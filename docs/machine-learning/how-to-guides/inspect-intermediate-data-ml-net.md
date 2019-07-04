@@ -1,22 +1,22 @@
 ---
-title: 在 ML.NET 处理期间检查中间数据值
-description: 了解如何在 ML.NET 机器学习管道处理期间检查实际的中间数据值
-ms.date: 04/29/2019
+title: 在 ML.NET 处理期间检查中间数据
+description: 学习如何在 ML.NET 中的 ML.NET 机器学习管道加载步骤、处理步骤和模型培训步骤期间检查中间数据。
+ms.date: 06/25/2019
 author: luisquintanilla
 ms.author: luquinta
-ms.custom: mvc, how-to
-ms.openlocfilehash: 06c4a473841db62a10dfc24025f842df7ae2c583
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.custom: mvc, how-to, title-hack-0625
+ms.openlocfilehash: d6ddeb523fb229eb0ebc9c2f22809312060e4266
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063519"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402393"
 ---
-# <a name="inspect-intermediate-data-values-during-processing"></a>在处理期间检查中间数据值
+# <a name="inspect-intermediate-data-during-processing"></a>在处理期间检查中间数据
 
-了解如何在 ML.NET 的加载、处理和训练步骤中检查值。
+学习如何在 ML.NET 中的加载步骤、处理步骤和模型培训步骤期间检查中间数据。 中间数据是机器学习管道中每个阶段的输出。
 
-可以在 ML.NET 中以各种方式检查加载到 [`IDataView`](xref:Microsoft.ML.IDataView) 中的如下所示的数据。
+可以在 ML.NET 中以各种方式检查加载到 [`IDataView`](xref:Microsoft.ML.IDataView) 中的如下所示的中间数据。
  
 ```csharp
 HousingData[] housingData = new HousingData[]
@@ -62,9 +62,9 @@ HousingData[] housingData = new HousingData[]
 
 ## <a name="convert-idataview-to-ienumerable"></a>将 IDataView 转换为 IEnumerable
 
-检查 [`IDataView`](xref:Microsoft.ML.IDataView) 的值的最快方法之一是将其转换为 [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601)。 若要将 [`IDataView`](xref:Microsoft.ML.IDataView) 转换为 [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601)，请使用 [`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable*) 方法。 
+检查 [`IDataView`](xref:Microsoft.ML.IDataView) 的最快方法之一是将其转换为 [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601)。 若要将 [`IDataView`](xref:Microsoft.ML.IDataView) 转换为 [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601)，请使用 [`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable*) 方法。 
 
-若要优化性能，请将 `reuseRowObject` 的值设置为 `true`。 如果这样做，将在评估当前行的数据时延迟填充相同的对象，而不是为数据集中的每一行创建一个新对象。
+若要优化性能，请将 `reuseRowObject` 设置为 `true`。 如果这样做，将在评估当前行的数据时延迟填充相同的对象，而不是为数据集中的每一行创建一个新对象。
 
 ```csharp
 // Create an IEnumerable of HousingData objects from IDataView
@@ -78,6 +78,8 @@ foreach (HousingData row in housingDataEnumerable)
     Console.WriteLine(row.Size);
 }
 ```
+
+## <a name="accessing-specific-indices-with-ienumerable"></a>使用 IEnumerable 访问特定索引
 
 如果只需要访问部分数据或特定索引，请使用 [`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable*) 并将 `reuseRowObject` 参数值设置为 `false`，以便为数据集中每个请求的行创建一个新对象。 然后，将 [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601) 转换为数组或列表。
 

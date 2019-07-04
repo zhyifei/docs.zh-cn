@@ -2,12 +2,12 @@
 title: dotnet test 命令
 description: dotnet test 命令可用于在给定项目中执行单元测试。
 ms.date: 05/29/2018
-ms.openlocfilehash: 1b2a3917a930db0c0a49ebea41f568aaf4a58ee3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6b67273f549edd7712237756a5aba13d5cb59a61
+ms.sourcegitcommit: 52e588dc2ee74d484cd07ac60076be25cbf777ab
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54535277"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67410357"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -72,7 +72,7 @@ dotnet test [-h|--help]
 
 `--blame`
 
-在意见模式中运行测试。 此选项有助于隔离导致测试主机出现故障的有问题的测试。 它会在当前目录中创建一个输出文件 (Sequence.xml)，其中捕获了故障前的测试执行顺序。
+在意见模式中运行测试。 此选项有助于隔离导致测试主机出现故障的有问题的测试。 它会在当前目录中创建一个输出文件 (Sequence.xml)，其中捕获了故障前的测试执行顺序  。
 
 `-c|--configuration {Debug|Release}`
 
@@ -120,7 +120,7 @@ dotnet test [-h|--help]
 
 `-s|--settings <SETTINGS_FILE>`
 
-运行测试时要使用的设置。
+`.runsettings` 文件用于运行测试。 [使用 `.runsettings` 文件配置单元测试。](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file?view=vs-2019)
 
 `-t|--list-tests`
 
@@ -190,7 +190,7 @@ dotnet test [-h|--help]
 
 `-s|--settings <SETTINGS_FILE>`
 
-运行测试时要使用的设置。
+`.runsettings` 文件用于运行测试。 [使用 `.runsettings` 文件配置单元测试。](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file?view=vs-2019)
 
 `-t|--list-tests`
 
@@ -240,7 +240,7 @@ dotnet test [-h|--help]
 
 `-s|--settings <SETTINGS_FILE>`
 
-运行测试时要使用的设置。
+`.runsettings` 文件用于运行测试。 [使用 `.runsettings` 文件配置单元测试。](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file?view=vs-2019)
 
 `-t|--list-tests`
 

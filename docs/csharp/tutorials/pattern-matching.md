@@ -3,12 +3,12 @@ title: 使用模式匹配功能来扩展数据类型
 description: 本高级教程展示了如何使用模式匹配技术，通过单独创建的数据和算法来创建功能。
 ms.date: 03/13/2019
 ms.custom: mvc
-ms.openlocfilehash: 58e4a9175752c7845507f48a3684747092dc609a
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: c42a917deee763e7c3e4e24949ec5c896d55016f
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66378073"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397838"
 ---
 # <a name="tutorial-using-pattern-matching-features-to-extend-data-types"></a>教程：使用模式匹配功能来扩展数据类型
 
@@ -199,7 +199,12 @@ vehicle switch
 };
 ```
 
-通行费收取机构并不关注运货卡车中的乘客数。 相反，他们根据运货卡车的重量级别收取更多费用。 超过 5000 磅的运货卡车需额外支付 5.00 美元。 3000 磅以下的轻型卡车可享受 2.00 美元折扣。 此规则通过以下代码实现：
+通行费收取机构并不关注运货卡车中的乘客数。 相反，它们根据卡车的重量级别调整通行费金额，如下所示：
+
+- 超过 5000 磅的运货卡车需额外支付 5.00 美元。
+- 3000 磅以下的轻型卡车可享受 2.00 美元折扣。
+
+此规则通过以下代码实现：
 
 ```csharp
 vehicle switch

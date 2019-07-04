@@ -10,16 +10,16 @@ helpviewer_keywords:
 - virtual methods [C#]
 - C# language, inheritance
 ms.assetid: 81d64ee4-50f9-4d6c-a8dc-257c348d2eea
-ms.openlocfilehash: 9ad7253fb9efc891e1f0fdea118e1fe7bde6a857
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 8f49118ebff8dcdfee45ce30de9b35437141e2bb
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58125910"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398474"
 ---
 # <a name="inheritance-c-programming-guide"></a>继承（C# 编程指南）
 
-继承（以及封装和多形性）是面向对象的编程的三个主要特征之一。 通过继承，可以创建重用、扩展和修改在其他类中定义的行为的新类。 其成员被继承的类称为“基类”，继承这些成员的类称为“派生类”。 派生类只能有一个直接基类。 但是，继承是可传递的。 如果 ClassC 派生自 ClassB，并且 ClassB 派生自 ClassA，则 ClassC 会继承在 ClassB 和 ClassA 中声明的成员。  
+继承（以及封装和多形性）是面向对象的编程的三个主要特征之一。 通过继承，可以创建重用、扩展和修改在其他类中定义的行为的新类。 其成员被继承的类称为“基类”  ，继承这些成员的类称为“派生类”  。 派生类只能有一个直接基类。 但是，继承是可传递的。 如果 ClassC 派生自 ClassB，并且 ClassB 派生自 ClassA，则 ClassC 会继承在 ClassB 和 ClassA 中声明的成员。  
   
 > [!NOTE]
 >  结构不支持继承，但它们可以实现接口。 有关详细信息，请参阅[接口](../../../csharp/programming-guide/interfaces/index.md)。  
@@ -40,10 +40,10 @@ ms.locfileid: "58125910"
  基类将方法声明为[虚拟](../../../csharp/language-reference/keywords/virtual.md) 时，派生类可以使用其自己的实现[重写](../../../csharp/language-reference/keywords/override.md)该方法。 如果基类将成员声明为[抽象](../../../csharp/language-reference/keywords/abstract.md)，则必须在直接继承自该类的任何非抽象类中重写该方法。 如果派生类本身是抽象的，则它会继承抽象成员而不会实现它们。 抽象和虚拟成员是多形性（面向对象的编程的第二个主要特征）的基础。 有关详细信息，请参阅[多态性](../../../csharp/programming-guide/classes-and-structs/polymorphism.md)。  
   
 ## <a name="abstract-base-classes"></a>抽象基类  
- 如果要使用 [new](../../../csharp/language-reference/keywords/new.md) 关键字防止直接实例化，则可以将类声明为[抽象](../../../csharp/language-reference/keywords/abstract.md)。 如果这样做，则仅当从该类派生新类时，才能使用该类。 抽象类可以包含一个或多个本身声明为抽象的方法签名。 这些签名指定参数和返回值，但没有任何实现（方法体）。 抽象类不必包含抽象成员；但是，如果类包含抽象成员，则类本身必须声明为抽象。 本身不抽象的派生类必须为来自抽象基类的任何抽象方法提供实现。 有关详细信息，请参阅[抽象类、密封类和类成员](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)。  
+ 如果要通过使用 [new](../../../csharp/language-reference/operators/new-operator.md) 运算符来防止直接实例化，则可以将类声明为[抽象](../../../csharp/language-reference/keywords/abstract.md)。 如果这样做，则仅当从该类派生新类时，才能使用该类。 抽象类可以包含一个或多个本身声明为抽象的方法签名。 这些签名指定参数和返回值，但没有任何实现（方法体）。 抽象类不必包含抽象成员；但是，如果类包含抽象成员，则类本身必须声明为抽象。 本身不抽象的派生类必须为来自抽象基类的任何抽象方法提供实现。 有关详细信息，请参阅[抽象类、密封类和类成员](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)。  
   
 ## <a name="interfaces"></a>接口  
- 接口是引用类型，有些类似于仅包含抽象成员的抽象基类。 类实现接口时，它必须为接口的所有成员提供实现。 类可以实现多个接口，即使它只能派生自单个直接基类。  
+ 接口  是引用类型，有些类似于仅包含抽象成员的抽象基类。 类实现接口时，它必须为接口的所有成员提供实现。 类可以实现多个接口，即使它只能派生自单个直接基类。  
   
  接口用于为类定义特定功能，这些功能不一定具有“是”关系。 例如，<xref:System.IEquatable%601?displayProperty=nameWithType> 接口可由任何类或结构实现，这些类或构造必须启用客户端代码来确定该类型的两个对象是否等效（但是由该类型定义等效性）。 <xref:System.IEquatable%601> 不表示基类和派生类之间存在的同一种“是”关系（例如，`Mammal` 是 `Animal`）。 有关详细信息，请参阅[接口](../../../csharp/programming-guide/interfaces/index.md)。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "58125910"
  类可以通过将自己或成员声明为[密封](../../../csharp/language-reference/keywords/sealed.md)，来防止其他类继承自它或继承自其任何成员。 有关详细信息，请参阅[抽象类、密封类和类成员](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)。  
   
 ## <a name="derived-class-hiding-of-base-class-members"></a>基类成员的派生类隐藏  
- 派生类可以通过使用相同名称和签名声明成员来隐藏基类成员。 [new](../../../csharp/language-reference/keywords/new.md) 修饰符可以用于显式指示成员不应作为基类成员的重写。 使用 [new](../../../csharp/language-reference/keywords/new.md) 不是必需的，但如果未使用 [new](../../../csharp/language-reference/keywords/new.md)，则会生成编译器警告。 有关详细信息，请参阅[使用 Override 和 New 关键字进行版本控制](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)和[了解何时使用 Override 和 New 关键字](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md)。  
+ 派生类可以通过使用相同名称和签名声明成员来隐藏基类成员。 [new](../../../csharp/language-reference/keywords/new-modifier.md) 修饰符可以用于显式指示成员不应作为基类成员的重写。 使用 [new](../../../csharp/language-reference/keywords/new-modifier.md) 不是必需的，但如果未使用 [new](../../../csharp/language-reference/keywords/new-modifier.md)，则会生成编译器警告。 有关详细信息，请参阅[使用 Override 和 New 关键字进行版本控制](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)和[了解何时使用 Override 和 New 关键字](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md)。  
   
 ## <a name="see-also"></a>请参阅
 

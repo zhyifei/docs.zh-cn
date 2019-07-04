@@ -2,12 +2,12 @@
 title: .NET Core 的 csproj 格式的新增内容
 description: 了解现有文件和 .NET Core csproj 文件之间的区别
 ms.date: 04/08/2019
-ms.openlocfilehash: 9c1f084af68010632cbe595858b2f242d37af598
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: a9b1caf6068a7161258a6825ed16894ac41b3be7
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65631808"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397534"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>.NET Core 的 csproj 格式的新增内容
 
@@ -55,9 +55,9 @@ ms.locfileid: "65631808"
 
 > 已知问题：.NET Core 2.1 SDK 只在项目还使用 Microsoft.NET.Sdk.Web 时才支持这种语法。 .NET Core 2.2 SDK 中解决了此问题。
 
-这些对 ASP.NET Core 元包的引用行为与大多数普通 NuGet 包略有不同。 使用这些元包的应用的[框架依赖部署](../deploying/index.md#framework-dependent-deployments-fdd)自动使用 ASP.NET Core 共享框架。 使用元包时，引用的 ASP.NET Core NuGet 包中的任何资产都不会与应用一起部署。也就是说，ASP.NET Core 共享框架包含这些资产。 共享框架中的资产更适合目标平台，旨在缩短应用启动时间。 若要详细了解共享框架，请参阅 [.NET Core 分发打包](../build/distribution-packaging.md)。
+这些对 ASP.NET Core 元包的引用行为与大多数普通 NuGet 包略有不同。 使用这些元包的应用的[框架依赖部署](../deploying/index.md#framework-dependent-deployments-fdd)自动使用 ASP.NET Core 共享框架。 使用元包时，引用的 ASP.NET Core NuGet 包中的任何资产都不会  与应用一起部署。也就是说，ASP.NET Core 共享框架包含这些资产。 共享框架中的资产更适合目标平台，旨在缩短应用启动时间。 若要详细了解共享框架，请参阅 [.NET Core 分发打包](../build/distribution-packaging.md)。
 
-如果指定版本，这会被视为框架依赖部署的 ASP.NET Core 共享框架的最低版本，并被视为独立式部署的确切版本。 这可能会导致以下后果：
+如果指定  版本，这会被视为框架依赖部署的 ASP.NET Core 共享框架的最低  版本，并被视为独立式部署的确切  版本。 这可能会导致以下后果：
 
 * 如果服务器上安装的 ASP.NET Core 版本低于 PackageReference 中指定的版本，.NET Core 进程便会无法启动。 元包更新通常先可用于 NuGet.org，再可用于托管环境（如 Azure）。 将 PackageReference 中的版本更新为 ASP.NET Core 可能会导致部署的应用失败。
 * 如果应用部署为[独立式部署](../deploying/index.md#self-contained-deployments-scd)，应用可能不包含 .NET Core 的最新安全更新程序。 如果未指定版本，SDK 可以自动在独立式部署中包含 ASP.NET Core 的最新版本。
@@ -77,7 +77,7 @@ ms.locfileid: "65631808"
 | None              | \*\*/\*                                   | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | \*\*/\*.cs; \*\*/\*.resx   |
 
 > [!NOTE]
-> 排除 glob 始终排除 `./bin` 和 `./obj` 文件夹，它们分别由 MSBuild 属性 `$(BaseOutputPath)` 和 `$(BaseIntermediateOutputPath)` 表示。 总体上来说，所有排除都由 `$(DefaultItemExcludes)` 表示。
+> 排除 glob  始终排除 `./bin` 和 `./obj` 文件夹，它们分别由 MSBuild 属性 `$(BaseOutputPath)` 和 `$(BaseIntermediateOutputPath)` 表示。 总体上来说，所有排除都由 `$(DefaultItemExcludes)` 表示。
 
 如果项目中有 glob，却又尝试使用最新的 SDK 生成它，则将收到以下错误：
 
@@ -95,7 +95,7 @@ ms.locfileid: "65631808"
 
 此更改不会修改其他包含项的主要机制。 但是，如果要指定（例如，指定某些文件通过应用发布），仍可以使用 *csproj* 中相应的已知机制来实现（例如，`<Content>` 元素）。
 
-`<EnableDefaultCompileItems>` 仅禁用 `Compile` glob，但不会影响其他 glob（如隐式 `None` glob），这也适用于 \*.cs 项。 因此，解决方案资源管理器继续显示在项目中作为 `None` 项的 \*.cs 项。 以类似的方式，可以将 `<EnableDefaultNoneItems>` 设置为 false 以禁用隐式 `None` glob，如下所示：
+`<EnableDefaultCompileItems>` 仅禁用 `Compile` glob，但不会影响其他 glob（如隐式 `None` glob），这也适用于 \*.cs 项。 因此，解决方案资源管理器  继续显示在项目中作为 `None` 项的 \*.cs 项。 以类似的方式，可以将 `<EnableDefaultNoneItems>` 设置为 false 以禁用隐式 `None` glob，如下所示：
 
 ```xml
 <PropertyGroup>
@@ -103,7 +103,7 @@ ms.locfileid: "65631808"
 </PropertyGroup>
 ```
 
-要禁用所有隐式 glob，可将 `<EnableDefaultItems>` 属性设置为 `false`，如以下示例所示：
+要禁用所有隐式 glob  ，可将 `<EnableDefaultItems>` 属性设置为 `false`，如以下示例所示：
 
 ```xml
 <PropertyGroup>
@@ -125,7 +125,7 @@ ms.locfileid: "65631808"
 
 ### <a name="sdk-attribute"></a>Sdk 特性
 
-.csproj 文件的根 `<Project>` 元素具有名为 `Sdk` 的新特性。 `Sdk` 指定项目将使用的 SDK。 如[分层文档](cli-msbuild-architecture.md)中所述，SDK 是一组可生成 .NET Core 代码的 MSBuild [任务](/visualstudio/msbuild/msbuild-tasks)和[目标](/visualstudio/msbuild/msbuild-targets)。 使用 .NET Core 3.0 预览版时，我们提供了 .NET Core 工具附带的三个主要 SDK 以及另外两个 SDK：
+.csproj 文件的根 `<Project>` 元素具有名为 `Sdk` 的新特性  。 `Sdk` 指定项目将使用的 SDK。 如[分层文档](cli-msbuild-architecture.md)中所述，SDK 是一组可生成 .NET Core 代码的 MSBuild [任务](/visualstudio/msbuild/msbuild-tasks)和[目标](/visualstudio/msbuild/msbuild-targets)。 使用 .NET Core 3.0 预览版时，我们提供了 .NET Core 工具附带的三个主要 SDK 以及另外两个 SDK：
 
 1. ID 为 `Microsoft.NET.Sdk` 的 .NET Core SDK
 2. ID 为 `Microsoft.NET.Sdk.Web` 的 .NET Core Web SDK
@@ -224,7 +224,7 @@ RID 允许发布独立部署。
 
 ## <a name="nuget-metadata-properties"></a>NugetMetadataProperties
 
-迁移到 MSBuild 后，我们已将在打包 NuGet 包时使用的输入元数据从 project.json 移到 .csproj 文件中。 输入为 MSBuild 属性，因此它们必须转到 `<PropertyGroup>` 组中。 下面列出了在使用 `dotnet pack` 命令或属于 SDK 的 `Pack` MSBuild 目标时，用作打包进程的输入的属性。
+迁移到 MSBuild 后，我们已将在打包 NuGet 包时使用的输入元数据从 project.json 移到 .csproj 文件中   。 输入为 MSBuild 属性，因此它们必须转到 `<PropertyGroup>` 组中。 下面列出了在使用 `dotnet pack` 命令或属于 SDK 的 `Pack` MSBuild 目标时，用作打包进程的输入的属性。
 
 ### <a name="ispackable"></a>IsPackable
 
@@ -308,7 +308,7 @@ license-expression =  1*1(simple-expression / compound-expression / UNLICENSED)
 
 ### <a name="packagelicenseurl"></a>PackageLicenseUrl
 
-适用于包的许可证的 URL。 （自 Visual Studio 15.9.4、.NET SDK 2.1.502 和 2.2.101 起已弃用）
+适用于包的许可证的 URL。 （自 Visual Studio 15.9.4、.NET SDK 2.1.502 和 2.2.101 起已弃用  ）
 
 ### <a name="packageiconurl"></a>PackageIconUrl
 
@@ -330,7 +330,7 @@ license-expression =  1*1(simple-expression / compound-expression / UNLICENSED)
 此布尔值指示在打包项目时，包是否应创建一个附加的符号包。 符号包的格式由 `SymbolPackageFormat` 属性控制。
 
 ### <a name="symbolpackageformat"></a>SymbolPackageFormat
-指定符号包的格式。 如果为“symbols.nupkg”，将使用包含 PDB、DLL 和其他输出文件的 .symbols.nupkg 扩展创建旧符号包。 如果为“snupkg”，将创建包含可移植 PDB 的 snupkg 符号包。 默认值为“symbols.nupkg”。
+指定符号包的格式。 如果为“symbols.nupkg”，将使用包含 PDB、DLL 和其他输出文件的 .symbols.nupkg  扩展创建旧符号包。 如果为“snupkg”，将创建包含可移植 PDB 的 snupkg 符号包。 默认值为“symbols.nupkg”。
 
 ### <a name="includesource"></a>IncludeSource
 

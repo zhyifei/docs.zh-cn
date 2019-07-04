@@ -2,12 +2,12 @@
 title: C# 7.2 中的新增功能
 description: C# 7.2 中的新增功能概述。
 ms.date: 08/16/2017
-ms.openlocfilehash: b8b2be68aac3cba92e0dbd74dfe4ee3cbbef0e88
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.openlocfilehash: 79402c9b569cb6848aaf240d83ba71338d525b35
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58185345"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67347415"
 ---
 # <a name="whats-new-in-c-72"></a>C# 7.2 中的新增功能
 
@@ -30,6 +30,13 @@ C# 7.2 使用[语言版本选择](../language-reference/configure-language-versi
   - `private protected` 访问修饰符允许访问同一程序集中的派生类。
 * [条件 `ref` 表达式](#conditional-ref-expressions)
   - 现在可以引用条件表达式 (`?:`) 的结果。
+
+本文的其余部分概述了每个功能。 你将了解每项功能背后的原理。 将了解语法。 可以使用 `dotnet try` 全局工具在环境中浏览这些功能：
+
+1. 安装 [dotnet-try](https://github.com/dotnet/try/blob/master/README.md#setup) 全局工具。
+1. 克隆 [dotnet/try-samples](https://github.com/dotnet/try-samples) 存储库。
+1. 将当前目录设置为 try-samples 存储库的 csharp7 子目录   。
+1. 运行 `dotnet try`。
 
 ## <a name="safe-efficient-code-enhancements"></a>安全高效的代码的增强功能
 

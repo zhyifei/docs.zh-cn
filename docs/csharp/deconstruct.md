@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 07/18/2016
 ms.assetid: 0b0c4b0f-4a47-4f66-9b8e-f5c63b195960
-ms.openlocfilehash: 6c24c1ec04bdd7ce7ee2061c2551652e26a28cf9
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: d7c5946f5df8a94bf8b54c10f33234b40338a622
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679328"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348151"
 ---
 # <a name="deconstructing-tuples-and-other-types"></a>析构元组和其他类型
 
@@ -20,7 +20,7 @@ ms.locfileid: "57679328"
 
 从对象检索多个字段值和属性值可能同样麻烦：必须按成员逐个将字段值或属性值赋给一个变量。
 
-从 C# 7.0 开始，用户可从元组中检索多个元素，或在单个析构操作中从对象检索多个字段值、属性值和计算值。 析构元组时，将其元素分配给各个变量。 析构对象时，将选定值分配给各个变量。
+从 C# 7.0 开始，用户可从元组中检索多个元素，或在单个析构操作中从对象检索多个字段值、属性值和计算值  。 析构元组时，将其元素分配给各个变量。 析构对象时，将选定值分配给各个变量。
 
 ## <a name="deconstructing-a-tuple"></a>析构元组
 
@@ -58,7 +58,7 @@ var (name, address, city, zip) = contact.GetAddressInfo();
 
 ## <a name="deconstructing-tuple-elements-with-discards"></a>使用弃元析构元组元素
 
-析构元组时，通常只需要关注某些元素的值。 从 C# 7.0 开始，便可利用 C# 对弃元的支持，弃元是一种仅能写入的变量，且其值将被忽略。 在赋值中，通过下划线字符 (\_) 指定弃元。 可弃元任意数量的值，且均由单个弃元  `_` 表示。
+析构元组时，通常只需要关注某些元素的值。 从 C# 7.0 开始，便可利用 C# 对弃元的支持，弃元是一种仅能写入的变量，且其值将被忽略  。 在赋值中，通过下划线字符 (\_) 指定弃元。 可弃元任意数量的值，且均由单个弃元  `_` 表示。
 
 以下示例演示了对元组使用弃元时的用法。 `QueryCityDataForYears` 方法返回一个 6 元组，包含城市名称、城市面积、一个年份、该年份的城市人口、另一个年份及该年份的城市人口。 该示例显示了两个年份之间人口的变化。 对于元组提供的数据，我们不关注城市面积，并在一开始就知道城市名称和两个日期。 因此，我们只关注存储在元组中的两个人口数量值，可将其余值作为占位符处理。  
 

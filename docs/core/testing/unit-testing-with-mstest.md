@@ -5,12 +5,12 @@ author: ncarandini
 ms.author: wiwagn
 ms.date: 09/08/2017
 ms.custom: seodec18
-ms.openlocfilehash: 4f6e1bb9a03a8f98052ec7bc911f22c288df6fe0
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: c396be926d743b672cb4611dc5569ecb48b09fec
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56746845"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397484"
 ---
 # <a name="unit-testing-c-with-mstest-and-net-core"></a>使用 MSTest 和 .NET Core 进行 C# 单元测试
 
@@ -18,7 +18,7 @@ ms.locfileid: "56746845"
 
 ### <a name="creating-the-source-project"></a>创建源项目
 
-打开 shell 窗口。 创建一个名为 unit-testing-using-mstest 的目录，用以保存解决方案。 在此新目录中，运行 [`dotnet new sln`](../tools/dotnet-new.md) 为类库和测试项目创建新的解决方案文件。 接下来，创建 PrimeService 目录。 下图显示了当前的目录和文件结构：
+打开 shell 窗口。 创建一个名为 unit-testing-using-mstest 的目录，用以保存解决方案  。 在此新目录中，运行 [`dotnet new sln`](../tools/dotnet-new.md) 为类库和测试项目创建新的解决方案文件。 接下来，创建 PrimeService  目录。 下图显示了当前的目录和文件结构：
 
 ```
 /unit-testing-using-mstest
@@ -43,11 +43,11 @@ namespace Prime.Services
 }
 ```
 
-将目录更改回 unit-testing-using-mstest 目录。 运行 [`dotnet sln add PrimeService/PrimeService.csproj`](../tools/dotnet-sln.md) 向解决方案添加类库项目。 
+将目录更改回 unit-testing-using-mstest  目录。 运行 [`dotnet sln add PrimeService/PrimeService.csproj`](../tools/dotnet-sln.md) 向解决方案添加类库项目。 
 
 ### <a name="creating-the-test-project"></a>创建测试项目
 
-接下来，创建 PrimeService.Tests 目录。 下图显示了它的目录结构：
+接下来，创建 PrimeService.Tests  目录。 下图显示了它的目录结构：
 
 ```
 /unit-testing-using-mstest
@@ -58,7 +58,7 @@ namespace Prime.Services
     /PrimeService.Tests
 ```
 
-将 *PrimeService.Tests* 目录作为当前目录，并使用 [`dotnet new mstest`](../tools/dotnet-new.md) 创建一个新项目。 dotnet 新命令会创建一个将 MStest 用作测试库的测试项目。 生成的模板在 *PrimeServiceTests.csproj* 文件中配置测试运行程序：
+将 *PrimeService.Tests* 目录作为当前目录，并使用 [`dotnet new mstest`](../tools/dotnet-new.md) 创建一个新项目。 dotnet 新命令会创建一个将 MSTest 用作测试库的测试项目。 生成的模板在 *PrimeServiceTests.csproj* 文件中配置测试运行程序：
 
 ```xml
 <ItemGroup>
@@ -89,7 +89,7 @@ dotnet add reference ../PrimeService/PrimeService.csproj
         PrimeServiceTests.csproj
 ```
 
-在 unit-testing-using-mstest 目录中执行 [`dotnet sln add .\PrimeService.Tests\PrimeService.Tests.csproj`](../tools/dotnet-sln.md)。 
+在 unit-testing-using-mstest  目录中执行 [`dotnet sln add .\PrimeService.Tests\PrimeService.Tests.csproj`](../tools/dotnet-sln.md)。 
 
 ## <a name="creating-the-first-test"></a>创建第一个测试
 
@@ -139,7 +139,7 @@ public bool IsPrime(int candidate)
 }
 ```
 
-在 unit-testing-using-mstest 目录中，再次运行 `dotnet test`。 `dotnet test` 命令构建 `PrimeService` 项目，然后构建 `PrimeService.Tests` 项目。 构建这两个项目后，该命令将运行此单项测试。 测试通过。
+在 unit-testing-using-mstest  目录中，再次运行 `dotnet test`。 `dotnet test` 命令构建 `PrimeService` 项目，然后构建 `PrimeService.Tests` 项目。 构建这两个项目后，该命令将运行此单项测试。 测试通过。
 
 ## <a name="adding-more-features"></a>添加更多功能
 

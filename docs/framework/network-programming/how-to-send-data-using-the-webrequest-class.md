@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WebRequest class, sending data to a host
 - Sending data to a host, using WebRequest class
 ms.assetid: 66686878-38ac-4aa6-bf42-ffb568ffc459
-ms.openlocfilehash: 3878a94debc7066cb8ace3b119d95d3b76d91610
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 2dcc9e70f51c3c96cbc3af238fed21021ff7ae2c
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322870"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67347359"
 ---
 # <a name="how-to-send-data-by-using-the-webrequest-class"></a>如何：使用 WebRequest 类发送数据
 以下过程描述将数据发送到服务器的步骤。 此过程通常用于将数据发布到 Web 页。 
@@ -31,7 +31,7 @@ ms.locfileid: "59322870"
     ```  
   
     > [!NOTE]
-    > .NET Framework 为以“http:”、“https:”、“ftp:”和“file:”开头的 URI 提供派生自 <xref:System.Net.WebRequest> 和 <xref:System.Net.WebResponse> 类的特定于协议的类。
+    > .NET Framework 为以“http:”、“https:”、“ftp:”和“file:”开头的 URI 提供派生自 <xref:System.Net.WebRequest> 和 <xref:System.Net.WebResponse> 类的特定于协议的类     。
     如果需要设置或读取特定于协议的属性，必须将 <xref:System.Net.WebRequest> 或 <xref:System.Net.WebResponse> 转换为特定于协议的对象类型。 有关详细信息，请参阅[对可插入协议进行编程](programming-pluggable-protocols.md)。 
   
 2. 设置 `WebRequest` 对象中任何所需的属性值。 例如，若要启用身份验证，则将 <xref:System.Net.WebRequest.Credentials%2A?displayProperty=nameWithType> 属性设置为 <xref:System.Net.NetworkCredential> 类的实例：
@@ -80,8 +80,8 @@ ms.locfileid: "59322870"
     Stream dataStream = request.GetRequestStream();  
     ```  
   
-    ```vb  
-    Stream dataStream = request.GetRequestStream()  
+    ```vb
+    Dim dataStream As Stream = request.GetRequestStream()  
     ```  
   
 7. 将数据写入到 `GetRequestStream` 方法返回的 <xref:System.IO.Stream> 对象中。 例如:
@@ -148,7 +148,7 @@ ms.locfileid: "59322870"
   
 ## <a name="example"></a>示例  
   
-以下代码示例演示如何将数据发送到 Web 服务器并读取其响应中的数据：  
+以下示例演示如何将数据发送到 Web 服务器并读取其响应中的数据：  
 
 [!code-csharp[SendDataUsingWebRequest](../../../samples/snippets/csharp/VS_Snippets_Network/SendDataUsingWebRequest/cs/WebRequestPostExample.cs)]
 [!code-vb[SendDataUsingWebRequest](../../../samples/snippets/visualbasic/VS_Snippets_Network/SendDataUsingWebRequest/vb/WebRequestPostExample.vb)]

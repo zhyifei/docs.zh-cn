@@ -1,13 +1,13 @@
 ---
 title: dotnet add package 命令
 description: “dotnet add package”命令可便于添加对项目的 NuGet 包引用。
-ms.date: 04/24/2019
-ms.openlocfilehash: 82f178026b46eb0237243b8ae49d17fbcc1af6ec
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.date: 06/26/2019
+ms.openlocfilehash: f387d32cbf706e1711439e393c1a7811bc8f47bd
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65959249"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422052"
 ---
 # <a name="dotnet-add-package"></a>dotnet add package
 
@@ -31,7 +31,7 @@ ms.locfileid: "65959249"
 
 [!INCLUDE[DotNet Restore Note](../../../includes/dotnet-restore-note.md)]
 
-例如，将 `Newtonsoft.Json` 添加到 ToDo.csproj 后的输出如以下示例所示：
+例如，将 `Newtonsoft.Json` 添加到 ToDo.csproj  后的输出如以下示例所示：
 
 ```console
   Writing C:\Users\mairaw\AppData\Local\Temp\tmp95A8.tmp
@@ -82,7 +82,7 @@ info : PackageReference for package 'Newtonsoft.Json' version '12.0.1' added to 
 
 * **`--package-directory <PACKAGE_DIRECTORY>`**
 
-  要在其中还原包的目录。
+  要在其中还原包的目录。 Windows 上的默认包还原位置为 `%userprofile%\.nuget\packages`，macOS 和 Linux 上的默认包还原位置为 `~/.nuget/packages`。 有关详细信息，请参阅[在 NuGet 中管理全局包、缓存和临时文件夹](https://docs.microsoft.com/nuget/consume-packages/managing-the-global-packages-and-cache-folders)。
 
 * **`-s|--source <SOURCE>`**
 
@@ -111,3 +111,8 @@ info : PackageReference for package 'Newtonsoft.Json' version '12.0.1' added to 
   ```console
   dotnet add package Microsoft.AspNetCore.StaticFiles -s https://dotnet.myget.org/F/dotnet-core/api/v3/index.json
   ```
+
+## <a name="see-also"></a>请参阅
+
+- [在 NuGet 中管理全局包、缓存和临时文件夹](https://docs.microsoft.com/nuget/consume-packages/managing-the-global-packages-and-cache-folders)
+- [NuGet 包版本控制](https://docs.microsoft.com/nuget/reference/package-versioning)

@@ -1,20 +1,20 @@
 ---
-title: 使用交叉验证训练和评估机器学习模型
-description: 了解如何使用交叉验证来训练和评估机器学习模型
-ms.date: 05/03/2019
+title: 使用交叉验证来训练机器学习模型
+description: 了解如何使用交叉验证在 ML.NET 中生成更强大的机器学习模型。 交叉验证是一种训练和模型评估技术，可将数据拆分为多个分区，并利用这些分区训练多个算法。
+ms.date: 06/25/2019
 author: luisquintanilla
 ms.author: luquinta
-ms.custom: mvc,how-to
-ms.openlocfilehash: a06711ca83ea545adc7292cf6d8173f006fdb94d
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.custom: mvc,how-to,title-hack-0625
+ms.openlocfilehash: c68c2b61054f59f03b4743ec30a694e94086ebab
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557837"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397646"
 ---
-# <a name="train-and-evaluate-a-machine-learning-model-using-cross-validation"></a>使用交叉验证训练和评估机器学习模型
+# <a name="train-a-machine-learning-model-using-cross-validation"></a>使用交叉验证来训练机器学习模型
 
-了解如何使用交叉验证在 ML.NET 中生成更强大的机器学习模型。 
+了解如何使用交叉验证在 ML.NET 中训练更强大的机器学习模型。 
 
 交叉验证是一种训练和模型评估技术，可将数据拆分为多个分区，并利用这些分区训练多个算法。 此技术通过保留来自训练过程的数据来提高模型的可靠性。 除提高不可见观测的性能之外，在数据受限的环境中，它还可用作使用较小数据集训练模型的有效工具。
 
@@ -93,7 +93,7 @@ var cvResults = mlContext.Regression.CrossValidate(transformedData, sdcaEstimato
 
 `cvResults` 中存储的结果是 [`CrossValidationResult`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601) 对象的集合。 此对象包括经过训练的模型以及可分别从 [`Model`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601.Model) 和 [`Metrics`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601.Metrics) 属性访问的指标。 在此示例中，`Model` 属性为 [`ITransformer`](xref:Microsoft.ML.ITransformer) 类型，`Metrics` 属性为 [`RegressionMetrics`](xref:Microsoft.ML.Data.RegressionMetrics) 类型。 
 
-## <a name="extract-metrics"></a>提取指标
+## <a name="evaluate-the-model"></a>评估模型
 
 可以通过单个 [`CrossValidationResult`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601) 对象的 `Metrics` 属性访问不同的经过训练的模型的指标。 在本例中，通过变量 `rSquared` 访问和存储 [R 平方指标](https://en.wikipedia.org/wiki/Coefficient_of_determination)。 
 
@@ -103,11 +103,7 @@ IEnumerable<double> rSquared =
         .Select(fold => fold.Metrics.RSquared);
 ```
 
-如果检查 `rSquared` 变量的内容，则输出应该是五个 0-1 之间的值，其中最接近 1 的值为最佳值。
-
-## <a name="select-the-best-performing-model"></a>选择性能最好的模型
-
-使用 R 平方等指标按性能最好到性能最差的顺序选择模型。 然后，选择性能最好的模型来进行预测或执行其他操作。
+如果检查 `rSquared` 变量的内容，则输出应该是五个 0-1 之间的值，其中最接近 1 的值为最佳值。 使用 R 平方等指标按性能最好到性能最差的顺序选择模型。 然后，选择性能最好的模型来进行预测或执行其他操作。
 
 ```csharp
 // Select all models

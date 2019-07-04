@@ -1,18 +1,18 @@
 ---
-title: 加载数据
-description: 将数据文件和流式处理数据加载到 ML.NET 中
-ms.date: 05/03/2019
-ms.custom: mvc,how-to
-ms.openlocfilehash: 6edcc92b610e2e1f5e21c371b9f0aefd0b216d31
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+title: 从文件和其他源加载数据
+description: 本操作说明演示如何将数据加载到 ML.NET 中进行处理和训练。 最初存储在文件或其他数据源（例如数据库、JSON、XML 或内存中集合）中的数据。
+ms.date: 06/25/2019
+ms.custom: mvc,how-to, title-hack-0625
+ms.openlocfilehash: fafbe3fed9e3f0b509eda4f9d8967965bde19767
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063651"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397746"
 ---
-# <a name="load-data-from-file-and-in-memory-sources"></a>从文件和内存中源加载数据
+# <a name="load-data-from-files-and-other-sources"></a>从文件和其他源加载数据
 
-本操作说明演示如何将数据加载到 ML.NET 中进行处理和训练。 数据最初存储在文件或实时/流式处理数据源中。
+本操作说明演示如何将数据加载到 ML.NET 中进行处理和训练。 最初存储在文件或其他数据源（例如数据库、JSON、XML 或内存中集合）中的数据。
 
 ## <a name="create-the-data-model"></a>创建数据模型
 
@@ -102,16 +102,15 @@ TextLoader textLoader = mlContext.Data.CreateTextLoader<HousingData>(separatorCh
 IDataView data = textLoader.Load("DataFolder/SubFolder1/1.txt", "DataFolder/SubFolder2/1.txt");
 ```
 
-## <a name="load-data-from-a-streaming-source"></a>从流式处理源加载数据
+## <a name="load-data-from-other-sources"></a>从其他源加载数据
 
-除了加载存储在磁盘上的数据外，ML.NET 还支持从各种流式处理源加载数据，这些源包括但不限于：
+除了加载存储在文件中的数据外，ML.NET 还支持从各种源加载数据，这些源包括但不限于：
 
 - 内存中集合
 - JSON/XML
 - 数据库
 
-> [!IMPORTANT]
-> 请注意，在使用流式处理源时，ML.NET 预计输入采用内存中集合的形式。 因此，在使用 JSON/XML 等源时，请确保将数据格式化为内存中集合。
+请注意，在使用流式处理源时，ML.NET 预计输入采用内存中集合的形式。 因此，在使用 JSON/XML 等源时，请确保将数据格式化为内存中集合。
 
 给定以下内存中集合：
 

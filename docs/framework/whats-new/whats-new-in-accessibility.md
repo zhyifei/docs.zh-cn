@@ -1,7 +1,7 @@
 ---
 title: .NET Framework 中辅助功能的新增功能
 ms.custom: updateeachrelease
-ms.date: 04/10/2018
+ms.date: 04/18/2019
 dev_langs:
 - csharp
 - vb
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - what's new [.NET Framework]
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 59fe1a5492b34d2aef88e81b86307498e3a5dc2c
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 19d9752e1c7cfbc0a7c85e7cf8053c09c5baca7a
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612285"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425577"
 ---
 # <a name="whats-new-in-accessibility-in-the-net-framework"></a>.NET Framework 中辅助功能的新增功能
 
@@ -28,6 +28,7 @@ ms.locfileid: "59612285"
 |---|---|
 |.NET Framework 4.7.1|"Switch.UseLegacyAccessibilityFeatures"|
 |.NET Framework 4.7.2|"Switch.UseLegacyAccessibilityFeatures.2"|
+|.NET Framework 4.8|"Switch.UseLegacyAccessibilityFeatures.3"|
 
 ### <a name="taking-advantage-of-accessibility-enhancements"></a>利用辅助功能改进
 
@@ -40,12 +41,21 @@ ms.locfileid: "59612285"
 </runtime>
 ```
 
-如果选择使用更高的 .NET Framework 版本中的辅助功能，还必须显式选择使用更低 .NET Framework 版本的功能。 将应用配置为利用 .NET Framework 4.7.1 和 4.7.2 中的辅助功能改进需要以下 [`<AppContextSwitchOverrides>`](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 元素：
+如果选择使用更高的 .NET Framework 版本中的辅助功能，还必须显式选择使用更低 .NET Framework 版本的功能。 通过配置应用以利用 .NET Framework 4.7.1 和 4.7.2 中的辅助功能改进需要以下 [`<AppContextSwitchOverrides>`](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 元素：
 
 ```xml
 <runtime>
     <!-- AppContextSwitchOverrides value attribute is in the form of 'key1=true|false;key2=true|false  -->
     <AppContextSwitchOverrides value="Switch.UseLegacyAccessibilityFeatures=false;Switch.UseLegacyAccessibilityFeatures.2=false" />
+</runtime>
+```
+
+通过配置应用以利用 .NET Framework 4.7.1、4.7.2 和 4.8 中的辅助功能改进需要以下 [`<AppContextSwitchOverrides>`](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 元素：
+
+```xml
+<runtime>
+    <!-- AppContextSwitchOverrides value attribute is in the form of 'key1=true|false;key2=true|false  -->
+    <AppContextSwitchOverrides value="Switch.UseLegacyAccessibilityFeatures=false;Switch.UseLegacyAccessibilityFeatures.2=false;Switch.UseLegacyAccessibilityFeatures.3=false" />
 </runtime>
 ```
 
@@ -60,9 +70,260 @@ ms.locfileid: "59612285"
 </runtime>
 ```
 
-## <a name="whats-new-in-accessibility-in-the-net-framework-472"></a>.NET Framework 4.7.2 中辅助功能的新增功能
+## <a name="whats-new-in-accessibility-in-net-framework-48"></a>.NET Framework 4.8 中辅助功能的新增功能
 
-.NET Framework 4.7.2 在以下几个领域新增了辅助功能：
+.NET Framework 4.8 在以下几个领域包含新增辅助功能：
+
+- [Windows 窗体](#winforms48)
+
+- [Windows Presentation Foundation (WPF)](#wpf48)
+
+- [Windows Workflow Foundation (WF) 工作流设计器](#wf48)
+
+<a name="winforms48" />
+
+### <a name="windows-forms"></a>Windows 窗体
+
+在 .NET Framework 4.8 中，Windows 窗体将对 LiveRegions 和通知事件的支持添加到多个常用控件中。 它还会在用户使用键盘导航到控件时添加工具提示支持。
+
+**标签和 StatusStrips 中的 UIA LiveRegions 支持**
+
+UIA LiveRegions 允许应用程序开发人员将用户工作位置之外的某个控件中的文本更改通知给屏幕阅读器。 例如，对于显示连接状态的 <xref:System.Windows.Forms.StatusStrip> 控件，这很有用。 如果连接断开且状态发生更改，开发人员可能会希望将此情况通知给屏幕阅读器。
+
+从 .NET Framework 4.8 开始，Windows 窗体同时为 <xref:System.Windows.Forms.Label> 和 <xref:System.Windows.Forms.StatusStrip> 控件实现 UIA LiveRegions。 例如，以下代码在名为 `label1` 的 <xref:System.Windows.Forms.Label> 控件中使用 LiveRegion：
+
+```csharp
+public Form1()
+{
+   InitializeComponent();
+   label1.AutomationLiveSetting = AutomationLiveSetting.Polite;
+}
+
+…
+Label1.Text = “Ready!”;
+```
+
+无论用户在何处与应用程序交互，讲述人都会宣布“准备就绪”。
+
+还可以将 <xref:System.Windows.Forms.UserControl> 实现为 LiveRegion：
+
+```csharp
+using System;
+using System.Windows.Forms;
+using System.Windows.Forms.Automation;
+
+namespace WindowsFormsApplication
+{
+   public partial class UserControl1 : UserControl, IAutomationLiveRegion
+   {
+      public UserControl1()
+      {
+         InitializeComponent();
+      }
+
+      public AutomationLiveSetting AutomationLiveSetting { get; set; }
+      private AutomationLiveSetting IAutomationLiveRegion.GetLiveSetting()
+      {
+         return this.AutomationLiveSetting;
+      }
+
+      protected override void OnTextChanged(EventArgs e)
+      {
+         base.OnTextChanged(e);
+         AutomationNotifications.UiaRaiseLiveRegionChangedEvent(this.AccessibilityObject);
+      }
+   }
+}
+```
+
+**UIA 通知事件**
+
+Windows 10 Fall Creators Update 中引入的 UIA 通知事件允许应用程序引发 UIA 事件，这使得讲述人仅根据你为事件提供的文本来进行宣读，而无需在 UI 中使用相应的控件。 在某些情况下，这是一种能够显着改善应用辅助功能的简单方法。 也可以用于通知可能需要很长时间的某些进程的进度。 有关 UIA 通知事件的详细信息，请参阅[桌面应用程序是否可以利用新的 UI 通知事件？](https://blogs.msdn.microsoft.com/winuiautomation/2017/11/08/can-your-desktop-app-leverage-the-new-uia-notification-event-in-order-to-have-narrator-say-exactly-what-your-customers-need/)。
+
+下面的示例会引发[通知事件](xref:System.Windows.Forms.AccessibleObject.RaiseAutomationNotification%2A)：
+
+```csharp
+MethodInfo raiseMethod = typeof(AccessibleObject).GetMethod("RaiseAutomationNotification");
+if (raiseMethod != null) {
+   raiseMethod.Invoke(progressBar1.AccessibilityObject, new object[3] {/*Other*/ 4, /*All*/ 2, "The progress is 50%." });
+}
+```
+
+**键盘访问工具提示**
+
+在面向 .NET Framework 4.7.2 及更早版本的应用程序中，只能通过将鼠标指针移到控件上，才能触发控件[工具提示](xref:System.Windows.Forms.ToolTip)。 从 .NET Framework 4.8 开始，键盘用户可以通过使用 Tab 键或箭头键（具有或不具有修饰键）来聚焦控件，从而触发控件的工具提示。 要实现这一特定的辅助功能优化效果，需要额外的 [AppContext 开关](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md)：
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+   <startup>
+      <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.6.1"/>
+   </startup>
+   <runtime>
+      <!-- AppContextSwitchOverrides values are in the form of 'key1=true|false;key2=true|false  -->
+      <!-- Please note that disabling Switch.UseLegacyAccessibilityFeatures, Switch.UseLegacyAccessibilityFeatures.2 and Switch.UseLegacyAccessibilityFeatures.3 is required to disable Switch.System.Windows.Forms.UseLegacyToolTipDisplay -->
+      <AppContextSwitchOverrides value="Switch.UseLegacyAccessibilityFeatures=false;Switch.UseLegacyAccessibilityFeatures.2=false;Switch.UseLegacyAccessibilityFeatures.3=false;Switch.System.Windows.Forms.UseLegacyToolTipDisplay=false"/>
+   </runtime>
+</configuration>
+```
+
+下图显示用户使用键盘选中按钮时的工具提示。
+
+![用户使用键盘导航到按钮时的工具提示](media/tooltip.png)
+
+<a name="wpf48" />
+
+### <a name="windows-presentation-foundation-wpf"></a>Windows Presentation Foundation (WPF)
+
+从 .NET Framework 4.8 开始，WPF 包括大量辅助功能改进。
+
+**屏幕讲述人不再宣读可见性为“折叠”或“隐藏”的元素**
+
+可见性为“折叠”或“隐藏”的元素不再被屏幕讲述人宣读。 如果向用户宣读包含可见性为 <xref:System.Windows.Visibility.Collapsed?displayProperty=nameWithType> 或 <xref:System.Windows.Visibility.Hidden?displayProperty=nameWithType> 的元素的用户界面，屏幕阅读器可能会错误呈现这些界面。 从 .NET Framework 4.8 开始，WPF 不再在 UIAutomation 树的控制视图中包含折叠或隐藏的元素，屏幕阅读器无法再宣读这些元素。
+
+**与非基于修饰器的文本选择配合使用的 SelectionTextBrush 属性**
+
+在 .NET Framework 4.7.2 中，WPF 添加了无需使用修饰器层即可绘制 <xref:System.Windows.Controls.TextBox> 和 <xref:System.Windows.Controls.PasswordBox> 文本选择的功能。 此方案中所选文本的前景色由 <xref:System.Windows.SystemColors.HighlightTextBrush?displayProperty=nameWithType> 决定。
+
+.NET Framework 4.8 添加了一个新属性 `SelectionTextBrush`，允许开发人员在使用非基于修饰器的文本选择时为所选文本选择特定画笔。 此属性仅适用于 <xref:System.Windows.Controls.Primitives.TextBoxBase> 派生的控件和启用了非基于修饰器的文本选择功能的 WPF 应用程序中的 <xref:System.Windows.Controls.PasswordBox> 控件。 该属性不适用于 <xref:System.Windows.Controls.RichTextBox> 控件。 如果未启用非基于修饰器的文本选择功能，则忽略此属性。
+
+要使用此属性，只需将其添加到 XAML 代码，并使用适当的画笔或绑定。 生成的文本选择如下所示：
+
+![用户使用键盘导航到按钮时的工具提示](media/selectiontextbrush-property.png)
+
+可以结合使用 `SelectionBrush` 和 `SelectionTextBrush` 属性来生成你认为合适的任何背景色和前景色组合。
+
+**对 UIAutomation ControllerFor 属性的支持**
+
+UIAutomation 的 `ControllerFor` 属性返回一系列由支持该属性的自动化元素操纵的自动化元素。 此属性通常用于自动建议辅助功能。 应在自动化元素会影响应用程序 UI 或桌面的一个或多个段时使用 `ControllerFor`。 否则，很难将控制操作的影响与 UI 元素关联。 此功能增加了控件为 `ControllerFor` 属性提供值的功能。
+
+.NET framework 4.8 添加了新的虚拟方法 <xref:System.Windows.Automation.Peers.AutomationPeer.GetControlledPeersCore?displayProperty=nameWithType?displayProperty=nameWithType>。 要为 `ControllerFor` 属性提供值，只需替代此方法并为此 <xref:System.Windows.Automation.Peers.AutomationPeer> 操作的控件返回 `List<AutomationPeer>`：
+
+```csharp
+public class AutoSuggestTextBox: TextBox
+{
+   protected override AutomationPeer OnCreateAutomationPeer()
+   {
+      return new AutoSuggestTextBoxAutomationPeer(this);
+   }
+
+   public ListBox SuggestionListBox;
+}
+
+internal class AutoSuggestTextBoxAutomationPeer : TextBoxAutomationPeer
+{
+   public AutoSuggestTextBoxAutomationPeer(AutoSuggestTextBox owner) : base(owner)
+   {
+   }
+
+   protected override List<AutomationPeer> GetControlledPeersCore()
+   {
+      List<AutomationPeer> controlledPeers = new List<AutomationPeer>();
+      AutoSuggestTextBox owner = Owner as AutoSuggestTextBox;
+      controlledPeers.Add(UIElementAutomationPeer.CreatePeerForElement(owner.SuggestionListBox));
+      return controlledPeers;
+   }
+}
+```
+
+**键盘访问工具提示**
+
+在 .NET Framework 4.7.2 和更早版本中，仅当用户将鼠标光标悬停在控件上时，系统才会显示工具提示。 在 .NET Framework 4.8 中，工具提示还会在键盘聚焦时显示，也可以通过键盘快捷方式显示。
+
+要启用此功能，应用程序需要面向 .NET Framework 4.8，或使用 `Switch.UseLegacyAccessibilityFeatures.3` 和 `Switch.UseLegacyToolTipDisplay` [AppContext](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 开关来选择加入。 下面是一个示例应用程序配置文件：
+
+```xml
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+   <startup>
+      <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5" />
+   </startup>
+   <runtime>
+      <AppContextSwitchOverrides value="Switch.UseLegacyAccessibilityFeatures=false;Switch.UseLegacyAccessibilityFeatures.2=false;Switch.UseLegacyAccessibilityFeatures.3=false;Switch.UseLegacyToolTipDisplay=false" />
+   </runtime>
+</configuration>
+```
+
+启用后，一旦控件接收到键盘焦点，包含工具提示的所有控件都会显示工具提示。 随时间推移或当键盘焦点发生变化时，可关闭工具提示。 用户还可以通过使用新的键盘快捷键 Ctrl+Shift+F10 手动关闭工具提示。 关闭工具提示后，可以使用相同的键盘快捷键再次显示。
+
+> [!NOTE]
+> <xref:System.Windows.Controls.Ribbon.Ribbon> 控件上的[功能区工具提示](xref:System.Windows.Controls.Ribbon.RibbonToolTip)不在键盘聚焦时显示；它们仅通过键盘快捷键显示。
+
+**添加了对 SizeOfSet 和 PositionInSet UIAutomation 属性的支持**
+
+Windows 10 引入了两个新的 UIAutomation 属性（`SizeOfSet` 和 `PositionInSet`），应用程序用其描述集合中的项数。 然后，UIAutomation 客户端应用程序（如屏幕阅读器）可以向某个应用程序查询这些属性，并宣布应用程序 UI 的准确表示形式。
+
+从 .NET Framework 4.8 开始，WPF 向 WPF 应用程序中的 UIAutomation 公开这两个属性。 这可以通过以下两种方式实现：
+
+- 通过使用依赖项属性。
+
+   WPF 添加了两个新的依赖项属性：<xref:System.Windows.Automation.AutomationProperties.SizeOfSet?displayProperty=nameWithType> 和 <xref:System.Windows.Automation.AutomationProperties.PositionInSet?displayProperty=nameWithType>。 开发人员可以使用 XAML 来设置它们的值：
+
+   ```xaml
+   <Button AutomationProperties.SizeOfSet="3"
+     AutomationProperties.PositionInSet="1">Button 1</Button>
+
+   <Button AutomationProperties.SizeOfSet="3"
+     AutomationProperties.PositionInSet="2">Button 2</Button>
+
+   <Button AutomationProperties.SizeOfSet="3"
+     AutomationProperties.PositionInSet="3">Button 3</Button>
+   ```
+
+- 通过替代 AutomationPeer 虚拟方法。
+
+   <xref:System.Windows.Automation.Peers.AutomationPeer.GetSizeOfSetCore> 和 <xref:System.Windows.Automation.Peers.AutomationPeer.GetPositionInSetCore> 虚拟方法已添加到 AutomationPeer 类中。 开发人员可以通过替代这些方法为 `SizeOfSet` 和 `PositionInSet` 提供值，如以下示例所示：
+
+   ```csharp
+   public class MyButtonAutomationPeer : ButtonAutomationPeer
+   {
+      protected override int GetSizeOfSetCore()
+      {
+         // Call into your own logic to provide a value for SizeOfSet
+         return CalculateSizeOfSet();
+      }
+
+      protected override int GetPositionInSetCore()
+      {
+         // Call into your own logic to provide a value for PositionInSet
+         return CalculatePositionInSet();
+      }
+   }
+   ```
+
+此外，开发人员无需执行其他操作，<xref:System.Windows.Controls.ItemsControl> 实例中的项会自动为这些属性提供值。 如果将 <xref:System.Windows.Controls.ItemsControl> 归组，则组的集合表示为一个集，并且每个组计为一个单独的集，该组内的每个项提供其在该组内的位置以及该组的大小。 虚拟化不会影响自动值。 即使没有实现某个项，它仍然会计入集的总大小，并影响其在同级项集中的位置。
+
+仅当应用程序面向 .NET Framework 4.8 时，才会提供自动值。 对于面向 .NET Framework 早期版本的应用程序，可以设置 `Switch.UseLegacyAccessibilityFeatures.3` [AppContext 开关](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md)，如以下 App.config 文件中所示：
+
+```xml
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+   <startup>
+      <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5" />
+   </startup>
+   <runtime>
+      <AppContextSwitchOverrides value="Switch.UseLegacyAccessibilityFeatures=false;Switch.UseLegacyAccessibilityFeatures.2=false;Switch.UseLegacyAccessibilityFeatures.3=false" />
+   </runtime>
+</configuration>
+```
+
+<a name="wf48" />
+
+### <a name="windows-workflow-foundation-wf-workflow-designer"></a>Windows Workflow Foundation (WF) 工作流设计器
+
+.NET Framework 4.8 中的工作流设计器包含以下更改：
+
+- 使用讲述人的用户将体验到 FlowSwitch 事例标签的改进。
+
+- 使用讲述人的用户将体验到按钮描述的改进。
+
+- 选择高对比度主题的用户将看到工作流设计器及其控件可见性方面的改进，例如元素间的对比度效果更好和用于焦点元素的更明显的选择框。
+
+如果应用程序面向 .NET Framework 4.7.2 或更早版本，则可以通过在应用程序配置文件中将`Switch.UseLegacyAccessibilityFeatures.3` [ AppContext 开关](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md)设置为 `false` 来选择这些更改。 有关详细信息，请参阅本文中的[利用辅助功能改进](#taking-advantage-of-accessibility-enhancements)部分。
+
+## <a name="whats-new-in-accessibility-in-net-framework-472"></a>.NET Framework 4.7.2 中辅助功能的新增功能
+
+.NET Framework 4.7.2 在以下几个领域包含新增辅助功能：
 
 - [Windows 窗体](#winforms472)
 
@@ -138,9 +399,9 @@ ms.locfileid: "59612285"
 
 但是，依赖于永不转义 WinForms 层的焦点的自动化应用程序不再会按预期工作。
 
-## <a name="whats-new-in-accessibility-in-the-net-framework-471"></a>.NET Framework 4.7.1 中辅助功能的新增功能
+## <a name="whats-new-in-accessibility-in-net-framework-471"></a>.NET Framework 4.7.1 中辅助功能的新增功能
 
-.NET Framework 4.7.1 在以下几个领域新增了辅助功能：
+.NET Framework 4.7.1 在以下几个领域包含新增辅助功能：
 
 - [Windows Presentation Foundation (WPF)](#wpf471)
 
@@ -158,13 +419,13 @@ ms.locfileid: "59612285"
 
 **屏幕阅读器改进**
 
-如果启用了辅助功能改进，.NET Framework 4.7.1 包括以下可影响屏幕读阅读的增强功能：
+如果启用了辅助功能改进，.NET Framework 4.7.1 包括以下可影响屏幕阅读器的增强功能：
 
 - 在 .NET Framework 4.7 及更低版本中，<xref:System.Windows.Controls.Expander> 控件由屏幕阅读器宣称为按钮。 从 .NET Framework 4.7.1 开始，它们被正确地称为可展开/可折叠组。
 
 - 在 .NET Framework 4.7 及更低版本中，<xref:System.Windows.Controls.DataGridCell> 控件由屏幕阅读器宣称为“自定义”。 从 .NET Framework 4.7.1 开始，它们被正确地称为数据网格单元格（已本地化）。
 
-- 从 .NET Framework 4.7.1 开始，屏幕阅读器读出可编辑 <xref:System.Windows.Controls.ComboBox> 的名称。
+- 从 .NET Framework 4.7.1 开始，屏幕阅读器宣布可编辑 <xref:System.Windows.Controls.ComboBox> 的名称。
 
 - 在 .NET Framework 4.7 及更低版本中，<xref:System.Windows.Controls.PasswordBox> 控件被宣称为“视图中没有任何项”或有其他错误行为。 此问题已在 .NET Framework 4.7.1 及更高版本中解决。
 
@@ -174,24 +435,24 @@ ms.locfileid: "59612285"
 
 为了支持活动区域，向 WPF 添加了以下 API：
 
-- <xref:System.Windows.Automation.AutomationElementIdentifiers.LiveSettingProperty?displayProperty=nameWithType> 和 <xref:System.Windows.Automation.AutomationElementIdentifiers.LiveRegionChangedEvent?displayProperty=nameWithType> 字段，用于标识 LiveSetting 属性和 LiveRegionChanged 事件。 可通过使用 XAML 来进行设置。
+- <xref:System.Windows.Automation.AutomationElementIdentifiers.LiveSettingProperty?displayProperty=nameWithType> 和 <xref:System.Windows.Automation.AutomationElementIdentifiers.LiveRegionChangedEvent?displayProperty=nameWithType> 字段，用于标识 LiveSetting  属性和 LiveRegionChanged  事件。 可通过使用 XAML 来进行设置。
 
-- AutomationProperties.LiveSetting 附加属性，用于向屏幕阅读器通知 UI 更改对用户的重要性。
+- AutomationProperties.LiveSetting  附加属性，用于向屏幕阅读器通知 UI 更改对用户的重要性。
 
-- <xref:System.Windows.Automation.AutomationProperties.LiveSettingProperty?displayProperty=nameWithType> 属性，用于标识 AutomationProperties.LiveSetting 附加属性。
+- <xref:System.Windows.Automation.AutomationProperties.LiveSettingProperty?displayProperty=nameWithType> 属性，用于标识 AutomationProperties.LiveSetting  附加属性。
 
-- <xref:System.Windows.Automation.Peers.AutomationPeer.GetLiveSettingCore%2A?displayProperty=nameWithType> 方法，可替代该方法以提供 LiveSetting 值。
+- <xref:System.Windows.Automation.Peers.AutomationPeer.GetLiveSettingCore%2A?displayProperty=nameWithType> 方法，可替代该方法以提供 LiveSetting  值。
 
-- <xref:System.Windows.Automation.AutomationProperties.GetLiveSetting%2A?displayProperty=nameWithType> 和 <xref:System.Windows.Automation.AutomationProperties.SetLiveSetting%2A?displayProperty=nameWithType> 方法，用于获取和设置 LiveSetting 值。
+- <xref:System.Windows.Automation.AutomationProperties.GetLiveSetting%2A?displayProperty=nameWithType> 和 <xref:System.Windows.Automation.AutomationProperties.SetLiveSetting%2A?displayProperty=nameWithType> 方法，用于获取和设置 LiveSetting  值。
 
-- <xref:System.Windows.Automation.AutomationLiveSetting?displayProperty=nameWithType> 枚举，用于定义以下可能的 LiveSetting 值：
+- <xref:System.Windows.Automation.AutomationLiveSetting?displayProperty=nameWithType> 枚举，用于定义以下可能的 LiveSetting  值：
 
    - <xref:System.Windows.Automation.AutomationLiveSetting.Off?displayProperty=nameWithType>。 如果活动区域的内容已更改，则该元素不会发送通知。
    - <xref:System.Windows.Automation.AutomationLiveSetting.Polite?displayProperty=nameWithType>。 如果活动区域的内容已更改，则该元素将发送非中断通知。
 
    - <xref:System.Windows.Automation.AutomationLiveSetting.Assertive?displayProperty=nameWithType>。 如果活动区域的内容已更改，则该元素将发送中断通知。
 
-可通过对相关元素设置 AutomationProperties.LiveSetting 属性来创建 LiveRegion，如以下示例所示：
+可通过对相关元素设置 AutomationProperties.LiveSetting  属性来创建 LiveRegion，如以下示例所示：
 
 ```xaml
 <TextBlock Name="myTextBlock" AutomationProperties.LiveSetting="Assertive">announcement</TextBlock>
@@ -369,11 +630,11 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
 自 .NET Framework 4.7.1 和 Visual Studio 2017 15.3 起，ASP.NET 改进了 ASP.NET Web 控件与 Visual Studio 中的辅助功能技术配合使用的方式。 包括以下更改：
 
-- 在以下控件中实现缺失 UI 的辅助功能模式：例如“详细信息视图”向导中的“添加字段”对话框或“ListView”向导的“配置 ListView”对话框。
+- 在以下控件中实现缺失 UI 的辅助功能模式：例如“详细信息视图”向导中的“添加字段”对话框或“ListView”向导的“配置 ListView”对话框     。
 
-- 改善在高对比度模式下（如“数据页导航字段编辑器”）的显示。
+- 改善在高对比度模式下（如“数据页导航字段编辑器”）的显示  。
 
-- 改善以下控件的键盘导航体验：例如 DataPager 控件的“编辑页导航字段”向导中的“字段”对话框、“配置 ObjectContext”对话框或“配置数据源”向导的“配置数据选择”对话框。
+- 改善以下控件的键盘导航体验：例如 DataPager 控件的“编辑页导航字段”向导中的“字段”对话框、“配置 ObjectContext”对话框或“配置数据源”向导的“配置数据选择”对话框      。
 
 <a name="tools471"></a>
 
@@ -401,9 +662,9 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
   - 警告图标可以通过键盘访问。
 
-  - “属性”窗口的“更多属性”按钮可以通过键盘访问。
+  - “属性”窗口的“更多属性”按钮可以通过键盘访问   。
 
-  - 键盘用户可以访问工作流设计器“参数”和“变量”窗格的标题项。
+  - 键盘用户可以访问工作流设计器“参数”和“变量”窗格的标题项   。
 
 - 提升了聚焦项的可见性，例如当：
 

@@ -3,12 +3,12 @@ title: C# 类型和变量 - C# 语言介绍
 description: 了解如何在 C# 中定义类型和声明变量
 ms.date: 08/10/2016
 ms.assetid: f8a8051e-0049-43f1-b594-9c84cc7b1224
-ms.openlocfilehash: 5623b4a1e85508ea7206df2c73b7aaffcbc3fbb1
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: a3f31eca296265c1e7f0c14a9540e267a2165ec1
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65881980"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423444"
 ---
 # <a name="types-and-variables"></a>类型和变量
 
@@ -55,7 +55,7 @@ C# 值类型又细分为*简单类型*、*枚举类型*、*结构类型*和*可�
 [DelegateTypes]: ../language-reference/keywords/delegate.md
 [ArrayTypes]: ../programming-guide/arrays/index.md
 
-有关数值类型的详细信息，请参阅[整型类型表](../language-reference/keywords/integral-types-table.md)和[浮点类型表](../language-reference/keywords/floating-point-types-table.md)。
+有关数值类型的详细信息，请参阅[整型类型](../language-reference/builtin-types/integral-numeric-types.md)和[浮点类型表](../language-reference/keywords/floating-point-types-table.md)。
 
 C# 的 `bool` 类型用于表示布尔值（`true` 或 `false`）。
 

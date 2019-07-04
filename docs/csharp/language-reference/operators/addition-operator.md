@@ -14,12 +14,12 @@ helpviewer_keywords:
 - event subscription [C#]
 - += operator [C#]
 ms.assetid: 93e56486-bb42-43c1-bd43-60af11e64e67
-ms.openlocfilehash: 14e62d53fca16212fae374b2627d1e96cbbca6ac
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 258adc45fc6874cca5829479eef1196ebea1e300
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025314"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67347979"
 ---
 # <a name="-and--operators-c-reference"></a>+ 和 += 运算符（C# 参考）
 
@@ -39,7 +39,7 @@ ms.locfileid: "67025314"
 
 ## <a name="delegate-combination"></a>委托组合
 
-对于[委托](../keywords/delegate.md)类型相同的操作数，`+` 运算符在调用时返回新的委托实例，调用第一个操作数，然后调用第二个操作数。 如果任何操作数均为 `null`，则 `+` 运算符将返回另一个操作数（也可能是 `null`）的值。 下面的示例演示如何组合使用委托和 `+` 运算符：
+对于[委托](../keywords/delegate.md)类型相同的操作数，`+` 运算符在调用时返回新的委托实例，调用左侧的操作数，然后调用右侧的操作数。 如果任何操作数均为 `null`，则 `+` 运算符将返回另一个操作数（也可能是 `null`）的值。 下面的示例演示如何组合使用委托和 `+` 运算符：
 
 [!code-csharp-interactive[delegate combination](~/samples/csharp/language-reference/operators/AdditionOperator.cs#AddDelegates)]
 

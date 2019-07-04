@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 42d9dc2a-8fcc-4ff3-b002-4ff260ef3dc5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6446cc3ee102fa57f5bf60c1353f7b9d5522be69
-ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
+ms.openlocfilehash: 178255c03c2f5da41579f00c0c81ba3c85a0b0ee
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66816129"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67347355"
 ---
 # <a name="security-considerations-for-reflection"></a>反射的安全注意事项
 通过反射能够获取有关类型和成员的信息，并能访问成员（即，调用方法和构造函数来获取和设置属性值，添加和移除事件处理程序，等等）。 使用反射可以获取有关类型的信息并且成员是不受限制的。 所有代码都可使用反射来执行以下任务：  
@@ -102,7 +102,7 @@ ms.locfileid: "66816129"
   
 - .NET Framework 2.0 Service Pack 1 中引入了 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> 标志。 早期版本的 .NET Framework 需要使用反射访问非公共成员的代码的 <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> 标志。 这是绝对不会授予给部分受信任的代码的权限。  
   
-- 以 [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] 开始，使用反射获取关于非公共类型和成员的信息不需要任何权限。 早期版本中，需要带 <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType> 标志的 <xref:System.Security.Permissions.ReflectionPermission>。  
+- 从 .NET Framework 2.0 开始，使用反射获取关于非公共类型和成员的信息不需要任何权限。 早期版本中，需要带 <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType> 标志的 <xref:System.Security.Permissions.ReflectionPermission>。  
   
 ## <a name="see-also"></a>请参阅
 

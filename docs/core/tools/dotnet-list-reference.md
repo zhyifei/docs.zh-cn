@@ -1,17 +1,21 @@
 ---
 title: dotnet list reference 命令
 description: dotnet list reference 命令可便于列出项目间引用。
-ms.date: 12/03/2018
-ms.openlocfilehash: c0b88c4a0af4469d7ddc9e0a9368bb1b2d9d20b6
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.date: 06/26/2019
+ms.openlocfilehash: 1f87ff89997cdaa6d0095a4db9f28a2e7cb7e6a9
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632414"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67421829"
 ---
 # <a name="dotnet-list-reference"></a>dotnet list reference
 
+**本主题适用于：✓** .NET Core 1.x SDK 及更高版本
+
+<!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+-->
 
 ## <a name="name"></a>name
 
@@ -19,7 +23,7 @@ ms.locfileid: "65632414"
 
 ## <a name="synopsis"></a>摘要
 
-`dotnet list [<PROJECT>] reference [-h|--help]`
+`dotnet list [<PROJECT>|<SOLUTION>] reference [-h|--help]`
 
 ## <a name="description"></a>说明
 
@@ -27,9 +31,9 @@ ms.locfileid: "65632414"
 
 ## <a name="arguments"></a>自变量
 
-* **`PROJECT`**
+* **`PROJECT | SOLUTION`**
 
-  指定用于列出引用的项目文件。 如果未指定，此命令会搜索当前目录，以获取项目文件。
+  指定用于列出引用的项目或解决方案文件。 如果未指定，此命令会搜索当前目录，以获取项目文件。
 
 ## <a name="options"></a>选项
 

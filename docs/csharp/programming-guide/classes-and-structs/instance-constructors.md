@@ -6,15 +6,16 @@ helpviewer_keywords:
 - constructors [C#], instance constructors
 - instance constructors [C#]
 ms.assetid: 24663779-c1e5-4af4-a942-ca554e4c542d
-ms.openlocfilehash: c698ffc8d1bc68b2ebcbdf4578ab5926d4743516
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: a5ed331c6b2960a56d7ab0d7812cb3a687ccfdd5
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203465"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423762"
 ---
 # <a name="instance-constructors-c-programming-guide"></a>实例构造函数（C# 编程指南）
-使用 [new](../../../csharp/language-reference/keywords/new.md) 表达式创建[类](../../../csharp/language-reference/keywords/class.md)的对象时，实例构造函数可用于创建和初始化任意实例成员变量。 若要初始化[静态](../../../csharp/language-reference/keywords/static.md)类或非静态类中的静态变量，必须定义静态构造函数。 有关详细信息，请参阅[静态构造函数](../../../csharp/programming-guide/classes-and-structs/static-constructors.md)。  
+
+使用 [new](../../../csharp/language-reference/operators/new-operator.md) 表达式创建[类](../../../csharp/language-reference/keywords/class.md)的对象时，实例构造函数可用于创建和初始化任意实例成员变量。 若要初始化[静态](../../../csharp/language-reference/keywords/static.md)类或非静态类中的静态变量，请定义静态构造函数。 有关详细信息，请参阅[静态构造函数](../../../csharp/programming-guide/classes-and-structs/static-constructors.md)。  
   
  下面的示例演示了实例构造函数：  
   
@@ -23,7 +24,7 @@ ms.locfileid: "57203465"
 > [!NOTE]
 >  为清楚起见，此类包含公共字段。 建议在编程时不要使用公共字段，因为这种做法会使程序中任何位置的任何方法都可以不受限制、不经验证地访问对象的内部组件。 数据成员通常应当为私有的，并且只应通过类方法和属性来访问。  
   
- 只要创建基于 `Coords` 类的对象，就会调用此实例构造函数。 诸如此类不带参数的构造函数称为“默认构造函数”。 然而，提供其他构造函数通常十分有用。 例如，可以将构造函数添加到 `Coords` 类，以便可以为数据成员指定初始值：  
+ 只要创建基于 `Coords` 类的对象，就会调用此实例构造函数。 诸如此类不带参数的构造函数称为“无参数构造函数”  。 然而，提供其他构造函数通常十分有用。 例如，可以将构造函数添加到 `Coords` 类，以便可以为数据成员指定初始值：  
   
  [!code-csharp[csProgGuideObjects#76](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#76)]  
   
@@ -31,7 +32,7 @@ ms.locfileid: "57203465"
   
  [!code-csharp[csProgGuideObjects#77](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#77)]  
   
- 如果某个类没有构造函数，则会自动生成一个默认构造函数，并使用默认值来初始化对象字段。 例如，[int](../../../csharp/language-reference/keywords/int.md) 初始化为 0。 有关默认值的详细信息，请参阅[默认值表](../../../csharp/language-reference/keywords/default-values-table.md)。 由于 `Coords` 类的默认构造函数将所有数据成员都初始化为零，因此可以将它完全移除，而不会更改类的工作方式。 本主题稍后部分的示例 1 中提供了使用多个构造函数的完整示例，示例 2 中提供了自动生成的构造函数的示例。  
+ 如果某个类没有构造函数，则会自动生成一个无参数构造函数，并使用默认值来初始化对象字段。 例如，[int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md) 初始化为 0。 有关默认值的详细信息，请参阅[默认值表](../../../csharp/language-reference/keywords/default-values-table.md)。 由于 `Coords` 类的无参数构造函数将所有数据成员都初始化为零，因此可以将它完全移除，而不会更改类的工作方式。 本主题稍后部分的示例 1 中提供了使用多个构造函数的完整示例，示例 2 中提供了自动生成的构造函数的示例。  
   
  也可以用实例构造函数来调用基类的实例构造函数。 类构造函数可通过初始值设定项来调用基类的构造函数，如下所示：  
   
@@ -45,7 +46,7 @@ ms.locfileid: "57203465"
  [!code-csharp[csProgGuideObjects#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#4)]  
   
 ## <a name="example-2"></a>示例 2  
- 在此示例中，`Person` 没有任何构造函数；在这种情况下，将自动提供默认构造函数，同时将字段初始化为它们的默认值。  
+ 在此示例中，`Person` 类没有任何构造函数；在这种情况下，将自动提供无参数构造函数，同时将字段初始化为它们的默认值。  
   
  [!code-csharp[csProgGuideObjects#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#8)]  
   

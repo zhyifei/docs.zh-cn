@@ -1,13 +1,13 @@
 ---
 title: dotnet-add reference 命令
 description: dotnet add reference 命令可便于添加项目间引用。
-ms.date: 04/24/2019
-ms.openlocfilehash: e90f95527d4f14c7851ccd8d30201daaaaefa2ae
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.date: 06/26/2019
+ms.openlocfilehash: 6e0ca40e701b62dcc18147f9de83cafa6aa2f50f
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65631943"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422006"
 ---
 # <a name="dotnet-add-reference"></a>dotnet-add reference
 
@@ -23,7 +23,7 @@ ms.locfileid: "65631943"
 
 ## <a name="synopsis"></a>摘要
 
-`dotnet add [<PROJECT>] reference [-f|--framework] <PROJECT_REFERENCES> [-h|--help]`
+`dotnet add [<PROJECT>] reference [-f|--framework] <PROJECT_REFERENCES> [-h|--help] [--interactive]`
 
 ## <a name="description"></a>说明
 
@@ -56,6 +56,10 @@ ms.locfileid: "65631943"
 * **`-f|--framework <FRAMEWORK>`**
 
   仅在以特定[框架](../../standard/frameworks.md)为目标时添加项目引用。
+
+* **`--interactive`**
+
+  允许命令停止并等待用户输入或操作（例如，完成身份验证）。 自 .NET Core 3.0 SDK 起可用。
 
 ## <a name="examples"></a>示例
 

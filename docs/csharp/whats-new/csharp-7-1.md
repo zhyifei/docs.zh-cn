@@ -2,12 +2,12 @@
 title: C# 7.1 中的新增功能
 description: C# 7.1 中的新增功能概述。
 ms.date: 04/09/2019
-ms.openlocfilehash: 4b7bd96e428f990b2db91a4cfd45da01dc133aac
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: a95111b6f217a2ca5c520c2d4d70efa0e23742f9
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65881556"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67347607"
 ---
 # <a name="whats-new-in-c-71"></a>C# 7.1 中的新增功能
 
@@ -29,6 +29,13 @@ C# 7.1 增加了[语言版本选择](../language-reference/configure-language-ve
 最后，编译器有 `-refout` 和 `-refonly` 两个选项，可用于控制[引用程序集生成](#reference-assembly-generation)。
 
 若要使用单点版本中的最新功能，需要[配置编译器语言版本](../language-reference/configure-language-version.md)并选择版本。
+
+本文的其余部分概述了每个功能。 你将了解每项功能背后的原理。 将了解语法。 可以使用 `dotnet try` 全局工具在环境中浏览这些功能：
+
+1. 安装 [dotnet-try](https://github.com/dotnet/try/blob/master/README.md#setup) 全局工具。
+1. 克隆 [dotnet/try-samples](https://github.com/dotnet/try-samples) 存储库。
+1. 将当前目录设置为 try-samples 存储库的 csharp7 子目录   。
+1. 运行 `dotnet try`。
 
 ## <a name="async-main"></a>异步 `main` 方法
 
@@ -109,5 +116,5 @@ var pair = (count, label); // element names are "count" and "label"
 
 ## <a name="reference-assembly-generation"></a>引用程序集生成
 
-有两个新编译器选项可生成仅引用程序集：[-refout](../language-reference/compiler-options/refout-compiler-option.md) 和 [-refonly](../language-reference/compiler-options/refonly-compiler-option.md)。
+有两个新编译器选项可生成仅引用程序集：[-refout](../language-reference/compiler-options/refout-compiler-option.md) 和 [-refonly](../language-reference/compiler-options/refonly-compiler-option.md)  。
 链接的文章详细介绍了这些选项和引用程序集。

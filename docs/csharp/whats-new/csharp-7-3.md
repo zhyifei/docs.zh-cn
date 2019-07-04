@@ -2,12 +2,12 @@
 title: C# 7.3 中的新增功能
 description: C# 7.3 中的新增功能概述
 ms.date: 05/16/2018
-ms.openlocfilehash: aca5c1b82253c02eccf24af1e5c45d0203d0b1b8
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 768070ead2b180d5f4491ac87be6c248c39e9944
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66832710"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397781"
 ---
 # <a name="whats-new-in-c-73"></a>C# 7.3 中的新增功能
 
@@ -34,7 +34,12 @@ C# 7.3 版本有两个主要主题。 第一个主题提供使安全代码的性
 - `-publicsign`，用于启用程序集的开放源代码软件 (OSS) 签名。
 - `-pathmap`用于提供源目录的映射。
 
-本文的剩余部分提供了详细信息和链接，以便你详细了解每项改进。
+本文的剩余部分提供了详细信息和链接，以便你详细了解每项改进。 可以使用 `dotnet try` 全局工具在环境中浏览这些功能：
+
+1. 安装 [dotnet-try](https://github.com/dotnet/try/blob/master/README.md#setup) 全局工具。
+1. 克隆 [dotnet/try-samples](https://github.com/dotnet/try-samples) 存储库。
+1. 将当前目录设置为 try-samples 存储库的 csharp7 子目录   。
+1. 运行 `dotnet try`。
 
 ## <a name="enabling-more-efficient-safe-code"></a>启用更高效的安全代码
 

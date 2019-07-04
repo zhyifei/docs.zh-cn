@@ -6,14 +6,15 @@ helpviewer_keywords:
 - ToString method, overriding in C#
 - inheritance [C#], overriding OnPaint and ToString
 ms.assetid: 8016db69-1f19-420c-8e17-98e8bebb7749
-ms.openlocfilehash: 18734627e299c696e23bb0ec9bc63ed37fe3e601
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: b12aeaeb5414d911abea4dfda654183ffa02b3e6
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59294972"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398458"
 ---
 # <a name="how-to-override-the-tostring-method-c-programming-guide"></a>如何：重写 ToString 方法（C# 编程指南）
+
 C# 中的每个类或结构都可隐式继承 <xref:System.Object> 类。 因此，C# 中的每个对象都会获取 <xref:System.Object.ToString%2A> 方法，该方法返回该对象的字符串表示形式。 例如，类型为 `int` 的所有变量都有一个 `ToString` 方法，使它们可以将其内容作为字符串返回：  
   
  [!code-csharp[csProgGuideInheritance#37](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#37)]  
@@ -23,9 +24,9 @@ C# 中的每个类或结构都可隐式继承 <xref:System.Object> 类。 因此
  若要深入了解如何通过 `ToString` 方法使用格式字符串和其他类型的自定义格式设置，请参阅[格式化类型](../../../standard/base-types/formatting-types.md)。  
   
 > [!IMPORTANT]
->  决定通过此方法提供信息内容时，请考虑你的类或结构是否会被不受信任的代码使用。 请务必确保不提供可能被恶意代码利用的任何信息。  
+> 决定通过此方法提供信息内容时，请考虑你的类或结构是否会被不受信任的代码使用。 请务必确保不提供可能被恶意代码利用的任何信息。  
   
-### <a name="to-override-the-tostring-method-in-your-class-or-struct"></a>替代类或结构中的 ToString 方法  
+替代类或结构中的 `ToString` 方法：
   
 1. 声明具有下列修饰符和返回类型的 `ToString` 方法：  
   
@@ -50,7 +51,6 @@ C# 中的每个类或结构都可隐式继承 <xref:System.Object> 类。 因此
 - [类和结构](../../../csharp/programming-guide/classes-and-structs/index.md)
 - [字符串](../../../csharp/programming-guide/strings/index.md)
 - [string](../../../csharp/language-reference/keywords/string.md)
-- [new](../../../csharp/language-reference/keywords/new.md)
 - [override](../../../csharp/language-reference/keywords/override.md)
 - [virtual](../../../csharp/language-reference/keywords/virtual.md)
 - [格式设置类型](../../../standard/base-types/formatting-types.md)

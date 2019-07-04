@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0f8bf8fa-b993-478f-87ab-1a1a7976d298
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 434a88e305f833a5a95bb62835b5badd4a2c4949
-ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
+ms.openlocfilehash: 4579e00bdaf89b4cf5d0da24a343fb5070609863
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66816147"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67347314"
 ---
 # <a name="security-issues-in-reflection-emit"></a>反射发出中的安全问题
 .NET Framework 提供了三种发出 Microsoft 中间语言 (MSIL) 的方式，每种方式都有其自身的安全问题：  
@@ -151,7 +151,7 @@ ms.locfileid: "66816147"
  最后，.NET Framework 2.0 SP1 引入了匿名托管的方法。  
   
 ### <a name="obtaining-information-on-types-and-members"></a>获取有关类型和成员的信息  
- 从 [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] 开始，获取有关非公共类型和成员信息不再需要任何权限。 使用反射可获取发出动态方法所需的信息。 例如，使用 <xref:System.Reflection.MethodInfo> 对象发出方法调用。 .NET Framework 的早期版本需要使用带有 <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType> 标志的 <xref:System.Security.Permissions.ReflectionPermission>。 有关详细信息，请参阅[反射的安全注意事项](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md)。  
+ 从 .NET Framework 2.0 开始，获取有关非公共类型和成员信息不再需要任何权限。 使用反射可获取发出动态方法所需的信息。 例如，使用 <xref:System.Reflection.MethodInfo> 对象发出方法调用。 .NET Framework 的早期版本需要使用带有 <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType> 标志的 <xref:System.Security.Permissions.ReflectionPermission>。 有关详细信息，请参阅[反射的安全注意事项](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md)。  
   
 ## <a name="see-also"></a>请参阅
 

@@ -3,12 +3,12 @@ title: ML.NET CLI 工具中的 auto-train 命令
 description: ML.NET CLI 工具中 auto-train 命令的概述、示例和参考。
 ms.date: 04/16/2019
 ms.custom: ''
-ms.openlocfilehash: ce5994f392c492e80676b9e65ce54fe010cf03ab
-ms.sourcegitcommit: 90f0bee0e8a416e45c78fa3ad4c91ef00e5228d5
+ms.openlocfilehash: 73bae0165af76226152de322d2951086646a1a1d
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66722611"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397660"
 ---
 # <a name="the-auto-train-command-in-mlnet-cli"></a>ML.NET CLI 中的“auto-train”命令
 

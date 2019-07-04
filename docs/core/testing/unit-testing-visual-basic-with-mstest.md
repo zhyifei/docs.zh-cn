@@ -7,14 +7,14 @@ ms.date: 09/01/2017
 dev_langs:
 - vb
 ms.custom: seodec18
-ms.openlocfilehash: a717e8b3da4743da96c3f6e52488fa1e8395e35d
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 035daf2ec7fa487c171317fd67e7c39fea7fc951
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66689263"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397619"
 ---
-# <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-mstest"></a>使用 dotnet test 和 MStest 进行 Visual Basic .NET Core 库单元测试
+# <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-mstest"></a>使用 dotnet test 和 MSTest 进行 Visual Basic .NET Core 库单元测试
 
 本教程介绍分步构建示例解决方案的交互式体验，以了解单元测试概念。 如果希望使用预构建解决方案学习本教程，请在开始前[查看或下载示例代码](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-vb-mstest/)。 有关下载说明，请参阅[示例和教程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
 
@@ -44,7 +44,7 @@ Namespace Prime.Services
 End Namespace
 ```
 
-将目录更改回 unit-testing-vb-using-stest  目录。 运行 [`dotnet sln add .\PrimeService\PrimeService.vbproj`](../tools/dotnet-sln.md) 向解决方案添加类库项目。
+将目录更改回 unit-testing-vb-using-mstest 目录  。 运行 [`dotnet sln add .\PrimeService\PrimeService.vbproj`](../tools/dotnet-sln.md) 向解决方案添加类库项目。
 
 ## <a name="creating-the-test-project"></a>创建测试项目
 

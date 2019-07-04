@@ -3,12 +3,12 @@ title: dotnet new 自定义模板
 description: 了解任意类型 .NET 项目或文件的自定义模板。
 author: thraka
 ms.date: 06/14/2019
-ms.openlocfilehash: d7e9c549ff132deb4682ba81ab5ff354d6cc1522
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: 738c6b07f77bdbf6fd946253f95c8691e4172f31
+ms.sourcegitcommit: 52e588dc2ee74d484cd07ac60076be25cbf777ab
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67169635"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67410353"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>dotnet new 自定义模板
 
@@ -100,7 +100,7 @@ mytemplate  文件夹是可安装的模板包。 安装此包后，`shortName` �
 01. 添加 `<PackageType>` 设置并将其设为 `Template`。
 01. 添加 `<PackageVersion>` 设置并将其设为有效的 [NuGet 版本号](/nuget/reference/package-versioning)。
 01. 添加 `<PackageId>` 设置并将其设为唯一标识符。 此标识符用于卸载模板包，NuGet 源用它来注册你的模板包。
-01. 应设置泛型元数据设置：`<Title>`、`<Authors>`、`<Description>` 和 `<Tags>`。
+01. 应设置泛型元数据设置：`<Title>`、`<Authors>`、`<Description>` 和 `<PackageTags>`。
 01. 必须设置 `<TargetFramework>` 设置，即使未使用模板过程生成的二进制文件也必须设置。 在下面的示例中，它设置为 `netstandard2.0`。
 
 .nupkg  NuGet 包形式的模板包要求所有模板都存储在包中的 content  文件夹中。 还有几个设置将添加到 .csproj  文件以确保生成的 .nupkg  作为模板包安装：
@@ -125,7 +125,7 @@ mytemplate  文件夹是可安装的模板包。 安装此包后，`shortName` �
     <Title>AdatumCorporation Templates</Title>
     <Authors>Me</Authors>
     <Description>Templates to use when creating an application for Adatum Corporation.</Description>
-    <Tags>dotnet-new;templates;contoso</Tags>
+    <PackageTags>dotnet-new;templates;contoso</PackageTags>
     <TargetFramework>netstandard2.0</TargetFramework>
 
     <IncludeContentInPack>true</IncludeContentInPack>

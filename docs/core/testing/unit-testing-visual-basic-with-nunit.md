@@ -6,12 +6,12 @@ ms.date: 10/04/2018
 dev_langs:
 - vb
 ms.custom: seodec18
-ms.openlocfilehash: 2c8a6b86dd66b13faa242f94cf11cb940986fbd0
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: cf8a81241c93a6eeecf04052aba57750774aa050
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56746871"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397507"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-nunit"></a>使用 dotnet test 和 NUnit 进行 Visual Basic .NET Core 库的单元测试
 
@@ -24,13 +24,13 @@ ms.locfileid: "56746871"
 
 ## <a name="creating-the-source-project"></a>创建源项目
 
-打开 shell 窗口。 创建一个名为 unit-testing-vb-nunit 的目录，以保留该解决方案。 在此新目录中，运行以下命令，为类库和测试项目创建新的解决方案文件：
+打开 shell 窗口。 创建一个名为 unit-testing-vb-nunit  的目录，以保留该解决方案。 在此新目录中，运行以下命令，为类库和测试项目创建新的解决方案文件：
 
 ```console
 dotnet new sln
 ```
 
-接下来，创建 PrimeService 目录。 下图显示了当前的文件结构：
+接下来，创建 PrimeService  目录。 下图显示了当前的文件结构：
 
 ```
 /unit-testing-vb-nunit
@@ -38,13 +38,13 @@ dotnet new sln
     /PrimeService
 ```
 
-将 PrimeService 作为当前目录，并运行以下命令以创建源项目：
+将 PrimeService  作为当前目录，并运行以下命令以创建源项目：
 
 ```console
 dotnet new classlib -lang VB
 ```
 
-将 Class1.VB 重命名为 PrimeService.VB。 创建 `PrimeService` 类的失败实现：
+将 Class1.VB  重命名为 PrimeService.VB  。 创建 `PrimeService` 类的失败实现：
 
 ```vb
 Imports System
@@ -58,7 +58,7 @@ Namespace Prime.Services
 End Namespace
 ```
 
-将目录更改回 unit-testing-vb-using-stest 目录。 运行以下命令，向解决方案添加类库项目：
+将目录更改回 unit-testing-vb-using-mstest 目录  。 运行以下命令，向解决方案添加类库项目：
 
 ```console
 dotnet sln add .\PrimeService\PrimeService.vbproj
@@ -66,7 +66,7 @@ dotnet sln add .\PrimeService\PrimeService.vbproj
 
 ## <a name="creating-the-test-project"></a>创建测试项目
 
-接下来，创建 PrimeService.Tests 目录。 下图显示了它的目录结构：
+接下来，创建 PrimeService.Tests  目录。 下图显示了它的目录结构：
 
 ```
 /unit-testing-vb-nunit
@@ -77,13 +77,13 @@ dotnet sln add .\PrimeService\PrimeService.vbproj
     /PrimeService.Tests
 ```
 
-将 PrimeService.Tests 目录作为当前目录，并使用以下命令创建一个新项目：
+将 PrimeService.Tests  目录作为当前目录，并使用以下命令创建一个新项目：
 
 ```console
 dotnet new nunit -lang VB
 ```
 
-[dotnet new](../tools/dotnet-new.md) 命令可创建一个将 NUnit 用作测试库的测试项目。 生成的模板在 PrimeServiceTests.vbproj 文件中配置了测试运行程序：
+[dotnet new](../tools/dotnet-new.md) 命令可创建一个将 NUnit 用作测试库的测试项目。 生成的模板在 PrimeServiceTests.vbproj  文件中配置了测试运行程序：
 
 [!code-xml[Packages](~/samples/core/getting-started/unit-testing-vb-nunit/PrimeService.Tests/PrimeService.Tests.vbproj#Packages)]
 
@@ -108,7 +108,7 @@ dotnet add reference ../PrimeService/PrimeService.vbproj
         PrimeService.Tests.vbproj
 ```
 
-在 unit-testing-vb-nunit 目录中执行以下命令：
+在 unit-testing-vb-nunit  目录中执行以下命令：
 
 ```console
 dotnet sln add .\PrimeService.Tests\PrimeService.Tests.vbproj
@@ -116,7 +116,7 @@ dotnet sln add .\PrimeService.Tests\PrimeService.Tests.vbproj
 
 ## <a name="creating-the-first-test"></a>创建第一个测试
 
-编写一个失败测试，使其通过，然后重复此过程。 在 PrimeService.Tests 目录中，将 UnitTest1.vb 文件重命名为 PrimeService_IsPrimeShould.VB，并将其整个内容替换为以下代码：
+编写一个失败测试，使其通过，然后重复此过程。 在 PrimeService.Tests  目录中，将 UnitTest1.vb  文件重命名为 PrimeService_IsPrimeShould.VB  ，并将其整个内容替换为以下代码：
 
 ```vb
 Imports NUnit.Framework
@@ -137,7 +137,7 @@ Namespace PrimeService.Tests
 End Namespace
 ```
 
-`<TestFixture>` 属性指示包含测试的类。 `<Test>` 属性表示由测试运行程序运行的方法。 在 unit-testing-vb-nunit 中，执行 [`dotnet test`](../tools/dotnet-test.md) 以构建测试和类库，然后运行测试。 NUnit 测试运行程序包含要运行测试的程序入口点。 `dotnet test` 使用已创建的单元测试项目启动测试运行程序。
+`<TestFixture>` 属性指示包含测试的类。 `<Test>` 属性表示由测试运行程序运行的方法。 在 unit-testing-vb-nunit  中，执行 [`dotnet test`](../tools/dotnet-test.md) 以构建测试和类库，然后运行测试。 NUnit 测试运行程序包含要运行测试的程序入口点。 `dotnet test` 使用已创建的单元测试项目启动测试运行程序。
 
 测试失败。 尚未创建实现。 在起作用的 `PrimeService` 类中编写最简单的代码，以生成此测试：
 
@@ -150,7 +150,7 @@ Public Function IsPrime(candidate As Integer) As Boolean
 End Function
 ```
 
-在 unit-testing-vb-nunit 目录中，再次运行 `dotnet test`。 `dotnet test` 命令构建 `PrimeService` 项目，然后构建 `PrimeService.Tests` 项目。 构建这两个项目后，该命令将运行此单项测试。 测试通过。
+在 unit-testing-vb-nunit  目录中，再次运行 `dotnet test`。 `dotnet test` 命令构建 `PrimeService` 项目，然后构建 `PrimeService.Tests` 项目。 构建这两个项目后，该命令将运行此单项测试。 测试通过。
 
 ## <a name="adding-more-features"></a>添加更多功能
 
@@ -160,7 +160,7 @@ End Function
 
 [!code-vb[Sample_TestCode](../../../samples/core/getting-started/unit-testing-vb-nunit/PrimeService.Tests/PrimeService_IsPrimeShould.vb?name=Sample_TestCode)]
 
-运行 `dotnet test`，两项测试均失败。 若要使所有测试通过，可以在 PrimeServices.cs 文件中更改 `Main` 方法开头的 `if` 子句：
+运行 `dotnet test`，两项测试均失败。 若要使所有测试通过，可以在 PrimeServices.cs 文件中更改 `Main` 方法开头的 `if` 子句  ：
 
 ```vb
 if candidate < 2

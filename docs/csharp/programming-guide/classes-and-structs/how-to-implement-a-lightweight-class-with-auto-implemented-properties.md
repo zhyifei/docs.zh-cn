@@ -6,24 +6,28 @@ helpviewer_keywords:
 - auto-implemented properties [C#]
 - properties [C#], auto-implemented
 ms.assetid: 1dc5a8ad-a4f7-4f32-8506-3fc6d8c8bfed
-ms.openlocfilehash: be4d7e5cf4d2f7c117766858dbba9c7c59c74b73
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.openlocfilehash: f9884f353e58ff6119e3bc3b95aa55f0f60d0ad5
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67267681"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398500"
 ---
 # <a name="how-to-implement-a-lightweight-class-with-auto-implemented-properties-c-programming-guide"></a>如何：使用自动实现的属性实现轻量类（C# 编程指南）
-本示例演示如何创建一个仅用于封装一组自动实现的属性的不可变轻型类。 当你必须使用引用类型语义时，请使用此种构造而不是结构。  
-  
- 可通过两种方法来实现不可变的属性。  可以将 [set](../../../csharp/language-reference/keywords/set.md) 访问器声明为[专用](../../../csharp/language-reference/keywords/private.md)。  属性只能在该类型中设置，但它对于使用者是不可变的。  也可以仅声明 [get](../../../csharp/language-reference/keywords/get.md) 访问器，使属性除了能在该类型的构造函数中可变，在其他任何位置都不可变。  
-  
- 当你声明一个 private `set` 取值函数时，你无法使用对象初始值设定项来初始化属性。 你必须使用构造函数或工厂方法。  
-  
-## <a name="example"></a>示例  
- 下面的示例演示了实现具有自动实现属性的不可变类的两种方法。 这两种方法均使用 private `set` 声明其中一个属性，使用单独的 `get` 声明另一个属性。  第一个类仅使用构造函数来初始化属性，第二个类则使用可调用构造函数的静态工厂方法。  
-  
-```csharp  
+
+本示例演示如何创建一个仅用于封装一组自动实现的属性的不可变轻型类。 当你必须使用引用类型语义时，请使用此种构造而不是结构。
+
+可通过两种方法来实现不可变的属性：
+- 可以将 [set](../../../csharp/language-reference/keywords/set.md) 访问器声明为[专用](../../../csharp/language-reference/keywords/private.md)。  属性只能在该类型中设置，但它对于使用者是不可变的。
+
+  当你声明一个 private `set` 取值函数时，你无法使用对象初始值设定项来初始化属性。 你必须使用构造函数或工厂方法。
+- 也可以仅声明 [get](../../../csharp/language-reference/keywords/get.md) 访问器，使属性除了能在该类型的构造函数中可变，在其他任何位置都不可变。
+
+## <a name="example"></a>示例
+
+下面的示例演示了实现具有自动实现属性的不可变类的两种方法。 这两种方法均使用 private `set` 声明其中一个属性，使用单独的 `get` 声明另一个属性。  第一个类仅使用构造函数来初始化属性，第二个类则使用可调用构造函数的静态工厂方法。
+
+```csharp
 // This class is immutable. After an object is created,
 // it cannot be modified from outside the class. It uses a
 // constructor to initialize its properties.
@@ -102,18 +106,18 @@ public class Program
         Console.ReadKey();
     }
 }
-  
-/* Output:  
-    Terry Adams, 123 Main St.  
-    Fadi Fakhouri, 345 Cypress Ave.  
-    Hanying Feng, 678 1st Ave  
-    Cesar Garcia, 12 108th St.  
-    Debra Garcia, 89 E. 42nd St.  
-*/  
-```  
-  
- 编译器为每个自动实现的属性创建了支持字段。 这些字段无法直接从源代码进行访问。  
-  
+
+/* Output:
+    Terry Adams, 123 Main St.
+    Fadi Fakhouri, 345 Cypress Ave.
+    Hanying Feng, 678 1st Ave
+    Cesar Garcia, 12 108th St.
+    Debra Garcia, 89 E. 42nd St.
+*/
+```
+
+编译器为每个自动实现的属性创建了支持字段。 这些字段无法直接从源代码进行访问。
+
 ## <a name="see-also"></a>请参阅
 
 - [属性](../../../csharp/programming-guide/classes-and-structs/properties.md)

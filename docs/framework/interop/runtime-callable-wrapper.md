@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 7e542583-1e31-4e10-b523-8cf2f29cb4a4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5a4a2f59ee81ac7884050f588d9bd437977490e9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 1cc4b691763c1aff4bacc2935a0a6cf32c880180
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59210124"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422619"
 ---
 # <a name="runtime-callable-wrapper"></a>运行时可调用包装
 公共语言运行时通过名为运行时可调用包装 (RCW) 的代理公开 COM 对象。 尽管 RCW 似乎是 .NET 客户端的普通对象，但它的主要功能是封送处理 .NET 客户端和 COM 对象之间的调用。  
@@ -39,23 +39,23 @@ ms.locfileid: "59210124"
   
  ![带有接口的运行时可调用包装器的屏幕截图。](./media/runtime-callable-wrapper/runtime-callable-wrapper-interfaces.gif)  
   
- 当创建为早期绑定对象时，RCW 为特定类型。 它可实现 COM 对象实现的接口，并可公开对象接口中的方法、属性和事件。 图示中，RCW 公开 INew 接口，但使用“IUnknown”和“IDispatch”接口。 此外，RCW 向 .NET 客户端公开 INew 接口的所有成员。  
+ 当创建为早期绑定对象时，RCW 为特定类型。 它可实现 COM 对象实现的接口，并可公开对象接口中的方法、属性和事件。 图示中，RCW 公开 INew 接口，但使用“IUnknown”和“IDispatch”接口   。 此外，RCW 向 .NET 客户端公开 INew 接口的所有成员。  
   
  RCW 使用下表列出的接口，这些接口由其包装的对象公开。  
   
 |接口|说明|  
 |---------------|-----------------|  
 |**IDispatch**|用于通过反射后期绑定到 COM 对象。|  
-|**IErrorInfo**|提供以下内容的文字描述：错误、错误源、帮助文件，帮助上下文以及定义错误的接口的 GUID（.NET 类始终为 GUID_NULL）。|  
-|**IProvideClassInfo**|如果正在包装的 COM 对象实现 IProvideClassInfo，RCW 会提取此接口中的类型信息以提供更佳的类型标识。|  
-|**IUnknown**|针对对象标识、类型强制和生存期管理：<br /><br /> -   对象标识<br />     运行时通过比较每个对象的 IUnknown 接口的值来区分 COM 对象。<br />-   类型强制<br />     RCW 识别由 QueryInterface 方法执行的动态类型发现。<br />-   生存期管理<br />     借助 QueryInterface 方法，RCW 获取并保存对非托管对象的引用，直到运行时在包装器上执行会释放非托管对象的垃圾回收。|  
+|**IErrorInfo**|提供以下内容的文字描述：错误、错误源、帮助文件，帮助上下文以及定义错误的接口的 GUID（.NET 类始终为 GUID_NULL）  。|  
+|**IProvideClassInfo**|如果正在包装的 COM 对象实现 IProvideClassInfo，RCW 会提取此接口中的类型信息以提供更佳的类型标识  。|  
+|**IUnknown**|针对对象标识、类型强制和生存期管理：<br /><br /> -   对象标识<br />     运行时通过比较每个对象的 IUnknown 接口的值来区分 COM 对象  。<br />-   类型强制<br />     RCW 识别由 QueryInterface 方法执行的动态类型发现  。<br />-   生存期管理<br />     借助 QueryInterface 方法，RCW 获取并保存对非托管对象的引用，直到运行时在包装器上执行会释放非托管对象的垃圾回收  。|  
   
  RCW 选择性地使用下表中列出的接口，这些接口由其包装的对象公开。  
   
 |接口|说明|  
 |---------------|-----------------|  
 |**IConnectionPoint** 和 **IConnectionPointContainer**|RCW 对向基于委托的事件公开连接点事件样式的对象执行转换。|  
-|**IDispatchEx**|如果类实现 IDispatchEx，则 RCW 实现 IExpando。 IDispatchEx 接口是 IDispatch 接口的扩展，与 IDispatch 不同，它可枚举、添加、删除和以区分大小的方式调用成员。|  
+|**IDispatchEx**|如果类实现 IDispatchEx，则 RCW 实现 IExpando   。 IDispatchEx 接口是 IDispatch 接口的扩展，与 IDispatch 不同，它可枚举、添加、删除和以区分大小的方式调用成员    。|  
 |**IEnumVARIANT**|使支持枚举的 COM 类型可被视为集合。|  
   
 ## <a name="see-also"></a>请参阅

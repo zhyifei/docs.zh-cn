@@ -7,15 +7,16 @@ helpviewer_keywords:
 - new keyword [C#]
 - polymorphism [C#], using override and new [C#]
 ms.assetid: 323db184-b136-46fc-8839-007886e7e8b0
-ms.openlocfilehash: d653761236cae580eb78a35f9697764f600ec6ee
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: eae57ae1f285e7f0e44c49e3d54fbd81bb4be591
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64583112"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398433"
 ---
 # <a name="knowing-when-to-use-override-and-new-keywords-c-programming-guide"></a>了解何时使用 Override 和 New 关键字（C# 编程指南）
-在 C# 中，派生类中的方法可具有与基类中的方法相同的名称。 可使用 [new](../../../csharp/language-reference/keywords/new.md) 和 [override](../../../csharp/language-reference/keywords/override.md) 关键字指定方法的交互方式。 `override` 修饰符用于扩展基类方法，而 `new` 修饰符则用于隐藏该方法。 本主题中的示例阐释了这种差异。  
+
+在 C# 中，派生类中的方法可具有与基类中的方法相同的名称。 可使用 [new](../../../csharp/language-reference/keywords/new-modifier.md) 和 [override](../../../csharp/language-reference/keywords/override.md) 关键字指定方法的交互方式。 `override` 修饰符用于扩展基类 `virtual` 方法，而 `new` 修饰符用于隐藏可访问的基类方法   。 本主题中的示例阐释了这种差异。  
   
  在控制台应用程序中，声明以下两个类：`BaseClass` 和 `DerivedClass`。 `DerivedClass` 继承自 `BaseClass`。  
   

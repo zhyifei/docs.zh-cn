@@ -4,12 +4,12 @@ description: 了解如何使用 Visual Studio Code 创建和调试首个 C# .NET
 author: kendrahavens
 ms.date: 12/05/2018
 ms.custom: seodec18
-ms.openlocfilehash: 7ea2aed3b340b7ae7a6dcd83df30f9453380af15
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1268a943d7cbf1033531a6c51f42c6fd672eaed3
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64750868"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67401840"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>C# 和 Visual Studio Code 入门
 
@@ -28,13 +28,13 @@ ms.locfileid: "64750868"
 1. 打开项目：
 
     * 打开 Visual Studio Code。
-    * 依次单击左侧菜单上的“资源管理器”图标和 **“打开文件夹”**。
-    * 从主菜单中选择“文件” > “打开文件夹”，打开要在其中放置 C# 项目的文件夹，然后单击“选择文件夹”。 在我们的示例中，为项目创建名为“HelloWorld”的文件夹。
+    * 依次单击左侧菜单上的“资源管理器”图标和 **“打开文件夹”** 。
+    * 从主菜单中选择“文件” > “打开文件夹”，打开要在其中放置 C# 项目的文件夹，然后单击“选择文件夹”    。 在我们的示例中，为项目创建名为“HelloWorld”的文件夹  。
 
       ![Visual Studio Code“打开文件夹”](media/with-visual-studio-code/vs-code-open-folder.png)
 
 2. 初始化 C# 项目：
-    * 通过从主菜单中选择“视图” > “集成终端”，从 Visual Studio Code 中打开集成终端。
+    * 通过从主菜单中选择“视图”   > “集成终端”  ，从 Visual Studio Code 中打开集成终端。
     * 在终端窗口中，键入“`dotnet new console`”。
     * 此命令在已编写“Hello World”简单程序的文件夹中创建 `Program.cs` 文件，以及 `HelloWorld.csproj` C# 项目文件。
 
@@ -42,7 +42,7 @@ ms.locfileid: "64750868"
 
 3. 解析生成资产：
 
-    * 对于 .NET Core 1.x，键入 `dotnet restore`。 运行 `dotnet restore` 后，便有权访问生成项目所需的 .NET Core 包。
+    * 对于 .NET Core 1.x  ，键入 `dotnet restore`。 运行 `dotnet restore` 后，便有权访问生成项目所需的 .NET Core 包。
 
       ![dotnet restore 命令](media/with-visual-studio-code/dotnet-restore-command.png)
 
@@ -62,7 +62,7 @@ ms.locfileid: "64750868"
 
     ![打开 Program.cs 文件](media/with-visual-studio-code/open-program-cs.png)
 
-2. Visual Studio Code 会提示添加缺少的资产，以生成和调试应用。 选择 **“是”**。
+2. Visual Studio Code 会提示添加缺少的资产，以生成和调试应用。 选择 **“是”** 。
 
     ![提示添加缺少的资产](media/with-visual-studio-code/missing-assets.png)
 
@@ -74,7 +74,7 @@ ms.locfileid: "64750868"
 
     ![在 Visual Studio Code 中选择“.NET Core”](media/with-visual-studio-code/select-net-core.png)
 
-5. 单击第 9 行旁边的编辑器边距（编辑器中行号左侧的空间）或者将文本光标移动到编辑器中的第 9 行并按 <kbd>F9</kbd>，为项目添加断点。
+5. 单击第 9 行旁边的编辑器边距  （编辑器中行号左侧的空间）或者将文本光标移动到编辑器中的第 9 行并按 <kbd>F9</kbd>，为项目添加断点。
 
     ![设置断点](media/with-visual-studio-code/set-breakpoint-vs-code.png)
 
@@ -90,7 +90,7 @@ ms.locfileid: "64750868"
 
 ## <a name="add-a-class"></a>添加类
 
-1. 若要添加一个新类，请右键单击 VSCode Explorer 并选择“新文件”。 此操作会将新文件添加到在 VSCode 中打开的文件夹中。
+1. 若要添加一个新类，请右键单击 VSCode Explorer 并选择“新文件”  。 此操作会将新文件添加到在 VSCode 中打开的文件夹中。
 2. 将文件命名为 `MyClass.cs`。 必须在末尾使用 `.cs` 扩展名保存它，以便将其识别为 csharp 文件。
 3. 添加下面的代码，以创建第一个类。 确保包括正确的命名空间，以便可以从 `Program.cs` 文件引用它。
 
@@ -138,7 +138,7 @@ ms.locfileid: "64750868"
 
 ### <a name="im-missing-required-assets-to-build-and-debug-c-in-visual-studio-code-my-debugger-says-no-configuration"></a>缺少在 Visual Studio Code 中生成和调试 C# 所需的资产。 调试器显示“无配置”。
 
-Visual Studio Code C# 扩展可生成用于生成和调试的资产。 首次打开 C# 项目时，Visual Studio Code 会提示用户生成这些资产。 如果当时并未生成这些资产，仍可以通过打开命令面板（“视图”>“命令面板”）并键入“>.NET：生成用于生成和调试的资产”来运行此命令。 选择此方法可生成所需的 .vscode、launch.json 和 tasks.jsonn 配置文件。
+Visual Studio Code C# 扩展可生成用于生成和调试的资产。 首次打开 C# 项目时，Visual Studio Code 会提示用户生成这些资产。 如果当时并未生成这些资产，仍可以通过打开命令面板（“视图”>“命令面板”  ）并键入“>.NET：生成用于生成和调试的资产”来运行此命令。 选择此方法可生成所需的 .vscode、launch.json 和 tasks.jsonn 配置文件。
 
 ## <a name="see-also"></a>请参阅
 
