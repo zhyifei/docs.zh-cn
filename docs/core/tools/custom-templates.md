@@ -1,159 +1,257 @@
 ---
 title: dotnet new 自定义模板
 description: 了解任意类型 .NET 项目或文件的自定义模板。
-author: mairaw
-ms.date: 08/11/2017
-ms.openlocfilehash: 6ce53cab308ed404974e4d736e735bc82ac04fe6
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+author: thraka
+ms.date: 06/14/2019
+ms.openlocfilehash: d7e9c549ff132deb4682ba81ab5ff354d6cc1522
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66299920"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67169635"
 ---
-# <a name="custom-templates-for-dotnet-new"></a><span data-ttu-id="10ff5-103">dotnet new 自定义模板</span><span class="sxs-lookup"><span data-stu-id="10ff5-103">Custom templates for dotnet new</span></span>
+# <a name="custom-templates-for-dotnet-new"></a><span data-ttu-id="505ff-103">dotnet new 自定义模板</span><span class="sxs-lookup"><span data-stu-id="505ff-103">Custom templates for dotnet new</span></span>
 
-<span data-ttu-id="10ff5-104">[.NET Core SDK](https://www.microsoft.com/net/download/core) 附带许多预安装的模板，与 [`dotnet new` 命令](dotnet-new.md)结合使用。</span><span class="sxs-lookup"><span data-stu-id="10ff5-104">The [.NET Core SDK](https://www.microsoft.com/net/download/core) comes with many templates pre-installed to use with the [`dotnet new` command](dotnet-new.md).</span></span> <span data-ttu-id="10ff5-105">自.NET Core 2.0 起，可以为任何类型的项目（如应用程序、服务、工具或类库）创建自己的自定义模板。</span><span class="sxs-lookup"><span data-stu-id="10ff5-105">Starting with .NET Core 2.0, you can create your own custom templates for any type of project, such as an app, service, tool, or class library.</span></span> <span data-ttu-id="10ff5-106">甚至可以创建输出一个或多个独立文件（如配置文件）的模板。</span><span class="sxs-lookup"><span data-stu-id="10ff5-106">You can even create a template that outputs one or more independent files, such as a configuration file.</span></span>
+<span data-ttu-id="505ff-104">[.NET Core SDK](https://www.microsoft.com/net/download/core) 随附了许多已安装并可供你使用的模板。</span><span class="sxs-lookup"><span data-stu-id="505ff-104">The [.NET Core SDK](https://www.microsoft.com/net/download/core) comes with many templates already installed and ready for you to use.</span></span> <span data-ttu-id="505ff-105">[`dotnet new` 命令](dotnet-new.md)不仅用于使用模板，还用于说明如何安装和卸载模板。</span><span class="sxs-lookup"><span data-stu-id="505ff-105">The [`dotnet new` command](dotnet-new.md) isn't only the way to use a template, but also how to install and uninstall templates.</span></span> <span data-ttu-id="505ff-106">自.NET Core 2.0 起，可以为任何类型的项目（如应用程序、服务、工具或类库）创建自己的自定义模板。</span><span class="sxs-lookup"><span data-stu-id="505ff-106">Starting with .NET Core 2.0, you can create your own custom templates for any type of project, such as an app, service, tool, or class library.</span></span> <span data-ttu-id="505ff-107">甚至可以创建输出一个或多个独立文件（如配置文件）的模板。</span><span class="sxs-lookup"><span data-stu-id="505ff-107">You can even create a template that outputs one or more independent files, such as a configuration file.</span></span>
 
-<span data-ttu-id="10ff5-107">可以从任何 NuGet 源上的 NuGet 包安装自定义模板，具体方法是直接引用 NuGet nupkg  文件，或指定包含模板的文件系统目录。</span><span class="sxs-lookup"><span data-stu-id="10ff5-107">You can install custom templates from a NuGet package on any NuGet feed, by referencing a NuGet *nupkg* file directly, or by specifying a file system directory that contains the template.</span></span> <span data-ttu-id="10ff5-108">借助模板引擎提供的功能，可以替换值、添加和排除文件和文件区域，并在使用模板时执行自定义处理操作。</span><span class="sxs-lookup"><span data-stu-id="10ff5-108">The template engine offers features that allow you to replace values, include and exclude files and regions of files, and execute custom processing operations when your template is used.</span></span>
+<span data-ttu-id="505ff-108">可以从任何 NuGet 源上的 NuGet 包安装自定义模板，具体方法是直接引用 NuGet .nupkg  文件，或指定包含模板的文件系统目录。</span><span class="sxs-lookup"><span data-stu-id="505ff-108">You can install custom templates from a NuGet package on any NuGet feed, by referencing a NuGet *.nupkg* file directly, or by specifying a file system directory that contains the template.</span></span> <span data-ttu-id="505ff-109">借助模板引擎提供的功能，可以替换值、包括和排除文件，并在使用模板时执行自定义处理操作。</span><span class="sxs-lookup"><span data-stu-id="505ff-109">The template engine offers features that allow you to replace values, include and exclude files, and execute custom processing operations when your template is used.</span></span>
 
-<span data-ttu-id="10ff5-109">模板引擎是开放源代码，在线代码存储库位于 GitHub 上的 [dotnet/templating](https://github.com/dotnet/templating/)。</span><span class="sxs-lookup"><span data-stu-id="10ff5-109">The template engine is open source, and the online code repository is at [dotnet/templating](https://github.com/dotnet/templating/) on GitHub.</span></span> <span data-ttu-id="10ff5-110">有关模板示例，请访问 [dotnet/dotnet-template-samples](https://github.com/dotnet/dotnet-template-samples) 存储库。</span><span class="sxs-lookup"><span data-stu-id="10ff5-110">Visit the [dotnet/dotnet-template-samples](https://github.com/dotnet/dotnet-template-samples) repo for samples of templates.</span></span> <span data-ttu-id="10ff5-111">GitHub 上的 [dotnet new 可用模板](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new)收录了更多模板，包括第三方模板。</span><span class="sxs-lookup"><span data-stu-id="10ff5-111">More templates, including templates from third parties, are found at [Available templates for dotnet new](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new) on GitHub.</span></span> <span data-ttu-id="10ff5-112">若要详细了解如何创建和使用自定义模板，请参阅[如何创建自己的 dotnet new 模板](https://devblogs.microsoft.com/dotnet/how-to-create-your-own-templates-for-dotnet-new/)和 [dotnet/templating GitHub 存储库 Wiki](https://github.com/dotnet/templating/wiki)。</span><span class="sxs-lookup"><span data-stu-id="10ff5-112">For more information about creating and using custom templates, see [How to create your own templates for dotnet new](https://devblogs.microsoft.com/dotnet/how-to-create-your-own-templates-for-dotnet-new/) and the [dotnet/templating GitHub repo Wiki](https://github.com/dotnet/templating/wiki).</span></span>
+<span data-ttu-id="505ff-110">模板引擎是开放源代码，在线代码存储库位于 GitHub 上的 [dotnet/templating](https://github.com/dotnet/templating/)。</span><span class="sxs-lookup"><span data-stu-id="505ff-110">The template engine is open source, and the online code repository is at [dotnet/templating](https://github.com/dotnet/templating/) on GitHub.</span></span> <span data-ttu-id="505ff-111">有关模板示例，请访问 [dotnet/dotnet-template-samples](https://github.com/dotnet/dotnet-template-samples) 存储库。</span><span class="sxs-lookup"><span data-stu-id="505ff-111">Visit the [dotnet/dotnet-template-samples](https://github.com/dotnet/dotnet-template-samples) repo for samples of templates.</span></span> <span data-ttu-id="505ff-112">GitHub 上的 [dotnet new 可用模板](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new)收录了更多模板，包括第三方模板。</span><span class="sxs-lookup"><span data-stu-id="505ff-112">More templates, including templates from third parties, are found at [Available templates for dotnet new](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new) on GitHub.</span></span> <span data-ttu-id="505ff-113">若要详细了解如何创建和使用自定义模板，请参阅[如何创建自己的 dotnet new 模板](https://devblogs.microsoft.com/dotnet/how-to-create-your-own-templates-for-dotnet-new/)和 [dotnet/templating GitHub 存储库 Wiki](https://github.com/dotnet/templating/wiki)。</span><span class="sxs-lookup"><span data-stu-id="505ff-113">For more information about creating and using custom templates, see [How to create your own templates for dotnet new](https://devblogs.microsoft.com/dotnet/how-to-create-your-own-templates-for-dotnet-new/) and the [dotnet/templating GitHub repo Wiki](https://github.com/dotnet/templating/wiki).</span></span>
 
-<span data-ttu-id="10ff5-113">若要按照演示步骤操作并创建模板，请参阅[创建 dotnet new 自定义模板](~/docs/core/tutorials/create-custom-template.md)教程。</span><span class="sxs-lookup"><span data-stu-id="10ff5-113">To follow a walkthrough and create a template, see the [Create a custom template for dotnet new](~/docs/core/tutorials/create-custom-template.md) tutorial.</span></span>
+<span data-ttu-id="505ff-114">若要按照演示步骤操作并创建模板，请参阅[创建 dotnet new 自定义模板](~/docs/core/tutorials/create-custom-template.md)教程。</span><span class="sxs-lookup"><span data-stu-id="505ff-114">To follow a walkthrough and create a template, see the [Create a custom template for dotnet new](~/docs/core/tutorials/create-custom-template.md) tutorial.</span></span>
 
-## <a name="configuration"></a><span data-ttu-id="10ff5-114">Configuration</span><span class="sxs-lookup"><span data-stu-id="10ff5-114">Configuration</span></span>
+### <a name="net-default-templates"></a><span data-ttu-id="505ff-115">.NET 默认模板</span><span class="sxs-lookup"><span data-stu-id="505ff-115">.NET default templates</span></span>
 
-<span data-ttu-id="10ff5-115">模板由以下部分组成：</span><span class="sxs-lookup"><span data-stu-id="10ff5-115">A template is composed of the following components:</span></span>
+<span data-ttu-id="505ff-116">安装 [.NET Core SDK](https://www.microsoft.com/net/download/core) 时，将获取十多个用于创建项目和文件的内置模板，包括控制台应用程序、类库、单元测试项目、ASP.NET Core 应用程序（包括 [Angular](https://angular.io/) 和 [React](https://facebook.github.io/react/) 项目）和配置文件。</span><span class="sxs-lookup"><span data-stu-id="505ff-116">When you install the [.NET Core SDK](https://www.microsoft.com/net/download/core), you receive over a dozen built-in templates for creating projects and files, including console apps, class libraries, unit test projects, ASP.NET Core apps (including [Angular](https://angular.io/) and [React](https://facebook.github.io/react/) projects), and configuration files.</span></span> <span data-ttu-id="505ff-117">若要列出内置模板，请运行带有 `-l|--list` 选项的 `dotnet new` 命令：</span><span class="sxs-lookup"><span data-stu-id="505ff-117">To list the built-in templates, run the `dotnet new` command with the `-l|--list` option:</span></span>
 
-- <span data-ttu-id="10ff5-116">源文件和文件夹</span><span class="sxs-lookup"><span data-stu-id="10ff5-116">Source files and folders</span></span>
-- <span data-ttu-id="10ff5-117">配置文件 (template.json  )</span><span class="sxs-lookup"><span data-stu-id="10ff5-117">A configuration file (*template.json*)</span></span>
+```console
+dotnet new --list
+```
 
-### <a name="source-files-and-folders"></a><span data-ttu-id="10ff5-118">源文件和文件夹</span><span class="sxs-lookup"><span data-stu-id="10ff5-118">Source files and folders</span></span>
+## <a name="configuration"></a><span data-ttu-id="505ff-118">Configuration</span><span class="sxs-lookup"><span data-stu-id="505ff-118">Configuration</span></span>
 
-<span data-ttu-id="10ff5-119">源文件和文件夹包含执行 `dotnet new <TEMPLATE>` 命令时用户希望模板引擎使用的任何文件和文件夹。</span><span class="sxs-lookup"><span data-stu-id="10ff5-119">The source files and folders include whatever files and folders you want the template engine to use when the `dotnet new <TEMPLATE>` command is executed.</span></span> <span data-ttu-id="10ff5-120">模板引擎旨在将可运行项目  用作源代码，以生成项目。</span><span class="sxs-lookup"><span data-stu-id="10ff5-120">The template engine is designed to use *runnable projects* as source code to produce projects.</span></span> <span data-ttu-id="10ff5-121">这样做有以下几个好处：</span><span class="sxs-lookup"><span data-stu-id="10ff5-121">This has several benefits:</span></span>
+<span data-ttu-id="505ff-119">模板由以下部分组成：</span><span class="sxs-lookup"><span data-stu-id="505ff-119">A template is composed of the following parts:</span></span>
 
-- <span data-ttu-id="10ff5-122">模板引擎不要求用户将特殊令牌注入项目的源代码。</span><span class="sxs-lookup"><span data-stu-id="10ff5-122">The template engine doesn't require you to inject special tokens into your project's source code.</span></span>
-- <span data-ttu-id="10ff5-123">代码文件不必是特殊文件，也不必以任何方式进行修改，即可与模板引擎配合使用。</span><span class="sxs-lookup"><span data-stu-id="10ff5-123">The code files aren't special files or modified in any way to work with the template engine.</span></span> <span data-ttu-id="10ff5-124">因此，处理项目时通常使用的工具也适用于模板内容。</span><span class="sxs-lookup"><span data-stu-id="10ff5-124">So, the tools you normally use when working with projects also work with template content.</span></span>
-- <span data-ttu-id="10ff5-125">生成、运行和调试模板项目，就像生成、运行和调试其他任何项目一样。</span><span class="sxs-lookup"><span data-stu-id="10ff5-125">You build, run, and debug your template projects just like you do for any of your other projects.</span></span>
-- <span data-ttu-id="10ff5-126">只需将 template.json  配置文件添加到项目，即可通过现有项目快速创建模板。</span><span class="sxs-lookup"><span data-stu-id="10ff5-126">You can quickly create a template from an existing project just by adding a *template.json* configuration file to the project.</span></span>
+- <span data-ttu-id="505ff-120">源文件和文件夹。</span><span class="sxs-lookup"><span data-stu-id="505ff-120">Source files and folders.</span></span>
+- <span data-ttu-id="505ff-121">配置文件 (template.json  )。</span><span class="sxs-lookup"><span data-stu-id="505ff-121">A configuration file (*template.json*).</span></span>
 
-<span data-ttu-id="10ff5-127">模板中存储的文件和文件夹并不限于正式的 .NET 项目类型，如 .NET Core 或 .NET Framework 解决方案。</span><span class="sxs-lookup"><span data-stu-id="10ff5-127">Files and folders stored in the template aren't limited to formal .NET project types, such as .NET Core or .NET Framework solutions.</span></span> <span data-ttu-id="10ff5-128">源文件和文件夹可能包含用户希望在使用模板时创建的任何内容，即使模板引擎仅输出一个文件（如配置文件或解决方案文件），也不例外。</span><span class="sxs-lookup"><span data-stu-id="10ff5-128">Source files and folders may consist of any content that you wish to create when the template is used, even if the template engine produces just one file for its output, such as a configuration file or a solution file.</span></span> <span data-ttu-id="10ff5-129">例如，可以创建包含 web.config  源文件的模板，并在使用模板时为项目创建经过修改的 web.config  文件。</span><span class="sxs-lookup"><span data-stu-id="10ff5-129">For example, you can create a template that contains a *web.config* source file and creates a modified *web.config* file for projects where the template is used.</span></span> <span data-ttu-id="10ff5-130">源文件修改依据为用户在 template.json  配置文件中提供的逻辑和设置，以及用户提供的作为选项传递到 `dotnet new <TEMPLATE>` 命令的值。</span><span class="sxs-lookup"><span data-stu-id="10ff5-130">The modifications to source files are based on logic and settings you've provided in the *template.json* configuration file along with values provided by the user passed as options to the `dotnet new <TEMPLATE>` command.</span></span>
+### <a name="source-files-and-folders"></a><span data-ttu-id="505ff-122">源文件和文件夹</span><span class="sxs-lookup"><span data-stu-id="505ff-122">Source files and folders</span></span>
 
-### <a name="templatejson"></a><span data-ttu-id="10ff5-131">template.json</span><span class="sxs-lookup"><span data-stu-id="10ff5-131">template.json</span></span>
+<span data-ttu-id="505ff-123">源文件和文件夹包含运行 `dotnet new <TEMPLATE>` 命令时用户希望模板引擎使用的任何文件和文件夹。</span><span class="sxs-lookup"><span data-stu-id="505ff-123">The source files and folders include whatever files and folders you want the template engine to use when the `dotnet new <TEMPLATE>` command is run.</span></span> <span data-ttu-id="505ff-124">模板引擎旨在将可运行项目  用作源代码，以生成项目。</span><span class="sxs-lookup"><span data-stu-id="505ff-124">The template engine is designed to use *runnable projects* as source code to produce projects.</span></span> <span data-ttu-id="505ff-125">这样做有以下几个好处：</span><span class="sxs-lookup"><span data-stu-id="505ff-125">This has several benefits:</span></span>
 
-<span data-ttu-id="10ff5-132">template.json  文件位于模板根目录中的 .template.config  文件夹。</span><span class="sxs-lookup"><span data-stu-id="10ff5-132">The *template.json* file is placed in a *.template.config* folder in the root directory of the template.</span></span> <span data-ttu-id="10ff5-133">此文件向模板引擎提供配置信息。</span><span class="sxs-lookup"><span data-stu-id="10ff5-133">The file provides configuration information to the template engine.</span></span> <span data-ttu-id="10ff5-134">最低配置必须包含下表中列出的成员，这足以创建功能模板。</span><span class="sxs-lookup"><span data-stu-id="10ff5-134">The minimum configuration requires the members shown in the following table, which is sufficient to create a functional template.</span></span>
+- <span data-ttu-id="505ff-126">模板引擎不要求用户将特殊令牌注入项目的源代码。</span><span class="sxs-lookup"><span data-stu-id="505ff-126">The template engine doesn't require you to inject special tokens into your project's source code.</span></span>
+- <span data-ttu-id="505ff-127">代码文件不必是特殊文件，也不必以任何方式进行修改，即可与模板引擎配合使用。</span><span class="sxs-lookup"><span data-stu-id="505ff-127">The code files aren't special files or modified in any way to work with the template engine.</span></span> <span data-ttu-id="505ff-128">因此，处理项目时通常使用的工具也适用于模板内容。</span><span class="sxs-lookup"><span data-stu-id="505ff-128">So, the tools you normally use when working with projects also work with template content.</span></span>
+- <span data-ttu-id="505ff-129">生成、运行和调试模板项目，就像生成、运行和调试其他任何项目一样。</span><span class="sxs-lookup"><span data-stu-id="505ff-129">You build, run, and debug your template projects just like you do for any of your other projects.</span></span>
+- <span data-ttu-id="505ff-130">只需将 ./.template.config/template.json  配置文件添加到项目，即可通过现有项目快速创建模板。</span><span class="sxs-lookup"><span data-stu-id="505ff-130">You can quickly create a template from an existing project just by adding a *./.template.config/template.json* configuration file to the project.</span></span>
 
-| <span data-ttu-id="10ff5-135">成员</span><span class="sxs-lookup"><span data-stu-id="10ff5-135">Member</span></span>            | <span data-ttu-id="10ff5-136">类型</span><span class="sxs-lookup"><span data-stu-id="10ff5-136">Type</span></span>          | <span data-ttu-id="10ff5-137">说明</span><span class="sxs-lookup"><span data-stu-id="10ff5-137">Description</span></span> |
+<span data-ttu-id="505ff-131">模板中存储的文件和文件夹并不限于正式的 .NET 项目类型。</span><span class="sxs-lookup"><span data-stu-id="505ff-131">Files and folders stored in the template aren't limited to formal .NET project types.</span></span> <span data-ttu-id="505ff-132">源文件和文件夹可能包含用户希望在使用模板时创建的任何内容，即使模板引擎仅生成一个文件作为输出也不例外。</span><span class="sxs-lookup"><span data-stu-id="505ff-132">Source files and folders may consist of any content that you wish to create when the template is used, even if the template engine produces just one file as its output.</span></span>
+
+<span data-ttu-id="505ff-133">可以基于在 template.json  配置文件中提供的逻辑和设置对模板生成的文件进行修改。</span><span class="sxs-lookup"><span data-stu-id="505ff-133">Files generated by the template can be modified based on logic and settings you've provided in the *template.json* configuration file.</span></span> <span data-ttu-id="505ff-134">用户可以将选项传递到 `dotnet new <TEMPLATE>` 命令以覆盖这些设置。</span><span class="sxs-lookup"><span data-stu-id="505ff-134">The user can override these settings by passing options to the `dotnet new <TEMPLATE>` command.</span></span> <span data-ttu-id="505ff-135">自定义逻辑的一个常见示例为模板部署的代码文件中的类或变量提供名称。</span><span class="sxs-lookup"><span data-stu-id="505ff-135">A common example of custom logic is providing a name for a class or variable in the code file that's deployed by a template.</span></span>
+
+### <a name="templatejson"></a><span data-ttu-id="505ff-136">template.json</span><span class="sxs-lookup"><span data-stu-id="505ff-136">template.json</span></span>
+
+<span data-ttu-id="505ff-137">template.json  文件位于模板根目录中的 .template.config  文件夹。</span><span class="sxs-lookup"><span data-stu-id="505ff-137">The *template.json* file is placed in a *.template.config* folder in the root directory of the template.</span></span> <span data-ttu-id="505ff-138">此文件向模板引擎提供配置信息。</span><span class="sxs-lookup"><span data-stu-id="505ff-138">The file provides configuration information to the template engine.</span></span> <span data-ttu-id="505ff-139">最低配置必须包含下表中列出的成员，这足以创建功能模板。</span><span class="sxs-lookup"><span data-stu-id="505ff-139">The minimum configuration requires the members shown in the following table, which is sufficient to create a functional template.</span></span>
+
+| <span data-ttu-id="505ff-140">成员</span><span class="sxs-lookup"><span data-stu-id="505ff-140">Member</span></span>            | <span data-ttu-id="505ff-141">类型</span><span class="sxs-lookup"><span data-stu-id="505ff-141">Type</span></span>          | <span data-ttu-id="505ff-142">说明</span><span class="sxs-lookup"><span data-stu-id="505ff-142">Description</span></span> |
 | ----------------- | ------------- | ----------- |
-| `$schema`         | <span data-ttu-id="10ff5-138">URI</span><span class="sxs-lookup"><span data-stu-id="10ff5-138">URI</span></span>           | <span data-ttu-id="10ff5-139">template.json  文件的 JSON 架构。</span><span class="sxs-lookup"><span data-stu-id="10ff5-139">The JSON schema for the *template.json* file.</span></span> <span data-ttu-id="10ff5-140">如果指定架构，支持 JSON 架构的编辑器启用 JSON 编辑功能。</span><span class="sxs-lookup"><span data-stu-id="10ff5-140">Editors that support JSON schemas enable JSON-editing features when the schema is specified.</span></span> <span data-ttu-id="10ff5-141">例如，[Visual Studio Code](https://code.visualstudio.com/) 要求此成员启用 IntelliSense。</span><span class="sxs-lookup"><span data-stu-id="10ff5-141">For example, [Visual Studio Code](https://code.visualstudio.com/) requires this member to enable IntelliSense.</span></span> <span data-ttu-id="10ff5-142">使用值 `http://json.schemastore.org/template`。</span><span class="sxs-lookup"><span data-stu-id="10ff5-142">Use a value of `http://json.schemastore.org/template`.</span></span> |
-| `author`          | <span data-ttu-id="10ff5-143">string</span><span class="sxs-lookup"><span data-stu-id="10ff5-143">string</span></span>        | <span data-ttu-id="10ff5-144">模板创建者。</span><span class="sxs-lookup"><span data-stu-id="10ff5-144">The author of the template.</span></span> |
-| `classifications` | <span data-ttu-id="10ff5-145">array(string)</span><span class="sxs-lookup"><span data-stu-id="10ff5-145">array(string)</span></span> | <span data-ttu-id="10ff5-146">为了找到模板，用户可能会在搜索模板时使用的 0 个或多个模板特征。</span><span class="sxs-lookup"><span data-stu-id="10ff5-146">Zero or more characteristics of the template that a user might use to find the template when searching for it.</span></span> <span data-ttu-id="10ff5-147">如果出现在使用 <code>dotnet new -l&#124;--list</code> 命令生成的模板列表中，classifications 还会出现在“Tags”  列中。</span><span class="sxs-lookup"><span data-stu-id="10ff5-147">The classifications also appear in the *Tags* column when it appears in a list of templates produced by using the <code>dotnet new -l&#124;--list</code> command.</span></span> |
-| `identity`        | <span data-ttu-id="10ff5-148">string</span><span class="sxs-lookup"><span data-stu-id="10ff5-148">string</span></span>        | <span data-ttu-id="10ff5-149">此模板的唯一名称。</span><span class="sxs-lookup"><span data-stu-id="10ff5-149">A unique name for this template.</span></span> |
-| `name`            | <span data-ttu-id="10ff5-150">string</span><span class="sxs-lookup"><span data-stu-id="10ff5-150">string</span></span>        | <span data-ttu-id="10ff5-151">用户应看到的模板名称。</span><span class="sxs-lookup"><span data-stu-id="10ff5-151">The name for the template that users should see.</span></span> |
-| `shortName`       | <span data-ttu-id="10ff5-152">string</span><span class="sxs-lookup"><span data-stu-id="10ff5-152">string</span></span>        | <span data-ttu-id="10ff5-153">方便用户选择模板的默认速记属性，适用于模板名称由用户指定（而不是通过 GUI 选择）的环境。</span><span class="sxs-lookup"><span data-stu-id="10ff5-153">A default shorthand for selecting the template that applies to environments where the template name is specified by the user, not selected via a GUI.</span></span> <span data-ttu-id="10ff5-154">例如，通过命令提示符和 CLI 命令使用模板时，短名称非常有用。</span><span class="sxs-lookup"><span data-stu-id="10ff5-154">For example, the short name is useful when using templates from a command prompt with CLI commands.</span></span> |
+| `$schema`         | <span data-ttu-id="505ff-143">URI</span><span class="sxs-lookup"><span data-stu-id="505ff-143">URI</span></span>           | <span data-ttu-id="505ff-144">template.json  文件的 JSON 架构。</span><span class="sxs-lookup"><span data-stu-id="505ff-144">The JSON schema for the *template.json* file.</span></span> <span data-ttu-id="505ff-145">如果指定架构，支持 JSON 架构的编辑器启用 JSON 编辑功能。</span><span class="sxs-lookup"><span data-stu-id="505ff-145">Editors that support JSON schemas enable JSON-editing features when the schema is specified.</span></span> <span data-ttu-id="505ff-146">例如，[Visual Studio Code](https://code.visualstudio.com/) 要求此成员启用 IntelliSense。</span><span class="sxs-lookup"><span data-stu-id="505ff-146">For example, [Visual Studio Code](https://code.visualstudio.com/) requires this member to enable IntelliSense.</span></span> <span data-ttu-id="505ff-147">使用值 `http://json.schemastore.org/template`。</span><span class="sxs-lookup"><span data-stu-id="505ff-147">Use a value of `http://json.schemastore.org/template`.</span></span> |
+| `author`          | <span data-ttu-id="505ff-148">string</span><span class="sxs-lookup"><span data-stu-id="505ff-148">string</span></span>        | <span data-ttu-id="505ff-149">模板创建者。</span><span class="sxs-lookup"><span data-stu-id="505ff-149">The author of the template.</span></span> |
+| `classifications` | <span data-ttu-id="505ff-150">array(string)</span><span class="sxs-lookup"><span data-stu-id="505ff-150">array(string)</span></span> | <span data-ttu-id="505ff-151">为了找到模板，用户可能会在搜索模板时使用的 0 个或多个模板特征。</span><span class="sxs-lookup"><span data-stu-id="505ff-151">Zero or more characteristics of the template that a user might use to find the template when searching for it.</span></span> <span data-ttu-id="505ff-152">如果出现在使用 `dotnet new -l|--list` 命令生成的模板列表中，classifications 还会出现在“Tags”  列中。</span><span class="sxs-lookup"><span data-stu-id="505ff-152">The classifications also appear in the *Tags* column when it appears in a list of templates produced by using the `dotnet new -l|--list` command.</span></span> |
+| `identity`        | <span data-ttu-id="505ff-153">string</span><span class="sxs-lookup"><span data-stu-id="505ff-153">string</span></span>        | <span data-ttu-id="505ff-154">此模板的唯一名称。</span><span class="sxs-lookup"><span data-stu-id="505ff-154">A unique name for this template.</span></span> |
+| `name`            | <span data-ttu-id="505ff-155">string</span><span class="sxs-lookup"><span data-stu-id="505ff-155">string</span></span>        | <span data-ttu-id="505ff-156">用户应看到的模板名称。</span><span class="sxs-lookup"><span data-stu-id="505ff-156">The name for the template that users should see.</span></span> |
+| `shortName`       | <span data-ttu-id="505ff-157">string</span><span class="sxs-lookup"><span data-stu-id="505ff-157">string</span></span>        | <span data-ttu-id="505ff-158">方便用户选择模板的默认速记名称，适用于模板名称由用户指定（而不是通过 GUI 选择）的环境。</span><span class="sxs-lookup"><span data-stu-id="505ff-158">A default shorthand name for selecting the template that applies to environments where the template name is specified by the user, not selected via a GUI.</span></span> <span data-ttu-id="505ff-159">例如，通过命令提示符和 CLI 命令使用模板时，短名称非常有用。</span><span class="sxs-lookup"><span data-stu-id="505ff-159">For example, the short name is useful when using templates from a command prompt with CLI commands.</span></span> |
 
-#### <a name="example"></a><span data-ttu-id="10ff5-155">示例:</span><span class="sxs-lookup"><span data-stu-id="10ff5-155">Example:</span></span>
+<span data-ttu-id="505ff-160">template.json  文件的完整架构位于 [JSON 架构存储](http://json.schemastore.org/template)。</span><span class="sxs-lookup"><span data-stu-id="505ff-160">The full schema for the *template.json* file is found at the [JSON Schema Store](http://json.schemastore.org/template).</span></span> <span data-ttu-id="505ff-161">有关 template.json  文件的详细信息，请参阅 [dotnet 创建模板 wiki](https://github.com/dotnet/templating/wiki)。</span><span class="sxs-lookup"><span data-stu-id="505ff-161">For more information about the *template.json* file, see the [dotnet templating wiki](https://github.com/dotnet/templating/wiki).</span></span>
+
+#### <a name="example"></a><span data-ttu-id="505ff-162">示例</span><span class="sxs-lookup"><span data-stu-id="505ff-162">Example</span></span>
+
+<span data-ttu-id="505ff-163">例如，下面是包含两个内容文件的模板文件夹：console.cs  和 readme.txt  。</span><span class="sxs-lookup"><span data-stu-id="505ff-163">For example, here is a template folder that contains two content files: *console.cs* and *readme.txt*.</span></span> <span data-ttu-id="505ff-164">请注意，其中有包含 template.json  文件的名为 .template.config  的所需文件夹。</span><span class="sxs-lookup"><span data-stu-id="505ff-164">Take notice that there is the required folder named *.template.config* that contains the *template.json* file.</span></span>
+
+```text
+└───mytemplate
+    │   console.cs
+    │   readme.txt
+    │
+    └───.template.config
+            template.json
+```
+
+<span data-ttu-id="505ff-165">template.json  文件如下所示：</span><span class="sxs-lookup"><span data-stu-id="505ff-165">The *template.json* file looks like the following:</span></span>
 
 ```json
 {
   "$schema": "http://json.schemastore.org/template",
-  "author": "Catalina Garcia",
+  "author": "Travis Chau",
   "classifications": [ "Common", "Console" ],
-  "identity": "GarciaSoftware.ConsoleTemplate.CSharp",
-  "name": "Garcia Software Console Application",
-  "shortName": "garciaconsole"
+  "identity": "AdatumCorporation.ConsoleTemplate.CSharp",
+  "name": "Adatum Corporation Console Application",
+  "shortName": "adatumconsole"
 }
 ```
 
-<span data-ttu-id="10ff5-156">template.json  文件的完整架构位于 [JSON 架构存储](http://json.schemastore.org/template)。</span><span class="sxs-lookup"><span data-stu-id="10ff5-156">The full schema for the *template.json* file is found at the [JSON Schema Store](http://json.schemastore.org/template).</span></span>
+<span data-ttu-id="505ff-166">mytemplate  文件夹是可安装的模板包。</span><span class="sxs-lookup"><span data-stu-id="505ff-166">The *mytemplate* folder is an installable template pack.</span></span> <span data-ttu-id="505ff-167">安装此包后，`shortName` 可与 `dotnet new` 命令结合使用。</span><span class="sxs-lookup"><span data-stu-id="505ff-167">Once the pack is installed, the `shortName` can be used with the `dotnet new` command.</span></span> <span data-ttu-id="505ff-168">例如，`dotnet new adatumconsole` 会将 `console.cs` 和 `readme.txt` 文件输出到当前文件夹。</span><span class="sxs-lookup"><span data-stu-id="505ff-168">For example, `dotnet new adatumconsole` would output the `console.cs` and `readme.txt` files to the current folder.</span></span>
 
-## <a name="net-default-templates"></a><span data-ttu-id="10ff5-157">.NET 默认模板</span><span class="sxs-lookup"><span data-stu-id="10ff5-157">.NET default templates</span></span>
+## <a name="packing-a-template-into-a-nuget-package-nupkg-file"></a><span data-ttu-id="505ff-169">将模板打包到 NuGet 包（nupkg 文件）</span><span class="sxs-lookup"><span data-stu-id="505ff-169">Packing a template into a NuGet package (nupkg file)</span></span>
 
-<span data-ttu-id="10ff5-158">安装 [.NET Core SDK](https://www.microsoft.com/net/download/core) 时，将获取十多个用于创建项目和文件的内置模板，包括控制台应用程序、类库、单元测试项目、ASP.NET Core 应用程序（包括 [Angular](https://angular.io/) 和 [React](https://facebook.github.io/react/) 项目）和配置文件。</span><span class="sxs-lookup"><span data-stu-id="10ff5-158">When you install the [.NET Core SDK](https://www.microsoft.com/net/download/core), you receive over a dozen built-in templates for creating projects and files, including console apps, class libraries, unit test projects, ASP.NET Core apps (including [Angular](https://angular.io/) and [React](https://facebook.github.io/react/) projects), and configuration files.</span></span> <span data-ttu-id="10ff5-159">若要列出内置模板，请执行 `dotnet new` 命令和 `-l|--list` 选项：</span><span class="sxs-lookup"><span data-stu-id="10ff5-159">To list the built-in templates, execute the `dotnet new` command with the `-l|--list` option:</span></span>
+<span data-ttu-id="505ff-170">自定义模板与 [dotnet pack](dotnet-pack.md) 命令和 .csproj  文件一起打包。</span><span class="sxs-lookup"><span data-stu-id="505ff-170">A custom template is packed with the [dotnet pack](dotnet-pack.md) command and a *.csproj* file.</span></span> <span data-ttu-id="505ff-171">或者，[NuGet](https://docs.microsoft.com/nuget/tools/nuget-exe-cli-reference) 可与 [nuget pack](https://docs.microsoft.com/nuget/tools/cli-ref-pack) 命令以及 .nuspec  文件一起使用。</span><span class="sxs-lookup"><span data-stu-id="505ff-171">Alternatively, [NuGet](https://docs.microsoft.com/nuget/tools/nuget-exe-cli-reference) can be used with the [nuget pack](https://docs.microsoft.com/nuget/tools/cli-ref-pack) command along with a *.nuspec* file.</span></span> <span data-ttu-id="505ff-172">但是，NuGet 在 Windows 上需要 .NET Framework，在 Linux 和 MacOS 上需要 [Mono](https://www.mono-project.com/)。</span><span class="sxs-lookup"><span data-stu-id="505ff-172">However, NuGet requires the .NET Framework on Windows and [Mono](https://www.mono-project.com/) on Linux and MacOS.</span></span>
 
-```console
-dotnet new -l
+<span data-ttu-id="505ff-173">该 .csproj  文件与传统代码项目 .csproj  文件略有不同。</span><span class="sxs-lookup"><span data-stu-id="505ff-173">The *.csproj* file is slightly different from a traditional code-project *.csproj* file.</span></span> <span data-ttu-id="505ff-174">请注意以下设置：</span><span class="sxs-lookup"><span data-stu-id="505ff-174">Note the following settings:</span></span>
+
+01. <span data-ttu-id="505ff-175">添加 `<PackageType>` 设置并将其设为 `Template`。</span><span class="sxs-lookup"><span data-stu-id="505ff-175">The `<PackageType>` setting is added and set to `Template`.</span></span>
+01. <span data-ttu-id="505ff-176">添加 `<PackageVersion>` 设置并将其设为有效的 [NuGet 版本号](/nuget/reference/package-versioning)。</span><span class="sxs-lookup"><span data-stu-id="505ff-176">The `<PackageVersion>` setting is added and set to a valid [NuGet version number](/nuget/reference/package-versioning).</span></span>
+01. <span data-ttu-id="505ff-177">添加 `<PackageId>` 设置并将其设为唯一标识符。</span><span class="sxs-lookup"><span data-stu-id="505ff-177">The `<PackageId>` setting is added and set to a unique identifier.</span></span> <span data-ttu-id="505ff-178">此标识符用于卸载模板包，NuGet 源用它来注册你的模板包。</span><span class="sxs-lookup"><span data-stu-id="505ff-178">This identifier is used to uninstall the template pack and is used by NuGet feeds to register your template pack.</span></span>
+01. <span data-ttu-id="505ff-179">应设置泛型元数据设置：`<Title>`、`<Authors>`、`<Description>` 和 `<Tags>`。</span><span class="sxs-lookup"><span data-stu-id="505ff-179">Generic metadata settings should be set: `<Title>`, `<Authors>`, `<Description>`, and `<Tags>`.</span></span>
+01. <span data-ttu-id="505ff-180">必须设置 `<TargetFramework>` 设置，即使未使用模板过程生成的二进制文件也必须设置。</span><span class="sxs-lookup"><span data-stu-id="505ff-180">The `<TargetFramework>` setting must be set, even though the binary produced by the template process isn't used.</span></span> <span data-ttu-id="505ff-181">在下面的示例中，它设置为 `netstandard2.0`。</span><span class="sxs-lookup"><span data-stu-id="505ff-181">In the example below it's set to `netstandard2.0`.</span></span>
+
+<span data-ttu-id="505ff-182">.nupkg  NuGet 包形式的模板包要求所有模板都存储在包中的 content  文件夹中。</span><span class="sxs-lookup"><span data-stu-id="505ff-182">A template pack, in the form of a *.nupkg* NuGet package, requires that all templates be stored in the *content* folder within the package.</span></span> <span data-ttu-id="505ff-183">还有几个设置将添加到 .csproj  文件以确保生成的 .nupkg  作为模板包安装：</span><span class="sxs-lookup"><span data-stu-id="505ff-183">There are a few more settings to add to a *.csproj* file to ensure that the generated *.nupkg* can be installed as a template pack:</span></span>
+
+01. <span data-ttu-id="505ff-184">`<IncludeContentInPack>` 设置设为 `true` 以包含项目在 NuGet 包中设为“内容”的任何文件  。</span><span class="sxs-lookup"><span data-stu-id="505ff-184">The `<IncludeContentInPack>` setting is set to `true` to include any file the project sets as **content** in the NuGet package.</span></span>
+01. <span data-ttu-id="505ff-185">`<IncludeBuildOutput>` 设置设为 `false` 以从 NuGet 包排除编译器生成的所有二进制文件。</span><span class="sxs-lookup"><span data-stu-id="505ff-185">The `<IncludeBuildOutput>` setting is set to `false` to exclude all binaries generated by the compiler from the NuGet package.</span></span>
+01. <span data-ttu-id="505ff-186">`<ContentTargetFolders>` 设置设为 `content`。</span><span class="sxs-lookup"><span data-stu-id="505ff-186">The `<ContentTargetFolders>` setting is set to `content`.</span></span> <span data-ttu-id="505ff-187">这可确保设为“内容”  的文件存储在 NuGet 包的 content  文件夹中。</span><span class="sxs-lookup"><span data-stu-id="505ff-187">This makes sure that the files set as **content** are stored in the *content* folder in the NuGet package.</span></span> <span data-ttu-id="505ff-188">NuGet 包中的此文件夹由 dotnet 模板系统解析。</span><span class="sxs-lookup"><span data-stu-id="505ff-188">This folder in the NuGet package is parsed by the dotnet template system.</span></span>
+
+<span data-ttu-id="505ff-189">使所有代码文件不被模板项目编译的一个简单的方法是使用 `<ItemGroup>` 元素内项目文件中的 `<Compile Remove="**\*" />` 项。</span><span class="sxs-lookup"><span data-stu-id="505ff-189">An easy way to exclude all code files from being compiled by your template project is by using the `<Compile Remove="**\*" />` item in your project file, inside an `<ItemGroup>` element.</span></span>
+
+<span data-ttu-id="505ff-190">设置模板包结构的一个简单方法是将所有模板放在单独的文件夹中，然后放到位于 .csproj 文件所在目录的 templates 文件夹的每个模板文件夹中   。</span><span class="sxs-lookup"><span data-stu-id="505ff-190">An easy way to structure your template pack is to put all templates in individual folders, and then each template folder inside of a *templates* folder that is located in the same directory as your *.csproj* file.</span></span> <span data-ttu-id="505ff-191">这样，你可以使用单个项目项包括 templates 中的所有文件和文件夹作为“内容”   。</span><span class="sxs-lookup"><span data-stu-id="505ff-191">This way, you can use a single project item to include all files and folders in the *templates* as **content**.</span></span> <span data-ttu-id="505ff-192">在 `<ItemGroup>` 元素中创建 `<Content Include="templates\**\*" Exclude="templates\**\bin\**;templates\**\obj\**" />` 项。</span><span class="sxs-lookup"><span data-stu-id="505ff-192">Inside of an `<ItemGroup>` element, create a `<Content Include="templates\**\*" Exclude="templates\**\bin\**;templates\**\obj\**" />` item.</span></span>
+
+<span data-ttu-id="505ff-193">下面是一个遵循上述所有准则的示例 .csproj  文件。</span><span class="sxs-lookup"><span data-stu-id="505ff-193">Here is an example *.csproj* file that follows all of the guidelines above.</span></span> <span data-ttu-id="505ff-194">它将 templates  子文件夹打包为“内容”  包文件夹，并使所有代码文件都不被编译。</span><span class="sxs-lookup"><span data-stu-id="505ff-194">It packs the *templates* child folder to the *content* package folder and excludes any code file from being compiled.</span></span>
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <PackageType>Template</PackageType>
+    <PackageVersion>1.0</PackageVersion>
+    <PackageId>AdatumCorporation.Utility.Templates</PackageId>
+    <Title>AdatumCorporation Templates</Title>
+    <Authors>Me</Authors>
+    <Description>Templates to use when creating an application for Adatum Corporation.</Description>
+    <Tags>dotnet-new;templates;contoso</Tags>
+    <TargetFramework>netstandard2.0</TargetFramework>
+
+    <IncludeContentInPack>true</IncludeContentInPack>
+    <IncludeBuildOutput>false</IncludeBuildOutput>
+    <ContentTargetFolders>content</ContentTargetFolders>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="templates\**\*" Exclude="templates\**\bin\**;templates\**\obj\**" />
+    <Compile Remove="**\*" />
+  </ItemGroup>
+
+</Project>
 ```
 
-## <a name="packing-a-template-into-a-nuget-package-nupkg-file"></a><span data-ttu-id="10ff5-160">将模板打包到 NuGet 包（nupkg 文件）</span><span class="sxs-lookup"><span data-stu-id="10ff5-160">Packing a template into a NuGet package (nupkg file)</span></span>
+<span data-ttu-id="505ff-195">以下示例演示使用 .csproj  创建模板包的文件和文件夹结构。</span><span class="sxs-lookup"><span data-stu-id="505ff-195">The example below demonstrates the file and folder structure of using a *.csproj* to create a template pack.</span></span> <span data-ttu-id="505ff-196">MyDotnetTemplates.csproj  文件和 templates  文件夹都位于名为 project_folder  的根目录中。</span><span class="sxs-lookup"><span data-stu-id="505ff-196">The *MyDotnetTemplates.csproj* file and *templates* folder are both located at the root of a directory named *project_folder*.</span></span> <span data-ttu-id="505ff-197">templates  文件夹包含两个模板 mytemplate1  和 mytemplate2  。</span><span class="sxs-lookup"><span data-stu-id="505ff-197">The *templates* folder contains two templates, *mytemplate1* and *mytemplate2*.</span></span> <span data-ttu-id="505ff-198">每个模板具有内容文件和包含 template.json  配置文件的 .template.config  文件夹。</span><span class="sxs-lookup"><span data-stu-id="505ff-198">Each template has content files and a *.template.config* folder with a *template.json* config file.</span></span>
 
-<span data-ttu-id="10ff5-161">目前，在 Windows 上使用 [nuget.exe](https://dist.nuget.org/win-x86-commandline/latest/nuget.exe)（而不是 [dotnet pack](dotnet-pack.md)）打包自定义模板。</span><span class="sxs-lookup"><span data-stu-id="10ff5-161">Currently, a custom template is packed on Windows with [nuget.exe](https://dist.nuget.org/win-x86-commandline/latest/nuget.exe) (not [dotnet pack](dotnet-pack.md)).</span></span> <span data-ttu-id="10ff5-162">若要进行跨平台打包，请考虑使用 [NuGetizer 3000](https://github.com/NuGet/Home/wiki/NuGetizer-3000)。</span><span class="sxs-lookup"><span data-stu-id="10ff5-162">For cross-platform packaging, consider using [NuGetizer 3000](https://github.com/NuGet/Home/wiki/NuGetizer-3000).</span></span>
+```text
+project_folder
+│   MyDotnetTemplates.csproj
+│
+└───templates
+    ├───mytemplate1
+    │   │   console.cs
+    │   │   readme.txt
+    │   │
+    │   └───.template.config
+    │           template.json
+    │
+    └───mytemplate2
+        │   otherfile.cs
+        │
+        └───.template.config
+                template.json
+```
 
-<span data-ttu-id="10ff5-163">将项目文件夹的内容连同 .template.config/template.json  文件一起放入 content  文件夹中。</span><span class="sxs-lookup"><span data-stu-id="10ff5-163">The contents of the project folder, together with its *.template.config/template.json* file, are placed into a folder named *content*.</span></span> <span data-ttu-id="10ff5-164">在 content  文件夹旁边，添加 [nuspec  文件](/nuget/create-packages/creating-a-package)。这是一个 XML 清单文件，用于描述包内容，并促进创建 NuGet 包。</span><span class="sxs-lookup"><span data-stu-id="10ff5-164">Next to the *content* folder, add a [*nuspec* file](/nuget/create-packages/creating-a-package), which is an XML manifest file that describes a package's contents and drives the process of creating the NuGet package.</span></span> <span data-ttu-id="10ff5-165">在 nuspec  文件的 \<packageTypes>  元素中，添加 `name` 属性值为 `Template` 的 \<packageType>  元素。</span><span class="sxs-lookup"><span data-stu-id="10ff5-165">Inside of a **\<packageTypes>** element in the *nuspec* file, include a **\<packageType>** element with a `name` attribute value of `Template`.</span></span> <span data-ttu-id="10ff5-166">content  文件夹和 nuspec  文件应位于同一目录。</span><span class="sxs-lookup"><span data-stu-id="10ff5-166">Both the *content* folder and the *nuspec* file should reside in the same directory.</span></span> <span data-ttu-id="10ff5-167">下表列出了将模板生成为 NuGet 包至少所需的 nuspec  文件元素。</span><span class="sxs-lookup"><span data-stu-id="10ff5-167">The table shows the minimum *nuspec* file elements required to produce a template as a NuGet package.</span></span>
+## <a name="installing-a-template"></a><span data-ttu-id="505ff-199">安装模板</span><span class="sxs-lookup"><span data-stu-id="505ff-199">Installing a template</span></span>
 
-| <span data-ttu-id="10ff5-168">元素</span><span class="sxs-lookup"><span data-stu-id="10ff5-168">Element</span></span>            | <span data-ttu-id="10ff5-169">类型</span><span class="sxs-lookup"><span data-stu-id="10ff5-169">Type</span></span>   | <span data-ttu-id="10ff5-170">说明</span><span class="sxs-lookup"><span data-stu-id="10ff5-170">Description</span></span> |
-| ------------------ | ------ | ----------- |
-| <span data-ttu-id="10ff5-171">**\<authors>**</span><span class="sxs-lookup"><span data-stu-id="10ff5-171">**\<authors>**</span></span>     | <span data-ttu-id="10ff5-172">string</span><span class="sxs-lookup"><span data-stu-id="10ff5-172">string</span></span> | <span data-ttu-id="10ff5-173">包创建者的逗号分隔列表，与 nuget.org 上的配置文件名称一致。创建者显示在 nuget.org 上的 NuGet 库中，用于交叉引用同一创建者的包。</span><span class="sxs-lookup"><span data-stu-id="10ff5-173">A comma-separated list of packages authors, matching the profile names on nuget.org. Authors are displayed in the NuGet Gallery on nuget.org and are used to cross-reference packages by the same authors.</span></span> |
-| <span data-ttu-id="10ff5-174">**\<description>**</span><span class="sxs-lookup"><span data-stu-id="10ff5-174">**\<description>**</span></span> | <span data-ttu-id="10ff5-175">string</span><span class="sxs-lookup"><span data-stu-id="10ff5-175">string</span></span> | <span data-ttu-id="10ff5-176">用于 UI 显示的包的详细说明。</span><span class="sxs-lookup"><span data-stu-id="10ff5-176">A long description of the package for UI display.</span></span> |
-| <span data-ttu-id="10ff5-177">**\<id>**</span><span class="sxs-lookup"><span data-stu-id="10ff5-177">**\<id>**</span></span>          | <span data-ttu-id="10ff5-178">string</span><span class="sxs-lookup"><span data-stu-id="10ff5-178">string</span></span> | <span data-ttu-id="10ff5-179">不区分大小写的包标识符，在 nuget.org 或包驻留的任意库中必须是唯一的。</span><span class="sxs-lookup"><span data-stu-id="10ff5-179">The case-insensitive package identifier, which must be unique across nuget.org or whatever gallery the package will reside in.</span></span> <span data-ttu-id="10ff5-180">ID 不得包含空格或对 URL 无效的字符，通常遵循 .NET 命名空间规则。</span><span class="sxs-lookup"><span data-stu-id="10ff5-180">IDs may not contain spaces or characters that are not valid for a URL and generally follow .NET namespace rules.</span></span> <span data-ttu-id="10ff5-181">有关指南，请参阅[选择唯一包标识符并设置版本号](/nuget/create-packages/creating-a-package#choosing-a-unique-package-identifier-and-setting-the-version-number)。</span><span class="sxs-lookup"><span data-stu-id="10ff5-181">See [Choosing a unique package identifier and setting the version number](/nuget/create-packages/creating-a-package#choosing-a-unique-package-identifier-and-setting-the-version-number) for guidance.</span></span> |
-| <span data-ttu-id="10ff5-182">**\<packageType>**</span><span class="sxs-lookup"><span data-stu-id="10ff5-182">**\<packageType>**</span></span> | <span data-ttu-id="10ff5-183">string</span><span class="sxs-lookup"><span data-stu-id="10ff5-183">string</span></span> | <span data-ttu-id="10ff5-184">将此元素置于 \<metadata>  元素之间的 \<packageTypes>  元素内。</span><span class="sxs-lookup"><span data-stu-id="10ff5-184">Place this element inside a **\<packageTypes>** element among the **\<metadata>** elements.</span></span> <span data-ttu-id="10ff5-185">将 \<packageType>  元素的 `name` 属性设置为 `Template`。</span><span class="sxs-lookup"><span data-stu-id="10ff5-185">Set the `name` attribute of the **\<packageType>** element to `Template`.</span></span> |
-| <span data-ttu-id="10ff5-186">**\<version>**</span><span class="sxs-lookup"><span data-stu-id="10ff5-186">**\<version>**</span></span>     | <span data-ttu-id="10ff5-187">string</span><span class="sxs-lookup"><span data-stu-id="10ff5-187">string</span></span> | <span data-ttu-id="10ff5-188">遵循 major.minor.patch 模式的包版本。</span><span class="sxs-lookup"><span data-stu-id="10ff5-188">The version of the package, following the major.minor.patch pattern.</span></span> <span data-ttu-id="10ff5-189">版本号可能包括预发布后缀，如[预发布版本](/nuget/create-packages/prerelease-packages#semantic-versioning)主题中所述。</span><span class="sxs-lookup"><span data-stu-id="10ff5-189">Version numbers may include a pre-release suffix as described in the [Pre-release versions](/nuget/create-packages/prerelease-packages#semantic-versioning) topic.</span></span> |
+<span data-ttu-id="505ff-200">使用 [dotnet new -i|--install](dotnet-new.md) 命令以安装包。</span><span class="sxs-lookup"><span data-stu-id="505ff-200">Use the [dotnet new -i|--install](dotnet-new.md) command to install a package.</span></span>
 
-<span data-ttu-id="10ff5-190">有关完整的 nuspec  文件架构，请参阅 [.nuspec 参考](/nuget/schema/nuspec)。</span><span class="sxs-lookup"><span data-stu-id="10ff5-190">See the [.nuspec reference](/nuget/schema/nuspec) for the complete *nuspec* file schema.</span></span> <span data-ttu-id="10ff5-191">[创建 dotnet new 自定义模板](~/docs/core/tutorials/create-custom-template.md)教程中展示了模板的示例 nuspec  文件。</span><span class="sxs-lookup"><span data-stu-id="10ff5-191">An example *nuspec* file for a template appears in the [Create a custom template for dotnet new](~/docs/core/tutorials/create-custom-template.md) tutorial.</span></span>
+### <a name="to-install-a-template-from-a-nuget-package-stored-at-nugetorg"></a><span data-ttu-id="505ff-201">从 nuget.org 中存储的 NuGet 包安装模板的具体步骤</span><span class="sxs-lookup"><span data-stu-id="505ff-201">To install a template from a NuGet package stored at nuget.org</span></span>
 
-<span data-ttu-id="10ff5-192">使用 `nuget pack <PATH_TO_NUSPEC_FILE>` 命令[创建包](/nuget/create-packages/creating-a-package#creating-the-package)。</span><span class="sxs-lookup"><span data-stu-id="10ff5-192">[Create a package](/nuget/create-packages/creating-a-package#creating-the-package) using the `nuget pack <PATH_TO_NUSPEC_FILE>` command.</span></span>
-
-## <a name="installing-a-template"></a><span data-ttu-id="10ff5-193">安装模板</span><span class="sxs-lookup"><span data-stu-id="10ff5-193">Installing a template</span></span>
-
-<span data-ttu-id="10ff5-194">从任何 NuGet 源上的 NuGet 包安装自定义模板，具体方法是直接引用 nupkg  文件，或指定包含模板配置的文件系统目录。</span><span class="sxs-lookup"><span data-stu-id="10ff5-194">Install a custom template from a NuGet package on any NuGet feed by referencing a *nupkg* file directly or by specifying a file system directory that contains a templating configuration.</span></span> <span data-ttu-id="10ff5-195">结合使用 `-i|--install` 选项和 [dotnet new](dotnet-new.md) 命令。</span><span class="sxs-lookup"><span data-stu-id="10ff5-195">Use the `-i|--install` option with the [dotnet new](dotnet-new.md) command.</span></span>
-
-### <a name="to-install-a-template-from-a-nuget-package-stored-at-nugetorg"></a><span data-ttu-id="10ff5-196">从 nuget.org 中存储的 NuGet 包安装模板的具体步骤</span><span class="sxs-lookup"><span data-stu-id="10ff5-196">To install a template from a NuGet package stored at nuget.org</span></span>
+<span data-ttu-id="505ff-202">使用 NuGet 包标识符安装模板包。</span><span class="sxs-lookup"><span data-stu-id="505ff-202">Use the NuGet package identifier to install a template package.</span></span>
 
 ```console
 dotnet new -i <NUGET_PACKAGE_ID>
 ```
 
-### <a name="to-install-a-template-from-a-local-nupkg-file"></a><span data-ttu-id="10ff5-197">从本地 nupkg 文件安装模板的具体步骤</span><span class="sxs-lookup"><span data-stu-id="10ff5-197">To install a template from a local nupkg file</span></span>
+### <a name="to-install-a-template-from-a-local-nupkg-file"></a><span data-ttu-id="505ff-203">从本地 nupkg 文件安装模板的具体步骤</span><span class="sxs-lookup"><span data-stu-id="505ff-203">To install a template from a local nupkg file</span></span>
+
+<span data-ttu-id="505ff-204">提供指向 .nupkg  NuGet 包文件的路径。</span><span class="sxs-lookup"><span data-stu-id="505ff-204">Provide the path to a *.nupkg* NuGet package file.</span></span>
 
 ```console
 dotnet new -i <PATH_TO_NUPKG_FILE>
 ```
 
-### <a name="to-install-a-template-from-a-file-system-directory"></a><span data-ttu-id="10ff5-198">从文件系统目录安装模板的具体步骤</span><span class="sxs-lookup"><span data-stu-id="10ff5-198">To install a template from a file system directory</span></span>
+### <a name="to-install-a-template-from-a-file-system-directory"></a><span data-ttu-id="505ff-205">从文件系统目录安装模板的具体步骤</span><span class="sxs-lookup"><span data-stu-id="505ff-205">To install a template from a file system directory</span></span>
 
-<span data-ttu-id="10ff5-199">`FILE_SYSTEM_DIRECTORY` 是包含项目和 .template.config  文件夹的项目文件夹：</span><span class="sxs-lookup"><span data-stu-id="10ff5-199">The `FILE_SYSTEM_DIRECTORY` is the project folder containing the project and the *.template.config* folder:</span></span>
+<span data-ttu-id="505ff-206">模板可从模板文件夹安装，如以上示例中的 mytemplate1  文件夹。</span><span class="sxs-lookup"><span data-stu-id="505ff-206">Templates can be installed from a template folder, such as the *mytemplate1* folder from the example above.</span></span> <span data-ttu-id="505ff-207">指定 .template.config  文件夹的文件夹路径。</span><span class="sxs-lookup"><span data-stu-id="505ff-207">Specify the folder path of the *.template.config* folder.</span></span> <span data-ttu-id="505ff-208">模板目录的路径不需要是绝对路径。</span><span class="sxs-lookup"><span data-stu-id="505ff-208">The path to the template directory does not need to be absolute.</span></span> <span data-ttu-id="505ff-209">但是，卸载从文件夹安装的模板时需要绝对路径。</span><span class="sxs-lookup"><span data-stu-id="505ff-209">However, an absolute path is required to uninstall a template that is installed from a folder.</span></span>
 
 ```console
 dotnet new -i <FILE_SYSTEM_DIRECTORY>
 ```
 
-## <a name="uninstalling-a-template"></a><span data-ttu-id="10ff5-200">卸载模板</span><span class="sxs-lookup"><span data-stu-id="10ff5-200">Uninstalling a template</span></span>
+## <a name="get-a-list-of-installed-templates"></a><span data-ttu-id="505ff-210">获取已安装模板的列表</span><span class="sxs-lookup"><span data-stu-id="505ff-210">Get a list of installed templates</span></span>
 
-<span data-ttu-id="10ff5-201">卸载自定义模板的方法是，按 `id` 引用 NuGet 包，或指定包含模板配置的文件系统目录。</span><span class="sxs-lookup"><span data-stu-id="10ff5-201">Uninstall a custom template by referencing a NuGet package by its `id` or by specifying a file system directory that contains a templating configuration.</span></span> <span data-ttu-id="10ff5-202">结合使用 `-u|--uninstall` 安装选项和 [dotnet new](dotnet-new.md) 命令。</span><span class="sxs-lookup"><span data-stu-id="10ff5-202">Use the `-u|--uninstall` install option with the [dotnet new](dotnet-new.md) command.</span></span>
+<span data-ttu-id="505ff-211">在没有任何其他参数的情况下，卸载命令将列出所有已安装的模板。</span><span class="sxs-lookup"><span data-stu-id="505ff-211">The uninstall command, without any other parameters, will list all installed templates.</span></span>
 
-### <a name="to-uninstall-a-template-from-a-nuget-package-stored-at-nugetorg"></a><span data-ttu-id="10ff5-203">从 nuget.org 中存储的 NuGet 包卸载模板的具体步骤</span><span class="sxs-lookup"><span data-stu-id="10ff5-203">To uninstall a template from a NuGet package stored at nuget.org</span></span>
+```console
+dotnet new -u
+```
+
+<span data-ttu-id="505ff-212">该命令返回如下所示的输出：</span><span class="sxs-lookup"><span data-stu-id="505ff-212">That command returns something similar to the following output:</span></span>
+
+```console
+Template Instantiation Commands for .NET Core CLI
+
+Currently installed items:
+  Microsoft.DotNet.Common.ItemTemplates
+    Templates:
+      global.json file (globaljson)
+      NuGet Config (nugetconfig)
+      Solution File (sln)
+      Dotnet local tool manifest file (tool-manifest)
+      Web Config (webconfig)
+  Microsoft.DotNet.Common.ProjectTemplates.3.0
+    Templates:
+      Class library (classlib) C#
+      Class library (classlib) F#
+      Class library (classlib) VB
+      Console Application (console) C#
+      Console Application (console) F#
+      Console Application (console) VB
+...
+```
+
+<span data-ttu-id="505ff-213">`Currently installed items:` 后面的第一级项是用于卸载模板的标识符。</span><span class="sxs-lookup"><span data-stu-id="505ff-213">The first level of items after `Currently installed items:` are the identifiers used in uninstalling a template.</span></span> <span data-ttu-id="505ff-214">在上述示例中，列出了 `Microsoft.DotNet.Common.ItemTemplates` 和 `Microsoft.DotNet.Common.ProjectTemplates.3.0`。</span><span class="sxs-lookup"><span data-stu-id="505ff-214">And in the example above, `Microsoft.DotNet.Common.ItemTemplates` and `Microsoft.DotNet.Common.ProjectTemplates.3.0` are listed.</span></span> <span data-ttu-id="505ff-215">如果使用文件系统路径安装模板，此标识符将是 .template.config  文件夹的文件夹路径。</span><span class="sxs-lookup"><span data-stu-id="505ff-215">If the template was installed by using a file system path, this identifier will the folder path of the *.template.config* folder.</span></span>
+
+## <a name="uninstalling-a-template"></a><span data-ttu-id="505ff-216">卸载模板</span><span class="sxs-lookup"><span data-stu-id="505ff-216">Uninstalling a template</span></span>
+
+<span data-ttu-id="505ff-217">使用 [dotnet new -u|--uninstall](dotnet-new.md) 命令卸载包。</span><span class="sxs-lookup"><span data-stu-id="505ff-217">Use the [dotnet new -u|--uninstall](dotnet-new.md) command to uninstall a package.</span></span>
+
+<span data-ttu-id="505ff-218">如果通过 NuGet 源或直接通过 .nupkg  文件安装包，请提供标识符。</span><span class="sxs-lookup"><span data-stu-id="505ff-218">If the package was installed by either a NuGet feed or by a *.nupkg* file directly, provide the identifier.</span></span>
 
 ```console
 dotnet new -u <NUGET_PACKAGE_ID>
 ```
 
-### <a name="to-uninstall-a-template-from-a-local-nupkg-file"></a><span data-ttu-id="10ff5-204">从本地 nupkg 文件卸载模板的具体步骤</span><span class="sxs-lookup"><span data-stu-id="10ff5-204">To uninstall a template from a local nupkg file</span></span>
-
-<span data-ttu-id="10ff5-205">若要卸载模板，请勿尝试使用 nupkg  文件路径。</span><span class="sxs-lookup"><span data-stu-id="10ff5-205">To uninstall the template, don't attempt to use the path to the *nupkg* file.</span></span> <span data-ttu-id="10ff5-206">无法尝试使用 `dotnet new -u <PATH_TO_NUPKG_FILE>` 卸载模板。</span><span class="sxs-lookup"><span data-stu-id="10ff5-206">Attempting to uninstall a template using `dotnet new -u <PATH_TO_NUPKG_FILE>` fails.</span></span> <span data-ttu-id="10ff5-207">按 `id` 引用包：</span><span class="sxs-lookup"><span data-stu-id="10ff5-207">Reference the package by its `id`:</span></span>
+<span data-ttu-id="505ff-219">如果通过指定 .template.config  文件夹的路径安装包，请使用该绝对  路径卸载包。</span><span class="sxs-lookup"><span data-stu-id="505ff-219">If the package was installed by specifying a path to the *.template.config* folder, use that **absolute** path to uninstall the package.</span></span> <span data-ttu-id="505ff-220">你可以在 `dotnet new -u` 命令提供的输出中看到模板的绝对路径。</span><span class="sxs-lookup"><span data-stu-id="505ff-220">You can see the absolute path of the template in the output provided by the `dotnet new -u` command.</span></span> <span data-ttu-id="505ff-221">有关详细信息，请参阅上文的[获取已安装的模板列表](#get-a-list-of-installed-templates)部分。</span><span class="sxs-lookup"><span data-stu-id="505ff-221">For more information, see the [Get a list of installed templates](#get-a-list-of-installed-templates) section above.</span></span>
 
 ```console
-dotnet new -u <NUGET_PACKAGE_ID>
+dotnet new -u <ABSOLUTE_FILE_SYSTEM_DIRECTORY>
 ```
 
-### <a name="to-uninstall-a-template-from-a-file-system-directory"></a><span data-ttu-id="10ff5-208">从文件系统目录卸载模板的具体步骤</span><span class="sxs-lookup"><span data-stu-id="10ff5-208">To uninstall a template from a file system directory</span></span>
+## <a name="create-a-project-using-a-custom-template"></a><span data-ttu-id="505ff-222">使用自定义模板创建项目</span><span class="sxs-lookup"><span data-stu-id="505ff-222">Create a project using a custom template</span></span>
 
-<span data-ttu-id="10ff5-209">`FILE_SYSTEM_DIRECTORY` 是包含项目和 .template.config  文件夹的项目文件夹。</span><span class="sxs-lookup"><span data-stu-id="10ff5-209">The `FILE_SYSTEM_DIRECTORY` is the project folder containing the project and the *.template.config* folder.</span></span> <span data-ttu-id="10ff5-210">提供的路径必须是绝对路径。</span><span class="sxs-lookup"><span data-stu-id="10ff5-210">The path provided needs to be the absolute path.</span></span> <span data-ttu-id="10ff5-211">无法尝试使用相对路径卸载模板。</span><span class="sxs-lookup"><span data-stu-id="10ff5-211">Attempting to uninstall a template using a relative path fails.</span></span> <span data-ttu-id="10ff5-212">有关详细信息，请查看 [dotnet new](dotnet-new.md) 一文。</span><span class="sxs-lookup"><span data-stu-id="10ff5-212">For more information, see the [dotnet new](dotnet-new.md) article.</span></span>
-
-```console
-dotnet new -u <FILE_SYSTEM_DIRECTORY>
-```
-
-## <a name="create-a-project-using-a-custom-template"></a><span data-ttu-id="10ff5-213">使用自定义模板创建项目</span><span class="sxs-lookup"><span data-stu-id="10ff5-213">Create a project using a custom template</span></span>
-
-<span data-ttu-id="10ff5-214">安装模板后，通过执行 `dotnet new <TEMPLATE>` 命令来使用模板，就像使用其他任何预安装模板一样。</span><span class="sxs-lookup"><span data-stu-id="10ff5-214">After a template is installed, use the template by executing the `dotnet new <TEMPLATE>` command as you would with any other pre-installed template.</span></span> <span data-ttu-id="10ff5-215">还可以为 `dotnet new` 命令指定[选项](dotnet-new.md#options)，包括在模板设置中配置的模板专用选项。</span><span class="sxs-lookup"><span data-stu-id="10ff5-215">You can also specify [options](dotnet-new.md#options) to the `dotnet new` command, including template specific options you configured in the template settings.</span></span> <span data-ttu-id="10ff5-216">直接向命令提供模板的短名称：</span><span class="sxs-lookup"><span data-stu-id="10ff5-216">Supply the template's short name directly to the command:</span></span>
+<span data-ttu-id="505ff-223">安装模板后，通过执行 `dotnet new <TEMPLATE>` 命令来使用模板，就像使用其他任何预安装模板一样。</span><span class="sxs-lookup"><span data-stu-id="505ff-223">After a template is installed, use the template by executing the `dotnet new <TEMPLATE>` command as you would with any other pre-installed template.</span></span> <span data-ttu-id="505ff-224">还可以为 `dotnet new` 命令指定[选项](dotnet-new.md#options)，包括在模板设置中配置的模板专用选项。</span><span class="sxs-lookup"><span data-stu-id="505ff-224">You can also specify [options](dotnet-new.md#options) to the `dotnet new` command, including template-specific options you configured in the template settings.</span></span> <span data-ttu-id="505ff-225">直接向命令提供模板的短名称：</span><span class="sxs-lookup"><span data-stu-id="505ff-225">Supply the template's short name directly to the command:</span></span>
 
 ```console
 dotnet new <TEMPLATE>
 ```
 
-## <a name="see-also"></a><span data-ttu-id="10ff5-217">请参阅</span><span class="sxs-lookup"><span data-stu-id="10ff5-217">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="505ff-226">请参阅</span><span class="sxs-lookup"><span data-stu-id="505ff-226">See also</span></span>
 
-- [<span data-ttu-id="10ff5-218">创建 dotnet new 自定义模板（教程）</span><span class="sxs-lookup"><span data-stu-id="10ff5-218">Create a custom template for dotnet new (tutorial)</span></span>](../tutorials/create-custom-template.md)
-- [<span data-ttu-id="10ff5-219">dotnet/templating GitHub 存储库 Wiki</span><span class="sxs-lookup"><span data-stu-id="10ff5-219">dotnet/templating GitHub repo Wiki</span></span>](https://github.com/dotnet/templating/wiki)
-- [<span data-ttu-id="10ff5-220">dotnet/dotnet-template-samples GitHub 存储库</span><span class="sxs-lookup"><span data-stu-id="10ff5-220">dotnet/dotnet-template-samples GitHub repo</span></span>](https://github.com/dotnet/dotnet-template-samples)
-- [<span data-ttu-id="10ff5-221">如何创建自己的 dotnet new 模板</span><span class="sxs-lookup"><span data-stu-id="10ff5-221">How to create your own templates for dotnet new</span></span>](https://devblogs.microsoft.com/dotnet/how-to-create-your-own-templates-for-dotnet-new/)
-- [<span data-ttu-id="10ff5-222">JSON 架构存储中的 template.json  架构</span><span class="sxs-lookup"><span data-stu-id="10ff5-222">*template.json* schema at the JSON Schema Store</span></span>](http://json.schemastore.org/template)
+- [<span data-ttu-id="505ff-227">创建 dotnet new 自定义模板（教程）</span><span class="sxs-lookup"><span data-stu-id="505ff-227">Create a custom template for dotnet new (tutorial)</span></span>](../tutorials/create-custom-template.md)
+- [<span data-ttu-id="505ff-228">dotnet/templating GitHub 存储库 Wiki</span><span class="sxs-lookup"><span data-stu-id="505ff-228">dotnet/templating GitHub repo Wiki</span></span>](https://github.com/dotnet/templating/wiki)
+- [<span data-ttu-id="505ff-229">dotnet/dotnet-template-samples GitHub 存储库</span><span class="sxs-lookup"><span data-stu-id="505ff-229">dotnet/dotnet-template-samples GitHub repo</span></span>](https://github.com/dotnet/dotnet-template-samples)
+- [<span data-ttu-id="505ff-230">如何创建自己的 dotnet new 模板</span><span class="sxs-lookup"><span data-stu-id="505ff-230">How to create your own templates for dotnet new</span></span>](https://devblogs.microsoft.com/dotnet/how-to-create-your-own-templates-for-dotnet-new/)
+- [<span data-ttu-id="505ff-231">JSON 架构存储中的 template.json  架构</span><span class="sxs-lookup"><span data-stu-id="505ff-231">*template.json* schema at the JSON Schema Store</span></span>](http://json.schemastore.org/template)
