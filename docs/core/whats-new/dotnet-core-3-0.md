@@ -6,19 +6,19 @@ dev_langs:
 - vb
 author: thraka
 ms.author: adegeo
-ms.date: 05/06/2019
-ms.openlocfilehash: 369c74d2d8e82f157de0eec4294a5ee50542292b
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.date: 06/14/2019
+ms.openlocfilehash: bb100ea064585235768ecb46781eb830c7dae0c6
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67169788"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67401962"
 ---
-# <a name="whats-new-in-net-core-30-preview-5"></a>.NET Core 3.0（预览版 5）的新增功能
+# <a name="whats-new-in-net-core-30-preview-6"></a>.NET Core 3.0（预览版 6）中的新增功能
 
-本文介绍 .NET Core 3.0（通过预览版 5）的新增功能。 最大的增强功能之一是对 Windows 桌面应用程序（仅限 Windows）的支持。 通过使用 .NET Core 3.0 SDK 组件 Windows 桌面，可以移植 Windows 窗体和 Windows Presentation Foundation (WPF) 应用程序。 为清楚起见，Windows 桌面组件仅在 Windows 上受支持，且仅在 Windows 中包含。 有关详细信息，请参阅本文后面的 [Windows 桌面](#windows-desktop)部分。
+本文介绍 .NET Core 3.0（通过预览版 6）的新增功能。 最大的增强功能之一是对 Windows 桌面应用程序（仅限 Windows）的支持。 通过使用 .NET Core 3.0 SDK 组件 Windows 桌面，可以移植 Windows 窗体和 Windows Presentation Foundation (WPF) 应用程序。 为清楚起见，Windows 桌面组件仅在 Windows 上受支持，且仅在 Windows 中包含。 有关详细信息，请参阅本文后面的 [Windows 桌面](#windows-desktop)部分。
 
-.NET Core 3.0 添加了对 C#8.0 的支持。 强烈建议使用最新版本的 Visual Studio 2019 Update 1 预览版或带有 OmniSharp 扩展的 VSCode。
+.NET Core 3.0 添加了对 C#8.0 的支持。 强烈建议使用[最新版本的 Visual Studio 预览版](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+preview)或带有 OmniSharp 扩展的 Visual Studio Code。
 
 立即在 Windows、Mac 和 Linux 上[下载并开始使用 .NET Core 3.0 预览版 6](https://aka.ms/netcore3download)。
 
@@ -55,7 +55,7 @@ ms.locfileid: "67169788"
 </Project>
 ```
 
-如果使用 Visual Studio，则需要 Visual Studio 2019，因为 Visual Studio 2017 不支持 **.NET Standard 2.1** 或 **.NET Core 3.0**。 我们强烈建议你使用 [Visual Studio 2019 Update 1 预览版](https://visualstudio.microsoft.com/vs/preview/)。
+如果使用 Visual Studio，则需要 [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)，这是因为 Visual Studio 2017 不支持 .NET Standard 2.1 或 .NET Core 3.0   。
 
 ## <a name="improved-net-core-version-apis"></a>改进的 .NET Core 版本 API
 
