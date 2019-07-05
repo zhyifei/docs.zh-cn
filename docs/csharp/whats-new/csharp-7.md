@@ -3,12 +3,12 @@ title: C# 7.0 中的新增功能 - C# 指南
 description: 大致了解 C# 语言的版本 7.0 中的新增功能。
 ms.date: 02/20/2019
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: c3fdee2bdb974640b56bfab3af4be57133ad2f7a
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 58d43167341b69e7e9ac67024e9993cf51c26c0b
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307155"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67347461"
 ---
 # <a name="whats-new-in-c-70"></a>C# 7.0 中的新增功能
 
@@ -34,7 +34,12 @@ C# 7.0 向 C# 语言添加了许多新功能：
 * [数字文本语法改进](#numeric-literal-syntax-improvements)
   - 新令牌可提高数值常量的可读性。
 
-本文的其余部分概述了每个功能。 你将了解每项功能背后的原理。 将了解语法。 可以在这些功能的[交互式探索](../tutorials/exploration/csharp-7.yml)中探索这些功能。
+本文的其余部分概述了每个功能。 你将了解每项功能背后的原理。 将了解语法。 可以使用 `dotnet try` 全局工具在环境中浏览这些功能：
+
+1. 安装 [dotnet-try](https://github.com/dotnet/try/blob/master/README.md#setup) 全局工具。
+1. 克隆 [dotnet/try-samples](https://github.com/dotnet/try-samples) 存储库。
+1. 将当前目录设置为 try-samples 存储库的 csharp7 子目录   。
+1. 运行 `dotnet try`。
 
 ## <a name="out-variables"></a>`out` 变量
 

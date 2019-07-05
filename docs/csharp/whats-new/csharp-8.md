@@ -2,12 +2,12 @@
 title: C# 8.0 中的新增功能 - C# 指南
 description: 简要介绍 C# 8.0 中提供的新功能。 本文使用最新的预览版 5。
 ms.date: 02/12/2019
-ms.openlocfilehash: 99056c9cd330c0c3ae6c63239989a2e9e9dc496c
-ms.sourcegitcommit: 5e05f983e63d5bbd8c0b246d02c6e4f23d2fc1db
+ms.openlocfilehash: 962829b68c5d02c3a7e563a00d391c4698024d47
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67151978"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397774"
 ---
 # <a name="whats-new-in-c-80"></a>C# 8.0 中的新增功能
 
@@ -30,7 +30,12 @@ C# 语言有许多增强功能，可以进行试用。
 > [!NOTE]
 > 本文针对 C# 8.0 预览版 5 进行了最后一次更新。
 
-本文的剩余部分将简要介绍这些功能。 如果有详细讲解的文章，则将提供指向这些教程和概述的链接。
+本文的剩余部分将简要介绍这些功能。 如果有详细讲解的文章，则将提供指向这些教程和概述的链接。 可以使用 `dotnet try` 全局工具在环境中浏览这些功能：
+
+1. 安装 [dotnet-try](https://github.com/dotnet/try/blob/master/README.md#setup) 全局工具。
+1. 克隆 [dotnet/try-samples](https://github.com/dotnet/try-samples) 存储库。
+1. 将当前目录设置为 try-samples 存储库的 csharp8 子目录   。
+1. 运行 `dotnet try`。
 
 ## <a name="readonly-members"></a>Readonly 成员
 
@@ -425,7 +430,7 @@ var lazyDog = words[^2..^0];
 ```csharp
 var allWords = words[..]; // contains "The" through "dog".
 var firstPhrase = words[..4]; // contains "The" through "fox"
-var lastPhrase = words[6..]; // contains "the, "lazy" and "dog"
+var lastPhrase = words[6..]; // contains "the", "lazy" and "dog"
 ```
 
 此外可以将范围声明为变量：

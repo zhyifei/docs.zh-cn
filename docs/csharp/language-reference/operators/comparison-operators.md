@@ -19,16 +19,16 @@ helpviewer_keywords:
 - <= operator [C#]
 - greater than or equal to operator [C#]
 - '>= operator [C#]'
-ms.openlocfilehash: 7d8a6b7f5bf83719f96009c301867056da755822
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 5b6668e20e4d69b7d6bdf3e6283574f1b974ef54
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025218"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423970"
 ---
 # <a name="comparison-operators-c-reference"></a>比较运算符（C# 参考）
 
-[`<`（小于）](#less-than-operator-)、[`>`（大于）](#greater-than-operator-)、[`<=`（小于或等于）](#less-than-or-equal-operator-)和 [`>=`（大于或等于）](#greater-than-or-equal-operator-)比较（也称为关系）运算符比较其操作数。 这些运算符支持所有[整型](../keywords/integral-types-table.md)和[浮动](../keywords/floating-point-types-table.md)数值类型。
+[`<`（小于）](#less-than-operator-)、[`>`（大于）](#greater-than-operator-)、[`<=`（小于或等于）](#less-than-or-equal-operator-)和 [`>=`（大于或等于）](#greater-than-or-equal-operator-)比较（也称为关系）运算符比较其操作数。 这些运算符支持所有[整型](../builtin-types/integral-numeric-types.md)和[浮动](../keywords/floating-point-types-table.md)数值类型。
 
 > [!NOTE]
 > 对于 `==`、`<`、`>`、`<=` 和 `>=` 运算符，如果所有操作数都不是数字（<xref:System.Double.NaN?displayProperty=nameWithType> 或 <xref:System.Single.NaN?displayProperty=nameWithType>），则运算结果为 `false`。 这意味着 `NaN` 值不大于、小于或等于任何其他 `double`（或 `float`）值，包括 `NaN`。 有关更多信息和示例，请参阅 <xref:System.Double.NaN?displayProperty=nameWithType> 或 <xref:System.Single.NaN?displayProperty=nameWithType> 参考文章。
@@ -39,25 +39,25 @@ ms.locfileid: "67025218"
 
 ## <a name="less-than-operator-"></a>小于运算符 \<
 
-如果第一个操作数小于第二个操作数，`<` 运算符返回 `true`，否则返回 `false`：
+如果左侧操作数小于右侧操作数，`<` 运算符返回 `true`，否则返回 `false`：
 
 [!code-csharp-interactive[less than example](~/samples/csharp/language-reference/operators/ComparisonOperators.cs#Less)]
 
 ## <a name="greater-than-operator-"></a>大于运算符 >
 
-如果第一个操作数大于第二个操作数，`>` 运算符返回 `true`，否则返回 `false`：
+如果左侧操作数大于右侧操作数，`>` 运算符返回 `true`，否则返回 `false`：
 
 [!code-csharp-interactive[greater than example](~/samples/csharp/language-reference/operators/ComparisonOperators.cs#Greater)]
 
 ## <a name="less-than-or-equal-operator-"></a>小于或等于运算符 \<=
 
-如果第一个操作数小于或等于第二个操作数，`<=` 运算符返回 `true`，否则返回 `false`：
+如果左侧操作数小于或等于右侧操作数，`<=` 运算符返回 `true`，否则返回 `false`：
 
 [!code-csharp-interactive[less than or equal example](~/samples/csharp/language-reference/operators/ComparisonOperators.cs#LessOrEqual)]
 
 ## <a name="greater-than-or-equal-operator-"></a>大于或等于运算符 >=
 
-如果第一个操作数大于或等于第二个操作数，`>=` 运算符返回 `true`，否则返回 `false`：
+如果左侧操作数大于或等于右侧操作数，`>=` 运算符返回 `true`，否则返回 `false`：
 
 [!code-csharp-interactive[greater than or equal example](~/samples/csharp/language-reference/operators/ComparisonOperators.cs#GreaterOrEqual)]
 

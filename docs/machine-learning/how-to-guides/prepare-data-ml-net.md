@@ -1,18 +1,18 @@
 ---
-title: 准备数据
+title: 准备建模的数据
 description: 了解如何在 ML.NET 中使用转换来操作和准备数据用于进行其他处理或建模。
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 05/03/2019
-ms.custom: mvc, how-to
-ms.openlocfilehash: abf43260a438c9b1febffc77cf39e7328e0377ee
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.date: 06/25/2019
+ms.custom: mvc, how-to, title-hack-0625
+ms.openlocfilehash: 4b7d5a09044e49f1b57b8276b893e0fc962a3be2
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67268247"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397722"
 ---
-# <a name="prepare-data"></a>准备数据
+# <a name="prepare-data-for-building-a-model"></a>准备建模的数据
 
 了解如何使用 ML.NET 来准备数据用于进行其他处理或生成模型。
 

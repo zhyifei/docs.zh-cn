@@ -6,12 +6,12 @@ ms.date: 05/01/2019
 ms.topic: overview
 ms.custom: mvc
 ms.author: nakersha
-ms.openlocfilehash: 39e454d67f60280c6a43e3b80d788d873345ab77
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: e34694eedd06c0a3e3558c9137c6add9a7f802e4
+ms.sourcegitcommit: 52e588dc2ee74d484cd07ac60076be25cbf777ab
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307380"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67410526"
 ---
 # <a name="automated-machine-learning-with-mlnet"></a>使用 ML.NET 自动化机器学习
 
@@ -26,6 +26,6 @@ ms.locfileid: "67307380"
 自动化 ML 目前仅限于二元分类、多类分类和回归这三个机器学习[任务](resources/tasks.md)。 未来的版本将支持其他机器学习任务。
 
 有三种方法可以使用自动化 ML：
+1. 通过图形用户界面，使用 [ML.NET 模型生成器](automate-training-with-model-builder.md)
 1. 在命令行中，使用 [ML.NET CLI](automate-training-with-cli.md)
 1. 通过应用程序，使用[自动化 ML API](how-to-guides/how-to-use-the-automl-api.md)
-1. 通过图形用户界面，使用 ML.NET 模型生成器

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - pointer increment [C#]
 - pointer decrement [C#]
 - pointer comparison [C#]
-ms.openlocfilehash: 50243f148f37f5f33f0c69ddd896549e7aea9462
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 03d6ed19ef01be7712ff2fdde0c1be2a6673e64f
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025106"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67401432"
 ---
 # <a name="pointer-related-operators-c-reference"></a>指针相关运算符（C# 参考）
 
@@ -42,7 +42,7 @@ ms.locfileid: "67025106"
 > [!NOTE]
 > 任何带指针的运算都需要使用 [unsafe](../keywords/unsafe.md) 上下文。 必须使用 [`-unsafe`](../compiler-options/unsafe-compiler-option.md) 编译器选项编译包含不安全块的代码。
 
-## <a name="address-of-operator-amp"></a>Address-of 运算符 &amp;
+## <a name="address-of-operator-"></a> Address-of 运算符 &amp;
 
 一元 `&` 运算符返回其操作数的地址：
 

@@ -27,12 +27,12 @@ helpviewer_keywords:
 - + operator [C#]
 - subtraction operator [C#]
 - '- operator [C#]'
-ms.openlocfilehash: af3f7a9379aa8ac12ef8c12abc99a0ded9188eb8
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 155ce5ce4673008a61b4231a3aaee5a40ad9ead6
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025304"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423995"
 ---
 # <a name="arithmetic-operators-c-reference"></a>算术运算符（C# 参考）
 
@@ -41,7 +41,7 @@ ms.locfileid: "67025304"
 - 一元 [`++`（增量）](#increment-operator-)、[`--`（减量）](#decrement-operator---)、[`+`（加）](#unary-plus-and-minus-operators)和 [`-`（减）](#unary-plus-and-minus-operators)运算符
 - 二元 [`*`（乘法）](#multiplication-operator-)、[`/`（除法）](#division-operator-)、[`%`（余数）](#remainder-operator-)、[`+`（加法）](#addition-operator-)和 [`-`（减法）](#subtraction-operator--)运算符
 
-这些运算符支持所有[整型](../keywords/integral-types-table.md)和[浮动](../keywords/floating-point-types-table.md)数值类型。
+这些运算符支持所有[整型](../builtin-types/integral-numeric-types.md)和[浮动](../keywords/floating-point-types-table.md)数值类型。
 
 ## <a name="increment-operator-"></a>增量运算符 ++
 
@@ -85,7 +85,7 @@ ms.locfileid: "67025304"
 
 [!code-csharp-interactive[unary plus and minus](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#UnaryPlusAndMinus)]
 
-一元 `-` 运算符不支持 [ulong](../keywords/ulong.md) 类型。
+一元 `-` 运算符不支持 [ulong](../builtin-types/integral-numeric-types.md) 类型。
 
 ## <a name="multiplication-operator-"></a>乘法运算符 *
 
@@ -97,7 +97,7 @@ ms.locfileid: "67025304"
 
 ## <a name="division-operator-"></a>除法运算符 /
 
-除法运算符 `/` 用它的第一个操作数除以第二个操作数。
+除法运算符 `/` 用它的左侧操作数除以右侧操作数。
 
 ### <a name="integer-division"></a>整数除法
 
@@ -119,11 +119,11 @@ ms.locfileid: "67025304"
 
 ## <a name="remainder-operator-"></a>余数运算符 %
 
-余数运算符 `%` 计算第一个操作数除以第二个操作数后的余数。
+余数运算符 `%` 计算左侧操作数除以右侧操作数后的余数。
 
 ### <a name="integer-remainder"></a>整数余数
   
-对于整数类型的操作数，`a % b` 的结果是 `a - (a / b) * b` 得出的值。 非零余数的符号与第一个操作数的符号相同，如下例所示：
+对于整数类型的操作数，`a % b` 的结果是 `a - (a / b) * b` 得出的值。 非零余数的符号与左侧操作数的符号相同，如下例所示：
 
 [!code-csharp-interactive[integer remainder](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#IntegerRemainder)]
 
@@ -157,7 +157,7 @@ ms.locfileid: "67025304"
 
 ## <a name="subtraction-operator--"></a>减法运算符 -
 
-减法运算符 `-` 从其第一个操作数中减去其第二个操作数：
+减法运算符 `-` 从其左侧操作数中减去其右侧操作数：
 
 [!code-csharp-interactive[subtraction operator](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#Subtraction)]
 

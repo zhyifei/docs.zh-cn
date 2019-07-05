@@ -29,16 +29,16 @@ helpviewer_keywords:
 - ^ operator [C#]
 - bitwise logical OR operator [C#]
 - '| operator [C#]'
-ms.openlocfilehash: 4a495fb5ce353bcb4f7ccda975dfc74ba711db79
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 8068ec09f0c7d05d6d711e4e7a607b6183727b41
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025240"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424002"
 ---
 # <a name="bitwise-and-shift-operators-c-reference"></a>位运算符和移位运算符（C# 参考）
 
-以下运算符使用[整数类型](../keywords/integral-types-table.md)的操作数执行位运算或移位运算：
+以下运算符使用[整数类型](../builtin-types/integral-numeric-types.md)的操作数执行位运算或移位运算：
 
 - 一元 [`~`（按位求补）](#bitwise-complement-operator-)运算符
 - 二进制 [`<<`（向左移位）](#left-shift-operator-)和 [`>>`（向右移位）](#right-shift-operator-)移位运算符
@@ -60,39 +60,39 @@ ms.locfileid: "67025240"
 
 ## <a name="left-shift-operator-"></a>左移位运算符 \<\<
 
-`<<` 运算符将其第一个操作数向左移动第二个操作数定义的位数。
+`<<` 运算符将其左侧操作数向左移动右侧操作数定义的位数。
 
 左移运算会放弃超出结果类型范围的高阶位，并将低阶空位位置设置为零，如以下示例所示：
 
 [!code-csharp-interactive[left shift](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#LeftShift)]
 
-由于移位运算符仅针对 `int`、`uint`、`long` 和 `ulong` 类型定义，因此运算的结果始终包含至少 32 位。 如果第一个操作数是其他整数类型（`sbyte`、`byte`、`short`、`ushort` 或 `char`），则其值将转换为 `int` 类型，如以下示例所示：
+由于移位运算符仅针对 `int`、`uint`、`long` 和 `ulong` 类型定义，因此运算的结果始终包含至少 32 位。 如果左侧操作数是其他整数类型（`sbyte`、`byte`、`short`、`ushort` 或 `char`），则其值将转换为 `int` 类型，如以下示例所示：
 
 [!code-csharp-interactive[left shift with promotion](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#LeftShiftPromoted)]
 
-有关 `<<` 运算符的第二个操作数如何定义移位计数的信息，请参阅[移位运算符的移位计数](#shift-count-of-the-shift-operators)部分。
+有关 `<<` 运算符的右侧操作数如何定义移位计数的信息，请参阅[移位运算符的移位计数](#shift-count-of-the-shift-operators)部分。
 
 ## <a name="right-shift-operator-"></a>右移位运算符 >>
 
-`>>` 运算符将其第一个操作数向右移动第二个操作数定义的位数。
+`>>` 运算符将其左侧操作数向右移动右侧操作数定义的位数。
 
 右移位运算会放弃低阶位，如以下示例所示：
 
 [!code-csharp-interactive[right shift](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#RightShift)]
 
-高顺序空位位置是根据第一个操作数类型设置的，如下所示：
+高顺序空位位置是根据左侧操作数类型设置的，如下所示：
 
-- 如果第一个操作数的类型是 [int](../keywords/int.md) 或 [long](../keywords/long.md)，右移运算符将执行算术  移位：第一个操作数的最高有效位（符号位）的值将传播到高顺序空位位置。 也就是说，如果第一个操作数为非负，高顺序空位位置设置为零，如果为负，则将该位置设置为 1。
+- 如果左侧操作数的类型是 [int](../builtin-types/integral-numeric-types.md) 或 [long](../builtin-types/integral-numeric-types.md)，右移运算符将执行算术  移位：左侧操作数的最高有效位（符号位）的值将传播到高顺序空位位置。 也就是说，如果左侧操作数为非负，高顺序空位位置设置为零，如果为负，则将该位置设置为 1。
 
   [!code-csharp-interactive[arithmetic right shift](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#ArithmeticRightShift)]
 
-- 如果第一个操作数的类型是 [uint](../keywords/uint.md) 或 [ulong](../keywords/ulong.md)，则右移运算符执行逻辑  移位：高顺序空位位置始终设置为零。
+- 如果左侧操作数的类型是 [uint](../builtin-types/integral-numeric-types.md) 或 [ulong](../builtin-types/integral-numeric-types.md)，则右移运算符执行逻辑  移位：高顺序空位位置始终设置为零。
 
   [!code-csharp-interactive[logical right shift](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#LogicalRightShift)]
 
-有关 `>>` 运算符的第二个操作数如何定义移位计数的信息，请参阅[移位运算符的移位计数](#shift-count-of-the-shift-operators)部分。
+有关 `>>` 运算符的右侧操作数如何定义移位计数的信息，请参阅[移位运算符的移位计数](#shift-count-of-the-shift-operators)部分。
 
-## <a name="logical-and-operator-amp"></a>逻辑与运算符 &amp;
+## <a name="logical-and-operator-"></a> 逻辑 AND 运算符 &amp;
 
 `&` 运算符计算其操作数的位逻辑 AND：
 
@@ -158,13 +158,13 @@ x = x op y
 
 ## <a name="shift-count-of-the-shift-operators"></a>移位运算符的移位计数
 
-对于移位运算符 `<<` 和 `>>`，第二个操作数的类型必须为 [int](../keywords/int.md) 或具有[预定义隐式数值转换](../keywords/implicit-numeric-conversions-table.md) 为 `int` 的类型。
+对于移位运算符 `<<` 和 `>>`，右侧操作数的类型必须为 [int](../builtin-types/integral-numeric-types.md) 或具有[预定义隐式数值转换](../keywords/implicit-numeric-conversions-table.md) 为 `int` 的类型。
 
 对于 `x << count` 和 `x >> count` 表达式，实际移位计数取决于 `x` 的类型，如下所示：
 
-- 如果 `x` 的类型为 [int](../keywords/int.md) 或 [unit](../keywords/uint.md)，则移位计数由第二个操作数的低阶五位定义  。 也就是说，移位计数通过 `count & 0x1F`（或 `count & 0b_1_1111`）计算得出。
+- 如果 `x` 的类型为 [int](../builtin-types/integral-numeric-types.md) 或 [unit](../builtin-types/integral-numeric-types.md)，则移位计数由右侧操作数的低阶五位定义  。 也就是说，移位计数通过 `count & 0x1F`（或 `count & 0b_1_1111`）计算得出。
 
-- 如果 `x` 的类型为 [long](../keywords/long.md) 或 [unlong](../keywords/ulong.md)，则移位计数由第二个操作数的低阶六位定义  。 也就是说，移位计数通过 `count & 0x3F`（或 `count & 0b_11_1111`）计算得出。
+- 如果 `x` 的类型为 [long](../builtin-types/integral-numeric-types.md) 或 [unlong](../builtin-types/integral-numeric-types.md)，则移位计数由右侧操作数的低阶六位定义  。 也就是说，移位计数通过 `count & 0x3F`（或 `count & 0b_11_1111`）计算得出。
 
 以下示例演示了该行为：
 
@@ -180,7 +180,7 @@ x = x op y
 
 用户定义的类型可以[重载](../keywords/operator.md) `~`、`<<`、`>>`、`&`、`|` 和 `^` 运算符。 重载二元运算符时，对应的复合赋值运算符也会隐式重载。 用户定义类型不能显式重载复合赋值运算符。
 
-如果用户定义类型 `T` 重载 `<<` 或 `>>` 运算符，则第一个操作数的类型必须为 `T` 且第二个操作数的类型必须为 `int`。
+如果用户定义类型 `T` 重载 `<<` 或 `>>` 运算符，则左侧操作数的类型必须为 `T` 且右侧操作数的类型必须为 `int`。
 
 ## <a name="c-language-specification"></a>C# 语言规范
 

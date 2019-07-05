@@ -32,12 +32,12 @@ helpviewer_keywords:
 - conditional OR operator [C#]
 - short-circuiting OR operator [C#]
 - '|| operator [C#]'
-ms.openlocfilehash: 37fe329026c16043abb20f8a9f030d877469951d
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 60907eb1bbfeb1daa9d9a74733387c4771accb45
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025223"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423980"
 ---
 # <a name="boolean-logical-operators-c-reference"></a>布尔逻辑运算符（C# 参考）
 
@@ -45,9 +45,9 @@ ms.locfileid: "67025223"
 
 - 一元 [`!`（逻辑非）](#logical-negation-operator-)运算符。
 - 二元 [`&`（逻辑与）](#logical-and-operator-)、[`|`（逻辑或）](#logical-or-operator-)和 [`^`（逻辑异或）](#logical-exclusive-or-operator-)运算符。 这些运算符始终计算两个操作数。
-- 二元 [`&&`（条件逻辑与）](#conditional-logical-and-operator-)和 [`||`（条件逻辑或）](#conditional-logical-or-operator-)运算符。 这些运算符仅在必要时才计算第二个操作数。
+- 二元 [`&&`（条件逻辑与）](#conditional-logical-and-operator-)和 [`||`（条件逻辑或）](#conditional-logical-or-operator-)运算符。 这些运算符仅在必要时才计算右侧操作数。
 
-对于[整型](../keywords/integral-types-table.md)类型的操作数，`&`、`|` 和 `^` 运算符执行位逻辑运算。 有关详细信息，请参阅[位运算符和移位运算符](bitwise-and-shift-operators.md)。
+对于[整型](../builtin-types/integral-numeric-types.md)类型的操作数，`&`、`|` 和 `^` 运算符执行位逻辑运算。 有关详细信息，请参阅[位运算符和移位运算符](bitwise-and-shift-operators.md)。
 
 ## <a name="logical-negation-operator-"></a>逻辑非运算符 !
 
@@ -55,17 +55,17 @@ ms.locfileid: "67025223"
 
 [!code-csharp-interactive[logical negation](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#Negation)]
 
-## <a name="logical-and-operator-amp"></a>逻辑与运算符 &amp;
+## <a name="logical-and-operator-"></a> 逻辑 AND 运算符 &amp;
 
 `&` 运算符计算操作数的逻辑与。 如果 `x` 和 `y` 的计算结果都为 `true`，则 `x & y` 的结果为 `true`。 否则，结果为 `false`。
 
-即使第一个操作数计算结果为 `false`，`&` 运算符也会计算这两个操作数，而在这种情况下，无论第二个操作数的值为何，结果都肯定为 `false`。
+即使左侧操作数计算结果为 `false`，`&` 运算符也会计算这两个操作数，而在这种情况下，无论右侧操作数的值为何，结果都肯定为 `false`。
 
-在下面的示例中，`&` 运算符的第二个操作数是方法调用，无论第一个操作数的值如何，都会执行方法调用：
+在下面的示例中，`&` 运算符的右侧操作数是方法调用，无论左侧操作数的值如何，都会执行方法调用：
 
 [!code-csharp-interactive[logical AND](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#And)]
 
-[条件逻辑与运算符](#conditional-logical-and-operator-) `&&` 也计算操作数的逻辑与，但如果第一个操作数的计算结果为 `false`，它就不会计算第二个操作数。
+[条件逻辑 AND 运算符](#conditional-logical-and-operator-) `&&` 也计算操作数的逻辑 AND，但如果左侧操作数的计算结果为 `false`，它就不会计算右侧操作数。
 
 对于整型类型的操作数，`&` 运算符计算其操作数的[位逻辑 AND](bitwise-and-shift-operators.md#logical-and-operator-)。 一元 `&` 运算符是 [address-of 运算符](pointer-related-operators.md#address-of-operator-)。
 
@@ -81,21 +81,21 @@ ms.locfileid: "67025223"
 
 `|` 运算符计算操作数的逻辑或。 如果 `x` 或 `y` 的计算结果为 `true`，则 `x | y` 的结果为 `true`。 否则，结果为 `false`。
 
-即使第一个操作数计算结果为 `true`，`|` 运算符也会计算这两个操作数，而在这种情况下，无论第二个操作数的值为何，结果都肯定为 `true`。
+即使左侧操作数计算结果为 `true`，`|` 运算符也会计算这两个操作数，而在这种情况下，无论右侧操作数的值为何，结果都肯定为 `true`。
 
-在下面的示例中，`|` 运算符的第二个操作数是方法调用，无论第一个操作数的值如何，都会执行方法调用：
+在下面的示例中，`|` 运算符的右侧操作数是方法调用，无论左侧操作数的值如何，都会执行方法调用：
 
 [!code-csharp-interactive[logical OR](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#Or)]
 
-[条件逻辑或运算符](#conditional-logical-or-operator-) `||` 也计算操作数的逻辑或，但如果第一个操作数的计算结果为 `true`，它就不会计算第二个操作数。
+[条件逻辑 OR 运算符](#conditional-logical-or-operator-) `||` 也计算操作数的逻辑 OR，但如果左侧操作数的计算结果为 `true`，它就不会计算右侧操作数。
 
 对于整型类型的操作数，`|` 运算符计算其操作数的[位逻辑 OR](bitwise-and-shift-operators.md#logical-or-operator-)。
 
-## <a name="conditional-logical-and-operator-ampamp"></a>条件逻辑与运算符 &amp;&amp;
+## <a name="conditional-logical-and-operator-"></a> 条件逻辑 AND 运算符 &amp;&amp;
 
-条件逻辑与运算符 `&&`（亦称为“短路”逻辑与运算符）计算操作数的逻辑与。 如果 `x` 和 `y` 的计算结果都为 `true`，则 `x && y` 的结果为 `true`。 否则，结果为 `false`。 如果第一个操作数的计算结果为 `false`，它就不会计算第二个操作数。
+条件逻辑与运算符 `&&`（亦称为“短路”逻辑与运算符）计算操作数的逻辑与。 如果 `x` 和 `y` 的计算结果都为 `true`，则 `x && y` 的结果为 `true`。 否则，结果为 `false`。 如果 `x` 的计算结果为 `false`，则不计算 `y`。
 
-在下面的示例中，`&&` 运算符的第二个操作数是方法调用，如果第一个操作数的计算结果为 `false`，就不执行方法调用：
+在下面的示例中，`&&` 运算符的右侧操作数是方法调用，如果左侧操作数的计算结果为 `false`，就不执行方法调用：
 
 [!code-csharp-interactive[conditional logical AND](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#ConditionalAnd)]
 
@@ -103,9 +103,9 @@ ms.locfileid: "67025223"
 
 ## <a name="conditional-logical-or-operator-"></a>条件逻辑或运算符 ||
 
-条件逻辑或运算符 `||`（亦称为“短路”逻辑或运算符）计算操作数的逻辑或。 如果 `x` 或 `y` 的计算结果为 `true`，则 `x || y` 的结果为 `true`。 否则，结果为 `false`。 如果第一个操作数的计算结果为 `true`，它就不会计算第二个操作数。
+条件逻辑或运算符 `||`（亦称为“短路”逻辑或运算符）计算操作数的逻辑或。 如果 `x` 或 `y` 的计算结果为 `true`，则 `x || y` 的结果为 `true`。 否则，结果为 `false`。 如果 `x` 的计算结果为 `true`，则不计算 `y`。
 
-在下面的示例中，`||` 运算符的第二个操作数是方法调用，如果第一个操作数的计算结果为 `true`，就不执行方法调用：
+在下面的示例中，`||` 运算符的右侧操作数是方法调用，如果左侧操作数的计算结果为 `true`，就不执行方法调用：
 
 [!code-csharp-interactive[conditional logical OR](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#ConditionalOr)]
 
