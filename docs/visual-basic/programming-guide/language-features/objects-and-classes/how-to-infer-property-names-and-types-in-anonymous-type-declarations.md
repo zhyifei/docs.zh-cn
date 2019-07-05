@@ -6,12 +6,12 @@ helpviewer_keywords:
 - anonymous types [Visual Basic], inferring property names and types
 - inferring property types [Visual Basic]
 ms.assetid: 7c748b22-913f-4d9d-b747-6b7bf296a0bc
-ms.openlocfilehash: 2f923bd7069e29eeb20cbc77cef02c8378917d4f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: aba8c37059cfc58fdffda55bcf1c485b61c3d249
+ms.sourcegitcommit: 4a3c95e91289d16c38979575a245a4f76b0da147
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665401"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67569488"
 ---
 # <a name="how-to-infer-property-names-and-types-in-anonymous-type-declarations-visual-basic"></a>如何：推断属性名和匿名类型声明 (Visual Basic 中) 中的类型
 匿名类型不提供直接指定属性的数据类型的机制。 所有属性的类型都是推断出来的。 下面的示例从用于初始化属性的值，直接推断 `Name` 和 `Price` 属性的类型。  
@@ -43,10 +43,11 @@ ms.locfileid: "64665401"
      为 `anon` 产生的类型将具有一个属性 `Book`，其类型为 <xref:System.Collections.IEnumerable>(Of XElement)。  
   
 - 从没有参数的函数，例如下面示例中的 `SomeFunction` 。  
-  
-     `Dim sc As New SomeClass`  
-  
-     `Dim anon1 = New With {Key sc.SomeFunction()}`  
+
+  ```vb
+     Dim sc As New SomeClass
+     Dim anon1 = New With {Key sc.SomeFunction()}
+  ```
   
      下面代码中的变量 `anon2` 是具有一个属性（一个名为 `First`的字符）的匿名类型。 这段代码将显示函数 <xref:System.Linq.Enumerable.First%2A>返回的字母“E”。  
   
@@ -57,20 +58,22 @@ ms.locfileid: "64665401"
 #### <a name="name-inference-will-fail-in-many-circumstances-including-the-following"></a>名称推理在许多情况下将失败，包括：  
   
 - 推理派生自对方法、构造函数或需要参数的参数化属性的调用。 如果 `anon1` 具有一个或多个参数，则上面的 `someFunction` 声明将失败。  
-  
-     `' Not valid.`  
-  
-     `' Dim anon3 = New With {Key sc.someFunction(someArg)}`  
-  
+
+    ```vb
+    ' Not valid.
+    ' Dim anon3 = New With {Key sc.someFunction(someArg)}
+    ```
+    
      向新属性名赋值可以解决这一问题。  
-  
-     `' Valid.`  
-  
-     `Dim anon4 = New With {Key .FunResult = sc.someFunction(someArg)}`  
-  
+
+    ```vb
+    ' Valid.
+    Dim anon4 = New With {Key .FunResult = sc.someFunction(someArg)}
+    ```
+
 - 推理派生自复杂表达式。  
   
-    ```  
+    ```vb  
     Dim aString As String = "Act "  
     ' Not valid.  
     ' Dim label = New With {Key aString & "IV"}  
@@ -81,41 +84,43 @@ ms.locfileid: "64665401"
      [!code-vb[VbVbalrAnonymousTypes#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#14)]  
   
 - 对多个属性的推理会产生两个或更多的同名属性。 回到前面示例中的声明，在那些声明中，不能将 `product.Name` 和 `car1.Name` 同时列为同一匿名类型的属性。 这是因为这些属性的推断标识符都是 `Name`。  
-  
-     `' Not valid.`  
-  
-     `' Dim anon5 = New With {Key product.Name, Key car1.Name}`  
-  
+
+     ```vb
+     ' Not valid.
+     ' Dim anon5 = New With {Key product.Name, Key car1.Name}
+     ```
+     
      通过为不同属性名赋值可以解决此问题。  
   
      [!code-vb[VbVbalrAnonymousTypes#36](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#36)]  
   
      请注意，更改大小写（在大写和小写字母之间切换）不能区分两个名称。  
-  
-     `Dim price = 0`  
-  
-     `' Not valid, because Price and price are the same name.`  
-  
-     `' Dim anon7 = New With {Key product.Price, Key price}`  
+
+     ```vb
+     Dim price = 0
+     ' Not valid, because Price and price are the same name.
+     ' Dim anon7 = New With {Key product.Price, Key price}
+     ```
   
 - 属性的初始类型和值取决于尚未建立的另一个属性。 例如， `.IDName = .LastName` 在匿名类型声明中无效，除非 `.LastName` 已经初始化。  
-  
-     `' Not valid.`  
-  
-     `' Dim anon8 = New With {Key .IDName = .LastName, Key .LastName = "Jones"}`  
-  
+
+     ```vb
+     ' Not valid.
+     ' Dim anon8 = New With {Key .IDName = .LastName, Key .LastName = "Jones"}
+     ```
+     
      在此示例中，可以通过逆转声明属性的顺序来解决问题。  
   
      [!code-vb[VbVbalrAnonymousTypes#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#15)]  
   
 - 匿名类型的属性名和 <xref:System.Object>的成员的名称相同。 例如，因为 `Equals` 是 <xref:System.Object>的一个方法，所以下面的声明会失败。  
   
-     `' Not valid.`  
-  
-     `' Dim relationsLabels1 = New With {Key .Equals = "equals", Key .Greater = _`  
-  
-     `'                       "greater than", Key .Less = "less than"}`  
-  
+     ```vb
+     ' Not valid.
+     ' Dim relationsLabels1 = New With {Key .Equals = "equals", Key .Greater = _
+     '                       "greater than", Key .Less = "less than"}
+     ```
+     
      可以通过更改属性名来修复该问题：  
   
      [!code-vb[VbVbalrAnonymousTypes#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#16)]  

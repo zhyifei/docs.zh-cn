@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: 2122213e69512b06d1328272740ac4ffdc36c1eb
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 55d78ed9bf839d66b3487f91d71d7a07a2123c5f
+ms.sourcegitcommit: 4a3c95e91289d16c38979575a245a4f76b0da147
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66483035"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67569558"
 ---
 # <a name="working-with-certificates"></a>使用证书
 对 Windows Communication Foundation (WCF) 安全性进行编程时，通常使用 X.509 数字证书对客户端和服务器进行身份验证，以及对消息进行加密和数字签名。 本主题将简要说明 X.509 数字证书的功能以及如何在 WCF 中使用它们，并提供一些主题的链接，这些主题对这些概念进行了深入说明，或揭示了如何使用 WCF 和证书来完成常见任务。  
@@ -85,8 +85,8 @@ ms.locfileid: "66483035"
   
  在创建自定义身份验证器时，要重写的最重要方法是 <xref:System.IdentityModel.Selectors.X509CertificateValidator.Validate%2A> 方法。 有关自定义身份验证的示例，请参阅 [X.509 证书验证程序](../../../../docs/framework/wcf/samples/x-509-certificate-validator.md)示例。 有关详细信息，请参阅[自定义凭据和凭据验证](../../../../docs/framework/wcf/extending/custom-credential-and-credential-validation.md)。  
   
-## <a name="using-the-powershell-new-selfsignedcertificate-cmdlet-to-build-a-certificate-chain"></a>使用 Powershell New-selfsignedcertificate Cmdlet 生成的证书链  
- Powershell New-selfsignedcertificate cmdlet 创建 X.509 证书和私钥/公钥对。 可以将私钥保存在磁盘上，然后用它来颁发和签名新证书，从而模拟链状证书的层次结构。 开发服务和应永远不会用于创建用于实际部署的证书时，该 cmdlet 旨在仅用作帮助。 开发 WCF 服务时，使用以下步骤来生成使用 New-selfsignedcertificate cmdlet 的信任链。  
+## <a name="using-the-powershell-new-selfsignedcertificate-cmdlet-to-build-a-certificate-chain"></a>使用 PowerShell New-selfsignedcertificate Cmdlet 生成的证书链  
+ PowerShell New-selfsignedcertificate cmdlet 创建 X.509 证书和私钥/公钥对。 可以将私钥保存在磁盘上，然后用它来颁发和签名新证书，从而模拟链状证书的层次结构。 开发服务和应永远不会用于创建用于实际部署的证书时，该 cmdlet 旨在仅用作帮助。 开发 WCF 服务时，使用以下步骤来生成使用 New-selfsignedcertificate cmdlet 的信任链。  
   
 #### <a name="to-build-a-chain-of-trust-with-the-new-selfsignedcertificate-cmdlet"></a>若要生成使用 New-selfsignedcertificate cmdlet 的信任链  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8b71d0f29d770b2722b0dfaabc8b9667e524c99e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 004122e9bb52dfe2e51ca00cd5362b2b7a06f30e
+ms.sourcegitcommit: 4a3c95e91289d16c38979575a245a4f76b0da147
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61984602"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67569574"
 ---
 # <a name="iclrmetahostgetruntime-method"></a>ICLRMetaHost::GetRuntime 方法
 获取[ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)对应于特定版本的公共语言运行时 (CLR) 的接口。 此方法取代[CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)函数与一起使用[STARTUP_LOADER_SAFEMODE](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md)标志。  
@@ -32,7 +32,7 @@ ms.locfileid: "61984602"
 ```  
 HRESULT GetRuntime (  
     [in] LPCWSTR pwzVersion,  
-    [in, REFIID riid,  
+    [in] REFIID riid,  
     [out,iid_is(riid), retval] LPVOID *ppRuntime  
 );  
 ```  
@@ -70,7 +70,7 @@ HRESULT GetRuntime (
   
  **库：** 包含为 MSCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 
