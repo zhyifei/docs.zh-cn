@@ -225,8 +225,6 @@
               href: keywords/explicit.md
             - name: 隐式
               href: keywords/implicit.md
-            - name: operator
-              href: keywords/operator.md
         - name: 访问关键字
           items:
             - name: base
@@ -354,6 +352,8 @@
           href: operators/stackalloc.md
         - name: true 和 false 运算符
           href: operators/true-false-operators.md
+        - name: 运算符重载
+          href: operators/operator-overloading.md
     - name: 'C# 特殊字符'
       items:
         - name: 概述
