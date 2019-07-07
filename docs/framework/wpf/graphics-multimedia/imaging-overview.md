@@ -21,21 +21,21 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
-ms.openlocfilehash: 6cb389cd0458d1c9e7af94586c394764f01e4bab
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b84a2e4c3cf4126a6efa7edaf868080dbc48b859
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665187"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610389"
 ---
 # <a name="imaging-overview"></a>图像处理概述
 本主题介绍 [!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-md.md)]。 借助 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]，开发人员可以显示、转换图像和设置图像的格式。  
 
 <a name="_wpfImaging"></a>   
 ## <a name="wpf-imaging-component"></a>WPF 图像处理组件  
- [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] 使得 [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] 内的图像处理功能得到了极大改进。 以前，图像处理功能（例如在公共控件上显示位图或使用图像）依赖于 [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] 或 [!INCLUDE[TLA#tla_gdiplus](../../../../includes/tlasharptla-gdiplus-md.md)] 库。 这些 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] 提供了基线图像处理功能，但缺乏诸如编解码器扩展性支持和高保真图像支持之类的功能。 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] 旨在克服 [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] 和 [!INCLUDE[TLA2#tla_gdiplus](../../../../includes/tla2sharptla-gdiplus-md.md)] 的缺点，并提供一组新的 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]，以在应用程序内显示和使用图像。  
+ [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] 使得 [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] 内的图像处理功能得到了极大改进。 以前，图像处理功能（例如在公共控件上显示位图或使用图像）依赖于 [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] 或 [!INCLUDE[TLA#tla_gdiplus](../../../../includes/tlasharptla-gdiplus-md.md)] 库。 这些 API 提供基线图像处理功能，但缺少编解码器扩展性支持和高保真图像支持等功能。 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] 旨在克服的不足之处[!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)]和[!INCLUDE[TLA2#tla_gdiplus](../../../../includes/tla2sharptla-gdiplus-md.md)]并提供一组新的 API 来显示，并使用你的应用程序中的图像。  
   
- 有两种方式可以访问 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]：托管组件和非托管组件。 非托管组件提供以下功能。  
+ 有两种方法来访问[!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]API、 托管的组件和非托管的组件。 非托管组件提供以下功能。  
   
 - 适用于新的或专用图像格式的扩展性模型。  
   
@@ -51,9 +51,9 @@ ms.locfileid: "64665187"
   
 - 托管组件利用非托管基础结构提供图像与其他 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 功能（如 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]、动画和图形）的无缝集成。 托管的组件还可以利用 Windows Presentation Foundation (WPF) 图像处理编解码器扩展性模型可以自动识别中的新图像格式的[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]应用程序。  
   
- 大多数托管[!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)][!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]驻留在<xref:System.Windows.Media.Imaging?displayProperty=nameWithType>命名空间，但一些重要类型，如<xref:System.Windows.Media.ImageBrush>并<xref:System.Windows.Media.ImageDrawing>驻留在<xref:System.Windows.Media?displayProperty=nameWithType>命名空间和<xref:System.Windows.Controls.Image>驻留在<xref:System.Windows.Controls?displayProperty=nameWithType>命名空间。  
+ 大多数托管[!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]API 驻留在<xref:System.Windows.Media.Imaging?displayProperty=nameWithType>命名空间中，尽管几个重要类型，如<xref:System.Windows.Media.ImageBrush>并<xref:System.Windows.Media.ImageDrawing>位于<xref:System.Windows.Media?displayProperty=nameWithType>命名空间和<xref:System.Windows.Controls.Image>驻留在<xref:System.Windows.Controls?displayProperty=nameWithType>命名空间。  
   
- 本主题提供有关托管组件的其他信息。 有关非托管 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] 的详细信息，请参阅[非托管 WPF 图像处理组件](/windows/desktop/wic/-wic-lh)文档。  
+ 本主题提供有关托管组件的其他信息。 有关详细信息非托管 API，请参阅[非托管 WPF 图像处理组件](/windows/desktop/wic/-wic-lh)文档。  
   
 <a name="_imageformats"></a>   
 ## <a name="wpf-image-formats"></a>WPF 图像格式  
@@ -167,7 +167,7 @@ ms.locfileid: "64665187"
   
  通过提供对元数据的访问<xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A>属性的<xref:System.Windows.Media.Imaging.BitmapSource>对象。 <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A> 返回<xref:System.Windows.Media.Imaging.BitmapMetadata>包括所有所包含的图像的元数据的对象。 此数据可以位于一个元数据架构中或位于不同架构的组合中。 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] 支持以下图像元数据架构：[!INCLUDE[TLA#tla_exif](../../../../includes/tlasharptla-exif-md.md)]、tEXt（PNG 文本数据）、[!INCLUDE[TLA#tla_ifd](../../../../includes/tlasharptla-ifd-md.md)]、[!INCLUDE[TLA#tla_iptc](../../../../includes/tlasharptla-iptc-md.md)] 和 [!INCLUDE[TLA#tla_xmp](../../../../includes/tlasharptla-xmp-md.md)]。  
   
- 为了简化读取元数据的过程<xref:System.Windows.Media.Imaging.BitmapMetadata>提供了可以如轻松访问的多个命名的属性<xref:System.Windows.Media.Imaging.BitmapMetadata.Author%2A>， <xref:System.Windows.Media.Imaging.BitmapMetadata.Title%2A>，和<xref:System.Windows.Media.Imaging.BitmapMetadata.CameraModel%2A>。 许多命名属性还可以用于编写元数据。 元数据查询读取器提供对读取元数据的其他支持。 <xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A>方法用于检索元数据查询读取器通过提供字符串查询，如 *"/ app1/exif /"*。 在以下示例中，<xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A>用于获取存储在文本 *"/text/description"* 位置。  
+ 为了简化读取元数据的过程<xref:System.Windows.Media.Imaging.BitmapMetadata>提供了可以如轻松访问的多个命名的属性<xref:System.Windows.Media.Imaging.BitmapMetadata.Author%2A>， <xref:System.Windows.Media.Imaging.BitmapMetadata.Title%2A>，和<xref:System.Windows.Media.Imaging.BitmapMetadata.CameraModel%2A>。 许多命名属性还可以用于编写元数据。 元数据查询读取器提供对读取元数据的其他支持。 <xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A>方法用于检索元数据查询读取器通过提供字符串查询，如 *"/ app1/exif /"* 。 在以下示例中，<xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A>用于获取存储在文本 *"/text/description"* 位置。  
   
  [!code-cpp[BitmapMetadata#GetQuery](~/samples/snippets/cpp/VS_Snippets_Wpf/BitMapMetadata/CPP/BitmapMetadata.cpp#getquery)]
  [!code-csharp[BitmapMetadata#GetQuery](~/samples/snippets/csharp/VS_Snippets_Wpf/BitMapMetadata/CSharp/BitmapMetadata.cs#getquery)]
@@ -183,7 +183,7 @@ ms.locfileid: "64665187"
 ## <a name="codec-extensibility"></a>编解码器扩展性  
  [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] 的核心功能是用于新图像编解码器的扩展性模型。 通过这些非托管的接口，编解码器开发人员可以将编解码器与 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 集成，这样 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 应用程序就可以自动使用新的图像格式。  
   
- 有关扩展性 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] 的示例，请参阅 [Win32 示例编解码器](https://go.microsoft.com/fwlink/?LinkID=160052)。 此示例演示如何为自定义图像格式创建解码器和编码器。  
+ 有关可扩展性 API 的示例，请参阅[Win32 示例编解码器](https://go.microsoft.com/fwlink/?LinkID=160052)。 此示例演示如何为自定义图像格式创建解码器和编码器。  
   
 > [!NOTE]
 >  编解码器必须进行数字签名，系统才能够识别它。  

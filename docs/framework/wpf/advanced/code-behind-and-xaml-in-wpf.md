@@ -5,12 +5,12 @@ helpviewer_keywords:
 - XAML [WPF], code-behind
 - code-behind files [WPF], XAML
 ms.assetid: 9df6d3c9-aed3-471c-af36-6859b19d999f
-ms.openlocfilehash: 01122991e99e41259c3b83a38eba002734d749ee
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6a47f5a93cb161c9a87df25403cc86247619cd81
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64655528"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610536"
 ---
 # <a name="code-behind-and-xaml-in-wpf"></a>WPF 中的代码隐藏和 XAML
 <a name="introduction"></a> 代码隐藏是一个术语，用于描述标记定义的对象，与联接的代码时[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]页进行标记编译。 本主题介绍了代码隐藏的要求以及代码中的可选内联代码机制[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。  
@@ -56,7 +56,7 @@ ms.locfileid: "64655528"
   
 <a name="Inline_Code_Limitations"></a>   
 ## <a name="inline-code-limitations"></a>内联代码的限制  
- 应考虑避免或限制的内联代码使用。 根据体系结构和编码基本原理，维护分离标记和代码隐藏保留设计器和开发人员角色得更为明显。 在更多技术级别中，为内联代码编写的代码可能难以编写，因为始终写入[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]生成的分部类，并且只能使用默认 XML 命名空间映射。 因为不能添加`using`语句，您必须完全限定的许多[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]所做的调用。 默认值[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]映射包括最而不是全部[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]命名空间中存在的[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]程序集; 必须完全限定的类型和成员中的其他 CLR 命名空间包含对的调用。 您还不能定义分部类以外的项目中的内联代码，并且您引用的所有用户代码实体必须都存在作为成员或生成的分部类中的变量。 其他语言特定编程功能，例如宏或`#ifdef`对全局变量或生成变量，也不是可用。 有关详细信息，请参阅[X:code 内部 XAML 类型](../../xaml-services/x-code-intrinsic-xaml-type.md)。  
+ 应考虑避免或限制的内联代码使用。 根据体系结构和编码基本原理，维护分离标记和代码隐藏保留设计器和开发人员角色得更为明显。 在更多技术级别中，为内联代码编写的代码可能难以编写，因为始终写入[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]生成的分部类，并且只能使用默认 XML 命名空间映射。 因为不能添加`using`语句，您必须完全限定的 API 调用所做的许多。 默认值[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]映射包括最而不是全部[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]命名空间中存在的[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]程序集; 必须完全限定的类型和成员中的其他 CLR 命名空间包含对的调用。 您还不能定义分部类以外的项目中的内联代码，并且您引用的所有用户代码实体必须都存在作为成员或生成的分部类中的变量。 其他语言特定编程功能，例如宏或`#ifdef`对全局变量或生成变量，也不是可用。 有关详细信息，请参阅[X:code 内部 XAML 类型](../../xaml-services/x-code-intrinsic-xaml-type.md)。  
   
 ## <a name="see-also"></a>请参阅
 

@@ -24,31 +24,31 @@ helpviewer_keywords:
 - focus [WPF]
 - mouse position [WPF]
 ms.assetid: ee5258b7-6567-415a-9b1c-c0cbe46e79ef
-ms.openlocfilehash: 6aae66de973c357b4b87578221a169bf750739fb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 47d892db8418b44fffeec870e56b49d5f986b563
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64599017"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610480"
 ---
 # <a name="input-overview"></a>输入概述
 <a name="introduction"></a> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]子系统提供了一个强大[!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]用于获取输入不同的设备，包括鼠标、 键盘、 触控和触笔。 本主题介绍了 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供的服务，并说明了输入系统的体系结构。
 
 <a name="input_api"></a>
 ## <a name="input-api"></a>输入 API
- 主要的输入[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]找到基元素类上公开： <xref:System.Windows.UIElement>， <xref:System.Windows.ContentElement>， <xref:System.Windows.FrameworkElement>，和<xref:System.Windows.FrameworkContentElement>。  有关基元素的详细信息，请参阅[基元素概述](base-elements-overview.md)。  这些类提供有关输入事件（例如按键、鼠标按钮、鼠标滚轮、鼠标移动、焦点管理和鼠标捕获等）的功能。 通过将输入 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] 放置在基元素上，而不是将所有输入事件视作一项服务，该输入体系结构使输入事件可以由 UI 中的特定对象指明其出处，并支持事件路由方案，从而使得多个元素有机会处理输入事件。 许多输入事件都具有与之相关联的一对事件。  例如，键按下事件与<xref:System.Windows.Input.Keyboard.KeyDown>和<xref:System.Windows.Input.Keyboard.PreviewKeyDown>事件。  这些事件的区别在于它们如何路由至目标元素。  预览事件将元素树从根元素到目标元素向下进行隧道操作。  冒泡事件从目标元素到根元素向上进行冒泡操作。  本概述后面部分和[路由事件概述](routed-events-overview.md)中更详细地讨论了 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的事件路由。
+ 基元素类上找到 API 公开的主要输入： <xref:System.Windows.UIElement>， <xref:System.Windows.ContentElement>， <xref:System.Windows.FrameworkElement>，和<xref:System.Windows.FrameworkContentElement>。  有关基元素的详细信息，请参阅[基元素概述](base-elements-overview.md)。  这些类提供有关输入事件（例如按键、鼠标按钮、鼠标滚轮、鼠标移动、焦点管理和鼠标捕获等）的功能。 通过将输入 API 放在基元素上，而将所有输入的事件都视为服务，该输入体系结构使输入的事件可通过在 UI 中的特定对象指明其来源和以支持多个元素，从而使得有 opp 事件路由方案ortunity 来处理输入的事件。 许多输入事件都具有与之相关联的一对事件。  例如，键按下事件与<xref:System.Windows.Input.Keyboard.KeyDown>和<xref:System.Windows.Input.Keyboard.PreviewKeyDown>事件。  这些事件的区别在于它们如何路由至目标元素。  预览事件将元素树从根元素到目标元素向下进行隧道操作。  冒泡事件从目标元素到根元素向上进行冒泡操作。  本概述后面部分和[路由事件概述](routed-events-overview.md)中更详细地讨论了 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的事件路由。
 
 ### <a name="keyboard-and-mouse-classes"></a>键盘和鼠标类
- 除了输入[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]基元素类上<xref:System.Windows.Input.Keyboard>类和<xref:System.Windows.Input.Mouse>类提供其他[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]用于处理键盘和鼠标输入。
+ 除了基元素类上的输入 API<xref:System.Windows.Input.Keyboard>类和<xref:System.Windows.Input.Mouse>类提供用于处理与键盘和鼠标输入的其他 API。
 
- 输入的示例[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]上<xref:System.Windows.Input.Keyboard>类<xref:System.Windows.Input.Keyboard.Modifiers%2A>属性，它返回<xref:System.Windows.Input.ModifierKeys>当前按下，和<xref:System.Windows.Input.Keyboard.IsKeyDown%2A>方法，这可确定是否按下某个指定的键。
+ 输入 API 上的示例<xref:System.Windows.Input.Keyboard>类是<xref:System.Windows.Input.Keyboard.Modifiers%2A>属性，它返回<xref:System.Windows.Input.ModifierKeys>当前按下，和<xref:System.Windows.Input.Keyboard.IsKeyDown%2A>方法，这可确定是否按下某个指定的键。
 
  下面的示例使用<xref:System.Windows.Input.Keyboard.GetKeyStates%2A>方法，以确定如果<xref:System.Windows.Input.Key>处于关闭状态。
 
  [!code-csharp[keyargssnippetsample#KeyEventArgsKeyBoardGetKeyStates](~/samples/snippets/csharp/VS_Snippets_Wpf/KeyArgsSnippetSample/CSharp/Window1.xaml.cs#keyeventargskeyboardgetkeystates)]
  [!code-vb[keyargssnippetsample#KeyEventArgsKeyBoardGetKeyStates](~/samples/snippets/visualbasic/VS_Snippets_Wpf/KeyArgsSnippetSample/visualbasic/window1.xaml.vb#keyeventargskeyboardgetkeystates)]
 
- 输入的示例[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]上<xref:System.Windows.Input.Mouse>类<xref:System.Windows.Input.Mouse.MiddleButton%2A>，用于获取鼠标中键的状态和<xref:System.Windows.Input.Mouse.DirectlyOver%2A>，后者将获取该元素在鼠标指针当前位于。
+ 输入 API 上的示例<xref:System.Windows.Input.Mouse>类是<xref:System.Windows.Input.Mouse.MiddleButton%2A>，用于获取鼠标中键的状态和<xref:System.Windows.Input.Mouse.DirectlyOver%2A>，后者将获取该元素在鼠标指针当前位于。
 
  下面的示例确定是否<xref:System.Windows.Input.Mouse.LeftButton%2A>鼠标位于<xref:System.Windows.Input.MouseButtonState.Pressed>状态。
 
@@ -58,7 +58,7 @@ ms.locfileid: "64599017"
  <xref:System.Windows.Input.Mouse>和<xref:System.Windows.Input.Keyboard>中更详细地介绍本概述介绍了类。
 
 ### <a name="stylus-input"></a>触笔输入
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 支持集成的<xref:System.Windows.Input.Stylus>。  <xref:System.Windows.Input.Stylus>是变得流行的笔输入[!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)]。  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序可以通过使用鼠标 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] 将触笔视为鼠标，但 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 也公开了触笔设备抽象，其使用的模型与键盘和鼠标类似。  所有与触笔相关的 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] 都包含单词“触笔”。
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 支持集成的<xref:System.Windows.Input.Stylus>。  <xref:System.Windows.Input.Stylus>是变得流行的笔输入[!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)]。  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序可以将触笔视为鼠标使用鼠标 API，但[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]还公开了触笔设备抽象，使用与键盘和鼠标类似的模型。  所有与触笔相关的 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] 都包含单词“触笔”。
 
  由于触笔可充当鼠标，因此仅支持鼠标输入的应用程序仍可以自动获得一定程度的触笔支持。 以这种方式使用触笔时，应用程序有能力处理相应的触笔事件，然后处理相应的鼠标事件。 此外，通过触笔设备抽象也可以使用墨迹输入等较高级别的服务。  有关墨迹输入的详细信息，请参阅[墨迹入门](getting-started-with-ink.md)。
 
@@ -350,7 +350,7 @@ ms.locfileid: "64599017"
 
 <a name="mouse_position"></a>
 ## <a name="mouse-position"></a>鼠标位置
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 输入 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] 提供了与坐标空间有关的有用信息。  例如，坐标 `(0,0)` 为左上角坐标，但该坐标是树中那一个元素的左上角坐标？ 是属于输入目标的元素？ 是在其上附加事件处理程序的元素？ 还是其他内容？ 为了避免混淆，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 输入 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] 要求，在处理通过鼠标获取的坐标时，应指定参考框架。 <xref:System.Windows.Input.Mouse.GetPosition%2A>方法返回鼠标指针相对于指定元素的坐标。
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]输入 API 提供了与坐标空间有关的有用信息。  例如，坐标 `(0,0)` 为左上角坐标，但该坐标是树中那一个元素的左上角坐标？ 是属于输入目标的元素？ 是在其上附加事件处理程序的元素？ 还是其他内容？ 为了避免混淆，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]输入 API 要求时使用通过鼠标获取的坐标指定参考框架。 <xref:System.Windows.Input.Mouse.GetPosition%2A>方法返回鼠标指针相对于指定元素的坐标。
 
 <a name="mouse_capture"></a>
 ## <a name="mouse-capture"></a>鼠标捕获

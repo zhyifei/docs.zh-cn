@@ -15,12 +15,12 @@ helpviewer_keywords:
 - XPSDrv-based printers
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
-ms.openlocfilehash: f82fd9803512dbd2466c4d0b49142e2c553d578a
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 2090c58369ed3c7bda5df1342291001d9550d48d
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66380235"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610460"
 ---
 # <a name="printing-overview"></a>打印概述
 使用 Microsoft.NET Framework 应用程序开发人员使用 Windows Presentation Foundation (WPF) 具有一组丰富新的打印和打印系统管理 Api。 在 [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] 中，还为创建 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 应用程序的开发人员和使用非托管代码的开发人员提供了这些打印系统增强功能中的某些功能。 此新功能的核心是新的 [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] 文件格式和 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 打印路径。  
@@ -31,7 +31,7 @@ ms.locfileid: "66380235"
 ## <a name="about-xps"></a>关于 XPS  
  XPS 是电子文档格式、 后台打印文件格式和页面描述语言。 此格式是开放文档格式，它使用 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]、[!INCLUDE[TLA#tla_opc](../../../../includes/tlasharptla-opc-md.md)] 及其他行业标准来创建跨平台的文档。 XPS 简化的过程按其数字文档进行创建、 共享、 打印、 查看和存档。 有关 XPS 的其他信息，请参阅[XPS 文档](/windows/desktop/printdocs/documents)。  
   
- 打印基于 XPS 的内容使用的几种方法[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]中演示[以编程方式打印 XPS 文件](how-to-programmatically-print-xps-files.md)。 在查看本主题中的内容时，参考这些示例会很有帮助。 (非托管的代码开发人员应参阅文档[MXDC_ESCAPE 函数](/windows/desktop/printdocs/mxdc-escape)。 Windows 窗体开发人员必须使用[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]中<xref:System.Drawing.Printing>命名空间不支持完整[!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]打印路径，但支持 GDI 到 XPS 的混合打印路径。 请参阅下面的**打印路径体系结构**。）  
+ 打印基于 XPS 的内容使用的几种方法[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]中演示[以编程方式打印 XPS 文件](how-to-programmatically-print-xps-files.md)。 在查看本主题中的内容时，参考这些示例会很有帮助。 (非托管的代码开发人员应参阅文档[MXDC_ESCAPE 函数](/windows/desktop/printdocs/mxdc-escape)。 Windows 窗体开发人员必须使用中的 API<xref:System.Drawing.Printing>命名空间不支持完整[!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]打印路径，但支持 GDI 到 XPS 的混合打印路径。 请参阅下面的**打印路径体系结构**。）  
   
 <a name="XPS_print_path_intro"></a>   
 ## <a name="xps-print-path"></a>XPS 打印路径  
@@ -51,7 +51,7 @@ ms.locfileid: "66380235"
   
 - 行业标准的 XPS 格式。  
   
- 对于基本打印方案，提供了简单直观的 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]只需单一入口点即可进入用户界面、完成配置和作业提交。 对于高级方案，为 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 自定义（或根本没有 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]）、同步或异步打印以及批量打印功能添加了附加支持。 这两个选项在完全或部分信任模式下都提供打印支持。  
+ 对于基本打印方案，与用户界面、 配置和作业提交的单入口点提供了简单而直观的 API。 对于高级方案，为 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 自定义（或根本没有 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]）、同步或异步打印以及批量打印功能添加了附加支持。 这两个选项在完全或部分信任模式下都提供打印支持。  
   
  XPS 旨在充分考虑了扩展性。 通过使用可扩展性框架，特性和功能可以为添加到 XPS 以模块化的方式。 扩展性功能包括：  
   
@@ -75,7 +75,7 @@ ms.locfileid: "66380235"
  <xref:System.Windows.Controls.PrintDialog?displayProperty=nameWithType>控件提供了单一入口点为[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]，配置和 XPS 作业提交。 若要了解如何实例化和使用该控件，请参阅[调用打印对话框](how-to-invoke-a-print-dialog.md)。  
   
 ### <a name="advanced-xps-printing"></a>高级 XPS 打印  
- 为了访问 XPS 的一整套功能，高级的打印[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]必须使用。 下面更详细地介绍了几个相关的 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]。 有关完整列表的 XPS 打印路径[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]，请参阅<xref:System.Windows.Xps>和<xref:System.Printing>命名空间的引用。  
+ 若要访问完整的 XPS 功能集，必须使用高级打印 API。 在下面更详细地介绍几个相关的 API。 有关完整列表的 XPS 打印路径[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]，请参阅<xref:System.Windows.Xps>和<xref:System.Printing>命名空间的引用。  
   
 #### <a name="printticket-and-printcapabilities"></a>PrintTicket 和 PrintCapabilities  
  <xref:System.Printing.PrintTicket>和<xref:System.Printing.PrintCapabilities>类是高级 XPS 功能的基础。 这两种类型的对象均是面向打印的功能（例如排序规则、双面打印、装订等）的 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] 格式的结构。这些结构由打印架构定义。 <xref:System.Printing.PrintTicket> 指示打印机如何处理打印作业。 <xref:System.Printing.PrintCapabilities> 类定义打印机的各种功能。 通过查询打印机的功能，可以创建充分利用打印机的受支持功能的 <xref:System.Printing.PrintTicket>。 同样，可以避免不受支持的功能。  

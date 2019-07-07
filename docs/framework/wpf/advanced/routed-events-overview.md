@@ -15,12 +15,12 @@ helpviewer_keywords:
 - button set [WPF], grouped
 - bubbling [WPF]
 ms.assetid: 1a2189ae-13b4-45b0-b12c-8de2e49c29d2
-ms.openlocfilehash: 7712ed02d20d692842267464a645bfc93ca8fd73
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 326900087f755b6c92d9ebb77dad36e5880fd2c0
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063898"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610446"
 ---
 # <a name="routed-events-overview"></a>路由事件概述
 本主题描述 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中路由事件的概念。 本主题定义路由事件术语、描述路由事件如何通过元素树来路由、概述如何处理路由事件，并介绍如何创建你自己的自定义路由事件。
@@ -98,7 +98,7 @@ ms.locfileid: "65063898"
   
  如果使用以下任一建议方案，路由事件的功能将得到充分发挥：在公用根处定义公用处理程序、合成自己的控件或者定义自己的自定义控件类。  
   
- 路由事件侦听器和路由事件源不必在其层次结构中共享公用事件。 任何<xref:System.Windows.UIElement>或<xref:System.Windows.ContentElement>可以是任一路由事件的事件侦听器。 因此，可以将有效的 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] 集中可用的全套路由事件用作概念“接口”，应用程序中的不同元素通过这个接口来交换事件信息。 路由事件的这个“接口”概念特别适用于输入事件。  
+ 路由事件侦听器和路由事件源不必在其层次结构中共享公用事件。 任何<xref:System.Windows.UIElement>或<xref:System.Windows.ContentElement>可以是任一路由事件的事件侦听器。 因此，您可以使用路由事件可在整个工作的 API 集作为概念"接口"，由此应用程序中的不同元素可以交换事件信息的完整集合。 路由事件的这个“接口”概念特别适用于输入事件。  
   
  路由事件还可以用于通过元素树进行通信，因为事件的事件数据会保留到路由中的每个元素中。 一个元素可以更改事件数据中的某些内容，该更改将用于路由中的下一个元素。  
   
@@ -177,7 +177,7 @@ ms.locfileid: "65063898"
   
 <a name="attached_events"></a>   
 ## <a name="attached-events-in-wpf"></a>WPF 中的附加事件  
- [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 语言还定义了一个名为附加事件的特殊类型的事件。 使用附加事件，可以将特定事件的处理程序添加到任意元素中。 处理事件的元素不必定义或继承附加事件，可能引发事件的对象和用来处理实例的目标也都不必将该事件定义为类成员，或将其作为类成员来“拥有”。  
+ [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 语言还定义了一个名为附加事件的特殊类型的事件。  使用附加事件，可以将特定事件的处理程序添加到任意元素中。 处理事件的元素不必定义或继承附加事件，可能引发事件的对象和用来处理实例的目标也都不必将该事件定义为类成员，或将其作为类成员来“拥有”。  
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 输入系统广泛使用附加事件。 但是，几乎所有的附加事件都是通过基本元素转发的。 输入事件随后会显示为作为基本元素类成员的等效非附加路由事件。 例如，基础附加事件<xref:System.Windows.Input.Mouse.MouseDown?displayProperty=nameWithType>可以更方便地处理针对任何给定<xref:System.Windows.UIElement>通过使用<xref:System.Windows.UIElement.MouseDown>上的<xref:System.Windows.UIElement>而不是可以处理附加的事件语法中[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]或代码。  
   
@@ -185,7 +185,7 @@ ms.locfileid: "65063898"
   
 <a name="Qualifying_Event_Names_in_XAML_for_Anticipated_Routing"></a>   
 ## <a name="qualified-event-names-in-xaml"></a>XAML 中的限定事件名称  
- 为子元素所引发的路由事件附加处理程序是另一个语法用法，它与 typename.eventname 附加事件语法相似，但它并非严格意义上的附加事件用法。 可以向公用父级附加处理程序以利用事件路由，即使公用父级可能没有作为成员的相关路由事件，也是如此。 请再次思考下面的示例：  
+ 为子元素所引发的路由事件附加处理程序是另一个语法用法，它与 typename.eventname 附加事件语法相似，但它并非严格意义上的附加事件用法。   可以向公用父级附加处理程序以利用事件路由，即使公用父级可能没有作为成员的相关路由事件，也是如此。 请再次思考下面的示例：  
   
  [!code-xaml[EventOvwSupport#GroupButton](~/samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml#groupbutton)]  
   

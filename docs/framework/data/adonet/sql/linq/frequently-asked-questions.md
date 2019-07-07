@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 252ed666-0679-4eea-b71b-2f14117ef443
-ms.openlocfilehash: 05ba633415f782d5edea7028c1b82b8031428576
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 68d4215129cf4481beb2d8561c1569b3049a287e
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878234"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610588"
 ---
 # <a name="frequently-asked-questions"></a>常见问题
 以下各节解答了您在实现 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 时可能遇到的一些常见问题。  
@@ -132,9 +132,9 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 ```  
   
 ## <a name="errors-using-sql-compact-35"></a>使用 SQL Compact 3.5 时的错误  
- 问： 在将表拖出 [!INCLUDE[ssEW](../../../../../../includes/ssew-md.md)] 数据库时收到错误消息。  
+ 问： 我将拖出 SQL Server Compact 3.5 数据库表时遇到错误。  
   
- 答： 虽然 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] 受 [!INCLUDE[ssEW](../../../../../../includes/ssew-md.md)] 运行时支持，但它在[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]中不受支持。 在这种情况下，必须创建您自己的实体类并添加合适的属性。  
+ 答： [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]不支持 SQL Server Compact 3.5，尽管[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]运行时。 在这种情况下，必须创建您自己的实体类并添加合适的属性。  
   
 ## <a name="errors-in-inheritance-relationships"></a>继承关系中的错误  
  问： 我使用[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]中的工具箱继承形状连接两个实体，但是收到错误消息。  
@@ -144,7 +144,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 ## <a name="provider-model"></a>提供程序模型  
  问： 是否有公共提供程序模型可用？  
   
- 答： 没有任何公共提供程序模型可用。 在此期间，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]支持 SQL Server 和[!INCLUDE[ssEW](../../../../../../includes/ssew-md.md)]仅。  
+ 答： 没有任何公共提供程序模型可用。 在此期间，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]仅支持 SQL Server 和 SQL Server Compact 3.5。  
   
 ## <a name="sql-injection-attacks"></a>SQL 注入式攻击  
  问： [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 如何防范 SQL 注入式攻击？  

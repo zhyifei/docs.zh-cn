@@ -17,12 +17,12 @@ helpviewer_keywords:
 - events [WPF], suppressing
 - bubbling events [WPF]
 ms.assetid: 5e745508-4861-4b48-b5f6-5fc7ce5289d2
-ms.openlocfilehash: 8cce3d1effa163c35cd219a6a52504b0f4d98c73
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a1004ce10baf6293c4c93efc61b91b3b6361377f
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64598660"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610368"
 ---
 # <a name="marking-routed-events-as-handled-and-class-handling"></a>将路由事件标记为“已处理”和“类处理”
 路由事件的处理程序可以在事件数据内将事件标记为已处理。 处理事件将有效地缩短路由。 类处理是一个编程概念，受路由事件支持。 类处理程序有机会在类级别使用处理程序处理特定路由事件，在类的任何实例上存在任何实例处理程序之前调用该处理程序。  
@@ -49,7 +49,7 @@ ms.locfileid: "64598660"
   
 <a name="Class_Handlers_and_Instance_Handlers"></a>   
 ## <a name="class-handlers-and-instance-handlers"></a>类处理程序和实例处理程序  
- 路由事件会考虑事件的两种不同类型的侦听器：类侦听器和实例侦听器。 类侦听器已存在，因为类型具有名为特定<xref:System.Windows.EventManager> [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] ，<xref:System.Windows.EventManager.RegisterClassHandler%2A>，在其静态构造函数，或已重写中的元素的基类的类处理程序虚方法。 实例侦听器是特定类实例/元素，其中一个或多个处理程序已附加为该路由事件调用<xref:System.Windows.UIElement.AddHandler%2A>。 现有[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]路由的事件调用<xref:System.Windows.UIElement.AddHandler%2A>作为的一部分[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]事件包装器添加{}并删除{}的事件，这也是如何实现简单[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]附加的机制启用通过特性语法的事件处理程序。 因此，即使简单[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]用法最终也等同于<xref:System.Windows.UIElement.AddHandler%2A>调用。  
+ 路由事件会考虑事件的两种不同类型的侦听器：类侦听器和实例侦听器。 类侦听器已存在，因为类型具有名为特定<xref:System.Windows.EventManager>API，<xref:System.Windows.EventManager.RegisterClassHandler%2A>，在其静态构造函数，或已重写中的元素的基类的类处理程序虚方法。 实例侦听器是特定类实例/元素，其中一个或多个处理程序已附加为该路由事件调用<xref:System.Windows.UIElement.AddHandler%2A>。 现有[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]路由的事件调用<xref:System.Windows.UIElement.AddHandler%2A>作为的一部分[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]事件包装器添加{}并删除{}的事件，这也是如何实现简单[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]附加的机制启用通过特性语法的事件处理程序。 因此，即使简单[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]用法最终也等同于<xref:System.Windows.UIElement.AddHandler%2A>调用。  
   
  将检查可视化树内的元素是否有注册的处理程序实现。 可能会在整个路由中以该路由事件的路由策略类型所固有的顺序调用处理程序。 例如，冒泡路由事件将首先调用那些附加到引发该路由事件的同一元素的处理程序。 然后，路由事件“冒泡”到下一父元素，以此类推，直到到达应用程序根元素。  
   

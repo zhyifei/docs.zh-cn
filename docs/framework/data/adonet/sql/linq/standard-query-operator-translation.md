@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a60c30fa-1e68-45fe-b984-f6abb9ede40e
-ms.openlocfilehash: 280557a5098c513111557f52d835b20d9a2eeb62
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ab93a5bae3c83bcce8fa46800ef759d8a2a7f858
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876873"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610555"
 ---
 # <a name="standard-query-operator-translation"></a>标准查询运算符转换
 
@@ -198,7 +198,7 @@ Visual Basic 编译器使用的以下 Helper 函数转换为对应的 SQL 运算
 
 ## <a name="sql-server-2000-support"></a>SQL Server 2000 支持
 
-以下 [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] 局限性（与 [!INCLUDE[sqprsqext](../../../../../../includes/sqprsqext-md.md)] 相比）会影响 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 支持。
+以下[!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)]（与 Microsoft SQL Server 2005 相比） 的限制会影响[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]支持。
 
 ### <a name="cross-apply-and-outer-apply-operators"></a>Cross Apply 和 Outer Apply 运算符
 
@@ -208,7 +208,7 @@ Visual Basic 编译器使用的以下 Helper 函数转换为对应的 SQL 运算
 
 ### <a name="text--ntext"></a>text / ntext
 
-数据类型`text`  /  `ntext`不能针对某些查询操作中使用`varchar(max)`  /  `nvarchar(max)`，支持哪些[!INCLUDE[sqprsqext](../../../../../../includes/sqprsqext-md.md)]。
+数据类型`text`  /  `ntext`不能针对某些查询操作中使用`varchar(max)`  /  `nvarchar(max)`，这受支持的 Microsoft SQL Server 2005。
 
 不存在解决此限制的方法。 具体而言，您不能对包含映射到 `Distinct()` 或 `text` 列的成员的任何结果使用 `ntext`。
 
