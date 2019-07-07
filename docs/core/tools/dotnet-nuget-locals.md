@@ -2,17 +2,21 @@
 title: dotnet nuget locals 命令
 description: dotnet nuget locals 命令可清除或列出本地 NuGet 资源，如 http 请求缓存、临时缓存或整个计算机范围内的全局包文件夹。
 author: karann-msft
-ms.date: 12/04/2018
-ms.openlocfilehash: 0a9fd7876aa4d1907eb37e6bac54295d938d36d3
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.date: 06/26/2019
+ms.openlocfilehash: 6436bbaee7ae50f4b225c32b2245c737b0d359c3
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632421"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539258"
 ---
 # <a name="dotnet-nuget-locals"></a>dotnet nuget locals
 
+**本主题适用于：✓** .NET Core 1.x SDK 及更高版本
+
+<!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+-->
 
 ## <a name="name"></a>name
 

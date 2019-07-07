@@ -3,12 +3,12 @@ title: Windows 上 .NET Core 的先决条件
 description: 了解在 Windows 计算机上开发和运行 .NET Core 应用程序所需的依赖项。
 ms.custom: updateeachvsrelease
 ms.date: 04/08/2019
-ms.openlocfilehash: 423a333edf5b2946a28855352adf2915642b1eae
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 9c4c15a08e0988955ecdf442307059868cb377d1
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66051960"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539358"
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Windows 上 .NET Core 的先决条件
 
@@ -52,14 +52,14 @@ ms.locfileid: "66051960"
 * 使用[安装程序脚本](./tools/dotnet-install-script.md)安装 .NET Core。
 * 部署独立式 .NET Core 应用程序。
 * 从源中生成产品。
-* 通过 .zip 文件安装 .NET Core。 这可能包括 build/CI/CD 服务器。
+* 通过 .zip 文件  安装 .NET Core。 这可能包括 build/CI/CD 服务器。
 
 > [!NOTE]
-> 对于 Windows 8.1 和更早版本，或 Windows Server 2012 R2 和更早版本：
+> 对于 Windows 8.1 和更早版本，或 Windows Server 2012 R2 和更早版本： 
 >
-> 确保 Windows 安装是最新版本，并且包括可通过 Windows 更新安装的 [KB2999226](https://support.microsoft.com/help/2999226/update-for-universal-c-runtime-in-windows)。 如果没有安装此更新，则在启动 .NET Core 应用程序时会看到如下错误：`The program can't start because api-ms-win-crt-runtime-1-1-0.dll is missing from your computer. Try reinstalling the program to fix this problem.`
+> 确保 Windows 安装是最新版本，并且包括可通过 Windows 更新安装的 [KB2999226](https://support.microsoft.com/help/2999226/update-for-universal-c-runtime-in-windows)。 如果没有安装此更新，则在启动 .NET Core 应用程序时会看到如下错误：`The program can't start because api-ms-win-crt-runtime-l1-1-0.dll is missing from your computer. Try reinstalling the program to fix this problem.`
 >
-> 对于 Windows 7 或 Windows Server 2008 R2：
+> 对于 Windows 7 或 Windows Server 2008 R2： 
 >
 > 除 KB2999226 以外，请确保还安装了 [KB2533623](https://support.microsoft.com/help/2533623/microsoft-security-advisory-insecure-library-loading-could-allow-remot)。 如果没有安装此更新，则在启动 .NET Core 应用程序时会看到如下错误：`The library hostfxr.dll was found, but loading it from C:\<path_to_app>\hostfxr.dll failed`。
 
@@ -77,11 +77,11 @@ ms.locfileid: "66051960"
 
 若要使用 .NET Core 2.2 SDK 在 Visual Studio 2017 中开发 .NET Core 应用：
 
- 1. [下载并安装 Visual Studio 2017 版本 15.9.0 或更高版本](/visualstudio/install/install-visual-studio)，并选择“其他工具集”部分中的“.NET Core 跨平台开发”工作负载。
+ 1. [下载并安装 Visual Studio 2017 版本 15.9.0 或更高版本](/visualstudio/install/install-visual-studio)，并选择“其他工具集”  部分中的“.NET Core 跨平台开发”  工作负载。
 
 ![选中“.NET Core 跨平台开发”工作负荷的 Visual Studio 2017 安装的屏幕截图](./media/windows-prerequisites/vs-2017-workloads.jpg)
 
-安装“.NET Core 跨平台开发”工具集后，Visual Studio 通常会安装以前版本的 .NET Core SDK。
+安装“.NET Core 跨平台开发”  工具集后，Visual Studio 通常会安装以前版本的 .NET Core SDK。
 例如，Visual Studio 2017 15.9 在安装工作负载后默认使用 .NET Core 2.1 SDK。
 
 若要更新 Visual Studio 以使用 .NET Core 2.2 SDK：
@@ -91,7 +91,7 @@ ms.locfileid: "66051960"
  1. 如果希望项目使用最新的 .NET Core 运行时，请使用以下说明将现有或新的 .NET Core 项目重定目标到 .NET Core 2.2：
 
     * 在 **“项目”** 菜单上，选择 **“属性”** 。
-    * 在“目标框架”选择菜单上，将值设置为“.NET Core 2.2”。
+    * 在“目标框架”  选择菜单上，将值设置为“.NET Core 2.2”  。
 
 ![已选择“.NET Core 2.2”目标框架菜单项的 Visual Studio 2017 应用程序项目属性屏幕截图](./media/windows-prerequisites/targeting-dotnet-core.jpg)
 
@@ -103,7 +103,7 @@ ms.locfileid: "66051960"
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
-若要在 Visual Studio 中开发 .NET Core 1.x 应用程序，请[下载并安装 Visual Studio 2017](/visualstudio/install/install-visual-studio)，并选择“其他工具集”部分中的“.NET Core 跨平台开发”工作负载。
+若要在 Visual Studio 中开发 .NET Core 1.x 应用程序，请[下载并安装 Visual Studio 2017](/visualstudio/install/install-visual-studio)，并选择“其他工具集”  部分中的“.NET Core 跨平台开发”  工作负载。
 
 ![选中“.NET Core 跨平台开发”工作负荷的 Visual Studio 2017 安装的屏幕截图](./media/windows-prerequisites/vs-workloads.jpg)
 
@@ -121,8 +121,8 @@ ms.locfileid: "66051960"
 > [!TIP]
 > 若要验证 Visual Studio 版本，请执行以下操作：
 >
-> * 在“帮助”菜单上，选择“关于 Microsoft Visual Studio”。
-> * 在“关于 Microsoft Visual Studio”对话框中，验证版本号。
+> * 在“帮助”  菜单上，选择“关于 Microsoft Visual Studio”  。
+> * 在“关于 Microsoft Visual Studio”  对话框中，验证版本号。
 >   * 对于 .NET Core 3.0 预览版 3 应用，Visual Studio 2019 版本应为 16.0 或更高版本。
 >   * 对于 .NET Core 2.2 应用，Visual Studio 2017 版本应为 15.9 或更高版本。
 >   * 对于 .NET Core 2.1 应用，Visual Studio 2017 版本应为 15.7 或更高版本。
