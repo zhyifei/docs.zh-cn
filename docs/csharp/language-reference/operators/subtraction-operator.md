@@ -13,12 +13,12 @@ helpviewer_keywords:
 - event unsubscription [C#]
 - -= operator [C#]
 ms.assetid: 4de7a4fa-c69d-48e6-aff1-3130af970b2d
-ms.openlocfilehash: 7c9863134cb2a12072954bb283c7828abece3adb
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: 80603107beb708e76a2c7446f300d71ede411570
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67347916"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67609857"
 ---
 # <a name="--and---operators-c-reference"></a>- 和 -= 运算符（C# 参考）
 
@@ -72,7 +72,7 @@ x = x - y
 
 ## <a name="operator-overloadability"></a>运算符可重载性
 
-用户定义的类型可以[重载](../keywords/operator.md) `-` 运算符。 重载二元 `-` 运算符后，也会隐式重载 `-=` 运算符。 用户定义类型不能显式重载 `-=` 运算符。
+用户定义的类型可以[重载](operator-overloading.md) `-` 运算符。 重载二元 `-` 运算符后，也会隐式重载 `-=` 运算符。 用户定义类型不能显式重载 `-=` 运算符。
 
 ## <a name="c-language-specification"></a>C# 语言规范
 

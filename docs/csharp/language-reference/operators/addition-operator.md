@@ -14,12 +14,12 @@ helpviewer_keywords:
 - event subscription [C#]
 - += operator [C#]
 ms.assetid: 93e56486-bb42-43c1-bd43-60af11e64e67
-ms.openlocfilehash: 258adc45fc6874cca5829479eef1196ebea1e300
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: 41355dbadd566648b45d825cdd6515bfc6d411aa
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67347979"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610040"
 ---
 # <a name="-and--operators-c-reference"></a>+ 和 += 运算符（C# 参考）
 
@@ -71,7 +71,7 @@ x = x + y
 
 ## <a name="operator-overloadability"></a>运算符可重载性
 
-用户定义的类型可以[重载](../keywords/operator.md) `+` 运算符。 重载二元 `+` 运算符后，也会隐式重载 `+=` 运算符。 用户定义类型不能显式重载 `+=` 运算符。
+用户定义的类型可以[重载](operator-overloading.md) `+` 运算符。 重载二元 `+` 运算符后，也会隐式重载 `+=` 运算符。 用户定义类型不能显式重载 `+=` 运算符。
 
 ## <a name="c-language-specification"></a>C# 语言规范
 

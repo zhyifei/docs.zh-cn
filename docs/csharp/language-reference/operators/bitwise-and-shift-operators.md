@@ -29,12 +29,12 @@ helpviewer_keywords:
 - ^ operator [C#]
 - bitwise logical OR operator [C#]
 - '| operator [C#]'
-ms.openlocfilehash: 8068ec09f0c7d05d6d711e4e7a607b6183727b41
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: c18a06971887049a443f0bd1af7c77610a787a27
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67424002"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67609942"
 ---
 # <a name="bitwise-and-shift-operators-c-reference"></a>位运算符和移位运算符（C# 参考）
 
@@ -178,7 +178,7 @@ x = x op y
 
 ## <a name="operator-overloadability"></a>运算符可重载性
 
-用户定义的类型可以[重载](../keywords/operator.md) `~`、`<<`、`>>`、`&`、`|` 和 `^` 运算符。 重载二元运算符时，对应的复合赋值运算符也会隐式重载。 用户定义类型不能显式重载复合赋值运算符。
+用户定义的类型可以[重载](operator-overloading.md) `~`、`<<`、`>>`、`&`、`|` 和 `^` 运算符。 重载二元运算符时，对应的复合赋值运算符也会隐式重载。 用户定义类型不能显式重载复合赋值运算符。
 
 如果用户定义类型 `T` 重载 `<<` 或 `>>` 运算符，则左侧操作数的类型必须为 `T` 且右侧操作数的类型必须为 `int`。
 

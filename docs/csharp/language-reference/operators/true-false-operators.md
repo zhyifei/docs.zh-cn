@@ -6,12 +6,12 @@ helpviewer_keywords:
 - false operator [C#]
 - true operator [C#]
 ms.assetid: 81a888fd-011e-4589-b242-6c261fea505e
-ms.openlocfilehash: cb5cde6be16ecf8898c5976e8db23d5ef70d1a47
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 7cbfca932b5f9f8a6f658e84204da5005da5ffb8
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67401313"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67609841"
 ---
 # <a name="true-and-false-operators-c-reference"></a>true 和 false 运算符（C# 参考）
 
@@ -26,7 +26,7 @@ ms.locfileid: "67401313"
 
 ## <a name="user-defined-conditional-logical-operators"></a>用户定义的条件逻辑运算符
 
-如果包含已定义 `true` 和 `false` 运算符的类型以某种方式[重载](../keywords/operator.md)[逻辑 OR 运算符](boolean-logical-operators.md#logical-or-operator-) `|` 或[逻辑 AND 运算符](boolean-logical-operators.md#logical-and-operator-) `&`，可以对相应类型的操作数分别执行[条件逻辑 OR 运算符](boolean-logical-operators.md#conditional-logical-or-operator-) `||` 或[条件逻辑 AND 运算符](boolean-logical-operators.md#conditional-logical-and-operator-) `&&` 运算。 有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/introduction.md)的[用户定义条件逻辑运算符](~/_csharplang/spec/expressions.md#user-defined-conditional-logical-operators)部分。
+如果包含已定义 `true` 和 `false` 运算符的类型以某种方式[重载](operator-overloading.md)[逻辑 OR 运算符](boolean-logical-operators.md#logical-or-operator-) `|` 或[逻辑 AND 运算符](boolean-logical-operators.md#logical-and-operator-) `&`，可以对相应类型的操作数分别执行[条件逻辑 OR 运算符](boolean-logical-operators.md#conditional-logical-or-operator-) `||` 或[条件逻辑 AND 运算符](boolean-logical-operators.md#conditional-logical-and-operator-) `&&` 运算。 有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/introduction.md)的[用户定义条件逻辑运算符](~/_csharplang/spec/expressions.md#user-defined-conditional-logical-operators)部分。
 
 ## <a name="example"></a>示例
 

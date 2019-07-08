@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 06/26/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: db9788e3065a0f2f21d712b2d4826efea2d8a829
-ms.sourcegitcommit: 52e588dc2ee74d484cd07ac60076be25cbf777ab
+ms.openlocfilehash: d9a6f193d877fc1a679b7a3cafd7491e021cb2ad
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67410575"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539624"
 ---
 # <a name="predict-prices-using-regression-with-model-builder"></a>将回归与模型生成器配合使用以预测价格
 
@@ -51,7 +51,7 @@ ms.locfileid: "67410575"
 
 1. 在解决方案资源管理器中，右键单击“taxi-fare-train.csv”文件并选择“属性”    。 在“高级”下，将“复制到输出目录”的值更改为“如果较新则复制”    。
 
-`taxi-fare-train.csv` 数据集中的每一行都包含一辆出租车的详细行程。 
+`taxi-fare-train.csv` 数据集中的每一行都包含一辆出租车的详细行程。
 
 1. 打开“taxi-fare-train.csv”数据集 
 
@@ -102,7 +102,7 @@ ms.locfileid: "67410575"
 在训练过程中，进度数据显示在训练步骤中的 `Progress` 部分。
 
 - “状态”显示训练进程的完成状态。
-- “最高准确性”显示截至目前由模型生成器找到的性能最佳的模型的准确性。 准确性越高，意味着模型对测试数据的预测越准确。 
+- “最高准确性”显示截至目前由模型生成器找到的性能最佳的模型的准确性。 准确性越高，意味着模型对测试数据的预测越准确。
 - “最佳算法”显示截至目前由模型生成器找到的性能最佳的算法的名称。
 - “最新算法”显示模型生成器为了训练模型采用的最新算法名称。
 
@@ -122,8 +122,8 @@ ms.locfileid: "67410575"
 - TaxiFarePredictionML.Model：一个 .NET Standard 类库，包含定义输入和输出模型数据架构的数据模型，以及在训练期间性能最佳的模型的持久版本。
 
 1. 在模型生成器工具的代码部分中，选择“添加项目”以将项目添加到解决方案  。
-1. 在“解决方案资源管理器”中，右键单击“TaxiFarePrediction”项目  。 然后选择“添加”>“现有项”  。 在文件类型下拉列表中选择 `All Files`，导航到 TaxiFarePredictionML.Model 项目目录，然后选择 `MLModel.zip` 文件  。 然后右键单击新添加的 `MLModel.zip` 文件，并选择“属性”  。 在“复制到输出目录”处，从下拉列表中选择“如果较新则复制”  。
-1. 右键单击“TaxiFarePrediction”项目  。 然后选择“添加”>“引用”  。 选择“项目”>“解决方案”节点，在列表中勾选“TaxiFarePredictionML.Model”项目并选择“确定”   。
+2. 在“解决方案资源管理器”中，右键单击“TaxiFarePrediction”项目  。 然后选择“添加”>“现有项”  。 在文件类型下拉列表中选择 `All Files`，导航到 TaxiFarePredictionML.Model 项目目录，然后选择 `MLModel.zip` 文件  。 然后右键单击新添加的 `MLModel.zip` 文件，并选择“属性”  。 在“复制到输出目录”处，从下拉列表中选择“如果较新则复制”  。
+3. 右键单击“TaxiFarePrediction”项目  。 然后选择“添加”>“引用”  。 选择“项目”>“解决方案”节点，在列表中勾选“TaxiFarePredictionML.Model”项目并选择“确定”   。
 
 4. 打开 TaxiFarePrediction 项目中的 Program.cs 文件   。
 5. 添加以下 using 语句：
