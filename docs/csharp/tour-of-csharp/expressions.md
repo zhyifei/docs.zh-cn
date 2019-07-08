@@ -3,12 +3,12 @@ title: C# 表达式 - C# 语言介绍
 description: 表达式、操作数和运算符是 C# 语言的构建基块
 ms.date: 04/25/2019
 ms.assetid: 20d5eb10-7381-47b9-ad90-f1cc895aa27e
-ms.openlocfilehash: ffe800304a9125e11e20d96a84919936f1fee2c1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2553730d495942730c53d3646f35e80759a4d168
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64753646"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67609322"
 ---
 # <a name="expressions"></a>表达式
 
@@ -23,7 +23,7 @@ ms.locfileid: "64753646"
 
 可以使用括号控制优先级和结合性。 例如，`x + y * z` 先计算 `y` 乘 `z`，并将结果与 `x` 相加，而 `(x + y) * z` 则先计算 `x` 加 `y`，然后将结果与 `z` 相乘。
 
-大部分运算符可[*重载*](../language-reference/keywords/operator.md)。 借助运算符重载，可以为一个或两个操作数为用户定义类或结构类型的运算指定用户定义运算符实现代码。
+大部分运算符可[*重载*](../language-reference/operators/operator-overloading.md)。 借助运算符重载，可以为一个或两个操作数为用户定义类或结构类型的运算指定用户定义运算符实现代码。
 
 C# 提供多个运算符用于执行[算术](../language-reference/operators/arithmetic-operators.md)、[逻辑](../language-reference/operators/boolean-logical-operators.md)、[按位和移位](../language-reference/operators/bitwise-and-shift-operators.md)运算以及[相等](../language-reference/operators/equality-operators.md)和[排序](../language-reference/operators/comparison-operators.md)比较。
 

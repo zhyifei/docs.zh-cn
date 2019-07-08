@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - enum keyword [C#]
 ms.assetid: bbeb9a0f-e9b3-41ab-b0a6-c41b1a08974c
-ms.openlocfilehash: 6af1f7f23447f9f1379ac6d223e198a4a2ea5645
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 57043963640f3c384b1e1a9aa7aeb65114689e9f
+ms.sourcegitcommit: 4a3c95e91289d16c38979575a245a4f76b0da147
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67424245"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67569536"
 ---
 # <a name="enum-c-reference"></a>enum（C# 参考）
 
-`enum` 关键字用于声明枚举，一种包含一组被称为枚举数列表的已命名常数的不同类型。  
+`enum` 关键字用于声明枚举，一种包含一组被称为枚举数列表的已命名常数的不同类型。
 
 通常最好是直接在命名空间内定义枚举，以便命名空间中的所有类都可以同样方便地访问它。 但是，也可能会在类或结构中嵌套枚举。
 
@@ -40,7 +40,6 @@ enum Day {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};
 ```csharp
 enum Day : byte {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};
 ```
-
 
 枚举类型的变量可在基本类型范围内分配到任何值；这些值不限于已命名常数。
 
