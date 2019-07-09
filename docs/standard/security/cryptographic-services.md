@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1f773b6f7d0b8b4e0b8647b7086d8782d1afbb93
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: c026174e881768af245860d1b719184dc47f1798
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690529"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67663991"
 ---
 # <a name="cryptographic-services"></a>加密服务
 
@@ -207,19 +207,19 @@ RSA 允许加密和签名，但 DSA 仅可用于签名，而 Diffie-Hellman 仅�
 
 - Alice 向 Bob 发送纯文本消息和经过哈希处理的消息（数字签名）。 Bob 接收消息并进行哈希处理，然后将其哈希值与从 Alice 处接收到的哈希值进行比较。 如果哈希值相同，则消息未更改。 如果值不同，则消息在 Alice 编写后遭到更改。
 
-    遗憾的是，此方法不会确定发件人的真伪。 任何人都可以模仿 Alice 并向 Bob 发送消息。 他们可以使用相同的哈希算法来签署消息，而 Bob 可确定的只是消息与它的签名相匹配。 这是中间人攻击的一种形式。 有关详细信息，请参阅[Cryptography Next Generation (CNG) 安全通信示例](https://docs.microsoft.com/previous-versions/cc488018(v=vs.100))。
+  遗憾的是，此方法不会确定发件人的真伪。 任何人都可以模仿 Alice 并向 Bob 发送消息。 他们可以使用相同的哈希算法来签署消息，而 Bob 可确定的只是消息与它的签名相匹配。 这是中间人攻击的一种形式。 有关详细信息，请参阅[Cryptography Next Generation (CNG) 安全通信示例](https://docs.microsoft.com/previous-versions/cc488018(v=vs.100))。
 
 - Alice 通过非安全的公共通道向 Bob 发送纯文本消息。 Alice 通过安全的专用通道向 Bob 发送经过哈希处理的消息。 Bob 接收纯文本消息，对其进行哈希处理并将此哈希值与私下交换的哈希值进行比较。 如果哈希值匹配，则 Bob 知道两件事：
 
-    - 消息未被更改。
+  - 消息未被更改。
 
-    - 消息的发件人 (Alice) 是可信的。
+  - 消息的发件人 (Alice) 是可信的。
 
-    为使此系统发挥作用，Alice 必须对 Bob 之外的所有方隐藏她的原始哈希值。
+  为使此系统发挥作用，Alice 必须对 Bob 之外的所有方隐藏她的原始哈希值。
 
 - Alice 通过非安全的公共通道向 Bob 发送纯文本消息，并将经过哈希处理的消息放置在其公开可见的网站上。
 
-    此方法可以通过防止任何人修改哈希值，从而防止消息遭到篡改。 尽管任何人都可读取此消息及其哈希值，但只有 Alice 可以更改哈希值。 想要模仿 Alice 的攻击者将需要访问 Alice 的网站。
+  此方法可以通过防止任何人修改哈希值，从而防止消息遭到篡改。 尽管任何人都可读取此消息及其哈希值，但只有 Alice 可以更改哈希值。 想要模仿 Alice 的攻击者将需要访问 Alice 的网站。
 
 之前的方法都无法防止他人读取 Alice 的消息，因为消息是以纯文本的形式传输的。 完整安全模式通常要求数字签名（消息签名）和加密。
 

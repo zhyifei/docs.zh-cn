@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics rendering tiers [WPF]
 - graphics [WPF], rendering tiers
 ms.assetid: 08dd1606-02a2-4122-9351-c0afd2ec3a70
-ms.openlocfilehash: a0ed7bb48c0b8c81b44d4e321dec902ba68fc523
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 77694b2a86c91f3e6946ecd50f4765404750f37b
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64640855"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67664157"
 ---
 # <a name="graphics-rendering-tiers"></a>图形呈现层
 呈现层为运行 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序的设备定义图形硬件功能和性能级别。  
@@ -101,7 +101,7 @@ ms.locfileid: "64640855"
 |设置|描述|  
 |-------------|-----------------|  
 |**禁用硬件加速选项**|指定是否应启用硬件加速。|  
-|**最大多重采样值**|指定用于消除 [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 内容锯齿的多重采样级别。|  
+|**最大多重采样值**|指定多重采样抗锯齿三维内容的程度。|  
 |**必需的视频驱动程序日期设置**|指定系统是否对 2004 年 11 月之前发布的驱动程序禁用硬件加速。|  
 |**使用参考光栅器选项**|指定 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 是否应使用参考光栅器。|  
   
@@ -122,7 +122,7 @@ ms.locfileid: "64640855"
   
  `~\Windows\System32`  
   
- 运行 [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 诊断工具时，主窗口中包含一组可用于显示和诊断 [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 相关信息的选项卡。 例如，“系统”选项卡提供有关计算机的系统信息，并指定安装在计算机上的 [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 版本。  
+ 运行 [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 诊断工具时，主窗口中包含一组可用于显示和诊断 [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 相关信息的选项卡。 例如，“系统”  选项卡提供有关计算机的系统信息，并指定安装在计算机上的 [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 版本。  
   
  ![屏幕快照：DirectX 诊断工具](./media/directxdiagnostictool-01.png "DirectXDiagnosticTool_01")  
 “DirectX 诊断工具”主窗口  

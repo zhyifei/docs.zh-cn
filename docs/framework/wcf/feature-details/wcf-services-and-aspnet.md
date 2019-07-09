@@ -2,12 +2,12 @@
 title: WCF 服务和 ASP.NET
 ms.date: 03/30/2017
 ms.assetid: b980496a-f0b0-4319-8e55-a0f0fa32da70
-ms.openlocfilehash: ef772a360ea53c2b5f177ed88ad14c4a1e1277ef
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: d42787492b00b8e0a5a732d641947fec61b5ff96
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65637557"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67663684"
 ---
 # <a name="wcf-services-and-aspnet"></a>WCF 服务和 ASP.NET
 
@@ -29,15 +29,15 @@ ASP.NET HTTP 运行库处理 ASP.NET 请求但不参与处理的请求发送到 
 
 - 在 AppDomain 中，由 HTTP 运行时实现的功能适用于 ASP.NET 内容而不适用于 WCF。 包含 ASP.NET 内容的 AppDomain 内承载的 WCF 服务不适用于 ASP.NET 应用程序平台的许多特定于 HTTP 的功能。 这些功能的示例包括：
 
-    - HttpContext:<xref:System.Web.HttpContext.Current%2A>始终是`null`时从 WCF 服务内部进行访问。 请改用 <xref:System.ServiceModel.Channels.RequestContext>。
+  - HttpContext:<xref:System.Web.HttpContext.Current%2A>始终是`null`时从 WCF 服务内部进行访问。 请改用 <xref:System.ServiceModel.Channels.RequestContext>。
 
-    - 基于文件的授权：WCF 安全模型不允许的访问控制列表 (ACL) 确定是否授权服务请求时应用于服务的.svc 文件中。
+  - 基于文件的授权：WCF 安全模型不允许的访问控制列表 (ACL) 确定是否授权服务请求时应用于服务的.svc 文件中。
 
-    - 基于配置的 URL 授权：同样，WCF 安全模型不符合 System.Web 的中指定的任何基于 URL 的授权规则\<授权 > 配置元素。 如果服务驻留在受保护的 ASP 的 URL 空间，用于 WCF 请求将忽略这些设置。NET 的 URL 授权规则。
+  - 基于配置的 URL 授权：同样，WCF 安全模型不符合 System.Web 的中指定的任何基于 URL 的授权规则\<授权 > 配置元素。 如果服务驻留在受保护的 ASP 的 URL 空间，用于 WCF 请求将忽略这些设置。NET 的 URL 授权规则。
 
-    - HttpModule 扩展性：WCF 托管基础结构截获 WCF 请求时<xref:System.Web.HttpApplication.PostAuthenticateRequest>事件引发并不会返回到 ASP.NET HTTP 管道中处理。 编码为在管道的后期截获请求的模块不截获 WCF 请求。
+  - HttpModule 扩展性：WCF 托管基础结构截获 WCF 请求时<xref:System.Web.HttpApplication.PostAuthenticateRequest>事件引发并不会返回到 ASP.NET HTTP 管道中处理。 编码为在管道的后期截获请求的模块不截获 WCF 请求。
 
-    - ASP.NET 模拟：默认情况下，WCF 请求总是作为运行 IIS 进程标识，即使 ASP.NET 设置来启用模拟使用 System.Web 的\<identity impersonate ="true"/ > 配置选项。
+  - ASP.NET 模拟：默认情况下，WCF 请求总是作为运行 IIS 进程标识，即使 ASP.NET 设置来启用模拟使用 System.Web 的\<identity impersonate ="true"/ > 配置选项。
 
 这些限制仅适用于 IIS 应用程序中承载的 WCF 服务。 存在 WCF 不会影响 ASP.NET 内容的行为。
 

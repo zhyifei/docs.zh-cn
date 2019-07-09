@@ -7,15 +7,15 @@ helpviewer_keywords:
 - 3-D graphics [WPF]
 - graphics [WPF], 3-D
 ms.assetid: 4f091835-28d1-498c-b660-9b3acf34ed13
-ms.openlocfilehash: 1f78d2f0ff8887ca5cf1cd1129fb946d2224246d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9689e3c42010b7de641bee47af34e6888c415ed9
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62020278"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67663959"
 ---
 # <a name="3-d-graphics-how-to-topics"></a>三维图形帮助主题
-在本部分中的主题演示如何使用[!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)]中的图形[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]应用程序。  
+在本部分中的主题演示如何使用 3d 图形[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]应用程序。  
   
 ## <a name="in-this-section"></a>本节内容  
  [创建 3D 场景](how-to-create-a-3-d-scene.md)  

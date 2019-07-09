@@ -6,12 +6,12 @@ helpviewer_keywords:
 - TextPattern class
 - classes, TextPattern
 ms.assetid: 41787927-df1f-4f4a-aba3-641662854fc4
-ms.openlocfilehash: d35e5b5127f335eac04caa8ee95749f45cb870bf
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: c7b30a854667a122ff30ec4a8e4855902489087f
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57673998"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67660781"
 ---
 # <a name="ui-automation-textpattern-overview"></a>UI 自动化 TextPattern 概述
 
@@ -41,7 +41,7 @@ ms.locfileid: "57673998"
 
 ## <a name="control-types"></a>控件类型
 
-#### <a name="text"></a>Text
+### <a name="text"></a>Text
 
 Text 控件是表示屏幕上一段文本的基本元素。
 
@@ -50,14 +50,14 @@ Text 控件是表示屏幕上一段文本的基本元素。
 > [!NOTE]
 > 文本控件可能不会显示在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树的内容视图中（请参阅 [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)）。 这是因为文本控件通常通过另一个控件的 Name 属性显示。 例如，用于标记编辑控件的文本是通过编辑控件的 Name 属性公开的。 因为，此编辑控件位于 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树的内容视图中，文本元素自身没有必要处于 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树的视图中。 在内容视图中显示的唯一文本为不是冗余信息的文本。 这能让任何辅助技术仅对其用户需要的信息段进行快速筛选。
 
-#### <a name="edit"></a>编辑
+### <a name="edit"></a>编辑
 
 编辑控件使用户可以查看和编辑单个文本行。
 
 > [!NOTE]
 > 在某些布局方案中，单个文本行可能会换行。
 
-#### <a name="document"></a>Document
+### <a name="document"></a>Document
 
 文档控件能让用户导航并从多个页面的文本上获取的信息。
 
@@ -93,8 +93,10 @@ Text 控件是表示屏幕上一段文本的基本元素。
 |`System.Windows.Automation.TextPatternIdentifiers Class`|包含用作文本提供程序标识符的值（请参阅 <xref:System.Windows.Automation.TextPatternIdentifiers>）。|
 
 <a name="Security"></a>
+
 ## <a name="security"></a>安全性
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]体系结构的设计考虑到了安全性 (请参阅[UI 自动化安全性概述](../../../docs/framework/ui-automation/ui-automation-security-overview.md))。 但是，此概述中所述的 TextPattern 类需要一些特定的安全注意事项。
+
+[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]体系结构的设计考虑到了安全性 (请参阅[UI 自动化安全性概述](../../../docs/framework/ui-automation/ui-automation-security-overview.md))。 但是，此概述中所述的 TextPattern 类需要一些特定的安全注意事项。
 
 - [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 文本提供程序提供只读接口，并且不提供能够更改控件中的现有文本的功能。
 
@@ -104,9 +106,9 @@ Text 控件是表示屏幕上一段文本的基本元素。
 
 - [!INCLUDE[TLA#tla_winvista](../../../includes/tlasharptla-winvista-md.md)] 安全性最重要的更改之一是：广泛地称为“安全输入”，其包括如最低特权（或有限权限）、用户帐户 (LUA) 和用户界面特权级别隔离 (UIPI) 在内的技术。
 
-    - UIPI 防止一个程序控制和/或监控另一个具有更多“特权”的程序，防止欺骗用户输入的跨进程窗口消息攻击。
+  - UIPI 防止一个程序控制和/或监控另一个具有更多“特权”的程序，防止欺骗用户输入的跨进程窗口消息攻击。
 
-    - LUA 对 Administrators 组中的用户正在运行的应用程序的权限进行限制设置。 应用程序不一定具有管理员权限，但将以必需的最低权限运行。 因此，可能会在 LUA 方案中强制执行一些限制。 最值得注意的字符串截断（包括 TextPattern 字符串），可能有必要限制从管理员级别的应用程序检索的字符串的大小，因此它们不会被强制将内存分配给禁用该应用程序的点。
+  - LUA 对 Administrators 组中的用户正在运行的应用程序的权限进行限制设置。 应用程序不一定具有管理员权限，但将以必需的最低权限运行。 因此，可能会在 LUA 方案中强制执行一些限制。 最值得注意的字符串截断（包括 TextPattern 字符串），可能有必要限制从管理员级别的应用程序检索的字符串的大小，因此它们不会被强制将内存分配给禁用该应用程序的点。
 
 <a name="Performance"></a>
 
@@ -120,19 +122,25 @@ Text 控件是表示屏幕上一段文本的基本元素。
 
 ## <a name="textpattern-terminology"></a>TextPattern 术语
 
-**特性**文本范围的格式设置特性 (例如，<xref:System.Windows.Automation.TextPattern.IsItalicAttribute>或<xref:System.Windows.Automation.TextPattern.FontNameAttribute>)。
+**属性**\
+文本范围的格式特性（例如， <xref:System.Windows.Automation.TextPattern.IsItalicAttribute> 或 <xref:System.Windows.Automation.TextPattern.FontNameAttribute>）。
 
-**退化范围**退化范围为空或零个字符的文本范围。 出于 TextPattern 控件模式的目的，文本插入点（或系统插入标记）被视为退化范围。 如果未选择文本， <xref:System.Windows.Automation.TextPattern.GetSelection%2A> 将返回文本插入点处的退化范围， <xref:System.Windows.Automation.TextPattern.RangeFromPoint%2A> 将返回退化范围作为其起始终结点。 文本提供程序找不到任何与给定条件相匹配的文本范围时，<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> 和 <xref:System.Windows.Automation.TextPattern.GetVisibleRanges%2A> 可能会返回退化范围。 此退化范围可用作文本提供程序内的起始终结点。 <xref:System.Windows.Automation.Text.TextPatternRange.FindText%2A> 并<xref:System.Windows.Automation.Text.TextPatternRange.FindAttribute%2A>返回空引用 (`Nothing`在 Microsoft Visual Basic.NET) 以避免与发现范围和退化范围相混淆。
+**退化范围**\
+退化范围为空或零字符文本区域。 出于 TextPattern 控件模式的目的，文本插入点（或系统插入标记）被视为退化范围。 如果未选择文本， <xref:System.Windows.Automation.TextPattern.GetSelection%2A> 将返回文本插入点处的退化范围， <xref:System.Windows.Automation.TextPattern.RangeFromPoint%2A> 将返回退化范围作为其起始终结点。 文本提供程序找不到任何与给定条件相匹配的文本范围时，<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> 和 <xref:System.Windows.Automation.TextPattern.GetVisibleRanges%2A> 可能会返回退化范围。 此退化范围可用作文本提供程序内的起始终结点。 <xref:System.Windows.Automation.Text.TextPatternRange.FindText%2A> 并<xref:System.Windows.Automation.Text.TextPatternRange.FindAttribute%2A>返回空引用 (`Nothing`在 Microsoft Visual Basic.NET) 以避免与发现范围和退化范围相混淆。
 
-**嵌入对象**有两种类型中的嵌入对象的[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]文本模型。 它们包含基于文本的内容元素，如超链接或表，以及控制元素（如图像和按钮）。 有关详细信息，请参见 [Access Embedded Objects Using UI Automation](../../../docs/framework/ui-automation/access-embedded-objects-using-ui-automation.md)。
+**嵌入的对象**\
+在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 文本模型中，有两种类型的嵌入对象。 它们包含基于文本的内容元素，如超链接或表，以及控制元素（如图像和按钮）。 有关详细信息，请参见 [Access Embedded Objects Using UI Automation](../../../docs/framework/ui-automation/access-embedded-objects-using-ui-automation.md)。
 
-**终结点**绝对<xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start>或<xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End>文本范围的文本容器内的点。
+**终结点**\
+文本容器内的文本范围的绝对 <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> 或 <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> 点。
 
 ![TextPatternRangeEndpoints&#40;的开始和结束&#41;。](../../../docs/framework/ui-automation/media/uia-textpattern-endpoints.PNG "UIA_TextPattern_Endpoints")下面将说明如何开始和结束点的一组。
 
-**TextRange**范围的文本，与起点和终点，包括所有关联的特性和功能的文本容器中的表示形式。
+**TextRange**\
+表示包括所有的相关特性和功能的文本容器中带起始点和终结点的一段文本。
 
-<xref:System.Windows.Automation.Text.TextUnit> 预定义用于导航的逻辑分段的文本范围的文本 （字符、 单词、 行或段落） 单元。
+<xref:System.Windows.Automation.Text.TextUnit>\
+用于导航文本范围的逻辑分段的预定义文本单元（字符、单词、行或段落）。
 
 ## <a name="see-also"></a>请参阅
 

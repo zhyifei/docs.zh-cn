@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a60c30fa-1e68-45fe-b984-f6abb9ede40e
-ms.openlocfilehash: ab93a5bae3c83bcce8fa46800ef759d8a2a7f858
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 1bba36579fce4fe78289ccb986073280b531420a
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67610555"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661877"
 ---
 # <a name="standard-query-operator-translation"></a>标准查询运算符转换
 
@@ -198,13 +198,13 @@ Visual Basic 编译器使用的以下 Helper 函数转换为对应的 SQL 运算
 
 ## <a name="sql-server-2000-support"></a>SQL Server 2000 支持
 
-以下[!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)]（与 Microsoft SQL Server 2005 相比） 的限制会影响[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]支持。
+以下 SQL Server 2000 限制 （与 Microsoft SQL Server 2005 相比） 会影响[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]支持。
 
 ### <a name="cross-apply-and-outer-apply-operators"></a>Cross Apply 和 Outer Apply 运算符
 
-这些运算符在 [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] 中不可用。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 设法通过一系列的重写来将它们替换为适当的联接。
+这些运算符不可用在 SQL Server 2000。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 设法通过一系列的重写来将它们替换为适当的联接。
 
-`Cross Apply` 和 `Outer Apply` 是为关系导航生成的。 可以进行这种重写的查询集定义不完善。 因此，[!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] 支持的最小查询集是不涉及关系导航的集合。
+`Cross Apply` 和 `Outer Apply` 是为关系导航生成的。 可以进行这种重写的查询集定义不完善。 出于此原因，SQL Server 2000 支持的最小查询集是不涉及关系导航组。
 
 ### <a name="text--ntext"></a>text / ntext
 
@@ -214,11 +214,11 @@ Visual Basic 编译器使用的以下 Helper 函数转换为对应的 SQL 运算
 
 ### <a name="behavior-triggered-by-nested-queries"></a>由嵌套查询触发的行为
 
-[!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)]（一直到 SP4）联编程序具有由嵌套查询触发的一些特性。 触发这些特性的 SQL 查询集定义不完善。 因此，您不能定义可能会引发 SQL Server 异常的 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 查询集。
+SQL Server 2000 （到 SP4) 联编程序具有由嵌套查询触发的一些特性。 触发这些特性的 SQL 查询集定义不完善。 因此，您不能定义可能会引发 SQL Server 异常的 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 查询集。
 
 ### <a name="skip-and-take-operators"></a>Skip 和 Take 运算符
 
-<xref:System.Linq.Enumerable.Take%2A> 和 <xref:System.Linq.Enumerable.Skip%2A> 用在针对 [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] 的查询中时存在一定的限制。 有关详细信息，请参阅中的"Skip 和 Take 异常在 SQL Server 2000"条目[故障排除](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)。
+<xref:System.Linq.Enumerable.Take%2A> 和 <xref:System.Linq.Enumerable.Skip%2A> 用在针对 SQL Server 2000 的查询中时存在一定的限制。 有关详细信息，请参阅中的"Skip 和 Take 异常在 SQL Server 2000"条目[故障排除](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)。
 
 ## <a name="object-materialization"></a>对象具体化
 

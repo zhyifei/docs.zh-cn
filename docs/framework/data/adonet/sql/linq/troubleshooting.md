@@ -2,12 +2,12 @@
 title: 疑难解答
 ms.date: 03/30/2017
 ms.assetid: 8cd4401c-b12c-4116-a421-f3dcffa65670
-ms.openlocfilehash: 8b34336871d599b72e548e2db90487c17377ba66
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: c09871abcdfb9243b5170386ffe79012c9c3f71d
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307185"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661867"
 ---
 # <a name="troubleshooting"></a>疑难解答
 下面的信息揭示您在 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 应用程序中可能遇到的一些问题，并提供建议以避免这些问题或减少这些问题的影响。  
@@ -57,7 +57,7 @@ ms.locfileid: "67307185"
 ## <a name="skip-and-take-exceptions-in-sql-server-2000"></a>SQL Server 2000 中的 Skip 和 Take 异常  
  在对 SQL Server 2000 数据库使用 <xref:System.Data.Linq.Mapping.ColumnAttribute.IsPrimaryKey%2A> 或 <xref:System.Linq.Queryable.Take%2A> 时，必须使用标识成员 (<xref:System.Linq.Queryable.Skip%2A>)。 查询必须针对单个表（即，不是联接），或必须为 <xref:System.Linq.Queryable.Distinct%2A>、<xref:System.Linq.Queryable.Except%2A>、<xref:System.Linq.Queryable.Intersect%2A> 或 <xref:System.Linq.Queryable.Union%2A> 操作，且不得包含 <xref:System.Linq.Queryable.Concat%2A> 操作。 有关详细信息，请参阅中的"SQL Server 2000 支持"部分[标准查询运算符转换](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)。  
   
- 此需求不适用于 [!INCLUDE[sqprsqlong](../../../../../../includes/sqprsqlong-md.md)]。  
+ 此要求不适用于 SQL Server 2005。  
   
 ## <a name="groupby-invalidoperationexception"></a>GroupBy InvalidOperationException  
  如果在按 <xref:System.Linq.Enumerable.GroupBy%2A> 表达式进行分组的 `boolean` 查询（如 `group x by (Phone==@phone)`）中有一个列值为 null，则会引发此异常。 因为表达式`boolean`，该密钥将被推断`boolean`，而非`nullable` `boolean`。 当转换后的比较生成 null 值时，尝试进行分配`nullable``boolean`到`boolean`，且会引发异常。  

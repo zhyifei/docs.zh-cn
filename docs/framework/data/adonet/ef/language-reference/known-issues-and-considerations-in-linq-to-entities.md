@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: acd71129-5ff0-4b4e-b266-c72cc0c53601
-ms.openlocfilehash: e84319c60534c3ecf154c3f58973bcc429a73842
-ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
+ms.openlocfilehash: d7d87a3e95cf66efb91b71f6ff3c7c9bb1fbb311
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67539825"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67662153"
 ---
 # <a name="known-issues-and-considerations-in-linq-to-entities"></a>LINQ to Entities 中的已知问题和注意事项
 本部分提供有关使用 LINQ to Entities 查询的已知问题的信息。  
@@ -35,7 +35,7 @@ ms.locfileid: "67539825"
   
 <a name="OrderingInfoLost"></a>   
 ## <a name="ordering-information-lost"></a>排序信息丢失  
- 如果将列投影到匿名类型，则会导致对兼容级别设置为“80”的 [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)] 数据库所执行的某些查询中会丢失排序信息。  当 order-by 列表中的列名与选择器中的列名相同时，就会发生这种情况，如下面的示例所示：  
+ 将列投影到匿名类型将导致在对"80"的兼容性级别设置为 SQL Server 2005 数据库执行某些查询中会丢失排序信息。  当 order-by 列表中的列名与选择器中的列名相同时，就会发生这种情况，如下面的示例所示：  
   
  [!code-csharp[DP L2E Conceptual Examples#SBUDT543840](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#sbudt543840)]
  [!code-vb[DP L2E Conceptual Examples#SBUDT543840](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#sbudt543840)]  

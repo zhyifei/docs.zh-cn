@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 70055c4b-1173-47a3-be80-b5bce6f59e9a
-ms.openlocfilehash: 403b0125e6b1966d201c891448ad25ec83f42be5
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: b28981196490e249d053ecd1704f6ba978585520
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65881921"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67662857"
 ---
 # <a name="custom-composite-designers---workflow-items-presenter"></a>自定义复合设计器 — 工作流项演示器
 
@@ -45,7 +45,7 @@ ms.locfileid: "65881921"
   - <xref:System.Activities.Presentation.WorkflowItemsPresenter.ItemsPanel?displayProperty=nameWithType> 是一个模板，可用于确定集合中的项的布局。 在此例中，使用水平堆叠面板。
 
   下面的示例代码演示了此过程。
-  
+
   ```xaml
   <sad:WorkflowItemsPresenter HintText="Drop Activities Here"
                                 Items="{Binding Path=ModelItem.Branches}">
@@ -64,7 +64,7 @@ ms.locfileid: "65881921"
 
 - 执行 `DesignerAttribute` 与 `Parallel` 类型的关联，然后输出报告的特性。
 
-    - 首先，注册所有默认的设计器。
+  - 首先，注册所有默认的设计器。
 
     以下是代码示例。
 
@@ -82,7 +82,7 @@ ms.locfileid: "65881921"
     RegisterCustomMetadata()
     ```
 
-    - 然后，在 `RegisterCustomMetadata` 方法中重写此并行处理。
+  - 然后，在 `RegisterCustomMetadata` 方法中重写此并行处理。
 
     下面的代码分别使用 C# 和 Visual Basic 演示了此过程。
 

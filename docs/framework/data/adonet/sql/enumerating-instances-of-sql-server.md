@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ddf1c83c-9d40-45e6-b04d-9828c6cbbfdc
-ms.openlocfilehash: a723679fe18352e115df78af72975097dc28b617
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d6d76d677bcf7dfa7df632bde8de76401a46db05
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61877586"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661892"
 ---
 # <a name="enumerating-instances-of-sql-server-adonet"></a>枚举 SQL Server 的实例 (ADO.NET)
 SQL Server 允许应用程序以查找在当前网络中的 SQL Server 实例。 <xref:System.Data.Sql.SqlDataSourceEnumerator> 类向应用程序开发人员公开此信息，提供包含所有可见服务器的信息的 <xref:System.Data.DataTable>。 返回表包含与匹配用户尝试创建新的连接时提供的列表并展开下拉列表包含所有可用的服务器上的网络上可用的服务器实例的列表，此**连接属性**对话框。 显示的结果并非总是完整的。  
@@ -48,7 +48,7 @@ System.Data.DataTable dataTable = instance.GetDataSources();
 |**ServerName**|服务器的名称。|  
 |**InstanceName**|服务器实例的名称。 如果服务器作为默认实例运行，则为空白。|  
 |**IsClustered**|指示服务器是否属于群集。|  
-|**Version**|服务器的版本。 例如：<br /><br /> -   9.00.x ([!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)])<br />-   10.0.xx ([!INCLUDE[ssKatmai](../../../../../includes/sskatmai-md.md)])<br />-   10.50.x ([!INCLUDE[ssKilimanjaro](../../../../../includes/sskilimanjaro-md.md)])<br />-   11.0.xx (SQL Server 2012)|  
+|**Version**|服务器的版本。 例如：<br /><br /> -9.00.x (SQL Server 2005)<br />-10.0.xx (SQL Server 2008)<br />-10.50.x (SQL Server 2008 R2)<br />-   11.0.xx (SQL Server 2012)|  
   
 ## <a name="enumeration-limitations"></a>枚举限制  
  所有可用服务器可能会列出，也可能不会列出。 根据超时和网络通信量等因素，列表可能会有所不同。 这可能会使两个连续调用生成不同的列表。 只会列出相同网络上的服务器。 广播包通常不会遍历路由器，这也就是可能会看不到某个服务器列出的原因，但是在各个调用之间是稳定的。  

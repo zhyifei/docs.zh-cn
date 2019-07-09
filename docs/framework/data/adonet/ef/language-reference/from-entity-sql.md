@@ -2,12 +2,12 @@
 title: FROM (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: ff3e3048-0d5d-4502-ae5c-9187fcbd0514
-ms.openlocfilehash: 36e3059869ed048bd7c5294c4f5f5407288610b2
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 69a6af868ace384a63d08d705c395b58a173ca8e
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489936"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67662156"
 ---
 # <a name="from-entity-sql"></a>FROM (Entity SQL)
 指定中使用的集合[选择](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)语句。  
@@ -96,7 +96,7 @@ LOB.Customers
 >  不同于在 TRANSACT-SQL，没有显式取消嵌套的步骤中无需[!INCLUDE[esql](../../../../../../includes/esql-md.md)]。  
   
 > [!NOTE]
->  `CROSS` 中引入了 `OUTER APPLY` 和 [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)] 运算符。 在某些情况下，查询管道可能生成包含 `CROSS APPLY` 和/或 `OUTER APPLY` 运算符的 Transact-SQL。 因为某些后端提供程序，包括 SQL Server 的版本早于[!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)]、 不支持这些运算符，不能对这些后端提供程序执行此类查询。  
+>  `CROSS` 和`OUTER APPLY`运算符在 SQL Server 2005 中引入。 在某些情况下，查询管道可能生成包含 `CROSS APPLY` 和/或 `OUTER APPLY` 运算符的 Transact-SQL。 因为某些后端提供程序，包括 SQL Server 2005 之前版本的 SQL Server 不支持这些运算符，则不能对这些后端提供程序执行此类查询。  
 >   
 >  下面是一些可能导致输出查询中出现 `CROSS APPLY` 和/或 `OUTER APPLY`运算符的典型情况：分页相关子查询；相关子查询或导航所生成的集合上的 AnyElement；使用接受元素选择器的分组方法的 LINQ 查询；显式指定 `CROSS APPLY` 或 `OUTER APPLY` 的查询；在 `DEREF` 构造上具有 `REF` 构造的查询。  
   

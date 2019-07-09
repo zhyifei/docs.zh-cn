@@ -2,12 +2,12 @@
 title: SqlClient 中的已知问题（实体框架）
 ms.date: 03/30/2017
 ms.assetid: 48fe4912-4d0f-46b6-be96-3a42c54780f6
-ms.openlocfilehash: 5c500a61a00914df7b106b7e89485921123e56ec
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 8cadb234ffc0f00049edd0c09475031eeec275df
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489531"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67662258"
 ---
 # <a name="known-issues-in-sqlclient-for-entity-framework"></a>SqlClient 中的已知问题（实体框架）
 本节介绍与 SQL Server .NET Framework 数据提供程序 (SqlClient) 有关的已知问题。  
@@ -21,7 +21,7 @@ ms.locfileid: "66489531"
  如果将非 `null` 值和 0 分别作为第一个自变量和第二个自变量传递给 `RIGHT(nvarchar(max)`, 0`)` 或 `RIGHT(varchar(max)`, 0`)`，将返回 `NULL` 值，而不是 `empty` 字符串。  
   
 ## <a name="cross-and-outer-apply-operators"></a>CROSS 和 OUTER APPLY 运算符  
- [!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)] 引入了 CROSS 和 OUTER APPLY 运算符。 在某些情况下查询管道可能生成包含 CROSS APPLY 和/或 OUTER APPLY 运算符的 TRANSACT-SQL 语句。 因为某些后端提供程序，包括 SQL Server 的版本早于[!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)]、 不支持这些运算符，不能对这些后端提供程序执行此类查询。  
+ CROSS 和 OUTER APPLY 运算符在 SQL Server 2005 中引入。 在某些情况下查询管道可能生成包含 CROSS APPLY 和/或 OUTER APPLY 运算符的 TRANSACT-SQL 语句。 因为某些后端提供程序，包括 SQL Server 2005 之前版本的 SQL Server 不支持这些运算符，则不能对这些后端提供程序执行此类查询。  
   
  下面是一些可能导致输出查询中出现 CROSS APPLY 和/或 OUTER APPLY 运算符的典型情况：  
   
@@ -36,7 +36,7 @@ ms.locfileid: "66489531"
 - 在 REF 构造上具有 DEREF 构造的查询。  
   
 ## <a name="skip-operator"></a>SKIP 运算符  
- 如果使用的是 [!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)]，则对非键列同时使用 SKIP 和 ORDER BY 可能会返回不正确的结果。 如果非键列中有重复数据，那么跳过的行数可能多于指定的行数。 这是由于 [!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)]对 SKIP 的解释方式造成的。 例如，在下面的查询中，如果 `E.NonKeyColumn` 有重复值，则跳过的行可能超过 5 行：  
+ 如果使用 SQL Server 2000，则对非键列使用 SKIP 和 ORDER BY 可能返回不正确的结果。 如果非键列中有重复数据，那么跳过的行数可能多于指定的行数。 这是因为如何跳过已翻译为 SQL Server 2000。 例如，在下面的查询中，如果 `E.NonKeyColumn` 有重复值，则跳过的行可能超过 5 行：  
   
 ```  
 SELECT [E] FROM Container.EntitySet AS [E] ORDER BY [E].[NonKeyColumn] DESC SKIP 5L  

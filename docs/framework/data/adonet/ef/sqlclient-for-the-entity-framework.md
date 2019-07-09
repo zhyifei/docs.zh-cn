@@ -2,12 +2,12 @@
 title: 用于实体框架的 SqlClient
 ms.date: 03/30/2017
 ms.assetid: 9a5d6d39-d955-43a5-a5c2-931c239398f1
-ms.openlocfilehash: d81499961e7e47bba3b2594ddddd192c87a4a936
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e8933a975c075407066bff97672f1b82f125bb47
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879108"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67662109"
 ---
 # <a name="sqlclient-for-the-entity-framework"></a>用于实体框架的 SqlClient
 本节介绍用于 SQL Server (SqlClient) 的 .NET Framework 数据提供程序，该提供程序使实体框架能够在 Microsoft SQL Server 上工作。  
@@ -20,7 +20,7 @@ ms.locfileid: "61879108"
 ## <a name="providermanifesttoken-schema-attribute"></a>ProviderManifestToken 架构属性  
  `ProviderManifestToken` 是以 SSDL 表示的 `Schema` 元素的一个必需特性。 此标记用于为脱机方案加载提供程序清单。 有关详细信息`ProviderManifestToken`属性，请参阅[架构元素 (SSDL)](/ef/ef6/modeling/designer/advanced/edmx/ssdl-spec#schema-element-ssdl)。  
   
- SqlClient 可以用作不同版本的 SQL Server 数据访问接口。 这些版本具有不同的功能。 例如，[!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)] 不支持在 `varchar(max)` 中引入的 `nvarchar(max)` 和 [!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)] 类型。  
+ SqlClient 可以用作不同版本的 SQL Server 数据访问接口。 这些版本具有不同的功能。 例如，SQL Server 2000 不支持`varchar(max)`和`nvarchar(max)`与 SQL Server 2005 引入的类型。  
   
  针对不同版本的 SQL Server，SqlClient 生成和接受以下提供程序清单标记。  
   

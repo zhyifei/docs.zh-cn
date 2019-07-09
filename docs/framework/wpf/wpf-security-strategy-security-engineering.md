@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Security Development Lifecycle (SDL), critical code management
 - threat modeling [WPF]
 ms.assetid: 0fc04394-4e47-49ca-b0cf-8cd1161d95b9
-ms.openlocfilehash: 9123d59709b483c72ab49652bda1e547430fa33d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c28fc87a71a1262ed5b3a6a04f615efc58e685ab
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663251"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67663343"
 ---
 # <a name="wpf-security-strategy---security-engineering"></a>WPF 安全策略 - 安全工程
 可信计算是 Microsoft 为确保生成安全代码而首创的一项技术。 可信计算技术的一个关键元素是 [!INCLUDE[TLA#tla_sdl](../../../includes/tlasharptla-sdl-md.md)]。 [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] 是与标准工程过程一同用于简化提交安全代码的工程实践。 [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] 包含十个阶段，将规范化、可度量性和附加结构的最佳实践结合在一起，包括：  
@@ -51,7 +51,7 @@ ms.locfileid: "64663251"
   
 2. **枚举入口点**。 杂货店的入口点可能包括前门和后门、窗户、装货区和空调设备。  
   
-3. **使用入口点调查针对资产的攻击**。 可能进行的攻击包括通过空调入口点来对杂货店的保险箱资产进行攻击；有人可能会将空调设备拆掉，将保险箱通过空调处拉出杂货店。  
+3. **使用入口点调查针对资产的攻击**。 可能进行的攻击包括通过空调  入口点来对杂货店的保险箱  资产进行攻击；有人可能会将空调设备拆掉，将保险箱通过空调处拉出杂货店。  
   
  威胁建模应用于整个 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]，包含以下各项：  
   
@@ -71,13 +71,13 @@ ms.locfileid: "64663251"
   
 - **Prefix/Prefast**:例如缓冲区溢出、 格式字符串问题以及错误检查的非托管代码中查找安全漏洞和常见安全问题。  
   
-- **已禁止的 Api**:搜索源代码，以识别的函数的众所周知的而引发安全问题，如意外使用`strcpy`。 一旦识别出这些函数，将用更安全的替代函数来取代它们。  
+- **已禁止的 Api**:搜索源代码，以识别的函数的众所周知的而引发安全问题，如意外使用`strcpy`。 确定后，这些函数替换为更安全的替代项。  
   
 <a name="techniques"></a>   
 ### <a name="testing-techniques"></a>测试技术  
  [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 使用多种安全测试技术，包括：  
   
-- **白盒测试**:测试人员查看源代码，，然后生成攻击测试  
+- **白盒测试**:测试人员查看源代码，，然后生成攻击测试。
   
 - **黑盒测试**:测试人员尝试查找通过检查 API 和功能，安全，然后尝试对产品进行攻击。  
   

@@ -2,12 +2,12 @@
 title: 事务管理升级
 ms.date: 03/30/2017
 ms.assetid: 1e96331e-31b6-4272-bbbd-29ed1e110460
-ms.openlocfilehash: 1e40244e1f6b5ffd7b52584a5da121d1203f8376
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: df2597d6fcce7fbd51f6f17bd42469cb7fcf3fdf
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64630573"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67662461"
 ---
 # <a name="transaction-management-escalation"></a>事务管理升级
 Windows 承载一组服务和模块，它们共同构成了一个事务管理器。 事务管理升级描述将事务从一个事务管理器组件迁移到另一个事务管理器组件的过程。  
@@ -25,7 +25,7 @@ Windows 承载一组服务和模块，它们共同构成了一个事务管理器
   
 - 在事务中至少登记了一个不支持单阶段通知的持久资源。  
   
-- 在事务中至少登记了两个支持单阶段通知的持久资源。 例如，登记与 [!INCLUDE[sqprsqlong](../../../../includes/sqprsqlong-md.md)] 的单个连接不会使事务提升。 但是，每当打开与 [!INCLUDE[sqprsqlong](../../../../includes/sqprsqlong-md.md)] 数据库的另一个连接而导致该数据库登记时，<xref:System.Transactions> 基础结构就会检测到该连接是事务中的第二个持久资源，并将其升级为 MSDTC 事务。  
+- 在事务中至少登记了两个支持单阶段通知的持久资源。 例如，登记与 SQL Server 2005 的单个连接不会导致事务被提升。 但是，每当打开另一个连接到 SQL Server 2005 数据库，从而导致数据库登记，<xref:System.Transactions>基础结构检测到它是在事务中的第二个持久资源，并将其升级为 MSDTC 事务。  
   
 - 调用请求来将事务“封送”到其他应用程序域或其他进程。 例如，跨应用程序域边界序列化事务对象。 事务对象是按值封送的，这意味着跨应用程序域边界（甚至在同一进程中）传递它的任何尝试都会导致序列化该事务对象。 您可以通过调用采用 <xref:System.Transactions.Transaction> 作为参数的远程方法来传递事务对象，也可以尝试访问远程事务所提供的组件。 这会序列化事务对象并使其升级，比如跨应用程序域序列化事务时。 将分布该事务，并且本地事务管理器将不再胜任。  
   
