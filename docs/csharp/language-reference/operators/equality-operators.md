@@ -15,12 +15,12 @@ helpviewer_keywords:
 - inequality operator [C#]
 - not equals operator [C#]
 - '!= operator [C#]'
-ms.openlocfilehash: 72e790dc008857a48602c92c9236588c531b64f9
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 3caacf8628e6ab07b731f0574ca3a0f7e973adcd
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67423932"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67609894"
 ---
 # <a name="equality-operators-c-reference"></a>相等运算符（C# 参考）
 
@@ -45,6 +45,14 @@ ms.locfileid: "67423932"
 
 从 C# 7.3 开始，`==` 和 `!=` 运算符由 C# [元组](../../tuples.md)支持。 有关详细信息，请参阅 [C# 元组类型](../../tuples.md)一文的[相等性和元组](../../tuples.md#equality-and-tuples)部分。
 
+### <a name="reference-types-equality"></a>引用类型的相等性
+
+默认情况下，如果两个引用类型操作符引用同一对象，则这两个操作符相等：
+
+[!code-csharp[reference type equality](~/samples/csharp/language-reference/operators/EqualityOperators.cs#ReferenceTypesEquality)]
+
+如示例所示，默认情况下，用户定义的引用类型支持 `==` 运算符。 但是，引用类型可重载 `==` 运算符。 如果引用类型重载 `==` 运算符，使用 <xref:System.Object.ReferenceEquals%2A?displayProperty=nameWithType> 方法来检查该类型的两个引用是否引用同一对象。
+
 ### <a name="string-equality"></a>字符串相等性
 
 如果两个字符串均为 `null` 或者两个字符串实例具有相等长度且在每个字符位置有相同字符，则这两个[字符串](../keywords/string.md)操作数相等：
@@ -53,15 +61,7 @@ ms.locfileid: "67423932"
 
 这就是区分大小写的序号比较。 有关字符串比较的详细信息，请参阅[如何在 C# 中比较字符串](../../how-to/compare-strings.md)。
 
-### <a name="reference-types-equality"></a>引用类型的相等性
-
-当两个非 `string` 引用类型引用同一对象时，其操作数相等：
-
-[!code-csharp[reference type equality](~/samples/csharp/language-reference/operators/EqualityOperators.cs#ReferenceTypesEquality)]
-
-如示例所示，默认情况下，用户定义的引用类型支持 `==` 运算符。 但是，用户定义的引用类型可以重载 `==` 运算符。 如果引用类型重载 `==` 运算符，使用 <xref:System.Object.ReferenceEquals%2A?displayProperty=nameWithType> 方法来检查该类型的两个引用是否引用同一对象。
-
-## <a name="delegate-equality"></a>委托相等
+### <a name="delegate-equality"></a>委托相等
 
 当两个[委托](../../programming-guide/delegates/index.md)操作数都是 `null` 或它们的调用列表长度相同并且在每个位置具有相同的条目时，运行时类型相同的两个委托操作数是相等的：
 
@@ -83,7 +83,7 @@ ms.locfileid: "67423932"
 
 ## <a name="operator-overloadability"></a>运算符可重载性
 
-用户定义类型可以[重载](../keywords/operator.md) `==` 和 `!=` 运算符。 如果某类型重载这两个运算符之一，它还必须重载另一个运算符。
+用户定义类型可以[重载](operator-overloading.md) `==` 和 `!=` 运算符。 如果某类型重载这两个运算符之一，它还必须重载另一个运算符。
 
 ## <a name="c-language-specification"></a>C# 语言规范
 

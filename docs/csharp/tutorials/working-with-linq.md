@@ -3,12 +3,12 @@ title: 使用 LINQ
 description: 此教程将介绍如何使用 LINQ 生成序列、编写用于 LINQ 查询的方法，以及如何区分及早计算和惰性计算。
 ms.date: 10/29/2018
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: e51fb166ccba793f9f2aa9d11a109280bf8eea93
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: e37c013add02f651875db7b908ae2b49711d996d
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66486994"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67609312"
 ---
 # <a name="working-with-linq"></a>使用 LINQ
 
@@ -268,6 +268,14 @@ shuffle = shuffle.Skip(26).InterleaveSequenceWith(shuffle.Take(26));
 
 [!CODE-csharp[LogQuery](../../../samples/csharp/getting-started/console-linq/extensions.cs?name=snippet3)]
 
+你将看到 `File` 下显示红色波浪线，这表示它不存在。 它将不编译，因为编译器无法识别 `File`。 要解决此问题，请务必在 `Extensions.cs` 中第一行的下面添加以下代码行：
+
+```csharp
+using System.IO;
+```
+
+这应可解决问题，随后红色错误将消失。
+
 接下来，使用日志消息来检测每个查询的定义：
 
 ```csharp
@@ -345,4 +353,3 @@ public static void Main(string[] args)
   - [使用 LINQ 进行数据转换 (C#)](../programming-guide/concepts/linq/data-transformations-with-linq.md)
   - [LINQ 中的查询语法和方法语法 (C#)](../programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)
   - [支持 LINQ 的 C# 功能](../programming-guide/concepts/linq/features-that-support-linq.md)
-    

@@ -18,18 +18,18 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 7d8ee9be8f399bca0aace61d344b19094c9518b0
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 0cd0a06dc919ecf11f1a3d343fe8ff023a5f8524
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67401470"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67609915"
 ---
 # <a name="c-operators-c-reference"></a>C# 运算符（C# 参考）
 
 C# 提供了许多由内置类型支持的预定义运算符。 例如，[算术运算符](arithmetic-operators.md)使用内置数值类型的操作数执行算术运算，[布尔逻辑运算符](boolean-logical-operators.md)使用 [bool](../keywords/bool.md) 操作数执行逻辑运算。
 
-用户定义类型可以重载某些运算符来定义该类型的操作数的相应行为。 有关详细信息，请参阅[运算符](../keywords/operator.md)关键字一文。
+用户定义类型可以重载某些运算符来定义该类型的操作数的相应行为。 有关详细信息，请参阅[运算符重载](operator-overloading.md)。
 
 以下各部分按最高优先级到最低优先级的顺序列出 C# 运算符。 各章节内运算符的优先级相同。
 
@@ -223,4 +223,3 @@ C# 提供了许多由内置类型支持的预定义运算符。 例如，[算术
 
 - [C# 参考](../index.md)
 - [运算符](../../programming-guide/statements-expressions-operators/operators.md)
-- [可重载运算符](../../programming-guide/statements-expressions-operators/overloadable-operators.md)

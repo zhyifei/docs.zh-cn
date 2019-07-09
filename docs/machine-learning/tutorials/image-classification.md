@@ -4,12 +4,12 @@ description: 了解如何使用迁移学习和 ML.NET 重新定型图像分类�
 ms.date: 06/12/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: 62a926795ce34a8c1639f1d42ebbb34b53dc67ad
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 9344d0757e140995dfd9ce7d1a355910a81c6d31
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67401743"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539852"
 ---
 # <a name="tutorial-retrain-a-tensorflow-image-classifier-with-transfer-learning-and-mlnet"></a>教程：使用迁移学习和 ML.NET 重新定型 TensorFlow 图像分类器
 
@@ -31,11 +31,11 @@ ms.locfileid: "67401743"
 
 此示例是一个控制台应用，使用 ML.NET 并通过重用预定型模型来生成图像分类器，以对定型数据很少的图像进行分类。
 
-可以在 [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/TransferLearningTF) 存储库中找到本教程的源代码。
+可以在 [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/TransferLearningTF) 存储库中找到本教程的源代码。 请注意在本教程中，.NET 项目配置默认面向 .NET core 2.2。
 
 ## <a name="prerequisites"></a>系统必备
 
-* 安装了“.NET Core 跨平台开发”工作负载的 [Visual Studio 2017 15.6 或更高版本](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)。
+* 安装了“.NET Core 跨平台开发”工作负载的 [Visual Studio 2017 15.6 或更高版本](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)。 
 
 * Microsoft.ML 1.0.0 Nuget 包
 * Microsoft.ML.ImageAnalytics 1.0.0 Nuget 包

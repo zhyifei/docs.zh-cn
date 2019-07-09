@@ -4,12 +4,12 @@ description: 本教程演示如何创建 .NET Core 控制台应用程序，该�
 ms.date: 05/13/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: a766d95c62fd3a89e3291e1ab803f5222fac46ea
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 833aeeb045ef1fd7bb0e6dbd2236bc3d9da2e8fc
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67306168"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506159"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-with-binary-classification-in-mlnet"></a>教程：在 ML.NET 中使用二元分类分析网站评论的情绪
 
@@ -93,12 +93,16 @@ ms.locfileid: "67306168"
 |哇...喜欢这个地方。              |    1     |
 |服务很及时。              |    1     |
 
-`SentimentPrediction` 是在训练模型后使用的预测类。 它继承自 `SentimentData`，用于显示带预测的 `SentimentText`。 `SentimentPrediction` 拥有一个布尔值 (`Sentiment`) 和一个 `PredictedLabel` `ColumnName` 特性。 `Label` 用于创建和训练模型，并且与拆分测试数据集结合使用来评估模型。 `PredictedLabel` 在预测和评估过程中使用。 对于评估，将使用训练数据、预测值和模型。
+`SentimentPrediction` 是在模型训练后使用的预测类。 它继承自 `SentimentData`，因此输入 `SentimentText` 可与输出预测结果一并显示。 `Prediction` 布尔值是随附新的输入 `SentimentText` 提供时模型预测出的值。
 
-[MLContext 类](xref:Microsoft.ML.MLContext)是所有 ML.NET 操作的起点。 初始化 `mlContext` 会创建一个新的 ML.NET 环境，可在模型创建工作流对象之间共享该环境。 从概念上讲，它与实体框架中的 `DBContext` 类似。
+输出类 `SentimentPrediction` 包含另外两个由模型计算得出的属性：`Score`（模型计算得出的原始分数）和 `Probability`（校准到具有积极情绪的文本几率的分数）。
+
+在本教程中，最重要的属性是 `Prediction`。
 
 ## <a name="load-the-data"></a>加载数据
 ML.NET 中的数据表示为 [IDataView 类](xref:Microsoft.ML.IDataView)。 `IDataView` 是用于描述表格数据（数字和文本）的一种灵活且有效的方法。 可从文本文件或实时（例如，SQL 数据库或日志文件）将数据加载到 `IDataView` 对象。
+
+[MLContext 类](xref:Microsoft.ML.MLContext)是所有 ML.NET 操作的起点。 初始化 `mlContext` 会创建一个新的 ML.NET 环境，可在模型创建工作流对象之间共享该环境。 从概念上讲，它与实体框架中的 `DBContext` 类似。
 
 准备应用，然后加载数据：
 
@@ -175,7 +179,7 @@ ML.NET 中的数据表示为 [IDataView 类](xref:Microsoft.ML.IDataView)。 `ID
 
     上述代码中的 `FeaturizeText()` 方法将文本列 (`SentimentText`) 转换为机器学习算法使用的数字键类型的 `Features` 列，并将其作为新的数据集列添加：
 
-    |情绪文本                         |情绪 |特征              |
+    |情绪文本                         |情绪 |功能              |
     |--------------------------------------|----------|----------------------|
     |女服务员的服务速度有点慢。|    0     |[0.76, 0.65, 0.44, …] |
     |酥皮不行。                    |    0     |[0.98, 0.43, 0.54, …] |

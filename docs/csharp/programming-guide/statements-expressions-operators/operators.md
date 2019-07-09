@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C# language, operators
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
-ms.openlocfilehash: 60e7f7c25b525c6db856731bd16c1c0e60efe6d6
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 551d4cd8bf26a1c1caf3cbf611d9f338ae2581be
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66422924"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67609508"
 ---
 # <a name="operators-c-programming-guide"></a>运算符（C# 编程指南）
 
@@ -80,7 +80,7 @@ a = (b = c);
   
 ## <a name="operator-overloading"></a>运算符重载
 
-可以为自定义类和结构定义特定运算符的行为。 此过程称为“运算符重载”  。 有关详细信息，请参阅[可重载运算符](overloadable-operators.md)和[运算符](../../language-reference/keywords/operator.md)关键字文章。
+可以为自定义类和结构定义特定运算符的行为。 此过程称为“运算符重载”  。 有关详细信息，请参阅[运算符重载](../../language-reference/operators/operator-overloading.md)。
   
 ## <a name="see-also"></a>请参阅
 

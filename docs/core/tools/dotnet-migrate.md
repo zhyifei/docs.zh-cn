@@ -1,21 +1,28 @@
 ---
 title: dotnet migrate 命令
 description: dotnet migrate 命令可迁移项目及其所有依赖项。
-ms.date: 05/25/2018
-ms.openlocfilehash: 861cd2cb982c6f41baf00a2cbd7e04b26816af76
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.date: 06/26/2019
+ms.openlocfilehash: 3304f666d15d9188cdae76a401747d91791f817f
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65631953"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539389"
 ---
 # <a name="dotnet-migrate"></a>dotnet migrate
 
+**本主题适用于：✓** .NET Core 1.x SDK 及更高版本
+
+<!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+-->
 
 ## <a name="name"></a>name
 
-`dotnet migrate` - 将预览版 2 .NET Core 项目迁移到 .NET Core SDK 1.0 项目。
+`dotnet migrate` - 将预览版 2 .NET Core 项目迁移到 .NET Core SDK 样式的项目中。
+
+> [!NOTE]
+> 将在下一预览发布版中从 .NET Core 3.0 SDK 删除 `dotnet migrate`。
 
 ## <a name="synopsis"></a>摘要
 
@@ -26,7 +33,7 @@ dotnet migrate [-h|--help]
 
 ## <a name="description"></a>说明
 
-`dotnet migrate` 命令将有效的基于预览版 2 *project.json* 的项目迁移到有效的 .NET Core SDK 1.0 *csproj* 项目。
+`dotnet migrate` 命令将基于预览版 2 project.json 的有效项目迁移到 .NET Core SDK 样式的有效 csproj 项目中   。
 
 默认情况下，命令迁移根项目和根项目包含的任何项目引用。 在运行时使用 `--skip-project-references` 选项禁用此行为。
 
@@ -50,9 +57,9 @@ dotnet migrate [-h|--help]
 下列路径之一：
 
 * 要迁移的 *project.json* 文件。
-* global.json 文件：迁移在 global.json 中指定的文件夹。
-* solution.sln 文件：迁移该解决方案中引用的项目。
-* 要迁移的目录：在指定的目录中以递归方式搜索要迁移的 project.json 文件。
+* global.json 文件：迁移在 global.json 中指定的文件夹   。
+* solution.sln 文件：迁移该解决方案中引用的项目  。
+* 要迁移的目录：在指定的目录中以递归方式搜索要迁移的 project.json 文件  。
 
 如未指定，则默认为当前目录。
 

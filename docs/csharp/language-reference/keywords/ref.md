@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: 1faebe2ce1a59798621888e3a518900234720be5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 5b45a24e719a03d052c88b5afd64bbe13eb0793e
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59116251"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610057"
 ---
 # <a name="ref-c-reference"></a>ref（C# 参考）
 
@@ -138,7 +138,7 @@ Ref readonly 局部变量用于指代在其签名中具有 `ref readonly` 并使
 
 - 不能对 `ref struct` 装箱。 无法向属于 `object`、`dynamic` 或任何接口类型的变量分配 `ref struct` 类型。
 - `ref struct` 类型不能实现接口。
-- 不能将 `ref struct` 声明为类或常规结构的成员。
+- 不能将 `ref struct` 声明为类或常规结构的字段成员。 这包括声明自动实现的属性，后者会创建一个由编译器生成的支持字段。 
 - 不能声明异步方法中属于 `ref struct` 类型的本地变量。 不能在返回类似 <xref:System.Threading.Tasks.Task>、<xref:System.Threading.Tasks.Task%601> 或 `Task` 类型的同步方法中声明它们。
 - 无法在迭代器中声明 `ref struct` 本地变量。
 - 无法捕获 Lambda 表达式或本地函数中的 `ref struct` 变量。

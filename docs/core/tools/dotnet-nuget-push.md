@@ -2,17 +2,21 @@
 title: dotnet nuget push 命令
 description: dotnet nuget push 命令可将包推送到服务器并发布。
 author: karann-msft
-ms.date: 12/04/2018
-ms.openlocfilehash: 7382cb93da3d7ed68f5731b3996c735c3f1461e4
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.date: 06/26/2019
+ms.openlocfilehash: 4d5efa94c6a4494158aea447be98256d2a307cd6
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65631722"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539133"
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
+**本主题适用于：✓** .NET Core 1.x SDK 及更高版本
+
+<!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+-->
 
 ## <a name="name"></a>name
 
@@ -20,23 +24,11 @@ ms.locfileid: "65631722"
 
 ## <a name="synopsis"></a>摘要
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
-
 ```
 dotnet nuget push [<ROOT>] [-d|--disable-buffering] [--force-english-output] [--interactive] [-k|--api-key] [-n|--no-symbols]
     [--no-service-endpoint] [-s|--source] [-sk|--symbol-api-key] [-ss|--symbol-source] [-t|--timeout]
 dotnet nuget push [-h|--help]
 ```
-
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
-```
-dotnet nuget push [<ROOT>] [-d|--disable-buffering] [--force-english-output] [-k|--api-key] [-n|--no-symbols]
-    [-s|--source] [-sk|--symbol-api-key] [-ss|--symbol-source] [-t|--timeout]
-dotnet nuget push [-h|--help]
-```
-
----
 
 ## <a name="description"></a>说明
 
@@ -49,8 +41,6 @@ dotnet nuget push [-h|--help]
   指定要推送的包的文件路径。
 
 ## <a name="options"></a>选项
-
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
 * **`-d|--disable-buffering`**
 
@@ -96,46 +86,6 @@ dotnet nuget push [-h|--help]
 
   指定推送到服务器的超时（秒）。 默认值为 300 秒（5 分钟）。 指定为 0（零秒）将应用默认值。
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
-* **`-d|--disable-buffering`**
-
-  当推送到 HTTP(S) 服务器以减少内存使用率时，禁用缓冲。
-
-* **`--force-english-output`**
-
-  使用固定的、基于英语的区域性强制运行应用程序。
-
-* **`-h|--help`**
-
-  打印出有关命令的简短帮助。
-
-* **`-k|--api-key <API_KEY>`**
-
-  服务器的 API 密钥。
-
-* **`-n|--no-symbols`**
-
-  不推送符号（即使存在）。
-
-* **`-s|--source <SOURCE>`**
-
-  指定服务器 URL。 除非在 NuGet 配置文件中设置了 `DefaultPushSource` 配置值，否则此选项是必需的。
-
-* **`-sk|--symbol-api-key <API_KEY>`**
-
-  符号服务器的 API 密钥。
-
-* **`-ss|--symbol-source <SOURCE>`**
-
-  指定符号服务器 URL。
-
-* **`-t|--timeout <TIMEOUT>`**
-
-  指定推送到服务器的超时（秒）。 默认值为 300 秒（5 分钟）。 指定为 0（零秒）将应用默认值。
-
----
-
 ## <a name="examples"></a>示例
 
 * 将 foo.nupkg 推送到默认推送源（指定 API 密钥）：
@@ -173,3 +123,7 @@ dotnet nuget push [-h|--help]
   ```console
   dotnet nuget push *.nupkg
   ```
+  
+  > [!NOTE]
+  > 如果此命令不起作用，则可能是较旧版本的 SDK（.NET Core 2.1 SDK 及更早版本）中的 bug 导致的。
+  > 要解决此问题，请升级 SDK 版本或改为运行以下命令：`dotnet nuget push **/*.nupkg`

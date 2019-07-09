@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# Language, access modifiers
 - access modifiers [C#], about
 ms.assetid: 6e81ee82-224f-4a12-9baf-a0dca2656c5b
-ms.openlocfilehash: d328f8e73824a4773c6e10f506f3021d3c88d085
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6622612e927b800e1a4769c99df0e2fa7d99a33d
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378047"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67609641"
 ---
 # <a name="access-modifiers-c-programming-guide"></a>访问修饰符（C# 编程指南）
 所有类型和类型成员都具有可访问性级别，该级别可以控制是否可以从你的程序集或其他程序集中的其他代码中使用它们。 可以使用以下访问修饰符在进行声明时指定类型或成员的可访问性：  
@@ -53,7 +53,7 @@ ms.locfileid: "57378047"
   
  为字段、属性或事件的任何成员的类型必须至少与该成员本身具有相同的可访问性。 同样，为方法、索引器或委托的任何成员的返回类型和参数类型必须至少与该成员本身具有相同的可访问性。 例如，不能具有返回类 `C` 的公共方法 `M`，除非 `C` 也是公共的。 同样，如果 `A` 声明为私有，则不能具有类型 `A` 的受保护的属性。  
   
- 用户定义的运算符始终必须声明为公共。 有关详细信息，请参阅[运算符（C# 参考）](../../../csharp/language-reference/keywords/operator.md)。  
+ 用户定义的运算符始终必须声明为公共和静态。 有关详细信息，请参阅[运算符重载](../../../csharp/language-reference/operators/operator-overloading.md)。  
   
  终结器不能具有可访问性修饰符。  
   
@@ -83,8 +83,8 @@ ms.locfileid: "57378047"
 - [public](../../../csharp/language-reference/keywords/public.md)
 - [internal](../../../csharp/language-reference/keywords/internal.md)
 - [受保护](../../../csharp/language-reference/keywords/protected.md)
-- [受保护的内部](../../../csharp/language-reference/keywords/protected-internal.md)
-- [专用受保护](../../../csharp/language-reference/keywords/private-protected.md)
+- [protected internal](../../../csharp/language-reference/keywords/protected-internal.md)
+- [private protected](../../../csharp/language-reference/keywords/private-protected.md)
 - [class](../../../csharp/language-reference/keywords/class.md)
 - [struct](../../../csharp/language-reference/keywords/struct.md)
 - [interface](../../../csharp/language-reference/keywords/interface.md)

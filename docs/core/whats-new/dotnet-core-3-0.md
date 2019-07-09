@@ -7,12 +7,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 06/14/2019
-ms.openlocfilehash: bb100ea064585235768ecb46781eb830c7dae0c6
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: a808a35876df8d2f6cee3c240c606b7bd979e9ee
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67401962"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539278"
 ---
 # <a name="whats-new-in-net-core-30-preview-6"></a>.NET Core 3.0（预览版 6）中的新增功能
 
@@ -107,6 +107,15 @@ System.Console.WriteLine($"RuntimeInformation.FrameworkDescription: {System.Runt
 
 若要发布单文件可执行文件，请使用 `dotnet publish` 命令在项目或命令行中设置 `PublishSingleFile`：
 
+```xml
+<PropertyGroup>
+  <RuntimeIdentifier>win10-x64</RuntimeIdentifier>
+  <PublishSingleFile>true</PublishSingleFile>
+</PropertyGroup>
+```
+
+-或-
+
 ```console
 dotnet publish -r win10-x64 /p:PublishSingleFile=true
 ```
@@ -121,7 +130,7 @@ dotnet publish -r win10-x64 /p:PublishSingleFile=true
 
 .NET Core 现在包含一个设置，将使用 [IL 链接器](https://github.com/mono/linker)工具扫描应用的 IL。 此工具将检测哪些代码是必需的，然后剪裁未使用的库。 此工具可以显著减少某些应用的部署大小。
 
-若要启用此工具，请使用项目中的 `<PublishTrimmed>` 设置并发布自包含应用：
+要启用此工具，请使用项目中的 `<PublishTrimmed>` 设置并发布自包含应用：
 
 ```xml
 <PropertyGroup>

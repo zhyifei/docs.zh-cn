@@ -3,12 +3,12 @@ title: .NET Core 命令行接口 (CLI) 工具
 description: 概述了 .NET Core 命令行接口 (CLI) 工具和功能。
 ms.date: 08/14/2017
 ms.custom: seodec18
-ms.openlocfilehash: e174867ce06e573fc85579183df0196d8276fb37
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ff96023dd0b161271e146f7a7e69924c9db9e769
+ms.sourcegitcommit: 4a3c95e91289d16c38979575a245a4f76b0da147
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61647419"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67569519"
 ---
 # <a name="net-core-command-line-interface-cli-tools"></a>.NET Core 命令行接口 (CLI) 工具
 
@@ -99,7 +99,7 @@ CLI 采用可使你为项目指定其他工具的扩展性模型。 有关详细
 
 ## <a name="command-structure"></a>命令结构
 
-CLI 命令结构包含[驱动程序（“dotnet”）](#driver)、[命令（或“谓词”）](#command-verb)，或可能的命令[参数](#arguments)和[选项](#options)。 在大部分 CLI 操作中可看到此模式，例如创建新控制台应用并从命令行运行该应用，因为从名为 *my_app* 的目录中执行时，显示以下命令：
+CLI 命令结构包含[驱动程序（“dotnet”）](#driver)和[命令](#command)，还可能包含命令[参数](#arguments)和[选项](#options)。 在大部分 CLI 操作中可看到此模式，例如创建新控制台应用并从命令行运行该应用，因为从名为 *my_app* 的目录中执行时，显示以下命令：
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
@@ -134,9 +134,9 @@ dotnet /build_output/my_app.dll
 
 首先，驱动程序确定要使用的 SDK 版本。 如果没有任何[“global.json”](global-json.md)，则使用可用的最新版本 SDK。 这有可能是预览版或稳定版，具体取决于计算机上的最新版本。  确定 SDK 版本后，它便会执行命令。
 
-### <a name="command-verb"></a>命令（“谓词”）
+### <a name="command"></a>命令
 
-命令（或“谓词”）仅仅是执行操作的命令。 例如，`dotnet build` 生成代码。 `dotnet publish` 发布代码。 使用 `dotnet {verb}` 约定将命令作为控制台应用程序实现。
+由命令执行操作。 例如，`dotnet build` 生成代码。 `dotnet publish` 发布代码。 使用 `dotnet {command}` 约定将命令作为控制台应用程序实现。
 
 ### <a name="arguments"></a>自变量
 

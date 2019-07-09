@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LINQ to SQL, DBML files
 - LINQ to SQL, SQLMetal
 ms.assetid: 819e5a96-7646-4fdb-b14b-fe31221b0614
-ms.openlocfilehash: b6f7450b4f682ea5ac69fd1bab434b27451e58df
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: d2ee9537df540936e0a5ec448e6aaddbbbc162b1
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586062"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610542"
 ---
 # <a name="sqlmetalexe-code-generation-tool"></a>SqlMetal.exe（代码生成工具）
 SqlMetal 命令行工具可为 [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)] 的 .NET Framework 组件生成代码和映射。 通过应用本主题后面出现的选项，可以指示 SqlMetal 执行若干种不同的操作，其中包括：  
@@ -45,12 +45,12 @@ sqlmetal [options] [<input file>]
   
 |选项|说明|  
 |------------|-----------------|  
-|/server: \<name>|指定数据库服务器名称。|  
-|/database: \<name>|指定服务器上的数据库目录。|  
-|/user: \<name>|指定登录用户 ID。默认值：使用 Windows 身份验证。|  
-|/password: \<password>|指定登录密码。 默认值：使用 Windows 身份验证。|  
-|/conn: \<connection string>|指定数据库连接字符串。 不能与 **/server**、 **/database**、 **/user**或 **/password** 选项一起使用。<br /><br /> 不要在连接字符串中包含文件名， 而应将文件名作为输入文件添加到命令行中。 例如，下一行命令将“c:\northwnd.mdf”指定为输入文件： **sqlmetal /code:"c:\northwind.cs" /language:csharp "c:\northwnd.mdf"**。|  
-|/timeout: \<seconds>|指定 SqlMetal 访问数据库时的超时值。 默认值：0（即没有时间限制）。|  
+|/server: \<name>  |指定数据库服务器名称。|  
+|/database: \<name>  |指定服务器上的数据库目录。|  
+|/user: \<name>  |指定登录用户 ID。默认值：使用 Windows 身份验证。|  
+|/password: \<password>  |指定登录密码。 默认值：使用 Windows 身份验证。|  
+|/conn: \<connection string>  |指定数据库连接字符串。 不能与 **/server**、 **/database**、 **/user**或 **/password** 选项一起使用。<br /><br /> 不要在连接字符串中包含文件名， 而应将文件名作为输入文件添加到命令行中。 例如，下一行命令将“c:\northwnd.mdf”指定为输入文件： **sqlmetal /code:"c:\northwind.cs" /language:csharp "c:\northwnd.mdf"** 。|  
+|/timeout: \<seconds>  |指定 SqlMetal 访问数据库时的超时值。 默认值：0（即没有时间限制）。|  
   
  **提取选项**  
   
@@ -72,18 +72,18 @@ sqlmetal [options] [<input file>]
   
 |选项|说明|  
 |------------|-----------------|  
-|/language: \<language>|指定源代码语言。<br /><br /> 有效 \<language>：vb、csharp。<br /><br /> 默认值：从代码文件的扩展名派生。|  
-|/namespace: \<name>|为生成的代码指定命名空间。 默认值：无命名空间。|  
-|/context: \<type>|指定数据上下文类的名称。 默认值：从数据库名称派生。|  
-|/entitybase: \<type>|指定生成的代码中的实体类的基类。 默认值：实体没有基类。|  
+|/language: \<language>  |指定源代码语言。<br /><br /> 有效 \<language>：vb、csharp  。<br /><br /> 默认值：从代码文件的扩展名派生。|  
+|/namespace: \<name>  |为生成的代码指定命名空间。 默认值：无命名空间。|  
+|/context: \<type>  |指定数据上下文类的名称。 默认值：从数据库名称派生。|  
+|/entitybase: \<type>  |指定生成的代码中的实体类的基类。 默认值：实体没有基类。|  
 |**/pluralize**|自动为类和成员名称应用复数或单数形式。<br /><br /> 此选项仅在美国可用。英文版。|  
-|/serialization: \<option>|生成可序列化类。<br /><br /> 有效\<选项>：无，单向。 默认值：无。<br /><br /> 有关详细信息，请参阅[序列化](../../../docs/framework/data/adonet/sql/linq/serialization.md)。|  
+|/serialization: \<option>  |生成可序列化类。<br /><br /> 有效\<选项>：  无，单向。 默认值：无。<br /><br /> 有关详细信息，请参阅[序列化](../../../docs/framework/data/adonet/sql/linq/serialization.md)。|  
   
  **输入文件**  
   
 |选项|说明|  
 |------------|-----------------|  
-|\<input file>|指定 SQL Server Express .mdf 文件、 [!INCLUDE[ssEW](../../../includes/ssew-md.md)] .sdf 文件或 .dbml 中间文件。|  
+|\<input file> |指定 SQL Server Express .mdf 文件、SQL Server Compact 3.5 .sdf 文件或 .dbml intermediate 文件。|  
   
 ## <a name="remarks"></a>备注  
  SqlMetal 功能实际涉及两个步骤：  
@@ -98,7 +98,7 @@ sqlmetal [options] [<input file>]
   
  如果没有指定 **/server** ，则假定为 **localhost/sqlexpress** 。  
   
- 如果存在下列一种或多种情况，[!INCLUDE[sqprsqext](../../../includes/sqprsqext-md.md)] 将引发异常：  
+ 如果下述一个或多个条件为 true，则 Microsoft SQL Server 2005 会引发异常：  
   
 - SqlMetal 尝试提取进行自我调用的存储过程。  
   
