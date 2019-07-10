@@ -19,16 +19,13 @@
                 - name: 整型数值类型
                   displayName: 'sbyte, byte, short, ushort, int, uint, long, ulong, integer'
                   href: builtin-types/integral-numeric-types.md
+                - name: 浮点型数值类型
+                  displayName: 'float, decimal, double, rational, real'
+                  href: builtin-types/floating-point-numeric-types.md
                 - name: char
                   href: keywords/char.md
-                - name: decimal
-                  href: keywords/decimal.md
-                - name: double
-                  href: keywords/double.md
                 - name: enum
                   href: keywords/enum.md
-                - name: float
-                  href: keywords/float.md
                 - name: struct
                   href: keywords/struct.md
             - name: 引用类型
@@ -55,8 +52,6 @@
               items:
                 - name: 内置类型表
                   href: keywords/built-in-types-table.md
-                - name: 浮点型表
-                  href: keywords/floating-point-types-table.md
                 - name: 值类型表
                   href: keywords/value-types-table.md
                 - name: 默认值表
