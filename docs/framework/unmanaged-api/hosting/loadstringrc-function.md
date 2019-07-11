@@ -16,21 +16,21 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6d985ed3b7af2aec7da709c3bbbfd10312e5e3a9
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 9047bf973224cdbc1f67463ef70f15f81089f827
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490199"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67768466"
 ---
-# <a name="loadstringrc-function"></a><span data-ttu-id="7edfb-102">LoadStringRC 函数</span><span class="sxs-lookup"><span data-stu-id="7edfb-102">LoadStringRC Function</span></span>
-<span data-ttu-id="7edfb-103">通过使用当前线程的默认区域性将 HRESULT 值转换成一条错误消息。</span><span class="sxs-lookup"><span data-stu-id="7edfb-103">Translates an HRESULT value into an error message by using the default culture of the current thread.</span></span>  
+# <a name="loadstringrc-function"></a><span data-ttu-id="1a558-102">LoadStringRC 函数</span><span class="sxs-lookup"><span data-stu-id="1a558-102">LoadStringRC Function</span></span>
+<span data-ttu-id="1a558-103">通过使用当前线程的默认区域性将 HRESULT 值转换成一条错误消息。</span><span class="sxs-lookup"><span data-stu-id="1a558-103">Translates an HRESULT value into an error message by using the default culture of the current thread.</span></span>  
   
- <span data-ttu-id="7edfb-104">.NET Framework 4 中已弃用此函数。</span><span class="sxs-lookup"><span data-stu-id="7edfb-104">This function has been deprecated in the .NET Framework 4.</span></span>  
+ <span data-ttu-id="1a558-104">.NET Framework 4 中已弃用此函数。</span><span class="sxs-lookup"><span data-stu-id="1a558-104">This function has been deprecated in the .NET Framework 4.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7edfb-105">语法</span><span class="sxs-lookup"><span data-stu-id="7edfb-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1a558-105">语法</span><span class="sxs-lookup"><span data-stu-id="1a558-105">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT LoadStringRC (  
     [in]  UINT    iResourceID,   
     [out] LPWSTR  szBuffer,   
@@ -39,40 +39,40 @@ HRESULT LoadStringRC (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="7edfb-106">参数</span><span class="sxs-lookup"><span data-stu-id="7edfb-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="1a558-106">参数</span><span class="sxs-lookup"><span data-stu-id="1a558-106">Parameters</span></span>  
  `iResourceID`  
- <span data-ttu-id="7edfb-107">[in]HRESULT。</span><span class="sxs-lookup"><span data-stu-id="7edfb-107">[in] An HRESULT.</span></span>  
+ <span data-ttu-id="1a558-107">[in]HRESULT。</span><span class="sxs-lookup"><span data-stu-id="1a558-107">[in] An HRESULT.</span></span>  
   
  `szBuffer`  
- <span data-ttu-id="7edfb-108">[out]包含成功完成后的错误消息的缓冲区。</span><span class="sxs-lookup"><span data-stu-id="7edfb-108">[out] A buffer that contains the error message upon successful completion.</span></span>  
+ <span data-ttu-id="1a558-108">[out]包含成功完成后的错误消息的缓冲区。</span><span class="sxs-lookup"><span data-stu-id="1a558-108">[out] A buffer that contains the error message upon successful completion.</span></span>  
   
  `iMax`  
- <span data-ttu-id="7edfb-109">[in]错误消息缓冲区的大小。</span><span class="sxs-lookup"><span data-stu-id="7edfb-109">[in] The size of the error message buffer.</span></span>  
+ <span data-ttu-id="1a558-109">[in]错误消息缓冲区的大小。</span><span class="sxs-lookup"><span data-stu-id="1a558-109">[in] The size of the error message buffer.</span></span>  
   
  `bQuiet`  
- <span data-ttu-id="7edfb-110">[in]忽略。</span><span class="sxs-lookup"><span data-stu-id="7edfb-110">[in] Ignored.</span></span>  
+ <span data-ttu-id="1a558-110">[in]忽略。</span><span class="sxs-lookup"><span data-stu-id="1a558-110">[in] Ignored.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="7edfb-111">返回值</span><span class="sxs-lookup"><span data-stu-id="7edfb-111">Return Value</span></span>  
- <span data-ttu-id="7edfb-112">此方法返回标准的组件对象模型 (COM) 错误代码，定义在 WinError.h，除了以下值。</span><span class="sxs-lookup"><span data-stu-id="7edfb-112">This method returns standard Component Object Model (COM) error codes, as defined in WinError.h, in addition to the following values.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="1a558-111">返回值</span><span class="sxs-lookup"><span data-stu-id="1a558-111">Return Value</span></span>  
+ <span data-ttu-id="1a558-112">此方法返回标准的组件对象模型 (COM) 错误代码，定义在 WinError.h，除了以下值。</span><span class="sxs-lookup"><span data-stu-id="1a558-112">This method returns standard Component Object Model (COM) error codes, as defined in WinError.h, in addition to the following values.</span></span>  
   
-|<span data-ttu-id="7edfb-113">返回代码</span><span class="sxs-lookup"><span data-stu-id="7edfb-113">Return code</span></span>|<span data-ttu-id="7edfb-114">描述</span><span class="sxs-lookup"><span data-stu-id="7edfb-114">Description</span></span>|  
+|<span data-ttu-id="1a558-113">返回代码</span><span class="sxs-lookup"><span data-stu-id="1a558-113">Return code</span></span>|<span data-ttu-id="1a558-114">描述</span><span class="sxs-lookup"><span data-stu-id="1a558-114">Description</span></span>|  
 |-----------------|-----------------|  
-|<span data-ttu-id="7edfb-115">S_OK</span><span class="sxs-lookup"><span data-stu-id="7edfb-115">S_OK</span></span>|<span data-ttu-id="7edfb-116">该方法已成功完成。</span><span class="sxs-lookup"><span data-stu-id="7edfb-116">The method completed successfully.</span></span>|  
-|<span data-ttu-id="7edfb-117">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="7edfb-117">E_INVALIDARG</span></span>|<span data-ttu-id="7edfb-118">`szBuffer` 为 null 或`iMax`为零 (0)。</span><span class="sxs-lookup"><span data-stu-id="7edfb-118">`szBuffer` is null or `iMax` is zero (0).</span></span>|  
+|<span data-ttu-id="1a558-115">S_OK</span><span class="sxs-lookup"><span data-stu-id="1a558-115">S_OK</span></span>|<span data-ttu-id="1a558-116">该方法已成功完成。</span><span class="sxs-lookup"><span data-stu-id="1a558-116">The method completed successfully.</span></span>|  
+|<span data-ttu-id="1a558-117">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="1a558-117">E_INVALIDARG</span></span>|<span data-ttu-id="1a558-118">`szBuffer` 为 null 或`iMax`为零 (0)。</span><span class="sxs-lookup"><span data-stu-id="1a558-118">`szBuffer` is null or `iMax` is zero (0).</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="7edfb-119">备注</span><span class="sxs-lookup"><span data-stu-id="7edfb-119">Remarks</span></span>  
- <span data-ttu-id="7edfb-120">如果该方法不成功，完成`szBuffer`包含空字符串。</span><span class="sxs-lookup"><span data-stu-id="7edfb-120">If the method does not complete successfully, `szBuffer` contains an empty string.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="1a558-119">备注</span><span class="sxs-lookup"><span data-stu-id="1a558-119">Remarks</span></span>  
+ <span data-ttu-id="1a558-120">如果该方法不成功，完成`szBuffer`包含空字符串。</span><span class="sxs-lookup"><span data-stu-id="1a558-120">If the method does not complete successfully, `szBuffer` contains an empty string.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="7edfb-121">要求</span><span class="sxs-lookup"><span data-stu-id="7edfb-121">Requirements</span></span>  
- <span data-ttu-id="7edfb-122">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="7edfb-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1a558-121">要求</span><span class="sxs-lookup"><span data-stu-id="1a558-121">Requirements</span></span>  
+ <span data-ttu-id="1a558-122">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="1a558-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="7edfb-123">**标头：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="7edfb-123">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="1a558-123">**标头：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="1a558-123">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="7edfb-124">**库：** MSCorEE.dll 和 Mscorwks.dll。</span><span class="sxs-lookup"><span data-stu-id="7edfb-124">**Library:** MSCorEE.dll and Mscorwks.dll.</span></span> <span data-ttu-id="7edfb-125">使用而不是 Mscorwks.dll MSCorEE.dll 确保面向.NET Framework 的正确版本。</span><span class="sxs-lookup"><span data-stu-id="7edfb-125">Use MSCorEE.dll instead of Mscorwks.dll to ensure that you target the correct version of the .NET Framework.</span></span>  
+ <span data-ttu-id="1a558-124">**库：** MSCorEE.dll 和 Mscorwks.dll。</span><span class="sxs-lookup"><span data-stu-id="1a558-124">**Library:** MSCorEE.dll and Mscorwks.dll.</span></span> <span data-ttu-id="1a558-125">使用而不是 Mscorwks.dll MSCorEE.dll 确保面向.NET Framework 的正确版本。</span><span class="sxs-lookup"><span data-stu-id="1a558-125">Use MSCorEE.dll instead of Mscorwks.dll to ensure that you target the correct version of the .NET Framework.</span></span>  
   
- <span data-ttu-id="7edfb-126">**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7edfb-126">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="1a558-126">**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1a558-126">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7edfb-127">请参阅</span><span class="sxs-lookup"><span data-stu-id="7edfb-127">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1a558-127">请参阅</span><span class="sxs-lookup"><span data-stu-id="1a558-127">See also</span></span>
 
-- [<span data-ttu-id="7edfb-128">LoadStringRCEx 函数</span><span class="sxs-lookup"><span data-stu-id="7edfb-128">LoadStringRCEx Function</span></span>](../../../../docs/framework/unmanaged-api/hosting/loadstringrcex-function.md)
-- [<span data-ttu-id="7edfb-129">弃用的 CLR 承载函数</span><span class="sxs-lookup"><span data-stu-id="7edfb-129">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [<span data-ttu-id="1a558-128">LoadStringRCEx 函数</span><span class="sxs-lookup"><span data-stu-id="1a558-128">LoadStringRCEx Function</span></span>](../../../../docs/framework/unmanaged-api/hosting/loadstringrcex-function.md)
+- [<span data-ttu-id="1a558-129">弃用的 CLR 承载函数</span><span class="sxs-lookup"><span data-stu-id="1a558-129">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
