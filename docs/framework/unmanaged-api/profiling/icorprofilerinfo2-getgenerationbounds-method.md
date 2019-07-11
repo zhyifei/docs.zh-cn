@@ -17,56 +17,56 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 310bde2889f8a383fde88cb1bbffce9bad157399
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.openlocfilehash: eee04315e18a6e0442271858b75783a081468f90
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67267996"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776713"
 ---
-# <a name="icorprofilerinfo2getgenerationbounds-method"></a><span data-ttu-id="933e0-102">ICorProfilerInfo2::GetGenerationBounds 方法</span><span class="sxs-lookup"><span data-stu-id="933e0-102">ICorProfilerInfo2::GetGenerationBounds Method</span></span>
-<span data-ttu-id="933e0-103">获取属于堆段的内存区域，堆段构成各代垃圾回收。</span><span class="sxs-lookup"><span data-stu-id="933e0-103">Gets the memory regions, which are segments of the heap, that make up the various garbage collection generations.</span></span>  
+# <a name="icorprofilerinfo2getgenerationbounds-method"></a><span data-ttu-id="1e41b-102">ICorProfilerInfo2::GetGenerationBounds 方法</span><span class="sxs-lookup"><span data-stu-id="1e41b-102">ICorProfilerInfo2::GetGenerationBounds Method</span></span>
+<span data-ttu-id="1e41b-103">获取属于堆段的内存区域，堆段构成各代垃圾回收。</span><span class="sxs-lookup"><span data-stu-id="1e41b-103">Gets the memory regions, which are segments of the heap, that make up the various garbage collection generations.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="933e0-104">语法</span><span class="sxs-lookup"><span data-stu-id="933e0-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1e41b-104">语法</span><span class="sxs-lookup"><span data-stu-id="1e41b-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetGenerationBounds(  
     [in]  ULONG cObjectRanges,  
     [out] ULONG *pcObjectRanges,  
     [out, size_is(cObjectRanges), length_is(*pcObjectRanges)] COR_PRF_GC_GENERATION_RANGE ranges[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="933e0-105">参数</span><span class="sxs-lookup"><span data-stu-id="933e0-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="1e41b-105">参数</span><span class="sxs-lookup"><span data-stu-id="1e41b-105">Parameters</span></span>  
  `cObjectRanges`  
- <span data-ttu-id="933e0-106">[in] 由调用方为 `ranges` 数组分配的元素数目。</span><span class="sxs-lookup"><span data-stu-id="933e0-106">[in] The number of elements allocated by the caller for the `ranges` array.</span></span>  
+ <span data-ttu-id="1e41b-106">[in] 由调用方为 `ranges` 数组分配的元素数目。</span><span class="sxs-lookup"><span data-stu-id="1e41b-106">[in] The number of elements allocated by the caller for the `ranges` array.</span></span>  
   
  `pcObjectRanges`  
- <span data-ttu-id="933e0-107">[out] 指向指定范围总数的整数的指针，部分或所有范围都将在 `ranges` 数组中返回。</span><span class="sxs-lookup"><span data-stu-id="933e0-107">[out] A pointer to an integer that specifies the total number of ranges, some or all of which will be returned in the `ranges` array.</span></span>  
+ <span data-ttu-id="1e41b-107">[out] 指向指定范围总数的整数的指针，部分或所有范围都将在 `ranges` 数组中返回。</span><span class="sxs-lookup"><span data-stu-id="1e41b-107">[out] A pointer to an integer that specifies the total number of ranges, some or all of which will be returned in the `ranges` array.</span></span>  
   
  `ranges`  
- <span data-ttu-id="933e0-108">[out]一个数组[COR_PRF_GC_GENERATION_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-range-structure.md)结构，其中每个正在进行垃圾回收的代中描述的内存范围 （即块）。</span><span class="sxs-lookup"><span data-stu-id="933e0-108">[out] An array of [COR_PRF_GC_GENERATION_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-range-structure.md) structures, each of which describes a range (that is, block) of memory within the generation that is undergoing garbage collection.</span></span>  
+ <span data-ttu-id="1e41b-108">[out]一个数组[COR_PRF_GC_GENERATION_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-range-structure.md)结构，其中每个正在进行垃圾回收的代中描述的内存范围 （即块）。</span><span class="sxs-lookup"><span data-stu-id="1e41b-108">[out] An array of [COR_PRF_GC_GENERATION_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-range-structure.md) structures, each of which describes a range (that is, block) of memory within the generation that is undergoing garbage collection.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="933e0-109">备注</span><span class="sxs-lookup"><span data-stu-id="933e0-109">Remarks</span></span>  
- <span data-ttu-id="933e0-110">可以从任何探查器回调调用 `GetGenerationBounds` 方法，前提是当前未进行垃圾回收。</span><span class="sxs-lookup"><span data-stu-id="933e0-110">The `GetGenerationBounds` method can be called from any profiler callback, provided that garbage collection is not in progress.</span></span>
+## <a name="remarks"></a><span data-ttu-id="1e41b-109">备注</span><span class="sxs-lookup"><span data-stu-id="1e41b-109">Remarks</span></span>  
+ <span data-ttu-id="1e41b-110">可以从任何探查器回调调用 `GetGenerationBounds` 方法，前提是当前未进行垃圾回收。</span><span class="sxs-lookup"><span data-stu-id="1e41b-110">The `GetGenerationBounds` method can be called from any profiler callback, provided that garbage collection is not in progress.</span></span>
 
- <span data-ttu-id="933e0-111">大多数代切换都发生在垃圾回收期间。</span><span class="sxs-lookup"><span data-stu-id="933e0-111">Most shifting of generations takes place during garbage collections.</span></span> <span data-ttu-id="933e0-112">在回收之间，代可能会增长，但通常不会反复切换。</span><span class="sxs-lookup"><span data-stu-id="933e0-112">Generations might grow between collections but generally do not move around.</span></span> <span data-ttu-id="933e0-113">因此，调用 `GetGenerationBounds` 最具特色的地方在于 `ICorProfilerCallback2::GarbageCollectionStarted` 和 `ICorProfilerCallback2::GarbageCollectionFinished` 中。</span><span class="sxs-lookup"><span data-stu-id="933e0-113">Therefore, the most interesting places to call `GetGenerationBounds` are in `ICorProfilerCallback2::GarbageCollectionStarted` and `ICorProfilerCallback2::GarbageCollectionFinished`.</span></span>  
+ <span data-ttu-id="1e41b-111">大多数代切换都发生在垃圾回收期间。</span><span class="sxs-lookup"><span data-stu-id="1e41b-111">Most shifting of generations takes place during garbage collections.</span></span> <span data-ttu-id="1e41b-112">在回收之间，代可能会增长，但通常不会反复切换。</span><span class="sxs-lookup"><span data-stu-id="1e41b-112">Generations might grow between collections but generally do not move around.</span></span> <span data-ttu-id="1e41b-113">因此，调用 `GetGenerationBounds` 最具特色的地方在于 `ICorProfilerCallback2::GarbageCollectionStarted` 和 `ICorProfilerCallback2::GarbageCollectionFinished` 中。</span><span class="sxs-lookup"><span data-stu-id="1e41b-113">Therefore, the most interesting places to call `GetGenerationBounds` are in `ICorProfilerCallback2::GarbageCollectionStarted` and `ICorProfilerCallback2::GarbageCollectionFinished`.</span></span>  
   
- <span data-ttu-id="933e0-114">在程序启动期间，某些对象是由公共语言运行时 (CLR) 自身分配的，通常发生在第 3 代和第 0 代中。</span><span class="sxs-lookup"><span data-stu-id="933e0-114">During program startup, some objects are allocated by the common language runtime (CLR) itself, generally in generations 3 and 0.</span></span> <span data-ttu-id="933e0-115">因此，当托管代码开始执行时，这些代将已经包含对象。</span><span class="sxs-lookup"><span data-stu-id="933e0-115">Thus, by the time managed code starts executing, these generations will already contain objects.</span></span> <span data-ttu-id="933e0-116">第 1 代和第 2 代通常将为空，但由垃圾回收器生成的虚拟对象除外。</span><span class="sxs-lookup"><span data-stu-id="933e0-116">Generations 1 and 2 will normally be empty, except for dummy objects that are generated by the garbage collector.</span></span> <span data-ttu-id="933e0-117">（虚拟对象的大小在 32 位的 CLR 实现中为 12 个字节；在 64 位实现中更大。）你还可能看到本机映像生成器 (NGen.exe) 生成的模块内的第 2 代范围。</span><span class="sxs-lookup"><span data-stu-id="933e0-117">(The size of dummy objects is 12 bytes in 32-bit implementations of the CLR; the size is larger in 64-bit implementations.) You might also see generation 2 ranges that are inside modules produced by the Native Image Generator (NGen.exe).</span></span> <span data-ttu-id="933e0-118">在这种情况下，第 2 代中的对象是*冻结对象*，NGen.exe 运行时而不是由垃圾回收器分配的。</span><span class="sxs-lookup"><span data-stu-id="933e0-118">In this case, the objects in generation 2 are *frozen objects*, which are allocated when NGen.exe runs rather than by the garbage collector.</span></span>  
+ <span data-ttu-id="1e41b-114">在程序启动期间，某些对象是由公共语言运行时 (CLR) 自身分配的，通常发生在第 3 代和第 0 代中。</span><span class="sxs-lookup"><span data-stu-id="1e41b-114">During program startup, some objects are allocated by the common language runtime (CLR) itself, generally in generations 3 and 0.</span></span> <span data-ttu-id="1e41b-115">因此，当托管代码开始执行时，这些代将已经包含对象。</span><span class="sxs-lookup"><span data-stu-id="1e41b-115">Thus, by the time managed code starts executing, these generations will already contain objects.</span></span> <span data-ttu-id="1e41b-116">第 1 代和第 2 代通常将为空，但由垃圾回收器生成的虚拟对象除外。</span><span class="sxs-lookup"><span data-stu-id="1e41b-116">Generations 1 and 2 will normally be empty, except for dummy objects that are generated by the garbage collector.</span></span> <span data-ttu-id="1e41b-117">（虚拟对象的大小在 32 位的 CLR 实现中为 12 个字节；在 64 位实现中更大。）你还可能看到本机映像生成器 (NGen.exe) 生成的模块内的第 2 代范围。</span><span class="sxs-lookup"><span data-stu-id="1e41b-117">(The size of dummy objects is 12 bytes in 32-bit implementations of the CLR; the size is larger in 64-bit implementations.) You might also see generation 2 ranges that are inside modules produced by the Native Image Generator (NGen.exe).</span></span> <span data-ttu-id="1e41b-118">在这种情况下，第 2 代中的对象是*冻结对象*，NGen.exe 运行时而不是由垃圾回收器分配的。</span><span class="sxs-lookup"><span data-stu-id="1e41b-118">In this case, the objects in generation 2 are *frozen objects*, which are allocated when NGen.exe runs rather than by the garbage collector.</span></span>  
   
- <span data-ttu-id="933e0-119">此函数使用调用方分配的缓冲区。</span><span class="sxs-lookup"><span data-stu-id="933e0-119">This function uses caller-allocated buffers.</span></span>  
+ <span data-ttu-id="1e41b-119">此函数使用调用方分配的缓冲区。</span><span class="sxs-lookup"><span data-stu-id="1e41b-119">This function uses caller-allocated buffers.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="933e0-120">要求</span><span class="sxs-lookup"><span data-stu-id="933e0-120">Requirements</span></span>  
- <span data-ttu-id="933e0-121">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="933e0-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1e41b-120">要求</span><span class="sxs-lookup"><span data-stu-id="1e41b-120">Requirements</span></span>  
+ <span data-ttu-id="1e41b-121">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="1e41b-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="933e0-122">**标头：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="933e0-122">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="1e41b-122">**标头：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="1e41b-122">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="933e0-123">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="933e0-123">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="1e41b-123">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="1e41b-123">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="933e0-124">**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="933e0-124">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="1e41b-124">**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1e41b-124">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="933e0-125">请参阅</span><span class="sxs-lookup"><span data-stu-id="933e0-125">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1e41b-125">请参阅</span><span class="sxs-lookup"><span data-stu-id="1e41b-125">See also</span></span>
 
-- [<span data-ttu-id="933e0-126">ICorProfilerInfo 接口</span><span class="sxs-lookup"><span data-stu-id="933e0-126">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [<span data-ttu-id="933e0-127">ICorProfilerInfo2 接口</span><span class="sxs-lookup"><span data-stu-id="933e0-127">ICorProfilerInfo2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
-- [<span data-ttu-id="933e0-128">Profiling 接口</span><span class="sxs-lookup"><span data-stu-id="933e0-128">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [<span data-ttu-id="933e0-129">分析</span><span class="sxs-lookup"><span data-stu-id="933e0-129">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [<span data-ttu-id="1e41b-126">ICorProfilerInfo 接口</span><span class="sxs-lookup"><span data-stu-id="1e41b-126">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [<span data-ttu-id="1e41b-127">ICorProfilerInfo2 接口</span><span class="sxs-lookup"><span data-stu-id="1e41b-127">ICorProfilerInfo2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+- [<span data-ttu-id="1e41b-128">Profiling 接口</span><span class="sxs-lookup"><span data-stu-id="1e41b-128">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [<span data-ttu-id="1e41b-129">分析</span><span class="sxs-lookup"><span data-stu-id="1e41b-129">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)

@@ -17,53 +17,53 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 85a43fef7f6dfa6dbe0bb9f1c4caec2c9c224b93
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 23ead080823ace1b091568108af8866dcbca14ec
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61763426"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67770275"
 ---
-# <a name="iclrtask2beginpreventasyncabort-method"></a><span data-ttu-id="3de91-102">ICLRTask2::BeginPreventAsyncAbort 方法</span><span class="sxs-lookup"><span data-stu-id="3de91-102">ICLRTask2::BeginPreventAsyncAbort Method</span></span>
-<span data-ttu-id="3de91-103">延迟新线程中止请求导致当前线程上的线程中止。</span><span class="sxs-lookup"><span data-stu-id="3de91-103">Delays new thread abort requests from resulting in thread aborts on the current thread.</span></span>  
+# <a name="iclrtask2beginpreventasyncabort-method"></a><span data-ttu-id="aa5c5-102">ICLRTask2::BeginPreventAsyncAbort 方法</span><span class="sxs-lookup"><span data-stu-id="aa5c5-102">ICLRTask2::BeginPreventAsyncAbort Method</span></span>
+<span data-ttu-id="aa5c5-103">延迟新线程中止请求导致当前线程上的线程中止。</span><span class="sxs-lookup"><span data-stu-id="aa5c5-103">Delays new thread abort requests from resulting in thread aborts on the current thread.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3de91-104">语法</span><span class="sxs-lookup"><span data-stu-id="3de91-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="aa5c5-104">语法</span><span class="sxs-lookup"><span data-stu-id="aa5c5-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT BeginPreventAsyncAbort();  
 ```  
   
-## <a name="return-value"></a><span data-ttu-id="3de91-105">返回值</span><span class="sxs-lookup"><span data-stu-id="3de91-105">Return Value</span></span>  
- <span data-ttu-id="3de91-106">此方法返回以下特定 HRESULT 以及表示方法失败的 HRESULT 错误。</span><span class="sxs-lookup"><span data-stu-id="3de91-106">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="aa5c5-105">返回值</span><span class="sxs-lookup"><span data-stu-id="aa5c5-105">Return Value</span></span>  
+ <span data-ttu-id="aa5c5-106">此方法返回以下特定 HRESULT 以及表示方法失败的 HRESULT 错误。</span><span class="sxs-lookup"><span data-stu-id="aa5c5-106">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
   
-|<span data-ttu-id="3de91-107">HRESULT</span><span class="sxs-lookup"><span data-stu-id="3de91-107">HRESULT</span></span>|<span data-ttu-id="3de91-108">描述</span><span class="sxs-lookup"><span data-stu-id="3de91-108">Description</span></span>|  
+|<span data-ttu-id="aa5c5-107">HRESULT</span><span class="sxs-lookup"><span data-stu-id="aa5c5-107">HRESULT</span></span>|<span data-ttu-id="aa5c5-108">描述</span><span class="sxs-lookup"><span data-stu-id="aa5c5-108">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="3de91-109">S_OK</span><span class="sxs-lookup"><span data-stu-id="3de91-109">S_OK</span></span>|<span data-ttu-id="3de91-110">该方法已成功完成。</span><span class="sxs-lookup"><span data-stu-id="3de91-110">The method completed successfully.</span></span>|  
-|<span data-ttu-id="3de91-111">HOST_E_INVALIDOPERATION</span><span class="sxs-lookup"><span data-stu-id="3de91-111">HOST_E_INVALIDOPERATION</span></span>|<span data-ttu-id="3de91-112">这不是当前线程的线程上调用方法。</span><span class="sxs-lookup"><span data-stu-id="3de91-112">The method was called on a thread which is not the current thread.</span></span>|  
+|<span data-ttu-id="aa5c5-109">S_OK</span><span class="sxs-lookup"><span data-stu-id="aa5c5-109">S_OK</span></span>|<span data-ttu-id="aa5c5-110">该方法已成功完成。</span><span class="sxs-lookup"><span data-stu-id="aa5c5-110">The method completed successfully.</span></span>|  
+|<span data-ttu-id="aa5c5-111">HOST_E_INVALIDOPERATION</span><span class="sxs-lookup"><span data-stu-id="aa5c5-111">HOST_E_INVALIDOPERATION</span></span>|<span data-ttu-id="aa5c5-112">这不是当前线程的线程上调用方法。</span><span class="sxs-lookup"><span data-stu-id="aa5c5-112">The method was called on a thread which is not the current thread.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="3de91-113">备注</span><span class="sxs-lookup"><span data-stu-id="3de91-113">Remarks</span></span>  
- <span data-ttu-id="3de91-114">调用此方法由一个递增当前线程的延迟线程中止计数器。</span><span class="sxs-lookup"><span data-stu-id="3de91-114">Calling this method increments the delay-thread-abort counter for the current thread by one.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="aa5c5-113">备注</span><span class="sxs-lookup"><span data-stu-id="aa5c5-113">Remarks</span></span>  
+ <span data-ttu-id="aa5c5-114">调用此方法由一个递增当前线程的延迟线程中止计数器。</span><span class="sxs-lookup"><span data-stu-id="aa5c5-114">Calling this method increments the delay-thread-abort counter for the current thread by one.</span></span>  
   
- <span data-ttu-id="3de91-115">调用`BeginPreventAsyncAbort`并[ICLRTask2::EndPreventAsyncAbort](../../../../docs/framework/unmanaged-api/hosting/iclrtask2-endpreventasyncabort-method.md)可以嵌套。</span><span class="sxs-lookup"><span data-stu-id="3de91-115">Calls to `BeginPreventAsyncAbort` and [ICLRTask2::EndPreventAsyncAbort](../../../../docs/framework/unmanaged-api/hosting/iclrtask2-endpreventasyncabort-method.md) can be nested.</span></span> <span data-ttu-id="3de91-116">只要该计数器是大于零，则会延迟当前线程的线程中止。</span><span class="sxs-lookup"><span data-stu-id="3de91-116">As long as the counter is greater than zero, thread aborts for the current thread are delayed.</span></span> <span data-ttu-id="3de91-117">如果此调用未配对通过调用`EndPreventAsyncAbort`方法，就可以访问哪些线程中止不能将传递到当前线程的状态。</span><span class="sxs-lookup"><span data-stu-id="3de91-117">If this call is not paired with a call to the `EndPreventAsyncAbort` method, it is possible to reach a state in which thread aborts cannot be delivered to the current thread.</span></span>  
+ <span data-ttu-id="aa5c5-115">调用`BeginPreventAsyncAbort`并[ICLRTask2::EndPreventAsyncAbort](../../../../docs/framework/unmanaged-api/hosting/iclrtask2-endpreventasyncabort-method.md)可以嵌套。</span><span class="sxs-lookup"><span data-stu-id="aa5c5-115">Calls to `BeginPreventAsyncAbort` and [ICLRTask2::EndPreventAsyncAbort](../../../../docs/framework/unmanaged-api/hosting/iclrtask2-endpreventasyncabort-method.md) can be nested.</span></span> <span data-ttu-id="aa5c5-116">只要该计数器是大于零，则会延迟当前线程的线程中止。</span><span class="sxs-lookup"><span data-stu-id="aa5c5-116">As long as the counter is greater than zero, thread aborts for the current thread are delayed.</span></span> <span data-ttu-id="aa5c5-117">如果此调用未配对通过调用`EndPreventAsyncAbort`方法，就可以访问哪些线程中止不能将传递到当前线程的状态。</span><span class="sxs-lookup"><span data-stu-id="aa5c5-117">If this call is not paired with a call to the `EndPreventAsyncAbort` method, it is possible to reach a state in which thread aborts cannot be delivered to the current thread.</span></span>  
   
- <span data-ttu-id="3de91-118">不为线程中止本身采用延迟。</span><span class="sxs-lookup"><span data-stu-id="3de91-118">The delay is not honored for a thread that aborts itself.</span></span>  
+ <span data-ttu-id="aa5c5-118">不为线程中止本身采用延迟。</span><span class="sxs-lookup"><span data-stu-id="aa5c5-118">The delay is not honored for a thread that aborts itself.</span></span>  
   
- <span data-ttu-id="3de91-119">虚拟机 (VM) 在内部使用此功能公开的功能。</span><span class="sxs-lookup"><span data-stu-id="3de91-119">The functionality that is exposed by this feature is used internally by the virtual machine (VM).</span></span> <span data-ttu-id="3de91-120">不恰当使用这些方法的可能导致在 VM 中未指定的行为。</span><span class="sxs-lookup"><span data-stu-id="3de91-120">Misuse of these methods may cause unspecified behavior in the VM.</span></span> <span data-ttu-id="3de91-121">例如，调用`EndPreventAsyncAbort`而无需第一个调用`BeginPreventAsyncAbort`VM 先前已增大时，无法设置计数器为零。</span><span class="sxs-lookup"><span data-stu-id="3de91-121">For example, calling `EndPreventAsyncAbort` without first calling `BeginPreventAsyncAbort` could set the counter to zero when the VM has previously incremented it.</span></span> <span data-ttu-id="3de91-122">同样，内部计数器不会检查溢出。</span><span class="sxs-lookup"><span data-stu-id="3de91-122">Similarly, the internal counter is not checked for overflow.</span></span> <span data-ttu-id="3de91-123">如果因为加在主机和 VM 超出其不可或缺的限制，所产生的行为是未指定。</span><span class="sxs-lookup"><span data-stu-id="3de91-123">If it exceeds its integral limit because it is incremented by both the host and the VM, the resulting behavior is unspecified.</span></span>  
+ <span data-ttu-id="aa5c5-119">虚拟机 (VM) 在内部使用此功能公开的功能。</span><span class="sxs-lookup"><span data-stu-id="aa5c5-119">The functionality that is exposed by this feature is used internally by the virtual machine (VM).</span></span> <span data-ttu-id="aa5c5-120">不恰当使用这些方法的可能导致在 VM 中未指定的行为。</span><span class="sxs-lookup"><span data-stu-id="aa5c5-120">Misuse of these methods may cause unspecified behavior in the VM.</span></span> <span data-ttu-id="aa5c5-121">例如，调用`EndPreventAsyncAbort`而无需第一个调用`BeginPreventAsyncAbort`VM 先前已增大时，无法设置计数器为零。</span><span class="sxs-lookup"><span data-stu-id="aa5c5-121">For example, calling `EndPreventAsyncAbort` without first calling `BeginPreventAsyncAbort` could set the counter to zero when the VM has previously incremented it.</span></span> <span data-ttu-id="aa5c5-122">同样，内部计数器不会检查溢出。</span><span class="sxs-lookup"><span data-stu-id="aa5c5-122">Similarly, the internal counter is not checked for overflow.</span></span> <span data-ttu-id="aa5c5-123">如果因为加在主机和 VM 超出其不可或缺的限制，所产生的行为是未指定。</span><span class="sxs-lookup"><span data-stu-id="aa5c5-123">If it exceeds its integral limit because it is incremented by both the host and the VM, the resulting behavior is unspecified.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3de91-124">要求</span><span class="sxs-lookup"><span data-stu-id="3de91-124">Requirements</span></span>  
- <span data-ttu-id="3de91-125">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="3de91-125">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="aa5c5-124">要求</span><span class="sxs-lookup"><span data-stu-id="aa5c5-124">Requirements</span></span>  
+ <span data-ttu-id="aa5c5-125">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="aa5c5-125">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3de91-126">**标头：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="3de91-126">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="aa5c5-126">**标头：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="aa5c5-126">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="3de91-127">**库：** 包含为 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="3de91-127">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="aa5c5-127">**库：** 包含为 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="aa5c5-127">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="3de91-128">**.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3de91-128">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="aa5c5-128">**.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="aa5c5-128">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3de91-129">请参阅</span><span class="sxs-lookup"><span data-stu-id="3de91-129">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="aa5c5-129">请参阅</span><span class="sxs-lookup"><span data-stu-id="aa5c5-129">See also</span></span>
 
-- [<span data-ttu-id="3de91-130">EndPreventAsyncAbort 方法</span><span class="sxs-lookup"><span data-stu-id="3de91-130">EndPreventAsyncAbort Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtask2-endpreventasyncabort-method.md)
-- [<span data-ttu-id="3de91-131">ICLRTask2 接口</span><span class="sxs-lookup"><span data-stu-id="3de91-131">ICLRTask2 Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtask2-interface.md)
-- [<span data-ttu-id="3de91-132">ICLRTaskManager 接口</span><span class="sxs-lookup"><span data-stu-id="3de91-132">ICLRTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
-- [<span data-ttu-id="3de91-133">IHostTask 接口</span><span class="sxs-lookup"><span data-stu-id="3de91-133">IHostTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
-- [<span data-ttu-id="3de91-134">IHostTaskManager 接口</span><span class="sxs-lookup"><span data-stu-id="3de91-134">IHostTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)
-- [<span data-ttu-id="3de91-135">承载接口</span><span class="sxs-lookup"><span data-stu-id="3de91-135">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [<span data-ttu-id="aa5c5-130">EndPreventAsyncAbort 方法</span><span class="sxs-lookup"><span data-stu-id="aa5c5-130">EndPreventAsyncAbort Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtask2-endpreventasyncabort-method.md)
+- [<span data-ttu-id="aa5c5-131">ICLRTask2 接口</span><span class="sxs-lookup"><span data-stu-id="aa5c5-131">ICLRTask2 Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtask2-interface.md)
+- [<span data-ttu-id="aa5c5-132">ICLRTaskManager 接口</span><span class="sxs-lookup"><span data-stu-id="aa5c5-132">ICLRTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
+- [<span data-ttu-id="aa5c5-133">IHostTask 接口</span><span class="sxs-lookup"><span data-stu-id="aa5c5-133">IHostTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
+- [<span data-ttu-id="aa5c5-134">IHostTaskManager 接口</span><span class="sxs-lookup"><span data-stu-id="aa5c5-134">IHostTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)
+- [<span data-ttu-id="aa5c5-135">承载接口</span><span class="sxs-lookup"><span data-stu-id="aa5c5-135">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

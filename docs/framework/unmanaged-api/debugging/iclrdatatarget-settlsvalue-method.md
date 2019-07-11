@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4c0be35772b10d89f90da5b33f47aa781034b13a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 34c0ab32d18d5aeeb81befa736cc42b678b11fb1
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61698078"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67738551"
 ---
-# <a name="iclrdatatargetsettlsvalue-method"></a><span data-ttu-id="6f384-102">ICLRDataTarget::SetTLSValue 方法</span><span class="sxs-lookup"><span data-stu-id="6f384-102">ICLRDataTarget::SetTLSValue Method</span></span>
-<span data-ttu-id="6f384-103">设置中指定目标进程中线程的线程本地存储 (TLS) 的值。</span><span class="sxs-lookup"><span data-stu-id="6f384-103">Sets a value in the thread local storage (TLS) of the specified thread in the target process.</span></span> <span data-ttu-id="6f384-104">由公共语言运行时 (CLR) 数据访问服务调用此方法。</span><span class="sxs-lookup"><span data-stu-id="6f384-104">This method is called by the common language runtime (CLR) data access services.</span></span>  
+# <a name="iclrdatatargetsettlsvalue-method"></a><span data-ttu-id="2c4aa-102">ICLRDataTarget::SetTLSValue 方法</span><span class="sxs-lookup"><span data-stu-id="2c4aa-102">ICLRDataTarget::SetTLSValue Method</span></span>
+<span data-ttu-id="2c4aa-103">设置中指定目标进程中线程的线程本地存储 (TLS) 的值。</span><span class="sxs-lookup"><span data-stu-id="2c4aa-103">Sets a value in the thread local storage (TLS) of the specified thread in the target process.</span></span> <span data-ttu-id="2c4aa-104">由公共语言运行时 (CLR) 数据访问服务调用此方法。</span><span class="sxs-lookup"><span data-stu-id="2c4aa-104">This method is called by the common language runtime (CLR) data access services.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6f384-105">语法</span><span class="sxs-lookup"><span data-stu-id="6f384-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2c4aa-105">语法</span><span class="sxs-lookup"><span data-stu-id="2c4aa-105">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT SetTLSValue (  
     [in] ULONG32            threadID,  
     [in] ULONG32            index,  
@@ -37,28 +37,28 @@ HRESULT SetTLSValue (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="6f384-106">参数</span><span class="sxs-lookup"><span data-stu-id="6f384-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="2c4aa-106">参数</span><span class="sxs-lookup"><span data-stu-id="2c4aa-106">Parameters</span></span>  
  `threadID`  
- <span data-ttu-id="6f384-107">[in]目标进程中线程的操作系统的系统标识符。</span><span class="sxs-lookup"><span data-stu-id="6f384-107">[in] The operating system identifier of a thread in the target process.</span></span>  
+ <span data-ttu-id="2c4aa-107">[in]目标进程中线程的操作系统的系统标识符。</span><span class="sxs-lookup"><span data-stu-id="2c4aa-107">[in] The operating system identifier of a thread in the target process.</span></span>  
   
  `index`  
- <span data-ttu-id="6f384-108">[in]位置的索引。</span><span class="sxs-lookup"><span data-stu-id="6f384-108">[in] The index of the location.</span></span> <span data-ttu-id="6f384-109">此值必须是线程的指定本地存储中的有效索引。</span><span class="sxs-lookup"><span data-stu-id="6f384-109">This value must be a valid index in the local store of the specified thread.</span></span>  
+ <span data-ttu-id="2c4aa-108">[in]位置的索引。</span><span class="sxs-lookup"><span data-stu-id="2c4aa-108">[in] The index of the location.</span></span> <span data-ttu-id="2c4aa-109">此值必须是线程的指定本地存储中的有效索引。</span><span class="sxs-lookup"><span data-stu-id="2c4aa-109">This value must be a valid index in the local store of the specified thread.</span></span>  
   
  `value`  
- <span data-ttu-id="6f384-110">[in]一个`CLRDATA_ADDRESS`值，该值指定要放置在给定的 TLS 位置的值。</span><span class="sxs-lookup"><span data-stu-id="6f384-110">[in] A `CLRDATA_ADDRESS` value that specifies the value to place in the given TLS location.</span></span>  
+ <span data-ttu-id="2c4aa-110">[in]一个`CLRDATA_ADDRESS`值，该值指定要放置在给定的 TLS 位置的值。</span><span class="sxs-lookup"><span data-stu-id="2c4aa-110">[in] A `CLRDATA_ADDRESS` value that specifies the value to place in the given TLS location.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="6f384-111">备注</span><span class="sxs-lookup"><span data-stu-id="6f384-111">Remarks</span></span>  
- <span data-ttu-id="6f384-112">此方法由调试应用程序的编写器实现。</span><span class="sxs-lookup"><span data-stu-id="6f384-112">This method is implemented by the writer of the debugging application.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="2c4aa-111">备注</span><span class="sxs-lookup"><span data-stu-id="2c4aa-111">Remarks</span></span>  
+ <span data-ttu-id="2c4aa-112">此方法由调试应用程序的编写器实现。</span><span class="sxs-lookup"><span data-stu-id="2c4aa-112">This method is implemented by the writer of the debugging application.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6f384-113">要求</span><span class="sxs-lookup"><span data-stu-id="6f384-113">Requirements</span></span>  
- <span data-ttu-id="6f384-114">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="6f384-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2c4aa-113">要求</span><span class="sxs-lookup"><span data-stu-id="2c4aa-113">Requirements</span></span>  
+ <span data-ttu-id="2c4aa-114">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="2c4aa-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6f384-115">**标头：** ClrData.idl, ClrData.h</span><span class="sxs-lookup"><span data-stu-id="6f384-115">**Header:** ClrData.idl, ClrData.h</span></span>  
+ <span data-ttu-id="2c4aa-115">**标头：** ClrData.idl, ClrData.h</span><span class="sxs-lookup"><span data-stu-id="2c4aa-115">**Header:** ClrData.idl, ClrData.h</span></span>  
   
- <span data-ttu-id="6f384-116">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6f384-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="2c4aa-116">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2c4aa-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="6f384-117">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6f384-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="2c4aa-117">**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2c4aa-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6f384-118">请参阅</span><span class="sxs-lookup"><span data-stu-id="6f384-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2c4aa-118">请参阅</span><span class="sxs-lookup"><span data-stu-id="2c4aa-118">See also</span></span>
 
-- [<span data-ttu-id="6f384-119">ICLRDataTarget 接口</span><span class="sxs-lookup"><span data-stu-id="6f384-119">ICLRDataTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
+- [<span data-ttu-id="2c4aa-119">ICLRDataTarget 接口</span><span class="sxs-lookup"><span data-stu-id="2c4aa-119">ICLRDataTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)

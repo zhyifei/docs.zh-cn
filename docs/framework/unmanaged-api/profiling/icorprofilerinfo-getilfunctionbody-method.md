@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b2960bc0cfc39adb9b7cbca236d495baf630a173
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 484fb5b8398e3ebd61d1c300afec1536ee1dc0c5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61991843"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780598"
 ---
-# <a name="icorprofilerinfogetilfunctionbody-method"></a><span data-ttu-id="6e704-102">ICorProfilerInfo::GetILFunctionBody 方法</span><span class="sxs-lookup"><span data-stu-id="6e704-102">ICorProfilerInfo::GetILFunctionBody Method</span></span>
-<span data-ttu-id="6e704-103">获取一个指针指向方法的主体在 Microsoft 中间语言 (MSIL) 代码中，从其标头处开始。</span><span class="sxs-lookup"><span data-stu-id="6e704-103">Gets a pointer to the body of a method in Microsoft intermediate language (MSIL) code, starting at its header.</span></span>  
+# <a name="icorprofilerinfogetilfunctionbody-method"></a><span data-ttu-id="b126f-102">ICorProfilerInfo::GetILFunctionBody 方法</span><span class="sxs-lookup"><span data-stu-id="b126f-102">ICorProfilerInfo::GetILFunctionBody Method</span></span>
+<span data-ttu-id="b126f-103">获取一个指针指向方法的主体在 Microsoft 中间语言 (MSIL) 代码中，从其标头处开始。</span><span class="sxs-lookup"><span data-stu-id="b126f-103">Gets a pointer to the body of a method in Microsoft intermediate language (MSIL) code, starting at its header.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6e704-104">语法</span><span class="sxs-lookup"><span data-stu-id="6e704-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b126f-104">语法</span><span class="sxs-lookup"><span data-stu-id="b126f-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetILFunctionBody(  
     [in]  ModuleID    moduleId,  
     [in]  mdMethodDef methodId,  
@@ -37,33 +37,33 @@ HRESULT GetILFunctionBody(
     [out] ULONG       *pcbMethodSize);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="6e704-105">参数</span><span class="sxs-lookup"><span data-stu-id="6e704-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b126f-105">参数</span><span class="sxs-lookup"><span data-stu-id="b126f-105">Parameters</span></span>  
  `moduleId`  
- <span data-ttu-id="6e704-106">[in]该函数所在的模块的 ID。</span><span class="sxs-lookup"><span data-stu-id="6e704-106">[in] The ID of the module in which the function resides.</span></span>  
+ <span data-ttu-id="b126f-106">[in]该函数所在的模块的 ID。</span><span class="sxs-lookup"><span data-stu-id="b126f-106">[in] The ID of the module in which the function resides.</span></span>  
   
  `methodId`  
- <span data-ttu-id="6e704-107">[in]方法的元数据标记。</span><span class="sxs-lookup"><span data-stu-id="6e704-107">[in] The metadata token for the method.</span></span>  
+ <span data-ttu-id="b126f-107">[in]方法的元数据标记。</span><span class="sxs-lookup"><span data-stu-id="b126f-107">[in] The metadata token for the method.</span></span>  
   
  `ppMethodHeader`  
- <span data-ttu-id="6e704-108">[out]指向方法的标头的指针。</span><span class="sxs-lookup"><span data-stu-id="6e704-108">[out] A pointer to the method's header.</span></span>  
+ <span data-ttu-id="b126f-108">[out]指向方法的标头的指针。</span><span class="sxs-lookup"><span data-stu-id="b126f-108">[out] A pointer to the method's header.</span></span>  
   
  `pcbMethodSize`  
- <span data-ttu-id="6e704-109">[out]一个整数，指定方法的大小。</span><span class="sxs-lookup"><span data-stu-id="6e704-109">[out] An integer that specifies the size of the method.</span></span>  
+ <span data-ttu-id="b126f-109">[out]一个整数，指定方法的大小。</span><span class="sxs-lookup"><span data-stu-id="b126f-109">[out] An integer that specifies the size of the method.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="6e704-110">备注</span><span class="sxs-lookup"><span data-stu-id="6e704-110">Remarks</span></span>  
- <span data-ttu-id="6e704-111">一种方法是按其所在的模块限定范围。</span><span class="sxs-lookup"><span data-stu-id="6e704-111">A method is scoped by the module in which it lives.</span></span> <span data-ttu-id="6e704-112">因为`GetILFunctionBody`方法旨在为访问工具提供对 MSIL 代码，然后加载公共语言运行时 (CLR)，它使用的元数据标记的方法来查找所需的实例。</span><span class="sxs-lookup"><span data-stu-id="6e704-112">Because the `GetILFunctionBody` method is designed to give a tool access to the MSIL code before it has been loaded by the common language runtime (CLR), it uses the metadata token of the method to find the desired instance.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b126f-110">备注</span><span class="sxs-lookup"><span data-stu-id="b126f-110">Remarks</span></span>  
+ <span data-ttu-id="b126f-111">一种方法是按其所在的模块限定范围。</span><span class="sxs-lookup"><span data-stu-id="b126f-111">A method is scoped by the module in which it lives.</span></span> <span data-ttu-id="b126f-112">因为`GetILFunctionBody`方法旨在为访问工具提供对 MSIL 代码，然后加载公共语言运行时 (CLR)，它使用的元数据标记的方法来查找所需的实例。</span><span class="sxs-lookup"><span data-stu-id="b126f-112">Because the `GetILFunctionBody` method is designed to give a tool access to the MSIL code before it has been loaded by the common language runtime (CLR), it uses the metadata token of the method to find the desired instance.</span></span>  
   
- <span data-ttu-id="6e704-113">`GetILFunctionBody` 如果可以返回 CORPROF_E_FUNCTION_NOT_IL HRESULT`methodId`指向一种方法，没有任何 MSIL 代码 （如一个抽象方法或平台调用 (PInvoke) 方法）。</span><span class="sxs-lookup"><span data-stu-id="6e704-113">`GetILFunctionBody` can return a CORPROF_E_FUNCTION_NOT_IL HRESULT if the `methodId` points to a method without any MSIL code (such as an abstract method, or a platform invoke (PInvoke) method).</span></span>  
+ <span data-ttu-id="b126f-113">`GetILFunctionBody` 如果可以返回 CORPROF_E_FUNCTION_NOT_IL HRESULT`methodId`指向一种方法，没有任何 MSIL 代码 （如一个抽象方法或平台调用 (PInvoke) 方法）。</span><span class="sxs-lookup"><span data-stu-id="b126f-113">`GetILFunctionBody` can return a CORPROF_E_FUNCTION_NOT_IL HRESULT if the `methodId` points to a method without any MSIL code (such as an abstract method, or a platform invoke (PInvoke) method).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6e704-114">要求</span><span class="sxs-lookup"><span data-stu-id="6e704-114">Requirements</span></span>  
- <span data-ttu-id="6e704-115">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="6e704-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b126f-114">要求</span><span class="sxs-lookup"><span data-stu-id="b126f-114">Requirements</span></span>  
+ <span data-ttu-id="b126f-115">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="b126f-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6e704-116">**标头：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="6e704-116">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="b126f-116">**标头：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="b126f-116">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="6e704-117">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6e704-117">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="b126f-117">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b126f-117">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="6e704-118">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6e704-118">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="b126f-118">**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b126f-118">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6e704-119">请参阅</span><span class="sxs-lookup"><span data-stu-id="6e704-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b126f-119">请参阅</span><span class="sxs-lookup"><span data-stu-id="b126f-119">See also</span></span>
 
-- [<span data-ttu-id="6e704-120">ICorProfilerInfo 接口</span><span class="sxs-lookup"><span data-stu-id="6e704-120">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [<span data-ttu-id="b126f-120">ICorProfilerInfo 接口</span><span class="sxs-lookup"><span data-stu-id="b126f-120">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

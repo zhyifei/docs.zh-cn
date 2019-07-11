@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 82d81be7a9e0843dfe382767de582f93371acb4c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f005ee9d3d9d4b8977cd6a1838fe46015e604df5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64584487"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777467"
 ---
-# <a name="imetadataemitdefinetyperefbyname-method"></a><span data-ttu-id="ad434-102">IMetaDataEmit::DefineTypeRefByName 方法</span><span class="sxs-lookup"><span data-stu-id="ad434-102">IMetaDataEmit::DefineTypeRefByName Method</span></span>
-<span data-ttu-id="ad434-103">获取在指定范围内，这是当前作用域之外定义的类型的元数据令牌。</span><span class="sxs-lookup"><span data-stu-id="ad434-103">Gets a metadata token for a type that is defined in the specified scope, which is outside the current scope.</span></span>  
+# <a name="imetadataemitdefinetyperefbyname-method"></a><span data-ttu-id="5035f-102">IMetaDataEmit::DefineTypeRefByName 方法</span><span class="sxs-lookup"><span data-stu-id="5035f-102">IMetaDataEmit::DefineTypeRefByName Method</span></span>
+<span data-ttu-id="5035f-103">获取在指定范围内，这是当前作用域之外定义的类型的元数据令牌。</span><span class="sxs-lookup"><span data-stu-id="5035f-103">Gets a metadata token for a type that is defined in the specified scope, which is outside the current scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ad434-104">语法</span><span class="sxs-lookup"><span data-stu-id="ad434-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5035f-104">语法</span><span class="sxs-lookup"><span data-stu-id="5035f-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT DefineTypeRefByName (   
     [in]  mdToken     tkResolutionScope,   
     [in]  LPCWSTR     szName,   
@@ -37,36 +37,36 @@ HRESULT DefineTypeRefByName (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="ad434-105">参数</span><span class="sxs-lookup"><span data-stu-id="ad434-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="5035f-105">参数</span><span class="sxs-lookup"><span data-stu-id="5035f-105">Parameters</span></span>  
  `tkResolutionScope`  
- <span data-ttu-id="ad434-106">[in]指定解析范围标记。</span><span class="sxs-lookup"><span data-stu-id="ad434-106">[in] The token specifying the resolution scope.</span></span> <span data-ttu-id="ad434-107">以下令牌类型是有效的：</span><span class="sxs-lookup"><span data-stu-id="ad434-107">The following token types are valid:</span></span>  
+ <span data-ttu-id="5035f-106">[in]指定解析范围标记。</span><span class="sxs-lookup"><span data-stu-id="5035f-106">[in] The token specifying the resolution scope.</span></span> <span data-ttu-id="5035f-107">以下令牌类型是有效的：</span><span class="sxs-lookup"><span data-stu-id="5035f-107">The following token types are valid:</span></span>  
   
-- <span data-ttu-id="ad434-108">`mdModuleRef`如果类型在其中定义调用方在同一程序集中定义的。</span><span class="sxs-lookup"><span data-stu-id="ad434-108">`mdModuleRef`, if the type is defined in the same assembly in which the caller is defined.</span></span>  
+- <span data-ttu-id="5035f-108">`mdModuleRef`如果类型在其中定义调用方在同一程序集中定义的。</span><span class="sxs-lookup"><span data-stu-id="5035f-108">`mdModuleRef`, if the type is defined in the same assembly in which the caller is defined.</span></span>  
   
-- <span data-ttu-id="ad434-109">`mdAssemblyRef`如果不是在其中定义调用方的程序集中定义的类型。</span><span class="sxs-lookup"><span data-stu-id="ad434-109">`mdAssemblyRef`, if the type is defined in an assembly other than the one in which the caller is defined.</span></span>  
+- <span data-ttu-id="5035f-109">`mdAssemblyRef`如果不是在其中定义调用方的程序集中定义的类型。</span><span class="sxs-lookup"><span data-stu-id="5035f-109">`mdAssemblyRef`, if the type is defined in an assembly other than the one in which the caller is defined.</span></span>  
   
-- <span data-ttu-id="ad434-110">`mdTypeRef`如果该类型是嵌套的类型。</span><span class="sxs-lookup"><span data-stu-id="ad434-110">`mdTypeRef`, if the type is a nested type.</span></span>  
+- <span data-ttu-id="5035f-110">`mdTypeRef`如果该类型是嵌套的类型。</span><span class="sxs-lookup"><span data-stu-id="5035f-110">`mdTypeRef`, if the type is a nested type.</span></span>  
   
-- <span data-ttu-id="ad434-111">`mdModule`如果在其中定义调用方位于同一模块中定义该类型。</span><span class="sxs-lookup"><span data-stu-id="ad434-111">`mdModule`, if the type is defined in the same module in which the caller is defined.</span></span>  
+- <span data-ttu-id="5035f-111">`mdModule`如果在其中定义调用方位于同一模块中定义该类型。</span><span class="sxs-lookup"><span data-stu-id="5035f-111">`mdModule`, if the type is defined in the same module in which the caller is defined.</span></span>  
   
-- <span data-ttu-id="ad434-112">如果全局定义的类型，则为 null。</span><span class="sxs-lookup"><span data-stu-id="ad434-112">Null, if the type is defined globally.</span></span>  
+- <span data-ttu-id="5035f-112">如果全局定义的类型，则为 null。</span><span class="sxs-lookup"><span data-stu-id="5035f-112">Null, if the type is defined globally.</span></span>  
   
  `szName`  
- <span data-ttu-id="ad434-113">[in]以 unicode 格式的目标类型的名称。</span><span class="sxs-lookup"><span data-stu-id="ad434-113">[in] The name of the target type in Unicode.</span></span>  
+ <span data-ttu-id="5035f-113">[in]以 unicode 格式的目标类型的名称。</span><span class="sxs-lookup"><span data-stu-id="5035f-113">[in] The name of the target type in Unicode.</span></span>  
   
  `ptr`  
- <span data-ttu-id="ad434-114">[out]一个指向`mdTypeRef`分配给类型的令牌。</span><span class="sxs-lookup"><span data-stu-id="ad434-114">[out] A pointer to the `mdTypeRef` token that is assigned to the type.</span></span>  
+ <span data-ttu-id="5035f-114">[out]一个指向`mdTypeRef`分配给类型的令牌。</span><span class="sxs-lookup"><span data-stu-id="5035f-114">[out] A pointer to the `mdTypeRef` token that is assigned to the type.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ad434-115">要求</span><span class="sxs-lookup"><span data-stu-id="ad434-115">Requirements</span></span>  
- <span data-ttu-id="ad434-116">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="ad434-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5035f-115">要求</span><span class="sxs-lookup"><span data-stu-id="5035f-115">Requirements</span></span>  
+ <span data-ttu-id="5035f-116">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="5035f-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ad434-117">**标头：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="ad434-117">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="5035f-117">**标头：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="5035f-117">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="ad434-118">**库：** 用作 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="ad434-118">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="5035f-118">**库：** 用作 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="5035f-118">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="ad434-119">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ad434-119">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="5035f-119">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5035f-119">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ad434-120">请参阅</span><span class="sxs-lookup"><span data-stu-id="ad434-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5035f-120">请参阅</span><span class="sxs-lookup"><span data-stu-id="5035f-120">See also</span></span>
 
-- [<span data-ttu-id="ad434-121">IMetaDataEmit Interface</span><span class="sxs-lookup"><span data-stu-id="ad434-121">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="ad434-122">IMetaDataEmit2 Interface</span><span class="sxs-lookup"><span data-stu-id="ad434-122">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="5035f-121">IMetaDataEmit Interface</span><span class="sxs-lookup"><span data-stu-id="5035f-121">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="5035f-122">IMetaDataEmit2 Interface</span><span class="sxs-lookup"><span data-stu-id="5035f-122">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

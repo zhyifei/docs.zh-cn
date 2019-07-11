@@ -17,55 +17,55 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 45167a2b358b9a7a39390c07f552aa3f3dabce4f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 37d04855a7ddc613c3857867179ec84ea0f7b6ab
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61760137"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780987"
 ---
-# <a name="ihostpolicymanagerondefaultaction-method"></a><span data-ttu-id="779ca-102">IHostPolicyManager::OnDefaultAction 方法</span><span class="sxs-lookup"><span data-stu-id="779ca-102">IHostPolicyManager::OnDefaultAction Method</span></span>
-<span data-ttu-id="779ca-103">通知公共语言运行时 (CLR) 是执行调用所设置的默认操作主机[iclrpolicymanager:: Setdefaultaction](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setdefaultaction-method.md)方法以响应线程中止或<xref:System.AppDomain>卸载。</span><span class="sxs-lookup"><span data-stu-id="779ca-103">Notifies the host that the common language runtime (CLR) is about to take the default action that was set by a call to the [ICLRPolicyManager::SetDefaultAction](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setdefaultaction-method.md) method in response to a thread abort or <xref:System.AppDomain> unload.</span></span>  
+# <a name="ihostpolicymanagerondefaultaction-method"></a><span data-ttu-id="525c0-102">IHostPolicyManager::OnDefaultAction 方法</span><span class="sxs-lookup"><span data-stu-id="525c0-102">IHostPolicyManager::OnDefaultAction Method</span></span>
+<span data-ttu-id="525c0-103">通知公共语言运行时 (CLR) 是执行调用所设置的默认操作主机[iclrpolicymanager:: Setdefaultaction](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setdefaultaction-method.md)方法以响应线程中止或<xref:System.AppDomain>卸载。</span><span class="sxs-lookup"><span data-stu-id="525c0-103">Notifies the host that the common language runtime (CLR) is about to take the default action that was set by a call to the [ICLRPolicyManager::SetDefaultAction](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setdefaultaction-method.md) method in response to a thread abort or <xref:System.AppDomain> unload.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="779ca-104">语法</span><span class="sxs-lookup"><span data-stu-id="779ca-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="525c0-104">语法</span><span class="sxs-lookup"><span data-stu-id="525c0-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT OnDefaultAction (  
     [in] EClrOperation  operation,   
     [in] EPolicyAction  action  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="779ca-105">参数</span><span class="sxs-lookup"><span data-stu-id="779ca-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="525c0-105">参数</span><span class="sxs-lookup"><span data-stu-id="525c0-105">Parameters</span></span>  
  `operation`  
- <span data-ttu-id="779ca-106">[in]之一[EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md)值，该值指示 CLR 回复的事件的种类。</span><span class="sxs-lookup"><span data-stu-id="779ca-106">[in] One of the [EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md) values, indicating the kind of event to which the CLR is responding.</span></span>  
+ <span data-ttu-id="525c0-106">[in]之一[EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md)值，该值指示 CLR 回复的事件的种类。</span><span class="sxs-lookup"><span data-stu-id="525c0-106">[in] One of the [EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md) values, indicating the kind of event to which the CLR is responding.</span></span>  
   
  `action`  
- <span data-ttu-id="779ca-107">[in]之一[EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md)值，该值指示 CLR 正在对事件作出响应的操作。</span><span class="sxs-lookup"><span data-stu-id="779ca-107">[in] One of the [EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md) values, indicating the action that the CLR is taking in response to the event.</span></span>  
+ <span data-ttu-id="525c0-107">[in]之一[EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md)值，该值指示 CLR 正在对事件作出响应的操作。</span><span class="sxs-lookup"><span data-stu-id="525c0-107">[in] One of the [EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md) values, indicating the action that the CLR is taking in response to the event.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="779ca-108">返回值</span><span class="sxs-lookup"><span data-stu-id="779ca-108">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="525c0-108">返回值</span><span class="sxs-lookup"><span data-stu-id="525c0-108">Return Value</span></span>  
   
-|<span data-ttu-id="779ca-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="779ca-109">HRESULT</span></span>|<span data-ttu-id="779ca-110">描述</span><span class="sxs-lookup"><span data-stu-id="779ca-110">Description</span></span>|  
+|<span data-ttu-id="525c0-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="525c0-109">HRESULT</span></span>|<span data-ttu-id="525c0-110">描述</span><span class="sxs-lookup"><span data-stu-id="525c0-110">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="779ca-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="779ca-111">S_OK</span></span>|<span data-ttu-id="779ca-112">`OnDefaultAction` 已成功返回。</span><span class="sxs-lookup"><span data-stu-id="779ca-112">`OnDefaultAction` returned successfully.</span></span>|  
-|<span data-ttu-id="779ca-113">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="779ca-113">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="779ca-114">CLR 尚未加载到进程中，或处于不能运行托管的代码或处理调用的状态。</span><span class="sxs-lookup"><span data-stu-id="779ca-114">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call.</span></span> <span data-ttu-id="779ca-115">已成功</span><span class="sxs-lookup"><span data-stu-id="779ca-115">successfully</span></span>|  
-|<span data-ttu-id="779ca-116">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="779ca-116">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="779ca-117">呼叫已超时。</span><span class="sxs-lookup"><span data-stu-id="779ca-117">The call timed out.</span></span>|  
-|<span data-ttu-id="779ca-118">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="779ca-118">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="779ca-119">调用方不拥有该锁。</span><span class="sxs-lookup"><span data-stu-id="779ca-119">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="779ca-120">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="779ca-120">HOST_E_ABANDONED</span></span>|<span data-ttu-id="779ca-121">事件已取消时被阻塞的线程或纤程正在等待它。</span><span class="sxs-lookup"><span data-stu-id="779ca-121">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="779ca-122">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="779ca-122">E_FAIL</span></span>|<span data-ttu-id="779ca-123">发生未知的灾难性故障。</span><span class="sxs-lookup"><span data-stu-id="779ca-123">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="779ca-124">如果某方法返回 E_FAIL，CLR 不再在进程内可用。</span><span class="sxs-lookup"><span data-stu-id="779ca-124">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="779ca-125">对托管方法的后续调用返回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="779ca-125">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="525c0-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="525c0-111">S_OK</span></span>|<span data-ttu-id="525c0-112">`OnDefaultAction` 已成功返回。</span><span class="sxs-lookup"><span data-stu-id="525c0-112">`OnDefaultAction` returned successfully.</span></span>|  
+|<span data-ttu-id="525c0-113">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="525c0-113">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="525c0-114">CLR 尚未加载到进程中，或处于不能运行托管的代码或处理调用的状态。</span><span class="sxs-lookup"><span data-stu-id="525c0-114">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call.</span></span> <span data-ttu-id="525c0-115">已成功</span><span class="sxs-lookup"><span data-stu-id="525c0-115">successfully</span></span>|  
+|<span data-ttu-id="525c0-116">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="525c0-116">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="525c0-117">呼叫已超时。</span><span class="sxs-lookup"><span data-stu-id="525c0-117">The call timed out.</span></span>|  
+|<span data-ttu-id="525c0-118">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="525c0-118">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="525c0-119">调用方不拥有该锁。</span><span class="sxs-lookup"><span data-stu-id="525c0-119">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="525c0-120">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="525c0-120">HOST_E_ABANDONED</span></span>|<span data-ttu-id="525c0-121">事件已取消时被阻塞的线程或纤程正在等待它。</span><span class="sxs-lookup"><span data-stu-id="525c0-121">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="525c0-122">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="525c0-122">E_FAIL</span></span>|<span data-ttu-id="525c0-123">发生未知的灾难性故障。</span><span class="sxs-lookup"><span data-stu-id="525c0-123">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="525c0-124">如果某方法返回 E_FAIL，CLR 不再在进程内可用。</span><span class="sxs-lookup"><span data-stu-id="525c0-124">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="525c0-125">对托管方法的后续调用返回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="525c0-125">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="779ca-126">要求</span><span class="sxs-lookup"><span data-stu-id="779ca-126">Requirements</span></span>  
- <span data-ttu-id="779ca-127">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="779ca-127">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="525c0-126">要求</span><span class="sxs-lookup"><span data-stu-id="525c0-126">Requirements</span></span>  
+ <span data-ttu-id="525c0-127">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="525c0-127">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="779ca-128">**标头：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="779ca-128">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="525c0-128">**标头：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="525c0-128">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="779ca-129">**库：** 包含为 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="779ca-129">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="525c0-129">**库：** 包含为 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="525c0-129">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="779ca-130">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="779ca-130">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="525c0-130">**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="525c0-130">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="779ca-131">请参阅</span><span class="sxs-lookup"><span data-stu-id="779ca-131">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="525c0-131">请参阅</span><span class="sxs-lookup"><span data-stu-id="525c0-131">See also</span></span>
 
-- [<span data-ttu-id="779ca-132">EClrOperation 枚举</span><span class="sxs-lookup"><span data-stu-id="779ca-132">EClrOperation Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md)
-- [<span data-ttu-id="779ca-133">EPolicyAction 枚举</span><span class="sxs-lookup"><span data-stu-id="779ca-133">EPolicyAction Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md)
-- [<span data-ttu-id="779ca-134">ICLRPolicyManager 接口</span><span class="sxs-lookup"><span data-stu-id="779ca-134">ICLRPolicyManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)
-- [<span data-ttu-id="779ca-135">IHostPolicyManager 接口</span><span class="sxs-lookup"><span data-stu-id="779ca-135">IHostPolicyManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostpolicymanager-interface.md)
+- [<span data-ttu-id="525c0-132">EClrOperation 枚举</span><span class="sxs-lookup"><span data-stu-id="525c0-132">EClrOperation Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md)
+- [<span data-ttu-id="525c0-133">EPolicyAction 枚举</span><span class="sxs-lookup"><span data-stu-id="525c0-133">EPolicyAction Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md)
+- [<span data-ttu-id="525c0-134">ICLRPolicyManager 接口</span><span class="sxs-lookup"><span data-stu-id="525c0-134">ICLRPolicyManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)
+- [<span data-ttu-id="525c0-135">IHostPolicyManager 接口</span><span class="sxs-lookup"><span data-stu-id="525c0-135">IHostPolicyManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostpolicymanager-interface.md)

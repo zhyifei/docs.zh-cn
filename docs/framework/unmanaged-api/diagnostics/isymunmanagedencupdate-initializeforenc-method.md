@@ -17,28 +17,28 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 135ae21c2281c545aa701ac2a22a43cea63f5242
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9b6ca8482de1eaf021d65f63a349f37cff15f8ce
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61939706"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67774708"
 ---
-# <a name="isymunmanagedencupdateinitializeforenc-method"></a><span data-ttu-id="ec193-102">ISymUnmanagedENCUpdate::InitializeForEnc 方法</span><span class="sxs-lookup"><span data-stu-id="ec193-102">ISymUnmanagedENCUpdate::InitializeForEnc Method</span></span>
-<span data-ttu-id="ec193-103">使方法边界，以在首次调用之前计算[ISymUnmanagedENCUpdate::UpdateSymbolStore2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-updatesymbolstore2-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="ec193-103">Allows method boundaries to be computed before the first call to the [ISymUnmanagedENCUpdate::UpdateSymbolStore2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-updatesymbolstore2-method.md) method.</span></span>  
+# <a name="isymunmanagedencupdateinitializeforenc-method"></a><span data-ttu-id="548a8-102">ISymUnmanagedENCUpdate::InitializeForEnc 方法</span><span class="sxs-lookup"><span data-stu-id="548a8-102">ISymUnmanagedENCUpdate::InitializeForEnc Method</span></span>
+<span data-ttu-id="548a8-103">使方法边界，以在首次调用之前计算[ISymUnmanagedENCUpdate::UpdateSymbolStore2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-updatesymbolstore2-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="548a8-103">Allows method boundaries to be computed before the first call to the [ISymUnmanagedENCUpdate::UpdateSymbolStore2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-updatesymbolstore2-method.md) method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ec193-104">语法</span><span class="sxs-lookup"><span data-stu-id="ec193-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="548a8-104">语法</span><span class="sxs-lookup"><span data-stu-id="548a8-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT InitializeForEnc();  
 ```  
   
-## <a name="return-value"></a><span data-ttu-id="ec193-105">返回值</span><span class="sxs-lookup"><span data-stu-id="ec193-105">Return Value</span></span>  
- <span data-ttu-id="ec193-106">如果方法成功，则为 S_OK否则为 E_FAIL 或某些其他错误代码。</span><span class="sxs-lookup"><span data-stu-id="ec193-106">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="548a8-105">返回值</span><span class="sxs-lookup"><span data-stu-id="548a8-105">Return Value</span></span>  
+ <span data-ttu-id="548a8-106">如果方法成功，则为 S_OK否则为 E_FAIL 或某些其他错误代码。</span><span class="sxs-lookup"><span data-stu-id="548a8-106">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ec193-107">要求</span><span class="sxs-lookup"><span data-stu-id="ec193-107">Requirements</span></span>  
- <span data-ttu-id="ec193-108">**标头：** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="ec193-108">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="548a8-107">要求</span><span class="sxs-lookup"><span data-stu-id="548a8-107">Requirements</span></span>  
+ <span data-ttu-id="548a8-108">**标头：** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="548a8-108">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ec193-109">请参阅</span><span class="sxs-lookup"><span data-stu-id="ec193-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="548a8-109">请参阅</span><span class="sxs-lookup"><span data-stu-id="548a8-109">See also</span></span>
 
-- [<span data-ttu-id="ec193-110">ISymUnmanagedENCUpdate 接口</span><span class="sxs-lookup"><span data-stu-id="ec193-110">ISymUnmanagedENCUpdate Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-interface.md)
+- [<span data-ttu-id="548a8-110">ISymUnmanagedENCUpdate 接口</span><span class="sxs-lookup"><span data-stu-id="548a8-110">ISymUnmanagedENCUpdate Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-interface.md)
