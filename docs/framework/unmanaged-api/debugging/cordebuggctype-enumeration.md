@@ -16,45 +16,45 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 315d6dd522f3c6be2d36b1eb411d9f471350df60
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f101fe2a84a26efb23f57bac3aaf4f0e64a4d36c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61651748"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67740028"
 ---
-# <a name="cordebuggctype-enumeration"></a><span data-ttu-id="5955b-102">CorDebugGCType 枚举</span><span class="sxs-lookup"><span data-stu-id="5955b-102">CorDebugGCType Enumeration</span></span>
-<span data-ttu-id="5955b-103">指示垃圾回收器是在工作站还是服务器上运行。</span><span class="sxs-lookup"><span data-stu-id="5955b-103">Indicates whether the garbage collector is running on a workstation or a server.</span></span>  
+# <a name="cordebuggctype-enumeration"></a><span data-ttu-id="f78f8-102">CorDebugGCType 枚举</span><span class="sxs-lookup"><span data-stu-id="f78f8-102">CorDebugGCType Enumeration</span></span>
+<span data-ttu-id="f78f8-103">指示垃圾回收器是在工作站还是服务器上运行。</span><span class="sxs-lookup"><span data-stu-id="f78f8-103">Indicates whether the garbage collector is running on a workstation or a server.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5955b-104">语法</span><span class="sxs-lookup"><span data-stu-id="5955b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f78f8-104">语法</span><span class="sxs-lookup"><span data-stu-id="f78f8-104">Syntax</span></span>  
   
-```  
+```cpp  
 typedef enum CorDebugGCType {  
     CorDebugWorkstationGC  = 0,  
     CorDebugServerGC       = ( CorDebugWorkstationGC + 1 )  
 } CorDebugGCType;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="5955b-105">参数</span><span class="sxs-lookup"><span data-stu-id="5955b-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f78f8-105">参数</span><span class="sxs-lookup"><span data-stu-id="f78f8-105">Parameters</span></span>  
   
-## <a name="members"></a><span data-ttu-id="5955b-106">成员</span><span class="sxs-lookup"><span data-stu-id="5955b-106">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="f78f8-106">成员</span><span class="sxs-lookup"><span data-stu-id="f78f8-106">Members</span></span>  
   
-|<span data-ttu-id="5955b-107">成员名称</span><span class="sxs-lookup"><span data-stu-id="5955b-107">Member name</span></span>|<span data-ttu-id="5955b-108">描述</span><span class="sxs-lookup"><span data-stu-id="5955b-108">Description</span></span>|  
+|<span data-ttu-id="f78f8-107">成员名称</span><span class="sxs-lookup"><span data-stu-id="f78f8-107">Member name</span></span>|<span data-ttu-id="f78f8-108">描述</span><span class="sxs-lookup"><span data-stu-id="f78f8-108">Description</span></span>|  
 |-----------------|-----------------|  
-|`CorDebugWorkstationGC`|<span data-ttu-id="5955b-109">垃圾回收器运行在工作站上。</span><span class="sxs-lookup"><span data-stu-id="5955b-109">The garbage collector is running on a workstation.</span></span>|  
-|`CorDebugServerGC`|<span data-ttu-id="5955b-110">垃圾回收器服务器上运行。</span><span class="sxs-lookup"><span data-stu-id="5955b-110">The garbage collector is running on a server.</span></span>|  
+|`CorDebugWorkstationGC`|<span data-ttu-id="f78f8-109">垃圾回收器运行在工作站上。</span><span class="sxs-lookup"><span data-stu-id="f78f8-109">The garbage collector is running on a workstation.</span></span>|  
+|`CorDebugServerGC`|<span data-ttu-id="f78f8-110">垃圾回收器服务器上运行。</span><span class="sxs-lookup"><span data-stu-id="f78f8-110">The garbage collector is running on a server.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="5955b-111">备注</span><span class="sxs-lookup"><span data-stu-id="5955b-111">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f78f8-111">备注</span><span class="sxs-lookup"><span data-stu-id="f78f8-111">Remarks</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5955b-112">要求</span><span class="sxs-lookup"><span data-stu-id="5955b-112">Requirements</span></span>  
- <span data-ttu-id="5955b-113">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="5955b-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f78f8-112">要求</span><span class="sxs-lookup"><span data-stu-id="f78f8-112">Requirements</span></span>  
+ <span data-ttu-id="f78f8-113">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="f78f8-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5955b-114">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="5955b-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="f78f8-114">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f78f8-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="5955b-115">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="5955b-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="f78f8-115">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f78f8-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="5955b-116">**.NET Framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5955b-116">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="f78f8-116">**.NET Framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f78f8-116">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5955b-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="5955b-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f78f8-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="f78f8-117">See also</span></span>
 
-- [<span data-ttu-id="5955b-118">调试枚举</span><span class="sxs-lookup"><span data-stu-id="5955b-118">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [<span data-ttu-id="f78f8-118">调试枚举</span><span class="sxs-lookup"><span data-stu-id="f78f8-118">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

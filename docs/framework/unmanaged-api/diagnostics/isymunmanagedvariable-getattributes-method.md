@@ -17,33 +17,33 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d7ba794060330de3934f8d4ca6434b09672d12bb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f7e71315b5ff99a550ae4a59f3b0d444093dac01
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61797561"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778280"
 ---
-# <a name="isymunmanagedvariablegetattributes-method"></a><span data-ttu-id="73c61-102">ISymUnmanagedVariable::GetAttributes 方法</span><span class="sxs-lookup"><span data-stu-id="73c61-102">ISymUnmanagedVariable::GetAttributes Method</span></span>
-<span data-ttu-id="73c61-103">获取此变量的特性标志。</span><span class="sxs-lookup"><span data-stu-id="73c61-103">Gets the attribute flags for this variable.</span></span>  
+# <a name="isymunmanagedvariablegetattributes-method"></a><span data-ttu-id="3841d-102">ISymUnmanagedVariable::GetAttributes 方法</span><span class="sxs-lookup"><span data-stu-id="3841d-102">ISymUnmanagedVariable::GetAttributes Method</span></span>
+<span data-ttu-id="3841d-103">获取此变量的特性标志。</span><span class="sxs-lookup"><span data-stu-id="3841d-103">Gets the attribute flags for this variable.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="73c61-104">语法</span><span class="sxs-lookup"><span data-stu-id="73c61-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3841d-104">语法</span><span class="sxs-lookup"><span data-stu-id="3841d-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetAttributes(  
     [out, retval] ULONG32* pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="73c61-105">参数</span><span class="sxs-lookup"><span data-stu-id="73c61-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="3841d-105">参数</span><span class="sxs-lookup"><span data-stu-id="3841d-105">Parameters</span></span>  
  `pRetVal`  
- <span data-ttu-id="73c61-106">[out]一个指向`ULONG32`接收属性。</span><span class="sxs-lookup"><span data-stu-id="73c61-106">[out] A pointer to a `ULONG32` that receives the attributes.</span></span> <span data-ttu-id="73c61-107">返回的值将是中定义的值之一[CorSymVarFlag](../../../../docs/framework/unmanaged-api/diagnostics/corsymvarflag-enumeration.md)枚举。</span><span class="sxs-lookup"><span data-stu-id="73c61-107">The returned value will be one of the values defined in the [CorSymVarFlag](../../../../docs/framework/unmanaged-api/diagnostics/corsymvarflag-enumeration.md) enumeration.</span></span>  
+ <span data-ttu-id="3841d-106">[out]一个指向`ULONG32`接收属性。</span><span class="sxs-lookup"><span data-stu-id="3841d-106">[out] A pointer to a `ULONG32` that receives the attributes.</span></span> <span data-ttu-id="3841d-107">返回的值将是中定义的值之一[CorSymVarFlag](../../../../docs/framework/unmanaged-api/diagnostics/corsymvarflag-enumeration.md)枚举。</span><span class="sxs-lookup"><span data-stu-id="3841d-107">The returned value will be one of the values defined in the [CorSymVarFlag](../../../../docs/framework/unmanaged-api/diagnostics/corsymvarflag-enumeration.md) enumeration.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="73c61-108">返回值</span><span class="sxs-lookup"><span data-stu-id="73c61-108">Return Value</span></span>  
- <span data-ttu-id="73c61-109">如果方法成功，则为 S_OK否则为 E_FAIL 或某些其他错误代码。</span><span class="sxs-lookup"><span data-stu-id="73c61-109">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="3841d-108">返回值</span><span class="sxs-lookup"><span data-stu-id="3841d-108">Return Value</span></span>  
+ <span data-ttu-id="3841d-109">如果方法成功，则为 S_OK否则为 E_FAIL 或某些其他错误代码。</span><span class="sxs-lookup"><span data-stu-id="3841d-109">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="73c61-110">要求</span><span class="sxs-lookup"><span data-stu-id="73c61-110">Requirements</span></span>  
- <span data-ttu-id="73c61-111">**标头：** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="73c61-111">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3841d-110">要求</span><span class="sxs-lookup"><span data-stu-id="3841d-110">Requirements</span></span>  
+ <span data-ttu-id="3841d-111">**标头：** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="3841d-111">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="73c61-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="73c61-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3841d-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="3841d-112">See also</span></span>
 
-- [<span data-ttu-id="73c61-113">ISymUnmanagedVariable 接口</span><span class="sxs-lookup"><span data-stu-id="73c61-113">ISymUnmanagedVariable Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)
+- [<span data-ttu-id="3841d-113">ISymUnmanagedVariable 接口</span><span class="sxs-lookup"><span data-stu-id="3841d-113">ISymUnmanagedVariable Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)

@@ -17,22 +17,22 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6c6b998bfe2c04d45b332088ad43272c8013e354
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7771691950fac34b30a804d507688deaa0548314
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61985395"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67766740"
 ---
-# <a name="icatalogservicesautodone-method"></a><span data-ttu-id="28272-102">ICatalogServices::Autodone 方法</span><span class="sxs-lookup"><span data-stu-id="28272-102">ICatalogServices::Autodone Method</span></span>
-<span data-ttu-id="28272-103">此方法支持 .NET Framework 基础结构，但不适合直接在代码中使用。</span><span class="sxs-lookup"><span data-stu-id="28272-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
+# <a name="icatalogservicesautodone-method"></a><span data-ttu-id="6e6f4-102">ICatalogServices::Autodone 方法</span><span class="sxs-lookup"><span data-stu-id="6e6f4-102">ICatalogServices::Autodone Method</span></span>
+<span data-ttu-id="6e6f4-103">此方法支持 .NET Framework 基础结构，但不适合直接在代码中使用。</span><span class="sxs-lookup"><span data-stu-id="6e6f4-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="28272-104">语法</span><span class="sxs-lookup"><span data-stu-id="28272-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6e6f4-104">语法</span><span class="sxs-lookup"><span data-stu-id="6e6f4-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT Autodone ( );  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="28272-105">请参阅</span><span class="sxs-lookup"><span data-stu-id="28272-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6e6f4-105">请参阅</span><span class="sxs-lookup"><span data-stu-id="6e6f4-105">See also</span></span>
 
-- [<span data-ttu-id="28272-106">承载接口</span><span class="sxs-lookup"><span data-stu-id="28272-106">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [<span data-ttu-id="6e6f4-106">承载接口</span><span class="sxs-lookup"><span data-stu-id="6e6f4-106">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

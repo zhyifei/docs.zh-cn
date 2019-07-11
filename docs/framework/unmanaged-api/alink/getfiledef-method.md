@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9153c9b3735e265d59ba072f747c92434c95d9ed
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a51e8c83d0949f68a41f6a4e10396adbc4f3c9c1
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789865"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67741888"
 ---
-# <a name="getfiledef-method"></a><span data-ttu-id="faaeb-102">GetFileDef 方法</span><span class="sxs-lookup"><span data-stu-id="faaeb-102">GetFileDef Method</span></span>
-<span data-ttu-id="faaeb-103">检索元数据 （而不是由 ALink 分配的令牌） 中使用的实际 FileDef 标记。</span><span class="sxs-lookup"><span data-stu-id="faaeb-103">Retrieves the actual FileDef token used in metadata (as opposed to the token assigned by ALink).</span></span>  
+# <a name="getfiledef-method"></a><span data-ttu-id="c6228-102">GetFileDef 方法</span><span class="sxs-lookup"><span data-stu-id="c6228-102">GetFileDef Method</span></span>
+<span data-ttu-id="c6228-103">检索元数据 （而不是由 ALink 分配的令牌） 中使用的实际 FileDef 标记。</span><span class="sxs-lookup"><span data-stu-id="c6228-103">Retrieves the actual FileDef token used in metadata (as opposed to the token assigned by ALink).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="faaeb-104">语法</span><span class="sxs-lookup"><span data-stu-id="faaeb-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c6228-104">语法</span><span class="sxs-lookup"><span data-stu-id="c6228-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetFileDef(  
     mdAssembly AssemblyID,  
     mdFile TargetFile,  
@@ -36,24 +36,24 @@ HRESULT GetFileDef(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="faaeb-105">参数</span><span class="sxs-lookup"><span data-stu-id="faaeb-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c6228-105">参数</span><span class="sxs-lookup"><span data-stu-id="c6228-105">Parameters</span></span>  
  `AssemblyID`  
- <span data-ttu-id="faaeb-106">程序集的 ID。</span><span class="sxs-lookup"><span data-stu-id="faaeb-106">ID of the assembly.</span></span>  
+ <span data-ttu-id="c6228-106">程序集的 ID。</span><span class="sxs-lookup"><span data-stu-id="c6228-106">ID of the assembly.</span></span>  
   
  `TargetFile`  
- <span data-ttu-id="faaeb-107">添加文件的令牌从 AddFile 方法或 AddImport 方法检索。</span><span class="sxs-lookup"><span data-stu-id="faaeb-107">Token of the added file as retrieved from AddFile Method or AddImport Method.</span></span>  
+ <span data-ttu-id="c6228-107">添加文件的令牌从 AddFile 方法或 AddImport 方法检索。</span><span class="sxs-lookup"><span data-stu-id="c6228-107">Token of the added file as retrieved from AddFile Method or AddImport Method.</span></span>  
   
  `pScope`  
- <span data-ttu-id="faaeb-108">收到 FileDef 令牌。</span><span class="sxs-lookup"><span data-stu-id="faaeb-108">Receives the FileDef token.</span></span>  
+ <span data-ttu-id="c6228-108">收到 FileDef 令牌。</span><span class="sxs-lookup"><span data-stu-id="c6228-108">Receives the FileDef token.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="faaeb-109">返回值</span><span class="sxs-lookup"><span data-stu-id="faaeb-109">Return Value</span></span>  
- <span data-ttu-id="faaeb-110">如果该方法成功，返回，则为 S_OK。</span><span class="sxs-lookup"><span data-stu-id="faaeb-110">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="c6228-109">返回值</span><span class="sxs-lookup"><span data-stu-id="c6228-109">Return Value</span></span>  
+ <span data-ttu-id="c6228-110">如果该方法成功，返回，则为 S_OK。</span><span class="sxs-lookup"><span data-stu-id="c6228-110">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="faaeb-111">要求</span><span class="sxs-lookup"><span data-stu-id="faaeb-111">Requirements</span></span>  
- <span data-ttu-id="faaeb-112">需要 alink.h</span><span class="sxs-lookup"><span data-stu-id="faaeb-112">Requires alink.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c6228-111">要求</span><span class="sxs-lookup"><span data-stu-id="c6228-111">Requirements</span></span>  
+ <span data-ttu-id="c6228-112">需要 alink.h</span><span class="sxs-lookup"><span data-stu-id="c6228-112">Requires alink.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="faaeb-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="faaeb-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c6228-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="c6228-113">See also</span></span>
 
-- [<span data-ttu-id="faaeb-114">IALink2 接口</span><span class="sxs-lookup"><span data-stu-id="faaeb-114">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [<span data-ttu-id="faaeb-115">IALink 接口</span><span class="sxs-lookup"><span data-stu-id="faaeb-115">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [<span data-ttu-id="faaeb-116">ALink API</span><span class="sxs-lookup"><span data-stu-id="faaeb-116">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [<span data-ttu-id="c6228-114">IALink2 接口</span><span class="sxs-lookup"><span data-stu-id="c6228-114">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [<span data-ttu-id="c6228-115">IALink 接口</span><span class="sxs-lookup"><span data-stu-id="c6228-115">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [<span data-ttu-id="c6228-116">ALink API</span><span class="sxs-lookup"><span data-stu-id="c6228-116">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)

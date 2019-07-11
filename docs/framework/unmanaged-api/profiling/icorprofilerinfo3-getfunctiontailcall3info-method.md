@@ -17,51 +17,51 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 40e518e3cf5967d2b0a7eda8c7b58ec0f918e219
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 74f0e6e39f99c9e6981066e6a3171bb9508cf1a5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62000605"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782141"
 ---
-# <a name="icorprofilerinfo3getfunctiontailcall3info-method"></a><span data-ttu-id="ca08c-102">ICorProfilerInfo3::GetFunctionTailcall3Info 方法</span><span class="sxs-lookup"><span data-stu-id="ca08c-102">ICorProfilerInfo3::GetFunctionTailcall3Info Method</span></span>
-<span data-ttu-id="ca08c-103">提供了正在向探查器报告的函数的堆栈帧[FunctionTailcall3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md)函数。</span><span class="sxs-lookup"><span data-stu-id="ca08c-103">Provides the stack frame of the function that is being reported to the profiler by the [FunctionTailcall3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md) function.</span></span> <span data-ttu-id="ca08c-104">仅在 `FunctionTailcall3WithInfo` 回调时可调用此方法。</span><span class="sxs-lookup"><span data-stu-id="ca08c-104">This method can be called only during the `FunctionTailcall3WithInfo` callback.</span></span>  
+# <a name="icorprofilerinfo3getfunctiontailcall3info-method"></a><span data-ttu-id="2011a-102">ICorProfilerInfo3::GetFunctionTailcall3Info 方法</span><span class="sxs-lookup"><span data-stu-id="2011a-102">ICorProfilerInfo3::GetFunctionTailcall3Info Method</span></span>
+<span data-ttu-id="2011a-103">提供了正在向探查器报告的函数的堆栈帧[FunctionTailcall3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md)函数。</span><span class="sxs-lookup"><span data-stu-id="2011a-103">Provides the stack frame of the function that is being reported to the profiler by the [FunctionTailcall3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md) function.</span></span> <span data-ttu-id="2011a-104">仅在 `FunctionTailcall3WithInfo` 回调时可调用此方法。</span><span class="sxs-lookup"><span data-stu-id="2011a-104">This method can be called only during the `FunctionTailcall3WithInfo` callback.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ca08c-105">语法</span><span class="sxs-lookup"><span data-stu-id="ca08c-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2011a-105">语法</span><span class="sxs-lookup"><span data-stu-id="2011a-105">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetFunctionTailcall3Info(   
             [in]  FunctionID functionId,   
             [in]  COR_PRF_ELT_INFO eltInfo,  
             [out] COR_PRF_FRAME_INFO *pFrameInfo);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="ca08c-106">参数</span><span class="sxs-lookup"><span data-stu-id="ca08c-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="2011a-106">参数</span><span class="sxs-lookup"><span data-stu-id="2011a-106">Parameters</span></span>  
  `functionId`  
- <span data-ttu-id="ca08c-107">[in]`FunctionID`返回的函数。</span><span class="sxs-lookup"><span data-stu-id="ca08c-107">[in] The `FunctionID` of the function that is returning.</span></span>  
+ <span data-ttu-id="2011a-107">[in]`FunctionID`返回的函数。</span><span class="sxs-lookup"><span data-stu-id="2011a-107">[in] The `FunctionID` of the function that is returning.</span></span>  
   
  `eltInfo`  
- <span data-ttu-id="ca08c-108">[in] 表示有关给定堆栈帧的信息的不透明的句柄。</span><span class="sxs-lookup"><span data-stu-id="ca08c-108">[in] An opaque handle that represents information about a given stack frame.</span></span> <span data-ttu-id="ca08c-109">探查器应提供相同`eltInfo`，提供给探查器`FunctionTailcall3WithInfo`函数。</span><span class="sxs-lookup"><span data-stu-id="ca08c-109">The profiler should provide the same `eltInfo` that was given to the profiler by the `FunctionTailcall3WithInfo` function.</span></span>  
+ <span data-ttu-id="2011a-108">[in] 表示有关给定堆栈帧的信息的不透明的句柄。</span><span class="sxs-lookup"><span data-stu-id="2011a-108">[in] An opaque handle that represents information about a given stack frame.</span></span> <span data-ttu-id="2011a-109">探查器应提供相同`eltInfo`，提供给探查器`FunctionTailcall3WithInfo`函数。</span><span class="sxs-lookup"><span data-stu-id="2011a-109">The profiler should provide the same `eltInfo` that was given to the profiler by the `FunctionTailcall3WithInfo` function.</span></span>  
   
  `pFrameInfo`  
- <span data-ttu-id="ca08c-110">[out] 表示有关给定堆栈帧的泛型信息的不透明的句柄。</span><span class="sxs-lookup"><span data-stu-id="ca08c-110">[out] An opaque handle that represents generics information about a given stack frame.</span></span> <span data-ttu-id="ca08c-111">此句柄仅在探查器调用 `GetFunctionTailcall3Info` 方法的 `FunctionTailcall3WithInfo` 回调时有效。</span><span class="sxs-lookup"><span data-stu-id="ca08c-111">This handle is valid only during the `FunctionTailcall3WithInfo` callback in which the profiler called the `GetFunctionTailcall3Info` method.</span></span>  
+ <span data-ttu-id="2011a-110">[out] 表示有关给定堆栈帧的泛型信息的不透明的句柄。</span><span class="sxs-lookup"><span data-stu-id="2011a-110">[out] An opaque handle that represents generics information about a given stack frame.</span></span> <span data-ttu-id="2011a-111">此句柄仅在探查器调用 `GetFunctionTailcall3Info` 方法的 `FunctionTailcall3WithInfo` 回调时有效。</span><span class="sxs-lookup"><span data-stu-id="2011a-111">This handle is valid only during the `FunctionTailcall3WithInfo` callback in which the profiler called the `GetFunctionTailcall3Info` method.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="ca08c-112">备注</span><span class="sxs-lookup"><span data-stu-id="ca08c-112">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="2011a-112">备注</span><span class="sxs-lookup"><span data-stu-id="2011a-112">Remarks</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ca08c-113">要求</span><span class="sxs-lookup"><span data-stu-id="ca08c-113">Requirements</span></span>  
- <span data-ttu-id="ca08c-114">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="ca08c-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2011a-113">要求</span><span class="sxs-lookup"><span data-stu-id="2011a-113">Requirements</span></span>  
+ <span data-ttu-id="2011a-114">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="2011a-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ca08c-115">**标头：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="ca08c-115">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="2011a-115">**标头：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="2011a-115">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="ca08c-116">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ca08c-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="2011a-116">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2011a-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="ca08c-117">**.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ca08c-117">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="2011a-117">**.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2011a-117">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ca08c-118">请参阅</span><span class="sxs-lookup"><span data-stu-id="ca08c-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2011a-118">请参阅</span><span class="sxs-lookup"><span data-stu-id="2011a-118">See also</span></span>
 
-- [<span data-ttu-id="ca08c-119">FunctionEnter3WithInfo</span><span class="sxs-lookup"><span data-stu-id="ca08c-119">FunctionEnter3WithInfo</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md)
-- [<span data-ttu-id="ca08c-120">FunctionLeave3WithInfo</span><span class="sxs-lookup"><span data-stu-id="ca08c-120">FunctionLeave3WithInfo</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md)
-- [<span data-ttu-id="ca08c-121">FunctionTailcall3WithInfo</span><span class="sxs-lookup"><span data-stu-id="ca08c-121">FunctionTailcall3WithInfo</span></span>](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md)
-- [<span data-ttu-id="ca08c-122">ICorProfilerInfo3 接口</span><span class="sxs-lookup"><span data-stu-id="ca08c-122">ICorProfilerInfo3 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
-- [<span data-ttu-id="ca08c-123">Profiling 接口</span><span class="sxs-lookup"><span data-stu-id="ca08c-123">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [<span data-ttu-id="ca08c-124">分析</span><span class="sxs-lookup"><span data-stu-id="ca08c-124">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [<span data-ttu-id="2011a-119">FunctionEnter3WithInfo</span><span class="sxs-lookup"><span data-stu-id="2011a-119">FunctionEnter3WithInfo</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md)
+- [<span data-ttu-id="2011a-120">FunctionLeave3WithInfo</span><span class="sxs-lookup"><span data-stu-id="2011a-120">FunctionLeave3WithInfo</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md)
+- [<span data-ttu-id="2011a-121">FunctionTailcall3WithInfo</span><span class="sxs-lookup"><span data-stu-id="2011a-121">FunctionTailcall3WithInfo</span></span>](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md)
+- [<span data-ttu-id="2011a-122">ICorProfilerInfo3 接口</span><span class="sxs-lookup"><span data-stu-id="2011a-122">ICorProfilerInfo3 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
+- [<span data-ttu-id="2011a-123">Profiling 接口</span><span class="sxs-lookup"><span data-stu-id="2011a-123">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [<span data-ttu-id="2011a-124">分析</span><span class="sxs-lookup"><span data-stu-id="2011a-124">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)

@@ -17,53 +17,53 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ace1ecaebe076be3576304ce0a3cc72e119c96d2
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 8043ae8a3d384ab0936ae96e39174a7afc80a636
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67421896"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776208"
 ---
-# <a name="icorprofilercallbackcomclassicvtabledestroyed-method"></a><span data-ttu-id="1180a-102">ICorProfilerCallback::COMClassicVTableDestroyed 方法</span><span class="sxs-lookup"><span data-stu-id="1180a-102">ICorProfilerCallback::COMClassicVTableDestroyed Method</span></span>
-<span data-ttu-id="1180a-103">通知探查器 COM 互操作 vtable 被销毁。</span><span class="sxs-lookup"><span data-stu-id="1180a-103">Notifies the profiler that a COM interop vtable is being destroyed.</span></span>  
+# <a name="icorprofilercallbackcomclassicvtabledestroyed-method"></a><span data-ttu-id="dbd1b-102">ICorProfilerCallback::COMClassicVTableDestroyed 方法</span><span class="sxs-lookup"><span data-stu-id="dbd1b-102">ICorProfilerCallback::COMClassicVTableDestroyed Method</span></span>
+<span data-ttu-id="dbd1b-103">通知探查器 COM 互操作 vtable 被销毁。</span><span class="sxs-lookup"><span data-stu-id="dbd1b-103">Notifies the profiler that a COM interop vtable is being destroyed.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="1180a-104">此回调是 vtable 的可能永远不会发生，因为进行销毁关闭时。</span><span class="sxs-lookup"><span data-stu-id="1180a-104">This callback is likely never to occur, because the destruction of vtables occurs very close to shutdown.</span></span>  
+>  <span data-ttu-id="dbd1b-104">此回调是 vtable 的可能永远不会发生，因为进行销毁关闭时。</span><span class="sxs-lookup"><span data-stu-id="dbd1b-104">This callback is likely never to occur, because the destruction of vtables occurs very close to shutdown.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1180a-105">语法</span><span class="sxs-lookup"><span data-stu-id="1180a-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="dbd1b-105">语法</span><span class="sxs-lookup"><span data-stu-id="dbd1b-105">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT COMClassicVTableDestroyed(  
     [in] ClassID wrappedClassId,  
     [in] REFGUID implementedIID,  
     [in] void    *pVTable);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="1180a-106">参数</span><span class="sxs-lookup"><span data-stu-id="1180a-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="dbd1b-106">参数</span><span class="sxs-lookup"><span data-stu-id="dbd1b-106">Parameters</span></span>  
  `wrappedClassId`  
- <span data-ttu-id="1180a-107">[in]为其创建此 vtable 类的 ID。</span><span class="sxs-lookup"><span data-stu-id="1180a-107">[in] The ID of the class for which this vtable was created.</span></span>  
+ <span data-ttu-id="dbd1b-107">[in]为其创建此 vtable 类的 ID。</span><span class="sxs-lookup"><span data-stu-id="dbd1b-107">[in] The ID of the class for which this vtable was created.</span></span>  
   
  `implementedIID`  
- <span data-ttu-id="1180a-108">[in]由类实现的接口 ID。</span><span class="sxs-lookup"><span data-stu-id="1180a-108">[in] The ID of the interface implemented by the class.</span></span> <span data-ttu-id="1180a-109">如果接口仅供内部，此值可能为 NULL。</span><span class="sxs-lookup"><span data-stu-id="1180a-109">This value may be NULL if the interface is internal only.</span></span>  
+ <span data-ttu-id="dbd1b-108">[in]由类实现的接口 ID。</span><span class="sxs-lookup"><span data-stu-id="dbd1b-108">[in] The ID of the interface implemented by the class.</span></span> <span data-ttu-id="dbd1b-109">如果接口仅供内部，此值可能为 NULL。</span><span class="sxs-lookup"><span data-stu-id="dbd1b-109">This value may be NULL if the interface is internal only.</span></span>  
   
  `pVTable`  
- <span data-ttu-id="1180a-110">[in]指向 vtable 开头的指针。</span><span class="sxs-lookup"><span data-stu-id="1180a-110">[in] A pointer to the start of the vtable.</span></span>  
+ <span data-ttu-id="dbd1b-110">[in]指向 vtable 开头的指针。</span><span class="sxs-lookup"><span data-stu-id="dbd1b-110">[in] A pointer to the start of the vtable.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="1180a-111">备注</span><span class="sxs-lookup"><span data-stu-id="1180a-111">Remarks</span></span>  
- <span data-ttu-id="1180a-112">探查器不应在其实现此方法阻止因为堆栈可能未处于允许垃圾回收的状态，因此不能启用抢先式垃圾回收。</span><span class="sxs-lookup"><span data-stu-id="1180a-112">The profiler should not block in its implementation of this method because the stack may not be in a state that allows garbage collection, and therefore preemptive garbage collection cannot be enabled.</span></span> <span data-ttu-id="1180a-113">如果探查器进行阻止并尝试执行垃圾回收，运行时将阻塞，直到此回调返回。</span><span class="sxs-lookup"><span data-stu-id="1180a-113">If the profiler blocks here and garbage collection is attempted, the runtime will block until this callback returns.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="dbd1b-111">备注</span><span class="sxs-lookup"><span data-stu-id="dbd1b-111">Remarks</span></span>  
+ <span data-ttu-id="dbd1b-112">探查器不应在其实现此方法阻止因为堆栈可能未处于允许垃圾回收的状态，因此不能启用抢先式垃圾回收。</span><span class="sxs-lookup"><span data-stu-id="dbd1b-112">The profiler should not block in its implementation of this method because the stack may not be in a state that allows garbage collection, and therefore preemptive garbage collection cannot be enabled.</span></span> <span data-ttu-id="dbd1b-113">如果探查器进行阻止并尝试执行垃圾回收，运行时将阻塞，直到此回调返回。</span><span class="sxs-lookup"><span data-stu-id="dbd1b-113">If the profiler blocks here and garbage collection is attempted, the runtime will block until this callback returns.</span></span>  
   
- <span data-ttu-id="1180a-114">为托管代码或以任何方式导致托管内存分配，不应调用此方法的探查器的实现。</span><span class="sxs-lookup"><span data-stu-id="1180a-114">The profiler's implementation of this method should not call into managed code or in any way cause a managed-memory allocation.</span></span>  
+ <span data-ttu-id="dbd1b-114">为托管代码或以任何方式导致托管内存分配，不应调用此方法的探查器的实现。</span><span class="sxs-lookup"><span data-stu-id="dbd1b-114">The profiler's implementation of this method should not call into managed code or in any way cause a managed-memory allocation.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="1180a-115">要求</span><span class="sxs-lookup"><span data-stu-id="1180a-115">Requirements</span></span>  
- <span data-ttu-id="1180a-116">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="1180a-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="dbd1b-115">要求</span><span class="sxs-lookup"><span data-stu-id="dbd1b-115">Requirements</span></span>  
+ <span data-ttu-id="dbd1b-116">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="dbd1b-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="1180a-117">**标头：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="1180a-117">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="dbd1b-117">**标头：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="dbd1b-117">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="1180a-118">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="1180a-118">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="dbd1b-118">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="dbd1b-118">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="1180a-119">**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1180a-119">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="dbd1b-119">**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="dbd1b-119">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1180a-120">请参阅</span><span class="sxs-lookup"><span data-stu-id="1180a-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="dbd1b-120">请参阅</span><span class="sxs-lookup"><span data-stu-id="dbd1b-120">See also</span></span>
 
-- [<span data-ttu-id="1180a-121">ICorProfilerCallback 接口</span><span class="sxs-lookup"><span data-stu-id="1180a-121">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [<span data-ttu-id="1180a-122">COMClassicVTableCreated 方法</span><span class="sxs-lookup"><span data-stu-id="1180a-122">COMClassicVTableCreated Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-comclassicvtablecreated-method.md)
+- [<span data-ttu-id="dbd1b-121">ICorProfilerCallback 接口</span><span class="sxs-lookup"><span data-stu-id="dbd1b-121">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="dbd1b-122">COMClassicVTableCreated 方法</span><span class="sxs-lookup"><span data-stu-id="dbd1b-122">COMClassicVTableCreated Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-comclassicvtablecreated-method.md)

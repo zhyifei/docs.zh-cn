@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 734857428c205b6d806a4279213afb1193f914c8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6e06695f5ba348315523c7414822ce87d594bdbc
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61650761"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776606"
 ---
-# <a name="isymunmanagedwritersetmethodsourcerange-method"></a><span data-ttu-id="49cdf-102">ISymUnmanagedWriter::SetMethodSourceRange 方法</span><span class="sxs-lookup"><span data-stu-id="49cdf-102">ISymUnmanagedWriter::SetMethodSourceRange Method</span></span>
-<span data-ttu-id="49cdf-103">指定的真正开始和结束对源文件中的方法。</span><span class="sxs-lookup"><span data-stu-id="49cdf-103">Specifies the true start and end of a method within a source file.</span></span> <span data-ttu-id="49cdf-104">此方法用于指定方法独立于方法内存在的序列点的范围。</span><span class="sxs-lookup"><span data-stu-id="49cdf-104">Use this method to specify the extent of a method independently of the sequence points that exist within the method.</span></span>  
+# <a name="isymunmanagedwritersetmethodsourcerange-method"></a><span data-ttu-id="fa93e-102">ISymUnmanagedWriter::SetMethodSourceRange 方法</span><span class="sxs-lookup"><span data-stu-id="fa93e-102">ISymUnmanagedWriter::SetMethodSourceRange Method</span></span>
+<span data-ttu-id="fa93e-103">指定的真正开始和结束对源文件中的方法。</span><span class="sxs-lookup"><span data-stu-id="fa93e-103">Specifies the true start and end of a method within a source file.</span></span> <span data-ttu-id="fa93e-104">此方法用于指定方法独立于方法内存在的序列点的范围。</span><span class="sxs-lookup"><span data-stu-id="fa93e-104">Use this method to specify the extent of a method independently of the sequence points that exist within the method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="49cdf-105">语法</span><span class="sxs-lookup"><span data-stu-id="49cdf-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="fa93e-105">语法</span><span class="sxs-lookup"><span data-stu-id="fa93e-105">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT SetMethodSourceRange(  
     [in] ISymUnmanagedDocumentWriter  *startDoc,  
     [in] ULONG32                      startLine,  
@@ -39,31 +39,31 @@ HRESULT SetMethodSourceRange(
     [in] ULONG32                      endColumn);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="49cdf-106">参数</span><span class="sxs-lookup"><span data-stu-id="49cdf-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="fa93e-106">参数</span><span class="sxs-lookup"><span data-stu-id="fa93e-106">Parameters</span></span>  
  `startDoc`  
- <span data-ttu-id="49cdf-107">[in]指向包含的起始位置的文档的指针。</span><span class="sxs-lookup"><span data-stu-id="49cdf-107">[in] A pointer to the document containing the starting position.</span></span>  
+ <span data-ttu-id="fa93e-107">[in]指向包含的起始位置的文档的指针。</span><span class="sxs-lookup"><span data-stu-id="fa93e-107">[in] A pointer to the document containing the starting position.</span></span>  
   
  `startLine`  
- <span data-ttu-id="49cdf-108">[in]起始行号。</span><span class="sxs-lookup"><span data-stu-id="49cdf-108">[in] The starting line number.</span></span>  
+ <span data-ttu-id="fa93e-108">[in]起始行号。</span><span class="sxs-lookup"><span data-stu-id="fa93e-108">[in] The starting line number.</span></span>  
   
  `startColumn`  
- <span data-ttu-id="49cdf-109">[in]起始列。</span><span class="sxs-lookup"><span data-stu-id="49cdf-109">[in] The starting column.</span></span>  
+ <span data-ttu-id="fa93e-109">[in]起始列。</span><span class="sxs-lookup"><span data-stu-id="fa93e-109">[in] The starting column.</span></span>  
   
  `endDoc`  
- <span data-ttu-id="49cdf-110">[in]指向包含的结束位置的文档的指针。</span><span class="sxs-lookup"><span data-stu-id="49cdf-110">[in] A pointer to the document containing the ending position.</span></span>  
+ <span data-ttu-id="fa93e-110">[in]指向包含的结束位置的文档的指针。</span><span class="sxs-lookup"><span data-stu-id="fa93e-110">[in] A pointer to the document containing the ending position.</span></span>  
   
  `endLine`  
- <span data-ttu-id="49cdf-111">[in]结束的行号。</span><span class="sxs-lookup"><span data-stu-id="49cdf-111">[in] The ending line number.</span></span>  
+ <span data-ttu-id="fa93e-111">[in]结束的行号。</span><span class="sxs-lookup"><span data-stu-id="fa93e-111">[in] The ending line number.</span></span>  
   
  `endColumn`  
- <span data-ttu-id="49cdf-112">[in]结束列号。</span><span class="sxs-lookup"><span data-stu-id="49cdf-112">[in] The ending column number.</span></span>  
+ <span data-ttu-id="fa93e-112">[in]结束列号。</span><span class="sxs-lookup"><span data-stu-id="fa93e-112">[in] The ending column number.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="49cdf-113">返回值</span><span class="sxs-lookup"><span data-stu-id="49cdf-113">Return Value</span></span>  
- <span data-ttu-id="49cdf-114">如果方法成功，则为 S_OK否则为 E_FAIL 或某些其他错误代码。</span><span class="sxs-lookup"><span data-stu-id="49cdf-114">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="fa93e-113">返回值</span><span class="sxs-lookup"><span data-stu-id="fa93e-113">Return Value</span></span>  
+ <span data-ttu-id="fa93e-114">如果方法成功，则为 S_OK否则为 E_FAIL 或某些其他错误代码。</span><span class="sxs-lookup"><span data-stu-id="fa93e-114">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="49cdf-115">要求</span><span class="sxs-lookup"><span data-stu-id="49cdf-115">Requirements</span></span>  
- <span data-ttu-id="49cdf-116">**标头：** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="49cdf-116">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="fa93e-115">要求</span><span class="sxs-lookup"><span data-stu-id="fa93e-115">Requirements</span></span>  
+ <span data-ttu-id="fa93e-116">**标头：** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="fa93e-116">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="49cdf-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="49cdf-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="fa93e-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="fa93e-117">See also</span></span>
 
-- [<span data-ttu-id="49cdf-118">ISymUnmanagedWriter 接口</span><span class="sxs-lookup"><span data-stu-id="49cdf-118">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [<span data-ttu-id="fa93e-118">ISymUnmanagedWriter 接口</span><span class="sxs-lookup"><span data-stu-id="fa93e-118">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

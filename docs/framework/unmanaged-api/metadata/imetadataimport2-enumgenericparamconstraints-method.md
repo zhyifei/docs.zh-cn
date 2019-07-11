@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f66b0145dbaece7292d2ccad169a97fbb10b6d11
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2ba9d7f8873d15a7cab2b9893feb8563dfc971b0
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61959568"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778757"
 ---
-# <a name="imetadataimport2enumgenericparamconstraints-method"></a><span data-ttu-id="eddf5-102">IMetaDataImport2::EnumGenericParamConstraints 方法</span><span class="sxs-lookup"><span data-stu-id="eddf5-102">IMetaDataImport2::EnumGenericParamConstraints Method</span></span>
-<span data-ttu-id="eddf5-103">获取与指定的标记表示的泛型参数相关联的泛型参数约束的数组的枚举器。</span><span class="sxs-lookup"><span data-stu-id="eddf5-103">Gets an enumerator for an array of generic parameter constraints associated with the generic parameter represented by the specified token.</span></span>  
+# <a name="imetadataimport2enumgenericparamconstraints-method"></a><span data-ttu-id="7883d-102">IMetaDataImport2::EnumGenericParamConstraints 方法</span><span class="sxs-lookup"><span data-stu-id="7883d-102">IMetaDataImport2::EnumGenericParamConstraints Method</span></span>
+<span data-ttu-id="7883d-103">获取与指定的标记表示的泛型参数相关联的泛型参数约束的数组的枚举器。</span><span class="sxs-lookup"><span data-stu-id="7883d-103">Gets an enumerator for an array of generic parameter constraints associated with the generic parameter represented by the specified token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="eddf5-104">语法</span><span class="sxs-lookup"><span data-stu-id="eddf5-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7883d-104">语法</span><span class="sxs-lookup"><span data-stu-id="7883d-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT EnumGenericParamConstraints (  
     [in, out] HCORENUM                *phEnum,  
     [in]  mdGenericParam              tk,  
@@ -39,39 +39,39 @@ HRESULT EnumGenericParamConstraints (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="eddf5-105">参数</span><span class="sxs-lookup"><span data-stu-id="eddf5-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="7883d-105">参数</span><span class="sxs-lookup"><span data-stu-id="7883d-105">Parameters</span></span>  
  `phEnum`  
- <span data-ttu-id="eddf5-106">[in、 out]一个指向枚举器。</span><span class="sxs-lookup"><span data-stu-id="eddf5-106">[in, out] A pointer to the enumerator.</span></span>  
+ <span data-ttu-id="7883d-106">[in、 out]一个指向枚举器。</span><span class="sxs-lookup"><span data-stu-id="7883d-106">[in, out] A pointer to the enumerator.</span></span>  
   
  `tk`  
- <span data-ttu-id="eddf5-107">[in]  表示其约束是要枚举的泛型参数的标记。</span><span class="sxs-lookup"><span data-stu-id="eddf5-107">[in]   A token that represents the generic parameter whose constraints are to be enumerated.</span></span>  
+ <span data-ttu-id="7883d-107">[in]  表示其约束是要枚举的泛型参数的标记。</span><span class="sxs-lookup"><span data-stu-id="7883d-107">[in]   A token that represents the generic parameter whose constraints are to be enumerated.</span></span>  
   
  `rGenericParamConstraints`  
- <span data-ttu-id="eddf5-108">[out]若要枚举的泛型参数约束的数组。</span><span class="sxs-lookup"><span data-stu-id="eddf5-108">[out] The array of generic parameter constraints to enumerate.</span></span>  
+ <span data-ttu-id="7883d-108">[out]若要枚举的泛型参数约束的数组。</span><span class="sxs-lookup"><span data-stu-id="7883d-108">[out] The array of generic parameter constraints to enumerate.</span></span>  
   
  `cMax`  
- <span data-ttu-id="eddf5-109">[in]  要放置在中的令牌的请求最大数目`rGenericParamConstraints`。</span><span class="sxs-lookup"><span data-stu-id="eddf5-109">[in]   The requested maximum number of tokens to place in `rGenericParamConstraints`.</span></span>  
+ <span data-ttu-id="7883d-109">[in]  要放置在中的令牌的请求最大数目`rGenericParamConstraints`。</span><span class="sxs-lookup"><span data-stu-id="7883d-109">[in]   The requested maximum number of tokens to place in `rGenericParamConstraints`.</span></span>  
   
  `pcGenericParamConstraints`  
- <span data-ttu-id="eddf5-110">[out]指向标记数的指针置于`rGenericParamConstraints`。</span><span class="sxs-lookup"><span data-stu-id="eddf5-110">[out] A pointer to the number of tokens placed in `rGenericParamConstraints`.</span></span>  
+ <span data-ttu-id="7883d-110">[out]指向标记数的指针置于`rGenericParamConstraints`。</span><span class="sxs-lookup"><span data-stu-id="7883d-110">[out] A pointer to the number of tokens placed in `rGenericParamConstraints`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="eddf5-111">返回值</span><span class="sxs-lookup"><span data-stu-id="eddf5-111">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="7883d-111">返回值</span><span class="sxs-lookup"><span data-stu-id="7883d-111">Return Value</span></span>  
   
-|<span data-ttu-id="eddf5-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="eddf5-112">HRESULT</span></span>|<span data-ttu-id="eddf5-113">描述</span><span class="sxs-lookup"><span data-stu-id="eddf5-113">Description</span></span>|  
+|<span data-ttu-id="7883d-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="7883d-112">HRESULT</span></span>|<span data-ttu-id="7883d-113">描述</span><span class="sxs-lookup"><span data-stu-id="7883d-113">Description</span></span>|  
 |-------------|-----------------|  
-|`S_OK`|<span data-ttu-id="eddf5-114">`EnumGenericParameterConstraints` 已成功返回。</span><span class="sxs-lookup"><span data-stu-id="eddf5-114">`EnumGenericParameterConstraints` returned successfully.</span></span>|  
-|`S_FALSE`|<span data-ttu-id="eddf5-115">`phEnum` 不包含任何成员元素。</span><span class="sxs-lookup"><span data-stu-id="eddf5-115">`phEnum` has no member elements.</span></span> <span data-ttu-id="eddf5-116">在这种情况下，`pcGenericParameterConstraints`设置为 0 （零）。</span><span class="sxs-lookup"><span data-stu-id="eddf5-116">In this case, `pcGenericParameterConstraints` is set to 0 (zero).</span></span>|  
+|`S_OK`|<span data-ttu-id="7883d-114">`EnumGenericParameterConstraints` 已成功返回。</span><span class="sxs-lookup"><span data-stu-id="7883d-114">`EnumGenericParameterConstraints` returned successfully.</span></span>|  
+|`S_FALSE`|<span data-ttu-id="7883d-115">`phEnum` 不包含任何成员元素。</span><span class="sxs-lookup"><span data-stu-id="7883d-115">`phEnum` has no member elements.</span></span> <span data-ttu-id="7883d-116">在这种情况下，`pcGenericParameterConstraints`设置为 0 （零）。</span><span class="sxs-lookup"><span data-stu-id="7883d-116">In this case, `pcGenericParameterConstraints` is set to 0 (zero).</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="eddf5-117">要求</span><span class="sxs-lookup"><span data-stu-id="eddf5-117">Requirements</span></span>  
- <span data-ttu-id="eddf5-118">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="eddf5-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7883d-117">要求</span><span class="sxs-lookup"><span data-stu-id="7883d-117">Requirements</span></span>  
+ <span data-ttu-id="7883d-118">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="7883d-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="eddf5-119">**标头：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="eddf5-119">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="7883d-119">**标头：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="7883d-119">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="eddf5-120">**库：** 用作 MsCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="eddf5-120">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="7883d-120">**库：** 用作 MsCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="7883d-120">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="eddf5-121">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="eddf5-121">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="7883d-121">**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7883d-121">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="eddf5-122">请参阅</span><span class="sxs-lookup"><span data-stu-id="eddf5-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7883d-122">请参阅</span><span class="sxs-lookup"><span data-stu-id="7883d-122">See also</span></span>
 
-- [<span data-ttu-id="eddf5-123">IMetaDataImport2 接口</span><span class="sxs-lookup"><span data-stu-id="eddf5-123">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
-- [<span data-ttu-id="eddf5-124">IMetaDataImport 接口</span><span class="sxs-lookup"><span data-stu-id="eddf5-124">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="7883d-123">IMetaDataImport2 接口</span><span class="sxs-lookup"><span data-stu-id="7883d-123">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="7883d-124">IMetaDataImport 接口</span><span class="sxs-lookup"><span data-stu-id="7883d-124">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

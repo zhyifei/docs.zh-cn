@@ -16,37 +16,37 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c631a0a3abb3cb2a342dfd44fdffb147b742ae3c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a984e8645bec0f58d8a31965b762e0a3a190ba59
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61698117"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67768014"
 ---
-# <a name="corgcthreadstatstypes-enumeration"></a><span data-ttu-id="67817-102">COR_GC_THREAD_STATS_TYPES 枚举</span><span class="sxs-lookup"><span data-stu-id="67817-102">COR_GC_THREAD_STATS_TYPES Enumeration</span></span>
-<span data-ttu-id="67817-103">指示线程的垃圾收集统计信息。</span><span class="sxs-lookup"><span data-stu-id="67817-103">Indicates the garbage collection statistics for a thread.</span></span>  
+# <a name="corgcthreadstatstypes-enumeration"></a><span data-ttu-id="71c1d-102">COR_GC_THREAD_STATS_TYPES 枚举</span><span class="sxs-lookup"><span data-stu-id="71c1d-102">COR_GC_THREAD_STATS_TYPES Enumeration</span></span>
+<span data-ttu-id="71c1d-103">指示线程的垃圾收集统计信息。</span><span class="sxs-lookup"><span data-stu-id="71c1d-103">Indicates the garbage collection statistics for a thread.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="67817-104">语法</span><span class="sxs-lookup"><span data-stu-id="67817-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="71c1d-104">语法</span><span class="sxs-lookup"><span data-stu-id="71c1d-104">Syntax</span></span>  
   
-```  
+```cpp  
 typedef enum {  
     COR_GC_THREAD_HAS_PROMOTED_BYTES  = 0x00000001  
 } COR_GC_THREAD_STATS_TYPES;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="67817-105">成员</span><span class="sxs-lookup"><span data-stu-id="67817-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="71c1d-105">成员</span><span class="sxs-lookup"><span data-stu-id="71c1d-105">Members</span></span>  
   
-|<span data-ttu-id="67817-106">成员</span><span class="sxs-lookup"><span data-stu-id="67817-106">Member</span></span>|<span data-ttu-id="67817-107">描述</span><span class="sxs-lookup"><span data-stu-id="67817-107">Description</span></span>|  
+|<span data-ttu-id="71c1d-106">成员</span><span class="sxs-lookup"><span data-stu-id="71c1d-106">Member</span></span>|<span data-ttu-id="71c1d-107">描述</span><span class="sxs-lookup"><span data-stu-id="71c1d-107">Description</span></span>|  
 |------------|-----------------|  
-|`COR_GC_THREAD_HAS_PROMOTED_BYTES`|<span data-ttu-id="67817-108">线程已在最近的垃圾回收提升的字节。</span><span class="sxs-lookup"><span data-stu-id="67817-108">The thread has bytes that were promoted in the most recent garbage collection.</span></span>|  
+|`COR_GC_THREAD_HAS_PROMOTED_BYTES`|<span data-ttu-id="71c1d-108">线程已在最近的垃圾回收提升的字节。</span><span class="sxs-lookup"><span data-stu-id="71c1d-108">The thread has bytes that were promoted in the most recent garbage collection.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="67817-109">要求</span><span class="sxs-lookup"><span data-stu-id="67817-109">Requirements</span></span>  
- <span data-ttu-id="67817-110">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="67817-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="71c1d-109">要求</span><span class="sxs-lookup"><span data-stu-id="71c1d-109">Requirements</span></span>  
+ <span data-ttu-id="71c1d-110">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="71c1d-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="67817-111">**标头：** GCHost.idl GCHost.h</span><span class="sxs-lookup"><span data-stu-id="67817-111">**Header:** GCHost.idl, GCHost.h</span></span>  
+ <span data-ttu-id="71c1d-111">**标头：** GCHost.idl GCHost.h</span><span class="sxs-lookup"><span data-stu-id="71c1d-111">**Header:** GCHost.idl, GCHost.h</span></span>  
   
- <span data-ttu-id="67817-112">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="67817-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="71c1d-112">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="71c1d-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="67817-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="67817-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="71c1d-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="71c1d-113">See also</span></span>
 
-- [<span data-ttu-id="67817-114">承载枚举</span><span class="sxs-lookup"><span data-stu-id="67817-114">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+- [<span data-ttu-id="71c1d-114">承载枚举</span><span class="sxs-lookup"><span data-stu-id="71c1d-114">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

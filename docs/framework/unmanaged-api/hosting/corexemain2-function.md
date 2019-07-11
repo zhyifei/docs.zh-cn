@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f968d84ae695eb1da127538ebdc5e4f55d6ebf39
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 46dab35c44e59a149822005575c83c13e9350455
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61985845"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67758543"
 ---
-# <a name="corexemain2-function"></a><span data-ttu-id="9e1cd-102">_CorExeMain2 函数</span><span class="sxs-lookup"><span data-stu-id="9e1cd-102">_CorExeMain2 Function</span></span>
-<span data-ttu-id="9e1cd-103">在指定的内存映射代码中执行的入口点。</span><span class="sxs-lookup"><span data-stu-id="9e1cd-103">Executes the entry point in the specified memory-mapped code.</span></span> <span data-ttu-id="9e1cd-104">由操作系统加载程序调用此函数。</span><span class="sxs-lookup"><span data-stu-id="9e1cd-104">This function is called by the operating system loader.</span></span>  
+# <a name="corexemain2-function"></a><span data-ttu-id="7ce82-102">_CorExeMain2 函数</span><span class="sxs-lookup"><span data-stu-id="7ce82-102">_CorExeMain2 Function</span></span>
+<span data-ttu-id="7ce82-103">在指定的内存映射代码中执行的入口点。</span><span class="sxs-lookup"><span data-stu-id="7ce82-103">Executes the entry point in the specified memory-mapped code.</span></span> <span data-ttu-id="7ce82-104">由操作系统加载程序调用此函数。</span><span class="sxs-lookup"><span data-stu-id="7ce82-104">This function is called by the operating system loader.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9e1cd-105">语法</span><span class="sxs-lookup"><span data-stu-id="9e1cd-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7ce82-105">语法</span><span class="sxs-lookup"><span data-stu-id="7ce82-105">Syntax</span></span>  
   
-```  
+```cpp  
 __int32 STDMETHODCALLTYPE _CorExeMain2 (  
    [in] PBYTE           pUnmappedPE,  
    [in] DWORD           cUnmappedPE,  
@@ -38,31 +38,31 @@ __int32 STDMETHODCALLTYPE _CorExeMain2 (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="9e1cd-106">参数</span><span class="sxs-lookup"><span data-stu-id="9e1cd-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="7ce82-106">参数</span><span class="sxs-lookup"><span data-stu-id="7ce82-106">Parameters</span></span>  
  `pUnmappedPE`  
- <span data-ttu-id="9e1cd-107">[in]指向内存映射代码的指针。</span><span class="sxs-lookup"><span data-stu-id="9e1cd-107">[in] A pointer to the memory-mapped code.</span></span>  
+ <span data-ttu-id="7ce82-107">[in]指向内存映射代码的指针。</span><span class="sxs-lookup"><span data-stu-id="7ce82-107">[in] A pointer to the memory-mapped code.</span></span>  
   
  `cUnmappedPE`  
- <span data-ttu-id="9e1cd-108">[in]元素数`pUnmappedPE`可以容纳。</span><span class="sxs-lookup"><span data-stu-id="9e1cd-108">[in] The number of elements `pUnmappedPE` can hold.</span></span>  
+ <span data-ttu-id="7ce82-108">[in]元素数`pUnmappedPE`可以容纳。</span><span class="sxs-lookup"><span data-stu-id="7ce82-108">[in] The number of elements `pUnmappedPE` can hold.</span></span>  
   
  `pImageNameIn`  
- <span data-ttu-id="9e1cd-109">[in]指向可执行映像的名称的指针。</span><span class="sxs-lookup"><span data-stu-id="9e1cd-109">[in] A pointer to the name of the executable image.</span></span>  
+ <span data-ttu-id="7ce82-109">[in]指向可执行映像的名称的指针。</span><span class="sxs-lookup"><span data-stu-id="7ce82-109">[in] A pointer to the name of the executable image.</span></span>  
   
  `pLoadersFileName`  
- <span data-ttu-id="9e1cd-110">[in]加载程序文件的名称。</span><span class="sxs-lookup"><span data-stu-id="9e1cd-110">[in] The name of the loader file.</span></span>  
+ <span data-ttu-id="7ce82-110">[in]加载程序文件的名称。</span><span class="sxs-lookup"><span data-stu-id="7ce82-110">[in] The name of the loader file.</span></span>  
   
  `pCmdLine`  
- <span data-ttu-id="9e1cd-111">[in]命令行参数，如果有的话。</span><span class="sxs-lookup"><span data-stu-id="9e1cd-111">[in] Command-line parameters, if any.</span></span>  
+ <span data-ttu-id="7ce82-111">[in]命令行参数，如果有的话。</span><span class="sxs-lookup"><span data-stu-id="7ce82-111">[in] Command-line parameters, if any.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9e1cd-112">要求</span><span class="sxs-lookup"><span data-stu-id="9e1cd-112">Requirements</span></span>  
- <span data-ttu-id="9e1cd-113">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="9e1cd-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7ce82-112">要求</span><span class="sxs-lookup"><span data-stu-id="7ce82-112">Requirements</span></span>  
+ <span data-ttu-id="7ce82-113">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="7ce82-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9e1cd-114">**标头：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="9e1cd-114">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="7ce82-114">**标头：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="7ce82-114">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="9e1cd-115">**库：** 包含为 MsCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="9e1cd-115">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="7ce82-115">**库：** 包含为 MsCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="7ce82-115">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="9e1cd-116">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9e1cd-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="7ce82-116">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7ce82-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9e1cd-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="9e1cd-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7ce82-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="7ce82-117">See also</span></span>
 
-- [<span data-ttu-id="9e1cd-118">元数据全局静态函数</span><span class="sxs-lookup"><span data-stu-id="9e1cd-118">Metadata Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)
+- [<span data-ttu-id="7ce82-118">元数据全局静态函数</span><span class="sxs-lookup"><span data-stu-id="7ce82-118">Metadata Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)
