@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b4f16db1d35f8a0de1c755566e27b07bf9067dfe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 21a727a5287f6eaad600fc37befc32790fc4cf26
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61796586"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67749296"
 ---
 # <a name="ihostthreadpoolmanagergetavailablethreads-method"></a>IHostThreadPoolManager::GetAvailableThreads 方法
 获取当前不在处理工作项在线程池中的线程数。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT GetAvailableThreads (  
     [out] DWORD *pdwAvailableWorkerThreads  
 );  
@@ -61,7 +61,7 @@ HRESULT GetAvailableThreads (
   
  **库：** 包含为 MSCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c29e581a77ac90882d102cfee2c715e9c309e1a3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9b761d31e640063e11c1e549966bb372449fe743
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780884"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67762271"
 ---
 # <a name="icordebugmetadatalocatorgetmetadata-method"></a>ICorDebugMetaDataLocator::GetMetaData 方法
 要求调试器返回模块（完成该调试器请求的操作需要其元数据）的完整路径。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT GetMetaData(  
       [in] LPCWSTR wszImagePath,  
       [in] DWORD   dwImageTimeStamp,  
@@ -82,7 +82,7 @@ HRESULT GetMetaData(
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

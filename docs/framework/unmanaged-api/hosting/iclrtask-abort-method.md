@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 57efd4f29ba7e28adf1af03030d7f83eb32c1c2b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3e48292d1b0bfaa990cca1b290f769d96938d433
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61763635"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67759028"
 ---
 # <a name="iclrtaskabort-method"></a>ICLRTask::Abort 方法
 请求公共语言运行时 (CLR) 中止任务的当前[ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)实例所表示。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT Abort ();  
 ```  
   
@@ -54,7 +54,7 @@ HRESULT Abort ();
   
  **库：** 包含为 MSCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

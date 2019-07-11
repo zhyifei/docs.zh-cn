@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 37e4abeebce155a4c332e864b4dfb6cf5a1141ec
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: abe1c8881330ebba5f7b68452cf3db0666ac20c3
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61940330"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67736242"
 ---
 # <a name="inotifysource2setnotifyfilter-method"></a>INotifySource2::SetNotifyFilter 方法
 将分配与此源使用通知筛选器。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT SetNotifyFilter  
 (  
     [in]  NOTIFY_FILTER   in_NotifyFilter,  

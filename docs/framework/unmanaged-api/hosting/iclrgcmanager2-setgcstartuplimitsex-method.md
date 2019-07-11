@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6cba7b4a34835eb2f394aa71be8b907973cb1cd6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 356678afb537ab5e5e1653c4f71140ce704e55ef
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61700184"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779676"
 ---
 # <a name="iclrgcmanager2setgcstartuplimitsex-method"></a>ICLRGCManager2::SetGCStartupLimitsEx 方法
 设置垃圾回收段的大小和第 0 代垃圾回收系统的最大大小。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT SetGCStartupLimitsEx (  
     [in] SIZE_T SegmentSize,   
     [in] SIZE_T MaxGen0Size  
@@ -70,7 +70,7 @@ HRESULT SetGCStartupLimitsEx (
   
  **库：** 包含为 MSCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

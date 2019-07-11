@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f0bbc2a63f0324db50008637827eb63125ee5813
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 55d4e936c8b732e4cc4a60df8c11b37c86c4a415
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662950"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778491"
 ---
 # <a name="compareassemblyidentity-function"></a>CompareAssemblyIdentity 函数
 比较两个程序集标识，以确定它们是否等效。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 STDAPI CompareAssemblyIdentity (  
     [in]  LPCWSTR                  pwzAssemblyIdentity1,  
     [in]  BOOL                     fUnified1,  
@@ -82,7 +82,7 @@ STDAPI CompareAssemblyIdentity (
   
  **库：** 包含为 MsCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

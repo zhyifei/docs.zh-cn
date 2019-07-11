@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4afbe64979ec69a192af955400ca8f4118102bd4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8717a1eafebf24366c35848dbe285943c107ed51
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665038"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777731"
 ---
 # <a name="imetadatadispenserexgetoption-method"></a>IMetaDataDispenserEx::GetOption 方法
 获取当前元数据范围的指定选项的值。 选项，可以控制如何处理对当前元数据范围的调用。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT GetOption (  
     [in]  REFGUID         optionId,   
     [out] const VARIANT   *pValue  
@@ -67,7 +67,7 @@ HRESULT GetOption (
   
  **库：** 用作 MsCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

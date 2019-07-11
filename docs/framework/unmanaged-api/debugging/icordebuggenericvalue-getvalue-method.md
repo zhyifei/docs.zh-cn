@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 53db4dcb13303c9e7bdd77a46b3c9526364bac06
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5e2fc054e42c34b13051e2125f8e18adc3029633
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61995639"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67755560"
 ---
 # <a name="icordebuggenericvaluegetvalue-method"></a>ICorDebugGenericValue::GetValue 方法
 将此泛型值复制到指定的缓冲区。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT GetValue (  
     [out] void     *pTo  
 );  
@@ -46,4 +46,4 @@ HRESULT GetValue (
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

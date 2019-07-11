@@ -2,18 +2,18 @@
 title: 通过演练学习
 ms.date: 03/30/2017
 ms.assetid: a8ae2965-6a49-4155-89b0-7fab2c488ab1
-ms.openlocfilehash: d5c8457bc1e484d3c7c2b57225261a3ef74023d1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e6b5f77d6d918ae1402074c9c3037ccadec8ac02
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64582911"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743030"
 ---
 # <a name="learning-by-walkthroughs"></a>通过演练学习
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]文档提供了一些演练。 本主题介绍一些一般性的演练问题（包括疑难解答），并提供指向用于了解 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 的一些入门级演练的链接。  
   
 > [!NOTE]
->  此“入门”部分中的演练向您展示了支持 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 技术的基本代码。 在实际操作中，您通常会使用[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]和 Windows 窗体项目来实现您的 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 应用程序。 [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] 文档提供用于此目的的示例和演练。  
+>  此“入门”部分中的演练向您展示了支持 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 技术的基本代码。 在实际操作中，您将通常使用对象关系设计器和 Windows 窗体项目来实现您[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]应用程序。 在 O/R 设计器文档提供了实现此目的的示例和演练。  
   
 ## <a name="getting-started-walkthroughs"></a>入门演练  
  本节中提供了若干演练。 这些演练基于 Northwind 示例数据库，以最不复杂的方式循序渐进地展示了 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 的功能。  
@@ -57,7 +57,7 @@ ms.locfileid: "64582911"
   
 2. 在左窗格中**SQL Server 配置管理器**，单击**SQL Server 2005 Services**。  
   
-3. 在右窗格中，右键单击**SQL Server (SQLEXPRESS)**，然后单击**属性**。  
+3. 在右窗格中，右键单击**SQL Server (SQLEXPRESS)** ，然后单击**属性**。  
   
 4. 单击**Log On**选项卡并验证您尝试登录到服务器的方式。  
   
@@ -83,9 +83,9 @@ ms.locfileid: "64582911"
   
 1. 在左窗格中**SQL Server 配置管理器**，单击**SQL Server 2005 Services**。  
   
-2. 在右窗格中，右键单击**SQL Server (SQLEXPRESS)**，然后单击**停止**。  
+2. 在右窗格中，右键单击**SQL Server (SQLEXPRESS)** ，然后单击**停止**。  
   
-3. 右键单击**SQL Server (SQLEXPRESS)**，然后单击**重新启动**。  
+3. 右键单击**SQL Server (SQLEXPRESS)** ，然后单击**重新启动**。  
   
 ## <a name="see-also"></a>请参阅
 

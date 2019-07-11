@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7c86a4fd2788c8ea2df5d9e54c5c221afd179704
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 502e7841f8c413aa48732bcea0b6c2178d70c061
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61905991"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776442"
 ---
 # <a name="assemblyflags-enumeration"></a>AssemblyFlags 枚举
 包含描述运行时功能的程序集的值。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 typedef enum {  
     afImplicitExportedTypes = 0x0001,  
     afImplicitResources = 0x0002,  
@@ -58,7 +58,7 @@ typedef enum {
   
  **库：** 包含为 MsCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

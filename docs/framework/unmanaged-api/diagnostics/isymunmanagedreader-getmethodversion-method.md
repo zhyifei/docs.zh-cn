@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b5d4145e6c76cf95f2468a3f5ad59edcd310423e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3f45423bb0ff4c755e657729c5725c8d9a22bde3
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61993312"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67746761"
 ---
 # <a name="isymunmanagedreadergetmethodversion-method"></a>ISymUnmanagedReader::GetMethodVersion 方法
 获取方法版本。 方法版本从 1 开始，在每的次递增的方法重新编译。 重新编译可发生该方法无需进行更改。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT GetMethodVersion (  
     [in]  ISymUnmanagedMethod* pMethod,  
     [out] int* version);  

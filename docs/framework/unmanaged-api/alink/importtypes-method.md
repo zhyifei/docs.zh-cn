@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 622e57aedf6c49e95dc2d7e40ba598361b3e6a26
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9876e3ba5ea67442714c2d00b1901c25e54494f2
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61753447"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67741634"
 ---
 # <a name="importtypes-method"></a>ImportTypes 方法
 启动导入的类型从通过导入每个作用域[ImportFile 方法](../../../../docs/framework/unmanaged-api/alink/importfile-method.md)。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT ImportTypes(  
     mdAssembly AssemblyID,  
     mdToken FileToken,  

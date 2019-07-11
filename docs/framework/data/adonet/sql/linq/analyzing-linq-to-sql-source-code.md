@@ -2,18 +2,18 @@
 title: 分析 LINQ to SQL 源代码
 ms.date: 03/30/2017
 ms.assetid: cba3eef8-e108-4478-b588-ad59580e133e
-ms.openlocfilehash: 35bc4988b8b9845ce6f45bab6849cd4b53a858ec
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e34364496a791031cc87cf07efd3d2adca39d93c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592483"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743589"
 ---
 # <a name="analyzing-linq-to-sql-source-code"></a>分析 LINQ to SQL 源代码
 通过按以下步骤操作，你可以用 Northwind 示例数据库生成 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 源代码。 您可以将对象模型的元素与数据库的元素作一个比较，以便更好地了解不同项的映射方式。  
   
 > [!NOTE]
->  使用 Visual Studio 的开发人员可以使用[!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)]来生成此代码。  
+>  使用 Visual Studio 的开发人员可以使用 O/R 设计器来生成此代码。  
   
 1. 如果您的开发计算机上还没有 Northwind 示例数据库，您可以免费下载它。 有关详细信息，请参阅[下载示例数据库](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)。  
   

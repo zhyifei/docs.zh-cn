@@ -2,12 +2,12 @@
 title: 进行和提交数据更改
 ms.date: 03/30/2017
 ms.assetid: d68c2dc3-99b3-49ab-b547-2ca5b386429a
-ms.openlocfilehash: c9d319727a750fbd3e2a186c28e79b20200c6bd0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 23dc45c990763e69b41608f6c3ec15a8db17bf23
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61903339"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743009"
 ---
 # <a name="making-and-submitting-data-changes"></a>进行和提交数据更改
 本节中的主题介绍如何做出更改并将更改传输至数据库，以及如何处理开放式并发冲突。  
@@ -15,7 +15,7 @@ ms.locfileid: "61903339"
 > [!NOTE]
 >  您可以重写 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]、`Insert` 和 `Update` 数据库操作的 `Delete` 默认方法。 有关详细信息，请参阅[自定义插入、 更新和删除操作](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md)。  
 >   
->  使用 Visual Studio 的开发人员可以使用[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]来开发用于同一目的的存储的过程。  
+>  使用 Visual Studio 的开发人员可以使用对象关系设计器来开发用于同一目的的存储的过程。  
   
 ## <a name="in-this-section"></a>本节内容  
  [如何：将行插入到数据库](../../../../../../docs/framework/data/adonet/sql/linq/how-to-insert-rows-into-the-database.md)  

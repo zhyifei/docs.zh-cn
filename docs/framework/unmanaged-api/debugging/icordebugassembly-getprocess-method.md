@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aeadcbd8f2d09320645c36fdc771cfb2cb976036
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d0d5b6648fe6ce8a42f343d3cbdd77eb026b8f13
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61645524"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67744480"
 ---
 # <a name="icordebugassemblygetprocess-method"></a>ICorDebugAssembly::GetProcess 方法
 获取在其中运行此 icor 调试程序集实例的进程的接口指针。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT GetProcess (  
     [out] ICorDebugProcess **ppProcess  
 );  
@@ -46,4 +46,4 @@ HRESULT GetProcess (
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

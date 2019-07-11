@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 05ce47953358b7025e30080fbbaf288a6c0e879d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 167eb9ae550454afee05cf1e724ba4afa4f95430
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61939836"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776735"
 ---
 # <a name="isymunmanageddocumentgetlanguage-method"></a>ISymUnmanagedDocument::GetLanguage 方法
 获取此文档的语言标识符  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT GetLanguage(  
     [out, retval]  GUID*  pRetVal);  
 ```  

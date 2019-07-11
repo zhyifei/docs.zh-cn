@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ebd36f01297f24c050f84fb67e7673f8641fe206
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 29fc1b491aa4e340c3d8ad6f761d0d6d901649ac
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789709"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67758561"
 ---
 # <a name="icordebugilframegetlocalvariable-method"></a>ICorDebugILFrame::GetLocalVariable 方法
 此 Microsoft 中间语言 (MSIL) 堆栈帧中获取指定的本地变量的值。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT GetLocalVariable (  
     [in] DWORD                  dwIndex,  
     [out] ICorDebugValue        **ppValue  
@@ -53,4 +53,4 @@ HRESULT GetLocalVariable (
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a1b189b79a02f04b7f795ff2524441f12b053cec
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 45089d1b64264e000c07603808f0c5fb1263b042
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61984628"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776569"
 ---
 # <a name="iclrmetahost-interface"></a>ICLRMetaHost 接口
 提供一些方法，返回特定版本的公共语言运行时 (CLR) 基于其版本号，列出所有已安装的 Clr、 列表中指定的进程加载的所有运行时中，发现用于编译为程序集，请退出一个过程的 CLR 版本使用正常的运行时关闭和查询旧 API 绑定。  
@@ -41,7 +41,7 @@ ms.locfileid: "61984628"
 ## <a name="remarks"></a>备注  
  若要获取此接口的实例的唯一方法是通过调用[CLRCreateInstance](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md)函数，如下所示：  
   
-```  
+```cpp  
 ICLRMetaHost *pMetaHost = NULL;  
 HRESULT hr = CLRCreateInstance(CLSID_CLRMetaHost,  
                    IID_ICLRMetaHost, (LPVOID*)&pMetaHost);  
@@ -54,7 +54,7 @@ HRESULT hr = CLRCreateInstance(CLSID_CLRMetaHost,
   
  **库：** 包含为 MSCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

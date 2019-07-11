@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7fa90aff73d94baf2cbf7d01f41710cb2aa10213
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3695f150797e6a59a2fb1d58c99f233a35d687ce
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61994001"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67771848"
 ---
 # <a name="icordebugthreadgetobject-method"></a>ICorDebugThread::GetObject 方法
 获取公共语言运行时 (CLR) 线程的接口指针。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT GetObject (  
     [out] ICorDebugValue   **ppObject  
 );  
@@ -46,7 +46,7 @@ HRESULT GetObject (
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

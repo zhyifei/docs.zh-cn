@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8b02f70f22a7d35bf0fe7816a52c490f88b31217
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fbdb9f6fc8376e080455957367dc79f4dfed8843
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61597123"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781201"
 ---
 # <a name="icorprofilerthreadenumgetcount-method"></a>ICorProfilerThreadEnum::GetCount 方法
 获取应用程序使用的线程数。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT GetCount (    [out] ULONG * pcelt  
 );  
 ```  
@@ -45,7 +45,7 @@ HRESULT GetCount (    [out] ULONG * pcelt
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

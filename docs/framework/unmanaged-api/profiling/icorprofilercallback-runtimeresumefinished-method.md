@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1c7b3c3ea5e976645c265b34327caa38ef6a28fd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 883e226042225b63097acf731b13abd69cc757ba
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61914779"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67750415"
 ---
 # <a name="icorprofilercallbackruntimeresumefinished-method"></a>ICorProfilerCallback::RuntimeResumeFinished 方法
 通知探查器运行时已恢复运行时的所有线程，并已返回到正常操作。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT RuntimeResumeFinished();  
 ```  
   
@@ -43,7 +43,7 @@ HRESULT RuntimeResumeFinished();
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

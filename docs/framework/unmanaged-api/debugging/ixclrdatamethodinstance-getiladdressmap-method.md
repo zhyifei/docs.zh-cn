@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: e88897342bf18111ebd4914948ab45085c35ea08
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 66e4768acff7ab735c6ac9e8f8f51a9511f7e371
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61942358"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67744682"
 ---
 # <a name="ixclrdatamethodinstancegetiladdressmap-method"></a>IXCLRDataMethodInstance::GetILAddressMap 方法
 
@@ -30,7 +30,7 @@ ms.locfileid: "61942358"
 
 ## <a name="syntax"></a>语法
 
-```
+```cpp
 HRESULT GetILAddressMap(
     [in] ULONG32                                   mapLen,
     [out] ULONG32                                 *mapNeeded,
@@ -56,9 +56,9 @@ HRESULT GetILAddressMap(
 ## <a name="requirements"></a>要求
 
 **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
-**标头：** None  
-**库：** None  
-**.NET Framework 版本：**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**标头：** 无  
+**库：** 无  
+**.NET Framework 版本：** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>请参阅
 

@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1fd903cb4a9ce664b7a1c958a3fef0c639d6845d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2796be32154275387da891683cc5053095f534af
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62045313"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67772322"
 ---
 # <a name="corsetenc-enumeration"></a>CorSetENC 枚举
 包含一些值，用于在元数据生成期间影响行为。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 typedef enum CorSetENC {  
   
     MDSetENCOn                  = 0x00000001,  
@@ -62,7 +62,7 @@ typedef enum CorSetENC {
   
  **标头：** CorHdr.h  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

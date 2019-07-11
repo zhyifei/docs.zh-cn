@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c3133d53-83ed-4a4d-af8b-82edcf3831db
-ms.openlocfilehash: 8ce30d60b05e600e4f6906221d4c360c7ad8c396
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 570b3d382157d4be832f57265ad3a064fcd3df9e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586687"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743468"
 ---
 # <a name="data-retrieval-and-cud-operations-in-n-tier-applications-linq-to-sql"></a>N 层应用程序中的数据检索和 CUD 操作 (LINQ to SQL)
 在将实体对象（如 Customers 或 Orders）通过网络序列化到客户端时，这些实体会与其数据上下文分离。 数据上下文不再跟踪这些实体的更改或它们与其他对象的关联。 只要客户端只读取数据，这就不会成为问题。 要使客户端可以向数据库添加新行，也比较容易做到。 但是，如果应用程序要求客户端能够更新或删除数据，则必须在调用 <xref:System.Data.Linq.DataContext.SubmitChanges%2A?displayProperty=nameWithType> 之前将实体附加到新的数据上下文。 此外，如果对原始值使用开放式并发检查，则还需要一种为数据库同时提供原始实体和修改后的实体的方式。 使用 `Attach` 方法可以在实体分离后将其放入新的数据上下文中。  
   
  即使要序列化代理对象来代替 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 实体，仍然必须在数据访问层 (DAL) 上构造一个实体，并将其附加到新的 <xref:System.Data.Linq.DataContext?displayProperty=nameWithType>，以便将数据提交给数据库。  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 完全不关心实体的序列化方式。 有关如何使用详细信息[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]和 SQLMetal 工具生成通过使用 Windows Communication Foundation (WCF) 是可序列化的类，请参阅[如何：使实体可序列化](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md)。  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 完全不关心实体的序列化方式。 有关如何使用对象关系设计器和 SQLMetal 工具生成通过使用 Windows Communication Foundation (WCF) 是可序列化的类的详细信息，请参阅[如何：使实体可序列化](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md)。  
   
 > [!NOTE]
 >  仅对新实体或反序列化后的实体调用 `Attach` 方法。 将实体与其原始数据上下文分离的唯一方式是将其序列化。 如果试图将未分离的实体附加到新的数据上下文，并且该实体仍然具有来自其以前的数据上下文的延迟加载程序，则 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 会引发异常。 如果一个实体具有来自两个不同数据上下文的延迟加载程序，则在对该实体执行插入、更新和删除操作时，可能产生意外的结果。 有关延迟加载程序的详细信息，请参阅[推迟加载与即时加载](../../../../../../docs/framework/data/adonet/sql/linq/deferred-versus-immediate-loading.md)。  

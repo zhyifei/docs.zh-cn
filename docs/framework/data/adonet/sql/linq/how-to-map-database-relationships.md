@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 538def39-8399-46fb-b02d-60ede4e050af
-ms.openlocfilehash: 5a20253e7164dabc22529d2238e9e85610d83706
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0637a2f32140081d310abf5f7254b526edc69fc6
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624704"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743235"
 ---
 # <a name="how-to-map-database-relationships"></a>如何：映射数据库关系
 可以在您的实体类中将始终相同的任何数据关系编码为属性引用。 例如，在 Northwind 示例数据库中，由于客户通常会下订单，因此在模型中客户与其订单之间始终存在关系。  
@@ -39,7 +39,7 @@ ms.locfileid: "64624704"
  在下面的一对多示例中，`Customer` 类具有一个声明客户与其订单之间的关系的属性。  `Orders` 属性为 <xref:System.Data.Linq.EntitySet%601> 类型。 此类型表明这种关系是一对多的（一个客户对多个订单）。 <xref:System.Data.Linq.Mapping.AssociationAttribute.OtherKey%2A> 属性用来说明如何实现这种关联，即通过指定相关类中要与此属性比较的属性的名称。 在此示例中，`CustomerID`属性进行比较，就像数据库*联接*会比较该列值。  
   
 > [!NOTE]
->  如果使用的 Visual Studio，则可以使用[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]创建类之间的关联。  
+>  如果使用的 Visual Studio，可以使用对象关系设计器来创建类之间的关联。  
   
  [!code-csharp[DlinqCustomize#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqCustomize/cs/Program.cs#3)]
  [!code-vb[DlinqCustomize#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqCustomize/vb/Module1.vb#3)]  

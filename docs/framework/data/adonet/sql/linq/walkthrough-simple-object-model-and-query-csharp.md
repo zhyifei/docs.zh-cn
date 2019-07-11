@@ -2,17 +2,17 @@
 title: 演练：简单对象模型和查询 (C#)
 ms.date: 03/30/2017
 ms.assetid: 419961cc-92d6-45f5-ae8a-d485bdde3a37
-ms.openlocfilehash: dd4ba42247a8305b14d859a5b49da4c11cfc18bc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 62d28d61b3df0cfd792cedc87daf91526b162818
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64617970"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742622"
 ---
 # <a name="walkthrough-simple-object-model-and-query-c"></a>演练：简单对象模型和查询 (C#)
 本演练提供了复杂性最小的基本端对端 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 方案。 您将创建一个可为示例 Northwind 数据库中的 Customers 表建模的实体类。 然后您将创建一个简单查询，用于列出位于伦敦的客户。  
   
- 本演练在设计上是面向代码的，以帮助说明 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 概念。 一般来说，您会使用 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] 来创建对象模型。  
+ 本演练在设计上是面向代码的，以帮助说明 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 概念。 一般来说，您将使用对象关系设计器来创建对象模型。  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
   
@@ -48,13 +48,13 @@ ms.locfileid: "64617970"
   
 2. 在中**项目类型**窗格**新项目**对话框中，单击**Visual C#** 。  
   
-3. 在“模板”窗格中，单击“控制台应用程序”。  
+3. 在“模板”  窗格中，单击“控制台应用程序”  。  
   
 4. 在中**名称**框中，键入**LinqConsoleApp**。  
   
 5. 在中**位置**框中，确认你想要用于存储项目文件。  
   
-6. 单击 **“确定”**。  
+6. 单击 **“确定”** 。  
   
 ## <a name="adding-linq-references-and-directives"></a>添加 LINQ 引用和指令  
  本演练用到默认情况下您的项目中可能未安装的程序集。 如果未将 System.Data.Linq 列出为你的项目中的引用 (展开**引用**中的节点**解决方案资源管理器**)，请按照以下步骤中的说明添加它。  

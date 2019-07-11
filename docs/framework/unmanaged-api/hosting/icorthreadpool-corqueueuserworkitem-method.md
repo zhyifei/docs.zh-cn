@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 249571cbe49fdce720630e31d2da1641aa979624
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b421825c7a1f0a42d9b54e36a8e8c1dce2c1fd76
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61700080"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67751178"
 ---
 # <a name="icorthreadpoolcorqueueuserworkitem-method"></a>ICorThreadpool::CorQueueUserWorkItem 方法
 此方法支持 .NET Framework 基础结构，但不适合直接在代码中使用。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT CorQueueUserWorkItem (  
     [in] LPTHREAD_START_ROUTINE Function,  
     [in] PVOID                  Context,  
@@ -45,7 +45,7 @@ HRESULT CorQueueUserWorkItem (
   
  **库：** 包含为 MSCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

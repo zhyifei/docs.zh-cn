@@ -12,19 +12,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b3b4906f988d09f7b01aee40e8f63b589da5f33d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 059e823110686a2b939c9664fa5b67e4041c3486
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61609199"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67740322"
 ---
 # <a name="cordebugcodeinvokekind-enumeration"></a>“Cor调试代码调用类型”枚举
 描述导出函数如何调用托管代码。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 typedef enum CorDebugCodeInvokeKind  
 {  
     CODE_INVOKE_KIND_NONE,       
@@ -54,7 +54,7 @@ typedef enum CorDebugCodeInvokeKind
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

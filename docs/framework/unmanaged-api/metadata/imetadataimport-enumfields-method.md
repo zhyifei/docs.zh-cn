@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 313dbd11f1d033f0e15de651b9c130cc98c217e9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 65f59d3df96f46ad65650183bdb6f631356a4d0b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62049929"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67775528"
 ---
 # <a name="imetadataimportenumfields-method"></a>IMetaDataImport::EnumFields 方法
 枚举指定的 TypeDef 标记所引用的类型的 FieldDef 标记。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT EnumFields (   
    [in, out] HCORENUM    *phEnum,   
    [in]      mdTypeDef   cl,   
@@ -69,7 +69,7 @@ HRESULT EnumFields (
   
  **库：** 包含为 MsCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

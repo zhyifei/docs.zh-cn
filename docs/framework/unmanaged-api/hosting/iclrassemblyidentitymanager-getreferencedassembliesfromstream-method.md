@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9d6f93ee7870c9d81394ee55c5574c52c2aea50a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9655981bf7ca21a6f59b305f6ea3fa5ff47f608a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61969970"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67773396"
 ---
 # <a name="iclrassemblyidentitymanagergetreferencedassembliesfromstream-method"></a>ICLRAssemblyIdentityManager::GetReferencedAssembliesFromStream 方法
 获取一个指向[ICLRReferenceAssemblyEnum](../../../../docs/framework/unmanaged-api/hosting/iclrreferenceassemblyenum-interface.md)对象，其中包含由指定的流中的程序集引用的程序集的程序集标识数据。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT GetReferencedAssembliesFromStream (  
     [in]  IStream *pStream,  
     [in]  DWORD    dwFlags,  
@@ -72,7 +72,7 @@ HRESULT GetReferencedAssembliesFromStream (
   
  **库：** 包含为 MSCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

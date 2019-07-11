@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3209b42263c62c8296d43ab06b0d89db2dd89be8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a3cd2a123e495b4bf19168e86932c866c91e980f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665992"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67751629"
 ---
 # <a name="strongnamesignatureverification-function"></a>StrongNameSignatureVerification 函数
 获取一个值，该值指示提供的路径中的程序集清单是否包含根据指定标志验证的强名称签名。  
@@ -30,7 +30,7 @@ ms.locfileid: "64665992"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 BOOLEAN StrongNameSignatureVerification (  
     [in]  LPCWSTR   wszFilePath,  
     [in]  DWORD     dwInFlags,  
@@ -72,7 +72,7 @@ BOOLEAN StrongNameSignatureVerification (
   
  **库：** 包含为 MsCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

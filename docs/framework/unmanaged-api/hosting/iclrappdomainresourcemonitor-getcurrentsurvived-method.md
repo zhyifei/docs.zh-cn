@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 408ef5419fbc2081d25ad442986ec8155bcb4c62
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 10df17f2f21928ab89c65be7fd07afe81c468a07
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61985187"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67766555"
 ---
 # <a name="iclrappdomainresourcemonitorgetcurrentsurvived-method"></a>ICLRAppDomainResourceMonitor::GetCurrentSurvived 方法
 获取上次的完整、 阻碍性垃圾回收后保留下来并由当前的应用程序域引用的字节数。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT STDMETHODCALLTYPE GetCurrentSurvived(  
              [in]  DWORD dwAppDomainId,  
              [out] ULONGLONG *pAppDomainBytesSurvived,  
@@ -66,7 +66,7 @@ HRESULT STDMETHODCALLTYPE GetCurrentSurvived(
   
  **库：** 包含为 MSCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

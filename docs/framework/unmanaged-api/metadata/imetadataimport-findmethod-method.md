@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 28aa8313e7ba0c071187d0f1f6d78431b16fc005
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4225794740b7786c6f758c9a0953d323c31a1081
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777866"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782492"
 ---
 # <a name="imetadataimportfindmethod-method"></a>IMetaDataImport::FindMethod 方法
 获取指向 MethodDef 标记所用的方法由指定<xref:System.Type>并具有指定的名称和元数据签名。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT FindMethod (  
    [in]  mdTypeDef          td,  
    [in]  LPCWSTR            szName,   
@@ -69,7 +69,7 @@ HRESULT FindMethod (
   
  **库：** 包含为 MsCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

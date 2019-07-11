@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: a2850add9acb2f7c5297ac6956e349c9277be291
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 77ef2c65157df4a033700bb8d0295875ede46554
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61965907"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67739107"
 ---
 # <a name="dacprejitdata-structure"></a>DacpReJitData 结构
 
@@ -30,7 +30,7 @@ ms.locfileid: "61965907"
 
 ## <a name="syntax"></a>语法
 
-```
+```cpp
 struct MSLAYOUT DacpReJitData
 {
     enum Flags
@@ -61,9 +61,9 @@ struct MSLAYOUT DacpReJitData
 
 ## <a name="requirements"></a>要求
 **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
-**标头：** None  
+**标头：** 无  
 **库：** None  
-**.NET Framework 版本：**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**.NET Framework 版本：** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>请参阅
 

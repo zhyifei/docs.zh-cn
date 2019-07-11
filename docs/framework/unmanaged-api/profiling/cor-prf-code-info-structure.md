@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 56734a9971759b78a835917c4914cf55edaa47a4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2f236a74da04dfddef852514eccb02215ad2d15a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775162"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67752388"
 ---
 # <a name="corprfcodeinfo-structure"></a>COR_PRF_CODE_INFO 结构
 表示存储在内存中的一个本机代码连续块。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 typedef struct _COR_PRF_CODE_INFO {  
     UINT_PTR startAddress;  
     SIZE_T size;  
@@ -49,7 +49,7 @@ typedef struct _COR_PRF_CODE_INFO {
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

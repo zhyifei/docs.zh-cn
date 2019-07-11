@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d28497c637a40d7e2659b18868124ea898397f92
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: b7f24606e3b021b0df5bdbaab795e4f672f724fa
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636906"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67761710"
 ---
 # <a name="blessiwbemservicesobject-function"></a>BlessIWbemServicesObject 函数
 指示用户凭据是否允许访问指定[IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices)对象。 
@@ -30,7 +30,7 @@ ms.locfileid: "65636906"
 
 ## <a name="syntax"></a>语法
 
-```
+```cpp
 HRESULT BlessIWbemServicesObject (
    [in] IUnknown* pIUnknown,
    [in] BSTR strUser, 
@@ -79,7 +79,7 @@ HRESULT BlessIWbemServicesObject (
 
  **标头：** WMINet_Utils.idl
 
- **.NET Framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+ **.NET Framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
 ## <a name="see-also"></a>请参阅
 

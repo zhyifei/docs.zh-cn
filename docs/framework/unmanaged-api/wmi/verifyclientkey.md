@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 47fee26a0c4c25e4bff5bca94e5e26daaf98cccd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f4b51fe4510f4172227d9afd049eb6815790a165
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61782481"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67783090"
 ---
 # <a name="verifyclientkey-function"></a>VerifyClientKey 函数
 确保客户端密钥具有正确的安全性。  
@@ -30,7 +30,7 @@ ms.locfileid: "61782481"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 LONG VerifyClientKey(); 
 ```  
 
@@ -45,7 +45,7 @@ LONG VerifyClientKey();
   
  **标头：** WMINet_Utils.def  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>请参阅
 

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 134fe55de71e3d6a9a68249febc4c70f11d4f36f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e42db5d7ebc9ec9983fe9e56477808415b26968b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61993858"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67751575"
 ---
 # <a name="icordebugtypegetrank-method"></a>ICorDebugType::GetRank 方法
 获取数组类型中的维度数。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT GetRank (  
     [out] ULONG32   *pnRank  
 );  
@@ -46,4 +46,4 @@ HRESULT GetRank (
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e645f79018d4ad41451faa07eba860e68b917539
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4087bdd82041152a9946a576e0eb96bf63f177c7
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61700782"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777271"
 ---
 # <a name="isymunmanagedwriterinitialize2-method"></a>ISymUnmanagedWriter::Initialize2 方法
 此编写器将与之关联的元数据发射器接口和设置输出文件将写入调试符号的名称。 此方法还允许您设置的程序数据库 (PDB) 文件的最终位置。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT Initialize2(  
     [in] IUnknown     *emitter,  
     [in] const WCHAR  *tempfilename,  

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bcd7bfb52cadf740d8fe3cb92a09b071f530b7ee
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b577e915422814fbd0060fdda53b9e2bf7cd091a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61994326"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67760728"
 ---
 # <a name="icordebugstepperdeactivate-method"></a>ICorDebugStepper::Deactivate 方法
 导致此 ICorDebugStepper 取消它收到的最后一个步骤命令。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT Deactivate ();  
 ```  
   
@@ -43,4 +43,4 @@ HRESULT Deactivate ();
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

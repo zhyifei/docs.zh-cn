@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 417cf623948d16147f9a1242d714f4df1311a314
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c1ea9424c000ad3ae4918181084c89038c2ec8d1
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61700938"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777286"
 ---
 # <a name="isymunmanagedwriterinitialize-method"></a>ISymUnmanagedWriter::Initialize 方法
 此编写器将与之关联的元数据发射器接口和设置输出文件将写入调试符号的名称。  
@@ -31,7 +31,7 @@ ms.locfileid: "61700938"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT Initialize(  
     [in] IUnknown     *emitter,  
     [in] const WCHAR  *filename,  

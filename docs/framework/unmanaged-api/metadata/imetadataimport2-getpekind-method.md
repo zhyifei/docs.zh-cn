@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d9dda1fb38546138d52b5fe61754d5497e676c37
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 91c80566ed284403ad559583a1e4f1025eb09985
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777411"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67755313"
 ---
 # <a name="imetadataimport2getpekind-method"></a>IMetaDataImport2::GetPEKind 方法
 获取一个值，标识的性质可移植可执行 (PE) 中的代码文件，通常是 DLL 或 EXE 文件，在当前元数据范围中定义。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT GetPEKind (  
    [out] DWORD *pdwPEKind,  
    [out] DWORD *pdwMachine  
@@ -46,7 +46,7 @@ HRESULT GetPEKind (
 ## <a name="remarks"></a>备注  
  由引用的值`pdwMachine`参数可以是以下值之一。  
   
-|“值”|计算机体系结构|  
+|值|计算机体系结构|  
 |-----------|--------------------------|  
 |IMAGE_FILE_MACHINE_I386<br /><br /> 0x014C|x86|  
 |IMAGE_FILE_MACHINE_IA64<br /><br /> 0x0200|Intel IPF|  
@@ -59,7 +59,7 @@ HRESULT GetPEKind (
   
  **库：** 用作 MsCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

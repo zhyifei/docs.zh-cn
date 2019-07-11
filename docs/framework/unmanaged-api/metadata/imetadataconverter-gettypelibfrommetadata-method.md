@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c0943971dc4858e2dce4d977f6f906b26f8ad51e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 208dd5ff2ba9eb450cac5a9807f0cd09852d5cf3
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62044377"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777816"
 ---
 # <a name="imetadataconvertergettypelibfrommetadata-method"></a>IMetaDataConverter::GetTypeLibFromMetaData 方法
 获取一个指向`ITypeLib`实例，它表示具有指定的库和模块名称的类型库。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT GetTypeLibFromMetaData (  
     [in]  BSTR     strModule,   
     [in]  BSTR     strTlbName,   
@@ -54,7 +54,7 @@ HRESULT GetTypeLibFromMetaData (
   
  **库：** 用作 MsCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

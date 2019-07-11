@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 52190583338f1c1ee9183a98d5f4a6cd7236342d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 994e007eabf8b7fdcf5446d905c06eb4ab91bb3f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61992545"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777674"
 ---
 # <a name="imetadataemitdefinecustomattribute-method"></a>IMetaDataEmit::DefineCustomAttribute 方法
 使用指定的元数据签名，附加到指定的对象，创建自定义属性的定义并获取该自定义特性定义的标记。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT DefineCustomAttribute (   
     [in]  mdToken     tkObj,   
     [in]  mdToken     tkType,   
@@ -62,7 +62,7 @@ HRESULT DefineCustomAttribute (
   
  **库：** 用作 MSCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

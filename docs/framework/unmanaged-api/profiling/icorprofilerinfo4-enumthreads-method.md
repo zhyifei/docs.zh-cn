@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bd0a4149b6dc6023579e8bc5b40751d23416e3a6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3d4cffc7c407db6acd15462e1e00769101e44b40
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61683844"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780858"
 ---
 # <a name="icorprofilerinfo4enumthreads-method"></a>ICorProfilerInfo4::EnumThreads 方法
 返回提供方法以按顺序循环访问所分析进程中的所有托管线程的集合的枚举器。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT EnumThreads([out]  
             ICorProfilerThreadEnum** ppEnum);  
 ```  
@@ -47,7 +47,7 @@ HRESULT EnumThreads([out]
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

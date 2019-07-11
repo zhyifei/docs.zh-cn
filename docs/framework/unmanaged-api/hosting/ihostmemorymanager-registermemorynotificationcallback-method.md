@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 87dfbe85d279aa191253857887c1d9b5b5f8c7cc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 48580f5ac71b906c302ee7ce1b98e7d4334f2482
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61951733"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67767733"
 ---
 # <a name="ihostmemorymanagerregistermemorynotificationcallback-method"></a>IHostMemoryManager::RegisterMemoryNotificationCallback 方法
 当前内存负载的计算机上注册的回调函数，宿主通过调用以通知公共语言运行时 (CLR) 的指针。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT RegisterMemoryNotificationCallback (  
     [in] ICLRMemoryNotificationCallback* pCallback  
 );  
@@ -63,7 +63,7 @@ HRESULT RegisterMemoryNotificationCallback (
   
  **库：** 包含为 MSCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

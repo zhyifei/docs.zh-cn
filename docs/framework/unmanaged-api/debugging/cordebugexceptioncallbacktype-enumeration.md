@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 91b09be04499396a2229962fd592f29cb8bc8d04
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b712ee0bb8e67f448b7ea2bee3c092367181abad
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61609019"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67740213"
 ---
 # <a name="cordebugexceptioncallbacktype-enumeration"></a>CorDebugExceptionCallbackType 枚举
 指示从进行回调的类型[ICorDebugManagedCallback2::Exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-exception-method.md)事件。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 typedef enum CorDebugExceptionCallbackType {  
     DEBUG_EXCEPTION_FIRST_CHANCE         = 1,  
     DEBUG_EXCEPTION_USER_FIRST_CHANCE    = 2,  
@@ -53,7 +53,7 @@ typedef enum CorDebugExceptionCallbackType {
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

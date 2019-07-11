@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Storyboards [WPF], animations
 - animations [WPF], overview
 ms.assetid: bd9ce563-725d-4385-87c9-d7ee38cf79ea
-ms.openlocfilehash: 63353f670528cd52f3e2927426ae715432422504
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 5c776942bced836437fdcb8aaf30faef48e3aaff
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663864"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780148"
 ---
 # <a name="animation-overview"></a>动画概述
 
@@ -101,7 +101,7 @@ ms.locfileid: "67663864"
     [!code-csharp[animation_ovws2#RectangleOpacityFadeExampleCode_3](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Class1.cs#rectangleopacityfadeexamplecode_3)]
     [!code-vb[animation_ovws2#RectangleOpacityFadeExampleCode_3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws2/VisualBasic/Class1.vb#rectangleopacityfadeexamplecode_3)]
 
-3. 上面的代码显示从转换的动画`1.0`到`0.0`，这将导致目标元素从完全不透明逐渐转变为完全不可见。 若要使元素后再逐渐回到视野，设置<xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>到动画属性`true`。 若要使动画无限期地重复，设置其<xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A>属性设置为<xref:System.Windows.Media.Animation.RepeatBehavior.Forever%2A>。以下示例演示如何设置<xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>和<xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A>XAML 中的属性。
+3. 上面的代码显示从转换的动画`1.0`到`0.0`，这将导致目标元素从完全不透明逐渐转变为完全不可见。 若要使元素后再逐渐回到视野，设置<xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>到动画属性`true`。 若要使动画无限期地重复，设置其<xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A>属性设置为<xref:System.Windows.Media.Animation.RepeatBehavior.Forever%2A>。 以下示例演示如何设置<xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>和<xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A>XAML 中的属性。
 
     [!code-xaml[animation_ovws2#RectangleOpacityFadeExampleXaml_4](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Window1.xaml#rectangleopacityfadeexamplexaml_4)]
 
@@ -231,10 +231,10 @@ ms.locfileid: "67663864"
 
 |属性类型|对应的基本 (From/To/By) 动画|对应的关键帧动画|对应的路径动画|用法示例|
 |-------------------|----------------------------------------------------|---------------------------------------|----------------------------------|-------------------|
-|<xref:System.Windows.Media.Color>|<xref:System.Windows.Media.Animation.ColorAnimation>|<xref:System.Windows.Media.Animation.ColorAnimationUsingKeyFrames>|None|进行动画处理<xref:System.Windows.Media.SolidColorBrush.Color%2A>的<xref:System.Windows.Media.SolidColorBrush>或<xref:System.Windows.Media.GradientStop>。|
+|<xref:System.Windows.Media.Color>|<xref:System.Windows.Media.Animation.ColorAnimation>|<xref:System.Windows.Media.Animation.ColorAnimationUsingKeyFrames>|无|进行动画处理<xref:System.Windows.Media.SolidColorBrush.Color%2A>的<xref:System.Windows.Media.SolidColorBrush>或<xref:System.Windows.Media.GradientStop>。|
 |<xref:System.Double>|<xref:System.Windows.Media.Animation.DoubleAnimation>|<xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>|<xref:System.Windows.Media.Animation.DoubleAnimationUsingPath>|进行动画处理<xref:System.Windows.FrameworkElement.Width%2A>的<xref:System.Windows.Controls.DockPanel>或<xref:System.Windows.FrameworkElement.Height%2A>的<xref:System.Windows.Controls.Button>。|
 |<xref:System.Windows.Point>|<xref:System.Windows.Media.Animation.PointAnimation>|<xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames>|<xref:System.Windows.Media.Animation.PointAnimationUsingPath>|进行动画处理<xref:System.Windows.Media.EllipseGeometry.Center%2A>位置<xref:System.Windows.Media.EllipseGeometry>。|
-|<xref:System.String>|None|<xref:System.Windows.Media.Animation.StringAnimationUsingKeyFrames>|None|进行动画处理<xref:System.Windows.Controls.TextBlock.Text%2A>的<xref:System.Windows.Controls.TextBlock>或<xref:System.Windows.Controls.ContentControl.Content%2A>的<xref:System.Windows.Controls.Button>。|
+|<xref:System.String>|无|<xref:System.Windows.Media.Animation.StringAnimationUsingKeyFrames>|无|进行动画处理<xref:System.Windows.Controls.TextBlock.Text%2A>的<xref:System.Windows.Controls.TextBlock>或<xref:System.Windows.Controls.ContentControl.Content%2A>的<xref:System.Windows.Controls.Button>。|
 
 <a name="animationsaretimelines"></a>
 
@@ -242,7 +242,7 @@ ms.locfileid: "67663864"
 
 所有动画类型均都继承自<xref:System.Windows.Media.Animation.Timeline>类; 因此，所有动画都是专用的类型的时间线。 一个<xref:System.Windows.Media.Animation.Timeline>定义一个时间段。 您可以指定*计时行为*的时间线： 其<xref:System.Windows.Media.Animation.Timeline.Duration%2A>，它是重复，甚至快时间走得多少次。
 
-因为动画是<xref:System.Windows.Media.Animation.Timeline>，它还表示时间段。 动画还会计算输出值变为运行其指定的时间段 (或<xref:System.Windows.Media.Animation.Timeline.Duration%2A>)。 在运行或“播放”动画时，动画将更新与其关联的属性。
+因为动画是<xref:System.Windows.Media.Animation.Timeline>，它还表示时间段。 动画还会计算输出值变为时更新其通过其指定的时间段 (或<xref:System.Windows.Media.Animation.Timeline.Duration%2A>)。 在运行或“播放”动画时，动画将更新与其关联的属性。
 
 这三个常用的计时属性<xref:System.Windows.Media.Animation.Timeline.Duration%2A>， <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>，和<xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A>。
 
@@ -321,7 +321,7 @@ ms.locfileid: "67663864"
 [!code-csharp[animation_ovws_procedural_snip#FillBehaviorExampleRectangleInline](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_procedural_snip/CSharp/FillBehaviorExample.cs#fillbehaviorexamplerectangleinline)]
 [!code-vb[animation_ovws_procedural_snip#FillBehaviorExampleRectangleInline](~/samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws_procedural_snip/visualbasic/fillbehaviorexample.vb#fillbehaviorexamplerectangleinline)]
 
-因为其<xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A>未发生变化，其默认值，即<xref:System.Windows.Media.Animation.FillBehavior.HoldEnd>，动画将保持最终值为 0，结束时。 因此，<xref:System.Windows.UIElement.Opacity%2A>矩形仍然为动画之后的 0 的结束。 如果您设置<xref:System.Windows.UIElement.Opacity%2A>的矩形与另一个值，你的代码似乎不起作用，因为动画仍将影响<xref:System.Windows.UIElement.Opacity%2A>属性。
+因为其<xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A>未发生变化，其默认值，即<xref:System.Windows.Media.Animation.FillBehavior.HoldEnd>，动画将保持其最终值为 0，结束时。 因此，<xref:System.Windows.UIElement.Opacity%2A>矩形仍然为动画之后的 0 的结束。 如果您设置<xref:System.Windows.UIElement.Opacity%2A>的矩形与另一个值，你的代码似乎不起作用，因为动画仍将影响<xref:System.Windows.UIElement.Opacity%2A>属性。
 
 若要重新获得的代码中的动画属性控制权的一种方法是使用<xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A>方法并指定为 null<xref:System.Windows.Media.Animation.AnimationTimeline>参数。 有关详细信息和示例，请参阅[后设置该属性进行动画处理使用演示图板](how-to-set-a-property-after-animating-it-with-a-storyboard.md)。
 
@@ -372,7 +372,7 @@ ms.locfileid: "67663864"
 |[动画和计时系统概述](animation-and-timing-system-overview.md)|描述计时系统如何使用<xref:System.Windows.Media.Animation.Timeline>和<xref:System.Windows.Media.Animation.Clock>类，允许你创建动画。|
 |[动画提示和技巧](animation-tips-and-tricks.md)|列出用于解决与动画有关的问题（如性能）的有用提示。|
 |[自定义动画概述](custom-animations-overview.md)|描述如何使用关键帧、动画类或逐帧回叫来扩展动画系统。|
-|From/To/By 动画概述|描述如何创建在两个值之间转换的动画。|
+|[From/To/By 动画概述](from-to-by-animations-overview.md)|描述如何创建在两个值之间转换的动画。|
 |[关键帧动画概述](key-frame-animations-overview.md)|描述如何使用多个目标值创建动画（包括控制内插方法的功能）。|
 |[缓动函数](easing-functions.md)|说明如何将数学公式应用于动画以获得真实行为（如反弹）。|
 |[路径动画概述](path-animations-overview.md)|描述如何沿复杂路径移动或旋转对象。|

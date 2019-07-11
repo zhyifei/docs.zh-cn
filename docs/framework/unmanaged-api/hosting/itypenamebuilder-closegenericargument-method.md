@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8fa4a83462f761a319c633d4f435dd590e50968c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: effdca7697d4ba43e267d994b1f24c8d073a1a3e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61672765"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778373"
 ---
 # <a name="itypenamebuilderclosegenericargument-method"></a>ITypeNameBuilder::CloseGenericArgument 方法
 此方法支持 .NET Framework 基础结构，但不适合直接在代码中使用。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT CloseGenericArgument ( );  
 ```  
   
@@ -40,7 +40,7 @@ HRESULT CloseGenericArgument ( );
   
  **库：** 包含为 MSCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

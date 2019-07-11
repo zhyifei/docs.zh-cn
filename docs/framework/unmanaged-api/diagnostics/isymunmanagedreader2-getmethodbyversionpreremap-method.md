@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bcd200b7fa431f193dd202c3c2a690aa22ec8e32
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 06b8ebf26794baa1d957cc47d1179283611b62d5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61986253"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67736682"
 ---
 # <a name="isymunmanagedreader2getmethodbyversionpreremap-method"></a>ISymUnmanagedReader2::GetMethodByVersionPreRemap 方法
 获取符号读取器方法，给定一个方法标记和编辑并继续的版本号。 版本号从 1 开始，并会在每的次递增的方法更改因执行编辑并继续操作。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT GetMethodByVersionPreRemap(  
     [in]  mdMethodDef token,  
     [in]  int version,  

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dfc94c2de1a14842cc017e5c4ef6023154c20f2a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1cb314f2afce0cbbf1c5fb185f516a30ad8313af
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61699898"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780507"
 ---
 # <a name="idebuggerthreadcontrolstartblockingfordebugger-method"></a>IDebuggerThreadControl::StartBlockingForDebugger 方法
 通知主机调试服务即将启动阻塞所有线程。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT StartBlockingForDebugger (  
     [in] DWORD dwUnused  
 );  
@@ -49,7 +49,7 @@ HRESULT StartBlockingForDebugger (
   
  **库：** 包含为 MSCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

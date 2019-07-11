@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 16001c4af2bcd8aa8d5fff6b06fa8c275bc24cb9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e50421dc15dd30f1811dbe5ebef2ff2f7a0a9483
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61597473"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67755822"
 ---
 # <a name="icorprofilercallbackinitialize-method"></a>ICorProfilerCallback::Initialize 方法
 调用以初始化代码探查器每次启动新的公共语言运行时 (CLR) 应用程序时。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT Initialize(  
     [in] IUnknown     *pICorProfilerInfoUnk);  
 ```  
@@ -48,7 +48,7 @@ HRESULT Initialize(
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7e7f2e8247d3ba822cc09a98f985926e6b5400c6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b608b8818890bdb27a956a90c7987cf7c421304d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62041166"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67772268"
 ---
 # <a name="icorprofilerinfogettokenandmetadatafromfunction-method"></a>ICorProfilerInfo::GetTokenAndMetadataFromFunction 方法
 获取元数据标记和可用于指定的函数对令牌的元数据接口实例。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT GetTokenAndMetaDataFromFunction(  
     [in]  FunctionID functionId,  
     [in]  REFIID     riid,  
@@ -57,7 +57,7 @@ HRESULT GetTokenAndMetaDataFromFunction(
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

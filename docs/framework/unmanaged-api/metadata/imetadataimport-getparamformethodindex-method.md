@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7c6f06ff4fc7d855ea07f1f572a2b7ea948efc51
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fdb3def9574f4442a22b370323dfdf044170542b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777652"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778942"
 ---
 # <a name="imetadataimportgetparamformethodindex-method"></a>IMetaDataImport::GetParamForMethodIndex 方法
 获取表示指定的 MethodDef 标记所表示的方法的指定的参数的标记。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT GetParamForMethodIndex (  
    [in]  mdMethodDef      md,  
    [in]  ULONG            ulParamSeq,  
@@ -54,7 +54,7 @@ HRESULT GetParamForMethodIndex (
   
  **库：** 包含为 MsCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

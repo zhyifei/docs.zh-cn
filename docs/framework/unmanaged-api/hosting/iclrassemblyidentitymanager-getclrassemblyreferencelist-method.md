@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: de166a22350e49197ff6a5b5d6dc956cdcc2d1ac
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 72bfb896ccff23938a4fc218fb1f95eebcf5bb93
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61985135"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67773502"
 ---
 # <a name="iclrassemblyidentitymanagergetclrassemblyreferencelist-method"></a>ICLRAssemblyIdentityManager::GetCLRAssemblyReferenceList 方法
 获取到的接口指针[ICLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)从提供的列表的部分程序集标识的实例。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT  GetCLRAssemblyReferenceList (  
     [in] LPCWSTR *ppwzAssemblyReferences,  
     [in] DWORD    dwNumOfReferences,  
@@ -65,7 +65,7 @@ HRESULT  GetCLRAssemblyReferenceList (
   
  **库：** 包含为 MSCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

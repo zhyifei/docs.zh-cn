@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 823a172c05d2ce76fef790966f54d7216f579fde
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2060a70e2a3ce355f43ade67e6d6843670e00ad3
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777528"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778846"
 ---
 # <a name="imetadataimportgetsigfromtoken-method"></a>IMetaDataImport::GetSigFromToken 方法
 获取与指定标记关联的二进制元数据签名。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT GetSigFromToken (   
    [in]   mdSignature        mdSig,   
    [out]  PCCOR_SIGNATURE    *ppvSig,   
@@ -54,7 +54,7 @@ HRESULT GetSigFromToken (
   
  **库：** 包含为 MsCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

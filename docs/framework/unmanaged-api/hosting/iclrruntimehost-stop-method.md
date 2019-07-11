@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 85116244ad21842fab025ddd48106deef75f210b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 97a0e6cbbd8972f58f9eedcfeb8aff1f93694064
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61771815"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67765666"
 ---
 # <a name="iclrruntimehoststop-method"></a>ICLRRuntimeHost::Stop 方法
 公共语言运行时 (CLR) 将停止执行代码。  
@@ -32,7 +32,7 @@ ms.locfileid: "61771815"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT Stop();  
 ```  
   
@@ -54,7 +54,7 @@ HRESULT Stop();
   
  **库：** 包含为 MSCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

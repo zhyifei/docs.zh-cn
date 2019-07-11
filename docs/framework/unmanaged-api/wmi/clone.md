@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bf9cca10a580af7991889de6993e931347fc27ea
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 80faf1a5a6297f5b105fdb609366f6774f8692b3
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61968150"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67761651"
 ---
 # <a name="clone-function"></a>Clone 函数
 返回一个新对象，该对象是当前对象的完整克隆。   
@@ -30,7 +30,7 @@ ms.locfileid: "61968150"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT Clone (
    [in] int                  vFunc, 
    [in] IWbemClassObject*    ptr, 
@@ -53,7 +53,7 @@ HRESULT Clone (
 
 此函数返回以下值中定义*WbemCli.h*标头文件，也可以在定义它们为常量在代码中：
 
-|返回的常量  |“值”  |描述  |
+|返回的常量  |值  |描述  |
 |---------|---------|---------|
 | `WBEM_E_FAILED` | 0x80041001 | 已存在时的常见错误。 |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `null` 指定为参数，且是不合法在这种用法。 |
@@ -71,7 +71,7 @@ HRESULT Clone (
   
  **标头：** WMINet_Utils.idl  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>请参阅
 

@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d12cbb66464baba4ee706ccb076764fbf025fc5f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 916d62a2b79a44d92611e735c6f9bbb3e01970e2
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61786173"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782730"
 ---
 # <a name="gettypelibinfo-function"></a>GetTypeLibInfo 函数
 返回有关指定的类型库的信息通过检查其[TLIBATTR](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagtlibattr)结构。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT GetTypeLibInfo(  
     [in]   LPWSTR     szFile,  
     [out]  GUID      *pTypeLibID,  
@@ -70,7 +70,7 @@ HRESULT GetTypeLibInfo(
   
  **库：** TlbRef.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4ebde1d506a120a99e1c637c660b45d698994f5a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 93ca394eb877a86e4242d5f9f18eb26f5628db7e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61992467"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67751084"
 ---
 # <a name="imetadataemitsetfieldrva-method"></a>IMetaDataEmit::SetFieldRVA 方法
 设置指定标记所引用的字段的相对虚拟地址的全局变量值。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT SetFieldRVA (   
     [in]  mdFieldDef  fd,   
     [in]  ULONG       ulRVA   
@@ -50,7 +50,7 @@ HRESULT SetFieldRVA (
   
  **库：** 用作 MSCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

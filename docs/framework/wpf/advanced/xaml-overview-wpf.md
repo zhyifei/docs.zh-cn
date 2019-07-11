@@ -19,12 +19,12 @@ helpviewer_keywords:
 - Extensible Application Markup Language (see XAML)
 - attribute syntax [XAML]
 ms.assetid: a80db4cd-dd0f-479f-a45f-3740017c22e4
-ms.openlocfilehash: f03d9481a2af3edebe83df5b1b725b7290d30d00
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: e0d277eb039c1fb1668f292d83ab9e7dbe4be70e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457536"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67762321"
 ---
 # <a name="xaml-overview-wpf"></a>XAML 概述 (WPF)
 本主题介绍 XAML 语言的功能，并演示如何使用 XAML 编写 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 应用程序。 本主题专门介绍 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 实现的 XAML。 XAML 本身是一个比 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 大的语言概念。  
@@ -64,7 +64,7 @@ ms.locfileid: "66457536"
 ### <a name="property-element-syntax"></a>属性元素语法  
  对于对象元素的某些属性，无法使用特性语法，因为无法在特性语法的引号和字符串限制内充分地表达提供属性值所必需的对象或信息。 对于这些情况，可以使用另一个语法，即属性元素语法。  
   
- 属性元素开始标记的语法为 `<`*typeName*`.`*propertyName*`>`。 通常，该标记的内容是类型的对象元素，属性会将该元素作为其值。 指定内容之后，必须用结束标记结束属性元素。 结束标记的语法为 `</`*typeName*`.`*propertyName*`>`。  
+ 属性元素开始标记的语法为 `<`*typeName*`.`*propertyName*`>`。 通常情况下，该标记的内容是类型的对象元素的属性将作为其值。 指定内容之后，必须关闭具有结束标记的属性元素。 结束标记的语法为 `</`*typeName*`.`*propertyName*`>`。  
   
  如果可以使用特性语法，那么使用特性语法通常更为方便，且能够实现更为精简的标记，但这通常只是样式问题，而不是技术限制。 以下示例演示在前面的特性语法示例中设置的相同属性，但这次对 `Button` 的所有属性使用属性元素语法。  
   
@@ -199,7 +199,7 @@ ms.locfileid: "66457536"
  [!code-xaml[XAMLOvwSupport#RootOnly](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page2.xaml#rootonly)]  
 [!code-xaml[XAMLOvwSupport#RootOnly2](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page2.xaml#rootonly2)]  
   
- 根元素还包含特性 `xmlns` 和 `xmlns:x`。 这些特性向 XAML 处理器指示哪些 XAML 命名空间包含标记将其作为元素引用的后备类型的类型定义。 `xmlns` 特性明确指示默认的 XAML 命名空间。 在默认的 XAML 命名空间中，可以不使用前缀指定标记中的对象元素。 对于大多数 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序方案以及 [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)] 的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 部分中给出的几乎所有示例，默认的 XAML 命名空间均映射到 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 命名空间 [!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)]。 `xmlns:x` 特性指示另一个 XAML 命名空间，该命名空间映射 XAML 语言命名空间[!INCLUDE[TLA#tla_xamlxmlnsv1](../../../../includes/tlasharptla-xamlxmlnsv1-md.md)]。  
+ 根元素还包含特性 `xmlns` 和 `xmlns:x`。 这些特性向 XAML 处理器指示哪些 XAML 命名空间包含标记将其作为元素引用的后备类型的类型定义。           `xmlns` 特性明确指示默认的 XAML 命名空间。 在默认的 XAML 命名空间中，可以不使用前缀指定标记中的对象元素。 对于大多数 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序方案以及 [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)] 的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 部分中给出的几乎所有示例，默认的 XAML 命名空间均映射到 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 命名空间 [!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)]。           `xmlns:x` 特性指示另一个 XAML 命名空间，该命名空间映射 XAML 语言命名空间[!INCLUDE[TLA#tla_xamlxmlnsv1](../../../../includes/tlasharptla-xamlxmlnsv1-md.md)]。  
   
  使用 `xmlns` 定义用法范围和名称范围映射的做法符合 XML 1.0 规范。 XAML 名称范围与 XML 名称范围的不同仅在于：XAML 名称范围还包含有关进行类型解析和分析 XAML 时名称范围的元素如何受类型支持的信息。  
   
@@ -208,7 +208,7 @@ ms.locfileid: "66457536"
  其 XAML 处理器的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 实现包括可识别 WPF 核心程序集的基础结构。 已知 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 核心程序集包含支持指向默认 XAML 命名空间的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 映射的类型。 这是通过项目生成文件中的配置以及 WPF 生成和项目系统实现的。 因此，为了引用来自 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 程序集的 XAML 元素，只需将默认 XAML 命名空间声明为默认 `xmlns`。  
   
 ### <a name="the-x-prefix"></a>X： 前缀  
- 在之前的根元素示例中，前缀 `x:` 用于映射 XAML 命名空间 [!INCLUDE[TLA#tla_xamlxmlnsv1](../../../../includes/tlasharptla-xamlxmlnsv1-md.md)]，该命名空间是支持 XAML 语言构造的专用 XAML 命名空间。 在这整个 [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)] 的项目模板、示例以及文档中，此 `x:` 前缀用于映射该 XAML 命名空间。 XAML 语言的 XAML 命名空间包含多个将在 XAML 中频繁使用的编程构造。 下面列出了最常用的 `x:` 前缀编程构造：  
+ 在之前的根元素示例中，前缀 `x:` 用于映射 XAML 命名空间 [!INCLUDE[TLA#tla_xamlxmlnsv1](../../../../includes/tlasharptla-xamlxmlnsv1-md.md)]，该命名空间是支持 XAML 语言构造的专用 XAML 命名空间。 在这整个 [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)] 的项目模板、示例以及文档中，此 `x:` 前缀用于映射该 XAML 命名空间。 XAML 语言 XAML 命名空间包含多个将在 XAML 中频繁使用的编程构造。 下面列出了最常用的 `x:` 前缀编程构造：  
   
 - [X:key](../../xaml-services/x-key-directive.md):设置的每个资源的唯一键<xref:System.Windows.ResourceDictionary>（或其他框架中的类似字典概念）。 在典型的 WPF 应用程序标记中的所有 `x:` 用法中，`x:Key` 可能占到 90%。  
   
@@ -220,7 +220,7 @@ ms.locfileid: "66457536"
   
 - [x： 类型](../../xaml-services/x-type-markup-extension.md):构造<xref:System.Type>引用基于类型名称。 这用于指定需要的属性<xref:System.Type>，如<xref:System.Windows.Style.TargetType%2A?displayProperty=nameWithType>，但属性经常具有本机字符串-到-<xref:System.Type>转换的方式， [x： 类型](../../xaml-services/x-type-markup-extension.md)标记扩展用法是可选。  
   
- `x:` 前缀/XAML 命名空间中还有其他一些不太常见的编程构造。 有关详细信息，请参阅[XAML Namespace （x:）语言功能](../../xaml-services/xaml-namespace-x-language-features.md)。  
+           `x:` 前缀/XAML 命名空间中还有其他一些不太常见的编程构造。 有关详细信息，请参阅[XAML Namespace （x:）语言功能](../../xaml-services/xaml-namespace-x-language-features.md)。  
   
 <a name="custom_prefixes_and_custom_types_in_xaml"></a>   
 ## <a name="custom-prefixes-and-custom-types-in-xaml"></a>自定义前缀和 XAML 中的自定义类型  

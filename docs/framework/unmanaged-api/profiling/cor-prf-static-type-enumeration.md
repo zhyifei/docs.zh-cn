@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 310915ce84819a2a5a2d5e1f22356b61c16e7ec7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 753c3b38187dd69593dcb0520acef9ce4b137039
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61599008"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67751901"
 ---
 # <a name="corprfstatictype-enumeration"></a>COR_PRF_STATIC_TYPE 枚举
 指示字段是否为静态的，并在字段为静态字段时指示应用于该字段的静态质量。 这些值可以组合使用位或运算来指示该字段具有多个不同的静态质量。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 typedef enum {  
     COR_PRF_FIELD_NOT_A_STATIC = 0x0,  
     COR_PRF_FIELD_APP_DOMAIN_STATIC = 0x1,  
@@ -55,7 +55,7 @@ typedef enum {
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

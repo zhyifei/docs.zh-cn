@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 08e4c395026a743323b40e5b1ace3db64e368078
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d0b4074d9dab8ad46468930373ad44b0c72bd690
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61967723"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67763737"
 ---
 # <a name="ihostcrsttryenter-method"></a>IHostCrst::TryEnter 方法
 尝试进入关键节由当前[IHostCrst](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-interface.md)实例。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT TryEnter (  
     [in]  DWORD  option,  
     [out] BOOL   *pbSucceeded  
@@ -64,7 +64,7 @@ HRESULT TryEnter (
   
  **库：** 包含为 MSCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

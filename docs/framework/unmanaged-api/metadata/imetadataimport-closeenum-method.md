@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7846eeceeb4d59c4e9aae73c79172c89184396e0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 7f27955467436d562c6a9acc9d7f666427e4c85b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59123846"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67770712"
 ---
 # <a name="imetadataimportcloseenum-method"></a>IMetaDataImport::CloseEnum 方法
 关闭由指定句柄的枚举器。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 void CloseEnum (  
    [in] HCORENUM hEnum  
 );  
@@ -49,7 +49,7 @@ void CloseEnum (
   
  **库：** 包含为 MsCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

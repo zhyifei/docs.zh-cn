@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2d6de2a5ff4d2743c7aca2e46b3af848138c15fb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 46ef53acdfa06b0c2be9d2aa55e89ce8fa34dfb0
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61917353"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67761738"
 ---
 # <a name="beginenumeration-function"></a>BeginEnumeration 函数
 开始为对象提供的方法的枚举。  
@@ -30,7 +30,7 @@ ms.locfileid: "61917353"
     
 ## <a name="syntax"></a>语法  
   
-``` 
+```cpp 
 HRESULT BeginMethodEnumeration (
    [in] int               vFunc, 
    [in] IWbemClassObject* ptr, 
@@ -49,7 +49,7 @@ HRESULT BeginMethodEnumeration (
 `lEnumFlags`  
 [in]零 (0) 的所有方法，或指定范围的枚举的标志。 在中定义的以下标志*WbemCli.h*标头文件，也可以在定义它们为常量在代码中：
 
-返回的常量  |“值”  |描述  |
+返回的常量  |值  |描述  |
 |---------|---------|---------|
 | `WBEM_FLAG_LOCAL_ONLY` | 0x10 | 限制对自身的类中定义的方法的枚举。 |
 | `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | 限制对从基类继承的属性的枚举。 |
@@ -58,7 +58,7 @@ HRESULT BeginMethodEnumeration (
 
 此函数返回以下值中定义*WbemCli.h*标头文件，也可以在定义它们为常量在代码中：
 
-|返回的常量  |“值”  |描述  |
+|返回的常量  |值  |描述  |
 |---------|---------|---------|
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | `lEnnumFlags` 为非零值并不是指定的标志之一。 |
 |`WBEM_S_NO_ERROR` | 0 | 函数调用成功。  |
@@ -74,7 +74,7 @@ HRESULT BeginMethodEnumeration (
   
  **标头：** WMINet_Utils.idl  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>请参阅
 

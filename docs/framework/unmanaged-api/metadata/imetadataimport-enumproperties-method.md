@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 410fd7a702d3aa3812b4ea053c43fdaa507a474a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3c63797b60354b461891f44d32cf1840f7fdcf3d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62042505"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67756495"
 ---
 # <a name="imetadataimportenumproperties-method"></a>IMetaDataImport::EnumProperties 方法
 枚举 PropertyDef 标记，这些标记表示指定的 TypeDef 标记所引用的类型的属性。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT EnumProperties (  
    [in, out] HCORENUM    *phEnum,  
    [in]      mdTypeDef   td,  
@@ -69,7 +69,7 @@ HRESULT EnumProperties (
   
  **库：** 包含为 MsCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

@@ -12,19 +12,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2d4e006a03db5b16de93dfd07ec7b964db4bfc1d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bab7da5855eaf562e55738b489ebf6f62dc45d04
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61609212"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67740229"
 ---
 # <a name="cordebugdecodeeventflagswindows-enumeration"></a>“Cor调试解码事件标志窗口”枚举
 提供关于 Windows 平台上的调试事件的其他信息。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 typedef enum CorDebugDecodeEventFlagsWindows {  
     IS_FIRST_CHANCE = 1,  
 } CorDebugDecodeEventFlagsWindows;  
@@ -49,7 +49,7 @@ typedef enum CorDebugDecodeEventFlagsWindows {
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

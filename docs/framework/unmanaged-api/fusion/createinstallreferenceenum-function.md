@@ -18,19 +18,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d7820b33dcfacae5ede5235607e40d95940fc474
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: da77d2eb848419c35e57ffacc8bf3d4580106fa5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61771893"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67764324"
 ---
 # <a name="createinstallreferenceenum-function"></a>CreateInstallReferenceEnum 函数
 获取一个指向[IInstallReferenceEnum](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceenum-interface.md)实例，它表示对指定的程序集的应用程序的引用的列表。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT CreateInstallReferenceEnum (  
     [out] IInstallReferenceEnum **ppRefEnum,  
     [in]  IAssemblyName         *pName,  
@@ -59,7 +59,7 @@ HRESULT CreateInstallReferenceEnum (
   
  **库：** Fusion.dll 和 Mscorwks.dll。 使用而不是 Mscorwks.dll Fusion.dll 确保面向.NET Framework 的正确版本。  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

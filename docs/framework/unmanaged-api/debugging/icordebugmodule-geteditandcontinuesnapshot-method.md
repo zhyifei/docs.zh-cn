@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3d3cf2947380a7d48a261faf1bbc24ec5773b970
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fb57f6e1f87b9baf61de781033d7d8bfe1639684
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61994872"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67762637"
 ---
 # <a name="icordebugmodulegeteditandcontinuesnapshot-method"></a>ICorDebugModule::GetEditAndContinueSnapshot 方法
 已否决。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT GetEditAndContinueSnapshot(  
     [out] ICorDebugEditAndContinueSnapshot **ppEditAndContinueSnapshot  
 );  
@@ -42,4 +42,4 @@ HRESULT GetEditAndContinueSnapshot(
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

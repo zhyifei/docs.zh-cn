@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2c16f6d1334888fc389a7c39cf0a3865afca2085
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3ada3a06a2beb8f21c3e24665c0f1f8e7c48515f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61934740"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67752956"
 ---
 # <a name="icordebugevalcreatevalue-method"></a>ICorDebugEval::CreateValue 方法
 创建指定类型的值与初始值为零或 null。  
@@ -31,7 +31,7 @@ ms.locfileid: "61934740"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT CreateValue (  
     [in] CorElementType     elementType,  
     [in] ICorDebugClass     *pElementClass,  

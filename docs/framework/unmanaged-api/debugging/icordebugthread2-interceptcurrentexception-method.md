@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 01b883a5c6dd0cff119ff09747d32c607ac7ec60
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a59476728280e42f45c416b614e6a721efaf26c8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61968293"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67765256"
 ---
 # <a name="icordebugthread2interceptcurrentexception-method"></a>ICorDebugThread2::InterceptCurrentException 方法
 允许调试器来拦截此线程上的当前异常。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT InterceptCurrentException (  
     [in] ICorDebugFrame  *pFrame  
 );  
@@ -49,4 +49,4 @@ HRESULT InterceptCurrentException (
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

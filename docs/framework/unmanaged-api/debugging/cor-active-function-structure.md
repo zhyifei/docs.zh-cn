@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c0400da0cd29d642a1be42be7e2b22213ae54b94
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6875ce0e7ae4cefa9b0c8abaded0dd4535bdf838
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61609655"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67740823"
 ---
 # <a name="coractivefunction-structure"></a>COR_ACTIVE_FUNCTION 结构
 包含有关在线程框架中当前处于活动状态的函数的信息。 此结构可供[ICorDebugThread2::GetActiveFunctions](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-getactivefunctions-method.md)方法。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 typedef struct  _COR_ACTIVE_FUNCTION {  
     ICorDebugAppDomain   *pAppDomain;  
     ICorDebugModule      *pModule;  
@@ -55,7 +55,7 @@ typedef struct  _COR_ACTIVE_FUNCTION {
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

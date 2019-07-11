@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 34d93c6956ff391e4d8726d8e45265c96947ad4c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 525ec4828fb942aeb447940ea68a523cd7c69140
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61986396"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67736736"
 ---
 # <a name="isymunmanagedreaderreplacesymbolstore-method"></a>ISymUnmanagedReader::ReplaceSymbolStore 方法
 用增量符号存储区替换现有的符号存储区。 此方法是类似于[UpdateSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md)方法，只不过给定的增量充当完全替换而不是更新。  
@@ -32,7 +32,7 @@ ms.locfileid: "61986396"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT ReplaceSymbolStore (  
     [in] const WCHAR *filename,  
     [in] IStream *pIStream);  

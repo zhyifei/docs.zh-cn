@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d66d24da05bc3b8f0c3d0a828456d7c61613d219
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: afa2d35a193a11360b52bcbdc1d9e5dae16d1c90
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62049877"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782127"
 ---
 # <a name="imetadataimportenummodulerefs-method"></a>IMetaDataImport::EnumModuleRefs 方法
 枚举表示导入的模块的 ModuleRef 标记。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT EnumModuleRefs (  
    [in, out] HCORENUM     *phEnum,  
    [out]     mdModuleRef  rModuleRefs[],  
@@ -65,7 +65,7 @@ HRESULT EnumModuleRefs (
   
  **库：** 包含为 MsCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

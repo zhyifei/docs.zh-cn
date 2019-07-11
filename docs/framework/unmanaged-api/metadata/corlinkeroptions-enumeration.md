@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dc0554ed89d21607978d059b26c4ad69e59a2d4c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 906b5ef2795d8fad996185f66f145a8cd3618c41
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62045785"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781814"
 ---
 # <a name="corlinkeroptions-enumeration"></a>CorLinkerOptions 枚举
 指定用于选择元数据链接器的选项的标志。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 typedef enum CorLinkerOptions {  
     MDAssembly          = 0x00000000,  
     MDNetModule         = 0x00000001,  
@@ -47,7 +47,7 @@ typedef enum CorLinkerOptions {
   
  **标头：** CorHdr.h  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

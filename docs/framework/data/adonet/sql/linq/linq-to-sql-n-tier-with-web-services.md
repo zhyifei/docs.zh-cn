@@ -2,18 +2,18 @@
 title: 具有 Web 服务的 LINQ to SQL N 层
 ms.date: 03/30/2017
 ms.assetid: 9cb10eb8-957f-4beb-a271-5f682016fed2
-ms.openlocfilehash: 7b13a0cd77925423a12c093b1b5ac9b63ad7e019
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4fafaa60dd75def98b486e18faa5bd3ecd1d6315
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033527"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743049"
 ---
 # <a name="linq-to-sql-n-tier-with-web-services"></a>具有 Web 服务的 LINQ to SQL N 层
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 尤其是对于如 Web 服务的松耦合数据访问层 (DAL) 中的中间层上使用而设计。 如果表示层为 ASP.NET 网页，则使用 <xref:System.Web.UI.WebControls.LinqDataSource> Web 服务器控件管理用户界面与中间层上的 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 之间的数据传输。 如果表示层不是 ASP.NET 页，则中间层和表示层都必须执行一些附加工作以管理数据的序列化和反序列化。  
   
 ## <a name="setting-up-linq-to-sql-on-the-middle-tier"></a>在中间层上设置 LINQ to SQL  
- 在 Web 服务或 n 层应用程序中，中间层包含数据上下文和实体类。 可以手动创建这些类，或是按照文档中其他部分的说明使用 SQLMetal.exe 或[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]创建。 在设计时，您可以选择使实体类可序列化。 有关详细信息，请参阅[如何：使实体可序列化](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md)。 也可以选择创建包装要序列化的数据的一组单独类，然后当在 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 查询中返回数据时投射到这些可序列化类型中。  
+ 在 Web 服务或 n 层应用程序中，中间层包含数据上下文和实体类。 手动或通过使用 SQLMetal.exe 或对象关系设计器，如文档中所述的其他位置，可以创建这些类。 在设计时，您可以选择使实体类可序列化。 有关详细信息，请参阅[如何：使实体可序列化](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md)。 也可以选择创建包装要序列化的数据的一组单独类，然后当在 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 查询中返回数据时投射到这些可序列化类型中。  
   
  随后可以使用客户端为进行检索、插入和更新数据而调用的方法来定义接口。 这些接口方法包装 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 查询。 可以使用任何类型的序列化机制处理远程方法调用和数据的序列化。 唯一的要求是如果您的对象模型中具有循环或双向关系（如标准 Northwind 对象模型中的 Customers 与 Orders 之间的关系），则必须使用支持这种关系的序列化程序。 Windows Communication Foundation (WCF) <xref:System.Runtime.Serialization.DataContractSerializer> 支持双向关系，但是使用非 WCF Web 服务的 XmlSerializer 不支持这种关系。 如果您选择使用 XmlSerializer，则必须确保您的对象模型没有循环关系。  
   

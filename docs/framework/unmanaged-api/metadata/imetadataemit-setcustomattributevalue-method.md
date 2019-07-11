@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6f9e684b90dcc7f0ff83962361486caf7e991568
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2a1f248cf800e9c2bf17d7849e449287cfc493f5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62050072"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67737212"
 ---
 # <a name="imetadataemitsetcustomattributevalue-method"></a>IMetaDataEmit::SetCustomAttributeValue 方法
 设置或更新由调用之前定义的自定义属性的值[imetadataemit:: Definecustomattribute](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definecustomattribute-method.md)。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT SetCustomAttributeValue (   
     [in]  mdCustomAttribute       pcv,   
     [in]  void const              *pCustomAttribute,    
@@ -54,7 +54,7 @@ HRESULT SetCustomAttributeValue (
   
  **库：** 用作 MSCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

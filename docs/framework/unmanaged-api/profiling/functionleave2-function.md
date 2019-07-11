@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8bde206d56bc7e8c930e1e428512232caccfb940
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 124921f2f99ca4d8da88cc3713624383e225a26f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586826"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781273"
 ---
 # <a name="functionleave2-function"></a>FunctionLeave2 函数
 函数即将返回给调用方，并提供有关堆栈帧和函数返回值的信息，请通知探查器。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 void __stdcall FunctionLeave2 (  
     [in]  FunctionID                        funcId,  
     [in]  UINT_PTR                          clientData,  
@@ -76,7 +76,7 @@ void __stdcall FunctionLeave2 (
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

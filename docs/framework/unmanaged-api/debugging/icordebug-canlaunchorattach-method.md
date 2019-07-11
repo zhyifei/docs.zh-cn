@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c109bab2ecd14e2b698a9b24dace56e986ad5e58
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: af933be9edc0d0fe7249f33800fe259ddc779aeb
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593523"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67738312"
 ---
 # <a name="icordebugcanlaunchorattach-method"></a>ICorDebug::CanLaunchOrAttach 方法
 返回一个 HRESULT，指示是否可以在当前的计算机和运行时配置的上下文中启动一个新的进程或附加到指定的现有进程。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT CanLaunchOrAttach (  
     [in] DWORD      dwProcessId,  
     [in] BOOL       win32DebuggingEnabled  
@@ -66,7 +66,7 @@ HRESULT CanLaunchOrAttach (
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

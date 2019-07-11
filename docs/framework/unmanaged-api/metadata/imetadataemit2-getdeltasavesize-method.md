@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 69897a7b646eb9f58e6b38588e302287b4241779
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0b0a190ce57091434006421e6d8551c78cbe66b8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62043675"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777167"
 ---
 # <a name="imetadataemit2getdeltasavesize-method"></a>IMetaDataEmit2::GetDeltaSaveSize 方法
 获取一个值，该值指示元数据大小而导致编辑并继续在当前会话中的任何更改。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT GetDeltaSaveSize (  
     [in]  CorSaveSize  fSave,  
     [out] DWORD        *pdwSaveSize  
@@ -50,7 +50,7 @@ HRESULT GetDeltaSaveSize (
   
  **库：** 用作 MsCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

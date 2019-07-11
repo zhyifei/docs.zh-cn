@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 15b1f6be2dac6bc7566852791ac22e495949521c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b9b7138d403bc84ab377301b82d697fd137416c6
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61992636"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781595"
 ---
 # <a name="corserializationtype-enumeration"></a>CorSerializationType 枚举
 指定公共语言运行时如何序列化对象。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 typedef enum CorSerializationType {  
   
     SERIALIZATION_TYPE_UNDEFINED     = 0,  
@@ -85,7 +85,7 @@ typedef enum CorSerializationType {
   
  **标头：** CorHdr.h  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

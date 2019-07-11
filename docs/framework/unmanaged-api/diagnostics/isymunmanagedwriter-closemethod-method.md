@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 591279a80b7d6a770127fb98eb71c056c48bdffd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 23f77f30b84622dffd8c76bb9302ad564f40ed41
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61934142"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778188"
 ---
 # <a name="isymunmanagedwriterclosemethod-method"></a>ISymUnmanagedWriter::CloseMethod 方法
 关闭当前方法。 一种方法关闭之后，可以在其中定义没有更多的符号。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT CloseMethod();  
 ```  
   

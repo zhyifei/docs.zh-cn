@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fb0e7a676fdbbe3cf04108266471833b28275b1b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d6fb0b11c26ff65f74681d1e3bf7324bfb0e559d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61985356"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67766621"
 ---
 # <a name="iceefilegen-class"></a>ICeeFileGen 类
 提供用于创建本机可移植可执行 (PE) 文件的功能。 接口通常用于由编译器生成可执行其已编译的输出。  
@@ -33,7 +33,7 @@ ms.locfileid: "61985356"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 class ICeeFileGen {  
 public:  
     virtual HRESULT CreateCeeFile(HCEEFILE *ceeFile);  

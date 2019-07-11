@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f53c8290271391e52176f8364b592ce6b46faf71
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0d287305934c7884d5474935e50de3d26e225975
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61994625"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67746160"
 ---
 # <a name="icordebugnativeframegetlocalregistervalue-method"></a>ICorDebugNativeFrame::GetLocalRegisterValue 方法
 获取参数或指定注册到此本机帧中存储的本地变量的值。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT GetLocalRegisterValue (  
     [in]  CorDebugRegister   reg,  
     [in]  ULONG              cbSigBlob,  
@@ -61,6 +61,6 @@ HRESULT GetLocalRegisterValue (
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅

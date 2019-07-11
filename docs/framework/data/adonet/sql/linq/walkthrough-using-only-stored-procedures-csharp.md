@@ -2,12 +2,12 @@
 title: 演练：仅使用存储过程 (C#)
 ms.date: 03/30/2017
 ms.assetid: ecde4bf2-fa4d-4252-b5e4-96a46b9e097d
-ms.openlocfilehash: f4c34252f7d92985dac94663c85d3cca0dc58ab3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f16cbdc1d22e7ec08237c0f13db9499ee2f9194f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64655127"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742554"
 ---
 # <a name="walkthrough-using-only-stored-procedures-c"></a>演练：仅使用存储过程 (C#)
 本演练提供了通过仅执行存储过程来访问数据的 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 基本端对端方案。 数据库管理员经常使用此方法来限制数据存储的访问方式。  
@@ -17,7 +17,7 @@ ms.locfileid: "64655127"
   
  对于本演练的目的，你将使用已映射到 Northwind 示例数据库中的存储过程的两种方法：CustOrdersDetail 和 CustOrderHist。 此映射发生在运行 SqlMetal 命令行工具来生成 C# 文件时。 有关更多信息，请参见本演练后面的“先决条件”一节。  
   
- 本演练不依赖于[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]。 使用 Visual Studio 的开发人员还可以使用[!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)]实现存储的过程功能。 请参阅[LINQ to SQL 工具在 Visual Studio 中](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)。  
+ 本演练不依赖于对象关系设计器。 使用 Visual Studio 的开发人员还可以使用 O/R 设计器来实现存储的过程功能。 请参阅[LINQ to SQL 工具在 Visual Studio 中](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)。  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
   
@@ -64,13 +64,13 @@ ms.locfileid: "64655127"
   
 2. 在中**项目类型**窗格中的**新项目**对话框中，单击**Visual C#** 。  
   
-3. 在 **“模板”** 窗格中，单击 **“Windows 窗体应用程序”**。  
+3. 在 **“模板”** 窗格中，单击 **“Windows 窗体应用程序”** 。  
   
 4. 在中**名称**框中，键入**SprocOnlyApp**。  
   
 5. 在中**位置**框中，确认你想要用于存储项目文件。  
   
-6. 单击 **“确定”**。  
+6. 单击 **“确定”** 。  
   
      Windows 窗体设计器即会打开。  
   
@@ -112,9 +112,9 @@ ms.locfileid: "64655127"
   
 #### <a name="to-set-up-the-user-interface"></a>设置用户界面  
   
-1. 返回 Windows 窗体设计器 (**Form1.cs[Design]**)。  
+1. 返回 Windows 窗体设计器 (**Form1.cs[Design]** )。  
   
-2. 在 **“视图”** 菜单上单击 **“工具箱”**。  
+2. 在 **“视图”** 菜单上单击 **“工具箱”** 。  
   
      工具箱即会打开。  
   
@@ -127,9 +127,9 @@ ms.locfileid: "64655127"
   
 4. 右键单击**label1**，然后单击**属性**。  
   
-5. 更改**文本**属性从**label1**到**Enter OrderID:**。  
+5. 更改**文本**属性从**label1**到**Enter OrderID:** 。  
   
-6. 在相同的方式对**label2**，更改**文本**属性从**label2**到**Enter CustomerID:**。  
+6. 在相同的方式对**label2**，更改**文本**属性从**label2**到**Enter CustomerID:** 。  
   
 7. 同样，在更改**文本**属性**button1**到**订单详细信息**。  
   

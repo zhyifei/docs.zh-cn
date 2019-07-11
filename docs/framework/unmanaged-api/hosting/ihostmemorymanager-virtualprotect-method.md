@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 62aa6b1d9be86a9b60abf894d67555f706e6a8ac
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1aa4ab44fc8ef1033dcef1a9b36d7487da86cd58
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61760150"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779354"
 ---
 # <a name="ihostmemorymanagervirtualprotect-method"></a>IHostMemoryManager::VirtualProtect 方法
 充当相应的 Win32 函数的逻辑包装。 Win32 实现`VirtualProtect`更改调用进程的虚拟地址空间中已提交页面区域上的保护。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT VirtualProtect (  
     [in]  void*   lpAddress,  
     [in]  SIZE_T  dwSize,  
@@ -72,7 +72,7 @@ HRESULT VirtualProtect (
   
  **库：** 包含为 MSCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 
