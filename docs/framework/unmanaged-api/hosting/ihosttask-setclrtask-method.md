@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b0220a0699e7325c6d81ba3ad4627176640937dd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 884fedd6e8c2d79e895591e38b59cd3abb27275e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789533"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67764392"
 ---
 # <a name="ihosttasksetclrtask-method"></a>IHostTask::SetCLRTask 方法
 将相关联`ICLRTask`实例与当前[IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)实例。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT SetCLRTask (  
     [in] ICLRTask *pCLRTask  
 );  
@@ -60,7 +60,7 @@ HRESULT SetCLRTask (
   
  **库：** 包含为 MSCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

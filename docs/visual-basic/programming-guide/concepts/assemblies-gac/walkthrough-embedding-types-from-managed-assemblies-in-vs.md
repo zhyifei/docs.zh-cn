@@ -2,12 +2,12 @@
 title: 演练：在 Visual Studio 中嵌入托管程序集中的类型 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 56ed12ba-adff-4e9c-a668-7fcba80c4795
-ms.openlocfilehash: 18f22a771ab7279f177fe39d8c372a8517056890
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0c0de529a0005c9dbaf1f8d0f25957b217280e31
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64754832"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67753020"
 ---
 # <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-visual-basic"></a>演练：在 Visual Studio 中嵌入托管程序集中的类型 (Visual Basic)
 
@@ -51,17 +51,17 @@ ms.locfileid: "64754832"
 
 ## <a name="creating-an-interface"></a>创建接口
 
-#### <a name="to-create-the-type-equivalence-interface-project"></a>创建类型等效性接口项目
+### <a name="to-create-the-type-equivalence-interface-project"></a>创建类型等效性接口项目
 
-1. 在 Visual Studio 中的“文件”菜单上，指向“新建”，然后单击“项目”。
+1. 在 Visual Studio 中的“文件”  菜单上，指向“新建”  ，然后单击“项目”  。
 
-2. 在“新建项目”对话框的“项目类型”窗格中，确保选中“Windows”。 在“模板”窗格中，选择“类库”。 在“名称”框中，键入 `TypeEquivalenceInterface`，然后单击“确定”。 新项目创建完成。
+2. 在“新建项目”  对话框的“项目类型”  窗格中，确保选中“Windows”  。 在“模板”  窗格中，选择“类库”  。 在“名称”  框中，键入 `TypeEquivalenceInterface`，然后单击“确定”  。 新项目创建完成。
 
 3. 在中**解决方案资源管理器**，右键单击 Class1.vb 文件，然后单击**重命名**。 将文件重命名为 `ISampleInterface.vb`，然后按 Enter。 重命名文件也会将类重命名为 `ISampleInterface`。 此类将表示类的公共接口。
 
-4. 右键单击 TypeEquivalenceInterface 项目，然后单击“属性”。 单击“编译”选项卡。将输出路径设置为开发计算机上的有效位置，例如 `C:\TypeEquivalenceSample`。 本演练的后续步骤中也将使用此位置。
+4. 右键单击 TypeEquivalenceInterface 项目，然后单击“属性”  。 单击“编译”  选项卡。将输出路径设置为开发计算机上的有效位置，例如 `C:\TypeEquivalenceSample`。 本演练的后续步骤中也将使用此位置。
 
-5. 在编辑项目属性期间，单击“签名”选项卡。选择“为程序集签名”选项。 在“选择强名称密钥文件”列表中，单击“<新建…>”。 在“密钥文件名”框中，键入 `key.snk`。 清除“使用密码保护密钥文件”复选框。 单击 **“确定”**。
+5. 在编辑项目属性期间，单击“签名”  选项卡。选择“为程序集签名”  选项。 在“选择强名称密钥文件”  列表中，单击“<新建…>”  。 在“密钥文件名”  框中，键入 `key.snk`。 清除“使用密码保护密钥文件”  复选框。 单击 **“确定”** 。
 
 6. 打开 ISampleInterface.vb 文件。 将以下代码添加到 ISampleInterface 类文件，以创建 ISampleInterface 接口。
 
@@ -76,11 +76,11 @@ ms.locfileid: "64754832"
     End Interface
     ```
 
-7. 在“工具”菜单上，单击“创建 Guid”。 在“创建 GUID”对话框中，单击“注册表格式”，然后单击“复制”。 单击“退出” 。
+7. 在“工具”  菜单上，单击“创建 Guid”  。 在“创建 GUID”  对话框中，单击“注册表格式”  ，然后单击“复制”  。 单击“退出”  。
 
-8. 在 `Guid` 特性中，删除示例 GUID ，并粘贴从“创建 GUID”对话框复制的 GUID。 删除复制的 GUID 中的大括号 ({})。
+8. 在 `Guid` 特性中，删除示例 GUID ，并粘贴从“创建 GUID”  对话框复制的 GUID。 删除复制的 GUID 中的大括号 ({})。
 
-9. 在“项目”菜单上，单击“显示所有文件”。
+9. 在“项目”菜单上，单击“显示所有文件”   。
 
 10. 在中**解决方案资源管理器**，展开**我的项目**文件夹。 双击 AssemblyInfo.vb。 向文件中添加以下特性。
 
@@ -92,27 +92,27 @@ ms.locfileid: "64754832"
 
 11. 保存项目。
 
-12. 右键单击 TypeEquivalenceInterface 项目，然后单击“生成”。 此时将编译类库 .dll 文件，并保存到指定的生成输出路径中（如 C:\TypeEquivalenceSample）。
+12. 右键单击 TypeEquivalenceInterface 项目，然后单击“生成”  。 此时将编译类库 .dll 文件，并保存到指定的生成输出路径中（如 C:\TypeEquivalenceSample）。
 
 ## <a name="creating-a-runtime-class"></a>创建运行时类
 
-#### <a name="to-create-the-type-equivalence-runtime-project"></a>创建类型等效性运行时项目
+### <a name="to-create-the-type-equivalence-runtime-project"></a>创建类型等效性运行时项目
 
-1. 在 Visual Studio 中的“文件”菜单上，指向“新建”，然后单击“项目”。
+1. 在 Visual Studio 中的“文件”  菜单上，指向“新建”  ，然后单击“项目”  。
 
-2. 在“新建项目”对话框的“项目类型”窗格中，确保选中“Windows”。 在“模板”窗格中，选择“类库”。 在“名称”框中，键入 `TypeEquivalenceRuntime`，然后单击“确定”。 新项目创建完成。
+2. 在“新建项目”  对话框的“项目类型”  窗格中，确保选中“Windows”  。 在“模板”  窗格中，选择“类库”  。 在“名称”  框中，键入 `TypeEquivalenceRuntime`，然后单击“确定”  。 新项目创建完成。
 
 3. 在中**解决方案资源管理器**，右键单击 Class1.vb 文件，然后单击**重命名**。 将文件重命名为 `SampleClass.vb`，然后按 Enter。 重命名文件也会将类重命名为 `SampleClass`。 此类将实现 `ISampleInterface` 接口。
 
-4. 右键单击 TypeEquivalenceRuntime 项目，然后单击“属性”。 单击“编译”选项卡。将输出路径设置为 TypeEquivalenceInterface 项目中所用的同一位置，例如，`C:\TypeEquivalenceSample`。
+4. 右键单击 TypeEquivalenceRuntime 项目，然后单击“属性”  。 单击“编译”  选项卡。将输出路径设置为 TypeEquivalenceInterface 项目中所用的同一位置，例如，`C:\TypeEquivalenceSample`。
 
-5. 在编辑项目属性期间，单击“签名”选项卡。选择“为程序集签名”选项。 在“选择强名称密钥文件”列表中，单击“<新建…>”。 在“密钥文件名”框中，键入 `key.snk`。 清除“使用密码保护密钥文件”复选框。 单击 **“确定”**。
+5. 在编辑项目属性期间，单击“签名”  选项卡。选择“为程序集签名”  选项。 在“选择强名称密钥文件”  列表中，单击“<新建…>”  。 在“密钥文件名”  框中，键入 `key.snk`。 清除“使用密码保护密钥文件”  复选框。 单击 **“确定”** 。
 
-6. 右键单击 TypeEquivalenceRuntime 项目，然后单击“添加引用”。 单击“浏览”选项卡，然后浏览到输出路径文件夹。 选择 TypeEquivalenceInterface.dll 文件并单击“确定”。
+6. 右键单击 TypeEquivalenceRuntime 项目，然后单击“添加引用”  。 单击“浏览”  选项卡，然后浏览到输出路径文件夹。 选择 TypeEquivalenceInterface.dll 文件并单击“确定”  。
 
-7. 在“项目”菜单上，单击“显示所有文件”。
+7. 在“项目”菜单上，单击“显示所有文件”   。
 
-8. 在“解决方案资源管理器”中，展开“引用”文件夹。 选择 TypeEquivalenceInterface 引用。 在 TypeEquivalenceInterface 引用的“属性”窗口中，将“特定版本”属性设置为“False”。
+8. 在“解决方案资源管理器”  中，展开“引用”  文件夹。 选择 TypeEquivalenceInterface 引用。 在 TypeEquivalenceInterface 引用的“属性”窗口中，将“特定版本”  属性设置为“False”  。
 
 9. 将以下代码添加到 SampleClass 类文件，以创建 SampleClass 类。
 
@@ -138,23 +138,23 @@ ms.locfileid: "64754832"
 
 10. 保存项目。
 
-11. 右键单击 TypeEquivalenceRuntime 项目，然后单击“生成”。 此时将编译类库 .dll 文件，并保存到指定的生成输出路径中（如 C:\TypeEquivalenceSample）。
+11. 右键单击 TypeEquivalenceRuntime 项目，然后单击“生成”  。 此时将编译类库 .dll 文件，并保存到指定的生成输出路径中（如 C:\TypeEquivalenceSample）。
 
 ## <a name="creating-a-client-project"></a>创建客户端项目
 
-#### <a name="to-create-the-type-equivalence-client-project"></a>创建类型等效性客户端项目
+### <a name="to-create-the-type-equivalence-client-project"></a>创建类型等效性客户端项目
 
-1. 在 Visual Studio 中的“文件”菜单上，指向“新建”，然后单击“项目”。
+1. 在 Visual Studio 中的“文件”  菜单上，指向“新建”  ，然后单击“项目”  。
 
-2. 在“新建项目”对话框的“项目类型”窗格中，确保选中“Windows”。 在“模板”窗格中，选择“控制台应用程序”。 在“名称”框中，键入 `TypeEquivalenceClient`，然后单击“确定”。 新项目创建完成。
+2. 在“新建项目”  对话框的“项目类型”  窗格中，确保选中“Windows”  。 在“模板”  窗格中，选择“控制台应用程序”  。 在“名称”  框中，键入 `TypeEquivalenceClient`，然后单击“确定”  。 新项目创建完成。
 
-3. 右键单击 TypeEquivalenceClient 项目，然后单击“属性”。 单击“编译”选项卡。将输出路径设置为 TypeEquivalenceInterface 项目中所用的同一位置，例如，`C:\TypeEquivalenceSample`。
+3. 右键单击 TypeEquivalenceClient 项目，然后单击“属性”  。 单击“编译”  选项卡。将输出路径设置为 TypeEquivalenceInterface 项目中所用的同一位置，例如，`C:\TypeEquivalenceSample`。
 
-4. 右键单击 TypeEquivalenceClient 项目，然后单击“添加引用”。 单击“浏览”选项卡，然后浏览到输出路径文件夹。 选择 TypeEquivalenceInterface.dll 文件（不是 TypeEquivalenceRuntime.dll）并单击“确定”。
+4. 右键单击 TypeEquivalenceClient 项目，然后单击“添加引用”  。 单击“浏览”  选项卡，然后浏览到输出路径文件夹。 选择 TypeEquivalenceInterface.dll 文件（不是 TypeEquivalenceRuntime.dll）并单击“确定”  。
 
-5. 在“项目”菜单上，单击“显示所有文件”。
+5. 在“项目”菜单上，单击“显示所有文件”   。
 
-6. 在“解决方案资源管理器”中，展开“引用”文件夹。 选择 TypeEquivalenceInterface 引用。 在 TypeEquivalenceInterface 引用的“属性”窗口中，将“嵌入互操作类型”属性设置为“True”。
+6. 在“解决方案资源管理器”  中，展开“引用”  文件夹。 选择 TypeEquivalenceInterface 引用。 在 TypeEquivalenceInterface 引用的“属性”窗口中，将“嵌入互操作类型”  属性设置为“True”  。
 
 7. 将以下代码添加到 Module1.vb 文件以创建客户端程序。
 
@@ -181,11 +181,11 @@ ms.locfileid: "64754832"
 
 ## <a name="modifying-the-interface"></a>修改接口
 
-#### <a name="to-modify-the-interface"></a>修改接口
+### <a name="to-modify-the-interface"></a>修改接口
 
-1. 在 Visual Studio 中的“文件”菜单上，指向“打开”，然后单击“项目/解决方案”。
+1. 在 Visual Studio 中的“文件”  菜单上，指向“打开”  ，然后单击“项目/解决方案”  。
 
-2. 在“打开项目”对话框中，右键单击 TypeEquivalenceInterface 项目，然后单击“属性”。 单击“应用程序”  选项卡。单击“程序集信息”按钮。 将“程序集版本”和“文件版本”的值更改为 `2.0.0.0`。
+2. 在“打开项目”  对话框中，右键单击 TypeEquivalenceInterface 项目，然后单击“属性”  。 单击“应用程序”  选项卡。单击“程序集信息”  按钮。 将“程序集版本”  和“文件版本”  的值更改为 `2.0.0.0`。
 
 3. 打开 ISampleInterface.vb 文件。 将以下代码行添加到 ISampleInterface 接口。
 
@@ -197,15 +197,15 @@ ms.locfileid: "64754832"
 
 4. 保存项目。
 
-5. 右键单击 TypeEquivalenceInterface 项目，然后单击“生成”。 此时将编译新版本的类库 .dll 文件，并保存到指定的生成输出路径中（如 C:\TypeEquivalenceSample）。
+5. 右键单击 TypeEquivalenceInterface 项目，然后单击“生成”  。 此时将编译新版本的类库 .dll 文件，并保存到指定的生成输出路径中（如 C:\TypeEquivalenceSample）。
 
 ## <a name="modifying-the-runtime-class"></a>修改运行时类
 
-#### <a name="to-modify-the-runtime-class"></a>修改运行时类
+### <a name="to-modify-the-runtime-class"></a>修改运行时类
 
-1. 在 Visual Studio 中的“文件”菜单上，指向“打开”，然后单击“项目/解决方案”。
+1. 在 Visual Studio 中的“文件”  菜单上，指向“打开”  ，然后单击“项目/解决方案”  。
 
-2. 在“打开项目”对话框中，右键单击 TypeEquivalenceRuntime 项目，然后单击“属性”。 单击“应用程序”  选项卡。单击“程序集信息”按钮。 将“程序集版本”和“文件版本”的值更改为 `2.0.0.0`。
+2. 在“打开项目”  对话框中，右键单击 TypeEquivalenceRuntime 项目，然后单击“属性”  。 单击“应用程序”  选项卡。单击“程序集信息”  按钮。 将“程序集版本”  和“文件版本”  的值更改为 `2.0.0.0`。
 
 3. 打开 SampleClass.vb 文件。 将以下代码行添加到 SampleClass 类。
 
@@ -219,7 +219,7 @@ ms.locfileid: "64754832"
 
 4. 保存项目。
 
-5. 右键单击 TypeEquivalenceRuntime 项目，然后单击“生成”。 此时将编译更新版本的类库 .dll 文件，并保存到之前指定的生成输出路径中（如 C:\TypeEquivalenceSample）。
+5. 右键单击 TypeEquivalenceRuntime 项目，然后单击“生成”  。 此时将编译更新版本的类库 .dll 文件，并保存到之前指定的生成输出路径中（如 C:\TypeEquivalenceSample）。
 
 6. 在文件资源管理器中，打开输出路径文件夹（如 C:\TypeEquivalenceSample）。 双击 TypeEquivalenceClient.exe 运行该程序。 程序将反映 TypeEquivalenceRuntime 程序集的未经重新编译的新版本。
 

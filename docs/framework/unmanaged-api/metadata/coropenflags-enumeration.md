@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 55934ef08b10764bb705d7c166621ec7cfcadd0a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 831f4665967f2cd07a7ebb4de750fbe456a82261
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61992675"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781683"
 ---
 # <a name="coropenflags-enumeration"></a>CorOpenFlags 枚举
 包含一些标志值，用于控制打开清单文件时的元数据行为。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 typedef enum CorOpenFlags  
 {  
     ofRead              =   0x00000000,  
@@ -71,7 +71,7 @@ typedef enum CorOpenFlags
   
  **标头：** CorHdr.h  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

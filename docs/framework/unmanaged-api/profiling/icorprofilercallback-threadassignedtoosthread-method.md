@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: eefcd4436a28fdf52cbe55da5d4bb7eea4449463
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 51c7235b4018fabb2ecf9c0db2800d5d9e54b327
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62041709"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67747140"
 ---
 # <a name="icorprofilercallbackthreadassignedtoosthread-method"></a>ICorProfilerCallback::ThreadAssignedToOSThread 方法
 通知探查器正在使用一个特定的操作系统线程实现一个托管的线程。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT ThreadAssignedToOSThread(  
     [in] ThreadID managedThreadId,  
     [in] DWORD    osThreadId);  
@@ -52,7 +52,7 @@ HRESULT ThreadAssignedToOSThread(
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

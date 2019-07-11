@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8fed98521c0609ebd8b5f65885d69c77814e9e85
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3f817fa3f24bebf3303c656bd02c4d93d1d1431b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62042284"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781400"
 ---
 # <a name="imetadatatablesgetstring-method"></a>IMetaDataTables::GetString 方法
 获取当前引用作用域中从表的列的指定索引处的字符串。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT GetString (   
     [in]  ULONG       ixString,  
     [out] const char  **ppString  
@@ -50,7 +50,7 @@ HRESULT GetString (
   
  **库：** 用作 MsCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

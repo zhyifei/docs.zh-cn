@@ -5,12 +5,12 @@ helpviewer_keywords:
 - classes [Visual Basic]
 - objects [Visual Basic]
 ms.assetid: c68c5752-1006-46e1-975a-6717b62a42fc
-ms.openlocfilehash: 216de8f70e0ad6856bf5d708347a7e5f852fe4c6
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: dd2968f7ab528fa07ef0c5af85f2a7f07147a76e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591563"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67755165"
 ---
 # <a name="objects-and-classes-in-visual-basic"></a>Visual Basic 中的对象和类
 
@@ -28,7 +28,7 @@ ms.locfileid: "65591563"
 
 必须先创建对象，然后才能访问对象成员。
 
-#### <a name="to-create-an-object-from-a-class"></a>创建类对象的具体操作
+### <a name="to-create-an-object-from-a-class"></a>创建类对象的具体操作
 
 1. 确定要创建哪个类的对象。
 
@@ -51,7 +51,7 @@ ms.locfileid: "65591563"
    ```
 
 > [!NOTE]
-> 应尽可能将变量声明为要向其分配的类类型。 这称为*早期绑定*。 如果在编译时不知道类类型，可将变量声明为 [Object 数据类型](../../../../visual-basic/language-reference/data-types/object-data-type.md)，从而调用晚期绑定。 不过，晚期绑定可能会降低性能，并限制对运行时对象成员的访问。 有关详细信息，请参阅[对象变量声明](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)。
+> 应尽可能将变量声明为要向其分配的类类型。 这称为*早期绑定*。 如果在编译时不知道类类型，可将变量声明为 [Object 数据类型](../../../../visual-basic/language-reference/data-types/object-data-type.md)，从而调用晚期绑定  。 不过，晚期绑定可能会降低性能，并限制对运行时对象成员的访问。 有关详细信息，请参阅[对象变量声明](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)。
 
 ### <a name="multiple-instances"></a>多个实例
 
@@ -135,7 +135,7 @@ safetyTimer.Start()
 
 #### <a name="accessing-nonshared-members"></a>访问非共享成员
 
-###### <a name="to-access-a-nonshared-member-of-an-object"></a>访问对象的非共享成员的具体操作
+##### <a name="to-access-a-nonshared-member-of-an-object"></a>访问对象的非共享成员的具体操作
 
 1. 请确保已创建类对象，并已将对象分配给对象变量。
 
@@ -151,7 +151,7 @@ safetyTimer.Start()
 
 #### <a name="accessing-shared-members"></a>访问共享成员
 
-###### <a name="to-access-a-shared-member-of-an-object"></a>访问对象的共享成员的具体操作
+##### <a name="to-access-a-shared-member-of-an-object"></a>访问对象的共享成员的具体操作
 
 - 类名后面依次是*成员访问运算符* (`.`) 和成员名称。 应始终通过类名直接访问对象的 `Shared` 成员。
 
@@ -204,7 +204,7 @@ End Sub
 
 在下面的示例中，假设要定义一种特殊类型的 <xref:System.Windows.Forms.Button>，类似于普通的 <xref:System.Windows.Forms.Button>，不同之处在于公开了用于保留前景色和背景色的方法。
 
-##### <a name="to-define-a-class-is-derived-from-an-already-existing-class"></a>定义派生自现有类的类的具体操作
+#### <a name="to-define-a-class-is-derived-from-an-already-existing-class"></a>定义派生自现有类的类的具体操作
 
 1. 使用 [Class 语句](../../../../visual-basic/language-reference/statements/class-statement.md)定义要创建其所需对象的类。
 
@@ -239,7 +239,7 @@ End Sub
 
 派生类继承基类的成员，因此随着类层次结构的不断深入，复杂性也随之增加。 有关详细信息，请参阅[继承基础知识](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)。
 
-#### <a name="compiling-the-code"></a>编译代码
+### <a name="compiling-the-code"></a>编译代码
 
 请确保编译器可以访问要从中派生新类的类。 也就是说，完全限定其名称（如上面的示例所示），或在 [Imports 语句（.NET 命名空间和类型）](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)中标识其命名空间。 如果类在不同的项目中，可能需要添加对相应项目的引用。 有关详细信息，请参阅[管理项目中的引用](/visualstudio/ide/managing-references-in-a-project)。
 

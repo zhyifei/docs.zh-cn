@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4ee8705d00e1f63f69863d0bf8e7d0d9d62807e6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 26b3761ab49f36c5f687ff2c62882667e044d299
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61968594"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67774220"
 ---
 # <a name="ememorycriticallevel-enumeration"></a>EMemoryCriticalLevel 枚举
 包含指示失败的影响，何时已请求特定的内存分配但是却无法满足的值。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 typedef enum {  
     eTaskCritical      = 0,  
     eAppDomainCritical = 1,  
@@ -54,7 +54,7 @@ typedef enum {
   
  **库：** MSCorEE.dll  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

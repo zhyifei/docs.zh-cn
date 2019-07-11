@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 47ef5bb2539820d5a7bcd4ca6b4de86564290709
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 00322a75c4a15e42c89ff5a8680171a168a37613
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61984407"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67758696"
 ---
 # <a name="ihostgcmanagersuspensionstarting-method"></a>IHostGCManager::SuspensionStarting 方法
 公共语言运行时 (CLR) 正在挂起执行的任务，以执行垃圾回收通知主机。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT SuspensionStarting ();  
 ```  
   
@@ -57,7 +57,7 @@ HRESULT SuspensionStarting ();
   
  **库：** 包含为 MSCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

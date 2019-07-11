@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e51ff24698a2839972f9a36eac6c18d4f6709ebd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b6187da564a62b8c30abdc6a150f0df45d565615
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64600150"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67763867"
 ---
 # <a name="ihostcontrolgethostmanager-method"></a>IHostControl::GetHostManager 方法
 获取具有指定的接口指针接口的主机的实现`IID`。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT GetHostManager (  
     [in] REFIID riid,  
     [out, iid_is(riid)] void** ppObject  
@@ -88,7 +88,7 @@ HRESULT GetHostManager (
   
  **库：** 包含为 MSCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

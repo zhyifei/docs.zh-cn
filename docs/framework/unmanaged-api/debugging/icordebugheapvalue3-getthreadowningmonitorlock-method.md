@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9a713a7d1f6e6a9d4b22071c33ac8e7c38cd371b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4322a7e23c7085dadb3b2df6c1f72125aa685cef
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665096"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67756600"
 ---
 # <a name="icordebugheapvalue3getthreadowningmonitorlock-method"></a>ICorDebugHeapValue3::GetThreadOwningMonitorLock 方法
 返回拥有此对象的监视器锁的托管的线程。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT GetThreadOwningMonitorLock (  
     [out] ICorDebugThread   **ppThread,  
     [out] DWORD              *pAcquisitionCount  
@@ -73,7 +73,7 @@ HRESULT GetThreadOwningMonitorLock (
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

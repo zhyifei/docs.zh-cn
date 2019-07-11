@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2db47f90e73922858013885e99e953ddcacbd450
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e7750d50b772ff17cf9dcd05de2e2f34556714e4
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61763511"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67770474"
 ---
 # <a name="iclrtaskrudeabort-method"></a>ICLRTask::RudeAbort 方法
 指示公共语言运行时 (CLR) 中止表示由当前的任务[ICLRTask 接口](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)实例立即和无条件地。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT RudeAbort ();   
 ```  
   
@@ -54,7 +54,7 @@ HRESULT RudeAbort ();
   
  **库：** 包含为 MSCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

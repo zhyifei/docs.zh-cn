@@ -18,19 +18,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2972b87b2d0136f182f8e8223988953e1896f2bd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e5a3d06f72ed7163a414ef12e9bec650d8b20783
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61986682"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67774284"
 ---
 # <a name="icoreclrdebugtarget-interface"></a>ICoreClrDebugTarget 接口
 提供控制引用计数、 枚举进程，并释放与调试程序附加到远程的 Macintosh Silverlight 目标相关联的内存的方法。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 class ICoreClrDebugTarget {  
       HRESULT EnumProcesses (  
           [out] DWORD*                    pcProcs,  

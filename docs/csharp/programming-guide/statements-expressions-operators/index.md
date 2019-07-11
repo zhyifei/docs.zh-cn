@@ -10,12 +10,12 @@ helpviewer_keywords:
 - C# language, expressions
 - statements [C#]
 ms.assetid: 20f8469d-5a6a-4084-ad90-0856b7e97e45
-ms.openlocfilehash: 2f7505051cce3aee99e6b6ea88a6a94498926214
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 7073ddc50b47ff239e8b310c0a5a1fbd84504133
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67609636"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743878"
 ---
 # <a name="statements-expressions-and-operators-c-programming-guide"></a>语句、表达式和运算符（C# 编程指南）
 
@@ -32,12 +32,6 @@ ms.locfileid: "67609636"
 - [运算符](operators.md)
 
 - [匿名函数](anonymous-functions.md)
-
-- [转换运算符](conversion-operators.md)
-
-  - [使用转换运算符](using-conversion-operators.md)
-
-  - [如何：在结构之间实现用户定义的转换](how-to-implement-user-defined-conversions-between-structs.md)
 
 - [相等比较](equality-comparisons.md)
 

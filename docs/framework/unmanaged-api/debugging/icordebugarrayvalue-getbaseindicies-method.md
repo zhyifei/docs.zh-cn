@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f24a1434f737e8281a0c68dd09d2e17b34371694
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4f4ecb700a19a4e06f9f0056881fe3cdb9753aae
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61786277"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67737604"
 ---
 # <a name="icordebugarrayvaluegetbaseindicies-method"></a>ICorDebugArrayValue::GetBaseIndicies 方法
 获取数组中的每个维的基索引。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT GetBaseIndicies (  
     [in] ULONG32          cdim,  
     [out, size_is(cdim), length_is(cdim)]   
@@ -51,4 +51,4 @@ HRESULT GetBaseIndicies (
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

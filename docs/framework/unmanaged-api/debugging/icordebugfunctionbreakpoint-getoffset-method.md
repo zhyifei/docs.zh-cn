@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6253191340c2f2d4f42f47d580b9d923ab3ff041
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 67e71002a78023ad6e8ef89c7a57d484a65aaeb3
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61651683"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67756381"
 ---
 # <a name="icordebugfunctionbreakpointgetoffset-method"></a>ICorDebugFunctionBreakpoint::GetOffset 方法
 获取断点的函数中的偏移量。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT GetOffset (  
     [out] ULONG32  *pnOffset  
 );  
@@ -46,4 +46,4 @@ HRESULT GetOffset (
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

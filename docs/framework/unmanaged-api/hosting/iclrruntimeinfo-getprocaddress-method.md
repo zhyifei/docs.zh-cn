@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a95b6b7e20bbcd86dedf187c932f2cf74d37cdab
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c196eafbc2ff1d851471355a630b860c7c02ba1b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61771769"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67765538"
 ---
 # <a name="iclrruntimeinfogetprocaddress-method"></a>ICLRRuntimeInfo::GetProcAddress 方法
 获取指定的函数导出从公共语言运行时 (CLR) 与此接口关联的地址。  
@@ -31,7 +31,7 @@ ms.locfileid: "61771769"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT GetProcAddress(  
      [in]  LPCSTR pszProcName,  
      [out, retval] LPVOID *ppProc);  
@@ -63,7 +63,7 @@ HRESULT GetProcAddress(
   
  **库：** 包含为 MSCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

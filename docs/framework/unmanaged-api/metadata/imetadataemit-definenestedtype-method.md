@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4ebd4e9beca315ef8284c915800afec6bdb78c78
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7676c83e8b231606896cb6d1224633b4fa15e725
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62044000"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777566"
 ---
 # <a name="imetadataemitdefinenestedtype-method"></a>IMetaDataEmit::DefineNestedType 方法
 创建类型定义的元数据签名，则返回`mdTypeDef`的该类型的令牌，并指定定义的类型是所引用的类型的成员`tdEncloser`参数。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT DefineNestedType (   
     [in]  LPCWSTR     szTypeDef,  
     [in]  DWORD       dwTypeDefFlags,   
@@ -66,7 +66,7 @@ HRESULT DefineNestedType (
   
  **库：** 用作 MSCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

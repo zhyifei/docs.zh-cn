@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0ec2981cbee4675f9cd2a4fd13d507f50ad2a3ff
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 80bff6f06851206ff01b861001c6ed7c90db7d1e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61597136"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67758193"
 ---
 # <a name="icorprofilercallback4rejitcompilationfinished-method"></a>ICorProfilerCallback4::ReJITCompilationFinished 方法
 通知探查器在实时 (JIT) 编译器已完成重新编译函数。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT ReJITCompilationFinished(  
     [in] FunctionID functionId,    [in] ReJITID rejitId,  
     [in] HRESULT    hrStatus,  
@@ -58,7 +58,7 @@ HRESULT ReJITCompilationFinished(
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

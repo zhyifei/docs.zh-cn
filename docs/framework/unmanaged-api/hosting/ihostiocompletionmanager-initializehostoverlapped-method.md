@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1dea19a13cd2c741a24695b293ae1c8621ad5688
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9d27799e427efd3659dc2864e7d1e8e2061c5c19
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61796794"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780777"
 ---
 # <a name="ihostiocompletionmanagerinitializehostoverlapped-method"></a>IHostIoCompletionManager::InitializeHostOverlapped 方法
 为宿主提供初始化要追加到 Win32 的任何自定义数据的机会`OVERLAPPED`用于异步 I/O 请求的结构。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT InitializeHostOverlapped (  
     [in] void* pvOverlapped  
 );  
@@ -66,7 +66,7 @@ HRESULT InitializeHostOverlapped (
   
  **库：** 包含为 MSCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 99aea385cf5e3c8bcf7cf39b7cc5618f99f8a631
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e1be6079ed382b8ab27d0aec16bd725f5c5b9cb5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777580"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778901"
 ---
 # <a name="imetadataimportgetpinvokemap-method"></a>IMetaDataImport::GetPinvokeMap 方法
 获取用于表示 PInvoke 调用的目标程序集的 ModuleRef 标记。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT GetPinvokeMap (  
    [in]  mdToken       tk,  
    [out] DWORD         *pdwMappingFlags,  
@@ -66,7 +66,7 @@ HRESULT GetPinvokeMap (
   
  **库：** 包含为 MsCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

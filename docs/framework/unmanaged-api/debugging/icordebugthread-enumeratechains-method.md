@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f131f7566376d6474f3189d5eb612b30bec2e2b7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a6f0ed843f72d3f1e1575da15776a94a9097fd02
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648427"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67771097"
 ---
 # <a name="icordebugthreadenumeratechains-method"></a>ICorDebugThread::EnumerateChains 方法
 获取包含此 ICorDebugThread 对象中的所有堆栈链的 ICorDebugChainEnum 枚举器的接口指针。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT EnumerateChains (  
     [out] ICorDebugChainEnum **ppChains  
 );  
@@ -59,4 +59,4 @@ HRESULT EnumerateChains (
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

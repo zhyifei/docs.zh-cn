@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 17568a46c8e946989af0e401366d7eaa885886da
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 061c482a7e674fd425fe627c741a11b39864ba5c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777547"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778856"
 ---
 # <a name="imetadataimportgetscopeprops-method"></a>IMetaDataImport::GetScopeProps 方法
 获取当前元数据范围内的程序集或模块的名称和版本标识符（可选）。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT GetScopeProps (  
    [out] LPWSTR           szName,  
    [in]  ULONG            cchName,  
@@ -61,7 +61,7 @@ HRESULT GetScopeProps (
   
  **库：** 包含为 MsCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

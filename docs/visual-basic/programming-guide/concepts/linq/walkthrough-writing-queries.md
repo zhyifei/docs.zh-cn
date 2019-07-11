@@ -7,12 +7,12 @@ helpviewer_keywords:
 - LINQ [Visual Basic], writing queries
 - writing LINQ queries [Visual Basic]
 ms.assetid: f0045808-b9fe-4d31-88d1-473d9957211e
-ms.openlocfilehash: f3671b7071cc30f5fae0dbd85677987f441d846f
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: 55ded2f2fbd5c2c6e33627ce7fafe6bb4248d5ef
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67505989"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67783258"
 ---
 # <a name="walkthrough-writing-queries-in-visual-basic"></a>演练：在 Visual Basic 中编写查询
 本演练演示如何使用 Visual Basic 语言功能编写[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]查询表达式。 本演练演示如何在列表中的学生对象创建查询、 运行查询，以及如何对其进行修改。 查询将合并多个功能，包括对象初始值设定项、 局部类型推理和匿名类型。  
@@ -21,7 +21,7 @@ ms.locfileid: "67505989"
   
 ## <a name="create-a-project"></a>创建项目  
   
-#### <a name="to-create-a-console-application-project"></a>若要创建控制台应用程序项目  
+### <a name="to-create-a-console-application-project"></a>若要创建控制台应用程序项目  
   
 1. 启动 Visual Studio。  
   
@@ -38,21 +38,21 @@ ms.locfileid: "67505989"
 ## <a name="add-an-in-memory-data-source"></a>添加的内存中数据源  
  在本演练中的查询的数据源是一系列`Student`对象。 每个`Student`对象包含名字、 姓氏、 一类和学术排名学生正文中的。  
   
-#### <a name="to-add-the-data-source"></a>添加数据源  
+### <a name="to-add-the-data-source"></a>添加数据源  
   
 - 定义`Student`类，并创建类的实例的列表。  
   
     > [!IMPORTANT]
     >  定义所需的代码`Student`类，并创建使用的列表在本演练中提供示例[如何：创建的项列表](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md)。 可以在此处复制并将其粘贴到你的项目。 新代码将替换在创建项目时出现的代码。  
   
-#### <a name="to-add-a-new-student-to-the-students-list"></a>若要向学生列表添加新学生  
+### <a name="to-add-a-new-student-to-the-students-list"></a>若要向学生列表添加新学生  
   
 - 请按照中的模式`getStudents`方法中添加的另一个实例`Student`到列表的类。 添加学生将介绍对象初始值设定项。 有关详细信息，请参阅[对象初始值设定项：命名和匿名类型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)。  
   
 ## <a name="create-a-query"></a>创建查询  
  执行时，在本部分中添加查询将生成其学术排名将其放入前十个学生列表。 因为该查询用于选择完整`Student`对象每次查询结果的类型是`IEnumerable(Of Student)`。 但是，查询类型通常是未指定在查询定义中。 相反，编译器使用局部类型推理来确定的类型。 有关详细信息，请参阅[本地类型推断](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)。 查询的范围变量`currentStudent`，可作为对每个引用`Student`在源中的实例`students`，提供对中的每个对象的属性访问`students`。  
   
-#### <a name="to-create-a-simple-query"></a>创建简单查询  
+### <a name="to-create-a-simple-query"></a>创建简单查询  
   
 1. 查找中的位置`Main`方法的项目的标记，如下所示：  
   
@@ -67,7 +67,7 @@ ms.locfileid: "67505989"
 ## <a name="run-the-query"></a>运行查询  
  该变量`studentQuery`包含定义的查询，而不运行查询的结果。 用于运行查询的典型机制是`For Each`循环。 返回序列中的每个元素的循环迭代变量可通过访问。 有关执行查询的详细信息，请参阅[编写你的第一个 LINQ 查询](../../../../visual-basic/programming-guide/concepts/linq/writing-your-first-linq-query.md)。  
   
-#### <a name="to-run-the-query"></a>若要运行查询  
+### <a name="to-run-the-query"></a>若要运行查询  
   
 1. 以下代码添加到`For Each`循环在项目中查询的下面。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "67505989"
 ## <a name="modify-the-query"></a>修改查询  
  它是更轻松地扫描查询结果，如果它们在指定的顺序。 可以对基于任何可用字段返回的序列进行排序。  
   
-#### <a name="to-order-the-results"></a>对结果进行排序  
+### <a name="to-order-the-results"></a>对结果进行排序  
   
 1. 添加以下`Order By`子句之间`Where`语句和`Select`查询语句。 `Order By`子句将排序结果按字母顺序从 A 到 Z、 的最后一个根据每个学生的名字。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "67505989"
   
 3. 生成并通过按 CTRL + F5 运行该应用程序。 请注意控制台窗口中的结果。  
   
-#### <a name="to-introduce-a-local-identifier"></a>引入本地标识符  
+### <a name="to-introduce-a-local-identifier"></a>引入本地标识符  
   
 1. 将代码添加在本部分介绍在查询表达式中的本地标识符。 本地标识符将用于保存中间结果。 在以下示例中，`name`是包含学生的串联的标识符的名字和姓氏。 为方便起见，可以使用的本地标识符或也可以通过将存储的一个表达式，否则将计算多次结果来提高性能。  
   
@@ -106,7 +106,7 @@ ms.locfileid: "67505989"
   
 2. 生成并通过按 CTRL + F5 运行该应用程序。 请注意控制台窗口中的结果。  
   
-#### <a name="to-project-one-field-in-the-select-clause"></a>投影在 Select 子句中的一个字段  
+### <a name="to-project-one-field-in-the-select-clause"></a>投影在 Select 子句中的一个字段  
   
 1. 添加查询和`For Each`来创建查询，以生成一个序列，其元素与不同源中元素的此部分中的循环。 在以下示例中，源是一系列`Student`返回对象，但只有一个成员的每个对象： 其姓氏为 Garcia 学生的名字。 因为`currentStudent.First`是一个字符串，返回的序列的数据类型`studentQuery3`是`IEnumerable(Of String)`，一个字符串序列。 如前面的示例中所示分配的数据类型为`studentQuery3`留给编译器通过使用局部类型推理来确定。  
   
@@ -116,7 +116,7 @@ ms.locfileid: "67505989"
   
 3. 生成并通过按 CTRL + F5 运行该应用程序。 请注意控制台窗口中的结果。  
   
-#### <a name="to-create-an-anonymous-type-in-the-select-clause"></a>若要在 Select 子句中创建一个匿名类型  
+### <a name="to-create-an-anonymous-type-in-the-select-clause"></a>若要在 Select 子句中创建一个匿名类型  
   
 1. 添加查询中使用此部分，以查看如何匿名类型中的代码。 如果您使用它们在查询中你想要从数据源而不是完整记录返回多个字段 (`currentStudent`前面的示例中的记录) 或单个字段 (`First`前面部分中)。 而不是定义新的命名的类型包含你想要在结果中包含的字段，你可以指定在字段`Select`子句和编译器创建一个匿名类型与这些字段作为其属性。 有关详细信息，请参阅[匿名类型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)。  
   

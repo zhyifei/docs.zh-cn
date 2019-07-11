@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4c6a9473a698e4635c8b5cc9fb58963334dfd65e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 22af95ef4bd1fca0a8253faa6ce0e1c7a862054d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61992272"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782664"
 ---
 # <a name="imetadatainfogetfilemapping-method"></a>IMetaDataInfo::GetFileMapping 方法
 获取内存区域的映射的文件和映射的类型。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT GetFileMapping (  
     [out] const void           **ppvData,   
     [out] ULONGLONG            *pcbData,   
@@ -71,7 +71,7 @@ HRESULT GetFileMapping (
   
  **库：** 用作 MsCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

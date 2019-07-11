@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ce6ad24e5e670db21d3a6942ab4650a68ae44568
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0d17f51867b64780fca9b21c5f48c88db36343af
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61749548"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67748780"
 ---
 # <a name="icordebugcontrollerhasqueuedcallbacks-method"></a>ICorDebugController::HasQueuedCallbacks 方法
 获取一个值，该值指示是否为指定的线程当前正在排队任何托管的回调。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT HasQueuedCallbacks (  
     [in] ICorDebugThread *pThread,  
     [out] BOOL           *pbQueued  
@@ -57,6 +57,6 @@ HRESULT HasQueuedCallbacks (
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅

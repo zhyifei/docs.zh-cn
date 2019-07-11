@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6ebf9ad72f7a1b0dd7ac54afa104089182f122ef
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c276fc560474ff41afd0e93173d87a76a17a1323
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61984277"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781008"
 ---
 # <a name="ihostsecuritymanagerimpersonateloggedonuser-method"></a>IHostSecurityManager::ImpersonateLoggedOnUser 方法
 请求的代码在执行使用当前用户标识的凭据。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT ImpersonateLoggedOnUser (  
     [in] HANDLE hToken  
 );  
@@ -62,7 +62,7 @@ HRESULT ImpersonateLoggedOnUser (
   
  **库：** 包含为 MSCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

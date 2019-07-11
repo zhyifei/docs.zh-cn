@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fdacb454783cfb8f90ea5a73807f0a199e16475d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9c4fa79f4918412720592bce449a001a349ae657
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61927833"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67766560"
 ---
 # <a name="igchostcollect-method"></a>IGCHost::Collect 方法
 强制给定生成，而不考虑当前的垃圾回收状态发生的集合。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT Collect (  
     [in] LONG Generation  
 );  
@@ -46,7 +46,7 @@ HRESULT Collect (
   
  **库：** 包含为 MSCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a25e52c6b858aaa602ffade0e407b1aaf6e5c67e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2af3f58fa7714b3c2b0ba387b1da650f0638dd6c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61995577"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67758771"
 ---
 # <a name="icordebugilframesetip-method"></a>ICorDebugILFrame::SetIP 方法
 将指令指针设置为 Microsoft 中间语言 (MSIL) 代码中的指定偏移量位置。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT SetIP (  
     [in] ULONG32 nOffset  
 );  
@@ -53,4 +53,4 @@ HRESULT SetIP (
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

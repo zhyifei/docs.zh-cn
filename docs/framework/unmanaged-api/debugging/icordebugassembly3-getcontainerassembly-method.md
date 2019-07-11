@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 ms.assetid: f5fddeb6-b82e-4ebb-b432-849ce8513c77
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a9bd4cd44eca9b12ab8773fd75b6262579cfe8e8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dbe28c01891464ff45dfec97b1d8b4685ba8a51a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61645509"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67744373"
 ---
 # <a name="icordebugassembly3getcontainerassembly-method"></a>ICorDebugAssembly3::GetContainerAssembly 方法
 返回该 `ICorDebugAssembly3` 对象的容器程序集。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT GetContainerAssembly(  
     ICorDebugAssembly **ppAssembly  
 );  
@@ -42,7 +42,7 @@ HRESULT GetContainerAssembly(
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

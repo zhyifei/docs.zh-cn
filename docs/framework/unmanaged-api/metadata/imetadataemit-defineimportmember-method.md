@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8851b3090685b19c4a7ef711d5adab232e46872e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 341972629e18213536919fe53bfae94613b4d6e9
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665041"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777643"
 ---
 # <a name="imetadataemitdefineimportmember-method"></a>IMetaDataEmit::DefineImportMember 方法
 创建对指定成员的类型或模块的当前作用域之外定义，并定义该引用的令牌的引用。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT DefineImportMember (   
     [in]  IMetaDataAssemblyImport  *pAssemImport,   
     [in]  const void               *pbHashValue,   
@@ -85,7 +85,7 @@ HRESULT DefineImportMember (
   
  **库：** 用作 MSCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

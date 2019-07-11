@@ -2,12 +2,12 @@
 title: 用户定义的函数
 ms.date: 03/30/2017
 ms.assetid: 3304c9b2-5c7a-4a95-9d45-4f260dcb606e
-ms.openlocfilehash: fb55a8b248b085275f83d47b1f452cd07bd8dcb1
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 54faca27e3f70283144f902e531e2a08e45bae3b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65582651"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742710"
 ---
 # <a name="user-defined-functions"></a>用户定义的函数
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 在您的对象模型中使用方法来表示用户定义的函数。 您可以通过应用 <xref:System.Data.Linq.Mapping.FunctionAttribute> 属性和 <xref:System.Data.Linq.Mapping.ParameterAttribute> 属性（如果需要）将方法指定为函数。 有关详细信息，请参阅[LINQ to SQL 对象模型](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)。  
@@ -20,7 +20,7 @@ ms.locfileid: "65582651"
   
 - 支持的.NET Framework 方法的函数。  
   
- 本节中的主题说明了在您自行编写代码的情况下，如何在您的应用程序中构建和调用这些方法。 使用 Visual Studio 的开发人员通常会使用[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]来映射用户定义的函数。  
+ 本节中的主题说明了在您自行编写代码的情况下，如何在您的应用程序中构建和调用这些方法。 使用 Visual Studio 的开发人员通常会使用对象关系设计器来映射用户定义的函数。  
   
 ## <a name="in-this-section"></a>本节内容  
  [如何：使用标量值用户定义函数](../../../../../../docs/framework/data/adonet/sql/linq/how-to-use-scalar-valued-user-defined-functions.md)  

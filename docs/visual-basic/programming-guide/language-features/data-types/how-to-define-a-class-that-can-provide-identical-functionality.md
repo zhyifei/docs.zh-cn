@@ -26,12 +26,12 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: a914adf8-e68f-4819-a6b1-200d1cf1c21c
-ms.openlocfilehash: 829ff08fe3805f37bc6189a66a6675b3518da138
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 19988e766d0f9ec895a24dddfcd17d0854aaf8ad
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64601014"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67757394"
 ---
 # <a name="how-to-define-a-class-that-can-provide-identical-functionality-on-different-data-types-visual-basic"></a>如何：定义一个类，可对不同的数据类型 (Visual Basic 中) 提供相同的功能
 你可以定义这样一个类：你可以通过该类创建可在不同数据类型上提供相同功能的对象。 为此，你可以在定义中指定一个或多个 *类型形参* 。 然后，该类将能够充当使用不同数据类型的对象的模板。 通过这种方式定义的类称为 *泛型类*。  
@@ -62,7 +62,7 @@ ms.locfileid: "64601014"
   
 6. 确保代码只使用它可提供给 `itemType`的任何数据类型所支持的运算和方法。  
   
-     下面的示例定义了一个类，用于管理一个非常简单的列表。 它将列表保存在内部数组 `items`中，并且使用代码可声明列表元素的数据类型。 参数化构造函数允许使用代码设置 `items`的上限，默认构造函数将此上限设置为 9（总共 10 项）。  
+     下面的示例定义了一个类，用于管理一个非常简单的列表。 它将列表保存在内部数组 `items`中，并且使用代码可声明列表元素的数据类型。 参数化构造函数允许使用代码来设置的上限`items`，并无参数构造函数将此上限设置为 9 (总共 10 项）。  
   
      [!code-vb[VbVbalrDataTypes#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#7)]  
   
@@ -77,7 +77,7 @@ ms.locfileid: "64601014"
 ## <a name="see-also"></a>请参阅
 
 - [数据类型](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
-- [Visual Basic 中的泛型类型](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Generic Types in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
 - [语言独立性和与语言无关的组件](../../../../standard/language-independence-and-language-independent-components.md)
 - [Of](../../../../visual-basic/language-reference/statements/of-clause.md)
 - [类型列表](../../../../visual-basic/language-reference/statements/type-list.md)

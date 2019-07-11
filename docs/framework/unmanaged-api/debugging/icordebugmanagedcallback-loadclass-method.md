@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 39ce3e8329c4ff32b55341127f68a800246677df
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5619dea17b9a7140238fd559d2f6b1a5d190ac33
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61995210"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67761896"
 ---
 # <a name="icordebugmanagedcallbackloadclass-method"></a>ICorDebugManagedCallback::LoadClass 方法
 通知调试器已加载的类。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT LoadClass (  
     [in] ICorDebugAppDomain *pAppDomain,  
     [in] ICorDebugClass     *c  
@@ -55,7 +55,7 @@ HRESULT LoadClass (
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

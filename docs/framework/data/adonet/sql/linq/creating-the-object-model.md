@@ -2,21 +2,21 @@
 title: 创建对象模型
 ms.date: 03/30/2017
 ms.assetid: 27afce86-9b1d-45fb-8e0b-636bf671a236
-ms.openlocfilehash: 7724d6e75b350e5c57f090d42ef1f49c4d3593b8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0f1a0d035f2b11f33a9899ededd876155d45de3c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032434"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743587"
 ---
 # <a name="creating-the-object-model"></a>创建对象模型
 您可以从现有数据库中创建对象模型并以该模型的默认状态使用它。 您还可以自定义该模型的许多方面及其行为。  
   
- 如果使用的 Visual Studio，则可以使用[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]来创建对象模型。  
+ 如果使用的 Visual Studio，可以使用对象关系设计器来创建对象模型。  
   
 ## <a name="in-this-section"></a>本节内容  
  [如何：在 Visual Basic 或 C# 中生成对象模型](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)  
- 介绍如何使用 SQLMetal 命令行工具。 此外提供了指向[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]对于 Visual Studio 用户  
+ 介绍如何使用 SQLMetal 命令行工具。 此外提供一个链接到对象关系设计器的 Visual Studio 用户  
   
  [如何：对象模型作为外部文件生成](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)  
  介绍如何生成外部映射文件，而不是使用基于属性的映射。  

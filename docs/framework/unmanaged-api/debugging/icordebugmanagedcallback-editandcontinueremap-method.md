@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d1bdb14e8c3a61a2b94cef778660eeb5c85c34df
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 100688ece4ebb984d3d03823ab01bbaae7d395db
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61988235"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67760270"
 ---
 # <a name="icordebugmanagedcallbackeditandcontinueremap-method"></a>ICorDebugManagedCallback::EditAndContinueRemap 方法
 此方法已被否决。 它通知调试器已被重新映射事件发送到集成的开发环境 (IDE)。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT EditAndContinueRemap (  
     [in] ICorDebugAppDomain *pAppDomain,  
     [in] ICorDebugThread *pThread,  
@@ -48,7 +48,7 @@ HRESULT EditAndContinueRemap (
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

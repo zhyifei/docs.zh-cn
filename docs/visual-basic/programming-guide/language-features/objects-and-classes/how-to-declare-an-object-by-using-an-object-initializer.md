@@ -7,17 +7,17 @@ helpviewer_keywords:
 - initializers [Visual Basic]
 - Video How tos, Visual Basic
 ms.assetid: 0f53a553-efd6-466d-80bf-6b679e5cd174
-ms.openlocfilehash: 775c40cbb62272f913297d5a58914a0c82c5a7d7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 850e20fe8b5b6bfd392c80c87950a81a1a8a5c24
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780830"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67755197"
 ---
 # <a name="how-to-declare-an-object-by-using-an-object-initializer-visual-basic"></a>如何：将对象声明使用对象初始值设定项 (Visual Basic)
 对象初始值设定项，可以声明并实例化单个语句中类的实例。 此外，可以不调用参数化构造函数的情况下一次初始化实例的一个或多个成员。  
   
- 当使用对象初始值设定项来创建已命名类型的实例时，将调用类的默认构造函数，跟您指定的顺序的指定成员的初始化。  
+ 当使用对象初始值设定项来创建已命名类型的实例时，将调用类的无参数构造函数，跟您指定的顺序的指定成员的初始化。  
   
  下面的过程演示如何创建的实例`Student`三种不同方式的类。 类具有名字、 姓氏和类年属性，等等。 三个声明的每个创建的新实例`Student`，使用属性`First`设置为"Michael"，属性`Last`设置为"Tucker"，并且所有其他成员设置为其默认值。 在过程中每个声明的结果等效于以下示例中，不使用对象初始值设定项。  
   

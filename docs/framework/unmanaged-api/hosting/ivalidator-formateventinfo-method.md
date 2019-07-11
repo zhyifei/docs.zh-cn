@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ecbecec86d81357000679ab50e12f06d91c9f50d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 31329a8674a9991a3f306eeff44ee3437ad64a5c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61765364"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779430"
 ---
 # <a name="ivalidatorformateventinfo-method"></a>IValidator::FormatEventInfo 方法
 获取对应于指定的验证错误的错误消息。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT FormatEventInfo(  
     [in] HRESULT            hVECode,  
     [in] VEContext          Context,  
@@ -62,4 +62,4 @@ HRESULT FormatEventInfo(
   
  **库：** 包含为 MSCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  

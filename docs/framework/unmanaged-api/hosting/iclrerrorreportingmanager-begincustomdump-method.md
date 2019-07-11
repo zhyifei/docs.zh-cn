@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8cb6cd8d31e01ea2f1749a6cb4d17173679f0c06
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1d0a85607586a8cdf0a319f2e43d9815d24be21b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61984784"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67772920"
 ---
 # <a name="iclrerrorreportingmanagerbegincustomdump-method"></a>ICLRErrorReportingManager::BeginCustomDump 方法
 指定的错误报告的自定义堆转储的配置。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT BeginCustomDump (  
     [in] ECustomDumpFlavor dwFlavor,  
     [in] DWORD dwNumItems,  
@@ -75,7 +75,7 @@ HRESULT BeginCustomDump (
   
  **库：** 包含为 MSCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

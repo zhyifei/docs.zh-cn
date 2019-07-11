@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 83468e13e1e028b031c31791910c4dd2d792f232
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 70ab6a94d19f1411e1f79a9f3912158ec02059ed
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61992116"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780223"
 ---
 # <a name="icorprofilerinfogetappdomaininfo-method"></a>ICorProfilerInfo::GetAppDomainInfo 方法
 接受应用程序域 ID。 返回应用程序域名称和包含该域的进程的 ID。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT GetAppDomainInfo(  
     [in]  AppDomainID appDomainId,  
     [in]  ULONG       cchName,  
@@ -67,7 +67,7 @@ HRESULT GetAppDomainInfo(
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

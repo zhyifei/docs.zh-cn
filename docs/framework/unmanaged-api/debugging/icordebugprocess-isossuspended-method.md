@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 039dc0d9befb038e643abc4e2524c133234f460b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 275f62c8211f71f067d310dd4b3af2ddb11e93d7
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775558"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67755457"
 ---
 # <a name="icordebugprocessisossuspended-method"></a>ICorDebugProcess::IsOSSuspended 方法
 获取一个值，该值指示指定的线程是否已挂起由于调试器停止此进程。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT IsOSSuspended(  
     [in]  DWORD threadID,  
     [out] BOOL  *pbSuspended);  
@@ -54,4 +54,4 @@ HRESULT IsOSSuspended(
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

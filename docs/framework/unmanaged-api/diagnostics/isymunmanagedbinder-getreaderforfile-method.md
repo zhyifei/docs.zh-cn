@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0414cadca910f3290f96a841e3f807f0de469606
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6081e2dfd64625697295f2ea2d1560bc597838da
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61940083"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776861"
 ---
 # <a name="isymunmanagedbindergetreaderforfile-method"></a>ISymUnmanagedBinder::GetReaderForFile 方法
 给定元数据接口和文件名称，返回的正确[ISymUnmanagedReader](isymunmanagedreader-interface.md)将读取与模块关联的调试符号的接口。  
@@ -31,7 +31,7 @@ ms.locfileid: "61940083"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT GetReaderForFile(  
     [in]  IUnknown     *importer,  
     [in]  const WCHAR  *fileName,  

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 156c16f73916d2b4efa1c1b3541a772fb43dd470
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f50e5fcee3705e05aeed820cf736613c12b00e50
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61988762"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67754870"
 ---
 # <a name="icordebugframegetfunctiontoken-method"></a>ICorDebugFrame::GetFunctionToken 方法
 获取包含与此堆栈帧关联的代码的函数的元数据标记。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT GetFunctionToken (  
     [out] mdMethodDef        *pToken  
 );  
@@ -46,4 +46,4 @@ HRESULT GetFunctionToken (
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

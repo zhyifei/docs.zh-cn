@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dbd9374decdce171d45e57512470c652abc24882
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6ffe25cae7122e65bed6aece7b0f6b2abe82c1eb
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61782624"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779292"
 ---
 # <a name="icorprofilercallback2threadnamechanged-method"></a>ICorProfilerCallback2::ThreadNameChanged 方法
 通知代码探查器线程的名称已更改。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT ThreadNameChanged(  
     [in] ThreadID threadId,  
     [in] ULONG cchName,  
@@ -53,7 +53,7 @@ HRESULT ThreadNameChanged(
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

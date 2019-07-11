@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fd7909b94343b1fb83836f5c369ddc1993f049d2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e6abc4893ac99c5ce93a409a8120f090250be57c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61995301"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67759661"
 ---
 # <a name="icordebugmanagedcallbackdebuggererror-method"></a>ICorDebugManagedCallback::DebuggerError 方法
 通知调试器在尝试处理来自公共语言运行时 (CLR) 的事件已发生了错误。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT DebuggerError (  
     [in] ICorDebugProcess *pProcess,  
     [in] HRESULT           errorHR,  
@@ -59,7 +59,7 @@ HRESULT DebuggerError (
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

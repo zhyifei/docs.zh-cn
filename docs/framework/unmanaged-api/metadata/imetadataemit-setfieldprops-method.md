@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 94ba607669b4b1ca68294470cf1cc4fb27464d28
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1ccafea78aa2497c52442a10ad1af1c05771df7e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61992480"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67737102"
 ---
 # <a name="imetadataemitsetfieldprops-method"></a>IMetaDataEmit::SetFieldProps 方法
 设置或更新指定的字段标记所引用的字段的默认值。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT SetFieldProps (  
     [in]  mdFieldDef  fd,   
     [in]  DWORD       dwFieldFlags,   
@@ -62,7 +62,7 @@ HRESULT SetFieldProps (
   
  **库：** 用作 MSCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

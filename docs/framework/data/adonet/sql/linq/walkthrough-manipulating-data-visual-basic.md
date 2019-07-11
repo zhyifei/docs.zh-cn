@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: 1f6a54f6-ec33-452a-a37d-48122207bf14
-ms.openlocfilehash: 0dd70eb5d3b3ad56a8597ce0658a296a03d5f4a7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 27ac9de488a92d838df06d4a501a9148e87b9c9f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64618051"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742719"
 ---
 # <a name="walkthrough-manipulating-data-visual-basic"></a>演练：操作数据 (Visual Basic)
 本演练提供了用于在数据库中添加、修改和删除数据的基本端对端 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 方案。 您将使用 Northwind 示例数据库的一个副本来添加一位客户，更改该客户的姓名，然后删除一个订单。  
@@ -29,7 +29,7 @@ ms.locfileid: "64618051"
   
 - 从 Northwind 数据库生成的 Visual Basic 代码文件。  
   
-     可以使用[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]或 SQLMetal 工具生成此文件。 本演练是通过使用 SQLMetal 工具以及如下命令行编写的：  
+     可以通过使用对象关系设计器或 SQLMetal 工具生成此文件。 本演练是通过使用 SQLMetal 工具以及如下命令行编写的：  
   
      **sqlmetal /code:"c:\linqtest2\northwind.vb" /language:vb "C:\linqtest2\northwnd.mdf" /pluralize**  
   
@@ -59,11 +59,11 @@ ms.locfileid: "64618051"
   
 2. 在中**项目类型**窗格中的**新项目**对话框中，单击**Visual Basic**。  
   
-3. 在“模板”窗格中，单击“控制台应用程序”。  
+3. 在“模板”  窗格中，单击“控制台应用程序”  。  
   
 4. 在中**名称**框中，键入**LinqDataManipulationApp**。  
   
-5. 单击 **“确定”**。  
+5. 单击 **“确定”** 。  
   
 ## <a name="adding-linq-references-and-directives"></a>添加 LINQ 引用和指令  
  本演练用到默认情况下您的项目中可能未安装的程序集。 如果`System.Data.Linq`不作为项目中引用列出 (单击**显示所有文件**中**解决方案资源管理器**展开**引用**节点)，请按照中所述添加它以下步骤。  

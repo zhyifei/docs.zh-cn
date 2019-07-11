@@ -11,12 +11,12 @@ helpviewer_keywords:
 - DllImport attribute, calling Windows API
 - Declare statement [Visual Basic], declaring DLL functions
 ms.assetid: 9280ca96-7a93-47a3-8d01-6d01be0657cb
-ms.openlocfilehash: 70914d63773c6a94ad92cf6301a8e2bc1368e7a1
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: d2dc80ec689f3e9fd2f36c36c3847ec4e5d1a576
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592708"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67783148"
 ---
 # <a name="walkthrough-calling-windows-apis-visual-basic"></a>演练：调用 Windows Api (Visual Basic)
 Windows Api 是动态链接库 (Dll) 的 Windows 操作系统的一部分。 您可以使用它们来执行任务时很难编写你自己的等效过程。 例如，Windows 提供了一个名为函数`FlashWindowEx`允许您进行应用程序的标题栏在浅色和深色阴影之间切换。  
@@ -32,14 +32,14 @@ Windows Api 是动态链接库 (Dll) 的 Windows 操作系统的一部分。 您
 ## <a name="api-calls-using-declare"></a>使用 API 调用声明  
  调用 Windows Api 的最常见方法是使用`Declare`语句。  
   
-#### <a name="to-declare-a-dll-procedure"></a>若要声明 DLL 过程  
+### <a name="to-declare-a-dll-procedure"></a>若要声明 DLL 过程  
   
 1. 确定你想要调用，该函数及其参数、 参数类型的名称和返回值，以及名称和包含该 DLL 的位置。  
   
     > [!NOTE]
     >  有关 Windows Api 的完整信息，请参阅平台 SDK Windows API 中的 Win32 SDK 文档。 有关 Windows Api 使用的常量的详细信息，检查如 Windows.h Platform SDK 中包含的标头文件。  
   
-2. 通过单击打开一个新的 Windows 应用程序项目**新建**上**文件**菜单中，然后单击**项目**。 此时将出现“新建项目”对话框。  
+2. 通过单击打开一个新的 Windows 应用程序项目**新建**上**文件**菜单中，然后单击**项目**。 此时将出现“新建项目”  对话框。  
   
 3. 选择**Windows 应用程序**从 Visual Basic 项目模板的列表。 显示新的项目。  
   
@@ -69,7 +69,7 @@ Windows Api 是动态链接库 (Dll) 的 Windows 操作系统的一部分。 您
 #### <a name="windows-api-constants"></a>Windows API 常量  
  某些参数是常量的组合。 例如，`MessageBox`在本演练中所示的 API 接受整数参数名为`Typ`，它控制如何显示消息框。 可以通过检查来确定这些常量的数值`#define`文件 WinUser.h 中的语句。 以十六进制格式，通常显示的数字值，因此可能需要使用一个计算器来将它们添加并将转换为十进制。 例如，如果想要合并的感叹号样式的常量`MB_ICONEXCLAMATION`0x00000030 和是/无样式`MB_YESNO`0x00000004，可以添加数字并获取结果 0x00000034 52 十进制。 虽然可以直接使用十进制的结果，则最好将这些值声明为你的应用程序中的常量并将其组合使用`Or`运算符。  
   
-###### <a name="to-declare-constants-for-windows-api-calls"></a>若要声明常量 Windows API 调用  
+##### <a name="to-declare-constants-for-windows-api-calls"></a>若要声明常量 Windows API 调用  
   
 1. 要调用的 Windows 函数，请参阅文档。 确定使用的常数的名称以及包含这些常量的数值的.h 文件的名称。  
   
@@ -77,7 +77,7 @@ Windows Api 是动态链接库 (Dll) 的 Windows 操作系统的一部分。 您
   
      `#define MB_ICONQUESTION             0x00000020L`  
   
-3. 添加等效`Const`到类或模块，以使这些常量可用于应用程序的语句。 例如：  
+3. 添加等效`Const`到类或模块，以使这些常量可用于应用程序的语句。 例如:  
   
      [!code-vb[VbVbalrInterop#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#11)]  
   
@@ -94,7 +94,7 @@ Windows Api 是动态链接库 (Dll) 的 Windows 操作系统的一部分。 您
 #### <a name="data-marshaling"></a>数据封送处理  
  Visual Basic 会自动将转换的数据类型的参数和返回值为 Windows API 调用，但你可以使用`MarshalAs`属性来显式指定 API 预期的非托管的数据类型。 关于互操作封送处理的详细信息，请参阅[互操作封送处理](../../../framework/interop/interop-marshaling.md)。  
   
-###### <a name="to-use-declare-and-marshalas-in-an-api-call"></a>若要在 API 调用中使用 Declare 和 MarshalAs  
+##### <a name="to-use-declare-and-marshalas-in-an-api-call"></a>若要在 API 调用中使用 Declare 和 MarshalAs  
   
 1. 确定你想要的参数、 调用数据类型的函数的名称和返回值。  
   
@@ -111,9 +111,9 @@ Windows Api 是动态链接库 (Dll) 的 Windows 操作系统的一部分。 您
   
  可以使用`DllImport`与大多数 Windows API 调用，只要该调用是指在不共享 (有时称为*静态*) 方法。 不能使用需要的类实例的方法。 与不同`Declare`语句，`DllImport`的调用不能使用`MarshalAs`属性。  
   
-#### <a name="to-call-a-windows-api-using-the-dllimport-attribute"></a>若要调用 Windows API 使用 DllImport 特性  
+### <a name="to-call-a-windows-api-using-the-dllimport-attribute"></a>若要调用 Windows API 使用 DllImport 特性  
   
-1. 通过单击打开一个新的 Windows 应用程序项目**新建**上**文件**菜单中，然后单击**项目**。 此时将出现“新建项目”对话框。  
+1. 通过单击打开一个新的 Windows 应用程序项目**新建**上**文件**菜单中，然后单击**项目**。 此时将出现“新建项目”  对话框。  
   
 2. 选择**Windows 应用程序**从 Visual Basic 项目模板的列表。 显示新的项目。  
   

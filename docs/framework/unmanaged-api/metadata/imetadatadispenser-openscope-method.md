@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5b94987631f7dbbe39e585a8ea2c2252b9427613
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6e157c758b472ea89e21c1ed1ba8c17693c20a3d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62050163"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777795"
 ---
 # <a name="imetadatadispenseropenscope-method"></a>IMetaDataDispenser::OpenScope 方法
 打开一个现有的磁盘上的文件并将其元数据映射到内存中。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT OpenScope (  
     [in]  LPCWSTR     szScope,   
     [in]  DWORD       dwOpenFlags,   
@@ -69,7 +69,7 @@ HRESULT OpenScope (
   
  **库：** 用作 MsCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3503aa1eb86246365e31f52313893ad8713f5748
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5b847cbbdf1bfccd91ca212dadd1fcd82cc12c82
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61992181"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67768198"
 ---
 # <a name="icorprofilercallbackmoduleloadstarted-method"></a>ICorProfilerCallback::ModuleLoadStarted 方法
 通知探查器正在加载的模块。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT ModuleLoadStarted(  
     [in] ModuleID moduleId);  
 ```  
@@ -48,7 +48,7 @@ HRESULT ModuleLoadStarted(
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b2960bc0cfc39adb9b7cbca236d495baf630a173
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 484fb5b8398e3ebd61d1c300afec1536ee1dc0c5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61991843"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780598"
 ---
 # <a name="icorprofilerinfogetilfunctionbody-method"></a>ICorProfilerInfo::GetILFunctionBody 方法
 获取一个指针指向方法的主体在 Microsoft 中间语言 (MSIL) 代码中，从其标头处开始。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT GetILFunctionBody(  
     [in]  ModuleID    moduleId,  
     [in]  mdMethodDef methodId,  
@@ -62,7 +62,7 @@ HRESULT GetILFunctionBody(
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

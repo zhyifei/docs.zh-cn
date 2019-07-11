@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 13e1e3369c4e7a185c2167facc8514b5cfc85a85
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ed7436ff73fa9cc19790859581930875f39e499e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61994689"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67746283"
 ---
 # <a name="icordebugnativeframegetlocaldoubleregistervalue-method"></a>ICorDebugNativeFrame::GetLocalDoubleRegisterValue 方法
 获取参数或此本机框架的两个指定寄存器中存储的本地变量的值。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT GetLocalDoubleRegisterValue (  
     [in] CorDebugRegister   highWordReg,  
     [in] CorDebugRegister   lowWordReg,  
@@ -65,6 +65,6 @@ HRESULT GetLocalDoubleRegisterValue (
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅

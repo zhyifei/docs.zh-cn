@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a15ae411-8dc2-4ca3-84d2-01c9d5f1972a
-ms.openlocfilehash: ff2b2f6575c82f3769823431ec6363775bf9d698
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1ff6f8b58e01c86ae1c1e2e1533b1997ba2eb6b0
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616072"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742891"
 ---
 # <a name="serialization"></a>序列化
 本主题介绍[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]序列化功能。 下面几段提供了有关在设计时如何在代码生成期间添加序列化以及 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 类的运行时序列化行为的信息。  
   
  您可以通过以下任一方法在设计时添加序列化代码：  
   
-- 在中[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]，更改**序列化模式**属性设置为**Unidirectional**。  
+- 在对象关系设计器更改**序列化模式**属性设置为**Unidirectional**。  
   
 - 在 SQLMetal 命令行中，添加 **/serialization**选项。 有关详细信息，请参阅 [SqlMetal.exe（代码生成工具）](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)。  
   

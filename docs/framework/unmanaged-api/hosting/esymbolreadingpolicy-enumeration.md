@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9ba29952fe4a6edfc6e9e80ec02f82de65ef0064
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 45b6b8593331801dd237d0a730afbd5a6a714bbf
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61628595"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67774176"
 ---
 # <a name="esymbolreadingpolicy-enumeration"></a>ESymbolReadingPolicy 枚举
 包含读取程序数据库 (PDB) 文件的策略设置的值。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 typedef enum {  
     eSymbolReadingNever,  
     eSymbolReadingAlways,  
@@ -54,7 +54,7 @@ typedef enum {
   
  **库：** MSCorEE.dll  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 
