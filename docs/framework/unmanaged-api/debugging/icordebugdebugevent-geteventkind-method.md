@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 ms.assetid: c37aaceb-c948-46bd-a943-08be4cbb76f4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 62eede48eea01563dbc3e170720694a24343d0a5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fdbc320e13e0cb140f5ef7aa63b878b43ca0189b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61964757"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67750051"
 ---
 # <a name="icordebugdebugeventgeteventkind-method"></a>ICorDebugDebugEvent::GetEventKind 方法
 指出该 `ICorDebugDebugEvent` 对象代表的事件类型。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT GetEventKind(  
     [out]CorDebugDebugEventKind *pDebugEventKind  
 );  
@@ -39,7 +39,7 @@ HRESULT GetEventKind(
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

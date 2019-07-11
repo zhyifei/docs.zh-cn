@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 49e45085b0fbca10e490f11ce588f68aa8237b46
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7ece16d8dcdc685db960a485cd19261f6b9f2fbe
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62043051"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67757593"
 ---
 # <a name="imetadataemitsave-method"></a>IMetaDataEmit::Save 方法
 将所有元数据保存到指定地址处的文件在当前范围内。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT Save (   
     [in]  LPCWSTR     szFile,   
     [in]  DWORD       dwSaveFlags  
@@ -50,7 +50,7 @@ HRESULT Save (
   
  **库：** 用作 MSCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f60a4b56270318a05d0e5a480fdb56eb45593d5e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3f56ceca5269ebffb29908c63e698ce794027d8a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61696701"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67768058"
 ---
 # <a name="corgcthreadstats-structure"></a>COR_GC_THREAD_STATS 结构
 包含有关垃圾回收的每个线程统计信息。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 typedef struct _COR_GC_THREAD_STATS {  
     ULONGLONG  PerThreadAllocation;   
     ULONG      Flags;   
@@ -52,7 +52,7 @@ typedef struct _COR_GC_THREAD_STATS {
   
  **库：** 包含为 MSCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

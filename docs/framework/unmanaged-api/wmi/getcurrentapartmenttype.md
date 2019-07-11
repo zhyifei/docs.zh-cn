@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9ead1c1a91b910e7cfbb09f17ba823fc7a77ce0f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 76c852ac81126895ea3a2e1b40473722c8445201
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61609004"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67746553"
 ---
 # <a name="getcurrentapartmenttype-function"></a>GetCurrentApartmentType 函数
 检索调用方执行操作所在的单元类型。   
@@ -30,7 +30,7 @@ ms.locfileid: "61609004"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT GetCurrentApartmentType (
    [in] int                   vFunc, 
    [in] IComThreadingInfo*    ptr, 
@@ -51,7 +51,7 @@ HRESULT GetCurrentApartmentType (
 
 ## <a name="return-value"></a>返回值
 
-|返回的常量  |“值”  |Description  |
+|返回的常量  |值  |Description  |
 |---------|---------|---------|
 | `S_OK` | 0 | 已成功完成该函数。 |
 | `E_FAIL` | 0x80000008 | 调用方不在一个单元执行。 |
@@ -65,7 +65,7 @@ HRESULT GetCurrentApartmentType (
   
  **标头：** WMINet_Utils.idl  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>请参阅
 

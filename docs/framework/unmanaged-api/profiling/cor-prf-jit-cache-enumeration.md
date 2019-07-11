@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0cdbe36403f830926d611ffdc655d82ea25ddeef
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a62199563c620156885c941204207b185834beb4
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61599086"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67752146"
 ---
 # <a name="corprfjitcache-enumeration"></a>COR_PRF_JIT_CACHE 枚举
 指示缓存的函数搜索的结果。  
@@ -31,7 +31,7 @@ ms.locfileid: "61599086"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 typedef enum {  
     COR_PRF_CACHED_FUNCTION_FOUND,  
     COR_PRF_CACHED_FUNCTION_NOT_FOUND  
@@ -52,7 +52,7 @@ typedef enum {
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

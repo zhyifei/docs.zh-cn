@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f664edf29e5d2f9ec4e523aa7f7b204cf999e01b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e75bf9aab820216373f2f33fe8aa567f10befcb1
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61724078"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67746521"
 ---
 # <a name="getnames-function"></a>GetNames 函数
 检索对象属性的子集或所有名称。 
@@ -30,7 +30,7 @@ ms.locfileid: "61724078"
     
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT GetNames (
    [in] int                 vFunc, 
    [in] IWbemClassObject*   ptr, 
@@ -65,7 +65,7 @@ HRESULT GetNames (
 
 此函数返回以下值中定义*WbemCli.h*标头文件，也可以在定义它们为常量在代码中：
 
-|返回的常量  |“值”  |描述  |
+|返回的常量  |值  |描述  |
 |---------|---------|---------|
 |`WBEM_E_FAILED` | 0x80041001 | 已存在时的常见错误。 |
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 一个或多个参数无效，或者指定了不正确的标志和参数组合。 |
@@ -82,19 +82,19 @@ HRESULT GetNames (
 
 可以作为传递的标志`lEnumFlags`自变量是在中定义的位域*WbemCli.h*标头文件，也可以在定义它们为常量在代码中。  可以结合任何其他组中的任何标志每个组中的一个标志。 但是，在同一组中的标志是互斥的。 
 
-| 组 1 标志 |“值”  |Description  |
+| 组 1 标志 |值  |Description  |
 |---------|---------|---------|
 | `WBEM_FLAG_ALWAYS` | 0 | 返回所有属性名称。 `strQualifierName` 和`pQualifierVal`未使用。 |
 | `WBEM_FLAG_ONLY_IF_TRUE` | 1 | 返回具有指定的名称的限定符的唯一属性`strQualifierName`参数。 如果使用此标志，则必须指定`strQualifierName`。 |
 |`WBEM_FLAG_ONLY_IF_FALSE` | 2 |  返回不具有指定的名称的限定符的唯一属性`strQualifierName`参数。 如果使用此标志，则必须指定`strQualifierName`。 |
 |`WBEM_FLAG_ONLY_IF_IDENTICAL` | 3 | 返回具有指定的名称的限定符的属性`wszQualifierName`参数和也有值与指定的相同`pQualifierVal`结构。 如果使用此标志，则必须指定这两`wszQualifierName`和一个`pQualifierValue`。 |
 
-| 组 2 标志 |“值”  |描述  |
+| 组 2 标志 |值  |描述  |
 |---------|---------|---------|
 |`WBEM_FLAG_KEYS_ONLY` | 0x4 | 返回定义的键的属性的名称。 |
 |`WBEM_FLAG_REFS_ONLY` | 0x8 | 返回唯一属性名称的对象引用。 |
 
-| 组 3 标志 |“值”  |描述  |
+| 组 3 标志 |值  |描述  |
 |---------|---------|---------|
 | `WBEM_FLAG_LOCAL_ONLY` | 0x10 | 返回属于派生程度最高的类的属性名称。 从父类中排除的属性。 |
 | `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | 返回属于父类的属性名称。 |
@@ -108,7 +108,7 @@ HRESULT GetNames (
   
  **标头：** WMINet_Utils.idl  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>请参阅
 

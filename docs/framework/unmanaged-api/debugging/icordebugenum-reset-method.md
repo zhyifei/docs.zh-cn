@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b3f70d2d90df43fdfe759387bebd776736843a1d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4e809cad8098ccb80685545c9e7f9deea2f73540
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61996172"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67752236"
 ---
 # <a name="icordebugenumreset-method"></a>ICorDebugEnum::Reset 方法
 将光标移到枚举的开头。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT Reset ();  
 ```  
   
@@ -40,7 +40,7 @@ HRESULT Reset ();
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

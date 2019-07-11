@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 99bc65b0181a7c0ab7877273b3747ece91544f99
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0ca510f30f0f38ae54eb83046b0e9d5541db882d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62049253"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67758685"
 ---
 # <a name="putmethod-function"></a>PutMethod 函数
 创建方法。
@@ -30,7 +30,7 @@ ms.locfileid: "62049253"
     
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT PutMethod (
    [in] int                vFunc, 
    [in] IWbemClassObject*  ptr, 
@@ -65,7 +65,7 @@ HRESULT PutMethod (
 
 此函数返回以下值中定义*WbemCli.h*标头文件，也可以在定义它们为常量在代码中：
 
-|返回的常量  |“值”  |描述  |
+|返回的常量  |值  |描述  |
 |---------|---------|---------|
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | 一个或多个参数是无效的。 |
 | `WBEM_E_INVALID_DUPLICATE_PARAMETER` | 0x80041043 | `[in, out]`方法参数中指定*pInSignature*并*pOutSignature*对象具有不同的限定符。
@@ -98,7 +98,7 @@ HRESULT PutMethod (
   
  **标头：** WMINet_Utils.idl  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>请参阅
 

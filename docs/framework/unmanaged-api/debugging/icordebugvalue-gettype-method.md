@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 83265c4f6dffed76f1710378cf5293aac7020ef2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c0dbdee35e6c73fbf2d73edd8a6c479e2f2882ea
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61986885"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67764311"
 ---
 # <a name="icordebugvaluegettype-method"></a>ICorDebugValue::GetType 方法
 获取此"ICorDebugValue"对象的基元类型。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT GetType (  
     [out] CorElementType   *pType  
 );  
@@ -51,6 +51,6 @@ HRESULT GetType (
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅

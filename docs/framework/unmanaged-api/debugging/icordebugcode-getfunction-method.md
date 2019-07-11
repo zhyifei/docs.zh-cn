@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0104a52c3aa206f86daff30d9d16298e6beae324
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 10ab92c660353bea85bbd0918a25f716898ef837
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61750237"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67747532"
 ---
 # <a name="icordebugcodegetfunction-method"></a>ICorDebugCode::GetFunction 方法
 获取与此"ICorDebugCode"关联"ICorDebugFunction"。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT GetFunction (  
     [out] ICorDebugFunction **ppFunction  
 );  
@@ -49,6 +49,6 @@ HRESULT GetFunction (
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅

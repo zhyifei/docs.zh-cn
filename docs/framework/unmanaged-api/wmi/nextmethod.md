@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2b3667f7371131a4c1394ba5ca619d1f605c89ce
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4a730947b0c962d801975917cdf752136e7221c4
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62000176"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67746474"
 ---
 # <a name="nextmethod-function"></a>NextMethod 函数
 检索到的调用开始枚举中的下一步方法[BeginMethodEnumeration](beginmethodenumeration.md)。  
@@ -30,7 +30,7 @@ ms.locfileid: "62000176"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT NextMethod (
    [in] int                 vFunc, 
    [in] IWbemClassObject*   ptr, 
@@ -65,7 +65,7 @@ HRESULT NextMethod (
 
 此函数返回以下值中定义*WbemCli.h*标头文件，也可以在定义它们为常量在代码中：
 
-|返回的常量  |“值”  |描述  |
+|返回的常量  |值  |描述  |
 |---------|---------|---------|
 | `WBEM_E_UNEXPECTED` | 0x8004101d | 出现不需要调用[ `BeginEnumeration` ](beginenumeration.md)函数。 |
 | `WBEM_S_NO_ERROR` | 0 | 函数调用成功。  |
@@ -86,7 +86,7 @@ HRESULT NextMethod (
   
  **标头：** WMINet_Utils.idl  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>请参阅
 

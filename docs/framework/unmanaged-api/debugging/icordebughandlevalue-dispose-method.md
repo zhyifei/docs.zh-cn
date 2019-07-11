@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9114799b87d39333ff9da66429dc1ea99ec2131c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d21703aa911b5222fff71282e6da26aa5c0e2853
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775684"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67756853"
 ---
 # <a name="icordebughandlevaluedispose-method"></a>ICorDebugHandleValue::Dispose 方法
 释放此 ICorDebugHandleValue 对象而无需显式地释放接口指针引用的句柄。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT Dispose ();  
 ```  
   
@@ -40,4 +40,4 @@ HRESULT Dispose ();
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

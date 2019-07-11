@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c153e6ae8558eeab2efa99765405fb7c84632b01
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3a5e3b82645456ffa574f63931abbf60a2194540
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61992844"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67764532"
 ---
 # <a name="ihosttaskalert-method"></a>IHostTask::Alert 方法
 请求主机唤醒表示由当前的任务[IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)的实例，因此，任务可以中止。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT Alert ();  
 ```  
   
@@ -57,7 +57,7 @@ HRESULT Alert ();
   
  **库：** 包含为 MSCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

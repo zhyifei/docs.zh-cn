@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b616017745d7cc33d57b1626b6c27c59a0a60a32
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a68ea07c40c966422be6ebb663e62508032c2610
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61992285"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67750444"
 ---
 # <a name="icorprofilercallbackrootreferences-method"></a>ICorProfilerCallback::RootReferences 方法
 通知探查器与垃圾回收后根引用的信息。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT RootReferences(  
     [in] ULONG    cRootRefs,  
     [in, size_is(cRootRefs)] ObjectID rootRefIds[] );  
@@ -56,7 +56,7 @@ HRESULT RootReferences(
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

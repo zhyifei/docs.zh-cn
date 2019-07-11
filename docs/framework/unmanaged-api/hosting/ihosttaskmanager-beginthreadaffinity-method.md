@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7eb5c7ec85c0adb301fb722155caaed3c14e0e19
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 59af484710dc0848d7712017021adc5f3dcb7bce
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789462"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67749768"
 ---
 # <a name="ihosttaskmanagerbeginthreadaffinity-method"></a>IHostTaskManager::BeginThreadAffinity 方法
 通知宿主托管代码进入在其中将当前的任务必须不移动到另一个操作系统线程的周期。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT BeginThreadAffinity ();  
 ```  
   
@@ -54,7 +54,7 @@ HRESULT BeginThreadAffinity ();
   
  **库：** 包含为 MSCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

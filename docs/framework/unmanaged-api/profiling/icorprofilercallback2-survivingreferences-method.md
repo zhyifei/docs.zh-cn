@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: da06ce49415317393b3489c2b8f97afc58f7c83b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5070dba7e7e1218fedf24d350c0461a1cd3835e1
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61650840"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67755518"
 ---
 # <a name="icorprofilercallback2survivingreferences-method"></a>ICorProfilerCallback2::SurvivingReferences 方法
 将堆中对象的布局报告为非压缩垃圾回收的结果。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT SurvivingReferences(  
     [in] ULONG  cSurvivingObjectIDRanges,  
     [in, size_is(cSurvivingObjectIDRanges)] ObjectID  
@@ -50,7 +50,7 @@ HRESULT SurvivingReferences(
  `cObjectIDRangeLength`  
  [in] 整数数组，其中每个整数均为内存中保留下来的连续对象块的大小。  
   
- `objectIDRangeStart` 数组中引用的每个块均指定了大小。  
+           `objectIDRangeStart` 数组中引用的每个块均指定了大小。  
   
 ## <a name="remarks"></a>备注  
   
@@ -78,7 +78,7 @@ HRESULT SurvivingReferences(
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

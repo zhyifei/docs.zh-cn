@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0d2af1b41f47a3906c0e573c104847aa3ff36cf8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5c04a08c9712359453b9c5a9d136e22e1de8648a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62040581"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67746504"
 ---
 # <a name="inheritsfrom-function"></a>InheritsFrom 函数
 确定当前类或实例是否派生自指定的父类。
@@ -30,7 +30,7 @@ ms.locfileid: "62040581"
     
 ## <a name="syntax"></a>语法  
   
-```
+```cpp
 HRESULT InheritsFrom (
    [in] int               vFunc, 
    [in] IWbemClassObject* ptr, 
@@ -53,7 +53,7 @@ HRESULT InheritsFrom (
 
 此函数返回以下值中定义*WbemCli.h*标头文件，也可以在定义它们为常量在代码中：
 
-|返回的常量  |“值”  |Description  |
+|返回的常量  |值  |Description  |
 |---------|---------|---------|
 | `WBEM_S_NO_ERROR` | 0 | 当前对象继承`wszAncestor`。  |
 | `WBEM_S_FALSE` | 1 | 当前对象不会继承从`wszAncestor`。 |
@@ -68,7 +68,7 @@ HRESULT InheritsFrom (
   
  **标头：** WMINet_Utils.idl  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>请参阅
 

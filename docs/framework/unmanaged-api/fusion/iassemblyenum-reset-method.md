@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0300165f33bfb3d5b4f05917f516feb26f0b5ec8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 075f952e6d5b3e863ca720bb206f33471809d09e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697584"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67754079"
 ---
 # <a name="iassemblyenumreset-method"></a>IAssemblyEnum::Reset 方法
 重置此[IAssemblyEnum](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md)其起始位置的对象。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT Reset (  
     void  
 );  
@@ -40,7 +40,7 @@ HRESULT Reset (
   
  **标头：** Fusion.h  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 
