@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 73645265821d5854776e412f8eb0f33b36db00d1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 54abcd357c6f26f54432b39bfcb4a0d63afabfe4
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61698169"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67738723"
 ---
 # <a name="iclrdatatargetgetpointersize-method"></a>ICLRDataTarget::GetPointerSize 方法
 获取用字节表示，目标进程使用的指针类型的大小。 由公共语言运行时数据访问服务调用此方法。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT GetPointerSize (  
     [out] ULONG32     *pointerSize  
 );  
@@ -49,7 +49,7 @@ HRESULT GetPointerSize (
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

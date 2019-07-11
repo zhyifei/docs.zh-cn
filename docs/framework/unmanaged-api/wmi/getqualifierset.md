@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 75bf52fbf9552dc464d9c646f0a2b1bc01cf89c0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e392d3afcd81e6eace7a674788a2a957da28842c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61723324"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67746470"
 ---
 # <a name="getqualifierset-function"></a>GetQualifierSet 函数
 检索类实例或类定义的限定符集。
@@ -30,7 +30,7 @@ ms.locfileid: "61723324"
     
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT GetQualifierSet (
    [in] int                 vFunc, 
    [in] IWbemClassObject*   ptr, 
@@ -53,7 +53,7 @@ HRESULT GetQualifierSet (
 
 此函数返回以下值中定义*WbemCli.h*标头文件，也可以在定义它们为常量在代码中：
 
-|返回的常量  |“值”  |描述  |
+|返回的常量  |值  |描述  |
 |---------|---------|---------|
 |`WBEM_E_FAILED` | 0x80041001 | 已存在时的常见错误。 |
 |`WBEM_E_NOT_FOUND` | 0x80041002 | 指定的方法不存在。 |
@@ -72,7 +72,7 @@ HRESULT GetQualifierSet (
   
  **标头：** WMINet_Utils.idl  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>请参阅
 

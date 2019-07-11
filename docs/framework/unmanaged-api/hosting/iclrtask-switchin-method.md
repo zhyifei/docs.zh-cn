@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5f36a963417aba082667bb9fb609e0d1dcad7b09
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ccc08ae210dd02bc71a1d83bc81525a7308c20e1
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61763446"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67770380"
 ---
 # <a name="iclrtaskswitchin-method"></a>ICLRTask::SwitchIn 方法
 通知公共语言运行时 (CLR) 的任务的当前[ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)实例表示现在处于可操作的状态。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT SwitchIn (  
     [in] HANDLE threadHandle  
 );  
@@ -64,7 +64,7 @@ HRESULT SwitchIn (
   
  **库：** 包含为 MSCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

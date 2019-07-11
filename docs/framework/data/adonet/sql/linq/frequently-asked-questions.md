@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 252ed666-0679-4eea-b71b-2f14117ef443
-ms.openlocfilehash: 68d4215129cf4481beb2d8561c1569b3049a287e
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 07801ee7bfbb32540880cdc8599e5b69797b09f9
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67610588"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743537"
 ---
 # <a name="frequently-asked-questions"></a>常见问题
 以下各节解答了您在实现 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 时可能遇到的一些常见问题。  
@@ -53,7 +53,7 @@ ms.locfileid: "67610588"
  答： [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 提供了几种工具用于检查其生成的 SQL 代码。 其中最重要的工具就是 <xref:System.Data.Linq.DataContext.Log%2A>。 有关详细信息，请参阅[调试支持](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)。  
   
 ## <a name="unexpected-stored-procedure-results"></a>意外的存储过程结果  
- 问： 我有一个存储过程，其返回值由 `MAX()` 进行计算。 在将该存储过程拖动到 [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)]图面时，返回值不正确。  
+ 问： 我有一个存储过程，其返回值由 `MAX()` 进行计算。 当我将存储的过程拖动到 O/R 设计器图面时，则返回值不正确。  
   
  答： [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 提供了两种方法来通过存储过程返回数据库生成的值：  
   
@@ -107,7 +107,7 @@ ms.locfileid: "67610588"
 ## <a name="multiple-dbml-files"></a>多个 DBML 文件  
  问： 如果我有多个 DBML 文件共享一些公用的表，我会收到一个编译器错误消息。  
   
- 答： 设置**上下文 Namespace**并**实体 Namespace**中的属性[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]为每个 DBML 文件不同的值。 此方法可以避免名称/命名空间冲突。  
+ 答： 设置**上下文 Namespace**并**实体 Namespace**对象关系设计器中为每个 DBML 文件不同的值的属性。 此方法可以避免名称/命名空间冲突。  
   
 ## <a name="avoiding-explicit-setting-of-database-generated-values-on-insert-or-update"></a>避免在插入或更新时显式设置数据库生成的值  
  问： 我的一个数据库表具有一个默认为 SQL `DateCreated` 的 `Getdate()` 列。 在我试图使用 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 插入新记录时，该值会设置为 `NULL`。 我希望其设置为数据库默认值。  
@@ -134,10 +134,10 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 ## <a name="errors-using-sql-compact-35"></a>使用 SQL Compact 3.5 时的错误  
  问： 我将拖出 SQL Server Compact 3.5 数据库表时遇到错误。  
   
- 答： [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]不支持 SQL Server Compact 3.5，尽管[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]运行时。 在这种情况下，必须创建您自己的实体类并添加合适的属性。  
+ 答： 对象关系设计器不支持 SQL Server Compact 3.5，尽管[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]运行时。 在这种情况下，必须创建您自己的实体类并添加合适的属性。  
   
 ## <a name="errors-in-inheritance-relationships"></a>继承关系中的错误  
- 问： 我使用[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]中的工具箱继承形状连接两个实体，但是收到错误消息。  
+ 问： 我使用对象关系设计器中的工具箱继承形状连接两个实体，但我收到错误。  
   
  答： 仅创建关系是不够的。 还必须提供其他信息，例如鉴别器列、基类鉴别器值和派生类鉴别器值。  
   
@@ -163,7 +163,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 3. 检查默认的 <xref:System.Data.Linq.Mapping.UpdateCheck> 值 (<xref:System.Data.Linq.Mapping.UpdateCheck.Never>) 以确定该值对于您的应用程序是否正确。  
   
     > [!CAUTION]
-    >  如果使用的[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]在 Visual Studio 中，可能会覆盖所做的更改。  
+    >  如果在 Visual Studio 中使用对象关系设计器，则可能会覆盖所做的更改。  
   
 ## <a name="aptca"></a>APTCA  
  问： System.Data.Linq 是否标记为供部分受信任的代码使用？  

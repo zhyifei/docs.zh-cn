@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7cb1f55e1d8643feb2750e8ea468f608dc3d5d40
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 36ff06b4bbe916e7038840d9bf3cbc455f161b70
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61984251"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67768308"
 ---
 # <a name="strongnamegetpublickeyex-method"></a>StrongNameGetPublicKeyEx 方法
 从公钥/私钥对，获取的公钥，并指定哈希算法和签名算法。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT StrongNameGetPublicKey (   
     [in]  LPCWSTR   pwzKeyContainer,  
     [in]  BYTE      *pbKeyBlob,  
@@ -76,7 +76,7 @@ HRESULT StrongNameGetPublicKey (
 ## <a name="remarks"></a>备注  
  下表显示了接受的值的集`uHashAlgId`参数。  
   
-|名称|“值”|  
+|name|值|  
 |----------|-----------|  
 |None|0|  
 |SHA-1|0x8004|  
@@ -91,7 +91,7 @@ HRESULT StrongNameGetPublicKey (
   
  **库：** 包含为 MSCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

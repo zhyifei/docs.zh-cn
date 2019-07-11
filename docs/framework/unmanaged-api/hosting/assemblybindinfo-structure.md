@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ce79987c7fcf45b8d10dcc4613e053ee735941de
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3f4cb71e5ac0afe19e865ffca6fe578ad08f3162
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61946819"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67773864"
 ---
 # <a name="assemblybindinfo-structure"></a>AssemblyBindInfo 结构
 提供有关引用程序集的详细的信息。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 typedef struct _AssemblyBindInfo {  
     DWORD       dwAppDomainId;  
     LPCWSTR     lpReferencedIdentity;  
@@ -56,7 +56,7 @@ typedef struct _AssemblyBindInfo {
   
  **库：** 包含为 MSCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

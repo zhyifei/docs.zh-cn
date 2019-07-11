@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3cb2a8d2a4e089d16b6c2129c165a9d8b6828f3f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 276a69deecccc91b3c511403c2bd0d5c0baabd9d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61969808"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67772803"
 ---
 # <a name="iclrerrorreportingmanagergetbucketparametersforcurrentexception-method"></a>ICLRErrorReportingManager::GetBucketParametersForCurrentException 方法
 获取调用线程上的当前异常的 Watson 存储桶。  
@@ -31,7 +31,7 @@ ms.locfileid: "61969808"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT GetBucketParametersForCurrentException(  
     [out] BucketParameters *pParams  
 );  
@@ -48,7 +48,7 @@ HRESULT GetBucketParametersForCurrentException(
   
  **库：** 包含为 MSCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

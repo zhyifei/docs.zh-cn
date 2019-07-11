@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6969f2c1df9b5b04122ed6aef550697171123cf5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e15f4e8691db13b9a646a1e1d783075acfcdd896
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61992493"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777082"
 ---
 # <a name="imetadatafilteristokenmarked-method"></a>IMetaDataFilter::IsTokenMarked 方法
 获取一个值，该值指示指定的元数据令牌是否已标记为已处理。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT IsTokenMarked (  
     [in]  mdToken  tk,   
     [out] BOOL     *pIsMarked  
@@ -50,7 +50,7 @@ HRESULT IsTokenMarked (
   
  **库：** 用作 MsCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

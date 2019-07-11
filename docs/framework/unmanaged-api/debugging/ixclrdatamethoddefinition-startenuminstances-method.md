@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 7f45a5b13e767fa6849f307ee96fb822447f1263
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 89473f2a6a3da73ee5d172a3700bdb4d624278ff
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65629953"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67756293"
 ---
 # <a name="ixclrdatamethoddefinitionstartenuminstances-method"></a>IXCLRDataMethodDefinition::StartEnumInstances 方法
 
@@ -30,7 +30,7 @@ ms.locfileid: "65629953"
 
 ## <a name="syntax"></a>语法
 
-```
+```cpp
 HRESULT StartEnumInstances(
     [in] IXCLRDataAppDomain* appDomain,
     [out] CLRDATA_ENUM *handle
@@ -52,9 +52,9 @@ HRESULT StartEnumInstances(
 ## <a name="requirements"></a>要求
 
 **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
-**标头：** None  
-**库：** None  
-**.NET Framework 版本：**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**标头：** 无  
+**库：** 无  
+**.NET Framework 版本：** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>请参阅
 

@@ -2,12 +2,12 @@
 title: JSON 和 XML 之间的映射
 ms.date: 03/30/2017
 ms.assetid: 22ee1f52-c708-4024-bbf0-572e0dae64af
-ms.openlocfilehash: ef5eaac8fc75149ac518ce322808a84bbab5506b
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 9049e622803396126890d4c88b9fee2a100f17c5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636440"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67747736"
 ---
 # <a name="mapping-between-json-and-xml"></a>JSON 和 XML 之间的映射
 <xref:System.Runtime.Serialization.Json.JsonReaderWriterFactory> 生成的读取器和编写器通过 JavaScript 对象表示法 (JSON) 内容提供 XML API。 JSON 使用 JavaScript 的对象文字子集对数据进行编码。 读取器和编写器生成的此工厂时也可使用 JSON 内容时使用的 Windows Communication Foundation (WCF) 应用程序由发送或接收<xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement>或<xref:System.ServiceModel.WebHttpBinding>。
@@ -48,7 +48,7 @@ ms.locfileid: "65636440"
 
 ```xml
 <?xml version="1.0"?>
-<root type="number">42</root>`
+<root type="number">42</root>
 ```
 
 和下面的元素：
@@ -141,8 +141,8 @@ JSON 类型属性的 AII 具有以下特征：
 |`number`|1 个或多个 CII|JSON `number` (JSON RFC，第 2.4 节)，可能是括在空白区域。 数字/空白组合中的每个字符是对应于 CII 的 [字符代码] 的字符。<br /><br /> 示例:下面的元素映射到 JSON 片段。<br /><br /> `<root type="number">    42</root>`<br /><br /> JSON 片段是    42<br /><br /> （保留空白）。|
 |`boolean`|4 或 5 个 Cii (对应于`true`或`false`)，可能由其他空白 Cii。|对应于字符串“true”的 CII 序列被映射到文字 `true`，而对应于字符串“false”的 CII 序列被映射到文字 `false`。 周围的空白区域将被保留。<br /><br /> 示例:下面的元素映射到 JSON 片段。<br /><br /> `<root type="boolean"> false</root>`<br /><br /> JSON 片段是 `false`。|
 |`null`|都不允许。|文字 `null`。 在 JSON 到 XML 的映射，`null`可能由未映射到 XML 的空白区域 (第 2 节中的 ws) 括起来。<br /><br /> 示例:下面的元素映射到 JSON 片段。<br /><br /> `<root type="null"/>`<br /><br /> 或<br /><br /> `<root type="null"></root>`<br /><br /> :<br /><br /> 在这两种情况下 JSON 片段都是 `Null`。|
-|`object`|0 个或多个 EII。|如 JSON RFC 第 2.2 节中的 `begin-object`（左花括号），后跟每个 EII 的成员记录，将进一步说明。 如果存在多个 EII，则在成员记录之间存在值分隔符（逗号）。 所有这一切后跟 end-object（右花括号）。<br /><br /> 示例:下面的元素映射到 JSON 片段。<br /><br /> `<root type="object">`<br /><br /> `<type1 type="string">aaa\</type1>`<br /><br /> `<type2 type="string">bbb\</type2>`<br /><br /> `</root >`<br /><br /> JSON 片段是 `{"type1":"aaa","type2":"bbb"}`。<br /><br /> 如果在 XML 到 JSON 的映射上存在数据协定类型属性，则在开头插入其他成员记录。 其名称是数据协定类型属性的 [本地名称] ("\_\_类型")，且其值的 [正常化值] 的属性。 相反，在 JSON 到 XML 的映射，如果第一个成员记录的名称是数据协定类型属性的 [本地名称] (即，"\_\_类型")，相应的数据协定类型属性是存在在映射 XML 中，但不存在对应的 EII。 请注意，此成员记录必须首先出现在 JSON 对象中才能应用此特殊映射。 这与通常的 JSON 处理（成员记录的顺序是不重要的）相背离。<br /><br /> 示例:<br /><br /> 下面的 JSON 片段映射到 XML。<br /><br /> `{"__type":"Person","name":"John"}`<br /><br /> XML 是下面的代码。<br /><br /> `<root type="object" __type="Person">   <name type="string">John</name> </root>`<br /><br /> 请注意， \_\_类型 AII 存在，但没有任何\_\_键入 EII。<br /><br /> 但是，如果保留 JSON 中的顺序，如下面的示例所示。<br /><br /> {"name":"John","\_\_type":"Person"}<br /><br /> 则显示对应的 XML。<br /><br /> `<root type="object">   <name type="string">John</name>   <__type type="string">Person</__type> </root>`<br /><br /> 也就是说，\_类型 （_t） 不再具有特殊含义，映射到 EII 像往常一样，不是 AII。<br /><br /> 映射到 JSON 值时，AII 的 [正常化值] 的转义/未转义规则与在此表的“string”行中指定的 JSON 字符串的相同。<br /><br /> 示例:<br /><br /> `<root type="object" __type="\abc" />`<br /><br /> 前面的示例可以映射到下面的 JSON。<br /><br /> `{"__type":"\\abc"}`<br /><br /> 不能在 XML 到 JSON 的映射，第一个 EII 的 [本地名称]"\_\_类型"。<br /><br /> 空白 (`ws`) 则永远不生成的 XML 到 JSON 的映射的对象和在 JSON 到 XML 的映射上忽略。<br /><br /> 示例:下面的 JSON 片段映射到一个 XML 元素。<br /><br /> `{ "ccc" : "aaa", "ddd" :"bbb"}`<br /><br /> 在下面的代码中显示了 XML 元素。<br /><br /> `<root type="object">    <ccc type="string">aaa</ccc>    <ddd type="string">bbb</bar> </root >`|
-|array|0 个或多个 EII|如 JSON RFC 第 2.3 节中的 begin-array（左花括号），后跟每个 EII 的数组记录，将进一步描述。 如果存在多个 EII，则在数组记录之间存在值分隔符（逗号）。 所有这一切后跟 end-array。<br /><br /> 示例:下面的 XML 元素映射到 JSON 片段。<br /><br /> `<root type="array"/>    <item type="string">aaa</item>    <item type="string">bbb</item> </root >`<br /><br /> JSON 片段是 ["aaa","bbb"]<br /><br /> 空白 (`ws`) 则永远不生成的 XML 到 JSON 的映射的数组，并在 JSON 到 XML 的映射上忽略。<br /><br /> 示例:JSON 片段。<br /><br />`["aaa", "bbb"]`<br /><br /> 它映射到的 XML 元素。<br /><br /> `<root type="array"/>    <item type="string">aaa</item>    <item type="string">bbb</item> </root >`|
+|`object`|0 个或多个 EII。|如 JSON RFC 第 2.2 节中的 `begin-object`（左花括号），后跟每个 EII 的成员记录，将进一步说明。 如果存在多个 EII，则在成员记录之间存在值分隔符（逗号）。 所有这一切后跟 end-object（右花括号）。<br /><br /> 示例:下面的元素映射到 JSON 片段。<br /><br /> `<root type="object">`<br /><br /> `<type1 type="string">aaa\</type1>`<br /><br /> `<type2 type="string">bbb\</type2>`<br /><br /> `</root >`<br /><br /> JSON 片段是 `{"type1":"aaa","type2":"bbb"}`。<br /><br /> 如果在 XML 到 JSON 的映射上存在数据协定类型属性，则在开头插入其他成员记录。 其名称是数据协定类型属性的 [本地名称] ("\_\_类型")，且其值的 [正常化值] 的属性。 相反，在 JSON 到 XML 的映射，如果第一个成员记录的名称是数据协定类型属性的 [本地名称] (即，"\_\_类型")，相应的数据协定类型属性是存在在映射 XML 中，但不存在对应的 EII。 请注意，此成员记录必须首先出现在 JSON 对象中才能应用此特殊映射。 这与通常的 JSON 处理（成员记录的顺序是不重要的）相背离。<br /><br /> 示例:<br /><br /> 下面的 JSON 片段映射到 XML。<br /><br /> `{"__type":"Person","name":"John"}`<br /><br /> XML 是下面的代码。<br /><br /> `<root type="object" __type="Person">   <name type="string">John</name> </root>`<br /><br /> 请注意， \_\_类型 AII 存在，但没有任何\_\_键入 EII。<br /><br /> 但是，如果保留 JSON 中的顺序，如下面的示例所示。<br /><br /> `{"name":"John","\_\_type":"Person"}`<br /><br /> 则显示对应的 XML。<br /><br /> `<root type="object">   <name type="string">John</name>   <__type type="string">Person</__type> </root>`<br /><br /> 也就是说，\_类型 （_t） 不再具有特殊含义，映射到 EII 像往常一样，不是 AII。<br /><br /> 映射到 JSON 值时，AII 的 [正常化值] 的转义/未转义规则与在此表的“string”行中指定的 JSON 字符串的相同。<br /><br /> 示例:<br /><br /> `<root type="object" __type="\abc" />`<br /><br /> 前面的示例可以映射到下面的 JSON。<br /><br /> `{"__type":"\\abc"}`<br /><br /> 不能在 XML 到 JSON 的映射，第一个 EII 的 [本地名称]"\_\_类型"。<br /><br /> 空白 (`ws`) 则永远不生成的 XML 到 JSON 的映射的对象和在 JSON 到 XML 的映射上忽略。<br /><br /> 示例:下面的 JSON 片段映射到一个 XML 元素。<br /><br /> `{ "ccc" : "aaa", "ddd" :"bbb"}`<br /><br /> 在下面的代码中显示了 XML 元素。<br /><br /> `<root type="object">    <ccc type="string">aaa</ccc>    <ddd type="string">bbb</bar> </root >`|
+|array|0 个或多个 EII|如 JSON RFC 第 2.3 节中的 begin-array（左花括号），后跟每个 EII 的数组记录，将进一步描述。 如果存在多个 EII，则在数组记录之间存在值分隔符（逗号）。 所有这一切后跟 end-array。<br /><br /> 示例:下面的 XML 元素映射到 JSON 片段。<br /><br /> `<root type="array"/>    <item type="string">aaa</item>    <item type="string">bbb</item> </root >`<br /><br /> JSON 片段是 `["aaa","bbb"]`<br /><br /> 空白 (`ws`) 则永远不生成的 XML 到 JSON 的映射的数组，并在 JSON 到 XML 的映射上忽略。<br /><br /> 示例:JSON 片段。<br /><br />`["aaa", "bbb"]`<br /><br /> 它映射到的 XML 元素。<br /><br /> `<root type="array"/>    <item type="string">aaa</item>    <item type="string">bbb</item> </root >`|
 
 成员记录的工作原理如下：
 
@@ -150,15 +150,17 @@ JSON 类型属性的 AII 具有以下特征：
 
 示例:下面的元素映射到 JSON 片段。
 
-`<root type="object"/>`
-
-`<myLocalName type="string">aaa</myLocalName>`
-
-`</root >`
+```xml
+<root type="object"/>
+<myLocalName type="string">aaa</myLocalName>
+</root >
+```
 
 将显示下面的 JSON 片段。
 
-`{"myLocalName":"aaa"}`
+```json
+{"myLocalName":"aaa"}
+```
 
 - 在 XML 到 JSON 的映射上，对必须在 JSON 中转义的字符进行转义，而不对其他字符进行转义。 但是，对“/”字符进行转义，尽管它不是必须转义的字符（在 JSON 到 XML 的映射上不必对它进行转义）。 这是支持 JSON 中 `DateTime` 数据的 ASP.NET AJAX 格式所必需的。
 
@@ -181,7 +183,9 @@ JSON 类型属性的 AII 具有以下特征：
 
 下面的 JSON 片段是它映射到的内容。
 
-`{"myLocalName1":"myValue1","myLocalName2":2,"myLocalName3":{"myNestedName1":true,"myNestedName2":null}}`
+```json
+{"myLocalName1":"myValue1","myLocalName2":2,"myLocalName3":{"myNestedName1":true,"myNestedName2":null}}
+```
 
 > [!NOTE]
 > 在前面的映射中没有 XML 编码步骤。 因此，WCF 仅支持 JSON 文档，其中键名称中的所有字符都是 XML 元素名称中的有效字符。 例如，JSON 文档 {"<":"a"} 不支持，因为 < 不是有效的 XML 元素名称。
@@ -208,7 +212,9 @@ JSON 类型属性的 AII 具有以下特征：
 
 下面是 JSON 片段。
 
-`["myValue1",2,[true,null]]`
+```json
+["myValue1",2,[true,null]]
+```
 
 ## <a name="see-also"></a>请参阅
 

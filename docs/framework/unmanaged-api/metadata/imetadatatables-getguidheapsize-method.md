@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 812794bc76d475c516effdc950ca6a0b877494c3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0ddbd1c034708326d75c59f8ed4764156f617b81
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62042414"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781483"
 ---
 # <a name="imetadatatablesgetguidheapsize-method"></a>IMetaDataTables::GetGuidHeapSize 方法
 获取以字节为单位，GUID 堆的大小。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT GetGuidHeapSize (  
     [out] ULONG   *pcbGuids  
 );  
@@ -46,7 +46,7 @@ HRESULT GetGuidHeapSize (
   
  **库：** 用作 MsCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

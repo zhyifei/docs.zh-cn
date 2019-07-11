@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 072e775d11d44dfbca27f1616889e388ae61d467
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 378095aa2b363f4003a5372b4158df27412655e1
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775474"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67757852"
 ---
 # <a name="ixclrdataprocessendenummethodinstancesbyaddress-method"></a>IXCLRDataProcess::EndEnumMethodInstancesByAddress 方法
 
@@ -30,7 +30,7 @@ ms.locfileid: "61775474"
 
 ## <a name="syntax"></a>语法
 
-```
+```cpp
 HRESULT EndEnumMethodInstancesByAddress(
     [in] CLRDATA_ENUM handle
 );
@@ -48,9 +48,9 @@ HRESULT EndEnumMethodInstancesByAddress(
 ## <a name="requirements"></a>要求
 
 **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
-**标头：** None  
+**标头：** 无  
 **库：** None  
-**.NET Framework 版本：**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**.NET Framework 版本：** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>请参阅
 

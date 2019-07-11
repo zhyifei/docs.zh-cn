@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9af0773c2ef066c103f823e4d28c0fd6e9eadc24
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c5ddc2646b560814adef01f2508f3792abe13c1d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697376"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67744534"
 ---
 # <a name="iassemblynamegetproperty-method"></a>IAssemblyName::GetProperty 方法
 获取一个指针指向引用指定的属性标识符的属性。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT GetProperty (  
     [in]      DWORD    PropertyId,  
     [out]     LPVOID   pvProperty,  
@@ -52,7 +52,7 @@ HRESULT GetProperty (
   
  **标头：** Fusion.h  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 534afdd5990435c6b4db5ef8ea27a8065b199496
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2aefd79e251d751a6c8354fa827863cb5aedf305
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62050007"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67751050"
 ---
 # <a name="imetadataemitsetmethodprops-method"></a>IMetaDataEmit::SetMethodProps 方法
 设置或更新存储在指定的相对虚拟地址，通过调用之前定义的方法的功能[imetadataemit:: Definemethod](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemethod-method.md)。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT SetMethodProps (   
     [in]  mdMethodDef md,   
     [in]  DWORD       dwMethodFlags,  
@@ -58,7 +58,7 @@ HRESULT SetMethodProps (
   
  **库：** 用作 MSCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

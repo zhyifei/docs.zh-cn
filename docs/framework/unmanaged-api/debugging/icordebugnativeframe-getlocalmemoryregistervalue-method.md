@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9b2244ec1be6fc0e5e19fac5adc7ecb38d68a0af
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5b8b871377db6da95a3d824461671241d7b163f5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61987982"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67746264"
 ---
 # <a name="icordebugnativeframegetlocalmemoryregistervalue-method"></a>ICorDebugNativeFrame::GetLocalMemoryRegisterValue 方法
 获取参数或局部变量，其中的低位字和高位字分别以进行存储指定的寄存器和内存位置，此本机帧的值。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT GetLocalMemoryRegisterValue (  
     [in] CORDB_ADDRESS      highWordAddress,  
     [in] CorDebugRegister   lowWordRegister,  
@@ -62,6 +62,6 @@ HRESULT GetLocalMemoryRegisterValue (
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅

@@ -12,19 +12,19 @@ helpviewer_keywords:
 - structures [.NET Framework], design guidelines
 ms.assetid: 1f48b2d8-608c-4be6-9ba4-d8f203ed9f9f
 author: KrzysztofCwalina
-ms.openlocfilehash: cc5b8d7effda31b0236477b217bccf5cf2137f8c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e787c5b34848a561b43c3457341673f11cc2bd00
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61650136"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67775545"
 ---
 # <a name="struct-design"></a>结构设计
 常规用途的值类型通常称为结构，其 C# 关键字。 本部分提供有关常规结构设计指导原则。  
   
- **X 切忌**为结构提供默认构造函数。  
+ **X 不**结构提供一个无参数构造函数。  
   
- 遵循此原则将允许创建结构数组，而无需对数组的每个项运行构造函数。 请注意，C# 不允许结构具有默认构造函数。  
+ 遵循此原则将允许创建结构数组，而无需对数组的每个项运行构造函数。 请注意，C#不允许结构具有无参数构造函数。  
   
  **X 切忌**定义可变值类型。  
   
@@ -38,11 +38,11 @@ ms.locfileid: "61650136"
   
  值类型的 <xref:System.Object.Equals%2A?displayProperty=nameWithType> 方法会导致装箱，并且其默认实现效率不高，因为它使用反射。 <xref:System.IEquatable%601.Equals%2A> 可以有更好的性能，并且可以进行实现，这样它就不会导致装箱。  
   
- X 请勿显式扩展 <xref:System.ValueType>。 实际上，大多数语言禁止此行为。  
+ X 请勿显式扩展 <xref:System.ValueType>。  实际上，大多数语言禁止此行为。  
   
  一般情况下，结构可能非常有用，但应仅用于不经常装箱的单个不可变的小值。  
   
- *部分版权 © 2005, 2009 Microsoft Corporation。保留所有权利。*  
+ *Portions © 2005, 2009 Microsoft Corporation 版权所有。保留所有权利。*  
   
  *经 Pearson Education, Inc 授权，转载自[框架设计准则：可重用的 .NET 库的约定、习惯用语和模式，第 2 版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 作者：Krzysztof Cwalina 和 Brad Abrams，由 Addison Wesley Professional 于 2008 年 10 月 22 日印发，作为 Microsoft Windows 开发系列的一部分。*  
   

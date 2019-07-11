@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fe99a00ca96270d1f35812d48e78cc6bd0a051ef
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d3693a42db8e32a4bb7a399f8c930da011130893
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64666037"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778738"
 ---
 # <a name="strongnamecompareassemblies-function"></a>StrongNameCompareAssemblies 函数
 确定两个程序集是否仅是强名称签名不同。  
@@ -30,7 +30,7 @@ ms.locfileid: "64666037"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 BOOLEAN StrongNameCompareAssemblies (  
     [in]  LPCWSTR   wszAssembly1,  
     [in]  LPCWSTR   wszAssembly2,  
@@ -64,7 +64,7 @@ BOOLEAN StrongNameCompareAssemblies (
   
  **库：** 包含为 MsCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="remarks"></a>备注  
  程序集的强名称签名包含程序集的文本名称、 版本、 区域性和公钥标记。  

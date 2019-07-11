@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5ea100ff86286cb98db5aa9fa6f3c12f5d318a90
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 64ba852c4bb0ae7b0119876fca4a4b2a107ed934
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62043123"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777418"
 ---
 # <a name="imetadataemitdeletepinvokemap-method"></a>IMetaDataEmit::DeletePinvokeMap 方法
 销毁指定标记所引用的对象的 PInvoke 映射元数据。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT DeletePinvokeMap (   
     [in]  mdToken     tk   
 );  
@@ -46,7 +46,7 @@ HRESULT DeletePinvokeMap (
   
  **库：** 用作 MSCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

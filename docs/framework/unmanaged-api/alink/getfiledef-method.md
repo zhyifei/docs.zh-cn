@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9153c9b3735e265d59ba072f747c92434c95d9ed
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a51e8c83d0949f68a41f6a4e10396adbc4f3c9c1
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789865"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67741888"
 ---
 # <a name="getfiledef-method"></a>GetFileDef 方法
 检索元数据 （而不是由 ALink 分配的令牌） 中使用的实际 FileDef 标记。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT GetFileDef(  
     mdAssembly AssemblyID,  
     mdFile TargetFile,  

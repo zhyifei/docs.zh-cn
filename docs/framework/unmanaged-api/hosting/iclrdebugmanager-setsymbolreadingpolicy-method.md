@@ -18,19 +18,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2dc3d350f5c97736b3b65c814a668195aceef2b0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2921484cb2baa92593ddb0335cf7b20c5c0f33eb
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61969983"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67773008"
 ---
 # <a name="iclrdebugmanagersetsymbolreadingpolicy-method"></a>ICLRDebugManager::SetSymbolReadingPolicy 方法
 设置用于读取程序数据库 (PDB) 文件的策略。 策略将确定是否在调用堆栈中包括行号和文件相关信息。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT SetSymbolReadingPolicy (  
     [in] ESymbolReadingPolicy policy  
 );  
@@ -55,7 +55,7 @@ HRESULT SetSymbolReadingPolicy (
   
  **库：** 包含为 MSCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

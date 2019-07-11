@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 48dd987896536006fe81bc01528cadb507123e27
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: aa5d5ee469d41cca46ea05fa4111ce3abff808d4
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62049422"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67771901"
 ---
 # <a name="gethashfromhandle-function"></a>GetHashFromHandle 函数
 使用指定的哈希算法，生成具有指定文件句柄的文件内容的哈希。  
@@ -30,7 +30,7 @@ ms.locfileid: "62049422"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT GetHashFromHandle (  
     [in]  HANDLE   hFile,  
     [in, out] unsigned int   *piHashAlg,  
@@ -63,7 +63,7 @@ HRESULT GetHashFromHandle (
   
  **库：** 包含为 MsCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

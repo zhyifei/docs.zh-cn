@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 678b7fbd595b1238b7025c22b0ed80b02ed4becd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 52ba9d5bac5e772d721d38e4e8a7ba6757d0ae2e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61750191"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67747499"
 ---
 # <a name="icordebugcodegetsize-method"></a>ICorDebugCode::GetSize 方法
 获取用字节表示，此"ICorDebugCode"所表示的二进制代码大小。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT GetSize (  
     [out] ULONG32    *pcBytes  
 );  
@@ -46,6 +46,6 @@ HRESULT GetSize (
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅

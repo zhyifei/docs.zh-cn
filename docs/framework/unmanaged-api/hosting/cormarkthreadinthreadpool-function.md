@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f0200ad36490efc546daebfa93904676b0af7684
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 3da22faa5e8863275cdfa8d03b980a5cbb55e87d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490524"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67758345"
 ---
 # <a name="cormarkthreadinthreadpool-function"></a>CorMarkThreadInThreadPool 函数
 将标记为托管代码的执行当前正在执行的线程池线程。 从.NET Framework 2.0 版开始，此函数没有任何影响。 它不是必需的并可以从你的代码。 .NET Framework 4 中已弃用此函数。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 void CorMarkThreadInThreadPool ();  
 ```  
   

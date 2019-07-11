@@ -18,19 +18,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 60b6d9c302cd3af9f41e5a8dce62d7eb268c4198
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a9eb9bb1e4abeb98d8d0ba2b052612d918c45f22
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61961169"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67741081"
 ---
 # <a name="closeclrenumeration-function"></a>CloseCLREnumeration 函数
 关闭任何有效公共语言运行时 (CLR) 继续启动事件返回的句柄数组中位于[EnumerateCLRs 函数](../../../../docs/framework/unmanaged-api/debugging/enumerateclrs-function.md)，并释放句柄和字符串路径数组的内存。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT CloseCLREnumeration (  
     [in]  DWORD      pHandleArray,  
     [in]  LPWSTR**   pStringArray,  

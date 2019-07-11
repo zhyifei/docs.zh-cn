@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 543cc63b3e2188c11a6a8bf1eaa846461375be99
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 956abe8ddf8075b7b8f8c057db0aa7187982e1d5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61597266"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782602"
 ---
 # <a name="qualifiersetdelete-function"></a>QualifierSet_Delete 函数
 按名称删除指定限定符。  
@@ -30,7 +30,7 @@ ms.locfileid: "61597266"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT QualifierSet_Delete (
    [in] int                  vFunc, 
    [in] IWbemQualifierSet*   ptr, 
@@ -53,9 +53,9 @@ HRESULT QualifierSet_Delete (
 
 此函数返回以下值中定义*WbemCli.h*标头文件，也可以在定义它们为常量在代码中：
 
-|返回的常量  |“值”  |描述  |
+|返回的常量  |值  |描述  |
 |---------|---------|---------|
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | `wszName` 参数无效。 |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 |           `wszName` 参数无效。 |
 |`WBEM_E_INVALID_OPERATION` | 0x80041016 | 删除此限定符是非法的。 |
 |`WBEM_E_NOT_FOUND` | 0x80041002 | 找不到指定的限定符。 |
 |`WBEM_S_NO_ERROR` | 0 | 函数调用成功。  |
@@ -72,7 +72,7 @@ HRESULT QualifierSet_Delete (
   
  **标头：** WMINet_Utils.idl  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>请参阅
 

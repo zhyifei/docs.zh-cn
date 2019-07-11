@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c1cea8adcd12ecb3078e4469e6b018ed49064e0b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c2ea0bf215c0d2abfe9beb29d736f893073d3be8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61723311"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67739506"
 ---
 # <a name="cordebugunmappedstop-enumeration"></a>CorDebugUnmappedStop 枚举
 指定未映射代码的类型，这些代码可以中断分档器代码执行。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 typedef enum CorDebugUnmappedStop {  
     STOP_NONE               = 0x0,  
     STOP_PROLOG             = 0x01,  
@@ -62,7 +62,7 @@ typedef enum CorDebugUnmappedStop {
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

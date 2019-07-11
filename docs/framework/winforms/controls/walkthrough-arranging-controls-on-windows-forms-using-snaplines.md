@@ -7,12 +7,12 @@ helpviewer_keywords:
 - SnapLine class [Windows Forms], walkthroughs
 - Windows Forms controls, arranging
 ms.assetid: d5c9edc7-cf30-4a97-8ebe-201d569340f8
-ms.openlocfilehash: a0b78afb653d3a47fa12b856de730131e5f8448e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c91fecf9e786f4a8e35486e7b30e9efe36c972e5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64606415"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67771647"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-snaplines"></a>演练：使用对齐线在 Windows 窗体上排列控件
 在窗体上精确地放置控件对于许多应用程序而言是高优先级。 Windows 窗体设计器提供许多布局工具来实现此目的。 一个最重要的是<xref:System.Windows.Forms.Design.Behavior.SnapLine>功能。  
@@ -53,7 +53,7 @@ ms.locfileid: "64606415"
 ## <a name="creating-the-project"></a>创建项目  
  第一步是创建项目并设置窗体。  
   
-#### <a name="to-create-the-project"></a>要创建项目  
+### <a name="to-create-the-project"></a>要创建项目  
   
 1. 创建一个名为"SnaplineExample"的基于 Windows 的应用程序项目 (**文件** > **新建** > **项目** >  **Visual C#** 或**Visual Basic** > **经典桌面** > **Windows 窗体应用程序**)。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "64606415"
 ## <a name="spacing-and-aligning-controls-using-snaplines"></a>间距和对齐控件使用对齐线  
  对齐线使您可以在你的窗体上对齐控件准确而直观的方式。 它们就符合与另一个控件或一组控件的位置附近移动选定的控件时。 你的选择将"对齐"到建议的位置为越过其他控件。  
   
-#### <a name="to-arrange-controls-using-snaplines"></a>使用对齐线排列控件  
+### <a name="to-arrange-controls-using-snaplines"></a>使用对齐线排列控件  
   
 1. 从 <xref:System.Windows.Forms.Button> “工具箱” **将** 控件拖到你的窗体上。  
   
@@ -85,7 +85,7 @@ ms.locfileid: "64606415"
 ## <a name="aligning-to-form-and-container-margins"></a>向窗体和容器的边缘对齐  
  对齐线帮助您将控件与窗体和容器边缘对齐以一致的方式。  
   
-#### <a name="to-align-controls-to-form-and-container-margins"></a>若要将控件添加到窗体和容器边缘对齐  
+### <a name="to-align-controls-to-form-and-container-margins"></a>若要将控件添加到窗体和容器边缘对齐  
   
 1. 选择其中一个<xref:System.Windows.Forms.Button>控制并将其移近右边框的窗体中，直到显示对齐线。 从右边框对齐线的距离是控件的总和<xref:System.Windows.Forms.Control.Margin%2A>属性和窗体的<xref:System.Windows.Forms.Control.Padding%2A>属性值。  
   
@@ -107,7 +107,7 @@ ms.locfileid: "64606415"
 ## <a name="aligning-to-grouped-controls"></a>对齐到分组后的控件  
  您可以使用对齐线对齐分组后的控件一样，很好地控制内<xref:System.Windows.Forms.GroupBox>控件。  
   
-#### <a name="to-align-to-grouped-controls"></a>对齐到一组控件  
+### <a name="to-align-to-grouped-controls"></a>对齐到一组控件  
   
 1. 选择两个窗体上的控件。 移动所选内容并记下你的选择和其他控件之间显示的对齐线。  
   
@@ -120,9 +120,9 @@ ms.locfileid: "64606415"
 ## <a name="using-snaplines-to-place-a-control-by-outlining-its-size"></a>使用对齐线将控件的大纲显示其大小  
  对齐线帮助您对齐控件时，首先将它们放在窗体上。  
   
-#### <a name="to-use-snaplines-to-place-a-control-by-outlining-its-size"></a>若要使用对齐线将控件置于大纲显示其大小  
+### <a name="to-use-snaplines-to-place-a-control-by-outlining-its-size"></a>若要使用对齐线将控件置于大纲显示其大小  
   
-1. 在“工具箱” 中，单击 <xref:System.Windows.Forms.Button> 控件图标。 请勿将其拖到窗体上。  
+1. 在“工具箱”  中，单击 <xref:System.Windows.Forms.Button> 控件图标。 请勿将其拖到窗体上。  
   
 2. 将鼠标指针移动窗体的设计图面。 请注意，指针会更改为十字形，同时会附上 <xref:System.Windows.Forms.Button> 控件图标。 另请注意显示建议的对齐的位置的对齐线<xref:System.Windows.Forms.Button>控件。  
   
@@ -137,7 +137,7 @@ ms.locfileid: "64606415"
 ## <a name="using-snaplines-when-dragging-a-control-from-the-toolbox"></a>从工具箱拖动控件时使用对齐线  
  对齐线帮助您对齐控件时将它们从**工具箱**拖动到窗体。  
   
-#### <a name="to-use-snaplines-when-dragging-a-control-from-the-toolbox"></a>若要从工具箱拖动控件时使用对齐线  
+### <a name="to-use-snaplines-when-dragging-a-control-from-the-toolbox"></a>若要从工具箱拖动控件时使用对齐线  
   
 1. 拖动<xref:System.Windows.Forms.Button>控件从**工具箱**拖动到窗体，但不会释放鼠标按钮。  
   
@@ -150,7 +150,7 @@ ms.locfileid: "64606415"
 ## <a name="resizing-controls-using-snaplines"></a>调整控件使用对齐线的大小  
  对齐线帮助您对齐控件调整其大小。  
   
-#### <a name="to-resize-a-control-using-snaplines"></a>调整控件使用对齐线的大小  
+### <a name="to-resize-a-control-using-snaplines"></a>调整控件使用对齐线的大小  
   
 1. 从 <xref:System.Windows.Forms.Button> “工具箱” **将** 控件拖到你的窗体上。  
   
@@ -163,7 +163,7 @@ ms.locfileid: "64606415"
 ## <a name="aligning-a-label-to-a-controls-text"></a>对齐到控件的文本标签  
  某些控件提供了用于对齐到显示的文本的其他控件的对齐线。  
   
-#### <a name="to-align-a-label-to-a-controls-text"></a>若要对齐到控件的文本标签  
+### <a name="to-align-a-label-to-a-controls-text"></a>若要对齐到控件的文本标签  
   
 1. 从 <xref:System.Windows.Forms.TextBox> “工具箱” **将** 控件拖到你的窗体上。 当 drop<xref:System.Windows.Forms.TextBox>拖到窗体控件，单击智能标记标志符号，选择**将文本设置为 textBox1**选项。 有关详细信息，请参阅[演练：在 Windows 上使用智能标记执行常见任务窗体控件](performing-common-tasks-using-smart-tags-on-wf-controls.md)。  
   
@@ -178,7 +178,7 @@ ms.locfileid: "64606415"
 ## <a name="using-snaplines-with-keyboard-navigation"></a>使用对齐线和键盘导航  
  对齐线帮助您对齐控件时排列它们使用键盘上的箭头键。  
   
-#### <a name="to-use-snaplines-with-keyboard-navigation"></a>若要使用的键盘导航使用对齐线  
+### <a name="to-use-snaplines-with-keyboard-navigation"></a>若要使用的键盘导航使用对齐线  
   
 1. 从 <xref:System.Windows.Forms.Button> “工具箱” **将** 控件拖到你的窗体上。 将其放置在窗体的左上角。  
   
@@ -199,7 +199,7 @@ ms.locfileid: "64606415"
 ## <a name="snaplines-and-layout-panels"></a>对齐线和布局面板  
  在布局面板内禁用对齐线。  
   
-#### <a name="to-selectively-disable-snaplines"></a>若要有选择性地禁用对齐线  
+### <a name="to-selectively-disable-snaplines"></a>若要有选择性地禁用对齐线  
   
 1. 从 <xref:System.Windows.Forms.TableLayoutPanel> “工具箱” **将** 控件拖到你的窗体上。  
   
@@ -214,13 +214,13 @@ ms.locfileid: "64606415"
 ## <a name="disabling-snaplines"></a>禁用对齐线  
  默认情况下启用对齐线。 您可以有选择地，禁用对齐线或您可以在设计环境中禁用它们。  
   
-#### <a name="to-selectively-disable-snaplines"></a>若要有选择性地禁用对齐线  
+### <a name="to-selectively-disable-snaplines"></a>若要有选择性地禁用对齐线  
   
 - 按 ALT 键和而移动一个窗体控件。  
   
      请注意，没有对齐线显示该控件不会按任何可能的对齐位置。  
   
-#### <a name="to-disable-snaplines-in-the-design-environment"></a>若要禁用设计环境中的对齐线  
+### <a name="to-disable-snaplines-in-the-design-environment"></a>若要禁用设计环境中的对齐线  
   
 1. 从**工具**菜单中，打开**选项**对话框。 打开 Windows 窗体设计器对话框。 有关详细信息，请参阅[选项对话框常规 Windows 窗体设计器](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/5aazxs78(v=vs.100))。  
   

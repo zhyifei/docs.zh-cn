@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0ca7aee79b5b8c3d58b4beb8f1ff886a7d55afab
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 43a502682e6ccfc36931970d0121f91529f51711
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61782702"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67744720"
 ---
 # <a name="icordebugremotetargetgethostname-method"></a>ICorDebugRemoteTarget::GetHostName 方法
 返回远程调试目标计算机的完全限定域名或 IPv4 地址。 此时不支持 IPV6。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT GetHostName (  
     [in] ULONG32      cchHostName,  
     [out] ULONG32*    pcchHostName,  

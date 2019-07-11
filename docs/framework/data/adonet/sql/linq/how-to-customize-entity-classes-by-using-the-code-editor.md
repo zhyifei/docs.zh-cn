@@ -2,15 +2,15 @@
 title: 如何：通过使用代码编辑器自定义实体类
 ms.date: 03/30/2017
 ms.assetid: ec28332f-9f3c-4e0a-baca-60f9141a68c0
-ms.openlocfilehash: 05a523f8b98c7b64350b67c217baba07dca14de3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 67a0e17b6a81d804ce101bf56d8da82fe330479c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62037825"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743422"
 ---
 # <a name="how-to-customize-entity-classes-by-using-the-code-editor"></a>如何：通过使用代码编辑器自定义实体类
-使用 Visual Studio 的开发人员可以使用[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]创建或自定义其实体类。  
+使用 Visual Studio 的开发人员可以使用对象关系设计器创建或自定义其实体类。  
   
  若要编写您自己的映射代码或自定义已生成的代码，还可以使用 Visual Studio 代码编辑器。 有关详细信息，请参阅[基于属性的映射](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)。  
   

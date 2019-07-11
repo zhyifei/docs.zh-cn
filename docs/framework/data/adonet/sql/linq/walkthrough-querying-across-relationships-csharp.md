@@ -2,12 +2,12 @@
 title: 演练：跨关系查询 (C#)
 ms.date: 03/30/2017
 ms.assetid: 552abeb1-18f2-4e93-a9c6-ef7b2db30c32
-ms.openlocfilehash: d9233bc7501544fff04c1c9eae215bd981fa4bd0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f36f618cfcb82847f6763641ee64565dcdedd919
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64618029"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742646"
 ---
 # <a name="walkthrough-querying-across-relationships-c"></a>演练：跨关系查询 (C#)
 本演练演示如何使用[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]*关联*来表示数据库中的外键关系。  
@@ -31,7 +31,7 @@ ms.locfileid: "64618029"
 ## <a name="mapping-relationships-across-tables"></a>跨表映射关系  
  在 `Customer` 类定义的后面，创建包含如下代码的 `Order` 实体类定义，这些代码表示 `Order.Customer` 作为外键与 `Customer.CustomerID` 相关。  
   
-#### <a name="to-add-the-order-entity-class"></a>添加 Order 实体类  
+### <a name="to-add-the-order-entity-class"></a>添加 Order 实体类  
   
 - 在 `Customer` 类后面键入或粘贴如下代码：  
   
@@ -40,7 +40,7 @@ ms.locfileid: "64618029"
 ## <a name="annotating-the-customer-class"></a>对 Customer 类进行批注  
  在此步骤中，您要对 `Customer` 类进行批注，以指示它与 `Order` 类的关系。 （这种添加批注的操作并非绝对必需的，因为定义任一方向上的关系都足以满足创建链接的需要。 但添加此批注确实便于您在任一方向上定位对象。）  
   
-#### <a name="to-annotate-the-customer-class"></a>对 Customer 类进行批注  
+### <a name="to-annotate-the-customer-class"></a>对 Customer 类进行批注  
   
 - 将下面的代码键入或粘贴到 `Customer` 类中：  
   
@@ -49,7 +49,7 @@ ms.locfileid: "64618029"
 ## <a name="creating-and-running-a-query-across-the-customer-order-relationship"></a>跨 Customer-Order 关系创建并运行查询  
  现在您可以直接从 `Order` 对象访问 `Customer` 对象，或反过来进行访问。 不需要显式*联接*customers 与 orders 之间。  
   
-#### <a name="to-access-order-objects-by-using-customer-objects"></a>使用 Customer 对象访问 Order 对象  
+### <a name="to-access-order-objects-by-using-customer-objects"></a>使用 Customer 对象访问 Order 对象  
   
 1. 通过将下面的代码键入或粘贴到 `Main` 方法中修改此方法：  
   
@@ -67,7 +67,7 @@ ms.locfileid: "64618029"
   
  在以下步骤中，您将创建 `Customers` 作为映射到数据库中的 Customers 表的强类型化表。  
   
-#### <a name="to-strongly-type-the-datacontext-object"></a>对 DataContext 对象进行强类型化  
+### <a name="to-strongly-type-the-datacontext-object"></a>对 DataContext 对象进行强类型化  
   
 1. 将下面的代码添加到 `Customer` 类声明的上方。  
   

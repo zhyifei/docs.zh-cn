@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b365aaa13b3070662a74ebcfc914f5ed3d291d76
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 888c9aa092d8eb01f2c0a7b915721828055a6f28
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61970009"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67773174"
 ---
 # <a name="iclrdebugmanagerbeginconnection-method"></a>ICLRDebugManager::BeginConnection 方法
 建立主机与调试器能够标识符和友好名称相关联的任务的列表之间的新连接。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT BeginConnection (  
     [in] CONNID dwConnectionId,  
     [in, string] wchar_t* szConnectionName  
@@ -69,7 +69,7 @@ HRESULT BeginConnection (
   
  **库：** 包含为 MSCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

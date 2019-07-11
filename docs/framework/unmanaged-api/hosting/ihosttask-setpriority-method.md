@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b05960eac85140a1539877eccf2d0ccdf053e76b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: cf9ecdeb4df6210805490586f1818298025fc036
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64657933"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67749949"
 ---
 # <a name="ihosttasksetpriority-method"></a>IHostTask::SetPriority 方法
 请求主机调整线程优先级级别表示由当前的任务[IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)实例。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT SetPriority (  
     [in] int newPriority  
 );  
@@ -81,7 +81,7 @@ HRESULT SetPriority (
   
  **库：** 包含为 MSCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

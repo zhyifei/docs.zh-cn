@@ -7,12 +7,12 @@ helpviewer_keywords:
 - controls [Windows Forms], arranging with FlowLayoutPanel
 - layout [Windows Forms], walkthroughs
 ms.assetid: a1744323-0316-49c2-992e-ebfc0a976b85
-ms.openlocfilehash: 8cfcdf8595733434cc56c621428c31238dd166dc
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: c9ee615a610c383c97b5d4f0de195cfc7422d3ec
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211171"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67771659"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel"></a>演练：使用 FlowLayoutPanel 在 Windows 窗体上排列控件
 
@@ -22,7 +22,7 @@ ms.locfileid: "65211171"
 
 <xref:System.Windows.Forms.TableLayoutPanel>排列其内容在网格中，提供的功能类似的 html\<表 > 元素。 其单元格排列为行和列，并且这些行和列可具有不同的大小。 有关详细信息，请参见[演练：使用 TableLayoutPanel 的 Windows 窗体上排列控件](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)。
 
-<xref:System.Windows.Forms.FlowLayoutPanel> 以特定的流向排列其内容：水平或垂直。 可从一行到下一行，或从一列到下列进行内容换行。 还可以剪切内容，而不是进行换行。 本演练涉及以下任务：
+          <xref:System.Windows.Forms.FlowLayoutPanel> 以特定的流向排列其内容：水平或垂直。 可从一行到下一行，或从一列到下列进行内容换行。 还可以剪切内容，而不是进行换行。 本演练涉及以下任务：
 
 - 创建 Windows 窗体项目
 
@@ -55,7 +55,7 @@ ms.locfileid: "65211171"
 
  <xref:System.Windows.Forms.FlowLayoutPanel> 控件可在父窗体的尺寸更改时重新调整其子控件的大小或对其进行重排。
 
-#### <a name="to-arrange-controls-horizontally-and-vertically-using-a-flowlayoutpanel"></a>使用 FlowLayoutPanel 沿水平和垂直方向排列控件
+### <a name="to-arrange-controls-horizontally-and-vertically-using-a-flowlayoutpanel"></a>使用 FlowLayoutPanel 沿水平和垂直方向排列控件
 
 1. 从 <xref:System.Windows.Forms.FlowLayoutPanel> “工具箱” **将** 控件拖到你的窗体上。
 
@@ -76,7 +76,7 @@ ms.locfileid: "65211171"
 ## <a name="changing-flow-direction"></a>更改流方向
  <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> 属性允许你更改控件排列的方向。 你可以从左到右、从右到左、从顶部到底部或从底部到顶部排列子控件。
 
-#### <a name="to-change-the-flow-direction-in-a-flowlayoutpanel"></a>若要在 FlowLayoutPanel 中更改流方向
+### <a name="to-change-the-flow-direction-in-a-flowlayoutpanel"></a>若要在 FlowLayoutPanel 中更改流方向
 
 1. 将 <xref:System.Windows.Forms.FlowLayoutPanel> 控件的 <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> 属性值更改为 <xref:System.Windows.Forms.FlowDirection.TopDown>。 请注意，子控件排列为一列或多列，具体取决于控件的高度。
 
@@ -85,7 +85,7 @@ ms.locfileid: "65211171"
 ## <a name="inserting-flow-breaks"></a>插入分流符
  <xref:System.Windows.Forms.FlowLayoutPanel> 控件向其子控件提供 FlowBreak 属性。 将 FlowBreak 属性的值设置为 `true` 导致 <xref:System.Windows.Forms.FlowLayoutPanel> 控件停止按当前排列方向对控件进行布局，并换行到下一行或下一列。
 
-#### <a name="to-insert-flow-breaks"></a>插入分流符
+### <a name="to-insert-flow-breaks"></a>插入分流符
 
 1. 将 <xref:System.Windows.Forms.FlowLayoutPanel> 控件的 <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> 属性值更改为 <xref:System.Windows.Forms.FlowDirection.TopDown>。
 
@@ -96,7 +96,7 @@ ms.locfileid: "65211171"
 ## <a name="positioning-controls-using-docking-and-anchoring"></a>使用停靠和锚定来定位控件
  子控件的停靠和锚定行为不同于其他容器控件中的行为。 停靠和锚定均相对于流方向上的最大控件。
 
-#### <a name="to-position-controls-using-docking-and-anchoring"></a>使用停靠和锚定定位控件
+### <a name="to-position-controls-using-docking-and-anchoring"></a>使用停靠和锚定定位控件
 
 1. 增加 <xref:System.Windows.Forms.FlowLayoutPanel> 的大小直到 <xref:System.Windows.Forms.Button> 控件全部排列在一列中。
 
@@ -115,7 +115,7 @@ ms.locfileid: "65211171"
 
  <xref:System.Windows.Forms.Control.Margin%2A> 属性允许你控制控件之间的间距。
 
-#### <a name="to-arrange-controls-using-the-padding-and-margin-properties"></a>使用“填充”和“边距”属性排列控件
+### <a name="to-arrange-controls-using-the-padding-and-margin-properties"></a>使用“填充”和“边距”属性排列控件
 
 1. 将 <xref:System.Windows.Forms.FlowLayoutPanel> 控件的 <xref:System.Windows.Forms.Control.Dock%2A> 属性值更改为 <xref:System.Windows.Forms.DockStyle.Fill>。 如果你的窗体足够大，则 <xref:System.Windows.Forms.Button> 控件将被移动到 <xref:System.Windows.Forms.FlowLayoutPanel> 控件的第一列中。
 
@@ -126,7 +126,7 @@ ms.locfileid: "65211171"
 ## <a name="inserting-controls-by-double-clicking-them-in-the-toolbox"></a>通过在工具箱中双击控件将其插入
  可通过在 <xref:System.Windows.Forms.FlowLayoutPanel> “工具箱” **中双击控件来填充**控件。
 
-#### <a name="to-insert-controls-by-double-clicking-in-the-toolbox"></a>若要通过在工具箱中双击控件将其插入
+### <a name="to-insert-controls-by-double-clicking-in-the-toolbox"></a>若要通过在工具箱中双击控件将其插入
 
 1. 在“工具箱” <xref:System.Windows.Forms.Button>**中，双击**控件图标。 请注意，新的 <xref:System.Windows.Forms.Button> 控件会出现在 <xref:System.Windows.Forms.FlowLayoutPanel> 控件中。
 
@@ -135,9 +135,9 @@ ms.locfileid: "65211171"
 ## <a name="inserting-a-control-by-drawing-its-outline"></a>通过绘制控件轮廓将其插入
  你可以通过在单元格中绘制控件轮廓将控件插入 <xref:System.Windows.Forms.FlowLayoutPanel> 控件并指定其大小。
 
-#### <a name="to-insert-a-control-by-drawing-its-outline"></a>通过绘制控件轮廓插入控件
+### <a name="to-insert-a-control-by-drawing-its-outline"></a>通过绘制控件轮廓插入控件
 
-1. 在“工具箱” 中，单击 <xref:System.Windows.Forms.Button> 控件图标。 请勿将其拖到窗体上。
+1. 在“工具箱”  中，单击 <xref:System.Windows.Forms.Button> 控件图标。 请勿将其拖到窗体上。
 
 2. 将鼠标指针移到 <xref:System.Windows.Forms.FlowLayoutPanel> 控件上。 请注意，指针会更改为十字形，同时会附上 <xref:System.Windows.Forms.Button> 控件图标。
 
@@ -148,7 +148,7 @@ ms.locfileid: "65211171"
 ## <a name="inserting-controls-using-the-insertion-bar"></a>使用插入栏插入控件
  可在 <xref:System.Windows.Forms.FlowLayoutPanel> 控件的特定位置插入控件。 将控件拖入 <xref:System.Windows.Forms.FlowLayoutPanel> 控件的客户端区域时，会显示一个插入栏，指示控件将插入的位置。
 
-#### <a name="to-insert-a-control-using-the-caret"></a>若要使用插入符号插入控件
+### <a name="to-insert-a-control-using-the-caret"></a>若要使用插入符号插入控件
 
 1. 从 <xref:System.Windows.Forms.Button> “工具箱” **将** 控件拖入 <xref:System.Windows.Forms.FlowLayoutPanel> 控件并指向两个 <xref:System.Windows.Forms.Button> 控件之间的空白区域。 请注意，绘制一个插入栏，指示在何处<xref:System.Windows.Forms.Button>拖放到将放置<xref:System.Windows.Forms.FlowLayoutPanel>控件。 将新的 <xref:System.Windows.Forms.Button> 控件放入 <xref:System.Windows.Forms.FlowLayoutPanel> 控件之前，移动鼠标指针以观察插入栏移动的方式。
 
@@ -157,11 +157,11 @@ ms.locfileid: "65211171"
 ## <a name="reassigning-existing-controls-to-a-different-parent"></a>将现有控件重新分配给另一个父控件
  可以将窗体中的控件分配给新的 <xref:System.Windows.Forms.FlowLayoutPanel> 控件。
 
-#### <a name="to-reparent-existing-controls"></a>若要重新设置现有控件的父级
+### <a name="to-reparent-existing-controls"></a>若要重新设置现有控件的父级
 
 1. 将三个 <xref:System.Windows.Forms.Button> 控件从“工具箱”  拖到窗体上。 将其相邻放置，但不用对齐它们。
 
-2. 在“工具箱” 中，单击 <xref:System.Windows.Forms.FlowLayoutPanel> 控件图标。 请勿将其拖到窗体上。
+2. 在“工具箱”  中，单击 <xref:System.Windows.Forms.FlowLayoutPanel> 控件图标。 请勿将其拖到窗体上。
 
 3. 将鼠标指针移至靠近这 3 个 <xref:System.Windows.Forms.Button> 控件。 请注意，指针会更改为十字形，同时会附上 <xref:System.Windows.Forms.FlowLayoutPanel> 控件图标。
 

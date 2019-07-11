@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0d992ea86b3221af222bb01f1985fe277cea5a2c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: be7dde136c5bc26148468d3d8031426b17f44292
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61988974"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67753129"
 ---
 # <a name="icordebugevalisactive-method"></a>ICorDebugEval::IsActive 方法
 获取一个值，该值指示此 ICorDebugEval 对象当前是否正在执行。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT IsActive (  
     [out] BOOL              *pbActive  
 );  
@@ -46,4 +46,4 @@ HRESULT IsActive (
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
