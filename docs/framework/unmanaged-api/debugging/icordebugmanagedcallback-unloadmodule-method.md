@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 12e42da015864e83663d2f4d74bab2a34052d760
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8826644ae3bdfbef76e9143de5f8f449c1555095
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61995080"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67761213"
 ---
 # <a name="icordebugmanagedcallbackunloadmodule-method"></a>ICorDebugManagedCallback::UnloadModule 方法
 通知调试器已卸载了公共语言运行时模块 (DLL)。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT UnloadModule (  
     [in] ICorDebugAppDomain  *pAppDomain,  
     [in] ICorDebugModule     *pModule  
@@ -53,7 +53,7 @@ HRESULT UnloadModule (
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

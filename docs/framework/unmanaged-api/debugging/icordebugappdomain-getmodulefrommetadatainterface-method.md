@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2eaa48dcc7dad2d66f1a60922c94193120b59b32
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 48249bb634c301b7fda2c360c3b793e9206a759a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61785149"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67737900"
 ---
 # <a name="icordebugappdomaingetmodulefrommetadatainterface-method"></a>ICorDebugAppDomain::GetModuleFromMetaDataInterface 方法
 获取与给定的元数据接口相对应的模块。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT GetModuleFromMetaDataInterface (  
     [in] IUnknown           *pIMetaData,  
     [out] ICorDebugModule  **ppModule  
@@ -50,4 +50,4 @@ HRESULT GetModuleFromMetaDataInterface (
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

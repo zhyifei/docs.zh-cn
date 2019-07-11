@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 79ef272e0c8afa0cd1942416c3a5eb9b825c2e6f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5741ba1b4564a703ff57b45c728bb9efac0bb35a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61992623"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782007"
 ---
 # <a name="iceegencomputepointer-method"></a>ICeeGen::ComputePointer 方法
 确定指定的代码部分的缓冲区。  
@@ -31,7 +31,7 @@ ms.locfileid: "61992623"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT ComputePointer (  
     [in]  HCEESECTION  section,  
     [in]  ULONG        RVA,   
@@ -56,7 +56,7 @@ HRESULT ComputePointer (
   
  **库：** 用作 MsCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 38f913b742f7ece2f136454f801ae780124aed87
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 71e9149bafc866f89253c4318ac69f2705431e48
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61987964"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67765304"
 ---
 # <a name="icordebugnativeframegetip-method"></a>ICorDebugNativeFrame::GetIP 方法
 获取本机代码偏移量为当前设置的指令指针的位置。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT GetIP (  
     [out] ULONG32           *pnOffset  
 );  
@@ -49,6 +49,6 @@ HRESULT GetIP (
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅

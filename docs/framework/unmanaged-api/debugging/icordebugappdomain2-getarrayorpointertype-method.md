@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6cc38ef23a8b802d674a7a6dc4807371e432f73d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fd8f71ca75a795ab86c61140eacbbcfb0a18b590
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593506"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67737813"
 ---
 # <a name="icordebugappdomain2getarrayorpointertype-method"></a>ICorDebugAppDomain2::GetArrayOrPointerType 方法
 获取指定的类型或指针或引用为指定类型的数组。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT GetArrayOrPointerType (  
     [in]  CorElementType    elementType,  
     [in]  ULONG32           nRank,  
@@ -69,4 +69,4 @@ HRESULT GetArrayOrPointerType (
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

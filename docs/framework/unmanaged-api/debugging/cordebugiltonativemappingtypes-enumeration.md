@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2f62707fb1e52a96cf3f131e9c11fee82ab03f4e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c7d9f5373f2b4ea216ca517813b1334b9f5c38a6
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61651761"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67739968"
 ---
 # <a name="cordebugiltonativemappingtypes-enumeration"></a>CorDebugIlToNativeMappingTypes 枚举
 指示本机指令，COR_DEBUG_IL_TO_NATIVE_MAP 结构的实例所表示的特定范围是否与特殊的代码区域相符。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 typedef enum CorDebugIlToNativeMappingTypes {  
     NO_MAPPING = -1,  
     PROLOG     = -2,  
@@ -51,7 +51,7 @@ typedef enum CorDebugIlToNativeMappingTypes {
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

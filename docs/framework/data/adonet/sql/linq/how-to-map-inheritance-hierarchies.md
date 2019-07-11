@@ -5,15 +5,15 @@ ms.assetid: b27c779b-9355-4dc7-b95f-7dfd504b6e48
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 6f437b7f7ae6a414971edb497bc2c84c03674fe8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e0ff3fe98fcd9ced0063d2bec85928504ea19bab
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61904041"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743186"
 ---
 # <a name="how-to-map-inheritance-hierarchies"></a>如何：映射继承层次结构
-若要在 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 中执行继承映射，您必须按以下步骤中的说明在继承层次结构的根类中指定属性 (Attribute) 和属性 (Attribute) 的属性 (Property)。 使用 Visual Studio 的开发人员可以使用[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]来映射继承层次结构。 请参阅[如何：使用 O/R 设计器配置继承](/visualstudio/data-tools/how-to-configure-inheritance-by-using-the-o-r-designer)。  
+若要在 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 中执行继承映射，您必须按以下步骤中的说明在继承层次结构的根类中指定属性 (Attribute) 和属性 (Attribute) 的属性 (Property)。 使用 Visual Studio 的开发人员可以使用对象关系设计器来映射继承层次结构。 请参阅[如何：使用 O/R 设计器配置继承](/visualstudio/data-tools/how-to-configure-inheritance-by-using-the-o-r-designer)。  
   
 > [!NOTE]
 >  子类中不需要具有特殊属性 (Attribute) 或属性 (Property)。 请特别注意，子类不具有 <xref:System.Data.Linq.Mapping.TableAttribute> 属性。  
@@ -43,7 +43,7 @@ ms.locfileid: "61904041"
 ## <a name="example"></a>示例  
   
 > [!NOTE]
->  如果使用的 Visual Studio，则可以使用[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]配置继承。 请参阅[如何：使用 O/R 设计器配置继承](/visualstudio/data-tools/how-to-configure-inheritance-by-using-the-o-r-designer)  
+>  如果使用的 Visual Studio，可以使用对象关系设计器配置继承。 请参阅[如何：使用 O/R 设计器配置继承](/visualstudio/data-tools/how-to-configure-inheritance-by-using-the-o-r-designer)  
   
  在下面的代码示例中，`Vehicle` 定义为根类，并且已执行前面的步骤来说明 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 的层次结构。  
   

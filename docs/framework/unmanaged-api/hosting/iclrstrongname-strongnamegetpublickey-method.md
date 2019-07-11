@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2acade14f9d30ca7bf0d098d6f58c80a367f621c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c1d98ada710771029e92ae2a942105e361a6ac7c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61795936"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67747981"
 ---
 # <a name="iclrstrongnamestrongnamegetpublickey-method"></a>ICLRStrongName::StrongNameGetPublicKey 方法
 获取从公钥/私钥对的公钥。 加密服务提供商 (CSP) 中的密钥容器名称或作为原始字节的集合，可提供的密钥对。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT StrongNameGetPublicKey (   
     [in]  LPCWSTR   szKeyContainer,  
     [in]  BYTE      *pbKeyBlob,  
@@ -72,7 +72,7 @@ HRESULT StrongNameGetPublicKey (
   
  **库：** 包含为 MSCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

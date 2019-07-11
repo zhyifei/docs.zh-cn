@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 490af9ca67b538e0093115a6b371b65d9788772f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0e1a2358590b95b39b6495b74078f079c5b34876
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61641354"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67765680"
 ---
 # <a name="iclrruntimehostunloadappdomain-method"></a>ICLRRuntimeHost::UnloadAppDomain 方法
 卸载托管<xref:System.AppDomain>对应于指定的数字标识符。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT UnloadAppDomain(  
     [in] DWORD dwAppDomainId  
     [in] BOOL  fWaitUntilDone  
@@ -64,7 +64,7 @@ HRESULT UnloadAppDomain(
   
  **库：** 包含为 MSCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

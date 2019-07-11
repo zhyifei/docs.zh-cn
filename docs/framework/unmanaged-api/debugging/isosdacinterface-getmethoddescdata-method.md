@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: cdbf662c664d6c87b2fa17bcb10d735b0f573dd2
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: ea54fdd83b9470db4a08daceaa695e450f5ca1af
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632319"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67764820"
 ---
 # <a name="isosdacinterfacegetmethoddescdata-method"></a>ISOSDacInterface::GetMethodDescData 方法
 
@@ -30,7 +30,7 @@ ms.locfileid: "65632319"
 
 ## <a name="syntax"></a>语法
 
-```
+```cpp
 HRESULT GetMethodDescData(
     CLRDATA_ADDRESS            methodDesc,
     CLRDATA_ADDRESS            ip,
@@ -68,9 +68,9 @@ HRESULT GetMethodDescData(
 ## <a name="requirements"></a>要求
 
 **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
-**标头：** None  
-**库：** None  
-**.NET Framework 版本：**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**标头：** 无  
+**库：** 无  
+**.NET Framework 版本：** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>请参阅
 

@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: faa6af54714f7f0b7ac91c7836673c163195d5f6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 198141545119976cb9107bc9c09b913572e266ce
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64656462"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781123"
 ---
 # <a name="mdainfo-structure"></a>MDAInfo 结构
 详细介绍`Event_MDAFired`触发托管调试助手 (MDA) 创建的事件。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 typedef struct _MDAInfo {  
     LPCWSTR  lpMDACaption;  
     LPCWSTR  lpMDAMessage  
@@ -60,7 +60,7 @@ typedef struct _MDAInfo {
   
  **库：** 包含为 MSCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 878941f7af71fa5e3de8e38c4a68a66cb964983d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9e953fa129308527f63df8dd8c5061252f8be57b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61993780"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67772442"
 ---
 # <a name="icordebugtype2-interface"></a>ICorDebugType2 接口
 扩展 ICorDebugType 接口可检索的基类型或复杂 （用户定义的） 类型的类型标识符。  
@@ -41,7 +41,7 @@ ms.locfileid: "61993780"
 ## <a name="example"></a>示例  
  下面的代码段演示如何使用[ICorDebugType2::GetTypeID](../../../../docs/framework/unmanaged-api/debugging/icordebugtype2-gettypeid-method.md)方法。  
   
-```  
+```cpp  
 // (error checking omitted for brevity)  
 // given an ICorDebugType *pType  
   
@@ -61,7 +61,7 @@ pType2->GetTypeID(&id);
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

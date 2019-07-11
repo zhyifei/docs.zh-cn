@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dffefedf14d5f219736e429be191021b2de7ddd2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c0c0679dac84089577a2698ed8b0b5497a1a81e8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61599294"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67753901"
 ---
 # <a name="corprffunctionargumentrange-structure"></a>COR_PRF_FUNCTION_ARGUMENT_RANGE 结构
 表示内存中按从左向右的顺序连续存储的函数自变量块。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 typedef struct _COR_PRF_FUNCTION_ARGUMENT_RANGE {  
     UINT_PTR startAddress;  
     ULONG length;  
@@ -49,7 +49,7 @@ typedef struct _COR_PRF_FUNCTION_ARGUMENT_RANGE {
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: de17a91b5093372579a4d9435532a95406addd0a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4b2860e811a16406a71d7ab8df123f2b32aaf13e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61969905"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67773295"
 ---
 # <a name="iclrassemblyreferencelistisstringassemblyreferenceinlist-method"></a>ICLRAssemblyReferenceList::IsStringAssemblyReferenceInList 方法
 获取一个值，指示所提供的名称是否与列表中的程序集的名称相匹配。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT IsStringAssemblyReferenceInList (  
     [in] LPCWSTR pwzAssemblyName  
 );  
@@ -54,7 +54,7 @@ HRESULT IsStringAssemblyReferenceInList (
   
  **库：** 包含为 MSCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

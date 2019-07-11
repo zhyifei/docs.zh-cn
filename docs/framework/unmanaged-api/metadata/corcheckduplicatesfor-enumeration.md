@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d04f5589ecffbcde59a6ffbe4f3d6c5f0b1040cd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a82ce9709e008e092c5f31372a89bf9a16e1f88b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62046041"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67767025"
 ---
 # <a name="corcheckduplicatesfor-enumeration"></a>CorCheckDuplicatesFor 枚举
 指定将检查有重复项的元数据令牌。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 typedef enum CorCheckDuplicatesFor {  
   
     MDDupAll                    = 0xffffffff,  
@@ -103,7 +103,7 @@ typedef enum CorCheckDuplicatesFor {
   
  **标头：** CorHdr.h  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

@@ -20,12 +20,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2a28b33f80299ae6fce34f9de66b6f7f1bc70ef6
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 7aaa0e83de1b1c3e2ce436de04a36addef16c057
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490565"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67758513"
 ---
 # <a name="corexitprocess-function"></a>CorExitProcess 函数
 关闭当前的非托管进程。  
@@ -34,7 +34,7 @@ ms.locfileid: "66490565"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 void STDMETHODCALLTYPE CorExitProcess (   
   int  exitCode  
 );  

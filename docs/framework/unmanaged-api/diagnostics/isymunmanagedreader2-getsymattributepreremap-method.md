@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 543a8015e944333942b619060059273577902a74
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 46c608a644619c28709de135d7c062175b012d80
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61986331"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777376"
 ---
 # <a name="isymunmanagedreader2getsymattributepreremap-method"></a>ISymUnmanagedReader2::GetSymAttributePreRemap 方法
 获取根据其名称的自定义属性。 与不同的元数据自定义特性，这些属性保存在符号存储区中。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT GetSymAttributePreRemap(  
     [in]  mdToken  parent,  
     [in]  WCHAR    *name,  

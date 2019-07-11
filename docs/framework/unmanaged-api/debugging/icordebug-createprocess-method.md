@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 795392bc50d4b7c5eeb82b98230a52156f273f15
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5d6220270634dd8e2d15787d717020b8f6f86bb9
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61989516"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67738327"
 ---
 # <a name="icordebugcreateprocess-method"></a>ICorDebug::CreateProcess 方法
 启动进程和调试器的控制下其主线程。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT CreateProcess (  
     [in]  LPCWSTR                     lpApplicationName,  
     [in]  LPWSTR                      lpCommandLine,  
@@ -99,7 +99,7 @@ HRESULT CreateProcess (
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

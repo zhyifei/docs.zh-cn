@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d7f8cccf8d583645982eb37f6afcb553914679ad
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 574ac706a07e7fcd701ab04f923d5171bea6f64a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777749"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782379"
 ---
 # <a name="imetadataimportgetfieldprops-method"></a>IMetaDataImport::GetFieldProps 方法
 获取与指定 FieldDef 标记引用的字段关联的元数据。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT GetFieldProps (  
    [in]  mdFieldDef        mb,   
    [out] mdTypeDef         *pClass,  
@@ -86,7 +86,7 @@ HRESULT GetFieldProps (
   
  **库：** 包含为 MsCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

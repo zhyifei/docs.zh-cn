@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MaskedTextBox control [Windows Forms]
 ms.assetid: 779b3a12-cd74-4e58-b46e-04983bda5b2c
-ms.openlocfilehash: dd156f9e5bf6519363f66ca61687f1e9f2bfc6ab
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ac747bf46c4dd1451e58615b1ec0311d75c899e8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64630433"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67760474"
 ---
 # <a name="how-to-set-the-input-mask"></a>如何：设置输入掩码
 掩码的文本框控件是支持的声明性语法来接受或拒绝用户输入增强的文本框控件。 通过设置掩码属性，可以指定允许的用户输入，而无需在应用程序中编写任何自定义验证逻辑。 有关详细信息，请参阅备注部分的<xref:System.Windows.Forms.MaskedTextBox>类。  
@@ -19,7 +19,7 @@ ms.locfileid: "64630433"
 ## <a name="setting-the-mask-property-manually"></a>手动设置掩码属性  
  如果你熟悉使用掩码属性支持的字符，则可以手动输入它。 掩码属性支持的字符的摘要，请参阅备注部分的<xref:System.Windows.Forms.MaskedTextBox.Mask%2A>属性。  
   
-#### <a name="to-set-the-mask-property-manually"></a>若要手动设置掩码属性  
+### <a name="to-set-the-mask-property-manually"></a>若要手动设置掩码属性  
   
 1. 在中**设计**视图中，选择<xref:System.Windows.Forms.MaskedTextBox>。  
   
@@ -30,7 +30,7 @@ ms.locfileid: "64630433"
 ## <a name="using-the-input-mask-dialog-box"></a>使用输入的掩码对话框  
  输入掩码对话框中提供了一些预定义的输入的掩码。 此外可以更改的预定义的掩码或手动输入自己的掩码。  
   
-#### <a name="to-open-the-input-mask-dialog-box"></a>若要打开输入掩码对话框  
+### <a name="to-open-the-input-mask-dialog-box"></a>若要打开输入掩码对话框  
   
 1. 在中**设计**视图中，选择<xref:System.Windows.Forms.MaskedTextBox>。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "64630433"
   
      **输入掩码**对话框随即出现。  
   
-#### <a name="to-use-the-input-mask-dialog-box"></a>若要使用输入掩码对话框  
+### <a name="to-use-the-input-mask-dialog-box"></a>若要使用输入掩码对话框  
   
 1. （可选）单击其中一个列表中的预定义掩码。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "64630433"
   
 4. 选中或清除**使用 ValidatingType**复选框。 **使用 ValidatingType**复选框指定是否一种数据类型用于验证输入的数据由用户。 有关更多信息，请参见 <xref:System.Windows.Forms.MaskedTextBox.ValidatingType%2A> 属性。  
   
-5. 单击 **“确定”**。  
+5. 单击 **“确定”** 。  
   
      输入掩码**掩码**属性中的**属性**窗口。  
   

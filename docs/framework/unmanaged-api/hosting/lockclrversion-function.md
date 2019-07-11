@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 16dd1b895abbd2357c46361c6381b1625422403f
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 6742293c1970198ef3d5f5da7d75a0c78e78045c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490183"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67768407"
 ---
 # <a name="lockclrversion-function"></a>LockClrVersion 函数
 允许宿主确定在进行显式初始化 CLR 之前将在进程中使用的公共语言运行时 (CLR) 的版本。  
@@ -31,7 +31,7 @@ ms.locfileid: "66490183"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT LockClrVersion (  
     [in] FLockClrVersionCallback   hostCallback,  
     [in] FLockClrVersionCallback  *pBeginHostSetup,  
@@ -60,7 +60,7 @@ HRESULT LockClrVersion (
 ## <a name="remarks"></a>备注  
  在宿主调用`LockClrVersion`之前初始化 CLR。 `LockClrVersion` 采用三个参数，所有这些都是类型的回调[FLockClrVersionCallback](../../../../docs/framework/unmanaged-api/hosting/flockclrversioncallback-function-pointer.md)。 此类型定义，如下所示。  
   
-```  
+```cpp  
 typedef HRESULT ( __stdcall *FLockClrVersionCallback ) ();  
 ```  
   

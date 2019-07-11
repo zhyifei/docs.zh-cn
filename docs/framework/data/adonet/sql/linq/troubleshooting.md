@@ -2,12 +2,12 @@
 title: 疑难解答
 ms.date: 03/30/2017
 ms.assetid: 8cd4401c-b12c-4116-a421-f3dcffa65670
-ms.openlocfilehash: c09871abcdfb9243b5170386ffe79012c9c3f71d
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 697432dce5f7698a8b4eabde3586bb4f77fd62de
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661867"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742749"
 ---
 # <a name="troubleshooting"></a>疑难解答
 下面的信息揭示您在 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 应用程序中可能遇到的一些问题，并提供建议以避免这些问题或减少这些问题的影响。  
@@ -26,7 +26,7 @@ ms.locfileid: "67661867"
  若要指定一个输入文件名，请将该名称作为输入文件添加到命令行。 不支持在连接字符串中包含文件名（使用 **/conn** 选项）。 有关详细信息，请参阅 [SqlMetal.exe（代码生成工具）](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)。  
   
 ## <a name="class-library-projects"></a>类库项目  
- [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]会在项目的 `app.config` 文件中创建一个连接字符串。 在类库项目中，不使用 `app.config` 文件。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 使用在设计时文件中提供的连接字符串。 更改 `app.config` 中的值不会更改应用程序连接到的数据库。  
+ 对象关系设计器创建中的连接字符串`app.config`项目文件。 在类库项目中，不使用 `app.config` 文件。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 使用在设计时文件中提供的连接字符串。 更改 `app.config` 中的值不会更改应用程序连接到的数据库。  
   
 ## <a name="cascade-delete"></a>级联删除  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 不支持且无法识别级联删除操作。 如果要在表中删除一个具有约束的行，必须执行以下操作之一：  

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 26a43a4f-83c9-4732-806d-bb23aad0ff6b
-ms.openlocfilehash: 6a25ea5fe80da1fed16f44fd3243ebea4d64069f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fa3690ae74869f5dc0fbaa8d824d4aebca8ce724
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61902884"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743065"
 ---
 # <a name="insert-update-and-delete-operations"></a>插入、更新和删除操作
 在 `Insert` 中执行 `Update`、`Delete` 和 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 操作的方法是：向对象模型中添加对象、更改和移除对象模型中的对象。 默认情况下，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 会将您所做的操作转换成 SQL，然后将这些更改提交至数据库。  
@@ -30,7 +30,7 @@ ms.locfileid: "61902884"
 > [!NOTE]
 >  您可以使用自己的自定义逻辑来重写此行为，这通常是通过存储过程来实现的。 有关详细信息，请参阅[开发人员在重写默认行为的职责](../../../../../../docs/framework/data/adonet/sql/linq/responsibilities-of-the-developer-in-overriding-default-behavior.md)。  
 >   
->  使用 Visual Studio 的开发人员可以使用[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]来开发用于此目的的存储的过程。  
+>  使用 Visual Studio 的开发人员可以使用对象关系设计器来开发用于此目的的存储的过程。  
   
 ## <a name="see-also"></a>请参阅
 

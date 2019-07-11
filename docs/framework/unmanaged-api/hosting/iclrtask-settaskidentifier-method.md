@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: abd8848ed54b26b66090e4865f9c3a0e5c4d20db
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9fe678dbf47141c31fb0870f1364983bc2ad69fc
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61763498"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67770407"
 ---
 # <a name="iclrtasksettaskidentifier-method"></a>ICLRTask::SetTaskIdentifier 方法
 指示公共语言运行时 (CLR) 将指定的标识符值与表示由当前的任务相关联[ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)实例。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT SetTaskIdentifier (  
     [in] DWORD Asked  
 );  
@@ -60,7 +60,7 @@ HRESULT SetTaskIdentifier (
   
  **库：** 包含为 MSCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

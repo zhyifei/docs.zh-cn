@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b8f2b08662e719a3308a62ab5b60f5dc490f2a6a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e61acbb15844c5ddfc8b7aa98c41bb18c6e9ade5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61985668"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67769758"
 ---
 # <a name="ebindpolicylevels-enumeration"></a>EBindPolicyLevels 枚举
 提供用于指定要应用或修改的程序集策略级别的标志。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 typedef enum {  
     ePolicyLevelNone         = 0x0,  
     ePolicyLevelRetargetable = 0x1,  
@@ -64,7 +64,7 @@ typedef enum {
   
  **库：** MSCorEE.dll  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

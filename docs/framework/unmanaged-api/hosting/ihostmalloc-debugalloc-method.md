@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6e089d133374f112dea13e91f9bd571bd2b5af07
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f87c9c04c4d5b1d65e8c844630a6034f3c72d484
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61796705"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780966"
 ---
 # <a name="ihostmallocdebugalloc-method"></a>IHostMAlloc::DebugAlloc 方法
 请求主机从堆中分配指定的数量的内存和此外来跟踪分配内存时。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT DebugAlloc (  
     [in]  SIZE_T  cbSize,   
     [in]  EMemoryCriticalLevel dwCriticalLevel,   
@@ -77,7 +77,7 @@ HRESULT DebugAlloc (
   
  **库：** 包含为 MSCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 88cd08b4290739808079bc8ecb713a5c5ea96584
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1baee71b5b8575f51eb54fbc8a037a5dddd24500
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777892"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782527"
 ---
 # <a name="imetadataimportfindfield-method"></a>IMetaDataImport::FindField 方法
 获取指向 FieldDef 标记字段包含由指定<xref:System.Type>并具有指定的名称和元数据签名。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT FindField (  
    [in]  mdTypeDef         td,  
    [in]  LPCWSTR           szName,  
@@ -69,7 +69,7 @@ HRESULT FindField (
   
  **库：** 包含为 MsCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

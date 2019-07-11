@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c43fd1c63b14fc3254044247213bf09453da870e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 917ebe3c2001a9bc87978685d7f9a19eb3d98220
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61599372"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67767197"
 ---
 # <a name="ihostmemorymanagergetmemoryload-method"></a>IHostMemoryManager::GetMemoryLoad 方法
 获取当前已在使用中，并因此不可用，报告的主机的物理内存量。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT GetMemoryLoad (  
     [out] DWORD*  pMemoryLoad,   
     [out] SIZE_T  *pAvailableBytes  
@@ -66,7 +66,7 @@ HRESULT GetMemoryLoad (
   
  **库：** 包含为 MSCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

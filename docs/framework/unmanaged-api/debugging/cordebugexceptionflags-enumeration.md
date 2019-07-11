@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2c7b9b25673685dde8b75702c80f525515917ae1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 352a45a33a109570f100e91a24cd44dc4f6780e7
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61915247"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67740145"
 ---
 # <a name="cordebugexceptionflags-enumeration"></a>CorDebugExceptionFlags 枚举
 提供有关异常的附加信息。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 typedef enum CorDebugExceptionFlags {  
     DEBUG_EXCEPTION_NONE = 0,  
     DEBUG_EXCEPTION_CAN_BE_INTERCEPTED = 0x0001  
@@ -52,7 +52,7 @@ typedef enum CorDebugExceptionFlags {
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3090887d3c670b2784b7b40c7d63832715596c3b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c5e8dd4a9dbf301b0910eda220513e9a3ffdc1cb
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697597"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778636"
 ---
 # <a name="getidentityauthority-function"></a>GetIdentityAuthority 函数
 获取一个指向[IIdentityAuthority](../../../../docs/framework/unmanaged-api/fusion/iidentityauthority-interface.md)管理密钥的代码对象的实例。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT GetIdentityAuthority (  
     [out] IIdentityAuthority   **ppIIdentityAuthority  
  );  
@@ -44,7 +44,7 @@ HRESULT GetIdentityAuthority (
   
  **标头：** Isolation.h  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

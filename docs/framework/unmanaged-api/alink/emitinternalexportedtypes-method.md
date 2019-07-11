@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c196bcc159b18b9dc04329d817ebe16e07bb8bb7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 15174480c4345f2514572701a5525f0f192ad120
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790008"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742098"
 ---
 # <a name="emitinternalexportedtypes-method"></a>EmitInternalExportedTypes 方法
 发出类型添加到程序集。 调用此方法后添加内部类型已知。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT EmitInternalExportedTypes(  
     mdAssembly AssemblyID  
 ) PURE;  

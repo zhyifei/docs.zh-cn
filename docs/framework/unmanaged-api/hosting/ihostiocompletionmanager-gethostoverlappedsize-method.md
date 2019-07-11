@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e4a5661128765cc058417fef6373767d46a4bd7b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 54e72205f8f976498df3b1fe1e055fb7df12d68e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61796898"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780684"
 ---
 # <a name="ihostiocompletionmanagergethostoverlappedsize-method"></a>IHostIoCompletionManager::GetHostOverlappedSize 方法
 获取宿主要追加到输入/输出请求的任何自定义数据的大小。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT GetHostOverlappedSize (  
     [out] DWORD *pcbSize  
 );  
@@ -70,7 +70,7 @@ HRESULT GetHostOverlappedSize (
   
  **库：** 包含为 MSCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

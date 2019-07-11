@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d98829b29100824e5d606e23aaf287c9f6e81d69
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9853f974230ee755a33bc46ca6ba3e086051b236
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61771912"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778476"
 ---
 # <a name="createapplicationcontext-function"></a>CreateApplicationContext 函数
 此函数支持.NET Framework 基础结构，不应在代码中直接使用。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT CreateApplicationContext (  
     [in]  IAssemblyName  *pName,  
     [out] LPPAPPLICATIONCONTEXT  *ppCtx  
@@ -49,7 +49,7 @@ HRESULT CreateApplicationContext (
   
  **库：** 包含为 Fusion.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

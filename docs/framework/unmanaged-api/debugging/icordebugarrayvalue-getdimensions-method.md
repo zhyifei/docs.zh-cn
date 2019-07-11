@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a52075f33d594787c516f84b65b3319991380907
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9c0f4836a3dc848b52ee7fe6947f350e6fab787f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61645690"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67737568"
 ---
 # <a name="icordebugarrayvaluegetdimensions-method"></a>ICorDebugArrayValue::GetDimensions 方法
 获取此数组的每个维度中的元素数。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT GetDimensions (  
     [in] ULONG32         cdim,  
     [out, size_is(cdim), length_is(cdim)]   
@@ -53,4 +53,4 @@ HRESULT GetDimensions (
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ae31506d4ba34bf262f49bc2321c6cfcd30f1b60
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4e2e6a4624403dcab30bdb7b6d3af0226204cac0
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61782689"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67744641"
 ---
 # <a name="icordebugremotetarget-interface"></a>ICorDebugRemoteTarget 接口
 介绍能够让开发人员在公共语言运行时 (CLR) 环境中调试基于 Silverlight 的应用程序的方法。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 interface ICorDebugRemoteTarget  : IUnknown  
 {  
     HRESULT GetHostName (  

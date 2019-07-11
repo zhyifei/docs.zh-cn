@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 26df40297d080d1ccc9464f7b09e7731f135e270
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b4e8b1a76bcc56424e61991d36c94c5f2dfab8aa
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61989230"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67745609"
 ---
 # <a name="icordebugchainenumnext-method"></a>ICorDebugChainEnum::Next 方法
 从当前位置开始枚举中获取指定的数量的 ICorDebugChain 实例。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT Next (  
     [in] ULONG  celt,  
     [out, size_is(celt), length_is(*pceltFetched)]  
@@ -55,4 +55,4 @@ HRESULT Next (
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

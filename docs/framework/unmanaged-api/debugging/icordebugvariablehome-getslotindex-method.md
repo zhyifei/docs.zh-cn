@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b819f1f02870a8a85a531d7d341cbaf488a1ccd6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 199c3ba5d5b9588db4c665070b4dec6266cefc2e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61993663"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67760355"
 ---
 # <a name="icordebugvariablehomegetslotindex-method"></a>ICorDebugVariableHome::GetSlotIndex 方法
 获取本地变量的托管的槽索引。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT GetSlotIndex(  
     [out] ULONG32 *pSlotIndex  
 );  
@@ -42,7 +42,7 @@ HRESULT GetSlotIndex(
 ## <a name="return-value"></a>返回值  
  该方法返回以下值。  
   
-|“值”|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |`S_OK`|方法调用返回中的槽索引值`pSlotIndex`。|  
 |`E_FAIL`|当前[ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)实例表示的函数参数。|  
@@ -57,7 +57,7 @@ HRESULT GetSlotIndex(
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

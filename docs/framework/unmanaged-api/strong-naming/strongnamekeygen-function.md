@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 95c1d8171d2d76ecf085252e7973c0da851b3225
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 74445b03e78ff68426f60c3e306d9151d0ba288a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64666032"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780998"
 ---
 # <a name="strongnamekeygen-function"></a>StrongNameKeyGen 函数
 创建新的公钥/私钥对，以便强名称使用。  
@@ -30,7 +30,7 @@ ms.locfileid: "64666032"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 BOOLEAN StrongNameKeyGen (  
     [in]  LPCWSTR   wszKeyContainer,  
     [in]  DWORD     dwFlags,  
@@ -71,7 +71,7 @@ BOOLEAN StrongNameKeyGen (
   
  **库：** 包含为 MsCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

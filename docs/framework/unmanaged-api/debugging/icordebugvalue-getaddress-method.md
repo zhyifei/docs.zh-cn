@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ac550ee7b1d66612557b30d15c275c90cf09b8af
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5dc29663153f837b660262eae51b6f032617d027
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61986851"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67765067"
 ---
 # <a name="icordebugvaluegetaddress-method"></a>ICorDebugValue::GetAddress 方法
 获取此"ICorDebugValue"对象，它是正在调试的过程中的地址。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT GetAddress (  
     [out] CORDB_ADDRESS   *pAddress  
 );  
@@ -49,6 +49,6 @@ HRESULT GetAddress (
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅

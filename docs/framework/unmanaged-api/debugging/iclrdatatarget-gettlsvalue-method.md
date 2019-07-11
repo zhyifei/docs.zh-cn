@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 21fa9a17067f754fe9b13c4d32193856a57750ca
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7de415b998ef97e7500c289a1bca4402d203b152
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61698130"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67738689"
 ---
 # <a name="iclrdatatargetgettlsvalue-method"></a>ICLRDataTarget::GetTLSValue 方法
 获取一个值从线程本地存储 (TLS) 的目标进程中指定的线程。 由公共语言运行时 (CLR) 数据访问服务调用此方法。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT GetTLSValue (  
     [in] ULONG32            threadID,  
     [in] ULONG32            index,  
@@ -57,7 +57,7 @@ HRESULT GetTLSValue (
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

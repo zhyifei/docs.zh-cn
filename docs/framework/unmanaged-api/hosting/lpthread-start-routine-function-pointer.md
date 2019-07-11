@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a81e78c0a34f766e1598dd27506f62bd3132f348
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 577526536e07172070a1e8a65e73fd15646681fb
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490155"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67768346"
 ---
 # <a name="lpthreadstartroutine-function-pointer"></a>LPTHREAD_START_ROUTINE 函数指针
 指向通知宿主某个线程已开始执行的函数。  
@@ -30,7 +30,7 @@ ms.locfileid: "66490155"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 typedef DWORD (__stdcall *LPTHREAD_START_ROUTINE) (  
     [in] LPVOID lpThreadParameter  
 );  

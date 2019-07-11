@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 274b91793cd51348c42661bf12a4e4385e17f630
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 536f3249593333234f7f09921007b483fb80cf79
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697766"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778588"
 ---
 # <a name="getappidauthority-function"></a>GetAppIdAuthority 函数
 获取一个指向[IAppIdAuthority](../../../../docs/framework/unmanaged-api/fusion/iappidauthority-interface.md)管理密钥的应用程序标识和引用的实例。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT GetAppIdAuthority (  
     [out] IAppIdAuthority **ppIAppIdAuthority  
  );  
@@ -44,7 +44,7 @@ HRESULT GetAppIdAuthority (
   
  **标头：** Isolation.h  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 
