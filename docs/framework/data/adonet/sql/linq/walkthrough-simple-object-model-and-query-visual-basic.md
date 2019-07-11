@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: c878e457-f715-46e4-a136-ff14d6c86018
-ms.openlocfilehash: 0d4e3360920347c38f24b962c097af32eb92bc48
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9bf97263bf8ae0ac3ece187e81a51edfaef48a54
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64657413"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742577"
 ---
 # <a name="walkthrough-simple-object-model-and-query-visual-basic"></a>演练：简单对象模型和查询 (Visual Basic)
 本演练提供了复杂性最小的基本端对端 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 方案。 您将创建一个可为示例 Northwind 数据库中的 Customers 表建模的实体类。 然后您将创建一个简单查询，用于列出位于伦敦的客户。  
   
- 本演练在设计上是面向代码的，以帮助说明 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 概念。 一般来说，您会使用 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] 来创建对象模型。  
+ 本演练在设计上是面向代码的，以帮助说明 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 概念。 一般来说，您将使用对象关系设计器来创建对象模型。  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
   
@@ -46,15 +46,15 @@ ms.locfileid: "64657413"
   
 #### <a name="to-create-a-linq-to-sql-solution"></a>创建 LINQ to SQL 解决方案  
   
-1. 在“文件”菜单上，单击“新建项目”。  
+1. 在“文件”菜单上，单击“新建项目”。    
   
 2. 在中**项目类型**窗格**新项目**对话框中，单击**Visual Basic**。  
   
-3. 在“模板”窗格中，单击“控制台应用程序”。  
+3. 在“模板”  窗格中，单击“控制台应用程序”  。  
   
 4. 在中**名称**框中，键入**LinqConsoleApp**。  
   
-5. 单击 **“确定”**。  
+5. 单击 **“确定”** 。  
   
 ## <a name="adding-linq-references-and-directives"></a>添加 LINQ 引用和指令  
  本演练用到默认情况下您的项目中可能未安装的程序集。 如果`System.Data.Linq`不作为项目中引用列出 (单击**显示所有文件**中**解决方案资源管理器**展开**引用**节点)，请按照中所述添加它以下步骤。  
@@ -139,11 +139,11 @@ ms.locfileid: "64657413"
   
      消息框会显示一个包含六个客户的列表。 控制台窗口会显示生成的 SQL 代码。  
   
-3. 单击“确定”，关闭该消息框。  
+3. 单击“确定”，关闭该消息框  。  
   
      应用程序即会关闭。  
   
-4. 在“文件”菜单上，单击“全部保存”。  
+4. 在“文件”  菜单上，单击“全部保存”  。  
   
      如果您要继续下一演练，您将需要此应用程序。  
   

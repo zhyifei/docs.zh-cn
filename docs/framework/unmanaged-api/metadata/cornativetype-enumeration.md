@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bf62000fd4ec5c8f3dea3fa7d560b3f9ead33fa7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 846c754aeb0a710fa70e906e666f694eaa77c576
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62045454"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781712"
 ---
 # <a name="cornativetype-enumeration"></a>CorNativeType 枚举
 包含一些值，用于描述本机非托管类型。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 typedef enum CorNativeType {  
   
     NATIVE_TYPE_END                  = 0x0,  
@@ -144,7 +144,7 @@ typedef enum CorNativeType {
   
  **标头：** CorHdr.h  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

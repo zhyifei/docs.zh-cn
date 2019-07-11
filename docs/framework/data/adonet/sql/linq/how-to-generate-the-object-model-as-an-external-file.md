@@ -2,18 +2,18 @@
 title: 如何：将对象模型作为外部文件生成
 ms.date: 03/30/2017
 ms.assetid: 2496fa06-3df4-4ecb-86c4-70a49ea08565
-ms.openlocfilehash: 2e439cd6628daa5b574be2049393dc2964896679
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 828e92903447b5c7cd3d7d27ed72bfe61d0dc6a9
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033743"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743292"
 ---
 # <a name="how-to-generate-the-object-model-as-an-external-file"></a>如何：将对象模型作为外部文件生成
 作为基于属性的映射的替代方法，可以使用 SQLMetal 命令行工具将您的对象模型生成为外部 XML 文件。 有关详细信息，请参阅 [SqlMetal.exe（代码生成工具）](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)。 使用外部 XML 映射文件可以降低代码中的混乱程度。 您还可以通过修改该外部文件来更改行为，而无需重新编译应用程序的二进制文件。 有关详细信息，请参阅[外部映射](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)。  
   
 > [!NOTE]
->  [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] 不支持生成外部映射文件。  
+>  对象关系设计器不支持生成外部映射文件。  
   
 ## <a name="example"></a>示例  
  下面的命令从 Northwind 示例数据库生成一个外部映射文件。  

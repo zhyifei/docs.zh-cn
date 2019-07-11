@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 056d1ac0ffd3ad7fa7cb1f86ae13331ac38b3eff
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7ff6bde5009e834bfca156fe4d3ad16da53ded85
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775643"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742380"
 ---
 # <a name="addfile-method"></a>AddFile 方法
 将文件添加到该程序集。 此外可以用于创建未绑定的模块。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT AddFile(  
     mdAssembly      AssemblyID,  
     LPCWSTR         pszFilename,  

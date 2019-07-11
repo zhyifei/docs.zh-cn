@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f15ee906fb20cb60272cee3deffa68dbe852f689
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e5de55d74741e9deb33be2f9adf15a970561664b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62042615"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779735"
 ---
 # <a name="imetadataimportenummethodswithname-method"></a>IMetaDataImport::EnumMethodsWithName 方法
 枚举具有指定名称并且由指定的 TypeDef 标记所引用的类型定义的方法。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT EnumMethodsWithName (  
    [in, out] HCORENUM    *phEnum,  
    [in]  mdTypeDef       cl,  
@@ -76,7 +76,7 @@ HRESULT EnumMethodsWithName (
   
  **库：** 包含为 MsCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

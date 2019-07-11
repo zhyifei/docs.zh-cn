@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d97d75eb5fab396530a6f48314e96c8d47d06439
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 86299a1f64120b3ca0ec858975b824b7e7288af9
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64656488"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67773258"
 ---
 # <a name="iclrcontrolgetclrmanager-method"></a>ICLRControl::GetCLRManager 方法
 到任何主机可用于配置公共语言运行时 (CLR) 管理器类型的实例获取的接口指针。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT GetCLRManager (  
     [in]  REFIID  riid,  
     [out] void  **ppObject  
@@ -76,7 +76,7 @@ HRESULT GetCLRManager (
   
  **库：** 包含为 MSCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

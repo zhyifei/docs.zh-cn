@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a2f71a277484adbbfe3628222c635528cdab03e6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 38c0937804eb82d1c96a605b55a00784ba58fe13
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62045742"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781831"
 ---
 # <a name="corimportoptions-enumeration"></a>CorImportOptions 枚举
 包含一些标志值，用于在导入当前作用域范围外的程序集的过程中控制行为。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 typedef enum CorImportOptions {  
   
     MDImportOptionDefault                = 0x00000000,  
@@ -63,7 +63,7 @@ typedef enum CorImportOptions {
   
  **标头：** CorHdr.h  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

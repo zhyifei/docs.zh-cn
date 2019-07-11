@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 3aac7e24fa9cd03350aebf5f441063bcedfaed04
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2f34ae3e6687027aeb75e7ea169487fc8cbda466
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61961286"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67741029"
 ---
 # <a name="clrdatailaddressmap-structure"></a>CLRDATA_IL_ADDRESS_MAP 结构
 
@@ -30,7 +30,7 @@ ms.locfileid: "61961286"
 
 ## <a name="syntax"></a>语法
 
-```
+```cpp
 typedef struct
 {
     ULONG32 ilOffset;
@@ -56,9 +56,9 @@ typedef struct
 ## <a name="requirements"></a>要求
 
 **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
-**标头：** None  
-**库：** None   
-**.NET Framework 版本：**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**标头：** 无  
+**库：** 无   
+**.NET Framework 版本：** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>请参阅
 

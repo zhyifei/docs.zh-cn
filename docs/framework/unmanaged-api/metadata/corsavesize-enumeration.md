@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bc36468a2016822e884ec3a36a23c75477a00a2d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c1e7bbac17d9a9ae191a5ad6d69b52a806383562
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62045378"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781604"
 ---
 # <a name="corsavesize-enumeration"></a>CorSaveSize 枚举
 包含一些值，用于指示查询保存操作的大小时所需的精度级别。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 typedef enum CorSaveSize {  
     cssAccurate                = 0x0000,   
     cssQuick                   = 0x0001,   
@@ -51,7 +51,7 @@ typedef enum CorSaveSize {
   
  **库：** 用作 MsCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

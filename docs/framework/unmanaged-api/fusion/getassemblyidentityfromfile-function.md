@@ -18,19 +18,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4f5dd25ec2a6a1b0b5d6266c3d8e728bd128a9ed
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 581c675cfb69503e6366471a469ffed1a2d13b1a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697753"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67745226"
 ---
 # <a name="getassemblyidentityfromfile-function"></a>GetAssemblyIdentityFromFile 函数
 获取一个指向`IUnknown`对象具有指定`IID`中程序集在指定的文件路径。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT GetAssemblyIdentityFromFile (  
     [in]  LPCWSTR   pwzFilePath,  
     [in]  REFIID    riid,  
@@ -53,7 +53,7 @@ HRESULT GetAssemblyIdentityFromFile (
   
  **标头：** Fusion.h  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

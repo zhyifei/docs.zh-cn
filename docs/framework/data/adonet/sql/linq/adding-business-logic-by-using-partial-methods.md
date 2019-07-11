@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3a73991e-fd4e-4610-93fb-7ced4dc6b7f9
-ms.openlocfilehash: ea7dbc4f760a446440cb7291413d69b1202f80e3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ed440f3315fc25e82b648f21410acb7a2c2a08f9
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033834"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743677"
 ---
 # <a name="adding-business-logic-by-using-partial-methods"></a>通过使用分部方法添加业务逻辑
 你可以自定义 Visual Basic 和C#生成的代码中的您[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]通过使用项目*分部方法*。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 生成的代码定义签名作为分部方法的一部分。 如果您要实现此方法，您可以添加自己的分部方法。 如果您不添加自己的实现，编译器将丢弃分部方法签名并调用 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中的默认方法。  
   
 > [!NOTE]
->  如果使用的 Visual Studio，则可以使用[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]向实体类添加验证及其他自定义项。  
+>  如果使用的 Visual Studio，可以使用对象关系设计器向实体类添加验证及其他自定义项。  
   
  例如，Northwind 示例数据库中 `Customer` 类的默认映射包括下面的分部方法：  
   

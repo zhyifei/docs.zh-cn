@@ -18,19 +18,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4e549e13c0d51e4aa708a674a2224168ab66f8ad
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 76ada8400573dd61c25e0dce3f49ce66b5fb30c1
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61774525"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67773800"
 ---
 # <a name="nukedownloadedcache-function"></a>NukeDownloadedCache 函数
 删除公共语言运行时 (CLR) 下载缓存。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT NukeDownloadedCache();  
 ```  
   
@@ -47,7 +47,7 @@ HRESULT NukeDownloadedCache();
   
  **库：** Fusion.dll 和 Mscorwks.dll。 使用而不是 Mscorwks.dll Fusion.dll 确保面向.NET Framework 的正确版本。  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

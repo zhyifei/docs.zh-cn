@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8056ef18089f56f1f9b6717d505fa3d058957541
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 97a3ab62cda82526a7ad8b8e5d985d9fce7d6f07
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61782521"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67783074"
 ---
 # <a name="spawninstance-function"></a>SpawnInstance 函数
 创建类的新实例。    
@@ -30,7 +30,7 @@ ms.locfileid: "61782521"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT SpawnInstance (
    [in] int                  vFunc, 
    [in] IWbemClassObject*    ptr, 
@@ -56,7 +56,7 @@ HRESULT SpawnInstance (
 
 此函数返回以下值中定义*WbemCli.h*标头文件，也可以在定义它们为常量在代码中：
 
-|返回的常量  |“值”  |描述  |
+|返回的常量  |值  |描述  |
 |---------|---------|---------|
 | `WBEM_E_INCOMPLETE_CLASS` | 0x80041020 | `ptr` 不是有效的类定义，无法生成新的实例。 不完整，或者它尚未注册到 Windows 管理通过调用[PutClassWmi](putclasswmi.md)。 |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 没有足够的内存是可用于完成该操作。 |
@@ -76,7 +76,7 @@ HRESULT SpawnInstance (
   
  **标头：** WMINet_Utils.idl  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>请参阅
 

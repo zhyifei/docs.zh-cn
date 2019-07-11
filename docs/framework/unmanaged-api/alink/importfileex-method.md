@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3b3cf91ad4e048ddfccb4086f36923f33d754ac0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fcf714cb0c1c1dd59ae2ec56279870c0bb3e1c4a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61949118"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67741718"
 ---
 # <a name="importfileex-method"></a>ImportFileEx 方法
 导入指定的程序集或未绑定的模块。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT ImportFileEx(  
     LPCWSTR pszFilename,  
     LPCWSTR pszTargetName,  

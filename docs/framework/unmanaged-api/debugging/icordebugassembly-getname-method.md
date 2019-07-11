@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3077e0494816a083d97839d66d06b18130e5dac8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 38542ec28cce9687dc3ed824f9d449f3070976da
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61645573"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67737297"
 ---
 # <a name="icordebugassemblygetname-method"></a>ICorDebugAssembly::GetName 方法
 获取程序集的名称，这`ICorDebugAssembly`实例所表示。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT GetName (  
     [in] ULONG32  cchName,  
     [out] ULONG32 *pcchName,  
@@ -57,4 +57,4 @@ HRESULT GetName (
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

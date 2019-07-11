@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a3056836d289383161f9fa538c3c6349f88b6ba6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 719f0522cc43625a4d6cc8afa838d869e47b40d1
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61905731"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781840"
 ---
 # <a name="corfilemapping-enumeration"></a>CorFileMapping 枚举
 包含描述从调用返回的文件映射的类型的值[imetadatainfo:: Getfilemapping](../../../../docs/framework/unmanaged-api/metadata/imetadatainfo-getfilemapping-method.md)方法。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 typedef enum CorFileMapping {  
   
     fmFlat                  =   0x0000,  
@@ -49,7 +49,7 @@ typedef enum CorFileMapping {
   
  **标头：** CorHdr.h  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

@@ -19,19 +19,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b7407db297a827004c851b904b2da8652778cb08
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f97e90e3953a01f07d77e604628fbdb79eb9efa0
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61756411"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779173"
 ---
 # <a name="corexemain-function"></a>_CorExeMain 函数
 初始化公共语言运行时 (CLR) 中，查找托管的入口点的可执行程序集 CLR 头中，并开始执行。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 __int32 STDMETHODCALLTYPE _CorExeMain ();  
 ```  
   
@@ -51,7 +51,7 @@ __int32 STDMETHODCALLTYPE _CorExeMain ();
   
  **库：** 包含为 MsCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b05f5a3f29c7b72ed83c1456175f68ef9b986e3e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 59328c8b7e86694610de20ade72a98a4280b439d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61987177"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67762629"
 ---
 # <a name="icordebugthreadgetactivechain-method"></a>ICorDebugThread::GetActiveChain 方法
 获取此 ICorDebugThread 对象上活动的 （最新的） 堆栈链的接口指针。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT GetActiveChain (  
     [out] ICorDebugChain **ppChain  
 );  
@@ -49,4 +49,4 @@ HRESULT GetActiveChain (
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

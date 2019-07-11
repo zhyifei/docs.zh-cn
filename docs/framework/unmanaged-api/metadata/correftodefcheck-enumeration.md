@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 82abeb0ce3db075d794787bb1fcd5bc18321bef2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2ae87dd4538a9a8e88591f498c0ce77b51bfa852
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906173"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781623"
 ---
 # <a name="correftodefcheck-enumeration"></a>CorRefToDefCheck 枚举
 指定用于控制将哪些引用项转换为相应定义以优化代码的标志。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 typedef enum CorRefToDefCheck {  
     MDRefToDefDefault           = 0x00000003,  
     MDRefToDefAll               = 0xffffffff,  
@@ -53,7 +53,7 @@ typedef enum CorRefToDefCheck {
   
  **标头：** CorHdr.h  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

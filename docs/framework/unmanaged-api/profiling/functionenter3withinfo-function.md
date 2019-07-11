@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1ec24952b91f5d959c1ac0bb50e2bbe4b94002b3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: cf16563e6d5fef3a743e802166173004a857dd0e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586799"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67745829"
 ---
 # <a name="functionenter3withinfo-function"></a>FunctionEnter3WithInfo 函数
 通知探查器正在将控件传递给函数，并提供句柄，可传递给[ICorProfilerInfo3::GetFunctionEnter3Info 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionenter3info-method.md)以检索堆栈帧和函数参数。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 void __stdcall FunctionEnter3WithInfo(  
                [in] FunctionIDOrClientID functionIDOrClientID,  
                [in] COR_PRF_ELT_INFO eltInfo);  
@@ -63,7 +63,7 @@ void __stdcall FunctionEnter3WithInfo(
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

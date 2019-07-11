@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: faf1be65d308b223490f3ae67eed3d8a2b1688b9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: eef2d75a2c8a3445c7f8666fec5be9e4d089e3cb
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61609357"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67740528"
 ---
 # <a name="corsegment-structure"></a>COR_SEGMENT 结构
 包含有关托管堆中的内存区域的信息。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 typedef struct _COR_SEGMENT {  
     CORDB_ADDRESS start;            
     CORDB_ADDRESS end;              
@@ -58,7 +58,7 @@ typedef struct _COR_SEGMENT {
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

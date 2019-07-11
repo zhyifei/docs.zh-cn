@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c7e807b502e0905f9ae785203289447c71d25e04
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8093a702069e4ecd4dad761ad0a431abe81d6141
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62041011"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780425"
 ---
 # <a name="strongnamehashsize-function"></a>StrongNameHashSize 函数
 使用指定的哈希算法获取哈希所需的缓冲区大小。  
@@ -30,7 +30,7 @@ ms.locfileid: "62041011"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 BOOLEAN StrongNameHashSize (  
     [in]  ULONG   ulHashAlg,  
     [out] DWORD   *pcbSize  
@@ -57,7 +57,7 @@ BOOLEAN StrongNameHashSize (
   
  **库：** 包含为 MsCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

@@ -20,12 +20,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fbfd3ae32f4d3033894fdaf6b1bcc880c324e928
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 68be16c559431de871dc9ddb1963897b0927d49a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62000280"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67783168"
 ---
 # <a name="strongnametokenfrompublickey-function"></a>StrongNameTokenFromPublicKey 函数
 获取表示公钥的令牌。 强名称标记是简写形式的公共密钥。  
@@ -34,7 +34,7 @@ ms.locfileid: "62000280"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 BOOLEANStrongNameTokenFromPublicKey (   
     [in]  BYTE    *pbPublicKeyBlob,  
     [in]  ULONG   cbPublicKeyBlob,  
@@ -71,7 +71,7 @@ BOOLEANStrongNameTokenFromPublicKey (
   
  **库：** 包含为 mscoree.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

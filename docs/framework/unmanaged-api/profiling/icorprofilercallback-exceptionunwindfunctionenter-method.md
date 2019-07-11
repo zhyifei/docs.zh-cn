@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0451ceac3018a3bab697a8ac82f5ef84f1026c6d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 85f788ec61cc441e7271fb7a8aba843f37d20a57
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61597168"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782729"
 ---
 # <a name="icorprofilercallbackexceptionunwindfunctionenter-method"></a>ICorProfilerCallback::ExceptionUnwindFunctionEnter 方法
 通知探查器的异常处理展开阶段已开始展开一个函数。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT ExceptionUnwindFunctionEnter(  
     [in] FunctionID functionId);  
 ```  
@@ -50,7 +50,7 @@ HRESULT ExceptionUnwindFunctionEnter(
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

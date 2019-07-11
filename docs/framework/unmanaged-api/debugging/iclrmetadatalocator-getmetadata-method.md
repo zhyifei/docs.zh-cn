@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e677aefd5420f71867c1f11a2c9408c77d305c45
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 235b93f4176858372a83331730ddea8b97179cc8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697831"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67738374"
 ---
 # <a name="iclrmetadatalocatorgetmetadata-method"></a>ICLRMetadataLocator::GetMetadata 方法
 调用由公共语言运行时 (CLR) 数据访问服务检索的图像的元数据。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT GetMetadata(  
     [in]  LPCWSTR         imagePath,  
     [in]  ULONG32         imageTimestamp,  
@@ -82,7 +82,7 @@ HRESULT GetMetadata(
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

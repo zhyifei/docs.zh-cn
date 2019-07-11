@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 148ca261e717b9a54192a13c317fe385b98f4ccd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 85c0cc3880e4fc78d4badea329d62a6fced2a977
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651165"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781946"
 ---
 # <a name="corprfexclauseinfo-structure"></a>COR_PRF_EX_CLAUSE_INFO 结构
 存储有关特定的异常子句实例及其关联的帧的信息。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 typedef struct COR_PRF_EX_CLAUSE_INFO {  
     COR_PRF_CLAUSE_TYPE clauseType;  
     UINT_PTR programCounter;  
@@ -70,7 +70,7 @@ typedef struct COR_PRF_EX_CLAUSE_INFO {
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

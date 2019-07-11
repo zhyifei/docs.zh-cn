@@ -2,17 +2,17 @@
 title: 存储过程
 ms.date: 03/30/2017
 ms.assetid: 4d23dd7a-a85f-44ff-a717-af7d0950c0fc
-ms.openlocfilehash: 9201965192f300de62679c1e5be75cf98a24e700
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b06dc19aa8b767da6a1c6b00bd5b465465db6060
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61917938"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742845"
 ---
 # <a name="stored-procedures"></a>存储过程
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 在您的对象模型中使用方法来表示数据库中的存储的过程。 您可以通过应用 <xref:System.Data.Linq.Mapping.FunctionAttribute> 属性和 <xref:System.Data.Linq.Mapping.ParameterAttribute> 属性（如果需要）将方法指定为存储过程。 有关详细信息，请参阅[LINQ to SQL 对象模型](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)。  
   
- 使用 Visual Studio 的开发人员通常会使用[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]来映射存储的过程。 本节中的主题说明了在您自行编写代码的情况下，如何在您的应用程序中构建和调用这些方法。  
+ 使用 Visual Studio 的开发人员通常会使用对象关系设计器来映射存储的过程。 本节中的主题说明了在您自行编写代码的情况下，如何在您的应用程序中构建和调用这些方法。  
   
 ## <a name="in-this-section"></a>本节内容  
  [如何：返回行集](../../../../../../docs/framework/data/adonet/sql/linq/how-to-return-rowsets.md)  

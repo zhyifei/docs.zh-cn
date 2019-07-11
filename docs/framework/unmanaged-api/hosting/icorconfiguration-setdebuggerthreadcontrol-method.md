@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6fc141cbebe08f8d0974788409d5aef0f68d2878
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ebbc076f52c661a394eff51954fceefe8e439ded
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61763251"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779895"
 ---
 # <a name="icorconfigurationsetdebuggerthreadcontrol-method"></a>ICorConfiguration::SetDebuggerThreadControl 方法
 设置调试服务将调用公共语言运行时 (CLR) 线程阻止和解除阻止以进行调试的回调接口。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT SetDebuggerThreadControl (  
     [in] IDebuggerThreadControl* pDebuggerThreadControl  
 );  
@@ -46,7 +46,7 @@ HRESULT SetDebuggerThreadControl (
   
  **库：** 包含为 MSCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

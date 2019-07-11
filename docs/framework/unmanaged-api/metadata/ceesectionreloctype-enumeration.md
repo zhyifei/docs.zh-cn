@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 882242da493c49a2e6aa09888e9503dcf2933589
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1218ee76a3b7a2f501f87adf1e0bc8133d5329b5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906134"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781340"
 ---
 # <a name="ceesectionreloctype-enumeration"></a>CeeSectionRelocType 枚举
 提供要影响的类型值`reloc`发出的调用中的指令[iceegen:: Addsectionreloc](../../../../docs/framework/unmanaged-api/metadata/iceegen-addsectionreloc-method.md)。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 typedef enum  {  
     srRelocAbsolute,  
     srRelocHighLow          = 3,  
@@ -77,7 +77,7 @@ typedef enum  {
   
  **库：** 包含为 MsCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

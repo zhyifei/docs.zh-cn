@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ad7856a9376880f867e35f1e63bc2cac1ca216fa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7d23b2371e7cc3c9d1e91af061c19b4fb0dbc69e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61794480"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779694"
 ---
 # <a name="iclrhostbindingpolicymanagerevaluatepolicy-method"></a>ICLRHostBindingPolicyManager::EvaluatePolicy 方法
 代表主机的计算结果绑定策略。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT EvaluatePolicy (  
     [in] LPCWSTR     pwzReferenceIdentity,  
     [in] BYTE       *pbApplicationPolicy,  
@@ -82,7 +82,7 @@ HRESULT EvaluatePolicy (
   
  **库：** 包含为 MSCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

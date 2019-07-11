@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: be2dfd6bb521dee14afd3728bdd9c446cb779e85
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 206d6448835b60c55b378636ff5daa5fa4f8b5d0
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61598839"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782596"
 ---
 # <a name="qualifiersetendenumeration-function"></a>QualifierSet_EndEnumeration 函数
 终止通过调用开始枚举[QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md)函数。  
@@ -30,7 +30,7 @@ ms.locfileid: "61598839"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT QualifierSet_EndEnumeration (
    [in] int                  vFunc, 
    [in] IWbemQualifierSet*   ptr
@@ -49,7 +49,7 @@ HRESULT QualifierSet_EndEnumeration (
 
 此函数返回的以下值中定义*WbemCli.h*标头文件，也可以将其定义为常量在代码中：
 
-|返回的常量  |“值”  |Description  |
+|返回的常量  |值  |Description  |
 |---------|---------|---------|
 |`WBEM_S_NO_ERROR` | 0 | 函数调用成功。  |
   
@@ -65,7 +65,7 @@ HRESULT QualifierSet_EndEnumeration (
   
 **标头：** WMINet_Utils.idl  
   
-**.NET Framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+**.NET Framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>请参阅
 

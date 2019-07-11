@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 49784a0eba0458a7b9ddbcd58cbe1a187c3c779a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9fb1dff80fccc920540d370797441b3a019d766c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61905822"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780911"
 ---
 # <a name="corattributetargets-enumeration"></a>CorAttributeTargets 枚举
 指定可应用属性的应用程序元素。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 typedef enum CorAttributeTargets  
 {  
     catAssembly            = 0x0001,  
@@ -91,7 +91,7 @@ typedef enum CorAttributeTargets
   
  **标头：** CorHdr.h  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

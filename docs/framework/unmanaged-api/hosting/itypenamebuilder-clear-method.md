@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5a4379a5f3c820889928f9008186b2f95b74b6da
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 80f130b392cbedb4d8f61c7428d48feb0d6ceece
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61672713"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778350"
 ---
 # <a name="itypenamebuilderclear-method"></a>ITypeNameBuilder::Clear 方法
 此方法支持 .NET Framework 基础结构，但不适合直接在代码中使用。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT Clear ( );  
 ```  
   
@@ -40,7 +40,7 @@ HRESULT Clear ( );
   
  **库：** 包含为 MSCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

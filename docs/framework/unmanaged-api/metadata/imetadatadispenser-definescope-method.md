@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 76a439effad9cb3f6dcdd232590cf2196ee7ab99
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1763f9341af2d90cf465cb554bf7f282a4d92058
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62044386"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777812"
 ---
 # <a name="imetadatadispenserdefinescope-method"></a>IMetaDataDispenser::DefineScope 方法
 可在其中创建新的元数据的内存中创建一个新的区域。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT DefineScope (  
     [in]  REFCLSID    rclsid,  
     [in]  DWORD       dwCreateFlags,  
@@ -65,7 +65,7 @@ HRESULT DefineScope (
   
  **库：** 用作 MsCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

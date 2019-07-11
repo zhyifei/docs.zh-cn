@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6cbbe85a99d0c78bd3d95ee654bdc13e376d017d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c4eefbb100b215cf4ac98352f37488b21cde49d8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61792660"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67772147"
 ---
 # <a name="icorprofilerinfosetfunctionidmapper-method"></a>ICorProfilerInfo::SetFunctionIDMapper 方法
 指定将调用以将 `FunctionID` 值映射至替换值（传递至探查器的输入/退出挂钩）的探查器实现函数。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT SetFunctionIDMapper (  
     [in] FunctionIDMapper *pFunc);  
 ```  
@@ -50,7 +50,7 @@ HRESULT SetFunctionIDMapper (
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

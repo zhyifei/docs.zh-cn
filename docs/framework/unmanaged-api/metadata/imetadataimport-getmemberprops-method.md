@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 83dec9b6ed3b1e538e0f1b7d13a33b8bdbc1cf54
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fcf32c4b27324ccc54eabbb248e8c9906cf693b6
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777723"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782365"
 ---
 # <a name="imetadataimportgetmemberprops-method"></a>IMetaDataImport::GetMemberProps 方法
 获取有关指定的成员定义，包括名称、 二进制签名和相对虚拟地址的元数据中存储的信息<xref:System.Type>指定的元数据标记所引用的成员。 这是一个简单的帮助程序方法： 如果*mb*然后是 MethodDef **GetMethodProps**调用; 如果*mb*然后是 FieldDef **GetFieldProps**调用。 查看这些详细信息的其他方法。 
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT GetMemberProps (  
    [in]  mdToken           mb,   
    [out] mdTypeDef         *pClass,  
@@ -94,7 +94,7 @@ HRESULT GetMemberProps (
   
  **库：** 包含为 MsCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

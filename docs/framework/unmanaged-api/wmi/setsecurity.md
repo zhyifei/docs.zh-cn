@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5cecd8538b8f2b5d04cb9f1822751661ce9f8728
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: a2cb71263201c86a93ca0bfbd783f2b8512055e6
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636220"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67783107"
 ---
 # <a name="setsecurity-function"></a>SetSecurity 函数
 
@@ -31,7 +31,7 @@ ms.locfileid: "65636220"
 
 ## <a name="syntax"></a>语法
 
-```
+```cpp
 HRESULT SetSecurity (
    [out] boolean* pNeedToReset, 
    [out] HANDLE* pCurrentThreadToken
@@ -58,7 +58,7 @@ HRESULT SetSecurity (
 
  **标头：** WMINet_Utils.idl
 
- **.NET Framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+ **.NET Framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
 ## <a name="see-also"></a>请参阅
 

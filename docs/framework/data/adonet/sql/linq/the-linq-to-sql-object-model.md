@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 81dd0c37-e2a4-4694-83b0-f2e49e693810
-ms.openlocfilehash: beb76f18a55d6e197c1c6bcfc91e3a8ef0f8119b
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: de3fc8b23bd132179fc7fb67d29010552138e3ab
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063116"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742828"
 ---
 # <a name="the-linq-to-sql-object-model"></a>LINQ to SQL 对象模型
 在[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]，开发人员的编程语言表示的对象模型映射到关系数据库的数据模型。 然后就会按照对象模型来执行对数据的操作。  
@@ -72,7 +72,7 @@ ms.locfileid: "65063116"
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 通过使用 <xref:System.Data.Linq.Mapping.FunctionAttribute> 和 <xref:System.Data.Linq.Mapping.ParameterAttribute> 属性将存储过程和函数映射到方法。 表示存储过程的方法与表示用户定义的函数的方法通过 <xref:System.Data.Linq.Mapping.FunctionAttribute.IsComposable%2A> 属性加以区分。 如果此属性设置为 `false`（默认值），则此方法表示存储过程。 如果它设置为 `true`，则此方法表示数据库函数。  
   
 > [!NOTE]
->  如果使用的 Visual Studio，则可以使用[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]创建映射到存储的过程和用户定义函数的方法。  
+>  如果使用的 Visual Studio，可以使用对象关系设计器创建映射到存储的过程和用户定义函数的方法。  
   
 ### <a name="example"></a>示例  
  [!code-csharp[DLinqObjectModel#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqObjectModel/cs/northwind.cs#4)]

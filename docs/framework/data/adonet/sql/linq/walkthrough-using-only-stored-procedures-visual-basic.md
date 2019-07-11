@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: 5a736a30-ba66-4adb-b87c-57d19476e862
-ms.openlocfilehash: 22db347afb45b981602d5a92516271f75b8e4359
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 270b0f2123a20787a8e75d40f56a675c55824243
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648682"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742560"
 ---
 # <a name="walkthrough-using-only-stored-procedures-visual-basic"></a>演练：仅使用存储过程 (Visual Basic)
 本演练提供了通过仅使用存储过程来访问数据的 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 基本端对端方案。 数据库管理员经常使用此方法来限制数据存储的访问方式。  
@@ -19,7 +19,7 @@ ms.locfileid: "64648682"
   
  对于本演练的目的，你将使用已映射到 Northwind 示例数据库中的存储过程的两种方法：CustOrdersDetail 和 CustOrderHist。 此映射发生在运行 SqlMetal 命令行工具生成的 Visual Basic 文件。 有关更多信息，请参见本演练后面的“先决条件”一节。  
   
- 本演练不依赖于[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]。 使用 Visual Studio 的开发人员还可以使用[!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)]实现存储的过程功能。 请参阅[LINQ to SQL 工具在 Visual Studio 中](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)。  
+ 本演练不依赖于对象关系设计器。 使用 Visual Studio 的开发人员还可以使用 O/R 设计器来实现存储的过程功能。 请参阅[LINQ to SQL 工具在 Visual Studio 中](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)。  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
   
@@ -60,24 +60,24 @@ ms.locfileid: "64648682"
 ## <a name="creating-a-linq-to-sql-solution"></a>创建 LINQ to SQL 解决方案  
  在此第一个任务中，创建一个包含必要的引用，生成并运行的 Visual Studio 解决方案[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]项目。  
   
-#### <a name="to-create-a-linq-to-sql-solution"></a>创建 LINQ to SQL 解决方案  
+### <a name="to-create-a-linq-to-sql-solution"></a>创建 LINQ to SQL 解决方案  
   
 1. 在 Visual Studio**文件**菜单上，单击**新项目**。  
   
-2. 在 **“新建项目”** 对话框中的 **“项目类型”** 窗格中，展开 **“Visual Basic”**，然后单击 **“Windows”**。  
+2. 在 **“新建项目”** 对话框中的 **“项目类型”** 窗格中，展开 **“Visual Basic”** ，然后单击 **“Windows”** 。  
   
-3. 在 **“模板”** 窗格中，单击 **“Windows 窗体应用程序”**。  
+3. 在 **“模板”** 窗格中，单击 **“Windows 窗体应用程序”** 。  
   
 4. 在中**名称**框中，键入**SprocOnlyApp**。  
   
-5. 单击 **“确定”**。  
+5. 单击 **“确定”** 。  
   
      Windows 窗体设计器即会打开。  
   
 ## <a name="adding-the-linq-to-sql-assembly-reference"></a>添加 LINQ to SQL 程序集引用  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 程序集未包含在标准的 Windows 窗体应用程序模板中。 您将需要按照以下步骤中的说明自行添加此程序集：  
   
-#### <a name="to-add-systemdatalinqdll"></a>添加 System.Data.Linq.dll  
+### <a name="to-add-systemdatalinqdll"></a>添加 System.Data.Linq.dll  
   
 1. 在中**解决方案资源管理器**，单击**显示所有文件**。  
   
@@ -90,7 +90,7 @@ ms.locfileid: "64648682"
 ## <a name="adding-the-northwind-code-file-to-the-project"></a>将 Northwind 代码文件添加到项目  
  此步骤假定你已使用 SqlMetal 工具从 Northwind 示例数据库生成代码文件。 有关更多信息，请参见本演练前面部分的“先决条件”一节。  
   
-#### <a name="to-add-the-northwind-code-file-to-the-project"></a>将 northwind 代码文件添加到项目  
+### <a name="to-add-the-northwind-code-file-to-the-project"></a>将 northwind 代码文件添加到项目  
   
 1. 上**项目**菜单上，单击**添加现有项**。  
   
@@ -101,7 +101,7 @@ ms.locfileid: "64648682"
 ## <a name="creating-a-database-connection"></a>创建数据库连接  
  在此步骤中，您要定义与 Northwind 示例数据库的连接。 本演练使用“c:\linqtest3\northwnd.mdf”作为路径。  
   
-#### <a name="to-create-the-database-connection"></a>创建数据库连接  
+### <a name="to-create-the-database-connection"></a>创建数据库连接  
   
 1. 在中**解决方案资源管理器**，右键单击**Form1.vb**，然后单击**查看代码**。  
   
@@ -114,11 +114,11 @@ ms.locfileid: "64648682"
 ## <a name="setting-up-the-user-interface"></a>设置用户界面  
  在此任务中，你要创建用户界面，供用户执行存储过程以访问数据库中的数据之用。 在您按照本演练开发的应用程序中，用户可以只使用嵌入在此应用程序中的存储过程来访问数据库中的数据。  
   
-#### <a name="to-set-up-the-user-interface"></a>设置用户界面  
+### <a name="to-set-up-the-user-interface"></a>设置用户界面  
   
-1. 返回 Windows 窗体设计器 (**Form1.vb[Design]**)。  
+1. 返回 Windows 窗体设计器 (**Form1.vb[Design]** )。  
   
-2. 在 **“视图”** 菜单上单击 **“工具箱”**。  
+2. 在 **“视图”** 菜单上单击 **“工具箱”** 。  
   
      工具箱即会打开。  
   
@@ -131,9 +131,9 @@ ms.locfileid: "64648682"
   
 4. 右键单击**Label1**，然后单击**属性**。  
   
-5. 更改**文本**属性从**Label1**到**Enter OrderID:**。  
+5. 更改**文本**属性从**Label1**到**Enter OrderID:** 。  
   
-6. 在相同的方式对**Label2**，更改**文本**属性从**Label2**到**Enter CustomerID:**。  
+6. 在相同的方式对**Label2**，更改**文本**属性从**Label2**到**Enter CustomerID:** 。  
   
 7. 同样，在更改**文本**属性**Button1**到**订单详细信息**。  
   
@@ -141,7 +141,7 @@ ms.locfileid: "64648682"
   
      将这些按钮控件加宽，以使所有文本均可见。  
   
-#### <a name="to-handle-button-clicks"></a>处理按钮单击  
+### <a name="to-handle-button-clicks"></a>处理按钮单击  
   
 1. 双击**订单详细信息**上**Form1**创建`Button1`事件处理程序并打开代码编辑器。  
   
@@ -158,7 +158,7 @@ ms.locfileid: "64648682"
 ## <a name="testing-the-application"></a>测试应用程序  
  现在，可以开始测试您的应用程序了。 请注意，您可对数据存储施加的影响仅限于这两个存储过程能够执行的操作。 这些操作是要根据您输入的所有 orderID 返回相应订单包括的产品，或根据您输入的所有 CustomerID 返回相应客户的产品订购历史记录。  
   
-#### <a name="to-test-the-application"></a>测试应用程序  
+### <a name="to-test-the-application"></a>测试应用程序  
   
 1. 按 F5 开始调试。  
   

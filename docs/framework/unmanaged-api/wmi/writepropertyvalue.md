@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a98103367f497b18f9b8fbd61a37abf9816b8356
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 47120ff9de9e6e4802c5aea990841b235cd6c74c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62040399"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67783059"
 ---
 # <a name="writepropertyvalue-function"></a>WritePropertyValue 函数
 将指定数量的字节写入由属性句柄标识的属性。
@@ -30,7 +30,7 @@ ms.locfileid: "62040399"
     
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT WritePropertyValue (
    [in] int                  vFunc, 
    [in] IWbemObjectAccess*   ptr, 
@@ -61,7 +61,7 @@ HRESULT WritePropertyValue (
 
 此函数返回以下值中定义*WbemCli.h*标头文件，也可以在定义它们为常量在代码中：
 
-|返回的常量  |“值”  |描述  |
+|返回的常量  |值  |描述  |
 |---------|---------|---------|
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 参数不是有效的。 |
 |`WBEM_E_TYPE_MISMATCH` | 0x80041005 | 出现类型不匹配。 |
@@ -80,7 +80,7 @@ HRESULT WritePropertyValue (
   
  **标头：** WMINet_Utils.idl  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>请参阅
 
