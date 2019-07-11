@@ -17,34 +17,34 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1585acce8bba0dff327c961f5e32ef6b46794401
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5bd07411acd074bf5a25148110dbdf28a004551a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61986019"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777256"
 ---
-# <a name="isymunmanagedwriteropennamespace-method"></a><span data-ttu-id="e698d-102">ISymUnmanagedWriter::OpenNamespace 方法</span><span class="sxs-lookup"><span data-stu-id="e698d-102">ISymUnmanagedWriter::OpenNamespace Method</span></span>
-<span data-ttu-id="e698d-103">打开一个新的命名空间。</span><span class="sxs-lookup"><span data-stu-id="e698d-103">Opens a new namespace.</span></span> <span data-ttu-id="e698d-104">定义一个命名空间的方法或变量之前调用此方法。</span><span class="sxs-lookup"><span data-stu-id="e698d-104">Call this method before defining methods or variables that occupy a namespace.</span></span> <span data-ttu-id="e698d-105">可以嵌套命名空间。</span><span class="sxs-lookup"><span data-stu-id="e698d-105">Namespaces can be nested.</span></span>  
+# <a name="isymunmanagedwriteropennamespace-method"></a><span data-ttu-id="daf26-102">ISymUnmanagedWriter::OpenNamespace 方法</span><span class="sxs-lookup"><span data-stu-id="daf26-102">ISymUnmanagedWriter::OpenNamespace Method</span></span>
+<span data-ttu-id="daf26-103">打开一个新的命名空间。</span><span class="sxs-lookup"><span data-stu-id="daf26-103">Opens a new namespace.</span></span> <span data-ttu-id="daf26-104">定义一个命名空间的方法或变量之前调用此方法。</span><span class="sxs-lookup"><span data-stu-id="daf26-104">Call this method before defining methods or variables that occupy a namespace.</span></span> <span data-ttu-id="daf26-105">可以嵌套命名空间。</span><span class="sxs-lookup"><span data-stu-id="daf26-105">Namespaces can be nested.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e698d-106">语法</span><span class="sxs-lookup"><span data-stu-id="e698d-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="daf26-106">语法</span><span class="sxs-lookup"><span data-stu-id="daf26-106">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT OpenNamespace(  
     [in] const WCHAR *name);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="e698d-107">参数</span><span class="sxs-lookup"><span data-stu-id="e698d-107">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="daf26-107">参数</span><span class="sxs-lookup"><span data-stu-id="daf26-107">Parameters</span></span>  
  `name`  
- <span data-ttu-id="e698d-108">[in]一个指向新的命名空间的名称。</span><span class="sxs-lookup"><span data-stu-id="e698d-108">[in] A pointer to the name of the new namespace.</span></span>  
+ <span data-ttu-id="daf26-108">[in]一个指向新的命名空间的名称。</span><span class="sxs-lookup"><span data-stu-id="daf26-108">[in] A pointer to the name of the new namespace.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="e698d-109">返回值</span><span class="sxs-lookup"><span data-stu-id="e698d-109">Return Value</span></span>  
- <span data-ttu-id="e698d-110">如果方法成功，则为 S_OK否则为 E_FAIL 或某些其他错误代码。</span><span class="sxs-lookup"><span data-stu-id="e698d-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="daf26-109">返回值</span><span class="sxs-lookup"><span data-stu-id="daf26-109">Return Value</span></span>  
+ <span data-ttu-id="daf26-110">如果方法成功，则为 S_OK否则为 E_FAIL 或某些其他错误代码。</span><span class="sxs-lookup"><span data-stu-id="daf26-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e698d-111">要求</span><span class="sxs-lookup"><span data-stu-id="e698d-111">Requirements</span></span>  
- <span data-ttu-id="e698d-112">**标头：** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="e698d-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="daf26-111">要求</span><span class="sxs-lookup"><span data-stu-id="daf26-111">Requirements</span></span>  
+ <span data-ttu-id="daf26-112">**标头：** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="daf26-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e698d-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="e698d-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="daf26-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="daf26-113">See also</span></span>
 
-- [<span data-ttu-id="e698d-114">ISymUnmanagedWriter 接口</span><span class="sxs-lookup"><span data-stu-id="e698d-114">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
-- [<span data-ttu-id="e698d-115">CloseNamespace 方法</span><span class="sxs-lookup"><span data-stu-id="e698d-115">CloseNamespace Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closenamespace-method.md)
+- [<span data-ttu-id="daf26-114">ISymUnmanagedWriter 接口</span><span class="sxs-lookup"><span data-stu-id="daf26-114">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [<span data-ttu-id="daf26-115">CloseNamespace 方法</span><span class="sxs-lookup"><span data-stu-id="daf26-115">CloseNamespace Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closenamespace-method.md)

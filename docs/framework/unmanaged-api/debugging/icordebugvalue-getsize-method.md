@@ -17,42 +17,42 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 41a9ff2c94c98a5acc930d68e648b0ea577a82c3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 94d8fbf4d93bbfbaaeb7c1268004aada22b9b7df
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61986838"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67768923"
 ---
-# <a name="icordebugvaluegetsize-method"></a><span data-ttu-id="da736-102">ICorDebugValue::GetSize 方法</span><span class="sxs-lookup"><span data-stu-id="da736-102">ICorDebugValue::GetSize Method</span></span>
-<span data-ttu-id="da736-103">获取大小，以字节为单位，此"ICorDebugValue"对象。</span><span class="sxs-lookup"><span data-stu-id="da736-103">Gets the size, in bytes, of this "ICorDebugValue" object.</span></span>  
+# <a name="icordebugvaluegetsize-method"></a><span data-ttu-id="992c8-102">ICorDebugValue::GetSize 方法</span><span class="sxs-lookup"><span data-stu-id="992c8-102">ICorDebugValue::GetSize Method</span></span>
+<span data-ttu-id="992c8-103">获取大小，以字节为单位，此"ICorDebugValue"对象。</span><span class="sxs-lookup"><span data-stu-id="992c8-103">Gets the size, in bytes, of this "ICorDebugValue" object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="da736-104">语法</span><span class="sxs-lookup"><span data-stu-id="da736-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="992c8-104">语法</span><span class="sxs-lookup"><span data-stu-id="992c8-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetSize (  
     [out] ULONG32   *pSize  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="da736-105">参数</span><span class="sxs-lookup"><span data-stu-id="da736-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="992c8-105">参数</span><span class="sxs-lookup"><span data-stu-id="992c8-105">Parameters</span></span>  
  `pSize`  
- <span data-ttu-id="da736-106">[out]以字节为单位，此值对象的大小。</span><span class="sxs-lookup"><span data-stu-id="da736-106">[out] The size, in bytes, of this value object.</span></span>  
+ <span data-ttu-id="992c8-106">[out]以字节为单位，此值对象的大小。</span><span class="sxs-lookup"><span data-stu-id="992c8-106">[out] The size, in bytes, of this value object.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="da736-107">备注</span><span class="sxs-lookup"><span data-stu-id="da736-107">Remarks</span></span>  
- <span data-ttu-id="da736-108">如果值的类型是引用类型，此方法返回的指针的大小而不是对象的大小。</span><span class="sxs-lookup"><span data-stu-id="da736-108">If the value's type is a reference type, this method returns the size of the pointer rather than the size of the object.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="992c8-107">备注</span><span class="sxs-lookup"><span data-stu-id="992c8-107">Remarks</span></span>  
+ <span data-ttu-id="992c8-108">如果值的类型是引用类型，此方法返回的指针的大小而不是对象的大小。</span><span class="sxs-lookup"><span data-stu-id="992c8-108">If the value's type is a reference type, this method returns the size of the pointer rather than the size of the object.</span></span>  
   
- <span data-ttu-id="da736-109">`ICorDebugValue::GetSize`方法将返回`COR_E_OVERFLOW`大于 64 位平台上的 4 GB 的对象。</span><span class="sxs-lookup"><span data-stu-id="da736-109">The `ICorDebugValue::GetSize` method returns `COR_E_OVERFLOW` for objects that are larger than 4 GB on 64-bit platforms.</span></span> <span data-ttu-id="da736-110">使用[ICorDebugValue3::GetSize64](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-getsize64-method.md)方法改为对象，将大于 4 GB。</span><span class="sxs-lookup"><span data-stu-id="da736-110">Use the [ICorDebugValue3::GetSize64](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-getsize64-method.md) method instead for objects that are larger than 4 GB.</span></span>  
+ <span data-ttu-id="992c8-109">`ICorDebugValue::GetSize`方法将返回`COR_E_OVERFLOW`大于 64 位平台上的 4 GB 的对象。</span><span class="sxs-lookup"><span data-stu-id="992c8-109">The `ICorDebugValue::GetSize` method returns `COR_E_OVERFLOW` for objects that are larger than 4 GB on 64-bit platforms.</span></span> <span data-ttu-id="992c8-110">使用[ICorDebugValue3::GetSize64](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-getsize64-method.md)方法改为对象，将大于 4 GB。</span><span class="sxs-lookup"><span data-stu-id="992c8-110">Use the [ICorDebugValue3::GetSize64](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-getsize64-method.md) method instead for objects that are larger than 4 GB.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="da736-111">要求</span><span class="sxs-lookup"><span data-stu-id="da736-111">Requirements</span></span>  
- <span data-ttu-id="da736-112">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="da736-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="992c8-111">要求</span><span class="sxs-lookup"><span data-stu-id="992c8-111">Requirements</span></span>  
+ <span data-ttu-id="992c8-112">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="992c8-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="da736-113">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="da736-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="992c8-113">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="992c8-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="da736-114">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="da736-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="992c8-114">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="992c8-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="da736-115">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="da736-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="992c8-115">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="992c8-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="da736-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="da736-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="992c8-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="992c8-116">See also</span></span>
 
-- [<span data-ttu-id="da736-117">GetSize64 方法</span><span class="sxs-lookup"><span data-stu-id="da736-117">GetSize64 Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-getsize64-method.md)
+- [<span data-ttu-id="992c8-117">GetSize64 方法</span><span class="sxs-lookup"><span data-stu-id="992c8-117">GetSize64 Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-getsize64-method.md)

@@ -16,72 +16,72 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 04e562b41b3d835d66fb9b803ee7db1c7fb8537f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a6f1d76ef5cf36bcbab29a33647520663f822798
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662562"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67770041"
 ---
-# <a name="corvalidateimage-function"></a><span data-ttu-id="d0c3b-102">_CorValidateImage 函数</span><span class="sxs-lookup"><span data-stu-id="d0c3b-102">_CorValidateImage Function</span></span>
-<span data-ttu-id="d0c3b-103">验证托管的模块映像，并已加载后通知操作系统加载程序。</span><span class="sxs-lookup"><span data-stu-id="d0c3b-103">Validates managed module images, and notifies the operating system loader after they have been loaded.</span></span>  
+# <a name="corvalidateimage-function"></a><span data-ttu-id="812af-102">_CorValidateImage 函数</span><span class="sxs-lookup"><span data-stu-id="812af-102">_CorValidateImage Function</span></span>
+<span data-ttu-id="812af-103">验证托管的模块映像，并已加载后通知操作系统加载程序。</span><span class="sxs-lookup"><span data-stu-id="812af-103">Validates managed module images, and notifies the operating system loader after they have been loaded.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d0c3b-104">语法</span><span class="sxs-lookup"><span data-stu-id="d0c3b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="812af-104">语法</span><span class="sxs-lookup"><span data-stu-id="812af-104">Syntax</span></span>  
   
-```  
+```cpp  
 STDAPI _CorValidateImage (   
    [in] PVOID* ImageBase,  
    [in] LPCWSTR FileName  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="d0c3b-105">参数</span><span class="sxs-lookup"><span data-stu-id="d0c3b-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="812af-105">参数</span><span class="sxs-lookup"><span data-stu-id="812af-105">Parameters</span></span>  
  `ImageBase`  
- <span data-ttu-id="d0c3b-106">[in]指向要作为验证的图像的起始位置的托管代码。</span><span class="sxs-lookup"><span data-stu-id="d0c3b-106">[in] A pointer to the starting location of the image to validate as managed code.</span></span> <span data-ttu-id="d0c3b-107">该映像必须已加载到内存中。</span><span class="sxs-lookup"><span data-stu-id="d0c3b-107">The image must already be loaded into memory.</span></span>  
+ <span data-ttu-id="812af-106">[in]指向要作为验证的图像的起始位置的托管代码。</span><span class="sxs-lookup"><span data-stu-id="812af-106">[in] A pointer to the starting location of the image to validate as managed code.</span></span> <span data-ttu-id="812af-107">该映像必须已加载到内存中。</span><span class="sxs-lookup"><span data-stu-id="812af-107">The image must already be loaded into memory.</span></span>  
   
  `FileName`  
- <span data-ttu-id="d0c3b-108">[in]图像的文件名。</span><span class="sxs-lookup"><span data-stu-id="d0c3b-108">[in] The file name of the image.</span></span>  
+ <span data-ttu-id="812af-108">[in]图像的文件名。</span><span class="sxs-lookup"><span data-stu-id="812af-108">[in] The file name of the image.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="d0c3b-109">返回值</span><span class="sxs-lookup"><span data-stu-id="d0c3b-109">Return Value</span></span>  
- <span data-ttu-id="d0c3b-110">此函数返回的标准值`E_INVALIDARG`， `E_OUTOFMEMORY`， `E_UNEXPECTED`，和`E_FAIL`，以及以下值。</span><span class="sxs-lookup"><span data-stu-id="d0c3b-110">This function returns the standard values `E_INVALIDARG`, `E_OUTOFMEMORY`, `E_UNEXPECTED`, and `E_FAIL`, as well as the following values.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="812af-109">返回值</span><span class="sxs-lookup"><span data-stu-id="812af-109">Return Value</span></span>  
+ <span data-ttu-id="812af-110">此函数返回的标准值`E_INVALIDARG`， `E_OUTOFMEMORY`， `E_UNEXPECTED`，和`E_FAIL`，以及以下值。</span><span class="sxs-lookup"><span data-stu-id="812af-110">This function returns the standard values `E_INVALIDARG`, `E_OUTOFMEMORY`, `E_UNEXPECTED`, and `E_FAIL`, as well as the following values.</span></span>  
   
-|<span data-ttu-id="d0c3b-111">返回值</span><span class="sxs-lookup"><span data-stu-id="d0c3b-111">Return value</span></span>|<span data-ttu-id="d0c3b-112">描述</span><span class="sxs-lookup"><span data-stu-id="d0c3b-112">Description</span></span>|  
+|<span data-ttu-id="812af-111">返回值</span><span class="sxs-lookup"><span data-stu-id="812af-111">Return value</span></span>|<span data-ttu-id="812af-112">描述</span><span class="sxs-lookup"><span data-stu-id="812af-112">Description</span></span>|  
 |------------------|-----------------|  
-|`STATUS_INVALID_IMAGE_FORMAT`|<span data-ttu-id="d0c3b-113">映像是无效的。</span><span class="sxs-lookup"><span data-stu-id="d0c3b-113">The image is invalid.</span></span> <span data-ttu-id="d0c3b-114">此值具有 HRESULT 0xC000007BL。</span><span class="sxs-lookup"><span data-stu-id="d0c3b-114">This value has the HRESULT 0xC000007BL.</span></span>|  
-|`STATUS_SUCCESS`|<span data-ttu-id="d0c3b-115">映像是有效的。</span><span class="sxs-lookup"><span data-stu-id="d0c3b-115">The image is valid.</span></span> <span data-ttu-id="d0c3b-116">此值具有 HRESULT 0x00000000L。</span><span class="sxs-lookup"><span data-stu-id="d0c3b-116">This value has the HRESULT 0x00000000L.</span></span>|  
+|`STATUS_INVALID_IMAGE_FORMAT`|<span data-ttu-id="812af-113">映像是无效的。</span><span class="sxs-lookup"><span data-stu-id="812af-113">The image is invalid.</span></span> <span data-ttu-id="812af-114">此值具有 HRESULT 0xC000007BL。</span><span class="sxs-lookup"><span data-stu-id="812af-114">This value has the HRESULT 0xC000007BL.</span></span>|  
+|`STATUS_SUCCESS`|<span data-ttu-id="812af-115">映像是有效的。</span><span class="sxs-lookup"><span data-stu-id="812af-115">The image is valid.</span></span> <span data-ttu-id="812af-116">此值具有 HRESULT 0x00000000L。</span><span class="sxs-lookup"><span data-stu-id="812af-116">This value has the HRESULT 0x00000000L.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="d0c3b-117">备注</span><span class="sxs-lookup"><span data-stu-id="d0c3b-117">Remarks</span></span>  
- <span data-ttu-id="d0c3b-118">在 Windows XP 和更高版本中，操作系统加载程序通过检查通用对象文件格式 (COFF) 标头中的 COM 描述符目录位检查托管模块。</span><span class="sxs-lookup"><span data-stu-id="d0c3b-118">In Windows XP and later versions, the operating system loader checks for managed modules by examining the COM Descriptor Directory bit in the common object file format (COFF) header.</span></span> <span data-ttu-id="d0c3b-119">一个设置位指示托管的模块。</span><span class="sxs-lookup"><span data-stu-id="d0c3b-119">A set bit indicates a managed module.</span></span> <span data-ttu-id="d0c3b-120">如果加载程序检测到托管的模块时，它将加载 MsCorEE.dll 并调用`_CorValidateImage`，该文件将执行以下操作：</span><span class="sxs-lookup"><span data-stu-id="d0c3b-120">If the loader detects a managed module, it loads MsCorEE.dll and calls `_CorValidateImage`, which performs the following actions:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="812af-117">备注</span><span class="sxs-lookup"><span data-stu-id="812af-117">Remarks</span></span>  
+ <span data-ttu-id="812af-118">在 Windows XP 和更高版本中，操作系统加载程序通过检查通用对象文件格式 (COFF) 标头中的 COM 描述符目录位检查托管模块。</span><span class="sxs-lookup"><span data-stu-id="812af-118">In Windows XP and later versions, the operating system loader checks for managed modules by examining the COM Descriptor Directory bit in the common object file format (COFF) header.</span></span> <span data-ttu-id="812af-119">一个设置位指示托管的模块。</span><span class="sxs-lookup"><span data-stu-id="812af-119">A set bit indicates a managed module.</span></span> <span data-ttu-id="812af-120">如果加载程序检测到托管的模块时，它将加载 MsCorEE.dll 并调用`_CorValidateImage`，该文件将执行以下操作：</span><span class="sxs-lookup"><span data-stu-id="812af-120">If the loader detects a managed module, it loads MsCorEE.dll and calls `_CorValidateImage`, which performs the following actions:</span></span>  
   
-- <span data-ttu-id="d0c3b-121">确认该图像是有效的托管的模块。</span><span class="sxs-lookup"><span data-stu-id="d0c3b-121">Confirms that the image is a valid managed module.</span></span>  
+- <span data-ttu-id="812af-121">确认该图像是有效的托管的模块。</span><span class="sxs-lookup"><span data-stu-id="812af-121">Confirms that the image is a valid managed module.</span></span>  
   
-- <span data-ttu-id="d0c3b-122">在图中的入口点更改为公共语言运行时 (CLR) 中的入口点。</span><span class="sxs-lookup"><span data-stu-id="d0c3b-122">Changes the entry point in the image to an entry point in the common language runtime (CLR).</span></span>  
+- <span data-ttu-id="812af-122">在图中的入口点更改为公共语言运行时 (CLR) 中的入口点。</span><span class="sxs-lookup"><span data-stu-id="812af-122">Changes the entry point in the image to an entry point in the common language runtime (CLR).</span></span>  
   
-- <span data-ttu-id="d0c3b-123">对于 64 位版本的 Windows，修改在内存中是通过将其从 PE32 转换为 PE32 + 格式的图像。</span><span class="sxs-lookup"><span data-stu-id="d0c3b-123">For 64-bit versions of Windows, modifies the image that is in memory by transforming it from PE32 to PE32+ format.</span></span>  
+- <span data-ttu-id="812af-123">对于 64 位版本的 Windows，修改在内存中是通过将其从 PE32 转换为 PE32 + 格式的图像。</span><span class="sxs-lookup"><span data-stu-id="812af-123">For 64-bit versions of Windows, modifies the image that is in memory by transforming it from PE32 to PE32+ format.</span></span>  
   
-- <span data-ttu-id="d0c3b-124">返回到加载程序加载托管的模块映像时。</span><span class="sxs-lookup"><span data-stu-id="d0c3b-124">Returns to the loader when the managed module images are loaded.</span></span>  
+- <span data-ttu-id="812af-124">返回到加载程序加载托管的模块映像时。</span><span class="sxs-lookup"><span data-stu-id="812af-124">Returns to the loader when the managed module images are loaded.</span></span>  
   
- <span data-ttu-id="d0c3b-125">对于可执行映像，操作系统加载程序然后调用[_CorExeMain](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md)函数，而不考虑可执行文件中指定的入口点。</span><span class="sxs-lookup"><span data-stu-id="d0c3b-125">For executable images, the operating system loader then calls the [_CorExeMain](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md) function, regardless of the entry point specified in the executable.</span></span> <span data-ttu-id="d0c3b-126">对于 DLL 程序集图像加载程序调用[_CorDllMain](../../../../docs/framework/unmanaged-api/hosting/cordllmain-function.md)函数。</span><span class="sxs-lookup"><span data-stu-id="d0c3b-126">For DLL assembly images, the loader calls the [_CorDllMain](../../../../docs/framework/unmanaged-api/hosting/cordllmain-function.md) function.</span></span>  
+ <span data-ttu-id="812af-125">对于可执行映像，操作系统加载程序然后调用[_CorExeMain](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md)函数，而不考虑可执行文件中指定的入口点。</span><span class="sxs-lookup"><span data-stu-id="812af-125">For executable images, the operating system loader then calls the [_CorExeMain](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md) function, regardless of the entry point specified in the executable.</span></span> <span data-ttu-id="812af-126">对于 DLL 程序集图像加载程序调用[_CorDllMain](../../../../docs/framework/unmanaged-api/hosting/cordllmain-function.md)函数。</span><span class="sxs-lookup"><span data-stu-id="812af-126">For DLL assembly images, the loader calls the [_CorDllMain](../../../../docs/framework/unmanaged-api/hosting/cordllmain-function.md) function.</span></span>  
   
- <span data-ttu-id="d0c3b-127">`_CorExeMain` 或`_CorDllMain`将执行以下操作：</span><span class="sxs-lookup"><span data-stu-id="d0c3b-127">`_CorExeMain` or `_CorDllMain` performs the following actions:</span></span>  
+ <span data-ttu-id="812af-127">`_CorExeMain` 或`_CorDllMain`将执行以下操作：</span><span class="sxs-lookup"><span data-stu-id="812af-127">`_CorExeMain` or `_CorDllMain` performs the following actions:</span></span>  
   
-- <span data-ttu-id="d0c3b-128">初始化 CLR。</span><span class="sxs-lookup"><span data-stu-id="d0c3b-128">Initializes the CLR.</span></span>  
+- <span data-ttu-id="812af-128">初始化 CLR。</span><span class="sxs-lookup"><span data-stu-id="812af-128">Initializes the CLR.</span></span>  
   
-- <span data-ttu-id="d0c3b-129">查找程序集的 CLR 标头中的托管的入口点。</span><span class="sxs-lookup"><span data-stu-id="d0c3b-129">Locates the managed entry point from the assembly's CLR header.</span></span>  
+- <span data-ttu-id="812af-129">查找程序集的 CLR 标头中的托管的入口点。</span><span class="sxs-lookup"><span data-stu-id="812af-129">Locates the managed entry point from the assembly's CLR header.</span></span>  
   
-- <span data-ttu-id="d0c3b-130">开始执行。</span><span class="sxs-lookup"><span data-stu-id="d0c3b-130">Begins execution.</span></span>  
+- <span data-ttu-id="812af-130">开始执行。</span><span class="sxs-lookup"><span data-stu-id="812af-130">Begins execution.</span></span>  
   
- <span data-ttu-id="d0c3b-131">加载程序调用[_CorImageUnloading](../../../../docs/framework/unmanaged-api/hosting/corimageunloading-function.md)函数时托管模块映像都会被卸载。</span><span class="sxs-lookup"><span data-stu-id="d0c3b-131">The loader calls the [_CorImageUnloading](../../../../docs/framework/unmanaged-api/hosting/corimageunloading-function.md) function when managed module images are unloaded.</span></span> <span data-ttu-id="d0c3b-132">但是，此函数不执行任何操作;它只是返回。</span><span class="sxs-lookup"><span data-stu-id="d0c3b-132">However, this function does not perform any action; it just returns.</span></span>  
+ <span data-ttu-id="812af-131">加载程序调用[_CorImageUnloading](../../../../docs/framework/unmanaged-api/hosting/corimageunloading-function.md)函数时托管模块映像都会被卸载。</span><span class="sxs-lookup"><span data-stu-id="812af-131">The loader calls the [_CorImageUnloading](../../../../docs/framework/unmanaged-api/hosting/corimageunloading-function.md) function when managed module images are unloaded.</span></span> <span data-ttu-id="812af-132">但是，此函数不执行任何操作;它只是返回。</span><span class="sxs-lookup"><span data-stu-id="812af-132">However, this function does not perform any action; it just returns.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d0c3b-133">要求</span><span class="sxs-lookup"><span data-stu-id="d0c3b-133">Requirements</span></span>  
- <span data-ttu-id="d0c3b-134">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="d0c3b-134">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="812af-133">要求</span><span class="sxs-lookup"><span data-stu-id="812af-133">Requirements</span></span>  
+ <span data-ttu-id="812af-134">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="812af-134">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d0c3b-135">**标头：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="d0c3b-135">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="812af-135">**标头：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="812af-135">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="d0c3b-136">**库：** 包含为 MsCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="d0c3b-136">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="812af-136">**库：** 包含为 MsCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="812af-136">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="d0c3b-137">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d0c3b-137">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="812af-137">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="812af-137">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d0c3b-138">请参阅</span><span class="sxs-lookup"><span data-stu-id="d0c3b-138">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="812af-138">请参阅</span><span class="sxs-lookup"><span data-stu-id="812af-138">See also</span></span>
 
-- [<span data-ttu-id="d0c3b-139">元数据全局静态函数</span><span class="sxs-lookup"><span data-stu-id="d0c3b-139">Metadata Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)
+- [<span data-ttu-id="812af-139">元数据全局静态函数</span><span class="sxs-lookup"><span data-stu-id="812af-139">Metadata Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)
