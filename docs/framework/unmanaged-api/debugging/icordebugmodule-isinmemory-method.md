@@ -17,38 +17,38 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d79a8b0c3c56ffe2b8f57ec26f5942ee0d681194
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 223989d883c421be228fb3d6a608643a5246c060
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61994833"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67763708"
 ---
-# <a name="icordebugmoduleisinmemory-method"></a><span data-ttu-id="2dc7d-102">ICorDebugModule::IsInMemory 方法</span><span class="sxs-lookup"><span data-stu-id="2dc7d-102">ICorDebugModule::IsInMemory Method</span></span>
-<span data-ttu-id="2dc7d-103">获取一个值，指示仅在内存中是否存在此模块。</span><span class="sxs-lookup"><span data-stu-id="2dc7d-103">Gets a value that indicates whether this module exists only in memory.</span></span>  
+# <a name="icordebugmoduleisinmemory-method"></a><span data-ttu-id="0d7b4-102">ICorDebugModule::IsInMemory 方法</span><span class="sxs-lookup"><span data-stu-id="0d7b4-102">ICorDebugModule::IsInMemory Method</span></span>
+<span data-ttu-id="0d7b4-103">获取一个值，指示仅在内存中是否存在此模块。</span><span class="sxs-lookup"><span data-stu-id="0d7b4-103">Gets a value that indicates whether this module exists only in memory.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2dc7d-104">语法</span><span class="sxs-lookup"><span data-stu-id="2dc7d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0d7b4-104">语法</span><span class="sxs-lookup"><span data-stu-id="0d7b4-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT IsInMemory(  
     [out] BOOL *pInMemory  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="2dc7d-105">参数</span><span class="sxs-lookup"><span data-stu-id="2dc7d-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="0d7b4-105">参数</span><span class="sxs-lookup"><span data-stu-id="0d7b4-105">Parameters</span></span>  
  `pInMemory`  
- <span data-ttu-id="2dc7d-106">[out]`true`如果此模块只存在于内存; 否则为`false`。</span><span class="sxs-lookup"><span data-stu-id="2dc7d-106">[out] `true` if this module exists only in memory; otherwise, `false`.</span></span>  
+ <span data-ttu-id="0d7b4-106">[out]`true`如果此模块只存在于内存; 否则为`false`。</span><span class="sxs-lookup"><span data-stu-id="0d7b4-106">[out] `true` if this module exists only in memory; otherwise, `false`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="2dc7d-107">备注</span><span class="sxs-lookup"><span data-stu-id="2dc7d-107">Remarks</span></span>  
- <span data-ttu-id="2dc7d-108">公共语言运行时 (CLR) 支持原始字节流中的模块的加载。</span><span class="sxs-lookup"><span data-stu-id="2dc7d-108">The common language runtime (CLR) supports the loading of modules from raw streams of bytes.</span></span> <span data-ttu-id="2dc7d-109">进行此类模块称为*内存中模块*和磁盘上不存在。</span><span class="sxs-lookup"><span data-stu-id="2dc7d-109">Such modules are called *in-memory modules* and do not exist on disk.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="0d7b4-107">备注</span><span class="sxs-lookup"><span data-stu-id="0d7b4-107">Remarks</span></span>  
+ <span data-ttu-id="0d7b4-108">公共语言运行时 (CLR) 支持原始字节流中的模块的加载。</span><span class="sxs-lookup"><span data-stu-id="0d7b4-108">The common language runtime (CLR) supports the loading of modules from raw streams of bytes.</span></span> <span data-ttu-id="0d7b4-109">进行此类模块称为*内存中模块*和磁盘上不存在。</span><span class="sxs-lookup"><span data-stu-id="0d7b4-109">Such modules are called *in-memory modules* and do not exist on disk.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="2dc7d-110">要求</span><span class="sxs-lookup"><span data-stu-id="2dc7d-110">Requirements</span></span>  
- <span data-ttu-id="2dc7d-111">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="2dc7d-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0d7b4-110">要求</span><span class="sxs-lookup"><span data-stu-id="0d7b4-110">Requirements</span></span>  
+ <span data-ttu-id="0d7b4-111">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="0d7b4-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="2dc7d-112">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="2dc7d-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="0d7b4-112">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="0d7b4-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="2dc7d-113">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2dc7d-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="0d7b4-113">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0d7b4-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="2dc7d-114">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2dc7d-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="0d7b4-114">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0d7b4-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2dc7d-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="2dc7d-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0d7b4-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="0d7b4-115">See also</span></span>

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 785defaa69609fc30852be9996531e6063586ceb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 422c5eab896833b2bab8daf0c854c05c252b9ee6
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61750171"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67747480"
 ---
-# <a name="icordebugcodegetencremapsequencepoints-method"></a><span data-ttu-id="722f3-102">ICorDebugCode::GetEnCRemapSequencePoints 方法</span><span class="sxs-lookup"><span data-stu-id="722f3-102">ICorDebugCode::GetEnCRemapSequencePoints Method</span></span>
-<span data-ttu-id="722f3-103">当前版本的.NET Framework 中未实现此方法。</span><span class="sxs-lookup"><span data-stu-id="722f3-103">This method is not implemented in the current version of the .NET Framework.</span></span>  
+# <a name="icordebugcodegetencremapsequencepoints-method"></a><span data-ttu-id="baff2-102">ICorDebugCode::GetEnCRemapSequencePoints 方法</span><span class="sxs-lookup"><span data-stu-id="baff2-102">ICorDebugCode::GetEnCRemapSequencePoints Method</span></span>
+<span data-ttu-id="baff2-103">当前版本的.NET Framework 中未实现此方法。</span><span class="sxs-lookup"><span data-stu-id="baff2-103">This method is not implemented in the current version of the .NET Framework.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="722f3-104">语法</span><span class="sxs-lookup"><span data-stu-id="722f3-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="baff2-104">语法</span><span class="sxs-lookup"><span data-stu-id="baff2-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetEnCRemapSequencePoints(  
     [in] ULONG32 cMap,  
     [out] ULONG32 *pcMap,  
@@ -38,4 +38,4 @@ HRESULT GetEnCRemapSequencePoints(
 );  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="722f3-105">请参阅</span><span class="sxs-lookup"><span data-stu-id="722f3-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="baff2-105">请参阅</span><span class="sxs-lookup"><span data-stu-id="baff2-105">See also</span></span>

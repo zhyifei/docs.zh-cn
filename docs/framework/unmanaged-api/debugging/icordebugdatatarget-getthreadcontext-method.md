@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2db073f6bde3ded27f8e1aa41bfcb87e764745f1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2047929c52dbb7b0d780a4ea0f180bae48a3ce79
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61748937"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67750395"
 ---
-# <a name="icordebugdatatargetgetthreadcontext-method"></a><span data-ttu-id="3ddef-102">ICorDebugDataTarget::GetThreadContext 方法</span><span class="sxs-lookup"><span data-stu-id="3ddef-102">ICorDebugDataTarget::GetThreadContext Method</span></span>
-<span data-ttu-id="3ddef-103">返回指定线程的当前线程上下文。</span><span class="sxs-lookup"><span data-stu-id="3ddef-103">Returns the current thread context for the specified thread.</span></span>  
+# <a name="icordebugdatatargetgetthreadcontext-method"></a><span data-ttu-id="e5c70-102">ICorDebugDataTarget::GetThreadContext 方法</span><span class="sxs-lookup"><span data-stu-id="e5c70-102">ICorDebugDataTarget::GetThreadContext Method</span></span>
+<span data-ttu-id="e5c70-103">返回指定线程的当前线程上下文。</span><span class="sxs-lookup"><span data-stu-id="e5c70-103">Returns the current thread context for the specified thread.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3ddef-104">语法</span><span class="sxs-lookup"><span data-stu-id="3ddef-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e5c70-104">语法</span><span class="sxs-lookup"><span data-stu-id="e5c70-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetThreadContext(  
        [in] DWORD dwThreadID,  
        [in] ULONG32 contextFlags,  
@@ -37,33 +37,33 @@ HRESULT GetThreadContext(
        [out, size_is(contextSize)] BYTE * pContext);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="3ddef-105">参数</span><span class="sxs-lookup"><span data-stu-id="3ddef-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e5c70-105">参数</span><span class="sxs-lookup"><span data-stu-id="e5c70-105">Parameters</span></span>  
  `dwThreadID`  
- <span data-ttu-id="3ddef-106">[in]要检索其上下文的线程的标识符。</span><span class="sxs-lookup"><span data-stu-id="3ddef-106">[in] The identifier of the thread whose context is to be retrieved.</span></span> <span data-ttu-id="3ddef-107">由操作系统定义的标识符。</span><span class="sxs-lookup"><span data-stu-id="3ddef-107">The identifier is defined by the operating system.</span></span>  
+ <span data-ttu-id="e5c70-106">[in]要检索其上下文的线程的标识符。</span><span class="sxs-lookup"><span data-stu-id="e5c70-106">[in] The identifier of the thread whose context is to be retrieved.</span></span> <span data-ttu-id="e5c70-107">由操作系统定义的标识符。</span><span class="sxs-lookup"><span data-stu-id="e5c70-107">The identifier is defined by the operating system.</span></span>  
   
  `contextFlags`  
- <span data-ttu-id="3ddef-108">[in]指示应读取上下文的哪些部分依赖于平台的标志的按位组合。</span><span class="sxs-lookup"><span data-stu-id="3ddef-108">[in] A bitwise combination of platform-dependent flags that indicate which portions of the context should be read.</span></span>  
+ <span data-ttu-id="e5c70-108">[in]指示应读取上下文的哪些部分依赖于平台的标志的按位组合。</span><span class="sxs-lookup"><span data-stu-id="e5c70-108">[in] A bitwise combination of platform-dependent flags that indicate which portions of the context should be read.</span></span>  
   
  `contextSize`  
- <span data-ttu-id="3ddef-109">[输入] `pContext` 的大小。</span><span class="sxs-lookup"><span data-stu-id="3ddef-109">[in] The size of `pContext`.</span></span>  
+ <span data-ttu-id="e5c70-109">[输入] `pContext` 的大小。</span><span class="sxs-lookup"><span data-stu-id="e5c70-109">[in] The size of `pContext`.</span></span>  
   
  `pContext`  
- <span data-ttu-id="3ddef-110">[out]将在其中存储的线程上下文缓冲区。</span><span class="sxs-lookup"><span data-stu-id="3ddef-110">[out] The buffer where the thread context will be stored.</span></span>  
+ <span data-ttu-id="e5c70-110">[out]将在其中存储的线程上下文缓冲区。</span><span class="sxs-lookup"><span data-stu-id="e5c70-110">[out] The buffer where the thread context will be stored.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="3ddef-111">备注</span><span class="sxs-lookup"><span data-stu-id="3ddef-111">Remarks</span></span>  
- <span data-ttu-id="3ddef-112">在 Windows 平台上`pContext`必须是`CONTEXT`（在 WinNT.h 中定义） 的结构，它是适用于由指定的计算机类型[icordebugdatatarget:: Getplatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="3ddef-112">On Windows platforms, `pContext` must be a `CONTEXT` structure (defined in WinNT.h) that is appropriate for the machine type specified by the [ICorDebugDataTarget::GetPlatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md) method.</span></span> <span data-ttu-id="3ddef-113">`contextFlags` 必须具有相同的值`ContextFlags`字段的`CONTEXT`结构。</span><span class="sxs-lookup"><span data-stu-id="3ddef-113">`contextFlags` must have the same values as the `ContextFlags` field of the `CONTEXT` structure.</span></span> <span data-ttu-id="3ddef-114">`CONTEXT`结构是特定于处理器的; WinNT.h 中的文件，了解详细信息，请参阅。</span><span class="sxs-lookup"><span data-stu-id="3ddef-114">The `CONTEXT` structure is processor-specific; refer to the WinNT.h file for details.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e5c70-111">备注</span><span class="sxs-lookup"><span data-stu-id="e5c70-111">Remarks</span></span>  
+ <span data-ttu-id="e5c70-112">在 Windows 平台上`pContext`必须是`CONTEXT`（在 WinNT.h 中定义） 的结构，它是适用于由指定的计算机类型[icordebugdatatarget:: Getplatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="e5c70-112">On Windows platforms, `pContext` must be a `CONTEXT` structure (defined in WinNT.h) that is appropriate for the machine type specified by the [ICorDebugDataTarget::GetPlatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md) method.</span></span> <span data-ttu-id="e5c70-113">`contextFlags` 必须具有相同的值`ContextFlags`字段的`CONTEXT`结构。</span><span class="sxs-lookup"><span data-stu-id="e5c70-113">`contextFlags` must have the same values as the `ContextFlags` field of the `CONTEXT` structure.</span></span> <span data-ttu-id="e5c70-114">`CONTEXT`结构是特定于处理器的; WinNT.h 中的文件，了解详细信息，请参阅。</span><span class="sxs-lookup"><span data-stu-id="e5c70-114">The `CONTEXT` structure is processor-specific; refer to the WinNT.h file for details.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3ddef-115">要求</span><span class="sxs-lookup"><span data-stu-id="3ddef-115">Requirements</span></span>  
- <span data-ttu-id="3ddef-116">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="3ddef-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e5c70-115">要求</span><span class="sxs-lookup"><span data-stu-id="e5c70-115">Requirements</span></span>  
+ <span data-ttu-id="e5c70-116">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="e5c70-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3ddef-117">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="3ddef-117">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="e5c70-117">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="e5c70-117">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="3ddef-118">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="3ddef-118">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="e5c70-118">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e5c70-118">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="3ddef-119">**.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3ddef-119">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="e5c70-119">**.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e5c70-119">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3ddef-120">请参阅</span><span class="sxs-lookup"><span data-stu-id="3ddef-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e5c70-120">请参阅</span><span class="sxs-lookup"><span data-stu-id="e5c70-120">See also</span></span>
 
-- [<span data-ttu-id="3ddef-121">ICorDebugDataTarget 接口</span><span class="sxs-lookup"><span data-stu-id="3ddef-121">ICorDebugDataTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md)
-- [<span data-ttu-id="3ddef-122">调试接口</span><span class="sxs-lookup"><span data-stu-id="3ddef-122">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [<span data-ttu-id="3ddef-123">调试</span><span class="sxs-lookup"><span data-stu-id="3ddef-123">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [<span data-ttu-id="e5c70-121">ICorDebugDataTarget 接口</span><span class="sxs-lookup"><span data-stu-id="e5c70-121">ICorDebugDataTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md)
+- [<span data-ttu-id="e5c70-122">调试接口</span><span class="sxs-lookup"><span data-stu-id="e5c70-122">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="e5c70-123">调试</span><span class="sxs-lookup"><span data-stu-id="e5c70-123">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

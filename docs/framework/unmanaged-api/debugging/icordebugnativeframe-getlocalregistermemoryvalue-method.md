@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 26cd30be591c4167fa6a6e4d19ba9d1c909c6428
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cc179236f5453724639d47558770179a1e80f706
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61927304"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67746192"
 ---
-# <a name="icordebugnativeframegetlocalregistermemoryvalue-method"></a><span data-ttu-id="9f98d-102">ICorDebugNativeFrame::GetLocalRegisterMemoryValue 方法</span><span class="sxs-lookup"><span data-stu-id="9f98d-102">ICorDebugNativeFrame::GetLocalRegisterMemoryValue Method</span></span>
-<span data-ttu-id="9f98d-103">获取参数或局部变量，其中的低位字和高位字存储在内存位置，寄存器中，分别指定，此本机帧的值。</span><span class="sxs-lookup"><span data-stu-id="9f98d-103">Gets the value of an argument or local variable, of which the low word and high word are stored in the memory location and specified register, respectively, for this native frame.</span></span>  
+# <a name="icordebugnativeframegetlocalregistermemoryvalue-method"></a><span data-ttu-id="254b4-102">ICorDebugNativeFrame::GetLocalRegisterMemoryValue 方法</span><span class="sxs-lookup"><span data-stu-id="254b4-102">ICorDebugNativeFrame::GetLocalRegisterMemoryValue Method</span></span>
+<span data-ttu-id="254b4-103">获取参数或局部变量，其中的低位字和高位字存储在内存位置，寄存器中，分别指定，此本机帧的值。</span><span class="sxs-lookup"><span data-stu-id="254b4-103">Gets the value of an argument or local variable, of which the low word and high word are stored in the memory location and specified register, respectively, for this native frame.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9f98d-104">语法</span><span class="sxs-lookup"><span data-stu-id="9f98d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="254b4-104">语法</span><span class="sxs-lookup"><span data-stu-id="254b4-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetLocalRegisterMemoryValue (  
     [in] CorDebugRegister   highWordReg,  
     [in] CORDB_ADDRESS      lowWordAddress,  
@@ -39,29 +39,29 @@ HRESULT GetLocalRegisterMemoryValue (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="9f98d-105">参数</span><span class="sxs-lookup"><span data-stu-id="9f98d-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="254b4-105">参数</span><span class="sxs-lookup"><span data-stu-id="254b4-105">Parameters</span></span>  
  `highWordReg`  
- <span data-ttu-id="9f98d-106">[in]"CorDebugRegister"枚举，指定包含值的高位字的寄存器的值。</span><span class="sxs-lookup"><span data-stu-id="9f98d-106">[in] A value of the "CorDebugRegister" enumeration that specifies the register containing the high word of the value.</span></span>  
+ <span data-ttu-id="254b4-106">[in]"CorDebugRegister"枚举，指定包含值的高位字的寄存器的值。</span><span class="sxs-lookup"><span data-stu-id="254b4-106">[in] A value of the "CorDebugRegister" enumeration that specifies the register containing the high word of the value.</span></span>  
   
  `lowWordAddress`  
- <span data-ttu-id="9f98d-107">[in]一个`CORDB_ADDRESS`值，该值指定包含值的低位字的内存位置。</span><span class="sxs-lookup"><span data-stu-id="9f98d-107">[in] A `CORDB_ADDRESS` value that specifies the memory location containing the low word of the value.</span></span>  
+ <span data-ttu-id="254b4-107">[in]一个`CORDB_ADDRESS`值，该值指定包含值的低位字的内存位置。</span><span class="sxs-lookup"><span data-stu-id="254b4-107">[in] A `CORDB_ADDRESS` value that specifies the memory location containing the low word of the value.</span></span>  
   
  `cbSigBlob`  
- <span data-ttu-id="9f98d-108">[in]一个整数，指定的二进制元数据签名的由引用大小`pvSigBlob`参数。</span><span class="sxs-lookup"><span data-stu-id="9f98d-108">[in] An integer that specifies the size of the binary metadata signature which is referenced by the `pvSigBlob` parameter.</span></span>  
+ <span data-ttu-id="254b4-108">[in]一个整数，指定的二进制元数据签名的由引用大小`pvSigBlob`参数。</span><span class="sxs-lookup"><span data-stu-id="254b4-108">[in] An integer that specifies the size of the binary metadata signature which is referenced by the `pvSigBlob` parameter.</span></span>  
   
  `pvSigBlob`  
- <span data-ttu-id="9f98d-109">[in]一个`PCCOR_SIGNATURE`指向值类型的二进制元数据签名的值。</span><span class="sxs-lookup"><span data-stu-id="9f98d-109">[in] A `PCCOR_SIGNATURE` value that points to the binary metadata signature of the value's type.</span></span>  
+ <span data-ttu-id="254b4-109">[in]一个`PCCOR_SIGNATURE`指向值类型的二进制元数据签名的值。</span><span class="sxs-lookup"><span data-stu-id="254b4-109">[in] A `PCCOR_SIGNATURE` value that points to the binary metadata signature of the value's type.</span></span>  
   
  `ppValue`  
- <span data-ttu-id="9f98d-110">[out]指向表示检索到的值存储在指定的注册和内存位置中的"ICorDebugValue"对象的地址的指针。</span><span class="sxs-lookup"><span data-stu-id="9f98d-110">[out] A pointer to the address of an "ICorDebugValue" object representing the retrieved value that is stored in the specified register and memory location.</span></span>  
+ <span data-ttu-id="254b4-110">[out]指向表示检索到的值存储在指定的注册和内存位置中的"ICorDebugValue"对象的地址的指针。</span><span class="sxs-lookup"><span data-stu-id="254b4-110">[out] A pointer to the address of an "ICorDebugValue" object representing the retrieved value that is stored in the specified register and memory location.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9f98d-111">要求</span><span class="sxs-lookup"><span data-stu-id="9f98d-111">Requirements</span></span>  
- <span data-ttu-id="9f98d-112">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="9f98d-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="254b4-111">要求</span><span class="sxs-lookup"><span data-stu-id="254b4-111">Requirements</span></span>  
+ <span data-ttu-id="254b4-112">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="254b4-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9f98d-113">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="9f98d-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="254b4-113">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="254b4-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="9f98d-114">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9f98d-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="254b4-114">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="254b4-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="9f98d-115">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9f98d-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="254b4-115">**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="254b4-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9f98d-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="9f98d-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="254b4-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="254b4-116">See also</span></span>

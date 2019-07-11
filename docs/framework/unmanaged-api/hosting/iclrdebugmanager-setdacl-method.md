@@ -17,46 +17,46 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: abe9a7b617e5fec0f25765dc5eb94d57ead1ffcc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b8c5d35af072b773786a8be5ad7d1e71a21c38b2
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61984825"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67773073"
 ---
-# <a name="iclrdebugmanagersetdacl-method"></a><span data-ttu-id="9c9b4-102">ICLRDebugManager::SetDacl 方法</span><span class="sxs-lookup"><span data-stu-id="9c9b4-102">ICLRDebugManager::SetDacl Method</span></span>
-<span data-ttu-id="9c9b4-103">未实现此方法。</span><span class="sxs-lookup"><span data-stu-id="9c9b4-103">This method is not implemented.</span></span>  
+# <a name="iclrdebugmanagersetdacl-method"></a><span data-ttu-id="f094b-102">ICLRDebugManager::SetDacl 方法</span><span class="sxs-lookup"><span data-stu-id="f094b-102">ICLRDebugManager::SetDacl Method</span></span>
+<span data-ttu-id="f094b-103">未实现此方法。</span><span class="sxs-lookup"><span data-stu-id="f094b-103">This method is not implemented.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9c9b4-104">语法</span><span class="sxs-lookup"><span data-stu-id="9c9b4-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f094b-104">语法</span><span class="sxs-lookup"><span data-stu-id="f094b-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT SetDacl (  
     [in] PACL pacl  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="9c9b4-105">参数</span><span class="sxs-lookup"><span data-stu-id="9c9b4-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f094b-105">参数</span><span class="sxs-lookup"><span data-stu-id="f094b-105">Parameters</span></span>  
  `pacl`  
- <span data-ttu-id="9c9b4-106">[in]指针到访问控制列表 (ACL)。</span><span class="sxs-lookup"><span data-stu-id="9c9b4-106">[in] A pointer to the Access Control List (ACL).</span></span>  
+ <span data-ttu-id="f094b-106">[in]指针到访问控制列表 (ACL)。</span><span class="sxs-lookup"><span data-stu-id="f094b-106">[in] A pointer to the Access Control List (ACL).</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="9c9b4-107">返回值</span><span class="sxs-lookup"><span data-stu-id="9c9b4-107">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="f094b-107">返回值</span><span class="sxs-lookup"><span data-stu-id="f094b-107">Return Value</span></span>  
   
-|<span data-ttu-id="9c9b4-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="9c9b4-108">HRESULT</span></span>|<span data-ttu-id="9c9b4-109">描述</span><span class="sxs-lookup"><span data-stu-id="9c9b4-109">Description</span></span>|  
+|<span data-ttu-id="f094b-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="f094b-108">HRESULT</span></span>|<span data-ttu-id="f094b-109">描述</span><span class="sxs-lookup"><span data-stu-id="f094b-109">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="9c9b4-110">E_NOTIMPL</span><span class="sxs-lookup"><span data-stu-id="9c9b4-110">E_NOTIMPL</span></span>|<span data-ttu-id="9c9b4-111">未实现方法。</span><span class="sxs-lookup"><span data-stu-id="9c9b4-111">The method is not implemented.</span></span>|  
+|<span data-ttu-id="f094b-110">E_NOTIMPL</span><span class="sxs-lookup"><span data-stu-id="f094b-110">E_NOTIMPL</span></span>|<span data-ttu-id="f094b-111">未实现方法。</span><span class="sxs-lookup"><span data-stu-id="f094b-111">The method is not implemented.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="9c9b4-112">要求</span><span class="sxs-lookup"><span data-stu-id="9c9b4-112">Requirements</span></span>  
- <span data-ttu-id="9c9b4-113">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="9c9b4-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f094b-112">要求</span><span class="sxs-lookup"><span data-stu-id="f094b-112">Requirements</span></span>  
+ <span data-ttu-id="f094b-113">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="f094b-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9c9b4-114">**标头：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="9c9b4-114">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="f094b-114">**标头：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="f094b-114">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="9c9b4-115">**库：** 包含为 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="9c9b4-115">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="f094b-115">**库：** 包含为 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="f094b-115">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="9c9b4-116">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9c9b4-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="f094b-116">**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f094b-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9c9b4-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="9c9b4-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f094b-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="f094b-117">See also</span></span>
 
-- [<span data-ttu-id="9c9b4-118">ICLRControl 接口</span><span class="sxs-lookup"><span data-stu-id="9c9b4-118">ICLRControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
-- [<span data-ttu-id="9c9b4-119">ICLRDebugManager 接口</span><span class="sxs-lookup"><span data-stu-id="9c9b4-119">ICLRDebugManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-interface.md)
-- [<span data-ttu-id="9c9b4-120">GetDacl 方法</span><span class="sxs-lookup"><span data-stu-id="9c9b4-120">GetDacl Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-getdacl-method.md)
-- [<span data-ttu-id="9c9b4-121">IHostControl 接口</span><span class="sxs-lookup"><span data-stu-id="9c9b4-121">IHostControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-interface.md)
+- [<span data-ttu-id="f094b-118">ICLRControl 接口</span><span class="sxs-lookup"><span data-stu-id="f094b-118">ICLRControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
+- [<span data-ttu-id="f094b-119">ICLRDebugManager 接口</span><span class="sxs-lookup"><span data-stu-id="f094b-119">ICLRDebugManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-interface.md)
+- [<span data-ttu-id="f094b-120">GetDacl 方法</span><span class="sxs-lookup"><span data-stu-id="f094b-120">GetDacl Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-getdacl-method.md)
+- [<span data-ttu-id="f094b-121">IHostControl 接口</span><span class="sxs-lookup"><span data-stu-id="f094b-121">IHostControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-interface.md)

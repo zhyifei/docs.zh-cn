@@ -17,33 +17,33 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5d1226f64df379b5c40304221e9e66eebcdb17b4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 965ce04b02a0eb1ca30aba065b3e372332e08b55
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61989126"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67752293"
 ---
-# <a name="icordebugenumclone-method"></a><span data-ttu-id="26e7d-102">ICorDebugEnum::Clone 方法</span><span class="sxs-lookup"><span data-stu-id="26e7d-102">ICorDebugEnum::Clone Method</span></span>
-<span data-ttu-id="26e7d-103">创建此 ICorDebugEnum 对象的副本。</span><span class="sxs-lookup"><span data-stu-id="26e7d-103">Creates a copy of this ICorDebugEnum object.</span></span>  
+# <a name="icordebugenumclone-method"></a><span data-ttu-id="ca707-102">ICorDebugEnum::Clone 方法</span><span class="sxs-lookup"><span data-stu-id="ca707-102">ICorDebugEnum::Clone Method</span></span>
+<span data-ttu-id="ca707-103">创建此 ICorDebugEnum 对象的副本。</span><span class="sxs-lookup"><span data-stu-id="ca707-103">Creates a copy of this ICorDebugEnum object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="26e7d-104">语法</span><span class="sxs-lookup"><span data-stu-id="26e7d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ca707-104">语法</span><span class="sxs-lookup"><span data-stu-id="ca707-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT Clone (  
     [out] ICorDebugEnum **ppEnum  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="26e7d-105">参数</span><span class="sxs-lookup"><span data-stu-id="26e7d-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ca707-105">参数</span><span class="sxs-lookup"><span data-stu-id="ca707-105">Parameters</span></span>  
  `ppEnum`  
- <span data-ttu-id="26e7d-106">[out]指向的地址的指针`ICorDebugEnum`对象，它是一份`ICorDebugEnum`对象。</span><span class="sxs-lookup"><span data-stu-id="26e7d-106">[out] A pointer to the address of an `ICorDebugEnum` object that is a copy of this `ICorDebugEnum` object.</span></span>  
+ <span data-ttu-id="ca707-106">[out]指向的地址的指针`ICorDebugEnum`对象，它是一份`ICorDebugEnum`对象。</span><span class="sxs-lookup"><span data-stu-id="ca707-106">[out] A pointer to the address of an `ICorDebugEnum` object that is a copy of this `ICorDebugEnum` object.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="26e7d-107">要求</span><span class="sxs-lookup"><span data-stu-id="26e7d-107">Requirements</span></span>  
- <span data-ttu-id="26e7d-108">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="26e7d-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ca707-107">要求</span><span class="sxs-lookup"><span data-stu-id="ca707-107">Requirements</span></span>  
+ <span data-ttu-id="ca707-108">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="ca707-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="26e7d-109">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="26e7d-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="ca707-109">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="ca707-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="26e7d-110">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="26e7d-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="ca707-110">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ca707-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="26e7d-111">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="26e7d-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="ca707-111">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ca707-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

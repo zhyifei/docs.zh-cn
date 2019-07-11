@@ -16,21 +16,21 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d28497c637a40d7e2659b18868124ea898397f92
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: b7f24606e3b021b0df5bdbaab795e4f672f724fa
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636906"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67761710"
 ---
-# <a name="blessiwbemservicesobject-function"></a><span data-ttu-id="49f56-103">BlessIWbemServicesObject 函数</span><span class="sxs-lookup"><span data-stu-id="49f56-103">BlessIWbemServicesObject function</span></span>
-<span data-ttu-id="49f56-104">指示用户凭据是否允许访问指定[IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices)对象。</span><span class="sxs-lookup"><span data-stu-id="49f56-104">Indicates whether the user credentials permit access to a specified [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) object.</span></span> 
+# <a name="blessiwbemservicesobject-function"></a><span data-ttu-id="fd104-103">BlessIWbemServicesObject 函数</span><span class="sxs-lookup"><span data-stu-id="fd104-103">BlessIWbemServicesObject function</span></span>
+<span data-ttu-id="fd104-104">指示用户凭据是否允许访问指定[IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices)对象。</span><span class="sxs-lookup"><span data-stu-id="fd104-104">Indicates whether the user credentials permit access to a specified [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) object.</span></span> 
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
 
-## <a name="syntax"></a><span data-ttu-id="49f56-105">语法</span><span class="sxs-lookup"><span data-stu-id="49f56-105">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="fd104-105">语法</span><span class="sxs-lookup"><span data-stu-id="fd104-105">Syntax</span></span>
 
-```
+```cpp
 HRESULT BlessIWbemServicesObject (
    [in] IUnknown* pIUnknown,
    [in] BSTR strUser, 
@@ -41,46 +41,46 @@ HRESULT BlessIWbemServicesObject (
 );
 ```
 
-## <a name="parameters"></a><span data-ttu-id="49f56-106">参数</span><span class="sxs-lookup"><span data-stu-id="49f56-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="fd104-106">参数</span><span class="sxs-lookup"><span data-stu-id="fd104-106">Parameters</span></span>
 
 `pIWbemServices`\
-<span data-ttu-id="49f56-107">[in]指向 WMI 服务对象的指针。</span><span class="sxs-lookup"><span data-stu-id="49f56-107">[in] A pointer to a WMI service object.</span></span>
+<span data-ttu-id="fd104-107">[in]指向 WMI 服务对象的指针。</span><span class="sxs-lookup"><span data-stu-id="fd104-107">[in] A pointer to a WMI service object.</span></span>
 
 `strUser`\
-<span data-ttu-id="49f56-108">[in]用户名称。</span><span class="sxs-lookup"><span data-stu-id="49f56-108">[in] The user name.</span></span>
+<span data-ttu-id="fd104-108">[in]用户名称。</span><span class="sxs-lookup"><span data-stu-id="fd104-108">[in] The user name.</span></span>
 
 `strPassword`\
-<span data-ttu-id="49f56-109">[in]与关联的密码`strUser`。</span><span class="sxs-lookup"><span data-stu-id="49f56-109">[in] The password associated with `strUser`.</span></span>
+<span data-ttu-id="fd104-109">[in]与关联的密码`strUser`。</span><span class="sxs-lookup"><span data-stu-id="fd104-109">[in] The password associated with `strUser`.</span></span>
 
 `strAuthority`\
-<span data-ttu-id="49f56-110">[in]用户的域名。</span><span class="sxs-lookup"><span data-stu-id="49f56-110">[in] The domain name of the user.</span></span> <span data-ttu-id="49f56-111">请参阅[ConnectServerWmi](connectserverwmi.md)函数的详细信息。</span><span class="sxs-lookup"><span data-stu-id="49f56-111">See the [ConnectServerWmi](connectserverwmi.md) function for more information.</span></span>
+<span data-ttu-id="fd104-110">[in]用户的域名。</span><span class="sxs-lookup"><span data-stu-id="fd104-110">[in] The domain name of the user.</span></span> <span data-ttu-id="fd104-111">请参阅[ConnectServerWmi](connectserverwmi.md)函数的详细信息。</span><span class="sxs-lookup"><span data-stu-id="fd104-111">See the [ConnectServerWmi](connectserverwmi.md) function for more information.</span></span>
 
 `impLevel`\
-<span data-ttu-id="49f56-112">[in]模拟级别。</span><span class="sxs-lookup"><span data-stu-id="49f56-112">[in] The impersonation level.</span></span>
+<span data-ttu-id="fd104-112">[in]模拟级别。</span><span class="sxs-lookup"><span data-stu-id="fd104-112">[in] The impersonation level.</span></span>
 
 `authnLevel`\
-<span data-ttu-id="49f56-113">[in]授权级别。</span><span class="sxs-lookup"><span data-stu-id="49f56-113">[in] The authorization level.</span></span>
+<span data-ttu-id="fd104-113">[in]授权级别。</span><span class="sxs-lookup"><span data-stu-id="fd104-113">[in] The authorization level.</span></span>
 
-## <a name="return-value"></a><span data-ttu-id="49f56-114">返回值</span><span class="sxs-lookup"><span data-stu-id="49f56-114">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="fd104-114">返回值</span><span class="sxs-lookup"><span data-stu-id="fd104-114">Return value</span></span>
 
-<span data-ttu-id="49f56-115">此函数返回以下值中定义*WinError.h*标头文件，也可以在定义它们为常量在代码中：</span><span class="sxs-lookup"><span data-stu-id="49f56-115">The following values returned by this function are defined in the *WinError.h* header file, or you can define them as constants in your code:</span></span>
+<span data-ttu-id="fd104-115">此函数返回以下值中定义*WinError.h*标头文件，也可以在定义它们为常量在代码中：</span><span class="sxs-lookup"><span data-stu-id="fd104-115">The following values returned by this function are defined in the *WinError.h* header file, or you can define them as constants in your code:</span></span>
 
-|<span data-ttu-id="49f56-116">返回的常量</span><span class="sxs-lookup"><span data-stu-id="49f56-116">Constant</span></span>  |<span data-ttu-id="49f56-117">值</span><span class="sxs-lookup"><span data-stu-id="49f56-117">Value</span></span>  |<span data-ttu-id="49f56-118">描述</span><span class="sxs-lookup"><span data-stu-id="49f56-118">Description</span></span>  |
+|<span data-ttu-id="fd104-116">返回的常量</span><span class="sxs-lookup"><span data-stu-id="fd104-116">Constant</span></span>  |<span data-ttu-id="fd104-117">值</span><span class="sxs-lookup"><span data-stu-id="fd104-117">Value</span></span>  |<span data-ttu-id="fd104-118">描述</span><span class="sxs-lookup"><span data-stu-id="fd104-118">Description</span></span>  |
 |---------|---------|---------|
-| `E_INVALIDARG` | <span data-ttu-id="49f56-119">0x80070057</span><span class="sxs-lookup"><span data-stu-id="49f56-119">0x80070057</span></span> | <span data-ttu-id="49f56-120">一个或多个参数均无效。</span><span class="sxs-lookup"><span data-stu-id="49f56-120">One or more arguments are invalid.</span></span> |
-| `E_POINTER` | <span data-ttu-id="49f56-121">0x80004003</span><span class="sxs-lookup"><span data-stu-id="49f56-121">0x80004003</span></span> | <span data-ttu-id="49f56-122">`pIWbemServices` 为 `null`。</span><span class="sxs-lookup"><span data-stu-id="49f56-122">`pIWbemServices` is `null`.</span></span> | 
-| `E_FAIL` | <span data-ttu-id="49f56-123">0x80000008</span><span class="sxs-lookup"><span data-stu-id="49f56-123">0x80000008</span></span> | <span data-ttu-id="49f56-124">发生未知的错误。</span><span class="sxs-lookup"><span data-stu-id="49f56-124">An unspecified error has occurred.</span></span> |
-| `E_OUTOFMEMORY` | <span data-ttu-id="49f56-125">0x80000002</span><span class="sxs-lookup"><span data-stu-id="49f56-125">0x80000002</span></span> | <span data-ttu-id="49f56-126">没有足够的内存是可用于执行该操作。</span><span class="sxs-lookup"><span data-stu-id="49f56-126">Insufficient memory is available to perform the operation.</span></span> | 
-| `S_OK` | <span data-ttu-id="49f56-127">0</span><span class="sxs-lookup"><span data-stu-id="49f56-127">0</span></span> | <span data-ttu-id="49f56-128">函数调用成功。</span><span class="sxs-lookup"><span data-stu-id="49f56-128">The function call was successful.</span></span> | 
+| `E_INVALIDARG` | <span data-ttu-id="fd104-119">0x80070057</span><span class="sxs-lookup"><span data-stu-id="fd104-119">0x80070057</span></span> | <span data-ttu-id="fd104-120">一个或多个参数均无效。</span><span class="sxs-lookup"><span data-stu-id="fd104-120">One or more arguments are invalid.</span></span> |
+| `E_POINTER` | <span data-ttu-id="fd104-121">0x80004003</span><span class="sxs-lookup"><span data-stu-id="fd104-121">0x80004003</span></span> | <span data-ttu-id="fd104-122">`pIWbemServices` 为 `null`。</span><span class="sxs-lookup"><span data-stu-id="fd104-122">`pIWbemServices` is `null`.</span></span> | 
+| `E_FAIL` | <span data-ttu-id="fd104-123">0x80000008</span><span class="sxs-lookup"><span data-stu-id="fd104-123">0x80000008</span></span> | <span data-ttu-id="fd104-124">发生未知的错误。</span><span class="sxs-lookup"><span data-stu-id="fd104-124">An unspecified error has occurred.</span></span> |
+| `E_OUTOFMEMORY` | <span data-ttu-id="fd104-125">0x80000002</span><span class="sxs-lookup"><span data-stu-id="fd104-125">0x80000002</span></span> | <span data-ttu-id="fd104-126">没有足够的内存是可用于执行该操作。</span><span class="sxs-lookup"><span data-stu-id="fd104-126">Insufficient memory is available to perform the operation.</span></span> | 
+| `S_OK` | <span data-ttu-id="fd104-127">0</span><span class="sxs-lookup"><span data-stu-id="fd104-127">0</span></span> | <span data-ttu-id="fd104-128">函数调用成功。</span><span class="sxs-lookup"><span data-stu-id="fd104-128">The function call was successful.</span></span> | 
 
-## <a name="requirements"></a><span data-ttu-id="49f56-129">要求</span><span class="sxs-lookup"><span data-stu-id="49f56-129">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="fd104-129">要求</span><span class="sxs-lookup"><span data-stu-id="fd104-129">Requirements</span></span>
 
- <span data-ttu-id="49f56-130">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="49f56-130">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>
+ <span data-ttu-id="fd104-130">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="fd104-130">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>
 
- <span data-ttu-id="49f56-131">**标头：** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="49f56-131">**Header:** WMINet_Utils.idl</span></span>
+ <span data-ttu-id="fd104-131">**标头：** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="fd104-131">**Header:** WMINet_Utils.idl</span></span>
 
- <span data-ttu-id="49f56-132">**.NET Framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="49f56-132">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>
+ <span data-ttu-id="fd104-132">**.NET Framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="fd104-132">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="49f56-133">请参阅</span><span class="sxs-lookup"><span data-stu-id="49f56-133">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="fd104-133">请参阅</span><span class="sxs-lookup"><span data-stu-id="fd104-133">See also</span></span>
 
-- [<span data-ttu-id="49f56-134">WMI 和性能计数器 （非托管 API 参考）</span><span class="sxs-lookup"><span data-stu-id="49f56-134">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+- [<span data-ttu-id="fd104-134">WMI 和性能计数器 （非托管 API 参考）</span><span class="sxs-lookup"><span data-stu-id="fd104-134">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)

@@ -17,57 +17,57 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c109bab2ecd14e2b698a9b24dace56e986ad5e58
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: af933be9edc0d0fe7249f33800fe259ddc779aeb
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593523"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67738312"
 ---
-# <a name="icordebugcanlaunchorattach-method"></a><span data-ttu-id="a3c9b-102">ICorDebug::CanLaunchOrAttach 方法</span><span class="sxs-lookup"><span data-stu-id="a3c9b-102">ICorDebug::CanLaunchOrAttach Method</span></span>
-<span data-ttu-id="a3c9b-103">返回一个 HRESULT，指示是否可以在当前的计算机和运行时配置的上下文中启动一个新的进程或附加到指定的现有进程。</span><span class="sxs-lookup"><span data-stu-id="a3c9b-103">Returns an HRESULT that indicates whether launching a new process or attaching to the specified existing process is possible within the context of the current machine and runtime configuration.</span></span>  
+# <a name="icordebugcanlaunchorattach-method"></a><span data-ttu-id="6310b-102">ICorDebug::CanLaunchOrAttach 方法</span><span class="sxs-lookup"><span data-stu-id="6310b-102">ICorDebug::CanLaunchOrAttach Method</span></span>
+<span data-ttu-id="6310b-103">返回一个 HRESULT，指示是否可以在当前的计算机和运行时配置的上下文中启动一个新的进程或附加到指定的现有进程。</span><span class="sxs-lookup"><span data-stu-id="6310b-103">Returns an HRESULT that indicates whether launching a new process or attaching to the specified existing process is possible within the context of the current machine and runtime configuration.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a3c9b-104">语法</span><span class="sxs-lookup"><span data-stu-id="a3c9b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6310b-104">语法</span><span class="sxs-lookup"><span data-stu-id="6310b-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT CanLaunchOrAttach (  
     [in] DWORD      dwProcessId,  
     [in] BOOL       win32DebuggingEnabled  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="a3c9b-105">参数</span><span class="sxs-lookup"><span data-stu-id="a3c9b-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="6310b-105">参数</span><span class="sxs-lookup"><span data-stu-id="6310b-105">Parameters</span></span>  
  `dwProcessId`  
- <span data-ttu-id="a3c9b-106">[in]现有的进程的 ID。</span><span class="sxs-lookup"><span data-stu-id="a3c9b-106">[in] The ID of an existing process.</span></span>  
+ <span data-ttu-id="6310b-106">[in]现有的进程的 ID。</span><span class="sxs-lookup"><span data-stu-id="6310b-106">[in] The ID of an existing process.</span></span>  
   
  `win32DebuggingEnabled`  
- <span data-ttu-id="a3c9b-107">[in]传入`true`如果打算使用 Win32 调试启用，启动或 Win32 调试已启用; 否则为附加传递`false`。</span><span class="sxs-lookup"><span data-stu-id="a3c9b-107">[in] Pass in `true` if you plan to launch with Win32 debugging enabled, or to attach with Win32 debugging enabled; otherwise, pass `false`.</span></span>  
+ <span data-ttu-id="6310b-107">[in]传入`true`如果打算使用 Win32 调试启用，启动或 Win32 调试已启用; 否则为附加传递`false`。</span><span class="sxs-lookup"><span data-stu-id="6310b-107">[in] Pass in `true` if you plan to launch with Win32 debugging enabled, or to attach with Win32 debugging enabled; otherwise, pass `false`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="a3c9b-108">返回值</span><span class="sxs-lookup"><span data-stu-id="a3c9b-108">Return Value</span></span>  
- <span data-ttu-id="a3c9b-109">如果调试服务确定启动新进程或附加到给定的进程，则返回 S_OK 提供有关当前的计算机和运行时配置的信息。</span><span class="sxs-lookup"><span data-stu-id="a3c9b-109">S_OK if the debugging services determine that launching a new process or attaching to the given process is possible, given the information about the current machine and runtime configuration.</span></span> <span data-ttu-id="a3c9b-110">可能的 HRESULT 值为：</span><span class="sxs-lookup"><span data-stu-id="a3c9b-110">Possible HRESULT values are:</span></span>  
+## <a name="return-value"></a><span data-ttu-id="6310b-108">返回值</span><span class="sxs-lookup"><span data-stu-id="6310b-108">Return Value</span></span>  
+ <span data-ttu-id="6310b-109">如果调试服务确定启动新进程或附加到给定的进程，则返回 S_OK 提供有关当前的计算机和运行时配置的信息。</span><span class="sxs-lookup"><span data-stu-id="6310b-109">S_OK if the debugging services determine that launching a new process or attaching to the given process is possible, given the information about the current machine and runtime configuration.</span></span> <span data-ttu-id="6310b-110">可能的 HRESULT 值为：</span><span class="sxs-lookup"><span data-stu-id="6310b-110">Possible HRESULT values are:</span></span>  
   
-- <span data-ttu-id="a3c9b-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="a3c9b-111">S_OK</span></span>  
+- <span data-ttu-id="6310b-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="6310b-111">S_OK</span></span>  
   
-- <span data-ttu-id="a3c9b-112">CORDBG_E_DEBUGGING_NOT_POSSIBLE</span><span class="sxs-lookup"><span data-stu-id="a3c9b-112">CORDBG_E_DEBUGGING_NOT_POSSIBLE</span></span>  
+- <span data-ttu-id="6310b-112">CORDBG_E_DEBUGGING_NOT_POSSIBLE</span><span class="sxs-lookup"><span data-stu-id="6310b-112">CORDBG_E_DEBUGGING_NOT_POSSIBLE</span></span>  
   
-- <span data-ttu-id="a3c9b-113">CORDBG_E_KERNEL_DEBUGGER_PRESENT</span><span class="sxs-lookup"><span data-stu-id="a3c9b-113">CORDBG_E_KERNEL_DEBUGGER_PRESENT</span></span>  
+- <span data-ttu-id="6310b-113">CORDBG_E_KERNEL_DEBUGGER_PRESENT</span><span class="sxs-lookup"><span data-stu-id="6310b-113">CORDBG_E_KERNEL_DEBUGGER_PRESENT</span></span>  
   
-- <span data-ttu-id="a3c9b-114">CORDBG_E_KERNEL_DEBUGGER_ENABLED</span><span class="sxs-lookup"><span data-stu-id="a3c9b-114">CORDBG_E_KERNEL_DEBUGGER_ENABLED</span></span>  
+- <span data-ttu-id="6310b-114">CORDBG_E_KERNEL_DEBUGGER_ENABLED</span><span class="sxs-lookup"><span data-stu-id="6310b-114">CORDBG_E_KERNEL_DEBUGGER_ENABLED</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="a3c9b-115">备注</span><span class="sxs-lookup"><span data-stu-id="a3c9b-115">Remarks</span></span>  
- <span data-ttu-id="a3c9b-116">此方法是仅用于提供信息。</span><span class="sxs-lookup"><span data-stu-id="a3c9b-116">This method is purely informational.</span></span> <span data-ttu-id="a3c9b-117">接口不会妨碍您启动或附加到进程，而不考虑值返回`CanLaunchOrAttach`。</span><span class="sxs-lookup"><span data-stu-id="a3c9b-117">The interface will not stop you from launching or attaching to a process, regardless of the value returned by `CanLaunchOrAttach`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="6310b-115">备注</span><span class="sxs-lookup"><span data-stu-id="6310b-115">Remarks</span></span>  
+ <span data-ttu-id="6310b-116">此方法是仅用于提供信息。</span><span class="sxs-lookup"><span data-stu-id="6310b-116">This method is purely informational.</span></span> <span data-ttu-id="6310b-117">接口不会妨碍您启动或附加到进程，而不考虑值返回`CanLaunchOrAttach`。</span><span class="sxs-lookup"><span data-stu-id="6310b-117">The interface will not stop you from launching or attaching to a process, regardless of the value returned by `CanLaunchOrAttach`.</span></span>  
   
- <span data-ttu-id="a3c9b-118">如果你打算使用 Win32 调试启用了启动或启用 Win32 调试附加，则传递`true`为`win32DebuggingEnabled`。</span><span class="sxs-lookup"><span data-stu-id="a3c9b-118">If you plan to launch with Win32 debugging enabled or attach with Win32 debugging enabled, pass `true` for `win32DebuggingEnabled`.</span></span> <span data-ttu-id="a3c9b-119">通过返回的 HRESULT`CanLaunchOrAttach`如果使用此选项可能不同。</span><span class="sxs-lookup"><span data-stu-id="a3c9b-119">The HRESULT returned by `CanLaunchOrAttach` might differ if you use this option.</span></span>  
+ <span data-ttu-id="6310b-118">如果你打算使用 Win32 调试启用了启动或启用 Win32 调试附加，则传递`true`为`win32DebuggingEnabled`。</span><span class="sxs-lookup"><span data-stu-id="6310b-118">If you plan to launch with Win32 debugging enabled or attach with Win32 debugging enabled, pass `true` for `win32DebuggingEnabled`.</span></span> <span data-ttu-id="6310b-119">通过返回的 HRESULT`CanLaunchOrAttach`如果使用此选项可能不同。</span><span class="sxs-lookup"><span data-stu-id="6310b-119">The HRESULT returned by `CanLaunchOrAttach` might differ if you use this option.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a3c9b-120">要求</span><span class="sxs-lookup"><span data-stu-id="a3c9b-120">Requirements</span></span>  
- <span data-ttu-id="a3c9b-121">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="a3c9b-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6310b-120">要求</span><span class="sxs-lookup"><span data-stu-id="6310b-120">Requirements</span></span>  
+ <span data-ttu-id="6310b-121">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="6310b-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a3c9b-122">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="a3c9b-122">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="6310b-122">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="6310b-122">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="a3c9b-123">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a3c9b-123">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="6310b-123">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6310b-123">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="a3c9b-124">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a3c9b-124">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="6310b-124">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6310b-124">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a3c9b-125">请参阅</span><span class="sxs-lookup"><span data-stu-id="a3c9b-125">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6310b-125">请参阅</span><span class="sxs-lookup"><span data-stu-id="6310b-125">See also</span></span>
 
-- [<span data-ttu-id="a3c9b-126">ICorDebug 接口</span><span class="sxs-lookup"><span data-stu-id="a3c9b-126">ICorDebug Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+- [<span data-ttu-id="6310b-126">ICorDebug 接口</span><span class="sxs-lookup"><span data-stu-id="6310b-126">ICorDebug Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)

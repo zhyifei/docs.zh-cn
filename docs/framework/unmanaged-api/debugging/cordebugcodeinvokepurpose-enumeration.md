@@ -12,19 +12,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 858dfe9b15422680a261fef9e22d8c89d9d7fe45
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 593644802fa490c80b361bfdad3473abe4e82922
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61609123"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67740277"
 ---
-# <a name="cordebugcodeinvokepurpose-enumeration"></a><span data-ttu-id="675a8-102">“Cor调试代码调用目的”枚举</span><span class="sxs-lookup"><span data-stu-id="675a8-102">CorDebugCodeInvokePurpose Enumeration</span></span>
-<span data-ttu-id="675a8-103">描述为何导出的函数会调用托管代码。</span><span class="sxs-lookup"><span data-stu-id="675a8-103">Describes why an exported function calls managed code.</span></span>  
+# <a name="cordebugcodeinvokepurpose-enumeration"></a><span data-ttu-id="be15e-102">“Cor调试代码调用目的”枚举</span><span class="sxs-lookup"><span data-stu-id="be15e-102">CorDebugCodeInvokePurpose Enumeration</span></span>
+<span data-ttu-id="be15e-103">描述为何导出的函数会调用托管代码。</span><span class="sxs-lookup"><span data-stu-id="be15e-103">Describes why an exported function calls managed code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="675a8-104">语法</span><span class="sxs-lookup"><span data-stu-id="675a8-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="be15e-104">语法</span><span class="sxs-lookup"><span data-stu-id="be15e-104">Syntax</span></span>  
   
-```  
+```cpp  
 typedef enum CorDebugCodeInvokePurpose  
 {  
     CODE_INVOKE_PURPOSE_NONE,  
@@ -34,31 +34,31 @@ typedef enum CorDebugCodeInvokePurpose
 } CorDebugCodeInvokePurpose;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="675a8-105">成员</span><span class="sxs-lookup"><span data-stu-id="675a8-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="be15e-105">成员</span><span class="sxs-lookup"><span data-stu-id="be15e-105">Members</span></span>  
   
-|<span data-ttu-id="675a8-106">成员</span><span class="sxs-lookup"><span data-stu-id="675a8-106">Member</span></span>|<span data-ttu-id="675a8-107">描述</span><span class="sxs-lookup"><span data-stu-id="675a8-107">Description</span></span>|  
+|<span data-ttu-id="be15e-106">成员</span><span class="sxs-lookup"><span data-stu-id="be15e-106">Member</span></span>|<span data-ttu-id="be15e-107">描述</span><span class="sxs-lookup"><span data-stu-id="be15e-107">Description</span></span>|  
 |------------|-----------------|  
-|`CODE_INVOKE_PURPOSE_NONE`|<span data-ttu-id="675a8-108">无或未知。</span><span class="sxs-lookup"><span data-stu-id="675a8-108">None or unknown.</span></span>|  
-|`CODE_INVOKE_PURPOSE_NATIVE_TO_MANAGED_TRANSITION`|<span data-ttu-id="675a8-109">托管代码会运行所有的托管入口点，例如反向平台调用 (p-invoke)。</span><span class="sxs-lookup"><span data-stu-id="675a8-109">The managed code will run any managed entry point, such as a reverse p-invoke.</span></span> <span data-ttu-id="675a8-110">通过运行时间无法得知更多目的。</span><span class="sxs-lookup"><span data-stu-id="675a8-110">Any more detailed purpose is unknown by the runtime.</span></span>|  
-|`CODE_INVOKE_PURPOSE_CLASS_INIT`|<span data-ttu-id="675a8-111">托管代码会运行一个静态构造函数。</span><span class="sxs-lookup"><span data-stu-id="675a8-111">The managed code will run a static constructor.</span></span>|  
-|`CODE_INVOKE_PURPOSE_INTERFACE_DISPATCH`|<span data-ttu-id="675a8-112">托管代码会运行一些受调用的接口方法的实施。</span><span class="sxs-lookup"><span data-stu-id="675a8-112">The managed code will run the implementation for some interface method that was called.</span></span>|  
+|`CODE_INVOKE_PURPOSE_NONE`|<span data-ttu-id="be15e-108">无或未知。</span><span class="sxs-lookup"><span data-stu-id="be15e-108">None or unknown.</span></span>|  
+|`CODE_INVOKE_PURPOSE_NATIVE_TO_MANAGED_TRANSITION`|<span data-ttu-id="be15e-109">托管代码会运行所有的托管入口点，例如反向平台调用 (p-invoke)。</span><span class="sxs-lookup"><span data-stu-id="be15e-109">The managed code will run any managed entry point, such as a reverse p-invoke.</span></span> <span data-ttu-id="be15e-110">通过运行时间无法得知更多目的。</span><span class="sxs-lookup"><span data-stu-id="be15e-110">Any more detailed purpose is unknown by the runtime.</span></span>|  
+|`CODE_INVOKE_PURPOSE_CLASS_INIT`|<span data-ttu-id="be15e-111">托管代码会运行一个静态构造函数。</span><span class="sxs-lookup"><span data-stu-id="be15e-111">The managed code will run a static constructor.</span></span>|  
+|`CODE_INVOKE_PURPOSE_INTERFACE_DISPATCH`|<span data-ttu-id="be15e-112">托管代码会运行一些受调用的接口方法的实施。</span><span class="sxs-lookup"><span data-stu-id="be15e-112">The managed code will run the implementation for some interface method that was called.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="675a8-113">备注</span><span class="sxs-lookup"><span data-stu-id="675a8-113">Remarks</span></span>  
- <span data-ttu-id="675a8-114">此枚举由[ICorDebugProcess6::GetExportStepInfo](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-getexportstepinfo-method.md)方法以提供信息通过单步执行托管代码。</span><span class="sxs-lookup"><span data-stu-id="675a8-114">This enumeration is used by the [ICorDebugProcess6::GetExportStepInfo](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-getexportstepinfo-method.md) method to provide information about stepping through managed code.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="be15e-113">备注</span><span class="sxs-lookup"><span data-stu-id="be15e-113">Remarks</span></span>  
+ <span data-ttu-id="be15e-114">此枚举由[ICorDebugProcess6::GetExportStepInfo](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-getexportstepinfo-method.md)方法以提供信息通过单步执行托管代码。</span><span class="sxs-lookup"><span data-stu-id="be15e-114">This enumeration is used by the [ICorDebugProcess6::GetExportStepInfo](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-getexportstepinfo-method.md) method to provide information about stepping through managed code.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="675a8-115">此枚举仅用于 .NET Native 调试方案。</span><span class="sxs-lookup"><span data-stu-id="675a8-115">This enumeration is intended for use in .NET Native debugging scenarios only.</span></span>  
+>  <span data-ttu-id="be15e-115">此枚举仅用于 .NET Native 调试方案。</span><span class="sxs-lookup"><span data-stu-id="be15e-115">This enumeration is intended for use in .NET Native debugging scenarios only.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="675a8-116">要求</span><span class="sxs-lookup"><span data-stu-id="675a8-116">Requirements</span></span>  
- <span data-ttu-id="675a8-117">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="675a8-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="be15e-116">要求</span><span class="sxs-lookup"><span data-stu-id="be15e-116">Requirements</span></span>  
+ <span data-ttu-id="be15e-117">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="be15e-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="675a8-118">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="675a8-118">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="be15e-118">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="be15e-118">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="675a8-119">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="675a8-119">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="be15e-119">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="be15e-119">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="675a8-120">**.NET Framework 版本：**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="675a8-120">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
+ <span data-ttu-id="be15e-120">**.NET Framework 版本：** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="be15e-120">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="675a8-121">请参阅</span><span class="sxs-lookup"><span data-stu-id="675a8-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="be15e-121">请参阅</span><span class="sxs-lookup"><span data-stu-id="be15e-121">See also</span></span>
 
-- [<span data-ttu-id="675a8-122">调试枚举</span><span class="sxs-lookup"><span data-stu-id="675a8-122">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
-- [<span data-ttu-id="675a8-123">调试</span><span class="sxs-lookup"><span data-stu-id="675a8-123">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [<span data-ttu-id="be15e-122">调试枚举</span><span class="sxs-lookup"><span data-stu-id="be15e-122">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [<span data-ttu-id="be15e-123">调试</span><span class="sxs-lookup"><span data-stu-id="be15e-123">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

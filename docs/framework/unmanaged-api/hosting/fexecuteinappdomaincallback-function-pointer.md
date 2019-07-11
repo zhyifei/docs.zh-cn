@@ -16,41 +16,41 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 26b3de456bc28f51cb20ab72b3934041ec6b06ae
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 8edd2a42ed1b826e1b6ea09e92165bc9fa967a8b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490450"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67760247"
 ---
-# <a name="fexecuteinappdomaincallback-function-pointer"></a><span data-ttu-id="f8b85-102">FExecuteInAppDomainCallback 函数指针</span><span class="sxs-lookup"><span data-stu-id="f8b85-102">FExecuteInAppDomainCallback Function Pointer</span></span>
-<span data-ttu-id="f8b85-103">指向以公共语言运行时 (CLR) 以执行托管的代码调用的函数。</span><span class="sxs-lookup"><span data-stu-id="f8b85-103">Points to a function that is called by the common language runtime (CLR) to execute managed code.</span></span>  
+# <a name="fexecuteinappdomaincallback-function-pointer"></a><span data-ttu-id="a27ff-102">FExecuteInAppDomainCallback 函数指针</span><span class="sxs-lookup"><span data-stu-id="a27ff-102">FExecuteInAppDomainCallback Function Pointer</span></span>
+<span data-ttu-id="a27ff-103">指向以公共语言运行时 (CLR) 以执行托管的代码调用的函数。</span><span class="sxs-lookup"><span data-stu-id="a27ff-103">Points to a function that is called by the common language runtime (CLR) to execute managed code.</span></span>  
   
- <span data-ttu-id="f8b85-104">.NET Framework 4 中已弃用此函数指针。</span><span class="sxs-lookup"><span data-stu-id="f8b85-104">This function pointer has been deprecated in the .NET Framework 4.</span></span>  
+ <span data-ttu-id="a27ff-104">.NET Framework 4 中已弃用此函数指针。</span><span class="sxs-lookup"><span data-stu-id="a27ff-104">This function pointer has been deprecated in the .NET Framework 4.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f8b85-105">语法</span><span class="sxs-lookup"><span data-stu-id="f8b85-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a27ff-105">语法</span><span class="sxs-lookup"><span data-stu-id="a27ff-105">Syntax</span></span>  
   
-```  
+```cpp  
 typedef HRESULT (__stdcall *FExecuteInAppDomainCallback) (  
     [in] void  *cookie  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="f8b85-106">参数</span><span class="sxs-lookup"><span data-stu-id="f8b85-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a27ff-106">参数</span><span class="sxs-lookup"><span data-stu-id="a27ff-106">Parameters</span></span>  
  `cookie`  
- <span data-ttu-id="f8b85-107">[in]指向包含要执行的托管的代码的不透明调用方分配的内存的指针。</span><span class="sxs-lookup"><span data-stu-id="f8b85-107">[in] A pointer to opaque caller-allocated memory that contains the managed code to be executed.</span></span>  
+ <span data-ttu-id="a27ff-107">[in]指向包含要执行的托管的代码的不透明调用方分配的内存的指针。</span><span class="sxs-lookup"><span data-stu-id="a27ff-107">[in] A pointer to opaque caller-allocated memory that contains the managed code to be executed.</span></span>  
   
- <span data-ttu-id="f8b85-108">分配和此内存的生存期由调用方 (CLR) 控制。</span><span class="sxs-lookup"><span data-stu-id="f8b85-108">The allocation and lifetime of this memory are controlled by the caller (that is, the CLR).</span></span> <span data-ttu-id="f8b85-109">这不是 CLR 托管堆内存。</span><span class="sxs-lookup"><span data-stu-id="f8b85-109">This is not CLR managed-heap memory.</span></span>  
+ <span data-ttu-id="a27ff-108">分配和此内存的生存期由调用方 (CLR) 控制。</span><span class="sxs-lookup"><span data-stu-id="a27ff-108">The allocation and lifetime of this memory are controlled by the caller (that is, the CLR).</span></span> <span data-ttu-id="a27ff-109">这不是 CLR 托管堆内存。</span><span class="sxs-lookup"><span data-stu-id="a27ff-109">This is not CLR managed-heap memory.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f8b85-110">要求</span><span class="sxs-lookup"><span data-stu-id="f8b85-110">Requirements</span></span>  
- <span data-ttu-id="f8b85-111">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="f8b85-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a27ff-110">要求</span><span class="sxs-lookup"><span data-stu-id="a27ff-110">Requirements</span></span>  
+ <span data-ttu-id="a27ff-111">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="a27ff-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f8b85-112">**标头：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="f8b85-112">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="a27ff-112">**标头：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="a27ff-112">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="f8b85-113">**库：** MSCorWks.dll</span><span class="sxs-lookup"><span data-stu-id="f8b85-113">**Library:** MSCorWks.dll</span></span>  
+ <span data-ttu-id="a27ff-113">**库：** MSCorWks.dll</span><span class="sxs-lookup"><span data-stu-id="a27ff-113">**Library:** MSCorWks.dll</span></span>  
   
- <span data-ttu-id="f8b85-114">**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f8b85-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="a27ff-114">**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a27ff-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f8b85-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="f8b85-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a27ff-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="a27ff-115">See also</span></span>
 
-- [<span data-ttu-id="f8b85-116">弃用的 CLR 承载函数</span><span class="sxs-lookup"><span data-stu-id="f8b85-116">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [<span data-ttu-id="a27ff-116">弃用的 CLR 承载函数</span><span class="sxs-lookup"><span data-stu-id="a27ff-116">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
