@@ -10,12 +10,12 @@ helpviewer_keywords:
 - initializers [Visual Basic]
 - named types [Visual Basic]
 ms.assetid: e2df3807-a70f-49dd-ac94-f1e07f472b1b
-ms.openlocfilehash: bf608ebb36a2e8f29e8429b77e023eced67273e1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 151c2f6cbb560d83ef0fcfef518bc50cec246ca2
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649776"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67783242"
 ---
 # <a name="object-initializers-named-and-anonymous-types-visual-basic"></a>对象初始值设定项：命名和匿名类型 (Visual Basic)
 对象初始值设定项，可以使用单个表达式指定为复杂对象的属性。 它们可以用于创建的命名类型和匿名类型的实例。  
@@ -32,7 +32,7 @@ ms.locfileid: "64649776"
  要求和结果的两个声明都不相同。 有关`namedCust`、 一个`Customer`具有类`Name`属性必须已经存在，并且声明会创建该类的实例。 有关`anonymousCust`，编译器会定义一个新类，具有一个属性，一个字符串称为`Name`，并创建该类的新实例。  
   
 ## <a name="named-types"></a>命名的类型  
- 对象初始值设定项提供一种简单方法调用一种类型的构造函数，然后在单个语句中设置某些或所有属性的值。 编译器将调用该语句的适当构造函数： 默认构造函数，如果未不提供任何参数或如果发送一个或多个实参的参数化构造函数。 然后，指定的属性的初始值设定项列表中出现的顺序初始化。  
+ 对象初始值设定项提供一种简单方法调用一种类型的构造函数，然后在单个语句中设置某些或所有属性的值。 编译器将调用该语句的适当构造函数： 如果未不提供任何参数，无参数构造函数或参数化构造函数，如果发送一个或多个自变量。 然后，指定的属性的初始值设定项列表中出现的顺序初始化。  
   
  初始值设定项列表中的每个初始化包含的类的成员初始值分配。 定义类时确定的名称和数据类型的成员。 在以下示例中，`Customer`类必须存在，并且必须具有成员命名`Name`和`City`，可以接受字符串值。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "64649776"
   
  [!code-vb[VbVbalrObjectInit#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#4)]  
   
- 每个这些声明是等效于以下示例中，这会创建`Customer`通过使用默认构造函数中，对象，然后指定初始值`Name`并`City`属性使用`With`语句。  
+ 每个这些声明是等效于以下示例中，这会创建`Customer`对象使用无参数构造函数，然后指定初始值`Name`并`City`属性使用`With`语句。  
   
  [!code-vb[VbVbalrObjectInit#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#5)]  
   
