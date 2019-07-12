@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: 668b3b927ac059acf160f5d96e8fbc614f57ddff
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: 21ada083f69b0acf49490b331c5a416361a2ee84
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67503998"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67802318"
 ---
 # <a name="strings-c-programming-guide"></a>字符串（C# 编程指南）
 字符串是值为文本的 <xref:System.String> 类型对象。 文本在内部存储为 <xref:System.Char> 对象的依序只读集合。 在 C# 字符串末尾没有 null 终止字符；因此，一个 C# 字符串可以包含任何数量的嵌入的 null 字符 ('\0')。 字符串的 <xref:System.String.Length%2A> 属性表示其包含的 `Char` 对象数量，而非 Unicode 字符数。 若要访问字符串中的各个 Unicode 码位，请使用 <xref:System.Globalization.StringInfo> 对象。  
@@ -62,10 +62,10 @@ ms.locfileid: "67503998"
 |\n|换行|0x000A|  
 |\r|回车|0x000D|  
 |\t|水平制表符|0x0009|  
-|\U|Unicode 转义序列 (UTF-32)|`\U00nnnnnn`（例如 `\U0001F47D` = "&#x1F47D;"）|  
-|\u|Unicode 转义序列 (UTF-16)|`\unnnn`（例如 `\u0041` = "A"）|  
 |\v|垂直制表符|0x000B|  
-|\x|除长度可变外，Unicode 转义序列与“\u”类似。|`\x0041` 或 `\x41` = "A"|  
+|\u|Unicode 转义序列 (UTF-16)|`\uHHHH`（范围：0000 - FFFF；示例：`\u00E7` =“ç”）|  
+|\U|Unicode 转义序列 (UTF-32)|`\U00HHHHHH`（范围：000000 - 10FFFF；示例：`\U0001F47D` =“&#x1F47D;”)|  
+|\x|除长度可变外，Unicode 转义序列与“\u”类似|`\xH[H][H][H]`（范围：0 - FFFF；示例：`\x00E7`、`\x0E7` 或 `\xE7` =“ç”）|  
   
 > [!WARNING]
 >  使用 `\x` 转义序列且指定的位数小于 4 个十六进制数字时，如果紧跟在转义序列后面的字符是有效的十六进制数字（即 0-9、A-F 和 a-f），则这些字符将被解释为转义序列的一部分。 例如，`\xA1` 会生成“&#161;”，即码位 U+00A1。 但是，如果下一个字符是“A”或“a”，则转义序列将转而被解释为 `\xA1A` 并生成“&#x0A1A;”（即码位 U+0A1A）。 在此类情况下，如果指定全部 4 个十六进制数字（例如 `\x00A1`），则可能导致解释出错。  
