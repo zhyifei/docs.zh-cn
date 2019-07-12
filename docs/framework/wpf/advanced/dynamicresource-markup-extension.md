@@ -8,12 +8,12 @@ helpviewer_keywords:
 - XAML [WPF], DynamicResource markup extension
 - DynamicResource markup extensions [WPF]
 ms.assetid: 7324f243-03af-4c2b-b0db-26ac6cdfcbe4
-ms.openlocfilehash: d07816718ebee2507f1888cffb70e6f8037bb996
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 90768a0c816e790138ba60bd24afee242e41e652
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62010392"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860284"
 ---
 # <a name="dynamicresource-markup-extension"></a>DynamicResource 标记扩展
 提供值的任何[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]通过推迟将对定义资源的引用值的属性特性。 类似于运行时查找该资源的查找行为。  
@@ -52,7 +52,7 @@ ms.locfileid: "62010392"
   
  资源键可以是任何字符串中定义[XamlName 语法](../../xaml-services/xamlname-grammar.md)。 资源键也可以是其他对象类型，如<xref:System.Type>。 一个<xref:System.Type>密钥是如何可以由主题样式控件的基础。 有关详细信息，请参阅[控件创作概述](../controls/control-authoring-overview.md)。  
   
- [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] 用于查找资源值，如<xref:System.Windows.FrameworkElement.FindResource%2A>，遵循所使用的相同的资源查找逻辑`DynamicResource`。  
+ Api，可用于查找资源的值，例如<xref:System.Windows.FrameworkElement.FindResource%2A>，遵循所使用的相同的资源查找逻辑`DynamicResource`。  
   
  引用资源的可选声明性方式是作为[StaticResource 标记扩展](staticresource-markup-extension.md)。  
   

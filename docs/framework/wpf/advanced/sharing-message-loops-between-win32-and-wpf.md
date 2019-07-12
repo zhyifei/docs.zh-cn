@@ -7,12 +7,12 @@ helpviewer_keywords:
 - sharing message loops [WPF]
 - interoperability [WPF], Win32
 ms.assetid: 39ee888c-e5ec-41c8-b11f-7b851a554442
-ms.openlocfilehash: d2fe63ed4bdefc91e4847af799747219bd7b4a76
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 31efc6e514682502e91487565869285dad22cab0
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64611731"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860013"
 ---
 # <a name="sharing-message-loops-between-win32-and-wpf"></a>在 Win32 和 WPF 之间共享消息循环
 本主题介绍如何实现与互操作的消息循环[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]，通过使用现有的消息循环中的进行展示<xref:System.Windows.Threading.Dispatcher>或通过创建单独的消息循环上[!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]端的互操作代码。  
@@ -20,7 +20,7 @@ ms.locfileid: "64611731"
 ## <a name="componentdispatcher-and-the-message-loop"></a>ComponentDispatcher 和消息循环  
  正常情况下，互操作和键盘事件支持的是实现<xref:System.Windows.Interop.IKeyboardInputSink>，或从已实现的类的子类<xref:System.Windows.Interop.IKeyboardInputSink>，如<xref:System.Windows.Interop.HwndSource>或<xref:System.Windows.Interop.HwndHost>。 但是，键盘接收器支持不能解决时发送和接收跨互操作边界的消息可能遇到的所有可能的消息循环需求。 若要帮助形式化应用程序消息循环体系结构，[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]提供了<xref:System.Windows.Interop.ComponentDispatcher>类，该类定义的消息循环，以按照一个简单的协议。  
   
- <xref:System.Windows.Interop.ComponentDispatcher> 是一个静态类，公开多个成员。 每个方法的作用域是隐式绑定到调用线程。 消息循环必须调用其中一些[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]（如在下一节中定义） 的关键时刻。  
+ <xref:System.Windows.Interop.ComponentDispatcher> 是一个静态类，公开多个成员。 每个方法的作用域是隐式绑定到调用线程。 消息循环必须调用这些 Api 的一些在关键时间 （如在下一节中定义）。  
   
  <xref:System.Windows.Interop.ComponentDispatcher> 提供的其他组件 （例如键盘接收器中） 可以侦听的事件。 <xref:System.Windows.Threading.Dispatcher>类将调用所有相应<xref:System.Windows.Interop.ComponentDispatcher>相应序列中的方法。 如果要实现您自己的消息循环，你的代码负责调用<xref:System.Windows.Interop.ComponentDispatcher>中类似的方式的方法。  
   

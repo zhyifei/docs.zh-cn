@@ -8,15 +8,15 @@ helpviewer_keywords:
 - ActiveX controls [WPF interoperability]
 - hosting ActiveX controls [WPF]
 ms.assetid: 1931d292-0dd1-434f-963c-dcda7638d75a
-ms.openlocfilehash: f19186380b0cbc71cdd64013ca5e49361ba26cda
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0181093de1c40889110ab7eae75a3847a17845a9
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778377"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859938"
 ---
 # <a name="walkthrough-hosting-an-activex-control-in-wpf"></a>演练：在 WPF 中承载 ActiveX 控件
-若要启用改进与浏览器交互，可以使用[!INCLUDE[TLA#tla_actx](../../../../includes/tlasharptla-actx-md.md)]中的控件在[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-基于应用程序。 本演练演示如何可以承载[!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)]上的控件作为[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]页。
+若要启用改进与浏览器交互，可以使用中的 Microsoft ActiveX 控件在[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-基于应用程序。 本演练演示如何可以承载[!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)]上的控件作为[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]页。
 
  本演练涉及以下任务：
 
@@ -26,7 +26,7 @@ ms.locfileid: "67778377"
 
 - 承载 WPF 页上的 ActiveX 控件。
 
- 完成本演练后，您将了解如何使用[!INCLUDE[TLA#tla_actx](../../../../includes/tlasharptla-actx-md.md)]中的控件在[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-基于应用程序。
+ 完成本演练后，您将了解如何使用 Microsoft ActiveX 控件中的你[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-基于应用程序。
 
 ## <a name="prerequisites"></a>系统必备
  你需要以下组件来完成本演练：
@@ -60,7 +60,7 @@ ms.locfileid: "67778377"
 9. 如果系统提示重命名所有引用，请单击**是**。
 
 ## <a name="creating-the-activex-control"></a>创建 ActiveX 控件
- [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] 自动生成<xref:System.Windows.Forms.AxHost>包装类[!INCLUDE[TLA#tla_actx](../../../../includes/tlasharptla-actx-md.md)]控制时该控件添加到设计图面。 以下过程创建名为 AxInterop.WMPLib.dll 托管程序集。
+ [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] 自动生成<xref:System.Windows.Forms.AxHost>Microsoft ActiveX 控件时，该控件添加到设计图面上的包装类。 以下过程创建名为 AxInterop.WMPLib.dll 托管程序集。
 
 ### <a name="to-create-the-activex-control"></a>若要创建 ActiveX 控件
 
@@ -76,7 +76,7 @@ ms.locfileid: "67778377"
 
 ### <a name="to-host-the-activex-control"></a>若要承载 ActiveX 控件
 
-1. 在 HostingAxInWpf 项目中，添加到生成的引用[!INCLUDE[TLA2#tla_actx](../../../../includes/tla2sharptla-actx-md.md)]互操作性程序集。
+1. 在 HostingAxInWpf 项目中，添加对生成的 ActiveX 互操作性程序集的引用。
 
      此程序集名为 AxInterop.WMPLib.dll 和时导入 Windows Media Player 控件添加到 WmpAxLib 项目的调试文件夹。
 

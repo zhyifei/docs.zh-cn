@@ -5,15 +5,15 @@ helpviewer_keywords:
 - metadata [WPF], framework properties
 - framework property metadata [WPF]
 ms.assetid: 9962f380-b885-4b61-a62e-457397083fea
-ms.openlocfilehash: f0385280cf01502a5b2786541c3d959fca24d239
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: 81c1941ffd95afb01dcb6ebda2634832a91cd876
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64912444"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859845"
 ---
 # <a name="framework-property-metadata"></a>框架属性元数据
-对于 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 体系结构中被视为 WPF 框架级的对象元素的属性，将报告框架属性元数据选项。 通常，WPF 框架级指示要求 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 演示 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] 和可执行文件处理呈现、数据绑定和属性系统优化等功能。 这些系统对框架属性元数据进行查询，以便为特定的元素属性确定特定于功能的特征。  
+对于 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 体系结构中被视为 WPF 框架级的对象元素的属性，将报告框架属性元数据选项。 一般情况下的 WPF 框架级别指定需要该功能，例如呈现、 数据绑定，并由属性系统优化[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Api 的演示文稿和可执行文件。 这些系统对框架属性元数据进行查询，以便为特定的元素属性确定特定于功能的特征。  
 
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>先决条件  
@@ -32,7 +32,7 @@ ms.locfileid: "64912444"
     > [!NOTE]
     >  属性值上下文中的术语“继承”指特定于依赖属性的情况；它意味着由于存在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 属性系统的 WPF 框架级功能，子元素可以从父元素继承实际的依赖属性值。 它与通过派生类型的托管代码类型和成员继承没有直接关系。 有关详细信息，请参阅[属性值继承](property-value-inheritance.md)。  
   
-- 报告数据绑定特性 (<xref:System.Windows.FrameworkPropertyMetadata.IsNotDataBindable%2A>， <xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault%2A>)。 默认情况下，框架中的依赖属性支持具有单向绑定行为的数据绑定。 如果数据绑定没有适用的方案，则可禁用数据绑定（因为这些属性应该是灵活且可扩展的，所以在默认的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] 中没有太多此类属性的示例）。 您可能会将绑定设置为具有双向绑定在一起在其组件部分之间的控件的行为的属性默认值 (<xref:System.Windows.Controls.MenuItem.IsSubmenuOpen%2A>是一个示例) 或双向绑定时的常见、 最期望的方案，为用户的 (<xref:System.Windows.Controls.TextBox.Text%2A>是一个示例)。 更改与数据绑定相关的元数据只会影响默认值；始终可以根据各个绑定更改此默认值。 若要详细了解常规的绑定模式和绑定，请参阅[数据绑定概述](../data/data-binding-overview.md)。  
+- 报告数据绑定特性 (<xref:System.Windows.FrameworkPropertyMetadata.IsNotDataBindable%2A>， <xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault%2A>)。 默认情况下，框架中的依赖属性支持具有单向绑定行为的数据绑定。 如果没有适用的方案说明，否则可能会禁用数据绑定 (因为它们旨在很灵活且可扩展，不存在此类属性默认值的许多示例[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Api)。 您可能会将绑定设置为具有双向绑定在一起在其组件部分之间的控件的行为的属性默认值 (<xref:System.Windows.Controls.MenuItem.IsSubmenuOpen%2A>是一个示例) 或双向绑定时的常见、 最期望的方案，为用户的 (<xref:System.Windows.Controls.TextBox.Text%2A>是一个示例)。 更改与数据绑定相关的元数据只会影响默认值；始终可以根据各个绑定更改此默认值。 若要详细了解常规的绑定模式和绑定，请参阅[数据绑定概述](../data/data-binding-overview.md)。  
   
 - 报告属性是否应记录的应用程序或服务支持日记功能 (<xref:System.Windows.FrameworkPropertyMetadata.Journal%2A>)。 对于一般的元素，默认情况下不会启用日记记录功能，但可针对特定用户输入控件有选择性地启用。 此属性专门由日记记录的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 实现等日记记录服务读取，并且通常针对用户控件（例如用户在列表中选择的应在各导航步骤中保留的控件）设置此属性。 有关日记的信息，请参阅[导航概述](../app-development/navigation-overview.md)。  
   

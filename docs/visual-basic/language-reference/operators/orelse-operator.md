@@ -11,19 +11,19 @@ helpviewer_keywords:
 - short-circuit evaluation
 - OrElse operator [Visual Basic]
 ms.assetid: 253803d8-05b0-47d7-b213-abd222847779
-ms.openlocfilehash: 28d1481b71979936bb16a2ecfb1140d85a674ef7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 02be78c8f2b7529f1fb0e46e9fe610a3c66b0652
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62054986"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860146"
 ---
 # <a name="orelse-operator-visual-basic"></a>OrElse 运算符 (Visual Basic)
 执行短路逻辑或运算对两个表达式。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```vb
 result = expression1 OrElse expression2  
 ```  
   
@@ -49,7 +49,8 @@ result = expression1 OrElse expression2
 |`False`|`False`|`False`|  
   
 ## <a name="data-types"></a>数据类型  
- `OrElse`仅对定义运算符[布尔数据类型](../../../visual-basic/language-reference/data-types/boolean-data-type.md)。 Visual Basic 将根据需要向每个操作数`Boolean`，并执行全部操作`Boolean`。 如果将结果分配到数值类型，Visual Basic 会将其转换从`Boolean`为该类型。 这可能产生意外的行为。 例如，`5 OrElse 12`会导致`–1`转换为`Integer`。  
+ `OrElse`仅对定义运算符[布尔数据类型](../../../visual-basic/language-reference/data-types/boolean-data-type.md)。 Visual Basic 将根据需要向每个操作数转换`Boolean`之前对表达式求值。 如果将结果分配到数值类型，Visual Basic 会将其转换从`Boolean`为该类型，以便`False`变得`0`和`True`变得`-1`。
+有关详细信息，请参阅[布尔类型转换](../data-types/boolean-data-type.md#type-conversions)
   
 ## <a name="overloading"></a>重载  
  [或运算符](../../../visual-basic/language-reference/operators/or-operator.md)并[IsTrue 运算符](../../../visual-basic/language-reference/operators/istrue-operator.md)可以是*重载*，这意味着，某个类或结构可以重新定义其行为时，操作数的相应类的类型或结构。 重载`Or`并`IsTrue`运算符影响的行为`OrElse`运算符。 如果你的代码使用`OrElse`上类或结构的重载`Or`和`IsTrue`，确保了解其重新定义的行为。 有关详细信息，请参阅 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  

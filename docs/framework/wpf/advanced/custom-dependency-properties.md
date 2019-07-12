@@ -14,12 +14,12 @@ helpviewer_keywords:
 - wrappers [WPF], implementing
 - dependency properties [WPF], custom
 ms.assetid: e6bfcfac-b10d-4f58-9f77-a864c2a2938f
-ms.openlocfilehash: 27554d7e0a7e980d240e0609fe0561c2138f0aa1
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 659497543d40c8eda18b55b4d98feac976c5abf5
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67664064"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860246"
 ---
 # <a name="custom-dependency-properties"></a>自定义依赖项属性
 
@@ -87,7 +87,7 @@ ms.locfileid: "67664064"
 
 ### <a name="registering-the-property-with-the-property-system"></a>在属性系统中注册属性
 
-为使属性成为依赖属性，必须在属性系统维护的表中注册该属性，并为属性指定一个唯一标识符。此唯一标识符会用作后续属性系统操作的限定符。 这些操作可能是内部操作，也可能使用你自己的代码调用属性系统 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]。 若要注册该属性，请调用<xref:System.Windows.DependencyProperty.Register%2A>类 （在类中，但任何成员定义外） 的正文中的方法。 此外提供标识符字段<xref:System.Windows.DependencyProperty.Register%2A>方法调用，作为返回值。 原因，<xref:System.Windows.DependencyProperty.Register%2A>完成调用之外其他成员定义是因为使用此返回值分配并创建`public` `static` `readonly`类型的字段<xref:System.Windows.DependencyProperty>作为您的类的一部分。 此字段会作为依赖属性的标识符。
+为使属性成为依赖属性，必须在属性系统维护的表中注册该属性，并为属性指定一个唯一标识符。此唯一标识符会用作后续属性系统操作的限定符。 这些操作可能是内部操作，或你自己的代码调用属性系统 Api。 若要注册该属性，请调用<xref:System.Windows.DependencyProperty.Register%2A>类 （在类中，但任何成员定义外） 的正文中的方法。 此外提供标识符字段<xref:System.Windows.DependencyProperty.Register%2A>方法调用，作为返回值。 原因，<xref:System.Windows.DependencyProperty.Register%2A>完成调用之外其他成员定义是因为使用此返回值分配并创建`public` `static` `readonly`类型的字段<xref:System.Windows.DependencyProperty>作为您的类的一部分。 此字段会作为依赖属性的标识符。
 
 [!code-csharp[WPFAquariumSln#RegisterAG](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#registerag)]
 [!code-vb[WPFAquariumSln#RegisterAG](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#registerag)]
@@ -174,7 +174,7 @@ ms.locfileid: "67664064"
 
 ## <a name="dependency-property-security-considerations"></a>依赖属性安全注意事项
 
-依赖属性应声明为公共属性。 依赖属性标识符字段应声明为公共静态字段。 即使尝试声明其他访问级别（例如受保护），也始终可以通过标识符和属性系统 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] 来访问依赖属性。 由于元数据报告或值确定受保护的标识符字段，甚至是可以访问[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]属于属性系统，如<xref:System.Windows.LocalValueEnumerator>。 有关详细信息，请参阅[依赖属性的安全性](dependency-property-security.md)。
+依赖属性应声明为公共属性。 依赖属性标识符字段应声明为公共静态字段。 即使尝试声明其他访问级别 （例如受保护），始终可以通过标识符和属性系统 Api 访问依赖项属性。 即使受保护的标识符字段是可以访问的因为元数据报告或值确定包含 Api 的属性系统，如<xref:System.Windows.LocalValueEnumerator>。 有关详细信息，请参阅[依赖属性的安全性](dependency-property-security.md)。
 
 <a name="DPCtor"></a>
 

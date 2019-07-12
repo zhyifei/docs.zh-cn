@@ -19,12 +19,12 @@ helpviewer_keywords:
 - Extensible Application Markup Language (see XAML)
 - attribute syntax [XAML]
 ms.assetid: a80db4cd-dd0f-479f-a45f-3740017c22e4
-ms.openlocfilehash: e0d277eb039c1fb1668f292d83ab9e7dbe4be70e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a067be444624ecffd8ab150f20740814dd9ee341
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67762321"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859970"
 ---
 # <a name="xaml-overview-wpf"></a>XAML 概述 (WPF)
 本主题介绍 XAML 语言的功能，并演示如何使用 XAML 编写 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 应用程序。 本主题专门介绍 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 实现的 XAML。 XAML 本身是一个比 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 大的语言概念。  
@@ -301,7 +301,7 @@ ms.locfileid: "67762321"
   
 <a name="base_classes_and_xaml"></a>   
 ## <a name="base-types-and-xaml"></a>基类型和 XAML  
- 基础 WPF XAML 及其 XAML 命名空间是类型的一个集合，这些类型对应于 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 对象以及 XAML 的标记元素。 但是，并不是所有的类都能映射到元素。 抽象类，如<xref:System.Windows.Controls.Primitives.ButtonBase>，并且某些非抽象基类，这些类用于中的继承[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]对象模型。 基类（包括抽象类）对于 XAML 开发仍然很重要，因为每个具体的 XAML 元素都从其层次结构中的某个基类继承成员。 通常，这些成员包括可以设置为元素特性的属性或者可以处理的事件。 <xref:System.Windows.FrameworkElement> 是的具体基础[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]的类[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]WPF 框架级别。 在设计时[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]，将使用各种形状、 面板、 装饰器，或从派生控件类，其中所有<xref:System.Windows.FrameworkElement>。 相关的基类<xref:System.Windows.FrameworkContentElement>，支持适合流布局表示形式的工作的面向文档的元素使用[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]特意镜像[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]中<xref:System.Windows.FrameworkElement>。 元素级的特性和 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 对象模型的组合提供一组通用的属性，这些属性可以在大多数具体的 XAML 元素上设置，而不管具体的 XAML 元素及其基础类型。  
+ 基础 WPF XAML 及其 XAML 命名空间是类型的一个集合，这些类型对应于 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 对象以及 XAML 的标记元素。 但是，并不是所有的类都能映射到元素。 抽象类，如<xref:System.Windows.Controls.Primitives.ButtonBase>，并且某些非抽象基类，这些类用于中的继承[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]对象模型。 基类（包括抽象类）对于 XAML 开发仍然很重要，因为每个具体的 XAML 元素都从其层次结构中的某个基类继承成员。 通常，这些成员包括可以设置为元素特性的属性或者可以处理的事件。 <xref:System.Windows.FrameworkElement> 是的具体基础[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]的类[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]WPF 框架级别。 在设计时[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]，将使用各种形状、 面板、 装饰器，或从派生控件类，其中所有<xref:System.Windows.FrameworkElement>。 相关的基类<xref:System.Windows.FrameworkContentElement>，支持适合流布局表示形式，使用特意镜像中的 Api 的 Api 的工作的面向文档的元素<xref:System.Windows.FrameworkElement>。 元素级的特性和 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 对象模型的组合提供一组通用的属性，这些属性可以在大多数具体的 XAML 元素上设置，而不管具体的 XAML 元素及其基础类型。  
   
 <a name="xaml_security"></a>   
 ## <a name="xaml-security"></a>XAML 安全性  

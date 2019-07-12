@@ -7,12 +7,12 @@ helpviewer_keywords:
 - metadata [WPF], for dependency properties
 - overriding metadata [WPF]
 ms.assetid: d01ed009-b722-41bf-b82f-fe1a8cdc50dd
-ms.openlocfilehash: a4b2edce76bc5ab97e644ec8dbdf045931e87786
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 66628e8cc1e56bff2227721d6f6b3e511be7453e
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663434"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860063"
 ---
 # <a name="dependency-property-metadata"></a>依赖项属性元数据
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 属性系统包括一个元数据报告系统，该系统不局限于可以通过反射或常规[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 特征报告的关于某个属性的内容。 依赖属性的元数据还可以由定义依赖属性的类来唯一地分配，可以在依赖属性添加到另一个类时进行更改，可以由所有从定义基类继承依赖属性的派生类来明确地重写。  
@@ -44,7 +44,7 @@ ms.locfileid: "64663434"
 ## <a name="when-to-override-metadata-when-to-derive-a-class"></a>何时重写元数据以及何时派生类  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 属性系统已经建立了如下功能：在不必完全重新实现依赖属性的情况下，更改依赖属性的某些特征。 这是通过为特定类型上所存在的依赖属性构造不同的属性元数据实例来完成的。 请注意，现有的大多数依赖属性都不是虚拟属性，因此，严格地说，只能通过隐藏现有成员来针对继承类“重新实现”依赖属性。  
   
- 如果尝试对某个类型的依赖属性启用的方案不能通过修改现有依赖属性的特征来完成，则可能有必要创建一个派生类，然后为该派生类声明一个自定义依赖属性。 自定义依赖属性与 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] 定义的依赖属性具有相同的行为。 有关自定义依赖属性的更多详细信息，请参阅[自定义依赖属性](custom-dependency-properties.md)。  
+ 如果尝试对某个类型的依赖属性启用的方案不能通过修改现有依赖属性的特征来完成，则可能有必要创建一个派生类，然后为该派生类声明一个自定义依赖属性。 自定义依赖属性的行为相同定义的依赖属性[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Api。 有关自定义依赖属性的更多详细信息，请参阅[自定义依赖属性](custom-dependency-properties.md)。  
   
  不能重写的依赖属性的一个显著特征就是它的值类型。 如果要继承的依赖属性的行为与所需的行为大体相同，但是要求它具有另一种类型，则必须实现一个自定义依赖属性，可能还需要通过类型转换或其他实现机制在自定义类上链接这些属性。 此外，不能替换现有<xref:System.Windows.ValidateValueCallback>，因为此回叫存在于注册字段本身而不是在其元数据。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "64663434"
 ### <a name="overriding-metadata"></a>重写元数据  
  重写元数据的主要目的在于，使你有机会更改各种派生自元数据的行为，这些行为应用于类型上存在的依赖属性。 [元数据](#dp_metadata_contents)一节中更详细地介绍了重写元数据的原因。 有关详细信息（包括一些代码示例），请参阅[重写依赖属性的元数据](how-to-override-metadata-for-a-dependency-property.md)。  
   
- 属性元数据可以在注册调用期间提供的依赖项属性 (<xref:System.Windows.DependencyProperty.Register%2A>)。 但是，在许多情况下，当类继承该依赖属性时，你可能希望为该类提供特定于类型的元数据。 您可以执行此操作通过调用<xref:System.Windows.DependencyProperty.OverrideMetadata%2A>方法。  例如，从[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]，则<xref:System.Windows.FrameworkElement>类是第一次注册的类型<xref:System.Windows.UIElement.Focusable%2A>依赖项属性。 但<xref:System.Windows.Controls.Control>类重写依赖属性提供自己的初始默认值，将它从元数据`false`到`true`，否则重新使用原始和<xref:System.Windows.UIElement.Focusable%2A>实现。  
+ 属性元数据可以在注册调用期间提供的依赖项属性 (<xref:System.Windows.DependencyProperty.Register%2A>)。 但是，在许多情况下，当类继承该依赖属性时，你可能希望为该类提供特定于类型的元数据。 您可以执行此操作通过调用<xref:System.Windows.DependencyProperty.OverrideMetadata%2A>方法。  例如，从[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Api，<xref:System.Windows.FrameworkElement>类是第一次注册的类型<xref:System.Windows.UIElement.Focusable%2A>依赖项属性。 但<xref:System.Windows.Controls.Control>类重写依赖属性提供自己的初始默认值，将它从元数据`false`到`true`，否则重新使用原始和<xref:System.Windows.UIElement.Focusable%2A>实现。  
   
  当你重写元数据时，系统会合并或替换不同的元数据特征。  
   

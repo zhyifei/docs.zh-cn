@@ -10,19 +10,19 @@ helpviewer_keywords:
 - printers [WPF], availability
 - print jobs [WPF], timing
 ms.assetid: 7e9c8ec1-abf6-4b3d-b1c6-33b35d3c4063
-ms.openlocfilehash: c68e6a69553f2cb14eb442c31e5138009f3c8411
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ee38caedc5d5a29d2221d6e5a6bf6cf74617bf8c
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64619445"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859717"
 ---
 # <a name="how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day"></a>如何：确定此时是否可以打印一项打印作业
 打印队列并不总是可用的一天 24 小时。 它们具有开始和结束时间属性可以设置以使其在一天中的某些时间不可用。 例如，此功能可用于保留专供特定部门的下午 5 点后的打印机。 该部门必须使用其他队列服务比其他部门的打印机。 将设置为其他部门队列以在下午 5 点后将不可用，而队列支持的部门可能被设置为始终可用。  
   
  此外，可以设置打印作业本身是可打印仅在指定的时间范围内。  
   
- <xref:System.Printing.PrintQueue>并<xref:System.Printing.PrintSystemJobInfo>类中公开[!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]的 Microsoft.NET Framework 提供一种远程检查是否给定的打印作业可以打印到给定队列的当前时间。  
+ <xref:System.Printing.PrintQueue>和<xref:System.Printing.PrintSystemJobInfo>公开 Api 的 Microsoft.NET Framework 中的类提供一种远程检查是否给定的打印作业可以打印到给定队列的当前时间。  
   
 ## <a name="example"></a>示例  
  下面的示例是一个示例，可以诊断问题的打印作业。  
@@ -54,7 +54,7 @@ ms.locfileid: "64619445"
  两个重载**ReportAvailabilityAtThisTime**方法是相同类型传递给它们，因此，只有除外<xref:System.Printing.PrintQueue>版本如下所示。  
   
 > [!NOTE]
->  这一事实的方法是相同类型除外引发的问题，该示例不会创建一个泛型方法的原因**ReportAvailabilityAtThisTime\<T >**。 原因是此类方法需要被限制为具有的类**StartTimeOfDay**并**UntilTimeOfDay**属性，该方法调用，但泛型方法均仅受限于单一类和唯一的类共有<xref:System.Printing.PrintQueue>并<xref:System.Printing.PrintSystemJobInfo>在继承树是<xref:System.Printing.PrintSystemObject>其中没有任何此类属性。  
+>  这一事实的方法是相同类型除外引发的问题，该示例不会创建一个泛型方法的原因**ReportAvailabilityAtThisTime\<T >** 。 原因是此类方法需要被限制为具有的类**StartTimeOfDay**并**UntilTimeOfDay**属性，该方法调用，但泛型方法均仅受限于单一类和唯一的类共有<xref:System.Printing.PrintQueue>并<xref:System.Printing.PrintSystemJobInfo>在继承树是<xref:System.Printing.PrintSystemObject>其中没有任何此类属性。  
   
  **ReportAvailabilityAtThisTime**方法 （如下面的代码示例所示） 首先初始化<xref:System.Boolean>sentinel 变量`true`。 将重置为`false`，如果队列不可用。  
   

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - dependency properties [WPF], read-only
 - read-only dependency properties [WPF]
 ms.assetid: f23d6ec9-3780-4c09-a2ff-b2f0a2deddf1
-ms.openlocfilehash: 327897d50bd23a739d015a4151459d9d4a6fc1a0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e74f7c2790a73211bcc8e6f13dcf2dfdc02e678b
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64611799"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859982"
 ---
 # <a name="read-only-dependency-properties"></a>只读依赖项属性
 本主题介绍只读依赖属性，包括现有只读依赖属性、创建自定义只读依赖属性的方案和技术。  
@@ -37,7 +37,7 @@ ms.locfileid: "64611799"
   
 - 由只读注册返回的对象是<xref:System.Windows.DependencyPropertyKey>而非<xref:System.Windows.DependencyProperty>。 仍应将该字段存储为成员，但通常不将其设置为类型的公共成员。  
   
- 无论你具有什么专用字段或值，可使用你确定的任何逻辑来完全编写对只读依赖属性的支持。 但是，在最初或运行时逻辑过程中设置属性的最简单方法是使用属性系统的 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]，而不是避开属性系统并直接设置专有支持字段。 具体而言，没有的签名<xref:System.Windows.DependencyObject.SetValue%2A>接受类型参数的<xref:System.Windows.DependencyPropertyKey>。 如何以及在何处设置此值以编程方式在应用程序逻辑中你如何可能想要设置的访问将影响<xref:System.Windows.DependencyPropertyKey>首次注册依赖属性时创建。 如果完全在专有类中处理此逻辑，或者如果要求从程序集的其他部分对其进行设置，可以在内部进行设置。 一种方法是调用<xref:System.Windows.DependencyObject.SetValue%2A>通知存储的属性值需要为其更改的类实例的相关事件的类事件处理程序中。 另一种方法是将绑定依赖关系属性在一起使用配对<xref:System.Windows.PropertyChangedCallback>和<xref:System.Windows.CoerceValueCallback>回调在注册过程中的这些属性的元数据的一部分。  
+ 无论你具有什么专用字段或值，可使用你确定的任何逻辑来完全编写对只读依赖属性的支持。 但是，最初或运行时逻辑的一部分设置该属性的最简单方法是使用属性系统的 Api，而不是避开属性系统并直接设置专有支持字段。 具体而言，没有的签名<xref:System.Windows.DependencyObject.SetValue%2A>接受类型参数的<xref:System.Windows.DependencyPropertyKey>。 如何以及在何处设置此值以编程方式在应用程序逻辑中你如何可能想要设置的访问将影响<xref:System.Windows.DependencyPropertyKey>首次注册依赖属性时创建。 如果完全在专有类中处理此逻辑，或者如果要求从程序集的其他部分对其进行设置，可以在内部进行设置。 一种方法是调用<xref:System.Windows.DependencyObject.SetValue%2A>通知存储的属性值需要为其更改的类实例的相关事件的类事件处理程序中。 另一种方法是将绑定依赖关系属性在一起使用配对<xref:System.Windows.PropertyChangedCallback>和<xref:System.Windows.CoerceValueCallback>回调在注册过程中的这些属性的元数据的一部分。  
   
  因为<xref:System.Windows.DependencyPropertyKey>是专用容器，并不会传播由属性系统在代码之外，更好的安全设置比读写依赖属性具有只读依赖属性。 对于读写依赖属性，标识字段是显式或隐式公用的，因此该属性可广泛设置。 有关更多详细信息，请参阅[依赖属性的安全性](dependency-property-security.md)。  
   

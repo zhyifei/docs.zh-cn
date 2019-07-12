@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - base elements [WPF]
 ms.assetid: 2c997092-72c6-4767-bc84-74267f4eee72
-ms.openlocfilehash: 6fc34c02ab1add0710b65da7d63f444e1628cbc6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3dfcaaf040a766e07eb46a0b943b7e023564fa1c
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64657372"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859959"
 ---
 # <a name="base-elements-overview"></a>基元素概述
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中较高比重的类都派生自四类，它们通常在 [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)] 文档中称为基元素。 这些类是<xref:System.Windows.UIElement>， <xref:System.Windows.FrameworkElement>， <xref:System.Windows.ContentElement>，和<xref:System.Windows.FrameworkContentElement>。 <xref:System.Windows.DependencyObject>类也相关，因为它是这两者的一个公共基类<xref:System.Windows.UIElement>和 <xref:System.Windows.ContentElement>  
@@ -19,7 +19,7 @@ ms.locfileid: "64657372"
  这两<xref:System.Windows.UIElement>并<xref:System.Windows.ContentElement>派生自<xref:System.Windows.DependencyObject>，通过某种程度上不同的途径。 如何处理此级别拆分<xref:System.Windows.UIElement>或<xref:System.Windows.ContentElement>中的用户界面和什么作用其处理的应用程序中使用。 <xref:System.Windows.UIElement> 还有<xref:System.Windows.Media.Visual>在其类层次结构，它是一个类公开低级别图形支持基础[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]。 <xref:System.Windows.Media.Visual> 通过定义独立矩形屏幕区域提供呈现框架。 在实践中，<xref:System.Windows.UIElement>是将支持较大的对象模型的元素为目标来呈现和分成若干个区域，可以描述为矩形屏幕区域和内容模型是有意更加开放，以允许不同的布局元素的组合。 <xref:System.Windows.ContentElement> 不是派生自<xref:System.Windows.Media.Visual>; 其模型是<xref:System.Windows.ContentElement>将由其他用途，如读取器或查看器，然后解释元素，并生成完整<xref:System.Windows.Media.Visual>为[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]来使用。 某些<xref:System.Windows.UIElement>类旨在成为内容宿主： 它们提供了一个或多个承载和呈现<xref:System.Windows.ContentElement>类 (<xref:System.Windows.Controls.DocumentViewer>举例说明这样的类)。 <xref:System.Windows.ContentElement> 用于内承载带有某种程度上较小的对象模型的元素的基类和文档内容的或更多地址的文本的信息，如<xref:System.Windows.UIElement>。  
   
 ### <a name="framework-level-and-core-level"></a>框架级别和核心级别  
- <xref:System.Windows.UIElement> 用作类的基类<xref:System.Windows.FrameworkElement>，并<xref:System.Windows.ContentElement>用作类的基类<xref:System.Windows.FrameworkContentElement>。 此下一级别类的目的是支持独立于 WPF 框架级别的 WPF 核心级别，同时这种划分也存在于 PresentationCore 和 PresentationFramework 程序集间如何划分 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]。 WPF 框架级别表示一种更完整的解决方案，以满足基本应用程序需求，其中包括实现演示文稿的布局管理器。 WPF 核心级别可提供一种方法，使你能够充分利用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]，而无需使用其他程序集的开销。 这些级别间的区别对大多数典型的应用程序开发方案几乎没影响，但一般情况下，你应整体考虑 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]，而不是关注 WPF 框架级别和 WPF 核心级别间的差异。 如果应用程序设计选择替换大量 WPF 框架级别功能，建议了解级别差异，例如，整体解决方案是否已有其自己的 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 组合和布局的实现。  
+ <xref:System.Windows.UIElement> 用作类的基类<xref:System.Windows.FrameworkElement>，并<xref:System.Windows.ContentElement>用作类的基类<xref:System.Windows.FrameworkContentElement>。 此下一级别的类的原因是支持是分开的 WPF 框架级别，同时这种划分也存在于 PresentationCore 和 PresentationFramework 程序集之间如何划分 Api 的 WPF 核心级别。 WPF 框架级别表示一种更完整的解决方案，以满足基本应用程序需求，其中包括实现演示文稿的布局管理器。 WPF 核心级别可提供一种方法，使你能够充分利用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]，而无需使用其他程序集的开销。 它们之间的区别很少级别最典型的应用程序开发方案的相关问题和一般情况下您应该将[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]作为一个整体的 Api 并不关注 WPF 框架级别和 WPF 核心之间的差异级别。 如果应用程序设计选择替换大量 WPF 框架级别功能，建议了解级别差异，例如，整体解决方案是否已有其自己的 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 组合和布局的实现。  
   
 <a name="subclassing_elements"></a>   
 ## <a name="choosing-which-element-to-derive-from"></a>选择要从其中派生的元素  

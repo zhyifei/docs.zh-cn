@@ -10,15 +10,15 @@ helpviewer_keywords:
 - print jobs [WPF], troubleshooting
 - print jobs [WPF], diagnosing problems
 ms.assetid: b081a170-84c6-48f9-a487-5766a8d58a82
-ms.openlocfilehash: c9da2e1daff23ef9ba39d8b5d53cb3be67f35a27
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: d64e77b7fc6862eead3cb7e791b3a8f68ac52713
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878212"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859736"
 ---
 # <a name="how-to-diagnose-problematic-print-job"></a>如何：诊断有问题的打印作业
-网络管理员经常接收到有关打印作业无法打印或打印速度慢的用户投诉。 丰富的打印作业属性中公开[!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]的 Microsoft.NET Framework 提供了一种方法用于执行快速的打印作业远程诊断。  
+网络管理员经常接收到有关打印作业无法打印或打印速度慢的用户投诉。 丰富的 Api 的 Microsoft.NET Framework 中公开的打印作业属性提供一种方法用于执行快速的打印作业远程诊断。  
   
 ## <a name="example"></a>示例  
  以下是创建此类实用程序的主要步骤。  

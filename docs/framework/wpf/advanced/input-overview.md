@@ -24,12 +24,12 @@ helpviewer_keywords:
 - focus [WPF]
 - mouse position [WPF]
 ms.assetid: ee5258b7-6567-415a-9b1c-c0cbe46e79ef
-ms.openlocfilehash: 47d892db8418b44fffeec870e56b49d5f986b563
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 5835cfb633451025ed32c2a26228e33a1b24473e
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67610480"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67857054"
 ---
 # <a name="input-overview"></a>输入概述
 <a name="introduction"></a> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]子系统提供了一个强大[!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]用于获取输入不同的设备，包括鼠标、 键盘、 触控和触笔。 本主题介绍了 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供的服务，并说明了输入系统的体系结构。
@@ -58,7 +58,7 @@ ms.locfileid: "67610480"
  <xref:System.Windows.Input.Mouse>和<xref:System.Windows.Input.Keyboard>中更详细地介绍本概述介绍了类。
 
 ### <a name="stylus-input"></a>触笔输入
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 支持集成的<xref:System.Windows.Input.Stylus>。  <xref:System.Windows.Input.Stylus>是变得流行的笔输入[!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)]。  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序可以将触笔视为鼠标使用鼠标 API，但[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]还公开了触笔设备抽象，使用与键盘和鼠标类似的模型。  所有与触笔相关的 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] 都包含单词“触笔”。
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 支持集成的<xref:System.Windows.Input.Stylus>。  <xref:System.Windows.Input.Stylus>是变得流行的笔输入[!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)]。  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序可以将触笔视为鼠标使用鼠标 API，但[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]还公开了触笔设备抽象，使用与键盘和鼠标类似的模型。  所有与触笔相关的 Api 包含单词"触笔"。
 
  由于触笔可充当鼠标，因此仅支持鼠标输入的应用程序仍可以自动获得一定程度的触笔支持。 以这种方式使用触笔时，应用程序有能力处理相应的触笔事件，然后处理相应的鼠标事件。 此外，通过触笔设备抽象也可以使用墨迹输入等较高级别的服务。  有关墨迹输入的详细信息，请参阅[墨迹入门](getting-started-with-ink.md)。
 
@@ -354,7 +354,7 @@ ms.locfileid: "67610480"
 
 <a name="mouse_capture"></a>
 ## <a name="mouse-capture"></a>鼠标捕获
- 鼠标设备专门保留称为鼠标捕获的模式特征。 鼠标捕获用于在拖放操作开始时保持转换的输入状态，从而不一定发生涉及鼠标指针的标称屏幕位置的其他操作。 拖动过程中，未终止拖放时用户无法单击，这使得大多数鼠标悬停提示在拖动来源拥有鼠标捕获时是不合适的。 输入系统公开了可确定鼠标捕获状态的 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] 以及可强制在特定元素上捕获鼠标或清除鼠标捕获状态的 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]。 有关拖放操作的详细信息，请参阅[拖放概述](drag-and-drop-overview.md)。
+ 鼠标设备专门保留称为鼠标捕获的模式特征。 鼠标捕获用于在拖放操作开始时保持转换的输入状态，从而不一定发生涉及鼠标指针的标称屏幕位置的其他操作。 拖动过程中，未终止拖放时用户无法单击，这使得大多数鼠标悬停提示在拖动来源拥有鼠标捕获时是不合适的。 在输入的系统公开可以确定鼠标捕获状态的 Api，以及可以强制鼠标捕获到一个特定元素，或清除鼠标捕获状态的 Api。 有关拖放操作的详细信息，请参阅[拖放概述](drag-and-drop-overview.md)。
 
 <a name="commands"></a>
 ## <a name="commands"></a>命令
