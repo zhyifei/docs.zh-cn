@@ -6,12 +6,12 @@ helpviewer_keywords:
 - client-side UI Automation provider, implementation
 - provider implementation, UI Automation
 ms.assetid: 3584c0a1-9cd0-4968-8b63-b06390890ef6
-ms.openlocfilehash: 9e3f0941d2fd92b8657d2d9df5b050e7793eb1d1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 02d77dfeb7a00292639131cad72cff7e079704c5
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647212"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67802226"
 ---
 # <a name="client-side-ui-automation-provider-implementation"></a>客户端 UI 自动化提供程序的实现
 > [!NOTE]
@@ -23,7 +23,7 @@ ms.locfileid: "64647212"
   
  但较旧的控件（例如 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 和 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] 中的控件）不直接支持 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]。 这些控件都将改为由存在于客户端进程中的提供程序提供，并且使用跨进程通信获取有关控件的信息；例如，通过监视在窗口与控件之间来回的消息。 此类客户端提供程序有时称为代理。  
   
- [!INCLUDE[TLA2#tla_winvista](../../../includes/tla2sharptla-winvista-md.md)] 提供标准的提供程序[!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)]和 Windows 窗体控件。 此外，回退提供程序为任何不由另一个服务器端提供程序或代理提供、但具有 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 实现的控件提供部分 [!INCLUDE[TLA#tla_aa](../../../includes/tlasharptla-aa-md.md)] 支持。 所有这样的提供程序均已自动加载，并且可供客户端应用程序使用。  
+ [!INCLUDE[TLA2#tla_winvista](../../../includes/tla2sharptla-winvista-md.md)] 提供标准的提供程序[!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)]和 Windows 窗体控件。 此外，回退提供程序提供部分[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]支持添加到由另一个服务器端提供程序不提供任何控件或代理但有一个 Microsoft Active Accessibility 的实现。 所有这样的提供程序均已自动加载，并且可供客户端应用程序使用。  
   
  有关详细信息的支持[!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)]和 Windows 窗体控件，请参阅[UI Automation Support for Standard Controls](../../../docs/framework/ui-automation/ui-automation-support-for-standard-controls.md)。  
   

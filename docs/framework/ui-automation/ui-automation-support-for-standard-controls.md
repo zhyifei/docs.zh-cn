@@ -5,12 +5,12 @@ helpviewer_keywords:
 - controls, UI Automation support for
 - UI Automation, support for standard controls
 ms.assetid: 3770ea8a-2655-4add-9c59-fe0610ad5084
-ms.openlocfilehash: 3fde9779205ea7d0902ddd99ed192f097a159d2c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 641fc3f8dfca3ff6506354c076b98cc88073a1b7
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59221474"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67802122"
 ---
 # <a name="ui-automation-support-for-standard-controls"></a>UI 自动化对标准控件的支持
 > [!NOTE]
@@ -136,7 +136,7 @@ ms.locfileid: "59221474"
 |VscrollBar|  
 |Web 浏览器|  
   
- 以下控件仅通过其对 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 的支持向 [!INCLUDE[TLA#tla_aa](../../../includes/tlasharptla-aa-md.md)]公开。 某些功能可能不可用。  
+ 以下控件公开给[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]只能通过它们对 Microsoft Active Accessibility 的支持。 某些功能可能不可用。  
   
 |控件名称|  
 |------------------|  
