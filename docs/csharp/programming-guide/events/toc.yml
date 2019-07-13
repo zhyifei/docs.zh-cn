@@ -9,7 +9,5 @@
       href: how-to-raise-base-class-events-in-derived-classes.md
     - name: 如何：实现接口事件
       href: how-to-implement-interface-events.md
-    - name: 如何：使用字典存储事件实例
-      href: how-to-use-a-dictionary-to-store-event-instances.md
     - name: 如何：实现自定义事件访问器
       href: how-to-implement-custom-event-accessors.md
