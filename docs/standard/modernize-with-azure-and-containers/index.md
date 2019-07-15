@@ -2,12 +2,12 @@
 title: 更新现有.NET 应用程序与 Azure 云和 Windows 容器 （第二版）
 description: 了解如何迁移并更新现有应用程序对 Azure 云以及与此电子书的容器。
 ms.date: 04/28/2018
-ms.openlocfilehash: 79e06c64867a7e1bb6c5d7da718886a713cb3c4c
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 4e632fcfbb8904a9def3fdad992286055c5df4f0
+ms.sourcegitcommit: 6472349821dbe202d01182bc2cfe9d7176eaaa6c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66834010"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67870602"
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>更新现有.NET 应用程序使用 Azure 云和 Windows 容器 （第二版）
 
@@ -98,7 +98,7 @@ Microsoft 和 <https://www.microsoft.com> 上“商标”网页列出的商标�
 | **优点**|
 | <li>没有任何新的重构代码 <li> 需要的工作量最少，实现快速迁移 <li> Azure 中支持最小公分母 <li> 保证基本可用性 <li> 移动到云后，更容易更新 | <li> 不重新架构 <li> 更改最小代码/配置 <li> 由于容器的原因，改进了部署和 DevOps 发布敏捷性 <li> 增加了密度，降低了部署成本 <li> 应用的可移植性和依赖项 <li> 主机目标的灵活性：PaaS 方法或 IaaS | <li> 架构师的云，则获得最大的好处从云中，但需要新的代码 <li> 微服务云原生方法 <li> 新式任务关键型应用程序，云复原的可高度扩展 <li> 完全托管服务 <li> 优化了规模 <li> 通过子系统优化了自主敏捷性 <li> 基于部署和 DevOps |
 | **挑战** |
-| <li> 除了转移运营费用或关闭数据中心之外，云价值较小 <li> 少托管：无 OS 或中间件修补;可以使用基础结构解决方案，如 Terraform、 Spinnaker 或 Puppet | <li> 容器化是学习曲线，为开发人员和 IT 运营中一个额外的步骤 <li> DevOps 和 CI/CD 管道通常是必需的这种方法。 如果不是当前的区域性组织中存在，它可能是其他挑战| <li> 有关云本机应用程序和微服务体系结构需要体系结构重建而且通常需要大量的代码重构或重写现代化 （增加了的时间和预算） <li> DevOps 和 CI/CD 管道通常是必需的这种方法。 如果不是当前的区域性组织中存在，它可能是其他挑战|
+| <li> 除了转移运营费用或关闭数据中心之外，云价值较小 <li> 少托管：无 OS 或中间件修补;可以使用基础结构解决方案，如 Terraform、 Spinnaker 或 Puppet | <li> 容器化是学习曲线，为开发人员和 IT 运营中一个额外的步骤 <li> DevOps 和 CI/CD 管道通常是必需的这种方法。 如果不是当前的区域性组织中存在，它可能是其他挑战| <li> 有关云本机应用程序和微服务体系结构需要体系结构重建而且通常需要大量的代码重构或重写现代化 （增加了的时间和预算）|
 > **表 1-1**。 现有 .NET 应用程序和服务的更新途径的优势和挑战
 
 ### <a name="key-technologies-and-architectures-by-maturity-level"></a>各成熟度级别使用的关键技术和体系结构
