@@ -6,12 +6,12 @@ helpviewer_keywords:
 - element tree [WPF]
 - visual tree [WPF]
 ms.assetid: e83f25e5-d66b-4fc7-92d2-50130c9a6649
-ms.openlocfilehash: f9b507c874dfe0ab3feca19e7fcf79df5af93e10
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 14ab9b5b36eee607679ee95423c2af912ed02310
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61774993"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860005"
 ---
 # <a name="trees-in-wpf"></a>WPF 中的树
 在许多技术中，元素和组件都按树结构的形式组织。在这种结构中，开发人员可以直接操作树中的对象节点来影响应用程序的绘制或行为。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 也使用了若干树结构形式来定义程序元素之间的关系。 多数情况下，在概念层面考虑对象树形式时，WPF 开发人员会用代码创建应用程序，或用 XAML 定义应用程序的组成部分，但他们会调用具体的 API 或使用特定的标记来执行此操作，而不是像在 XML DOM 中那样，使用某些常规对象树操作 API。 WPF 公开提供树形式视图的两个帮助器类<xref:System.Windows.LogicalTreeHelper>和<xref:System.Windows.Media.VisualTreeHelper>。 WPF 文档中还使用了“可视化树”和“逻辑树”两个术语，它们有助于理解某些关键 WPF 功能的行为。 本主题定义的可视化树和逻辑树的表示，讨论这些树与总体对象树概念，并引入了<xref:System.Windows.LogicalTreeHelper>和<xref:System.Windows.Media.VisualTreeHelper>s。  
@@ -51,7 +51,7 @@ ms.locfileid: "61774993"
   
 <a name="override_logical_tree"></a>   
 ### <a name="overriding-the-logical-tree"></a>替代逻辑树  
- 经验丰富的控件作者会通过替代若干 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]（用于定义常规对象或内容模型如何在逻辑树中添加或删除对象）来替代逻辑树。 有关如何替代逻辑树的示例，请参阅[替代逻辑树](how-to-override-the-logical-tree.md)。  
+ 高级的控件创作者可以通过重写定义常规对象或内容模型如何添加或删除逻辑树中的对象的几个 Api 替代逻辑树。 有关如何替代逻辑树的示例，请参阅[替代逻辑树](how-to-override-the-logical-tree.md)。  
   
 <a name="pvi"></a>   
 ### <a name="property-value-inheritance"></a>属性值继承  

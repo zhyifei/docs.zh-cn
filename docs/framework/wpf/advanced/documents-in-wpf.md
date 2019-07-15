@@ -10,12 +10,12 @@ helpviewer_keywords:
 - documents [WPF], types of
 - documents [WPF], browser-viewable
 ms.assetid: 6e8db7bc-050a-4070-aa72-bb8c46e87ff8
-ms.openlocfilehash: b83d9c972dbdadb721bae8b7d616c94a0c1c831f
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: 020ea101ae38b9be854398a55ddd31e67b9fda35
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67804746"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859670"
 ---
 # <a name="documents-in-wpf"></a>WPF 中的文档
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供丰富的文档功能，可创建旨在比前几代 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 更易于访问和读取的高保真内容文档。 除增强功能和质量外，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 还对文档显示、打包和安全性能提供集成服务。 本主题介绍 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 文档类型和文档打包。  
@@ -59,7 +59,7 @@ ms.locfileid: "67804746"
   
 <a name="packaging"></a>   
 ## <a name="document-packaging"></a>文档打包  
- <xref:System.IO.Packaging> [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]提供一种有效方式组织应用程序数据、 文档内容和相关的资源的访问权限，可移植且易于分发非常简单的单个容器中。 ZIP 文件是举例说明<xref:System.IO.Packaging.Package>类型，能够作为一个单元中包含多个对象。 打包[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]提供默认<xref:System.IO.Packaging.ZipPackage>设计一种开放打包约定标准使用 XML 和 ZIP 文件体系结构的实现。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 打包 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] 使得创建包以及在包内存储和访问对象变得更为简单。 中存储的对象<xref:System.IO.Packaging.Package>称为<xref:System.IO.Packaging.PackagePart>（"部件"）。 包还可包括已签名的数字证书，这些证书可用于标识部件的发信方以及验证包内容是否尚未修改。  包还包括<xref:System.IO.Packaging.PackageRelationship>允许附加信息添加到包或与特定部分关联而无需实际修改现有部件内容的功能。  包服务还支持 [!INCLUDE[TLA#tla_rm](../../../../includes/tlasharptla-rm-md.md)]。  
+ <xref:System.IO.Packaging> Api 提供了一种有效方式组织应用程序数据、 文档内容和相关的资源的访问权限，可移植且易于分发非常简单的单个容器中。 ZIP 文件是举例说明<xref:System.IO.Packaging.Package>类型，能够作为一个单元中包含多个对象。 打包 Api 提供默认<xref:System.IO.Packaging.ZipPackage>设计一种开放打包约定标准使用 XML 和 ZIP 文件体系结构的实现。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]打包 Api 简化了创建包，并存储和访问其中的对象。 中存储的对象<xref:System.IO.Packaging.Package>称为<xref:System.IO.Packaging.PackagePart>（"部件"）。 包还可包括已签名的数字证书，这些证书可用于标识部件的发信方以及验证包内容是否尚未修改。  包还包括<xref:System.IO.Packaging.PackageRelationship>允许附加信息添加到包或与特定部分关联而无需实际修改现有部件内容的功能。  包服务还支持 [!INCLUDE[TLA#tla_rm](../../../../includes/tlasharptla-rm-md.md)]。  
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 包体系结构用作大量关键技术的基础：  
   
@@ -71,7 +71,7 @@ ms.locfileid: "67804746"
   
  基于打包 Api，<xref:System.Windows.Xps.Packaging.XpsDocument>专门设计用于存储[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]固定内容文档。 <xref:System.Windows.Xps.Packaging.XpsDocument>是可以在查看器，显示在中打开一个自包含的文档<xref:System.Windows.Controls.DocumentViewer>控件，路由到打印后台处理，或直接输出到[!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]-兼容的打印机。  
   
- 以下各节提供有关的更多信息<xref:System.IO.Packaging.Package>并<xref:System.Windows.Xps.Packaging.XpsDocument>[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]随附[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。  
+ 以下各节提供有关的更多信息<xref:System.IO.Packaging.Package>并<xref:System.Windows.Xps.Packaging.XpsDocument>提供 Api 来与[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。  
   
 <a name="packages"></a>   
 ### <a name="package-components"></a>包组件  
