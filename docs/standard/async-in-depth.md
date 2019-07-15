@@ -76,7 +76,7 @@ public async Task<string> GetFirstCharactersCountAsync(string url, int count)
 
 对 `GetStringAsync()` 的调用通过低级别 .NET 库进行（可能是调用其他异步方法），直到其到达 P/Invoke 互操作调用，进入本机网络库。 本机库随后可能会调入系统 API 调用（例如 Linux 上套接字的 `write()`）。 可能会使用 [TaskCompletionSource](xref:System.Threading.Tasks.TaskCompletionSource%601.SetResult(%600)) 在本机/托管边界创建一个任务对象。 将通过层向上传递任务对象，对其进行操作或直接返回，最后返回到初始调用方。
 
-在上述的第二个示例中，`Task<T>` 对象将直接从 `GetStringAsync` 返回。 由于使用了 `await` 关键字，因此该方法会返回一个新建的任务对象。 在`GetFirstCharactersCountAsync`方法中,控制权从此处开始会移交给调用方 。 [Task&lt;T&gt;](xref:System.Threading.Tasks.Task%601) 对象的方法和属性确保调用方监视任务进度，当执行完 GetFirstCharactersCountAsync 中剩余的代码时，任务便完成。
+在上述第二个示例中，`Task<T>` 对象直接从 `GetStringAsync` 返回。由于使用了 `await` 关键字，因此该方法会返回一个新建的任务对象。在 `GetFirstCharactersCountAsync` 方法中，控制权从此位置返回给调用方。[Task&lt;T&gt;](xref:System.Threading.Tasks.Task%601) 对象的方法和属性使调用者能够监视任务的进度。GetFirstCharactersCountAsync 中剩余的代码执行完毕时，该任务便完成。	
 
 调用系统 API 后，请求位于内核空间，一路来到操作系统的网络子系统（例如 Linux 内核中的 `/net`）。  此处操作系统将对网络请求进行异步处理。  所用操作系统不同，细节可能有所不同（可能会将设备驱动程序调用安排为发送回运行时的信号，或者会执行设备驱动程序调用然后有一个信号发送回来），但最终都会通知运行时网络请求正在进行中。  此时，设备驱动程序工作处于已计划、正在进行或是已完成（请求已“通过网络”发出），但由于这些均为异步进行，设备驱动程序可立即着手处理其他事项！
 
