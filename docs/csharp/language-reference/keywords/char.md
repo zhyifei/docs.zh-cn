@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - char data type [C#]
 ms.assetid: b51cf4fb-124c-4067-af48-afbac122b228
-ms.openlocfilehash: 0b4f04a1ba6244373e36cc6a6188edabe33ec453
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: b58730d945582ded7b76fcd5c4c65bc1dd9324da
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67424342"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661455"
 ---
 # <a name="char-c-reference"></a>char（C# 参考）
 
@@ -33,7 +33,7 @@ ms.locfileid: "67424342"
 
 ## <a name="conversions"></a>转换
 
-`char` 可隐式转换为 [ushort](../builtin-types/integral-numeric-types.md)、[int](../builtin-types/integral-numeric-types.md)、[uint](../builtin-types/integral-numeric-types.md)、[double](../../../csharp/language-reference/keywords/double.md) 或 [decimal](../../../csharp/language-reference/keywords/decimal.md)。 但是无法将其他类型隐式转换为 `char` 类型。
+`char` 可隐式转换为 [ushort](../builtin-types/integral-numeric-types.md)、[int](../builtin-types/integral-numeric-types.md)、[uint](../builtin-types/integral-numeric-types.md)、[double](../builtin-types/floating-point-numeric-types.md) 或 [decimal](../builtin-types/floating-point-numeric-types.md)。 但是无法将其他类型隐式转换为 `char` 类型。
 
 <xref:System.Char?displayProperty=nameWithType> 类型提供多种适用于 `char` 值的静态方法。
 

@@ -2,12 +2,12 @@
 title: 在完成一个异步任务后取消剩余任务 (C#)
 ms.date: 07/20/2015
 ms.assetid: d3cebc74-c392-497b-b1e6-62a262eabe05
-ms.openlocfilehash: baf757f7f7a71528dd5dc36b0f807eb452577a38
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 9b968ec902d9653caa410e917af40c8a521e55b4
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298664"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859609"
 ---
 # <a name="cancel-remaining-async-tasks-after-one-is-complete-c"></a>在完成一个异步任务后取消剩余任务 (C#)
 通过结合使用 <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> 方法和 <xref:System.Threading.CancellationToken>，可在一个任务完成时取消所有剩余任务。 `WhenAny` 方法采用任务集合中的一个参数。 该方法启动所有任务，并返回单个任务。 当集合中任意任务完成时，完成单个任务。  
@@ -22,11 +22,11 @@ ms.locfileid: "59298664"
   
 1. 解压缩下载的文件，然后启动 Visual Studio。  
   
-2. 在菜单栏上，依次选择 **“文件”**、 **“打开”** 和 **“项目/解决方案”**。  
+2. 在菜单栏上，依次选择 **“文件”** 、 **“打开”** 和 **“项目/解决方案”** 。  
   
-3. 在“打开项目”对话框中，打开保存已解压的示例代码的文件夹，然后打开 AsyncFineTuningCS 的解决方案 (.sln) 文件。  
+3. 在“打开项目”  对话框中，打开保存已解压的示例代码的文件夹，然后打开 AsyncFineTuningCS 的解决方案 (.sln) 文件。  
   
-4. 在“解决方案资源管理器”中，打开“CancelAfterOneTask”项目的快捷菜单，然后选择“设为启动项目”。  
+4. 在“解决方案资源管理器”  中，打开“CancelAfterOneTask”  项目的快捷菜单，然后选择“设为启动项目”  。  
   
 5. 选择 F5 键运行该项目。  
   
@@ -37,14 +37,14 @@ ms.locfileid: "59298664"
  如果不想下载项目，可在本主题末尾处查看 MainWindow.xaml.cs 文件。  
   
 ## <a name="building-the-example"></a>生成示例  
- 本主题中的示例添加到[取消异步任务或任务列表 (C#)](../../../../csharp/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)中开发的项目，以取消任务列表。 该示例使用相同的 UI，但未显示使用“取消”按钮。  
+ 本主题中的示例添加到[取消异步任务或任务列表 (C#)](../../../../csharp/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)中开发的项目，以取消任务列表。 该示例使用相同的 UI，但未显示使用“取消”  按钮。  
   
- 若要自行生成示例，请按“下载示例”部分的说明逐步操作，选择“CancelAListOfTasks”作为“启动项目”。 将此主题中的更改添加到该项目。  
+ 若要自行生成示例，请按“下载示例”部分的说明逐步操作，选择“CancelAListOfTasks”  作为“启动项目”  。 将此主题中的更改添加到该项目。  
   
  在 **CancelAListOfTasks** 项目的 MainWindow.xaml.cs 文件中，通过将每个网站的处理步骤从 `AccessTheWebAsync` 中的循环移动至下列异步方法来启动转换。  
   
 ```csharp  
-/ ***Bundle the processing steps for a website into one async method.  
+// ***Bundle the processing steps for a website into one async method.  
 async Task<int> ProcessURLAsync(string url, HttpClient client, CancellationToken ct)  
 {  
     // GetAsync returns a Task<HttpResponseMessage>.   

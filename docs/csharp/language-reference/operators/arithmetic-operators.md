@@ -27,12 +27,12 @@ helpviewer_keywords:
 - + operator [C#]
 - subtraction operator [C#]
 - '- operator [C#]'
-ms.openlocfilehash: 4108583a5f97d1349fb54c335d55252352ea4883
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 02b27270c93550278308900382ae05091edb2543
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67609998"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661537"
 ---
 # <a name="arithmetic-operators-c-reference"></a>算术运算符（C# 参考）
 
@@ -41,7 +41,7 @@ ms.locfileid: "67609998"
 - 一元 [`++`（增量）](#increment-operator-)、[`--`（减量）](#decrement-operator---)、[`+`（加）](#unary-plus-and-minus-operators)和 [`-`（减）](#unary-plus-and-minus-operators)运算符
 - 二元 [`*`（乘法）](#multiplication-operator-)、[`/`（除法）](#division-operator-)、[`%`（余数）](#remainder-operator-)、[`+`（加法）](#addition-operator-)和 [`-`（减法）](#subtraction-operator--)运算符
 
-这些运算符支持所有[整型](../builtin-types/integral-numeric-types.md)和[浮动](../keywords/floating-point-types-table.md)数值类型。
+这些运算符支持所有[整型](../builtin-types/integral-numeric-types.md)和[浮动](../builtin-types/floating-point-numeric-types.md)数值类型。
 
 ## <a name="increment-operator-"></a>增量运算符 ++
 

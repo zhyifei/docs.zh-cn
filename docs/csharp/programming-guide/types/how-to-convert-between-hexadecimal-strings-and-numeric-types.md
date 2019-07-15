@@ -8,12 +8,12 @@ helpviewer_keywords:
 - strings [C#], converting hexadecimal strings
 - hexadecimal strings [C#]
 ms.assetid: 7115c49f-7d1d-40c3-8bd9-aae0cc1d46b6
-ms.openlocfilehash: 046a406c32cd2ad0649cf88381a9e121f7566fe5
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 2b896fb645113bc33b6a320948770947adc16dab
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67423515"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661145"
 ---
 # <a name="how-to-convert-between-hexadecimal-strings-and-numeric-types-c-programming-guide"></a>如何：在十六进制字符串与数值类型之间转换（C# 编程指南）
 以下示例演示如何执行下列任务：  
@@ -24,7 +24,7 @@ ms.locfileid: "67423515"
   
 - 将十六进制 `string` 转换为 [int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md)。  
   
-- 将十六进制 `string` 转换为 [float](../../../csharp/language-reference/keywords/float.md)。  
+- 将十六进制 `string` 转换为 [float](../../../csharp/language-reference/builtin-types/floating-point-numeric-types.md)。  
   
 - 将[字节](../../../csharp/language-reference/builtin-types/integral-numeric-types.md)数组转换为十六进制 `string`。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "67423515"
  [!code-csharp[csProgGuideTypes#32](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#32)]  
   
 ## <a name="example"></a>示例  
- 下面的示例演示了如何使用 <xref:System.BitConverter?displayProperty=nameWithType> 类和 <xref:System.UInt32.Parse%2A?displayProperty=nameWithType> 方法将十六进制 `string` 转换为 [float](../../../csharp/language-reference/keywords/float.md)。  
+ 下面的示例演示了如何使用 <xref:System.BitConverter?displayProperty=nameWithType> 类和 <xref:System.UInt32.Parse%2A?displayProperty=nameWithType> 方法将十六进制 `string` 转换为 [float](../../../csharp/language-reference/builtin-types/floating-point-numeric-types.md)。  
   
  [!code-csharp[csProgGuideTypes#39](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#39)]  
   

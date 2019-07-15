@@ -5,12 +5,12 @@ ms.date: 04/20/2018
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.openlocfilehash: 81e9a86c4761b329918bf04023dea42d2e1ad6f5
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 59846affb1eea5bd9d6a80c623eab5e3aa9db87c
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67423530"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661085"
 ---
 # <a name="pointer-types-c-programming-guide"></a>指针类型（C# 编程指南）
 
@@ -24,10 +24,10 @@ void* identifier; //allowed but not recommended
 在指针类型中的 `*` 之前指定的类型被称为“referent 类型”  。 以下任一类型均可为 referent 类型：
 
 - 任何整型类型：[sbyte](../../language-reference/builtin-types/integral-numeric-types.md)、[byte](../../language-reference/builtin-types/integral-numeric-types.md)、[short](../../language-reference/builtin-types/integral-numeric-types.md)、[ushort](../../language-reference/builtin-types/integral-numeric-types.md)、[int](../../language-reference/builtin-types/integral-numeric-types.md)、[uint](../../language-reference/builtin-types/integral-numeric-types.md)、[long](../../language-reference/builtin-types/integral-numeric-types.md)、[ulong](../../language-reference/builtin-types/integral-numeric-types.md)。
-- 任何浮点类型：[浮点](../../language-reference/keywords/float.md)、[双精度](../../language-reference/keywords/double.md)。
+- 任何浮点类型：[浮点](../../language-reference/builtin-types/floating-point-numeric-types.md)、[双精度](../../language-reference/builtin-types/floating-point-numeric-types.md)。
 - [字符](../../language-reference/keywords/char.md)。
 - [布尔型](../../language-reference/keywords/bool.md)。
-- [小数](../../language-reference/keywords/decimal.md)。
+- [小数](../../language-reference/builtin-types/floating-point-numeric-types.md)。
 - 任何[枚举](../../language-reference/keywords/enum.md)类型。
 - 任何指针类型。 这允许如 `void**` 的表达式。
 - 任何仅包含非托管类型字段的用户定义的结构类型。
