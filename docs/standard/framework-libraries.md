@@ -6,12 +6,12 @@ ms.author: ronpet
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 7b77b6c1-8367-4602-bff3-91e4c05ac643
-ms.openlocfilehash: 1e825efcb2a352c823391fb0dad3d566189da001
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 494ac194fe8dc9554c6e0d1d87ba2ed613d1d16b
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67425542"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67663231"
 ---
 # <a name="framework-libraries"></a>框架库
 
@@ -30,8 +30,8 @@ BCL 提供最基本的类型和实用工具功能，是其他所有 .NET 类库�
 * <xref:System.Object?displayProperty=nameWithType> ([object](../csharp/language-reference/keywords/object.md)) - CLR 类型系统中的最基本基类。 它位于类型层次结构的根级别。
 * <xref:System.Int16?displayProperty=nameWithType> ([short](../csharp/language-reference/builtin-types/integral-numeric-types.md)) - 16 位带符号整数类型。 也存在无符号 <xref:System.UInt16>。
 * <xref:System.Int32?displayProperty=nameWithType> ([int](../csharp/language-reference/builtin-types/integral-numeric-types.md)) - 32 位带符号整数类型。 也存在无符号 [UInt32](../csharp/language-reference/builtin-types/integral-numeric-types.md)。
-* <xref:System.Single?displayProperty=nameWithType> ([float](../csharp/language-reference/keywords/float.md)) - 32 位浮点类型。
-* <xref:System.Decimal?displayProperty=nameWithType> ([decimal](../csharp/language-reference/keywords/decimal.md)) -128 位十进制类型。
+* <xref:System.Single?displayProperty=nameWithType> ([float](../csharp/language-reference/builtin-types/floating-point-numeric-types.md)) - 32 位浮点类型。
+* <xref:System.Decimal?displayProperty=nameWithType> ([decimal](../csharp/language-reference/builtin-types/floating-point-numeric-types.md)) -128 位十进制类型。
 * <xref:System.Byte?displayProperty=nameWithType> ([byte](../csharp/language-reference/builtin-types/integral-numeric-types.md)) - 表示内存字节的无符号 8 位整数。
 * <xref:System.Boolean?displayProperty=nameWithType> ([bool](../csharp/language-reference/keywords/bool.md)) - 表示 `true` 或 `false` 的布尔类型。
 * <xref:System.Char?displayProperty=nameWithType> ([char](../csharp/language-reference/keywords/char.md)) - 表示 Unicode 字符的 16 位数字类型。

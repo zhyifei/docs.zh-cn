@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: ad624a665dbe8e989ea05acc20213809e515e6ac
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: b23909c53b451b4b18bf0ccdf59f51e7c8e3114f
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59803351"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67802470"
 ---
 ### <a name="incorrect-code-generation-when-passing-and-comparing-uint16-values"></a>传递和比较 UInt16 值时，代码生成不正确
 
@@ -15,3 +15,4 @@ ms.locfileid: "59803351"
 |范围|边缘|
 |Version|4.7|
 |类型|运行时|
+

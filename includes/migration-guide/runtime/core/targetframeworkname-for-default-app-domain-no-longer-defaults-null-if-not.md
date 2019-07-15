@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: cbe1b32fa40e509f620845866c7a584e37f49a80
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: f221f923381d874e1d9e8b420811a770d86f7578
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59774129"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67858613"
 ---
 ### <a name="targetframeworkname-for-default-app-domain-no-longer-defaults-to-null-if-not-set"></a>默认应用域的 TargetFrameworkName 不再默认为 null（如果未设置）
 
@@ -16,3 +16,4 @@ ms.locfileid: "59774129"
 |版本|4.6|
 |类型|运行时|
 |受影响的 API|<ul><li><xref:System.AppDomainSetup.TargetFrameworkName?displayProperty=nameWithType></li></ul>|
+

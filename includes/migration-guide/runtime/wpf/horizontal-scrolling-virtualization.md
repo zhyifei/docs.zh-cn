@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: ac7a56dc654ef4fd966077dd25012f0c50b0fc8d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 0825233c0dae131fa9d00565348fac6fdf0be063
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59235992"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67857510"
 ---
 ### <a name="horizontal-scrolling-and-virtualization"></a>水平滚动和虚拟化
 
@@ -16,3 +16,4 @@ ms.locfileid: "59235992"
 |版本|4.6.2|
 |类型|运行时|
 |受影响的 API|<ul><li><xref:System.Windows.Controls.Primitives.IScrollInfo?displayProperty=nameWithType></li></ul>|
+

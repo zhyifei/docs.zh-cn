@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 735278848cb7399e414a128afc650a0a1f882337
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 38dd0b33202b8e8f1708ebec689333bd5367c93f
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59803334"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67857557"
 ---
 ### <a name="changing-the-isenabled-property-of-the-parent-of-a-textblock-control-affects-any-child-controls"></a>更改 TextBlock 控件父级的 IsEnabled 属性会影响任何子控件
 
@@ -16,3 +16,4 @@ ms.locfileid: "59803334"
 |版本|4.6.2|
 |类型|运行时|
 |受影响的 API|<ul><li><xref:System.Windows.UIElement.IsEnabled?displayProperty=nameWithType></li></ul>|
+

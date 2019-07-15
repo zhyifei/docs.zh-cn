@@ -1,12 +1,12 @@
 ---
-ms.openlocfilehash: b761cb699c4677f815835cdab9c6aa3039f5bb38
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 778b6973b0a08e89471f9a4aa31a077da2d30c16
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59235186"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67858416"
 ---
-### <a name="listboxitem-isselected-binding-issue-with-observablecollectiontmove"></a>ObservableCollection\<T>.Move 的 ListBoxItem IsSelected 绑定问题
+### <a name="listboxitem-isselected-binding-issue-with-observablecollectionlttgtmove"></a>ObservableCollection&lt;T&gt;.Move 的 ListBoxItem IsSelected 绑定问题
 
 |   |   |
 |---|---|
@@ -16,3 +16,4 @@ ms.locfileid: "59235186"
 |版本|4.5|
 |类型|运行时|
 |受影响的 API|<ul><li><xref:System.Collections.ObjectModel.ObservableCollection%601.Move(System.Int32,System.Int32)?displayProperty=nameWithType></li><li><xref:System.Collections.ObjectModel.ObservableCollection%601.MoveItem(System.Int32,System.Int32)?displayProperty=nameWithType></li></ul>|
+

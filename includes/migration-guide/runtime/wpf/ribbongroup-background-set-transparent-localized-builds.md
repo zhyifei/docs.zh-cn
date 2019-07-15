@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 921baed7381fad363cc832c6b6af69068c2c8f43
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 9500907c6a1ba5b27008dcad4c9b47aef9092106
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59235989"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67802481"
 ---
 ### <a name="ribbongroup-background-is-set-to-transparent-in-localized-builds"></a>本地化版本中的 RibbonGroup 背景设置为透明
 
@@ -15,3 +15,4 @@ ms.locfileid: "59235989"
 |范围|边缘|
 |版本|4.6.2|
 |类型|运行时|
+

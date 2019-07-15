@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 09e3f0e168e0dcbe79d8ee7216f2671c67bfb87e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 8049bf01bc10c5913fa11b25e49afd1b1317eecc
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59234115"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67802935"
 ---
 ### <a name="wpf-spell-checking-fails-in-unexpected-ways"></a>WPF 拼写检查以一种意想不到的方式失败
 
@@ -15,3 +15,4 @@ ms.locfileid: "59234115"
 |范围|边缘|
 |版本|4.6.1|
 |类型|运行时|
+

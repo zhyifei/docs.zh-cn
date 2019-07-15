@@ -18,12 +18,12 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 61f676b5-936f-40f6-83ce-f22805ec9c2f
-ms.openlocfilehash: 85e7f10643c57837cf0b66613825241db94c0065
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 5171b9b9878331069e354eeb17ad57ca9bd594a8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423874"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67773661"
 ---
 # <a name="how-to-implement-a-component-that-supports-the-event-based-asynchronous-pattern"></a>如何：实现支持基于事件的异步模式的组件
 若要编写的类有一些可能会带来明显延迟的操作，请考虑按照[基于事件的异步模式概述](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)中的步骤操作，为它实现异步功能。  
@@ -53,14 +53,14 @@ ms.locfileid: "66423874"
 ## <a name="creating-the-component"></a>创建组件  
  第一步是，创建实现基于事件的异步模式的组件。  
   
-#### <a name="to-create-the-component"></a>创建组件的具体步骤  
+### <a name="to-create-the-component"></a>创建组件的具体步骤  
   
 - 创建继承自 <xref:System.ComponentModel.Component> 的类 `PrimeNumberCalculator`。  
   
 ## <a name="defining-public-asynchronous-events-and-delegates"></a>定义公共异步事件和委托  
  组件使用事件与客户端进行通信。 _MethodName_**Completed** 事件预警客户端注意异步任务完成，_MethodName_**ProgressChanged** 事件向客户端告知异步任务的进度。  
   
-#### <a name="to-define-asynchronous-events-for-clients-of-your-component"></a>若要定义组件客户端的异步事件，请执行以下步骤：  
+### <a name="to-define-asynchronous-events-for-clients-of-your-component"></a>若要定义组件客户端的异步事件，请执行以下步骤：  
   
 1. 在文件顶部，导入 <xref:System.Threading?displayProperty=nameWithType> 和 <xref:System.Collections.Specialized?displayProperty=nameWithType> 命名空间。  
   
@@ -85,7 +85,7 @@ ms.locfileid: "66423874"
 ## <a name="checkpoint"></a>检查点  
  此时，可以生成组件。  
   
-#### <a name="to-test-your-component"></a>测试组件的具体步骤  
+### <a name="to-test-your-component"></a>测试组件的具体步骤  
   
 - 编译组件。  
   
@@ -99,9 +99,9 @@ ms.locfileid: "66423874"
      这些警告会在下一部分中得到清除。  
   
 ## <a name="defining-private-delegates"></a>定义专用委托  
- `PrimeNumberCalculator` 组件的异步特性是通过特殊的 <xref:System.Threading.SendOrPostCallback> 委托在内部进行实现。 <xref:System.Threading.SendOrPostCallback> 表示对 <xref:System.Threading.ThreadPool> 线程执行的回调方法。 回调方法必须有需要使用单个 <xref:System.Object> 类型参数的签名。也就是说，需要在包装类中的各委托之间传递状态。 有关更多信息，请参见<xref:System.Threading.SendOrPostCallback>。  
+ `PrimeNumberCalculator` 组件的异步特性是通过特殊的 <xref:System.Threading.SendOrPostCallback> 委托在内部进行实现。 <xref:System.Threading.SendOrPostCallback> 表示对 <xref:System.Threading.ThreadPool> 线程执行的回调方法。 回调方法必须有需要使用单个 <xref:System.Object> 类型参数的签名。也就是说，需要在包装类中的各委托之间传递状态。 有关详细信息，请参阅 <xref:System.Threading.SendOrPostCallback>。  
   
-#### <a name="to-implement-your-components-internal-asynchronous-behavior"></a>若要实现组件的内部异步行为，请执行以下操作：  
+### <a name="to-implement-your-components-internal-asynchronous-behavior"></a>若要实现组件的内部异步行为，请执行以下操作：  
   
 1. 在 `PrimeNumberCalculator` 类中声明并创建 <xref:System.Threading.SendOrPostCallback> 委托。 在 `InitializeDelegates` 实用工具方法中创建 <xref:System.Threading.SendOrPostCallback> 对象。  
   
@@ -132,7 +132,7 @@ ms.locfileid: "66423874"
 ## <a name="implementing-public-events"></a>实现公共事件  
  实现基于事件的异步模式的组件使用事件与客户端进行通信。 这些事件在 <xref:System.ComponentModel.AsyncOperation> 类的相助下对适当的线程调用。  
   
-#### <a name="to-raise-events-to-your-components-clients"></a>若要向组件的客户端抛出事件，请执行以下操作：  
+### <a name="to-raise-events-to-your-components-clients"></a>若要向组件的客户端抛出事件，请执行以下操作：  
   
 1. 实现公共事件，以向客户端报告事件。 需要实现两个事件，一个用于报告进度事件，另一个用于报告完成事件。  
   
@@ -146,7 +146,7 @@ ms.locfileid: "66423874"
   
  `CompletionMethod` 签名必须保留描述异步操作结果所需的全部状态。 它保留以下状态：此异步操作测试的数字是什么、数字是否为质数，以及第一个除数的值是什么（如果不是质数的话）。 此外，它还保留描述所发生的任何异常的状态，以及与此任务对应的 <xref:System.ComponentModel.AsyncOperation>。  
   
-#### <a name="to-complete-an-asynchronous-operation"></a>若要完成异步操作，请执行以下操作：  
+### <a name="to-complete-an-asynchronous-operation"></a>若要完成异步操作，请执行以下操作：  
   
 - 实现完成方法。 此方法需要使用六个参数，用于填充通过客户端的 `CalculatePrimeCompletedEventHandler` 返回到客户端的 `CalculatePrimeCompletedEventArgs`。 它还从内部集合中删除客户端的任务 ID 令牌，并通过调用 <xref:System.ComponentModel.AsyncOperation.PostOperationCompleted%2A> 结束异步操作的生存期。 <xref:System.ComponentModel.AsyncOperation> 封送对适用于应用模型的线程或上下文执行的调用。  
   
@@ -156,7 +156,7 @@ ms.locfileid: "66423874"
 ## <a name="checkpoint"></a>检查点  
  此时，可以生成组件。  
   
-#### <a name="to-test-your-component"></a>测试组件的具体步骤  
+### <a name="to-test-your-component"></a>测试组件的具体步骤  
   
 - 编译组件。  
   
@@ -178,7 +178,7 @@ ms.locfileid: "66423874"
 > [!NOTE]
 >  进度事件报告是在 `BuildPrimeNumberList` 方法中实现。 在快速运行的计算机上，`ProgressChanged` 事件可能会快速连续抛出。 对其抛出这些事件的客户端线程必须能够处理这种情况。 消息可能会像洪水般涌入用户界面代码，导致代码无法不断更新，继而导致无响应。 有关处理此情况的示例用户界面，请参阅[如何：实现基于事件的异步模式的客户端](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md)。  
   
-#### <a name="to-execute-the-prime-number-calculation-asynchronously"></a>若要异步执行质数计算，请执行以下操作：  
+### <a name="to-execute-the-prime-number-calculation-asynchronously"></a>若要异步执行质数计算，请执行以下操作：  
   
 1. 实现 `TaskCanceled` 实用工具方法。 此方法检查任务生存期集合中是否有给定的任务 ID；如果找不到任务 ID，就会返回 `true`。  
   
@@ -210,7 +210,7 @@ ms.locfileid: "66423874"
 ## <a name="checkpoint"></a>检查点  
  此时，可以生成组件。  
   
-#### <a name="to-test-your-component"></a>测试组件的具体步骤  
+### <a name="to-test-your-component"></a>测试组件的具体步骤  
   
 - 编译组件。  
   
@@ -221,7 +221,7 @@ ms.locfileid: "66423874"
   
  若要取消特定挂起操作，请对相应的 <xref:System.ComponentModel.AsyncOperation> 调用 <xref:System.ComponentModel.AsyncOperation.PostOperationCompleted%2A>。 这样一来，可以结束操作，随后只要调用 <xref:System.ComponentModel.AsyncOperation> 都会导致异常抛出。  
   
-#### <a name="to-implement-start-and-cancel-functionality"></a>若要实现启动和取消功能，请执行以下操作：  
+### <a name="to-implement-start-and-cancel-functionality"></a>若要实现启动和取消功能，请执行以下操作：  
   
 1. 实现 `CalculatePrimeAsync` 方法。 请确保相对于表示当前挂起任务的所有令牌，客户端提供的令牌（任务 ID）都是唯一的。 如果客户端传入的令牌不唯一，`CalculatePrimeAsync` 会抛出异常。 如果唯一，令牌会被添加到任务 ID 集合中。  
   
@@ -236,7 +236,7 @@ ms.locfileid: "66423874"
 ## <a name="checkpoint"></a>检查点  
  此时，可以生成组件。  
   
-#### <a name="to-test-your-component"></a>测试组件的具体步骤  
+### <a name="to-test-your-component"></a>测试组件的具体步骤  
   
 - 编译组件。  
   

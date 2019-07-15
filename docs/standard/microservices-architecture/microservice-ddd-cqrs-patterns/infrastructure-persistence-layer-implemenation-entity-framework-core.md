@@ -2,12 +2,12 @@
 title: 使用 Entity Framework Core 实现基础结构持久性层
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 探索使用 Entity Framework Core 实现基础结构持久性层的细节。
 ms.date: 10/08/2018
-ms.openlocfilehash: c6b0a022dfecb24c479a0fd3c84dbde719a390a8
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 7e3480999b115ac13f8d7ebcaed826b407aa7637
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65639529"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778052"
 ---
 # <a name="implement-the-infrastructure-persistence-layer-with-entity-framework-core"></a>使用 Entity Framework Core 实现基础结构持久性层
 
@@ -21,7 +21,7 @@ Entity Framework (EF) Core 是轻量化、可扩展和跨平台版的常用 Enti
 
 EF 简介已提供于 Microsoft 文档中，因此这里我们只提供指向该信息的链接。
 
-#### <a name="additional-resources"></a>其他资源
+### <a name="additional-resources"></a>其他资源
 
 - **Entity Framework Core** \
   [https://docs.microsoft.com/ef/core/](/ef/core/)
@@ -37,7 +37,7 @@ EF 简介已提供于 Microsoft 文档中，因此这里我们只提供指向该
 
 ## <a name="infrastructure-in-entity-framework-core-from-a-ddd-perspective"></a>Entity Framework Core 中的基础结构（DDD 角度）
 
-从 DDD 的角度来看，EF 的一个重要功能是能够使用 POCO 域实体，在 EF 术语中也称为 POCO 代码优先实体。 如果使用 POCO 域实体，根据[持久性无感知](https://deviq.com/persistence-ignorance/)和[基础结构无感知](https://ayende.com/blog/3137/infrastructure-ignorance)原则，域模型类对于持久性是无感知的。
+从 DDD 的角度来看，EF 的一个重要功能是能够使用 POCO 域实体，在 EF 术语中也称为 POCO 代码优先实体  。 如果使用 POCO 域实体，根据[持久性无感知](https://deviq.com/persistence-ignorance/)和[基础结构无感知](https://ayende.com/blog/3137/infrastructure-ignorance)原则，域模型类对于持久性是无感知的。
 
 根据 DDD 模式，应在实体类自身内封装域行为和规则，以便在访问任何集合时，它可以控制不变量、验证和规则。 因此，从 DDD 角度来看，允许公开访问子实体或值对象的集合不是一个好做法。 相反，建议公开用于控制如何及何时更新字段和属性集合的方法，以及这种情况下应发生什么行为和操作的方法。
 
@@ -230,7 +230,7 @@ builder.RegisterType<OrderRepository>()
 
 请注意，DbContext 设置为范围内 (InstancePerLifetimeScope) 生存期（DBContext 的默认生存期）时，为存储库使用的单一生存期可能导致严重的并发问题。
 
-#### <a name="additional-resources"></a>其他资源
+### <a name="additional-resources"></a>其他资源
 
 - **Implementing the Repository and Unit of Work Patterns in an ASP.NET MVC Application** \（在 ASP.NET MVC 应用程序中实现存储库模式和工作单元模式）
   <https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application>
@@ -243,7 +243,7 @@ builder.RegisterType<OrderRepository>()
 
 ## <a name="table-mapping"></a>表映射
 
-表映射标识要从数据库查询并保存到数据库的表数据。 前面你已了解如何使用域实体（例如，产品或订单域）来生成相关的数据库架构。 EF 特别围绕着约定的概念进行设计。 约定处理“表的名称是什么？” 或者“什么属性是主键？”这类问题。 约定通常基于约定俗成的名称，例如主键通常是一个以 Id 结尾的属性。
+表映射标识要从数据库查询并保存到数据库的表数据。 前面你已了解如何使用域实体（例如，产品或订单域）来生成相关的数据库架构。 EF 特别围绕着约定的概念进行设计  。 约定处理“表的名称是什么？” 或者“什么属性是主键？”这类问题。 约定通常基于约定俗成的名称，例如主键通常是一个以 Id 结尾的属性。
 
 按照约定，每个实体将设置为映射到名称与 `DbSet<TEntity>` 属性（公开派生上下文中的实体）相同的表中。 如果给定实体未提供任何 `DbSet<TEntity>` 值，则使用类名。
 
@@ -447,7 +447,7 @@ public IEnumerable<T> List(ISpecification<T> spec)
 
 尽管我们不建议从存储库返回 IQueryable，但可以在存储库中使用它们来生成一系列结果。 可以看到此方法在以上 List 方法中使用，List 方法使用中间 IQueryable 表达式来生成查询的包含内容列表，然后再使用最后一行上的规范条件来执行查询。
 
-#### <a name="additional-resources"></a>其他资源
+### <a name="additional-resources"></a>其他资源
 
 - **Table Mapping** \（表映射）
   [https://docs.microsoft.com/ef/core/modeling/relational/tables](/ef/core/modeling/relational/tables)
@@ -461,7 +461,7 @@ public IEnumerable<T> List(ISpecification<T> spec)
 - **Steve Smith.Encapsulated Collections in Entity Framework Core** \（Entity Framework Core 中的封装集合）
   <https://ardalis.com/encapsulated-collections-in-entity-framework-core>
 
-- 阴影属性 \
+- 阴影属性 \ 
   [https://docs.microsoft.com/ef/core/modeling/shadow-properties](/ef/core/modeling/shadow-properties)
 
 - **The Specification pattern** \（规范模式）

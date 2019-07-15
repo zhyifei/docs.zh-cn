@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: f4a5911787fa5f72be1dcd15c67b3f132c3f1110
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 9c2a8eca3f4498906cf703ff3b8ffb7336ff7a1b
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59803302"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67804396"
 ---
 ### <a name="icontobitmap-successfully-converts-icons-with-png-frames-into-bitmap-objects"></a>Icon.ToBitmap 成功将带 PNG 帧的图标转换为位图对象
 
@@ -16,3 +16,4 @@ ms.locfileid: "59803302"
 |版本|4.6|
 |类型|重定目标|
 |受影响的 API|<ul><li><xref:System.Drawing.Icon.ToBitmap?displayProperty=nameWithType></li></ul>|
+

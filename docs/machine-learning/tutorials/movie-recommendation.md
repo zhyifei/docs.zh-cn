@@ -3,15 +3,15 @@ title: 教程：生成影片推荐系统 - 矩阵因子分解
 description: 本教程演示如何在 .NET Core 控制台应用程序中使用 ML.NET 生成电影推荐系统。 这些步骤使用 C# 和 Visual Studio 2019。
 author: briacht
 ms.author: johalex
-ms.date: 05/06/2019
+ms.date: 07/09/2019
 ms.custom: mvc, title-hack-0516
 ms.topic: tutorial
-ms.openlocfilehash: 512c8d663835da77c05fb24926ff85c56afd11ca
-ms.sourcegitcommit: 90f0bee0e8a416e45c78fa3ad4c91ef00e5228d5
+ms.openlocfilehash: bf04f5a098bd2c378a2b73d7684eb74e16feb728
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66725413"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779049"
 ---
 # <a name="tutorial-build-a-movie-recommender-using-matrix-factorizaton-with-mlnet"></a>教程：使用矩阵因子分解和 ML.NET 生成影片推荐系统
 
@@ -56,7 +56,7 @@ ms.locfileid: "66725413"
 
 3. 安装“Microsoft.ML”和“Microsoft.ML.Recommender”NuGet 包   ：
 
-    在“解决方案资源管理器”中，右键单击项目，然后选择“管理 NuGet 包”   。 选择“nuget.org”作为包源，然后选择“浏览”选项卡并搜索“Microsoft.ML”，在列表中选择“1.0.0”包，再选择“安装”按钮     。 选择“预览更改”  对话框上的“确定”  按钮，如果你同意所列包的许可条款，则选择“接受许可”  对话框上的“我接受”  按钮。 对 **Microsoft.ML.Recommender v0.12.0** 重复这些步骤。
+    在“解决方案资源管理器”中，右键单击项目，然后选择“管理 NuGet 包”   。 选择“nuget.org”作为包源，然后选择“浏览”选项卡并搜索“Microsoft.ML”，在列表中选择包，再选择“安装”按钮    。 选择“预览更改”  对话框上的“确定”  按钮，如果你同意所列包的许可条款，则选择“接受许可”  对话框上的“我接受”  按钮。 对“Microsoft.ML.Recommender”重复这些步骤  。
 
 4. 在 Program.cs 文件的顶部添加以下 `using` 语句  ：
 
@@ -96,7 +96,7 @@ ML.NET 过程的第一步是准备并加载用于训练和测试数据的模型�
 
 想要预测影片评分，因此评分列为 `Label`。 其他三列，`userId``movieId` 和 `timestamp` 都用 `Features` 来预测 `Label`。
 
-| 功能      | Label         |
+| 特征      | Label         |
 | ------------- |:-------------:|
 | `userId`        |    `rating`     |
 | `movieId`      |               |
@@ -106,7 +106,7 @@ ML.NET 过程的第一步是准备并加载用于训练和测试数据的模型�
 
 在此示例中，应将 `timestamp` 列排除为 `Feature`，因为时间戳并不会真正影响用户对给定影片的评分方式，因此无法进行更准确的预测：
 
-| 功能      | Label         |
+| 特征      | Label         |
 | ------------- |:-------------:|
 | `userId`        |    `rating`     |
 | `movieId`      |               |
@@ -350,7 +350,7 @@ Movie 10 is recommended for user 6
 使用下面的代码紧随 `UseModelForSinglePrediction()` 方法后创建 `SaveModel()` 方法：
 
 ```csharp
-public static void SaveModel(MLContext mlContext, ITransformer model)
+public static void SaveModel(MLContext mlContext, DataViewSchema trainingDataViewSchema, ITransformer model)
 {
 
 }
@@ -417,7 +417,7 @@ Movie 10 is recommended for user 6
 
 [交叉验证](../how-to-guides/train-cross-validation-ml-net.md)是一种评估模型的方法，它将数据随机分成子集（而不是像你在本教程中那样从数据集中提取测试数据），并将一些组作为训练数据，一些组作为测试数据。 从模型质量方面看，该方法优于进行训练-测试拆分。
 
-### <a name="features"></a>功能
+### <a name="features"></a>特征
 
 在本教程中，只使用数据集提供的三个 `Features`（`user id``movie id` 和 `rating`）。
 

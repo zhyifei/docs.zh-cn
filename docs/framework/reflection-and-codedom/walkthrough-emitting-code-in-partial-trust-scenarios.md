@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c45be261-2a9d-4c4e-9bd6-27f0931b7d25
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7238edb35e7fd69c0161adbc3b80b122575bbf75
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: f13a07be13294cc408cd381bef6eec1f9095365f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690308"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742460"
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>演练：在部分信任应用场景中发出代码
 反射发出以完全信任或部分信任形式使用相同的 API 集，但某些功能在部分受信任代码中需要特殊权限。 此外，反射发出具有一个功能，即匿名托管动态方法，旨在由安全透明的程序集采用部分信任的形式使用。  
@@ -57,7 +57,7 @@ ms.locfileid: "66690308"
   
  下列过程创建沙盒应用程序域，它运行部分信任的代码，从而测试方案，方案中发出的代码只能访问公共类型的公共成员。 随后的过程演示如何添加 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess> 来测试方案，方案中发出的代码可以访问程序集中的非公共类型和成员（授予了程序集相同权限或较低权限）。  
   
-##### <a name="to-create-an-application-domain-with-partial-trust"></a>创建部分信任的应用程序域  
+#### <a name="to-create-an-application-domain-with-partial-trust"></a>创建部分信任的应用程序域  
   
 1. 创建一个权限集，将其授予沙盒应用程序域中的程序集。 在这种情况下，使用的是 Internet 区域的权限集。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "66690308"
 > [!NOTE]
 >  为防止特权提升，在构造匿名托管动态方法时，将包含发出程序集的堆栈信息。 调用方法时检查堆栈信息。 因此，从完全信任的代码调用的匿名托管动态方法仍被限制为发出程序集的信任等级。  
   
-##### <a name="to-create-an-application-domain-with-partial-trust-plus-rma"></a>创建部分信任的应用程序域和 RMA  
+#### <a name="to-create-an-application-domain-with-partial-trust-plus-rma"></a>创建部分信任的应用程序域和 RMA  
   
 1. 创建一个具有 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess> (RMA) 标记的 <xref:System.Security.Permissions.ReflectionPermission> 新对象，并使用 <xref:System.Security.PermissionSet.SetPermission%2A?displayProperty=nameWithType> 方法向授予集添加该权限。  
   

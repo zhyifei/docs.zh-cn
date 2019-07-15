@@ -15,12 +15,12 @@ helpviewer_keywords:
 - text files [Visual Basic], reading
 - I/O [Visual Basic], reading text from files
 ms.assetid: 7d2109eb-f98a-4389-b43d-30f384aaa7d5
-ms.openlocfilehash: f3fecf521ca4a9397bacffbb084c4107af97f5b2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: fc96baaff3b70fcb32e19e2ce08bdb0187c86c01
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59345269"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67783203"
 ---
 # <a name="walkthrough-manipulating-files-by-using-net-framework-methods-visual-basic"></a>演练：使用 .NET Framework 方法操作文件 (Visual Basic)
 此演练演示了如何使用 <xref:System.IO.StreamReader> 类打开和读取文件，如何查看文件是否正被访问，如何在使用 <xref:System.IO.StreamReader> 类实例读取的文件中搜索字符串，以及如何使用 <xref:System.IO.StreamWriter> 类写入文件。  
@@ -30,15 +30,15 @@ ms.locfileid: "59345269"
 ## <a name="creating-the-application"></a>创建应用程序  
  启动 Visual Studio，并创建一个用户可用于写入指定文件的窗体来开始项目。  
   
-#### <a name="to-create-the-project"></a>要创建项目  
+### <a name="to-create-the-project"></a>要创建项目  
   
-1. 在“文件”菜单上，选择“新建项目”。  
+1. 在“文件”菜单上，选择“新建项目”。    
   
-2. 在“新建项目”窗格中，单击“Windows 应用程序”。  
+2. 在“新建项目”窗格中，单击“Windows 应用程序”。    
   
-3. 在“名称”框中，键入 `MyDiary`，然后单击“确定”。  
+3. 在“名称”框中，键入 `MyDiary`，然后单击“确定”。    
   
-     Visual Studio 将项目添加到“解决方案资源管理器”中，“Windows 窗体设计器”随即打开。  
+     Visual Studio 将项目添加到“解决方案资源管理器”中，“Windows 窗体设计器”随即打开   。  
   
 4. 将下表中的控件添加到窗体中，并为其属性设置相应的值。  
   
@@ -51,9 +51,9 @@ ms.locfileid: "59345269"
 ## <a name="writing-to-the-file"></a>写入文件  
  若要通过应用程序添加写入文件的功能，请使用 <xref:System.IO.StreamWriter> 类。 <xref:System.IO.StreamWriter> 设计用于特定编码的字符输出，而 <xref:System.IO.Stream> 类设计用于字节的输入和输出。 使用 <xref:System.IO.StreamWriter> 可将多行信息写入标准的文本文件。 有关 <xref:System.IO.StreamWriter> 类的详细信息，请参阅 <xref:System.IO.StreamWriter>。  
   
-#### <a name="to-add-writing-functionality"></a>添加写入功能  
+### <a name="to-add-writing-functionality"></a>添加写入功能  
   
-1. 从“视图”菜单中选择“代码”，以打开代码编辑器。  
+1. 从“视图”菜单中选择“代码”，以打开代码编辑器。    
   
 2. 由于该应用程序引用 <xref:System.IO> 命名空间，因此，请在代码的最开头处，在窗体的类声明（以 `Public Class Form1` 开始）之前，添加以下语句。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "59345269"
   
      写入文件前，必须创建一个 <xref:System.IO.StreamWriter> 类的实例。  
   
-3. 从“视图”菜单中选择“设计器”，以返回“Windows 窗体设计器”。 双击 `Submit` 按钮，为该按钮创建一个 <xref:System.Windows.Forms.Control.Click> 事件处理程序，然后添加以下代码。  
+3. 从“视图”菜单中选择“设计器”，以返回“Windows 窗体设计器”。    双击 `Submit` 按钮，为该按钮创建一个 <xref:System.Windows.Forms.Control.Click> 事件处理程序，然后添加以下代码。  
   
      [!code-vb[VbVbcnMyFileSystem#36](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#36)]  
   
@@ -96,21 +96,21 @@ ms.locfileid: "59345269"
 |<xref:System.Windows.Forms.Button>|**名称**<br /><br /> **文本**|`GetEntries`<br /><br /> **获取项**|  
 |<xref:System.Windows.Forms.ComboBox>|**名称**<br /><br /> **文本**<br /><br /> **启用**|`PickEntries`<br /><br /> **选择一项**<br /><br /> `False`|  
   
-#### <a name="to-populate-the-combo-box"></a>填充组合框  
+### <a name="to-populate-the-combo-box"></a>填充组合框  
   
 1. `PickEntries`<xref:System.Windows.Forms.ComboBox> 用于显示用户提交每一项的日期，这样，用户就可以选择特定日期的项。 创建 `GetEntries` 按钮的 <xref:System.Windows.Forms.Control.Click> 事件处理程序并添加以下代码。  
   
      [!code-vb[VbVbcnMyFileSystem#41](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#41)]  
   
-2. 若要测试代码，请按 F5 编译该应用程序，然后单击“获取项”。 单击 <xref:System.Windows.Forms.ComboBox> 中的下拉箭头，以显示条目日期。  
+2. 若要测试代码，请按 F5 编译该应用程序，然后单击“获取项”。  单击 <xref:System.Windows.Forms.ComboBox> 中的下拉箭头，以显示条目日期。  
   
-#### <a name="to-choose-and-display-individual-entries"></a>选择并显示个别项  
+### <a name="to-choose-and-display-individual-entries"></a>选择并显示个别项  
   
 1. 创建 `Display` 按钮的 <xref:System.Windows.Forms.Control.Click> 事件处理程序并添加以下代码。  
   
      [!code-vb[VbVbcnMyFileSystem#42](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#42)]  
   
-2. 若要测试代码，请按 F5 编译该应用程序，然后提交一项。 单击“获取项”，从 <xref:System.Windows.Forms.ComboBox> 中选择一项，然后单击“显示”。 所选条目的内容显示在 `DisplayEntry`<xref:System.Windows.Forms.TextBox> 中。  
+2. 若要测试代码，请按 F5 编译该应用程序，然后提交一项。 单击“获取项”，从 <xref:System.Windows.Forms.ComboBox> 中选择一项，然后单击“显示”。   所选条目的内容显示在 `DisplayEntry`<xref:System.Windows.Forms.TextBox> 中。  
   
 ## <a name="enabling-users-to-delete-or-modify-entries"></a>允许用户删除或修改项  
  最后，可以包括其他功能，以允许用户使用 `DeleteEntry` 和 `EditEntry` 按钮来删除或修改项。 除非显示有项，否则这两个按钮都保持禁用状态。  
@@ -123,7 +123,7 @@ ms.locfileid: "59345269"
 |<xref:System.Windows.Forms.Button>|**名称**<br /><br /> **文本**<br /><br /> **启用**|`EditEntry`<br /><br /> **编辑项**<br /><br /> `False`|  
 |<xref:System.Windows.Forms.Button>|**名称**<br /><br /> **文本**<br /><br /> **启用**|`SubmitEdit`<br /><br /> **提交编辑**<br /><br /> `False`|  
   
-#### <a name="to-enable-deletion-and-modification-of-entries"></a>允许删除和修改项  
+### <a name="to-enable-deletion-and-modification-of-entries"></a>允许删除和修改项  
   
 1. 在 `DisplayEntry.Text = ReadString` 之后，将以下代码添加到 `Display` 按钮的 <xref:System.Windows.Forms.Control.Click> 事件。  
   
@@ -145,7 +145,7 @@ ms.locfileid: "59345269"
   
      [!code-vb[VbVbcnMyFileSystem#47](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#47)]  
   
- 若要测试代码，请按 F5 编译该应用程序。 单击“获取项”，选择一项，然后单击“显示”。 条目将出现在 `DisplayEntry`<xref:System.Windows.Forms.TextBox> 中。 单击“编辑项”。 条目将出现在 `Entry`<xref:System.Windows.Forms.TextBox> 中。 编辑 `Entry`<xref:System.Windows.Forms.TextBox> 中的项，然后单击“提交编辑”。 打开 `MyDiary.txt` 文件以确认所做的更正。 现在，选择一项，然后单击“删除项”。 当 <xref:System.Windows.Forms.MessageBox> 请求确认时，请单击“确定”。 关闭该应用程序，然后打开 `MyDiary.txt`，以确认该项已删除。  
+ 若要测试代码，请按 F5 编译该应用程序。 单击“获取项”，选择一项，然后单击“显示”。   条目将出现在 `DisplayEntry`<xref:System.Windows.Forms.TextBox> 中。 单击“编辑项”  。 条目将出现在 `Entry`<xref:System.Windows.Forms.TextBox> 中。 编辑 `Entry`<xref:System.Windows.Forms.TextBox> 中的项，然后单击“提交编辑”  。 打开 `MyDiary.txt` 文件以确认所做的更正。 现在，选择一项，然后单击“删除项”  。 当 <xref:System.Windows.Forms.MessageBox> 请求确认时，请单击“确定”  。 关闭该应用程序，然后打开 `MyDiary.txt`，以确认该项已删除。  
   
 ## <a name="see-also"></a>请参阅
 

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 71c81cf188fa4c2300661f10eb87e7ae00e031f6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 9ad283af76085c228bedceb6db723a1d18b10210
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59803342"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67804477"
 ---
 ### <a name="etw-event-names-cannot-differ-only-by-a-start-or-stop-suffix"></a>ETW 事件名称无法仅通过“Start”或“Stop”后缀区别开来
 
@@ -15,3 +15,4 @@ ms.locfileid: "59803342"
 |范围|边缘|
 |版本|4.6|
 |类型|重定目标|
+

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 6dd7f2a2f6dec306940650beee58104b20788bdb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 7848b9a15c34e40c33495c31bd942e93c522cbdb
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59803352"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67859303"
 ---
 ### <a name="calls-to-claimsidentity-constructors"></a>调用 ClaimsIdentity 构造函数
 
@@ -16,3 +16,4 @@ ms.locfileid: "59803352"
 |版本|4.6.2|
 |类型|重定目标|
 |受影响的 API|<ul><li><xref:System.Security.Claims.ClaimsIdentity.%23ctor(System.Security.Principal.IIdentity)?displayProperty=nameWithType></li><li><xref:System.Security.Claims.ClaimsIdentity.%23ctor(System.Security.Principal.IIdentity,System.Collections.Generic.IEnumerable{System.Security.Claims.Claim})?displayProperty=nameWithType></li><li><xref:System.Security.Claims.ClaimsIdentity.%23ctor(System.Security.Principal.IIdentity,System.Collections.Generic.IEnumerable{System.Security.Claims.Claim},System.String,System.String,System.String)?displayProperty=nameWithType></li></ul>|
+

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 2359dafb9042c13ae75e644d4ea655f53c14e95e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: ce7e2db3f74ec24f47b1c224335451c997c4c349
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59803341"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67804336"
 ---
 ### <a name="wcf-binding-with-the-transportwithmessagecredential-security-mode"></a>与 TransportWithMessageCredential 安全模式绑定的 WCF
 
@@ -16,3 +16,4 @@ ms.locfileid: "59803341"
 |版本|4.6.1|
 |类型|重定目标|
 |受影响的 API|<ul><li><xref:System.ServiceModel.BasicHttpSecurityMode.TransportWithMessageCredential?displayProperty=nameWithType></li><li><xref:System.ServiceModel.BasicHttpsSecurityMode.TransportWithMessageCredential?displayProperty=nameWithType></li><li><xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential?displayProperty=nameWithType></li><li><xref:System.ServiceModel.WSFederationHttpSecurityMode.TransportWithMessageCredential?displayProperty=nameWithType></li></ul>|
+

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 39dc55aa-f2a1-4093-87bb-f1c0edb6e761
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6933aa5ee253f78806aba401749256934f490126
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: cb45fc253e24c9770436432d2734ba8fce249453
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833593"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67662368"
 ---
 # <a name="packaging-an-assembly-for-com"></a>将 COM 的程序集打包
 
@@ -61,7 +61,7 @@ COM 开发人员可从其计划纳入应用程序的托管类型相关信息中�
 
   无论选择的机制如何，生成的类型库中仅包含所提供程序集中定义的公共类型。
 
-  可将类型库打包为单独文件，或将其作为 Win32 资源文件嵌入基于 .NET 的应用程序。 Microsoft Visual Basic 6.0 自动执行此任务；但若 [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)]，必须手动嵌入类型库。 有关说明，请参阅[如何：将类型库作为 Win32 资源嵌入基于 .NET 的应用程序](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ww9a897z(v=vs.100))。
+有关说明，请参阅[如何：将类型库作为 Win32 资源嵌入基于 .NET 的应用程序](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ww9a897z(v=vs.100))。
 
 <a name="cpconpackagingassemblyforcomanchor1"></a>
 

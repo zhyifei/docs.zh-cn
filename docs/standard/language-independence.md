@@ -7,12 +7,12 @@ dev_langs:
 - vb
 ms.technology: dotnet-standard
 ms.assetid: 2dbed1bc-86f5-43cd-9a57-adbb1c5efba4
-ms.openlocfilehash: 79b74090a5a443c944df94f9df1c3f4d283df02f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: af266a551a194f55bc4951a8bdb0e9af6f823663
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59214736"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67663007"
 ---
 # <a name="language-independence-and-language-independent-components"></a>语言独立性和与语言无关的组件
 
@@ -29,35 +29,35 @@ ms.locfileid: "59214736"
 
 * [CLS 遵从性规则](#cls-compliance-rules)
 
-    * [类型和类型成员签名](#types-and-type-member-signatures)
+  * [类型和类型成员签名](#types-and-type-member-signatures)
 
-    * [命名约定](#naming-conventions)
+  * [命名约定](#naming-conventions)
 
-    * [类型转换](#type-conversion)
+  * [类型转换](#type-conversion)
 
-    * [数组](#arrays)
+  * [数组](#arrays)
 
-    * [接口](#interfaces)
+  * [接口](#interfaces)
 
-    * [枚举](#enumerations)
+  * [枚举](#enumerations)
 
-    * [类型成员概述](#type-members-in-general)
+  * [类型成员概述](#type-members-in-general)
 
-    * [成员可访问性](#member-accessibility)
+  * [成员可访问性](#member-accessibility)
 
-    * [泛型类型和成员](#generic-types-and-members)
+  * [泛型类型和成员](#generic-types-and-members)
 
-    * [构造函数](#constructors)
+  * [构造函数](#constructors)
 
-    * [属性](#properties)
+  * [属性](#properties)
 
-    * [事件](#events)
+  * [事件](#events)
 
-    * [重载](#overloads)
+  * [重载](#overloads)
 
-    * [异常](#exceptions)
+  * [异常](#exceptions)
 
-    * [特性](#attributes)
+  * [特性](#attributes)
 
 * [CLSCompliantAttribute 特性](#the-clscompliantattribute-attribute)
 
@@ -1307,11 +1307,11 @@ End Module
 
 * 有两种枚举：
 
-    * 一种表示一组互斥的命名整数值的枚举。 这种类型的枚举由缺少 [System.FlagsAttribute](xref:System.FlagsAttribute) 自定义特性表示。
+  * 一种表示一组互斥的命名整数值的枚举。 这种类型的枚举由缺少 [System.FlagsAttribute](xref:System.FlagsAttribute) 自定义特性表示。
 
-    * 一种表示可结合用来生成未命名值的一组位标志的枚举。 这种类型的枚举由存在 [System.FlagsAttribute](xref:System.FlagsAttribute) 自定义特性表示。
+  * 一种表示可结合用来生成未命名值的一组位标志的枚举。 这种类型的枚举由存在 [System.FlagsAttribute](xref:System.FlagsAttribute) 自定义特性表示。
 
- 有关详细信息，请参阅 [Enum](xref:System.Enum) 结构的文档。
+有关详细信息，请参阅 [Enum](xref:System.Enum) 结构的文档。
 
 * 枚举的值不限于其指定值的范围。 换言之，枚举中的值的范围是其基础值的范围。 您可以使用 `Enum.IsDefined` 方法来确定指定的值是否为枚举成员。
 
@@ -1620,7 +1620,7 @@ End Module
 '       Outer`1+Inner1B`1[System.String,System.Int32]
 ```
 
-泛型类型名称采用 *name*'*n* 格式进行编码，其中 *name* 是类型名称，*`* 是字符文本，*n* 是在类型上声明的参数数目，或对于嵌套泛型类型为最近引入的类型参数的数目。 此泛型类型名称的编码主要对使用反射来访问库中符合 CLS 的泛型类型的开发人员很有用。
+泛型类型名称采用 *name*'*n* 格式进行编码，其中 *name* 是类型名称， *`* 是字符文本，*n* 是在类型上声明的参数数目，或对于嵌套泛型类型为最近引入的类型参数的数目。 此泛型类型名称的编码主要对使用反射来访问库中符合 CLS 的泛型类型的开发人员很有用。
 
 如果将约束应用于泛型类型，则任何用作约束的类型也必须符合 CLS。 下面的示例定义一个名为 `BaseClass` 的不符合 CLS 的类和一个其类型参数必须派生自 `BaseCollection` 的名为 `BaseClass` 的泛型类。 但由于 `BaseClass` 不符合 CLS，因此编译器会发出警告。
 
@@ -2066,7 +2066,7 @@ End Class
 
 * 用于移除事件处理程序的名为 `remove`_*EventName* 的方法。 例如，`DbConnection.StateChange` 事件的移除方法名为 `remove_StateChange`。
 
-* 用于指示事件已发生的名为 `raise`\_EventName 的方法。
+* 用于指示事件已发生的名为 `raise`\_EventName  的方法。
 
 > [!NOTE]
 > 大多数关于事件的公共语言规范的规则都通过语言编译器实施，且对组件开发人员是透明的。
@@ -2667,7 +2667,7 @@ End Class
 
 `CLSCompliantAttribute` 特性的值由包含的程序元素继承。 例如，如果程序集标记为符合 CLS，则其类型也符合 CLS。 如果类型标记为符合 CLS，则其嵌套的类型和成员也符合 CLS。
 
-您可以通过将 `CLSCompliantAttribute` 特性应用到包含的编程元素来显式重写继承的遵从性。 例如，可以使用 isCompliant 值为 `false` 的 `CLSCompliantAttribute` 特性来定义符合标准的程序集中不符合标准的类型，还可以使用 isComplian 值为 `true` 的特性来定义不符合标准的程序集中符合标准的类型。 您还可以在符合标准的类型中定义不符合标准的成员。 但是，不符合标准的类型无法拥有符合标准的成员，因此无法使用 *isCompliant* 值为 `true` 的特性从一个不符合标准的类型重写继承。
+您可以通过将 `CLSCompliantAttribute` 特性应用到包含的编程元素来显式重写继承的遵从性。 例如，可以使用 isCompliant  值为 `false` 的 `CLSCompliantAttribute` 特性来定义符合标准的程序集中不符合标准的类型，还可以使用 isComplian  值为 `true` 的特性来定义不符合标准的程序集中符合标准的类型。 您还可以在符合标准的类型中定义不符合标准的成员。 但是，不符合标准的类型无法拥有符合标准的成员，因此无法使用 *isCompliant* 值为 `true` 的特性从一个不符合标准的类型重写继承。
 
 在开发组件时，应始终使用 `CLSCompliantAttribute` 特性来指示您的程序集、其类型及其成员是否符合 CLS。
 

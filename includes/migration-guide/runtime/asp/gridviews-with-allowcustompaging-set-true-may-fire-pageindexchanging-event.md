@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: c9c46793a0f66894649796d960547848ff5ebf8c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: a7a8bd1a9823a621f3a63c6877da9454489b48fd
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59803318"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67858549"
 ---
 ### <a name="gridviews-with-allowcustompaging-set-to-true-may-fire-the-pageindexchanging-event-when-leaving-the-final-page-of-the-view"></a>AllowCustomPaging 设为 true 的 GridViews 可能在离开视图最后一页时触发 PageIndexChanging 事件
 
@@ -16,3 +16,4 @@ ms.locfileid: "59803318"
 |版本|4.5|
 |类型|运行时|
 |受影响的 API|<ul><li><xref:System.Web.UI.WebControls.GridView.AllowCustomPaging?displayProperty=nameWithType></li></ul>|
+

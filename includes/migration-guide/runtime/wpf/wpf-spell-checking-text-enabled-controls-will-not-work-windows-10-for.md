@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: abb89099c4c8a5d9c0e55ef8f357faf44e75b045
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 97ca78e154eb25e863256e06caa119fe753bc344
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59774128"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67858467"
 ---
 ### <a name="wpf-spell-checking-in-text-enabled-controls-will-not-work-in-windows-10-for-languages-not-in-the-oss-input-language-list"></a>支持文本的控件中的 WPF 拼写检查在 Windows 10 中将不适用于 OS 输入语言列表以外的语言
 
@@ -15,3 +15,4 @@ ms.locfileid: "59774128"
 |范围|边缘|
 |版本|4.6|
 |类型|运行时|
+
