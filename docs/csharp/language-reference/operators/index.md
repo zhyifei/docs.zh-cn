@@ -18,12 +18,12 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 0cd0a06dc919ecf11f1a3d343fe8ff023a5f8524
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 0639becb1620daf7d457995392d134d40b90e826
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67609915"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68235944"
 ---
 # <a name="c-operators-c-reference"></a>C# 运算符（C# 参考）
 
@@ -61,7 +61,7 @@ C# 提供了许多由内置类型支持的预定义运算符。 例如，[算术
 
 [default(T)](../../programming-guide/statements-expressions-operators/default-value-expressions.md) - 生成类型 T 的默认值。
 
-[nameof](../keywords/nameof.md)：获取变量、类型或成员的简单（非限定）名称作为常数字符串。
+[nameof](nameof.md)：获取变量、类型或成员的简单（非限定）名称作为常数字符串。
 
 [delegate](../../programming-guide/statements-expressions-operators/anonymous-methods.md)：声明并返回委托实例。
 
