@@ -32,12 +32,12 @@ helpviewer_keywords:
 - uint keyword [C#]
 - long keyword [C#]
 - ulong keyword [C#]
-ms.openlocfilehash: bde0b7cea52951cd72bde6cfd7d8f1c7dbcb8f46
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 0a1ed01d9e6cb86ea177e8b947627f9dc02eedae
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67425592"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67744213"
 ---
 # <a name="integral-numeric-types--c-reference"></a>整型数值类型（C# 参考）
 
@@ -76,14 +76,14 @@ var binaryLiteral = 0b_0010_1010;
 
 十进制文本不需要任何前缀。 `x` 或 `X` 前缀表示十六进制文本  。 `b` 或 `B` 前缀表示二进制文本  。 `binaryLiteral` 的声明演示将 `_` 用作数字分隔符  。 数字分隔符可以与所有数值文本一起使用。 C# 7.0 及以后版本均支持二进制文本和数字分隔符 `_`。
 
-## <a name="literal-suffixes"></a>文本后缀 
+### <a name="literal-suffixes"></a>文本后缀 
 
-`l` 或 `L` 后缀指定整型文本应为 `long` 类型。 `ul` 或 `UL` 后缀指定 `ulong` 类型。 如果对大于 9,223,372,036,854,775,807（`long` 的最大值）的文本使用 `L` 后缀，则该值将转换为 `ulong` 类型。 如果由整数字面量所表示的值超出了 <xref:System.UInt64.MaxValue?displayProperty=nameWithType>，则将出现编译器错误 [CS1021](../../misc/cs1021.md)。 
+`l` 或 `L` 后缀指定整型文本应为 `long` 类型。 `ul` 或 `UL` 后缀指定 `ulong` 类型。 如果对大于 9,223,372,036,854,775,807（`long` 的最大值）的文本使用 `L` 后缀，则该值将转换为 `ulong` 类型。 如果整型文本表示的值超出了 <xref:System.UInt64.MaxValue?displayProperty=nameWithType>，就会出现编译器错误 [CS1021](../../misc/cs1021.md)。 
 
 > [!NOTE]
 > 也可用小写字母“l”作后缀。 但是，字母“l”容易与数字“1”混淆，因此会生成编译器警告。 为清楚起见，请使用“L”。
 
-## <a name="type-of-an-integral-literal"></a>整型文本类型
+### <a name="type-of-an-integral-literal"></a>整型文本类型
 
 如果整型文本没有后缀，则其类型为以下类型中可表示其值的第一个类型：
 
@@ -118,8 +118,16 @@ var anotherLong = (long)42;
 
 - [C# 语言规范 - 整型类型](~/_csharplang/spec/types.md#integral-types)
 - [C# 参考](../index.md)
-- [浮点型表](../keywords/floating-point-types-table.md)
+- [浮点类型](floating-point-numeric-types.md)
 - [默认值表](../keywords/default-values-table.md)
 - [设置数值结果表的格式](../keywords/formatting-numeric-results-table.md)
 - [内置类型表](../keywords/built-in-types-table.md)
 - [.NET 中的数字](../../../standard/numerics.md)
+- <xref:System.Byte?displayProperty=nameWithType>
+- <xref:System.SByte?displayProperty=nameWithType>
+- <xref:System.Int16?displayProperty=nameWithType>
+- <xref:System.UInt16?displayProperty=nameWithType>
+- <xref:System.Int32?displayProperty=nameWithType>
+- <xref:System.UInt32?displayProperty=nameWithType>
+- <xref:System.Int64?displayProperty=nameWithType>
+- <xref:System.UInt64?displayProperty=nameWithType>

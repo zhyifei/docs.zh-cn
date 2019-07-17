@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 6a600fe5-3af3-4c64-82da-10a0a8e2d79b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f2e2fd6f46a430424e6010adbe0662b5bd3db7ea
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 246e6572deefaf4546afe6fb5326ecc2286215a5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622656"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67766806"
 ---
 # <a name="weak-references"></a>弱引用
 如果应用程序的代码可以访问一个正由该程序使用的对象，垃圾回收器就不能回收该对象， 那么，就认为应用程序对该对象具有强引用。  
@@ -35,7 +35,7 @@ ms.locfileid: "64622656"
   
 - Short  
   
-     垃圾回收功能回收对象后，短弱引用的目标会变为 `null`。 弱引用本身是托管对象，与其他任何托管对象一样需要经过垃圾回收。  短弱引用是 <xref:System.WeakReference> 的默认构造函数。  
+     垃圾回收功能回收对象后，短弱引用的目标会变为 `null`。 弱引用本身是托管对象，与其他任何托管对象一样需要经过垃圾回收。  短弱引用是 <xref:System.WeakReference> 的无参数构造函数。  
   
 - Long  
   

@@ -1,15 +1,15 @@
 ---
 title: 教程：重新定型 TensorFlow 图像分类器 - 迁移学习
 description: 了解如何使用迁移学习和 ML.NET 重新定型图像分类器 TensorFlow 模型。 已定型原始模型，可以对单个图像进行分类。 重新定型后，新模型将图像组织成较大类别。
-ms.date: 06/12/2019
+ms.date: 07/09/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: 9344d0757e140995dfd9ce7d1a355910a81c6d31
-ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
+ms.openlocfilehash: 65f94fa5e725703d79d0dddae761cbfbc3f89e0e
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67539852"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67804759"
 ---
 # <a name="tutorial-retrain-a-tensorflow-image-classifier-with-transfer-learning-and-mlnet"></a>教程：使用迁移学习和 ML.NET 重新定型 TensorFlow 图像分类器
 
@@ -43,7 +43,7 @@ ms.locfileid: "67539852"
 
 * [教程资产目录 .ZIP 文件](https://download.microsoft.com/download/0/E/5/0E5E0136-21CE-4C66-AC18-9917DED8A4AD/image-classifier-assets.zip)
 
-* [InceptionV3 机器学习模型](https://storage.googleapis.com/download.tensorflow.org/models/inception5h.zip)
+* [InceptionV1 机器学习模型](https://storage.googleapis.com/download.tensorflow.org/models/inception5h.zip)
 
 ## <a name="select-the-appropriate-machine-learning-task"></a>选择适当的机器学习任务
 
@@ -77,7 +77,7 @@ ms.locfileid: "67539852"
 
 图像分类模型重用 [Inception 模型](https://storage.googleapis.com/download.tensorflow.org/models/inception5h.zip)，这是对 `ImageNet` 数据集定型的热门图像识别模型，其中 TensorFlow 模型尝试将所有图像分类为 1000 个类别，如“雨伞”、“针织衫”和“洗碗机”。
 
-`Inception v3 model` 可以分类为[深度卷积神经网络](https://en.wikipedia.org/wiki/Convolutional_neural_network)，执行艰难视觉识别任务的效果合理，在一些领域中匹敌或超过人为绩效。 此模型/算法是由多个研究人员根据以下原始文章开发的：[“重新思考计算机视觉的 Inception 体系结构”，作者为 Szegedy 以及其他人](https://arxiv.org/abs/1512.00567)
+`Inception v1 model` 可以分类为[深度卷积神经网络](https://en.wikipedia.org/wiki/Convolutional_neural_network)，执行艰难视觉识别任务的效果合理，在一些领域中匹敌或超过人为绩效。 此模型/算法是由多个研究人员根据以下原始文章开发的：[“重新思考计算机视觉的 Inception 体系结构”，作者为 Szegedy 以及其他人](https://arxiv.org/abs/1512.00567)
 
 由于 `Inception model` 已对数千个不同图像进行过预定型，因此其中包含图像识别所需的[图像特征](https://en.wikipedia.org/wiki/Feature_(computer_vision))。 较低图像特征层识别简单特征（如边缘），较高层识别更复杂的特征（如形状）。 最后一层对更小的数据集进行定型，因为你是从已了解如何分类图像的预定型模型入手。 由于模型允许分类为超过两个类别，因此这是[多类别分类器](../resources/tasks.md#multiclass-classification)示例。 
 

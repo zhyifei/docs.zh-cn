@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c82dc689-7e82-4767-a18d-cd24ce5f05e9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9bb3120887a1a42d01b8d8ddc3351d1209294ffc
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 5e77fac49db4a2faadb5785c4ef15e401f340d8b
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677560"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67663984"
 ---
 # <a name="regular-expression-options"></a>正则表达式选项
 
@@ -44,26 +44,26 @@ ms.locfileid: "57677560"
 
 - 在 `options` 类构造函数或静态（在 Visual Basic 中为 <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>）模式匹配方法的 `Shared` 参数中，如 <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> 或 <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType>。 `options` 参数是 <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> 枚举值的按位“或”组合。
 
-    当通过使用类构造函数的 `options` 参数，将选项提供给 <xref:System.Text.RegularExpressions.Regex> 实例时，这些选项将分配给 <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> 属性。 然而，<xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> 属性不会在正则表达式模式本身中反映内联选项。
+  当通过使用类构造函数的 `options` 参数，将选项提供给 <xref:System.Text.RegularExpressions.Regex> 实例时，这些选项将分配给 <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> 属性。 然而，<xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> 属性不会在正则表达式模式本身中反映内联选项。
 
-    下面的示例进行了这方面的演示。 在标识以字母“d”开头的单词时，它使用 `options` 方法的 <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> 参数来启用不区分大小写匹配和忽略模式空白。
+  下面的示例进行了这方面的演示。 在标识以字母“d”开头的单词时，它使用 `options` 方法的 <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> 参数来启用不区分大小写匹配和忽略模式空白。
 
-    [!code-csharp[Conceptual.Regex.Language.Options#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/example1.cs#6)]
-    [!code-vb[Conceptual.Regex.Language.Options#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/example1.vb#6)]
+  [!code-csharp[Conceptual.Regex.Language.Options#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/example1.cs#6)]
+  [!code-vb[Conceptual.Regex.Language.Options#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/example1.vb#6)]
 
 - 通过在包含语法 `(?imnsx-imnsx)` 的正则表达式模式中应用内联选项。 该选项从选项定义为模式末尾的点应用于该模式，或应用于另一内联选项未定义选项的点。 请注意，<xref:System.Text.RegularExpressions.Regex> 实例的 <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> 属性不会反映这些内联选项。 有关详细信息，请参阅[其他构造](../../../docs/standard/base-types/miscellaneous-constructs-in-regular-expressions.md)主题。
 
-    下面的示例进行了这方面的演示。 在标识以字母“d”开头的单词时，它使用内联选项来启用不区分大小写匹配和忽略模式空白。
+  下面的示例进行了这方面的演示。 在标识以字母“d”开头的单词时，它使用内联选项来启用不区分大小写匹配和忽略模式空白。
 
-    [!code-csharp[Conceptual.Regex.Language.Options#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/example1.cs#7)]
-    [!code-vb[Conceptual.Regex.Language.Options#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/example1.vb#7)]
+  [!code-csharp[Conceptual.Regex.Language.Options#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/example1.cs#7)]
+  [!code-vb[Conceptual.Regex.Language.Options#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/example1.vb#7)]
 
-- 通过在包含语法 `(?imnsx-imnsx:`subexpression`)` 的正则表达式模式的特定分组构造中，应用内联选项。 一组选项前面没有符号用于打开该设置；一组选项前面的减号用于关闭该设置。 （无论选项是启用还是禁用，`?` 都是所需的语言构造语法的固定部分。）选项只应用于该组。 有关详细信息，请参阅[分组构造](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。
+- 通过在包含语法 `(?imnsx-imnsx:`subexpression  `)` 的正则表达式模式的特定分组构造中，应用内联选项。 一组选项前面没有符号用于打开该设置；一组选项前面的减号用于关闭该设置。 （无论选项是启用还是禁用，`?` 都是所需的语言构造语法的固定部分。）选项只应用于该组。 有关详细信息，请参阅[分组构造](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。
 
-    下面的示例进行了这方面的演示。 在标识以字母“d”开头的单词时，它使用分组构造中的内联选项来启用不区分大小写匹配和忽略模式空白。
+  下面的示例进行了这方面的演示。 在标识以字母“d”开头的单词时，它使用分组构造中的内联选项来启用不区分大小写匹配和忽略模式空白。
 
-    [!code-csharp[Conceptual.Regex.Language.Options#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/example1.cs#8)]
-    [!code-vb[Conceptual.Regex.Language.Options#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/example1.vb#8)]
+  [!code-csharp[Conceptual.Regex.Language.Options#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/example1.cs#8)]
+  [!code-vb[Conceptual.Regex.Language.Options#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/example1.vb#8)]
 
 如果选项指定为内联，一个选项或一组选项前面的减号 (`-`) 用于关闭这些选项。 例如，内联构造 `(?ix-ms)` 将打开 <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> 和 <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType> 选项而关闭 <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> 和 <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> 选项。 默认情况下，关闭所有正则表达式选项。
 
@@ -210,7 +210,7 @@ ms.locfileid: "57677560"
 
 ## <a name="explicit-captures-only"></a>仅显式捕获
 
-默认情况下，通过在正则表达式模式中使用括号来定义捕获组。 通过 `(?<`name`>`subexpression`)` 语言选项为命名组指定名称或编号，而未命名组按索引进行访问。 在 <xref:System.Text.RegularExpressions.GroupCollection> 对象中，未命名的组先于已命名的组。
+默认情况下，通过在正则表达式模式中使用括号来定义捕获组。 通过 `(?<`name  `>`subexpression  `)` 语言选项为命名组指定名称或编号，而未命名组按索引进行访问。 在 <xref:System.Text.RegularExpressions.GroupCollection> 对象中，未命名的组先于已命名的组。
 
 分组构造通常仅用于将限定符应用于多个语言元素，而非应用于捕获的子字符串。 例如，如果下面的正则表达式：
 
@@ -220,7 +220,7 @@ ms.locfileid: "57677560"
 
 旨在仅从文档提取末尾有句号、感叹点或问号的句子，仅产生的句子（这由 <xref:System.Text.RegularExpressions.Match> 对象表示）有意义。 集合中的各单词不是。
 
-随后未使用的捕获组可能很昂贵，因为正则表达式引擎必须填充 <xref:System.Text.RegularExpressions.GroupCollection> 和 <xref:System.Text.RegularExpressions.CaptureCollection> 集合对象。 作为替换方法，也可以使用 <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> 选项或 `n` 内联选项，指定显式命名的唯一有效捕获，或由 `(?<`名称`>` 子表达式`)` 构造指定的编号组。
+随后未使用的捕获组可能很昂贵，因为正则表达式引擎必须填充 <xref:System.Text.RegularExpressions.GroupCollection> 和 <xref:System.Text.RegularExpressions.CaptureCollection> 集合对象。 作为替换方法，也可以使用 <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> 选项或 `n` 内联选项，指定显式命名的唯一有效捕获，或由 `(?<`名称  `>` 子表达式  `)` 构造指定的编号组。
 
 以下示例显示 `\b\(?((\w+),?\s?)+[\.!?]\)?` 正则表达式模式在 <xref:System.Text.RegularExpressions.Regex.Match%2A> 方法被调用且没有 <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> 选项时返回的匹配信息。 如第一个方法调用输出所示，正则表达式引擎使用有关已捕获的子字符串的信息完全填充 <xref:System.Text.RegularExpressions.GroupCollection> 和 <xref:System.Text.RegularExpressions.CaptureCollection> 集合对象。 因为第二个方法使用设置为 `options` 的 <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> 进行调用，所以它不会捕获有关组的信息。
 
@@ -292,13 +292,13 @@ ms.locfileid: "57677560"
 
 - 始终按原义解释字符内的空格。 例如，正则表达式模式 `[ .,;:]` 匹配任意单个空白字符、句号、逗号、分号或冒号。
 
-- 加括号的限定符内不允许有空格，如 `{`n`}`、`{`n`,}` 和 `{`n`,`m`}`。 例如，因为它包含一个空白字符，所以正则表达式模式 `\d{1, 3}` 与任何从 1 到 3 位数的数字序列不匹配。
+- 加括号的限定符内不允许有空格，如 `{`n  `}`、`{`n  `,}` 和 `{`n  `,`m  `}`。 例如，因为它包含一个空白字符，所以正则表达式模式 `\d{1, 3}` 与任何从 1 到 3 位数的数字序列不匹配。
 
 - 引入语言元素的字符序列内不允许有空格。 例如:
 
-    - 语言元素 `(?:`subexpression`)` 表示非捕获组，并且该元素的 `(?:` 部分不能有嵌入空格。 模式 `(? :`子表达式`)` 在运行时抛出 <xref:System.ArgumentException>，因为正则表达式引擎无法分析此模式，且模式 `( ?:`子表达式`)` 与子表达式不匹配。
+  - 语言元素 `(?:`subexpression  `)` 表示非捕获组，并且该元素的 `(?:` 部分不能有嵌入空格。 模式 `(? :`子表达式  `)` 在运行时抛出 <xref:System.ArgumentException>，因为正则表达式引擎无法分析此模式，且模式 `( ?:`子表达式  `)` 与子表达式  不匹配。
 
-    - 语言元素 `\p{`name`}` 表示一个 Unicode 类别或命名块，它不能在元素的 `\p{` 部分中包括嵌入空格。 如果你包括了空格，则该元素会在运行时引发 <xref:System.ArgumentException> 异常。
+  - 语言元素 `\p{`name  `}` 表示一个 Unicode 类别或命名块，它不能在元素的 `\p{` 部分中包括嵌入空格。 如果你包括了空格，则该元素会在运行时引发 <xref:System.ArgumentException> 异常。
 
 启用此选项有助于简化通常很难分析和理解的正则表达式。 它提高了可读性，并可以记录正则表达式。
 
@@ -332,7 +332,7 @@ ms.locfileid: "57677560"
 [!code-csharp[Conceptual.Regex.Language.Options#17](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/righttoleft1.cs#17)]
 [!code-vb[Conceptual.Regex.Language.Options#17](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/righttoleft1.vb#17)]
 
-另请注意，预测先行断言（`(?=`subexpression`)` 语言元素）和回顾后发断言（`(?<=`subexpression`)` 语言元素）不会更改方向。 预测先行断言向右搜索；回顾后发断言向左搜索。 例如，正则表达式 `(?<=\d{1,2}\s)\w+,?\s\d{4}` 使用回顾后发断言测试月份名称前面的日期。 然后该正则表达式匹配月份和年份。 有关预测先行和回顾后发断言的信息，请参阅[分组构造](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。
+另请注意，预测先行断言（`(?=`subexpression  `)` 语言元素）和回顾后发断言（`(?<=`subexpression  `)` 语言元素）不会更改方向。 预测先行断言向右搜索；回顾后发断言向左搜索。 例如，正则表达式 `(?<=\d{1,2}\s)\w+,?\s\d{4}` 使用回顾后发断言测试月份名称前面的日期。 然后该正则表达式匹配月份和年份。 有关预测先行和回顾后发断言的信息，请参阅[分组构造](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。
 
 [!code-csharp[Conceptual.Regex.Language.Options#18](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/righttoleft2.cs#18)]
 [!code-vb[Conceptual.Regex.Language.Options#18](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/righttoleft2.vb#18)]
@@ -364,32 +364,32 @@ ECMAScript 和规范化正则表达式的行为在三个方面不同：字符类
 
 - 字符类语法。 因为规范的正则表达式支持 Unicode，却不支持 ECMAScript，ECMAScript 中的字符类具有一个受限更多的语法且某些字符类语言元素具有不同的含义。 例如，ECMAScript 不支持语言元素（例如 Unicode 类别或块元素 `\p` 和 `\P`）。 同样，使用 ECMAScript 时，与单词字符匹配的 `\w` 元素等效于 `[a-zA-Z_0-9]` 字符类，使用规范化行为时，该元素等效于 `[\p{Ll}\p{Lu}\p{Lt}\p{Lo}\p{Nd}\p{Pc}\p{Lm}]`。 有关更多信息，请参见 [字符类](../../../docs/standard/base-types/character-classes-in-regular-expressions.md)。
 
-    下面的示例阐释了规范化与 ECMAScript 模式匹配之间的差异。 它定义了正则表达式 `\b(\w+\s*)+`，该表达式与后跟空白字符的单词匹配。 由两个字符串组成的输入，其中一个字符串使用拉丁字符集，另一个则使用西里尔字符集。 如输出所示，对使用 ECMAScript 匹配的 <xref:System.Text.RegularExpressions.Regex.IsMatch%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> 方法的调用无法与西里尔文的单词匹配，而使用规范化匹配的方法调用与这些单词也不匹配。
+  下面的示例阐释了规范化与 ECMAScript 模式匹配之间的差异。 它定义了正则表达式 `\b(\w+\s*)+`，该表达式与后跟空白字符的单词匹配。 由两个字符串组成的输入，其中一个字符串使用拉丁字符集，另一个则使用西里尔字符集。 如输出所示，对使用 ECMAScript 匹配的 <xref:System.Text.RegularExpressions.Regex.IsMatch%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> 方法的调用无法与西里尔文的单词匹配，而使用规范化匹配的方法调用与这些单词也不匹配。
 
-    [!code-csharp[Conceptual.Regex.Language.Options#16](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/ecmascript1.cs#16)]
-    [!code-vb[Conceptual.Regex.Language.Options#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/ecmascript1.vb#16)]
+  [!code-csharp[Conceptual.Regex.Language.Options#16](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/ecmascript1.cs#16)]
+  [!code-vb[Conceptual.Regex.Language.Options#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/ecmascript1.vb#16)]
 
 - 自引用捕获组。 自身具有后向引用的正则表达式捕获类必须在每次捕获迭代时得到更新。 如以下示例所示，此功能将在使用 ECMAScript 时使正则表达式 `((a+)(\1) ?)+` 与输入字符串“aa aaaa aaaaaa”匹配，但在使用规范化匹配时则不会匹配。
 
-    [!code-csharp[Conceptual.Regex.Language.Options#21](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/ecmascript2.cs#21)]
-    [!code-vb[Conceptual.Regex.Language.Options#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/ecmascript2.vb#21)]
+  [!code-csharp[Conceptual.Regex.Language.Options#21](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/ecmascript2.cs#21)]
+  [!code-vb[Conceptual.Regex.Language.Options#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/ecmascript2.vb#21)]
 
-    该正则表达式的定义如下表所示。
+  该正则表达式的定义如下表所示。
 
-    |模式|说明|
-    |-------------|-----------------|
-    |(a+)|与字母“a”匹配一次或多次。 这是第二个捕获组。|
-    |(\1)|与第一个捕获组捕获的子字符串匹配。 这是第三个捕获组。|
-    |?|匹配零个或一个空白字符。|
-    |((a+)(\1) ?)+|与某个模式匹配一次或多次，该模式有一个或多个“a”字符，后跟与第一个捕获组（后无空白字符或后跟一个空白字符）匹配的字符串。 这是第一个捕获组。|
+  |模式|说明|
+  |-------------|-----------------|
+  |(a+)|与字母“a”匹配一次或多次。 这是第二个捕获组。|
+  |(\1)|与第一个捕获组捕获的子字符串匹配。 这是第三个捕获组。|
+  |?|匹配零个或一个空白字符。|
+  |((a+)(\1) ?)+|与某个模式匹配一次或多次，该模式有一个或多个“a”字符，后跟与第一个捕获组（后无空白字符或后跟一个空白字符）匹配的字符串。 这是第一个捕获组。|
 
 - 八进制转义和反向引用间的多义性的解析。 下表总结了规范化和 ECMAScript 正则表达式在八进制与后向引用解释中的区别。
 
-    |正则表达式|规范行为|ECMAScript 行为|
-    |------------------------|------------------------|-------------------------|
-    |`\0` 后跟 0 到 2 个八进制数字|解释为八进制。 例如，`\044` 总是解释为八进制值并表示“$”。|行为相同。|
-    |`\` 后跟一个从 1 到 9 的数字，后面再没有任何其他十进制数字，|解释为反向引用。 例如，`\9` 始终表示后向引用 9，即使第九捕获组不存在。 如果捕获组不存在，则正则表达式分析器将引发 <xref:System.ArgumentException>。|如果存在单个十进制数字捕获组，则后向引用该数字。 否则将该值解释为文本。|
-    |`\` 后跟一个从 1 到 9 的数字，后跟其他十进制数字|将数字解释为十进制值。 如果存在该捕获组，则将该表达式解释为后向引用。<br /><br /> 否则，将前导的八进制数字解释为不超过八进制值 377 的八进制数字；也就是说，仅考虑该值的后八位。 将其余数字解释为文本。 例如，如果表达式 `\3000` 中存在捕获组 300，则解释为后向引用 300；如果捕获组 300 不存在，则解释为后跟 0 的八进制数字 300。|通过将尽可能多的数字转换为可引用捕获的十进制值解释为反向引用。 如果任何数字都不能转换，则解释为使用其值不超过八进制值 377 的前导八进制数字的八进制数字；将其余数字解释为文本。|
+  |正则表达式|规范行为|ECMAScript 行为|
+  |------------------------|------------------------|-------------------------|
+  |`\0` 后跟 0 到 2 个八进制数字|解释为八进制。 例如，`\044` 总是解释为八进制值并表示“$”。|行为相同。|
+  |`\` 后跟一个 1 到 9 的数字，后面不跟任何其他十进制数字，| 解释为反向引用。 例如，`\9` 始终表示后向引用 9，即使第九捕获组不存在。 如果捕获组不存在，则正则表达式分析器将引发 <xref:System.ArgumentException>。|如果存在单个十进制数字捕获组，则后向引用该数字。 否则将该值解释为文本。|
+  |`\` 后跟一个 1 到 9 的数字，后面不跟任何其他十进制数字 | 将数字解释为十进制值。 如果存在该捕获组，则将该表达式解释为后向引用。<br /><br /> 否则，将前导的八进制数字解释为不超过八进制值 377 的八进制数字；也就是说，仅考虑该值的后八位。 将其余数字解释为文本。 例如，如果表达式 `\3000` 中存在捕获组 300，则解释为后向引用 300；如果捕获组 300 不存在，则解释为后跟 0 的八进制数字 300。|通过将尽可能多的数字转换为可引用捕获的十进制值解释为反向引用。 如果任何数字都不能转换，则解释为使用其值不超过八进制值 377 的前导八进制数字的八进制数字；将其余数字解释为文本。|
 
 [返回页首](#Top)
 

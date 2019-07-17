@@ -4,16 +4,16 @@ description: 使用 ASP.NET Core 和 Azure 构建新式 Web 应用程序 | 测�
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: e93c33ae29268c3968ccb59739e899966ae4339d
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 941c73f9a8b7b4c4336adfaec45775feec738f51
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463704"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67804716"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>测试 ASP.NET Core MVC 应用
 
-> “如果你不喜欢对产品进行单元测试，很可能你的客户也不喜欢这样做。”
+> “如果你不喜欢对产品进行单元测试，很可能你的客户也不喜欢这样做。” 
  > \_- 匿名-
 
 任何复杂程度的软件在响应更改方面皆可能意外失败。 因此，更改后，除最普通（或关键性最低）的应用程序外，其他所有应用程序均需测试。 手动测试是最慢、最不可靠且最昂贵的软件测试方式。 遗憾的是，如果应用程序在设计上不具备可测试性，这可能是唯一可用的方式。 按照[章节 4](architectural-principles.md) 中所述体系结构原则编写的应用程序应具备单元可测试性，ASP.NET Core 应用程序还支持集成和功能测试。
@@ -30,11 +30,11 @@ ms.locfileid: "58463704"
 
 ### <a name="integration-tests"></a>集成测试
 
-尽管建议封装与数据库和文件系统等基础结构交互的代码，但是仍会剩下一些此类代码，你可能需要对其进行测试。 应用程序依赖项完全解析时，还应验证代码层是否按预期方式交互。 这是集成测试的目的。 与单元测试相比，由于集成测试通常依赖外部依赖项和基础结构，因此其设置速度较慢，难度较大。 因此，如果可通过单元测试进行测试，请尽量避免使用集成测试。 如果可通过单元测试测试给定方案，请使用单元测试进行测试。 如果不能，再考虑使用集成测试。
+尽管建议封装与数据库和文件系统等基础结构交互的代码，但是仍会剩下一些此类代码，你可能需要对其进行测试。 应用程序依赖项完全解析时，还应验证代码层是否按预期方式交互。 这是集成测试的目的。 与单元测试相比，由于集成测试通常依赖外部依赖项和基础结构，因此其设置速度较慢，难度较大。 因此，应避免测试可以通过集成测试中的单元测试进行测试的项。 如果可通过单元测试测试给定方案，请使用单元测试进行测试。 如果不能，再考虑使用集成测试。
 
 与单元测试相比，集成测试通常具有更复杂的设置和拆卸过程。 例如，针对实际数据库运行的集成测试，在每次运行测试前，需要通过一种方式将数据库返回到已知状态。 随着不断添加新测试以及生产数据库架构不断发展，这些测试脚本的大小和复杂性会逐渐增加。 对于许多大型系统，将签入共享源代码管理更改前，在开发人员工作站上运行一整套集成测试并不实际。 这种情况下，可在生成服务器上运行集成测试。
 
-LocalFileImageService 实现类实现用于从具有如下给定 ID 的特定文件夹提取和返回映像文件字节数的逻辑：
+`LocalFileImageService` 实现类实现从具有给定 ID 的特定文件夹中提取和返回图像文件的字节的逻辑：
 
 ```csharp
 public class LocalFileImageService : IImageService
@@ -147,7 +147,7 @@ public IActionResult GetImage(int id)
 }
 ```
 
-System.IO.File 上的直接依赖项使得对此方法执行单元测试变得困难（它使用 System.IO.File 读取文件系统）。 可测试此行为以确保其按预期方式运行，但对实际文件执行此操作属于集成测试。 请注意，无法单元测试该方法的路由。稍后我们将了解如何通过功能测试快速执行此操作。
+通过 `System.IO.File` 上的直接依赖项难以对此方法执行单元测试。 可测试此行为以确保其按预期方式运行，但对实际文件执行此操作属于集成测试。 请注意，无法单元测试该方法的路由。稍后我们将了解如何通过功能测试快速执行此操作。
 
 如果无法直接对文件系统行为执行单元测试，且无法测试路由，还能测试什么呢？ 通过重构确保单元测试的可行性后，可能会发现一些测试用例以及缺失行为，例如错误处理。 如未找到文件，此方法会执行什么操作？ 它应执行什么操作？ 本示例中，重构方法如下：
 
@@ -175,7 +175,7 @@ public IActionResult GetImage(int id)
 
 ## <a name="integration-testing-aspnet-core-apps"></a>对 ASP.NET Core 应用执行集成测试
 
-ASP.NET Core 应用中的大多数集成测试应该是测试基础结构项目中定义的服务和其他实现类型。 测试 ASP.NET Core MVC 项目是否正常运行的最佳方法是针对在测试主机中运行的应用运行的功能测试。 本章前面的“集成测试”部分中显示了数据访问类的集成测试示例。
+ASP.NET Core 应用中的大多数集成测试应该是测试基础结构项目中定义的服务和其他实现类型。 例如，可以[测试 EF Core 是否已成功更新并检索](https://docs.microsoft.com/ef/core/miscellaneous/testing/)希望从驻留在基础结构项目中的数据访问类中获得的数据。 测试 ASP.NET Core MVC 项目是否正常运行的最佳方法是针对在测试主机中运行的应用运行的功能测试。
 
 ## <a name="functional-testing-aspnet-core-apps"></a>对 ASP.NET Core 应用执行功能测试
 
@@ -308,6 +308,15 @@ namespace Microsoft.eShopWeb.FunctionalTests.WebRazorPages
 ```
 
 该功能测试执行完整的 ASP.NET Core MVC/Razor Pages 应用程序堆栈，包括所有中间件、筛选器、绑定器等。 它验证给定的路由 ("/") 是否返回预期的成功状态代码和 HTML 输出。 它无需设置实际 Web 服务器即可实现该操作，因此可避免使用实际 Web 服务器进行测试可能遇到的许多问题（例如防火墙设置问题）。 虽然针对 TestServer 运行的功能测试通常比集成测试和单元测试更慢，但是比测试 Web 服务器的网络上运行的测试速度更快。 应使用功能测试来确保应用程序的前端堆栈按预期运行。 当在控制器或页面中发现了重复内容并通过添加筛选器找到了这些重复内容时，这些测试将尤为有用。 理想情况下，此重构不会改变应用程序的行为，并且将有一套功能测试来验证确实如此。
+
+> ### <a name="references--test-aspnet-core-mvc-apps"></a>参考 - 测试 ASP.NET Core MVC 应用
+>
+> - **在 ASP.NET Core 进行测试**  
+>   <https://docs.microsoft.com/aspnet/core/testing/>
+> - **单元测试命名约定**  
+>   <https://ardalis.com/unit-test-naming-convention>
+> - **测试 EF Core**  
+>   <https://docs.microsoft.com/ef/core/miscellaneous/testing/>
 
 >[!div class="step-by-step"]
 >[上一页](work-with-data-in-asp-net-core-apps.md)

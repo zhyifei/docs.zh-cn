@@ -6,12 +6,12 @@ ms.topic: overview
 ms.custom: mvc
 ms.author: nakersha
 author: natke
-ms.openlocfilehash: 06085091a13ad76dcd554cfe637bcc151bbb8476
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 30e96d85ecc04332bc5e6c8f57badd000f729904
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67610180"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67660639"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>什么是 ML.NET 以及它如何工作？
 
@@ -163,7 +163,7 @@ ML.NET 模型是一个对象，它包含为了获得预测输出而要对输入�
 
 ML.NET 应用程序从 <xref:Microsoft.ML.MLContext> 对象开始。 此单一实例对象包含**目录**。 目录是用于数据加载和保存、转换、训练程序和模型操作组件的工厂。 每个目录对象都具有创建不同类型的组件的方法：
 
-||||
+|||||
 |-|-|-|-|
 |数据加载和保存||<xref:Microsoft.ML.DataOperationsCatalog>||
 |数据准备||<xref:Microsoft.ML.TransformsCatalog>||
@@ -171,11 +171,11 @@ ML.NET 应用程序从 <xref:Microsoft.ML.MLContext> 对象开始。 此单一�
 ||多类分类|<xref:Microsoft.ML.MulticlassClassificationCatalog>||
 ||异常情况检测|<xref:Microsoft.ML.AnomalyDetectionCatalog>||
 ||聚类分析|<xref:Microsoft.ML.ClusteringCatalog>||
-||预测|<xref:Microsoft.ML.Forecasting>||
+||预测|<xref:Microsoft.ML.ForecastingCatalog>||
 ||排名|<xref:Microsoft.ML.RankingCatalog>||
 ||回归测试|<xref:Microsoft.ML.RegressionCatalog>||
-||建议|<xref:Microsoft.ML.RecommendationCatalog>|添加 Microsoft.ML.Recommender|
-||TimeSeries|<xref:Microsoft.ML.TimeSeriesCatalog>|添加 Microsoft.ML.TimeSeries|
+||建议|<xref:Microsoft.ML.RecommendationCatalog>|添加 `Microsoft.ML.Recommender` NuGet 包|
+||TimeSeries|<xref:Microsoft.ML.TimeSeriesCatalog>|添加 `Microsoft.ML.TimeSeries` NuGet 包|
 |模型使用 ||<xref:Microsoft.ML.ModelOperationsCatalog>||
 
 可以导航到上述各个类别的创建方法。 使用 Visual Studio 时，目录通过 IntelliSense 显示。

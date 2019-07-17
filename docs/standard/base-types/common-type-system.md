@@ -19,12 +19,12 @@ ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: fdd7eef0994ca9c7b0533b6497d76a4720dd1f64
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e916d7d335bcdeff64393a25ab697748209d147c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634644"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782635"
 ---
 # <a name="common-type-system"></a>常规类型系统
 通用类型系统定义了如何在公共语言运行时中声明、使用和管理类型，同时也是运行时跨语言集成支持的一个重要组成部分。 常规类型系统执行以下功能：  
@@ -86,7 +86,7 @@ ms.locfileid: "64634644"
   
  没有实现的类成员是抽象成员。 有一个或更多抽象成员的类其本身也是抽象的；不可以创建它的新实例。 以运行时为目标的某些语言允许将类标记为抽象类，即使其成员都不是抽象成员也是如此。 当要封装一组派生类可在适当时候继承或重写的基本功能时，可以使用抽象类。 非抽象的类称为具体类。  
   
- 类可以实现任意数目的接口，但是它除了 <xref:System.Object?displayProperty=nameWithType>（所有类都可以隐式从它继承）之外，只能从一个基类继承。 所有的类都必须至少有一个构造函数，该函数初始化此类的新实例。 如果没有显式定义构造函数，大多数编译器将自动提供一个默认（无参数的）构造函数。  
+ 类可以实现任意数目的接口，但是它除了 <xref:System.Object?displayProperty=nameWithType>（所有类都可以隐式从它继承）之外，只能从一个基类继承。 所有的类都必须至少有一个构造函数，该函数初始化此类的新实例。 如果没有显式定义构造函数，大多数编译器将自动提供一个无参数构造函数。  
   
 <a name="Structures"></a>   
 ### <a name="structures"></a>结构  
@@ -261,7 +261,7 @@ ms.locfileid: "64634644"
  [!code-csharp[Conceptual.Types.Members.Properties#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.types.members.properties/cs/example.cs#1)]
  [!code-vb[Conceptual.Types.Members.Properties#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.members.properties/vb/example.vb#1)]  
   
- 除了包含属性本身之外，包含可读属性的类型的 Microsoft 中间语言 (MSIL) 还包含 `get_`propertyname 方法，包含可写属性的类型的 MSIL 还包含 `set_`propertyname 方法。  
+ 除了包含属性本身之外，包含可读属性的类型的 Microsoft 中间语言 (MSIL) 还包含 `get_`propertyname  方法，包含可写属性的类型的 MSIL 还包含 `set_`propertyname  方法。  
   
 <a name="Methods"></a>   
 ### <a name="methods"></a>方法  
@@ -273,9 +273,9 @@ ms.locfileid: "64634644"
 ### <a name="constructors"></a>构造函数  
  构造函数是一种特殊类型的方法，可创建类或结构的新实例。 像任何其他方法一样，构造函数可以包含参数，但是它不返回值（即它返回 `void`）。  
   
- 如果类的源代码没有显式定义构造函数，编译器将包含一个默认（无参数的）构造函数。 但是，如果某个类的源代码只定义参数化的构造函数，则 Visual Basic 和 C# 编译器将不会生成无参数构造函数。  
+ 如果类的源代码没有显式定义构造函数，则编译器包含一个无参数构造函数。 但是，如果某个类的源代码只定义参数化的构造函数，则 Visual Basic 和 C# 编译器将不会生成无参数构造函数。  
   
- 如果某个结构的源代码定义多个构造函数，则这些构造函数必须是参数化的；结构不能定义默认（无参数）构造函数，并且编译器不会为结构或其他值类型生成无参数构造函数。 所有值类型都具有隐式的默认构造函数。 此构造函数由公共语言运行时实现，并且将该结构的所有字段都初始化为其默认值。  
+ 如果一个结构的源代码定义多个构造函数，则这些构造函数必须是参数化的；结构不能定义无参数构造函数，并且编译器不会为结构或其他值类型生成无参数构造函数。 所有值类型都具有隐式无参数构造函数。 此构造函数由公共语言运行时实现，并且将该结构的所有字段都初始化为其默认值。  
   
 <a name="Events"></a>   
 ### <a name="events"></a>事件  

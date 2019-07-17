@@ -17,20 +17,20 @@ helpviewer_keywords:
 ms.assetid: 5cdc9396-a64b-4615-a1cd-b605db4c5983
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 86ddb4ed45479e483dde447983f6dc31edcc8930
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ae1e5c89676eaebfed5bbcae76048c7c48db5a18
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54738834"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779942"
 ---
 # <a name="performing-culture-insensitive-string-operations-in-collections"></a>在集合中执行不区分区域性的字符串操作
-<xref:System.Collections> 命名空间中包含默认提供区域性敏感型行为的类和成员。 <xref:System.Collections.CaseInsensitiveComparer> 和 <xref:System.Collections.CaseInsensitiveHashCodeProvider> 类的默认构造函数使用 <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> 属性初始化新实例。 默认情况下，<xref:System.Collections.Specialized.CollectionsUtil.CreateCaseInsensitiveHashtable%2A?displayProperty=nameWithType> 方法的所有重载都会使用 `Thread.CurrentCulture` 属性新建 <xref:System.Collections.Hashtable> 类的实例。 默认情况下，<xref:System.Collections.ArrayList.Sort%2A?displayProperty=nameWithType> 方法重载使用 `Thread.CurrentCulture` 执行区域性敏感型排序。 将字符串用作键时，<xref:System.Collections.SortedList> 中的排序和查找可能会受 `Thread.CurrentCulture` 影响。 请按本节提供的用法建议，在 `Collections` 命名空间中的这些类和方法中获取不区分区域性的结果。  
+<xref:System.Collections> 命名空间中包含默认提供区域性敏感型行为的类和成员。 <xref:System.Collections.CaseInsensitiveComparer> 和 <xref:System.Collections.CaseInsensitiveHashCodeProvider> 类的无参数构造函数使用 <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> 属性初始化新实例。 默认情况下，<xref:System.Collections.Specialized.CollectionsUtil.CreateCaseInsensitiveHashtable%2A?displayProperty=nameWithType> 方法的所有重载都会使用 `Thread.CurrentCulture` 属性新建 <xref:System.Collections.Hashtable> 类的实例。 默认情况下，<xref:System.Collections.ArrayList.Sort%2A?displayProperty=nameWithType> 方法重载使用 `Thread.CurrentCulture` 执行区域性敏感型排序。 将字符串用作键时，<xref:System.Collections.SortedList> 中的排序和查找可能会受 `Thread.CurrentCulture` 影响。 请按本节提供的用法建议，在 `Collections` 命名空间中的这些类和方法中获取不区分区域性的结果。  
   
  **注意**：向比较方法传递 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> 确实会执行非区域性敏感型比较。 但是，这不会导致对文件路径、注册表项、环境变量等进行非语义比较。 也不支持基于比较结果的安全决策。 若要进行非语义比较或支持基于结果的安全决策，应用应使用接受 <xref:System.StringComparison> 值的比较方法。 然后，应用应传递 <xref:System.StringComparison>。  
   
 ## <a name="using-the-caseinsensitivecomparer-and-caseinsensitivehashcodeprovider-classes"></a>使用 CaseInsensitiveComparer 和 CaseInsensitiveHashCodeProvider 类  
- `CaseInsensitiveHashCodeProvider` 和 `CaseInsensitiveComparer` 的默认构造函数使用 `Thread.CurrentCulture` 来初始化类的新实例，因而产生区分区域性的行为。 下面的代码示例演示 `Hashtable` 的构造函数，该构造函数使用 `CaseInsensitiveHashCodeProvider` 和 `CaseInsensitiveComparer` 的默认构造函数，因而区分区域性。  
+ `CaseInsensitiveHashCodeProvider` 和 `CaseInsensitiveComparer` 的无参数构造函数使用 `Thread.CurrentCulture` 来初始化类的新实例，产生区域性敏感行为。 下面的代码示例演示区域性敏感 `Hashtable` 的构造函数，因为该构造函数使用 `CaseInsensitiveHashCodeProvider` 和 `CaseInsensitiveComparer` 的无参数构造函数。  
   
 ```vb  
 internalHashtable = New Hashtable(CaseInsensitiveHashCodeProvider.Default, CaseInsensitiveComparer.Default)  

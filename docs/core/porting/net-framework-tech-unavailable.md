@@ -4,12 +4,12 @@ description: 了解在 .NET Core 上不可用的 .NET Framework 技术
 author: cartermp
 ms.author: mairaw
 ms.date: 04/30/2019
-ms.openlocfilehash: 4a798e85adc056b09761bd17b5d9a143643e77ad
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: bfeea58f4d80b789a7174a77e0784f2326906416
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67397625"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67737089"
 ---
 # <a name="net-framework-technologies-unavailable-on-net-core"></a>.NET Framework 技术在 .NET Core 上不可用
 
@@ -19,7 +19,7 @@ ms.locfileid: "67397625"
 
 ## <a name="appdomains"></a>AppDomain
 
-应用程序域 (AppDomain) 可将应用相互隔离。 AppDomain 需要运行时支持并且通常价格昂贵。 不支持创建额外应用程序域... 我们不计划在将来添加此功能。 对于代码隔离，建议将流程分隔开来或将容器用作一种替代方法。 对于动态加载的程序集，我们建议使用新的 <xref:System.Runtime.Loader.AssemblyLoadContext> 类。
+应用程序域 (AppDomain) 可将应用相互隔离。 AppDomain 需要运行时支持并且通常价格昂贵。 不支持创建其他应用域。 我们不计划在将来添加此功能。 对于代码隔离，建议将流程分隔开来或将容器用作一种替代方法。 对于动态加载的程序集，我们建议使用新的 <xref:System.Runtime.Loader.AssemblyLoadContext> 类。
 
 .NET Core 公开了一些 <xref:System.AppDomain> API 曲面，以便可以更轻松地从 .NET Framework 进行代码迁移。 一些 API 可正常工作（例如 <xref:System.AppDomain.UnhandledException?displayProperty=nameWithType>），一些成员不会执行任何操作（例如 <xref:System.AppDomain.SetCachePath%2A>），也有一些会引发 <xref:System.PlatformNotSupportedException>（例如 <xref:System.AppDomain.CreateDomain%2A>）。 对照 [dotnet/corefx GitHub 存储库](https://github.com/dotnet/corefx)中的 [`System.AppDomain` 引用源](https://github.com/dotnet/corefx/blob/master/src/Common/src/CoreLib/System/AppDomain.cs)检查所使用的类型，确保选择与已实现的版本相匹配的分支。
 

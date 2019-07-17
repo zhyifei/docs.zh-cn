@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 672a5ac8-8305-4d28-ba10-11089c2c0924
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f423c37ca264c4f23aca3736a72164f5d13bdca3
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 8480e2d6817d0367e89542c0e6c89cd26183dd5e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55065983"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67774896"
 ---
 # <a name="xslt-compiler-xsltcexe"></a>XSLT 编译器 (xsltc.exe)
 XSLT 编译器 (xsltc.exe) 编译 XSLT 样式表并生成一个程序集。 然后可以将已编译的样式表直接传递到 <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> 方法中。 不能用 xsltc.exe 生成签名的程序集。  
@@ -37,7 +37,7 @@ xsltc [options] [/class:<name>] <sourceFile> [[/class:<name>] <sourceFile>...]
 |`/debug[`+&#124;-`]`|指定是否生成调试信息。<br /><br /> 指定 `+` 或 `/debug` 将导致编译器生成调试信息并将此信息放在程序数据库 (PDB) 文件中。 生成的 PDB 文件的名称为 `assemblyName`.pdb。<br /><br /> 指定 `-`（在不指定 `/debug` 时生效）将导致不创建任何调试信息。 生成发布程序集。 **注意：** 在调试模式下进行编译会显著影响 XSLT 性能。|  
 |`/help`|显示该工具的命令语法和选项。|  
 |`/nologo`|禁止显示编译器版权消息。|  
-|`/platform:` `string`|指定程序集可以在其上运行的平台。 下面说明有效的平台值：<br /><br /> `x86` 将程序集编译成可由 32 位、x86 兼容的公共语言运行库运行<br /><br /> `x64` 将程序集编译成可由 64 位公共语言运行库在支持 AMD64 或 EM64T 指令集的计算机上运行。<br /><br /> [!INCLUDE[vcpritanium](../../../../includes/vcpritanium-md.md)] 将程序集编译成可由 64 位公共语言运行库在具有 [!INCLUDE[vcpritanium](../../../../includes/vcpritanium-md.md)] 处理器的计算机上运行。<br /><br /> `anycpu` 将程序集编译成可在任何平台上运行。 这是默认设置。|  
+|`/platform:` `string`|指定程序集可以在其上运行的平台。 下面说明有效的平台值：<br /><br /> `x86` 将程序集编译成可由 32 位、x86 兼容的公共语言运行库运行<br /><br /> `x64` 将程序集编译成可由 64 位公共语言运行库在支持 AMD64 或 EM64T 指令集的计算机上运行。<br /><br /> Itanium 将程序集编译成可由 64 位公共语言运行时在采用 Itanium 处理器的计算机上运行。<br /><br /> `anycpu` 将程序集编译成可在任何平台上运行。 这是默认设置。|  
 |`/out:` `assemblyName`|指定输出的程序集的名称。 程序集名称默认为主样式表的名称；如果有多个样式表，则为第一个样式表的名称。<br /><br /> 如果样式表包含脚本，脚本将保存到单独的程序集。 脚本程序集名称从主程序集名称生成。 例如，如果您为程序集名称指定了 CustOrders.dll，则第一个脚本程序集命名为 CustOrders_Script1.dll。|  
 |`/settings:` `document+-, script+-, DTD+-,`|指定是否允许在样式表中使用 `document()` 函数、XSLT 脚本或文档类型定义 (DTD)。<br /><br /> 默认行为禁用对 DTD、`document()` 函数和脚本的支持。|  
 |`@` `file`|允许您指定包含编译器选项的文件。|  
@@ -49,7 +49,7 @@ xsltc [options] [/class:<name>] <sourceFile> [[/class:<name>] <sourceFile>...]
 > [!NOTE]
 >  您还必须包括已编译的程序集作为应用程序中的引用。  
   
- xsltc.exe 工具不验证类（`/class:` 名称）或程序集（`/out:`assemblyName）名称。 如果名称无效，公共语言运行库将引发错误。  
+ xsltc.exe 工具不验证类（`/class:` 名称）或程序集（`/out:`assemblyName）名称   。 如果名称无效，公共语言运行库将引发错误。  
   
 ## <a name="examples"></a>示例  
  下面的命令编译样式表并创建一个名为 booksort.dll 的程序集。  

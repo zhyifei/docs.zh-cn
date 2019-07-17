@@ -1,5 +1,5 @@
 ---
-title: 如何：创建用户定义的异常
+title: 如何：创建用户定义异常
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 25819a5a-f915-4fc8-b924-a76915674e04
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dca313fad896ac1c8eac37c853657bea44a8b777
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 42860f549877436f43bfdc20fb3abde91d36101d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44192231"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67783194"
 ---
 # <a name="how-to-create-user-defined-exceptions"></a>如何创建用户定义的异常
 
 .NET 可提供由基类 <xref:System.Exception> 最终派生的异常类层次结构。 然而，如果预定义的异常都不符合需求，可通过从 <xref:System.Exception> 类派生来创建自己的异常类。
 
-创建自己的异常时，用户定义的异常类的名称需要以“Exception”结尾，并实施三个常见的构造函数，如以下示例所示。 该示例定义名为 `EmployeeListNotFoundException` 的新异常类。 该类从 <xref:System.Exception> 派生，且包含三个构造函数。
+创建自己的异常时，用户定义的异常类的名称需要以“Exception”一词结尾，并实现三个常见的构造函数，如以下示例所示。 该示例定义名为 `EmployeeListNotFoundException` 的新异常类。 该类从 <xref:System.Exception> 派生，且包含三个构造函数。
 
 [!code-cpp[dg_exceptionDesign#14](../../../samples/snippets/cpp/VS_Snippets_CLR/dg_exceptionDesign/cpp/example2.cpp#14)]
 [!code-csharp[dg_exceptionDesign#14](../../../samples/snippets/csharp/VS_Snippets_CLR/dg_exceptionDesign/cs/example2.cs#14)]
