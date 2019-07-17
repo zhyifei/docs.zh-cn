@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - UI Automation
 ms.assetid: e7ec856e-41ee-47b1-9d57-b75a3dad088c
-ms.openlocfilehash: 8903b6a47aa2800ef4fa4fba2cd2537d2b3896e2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9b6d594a3d92a7b666e52c92221d60956e718b42
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033236"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68237543"
 ---
 # <a name="accessibility"></a>可访问性
 > [!NOTE]
@@ -19,7 +19,7 @@ ms.locfileid: "62033236"
   
  [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 是 [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)] 新的辅助功能框架。 它通过提供对有关 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 的信息的按计划访问，满足辅助技术产品和自动化测试框架的需求。 此外，借助 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，控件和应用程序开发人员可实现其产品的可访问性。  
   
- 本文档说明托管代码的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] [!INCLUDE[TLA#tla_api](../../../includes/tlasharptla-api-md.md)]。 有关如何在 C++ 中为 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 编程的信息，请参阅 [Win32 应用程序的 UI 自动化](/windows/desktop/winauto/windows-automation-api-portal)。  
+ 本文档介绍[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]托管代码的 API。 有关如何在 C++ 中为 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 编程的信息，请参阅 [Win32 应用程序的 UI 自动化](/windows/desktop/winauto/windows-automation-api-portal)。  
   
 ## <a name="in-this-section"></a>本节内容  
  [辅助功能最佳方案](../../../docs/framework/ui-automation/accessibility-best-practices.md)  

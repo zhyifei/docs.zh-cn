@@ -8,12 +8,12 @@ helpviewer_keywords:
 - applications [WPF], focus
 - focus in applications [WPF]
 ms.assetid: 0230c4eb-0c8a-462b-ac4b-ae3e511659f4
-ms.openlocfilehash: 72b866d714e6a77020bdb74843c3aaa0ba0c3278
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8546516124b2156e02446e15d7bdcaf3cdbd717d
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61703421"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238610"
 ---
 # <a name="focus-overview"></a>焦点概述
 在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中，有两个与焦点有关的主要概念：键盘焦点和逻辑焦点。  键盘焦点指接收键盘输入的元素，而逻辑焦点指焦点范围中具有焦点的元素。  本概述详细介绍了这些概念。  对于创建具有多个可获取焦点的区域的复杂应用程序来说，理解这些概念之间的区别非常重要。  
@@ -82,7 +82,7 @@ ms.locfileid: "61703421"
   
 <a name="Manipulating_Focus_Programmatically"></a>   
 ## <a name="navigating-focus-programmatically"></a>以编程方式导航焦点  
- 其他[!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]才能使用焦点会<xref:System.Windows.UIElement.MoveFocus%2A>和<xref:System.Windows.UIElement.PredictFocus%2A>。  
+ 其他 api，以使用焦点<xref:System.Windows.UIElement.MoveFocus%2A>和<xref:System.Windows.UIElement.PredictFocus%2A>。  
   
  <xref:System.Windows.FrameworkElement.MoveFocus%2A> 将焦点移至应用程序中的下一个元素。  一个<xref:System.Windows.Input.TraversalRequest>使用指定的方向。   <xref:System.Windows.Input.FocusNavigationDirection>传递给<xref:System.Windows.UIElement.MoveFocus%2A>指定不同的方向焦点可以移动，例如<xref:System.Windows.Input.FocusNavigationDirection.First>， <xref:System.Windows.Input.FocusNavigationDirection.Last>，<xref:System.Windows.Input.FocusNavigationDirection.Up>和<xref:System.Windows.Input.FocusNavigationDirection.Down>。  
   

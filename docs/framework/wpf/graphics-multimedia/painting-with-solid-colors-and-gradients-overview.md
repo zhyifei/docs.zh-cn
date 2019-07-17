@@ -9,12 +9,12 @@ helpviewer_keywords:
 - brushes [WPF], painting with gradients
 - painting with solid colors [WPF]
 ms.assetid: f5b182f3-c5c7-4cbe-9f2f-65e690d08255
-ms.openlocfilehash: 4e004b624c331375501c5f48d2566a664b734d3b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5ba8127d5be24a9fdcccf0bebcc08e5699d98033
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649981"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238392"
 ---
 # <a name="painting-with-solid-colors-and-gradients-overview"></a>使用纯色和渐变进行绘制概述
 本主题介绍如何使用<xref:System.Windows.Media.SolidColorBrush>， <xref:System.Windows.Media.LinearGradientBrush>，和<xref:System.Windows.Media.RadialGradientBrush>对象用纯色、 线性渐变和径向渐变进行绘制。  
@@ -31,7 +31,7 @@ ms.locfileid: "64649981"
   
      [!code-xaml[BrushOverviewExamples_snip#SolidColorBrushNamedColor1XAML](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/SolidColorBrushExample.xaml#solidcolorbrushnamedcolor1xaml)]  
   
-- 通过指定红色、绿色和蓝色的分量从 32 位调色板中选择一种颜色，以合并为单个纯色。  从 32 位调色板指定一种颜色的格式为“*#rrggbb*”，其中 *rr* 为两位十六进制数，用于指定红色的相对量，*gg* 指定绿色的相对量，*bb* 指定蓝色的相对量。  此外，该颜色可指定为“#*aarrggbb*”，其中，*aa* 指定该颜色的 *alpha* 值或透明度。 使用此方法能够创建部分透明的颜色。  在以下示例中，<xref:System.Windows.Controls.Control.Background%2A>的<xref:System.Windows.Controls.Button>设置为完全不透明红色使用十六进制表示法。  
+- 通过指定红色、绿色和蓝色的分量从 32 位调色板中选择一种颜色，以合并为单个纯色。  从 32 位调色板指定一种颜色的格式为“ *#rrggbb*”，其中 *rr* 为两位十六进制数，用于指定红色的相对量，*gg* 指定绿色的相对量，*bb* 指定蓝色的相对量。  此外，该颜色可指定为“#*aarrggbb*”，其中，*aa* 指定该颜色的 *alpha* 值或透明度。 使用此方法能够创建部分透明的颜色。  在以下示例中，<xref:System.Windows.Controls.Control.Background%2A>的<xref:System.Windows.Controls.Button>设置为完全不透明红色使用十六进制表示法。  
   
      [!code-xaml[BrushOverviewExamples_snip#SolidColorBrushHex1XAML](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/SolidColorBrushExample.xaml#solidcolorbrushhex1xaml)]  
   
@@ -142,15 +142,15 @@ ms.locfileid: "64649981"
   
 <a name="specifyinggradientcolors"></a>   
 ## <a name="specifying-transparent-or-partially-transparent-gradient-stops"></a>指定透明或部分透明的梯度停止点  
- 由于梯度停止点不提供 opacity 属性，因此必须指定使用的颜色的 alpha 通道[!INCLUDE[TLA#tla_argb](../../../../includes/tlasharptla-argb-md.md)]标记或使用十六进制表示法<xref:System.Windows.Media.Color.FromScRgb%2A?displayProperty=nameWithType>方法创建透明或部分透明的梯度停止点。 下面的几节介绍如何在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 和代码中创建部分透明的梯度停止点。  
+ 由于梯度停止点不提供 opacity 属性，因此必须指定使用 ARGB 十六进制表示法中标记或使用的颜色的 alpha 通道<xref:System.Windows.Media.Color.FromScRgb%2A?displayProperty=nameWithType>方法创建透明或部分透明的梯度停止点。 下面的几节介绍如何在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 和代码中创建部分透明的梯度停止点。  
   
 <a name="argbsyntax"></a>   
 ### <a name="specifying-color-opacity-in-xaml"></a>在“XAML”中指定颜色不透明度  
- 在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中，使用 [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] 十六进制表示法指定个别颜色的不透明度。 [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] 十六进制表示法使用下面语法：  
+ 在[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，使用 ARGB 十六进制表示法指定个别颜色的不透明度。 ARGB 十六进制表示法使用以下语法：  
   
  `#` **aa** *rrggbb*  
   
- 上一行中的 *aa* 表示用于指定颜色不透明度的两位十六进制值。 *rr*、*gg* 和 *bb* 分别表示用于指定颜色中的红色、绿色和蓝色量的两位十六进制值。 每个十六进制数字介于 0-9 或 A-F 之间。 0 是最小值，F 是最大值。 00 的 alpha 值指定完全透明的颜色，而 FF 的 alpha 值创建完全不透明的颜色。  在下面的示例中，十六进制 [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] 表示法用于指定两种颜色。 第一种为部分透明（alpha 值为 x20），而第二种为完全不透明。  
+ 上一行中的 *aa* 表示用于指定颜色不透明度的两位十六进制值。 *rr*、*gg* 和 *bb* 分别表示用于指定颜色中的红色、绿色和蓝色量的两位十六进制值。 每个十六进制数字介于 0-9 或 A-F 之间。 0 是最小值，F 是最大值。 00 的 alpha 值指定完全透明的颜色，而 FF 的 alpha 值创建完全不透明的颜色。  在以下示例中，使用十六进制 ARGB 表示法来指定两种颜色。 第一种为部分透明（alpha 值为 x20），而第二种为完全不透明。  
   
  [!code-xaml[GradientBrushExamples_snip#TransparentGradientStopExample1XAML](~/samples/snippets/xaml/VS_Snippets_Wpf/GradientBrushExamples_snip/XAML/GradientStopsExample.xaml#transparentgradientstopexample1xaml)]  
   

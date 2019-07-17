@@ -6,12 +6,12 @@ helpviewer_keywords:
 - user interface, see UI
 - accessibility, UI automation
 ms.assetid: 65847654-9994-4a9e-b36d-2dd5d998770b
-ms.openlocfilehash: 02700c75152c32ebee3a0898de1e322ddf9b6e17
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: a914f2c54e5e5b368533b686b1926f7f7ef2e12a
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67802235"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68237325"
 ---
 # <a name="ui-automation-overview"></a>UI 自动化概述
 > [!NOTE]
@@ -36,7 +36,7 @@ ms.locfileid: "67802235"
   
 |组件|描述|  
 |---------------|-----------------|  
-|提供程序 [!INCLUDE[TLA#tla_api](../../../includes/tlasharptla-api-md.md)] （UIAutomationProvider.dll 和 UIAutomationTypes.dll）|一组接口定义，它们由 UI 自动化提供程序、提供关于 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 元素信息并响应编程输入的对象来实现。|  
+|提供程序 API （UIAutomationProvider.dll 和 UIAutomationTypes.dll）|一组接口定义，它们由 UI 自动化提供程序、提供关于 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 元素信息并响应编程输入的对象来实现。|  
 |客户端 API（UIAutomationClient.dll 和 UIAutomationTypes.dll）|一组托管代码的类型，它们使 UI 自动化客户端应用程序可以获取有关 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 的信息，并将输入发送到控件。|  
 |UiAutomationCore.dll|用于处理提供程序和客户端之间通信的基础代码（有时称为 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 核心）。|  
 |UIAutomationClientsideProviders.dll|一组用于标准旧版本控件的 UI 自动化提供程序。 （[!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 控件具有对 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 的本机支持。）此支持自动提供给客户端应用程序。|  

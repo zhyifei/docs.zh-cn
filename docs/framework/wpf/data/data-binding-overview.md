@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data binding [WPF], about data binding
 - conversion for data binding [WPF]
 ms.assetid: c707c95f-7811-401d-956e-2fffd019a211
-ms.openlocfilehash: 3e4438b309d4e443d07a6c2db2310733927fd38b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 86178f3e49dc25bee57b0896f2ebc2cf729b69bd
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625345"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238469"
 ---
 # <a name="data-binding-overview"></a>数据绑定概述
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 数据绑定为应用程序呈现数据并与数据交互提供了一种简单且一致的方式。 元素能够以 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 对象和 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] 形式绑定到来自各种数据源的数据。 <xref:System.Windows.Controls.ContentControl>如 s<xref:System.Windows.Controls.Button>并<xref:System.Windows.Controls.ItemsControl>如 s<xref:System.Windows.Controls.ListBox>和<xref:System.Windows.Controls.ListView>具有内置功能，使灵活的样式设置单个数据项的集合。 可基于数据生成排序、筛选和分组视图。  
@@ -28,7 +28,7 @@ ms.locfileid: "64625345"
 ## <a name="what-is-data-binding"></a>什么是数据绑定？  
  数据绑定是在应用程序 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 和业务逻辑之间建立连接的过程。 如果绑定具有正确的设置，并且数据提供适当的通知，则在数据更改其值时，绑定到该数据的元素会自动反映更改。 数据绑定还意味着，如果元素中数据的外部表示形式发生更改，则基础数据可以自动进行更新以反映更改。 例如，如果用户编辑中的值<xref:System.Windows.Controls.TextBox>元素，则基础数据值自动更新以反映所做的更改。  
   
- 数据绑定的典型用法是将服务器或本地配置数据放置到窗体或其他 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 控件中。 在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中，此概念得到扩展，包括将大量属性绑定到各种数据源。 在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中，元素的依赖属性可以绑定到 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 对象（包括 [!INCLUDE[TLA#tla_adonet](../../../../includes/tlasharptla-adonet-md.md)] 对象或与 Web 服务和 Web 属性关联的对象）和 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 数据。  
+ 数据绑定的典型用法是将服务器或本地配置数据放置到窗体或其他 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 控件中。 在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中，此概念得到扩展，包括将大量属性绑定到各种数据源。 在中[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]，可将元素的依赖项属性绑定到[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]对象 （包括 ADO.NET 对象或与 Web 服务和 Web 属性关联的对象） 和[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]数据。  
   
  有关数据绑定的示例，请参阅[数据绑定演示](https://go.microsoft.com/fwlink/?LinkID=163703)中的以下应用程序 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]：  
   
@@ -46,11 +46,11 @@ ms.locfileid: "64625345"
   
 - 类型*StartDate*属性是<xref:System.DateTime>，这会返回一个日期，包括到毫秒的时间。 在此应用程序中，使用了一个自定义转换器，以便显示较短的日期字符串。 [数据转换](#data_conversion)部分提供了有关转换器的信息。  
   
- 当用户单击“添加产品”按钮时，会出现以下窗体：  
+ 当用户单击“添加产品”  按钮时，会出现以下窗体：  
   
  ![添加产品清单页](./media/databinding-demo-addproductlisting.png "DataBinding_Demo_AddProductListing")  
   
- 用户可以编辑窗体中的字段，使用简略预览和详细预览窗格来预览产品清单，然后单击“提交”以添加新的产品清单。 任何现有的分组、筛选和排序功能都将应用于新项。 在这种特殊情况下，上图中输入的项会作为 *Computer* 类别中的第二项显示。  
+ 用户可以编辑窗体中的字段，使用简略预览和详细预览窗格来预览产品清单，然后单击“提交”  以添加新的产品清单。 任何现有的分组、筛选和排序功能都将应用于新项。 在这种特殊情况下，上图中输入的项会作为 *Computer* 类别中的第二项显示。  
   
  不会显示此映像是中提供的验证逻辑*Start Date* <xref:System.Windows.Controls.TextBox>。 如果用户输入无效日期 （格式无效或为过去的日期），将通过通知用户<xref:System.Windows.Controls.ToolTip>和一个红色感叹号旁边<xref:System.Windows.Controls.TextBox>。 [数据验证](#data_validation)一节讨论了如何创建验证逻辑。  
   
@@ -68,7 +68,7 @@ ms.locfileid: "64625345"
   
 - 目标属性必须为依赖属性。 大多数<xref:System.Windows.UIElement>属性是依赖关系属性和大多数依赖项属性，除了只读属性，默认情况下支持数据绑定。 (仅<xref:System.Windows.DependencyObject>类型可以定义依赖关系属性和所有<xref:System.Windows.UIElement>派生自<xref:System.Windows.DependencyObject>。)  
   
-- 尽管图中并未指出，但请注意，绑定源对象并不限于自定义 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 对象。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 数据绑定支持 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 对象和 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 形式的数据。 若要提供一些示例，绑定源可以是<xref:System.Windows.UIElement>，任何列表对象、[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]与关联的对象[!INCLUDE[TLA#tla_adonet](../../../../includes/tlasharptla-adonet-md.md)]数据或 Web 服务或 XmlNode 包含你[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]数据。 有关详细信息，请参阅[绑定源概述](binding-sources-overview.md)。  
+- 尽管图中并未指出，但请注意，绑定源对象并不限于自定义 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 对象。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 数据绑定支持 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 对象和 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 形式的数据。 若要提供一些示例，绑定源可以是<xref:System.Windows.UIElement>，任何列表对象、[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]与 ADO.NET 数据或 Web 服务相关联的对象或包含的 XmlNode 你[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]数据。 有关详细信息，请参阅[绑定源概述](binding-sources-overview.md)。  
   
  在通读其他 [!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)] 主题时，请务必记住：在建立绑定时，需要将绑定目标绑定*到*绑定源。 例如，如果您要显示某些基础[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]中的数据<xref:System.Windows.Controls.ListBox>使用数据绑定时，要绑定您<xref:System.Windows.Controls.ListBox>到[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]数据。  
   

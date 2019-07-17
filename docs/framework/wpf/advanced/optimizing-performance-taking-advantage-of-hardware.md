@@ -9,12 +9,12 @@ helpviewer_keywords:
 - graphics [WPF], rendering tiers
 - software rendering pipeline [WPF]
 ms.assetid: bfb89bae-7aab-4cac-a26c-a956eda8fce2
-ms.openlocfilehash: d40d1636b510fcfe667ab3e728d1688ce38641d4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 13812fa5429bbe33341e51e4b3be14fbbcb361cb
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64611944"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238455"
 ---
 # <a name="optimizing-performance-taking-advantage-of-hardware"></a>优化性能：利用硬件
 内部体系结构[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]具有两个呈现管道、 硬件和软件。 本主题提供有关这些呈现管道，以帮助你做出有关您的应用程序的性能优化的信息。  
@@ -30,7 +30,7 @@ ms.locfileid: "64611944"
 ### <a name="graphics-rendering-tiers"></a>图形呈现层  
  它可能很难预测你的应用程序将在运行的硬件配置。 但是，你可能想要考虑使用允许无缝切换功能在不同的硬件上运行时，以便它可以充分利用每个不同的硬件配置的应用程序的设计。  
   
- 若要实现此目的，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]提供功能，以确定在运行时中的系统的图形功能。 分类为一个三个呈现功能层的视频卡取决于图形功能。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 公开[!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]允许应用程序在查询的呈现功能层。 然后，你的应用程序可以在运行的时间，具体取决于硬件支持的呈现层采用不同的代码路径。  
+ 若要实现此目的，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]提供功能，以确定在运行时中的系统的图形功能。 分类为一个三个呈现功能层的视频卡取决于图形功能。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 公开一个 API，使应用程序能够查询呈现功能层。 然后，你的应用程序可以在运行的时间，具体取决于硬件支持的呈现层采用不同的代码路径。  
   
  对呈现层级别影响最大的图形硬件功能包括：  
   

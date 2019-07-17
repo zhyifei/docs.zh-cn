@@ -15,12 +15,12 @@ helpviewer_keywords:
 - XPSDrv-based printers
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
-ms.openlocfilehash: acfc252708bf8be7abacb1adc2968122501315a0
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: bb3737ca879f3687b25b021348da0c50f663c58e
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67860202"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238670"
 ---
 # <a name="printing-overview"></a>打印概述
 使用 Microsoft.NET Framework 应用程序开发人员使用 Windows Presentation Foundation (WPF) 具有一组丰富新的打印和打印系统管理 Api。 在 [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] 中，还为创建 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 应用程序的开发人员和使用非托管代码的开发人员提供了这些打印系统增强功能中的某些功能。 此新功能的核心是新的 [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] 文件格式和 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 打印路径。  
@@ -69,7 +69,7 @@ ms.locfileid: "67860202"
  ![屏幕截图显示了 XPS 打印系统。](./media/printing-overview/xml-paper-specification-print-system.png)  
   
 ### <a name="basic-xps-printing"></a>基本 XPS 打印  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 定义基本和高级 [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]。 对于那些不需要打印进行广泛自定义或访问完整的 XPS 功能的应用程序提供了设置此选项，基本打印支持。 基本打印支持通过一个打印对话框控件公开，该控件要求最低的配置，并采用熟悉的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]。 许多 XPS 功能都可使用此简化的打印模型。  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 定义同时基本和高级 API。 对于那些不需要打印进行广泛自定义或访问完整的 XPS 功能的应用程序提供了设置此选项，基本打印支持。 基本打印支持通过一个打印对话框控件公开，该控件要求最低的配置，并采用熟悉的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]。 许多 XPS 功能都可使用此简化的打印模型。  
   
 #### <a name="printdialog"></a>PrintDialog  
  <xref:System.Windows.Controls.PrintDialog?displayProperty=nameWithType>控件提供了单一入口点为[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]，配置和 XPS 作业提交。 若要了解如何实例化和使用该控件，请参阅[调用打印对话框](how-to-invoke-a-print-dialog.md)。  

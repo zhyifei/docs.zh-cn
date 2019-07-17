@@ -10,12 +10,12 @@ helpviewer_keywords:
 - extending glass frames into applications [WPF]
 - glass frames [WPF], extending into applications
 ms.assetid: 74388a3a-4b69-4a9d-ba1f-e107636bd660
-ms.openlocfilehash: 1c3316fa88d3024af4e81072cbe64c13cfbdb18e
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 11c872767b5e3595da1fb4982d3b12e0fc77db98
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67610286"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238589"
 ---
 # <a name="extend-glass-frame-into-a-wpf-application"></a>将玻璃框扩展到 WPF 应用程序
 
@@ -30,7 +30,7 @@ ms.locfileid: "67610286"
 
 ![扩展到 IE7 地址栏后的屏幕截图显示玻璃框。](./media/extend-glass-frame-into-a-wpf-application/internet-explorer-glass-frame-extended-address-bar.png)
 
-若要在 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 应用程序上扩展玻璃框，需要访问非托管 [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]。 下面的代码示例执行两个 API 将框扩展到工作区所需的平台调用 (pinvoke)。 这些 API 的每个调用类中声明**NonClientRegionAPI**。
+若要将玻璃框扩展上[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]应用程序中，需要对非托管 API 的访问。 下面的代码示例执行两个 API 将框扩展到工作区所需的平台调用 (pinvoke)。 这些 API 的每个调用类中声明**NonClientRegionAPI**。
 
 ```csharp
 [StructLayout(LayoutKind.Sequential)]

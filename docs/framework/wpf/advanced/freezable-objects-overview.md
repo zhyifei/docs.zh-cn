@@ -9,12 +9,12 @@ helpviewer_keywords:
 - unfreezing Freezable objects [WPF]
 - classes [WPF], Freezable
 ms.assetid: 89c71692-4f43-4057-b611-67c6a8a863a2
-ms.openlocfilehash: 79c539bd0117c712670601b7498c490fca76090e
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: b2ef3c3dbbfbcef08f58c47948f76cb2c238b48a
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67610522"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238528"
 ---
 # <a name="freezable-objects-overview"></a>Freezable 对象概述
 本主题介绍如何有效地使用和创建<xref:System.Windows.Freezable>对象，它们提供特殊功能，可帮助提高应用程序性能。 Freezable 对象的示例包括画笔、 笔、 转换、 几何和动画。  
@@ -148,7 +148,7 @@ mc:Ignorable="PresentationOptions"
   
  此外必须遵守以下规则用于访问和写入不属于依赖项属性的数据成员：  
   
-- 在任何开头[!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]读取非依赖项属性数据成员，请调用<xref:System.Windows.Freezable.ReadPreamble%2A>方法。  
+- 在读取非依赖项属性数据成员的任何 API 开始时，调用<xref:System.Windows.Freezable.ReadPreamble%2A>方法。  
   
 - 在开始任何 API，它将写入非依赖项属性数据成员时，调用<xref:System.Windows.Freezable.WritePreamble%2A>方法。 (调用后<xref:System.Windows.Freezable.WritePreamble%2A>在 API 中，您不需要进行额外调用<xref:System.Windows.Freezable.ReadPreamble%2A>如果还读取非依赖项属性数据成员。)  
   

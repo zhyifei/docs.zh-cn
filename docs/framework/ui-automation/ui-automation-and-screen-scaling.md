@@ -10,12 +10,12 @@ helpviewer_keywords:
 - UI (user interface), automation
 - UI Automation
 ms.assetid: 4380cad7-e509-448f-b9a5-6de042605fd4
-ms.openlocfilehash: 5b9af742558cd1a672c739040aef9e80dcaaabe5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4e101fffbd7e53cadce0b621d73ade2d1459ba00
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64652197"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68237443"
 ---
 # <a name="ui-automation-and-screen-scaling"></a>UI 自动化和屏幕缩放
 > [!NOTE]
@@ -36,13 +36,13 @@ ms.locfileid: "64652197"
   
  屏幕缩放为以任何方式与屏幕坐标有关的应用程序带来了新的挑战。 屏幕现在包含两个坐标系：物理和逻辑。 点的物理坐标是距原点左上部的实际偏移量（以像素为单位）。 如果像素本身进行了缩放，则逻辑坐标为缩放后的偏移量。  
   
- 假定你设计了一个对话框，其按钮位于坐标 (100, 48) 处。 当此对话框按默认值 96 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]显示时，该按钮所处的物理坐标为 (100, 48)。 当为 120 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]时，它所处的物理坐标为 (125, 60)。 但逻辑坐标表示在任何相同[!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]设置：(100, 48).  
+ 假定你设计了一个对话框，其按钮位于坐标 (100, 48) 处。 当此对话框按默认值 96 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]显示时，该按钮所处的物理坐标为 (100, 48)。 当为 120 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]时，它所处的物理坐标为 (125, 60)。 但逻辑坐标表示在任何相同[!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]设置：（100，48）。  
   
  逻辑坐标非常重要，因为它们使操作系统和应用程序的行为保持一致，而不考虑 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] 设置。 例如，正常情况下， <xref:System.Windows.Forms.Cursor.Position%2A?displayProperty=nameWithType> 将返回逻辑坐标。 如果将光标移至对话框中的某个元素，则将返回相同的坐标，而不考虑 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] 设置。 如果你在 (100, 100) 处拖动控件，它将被拖到这些逻辑坐标，并将占用与任何 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] 设置相同的相对位置。  
   
 <a name="Scaling_in_UI_Automation_Clients"></a>   
 ## <a name="scaling-in-ui-automation-clients"></a>UI 自动化客户端中的缩放  
-  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] [!INCLUDE[TLA#tla_api](../../../includes/tlasharptla-api-md.md)] 不使用逻辑坐标。 下面的方法和属性将返回物理坐标或将其用作参数。  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] API 不使用逻辑坐标。 下面的方法和属性将返回物理坐标或将其用作参数。  
   
 - <xref:System.Windows.Automation.AutomationElement.GetClickablePoint%2A>  
   

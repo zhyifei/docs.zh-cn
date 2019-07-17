@@ -7,12 +7,12 @@ helpviewer_keywords:
 - classes [WPF], owners of dependency properties
 - metadata [WPF], dependency properties
 ms.assetid: 1fbada8e-4867-4ed1-8d97-62c07dad7ebc
-ms.openlocfilehash: 4ea417b2a922574eb92a07aa845c360f6e843f17
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7d5ff09bb9cc8da45f44cf6fe952411e7cd3f4c4
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663401"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238542"
 ---
 # <a name="dependency-property-value-precedence"></a>依赖项属性值优先级
 <a name="introduction"></a> 本主题说明 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 属性系统的工作机制如何影响依赖属性的值，并介绍应用于属性有效值的属性系统的各方面所依据的优先级。  
@@ -43,7 +43,7 @@ ms.locfileid: "64663401"
   
 2. **活动动画或具有 Hold 行为的动画。** 为了获得任何实用效果，属性的动画必须优先于基（未动画）值，即使该值是在本地设置的也是如此。 有关详细信息，请参阅本主题后面的[强制、动画和基值](#animations)。  
   
-3. **本地值。** 可能会通过"包装器"属性，这也相当于为属性或属性元素中设置的方便地设置本地值[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，或通过调用<xref:System.Windows.DependencyObject.SetValue%2A>[!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]使用特定实例的属性。 如果使用绑定或资源来设置本地值，则每个值都按照直接设置值的优先级顺序来应用。  
+3. **本地值。** 可能会通过"包装器"属性，这也相当于为属性或属性元素中设置的方便地设置本地值[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，或通过调用<xref:System.Windows.DependencyObject.SetValue%2A>API 使用的特定实例的属性。 如果使用绑定或资源来设置本地值，则每个值都按照直接设置值的优先级顺序来应用。  
   
 4. **TemplatedParent 模板属性。** 元素具有<xref:System.Windows.FrameworkElement.TemplatedParent%2A>如果将其创建为模板的一部分 (<xref:System.Windows.Controls.ControlTemplate>或<xref:System.Windows.DataTemplate>)。 有关何时应用此原则的详细信息，请参阅本主题后面的 [TemplatedParent](#templatedparent)。 在模板中，按以下优先级顺序应用：  
   

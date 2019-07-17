@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
-ms.openlocfilehash: 94937b2c3e6935474d337c62bfd6698441dfcc2e
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: 98dc2899fd2c6a294f9f878ccbf87f60520bbe78
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67860115"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238688"
 ---
 # <a name="typography-in-wpf"></a>WPF 中的版式
 本主题介绍 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 的主要版式功能。 这些功能包括改进的文本呈现质量和性能、[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 版式支持、增强的国际文本、增强的字体支持和新的文本应用程序编程接口 (API)。  
@@ -142,7 +142,7 @@ ms.locfileid: "67860115"
 ### <a name="advanced-text-formatting"></a>高级文本格式设置  
  在最高级别的文本 Api，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]能够通过创建自定义文本布局<xref:System.Windows.Media.TextFormatting.TextFormatter>对象中和其他类型<xref:System.Windows.Media.TextFormatting>命名空间。 <xref:System.Windows.Media.TextFormatting.TextFormatter>和关联的类可以实现支持的字符格式、 段落样式定义的自定义文本布局换行规则和其他布局功能对国际文本。 只有在极少数情况下才需要重写 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 文本布局支持的默认实现。 但是，如果要创建文本编辑控件或应用程序，则可能需要非默认的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 实现。  
   
- 与传统文本不同[!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]，则<xref:System.Windows.Media.TextFormatting.TextFormatter>与通过回调方法的一组文本布局客户端进行交互。 它要求客户端提供这些方法的实现中<xref:System.Windows.Media.TextFormatting.TextSource>类。 下图说明了客户端应用程序之间的文本布局交互和<xref:System.Windows.Media.TextFormatting.TextFormatter>。  
+ 与传统文本 API，不同<xref:System.Windows.Media.TextFormatting.TextFormatter>与通过回调方法的一组文本布局客户端进行交互。 它要求客户端提供这些方法的实现中<xref:System.Windows.Media.TextFormatting.TextSource>类。 下图说明了客户端应用程序之间的文本布局交互和<xref:System.Windows.Media.TextFormatting.TextFormatter>。  
   
  ![文本布局客户端和 TextFormatter 示意图](./media/typography-in-wpf/text-layout-text-formatter-interaction.png)  
   

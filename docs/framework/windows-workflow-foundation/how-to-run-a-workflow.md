@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f814ff82-fe2b-4614-aebb-b768c3e61179
-ms.openlocfilehash: c47e1ba89179b38055244c01507318836c899fda
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: a7784f37c9e8009adc3735974a6fb0423f24ea37
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65637522"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238517"
 ---
 # <a name="how-to-run-a-workflow"></a>如何：运行工作流
 本主题是 Windows Workflow Foundation 入门教程的延续，讨论如何创建工作流宿主并运行在以前定义的工作流[如何：创建工作流](how-to-create-a-workflow.md)主题。
@@ -25,21 +25,21 @@ ms.locfileid: "65637522"
   
 1. 从以前打开的解决方案[如何：创建活动](how-to-create-an-activity.md)通过使用 Visual Studio 2012 的主题。  
   
-2. 在 **解决方案资源管理器** 中右键单击 **WF45GettingStartedTutorial** 解决方案，选择 **“添加”** 和 **“新建项目”**。  
+2. 在 **解决方案资源管理器** 中右键单击 **WF45GettingStartedTutorial** 解决方案，选择 **“添加”** 和 **“新建项目”** 。  
   
     > [!TIP]
     >  如果未显示 **解决方案资源管理器** 窗口，请从 **“视图”** 菜单选择 **“解决方案资源管理器** 。
 
-3. 在 **“已安装”** 节点中，选择 **“Visual C#”**、 **“工作流”** （或 **“Visual Basic”**、 **“工作流”**）。
+3. 在 **“已安装”** 节点中，选择 **“Visual C#”** 、 **“工作流”** （或 **“Visual Basic”** 、 **“工作流”** ）。
 
     > [!NOTE]
     >  根据在 Visual Studio 中配置为主要语言的编程语言的不同， **“Visual C#”** 或 **“Visual Basic”** 节点可能位于 **“已安装”** 节点下的 **“其他语言”** 节点中。
 
      请确保在 .NET Framework 版本下拉列表中选择 **“.NET Framework 4.5”** 。 从 **“工作流”** 列表中选择 **“工作流控制台应用程序”** 。 类型`NumberGuessWorkflowHost`成**名称**框，然后单击**确定**。 这将创建适合初学者的工作流应用程序，它具备基本的工作流承载支持。 基本承载代码将修改用于运行工作流应用程序。
 
-4. 在 **解决方案资源管理器** 中右键单击新添加的 **NumberGuessWorkflowHost** ，然后选择 **“添加引用”**。 在 **“添加引用”** 列表中选择 **“解决方案”** ，选中 **NumberGuessWorkflowActivities**旁边的复选框，然后单击 **“确定”**。
+4. 在 **解决方案资源管理器** 中右键单击新添加的 **NumberGuessWorkflowHost** ，然后选择 **“添加引用”** 。 在 **“添加引用”** 列表中选择 **“解决方案”** ，选中 **NumberGuessWorkflowActivities**旁边的复选框，然后单击 **“确定”** 。
 
-5. 在 **解决方案资源管理器** 中右键单击 **Workflow1.xaml** ，然后选择 **“删除”**。 单击 **“确定”** 以确认。
+5. 在 **解决方案资源管理器** 中右键单击 **Workflow1.xaml** ，然后选择 **“删除”** 。 单击 **“确定”** 以确认。
 
 ### <a name="to-modify-the-workflow-hosting-code"></a>修改工作流承载代码
 
@@ -51,13 +51,13 @@ ms.locfileid: "65637522"
      因为此项目是用 **“工作流控制台应用程序”** 模板创建的，所以 **“Program.cs”** 或 **“Module1.vb”** 包含以下基本工作流承载代码。
 
     ```vb
-    ' Create and cache the workflow definition
-    Activity workflow1 = new Workflow1()
+    ' Create and cache the workflow definition.
+    Dim workflow1 As Activity = New Workflow1()
     WorkflowInvoker.Invoke(workflow1)
     ```
 
     ```csharp
-    // Create and cache the workflow definition
+    // Create and cache the workflow definition.
     Activity workflow1 = new Workflow1();
     WorkflowInvoker.Invoke(workflow1);
     ```
@@ -139,7 +139,7 @@ ms.locfileid: "65637522"
 
 ## <a name="BKMK_ToRunTheApplication"></a> 生成并运行应用程序
 
-1. 在 **解决方案资源管理器** 中，右键单击 **NumberGuessWorkflowHost** 项目，然后选择 **“设为启动项目”**。
+1. 在 **解决方案资源管理器** 中，右键单击 **NumberGuessWorkflowHost** 项目，然后选择 **“设为启动项目”** 。
 
 2. 按 Ctrl+F5 生成并运行应用程序。 尝试以尽可能少的次数猜出该数。
 

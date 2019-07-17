@@ -16,12 +16,12 @@ helpviewer_keywords:
 - data templates [WPF]
 - thread [WPF], affinity
 ms.assetid: 8579c10b-76ab-4c52-9691-195ce02333c8
-ms.openlocfilehash: 697a3dff663b333ce97e05783df6b163692b5d9e
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 2fa2e039d73d079b6dacc9326c64fc2015eecc49
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67610344"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238486"
 ---
 # <a name="wpf-architecture"></a>WPF 体系结构
 本主题提供 Windows Presentation Foundation (WPF) 类层次结构的指导的教程。 本主题涵盖了 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 的大部分主要子系统，并说明它们的交互方式。 本主题还详细介绍了 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 架构师所做的一些选择。  
@@ -64,7 +64,7 @@ ms.locfileid: "67610344"
 ## <a name="systemwindowsmediavisual"></a>System.Windows.Media.Visual  
  定义一个系统后，下一步是将像素绘制到屏幕上。 <xref:System.Windows.Media.Visual>类提供了用于每个可以选择性地包含绘制指令以及有关如何呈现这些指令 （剪裁、 转换等） 的元数据生成视觉对象的树。 <xref:System.Windows.Media.Visual> 专为极其轻量且灵活，因此大部分功能没有公共 API 接触并且非常依赖受保护的回调函数。  
   
- <xref:System.Windows.Media.Visual> 是真正的入口点[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]复合系统。 <xref:System.Windows.Media.Visual> 是托管这两个子系统之间的连接点[!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]和非托管的 milcore。  
+ <xref:System.Windows.Media.Visual> 是真正的入口点[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]复合系统。 <xref:System.Windows.Media.Visual> 是的这两个子系统、 托管的 API 和非托管的 milcore 之间点。  
   
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 通过遍历由 milcore 管理的非托管数据结构来显示数据。 这些结构（称为组合节点）代表层次结构显示树，其中每个节点都有呈现指令。 只能通过消息传递协议来访问此树（如下图右侧所示）。  
   

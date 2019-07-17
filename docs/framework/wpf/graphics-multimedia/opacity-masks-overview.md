@@ -6,12 +6,12 @@ helpviewer_keywords:
 - masks [WPF], opacity
 - opacity [WPF], masks
 ms.assetid: 22367fab-5f59-4583-abfd-db2bf86eaef7
-ms.openlocfilehash: 3ee02eca9719f4ffa3ee0c165ad2541c9ffd085e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7554471d8b812b60e0b1aeb6dd3096b542ca44d6
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625262"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238409"
 ---
 # <a name="opacity-masks-overview"></a>不透明蒙板概述
 不透明蒙板能够使部分元素或视觉对象透明或部分透明。 若要创建不透明蒙板，则应用<xref:System.Windows.Media.Brush>到<xref:System.Windows.UIElement.OpacityMask%2A>元素的属性或<xref:System.Windows.Media.Visual>。  画笔映射到元素或视觉对象，并且画笔的每个像素的不透明度值用于确定生成的元素或视觉对象的每个相应像素的不透明度。  
@@ -69,15 +69,15 @@ DrawingBrush 不透明蒙板示例
 ## <a name="specifying-gradient-stops-for-an-opacity-mask"></a>为不透明蒙板指定梯度停止点  
  在上一示例中，系统定义颜色<xref:System.Windows.Media.Colors.Black%2A>用作渐变的开始颜色。 因为所有中的颜色<xref:System.Windows.Media.Colors>类，除<xref:System.Windows.Media.Colors.Transparent%2A>，是完全不透明，它们可以用于只需定义渐变不透明蒙板的起始颜色。  
   
- 附加控制 alpha 值定义不透明蒙板时，可以指定使用的颜色的 alpha 通道[!INCLUDE[TLA#tla_argb](../../../../includes/tlasharptla-argb-md.md)]标记中或使用十六进制表示法<xref:System.Windows.Media.Color.FromScRgb%2A?displayProperty=nameWithType>方法。  
+ 附加控制 alpha 值定义不透明蒙板时，可以指定在标记中使用 ARGB 十六进制表示法或使用的颜色的 alpha 通道<xref:System.Windows.Media.Color.FromScRgb%2A?displayProperty=nameWithType>方法。  
   
 <a name="argbsyntax"></a>   
 ### <a name="specifying-color-opacity-in-xaml"></a>在“XAML”中指定颜色不透明度  
- 在 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 中，使用 [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] 十六进制表示法指定个别颜色的不透明度。 [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] 十六进制表示法使用下面语法：  
+ 在[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]，使用 ARGB 十六进制表示法指定个别颜色的不透明度。 ARGB 十六进制表示法使用以下语法：  
   
  `#` **aa** *rrggbb*  
   
- 上一行中的 *aa* 表示用于指定颜色不透明度的两位十六进制值。 *rr*、*gg* 和 *bb* 分别表示用于指定颜色中的红色、绿色和蓝色量的两位十六进制值。 每个十六进制数字介于 0-9 或 A-F 之间。 0 是最小值，F 是最大值。 00 的 alpha 值指定完全透明的颜色，而 FF 的 alpha 值创建完全不透明的颜色。  在下面的示例中，十六进制 [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] 表示法用于指定两种颜色。 第一种为完全不透明色，第二种为完全透明色。  
+ 上一行中的 *aa* 表示用于指定颜色不透明度的两位十六进制值。 *rr*、*gg* 和 *bb* 分别表示用于指定颜色中的红色、绿色和蓝色量的两位十六进制值。 每个十六进制数字介于 0-9 或 A-F 之间。 0 是最小值，F 是最大值。 00 的 alpha 值指定完全透明的颜色，而 FF 的 alpha 值创建完全不透明的颜色。  在以下示例中，使用十六进制 ARGB 表示法来指定两种颜色。 第一种为完全不透明色，第二种为完全透明色。  
   
  [!code-xaml[OpacityMasksSnippet#AARRGGBBValueonOpacityMask](~/samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksSnippet/CS/GradientBrushExample.xaml#aarrggbbvalueonopacitymask)]  
   

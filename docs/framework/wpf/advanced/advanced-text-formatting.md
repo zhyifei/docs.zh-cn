@@ -9,12 +9,12 @@ helpviewer_keywords:
 - text [WPF]
 - typography [WPF], text formatting
 ms.assetid: f0a7986e-f5b2-485c-a27d-f8e922022212
-ms.openlocfilehash: 4ed6dd33efd5fdc5e2c61df4173bec5cc2f0d807
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: 0d3b44007524f502d8393d1dc1834142090a7a15
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67859688"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238660"
 ---
 # <a name="advanced-text-formatting"></a>高级文本格式设置
 Windows Presentation Foundation (WPF) 应用程序中包含文本提供一套稳健的 Api。 布局和[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]Api，如<xref:System.Windows.Controls.TextBlock>、 提供了最常见和常规使用用于呈现文本元素。 绘制 Api，如<xref:System.Windows.Media.GlyphRunDrawing>和<xref:System.Windows.Media.FormattedText>，在绘图中加入格式化的文本提供一种方法。 在最高级别，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]提供了一个可扩展的文本格式引擎，用于控制文本呈现，如文本存储管理、 文本运行格式管理和嵌入的对象管理的各个方面。  
@@ -38,7 +38,7 @@ Windows Presentation Foundation (WPF) 应用程序中包含文本提供一套稳
 ## <a name="using-the-text-formatter"></a>使用文本格式化程序  
  <xref:System.Windows.Media.TextFormatting.TextFormatter> 是[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]文本格式引擎，提供服务，用于设置格式及断开文本行。 文本格式化程序可处理各种文本字符格式和段落样式，并提供对国际文本布局的支持。  
   
- 与传统文本不同[!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]，则<xref:System.Windows.Media.TextFormatting.TextFormatter>与通过回调方法的一组文本布局客户端进行交互。 它要求客户端提供这些方法的实现中<xref:System.Windows.Media.TextFormatting.TextSource>类。 下图说明了客户端应用程序之间的文本布局交互和<xref:System.Windows.Media.TextFormatting.TextFormatter>。  
+ 与传统文本 API，不同<xref:System.Windows.Media.TextFormatting.TextFormatter>与通过回调方法的一组文本布局客户端进行交互。 它要求客户端提供这些方法的实现中<xref:System.Windows.Media.TextFormatting.TextSource>类。 下图说明了客户端应用程序之间的文本布局交互和<xref:System.Windows.Media.TextFormatting.TextFormatter>。  
   
  ![文本布局客户端和 TextFormatter 示意图](./media/advanced-text-formatting/text-layout-textformatter-interaction.png)  
   
