@@ -15,7 +15,7 @@ ms.lasthandoff: 07/12/2019
 ms.locfileid: "67859644"
 ---
 # <a name="events-c-programming-guide"></a>事件（C# 编程指南）
-[类](../../../csharp/language-reference/keywords/class.md) 或对象可以通过事件向其他类或对象通知发生的相关事情。发送（或引发**）事件的类称为“发布者”，接收（或处理**）事件的类称为“订阅者”。 
+[类](../../../csharp/language-reference/keywords/class.md) 或对象可以通过事件向其他类或对象通知发生的相关事情。 发送（或引发  ）事件的类称为“发布者”  ，接收（或处理  ）事件的类称为“订阅者”  。  
   
  在典型的 C# Windows 窗体或 Web 应用程序中，可订阅由按钮和列表框等控件引发的事件。 可以使用 Visual C# 集成开发环境 (IDE) 来浏览控件发布的事件，并选择想要处理的事件。 借助 IDE，可轻松自动添加空白事件处理程序方法以及要订阅该事件的代码。 有关详细信息，请参阅[如何：订阅和取消订阅事件](../../../csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)。  
   
