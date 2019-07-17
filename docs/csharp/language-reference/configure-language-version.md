@@ -1,97 +1,84 @@
 ---
-title: 选择 C# 语言版本 - C# 指南
-description: 配置编译器以使用特定的编译器版本执行语法验证
-ms.date: 02/28/2019
-ms.openlocfilehash: feb3e51a107f9830071b55c7985f202edc842f4a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+title: C# 语言版本控制 - C# 指南
+description: 了解如何根据项目确定 C# 语言版本，以及可以手动调整的不同值。
+ms.date: 07/10/2019
+ms.openlocfilehash: 2d593ca0588f291c61cdf52fbc1eb60a1f3f7ecb
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59770875"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859603"
 ---
-# <a name="select-the-c-language-version"></a><span data-ttu-id="bd621-103">选择 C# 语言版本</span><span class="sxs-lookup"><span data-stu-id="bd621-103">Select the C# language version</span></span>
+# <a name="c-language-versioning"></a><span data-ttu-id="0c546-103">C# 语言版本控制</span><span class="sxs-lookup"><span data-stu-id="0c546-103">C# language versioning</span></span>
 
-<span data-ttu-id="bd621-104">C# 编译器根据项目的一个或多个目标框架确定默认语言版本。</span><span class="sxs-lookup"><span data-stu-id="bd621-104">The C# compiler determines a default language version based on your project's target framework or frameworks.</span></span> <span data-ttu-id="bd621-105">如果你的项目是以具有相应预览语言版本的预览框架为目标，那么使用的语言版本是预览语言版本。</span><span class="sxs-lookup"><span data-stu-id="bd621-105">When your project targets a preview framework that has a corresponding preview language version, the language version used is the preview language version.</span></span> <span data-ttu-id="bd621-106">如果你的项目不以预览框架为目标，则使用的语言版本是最新的次要版本。</span><span class="sxs-lookup"><span data-stu-id="bd621-106">When your project doesn't target a preview framework, the language version used is the latest minor version.</span></span>
+<span data-ttu-id="0c546-104">C# 编译器根据项目的一个或多个目标框架确定默认语言版本。</span><span class="sxs-lookup"><span data-stu-id="0c546-104">The C# compiler determines a default language version based on your project's target framework or frameworks.</span></span> <span data-ttu-id="0c546-105">这是因为 C# 语言可能具有依赖于每个 .NET 实现中不提供的类型或运行时组件的功能。</span><span class="sxs-lookup"><span data-stu-id="0c546-105">This is because the C# language may have features that rely on types or runtime components that are not available in every .NET implementation.</span></span> <span data-ttu-id="0c546-106">这也确保了无论根据哪种目标构建项目，默认情况下你都将获得最兼容的语言版本。</span><span class="sxs-lookup"><span data-stu-id="0c546-106">This also ensures that for whatever target your project is built against, you get the highest compatible language version by default.</span></span>
 
-<span data-ttu-id="bd621-107">例如，在 .NET Core 3.0 的预览版期间，任何以 `netcoreapp3.0` 或 `netstandard2.1` 为目标的项目（均为预览版）都将使用 C# 8.0 语言（同样为预览版）。</span><span class="sxs-lookup"><span data-stu-id="bd621-107">For example, during the preview period for .NET Core 3.0, any project that targets `netcoreapp3.0` or `netstandard2.1` (both in preview) will use the C# 8.0 language (also in preview).</span></span> <span data-ttu-id="bd621-108">以任何已发布版本为目标的项目将使用 C# 7.3（最新发布的版本）。</span><span class="sxs-lookup"><span data-stu-id="bd621-108">Projects targeting any released version will use C# 7.3 (the latest released version).</span></span> <span data-ttu-id="bd621-109">此行为意味着任何以 .NET Framework 为目标的项目都将使用最新版本 (C# 7.3)。</span><span class="sxs-lookup"><span data-stu-id="bd621-109">This behavior means that any project targeting .NET Framework will use latest (C# 7.3).</span></span> 
+## <a name="defaults"></a><span data-ttu-id="0c546-107">默认值</span><span class="sxs-lookup"><span data-stu-id="0c546-107">Defaults</span></span>
 
-<span data-ttu-id="bd621-110">借助此功能，在开发环境中安装新版本的 SDK 和工具时，不必选择在项目中引入新的语言功能。</span><span class="sxs-lookup"><span data-stu-id="bd621-110">This capability decouples the decision to install new versions of the SDK and tools in your development environment from the decision to incorporate new language features in a project.</span></span> <span data-ttu-id="bd621-111">可以在生成计算机上安装最新的 SDK 和工具。</span><span class="sxs-lookup"><span data-stu-id="bd621-111">You can install the latest SDK and tools on your build machine.</span></span> <span data-ttu-id="bd621-112">每个项目可以配置为对其生成使用该语言的特定版本。</span><span class="sxs-lookup"><span data-stu-id="bd621-112">Each project can be configured to use a specific version of the language for its build.</span></span> <span data-ttu-id="bd621-113">默认行为意味着只有在项目以这些框架为目标时，才会启用依赖于新类型或新 CLR 行为的任何语言功能。</span><span class="sxs-lookup"><span data-stu-id="bd621-113">The default behavior means that any language features that rely on new types or new CLR behavior are enabled only when projects target those frameworks.</span></span>
+<span data-ttu-id="0c546-108">编译器根据以下规则确定默认值：</span><span class="sxs-lookup"><span data-stu-id="0c546-108">The compiler determines a default based on these rules:</span></span>
 
-<span data-ttu-id="bd621-114">可以通过指定语言版本来覆盖默认行为。</span><span class="sxs-lookup"><span data-stu-id="bd621-114">You can override the default behavior by specifying a language version.</span></span> <span data-ttu-id="bd621-115">有几种方法可以设置语言版本：</span><span class="sxs-lookup"><span data-stu-id="bd621-115">There are several ways to set the language version:</span></span>
+|<span data-ttu-id="0c546-109">目标框架</span><span class="sxs-lookup"><span data-stu-id="0c546-109">Target framework</span></span>|<span data-ttu-id="0c546-110">version</span><span class="sxs-lookup"><span data-stu-id="0c546-110">version</span></span>|<span data-ttu-id="0c546-111">C# 语言版本的默认值</span><span class="sxs-lookup"><span data-stu-id="0c546-111">C# language version default</span></span>|
+|----------------|-------|---------------------------|
+|<span data-ttu-id="0c546-112">.NET Core</span><span class="sxs-lookup"><span data-stu-id="0c546-112">.NET Core</span></span>|<span data-ttu-id="0c546-113">3.x</span><span class="sxs-lookup"><span data-stu-id="0c546-113">3.x</span></span>|<span data-ttu-id="0c546-114">C# 8.0</span><span class="sxs-lookup"><span data-stu-id="0c546-114">C# 8.0</span></span>|
+|<span data-ttu-id="0c546-115">.NET Core</span><span class="sxs-lookup"><span data-stu-id="0c546-115">.NET Core</span></span>|<span data-ttu-id="0c546-116">2.x</span><span class="sxs-lookup"><span data-stu-id="0c546-116">2.x</span></span>|<span data-ttu-id="0c546-117">C# 7.3</span><span class="sxs-lookup"><span data-stu-id="0c546-117">C# 7.3</span></span>|
+|<span data-ttu-id="0c546-118">.NET Standard</span><span class="sxs-lookup"><span data-stu-id="0c546-118">.NET Standard</span></span>|<span data-ttu-id="0c546-119">全部</span><span class="sxs-lookup"><span data-stu-id="0c546-119">all</span></span>|<span data-ttu-id="0c546-120">C# 7.3</span><span class="sxs-lookup"><span data-stu-id="0c546-120">C# 7.3</span></span>|
+|<span data-ttu-id="0c546-121">.NET Framework</span><span class="sxs-lookup"><span data-stu-id="0c546-121">.NET Framework</span></span>|<span data-ttu-id="0c546-122">全部</span><span class="sxs-lookup"><span data-stu-id="0c546-122">all</span></span>|<span data-ttu-id="0c546-123">C# 7.3</span><span class="sxs-lookup"><span data-stu-id="0c546-123">C# 7.3</span></span>|
 
-- <span data-ttu-id="bd621-116">依靠 [Visual Studio 快速操作](#visual-studio-quick-action)。</span><span class="sxs-lookup"><span data-stu-id="bd621-116">Rely on a [Visual Studio quick action](#visual-studio-quick-action).</span></span>
-- <span data-ttu-id="bd621-117">在 [Visual Studio UI](#set-the-language-version-in-visual-studio) 中设置语言版本。</span><span class="sxs-lookup"><span data-stu-id="bd621-117">Set the language version in the [Visual Studio UI](#set-the-language-version-in-visual-studio).</span></span>
-- <span data-ttu-id="bd621-118">手动编辑 [.csproj 文件](#edit-the-csproj-file)。</span><span class="sxs-lookup"><span data-stu-id="bd621-118">Manually edit your [**.csproj** file](#edit-the-csproj-file).</span></span>
-- <span data-ttu-id="bd621-119">为[子目录中的多个项目](#configure-multiple-projects)设置语言版本。</span><span class="sxs-lookup"><span data-stu-id="bd621-119">Set the language version [for multiple projects in a subdirectory](#configure-multiple-projects).</span></span>
-- <span data-ttu-id="bd621-120">配置 [`-langversion` 编译器选项](#set-the-langversion-compiler-option)。</span><span class="sxs-lookup"><span data-stu-id="bd621-120">Configure the [`-langversion` compiler option](#set-the-langversion-compiler-option).</span></span>
+## <a name="default-for-previews"></a><span data-ttu-id="0c546-124">默认值适用于预览版</span><span class="sxs-lookup"><span data-stu-id="0c546-124">Default for previews</span></span>
 
-## <a name="visual-studio-quick-action"></a><span data-ttu-id="bd621-121">Visual Studio 快速操作</span><span class="sxs-lookup"><span data-stu-id="bd621-121">Visual Studio quick action</span></span>
+<span data-ttu-id="0c546-125">如果你的项目是以具有相应预览语言版本的预览框架为目标，那么使用的语言版本是预览语言版本。</span><span class="sxs-lookup"><span data-stu-id="0c546-125">When your project targets a preview framework that has a corresponding preview language version, the language version used is the preview language version.</span></span> <span data-ttu-id="0c546-126">这可确保你可以使用保证在任何环境中都可用的预览提供的最新功能，而不会影响面向发布的 .NET Core 版本的项目。</span><span class="sxs-lookup"><span data-stu-id="0c546-126">This ensures that you can use the latest features that are guaranteed to work with that preview in any environment without affecting your projects that target a released .NET Core version.</span></span>
 
-<span data-ttu-id="bd621-122">Visual Studio 可帮助你确定需要的语言版本。</span><span class="sxs-lookup"><span data-stu-id="bd621-122">Visual Studio helps you determine the language version you need.</span></span> <span data-ttu-id="bd621-123">如果你使用的语言功能不适合当前配置的版本，Visual Studio 会显示一项潜在修复来为项目更新语言版本。</span><span class="sxs-lookup"><span data-stu-id="bd621-123">If you use a language feature that is not available for the currently configured version, Visual Studio shows a potential fix to update the language version for the project.</span></span>
+## <a name="overriding-a-default"></a><span data-ttu-id="0c546-127">重写默认值</span><span class="sxs-lookup"><span data-stu-id="0c546-127">Overriding a default</span></span>
 
-## <a name="set-the-language-version-in-visual-studio"></a><span data-ttu-id="bd621-124">在 Visual Studio 中设置语言版本</span><span class="sxs-lookup"><span data-stu-id="bd621-124">Set the language version in Visual Studio</span></span>
+<span data-ttu-id="0c546-128">如果必须明确指定 C# 版本，可以通过以下几种方式实现：</span><span class="sxs-lookup"><span data-stu-id="0c546-128">If you must specify your C# version explicitly, you can do so in several ways:</span></span>
 
-<span data-ttu-id="bd621-125">可以在 Visual Studio 中设置该版本。</span><span class="sxs-lookup"><span data-stu-id="bd621-125">You can set the version in Visual Studio.</span></span> <span data-ttu-id="bd621-126">右键单击“解决方案资源管理器”中的项目节点，然后选择“属性”。</span><span class="sxs-lookup"><span data-stu-id="bd621-126">Right-click on the project node in Solution Explorer and select **Properties**.</span></span> <span data-ttu-id="bd621-127">选择**生成**选项卡并选择**高级**按钮。</span><span class="sxs-lookup"><span data-stu-id="bd621-127">Select the **Build** tab and select the **Advanced** button.</span></span> <span data-ttu-id="bd621-128">在下拉列表中，选择版本。</span><span class="sxs-lookup"><span data-stu-id="bd621-128">In the dropdown, select the version.</span></span> <span data-ttu-id="bd621-129">下图显示“最新”设置：</span><span class="sxs-lookup"><span data-stu-id="bd621-129">The following image shows the "latest" setting:</span></span>
+- <span data-ttu-id="0c546-129">手动编辑[项目文件](#edit-the-project-file)。</span><span class="sxs-lookup"><span data-stu-id="0c546-129">Manually edit your [project file](#edit-the-project-file).</span></span>
+- <span data-ttu-id="0c546-130">为[子目录中的多个项目](#configure-multiple-projects)设置语言版本。</span><span class="sxs-lookup"><span data-stu-id="0c546-130">Set the language version [for multiple projects in a subdirectory](#configure-multiple-projects).</span></span>
+- <span data-ttu-id="0c546-131">配置 [`-langversion` 编译器选项](#set-the-langversion-compiler-option)。</span><span class="sxs-lookup"><span data-stu-id="0c546-131">Configure the [`-langversion` compiler option](#set-the-langversion-compiler-option).</span></span>
 
-![高级生成设置的屏幕截图，在这里可以指定语言版本](./media/configure-language-version/advanced-build-settings.png)
+### <a name="edit-the-project-file"></a><span data-ttu-id="0c546-132">编辑项目文件</span><span class="sxs-lookup"><span data-stu-id="0c546-132">Edit the project file</span></span>
 
-> [!NOTE]
-> <span data-ttu-id="bd621-131">如果使用 Visual Studio IDE 来更新 csproj 文件，IDE 将为每个生成配置创建单独的节点。</span><span class="sxs-lookup"><span data-stu-id="bd621-131">If you use the Visual Studio IDE to update your csproj files, the IDE creates separate nodes for each build configuration.</span></span> <span data-ttu-id="bd621-132">通常在所有生成配置中都设置相同的值，但你需要为每个生成配置显式地设置值，或在修改此设置时选择"所有配置"。</span><span class="sxs-lookup"><span data-stu-id="bd621-132">You'll typically set the value the same in all build configurations, but you need to set it explicitly for each build configuration, or select "All Configurations" when you modify this setting.</span></span> <span data-ttu-id="bd621-133">在 csproj 文件中，你可以看到如下内容：</span><span class="sxs-lookup"><span data-stu-id="bd621-133">You'll see the following in your csproj file:</span></span>
->
->```xml
-> <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
->  <LangVersion>latest</LangVersion>
-></PropertyGroup>
->
-> <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
->  <LangVersion>latest</LangVersion>
-> </PropertyGroup>
-> ```
->
-
-## <a name="edit-the-csproj-file"></a><span data-ttu-id="bd621-134">编辑 csproj 文件</span><span class="sxs-lookup"><span data-stu-id="bd621-134">Edit the csproj file</span></span>
-
-<span data-ttu-id="bd621-135">可在 .csproj 文件中设置语言版本。</span><span class="sxs-lookup"><span data-stu-id="bd621-135">You can set the language version in your **.csproj** file.</span></span> <span data-ttu-id="bd621-136">添加如下元素：</span><span class="sxs-lookup"><span data-stu-id="bd621-136">Add an element like the following:</span></span>
+<span data-ttu-id="0c546-133">可在项目文件中设置语言版本。</span><span class="sxs-lookup"><span data-stu-id="0c546-133">You can set the language version in your project file.</span></span> <span data-ttu-id="0c546-134">例如，如果你明确希望访问预览功能，则可以添加如下元素：</span><span class="sxs-lookup"><span data-stu-id="0c546-134">For example, if you explicitly wanted access to preview features, you could do add an element like this:</span></span>
 
 ```xml
 <PropertyGroup>
-   <LangVersion>latest</LangVersion>
+   <LangVersion>preview</LangVersion>
 </PropertyGroup>
 ```
 
-<span data-ttu-id="bd621-137">`latest` 值使用 C# 语言的最新次要版本。</span><span class="sxs-lookup"><span data-stu-id="bd621-137">The value `latest` uses the latest minor version of the C# language.</span></span> <span data-ttu-id="bd621-138">有效值为：</span><span class="sxs-lookup"><span data-stu-id="bd621-138">Valid values are:</span></span>
+<span data-ttu-id="0c546-135">值 `preview` 使用编译器支持的最新可用的 C# 语言预览版。</span><span class="sxs-lookup"><span data-stu-id="0c546-135">The value `preview` uses the latest available preview C# language that your compiler supports.</span></span>
 
-|<span data-ttu-id="bd621-139">值</span><span class="sxs-lookup"><span data-stu-id="bd621-139">Value</span></span>|<span data-ttu-id="bd621-140">含义</span><span class="sxs-lookup"><span data-stu-id="bd621-140">Meaning</span></span>|
-|------------|-------------|
-|<span data-ttu-id="bd621-141">preview</span><span class="sxs-lookup"><span data-stu-id="bd621-141">preview</span></span>|<span data-ttu-id="bd621-142">编译器接受最新预览版中的所有有效语言语法。</span><span class="sxs-lookup"><span data-stu-id="bd621-142">The compiler accepts all valid language syntax from the latest preview version.</span></span>|
-|<span data-ttu-id="bd621-143">最新</span><span class="sxs-lookup"><span data-stu-id="bd621-143">latest</span></span>|<span data-ttu-id="bd621-144">编译器接受最新发布的编译器版本（包括次要版本）中的语法。</span><span class="sxs-lookup"><span data-stu-id="bd621-144">The compiler accepts syntax from the latest released version of the compiler (including minor version).</span></span>|
-|<span data-ttu-id="bd621-145">latestMajor</span><span class="sxs-lookup"><span data-stu-id="bd621-145">latestMajor</span></span>|<span data-ttu-id="bd621-146">编译器接受最新发布的编译器主要版本中的语法。</span><span class="sxs-lookup"><span data-stu-id="bd621-146">The compiler accepts syntax from the latest released major version of the compiler.</span></span>|
-|<span data-ttu-id="bd621-147">8.0</span><span class="sxs-lookup"><span data-stu-id="bd621-147">8.0</span></span>|<span data-ttu-id="bd621-148">编译器只接受 C# 8.0 或更低版本中所含的语法。</span><span class="sxs-lookup"><span data-stu-id="bd621-148">The compiler accepts only syntax that is included in C# 8.0 or lower.</span></span>|
-|<span data-ttu-id="bd621-149">7.3</span><span class="sxs-lookup"><span data-stu-id="bd621-149">7.3</span></span>|<span data-ttu-id="bd621-150">编译器只接受 C# 7.3 或更低版本中所含的语法。</span><span class="sxs-lookup"><span data-stu-id="bd621-150">The compiler accepts only syntax that is included in C# 7.3 or lower.</span></span>|
-|<span data-ttu-id="bd621-151">7.2</span><span class="sxs-lookup"><span data-stu-id="bd621-151">7.2</span></span>|<span data-ttu-id="bd621-152">编译器只接受 C# 7.2 或更低版本中所含的语法。</span><span class="sxs-lookup"><span data-stu-id="bd621-152">The compiler accepts only syntax that is included in C# 7.2 or lower.</span></span>|
-|<span data-ttu-id="bd621-153">7.1</span><span class="sxs-lookup"><span data-stu-id="bd621-153">7.1</span></span>|<span data-ttu-id="bd621-154">编译器只接受 C# 7.1 或更低版本中所含的语法。</span><span class="sxs-lookup"><span data-stu-id="bd621-154">The compiler accepts only syntax that is included in C# 7.1 or lower.</span></span>|
-|<span data-ttu-id="bd621-155">7</span><span class="sxs-lookup"><span data-stu-id="bd621-155">7</span></span>|<span data-ttu-id="bd621-156">编译器只接受 C# 7.0 或更低版本中所含的语法。</span><span class="sxs-lookup"><span data-stu-id="bd621-156">The compiler accepts only syntax that is included in C# 7.0 or lower.</span></span>|
-|<span data-ttu-id="bd621-157">6</span><span class="sxs-lookup"><span data-stu-id="bd621-157">6</span></span>|<span data-ttu-id="bd621-158">编译器只接受 C# 6.0 或更低版本中所含的语法。</span><span class="sxs-lookup"><span data-stu-id="bd621-158">The compiler accepts only syntax that is included in C# 6.0 or lower.</span></span>|
-|<span data-ttu-id="bd621-159">5</span><span class="sxs-lookup"><span data-stu-id="bd621-159">5</span></span>|<span data-ttu-id="bd621-160">编译器只接受 C# 5.0 或更低版本中所含的语法。</span><span class="sxs-lookup"><span data-stu-id="bd621-160">The compiler accepts only syntax that is included in C# 5.0 or lower.</span></span>|
-|<span data-ttu-id="bd621-161">4</span><span class="sxs-lookup"><span data-stu-id="bd621-161">4</span></span>|<span data-ttu-id="bd621-162">编译器只接受 C# 4.0 或更低版本中所含的语法。</span><span class="sxs-lookup"><span data-stu-id="bd621-162">The compiler accepts only syntax that is included in C# 4.0 or lower.</span></span>|
-|<span data-ttu-id="bd621-163">3</span><span class="sxs-lookup"><span data-stu-id="bd621-163">3</span></span>|<span data-ttu-id="bd621-164">编译器只接受 C# 3.0 或更低版本中所含的语法。</span><span class="sxs-lookup"><span data-stu-id="bd621-164">The compiler accepts only syntax that is included in C# 3.0 or lower.</span></span>|
-|<span data-ttu-id="bd621-165">ISO-2</span><span class="sxs-lookup"><span data-stu-id="bd621-165">ISO-2</span></span>|<span data-ttu-id="bd621-166">编译器只接受 ISO/IEC 23270:2006 C# (2.0) 中所含的语法</span><span class="sxs-lookup"><span data-stu-id="bd621-166">The compiler accepts only syntax that is included in ISO/IEC 23270:2006 C# (2.0)</span></span> |
-|<span data-ttu-id="bd621-167">ISO-1</span><span class="sxs-lookup"><span data-stu-id="bd621-167">ISO-1</span></span>|<span data-ttu-id="bd621-168">编译器只接受 ISO/IEC 23270:2003 C# (1.0/1.2) 中所含的语法</span><span class="sxs-lookup"><span data-stu-id="bd621-168">The compiler accepts only syntax that is included in ISO/IEC 23270:2003 C# (1.0/1.2)</span></span> |
+### <a name="configure-multiple-projects"></a><span data-ttu-id="0c546-136">配置多个项目</span><span class="sxs-lookup"><span data-stu-id="0c546-136">Configure multiple projects</span></span>
 
-## <a name="configure-multiple-projects"></a><span data-ttu-id="bd621-169">配置多个项目</span><span class="sxs-lookup"><span data-stu-id="bd621-169">Configure multiple projects</span></span>
-
-<span data-ttu-id="bd621-170">可以创建包含 `<LangVersion>` 元素的 Directory.Build.props 文件来配置多个目录。</span><span class="sxs-lookup"><span data-stu-id="bd621-170">You can create a **Directory.Build.props** file that contains the `<LangVersion>` element to configure multiple directories.</span></span> <span data-ttu-id="bd621-171">通常是在解决方案目录中完成这件事。</span><span class="sxs-lookup"><span data-stu-id="bd621-171">You typically do that in your solution directory.</span></span> <span data-ttu-id="bd621-172">将以下内容添加到解决方案目录中的 Directory.Build.props 文件：</span><span class="sxs-lookup"><span data-stu-id="bd621-172">Add the following to a **Directory.Build.props** file in your solution directory:</span></span>
+<span data-ttu-id="0c546-137">可以创建包含 `<LangVersion>` 元素的 Directory.Build.props  文件来配置多个目录。</span><span class="sxs-lookup"><span data-stu-id="0c546-137">You can create a **Directory.Build.props** file that contains the `<LangVersion>` element to configure multiple directories.</span></span> <span data-ttu-id="0c546-138">通常是在解决方案目录中完成这件事。</span><span class="sxs-lookup"><span data-stu-id="0c546-138">You typically do that in your solution directory.</span></span> <span data-ttu-id="0c546-139">将以下内容添加到解决方案目录中的 Directory.Build.props  文件：</span><span class="sxs-lookup"><span data-stu-id="0c546-139">Add the following to a **Directory.Build.props** file in your solution directory:</span></span>
 
 ```xml
 <Project>
  <PropertyGroup>
-   <LangVersion>7.3</LangVersion>
+   <LangVersion>preview</LangVersion>
  </PropertyGroup>
 </Project>
 ```
 
-<span data-ttu-id="bd621-173">现在，包含该文件的目录的每个子目录中的生成都将使用 C# 版本 7.3 语法。</span><span class="sxs-lookup"><span data-stu-id="bd621-173">Now, builds in every subdirectory of the directory containing that file will use C# version 7.3 syntax.</span></span> <span data-ttu-id="bd621-174">有关详细信息，请参阅关于[自定义生成](/visualstudio/msbuild/customize-your-build)的文章。</span><span class="sxs-lookup"><span data-stu-id="bd621-174">For more information, see the article on [Customize your build](/visualstudio/msbuild/customize-your-build).</span></span>
+<span data-ttu-id="0c546-140">现在，包含该文件的目录的每个子目录中的版本都将使用 C# 预览版。</span><span class="sxs-lookup"><span data-stu-id="0c546-140">Now, builds in every subdirectory of the directory containing that file will use the preview C# version.</span></span> <span data-ttu-id="0c546-141">有关详细信息，请参阅关于[自定义生成](/visualstudio/msbuild/customize-your-build)的文章。</span><span class="sxs-lookup"><span data-stu-id="0c546-141">For more information, see the article on [Customize your build](/visualstudio/msbuild/customize-your-build).</span></span>
 
-## <a name="set-the-langversion-compiler-option"></a><span data-ttu-id="bd621-175">选择 langversion 编译器选项</span><span class="sxs-lookup"><span data-stu-id="bd621-175">Set the langversion compiler option</span></span>
+## <a name="c-language-version-reference"></a><span data-ttu-id="0c546-142">C# 语言版本引用</span><span class="sxs-lookup"><span data-stu-id="0c546-142">C# language version reference</span></span>
 
-<span data-ttu-id="bd621-176">你可以使用 `-langversion` 命令行选项。</span><span class="sxs-lookup"><span data-stu-id="bd621-176">You can use the `-langversion` command-line option.</span></span> <span data-ttu-id="bd621-177">有关详细信息，请参阅关于 [/langversion](../language-reference/compiler-options/langversion-compiler-option.md) 编译器选项的文章。</span><span class="sxs-lookup"><span data-stu-id="bd621-177">For more information, see the article on the [-langversion](../language-reference/compiler-options/langversion-compiler-option.md) compiler option.</span></span> <span data-ttu-id="bd621-178">若要查看有效值的列表，请键入 `csc -langversion:?`。</span><span class="sxs-lookup"><span data-stu-id="bd621-178">You can see a list of the valid values by typing  `csc -langversion:?`.</span></span>
+<span data-ttu-id="0c546-143">下表显示当前所有 C# 语言版本。</span><span class="sxs-lookup"><span data-stu-id="0c546-143">The following table shows all current C# language versions.</span></span> <span data-ttu-id="0c546-144">如果编译器较旧，它可能不一定了解每个值。</span><span class="sxs-lookup"><span data-stu-id="0c546-144">Your compiler may not necessarily understand every value if it is older.</span></span> <span data-ttu-id="0c546-145">如果安装的是 .NET Core 3.0，则你可以访问列出的所有内容。</span><span class="sxs-lookup"><span data-stu-id="0c546-145">If you install .NET Core 3.0, then you will have access to everything listed.</span></span>
+
+|<span data-ttu-id="0c546-146">值</span><span class="sxs-lookup"><span data-stu-id="0c546-146">Value</span></span>|<span data-ttu-id="0c546-147">含义</span><span class="sxs-lookup"><span data-stu-id="0c546-147">Meaning</span></span>|
+|------------|-------------|
+|<span data-ttu-id="0c546-148">preview</span><span class="sxs-lookup"><span data-stu-id="0c546-148">preview</span></span>|<span data-ttu-id="0c546-149">编译器接受最新预览版中的所有有效语言语法。</span><span class="sxs-lookup"><span data-stu-id="0c546-149">The compiler accepts all valid language syntax from the latest preview version.</span></span>|
+|<span data-ttu-id="0c546-150">最新</span><span class="sxs-lookup"><span data-stu-id="0c546-150">latest</span></span>|<span data-ttu-id="0c546-151">编译器接受最新发布的编译器版本（包括次要版本）中的语法。</span><span class="sxs-lookup"><span data-stu-id="0c546-151">The compiler accepts syntax from the latest released version of the compiler (including minor version).</span></span>|
+|<span data-ttu-id="0c546-152">latestMajor</span><span class="sxs-lookup"><span data-stu-id="0c546-152">latestMajor</span></span>|<span data-ttu-id="0c546-153">编译器接受最新发布的编译器主要版本中的语法。</span><span class="sxs-lookup"><span data-stu-id="0c546-153">The compiler accepts syntax from the latest released major version of the compiler.</span></span>|
+|<span data-ttu-id="0c546-154">8.0</span><span class="sxs-lookup"><span data-stu-id="0c546-154">8.0</span></span>|<span data-ttu-id="0c546-155">编译器只接受 C# 8.0 或更低版本中所含的语法。</span><span class="sxs-lookup"><span data-stu-id="0c546-155">The compiler accepts only syntax that is included in C# 8.0 or lower.</span></span>|
+|<span data-ttu-id="0c546-156">7.3</span><span class="sxs-lookup"><span data-stu-id="0c546-156">7.3</span></span>|<span data-ttu-id="0c546-157">编译器只接受 C# 7.3 或更低版本中所含的语法。</span><span class="sxs-lookup"><span data-stu-id="0c546-157">The compiler accepts only syntax that is included in C# 7.3 or lower.</span></span>|
+|<span data-ttu-id="0c546-158">7.2</span><span class="sxs-lookup"><span data-stu-id="0c546-158">7.2</span></span>|<span data-ttu-id="0c546-159">编译器只接受 C# 7.2 或更低版本中所含的语法。</span><span class="sxs-lookup"><span data-stu-id="0c546-159">The compiler accepts only syntax that is included in C# 7.2 or lower.</span></span>|
+|<span data-ttu-id="0c546-160">7.1</span><span class="sxs-lookup"><span data-stu-id="0c546-160">7.1</span></span>|<span data-ttu-id="0c546-161">编译器只接受 C# 7.1 或更低版本中所含的语法。</span><span class="sxs-lookup"><span data-stu-id="0c546-161">The compiler accepts only syntax that is included in C# 7.1 or lower.</span></span>|
+|<span data-ttu-id="0c546-162">7</span><span class="sxs-lookup"><span data-stu-id="0c546-162">7</span></span>|<span data-ttu-id="0c546-163">编译器只接受 C# 7.0 或更低版本中所含的语法。</span><span class="sxs-lookup"><span data-stu-id="0c546-163">The compiler accepts only syntax that is included in C# 7.0 or lower.</span></span>|
+|<span data-ttu-id="0c546-164">6</span><span class="sxs-lookup"><span data-stu-id="0c546-164">6</span></span>|<span data-ttu-id="0c546-165">编译器只接受 C# 6.0 或更低版本中所含的语法。</span><span class="sxs-lookup"><span data-stu-id="0c546-165">The compiler accepts only syntax that is included in C# 6.0 or lower.</span></span>|
+|<span data-ttu-id="0c546-166">5</span><span class="sxs-lookup"><span data-stu-id="0c546-166">5</span></span>|<span data-ttu-id="0c546-167">编译器只接受 C# 5.0 或更低版本中所含的语法。</span><span class="sxs-lookup"><span data-stu-id="0c546-167">The compiler accepts only syntax that is included in C# 5.0 or lower.</span></span>|
+|<span data-ttu-id="0c546-168">4</span><span class="sxs-lookup"><span data-stu-id="0c546-168">4</span></span>|<span data-ttu-id="0c546-169">编译器只接受 C# 4.0 或更低版本中所含的语法。</span><span class="sxs-lookup"><span data-stu-id="0c546-169">The compiler accepts only syntax that is included in C# 4.0 or lower.</span></span>|
+|<span data-ttu-id="0c546-170">3</span><span class="sxs-lookup"><span data-stu-id="0c546-170">3</span></span>|<span data-ttu-id="0c546-171">编译器只接受 C# 3.0 或更低版本中所含的语法。</span><span class="sxs-lookup"><span data-stu-id="0c546-171">The compiler accepts only syntax that is included in C# 3.0 or lower.</span></span>|
+|<span data-ttu-id="0c546-172">ISO-2</span><span class="sxs-lookup"><span data-stu-id="0c546-172">ISO-2</span></span>|<span data-ttu-id="0c546-173">编译器只接受 ISO/IEC 23270:2006 C# (2.0) 中所含的语法</span><span class="sxs-lookup"><span data-stu-id="0c546-173">The compiler accepts only syntax that is included in ISO/IEC 23270:2006 C# (2.0)</span></span> |
+|<span data-ttu-id="0c546-174">ISO-1</span><span class="sxs-lookup"><span data-stu-id="0c546-174">ISO-1</span></span>|<span data-ttu-id="0c546-175">编译器只接受 ISO/IEC 23270:2003 C# (1.0/1.2) 中所含的语法</span><span class="sxs-lookup"><span data-stu-id="0c546-175">The compiler accepts only syntax that is included in ISO/IEC 23270:2003 C# (1.0/1.2)</span></span> |

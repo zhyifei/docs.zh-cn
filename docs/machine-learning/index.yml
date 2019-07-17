@@ -15,7 +15,7 @@ sections:
   - title: 开始操作
     items:
       - type: paragraph
-        text: 若要了解如何使用 ML.NET 生成机器学习应用程序，请阅读<a href="/dotnet/machine-learning/how-does-mldotnet-work">什么是 ML.NET？它如何工作？</a> 或者通过将 <b>Microsoft.ML</b> nuget 包添加到应用程序来开始操作。
+        text: 若要了解如何使用 ML.NET 生成机器学习应用程序，请阅读<a href="/dotnet/machine-learning/how-does-mldotnet-work">什么是 ML.NET？它如何工作？</a> 或者通过将 <b>Microsoft.ML</b> NuGet 包添加到应用程序来开始操作。
   - title: 分步教程
     items:
       - type: paragraph
