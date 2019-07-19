@@ -4,15 +4,15 @@ ms.date: 04/12/2018
 helpviewer_keywords:
 - Visual Basic compiler, options
 ms.assetid: fbe36f7a-7cfa-4f77-a8d4-2be5958568e3
-ms.openlocfilehash: b945edca8bd739e6f122ed8b3e950508ecc28510
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.openlocfilehash: d8a1e36c0932de9bf50c109ea979a1e358795388
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67268161"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68331542"
 ---
 # <a name="visual-basic-compiler-options-listed-by-category"></a>按类别列出的 Visual Basic 编译器选项
-Visual Basic 命令行编译器用作一种编译来自 Visual Studio 集成的开发环境 (IDE) 中的程序的替代方法。 下面是 Visual Basic 命令行编译器选项按功能分类排序的列表。  
+作为从 Visual Studio 集成开发环境 (IDE) 中编译程序的替代方法, 可以使用 Visual Basic 命令行编译器。 下面是按功能类别排序 Visual Basic 命令行编译器选项的列表。  
 
 [!INCLUDE[compiler-options](~/includes/compiler-options.md)]
   
@@ -39,9 +39,9 @@ Visual Basic 命令行编译器用作一种编译来自 Visual Studio 集成的�
 |---|---|  
 |[-doc](../../../visual-basic/reference/command-line-compiler/doc.md)|处理 XML 文件的文档注释。|  
 |[-deterministic](../../../visual-basic/reference/command-line-compiler/deterministic.md)|如果输入相同，则会导致编译器输出的程序集其二进制内容在整个编译中相同。|
-|[-netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)|设置编译器将.NET Compact Framework 为目标。|  
+|[-netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)|设置编译器以面向 .NET Compact Framework。|  
 |[-out](../../../visual-basic/reference/command-line-compiler/out.md)|指定输出目录。|  
-|[/refonly](refonly-compiler-option.md)|输出仅引用程序集。|
+|[/refonly](refonly-compiler-option.md)|仅输出引用程序集。|
 |[/refout](refout-compiler-option.md)|指定引用程序集的输出路径。|
 |[-target](../../../visual-basic/reference/command-line-compiler/target.md)|指定输出的格式。|  
   
@@ -54,7 +54,7 @@ Visual Basic 命令行编译器用作一种编译来自 Visual Studio 集成的�
 |[-imports](../../../visual-basic/reference/command-line-compiler/imports.md)|从指定的程序集导入命名空间。|  
 |[-keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md)|指定密钥对的密钥容器名称从而为程序集赋予强名称。|  
 |[-keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md)|指定包含密钥或密钥对的文件从而为程序集赋予强名称。|  
-|[-libpath](../../../visual-basic/reference/command-line-compiler/libpath.md)|指定引用的程序集的位置[-引用](../../../visual-basic/reference/command-line-compiler/reference.md)选项。|  
+|[-libpath](../../../visual-basic/reference/command-line-compiler/libpath.md)|指定由[-reference](../../../visual-basic/reference/command-line-compiler/reference.md)选项引用的程序集的位置。|  
 |[-reference](../../../visual-basic/reference/command-line-compiler/reference.md)|从程序集导入元数据。|  
 |[-moduleassemblyname](../../../visual-basic/reference/command-line-compiler/moduleassemblyname.md)|指定模块所属程序集的名称。|  
 |`-analyzer`|从此程序集（缩写形式：-a）运行分析器|  
@@ -111,9 +111,9 @@ Visual Basic 命令行编译器用作一种编译来自 Visual Studio 集成的�
 |[@（指定响应文件）](../../../visual-basic/reference/command-line-compiler/specify-response-file.md)|指定响应文件。|  
 |[-baseaddress](../../../visual-basic/reference/command-line-compiler/baseaddress.md)|指定的 DLL 的基址。|  
 |[-codepage](../../../visual-basic/reference/command-line-compiler/codepage.md)|指定要用于编译中所有源代码文件的代码页。|  
-|[-errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)|指定 Visual Basic 编译器应报告内部编译器错误的方式。|  
+|[-errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)|指定 Visual Basic 编译器如何报告内部编译器错误。|  
 |[-highentropyva](../../../visual-basic/reference/command-line-compiler/highentropyva.md)|向 Windows 内核提供下列信息：特定的可执行文件是否支持高熵地址空间布局随机化 (ASLR)。|  
-|[-main](../../../visual-basic/reference/command-line-compiler/main.md)|指定包含的类`Sub Main`启动时要使用的过程。|  
+|[-main](../../../visual-basic/reference/command-line-compiler/main.md)|指定包含启动时要使用`Sub Main`的过程的类。|  
 |[-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)|不要使用 Vbc.rsp 进行编译|  
 |[-nostdlib](../../../visual-basic/reference/command-line-compiler/nostdlib.md)|导致编译器不引用标准库。|  
 |[-nowin32manifest](../../../visual-basic/reference/command-line-compiler/nowin32manifest.md)|指示编译器不在可执行文件中嵌入任何应用程序清单。|  
@@ -124,7 +124,7 @@ Visual Basic 命令行编译器用作一种编译来自 Visual Studio 集成的�
 |[-vbruntime](../../../visual-basic/reference/command-line-compiler/vbruntime.md)|指定编译器应在不引用 Visual Basic 运行库的情况下进行编译，或在引用特定运行库的情况下进行编译。|  
 |[-win32manifest](../../../visual-basic/reference/command-line-compiler/win32manifest.md)|标识用户定义的 Win32 应用程序清单文件要嵌入到项目的可移植可执行 (PE) 文件。|  
 |`-parallel[+&#124;-]`|指定是否使用并发生成 (+)。|  
-|`-checksumalgorithm:<alg>`|指定用于计算 PDB 中存储的源文件校验和的算法。  受支持的值为:SHA1（默认值）或 SHA256。|  
+|`-checksumalgorithm:<alg>`|指定用于计算 PDB 中存储的源文件校验和的算法。  受支持的值为:SHA1（默认值）或 SHA256。 <br>由于 SHA1 出现冲突, Microsoft 建议 SHA256 或更好。|  
   
 ## <a name="see-also"></a>请参阅
 

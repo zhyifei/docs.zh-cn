@@ -5,12 +5,12 @@ helpviewer_keywords:
 - localization [WPF], attributes
 - localization [WPF], comments
 ms.assetid: ead2d9ac-b709-4ec1-a924-39927a29d02f
-ms.openlocfilehash: a242dc1f69c79b2c1a67c1a9235d3e942553caf1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1ef18802ab3568df00e29eb4ccaf717f4bdf4863
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64598730"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68330993"
 ---
 # <a name="localization-attributes-and-comments"></a>本地化特性和注释
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 本地化注释是由开发人员提供的 [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] 源代码中的属性，用于提供本地化规则和提示。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 本地化注释包含两组信息：可本地化特性和任意形式的本地化注释。 可本地化特性由 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 本地化 API 用于指示哪些资源要进行本地化。 任意形式的注释是应用程序作者希望包含的任何信息。  
@@ -23,7 +23,7 @@ ms.locfileid: "64598730"
   
 2. 在生成过程中，可以在 .proj 文件中指定是将任意形式的本地化注释留在程序集内、去掉部分注释还是去掉所有注释。 去掉的注释放在一个单独的文件中。 可以使用 `LocalizationDirectivesToLocFile` 标记指定你的选项，例如：  
   
-     `<LocalizationDirectivesToLocFile>` 值 `</LocalizationDirectivesToLocFile>`  
+     `<LocalizationDirectivesToLocFile>` 值  `</LocalizationDirectivesToLocFile>`  
   
 3. 可以分配的值包括：  
   
@@ -33,7 +33,7 @@ ms.locfileid: "64598730"
   
     - **All** - 从程序集中去掉注释和特性，并将它们两者都放在单独的 LocFile 中。  
   
-4. 从 [!INCLUDE[TLA2#tla_baml](../../../../includes/tla2sharptla-baml-md.md)] 中提取可本地化资源时，可本地化性特性将由 [!INCLUDE[TLA2#tla_baml](../../../../includes/tla2sharptla-baml-md.md)] 本地化 API 保留。  
+4. 从 BAML 中提取可本地化的资源时, BAML 本地化 API 会考虑本地化特性。  
   
 5. 以后可以将仅包含任意形式的注释的本地化注释文件合并到本地化过程中。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "64598730"
   
  这些特性可以按照由空格分开的任何顺序进行指定。 如果指定了重复特性，则最后一个特性将替代前面的特性。 例如，Localization.Attributes = "Unmodifiable Modifiable" 会将 Modifiability 设置为 Modifiable，因为最后一个值是 Modifiable。  
   
- Modifiability 和 Readability 的名称已经揭示了自身的含义。 “Category”特性提供的预定义类别可帮助本地化人员翻译文本。 类别（如 Text、Label 和 Title）为本地化人员提供了有关如何翻译文本的信息。 也有一些特殊类别：无、 继承、 忽略，和 NeverLocalize。  
+ Modifiability 和 Readability 的名称已经揭示了自身的含义。 “Category”特性提供的预定义类别可帮助本地化人员翻译文本。 类别（如 Text、Label 和 Title）为本地化人员提供了有关如何翻译文本的信息。 还有特殊类别:None、Inherit、Ignore 和 NeverLocalize。  
   
  下表显示了这些特殊类别的含义。  
   

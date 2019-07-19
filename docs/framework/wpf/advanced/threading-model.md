@@ -18,63 +18,63 @@ helpviewer_keywords:
 - nested message processing [WPF]
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
-ms.openlocfilehash: c74d76cf7c216ed1d4d5c0741ed0ca4f651543e0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ebfbb2df3e931690f2ba12f0a2ad868da0212f5d
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64598628"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68331624"
 ---
 # <a name="threading-model"></a>线程处理模型
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 旨在帮助开发人员处理复杂的线程处理问题。 因此，大部分[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]开发人员无需编写一个接口，使用多个线程。 由于多线程程序既复杂又难以调试，因此当存在单线程解决方案时，应避免使用多线程程序。  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 旨在帮助开发人员处理复杂的线程处理问题。 因此, 大多数[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]开发人员无需编写使用多个线程的接口。 由于多线程程序既复杂又难以调试，因此当存在单线程解决方案时，应避免使用多线程程序。  
   
- 无论构建得多好，但是，否[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]framework 曾经能够为每种问题提供单线程解决方案。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 就关闭，但仍有些情况下，多个线程来改进[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]响应能力或应用程序的性能。 基于上文所述的背景材料，本文对上述情况进行探讨，然后通过对一些低级别的细节进行讨论作出总结。  
+ 当然, 无论架构的设计方式如何, [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]框架都无法为每种类型的问题提供单线程解决方案。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]接近, 但在某些情况下, 多个线程会[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]提高响应能力或应用程序性能。 基于上文所述的背景材料，本文对上述情况进行探讨，然后通过对一些低级别的细节进行讨论作出总结。  
 
 > [!NOTE]
->  本主题讨论了使用线程处理<xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A>异步调用的方法。 您还可以通过调用进行异步调用<xref:System.Windows.Threading.Dispatcher.InvokeAsync%2A>方法，这需要<xref:System.Action>或<xref:System.Func%601>作为参数。  <xref:System.Windows.Threading.Dispatcher.InvokeAsync%2A>方法将返回<xref:System.Windows.Threading.DispatcherOperation>或<xref:System.Windows.Threading.DispatcherOperation%601>，其中包含<xref:System.Windows.Threading.DispatcherOperation.Task%2A>属性。 可以使用`await`使用的关键字<xref:System.Windows.Threading.DispatcherOperation>或关联<xref:System.Threading.Tasks.Task>。 如果你需要同步等待<xref:System.Threading.Tasks.Task>返回的<xref:System.Windows.Threading.DispatcherOperation>或<xref:System.Windows.Threading.DispatcherOperation%601>，调用<xref:System.Windows.Threading.TaskExtensions.DispatcherOperationWait%2A>扩展方法。  调用<xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType>将导致死锁。 详细了解使用<xref:System.Threading.Tasks.Task>执行异步操作，请参阅任务并行。  <xref:System.Windows.Threading.Dispatcher.Invoke%2A>方法还具有采用重载<xref:System.Action>或<xref:System.Func%601>作为参数。  可以使用<xref:System.Windows.Threading.Dispatcher.Invoke%2A>方法来进行同步调用通过传入一个委托，委托<xref:System.Action>或<xref:System.Func%601>。  
+>  本主题介绍了如何使用<xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A>异步调用方法进行线程处理。 还可以通过调用<xref:System.Windows.Threading.Dispatcher.InvokeAsync%2A>方法 ( <xref:System.Action>采用或<xref:System.Func%601>作为参数) 进行异步调用。  <xref:System.Windows.Threading.Dispatcher.InvokeAsync%2A>方法返回<xref:System.Windows.Threading.DispatcherOperation.Task%2A>或,<xref:System.Windows.Threading.DispatcherOperation%601>它具有属性。 <xref:System.Windows.Threading.DispatcherOperation> 可以将`await`关键字与<xref:System.Windows.Threading.DispatcherOperation>或关联<xref:System.Threading.Tasks.Task>的结合使用。 如果<xref:System.Threading.Tasks.Task>需要为<xref:System.Windows.Threading.DispatcherOperation>或<xref:System.Windows.Threading.DispatcherOperation%601>返回的返回同步, 请调用<xref:System.Windows.Threading.TaskExtensions.DispatcherOperationWait%2A>扩展方法。  调用<xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType>将导致死锁。 有关使用<xref:System.Threading.Tasks.Task>执行异步操作的详细信息, 请参阅任务并行。  方法还具有<xref:System.Action>采用或<xref:System.Func%601>作为参数的重载。 <xref:System.Windows.Threading.Dispatcher.Invoke%2A>  可以通过传入委托<xref:System.Windows.Threading.Dispatcher.Invoke%2A>或<xref:System.Func%601>, <xref:System.Action>使用方法进行同步调用。  
   
 <a name="threading_overview"></a>   
 ## <a name="overview-and-the-dispatcher"></a>概述和调度程序  
- 通常情况下，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序启动两个线程： 一个用于处理呈现和另一个用于管理[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]。 呈现线程有效地在隐藏模式运行的同时在后台[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]线程接收输入、 处理事件、 绘制屏幕和运行应用程序代码。 大多数应用程序使用单个[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]线程，尽管在某些情况下最好使用多个。 我们将稍后通过示例对此进行讨论。  
+ 通常, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序从两个线程开始: 一个用于处理渲染, 另一个[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]用于管理。 当[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]线程接收输入、处理事件、绘制屏幕和运行应用程序代码时, 呈现线程在后台有效地运行。 大多数应用程序使用单个[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]线程, 尽管在某些情况下, 最好使用多个线程。 我们将稍后通过示例对此进行讨论。  
   
- [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]线程队列工作项调用的对象内<xref:System.Windows.Threading.Dispatcher>。 <xref:System.Windows.Threading.Dispatcher> 基于优先级选择工作项，并运行每一个工作项直到完成。  每个[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]线程必须至少一个<xref:System.Windows.Threading.Dispatcher>，和每个<xref:System.Windows.Threading.Dispatcher>可以在一个线程中执行的工作项。  
+ 线程在名为的对象内对工作项<xref:System.Windows.Threading.Dispatcher>进行排队。 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] <xref:System.Windows.Threading.Dispatcher> 基于优先级选择工作项，并运行每一个工作项直到完成。  每[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]个线程都必须至少有<xref:System.Windows.Threading.Dispatcher>一个线程, <xref:System.Windows.Threading.Dispatcher>并且每个线程只能在一个线程中执行工作项。  
   
- 构建响应迅速的用户友好应用程序的诀窍是最大限度地<xref:System.Windows.Threading.Dispatcher>通过保留的工作项小吞吐量。 这样，工作项永远不会过时坐在<xref:System.Windows.Threading.Dispatcher>队列等待处理。 输入和响应间任何可察觉的延迟都会让用户不满。  
+ 构建响应能力强的用户应用程序的技巧是通过使工作<xref:System.Windows.Threading.Dispatcher>项更小来最大限度地提高吞吐量。 这样一来, <xref:System.Windows.Threading.Dispatcher>在队列中等待处理的项永远不会过时。 输入和响应间任何可察觉的延迟都会让用户不满。  
   
- 如何[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序应处理大型操作？ 如果代码涉及大型计算，或需要查询某些远程服务器上的数据库，应该怎么办？ 通常情况下，答案是处理大型操作在单独的线程，离开[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]线程可以自由地倾向于中的项<xref:System.Windows.Threading.Dispatcher>队列。 大型操作完成后，它可以报告其结果返回到[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]线程以进行显示。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序应该如何处理大操作？ 如果代码涉及大型计算，或需要查询某些远程服务器上的数据库，应该怎么办？ 通常情况下, 答案是在单独的线程中处理大操作, 使[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]线程可自由地用于<xref:System.Windows.Threading.Dispatcher>队列中的项。 当大操作完成时, 它可以将其结果报告回[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]线程以便显示。  
   
- 从历史上看，[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]允许[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]元素只能由创建它们的线程访问。 这意味着，负责长时间运行任务的后台线程无法在任务完成时更新文本框。 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 这样做是为了确保完整性[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]组件。 如果在绘制过程中后台线程更新了列表框的内容，则此列表框看起来可能会很奇怪。  
+ 过去, [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]只[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]允许通过创建元素的线程来访问元素。 这意味着，负责长时间运行任务的后台线程无法在任务完成时更新文本框。 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]这样做是为了确保[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]组件的完整性。 如果在绘制过程中后台线程更新了列表框的内容，则此列表框看起来可能会很奇怪。  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 具有内置互相排斥机制，此机制能强制执行这种协调。 中的大多数类[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]派生自<xref:System.Windows.Threading.DispatcherObject>。 在构建过程中<xref:System.Windows.Threading.DispatcherObject>存储到的引用<xref:System.Windows.Threading.Dispatcher>链接到当前运行的线程。 实际上，<xref:System.Windows.Threading.DispatcherObject>将与创建它的线程相关联。 在程序执行期间<xref:System.Windows.Threading.DispatcherObject>可以调用它的公共<xref:System.Windows.Threading.DispatcherObject.VerifyAccess%2A>方法。 <xref:System.Windows.Threading.DispatcherObject.VerifyAccess%2A> 检查<xref:System.Windows.Threading.Dispatcher>与当前线程相关联并将其到比较<xref:System.Windows.Threading.Dispatcher>构造过程中存储的引用。 如果它们不匹配，<xref:System.Windows.Threading.DispatcherObject.VerifyAccess%2A>将引发异常。 <xref:System.Windows.Threading.DispatcherObject.VerifyAccess%2A> 应属于每个方法的开头调用<xref:System.Windows.Threading.DispatcherObject>。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 具有内置互相排斥机制，此机制能强制执行这种协调。 中的大多数[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]类都<xref:System.Windows.Threading.DispatcherObject>是从派生的。 构造时, 将<xref:System.Windows.Threading.DispatcherObject>对链接的<xref:System.Windows.Threading.Dispatcher>引用存储到当前正在运行的线程。 实际上, <xref:System.Windows.Threading.DispatcherObject>与创建它的线程关联。 在程序执行期间, <xref:System.Windows.Threading.DispatcherObject>可以调用其公共<xref:System.Windows.Threading.DispatcherObject.VerifyAccess%2A>方法。 <xref:System.Windows.Threading.DispatcherObject.VerifyAccess%2A>检查与<xref:System.Windows.Threading.Dispatcher>当前线程关联的, 并将其与在<xref:System.Windows.Threading.Dispatcher>构造过程中存储的引用进行比较。 如果二者不匹配, <xref:System.Windows.Threading.DispatcherObject.VerifyAccess%2A>将引发异常。 <xref:System.Windows.Threading.DispatcherObject.VerifyAccess%2A>用于在属于的<xref:System.Windows.Threading.DispatcherObject>每个方法的开头调用。  
   
- 如果只有一个线程可以修改[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]，如何执行后台线程与用户交互？ 后台线程可请求[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]线程来执行代表其自身的操作。 这是通过注册与工作项<xref:System.Windows.Threading.Dispatcher>的[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]线程。 <xref:System.Windows.Threading.Dispatcher>类提供了两种方法来注册工作项：<xref:System.Windows.Threading.Dispatcher.Invoke%2A>和<xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A>。 这两种方法都计划一个用于执行的委托。 <xref:System.Windows.Threading.Dispatcher.Invoke%2A> 是一个同步调用 – 也就是说，它不会返回直到[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]线程完成执行委托。 <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> 是异步的将立即返回。  
+ 如果只有一个线程可以修改[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], 则后台线程如何与用户交互？ 后台线程可以要求[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]线程代表其执行操作。 它通过将工作项注册到<xref:System.Windows.Threading.Dispatcher> [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]线程的来实现此目的。 类提供两种方法来注册工作项: <xref:System.Windows.Threading.Dispatcher.Invoke%2A>和<xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A>。 <xref:System.Windows.Threading.Dispatcher> 这两种方法都计划一个用于执行的委托。 <xref:System.Windows.Threading.Dispatcher.Invoke%2A>是一个同步调用-即, 它不会返回, 直到[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]线程实际完成执行委托。 <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A>是异步的, 并且会立即返回。  
   
- <xref:System.Windows.Threading.Dispatcher>按优先级排列其队列中的元素。 有可能会添加到的元素时指定的十个级别<xref:System.Windows.Threading.Dispatcher>队列。 这些优先级均维护在<xref:System.Windows.Threading.DispatcherPriority>枚举。 有关详细信息<xref:System.Windows.Threading.DispatcherPriority>级别可在[!INCLUDE[TLA2#tla_winfxsdk](../../../../includes/tla2sharptla-winfxsdk-md.md)]文档。  
+ 按<xref:System.Windows.Threading.Dispatcher>优先级对其队列中的元素进行排序。 向<xref:System.Windows.Threading.Dispatcher>队列中添加元素时, 可以指定10个级别。 这些优先级在<xref:System.Windows.Threading.DispatcherPriority>枚举中维护。 有关<xref:System.Windows.Threading.DispatcherPriority>级别的详细信息, [!INCLUDE[TLA2#tla_winfxsdk](../../../../includes/tla2sharptla-winfxsdk-md.md)]请参阅文档。  
   
 <a name="samples"></a>   
-## <a name="threads-in-action-the-samples"></a>在操作中的线程：这些示例  
+## <a name="threads-in-action-the-samples"></a>操作中的线程:示例  
   
 <a name="prime_number"></a>   
 ### <a name="a-single-threaded-application-with-a-long-running-calculation"></a>具有长时间运行计算的单线程应用程序  
- 大多数[!INCLUDE[TLA#tla_gui#plural](../../../../includes/tlasharptla-guisharpplural-md.md)]花费其时间处于空闲状态等待响应用户交互中生成的事件时有很大一部分。 通过精心编程此空闲时间可建设性地，而不会影响的响应能力[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]线程模型不允许输入中断中发生的操作[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]线程。 这意味着您必须确保返回到<xref:System.Windows.Threading.Dispatcher>定期到挂起的输入事件在过时之前的进程。  
+ 大多数[!INCLUDE[TLA#tla_gui#plural](../../../../includes/tlasharptla-guisharpplural-md.md)]情况下, 在等待为响应用户交互而生成的事件时, 会花费大量时间空闲。 对此空闲时间进行仔细编程时, 可以建设性地使用, 而不会影响[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]的响应能力。 线程模型不允许输入中断[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]线程中发生的操作。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 这意味着, 你必须确保<xref:System.Windows.Threading.Dispatcher>定期返回以处理挂起输入事件, 然后才能使其过时。  
   
  请看下面的示例：  
   
- ![显示线程的质数的屏幕截图。](./media/threading-model/threading-prime-numbers.png)  
+ ![显示质数线程的屏幕截图。](./media/threading-model/threading-prime-numbers.png)  
   
- 这个简单的应用程序从 3 开始向上计数以搜索质数。 当用户单击**启动**按钮，开始执行搜索。 当程序查找到一个质数时，它将根据其发现内容更新用户界面。 用户可随时停止搜索。  
+ 这个简单的应用程序从 3 开始向上计数以搜索质数。 当用户单击 "**开始**" 按钮时, 将开始搜索。 当程序查找到一个质数时，它将根据其发现内容更新用户界面。 用户可随时停止搜索。  
   
- 尽管十分简单，但对质数的搜索可以永远持续下去，这会带来一些问题。  如果我们处理整个搜索按钮的单击事件处理程序，我们绝不会给[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]线程有机会处理其他事件。 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]者将无法响应输入或进程消息。 它将永远不会重绘，也永远不会响应按钮单击。  
+ 尽管十分简单，但对质数的搜索可以永远持续下去，这会带来一些问题。  如果在按钮的 click 事件处理程序中处理了整个搜索, 则永远不会为[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]线程分配处理其他事件的机会。 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]将无法响应输入或处理消息。 它将永远不会重绘，也永远不会响应按钮单击。  
   
  可以在单独的线程中搜索质数，但这样的话，我们需要处理一些同步问题。 通过单线程方法，可以直接更新列出所找到的最大质数的标签。  
   
- 如果我们分解成可管理块的计算的任务，我们可以定期返回到<xref:System.Windows.Threading.Dispatcher>和处理事件。 我们可以提供[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]机会重绘和处理输入。  
+ 如果我们将计算任务分解为可管理的块, 我们可以定期返回到<xref:System.Windows.Threading.Dispatcher>并处理事件。 我们可以给[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]出重绘和处理输入的机会。  
   
- 划分计算和事件处理之间的处理时间的最佳方式是管理计算从<xref:System.Windows.Threading.Dispatcher>。 通过使用<xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A>方法中，我们可以计划质数检查中的同一队列[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]来自事件。 在我们的示例中，一次仅计划一个质数检查。 完成质数检查后，立即计划下一个检查。 此检查才会继续后才挂起[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]已处理事件。  
+ 在计算与事件处理之间拆分处理时间的最佳方式是从<xref:System.Windows.Threading.Dispatcher>管理计算。 通过使用<xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A>方法, 可以在从其绘制[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]事件的同一队列中计划质数检查。 在我们的示例中，一次仅计划一个质数检查。 完成质数检查后，立即计划下一个检查。 只有处理挂起[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]事件之后, 才会执行此检查。  
   
- ![屏幕截图显示了调度程序队列。](./media/threading-model/threading-dispatcher-queue.png)  
+ ![显示调度程序队列的屏幕截图。](./media/threading-model/threading-dispatcher-queue.png)  
   
- [!INCLUDE[TLA#tla_word](../../../../includes/tlasharptla-word-md.md)] 通过此机制完成拼写检查。 使用的空闲时间在后台执行了拼写检查[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]线程。 我们来看一看代码。  
+ [!INCLUDE[TLA#tla_word](../../../../includes/tlasharptla-word-md.md)] 通过此机制完成拼写检查。 使用[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]线程的空闲时间在后台完成拼写检查。 我们来看一看代码。  
   
  下列示例显示了创建用户界面的 XAML。  
   
@@ -90,22 +90,22 @@ ms.locfileid: "64598628"
  [!code-csharp[ThreadingPrimeNumbers#ThreadingPrimeNumberStartOrStop](~/samples/snippets/csharp/VS_Snippets_Wpf/ThreadingPrimeNumbers/CSharp/Window1.xaml.cs#threadingprimenumberstartorstop)]
  [!code-vb[ThreadingPrimeNumbers#ThreadingPrimeNumberStartOrStop](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ThreadingPrimeNumbers/visualbasic/mainwindow.xaml.vb#threadingprimenumberstartorstop)]  
   
- 除了上更新的文本<xref:System.Windows.Controls.Button>，此处理程序负责通过添加委托，计划首个质数检查<xref:System.Windows.Threading.Dispatcher>队列。 此事件处理程序完成其工作后一段时间内<xref:System.Windows.Threading.Dispatcher>将选择执行此委托。  
+ 除了更新上<xref:System.Windows.Controls.Button>的文本, 此处理程序负责通过将委托添加<xref:System.Windows.Threading.Dispatcher>到队列来计划第一个质数检查。 在此事件处理程序完成其工作后的<xref:System.Windows.Threading.Dispatcher>某个时间, 将选择此委托以便执行。  
   
- 更早版本，我们提到<xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A>是<xref:System.Windows.Threading.Dispatcher>成员用于计划用于执行的委托。 在这种情况下，我们选择<xref:System.Windows.Threading.DispatcherPriority.SystemIdle>优先级。 <xref:System.Windows.Threading.Dispatcher>仅当没有要处理的重要事件时，会执行此委托。 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 响应能力比数字检查更重要。 我们还传递了一个表示数字检查例程的新委托。  
+ 如前文所述, <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> <xref:System.Windows.Threading.Dispatcher>是用于计划委托执行的成员。 在此示例中, 我们选择<xref:System.Windows.Threading.DispatcherPriority.SystemIdle>优先级。 仅<xref:System.Windows.Threading.Dispatcher>当没有要处理的重要事件时, 才会执行此委托。 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 响应能力比数字检查更重要。 我们还传递了一个表示数字检查例程的新委托。  
   
  [!code-csharp[ThreadingPrimeNumbers#ThreadingPrimeNumberCheckNextNumber](~/samples/snippets/csharp/VS_Snippets_Wpf/ThreadingPrimeNumbers/CSharp/Window1.xaml.cs#threadingprimenumberchecknextnumber)]
  [!code-vb[ThreadingPrimeNumbers#ThreadingPrimeNumberCheckNextNumber](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ThreadingPrimeNumbers/visualbasic/mainwindow.xaml.vb#threadingprimenumberchecknextnumber)]  
   
- 此方法检查下一个奇数是否是质数。 如果是质数，此方法将直接更新`bigPrime`<xref:System.Windows.Controls.TextBlock>以反映此发现。 可以如此操作的原因是，该计算发生在用于创建组件的相同线程中。 如果选择使用单独的线程进行计算，我们必须使用更复杂的同步机制，并执行在更新[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]线程。 我们将在下一步中演示这种情况。  
+ 此方法检查下一个奇数是否是质数。 如果它是质数, 则方法会直接更新`bigPrime` <xref:System.Windows.Controls.TextBlock>以反映它的发现。 可以如此操作的原因是，该计算发生在用于创建组件的相同线程中。 如果我们选择使用单独的线程进行计算, 则必须使用更复杂的同步机制, 并在[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]线程中执行更新。 我们将在下一步中演示这种情况。  
   
- 此示例的完整源代码，请参阅[单线程应用程序使用长时间运行计算示例](https://go.microsoft.com/fwlink/?LinkID=160038)  
+ 有关此示例的完整源代码, 请参阅[具有长时间运行计算的单线程应用程序示例](https://go.microsoft.com/fwlink/?LinkID=160038)  
   
 <a name="weather_sim"></a>   
 ### <a name="handling-a-blocking-operation-with-a-background-thread"></a>使用后台线程处理阻塞操作  
- 在图形应用程序中处理阻塞操作可能很困难。 我们不希望从事件处理程序调用阻塞方法，因为应用程序可能看上去冻结。 我们可以使用单独的线程来处理这些操作，但操作完成后，我们必须将与同步[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]线程因为我们不能直接修改[!INCLUDE[TLA2#tla_gui](../../../../includes/tla2sharptla-gui-md.md)]从工作线程。 我们可以使用<xref:System.Windows.Threading.Dispatcher.Invoke%2A>或<xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A>要插入到委托<xref:System.Windows.Threading.Dispatcher>的[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]线程。 最终，将以具有修改权限执行这些委托[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]元素。  
+ 在图形应用程序中处理阻塞操作可能很困难。 我们不希望从事件处理程序调用阻塞方法，因为应用程序可能看上去冻结。 我们可以使用单独的线程来处理这些操作, 但完成此操作后, 必须与[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]线程同步, 因为我们无法从我们的[!INCLUDE[TLA2#tla_gui](../../../../includes/tla2sharptla-gui-md.md)]工作线程直接修改。 我们可以使用<xref:System.Windows.Threading.Dispatcher.Invoke%2A>或<xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> <xref:System.Windows.Threading.Dispatcher>将委托插入到[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]线程的中。 最终, 将执行这些委托并带有修改[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]元素的权限。  
   
- 在本例中，我们模拟了一个检索天气预报的远程过程调用。 我们使用单独的工作线程来执行此调用，并且计划中的更新方法在调用<xref:System.Windows.Threading.Dispatcher>的[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]线程完成时。  
+ 在本例中，我们模拟了一个检索天气预报的远程过程调用。 我们使用单独的工作线程执行此调用, 并在完成时在<xref:System.Windows.Threading.Dispatcher> [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]线程的中计划更新方法。  
   
  ![显示天气 UI 的屏幕截图。](./media/threading-model/threading-weather-ui.png)  
   
@@ -119,31 +119,31 @@ ms.locfileid: "64598628"
      [!code-csharp[ThreadingWeatherForecast#ThreadingWeatherButtonHandler](~/samples/snippets/csharp/VS_Snippets_Wpf/ThreadingWeatherForecast/CSharp/Window1.xaml.cs#threadingweatherbuttonhandler)]
      [!code-vb[ThreadingWeatherForecast#ThreadingWeatherButtonHandler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ThreadingWeatherForecast/visualbasic/window1.xaml.vb#threadingweatherbuttonhandler)]  
   
- 单击按钮时，会显示时钟绘图并开始对其进行动画处理。 禁用该按钮。 我们调用`FetchWeatherFromServer`中一个新线程，然后，我们的方法返回，从而允许<xref:System.Windows.Threading.Dispatcher>处理事件时我们等待收集天气预报。  
+ 单击按钮时，会显示时钟绘图并开始对其进行动画处理。 禁用该按钮。 我们在新`FetchWeatherFromServer`线程中调用方法, 然后返回, 允许在<xref:System.Windows.Threading.Dispatcher>我们等待收集天气预报时处理事件。  
   
 - 获取天气  
   
      [!code-csharp[ThreadingWeatherForecast#ThreadingWeatherFetchWeather](~/samples/snippets/csharp/VS_Snippets_Wpf/ThreadingWeatherForecast/CSharp/Window1.xaml.cs#threadingweatherfetchweather)]
      [!code-vb[ThreadingWeatherForecast#ThreadingWeatherFetchWeather](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ThreadingWeatherForecast/visualbasic/window1.xaml.vb#threadingweatherfetchweather)]  
   
- 为简便起见，本例中没有任何网络代码。 通过使新线程进入休眠状态四秒钟，模拟网络访问的延迟。 在此期间，原始[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]线程仍在运行并对事件作出响应。 为了对此进行演示，我们让动画保持运行状态，最小化和最大化按钮也继续工作。  
+ 为简便起见，本例中没有任何网络代码。 通过使新线程进入休眠状态四秒钟，模拟网络访问的延迟。 此时, 原始[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]线程仍在运行并响应事件。 为了对此进行演示，我们让动画保持运行状态，最小化和最大化按钮也继续工作。  
   
- 当延迟已完成，并且我们随机选择了天气预报时，就可以报告回时[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]线程。 为此，计划调用我们`UpdateUserInterface`中[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]线程使用该线程<xref:System.Windows.Threading.Dispatcher>。 将描述天气的字符串传递给此计划方法调用。  
+ 当延迟结束, 并且我们随机选择了天气预报后, 就可以向下报告回来了[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 。 为此, 我们需要`UpdateUserInterface`使用线程的[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] <xref:System.Windows.Threading.Dispatcher>在线程中计划对的调用。 将描述天气的字符串传递给此计划方法调用。  
   
-- 正在更新 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]  
+- 更新[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]  
   
      [!code-csharp[ThreadingWeatherForecast#ThreadingWeatherUpdateUI](~/samples/snippets/csharp/VS_Snippets_Wpf/ThreadingWeatherForecast/CSharp/Window1.xaml.cs#threadingweatherupdateui)]
      [!code-vb[ThreadingWeatherForecast#ThreadingWeatherUpdateUI](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ThreadingWeatherForecast/visualbasic/window1.xaml.vb#threadingweatherupdateui)]  
   
- 当<xref:System.Windows.Threading.Dispatcher>中[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]线程有时间时，它将执行计划的调用`UpdateUserInterface`。 此方法停止时钟动画，并选择一张映像用于描述天气。 它将显示此映像，并还原“获取预报”按钮。  
+ 当<xref:System.Windows.Threading.Dispatcher> 线程[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]中的具有时间时, 它将执行对`UpdateUserInterface`的计划调用。 此方法停止时钟动画，并选择一张映像用于描述天气。 它将显示此映像，并还原“获取预报”按钮。  
   
 <a name="multi_browser"></a>   
 ### <a name="multiple-windows-multiple-threads"></a>多窗口、多线程  
- 某些[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序需要多个顶层窗口。 它是完全可以接受一个线程 /<xref:System.Windows.Threading.Dispatcher>组合来管理多个时段，但有时多线程更好地。 尤其当这些窗口中的某一个将有可能要独占线程时，更是如此。  
+ 某些[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序需要多个顶级窗口。 一个线程/<xref:System.Windows.Threading.Dispatcher>组合可用于管理多个窗口是完全可接受的, 但有时多个线程会执行更好的作业。 尤其当这些窗口中的某一个将有可能要独占线程时，更是如此。  
   
  [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 资源管理器以这种方式工作。 每个新资源管理器窗口都属于原始进程，但它是在独立线程的控件下创建的。  
   
- 通过使用[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<xref:System.Windows.Controls.Frame>控件中，我们可以显示网页。 我们可以轻松地创建一个简单[!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]替换。 让我们从一个重要功能开始：打开新资源管理器窗口的能力。 当用户单击“新建窗口”按钮时，我们将在单独的线程中启动窗口的副本。 这样一来，在其中一个窗口中的长时间运行或阻塞操作将不会锁定其他窗口。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 使用<xref:System.Windows.Controls.Frame>控件, 可以显示网页。 我们可以轻松创建一个简单[!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]的替换。 让我们从一个重要功能开始：打开新资源管理器窗口的能力。 当用户单击“新建窗口”按钮时，我们将在单独的线程中启动窗口的副本。 这样一来，在其中一个窗口中的长时间运行或阻塞操作将不会锁定其他窗口。  
   
  在实际情况下，Web 浏览器模型自身拥有复杂的线程模型。 由于大多数读者都熟悉它，所以我们选择它。  
   
@@ -164,56 +164,56 @@ ms.locfileid: "64598628"
  [!code-csharp[ThreadingMultipleBrowsers#ThreadingMultiBrowserThreadStart](~/samples/snippets/csharp/VS_Snippets_Wpf/ThreadingMultipleBrowsers/CSharp/Window1.xaml.cs#threadingmultibrowserthreadstart)]
  [!code-vb[ThreadingMultipleBrowsers#ThreadingMultiBrowserThreadStart](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ThreadingMultipleBrowsers/VisualBasic/Window1.xaml.vb#threadingmultibrowserthreadstart)]  
   
- 此方法是新线程的起点。 我们在此线程的控件下创建了一个新窗口。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 自动创建一个新<xref:System.Windows.Threading.Dispatcher>来管理新线程。 我们所要执行的操作使窗口功能是启动<xref:System.Windows.Threading.Dispatcher>。  
+ 此方法是新线程的起点。 我们在此线程的控件下创建了一个新窗口。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]自动创建新<xref:System.Windows.Threading.Dispatcher>的以管理新线程。 为了使窗口正常运行, 我们需要做的<xref:System.Windows.Threading.Dispatcher>就是启动。  
   
 <a name="stumbling_points"></a>   
 ## <a name="technical-details-and-stumbling-points"></a>技术详细信息和疑难点  
   
 ### <a name="writing-components-using-threading"></a>使用线程处理编写组件  
- Microsoft.NET Framework 开发人员指南介绍了如何一个组件可以公开给其客户端的异步行为的模式 (请参阅[基于事件的异步模式概述](../../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md))。 例如，假设我们想要打包`FetchWeatherFromServer`到可重用的非图形组件的方法。 遵循标准的 Microsoft.NET Framework 模式，它看起来应如下所示。  
+ Microsoft .NET Framework 开发人员指南介绍了组件如何向其客户端公开异步行为的模式 (请参阅[基于事件的异步模式概述](../../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md))。 例如, 假设我们想要将`FetchWeatherFromServer`方法打包到可重用的非图形组件。 按照标准 Microsoft .NET 框架模式, 这会如下所示。  
   
  [!code-csharp[CommandingOverviewSnippets#ThreadingArticleWeatherComponent1](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml.cs#threadingarticleweathercomponent1)]
  [!code-vb[CommandingOverviewSnippets#ThreadingArticleWeatherComponent1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CommandingOverviewSnippets/visualbasic/window1.xaml.vb#threadingarticleweathercomponent1)]  
   
  `GetWeatherAsync` 将使用上述的技术之一（如创建后台线程）来以异步方式工作，而非阻止调用线程。  
   
- 此模式的最重要的部分之一调用*MethodName* `Completed`方法调用的同一线程上*MethodName* `Async`方法开头。 无法执行此操作使用[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]相当轻松地通过将存储<xref:System.Windows.Threading.Dispatcher.CurrentDispatcher%2A>— 但然后非图形组件可能只能用在[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序，不在[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]或[!INCLUDE[TLA#tla_aspnet](../../../../includes/tlasharptla-aspnet-md.md)]程序。  
+ 此模式中最重要的部分之一是在调用方法  `Completed` *名称*`Async`方法的同一线程上调用方法 1, 以开始。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]您可以通过存储<xref:System.Windows.Threading.Dispatcher.CurrentDispatcher%2A>来轻松地执行此操作, 但随后只能[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]在应用程序中使用非图形组件[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] , 而不能在或 ASP.NET 程序中使用。  
   
- <xref:System.Windows.Threading.DispatcherSynchronizationContext>类解决了上述需要，将其视为的简化版本<xref:System.Windows.Threading.Dispatcher>的工作方式与其他[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]框架的积极。  
+ 类可满足这一需要, 将其视为与其他[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]框架一起工作的简化版本。 <xref:System.Windows.Threading.Dispatcher> <xref:System.Windows.Threading.DispatcherSynchronizationContext>  
   
  [!code-csharp[CommandingOverviewSnippets#ThreadingArticleWeatherComponent2](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml.cs#threadingarticleweathercomponent2)]
  [!code-vb[CommandingOverviewSnippets#ThreadingArticleWeatherComponent2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CommandingOverviewSnippets/visualbasic/window1.xaml.vb#threadingarticleweathercomponent2)]  
   
 ### <a name="nested-pumping"></a>嵌套泵  
- 有时不可行完全锁定[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]线程。 让我们考虑<xref:System.Windows.MessageBox.Show%2A>方法的<xref:System.Windows.MessageBox>类。 <xref:System.Windows.MessageBox.Show%2A> 不会返回，直到用户单击确定按钮。 但是，它却会创建一个窗口，该窗口为了获得交互性而必须具有消息循环。 在等待用户单击“确定”时，原始应用程序窗口将不会响应用户的输入。 但是，它将继续处理绘制消息。 当被覆盖和被显示时，原始窗口将重绘其本身。  
+ 有时完全锁定线程是不可行的[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 。 让我们考虑<xref:System.Windows.MessageBox.Show%2A>一下<xref:System.Windows.MessageBox>类的方法。 <xref:System.Windows.MessageBox.Show%2A>用户单击 "确定" 按钮后, 才会返回。 但是，它却会创建一个窗口，该窗口为了获得交互性而必须具有消息循环。 在等待用户单击“确定”时，原始应用程序窗口将不会响应用户的输入。 但是，它将继续处理绘制消息。 当被覆盖和被显示时，原始窗口将重绘其本身。  
   
- ![显示一个消息框具有确定按钮的屏幕截图](./media/threading-model/threading-message-loop.png)  
+ ![显示带有 "确定" 按钮的消息的屏幕截图](./media/threading-model/threading-message-loop.png)  
   
- 一些线程必须负责消息框窗口。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 可以为消息框窗口创建新线程，但此线程无法在原始窗口中绘制禁用的元素（请回忆之前所讨论的互相排斥）。 相反，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]使用嵌套的消息处理系统。 <xref:System.Windows.Threading.Dispatcher>类包含一个名为的特殊方法<xref:System.Windows.Threading.Dispatcher.PushFrame%2A>，用于存储应用程序的当前执行点然后开始新的消息循环。 当嵌套的消息循环完成后时，原始后恢复执行<xref:System.Windows.Threading.Dispatcher.PushFrame%2A>调用。  
+ 一些线程必须负责消息框窗口。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 可以为消息框窗口创建新线程，但此线程无法在原始窗口中绘制禁用的元素（请回忆之前所讨论的互相排斥）。 相反, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]使用嵌套消息处理系统。 类包含名<xref:System.Windows.Threading.Dispatcher.PushFrame%2A>为的特殊方法, 该方法存储应用程序的当前执行点, 然后开始新的消息循环。 <xref:System.Windows.Threading.Dispatcher> 当嵌套消息循环完成时, 执行将在原始<xref:System.Windows.Threading.Dispatcher.PushFrame%2A>调用后恢复。  
   
- 在这种情况下，<xref:System.Windows.Threading.Dispatcher.PushFrame%2A>维护到调用程序上下文<xref:System.Windows.MessageBox>。<xref:System.Windows.MessageBox.Show%2A>，并启动新的消息循环重绘后台窗口和处理消息框窗口的输入。 当用户单击确定，并清除弹出窗口中时，嵌套的循环退出，并在调用后继续控制<xref:System.Windows.MessageBox.Show%2A>。  
+ 在这种情况<xref:System.Windows.Threading.Dispatcher.PushFrame%2A>下, 将在<xref:System.Windows.MessageBox>调用<xref:System.Windows.MessageBox.Show%2A>时维护程序上下文, 并启动一个新的消息循环, 以重新绘制背景窗口并处理消息框窗口中的输入。 当用户单击 "确定" 并清除弹出窗口时, 嵌套循环将退出, 并在调用<xref:System.Windows.MessageBox.Show%2A>后恢复控件。  
   
 ### <a name="stale-routed-events"></a>过时的路由事件  
- 中的路由的事件系统[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]会引发事件时通知整个树。  
+ 引发事件时, 中[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]的路由事件系统会通知整个树。  
   
  [!code-xaml[InputOvw#ThreadingArticleStaticRoutedEvent](~/samples/snippets/csharp/VS_Snippets_Wpf/InputOvw/CSharp/Page1.xaml#threadingarticlestaticroutedevent)]  
   
- 在椭圆上按下鼠标左键时`handler2`执行。 之后`handler2`完成之后，事件将传递到<xref:System.Windows.Controls.Canvas>对象，后者使用`handler1`若要对其进行处理。 仅当发生这种情况`handler2`没有显式标记事件对象为已处理。  
+ 当在椭圆上按下鼠标左键时, `handler2`将执行。 完成`handler2`后, 会将事件传递<xref:System.Windows.Controls.Canvas>给对象, 后者使用`handler1`来处理该事件。 仅当未将`handler2`事件对象显式标记为已处理时, 才会发生这种情况。  
   
- 可能的`handler2`将需要很长的时间来处理此事件。 `handler2` 可以使用<xref:System.Windows.Threading.Dispatcher.PushFrame%2A>开始小时内不会返回一个嵌套的消息循环。 如果`handler2`不的标记该事件为已处理此消息循环时完成，则树向上传递事件，即使它是非常陈旧。  
+ 可能需要大量时间`handler2`来处理此事件。 `handler2`可能使用<xref:System.Windows.Threading.Dispatcher.PushFrame%2A>来开始一个嵌套消息循环, 该循环在数小时内不会返回。 如果`handler2`在此消息循环完成时未将事件标记为已处理, 则该事件将在树中向上传递, 即使它非常旧。  
   
 ### <a name="reentrancy-and-locking"></a>重新进入和锁定  
- 锁定机制[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]不完全相同的行为可能想象一个; 可能有人以为将完全停止操作，请求锁定时的线程。 实际上，该线程将继续接收和处理高优先级的消息。 这样有助于防止死锁，并使接口最低限度地响应，但这样做有可能引入细微 bug。  大多数情况下无需知道任何有关此操作，但在极少数情况下 (通常涉及[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]窗口消息或 COM STA 组件) 这可能是值得。  
+ 的锁定机制[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]的行为可能与想象的行为完全不同; 在请求锁时, 可能会希望线程完全停止操作。 实际上，该线程将继续接收和处理高优先级的消息。 这样有助于防止死锁，并使接口最低限度地响应，但这样做有可能引入细微 bug。  大多数情况下, 不需要了解有关此操作的任何信息, 但在极少数情况下 (通常[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]涉及到窗口消息或 COM STA 组件), 这一点很有价值。  
   
- 大多数接口不构建记住的线程安全，因为开发人员在假设的[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]永远不会由多个线程访问。 在此情况下，单个线程可能会使在意外情况的环境更改可导致这些错误影响的<xref:System.Windows.Threading.DispatcherObject>应该互相排斥机制来解决。 请看下面的伪代码：  
+ 大多数接口都不是以线程安全为基础生成的, 因为开发人员可以假定[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]永远不会由多个线程访问。 在这种情况下, 单个线程可能会在意外的时间发生环境更改, 从而导致这<xref:System.Windows.Threading.DispatcherObject>类错误的影响, 从而导致互斥机制能够解决。 请看下面的伪代码：  
   
- ![线程处理重新进入该节目的关系图。](./media/threading-model/threading-reentrancy.png "ThreadingReentrancy")  
+ ![显示线程重入的关系图。](./media/threading-model/threading-reentrancy.png "ThreadingReentrancy")  
   
- 大多数情况下，这是正确的事情，但有时候，在[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]其中此类异常的重入确实会造成问题。 这样，在某些关键时刻[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]调用<xref:System.Windows.Threading.Dispatcher.DisableProcessing%2A>，这将更改为使用该线程的锁定指令[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]无重入锁，而非常规[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]锁。  
+ 大多数情况下都是正确的, 但有时这种意外重入[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]可能会导致问题。 因此, 在某些关键情况下[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] , <xref:System.Windows.Threading.Dispatcher.DisableProcessing%2A> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]会调用, 这将更改该线程的锁定指令以使用无提示锁定, 而不是使用[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]普通的锁。  
   
- 那么，为什么未[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]团队选择这种行为？ 它与 COM STA 对象和完成线程有关。 当一个对象进行垃圾回收，其`Finalize`方法不运行，在专用终结器线程上[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]线程。 其中问题出在这里，因为 COM STA 对象，其上创建[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]线程仅在释放上[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]线程。 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]相当于<xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A>(在这种情况下使用 Win32 的`SendMessage`)。 但是，如果[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]线程正忙，终结器线程被停止，COM STA 对象无法被释放，这种结构造成严重的内存泄漏。 因此[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]团队通过严格的调用，使锁定的工作方式以它们执行操作。  
+ 那么为什么[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]团队选择此行为呢？ 它与 COM STA 对象和完成线程有关。 当对对象进行垃圾回收时, `Finalize`它的方法将在专用终结器线程上运行[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] , 而不是在线程上运行。 其中存在问题, 因为在[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]线程上创建的 COM STA 对象只能[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]在线程上释放。 等效于 (在这种情况下使用 win32 `SendMessage`)。 <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 但如果[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]线程繁忙, 则终结器线程将停止, 并且无法释放 COM STA 对象, 这将导致严重的内存泄漏。 这样, [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]团队就可以轻松地进行调用, 使锁按照它们的工作方式工作。  
   
- 有关任务[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]是为了避免意外重新进入而无需重新引入内存泄露，这正是我们不会阻止无处不在可重入性。  
+ 的任务[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]是在不重新引入内存泄漏的情况下避免意外的重入, 这就是我们不会在任何地方阻止重入的原因。  
   
 ## <a name="see-also"></a>请参阅
 

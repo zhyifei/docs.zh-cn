@@ -2,24 +2,24 @@
 title: 使用传输安全保护消息
 ms.date: 03/30/2017
 ms.assetid: 9029771a-097e-448a-a13a-55d2878330b8
-ms.openlocfilehash: 6f93fa37c6f1d6a0d7396c7f9ea5e97b44d1dc92
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a8a7e9422679927636ae2dc9b6a2ab34202ee74c
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64603523"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68331522"
 ---
 # <a name="securing-messages-using-transport-security"></a>使用传输安全保护消息
 本节讨论消息队列 (MSMQ) 传输安全，您可将其用于保护发送到队列的消息。  
   
 > [!NOTE]
->  之前阅读此主题，建议先阅读[安全性概念](../../../../docs/framework/wcf/feature-details/security-concepts.md)。  
+>  在阅读本主题之前, 建议你阅读[安全概念](../../../../docs/framework/wcf/feature-details/security-concepts.md)。  
   
- 下图提供了使用 Windows Communication Foundation (WCF) 的排队通信的概念模型。 此插图和术语用于说明传输安全概念。  
+ 下图提供了使用 Windows Communication Foundation (WCF) 进行排队通信的概念模型。 此插图和术语用于说明传输安全概念。  
   
- ![排队应用程序关系图](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "分布式队列图")  
+ ![排队应用程序关系图](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "分布式队列-图表")  
   
- 发送排队时使用的 WCF 消息<xref:System.ServiceModel.NetMsmqBinding>，WCF 消息附加作为 MSMQ 消息正文。 传输安全可以保护全部 MSMQ 消息（MSMQ 消息头或属性和消息正文）的安全。 因为它是 MSMQ 消息的正文，使用传输安全还可以保护 WCF 消息。  
+ 使用 wcf <xref:System.ServiceModel.NetMsmqBinding>发送排队消息时, wcf 消息将附加为 MSMQ 消息的正文。 传输安全可以保护全部 MSMQ 消息（MSMQ 消息头或属性和消息正文）的安全。 由于它是 MSMQ 消息的正文, 因此使用传输安全性还能保护 WCF 消息。  
   
  传输安全的关键概念在于，客户端必须满足安全要求，才能使消息进入目标队列。 这与消息安全不同。在消息安全中，针对接收消息的应用程序来保护消息。  
   
@@ -38,19 +38,19 @@ ms.locfileid: "64603523"
   
  MSMQ 还能够将证书附加到未向 Active Directory 注册的消息中。 在这种情况下，它可以确保该消息已使用附加的证书进行签名。  
   
- WCF MSMQ 传输安全的一部分提供了这两个选项，他们会获得传输安全的关键核心。  
+ WCF 提供了这两个选项作为 MSMQ 传输安全的一部分, 它们是用于传输安全的密钥透视。  
   
  默认情况下将启用传输安全。  
   
  了解这些基本知识后，以下各节将详细介绍与 <xref:System.ServiceModel.NetMsmqBinding> 和 <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> 绑定的传输安全属性。  
   
 #### <a name="msmq-authentication-mode"></a>MSMQ 身份验证模式  
- <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> 指示是使用 Windows 域安全还是基于外部证书的安全来保护消息。 在这两种身份验证模式，WCF 排队的传输通道使用`CertificateValidationMode`服务配置中指定。 证书验证模式指定用于检查证书有效性的机制。  
+ <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> 指示是使用 Windows 域安全还是基于外部证书的安全来保护消息。 在这两种身份验证模式下, WCF 排队传输`CertificateValidationMode`通道都使用服务配置中指定的。 证书验证模式指定用于检查证书有效性的机制。  
   
  启用传输安全时，默认的设置为 <xref:System.ServiceModel.MsmqAuthenticationMode.WindowsDomain>。  
   
 #### <a name="windows-domain-authentication-mode"></a>Windows 域身份验证模式  
- 如果选择使用 Windows 安全，则需要 Active Directory 集成。 <xref:System.ServiceModel.MsmqAuthenticationMode.WindowsDomain> 是默认的传输安全模式。 当此设置时，WCF 通道将 Windows SID 附加到 MSMQ 消息，并使用从 Active Directory 获取其内部证书。 MSMQ 将此内部证书用于保护消息。 接收队列管理器使用 Active Directory 来搜索并查找匹配的证书，以便对客户端进行身份验证，并检查 SID 是否还与客户端的 SID 匹配。 如果证书（在 `WindowsDomain` 身份验证模式下在内部生成或在 `Certificate` 身份验证模式下在外部生成）附加到消息中，则即使目标队列未标记为要求身份验证，也将执行此身份验证步骤。  
+ 如果选择使用 Windows 安全，则需要 Active Directory 集成。 <xref:System.ServiceModel.MsmqAuthenticationMode.WindowsDomain> 是默认的传输安全模式。 设置此设置后, WCF 通道会将 Windows SID 附加到 MSMQ 消息, 并使用从 Active Directory 获取的内部证书。 MSMQ 将此内部证书用于保护消息。 接收队列管理器使用 Active Directory 来搜索并查找匹配的证书，以便对客户端进行身份验证，并检查 SID 是否还与客户端的 SID 匹配。 如果证书（在 `WindowsDomain` 身份验证模式下在内部生成或在 `Certificate` 身份验证模式下在外部生成）附加到消息中，则即使目标队列未标记为要求身份验证，也将执行此身份验证步骤。  
   
 > [!NOTE]
 >  创建队列时，您可以将队列标记为已进行身份验证的队列，以指示队列要求对向队列发送消息的客户端进行身份验证。 这可以确保队列中不接受未经身份验证的消息。  
@@ -60,9 +60,9 @@ ms.locfileid: "64603523"
 #### <a name="certificate-authentication-mode"></a>证书身份验证模式  
  使用证书身份验证模式不需要 Active Directory 集成。 实际上，在某些情况下，例如在工作组模式（没有 Active Directory 集成）中安装 MSMQ 时，或使用 SOAP 可靠传送消息协议 (SRMP) 将消息发送到队列时，只有 <xref:System.ServiceModel.MsmqAuthenticationMode.Certificate> 才起作用。  
   
- 发送 WCF 消息时<xref:System.ServiceModel.MsmqAuthenticationMode.Certificate>，WCF 通道不会附加到 MSMQ 消息的 Windows SID。 同样，目标队列 ACL 必须允许使用 `Anonymous` 用户权限向队列发送消息。 接收队列管理器检查 MSMQ 消息是否已使用证书进行签名，但不执行任何身份验证。  
+ 使用<xref:System.ServiceModel.MsmqAuthenticationMode.Certificate>发送 wcf 消息时, wcf 通道不会将 Windows SID 附加到 MSMQ 消息。 同样，目标队列 ACL 必须允许使用 `Anonymous` 用户权限向队列发送消息。 接收队列管理器检查 MSMQ 消息是否已使用证书进行签名，但不执行任何身份验证。  
   
- 包含其声明和标识信息的证书中填充<xref:System.ServiceModel.ServiceSecurityContext>WCF 排队的传输通道。 服务可使用此信息来对发送方执行其自己的身份验证。  
+ 带有声明和标识信息的证书<xref:System.ServiceModel.ServiceSecurityContext>由 WCF 排队传输通道在中填充。 服务可使用此信息来对发送方执行其自己的身份验证。  
   
 ### <a name="msmq-protection-level"></a>MSMQ 保护级别  
  保护级别指示如何保护 MSMQ 消息以确保该消息不会被篡改。 保护级别是在 <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> 属性中指定的。 默认值为 <xref:System.Net.Security.ProtectionLevel.Sign>。  
@@ -94,7 +94,9 @@ ms.locfileid: "64603523"
 ### <a name="msmq-hash-algorithm"></a>MSMQ 哈希算法  
  哈希算法指定用于创建 MSMQ 消息的数字签名的算法。 接收队列管理器使用此算法对 MSMQ 消息进行身份验证。 只有在 <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> 设置为 <xref:System.Net.Security.ProtectionLevel.Sign> 或 <xref:System.Net.Security.ProtectionLevel.EncryptAndSign> 时，才使用此属性。  
   
- 支持的算法包括 `MD5`、`SHA1`、`SHA256` 和 `SHA512`。 默认值为 `SHA1`。  
+ 支持的算法包括 `MD5`、`SHA1`、`SHA256` 和 `SHA512`。 默认值为 `SHA1`。
+
+ 由于 MD5/SHA1 出现冲突, Microsoft 建议 SHA256 或更好。
   
 ## <a name="see-also"></a>请参阅
 
