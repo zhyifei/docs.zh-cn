@@ -8,14 +8,14 @@ helpviewer_keywords:
 - defaultProxy element
 - <defaultProxy> element
 ms.assetid: 9d663c4b-07b4-4f6f-9b12-efbd3630354f
-ms.openlocfilehash: ce08dadb0fb7b986c0573b1514f9ecbbe2961c3a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5947808cd137fc4cd280ac683a3e9a14b0d4644d
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674566"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68363867"
 ---
-# <a name="defaultproxy-element-network-settings"></a>\<defaultProxy > 元素 （网络设置）
+# <a name="defaultproxy-element-network-settings"></a>\<defaultProxy > 元素 (网络设置)
 配置超文本传输协议 (HTTP) 代理服务器。  
   
  \<configuration>  
@@ -50,7 +50,7 @@ ms.locfileid: "61674566"
 |-----------------|---------------------|  
 |[bypasslist](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|提供一组描述不使用代理的地址的正则表达式。|  
 |[module](../../../../../docs/framework/configure-apps/file-schema/network/module-element-network-settings.md)|向应用程序添加新的代理模块。|  
-|[proxy](../../../../../docs/framework/configure-apps/file-schema/network/proxy-element-network-settings.md)|定义代理服务器。|  
+|[代理](../../../../../docs/framework/configure-apps/file-schema/network/proxy-element-network-settings.md)|定义代理服务器。|  
   
 ### <a name="parent-elements"></a>父元素  
   
@@ -61,13 +61,13 @@ ms.locfileid: "61674566"
 ## <a name="remarks"></a>备注  
  如果 defaultProxy 元素为空，则将沿用 Internet Explorer 中的代理设置。 这种行为在 .NET Framework 1.1 版中有所不同。  
   
- 如果引发异常[模块](../../../../../docs/framework/configure-apps/file-schema/network/module-element-network-settings.md)元素指定非公共类型，该类型不派生自<xref:System.Net.IWebProxy>类，可能出现的默认构造函数为此对象的异常，或者出现异常时正在检索系统指定的默认代理。 异常的 <xref:System.Exception.InnerException%2A> 属性应具有错误根本原因的详细信息。  
+ 如果[module](../../../../../docs/framework/configure-apps/file-schema/network/module-element-network-settings.md)元素指定非公共类型, 该类型不是从<xref:System.Net.IWebProxy>类派生, 则此对象的无参数构造函数中出现异常, 或者在检索时出现异常, 则会引发异常。系统指定的默认代理。 异常的 <xref:System.Exception.InnerException%2A> 属性应具有错误根本原因的详细信息。  
   
 ## <a name="configuration-files"></a>配置文件  
  此元素可在应用程序配置文件或计算机配置文件 (Machine.config) 中使用。  
   
 ## <a name="example"></a>示例  
- 以下示例使用来自 Internet 资源管理器代理的默认值、 指定代理地址，并跳过本地访问和访问 contoso.com 的代理。  
+ 以下示例使用 Internet Explorer 代理中的默认值, 指定代理地址, 并绕过代理进行本地访问和 contoso.com。  
   
 ```xml  
 <configuration>  

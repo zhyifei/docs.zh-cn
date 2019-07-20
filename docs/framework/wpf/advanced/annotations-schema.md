@@ -6,34 +6,34 @@ helpviewer_keywords:
 - Microsoft Annotations Framework [WPF]
 - documents [WPF], annotations
 ms.assetid: a893442b-e220-4603-bf6a-b01fefcb4b37
-ms.openlocfilehash: 503858b717ef541675b642a735289e3903b91fdc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1d11b0bb2086bb449c0ffc0ff89430a55096a28d
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777074"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68364353"
 ---
 # <a name="annotations-schema"></a>批注架构
 
 本主题介绍 Microsoft Annotations Framework 用来保存和检索用户批注数据的 XML 架构定义 (XSD)。
 
-[!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] 将批注数据从内部表示形式序列化为 XML 格式。  [!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] XSD 架构描述了用于此转换的 XML 格式。  该架构定义独立于实现、可用来在应用程序之间交换批注数据的 XML 格式。
+批注框架将批注数据从内部表示形式序列化为 XML 格式。  批注框架 XSD 架构描述了用于此转换的 XML 格式。  该架构定义独立于实现、可用来在应用程序之间交换批注数据的 XML 格式。
 
-[!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] XML 架构定义由两个子架构组成
+批注框架 XML 架构定义包含两个个子架构
 
 - 批注 XML 核心架构（核心架构）。
 
 - 批注 XML 基本架构（核心架构）。
 
-核心架构定义的主 XML 结构<xref:System.Windows.Annotations.Annotation>。  大部分核心架构中定义的 XML 元素中的类型对应<xref:System.Windows.Annotations>命名空间。  核心架构公开应用程序可在其中添加自己的 XML 数据的三个扩展点。  这些扩展点包括<xref:System.Windows.Annotations.Annotation.Authors%2A>， <xref:System.Windows.Annotations.ContentLocatorPart>，和"内容"。  (内容元素中的窗体提供了<xref:System.Xml.XmlElement>列表。)
+核心架构定义的主 XML 结构<xref:System.Windows.Annotations.Annotation>。  核心架构中定义的大多数 XML 元素对应于<xref:System.Windows.Annotations>命名空间中的类型。  核心架构公开应用程序可在其中添加自己的 XML 数据的三个扩展点。  这些扩展点包括<xref:System.Windows.Annotations.Annotation.Authors%2A>、 <xref:System.Windows.Annotations.ContentLocatorPart>和 "内容"。  (内容元素以<xref:System.Xml.XmlElement>列表的形式提供。)
 
-本主题中描述的基本架构定义的扩展<xref:System.Windows.Annotations.Annotation.Authors%2A>， <xref:System.Windows.Annotations.ContentLocatorPart>，和内容的初始 Windows Presentation Foundation (WPF) 版本中包含的类型。
+本主题中所述的基本架构定义了初始 Windows Presentation Foundation <xref:System.Windows.Annotations.Annotation.Authors%2A>( <xref:System.Windows.Annotations.ContentLocatorPart>WPF) 版本附带的、和内容类型的扩展。
 
 <a name="CoreSchema"></a>
 
 ## <a name="annotations-xml-core-schema"></a>批注 XML 核心架构
 
-批注 XML 核心架构定义用于存储的 XML 结构<xref:System.Windows.Annotations.Annotation>对象。
+批注 xml 核心架构定义用于存储<xref:System.Windows.Annotations.Annotation>对象的 xml 结构。
 
 ```xml
 <xsd:schema elementFormDefault="qualified" attributeFormDefault="unqualified"
@@ -187,7 +187,7 @@ ms.locfileid: "61777074"
 
 ## <a name="annotations-xml-base-schema"></a>批注 XML 基本架构
 
-基本架构定义为核心架构中定义的三个抽象元素的 XML 结构<xref:System.Windows.Annotations.Annotation.Authors%2A>， <xref:System.Windows.Annotations.ContentLocatorPart>，和<xref:System.Windows.Annotations.AnnotationResource.Contents%2A>。
+基本架构为核心架构中定义的三个抽象元素 ( <xref:System.Windows.Annotations.Annotation.Authors%2A>、 <xref:System.Windows.Annotations.ContentLocatorPart>和<xref:System.Windows.Annotations.AnnotationResource.Contents%2A>) 定义 XML 结构。
 
 ```xml
 <xsd:schema elementFormDefault="qualified" attributeFormDefault="unqualified"
@@ -500,7 +500,7 @@ ms.locfileid: "61777074"
 
 ## <a name="sample-xml-produced-by-annotations-xmlstreamstore"></a>批注 XmlStreamStore 所生成的示例 XML
 
-下面的 XML 显示了批注的输出<xref:System.Windows.Annotations.Storage.XmlStreamStore>和组织的一个示例文件，包含三个批注： 突出显示、 文本粘滞便笺以及墨迹便笺。
+下面的 XML 显示了一个批注<xref:System.Windows.Annotations.Storage.XmlStreamStore>的输出, 以及一个包含三个批注的示例文件 (一个突出显示、文本粘滞便笺和一个墨迹便笺) 的组织。
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>

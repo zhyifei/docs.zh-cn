@@ -2,12 +2,12 @@
 title: 更改发送活动的缓存共享级别
 ms.date: 03/30/2017
 ms.assetid: 03926a64-753d-460e-ac06-2a4ff8e1bbf5
-ms.openlocfilehash: 079eb037f074155aec3ad5473480bbf5d4d341b2
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: ac4f2e4fe85d6b243999add6bda65f4fb202f79c
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67425160"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68363837"
 ---
 # <a name="changing-the-cache-sharing-levels-for-send-activities"></a>更改发送活动的缓存共享级别
 使用 <xref:System.ServiceModel.Activities.SendMessageChannelCache> 扩展可以自定义缓存共享级别、通道工厂缓存的设置，以及使用 <xref:System.ServiceModel.Activities.Send> 消息传递活动将消息发送到服务终结点的工作流的通道缓存的设置。 这些工作流通常是客户端工作流，但也可以是在 <xref:System.ServiceModel.WorkflowServiceHost> 中承载的工作流服务。 通道工厂缓存包含已缓存的 <xref:System.ServiceModel.ChannelFactory%601> 对象。 通道缓存包含已缓存的通道。  
@@ -20,11 +20,11 @@ ms.locfileid: "67425160"
   
  下面介绍了可供工作流中的 <xref:System.ServiceModel.Activities.Send> 活动使用的各种缓存共享级别及其建议用法：  
   
-- **宿主级**:在宿主共享级别，缓存是仅供在工作流服务主机中承载的工作流实例。 缓存还可在进程范围的缓存中的工作流服务主机之间共享。  
+- **主机级别**:在宿主共享级别, 缓存仅对工作流服务主机中承载的工作流实例可用。 缓存还可在进程范围的缓存中的工作流服务主机之间共享。  
   
-- **实例级别**:在共享级别的实例，缓存可供其整个生存期内的特定工作流实例，但缓存将不可供其他工作流实例。  
+- **实例级别**:在实例共享级别, 缓存可用于在其整个生存期内的特定工作流实例, 但缓存不能用于其他工作流实例。  
   
-- **无缓存**:如果必须使用在配置中定义的终结点的工作流，在缓存处于关闭状态默认情况下中。 在这种情况下，由于打开缓存可能会造成不安全的情况，因此也建议关闭缓存。 例如，在针对每次发送都需要使用不同的标识（不同的凭据或使用模拟）时。  
+- **无缓存**:如果工作流使用在配置中定义的终结点, 则默认情况下, 缓存处于关闭状态。 在这种情况下，由于打开缓存可能会造成不安全的情况，因此也建议关闭缓存。 例如，在针对每次发送都需要使用不同的标识（不同的凭据或使用模拟）时。  
   
 ## <a name="changing-the-cache-sharing-level-for-a-client-workflow"></a>更改客户端工作流的缓存共享级别  
  若要在客户端工作流中设置缓存共享，请将 <xref:System.ServiceModel.Activities.SendMessageChannelCache> 类的实例作为扩展添加到所需的工作流实例集。 这样可在所有工作流实例之间共享缓存。 下面的代码示例演示如何执行这些步骤。  
@@ -86,7 +86,7 @@ serviceHost.WorkflowExtensions.Add(() => new SendMessageChannelCache
 ```  
   
 ## <a name="customizing-cache-settings"></a>自定义缓存设置  
- 您可以为通道工厂缓存和通道缓存自定义缓存设置。 缓存设置在 <xref:System.ServiceModel.Activities.ChannelCacheSettings> 类中定义。 <xref:System.ServiceModel.Activities.SendMessageChannelCache> 类在其默认构造函数中为通道工厂缓存和通道缓存定义默认缓存设置。 下表针对各种缓存类型列出了这些缓存设置的默认值。  
+ 您可以为通道工厂缓存和通道缓存自定义缓存设置。 缓存设置在 <xref:System.ServiceModel.Activities.ChannelCacheSettings> 类中定义。 <xref:System.ServiceModel.Activities.SendMessageChannelCache>类在其无参数构造函数中为通道工厂缓存和通道缓存定义默认缓存设置。 下表针对各种缓存类型列出了这些缓存设置的默认值。  
   
 |设置|LeaseTimeout（分钟）|IdleTimeout（分钟）|MaxItemsInCache|  
 |-|-|-|-|  
@@ -150,7 +150,7 @@ SendMessageChannelCache customChannelCacheExtension =
 clientInstance.Extensions.Add(customChannelCacheExtension);  
 ```  
   
- 在承载的工作流服务中，可以在应用程序配置文件中指定工厂缓存和通道缓存设置。 为此，应添加一个包含工厂和通道缓存的缓存设置的服务行为，并将此服务行为添加到您的服务中。 下面的示例显示了包含的配置文件的内容`MyChannelCacheBehavior`服务使用自定义工厂缓存和通道缓存设置的行为。 此服务行为添加到服务`behaviorConfiguration`属性。  
+ 在承载的工作流服务中，可以在应用程序配置文件中指定工厂缓存和通道缓存设置。 为此，应添加一个包含工厂和通道缓存的缓存设置的服务行为，并将此服务行为添加到您的服务中。 下面的示例显示了配置文件的内容, 其中包含具有`MyChannelCacheBehavior`自定义工厂缓存和通道缓存设置的服务行为。 此服务行为通过`behaviorConfiguration`属性添加到服务。  
   
 ```xml  
 <configuration>    

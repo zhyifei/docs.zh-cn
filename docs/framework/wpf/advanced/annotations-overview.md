@@ -9,17 +9,17 @@ helpviewer_keywords:
 - documents [WPF], annotations
 - sticky notes [WPF]
 ms.assetid: 716bf474-29bd-4c74-84a4-8e0744bdad62
-ms.openlocfilehash: faf2e9bbe23acfd46ee98e1f0fca01b7563ede73
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 861a757effee8d68d1e41682dd91ffadba20c536
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777296"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68364375"
 ---
 # <a name="annotations-overview"></a>批注概述
 在纸质文档上编写说明或注释毫不稀奇，我们几乎认为这是理所当然的。 这些说明或注释就是“批注”，我们将其添加到文档，用于标注信息或突出显示兴趣项以供日后参考。 虽然在打印文档上编写注释很简单也很平常，但是就算在所有电子文档上添加个人注释，功能上却通常有很多限制。  
   
- 本主题介绍几个常见类型的批注，特别是粘滞便笺和突出显示，并说明了如何将[!INCLUDE[TLA#tla_caf](../../../../includes/tlasharptla-caf-md.md)]简化这些类型的应用程序可以通过 Windows Presentation Foundation (WPF) 文档中的批注查看控件。  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 支持批注的文档查看控件包括<xref:System.Windows.Controls.FlowDocumentReader>并<xref:System.Windows.Controls.FlowDocumentScrollViewer>，以及控件派生自<xref:System.Windows.Controls.Primitives.DocumentViewerBase>如<xref:System.Windows.Controls.DocumentViewer>和<xref:System.Windows.Controls.FlowDocumentPageViewer>。  
+ 本主题介绍了几种常见类型的批注, 特别是粘滞便笺和突出显示内容, 并说明了 Microsoft 批注框架如何通过 Windows Presentation Foundation 在应用程序中帮助这些类型的批注) 文档查看控件。  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]支持批注的文档查看控件包括<xref:System.Windows.Controls.FlowDocumentReader>和<xref:System.Windows.Controls.FlowDocumentScrollViewer>, 以及派生自<xref:System.Windows.Controls.Primitives.DocumentViewerBase> <xref:System.Windows.Controls.DocumentViewer>和<xref:System.Windows.Controls.FlowDocumentPageViewer>的控件。  
 
 <a name="caf1_type_stickynotes"></a>   
 ## <a name="sticky-notes"></a>便笺  
@@ -36,19 +36,19 @@ ms.locfileid: "61777296"
   
 <a name="caf1_type_callouts"></a>   
 ## <a name="highlights"></a>突出显示  
- 当人们在纸质文档上作标记时，往往使用创造性的方法来突出显示兴趣项，例如对于句子中的某些字词，加下划线、高亮显示、圈出，或者将在空白的地方绘制标记或符号。  [!INCLUDE[TLA#tla_caf](../../../../includes/tlasharptla-caf-md.md)] 中的突出显示批注具有类似的功能，用于标记在 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 文档查看控件中显示的信息。  
+ 当人们在纸质文档上作标记时，往往使用创造性的方法来突出显示兴趣项，例如对于句子中的某些字词，加下划线、高亮显示、圈出，或者将在空白的地方绘制标记或符号。  Microsoft 批注框架中的突出显示批注提供了一个类似的功能, 用于[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]标记文档查看控件中显示的信息。  
   
  下图演示了一个突出显示批注的示例。  
   
  ![突出显示批注](./media/caf-callouts.png "CAF_Callouts")  
   
- 用户通常通过首先选择一些文本或自己感兴趣的项，然后右键单击以显示创建批注<xref:System.Windows.Controls.ContextMenu>批注选项。  下面的示例演示[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]可用于声明<xref:System.Windows.Controls.ContextMenu>用户可以访问创建和管理批注的路由命令。  
+ 用户通常通过首先选择某个文本或感兴趣的项来创建批注, 然后右键单击以显示<xref:System.Windows.Controls.ContextMenu>批注选项的。  下面的示例演示[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]了如何使用路由命令<xref:System.Windows.Controls.ContextMenu>声明, 用户可以访问这些命令来创建和管理批注。  
   
  [!code-xaml[DocViewerAnnotationsXps#CreateDeleteAnnotations](~/samples/snippets/csharp/VS_Snippets_Wpf/DocViewerAnnotationsXps/CSharp/Window1.xaml#createdeleteannotations)]  
   
 <a name="caf1_framework_data_anchoring"></a>   
 ## <a name="data-anchoring"></a>数据锚定  
- [!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] 将批注与用户选择的数据绑定，而不仅仅是绑定到显示视图中的某个位置。 因此，如果文档视图更改（例如，当用户滚动显示窗口或者调整其大小时），批注将仍然跟随它绑定到的所选数据。 例如，下图显示了用户在所选文本上做的批注。 当文档视图更改时（滚动、调整大小、缩放或者移动），突出显示批注将与最初所选数据一起移动。  
+ 批注框架将批注绑定到用户选择的数据, 而不只是显示在显示视图上的某个位置。 因此，如果文档视图更改（例如，当用户滚动显示窗口或者调整其大小时），批注将仍然跟随它绑定到的所选数据。 例如，下图显示了用户在所选文本上做的批注。 当文档视图更改时（滚动、调整大小、缩放或者移动），突出显示批注将与最初所选数据一起移动。  
   
  ![批注数据锚定](./media/caf-dataanchoring.png "CAF_DataAnchoring")  
   
@@ -61,7 +61,7 @@ ms.locfileid: "61777296"
  [!code-csharp[FlowDocumentAnnotatedViewer#Handler](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentAnnotatedViewer/CSharp/Window1.xaml.cs#handler)]
  [!code-vb[FlowDocumentAnnotatedViewer#Handler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentAnnotatedViewer/visualbasic/window1.xaml.vb#handler)]  
   
- 另一个示例方案涉及到应用程序，使交换批注和文档通过电子邮件的读取者之间的粘滞便笺。 凭借此功能，这些应用程序可以将读取器导航到包含要交换的批注的页面。  
+ 另一个示例方案包括允许通过电子邮件在文档读取器之间交换批注和便笺的应用程序。 凭借此功能，这些应用程序可以将读取器导航到包含要交换的批注的页面。  
   
 ## <a name="see-also"></a>请参阅
 
@@ -75,4 +75,4 @@ ms.locfileid: "61777296"
 - [ContextMenu 概述](../controls/contextmenu-overview.md)
 - [命令概述](commanding-overview.md)
 - [流文档概述](flow-document-overview.md)
-- [如何：将命令添加到菜单项](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms741839(v=vs.90))
+- [如何：向 MenuItem 添加命令](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms741839(v=vs.90))

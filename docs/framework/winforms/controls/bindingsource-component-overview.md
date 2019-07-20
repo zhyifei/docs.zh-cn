@@ -7,18 +7,18 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], about BindingSource component
 - data binding [Windows Forms], BindingSource component
 ms.assetid: be838caf-fcb0-4b68-827f-58b2c04b747f
-ms.openlocfilehash: 2237ba71487afc132f9164243a664b277397ccfa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9c9c9fb574b9f3e687b2d8d5c4606bfb66ebfa64
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61939097"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68364447"
 ---
 # <a name="bindingsource-component-overview"></a>BindingSource 组件概述
 <xref:System.Windows.Forms.BindingSource> 组件旨在简化将控件绑定到基础数据源的过程。 <xref:System.Windows.Forms.BindingSource> 组件同时充当管道和其他控件可以绑定的数据源。 将命令传递到基础数据列表时，它提供窗体数据连接的抽象。 此外，可以直接向其添加数据，以便组件本身可用作数据源。  
   
 ## <a name="bindingsource-component-as-an-intermediary"></a>作为中介的 BindingSource 组件  
- <xref:System.Windows.Forms.BindingSource> 组件为窗体上的某些或全部控件充当数据源。 在 Visual Studio 中，<xref:System.Windows.Forms.BindingSource>可以绑定到通过控件`DataBindings`属性，它是从可访问**属性**窗口。 另请参阅[如何：将 Windows 窗体控件与 BindingSource 组件使用设计器绑定](bind-wf-controls-with-the-bindingsource.md)。  
+ <xref:System.Windows.Forms.BindingSource> 组件为窗体上的某些或全部控件充当数据源。 在 Visual Studio 中, <xref:System.Windows.Forms.BindingSource>可以通过`DataBindings`属性将绑定到控件, 该属性可从 "**属性**" 窗口进行访问。 另请[参阅如何:使用设计器](bind-wf-controls-with-the-bindingsource.md)将 Windows 窗体控件与 BindingSource 组件绑定。  
   
  可以将 <xref:System.Windows.Forms.BindingSource> 组件同时绑定到两个简单的数据源（如一个对象或一个基本集合（如 <xref:System.Collections.ArrayList>）的单个属性）和复杂的数据源（如数据库表）。 <xref:System.Windows.Forms.BindingSource> 组件充当提供绑定和货币管理服务的中介。 在设计时或运行时中，通过将 <xref:System.Windows.Forms.BindingSource> 组件的 <xref:System.Windows.Forms.BindingSource.DataSource%2A> 和 <xref:System.Windows.Forms.BindingSource.DataMember%2A> 属性分别设置为数据库和表，可将其绑定到复杂的数据源。 下图演示 <xref:System.Windows.Forms.BindingSource> 组件在何处能够融入现有的绑定数据的体系结构。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "61939097"
 |<xref:System.Windows.Forms.BindingSource.RemoveCurrent%2A> 方法|从列表中移除当前项。|  
 |<xref:System.Windows.Forms.BindingSource.EndEdit%2A> 方法|将挂起的更改应用于基础数据源。|  
 |<xref:System.Windows.Forms.BindingSource.CancelEdit%2A> 方法|取消当前的编辑操作。|  
-|<xref:System.Windows.Forms.BindingSource.AddNew%2A> 方法|在基础列表中添加一个新项。 如果数据源实现 <xref:System.ComponentModel.IBindingList> 并从 <xref:System.Windows.Forms.BindingSource.AddingNew> 事件返回一个项，则添加此项。 否则，该请求将传递给此列表的 <xref:System.ComponentModel.IBindingList.AddNew%2A> 方法。 如果基础列表不是 <xref:System.ComponentModel.IBindingList>，则通过该项的公共默认构造函数自动创建该项。|  
+|<xref:System.Windows.Forms.BindingSource.AddNew%2A> 方法|在基础列表中添加一个新项。 如果数据源实现 <xref:System.ComponentModel.IBindingList> 并从 <xref:System.Windows.Forms.BindingSource.AddingNew> 事件返回一个项，则添加此项。 否则，该请求将传递给此列表的 <xref:System.ComponentModel.IBindingList.AddNew%2A> 方法。 如果基础列表不<xref:System.ComponentModel.IBindingList>是, 则会通过其公共的无参数构造函数自动创建项。|  
   
 ## <a name="sorting-and-filtering"></a>排序与筛选  
  通常，应使用数据源的已排序或已筛选视图。 下表显示 <xref:System.Windows.Forms.BindingSource> 组件数据源提供的成员。  

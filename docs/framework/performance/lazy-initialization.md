@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 56b4ae5c-4745-44ff-ad78-ffe4fcde6b9b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7b19fbeb0144698c5091a9bbe6bce45c21c4f0d8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: aef3105844ee61607bbc85332a76611c91a4198a
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616374"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68364048"
 ---
 # <a name="lazy-initialization"></a>迟缓初始化
-对象的迟缓初始化意味着推迟创建该对象，直到它被首次使用。 （在本主题中，术语迟缓初始化和迟缓实例化是同义词。）迟缓初始化主要用于提升性能、避免计算浪费和降低程序内存需求。 以下是常见方案：  
+对象的  迟缓初始化意味着推迟创建该对象，直到它被首次使用。 （在本主题中，术语  迟缓初始化和迟缓实例化  是同义词。）迟缓初始化主要用于提升性能、避免计算浪费和降低程序内存需求。 以下是常见方案：  
   
 - 对象创建成本高且程序可能不会使用它。 例如，假定内存中有具有 `Orders` 属性的 `Customer` 对象，该对象包含大量 `Order` 对象，初始化这些对象需要数据库连接。 如果用户永远不要求显示 Orders 或在计算中使用该数据，则无需使用系统内存或计算周期来创建它。 通过使用 `Lazy<Orders>` 来声明 `Orders` 对象用于迟缓初始化，可以避免在不使用该对象时浪费系统资源。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "64616374"
 |<xref:System.Threading.LazyInitializer>|为对象的迟缓初始化提供高级 `static`（Visual Basic 中的 `Shared`）方法，无需支付类的成本。|  
   
 ## <a name="basic-lazy-initialization"></a>基本迟缓初始化  
- 若要定义迟缓初始化类型（例如 `MyType`），使用 `Lazy<MyType>`（Visual Basic 中的 `Lazy(Of MyType)`），如以下示例所示。 如果没有在 <xref:System.Lazy%601> 构造函数中传入委托，则在首次访问值属性时，将使用 <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> 创建包装类型。 如果该类型没有默认构造函数，则会引发运行时异常。  
+ 若要定义迟缓初始化类型（例如 `MyType`），使用 `Lazy<MyType>`（Visual Basic 中的 `Lazy(Of MyType)`），如以下示例所示。 如果没有在 <xref:System.Lazy%601> 构造函数中传入委托，则在首次访问值属性时，将使用 <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> 创建包装类型。 如果该类型没有无参数构造函数, 则会引发运行时异常。  
   
  在以下示例中，假定 `Orders` 是包含从数据库检索的大量 `Order` 对象的类。 `Customer` 对象包含 `Orders` 的实例，但根据用户操作，可能不需要 `Orders` 对象的数据。  
   
@@ -89,7 +89,7 @@ ms.locfileid: "64616374"
 ## <a name="exceptions-in-lazy-objects"></a>迟缓对象的异常  
  如前所述，<xref:System.Lazy%601> 对象始终返回其初始化的相同对象或值，因此 <xref:System.Lazy%601.Value%2A> 属性是只读的。 如果启用异常缓存，则此永久性还会扩展到异常行为。 如果迟缓初始化的对象异常启用了缓存，并且引发其初始化方法中的发生异常时<xref:System.Lazy%601.Value%2A>首先访问属性时，相同的异常会在每个后续尝试访问上引发<xref:System.Lazy%601.Value%2A>属性. 也就是说，即使在多线程方案中，包装类型的构造函数也绝不会被重新调用。 因此，<xref:System.Lazy%601> 对象不能在一次访问时引发异常，并在随后访问时返回值。  
   
- 当使用任何采用初始化方法（`valueFactory` 参数）的 <xref:System.Lazy%601?displayProperty=nameWithType> 构造函数时，都会启用异常缓存；例如，当使用 `Lazy(T)(Func(T))` 构造函数时，会启用异常缓存。 如果构造函数还使用 <xref:System.Threading.LazyThreadSafetyMode> 值（`mode` 参数），请指定 <xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication?displayProperty=nameWithType> 或 <xref:System.Threading.LazyThreadSafetyMode.None?displayProperty=nameWithType>。 指定初始化方法可启用这两种模式的异常缓存。 初始化方法非常简单。 例如，它可能会调用 `T` 的默认构造函数：C# 中的 `new Lazy<Contents>(() => new Contents(), mode)` 或 Visual Basic 中的 `New Lazy(Of Contents)(Function() New Contents())`。 如果你使用不指定初始化方法的 <xref:System.Lazy%601?displayProperty=nameWithType> 构造函数，则不会缓存 `T` 默认构造函数引发的异常。 有关详细信息，请参见 <xref:System.Threading.LazyThreadSafetyMode> 枚举。  
+ 当使用任何采用初始化方法（`valueFactory` 参数）的 <xref:System.Lazy%601?displayProperty=nameWithType> 构造函数时，都会启用异常缓存；例如，当使用 `Lazy(T)(Func(T))` 构造函数时，会启用异常缓存。 如果构造函数还使用 <xref:System.Threading.LazyThreadSafetyMode> 值（`mode` 参数），请指定 <xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication?displayProperty=nameWithType> 或 <xref:System.Threading.LazyThreadSafetyMode.None?displayProperty=nameWithType>。 指定初始化方法可启用这两种模式的异常缓存。 初始化方法非常简单。 例如, 它可能会调用中的参数构造`T`函数`new Lazy<Contents>(() => new Contents(), mode)` : C#在中`New Lazy(Of Contents)(Function() New Contents())` , 或在 Visual Basic 中。 如果你使用<xref:System.Lazy%601?displayProperty=nameWithType>不指定初始化方法的构造函数, 则不`T`会缓存的无参数构造函数引发的异常。 有关详细信息，请参见 <xref:System.Threading.LazyThreadSafetyMode> 枚举。  
   
 > [!NOTE]
 >  如果通过将 `isThreadSafe` 构造函数参数设置为 `false` 或将 `mode` 构造函数参数设置为 <xref:System.Threading.LazyThreadSafetyMode.None?displayProperty=nameWithType> 来创建 <xref:System.Lazy%601> 对象，则必须从单个线程访问 <xref:System.Lazy%601> 对象或提供你自己的同步。 这适用于对象的所有方面，包括异常缓存。  
@@ -100,11 +100,11 @@ ms.locfileid: "64616374"
   
 |构造函数|线程安全性|使用初始化方法|异常被缓存|  
 |-----------------|------------------------|--------------------------------|---------------------------|  
-|Lazy(T)()|(<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>)|否|否|  
+|Lazy(T)()|(<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>)|No|No|  
 |Lazy(T)(Func(T))|(<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>)|是|是|  
-|Lazy(T)(Boolean)|`True` (<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>) 或 `false` (<xref:System.Threading.LazyThreadSafetyMode.None>)|否|否|  
+|Lazy(T)(Boolean)|`True` (<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>) 或 `false` (<xref:System.Threading.LazyThreadSafetyMode.None>)|No|No|  
 |Lazy(T)(Func(T), Boolean)|`True` (<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>) 或 `false` (<xref:System.Threading.LazyThreadSafetyMode.None>)|是|是|  
-|Lazy(T)(LazyThreadSafetyMode)|用户指定|否|否|  
+|Lazy(T)(LazyThreadSafetyMode)|用户指定|No|No|  
 |Lazy(T)(Func(T), LazyThreadSafetyMode)|用户指定|是|如果用户指定 <xref:System.Threading.LazyThreadSafetyMode.PublicationOnly> 则为 no；否则为 yes。|  
   
 ## <a name="implementing-a-lazy-initialized-property"></a>实现迟缓初始化的属性  
@@ -116,7 +116,7 @@ ms.locfileid: "64616374"
  <xref:System.Lazy%601.Value%2A> 属性是只读的；因此，将其公开的属性没有 `set` 访问器。 如果需要由 <xref:System.Lazy%601> 对象支持的读取/写入属性，则 `set` 访问器必须创建一个新的 <xref:System.Lazy%601> 对象并将其分配到后备存储。 `set` 访问器必须创建一个 lambda 表达式（该表达式返回传递给 `set` 访问器的新属性值），并将该 lambda 表达式传递给新的 <xref:System.Lazy%601> 对象的构造函数。 下一次访问 <xref:System.Lazy%601.Value%2A> 属性将导致新 <xref:System.Lazy%601> 的初始化，并且其 <xref:System.Lazy%601.Value%2A> 属性此后会返回已分配给该属性的新值。 进行此复杂安排的原因是保留内置于 <xref:System.Lazy%601> 的多线程保护。 否则，属性访问器必须缓存由 <xref:System.Lazy%601.Value%2A> 属性返回的第一个值并仅修改缓存值，而用户必须编写自己的线程安全代码才能执行此操作。 因为由 <xref:System.Lazy%601> 对象支持的读取/写入属性需要其他初始化，因此此性能可能不可接受。 此外，可能需要额外的协调以避免资源库与 getter 之间的争用条件，具体取决于特定方案。  
   
 ## <a name="thread-local-lazy-initialization"></a>线程本地迟缓初始化  
- 在一些多线程方案中，可能需要为每个线程提供其专用数据。 此类数据称为线程本地数据。 在 .NET Framework 版本 3.5 及先前版本中，可以将 `ThreadStatic` 属性应用到静态变量，使其成为本地线程。 然而，使用 `ThreadStatic` 属性可能会导致细微的错误。 例如，即使是基本的初始化语句也将导致仅在访问其的首个线程上初始化变量，如以下示例所示。  
+ 在一些多线程方案中，可能需要为每个线程提供其专用数据。 此类数据称为线程本地数据  。 在 .NET Framework 版本 3.5 及先前版本中，可以将 `ThreadStatic` 属性应用到静态变量，使其成为本地线程。 然而，使用 `ThreadStatic` 属性可能会导致细微的错误。 例如，即使是基本的初始化语句也将导致仅在访问其的首个线程上初始化变量，如以下示例所示。  
   
  [!code-csharp[Lazy#6](../../../samples/snippets/csharp/VS_Snippets_Misc/lazy/cs/cs_lazycodefile.cs#6)]
  [!code-vb[Lazy#6](../../../samples/snippets/visualbasic/VS_Snippets_Misc/lazy/vb/lazy_vb.vb#6)]  

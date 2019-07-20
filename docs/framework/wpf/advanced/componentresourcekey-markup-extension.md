@@ -8,35 +8,35 @@ helpviewer_keywords:
 - ComponentResourceKey markup extension [WPF]
 - XAML [WPF], ComponentResourceKey markup extension
 ms.assetid: d6bcdbe6-61b3-40a7-b381-4e02185b5a85
-ms.openlocfilehash: a593839447742ed91d22a397d29b2455ce7a3b2d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 93735d12426042fd6517c10a55d1a9bd32f906bb
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64627411"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68363060"
 ---
 # <a name="componentresourcekey-markup-extension"></a>ComponentResourceKey 标记扩展
-定义和引用从外部程序集加载的资源键。 这样一种资源查找程序集，而不是显式的资源字典在程序集或对类中指定目标类型。  
+定义和引用从外部程序集加载的资源的键。 这使得资源查找可以在程序集中指定目标类型, 而不是在程序集或类中指定显式资源字典。  
   
-## <a name="xaml-attribute-usage-setting-key-compact"></a>XAML 特性用法 （设置键，compact）  
+## <a name="xaml-attribute-usage-setting-key-compact"></a>XAML 特性用法 (设置键, compact)  
   
 ```xml  
 <object x:Key="{ComponentResourceKey {x:Type targetTypeName}, targetID}" .../>  
 ```  
   
-## <a name="xaml-attribute-usage-setting-key-verbose"></a>XAML 特性用法 （设置键、 verbose）  
+## <a name="xaml-attribute-usage-setting-key-verbose"></a>XAML 特性用法 (设置键, 详细)  
   
 ```xml  
 <object x:Key="{ComponentResourceKey TypeInTargetAssembly={x:Type targetTypeName}, ResourceID=targetID}" .../>  
 ```  
   
-## <a name="xaml-attribute-usage-requesting-resource-compact"></a>XAML 特性用法 （请求资源，compact）  
+## <a name="xaml-attribute-usage-requesting-resource-compact"></a>XAML 特性用法 (请求资源, compact)  
   
 ```xml  
 <object property="{DynamicResource {ComponentResourceKey {x:Type targetTypeName}, targetID}}" .../>  
 ```  
   
-## <a name="xaml-attribute-usage-requesting-resource-verbose"></a>XAML 特性用法 （请求资源，详细）  
+## <a name="xaml-attribute-usage-requesting-resource-verbose"></a>XAML 特性用法 (请求资源, 详细)  
   
 ```xml  
 <object property="{DynamicResource {ComponentResourceKey TypeInTargetAssembly={x:Type targetTypeName}, ResourceID=targetID}}" .../>  
@@ -46,31 +46,31 @@ ms.locfileid: "64627411"
   
 |||  
 |-|-|  
-|`targetTypeName`|公共名称[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]资源程序集中定义的类型。|  
-|`targetID`|资源键。 当资源查找`targetID`将类似于[X:key 指令](../../xaml-services/x-key-directive.md)的资源。|  
+|`targetTypeName`|在资源程序集中定义[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]的公共类型的名称。|  
+|`targetID`|资源的键。 查找资源时, `targetID`将类似于资源的 "x:Key"[指令](../../xaml-services/x-key-directive.md)。|  
   
 ## <a name="remarks"></a>备注  
- 如上面的用法中所示 {`ComponentResourceKey`} 标记扩展用法在两个位置找到：  
+ 如以上用法中所示, 可在`ComponentResourceKey`以下两个位置找到 {} 标记扩展用法:  
   
-- 内的主题资源字典，由控件作者提供的键的定义。  
+- 主题资源字典中的键的定义, 由控件作者提供。  
   
-- 从程序集访问主题资源，当你重新模板化控件但想要使用来自控件的主题提供资源的属性值。  
+- 在重新模板化控件时访问程序集中的主题资源, 但需要使用由控件主题提供的资源提供的属性值。  
   
- 用于引用来自主题的组件资源，通常建议您使用`{DynamicResource}`而非`{StaticResource}`。 这是与用法中所示。 `{DynamicResource}` 建议，因为用户可以更改主题本身。 如果你想与支持该主题的控件作者的意图最匹配的组件资源，应启用组件资源参考，用于也是动态的。  
+ 对于引用来自主题的组件资源, 通常建议使用`{DynamicResource}` `{StaticResource}`而不是。 用法中显示了这种情况。 `{DynamicResource}`建议使用, 因为用户可以更改主题本身。 如果希望组件资源与控件作者为支持主题最匹配, 则应使组件资源引用也是动态的。  
   
- <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A>标识存在于实际定义资源所在的目标集中的类型。 一个`ComponentResourceKey`可以定义和使用独立于完全了解其中<xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A>已定义，但最终必须解决通过引用的程序集的类型。  
+ <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A>标识在实际定义资源的目标程序集中存在的类型。 可以定义和使用独立于确切了解定义的位置, <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A>但最终必须通过引用的程序集解析类型。 `ComponentResourceKey`  
   
- 常见用法<xref:System.Windows.ComponentResourceKey>是定义键，然后公开为类的成员。 对于此用法中，你使用<xref:System.Windows.ComponentResourceKey>类构造函数，不是标记扩展。 有关详细信息，请参阅<xref:System.Windows.ComponentResourceKey>，或主题的"定义和引用主题资源的键"部分[控件创作概述](../controls/control-authoring-overview.md)。  
+ 的一个常见用途<xref:System.Windows.ComponentResourceKey>是定义随后作为类的成员公开的键。 对于此用法, 使用<xref:System.Windows.ComponentResourceKey>类构造函数, 而不是标记扩展。 有关详细信息, 请<xref:System.Windows.ComponentResourceKey>参阅或主题[控件创作概述](../controls/control-authoring-overview.md)的 "定义和引用主题资源的键" 一节。  
   
- 有关建立键和引用键控资源，特性语法通常用于`ComponentResourceKey`标记扩展。  
+ 对于建立密钥和引用键控资源, 特性语法通常用于`ComponentResourceKey`标记扩展。  
   
- 依赖于简洁的语法所示<xref:System.Windows.ComponentResourceKey.%23ctor%2A?displayProperty=nameWithType>构造函数签名和标记扩展的位置参数用法。 依据的顺序`targetTypeName`和`targetID`提供非常重要。 详细语法依赖<xref:System.Windows.ComponentResourceKey.%23ctor%2A?displayProperty=nameWithType>默认构造函数，然后设置<xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A>和<xref:System.Windows.ComponentResourceKey.ResourceId%2A>类似于在对象元素上的实际特性语法的方式。 在详细的语法中，将设置属性的顺序并不重要。 主题中的更多详细信息中所述的以下两个替代方法 （compact 和 verbose） 机制以及关系[标记扩展和 WPF XAML](markup-extensions-and-wpf-xaml.md)。  
+ 所示的压缩语法依赖于<xref:System.Windows.ComponentResourceKey.%23ctor%2A?displayProperty=nameWithType>标记扩展的构造函数签名和位置参数用法。 给定`targetTypeName` 和`targetID`的顺序非常重要。 详细语法依赖于无参数<xref:System.Windows.ComponentResourceKey.%23ctor%2A?displayProperty=nameWithType>的构造函数, 然后以与<xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> object <xref:System.Windows.ComponentResourceKey.ResourceId%2A>元素上的 true 特性语法类似的方式来设置和。 在详细语法中, 设置属性的顺序并不重要。 主题[标记扩展和 WPF XAML](markup-extensions-and-wpf-xaml.md)中更详细地介绍了这两种备选方法 (简洁和详细) 的关系和机制。  
   
- 从技术上讲，值`targetID`可以是任何对象，它不需要为的字符串。 但是，在 WPF 中最常见的用法是对齐`targetID`值，该值具有窗体的字符串，并且其中此类字符串中可[XamlName 语法](../../xaml-services/xamlname-grammar.md)。  
+ 从技术上来说, `targetID`的值可以是任何对象, 不一定是字符串。 不过, WPF 最常见的用法是将`targetID`值与字符串形式的窗体进行对齐, 在[XamlName 语法](../../xaml-services/xamlname-grammar.md)中, 此类字符串有效。  
   
- `ComponentResourceKey` 可以在对象元素语法中使用。 在这种情况下，指定的值都<xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A>和<xref:System.Windows.ComponentResourceKey.ResourceId%2A>正确初始化该扩展所需的属性。  
+ `ComponentResourceKey`可以在对象元素语法中使用。 在这种情况下, 需要指定<xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A>和<xref:System.Windows.ComponentResourceKey.ResourceId%2A>属性的值才能正确地初始化扩展。  
   
- 在中[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)][!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]读取器实现，对此标记扩展的处理由定义<xref:System.Windows.ComponentResourceKey>类。  
+ 在读取器实现中, 对此标记<xref:System.Windows.ComponentResourceKey>扩展的处理由类定义。 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]  
   
  `ComponentResourceKey` 是标记扩展。 当要求转义特性值应为非文本值或非处理程序名称时，通常会实现标记扩展，相对于只在某些类型或属性上放置类型转换器而言，此需求更具有全局性。 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中的所有标记扩展在其特性语法中都使用 { 和 } 字符，[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 处理器通过这一约定确认标记扩展必须处理该特性。 有关详细信息，请参阅[标记扩展和 WPF XAML](markup-extensions-and-wpf-xaml.md)。  
   

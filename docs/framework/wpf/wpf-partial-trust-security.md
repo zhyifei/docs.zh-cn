@@ -15,17 +15,17 @@ helpviewer_keywords:
 - feature security requirements [WPF]
 - managing permissions [WPF]
 ms.assetid: ef2c0810-1dbf-4511-babd-1fab95b523b5
-ms.openlocfilehash: 98377a48b1ffe1ffabd72d0b42de4ed3da3ef93a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fcc5d3aa6d093f1fbf8af19c4f0c65036e1705d7
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64642927"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68364385"
 ---
 # <a name="wpf-partial-trust-security"></a>WPF 部分信任安全
-<a name="introduction"></a>一般情况下，应该限制 Internet 应用程序直接访问关键系统资源，防止恶意损坏。 默认情况下， [!INCLUDE[TLA#tla_html](../../../includes/tlasharptla-html-md.md)] ，客户端脚本编写语言也不能访问关键系统资源。 因为 Windows Presentation Foundation (WPF) 可从浏览器启动浏览器承载的应用程序，它们应该符合一组类似的限制。 若要强制实施这些限制[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]同时依赖于[!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)]并[!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)](请参阅[WPF 安全策略-平台安全性](wpf-security-strategy-platform-security.md))。 默认情况下，浏览器承载的应用程序请求 Internet 区域[!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)]组的权限，而不考虑是否从 Internet、 本地 intranet 或本地计算机启动。 如果应用程序的运行权限小于完整权限集，则说明该应用程序正在部分信任环境下运行。  
+<a name="introduction"></a>一般情况下，应该限制 Internet 应用程序直接访问关键系统资源，防止恶意损坏。 默认情况下[!INCLUDE[TLA#tla_html](../../../includes/tlasharptla-html-md.md)] , 和客户端脚本语言不能访问关键系统资源。 由于可以从浏览器启动 Windows Presentation Foundation (WPF) 浏览器承载的应用程序, 因此它们应符合一组类似的限制。 若要强制实施这些[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]限制, 需要同时依赖于代码访问安全性 ( [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] CAS) 和 (请参阅[WPF 安全策略-平台安全性](wpf-security-strategy-platform-security.md))。 默认情况下, 浏览器承载的应用程序请求 Internet 区域 CA 权限集, 不管它们是从 Internet、本地 intranet 还是本地计算机启动。 如果应用程序的运行权限小于完整权限集，则说明该应用程序正在部分信任环境下运行。  
   
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 提供各种支持，以确保在部分信任，并连同，，可以安全地使用尽可能多的功能[!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)]，为部分信任编程提供额外支持。  
+ [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]提供各种支持, 以确保在部分信任环境中可以安全地使用尽可能多的功能, 并与 CA 一起为部分信任编程提供附加支持。  
   
  本主题包含以下各节：  
   
@@ -37,9 +37,9 @@ ms.locfileid: "64642927"
   
 <a name="WPF_Feature_Partial_Trust_Support"></a>   
 ## <a name="wpf-feature-partial-trust-support"></a>WPF 功能部分信任支持  
- 下表列出了安全的 Internet 区域权限集的限制范围内使用的高级功能的 Windows Presentation Foundation (WPF)。  
+ 下表列出了在 Internet 区域权限集限制内可以安全使用的 Windows Presentation Foundation (WPF) 的高级功能。  
   
- 表 1:在部分信任环境中的安全的 WPF 功能  
+ 表 1:在部分信任环境中安全的 WPF 功能  
   
 |功能区域|功能|  
 |------------------|-------------|  
@@ -48,25 +48,25 @@ ms.locfileid: "64642927"
 |视觉对象|2D 和 3D<br /><br /> 动画<br /><br /> 媒体（源站点和跨域）<br /><br /> 图像处理/音频/视频|  
 |阅读|流文档<br /><br /> XPS 文档<br /><br /> 嵌入式字体与系统字体<br /><br /> CFF 字体与 TrueType 字体|  
 |编辑|拼写检查<br /><br /> RichTextBox<br /><br /> 纯文本和墨迹剪贴板支持<br /><br /> 用户启动的粘贴<br /><br /> 复制选定内容|  
-|Controls|常规控件|  
+|控件|常规控件|  
   
- 此表涵盖了[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]在高级别的功能。 有关更多详细信息，[!INCLUDE[TLA#tla_lhsdk](../../../includes/tlasharptla-lhsdk-md.md)]文档中的每个成员所需的权限[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]。 此外，以下功能含有部分信任执行的相关详细信息，其中包括特殊注意事项。  
+ 此表包含[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]高级别功能。 有关更多详细信息, [!INCLUDE[TLA#tla_lhsdk](../../../includes/tlasharptla-lhsdk-md.md)]请记录中[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]每个成员所需的权限。 此外，以下功能含有部分信任执行的相关详细信息，其中包括特殊注意事项。  
   
-- [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] (请参阅[XAML 概述 (WPF)](./advanced/xaml-overview-wpf.md))。  
+- [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)](请参阅[XAML 概述 (WPF)](./advanced/xaml-overview-wpf.md))。  
   
-- 弹出窗口 (请参阅<xref:System.Windows.Controls.Primitives.Popup?displayProperty=nameWithType>)。  
+- 弹出窗口 ( <xref:System.Windows.Controls.Primitives.Popup?displayProperty=nameWithType>请参阅)。  
   
-- 拖放到 (请参阅[拖放概述](./advanced/drag-and-drop-overview.md))。  
+- 拖放 (请参阅[拖放概述](./advanced/drag-and-drop-overview.md))。  
   
-- 剪贴板 (请参阅<xref:System.Windows.Clipboard?displayProperty=nameWithType>)。  
+- 剪贴板 (请<xref:System.Windows.Clipboard?displayProperty=nameWithType>参阅)。  
   
-- 映像 (请参阅<xref:System.Windows.Controls.Image?displayProperty=nameWithType>)。  
+- 映像 (请<xref:System.Windows.Controls.Image?displayProperty=nameWithType>参阅)。  
   
-- 序列化 (请参阅<xref:System.Windows.Markup.XamlReader.Load%2A?displayProperty=nameWithType>， <xref:System.Windows.Markup.XamlWriter.Save%2A?displayProperty=nameWithType>)。  
+- 序列化 ( <xref:System.Windows.Markup.XamlReader.Load%2A?displayProperty=nameWithType>请<xref:System.Windows.Markup.XamlWriter.Save%2A?displayProperty=nameWithType>参见、)。  
   
-- 打开文件对话框 (请参阅<xref:Microsoft.Win32.OpenFileDialog?displayProperty=nameWithType>)。  
+- "打开文件" 对话框 ( <xref:Microsoft.Win32.OpenFileDialog?displayProperty=nameWithType>请参阅)。  
   
- 下表概括了[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]不安全的 Internet 的限制范围内运行的功能区域权限集。  
+ 下表概述[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]了在 Internet 区域权限集限制范围内无法安全运行的功能。  
   
  表 2:在部分信任环境中不安全的 WPF 功能  
   
@@ -78,7 +78,7 @@ ms.locfileid: "64642927"
   
 <a name="Partial_Trust_Programming"></a>   
 ## <a name="partial-trust-programming"></a>部分信任编程  
- 有关[!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)]应用程序，超出默认权限集的代码将具有不同的行为依赖于安全区域。 在某些情况下，用户会在尝试安装它时收到警告。 用户可以选择继续或取消安装。 下表描述每个安全区域的应用程序的行为，以及为了使应用程序接收完全信任而必须执行的操作。  
+ 对于[!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)]应用程序, 超过默认权限集的代码将具有不同的行为, 具体取决于安全区域。 在某些情况下，用户会在尝试安装它时收到警告。 用户可以选择继续或取消安装。 下表描述每个安全区域的应用程序的行为，以及为了使应用程序接收完全信任而必须执行的操作。  
   
 |安全区域|行为|获取完全信任|  
 |-------------------|--------------|------------------------|  
@@ -89,18 +89,18 @@ ms.locfileid: "64642927"
 > [!NOTE]
 >  上表中描述的行为针对不遵循 ClickOnce 受信任部署模型的完全信任 XBAP。  
   
- 通常，超出允许权限的代码可能是在独立应用程序和浏览器托管的应用程序之间共享的公用代码。 [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] 和[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]提供用于管理此方案中的几种方法。  
+ 通常，超出允许权限的代码可能是在独立应用程序和浏览器托管的应用程序之间共享的公用代码。 Ca 并[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]提供多种方法来管理这种情况。  
   
 <a name="Detecting_Permissions_using_CAS"></a>   
 ### <a name="detecting-permissions-using-cas"></a>使用 CAS 检测权限  
- 在某些情况下，很可能共享中的代码库程序集以供这两个独立应用程序和[!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)]。 这时，代码执行的功能所需要的权限可能超出应用程序的授权权限集允许的权限。 你的应用程序可以检测有特定的权限的使用 Microsoft.NET Framework 安全性。 具体而言，它可以测试它是否有特定的权限通过调用<xref:System.Security.CodeAccessPermission.Demand%2A>所需权限的实例上的方法。 以下示例对此进行了演示，示例中的代码查询其是否能够将文件保存到本地磁盘：  
+ 在某些情况下, 独立应用程序和[!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)]都可以使用库程序集中的共享代码。 这时，代码执行的功能所需要的权限可能超出应用程序的授权权限集允许的权限。 应用程序可以通过使用 Microsoft .NET 框架安全性来检测它是否具有特定权限。 具体而言, 它可以通过对所需权限的实例调用<xref:System.Security.CodeAccessPermission.Demand%2A>方法来测试它是否有特定权限。 以下示例对此进行了演示，示例中的代码查询其是否能够将文件保存到本地磁盘：  
   
  [!code-csharp[PartialTrustSecurityOverviewSnippets#DetectPermsCODE1](~/samples/snippets/csharp/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/CSharp/FileHandling.cs#detectpermscode1)]
  [!code-vb[PartialTrustSecurityOverviewSnippets#DetectPermsCODE1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/VisualBasic/FileHandling.vb#detectpermscode1)]  
 [!code-csharp[PartialTrustSecurityOverviewSnippets#DetectPermsCODE2](~/samples/snippets/csharp/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/CSharp/FileHandling.cs#detectpermscode2)]
 [!code-vb[PartialTrustSecurityOverviewSnippets#DetectPermsCODE2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/VisualBasic/FileHandling.vb#detectpermscode2)]  
   
- 如果应用程序没有所需的权限，对调用<xref:System.Security.CodeAccessPermission.Demand%2A>将引发安全异常。 如果没有引发异常，则表示已授予该权限。 `IsPermissionGranted` 封装此行为，并返回`true`或`false`根据需要。  
+ 如果应用程序没有所需的权限, 则对的调用<xref:System.Security.CodeAccessPermission.Demand%2A>将引发安全异常。 如果没有引发异常，则表示已授予该权限。 `IsPermissionGranted`封装此行为, 并`true`根据`false`需要返回或。  
   
 <a name="Graceful_Degradation_of_Functionality"></a>   
 ### <a name="graceful-degradation-of-functionality"></a>功能下降  
@@ -113,37 +113,37 @@ ms.locfileid: "64642927"
   
  在很多情况下，应该能够找到部分信任替代方法。  
   
- 在受控环境中，如 intranet，自定义托管的框架可以安装整个客户端群到[!INCLUDE[TLA#tla_gac](../../../includes/tlasharptla-gac-md.md)]。 这些库可以执行需要完全信任的代码，只允许使用部分信任的应用程序从引用<xref:System.Security.AllowPartiallyTrustedCallersAttribute>(有关详细信息，请参阅[安全](security-wpf.md)和[WPF 安全性策略-平台安全性](wpf-security-strategy-platform-security.md))。  
+ 在受控环境 (例如 intranet) 中, 可在客户端基础上将自定义托管框架安装到[!INCLUDE[TLA#tla_gac](../../../includes/tlasharptla-gac-md.md)]中。 这些库可以执行需要完全信任的代码, 并从只允许使用<xref:System.Security.AllowPartiallyTrustedCallersAttribute>部分信任的应用程序引用 (有关详细信息, 请参阅[安全性](security-wpf.md)和[WPF 安全策略-平台安全性](wpf-security-strategy-platform-security.md))。  
   
 <a name="Browser_Host_Detection"></a>   
 ### <a name="browser-host-detection"></a>浏览器主机检测  
- 使用[!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)]以检查是否有权限是恰当的方法时您需要根据每个权限检查。 然而，这一技巧依赖于在正常处理过程中捕获异常（通常不鼓励这样做），并且可能导致性能问题。 相反，如果你[!INCLUDE[TLA#tla_xbap](../../../includes/tlasharptla-xbap-md.md)]只在 Internet 区域沙箱内的运行，可以使用<xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A?displayProperty=nameWithType>属性，返回 true [!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)]。  
+ 当你需要按权限检查时, 使用 CA 检查权限是一种合适的方法。 然而，这一技巧依赖于在正常处理过程中捕获异常（通常不鼓励这样做），并且可能导致性能问题。 相反, 如果你[!INCLUDE[TLA#tla_xbap](../../../includes/tlasharptla-xbap-md.md)]仅在 Internet 区域沙盒中运行, 则可以<xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A?displayProperty=nameWithType>使用属性[!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)], 该属性将返回 true。  
   
 > [!NOTE]
->  <xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A> 是否在浏览器中，没有哪个应用程序的权限集运行与运行应用程序仅将区分开来。  
+>  <xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A>仅区分应用程序是否在浏览器中运行, 而不区分应用程序运行时使用的权限集。  
   
 <a name="Managing_Permissions"></a>   
 ## <a name="managing-permissions"></a>管理权限  
- 默认情况下，[!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)]以部分信任级别 （默认 Internet 区域权限集） 运行。 但是，根据应用程序的要求，可以更改默认的权限集。 例如，如果[!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)]启动时从本地 intranet，它可以充分利用增强的权限集下, 表中所示。  
+ 默认情况下[!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)] , 在部分信任情况下运行 (默认 Internet 区域权限集)。 但是，根据应用程序的要求，可以更改默认的权限集。 例如, 如果是从[!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)]本地 intranet 启动的, 则可以利用增加的权限集, 如下表所示。  
   
  表 3:LocalIntranet 和 Internet 权限  
   
 |权限|特性|LocalIntranet|Internet|  
 |----------------|---------------|-------------------|--------------|  
-|DNS|访问 DNS 服务器|是|否|  
-|环境变量|读取|是|否|  
+|DNS|访问 DNS 服务器|是|No|  
+|环境变量|读取|是|No|  
 |文件对话框|打开|是|是|  
-|文件对话框|不受限制|是|否|  
-|独立存储|按用户隔离程序集|是|否|  
+|文件对话框|不受限制|是|No|  
+|独立存储|按用户隔离程序集|是|No|  
 |独立存储|未知隔离|是|是|  
-|独立存储|无限制用户配额|是|否|  
+|独立存储|无限制用户配额|是|No|  
 |媒体|安全音频、视频和图像|是|是|  
-|打印|默认打印|是|否|  
+|打印|默认打印|是|No|  
 |打印|安全打印|是|是|  
-|映像|发出|是|否|  
+|映像|发出|是|No|  
 |安全性|托管代码执行|是|是|  
-|安全性|声明授予的权限|是|否|  
-|用户界面|不受限制|是|否|  
+|安全性|声明授予的权限|是|No|  
+|用户界面|不受限制|是|No|  
 |用户界面|安全顶级窗口|是|是|  
 |用户界面|自己的剪贴板|是|是|  
 |Web 浏览器|HTML 中的安全框架导航|是|是|  
@@ -159,9 +159,9 @@ ms.locfileid: "64642927"
   
 - [保护 ClickOnce 应用程序](/visualstudio/deployment/securing-clickonce-applications)。  
   
- 如果你[!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)]需要完全信任，可以使用相同的工具来提高所请求的权限。 尽管[!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)]将仅接收完全信任，如果它是安装并启动从本地计算机上，在 intranet 或从受信任或允许的站点在浏览器中列出的 URL。 如果从 Intranet 或受信任站点安装应用程序，则用户会收到标准 ClickOnce 提示，通知用户提升了权限。 用户可以选择继续或取消安装。  
+ 如果你[!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)]需要完全信任, 则可以使用相同的工具来增加请求的权限。 尽管仅在以下情况下才会获得完全信任:从本地计算机、intranet或从浏览器的受信任或允许的站点中列出的URL中安装和启动。[!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)] 如果从 Intranet 或受信任站点安装应用程序，则用户会收到标准 ClickOnce 提示，通知用户提升了权限。 用户可以选择继续或取消安装。  
   
- 或者，可以使用 ClickOnce 受信任部署模型从任何安全区域中进行完全信任部署。 有关详细信息，请参阅[Trusted Application Deployment Overview](/visualstudio/deployment/trusted-application-deployment-overview)并[安全](security-wpf.md)。  
+ 或者，可以使用 ClickOnce 受信任部署模型从任何安全区域中进行完全信任部署。 有关详细信息, 请参阅[受信任的应用程序部署概述](/visualstudio/deployment/trusted-application-deployment-overview)和[安全性](security-wpf.md)。  
   
 ## <a name="see-also"></a>请参阅
 

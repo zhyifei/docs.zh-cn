@@ -5,12 +5,12 @@ helpviewer_keywords:
 - markup extensions [XAML Services], custom
 - XAML [XAML Services], markup extensions
 ms.assetid: 261b2b11-2dc0-462f-8c66-55b8c9c6e436
-ms.openlocfilehash: ce626d9b75f2061ff024fa25ce005f952301603e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 29cf4e03c1e4f91cd4390b84dd62c07268fe0189
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64617263"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68364327"
 ---
 # <a name="markup-extensions-for-xaml-overview"></a>XAML 的标记扩展概述
 标记扩展是一种用于获取既不是基元也不是特定 XAML 类型的值的 XAML 方法。 对于特性用法，标记扩展使用已知的左大括号 `{` 字符序列输入标记扩展范围，并使用右大括号 `}` 退出。 使用 .NET Framework XAML 服务时，可以使用 System.Xaml 程序集中的某些预定义 XAML 语言标记扩展。 还可以使用 <xref:System.Windows.Markup.MarkupExtension> 类（在 System.Xaml 中定义）的子类，并定义自己的标记扩展。 或者，如果已在引用特定框架，则可以使用由该框架定义的标记扩展。  
@@ -22,7 +22,7 @@ ms.locfileid: "64617263"
  .NET Framework XAML 服务实现了几个标记扩展来实现 XAML 语言支持。 这些标记扩展与作为一种语言的 XAML 规范各部分相对应。 这些扩展通常在语法中可由 `x:` 前缀进行标识（如常见用法中所见）。 这些 XAML 语言元素的 .NET Framework XAML 服务实现都派生自  <xref:System.Windows.Markup.MarkupExtension> 基类。  
   
 > [!NOTE]
->  `x:` 前缀用于 XAML 语言命名空间中的典型 XAML 命名空间映射（在 XAML 生成的根元素中）。 例如，用于各种特定框架的 Visual Studio 项目和页面模板启动使用这一个 XAML 文件`x:`映射。 可以在自己的 XAML 命名空间映射中选择不同的前缀标记，但是本文档采用默认值 `x:` 映射来标识作为 XAML 语言 XAML 命名空间的已定义部分的实体，而不是采用特定框架的默认 XAML 命名空间或其他任意 CLR 或 XML 命名空间。  
+>  `x:` 前缀用于 XAML 语言命名空间中的典型 XAML 命名空间映射（在 XAML 生成的根元素中）。 例如, 用于各种特定框架的 Visual Studio 项目和页面模板会使用此`x:`映射启动一个 XAML 文件。 可以在自己的 XAML 命名空间映射中选择不同的前缀标记，但是本文档采用默认值 `x:` 映射来标识作为 XAML 语言 XAML 命名空间的已定义部分的实体，而不是采用特定框架的默认 XAML 命名空间或其他任意 CLR 或 XML 命名空间。  
   
 ### <a name="xtype"></a>x:Type  
  `x:Type` 为命名类型提供 <xref:System.Type> 对象。 此功能最常在使用基础 CLR 类型和类型派生作为分组名字对象或标识符的延迟机制中使用。 WPF 样式和模板以及其 `TargetType` 属性的用法是一个具体示例。 有关详细信息，请参阅 [x:Type Markup Extension](x-type-markup-extension.md)。  
@@ -40,7 +40,7 @@ ms.locfileid: "64617263"
  `x:Reference` 属于 XAML 2009（原始 (2006) 语言集的扩展）。 `x:Reference` 表示对对象图中另一个现有对象的引用。 该对象由其 `x:Name`进行标识。 有关详细信息，请参阅 [x:Reference Markup Extension](x-reference-markup-extension.md)。  
   
 ### <a name="other-x-constructs"></a>其他 x:构造  
- 还有其他用于支持 XAML 语言功能的 `x:` 构造，不过这些构造并不作为标记扩展而实现。 有关详细信息，请参阅[XAML Namespace （x:）语言功能](xaml-namespace-x-language-features.md)。  
+ 还有其他用于支持 XAML 语言功能的 `x:` 构造，不过这些构造并不作为标记扩展而实现。 有关详细信息, 请[参阅 XAML 命名空间 (x:)语言功能](xaml-namespace-x-language-features.md)。  
   
 <a name="the_markupextension_base_class"></a>   
 ## <a name="the-markupextension-base-class"></a>MarkupExtension 基类  
@@ -63,9 +63,9 @@ ms.locfileid: "64617263"
  从标记用法的角度来看，在用法中包含 `Extension` 后缀是有效的。 但是，这种方法的行为如同 `Extension` 真正是类名的一部分，如果标记扩展支持类没有 `Extension` 后缀，XAML 对象编写器会无法针对该用法解析支持类。  
   
 ### <a name="the-default-constructor"></a>默认构造函数  
- 对于所有标记扩展支持类型，应公开公共默认构造函数。 对于 XAML 对象编写器实例化对象元素用法中的标记扩展的任何情况，都需要默认构造函数。 支持对象元素用法对于标记扩展是合理预期（特别是对于序列化）。 但是，如果只想支持标记扩展的特性用法，则可以在没有公共构造函数的情况下实现标记扩展。  
+ 对于所有标记扩展支持类型, 应公开一个公共的无参数构造函数。 对于 XAML 对象编写器从对象元素用法实例化标记扩展的任何情况, 都需要一个无参数的构造函数。 支持对象元素用法对于标记扩展是合理预期（特别是对于序列化）。 但是，如果只想支持标记扩展的特性用法，则可以在没有公共构造函数的情况下实现标记扩展。  
   
- 如果标记扩展用法没有参数，则支持用法需要默认构造函数。  
+ 如果标记扩展用法没有参数, 则需要使用无参数构造函数来支持使用。  
   
 <a name="constructor_patterns_and_positional_arguments_for_a_custom_markup_extension"></a>   
 ## <a name="constructor-patterns-and-positional-arguments-for-a-custom-markup-extension"></a>自定义标记扩展的构造函数模式和位置参数  
@@ -81,7 +81,7 @@ public Collate(CollationMode collationMode) {...}
   
  处理的工作原理在概念上如同标记扩展是要创建的对象，然后设置其成员值。 要设置的每个指定属性的计算方式都类似于如何在分析 XAML 时对创建的对象设置指定成员。 有两个重要的差异：  
   
-- 如前所述，标记扩展支持类型不需要具有默认构造函数，即可在 XAML 中进行实例化。 其对象构造会推迟到文本语法中的可能参数进行词汇切分并计算为位置或命名参数，会在该时间调用适当的构造函数。  
+- 如前所述, 标记扩展支持类型不需要具有无参数的构造函数即可在 XAML 中进行实例化。 其对象构造会推迟到文本语法中的可能参数进行词汇切分并计算为位置或命名参数，会在该时间调用适当的构造函数。  
   
 - 标记扩展用法可以进行嵌套。 首先计算最内层的标记扩展。 因此，可以采用这类用法，并一个构造参数声明为需要生成值转换器（如标记扩展）的类型。  
   
@@ -116,7 +116,7 @@ public Collate(CollationMode collationMode, object collateThis) {...}
 ## <a name="property-element-usage-of-a-markup-extension"></a>标记扩展的属性元素用法  
  标记扩展用法方案通常是围绕在特性用法中使用标记扩展来设计的。 但是，还可能可以定义后备类以支持属性元素用法。  
   
- 若要支持标记扩展的属性元素用法，请定义公共默认构造函数。 这应是实例构造函数，而不是静态构造函数。 这是必需的，因为 XAML 处理器通常必须对它从标记处理的任何对象元素调用默认构造函数，并且这会包含标记扩展类作为对象元素。 对于高级方案，可以为类定义非默认构造路径。 (有关详细信息，请参阅[X:factorymethod 指令](x-factorymethod-directive.md)。)但是，不应将这些模式用于标记扩展用途，因为这会显著提高用法模式的发现难度（对于设计者和原始标记的用户都是如此）。  
+ 若要支持标记扩展的属性元素用法, 请定义公共无参数构造函数。 这应是实例构造函数，而不是静态构造函数。 这是必需的, 因为 XAML 处理器通常必须对它从标记处理的任何对象元素调用无参数的构造函数, 并且这包括标记扩展类作为对象元素。 对于高级方案，可以为类定义非默认构造路径。 (有关详细信息, 请参阅[X:FactoryMethod 指令](x-factorymethod-directive.md)。)但是，不应将这些模式用于标记扩展用途，因为这会显著提高用法模式的发现难度（对于设计者和原始标记的用户都是如此）。  
   
 <a name="attributing_for_a_custom_markup_extension"></a>   
 ## <a name="attributing-for-a-custom-markup-extension"></a>自定义标记扩展的归因  
