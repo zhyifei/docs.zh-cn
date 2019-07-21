@@ -3,12 +3,12 @@ title: Windows 上 .NET Core 的先决条件
 description: 了解在 Windows 计算机上开发和运行 .NET Core 应用程序所需的依赖项。
 ms.custom: updateeachvsrelease
 ms.date: 04/08/2019
-ms.openlocfilehash: 9c4c15a08e0988955ecdf442307059868cb377d1
-ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
+ms.openlocfilehash: 1921ef565c2d04624009f7684e439ddba1cdf57e
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67539358"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68331071"
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Windows 上 .NET Core 的先决条件
 
@@ -19,18 +19,6 @@ ms.locfileid: "67539358"
 * [Visual Studio Code](https://code.visualstudio.com/)
 
 此外，如果你正在使用 Visual Studio 2017 开发 Windows，[使用 Visual Studio 2017 的先决条件](#prerequisites-with-visual-studio-2017)部分更详细地介绍了有关支持 .NET Core 开发的最小版本。
-
-## <a name="net-core-supported-windows-versions"></a>支持 .NET Core 的 Windows 版本
-
-以下版本支持 .NET Core：
-
-* Windows 7 SP1
-* Windows 8.1
-* Windows 10 周年更新（版本 1607）或更高版本
-* Windows Server 2008 R2 SP1（完全服务器或服务器核心）
-* Windows Server 2012 SP1（完全服务器或服务器核心）
-* Windows Server 2012 R2（完全服务器或服务器核心）
-* Windows Server 2016 或更高版本（完全服务器、服务器核心或 Nano Server）
 
 ## <a name="net-core-supported-operating-systems"></a>.NET Core 支持的操作系统
 
