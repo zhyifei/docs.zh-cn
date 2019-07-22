@@ -3,12 +3,12 @@ title: C# 发展历史 - C# 指南
 description: 这些语言在最早版本中是什么样的，它又是如何演化的？
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 351e4de01a7c3c50cb815a99f0bde546848a9e51
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 8230efcbcdd67cc99f321efc6509df3665d9f2f7
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423234"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68363877"
 ---
 # <a name="the-history-of-c"></a>C\# 发展历史
 
@@ -56,7 +56,7 @@ C# 1.0 的主要功能包括：
 
 - [泛型](../programming-guide/generics/index.md)
 - [分部类型](../programming-guide/classes-and-structs/partial-classes-and-methods.md#partial-classes)
-- [匿名方法](../programming-guide/statements-expressions-operators/anonymous-methods.md)
+- [匿名方法](../language-reference/operators/delegate-operator.md)
 - [可以为 null 的类型](../programming-guide/nullable-types/index.md)
 - [迭代器](../programming-guide/concepts/iterators.md)
 - [协变和逆变](../programming-guide/concepts/covariance-contravariance/index.md)
@@ -122,7 +122,7 @@ C# 5.0 版是该语言有针对性的一个版本。 对此版本中所做的几
 - [异步成员](../async.md)
 - [调用方信息特性](../programming-guide/concepts/caller-information.md)
 
-### <a name="see-also"></a>请参阅
+### <a name="see-also"></a>另请参阅
 
 * [代码工程：C# 5.0 中的调用方信息属性](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp)
 

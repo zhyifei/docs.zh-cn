@@ -18,12 +18,12 @@ ms.assetid: 071e22e9-fbb0-4ecf-add1-8d2424f9f2d1
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 756d63be456dce10ca9e95963ed25602e6f4aec1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 61f1b93d2f54923f0dfc4832a79fe35dc319d0f6
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634776"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68331750"
 ---
 # <a name="alternation-constructs-in-regular-expressions"></a>正则表达式中的备用构造
 <a name="top"></a> 替换构造可修改正则表达式以启用 either/or 或条件匹配。 .NET 支持三种备用构造：  
@@ -52,7 +52,7 @@ ms.locfileid: "64634776"
 |<code>(a&#124;e)</code>|匹配“a”或“e”。|  
 |`y\b`|匹配单词边界中的“y”。|  
   
- 还可以使用 `|` 字符执行具有多个字符或子表达式（包含任意组合的字符常量和正则表达式语言元素）的 either/or 匹配。 （字符类不提供此功能。）下面的示例使用 `|` 字符提取美国社会安全号码 (SSN)（格式为 ddd-dd-dddd 的 9 位数字），或美国雇主标识号 (EIN)（格式为 dd-ddddddd 的 9 位数字）。  
+ 还可以使用 `|` 字符执行具有多个字符或子表达式（包含任意组合的字符常量和正则表达式语言元素）的 either/or 匹配。 （字符类不提供此功能。）下面的示例使用 `|` 字符提取美国社会安全号码 (SSN)（格式为 ddd  -dd  -dddd  的 9 位数字），或美国雇主标识号 (EIN)（格式为 dd  -ddddddd  的 9 位数字）。  
   
  [!code-csharp[RegularExpressions.Language.Alternation#2](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.alternation/cs/alternation2.cs#2)]
  [!code-vb[RegularExpressions.Language.Alternation#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.alternation/vb/alternation2.vb#2)]  
@@ -71,13 +71,13 @@ ms.locfileid: "64634776"
 ## <a name="conditional-matching-with-an-expression"></a>条件匹配的表达式  
  此语言元素尝试根据是否可以匹配初始模式来匹配两种模式之一。 语法为：  
   
- `(?(`expression`)`yes`|`no`)`  
+ `(?(`expression  `)`yes  `|`no  `)`  
   
  其中， *expression* 是要匹配的初始模式， *yes* 是当匹配 *expression* 时要匹配的模式，而 *no* 是未匹配 *expression* 时要匹配的可选模式。 正则表达式引擎将 *expression* 视为一个宽度为零的断言；也就是说，正则表达式引擎在计算 *expression*之后，不再处理输入流的后续数据。 因此，该构造是等效于以下语法：  
   
  `(?(?=` *表达式* `)` *是* `|` *no* `)`  
   
- 其中 `(?=`expression`)` 是宽度为零的断言构造。 （有关详细信息，请参阅[分组构造](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。）由于正则表达式引擎将 expression 解释为定位点（零宽断言），因此 expression 必须是零宽断言（有关详细信息，请参阅[定位标记](../../../docs/standard/base-types/anchors-in-regular-expressions.md)），或者是也包含在 yes 中的子表达式。 否则，无法匹配 *yes* 模式。  
+ 其中 `(?=`expression  `)` 是宽度为零的断言构造。 （有关详细信息，请参阅[分组构造](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。）由于正则表达式引擎将 expression  解释为定位点（零宽断言），因此 expression  必须是零宽断言（有关详细信息，请参阅[定位标记](../../../docs/standard/base-types/anchors-in-regular-expressions.md)），或者是也包含在 yes  中的子表达式。 否则，无法匹配 *yes* 模式。  
   
 > [!NOTE]
 >  如果 *expression*是命名捕获组或带编号的捕获组，则替换构造将被解释为捕获测试；有关详细信息，请参阅下一节 [基于有效捕获组的条件匹配](#Conditional_Group)。 换而言之，正则表达式引擎不会尝试匹配捕获的子字符串，而是测试该组是否存在。  
@@ -125,7 +125,7 @@ ms.locfileid: "64634776"
 |`\b`|在单词边界处开始。|  
 |`(?<n2>\d{2}-)?`|匹配两个数字后接一个连字符的零或一个匹配项。 命名此捕获组 `n2`。|  
 |`(?(n2)`|测试输入字符串中是否有 `n2` 的匹配项。|  
-|`)\d{7}`|如果找到 `n2` 的匹配项，则匹配 7 个十进制数字。|  
+|`\d{7}`|如果找到 `n2` 的匹配项，则匹配 7 个十进制数字。|  
 |<code>&#124;\d{3}-\d{2}-\d{4}</code>|如果未找到 `n2` 的匹配项，则匹配 3 个十进制数字，后接一个连字符，再接 2 个十进制数字，再接另一个连字符，再接 4 个十进制数字。|  
 |`\b`|与字边界匹配。|  
   

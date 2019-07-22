@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 122741d13294c8b137ce48e28f0aa39c6e36265a
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: 824d75585efd40937c1a48376ec7862cba1a8fa3
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67859135"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68235517"
 ---
 ### <a name="nullreferenceexception-in-exception-handling-code-from-imagesourceconverterconvertfrom"></a>ImageSourceConverter.ConvertFrom 异常处理代码中的 NullReferenceException
 
@@ -16,4 +16,3 @@ ms.locfileid: "67859135"
 |Version|4.7|
 |类型|重定目标|
 |受影响的 API|<ul><li><xref:System.Windows.Media.ImageSourceConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)?displayProperty=nameWithType></li></ul>|
-
