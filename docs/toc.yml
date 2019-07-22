@@ -1382,7 +1382,7 @@
               href: visual-basic/language-reference/modifiers/out-generic-modifier.md
             - name: Overloads
               href: visual-basic/language-reference/modifiers/overloads.md
-            - name: Overrides
+            - name: Overridable
               href: visual-basic/language-reference/modifiers/overridable.md
             - name: Overrides
               href: visual-basic/language-reference/modifiers/overrides.md
