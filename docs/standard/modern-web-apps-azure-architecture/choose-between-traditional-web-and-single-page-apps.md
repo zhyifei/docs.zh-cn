@@ -4,17 +4,17 @@ description: 了解在生成 Web 应用时，如何在传统 Web 应用和单页
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 5b8569f2abd5160fa8a080c06441a963fb455f6b
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: d68c167dce791a31eeb5ca5729b50ec22c64f9b0
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55825740"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68331593"
 ---
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>在传统 Web 应用和单页应用 (SPA) 之间选择
 
 > “Atwood 定律：任何能够用 JavaScript 编写的应用程序，最终必将用 JavaScript 编写。”  
-> \- Jeff Atwood
+> \- Jeff Atwood 
 
 目前可通过两种通用方法来构建 Web 应用程序：在服务器上执行大部分应用程序逻辑的传统 Web 应用程序，以及在 Web 浏览器中执行大部分用户界面逻辑的单页应用程序 (SPA)，后者主要使用 Web API 与 Web 服务器通信。 也可以将两种方法混合使用，最简单的方法是在更大型的传统 Web 应用程序中承载一个或多个丰富 SPA 类子应用程序。
 
@@ -38,9 +38,9 @@ ms.locfileid: "55825740"
 
 使用 SPA 模型改进用户体验时必须权衡这些注意事项。
 
-## <a name="razor-components"></a>Razor 组件
+## <a name="blazor"></a>Blazor
 
-ASP.NET Core 3.0 引入了一种新模型，用于构建称为 Razor 组件的丰富的、交互式和可组合的 UI。 Razor 组件允许开发者在服务器上使用 Razor 构建 UI，并使用名为 WebAssembly 的 JavaScript 库将此代码传递到浏览器和执行客户端。 ASP.NET Core 3.0 仍在开发中，但你应该会期望在本电子书的 3.0 更新中看到有关此技术的详细信息。 有关 Razor 组件（名为 Blazor 的代码）的详细信息，请参阅 [Blazor 入门](https://blazor.net/docs/get-started.html)。
+ASP.NET Core 3.0 引入了一种新模型，用于构建称为 Blazor 的丰富的、交互式和可组合的 UI。 Blazor 服务器端允许开发人员在服务器上使用 Razor 构建 UI，并使用名为 WebAssembly 的 JavaScript 库将此代码传递到浏览器和执行客户端。 ASP.NET Core 3.0 仍在开发中，但你应该会期望在本电子书的 3.0 更新中看到有关此技术的详细信息。 有关 Blazor 的详细信息，请参阅 [Blazor 入门](https://blazor.net/docs/get-started.html)。
 
 ## <a name="when-to-choose-traditional-web-apps"></a>何时选择传统 Web 应用
 

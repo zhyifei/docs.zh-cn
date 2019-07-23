@@ -4,12 +4,12 @@ description: 了解如何创建支持插件的 .NET Core 应用程序。
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/28/2019
-ms.openlocfilehash: a9431ee28c7df21a8688f845be20e062eca21887
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 308fd2f853261e87da71892c42e17e36984d1978
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59773423"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68330975"
 ---
 # <a name="create-a-net-core-application-with-plugins"></a>使用插件创建 .NET Core 应用程序
 
@@ -32,7 +32,7 @@ ms.locfileid: "59773423"
 2. 为了更容易生成项目，创建 Visual Studio 解决方案文件。 在同一文件夹中运行 `dotnet new sln`。 
 3. 运行 `dotnet sln add AppWithPlugin/AppWithPlugin.csproj` 向解决方案添加应用项目。
 
-现在，我们可以填写应用程序的主干。 使用下面的代码替换 AppWithPlugin/Program.cs 文件中的代码：
+现在，我们可以填写应用程序的主干。 使用下面的代码替换 AppWithPlugin/Program.cs 文件中的代码： 
 
 ```csharp
 using PluginBase;
@@ -171,11 +171,11 @@ static IEnumerable<ICommand> CreateCommands(Assembly assembly)
 
 ## <a name="load-plugins"></a>加载插件
 
-现在，应用程序可以正确加载和实例化来自已加载的插件程序集的命令，但仍然无法加载插件程序集。 使用以下内容在 AppWithPlugin 文件夹中创建名为 PluginLoadContext.cs 的文件：
+现在，应用程序可以正确加载和实例化来自已加载的插件程序集的命令，但仍然无法加载插件程序集。 使用以下内容在 AppWithPlugin 文件夹中创建名为 PluginLoadContext.cs 的文件：  
 
 [!code-csharp[loading-plugins](~/samples/core/extensions/AppWithPlugin/AppWithPlugin/PluginLoadContext.cs)]
 
-`PluginLoadContext` 类型派生自 <xref:System.Runtime.Loader.AssemblyLoadContext>。 `AssemblyLoadContext` 类型是运行时中的特殊类型，该类型允许开发人员将已加载的程序集隔离到不同的组中，以确保程序集版本不冲突。 此外，自定义 `AssemblyLoadContext` 可以选择不同路径来加载程序集格式并重写默认行为。 `PluginLoadContext` 使用 .NET Core 3.0 中引入的 `AssemblyDependencyResolver` 类型的实例将程序集名称解析为路径。 `AssemblyDependencyResolver` 对象是使用 .NET 类库的路径构造的。 它根据类库的 deps.json 文件（其路径传递给 `AssemblyDependencyResolver` 构造函数）将程序集和本机库解析为它们的相对路径。 自定义 `AssemblyLoadContext` 使插件能够拥有自己的依赖项，`AssemblyDependencyResolver` 使正确加载依赖项变得容易。
+`PluginLoadContext` 类型派生自 <xref:System.Runtime.Loader.AssemblyLoadContext>。 `AssemblyLoadContext` 类型是运行时中的特殊类型，该类型允许开发人员将已加载的程序集隔离到不同的组中，以确保程序集版本不冲突。 此外，自定义 `AssemblyLoadContext` 可以选择不同路径来加载程序集格式并重写默认行为。 `PluginLoadContext` 使用 .NET Core 3.0 中引入的 `AssemblyDependencyResolver` 类型的实例将程序集名称解析为路径。 `AssemblyDependencyResolver` 对象是使用 .NET 类库的路径构造的。 它根据类库的 .deps.json 文件（其路径传递给 `AssemblyDependencyResolver` 构造函数）将程序集和本机库解析为它们的相对路径  。 自定义 `AssemblyLoadContext` 使插件能够拥有自己的依赖项，`AssemblyDependencyResolver` 使正确加载依赖项变得容易。
 
 由于 `AppWithPlugin` 项目具有 `PluginLoadContext` 类型，所以请使用以下正文更新 `Program.LoadPlugin` 方法：
 
@@ -205,11 +205,11 @@ static Assembly LoadPlugin(string relativePath)
 
 1. 运行 `dotnet new classlib -o HelloPlugin` 创建名为 `HelloPlugin` 的新类库项目。
 2. 运行 `dotnet sln add HelloPlugin/HelloPlugin.csproj` 向 `AppWithPlugin` 解决方案添加项目。 
-3. 使用以下内容将 HelloPlugin/Class1.cs 文件替换为名为 HelloCommand.cs 的文件：
+3. 使用以下内容将 HelloPlugin/Class1.cs 文件替换为名为 HelloCommand.cs 的文件：  
 
 [!code-csharp[the-hello-plugin](~/samples/core/extensions/AppWithPlugin/HelloPlugin/HelloCommand.cs)]
 
-现在，打开 HelloPlugin.csproj 文件。 它应类似于以下内容：
+现在，打开 HelloPlugin.csproj 文件  。 它应类似于以下内容：
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -232,7 +232,7 @@ static Assembly LoadPlugin(string relativePath)
 </ItemGroup>
 ```
 
-`<Private>false</Private>` 元素非常重要。 它告知 MSBuild 不要将 PluginBase.dll 复制到 HelloPlugin 的输出目录。 如果 PluginBase.dll 程序集出现在输出目录中，`PluginLoadContext` 将在那里查找到该程序集并在加载 HelloPlugin.dll 程序集时加载它。 此时，`HelloPlugin.HelloCommand` 类型将从 `HelloPlugin` 项目的输出目录中的 PluginBase.dll 实现 `ICommand` 接口，而不是加载到默认加载上下文中的 `ICommand` 接口。 因为运行时将这两种类型视为不同程序集的不同类型，所以 `AppWithPlugin.Program.CreateCommands` 方法将找不到命令。 因此，对包含插件接口的程序集的引用需要 `<Private>false</Private>` 元数据。
+`<Private>false</Private>` 元素非常重要。 它告知 MSBuild 不要将 PluginBase.dll 复制到 HelloPlugin 的输出目录  。 如果 PluginBase.dll 程序集出现在输出目录中，`PluginLoadContext` 将在那里查找到该程序集并在加载 HelloPlugin.dll 程序集时加载它   。 此时，`HelloPlugin.HelloCommand` 类型将从 `HelloPlugin` 项目的输出目录中的 PluginBase.dll 实现 `ICommand` 接口，而不是加载到默认加载上下文中的 `ICommand` 接口  。 因为运行时将这两种类型视为不同程序集的不同类型，所以 `AppWithPlugin.Program.CreateCommands` 方法将找不到命令。 因此，对包含插件接口的程序集的引用需要 `<Private>false</Private>` 元数据。
 
 因为 `HelloPlugin` 项目已完成，所以我们应该更新 `AppWithPlugin` 项目，以确认可以找到 `HelloPlugin` 插件的位置。 在 `// Paths to plugins to load` 注释之后，添加 `@"HelloPlugin\bin\Debug\netcoreapp3.0\HelloPlugin.dll"` 作为 `pluginPaths` 数组的元素。
 
@@ -260,4 +260,4 @@ static Assembly LoadPlugin(string relativePath)
 
 ## <a name="plugin-target-framework-recommendations"></a>插件目标框架建议
 
-因为插件依赖项加载使用 deps.json 文件，所以存在一个与插件的目标框架相关的问题。 具体来说，插件应该以运行时为目标，比如 .NET Core 3.0，而不是某一版本的 .NET Standard。 `deps.json` 文件基于项目所针对的框架生成，而且由于许多与 .NET Standard 兼容的包提供了用于针对 .NET Standard 进行生成的引用程序集和用于特定运行时的实现程序集，因此 `deps.json` 可能无法正确查看实现程序集，或者它可能会获取 .NET Standard 版本的程序集，而不是期望的 .NET Core 版本的程序集。
+因为插件依赖项加载使用 .deps.json 文件，所以存在一个与插件的目标框架相关的问题  。 具体来说，插件应该以运行时为目标，比如 .NET Core 3.0，而不是某一版本的 .NET Standard。 .deps.json  文件基于项目所针对的框架生成，而且由于许多与 .NET Standard 兼容的包提供了用于针对 .NET Standard 进行生成的引用程序集和用于特定运行时的实现程序集，因此 .deps.json  可能无法正确查看实现程序集，或者它可能会获取 .NET Standard 版本的程序集，而不是期望的 .NET Core 版本的程序集。

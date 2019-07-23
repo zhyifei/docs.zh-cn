@@ -331,6 +331,9 @@
         - name: ':: 运算符'
           href: operators/namespace-alias-qualifer.md
           displayName: namespace alias qualifier
+        - name: 委托运算符
+          href: operators/delegate-operator.md
+          displayName: anonymous
         - name: nameof 运算符
           href: operators/nameof.md
         - name: new 运算符

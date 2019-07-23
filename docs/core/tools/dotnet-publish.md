@@ -2,14 +2,14 @@
 title: dotnet publish 命令
 description: dotnet publish 命令可将 .NET Core 项目发布到目录。
 ms.date: 05/29/2018
-ms.openlocfilehash: 24490bd0fbfca65692d7025b5ed2aea659c35473
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 8cefeae17e464e14abc54dce1feb414a72c44164
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59611544"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68331034"
 ---
-# <a name="dotnet-publish"></a>dotnet 发布
+# <a name="dotnet-publish"></a>dotnet publish
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
@@ -49,9 +49,9 @@ dotnet publish [-h|--help]
 
 `dotnet publish` 编译应用程序、读取 project 文件中指定的所有依赖项并将生成的文件集发布到目录。 输出包括以下资产：
 
-* 扩展名为 dll 的程序集中的中间语言 (IL) 代码。
-* 包含项目所有依赖项的 .deps.json 文件。
-* .runtime.config.json 文件，其中指定了应用程序所需的共享运行时，以及运行时的其他配置选项（例如，垃圾回收类型）。
+* 扩展名为 dll  的程序集中的中间语言 (IL) 代码。
+* 包含项目所有依赖项的 .deps.json 文件  。
+* .runtimeconfig.json  文件，其中指定了应用程序所需的共享运行时，以及运行时的其他配置选项（例如，垃圾回收类型）。
 * 应用程序的依赖项，将这些依赖项从 NuGet 缓存复制到输出文件夹。
 
 `dotnet publish` 命令的输出可供部署至托管系统（例如服务器、电脑、Mac、笔记本电脑）以便执行。 若要准备用于部署的应用程序，这是唯一正式受支持的方法。 根据项目指定的部署的类型，托管系统不一定已在其上安装 .NET Core 共享运行时。 有关详细信息，请参阅 [.NET Core 应用程序部署](../deploying/index.md)。 有关已发布应用程序的目录结构，请参阅[目录结构](/aspnet/core/hosting/directory-structure)。
@@ -78,7 +78,7 @@ dotnet publish [-h|--help]
 
 `--force`
 
-强制解析所有依赖项，即使上次还原已成功，也不例外。 指定此标记等同于删除 project.assets.json 文件。
+强制解析所有依赖项，即使上次还原已成功，也不例外。 指定此标记等同于删除 project.assets.json 文件  。
 
 `-h|--help`
 
@@ -102,7 +102,7 @@ dotnet publish [-h|--help]
 
 `-o|--output <OUTPUT_DIRECTORY>`
 
-指定输出目录的路径。 如未指定，对于依赖于框架的部署，将默认为 ./bin/[configuration]/[framework]/publish/ 或对于独立部署，将默认为 ./bin/[configuration]/[framework]/[runtime]/publish/。
+指定输出目录的路径。 如未指定，对于依赖于框架的部署，将默认为 ./bin/[configuration]/[framework]/publish/  或对于独立部署，将默认为 ./bin/[configuration]/[framework]/[runtime]/publish/  。
 如果路径是相对的，则生成的输出目录与项目文件位置相关，而与当前工作目录不相关。
 
 `--self-contained`
@@ -133,7 +133,7 @@ dotnet publish [-h|--help]
 
 `--force`
 
-强制解析所有依赖项，即使上次还原已成功，也不例外。 指定此标记等同于删除 project.assets.json 文件。
+强制解析所有依赖项，即使上次还原已成功，也不例外。 指定此标记等同于删除 project.assets.json 文件  。
 
 `-h|--help`
 
@@ -153,7 +153,7 @@ dotnet publish [-h|--help]
 
 `-o|--output <OUTPUT_DIRECTORY>`
 
-指定输出目录的路径。 如未指定，对于依赖于框架的部署，将默认为 ./bin/[configuration]/[framework]/publish/ 或对于独立部署，将默认为 ./bin/[configuration]/[framework]/[runtime]/publish/。
+指定输出目录的路径。 如未指定，对于依赖于框架的部署，将默认为 ./bin/[configuration]/[framework]/publish/  或对于独立部署，将默认为 ./bin/[configuration]/[framework]/[runtime]/publish/  。
 如果路径是相对的，则生成的输出目录与项目文件位置相关，而与当前工作目录不相关。
 
 `--self-contained`
@@ -192,7 +192,7 @@ dotnet publish [-h|--help]
 
 `-o|--output <OUTPUT_DIRECTORY>`
 
-指定输出目录的路径。 如未指定，对于依赖于框架的部署，将默认为 ./bin/[configuration]/[framework]/publish/ 或对于独立部署，将默认为 ./bin/[configuration]/[framework]/[runtime]/publish/。
+指定输出目录的路径。 如未指定，对于依赖于框架的部署，将默认为 ./bin/[configuration]/[framework]/publish/  或对于独立部署，将默认为 ./bin/[configuration]/[framework]/[runtime]/publish/  。
 如果路径是相对的，则生成的输出目录与项目文件位置相关，而与当前工作目录不相关。
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`

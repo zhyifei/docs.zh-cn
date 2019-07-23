@@ -32,35 +32,40 @@ helpviewer_keywords:
 - uint keyword [C#]
 - long keyword [C#]
 - ulong keyword [C#]
-ms.openlocfilehash: 0a1ed01d9e6cb86ea177e8b947627f9dc02eedae
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: dfb1298abaff0cfe8eae7536f94511a30012a4a9
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744213"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68236080"
 ---
 # <a name="integral-numeric-types--c-reference"></a>整型数值类型（C# 参考）
 
-“整型数值类型”是“简单类型”的子集，可以使用[文本](#integral-literals)**进行初始化**   。 所有整型类型同时也是值类型。
+“整型数值类型”是“简单类型”的子集，可以使用[文本](#integral-literals)**进行初始化**   。 所有整型类型同时也是值类型。 所有整型数值类型都支持[算术](../operators/arithmetic-operators.md)、[位逻辑](../operators/bitwise-and-shift-operators.md)、[比较和相等](../operators/equality-operators.md)运算符。
 
-所有整型数值类型都支持[算术](../operators/arithmetic-operators.md)、[位逻辑](../operators/bitwise-and-shift-operators.md)、[比较和相等](../operators/equality-operators.md)运算符。
+## <a name="characteristics-of-the-integral-types"></a>整型类型的特征
 
-## <a name="sizes-and-ranges"></a>大小和范围
+C# 支持以下预定义整型类型：
 
-下表显示整型类型的大小和范围：
+|C# 类型/关键字|范围|大小|.NET 类型|
+|----------|-----------|----------|-------------|
+|`sbyte`|-128 到 127|8 位带符号整数|<xref:System.SByte?displayProperty=nameWithType>|
+|`byte`|0 到 255|无符号的 8 位整数|<xref:System.Byte?displayProperty=nameWithType>|
+|`short`|-32,768 到 32,767|有符号 16 位整数|<xref:System.Int16?displayProperty=nameWithType>|
+|`ushort`|0 到 65,535|无符号 16 位整数|<xref:System.UInt16?displayProperty=nameWithType>|
+|`int`|-2,147,483,648 到 2,147,483,647|带符号的 32 位整数|<xref:System.Int32?displayProperty=nameWithType>|
+|`uint`|0 到 4,294,967,295|无符号的 32 位整数|<xref:System.UInt32?displayProperty=nameWithType>|
+|`long`|-9,223,372,036,854,775,808 到 9,223,372,036,854,775,807|64 位带符号整数|<xref:System.Int64?displayProperty=nameWithType>|
+|`ulong`|0 到 18,446,744,073,709,551,615|无符号 64 位整数|<xref:System.UInt64?displayProperty=nameWithType>|
 
-|类型|范围|大小|  
-|----------|-----------|----------|  
-|`sbyte`|-128 到 127|8 位带符号整数|  
-|`byte`|0 到 255|无符号的 8 位整数|  
-|`short`|-32,768 到 32,767|有符号 16 位整数|  
-|`ushort`|0 到 65,535|无符号 16 位整数|  
-|`int`|-2,147,483,648 到 2,147,483,647|带符号的 32 位整数|  
-|`uint`|0 到 4,294,967,295|无符号的 32 位整数|  
-|`long`|-9,223,372,036,854,775,808 到 9,223,372,036,854,775,807|64 位带符号整数|  
-|`ulong`|0 到 18,446,744,073,709,551,615|无符号 64 位整数|  
+在上表中，最左侧列中的每个 C# 类型关键字都是相应 .NET 类型的别名。 它们是可互换的。 例如，以下声明声明了相同类型的变量：
 
-所有整型类型的默认值都是 `0`。 每个整型类型都有名为 `MinValue` 和 `MaxValue` 的常量，且分别为该类型的最小值和最大值。
+```csharp
+int a = 123;
+System.Int32 b = 123;
+```
+
+每个整型类型的默认值都为零 `0`。 每个整型类型都有 `MinValue` 和 `MaxValue` 常量，提供该类型的最小值和最大值。
 
 <xref:System.Numerics.BigInteger?displayProperty=nameWithType> 结构用于表示没有上限或下限的带符号整数。
 
@@ -76,7 +81,7 @@ var binaryLiteral = 0b_0010_1010;
 
 十进制文本不需要任何前缀。 `x` 或 `X` 前缀表示十六进制文本  。 `b` 或 `B` 前缀表示二进制文本  。 `binaryLiteral` 的声明演示将 `_` 用作数字分隔符  。 数字分隔符可以与所有数值文本一起使用。 C# 7.0 及以后版本均支持二进制文本和数字分隔符 `_`。
 
-### <a name="literal-suffixes"></a>文本后缀 
+### <a name="literal-suffixes"></a>文本后缀
 
 `l` 或 `L` 后缀指定整型文本应为 `long` 类型。 `ul` 或 `UL` 后缀指定 `ulong` 类型。 如果对大于 9,223,372,036,854,775,807（`long` 的最大值）的文本使用 `L` 后缀，则该值将转换为 `ulong` 类型。 如果整型文本表示的值超出了 <xref:System.UInt64.MaxValue?displayProperty=nameWithType>，就会出现编译器错误 [CS1021](../../misc/cs1021.md)。 
 
@@ -123,11 +128,3 @@ var anotherLong = (long)42;
 - [设置数值结果表的格式](../keywords/formatting-numeric-results-table.md)
 - [内置类型表](../keywords/built-in-types-table.md)
 - [.NET 中的数字](../../../standard/numerics.md)
-- <xref:System.Byte?displayProperty=nameWithType>
-- <xref:System.SByte?displayProperty=nameWithType>
-- <xref:System.Int16?displayProperty=nameWithType>
-- <xref:System.UInt16?displayProperty=nameWithType>
-- <xref:System.Int32?displayProperty=nameWithType>
-- <xref:System.UInt32?displayProperty=nameWithType>
-- <xref:System.Int64?displayProperty=nameWithType>
-- <xref:System.UInt64?displayProperty=nameWithType>

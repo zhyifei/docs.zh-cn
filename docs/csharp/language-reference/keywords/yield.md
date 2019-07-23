@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - yield keyword [C#]
 ms.assetid: 1089194f-9e53-46a2-8642-53ccbe9d414d
-ms.openlocfilehash: 3e5bb96357293c42d4bd2161756260fd849cc099
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.openlocfilehash: 0d2c3f67715b9b2161a6c908576ac9f964ff13d6
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67267788"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68363132"
 ---
 # <a name="yield-c-reference"></a>yield（C# 参考）
 
@@ -46,9 +46,9 @@ yield break;
 
 返回 `yield` 或 <xref:System.Collections.IEnumerable> 的迭代器的 <xref:System.Collections.IEnumerator> 类型为 `object`。  如果迭代器返回 <xref:System.Collections.Generic.IEnumerable%601> 或 <xref:System.Collections.Generic.IEnumerator%601>，则必须将 `yield return` 语句中的表达式类型隐式转换为泛型类型参数。
 
-你不能在具有以下特点的方法中包含 `yield return` 或 `yield break` 语句：
+以下情形中不能包含 `yield return` 或 `yield break` 语句：
 
-- 匿名方法。 有关详细信息，请参阅[匿名方法](../../programming-guide/statements-expressions-operators/anonymous-methods.md)。
+- [Lambda 表达式](../../programming-guide/statements-expressions-operators/lambda-expressions.md)和[匿名方法](../operators/delegate-operator.md)。
 
 - 包含不安全的块的方法。 有关详细信息，请参阅 [unsafe](unsafe.md)。
 

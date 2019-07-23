@@ -3,12 +3,12 @@ title: .NET Core CLI 扩展性模型
 description: 了解如何扩展命令行接口 (CLI) 工具。
 ms.date: 04/12/2017
 ms.custom: seodec18
-ms.openlocfilehash: ca6bf30fb6aaf815a859a00bc391ef790566acaf
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 784eb50dfdbc0f88050a9f727ddbf53db34d3209
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57675090"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68331000"
 ---
 # <a name="net-core-cli-tools-extensibility-model"></a>.NET Core CLI 工具扩展性模型
 
@@ -69,7 +69,7 @@ ms.locfileid: "57675090"
 生成后，使用 [`dotnet pack`](dotnet-pack.md) 命令创建 NuGet 包（.nupkg 文件），其中包含代码和依赖项等相关信息。 可以随意命名包，但内部应用程序（即实际的工具二进制文件）必须遵循 `dotnet-<command>` 的约定，以便 `dotnet` 能够调用它。
 
 > [!NOTE]
-> 在低于 RC3 版本的 .NET Core 命令行工具中，`dotnet pack` 命令存在一个 bug，导致 `runtime.config.json` 无法与该工具一起打包。 缺少该文件导致发生运行时错误。 如果遇到此行为，请务必更新到最新工具，然后重试 `dotnet pack`。
+> 在低于 RC3 版本的 .NET Core 命令行工具中，`dotnet pack` 命令存在一个 bug，导致 .runtimeconfig.json  无法与该工具一起打包。 缺少该文件导致发生运行时错误。 如果遇到此行为，请务必更新到最新工具，然后重试 `dotnet pack`。
 
 由于工具是可移植应用程序，因此使用该工具的用户必须拥有生成该工具时所针对的 .NET Core 库版本，以便运行此工具。 工具使用的以及 .NET Core 库未包含的其他任何依赖项均被还原并放置在 NuGet 缓存中。 因此，使用 .NET Core 库和 NuGet 缓存中的程序集可以运行整个工具。
 
@@ -81,7 +81,7 @@ ms.locfileid: "57675090"
 ## <a name="custom-targets"></a>自定义目标
 NuGet 可将[自定义 MSBuild 目标和属性文件打包](/nuget/create-packages/creating-a-package#including-msbuild-props-and-targets-in-a-package)。 在移动 .NET Core CLI 工具以使用 MSBuild 后，会对 .NET Core 项目应用可扩展性的相同机制。 若要扩展生成过程、访问生成过程中的任何项目（如生成的文件）或检查调用生成时使用的配置等，建议使用该类型的扩展。
 
-在下面的示例中，可看到目标的项目文件，它使用的是 `csproj` 语法。 该语法指示 [`dotnet pack`](dotnet-pack.md) 命令对哪些内容打包，以便将目标文件和程序集放在包中的 build 文件夹内。 请注意将 `Label` 属性设置为 `dotnet pack instructions` 的 `<ItemGroup>` 元素，以及在其下定义的目标。
+在下面的示例中，可看到目标的项目文件，它使用的是 `csproj` 语法。 该语法指示 [`dotnet pack`](dotnet-pack.md) 命令对哪些内容打包，以便将目标文件和程序集放在包中的 build  文件夹内。 请注意将 `Label` 属性设置为 `dotnet pack instructions` 的 `<ItemGroup>` 元素，以及在其下定义的目标。
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -141,7 +141,7 @@ NuGet 可将[自定义 MSBuild 目标和属性文件打包](/nuget/create-packag
 
 此 CLI 工具集扩展的模式就非常简单。 正如 [.NET Core CLI 概述](index.md)中所述，`dotnet` 驱动程序可以运行以 `dotnet-<command>` 约定命名的任何命令。 默认的解析逻辑将首先探测多个位置，最后探测系统路径。 如果请求的命令存在于系统路径中并且属于可调用的二进制文件，则 `dotnet` 驱动程序将调用它。
 
-文件必须是可执行的。 在 Unix 系统上，这表示通过 `chmod +x` 设置了执行位的任何内容。 在 Windows 上，可使用 cmd 文件。
+文件必须是可执行的。 在 Unix 系统上，这表示通过 `chmod +x` 设置了执行位的任何内容。 在 Windows 上，可使用 cmd  文件。
 
 来看看非常简单的“Hello World”工具的实现。 我们将在 Windows 上同时使用 `bash` 和 `cmd`。
 下列命令将简单地向控制台回显“Hello World”。

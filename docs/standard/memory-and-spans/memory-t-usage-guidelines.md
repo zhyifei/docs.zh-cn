@@ -6,16 +6,16 @@ helpviewer_keywords:
 - using Memory&lt;T&gt; and Span&lt;T&gt;
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 380c0eef137eb5142c30e63f5446f5d60723087a
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 5aa778477abf3b91e32d9cb8ffdf50baaca5f001
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66834047"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68362902"
 ---
 # <a name="memoryt-and-spant-usage-guidelines"></a>内存\<T> 和跨度\<T> 使用准则
 
-.NET Core 包括多个表示内存的任意连续区域的类型。 .NET Core 2.0 引入了 <xref:System.Span%601> 和 <xref:System.ReadOnlySpan%601>，它们是可由托管或非托管内存提供支持的轻量级内存缓冲区。 由于这些类型可以存储在堆栈上，因此它们不适用于多种方案，包括异步方法调用。 .NET Core 2.1 添加了其他一些类型，包括 <xref:System.Memory%601>、<xref:System.ReadOnlyMemory%601>、<xref:System.Buffers.IMemoryOwner%601> 和 <xref:System.Buffers.MemoryPool%601>。 与 <xref:System.Span%601> 相同，<xref:System.Memory%601> 及其相关类型可以由托管和非托管内存提供支持。 与 <xref:System.Span%601> 不同，<xref:System.Memory%601> 只能存储在托管堆上。
+.NET Core 包括多个表示内存的任意连续区域的类型。 .NET Core 2.0 引入了 <xref:System.Span%601> 和 <xref:System.ReadOnlySpan%601>，它们是可由托管或非托管内存提供支持的轻量级内存缓冲区。 由于这些类型只能存储在堆栈上，因此它们不适用于多种方案，包括异步方法调用。 .NET Core 2.1 添加了其他一些类型，包括 <xref:System.Memory%601>、<xref:System.ReadOnlyMemory%601>、<xref:System.Buffers.IMemoryOwner%601> 和 <xref:System.Buffers.MemoryPool%601>。 与 <xref:System.Span%601> 相同，<xref:System.Memory%601> 及其相关类型可以由托管和非托管内存提供支持。 与 <xref:System.Span%601> 不同，<xref:System.Memory%601> 可以存储在托管堆上。
 
 <xref:System.Span%601> 和 <xref:System.Memory%601> 都是可用于管道的结构化数据的缓冲区。 也就是说，它们设计的目的是将某些或所有数据有效地传递到管道中的组件，这些组件可以对其进行处理并（可选）修改缓冲区。 由于 <xref:System.Memory%601> 及其相关类型可由多个组件或多个线程访问，因此开发人员必须遵循一些标准使用准则才能生成可靠的代码。
 

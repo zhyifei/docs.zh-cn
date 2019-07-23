@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 076ee62d-a964-449e-a447-c31b33518b81
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a4640e776cc76ef56227858f6a4aa04e77ecbbdc
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 8b07c3eb9d96bb6f675a6a2ca742cc9bdf3c3826
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586001"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68364061"
 ---
 # <a name="how-to-hook-up-a-delegate-using-reflection"></a>如何：使用反射将委托挂钩
 使用反射加载和运行程序集时，不能使用 C# `+=` 运算符或 Visual Basic [AddHandler 语句](~/docs/visual-basic/language-reference/statements/addhandler-statement.md)等语言功能将事件挂钩。 以下过程介绍如何通过反射获取所需的全部类型来将现有方法挂钩到事件，以及如何使用反射发出以创建动态方法并将其挂钩到事件。  
@@ -33,7 +33,7 @@ ms.locfileid: "65586001"
      [!code-csharp[HookUpDelegate#3](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#3)]
      [!code-vb[HookUpDelegate#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HookUpDelegate/vb/source.vb#3)]  
   
-2. 获取表示类型的 <xref:System.Type> 对象，并创建一个该类型的实例。 由于窗体具有默认构造函数，因此下面的代码中使用了 <xref:System.Activator.CreateInstance%28System.Type%29> 方法。 如果要创建的类型没有默认构造函数，<xref:System.Activator.CreateInstance%2A> 方法还有其他几种重载可供使用。 新实例存储为类型 <xref:System.Object>，以保持对程序集一无所知的假定。 （通过反射可获取程序集中的类型，无需事先知悉其名称。）  
+2. 获取表示类型的 <xref:System.Type> 对象，并创建一个该类型的实例。 由于窗体具有无参数构造函数，因此下面的代码中使用了 <xref:System.Activator.CreateInstance%28System.Type%29> 方法。 如果要创建的类型没有无参数构造函数，<xref:System.Activator.CreateInstance%2A> 方法还有其他几种重载可供使用。 新实例存储为类型 <xref:System.Object>，以保持对程序集一无所知的假定。 （通过反射可获取程序集中的类型，无需事先知悉其名称。）  
   
      [!code-cpp[HookUpDelegate#4](../../../samples/snippets/cpp/VS_Snippets_CLR/HookUpDelegate/cpp/source.cpp#4)]
      [!code-csharp[HookUpDelegate#4](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#4)]

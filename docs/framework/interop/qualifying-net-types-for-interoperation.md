@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4b8afb52-fb8d-4e65-b47c-fd82956a3cdd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2e57ec1a70aaae384f73b1ffdbf92e93fc0a7bdd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8b2e14a7508d4a5e8069a3b98dee38a0ac62750c
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648564"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68363982"
 ---
 # <a name="qualifying-net-types-for-interoperation"></a>为互操作限定 .NET 类型
 若要向 COM 应用程序公开程序集中的类型，请考虑 COM 互操作在设计时的需求。 如果符合以下准则，托管类型（类、接口、结构和枚举）将与 COM 类型无缝集成：  
@@ -37,9 +37,9 @@ ms.locfileid: "64648564"
   
      如果要对 COM 可见，公共类型的成员也必须是公共的。 通过应用 <xref:System.Runtime.InteropServices.ComVisibleAttribute>，可以限制程序集、公共类型或公共类型的公共成员的可见性。 默认情况下，所有公共类型和成员都是可见的。  
   
-- 具备公共默认构造函数的类型才能从 COM 中激活。  
+- 具备公共无参数构造函数的类型才能从 COM 中激活。  
   
-     托管的公共类型对于 COM 是可见的。 但是如果没有公共默认构造函数（不带任何参数的构造函数），COM 客户端无法创建该类型。 如果该类型由其他方法激活，COM 客户端仍可使用该类型。  
+     托管的公共类型对于 COM 是可见的。 但是如果没有公共无参数构造函数（不带任何参数的构造函数），COM 客户端无法创建该类型。 如果该类型由其他方法激活，COM 客户端仍可使用该类型。  
   
 - 类型不能是抽象的。  
   

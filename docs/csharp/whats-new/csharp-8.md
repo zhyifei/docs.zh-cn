@@ -2,12 +2,12 @@
 title: C# 8.0 中的新增功能 - C# 指南
 description: 简要介绍 C# 8.0 中提供的新功能。 本文使用最新的预览版 5。
 ms.date: 02/12/2019
-ms.openlocfilehash: 962829b68c5d02c3a7e563a00d391c4698024d47
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: bf67baba926effd012ae01d3d802ba921e41ad5a
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67397774"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68363892"
 ---
 # <a name="whats-new-in-c-80"></a>C# 8.0 中的新增功能
 
@@ -265,7 +265,6 @@ static void WriteLinesToFile(IEnumerable<string> lines)
     using var file = new System.IO.StreamWriter("WriteLines2.txt");
     foreach (string line in lines)
     {
-        // If the line doesn't contain the word 'Second', write the line to the file.
         if (!line.Contains("Second"))
         {
             file.WriteLine(line);
@@ -275,7 +274,7 @@ static void WriteLinesToFile(IEnumerable<string> lines)
 }
 ```
 
-在前面的示例中，当到达方法的右括号时，将对该文件进行处理。 这是声明 `file` 的范围的末尾。 前面的代码相当于下面使用经典 [using 语句](../language-reference/keywords/using-statement.md)语句的代码：
+在前面的示例中，当到达方法的右括号时，将对该文件进行处理。 这是声明 `file` 的范围的末尾。 前面的代码相当于下面使用经典 [using 语句](../language-reference/keywords/using-statement.md)的代码：
 
 ```csharp
 static void WriteLinesToFile(IEnumerable<string> lines)
@@ -284,7 +283,6 @@ static void WriteLinesToFile(IEnumerable<string> lines)
     {
         foreach (string line in lines)
         {
-            // If the line doesn't contain the word 'Second', write the line to the file.
             if (!line.Contains("Second"))
             {
                 file.WriteLine(line);
@@ -296,7 +294,7 @@ static void WriteLinesToFile(IEnumerable<string> lines)
 
 在前面的示例中，当到达与 `using` 语句关联的右括号时，将对该文件进行处理。
 
-在这两种情况下，编译器将生成对 `Dispose()` 的调用。 如果 using 语句中的表达式不可处置，编译器将生成一个错误。
+在这两种情况下，编译器将生成对 `Dispose()` 的调用。 如果 `using` 语句中的表达式不可处置，编译器将生成一个错误。
 
 ## <a name="static-local-functions"></a>静态本地函数
 

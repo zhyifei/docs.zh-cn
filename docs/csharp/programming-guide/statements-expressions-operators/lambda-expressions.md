@@ -9,16 +9,16 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-ms.openlocfilehash: dd9b77a90030a96d17104c8c0e48964b6a85d165
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 546feb6f3c4515ceecdb5b5afa14c0fc99ab7020
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58125728"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68363908"
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>Lambda 表达式（C# 编程指南）
 
-Lambda 表达式是作为对象处理的代码块（表达式或语句块）。 它可作为参数传递给方法，也可通过方法调用返回。 Lambda 表达式广泛用于：
+Lambda 表达式  是作为对象处理的代码块（表达式或语句块）。 它可作为参数传递给方法，也可通过方法调用返回。 Lambda 表达式广泛用于：
 
 - 将要执行的代码传递给异步方法，例如 <xref:System.Threading.Tasks.Task.Run(System.Action)?displayProperty=nameWithType>。
 
@@ -41,12 +41,10 @@ Lambda 表达式使用 [lambda 声明运算符](../../language-reference/operato
 [!code-csharp-interactive[lambda is argument](~/samples/snippets/csharp/programming-guide/lambda-expressions/Introduction.cs#Argument)]
 
 如果使用基于方法的语法在 <xref:System.Linq.Enumerable?displayProperty=nameWithType> 类中调用 <xref:System.Linq.Enumerable.Select%2A?displayProperty=nameWithType> 方法（就像在 LINQ to Objects 和 LINQ to XML 中一样），参数是委托类型 <xref:System.Func%602?displayProperty=nameWithType>。 使用 Lambda 表达式创建该委托最为方便。 如果在 <xref:System.Linq.Queryable?displayProperty=nameWithType> 类中调用 <xref:System.Linq.Queryable.Select%2A?displayProperty=nameWithType> 方法（就像在 LINQ to SQL 中一样），参数类型是表达式树类型 [`Expression<Func<TSource,TResult>>`](<xref:System.Linq.Expressions.Expression%601>)。 同样，Lambda 表达式只是一种非常简洁的构造该表达式目录树的方式。 尽管事实上通过 Lambda 创建的对象具有不同的类型，但 Lambda 使得 `Select` 调用看起来类似。
-
-所有适用于[匿名方法](anonymous-methods.md)的限制也都适用于 lambda 表达式。
   
 ## <a name="expression-lambdas"></a>表达式 lambda
 
-表达式位于 `=>` 运算符右侧的 lambda 表达式称为“表达式 lambda”。 表达式 lambda 广泛用于[表达式树](../concepts/expression-trees/index.md)的构造。 表达式 lambda 会返回表达式的结果，并采用以下基本形式：
+表达式位于 `=>` 运算符右侧的 lambda 表达式称为“表达式 lambda”  。 表达式 lambda 广泛用于[表达式树](../concepts/expression-trees/index.md)的构造。 表达式 lambda 会返回表达式的结果，并采用以下基本形式：
 
 ```csharp
 (input-parameters) => expression
@@ -82,7 +80,7 @@ Lambda 表达式使用 [lambda 声明运算符](../../language-reference/operato
 
 [!code-csharp-interactive[statement lambda](~/samples/snippets/csharp/programming-guide/lambda-expressions/ExpressionAndStatementLambdas.cs#StatementLambda)]
 
-像匿名方法一样，语句 lambda 也不能用于创建表达式目录树。
+语句 lambda 也不能用于创建表达式目录树。
   
 ## <a name="async-lambdas"></a>异步 lambda
 
@@ -196,9 +194,9 @@ lambda 类型推理的一般规则如下：
   
 请注意，lambda 表达式本身没有类型，因为通用类型系统没有“lambda 表达式”这一固有概念。 不过，有时以一种非正式的方式谈论 lambda 表达式的“类型”会很方便。 在这些情况下，类型是指委托类型或 lambda 表达式所转换到的 <xref:System.Linq.Expressions.Expression> 类型。
 
-## <a name="variable-scope-in-lambda-expressions"></a>lambda 表达式中的变量范围
+## <a name="capture-of-outer-variables-and-variable-scope-in-lambda-expressions"></a>捕获 lambda 表达式中的外部变量和变量范围
 
-在定义 lambda 表达式的方法内或包含 lambda 表达式的类型内，lambda 可以引用范围内的外部变量（请参阅[匿名方法](anonymous-methods.md)）。 以这种方式捕获的变量将进行存储以备在 lambda 表达式中使用，即使在其他情况下，这些变量将超出范围并进行垃圾回收。 必须明确地分配外部变量，然后才能在 lambda 表达式中使用该变量。 下面的示例演示这些规则：
+lambda 可以引用外部变量  。 这些变量是在定义 lambda 表达式的方法中或包含 lambda 表达式的类型中的范围内变量。 以这种方式捕获的变量将进行存储以备在 lambda 表达式中使用，即使在其他情况下，这些变量将超出范围并进行垃圾回收。 必须明确地分配外部变量，然后才能在 lambda 表达式中使用该变量。 下面的示例演示这些规则：
 
 [!code-csharp[variable scope](~/samples/snippets/csharp/programming-guide/lambda-expressions/VariableScopeWithLambdas.cs#VariableScope)]
 
@@ -226,7 +224,6 @@ lambda 类型推理的一般规则如下：
 
 - [C# 编程指南](../index.md)
 - [LINQ（语言集成查询）](../concepts/linq/index.md)
-- [匿名方法](anonymous-methods.md)
 - [表达式树](../concepts/expression-trees/index.md)
 - [本地函数与 lambda 表达式比较](../../local-functions-vs-lambdas.md)
 - [隐式类型化 lambda 表达式](../../implicitly-typed-lambda-expressions.md)

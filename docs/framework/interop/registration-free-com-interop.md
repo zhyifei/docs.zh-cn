@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 90f308b9-82dc-414a-bce1-77e0155e56bd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4a3de327001f987b6c35d547b7cf3cbe7feeac49
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ed8525cad7dd56fe026070786b0f0cf51c0fec2d
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648527"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68363973"
 ---
 # <a name="registration-free-com-interop"></a>免注册 COM 互操作
 免注册 COM 互操作在不使用 Windows 注册表来存储程序集信息的情况下激活组件。 不是在部署过程中在计算机上注册组件，而是在设计时创建包含有关绑定和激活信息的 Win32 样式清单文件。 正是这些清单文件（而不是注册表项）指导对象的激活。  
@@ -41,7 +41,7 @@ ms.locfileid: "64648527"
   
      Windows Server 2003 系列还支持基于 .NET 的程序集采用免注册 COM 互操作。  
   
-     要使基于 .NET 的类与 COM 的免注册激活兼容，类必须具有默认的构造函数，并且必须是公共类。  
+     要使基于 .NET 的类与 COM 的免注册激活兼容，类必须具有无参数构造函数，并且必须是公共类。  
   
 ### <a name="configuring-com-components-for-registration-free-activation"></a>将 COM 组件配置为免注册激活  
   

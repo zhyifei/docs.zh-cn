@@ -17,30 +17,39 @@ helpviewer_keywords:
 - floating-point numbers [C#], float keyword
 - double data type [C#]
 - decimal keyword [C#]
-ms.openlocfilehash: 738368abd9db75fbd97d1913324cab3b6e869c56
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 0d97b3ffd587e8398e5572706a47937716a6e709
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67664187"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68236059"
 ---
 # <a name="floating-point-numeric-types-c-reference"></a>浮点数值类型（C# 引用）
 
 “浮点类型”是“简单类型”的子集，可以使用[文本](#floating-point-literals)**进行初始化**   。 所有浮点类型也是值类型。 所有浮点数值类型都支持[算术](../operators/arithmetic-operators.md)、[比较和相等](../operators/equality-operators.md)运算符。
 
-下表显示了浮点类型的精度和大致范围：
+## <a name="characteristics-of-the-floating-point-types"></a>浮点类型的特征
+
+C# 支持以下预定义浮点类型：
   
-|类型|大致范围|精度|  
-|----------|-----------------------|---------------|  
-|`float`|±1.5 x 10<sup>−45</sup> 至 ±3.4 x 10<sup>38</sup>|大约 6-9 位数字|  
-|`double`|±5.0 × 10<sup>−324</sup> 到 ±1.7 × 10<sup>308</sup>|大约 15-17 位数字|  
-|`decimal`|±1.0 x 10<sup>-28</sup> 至 ±7.9228 x 10<sup>28</sup>|28-29 位|  
+|C# 类型/关键字|大致范围|精度|.NET 类型|
+|----------|-----------------------|---------------|--------------|
+|`float`|±1.5 x 10<sup>−45</sup> 至 ±3.4 x 10<sup>38</sup>|大约 6-9 位数字|<xref:System.Single?displayProperty=nameWithType>|
+|`double`|±5.0 × 10<sup>−324</sup> 到 ±1.7 × 10<sup>308</sup>|大约 15-17 位数字|<xref:System.Double?displayProperty=nameWithType>|
+|`decimal`|±1.0 x 10<sup>-28</sup> 至 ±7.9228 x 10<sup>28</sup>|28-29 位|<xref:System.Decimal?displayProperty=nameWithType>|
 
-所有浮点类型的默认值都为 `0`。 每个浮点类型都有名为 `MinValue` 和 `MaxValue` 的常量，分别表示该类型的最小值和最大值。 `float` 和 `double` 类型包括 `PositiveInfinity`、`NegativeInfinity` 和 `NaN` 其他常量（适用于“非数字”）。 `decimal` 类型包括 `Zero`、`One` 和 `MinusOne` 常量。
+在上表中，最左侧列中的每个 C# 类型关键字都是相应 .NET 类型的别名。 它们是可互换的。 例如，以下声明声明了相同类型的变量：
 
-与 `float` 和 `double` 相比，`decimal` 类型具有更高的精度和更小的范围，这使它适合于财务和货币计算。
+```csharp
+double a = 12.3;
+System.Double b = 12.3;
+```
 
-可以在表达式中混合使用整型类型和浮点类型。 在这种情况下，整数类型将转换为浮点类型。 根据以下规则对表达式求值：
+每个浮点类型的默认值都为零，`0`。 每个浮点类型都有 `MinValue` 和 `MaxValue` 常量，提供该类型的最小值和最大有限值。 `float` and `double` 类型还提供可表示非数字和无穷大值的常量。 例如，`double` 类型提供以下常量：<xref:System.Double.NaN?displayProperty=nameWithType>、<xref:System.Double.NegativeInfinity?displayProperty=nameWithType> 和 <xref:System.Double.PositiveInfinity?displayProperty=nameWithType>。
+
+与 `float` 和 `double` 相比，`decimal` 类型具有更高的精度和更小的范围，因此它适合于财务和货币计算。
+
+可以在表达式中混合使用[整型](integral-numeric-types.md)类型和浮点类型。 在这种情况下，整数类型将转换为浮点类型。 根据以下规则对表达式求值：
 
 - 如果其中一个浮点类型是 `double`，该表达式在关系比较或相等比较中求值类型为 `double` 或 [bool](../keywords/bool.md)。
 - 如果表达式中没有 `double` 类型，则表达式在关系比较或相等比较中求值类型为 `float` 或 [bool](../keywords/bool.md)。
@@ -77,7 +86,7 @@ myMoney = 400.75M;
 
 ## <a name="conversions"></a>转换
 
-存在从 `float` 到 `double` 的隐式转换（称为扩大转换），因为 `float` 值的范围是 `double` 的正确子集，并且从 `float` 到 `double` 不会丢失精度  。 
+存在从 `float` 到 `double` 的隐式转换（称为扩大转换），因为 `float` 值的范围是 `double` 的正确子集，并且从 `float` 到 `double` 不会丢失精度  。
 
 未定义从源类型到目标类型的隐式转换时，必须使用显式强制转换将一个浮点类型转换为另一个浮点类型。 这称为收缩转换  。 由于转换可能导致数据丢失，因此必须使用显式用例。 其他浮点类型与 `decimal` 类型之间不存在隐式转换，因为 `decimal` 类型的精度高于 `float` 或 `double`。
 
@@ -89,15 +98,11 @@ myMoney = 400.75M;
 
 - [C# 参考](../index.md)
 - [整型类型](integral-numeric-types.md)
-- [默认值表](../keywords/default-values-table.md)
-- [设置数值结果表的格式](../keywords/formatting-numeric-results-table.md)
 - [内置类型表](../keywords/built-in-types-table.md)
 - [.NET 中的数字](../../../standard/numerics.md)
 - [强制转换和类型转换](../../programming-guide/types/casting-and-type-conversions.md)
 - [隐式数值转换表](../keywords/implicit-numeric-conversions-table.md)
 - [显式数值转换表](../keywords/explicit-numeric-conversions-table.md)
-- <xref:System.Single?displayProperty=nameWithType>
-- <xref:System.Double?displayProperty=nameWithType>
-- <xref:System.Decimal?displayProperty=nameWithType>
 - <xref:System.Numerics.Complex?displayProperty=nameWithType>
+- [设置数值结果表的格式](../keywords/formatting-numeric-results-table.md)
 - [Standard Numeric Format Strings](../../../standard/base-types/standard-numeric-format-strings.md)

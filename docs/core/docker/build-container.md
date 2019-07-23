@@ -4,12 +4,12 @@ description: 在本教程中，你将了解如何使用 Docker 容器化 .NET Co
 ms.date: 06/26/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 16edb129be679179450c485ced2586cea9ed9763
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 81b3ce2d6ebb73648d9026c92f490dcc723014f6
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67609294"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68331039"
 ---
 # <a name="tutorial-containerize-a-net-core-app"></a>教程：使 .NET Core 应用程序容器化
 
@@ -177,7 +177,7 @@ myapp.deps.json  myapp.dll  myapp.pdb  myapp.runtimeconfig.json
 在终端中，导航到你在启动时创建的工作文件夹的目录。 在工作文件夹中创建名为“Dockerfile”的文件，在文本编辑器中打开它  。 将以下命令添加为此文件的首行：
 
 ```dockerfile
-FROM mcr.microsoft.com/dotnet/core/aspnet:2.2
+FROM mcr.microsoft.com/dotnet/core/runtime:2.2
 ```
 
 `FROM` 命令指示 Docker 从 mcr.microsoft.com/dotnet/core/runtime  存储库拉取标记为“2.2”  的映像。 请确保拉取的 .NET Core 运行时与 SDK 定目标到的运行时一致。 例如，上一部分中创建的应用定目标到 .Net Core 2.2，且使用 .Net Core 2.2 SDK。 因此，Dockerfile  中引用的基础映像被标记为“2.2”  。
@@ -205,7 +205,13 @@ docker-working
     └───obj
 ```
 
-在终端中，运行 `docker build -t myimage -f Dockerfile .`，然后 Docker 会处理 Dockerfile  中的每一行。 `docker build` 命令中的 `.` 指示 Docker 在当前文件夹中查找 Dockerfile  。 此命令生成映像，并创建指向相应映像的本地存储库“myimage”  。 在此命令完成后，运行 `docker images` 以列出已安装的映像：
+在终端中运行以下命令：
+
+```console
+docker build -t myimage -f Dockerfile .
+```
+
+Docker 会处理 Dockerfile  中的每一行。 `docker build` 命令中的 `.` 指示 Docker 在当前文件夹中查找 Dockerfile  。 此命令生成映像，并创建指向相应映像的本地存储库“myimage”  。 在此命令完成后，运行 `docker images` 以列出已安装的映像：
 
 ```console
 > docker images
@@ -241,7 +247,6 @@ Removing intermediate container f34da5c18e7c
  ---> ddcc6646461b
 Successfully built ddcc6646461b
 Successfully tagged myimage:latest
-
 
 > docker images
 REPOSITORY                              TAG                 IMAGE ID            CREATED             SIZE

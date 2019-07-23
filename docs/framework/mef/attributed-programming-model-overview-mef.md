@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 49b787ff-2741-4836-ad51-c3017dc592d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 09eb37fd2c1bf77e981a2eb7952b1fff5110e977
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: bed67019fdd3bb81585d08349715a895dfe5a681
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357295"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68363961"
 ---
 # <a name="attributed-programming-model-overview-mef"></a>特性化编程模型概述 (MEF)
 
@@ -268,7 +268,7 @@ public class MyLogger : IMyAddin { }
 
 导出的 MEF 部件通常由组合引擎创建，以响应填写匹配的导入的直接请求或需求。 默认情况下，在创建部件时，组合引擎将使用无参数的构造函数。 若要使该引擎使用其他构造函数，你可以用 `ImportingConstructor` 特性标记它。
 
-每个部件都可能只有一个供组合引擎使用的构造函数。 如果不提供默认构造函数和 `ImportingConstructor` 特性，或者提供多个 `ImportingConstructor` 特性，将会产生错误。
+每个部件都可能只有一个供组合引擎使用的构造函数。 如果不提供无参数构造函数和 `ImportingConstructor` 特性，或者提供多个 `ImportingConstructor` 特性，将会产生错误。
 
 为了填充用 `ImportingConstructor` 特性标记的构造函数的参数，所有这些参数均将自动声明为导入。 这样可以方便地声明在部件初始化过程中使用的导入。 下面的类使用 `ImportingConstructor` 来声明导入。
 
@@ -277,7 +277,7 @@ Public Class MyClass1
 
     Private _theAddin As IMyAddin
 
-    'Default constructor will NOT be used
+    'Parameterless constructor will NOT be used
     'because the ImportingConstructor
     'attribute is present.
     Public Sub New()
@@ -300,7 +300,7 @@ public class MyClass
 {
     private IMyAddin _theAddin;
 
-    //Default constructor will NOT be
+    //Parameterless constructor will NOT be
     //used because the ImportingConstructor
     //attribute is present.
     public MyClass() { }
@@ -466,7 +466,7 @@ public class DataThree
 
 ## <a name="metadata-and-metadata-views"></a>元数据和元数据视图
 
-导出可提供有关自身的附加信息（称为“元数据” ）。 元数据可用于将导出的对象的属性传递到导入部件。 导入部件可以使用此数据来决定要使用哪些导出，或收集有关导出的信息而不必构造导出。 因此，导入必须为延迟导入才能使用元数据。
+导出可提供有关自身的附加信息（称为“元数据”  ）。 元数据可用于将导出的对象的属性传递到导入部件。 导入部件可以使用此数据来决定要使用哪些导出，或收集有关导出的信息而不必构造导出。 因此，导入必须为延迟导入才能使用元数据。
 
 为了使用元数据，你通常会声明一个称为 *元数据视图*的接口，该接口声明哪些元数据将可用。 元数据视图接口必须只有属性，并且这些属性必须具有 `get` 访问器。 下面的接口是一个示例元数据视图。
 

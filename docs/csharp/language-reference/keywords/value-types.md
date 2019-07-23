@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: fd865f2a9c4a6d2c17f79a21866103a2db982e5f
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 72771ee494b6be7142ce3f9bec43dcb8aa8a8401
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661594"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68363082"
 ---
 # <a name="value-types-c-reference"></a>值类型（C# 参考）
 
@@ -88,7 +88,7 @@ int myInt = new int();
 int myInt = 0;
 ```
 
-使用 [new](../operators/new-operator.md) 运算符调用特定类型的无参数构造函数，并将默认值赋给变量。 在上述示例中，无参数构造函数将值 `0` 赋给 `myInt`。 有关通过调用默认构造函数所赋予的值的详细信息，请参阅[默认值表](default-values-table.md)。
+使用 [new](../operators/new-operator.md) 运算符调用特定类型的无参数构造函数，并将默认值赋给变量。 在上述示例中，无参数构造函数将值 `0` 赋给 `myInt`。 有关通过调用无参数构造函数所赋予的值的详细信息，请参阅[默认值表](default-values-table.md)。
 
 对于用户定义类型，使用 [new](../operators/new-operator.md) 调用无参数构造函数。 例如，以下语句调用 `Point` 结构的无参数构造函数：
 

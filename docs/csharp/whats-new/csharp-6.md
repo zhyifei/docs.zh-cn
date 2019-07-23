@@ -2,12 +2,12 @@
 title: C# 6 中的新增功能 - C# 指南
 description: 了解 C# 版本 6 中的新增功能
 ms.date: 12/12/2018
-ms.openlocfilehash: 478fd512f6b6facfce6d7f70f9691ce15e418d6e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 49247109bd1acbf697f5700b5cfe9a2b85393b2c
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58920670"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68235723"
 ---
 # <a name="whats-new-in-c-6"></a>C# 6 中的新增功能
 
@@ -17,7 +17,7 @@ C# 6.0 版本包含许多可提高开发人员工作效率的功能。 这些功
 
 ## <a name="read-only-auto-properties"></a>只读自动属性
 
-只读自动属性提供了更简洁的语法来创建不可变类型。 你声明仅具有 get 访问器的自动属性：
+只读自动属性  提供了更简洁的语法来创建不可变类型。 你声明仅具有 get 访问器的自动属性：
 
 [!code-csharp[ReadOnlyAutoProperty](../../../samples/snippets/csharp/new-in-6/newcode.cs#ReadOnlyAutoProperty)]
 
@@ -46,7 +46,7 @@ public class Student
 
 ## <a name="auto-property-initializers"></a>自动属性初始化表达式
 
-自动属性初始值设定项可让你在属性声明中声明自动属性的初始值。
+自动属性初始值设定项  可让你在属性声明中声明自动属性的初始值。
 
 [!code-csharp[Initialization](../../../samples/snippets/csharp/new-in-6/newcode.cs#Initialization)]
 
@@ -66,7 +66,7 @@ public class Student
 
 ## <a name="using-static"></a>using static
 
-using static 增强功能可用于导入单个类的静态方法。 指定要使用的类：
+using static  增强功能可用于导入单个类的静态方法。 指定要使用的类：
 
 [!code-csharp[UsingStaticMath](../../../samples/snippets/csharp/new-in-6/newcode.cs#UsingStaticMath)]
 
@@ -87,13 +87,13 @@ using static 增强功能可用于导入单个类的静态方法。 指定要使
 
 ## <a name="null-conditional-operators"></a>Null 条件运算符
 
-Null 条件运算符使 null 检查更轻松、更流畅。 将成员访问 `.` 替换为 `?.`：
+Null 条件运算符使 null 检查更轻松、更流畅  。 将成员访问 `.` 替换为 `?.`：
 
 [!code-csharp[NullConditional](../../../samples/snippets/csharp/new-in-6/program.cs#NullConditional)]
 
 在前面的示例中，如果 Person 对象是 `null`，则将变量 `first` 赋值为 `null`。 否则，将 `FirstName` 属性的值分配给该变量。 最重要的是，`?.` 意味着当 `person` 变量为 `null` 时，此行代码不会生成 `NullReferenceException`。 它会短路并返回 `null`。 还可以将 null 条件运算符用于数组或索引器访问。 将索引表达式中的 `[]` 替换为 `?[]`。
 
-无论 `person` 的值是什么，以下表达式均返回 `string`。 通常，将此构造与“null 合并”运算符一起使用，以在其中一个属性为 `null` 时分配默认值。 表达式短路时，键入返回的 `null` 值以匹配整个表达式。
+无论 `person` 的值是什么，以下表达式均返回 `string`。 通常，将此构造与“null 合并”运算符一起使用，以在其中一个属性为 `null` 时分配默认值  。 表达式短路时，键入返回的 `null` 值以匹配整个表达式。
 
 [!code-csharp[NullCoalescing](../../../samples/snippets/csharp/new-in-6/program.cs#NullCoalescing)]
 
@@ -131,13 +131,13 @@ var gradeStr = str.ToString(new System.Globalization.CultureInfo("de-DE"));
 
 ## <a name="exception-filters"></a>异常筛选器
 
-“异常筛选器”是确定何时应该应用给定的 catch 子句的子句。 如果用于异常筛选器的表达式计算结果为 `true`，则 catch 子句将对异常执行正常处理。 如果表达式计算结果为 `false`，则将跳过 `catch` 子句。 一种用途是检查有关异常的信息，以确定 `catch` 子句是否可以处理该异常：
+“异常筛选器”是确定何时应该应用给定的 catch 子句的子句  。 如果用于异常筛选器的表达式计算结果为 `true`，则 catch 子句将对异常执行正常处理。 如果表达式计算结果为 `false`，则将跳过 `catch` 子句。 一种用途是检查有关异常的信息，以确定 `catch` 子句是否可以处理该异常：
 
 [!code-csharp[ExceptionFilter](../../../samples/snippets/csharp/new-in-6/NetworkClient.cs#ExceptionFilter)]
 
 ## <a name="the-nameof-expression"></a>`nameof` 表达式
 
-`nameof` 表达式的计算结果为符号的名称。 每当需要变量、属性或成员字段的名称时，这是让工具正常运行的好办法。 `nameof` 的其中一个最常见的用途是提供引起异常的符号的名称：
+[nameof](../language-reference/operators/nameof.md) 表达式的计算结果为符号的名称。 每当需要变量、属性或成员字段的名称时，这是让工具正常运行的好办法。 `nameof` 的其中一个最常见的用途是提供引起异常的符号的名称：
 
 [!code-csharp[nameof](../../../samples/snippets/csharp/new-in-6/NewCode.cs#UsingStaticString)]
 
@@ -158,7 +158,7 @@ C# 5 对于可放置 `await` 表达式的位置有若干限制。 使用 C# 6，
 
 ## <a name="initialize-associative-collections-using-indexers"></a>使用索引器初始化关联集合
 
-索引初始值设定项是提高集合初始值设定项与索引用途一致性的两个功能之一。 在早期版本的 C# 中，可以将集合初始值设定项用于序列样式集合，包括在键值对周围添加括号而得到 <xref:System.Collections.Generic.Dictionary%602>：
+索引初始值设定项  是提高集合初始值设定项与索引用途一致性的两个功能之一。 在早期版本的 C# 中，可以将集合初始值设定项用于序列样式集合，包括在键值对周围添加括号而得到 <xref:System.Collections.Generic.Dictionary%602>： 
 
 [!code-csharp[ListInitializer](../../../samples/snippets/csharp/new-in-6/initializers.cs#CollectionInitializer)]
 
@@ -170,7 +170,7 @@ C# 5 对于可放置 `await` 表达式的位置有若干限制。 使用 C# 6，
 
 ## <a name="extension-add-methods-in-collection-initializers"></a>集合初始值设定项中的扩展 `Add` 方法
 
-使集合初始化更容易的另一个功能是对 `Add` 方法使用扩展方法。 添加此功能的目的是进行 Visual Basic 的奇偶校验。 如果自定义集合类的方法具有通过语义方式添加新项的名称，则此功能非常有用。
+使集合初始化更容易的另一个功能是对 `Add` 方法使用扩展方法  。 添加此功能的目的是进行 Visual Basic 的奇偶校验。 如果自定义集合类的方法具有通过语义方式添加新项的名称，则此功能非常有用。
 
 ## <a name="improved-overload-resolution"></a>改进了重载解析
 
