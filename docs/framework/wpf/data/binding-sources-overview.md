@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], binding source
 - binding sources [WPF]
 ms.assetid: 2df2cd11-6aac-4bdf-ab7b-ea5f464cd5ca
-ms.openlocfilehash: 48df7083d990dde157c9b7b2a062c865954cf38a
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 9bb77146a55bae4aed17bdd3ef48eca7890d4807
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364202"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68401446"
 ---
 # <a name="binding-sources-overview"></a>绑定源概述
 在数据绑定中，绑定源对象是指用户从其获取数据的对象。 本主题讨论可用作绑定源的对象类型。  
@@ -22,7 +22,7 @@ ms.locfileid: "68364202"
   
 |绑定源|描述|  
 |--------------------|-----------------|  
-|[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 对象|可以绑定到任何 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 对象的公有属性、子属性以及索引器。 绑定引擎使用 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 反射来获取属性值。 或者, 实现<xref:System.ComponentModel.ICustomTypeDescriptor>或具有已注册<xref:System.ComponentModel.TypeDescriptionProvider>的对象也适用于绑定引擎。<br /><br /> 有关如何实现可用作绑定源的类的详细信息，请参阅本主题后面的[为绑定源实现类](#classes)。|  
+|公共语言运行时 (CLR) 对象|可以绑定到任何公共语言运行时 (CLR) 对象的公共属性、子属性以及索引器。 绑定引擎使用 CLR 反射获取属性的值。 或者, 实现<xref:System.ComponentModel.ICustomTypeDescriptor>或具有已注册<xref:System.ComponentModel.TypeDescriptionProvider>的对象也适用于绑定引擎。<br /><br /> 有关如何实现可用作绑定源的类的详细信息，请参阅本主题后面的[为绑定源实现类](#classes)。|  
 |动态对象|可以绑定到实现<xref:System.Dynamic.IDynamicMetaObjectProvider>接口的对象的可用属性和索引器。 如果可以访问代码中的成员，则可以绑定到该成员。 例如，如果动态对象使用户可以通过 `someObjet.AProperty` 访问代码中的成员，则可以通过将绑定路径设置为 `AProperty` 来绑定到该成员。|  
 |ADO.NET 对象|可以绑定到 ADO.NET 对象, 例如<xref:System.Data.DataTable>。 <xref:System.Data.DataView> ADO.NET<xref:System.ComponentModel.IBindingList>实现接口, 该接口提供绑定引擎侦听的更改通知。|  
 |[!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] 对象|`XPath`您可以<xref:System.Xml.XmlNode>在、 <xref:System.Xml.XmlDocument>或上绑定和运行查询。<xref:System.Xml.XmlElement> 访问[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]标记中的绑定源的数据的一种简便方法是<xref:System.Windows.Data.XmlDataProvider>使用对象。 有关详细信息，请参阅[使用 XMLDataProvider 和 XPath 查询绑定到 XML 数据](how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)。<br /><br /> 你还可以使用 LINQ to XML 绑定<xref:System.Xml.Linq.XElement>到<xref:System.Xml.Linq.XDocument>或绑定到这些类型的对象上运行的查询结果。 使用 LINQ to XML 访问作为标记中的绑定源的 XML 数据的一种简便方法是使用<xref:System.Windows.Data.ObjectDataProvider>对象。 有关详细信息，请参阅[绑定到 XDocument、XElement 或 LINQ for XML 查询结果](how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md)。|  
@@ -33,9 +33,9 @@ ms.locfileid: "68364202"
  可以创建自己的绑定源。 本部分讨论在要实现用作绑定源的类时需要了解的内容。  
   
 ### <a name="providing-change-notifications"></a>提供更改通知  
- 如果你使用<xref:System.Windows.Data.BindingMode.OneWay>的是或<xref:System.Windows.Data.BindingMode.TwoWay>绑定[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] (因为你希望在绑定源属性动态变化时进行更新), 则必须实现适当的属性更改通知机制。 建议的机制适用[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]于或动态类来<xref:System.ComponentModel.INotifyPropertyChanged>实现接口。 有关详细信息，请参阅[实现属性更改通知](how-to-implement-property-change-notification.md)。  
+ 如果你使用<xref:System.Windows.Data.BindingMode.OneWay>的是或<xref:System.Windows.Data.BindingMode.TwoWay>绑定[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] (因为你希望在绑定源属性动态变化时进行更新), 则必须实现适当的属性更改通知机制。 建议的机制是使用 CLR 或动态类实现<xref:System.ComponentModel.INotifyPropertyChanged>接口。 有关详细信息，请参阅[实现属性更改通知](how-to-implement-property-change-notification.md)。  
   
- 如果创建[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]的对象未实现<xref:System.ComponentModel.INotifyPropertyChanged>, 则必须安排自己的通知系统以确保绑定中使用的数据保持最新。 可以通过支持要更改通知的每个属性的 `PropertyChanged` 模式来提供更改通知。 若要支持此模式，请为每个属性定义一个 *PropertyName*Changed 事件，其中 *PropertyName* 是属性的名称。 每次更改属性时都会引发该事件。  
+ 如果你创建了一个不实现<xref:System.ComponentModel.INotifyPropertyChanged>的 CLR 对象, 则必须安排你自己的通知系统以确保绑定中使用的数据保持最新。 可以通过支持要更改通知的每个属性的 `PropertyChanged` 模式来提供更改通知。 若要支持此模式，请为每个属性定义一个 *PropertyName*Changed 事件，其中 *PropertyName* 是属性的名称。 每次更改属性时都会引发该事件。  
   
  如果绑定源实现了其中一个通知机制，将会自动进行目标更新。 如果出于任何原因, 你的绑定源不提供适当的属性更改通知, 你可以选择使用<xref:System.Windows.Data.BindingExpression.UpdateTarget%2A>方法显式更新目标属性。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "68364202"
   
  此表描述了数据绑定中有关权限要求的以下要点：  
   
-- 对于 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 属性，只要绑定引擎能够使用反射访问绑定源属性，数据绑定就有效。 否则，绑定引擎会发出找不到属性的警告，并使用回退值或默认值（如果可用）。  
+- 对于 CLR 属性, 只要绑定引擎能够使用反射访问绑定源属性, 数据绑定就会起作用。 否则，绑定引擎会发出找不到属性的警告，并使用回退值或默认值（如果可用）。  
   
 - 可以绑定到在编译时或运行时定义的动态对象上的属性。  
   

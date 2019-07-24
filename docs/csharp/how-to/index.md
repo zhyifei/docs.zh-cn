@@ -2,16 +2,16 @@
 title: 操作指南（C# 指南）
 description: 快速提示及重点短代码示例集合
 ms.date: 12/20/2017
-ms.openlocfilehash: 63410d687bd09f95a5ce7ce9304f2281b2f8d334
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: 09e39e3c9bea5d4b9240039e37d2a5998fe1ebf8
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67859538"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68400738"
 ---
 # <a name="how-to-c"></a>操作指南 (C#)
 
-在 C# 指南中的操作指南部分快速了解常见问题的答案。 在某些情况下，可能会在多个部分列出相关文章。 我们希望用户可从多个搜索路径找到操作指南。 
+在 C# 指南中的操作指南部分快速了解常见问题的答案。 在某些情况下，可能会在多个部分列出相关文章。 我们希望用户可从多个搜索路径找到操作指南。
 
 ## <a name="general-c-concepts"></a>C# 一般概念
 
@@ -19,7 +19,6 @@ ms.locfileid: "67859538"
 
 - [使用对象初始值设定项初始化对象](../programming-guide/classes-and-structs/how-to-initialize-objects-by-using-an-object-initializer.md)。
 - [了解向方法传递结构和传递类的区别](../programming-guide/classes-and-structs/how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method.md)。
-- [如何使用 Lambda 表达式](../programming-guide/statements-expressions-operators/how-to-use-lambda-expressions-outside-linq.md)。
 - [使用全局命名空间别名解决类型名冲突](../programming-guide/namespaces/how-to-use-the-global-namespace-alias.md)。
 - [使用运算符重载](../language-reference/operators/operator-overloading.md)。
 - [实现和调用自定义扩展方法](../programming-guide/classes-and-structs/how-to-implement-and-call-a-custom-extension-method.md)。
