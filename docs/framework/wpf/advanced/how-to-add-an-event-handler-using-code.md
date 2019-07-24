@@ -8,26 +8,26 @@ helpviewer_keywords:
 - event handlers [WPF], adding
 - XAML [WPF], adding event handlers
 ms.assetid: 269c61e0-6bd9-4291-9bed-1c5ee66da486
-ms.openlocfilehash: 32e3926bb4c519b7be14a26484603d6d4ea88b6a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 00b12d9dc25e0704eb73d8bc727ae6647493f494
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665798"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68401166"
 ---
 # <a name="how-to-add-an-event-handler-using-code"></a>如何：使用代码添加事件处理程序
 此示例演示如何使用代码将事件处理程序添加到元素。  
   
- 如果你想要添加到事件处理程序[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]已加载元素，并包含的元素的标记页面，则必须添加使用代码处理程序。 或者，如果您正在生成的应用程序完全使用代码而没有声明使用任何元素的元素树[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，可以调用特定方法来将事件处理程序添加到构造的元素树。  
+ 如果要向[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]元素添加一个事件处理程序, 并且已加载包含该元素的标记页, 则必须使用代码添加该处理程序。 或者, 如果您正在使用代码完全构建应用程序的元素树, 而不使用[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]声明任何元素, 则可以调用特定的方法将事件处理程序添加到构造的元素树中。  
   
 ## <a name="example"></a>示例  
- 下面的示例添加一个新<xref:System.Windows.Controls.Button>到现有的页面中最初定义[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。 代码隐藏文件实现事件处理程序方法，然后将该方法添加为新的事件处理程序上<xref:System.Windows.Controls.Button>。  
+ 下面的示例将新<xref:System.Windows.Controls.Button>的添加到最初在中[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]定义的现有页。 代码隐藏文件实现事件处理程序方法, 然后将该方法作为的新事件处理程序<xref:System.Windows.Controls.Button>添加到中。  
   
- C#的示例使用`+=`运算符分配的事件处理程序。 这是用于分配中的处理程序的相同运算符[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]事件处理模型。 作为一种方式添加事件处理程序的情况下，Microsoft Visual Basic 不支持此运算符。 相反，它要求两种技术之一：  
+ 该C#示例使用`+=`运算符为事件分配处理程序。 这是用于在公共语言运行时 (CLR) 事件处理模型中分配处理程序的同一运算符。 Microsoft Visual Basic 不支持将此运算符作为添加事件处理程序的方法。 而是需要以下两种方法之一:  
   
-- 使用<xref:System.Windows.UIElement.AddHandler%2A>方法，一起`AddressOf`运算符，以引用的事件处理程序实现。  
+- <xref:System.Windows.UIElement.AddHandler%2A>结合使用方法和运算符来引用`AddressOf`事件处理程序实现。  
   
-- 使用`Handles`关键字作为事件处理程序定义的一部分。 此处; 未显示这种方法请参阅[Visual Basic 和 WPF 事件处理](visual-basic-and-wpf-event-handling.md)。  
+- 在事件处理程序定义中使用关键字。`Handles` 此处未显示此方法;请参阅[Visual Basic 和 WPF 事件处理](visual-basic-and-wpf-event-handling.md)。  
   
  [!code-xaml[RoutedEventAddRemoveHandler#XAML](~/samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventAddRemoveHandler/CSharp/default.xaml#xaml)]  
   
@@ -35,7 +35,7 @@ ms.locfileid: "64665798"
  [!code-vb[RoutedEventAddRemoveHandler#Handler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RoutedEventAddRemoveHandler/VisualBasic/default.xaml.vb#handler)]  
   
 > [!NOTE]
->  添加事件处理程序在最初分析[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]页是要简单得多。 在对象元素中你想要添加事件处理程序，将添加匹配你想要处理的事件名称的属性。 然后该属性的值指定的代码隐藏文件中定义的事件处理程序方法的名称为[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]页。 有关详细信息，请参阅[XAML 概述 (WPF)](xaml-overview-wpf.md)或[路由事件概述](routed-events-overview.md)。  
+>  在初始分析[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]页中添加事件处理程序要简单得多。 在要添加事件处理程序的对象元素中, 添加一个与你要处理的事件的名称相匹配的属性。 然后, 将该属性的值指定为在[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]该页的代码隐藏文件中定义的事件处理程序方法的名称。 有关详细信息, 请参阅[XAML 概述 (WPF)](xaml-overview-wpf.md)或[路由事件概述](routed-events-overview.md)。  
   
 ## <a name="see-also"></a>请参阅
 

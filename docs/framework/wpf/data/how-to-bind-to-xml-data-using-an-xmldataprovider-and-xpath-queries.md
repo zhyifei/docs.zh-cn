@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], binding to XML data using XmlDataProvider queries
 - binding [WPF], to XML data using XmlDataProvider queries
 ms.assetid: 7dcd018f-16aa-4870-8e47-c1b4ea31e574
-ms.openlocfilehash: 49f32ae4f358885268044cbfd785239f537940ae
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: dc4fb2d5f0c48c077d2ff7ca5e5269ce5cba71e5
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64609422"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68400498"
 ---
 # <a name="how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries"></a>如何：使用 XMLDataProvider 和 XPath 查询绑定到 XML 数据
 此示例演示如何通过 <xref:System.Windows.Data.XmlDataProvider> 绑定到 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] 数据。  
@@ -19,10 +19,10 @@ ms.locfileid: "64609422"
  使用 <xref:System.Windows.Data.XmlDataProvider> 时，可以在应用程序中通过数据绑定访问的底层数据可以是任何 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 节点树。 换言之，可以通过 <xref:System.Windows.Data.XmlDataProvider> 很方便地将任何 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] 节点树用作绑定源。  
   
 ## <a name="example"></a>示例  
- 在以下示例中，数据作为 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 数据岛直接嵌入 <xref:System.Windows.FrameworkElement.Resources%2A> 节中。 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 数据岛必须包装在 `<x:XData>` 标记中，并且始终有一个根节点，在本示例中根节点为 *Inventory*。  
+ 在以下示例中，数据作为 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 数据岛直接嵌入 <xref:System.Windows.FrameworkElement.Resources%2A> 节中。           [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 数据岛必须包装在 `<x:XData>` 标记中，并且始终有一个根节点，在本示例中根节点为 *Inventory*。  
   
 > [!NOTE]
->  [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 数据的根节点有一个将 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 命名空间设置为空字符串的 **xmlns** 属性。 将 XPath 查询应用到 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 页中内联的数据岛时，需要此属性。 在本内联示例中，[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 继承 <xref:System.Windows> 命名空间，数据岛也是如此。 因此，需要将命名空间设置为空，以防止 XPath 查询被限制在 <xref:System.Windows> 命名空间，从而误导查询。  
+>            [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 数据的根节点有一个将 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 命名空间设置为空字符串的 **xmlns** 属性。 将 XPath 查询应用到 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 页中内联的数据岛时，需要此属性。 在本内联示例中，[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 继承 <xref:System.Windows> 命名空间，数据岛也是如此。 因此，需要将命名空间设置为空，以防止 XPath 查询被限制在 <xref:System.Windows> 命名空间，从而误导查询。  
   
  [!code-xaml[XMLDataSource#1](~/samples/snippets/csharp/VS_Snippets_Wpf/XmlDataSource/CS/Window1.xaml#1)]  
   
@@ -30,21 +30,21 @@ ms.locfileid: "64609422"
   
  运行此示例时，<xref:System.Windows.Controls.ListBox> 将显示以下项。 它们是 *Books* 中，*Stock* 值为“*out*”，或者 *Number* 值为 3 或者大于等于 8 的所有元素的 *Title*。 请注意，没有返回 *CD* 项，因为 <xref:System.Windows.Data.XmlDataProvider> 中设置的 <xref:System.Windows.Data.XmlDataProvider.XPath%2A> 值指定了仅公开 *Books* 元素（实质上设置了一个筛选器）。  
   
- ![显示有四部著作的标题的 XPath 示例的屏幕截图。](./media/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries/xpath-example-listbox-details.png)  
+ ![显示四本书标题的 XPath 示例的屏幕截图。](./media/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries/xpath-example-listbox-details.png)  
   
  在此示例中，显示书名是因为在 <xref:System.Windows.DataTemplate> 中，<xref:System.Windows.Controls.TextBlock> 绑定的 <xref:System.Windows.Data.Binding.XPath%2A> 被设置为 "*Title*"。 若要显示某个属性（如 *ISBN*）的值，则可将该 <xref:System.Windows.Data.Binding.XPath%2A> 值设置为 "`@ISBN`"。  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的 **XPath** 属性使用 XmlNode.SelectNodes 方法处理。 可以修改 **XPath** 查询以获取不同的结果。 以下是前一示例中被绑定 <xref:System.Windows.Controls.ListBox> 的 <xref:System.Windows.Data.Binding.XPath%2A> 查询的一些示例：  
+           [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的 **XPath** 属性使用 XmlNode.SelectNodes 方法处理。 可以修改 **XPath** 查询以获取不同的结果。 以下是前一示例中被绑定 <xref:System.Windows.Controls.ListBox> 的 <xref:System.Windows.Data.Binding.XPath%2A> 查询的一些示例：  
   
 - `XPath="Book[1]"` 将返回第一个 Book 元素（“XML in Action”）。 请注意，**XPath** 索引从 1 而不是从 0 开始。  
   
 - `XPath="Book[@*]"` 将返回带有任意属性的所有 Book 元素。  
   
-- `XPath="Book[last()-1]"` 将返回倒数第二个 Book 元素（“Introducing Microsoft .NET”）。  
+- `XPath="Book[last()-1]"` 将返回第二个至最后一个 Book 元素（“Introducing Microsoft .NET”）。  
   
 - `XPath="*[position()>3]"` 将返回除前 3 个元素之外的所有 Book 元素。  
   
- 运行 **XPath** 查询时，它将返回 <xref:System.Xml.XmlNode> 或 XmlNode 的列表。 <xref:System.Xml.XmlNode> 是[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]对象，这意味着你可以使用 <xref:System.Windows.Data.Binding.Path%2A> 属性来绑定到[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]属性。 再以上述示例为例。 如果该示例的其余部分保持不变，而你将 <xref:System.Windows.Controls.TextBlock> 绑定更改为如下所示，则会在 <xref:System.Windows.Controls.ListBox> 中看到返回的 XmlNode 的名称。 在此情况下，所有返回节点的名称为“*Book*”。  
+ 运行 **XPath** 查询时，它将返回 <xref:System.Xml.XmlNode> 或 XmlNode 的列表。 <xref:System.Xml.XmlNode>是公共语言运行时 (clr) 对象, 这意味着你可以使用<xref:System.Windows.Data.Binding.Path%2A>属性绑定到公共语言运行时 (clr) 属性。 再以上述示例为例。 如果该示例的其余部分保持不变，而你将 <xref:System.Windows.Controls.TextBlock> 绑定更改为如下所示，则会在 <xref:System.Windows.Controls.ListBox> 中看到返回的 XmlNode 的名称。 在此情况下，所有返回节点的名称为“*Book*”。  
   
  [!code-xaml[XmlDataSourceVariation#XmlNodePath](~/samples/snippets/csharp/VS_Snippets_Wpf/XmlDataSourceVariation/CS/Page1.xaml#xmlnodepath)]  
   

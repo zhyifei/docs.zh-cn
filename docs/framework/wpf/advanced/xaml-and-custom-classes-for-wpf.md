@@ -6,15 +6,15 @@ helpviewer_keywords:
 - XAML [WPF], custom classes
 - classes [WPF], custom classes in XAML
 ms.assetid: e7313137-581e-4a64-8453-d44e15a6164a
-ms.openlocfilehash: c429df440f87110a9059b8f9c40cdf273952f581
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 8b47c43e897004a6c7eb3d2f8b2a2b9bb625e158
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364109"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68400832"
 ---
 # <a name="xaml-and-custom-classes-for-wpf"></a>XAML 及 WPF 的自定义类
-[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 框架中实现的 XAML 支持定义任何 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 语言的自定义类或结构，然后使用 XAML 标记访问类。 通常通过将自定义类型映射到 XAML 命名空间前缀，可在同一标记文件中混合使用 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 定义类型和自定义类型。 本主题讨论将自定义类用作 XAML 元素必须满足的要求。  
+在公共语言运行时 (CLR) 框架中实现的 XAML 支持使用任何公共语言运行时 (CLR) 语言定义自定义类或结构, 然后使用 XAML 标记访问该类。 通常通过将自定义类型映射到 XAML 命名空间前缀，可在同一标记文件中混合使用 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 定义类型和自定义类型。 本主题讨论将自定义类用作 XAML 元素必须满足的要求。  
 
 <a name="Custom_Classes_in_Applications_vs__in_Assemblies"></a>   
 ## <a name="custom-classes-in-applications-or-assemblies"></a>应用程序或程序集中的自定义类  
@@ -37,7 +37,7 @@ ms.locfileid: "68364109"
  除启用对象元素语法外，对象定义还会对任何其他将该对象作为值类型的公共属性启用属性元素语法。 这是因为对象现在可被实例化为对象元素，且可填充此类属性的属性元素值。  
   
 ### <a name="structures"></a>结构  
- 你定义为自定义类型的结构始终能够在中[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]的 XAML 中构造。这是因为[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]编译器会为结构隐式创建一个无参数的构造函数, 该构造函数将所有属性值初始化为其默认值。 某些情况下，结构并不需要默认构造行为和/或对象元素用法。 这可能是因为结构需要通过概念方式将值和函数作为联合来填充，其中包含的值可能具有互斥的解释，因而其不存在任何可设置属性。 此[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]类结构的一个示例是<xref:System.Windows.GridLength>。 通常情况下，此类结构应实现类型转换器，以便可通过属性形式表达值，方法是使用创建结构值的不同解释或模式的字符串约定。 结构还应通过非参数构造函数公开代码构造的类似行为。  
+ 你定义为自定义类型的结构始终能够在中[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]的 XAML 中构造。这是因为 CLR 编译器会为结构隐式创建一个无参数的构造函数, 该构造函数将所有属性值初始化为其默认值。 某些情况下，结构并不需要默认构造行为和/或对象元素用法。 这可能是因为结构需要通过概念方式将值和函数作为联合来填充，其中包含的值可能具有互斥的解释，因而其不存在任何可设置属性。 此[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]类结构的一个示例是<xref:System.Windows.GridLength>。 通常情况下，此类结构应实现类型转换器，以便可通过属性形式表达值，方法是使用创建结构值的不同解释或模式的字符串约定。 结构还应通过非参数构造函数公开代码构造的类似行为。  
   
 <a name="Requirements_for_Properties_of_a_Custom_Class_as_XAML"></a>   
 ## <a name="requirements-for-properties-of-a-custom-class-as-xaml-attributes"></a>将自定义类属性用作 XAML 特性的要求  
@@ -57,7 +57,7 @@ ms.locfileid: "68364109"
  允许使用特性语法的属性的示例, 但不允许通过 XAML 使用包含对象元素的属性元素语法, 这是采用<xref:System.Windows.Input.Cursor>类型的各种属性。 类具有专用的类型转换器<xref:System.Windows.Input.CursorConverter>, 但不公开<xref:System.Windows.FrameworkElement.Cursor%2A>无参数构造函数, 因此, 只能通过特性语法来设置属性, 即使实际<xref:System.Windows.Input.Cursor>类型是引用类型。 <xref:System.Windows.Input.Cursor>  
   
 ### <a name="per-property-type-converters"></a>按属性类型转换器  
- 或者，属性本身可能声明属性级别的类型转换器。 这将启用 "微型语言", 它通过将属性的传入字符串值作为基于适当类型的<xref:System.ComponentModel.TypeConverter.ConvertFrom%2A>操作的输入处理, 来实例化内联属性类型的对象。 此操作的目的通常是提供方便的访问器，且这不是在 XAML 中启用属性设置的唯一方式。 但是, 也可以将类型转换器用于要使用不提供无参数构造函数或特性[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]化类型转换器的现有类型的特性。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] API 中的示例是<xref:System.Globalization.CultureInfo>采用类型的某些属性。 在这种情况[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]下, 使用现有 Microsoft .NET <xref:System.Globalization.CultureInfo>框架类型来更好地解决在早期版本的框架中使用的兼容性和迁移<xref:System.Globalization.CultureInfo>方案, 但该类型不支持所需的作为 XAML 属性值直接使用的构造函数或类型级类型转换。  
+ 或者，属性本身可能声明属性级别的类型转换器。 这将启用 "微型语言", 它通过将属性的传入字符串值作为基于适当类型的<xref:System.ComponentModel.TypeConverter.ConvertFrom%2A>操作的输入处理, 来实例化内联属性类型的对象。 此操作的目的通常是提供方便的访问器，且这不是在 XAML 中启用属性设置的唯一方式。 但是, 也可以将类型转换器用于要使用不提供无参数构造函数或特性化类型转换器的现有 CLR 类型的特性。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] API 中的示例是<xref:System.Globalization.CultureInfo>采用类型的某些属性。 在这种情况[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]下, 使用现有 Microsoft .NET <xref:System.Globalization.CultureInfo>框架类型来更好地解决在早期版本的框架中使用的兼容性和迁移<xref:System.Globalization.CultureInfo>方案, 但该类型不支持所需的作为 XAML 属性值直接使用的构造函数或类型级类型转换。  
   
  每当公开具有 XAML 用法的属性时，特别是对于控件作者，应特别考虑使用依赖属性支持此属性。 如果你使用 XAML 处理器的现有[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]实现, 则这一点尤其重要, 因为你可以使用<xref:System.Windows.DependencyProperty>后备来提高性能。 依赖属性将对用户针对 XAML 可访问属性所需的属性公开属性系统功能。 这包括动画、数据绑定和样式支持等功能。 有关详细信息，请参阅[自定义依赖属性](custom-dependency-properties.md)和 [XAML 加载和依赖属性](xaml-loading-and-dependency-properties.md)。  
   
@@ -66,10 +66,10 @@ ms.locfileid: "68364109"
   
 <a name="Requirements_for_Events_of_a_Custom_Class_as_XAML"></a>   
 ## <a name="requirements-for-xaml-event-handler-attribute-syntax-on-events-of-a-custom-class"></a>自定义类事件上 XAML 事件处理程序特性语法的要求  
- 若要用作[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]事件, 事件必须作为支持无参数构造函数的类上的公共事件公开, 或在可在派生类上访问事件的抽象类上公开。 为了方便地用作路由事件[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] , 事件应实现显式`add`和`remove`方法[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] , 这些方法可为事件签名添加和删除处理程序, 并将这些处理程序转发到<xref:System.Windows.UIElement.AddHandler%2A>和<xref:System.Windows.UIElement.RemoveHandler%2A>方法。 这些方法添加或删除事件所附加到的实例上的路由事件处理程序存储的处理程序。  
+ 若要用作 CLR 事件, 事件必须作为支持无参数构造函数的类上的公共事件公开, 或在可在派生类上访问事件的抽象类上公开。 为了方便地用作路由事件, CLR 事件应该实现`add`显式和`remove`方法, 这些方法可为 CLR 事件签名添加和删除处理程序, 并将这些处理程序<xref:System.Windows.UIElement.AddHandler%2A>转发到和<xref:System.Windows.UIElement.RemoveHandler%2A>方法. 这些方法添加或删除事件所附加到的实例上的路由事件处理程序存储的处理程序。  
   
 > [!NOTE]
->  可以使用<xref:System.Windows.UIElement.AddHandler%2A>为路由事件直接注册处理程序, 并特意不[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]定义公开路由事件的事件。 通常不建议采用此操作，因为事件不会启用 XAML 特性语法用于附加处理程序，并且生成类提供的类型功能的 XAML 视图透明度较低。  
+>  可以使用<xref:System.Windows.UIElement.AddHandler%2A>为路由事件直接注册处理程序, 并特意不定义公开路由事件的 CLR 事件。 通常不建议采用此操作，因为事件不会启用 XAML 特性语法用于附加处理程序，并且生成类提供的类型功能的 XAML 视图透明度较低。  
   
 <a name="Collection_Properties"></a>   
 ## <a name="writing-collection-properties"></a>编写集合属性  

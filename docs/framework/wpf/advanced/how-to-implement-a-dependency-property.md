@@ -8,20 +8,20 @@ helpviewer_keywords:
 - dependency properties [WPF], backing properties with
 - properties [WPF], backing with dependency properties
 ms.assetid: 855fd6d7-19ac-493c-bf5e-2f40b57cdc92
-ms.openlocfilehash: e2f18cb3941be2ebf4315a844c05b91ff49c6aa2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6f2fb9b0824feb6253527de063f58da2427d0c06
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61757451"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68400352"
 ---
 # <a name="how-to-implement-a-dependency-property"></a>如何：实现依赖属性
-此示例演示如何重新[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]具有属性<xref:System.Windows.DependencyProperty>字段，从而定义依赖项属性。 定义自己的属性并需要其支持 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 功能的诸多方面（包括样式、数据绑定、继承、动画和默认值）时，应将其作为依赖属性实现。  
+此示例演示如何使用<xref:System.Windows.DependencyProperty>字段返回公共语言运行时 (CLR) 属性, 从而定义依赖属性。 定义自己的属性并需要其支持 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 功能的诸多方面（包括样式、数据绑定、继承、动画和默认值）时，应将其作为依赖属性实现。  
   
 ## <a name="example"></a>示例  
- 下面的示例第一次注册依赖属性通过调用<xref:System.Windows.DependencyProperty.Register%2A>方法。 用于存储名称，并且必须依赖项属性的特征的标识符字段的名称<xref:System.Windows.DependencyProperty.Name%2A>作为的一部分为依赖属性选择了<xref:System.Windows.DependencyProperty.Register%2A>调用中，文字字符串由追加`Property`。 例如，如果你注册具有的依赖关系属性<xref:System.Windows.DependencyProperty.Name%2A>的`Location`，则定义的依赖项属性标识符字段必须命名为`LocationProperty`。  
+ 下面的示例首先通过调用<xref:System.Windows.DependencyProperty.Register%2A>方法来注册依赖属性。 用于存储依赖项属性的名称和特征的标识符字段的名称必须是您在<xref:System.Windows.DependencyProperty.Name%2A> <xref:System.Windows.DependencyProperty.Register%2A>调用期间为依赖项属性选择的名称, 并且附加了文本字符串`Property`。 例如, 如果向注册依赖属性<xref:System.Windows.DependencyProperty.Name%2A> `Location`, 则必须将为依赖属性定义的标识符字段命名为`LocationProperty`。  
   
- 在此示例中，依赖项属性的名称并将其[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]访问器已`State`; 标识符字段`StateProperty`; 属性的类型是<xref:System.Boolean>; 注册依赖属性的类型是`MyStateControl`。  
+ 在此示例中, 依赖属性的名称及其 CLR `State`访问器是; 标识符`StateProperty`字段为; 属性的类型为<xref:System.Boolean>; 而注册依赖属性的类型为`MyStateControl`。  
   
  如果不遵循此命名模式，则设计器可能无法正确地报告属性，而且属性系统样式应用程序的某些方面可能不会以预期的方式工作。  
   
@@ -30,7 +30,7 @@ ms.locfileid: "61757451"
  [!code-csharp[PropertySystemEsoterics#MyStateControl](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertySystemEsoterics/CSharp/SDKSampleLibrary/class1.cs#mystatecontrol)]
  [!code-vb[PropertySystemEsoterics#MyStateControl](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertySystemEsoterics/visualbasic/sdksamplelibrary/class1.vb#mystatecontrol)]  
   
- 若要深入了解实现依赖属性而非仅使用私有字段支持 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 属性的原因及其实现方式，请参阅[依赖属性概述](dependency-properties-overview.md)。  
+ 若要详细了解如何以及为什么要实现依赖属性的 CLR 属性, 请参阅[依赖属性概述](dependency-properties-overview.md)。  
   
 ## <a name="see-also"></a>请参阅
 

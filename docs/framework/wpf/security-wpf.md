@@ -13,15 +13,15 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-ms.openlocfilehash: e57908d9471cc8bd4a50f05c2c7c9f738b061be3
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 8d01e018e570a1ab530f476368d80f4082a73bda
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364399"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68400789"
 ---
 # <a name="security-wpf"></a>安全性 (WPF)
-<a name="introduction"></a>开发 Windows Presentation Foundation (WPF) 独立应用程序和浏览器托管应用程序时, 必须考虑安全模型。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]无论是使用 Windows Installer (.msi)、  XCopy 还是[!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]部署的, 独立应用程序都以无限制权限 (ca FullTrust 权限集) 执行。 不支持使用 ClickOnce 部署部分信任的独立 WPF 应用程序。 但是, 完全信任的主机应用程序可以使用 .NET Framework 外接程序<xref:System.AppDomain>模型创建部分信任。 有关详细信息, 请参阅[WPF 外接程序概述](./app-development/wpf-add-ins-overview.md)。  
+<a name="introduction"></a>开发 Windows Presentation Foundation (WPF) 独立应用程序和浏览器托管应用程序时, 必须考虑安全模型。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]无论是使用 Windows Installer (.msi)、XCopy 还是 ClickOnce 部署的, 独立应用程序都以无限制权限 (CA**FullTrust**权限集) 执行。 不支持使用 ClickOnce 部署部分信任的独立 WPF 应用程序。 但是, 完全信任的主机应用程序可以使用 .NET Framework 外接程序<xref:System.AppDomain>模型创建部分信任。 有关详细信息, 请参阅[WPF 外接程序概述](./app-development/wpf-add-ins-overview.md)。  
   
  [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]浏览器承载的应用程序由[!INCLUDE[TLA#tla_iegeneric](../../../includes/tlasharptla-iegeneric-md.md)]或 Firefox 承载, 可以[!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)]是或松散[!INCLUDE[TLA#tla_xaml](../../../includes/tlasharptla-xaml-md.md)]文档。有关详细信息, 请参阅[WPF XAML 浏览器应用程序概述](./app-development/wpf-xaml-browser-applications-overview.md)。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "68364399"
 ## <a name="safe-navigation"></a>安全导航  
  对于[!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)] ,[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]区分两种类型的导航: 应用程序和浏览器。  
   
- 应用程序导航  是指在浏览器托管的应用程序内的内容项之间进行导航。 浏览器导航  是指可更改浏览器自身的内容和位置 URL 的导航。 应用程序导航 (通常为 XAML) 与浏览器导航 (通常为 HTML) 之间的关系如下图所示:
+ 应用程序导航是指在浏览器托管的应用程序内的内容项之间进行导航。 浏览器导航是指可更改浏览器自身的内容和位置 URL 的导航。 应用程序导航 (通常为 XAML) 与浏览器导航 (通常为 HTML) 之间的关系如下图所示:
   
  ![应用程序导航与浏览器导航之间的关系。](./media/security-wpf/application-browser-navigation-relationship.png)  
   
@@ -103,7 +103,7 @@ ms.locfileid: "68364399"
   
  对于**Internet**、 **Intranet**、**受信任的站点**和**受限制的站点**区域, 可通过这种方式进行保护的功能集合以每个区域为基础进行配置。 以下步骤描述如何配置安全设置：  
   
-1. 打开“控制面板”  。  
+1. 打开“控制面板” 。  
   
 2. 单击 "**网络和 internet** ", 然后单击 " **internet 选项**"。  
   
@@ -268,7 +268,7 @@ ms.locfileid: "68364399"
 |----------|--------------|  
 |托管代码|[应用程序的模式和实践安全指南](https://go.microsoft.com/fwlink/?LinkId=117426)|  
 |CAS|[代码访问安全性](../misc/code-access-security.md)|  
-|[!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]|[ClickOnce 安全和部署](/visualstudio/deployment/clickonce-security-and-deployment)|  
+|ClickOnce|[ClickOnce 安全和部署](/visualstudio/deployment/clickonce-security-and-deployment)|  
 |[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]|[WPF 部分信任安全](wpf-partial-trust-security.md)|  
   
 ## <a name="see-also"></a>请参阅

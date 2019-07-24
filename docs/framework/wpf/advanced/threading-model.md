@@ -18,12 +18,12 @@ helpviewer_keywords:
 - nested message processing [WPF]
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
-ms.openlocfilehash: ebfbb2df3e931690f2ba12f0a2ad868da0212f5d
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 2667417c5d25821f2fed2101e1d485280e171eab
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331624"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68400645"
 ---
 # <a name="threading-model"></a>线程处理模型
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 旨在帮助开发人员处理复杂的线程处理问题。 因此, 大多数[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]开发人员无需编写使用多个线程的接口。 由于多线程程序既复杂又难以调试，因此当存在单线程解决方案时，应避免使用多线程程序。  
@@ -177,7 +177,7 @@ ms.locfileid: "68331624"
   
  `GetWeatherAsync` 将使用上述的技术之一（如创建后台线程）来以异步方式工作，而非阻止调用线程。  
   
- 此模式中最重要的部分之一是在调用方法  `Completed` *名称*`Async`方法的同一线程上调用方法 1, 以开始。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]您可以通过存储<xref:System.Windows.Threading.Dispatcher.CurrentDispatcher%2A>来轻松地执行此操作, 但随后只能[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]在应用程序中使用非图形组件[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] , 而不能在或 ASP.NET 程序中使用。  
+ 此模式中最重要的部分之一是在调用方法 `Completed` *名称*`Async`方法的同一线程上调用方法 1, 以开始。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]您可以通过存储<xref:System.Windows.Threading.Dispatcher.CurrentDispatcher%2A>来轻松地执行此操作, 但随后只能[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]在应用程序中使用非图形组件[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] , 而不能在或 ASP.NET 程序中使用。  
   
  类可满足这一需要, 将其视为与其他[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]框架一起工作的简化版本。 <xref:System.Windows.Threading.Dispatcher> <xref:System.Windows.Threading.DispatcherSynchronizationContext>  
   
@@ -203,15 +203,15 @@ ms.locfileid: "68331624"
  可能需要大量时间`handler2`来处理此事件。 `handler2`可能使用<xref:System.Windows.Threading.Dispatcher.PushFrame%2A>来开始一个嵌套消息循环, 该循环在数小时内不会返回。 如果`handler2`在此消息循环完成时未将事件标记为已处理, 则该事件将在树中向上传递, 即使它非常旧。  
   
 ### <a name="reentrancy-and-locking"></a>重新进入和锁定  
- 的锁定机制[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]的行为可能与想象的行为完全不同; 在请求锁时, 可能会希望线程完全停止操作。 实际上，该线程将继续接收和处理高优先级的消息。 这样有助于防止死锁，并使接口最低限度地响应，但这样做有可能引入细微 bug。  大多数情况下, 不需要了解有关此操作的任何信息, 但在极少数情况下 (通常[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]涉及到窗口消息或 COM STA 组件), 这一点很有价值。  
+ 公共语言运行时 (CLR) 的锁定机制的行为与可能不完全相同;请求锁时, 可能会希望线程完全停止操作。 实际上，该线程将继续接收和处理高优先级的消息。 这样有助于防止死锁，并使接口最低限度地响应，但这样做有可能引入细微 bug。  大多数情况下, 不需要了解有关此操作的任何信息, 但在极少数情况下 (通常[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]涉及到窗口消息或 COM STA 组件), 这一点很有价值。  
   
  大多数接口都不是以线程安全为基础生成的, 因为开发人员可以假定[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]永远不会由多个线程访问。 在这种情况下, 单个线程可能会在意外的时间发生环境更改, 从而导致这<xref:System.Windows.Threading.DispatcherObject>类错误的影响, 从而导致互斥机制能够解决。 请看下面的伪代码：  
   
  ![显示线程重入的关系图。](./media/threading-model/threading-reentrancy.png "ThreadingReentrancy")  
   
- 大多数情况下都是正确的, 但有时这种意外重入[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]可能会导致问题。 因此, 在某些关键情况下[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] , <xref:System.Windows.Threading.Dispatcher.DisableProcessing%2A> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]会调用, 这将更改该线程的锁定指令以使用无提示锁定, 而不是使用[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]普通的锁。  
+ 大多数情况下都是正确的, 但有时这种意外重入[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]可能会导致问题。 因此, 在某些关键情况下[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] , <xref:System.Windows.Threading.Dispatcher.DisableProcessing%2A> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]会调用, 这将更改该线程的锁定指令以使用无提示锁定, 而不是使用常用的 CLR 锁。  
   
- 那么为什么[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]团队选择此行为呢？ 它与 COM STA 对象和完成线程有关。 当对对象进行垃圾回收时, `Finalize`它的方法将在专用终结器线程上运行[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] , 而不是在线程上运行。 其中存在问题, 因为在[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]线程上创建的 COM STA 对象只能[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]在线程上释放。 等效于 (在这种情况下使用 win32 `SendMessage`)。 <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 但如果[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]线程繁忙, 则终结器线程将停止, 并且无法释放 COM STA 对象, 这将导致严重的内存泄漏。 这样, [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]团队就可以轻松地进行调用, 使锁按照它们的工作方式工作。  
+ 那么为什么 CLR 团队选择此行为呢？ 它与 COM STA 对象和完成线程有关。 当对对象进行垃圾回收时, `Finalize`它的方法将在专用终结器线程上运行[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] , 而不是在线程上运行。 其中存在问题, 因为在[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]线程上创建的 COM STA 对象只能[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]在线程上释放。 CLR 执行的等效<xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A>操作 (在这种情况下, 使用 win32 `SendMessage`)。 但如果[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]线程繁忙, 则终结器线程将停止, 并且无法释放 COM STA 对象, 这将导致严重的内存泄漏。 因此, CLR 团队做出了很难的调用, 使锁按照它们的工作方式工作。  
   
  的任务[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]是在不重新引入内存泄漏的情况下避免意外的重入, 这就是我们不会在任何地方阻止重入的原因。  
   

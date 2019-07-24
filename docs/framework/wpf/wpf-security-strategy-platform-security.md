@@ -17,15 +17,15 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: 0b39fce8bfd89dd11a863993738ef9b4fa64ba91
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 42b1596082fe3e682a6fa806412ab5837b087bf9
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364431"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68400712"
 ---
-# <a name="wpf-security-strategy---platform-security"></a>WPF 安全策略 - 平台安全性
-虽然 Windows Presentation Foundation (WPF) 提供各种安全服务, 但它还利用基础平台 (包括操作系统、 [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)]和[!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)]) 的安全功能。 这些层组合在一起旨在提供 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 强大且深层防御的安全模型，尝试避免任何单点故障，如下图所示：  
+# <a name="wpf-security-strategy---platform-security"></a>WPF 安全策略 — 平台安全性
+虽然 Windows Presentation Foundation (WPF) 提供各种安全服务, 但它还利用基础平台 (包括操作系统、CLR 和[!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)]) 的安全功能。 这些层组合在一起旨在提供 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 强大且深层防御的安全模型，尝试避免任何单点故障，如下图所示：  
   
  ![显示 WPF 安全模型的关系图。](./media/wpf-security-strategy-platform-security/windows-presentation-foundation-security.png)  
   
@@ -44,7 +44,7 @@ ms.locfileid: "68364431"
 - [!INCLUDE[TLA#tla_win_update](../../../includes/tlasharptla-win-update-md.md)]。  
   
 #### <a name="gs-compilation"></a>/GS 编译  
- [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)] 通过对众多核心系统库进行重新编译提供保护，这些核心系统库包括所有 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 依赖项（如 [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] 以帮助缓解缓冲区溢出。 通过使用/GS 形参和 C/C++ 命令行编译器可实现这一点。 虽然应显式避免缓冲区溢出，但 /GS 编译针对由它们无意或恶意创建的潜在漏洞提供了深层防御示例。  
+ [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)]通过重新编译许多核心系统库 (包括所有[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]依赖项 (如 CLR) 来提供保护, 以帮助缓解缓冲区溢出。 通过使用/GS 形参和 C/C++ 命令行编译器可实现这一点。 虽然应显式避免缓冲区溢出，但 /GS 编译针对由它们无意或恶意创建的潜在漏洞提供了深层防御示例。  
   
  以前，缓冲区溢出已导致出现了许多影响较大的安全漏洞。 当攻击者利用代码漏洞时就会发生缓冲区溢出，代码漏洞可让注入的恶意代码通过缓冲区边界写入。 从而让攻击者可以通过重写导致执行攻击者代码的函数返回地址执行代码进程。 结果，恶意代码可以执行具有截获进程相同特权的任意代码。  
   
@@ -90,13 +90,13 @@ ms.locfileid: "68364431"
   
 <a name="Common_Language_Runtime_Security"></a>   
 ## <a name="common-language-runtime-security"></a>公共语言运行时的安全性  
- [!INCLUDE[TLA#tla_clr](../../../includes/tlasharptla-clr-md.md)]提供了许多主要安全优势, 包括验证和验证、代码访问安全性 (CAS) 和安全关键方法。  
+ 公共语言运行时 (CLR) 提供了许多重要的安全优势, 包括验证和验证、代码访问安全性 (CAS) 和安全关键方法。  
   
 <a name="Validation_and_Verification"></a>   
 ### <a name="validation-and-verification"></a>确认和验证  
- 为了提供程序集隔离和完整性，[!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] 将使用验证过程。 [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] 验证可确保程序集通过以下方式进行隔离：即通过验证其指向程序集外部地址的可移植可执行 (PE) 文件的格式。 [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] 验证还可以验证内嵌在程序集中的元数据的完整性。  
+ 为了提供程序集隔离和完整性, CLR 使用验证过程。 CLR 验证通过验证指向程序集外部地址的可移植可执行 (PE) 文件格式来确保程序集的隔离。 CLR 验证还验证嵌入到程序集内的元数据的完整性。  
   
- 为了确保类型安全, 帮助防止常见安全问题 (例如缓冲区溢出), 并通过子进程隔离启用沙盒, [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)]安全性使用验证概念。  
+ 为了确保类型安全, 帮助防止常见安全问题 (例如缓冲区溢出), 并通过子进程隔离启用沙盒, CLR 安全使用验证概念。  
   
  托管应用程序被编译为 Microsoft 中间语言 (MSIL)。 当执行托管应用程序中的方法时，将采用实时 (JIT) 编译方式把 MSIL 编译为本机代码。 JIT 编译包括的验证过程将应用许多众多安全和可靠规则，从而确保代码不会：  
   
@@ -172,13 +172,13 @@ ms.locfileid: "68364431"
   
 <a name="ClickOnce_Deployment"></a>   
 ### <a name="clickonce-deployment"></a>ClickOnce 部署  
- [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)]是一种全面的部署技术, .NET Framework 附带, 并与[!INCLUDE[TLA#tla_visualstu](../../../includes/tlasharptla-visualstu-md.md)]集成 (有关详细信息, 请参阅[ClickOnce 安全和部署](/visualstudio/deployment/clickonce-security-and-deployment))。 独立的 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 应用程序可以使用 [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] 进行部署，但浏览器承载的应用程序必须使用 [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)] 进行部署。  
+ ClickOnce 是一种全面的部署技术, 包含在 .NET Framework 中, 并[!INCLUDE[TLA#tla_visualstu](../../../includes/tlasharptla-visualstu-md.md)]与集成 (有关详细信息, 请参阅[ClickOnce 安全和部署](/visualstudio/deployment/clickonce-security-and-deployment))。 独立[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]应用程序可使用 clickonce 进行部署, 而浏览器承载的应用程序必须使用 clickonce 进行部署。  
   
- 使用[!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]部署的应用程序的代码访问安全性 (CAS) 提供额外的安全层; 实质[!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)]上, 部署的应用程序会请求所需的权限。 如果它们不超过在其中部署应用程序的区域的权限集，几乎仅授予它们这些权限。 通过将权限集减少到仅需要的权限集, 即使它们小于启动区域的权限集提供的权限集, 应用程序有权访问的资源数也会降至最低。 因此，如果截获到应用程序，将可以降低对客户端计算机的潜在损坏几率。  
+ 使用 ClickOnce 部署的应用程序在代码访问安全性 (CAS) 上给予了附加的安全层;实质上, ClickOnce 部署的应用程序会请求所需的权限。 如果它们不超过在其中部署应用程序的区域的权限集，几乎仅授予它们这些权限。 通过将权限集减少到仅需要的权限集, 即使它们小于启动区域的权限集提供的权限集, 应用程序有权访问的资源数也会降至最低。 因此，如果截获到应用程序，将可以降低对客户端计算机的潜在损坏几率。  
   
 <a name="Security_Critical_Methodology"></a>   
 ### <a name="security-critical-methodology"></a>安全-关键方法  
- 使用[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]权限启用用于 XBAP 应用程序的 Internet 区域沙盒的代码必须保持最高的安全审核和控制度。 为了满足此要求, .NET Framework 为管理提升特权的代码提供了新支持。 具体而言, [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)]使你能够标识提升权限的代码, 并使用对<xref:System.Security.SecurityCriticalAttribute>其进行标记; <xref:System.Security.SecurityCriticalAttribute>任何未标记为的代码都将使用此方法变得*透明*。 反之，禁止未标有 <xref:System.Security.SecurityCriticalAttribute> 的托管代码提升特权。  
+ 使用[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]权限启用用于 XBAP 应用程序的 Internet 区域沙盒的代码必须保持最高的安全审核和控制度。 为了满足此要求, .NET Framework 为管理提升特权的代码提供了新支持。 具体而言, CLR 使你能够标识提升权限的代码, 并使用对<xref:System.Security.SecurityCriticalAttribute>其进行标记; 任何未<xref:System.Security.SecurityCriticalAttribute>标记为的代码都将使用此方法变得*透明*。 反之，禁止未标有 <xref:System.Security.SecurityCriticalAttribute> 的托管代码提升特权。  
   
  安全关键方法允许将提升特权的[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]代码组织到*安全关键内核*中, 并使剩余部分透明。 隔离安全关键代码可使[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]工程团队将附加的安全分析和源控制重点放在安全关键内核之上, 而不是标准安全实践 (请参阅[WPF 安全策略-安全性)工程](wpf-security-strategy-security-engineering.md))。  
   
@@ -202,7 +202,7 @@ ms.locfileid: "68364431"
   
  相同的用户启动逻辑也适用于**打开**/**保存**安全提示。 始终在信息栏下捕获 ActiveX 安装对话框, 除非它们表示从以前安装的控件进行升级。 这些度量值组合在一起，可提供用户更安全、更可控的用户体验，因为诱导他们安装不需要的软件或恶意软件的站点受到了保护。  
   
- 这些功能还可以对使用 [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] 浏览网站（允许他们下载和安装 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 应用程序）的用户提供保护。 特别是，这是因为 [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] 提供的用户体验更好，降低了安装恶意或“狡猾”的应用程序的几率，而不考虑用于构建它的技术类型，包括 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 通过使用 [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] 进一步增强这些保护，以便通过 Internet 下载其应用程序。 由于 [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)] 是在 Internet 区域安全沙盒内执行，因此可以无缝地启动它们。 另一方面，独立的 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 应用程序需要完全信任才能执行。 对于这些应用程序，[!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] 将在启动过程示安全对话框，以通知使用应用程序的其他安全要求。 但是，必须由用户启动，必须由用户启动的逻辑进行管理并且可以取消。  
+ 这些功能还可以对使用 [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] 浏览网站（允许他们下载和安装 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 应用程序）的用户提供保护。 特别是，这是因为 [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] 提供的用户体验更好，降低了安装恶意或“狡猾”的应用程序的几率，而不考虑用于构建它的技术类型，包括 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]使用 ClickOnce 添加到这些保护, 以便通过 Internet 下载其应用程序。 由于 [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)] 是在 Internet 区域安全沙盒内执行，因此可以无缝地启动它们。 另一方面，独立的 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 应用程序需要完全信任才能执行。 对于这些应用程序, ClickOnce 将在启动过程中显示一个安全对话框, 以通知使用应用程序的其他安全要求。 但是，必须由用户启动，必须由用户启动的逻辑进行管理并且可以取消。  
   
  [!INCLUDE[TLA2#tla_ie7](../../../includes/tla2sharptla-ie7-md.md)]包含并扩展了作为持续提供安全承诺一部分的 [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] 的安全功能。  
   

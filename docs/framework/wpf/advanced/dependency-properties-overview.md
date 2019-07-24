@@ -14,19 +14,19 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - resources [WPF], references to
 ms.assetid: d119d00c-3afb-48d6-87a0-c4da4f83dee5
-ms.openlocfilehash: 483710281feafdf97cfef9b72a67af035dcf0efa
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: b7401cd3e9551b378983193f4c5e8e4107954b74
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67860164"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68401413"
 ---
 # <a name="dependency-properties-overview"></a>依赖属性概述
 
 Windows Presentation Foundation (WPF) 提供一组服务，这些服务可用于扩展类型的[属性](../../../standard/base-types/common-type-system.md#Properties)的功能。 这些服务通常统称为 WPF 属性系统。 由 WPF 属性系统支持的属性称为依赖属性。 本概述介绍 WPF 属性系统以及依赖属性的功能。 这包括如何在 XAML 和在代码中使用现有依赖属性。 本概述还介绍依赖属性所特有的方面（如依赖属性元数据），并说明如何在自定义类中创建自己的依赖属性。
 
 ## <a name="prerequisites"></a>系统必备
-本主题假设你在 .NET 类型系统和面向对象的编程方面有一些基础知识。 为了能理解本主题中的示例，还应了解 XAML 并知道如何编写 WPF 应用程序。 有关详细信息，请参见[演练：我第一个 WPF 桌面应用程序](../getting-started/walkthrough-my-first-wpf-desktop-application.md)。  
+本主题假设你在 .NET 类型系统和面向对象的编程方面有一些基础知识。 为了能理解本主题中的示例，还应了解 XAML 并知道如何编写 WPF 应用程序。 有关详细信息，请参见[演练：我的第一个 WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md)桌面应用程序。  
   
 ## <a name="dependency-properties-and-clr-properties"></a>依赖属性和 CLR 属性
  在 WPF 中，属性通常公开为标准 .NET [属性](../../../standard/base-types/common-type-system.md#Properties)。 在基本级别，可以直接与这些属性交互，而不必了解它们是以依赖属性的形式实现的。 但是，应当熟悉 WPF 属性系统的部分或全部功能，以便利用这些功能。
@@ -40,11 +40,11 @@ Windows Presentation Foundation (WPF) 提供一组服务，这些服务可用于
 
 下面列出了与依赖属性一起使用的术语：
 
-- **依赖项属性：** 一个属性，它由支持<xref:System.Windows.DependencyProperty>。
+- **依赖属性:** 由支持的属性<xref:System.Windows.DependencyProperty>。
 
-- **依赖项属性标识符：** 一个<xref:System.Windows.DependencyProperty>实例，这是注册依赖属性时，获取作为返回值，然后存储为类的静态成员。 对于与 WPF 属性系统交互的许多 API，此标识符用作一个参数。
+- **依赖项属性标识符:** <xref:System.Windows.DependencyProperty>实例, 在注册依赖属性时作为返回值获取, 然后存储为类的静态成员。 对于与 WPF 属性系统交互的许多 API，此标识符用作一个参数。
 
-- **CLR"包装器":** 实际 get 和 set 实现的属性。 这些实现通过在 <xref:System.Windows.DependencyObject.GetValue%2A> 和 <xref:System.Windows.DependencyObject.SetValue%2A> 调用中使用依赖属性标识符来并入依赖属性标识符，从而使用 WPF 属性系统为属性提供支持。
+- **CLR "包装器":** 属性的实际 get 和 set 实现。 这些实现通过在 <xref:System.Windows.DependencyObject.GetValue%2A> 和 <xref:System.Windows.DependencyObject.SetValue%2A> 调用中使用依赖属性标识符来并入依赖属性标识符，从而使用 WPF 属性系统为属性提供支持。
 
 下面的示例定义 `IsSpinning` 依赖属性，并说明 <xref:System.Windows.DependencyProperty> 标识符与它所支持的属性之间的关系。
 
@@ -68,7 +68,7 @@ XAML 支持多种设置属性的语法格式。 要对特定的属性使用哪�
 [!code-xaml[PropertiesOvwSupport#PESyntaxProperty](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/Page1.xaml#pesyntaxproperty)]
 
 ### <a name="setting-properties-in-code"></a>在代码中设置属性
- 在代码中设置依赖属性值通常只是调用由 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]“包装器”公开的 set 实现。
+ 在代码中设置依赖属性值通常只是对 CLR "包装" 公开的集实现的调用。
 
 [!code-csharp[PropertiesOvwSupport#ProceduralPropertySet](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/Page1.xaml.cs#proceduralpropertyset)]
 [!code-vb[PropertiesOvwSupport#ProceduralPropertySet](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page1.xaml.vb#proceduralpropertyset)]
@@ -78,7 +78,7 @@ XAML 支持多种设置属性的语法格式。 要对特定的属性使用哪�
 [!code-csharp[PropertiesOvwSupport#ProceduralPropertyGet](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/Page1.xaml.cs#proceduralpropertyget)]
  [!code-vb[PropertiesOvwSupport#ProceduralPropertyGet](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page1.xaml.vb#proceduralpropertyget)]
 
-您还可以调用属性系统 Api<xref:System.Windows.DependencyObject.GetValue%2A>和<xref:System.Windows.DependencyObject.SetValue%2A>直接。 如果你正在使用现有的属性 （包装会更方便，并为开发人员工具提供更好地公开属性），但直接调用 Api 是适用于某些情况下，这是不通常有必要。
+还可以<xref:System.Windows.DependencyObject.GetValue%2A> <xref:System.Windows.DependencyObject.SetValue%2A>直接调用属性系统 api。 如果使用现有属性 (包装更方便, 并为开发人员工具提供更好的属性公开), 则通常不需要这样做, 但在某些情况下, 可以直接调用 Api。
 
 还可以在 XAML 中设置属性，然后通过代码隐藏在代码中访问这些属性。 有关详细信息，请参阅 [WPF 中的代码隐藏和 XAML](code-behind-and-xaml-in-wpf.md)。
 
@@ -168,7 +168,7 @@ XAML 支持多种设置属性的语法格式。 要对特定的属性使用哪�
 有关详细信息，请参阅[属性值继承](property-value-inheritance.md)。
 
 ### <a name="wpf-designer-integration"></a>WPF 设计器集成
-如果自定义控件具有实现为依赖属性的属性，则它会收到相应的[!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)]支持。 一个示例就是能够在“属性”  窗口中编辑直接依赖属性和附加依赖属性。 有关详细信息，请参阅[控件创作概述](../controls/control-authoring-overview.md)。
+如果自定义控件具有实现为依赖属性的属性，则它会收到相应的[!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)]支持。 一个示例就是能够在“属性”窗口中编辑直接依赖属性和附加依赖属性。 有关详细信息，请参阅[控件创作概述](../controls/control-authoring-overview.md)。
 
 ## <a name="dependency-property-value-precedence"></a>依赖项属性值优先级
 获取依赖属性的值时，获得的值可能是通过参与 WPF 属性系统的其他任一基于属性的输入而在该属性上设置的。 由于存在依赖属性值优先级，使得属性获取值的方式的各种方案得以按可预测的方式交互。
@@ -190,7 +190,7 @@ XAML 支持多种设置属性的语法格式。 要对特定的属性使用哪�
 
 ## <a name="learning-more-about-dependency-properties"></a>了解有关依赖属性的详细信息  
 
-- 附加属性是一种支持 XAML 中的专用语法的属性。 附加属性通常与[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 属性不具有 1:1 对应关系，而且不一定是依赖属性。 附加属性的典型用途是使子元素可以向其父元素报告属性值，即使父元素和子元素的类成员列表中均没有该属性也是如此。 一种主要情况是使子元素能够告知父元素应如何在 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 中呈现它们；有关示例，请参阅 <xref:System.Windows.Controls.DockPanel.Dock%2A> 或 <xref:System.Windows.Controls.Canvas.Left%2A>。 有关详细信息，请参阅[附加属性概述](attached-properties-overview.md)。
+- 附加属性是一种支持 XAML 中的专用语法的属性。 附加属性通常与公共语言运行时 (CLR) 属性没有1:1 对应关系, 并且不一定是依赖属性。 附加属性的典型用途是使子元素可以向其父元素报告属性值，即使父元素和子元素的类成员列表中均没有该属性也是如此。 一种主要情况是使子元素能够告知父元素应如何在 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 中呈现它们；有关示例，请参阅 <xref:System.Windows.Controls.DockPanel.Dock%2A> 或 <xref:System.Windows.Controls.Canvas.Left%2A>。 有关详细信息，请参阅[附加属性概述](attached-properties-overview.md)。
 
 - 组件开发人员或应用程序开发人员可能希望创建自己的依赖属性，以便实现数据绑定或样式支持之类的功能，或者实现对失效和值强制的支持。 有关详细信息，请参阅[自定义依赖属性](custom-dependency-properties.md)。
 

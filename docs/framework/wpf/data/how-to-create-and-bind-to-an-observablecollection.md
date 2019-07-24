@@ -8,15 +8,15 @@ helpviewer_keywords:
 - data binding [WPF], ObservableCollection class
 - notifications [WPF]
 ms.assetid: 6cf7e275-df76-41c6-a611-53b889b8fd5a
-ms.openlocfilehash: 45f8b097bfdb8d3d7994e53ea05146aa6de0fc21
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0fd851ac413b54769bf6606b2220cf38934902be
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62020915"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68401423"
 ---
 # <a name="how-to-create-and-bind-to-an-observablecollection"></a>如何：创建和绑定到 ObservableCollection
-此示例演示如何创建和绑定到一个集合，其中派生<xref:System.Collections.ObjectModel.ObservableCollection%601>类，该类是一个集合类，添加或移除项时提供通知。  
+此示例演示如何创建和绑定到从<xref:System.Collections.ObjectModel.ObservableCollection%601>类派生的集合, 该类是在添加或移除项时提供通知的集合类。  
   
 ## <a name="example"></a>示例  
  下面的示例演示 `NameList` 集合的实现：  
@@ -104,7 +104,7 @@ Public Class PersonName
 End Class  
 ```  
   
- 可以根据[使数据可用于 XAML 中的绑定](how-to-make-data-available-for-binding-in-xaml.md)中的说明，按照与其他 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 对象相同的方式使集合可用于绑定。 例如，可以在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中实例化该集合，并将该集合指定为一个资源，如下所示：  
+ 可以像使用其他公共语言运行时 (CLR) 对象一样, 使集合可用于绑定, 如在[XAML 中使数据可用于绑定](how-to-make-data-available-for-binding-in-xaml.md)中所述。 例如，可以在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中实例化该集合，并将该集合指定为一个资源，如下所示：  
   
 ```xaml  
 <Window  
@@ -136,7 +136,7 @@ End Class
  此处没有显示 `NameItemTemplate` 的定义。  
   
 > [!NOTE]
->  集合中的对象必须满足[绑定源概述](binding-sources-overview.md)中所述的要求。 具体而言，如果使用的<xref:System.Windows.Data.BindingMode.OneWay>或<xref:System.Windows.Data.BindingMode.TwoWay>(例如，希望你[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]时更新源属性发生显著变化)，必须实现适当的属性更改通知机制，如<xref:System.ComponentModel.INotifyPropertyChanged>接口。  
+>  集合中的对象必须满足[绑定源概述](binding-sources-overview.md)中所述的要求。 特别是, 如果您使用<xref:System.Windows.Data.BindingMode.OneWay>的是或<xref:System.Windows.Data.BindingMode.TwoWay> ( [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]例如, 您希望在源属性动态变化时进行更新), 则必须实现适当的属性更改通知机制, 例如<xref:System.ComponentModel.INotifyPropertyChanged>接口。  
   
  有关详细信息，请参阅[数据绑定概述](data-binding-overview.md)中的“绑定到集合”一节。  
   

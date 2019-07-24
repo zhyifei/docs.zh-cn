@@ -29,12 +29,12 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: 66158d14b7686f520260cd24fbf6c1b0e7dda1d4
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 2c4e7213ddcffdb026d3d6e6b339bfc91b3c27c6
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364107"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68400785"
 ---
 # <a name="xaml-syntax-in-detail"></a>XAML 语法详述
 本主题定义用于描述 XAML 语法元素的术语。 在本文档的其余部分中经常使用这些术语, 这两个术语分别适用于 WPF 文档, 适用于使用 XAML 的其他框架或由 system.exception 级别的 XAML 语言支持启用的基本 XAML 概念。 本主题概述了在主题[XAML 概述 (WPF)](xaml-overview-wpf.md)中引入的基本术语。  
@@ -47,7 +47,7 @@ ms.locfileid: "68364107"
   
 <a name="xaml_and_clr"></a>   
 ## <a name="xaml-and-clr"></a>XAML 和 CLR  
- XAML 是一种标记语言。 根据[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]名称的隐含, 启用运行时执行。 XAML 本身不是 CLR 运行时直接使用的公共语言之一。 相反, 可以将 XAML 视为支持其自己的类型系统。 WPF 使用的特定 XAML 分析系统是在 CLR 和 CLR 类型系统上构建的。 在分析用于 WPF 的 XAML 时, XAML 类型会映射到 CLR 类型以实例化运行时表示形式。 出于此原因, 本文档中的语法讨论的其余部分将包括对 CLR 类型系统的引用, 尽管 XAML 语言规范中的等效语法讨论不包括在内。 (根据 XAML 语言规范级别, XAML 类型可以映射到任何其他类型系统, 而无需是 CLR, 但这需要创建和使用不同的 XAML 分析器。)  
+ XAML 是一种标记语言。 公共语言运行时 (CLR) 根据其名称的隐含, 启用运行时执行。 XAML 本身不是 CLR 运行时直接使用的公共语言之一。 相反, 可以将 XAML 视为支持其自己的类型系统。 WPF 使用的特定 XAML 分析系统是在 CLR 和 CLR 类型系统上构建的。 在分析用于 WPF 的 XAML 时, XAML 类型会映射到 CLR 类型以实例化运行时表示形式。 出于此原因, 本文档中的语法讨论的其余部分将包括对 CLR 类型系统的引用, 尽管 XAML 语言规范中的等效语法讨论不包括在内。 (根据 XAML 语言规范级别, XAML 类型可以映射到任何其他类型系统, 而无需是 CLR, 但这需要创建和使用不同的 XAML 分析器。)  
   
 #### <a name="members-of-types-and-class-inheritance"></a>类型和类继承的成员  
  作为[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]类型的 XAML 成员出现的属性和事件通常继承自基类型。 例如, 请看下面的示例`<Button Background="Blue" .../>`:。 如果要查看类定义、反射结果或文档<xref:System.Windows.Controls.Button> ,属性不是类的直接声明属性。<xref:System.Windows.Controls.Control.Background%2A> 相反, <xref:System.Windows.Controls.Control.Background%2A>继承自基类<xref:System.Windows.Controls.Control> 。  

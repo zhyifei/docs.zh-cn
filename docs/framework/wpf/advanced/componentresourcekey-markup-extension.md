@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ComponentResourceKey markup extension [WPF]
 - XAML [WPF], ComponentResourceKey markup extension
 ms.assetid: d6bcdbe6-61b3-40a7-b381-4e02185b5a85
-ms.openlocfilehash: 93735d12426042fd6517c10a55d1a9bd32f906bb
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: b373b33fcc962e49aa220f31e24b1484a0a8cd98
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363060"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68401604"
 ---
 # <a name="componentresourcekey-markup-extension"></a>ComponentResourceKey 标记扩展
 定义和引用从外部程序集加载的资源的键。 这使得资源查找可以在程序集中指定目标类型, 而不是在程序集或类中指定显式资源字典。  
@@ -46,7 +46,7 @@ ms.locfileid: "68363060"
   
 |||  
 |-|-|  
-|`targetTypeName`|在资源程序集中定义[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]的公共类型的名称。|  
+|`targetTypeName`|在资源程序集中定义的公共公共语言运行时 (CLR) 类型的名称。|  
 |`targetID`|资源的键。 查找资源时, `targetID`将类似于资源的 "x:Key"[指令](../../xaml-services/x-key-directive.md)。|  
   
 ## <a name="remarks"></a>备注  

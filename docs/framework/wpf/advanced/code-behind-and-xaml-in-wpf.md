@@ -5,15 +5,15 @@ helpviewer_keywords:
 - XAML [WPF], code-behind
 - code-behind files [WPF], XAML
 ms.assetid: 9df6d3c9-aed3-471c-af36-6859b19d999f
-ms.openlocfilehash: 6a47f5a93cb161c9a87df25403cc86247619cd81
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: acd8c9ff0a4ff718dba272958a3e63820bcf1354
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67610536"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68401607"
 ---
 # <a name="code-behind-and-xaml-in-wpf"></a>WPF 中的代码隐藏和 XAML
-<a name="introduction"></a> 代码隐藏是一个术语，用于描述标记定义的对象，与联接的代码时[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]页进行标记编译。 本主题介绍了代码隐藏的要求以及代码中的可选内联代码机制[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。  
+<a name="introduction"></a>代码隐藏是一项术语, 用于描述在对[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]页进行标记编译时与标记定义的对象联接的代码。 本主题介绍代码隐藏的要求, 以及中[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]代码的替代内联代码机制。  
   
  本主题包含以下各节：  
   
@@ -21,42 +21,42 @@ ms.locfileid: "67610536"
   
 - [代码隐藏和 XAML 语言](#codebehind_and_the_xaml_language)  
   
-- [代码隐藏、 事件处理程序和 WPF 中的分部类要求](#Code_behind__Event_Handler__and_Partial_Class)  
+- [WPF 中的代码隐藏、事件处理程序和分部类要求](#Code_behind__Event_Handler__and_Partial_Class)  
   
 - [x:Code](#x_Code)  
   
-- [内联代码的限制](#Inline_Code_Limitations)  
+- [内联代码限制](#Inline_Code_Limitations)  
   
 <a name="Prerequisites"></a>   
 ## <a name="prerequisites"></a>系统必备  
- 本主题假定你已阅读[XAML 概述 (WPF)](xaml-overview-wpf.md)具备的一些基础知识和[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]和面向对象的编程。  
+ 本主题假定您已阅读了[XAML 概述 (WPF)](xaml-overview-wpf.md) , 并对 CLR 和面向对象的编程有一些基本知识。  
   
 <a name="codebehind_and_the_xaml_language"></a>   
 ## <a name="code-behind-and-the-xaml-language"></a>代码隐藏和 XAML 语言  
- XAML 语言包含语言级别功能，使得可以将代码文件与标记文件，然后在标记文件端相关联。 具体而言，XAML 语言定义的语言功能[X:class 指令](../../xaml-services/x-class-directive.md)， [X:subclass 指令](../../xaml-services/x-subclass-directive.md)，并[X:classmodifier 指令](../../xaml-services/x-classmodifier-directive.md)。 完全应该如何生成代码，以及如何将集成标记和代码，不是 XAML 语言指定的一部分。 它应由 WPF 来确定如何将代码集成之类的框架、 如何为使用 XAML 在应用程序和编程模型和生成操作或其他支持的所有这些要求。  
+ XAML 语言包含语言级功能, 使您可以将代码文件与标记文件相关联。 具体而言, XAML 语言将定义语言功能[X:Class 指令](../../xaml-services/x-class-directive.md)、 [X:Subclass 指令](../../xaml-services/x-subclass-directive.md)和[x:ClassModifier 指令](../../xaml-services/x-classmodifier-directive.md)。 应确切地说明代码的生成方式以及如何集成标记和代码, 这并不是 XAML 语言指定内容的一部分。 它留给了框架 (如 WPF) 来确定如何集成代码, 如何在应用程序和编程模型中使用 XAML, 以及生成操作或支持所有这些操作所需的其他支持。  
   
 <a name="Code_behind__Event_Handler__and_Partial_Class"></a>   
-## <a name="code-behind-event-handler-and-partial-class-requirements-in-wpf"></a>代码隐藏、 事件处理程序和 WPF 中的分部类要求  
+## <a name="code-behind-event-handler-and-partial-class-requirements-in-wpf"></a>WPF 中的代码隐藏、事件处理程序和分部类要求  
   
-- 分部类必须派生自支持的根元素的类型。  
+- 分部类必须派生自根元素支持的类型。  
   
-- 请注意，标记编译生成操作的默认行为下, 您可以将派生留空的分部类定义中的代码隐藏侧。 即使未指定，编译的结果将假定页面根后备类型的分部类的基础。 但是，依赖于此行为不是一种最佳做法。  
+- 请注意, 在标记编译生成操作的默认行为下, 可以在代码隐藏端的分部类定义中保留派生空白。 已编译的结果将假定页根的后备类型为分部类的基础, 即使未指定也是如此。 但是, 依赖于此行为并不是最佳做法。  
   
-- 在代码隐藏中编写的事件处理程序的实例方法，并且不能为静态方法。 这些方法必须由标识的 CLR 命名空间中的分部类定义`x:Class`。 您不能有资格的一个事件处理程序，以指示名称[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]处理器，查找事件布线，另一个类作用域中的事件处理程序。  
+- 在代码隐藏中编写的事件处理程序必须是实例方法, 并且不能是静态方法。 这些方法必须由标识`x:Class`的 CLR 命名空间中的分部类定义。 不能将事件处理程序的名称限定为指示[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]处理器在不同的类范围内查找事件布线的事件处理程序。  
   
-- 该处理程序必须在后备类型系统中匹配相应的事件的委托。  
+- 处理程序必须匹配后备类型系统中相应事件的委托。  
   
-- 对于 Microsoft Visual Basic 语言具体而言，您使用的是特定于语言的`Handles`关键字将处理程序相关联的实例和事件处理程序声明，而不是附加处理程序中的属性中[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。 但是，此方法也存在一些限制，因为`Handles`关键字不能支持所有的特定功能[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]事件系统，如某些路由事件方案或附加事件。 有关详细信息，请参阅[Visual Basic 和 WPF 事件处理](visual-basic-and-wpf-event-handling.md)。  
+- 对于 Microsoft Visual Basic 语言, 你可以使用特定`Handles`于语言的关键字在处理程序声明中将处理程序与实例和事件关联, 而不是使用中[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]的特性附加处理程序。 但是, 这种方法确实存在一些限制, `Handles`因为关键字不能支持[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]事件系统的所有特定功能, 如某些路由事件方案或附加事件。 有关详细信息, 请参阅[Visual Basic 和 WPF 事件处理](visual-basic-and-wpf-event-handling.md)。  
   
 <a name="x_Code"></a>   
 ## <a name="xcode"></a>x:Code  
- [X:code](../../xaml-services/x-code-intrinsic-xaml-type.md)中定义的指令元素[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。 `x:Code`指令元素可以包含嵌入式编程代码。 是以内联方式定义的代码可以与交互[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]同一页面上。 下面的示例说明了内联 C# 代码。 请注意，该代码位于`x:Code`元素和代码必须用引起`<CDATA[`...`]]>`用于对内容进行转义[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]，以便[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]处理器 (解释任一[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]架构或[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]架构) 不会尝试解释内容按字面意思为[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]。  
+ [x:Code](../../xaml-services/x-code-intrinsic-xaml-type.md)是在中[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]定义的指令元素。 `x:Code`指令元素可以包含内联编程代码。 以内联方式定义的代码可以与同一页[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]上的进行交互。 下面的示例说明内联C#代码。 请注意, 代码位于`x:Code`元素内部, 并且代码必须用 ... `<CDATA[`[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]若要对的内容[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]进行转义, 以便处理器 (解释架构或架构) 不会尝试按原义解释内容。 `]]>`  
   
  [!code-xaml[XAMLOvwSupport#ButtonWithInlineCode](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page4.xaml#buttonwithinlinecode)]  
   
 <a name="Inline_Code_Limitations"></a>   
-## <a name="inline-code-limitations"></a>内联代码的限制  
- 应考虑避免或限制的内联代码使用。 根据体系结构和编码基本原理，维护分离标记和代码隐藏保留设计器和开发人员角色得更为明显。 在更多技术级别中，为内联代码编写的代码可能难以编写，因为始终写入[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]生成的分部类，并且只能使用默认 XML 命名空间映射。 因为不能添加`using`语句，您必须完全限定的 API 调用所做的许多。 默认值[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]映射包括最而不是全部[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]命名空间中存在的[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]程序集; 必须完全限定的类型和成员中的其他 CLR 命名空间包含对的调用。 您还不能定义分部类以外的项目中的内联代码，并且您引用的所有用户代码实体必须都存在作为成员或生成的分部类中的变量。 其他语言特定编程功能，例如宏或`#ifdef`对全局变量或生成变量，也不是可用。 有关详细信息，请参阅[X:code 内部 XAML 类型](../../xaml-services/x-code-intrinsic-xaml-type.md)。  
+## <a name="inline-code-limitations"></a>内联代码限制  
+ 应考虑避免或限制使用内联代码。 就体系结构和编码理念而言, 维护标记和代码隐藏之间的分离使设计人员和开发人员角色更加独特。 在更多的技术级别上, 你为内联代码编写的代码可能会很难编写, 因为你始终会写入生成[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]的分部类, 并且只能使用默认的 XML 命名空间映射。 由于不能添加`using`语句, 因此必须完全限定你所做的多个 API 调用。 默认[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]映射包括[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]程序集中存在的大多数但不是所有的 CLR 命名空间; 必须完全限定对其他 CLR 命名空间中包含的类型和成员的调用。 你还不能在内联代码中定义除分部类之外的任何内容, 并且引用的所有用户代码实体都必须作为生成的分部类中的成员或变量存在。 其他特定于语言的编程功能 (如宏`#ifdef`或针对全局变量或生成变量) 也不可用。 有关详细信息, 请参阅[X:Code 内部 XAML 类型](../../xaml-services/x-code-intrinsic-xaml-type.md)。  
   
 ## <a name="see-also"></a>请参阅
 
