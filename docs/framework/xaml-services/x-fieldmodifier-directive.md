@@ -6,15 +6,15 @@ helpviewer_keywords:
 - x:FieldModifier attribute [XAML Services]
 - XAML [XAML Services], x:FieldModifier attribute
 ms.assetid: ed427cd4-2f35-4d24-bd2f-0fa7b71ec248
-ms.openlocfilehash: 0394522b8a006d6b187219c8ef7dfccd6556ffca
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 646ad1ca99d83f9fb2994f3c394eca27a60c0eac
+ms.sourcegitcommit: 4b9c2d893b45d47048c6598b4182ba87759b1b59
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64617081"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68484722"
 ---
 # <a name="xfieldmodifier-directive"></a>x:FieldModifier 指令
-修改 XAML 编译行为，以便与定义的已命名的对象引用的字段<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType>而不是访问<xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>默认行为。  
+修改 XAML 编译行为, 以便使用<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> access 而不<xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>是默认行为来定义命名对象引用的字段。  
   
 ## <a name="xaml-attribute-usage"></a>XAML 属性用法  
   
@@ -26,29 +26,29 @@ ms.locfileid: "64617081"
   
 |||  
 |-|-|  
-|*Public*|传递以指定确切的字符串<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType>与<xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>各不相同，具体取决于使用的代码隐藏编程语言。 请参阅“备注”。|  
+|*Public*|传递给指定<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType>的确切字符串与<xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>不同, 具体取决于所使用的代码隐藏编程语言。 请参阅“备注”。|  
   
 ## <a name="dependencies"></a>依赖项  
- 如果使用 XAML 生产`x:FieldModifier`任意位置，该 XAML 生产的根元素必须声明[X:class 指令](x-class-directive.md)。  
+ 如果 xaml 生产使用`x:FieldModifier`任意位置, 则该 xaml 生产的根元素必须声明[x:Class 指令](x-class-directive.md)。  
   
 ## <a name="remarks"></a>备注  
- `x:FieldModifier` 不相关的声明的类或其成员的常规访问级别。 如果是 XAML 生产的一部分的特定 XAML 对象处理时，并将成为应用程序的对象图中可以访问的对象，此选项仅适用于 XAML 处理行为。 默认情况下，此类对象的字段引用将保持私有，以防止控件使用者直接修改的对象图。 相反，控件使用者应使用标准模式的情况下启用的编程模型，如通过获取布局根、 子元素集合，专用的公共属性，修改对象图形等。  
+ `x:FieldModifier`与声明类或其成员的常规访问级别无关。 当处理作为 XAML 生产一部分的特定 XAML 对象时, 此方法仅适用于 XAML 处理行为, 并成为可在应用程序的对象图中访问的对象。 默认情况下, 此类对象的字段引用保持为私有, 这会阻止控件使用者直接修改对象图。 相反, 控件使用者应该使用由编程模型启用的标准模式 (如通过获取布局根、子元素集合、专用公共属性等) 来修改对象关系图。  
   
- 值为`x:FieldModifier`属性因编程语言，并在特定框架中它的用途而异。 要使用的字符串取决于如何实现每种语言及其<xref:System.CodeDom.Compiler.CodeDomProvider>和类型转换器，它将返回定义的含义<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType>和<xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>，以及该语言是否区分大小写。  
+ `x:FieldModifier`特性的值因编程语言而异, 其用途在特定框架中可能有所不同。 要使用的字符串取决于每种语言如何实现<xref:System.CodeDom.Compiler.CodeDomProvider>其和返回的类型转换器, 以定义<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType>和<xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>的含义, 以及该语言是否区分大小写。  
   
-- 对于 C#，要传递的用于指定的字符串<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType>是`public`。  
+- 对于C#, 要传递的要传递<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType>的字符串为。 `public`  
   
-- 用于 Microsoft Visual Basic.NET，要传递的用于指定的字符串<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType>是`Public`。  
+- 对于 Microsoft Visual Basic .net, 要传递<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> `Public`的字符串为。  
   
-- 有关[!INCLUDE[TLA2#tla_cppcli](../../../includes/tla2sharptla-cppcli-md.md)]，XAML 没有目标当前存在; 因此，要传递的字符串是不确定。  
+- 对于C++/cli, 当前不存在 XAML 的目标;因此, 传递的字符串未定义。  
   
- 此外可以指定<xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>(`internal`中C#， `Friend` Visual Basic 中) 但指定<xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>并不常见因为`NotPublic`因为该行为已是默认值。  
+ 你还可以在<xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> Visual Basic`internal`中C#指定`Friend` (在中), <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>但指定不`NotPublic`常见, 因为行为已是默认值。  
   
- <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> 是默认行为，因为它不是很频繁编译 XAML 的程序集之外的代码需要访问 XAML 创建的元素。 WPF 安全体系结构以及 XAML 编译行为将声明为公共，存储元素实例的字段，除非专门设置`x:FieldModifier`以允许公共访问。  
+ <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>是默认行为, 因为编译 XAML 的程序集之外的代码很少需要访问 XAML 创建的元素。 WPF 安全体系结构与 XAML 编译行为一起不会声明将元素实例存储为公共的字段, 除非您专门`x:FieldModifier`将设置为允许公共访问。  
   
- `x:FieldModifier` 带有的元素才[X:name 指令](x-name-directive.md)因为该名称用于引用后它是公共字段。  
+ `x:FieldModifier`仅适用于具有[X:Name 指令](x-name-directive.md)的元素, 因为该名称用于在其公开后引用字段。  
   
- 默认情况下，根元素的分部类是公共的则但是，您可以通过使其非公共使用[X:classmodifier 指令](x-classmodifier-directive.md)。 [X:classmodifier 指令](x-classmodifier-directive.md)还会影响根元素类的实例的访问级别。 将两者放入`x:Name`并`x:FieldModifier`根元素，但这仅生成公共字段副本的根元素，具有真正的根元素类访问级别仍受[X:classmodifier 指令](x-classmodifier-directive.md)。  
+ 默认情况下, 根元素的分部类是公共的;但是, 可以使用[X:ClassModifier 指令](x-classmodifier-directive.md)使其成为非公共的。 [X:ClassModifier 指令](x-classmodifier-directive.md)还会影响 root 元素类的实例的访问级别。 你可以将`x:Name`和`x:FieldModifier`置于根元素上, 但这只会生成根元素的公共字段副本, 其真正的根元素类访问级别仍由[x:ClassModifier 指令](x-classmodifier-directive.md)控制。  
   
 ## <a name="see-also"></a>请参阅
 

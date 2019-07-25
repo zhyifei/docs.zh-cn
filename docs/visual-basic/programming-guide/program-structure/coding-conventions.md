@@ -6,68 +6,68 @@ helpviewer_keywords:
 - examples [Visual Basic], coding conventions
 - Visual Basic code, conventions
 ms.assetid: c1df130b-fec6-49a5-becf-0a7e494a1d0f
-ms.openlocfilehash: fe07b01cfa62d8d1cbc2e4a61cac814425af7da0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 580a6e1caa78ea981b6d2be68a6e7c61e2ad55d7
+ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64639838"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68433812"
 ---
 # <a name="visual-basic-coding-conventions"></a>Visual Basic 编码约定
-Microsoft 开发的示例和文档，请按照本主题中的准则。 如果您遵循相同的编码约定，您可能会获得以下优势：  
+Microsoft 将按照本主题中的准则开发示例和文档。 如果遵循相同的编码约定, 可能会获得以下好处:  
   
-- 你的代码将具有一致的外观，以便读者可以更好地专注于内容而非布局。  
+- 你的代码将具有一致的外观, 以便读者可以更好地专注于内容而非布局。  
   
-- 读取器了解您的代码更快速因为它们可以使基于以前的经验的假设。  
+- 读者可以更快地了解你的代码, 因为它们可以根据以前的经验做出假设。  
   
-- 可以复制、 更改，并更轻松地维护代码。  
+- 您可以更轻松地复制、更改和维护代码。  
   
-- 可帮助确保您的代码演示 Visual Basic 的"最佳实践"。  
+- 您可以帮助确保您的代码演示 Visual Basic 的 "最佳实践"。  
   
 ## <a name="naming-conventions"></a>命名约定  
   
-- 有关命名指南的信息，请参阅[命名准则](../../../standard/design-guidelines/naming-guidelines.md)主题。  
+- 有关命名准则的信息, 请参阅[命名准则](../../../standard/design-guidelines/naming-guidelines.md)主题。  
   
-- 不使用"My"我的"作为变量名称的一部分。 此做法会与混淆`My`对象。  
+- 不要使用 "我的" 或 "我的" 作为变量名称的一部分。 这种做法会与`My`对象混淆。  
   
-- 无需更改自动生成的代码，使它们符合指南中的对象名称。  
+- 不需要在自动生成的代码中更改对象的名称, 使其符合指导原则。  
   
 ## <a name="layout-conventions"></a>布局约定  
   
-- 插入制表符作为空格，并使用智能缩进四空格缩进。  
+- 将制表符插入为空格, 并使用具有四个空格缩进的智能缩进。  
   
-- 使用**整齐排列代码 （重新格式化） 的**格式重新设置你的代码在代码编辑器中。 有关详细信息，请参阅[选项，文本编辑器，基本 (Visual Basic)](/visualstudio/ide/reference/options-text-editor-basic-visual-basic)。  
+- 使用**非常列表 (重新格式化) 代码**在代码编辑器中重新设置代码的格式。 有关详细信息, 请参阅[选项, 文本编辑器, 基本 (Visual Basic)](/visualstudio/ide/reference/options-text-editor-basic-visual-basic)。  
   
-- 使用每行只有一条语句。 不要使用 Visual Basic 行分隔符 （:）。  
+- 每行仅使用一条语句。 不要使用 Visual Basic 行分隔符 (:)。  
   
-- 避免使用隐式行继续符为支持显式行继续符"_"，无论该语言允许它在何处。  
+- 在语言允许的任何位置, 避免使用显式行继续符 "_" 来取代隐式行继续符。  
   
-- 使用每行只有一个声明。  
+- 每行仅使用一个声明。  
   
-- 如果**整齐排列代码 （重新格式化） 的**不格式化继续行自动、 手动缩进一个制表位的延续任务行。 但是，始终左对齐列表中的项。  
+- 如果在很多**情况下 (重新格式化) 代码**不会自动设置延续行的格式, 则手动将连续行缩进一个制表位。 但是, 始终左对齐列表中的项。  
   
     ```  
     a As Integer,  
     b As Integer  
     ```  
   
-- 添加方法和属性定义之间的至少一个空白行。  
+- 在方法和属性定义之间添加至少一个空白行。  
   
 ## <a name="commenting-conventions"></a>注释约定  
   
-- 将注释放在单独的行而不是代码行末尾处。  
+- 将注释放在单独的行上, 而不是放在代码行的末尾。  
   
-- 开始注释文本以大写字母，并使用句点结束注释文本。  
+- 以大写字母开始注释文本, 并以句点结束注释文本。  
   
-- 插入注释分隔符 （'） 和注释文本之间的一个空格。  
+- 在注释分隔符 (') 与注释文本之间插入一个空格。  
   
      [!code-vb[VbVbalrGuidelines#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#2)]  
   
-- 环绕在注释格式化的星号块。  
+- 不要在带格式的星号块中环绕注释。  
   
 ## <a name="program-structure"></a>程序结构  
   
-- 当你使用`Main`方法，使用默认构造进行新控制台应用程序，并使用`My`对命令行参数。  
+- 使用`Main`方法时, 请为新的控制台应用程序使用默认构造, `My`并使用作为命令行参数。  
   
      [!code-vb[VbVbalrGuidelines#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#3)]  
   
@@ -75,26 +75,28 @@ Microsoft 开发的示例和文档，请按照本主题中的准则。 如果您
   
 ### <a name="string-data-type"></a>String 数据类型  
   
-- 若要连接字符串，请使用与号 (&)。  
+- 使用[字符串内插](https://docs.microsoft.com/dotnet/visual-basic/programming-guide/language-features/strings/interpolated-strings)来连接短字符串，如下面的代码所示。
   
-     [!code-vb[VbVbalrGuidelines#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#4)]  
+     ```vb
+     MsgBox($"hello{vbCrLf}goodbye")
+     ```
   
-- 若要追加在循环中的字符串，请使用<xref:System.Text.StringBuilder>对象。  
+- 若要在循环中追加字符串, <xref:System.Text.StringBuilder>请使用对象。  
   
      [!code-vb[VbVbalrGuidelines#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#5)]  
   
-### <a name="relaxed-delegates-in-event-handlers"></a>事件处理程序中的宽松的委托  
- 不显式符合条件的参数 （对象和 EventArgs） 到事件处理程序。 如果不使用传递给事件 （例如，发送方为对象，e 为 EventArgs） 的事件参数，使用宽松的委托，并将在代码中的事件参数：  
+### <a name="relaxed-delegates-in-event-handlers"></a>事件处理程序中的宽松委托  
+ 不要将参数 (对象和 EventArgs) 显式限定到事件处理程序。 如果未使用传递给事件的事件参数 (例如, 作为对象的发送方、e 作为 EventArgs), 请使用宽松委托, 并在代码中留下事件参数:  
   
  [!code-vb[VbVbalrGuidelines#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#7)]  
   
 ### <a name="unsigned-data-type"></a>无符号数据类型  
   
-- 使用`Integer`而不是无符号类型，将在必要时除外。  
+- 使用`Integer`而不是无符号类型, 但它们是必需的。  
   
 ### <a name="arrays"></a>数组  
   
-- 在初始化数组声明行上的时，请使用短语法。 例如，使用以下语法。  
+- 在声明行上初始化数组时, 请使用短语法。 例如, 使用以下语法。  
   
      [!code-vb[VbVbalrGuidelines#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#8)]  
   
@@ -102,106 +104,106 @@ Microsoft 开发的示例和文档，请按照本主题中的准则。 如果您
   
      [!code-vb[VbVbalrGuidelines#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#9)]  
   
-- 将数组指定符置于类型上而不是变量上。 例如，使用以下语法：  
+- 将数组指示符置于类型上, 而不是变量上。 例如, 使用以下语法:  
   
      [!code-vb[VbVbalrGuidelines#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#11)]  
   
-     不要使用以下语法：  
+     不要使用以下语法:  
   
      [!code-vb[VbVbalrGuidelines#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#10)]  
   
-- 当声明和初始化基本数据类型的数组时，请使用 {} 语法。 例如，使用以下语法：  
+- 声明和初始化基本数据类型的数组时, 请使用 {} 语法。 例如, 使用以下语法:  
   
      [!code-vb[VbVbalrGuidelines#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#12)]  
   
-     不要使用以下语法：  
+     不要使用以下语法:  
   
      [!code-vb[VbVbalrGuidelines#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#13)]  
   
 ### <a name="use-the-with-keyword"></a>使用 With 关键字  
- 当你进行一系列调用到一个对象时，请考虑使用`With`关键字：  
+ 对一个对象进行一系列调用时, 请考虑使用`With`关键字:  
   
  [!code-vb[VbVbalrGuidelines#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#15)]  
   
-### <a name="use-the-trycatch-and-using-statements-when-you-use-exception-handling"></a>可以使用 Try...Catch 和 Using 语句时使用异常处理  
+### <a name="use-the-trycatch-and-using-statements-when-you-use-exception-handling"></a>使用 Try .。。使用异常处理时捕获和使用语句  
  请勿使用 `On Error Goto`。  
   
 ### <a name="use-the-isnot-keyword"></a>使用 IsNot 关键字  
- 使用`IsNot`关键字而不是`Not...Is Nothing`。  
+ 使用关键字而不是`Not...Is Nothing` `IsNot` 。  
   
-### <a name="new-keyword"></a>新的关键字  
+### <a name="new-keyword"></a>New 关键字  
   
-- 使用短实例化。 例如，使用以下语法：  
+- 使用短实例化。 例如, 使用以下语法:  
   
      [!code-vb[VbVbalrGuidelines#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#21)]  
   
-     前面的行是等效于此：  
+     前面的行等效于:  
   
      [!code-vb[VbVbalrGuidelines#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#22)]  
   
-- 使用对象初始值设定项的新对象而不是无参数构造函数：  
+- 为新对象使用对象初始值设定项, 而不使用无参数构造函数:  
   
      [!code-vb[VbVbalrGuidelines#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#23)]  
   
 ### <a name="event-handling"></a>事件处理  
   
-- 使用`Handles`而非`AddHandler`:  
+- `Handles` 使用`AddHandler`而不是:  
   
      [!code-vb[VbVbalrGuidelines#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#24)]  
   
-- 使用`AddressOf`，并执行不显式实例化委托：  
+- 使用`AddressOf`, 并且不显式实例化委托:  
   
      [!code-vb[VbVbalrGuidelines#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#25)]  
   
-- 在定义事件时，使用短语法并让编译器定义此委托：  
+- 定义事件时, 请使用 short 语法, 并让编译器定义委托:  
   
      [!code-vb[VbVbalrGuidelines#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#26)]  
   
-- 不要验证事件是否是`Nothing`(null)，然后再调用`RaiseEvent`方法。 `RaiseEvent` 检查`Nothing`引发事件之前。  
+- `Nothing` 在`RaiseEvent`调用方法之前, 不要验证事件是否为 (null)。 `RaiseEvent`在引发`Nothing`事件之前进行检查。  
   
-### <a name="using-shared-members"></a>使用共享的成员  
- 调用`Shared`使用类名称，不能从一个实例变量的成员。  
+### <a name="using-shared-members"></a>使用共享成员  
+ 使用`Shared`类名称 (而不是从实例变量) 调用成员。  
   
 ### <a name="use-xml-literals"></a>使用 XML 文本  
- XML 文本简化了在使用 XML （例如，加载、 查询和转换） 时遇到的最常见任务。 当使用 XML 进行开发时，请遵循以下准则：  
+ XML 文本简化了使用 XML 时所遇到的最常见任务 (例如, 加载、查询和转换)。 当你用 XML 开发时, 请遵循以下准则:  
   
-- 使用 XML 文本创建 XML 文档和片段，而不直接调用 XML Api。  
+- 使用 XML 文本来创建 XML 文档和片段, 而不是直接调用 XML Api。  
   
-- 导入 XML 命名空间在文件或项目级别，以充分利用 XML 文本的性能优化。  
+- 在文件或项目级别导入 XML 命名空间, 以利用 XML 文本的性能优化。  
   
-- 使用 XML 轴属性访问元素和 XML 文档中的属性。  
+- 使用 XML 轴属性可以访问 XML 文档中的元素和属性。  
   
-- 使用嵌入的表达式包括值并创建从现有值而不是使用 API 调用，如 XML`Add`方法：  
+- 使用嵌入的表达式包含值和从现有值创建 XML, 而不是使用 API 调用 (如`Add`方法):  
   
      [!code-vb[VbVbalrGuidelines#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#27)]  
   
 ### <a name="linq-queries"></a>LINQ 查询  
   
-- 对查询变量使用有意义的名称：  
+- 对查询变量使用有意义的名称:  
   
      [!code-vb[VbVbalrGuidelines#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#28)]  
   
-- 为确保匿名类型的属性名称正确大写使用 Pascal 的查询中的元素提供名称大小写：  
+- 为查询中的元素提供名称, 以确保匿名类型的属性名称使用 Pascal 大小写正确地大写:  
   
      [!code-vb[VbVbalrGuidelines#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#29)]  
   
-- 如果结果中的属性名称模棱两可，请对属性重命名。 例如，如果您的查询返回一个客户名称和一个订单 ID，重命名它们而不是它们保留为`Name`和`ID`结果中：  
+- 如果结果中的属性名称模棱两可，请对属性重命名。 例如, 如果你的查询返回客户名称和订单 ID, 请将它们重命名, 而不是`Name` `ID`在结果中保留它们:  
   
      [!code-vb[VbVbalrGuidelines#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#30)]  
   
-- 查询变量和范围变量的声明中使用类型推断功能：  
+- 在查询变量和范围变量的声明中使用类型推理:  
   
      [!code-vb[VbVbalrGuidelines#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#31)]  
   
-- 对齐下的查询子句`From`语句：  
+- 对齐语句下的`From`查询子句:  
   
      [!code-vb[VbVbalrGuidelines#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#32)]  
   
-- 使用`Where`子句之前其他查询子句，以便更高版本的查询子句作用于筛选的数据集：  
+- 在`Where`其他查询子句之前使用子句, 以便后面的查询子句对筛选的数据集执行操作:  
   
      [!code-vb[VbVbalrGuidelines#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#33)]  
   
-- 使用`Join`子句显式定义的联接操作，而不是使用`Where`子句隐式定义联接操作：  
+- 使用子句显式定义联接运算, 而不是`Where`使用子句隐式定义联接运算: `Join`  
   
      [!code-vb[VbVbalrGuidelines#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#34)]  
   
