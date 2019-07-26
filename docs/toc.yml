@@ -68,12 +68,7 @@
     - name: 处理和引发异常
       href: standard/exceptions/
     - name: .NET 中的程序集
-      href: standard/assembly/index.md
-      items:
-        - name: .NET 程序集文件格式
-          href: standard/assembly/file-format.md
-        - name: 如何：在 .NET Core 中使用和调试程序集可卸载性
-          href: standard/assembly/unloadability-howto.md
+      href: standard/assembly/
     - name: 垃圾回收
       href: standard/garbage-collection/
     - name: 泛型类型

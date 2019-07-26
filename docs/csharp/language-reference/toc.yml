@@ -207,8 +207,6 @@
           items:
             - name: await
               href: keywords/await.md
-            - name: sizeof
-              href: keywords/sizeof.md
         - name: 访问关键字
           items:
             - name: base
@@ -340,6 +338,8 @@
           href: operators/nameof.md
         - name: new 运算符
           href: operators/new-operator.md
+        - name: sizeof 运算符
+          href: operators/sizeof.md
         - name: stackalloc 运算符
           href: operators/stackalloc.md
         - name: true 和 false 运算符
