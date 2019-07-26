@@ -15,130 +15,140 @@ helpviewer_keywords:
 - scope [Visual Basic], Visual Basic
 - procedure scope [Visual Basic]
 ms.assetid: 208106fe-79c9-4eec-93c6-55f08548895f
-ms.openlocfilehash: 806e4605411304f58d0428f2588454ba9652946e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7f7e32d6ac838e250c260987d3d5c375f8697c45
+ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64610370"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68512852"
 ---
 # <a name="scope-in-visual-basic"></a>Visual Basic 中的范围
-*作用域*声明的元素是一组的所有代码都可以引用它而无需限定其名称或使其可通过[Imports 语句 （.NET Namespace 和类型）](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)。 元素可以具有以下级别之一的作用域：  
-  
-|级别|描述|  
-|-----------|-----------------|  
-|块范围|在声明它仅在代码中的可用块|  
-|过程范围|适用于在其中声明的过程中的所有代码|  
-|模块范围内|适用于在模块、 类或结构声明它的所有代码|  
-|Namespace 作用域|适用于在其中声明的命名空间中的所有代码|  
-  
- 这些级别范围从最小 （块） 到最宽 （命名空间），其中*最小范围*意味着可以引用而无需限定的元素的代码的最小集。 有关详细信息，请参阅此页上的"级别的作用域"。  
-  
-## <a name="specifying-scope-and-defining-variables"></a>指定作用域，以及定义变量  
- 在声明它时指定元素的范围。 作用域取决于以下因素：  
-  
-- 在其中声明该元素的区域 （块、 过程、 模块、 类或结构）  
-  
-- 包含元素的声明的命名空间  
-  
-- 为元素声明的访问级别  
-  
- 时要格外小心定义变量具有相同名称但不同的作用域，因为这样做可能会导致意外结果。 有关详细信息，请参阅 [References to Declared Elements](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)。  
-  
-## <a name="levels-of-scope"></a>级别的作用域  
- 编程元素是在整个声明它的区域中可用。 同一区域中的所有代码可以无需限定其名称都引用该元素。  
-  
-### <a name="block-scope"></a>块范围  
- 块是一组语句包含在启动和终止声明语句，如下所示：  
-  
-- `Do` 和 `Loop`  
-  
-- `For` [`Each`] 和 `Next`  
-  
-- `If` 和 `End If`  
-  
-- `Select` 和 `End Select`  
-  
-- `SyncLock` 和 `End SyncLock`  
-  
-- `Try` 和 `End Try`  
-  
-- `While` 和 `End While`  
-  
-- `With` 和 `End With`  
-  
- 如果您声明一个块内的变量，可以仅在该块中使用它。 在下面的示例中，整数变量的作用域`cube`是块之间`If`和`End If`，你可以不再引用`cube`时将执行传递到块之外。  
-  
-```  
-If n < 1291 Then  
-    Dim cube As Integer  
-    cube = n ^ 3  
-End If  
-```  
-  
+
+已声明元素的*作用域*是所有可引用它的代码的集合, 无需限定其名称或通过[Imports 语句 (.net 命名空间和类型)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)提供它。 元素可以具有以下级别之一的作用域:
+
+|级别|描述|
+|-----------|-----------------|
+|块范围|仅在声明它的代码块内可用|
+|过程范围|对声明它的过程中的所有代码可用|
+|模块范围|适用于声明它的模块、类或结构中的所有代码|
+|命名空间范围|可用于声明它的命名空间中的所有代码|
+
+这种级别的作用域从最小 (块) 到最宽 (命名空间) 的范围进度, 其中最*窄的范围*指的是可以引用元素而不进行限定的最小代码集。 有关详细信息, 请参阅本页上的 "范围级别"。
+
+## <a name="specifying-scope-and-defining-variables"></a>指定作用域和定义变量
+
+在声明元素时指定其作用域。 范围可能取决于以下因素:
+
+- 声明元素的区域 (块、过程、模块、类或结构)
+
+- 包含元素声明的命名空间
+
+- 为元素声明的访问级别
+
+定义名称相同但范围不同的变量时请小心, 因为这样做可能会导致意外的结果。 有关详细信息，请参阅 [References to Declared Elements](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)。
+
+## <a name="levels-of-scope"></a>范围级别
+
+编程元素可在声明它的整个区域内使用。 同一区域中的所有代码都可以引用元素, 而无需限定其名称。
+
+### <a name="block-scope"></a>块范围
+
+块是包含在启动和终止声明语句中的一组语句, 如下所示:
+
+- `Do` 和 `Loop`
+
+- `For`[`Each`] 和`Next`
+
+- `If` 和 `End If`
+
+- `Select` 和 `End Select`
+
+- `SyncLock` 和 `End SyncLock`
+
+- `Try` 和 `End Try`
+
+- `While` 和 `End While`
+
+- `With` 和 `End With`
+
+如果在块中声明一个变量, 则只能在该块内使用它。 在下面的示例中, `cube`整数变量的作用域是介于和`End If`之间`If`的块`cube` , 当执行传递到块时, 你将无法再引用。
+
+```vb
+If n < 1291 Then
+    Dim cube As Integer
+    cube = n ^ 3
+End If
+```
+
 > [!NOTE]
->  即使变量的作用域仅限于一个块，其生存期内仍为整个过程。 如果在该过程一次输入块，每个块变量将保留以前的值。 若要避免这种情况中的意外的结果，明智的做法是在块的开始处的块变量进行初始化。  
-  
-### <a name="procedure-scope"></a>过程范围  
- 一个过程中声明的元素不在该过程外可用。 仅包含声明的过程可以使用它。 在此级别的变量是也称为*局部变量*。 将它们与声明[Dim 语句](../../../../visual-basic/language-reference/statements/dim-statement.md)用或者不用[静态](../../../../visual-basic/language-reference/modifiers/static.md)关键字。  
-  
- 过程和块范围关系十分紧密。 如果要声明的变量在过程内，但在该过程中的任何块外，您可以将变量作为具有块范围，其中块就是整个过程。  
-  
+> 即使变量的作用域限制为块, 其生存期仍是整个过程的生存期。 如果在过程中多次输入块, 则每个块变量将保留其以前的值。 若要避免在这种情况下出现意外结果, 最好在块的开头初始化块变量。
+
+### <a name="procedure-scope"></a>过程范围
+
+在过程中声明的元素在该过程之外不可用。 只有包含声明的过程可以使用它。 此级别的变量也称为*局部变量*。 用[Dim 语句](../../../../visual-basic/language-reference/statements/dim-statement.md)声明它们, 无论是还是不带[Static](../../../../visual-basic/language-reference/modifiers/static.md)关键字。
+
+过程和块范围密切相关。 如果在过程内但在该过程中的任何块外声明变量, 则可以将变量视为具有块范围, 其中块是整个过程。
+
 > [!NOTE]
->  所有局部元素，即使它们是`Static`变量，是专用于其显示的过程。 不能声明任何元素使用[公共](../../../../visual-basic/language-reference/modifiers/public.md)过程中的关键字。  
-  
-### <a name="module-scope"></a>模块范围内  
- 为方便起见，单个字词*模块级别*同样适用于模块、 类和结构。 可以通过将声明语句之外的任何过程或块，但模块、 类或结构中声明此级别的元素。  
-  
- 在模块级别声明时，你选择的访问权限级别确定作用域。 包含模块、 类或结构的命名空间还会影响作用域。  
-  
- 为其声明的元素[专用](../../../../visual-basic/language-reference/modifiers/private.md)访问级别都可用的另一个模块中的任何代码的每个过程在该模块中，而不可用。 `Dim`语句在模块级别的默认值为`Private`如果不使用任何访问级别关键字。 但是，您使用可以进行的作用域和访问级别更明显`Private`中的关键字`Dim`语句。  
-  
- 模块中定义的所有过程的字符串变量，在以下示例中，可以都引用`strMsg`。 当调用第二个过程时，它将显示的字符串变量的内容`strMsg`对话框框中。  
-  
-```  
-' Put the following declaration at module level (not in any procedure).  
-Private strMsg As String  
-' Put the following Sub procedure in the same module.  
-Sub initializePrivateVariable()  
-    strMsg = "This variable cannot be used outside this module."  
-End Sub  
-' Put the following Sub procedure in the same module.  
-Sub usePrivateVariable()  
-    MsgBox(strMsg)  
-End Sub  
-```  
-  
-### <a name="namespace-scope"></a>Namespace 作用域  
- 如果声明在模块级别使用的元素[友元](../../../../visual-basic/language-reference/modifiers/friend.md)或[公共](../../../../visual-basic/language-reference/modifiers/public.md)关键字，将其提供给整个在其中声明该元素的命名空间的所有过程。 与前面的示例中，字符串变量进行如下更改`strMsg`可以由其声明的命名空间中的任意位置的代码引用。  
-  
-```  
-' Include this declaration at module level (not inside any procedure).  
-Public strMsg As String  
-```  
-  
- Namespace 作用域包括嵌套的命名空间。 可从命名空间内的元素也是可从嵌套在该命名空间内的任何命名空间。  
-  
- 如果你的项目不包含任何[Namespace 语句](../../../../visual-basic/language-reference/statements/namespace-statement.md)s，项目中的所有内容都是相同的命名空间中。 在这种情况下，可以将命名空间范围视为项目范围。 `Public` 模块、 类或结构中的元素也是可用于引用其项目的任何项目。  
-  
-## <a name="choice-of-scope"></a>所选的作用域  
- 在声明变量时，您应记住以下几点选择其作用域内时。  
-  
-### <a name="advantages-of-local-variables"></a>本地变量的优点  
- 本地变量是出于以下原因适合用于临时计算的任何类型：  
-  
-- **避免名称冲突。** 本地变量名称不容易发生冲突。 例如，可以创建多个不同的过程包含一个名为变量`intTemp`。 只要每个`intTemp`被声明为局部变量，每个过程识别其自己的版本的`intTemp`。 任何一个步骤可能会更改其本地中的值`intTemp`而不会影响`intTemp`其他过程中的变量。  
-  
-- **内存占用情况。** 本地变量仅在其过程运行时占用的内存。 该过程返回到调用代码时，会释放其内存。 与此相反，[共享](../../../../visual-basic/language-reference/modifiers/shared.md)并[静态](../../../../visual-basic/language-reference/modifiers/static.md)变量消耗内存资源，直到你的应用程序停止运行，因此，它们仅在必要时使用。 *实例变量*占用内存实例继续存在，这使它们更少比本地变量有效，但可能会比效率更高`Shared`或`Static`变量。  
-  
-### <a name="minimizing-scope"></a>最大程度减少作用域  
- 一般情况下，当声明的任何变量或常量时，它编程最佳做法是使其范围尽可能窄 （块范围是最小）。 这有助于节约内存和最大程度减少你错误地引用错误的变量的代码的可能性。 同样，应将变量声明[静态](../../../../visual-basic/language-reference/modifiers/static.md)仅当有必要过程调用之间保留值。  
-  
+> 所有本地元素 (即使它们是`Static`变量) 都专用于它们出现的过程。 不能在过程中使用[Public](../../../../visual-basic/language-reference/modifiers/public.md)关键字声明任何元素。
+
+### <a name="module-scope"></a>模块范围
+
+为方便起见, 单术语*模块级别*同样适用于模块、类和结构。 您可以通过将声明语句置于任何过程或块的外部, 但在模块、类或结构中, 在此级别声明元素。
+
+在模块级别进行声明时, 所选的访问级别将确定范围。 包含模块、类或结构的命名空间还会影响范围。
+
+声明[专用](../../../../visual-basic/language-reference/modifiers/private.md)访问级别的元素可用于该模块中的每个过程, 但不能用于不同模块中的任何代码。 如果`Dim`不使用任何访问级别关键字`Private` , 模块级别的语句将默认为。 但是, 可以`Private` `Dim`在语句中使用关键字, 使作用域和访问级别更明显。
+
+在下面的示例中, 模块中定义的所有过程都可以引用字符串变量`strMsg`。 调用第二个过程时, 将在对话框中显示字符串变量`strMsg`的内容。
+
+```vb
+' Put the following declaration at module level (not in any procedure).
+Private strMsg As String
+' Put the following Sub procedure in the same module.
+Sub initializePrivateVariable()
+    strMsg = "This variable cannot be used outside this module."
+End Sub
+' Put the following Sub procedure in the same module.
+Sub usePrivateVariable()
+    MsgBox(strMsg)
+End Sub
+```
+
+### <a name="namespace-scope"></a>命名空间范围
+
+如果使用[Friend](../../../../visual-basic/language-reference/modifiers/friend.md)或[Public](../../../../visual-basic/language-reference/modifiers/public.md)关键字在模块级别声明一个元素, 则该元素将可用于声明该元素的整个命名空间中的所有过程。 对于前面的示例的以下更改, 字符串变量`strMsg`可以在其声明的命名空间中的任何位置通过代码引用。
+
+```vb
+' Include this declaration at module level (not inside any procedure).
+Public strMsg As String
+```
+
+命名空间范围包括嵌套命名空间。 命名空间中的可用元素也可以从嵌套在该命名空间中的任何命名空间中使用。
+
+如果你的项目不包含任何[命名空间语句](../../../../visual-basic/language-reference/statements/namespace-statement.md), 则项目中的所有内容都在相同的命名空间中。 在这种情况下, 可以将命名空间范围视为项目范围。 `Public`模块、类或结构中的元素也可用于引用其项目的任何项目。
+
+## <a name="choice-of-scope"></a>范围选择
+
+当你声明变量时, 在选择其作用域时应牢记以下几点。
+
+### <a name="advantages-of-local-variables"></a>局部变量的优点
+
+局部变量对于任何类型的临时计算都是一个不错的选择, 原因如下:
+
+- **避免名称冲突。** 局部变量名称不容易发生冲突。 例如, 可以创建几个不同的过程, 其中包含一个`intTemp`名为的变量。 只要每个`intTemp`都声明为局部变量, 每个过程就只能识别自己的`intTemp`版本。 任何一个过程都可以更改其本地`intTemp`中的值, 而不会影响`intTemp`其他过程中的变量。
+
+- **内存消耗。** 局部变量仅在其过程正在运行时占用内存。 当过程返回到调用代码时, 将释放其内存。 相反,[共享](../../../../visual-basic/language-reference/modifiers/shared.md)和[静态](../../../../visual-basic/language-reference/modifiers/static.md)变量将消耗内存资源, 直到应用程序停止运行, 因此仅在必要时才使用它们。 *实例变量*会在其实例继续存在时使用内存, 这使得它们的效率低于局部变量, 但可能更高效`Shared`。 `Static`
+
+### <a name="minimizing-scope"></a>最小化范围
+
+通常情况下, 在声明任何变量或常量时, 最好将范围设置为尽可能缩小 (块范围是最小)。 这有助于节省内存, 并最大程度地减少代码错误引用错误变量的几率。 同样, 仅当需要在过程调用之间保留变量值时, 才应将该变量声明为[静态](../../../../visual-basic/language-reference/modifiers/static.md)。
+
 ## <a name="see-also"></a>请参阅
 
 - [已声明元素的特性](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)
 - [如何：控制变量的作用域](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md)
-- [在 Visual Basic 中的生存期](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
-- [在 Visual Basic 中的访问级别](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [生存期 (Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
+- [Visual Basic 中的访问级别](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [对已声明元素的引用](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
 - [变量声明](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)

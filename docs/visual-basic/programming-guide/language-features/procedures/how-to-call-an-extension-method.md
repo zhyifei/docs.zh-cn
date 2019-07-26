@@ -5,97 +5,98 @@ helpviewer_keywords:
 - calling extension methods [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: df07750f-40f4-4c07-a79e-1113a27cfbea
-ms.openlocfilehash: 5cb0684637a716dfec947740ba345c62eaabddd7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f2058162ab939d2619d7255c884d88c35ee63715
+ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61863670"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68512676"
 ---
 # <a name="how-to-call-an-extension-method-visual-basic"></a>如何：调用扩展方法 (Visual Basic)
-扩展方法，可将方法添加到现有类。 声明的扩展方法并将其引入到范围后，可以调用它类似于它所扩展的类型的实例方法。 有关如何编写扩展方法的详细信息，请参阅[如何：编写扩展方法](./how-to-write-an-extension-method.md)。  
-  
- 以下说明，请参阅扩展方法`PrintAndPunctuate`，随后会显示调用它的任何值后跟的字符串实例中发送的第二个参数， `punc`。  
-  
-```vb  
-Imports System.Runtime.CompilerServices  
-  
-Module StringExtensions  
-    <Extension()>   
-    Public Sub PrintAndPunctuate(ByVal aString As String,   
-                                 ByVal punc As String)  
-        Console.WriteLine(aString & punc)  
-    End Sub  
-  
-End Module  
-```  
-  
- 该方法必须在范围内，被调用时。  
-  
-### <a name="to-call-an-extension-method"></a>若要调用扩展方法  
-  
-1. 声明具有扩展方法的第一个参数的数据类型的变量。 有关`PrintAndPunctuate`，你需要<xref:System.String>变量：  
-  
-    ```  
-    Dim example = "Ready"  
-    ```  
-  
-2. 变量将调用扩展方法，和它的值绑定到的第一个参数， `aString`。 将显示以下调用语句`Ready?`。  
-  
-    ```  
-    example.PrintAndPunctuate("?")  
-    ```  
-  
-     请注意，对此扩展方法的调用看起来就像对任何一个调用<xref:System.String>实例需要一个参数的方法：  
-  
-    ```  
-    example.EndsWith("dy")  
-    example.IndexOf("R")  
-    ```  
-  
-3. 声明另一个字符串变量，并再次调用方法以查看其工作与任何字符串。  
-  
-    ```  
-    Dim example2 = " or not"  
-    example2.PrintAndPunctuate("!!!")  
-    ```  
-  
-     结果这一次是： `or not!!!`。  
-  
-## <a name="example"></a>示例  
- 下面的代码是创建的一个完整的示例和使用简单的扩展方法。  
-  
-```vb  
-Imports System.Runtime.CompilerServices  
-Imports ConsoleApplication1.StringExtensions  
-  
-Module Module1  
-  
-    Sub Main()  
-  
-        Dim example = "Hello"  
-        example.PrintAndPunctuate(".")  
-        example.PrintAndPunctuate("!!!!")  
-  
-        Dim example2 = "Goodbye"  
-        example2.PrintAndPunctuate("?")  
-    End Sub  
-  
-    <Extension()>   
-    Public Sub PrintAndPunctuate(ByVal aString As String,   
-                                 ByVal punc As String)  
-        Console.WriteLine(aString & punc)  
-    End Sub  
-End Module  
-  
-' Output:  
-' Hello.  
-' Hello!!!!  
-' Goodbye?  
-```  
-  
+
+扩展方法使你能够向现有类添加方法。 在扩展方法被声明并引入作用域后, 可以像它所扩展的类型的实例方法一样调用它。 有关如何编写扩展方法的详细信息, 请参阅[如何:编写扩展方法](./how-to-write-an-extension-method.md)。
+
+ 下面的说明引用 extension 方法, `PrintAndPunctuate`该方法将显示调用它的字符串实例, 然后在中为第二个`punc`参数发送任何值。
+
+```vb
+Imports System.Runtime.CompilerServices
+
+Module StringExtensions
+    <Extension()>
+    Public Sub PrintAndPunctuate(ByVal aString As String,
+                                 ByVal punc As String)
+        Console.WriteLine(aString & punc)
+    End Sub
+
+End Module
+```
+
+调用方法时, 该方法必须在范围内。
+
+### <a name="to-call-an-extension-method"></a>调用扩展方法
+
+1. 声明一个变量, 该变量的数据类型为扩展方法的第一个参数。 对于`PrintAndPunctuate`, 需要一个<xref:System.String>变量:
+
+    ```vb
+    Dim example = "Ready"
+    ```
+
+2. 该变量将调用扩展方法, 并且其值绑定到第一个参数`aString`。 将显示`Ready?`下面的调用语句。
+
+    ```vb
+    example.PrintAndPunctuate("?")
+    ```
+
+     请注意, 对此扩展方法的调用看起来就像调用需要一个参数的<xref:System.String>任何一个实例方法:
+
+    ```vb
+    example.EndsWith("dy")
+    example.IndexOf("R")
+    ```
+
+3. 声明另一个字符串变量并再次调用方法, 以查看它是否适用于任何字符串。
+
+    ```vb
+    Dim example2 = " or not"
+    example2.PrintAndPunctuate("!!!")
+    ```
+
+     此时间的结果为: `or not!!!`。
+
+## <a name="example"></a>示例
+ 下面的代码是创建和使用简单扩展方法的完整示例。
+
+```vb
+Imports System.Runtime.CompilerServices
+Imports ConsoleApplication1.StringExtensions
+
+Module Module1
+
+    Sub Main()
+
+        Dim example = "Hello"
+        example.PrintAndPunctuate(".")
+        example.PrintAndPunctuate("!!!!")
+
+        Dim example2 = "Goodbye"
+        example2.PrintAndPunctuate("?")
+    End Sub
+
+    <Extension()>
+    Public Sub PrintAndPunctuate(ByVal aString As String,
+                                 ByVal punc As String)
+        Console.WriteLine(aString & punc)
+    End Sub
+End Module
+
+' Output:
+' Hello.
+' Hello!!!!
+' Goodbye?
+```
+
 ## <a name="see-also"></a>请参阅
 
 - [如何：编写扩展方法](./how-to-write-an-extension-method.md)
 - [扩展方法](./extension-methods.md)
-- [在 Visual Basic 中的作用域](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [范围 Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)

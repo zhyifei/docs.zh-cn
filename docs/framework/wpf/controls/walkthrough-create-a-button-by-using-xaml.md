@@ -4,33 +4,33 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - buttons [WPF]
 ms.assetid: 138c41c4-1759-4bbf-8d77-77031a06a8a0
-ms.openlocfilehash: f7652b0c63212f9566c709421b56168377a0ace3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2dfa70515fb257740015e4d6d75ef9d8a6007006
+ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665211"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68512818"
 ---
 # <a name="walkthrough-create-a-button-by-using-xaml"></a>演练：使用 XAML 创建按钮
-本演练的目的是了解如何创建 Windows Presentation Foundation (WPF) 应用程序中使用的动画的按钮。 本演练使用样式和模板来创建自定义的按钮资源允许重用代码和从按钮声明按钮逻辑的分离。 本演练完全在编写[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]。  
+本演练的目的是了解如何创建在 Windows Presentation Foundation (WPF) 应用程序中使用的动画按钮。 本演练使用样式和模板来创建自定义的按钮资源, 以允许在按钮声明中重复使用代码和按钮逻辑分离。 本演练完全是在中[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]编写的。  
   
 > [!IMPORTANT]
->  本演练将指导您完成创建应用程序，通过键入或复制并粘贴步骤[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]到 Microsoft Visual Studio。 如果你想要了解如何使用设计工具 (Microsoft Expression Blend) 来创建相同的应用程序，请参阅[创建一个按钮通过使用 Microsoft Expression Blend](walkthrough-create-a-button-by-using-microsoft-expression-blend.md)。  
+>  本演练将指导你完成通过键入或复制并粘贴[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]到 Microsoft Visual Studio 创建应用程序的步骤。 如果希望了解如何使用设计工具 (Microsoft Expression Blend) 创建相同的应用程序, 请参阅[使用 Microsoft Expression Blend 创建按钮](walkthrough-create-a-button-by-using-microsoft-expression-blend.md)。  
   
- 下图显示了已完成的按钮。  
+ 下图显示了 "已完成" 按钮。  
   
- ![通过使用 XAML 创建的自定义按钮](./media/custom-button-animatedbutton-5.gif "custom_button_AnimatedButton_5")  
+ ![使用 XAML 创建的自定义按钮](./media/custom-button-animatedbutton-5.gif "custom_button_AnimatedButton_5")  
   
 ## <a name="create-basic-buttons"></a>创建基本按钮  
- 让我们首先创建一个新项目并将几个按钮添加到窗口。  
+ 首先创建一个新项目, 并向该窗口添加几个按钮。  
   
-#### <a name="to-create-a-new-wpf-project-and-add-buttons-to-the-window"></a>若要创建新的 WPF 项目并将按钮添加到窗口  
+#### <a name="to-create-a-new-wpf-project-and-add-buttons-to-the-window"></a>创建新的 WPF 项目并向窗口中添加按钮  
   
 1. 启动 Visual Studio。  
   
-2. **创建新的 WPF 项目：** 在 **“文件”** 菜单上，指向 **“新建”**，然后单击 **“项目”**。 查找**Windows 应用程序 (WPF)** 模板，并命名项目"AnimatedButton"。 这将创建应用程序的主干。  
+2. **创建新的 WPF 项目:** 在 **“文件”** 菜单上，指向 **“新建”** ，然后单击 **“项目”** 。 找到**Windows 应用程序 (WPF)** 模板, 并将项目命名为 "AnimatedButton"。 这将创建应用程序的主干。  
   
-3. **添加基本的默认按钮：** 在本演练中所需的所有文件均由模板都提供。 通过双击它在解决方案资源管理器中打开 Window1.xaml 文件。 默认情况下，没有<xref:System.Windows.Controls.Grid>在 Window1.xaml 中的元素。 删除<xref:System.Windows.Controls.Grid>元素，并添加到了几个按钮[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]通过键入或复制并粘贴到 Window1.xaml 以下突出显示的代码页：  
+3. **添加基本的默认按钮:** 此演练所需的所有文件都由模板提供。 在解决方案资源管理器中双击 Window1.xaml 文件, 将其打开。 默认情况下, window1.xaml 中<xref:System.Windows.Controls.Grid>有一个元素。 通过键入或复制以下突出显示的代码并[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]将其粘贴到 window1.xaml 中, 删除元素并向页面添加几个按钮:<xref:System.Windows.Controls.Grid>  
   
     ```xaml  
     <Window x:Class="AnimatedButton.Window1"  
@@ -47,18 +47,18 @@ ms.locfileid: "64665211"
     </Window>  
     ```  
   
-     按 F5 运行该应用程序;您将看到类似于下图的按钮的组。  
+     按 F5 运行该应用程序;应会看到如下图所示的一组按钮。  
   
      ![三个基本按钮](./media/custom-button-animatedbutton-1.gif "custom_button_AnimatedButton_1")  
   
-     现在，已创建的基本按钮，您已完成 Window1.xaml 文件中的工作。 本演练的其余部分重点介绍 app.xaml 文件中，定义样式和模板的按钮。  
+     现在, 您已创建了基本按钮, 接下来在 Window1.xaml 文件中完成工作。 本演练的其余部分侧重于 app.xaml 文件, 为按钮定义样式和模板。  
   
 ## <a name="set-basic-properties"></a>设置基本属性  
- 接下来，让我们来设置这些按钮来控制按钮外观和布局的某些属性。 而不是单独在按钮上设置属性，将使用的资源来定义整个应用程序的按钮属性。 应用程序资源是从概念上讲类似于外部[!INCLUDE[TLA#tla_css](../../../../includes/tlasharptla-css-md.md)]网页; 但是，资源将比强大得多[!INCLUDE[TLA#tla_css](../../../../includes/tlasharptla-css-md.md)]，正如您将看到本演练结束。 若要了解有关资源的详细信息，请参阅[XAML 资源](../advanced/xaml-resources.md)。  
+ 接下来, 让我们在这些按钮上设置一些属性, 以控制按钮的外观和布局。 您将使用资源来定义整个应用程序的按钮属性, 而不是单独设置按钮的属性。 应用程序资源在概念上类似于网页的外部级联样式表 (CSS);但是, 资源比级联样式表 (CSS) 要强大得多, 如本演练结束时所见。 若要了解有关资源的详细信息, 请参阅[XAML 资源](../advanced/xaml-resources.md)。  
   
-#### <a name="to-use-styles-to-set-basic-properties-on-the-buttons"></a>若要使用样式按钮上设置基本属性  
+#### <a name="to-use-styles-to-set-basic-properties-on-the-buttons"></a>使用样式设置按钮的基本属性  
   
-1. **定义 Application.Resources 块：** 打开 app.xaml 并添加以下突出显示的标记，如果尚不存在：  
+1. **定义应用程序 .Resources 块:** 打开 app.xaml 并添加以下突出显示的标记 (如果尚未存在):  
   
     ```xaml  
     <Application x:Class="AnimatedButton.App"  
@@ -72,9 +72,9 @@ ms.locfileid: "64665211"
     </Application>  
     ```  
   
-     您在其中定义资源取决于资源范围。 定义中的资源`Application.Resources`在 app.xaml 文件，要使用从任意位置的应用程序中的资源。 若要了解有关定义你的资源范围的详细信息，请参阅[XAML 资源](../advanced/xaml-resources.md)。  
+     资源范围由定义资源的位置确定。 在 app.xaml 文件`Application.Resources`中定义中的资源, 可以从应用程序中的任何位置使用资源。 若要了解有关定义资源范围的详细信息, 请参阅[XAML 资源](../advanced/xaml-resources.md)。  
   
-2. **创建一个样式，并定义与它的基本属性值：** 添加以下标记到`Application.Resources`块。 此标记创建<xref:System.Windows.Style>应用于的应用程序设置中的所有按钮<xref:System.Windows.FrameworkElement.Width%2A>的按钮为 90 和<xref:System.Windows.FrameworkElement.Margin%2A>到 10:  
+2. **创建样式, 并使用它定义基本属性值:** 将以下标记添加到`Application.Resources`块。 此标记创建一个<xref:System.Windows.Style> , 它应用于应用程序中的所有按钮, <xref:System.Windows.FrameworkElement.Width%2A>将按钮的设置为 90, <xref:System.Windows.FrameworkElement.Margin%2A>将设置为 10:  
   
     ```xaml  
     <Application.Resources>  
@@ -85,13 +85,13 @@ ms.locfileid: "64665211"
     </Application.Resources>  
     ```  
   
-     <xref:System.Windows.Style.TargetType%2A>属性指定该样式应用于类型的所有对象<xref:System.Windows.Controls.Button>。 每个<xref:System.Windows.Setter>设置为不同的属性值<xref:System.Windows.Style>。 因此，此时应用程序中的每个按钮具有宽度为 90、 边距为 10。  如果按 F5 运行该应用程序时，你会看到以下窗口。  
+     属性指定样式应用于所有类型<xref:System.Windows.Controls.Button>的对象。 <xref:System.Windows.Style.TargetType%2A> 每<xref:System.Windows.Setter> 个<xref:System.Windows.Style>为设置一个不同的属性值。 因此, 应用程序中的每个按钮的宽度均为 90, 边距为10。  如果按 F5 运行该应用程序, 将看到以下窗口。  
   
-     ![具有宽度为 90、 边距为 10 的按钮](./media/custom-button-animatedbutton-2.gif "custom_button_AnimatedButton_2")  
+     ![宽度为 90, 边距为10的按钮](./media/custom-button-animatedbutton-2.gif "custom_button_AnimatedButton_2")  
   
-     没有你可以执行更多使用样式，包括各种的方式来优化对象的目标、 指定复杂属性值，以及甚至使用样式作为输入的其他样式。 有关详细信息，请参阅[样式设置和模板化](styling-and-templating.md)。  
+     您还可以对样式进行更多的操作, 其中包括多种方法来微调目标对象、指定复杂的属性值, 甚至使用样式作为其他样式的输入。 有关详细信息，请参阅[样式设置和模板化](styling-and-templating.md)。  
   
-3. **样式属性值设置为资源：** 资源启用重用通常定义的对象和值的简单方法。 它是特别有用，可以定义使用的资源以使代码更加模块化的复杂值。 将以下突出显示的标记添加到 app.xaml。  
+3. **将样式属性值设置为资源:** 通过资源, 可以使用一种简单的方法来重复使用通常定义的对象和值。 使用资源来定义复杂值非常有用, 使代码更具模块化。 将以下突出显示的标记添加到 app.config。  
   
     ```xaml  
     <Application.Resources>  
@@ -108,20 +108,20 @@ ms.locfileid: "64665211"
     </Application.Resources>  
     ```  
   
-     直接在`Application.Resources`块中，创建名为"GrayBlueGradientBrush"的资源。 该资源定义水平渐变。 此资源可从任何位置的属性值作为应用程序，包括内部的按钮样式资源库中<xref:System.Windows.Controls.Control.Background%2A>属性。 现在，所有按钮都有<xref:System.Windows.Controls.Control.Background%2A>此渐变的属性值。  
+     直接在`Application.Resources`块下面创建一个名为 "GrayBlueGradientBrush" 的资源。 此资源定义水平渐变。 此资源可用作应用程序中任意位置的属性值, 包括<xref:System.Windows.Controls.Control.Background%2A>属性在按钮样式 setter 中的值。 现在, 所有按钮的属性值<xref:System.Windows.Controls.Control.Background%2A>都是此渐变。  
   
-     按 F5 运行该应用程序。 它应如以下所示。  
+     按 F5 运行该应用程序。 其外观应如下所示。  
   
-     ![具有渐变背景的按钮](./media/custom-button-animatedbutton-3.gif "custom_button_AnimatedButton_3")  
+     ![带有渐变背景的按钮](./media/custom-button-animatedbutton-3.gif "custom_button_AnimatedButton_3")  
   
-## <a name="create-a-template-that-defines-the-look-of-the-button"></a>创建用于定义按钮的外观的模板  
- 在本部分中，你创建自定义按钮的外观 (presentation) 的模板。 按钮演示文稿是组成包括矩形和其他组件的多个对象提供独特外观的按钮。  
+## <a name="create-a-template-that-defines-the-look-of-the-button"></a>创建定义按钮外观的模板  
+ 在本部分中, 将创建一个自定义按钮外观 (表示) 的模板。 按钮表示由多个对象组成, 其中包括矩形和其他组件, 用于为按钮指定独特的外观。  
   
- 到目前为止，应用程序中的按钮外观的控件已限制为更改按钮的属性。 如果你想要对按钮的外观进行更激进的更改？ 模板启用功能强大的对象显示的控制。 因为样式中，可以使用模板，您可以将模板应用于 （在本演练中，按钮），该样式应用到的所有对象。  
+ 到目前为止, 控件在应用程序中的外观控件限制为更改按钮的属性。 如果要对按钮的外观进行更多的根式更改, 会怎么样？ 模板可以强大地控制对象的表示形式。 由于可以在样式内使用模板, 因此可以将模板应用于样式应用到的所有对象 (在本演练中为按钮)。  
   
-#### <a name="to-use-the-template-to-define-the-look-of-the-button"></a>若要使用模板来定义按钮的外观  
+#### <a name="to-use-the-template-to-define-the-look-of-the-button"></a>使用模板定义按钮的外观  
   
-1. **设置模板：** 因为的控件，如<xref:System.Windows.Controls.Button>具有<xref:System.Windows.Controls.Control.Template%2A>属性，可以定义模板属性值，就像我们已经设置了中的其他属性值一样<xref:System.Windows.Style>使用<xref:System.Windows.Setter>。 将以下突出显示的标记添加到按钮样式。  
+1. **设置模板:** 由于控件 ( <xref:System.Windows.Controls.Button>如<xref:System.Windows.Controls.Control.Template%2A>具有属性), 因此可以定义模板属性值, 就像<xref:System.Windows.Style>我们使用在中<xref:System.Windows.Setter>设置的其他属性值一样。 将以下突出显示的标记添加到按钮样式。  
   
     ```xaml
     <Application.Resources>  
@@ -144,7 +144,7 @@ ms.locfileid: "64665211"
     </Application.Resources>  
     ```  
   
-2. **更改按钮表示：** 此时，您需要定义模板。 添加以下突出显示的标记。 此标记指定了两个<xref:System.Windows.Shapes.Rectangle>元素具有圆角边缘、 后跟<xref:System.Windows.Controls.DockPanel>。 <xref:System.Windows.Controls.DockPanel>使用到主机<xref:System.Windows.Controls.ContentPresenter>的按钮。 一个<xref:System.Windows.Controls.ContentPresenter>显示按钮的内容。 在本演练中，内容是文本 （"按钮 1"、"按钮 2"、"Button 3"）。 所有模板组件 (矩形并<xref:System.Windows.Controls.DockPanel>) 内的布局<xref:System.Windows.Controls.Grid>。  
+2. **更改按钮演示:** 此时, 需要定义模板。 添加以下突出显示的标记。 此标记指定两<xref:System.Windows.Shapes.Rectangle>个具有舍入边缘的元素, <xref:System.Windows.Controls.DockPanel>后跟一个。 <xref:System.Windows.Controls.DockPanel>用于承载按钮的。 <xref:System.Windows.Controls.ContentPresenter> <xref:System.Windows.Controls.ContentPresenter>显示按钮的内容。 在本演练中, 内容是文本 ("Button 1"、"Button 2"、"Button 3")。 所有模板组件 (矩形和<xref:System.Windows.Controls.DockPanel>) 都在中<xref:System.Windows.Controls.Grid>进行布局。  
   
     ```xaml  
     <Setter.Value>  
@@ -163,11 +163,11 @@ ms.locfileid: "64665211"
     </Setter.Value>  
     ```  
   
-     按 F5 运行该应用程序。 它应如以下所示。  
+     按 F5 运行该应用程序。 其外观应如下所示。  
   
      ![](./media/custom-button-animatedbutton-4.gif "custom_button_AnimatedButton_4")  
   
-3. **将玻璃添加到模板：** 接下来将添加玻璃效果。 首先创建一些创建玻璃渐变效果的资源。 添加这些渐变中的资源任意位置`Application.Resources`块：  
+3. **将 glasseffect 添加到模板:** 接下来, 你将添加玻璃。 首先, 创建一些创建玻璃渐变效果的资源。 在块中的`Application.Resources`任何位置添加这些渐变资源:  
   
     ```xaml  
     <Application.Resources>  
@@ -185,7 +185,7 @@ ms.locfileid: "64665211"
     <!-- Styles and other resources below here. -->  
     ```  
   
-     这些资源用作为<xref:System.Windows.Shapes.Shape.Fill%2A>矩形，我们将其插入到<xref:System.Windows.Controls.Grid>的按钮模板。 将以下突出显示的标记添加到模板。  
+     这些资源<xref:System.Windows.Shapes.Shape.Fill%2A>用作在按钮模板的中插入<xref:System.Windows.Controls.Grid>的矩形的。 将以下突出显示的标记添加到模板。  
   
     ```xaml
     <Setter.Value>  
@@ -242,18 +242,18 @@ ms.locfileid: "64665211"
     </Setter.Value>  
     ```  
   
-     请注意，<xref:System.Windows.UIElement.Opacity%2A>与矩形的`x:Name`"glassCube"属性为 0，当您运行该示例，看不到玻璃矩形叠加在最前面。 这是因为我们将更高版本时添加触发器用于模板用户交互的按钮。 但是，可以看到该按钮如下所示现在通过更改<xref:System.Windows.UIElement.Opacity%2A>值与 1 和运行应用程序。 请参见下图。 在前进到下一步前, 更改<xref:System.Windows.UIElement.Opacity%2A>回 0。  
+     请注意, `x:Name`属性为 "glassCube" 的矩形的为 0, 因此, 在运行该示例时, 看不到顶部显示的玻璃矩形。 <xref:System.Windows.UIElement.Opacity%2A> 这是因为, 稍后我们会将触发器添加到模板中, 以便用户与按钮交互时。 不过, 现在可以通过将<xref:System.Windows.UIElement.Opacity%2A>值更改为1并运行应用程序来查看按钮的外观。 请参见下图。 继续下一步之前, 请将<xref:System.Windows.UIElement.Opacity%2A>返回回0。  
   
-     ![通过使用 XAML 创建的自定义按钮](./media/custom-button-animatedbutton-5.gif "custom_button_AnimatedButton_5")  
+     ![使用 XAML 创建的自定义按钮](./media/custom-button-animatedbutton-5.gif "custom_button_AnimatedButton_5")  
   
 ## <a name="create-button-interactivity"></a>创建按钮交互性  
- 在本部分中，将创建属性触发器和事件触发器可以更改属性值和运行动画以响应用户操作，例如将鼠标指针移动到按钮上方并单击。  
+ 在本部分中, 你将创建属性触发器和事件触发器, 以更改属性值, 并运行动画来响应用户操作, 例如, 将鼠标指针移到按钮上并单击。  
   
- 添加交互性 （鼠标悬停、 鼠标离开，单击，等） 的简单方法是定义模板或样式中的触发器。 若要创建<xref:System.Windows.Trigger>，如定义属性"条件":按钮<xref:System.Windows.UIElement.IsMouseOver%2A>属性值等于`true`。 然后定义触发器条件为 true 时进行的资源库 （操作）。  
+ 添加交互 (鼠标悬停、鼠标离开、单击等) 的一种简单方法是在模板或样式中定义触发器。 若要创建<xref:System.Windows.Trigger>, 请定义属性 "条件", 如:按钮<xref:System.Windows.UIElement.IsMouseOver%2A>属性值`true`等于。 然后, 定义在触发器条件为 true 时执行的 setter (操作)。  
   
 #### <a name="to-create-button-interactivity"></a>若要创建按钮交互性  
   
-1. **添加模板触发器：** 将突出显示的标记添加到你的模板。  
+1. **添加模板触发器:** 将突出显示的标记添加到模板。  
   
     ```xaml
     <Setter.Value>  
@@ -318,7 +318,7 @@ ms.locfileid: "64665211"
     </Setter.Value>  
     ```  
   
-2. **添加属性触发器：** 添加到突出显示的标记`ControlTemplate.Triggers`块：  
+2. **添加属性触发器:** 将突出显示的标记添加`ControlTemplate.Triggers`到块:  
   
     ```xaml
     <ControlTemplate.Triggers>  
@@ -328,9 +328,9 @@ ms.locfileid: "64665211"
     <ControlTemplate.Triggers/>  
     ```  
   
-     按 F5 以运行应用程序并查看效果，如对按钮运行鼠标指针。  
+     按 F5 运行应用程序, 并在按钮上运行鼠标指针时查看效果。  
   
-3. **添加焦点触发器：** 接下来，我们将添加一些类似的 setter 来处理这种情况时该按钮具有焦点 （例如，在用户单击它）。  
+3. **添加焦点触发器:** 接下来, 我们将添加一些类似的 setter 来处理按钮有焦点的情况 (例如, 用户单击后)。  
   
     ```xaml  
     <ControlTemplate.Triggers>  
@@ -359,9 +359,9 @@ ms.locfileid: "64665211"
     </ControlTemplate.Triggers>  
     ```  
   
-     按 F5 以运行该应用程序并单击其中一个按钮。 请注意，在单击因为它仍然具有焦点的按钮始终保持突出显示。 如果单击另一个按钮，新建按钮获得焦点，而最后一个失去它。  
+     按 F5 运行应用程序, 并单击其中一个按钮。 请注意, 单击按钮后, 按钮会保持突出显示, 因为它仍有焦点。 如果单击另一个按钮, 新按钮会获得焦点, 而最后一个按钮丢失。  
   
-4. **添加动画**<xref:System.Windows.UIElement.MouseEnter> **并** <xref:System.Windows.UIElement.MouseLeave> **:** 接下来我们将某些动画添加到触发器。 添加以下标记内部的任意位置`ControlTemplate.Triggers`块。  
+4. **为**<xref:System.Windows.UIElement.MouseEnter> 和添加<xref:System.Windows.UIElement.MouseLeave>动画 **:**  接下来, 将一些动画添加到触发器。 将以下标记添加到`ControlTemplate.Triggers`块内的任意位置。  
   
     ```xaml
     <!-- Animations that start when mouse enters and leaves button. -->  
@@ -392,13 +392,13 @@ ms.locfileid: "64665211"
     </EventTrigger>  
     ```  
   
-     当鼠标指针移动到按钮上方并返回到正常大小当指针离开时，透明矩形会缩小。  
+     当鼠标指针移到按钮上并在指针离开时返回到正常大小时, 玻璃矩形会收缩。  
   
-     当鼠标指针移到该按钮时触发的两个动画 (<xref:System.Windows.UIElement.MouseEnter>引发事件)。 这些动画收缩玻璃矩形沿 X 和 Y 轴。 请注意，属性在<xref:System.Windows.Media.Animation.DoubleAnimation>元素 —<xref:System.Windows.Media.Animation.Timeline.Duration%2A>和<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>。 <xref:System.Windows.Media.Animation.Timeline.Duration%2A>指定动画发生超过半秒，和<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>指定玻璃收缩 10%。  
+     当指针进入按钮 (<xref:System.Windows.UIElement.MouseEnter>引发事件) 时, 会触发两个动画。 这些动画沿 X 和 Y 轴收缩玻璃矩形。 请注意<xref:System.Windows.Media.Animation.DoubleAnimation>元素上的属性, <xref:System.Windows.Media.Animation.Timeline.Duration%2A>即<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>和。 指定动画每半秒出现一次, 并<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>指定玻璃缩小 10%。 <xref:System.Windows.Media.Animation.Timeline.Duration%2A>  
   
-     第二个事件触发器 (<xref:System.Windows.UIElement.MouseLeave>) 就会停止运行的第一个。 当您停止<xref:System.Windows.Media.Animation.Storyboard>，经过动画处理的所有属性都返回到其默认值。 因此，当用户移动指针离开按钮，按钮将恢复为之前在按钮上移动鼠标指针的方式。 有关动画的详细信息，请参阅[动画概述](../graphics-multimedia/animation-overview.md)。  
+     第二个事件触发器<xref:System.Windows.UIElement.MouseLeave>() 只是停止第一个触发器。 停止<xref:System.Windows.Media.Animation.Storyboard>时, 所有动画属性都将恢复为其默认值。 因此, 当用户将指针移到按钮上时, 按钮返回到鼠标指针移到按钮上之前的状态。 有关动画的详细信息, 请参阅[动画概述](../graphics-multimedia/animation-overview.md)。  
   
-5. **添加动画，以单击按钮时：** 最后一步是添加用于的触发器，当用户单击按钮。 添加以下标记内部的任意位置`ControlTemplate.Triggers`块：  
+5. **在单击按钮时添加动画:** 最后一步是在用户单击按钮时添加触发器。 在`ControlTemplate.Triggers`块中的任意位置添加以下标记:  
   
     ```xaml
     <!-- Animation fires when button is clicked, causing glass to spin.  -->  
@@ -416,20 +416,20 @@ ms.locfileid: "64665211"
     </EventTrigger>  
     ```  
   
-     按 F5 以运行该应用程序，并单击其中一个按钮。 当单击按钮时，透明矩形会旋转一周。  
+     按 F5 运行应用程序, 然后单击其中一个按钮。 单击按钮时, 玻璃矩形会旋转。  
   
 ## <a name="summary"></a>总结  
- 在本演练中，您执行了以下练习：  
+ 在本演练中, 您执行了以下练习:  
   
-- 面向<xref:System.Windows.Style>为对象类型 (<xref:System.Windows.Controls.Button>)。  
+- 目标为对象类型 (<xref:System.Windows.Controls.Button>)。 <xref:System.Windows.Style>  
   
-- 控制在整个应用程序中使用的按钮的基本属性<xref:System.Windows.Style>。  
+- 使用的<xref:System.Windows.Style>整个应用程序中的按钮的受控基本属性。  
   
-- 创建资源，如渐变来使用的属性值的<xref:System.Windows.Style>资源库。  
+- 创建了一些资源, 如用于资源<xref:System.Windows.Style>库属性值的渐变。  
   
-- 通过将模板应用于按钮自定义整个应用程序中的按钮的外观。  
+- 通过将模板应用于按钮, 自定义了整个应用程序中的按钮的外观。  
   
-- 自定义行为响应用户操作中的按钮 (如<xref:System.Windows.UIElement.MouseEnter>， <xref:System.Windows.UIElement.MouseLeave>，和<xref:System.Windows.Controls.Primitives.ButtonBase.Click>) 包含的动画效果。  
+- 用于响应用户操作 (如<xref:System.Windows.UIElement.MouseEnter>、 <xref:System.Windows.UIElement.MouseLeave>和<xref:System.Windows.Controls.Primitives.ButtonBase.Click>) 的按钮的自定义行为, 其中包含动画效果。  
   
 ## <a name="see-also"></a>请参阅
 

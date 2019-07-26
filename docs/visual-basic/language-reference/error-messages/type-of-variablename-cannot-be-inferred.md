@@ -7,61 +7,62 @@ f1_keywords:
 helpviewer_keywords:
 - BC30982
 ms.assetid: 741e85d9-a747-42ad-a1e1-a3f1928aaff5
-ms.openlocfilehash: 2dc7793a837c588b98365a97ada58c67dc07fa03
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c3086f79fb71693810bc8f14e8c0f493aa1e6515
+ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664256"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68512709"
 ---
-# <a name="type-of-variablename-cannot-be-inferred-because-the-loop-bounds-and-the-step-variable-do-not-widen-to-the-same-type"></a>类型\<变量名 > 无法推断，因为循环边界和步骤变量未扩大到同一类型
-您编写`For...Next`循环中的编译器无法推断 for 循环控制变量的数据类型因为以下条件成立：  
-  
-- 未在 `As` 子句中指定循环控制变量的数据类型。  
-  
-- 循环边界和步骤变量包含至少两种数据类型。  
-  
-- 数据类型之间存在的标准转换。  
-  
- 因此，编译器无法推断的循环控制变量的数据类型。  
-  
- 在以下示例中，步骤变量是字符，且循环边界都是整数。 由于没有任何标准字符和整数之间转换，会报告此错误。  
-  
-```vb  
-Dim stepVar = "1"c  
-Dim m = 0  
-Dim n = 20  
-  
-' Not valid.  
-' For i = 1 To 10 Step stepVar  
-    ' Loop processing  
-' Next  
-```  
-  
- **错误 ID:** BC30982  
-  
-## <a name="to-correct-this-error"></a>更正此错误  
-  
-- 更改类型的循环边界和步骤变量根据需要，以便在至少一个其他扩大到的类型。 在前面的示例中，更改的类型`stepVar`到`Integer`。  
-  
-    ```  
-    Dim stepVar = 1  
-    ```  
-  
-     - 或 -  
-  
-    ```  
-    Dim stepVar As Integer = 1  
-    ```  
-  
-- 使用显式转换函数将转换为相应类型的循环边界和步骤变量。 在上述示例中，将应用`Val`函数来`stepVar`。  
-  
-    ```  
-    For i = 1 To 10 Step Val(stepVar)  
-        ' Loop processing  
-    Next  
-    ```  
-  
+# <a name="type-of-variablename-cannot-be-inferred-because-the-loop-bounds-and-the-step-variable-do-not-widen-to-the-same-type"></a>因为循环边界\<和步骤变量未扩大到同一类型, 所以无法推断 "variablename >" 的类型
+
+你编写了一个`For...Next`循环, 该循环中编译器无法推断循环控制变量的数据类型, 因为满足以下条件:
+
+- 未在 `As` 子句中指定循环控制变量的数据类型。
+
+- 循环边界和步骤变量包含至少两种数据类型。
+
+- 数据类型之间不存在标准转换。
+
+ 因此, 编译器无法推断循环控制变量的数据类型。
+
+ 在下面的示例中, 步骤变量是一个字符, 并且循环边界都是整数。 由于字符和整数之间没有标准转换, 因此将报告此错误。
+
+```vb
+Dim stepVar = "1"c
+Dim m = 0
+Dim n = 20
+
+' Not valid.
+' For i = 1 To 10 Step stepVar
+    ' Loop processing
+' Next
+```
+
+**错误 ID:** BC30982
+
+## <a name="to-correct-this-error"></a>更正此错误
+
+- 根据需要更改循环边界和步骤变量的类型, 以使其中至少有一个类型为其他类型。 在前面的示例中, 将的`stepVar`类型更改为。 `Integer`
+
+  ```vb
+  Dim stepVar = 1
+  ```
+
+  或
+
+  ```vb
+  Dim stepVar As Integer = 1
+  ```
+
+- 使用显式转换函数将循环边界和步骤变量转换为适当的类型。 在前面的示例中, 将`Val` `stepVar`函数应用于。
+
+  ```vb
+  For i = 1 To 10 Step Val(stepVar)
+      ' Loop processing
+  Next
+  ```
+
 ## <a name="see-also"></a>请参阅
 
 - <xref:Microsoft.VisualBasic.Conversion.Val%2A>

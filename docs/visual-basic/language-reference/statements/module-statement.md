@@ -13,15 +13,15 @@ helpviewer_keywords:
 - classes [Visual Basic], vs. modules
 - declarations [Visual Basic], modules
 ms.assetid: a1243afc-14a5-45df-95d5-51118aeac362
-ms.openlocfilehash: 73d4a5cc8fd4bad41ead1fda830504b19877a8d8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 08268fd473a3a916f41f2f46090e3245acda07dd
+ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625474"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68513012"
 ---
 # <a name="module-statement"></a>Module 语句
-声明模块的名称，并引入的变量、 属性、 事件和该模块包含的过程的定义。  
+声明模块的名称, 并引入模块包含的变量、属性、事件和过程的定义。  
   
 ## <a name="syntax"></a>语法  
   
@@ -33,7 +33,7 @@ End Module
   
 ## <a name="parts"></a>部件  
  `attributelist`  
- 可选。 请参阅[属性列表](../../../visual-basic/language-reference/statements/attribute-list.md)。  
+ 可选。 请参阅[特性列表](../../../visual-basic/language-reference/statements/attribute-list.md)。  
   
  `accessmodifier`  
  可选。 可以是以下各项之一：  
@@ -48,50 +48,50 @@ End Module
  必需。 此模块的名称。 请参阅 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。  
   
  `statements`  
- 可选。 定义变量、 属性、 事件、 过程和嵌套的类型，此模块的语句。  
+ 可选。 定义此模块的变量、属性、事件、过程和嵌套类型的语句。  
   
  `End Module`  
- 终止`Module`定义。  
+ `Module`终止定义。  
   
 ## <a name="remarks"></a>备注  
- 一个`Module`语句定义在整个命名空间中可用的引用类型。 一个*模块*(有时称为*标准模块*) 类似于类，但有一些重要的差别。 每个模块都有且只有一个实例，并不需要创建或分配给一个变量。 模块不支持继承或实现接口。 请注意，模块并不*类型*类或结构是在意义上，不能声明为具有模块的数据类型的编程元素。  
+ `Module`语句定义在其命名空间中可用的引用类型。 *模块*(有时称为*标准模块*) 与类相似, 但有一些重要的区别。 每个模块都有一个实例, 无需创建或分配给变量。 模块不支持继承或实现接口。 请注意, 如果某个模块不是类或结构的*类型*, 则不能将编程元素声明为具有模块的数据类型。  
   
- 可以使用`Module`仅在命名空间级别。 这意味着*声明上下文*供模块必须的源文件或命名空间，并且不能为类、 结构、 模块、 接口、 过程或块。 不能嵌套在另一个模块，或在任何类型的模块。 有关详细信息，请参阅[声明上下文和默认访问级别](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)。  
+ 只能在命名`Module`空间级别使用。 这意味着模块的*声明上下文*必须是源文件或命名空间, 不能是类、结构、模块、接口、过程或块。 不能将模块嵌套在其他模块或任何类型中。 有关详细信息，请参阅[声明上下文和默认访问级别](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)。  
   
- 模块具有相同的生存期为您的程序。 因为其成员是所有`Shared`，它们还具有相同的程序的生存期。  
+ 模块与程序具有相同的生存期。 因为其成员都是`Shared`, 所以它们的生存期也等于程序的生存期。  
   
- 默认为模块[友元](../../../visual-basic/language-reference/modifiers/friend.md)访问。 您可以调整其访问级别和访问修饰符。 有关详细信息，请参阅[访问 Visual Basic 中的级别](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
+ 模块默认为[Friend](../../../visual-basic/language-reference/modifiers/friend.md)访问。 您可以使用访问修饰符调整其访问级别。 有关详细信息, 请参阅[Visual Basic 中的访问级别](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
   
- 模块的所有成员都都隐式`Shared`。  
+ 模块的所有成员都是隐`Shared`式的。  
   
 ## <a name="classes-and-modules"></a>类和模块  
- 这些元素具有许多相似之处，但有一些重要的差异。  
+ 这些元素具有许多相似之处, 但也存在一些重要的差异。  
   
-- **术语。** 以前版本的 Visual Basic 识别两种类型的模块：*类模块*（.cls 文件） 和*标准模块*（.bas 文件）。 当前版本调用这些*类*并*模块*分别。  
+- **规范.** Visual Basic 的早期版本可识别两种类型的模块:*类模块*(cls 文件) 和*标准模块*(bas 文件)。 当前版本分别调用这些*类*和*模块*。  
   
-- **共享的成员。** 您可以控制是否在不共享类的成员或实例成员。  
+- **共享成员。** 您可以控制某个类的成员是共享成员还是实例成员。  
   
-- **面向对象。** 类是面向对象的但不是模块。 因此，只能将类可以为对象实例化。 有关详细信息，请参阅[对象和类](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)。  
+- **对象方向。** 类是面向对象的, 但模块不是。 因此, 只有类可以实例化为对象。 有关详细信息, 请参阅[对象和类](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)。  
   
 ## <a name="rules"></a>规则  
   
-- **修饰符。** 所有模块成员都为隐式[共享](../../../visual-basic/language-reference/modifiers/shared.md)。 不能使用`Shared`关键字时声明一个成员，并且您不能更改任何成员的共享的状态。  
+- **组成.** 所有模块成员都是隐式[共享](../../../visual-basic/language-reference/modifiers/shared.md)的。 不能在声明`Shared`成员时使用关键字, 也不能更改任何成员的共享状态。  
   
-- **继承。** 而不从任何类型继承一个模块，不能<xref:System.Object>，哪些所有模块从继承。 具体而言，不能从另一个继承一个模块。  
+- **继承。** 模块不能从所有模块继承的类型<xref:System.Object>继承。 特别是, 一个模块不能从另一个模块继承。  
   
-     不能使用[Inherits Statement](../../../visual-basic/language-reference/statements/inherits-statement.md)在模块定义中，甚至指定<xref:System.Object>。  
+     不能在模块定义中使用[Inherits 语句](../../../visual-basic/language-reference/statements/inherits-statement.md), 甚至可以指定<xref:System.Object>。  
   
-- **默认属性。** 您不能在模块中定义的任何默认属性。 有关详细信息，请参阅[默认](../../../visual-basic/language-reference/modifiers/default.md)。  
+- **默认属性。** 不能在模块中定义任何默认属性。 有关详细信息, 请参阅[默认值](../../../visual-basic/language-reference/modifiers/default.md)。  
   
 ## <a name="behavior"></a>行为  
   
-- **访问级别。** 在模块中，可以声明具有其自己的访问级别的每个成员。 模块成员默认为[公共](../../../visual-basic/language-reference/modifiers/public.md)访问，除变量和常量、 到哪些默认[专用](../../../visual-basic/language-reference/modifiers/private.md)访问。 当模块具有比其成员之一的限制性更强的访问时，指定的模块的访问级别将优先。  
+- **访问级别。** 在模块中, 你可以使用其自己的访问级别声明每个成员。 模块成员默认为[公共](../../../visual-basic/language-reference/modifiers/public.md)访问权限, 变量和常量除外, 默认为[私有](../../../visual-basic/language-reference/modifiers/private.md)访问。 当某个模块的访问权限超过其成员之一时, 将优先使用指定的模块访问级别。  
   
-- **作用域。** 模块是在整个命名空间范围内。  
+- **内.** 模块在其命名空间中的作用域。  
   
-     每个模块成员的作用域是整个模块。 请注意，所有成员都会都经受*类型提升*，这将导致它们提升到包含该模块的命名空间的范围。 有关详细信息，请参阅[类型提升](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md)。  
+     每个模块成员的作用域都是整个模块。 请注意, 所有成员都接受*类型提升*, 这会导致其作用域升级到包含该模块的命名空间。 有关详细信息, 请参阅[类型提升](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md)。  
   
-- **限定。** 您可以在项目中，有多个模块，而您可以声明具有两个或多个模块中具有相同名称的成员。 但是，如果引用是从外部该模块必须限定对此类成员具有适当的模块名称的任何引用。 有关详细信息，请参阅 [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)。  
+- **限定.** 项目中可以有多个模块, 可以在两个或多个模块中声明同名的成员。 但是, 如果引用来自模块外部, 则必须使用适当的模块名称来限定对此类成员的任何引用。 有关详细信息，请参阅 [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)。  
   
 ## <a name="example"></a>示例  
  [!code-vb[VbVbalrStatements#69](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#69)]  

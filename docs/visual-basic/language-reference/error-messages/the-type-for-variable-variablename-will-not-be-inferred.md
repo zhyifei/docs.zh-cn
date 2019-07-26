@@ -7,80 +7,81 @@ f1_keywords:
 helpviewer_keywords:
 - BC42110
 ms.assetid: ef4442eb-08d1-434f-a03b-4aa2ed4e4414
-ms.openlocfilehash: a595f38f6dd68b9c152bfa78ec0bebf36e173e17
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e56529919945558df178e18a83a895a79bfe4919
+ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649971"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68512727"
 ---
-# <a name="the-type-for-variable-variablename-will-not-be-inferred-because-it-is-bound-to-a-field-in-an-enclosing-scope"></a>变量的类型\<变量名 >' 绑定到封闭范围中的字段，因此将不会推断
-变量的类型\<变量名 >' 绑定到封闭范围中的字段，因此将不会推断。 请更改名称\<变量名 >，或使用完全限定的名称 （例如，Me.variablename 或 MyBase.variablename）。  
-  
- 在代码中的循环控制变量与类或其他封闭范围内的字段具有相同的名称。 因为控制变量用在无需`As`子句，它绑定到封闭范围中的字段和编译器不为其创建一个新的变量或推断出类型。  
-  
- 在以下示例中，`Index`中的控制变量`For`语句中，绑定到`Index`字段中`Customer`类。 编译器不会创建新的变量控制变量`Index`或推断其类型。  
-  
-```  
-Class Customer  
-  
-    ' The class has a field named Index.  
-    Private Index As Integer  
-  
-    Sub Main()  
-  
-    ' The following line will raise this warning.  
-        For Index = 1 To 10  
-            ' ...  
-        Next  
-  
-    End Sub  
-End Class  
-```  
-  
- 默认情况下，此消息是一个警告。 有关如何隐藏警告或如何将警告视为错误的信息，请参见 [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic)。  
-  
- **错误 ID:** BC42110  
-  
-### <a name="to-address-this-warning"></a>解决此警告  
-  
-- 通过其名称更改为标识符，也不是类的字段的名称使本地循环控制变量。  
-  
-    ```  
-    For I = 1 To 10  
-    ```  
-  
-- 阐明循环控制变量绑定到类字段，通过前缀来`Me.`向变量名称。  
-  
-    ```  
-    For Me.Index = 1 To 10  
-    ```  
-  
-- 使用而不是依赖于本地类型推断，`As`子句来指定 for 循环控制变量的类型。  
-  
-    ```  
-    For Index As Integer = 1 To 10  
-    ```  
-  
-## <a name="example"></a>示例  
- 下面的代码演示在位置中的第一个更正与前面的示例。  
-  
-```  
-Class Customer  
-  
-    ' The class has a field named Index.  
-    Private Index As Integer  
-  
-    Sub Main()  
-  
-        For I = 1 To 10  
-            ' ...  
-        Next  
-  
-    End Sub  
-End Class  
-```  
-  
+# <a name="the-type-for-variable-variablename-will-not-be-inferred-because-it-is-bound-to-a-field-in-an-enclosing-scope"></a>不会推断变量 "\<variablename >" 的类型, 因为它绑定到封闭范围中的某个字段
+
+不会推断变量 "\<variablename >" 的类型, 因为它绑定到封闭范围中的某个字段。 请更改 "\<variablename >" 的名称, 或使用完全限定的名称 (例如, "variablename" 或 "variablename")。
+
+代码中的循环控制变量与类的字段或其他封闭范围的名称相同。 因为在没有`As`子句的情况下使用控制变量, 它将绑定到封闭范围中的字段, 并且编译器不会为其创建新的变量, 也不会推断其类型。
+
+在`Index`下面的示例中, `For`语句中的控制变量绑定`Customer`到类中的`Index`字段。 编译器不会为控件变量`Index`创建新的变量, 也不会推断其类型。
+
+```vb
+Class Customer
+
+    ' The class has a field named Index.
+    Private Index As Integer
+
+    Sub Main()
+
+    ' The following line will raise this warning.
+        For Index = 1 To 10
+            ' ...
+        Next
+
+    End Sub
+End Class
+```
+
+默认情况下，此消息是一个警告。 有关如何隐藏警告或如何将警告视为错误的信息，请参见 [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic)。
+
+**错误 ID:** BC42110
+
+### <a name="to-address-this-warning"></a>解决此警告
+
+- 将循环控制变量的名称更改为不属于类的字段名称的标识符, 使该循环控制变量成为局部变量。
+
+  ```vb
+  For I = 1 To 10
+  ```
+
+- 阐明循环控制变量是通过在变量名称的前面加上`Me.`前缀来绑定到类字段。
+
+  ```vb
+  For Me.Index = 1 To 10
+  ```
+
+- 使用`As`子句来指定循环控制变量的类型, 而不是依赖于局部类型推理。
+
+  ```vb
+  For Index As Integer = 1 To 10
+  ```
+
+## <a name="example"></a>示例
+ 下面的代码显示了前面的示例, 其中的第一个更正是就地的。
+
+```vb
+Class Customer
+
+    ' The class has a field named Index.
+    Private Index As Integer
+
+    Sub Main()
+
+        For I = 1 To 10
+            ' ...
+        Next
+
+    End Sub
+End Class
+```
+
 ## <a name="see-also"></a>请参阅
 
 - [Option Infer 语句](../../../visual-basic/language-reference/statements/option-infer-statement.md)

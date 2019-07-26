@@ -7,32 +7,33 @@ f1_keywords:
 helpviewer_keywords:
 - BC30638
 ms.assetid: 93b654f4-70fa-4a48-baed-ffae42075550
-ms.openlocfilehash: 50e1cd0e41da467a9e816c8e5d64d09a36923d65
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 951f710160ae1023671773c21c73946f5ae94c2b
+ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665738"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68512766"
 ---
 # <a name="array-bounds-cannot-appear-in-type-specifiers"></a>数组界限不能出现在类型说明符中
-数组大小不能声明为数据类型说明符的一部分。  
-  
- **错误 ID:** BC30638  
-  
-## <a name="to-correct-this-error"></a>更正此错误  
-  
-- 指定紧跟变量的名称，而不是数组大小类型之后，如下面的示例中所示的数组的大小。  
-  
-    ```  
-    Dim Array(8) As Integer   
-    ```  
-  
-- 定义一个数组并将其与所需的元素数进行初始化，如下面的示例中所示。  
-  
-    ```  
-    Dim Array2() As Integer = New Integer(8) {}  
-    ```  
-  
+
+数组大小不能声明为数据类型说明符的一部分。
+
+**错误 ID:** BC30638
+
+## <a name="to-correct-this-error"></a>更正此错误
+
+- 指定紧随变量名称后面的数组大小, 而不是将数组大小放在类型之后, 如下面的示例中所示。
+
+  ```vb
+  Dim Array(8) As Integer
+  ```
+
+- 定义一个数组, 并用所需的元素数对其进行初始化, 如以下示例中所示。
+
+  ```vb
+  Dim Array2() As Integer = New Integer(8) {}
+  ```
+
 ## <a name="see-also"></a>请参阅
 
 - [数组](../../../visual-basic/programming-guide/language-features/arrays/index.md)
