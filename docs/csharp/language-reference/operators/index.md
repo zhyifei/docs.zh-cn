@@ -18,12 +18,12 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: b6a1cc3ced3205037eb5b83ac3841efbfbd1b5b9
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 13ad16ab768cdaee96cab29811e2ed058dee977a
+ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331219"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68512242"
 ---
 # <a name="c-operators-c-reference"></a>C# 运算符（C# 参考）
 
@@ -65,7 +65,7 @@ C# 提供了许多由内置类型支持的预定义运算符。 例如，[算术
 
 [delegate](delegate-operator.md)：声明并返回委托实例。
 
-[sizeof](../keywords/sizeof.md)：返回类型操作数的大小（以字节为单位）。
+[sizeof](sizeof.md)：返回类型操作数的大小（以字节为单位）。
 
 [stackalloc](stackalloc.md)：在堆栈上分配内存块。
 
