@@ -4,12 +4,12 @@ description: 使用 dotnet test 和 NUnit 分步构建一个示例解决方案�
 author: rprouse
 ms.date: 08/31/2018
 ms.custom: seodec18
-ms.openlocfilehash: 7d3daa344b2a6fb8694a255fdc26b5ba31e2d82a
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 53e8ebd6e4c3f07ace72df5e7dc916ecd30ce831
+ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56747978"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68433919"
 ---
 # <a name="unit-testing-c-with-nunit-and-net-core"></a>使用 NUnit 和 .NET Core 进行 C# 单元测试
 
@@ -22,13 +22,13 @@ ms.locfileid: "56747978"
 
 ## <a name="creating-the-source-project"></a>创建源项目
 
-打开 shell 窗口。 创建一个名为 unit-testing-using-nunit 的目录，以保留该解决方案。 在此新目录中，运行以下命令，为类库和测试项目创建新的解决方案文件：
+打开 shell 窗口。 创建一个名为 unit-testing-using-nunit  的目录，以保留该解决方案。 在此新目录中，运行以下命令，为类库和测试项目创建新的解决方案文件：
 
 ```console
 dotnet new sln
 ```
  
-接下来，创建 PrimeService 目录。 下图显示了当前的目录和文件结构：
+接下来，创建 PrimeService  目录。 下图显示了当前的目录和文件结构：
 
 ```
 /unit-testing-using-nunit
@@ -36,7 +36,7 @@ dotnet new sln
     /PrimeService
 ```
 
-将 PrimeService 作为当前目录，并运行以下命令以创建源项目：
+将 PrimeService  作为当前目录，并运行以下命令以创建源项目：
 
 ```console
 dotnet new classlib
@@ -59,7 +59,7 @@ namespace Prime.Services
 }
 ```
 
-将目录更改回 unit-testing-using-nunit 目录。 运行以下命令，向解决方案添加类库项目：
+将目录更改回 unit-testing-using-nunit  目录。 运行以下命令，向解决方案添加类库项目：
 
 ```console
 dotnet sln add PrimeService/PrimeService.csproj
@@ -67,7 +67,7 @@ dotnet sln add PrimeService/PrimeService.csproj
 
 ## <a name="creating-the-test-project"></a>创建测试项目
 
-接下来，创建 PrimeService.Tests 目录。 下图显示了它的目录结构：
+接下来，创建 PrimeService.Tests  目录。 下图显示了它的目录结构：
 
 ```
 /unit-testing-using-nunit
@@ -78,13 +78,13 @@ dotnet sln add PrimeService/PrimeService.csproj
     /PrimeService.Tests
 ```
 
-将 PrimeService.Tests 目录作为当前目录，并使用以下命令创建一个新项目：
+将 PrimeService.Tests  目录作为当前目录，并使用以下命令创建一个新项目：
 
 ```console
 dotnet new nunit
 ```
 
-[dotnet new](../tools/dotnet-new.md) 命令可创建一个将 NUnit 用作测试库的测试项目。 生成的模板在 PrimeService.Tests.csproj 文件中配置测试运行程序：
+[dotnet new](../tools/dotnet-new.md) 命令可创建一个将 NUnit 用作测试库的测试项目。 生成的模板在 PrimeService.Tests.csproj  文件中配置测试运行程序：
 
 [!code-xml[Packages](~/samples/core/getting-started/unit-testing-using-nunit/PrimeService.Tests/PrimeService.Tests.csproj#Packages)]
 
@@ -109,7 +109,7 @@ dotnet add reference ../PrimeService/PrimeService.csproj
         PrimeService.Tests.csproj
 ```
 
-在 unit-testing-using-nunit 目录中执行以下命令：
+在 unit-testing-using-nunit  目录中执行以下命令：
 
 ```console
 dotnet sln add ./PrimeService.Tests/PrimeService.Tests.csproj
@@ -117,7 +117,7 @@ dotnet sln add ./PrimeService.Tests/PrimeService.Tests.csproj
 
 ## <a name="creating-the-first-test"></a>创建第一个测试
 
-编写一个失败测试，使其通过，然后重复此过程。 在 PrimeService.Tests 目录中，将 UnitTest1.cs 文件重命名为 PrimeService_IsPrimeShould.cs，并将其整个内容替换为以下代码：
+编写一个失败测试，使其通过，然后重复此过程。 在 PrimeService.Tests  目录中，将 UnitTest1.cs  文件重命名为 PrimeService_IsPrimeShould.cs  ，并将其整个内容替换为以下代码：
 
 ```csharp
 using NUnit.Framework;
@@ -128,19 +128,26 @@ namespace Prime.UnitTests.Services
     [TestFixture]
     public class PrimeService_IsPrimeShould
     {
-        private readonly PrimeService _primeService;
-
         public PrimeService_IsPrimeShould()
         {
-            _primeService = new PrimeService();
         }
 
         [Test]
         public void ReturnFalseGivenValueOf1()
         {
-            var result = _primeService.IsPrime(1);
+            PrimeService primeService = CreatePrimeService();
+            var result = primeService.IsPrime(1);
 
             Assert.IsFalse(result, "1 should not be prime");
+        }
+        
+        /*
+        More tests
+        */
+        
+        private PrimeService CreatePrimeService()
+        {
+             return new PrimerService();
         }
     }
 }
@@ -163,7 +170,7 @@ public bool IsPrime(int candidate)
 }
 ```
 
-在 unit-testing-using-nunit 目录中再次运行 `dotnet test`。 `dotnet test` 命令构建 `PrimeService` 项目，然后构建 `PrimeService.Tests` 项目。 构建这两个项目后，该命令将运行此单项测试。 测试通过。
+在 unit-testing-using-nunit  目录中再次运行 `dotnet test`。 `dotnet test` 命令构建 `PrimeService` 项目，然后构建 `PrimeService.Tests` 项目。 构建这两个项目后，该命令将运行此单项测试。 测试通过。
 
 ## <a name="adding-more-features"></a>添加更多功能
 
@@ -173,7 +180,7 @@ public bool IsPrime(int candidate)
 
 [!code-csharp[Sample_TestCode](../../../samples/core/getting-started/unit-testing-using-nunit/PrimeService.Tests/PrimeService_IsPrimeShould.cs?name=Sample_TestCode)]
 
-运行 `dotnet test`，两项测试均失败。 若要使所有测试通过，可以在 PrimeService.cs 文件中更改 `Main` 方法开头的 `if` 子句：
+运行 `dotnet test`，两项测试均失败。 若要使所有测试通过，可以在 PrimeService.cs 文件中更改 `Main` 方法开头的 `if` 子句  ：
 
 ```csharp
 if (candidate < 2)
