@@ -1,0 +1,11 @@
+- name: .NET 中的程序集
+  href: index.md
+  items:
+    - name: 友元程序集
+      items:
+        - name: 概述
+          href: friend-assemblies.md
+    - name: .NET 程序集文件格式
+      href: file-format.md
+    - name: 如何在 .NET Core 中使用和调试程序集可卸载性
+      href: unloadability-howto.md
