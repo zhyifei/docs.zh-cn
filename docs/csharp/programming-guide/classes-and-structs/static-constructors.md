@@ -6,12 +6,12 @@ helpviewer_keywords:
 - static constructors [C#]
 - constructors [C#], static
 ms.assetid: 151ec95e-3c4d-4ed7-885d-95b7a3be2e7d
-ms.openlocfilehash: f053a74fcb87971506b83ca8ca2076517ddddf56
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: f8924f5a1e93a616b114506f383242fd2fde615c
+ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307109"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68433576"
 ---
 # <a name="static-constructors-c-programming-guide"></a>静态构造函数（C# 编程指南）
 静态构造函数用于初始化任何[静态](../../../csharp/language-reference/keywords/static.md)数据，或执行仅需执行一次的特定操作。 将在创建第一个实例或引用任何静态成员之前自动调用静态构造函数。  
@@ -67,4 +67,4 @@ ms.locfileid: "67307109"
 - [静态类和静态类成员](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)
 - [终结器](../../../csharp/programming-guide/classes-and-structs/destructors.md)
 - [构造函数设计准则](../../../standard/design-guidelines/constructor.md#type-constructor-guidelines)
-- [安全警告 - CA2121：静态构造函数应为私有](https://docs.microsoft.com/en-us/visualstudio/code-quality/ca2121-static-constructors-should-be-private)
+- [安全警告 - CA2121：静态构造函数应为私有](https://docs.microsoft.com/visualstudio/code-quality/ca2121-static-constructors-should-be-private)

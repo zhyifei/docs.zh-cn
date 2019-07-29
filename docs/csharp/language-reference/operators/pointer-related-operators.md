@@ -20,12 +20,12 @@ helpviewer_keywords:
 - pointer increment [C#]
 - pointer decrement [C#]
 - pointer comparison [C#]
-ms.openlocfilehash: 03d6ed19ef01be7712ff2fdde0c1be2a6673e64f
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 830aef8546191df3df4a70e350ba561367a9e474
+ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67401432"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68512357"
 ---
 # <a name="pointer-related-operators-c-reference"></a>指针相关运算符（C# 参考）
 
@@ -124,7 +124,7 @@ x->y
 - `p + n` 和 `n + p` 表达式都生成 `T*` 类型的指针，该指针是将 `n * sizeof(T)` 添加到 `p` 给出的地址得到的。
 - `p - n` 表达式生成类型为 `T*` 的指针，该指针是从 `p` 给出的地址中减去 `n * sizeof(T)` 得到的。
 
-[`sizeof` 运算符](../keywords/sizeof.md)获取类型的大小（以字节为单位）。
+[`sizeof` 运算符](sizeof.md)获取类型的大小（以字节为单位）。
 
 以下示例演示了 `+` 运算符与指针的用法：
 
@@ -193,4 +193,4 @@ x->y
 - [unsafe 关键字](../keywords/unsafe.md)
 - [fixed 关键字](../keywords/fixed-statement.md)
 - [stackalloc 运算符](stackalloc.md)
-- [sizeof 运算符](../keywords/sizeof.md)
+- [sizeof 运算符](sizeof.md)
