@@ -7,12 +7,12 @@ f1_keywords:
 - whereconstraint_CSharpKeyword
 helpviewer_keywords:
 - where (generic type constraint) [C#]
-ms.openlocfilehash: 3982c97bc56b42237700343b2572d1bba930bbbd
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: bccc22f5362b22540dadf08e6b21a07cbc578327
+ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66422771"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68433851"
 ---
 # <a name="where-generic-type-constraint-c-reference"></a>where（泛型类型约束）（C# 参考）
 
@@ -33,7 +33,7 @@ ms.locfileid: "66422771"
 
 [!code-csharp[using the class and struct constraints](../../../../samples/snippets/csharp/keywords/GenericWhereConstraints.cs#3)]
 
-`where` 子句还可包括 `unmanaged` 约束。 `unmanaged` 约束将类型参数限制为名为“非托管类型”的类型  。 “非托管类型”不是引用类型，且任何嵌套级别都不包含引用类型字段  。 `unmanaged` 约束使得在 C# 中编写低级别的互操作代码变得更容易。 此约束支持跨所有非托管类型的可重用例程。 `unmanaged` 约束不能与 `class` 或 `struct` 约束结合使用。 `unmanaged` 约束强制该类型必须为 `struct`：
+`where` 子句还可包括 `unmanaged` 约束。 `unmanaged` 约束将类型参数限制为名为[“非托管类型”](../builtin-types/unmanaged-types.md)的类型。 `unmanaged` 约束使得在 C# 中编写低级别的互操作代码变得更容易。 此约束支持跨所有非托管类型的可重用例程。 `unmanaged` 约束不能与 `class` 或 `struct` 约束结合使用。 `unmanaged` 约束强制该类型必须为 `struct`：
 
 [!code-csharp[using the unmanaged constraint](../../../../samples/snippets/csharp/keywords/GenericWhereConstraints.cs#4)]
 

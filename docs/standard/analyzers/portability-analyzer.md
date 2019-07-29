@@ -4,12 +4,12 @@ description: 了解如何使用 .NET 可移植性分析器工具，评估代码�
 ms.date: 07/18/2019
 ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: 433936480aa1181370a6ebc2bd2ba9914a50dfa2
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 32b4f980061b0975c413a8cde436074f76cfabc9
+ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331744"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68433949"
 ---
 # <a name="the-net-portability-analyzer"></a>.NET 可移植性分析器
 
@@ -29,7 +29,7 @@ ms.locfileid: "68331744"
 
 ![可移植性屏幕截图](./media/portability-analyzer/portability-screenshot.png)
 
-还可以使用 ApiPort 控制台应用程序，可从 [ApiPort 存储库](http://aka.ms/apiportdownload)进行下载。 可以使用 `listTargets` 命令选项以显示可用的目标列表，然后通过指定 `-t` 或 `--target` 命令选项来选择目标平台。 
+还可以使用 ApiPort 控制台应用程序，可从 [ApiPort 存储库](https://aka.ms/apiportdownload)进行下载。 可以使用 `listTargets` 命令选项以显示可用的目标列表，然后通过指定 `-t` 或 `--target` 命令选项来选择目标平台。 
 
 ### <a name="analyze-portability"></a>分析可移植性
 若要在 Visual Studio 中分析整个项目，请在“解决方案资源管理器”中右键单击该项目，然后选择“分析程序集可移植性”   。 也可以转到“分析”菜单，选择“分析程序集可移植性”。   在该位置选择项目的可执行文件或 DLL。
