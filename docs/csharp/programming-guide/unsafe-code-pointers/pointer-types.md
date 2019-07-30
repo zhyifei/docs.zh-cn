@@ -5,12 +5,12 @@ ms.date: 04/20/2018
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.openlocfilehash: 59846affb1eea5bd9d6a80c623eab5e3aa9db87c
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 704af9aae23571abdb82ae851066e3c03dbe7161
+ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661085"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68433544"
 ---
 # <a name="pointer-types-c-programming-guide"></a>指针类型（C# 编程指南）
 
@@ -21,16 +21,7 @@ type* identifier;
 void* identifier; //allowed but not recommended
 ```
 
-在指针类型中的 `*` 之前指定的类型被称为“referent 类型”  。 以下任一类型均可为 referent 类型：
-
-- 任何整型类型：[sbyte](../../language-reference/builtin-types/integral-numeric-types.md)、[byte](../../language-reference/builtin-types/integral-numeric-types.md)、[short](../../language-reference/builtin-types/integral-numeric-types.md)、[ushort](../../language-reference/builtin-types/integral-numeric-types.md)、[int](../../language-reference/builtin-types/integral-numeric-types.md)、[uint](../../language-reference/builtin-types/integral-numeric-types.md)、[long](../../language-reference/builtin-types/integral-numeric-types.md)、[ulong](../../language-reference/builtin-types/integral-numeric-types.md)。
-- 任何浮点类型：[浮点](../../language-reference/builtin-types/floating-point-numeric-types.md)、[双精度](../../language-reference/builtin-types/floating-point-numeric-types.md)。
-- [字符](../../language-reference/keywords/char.md)。
-- [布尔型](../../language-reference/keywords/bool.md)。
-- [小数](../../language-reference/builtin-types/floating-point-numeric-types.md)。
-- 任何[枚举](../../language-reference/keywords/enum.md)类型。
-- 任何指针类型。 这允许如 `void**` 的表达式。
-- 任何仅包含非托管类型字段的用户定义的结构类型。
+在指针类型中的 `*` 之前指定的类型被称为“referent 类型”  。 只有[非托管类型](../../language-reference/builtin-types/unmanaged-types.md)可为引用类型。
 
 指针类型不从[对象](../../language-reference/keywords/object.md)继承，并且指针类型与 `object` 之间不存在转换。 此外，装箱和取消装箱不支持指针。 但是，你可在不同的指针类型之间以及指针类型和整型之间进行转换。
 

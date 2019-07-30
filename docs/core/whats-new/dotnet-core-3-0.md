@@ -7,12 +7,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 06/14/2019
-ms.openlocfilehash: a808a35876df8d2f6cee3c240c606b7bd979e9ee
-ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
+ms.openlocfilehash: b1dd243d754bfc3b682c084820547f6b7846f0ea
+ms.sourcegitcommit: 4b9c2d893b45d47048c6598b4182ba87759b1b59
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67539278"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68484660"
 ---
 # <a name="whats-new-in-net-core-30-preview-6"></a>.NET Core 3.0（预览版 6）中的新增功能
 
@@ -33,7 +33,7 @@ ms.locfileid: "67539278"
 
 ## <a name="net-core-sdk-windows-installer"></a>.NET Core SDK Windows Installer
 
-用于 Windows 的 MSI 安装程序已从 .NET Core 3.0 开始更改。 SDK 安装程序现在将对 SDK 功能区段版本进行就地升级。 功能区段在版本号的*补丁*部分中的*数百个*组中定义。 例如，**3.0.*101*** 和 **3.0.*201*** 是两个不同功能区段中的版本，而 **3.0.*101*** 和 **3.0.*199*** 则属于同一个功能区段。 并且，当安装 .NET Core SDK **3.0.*101*** 时，将从计算机中删除 .NET Core SDK **3.0.*100***（如果存在）。 当 .NET Core SDK **3.0.*200*** 安装在同一台计算机上时，不会删除 .NET Core SDK **3.0.*101***。
+用于 Windows 的 MSI 安装程序已从 .NET Core 3.0 开始更改。 SDK 安装程序现在将对 SDK 功能区段版本进行就地升级。 功能区段在版本号的*补丁*部分中的*数百个*组中定义。 例如，**3.0._101_** 和 **3.0._201_** 是两个不同功能区段中的版本，而 **3.0._101_** 和 **3.0._199_** 则属于同一个功能区段。 并且，当安装 .NET Core SDK **3.0._101_** 时，将从计算机中删除 .NET Core SDK **3.0._100_** （如果存在）。 当 .NET Core SDK **3.0._200_** 安装在同一台计算机上时，不会删除 .NET Core SDK **3.0._101_** 。
 
 有关版本控制的详细信息，请参阅 [.NET Core 的版本控制方式概述](../versions/index.md)。
 
