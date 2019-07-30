@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, namespaces
 - namespaces [C#]
 ms.assetid: b1c4ab46-3fad-4ffa-9deb-dd50a2d8c65a
-ms.openlocfilehash: 893ac7bbfcfe159787789238c3142f34ac7ecf35
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 79b7057b1f6a9cdba2215124160b28efb9a1c0be
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423289"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629516"
 ---
 # <a name="namespaces-c-programming-guide"></a>命名空间（C# 编程指南）
 
@@ -54,4 +54,4 @@ ms.locfileid: "66423289"
 - [如何：使用 My 命名空间](how-to-use-the-my-namespace.md)
 - [标识符名称](../inside-a-program/identifier-names.md)
 - [using 指令](../../language-reference/keywords/using-directive.md)
-- [::运算符](../../language-reference/operators/namespace-alias-qualifer.md)
+- [::运算符](../../language-reference/operators/namespace-alias-qualifier.md)

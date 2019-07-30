@@ -19,10 +19,6 @@
     - name: 向 COM 公开 .NET Framework 组件
       href: exposing-dotnet-components-to-com.md
       items:
-        - name: 为互操作限定 .NET 类型
-          href: qualifying-net-types-for-interoperation.md
-        - name: 应用互操作特性
-          href: applying-interop-attributes.md
         - name: 将 COM 的程序集打包
           href: packaging-an-assembly-for-com.md
         - name: 向 COM 注册程序集
@@ -94,15 +90,8 @@
               href: how-to-migrate-managed-code-dcom-to-wcf.md
     - name: 如何：映射 HRESULT 和异常
       href: how-to-map-hresults-and-exceptions.md
-    - name: COM 包装
-      href: com-wrappers.md
-      items:
-        - name: 运行时可调用包装
-          href: runtime-callable-wrapper.md
-        - name: COM 可调用包装
-          href: com-callable-wrapper.md
-        - name: 如何：创建 COM 包装
-          href: how-to-create-com-wrappers.md
+    - name: 如何：创建 COM 包装
+      href: how-to-create-com-wrappers.md
     - name: 类型等效性和嵌入的互操作类型
       href: type-equivalence-and-embedded-interop-types.md
     - name: 如何：使用 Tlbimp.exe 生成主互操作程序集

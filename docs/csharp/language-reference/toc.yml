@@ -329,7 +329,7 @@
           href: operators/lambda-operator.md
           displayName: lambda
         - name: ':: 运算符'
-          href: operators/namespace-alias-qualifer.md
+          href: operators/namespace-alias-qualifier.md
           displayName: namespace alias qualifier
         - name: 委托运算符
           href: operators/delegate-operator.md
