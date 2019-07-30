@@ -1,13 +1,13 @@
 ---
 title: 值
-description: 了解如何在值F#是具有特定类型的数量。
+description: 了解中F#的值如何是具有特定类型的数量。
 ms.date: 05/16/2016
-ms.openlocfilehash: fe87bb568591b862737456ff92ba202ba7795e3d
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: ed7a5b069a5a47aacf0cce4cfa754ded46f6e84a
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641621"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630796"
 ---
 # <a name="values"></a>值
 
@@ -15,13 +15,13 @@ F# 形式的值是具有特定类型的数量；值可以是整数或浮点数�
 
 ## <a name="binding-a-value"></a>绑定值
 
-术语“绑定”意指将名称与定义关联。 `let` 关键字将绑定值，如下例所示：
+术语“绑定”  意指将名称与定义关联。 `let` 关键字将绑定值，如下例所示：
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet601.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet601.fs)]
 
 值的类型根据定义推断得出。 对于基元类型（例如整数或浮点数），类型由文本的类型确定。 因此，在前面的示例中，编译器将 `b` 的类型推断为 `unsigned int`，而将 `a` 的类型推断为 `int`。 函数值的类型由函数体中的返回值确定。 有关函数值类型的详细信息，请参阅[函数](../functions/index.md)。 有关文本类型的详细信息，请参阅[文本](../literals.md)。
 
-默认情况下，编译器不会发出诊断信息未使用的绑定。 若要启用接收这些消息，警告 1182年项目文件中或调用编译器时 (请参阅`--warnon`下[编译器选项](../compiler-options.md))。
+默认情况下, 编译器不会对未使用的绑定发出诊断。 若要接收这些消息, 请在项目文件中或在调用编译器时启用警告 1182 `--warnon` (请参阅[编译器选项](../compiler-options.md)下)。
 
 ## <a name="why-immutable"></a>为何不可变？
 
@@ -37,15 +37,15 @@ F# 不是纯粹的函数语言，但它完全支持函数编程。 使用不可�
 
 可以使用 `let` 关键字，采用像定义值一样的方式将初始值赋给可变变量。 但区别在于，随后可以使用 `<-` 运算符将新值赋给可变变量，如下例所示。
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet602.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet602.fs)]
 
-标记的值`mutable`可能会自动提升为`'a ref`如果捕获闭包，包括创建闭包，如的窗体`seq`生成器。 如果你想要在发生这种情况时收到通知，启用警告 3180 项目文件中或调用编译器时。
+如果由`mutable`闭包捕获的值`'a ref` (包括`seq`创建闭包的窗体, 如构建者), 则标记的值可能会自动升级到。 如果希望在出现这种情况时收到通知, 请在项目文件中或在调用编译器时启用警告3180。
 
 ## <a name="related-topics"></a>相关主题
 
 |Title|描述|
 |-----|-----------|
-|[let 绑定](../functions/let-bindings.md)|提供有关使用信息`let`关键字将绑定到值和函数的名称。|
+|[let 绑定](../functions/let-bindings.md)|提供有关使用关键字将`let`名称绑定到值和函数的信息。|
 |[函数](../functions/index.md)|提供 F# 中函数的概述。|
 
 ## <a name="see-also"></a>请参阅

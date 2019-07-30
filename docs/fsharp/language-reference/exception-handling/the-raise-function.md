@@ -1,17 +1,17 @@
 ---
 title: 异常：raise 函数
-description: 了解如何F#raise 函数用来指示已发生的错误或异常情况。
+description: 了解如何使用F# "raise" 函数指示发生了错误或异常情况。
 ms.date: 05/16/2016
-ms.openlocfilehash: 9e2515ad7b85c1025bc3aa0aa2a6929a8d35436d
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: e0cc8da8310203c537b8081af8a225671bd8c6a3
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641968"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630286"
 ---
 # <a name="exceptions-the-raise-function"></a>异常：raise 函数
 
-`raise`函数用来指示已发生的错误或异常情况。 异常对象中捕获有关错误的信息。
+`raise`函数用于指示发生了错误或异常情况。 有关错误的信息在异常对象中捕获。
 
 ## <a name="syntax"></a>语法
 
@@ -21,17 +21,17 @@ raise (expression)
 
 ## <a name="remarks"></a>备注
 
-`raise`函数生成的异常对象，并启动堆栈展开过程。 在堆栈展开过程由公共语言运行时 (CLR) 管理，因此与任何其他.NET 语言在此过程的行为都将是相同。 在堆栈展开过程是一个搜索匹配生成的异常的异常处理程序。 在当前开始搜索`try...with`表达式，如果有的话。 在每个模式`with`按顺序块检查。 当找到匹配的异常处理程序时，异常将被视为已处理。否则，堆栈的展开和`with`直到找到匹配的处理程序，则检查调用链的块。 任何`finally`当堆栈展开，按顺序还执行调用链中遇到的块。
+`raise`函数生成异常对象并启动堆栈展开过程。 堆栈展开进程由公共语言运行时 (CLR) 管理, 因此此进程的行为与任何其他 .NET 语言中的行为相同。 堆栈展开过程是一个搜索与生成的异常匹配的异常处理程序。 搜索从当前`try...with`表达式开始 (如果有)。 将按顺序检查`with`块中的每个模式。 当找到匹配的异常处理程序时, 该异常将被视为已处理;否则, 将展开堆栈并`with`检查调用链, 直到找到匹配的处理程序。 如果`finally`堆栈展开, 则在调用链中遇到的任何块也将按顺序执行。
 
-`raise`函数等同于`throw`中C#或C++。 使用`reraise`传播调用链相同的异常的 catch 处理程序中。
+函数等效于或C++中的C# `throw` `raise` 在`reraise` catch 处理程序中使用以在调用链中向上传播相同的异常。
 
-下面的代码示例说明如何使用`raise`函数生成异常。
+下面的代码示例演示了如何使用`raise`函数生成异常。
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet5801.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5801.fs)]
 
-`raise`函数还可用来引发.NET 异常，如下面的示例中所示。
+`raise`函数还可用于引发 .net 异常, 如下面的示例中所示。
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet5802.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5802.fs)]
 
 ## <a name="see-also"></a>请参阅
 

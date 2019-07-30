@@ -10,28 +10,28 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], types of errors
 - syntax errors [Visual Basic], Visual Basic
 ms.assetid: 3048aabf-8c97-4e13-9150-853769cb5f6f
-ms.openlocfilehash: 07db963ac3cf9d1c0d17c420480189d362cdaf2c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 030986111a50ab59c605a1d683fedc118d10b260
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61973168"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68626610"
 ---
 # <a name="error-types-visual-basic"></a>错误类型 (Visual Basic)
-在 Visual Basic 中，错误 (也称为*异常*) 分为三个类别之一： 语法错误、 运行时错误和逻辑错误。  
-  
-## <a name="syntax-errors"></a>语法错误  
- *语法错误*是编写代码时出现。 Visual Basic 会检查你的代码，并在您键入**代码编辑器**窗口并向你发出警报，如果出现错误，例如拼错单词或不正确地使用一个语言元素。 语法错误则是最常见的错误类型。 解决方法轻松地在编码的环境中就立即发生。  
-  
+在 Visual Basic 中, 错误分为三个类别之一: 语法错误、运行时错误和逻辑错误。
+
+## <a name="syntax-errors"></a>语法错误
+ *语法错误*是在编写代码时显示的错误。 如果使用的是 Visual Studio, 则 Visual Basic 在**代码编辑器**窗口中键入代码时检查代码, 并在出现错误时发出警报, 如错误拼写错误或错误地使用语言元素。 如果从命令行进行编译, Visual Basic 将显示编译器错误, 其中包含有关语法错误的信息。 语法错误是最常见的错误类型。 一旦出现, 就可以在编码环境中轻松地对其进行修复。
+
 > [!NOTE]
->  `Option Explicit`语句是一种避免语法错误。 它会强制你提前声明要使用的应用程序中的所有变量。 因此，当在代码中使用这些变量时，版式的任何错误立即捕获，并且可以修复。  
+>  `Option Explicit`语句是避免语法错误的一种方法。 它强制您事先声明要在应用程序中使用的所有变量。 因此, 当在代码中使用这些变量时, 会立即捕获任何排字错误, 并可修复这些错误。
+
+## <a name="run-time-errors"></a>运行时错误
+ *运行时错误*是指仅在编译和运行代码后显示的错误。 它们涉及的代码可能看起来是正确的, 因为它没有语法错误, 但不会执行。 例如, 你可能会正确编写一行代码来打开文件。 但是, 如果该文件不存在, 应用程序将无法打开该文件, 并将引发异常。 您可以通过重写错误的代码或使用[异常处理](../../language-reference/statements/try-catch-finally-statement.md)来修复大多数运行时错误, 然后重新编译并重新运行它。
   
-## <a name="run-time-errors"></a>运行时错误  
- *运行时错误*是仅在编译和运行你的代码后出现。 这些技术包括可能看起来是正确的它不存在语法错误，但不是会执行的代码。 例如，可以正确编写一行代码打开文件。 如果该文件已损坏，无法执行该应用程序，但`Open`函数，并且它将停止运行。 通过重写了错误代码，然后重新编译和重新运行它，可以修复大多数运行时错误。  
-  
-## <a name="logic-errors"></a>逻辑错误  
- *逻辑错误*是使用应用程序后出现的。 它们是以响应用户操作的大多数通常不需要的或意外结果。 例如，错误键入的键或其他外部影响可能会导致你的应用程序停止工作中所需的参数，或完全。 逻辑错误通常是最难的类型，若要解决，因为它不是始终清除它们发生的位置。  
-  
+## <a name="logic-errors"></a>逻辑错误
+ *逻辑错误*是指在应用程序使用后出现的错误。 它们最常见的是开发人员作出的假设, 或者是不需要或意外的结果来响应用户操作。 例如, 键入错误的键可能会为方法提供错误的信息, 或者, 如果不是这样, 则您可能会假设始终向方法提供有效的值。 尽管可以通过使用[异常处理](../../language-reference/statements/try-catch-finally-statement.md)(例如, 通过测试参数是否为`Nothing`并引发<xref:System.ArgumentNullException>) 来处理逻辑错误, 但通常应通过更正逻辑中的错误并重新编译程序.
+
 ## <a name="see-also"></a>请参阅
 
 - [Try...Catch...Finally 语句](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)

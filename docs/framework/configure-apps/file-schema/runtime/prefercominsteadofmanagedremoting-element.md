@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: a279a42a-c415-4e79-88cf-64244ebda613
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e32e4b490f0824cf97a1ae5910d7c74801c7b439
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2c7a558af17493c955b4f148d0abf7f42c9dd6f8
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592696"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629430"
 ---
 # <a name="prefercominsteadofmanagedremoting-element"></a>\<PreferComInsteadOfManagedRemoting > 元素
-指定是否在运行时将使用 COM 互操作而不是远程处理的所有调用跨应用程序域边界。  
+指定运行时是否将对跨应用程序域边界的所有调用使用 COM 互操作而不是远程处理。  
   
  \<configuration>  
 \<运行时 >  
@@ -34,13 +34,13 @@ ms.locfileid: "64592696"
   
 |特性|描述|  
 |---------------|-----------------|  
-|`enabled`|必需的特性。<br /><br /> 指示是否在运行时将跨应用程序域边界而不是远程处理中使用 COM 互操作。|  
+|`enabled`|必需的特性。<br /><br /> 指示运行时是否将使用 COM 互操作, 而不是跨应用程序域边界进行远程处理。|  
   
 ## <a name="enabled-attribute"></a>enabled 特性  
   
 |值|描述|  
 |-----------|-----------------|  
-|`false`|在运行时将使用远程处理跨应用程序域边界。 这是默认设置。|  
+|`false`|运行时将跨应用程序域边界使用远程处理。 这是默认设置。|  
 |`true`|运行时将跨应用程序域边界使用 COM 互操作。|  
   
 ### <a name="child-elements"></a>子元素  
@@ -54,16 +54,16 @@ ms.locfileid: "64592696"
 |`runtime`|包含有关程序集绑定和垃圾回收的信息。|  
   
 ## <a name="remarks"></a>备注  
- 当您将设置`enabled`属性为`true`，运行时的行为，如下所示：  
+ 将`enabled`属性设置为`true`时, 运行时的行为如下所示:  
   
-- 在运行时不会调用[iunknown:: Queryinterface](https://go.microsoft.com/fwlink/?LinkID=144867)有关[IManagedObject](../../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md)接口时[IUnknown](https://go.microsoft.com/fwlink/?LinkId=148003)接口进入域通过 COM 接口。 相反，它构造[运行时可调用包装器](../../../../../docs/framework/interop/runtime-callable-wrapper.md)(RCW) 对象周围。  
+- 当[iunknown](https://go.microsoft.com/fwlink/?LinkId=148003)接口通过 COM 接口进入域时, 运行时不为[IManagedObject](../../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md)接口调用[iunknown:: QueryInterface](https://go.microsoft.com/fwlink/?LinkID=144867) 。 相反, 它会在对象周围构造一个[运行时可调用包装](../../../../../docs/standard/native-interop/runtime-callable-wrapper.md)器 (RCW)。  
   
-- 在接收时，运行时将返回 E_NOINTERFACE`QueryInterface`寻求[IManagedObject](../../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md)接口的任何[COM 可调用包装器](../../../../../docs/framework/interop/com-callable-wrapper.md)(CCW) 已在此域中创建。  
+- 运行时在接收到`QueryInterface`已在此域中创建的任何 COM 可[调用包装](../../../../../docs/standard/native-interop/com-callable-wrapper.md)器 (CCW) 的[IManagedObject](../../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md)接口调用时, 将返回 E_NOINTERFACE。  
   
- 请确保这两种行为，COM 上的所有调用之间的都接口的托管的对象跨应用程序域边界使用 COM 和 COM 互操作而不是远程处理。  
+ 这两个行为确保跨应用程序域边界在托管对象之间对 COM 接口进行的所有调用均使用 COM 和 COM 互操作, 而不是远程处理。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何指定运行时应使用 COM 互操作跨隔离边界：  
+ 下面的示例演示如何指定运行时应跨隔离边界使用 COM 互操作:  
   
 ```xml  
 <configuration>  

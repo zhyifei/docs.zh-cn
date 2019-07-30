@@ -1,15 +1,15 @@
 ---
-title: 异常:invalidArg 函数
-description: 了解如何F#invalidArg 函数生成参数异常。
+title: 异常：invalidArg 函数
+description: 了解F# "invalidArg" 函数如何生成自变量异常。
 ms.date: 05/16/2016
-ms.openlocfilehash: 1f0cbc9b7e805822544d6d54bc1fc69adf82967a
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 010dbfe313f539093b4ee7a19984ef54500b072d
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645501"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630305"
 ---
-# <a name="exceptions-the-invalidarg-function"></a>异常:invalidArg 函数
+# <a name="exceptions-the-invalidarg-function"></a>异常：invalidArg 函数
 
 `invalidArg`函数生成参数异常。
 
@@ -21,13 +21,13 @@ invalidArg parameter-name error-message-string
 
 ## <a name="remarks"></a>备注
 
-在上述语法中的参数名称是参数的其参数是参数的无效名称的字符串。 *错误消息字符串*是文本字符串或类型的值`string`。 它将成为`Message`异常对象的属性。
+前面的语法中的参数名称是一个字符串, 其参数的名称无效。 *错误消息字符串*是文本字符串或类型`string`的值。 它将成为`Message`异常对象的属性。
 
-由生成的异常`invalidArg`是`System.ArgumentException`异常。 下面的代码演示如何使用`invalidArg`引发异常。
+生成`invalidArg`的异常是一个`System.ArgumentException`异常。 下面的代码演示`invalidArg`如何使用来引发异常。
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet6101.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6101.fs)]
 
-输出是以下内容，然后由堆栈跟踪 （未显示）。
+输出如下所示, 后跟堆栈跟踪 (未显示)。
 
 ```
 December

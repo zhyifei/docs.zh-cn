@@ -8,12 +8,12 @@ helpviewer_keywords:
 - troubleshooting graphics rendering [WPF]
 - graphics [WPF], rendering
 ms.assetid: f4b41b42-327d-407c-b398-3ed5f505df8b
-ms.openlocfilehash: b1c61aa333c428e5cb811a5d19469516cbb813e3
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: c3544769480a45068be0ca64e90f91253daf3e16
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663162"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629786"
 ---
 # <a name="graphics-rendering-registry-settings"></a>图形呈现注册表设置
 本主题概述了影响 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 图形呈现注册表设置。  
@@ -33,7 +33,7 @@ ms.locfileid: "67663162"
 |设置|描述|  
 |-------------|-----------------|  
 |**禁用硬件加速选项**|指定是否应启用硬件加速。|  
-|**最大多重采样值**|指定多重采样抗锯齿三维内容的程度。|  
+|**最大多重采样值**|指定用于对三维内容进行抗锯齿的多级分级。|  
 |**必需的视频驱动程序日期设置**|指定系统是否对 2004 年 11 月之前发布的驱动程序禁用硬件加速。|  
 |**使用参考光栅器选项**|指定 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 是否应使用参考光栅器。|  
   
@@ -57,9 +57,9 @@ ms.locfileid: "67663162"
 |------------------|----------------|  
 |`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\MaxMultisampleType`|DWORD|  
   
- **最大多重采样值**使您可以调整的最大抗锯齿 3-D 内容的量。 使用此级别禁用在三维抗锯齿[!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)]中启用它或[!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)]。  
+ "**最大多级采样值**" 使您可以调整三维内容的最大抗锯齿量。 使用此级别可在中[!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)]禁用或启用[!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)]三维消除锯齿功能。  
   
- “最大多重采样值”  是一个 DWORD 值，范围为从 0 到 16。 如果值为 0，则指定应禁用 3-D 内容的多重采样抗锯齿；如果值为 16，将尝试设置最多 16 倍多重采样抗锯齿（如果受视频卡支持）。 请注意，在使用 XPDM 驱动程序的计算机上设置此注册表项值将导致应用程序使用大量额外视频内存，从而降低三维呈现的性能并有可能呈现错误和稳定性出现的问题。  
+ “最大多重采样值”  是一个 DWORD 值，范围为从 0 到 16。 如果值为 0，则指定应禁用 3-D 内容的多重采样抗锯齿；如果值为 16，将尝试设置最多 16 倍多重采样抗锯齿（如果受视频卡支持）。 请注意, 在使用 XPDM 驱动程序的计算机上设置此注册表项值将导致应用程序使用大量附加视频内存, 降低三维呈现的性能, 并有可能引入呈现错误和稳定性方面.  
   
  当未设置此注册表项时， [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 将默认为 0（对于 XPDM 驱动程序）和 4（对于 WDDM 驱动程序）。  
   
@@ -89,7 +89,7 @@ ms.locfileid: "67663162"
 |------------------|----------------|  
 |`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\UseReferenceRasterizer`|DWORD|  
   
- 使用“使用参考光栅器选项”  ，可以在模拟硬件呈现模式中强制执行 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 以进行调试：[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 转到硬件模式，但使用 [!INCLUDE[TLA#tla_d3d](../../../../includes/tlasharptla-d3d-md.md)] 参考软件光栅器 d3dref9.dll，而不是实际的硬件设备。  
+ **使用 "使用参考光栅" 选项**, 您[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]可以强制进入模拟硬件呈现模式以进行[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]调试: 进入硬件模式, 但使用 Microsoft Direct3D reference software d3dref9.dll,而不是实际的硬件设备。  
   
  参考光栅器非常缓慢，但可以绕过视频驱动程序以避免由驱动程序问题导致的任何呈现问题。 出于此原因，可使用参考光栅器确定呈现问题是否由视频驱动程序导致。 d3dref9.dll 文件必须位于应用程序可访问它的位置，如系统路径或应用程序的本地目录中的任何位置。  
   

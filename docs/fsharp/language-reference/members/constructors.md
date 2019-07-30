@@ -2,12 +2,12 @@
 title: 构造函数
 description: 了解如何在中F#定义和使用构造函数来创建和初始化类和结构对象。
 ms.date: 05/16/2016
-ms.openlocfilehash: ef5dc134ad98179b6a365c4c34a9eca22fe5f7f6
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: c25fdcb95c2873eb69a94f30c87735e5c04d391b
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364355"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627593"
 ---
 # <a name="constructors"></a>构造函数
 
@@ -23,7 +23,7 @@ ms.locfileid: "68364355"
 
 下面的代码演示一个类, 该类具有构造函数和用于创建对象的各种方法。
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3501.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3501.fs)]
 
 输出如下所示。
 
@@ -40,7 +40,7 @@ Initialized object that has coordinates (0, 0, 0)
 
 此外, 结构通常包含使用`val`关键字创建的字段; 类也可以包含这些字段。 具有使用`val`关键字定义的字段的结构和类也可以通过使用记录表达式在其他构造函数中进行初始化, 如以下代码所示。
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3502.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3502.fs)]
 
 有关详细信息, 请[参阅显式字段:`val`关键字。](explicit-fields-the-val-keyword.md)
 
@@ -48,7 +48,7 @@ Initialized object that has coordinates (0, 0, 0)
 
 类中的主构造函数可执行`do`绑定中的代码。 但是, 如果必须在没有绑定的`do`情况下在其他构造函数中执行代码怎么办？ 为此, 请使用`then`关键字。
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3503.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3503.fs)]
 
 主构造函数的副作用仍在执行。 因此, 输出如下所示。
 
@@ -62,11 +62,11 @@ Created an invalid person object.
 
 在其他成员中, 您可以在每个成员的定义中提供当前对象的名称。 你还可以使用`as`紧跟构造函数参数的关键字, 将自标识符置于类定义的第一行。 下面的示例演示了此语法。
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3504.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3504.fs)]
 
 在其他构造函数中, 还可以通过将`as`子句置于构造函数参数之后来定义自定义标识符。 下面的示例演示了此语法。
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3505.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3505.fs)]
 
 当你尝试在完全定义对象之前使用对象时, 可能会出现问题。 因此, 使用 self 标识符可能导致编译器发出警告并插入其他检查, 以确保在初始化对象之前不会访问对象的成员。 只应在主构造函数的`do`绑定中使用自标识符, 或在其他构造函数的`then`关键字之后使用。
 
@@ -76,11 +76,11 @@ Created an invalid person object.
 
 您可以通过将窗体`property = value`赋值的列表追加到构造函数的参数列表, 将值分配给初始化代码中类对象的属性。 下面的代码示例对此进行了演示。
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3506.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3506.fs)]
 
 以下版本的前面的代码演示了一个构造函数调用中的普通参数、可选参数和属性设置的组合。
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3507.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3507.fs)]
 
 ## <a name="constructors-in-inherited-class"></a>继承类中的构造函数
 

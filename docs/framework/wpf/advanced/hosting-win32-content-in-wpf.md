@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 3cc8644a-34f3-4082-9ddc-77623e4df2d8
-ms.openlocfilehash: ee260d58cdb4dc971fc32ca5c889b459b6a48489
-ms.sourcegitcommit: 4b9c2d893b45d47048c6598b4182ba87759b1b59
+ms.openlocfilehash: 10bdeae8fe46f78e60d278fdbe93883a1c6bd356
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68484741"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629883"
 ---
 # <a name="hosting-win32-content-in-wpf"></a>在 WPF 中承载 Win32 内容
 
@@ -48,11 +48,11 @@ virtual void DestroyWindowCore(HandleRef hwnd) override {
 
 但是, 假设[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]代码不是很容易自包含？ 如果是这样, 您可以创建[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]一个对话框, 并将其内容嵌入到[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]更大的应用程序中。 此示例在[!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]和C++中显示了这种情况, 虽然也可以使用不同的语言或在命令行中执行此操作。
 
-从编译为C++ [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)]项目的简单对话框开始。
+首先, 使用一个简单的对话框, 该对话框编译C++为 DLL 项目。
 
 接下来, 将对话框引入到更[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]大的应用程序:
 
-- 将[!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)]编译为托管 (`/clr`)
+- 将 DLL 编译为托管 (`/clr`)
 
 - 将对话框变为控件
 
@@ -120,7 +120,7 @@ public ref class MyHwndHost : public HwndHost, IKeyboardInputSink {
         }
 ```
 
-在这里, 您`CreateDialog`将使用创建真正是控件的对话框。 由于这是在中调用[!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)]的第一个方法, 因此还[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]应通过调用稍后定义的函数 (称为`InitializeGlobals()`:
+在这里, 您`CreateDialog`将使用创建真正是控件的对话框。 由于这是在 DLL 中调用的第一个方法, 因此还[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]应该通过调用稍后定义的函数 (称为: `InitializeGlobals()`
 
 ```cpp
 bool initialized = false;

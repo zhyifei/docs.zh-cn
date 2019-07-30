@@ -23,54 +23,59 @@ helpviewer_keywords:
 - user-defined data types
 - types [Visual Basic], user-defined
 ms.assetid: be913dca-a364-4a51-96a1-549a1b390b0a
-ms.openlocfilehash: 42aecd0a5d948ab76d7bd11990d4cdbdce611015
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 76073037dcaac0e87bc8a352f3b438332d11d881
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64646954"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630129"
 ---
 # <a name="user-defined-data-type"></a>用户定义的数据类型
-在您定义的格式保存数据。 `Structure`语句定义的格式。  
-  
- 早期版本的 Visual Basic 支持用户定义类型 (UDT)。 当前版本扩展了到 UDT*结构*。 结构是一个或多个串联*成员*的各种数据类型。 Visual Basic 将结构作为单个单元，尽管您还可以单独访问其成员。  
-  
-## <a name="remarks"></a>备注  
- 定义和使用结构数据类型，或无基本数据类型满足你的需求时您需要将各种数据类型组合到单个单元。  
-  
- 结构的数据类型的默认值由其每个成员的默认值的组合组成。  
-  
-## <a name="declaration-format"></a>声明格式  
- 在结构声明开头[Structure 语句](../../../visual-basic/language-reference/statements/structure-statement.md)结尾`End Structure`语句。 `Structure`语句提供的结构，这也是该结构定义的数据类型的标识符的名称。 代码的其他部分可以使用此标识符来声明变量、 参数和函数返回值为此结构的数据类型。  
-  
- 之间的声明`Structure`和`End Structure`语句定义的结构的成员。  
-  
-## <a name="member-access-levels"></a>成员访问级别  
- 必须声明使用每个成员[Dim 语句](../../../visual-basic/language-reference/statements/dim-statement.md)或指定访问级别，例如语句[公共](../../../visual-basic/language-reference/modifiers/public.md)，[友元](../../../visual-basic/language-reference/modifiers/friend.md)，或[专用](../../../visual-basic/language-reference/modifiers/private.md). 如果使用`Dim`语句中，为公共访问级别默认设置。  
-  
-## <a name="programming-tips"></a>编程提示  
-  
-- **内存占用情况。** 与所有复合数据类型，不能安全地通过同时添加其成员的名义存储分配计算结构的内存总消耗。 此外，不能安全地假定已在内存中存储的顺序声明的顺序相同。 如果需要控制结构的存储布局，你可以申请<xref:System.Runtime.InteropServices.StructLayoutAttribute>属性为`Structure`语句。  
-  
-- **互操作注意事项。** 如果你与不是为.NET Framework 编写的组件交互，如自动化或 COM 对象，请记住，在其他环境中的用户定义类型都不兼容使用 Visual Basic 的结构类型。  
-  
-- **扩大转换。** 没有自动转换到或从任何结构的数据类型。 可以使用在结构上定义转换运算符[Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md)，并可以声明为每个转换运算符`Widening`或`Narrowing`。  
-  
-- **类型字符。** 结构的数据类型不具有文本类型字符或标识符类型字符。  
-  
-- **Framework 类型。** .NET Framework 中没有相应类型。 从.NET Framework 类继承的所有结构<xref:System.ValueType?displayProperty=nameWithType>，但没有单个结构对应于<xref:System.ValueType?displayProperty=nameWithType>。  
-  
-## <a name="example"></a>示例  
- 下面的示例演示一种结构的声明的大纲。  
-  
-```  
-[Public | Protected | Friend | Protected Friend | Private] Structure structname  
-    {Dim | Public | Friend | Private} member1 As datatype1  
-    ' ...  
-    {Dim | Public | Friend | Private} memberN As datatypeN  
-End Structure  
-```  
-  
+
+以您定义的格式保存数据。 `Structure`语句定义格式。
+
+以前版本的 Visual Basic 支持用户定义的类型 (UDT)。 当前版本将 UDT 扩展到*结构*。 结构是一种或多种数据类型*成员*的串联。 Visual Basic 将结构视为单个单元, 但你也可以单独访问其成员。
+
+## <a name="remarks"></a>备注
+
+当需要将各种数据类型组合成单个单元时, 或在没有任何基本数据类型满足您的需求时, 可定义和使用结构数据类型。
+
+结构数据类型的默认值由其每个成员的默认值组合而成。
+
+## <a name="declaration-format"></a>声明格式
+
+结构声明以[结构语句](../../../visual-basic/language-reference/statements/structure-statement.md)开头, 以`End Structure`语句结尾。 `Structure`语句提供结构的名称, 该结构也是结构正在定义的数据类型的标识符。 代码的其他部分可以使用此标识符来声明变量、参数和函数返回值, 使其成为此结构的数据类型。
+
+`Structure` 和`End Structure`语句之间的声明定义结构的成员。
+
+## <a name="member-access-levels"></a>成员访问级别
+
+必须使用[Dim 语句](../../../visual-basic/language-reference/statements/dim-statement.md)或指定访问级别的语句 (如[Public](../../../visual-basic/language-reference/modifiers/public.md)、 [Friend](../../../visual-basic/language-reference/modifiers/friend.md)或[Private](../../../visual-basic/language-reference/modifiers/private.md)) 声明每个成员。 如果使用`Dim`语句, 则访问级别默认为 "公共"。
+
+## <a name="programming-tips"></a>编程提示
+
+- **内存消耗。** 与所有复合数据类型一样, 不能通过将其成员的标称存储分配相加来安全地计算结构的总内存消耗量。 而且, 不能安全地假设内存中的存储顺序与声明顺序相同。 如果需要控制结构的存储布局, 则可以将<xref:System.Runtime.InteropServices.StructLayoutAttribute>属性应用于该`Structure`语句。
+
+- **互操作注意事项。** 如果与不是为 .NET Framework 编写的组件 (如自动化或 COM 对象) 交互, 请记住, 其他环境中的用户定义类型与 Visual Basic 结构类型不兼容。
+
+- **扩大.** 不会与任何结构数据类型自动转换。 您可以使用[Operator 语句](../../../visual-basic/language-reference/statements/operator-statement.md)在结构上定义转换运算符, 并且可以将`Widening`每个转换运算符声明为或。 `Narrowing`
+
+- **键入字符。** 结构数据类型没有文本类型字符或标识符类型字符。
+
+- **Framework 类型。** .NET Framework 中没有相应的类型。 所有结构都继承自 .NET Framework 类<xref:System.ValueType?displayProperty=nameWithType>, 但没有单个结构<xref:System.ValueType?displayProperty=nameWithType>对应于。
+
+## <a name="example"></a>示例
+
+以下范例显示了结构声明的轮廓。
+
+```
+[Public | Protected | Friend | Protected Friend | Private] Structure structname
+    {Dim | Public | Friend | Private} member1 As datatype1
+    ' ...
+    {Dim | Public | Friend | Private} memberN As datatypeN
+End Structure
+```
+
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.ValueType>

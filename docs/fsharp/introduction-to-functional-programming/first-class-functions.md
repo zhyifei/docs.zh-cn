@@ -1,182 +1,182 @@
 ---
 title: 头等函数
-description: 了解有关的第一类函数，以及如何对函数式编程中的重要信息F#。
+description: 了解第一类函数以及它们对于中F#的函数编程是非常重要的。
 ms.date: 10/29/2018
-ms.openlocfilehash: 505ad686614b53d779cb617fc04ac74c2a88b31b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4681d32abd59cc4aade6f4cb2d062e7888bcfbbc
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772752"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629713"
 ---
 # <a name="first-class-functions"></a>头等函数
 
-函数编程语言的决定性特征是提升至最优状态的函数。 您应能够执行的函数，任何您可以使用其他内置类型的值执行操作并将无法执行此操作与一般程度的工作量。
+函数编程语言的一种定义特性是将函数提升为第一类状态。 您应该能够对使用其他内置类型的值的函数执行任何操作, 并且能够以相当的工作量来实现此目的。
 
-典型的第一类状态的度量值包括：
+第一类状态的典型度量值包括:
 
-- 您可以将函数绑定到标识符？ 也就是说，可以在为其提供名称？
+- 是否可以将函数绑定到标识符？ 也就是说, 可以为其指定名称吗？
 
-- 可以存储函数中的数据结构，如在列表中？
+- 能否在数据结构 (如列表中) 中存储函数？
 
-- 可以为函数调用中的自变量传递函数？
+- 是否可以在函数调用中将函数作为参数传递？
 
-- 您可以从函数调用返回一个函数？
+- 是否可以从函数调用返回函数？
 
-最后两个度量值定义所谓*高阶 operations*或*高阶函数*。 高阶函数接受作为参数的函数，并返回函数作为函数调用的值。 这些操作支持这种功能性编程作为映射函数和函数的组合。
+最后两个度量值定义了所谓的*高阶运算*或*高阶函数*。 高阶函数接受函数作为参数, 并返回函数作为函数调用的值。 这些操作支持将函数编程作为映射函数和函数的组合。
 
-## <a name="give-the-value-a-name"></a>为指定名称的值
+## <a name="give-the-value-a-name"></a>为值指定名称
 
-如果函数是第一类值，您必须能够将其命名，就像可以命名整数、 字符串和其他内置类型。 这称为函数编程语言标识符绑定到的值中。 F#使用[`let`绑定](../language-reference/functions/let-bindings.md)要绑定到值的名称： `let <identifier> = <value>`。 下面的代码演示两个示例。
+如果函数是第一类值, 则您必须能够命名它, 就像您命名整数、字符串和其他内置类型一样。 这在函数编程文献中称为将标识符绑定到某个值。 F#`let <identifier> = <value>` [使用`let`绑定](../language-reference/functions/let-bindings.md)将名称绑定到值:。 下面的代码演示了两个示例。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet20.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/contour/snippet20.fs)]
 
-您可以命名很容易地函数。 下面的示例定义一个名为函数`squareIt`通过将标识符绑定`squareIt`到[lambda 表达式](../language-reference/functions/lambda-expressions-the-fun-keyword.md) `fun n -> n * n`。 函数`squareIt`具有一个参数、 `n`，它将返回该参数的平方和。
+您可以轻松地命名函数。 下面的示例定义了一个名`squareIt`为的函数, `squareIt`该函数将标识符绑定到[lambda 表达式](../language-reference/functions/lambda-expressions-the-fun-keyword.md) `fun n -> n * n`。 函数`squareIt`具有一个参数, `n`并返回该参数的平方。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet21.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/contour/snippet21.fs)]
 
-F#提供了以下更简洁的语法来实现相同的结果，少键入一些字符。
+F#提供了以下更简洁的语法来实现相同的结果, 但键入的内容更少。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet22.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/contour/snippet22.fs)]
 
-主要是下面的示例使用第一个样式， `let <function-name> = <lambda-expression>`，以强调函数的声明和其他类型的值的声明之间的相似之处。 但是，还可以使用简洁的语法编写所有命名的函数。 这两种方式编写的一些示例。
+下面的示例使用第一种样式`let <function-name> = <lambda-expression>`来强调函数声明和其他类型值的声明之间的相似之处。 但是, 还可以用简洁的语法来编写所有命名函数。 其中的一些示例是以这两种方式编写的。
 
-## <a name="store-the-value-in-a-data-structure"></a>应用商店中的数据结构的值
+## <a name="store-the-value-in-a-data-structure"></a>将值存储在数据结构中
 
-第一类值可以存储在一个数据结构。 下面的代码显示了将值存储在列表和元组中的示例。
+第一类值可以存储在数据结构中。 下面的代码演示将值存储在列表和元组中的示例。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet23.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/contour/snippet23.fs)]
 
-若要验证存储元组中的函数名称的确会实际计算的函数，下面的示例，请使用`fst`并`snd`运算符从元组中提取的第一个和第二个元素`funAndArgTuple`。 元组中的第一个元素是`squareIt`和第二个元素是`num`。 标识符`num`绑定到的有效参数的整数 10 上, 一示例中`squareIt`函数。 第二个表达式所应用到的元组中的第二个元素的元组中的第一个元素： `squareIt num`。
+若要验证存储在元组中的函数名称实际上是否计算为函数, 下面的示例使用`fst`和`snd`运算符从元组`funAndArgTuple`中提取第一个和第二个元素。 元组中的第一个元素`squareIt`是, 第二个`num`元素是。 标识符`num`在前面的示例中绑定到整数 10, 这是`squareIt`函数的有效参数。 第二个表达式将元组中的第一个元素应用到元组中的`squareIt num`第二个元素:。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet24.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/contour/snippet24.fs)]
 
-同样，就像标识符`num`整数 10 可以互换使用，因此可以标识符`squareIt`和 lambda 表达式`fun n -> n * n`。
+同样, 可以互换使用`num`标识符和整数 10, 因此可以使用标识符`squareIt`和 lambda 表达式`fun n -> n * n`。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet25.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/contour/snippet25.fs)]
 
-## <a name="pass-the-value-as-an-argument"></a>值作为参数传递
+## <a name="pass-the-value-as-an-argument"></a>将值作为参数传递
 
-如果值有一种语言中的第一类的状态，则可以它作为参数传递给函数。 例如，它是常见整数和字符串作为参数传递。 下面的代码演示整数和字符串中作为参数传递F#。
+如果某个值具有语言形式的第一类状态, 则可以将其作为参数传递给函数。 例如, 通常将整数和字符串作为参数传递。 下面的代码显示了在中作为参数传递的F#整数和字符串。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet26.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/contour/snippet26.fs)]
 
-如果函数的第一类的状态，您必须能够将它们作为参数传递相同的方式。 请记住，这是高阶函数的第一个特征。
+如果函数具有一流状态, 则您必须能够以相同的方式将它们作为参数传递。 请记住, 这是高阶函数的第一个特征。
 
-在以下示例中，函数`applyIt`具有两个参数`op`和`arg`。 如果您将发送具有一个参数的函数`op`和到函数的相应参数`arg`，该函数返回应用的结果`op`到`arg`。 在以下示例中，函数参数和整数自变量将发送相同方式使用它们的名称。
+在下面的示例中, `applyIt`函数具有两个`op`参数`arg`: 和。 如果在具有`op`一个参数的函数中进行发送, 并向提供`arg`函数的适当参数, 则函数将返回应用`op`到`arg`的结果。 在下面的示例中, 函数参数和整数参数都是通过使用其名称以相同方式发送的。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet27.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/contour/snippet27.fs)]
 
-能够将函数作为参数发送到另一个函数是函数编程语言，例如映射或筛选器操作中的常见抽象的基础。 映射操作，例如，是捕获共享单步执行列表、 对每个元素进行一些操作，然后返回结果的列表的函数的计算，高阶函数。 您可能想要递增的整数，列表中每个元素或正方形每个元素，或更改为大写的字符串列表中每个元素。 计算的易出错部分是递归过程的列表的步骤和生成的要返回的结果列表。 映射函数中捕获该部分。 你已将某个特定应用程序是你想要单独应用于每个列表元素的函数 （添加、 求平方、 更改大小写）。 函数作为参数发送到映射函数，就像`squareIt`发送到`applyIt`在前面的示例。
+将函数作为自变量发送到另一个函数的能力是在函数编程语言 (例如映射或筛选器操作) 中为常见的抽象。 例如, 映射操作是一个高阶函数, 该函数捕获逐句通过列表的函数所共享的计算, 对每个元素执行一些操作, 然后返回结果列表。 您可能想要在一个整数列表中递增每个元素, 或在每个元素的后面递增, 或将字符串列表中的每个元素更改为大写。 计算中易出错的部分是单步执行列表并生成要返回的结果列表的递归过程。 该部件在映射函数中捕获。 对于特定应用程序, 只需对每个列表元素分别应用 (添加、求平方、变化大小写)。 该函数作为参数发送到 mapping 函数, 就像`squareIt` `applyIt`在前面的示例中一样。
 
-F#提供用于大多数集合类型，包括映射方法[列出了](../language-reference/lists.md)，[数组](../language-reference/arrays.md)，并[序列](../language-reference/sequences.md)。 下面的示例使用列表。 语法是`List.map <the function> <the list>`。
+F#为大多数集合类型 (包括[列表](../language-reference/lists.md)、[数组](../language-reference/arrays.md)和[序列](../language-reference/sequences.md)) 提供映射方法。 下面的示例使用列表。 语法为`List.map <the function> <the list>`。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet28.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/contour/snippet28.fs)]
 
-有关详细信息，请参阅[列出了](../language-reference/lists.md)。
+有关详细信息, 请参阅[列表](../language-reference/lists.md)。
 
 ## <a name="return-the-value-from-a-function-call"></a>从函数调用返回值
 
-最后，如果函数具有一种语言中的第一类的状态，您必须能够将其作为函数调用的值返回就像返回其他类型，如整数和字符串。
+最后, 如果某个函数在某种语言中具有一流状态, 则您必须能够将其作为函数调用的值返回, 就像您返回其他类型 (如整数和字符串) 一样。
 
-以下函数调用返回整数并将其显示。
+以下函数调用返回整数并显示它们。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet29.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/contour/snippet29.fs)]
 
 以下函数调用返回一个字符串。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet30.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/contour/snippet30.fs)]
 
-以下函数调用中，声明为内联，返回一个布尔值。 显示的值是`True`。
+以下函数调用 (以内联方式声明) 将返回一个布尔值。 显示的值为`True`。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet31.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/contour/snippet31.fs)]
 
-返回一个函数作为函数调用的值的功能是高阶函数的第二个特征。 在以下示例中，`checkFor`被定义为采用一个参数的函数`item`，并返回作为其值的新函数。 返回的函数采用一个列表作为其参数`lst`，并搜索`item`中`lst`。 如果`item`，则该函数将返回`true`。 如果`item`不存在，该函数将返回`false`。 上一节中，以下代码使用提供的列表函数[List.exists](https://msdn.microsoft.com/library/15a3ebd5-98f0-44c0-8220-7dedec3e68a8)，以在列表中搜索。
+将函数作为函数调用值返回的能力是高阶函数的第二个特征。 在下面的示例中`checkFor` , 将定义为一个函数, 该函数采用一个`item`参数, 并返回一个新函数作为其值。 返回的函数采用列表作为其参数, `lst`并在中`lst`进行`item`搜索。 如果`item`存在, 则该函数返回`true`。 如果`item`不存在, 则该函数将`false`返回。 如上一节所示, 以下代码使用提供的列表函数[list](https://msdn.microsoft.com/library/15a3ebd5-98f0-44c0-8220-7dedec3e68a8), 以搜索列表。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet32.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/contour/snippet32.fs)]
 
-下面的代码使用`checkFor`若要创建新的函数采用一个自变量、 列表和 7 的搜索列表中。
+下面的代码使用`checkFor`创建一个新函数, 该函数采用一个自变量和一个列表, 并在列表中搜索7。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet33.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/contour/snippet33.fs)]
 
-下面的示例使用中的函数的第一类状态F#来声明一个函数， `compose`，返回两个函数参数的组合。
+下面的示例使用中F#函数的第一类状态声明一个函数, `compose`该函数返回两个函数参数的组合。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet34.fs)]
-
-> [!NOTE]
-> 更短的版本，请参阅以下部分中，"扩充函数。"
-
-下面的代码将作为参数发送两个函数`compose`，这两个的这需要相同类型的单个参数。 返回值是一个新函数，则两个函数参数的组合。
-
-[!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet35.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/contour/snippet34.fs)]
 
 > [!NOTE]
-> F#提供了两个运算符`<<`和`>>`，组合函数。 例如，`let squareAndDouble2 = doubleIt << squareIt`等效于`let squareAndDouble = compose doubleIt squareIt`在前面的示例。
+> 对于更短的版本, 请参阅下一节 "扩充函数"。
 
-返回一个函数作为函数调用的值的以下示例创建一个简单的猜测游戏。 若要创建一个游戏，调用`makeGame`的值，希望有人猜测中发送`target`。 函数的返回值`makeGame`是接受一个参数 （猜测值），并报告猜测是正确的函数。
+下面的代码将两个函数作为自`compose`变量发送到, 这两个函数都采用同一类型的单个自变量。 返回值是一个新函数, 它是两个函数参数的组合。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet36.fs)]
-
-下面的代码调用`makeGame`，将值发送`7`为`target`。 标识符`playGame`绑定到返回的 lambda 表达式。 因此，`playGame`是一个函数，将作为它的一个参数值为`guess`。
-
-[!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet37.fs)]
-
-## <a name="curried-functions"></a>扩充的函数
-
-可以通过利用隐式更简洁地编写的示例在上一节中的许多*科*中F#函数声明。 科是一个转换具有多个参数为一系列的嵌入功能，其中每个具有单个参数的函数的过程。 在F#，本质上是扩充具有多个参数的函数。 例如，`compose`从上一节可以编写以下简洁样式，带有三个参数中所示。
-
-[!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet38.fs)]
-
-但是，结果是返回一个参数，它又会返回一个参数的另一个函数的函数，如中所示的一个参数的函数`compose4curried`。
-
-[!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet39.fs)]
-
-您可以访问以下几种方式的此函数。 下面的示例的每个返回并显示 18。 您可以替换`compose4`与`compose4curried`中任何示例。
-
-[!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet40.fs)]
-
-若要验证函数仍像以前一样工作，试一次原始测试用例。
-
-[!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet41.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/contour/snippet35.fs)]
 
 > [!NOTE]
-> 你可以限制科参数括在元组中。 详细信息，请参阅"参数模式"中[形参和实参](../language-reference/parameters-and-arguments.md)。
+> F#提供两个编写`<<`函数`>>`的运算符和。 例如, `let squareAndDouble = compose doubleIt squareIt`在`let squareAndDouble2 = doubleIt << squareIt`前面的示例中, 等效于。
 
-下面的示例使用隐式扩充编写的简短版本`makeGame`。 如何的详细信息`makeGame`构造并返回`game`函数不太明确按以下格式，但你可以通过使用原始的结果是相同的测试用例验证。
+以下用于将函数作为函数调用值返回的示例将创建一个简单的推测游戏。 若要创建游戏, 请`makeGame`调用, 并在中调用要将其发送到的`target`某个值。 函数`makeGame`的返回值是一个函数, 它采用一个参数 (guess) 并报告推测是否正确。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet42.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/contour/snippet36.fs)]
 
-科的详细信息，请参阅"的参数的部分应用程序"中[函数](../language-reference/functions/index.md)。
+下面的代码调用`makeGame`, 并发送的`7` `target`值。 标识符`playGame`绑定到返回的 lambda 表达式。 因此, `playGame`它是一个函数, 它将作为一个参数的`guess`值。
 
-## <a name="identifier-and-function-definition-are-interchangeable"></a>是可互换的标识符和函数定义
+[!code-fsharp[Main](~/samples/snippets/fsharp/contour/snippet37.fs)]
 
-变量名称`num`中的上一个示例的计算结果为整数 10，并不奇怪，因为`num`是有效，10 也是有效的。 这同样适用的函数标识符和它们的值： 可以随处可用的函数的名称，使用绑定到的 lambda 表达式。
+## <a name="curried-functions"></a>扩充函数
 
-下面的示例定义`Boolean`调用的函数`isNegative`，然后互换使用的函数的名称和函数的定义。 接下来三个示例都返回并显示`False`。
+可以通过利用函数声明中F#的隐式*currying* , 将上一节中的许多示例编写得更简洁。 Currying 是将具有多个参数的函数转换为一系列嵌入函数的过程, 其中每个函数都有一个参数。 在F#中, 具有多个参数的函数在本质上是扩充的。 例如, `compose`可以按照下面的简洁样式中所示, 用三个参数来编写上述部分。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet43.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/contour/snippet38.fs)]
 
-若要进一步它一个步骤，替换为的值的`applyIt`为绑定到`applyIt`。
+但是, 结果是一个参数的函数, 该函数返回一个参数的函数, 该函数反过来返回一个参数的另一个函数, 如中`compose4curried`所示。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet44.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/contour/snippet39.fs)]
+
+可以通过多种方式访问此函数。 下面的每个示例都返回并显示18。 您可以在`compose4`任何`compose4curried`示例中将替换为。
+
+[!code-fsharp[Main](~/samples/snippets/fsharp/contour/snippet40.fs)]
+
+若要验证函数是否仍像以前一样工作, 请再次尝试原始测试用例。
+
+[!code-fsharp[Main](~/samples/snippets/fsharp/contour/snippet41.fs)]
+
+> [!NOTE]
+> 可以通过在元组中包含参数来限制 currying。 有关详细信息, 请参阅[参数和参数](../language-reference/parameters-and-arguments.md)中的 "参数模式"。
+
+下面的示例使用隐式 currying 来编写较短的`makeGame`版本。 在此格式中`makeGame` , 构造和`game`返回函数的方式的详细信息不太明确, 但你可以使用结果相同的原始测试用例进行验证。
+
+[!code-fsharp[Main](~/samples/snippets/fsharp/contour/snippet42.fs)]
+
+有关 currying 的详细信息, 请参阅[函数](../language-reference/functions/index.md)中的 "参数的部分应用"。
+
+## <a name="identifier-and-function-definition-are-interchangeable"></a>标识符和函数定义可互换
+
+前面的示例`num`中的变量名的计算结果为整数 10, 并且在其中`num`有效的情况下, 也是很奇怪的, 10 也是有效的。 函数标识符及其值也是如此: 任何位置都可以使用函数的名称, 可以使用它绑定到的 lambda 表达式。
+
+下面的示例定义了`Boolean`一个名`isNegative`为的函数, 然后使用函数的名称和函数的定义。 接下来的三个示例都返回`False`并显示。
+
+[!code-fsharp[Main](~/samples/snippets/fsharp/contour/snippet43.fs)]
+
+若要进一步执行此`applyIt`操作, 请将绑定到的值替换为。 `applyIt`
+
+[!code-fsharp[Main](~/samples/snippets/fsharp/contour/snippet44.fs)]
 
 ## <a name="functions-are-first-class-values-in-f"></a>函数是 F 中的第一类值\#
 
-前面几节中的示例演示中，函数F#满足的条件中的一类值F#:
+前面几节中的示例说明中F#的函数满足中第一类值的条件: F#
 
-- 可以绑定到函数定义的标识符。
-[!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet21.fs)]
+- 可以将标识符绑定到函数定义。
+[!code-fsharp[Main](~/samples/snippets/fsharp/contour/snippet21.fs)]
 
-- 您可以在数据结构存储函数。
-[!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet45.fs)]
+- 您可以将函数存储在数据结构中。
+[!code-fsharp[Main](~/samples/snippets/fsharp/contour/snippet45.fs)]
 
-- 可以将函数作为参数传递。
-[!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet46.fs)]
+- 可以将函数作为自变量传递。
+[!code-fsharp[Main](~/samples/snippets/fsharp/contour/snippet46.fs)]
 
-- 可以将函数作为函数调用的值返回。
-[!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet32.fs)]
+- 您可以返回函数作为函数调用的值。
+[!code-fsharp[Main](~/samples/snippets/fsharp/contour/snippet32.fs)]
 
-有关详细信息F#，请参阅[F#语言参考](../language-reference/index.md)。
+有关的详细信息F#, 请参阅[ F#语言参考](../language-reference/index.md)。
 
 ## <a name="example"></a>示例
 
@@ -186,12 +186,12 @@ F#提供用于大多数集合类型，包括映射方法[列出了](../language-
 
 ### <a name="code"></a>代码
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet47.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/contour/snippet47.fs)]
 
 ## <a name="see-also"></a>请参阅
 
 - [列表](../language-reference/lists.md)
 - [元组](../language-reference/tuples.md)
 - [函数](../language-reference/functions/index.md)
-- [`let` Bindings](../language-reference/functions/let-bindings.md)
-- [Lambda 表达式：`fun` 关键字](../language-reference/functions/lambda-expressions-the-fun-keyword.md)
+- [`let`绑定](../language-reference/functions/let-bindings.md)
+- [Lambda 表达式:`fun` 关键字](../language-reference/functions/lambda-expressions-the-fun-keyword.md)

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - data templates [WPF]
 - thread [WPF], affinity
 ms.assetid: 8579c10b-76ab-4c52-9691-195ce02333c8
-ms.openlocfilehash: 987e48f163d35d27f6736464d7497451cca82c0c
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 440a6d76e5295613d2887c0a77d9a49e870e580b
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400856"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629820"
 ---
 # <a name="wpf-architecture"></a>WPF 体系结构
 本主题提供 Windows Presentation Foundation (WPF) 类层次结构的指导教程。 本主题涵盖了 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 的大部分主要子系统，并说明它们的交互方式。 本主题还详细介绍了 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 架构师所做的一些选择。  
@@ -30,7 +30,7 @@ ms.locfileid: "68400856"
 ## <a name="systemobject"></a>System.Object  
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 主要编程模型通过托管代码公开。 在 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 的早期设计阶段，曾有过大量关于如何界定系统的托管组件和非托管组件的争论。 CLR 提供了许多功能, 这些功能使得开发更高效、更可靠 (包括内存管理、错误处理、通用类型系统等), 但会产生费用。  
   
- 下图说明了 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 的主要组件。 关系图的红色部分（PresentationFramework、PresentationCore 和 milcore）是 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 的主要代码部分。 在这些组件中，只有一个是非托管组件 - milcore。 milcore 是以非托管代码编写的，目的是实现与 [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 的紧密集成。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 中的所有显示均通过 [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 引擎完成，因此硬件和软件呈现都很高效。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 还要求对内存和执行进行精细控制。 Milcore 中的组合引擎对性能的影响非常高, 需要具有 CLR 的许多优点才能获得性能。  
+ 下图说明了 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 的主要组件。 关系图的红色部分（PresentationFramework、PresentationCore 和 milcore）是 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 的主要代码部分。 在这些组件中，只有一个是非托管组件 - milcore。 Milcore 以非托管代码编写, 以便实现与 DirectX 的紧密集成。 中[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]的所有显示都是通过 DirectX 引擎完成的, 因此可以实现高效的硬件和软件呈现。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 还要求对内存和执行进行精细控制。 Milcore 中的组合引擎对性能的影响非常高, 需要具有 CLR 的许多优点才能获得性能。  
   
  ![WPF 在 .NET Framework 中的位置。](./media/wpf-architect1.PNG "wpf_architect1")  
   

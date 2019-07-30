@@ -1,17 +1,17 @@
 ---
 title: 命名空间
-description: 了解如何F#命名空间，可将代码组织到相关的功能区域，通过它可以将名称附加到的程序元素分组。
+description: 了解F#命名空间如何允许用户将名称附加到一组程序元素, 从而将代码组织到相关功能的各个区域。
 ms.date: 12/08/2018
-ms.openlocfilehash: b315d654dad0d36e3584564ad027c68fb3c94cce
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: d295f25cae81bc28b4fcb522bdcacde862f9517a
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645273"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627373"
 ---
 # <a name="namespaces"></a>命名空间
 
-命名空间，可以将代码组织到相关的功能区域，通过它可以将名称附加一组F#的程序元素。 命名空间是在通常顶级元素F#文件。
+命名空间使你能够将一个名称附加到一组F#程序元素, 从而将代码组织到相关功能的各个区域。 命名空间通常是文件中F#的顶级元素。
 
 ## <a name="syntax"></a>语法
 
@@ -21,27 +21,27 @@ namespace [rec] [parent-namespaces.]identifier
 
 ## <a name="remarks"></a>备注
 
-如果你想要将代码放入一个命名空间，文件中的第一个声明必须声明命名空间。 然后将整个文件的内容会成为该命名空间的一部分，提供任何其他命名空间声明不存在更多的文件中。 如果是这种情况，然后被视为下一步的命名空间声明之前的所有代码可在第一个命名空间中。
+如果要将代码放入命名空间中, 则文件中的第一个声明必须声明命名空间。 如果文件中不存在其他命名空间声明, 则整个文件的内容将成为命名空间的一部分。 如果是这种情况, 则所有代码直到下一个命名空间声明都被视为位于第一个命名空间内。
 
-命名空间不能直接包含的值和函数。 相反，必须在模块中，包含值和函数以及模块包含命名空间中。 命名空间可以包含类型和模块。
+命名空间不能直接包含值和函数。 相反, 值和函数必须包含在模块中, 且模块包含在命名空间中。 命名空间可以包含类型和模块。
 
-XML 文档注释可以声明一个命名空间，上面，但它们将被忽略。 编译器指令还可以上述命名空间声明。
+XML 文档注释可以在命名空间之上声明, 但会被忽略。 还可以在命名空间之上声明编译器指令。
 
-命名空间可以显式声明命名空间关键字，或隐式声明模块时。 若要显式声明命名空间，请使用命名空间关键字后跟的命名空间名称。 下面的示例演示声明一个命名空间的代码文件`Widgets`的类型和该命名空间中提供的模块。
+可以使用 namespace 关键字显式声明命名空间, 或在声明模块时隐式声明命名空间。 若要显式声明命名空间, 请使用 namespace 关键字, 后跟命名空间名称。 下面的示例演示一个代码文件, 该代码文件`Widgets`声明具有类型的命名空间和包含在该命名空间中的模块。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6406.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6406.fs)]
 
-如果该文件的全部内容都位于一个模块，还可以声明命名空间隐式使用`module`关键字并提供完全限定的模块名称中的新命名空间名称。 下面的示例演示一个文件，其中声明一个命名空间`Widgets`和模块`WidgetsModule`，其中包含一个函数。
+如果该文件的所有内容都在一个模块中, 则还可以使用`module`关键字隐式声明命名空间, 并在完全限定的模块名称中提供新的命名空间名称。 下面的示例演示一个声明命名空间`Widgets`的代码文件和一个包含函数的模块。 `WidgetsModule`
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6401.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6401.fs)]
 
-下面的代码是等效于上述代码中，但该模块是一个本地模块声明。 在这种情况下，命名空间必须出现在各自的行。
+下面的代码等效于前面的代码, 但模块为本地模块声明。 在这种情况下, 命名空间必须出现在其自己的行上。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/namespaces/snippet6402.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/namespaces/snippet6402.fs)]
 
-如果在同一文件中一个或多个命名空间中需要多个模块，则必须使用本地模块声明。 当使用本地模块声明时，不能在模块声明中使用的限定命名空间。 下面的代码显示了具有命名空间声明和两个本地模块声明的文件。 在这种情况下，这些模块直接包含在该命名空间。没有任何文件具有相同名称的隐式创建的模块。 任何其他代码在文件中，如`do`绑定，因此需要限定模块成员位于命名空间中但不是在的内部模块`widgetFunction`通过使用模块名称。
+如果一个或多个命名空间中的同一文件中需要多个模块, 则必须使用本地模块声明。 使用本地模块声明时, 不能在模块声明中使用限定的命名空间。 下面的代码演示一个具有命名空间声明和两个本地模块声明的文件。 在这种情况下, 模块直接包含在命名空间中;没有隐式创建的与该文件同名的模块。 文件中的任何其他代码 (如`do`绑定) 都位于命名空间中, 但不在内部模块中, 因此需要使用模块名称来限定模块成员。 `widgetFunction`
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6403.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6403.fs)]
 
 此示例的输出如下所示。
 
@@ -50,33 +50,33 @@ Module1 10 20
 Module2 5 6
 ```
 
-有关详细信息，请参阅[模块](modules.md)。
+有关详细信息, 请参阅[模块](modules.md)。
 
-## <a name="nested-namespaces"></a>嵌套的命名空间
+## <a name="nested-namespaces"></a>嵌套命名空间
 
-在创建嵌套的命名空间时，必须完全限定它。 否则，您创建新的顶级命名空间。 命名空间声明中将忽略缩进。
+创建嵌套命名空间时, 必须完全限定该命名空间。 否则, 将创建一个新的顶级命名空间。 命名空间声明中将忽略缩进。
 
-下面的示例演示如何声明嵌套的命名空间。
+下面的示例演示如何声明嵌套命名空间。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6404.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6404.fs)]
 
-## <a name="namespaces-in-files-and-assemblies"></a>中的文件和程序集的命名空间
+## <a name="namespaces-in-files-and-assemblies"></a>文件和程序集中的命名空间
 
-命名空间可以跨多个文件中的单个项目或编译。 术语*命名空间片段*介绍包含在一个文件中的命名空间的一部分。 命名空间还可以跨多个程序集。 例如，`System`命名空间中包含整个.NET Framework，也不能跨越多个程序集包含多个嵌套的命名空间。
+命名空间可跨单个项目或编译中的多个文件。 术语 "*命名空间片段*" 描述包含在一个文件中的命名空间的一部分。 命名空间也可以跨多个程序集。 例如, `System`命名空间包含整个 .NET Framework, 这跨多个程序集, 并且包含许多嵌套命名空间。
 
-## <a name="global-namespace"></a>全局 Namespace
+## <a name="global-namespace"></a>全局命名空间
 
-使用预定义的命名空间`global`将名称放在.NET 顶级命名空间。
+使用预定义的命名`global`空间将名称放在 .net 顶级命名空间中。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6407.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6407.fs)]
 
-您还可以使用全局若要引用的顶级的.NET 命名空间，例如，若要解决与其他命名空间的名称冲突。
+你还可以使用 global 引用顶层 .NET 命名空间, 例如, 解析与其他命名空间的名称冲突。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6408.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6408.fs)]
 
 ## <a name="recursive-namespaces"></a>递归命名空间
 
-此外可以为递归，从而允许所有包含的代码要相互递归声明命名空间。  这是通过`namespace rec`。 使用`namespace rec`可以缓解一些烦恼无法编写类型和模块之间相互引用代码中的。 以下是此示例：
+还可以将命名空间声明为 recursive, 以允许所有包含的代码相互递归。  这是通过`namespace rec`实现的。 `namespace rec`使用可以减少无法在类型和模块之间编写相互引用代码的一些难题。 下面是一个示例:
 
 ```fsharp
 namespace rec MutualReferences
@@ -117,12 +117,12 @@ module BananaHelpers =
         | Down -> b |> peelSides
 ```
 
-请注意，异常`DontSqueezeTheBananaException`和类`Banana`两者相互引用。  此外，模块`BananaHelpers`和类`Banana`也相互引用。 这不是可能表示F#如果你删除`rec`关键字从`MutualReferences`命名空间。
+请注意, 异常`DontSqueezeTheBananaException`和类`Banana`都相互引用。  此外, 模块`BananaHelpers`和类`Banana`也相互引用。 如果从F# `rec` 命名空间中删除关键字,则无法在中进行表示。`MutualReferences`
 
-此功能也仅适用于顶级[模块](modules.md)。
+此功能也适用于顶级[模块](modules.md)。
 
 ## <a name="see-also"></a>请参阅
 
 - [F# 语言参考](index.md)
 - [模块](modules.md)
-- [F#RFC FS-1009-允许通过在文件中的较大范围的相互引用类型和模块](https://github.com/fsharp/fslang-design/blob/master/FSharp-4.1/FS-1009-mutually-referential-types-and-modules-single-scope.md)
+- [F#RFC FS-1009-允许在文件中的更大范围内进行相互引用类型和模块](https://github.com/fsharp/fslang-design/blob/master/FSharp-4.1/FS-1009-mutually-referential-types-and-modules-single-scope.md)

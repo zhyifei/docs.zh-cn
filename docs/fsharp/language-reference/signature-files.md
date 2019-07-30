@@ -1,13 +1,13 @@
 ---
 title: 签名文件
-description: 了解如何使用F#签名文件以保存有关的一组公共签名信息F#程序元素，如类型、 命名空间和模块。
+description: 了解如何使用F#签名文件来保存有关一组F#程序元素 (如类型、命名空间和模块) 的公共签名的信息。
 ms.date: 06/15/2018
-ms.openlocfilehash: 88938309a7c2bd12428f06ba8088141fd5349e80
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c04ac8bf4ee360a2caa15be8f2bbea41105bd160
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61770443"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627150"
 ---
 # <a name="signatures"></a>签名
 
@@ -19,7 +19,7 @@ ms.locfileid: "61770443"
 
 签名文件描述相应的实现文件中的命名空间、模块、类型和成员。 你使用签名文件中的信息来指定相应实现文件中的哪部分代码可从实现文件外部的代码进行访问、哪部分代码属于实现文件内部。 包含在签名文件中的命名空间、模块和类型必须是包含在实现文件中的命名空间、模块和类型的子集。 除了本主题后面记录的一些例外之外，签名文件中未列出的那些语言元素被视为实现文件专用元素。 如果项目或命令行中未找到签名文件，则使用默认可访问性。
 
-有关默认可访问性的详细信息，请参阅[访问控制](access-control.md)。
+有关默认辅助功能的详细信息, 请参阅[访问控制](access-control.md)。
 
 在签名文件中，你不会重复定义类型以及实现每个方法或函数。 相反，可以对每个方法和函数使用签名，它将作为由模块或命名空间片段实现的功能的完整规范。 类型签名的语法与在接口和抽象类的抽象方法声明中使用的语法相同，并且当它正确显示编译的输入时还由 IntelliSense 和 F# interpreter fsi.exe 显示。
 
@@ -56,15 +56,15 @@ ms.locfileid: "61770443"
 
 - 签名和实现的参数模式（也称为 *arity*）必须一致。
 
-- 如果签名文件中的参数名称不同于相应的实现文件中，签名文件中的名称将使用相反，它可能会导致调试或分析时出现的问题。 如果希望此类不匹配项，启用警告 3218 在项目文件中的通知或调用编译器时 (请参阅`--warnon`下[编译器选项](compiler-options.md))。
+- 如果签名文件中的参数名称不同于相应的实现文件, 则将使用签名文件中的名称, 此名称在调试或分析时可能会导致问题。 如果希望收到有关此类不匹配的通知, 请在项目文件中或在调用编译器时启用警告 3218 `--warnon` (请参阅 "[编译器选项](compiler-options.md)" 下)。
 
 下面的代码示例显示具有命名空间、模块、函数值、类型签名以及相应特性的签名文件示例。 它还显示相应的实现文件。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/fssignatures/snippet9002.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/fssignatures/snippet9002.fs)]
 
 下面的代码演示实现文件。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/fssignatures/snippet9001.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/fssignatures/snippet9001.fs)]
 
 ## <a name="see-also"></a>请参阅
 

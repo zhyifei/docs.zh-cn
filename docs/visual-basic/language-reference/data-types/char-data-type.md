@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data types [Visual Basic], assigning
 - Char data type [Visual Basic], character literals
 ms.assetid: cd7547a9-7855-4e8e-b216-35d74a362657
-ms.openlocfilehash: ca40e6c8dcba3da29bdb68b29c91c852e477f8f7
-ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
+ms.openlocfilehash: 8313c2282a3b4b7b035f9f3b685a786c4471f53a
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68512791"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630152"
 ---
 # <a name="char-data-type-visual-basic"></a>Char 数据类型 (Visual Basic)
 
@@ -37,16 +37,22 @@ Unicode 的第一个128码位 (0 – 127) 对应于标准美式键盘上的字�
 
 Visual Basic 不会直接在和`Char`数值类型之间转换。 您可以使用<xref:Microsoft.VisualBasic.Strings.Asc%2A>或<xref:Microsoft.VisualBasic.Strings.AscW%2A> `Char` 函数`Integer`将值转换为表示其码位的。 您可以使用<xref:Microsoft.VisualBasic.Strings.Chr%2A>或<xref:Microsoft.VisualBasic.Strings.ChrW%2A> `Integer` 函数`Char`将值转换为具有该码位的。
 
-如果类型检查开关 ([Option Strict 语句](../../../visual-basic/language-reference/statements/option-strict-statement.md)) 为 on, 则必须将文本类型字符追加到单字符字符串文本, 以将其标识为`Char`数据类型。 下面的示例阐释了这一点。
+如果类型检查开关 ( [Option Strict 语句](../../../visual-basic/language-reference/statements/option-strict-statement.md)) 为 on, 则必须将文本类型字符追加到单字符字符串文本中, 以将其标识为`Char`数据类型。 下面的示例阐释了这一点。 对`charVar`变量的第一次赋值将生成编译器错误`Option Strict` [BC30512](../../misc/bc30512.md) , 因为处于打开。 第二个编译成功, `c`因为文本类型字符将文本标识`Char`为值。
 
 ```vb
 Option Strict On
-Dim charVar As Char
-' The following statement attempts to convert a String literal to Char.
-' Because Option Strict is On, it generates a compiler error.
-charVar = "Z"
-' The following statement succeeds because it specifies a Char literal.
-charVar = "Z"C
+
+Module CharType
+    Public Sub Main()
+        Dim charVar As Char
+
+        ' This statement generates compiler error BC30512 because Option Strict is On.  
+        charVar = "Z"  
+
+        ' The following statement succeeds because it specifies a Char literal.  
+        charVar = "Z"c
+    End Sub
+End Module
 ```
 
 ## <a name="programming-tips"></a>编程提示
@@ -55,7 +61,7 @@ charVar = "Z"C
 
 - **互操作注意事项。** 如果你使用不是为 .NET Framework 编写的组件 (如自动化或 COM 对象) 进行交互, 请记住, 在其他环境中字符类型具有不同的数据宽度 (8 位)。 如果将一个8位参数传递给此类组件, 请`Byte` `Char`在新的 Visual Basic 代码中将其声明为而不是。
 
-- **扩大.** 数据类型扩大到`String`。 `Char` 这意味着你可以转换`Char`为`String` <xref:System.OverflowException?displayProperty=nameWithType> , 并且不会遇到错误。
+- **扩大.** 数据类型扩大到`String`。 `Char` 这意味着你可以将`Char`转换`String`为<xref:System.OverflowException?displayProperty=nameWithType>, 而不会遇到。
 
 - **键入字符。** 将文本类型字符`C`追加到单字符字符串文本会将其强制转换`Char`为数据类型。 `Char`没有标识符类型字符。
 

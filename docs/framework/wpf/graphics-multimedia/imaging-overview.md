@@ -21,12 +21,12 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
-ms.openlocfilehash: dc7129e11a82741f5a095d7f1824de3f90421056
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: d1fcf15db750167a93344ff8efd5957933bed6c0
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331763"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629846"
 ---
 # <a name="imaging-overview"></a>图像处理概述
 本主题介绍 [!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-md.md)]。 借助 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]，开发人员可以显示、转换图像和设置图像的格式。  
@@ -165,7 +165,7 @@ ms.locfileid: "68331763"
 ## <a name="image-metadata"></a>图像元数据  
  某些图像文件包含用于描述文件的内容或特征的元数据。 例如，大多数数数字相机创建的图像中包含用于捕获该图像的照相机品牌和型号的元数据。 每种图像格式处理元数据的方式不同，但 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] 为存储和检索每种受支持图像格式的元数据提供了一种统一方式。  
   
- 通过<xref:System.Windows.Media.Imaging.BitmapSource>对象的属性提供对元<xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A>数据的访问。 <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A>返回一个<xref:System.Windows.Media.Imaging.BitmapMetadata>对象, 该对象包含图像所包含的所有元数据。 此数据可以位于一个元数据架构中或位于不同架构的组合中。 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] 支持以下图像元数据架构：[!INCLUDE[TLA#tla_exif](../../../../includes/tlasharptla-exif-md.md)]、tEXt（PNG 文本数据）、[!INCLUDE[TLA#tla_ifd](../../../../includes/tlasharptla-ifd-md.md)]、[!INCLUDE[TLA#tla_iptc](../../../../includes/tlasharptla-iptc-md.md)] 和 [!INCLUDE[TLA#tla_xmp](../../../../includes/tlasharptla-xmp-md.md)]。  
+ 通过<xref:System.Windows.Media.Imaging.BitmapSource>对象的属性提供对元<xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A>数据的访问。 <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A>返回一个<xref:System.Windows.Media.Imaging.BitmapMetadata>对象, 该对象包含图像所包含的所有元数据。 此数据可以位于一个元数据架构中或位于不同架构的组合中。 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]支持以下图像元数据架构:可交换图像文件 (Exif)、文本 (PNG 文本数据)、 [!INCLUDE[TLA#tla_ifd](../../../../includes/tlasharptla-ifd-md.md)] [!INCLUDE[TLA#tla_iptc](../../../../includes/tlasharptla-iptc-md.md)]、和[!INCLUDE[TLA#tla_xmp](../../../../includes/tlasharptla-xmp-md.md)]。  
   
  为了简化读取元数据<xref:System.Windows.Media.Imaging.BitmapMetadata>的过程, 提供了多个可以轻松访问的命名属性, <xref:System.Windows.Media.Imaging.BitmapMetadata.Author%2A>如、 <xref:System.Windows.Media.Imaging.BitmapMetadata.Title%2A>和<xref:System.Windows.Media.Imaging.BitmapMetadata.CameraModel%2A>。 许多命名属性还可以用于编写元数据。 元数据查询读取器提供对读取元数据的其他支持。 方法用于检索元数据查询读取器, 方法是提供一个字符串查询, 如 *"/app1/exif/"。* <xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A> 在下面的示例中<xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A> , 用于获取存储在 *"/Text/Description"* 位置中的文本。  
   

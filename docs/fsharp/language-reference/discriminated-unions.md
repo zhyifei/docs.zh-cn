@@ -2,16 +2,16 @@
 title: 可区分联合
 description: 了解如何使用F#可区分联合。
 ms.date: 05/16/2016
-ms.openlocfilehash: a3958a9ffb021c0c46c24216f17a1e7ee5605dd3
-ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
+ms.openlocfilehash: 940bc51f49e283c31846dd2047b749769b919838
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66816240"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630358"
 ---
 # <a name="discriminated-unions"></a>可区分联合
 
-可区分的联合提供的值可以为某个数量的已命名的情况下，可能是每个具有不同值和类型的支持。 可区分的联合可用于异类数据;可以具有特殊的情况下，包括有效和错误情况; 的数据在从一个实例到另一个; 的类型发生变化的数据和为小对象层次结构的替代方法。 此外，递归的可区分联合用于表示树数据结构。
+可区分联合提供的值支持可以是多个命名用例中的一个, 可能每个值都有不同的值和类型。 可区分联合适用于异类数据;可能有特殊情况的数据, 包括有效和错误事例;不同类型的数据的不同之处在于:作为小型对象层次结构的替代方法。 此外, 递归的可区分联合用于表示树数据结构。
 
 ## <a name="syntax"></a>语法
 
@@ -26,11 +26,11 @@ type [accessibility-modifier] type-name =
 
 ## <a name="remarks"></a>备注
 
-可区分的联合类似于其他语言中的联合类型，但有差异。 中的联合类型与C++或变体类型在 Visual Basic 中，不固定的值中存储的数据;它可以是若干个不同选项之一。 与这些其他语言中的联合不同，为每个可能的选项提供*用例标识符*。 用例标识符是有关此类型的对象可能是; 的值的各种可能的类型名称值是可选的。 如果值不存在，这种情况相当于枚举用例。 如果值存在，则每个值可以是单个值的指定的类型或聚合多个字段的相同或不同类型的元组。 可以为单个字段命名，但名称是可选的即使在相同情况下的其他字段的名称。
+可区分联合类似于其他语言中的联合类型, 但有一些差异。 与 Visual Basic 中的联合类型C++或变体类型一样, 值中存储的数据不是固定的;它可以是几个不同的选项之一。 与其他这些语言中的联合不同, 每个可能的选项都有一个*case 标识符*。 Case 标识符是此类型的对象可能具有的各种类型的值的名称;值是可选的。 如果值不存在, 则该事例等效于枚举用例。 如果存在值, 则每个值可以是指定类型的单个值, 也可以是聚合同一类型或不同类型的多个字段的元组。 您可以为单个字段指定一个名称, 但该名称是可选的, 即使在同一种情况下, 也是如此。
 
-可区分联合可访问性默认为`public`。
+可区分的联合的辅助`public`功能默认为。
 
-例如，考虑形状类型的以下声明。
+例如, 请考虑下面的形状类型声明。
 
 ```fsharp
 type Shape =
@@ -39,9 +39,9 @@ type Shape =
     | Prism of width : float * float * height : float
 ```
 
-前面的代码声明的可区分的联合形状，它可以具有任意三个用例的值：矩形、 圆形和棱镜。 每种情况下具有一组不同的字段。 矩形用例有两个命名字段，这两个类型`float`，具有名称宽度和长度。 圆形用例都只是一个命名的字段，radius。 棱镜用例有三个字段，哪个 （宽度和高度） 的两个命名字段。 未命名的字段称为匿名字段。
+前面的代码声明了一个可区分的联合形状, 其中的值可以是以下三种情况之一:Rectangle、Circle 和 Prism。 每个事例都有一组不同的字段。 矩形用例有两个命名字段, 两个`float`均为类型, 名称为 width 和 length。 圆形大小写只包含一个命名字段 "半径"。 Prism 用例有三个字段, 其中两个字段 (宽度和高度) 为 "命名字段"。 未命名字段称为匿名字段。
 
-通过根据以下示例的命名和匿名字段提供值来构造对象。
+您可以根据以下示例, 为已命名和匿名字段提供值来构造对象。
 
 ```fsharp
 let rect = Rectangle(length = 1.3, width = 10.0)
@@ -49,9 +49,9 @@ let circ = Circle (1.0)
 let prism = Prism(5., 2.0, height = 3.0)
 ```
 
-此代码显示了您可以使用命名的字段初始化，也可以依赖于声明中字段的排序方式，只需提供的值对于每个字段又。 有关构造函数调用`rect`前面的代码中使用的命名的字段，但对于构造函数调用`circ`使用了排序。 可以混合有序的字段和已命名字段，如下所示的构造`prism`。
+此代码显示, 您可以在初始化中使用已命名的字段, 也可以依赖于声明中的字段顺序, 而只是提供每个字段的值。 前面代码`rect`中的构造函数调用使用命名字段, 但的构造函数`circ`调用使用排序。 可以混合使用已排序的字段和命名字段, 如的构造`prism`中所示。
 
-`option`类型是一个简单的可区分的联合中F#核心库。 `option`类型声明，如下所示。
+该`option`类型是F#核心库中的一个简单的可区分联合。 此`option`类型声明如下。
 
 ```fsharp
 // The option type is a discriminated union.
@@ -60,17 +60,17 @@ type Option<'a> =
     | None
 ```
 
-前面的代码中指定的类型`Option`是具有两种情况下，可区分的联合`Some`和`None`。 `Some`事例都有一个关联的值，其类型由类型参数的一个匿名字段组成`'a`。 `None`用例都没有关联的值。 因此`option`类型指定的泛型类型，既可以具有某些类型或任何值的值。 类型`Option`还具有小写的类型别名`option`，即更常用。
+上面的代码指定该类型`Option`是具有两个用例 (和`None`) `Some`的可区分联合。 事例具有一个关联的值, 它由一个匿名字段组成, 该字段的类型由类型`'a`参数表示。 `Some` `None`事例没有关联值。 因此, `option`类型指定泛型类型, 该类型具有某种类型的值或没有值。 该类型`Option`还具有一个更常用的小写`option`类型别名。
 
-用例标识符可用作可区分联合类型的构造函数。 例如，使用以下代码创建的值`option`类型。
+Case 标识符可用作可区分联合类型的构造函数。 例如, 下面的代码用于创建`option`类型的值。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2001.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2001.fs)]
 
-用例标识符还用在模式匹配表达式中。 在模式匹配表达式中，标识符提供了与各个用例关联的值。 例如，在下面的代码中，`x`标识符提供与相关联的值`Some`用例`option`类型。
+Case 标识符还用于模式匹配表达式。 在模式匹配表达式中, 会为与单个用例关联的值提供标识符。 例如, 在下面的代码中, `x`是给定与`option`类型的`Some`大小写关联的值的标识符。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2002.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2002.fs)]
 
-在模式匹配表达式中，可以使用命名的字段来指定可区分的联合匹配。 对于以前声明的形状类型，可以使用命名的字段，如下面的代码所示，若要提取的字段的值。
+在模式匹配表达式中, 可以使用命名字段来指定可区分的联合匹配。 对于之前声明的形状类型, 可以使用命名字段, 如以下代码所示, 以便提取字段的值。
 
 ```fsharp
 let getShapeHeight shape =
@@ -80,11 +80,11 @@ let getShapeHeight shape =
     | Prism(height = h) -> h
 ```
 
-通常情况下，用例标识符可以使用而无需对其进行联合的名称限定。 如果你想要始终用联合名称限定的名称，你可以申请[RequireQualifiedAccess](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.requirequalifiedaccessattribute-class-[fsharp])联合类型定义的属性。
+通常情况下, 可以使用 case 标识符, 无需使用联合名称来限定它们。 如果希望名称始终使用联合的名称进行限定, 则可将[RequireQualifiedAccess](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.requirequalifiedaccessattribute-class-[fsharp])特性应用于联合类型定义。
 
-### <a name="unwrapping-discriminated-unions"></a>解包的可区分的联合
+### <a name="unwrapping-discriminated-unions"></a>解包可区分联合
 
-在F#的可区分联合通常用于在域模型中包装单一类型。 它很容易提取通过模式匹配也的基础值。 您不需要对单个事例使用匹配表达式：
+在F#可区分联合中, 通常用于包装单个类型的域建模。 也可以通过模式匹配轻松提取基础值。 对于一个事例, 无需使用 match 表达式:
 
 ```fsharp
 let ([UnionCaseName] [values]) = [UnionValue]
@@ -101,7 +101,7 @@ let someFunctionUsingShaderProgram shaderProgram =
     ...
 ```
 
-模式匹配还允许直接在函数参数中，因此，可以解除单个事例的包装：
+函数参数中也可以直接使用模式匹配, 因此, 可以将一个事例解包到其中:
 
 ```fsharp
 let someFunctionUsingShaderProgram (ShaderProgram id) =
@@ -111,7 +111,7 @@ let someFunctionUsingShaderProgram (ShaderProgram id) =
 
 ## <a name="struct-discriminated-unions"></a>结构可区分联合
 
-您还可以为结构表示可区分联合。  这通过`[<Struct>]`属性。
+您还可以将可区分联合表示为结构。  此操作是通过`[<Struct>]`属性实现的。
 
 ```fsharp
 [<Struct>]
@@ -124,21 +124,21 @@ type Multicase =
     | Case3 of Case3 : double
 ```
 
-因为这些是值类型，不能引用类型，所以一些额外注意事项与引用可区分联合：
+由于这些是值类型而不是引用类型, 因此与引用可区分联合相比, 有一些额外的注意事项:
 
-1. 它们作为值类型复制，并具有值类型语义。
-2. 不能用于 multicase 的结构可区分联合使用递归类型定义。
-3. 必须提供 multicase struct 可区分联合的唯一大小写的名称。
+1. 它们被复制为值类型并具有值类型语义。
+2. 不能将递归类型定义用于 multicase 结构可区分联合。
+3. 必须为 multicase 结构可区分联合提供唯一的事例名称。
 
-## <a name="using-discriminated-unions-instead-of-object-hierarchies"></a>使用可区分的联合替代对象层次结构
+## <a name="using-discriminated-unions-instead-of-object-hierarchies"></a>使用可区分联合而不是对象层次结构
 
-您可以通常可区分的联合用作小对象层次结构的更简单的替代。 无法为例，而不是使用以下可区分的联合`Shape`基类具有派生类型圆形、 方形，依此类推。
+通常, 可以将可区分联合用作小型对象层次结构的更简单的替代方法。 例如, 可以使用以下可区分联合, 而不`Shape`是具有用于圆形、方形等的派生类型的基类。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2003.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2003.fs)]
 
-而是虚方法来计算面积或周长，那样使用面向对象的实现中，可以使用模式匹配分支到合适的公式来计算这些数量。 在以下示例中，不同的公式用于计算区域，具体取决于该形状。
+与在面向对象的实现中使用的一样, 可以使用模式匹配分支到适当的公式来计算这些数量, 而不是使用虚方法来计算区域或外围网络。 在下面的示例中, 使用不同的公式来计算区域, 具体取决于形状。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2004.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2004.fs)]
 
 输出如下所示：
 
@@ -148,25 +148,25 @@ Area of square that has side 10.000000: 100.000000
 Area of rectangle that has height 5.000000 and width 10.000000 is 50.000000
 ```
 
-## <a name="using-discriminated-unions-for-tree-data-structures"></a>对树数据结构使用可区分的联合
+## <a name="using-discriminated-unions-for-tree-data-structures"></a>对树形数据结构使用可区分联合
 
-可区分的联合可以是递归的这意味着联合本身，可以包含在一个或多个用例的类型。 递归的可区分的联合可用于创建树的结构，用于记录的编程语言中的模型表达式。 在下面的代码中，递归的可区分联合用于创建二进制树数据结构。 该联合的两种情况，包括`Node`，这是一个包含一个整数值和左、 右子树节点和`Tip`，后者用于终结树。
+可区分联合可以是递归的, 这意味着可将联合本身包含在一个或多个事例的类型中。 递归的可区分联合可用于创建树结构, 用于在编程语言中为表达式建模。 在下面的代码中, 递归的可区分联合用于创建二进制树数据结构。 联合包括两个事例, `Node`即一个具有整数值的节点、左右子树和`Tip`, 后者终止树。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2005.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2005.fs)]
 
-在前面的代码，`resultSumTree`具有值 10。 下图显示的树结构`myTree`。
+在前面的代码中`resultSumTree` , 的值为10。 下图显示了的树结构`myTree`。
 
-![图，显示 mytree 的树结构。](../media/discriminated-unions/tree-structure-mytree.png)
+![显示 myTree 的树结构的关系图。](../media/discriminated-unions/tree-structure-mytree.png)
 
-如果在树中的节点是异类是可行的可区分的联合。 在下面的代码中，类型`Expression`表示一种简单的编程语言支持添加中的表达式的抽象语法树和乘法的数字和变量。 一些联合用例不是递归的表示数字 (`Number`) 或变量 (`Variable`)。 其他情况下是递归的并表示操作 (`Add`和`Multiply`)、 的操作数也是表达式。 `Evaluate`函数使用匹配表达式以递归方式处理语法树。
+如果树中的节点是异类的, 则可区分的联合工作良好。 在下面的代码中, 类型`Expression`表示简单编程语言中表达式的抽象语法树, 它支持数字和变量的加法和乘法。 某些联合用例不是递归的, 表示数字 (`Number`) 或变量 (`Variable`)。 其他情况是递归的, 表示运算 (`Add`和`Multiply`), 其中操作数也是表达式。 `Evaluate`函数使用 match 表达式以递归方式处理语法树。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2006.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2006.fs)]
 
-此代码执行时，值`result`为 5。
+执行此代码时, 的值`result`为5。
 
 ## <a name="members"></a>成员
 
-就可以定义在可区分联合的成员。 下面的示例演示如何定义属性，并实现接口：
+可以在可区分的联合上定义成员。 下面的示例演示如何定义属性和实现接口:
 
 ```fsharp
 open System
@@ -196,9 +196,9 @@ type Shape =
             | Rectangle(l, w) -> printfn "Rectangle with length %f and width %f" l w
 ```
 
-## <a name="common-attributes"></a>常用属性
+## <a name="common-attributes"></a>常见属性
 
-以下属性是可区分联合中经常见到：
+以下属性通常出现在可区分联合中:
 
 * `[<RequireQualifiedAccess>]`
 * `[<NoEquality>]`

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 5c7ea24a-39ac-4e5f-83b7-b9f9a1b556ab
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2988b054030df23ae8ccd8840f83c239f0401321
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 70c60461f3ddd6bdabd151f60c7bc81eef18e650
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64607265"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629466"
 ---
 # <a name="gcallowverylargeobjects-element"></a>\<gcAllowVeryLargeObjects > 元素
 在 64 位平台上，启用总大小大于 2 千兆字节 (GB) 的数组。  
@@ -35,14 +35,14 @@ ms.locfileid: "64607265"
   
 |特性|描述|  
 |---------------|-----------------|  
-|`enabled`|必需的特性。<br /><br /> 指定是否在 64 位平台上启用的总大小大于 2 GB 的数组。|  
+|`enabled`|必需的特性。<br /><br /> 指定是否在64位平台上启用了总大小中大于 2 GB 的数组。|  
   
 ## <a name="enabled-attribute"></a>enabled 特性  
   
 |值|描述|  
 |-----------|-----------------|  
-|`false`|数组大于 2 GB 的总大小不会启用。 这是默认设置。|  
-|`true`|64 位平台上启用了数组大于 2 GB 的总大小。|  
+|`false`|总大小中大于 2 GB 的数组未启用。 这是默认设置。|  
+|`true`|在64位平台上, 总大小中已启用大于 2 GB 的数组。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  
@@ -55,19 +55,19 @@ ms.locfileid: "64607265"
 |`runtime`|包含有关运行时初始化选项的信息。|  
   
 ## <a name="remarks"></a>备注  
- 在应用程序配置文件中使用此元素启用数组大于 2 GB 的大小，但不会更改对对象大小或数组大小的其他限制：  
+ 在应用程序配置文件中使用此元素可启用大小大于 2 GB 的数组, 但不会更改对象大小或数组大小的其他限制:  
   
-- 最大数组中元素数是<xref:System.UInt32.MaxValue?displayProperty=nameWithType>。  
+- 数组中元素的最大数目为<xref:System.UInt32.MaxValue?displayProperty=nameWithType>。  
   
-- 在任何单个维度中的最大索引是 2,147,483,591 (0x7FFFFFC7) 的字节数组和单字节结构的数组和 2,146,435,071 (0X7FEFFFFF) 对于其他类型。  
+- 任何单个维度中的最大索引为 2147483591 (0x7FFFFFC7) (对于字节数组) 和单字节结构数组, 2146435071 (0X7FEFFFFF) 用于其他类型。  
   
-- 字符串和其他非数组对象的最大大小保持不变。  
+- 字符串和其他非数组对象的最大大小不变。  
   
 > [!CAUTION]
->  启用此功能前，请确保你的应用程序不包括假设所有数组大于 2 GB 的大小较小的不安全代码。 例如，如果写入假定数组不会超过 2 GB，数组用作缓冲区的不安全代码可能是容易受到缓冲区溢出。  
+>  在启用此功能之前, 请确保应用程序不包含不安全代码, 该代码假定所有数组大小均小于 2 GB。 例如, 使用数组作为缓冲区的不安全代码可能容易受到缓冲区溢出的攻击, 因为假设数组不会超过 2 GB。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何启用此功能的应用程序。  
+ 下面的示例演示如何为应用程序启用此功能。  
   
 ```xml  
 <configuration>  
@@ -77,6 +77,10 @@ ms.locfileid: "64607265"
 </configuration>  
 ```  
   
+## <a name="supported-in"></a>受以下版本支持：
+
+.NET Framework 4.5 及更高版本
+
 ## <a name="see-also"></a>请参阅
 
 - [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)

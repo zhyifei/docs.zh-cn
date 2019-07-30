@@ -1,17 +1,17 @@
 ---
 title: 引用单元格
-description: 了解如何F#引用单元格是使您能够创建具有引用语义的可变值的存储位置。
+description: 了解如何F#使用引用单元格来创建具有引用语义的可变值的存储位置。
 ms.date: 05/16/2016
-ms.openlocfilehash: e4fcd3cf1abcf5f5e3b4d5439c9215b79ff8dbcd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: faaa4a6b54ff0366163b6821edff7fa4cb2f5a88
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61795391"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627248"
 ---
 # <a name="reference-cells"></a>引用单元格
 
-*引用单元格*是使您能够创建具有引用语义的可变值的存储位置。
+*引用单元*是使你能够创建具有引用语义的可变值的存储位置。
 
 ## <a name="syntax"></a>语法
 
@@ -29,7 +29,7 @@ ref expression
 
 下面的代码示例阐释了引用单元格的声明和用法。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2201.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2201.fs)]
 
 输出为 `50`。
 
@@ -54,15 +54,15 @@ let ref x = { contents = x }
 |--------------------------|-----------|----|----------|
 |`!`（取消引用运算符）|返回基础值。|`'a ref -> 'a`|`let (!) r = r.contents`|
 |`:=`（赋值运算符）|更改基础值。|`'a ref -> 'a -> unit`|`let (:=) r x = r.contents <- x`|
-|`ref` （运算符）|将值封装到新的引用单元格中。|`'a -> 'a ref`|`let ref x = { contents = x }`|
-|`Value` （属性）|获取或设置基础值。|`unit -> 'a`|`member x.Value = x.contents`|
+|`ref`操作员|将值封装到新的引用单元格中。|`'a -> 'a ref`|`let ref x = { contents = x }`|
+|`Value`知识产权|获取或设置基础值。|`unit -> 'a`|`member x.Value = x.contents`|
 |`contents`（记录字段）|获取或设置基础值。|`'a`|`let ref x = { contents = x }`|
 
 可通过多种方式来访问基础值。 取消引用运算符 (`!`) 返回的值不是可赋值的值。 因此，如果要修改基础值，您必须改用赋值运算符 (`:=`)。
 
 `Value` 属性和 `contents` 字段都是可赋值的值。 因此，您可以使用它们来访问或更改基础值，如下面的代码所示。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2203.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2203.fs)]
 
 输出如下所示。
 
@@ -75,13 +75,13 @@ let ref x = { contents = x }
 
 提供字段 `contents` 的目的是为了与其他版本的 ML 兼容，并且该字段将在编译过程中产生警告。 若要禁用警告，请使用 `--mlcompatibility` 编译器选项。 有关详细信息，请参阅[编译器选项](compiler-options.md)。
 
-C#程序员应知道`ref`在C#不是与相同`ref`中F#。 中的构造等效于F#都[byref](byrefs.md)，这是从引用单元格不同的概念。
+C#程序员`ref`应知道在中C# , 与`ref`中F#的不同。 中F#的等效构造是[byref](byrefs.md), 这是不同于引用单元的概念。
 
-值标记为`mutable`可能会自动提升为`'a ref`如果捕获的闭包中; 请参阅[值](values/index.md)。
+如果由闭`mutable`包捕获, 则标记`'a ref`为的值可能会自动提升为; 请参阅[值](./values/index.md)。
 
 ## <a name="see-also"></a>请参阅
 
 - [F# 语言参考](index.md)
 - [参数和自变量](parameters-and-arguments.md)
-- [符号和运算符参考](symbol-and-operator-reference/index.md)
-- [值](values/index.md)
+- [符号和运算符参考](./symbol-and-operator-reference/index.md)
+- [值](./values/index.md)

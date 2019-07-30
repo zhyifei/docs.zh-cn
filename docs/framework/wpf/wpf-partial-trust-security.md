@@ -15,12 +15,12 @@ helpviewer_keywords:
 - feature security requirements [WPF]
 - managing permissions [WPF]
 ms.assetid: ef2c0810-1dbf-4511-babd-1fab95b523b5
-ms.openlocfilehash: 259db84c8ab3b9bbad809b9636ba18537dd6fe62
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: b8234dcb33e9d429329c6d68900119382ff2f1cb
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400731"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629789"
 ---
 # <a name="wpf-partial-trust-security"></a>WPF 部分信任安全
 <a name="introduction"></a>一般情况下，应该限制 Internet 应用程序直接访问关键系统资源，防止恶意损坏。 默认情况下[!INCLUDE[TLA#tla_html](../../../includes/tlasharptla-html-md.md)] , 和客户端脚本语言不能访问关键系统资源。 由于可以从浏览器启动 Windows Presentation Foundation (WPF) 浏览器承载的应用程序, 因此它们应符合一组类似的限制。 若要强制实施这些[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]限制, 需要同时依赖于代码访问安全性 (CAS) 和 ClickOnce (请参阅[WPF 安全策略-平台安全性](wpf-security-strategy-platform-security.md))。 默认情况下, 浏览器承载的应用程序请求 Internet 区域 CA 权限集, 不管它们是从 Internet、本地 intranet 还是本地计算机启动。 如果应用程序的运行权限小于完整权限集，则说明该应用程序正在部分信任环境下运行。  
@@ -113,7 +113,7 @@ ms.locfileid: "68400731"
   
  在很多情况下，应该能够找到部分信任替代方法。  
   
- 在受控环境 (例如 intranet) 中, 可在客户端基础上将自定义托管框架安装到[!INCLUDE[TLA#tla_gac](../../../includes/tlasharptla-gac-md.md)]中。 这些库可以执行需要完全信任的代码, 并从只允许使用<xref:System.Security.AllowPartiallyTrustedCallersAttribute>部分信任的应用程序引用 (有关详细信息, 请参阅[安全性](security-wpf.md)和[WPF 安全策略-平台安全性](wpf-security-strategy-platform-security.md))。  
+ 在受控环境 (例如 intranet) 中, 可在客户端基础上将自定义托管框架安装到全局程序集缓存 (GAC) 中。 这些库可以执行需要完全信任的代码, 并从只允许使用<xref:System.Security.AllowPartiallyTrustedCallersAttribute>部分信任的应用程序引用 (有关详细信息, 请参阅[安全性](security-wpf.md)和[WPF 安全策略-平台安全性](wpf-security-strategy-platform-security.md))。  
   
 <a name="Browser_Host_Detection"></a>   
 ### <a name="browser-host-detection"></a>浏览器主机检测  

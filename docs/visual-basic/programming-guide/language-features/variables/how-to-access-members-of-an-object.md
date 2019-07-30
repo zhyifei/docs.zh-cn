@@ -1,75 +1,79 @@
 ---
-title: 如何：访问对象 (Visual Basic 中) 的成员
+title: 如何：访问对象的成员 (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - members [Visual Basic], accessing
 - object variables [Visual Basic], accessing members
 ms.assetid: a0072514-6a79-4dd6-8d03-ca8c13e61ddc
-ms.openlocfilehash: 46c5eb9bc79b3a408a5a4fc9f40fee7391937c58
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 882046b829ade2da7c10b3db4c0d6c9ca9f3d579
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663603"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630830"
 ---
-# <a name="how-to-access-members-of-an-object-visual-basic"></a>如何：访问对象 (Visual Basic 中) 的成员
-引用的对象的对象变量后，你通常想要与该对象，例如其方法、 属性、 字段和事件的成员。 例如，一次创建一个新<xref:System.Windows.Forms.Form>对象，你可能想要设置其<xref:System.Windows.Forms.Control.Text%2A>属性或调用其<xref:System.Windows.Forms.Control.Focus%2A>方法。  
-  
-## <a name="accessing-members"></a>成员访问  
- 通过对引用该变量访问对象的成员。  
-  
-#### <a name="to-access-members-of-an-object"></a>若要访问对象的成员  
-  
-- 使用成员访问运算符 (`.`) 之间的对象变量名称和成员名称。  
-  
-    ```  
-    currentText = newForm.Text  
-    ```  
-  
-     如果该成员是[共享](../../../../visual-basic/language-reference/modifiers/shared.md)，不需要一个变量来访问它。  
-  
-## <a name="accessing-members-of-an-object-of-known-type"></a>已知类型的对象的成员访问  
- 如果在编译时知道对象的类型，则可以使用*早期绑定*指的是它的变量。  
-  
-#### <a name="to-access-members-of-an-object-for-which-you-know-the-type-at-compile-time"></a>若要访问的对象，您知道该类型在编译时成员  
-  
-1. 你想要分配给该变量的对象类型的对象变量声明。  
-  
-    ```  
-    Dim extraForm As System.Windows.Forms.Form  
-    ```  
-  
-     与`Option Strict On`，可以仅将分配<xref:System.Windows.Forms.Form>对象 (或类型的对象派生自<xref:System.Windows.Forms.Form>) 到`extraForm`。 如果已定义的类或结构优先于具有拓宽`CType`转换为<xref:System.Windows.Forms.Form>，还可以将该类或结构`extraForm`。  
-  
-2. 使用成员访问运算符 (`.`) 之间的对象变量名称和成员名称。  
-  
-    ```  
-    extraForm.Show()  
-    ```  
-  
-     您可以访问的所有方法和属性特定于<xref:System.Windows.Forms.Form>类，无论什么`Option Strict`设置。  
-  
-## <a name="accessing-members-of-an-object-of-unknown-type"></a>未知类型的对象的成员访问  
- 如果在编译时不知道对象的类型，则必须使用*后期绑定*它是指任何变量。  
-  
-#### <a name="to-access-members-of-an-object-for-which-you-do-not-know-the-type-at-compile-time"></a>若要访问的对象为其您不知道该类型在编译时成员  
-  
-1. 对象变量的声明[Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)。 (声明一个变量，作为`Object`等同于其声明为<xref:System.Object?displayProperty=nameWithType>。)  
-  
-    ```  
-    Dim someControl As Object  
-    ```  
-  
-     与`Option Strict On`，可以访问成员上定义的<xref:System.Object>类。  
-  
-2. 使用成员访问运算符 (`.`) 之间的对象变量名称和成员名称。  
-  
-    ```  
-    someControl.GetType()  
-    ```  
-  
-     若要能够访问分配给对象变量的任何对象的成员，必须设置`Option Strict Off`。 当执行此操作时，编译器无法保证给定的成员由分配给变量的对象。 如果对象未公开的成员尝试访问，<xref:System.MemberAccessException>会发生异常。  
-  
+# <a name="how-to-access-members-of-an-object-visual-basic"></a>如何：访问对象的成员 (Visual Basic)
+
+如果对象变量引用某个对象, 则通常需要使用该对象的成员, 例如其方法、属性、字段和事件。 例如, 在创建新<xref:System.Windows.Forms.Form>的对象后, 你可能需要设置其<xref:System.Windows.Forms.Control.Text%2A>属性或调用其<xref:System.Windows.Forms.Control.Focus%2A>方法。
+
+## <a name="accessing-members"></a>访问成员
+
+您可以通过引用对象的变量来访问该对象的成员。
+
+#### <a name="to-access-members-of-an-object"></a>访问对象的成员
+
+- 在对象变量名称和成员名称`.`之间使用成员访问运算符 ()。
+
+    ```vb
+    currentText = newForm.Text
+    ```
+
+    如果该成员是[共享](../../../../visual-basic/language-reference/modifiers/shared.md)的, 则不需要使用变量来访问它。
+
+## <a name="accessing-members-of-an-object-of-known-type"></a>访问已知类型的对象成员
+
+如果在编译时知道对象的类型, 则可以对引用它的变量使用*早期绑定*。
+
+#### <a name="to-access-members-of-an-object-for-which-you-know-the-type-at-compile-time"></a>访问在编译时知道其类型的对象成员
+
+1. 将对象变量声明为要分配给变量的对象的类型。
+
+    ```vb
+    Dim extraForm As System.Windows.Forms.Form
+    ```
+
+    使用`Option Strict On`, 你只能<xref:System.Windows.Forms.Form>将对象 (或派生自<xref:System.Windows.Forms.Form>的类型的对象) 分配给`extraForm`。 如果您已定义了一个使用扩大`CType` <xref:System.Windows.Forms.Form>转换的类或结构, 则还可以将该类或结构分配给`extraForm`。
+
+2. 在对象变量名称和成员名称`.`之间使用成员访问运算符 ()。
+
+    ```vb
+    extraForm.Show()
+    ```
+
+    您可以访问特定于<xref:System.Windows.Forms.Form>类的所有方法和属性, 无论`Option Strict`设置是什么。
+
+## <a name="accessing-members-of-an-object-of-unknown-type"></a>访问类型未知的对象的成员
+
+如果在编译时不知道对象的类型, 则必须对引用它的任何变量使用*后期绑定*。
+
+#### <a name="to-access-members-of-an-object-for-which-you-do-not-know-the-type-at-compile-time"></a>访问在编译时不知道其类型的对象成员
+
+1. 将对象变量声明为[对象数据类型](../../../../visual-basic/language-reference/data-types/object-data-type.md)。 (将变量`Object`声明为与将<xref:System.Object?displayProperty=nameWithType>其声明为相同。)
+
+    ```vb
+    Dim someControl As Object
+    ```
+
+    使用`Option Strict On`, 你只可以访问<xref:System.Object>在类上定义的成员。
+
+2. 在对象变量名称和成员名称`.`之间使用成员访问运算符 ()。
+
+    ```vb
+    someControl.GetType()
+    ```
+
+    若要能够访问分配给对象变量的任何对象的成员, 必须设置`Option Strict Off`。 当你执行此操作时, 编译器无法保证给定成员由分配给变量的对象公开。 如果对象未公开尝试访问的成员, <xref:System.MemberAccessException>则会出现异常。
+
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Object>

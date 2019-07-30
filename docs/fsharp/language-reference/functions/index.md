@@ -1,13 +1,13 @@
 ---
 title: 函数
-description: 了解如何在函数F#以及F#支持通用函数编程构造。
+description: 了解中的F#函数以及如何F#支持常见的函数编程构造。
 ms.date: 05/16/2016
-ms.openlocfilehash: f68a36de7af2bdb803b0b633929aa472806f61aa
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 6f65ce692169b71abe8d2eff7ef07b66975d478b
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645402"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630699"
 ---
 # <a name="functions"></a>函数
 
@@ -42,11 +42,11 @@ let f x = x + 1
 
 在模块范围以外的任何级别范围上，重用某个值或函数名称不是错误。 重用某个名称时，后来声明的名称将隐藏前面声明的名称。 但在模块中的顶级别范围内，名称必须唯一。 例如，以下代码如果出现在模块范围内则会产生错误，而出现在某个函数内部则不会产生错误：
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet101.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet101.fs)]
 
 但以下代码在任何级别的范围内都可接受：
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet102.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet102.fs)]
 
 ### <a name="parameters"></a>参数
 
@@ -74,7 +74,7 @@ let f x = (x, x)
 
 函数体可包含本地变量和函数的定义。 此类变量和函数位于当前函数的主体范围内，而非其外部。 如果已启用轻量语法选项，则必须使用缩进来指示定义位于函数体中，如下例所示：
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet103.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet103.fs)]
 
 有关详细信息，请参阅[代码格式设置准则](../code-formatting-guidelines.md)和[详细语法](../verbose-syntax.md)。
 
@@ -84,7 +84,7 @@ let f x = (x, x)
 
 若要显式指定返回值，请编写如下代码：
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet105.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet105.fs)]
 
 如上面编写的代码一样，编译器将 **float** 应用于整个函数；如果还打算将其应用于参数类型，可使用以下代码：
 
@@ -102,37 +102,37 @@ let vol = cylinderVolume 2.0 3.0
 
 ## <a name="partial-application-of-arguments"></a>部分应用参数
 
-如果提供的参数数目少于指定的参数数目，则可创建一个应采用其余参数的新函数。 这种处理参数的方法称为“柯里化”，而且这是 F# 等函数编程语言的一个特性。 例如，假设正在处理两种尺寸的管道：一种管道的半径为 **2.0**，另一种管道的半径为 **3.0**。 你可能会创建用于确定管道体积的函数，如下所示：
+如果提供的参数数目少于指定的参数数目，则可创建一个应采用其余参数的新函数。 这种处理参数的方法称为“柯里化”  ，而且这是 F# 等函数编程语言的一个特性。 例如，假设正在处理两种尺寸的管道：一种管道的半径为 **2.0**，另一种管道的半径为 **3.0**。 你可能会创建用于确定管道体积的函数，如下所示：
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet106.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet106.fs)]
 
 然后，会根据需要提供附加参数，用来表示两个不同尺寸的管道的各种长度：
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet107.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet107.fs)]
 
 ## <a name="recursive-functions"></a>递归函数
 
-递归函数是调用自身的函数。 它们要求在指定 **let** 关键字之后指定 **rec** 关键字。 从函数的主体内调用递归函数与调用任何函数调用是一样的。 以下递归函数计算*n*<sup>th</sup>斐波纳契数。 斐波纳契数序列很早就为人所知，此序列中的每个连续的数字都是序列中前两个数字之和。
+递归函数是调用自身的函数。 它们要求在指定 **let** 关键字之后指定 **rec** 关键字。 从函数的主体内调用递归函数与调用任何函数调用是一样的。 以下递归函数计算<sup>第</sup> *n*个斐波那契数。 斐波纳契数序列很早就为人所知，此序列中的每个连续的数字都是序列中前两个数字之和。
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet108.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet108.fs)]
 
 如果在编写递归函数时不细心或者不清楚一些特殊技术（例如累加器和延续的使用），则有些递归函数可能会造成执行效率低下或使程序堆栈溢出。
 
 ## <a name="function-values"></a>函数值
 
-在 F# 中，所有函数都被视为值；实际上，它们被称为“函数值”。 因为函数是值，所以它们可用作其他函数的参数，或在需要使用值的其他上下文中使用。 下面是一个采用函数值作为参数的函数示例：
+在 F# 中，所有函数都被视为值；实际上，它们被称为“函数值”  。 因为函数是值，所以它们可用作其他函数的参数，或在需要使用值的其他上下文中使用。 下面是一个采用函数值作为参数的函数示例：
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet109.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet109.fs)]
 
 可通过使用 `->` 标记来指定函数值的类型。 此标记的左边是参数的类型，右边是返回值。 在前面的示例中，`apply1` 是一个采用函数 `transform` 作为参数的函数，其中 `transform` 是一个采用整数并返回其他整数的函数。 下面的代码演示如何使用 `apply1`：
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet110.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet110.fs)]
 
 运行前面的代码之后，`result` 的值将为 101。
 
 多个参数之间由连续的 `->` 标记分隔，如下例所示：
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet111.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet111.fs)]
 
 结果是 200。
 
@@ -140,15 +140,15 @@ let vol = cylinderVolume 2.0 3.0
 
 *lambda 表达式* 是未命名的函数。 在上述示例中，可以不定义命名的函数 **increment** 和 **mul**，而使用如下的 lambda 表达式：
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet112.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet112.fs)]
 
-可通过使用 `fun` 关键字来定义 lambda 表达式。 lambda 表达式类似于函数定义，只不过使用了 `->` 标记将参数列表与函数体分隔，而不是使用 `=` 标记。 与在常规函数定义中一样，可推断或显式指定参数类型，并且从主体中最后一个表达式的类型推断出 lambda 表达式的返回类型。 有关详细信息，请参阅[Lambda 表达式：`fun`关键字](../functions/lambda-expressions-the-fun-keyword.md)。
+可通过使用 `fun` 关键字来定义 lambda 表达式。 lambda 表达式类似于函数定义，只不过使用了 `->` 标记将参数列表与函数体分隔，而不是使用 `=` 标记。 与在常规函数定义中一样，可推断或显式指定参数类型，并且从主体中最后一个表达式的类型推断出 lambda 表达式的返回类型。 有关详细信息, 请[参阅 Lambda 表达式:`fun`关键字。](../functions/lambda-expressions-the-fun-keyword.md)
 
 ## <a name="function-composition-and-pipelining"></a>函数组合和流水线处理
 
 F# 中的函数可由其他函数组合而成。 由 **function1** 和 **function2** 这两个函数组合而成的另一个函数表示先应用 **function1**，接着应用 **function2**：
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet113.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet113.fs)]
 
 结果为 202。
 

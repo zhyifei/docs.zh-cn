@@ -1,17 +1,17 @@
 ---
 title: 索引属性
-description: 了解如何在中的索引属性F#，这允许对有序数据的类似数组的访问。
+description: 了解中F#的索引属性, 该属性允许对按序的数据进行类似数组的访问。
 ms.date: 10/17/2018
-ms.openlocfilehash: 7fc8f46e029255c6ed985a43b92c8f7c2908c428
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 379417e31b8e178d8c939e5b23dc144bfb17e562
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489489"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627557"
 ---
 # <a name="indexed-properties"></a>索引属性
 
-在定义类，用于对有序数据提取时，有时可能很有帮助，而无需公开基础的实现提供对该数据的索引的访问。 这通过`Item`成员。
+定义对按序的数据进行抽象的类时, 有时提供对该数据的索引访问会很有帮助, 而无需公开基础实现。 这是通过`Item`成员执行的。
 
 ## <a name="syntax"></a>语法
 
@@ -36,19 +36,19 @@ member self-identifier.Item
 
 ## <a name="remarks"></a>备注
 
-上述语法中的窗体演示如何定义具有这两者的索引的属性`get`和一个`set`方法中，有`get`方法，或具有`set`方法仅。 此外可以将两者合并为仅限获取和组，所示的语法所示的语法，并生成具有 get 和 set 的属性。 这后一种形式，可将不同的可访问性修饰符和属性放在 get 和 set 方法。
+上面的语法的形式显示了如何定义`get`同时具有`set`和方法的索引属性、仅具有`get`方法或仅具有`set`方法。 你还可以将显示的语法和仅用于 get 的语法组合在一起, 并生成同时具有 get 和 set 的语法。 后一种形式允许将不同的可访问性修饰符和特性置于 get 和 set 方法上。
 
-使用名称`Item`，编译器会将属性视为默认索引属性。 一个*的默认索引属性*是一个属性，可以访问的对象实例上使用的类似数组的语法。 例如，如果`o`是用于定义此属性，该语法的类型的对象`o.[index]`用于访问属性。
+通过使用名称`Item`, 编译器将属性视为默认的索引属性。 *默认索引属性*是一个属性, 可通过对对象实例使用类似数组的语法来访问它。 例如, 如果`o`是定义此属性的类型的对象, 则使用语法`o.[index]`来访问属性。
 
-用于访问非默认索引的属性的语法是提供属性和中括号内，就像常规成员的索引的名称。 例如，如果上的属性`o`称为`Ordinal`，您编写`o.Ordinal(index)`来访问它。
+用于访问非默认索引属性的语法是在括号中提供属性和索引的名称, 就像常规成员一样。 例如, 如果调用`o` `Ordinal`了上的属性, 则可以编写`o.Ordinal(index)`来访问它。
 
-无论使用哪种形式，应始终使用扩充窗体上的索引属性的集方法。 扩充函数有关的信息，请参阅[函数](../functions/index.md)。
+无论使用哪种窗体, 都应始终对索引属性使用 set 方法的扩充形式。 有关扩充函数的信息, 请参阅[函数](../functions/index.md)。
 
 ## <a name="example"></a>示例
 
-下面的代码示例演示定义和使用的默认和非默认索引的属性具有 get 和 set 方法。
+下面的代码示例演示了具有 get 和 set 方法的默认和非默认索引属性的定义和使用。
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3301.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet3301.fs)]
 
 ## <a name="output"></a>Output
 
@@ -58,11 +58,11 @@ ONE first two second three third four fourth five fifth six 6th
 seven seventh eight eighth nine ninth ten tenth
 ```
 
-## <a name="indexed-properties-with-multiple-index-values"></a>具有多个索引值的索引的属性
+## <a name="indexed-properties-with-multiple-index-values"></a>具有多个索引值的索引属性
 
-索引的属性可以具有多个索引值。 在这种情况下，值是逗号分隔时使用的属性。 在此类属性中的 set 方法必须具有两个扩充的参数，其中第一个是包含密钥的元组，其中第二个是要设置的值。
+索引属性可以有多个索引值。 在这种情况下, 如果使用属性, 则值用逗号分隔。 此类属性中的 set 方法必须具有两个扩充参数, 其中第一个参数是包含键的元组, 第二个参数是要设置的值。
 
-下面的代码演示如何将具有多个索引值的索引属性。
+下面的代码演示如何使用具有多个索引值的索引属性。
 
 ```fsharp
 open System.Collections.Generic

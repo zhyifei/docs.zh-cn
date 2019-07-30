@@ -1,17 +1,17 @@
 ---
-title: 异常:try...finally 表达式
-description: 了解如何F#try...最后表达式使您可以执行清理代码，即使代码块将引发异常。
+title: 异常：try...finally 表达式
+description: 了解F# "try .。。finally 表达式使你可以执行清理代码, 即使代码块引发异常也是如此。
 ms.date: 05/16/2016
-ms.openlocfilehash: d246bce52b5f30d5e8d7e3c36e9f7d7c48627913
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 03fbda1ef5d55560232f0217f603fc04c0af0eb4
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645467"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630272"
 ---
-# <a name="exceptions-the-tryfinally-expression"></a>异常:try...finally 表达式
+# <a name="exceptions-the-tryfinally-expression"></a>异常：try...finally 表达式
 
-`try...finally`表达式使您可以执行清理代码，即使代码块将引发异常。
+`try...finally`表达式使你可以执行清理代码, 即使代码块引发异常也是如此。
 
 ## <a name="syntax"></a>语法
 
@@ -24,28 +24,28 @@ finally
 
 ## <a name="remarks"></a>备注
 
-`try...finally`表达式可用于执行中的代码*expression2*在上述语法而不考虑是否在执行期间生成异常*expression1*。
+表达式可用于执行前面语法中的表达式2中的代码, 而不管是否在执行*表达式*2 的过程中生成了异常。 `try...finally`
 
-类型*expression2*不计入整个表达式; 的值不会发生异常时返回的类型是中的最后一个值*expression1*。 当发生了异常时，不返回任何值和控制流将传输到下一步的匹配异常处理程序在调用堆栈上。 如果不找到任何异常处理程序，则该程序将终止。 执行匹配的处理程序中的代码或程序终止中的代码之前`finally`执行分支。
+*表达式*2 的类型不影响整个表达式的值;异常不发生时返回的类型是*表达式*= 值中的最后一个值。 发生异常时, 不会返回任何值, 并且在调用堆栈上, 控制流传输到下一个匹配的异常处理程序。 如果未找到异常处理程序, 程序将终止。 在执行匹配处理程序中的代码或程序终止之前, 执行`finally`分支中的代码。
 
 下面的代码演示如何使用`try...finally`表达式。
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet5701.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5701.fs)]
 
-向控制台输出如下所示。
+控制台的输出如下所示。
 
 ```
 Closing stream
 Exception handled.
 ```
 
-您可以看到输出中，在流关闭之前处理外部异常，和文件`test.txt`包含的文本`test1`，指示已刷新缓冲区，并已将其写入到磁盘，即使该异常将传输控制对外部异常处理程序。
+正如您从输出中看到的那样, 流在外部异常处理前关闭, 并且该文件`test.txt`包含文本, 该文本`test1`指示缓冲区已刷新并写入磁盘 (即使传输的异常除外)对外部异常处理程序的控制。
 
-请注意，`try...with`构造是一个单独的构造，从`try...finally`构造。 因此，如果你的代码需要两`with`块和一个`finally`块中，您必须将嵌套的两个构造，如以下代码示例所示。
+请注意, `try...with`构造是一个独立`try...finally`于构造的构造。 因此, 如果代码需要`with`块`finally`和块, 则必须嵌套两个构造, 如下面的代码示例中所示。
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet5702.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5702.fs)]
 
-在上下文中计算表达式，包括序列表达式和异步工作流**try...最后**表达式可能具有的自定义实现。 有关详细信息，请参阅[计算表达式](../computation-expressions.md)。
+在计算表达式 (包括序列表达式和异步工作流) 的上下文中,**尝试 .。。finally**表达式可以具有自定义实现。 有关详细信息, 请参阅[计算表达式](../computation-expressions.md)。
 
 ## <a name="see-also"></a>请参阅
 

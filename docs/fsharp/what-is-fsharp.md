@@ -1,13 +1,13 @@
 ---
 title: F# 是什么
-description: 了解F#编程语言是以及F#就像编程。 了解丰富的数据类型、 函数和它们如何组合在一起。
+description: 了解F#编程语言和F#编程的作用。 了解丰富的数据类型、函数以及它们如何组合在一起。
 ms.date: 08/03/2018
-ms.openlocfilehash: fc4f4db771c43a4ec08cc9d3a247cf1f38e60457
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: 0c576fe49fadebd68e4fc9d2b20ea8f0cb991af5
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67486834"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630457"
 ---
 # <a name="what-is-f"></a>F\# 是什么
 
@@ -37,7 +37,7 @@ let main args =
 
 F# 具有许多特性，包括：
 
-* 轻量语法
+* 轻型语法
 * 默认情况下不可变
 * 类型推断和自动泛化
 * 头等函数
@@ -45,11 +45,11 @@ F# 具有许多特性，包括：
 * 模式匹配
 * 异步编程
 
-[F# 语言参考](language-reference/index.md)中介绍了完整的特性。
+          [F# 语言参考](./language-reference/index.md)中介绍了完整的特性。
 
 ## <a name="rich-data-types"></a>丰富的数据类型
 
-[记录](language-reference/records.md)和[可区分联合](language-reference/discriminated-unions.md)等数据类型可以表示复杂的数据和域。
+          [记录](./language-reference/records.md)和[可区分联合](./language-reference/discriminated-unions.md)等数据类型可以表示复杂的数据和域。
 
 ```fsharp
 // Group data with Records
@@ -76,7 +76,7 @@ F# 的记录和可区分联合默认情况下非 null、不可变且可比较，
 
 ## <a name="enforced-correctness-with-functions-and-pattern-matching"></a>利用函数和模式匹配强制实现正确性
 
-F# 函数易于声明且实用性强。 与[模式匹配](language-reference/pattern-matching.md)结合使用时，可以定义其正确性获得编译器保障的行为。
+F# 函数易于声明且实用性强。 与[模式匹配](./language-reference/pattern-matching.md)结合使用时，可以定义其正确性获得编译器保障的行为。
 
 ```fsharp
 // Returns a WithdrawalResult
@@ -119,7 +119,7 @@ module Set =
     let add value (set: Set<'T>) = set.Add(value)
 ```
 
-在 F# 中，你会经常编写一类代码，这些代码将对象视为供函数操作的另一种数据类型，而不是编写面向对象的代码。 在较大型的 F# 程序中，通常需要使用[泛型接口](language-reference/interfaces.md)、[对象表达式](language-reference/object-expressions.md)等功能，此文还需正确使用[成员](language-reference/members/index.md)。
+在 F# 中，你会经常编写一类代码，这些代码将对象视为供函数操作的另一种数据类型，而不是编写面向对象的代码。 在较大型的 F# 程序中，通常需要使用[泛型接口](./language-reference/interfaces.md)、[对象表达式](./language-reference/object-expressions.md)等功能，此文还需正确使用[成员](./language-reference/members/index.md)。
 
 ## <a name="next-steps"></a>后续步骤
 

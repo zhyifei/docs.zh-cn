@@ -1,17 +1,17 @@
 ---
-title: 递归函数：Rec 关键字
-description: 了解如何F#rec 关键字用于与 let 关键字定义的递归函数。
+title: 递归函数:Rec 关键字
+description: 了解如何将F# "rec" 关键字与 "let" 关键字一起使用, 以定义递归函数。
 ms.date: 05/16/2016
-ms.openlocfilehash: 86eaf1c8a5566d8b9cbc4dcb72f945e2497e5439
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 7edaa7206b2109c7b1a405624b9b2330968f9c52
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645306"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630652"
 ---
-# <a name="recursive-functions-the-rec-keyword"></a>递归函数：Rec 关键字
+# <a name="recursive-functions-the-rec-keyword"></a>递归函数:Rec 关键字
 
-`rec`一起使用关键字`let`关键字来定义的递归函数。
+`rec` 关键字`let`与关键字一起用于定义递归函数。
 
 ## <a name="syntax"></a>语法
 
@@ -30,24 +30,24 @@ function2-body
 
 ## <a name="remarks"></a>备注
 
-递归函数，调用本身，这些函数中显式标识F#语言。 这使正在定义的标识符可在函数的作用域中。
+递归函数 (调用自身的函数) 是在F#语言中显式标识的。 这会使正在定义的标识符在函数作用域内可用。
 
-以下代码演示了递归函数，用于计算*n*<sup>th</sup>斐波纳契数。
+下面的代码演示了计算<sup>第</sup> *n*个斐波那契数的递归函数。
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet4001.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet4001.fs)]
 
 > [!NOTE]
-> 在实践中，上面这类代码是一种浪费的内存和处理器时间，因为它涉及的以前计算的值重新计算。
+> 在实践中, 类似于上面的代码会浪费内存和处理器时间, 因为它涉及到重新计算以前计算的值。
 
-方法是隐式类型; 中递归无需添加`rec`关键字。 类中的 let 的绑定不是隐式递归。
+方法在类型内隐式递归;无需添加`rec`关键字。 类中的 Let 绑定不隐式递归。
 
 ## <a name="mutually-recursive-functions"></a>相互递归函数
 
-函数是有时*相互递归*，这意味着调用形成了循环，其中一个函数调用另一个后者又调用第一个具有任意数量的调用之间。 您必须在一个一起定义此类函数`let`使用的绑定`and`关键字来将它们链接在一起。
+有时, 函数是*相互递归*的, 这意味着, 调用会形成一个圆圈, 其中一个函数调用另一个函数, 而后者又调用第一个, 并在之间进行任意数量的调用。 必须在一个`let`绑定中一起定义此类函数, `and`使用关键字将它们链接在一起。
 
 下面的示例演示两个相互递归函数。
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet4002.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet4002.fs)]
 
 ## <a name="see-also"></a>请参阅
 

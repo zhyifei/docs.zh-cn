@@ -1,67 +1,67 @@
 ---
-title: 开始使用F#在 Visual Studio for Mac
-description: 了解如何使用F#使用 Visual Studio for mac。
+title: Visual Studio for Mac 中的F#入门
+description: 了解如何使用F#与 Visual Studio for Mac。
 ms.date: 07/03/2018
-ms.openlocfilehash: a6997f139d7e6c5fdf77878442db0b0b75b3d727
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 679ed1ea28f5d0e0d910dbd407b38d1d2f0314f6
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61949716"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629754"
 ---
-# <a name="get-started-with-f-in-visual-studio-for-mac"></a>开始使用F#在 Visual Studio for Mac
+# <a name="get-started-with-f-in-visual-studio-for-mac"></a>Visual Studio for Mac 中的F#入门
 
-F#和视觉对象F#工具在 Visual Studio for Mac IDE 支持。 请确保已[Visual Studio for Mac 安装](install-fsharp.md#install-f-with-visual-studio-for-mac)。
+F#Visual Studio for Mac IDE 中F#支持可视化工具。 确保已[安装 Visual Studio for Mac](install-fsharp.md#install-f-with-visual-studio-for-mac)。
 
 ## <a name="creating-a-console-application"></a>创建控制台应用程序
 
-Visual Studio for Mac 中最基本的项目之一是控制台应用程序。  以下是使用方法。  打开 Visual Studio for Mac 后：
+Visual Studio for Mac 中最基本的项目之一是控制台应用程序。  以下是使用方法。  打开 Visual Studio for Mac 后:
 
-1. 上**文件**菜单，依次指向**新的解决方案**。
+1. 在 "**文件**" 菜单上, 指向 "**新建解决方案**"。
 
-2. 在新建项目对话框中，有 2 个不同的模板的控制台应用程序。  在另一个-> 面向.NET Framework 的.NET。  其他模板位于.NET Core-> 应用程序以.NET Core 为目标。  对于本文，任一模板应适用。
+2. 在 "新建项目" 对话框中, 控制台应用程序有两个不同的模板。  在其他 > 的 .NET 中有一个面向 .NET Framework 的。  其他模板位于.NET Core-> 应用程序以.NET Core 为目标。  这两个模板都适用于本文的目的。
 
-3. 在控制台应用程序下，更改C#到F#如果需要。  选择**下一步**按钮继续推进工作 ！  
+3. 在 "控制台应用" C#下F# , 根据需要将更改为。  选择 "**下一步**" 按钮继续!  
 
-4. 为项目提供一个名称，并选择所需的应用的选项。  请注意，屏幕将显示将创建的目录结构的端到预览窗格中，基于所选的选项。  
+4. 为项目命名, 并为应用选择所需的选项。  请注意, 屏幕右侧的预览窗格将显示将根据所选选项创建的目录结构。  
 
-5. 单击 **“创建”**。  现在应看到F#解决方案资源管理器中的项目。
+5. 单击 **“创建”** 。  现在应会在解决方案资源管理器F#中看到一个项目。
 
 ## <a name="writing-your-code"></a>编写代码
 
-通过编写一些代码首先让我们开始吧。  请确保`Program.fs`文件已打开，，然后将其内容替换为以下：
+让我们首先编写一些代码。  确保该`Program.fs`文件已打开, 然后将其内容替换为以下内容:
 
-[!code-fsharp[HelloSquare](../../../samples/snippets/fsharp/getting-started/hello-square.fs)]
+[!code-fsharp[HelloSquare](~/samples/snippets/fsharp/getting-started/hello-square.fs)]
 
-在前面的代码示例，一个函数`square`具有已定义接受名为输入`x`并将其本身乘以。  因为F#使用[类型推理](../language-reference/type-inference.md)的类型`x`不需要指定。  F#编译器了解有效，乘法的类型，并将分配到的类型`x`具体取决于`square`调用。  如果您悬停`square`，则应查看以下信息：
+在上面的代码示例中, 已`square`定义了一个函数, 该函数采用`x`一个名为的输入, 并将其与自身相乘。  由于F#使用[类型推理](../language-reference/type-inference.md), 因此不需要`x`指定的类型。  编译器了解乘法的有效类型, 并根据调用方式`square`将类型分配给`x`。 F#  如果将鼠标悬停`square`在上方, 应会看到以下内容:
 
 ```
 val square: x:int -> int
 ```
 
-这是所谓的函数的类型签名。  它可以读取如下："正方形是一个函数，它采用名为整数 x，并生成一个整数"。  请注意，编译器提供`square``int`类型现在-这是因为乘法不是泛型跨*所有*类型，但而不是跨一组已关闭的类型是泛型。  F#编译器中选取`int`在此点，但它将调整类型签名如果调用`square`与其他输入类型，如`float`。
+这就是所谓函数的类型签名。  如下所示:"方形是一个函数, 它采用名为 x 的整数并生成一个整数"。  请注意, 编译器`square` `int`现在提供类型, 这是因为乘法在*所有*类型中都不是泛型的, 而是在一组封闭类型中是通用的。  此时F#会选取`int`编译器, 但如果您使用`float`其他输入类型 (如) 调用`square` , 则会调整类型签名。
 
-另一个函数`main`，定义，则这用修饰`EntryPoint`属性告知F#编译器的执行程序时，应从这里开始。  它遵循的约定与其他[C 样式编程语言](https://en.wikipedia.org/wiki/Entry_point#C_and_C.2B.2B)，其中的命令行参数可以传递给此函数，并返回一个整数代码 (通常`0`)。
+定义了另`main`一个函数, 该函数`EntryPoint`用特性修饰, 以告知编译器程序F#执行应在此开始。  它遵循与其他[C 样式编程语言](https://en.wikipedia.org/wiki/Entry_point#C_and_C.2B.2B)相同的约定, 可以将命令行参数传递给此函数, 并且返回整数代码 (通常`0`为)。
 
-在我们调用此函数是`square`函数的参数和`12`。  F#编译器然后将分配的类型`square`要`int -> int`(即，一个函数，它采用`int`，并生成`int`)。  对调用`printfn`是格式化的打印函数使用类似于 C 样式编程语言，它们分别对应于格式字符串中指定的参数的格式字符串，然后将打印结果和一个新行。
+在此函数中, 我们使用的`square` `12`参数调用了函数。  然后F# `square` , 编译器将`int -> int`的类型分配为 (即, 采用`int`并生成的`int`函数)。  对`printfn`的调用是一个格式化的打印函数, 它使用格式字符串 (类似于 C 样式编程语言)、与在格式字符串中指定的参数相对应的参数, 然后输出结果和新行。
 
 ## <a name="running-your-code"></a>运行代码
 
-可以运行该代码并查看结果，通过单击**运行**从顶级菜单，然后**启动但不调试**。  这将运行程序而不进行调试，并允许您以查看结果。
+可以通过单击顶级菜单中的 "**运行**" 来运行代码并查看结果, 然后在**不调试的情况下启动**。  这将在不调试的情况下运行程序, 并允许你查看结果。
 
-现在应看到以下输出到控制台窗口的 Visual Studio for Mac:
+现在, 应会看到以下输出到 Visual Studio for Mac 弹出的控制台窗口:
 
 ```
 12 squared is 144!
 ```
 
-祝贺你！  你已创建你的第一个F#在 Visual Studio for Mac，编写的项目F#函数输出的结果调用的函数，并运行项目以查看部分结果。
+祝贺你！  已在 Visual Studio for Mac 中创建F#了第一个项目, 并F#编写了一个函数, 该函数将调用该函数的结果打印出来, 并运行该项目以查看某些结果。
 
-## <a name="using-f-interactive"></a>使用F#交互
+## <a name="using-f-interactive"></a>使用F#交互式
 
-视觉对象的最佳功能之一F#的 mac 在 Visual Studio 工具F#交互窗口。  它允许您以将代码发送到的进程可以在此调用该代码，并以交互方式查看结果。
+Visual Studio for Mac 中的可视化F#工具的最佳功能之一是F#交互窗口。  它允许你将代码发送到可调用该代码并以交互方式查看结果的进程。
 
-若要开始使用它，突出显示`square`在代码中定义的函数。  接下来，单击**编辑**从顶级菜单。  接下来，选择**发送到选定内容F#交互式**。  此时将执行中的代码F#交互窗口。  或者，可以右键单击所选内容上，选择**发送到选定内容F#交互式**。  应会看到F#显示交互式窗口，并在它下面：
+若要开始使用它, 请`square`突出显示代码中定义的函数。  接下来, 单击顶部菜单中的 "**编辑**"。  接下来 **, 选择 " F#将所选内容发送到交互**"。  这会在F#交互窗口中执行代码。  也可以右键单击所选内容, 然后选择 "**将所选F#内容发送到交互**"。  应该会看到F#交互式窗口出现, 其中包含以下内容:
 
 ```
 >
@@ -71,7 +71,7 @@ val square : x:int -> int
 >
 ```
 
-这将显示为相同的函数签名`square`你此前看到当悬停在该函数的函数。  因为`square`现在中定义F#交互式过程中，您可以调用它使用不同的值：
+这会显示`square`函数的相同函数签名, 在您前面悬停该函数时, 您会看到此函数签名。  由于`square`现在是在F#交互式进程中定义的, 因此可以对其调用不同的值:
 
 ```
 > square 12;;
@@ -80,7 +80,7 @@ val it : int = 144
 val it : int = 169
 ```
 
-此执行该函数时，将结果绑定到一个新名称`it`，并显示类型和值`it`。  请注意，必须终止与每个行`;;`。  这是如何F#交互窗口知道函数调用完成时。  您还可以定义中的新函数F#交互：
+这会执行函数, 将结果绑定到新名称`it`, 并显示的`it`类型和值。  请注意, 必须用`;;`终止每行。  这是F#交互式知道函数调用的完成时间。  还可以在交互式中F#定义新函数:
 
 ```
 > let isOdd x = x % 2 <> 0;;
@@ -91,27 +91,27 @@ val isOdd : x:int -> bool
 val it : bool = false
 ```
 
-上面的定义一个新的函数`isOdd`，此方法采用`int`和检查，以查看它是否是奇数 ！  可以调用此函数可看到它使用不同的输入返回的内容。  您可以调用函数调用中的函数：
+上面定义了一个新函数, `isOdd`该函数`int`采用并检查它是否为奇数!  您可以调用此函数, 以查看它如何返回不同的输入。  可以在函数调用中调用函数:
 
 ```
 > isOdd (square 15);;
 val it : bool = true
 ```
 
-此外可以使用[管道进运算符](../language-reference/symbol-and-operator-reference/index.md)以输送到两个函数的值：
+还可以使用[管道转发运算符](../language-reference/symbol-and-operator-reference/index.md)将值传递给两个函数:
 
 ```
 > 15 |> square |> isOdd;;
 val it : bool = true
 ```
 
-管道进运算符和的详细信息，在更高版本的教程中介绍。
+后面的教程中介绍了管道转发运算符等。
 
-这是仅了解一下如何使用F#交互。  若要了解详细信息，请查看[使用交互式编程F# ](../tutorials/fsharp-interactive/index.md)。
+这只是一种熟悉交互式操作的方式F# 。  若要了解详细信息, 请查看[的F#交互式编程](../tutorials/fsharp-interactive/index.md)。
 
 ## <a name="next-steps"></a>后续步骤
 
-如果你尚未这样做，请查看[概览F# ](../tour.md)，其中介绍了一些核心功能F#语言。  它将为您提供的某些功能的概述F#，并提供足够的代码示例，您可以将复制到 Visual Studio for Mac 和运行。  此外，还有一些有用的外部资源，您可以使用，在演示[F#指南](../index.md)。
+如果你尚未这样做, 请查看[的F#教程](../tour.md), 其中介绍了该F#语言的一些核心功能。  它将为你概述的某些功能F#, 并提供可复制到 Visual Studio for Mac 并运行的充足代码示例。  本指南中还提供了一些可以使用的展示外部资源。 [ F# ](../index.md)
 
 ## <a name="see-also"></a>请参阅
 
@@ -119,4 +119,4 @@ val it : bool = true
 - [F# 教程](../tour.md)
 - [F#语言参考](../language-reference/index.md)
 - [类型推理](../language-reference/type-inference.md)
-- [符号和运算符参考](../language-reference/symbol-and-operator-reference/index.md)
+- [符号和运算符引用](../language-reference/symbol-and-operator-reference/index.md)

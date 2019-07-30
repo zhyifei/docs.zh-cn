@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LocBaml tool [WPF]
 - applications [WPF], localizing
 ms.assetid: 5001227e-9326-48a4-9dcd-ba1b89ee6653
-ms.openlocfilehash: 68bb3b8cd080e5b454776433e65027b7d18e7c3b
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 749ba2dd9318976289d9d4140cfadd711e0548d4
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331554"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629873"
 ---
 # <a name="how-to-localize-an-application"></a>如何：对应用程序进行本地化
 本教程介绍如何通过使用 LocBaml 工具创建本地化应用程序。  
@@ -66,7 +66,7 @@ ms.locfileid: "68331554"
 ## <a name="create-the-neutral-language-resources-satellite-assembly"></a>创建非特定语言资源附属程序集  
  将应用程序配置为生成非特定语言资源附属程序集后，则可生成应用程序。 这会生成主应用程序程序集，以及 LocBaml 本地化所需的非特定语言资源附属程序集。 若要生成应用程序：  
   
-1. 编译 HelloApp 以创建一个 [!INCLUDE[TLA#tla_dll](../../../../includes/tlasharptla-dll-md.md)]：  
+1. 编译 Helloapp.resources.dll 以创建动态链接库 (DLL):  
   
      **msbuild helloapp.csproj**  
   
@@ -91,7 +91,7 @@ ms.locfileid: "68331554"
   
 4. 运行 LocBaml 时可指定下列选项：  
   
-    - **parse**或 **-p:** 分析 Baml、资源或[!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)]文件以生成 .csv 或 .txt 文件。  
+    - **parse**或 **-p:** 分析 Baml、资源或 DLL 文件以生成 .csv 或 .txt 文件。  
   
     - **生成**或 **-g:** 使用翻译的文件生成本地化的二进制文件。  
   
@@ -101,7 +101,7 @@ ms.locfileid: "68331554"
   
     - **转换**或 **-** 传输 {*转换 .csv*] **:** 已翻译或本地化的文件。  
   
-    - **asmpath**或 **-asmpath:** {*filedirectory*] **:** 如果代码包含自定义控件, 则必须将 asmpath 提供给自定义控件程序集。  [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]  
+    - **asmpath**或 **-asmpath:** {*filedirectory*] **:** 如果代码包含自定义控件, 则必须将 asmpath 提供给自定义控件程序集。 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]  
   
     - **nologo**显示没有徽标或版权信息。  
   
@@ -152,7 +152,7 @@ ms.locfileid: "68331554"
    |BAML 名称|资源键|类别|可读性|可修改性|注释|值|  
    |---------------|------------------|--------------|-----------------|-------------------|--------------|-----------|
    |HelloApp.g.en-US.resources:window1.baml|Stack1:System.Windows.Controls.StackPanel.$Content|忽略|FALSE|FALSE||#Text1;#Text2|
-   |HelloApp.g.en-US.resources:window1.baml|Text1:System.Windows.Controls.TextBlock.$Content|无|TRUE|TRUE||Hello World|
+   |HelloApp.g.en-US.resources:window1.baml|Text1:System.Windows.Controls.TextBlock.$Content|None|TRUE|TRUE||Hello World|
    |HelloApp.g.en-US.resources:window1.baml|Text2:System.Windows.Controls.TextBlock.$Content|无|TRUE|TRUE||Goodbye World|
   
    请注意,**注释**字段的所有值不包含任何值;如果字段没有值, 则为空。 另请注意, 第一行中的项既不可读也不可修改, 并且具有 "Ignore" 作为其**类别**值, 所有这些都指示该值不可本地化。  

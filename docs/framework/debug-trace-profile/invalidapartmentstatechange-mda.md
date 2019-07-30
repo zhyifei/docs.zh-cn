@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e56fb9df-5286-4be7-b313-540c4d876cd7
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1d55329fd64176ad0a366c4b80453c2be34c166e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6a7be97ef3184c6836cd67e47b4e9383214f1b5f
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614347"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629410"
 ---
 # <a name="invalidapartmentstatechange-mda"></a>invalidApartmentStateChange MDA
 `invalidApartmentStateChange` 托管调试助手 (MDS) 通过以下两种问题中的任何一种激活：  
@@ -31,7 +31,7 @@ ms.locfileid: "64614347"
   
 - 线程的 COM 单元状态不符合请求。 这可能造成用于已有线程模型的 COM 组件的代理不同于现有代理。 进而可能导致在通过未设置为跨单元封送的接口调用 COM 对象时，引发 <xref:System.InvalidCastException>。  
   
-- 线程的 COM 单元状态不同于预期。 这可能造成调用[运行时可调用包装器](../../../docs/framework/interop/runtime-callable-wrapper.md) (RCW) 时，出现 <xref:System.Runtime.InteropServices.COMException>、RPC_E_WRONG_THREAD 返回 HRESULT 以及 <xref:System.InvalidCastException>。 这也可能造成部分单线程 COM 组件由多个线程同时访问，进而导致损坏或数据丢失。  
+- 线程的 COM 单元状态不同于预期。 这可能造成调用[运行时可调用包装器](../../../docs/standard/native-interop/runtime-callable-wrapper.md) (RCW) 时，出现 <xref:System.Runtime.InteropServices.COMException>、RPC_E_WRONG_THREAD 返回 HRESULT 以及 <xref:System.InvalidCastException>。 这也可能造成部分单线程 COM 组件由多个线程同时访问，进而导致损坏或数据丢失。  
   
 ## <a name="cause"></a>原因  
   

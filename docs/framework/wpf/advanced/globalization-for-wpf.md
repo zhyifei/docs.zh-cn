@@ -7,12 +7,12 @@ helpviewer_keywords:
 - international user interface [WPF], XAML
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-ms.openlocfilehash: fd99d97d677ef588c3f7e2a178190377d72c74ce
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 099d6b94f9094ac9baed25e5060d8a166e27573b
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400638"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629922"
 ---
 # <a name="globalization-for-wpf"></a>WPF 的全球化
 本主题介绍编写[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]全球市场应用程序时应注意的问题。 [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] 中`System.Globalization`定义了全球化编程元素。
@@ -127,7 +127,7 @@ ms.locfileid: "68400638"
 
  [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)]字体允许使用[!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)]编码处理大字形集。 这种编码享有广泛的国际支持，并支持版式字形变体。
 
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]文本呈现由[!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)]支持分辨率独立性的子像素技术提供支持。 这极大地提高了可读性，并为所有脚本提供了支持高质量杂志样式文档的功能。
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]文本呈现由支持分辨率独立性的 Microsoft ClearType 子像素技术提供支持。 这极大地提高了可读性，并为所有脚本提供了支持高质量杂志样式文档的功能。
 
 <a name="intl_layout"></a>
 ### <a name="international-layout"></a>国际化布局

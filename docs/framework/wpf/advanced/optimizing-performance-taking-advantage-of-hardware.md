@@ -1,5 +1,5 @@
 ---
-title: 优化性能：利用硬件
+title: 优化性能:利用硬件
 ms.date: 03/30/2017
 helpviewer_keywords:
 - graphics [WPF], performance
@@ -9,28 +9,28 @@ helpviewer_keywords:
 - graphics [WPF], rendering tiers
 - software rendering pipeline [WPF]
 ms.assetid: bfb89bae-7aab-4cac-a26c-a956eda8fce2
-ms.openlocfilehash: 13812fa5429bbe33341e51e4b3be14fbbcb361cb
-ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
+ms.openlocfilehash: 7acf5a3f48ac4987037873c63111d988ec3a4979
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68238455"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629646"
 ---
-# <a name="optimizing-performance-taking-advantage-of-hardware"></a>优化性能：利用硬件
-内部体系结构[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]具有两个呈现管道、 硬件和软件。 本主题提供有关这些呈现管道，以帮助你做出有关您的应用程序的性能优化的信息。  
+# <a name="optimizing-performance-taking-advantage-of-hardware"></a>优化性能:利用硬件
+的[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]内部体系结构有两个渲染管道: 硬件和软件。 本主题提供有关这些渲染管道的信息, 以帮助您确定应用程序的性能优化。  
   
 ## <a name="hardware-rendering-pipeline"></a>硬件呈现管道  
- 在确定的最重要因素之一[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]性能是它是呈现绑定 — 必须要呈现，成本更高性能的像素越多。 但是，呈现的详细信息可以卸载到[!INCLUDE[TLA#tla_gpu](../../../../includes/tlasharptla-gpu-md.md)]，可以获得更多的性能优势。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序的硬件呈现管道采用充分利用[!INCLUDE[TLA#tla_dx](../../../../includes/tlasharptla-dx-md.md)]功能支持的最少的硬件上[!INCLUDE[TLA#tla_dx](../../../../includes/tlasharptla-dx-md.md)]版本 7.0。 支持的硬件可以获得更多优化[!INCLUDE[TLA#tla_dx](../../../../includes/tlasharptla-dx-md.md)]版本 7.0 和 PixelShader 2.0 + 功能。  
+ 确定[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]性能的最重要因素之一在于它是呈现绑定的 (需要呈现的像素越多), 性能开销就越大。 但是, 可以卸载到的[!INCLUDE[TLA#tla_gpu](../../../../includes/tlasharptla-gpu-md.md)]呈现越多, 可获得的性能优势就越多。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序硬件呈现管道充分利用了 microsoft directx 功能, 这些功能支持最少的 microsoft directx 7.0 版硬件。 可以通过支持 Microsoft DirectX 7.0 版和 PixelShader 2.0 + 功能的硬件来获得进一步的优化。  
   
 ## <a name="software-rendering-pipeline"></a>软件呈现管道  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]软件呈现管道是完全受 CPU 限制。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 充分利用 SSE 和 SSE2 指令的设置在 CPU 中来实现优化、 功能完备的软件光栅器。 回退到软件是无缝应用程序功能不能使用硬件呈现管道呈现任何时间。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]软件呈现管道完全受 CPU 限制。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]利用 CPU 中的 SSE 和 SSE2 指令集来实现经过优化且功能完备的软件光栅。 当应用程序功能不能使用硬件呈现管道进行呈现时, 无缝回退到软件。  
   
- 您会遇到的最大的性能问题时在软件模式下呈现相关填充率，定义为呈现的像素数。 如果担心软件呈现模式中的性能，尝试尽量减少重新绘制像素的次数。 例如，如果您的应用程序包含一个蓝色背景，然后通过它呈现略有透明图像，您将呈现所有两次，应用程序中的像素。 因此，它将需要两次长呈现具有比有仅蓝色背景图像的应用程序。  
+ 在软件模式下呈现时遇到的最大性能问题与填充率相关, 填充率定义为要呈现的像素数。 如果你担心软件呈现模式的性能, 请尝试最大程度地减少重绘像素的次数。 例如, 如果应用程序具有蓝色背景, 然后在其上呈现略微透明的图像, 则会在应用程序中呈现两次所有像素。 因此, 使用图像呈现应用程序需要两次, 而不是只有蓝色背景。  
   
 ### <a name="graphics-rendering-tiers"></a>图形呈现层  
- 它可能很难预测你的应用程序将在运行的硬件配置。 但是，你可能想要考虑使用允许无缝切换功能在不同的硬件上运行时，以便它可以充分利用每个不同的硬件配置的应用程序的设计。  
+ 预测应用程序将在其上运行的硬件配置可能非常困难。 但是, 你可能需要考虑允许应用程序在不同硬件上运行时无缝切换功能的设计, 使其能够充分利用各种不同的硬件配置。  
   
- 若要实现此目的，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]提供功能，以确定在运行时中的系统的图形功能。 分类为一个三个呈现功能层的视频卡取决于图形功能。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 公开一个 API，使应用程序能够查询呈现功能层。 然后，你的应用程序可以在运行的时间，具体取决于硬件支持的呈现层采用不同的代码路径。  
+ 为实现此目的[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] , 提供了在运行时确定系统的图形功能的功能。 图形功能通过将视频卡分类为三个呈现功能层之一来确定。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]公开一个 API, 该 API 允许应用程序查询呈现功能层。 然后, 应用程序可以在运行时采用不同的代码路径, 具体取决于硬件支持的呈现层。  
   
  对呈现层级别影响最大的图形硬件功能包括：  
   
@@ -42,17 +42,17 @@ ms.locfileid: "68238455"
   
 - **多纹理支持** - 多纹理支持是指对 3D 图形对象执行混合操作期间应用两个或更多个不同纹理的功能。 多纹理支持的程度取决于图形硬件中的多纹理单元数。  
   
- 像素着色器、 顶点着色器和多纹理功能用于定义特定[!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]版本级别，这反过来，用于定义中的不同的呈现层[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。  
+ "像素着色器"、"顶点着色器" 和 "多纹理" 功能用于定义特定的 DirectX 版本级别, 后者反过来用于定义中[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]的不同呈现层。  
   
  图形硬件的功能决定了 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序的呈现功能。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 系统定义了 3 个呈现层：  
   
-- **呈现层 0** - 无图形硬件加速。 [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]版本级别低于 7.0 版。  
+- **呈现层 0** - 无图形硬件加速。 DirectX 版本级别低于版本7.0。  
   
-- **呈现层 1**部分的图形硬件加速。 [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]版本级别为大于或等于版本 7.0，并**较小**比 9.0 版。  
+- **呈现层 1**部分图形硬件加速。 DirectX 版本级别大于或等于版本 7.0 **, 并且低于**版本9.0。  
   
-- **呈现层 2** - 大多数图形功能都使用图形硬件加速。 [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 版本级别高于或等于 9.0。  
+- **呈现层 2** - 大多数图形功能都使用图形硬件加速。 DirectX 版本级别大于或等于版本9.0。  
   
- 有关详细信息[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]呈现层，请参阅[图形呈现层](graphics-rendering-tiers.md)。  
+ 有关[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]呈现层的详细信息, 请参阅[图形呈现层](graphics-rendering-tiers.md)。  
   
 ## <a name="see-also"></a>请参阅
 

@@ -1,13 +1,13 @@
 ---
 title: 编译器指令
-description: 了解如何F#语言预处理器指令、 条件编译指令、 行指令和编译器指令。
+description: 了解F#语言预处理器指令、条件编译指令、行指令和编译器指令。
 ms.date: 12/10/2018
-ms.openlocfilehash: 2b62fb930a3b0c55103d6b0edbe20ae056ba86bd
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 16db2efb2fee2c2c5e94aa98eb0a13183a4e0e0b
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645498"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630411"
 ---
 # <a name="compiler-directives"></a>编译器指令
 
@@ -21,32 +21,32 @@ ms.locfileid: "65645498"
 
 |指令|描述|
 |---------|-----------|
-|`#if` *符号*|支持条件编译。 后面部分中的代码`#if`如果，则包含*符号*定义。 此外可以使用取反符号`!`。|
+|`#if`*符号*|支持条件编译。 如果定义了*符号*, 则`#if`包括之后的部分中的代码。 还可以对符号求反`!`。|
 |`#else`|支持条件编译。 如果未定义与前面的 `#if` 一起使用的符号，则将一段代码标记为包含在内。|
 |`#endif`|支持条件编译。 标记条件代码段的末尾。|
-|`#`[line] *int*,<br/>`#`[line] *int* *string*,<br/>`#`[line] *int* *verbatim-string*|指示原始源代码行和文件名以用于调试。 此功能是为生成 F# 源代码的工具而提供的。|
-|`#nowarn` *warningcode*|禁用编译器警告。 若要禁用警告，请在编译器输出中查找其编号，然后将它包含在引号内。 省略“FS”前缀。 若要禁用同一行上的多个警告编号，请将每个编号用引号引起来，并使用空格分隔每个字符串。 例如：
+|`#`内嵌*int*、<br/>`#`内嵌*int* *string*,<br/>`#`[line] *int* *verbatim-string*|指示原始源代码行和文件名以用于调试。 此功能是为生成 F# 源代码的工具而提供的。|
+|`#nowarn`*warningcode*|禁用编译器警告。 若要禁用警告，请在编译器输出中查找其编号，然后将它包含在引号内。 省略“FS”前缀。 若要禁用同一行上的多个警告编号，请将每个编号用引号引起来，并使用空格分隔每个字符串。 例如：
 
 `#nowarn "9" "40"`
 
-禁用警告的效果应用于整个文件，包括位于该指令之前文件部分。 |
+禁用警告的效果适用于整个文件, 包括指令前面的部分文件。 |
 
 ## <a name="conditional-compilation-directives"></a>条件编译指令
 
-通过这些指令之一停用的代码显示为灰色 Visual Studio 代码编辑器中。
+通过其中一个指令停用的代码在 Visual Studio Code 编辑器中显示为灰色。
 
 > [!NOTE]
 > 条件编译指令的行为与它在其他语言中的行为不同。 例如，不能使用涉及符号的布尔表达式，并且 `true` 和 `false` 没有特殊含义。 在 `if` 指令中使用的符号必须通过命令行或在项目设置中定义；没有 `define` 预处理器指令。
 
-以下代码演示了 `#if`、`#else` 和 `#endif` 指令的用法。 在此示例中，代码包含两个版本的 `function1` 定义。 当`VERSION1`使用定义[-define 编译器选项](https://msdn.microsoft.com/library/434394ae-0d4a-459c-a684-bffede519a04)，之间的代码`#if`指令和`#else`激活指令。 否则，会激活 `#else` 与 `#endif` 之间的代码。
+以下代码演示了 `#if`、`#else` 和 `#endif` 指令的用法。 在此示例中，代码包含两个版本的 `function1` 定义。 当`VERSION1`使用[-define 编译器选项](https://msdn.microsoft.com/library/434394ae-0d4a-459c-a684-bffede519a04)定义时, 将激活`#if`指令和`#else`指令之间的代码。 否则，会激活 `#else` 与 `#endif` 之间的代码。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet7301.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet7301.fs)]
 
 F# 中没有 `#define` 预处理器指令。 必须使用编译器选项或项目设置来定义 `#if` 指令使用的符号。
 
 条件编译指令可以进行嵌套。 缩进对于预处理器指令并不重要。
 
-此外可以要求反的符号与`!`。 在此示例中，字符串的值是内容仅当_不_调试：
+你还可以使用`!`对符号求反。 在此示例中, 仅当_不_调试时, 字符串的值才是:
 
 ```fsharp
 #if !DEBUG
@@ -62,7 +62,7 @@ let str = "Debugging!"
 
 使用 `#line` 指令时，必须将文件名括在引号内。 除非原义标记 (`@`) 出现在字符串前面，否则必须使用两个反斜杠字符（而不是一个）对反斜杠字符进行转义，才能在路径中使用它们。 以下是有效的行标记。 在这些示例中，假设原始文件 `Script1` 会在通过某种工具运行时产生自动生成的 F# 代码文件，并且这些指令的位置处的代码是从文件 `Script1` 中第 25 行处的一些标记生成的。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet7303.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet7303.fs)]
 
 这些标记指示在此位置生成的 F# 代码派生自位于 `Script1` 中第 `25` 行上或附近的一些构造。
 
@@ -74,9 +74,9 @@ let str = "Debugging!"
 
 |指令|描述|
 |---------|-----------|
-|`#light` ["on"&#124;"off"]|启用或禁用轻量语法，以便与其他版本的 ML 兼容。 默认情况下，轻量语法处于启用状态。 详细语法始终处于启用状态。 因此，可以同时使用轻量语法和详细语法。 指令 `#light` 本身等效于 `#light "on"`。 如果指定 `#light "off"`，则必须对所有语言构造使用详细语法。 F# 文档中展示的语法基于使用轻量语法这一假设。 有关详细信息，请参阅[详细语法](verbose-syntax.md)。|
+|`#light` ["on"&#124;"off"]|启用或禁用轻量语法，以便与其他版本的 ML 兼容。 默认情况下，轻量语法处于启用状态。 详细语法始终处于启用状态。 因此，可以同时使用轻量语法和详细语法。 指令 `#light` 本身等效于 `#light "on"`。 如果指定 `#light "off"`，则必须对所有语言构造使用详细语法。 F# 文档中展示的语法基于使用轻量语法这一假设。 有关详细信息, 请参阅[详细语法](verbose-syntax.md)。|
 
-解释器 (fsi.exe) 指令，请参阅[使用交互式编程F# ](../tutorials/fsharp-interactive/index.md)。
+对于解释器 (fsi.exe) 指令, 请参阅[与的F#交互编程](../tutorials/fsharp-interactive/index.md)。
 
 ## <a name="see-also"></a>请参阅
 

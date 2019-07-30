@@ -13,73 +13,77 @@ helpviewer_keywords:
 - assignment statements [Visual Basic], object variable assignment
 - Me keyword [Visual Basic], as object variable
 ms.assetid: 3706811d-fd40-44fe-8727-d692e8e55d6d
-ms.openlocfilehash: dff1b9bb9e87f827663786cac3f33531db41b2c1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 59dea45511ba8d7d10c95cf17e47981124c532e4
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61757061"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68631052"
 ---
 # <a name="object-variable-assignment-visual-basic"></a>对象变量赋值 (Visual Basic)
-使用普通赋值语句将对象分配给对象变量。 可以分配对象表达式或[Nothing](../../../../visual-basic/language-reference/nothing.md)关键字，如下面的示例说明了。  
-  
-```  
-Dim thisObject As Object  
-' The following statement assigns an object reference.  
-thisObject = Form1  
-' The following statement discontinues association with any object.  
-thisObject = Nothing  
-```  
-  
- `Nothing` 意味着没有当前分配给变量对象。  
-  
-## <a name="initialization"></a>初始化  
- 当你的代码开始运行，您的对象变量初始化为`Nothing`。 这些声明中包含的初始化被重新初始化时执行的声明语句指定的值。  
-  
- 通过使用包括在声明中初始化[新建](../../../../visual-basic/language-reference/operators/new-operator.md)关键字。 下面的声明语句声明对象变量`testUri`和`ver`并向其分配特定的对象。 每个可以使用一种合适的类的重载构造函数来初始化对象。  
-  
-```  
-Dim testUri As New System.Uri("https://www.microsoft.com")  
-Dim ver As New System.Version(6, 1, 0)  
-```  
-  
-## <a name="disassociation"></a>解除关联  
- 将对象变量设置为`Nothing`终止与任何特定对象的变量的关联。 这会防止意外更改通过更改变量的对象。 它还允许您测试对象变量是否指向有效的对象，如以下示例所示。  
-  
-```  
-If otherObject IsNot Nothing Then  
-    ' otherObject refers to a valid object, so your code can use it.  
-End If  
-```  
-  
- 如果您的变量是指该对象是另一个应用程序中，该应用程序是否已终止或只是失效的对象无法确定此测试。  
-  
- 值为对象变量`Nothing`也称为*null 引用*。  
-  
-## <a name="current-instance"></a>当前实例  
- *当前实例*的对象是当前正在其中执行代码。 在过程内执行所有代码，因为当前实例是在其中调用该过程。  
-  
- `Me`关键字作为对象变量引用当前实例。 如果不是一个过程[共享](../../../../visual-basic/language-reference/modifiers/shared.md)，可以使用`Me`关键字来获取当前实例的指针。 共享的过程不能与类的特定实例相关联。  
-  
- 使用`Me`对于当前的实例传递到另一个模块中的过程非常有用。 例如，假设你有多个 XML 文档，想要将一些标准文本添加到所有这些。 下面的示例定义一个过程来执行此操作。  
-  
-```  
-Sub addStandardText(XmlDoc As System.Xml.XmlDocument)  
-    XmlDoc.CreateTextNode("This text goes into every XML document.")  
-End Sub  
-```  
-  
- 然后，每个 XML 文档对象无法调用该过程，并作为参数传递它的当前实例。 下面的示例演示这一操作。  
-  
-```  
-addStandardText(Me)  
-```  
-  
+
+使用常规赋值语句将对象分配给对象变量。 可以分配对象表达式或[Nothing](../../../../visual-basic/language-reference/nothing.md)关键字, 如下面的示例所示。
+
+```vb
+Dim thisObject As Object
+' The following statement assigns an object reference.
+thisObject = Form1
+' The following statement discontinues association with any object.
+thisObject = Nothing
+```
+
+`Nothing`表示当前没有对象分配给该变量。
+
+## <a name="initialization"></a>初始化
+
+当你的代码开始运行时, 你的对象变量`Nothing`将初始化为。 其声明包含初始化的将重新初始化为在执行声明语句时指定的值。
+
+可以通过使用[New](../../../../visual-basic/language-reference/operators/new-operator.md)关键字在声明中包含初始化。 以下声明语句声明对象变量`testUri`并`ver`为其分配特定的对象。 每个都使用适当类的重载构造函数之一来初始化对象。
+
+```vb
+Dim testUri As New System.Uri("https://www.microsoft.com")
+Dim ver As New System.Version(6, 1, 0)
+```
+
+## <a name="disassociation"></a>Disassociation
+
+设置对象变量以使`Nothing`变量与任何特定对象的关联停止。 这样可以防止意外更改变量来更改对象。 它还允许您测试对象变量是否指向有效对象, 如下面的示例所示。
+
+```vb
+If otherObject IsNot Nothing Then
+    ' otherObject refers to a valid object, so your code can use it.
+End If
+```
+
+如果变量所引用的对象在另一应用程序中, 则此测试无法确定该应用程序是否已终止或只是使该对象无效。
+
+值为的`Nothing`对象变量也称为*空引用*。
+
+## <a name="current-instance"></a>当前实例
+
+对象的*当前实例*是当前正在执行代码的实例。 由于所有代码都在过程中执行, 因此当前实例是在其中调用过程的实例。
+
+`Me`关键字充当引用当前实例的对象变量。 如果过程不是[共享](../../../../visual-basic/language-reference/modifiers/shared.md)的, 它可以使用`Me`关键字获取指向当前实例的指针。 共享过程不能与类的特定实例相关联。
+
+使用`Me`对于将当前实例传递到另一个模块中的过程特别有用。 例如, 假设您有多个 XML 文档, 并且想要将一些标准文本添加到其中。 下面的示例定义了用于执行此操作的过程。
+
+```vb
+Sub addStandardText(XmlDoc As System.Xml.XmlDocument)
+    XmlDoc.CreateTextNode("This text goes into every XML document.")
+End Sub
+```
+
+然后, 每个 XML 文档对象都可以调用该过程, 并将其当前实例作为参数传递。 下面的示例演示这一操作。
+
+```vb
+addStandardText(Me)
+```
+
 ## <a name="see-also"></a>请参阅
 
 - [对象变量](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [对象变量声明](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)
 - [对象变量值](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)
-- [如何：声明对象变量并在 Visual Basic 中为其分配对象](../../../../visual-basic/programming-guide/language-features/variables/how-to-declare-an-object-variable-and-assign-an-object-to-it.md)
+- [如何：声明对象变量, 并将对象分配给 Visual Basic](../../../../visual-basic/programming-guide/language-features/variables/how-to-declare-an-object-variable-and-assign-an-object-to-it.md)
 - [如何：使对象变量不引用任何实例](../../../../visual-basic/programming-guide/language-features/variables/how-to-make-an-object-variable-not-refer-to-any-instance.md)
 - [Me、My、MyBase 和 MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)

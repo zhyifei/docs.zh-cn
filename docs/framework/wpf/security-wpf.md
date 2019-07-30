@@ -13,12 +13,12 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-ms.openlocfilehash: 8d01e018e570a1ab530f476368d80f4082a73bda
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: ec026fd9273e99c88ec2e30cf46c3147419ace94
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400789"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629807"
 ---
 # <a name="security-wpf"></a>安全性 (WPF)
 <a name="introduction"></a>开发 Windows Presentation Foundation (WPF) 独立应用程序和浏览器托管应用程序时, 必须考虑安全模型。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]无论是使用 Windows Installer (.msi)、XCopy 还是 ClickOnce 部署的, 独立应用程序都以无限制权限 (CA**FullTrust**权限集) 执行。 不支持使用 ClickOnce 部署部分信任的独立 WPF 应用程序。 但是, 完全信任的主机应用程序可以使用 .NET Framework 外接程序<xref:System.AppDomain>模型创建部分信任。 有关详细信息, 请参阅[WPF 外接程序概述](./app-development/wpf-add-ins-overview.md)。  
@@ -47,7 +47,7 @@ ms.locfileid: "68400789"
 ## <a name="safe-navigation"></a>安全导航  
  对于[!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)] ,[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]区分两种类型的导航: 应用程序和浏览器。  
   
- 应用程序导航是指在浏览器托管的应用程序内的内容项之间进行导航。 浏览器导航是指可更改浏览器自身的内容和位置 URL 的导航。 应用程序导航 (通常为 XAML) 与浏览器导航 (通常为 HTML) 之间的关系如下图所示:
+ 应用程序导航  是指在浏览器托管的应用程序内的内容项之间进行导航。 浏览器导航  是指可更改浏览器自身的内容和位置 URL 的导航。 应用程序导航 (通常为 XAML) 与浏览器导航 (通常为 HTML) 之间的关系如下图所示:
   
  ![应用程序导航与浏览器导航之间的关系。](./media/security-wpf/application-browser-navigation-relationship.png)  
   
@@ -103,7 +103,7 @@ ms.locfileid: "68400789"
   
  对于**Internet**、 **Intranet**、**受信任的站点**和**受限制的站点**区域, 可通过这种方式进行保护的功能集合以每个区域为基础进行配置。 以下步骤描述如何配置安全设置：  
   
-1. 打开“控制面板” 。  
+1. 打开“控制面板”。  
   
 2. 单击 "**网络和 internet** ", 然后单击 " **internet 选项**"。  
   
@@ -216,9 +216,9 @@ ms.locfileid: "68400789"
   
 <a name="APTCA"></a>   
 ## <a name="disabling-aptca-assemblies-for-partially-trusted-client-applications"></a>对部分受信任的客户端应用程序禁用 APTCA 程序集  
- 将托管程序集安装到后[!INCLUDE[TLA#tla_gac](../../../includes/tlasharptla-gac-md.md)], 它们将成为完全受信任的程序集, 因为用户必须提供显式权限才能安装这些程序集。 因为这些程序集是完全受信任的，所以只有完全受信任的托管客户端应用程序才可以使用它们。 若要允许部分受信任的应用程序使用它们, 必须用<xref:System.Security.AllowPartiallyTrustedCallersAttribute> (APTCA) 标记它们。 仅当程序集经过测试，可在部分信任的情况下安全执行时，才应该为其标记此特性。  
+ 将托管程序集安装到全局程序集缓存 (GAC) 中时, 它们将成为完全受信任的程序集, 因为用户必须提供显式权限才能安装这些程序集。 因为这些程序集是完全受信任的，所以只有完全受信任的托管客户端应用程序才可以使用它们。 若要允许部分受信任的应用程序使用它们, 必须用<xref:System.Security.AllowPartiallyTrustedCallersAttribute> (APTCA) 标记它们。 仅当程序集经过测试，可在部分信任的情况下安全执行时，才应该为其标记此特性。  
   
- 但是, APTCA 程序集在安装到[!INCLUDE[TLA2#tla_gac](../../../includes/tla2sharptla-gac-md.md)]后可能会出现安全漏洞。 一旦发现安全漏洞，程序集发布者可以生成安全更新来修复现有安装上的问题，还可以阻止问题发现后进行的安装操作。 其中一个更新选项是卸载程序集，即使这可能中断使用该程序集的其他完全受信任的客户端应用程序。  
+ 但是, APTCA 程序集在安装到 GAC 后可能会出现安全漏洞。 一旦发现安全漏洞，程序集发布者可以生成安全更新来修复现有安装上的问题，还可以阻止问题发现后进行的安装操作。 其中一个更新选项是卸载程序集，即使这可能中断使用该程序集的其他完全受信任的客户端应用程序。  
   
  [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]提供了一种机制, 通过该机制, 无需卸载 aptca [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)]程序集即可为部分信任禁用 aptca 程序集。  
   
