@@ -1,17 +1,17 @@
 ---
-title: 条件表达式： if...然后...其他
-description: 了解如何编写中的条件表达式F#若要执行代码的不同分支。
+title: '条件表达式: if .。。then .。。其它'
+description: 了解如何编写中F#的条件表达式来执行不同的代码分支。
 ms.date: 05/16/2016
-ms.openlocfilehash: db2d5ce5b75ecda171f2623c986878dcee1cf4d9
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 825149bf296eded3cc2b4d8847ba4d82bea40cdc
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641992"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630394"
 ---
-# <a name="conditional-expressions-ifthenelse"></a>条件表达式： `if...then...else`
+# <a name="conditional-expressions-ifthenelse"></a>条件表达式:`if...then...else`
 
-`if...then...else`表达式在运行代码的不同分支，还可以为不同的值，具体取决于给定的布尔表达式计算。
+`if...then...else`表达式运行不同的代码分支, 还根据给定的布尔表达式计算出不同的值。
 
 ## <a name="syntax"></a>语法
 
@@ -21,15 +21,15 @@ if boolean-expression then expression1 [ else expression2 ]
 
 ## <a name="remarks"></a>备注
 
-在上述语法中， *expression1*运行时的布尔表达式的计算结果为`true`; 否则为*expression2*运行。
+在前面的语法中  , 如果布尔表达式的计算结果为`true`, 则表达式1将运行;*否则, 表达式*2 将运行。
 
-不同于其他语言中`if...then...else`构造是一个表达式，而不是语句。 这意味着它会生成一个值，该值是在执行的分支中的最后一个表达式的值。 每个分支中生成的值的类型必须匹配。 如果未显式`else`分支，其类型是`unit`。 因此，如果的类型`then`分支而不是任何类型`unit`，必须有`else`分支具有相同的返回类型。 当链接`if...then...else`表达式组合在一起，可以使用关键字`elif`而不是`else if`; 它们是等效。
+与其他语言不同, `if...then...else`构造是一个表达式, 而不是语句。 这意味着它会生成一个值, 该值是执行的分支中最后一个表达式的值。 每个分支中生成的值的类型必须匹配。 如果没有显式`else`分支, 则其类型为`unit`。 因此, 如果`then`分支的类型是以外的任何类型`unit` `else` , 则必须具有具有相同返回类型的分支。 将表达式`if...then...else`链接在一起时, 可以使用关键字`elif`而不`else if`是; 它们是等效的。
 
 ## <a name="example"></a>示例
 
 下面的示例演示如何使用`if...then...else`表达式。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4501.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4501.fs)]
 
 ```
 10 is less than 20
