@@ -1,25 +1,25 @@
 ---
 title: 切片 (F#)
-description: 了解如何使用现有的切片F#数据类型以及如何定义其他数据类型的切片。
+description: 了解如何使用现有F#数据类型的切片, 以及如何为其他数据类型定义自己的切片。
 ms.date: 01/22/2019
-ms.openlocfilehash: 1d8bb029ad18c8853ab58888959967ed279fb368
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3067982c2b4249312c7e9365bbfb994be840911d
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61925980"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627144"
 ---
-# <a name="slices"></a><span data-ttu-id="062c7-103">切片</span><span class="sxs-lookup"><span data-stu-id="062c7-103">Slices</span></span>
+# <a name="slices"></a><span data-ttu-id="19837-103">切片</span><span class="sxs-lookup"><span data-stu-id="19837-103">Slices</span></span>
 
-<span data-ttu-id="062c7-104">在F#，切片是一种数据类型的子集。</span><span class="sxs-lookup"><span data-stu-id="062c7-104">In F#, a slice is a subset of a data type.</span></span> <span data-ttu-id="062c7-105">若要将能够从数据类型执行切片，数据类型必须要么定义`GetSlice`方法中或在[键入扩展名](type-extensions.md)，它是在作用域。</span><span class="sxs-lookup"><span data-stu-id="062c7-105">To be able to take a slice from a data type, the data type must either define a `GetSlice` method or in a [type extension](type-extensions.md) that is in scope.</span></span> <span data-ttu-id="062c7-106">本文介绍了如何获取切片从现有F#类型以及如何定义你自己。</span><span class="sxs-lookup"><span data-stu-id="062c7-106">This article explains how to take slices from existing F# types and how to define your own.</span></span>
+<span data-ttu-id="19837-104">在F#中, 切片是数据类型的子集。</span><span class="sxs-lookup"><span data-stu-id="19837-104">In F#, a slice is a subset of a data type.</span></span> <span data-ttu-id="19837-105">为了能够从数据类型中获取切片, 数据类型必须定义一个`GetSlice`方法或在范围内的[类型扩展](type-extensions.md)中。</span><span class="sxs-lookup"><span data-stu-id="19837-105">To be able to take a slice from a data type, the data type must either define a `GetSlice` method or in a [type extension](type-extensions.md) that is in scope.</span></span> <span data-ttu-id="19837-106">本文介绍如何从现有F#类型获取切片以及如何定义切片。</span><span class="sxs-lookup"><span data-stu-id="19837-106">This article explains how to take slices from existing F# types and how to define your own.</span></span>
 
-<span data-ttu-id="062c7-107">切片是类似于[索引器](members/indexed-properties.md)，但而不是从基础数据结构生成单个值，它们会产生多个数据库。</span><span class="sxs-lookup"><span data-stu-id="062c7-107">Slices are similar to [indexers](members/indexed-properties.md), but instead of yielding a single value from the underlying data structure, they yield multiple ones.</span></span>
+<span data-ttu-id="19837-107">切片与[索引器](./members/indexed-properties.md)相似, 但它不是从基础数据结构产生单个值, 而是生成多个值。</span><span class="sxs-lookup"><span data-stu-id="19837-107">Slices are similar to [indexers](./members/indexed-properties.md), but instead of yielding a single value from the underlying data structure, they yield multiple ones.</span></span>
 
-<span data-ttu-id="062c7-108">F#当前具有对字符串、 列表、 数组和 2D 数组进行切片的内部函数支持。</span><span class="sxs-lookup"><span data-stu-id="062c7-108">F# currently has intrinsic support for slicing strings, lists, arrays, and 2D arrays.</span></span>
+<span data-ttu-id="19837-108">F#目前对切片字符串、列表、数组和二维数组的内部支持。</span><span class="sxs-lookup"><span data-stu-id="19837-108">F# currently has intrinsic support for slicing strings, lists, arrays, and 2D arrays.</span></span>
 
-## <a name="basic-slicing-with-f-lists-and-arrays"></a><span data-ttu-id="062c7-109">使用基本切片F#列表和数组</span><span class="sxs-lookup"><span data-stu-id="062c7-109">Basic slicing with F# lists and arrays</span></span>
+## <a name="basic-slicing-with-f-lists-and-arrays"></a><span data-ttu-id="19837-109">具有列表和F#数组的基本切片</span><span class="sxs-lookup"><span data-stu-id="19837-109">Basic slicing with F# lists and arrays</span></span>
 
-<span data-ttu-id="062c7-110">生成切片的最常见的数据类型F#列表和数组。</span><span class="sxs-lookup"><span data-stu-id="062c7-110">The most common data types that are sliced are F# lists and arrays.</span></span> <span data-ttu-id="062c7-111">下面的示例演示如何执行此操作的列表：</span><span class="sxs-lookup"><span data-stu-id="062c7-111">The following example demonstrates how to do this with lists:</span></span>
+<span data-ttu-id="19837-110">切片最常见的数据类型为F# "列表" 和 "数组"。</span><span class="sxs-lookup"><span data-stu-id="19837-110">The most common data types that are sliced are F# lists and arrays.</span></span> <span data-ttu-id="19837-111">下面的示例演示如何通过列表执行此操作:</span><span class="sxs-lookup"><span data-stu-id="19837-111">The following example demonstrates how to do this with lists:</span></span>
 
 ```fsharp
 // Generate a list of 100 integers
@@ -38,7 +38,7 @@ let unboundedEnd = fullList.[94..]
 printfn "Unbounded end slice: %A" unboundedEnd
 ```
 
-<span data-ttu-id="062c7-112">对数组进行切片就像对列表进行切片：</span><span class="sxs-lookup"><span data-stu-id="062c7-112">Slicing arrays is just like slicing lists:</span></span>
+<span data-ttu-id="19837-112">切片数组与切片列表类似:</span><span class="sxs-lookup"><span data-stu-id="19837-112">Slicing arrays is just like slicing lists:</span></span>
 
 ```fsharp
 // Generate an array of 100 integers
@@ -57,11 +57,11 @@ let unboundedEnd = fullArray.[94..]
 printfn "Unbounded end slice: %A" unboundedEnd
 ```
 
-## <a name="slicing-multidimensional-arrays"></a><span data-ttu-id="062c7-113">切片的多维数组</span><span class="sxs-lookup"><span data-stu-id="062c7-113">Slicing multidimensional arrays</span></span>
+## <a name="slicing-multidimensional-arrays"></a><span data-ttu-id="19837-113">切片多维数组</span><span class="sxs-lookup"><span data-stu-id="19837-113">Slicing multidimensional arrays</span></span>
 
-<span data-ttu-id="062c7-114">F#支持多维数组中的F#核心库。</span><span class="sxs-lookup"><span data-stu-id="062c7-114">F# supports multidimensional arrays in the F# core library.</span></span> <span data-ttu-id="062c7-115">与一维数组相同的多维数组的切片也很有用。</span><span class="sxs-lookup"><span data-stu-id="062c7-115">As with one-dimensional arrays, slices of multidimensional arrays can also be useful.</span></span> <span data-ttu-id="062c7-116">但是，引入了额外的维度要求略有不同的语法，以便您可以采取的特定行和列切片。</span><span class="sxs-lookup"><span data-stu-id="062c7-116">However, the introduction of additional dimensions mandates a slightly different syntax so that you can take slices of specific rows and columns.</span></span>
+<span data-ttu-id="19837-114">F#支持F#核心库中的多维数组。</span><span class="sxs-lookup"><span data-stu-id="19837-114">F# supports multidimensional arrays in the F# core library.</span></span> <span data-ttu-id="19837-115">与一维数组一样, 多维数组的切片也很有用。</span><span class="sxs-lookup"><span data-stu-id="19837-115">As with one-dimensional arrays, slices of multidimensional arrays can also be useful.</span></span> <span data-ttu-id="19837-116">但是, 附加维度的引入要求使用略微不同的语法, 以便能够获取特定行和列的切片。</span><span class="sxs-lookup"><span data-stu-id="19837-116">However, the introduction of additional dimensions mandates a slightly different syntax so that you can take slices of specific rows and columns.</span></span>
 
-<span data-ttu-id="062c7-117">以下示例演示如何进行切片的二维数组：</span><span class="sxs-lookup"><span data-stu-id="062c7-117">The following examples demonstrate how to slice a 2D array:</span></span>
+<span data-ttu-id="19837-117">下面的示例演示如何切分二维数组:</span><span class="sxs-lookup"><span data-stu-id="19837-117">The following examples demonstrate how to slice a 2D array:</span></span>
 
 ```fsharp
 // Generate a 3x3 2D matrix
@@ -89,13 +89,13 @@ let twoByTwo = A.[0..1,0..1]
 printfn "%A" twoByTwo
 ```
 
-<span data-ttu-id="062c7-118">F#核心库不会定义`GetSlice`三维数组。</span><span class="sxs-lookup"><span data-stu-id="062c7-118">The F# core library does not define `GetSlice`for 3D arrays.</span></span> <span data-ttu-id="062c7-119">如果你想要对那些或其他数组或多个维度进行切片，则必须定义`GetSlice`成员自己。</span><span class="sxs-lookup"><span data-stu-id="062c7-119">If you wish to slice those or other arrays of more dimensions, you must define the `GetSlice` member yourself.</span></span>
+<span data-ttu-id="19837-118">F#核心库不为3d 阵列`GetSlice`定义。</span><span class="sxs-lookup"><span data-stu-id="19837-118">The F# core library does not define `GetSlice`for 3D arrays.</span></span> <span data-ttu-id="19837-119">如果要对其他维度的数组或其他数组进行切片, 则必须自行定义`GetSlice`成员。</span><span class="sxs-lookup"><span data-stu-id="19837-119">If you wish to slice those or other arrays of more dimensions, you must define the `GetSlice` member yourself.</span></span>
 
-## <a name="defining-slices-for-other-data-structures"></a><span data-ttu-id="062c7-120">定义其他数据结构的切片</span><span class="sxs-lookup"><span data-stu-id="062c7-120">Defining slices for other data structures</span></span>
+## <a name="defining-slices-for-other-data-structures"></a><span data-ttu-id="19837-120">为其他数据结构定义切片</span><span class="sxs-lookup"><span data-stu-id="19837-120">Defining slices for other data structures</span></span>
 
-<span data-ttu-id="062c7-121">F#核心库定义了针对一组有限的类型段。</span><span class="sxs-lookup"><span data-stu-id="062c7-121">The F# core library defines slices for a limited set of types.</span></span> <span data-ttu-id="062c7-122">如果你想要定义更多的数据类型的切片，就可以做到本身在类型定义中或在类型扩展中。</span><span class="sxs-lookup"><span data-stu-id="062c7-122">If you wish to define slices for more data types, you can do so either in the type definition itself or in a type extension.</span></span>
+<span data-ttu-id="19837-121">F#核心库定义了有限类型集的切片。</span><span class="sxs-lookup"><span data-stu-id="19837-121">The F# core library defines slices for a limited set of types.</span></span> <span data-ttu-id="19837-122">如果要定义更多数据类型的切片, 可以在类型定义本身或类型扩展中执行此操作。</span><span class="sxs-lookup"><span data-stu-id="19837-122">If you wish to define slices for more data types, you can do so either in the type definition itself or in a type extension.</span></span>
 
-<span data-ttu-id="062c7-123">例如，下面是可以如何定义切片<xref:System.ArraySegment%601>类，以允许用于方便数据处理：</span><span class="sxs-lookup"><span data-stu-id="062c7-123">For example, here's how you might define slices for the <xref:System.ArraySegment%601> class to allow for convenient data manipulation:</span></span>
+<span data-ttu-id="19837-123">例如, 下面介绍了<xref:System.ArraySegment%601>如何为类定义切片, 以方便进行数据操作:</span><span class="sxs-lookup"><span data-stu-id="19837-123">For example, here's how you might define slices for the <xref:System.ArraySegment%601> class to allow for convenient data manipulation:</span></span>
 
 ```fsharp
 open System
@@ -110,9 +110,9 @@ let arr = ArraySegment [| 1 .. 10 |]
 let slice = arr.[2..5] //[ 3; 4; 5]
 ```
 
-### <a name="use-inlining-to-avoid-boxing-if-it-is-necessary"></a><span data-ttu-id="062c7-124">使用内联，从而避免装箱，如有必要</span><span class="sxs-lookup"><span data-stu-id="062c7-124">Use inlining to avoid boxing if it is necessary</span></span>
+### <a name="use-inlining-to-avoid-boxing-if-it-is-necessary"></a><span data-ttu-id="19837-124">如果需要, 请使用内联来避免装箱</span><span class="sxs-lookup"><span data-stu-id="19837-124">Use inlining to avoid boxing if it is necessary</span></span>
 
-<span data-ttu-id="062c7-125">如果你正在定义的实际结构类型的切片，我们建议您`inline``GetSlice`成员。</span><span class="sxs-lookup"><span data-stu-id="062c7-125">If you are defining slices for a type that is actually a struct, we recommend that you `inline` the `GetSlice` member.</span></span> <span data-ttu-id="062c7-126">F#编译器会优化的可选参数，避免由于切片任何堆分配。</span><span class="sxs-lookup"><span data-stu-id="062c7-126">The F# compiler optimizes away the optional arguments, avoiding any heap allocations as a result of slicing.</span></span> <span data-ttu-id="062c7-127">这是非常重要的如切片构造<xref:System.Span%601>，不能在堆上分配。</span><span class="sxs-lookup"><span data-stu-id="062c7-127">This is critically important for slicing constructs such as <xref:System.Span%601> that cannot be allocated on the heap.</span></span>
+<span data-ttu-id="19837-125">如果要为实际为结构的类型定义切片, 我们建议你`inline`使用`GetSlice`成员。</span><span class="sxs-lookup"><span data-stu-id="19837-125">If you are defining slices for a type that is actually a struct, we recommend that you `inline` the `GetSlice` member.</span></span> <span data-ttu-id="19837-126">F#编译器消除了可选参数, 避免了切片的任何分配。</span><span class="sxs-lookup"><span data-stu-id="19837-126">The F# compiler optimizes away the optional arguments, avoiding any heap allocations as a result of slicing.</span></span> <span data-ttu-id="19837-127">这对于切片构造极其重要<xref:System.Span%601> , 例如无法在堆上分配。</span><span class="sxs-lookup"><span data-stu-id="19837-127">This is critically important for slicing constructs such as <xref:System.Span%601> that cannot be allocated on the heap.</span></span>
 
 ```fsharp
 open System
@@ -135,6 +135,6 @@ printSpan sp.[0..3] // [|1; 2; 3|]
 printSpan sp.[1..2] // |2; 3|]
 ```
 
-## <a name="see-also"></a><span data-ttu-id="062c7-128">请参阅</span><span class="sxs-lookup"><span data-stu-id="062c7-128">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="19837-128">请参阅</span><span class="sxs-lookup"><span data-stu-id="19837-128">See also</span></span>
 
-- [<span data-ttu-id="062c7-129">索引的属性</span><span class="sxs-lookup"><span data-stu-id="062c7-129">Indexed properties</span></span>](members/indexed-properties.md)
+- [<span data-ttu-id="19837-129">索引属性</span><span class="sxs-lookup"><span data-stu-id="19837-129">Indexed properties</span></span>](./members/indexed-properties.md)

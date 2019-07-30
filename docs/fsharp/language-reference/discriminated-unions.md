@@ -2,18 +2,18 @@
 title: 可区分联合
 description: 了解如何使用F#可区分联合。
 ms.date: 05/16/2016
-ms.openlocfilehash: a3958a9ffb021c0c46c24216f17a1e7ee5605dd3
-ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
+ms.openlocfilehash: 940bc51f49e283c31846dd2047b749769b919838
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66816240"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630358"
 ---
-# <a name="discriminated-unions"></a><span data-ttu-id="93d7d-103">可区分联合</span><span class="sxs-lookup"><span data-stu-id="93d7d-103">Discriminated Unions</span></span>
+# <a name="discriminated-unions"></a><span data-ttu-id="dfb15-103">可区分联合</span><span class="sxs-lookup"><span data-stu-id="dfb15-103">Discriminated Unions</span></span>
 
-<span data-ttu-id="93d7d-104">可区分的联合提供的值可以为某个数量的已命名的情况下，可能是每个具有不同值和类型的支持。</span><span class="sxs-lookup"><span data-stu-id="93d7d-104">Discriminated unions provide support for values that can be one of a number of named cases, possibly each with different values and types.</span></span> <span data-ttu-id="93d7d-105">可区分的联合可用于异类数据;可以具有特殊的情况下，包括有效和错误情况; 的数据在从一个实例到另一个; 的类型发生变化的数据和为小对象层次结构的替代方法。</span><span class="sxs-lookup"><span data-stu-id="93d7d-105">Discriminated unions are useful for heterogeneous data; data that can have special cases, including valid and error cases; data that varies in type from one instance to another; and as an alternative for small object hierarchies.</span></span> <span data-ttu-id="93d7d-106">此外，递归的可区分联合用于表示树数据结构。</span><span class="sxs-lookup"><span data-stu-id="93d7d-106">In addition, recursive discriminated unions are used to represent tree data structures.</span></span>
+<span data-ttu-id="dfb15-104">可区分联合提供的值支持可以是多个命名用例中的一个, 可能每个值都有不同的值和类型。</span><span class="sxs-lookup"><span data-stu-id="dfb15-104">Discriminated unions provide support for values that can be one of a number of named cases, possibly each with different values and types.</span></span> <span data-ttu-id="dfb15-105">可区分联合适用于异类数据;可能有特殊情况的数据, 包括有效和错误事例;不同类型的数据的不同之处在于:作为小型对象层次结构的替代方法。</span><span class="sxs-lookup"><span data-stu-id="dfb15-105">Discriminated unions are useful for heterogeneous data; data that can have special cases, including valid and error cases; data that varies in type from one instance to another; and as an alternative for small object hierarchies.</span></span> <span data-ttu-id="dfb15-106">此外, 递归的可区分联合用于表示树数据结构。</span><span class="sxs-lookup"><span data-stu-id="dfb15-106">In addition, recursive discriminated unions are used to represent tree data structures.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="93d7d-107">语法</span><span class="sxs-lookup"><span data-stu-id="93d7d-107">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="dfb15-107">语法</span><span class="sxs-lookup"><span data-stu-id="dfb15-107">Syntax</span></span>
 
 ```fsharp
 [ attributes ]
@@ -24,13 +24,13 @@ type [accessibility-modifier] type-name =
     [ member-list ]
 ```
 
-## <a name="remarks"></a><span data-ttu-id="93d7d-108">备注</span><span class="sxs-lookup"><span data-stu-id="93d7d-108">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="dfb15-108">备注</span><span class="sxs-lookup"><span data-stu-id="dfb15-108">Remarks</span></span>
 
-<span data-ttu-id="93d7d-109">可区分的联合类似于其他语言中的联合类型，但有差异。</span><span class="sxs-lookup"><span data-stu-id="93d7d-109">Discriminated unions are similar to union types in other languages, but there are differences.</span></span> <span data-ttu-id="93d7d-110">中的联合类型与C++或变体类型在 Visual Basic 中，不固定的值中存储的数据;它可以是若干个不同选项之一。</span><span class="sxs-lookup"><span data-stu-id="93d7d-110">As with a union type in C++ or a variant type in Visual Basic, the data stored in the value is not fixed; it can be one of several distinct options.</span></span> <span data-ttu-id="93d7d-111">与这些其他语言中的联合不同，为每个可能的选项提供*用例标识符*。</span><span class="sxs-lookup"><span data-stu-id="93d7d-111">Unlike unions in these other languages, however, each of the possible options is given a *case identifier*.</span></span> <span data-ttu-id="93d7d-112">用例标识符是有关此类型的对象可能是; 的值的各种可能的类型名称值是可选的。</span><span class="sxs-lookup"><span data-stu-id="93d7d-112">The case identifiers are names for the various possible types of values that objects of this type could be; the values are optional.</span></span> <span data-ttu-id="93d7d-113">如果值不存在，这种情况相当于枚举用例。</span><span class="sxs-lookup"><span data-stu-id="93d7d-113">If values are not present, the case is equivalent to an enumeration case.</span></span> <span data-ttu-id="93d7d-114">如果值存在，则每个值可以是单个值的指定的类型或聚合多个字段的相同或不同类型的元组。</span><span class="sxs-lookup"><span data-stu-id="93d7d-114">If values are present, each value can either be a single value of a specified type, or a tuple that aggregates multiple fields of the same or different types.</span></span> <span data-ttu-id="93d7d-115">可以为单个字段命名，但名称是可选的即使在相同情况下的其他字段的名称。</span><span class="sxs-lookup"><span data-stu-id="93d7d-115">You can give an individual field a name, but the name is optional, even if other fields in the same case are named.</span></span>
+<span data-ttu-id="dfb15-109">可区分联合类似于其他语言中的联合类型, 但有一些差异。</span><span class="sxs-lookup"><span data-stu-id="dfb15-109">Discriminated unions are similar to union types in other languages, but there are differences.</span></span> <span data-ttu-id="dfb15-110">与 Visual Basic 中的联合类型C++或变体类型一样, 值中存储的数据不是固定的;它可以是几个不同的选项之一。</span><span class="sxs-lookup"><span data-stu-id="dfb15-110">As with a union type in C++ or a variant type in Visual Basic, the data stored in the value is not fixed; it can be one of several distinct options.</span></span> <span data-ttu-id="dfb15-111">与其他这些语言中的联合不同, 每个可能的选项都有一个*case 标识符*。</span><span class="sxs-lookup"><span data-stu-id="dfb15-111">Unlike unions in these other languages, however, each of the possible options is given a *case identifier*.</span></span> <span data-ttu-id="dfb15-112">Case 标识符是此类型的对象可能具有的各种类型的值的名称;值是可选的。</span><span class="sxs-lookup"><span data-stu-id="dfb15-112">The case identifiers are names for the various possible types of values that objects of this type could be; the values are optional.</span></span> <span data-ttu-id="dfb15-113">如果值不存在, 则该事例等效于枚举用例。</span><span class="sxs-lookup"><span data-stu-id="dfb15-113">If values are not present, the case is equivalent to an enumeration case.</span></span> <span data-ttu-id="dfb15-114">如果存在值, 则每个值可以是指定类型的单个值, 也可以是聚合同一类型或不同类型的多个字段的元组。</span><span class="sxs-lookup"><span data-stu-id="dfb15-114">If values are present, each value can either be a single value of a specified type, or a tuple that aggregates multiple fields of the same or different types.</span></span> <span data-ttu-id="dfb15-115">您可以为单个字段指定一个名称, 但该名称是可选的, 即使在同一种情况下, 也是如此。</span><span class="sxs-lookup"><span data-stu-id="dfb15-115">You can give an individual field a name, but the name is optional, even if other fields in the same case are named.</span></span>
 
-<span data-ttu-id="93d7d-116">可区分联合可访问性默认为`public`。</span><span class="sxs-lookup"><span data-stu-id="93d7d-116">Accessibility for discriminated unions defaults to `public`.</span></span>
+<span data-ttu-id="dfb15-116">可区分的联合的辅助`public`功能默认为。</span><span class="sxs-lookup"><span data-stu-id="dfb15-116">Accessibility for discriminated unions defaults to `public`.</span></span>
 
-<span data-ttu-id="93d7d-117">例如，考虑形状类型的以下声明。</span><span class="sxs-lookup"><span data-stu-id="93d7d-117">For example, consider the following declaration of a Shape type.</span></span>
+<span data-ttu-id="dfb15-117">例如, 请考虑下面的形状类型声明。</span><span class="sxs-lookup"><span data-stu-id="dfb15-117">For example, consider the following declaration of a Shape type.</span></span>
 
 ```fsharp
 type Shape =
@@ -39,9 +39,9 @@ type Shape =
     | Prism of width : float * float * height : float
 ```
 
-<span data-ttu-id="93d7d-118">前面的代码声明的可区分的联合形状，它可以具有任意三个用例的值：矩形、 圆形和棱镜。</span><span class="sxs-lookup"><span data-stu-id="93d7d-118">The preceding code declares a discriminated union Shape, which can have values of any of three cases: Rectangle, Circle, and Prism.</span></span> <span data-ttu-id="93d7d-119">每种情况下具有一组不同的字段。</span><span class="sxs-lookup"><span data-stu-id="93d7d-119">Each case has a different set of fields.</span></span> <span data-ttu-id="93d7d-120">矩形用例有两个命名字段，这两个类型`float`，具有名称宽度和长度。</span><span class="sxs-lookup"><span data-stu-id="93d7d-120">The Rectangle case has two named fields, both of type `float`, that have the names width and length.</span></span> <span data-ttu-id="93d7d-121">圆形用例都只是一个命名的字段，radius。</span><span class="sxs-lookup"><span data-stu-id="93d7d-121">The Circle case has just one named field, radius.</span></span> <span data-ttu-id="93d7d-122">棱镜用例有三个字段，哪个 （宽度和高度） 的两个命名字段。</span><span class="sxs-lookup"><span data-stu-id="93d7d-122">The Prism case has three fields, two of which (width and height) are named fields.</span></span> <span data-ttu-id="93d7d-123">未命名的字段称为匿名字段。</span><span class="sxs-lookup"><span data-stu-id="93d7d-123">Unnamed fields are referred to as anonymous fields.</span></span>
+<span data-ttu-id="dfb15-118">前面的代码声明了一个可区分的联合形状, 其中的值可以是以下三种情况之一:Rectangle、Circle 和 Prism。</span><span class="sxs-lookup"><span data-stu-id="dfb15-118">The preceding code declares a discriminated union Shape, which can have values of any of three cases: Rectangle, Circle, and Prism.</span></span> <span data-ttu-id="dfb15-119">每个事例都有一组不同的字段。</span><span class="sxs-lookup"><span data-stu-id="dfb15-119">Each case has a different set of fields.</span></span> <span data-ttu-id="dfb15-120">矩形用例有两个命名字段, 两个`float`均为类型, 名称为 width 和 length。</span><span class="sxs-lookup"><span data-stu-id="dfb15-120">The Rectangle case has two named fields, both of type `float`, that have the names width and length.</span></span> <span data-ttu-id="dfb15-121">圆形大小写只包含一个命名字段 "半径"。</span><span class="sxs-lookup"><span data-stu-id="dfb15-121">The Circle case has just one named field, radius.</span></span> <span data-ttu-id="dfb15-122">Prism 用例有三个字段, 其中两个字段 (宽度和高度) 为 "命名字段"。</span><span class="sxs-lookup"><span data-stu-id="dfb15-122">The Prism case has three fields, two of which (width and height) are named fields.</span></span> <span data-ttu-id="dfb15-123">未命名字段称为匿名字段。</span><span class="sxs-lookup"><span data-stu-id="dfb15-123">Unnamed fields are referred to as anonymous fields.</span></span>
 
-<span data-ttu-id="93d7d-124">通过根据以下示例的命名和匿名字段提供值来构造对象。</span><span class="sxs-lookup"><span data-stu-id="93d7d-124">You construct objects by providing values for the named and anonymous fields according to the following examples.</span></span>
+<span data-ttu-id="dfb15-124">您可以根据以下示例, 为已命名和匿名字段提供值来构造对象。</span><span class="sxs-lookup"><span data-stu-id="dfb15-124">You construct objects by providing values for the named and anonymous fields according to the following examples.</span></span>
 
 ```fsharp
 let rect = Rectangle(length = 1.3, width = 10.0)
@@ -49,9 +49,9 @@ let circ = Circle (1.0)
 let prism = Prism(5., 2.0, height = 3.0)
 ```
 
-<span data-ttu-id="93d7d-125">此代码显示了您可以使用命名的字段初始化，也可以依赖于声明中字段的排序方式，只需提供的值对于每个字段又。</span><span class="sxs-lookup"><span data-stu-id="93d7d-125">This code shows that you can either use the named fields in the initialization, or you can rely on the ordering of the fields in the declaration and just provide the values for each field in turn.</span></span> <span data-ttu-id="93d7d-126">有关构造函数调用`rect`前面的代码中使用的命名的字段，但对于构造函数调用`circ`使用了排序。</span><span class="sxs-lookup"><span data-stu-id="93d7d-126">The constructor call for `rect` in the previous code uses the named fields, but the constructor call for `circ` uses the ordering.</span></span> <span data-ttu-id="93d7d-127">可以混合有序的字段和已命名字段，如下所示的构造`prism`。</span><span class="sxs-lookup"><span data-stu-id="93d7d-127">You can mix the ordered fields and named fields, as in the construction of `prism`.</span></span>
+<span data-ttu-id="dfb15-125">此代码显示, 您可以在初始化中使用已命名的字段, 也可以依赖于声明中的字段顺序, 而只是提供每个字段的值。</span><span class="sxs-lookup"><span data-stu-id="dfb15-125">This code shows that you can either use the named fields in the initialization, or you can rely on the ordering of the fields in the declaration and just provide the values for each field in turn.</span></span> <span data-ttu-id="dfb15-126">前面代码`rect`中的构造函数调用使用命名字段, 但的构造函数`circ`调用使用排序。</span><span class="sxs-lookup"><span data-stu-id="dfb15-126">The constructor call for `rect` in the previous code uses the named fields, but the constructor call for `circ` uses the ordering.</span></span> <span data-ttu-id="dfb15-127">可以混合使用已排序的字段和命名字段, 如的构造`prism`中所示。</span><span class="sxs-lookup"><span data-stu-id="dfb15-127">You can mix the ordered fields and named fields, as in the construction of `prism`.</span></span>
 
-<span data-ttu-id="93d7d-128">`option`类型是一个简单的可区分的联合中F#核心库。</span><span class="sxs-lookup"><span data-stu-id="93d7d-128">The `option` type is a simple discriminated union in the F# core library.</span></span> <span data-ttu-id="93d7d-129">`option`类型声明，如下所示。</span><span class="sxs-lookup"><span data-stu-id="93d7d-129">The `option` type is declared as follows.</span></span>
+<span data-ttu-id="dfb15-128">该`option`类型是F#核心库中的一个简单的可区分联合。</span><span class="sxs-lookup"><span data-stu-id="dfb15-128">The `option` type is a simple discriminated union in the F# core library.</span></span> <span data-ttu-id="dfb15-129">此`option`类型声明如下。</span><span class="sxs-lookup"><span data-stu-id="dfb15-129">The `option` type is declared as follows.</span></span>
 
 ```fsharp
 // The option type is a discriminated union.
@@ -60,17 +60,17 @@ type Option<'a> =
     | None
 ```
 
-<span data-ttu-id="93d7d-130">前面的代码中指定的类型`Option`是具有两种情况下，可区分的联合`Some`和`None`。</span><span class="sxs-lookup"><span data-stu-id="93d7d-130">The previous code specifies that the type `Option` is a discriminated union that has two cases, `Some` and `None`.</span></span> <span data-ttu-id="93d7d-131">`Some`事例都有一个关联的值，其类型由类型参数的一个匿名字段组成`'a`。</span><span class="sxs-lookup"><span data-stu-id="93d7d-131">The `Some` case has an associated value that consists of one anonymous field whose type is represented by the type parameter `'a`.</span></span> <span data-ttu-id="93d7d-132">`None`用例都没有关联的值。</span><span class="sxs-lookup"><span data-stu-id="93d7d-132">The `None` case has no associated value.</span></span> <span data-ttu-id="93d7d-133">因此`option`类型指定的泛型类型，既可以具有某些类型或任何值的值。</span><span class="sxs-lookup"><span data-stu-id="93d7d-133">Thus the `option` type specifies a generic type that either has a value of some type or no value.</span></span> <span data-ttu-id="93d7d-134">类型`Option`还具有小写的类型别名`option`，即更常用。</span><span class="sxs-lookup"><span data-stu-id="93d7d-134">The type `Option` also has a lowercase type alias, `option`, that is more commonly used.</span></span>
+<span data-ttu-id="dfb15-130">上面的代码指定该类型`Option`是具有两个用例 (和`None`) `Some`的可区分联合。</span><span class="sxs-lookup"><span data-stu-id="dfb15-130">The previous code specifies that the type `Option` is a discriminated union that has two cases, `Some` and `None`.</span></span> <span data-ttu-id="dfb15-131">事例具有一个关联的值, 它由一个匿名字段组成, 该字段的类型由类型`'a`参数表示。 `Some`</span><span class="sxs-lookup"><span data-stu-id="dfb15-131">The `Some` case has an associated value that consists of one anonymous field whose type is represented by the type parameter `'a`.</span></span> <span data-ttu-id="dfb15-132">`None`事例没有关联值。</span><span class="sxs-lookup"><span data-stu-id="dfb15-132">The `None` case has no associated value.</span></span> <span data-ttu-id="dfb15-133">因此, `option`类型指定泛型类型, 该类型具有某种类型的值或没有值。</span><span class="sxs-lookup"><span data-stu-id="dfb15-133">Thus the `option` type specifies a generic type that either has a value of some type or no value.</span></span> <span data-ttu-id="dfb15-134">该类型`Option`还具有一个更常用的小写`option`类型别名。</span><span class="sxs-lookup"><span data-stu-id="dfb15-134">The type `Option` also has a lowercase type alias, `option`, that is more commonly used.</span></span>
 
-<span data-ttu-id="93d7d-135">用例标识符可用作可区分联合类型的构造函数。</span><span class="sxs-lookup"><span data-stu-id="93d7d-135">The case identifiers can be used as constructors for the discriminated union type.</span></span> <span data-ttu-id="93d7d-136">例如，使用以下代码创建的值`option`类型。</span><span class="sxs-lookup"><span data-stu-id="93d7d-136">For example, the following code is used to create values of the `option` type.</span></span>
+<span data-ttu-id="dfb15-135">Case 标识符可用作可区分联合类型的构造函数。</span><span class="sxs-lookup"><span data-stu-id="dfb15-135">The case identifiers can be used as constructors for the discriminated union type.</span></span> <span data-ttu-id="dfb15-136">例如, 下面的代码用于创建`option`类型的值。</span><span class="sxs-lookup"><span data-stu-id="dfb15-136">For example, the following code is used to create values of the `option` type.</span></span>
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2001.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2001.fs)]
 
-<span data-ttu-id="93d7d-137">用例标识符还用在模式匹配表达式中。</span><span class="sxs-lookup"><span data-stu-id="93d7d-137">The case identifiers are also used in pattern matching expressions.</span></span> <span data-ttu-id="93d7d-138">在模式匹配表达式中，标识符提供了与各个用例关联的值。</span><span class="sxs-lookup"><span data-stu-id="93d7d-138">In a pattern matching expression, identifiers are provided for the values associated with the individual cases.</span></span> <span data-ttu-id="93d7d-139">例如，在下面的代码中，`x`标识符提供与相关联的值`Some`用例`option`类型。</span><span class="sxs-lookup"><span data-stu-id="93d7d-139">For example, in the following code, `x` is the identifier given the value that is associated with the `Some` case of the `option` type.</span></span>
+<span data-ttu-id="dfb15-137">Case 标识符还用于模式匹配表达式。</span><span class="sxs-lookup"><span data-stu-id="dfb15-137">The case identifiers are also used in pattern matching expressions.</span></span> <span data-ttu-id="dfb15-138">在模式匹配表达式中, 会为与单个用例关联的值提供标识符。</span><span class="sxs-lookup"><span data-stu-id="dfb15-138">In a pattern matching expression, identifiers are provided for the values associated with the individual cases.</span></span> <span data-ttu-id="dfb15-139">例如, 在下面的代码中, `x`是给定与`option`类型的`Some`大小写关联的值的标识符。</span><span class="sxs-lookup"><span data-stu-id="dfb15-139">For example, in the following code, `x` is the identifier given the value that is associated with the `Some` case of the `option` type.</span></span>
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2002.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2002.fs)]
 
-<span data-ttu-id="93d7d-140">在模式匹配表达式中，可以使用命名的字段来指定可区分的联合匹配。</span><span class="sxs-lookup"><span data-stu-id="93d7d-140">In pattern matching expressions, you can use named fields to specify discriminated union matches.</span></span> <span data-ttu-id="93d7d-141">对于以前声明的形状类型，可以使用命名的字段，如下面的代码所示，若要提取的字段的值。</span><span class="sxs-lookup"><span data-stu-id="93d7d-141">For the Shape type that was declared previously, you can use the named fields as the following code shows to extract the values of the fields.</span></span>
+<span data-ttu-id="dfb15-140">在模式匹配表达式中, 可以使用命名字段来指定可区分的联合匹配。</span><span class="sxs-lookup"><span data-stu-id="dfb15-140">In pattern matching expressions, you can use named fields to specify discriminated union matches.</span></span> <span data-ttu-id="dfb15-141">对于之前声明的形状类型, 可以使用命名字段, 如以下代码所示, 以便提取字段的值。</span><span class="sxs-lookup"><span data-stu-id="dfb15-141">For the Shape type that was declared previously, you can use the named fields as the following code shows to extract the values of the fields.</span></span>
 
 ```fsharp
 let getShapeHeight shape =
@@ -80,17 +80,17 @@ let getShapeHeight shape =
     | Prism(height = h) -> h
 ```
 
-<span data-ttu-id="93d7d-142">通常情况下，用例标识符可以使用而无需对其进行联合的名称限定。</span><span class="sxs-lookup"><span data-stu-id="93d7d-142">Normally, the case identifiers can be used without qualifying them with the name of the union.</span></span> <span data-ttu-id="93d7d-143">如果你想要始终用联合名称限定的名称，你可以申请[RequireQualifiedAccess](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.requirequalifiedaccessattribute-class-[fsharp])联合类型定义的属性。</span><span class="sxs-lookup"><span data-stu-id="93d7d-143">If you want the name to always be qualified with the name of the union, you can apply the [RequireQualifiedAccess](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.requirequalifiedaccessattribute-class-[fsharp]) attribute to the union type definition.</span></span>
+<span data-ttu-id="dfb15-142">通常情况下, 可以使用 case 标识符, 无需使用联合名称来限定它们。</span><span class="sxs-lookup"><span data-stu-id="dfb15-142">Normally, the case identifiers can be used without qualifying them with the name of the union.</span></span> <span data-ttu-id="dfb15-143">如果希望名称始终使用联合的名称进行限定, 则可将[RequireQualifiedAccess](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.requirequalifiedaccessattribute-class-[fsharp])特性应用于联合类型定义。</span><span class="sxs-lookup"><span data-stu-id="dfb15-143">If you want the name to always be qualified with the name of the union, you can apply the [RequireQualifiedAccess](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.requirequalifiedaccessattribute-class-[fsharp]) attribute to the union type definition.</span></span>
 
-### <a name="unwrapping-discriminated-unions"></a><span data-ttu-id="93d7d-144">解包的可区分的联合</span><span class="sxs-lookup"><span data-stu-id="93d7d-144">Unwrapping Discriminated Unions</span></span>
+### <a name="unwrapping-discriminated-unions"></a><span data-ttu-id="dfb15-144">解包可区分联合</span><span class="sxs-lookup"><span data-stu-id="dfb15-144">Unwrapping Discriminated Unions</span></span>
 
-<span data-ttu-id="93d7d-145">在F#的可区分联合通常用于在域模型中包装单一类型。</span><span class="sxs-lookup"><span data-stu-id="93d7d-145">In F# Discriminated Unions are often used in domain-modeling for wrapping a single type.</span></span> <span data-ttu-id="93d7d-146">它很容易提取通过模式匹配也的基础值。</span><span class="sxs-lookup"><span data-stu-id="93d7d-146">It's easy to extract the underlying value via pattern matching as well.</span></span> <span data-ttu-id="93d7d-147">您不需要对单个事例使用匹配表达式：</span><span class="sxs-lookup"><span data-stu-id="93d7d-147">You don't need to use a match expression for a single case:</span></span>
+<span data-ttu-id="dfb15-145">在F#可区分联合中, 通常用于包装单个类型的域建模。</span><span class="sxs-lookup"><span data-stu-id="dfb15-145">In F# Discriminated Unions are often used in domain-modeling for wrapping a single type.</span></span> <span data-ttu-id="dfb15-146">也可以通过模式匹配轻松提取基础值。</span><span class="sxs-lookup"><span data-stu-id="dfb15-146">It's easy to extract the underlying value via pattern matching as well.</span></span> <span data-ttu-id="dfb15-147">对于一个事例, 无需使用 match 表达式:</span><span class="sxs-lookup"><span data-stu-id="dfb15-147">You don't need to use a match expression for a single case:</span></span>
 
 ```fsharp
 let ([UnionCaseName] [values]) = [UnionValue]
 ```
 
-<span data-ttu-id="93d7d-148">下面的示例演示这一操作：</span><span class="sxs-lookup"><span data-stu-id="93d7d-148">The following example demonstrates this:</span></span>
+<span data-ttu-id="dfb15-148">下面的示例演示这一操作：</span><span class="sxs-lookup"><span data-stu-id="dfb15-148">The following example demonstrates this:</span></span>
 
 ```fsharp
 type ShaderProgram = | ShaderProgram of id:int
@@ -101,7 +101,7 @@ let someFunctionUsingShaderProgram shaderProgram =
     ...
 ```
 
-<span data-ttu-id="93d7d-149">模式匹配还允许直接在函数参数中，因此，可以解除单个事例的包装：</span><span class="sxs-lookup"><span data-stu-id="93d7d-149">Pattern matching is also allowed directly in function parameters, so you can unwrap a single case there:</span></span>
+<span data-ttu-id="dfb15-149">函数参数中也可以直接使用模式匹配, 因此, 可以将一个事例解包到其中:</span><span class="sxs-lookup"><span data-stu-id="dfb15-149">Pattern matching is also allowed directly in function parameters, so you can unwrap a single case there:</span></span>
 
 ```fsharp
 let someFunctionUsingShaderProgram (ShaderProgram id) =
@@ -109,9 +109,9 @@ let someFunctionUsingShaderProgram (ShaderProgram id) =
     ...
 ```
 
-## <a name="struct-discriminated-unions"></a><span data-ttu-id="93d7d-150">结构可区分联合</span><span class="sxs-lookup"><span data-stu-id="93d7d-150">Struct Discriminated Unions</span></span>
+## <a name="struct-discriminated-unions"></a><span data-ttu-id="dfb15-150">结构可区分联合</span><span class="sxs-lookup"><span data-stu-id="dfb15-150">Struct Discriminated Unions</span></span>
 
-<span data-ttu-id="93d7d-151">您还可以为结构表示可区分联合。</span><span class="sxs-lookup"><span data-stu-id="93d7d-151">You can also represent Discriminated Unions as structs.</span></span>  <span data-ttu-id="93d7d-152">这通过`[<Struct>]`属性。</span><span class="sxs-lookup"><span data-stu-id="93d7d-152">This is done with the `[<Struct>]` attribute.</span></span>
+<span data-ttu-id="dfb15-151">您还可以将可区分联合表示为结构。</span><span class="sxs-lookup"><span data-stu-id="dfb15-151">You can also represent Discriminated Unions as structs.</span></span>  <span data-ttu-id="dfb15-152">此操作是通过`[<Struct>]`属性实现的。</span><span class="sxs-lookup"><span data-stu-id="dfb15-152">This is done with the `[<Struct>]` attribute.</span></span>
 
 ```fsharp
 [<Struct>]
@@ -124,23 +124,23 @@ type Multicase =
     | Case3 of Case3 : double
 ```
 
-<span data-ttu-id="93d7d-153">因为这些是值类型，不能引用类型，所以一些额外注意事项与引用可区分联合：</span><span class="sxs-lookup"><span data-stu-id="93d7d-153">Because these are value types and not reference types, there are extra considerations compared with reference discriminated unions:</span></span>
+<span data-ttu-id="dfb15-153">由于这些是值类型而不是引用类型, 因此与引用可区分联合相比, 有一些额外的注意事项:</span><span class="sxs-lookup"><span data-stu-id="dfb15-153">Because these are value types and not reference types, there are extra considerations compared with reference discriminated unions:</span></span>
 
-1. <span data-ttu-id="93d7d-154">它们作为值类型复制，并具有值类型语义。</span><span class="sxs-lookup"><span data-stu-id="93d7d-154">They are copied as value types and have value type semantics.</span></span>
-2. <span data-ttu-id="93d7d-155">不能用于 multicase 的结构可区分联合使用递归类型定义。</span><span class="sxs-lookup"><span data-stu-id="93d7d-155">You cannot use a recursive type definition with a multicase struct Discriminated Union.</span></span>
-3. <span data-ttu-id="93d7d-156">必须提供 multicase struct 可区分联合的唯一大小写的名称。</span><span class="sxs-lookup"><span data-stu-id="93d7d-156">You must provide unique case names for a multicase struct Discriminated Union.</span></span>
+1. <span data-ttu-id="dfb15-154">它们被复制为值类型并具有值类型语义。</span><span class="sxs-lookup"><span data-stu-id="dfb15-154">They are copied as value types and have value type semantics.</span></span>
+2. <span data-ttu-id="dfb15-155">不能将递归类型定义用于 multicase 结构可区分联合。</span><span class="sxs-lookup"><span data-stu-id="dfb15-155">You cannot use a recursive type definition with a multicase struct Discriminated Union.</span></span>
+3. <span data-ttu-id="dfb15-156">必须为 multicase 结构可区分联合提供唯一的事例名称。</span><span class="sxs-lookup"><span data-stu-id="dfb15-156">You must provide unique case names for a multicase struct Discriminated Union.</span></span>
 
-## <a name="using-discriminated-unions-instead-of-object-hierarchies"></a><span data-ttu-id="93d7d-157">使用可区分的联合替代对象层次结构</span><span class="sxs-lookup"><span data-stu-id="93d7d-157">Using Discriminated Unions Instead of Object Hierarchies</span></span>
+## <a name="using-discriminated-unions-instead-of-object-hierarchies"></a><span data-ttu-id="dfb15-157">使用可区分联合而不是对象层次结构</span><span class="sxs-lookup"><span data-stu-id="dfb15-157">Using Discriminated Unions Instead of Object Hierarchies</span></span>
 
-<span data-ttu-id="93d7d-158">您可以通常可区分的联合用作小对象层次结构的更简单的替代。</span><span class="sxs-lookup"><span data-stu-id="93d7d-158">You can often use a discriminated union as a simpler alternative to a small object hierarchy.</span></span> <span data-ttu-id="93d7d-159">无法为例，而不是使用以下可区分的联合`Shape`基类具有派生类型圆形、 方形，依此类推。</span><span class="sxs-lookup"><span data-stu-id="93d7d-159">For example, the following discriminated union could be used instead of a `Shape` base class that has derived types for circle, square, and so on.</span></span>
+<span data-ttu-id="dfb15-158">通常, 可以将可区分联合用作小型对象层次结构的更简单的替代方法。</span><span class="sxs-lookup"><span data-stu-id="dfb15-158">You can often use a discriminated union as a simpler alternative to a small object hierarchy.</span></span> <span data-ttu-id="dfb15-159">例如, 可以使用以下可区分联合, 而不`Shape`是具有用于圆形、方形等的派生类型的基类。</span><span class="sxs-lookup"><span data-stu-id="dfb15-159">For example, the following discriminated union could be used instead of a `Shape` base class that has derived types for circle, square, and so on.</span></span>
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2003.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2003.fs)]
 
-<span data-ttu-id="93d7d-160">而是虚方法来计算面积或周长，那样使用面向对象的实现中，可以使用模式匹配分支到合适的公式来计算这些数量。</span><span class="sxs-lookup"><span data-stu-id="93d7d-160">Instead of a virtual method to compute an area or perimeter, as you would use in an object-oriented implementation, you can use pattern matching to branch to appropriate formulas to compute these quantities.</span></span> <span data-ttu-id="93d7d-161">在以下示例中，不同的公式用于计算区域，具体取决于该形状。</span><span class="sxs-lookup"><span data-stu-id="93d7d-161">In the following example, different formulas are used to compute the area, depending on the shape.</span></span>
+<span data-ttu-id="dfb15-160">与在面向对象的实现中使用的一样, 可以使用模式匹配分支到适当的公式来计算这些数量, 而不是使用虚方法来计算区域或外围网络。</span><span class="sxs-lookup"><span data-stu-id="dfb15-160">Instead of a virtual method to compute an area or perimeter, as you would use in an object-oriented implementation, you can use pattern matching to branch to appropriate formulas to compute these quantities.</span></span> <span data-ttu-id="dfb15-161">在下面的示例中, 使用不同的公式来计算区域, 具体取决于形状。</span><span class="sxs-lookup"><span data-stu-id="dfb15-161">In the following example, different formulas are used to compute the area, depending on the shape.</span></span>
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2004.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2004.fs)]
 
-<span data-ttu-id="93d7d-162">输出如下所示：</span><span class="sxs-lookup"><span data-stu-id="93d7d-162">The output is as follows:</span></span>
+<span data-ttu-id="dfb15-162">输出如下所示：</span><span class="sxs-lookup"><span data-stu-id="dfb15-162">The output is as follows:</span></span>
 
 ```
 Area of circle that has radius 15.000000: 706.858347
@@ -148,25 +148,25 @@ Area of square that has side 10.000000: 100.000000
 Area of rectangle that has height 5.000000 and width 10.000000 is 50.000000
 ```
 
-## <a name="using-discriminated-unions-for-tree-data-structures"></a><span data-ttu-id="93d7d-163">对树数据结构使用可区分的联合</span><span class="sxs-lookup"><span data-stu-id="93d7d-163">Using Discriminated Unions for Tree Data Structures</span></span>
+## <a name="using-discriminated-unions-for-tree-data-structures"></a><span data-ttu-id="dfb15-163">对树形数据结构使用可区分联合</span><span class="sxs-lookup"><span data-stu-id="dfb15-163">Using Discriminated Unions for Tree Data Structures</span></span>
 
-<span data-ttu-id="93d7d-164">可区分的联合可以是递归的这意味着联合本身，可以包含在一个或多个用例的类型。</span><span class="sxs-lookup"><span data-stu-id="93d7d-164">Discriminated unions can be recursive, meaning that the union itself can be included in the type of one or more cases.</span></span> <span data-ttu-id="93d7d-165">递归的可区分的联合可用于创建树的结构，用于记录的编程语言中的模型表达式。</span><span class="sxs-lookup"><span data-stu-id="93d7d-165">Recursive discriminated unions can be used to create tree structures, which are used to model expressions in programming languages.</span></span> <span data-ttu-id="93d7d-166">在下面的代码中，递归的可区分联合用于创建二进制树数据结构。</span><span class="sxs-lookup"><span data-stu-id="93d7d-166">In the following code, a recursive discriminated union is used to create a binary tree data structure.</span></span> <span data-ttu-id="93d7d-167">该联合的两种情况，包括`Node`，这是一个包含一个整数值和左、 右子树节点和`Tip`，后者用于终结树。</span><span class="sxs-lookup"><span data-stu-id="93d7d-167">The union consists of two cases, `Node`, which is a node with an integer value and left and right subtrees, and `Tip`, which terminates the tree.</span></span>
+<span data-ttu-id="dfb15-164">可区分联合可以是递归的, 这意味着可将联合本身包含在一个或多个事例的类型中。</span><span class="sxs-lookup"><span data-stu-id="dfb15-164">Discriminated unions can be recursive, meaning that the union itself can be included in the type of one or more cases.</span></span> <span data-ttu-id="dfb15-165">递归的可区分联合可用于创建树结构, 用于在编程语言中为表达式建模。</span><span class="sxs-lookup"><span data-stu-id="dfb15-165">Recursive discriminated unions can be used to create tree structures, which are used to model expressions in programming languages.</span></span> <span data-ttu-id="dfb15-166">在下面的代码中, 递归的可区分联合用于创建二进制树数据结构。</span><span class="sxs-lookup"><span data-stu-id="dfb15-166">In the following code, a recursive discriminated union is used to create a binary tree data structure.</span></span> <span data-ttu-id="dfb15-167">联合包括两个事例, `Node`即一个具有整数值的节点、左右子树和`Tip`, 后者终止树。</span><span class="sxs-lookup"><span data-stu-id="dfb15-167">The union consists of two cases, `Node`, which is a node with an integer value and left and right subtrees, and `Tip`, which terminates the tree.</span></span>
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2005.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2005.fs)]
 
-<span data-ttu-id="93d7d-168">在前面的代码，`resultSumTree`具有值 10。</span><span class="sxs-lookup"><span data-stu-id="93d7d-168">In the previous code, `resultSumTree` has the value 10.</span></span> <span data-ttu-id="93d7d-169">下图显示的树结构`myTree`。</span><span class="sxs-lookup"><span data-stu-id="93d7d-169">The following illustration shows the tree structure for `myTree`.</span></span>
+<span data-ttu-id="dfb15-168">在前面的代码中`resultSumTree` , 的值为10。</span><span class="sxs-lookup"><span data-stu-id="dfb15-168">In the previous code, `resultSumTree` has the value 10.</span></span> <span data-ttu-id="dfb15-169">下图显示了的树结构`myTree`。</span><span class="sxs-lookup"><span data-stu-id="dfb15-169">The following illustration shows the tree structure for `myTree`.</span></span>
 
-![图，显示 mytree 的树结构。](../media/discriminated-unions/tree-structure-mytree.png)
+![显示 myTree 的树结构的关系图。](../media/discriminated-unions/tree-structure-mytree.png)
 
-<span data-ttu-id="93d7d-171">如果在树中的节点是异类是可行的可区分的联合。</span><span class="sxs-lookup"><span data-stu-id="93d7d-171">Discriminated unions work well if the nodes in the tree are heterogeneous.</span></span> <span data-ttu-id="93d7d-172">在下面的代码中，类型`Expression`表示一种简单的编程语言支持添加中的表达式的抽象语法树和乘法的数字和变量。</span><span class="sxs-lookup"><span data-stu-id="93d7d-172">In the following code, the type `Expression` represents the abstract syntax tree of an expression in a simple programming language that supports addition and multiplication of numbers and variables.</span></span> <span data-ttu-id="93d7d-173">一些联合用例不是递归的表示数字 (`Number`) 或变量 (`Variable`)。</span><span class="sxs-lookup"><span data-stu-id="93d7d-173">Some of the union cases are not recursive and represent either numbers (`Number`) or variables (`Variable`).</span></span> <span data-ttu-id="93d7d-174">其他情况下是递归的并表示操作 (`Add`和`Multiply`)、 的操作数也是表达式。</span><span class="sxs-lookup"><span data-stu-id="93d7d-174">Other cases are recursive, and represent operations (`Add` and `Multiply`), where the operands are also expressions.</span></span> <span data-ttu-id="93d7d-175">`Evaluate`函数使用匹配表达式以递归方式处理语法树。</span><span class="sxs-lookup"><span data-stu-id="93d7d-175">The `Evaluate` function uses a match expression to recursively process the syntax tree.</span></span>
+<span data-ttu-id="dfb15-171">如果树中的节点是异类的, 则可区分的联合工作良好。</span><span class="sxs-lookup"><span data-stu-id="dfb15-171">Discriminated unions work well if the nodes in the tree are heterogeneous.</span></span> <span data-ttu-id="dfb15-172">在下面的代码中, 类型`Expression`表示简单编程语言中表达式的抽象语法树, 它支持数字和变量的加法和乘法。</span><span class="sxs-lookup"><span data-stu-id="dfb15-172">In the following code, the type `Expression` represents the abstract syntax tree of an expression in a simple programming language that supports addition and multiplication of numbers and variables.</span></span> <span data-ttu-id="dfb15-173">某些联合用例不是递归的, 表示数字 (`Number`) 或变量 (`Variable`)。</span><span class="sxs-lookup"><span data-stu-id="dfb15-173">Some of the union cases are not recursive and represent either numbers (`Number`) or variables (`Variable`).</span></span> <span data-ttu-id="dfb15-174">其他情况是递归的, 表示运算 (`Add`和`Multiply`), 其中操作数也是表达式。</span><span class="sxs-lookup"><span data-stu-id="dfb15-174">Other cases are recursive, and represent operations (`Add` and `Multiply`), where the operands are also expressions.</span></span> <span data-ttu-id="dfb15-175">`Evaluate`函数使用 match 表达式以递归方式处理语法树。</span><span class="sxs-lookup"><span data-stu-id="dfb15-175">The `Evaluate` function uses a match expression to recursively process the syntax tree.</span></span>
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2006.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2006.fs)]
 
-<span data-ttu-id="93d7d-176">此代码执行时，值`result`为 5。</span><span class="sxs-lookup"><span data-stu-id="93d7d-176">When this code is executed, the value of `result` is 5.</span></span>
+<span data-ttu-id="dfb15-176">执行此代码时, 的值`result`为5。</span><span class="sxs-lookup"><span data-stu-id="dfb15-176">When this code is executed, the value of `result` is 5.</span></span>
 
-## <a name="members"></a><span data-ttu-id="93d7d-177">成员</span><span class="sxs-lookup"><span data-stu-id="93d7d-177">Members</span></span>
+## <a name="members"></a><span data-ttu-id="dfb15-177">成员</span><span class="sxs-lookup"><span data-stu-id="dfb15-177">Members</span></span>
 
-<span data-ttu-id="93d7d-178">就可以定义在可区分联合的成员。</span><span class="sxs-lookup"><span data-stu-id="93d7d-178">It is possible to define members on discriminated unions.</span></span> <span data-ttu-id="93d7d-179">下面的示例演示如何定义属性，并实现接口：</span><span class="sxs-lookup"><span data-stu-id="93d7d-179">The following example shows how to define a property and implement an interface:</span></span>
+<span data-ttu-id="dfb15-178">可以在可区分的联合上定义成员。</span><span class="sxs-lookup"><span data-stu-id="dfb15-178">It is possible to define members on discriminated unions.</span></span> <span data-ttu-id="dfb15-179">下面的示例演示如何定义属性和实现接口:</span><span class="sxs-lookup"><span data-stu-id="dfb15-179">The following example shows how to define a property and implement an interface:</span></span>
 
 ```fsharp
 open System
@@ -196,15 +196,15 @@ type Shape =
             | Rectangle(l, w) -> printfn "Rectangle with length %f and width %f" l w
 ```
 
-## <a name="common-attributes"></a><span data-ttu-id="93d7d-180">常用属性</span><span class="sxs-lookup"><span data-stu-id="93d7d-180">Common attributes</span></span>
+## <a name="common-attributes"></a><span data-ttu-id="dfb15-180">常见属性</span><span class="sxs-lookup"><span data-stu-id="dfb15-180">Common attributes</span></span>
 
-<span data-ttu-id="93d7d-181">以下属性是可区分联合中经常见到：</span><span class="sxs-lookup"><span data-stu-id="93d7d-181">The following attributes are commonly seen in discriminated unions:</span></span>
+<span data-ttu-id="dfb15-181">以下属性通常出现在可区分联合中:</span><span class="sxs-lookup"><span data-stu-id="dfb15-181">The following attributes are commonly seen in discriminated unions:</span></span>
 
 * `[<RequireQualifiedAccess>]`
 * `[<NoEquality>]`
 * `[<NoComparison>]`
 * `[<Struct>]`
 
-## <a name="see-also"></a><span data-ttu-id="93d7d-182">请参阅</span><span class="sxs-lookup"><span data-stu-id="93d7d-182">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="dfb15-182">请参阅</span><span class="sxs-lookup"><span data-stu-id="dfb15-182">See also</span></span>
 
-- [<span data-ttu-id="93d7d-183">F# 语言参考</span><span class="sxs-lookup"><span data-stu-id="93d7d-183">F# Language Reference</span></span>](index.md)
+- [<span data-ttu-id="dfb15-183">F# 语言参考</span><span class="sxs-lookup"><span data-stu-id="dfb15-183">F# Language Reference</span></span>](index.md)

@@ -1,33 +1,33 @@
 ---
 title: 形参和实参
-description: 了解如何F#对定义形参并将参数传递给函数、 方法和属性的语言支持。
+description: 了解用于F#定义参数和将参数传递给函数、方法和属性的语言支持。
 ms.date: 05/16/2016
-ms.openlocfilehash: b68b3fdd14a66a7312efa5adb709adaeceaae282
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 561cefb1d437b2f38f6ee4ca37cd955235ca06fa
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61666256"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627317"
 ---
-# <a name="parameters-and-arguments"></a><span data-ttu-id="302eb-103">形参和实参</span><span class="sxs-lookup"><span data-stu-id="302eb-103">Parameters and Arguments</span></span>
+# <a name="parameters-and-arguments"></a><span data-ttu-id="9f5bd-103">形参和实参</span><span class="sxs-lookup"><span data-stu-id="9f5bd-103">Parameters and Arguments</span></span>
 
-<span data-ttu-id="302eb-104">本主题介绍对定义形参并将参数传递给函数、 方法和属性的语言支持。</span><span class="sxs-lookup"><span data-stu-id="302eb-104">This topic describes language support for defining parameters and passing arguments to functions, methods, and properties.</span></span> <span data-ttu-id="302eb-105">它包括有关如何将传递的引用，以及如何定义和使用可以采用可变数量的参数的方法的信息。</span><span class="sxs-lookup"><span data-stu-id="302eb-105">It includes information about how to pass by reference, and how to define and use methods that can take a variable number of arguments.</span></span>
+<span data-ttu-id="9f5bd-104">本主题介绍用于定义参数和将参数传递给函数、方法和属性的语言支持。</span><span class="sxs-lookup"><span data-stu-id="9f5bd-104">This topic describes language support for defining parameters and passing arguments to functions, methods, and properties.</span></span> <span data-ttu-id="9f5bd-105">它包括有关如何按引用传递的信息, 以及如何定义和使用可采用可变数量的自变量的方法。</span><span class="sxs-lookup"><span data-stu-id="9f5bd-105">It includes information about how to pass by reference, and how to define and use methods that can take a variable number of arguments.</span></span>
 
-## <a name="parameters-and-arguments"></a><span data-ttu-id="302eb-106">形参和实参</span><span class="sxs-lookup"><span data-stu-id="302eb-106">Parameters and Arguments</span></span>
+## <a name="parameters-and-arguments"></a><span data-ttu-id="9f5bd-106">形参和实参</span><span class="sxs-lookup"><span data-stu-id="9f5bd-106">Parameters and Arguments</span></span>
 
-<span data-ttu-id="302eb-107">术语*参数*用于描述的预期提供的值的名称。</span><span class="sxs-lookup"><span data-stu-id="302eb-107">The term *parameter* is used to describe the names for values that are expected to be supplied.</span></span> <span data-ttu-id="302eb-108">术语*自变量*用于为每个参数提供的值。</span><span class="sxs-lookup"><span data-stu-id="302eb-108">The term *argument* is used for the values provided for each parameter.</span></span>
+<span data-ttu-id="9f5bd-107">术语*参数*用于描述应提供的值的名称。</span><span class="sxs-lookup"><span data-stu-id="9f5bd-107">The term *parameter* is used to describe the names for values that are expected to be supplied.</span></span> <span data-ttu-id="9f5bd-108">术语*参数*用于为每个参数提供的值。</span><span class="sxs-lookup"><span data-stu-id="9f5bd-108">The term *argument* is used for the values provided for each parameter.</span></span>
 
-<span data-ttu-id="302eb-109">元组或扩充窗体，或两者的某种组合中，可以指定参数。</span><span class="sxs-lookup"><span data-stu-id="302eb-109">Parameters can be specified in tuple or curried form, or in some combination of the two.</span></span> <span data-ttu-id="302eb-110">可以通过使用显式参数名称传递参数。</span><span class="sxs-lookup"><span data-stu-id="302eb-110">You can pass arguments by using an explicit parameter name.</span></span> <span data-ttu-id="302eb-111">方法的参数可以是指定为可选，指定的默认值。</span><span class="sxs-lookup"><span data-stu-id="302eb-111">Parameters of methods can be specified as optional and given a default value.</span></span>
+<span data-ttu-id="9f5bd-109">参数可以在元组或扩充形式中指定, 也可以在这两者的某种组合中指定。</span><span class="sxs-lookup"><span data-stu-id="9f5bd-109">Parameters can be specified in tuple or curried form, or in some combination of the two.</span></span> <span data-ttu-id="9f5bd-110">可以通过使用显式参数名传递参数。</span><span class="sxs-lookup"><span data-stu-id="9f5bd-110">You can pass arguments by using an explicit parameter name.</span></span> <span data-ttu-id="9f5bd-111">可以将方法的参数指定为 optional, 并为其指定默认值。</span><span class="sxs-lookup"><span data-stu-id="9f5bd-111">Parameters of methods can be specified as optional and given a default value.</span></span>
 
-## <a name="parameter-patterns"></a><span data-ttu-id="302eb-112">参数模式</span><span class="sxs-lookup"><span data-stu-id="302eb-112">Parameter Patterns</span></span>
+## <a name="parameter-patterns"></a><span data-ttu-id="9f5bd-112">参数模式</span><span class="sxs-lookup"><span data-stu-id="9f5bd-112">Parameter Patterns</span></span>
 
-<span data-ttu-id="302eb-113">一般情况下，提供给函数和方法的参数是由空格分隔的模式。</span><span class="sxs-lookup"><span data-stu-id="302eb-113">Parameters supplied to functions and methods are, in general, patterns separated by spaces.</span></span> <span data-ttu-id="302eb-114">这意味着，从原理上讲，任何模式中所述[匹配表达式](match-expressions.md)可用于在参数列表中的函数或成员。</span><span class="sxs-lookup"><span data-stu-id="302eb-114">This means that, in principle, any of the patterns described in [Match Expressions](match-expressions.md) can be used in a parameter list for a function or member.</span></span>
+<span data-ttu-id="9f5bd-113">通常情况下, 提供给函数和方法的参数是由空格分隔的模式。</span><span class="sxs-lookup"><span data-stu-id="9f5bd-113">Parameters supplied to functions and methods are, in general, patterns separated by spaces.</span></span> <span data-ttu-id="9f5bd-114">这意味着, 可以在函数或成员的参数列表中使用[Match 表达式](match-expressions.md)中所述的任何模式。</span><span class="sxs-lookup"><span data-stu-id="9f5bd-114">This means that, in principle, any of the patterns described in [Match Expressions](match-expressions.md) can be used in a parameter list for a function or member.</span></span>
 
-<span data-ttu-id="302eb-115">方法通常会使用元组形式传递自变量。</span><span class="sxs-lookup"><span data-stu-id="302eb-115">Methods usually use the tuple form of passing arguments.</span></span> <span data-ttu-id="302eb-116">这实现了从其他.NET 语言的角度来看更加清晰的结果，因为元组形式与.NET 方法中传递参数的方法相匹配。</span><span class="sxs-lookup"><span data-stu-id="302eb-116">This achieves a clearer result from the perspective of other .NET languages because the tuple form matches the way arguments are passed in .NET methods.</span></span>
+<span data-ttu-id="9f5bd-115">方法通常使用元组形式传递参数。</span><span class="sxs-lookup"><span data-stu-id="9f5bd-115">Methods usually use the tuple form of passing arguments.</span></span> <span data-ttu-id="9f5bd-116">这可以从其他 .NET 语言的角度获得更清晰的结果, 因为元组格式与在 .NET 方法中传递参数的方式匹配。</span><span class="sxs-lookup"><span data-stu-id="9f5bd-116">This achieves a clearer result from the perspective of other .NET languages because the tuple form matches the way arguments are passed in .NET methods.</span></span>
 
-<span data-ttu-id="302eb-117">通过使用创建的函数最常使用扩充的形式`let`绑定。</span><span class="sxs-lookup"><span data-stu-id="302eb-117">The curried form is most often used with functions created by using `let` bindings.</span></span>
+<span data-ttu-id="9f5bd-117">扩充形式最常用于使用`let`绑定创建的函数。</span><span class="sxs-lookup"><span data-stu-id="9f5bd-117">The curried form is most often used with functions created by using `let` bindings.</span></span>
 
-<span data-ttu-id="302eb-118">下面的伪代码显示了元组和扩充的参数的示例。</span><span class="sxs-lookup"><span data-stu-id="302eb-118">The following pseudocode shows examples of tuple and curried arguments.</span></span>
+<span data-ttu-id="9f5bd-118">以下伪代码显示了元组和扩充参数的示例。</span><span class="sxs-lookup"><span data-stu-id="9f5bd-118">The following pseudocode shows examples of tuple and curried arguments.</span></span>
 
 ```fsharp
 // Tuple form.
@@ -36,32 +36,32 @@ member this.SomeMethod(param1, param2) = ...
 let function1 param1 param2 = ...
 ```
 
-<span data-ttu-id="302eb-119">组合的窗体时，某些参数是在元组中，有些则不然。</span><span class="sxs-lookup"><span data-stu-id="302eb-119">Combined forms are possible when some arguments are in tuples and some are not.</span></span>
+<span data-ttu-id="9f5bd-119">当某些参数在元组中时, 可能会组合窗体, 而有些参数则可能不存在。</span><span class="sxs-lookup"><span data-stu-id="9f5bd-119">Combined forms are possible when some arguments are in tuples and some are not.</span></span>
 
 ```fsharp
 let function2 param1 (param2a, param2b) param3 = ...
 ```
 
-<span data-ttu-id="302eb-120">其他模式还可用于在参数列表中，但如果参数模式与所有可能的输入不匹配，则可能是不完整的匹配项在运行时。</span><span class="sxs-lookup"><span data-stu-id="302eb-120">Other patterns can also be used in parameter lists, but if the parameter pattern does not match all possible inputs, there might be an incomplete match at run time.</span></span> <span data-ttu-id="302eb-121">异常`MatchFailureException`自变量的值与参数列表中指定的模式不匹配时生成。</span><span class="sxs-lookup"><span data-stu-id="302eb-121">The exception `MatchFailureException` is generated when the value of an argument does not match the patterns specified in the parameter list.</span></span> <span data-ttu-id="302eb-122">当参数模式允许的不完整的匹配项时，编译器将发出警告。</span><span class="sxs-lookup"><span data-stu-id="302eb-122">The compiler issues a warning when a parameter pattern allows for incomplete matches.</span></span> <span data-ttu-id="302eb-123">至少一个其他模式在通常可用于参数列表，这就是通配符模式。</span><span class="sxs-lookup"><span data-stu-id="302eb-123">At least one other pattern is commonly useful for parameter lists, and that is the wildcard pattern.</span></span> <span data-ttu-id="302eb-124">如果只是想要忽略提供的任何自变量参数列表中使用通配符模式。</span><span class="sxs-lookup"><span data-stu-id="302eb-124">You use the wildcard pattern in a parameter list when you simply want to ignore any arguments that are supplied.</span></span> <span data-ttu-id="302eb-125">下面的代码演示如何使用参数列表中的通配符模式。</span><span class="sxs-lookup"><span data-stu-id="302eb-125">The following code illustrates the use of the wildcard pattern in an argument list.</span></span>
+<span data-ttu-id="9f5bd-120">其他模式也可用于参数列表中, 但如果参数模式与所有可能的输入都不匹配, 则在运行时可能会出现不完整的匹配项。</span><span class="sxs-lookup"><span data-stu-id="9f5bd-120">Other patterns can also be used in parameter lists, but if the parameter pattern does not match all possible inputs, there might be an incomplete match at run time.</span></span> <span data-ttu-id="9f5bd-121">当参数`MatchFailureException`的值与参数列表中指定的模式不匹配时, 将生成异常。</span><span class="sxs-lookup"><span data-stu-id="9f5bd-121">The exception `MatchFailureException` is generated when the value of an argument does not match the patterns specified in the parameter list.</span></span> <span data-ttu-id="9f5bd-122">当参数模式允许不完全匹配时, 编译器会发出警告。</span><span class="sxs-lookup"><span data-stu-id="9f5bd-122">The compiler issues a warning when a parameter pattern allows for incomplete matches.</span></span> <span data-ttu-id="9f5bd-123">至少一个其他模式对于参数列表通常很有用, 这是通配符模式。</span><span class="sxs-lookup"><span data-stu-id="9f5bd-123">At least one other pattern is commonly useful for parameter lists, and that is the wildcard pattern.</span></span> <span data-ttu-id="9f5bd-124">如果只想忽略提供的任何参数, 请在参数列表中使用通配符模式。</span><span class="sxs-lookup"><span data-stu-id="9f5bd-124">You use the wildcard pattern in a parameter list when you simply want to ignore any arguments that are supplied.</span></span> <span data-ttu-id="9f5bd-125">下面的代码说明了参数列表中通配符模式的用法。</span><span class="sxs-lookup"><span data-stu-id="9f5bd-125">The following code illustrates the use of the wildcard pattern in an argument list.</span></span>
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/parameters-and-arguments-1/snippet3801.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/parameters-and-arguments-1/snippet3801.fs)]
 
-<span data-ttu-id="302eb-126">您不感兴趣通常提供作为一个字符串数组，如以下代码所示的命令行参数时，可能很有用，只要不需要传入的参数，如主入口点到程序中，通配符模式。</span><span class="sxs-lookup"><span data-stu-id="302eb-126">The wildcard pattern can be useful whenever you do not need the arguments passed in, such as in the main entry point to a program, when you are not interested in the command-line arguments that are normally supplied as a string array, as in the following code.</span></span>
+<span data-ttu-id="9f5bd-126">如果不需要传入的参数 (例如, 在程序的主入口点中) 对通常作为字符串数组提供的命令行参数感兴趣, 则可以使用通配符模式, 如下面的代码所示。</span><span class="sxs-lookup"><span data-stu-id="9f5bd-126">The wildcard pattern can be useful whenever you do not need the arguments passed in, such as in the main entry point to a program, when you are not interested in the command-line arguments that are normally supplied as a string array, as in the following code.</span></span>
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/parameters-and-arguments-1/snippet3802.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/parameters-and-arguments-1/snippet3802.fs)]
 
-<span data-ttu-id="302eb-127">有时使用参数中的其他模式包括`as`模式，且可区分的联合和活动模式与相关联的标识符模式。</span><span class="sxs-lookup"><span data-stu-id="302eb-127">Other patterns that are sometimes used in arguments are the `as` pattern, and identifier patterns associated with discriminated unions and active patterns.</span></span> <span data-ttu-id="302eb-128">可以使用单用例可区分联合模式，如下所示。</span><span class="sxs-lookup"><span data-stu-id="302eb-128">You can use the single-case discriminated union pattern as follows.</span></span>
+<span data-ttu-id="9f5bd-127">有时在参数中使用的`as`其他模式是模式, 以及与可区分的联合和活动模式关联的标识符模式。</span><span class="sxs-lookup"><span data-stu-id="9f5bd-127">Other patterns that are sometimes used in arguments are the `as` pattern, and identifier patterns associated with discriminated unions and active patterns.</span></span> <span data-ttu-id="9f5bd-128">可以按如下所示使用单用例可区分联合模式。</span><span class="sxs-lookup"><span data-stu-id="9f5bd-128">You can use the single-case discriminated union pattern as follows.</span></span>
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/parameters-and-arguments-1/snippet3803.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/parameters-and-arguments-1/snippet3803.fs)]
 
-<span data-ttu-id="302eb-129">输出如下所示。</span><span class="sxs-lookup"><span data-stu-id="302eb-129">The output is as follows.</span></span>
+<span data-ttu-id="9f5bd-129">输出如下所示。</span><span class="sxs-lookup"><span data-stu-id="9f5bd-129">The output is as follows.</span></span>
 
 ```
 Data begins at 0 and ends at 4 in string Et tu, Brute?
 Et tu
 ```
 
-<span data-ttu-id="302eb-130">活动模式可作为参数，例如，如果将参数转换为所需的格式，如以下示例所示：</span><span class="sxs-lookup"><span data-stu-id="302eb-130">Active patterns can be useful as parameters, for example, when transforming an argument into a desired format, as in the following example:</span></span>
+<span data-ttu-id="9f5bd-130">活动模式可用作参数, 例如, 将参数转换为所需格式时, 如以下示例中所示:</span><span class="sxs-lookup"><span data-stu-id="9f5bd-130">Active patterns can be useful as parameters, for example, when transforming an argument into a desired format, as in the following example:</span></span>
 
 ```fsharp
 type Point = { x : float; y : float }
@@ -73,53 +73,53 @@ let radius (Polar(r, _)) = r
 let angle (Polar(_, theta)) = theta
 ```
 
-<span data-ttu-id="302eb-131">可以使用`as`模式匹配的值存储为本地值，如以下代码行中所示。</span><span class="sxs-lookup"><span data-stu-id="302eb-131">You can use the `as` pattern to store a matched value as a local value, as is shown in the following line of code.</span></span>
+<span data-ttu-id="9f5bd-131">您可以使用`as`模式将匹配的值存储为本地值, 如下面的代码行所示。</span><span class="sxs-lookup"><span data-stu-id="9f5bd-131">You can use the `as` pattern to store a matched value as a local value, as is shown in the following line of code.</span></span>
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/parameters-and-arguments-1/snippet3805.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/parameters-and-arguments-1/snippet3805.fs)]
 
-<span data-ttu-id="302eb-132">偶尔使用的另一种模式是离开通过提供，作为函数的正文未命名的最后一个参数的函数、 隐式的自变量将立即执行模式匹配的 lambda 表达式。</span><span class="sxs-lookup"><span data-stu-id="302eb-132">Another pattern that is used occasionally is a function that leaves the last argument unnamed by providing, as the body of the function, a lambda expression that immediately performs a pattern match on the implicit argument.</span></span> <span data-ttu-id="302eb-133">此示例为以下代码行。</span><span class="sxs-lookup"><span data-stu-id="302eb-133">An example of this is the following line of code.</span></span>
+<span data-ttu-id="9f5bd-132">偶尔使用的另一种模式是将未命名的最后一个参数作为函数的主体提供, 该函数可立即对隐式参数执行模式匹配。</span><span class="sxs-lookup"><span data-stu-id="9f5bd-132">Another pattern that is used occasionally is a function that leaves the last argument unnamed by providing, as the body of the function, a lambda expression that immediately performs a pattern match on the implicit argument.</span></span> <span data-ttu-id="9f5bd-133">下面的代码行就是一个示例。</span><span class="sxs-lookup"><span data-stu-id="9f5bd-133">An example of this is the following line of code.</span></span>
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/parameters-and-arguments-1/snippet3804.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/parameters-and-arguments-1/snippet3804.fs)]
 
-<span data-ttu-id="302eb-134">此代码定义一个函数接受一个泛型列表，并返回`true`如果列表为空，和`false`否则为。</span><span class="sxs-lookup"><span data-stu-id="302eb-134">This code defines a function that takes a generic list and returns `true` if the list is empty, and `false` otherwise.</span></span> <span data-ttu-id="302eb-135">使用此类技术可以使代码更难以阅读。</span><span class="sxs-lookup"><span data-stu-id="302eb-135">The use of such techniques can make code more difficult to read.</span></span>
+<span data-ttu-id="9f5bd-134">此代码定义一个函数, 该函数采用泛型列表, `true`如果列表为空`false` , 则返回, 否则返回。</span><span class="sxs-lookup"><span data-stu-id="9f5bd-134">This code defines a function that takes a generic list and returns `true` if the list is empty, and `false` otherwise.</span></span> <span data-ttu-id="9f5bd-135">使用此类技术会使代码更难以阅读。</span><span class="sxs-lookup"><span data-stu-id="9f5bd-135">The use of such techniques can make code more difficult to read.</span></span>
 
-<span data-ttu-id="302eb-136">有时，涉及不完整的匹配项的模式是有用的例如，如果您知道您的程序中的列表具有只有三个元素，您可以使用如下所示的模式参数列表中。</span><span class="sxs-lookup"><span data-stu-id="302eb-136">Occasionally, patterns that involve incomplete matches are useful, for example, if you know that the lists in your program have only three elements, you might use a pattern like the following in a parameter list.</span></span>
+<span data-ttu-id="9f5bd-136">偶尔, 涉及不完整匹配的模式非常有用, 例如, 如果您知道程序中的列表只有三个元素, 则可以在参数列表中使用如下所示的模式。</span><span class="sxs-lookup"><span data-stu-id="9f5bd-136">Occasionally, patterns that involve incomplete matches are useful, for example, if you know that the lists in your program have only three elements, you might use a pattern like the following in a parameter list.</span></span>
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/parameters-and-arguments-1/snippet3806.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/parameters-and-arguments-1/snippet3806.fs)]
 
-<span data-ttu-id="302eb-137">最好保留以供快速原型制作和其他临时使用具有不完全匹配的模式的使用。</span><span class="sxs-lookup"><span data-stu-id="302eb-137">The use of patterns that have incomplete matches is best reserved for quick prototyping and other temporary uses.</span></span> <span data-ttu-id="302eb-138">编译器将发出此类代码的警告。</span><span class="sxs-lookup"><span data-stu-id="302eb-138">The compiler will issue a warning for such code.</span></span> <span data-ttu-id="302eb-139">此类模式无法涵盖所有可能的输入的一般情况下，并因此不适合组件 Api。</span><span class="sxs-lookup"><span data-stu-id="302eb-139">Such patterns cannot cover the general case of all possible inputs and therefore are not suitable for component APIs.</span></span>
+<span data-ttu-id="9f5bd-137">使用不完整匹配的模式最适合用于快速原型和其他临时用途。</span><span class="sxs-lookup"><span data-stu-id="9f5bd-137">The use of patterns that have incomplete matches is best reserved for quick prototyping and other temporary uses.</span></span> <span data-ttu-id="9f5bd-138">编译器将为此类代码发出警告。</span><span class="sxs-lookup"><span data-stu-id="9f5bd-138">The compiler will issue a warning for such code.</span></span> <span data-ttu-id="9f5bd-139">此类模式无法涵盖所有可能输入的常规情况, 因此不适合用于组件 Api。</span><span class="sxs-lookup"><span data-stu-id="9f5bd-139">Such patterns cannot cover the general case of all possible inputs and therefore are not suitable for component APIs.</span></span>
 
-## <a name="named-arguments"></a><span data-ttu-id="302eb-140">命名实参</span><span class="sxs-lookup"><span data-stu-id="302eb-140">Named Arguments</span></span>
+## <a name="named-arguments"></a><span data-ttu-id="9f5bd-140">命名实参</span><span class="sxs-lookup"><span data-stu-id="9f5bd-140">Named Arguments</span></span>
 
-<span data-ttu-id="302eb-141">可以通过在逗号分隔参数列表中，位置指定的方法参数或它们可以显式传递给方法通过提供名称后, 跟一个等号和要在中传递的值。</span><span class="sxs-lookup"><span data-stu-id="302eb-141">Arguments for methods can be specified by position in a comma-separated argument list, or they can be passed to a method explicitly by providing the name, followed by an equal sign and the value to be passed in.</span></span> <span data-ttu-id="302eb-142">如果指定通过提供的名称，它们可以出现在不同的声明中使用的顺序。</span><span class="sxs-lookup"><span data-stu-id="302eb-142">If specified by providing the name, they can appear in a different order from that used in the declaration.</span></span>
+<span data-ttu-id="9f5bd-141">可以通过以逗号分隔的参数列表中的位置指定方法的参数, 也可以通过提供名称, 后跟一个等号和要传入的值, 来以显式方式将方法传递给方法。</span><span class="sxs-lookup"><span data-stu-id="9f5bd-141">Arguments for methods can be specified by position in a comma-separated argument list, or they can be passed to a method explicitly by providing the name, followed by an equal sign and the value to be passed in.</span></span> <span data-ttu-id="9f5bd-142">如果通过提供名称指定, 它们的显示顺序可能与声明中使用的顺序不同。</span><span class="sxs-lookup"><span data-stu-id="9f5bd-142">If specified by providing the name, they can appear in a different order from that used in the declaration.</span></span>
 
-<span data-ttu-id="302eb-143">命名的自变量可以对某些类型的 API，如方法参数的重新排序中的更改使代码更具可读性且更适应能力更强。</span><span class="sxs-lookup"><span data-stu-id="302eb-143">Named arguments can make code more readable and more adaptable to certain types of changes in the API, such as a reordering of method parameters.</span></span>
+<span data-ttu-id="9f5bd-143">命名参数可以使代码更具可读性, 更好地适应 API 中某些类型的更改, 如方法参数的重新排序。</span><span class="sxs-lookup"><span data-stu-id="9f5bd-143">Named arguments can make code more readable and more adaptable to certain types of changes in the API, such as a reordering of method parameters.</span></span>
 
-<span data-ttu-id="302eb-144">命名的参数只允许在方法，不能用于`let`-绑定函数、 函数或 lambda 表达式。</span><span class="sxs-lookup"><span data-stu-id="302eb-144">Named arguments are allowed only for methods, not for `let`-bound functions, function values, or lambda expressions.</span></span>
+<span data-ttu-id="9f5bd-144">命名参数只允许用于方法, 不`let`允许用于绑定函数、函数值或 lambda 表达式。</span><span class="sxs-lookup"><span data-stu-id="9f5bd-144">Named arguments are allowed only for methods, not for `let`-bound functions, function values, or lambda expressions.</span></span>
 
-<span data-ttu-id="302eb-145">下面的代码示例演示如何将命名参数。</span><span class="sxs-lookup"><span data-stu-id="302eb-145">The following code example demonstrates the use of named arguments.</span></span>
+<span data-ttu-id="9f5bd-145">下面的代码示例演示如何使用命名参数。</span><span class="sxs-lookup"><span data-stu-id="9f5bd-145">The following code example demonstrates the use of named arguments.</span></span>
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/parameters-and-arguments-1/snippet3807.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/parameters-and-arguments-1/snippet3807.fs)]
 
-<span data-ttu-id="302eb-146">在类构造函数调用中，可以使用类似于的命名参数的语法来设置类的属性的值。</span><span class="sxs-lookup"><span data-stu-id="302eb-146">In a call to a class constructor, you can set the values of properties of the class by using a syntax similar to that of named arguments.</span></span> <span data-ttu-id="302eb-147">下面的示例显示了此语法。</span><span class="sxs-lookup"><span data-stu-id="302eb-147">The following example shows this syntax.</span></span>
+<span data-ttu-id="9f5bd-146">在对类构造函数的调用中, 可以通过使用类似于命名参数的语法来设置类的属性值。</span><span class="sxs-lookup"><span data-stu-id="9f5bd-146">In a call to a class constructor, you can set the values of properties of the class by using a syntax similar to that of named arguments.</span></span> <span data-ttu-id="9f5bd-147">下面的示例演示了此语法。</span><span class="sxs-lookup"><span data-stu-id="9f5bd-147">The following example shows this syntax.</span></span>
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet3506.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3506.fs)]
 
-<span data-ttu-id="302eb-148">有关详细信息，请参阅[构造函数 (F#)](https://msdn.microsoft.com/library/2cd0ed07-d214-4125-8317-4f288af99f05)。</span><span class="sxs-lookup"><span data-stu-id="302eb-148">For more information, see [Constructors (F#)](https://msdn.microsoft.com/library/2cd0ed07-d214-4125-8317-4f288af99f05).</span></span>
+<span data-ttu-id="9f5bd-148">有关详细信息, 请参阅[构造F#函数 ()](https://msdn.microsoft.com/library/2cd0ed07-d214-4125-8317-4f288af99f05)。</span><span class="sxs-lookup"><span data-stu-id="9f5bd-148">For more information, see [Constructors (F#)](https://msdn.microsoft.com/library/2cd0ed07-d214-4125-8317-4f288af99f05).</span></span>
 
-## <a name="optional-parameters"></a><span data-ttu-id="302eb-149">可选参数</span><span class="sxs-lookup"><span data-stu-id="302eb-149">Optional Parameters</span></span>
+## <a name="optional-parameters"></a><span data-ttu-id="9f5bd-149">可选参数</span><span class="sxs-lookup"><span data-stu-id="9f5bd-149">Optional Parameters</span></span>
 
-<span data-ttu-id="302eb-150">可以通过使用参数名称前面的问号指定一种方法的可选参数。</span><span class="sxs-lookup"><span data-stu-id="302eb-150">You can specify an optional parameter for a method by using a question mark in front of the parameter name.</span></span> <span data-ttu-id="302eb-151">可选参数将被解释为F#选项类型，因此您可以将这些查询，查询选项类型，通过常规方式`match`具有表达式`Some`并`None`。</span><span class="sxs-lookup"><span data-stu-id="302eb-151">Optional parameters are interpreted as the F# option type, so you can query them in the regular way that option types are queried, by using a `match` expression with `Some` and `None`.</span></span> <span data-ttu-id="302eb-152">仅在成员上，通过使用创建的函数上不允许使用可选参数`let`绑定。</span><span class="sxs-lookup"><span data-stu-id="302eb-152">Optional parameters are permitted only on members, not on functions created by using `let` bindings.</span></span>
+<span data-ttu-id="9f5bd-150">可以通过在参数名称前面使用问号来指定方法的可选参数。</span><span class="sxs-lookup"><span data-stu-id="9f5bd-150">You can specify an optional parameter for a method by using a question mark in front of the parameter name.</span></span> <span data-ttu-id="9f5bd-151">F#可选参数被解释为选项类型, 因此, 你可以通过使用`match`带有`Some`和`None`的表达式, 以通过查询选项类型的常规方式查询它们。</span><span class="sxs-lookup"><span data-stu-id="9f5bd-151">Optional parameters are interpreted as the F# option type, so you can query them in the regular way that option types are queried, by using a `match` expression with `Some` and `None`.</span></span> <span data-ttu-id="9f5bd-152">仅允许在成员上使用可选参数, 而不允许使用`let`绑定创建的函数。</span><span class="sxs-lookup"><span data-stu-id="9f5bd-152">Optional parameters are permitted only on members, not on functions created by using `let` bindings.</span></span>
 
-<span data-ttu-id="302eb-153">您可以现有可选将值传递给方法的参数名称，如`?arg=None`或`?arg=Some(3)`或`?arg=arg`。</span><span class="sxs-lookup"><span data-stu-id="302eb-153">You can pass existing optional values to method by parameter name, such as `?arg=None` or `?arg=Some(3)` or `?arg=arg`.</span></span> <span data-ttu-id="302eb-154">构建一种方法将可选参数传递给另一种方法时，这很有用。</span><span class="sxs-lookup"><span data-stu-id="302eb-154">This can be useful when building a method that passes optional arguments to another method.</span></span>
+<span data-ttu-id="9f5bd-153">可以按参数名称 (如`?arg=None` `?arg=arg`或`?arg=Some(3)` ) 将现有可选值传递给方法。</span><span class="sxs-lookup"><span data-stu-id="9f5bd-153">You can pass existing optional values to method by parameter name, such as `?arg=None` or `?arg=Some(3)` or `?arg=arg`.</span></span> <span data-ttu-id="9f5bd-154">这在生成将可选自变量传递给其他方法的方法时非常有用。</span><span class="sxs-lookup"><span data-stu-id="9f5bd-154">This can be useful when building a method that passes optional arguments to another method.</span></span>
 
-<span data-ttu-id="302eb-155">此外可以使用一个函数`defaultArg`，用于设置默认值为可选的参数。</span><span class="sxs-lookup"><span data-stu-id="302eb-155">You can also use a function `defaultArg`, which sets a default value of an optional argument.</span></span> <span data-ttu-id="302eb-156">`defaultArg`函数使用的第一个参数的可选参数，以及为第二个的默认值。</span><span class="sxs-lookup"><span data-stu-id="302eb-156">The `defaultArg` function takes the optional parameter as the first argument and the default value as the second.</span></span>
+<span data-ttu-id="9f5bd-155">还可以使用函数`defaultArg`来设置可选参数的默认值。</span><span class="sxs-lookup"><span data-stu-id="9f5bd-155">You can also use a function `defaultArg`, which sets a default value of an optional argument.</span></span> <span data-ttu-id="9f5bd-156">`defaultArg`函数采用可选参数作为第一个参数, 将默认值作为第二个参数。</span><span class="sxs-lookup"><span data-stu-id="9f5bd-156">The `defaultArg` function takes the optional parameter as the first argument and the default value as the second.</span></span>
 
-<span data-ttu-id="302eb-157">下面的示例演示如何使用可选参数。</span><span class="sxs-lookup"><span data-stu-id="302eb-157">The following example illustrates the use of optional parameters.</span></span>
+<span data-ttu-id="9f5bd-157">下面的示例阐释了可选参数的用法。</span><span class="sxs-lookup"><span data-stu-id="9f5bd-157">The following example illustrates the use of optional parameters.</span></span>
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/parameters-and-arguments-1/snippet3808.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/parameters-and-arguments-1/snippet3808.fs)]
 
-<span data-ttu-id="302eb-158">输出如下所示。</span><span class="sxs-lookup"><span data-stu-id="302eb-158">The output is as follows.</span></span>
+<span data-ttu-id="9f5bd-158">输出如下所示。</span><span class="sxs-lookup"><span data-stu-id="9f5bd-158">The output is as follows.</span></span>
 
 ```
 Baud Rate: 9600 Duplex: Full Parity: false
@@ -130,7 +130,7 @@ Baud Rate: 9600 Duplex: Full Parity: false
 Baud Rate: 4800 Duplex: Half Parity: false
 ```
 
-<span data-ttu-id="302eb-159">对于C#和 Visual Basic 互操作可以使用的特性`[<Optional; DefaultParameterValue<(...)>]`在F#，以便调用方将看到为可选参数。</span><span class="sxs-lookup"><span data-stu-id="302eb-159">For the purposes of C# and Visual Basic interop you can use the attributes `[<Optional; DefaultParameterValue<(...)>]` in F#, so that callers will see an argument as optional.</span></span> <span data-ttu-id="302eb-160">这相当于定义该参数为可选中C#中作为`MyMethod(int i = 3)`。</span><span class="sxs-lookup"><span data-stu-id="302eb-160">This is equivalent to defining the argument as optional in C# as in `MyMethod(int i = 3)`.</span></span>
+<span data-ttu-id="9f5bd-159">出于C#和 Visual Basic 互操作, 可以使用中`[<Optional; DefaultParameterValue<(...)>]` F#的属性, 以便调用方将参数显示为可选。</span><span class="sxs-lookup"><span data-stu-id="9f5bd-159">For the purposes of C# and Visual Basic interop you can use the attributes `[<Optional; DefaultParameterValue<(...)>]` in F#, so that callers will see an argument as optional.</span></span> <span data-ttu-id="9f5bd-160">这等效于将自变量定义为中的C#可选, `MyMethod(int i = 3)`如中所示。</span><span class="sxs-lookup"><span data-stu-id="9f5bd-160">This is equivalent to defining the argument as optional in C# as in `MyMethod(int i = 3)`.</span></span>
 
 ```fsharp
 open System
@@ -140,7 +140,7 @@ type C =
         printfn "%s" message
 ```
 
-<span data-ttu-id="302eb-161">此外可以作为默认参数值指定一个新的对象。</span><span class="sxs-lookup"><span data-stu-id="302eb-161">You can also specify a new object as a default parameter value.</span></span> <span data-ttu-id="302eb-162">例如，`Foo`成员可以有一个可选`CancellationToken`作为输入改为：</span><span class="sxs-lookup"><span data-stu-id="302eb-162">For example, the `Foo` member could have an optional `CancellationToken` as input instead:</span></span>
+<span data-ttu-id="9f5bd-161">你还可以将新的对象指定为默认参数值。</span><span class="sxs-lookup"><span data-stu-id="9f5bd-161">You can also specify a new object as a default parameter value.</span></span> <span data-ttu-id="9f5bd-162">例如, `Foo`成员可以将可选`CancellationToken`作为输入:</span><span class="sxs-lookup"><span data-stu-id="9f5bd-162">For example, the `Foo` member could have an optional `CancellationToken` as input instead:</span></span>
 
 ```fsharp
 open System.Threading
@@ -150,22 +150,22 @@ type C =
         printfn "%A" ct
 ```
 
-<span data-ttu-id="302eb-163">作为参数的给定值`DefaultParameterValue`必须与参数的类型匹配。</span><span class="sxs-lookup"><span data-stu-id="302eb-163">The value given as argument to `DefaultParameterValue` must match the type of the parameter.</span></span> <span data-ttu-id="302eb-164">例如，以下不是允许：</span><span class="sxs-lookup"><span data-stu-id="302eb-164">For example, the following is not allowed:</span></span>
+<span data-ttu-id="9f5bd-163">作为的参数`DefaultParameterValue`提供的值必须与参数的类型匹配。</span><span class="sxs-lookup"><span data-stu-id="9f5bd-163">The value given as argument to `DefaultParameterValue` must match the type of the parameter.</span></span> <span data-ttu-id="9f5bd-164">例如, 不允许使用以下项:</span><span class="sxs-lookup"><span data-stu-id="9f5bd-164">For example, the following is not allowed:</span></span>
 
 ```fsharp
 type C =
     static member Wrong([<Optional; DefaultParameterValue("string")>] i:int) = ()
 ```
 
-<span data-ttu-id="302eb-165">在这种情况下，编译器会生成警告，并将完全忽略这两个属性。</span><span class="sxs-lookup"><span data-stu-id="302eb-165">In this case, the compiler generates a warning and will ignore both attributes altogether.</span></span> <span data-ttu-id="302eb-166">请注意，默认值`null`需要类型批注，否则编译器将推断类型错误，即`[<Optional; DefaultParameterValue(null:obj)>] o:obj`。</span><span class="sxs-lookup"><span data-stu-id="302eb-166">Note that the default value `null` needs to be type-annotated, as otherwise the compiler infers the wrong type, i.e. `[<Optional; DefaultParameterValue(null:obj)>] o:obj`.</span></span>
+<span data-ttu-id="9f5bd-165">在这种情况下, 编译器将生成警告, 并将完全忽略这两个特性。</span><span class="sxs-lookup"><span data-stu-id="9f5bd-165">In this case, the compiler generates a warning and will ignore both attributes altogether.</span></span> <span data-ttu-id="9f5bd-166">请注意, 默认值`null`需要为类型批注, 否则编译器将推断错误的类型, `[<Optional; DefaultParameterValue(null:obj)>] o:obj`即。</span><span class="sxs-lookup"><span data-stu-id="9f5bd-166">Note that the default value `null` needs to be type-annotated, as otherwise the compiler infers the wrong type, i.e. `[<Optional; DefaultParameterValue(null:obj)>] o:obj`.</span></span>
 
-## <a name="passing-by-reference"></a><span data-ttu-id="302eb-167">按引用传递</span><span class="sxs-lookup"><span data-stu-id="302eb-167">Passing by Reference</span></span>
+## <a name="passing-by-reference"></a><span data-ttu-id="9f5bd-167">按引用传递</span><span class="sxs-lookup"><span data-stu-id="9f5bd-167">Passing by Reference</span></span>
 
-<span data-ttu-id="302eb-168">传递F#按引用值涉及[byref](byrefs.md)，这是托管的指针类型。</span><span class="sxs-lookup"><span data-stu-id="302eb-168">Passing an F# value by reference involves [byrefs](byrefs.md), which are managed pointer types.</span></span> <span data-ttu-id="302eb-169">对于要使用的类型是，如下所示的指南：</span><span class="sxs-lookup"><span data-stu-id="302eb-169">Guidance for which type to use is as follows:</span></span>
+<span data-ttu-id="9f5bd-168">按引用F#传递值涉及[byref](byrefs.md), 它们是托管指针类型。</span><span class="sxs-lookup"><span data-stu-id="9f5bd-168">Passing an F# value by reference involves [byrefs](byrefs.md), which are managed pointer types.</span></span> <span data-ttu-id="9f5bd-169">使用哪种类型的指南如下:</span><span class="sxs-lookup"><span data-stu-id="9f5bd-169">Guidance for which type to use is as follows:</span></span>
 
-* <span data-ttu-id="302eb-170">使用`inref<'T>`如果只需要读取指针。</span><span class="sxs-lookup"><span data-stu-id="302eb-170">Use `inref<'T>` if you only need to read the pointer.</span></span>
-* <span data-ttu-id="302eb-171">使用`outref<'T>`如果只需编写的指针。</span><span class="sxs-lookup"><span data-stu-id="302eb-171">Use `outref<'T>` if you only need to write to the pointer.</span></span>
-* <span data-ttu-id="302eb-172">使用`byref<'T>`如果你需要同时读取和写入到的指针。</span><span class="sxs-lookup"><span data-stu-id="302eb-172">Use `byref<'T>` if you need to both read from and write to the pointer.</span></span>
+* <span data-ttu-id="9f5bd-170">如果`inref<'T>`只需要读取指针, 请使用。</span><span class="sxs-lookup"><span data-stu-id="9f5bd-170">Use `inref<'T>` if you only need to read the pointer.</span></span>
+* <span data-ttu-id="9f5bd-171">如果`outref<'T>`只需要写入指针, 请使用。</span><span class="sxs-lookup"><span data-stu-id="9f5bd-171">Use `outref<'T>` if you only need to write to the pointer.</span></span>
+* <span data-ttu-id="9f5bd-172">如果`byref<'T>`需要读取和写入指针, 请使用。</span><span class="sxs-lookup"><span data-stu-id="9f5bd-172">Use `byref<'T>` if you need to both read from and write to the pointer.</span></span>
 
 ```fsharp
 let example1 (x: inref<int>) = printfn "It's %d" x
@@ -186,25 +186,25 @@ example2 &y
 example3 &y // Now 'y' is 3
 ```
 
-<span data-ttu-id="302eb-173">因为参数是一个指针，值为可变，对值的任何更改将保留后执行函数。</span><span class="sxs-lookup"><span data-stu-id="302eb-173">Because the parameter is a pointer and the value is mutable, any changes to the value are retained after the execution of the function.</span></span>
+<span data-ttu-id="9f5bd-173">由于参数是一个指针, 并且值是可变的, 因此在执行函数后将保留对值所做的任何更改。</span><span class="sxs-lookup"><span data-stu-id="9f5bd-173">Because the parameter is a pointer and the value is mutable, any changes to the value are retained after the execution of the function.</span></span>
 
-<span data-ttu-id="302eb-174">可以使用一个元组作为返回值来存储任何`out`中.NET 库方法的参数。</span><span class="sxs-lookup"><span data-stu-id="302eb-174">You can use a tuple as a return value to store any `out` parameters in .NET library methods.</span></span> <span data-ttu-id="302eb-175">或者，您可以将`out`参数作为`byref`参数。</span><span class="sxs-lookup"><span data-stu-id="302eb-175">Alternatively, you can treat the `out` parameter as a `byref` parameter.</span></span> <span data-ttu-id="302eb-176">下面的代码示例说明了这两种方式。</span><span class="sxs-lookup"><span data-stu-id="302eb-176">The following code example illustrates both ways.</span></span>
+<span data-ttu-id="9f5bd-174">您可以使用元组作为返回值, 以在 .net `out`库方法中存储任何参数。</span><span class="sxs-lookup"><span data-stu-id="9f5bd-174">You can use a tuple as a return value to store any `out` parameters in .NET library methods.</span></span> <span data-ttu-id="9f5bd-175">或者, 您可以将`out`参数`byref`视为参数。</span><span class="sxs-lookup"><span data-stu-id="9f5bd-175">Alternatively, you can treat the `out` parameter as a `byref` parameter.</span></span> <span data-ttu-id="9f5bd-176">下面的代码示例演示了这两种方法。</span><span class="sxs-lookup"><span data-stu-id="9f5bd-176">The following code example illustrates both ways.</span></span>
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/parameters-and-arguments-1/snippet3810.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/parameters-and-arguments-1/snippet3810.fs)]
 
-## <a name="parameter-arrays"></a><span data-ttu-id="302eb-177">参数数组</span><span class="sxs-lookup"><span data-stu-id="302eb-177">Parameter Arrays</span></span>
+## <a name="parameter-arrays"></a><span data-ttu-id="9f5bd-177">参数数组</span><span class="sxs-lookup"><span data-stu-id="9f5bd-177">Parameter Arrays</span></span>
 
-<span data-ttu-id="302eb-178">有时有必要定义采用任意数量的异构类型的参数的函数。</span><span class="sxs-lookup"><span data-stu-id="302eb-178">Occasionally it is necessary to define a function that takes an arbitrary number of parameters of heterogeneous type.</span></span> <span data-ttu-id="302eb-179">它不会实际创建所有可能的重载的方法来应对可能使用的所有类型。</span><span class="sxs-lookup"><span data-stu-id="302eb-179">It would not be practical to create all the possible overloaded methods to account for all the types that could be used.</span></span> <span data-ttu-id="302eb-180">.NET 实现为此类方法的参数数组功能通过提供支持。</span><span class="sxs-lookup"><span data-stu-id="302eb-180">The .NET implementations provide support for such methods through the parameter array feature.</span></span> <span data-ttu-id="302eb-181">可以有任意数量的参数提供的签名中使用参数数组的方法。</span><span class="sxs-lookup"><span data-stu-id="302eb-181">A method that takes a parameter array in its signature can be provided with an arbitrary number of parameters.</span></span> <span data-ttu-id="302eb-182">参数被放入数组中。</span><span class="sxs-lookup"><span data-stu-id="302eb-182">The parameters are put into an array.</span></span> <span data-ttu-id="302eb-183">数组元素的类型确定可以传递给函数的参数类型。</span><span class="sxs-lookup"><span data-stu-id="302eb-183">The type of the array elements determines the parameter types that can be passed to the function.</span></span> <span data-ttu-id="302eb-184">如果定义数组，该参数数组`System.Object`与元素类型，然后客户端代码可以通过任何类型的值。</span><span class="sxs-lookup"><span data-stu-id="302eb-184">If you define the parameter array with `System.Object` as the element type, then client code can pass values of any type.</span></span>
+<span data-ttu-id="9f5bd-178">有时, 有必要定义一个函数, 该函数采用任意数量的异类类型的参数。</span><span class="sxs-lookup"><span data-stu-id="9f5bd-178">Occasionally it is necessary to define a function that takes an arbitrary number of parameters of heterogeneous type.</span></span> <span data-ttu-id="9f5bd-179">创建所有可能的重载方法以考虑可以使用的所有类型是不可行的。</span><span class="sxs-lookup"><span data-stu-id="9f5bd-179">It would not be practical to create all the possible overloaded methods to account for all the types that could be used.</span></span> <span data-ttu-id="9f5bd-180">.NET 实现通过参数数组功能为此类方法提供支持。</span><span class="sxs-lookup"><span data-stu-id="9f5bd-180">The .NET implementations provide support for such methods through the parameter array feature.</span></span> <span data-ttu-id="9f5bd-181">在其签名中采用参数数组的方法可以使用任意数量的参数提供。</span><span class="sxs-lookup"><span data-stu-id="9f5bd-181">A method that takes a parameter array in its signature can be provided with an arbitrary number of parameters.</span></span> <span data-ttu-id="9f5bd-182">参数放入数组中。</span><span class="sxs-lookup"><span data-stu-id="9f5bd-182">The parameters are put into an array.</span></span> <span data-ttu-id="9f5bd-183">数组元素的类型决定了可传递给函数的参数类型。</span><span class="sxs-lookup"><span data-stu-id="9f5bd-183">The type of the array elements determines the parameter types that can be passed to the function.</span></span> <span data-ttu-id="9f5bd-184">如果用`System.Object`作为元素类型定义参数数组, 则客户端代码可以传递任何类型的值。</span><span class="sxs-lookup"><span data-stu-id="9f5bd-184">If you define the parameter array with `System.Object` as the element type, then client code can pass values of any type.</span></span>
 
-<span data-ttu-id="302eb-185">在F#，参数数组只能在方法中定义。</span><span class="sxs-lookup"><span data-stu-id="302eb-185">In F#, parameter arrays can only be defined in methods.</span></span> <span data-ttu-id="302eb-186">它们不能独立函数或模块中定义的函数中使用。</span><span class="sxs-lookup"><span data-stu-id="302eb-186">They cannot be used in standalone functions or functions that are defined in modules.</span></span>
+<span data-ttu-id="9f5bd-185">在F#中, 只能在方法中定义参数数组。</span><span class="sxs-lookup"><span data-stu-id="9f5bd-185">In F#, parameter arrays can only be defined in methods.</span></span> <span data-ttu-id="9f5bd-186">它们不能用于独立函数或模块中定义的函数。</span><span class="sxs-lookup"><span data-stu-id="9f5bd-186">They cannot be used in standalone functions or functions that are defined in modules.</span></span>
 
-<span data-ttu-id="302eb-187">使用定义的参数数组`ParamArray`属性。</span><span class="sxs-lookup"><span data-stu-id="302eb-187">You define a parameter array by using the `ParamArray` attribute.</span></span> <span data-ttu-id="302eb-188">`ParamArray`属性只能应用到的最后一个参数。</span><span class="sxs-lookup"><span data-stu-id="302eb-188">The `ParamArray` attribute can only be applied to the last parameter.</span></span>
+<span data-ttu-id="9f5bd-187">使用`ParamArray`特性定义参数数组。</span><span class="sxs-lookup"><span data-stu-id="9f5bd-187">You define a parameter array by using the `ParamArray` attribute.</span></span> <span data-ttu-id="9f5bd-188">`ParamArray`特性只能应用于最后一个参数。</span><span class="sxs-lookup"><span data-stu-id="9f5bd-188">The `ParamArray` attribute can only be applied to the last parameter.</span></span>
 
-<span data-ttu-id="302eb-189">以下代码演示了这两个调用采用一个参数数组和的中的类型定义的.NET 方法F#具有使用参数数组的方法。</span><span class="sxs-lookup"><span data-stu-id="302eb-189">The following code illustrates both calling a .NET method that takes a parameter array and the definition of a type in F# that has a method that takes a parameter array.</span></span>
+<span data-ttu-id="9f5bd-189">下面的代码演示了如何调用一个 .NET 方法, 该方法采用参数数组和中F#某个类型的定义, 该方法具有采用参数数组的方法。</span><span class="sxs-lookup"><span data-stu-id="9f5bd-189">The following code illustrates both calling a .NET method that takes a parameter array and the definition of a type in F# that has a method that takes a parameter array.</span></span>
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/parameters-and-arguments-2/snippet3811.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/parameters-and-arguments-2/snippet3811.fs)]
 
-<span data-ttu-id="302eb-190">当运行在项目中，上述代码的输出如下所示：</span><span class="sxs-lookup"><span data-stu-id="302eb-190">When run in a project, the output of the previous code is as follows:</span></span>
+<span data-ttu-id="9f5bd-190">在项目中运行时, 上一代码的输出如下所示:</span><span class="sxs-lookup"><span data-stu-id="9f5bd-190">When run in a project, the output of the previous code is as follows:</span></span>
 
 ```console
 a 1 10 Hello world 1 True
@@ -216,6 +216,6 @@ a 1 10 Hello world 1 True
 true
 ```
 
-## <a name="see-also"></a><span data-ttu-id="302eb-191">请参阅</span><span class="sxs-lookup"><span data-stu-id="302eb-191">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9f5bd-191">请参阅</span><span class="sxs-lookup"><span data-stu-id="9f5bd-191">See also</span></span>
 
-- [<span data-ttu-id="302eb-192">成员</span><span class="sxs-lookup"><span data-stu-id="302eb-192">Members</span></span>](members/index.md)
+- [<span data-ttu-id="9f5bd-192">成员</span><span class="sxs-lookup"><span data-stu-id="9f5bd-192">Members</span></span>](./members/index.md)

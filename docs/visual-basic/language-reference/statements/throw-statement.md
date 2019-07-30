@@ -14,46 +14,39 @@ helpviewer_keywords:
 - exception handling, unstructured
 - throw statement [Visual Basic]
 ms.assetid: a6e07406-5c8a-4498-87a2-8339f3651d62
-ms.openlocfilehash: 2494eac2f61f112f3ba6321ada7404f8cd618049
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a6d10982cf199e9285334e0d72e6622275d51b4d
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766631"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68626192"
 ---
-# <a name="throw-statement-visual-basic"></a><span data-ttu-id="cb4d4-102">Throw 语句 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cb4d4-102">Throw Statement (Visual Basic)</span></span>
-<span data-ttu-id="cb4d4-103">引发异常过程中。</span><span class="sxs-lookup"><span data-stu-id="cb4d4-103">Throws an exception within a procedure.</span></span>  
-  
-## <a name="syntax"></a><span data-ttu-id="cb4d4-104">语法</span><span class="sxs-lookup"><span data-stu-id="cb4d4-104">Syntax</span></span>  
-  
-```  
-Throw [ expression ]  
-```  
-  
-## <a name="part"></a><span data-ttu-id="cb4d4-105">部件</span><span class="sxs-lookup"><span data-stu-id="cb4d4-105">Part</span></span>  
- `expression`  
- <span data-ttu-id="cb4d4-106">提供有关要引发的异常信息。</span><span class="sxs-lookup"><span data-stu-id="cb4d4-106">Provides information about the exception to be thrown.</span></span> <span data-ttu-id="cb4d4-107">驻留在中时是可选的`Catch`语句，另有要求。</span><span class="sxs-lookup"><span data-stu-id="cb4d4-107">Optional when residing in a `Catch` statement, otherwise required.</span></span>  
-  
-## <a name="remarks"></a><span data-ttu-id="cb4d4-108">备注</span><span class="sxs-lookup"><span data-stu-id="cb4d4-108">Remarks</span></span>  
- <span data-ttu-id="cb4d4-109">`Throw`语句将引发异常，您可以使用结构化异常处理代码来处理 (`Try`...`Catch`...`Finally`) 或非结构化的异常处理代码 (`On Error GoTo`)。</span><span class="sxs-lookup"><span data-stu-id="cb4d4-109">The `Throw` statement throws an exception that you can handle with structured exception-handling code (`Try`...`Catch`...`Finally`) or unstructured exception-handling code (`On Error GoTo`).</span></span> <span data-ttu-id="cb4d4-110">可以使用`Throw`语句来捕获在代码中的错误，因为直到找到相应的异常处理代码，Visual Basic 调用堆栈向上移动。</span><span class="sxs-lookup"><span data-stu-id="cb4d4-110">You can use the `Throw` statement to trap errors within your code because Visual Basic moves up the call stack until it finds the appropriate exception-handling code.</span></span>  
-  
- <span data-ttu-id="cb4d4-111">一个`Throw`不包含表达式的语句仅可在`Catch`语句，在其中 case 语句重新引发当前处理的异常`Catch`语句。</span><span class="sxs-lookup"><span data-stu-id="cb4d4-111">A `Throw` statement with no expression can only be used in a `Catch` statement, in which case the statement rethrows the exception currently being handled by the `Catch` statement.</span></span>  
-  
- <span data-ttu-id="cb4d4-112">`Throw`语句将重置的调用堆栈`expression`异常。</span><span class="sxs-lookup"><span data-stu-id="cb4d4-112">The `Throw` statement resets the call stack for the `expression` exception.</span></span> <span data-ttu-id="cb4d4-113">如果`expression`未提供，调用堆栈将保持不变。</span><span class="sxs-lookup"><span data-stu-id="cb4d4-113">If `expression` is not provided, the call stack is left unchanged.</span></span> <span data-ttu-id="cb4d4-114">您可以访问通过异常的调用堆栈<xref:System.Exception.StackTrace%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="cb4d4-114">You can access the call stack for the exception through the <xref:System.Exception.StackTrace%2A> property.</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="cb4d4-115">示例</span><span class="sxs-lookup"><span data-stu-id="cb4d4-115">Example</span></span>  
- <span data-ttu-id="cb4d4-116">下面的代码使用`Throw`语句引发异常：</span><span class="sxs-lookup"><span data-stu-id="cb4d4-116">The following code uses the `Throw` statement to throw an exception:</span></span>  
-  
- [!code-vb[VbVbalrStatements#84](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#84)]  
-  
-## <a name="requirements"></a><span data-ttu-id="cb4d4-117">要求</span><span class="sxs-lookup"><span data-stu-id="cb4d4-117">Requirements</span></span>  
- <span data-ttu-id="cb4d4-118">**命名空间：**[Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)</span><span class="sxs-lookup"><span data-stu-id="cb4d4-118">**Namespace:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)</span></span>  
-  
- <span data-ttu-id="cb4d4-119">**模块：** `Interaction`</span><span class="sxs-lookup"><span data-stu-id="cb4d4-119">**Module:** `Interaction`</span></span>  
-  
- <span data-ttu-id="cb4d4-120">**程序集：** Visual Basic 运行库（在 Microsoft.VisualBasic.dll 中）</span><span class="sxs-lookup"><span data-stu-id="cb4d4-120">**Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="cb4d4-121">请参阅</span><span class="sxs-lookup"><span data-stu-id="cb4d4-121">See also</span></span>
+# <a name="throw-statement-visual-basic"></a><span data-ttu-id="45bf6-102">Throw 语句 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="45bf6-102">Throw Statement (Visual Basic)</span></span>
+<span data-ttu-id="45bf6-103">在过程中引发异常。</span><span class="sxs-lookup"><span data-stu-id="45bf6-103">Throws an exception within a procedure.</span></span>
 
-- [<span data-ttu-id="cb4d4-122">Try...Catch...Finally 语句</span><span class="sxs-lookup"><span data-stu-id="cb4d4-122">Try...Catch...Finally Statement</span></span>](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
-- [<span data-ttu-id="cb4d4-123">On Error 语句</span><span class="sxs-lookup"><span data-stu-id="cb4d4-123">On Error Statement</span></span>](../../../visual-basic/language-reference/statements/on-error-statement.md)
+## <a name="syntax"></a><span data-ttu-id="45bf6-104">语法</span><span class="sxs-lookup"><span data-stu-id="45bf6-104">Syntax</span></span>
+
+```vb
+Throw [ expression ]
+```
+
+## <a name="part"></a><span data-ttu-id="45bf6-105">部件</span><span class="sxs-lookup"><span data-stu-id="45bf6-105">Part</span></span>
+ <span data-ttu-id="45bf6-106">`expression`提供有关要引发的异常的信息。</span><span class="sxs-lookup"><span data-stu-id="45bf6-106">`expression` Provides information about the exception to be thrown.</span></span> <span data-ttu-id="45bf6-107">如果位于`Catch`语句中, 则为可选; 否则为必需。</span><span class="sxs-lookup"><span data-stu-id="45bf6-107">Optional when residing in a `Catch` statement, otherwise required.</span></span>
+  
+## <a name="remarks"></a><span data-ttu-id="45bf6-108">备注</span><span class="sxs-lookup"><span data-stu-id="45bf6-108">Remarks</span></span>
+ <span data-ttu-id="45bf6-109">语句引发异常, 你可以使用结构化异常处理代码 (`Try`... `Throw``Catch`...) 或非结构化异常处理代码`On Error GoTo`()。 `Finally`</span><span class="sxs-lookup"><span data-stu-id="45bf6-109">The `Throw` statement throws an exception that you can handle with structured exception-handling code (`Try`...`Catch`...`Finally`) or unstructured exception-handling code (`On Error GoTo`).</span></span> <span data-ttu-id="45bf6-110">您可以使用`Throw`语句来捕获代码中的错误, 因为 Visual Basic 在调用堆栈中向上移动, 直到找到相应的异常处理代码。</span><span class="sxs-lookup"><span data-stu-id="45bf6-110">You can use the `Throw` statement to trap errors within your code because Visual Basic moves up the call stack until it finds the appropriate exception-handling code.</span></span>
+ 
+ <span data-ttu-id="45bf6-111">不带 expression 的`Catch` `Catch`语句只能用在语句中, 在这种情况下, 该语句重新引发语句当前正在处理的异常。 `Throw`</span><span class="sxs-lookup"><span data-stu-id="45bf6-111">A `Throw` statement with no expression can only be used in a `Catch` statement, in which case the statement rethrows the exception currently being handled by the `Catch` statement.</span></span>
+
+ <span data-ttu-id="45bf6-112">语句重置`expression`异常的调用堆栈。 `Throw`</span><span class="sxs-lookup"><span data-stu-id="45bf6-112">The `Throw` statement resets the call stack for the `expression` exception.</span></span> <span data-ttu-id="45bf6-113">如果`expression`未提供, 则调用堆栈保持不变。</span><span class="sxs-lookup"><span data-stu-id="45bf6-113">If `expression` is not provided, the call stack is left unchanged.</span></span> <span data-ttu-id="45bf6-114">您可以通过<xref:System.Exception.StackTrace%2A>属性访问异常的调用堆栈。</span><span class="sxs-lookup"><span data-stu-id="45bf6-114">You can access the call stack for the exception through the <xref:System.Exception.StackTrace%2A> property.</span></span>
+
+## <a name="example"></a><span data-ttu-id="45bf6-115">示例</span><span class="sxs-lookup"><span data-stu-id="45bf6-115">Example</span></span>
+ <span data-ttu-id="45bf6-116">下面的代码使用`Throw`语句引发异常:</span><span class="sxs-lookup"><span data-stu-id="45bf6-116">The following code uses the `Throw` statement to throw an exception:</span></span>
+ 
+ [!code-vb[VbVbalrStatements#84](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#84)]
+
+  
+## <a name="see-also"></a><span data-ttu-id="45bf6-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="45bf6-117">See also</span></span>
+
+- [<span data-ttu-id="45bf6-118">Try...Catch...Finally 语句</span><span class="sxs-lookup"><span data-stu-id="45bf6-118">Try...Catch...Finally Statement</span></span>](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
+- [<span data-ttu-id="45bf6-119">On Error 语句</span><span class="sxs-lookup"><span data-stu-id="45bf6-119">On Error Statement</span></span>](../../../visual-basic/language-reference/statements/on-error-statement.md)
