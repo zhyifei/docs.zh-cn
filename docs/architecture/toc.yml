@@ -1,0 +1,15 @@
+- name: .NET 应用程序体系结构指南
+  href: index.yml
+- name: 电子书
+  expanded: true
+  items:
+    - name: 使用 ASP.NET Core 和 Microsoft Azure 构建新式 Web 应用程序
+      href: modern-web-apps-azure/
+    - name: 使用 Azure 云和 Windows 容器更新现有 .NET 应用程序
+      href: modernize-with-azure-containers/
+    - name: 使用 Microsoft 平台和工具容器化 Docker 应用程序生命周期
+      href: containerized-lifecycle/
+    - name: .NET 微服务：适用于容器化 .NET 应用程序的体系结构
+      href: microservices/
+    - name: 无服务器应用：体系结构、模式和 Azure 实现
+      href: serverless/
