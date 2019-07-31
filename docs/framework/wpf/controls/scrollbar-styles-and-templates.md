@@ -9,37 +9,37 @@ helpviewer_keywords:
 - templates [WPF], ScrollBar
 - parts [WPF], ScrollBar
 ms.assetid: 066ea45a-e27d-43b0-adfe-cce6934c22f5
-ms.openlocfilehash: 22b2206067302f621a94a1e9abca1607792b3393
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 016556fb825ddf60af7dc572d6fda7323b9bb09d
+ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62052880"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68671973"
 ---
 # <a name="scrollbar-styles-and-templates"></a>ScrollBar 样式和模板
-本主题介绍的样式和模板的<xref:System.Windows.Controls.Primitives.ScrollBar>控件。 可以修改默认<xref:System.Windows.Controls.ControlTemplate>为控件提供唯一外观。 有关详细信息，请参阅[通过创建 ControlTemplate 自定义现有控件的外观](customizing-the-appearance-of-an-existing-control.md)。  
+本主题描述<xref:System.Windows.Controls.Primitives.ScrollBar>控件的样式和模板。 您可以修改默认值<xref:System.Windows.Controls.ControlTemplate> , 为控件指定独特的外观。 有关详细信息，请参阅[通过创建 ControlTemplate 自定义现有控件的外观](customizing-the-appearance-of-an-existing-control.md)。  
   
-## <a name="scrollbar-parts"></a>滚动条部分  
- 下表列出了用于命名的部件<xref:System.Windows.Controls.Primitives.ScrollBar>控件。  
+## <a name="scrollbar-parts"></a>滚动条部件  
+ 下表列出了<xref:System.Windows.Controls.Primitives.ScrollBar>控件的已命名部件。  
   
 |部件|类型|描述|  
 |-|-|-|  
-|PART_Track|<xref:System.Windows.Controls.Primitives.Track>|指示的位置的元素的容器<xref:System.Windows.Controls.Primitives.ScrollBar>。|  
+|PART_Track|<xref:System.Windows.Controls.Primitives.Track>|指示的位置<xref:System.Windows.Controls.Primitives.ScrollBar>的元素的容器。|  
   
 ## <a name="scrollbar-states"></a>滚动条状态  
- 下表列出了的可视状态<xref:System.Windows.Controls.Primitives.ScrollBar>控件。  
+ 下表列出了<xref:System.Windows.Controls.Primitives.ScrollBar>控件的可视状态。  
   
 |VisualState 名称|VisualStateGroup 名称|描述|  
 |----------------------|---------------------------|-----------------|  
 |普通|CommonStates|默认状态。|  
 |MouseOver|CommonStates|鼠标指针悬停在控件上。|  
 |已禁用|CommonStates|已禁用控件。|  
-|有效|ValidationStates|该控件使用<xref:System.Windows.Controls.Validation>类和<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加的属性是`false`。|  
-|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加的属性是`true`已在控件有焦点。|  
-|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加的属性是`true`具有该控件没有焦点。|  
+|有效|ValidationStates|控件使用<xref:System.Windows.Controls.Validation>类<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> , 附加属性为`false`。|  
+|InvalidFocused|ValidationStates|附加属性为`true` , 并且控件具有焦点。 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>|  
+|InvalidUnfocused|ValidationStates|附加<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>的属性为`true` , 并且该控件没有焦点。|  
   
-## <a name="scrollbar-controltemplate-example"></a>滚动条 ControlTemplate 示例  
- 下面的示例演示如何定义<xref:System.Windows.Controls.ControlTemplate>为<xref:System.Windows.Controls.Primitives.ScrollBar>控件。  
+## <a name="scrollbar-controltemplate-example"></a>滚动条 System.windows.controls.controltemplate> 示例  
+ 下面的示例演示如何为<xref:System.Windows.Controls.ControlTemplate> <xref:System.Windows.Controls.Primitives.ScrollBar>控件定义。  
   
  [!code-xaml[ControlTemplateExamples#ScrollBar](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/scrollbar.xaml#scrollbar)]  
   

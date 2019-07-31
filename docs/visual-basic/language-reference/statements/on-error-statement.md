@@ -22,102 +22,100 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], handling
 - On Error statement [Visual Basic]
 ms.assetid: ff947930-fb84-40cf-bd66-1ea219561d5c
-ms.openlocfilehash: 0a5a5261e6b71178adce02a5635c1f91a1469f3d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 170cc4a42eda0b54d1e252104a702e008af7a336
+ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61784067"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68671821"
 ---
 # <a name="on-error-statement-visual-basic"></a>On Error 语句 (Visual Basic)
-启用错误处理例程，并指定该例程在过程; 中的位置此外可以用于禁用错误处理例程。  
+启用错误处理例程, 并指定例程在过程中的位置;还可用于禁用错误处理例程。 `On Error`语句用在非结构化错误处理中, 可以使用而不是结构化异常处理。 [结构化异常处理](../../../standard/exceptions/index.md)内置于 .net 中, 通常更高效, 因此在处理应用程序中的运行时错误时建议使用。
+
+ 如果没有错误处理或异常处理, 则发生的任何运行时错误都是致命的: 将显示一条错误消息, 并停止执行。
+
+> [!NOTE]
+>  关键字还用于[Error 语句](../../../visual-basic/language-reference/statements/error-statement.md), 该语句支持向后兼容性。 `Error`
+
+## <a name="syntax"></a>语法
+
+```vb
+On Error { GoTo [ line | 0 | -1 ] | Resume Next }
+```
+
+## <a name="parts"></a>部件
+
+|术语|定义|
+|---|---|
+|`GoTo`*行*|启用从必需*line*参数所指定的行开始的错误处理例程。 *Line*参数是任意行标签或行号。 如果出现运行时错误, 控制将分支到指定的行, 使错误处理程序处于活动状态。 指定的行必须与`On Error`语句位于同一过程中, 否则将发生编译时错误。|
+|`GoTo 0`|禁用当前过程中启用的错误处理程序, 并将`Nothing`其重置为。|
+|`GoTo -1`|在当前过程中禁用已启用的异常并将`Nothing`其重置为。|
+|`Resume Next`|指定在发生运行时错误时, 控制转到紧随发生错误的语句之后的语句, 然后从该点继续执行。 `On Error GoTo`在访问对象时, 请使用此窗体而不是。|
+
+## <a name="remarks"></a>备注
+
+> [!NOTE]
+>  建议尽可能地在代码中使用结构化异常处理, 而不是使用非结构化异常处理和`On Error`语句。 有关详细信息，请参阅 [Try...Catch...Finally 语句](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)。
+
+ "Enabled" 错误处理程序是指由`On Error`语句打开的错误处理程序。 "活动" 错误处理程序是在处理错误的过程中的已启用处理程序。
+
+ 如果错误处理程序处于活动状态 (在出现`Resume`错误与`Exit Function`、 `Exit Sub`、或`Exit Property`语句之间) 时出现错误, 则当前过程的错误处理程序无法处理此错误。 控件返回到调用过程。
   
- 如果错误处理，不会发生任何运行时错误是致命： 显示一条错误消息，并且停止执行。  
+ 如果调用过程具有已启用的错误处理程序, 则会激活该处理程序来处理错误。 如果调用过程的错误处理程序也处于活动状态, 控制将通过以前的调用过程返回, 直到找到已启用但不活动的错误处理程序。 如果找不到这样的错误处理程序, 则该错误在实际发生时是致命的。
   
- 只要有可能，我们建议您同时使用结构化的异常处理在代码中，而不使用非结构化的异常处理和`On Error`语句。 有关详细信息，请参阅 [Try...Catch...Finally 语句](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)。  
+ 每次错误处理程序将控制权返回给调用过程时, 该过程将成为当前过程。 一旦任何过程中的错误处理程序处理错误, 就会在当前过程中的`Resume`语句指定的点继续执行。
   
 > [!NOTE]
->  `Error`关键字还用于[Error 语句](../../../visual-basic/language-reference/statements/error-statement.md)，这为了向后兼容受支持。  
+>  错误处理例程不`Sub`是过程`Function`或过程。 它是由行标签或行号标记的代码部分。
   
-## <a name="syntax"></a>语法  
-  
-```  
-On Error { GoTo [ line | 0 | -1 ] | Resume Next }  
-```  
-  
-## <a name="parts"></a>部件  
-  
-|术语|定义|  
-|---|---|  
-|`GoTo` `line`|启用指定在所需的行开始的错误处理例程`line`参数。 `line`参数是任意行标签或行号。 如果出现运行时错误，则控制分支到指定的行，使错误处理程序处于活动状态。 指定的行必须采用与相同的步骤`On Error`语句或编译时错误会发生。|  
-|`GoTo` 0|禁用当前过程中启用的错误处理和重置为`Nothing`。|  
-|`GoTo` -1|禁用当前过程中已启用的异常和重置为`Nothing`。|  
-|`Resume Next`|指定语句出现运行时错误时，控件跳转到紧跟其中发生错误，并从该点继续执行该语句的语句。 使用此窗体而非`On Error GoTo`访问对象时。|  
-  
-## <a name="remarks"></a>备注  
-  
-> [!NOTE]
->  我们建议使用只要有可能，在代码中的结构化的异常处理，而不是使用非结构化的异常处理和`On Error`语句。 有关详细信息，请参阅 [Try...Catch...Finally 语句](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)。  
-  
- "已启用"的错误处理程序是指已开启，`On Error`语句。 "活动"的错误处理程序是一个已启用的处理程序的过程中处理错误。  
-  
- 错误处理程序处于活动状态时如果发生错误 (错误的匹配项之间和一个`Resume`， `Exit Sub`， `Exit Function`，或`Exit Property`语句)，当前过程的错误处理程序无法处理该错误。 控制权返回给调用的过程。  
-  
- 如果调用过程具有一个已启用的错误处理程序，它被激活以处理错误。 如果调用过程的错误处理程序还处于活动状态，控制将传递回通过前一个调用过程中，直到找到已启用，但非活动状态，错误处理程序。 如果不找到任何此类错误处理程序，则这个错误是致命它实际发生的时候。  
-  
- 错误处理程序将控制传递回调用过程时，每次该过程将成为当前的过程。 一旦通过任何过程中的错误处理程序处理错误，则执行将在由指定的位置的当前过程`Resume`语句。  
-  
-> [!NOTE]
->  不是错误处理例程`Sub`过程或`Function`过程。 它是一段代码标记行标签或行号。  
-  
-## <a name="number-property"></a>Number 属性  
- 错误处理例程依赖于中的值`Number`属性的`Err`对象，以确定错误的原因。 例程应测试或保存相关的属性值中`Err`对象之前可能出现其他错误或错误调用之前可能会导致的过程。 中的属性值`Err`对象只反映最新的错误。 与相关联的错误消息`Err.Number`中包含`Err.Description`。  
+## <a name="number-property"></a>Number 属性
+ 错误处理例程依赖于`Number` `Err`对象的属性中的值来确定错误的原因。 在发生任何其他错误之前, 或在调用可能`Err`导致错误的过程之前, 例程应测试或保存对象中的相关属性值。 `Err`对象中的属性值仅反映最近的错误。 与`Err.Number`关联的错误消息包含在中`Err.Description`。  
   
 ## <a name="throw-statement"></a>Throw 语句  
- 与引发的错误`Err.Raise`方法设置`Exception`属性设置为新创建的实例<xref:System.Exception>类。 为了支持派生的异常类型的异常引发`Throw`语句支持的语言。 这将是要引发的异常实例的单个参数。 下面的示例演示如何使用现有的异常处理支持使用这些功能：  
-  
+ 使用`Err.Raise`方法引发的错误会`Exception`将属性设置为<xref:System.Exception>类的新创建实例。 为了支持引发派生异常类型的异常, `Throw`语言支持语句。 这需要一个参数, 该参数是要引发的异常实例。 下面的示例演示如何将这些功能与现有的异常处理支持结合使用:
+
  [!code-vb[VbVbalrErrorHandling#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrErrorHandling/VB/Class1.vb#17)]  
   
- 请注意，`On Error GoTo`语句捕获所有错误，而不考虑异常类。  
+ 请注意, 语句捕获所有错误, 而不考虑异常类。 `On Error GoTo`
   
-## <a name="on-error-resume-next"></a>On Error Resume Next  
- `On Error Resume Next` 会导致执行继续后立即导致运行时错误，该语句的语句或使用紧跟最新的语句调用带过程包含`On Error Resume Next`语句。 此语句允许执行继续运行时错误。 您可以将会出现错误的错误处理例程，而不是将控制转移到过程内的另一个位置。 `On Error Resume Next`语句变为非活动状态时调用另一个过程，因此应执行`On Error Resume Next`中每个语句调用例程，如果你想在该例程处理内联错误。  
+## <a name="on-error-resume-next"></a>"出错时继续"
+ `On Error Resume Next`使执行继续使用紧随导致运行时错误的语句之后的语句, 或紧随包含`On Error Resume Next`语句的过程的最近调用之后的语句。 此语句允许在运行时错误的情况下继续执行。 可以放置错误处理例程, 其中发生错误, 而不是将控制转移到过程内的另一个位置。 当调用另一个过程时, `On Error Resume Next` 语句变为非活动状态,因此,如果您希望在该例程中进行内联错误处理,则应在每个调用的例程中执行语句。`On Error Resume Next`
   
 > [!NOTE]
->  `On Error Resume Next`构造可能优于`On Error GoTo`处理期间对其他对象的访问生成的错误时。 检查`Err`与对象的每个交互清楚地了解对象所访问的代码之后。 可以确定哪个对象放置中的错误代码`Err.Number`，以及哪个对象最初生成错误 (中指定的对象`Err.Source`)。  
-  
-## <a name="on-error-goto-0"></a>Error GoTo 0 上  
- `On Error GoTo 0` 禁用当前过程中的错误处理。 它不会作为错误处理代码的开头指定 0 行，即使过程包含编号为 0 的行。 无需`On Error GoTo 0`退出一个过程时，会自动禁用语句中，错误处理程序。  
-  
-## <a name="on-error-goto--1"></a>在错误 GoTo-1  
- `On Error GoTo -1` 禁用当前过程中的异常。 它不指定行-1 作为开头的错误处理代码，即使过程包含的行号为-1。 无需`On Error GoTo -1`退出一个过程时，会自动禁用语句中，异常。  
-  
- 若要阻止运行时未发生错误的错误处理代码，请将置于`Exit Sub`， `Exit Function`，或`Exit Property`语句之前的错误处理例程，如以下片段中所示：  
-  
- [!code-vb[VbVbalrErrorHandling#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrErrorHandling/VB/Class1.vb#18)]  
-  
- 在这里，错误处理代码如下所示`Exit Sub`语句位于`End Sub`语句以将其与过程流。 可以将错误处理代码放在过程中的任意位置。  
-  
-## <a name="untrapped-errors"></a>无法捕获的错误  
- 无法捕获的对象中的错误返回到控制应用程序作为可执行文件运行时对象。 在开发环境中，无法捕获的错误返回到控制应用程序仅当设置了适当的选项。 请参阅的说明这些选项应该设置在调试过程中的、 如何进行设置，以及主机是否可以创建类的主机应用程序的文档。  
-  
- 如果创建了访问其他对象的对象，应尝试处理它们可能传回任何未处理的错误。 如果您不能映射中的错误代码`Err.Number`到某个你自己的错误，然后传递它们重新添加到您的对象的调用方。 应通过添加到您的错误代码来指定错误`VbObjectError`常量。 例如，如果您的错误代码为 1052年，将其分配，如下所示：  
-  
- [!code-vb[VbVbalrErrorHandling#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrErrorHandling/VB/Class1.vb#19)]  
-  
+>  在`On Error Resume Next`处理访问其他对象的`On Error GoTo`过程中生成的错误时, 构造可能更好。 在`Err`每次与对象交互后进行检查将消除代码所访问的对象的歧义。 您可以确定哪个对象放置了错误代码`Err.Number`, 以及哪个对象最初生成了错误 (在中`Err.Source`指定的对象)。
+
+## <a name="on-error-goto-0"></a>出现错误时转到0
+ `On Error GoTo 0`禁用当前过程中的错误处理。 即使过程包含编号为0的行, 它也不会将第0行指定为错误处理代码的开头。 如果没有`On Error GoTo 0`语句, 则在退出过程时, 将自动禁用错误处理程序。
+
+## <a name="on-error-goto--1"></a>Error GoTo 时-1
+ `On Error GoTo -1`禁用当前过程中的异常。 即使过程包含编号为-1 的行, 它也不会将第1行指定为错误处理代码的开头。 如果不`On Error GoTo -1`使用语句, 则在退出过程时, 将自动禁用异常。
+
+ 若要防止错误处理代码在未发生错误时运行, 请将`Exit Sub`、 `Exit Function`或`Exit Property`语句紧靠在错误处理例程之前, 如以下代码片段所示:
+
+ [!code-vb[VbVbalrErrorHandling#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrErrorHandling/VB/Class1.vb#18)]
+
+ 此处, 错误处理代码将遵循`Exit Sub`语句, 并在`End Sub`语句之前执行, 以将其与过程流区分开来。 可以在过程中的任何位置放置错误处理代码。
+
+## <a name="untrapped-errors"></a>未捕获错误
+ 当对象作为可执行文件运行时, 对象中的未捕获错误将返回给控制应用程序。 在开发环境中, 仅当设置了正确的选项时, 未捕获错误才能返回给控制应用程序。 请参阅宿主应用程序的文档, 以了解在调试期间应设置哪些选项、如何设置这些选项以及宿主是否可以创建类。
+
+ 如果创建的对象访问其他对象, 则应尝试处理它们传回的任何未处理的错误。 如果无法做到这一点, 请将中`Err.Number`的错误代码映射到你自己的错误之一, 然后将它们传递回你的对象的调用方。 应通过将错误代码添加到`VbObjectError`常量来指定错误。 例如, 如果错误代码为 1052, 请按如下所示分配:
+
+ [!code-vb[VbVbalrErrorHandling#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrErrorHandling/VB/Class1.vb#19)]
+
 > [!CAUTION]
->  系统对 Windows 动态链接库 (Dll) 的调用过程中出现错误不会引发异常并不能与 Visual Basic 错误捕获捕获。 当调用 DLL 函数，应检查成功或失败 （根据 API 规范），每个返回值和出现故障时，检查值`Err`对象的`LastDLLError`属性。  
-  
-## <a name="example"></a>示例  
- 此示例首先使用`On Error GoTo`语句指定的位置的过程中的错误处理例程。 在示例中，尝试除以零将产生错误编号为 6。 在错误处理例程中，处理该错误，然后将控件返回到导致该错误的语句。 `On Error GoTo 0`语句关闭错误捕获。 然后`On Error Resume Next`语句用于延迟错误捕获，以确保可以为某些已知的下一个语句所生成错误的上下文。 请注意，`Err.Clear`用于清除`Err`之后处理该错误的对象的属性。  
-  
- [!code-vb[VbVbalrErrorHandling#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrErrorHandling/VB/Class1.vb#20)]  
-  
-## <a name="requirements"></a>要求  
- **命名空间：**[Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
-  
- **程序集：** Visual Basic 运行库（在 Microsoft.VisualBasic.dll 中）  
-  
+>  调用 Windows 动态链接库 (Dll) 时出现系统错误, 不会引发异常, 并且不会因 Visual Basic 错误捕获而捕获。 调用 DLL 函数时, 应检查每个返回值的成功或失败情况 (根据 API 规范), 并在发生故障时检查`Err` `LastDLLError`对象的属性中的值。
+
+## <a name="example"></a>示例
+ 此示例首先使用`On Error GoTo`语句在过程中指定错误处理例程的位置。 在此示例中, 被零除的尝试将生成错误编号6。 错误在错误处理例程中进行处理, 然后将控件返回给导致错误的语句。 `On Error GoTo 0`语句会关闭错误捕获。 然后, `On Error Resume Next`使用语句将错误捕获延迟, 以便对下一条语句所生成的错误上下文具有特定的已知上下文。 请注意`Err.Clear` , 在处理错误后`Err` , 用于清除对象的属性。
+
+ [!code-vb[VbVbalrErrorHandling#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrErrorHandling/VB/Class1.vb#20)]
+
+## <a name="requirements"></a>要求
+ **命名空间：** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)
+
+ **件**Visual Basic 运行库（在 Microsoft.VisualBasic.dll 中）
+
 ## <a name="see-also"></a>请参阅
 
 - <xref:Microsoft.VisualBasic.Information.Err%2A>

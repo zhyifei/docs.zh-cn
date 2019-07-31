@@ -15,12 +15,12 @@ helpviewer_keywords:
 - XPSDrv-based printers
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
-ms.openlocfilehash: 31574df75ebd8ecde11f45dbcce86550bbb8c107
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 4f8fd92105bd5ae09e0c1daa2e0db48b74cde77c
+ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629692"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68672044"
 ---
 # <a name="printing-overview"></a>打印概述
 使用 Microsoft .NET 框架, 使用 Windows Presentation Foundation (WPF) 的应用程序开发人员具有丰富的一组新的打印和打印系统管理 Api。 在 [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] 中，还为创建 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 应用程序的开发人员和使用非托管代码的开发人员提供了这些打印系统增强功能中的某些功能。 此新功能的核心是新的 [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] 文件格式和 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 打印路径。  
@@ -39,7 +39,7 @@ ms.locfileid: "68629692"
   
  Xps 打印路径是基于 xps 打印机驱动程序模型 (XPSDrv) 构建的, 它为开发人员提供了若干优点[!INCLUDE[TLA#tla_wys](../../../../includes/tlasharptla-wys-md.md)] , 如打印、改进了颜色支持以及大大提高了打印性能。 (有关 XPSDrv 的详细信息, 请参阅[Windows 驱动程序工具包文档](/windows-hardware/drivers/)。)  
   
- XPS 文档的打印后台处理程序的操作本质上与以前版本的 Windows 相同。 但是, 它已得到增强, 除了现有[!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)]的打印路径外, 还支持 XPS 打印路径。 新的打印路径本机使用 XPS 假脱机文件。 虽然为的早期版本[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]编写的用户模式打印机驱动程序将继续工作, 但需要使用 xps 打印机驱动程序 (XPSDrv) 才能使用 xps 打印路径。  
+ XPS 文档的打印后台处理程序的操作本质上与以前版本的 Windows 相同。 但是, 它已得到增强, 除了现有的 GDI 打印路径以外, 还支持 XPS 打印路径。 新的打印路径本机使用 XPS 假脱机文件。 虽然为的早期版本[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]编写的用户模式打印机驱动程序将继续工作, 但需要使用 xps 打印机驱动程序 (XPSDrv) 才能使用 xps 打印路径。  
   
  XPS 打印路径的优点非常重要, 包括:  
   
@@ -60,9 +60,9 @@ ms.locfileid: "68629692"
 - 可扩展筛选器管道。 XPS 打印机驱动程序 (XPSDrv) 筛选器管道设计用于启用 XPS 文档的直接和可缩放打印。 有关详细信息, 请参阅[XPSDrv 打印机驱动程序](/windows-hardware/drivers/print/xpsdrv-printer-drivers)。 
   
 ### <a name="print-path-architecture"></a>打印路径体系结构  
- 尽管和[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] .NET Framework 应用程序都支持 xps [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] , Windows 窗体应用程序使用[!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)]进行 xps 转换, 以便为 xps 打印机驱动程序 (XPSDrv) 创建 xps 格式的内容。 这些应用程序不是使用 XPS 打印路径所必需的, 并且可以继续使用基于增强型图元文件 (EMF) 的打印。 但是, 大多数 XPS 功能和增强功能仅适用于面向 XPS 打印路径的应用程序。  
+ 尽管和[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] .NET Framework 应用程序都支持 xps [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] , Windows 窗体应用程序使用 GDI 进行 xps 转换, 以便为 xps 打印机驱动程序 (XPSDrv) 创建 xps 格式的内容。 这些应用程序不是使用 XPS 打印路径所必需的, 并且可以继续使用基于增强型图元文件 (EMF) 的打印。 但是, 大多数 XPS 功能和增强功能仅适用于面向 XPS 打印路径的应用程序。  
   
- 若要通过[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]和 Windows 窗体应用程序启用基于 XPSDrv 的打印机, XPS 打印机驱动程序 (XPSDrv) 支持[!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)]转换为 XPS 格式。 XPSDrv 模型还提供了用于 XPS [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)]格式的转换器, [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]以便应用程序能够打印[!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]文档。 对于[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]应用程序, 每当写入操作[!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)]的目标打印队列没有 XPSDrv 驱动程序时, <xref:System.Windows.Xps.XpsDocumentWriter>将由<xref:System.Windows.Xps.XpsDocumentWriter.Write%2A>类的和<xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A>方法自动完成 XPS 到格式的转换。 (Windows 窗体应用程序不[!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]能打印文档。)  
+ 若要通过[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]和 Windows 窗体应用程序启用基于 XPSDrv 的打印机, XPS 打印机驱动程序 (XPSDrv) 支持将 GDI 转换为 xps 格式。 XPSDrv 模型还提供了用于 XPS 到 GDI 格式的转换器, 以便[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]应用程序能够[!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]打印文档。 对于[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]应用程序, 每当写入操作的目标打印队列没有 XPSDrv 驱动<xref:System.Windows.Xps.XpsDocumentWriter.Write%2A>程序<xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A>时, 将<xref:System.Windows.Xps.XpsDocumentWriter>由类的和方法自动完成 XPS 到 GDI 格式的转换。 (Windows 窗体应用程序不[!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]能打印文档。)  
   
  下图描述了打印子系统, 并定义了提供[!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)]的部分以及由软件和硬件供应商定义的部分:  
   
@@ -106,17 +106,17 @@ ms.locfileid: "68629692"
   
 <a name="GDI_Print_Path_intro"></a>   
 ## <a name="gdi-print-path"></a>GDI 打印路径  
- 虽然[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]应用程序本身支持 xps 打印路径, [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]但 Windows 窗体应用程序也可以利用某些 XPS 功能。 Xps 打印机驱动程序 (XPSDrv) 可以将[!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)]基于的输出转换为 XPS 格式。 对于高级方案, 支持使用[MICROSOFT XPS 文档转换器 (MXDC)](/windows/desktop/printdocs/microsoft-xps-document-converter--mxdc-)对内容进行自定义转换。 同样, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]应用程序还可以<xref:System.Windows.Xps.XpsDocumentWriter.Write%2A>通过调用[!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] <xref:System.Windows.Xps.XpsDocumentWriter>类的或<xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A>方法之一, 并指定非 XpsDrv 打印机作为目标打印队列来输出到打印路径。  
+ 虽然[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]应用程序本身支持 xps 打印路径, [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]但 Windows 窗体应用程序也可以利用某些 XPS 功能。 XPS 打印机驱动程序 (XPSDrv) 可以将基于 GDI 的输出转换为 XPS 格式。 对于高级方案, 支持使用[MICROSOFT XPS 文档转换器 (MXDC)](/windows/desktop/printdocs/microsoft-xps-document-converter--mxdc-)对内容进行自定义转换。 同样, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]应用程序还可以通过调用<xref:System.Windows.Xps.XpsDocumentWriter>类的<xref:System.Windows.Xps.XpsDocumentWriter.Write%2A>或<xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A>方法之一, 并指定非 XpsDrv 打印机作为目标打印队列来输出到 GDI 打印路径。  
 
-对于不需要 XPS 功能或支持的应用程序, 当前[!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)]的打印路径保持不变。  
+对于不需要 XPS 功能或支持的应用程序, 当前的 GDI 打印路径保持不变。  
   
-- 有关[!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)]打印路径和各种 XPS 转换选项的其他参考资料, 请参阅[Microsoft XPS 文档转换器 (MXDC)](/windows/desktop/printdocs/microsoft-xps-document-converter--mxdc-)和[XPSDrv 打印机驱动程序](/windows-hardware/drivers/print/xpsdrv-printer-drivers)。  
+- 有关 GDI 打印路径和各种 XPS 转换选项的其他参考资料, 请参阅[MICROSOFT XPS 文档转换器 (MXDC)](/windows/desktop/printdocs/microsoft-xps-document-converter--mxdc-)和[XPSDrv 打印机驱动程序](/windows-hardware/drivers/print/xpsdrv-printer-drivers)。  
   
 <a name="XPS_Driver_Model_intro"></a>   
 ## <a name="xpsdrv-driver-model"></a>XPSDrv 驱动程序模型  
  XPS 打印路径在打印到启用 XPS 的打印机或驱动程序时使用 XPS 作为本机打印后台处理格式, 从而提高了后台处理程序的效率。 简化的假脱机过程消除了在文档进行后台处理之前生成中间后台打印文件 (如 EMF 数据文件) 的需要。 通过较小的假脱机文件大小, XPS 打印路径可以减少网络流量并提高打印性能。  
   
- EMF 是一种封闭格式, 它将应用程序输出表示为[!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)]对呈现服务的一系列调用。 与 EMF 不同, XPS 假脱机格式代表实际的文档, 而在输出到基于 XPS 的打印机驱动程序 (XPSDrv) 时无需进一步解释。 这些驱动程序可以用这种格式直接对数据进行操作。 此功能消除了使用 EMF 文件和[!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)]基于的打印驱动程序时所需的数据和颜色空间转换。  
+ EMF 是一种封闭格式, 它将应用程序输出表示为对用于呈现服务的 GDI 进行的一系列调用。 与 EMF 不同, XPS 假脱机格式代表实际的文档, 而在输出到基于 XPS 的打印机驱动程序 (XPSDrv) 时无需进一步解释。 这些驱动程序可以用这种格式直接对数据进行操作。 此功能消除了使用 EMF 文件和基于 GDI 的打印驱动程序时所需的数据和颜色空间转换。  
   
  当你使用面向 XPS 打印机驱动程序 (XPSDrv) 的 XPS 文档时, 通常会减少假脱机文件大小, 与 EMF 等效项相比;但是, 有一些例外情况:  
   

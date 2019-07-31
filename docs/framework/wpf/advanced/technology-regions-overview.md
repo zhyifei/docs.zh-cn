@@ -9,12 +9,12 @@ helpviewer_keywords:
 - interoperability [WPF], airspace
 - Win32 code [WPF], window regions
 ms.assetid: b7cc350f-b9e2-48b1-be14-60f3d853222e
-ms.openlocfilehash: e2c93f4471db2d72851a5d5bd8806b59a3e5ee28
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: a169064052a567694b1cbd1e2f8ac2f00b047a68
+ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629860"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68671837"
 ---
 # <a name="technology-regions-overview"></a>技术区概述
 如果在应用程序中使用多种呈现技术（例如 WPF、Win32 或 DirectX），则这些呈现技术必须共享公共顶级窗口中的呈现区域。 本主题介绍可能会对 WPF 互操作应用程序的呈现和输入造成影响的问题。  
@@ -52,13 +52,13 @@ ms.locfileid: "68629860"
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]支持 Hrgn;但是, 没有适用于此功能的托管 Api。 您可以使用平台调用和<xref:System.Windows.Interop.HwndSource>来调用相关[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]的 api。 有关详细信息，请参阅[从托管代码调用本机函数](/cpp/dotnet/calling-native-functions-from-managed-code)。  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 分层窗口在不同操作系统上具有不同的功能。 这是因为[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]使用 DirectX 呈现, 而分层窗口主要用于呈现, 而[!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)]不是针对 DirectX 呈现。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 分层窗口在不同操作系统上具有不同的功能。 这是因为[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]使用 DirectX 呈现, 而分层窗口主要是为 GDI 呈现而不是 DirectX 呈现设计的。  
   
 - [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 支持 [!INCLUDE[TLA#tla_longhorn](../../../../includes/tlasharptla-longhorn-md.md)] 及更高版本上的硬件加速分层窗口。 上[!INCLUDE[TLA2#tla_winxp](../../../../includes/tla2sharptla-winxp-md.md)]的硬件加速分层窗口需要 Microsoft directx 支持, 因此这些功能将取决于该计算机上的 Microsoft directx 版本。  
   
 - [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 不支持透明度颜色键，因为 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 无法保证准确呈现所请求的颜色，尤其当呈现采用了硬件加速时更是如此。  
   
-- 如果你的应用程序在[!INCLUDE[TLA2#tla_winxp](../../../../includes/tla2sharptla-winxp-md.md)]上运行, 在 directx 应用程序呈现时, 位于 directx 表面之上的分层窗口会闪烁。  (实际呈现序列是[!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)]隐藏分层窗口, 然后进行 DirectX 绘制, 然后[!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)]将分层窗口放回)。  非 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 分层窗口也有此限制。  
+- 如果你的应用程序在[!INCLUDE[TLA2#tla_winxp](../../../../includes/tla2sharptla-winxp-md.md)]上运行, 在 directx 应用程序呈现时, 位于 directx 表面之上的分层窗口会闪烁。  (实际呈现顺序是 Microsoft Windows 图形设备接口 (GDI) 隐藏分层窗口, 然后 DirectX 绘制, 然后 Microsoft Windows 图形设备接口 (GDI) 将分层窗口返回。  非 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 分层窗口也有此限制。  
   
 ## <a name="see-also"></a>请参阅
 

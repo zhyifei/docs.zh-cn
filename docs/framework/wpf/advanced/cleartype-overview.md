@@ -5,12 +5,12 @@ helpviewer_keywords:
 - typography [WPF], ClearType technology
 - ClearType [WPF], technology
 ms.assetid: 7e2392e0-75dc-463d-a716-908772782431
-ms.openlocfilehash: c9d86cadd5f2115d0214d9a1b1dce7e6682341e0
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 405d06a8da8ec5c428c1565bcd08236de0f1fa88
+ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629726"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68672047"
 ---
 # <a name="cleartype-overview"></a>ClearType 概述
 本主题概述了中[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]的 Microsoft ClearType 技术。  
@@ -19,11 +19,11 @@ ms.locfileid: "68629726"
 ## <a name="technology-overview"></a>技术概述  
  ClearType 是一种由[!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)]开发的软件技术, 可提高现有 lcd (液晶显示器, 如笔记本电脑屏幕、Pocket PC 屏幕和平板显示器) 上文本的可读性。  ClearType 通过访问 LCD 屏幕的每个像素中的各个垂直色带元素来工作。 在 ClearType 之前, 计算机可以显示的最小细节级别为单个像素, 但在 LCD 监视器上运行 ClearType 时, 我们现在可以将文本的功能显示为小到宽度的一小部分。 超高的分辨率增加了文本显示中细节的清晰度，使其更便于长时间阅读。  
   
- 中[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]可用的 cleartype 是最新一代的 cleartype, 它对中[!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)]找到的版本具有多项改进。  
+ 中[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]可用的 cleartype 是最新一代的 cleartype, 它对 Microsoft Windows 图形设备接口 (GDI) 中找到的版本具有多项改进。  
   
 <a name="sub-pixel_positioning"></a>   
 ## <a name="sub-pixel-positioning"></a>子像素定位  
- 对以前版本的 ClearType 的重大改进是使用子像素定位。 与中[!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)]找到的 cleartype 实现不同, 中[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]找到的 cleartype 允许标志符号在像素内开始, 而不仅仅是像素的开始边界。 由于在定位字形时的这种超高的分辨率，字形的间距和比例更加精确和一致。  
+ 对以前版本的 ClearType 的重大改进是使用子像素定位。 与在 GDI 中找到的 cleartype 实现不同, 中[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]找到的 cleartype 允许标志符号在像素内开始, 而不仅仅是像素的开始边界。 由于在定位字形时的这种超高的分辨率，字形的间距和比例更加精确和一致。  
   
  以下两个示例演示了使用子像素定位时，字形如何从任意子像素边界处开始。 左侧的示例使用较早版本的 ClearType 呈现器呈现, 该版本不采用子像素定位。 右侧的示例使用新版本的 ClearType 呈现器呈现, 使用了子像素定位。 请注意右侧图像中的每个 **e** 和 **l** 的呈现方式稍有不同，因为每一个字母都开始于一个不同的子像素。 在屏幕上以正常尺寸查看文本时，由于字形图像的高对比度，这种差异并不明显。 这种情况只能由 ClearType 中包含的复杂颜色筛选来实现。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "68629726"
   
 <a name="y-direction_antialiasing"></a>   
 ## <a name="y-direction-antialiasing"></a>Y 方向抗锯齿功能  
- 中[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] ClearType 的另一个改进是 y 方向抗锯齿。 不带 y [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)]方向抗锯齿的 ClearType 在 x 轴上提供更好的分辨率, 而不能在 y 轴上提供更好的分辨率。 在平缓曲线的顶部和底部，锯齿状边缘会降低其可读性。  
+ 中[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] ClearType 的另一个改进是 y 方向抗锯齿。 无 y 方向抗锯齿的 GDI 中的 ClearType 在 x 轴上提供更好的分辨率, 而不是 y 轴。 在平缓曲线的顶部和底部，锯齿状边缘会降低其可读性。  
   
  以下示例演示了没有 y 方向抗锯齿功能的效果。 在这个示例中，字母顶部和底部的锯齿状边缘非常明显。  
   
