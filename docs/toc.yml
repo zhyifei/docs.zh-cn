@@ -18,19 +18,6 @@
       href: standard/frameworks.md
     - name: .NET 术语表
       href: standard/glossary.md
-    - name: 体系结构指南
-      href: standard/guidance-architecture.md
-      items:
-        - name: 使用 ASP.NET Core 和 Microsoft Azure 构建新式 Web 应用程序
-          href: standard/modern-web-apps-azure-architecture/
-        - name: 使用 Azure 云和 Windows 容器更新现有 .NET 应用程序
-          href: standard/modernize-with-azure-and-containers/
-        - name: 使用 Microsoft 平台和工具容器化 Docker 应用程序生命周期
-          href: standard/containerized-lifecycle-architecture/
-        - name: .NET 微服务：适用于容器化 .NET 应用程序的体系结构
-          href: standard/microservices-architecture/
-        - name: 无服务器应用：体系结构、模式和 Azure 实现
-          href: standard/serverless-architecture/
     - name: 开放源代码库指南
       href: standard/library-guidance/
     - name: 为服务器应用选择 .NET Core 或 .NET Framework
@@ -113,6 +100,20 @@
           href: standard/native-interop/best-practices.md
         - name: 字符集和封送
           href: standard/native-interop/charset.md
+        - name: COM 互操作
+          href: standard/native-interop/cominterop.md
+          items:
+            - name: COM 包装
+              href: standard/native-interop/com-wrappers.md
+              items:
+                - name: 运行时可调用包装
+                  href: standard/native-interop/runtime-callable-wrapper.md
+                - name: COM 可调用包装
+                  href: standard/native-interop/com-callable-wrapper.md
+            - name: 为 COM 互操作限定 .NET 类型
+              href: standard/native-interop/qualify-net-types-for-interoperation.md
+        - name: 应用互操作特性
+          href: standard/native-interop/apply-interop-attributes.md
     - name: 集合和数据结构
       href: standard/collections/
     - name: .NET 中的数字
@@ -222,6 +223,10 @@
           href: core/tutorials/aspnet-core.md
         - name: 从本机代码承载 .NET Core
           href: core/tutorials/netcore-hosting.md
+    - name: 本机互操作性
+      items:
+        - name: 向 COM 公开 .NET Core 组件
+          href: core/native-interop/expose-components-to-com.md
     - name: 包、元包和框架
       href: core/packages.md
     - name: CLI 变更概述
@@ -1037,6 +1042,24 @@
     - name: 编程概念
       href: visual-basic/programming-guide/concepts/index.md
       items:
+        - name: 程序集
+          items:
+            - name: 友元程序集
+              items:
+                - name: 如何：创建未签名的友元程序集
+                  href: visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md
+                - name: 如何：创建已签名的友元程序集
+                  href: visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md
+            - name: 如何：使用命令行创建和使用程序集
+              href: visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md
+            - name: 如何：确定文件是否为程序集
+              href: visual-basic/programming-guide/concepts/assemblies-gac/how-to-determine-if-a-file-is-an-assembly.md
+            - name: 如何：加载和卸载程序集
+              href: visual-basic/programming-guide/concepts/assemblies-gac/how-to-load-and-unload-assemblies.md
+            - name: 如何：与其他应用程序共享程序集
+              href: visual-basic/programming-guide/concepts/assemblies-gac/how-to-share-an-assembly-with-other-applications.md
+            - name: 演练：嵌入托管程序集中的类型
+              href: visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md
         - name: 使用 Async 和 Await 的异步编程
           href: visual-basic/programming-guide/concepts/async/index.md
         - name: 特性
@@ -2393,5 +2416,7 @@
   href: machine-learning/index.yml
 - name: .NET for Apache Spark 指南
   href: spark/index.yml
+- name: .NET 应用程序体系结构指南
+  href: architecture/index.yml
 - name: 示例和教程
   href: samples-and-tutorials/index.md
