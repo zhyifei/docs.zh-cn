@@ -19,19 +19,20 @@ helpviewer_keywords:
 - Extensible Application Markup Language (see XAML)
 - attribute syntax [XAML]
 ms.assetid: a80db4cd-dd0f-479f-a45f-3740017c22e4
-ms.openlocfilehash: 4f3d8a9f275a41b96b6518d63552ce9873cca0fb
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: ee5318b8ba1284f2805b80b3e41fab3ae739158c
+ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400815"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68671998"
 ---
 # <a name="xaml-overview-wpf"></a>XAML 概述 (WPF)
+
 本主题介绍 XAML 语言的功能，并演示如何使用 XAML 编写 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 应用程序。 本主题专门介绍 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 实现的 XAML。 XAML 本身是一个比 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 大的语言概念。  
 
 <a name="what_is_xaml"></a>   
 ## <a name="what-is-xaml"></a>什么是 XAML？  
- XAML 是一种声明性标记语言。 应用于 .NET Framework 编程模型时, XAML 简化了为 .NET Framework [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]应用程序创建的工作。 可以在声明性 XAML 标记中创建可见的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 元素，然后使用代码隐藏文件（通过分部类定义与标记相连接）将 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 定义与运行时逻辑相分离。 XAML 直接以程序集中定义的一组特定后备类型表示对象的实例化。 这与大多数其他标记语言不同，后者通常是与后备类型系统没有此类直接关系的解释语言。 XAML 实现了一个工作流，通过此工作流，各方可以采用不同的工具来处理 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 和应用程序的逻辑。  
+ XAML 是一种声明性标记语言。 应用于 .NET Framework 编程模型时, XAML 简化了为 .NET Framework [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]应用程序创建的工作。 可以在声明性[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] XAML 标记中创建可见元素, 然后使用通过分部[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]类定义联接到标记的代码隐藏文件, 将定义与运行时逻辑分离。 XAML 直接以程序集中定义的一组特定后备类型表示对象的实例化。 这与大多数其他标记语言不同，后者通常是与后备类型系统没有此类直接关系的解释语言。 XAML 实现了一个工作流，通过此工作流，各方可以采用不同的工具来处理 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 和应用程序的逻辑。  
   
  以文本表示时，XAML 文件是通常具有 `.xaml` 扩展名的 XML 文件。 可通过任何 XML 编码对文件进行编码，但通常以 UTF-8 编码。  
   
@@ -104,7 +105,7 @@ ms.locfileid: "68400815"
   
  作为 XAML 语言的规则，XAML 内容属性的值必须完全在该对象元素的其他任何属性元素之前或之后指定。 例如，以下标记不会进行编译：  
   
-```  
+```xaml
 <Button>I am a   
   <Button.Background>Blue</Button.Background>  
   blue button</Button>  
@@ -188,7 +189,7 @@ ms.locfileid: "68400815"
  [!code-xaml[XAMLOvwSupport#MarginVerbose](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page7.xaml#marginverbose)]  
   
 > [!NOTE]
->  还有有限数量的对象, 其中类型转换是将属性设置为该类型而不涉及子类的唯一公开方法, 因为该类型本身不具有无参数的构造函数。 例如, <xref:System.Windows.Input.Cursor>。  
+> 还有有限数量的对象, 其中类型转换是将属性设置为该类型而不涉及子类的唯一公开方法, 因为该类型本身不具有无参数的构造函数。 例如, <xref:System.Windows.Input.Cursor>。  
   
  若要深入了解如何支持类型转换及其在特性语法上的应用，请参阅 [TypeConverters 和 XAML](typeconverters-and-xaml.md)。  
   
@@ -199,7 +200,7 @@ ms.locfileid: "68400815"
  [!code-xaml[XAMLOvwSupport#RootOnly](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page2.xaml#rootonly)]  
 [!code-xaml[XAMLOvwSupport#RootOnly2](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page2.xaml#rootonly2)]  
   
- 根元素还包含特性 `xmlns` 和 `xmlns:x`。 这些特性向 XAML 处理器指示哪些 XAML 命名空间包含标记将其作为元素引用的后备类型的类型定义。           `xmlns` 特性明确指示默认的 XAML 命名空间。 在默认的 XAML 命名空间中，可以不使用前缀指定标记中的对象元素。 对于大多数 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序方案以及 [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)] 的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 部分中给出的几乎所有示例，默认的 XAML 命名空间均映射到 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 命名空间 [!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)]。           `xmlns:x` 特性指示另一个 XAML 命名空间，该命名空间映射 XAML 语言命名空间[!INCLUDE[TLA#tla_xamlxmlnsv1](../../../../includes/tlasharptla-xamlxmlnsv1-md.md)]。  
+ 根元素还包含特性 `xmlns` 和 `xmlns:x`。 这些特性向 XAML 处理器指示哪些 XAML 命名空间包含标记将其作为元素引用的后备类型的类型定义。 `xmlns` 特性明确指示默认的 XAML 命名空间。 在默认的 XAML 命名空间中，可以不使用前缀指定标记中的对象元素。 对于大多数 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序方案以及 [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)] 的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 部分中给出的几乎所有示例，默认的 XAML 命名空间均映射到 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 命名空间 [!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)]。 `xmlns:x` 特性指示另一个 XAML 命名空间，该命名空间映射 XAML 语言命名空间[!INCLUDE[TLA#tla_xamlxmlnsv1](../../../../includes/tlasharptla-xamlxmlnsv1-md.md)]。  
   
  使用 `xmlns` 定义用法范围和名称范围映射的做法符合 XML 1.0 规范。 XAML 名称范围与 XML 名称范围的不同仅在于：XAML 名称范围还包含有关进行类型解析和分析 XAML 时名称范围的元素如何受类型支持的信息。  
   
@@ -214,7 +215,7 @@ ms.locfileid: "68400815"
   
 - [x:Class](../../xaml-services/x-class-directive.md):指定为 XAML 页提供代码隐藏的类的 CLR 命名空间和类名。 必须具有这样一个类才能支持每个 WPF 编程模型的代码隐藏，因此即使没有资源，也几乎总是能看到映射的 `x:`。  
   
-- [x:Name](../../xaml-services/x-name-directive.md):在处理对象元素后, 为运行时代码中存在的实例指定运行时对象名称。 通常，经常为 [x:Name](../../xaml-services/x-name-directive.md) 使用 WPF 定义的等效属性。 此类属性特定映射到 CLR 后备属性，因此更便于进行应用程序编程，在应用程序编程中，经常使用运行时代码从初始化的 XAML 中查找命名元素。 最常见的此类属性<xref:System.Windows.FrameworkElement.Name%2A?displayProperty=nameWithType>是。 当等效的 WPF [](../../xaml-services/x-name-directive.md)框架级<xref:System.Windows.FrameworkElement.Name%2A>属性在特定类型中不受支持时, 仍可以使用 x:Name。 某些动画方案中会发生这种情况。  
+- [x:Name](../../xaml-services/x-name-directive.md):在处理对象元素后, 为运行时代码中存在的实例指定运行时对象名称。 通常，经常为 [x:Name](../../xaml-services/x-name-directive.md) 使用 WPF 定义的等效属性。 此类属性特定映射到 CLR 后备属性，因此更便于进行应用程序编程，在应用程序编程中，经常使用运行时代码从初始化的 XAML 中查找命名元素。 最常见的此类属性<xref:System.Windows.FrameworkElement.Name%2A?displayProperty=nameWithType>是。 当等效的 WPF 框架级<xref:System.Windows.FrameworkElement.Name%2A>属性在特定类型中不受支持时, 仍可以使用 [x:Name](../../xaml-services/x-name-directive.md)。 某些动画方案中会发生这种情况。  
   
 - [x:Static](../../xaml-services/x-static-markup-extension.md):启用一个引用, 该引用返回一个不是与 XAML 兼容的属性的静态值。  
   
@@ -228,7 +229,7 @@ ms.locfileid: "68400815"
   
  下面是一个说明自定义前缀如何在 XAML 标记中工作的基本示例。 前缀 `custom` 在根元素标记中定义，并映射为打包在应用程序中并随应用程序一起提供的特定程序集。 此程序集包含 `NumericUpDown` 类型，实现该类型的目的是在支持常规 XAML 用法之外，还可以使用允许在 WPF XAML 内容模型的此特定点执行插入的类继承。 通过使用该前缀，此 `NumericUpDown` 控件的一个实例声明为对象元素，以便 XAML 分析程序可找到包含该类型的 XAML 命名空间，从而找到包含该类型定义的后备程序集的位置。  
   
-```  
+```xaml
 <Page  
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"   
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"   
