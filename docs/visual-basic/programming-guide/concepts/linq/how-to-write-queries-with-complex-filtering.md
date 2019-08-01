@@ -1,15 +1,15 @@
 ---
-title: 如何：使用复杂筛选 (Visual Basic) 编写查询
+title: 如何：编写带有复杂筛选的查询 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: bf286ffc-7990-4b00-a4eb-ee3d70129950
-ms.openlocfilehash: ac58394619b83e2b862e87926f0b6a722fdc3c7e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0459c9549238257c0a76276a1d10f6d370144214
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61614839"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68709854"
 ---
-# <a name="how-to-write-queries-with-complex-filtering-visual-basic"></a>如何：使用复杂筛选 (Visual Basic) 编写查询
+# <a name="how-to-write-queries-with-complex-filtering-visual-basic"></a>如何：编写带有复杂筛选的查询 (Visual Basic)
 有时，您需要编写使用复杂筛选器的 LINQ to XML 查询。 例如，您可能必须查找其子元素具有特定名称和值的所有元素。 本主题提供一个编写使用复杂筛选的查询的示例。  
   
 ## <a name="example"></a>示例  
@@ -17,7 +17,7 @@ ms.locfileid: "61614839"
   
  此示例使用下面的 XML 文档：[示例 XML 文件：多个采购订单 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md)。  
   
- 有关详细信息`Any`运算符，请参阅[限定符运算 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/quantifier-operations.md)。  
+ 有关`Any`运算符的详细信息, 请参阅[限定符运算 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/quantifier-operations.md)。  
   
 ```vb  
 Dim root As XElement = XElement.Load("PurchaseOrders.xml")  
@@ -43,7 +43,7 @@ Next
 ```  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何对命名空间中的 XML 进行同样的查询。 有关详细信息，请参阅[使用 XML 命名空间 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)。  
+ 下面的示例演示如何对命名空间中的 XML 进行同样的查询。 有关详细信息, 请参阅[命名空间概述 (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)。  
   
  此示例使用下面的 XML 文档：[示例 XML 文件：命名空间中的多个采购订单](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-in-a-namespace.md)。  
   
@@ -84,5 +84,5 @@ End Module
 - [XML 子轴属性](../../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md)
 - [XML 特性轴属性](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)
 - [XML 值属性](../../../../visual-basic/language-reference/xml-axis/xml-value-property.md)
-- [投影运算 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projection-operations.md)
+- [投影操作 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projection-operations.md)
 - [限定符运算 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/quantifier-operations.md)

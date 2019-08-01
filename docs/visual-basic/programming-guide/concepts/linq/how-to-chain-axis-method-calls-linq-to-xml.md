@@ -2,12 +2,12 @@
 title: 如何：链接轴方法调用 (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: e4e22942-39bd-460f-b3c0-9f09e53d3aa9
-ms.openlocfilehash: 2b74bcd9b9b61ddbfddcdbdf4c48af6b2fbd68a2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8c607915d83c49958e3aa86c9625fa1311a2274b
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855265"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68709838"
 ---
 # <a name="how-to-chain-axis-method-calls-linq-to-xml-visual-basic"></a>如何：链接轴方法调用 (LINQ to XML) (Visual Basic)
 一个在代码中常用的模式是调用轴方法，然后调用一个扩展方法轴。  
@@ -86,7 +86,7 @@ Next
 ```  
   
 ## <a name="example"></a>示例  
- 下面的示例演示针对命名空间中的 XML 的相同技术。 有关详细信息，请参阅[使用 XML 命名空间 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)。  
+ 下面的示例演示针对命名空间中的 XML 的相同技术。 有关详细信息, 请参阅[命名空间概述 (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)。  
   
  此示例使用下面的 XML 文档：[示例 XML 文件：命名空间中的多个采购订单](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-in-a-namespace.md)。  
   

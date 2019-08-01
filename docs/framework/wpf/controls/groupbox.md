@@ -7,17 +7,17 @@ helpviewer_keywords:
 - controls [WPF], GroupBox
 - GroupBox control [WPF]
 ms.assetid: 1f4ed3d9-a171-4623-bc4f-3314e3576271
-ms.openlocfilehash: 6baee12c04e93a94736acacb1e4774b3cc20a3ac
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1808fefab2d15ce57da4b381f258dc8e5207e358
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62008717"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68709106"
 ---
 # <a name="groupbox"></a>GroupBox
-<xref:System.Windows.Controls.GroupBox>控件是<xref:System.Windows.Controls.HeaderedContentControl>提供的名为的容器[!INCLUDE[TLA#tla_gui](../../../../includes/tlasharptla-gui-md.md)]内容。  
+控件是一个<xref:System.Windows.Controls.HeaderedContentControl> , 它为图形用户界面 (GUI) 内容提供标题容器。 <xref:System.Windows.Controls.GroupBox>  
   
- 如下图所示<xref:System.Windows.Controls.GroupBox>，其中包含<xref:System.Windows.Controls.TabControl>和一个<xref:System.Windows.Controls.Button>括在<xref:System.Windows.Controls.StackPanel>。  
+ 下图显示<xref:System.Windows.Controls.GroupBox>了<xref:System.Windows.Controls.TabControl>包含的和<xref:System.Windows.Controls.Button> <xref:System.Windows.Controls.StackPanel>的。  
   
  ![显示分组框的屏幕截图。](./media/groupbox/groupbox-tab-button-stackpanel.jpg)  
   

@@ -18,12 +18,12 @@ helpviewer_keywords:
 - nested message processing [WPF]
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
-ms.openlocfilehash: 2667417c5d25821f2fed2101e1d485280e171eab
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 6bea25fbd321eead9137caaeb212b76a9d528e88
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400645"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710398"
 ---
 # <a name="threading-model"></a>线程处理模型
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 旨在帮助开发人员处理复杂的线程处理问题。 因此, 大多数[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]开发人员无需编写使用多个线程的接口。 由于多线程程序既复杂又难以调试，因此当存在单线程解决方案时，应避免使用多线程程序。  
@@ -56,7 +56,7 @@ ms.locfileid: "68400645"
   
 <a name="prime_number"></a>   
 ### <a name="a-single-threaded-application-with-a-long-running-calculation"></a>具有长时间运行计算的单线程应用程序  
- 大多数[!INCLUDE[TLA#tla_gui#plural](../../../../includes/tlasharptla-guisharpplural-md.md)]情况下, 在等待为响应用户交互而生成的事件时, 会花费大量时间空闲。 对此空闲时间进行仔细编程时, 可以建设性地使用, 而不会影响[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]的响应能力。 线程模型不允许输入中断[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]线程中发生的操作。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 这意味着, 你必须确保<xref:System.Windows.Threading.Dispatcher>定期返回以处理挂起输入事件, 然后才能使其过时。  
+ 大多数图形用户界面 (Gui) 在等待为响应用户交互而生成的事件时, 花费了大量时间空闲。 对此空闲时间进行仔细编程时, 可以建设性地使用, 而不会影响[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]的响应能力。 线程模型不允许输入中断[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]线程中发生的操作。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 这意味着, 你必须确保<xref:System.Windows.Threading.Dispatcher>定期返回以处理挂起输入事件, 然后才能使其过时。  
   
  请看下面的示例：  
   
@@ -103,7 +103,7 @@ ms.locfileid: "68400645"
   
 <a name="weather_sim"></a>   
 ### <a name="handling-a-blocking-operation-with-a-background-thread"></a>使用后台线程处理阻塞操作  
- 在图形应用程序中处理阻塞操作可能很困难。 我们不希望从事件处理程序调用阻塞方法，因为应用程序可能看上去冻结。 我们可以使用单独的线程来处理这些操作, 但完成此操作后, 必须与[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]线程同步, 因为我们无法从我们的[!INCLUDE[TLA2#tla_gui](../../../../includes/tla2sharptla-gui-md.md)]工作线程直接修改。 我们可以使用<xref:System.Windows.Threading.Dispatcher.Invoke%2A>或<xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> <xref:System.Windows.Threading.Dispatcher>将委托插入到[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]线程的中。 最终, 将执行这些委托并带有修改[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]元素的权限。  
+ 在图形应用程序中处理阻塞操作可能很困难。 我们不希望从事件处理程序调用阻塞方法，因为应用程序可能看上去冻结。 我们可以使用单独的线程来处理这些操作, 但完成此操作后, 必须与[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]线程同步, 因为我们无法从我们的工作线程直接修改 GUI。 我们可以使用<xref:System.Windows.Threading.Dispatcher.Invoke%2A>或<xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> <xref:System.Windows.Threading.Dispatcher>将委托插入到[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]线程的中。 最终, 将执行这些委托并带有修改[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]元素的权限。  
   
  在本例中，我们模拟了一个检索天气预报的远程过程调用。 我们使用单独的工作线程执行此调用, 并在完成时在<xref:System.Windows.Threading.Dispatcher> [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]线程的中计划更新方法。  
   

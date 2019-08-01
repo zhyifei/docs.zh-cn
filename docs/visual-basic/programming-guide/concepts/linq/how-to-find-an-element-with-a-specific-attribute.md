@@ -1,15 +1,15 @@
 ---
-title: 如何：查找具有特定属性 (Visual Basic 中) 的元素
+title: 如何：查找具有特定特性的元素 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 59fb7c19-d42f-40eb-8cf8-f1d5b9658eb7
-ms.openlocfilehash: d4af129cdb7e9049be747b9eb29aaa26ef5d8188
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 615dc9bb4ee9b90c0e7b9ecb86d9342bc688f3b1
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855615"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710278"
 ---
-# <a name="how-to-find-an-element-with-a-specific-attribute-visual-basic"></a>如何：查找具有特定属性 (Visual Basic 中) 的元素
+# <a name="how-to-find-an-element-with-a-specific-attribute-visual-basic"></a>如何：查找具有特定特性的元素 (Visual Basic)
 本主题演示如何查找其属性具有特定值的元素。  
   
 ## <a name="example"></a>示例  
@@ -41,10 +41,10 @@ Next
 </Address>  
 ```  
   
- 请注意，此示例中使用[XML 子轴属性](../../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md)，则[XML 特性轴属性](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)，并[XML 值属性](../../../../visual-basic/language-reference/xml-axis/xml-value-property.md)。  
+ 请注意, 此示例使用[Xml 子轴属性](../../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md)、 [xml 属性轴属性](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)和[xml 值属性](../../../../visual-basic/language-reference/xml-axis/xml-value-property.md)。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何对命名空间中的 XML 进行同样的查询。 有关详细信息，请参阅[使用 XML 命名空间 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)。  
+ 下面的示例演示如何对命名空间中的 XML 进行同样的查询。 有关详细信息, 请参阅[命名空间概述 (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)。  
   
  此示例使用下面的 XML 文档：[示例 XML 文件：命名空间中的典型采购单](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md)。  
   
@@ -84,4 +84,4 @@ End Module
 - <xref:System.Xml.Linq.XContainer.Elements%2A>
 - [基本查询 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
 - [标准查询运算符概述 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [投影运算 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projection-operations.md)
+- [投影操作 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projection-operations.md)

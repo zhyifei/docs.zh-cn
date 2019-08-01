@@ -6,20 +6,20 @@ helpviewer_keywords:
 - UI Automation, Window control pattern
 - Window control pattern
 ms.assetid: a28cb286-296e-4a62-b4cb-55ad636ebccc
-ms.openlocfilehash: 07b17ae1ed89c84bac4ac40e9934a0d36fda357f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9cab4dbbcd3302a6e74783eaefdbbd8463332224
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625842"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710245"
 ---
 # <a name="implementing-the-ui-automation-window-control-pattern"></a>实现 UI 自动化 Window 控件模式
 > [!NOTE]
->  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，请参阅[Windows 自动化 API:UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关的最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], 请[参阅 Windows 自动化 API:UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  本主题介绍实现 <xref:System.Windows.Automation.Provider.IWindowProvider>的准则和约定，包括有关 <xref:System.Windows.Automation.WindowPattern> 属性、方法和事件的信息。 本主题的结尾列出了指向其他参考资料的链接。  
   
- <xref:System.Windows.Automation.WindowPattern> 控件模式用于支持在传统的 [!INCLUDE[TLA#tla_gui](../../../includes/tlasharptla-gui-md.md)]内提供基于基本窗口的功能的控件。 必须实现此控件模式的控件示例包括顶级应用程序窗口、 [!INCLUDE[TLA#tla_mdi](../../../includes/tlasharptla-mdi-md.md)] 子窗口、大小可调的拆分窗格控件、模式对话框和气球状帮助窗口。  
+ <xref:System.Windows.Automation.WindowPattern>控件模式用于支持在传统图形用户界面 (GUI) 中提供基于窗口的基本功能的控件。 必须实现此控件模式的控件示例包括顶级应用程序窗口、 [!INCLUDE[TLA#tla_mdi](../../../includes/tlasharptla-mdi-md.md)] 子窗口、大小可调的拆分窗格控件、模式对话框和气球状帮助窗口。  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
 ## <a name="implementation-guidelines-and-conventions"></a>实现准则和约定  
@@ -41,17 +41,17 @@ ms.locfileid: "64625842"
   
 |必需的成员|成员类型|说明|  
 |---------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.InteractionState%2A>|属性|None|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.IsModal%2A>|属性|None|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.IsTopmost%2A>|属性|None|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.Maximizable%2A>|属性|None|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.Minimizable%2A>|属性|None|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.VisualState%2A>|属性|None|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.Close%2A>|方法|None|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A>|方法|None|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.InteractionState%2A>|Property|None|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.IsModal%2A>|Property|None|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.IsTopmost%2A>|属性|无|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.Maximizable%2A>|Property|无|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.Minimizable%2A>|Property|None|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.VisualState%2A>|Property|无|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.Close%2A>|方法|无|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A>|方法|无|  
 |<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A>|方法|None|  
-|<xref:System.Windows.Automation.WindowPattern.WindowClosedEvent>|Event|None|  
-|<xref:System.Windows.Automation.WindowPattern.WindowOpenedEvent>|Event|None|  
+|<xref:System.Windows.Automation.WindowPattern.WindowClosedEvent>|Event|无|  
+|<xref:System.Windows.Automation.WindowPattern.WindowOpenedEvent>|Event|无|  
 |<xref:System.Windows.Automation.WindowInteractionState>|Event|不保证为 <xref:System.Windows.Automation.WindowInteractionState.ReadyForUserInteraction>|  
   
 <a name="Exceptions"></a>   
@@ -60,8 +60,8 @@ ms.locfileid: "64625842"
   
 |异常类型|条件|  
 |--------------------|---------------|  
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A><br /><br /> -当控件不支持请求的行为。|  
-|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A><br /><br /> -当参数不是有效数字。|  
+|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A><br /><br /> -控件不支持请求的行为时。|  
+|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A><br /><br /> -当参数不是有效的数字时。|  
   
 ## <a name="see-also"></a>请参阅
 

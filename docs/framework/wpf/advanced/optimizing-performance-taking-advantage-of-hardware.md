@@ -9,18 +9,18 @@ helpviewer_keywords:
 - graphics [WPF], rendering tiers
 - software rendering pipeline [WPF]
 ms.assetid: bfb89bae-7aab-4cac-a26c-a956eda8fce2
-ms.openlocfilehash: 7acf5a3f48ac4987037873c63111d988ec3a4979
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: a47a4aae785d817904c30fe7c865a1c033eb3cca
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629646"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68709226"
 ---
 # <a name="optimizing-performance-taking-advantage-of-hardware"></a>优化性能:利用硬件
 的[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]内部体系结构有两个渲染管道: 硬件和软件。 本主题提供有关这些渲染管道的信息, 以帮助您确定应用程序的性能优化。  
   
 ## <a name="hardware-rendering-pipeline"></a>硬件呈现管道  
- 确定[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]性能的最重要因素之一在于它是呈现绑定的 (需要呈现的像素越多), 性能开销就越大。 但是, 可以卸载到的[!INCLUDE[TLA#tla_gpu](../../../../includes/tlasharptla-gpu-md.md)]呈现越多, 可获得的性能优势就越多。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序硬件呈现管道充分利用了 microsoft directx 功能, 这些功能支持最少的 microsoft directx 7.0 版硬件。 可以通过支持 Microsoft DirectX 7.0 版和 PixelShader 2.0 + 功能的硬件来获得进一步的优化。  
+ 确定[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]性能的最重要因素之一在于它是呈现绑定的 (需要呈现的像素越多), 性能开销就越大。 但是, 可以卸载到图形处理单元 (GPU) 的渲染越多, 可获得的性能优势就越多。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序硬件呈现管道充分利用了 microsoft directx 功能, 这些功能支持最少的 microsoft directx 7.0 版硬件。 可以通过支持 Microsoft DirectX 7.0 版和 PixelShader 2.0 + 功能的硬件来获得进一步的优化。  
   
 ## <a name="software-rendering-pipeline"></a>软件呈现管道  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]软件呈现管道完全受 CPU 限制。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]利用 CPU 中的 SSE 和 SSE2 指令集来实现经过优化且功能完备的软件光栅。 当应用程序功能不能使用硬件呈现管道进行呈现时, 无缝回退到软件。  
