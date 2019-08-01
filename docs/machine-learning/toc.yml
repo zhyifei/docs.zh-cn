@@ -23,6 +23,8 @@
       href: tutorials/image-classification.md
     - name: 产品销售分析（异常情况检测）
       href: tutorials/sales-anomaly-detection.md
+    - name: 检测图像中的对象 (对象检测)
+      href: tutorials/object-detection-onnx.md
 - name: 操作指南
   items:
     - name: 加载数据
