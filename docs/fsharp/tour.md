@@ -17,7 +17,7 @@ F# 中有两个主要概念：函数和类型。  本文主要介绍该语言中
 
 ## <a name="executing-the-code-online"></a>在线执行代码
 
-如果未在计算机F#上安装, 则可以在浏览器[ F# ](https://tryfsharp.fsbolero.io/)中执行 WebAssembly 中的所有示例。 Fable 是一种用于直接在浏览器中执行 F# 的方言。 若要在 REPL 中查看以下示例，请查看 Fable REPL 左侧菜单栏中的“示例”>“了解”>“F# 概览”  。
+如果未在计算机F#上安装, 则可以在浏览器[ F# ](https://tryfsharp.fsbolero.io/)中执行 WebAssembly 中的所有示例。 Fable 是一种用于直接在浏览器中执行 F# 的方言。 若要在 REPL 中查看以下示例，请查看 Fable REPL 左侧菜单栏中的“示例”>“了解”>“F# 概览” 。
 
 ## <a name="functions-and-modules"></a>函数和模块
 
