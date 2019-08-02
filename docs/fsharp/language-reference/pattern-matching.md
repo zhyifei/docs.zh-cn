@@ -2,12 +2,12 @@
 title: 模式匹配
 description: 了解如何使用模式F#将数据与逻辑结构进行比较、将数据分解为构成部分或从数据中提取信息。
 ms.date: 05/16/2016
-ms.openlocfilehash: 156bb670e0c494a3d515eab03e2e4672d6743dec
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 60e0d6cd550724bc8448fddd7b163c2c9f1637be
+ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627299"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68733469"
 ---
 # <a name="pattern-matching"></a>模式匹配
 
@@ -15,9 +15,9 @@ ms.locfileid: "68627299"
 
 ## <a name="remarks"></a>备注
 
-在许多语言构造 (如`match`表达式) 中使用模式。 当您处理`let`绑定、lambda 表达式和`try...with`与表达式关联的异常处理程序中的函数的参数时, 将使用这些参数。 有关详细信息, 请参阅[Match 表达式](match-expressions.md)、 [let 绑定](./functions/let-bindings.md)、 [Lambda 表达式:`fun` 关键字](./functions/lambda-expressions-the-fun-keyword.md)和异常[:`try...with`表达式。](/.exception-handling/the-try-with-expression.md)
+在许多语言构造 (如`match`表达式) 中使用模式。 当您处理`let`绑定、lambda 表达式和`try...with`与表达式关联的异常处理程序中的函数的参数时, 将使用这些参数。 有关详细信息, 请参阅[Match 表达式](match-expressions.md)、 [let 绑定](./functions/let-bindings.md)、 [Lambda 表达式:`fun` 关键字](./functions/lambda-expressions-the-fun-keyword.md)和异常[:`try...with`表达式。](./exception-handling/the-try-with-expression.md)
 
-例如, 在`match`表达式中, 管道符号*后跟*。
+例如, 在`match`表达式中, 管道符号后跟。
 
 ```fsharp
 match expression with
@@ -29,7 +29,7 @@ match expression with
 
 下表显示了支持的模式。 在运行时, 将按照表中列出的顺序针对以下每个模式对输入进行测试, 并以递归方式应用模式: 在代码中显示时, 从第一个到最后一个, 以及从左到右的每行模式。
 
-|名称|描述|示例|
+|name|描述|示例|
 |----|-----------|-------|
 |常量模式|任何数值、字符或字符串文本、枚举常量或定义的文本标识符|`1.0`, `"test"`, `30`, `Color.Red`|
 |标识符模式|可区分联合、异常标签或活动模式用例的 case 值|`Some(x)`<br /><br />`Failure(msg)`|
@@ -103,7 +103,7 @@ match shape with
 
 使用活动模式可以定义更复杂的自定义模式匹配。 有关活动模式的详细信息, 请参阅[活动模式](active-patterns.md)。
 
-标识符为异常的情况在异常处理程序上下文的模式匹配中使用。 有关异常处理中的模式匹配的信息, [请参阅异常:`try...with`表达式。](/.exception-handling/the-try-with-expression.md)
+标识符为异常的情况在异常处理程序上下文的模式匹配中使用。 有关异常处理中的模式匹配的信息, [请参阅异常:`try...with`表达式。](./exception-handling/the-try-with-expression.md)
 
 ## <a name="variable-patterns"></a>变量模式
 

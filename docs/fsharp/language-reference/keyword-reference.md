@@ -2,12 +2,12 @@
 title: 关键字参考
 description: 查找有关所有F#语言关键字的信息的链接。
 ms.date: 05/16/2016
-ms.openlocfilehash: f845db74fd7ffd4164cc74acd192e39df7d2d6b1
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 680b270a99eff7aa98652579d2fd31b4b05080ca
+ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627628"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68733486"
 ---
 # <a name="keyword-reference"></a>关键字参考
 
@@ -35,10 +35,10 @@ ms.locfileid: "68627628"
 |`elif`|[条件表达式：`if...then...else`](conditional-expressions-if-then-else.md)|用于条件分支。 的缩写形式`else if`。|
 |`else`|[条件表达式：`if...then...else`](conditional-expressions-if-then-else.md)|用于条件分支。|
 |`end`|[结构](structures.md)<br /><br />[可区分联合](discriminated-unions.md)<br /><br />[记录](records.md)<br /><br />[类型扩展](type-extensions.md)<br /><br />[详细语法](verbose-syntax.md)|在类型定义和类型扩展中, 指示成员定义节的结尾。<br /><br />在详细语法中, 用于指定以`begin`关键字开头的代码块的结尾。|
-|`exception`|[异常处理](/.exception-handling/index.md)<br /><br />[异常类型](/.exception-handling/exception-types.md)|用于声明异常类型。|
+|`exception`|[异常处理](./exception-handling/index.md)<br /><br />[异常类型](./exception-handling/exception-types.md)|用于声明异常类型。|
 |`extern`|[外部函数](./functions/external-functions.md)|指示已声明的程序元素是在另一个二进制文件或程序集中定义的。|
 |`false`|[基元类型](primitive-types.md)|用作布尔文本。|
-|`finally`|[异常：`try...finally`表达式](/.exception-handling/the-try-finally-expression.md)|与`try`结合使用可引入代码块, 无论是否发生异常都将执行。|
+|`finally`|[异常：`try...finally`表达式](./exception-handling/the-try-finally-expression.md)|与`try`结合使用可引入代码块, 无论是否发生异常都将执行。|
 |`fixed`|[小数点](fixed.md)|用于在堆栈上 "固定" 指针, 以防止它被垃圾回收。|
 |`for`|[循环`for...to`表达式](loops-for-to-expression.md)<br /><br />[循环：for...in 表达式](loops-for-in-expression.md)|用于循环构造。|
 |`fun`|[Lambda 表达式:`fun` 关键字](./functions/lambda-expressions-the-fun-keyword.md)|用于 lambda 表达式 (也称为匿名函数)。|
@@ -62,7 +62,7 @@ ms.locfileid: "68627628"
 |`new`|[构造函数](./members/constructors.md)<br /><br />[约束](./generics/constraints.md)|用于声明、定义或调用创建或可创建对象的构造函数。<br /><br />还在泛型参数约束中使用, 以指示类型必须具有特定构造函数。|
 |`not`|[符号和运算符参考](./symbol-and-operator-reference/index.md)<br /><br />[约束](./generics/constraints.md)|实际上不是关键字。 但是, `not struct`组合用作泛型参数约束。|
 |`null`|[Null 值](./values/null-values.md)<br /><br />[约束](./generics/constraints.md)|指示缺少对象。<br /><br />还在泛型参数约束中使用。|
-|`of`|[可区分联合](discriminated-unions.md)<br /><br />[委托](delegates.md)<br /><br />[异常类型](/.exception-handling/exception-types.md)|在可区分联合中用于指示值类别的类型, 以及委托和异常声明中的类型。|
+|`of`|[可区分联合](discriminated-unions.md)<br /><br />[委托](delegates.md)<br /><br />[异常类型](./exception-handling/exception-types.md)|在可区分联合中用于指示值类别的类型, 以及委托和异常声明中的类型。|
 |`open`|[导入声明：`open` 关键字](import-declarations-the-open-keyword.md)|用于使命名空间或模块的内容在无限制的情况下可用。|
 |`or`|[符号和运算符参考](./symbol-and-operator-reference/index.md)<br /><br />[约束](./generics/constraints.md)|作为布尔`or`运算符与布尔条件一起使用。 等效于 `||`。<br /><br />还在成员约束中使用。|
 |`override`|[成员](./members/index.md)|用于实现与基版本不同的抽象或虚方法的版本。|
@@ -77,7 +77,7 @@ ms.locfileid: "68627628"
 |`then`|[条件表达式：`if...then...else`](conditional-expressions-if-then-else.md)<br /><br />[构造函数](./members/constructors.md)|用于条件表达式。<br /><br />还用于在对象构造后执行副作用。|
 |`to`|[循环`for...to`表达式](loops-for-to-expression.md)|`for`用于循环以指示范围。|
 |`true`|[基元类型](primitive-types.md)|用作布尔文本。|
-|`try`|[异常：Try .。。with 表达式](/.exception-handling/the-try-with-expression.md)<br /><br />[异常：Try .。。finally 表达式](/.exception-handling/the-try-finally-expression.md)|用于引入可能生成异常的代码块。 与`with` 或`finally`一起使用。|
+|`try`|[异常：Try .。。with 表达式](./exception-handling/the-try-with-expression.md)<br /><br />[异常：Try .。。finally 表达式](./exception-handling/the-try-finally-expression.md)|用于引入可能生成异常的代码块。 与`with` 或`finally`一起使用。|
 |`type`|[F# 类型](fsharp-types.md)<br /><br />[类](classes.md)<br /><br />[记录](records.md)<br /><br />[结构](structures.md)<br /><br />[枚举](enumerations.md)<br /><br />[可区分联合](discriminated-unions.md)<br /><br />[类型缩写](type-abbreviations.md)<br /><br />[度量单位](units-of-measure.md)|用于声明类、记录、结构、可区分联合、枚举类型、度量单位或类型缩写。|
 |`upcast`|[强制转换和转换](casting-and-conversions.md)|用于转换为继承链中更高的类型。|
 |`use`|[资源管理:`use` 关键字](resource-management-the-use-keyword.md)|`let`对于需要`Dispose`调用以释放资源的值, 使用而不是。|
@@ -86,7 +86,7 @@ ms.locfileid: "68627628"
 |`void`|[基元类型](primitive-types.md)|指示 .net `void`类型。 与其他 .NET 语言互操作时使用。|
 |`when`|[约束](./generics/constraints.md)|用于模式匹配的布尔条件 (*临界*条件) 以及为泛型类型参数引入约束子句。|
 |`while`|[循环`while...do`表达式](loops-while-do-expression.md)|引入循环构造。|
-|`with`|[match 表达式](match-expressions.md)<br /><br />[对象表达式](object-expressions.md)<br /><br />[复制和更新记录表达式](copy-and-update-record-expressions.md)<br /><br />[类型扩展](type-extensions.md)<br /><br />[异常：`try...with`表达式](/.exception-handling/the-try-with-expression.md)|在模式匹配表达式`match`中与关键字一起使用。 还在对象表达式、记录复制表达式和类型扩展中用于引入成员定义, 并用于引入异常处理程序。|
+|`with`|[match 表达式](match-expressions.md)<br /><br />[对象表达式](object-expressions.md)<br /><br />[复制和更新记录表达式](copy-and-update-record-expressions.md)<br /><br />[类型扩展](type-extensions.md)<br /><br />[异常：`try...with`表达式](./exception-handling/the-try-with-expression.md)|在模式匹配表达式`match`中与关键字一起使用。 还在对象表达式、记录复制表达式和类型扩展中用于引入成员定义, 并用于引入异常处理程序。|
 |`yield`|[序列](sequences.md)|在序列表达式中用于生成序列的值。|
 |`yield!`|[计算表达式](computation-expressions.md)<br /><br />[异步工作流](asynchronous-workflows.md)|在计算表达式中用于将给定计算表达式的结果追加到包含计算表达式的结果集合。|
 

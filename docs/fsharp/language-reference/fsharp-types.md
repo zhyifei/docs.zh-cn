@@ -2,12 +2,12 @@
 title: F# 类型
 description: 了解中F#使用的类型以及如何F#命名和描述类型。
 ms.date: 05/16/2016
-ms.openlocfilehash: 44bd9d985e0ce1afa1bf2a8457dcd9470b13dfe1
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 826bcb56aad3b50fbfcf8f807bb34e9cdcdecaf7
+ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630229"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68733491"
 ---
 # <a name="f-types"></a>F# 类型
 
@@ -22,7 +22,7 @@ ms.locfileid: "68630229"
 
 .NET Framework 是对象类型、接口类型、委托类型和其他对象的源。 您可以定义自己的对象类型, 就像在任何其他 .NET 语言中一样。
 
-此外, F#代码还可以定义别名, 它们是  类型的备用名称。 当类型将来可能会更改, 并且你希望避免更改依赖于类型的代码时, 你可以使用类型缩写。 或者, 您可以将类型缩写用作可使代码更易于阅读和理解的类型的友好名称。
+此外, F#代码还可以定义别名, 它们是类型的备用名称。 当类型将来可能会更改, 并且你希望避免更改依赖于类型的代码时, 你可以使用类型缩写。 或者, 您可以将类型缩写用作可使代码更易于阅读和理解的类型的友好名称。
 
 F#提供了一些有用的集合类型, 这些类型在设计时需要考虑函数编程。 使用这些集合类型可帮助你编写更具样式的代码。 有关详细信息, 请参阅[ F#集合类型](fsharp-collection-types.md)。
 
@@ -69,4 +69,4 @@ F#提供了一些有用的集合类型, 这些类型在设计时需要考虑函�
 |[委托](delegates.md)|描述委托类型, 该类型将函数表示为对象。|
 |[枚举](enumerations.md)|描述枚举类型, 其值属于一组命名值。|
 |[特性](attributes.md)|介绍用于指定另一种类型的元数据的特性。|
-|[异常类型](/.exception-handling/exception-types.md)|描述用于指定错误信息的异常。|
+|[异常类型](./exception-handling/exception-types.md)|描述用于指定错误信息的异常。|
