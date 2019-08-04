@@ -6,12 +6,12 @@ ms.date: 10/04/2018
 dev_langs:
 - fsharp
 ms.custom: seodec18
-ms.openlocfilehash: 926e47c277c8649627482a8036ca3704be142f33
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 7b559d94c03081a8ef67cf91ccfb7d08ff5b6c60
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65631869"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68626457"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-nunit"></a>使用 dotnet test 和 NUnit 在 .NET Core 中进行 F# 库的单元测试
 
@@ -24,14 +24,14 @@ ms.locfileid: "65631869"
 
 ## <a name="creating-the-source-project"></a>创建源项目
 
-打开 shell 窗口。 创建一个名为 unit-testing-with-fsharp 的目录，以保留该解决方案。
+打开 shell 窗口。 创建一个名为 unit-testing-with-fsharp  的目录，以保留该解决方案。
 在此新目录中，运行以下命令，为类库和测试项目创建新的解决方案文件：
 
 ```console
 dotnet new sln
 ```
 
-接下来，创建 MathService 目录。 下图显示了当前的目录和文件结构：
+接下来，创建 MathService  目录。 下图显示了当前的目录和文件结构：
 
 ```
 /unit-testing-with-fsharp
@@ -39,7 +39,7 @@ dotnet new sln
     /MathService
 ```
 
-将 MathService 作为当前目录，并运行以下命令以创建源项目：
+将 MathService  作为当前目录，并运行以下命令以创建源项目：
 
 ```console
 dotnet new classlib -lang F#
@@ -52,7 +52,7 @@ module MyMath =
     let squaresOfOdds xs = raise (System.NotImplementedException("You haven't written a test yet!"))
 ```
 
-将目录更改回 unit-testing-with-fsharp 目录。 运行以下命令，向解决方案添加类库项目：
+将目录更改回 unit-testing-with-fsharp  目录。 运行以下命令，向解决方案添加类库项目：
 
 ```console
 dotnet sln add .\MathService\MathService.fsproj
@@ -60,7 +60,7 @@ dotnet sln add .\MathService\MathService.fsproj
 
 ## <a name="creating-the-test-project"></a>创建测试项目
 
-接下来，创建 MathService.Tests 目录。 下图显示了它的目录结构：
+接下来，创建 MathService.Tests  目录。 下图显示了它的目录结构：
 
 ```
 /unit-testing-with-fsharp
@@ -71,13 +71,13 @@ dotnet sln add .\MathService\MathService.fsproj
     /MathService.Tests
 ```
 
-将 MathService.Tests 目录作为当前目录，并使用以下命令创建一个新项目：
+将 MathService.Tests  目录作为当前目录，并使用以下命令创建一个新项目：
 
 ```console
 dotnet new nunit -lang F#
 ```
 
-这会创建一个将 NUnit 用作测试框架的测试项目。 生成的模板在 MathServiceTests.fsproj 中配置测试运行程序：
+这会创建一个将 NUnit 用作测试框架的测试项目。 生成的模板在 MathServiceTests.fsproj  中配置测试运行程序：
 
 ```xml
 <ItemGroup>
@@ -108,7 +108,7 @@ dotnet add reference ../MathService/MathService.fsproj
         MathService.Tests.fsproj
 ```
 
-在 unit-testing-with-fsharp 目录中执行以下命令：
+在 unit-testing-with-fsharp  目录中执行以下命令：
 
 ```console
 dotnet sln add .\MathService.Tests\MathService.Tests.fsproj
@@ -116,7 +116,7 @@ dotnet sln add .\MathService.Tests\MathService.Tests.fsproj
 
 ## <a name="creating-the-first-test"></a>创建第一个测试
 
-编写一个失败测试，使其通过，然后重复此过程。 打开 UnitTest1.fs 并添加以下代码：
+编写一个失败测试，使其通过，然后重复此过程。 打开 UnitTest1.fs  并添加以下代码：
 
 ```fsharp
 namespace MathService.Tests
@@ -136,7 +136,7 @@ type TestClass () =
      member this.FailEveryTime() = Assert.True(false)
 ```
 
-`[<TestFixture>]` 属性表示包含测试的类。 `[<Test>]` 属性表示由测试运行程序运行的测试方法。 在 unit-testing-with-fsharp 目录中，执行 [`dotnet test`](../tools/dotnet-test.md) 以构建测试和类库，然后运行测试。 NUnit 测试运行程序包含要运行测试的程序入口点。 `dotnet test` 使用已创建的单元测试项目启动测试运行程序。
+`[<TestFixture>]` 属性表示包含测试的类。 `[<Test>]` 属性表示由测试运行程序运行的测试方法。 在 unit-testing-with-fsharp  目录中，执行 [`dotnet test`](../tools/dotnet-test.md) 以构建测试和类库，然后运行测试。 NUnit 测试运行程序包含要运行测试的程序入口点。 `dotnet test` 使用已创建的单元测试项目启动测试运行程序。
 
 这两个测试演示了最基本的已通过测试和未通过测试。 `My test` 通过，而 `Fail every time` 未通过。 现在创建针对 `squaresOfOdds` 方法的测试。 `squaresOfOdds` 方法返回输入序列中所有奇整数值的平方序列。 可以以迭代的方式创建可验证此功能的测试，而非尝试同时写入所有的函数。 若要让每个测试都通过，意味着要针对此方法创建必要的功能。
 
@@ -152,14 +152,14 @@ member this.TestEvenSequence() =
 
 请注意已将 `expected` 序列转换为列表。 NUnit 框架依赖于许多标准 .NET 类型。 此依赖关系表示公共接口和预期结果支持 <xref:System.Collections.ICollection>，而非 <xref:System.Collections.IEnumerable>。
 
-运行此测试时，会看到测试失败。 尚未创建实现。 在起作用的 MathService 项目的 Library.fs 类中编写最简单的代码，使此测试通过：
+运行此测试时，会看到测试失败。 尚未创建实现。 在起作用的 MathService 项目的 Library.fs 类中编写最简单的代码，使此测试通过： 
 
-```csharp
+```fsharp
 let squaresOfOdds xs =
     Seq.empty<int>
 ```
 
-在 unit-testing-with-fsharp 目录中，再次运行 `dotnet test`。 `dotnet test` 命令构建 `MathService` 项目，然后构建 `MathService.Tests` 项目。 构建这两个项目后，该命令将运行测试。 现在两个测试通过。
+在 unit-testing-with-fsharp  目录中，再次运行 `dotnet test`。 `dotnet test` 命令构建 `MathService` 项目，然后构建 `MathService.Tests` 项目。 构建这两个项目后，该命令将运行测试。 现在两个测试通过。
 
 ## <a name="completing-the-requirements"></a>完成要求
 

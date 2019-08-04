@@ -4,12 +4,12 @@ description: 了解 .NET Core 的新增功能。
 author: rpetrusha
 ms.author: ronpet
 ms.date: 08/13/2017
-ms.openlocfilehash: 2d0f6a9faaec4d4438452054624751a40c96c8e5
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: f48b8e88a716df0f07a5626bdc8f66000cfaeed8
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464068"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68626360"
 ---
 # <a name="whats-new-in-net-core-20"></a>.NET Core 2.0 的新增功能
 
@@ -74,7 +74,7 @@ ms.locfileid: "58464068"
 
 1. 输入命令 `dotnet new console -lang vb`。
 
-   此命令创建文件扩展名为 `.vbproj` 的项目文件，以及名为 Program.vb 的 Visual Basic 源代码文件。 此文件包含用于将字符串“Hello World!”写入控制台窗口的源代码 。
+   此命令创建文件扩展名为 `.vbproj` 的项目文件，以及名为 Program.vb  的 Visual Basic 源代码文件。 此文件包含用于将字符串“Hello World!”写入控制台窗口的源代码 。
 
 1. 输入命令 `dotnet run`。 [.NET Core CLI](../tools/index.md) 自动编译并执行应用程序，在控制台窗口中 显示文本字符串“Hello World!”。
 
@@ -132,7 +132,7 @@ Visual Studio 2017 版本 15.3 和（在某些情况下）Visual Studio for Mac 
 
 如果已安装 .NET Core 2.0 SDK，可以将 .NET Core 1.x 项目重定目标到 .NET Core 2.0，并将 .NET Standard 1.x 库重定目标到 .NET Standard 2.0。
 
-若要在 Visual Studio 中重定目标项目，可以打开项目属性对话框的“应用程序”选项卡，再将“目标框架”值更改为“.NET Core 2.0”或“.NET Standard 2.0”。 还可以通过右键单击项目并选择“编辑 \*.csproj 文件”选项进行更改。 有关详细信息，请参阅本主题前面的[工具](#tooling)部分。
+若要在 Visual Studio 中重定目标项目，可以打开项目属性对话框的“应用程序”  选项卡，再将“目标框架”  值更改为“.NET Core 2.0”  或“.NET Standard 2.0”  。 还可以通过右键单击项目并选择“编辑 \*.csproj 文件”  选项进行更改。 有关详细信息，请参阅本主题前面的[工具](#tooling)部分。
 
 ### <a name="live-unit-testing-support-for-net-core"></a>.NET Core 的 Live Unit Testing 支持
 
@@ -156,8 +156,8 @@ Visual Studio 2017 版本 15.3 和（在某些情况下）Visual Studio for Mac 
 
 通过 [.NET 应用程序体系结构](https://www.microsoft.com/net/learn/architecture)，可以查看一系列电子图书，其中提供了有关如何使用 .NET 生成内容的指导、最佳做法和示例应用程序：
 
-- [微服务和 Docker 容器](../../standard/microservices-architecture/index.md)
-- [使用 ASP.NET 的 Web 应用程序](../../standard/modern-web-apps-azure-architecture/index.md)
+- [微服务和 Docker 容器](../../architecture/microservices/index.md)
+- [使用 ASP.NET 的 Web 应用程序](../../architecture/modern-web-apps-azure/index.md)
 - [使用 Xamarin 的移动应用](/xamarin/xamarin-forms/enterprise-application-patterns/index)
 - [使用 Azure 部署到云的应用程序](/azure/architecture/reference-architectures/index)
 

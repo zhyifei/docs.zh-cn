@@ -3,12 +3,12 @@ title: Docker 简介
 description: 本文简要概述 .NET Core 应用程序上下文中的 Docker。
 ms.date: 03/20/2019
 ms.custom: mvc, seodec18
-ms.openlocfilehash: d0bce09d7acdcf474fbb8849c8fc82dae4a69598
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5da71215e3b539f10993677d23d89e2b8a49cb39
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64753296"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68626474"
 ---
 # <a name="introduction-to-net-and-docker"></a>.NET 和 Docker 简介
 
@@ -32,7 +32,7 @@ ms.locfileid: "64753296"
 
 ### <a name="registries"></a>注册表
 
-容器注册表是映像存储库的集合。 映像可以基于注册表映像。 可以直接从注册表中的映像创建容器。 [Docker 容器、映像和注册表之间的关系](../../standard/microservices-architecture/container-docker-introduction/docker-containers-images-registries.md)是[构建和生成容器化应用程序或微服务](../../standard/microservices-architecture/architect-microservice-container-applications/index.md)时的一个重要概念。 此方法大大缩短了开发和部署之间的时间。
+容器注册表是映像存储库的集合。 映像可以基于注册表映像。 可以直接从注册表中的映像创建容器。 [Docker 容器、映像和注册表之间的关系](../../architecture/microservices/container-docker-introduction/docker-containers-images-registries.md)是[构建和生成容器化应用程序或微服务](../../architecture/microservices/architect-microservice-container-applications/index.md)时的一个重要概念。 此方法大大缩短了开发和部署之间的时间。
 
 Docker 具有一个托管在 [Docker 中心](https://hub.docker.com/)的公共注册表，可供用户使用。 [.NET Core 相关映像](https://hub.docker.com/_/microsoft-dotnet-core/)均在 Docker 中心列出。 
 
@@ -40,7 +40,7 @@ Microsoft 容器注册表 (MCR) 是 Microsoft 提供的容器映像的官方来�
 
 ### <a name="dockerfile"></a>Dockerfile
 
-Dockerfile 是定义可创建映像的一组指令的文件。 Dockerfile 中的每个指令创建映像中的一个层。 大多数情况下，在重新生成映像时，只会重新生成已发生更改的层。 可以将 Dockerfile 分发给其他人，便于他们采用你创建映像的方式重新创建一个新映像。 尽管可以分发有关如何创建映像的指令，但分发映像的主要方式是将其发布到注册表。
+Dockerfile  是定义可创建映像的一组指令的文件。 Dockerfile  中的每个指令创建映像中的一个层。 大多数情况下，在重新生成映像时，只会重新生成已发生更改的层。 可以将 Dockerfile  分发给其他人，便于他们采用你创建映像的方式重新创建一个新映像。 尽管可以分发有关如何创建映像的指令  ，但分发映像的主要方式是将其发布到注册表。
 
 ## <a name="net-core-images"></a>.NET Core 映像
 
