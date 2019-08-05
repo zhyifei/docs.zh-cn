@@ -1,4 +1,4 @@
-- name: 高级
+- name: 高级 WPF 区域
   href: index.md
   items:
     - name: WPF 体系结构
@@ -56,7 +56,7 @@
               href: mc-ignorable-attribute.md
             - name: 'mc:ProcessContent 特性'
               href: mc-processcontent-attribute.md
-    - name: 基元素
+    - name: 基元素类
       href: base-elements.md
       items:
         - name: 基元素概述
@@ -104,7 +104,7 @@
               href: how-to-find-an-element-by-its-name.md
             - name: 重写逻辑树
               href: how-to-override-the-logical-tree.md
-    - name: 属性
+    - name: WPF 属性系统
       href: properties-wpf.md
       items:
         - name: 依赖项属性概述
@@ -144,7 +144,7 @@
               href: how-to-register-an-attached-property.md
             - name: 重写依赖属性的元数据
               href: how-to-override-metadata-for-a-dependency-property.md
-    - name: 事件
+    - name: 活动
       href: events-wpf.md
       items:
         - name: 路由事件概述
@@ -260,7 +260,7 @@
                   href: how-to-analyze-ink-with-analysis-hints.md
                 - name: 旋转墨迹
                   href: how-to-rotate-ink.md
-                - name: '禁用用于 WPF 应用程序的 RealTimeStylus '
+                - name: 禁用用于 WPF 应用程序的 RealTimeStylus
                   href: disable-the-realtimestylus-for-wpf-applications.md
     - name: 拖放
       href: drag-and-drop.md
@@ -562,11 +562,11 @@
               href: optimizing-performance-object-behavior.md
             - name: 应用程序资源
               href: optimizing-performance-application-resources.md
-            - name: Text
+            - name: 文本
               href: optimizing-performance-text.md
             - name: 数据绑定
               href: optimizing-performance-data-binding.md
-            - name: 控件
+            - name: 控制
               href: optimizing-performance-controls.md
             - name: 其他性能建议
               href: optimizing-performance-other-recommendations.md

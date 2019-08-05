@@ -120,7 +120,7 @@
       href: standard/numerics.md
     - name: 日期、时间和时区
       href: standard/datetime/
-    - name: 事件
+    - name: 活动
       href: standard/events/
     - name: 托管执行过程
       href: standard/managed-execution-process.md
@@ -134,13 +134,13 @@
       href: standard/io/index.md
     - name: 全球化和本地化
       href: standard/globalization-localization/
-    - name: 特性
+    - name: 属性
       href: standard/attributes/
     - name: 框架设计准则
       href: standard/design-guidelines/
     - name: XML 文档和数据
       href: standard/data/xml/
-    - name: 安全性
+    - name: 安全
       href: standard/security/
     - name: 序列化
       href: standard/serialization/
@@ -298,7 +298,7 @@
           href: /visualstudio/test/live-unit-testing-start
     - name: 持续集成
       href: core/tools/using-ci-with-cli.md
-    - name: 版本管理
+    - name: 版本控制
       href: core/versions/index.md
       items:
         - name: .NET Core 版本选择
@@ -444,7 +444,7 @@
   items:
     - name: 新增功能
       href: framework/whats-new/
-    - name: 开始操作
+    - name: 入门
       href: framework/get-started/
     - name: 安装指南
       href: framework/install/
@@ -509,7 +509,7 @@
 - name: 'C# 指南'
   href: csharp/index.md
   items:
-    - name: 开始操作
+    - name: 入门
       href: csharp/getting-started/
     - name: 教程
       items:
@@ -595,14 +595,16 @@
       items:
         - name: 'C# 类型系统'
           href: csharp/programming-guide/types/index.md
+        - name: 可为空引用类型
+          href: csharp/nullable-references.md
+        - name: 使用特性和约束描述可为 null 的 API
+          href: csharp/nullable-attributes.md
         - name: 命名空间
           href: csharp/programming-guide/namespaces/index.md
         - name: 基本类型
           href: csharp/basic-types.md
         - name: 类
           href: csharp/programming-guide/classes-and-structs/classes.md
-        - name: 可为空引用类型
-          href: csharp/nullable-references.md
         - name: 结构
           href: csharp/structs.md
         - name: 元组
@@ -667,13 +669,13 @@
               href: csharp/expression-trees-building.md
             - name: 翻译表达式
               href: csharp/expression-trees-translating.md
-            - name: 总结
+            - name: 摘要
               href: csharp/expression-trees-summary.md
         - name: 本机互操作性
           href: csharp/programming-guide/interop/index.md
         - name: 记录代码
           href: csharp/codedoc.md
-        - name: 版本管理
+        - name: 版本控制
           href: csharp/versioning.md
     - name: '操作指南 C# 主题'
       items:
@@ -704,7 +706,7 @@
 - name: 'F# 指南'
   href: fsharp/index.md
   items:
-    - name: 开始操作
+    - name: 入门
       href: fsharp/get-started/index.md
       items:
         - name: '安装 F#'
@@ -857,7 +859,7 @@
               href: fsharp/language-reference/members/methods.md
             - name: 构造函数
               href: fsharp/language-reference/members/constructors.md
-            - name: 事件
+            - name: 活动
               href: fsharp/language-reference/members/events.md
             - name: 显式字段：`val` 关键字
               href: fsharp/language-reference/members/explicit-fields-the-val-keyword.md
@@ -875,7 +877,7 @@
           href: fsharp/language-reference/object-expressions.md
         - name: 强制转换和转换
           href: fsharp/language-reference/casting-and-conversions.md
-        - name: 访问控制
+        - name: Access Control
           href: fsharp/language-reference/access-control.md
         - name: 条件表达式：if...then...else
           href: fsharp/language-reference/conditional-expressions-if-then-else.md
@@ -908,7 +910,7 @@
               href: fsharp/language-reference/exception-handling/the-failwith-function.md
             - name: invalidArg 函数
               href: fsharp/language-reference/exception-handling/the-invalidArg-function.md
-        - name: 特性
+        - name: 属性
           href: fsharp/language-reference/attributes.md
         - name: 资源管理：use 关键字
           href: fsharp/language-reference/resource-management-the-use-keyword.md
@@ -979,7 +981,7 @@
   items:
     - name: Visual Basic 的新增功能
       href: visual-basic/getting-started/whats-new.md
-    - name: 开始操作
+    - name: 入门
       href: visual-basic/getting-started/index.md
       items:
         - name: Visual Studio 中 Visual Basic 的重大更改
@@ -1062,7 +1064,7 @@
               href: visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md
         - name: 使用 Async 和 Await 的异步编程
           href: visual-basic/programming-guide/concepts/async/index.md
-        - name: 特性
+        - name: 属性
           href: visual-basic/programming-guide/concepts/attributes/index.md
         - name: 调用方信息
           href: visual-basic/programming-guide/concepts/caller-information.md
@@ -1196,7 +1198,7 @@
           href: visual-basic/programming-guide/language-features/early-late-binding/index.md
         - name: 错误类型
           href: visual-basic/programming-guide/language-features/error-types.md
-        - name: 事件
+        - name: 活动
           href: visual-basic/programming-guide/language-features/events/index.md
         - name: 接口
           href: visual-basic/programming-guide/language-features/interfaces/index.md
@@ -1291,7 +1293,7 @@
               href: visual-basic/language-reference/keywords/registry-summary.md
             - name: 字符串操作摘要
               href: visual-basic/language-reference/keywords/string-manipulation-summary.md
-        - name: 特性
+        - name: 属性
           href: visual-basic/language-reference/attributes.md
         - name: 常量和枚举
           href: visual-basic/language-reference/constants-and-enumerations.md
@@ -1364,9 +1366,9 @@
           items:
             - name: Ansi
               href: visual-basic/language-reference/modifiers/ansi.md
-            - name: Assembly
+            - name: 程序集
               href: visual-basic/language-reference/modifiers/assembly.md
-            - name: Async
+            - name: 异步
               href: visual-basic/language-reference/modifiers/async.md
             - name: 自动
               href: visual-basic/language-reference/modifiers/auto.md
@@ -1382,13 +1384,13 @@
               href: visual-basic/language-reference/modifiers/in-generic-modifier.md
             - name: 迭代器
               href: visual-basic/language-reference/modifiers/iterator.md
-            - name: 键
+            - name: 密钥
               href: visual-basic/language-reference/modifiers/key.md
             - name: 模块
               href: visual-basic/language-reference/modifiers/module-keyword.md
             - name: MustInherit
               href: visual-basic/language-reference/modifiers/mustinherit.md
-            - name: New
+            - name: MustOverride
               href: visual-basic/language-reference/modifiers/mustoverride.md
             - name: Narrowing
               href: visual-basic/language-reference/modifiers/narrowing.md
@@ -1396,7 +1398,7 @@
               href: visual-basic/language-reference/modifiers/notinheritable.md
             - name: NotOverridable
               href: visual-basic/language-reference/modifiers/notoverridable.md
-            - name: Optional
+            - name: 可选
               href: visual-basic/language-reference/modifiers/optional.md
             - name: Out（泛型修饰符）
               href: visual-basic/language-reference/modifiers/out-generic-modifier.md
@@ -1404,13 +1406,13 @@
               href: visual-basic/language-reference/modifiers/overloads.md
             - name: Overrides
               href: visual-basic/language-reference/modifiers/overridable.md
-            - name: Overrides
+            - name: 重写
               href: visual-basic/language-reference/modifiers/overrides.md
             - name: ParamArray
               href: visual-basic/language-reference/modifiers/paramarray.md
             - name: 部分
               href: visual-basic/language-reference/modifiers/partial.md
-            - name: Private
+            - name: 专用
               href: visual-basic/language-reference/modifiers/private.md
             - name: Private Protected
               href: visual-basic/language-reference/modifiers/private-protected.md
@@ -1418,15 +1420,15 @@
               href: visual-basic/language-reference/modifiers/protected.md
             - name: Protected Friend
               href: visual-basic/language-reference/modifiers/protected-friend.md
-            - name: Public
+            - name: 公共
               href: visual-basic/language-reference/modifiers/public.md
             - name: ReadOnly
               href: visual-basic/language-reference/modifiers/readonly.md
             - name: Shadows
               href: visual-basic/language-reference/modifiers/shadows.md
-            - name: Shared
+            - name: 共享
               href: visual-basic/language-reference/modifiers/shared.md
-            - name: Static
+            - name: 静态
               href: visual-basic/language-reference/modifiers/static.md
             - name: Unicode
               href: visual-basic/language-reference/modifiers/unicode.md
@@ -1600,7 +1602,7 @@
                   href: visual-basic/language-reference/operators/like-operator.md
                 - name: Mod 运算符
                   href: visual-basic/language-reference/operators/mod-operator.md
-                - name: New 运算符
+                - name: 新建操作员
                   href: visual-basic/language-reference/operators/new-operator.md
                 - name: Not 运算符
                   href: visual-basic/language-reference/operators/not-operator.md
