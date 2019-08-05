@@ -7,16 +7,16 @@ helpviewer_keywords:
 ms.assetid: 4b2fcf8a-429d-43ce-8334-e026040be8bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 55b859f109cc224ebf1a8fd62a1d3d3440cf906c
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: e599696b75ed1a0186276dfa47baef2cdf9d7097
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636106"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629389"
 ---
 # <a name="how-to-register-primary-interop-assemblies"></a>如何：注册主互操作程序集
 
-类仅能由 COM 互操作封送，并总是作为接口封送。 在某些情况下用来将该类封送的接口称为类接口。 有关使用选择的接口重写类接口的信息，请参阅 [COM可调用包装器](../../../docs/framework/interop/com-callable-wrapper.md)。
+类仅能由 COM 互操作封送，并总是作为接口封送。 在某些情况下用来将该类封送的接口称为类接口。 有关使用选择的接口重写类接口的信息，请参阅 [COM可调用包装器](../../../docs/standard/native-interop/com-callable-wrapper.md)。
 
  尽管任何想要从 .NET Framework 应用程序使用 COM 类型的开发人员都可以生成互操作程序集，但这样做会产生一个问题。 每次一名开发人员导入 COM 类型库并对其进行签名时，该开发人员就创建了一组与另一个开发人员所导入和签名的类型不兼容的唯一类型。 此类型不兼容性问题的解决方案是每个开发人员都获取供应商提供并签名的主互操作程序集。
 
@@ -38,9 +38,9 @@ ms.locfileid: "65636106"
 
 1. 在命令提示符处，键入：
 
-     regasm assemblyname
+     regasm  assemblyname 
 
-     在此命令中，assemblyname 是已注册的程序集的文件名。 Regasm.exe 会在与原始类型库相同的注册表项下为主互操作程序集添加一个条目。
+     在此命令中，assemblyname  是已注册的程序集的文件名。 Regasm.exe 会在与原始类型库相同的注册表项下为主互操作程序集添加一个条目。
 
 ## <a name="example"></a>示例
  下列示例注册 `CompanyA.UtilLib.dll` 主互操作程序集。
