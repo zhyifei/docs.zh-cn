@@ -125,7 +125,7 @@ Microsoft 将按照本主题中的准则开发示例和文档。 如果遵循相
   
  [!code-vb[VbVbalrGuidelines#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#15)]  
   
-### <a name="use-the-trycatch-and-using-statements-when-you-use-exception-handling"></a>使用 Try .。。使用异常处理时捕获和使用语句  
+### <a name="use-the-trycatch-and-using-statements-when-you-use-exception-handling"></a>使用 Try... 使用异常处理时捕获和使用语句  
  请勿使用 `On Error Goto`。  
   
 ### <a name="use-the-isnot-keyword"></a>使用 IsNot 关键字  
