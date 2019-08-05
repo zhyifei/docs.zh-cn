@@ -4,12 +4,12 @@ description: 关于在 .NET 中生成服务器应用时应考虑使用哪种 .NE
 author: cartermp
 ms.author: mairaw
 ms.date: 06/19/2018
-ms.openlocfilehash: 3034f77fe8ee136011a523f6882ffa09ed2758d6
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 6bdcb002c2e37f45c298259c2867a631b38152ca
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641160"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630861"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>为服务器应用选择 .NET Core 或 .NET Framework
 
@@ -46,7 +46,7 @@ ms.locfileid: "65641160"
 
 可用的基础结构平台有很多。 [Azure Service Fabric](https://azure.microsoft.com/services/service-fabric/)，设计用于大型和复杂微服务系统 。 [Azure App Service](https://azure.microsoft.com/services/app-service/)，很适合用于无状态微服务。 基于 Docker 的微服务备选方案适合任何一种微服务方法，这部分内容将在[容器](#containers)部分进行说明。 所有这些平台都支持 .NET Core，是托管微服务的理想选择。
 
-有关微服务体系结构的详细信息，请参阅 [.NET 微服务 - 适用于容器化 .NET 应用程序的体系结构](microservices-architecture/index.md)。
+有关微服务体系结构的详细信息，请参阅 [.NET 微服务 - 适用于容器化 .NET 应用程序的体系结构](../architecture/microservices/index.md)。
 
 ### <a name="containers"></a>容器
 
@@ -110,4 +110,4 @@ Docker 容器可托管在自己的 Linux 或 Windows 基础结构中，或托管
 - [从 .NET Framework 移植到 .NET Core](../core/porting/index.md)
 - [.NET 和 Docker 简介](../core/docker/intro-net-docker.md)
 - [.NET 组件概述](components.md)
-- [.NET 微服务 - 适用于容器化 .NET 应用程序的体系结构](microservices-architecture/index.md)
+- [.NET 微服务 - 适用于容器化 .NET 应用程序的体系结构](../architecture/microservices/index.md)
