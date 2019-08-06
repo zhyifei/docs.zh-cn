@@ -24,18 +24,18 @@ helpviewer_keywords:
 - programmatic navigation [WPF]
 - hyperlinks [WPF]
 ms.assetid: 86ad2143-606a-4e34-bf7e-51a2594248b8
-ms.openlocfilehash: 24b872fcf58db3ef0ef7d04165129804dc46d641
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: ee2f6050eeea6eec840156ed5dce9fb9b6172149
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364288"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796863"
 ---
 # <a name="navigation-overview"></a>导航概述
 
 Windows Presentation Foundation (WPF) 支持可在两种类型的应用程序中使用的浏览器样式的导航: [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]独立应用程序和。 为了使导航的内容打包[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] , <xref:System.Windows.Controls.Page>提供了类。 您可以通过<xref:System.Windows.Documents.Hyperlink>使用或<xref:System.Windows.Controls.Page> <xref:System.Windows.Navigation.NavigationService>以编程方式使用从一个导航到另一个。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 使用日志记住从其导航和导航回它们的页。
 
-<xref:System.Windows.Controls.Page>、 <xref:System.Windows.Documents.Hyperlink> [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]、 <xref:System.Windows.Navigation.NavigationService>和日志构成提供的导航支持的核心。 本概述首先详细探讨这些功能, 然后介绍高级导航支持, 其中包括导航[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]到松散[!INCLUDE[TLA#tla_html](../../../../includes/tlasharptla-html-md.md)]文件、文件和对象。
+<xref:System.Windows.Controls.Page>、 <xref:System.Windows.Documents.Hyperlink> [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]、 <xref:System.Windows.Navigation.NavigationService>和日志构成提供的导航支持的核心。 本概述首先详细探讨这些功能, 然后介绍高级导航支持, 其中包括导航[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]到松散文件、HTML 文件和对象。
 
 > [!NOTE]
 > 在本主题中, 术语 "浏览器" 只引用可以承载[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]应用程序的浏览器, 当前包括[!INCLUDE[TLA#tla_ie](../../../../includes/tlasharptla-ie-md.md)]和 Firefox。 仅特定[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]的浏览器支持特定功能的情况下, 浏览器版本被引用。
@@ -79,7 +79,7 @@ Windows Presentation Foundation (WPF) 支持可在两种类型的应用程序中
 
 ### <a name="implementing-a-page"></a>实现页
 
-在[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]中, 您可以导航到多个内容类型, 其中包括 .NET Framework 对象、自定义对象、枚举值[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 、用户控件[!INCLUDE[TLA#tla_html](../../../../includes/tlasharptla-html-md.md)] 、文件和文件。 不过, 你会发现打包内容最常见和最方便的方法是使用<xref:System.Windows.Controls.Page>。 此外, <xref:System.Windows.Controls.Page>还实现了特定于导航的功能, 以增强其外观并简化开发。
+在[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]中, 您可以导航到多个内容类型, 其中包括 .NET Framework 对象、自定义对象、枚举值[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 、用户控件、文件和 HTML 文件。 不过, 你会发现打包内容最常见和最方便的方法是使用<xref:System.Windows.Controls.Page>。 此外, <xref:System.Windows.Controls.Page>还实现了特定于导航的功能, 以增强其外观并简化开发。
 
 使用<xref:System.Windows.Controls.Page>, 可以通过使用如下所示的标记[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]以声明方式实现可导航的内容页。
 
@@ -218,7 +218,7 @@ Windows Presentation Foundation (WPF) 支持可在两种类型的应用程序中
 > 本部分介绍中[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]的默认片段导航实现。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]还允许实现自己的片段导航方案, 该方案在某种程度上需要处理<xref:System.Windows.Navigation.NavigationService.FragmentNavigation?displayProperty=nameWithType>事件。
 
 > [!IMPORTANT]
-> 仅当[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]可以通过`Page` [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 浏览[!INCLUDE[TLA2#tla_http](../../../../includes/tla2sharptla-http-md.md)]这些页面时, 才可以导航到松散页面 (仅限标记的文件, 并将其作为根元素)。
+> 仅当可以通过 HTTP 浏览这些[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]页面时, 才能导航[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]到松散`Page`页面 (仅限标记的文件, 并将其作为根元素)。
 >
 > 但松散[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]页可以导航到其自己的片段。
 
@@ -501,7 +501,7 @@ Windows Presentation Foundation (WPF) 支持可在两种类型的应用程序中
 
 - <xref:System.Windows.Controls.TextBox>
 
-如果使用这些控件, 则会在<xref:System.Windows.Controls.Page>导航中记住输入的数据, 如下**图所**<xref:System.Windows.Controls.ListBox>示。 <xref:System.Windows.Controls.Page>
+如果使用这些控件 <xref:System.Windows.Controls.ListBox> , 则会在<xref:System.Windows.Controls.Page>导航中记住输入的数据, 如下图所示。 <xref:System.Windows.Controls.Page>
 
 ![具有记住状态的控件的页面](./media/navigation-overview/data-remembered-across-page-navigations.png "跨页面导航记住输入的数据。")
 
@@ -539,7 +539,7 @@ Windows Presentation Foundation (WPF) 支持可在两种类型的应用程序中
 
 - 来自相同域的 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 可以创建和共享 cookie。
 
-- [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]同一个域中的页可以创建和共享cookie。[!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)]
+- [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]同一个域中的 HTML 页面可以创建和共享 cookie。
 
 - 当和松散[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]页[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]发出 Web 请求时, 会调度 cookie。
 
@@ -683,7 +683,7 @@ Windows Presentation Foundation (WPF) 支持可在两种类型的应用程序中
 
 本主题中<xref:System.Windows.Controls.Page>的和 pack [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]已用于演示的[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]各种导航功能。 但是, <xref:System.Windows.Controls.Page>编译到应用程序中的仅是可以导航到的内容类型, 而 pack [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]并不是标识内容的唯一方法。
 
-如本部分所示, 你还可以导航到[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]松散文件[!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)] 、文件和对象。
+如本部分所示, 你还可以导航到[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]松散文件、HTML 文件和对象。
 
 <a name="Navigating_to_Loose_XAML_Files"></a>
 
@@ -724,19 +724,19 @@ Windows Presentation Foundation (WPF) 支持可在两种类型的应用程序中
 
 ### <a name="navigating-to-html-files-by-using-frame"></a>通过使用框架导航到 HTML 文件
 
-如您所料, 还可以导航到[!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)]。 只需提供一个[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]使用 http 方案的。 例如, 下面[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]的示例演示一个<xref:System.Windows.Controls.Frame>导航到[!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)]页面的。
+正如您所料, 还可以导航到 HTML。 只需提供一个[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]使用 http 方案的。 例如, 下面[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]的示例演示一个<xref:System.Windows.Controls.Frame>导航到 HTML 页的。
 
 [!code-xaml[NavigationOverviewSnippets#FrameHtmlNavMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/FrameHTMLNavPage.xaml#framehtmlnavmarkup)]
 
-导航到[!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)]需要特殊权限。 例如, 你不能从[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]在 Internet 区域部分信任安全沙箱中运行的中导航。 有关详细信息，请参阅 [WPF 部分信任安全性](../wpf-partial-trust-security.md)。
+导航到 HTML 需要特殊权限。 例如, 你不能从[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]在 Internet 区域部分信任安全沙箱中运行的中导航。 有关详细信息，请参阅 [WPF 部分信任安全性](../wpf-partial-trust-security.md)。
 
 <a name="Navigating_to_HTML_Files_Using_WebBrowser"></a>
 
 ### <a name="navigating-to-html-files-by-using-the-webbrowser-control"></a>通过使用 WebBrowser 控件导航到 HTML 文件
 
-<xref:System.Windows.Controls.WebBrowser>控件支持[!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)]文档托管、导航和脚本/托管代码互操作性。 有关<xref:System.Windows.Controls.WebBrowser>控件的详细信息, 请参阅<xref:System.Windows.Controls.WebBrowser>。
+<xref:System.Windows.Controls.WebBrowser>控件支持 HTML 文档托管、导航和脚本/托管代码互操作性。 有关<xref:System.Windows.Controls.WebBrowser>控件的详细信息, 请参阅<xref:System.Windows.Controls.WebBrowser>。
 
-与<xref:System.Windows.Controls.Frame>一样, 导航[!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)]到<xref:System.Windows.Controls.WebBrowser>使用需要特殊权限。 例如, 在部分信任的应用程序中, 你只能导航到[!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)]位于源站点的。 有关详细信息，请参阅 [WPF 部分信任安全性](../wpf-partial-trust-security.md)。
+类似<xref:System.Windows.Controls.Frame>地, 使用导航到<xref:System.Windows.Controls.WebBrowser>使用的 HTML 需要特殊的权限。 例如, 在部分信任的应用程序中, 你只能导航到位于源站点的 HTML。 有关详细信息，请参阅 [WPF 部分信任安全性](../wpf-partial-trust-security.md)。
 
 <a name="Navigating_to_Objects"></a>
 

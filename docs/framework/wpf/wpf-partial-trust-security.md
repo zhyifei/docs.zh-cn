@@ -15,15 +15,15 @@ helpviewer_keywords:
 - feature security requirements [WPF]
 - managing permissions [WPF]
 ms.assetid: ef2c0810-1dbf-4511-babd-1fab95b523b5
-ms.openlocfilehash: b8234dcb33e9d429329c6d68900119382ff2f1cb
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 34beee309f080c53ecb16436beb0c4c6be7733e5
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629789"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796787"
 ---
 # <a name="wpf-partial-trust-security"></a>WPF 部分信任安全
-<a name="introduction"></a>一般情况下，应该限制 Internet 应用程序直接访问关键系统资源，防止恶意损坏。 默认情况下[!INCLUDE[TLA#tla_html](../../../includes/tlasharptla-html-md.md)] , 和客户端脚本语言不能访问关键系统资源。 由于可以从浏览器启动 Windows Presentation Foundation (WPF) 浏览器承载的应用程序, 因此它们应符合一组类似的限制。 若要强制实施这些[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]限制, 需要同时依赖于代码访问安全性 (CAS) 和 ClickOnce (请参阅[WPF 安全策略-平台安全性](wpf-security-strategy-platform-security.md))。 默认情况下, 浏览器承载的应用程序请求 Internet 区域 CA 权限集, 不管它们是从 Internet、本地 intranet 还是本地计算机启动。 如果应用程序的运行权限小于完整权限集，则说明该应用程序正在部分信任环境下运行。  
+<a name="introduction"></a>一般情况下，应该限制 Internet 应用程序直接访问关键系统资源，防止恶意损坏。 默认情况下, HTML 和客户端脚本语言不能访问关键系统资源。 由于可以从浏览器启动 Windows Presentation Foundation (WPF) 浏览器承载的应用程序, 因此它们应符合一组类似的限制。 若要强制实施这些[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]限制, 需要同时依赖于代码访问安全性 (CAS) 和 ClickOnce (请参阅[WPF 安全策略-平台安全性](wpf-security-strategy-platform-security.md))。 默认情况下, 浏览器承载的应用程序请求 Internet 区域 CA 权限集, 不管它们是从 Internet、本地 intranet 还是本地计算机启动。 如果应用程序的运行权限小于完整权限集，则说明该应用程序正在部分信任环境下运行。  
   
  [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]提供各种支持, 以确保在部分信任环境中可以安全地使用尽可能多的功能, 并与 CA 一起为部分信任编程提供附加支持。  
   

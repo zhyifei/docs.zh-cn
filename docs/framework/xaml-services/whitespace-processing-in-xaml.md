@@ -7,27 +7,27 @@ helpviewer_keywords:
 - white-space processing in XAML [XAML Services]
 - characters [XAML Services], East Asian
 ms.assetid: cc9cc377-7544-4fd0-b65b-117b90bb0b23
-ms.openlocfilehash: 81d8cdb8d2dfc593d37322b70c070bc0b9f10b25
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 077f19690d204d3b8f682d01c51feee9e9edbfd4
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64659691"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796823"
 ---
 # <a name="white-space-processing-in-xaml"></a>XAML 中的空白处理
-XAML 的语言规则状态必须由处理该有意义的空白[!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)]处理器实现。 本主题介绍这些 XAML 语言规则。 它还介绍了由定义的其他空格处理[!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]XAML 处理器和序列化的 XAML 编写器的实现。  
+XAML 的语言规则状态必须由[!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)]处理器实现处理有效空白。 本主题介绍这些 XAML 语言规则。 它还记录了由 xaml 处理器的[!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]实现和用于序列化的 xaml 编写器定义的其他空白空间处理。  
   
 <a name="whitespace_definition"></a>   
 ## <a name="white-space-definition"></a>空格定义  
- 与一致[!INCLUDE[TLA2#tla_xml](../../../includes/tla2sharptla-xml-md.md)]中的空白字符[!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)]是空格、 换行符和制表符。这些字符分别对应于 [!INCLUDE[TLA#tla_unicode](../../../includes/tlasharptla-unicode-md.md)] 值 0020、000A 和 0009。  
+ 与[!INCLUDE[TLA2#tla_xml](../../../includes/tla2sharptla-xml-md.md)]一致, 中[!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)]的空格字符是空格、换行符和制表符。这些字符分别对应于 [!INCLUDE[TLA#tla_unicode](../../../includes/tlasharptla-unicode-md.md)] 值 0020、000A 和 0009。  
   
 <a name="whitespace_normalization"></a>   
-## <a name="white-space-normalization"></a>空格规范化  
- 默认情况下出现以下空格标准化时[!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)]处理器处理[!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)]文件：  
+## <a name="white-space-normalization"></a>空白标准化  
+ 默认情况下, 当[!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)]处理器[!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)]处理文件时, 将发生以下空白标准化:  
   
 1. 删除中文字符间的换行符。 有关此术语的定义，请稍后参阅本主题中的“中文字符”一节。  
   
-2. 所有空白字符 （空格、 换行符、 选项卡） 都转换为空格。  
+2. 所有空白字符 (空格、换行符、制表符) 都转换为空格。  
   
 3. 删除所有连续的空格，并替换为一个空格。  
   
@@ -38,7 +38,7 @@ XAML 的语言规则状态必须由处理该有意义的空白[!INCLUDE[TLA2#tla
  “默认”对应于由 [xml: space](xml-space-handling-in-xaml.md) 属性的默认值表示的状态。  
   
 <a name="whitespace_in_inner_text_and_string_primitives"></a>   
-## <a name="white-space-in-inner-text-and-string-primitives"></a>内部文本和字符串基元中的空白区域  
+## <a name="white-space-in-inner-text-and-string-primitives"></a>内部文本和字符串基元中的空格  
  先前的标准化规则适用于 XAML 元素中找到的内部文本。 标准化后，XAML 处理器将所有内部文本转换为适当的类型，如下所示：  
   
 - 如果属性的类型不是一个集合，但不直接是 <xref:System.Object> 类型，则 XAML 处理器会尝试使用其类型转换器来转换为该类型。 此处的转换失败将导致编译时错误。  
@@ -51,11 +51,11 @@ XAML 的语言规则状态必须由处理该有意义的空白[!INCLUDE[TLA2#tla
   
 <a name="preserving_whitespace"></a>   
 ## <a name="preserving-white-space"></a>保留空白  
- 有几种方法来保留源中的空白[!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)]不受影响的最终表现形式为[!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)]处理器空格标准化。  
+ 有几种方法可用于保留源[!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)]中的空白, 以最终表示不[!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)]受处理器空白标准化的影响。  
   
- **xml:space="preserve"**:指定此属性在需要时保留空白的元素的级别。 这样保留了所有的空格，其中包括可能由代码编辑应用程序添加到“优质打印”对齐元素以作为可视化直观嵌套的空格。 但是，是否呈现这些空白是由包含元素的内容模型决定的。 避免指定`xml:space="preserve"`根级别因为大多数对象模型不会将白色空间而不考虑如何设置该属性为重要。 全局设置 `xml:space` 可能对 XAML 在某些实现中的处理（特别是序列化）产生性能后果。 它是更好的做法，以仅呈现字符串内的空白或空格重要集合的元素级别上特别设置该属性。  
+ **xml:space="preserve"** :在需要空白保留空间的元素级别指定此属性。 这样保留了所有的空格，其中包括可能由代码编辑应用程序添加到“优质打印”对齐元素以作为可视化直观嵌套的空格。 但是，是否呈现这些空白是由包含元素的内容模型决定的。 避免在`xml:space="preserve"`根级别指定, 因为无论你如何设置该属性, 大多数对象模型都不会将空格视为重要。 全局设置 `xml:space` 可能对 XAML 在某些实现中的处理（特别是序列化）产生性能后果。 更好的做法是仅在元素级别上设置属性, 这些元素会在字符串中呈现空白, 或者是空白的重要集合。  
   
- **实体和非换行空格**： [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 支持在文本对象模型中放置任何 [!INCLUDE[TLA#tla_unicode](../../../includes/tlasharptla-unicode-md.md)] 实体。 可以使用专用的实体，例如不间断空格 (&\#160; utf-8 编码中)。 还可以使用支持不间断空格字符的富文本控件。 如果使用实体来模拟布局特征（例如缩进），则应当小心，因为实体的运行时输出将根据更大数量的因素变化，而不是根据在典型布局系统中产生缩进结果的能力，如面板和边距的正确使用。 例如，实体映射到字体，并且可以响应用户的字体选择更改大小。  
+ **实体和非换行空格**： [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 支持在文本对象模型中放置任何 [!INCLUDE[TLA#tla_unicode](../../../includes/tlasharptla-unicode-md.md)] 实体。 可以在 utf-8 编码中使用专用实体, 如不\#间断空格 (& 160;)。 还可以使用支持不间断空格字符的富文本控件。 如果使用实体来模拟布局特征（例如缩进），则应当小心，因为实体的运行时输出将根据更大数量的因素变化，而不是根据在典型布局系统中产生缩进结果的能力，如面板和边距的正确使用。 例如，实体映射到字体，并且可以响应用户的字体选择更改大小。  
   
 <a name="east_asian_characters"></a>   
 ## <a name="east-asian-characters"></a>东亚字符  
@@ -63,19 +63,19 @@ XAML 的语言规则状态必须由处理该有意义的空白[!INCLUDE[TLA2#tla
   
 <a name="whitespace_and_text_content_models"></a>   
 ## <a name="white-space-and-text-content-models"></a>空格和文本内容模型  
- 在实践中，保留空格仅与所有可能内容模型的子集。 该子集由内容模型组成，这些模型可以采用某种形式的单独 <xref:System.String> 类型、专用 <xref:System.String> 集合，或 <xref:System.String> 和 <xref:System.Collections.IList> 或 <xref:System.Collections.Generic.ICollection%601> 集合中其他类型的混合。  
+ 在实践中, 保留空白只是为了实现所有可能的内容模型的子集。 该子集由内容模型组成，这些模型可以采用某种形式的单独 <xref:System.String> 类型、专用 <xref:System.String> 集合，或 <xref:System.String> 和 <xref:System.Collections.IList> 或 <xref:System.Collections.Generic.ICollection%601> 集合中其他类型的混合。  
   
-### <a name="white-space-and-text-content-models-in-wpf"></a>在 WPF 中的空格和文本内容模型  
- 为了便于说明，此部分的其余部分引用由 WPF 定义的特定类型。 本主题中介绍的空格处理功能是通常与.NET Framework XAML 服务和 WPF 相关。 若要查看运行中的此行为，可以使用一些 WPF XAML 标记进行试验，在对象图中查看结果，然后重新序列化为标记。  
+### <a name="white-space-and-text-content-models-in-wpf"></a>WPF 中的空格和文本内容模型  
+ 为了便于说明，此部分的其余部分引用由 WPF 定义的特定类型。 本主题中描述的空格处理功能通常与 .NET Framework XAML 服务和 WPF 相关。 若要查看运行中的此行为，可以使用一些 WPF XAML 标记进行试验，在对象图中查看结果，然后重新序列化为标记。  
   
- 甚至对于的内容模型可以采用字符串，这些内容模型内的默认行为是，任何保留的空白区域不被视为重要。 例如，<xref:System.Windows.Controls.ListBox>采用<xref:System.Collections.IList>，但空白区域 (如每个之间的换行符<xref:System.Windows.Controls.ListBoxItem>) 不会保留且不会呈现。 如果尝试使用换行符作为 <xref:System.Windows.Controls.ListBoxItem> 项的字符串之间的分隔符，则完全不适用；由换行符分隔的字符串将被视为一个字符串和一个项。  
+ 即使对于可以采用字符串的内容模型, 这些内容模型内的默认行为也不会被视为重要。 例如, <xref:System.Windows.Controls.ListBox> <xref:System.Collections.IList>采用, 但不会保留且不会呈现空格 (如每个<xref:System.Windows.Controls.ListBoxItem>空白之间的换行符)。 如果尝试使用换行符作为 <xref:System.Windows.Controls.ListBoxItem> 项的字符串之间的分隔符，则完全不适用；由换行符分隔的字符串将被视为一个字符串和一个项。  
   
- 不要将空格视为重要这些集合通常是流文档模型的一部分。 支持空格保留行为的主要集合是<xref:System.Windows.Documents.InlineCollection>。 此集合类用声明<xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute>; 如果找到此属性，[!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)]处理器会将集合内的空格视为重要。 组合`xml:space="preserve"`内的空格和<xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute>表示集合是保留并呈现所有空格。 组合`xml:space="default"`内的空格和<xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute>的初始空格标准化之前所述，它使空间在某些位置，而这些空格的原因被保留并呈现。 需要哪种行为由你决定，并且应有选择地使用 `xml:space` 以启用需要的行为。  
+ 那些将空格视为重要的集合通常是流文档模型的一部分。 支持空白保存行为的主集合为<xref:System.Windows.Documents.InlineCollection>。 此集合类与一起<xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute>声明; 找到此属性时[!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] , 处理器会将集合内的空格视为重要。 <xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute>表示的集合`xml:space="preserve"`中的和空格的组合是指保留并呈现所有空格。 `xml:space="default"` 和<xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute>中的空格组合会导致前面所述的初始空白标准化, 这会在某些位置留下一个空格, 并保留并呈现这些空格。 需要哪种行为由你决定，并且应有选择地使用 `xml:space` 以启用需要的行为。  
   
- 此外，隐含流文档模型中的某些内联元素应有意不引入额外空格，即使在空白有意义集合。 例如，<xref:System.Windows.Documents.LineBreak>元素具有相同的目的\<b R / > 标记中的[!INCLUDE[TLA2#tla_html](../../../includes/tla2sharptla-html-md.md)]，并以提高可读性，在标记中，通常<xref:System.Windows.Documents.LineBreak>从任何后续文本分隔编写的换行符。 不应标准化该换行符以使它成为后续行中的前导空格。 若要启用此行为的类定义<xref:System.Windows.Documents.LineBreak>元素适用<xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute>，它然后解释由[!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)]处理器来表示该空白区域周围<xref:System.Windows.Documents.LineBreak>始终被裁剪。  
+ 此外, 流文档模型中换行符 linebreak 的某些内联元素应特意不引入额外的空间, 即使是在空白有意义的集合中。 例如, <xref:System.Windows.Documents.LineBreak>元素与 HTML 中的\<BR/> 标记具有相同的用途, 为标记中的可读性, 通常是由创作<xref:System.Windows.Documents.LineBreak>的换行符与任何后续文本分隔开。 不应标准化该换行符以使它成为后续行中的前导空格。 若要启用此行为, <xref:System.Windows.Documents.LineBreak>则元素的类定义<xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute>将应用, 然后由[!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)]处理器进行解释, 以表示始终修整周围<xref:System.Windows.Documents.LineBreak>的空格。  
   
 ## <a name="see-also"></a>请参阅
 
 - [XAML 概述 (WPF)](../wpf/advanced/xaml-overview-wpf.md)
 - [XML 字符实体和 XAML](xml-character-entities-and-xaml.md)
-- [xml: space 处理在 XAML 中](xml-space-handling-in-xaml.md)
+- [xml: 在 XAML 中处理空间](xml-space-handling-in-xaml.md)

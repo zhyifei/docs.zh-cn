@@ -22,12 +22,12 @@ helpviewer_keywords:
 - Sub Dispose destructor
 - garbage collection [Visual Basic], Visual Basic
 ms.assetid: f1ee8458-b156-44e0-9a8a-5dd171648cd8
-ms.openlocfilehash: 5b092f50ddff5c432fbd6396b5fedafe7a6acba0
-ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
+ms.openlocfilehash: 932f56a9a277360b11c551aaa1faf819f8e07fe6
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68512845"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796671"
 ---
 # <a name="object-lifetime-how-objects-are-created-and-destroyed-visual-basic"></a>对象生存期：如何创建和销毁对象 (Visual Basic)
 
@@ -41,7 +41,7 @@ ms.locfileid: "68512845"
 
 ### <a name="sub-new"></a>Sub New
 
-创建类时，`Sub New` 构造函数仅可运行一次。 调用此函数的位置只能是相同类或派生类的另一个构造函数的代码的第一行。 此外，`Sub New` 方法中的代码始终在类中任何其他代码之前运行。 如果未显式`Sub New`定义类的过程`Sub New` , Visual Basic 和更高版本将在运行时隐式创建构造函数。
+创建类时，`Sub New` 构造函数仅可运行一次。 调用此函数的位置只能是相同类或派生类的另一个构造函数的代码的第一行。 此外，`Sub New` 方法中的代码始终在类中任何其他代码之前运行。 如果未显式`Sub New`定义`Sub New`类的过程, 则 Visual Basic 在运行时隐式创建构造函数。
 
 若要创建类的构造函数，请在类定义中的任何位置创建一个名为 `Sub New` 的过程。 若要创建参数化构造函数，请按指定任何其他过程的参数的方式，将参数名称和数据类型指定为 `Sub New`，如下面代码所示：
 
@@ -64,7 +64,7 @@ ms.locfileid: "68512845"
 
 `Finalize` 析构函数是一种仅可从其所属的类或派生类中调用的受保护方法。 系统在对象被销毁时自动调用 `Finalize`，所以你不应从派生类的 `Finalize` 实现的外部显式调用 `Finalize`。
 
-与 `Class_Terminate`（对象设置为 Nothing 就立即执行）不同，在对象失去范围到 Visual Basic 调用 `Finalize` 析构函数之间通常存在延迟。 Visual Basic 及更高版本允许使用另一种析构函数<xref:System.IDisposable.Dispose%2A>, 可以随时显式调用此类析构函数以立即释放资源。
+与 `Class_Terminate`（对象设置为 Nothing 就立即执行）不同，在对象失去范围到 Visual Basic 调用 `Finalize` 析构函数之间通常存在延迟。 Visual Basic .net 允许使用第二种析构函数<xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>, 可以随时显式调用它来立即释放资源。
 
 > [!NOTE]
 > `Finalize` 析构函数不应引发异常，因为它们不能由应用程序处理，并且可能会导致应用程序终止。

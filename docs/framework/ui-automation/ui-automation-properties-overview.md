@@ -5,16 +5,16 @@ helpviewer_keywords:
 - UI Automation, properties
 - properties, UI Automation
 ms.assetid: a6c31d7b-b33e-49b3-b5c1-31a345f9b7c8
-ms.openlocfilehash: 154ddb91e8a87c513dd1568a7f83b626dba98c20
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0468a2f47b9f270e37ad800b83d70c475cbed2c6
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64652174"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796627"
 ---
 # <a name="ui-automation-properties-overview"></a>UI 自动化属性概述
 > [!NOTE]
->  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，请参阅[Windows 自动化 API:UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关的最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], 请[参阅 Windows 自动化 API:UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  UI 自动化提供程序公开 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 元素的属性。 这些属性使 UI 自动化客户端应用程序能够发现 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)]各部分（特别是控件）的信息，包括静态数据和动态数据。  
   
@@ -26,11 +26,11 @@ ms.locfileid: "64652174"
   
 <a name="Property_Identifiers"></a>   
 ## <a name="property-identifiers"></a>属性标识符  
- 每个属性都由一个数字和名称标识。 属性的名称仅用于调试和诊断。 提供程序使用数字 [!INCLUDE[TLA2#tla_id#plural](../../../includes/tla2sharptla-idsharpplural-md.md)] 来标识传入的属性请求。 但是，客户端应用程序只使用封装了数字和名称的 <xref:System.Windows.Automation.AutomationProperty>来标识它们希望检索的属性。  
+ 每个属性都由一个数字和名称标识。 属性的名称仅用于调试和诊断。 提供程序使用数字 Id 来标识传入的属性请求。 但是，客户端应用程序只使用封装了数字和名称的 <xref:System.Windows.Automation.AutomationProperty>来标识它们希望检索的属性。  
   
  表示特定属性的<xref:System.Windows.Automation.AutomationProperty> 对象在各个类中以字段的形式提供。 出于安全原因，UI 自动化提供程序将从 Uiautomationtypes.dll 中包含的一组单独的类中获取这些对象。  
   
- 下表按包含 <xref:System.Windows.Automation.AutomationProperty>[!INCLUDE[TLA2#tla_id#plural](../../../includes/tla2sharptla-idsharpplural-md.md)]。  
+ 下表按包含<xref:System.Windows.Automation.AutomationProperty>id 的类对属性进行分类。  
   
 |属性的种类|客户端从中获取 ID|提供程序从中获取 ID|  
 |-------------------------|--------------------------|----------------------------|  
@@ -53,12 +53,12 @@ ms.locfileid: "64652174"
   
 <a name="Properties_by_Category"></a>   
 ## <a name="properties-by-category"></a>按类别列出的属性  
- 下表对其 [!INCLUDE[TLA2#tla_id#plural](../../../includes/tla2sharptla-idsharpplural-md.md)] 位于 <xref:System.Windows.Automation.AutomationElement> 和 <xref:System.Windows.Automation.AutomationElementIdentifiers>中的属性进行分类。 这些属性是所有控件共有的。 很少一些属性在提供程序应用程序的生存期内可能是静态的；大多数动态属性都与控件模式关联。  
+ 下表对其 id 在和<xref:System.Windows.Automation.AutomationElement> <xref:System.Windows.Automation.AutomationElementIdentifiers>中找到的属性进行分类。 这些属性是所有控件共有的。 很少一些属性在提供程序应用程序的生存期内可能是静态的；大多数动态属性都与控件模式关联。  
   
  除 **和** 之外， <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A><xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>“属性访问”列还列出了每个属性的任何其他访问器。 有关在客户端应用程序中获取属性的详细信息，请参阅 [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)。  
   
 > [!NOTE]
->  有关每个属性的具体信息，请访问  “属性访问”列中的链接。  
+>  有关每个属性的具体信息，请访问 “属性访问”列中的链接。  
   
 ### <a name="display-characteristics"></a>显示特征  
   

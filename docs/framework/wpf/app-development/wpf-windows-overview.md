@@ -28,12 +28,12 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-ms.openlocfilehash: ffb397c673333b26649a815fce7a5d4e63e5b987
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 519afa7f39f669b184ccc269546ef930c114c404
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401724"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796783"
 ---
 # <a name="wpf-windows-overview"></a>WPF Windows 概述
 用户通过 Windows 与 Windows Presentation Foundation (WPF) 独立应用程序交互。 窗口的主要用途是托管使数据可视化并使用户能够与数据交互的内容。 独立[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]应用程序<xref:System.Windows.Window>使用类提供自己的窗口。 本主题将<xref:System.Windows.Window>介绍在独立的应用程序中创建和管理 windows 的基本原理。  
@@ -167,7 +167,7 @@ ms.locfileid: "68401724"
   
 - 在不影响另一个窗口的情况下最小化、最大化和还原。  
   
- 某些窗口要求与打开它们的窗口保持某种关系。 例如, [!INCLUDE[TLA#tla_ide](../../../../includes/tlasharptla-ide-md.md)]应用程序可能打开属性窗口和工具窗口, 其典型行为是涵盖创建它们的窗口。 此外，此类窗口应始终与创建它们的窗口一起关闭、最小化、最大化和还原。 这种关系可通过使*一个窗口成为*一个窗口而建立, 通过设置<xref:System.Windows.Window.Owner%2A> *拥有的窗口*的属性和对*所有者窗口*的引用来实现。 这在下面的示例中显示。  
+ 某些窗口要求与打开它们的窗口保持某种关系。 例如, 集成开发环境 (IDE) 应用程序可以打开属性窗口和工具窗口, 其典型行为是涵盖创建它们的窗口。 此外，此类窗口应始终与创建它们的窗口一起关闭、最小化、最大化和还原。 这种关系可通过使一个窗口成为一个窗口而建立, 通过设置<xref:System.Windows.Window.Owner%2A> *拥有的窗口*的属性和对*所有者窗口*的引用来实现。 这在下面的示例中显示。  
   
  [!code-csharp[WindowOwnerOwnedWindowsSnippets#SetWindowOwnerCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowOwnerOwnedWindowsSnippets/CSharp/MainWindow.xaml.cs#setwindowownercode)]
  [!code-vb[WindowOwnerOwnedWindowsSnippets#SetWindowOwnerCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WindowOwnerOwnedWindowsSnippets/visualbasic/mainwindow.xaml.vb#setwindowownercode)]  
