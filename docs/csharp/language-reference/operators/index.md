@@ -18,12 +18,12 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 13ad16ab768cdaee96cab29811e2ed058dee977a
-ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
+ms.openlocfilehash: bc5e2c88314c2f590aeddcfd37bd04c3a7400804
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68512242"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796480"
 ---
 # <a name="c-operators-c-reference"></a>C# 运算符（C# 参考）
 
@@ -59,7 +59,7 @@ C# 提供了许多由内置类型支持的预定义运算符。 例如，[算术
 
 [unchecked](../keywords/unchecked.md)：对整数运算禁用溢出检查。 这是默认的编译器行为。
 
-[default(T)](../../programming-guide/statements-expressions-operators/default-value-expressions.md) - 生成类型 T 的默认值。
+[default(T)](default.md) - 生成类型 T 的默认值。
 
 [nameof](nameof.md)：获取变量、类型或成员的简单（非限定）名称作为常数字符串。
 

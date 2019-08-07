@@ -8,25 +8,25 @@ helpviewer_keywords:
 - history [WPF], navigating back
 - navigation [WPF], through navigation history (back)
 ms.assetid: 9343234b-d864-441d-b8a7-d895cba80a87
-ms.openlocfilehash: c489a1593b3d1f22fe1ad6e648d3f8a3f7a6cd44
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 86590c2794339ac22cbc8ec5e11224736133e870
+ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947779"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68817976"
 ---
 # <a name="how-to-navigate-back-through-navigation-history"></a>如何：通过导航历史记录后退
-此示例说明如何导航到条目后退导航历史记录。  
+此示例说明如何导航到后退导航历史记录中的条目。  
   
 ## <a name="example"></a>示例  
- 正在从中承载的内容的代码<xref:System.Windows.Navigation.NavigationWindow>，<xref:System.Windows.Controls.Frame>使用<xref:System.Windows.Navigation.NavigationService>，或[!INCLUDE[TLA#tla_iegeneric](../../../../includes/tlasharptla-iegeneric-md.md)]可以在向后导航导航历史记录，一次一个条目。  
+ 从<xref:System.Windows.Navigation.NavigationWindow>、 <xref:System.Windows.Controls.Frame>使用或InternetExplorer中承载的内容运行的代码可以通过导航历史记录(一次一个条目)导航回来。<xref:System.Windows.Navigation.NavigationService>  
   
- 导航回一项需要首先检查是否存在条目后退导航历史记录中，通过检查**CanGoBack**属性，在导航回一个条目，通过调用之前**GoBack**方法。 以下示例所示：  
+ 向后导航一个条目要求首先检查后导航历史记录中是否存在条目, 方法是检查**CanGoBack**属性, 然后通过调用**GoBack**方法导航回一个条目。 下面的示例对此进行了说明:  
   
  [!code-csharp[HOWTONavigationSnippets#NavigateBackCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/HOWTONavigationSnippets/CSharp/HomePage.xaml.cs#navigatebackcode)]
  [!code-vb[HOWTONavigationSnippets#NavigateBackCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTONavigationSnippets/visualbasic/homepage.xaml.vb#navigatebackcode)]  
   
- **CanGoBack**并**GoBack**由实现<xref:System.Windows.Navigation.NavigationWindow>， <xref:System.Windows.Controls.Frame>，并<xref:System.Windows.Navigation.NavigationService>。  
+ **CanGoBack**和**GoBack**是通过、 <xref:System.Windows.Navigation.NavigationWindow> <xref:System.Windows.Controls.Frame>和<xref:System.Windows.Navigation.NavigationService>实现的。  
   
 > [!NOTE]
->  如果您调用**GoBack**，和后退导航历史记录中没有任何条目<xref:System.InvalidOperationException>引发。
+>  如果调用**GoBack**, 且后退导航历史记录中没有任何条目, <xref:System.InvalidOperationException>则会引发。

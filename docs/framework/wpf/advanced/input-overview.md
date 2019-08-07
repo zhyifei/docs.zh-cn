@@ -24,12 +24,12 @@ helpviewer_keywords:
 - focus [WPF]
 - mouse position [WPF]
 ms.assetid: ee5258b7-6567-415a-9b1c-c0cbe46e79ef
-ms.openlocfilehash: 1149a70fc723a82144d13cbd079e3287b52ec4fb
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 8fa9f2dd668efca6a3108973ff792cc17b37b410
+ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401481"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68818039"
 ---
 # <a name="input-overview"></a>输入概述
 <a name="introduction"></a>[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]子系统提供了一个功能强大的 API, 用于获取各种设备 (包括鼠标、键盘、触摸和触笔) 的输入。 本主题介绍了 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供的服务，并说明了输入系统的体系结构。
@@ -113,7 +113,7 @@ ms.locfileid: "68401481"
 ## <a name="text-input"></a>文本输入
  <xref:System.Windows.ContentElement.TextInput>事件使你能够以与设备无关的方式侦听文本输入。 键盘是文本输入的主要方式，但通过语音、手写和其他输入设备也可以生成文本输入。
 
- 对于键盘输入, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]首先发送相应<xref:System.Windows.ContentElement.KeyDown> / <xref:System.Windows.ContentElement.KeyUp>的事件。 如果未处理这些事件, 并且该键是文本 (而不是诸如方向箭头或函数键之类的控件键), 则<xref:System.Windows.ContentElement.TextInput>会引发事件。  和<xref:System.Windows.ContentElement.KeyDown>事件之间/ <xref:System.Windows.ContentElement.KeyUp>并不总是有简单的一对一映射,因为多个击键可以生成一个文本输入字符,而单个击键可以生成多个字符<xref:System.Windows.ContentElement.TextInput>strings.  对于中文、日文和韩文等语言尤其如此，这些语言使用 [!INCLUDE[TLA#tla_ime#plural](../../../../includes/tlasharptla-imesharpplural-md.md)] 生成由其对应的字母组成的成千上万个可能的字符。
+ 对于键盘输入, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]首先发送相应<xref:System.Windows.ContentElement.KeyDown> / <xref:System.Windows.ContentElement.KeyUp>的事件。 如果未处理这些事件, 并且该键是文本 (而不是诸如方向箭头或函数键之类的控件键), 则<xref:System.Windows.ContentElement.TextInput>会引发事件。  和<xref:System.Windows.ContentElement.KeyDown>事件之间/ <xref:System.Windows.ContentElement.KeyUp>并不总是有简单的一对一映射,因为多个击键可以生成一个文本输入字符,而单个击键可以生成多个字符<xref:System.Windows.ContentElement.TextInput>strings.  对于中文、日语和韩语等语言, 使用输入法编辑器 (Ime) 在其相应的字母表中生成成千上万个可能的字符时尤其如此。
 
  当[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.ContentElement.KeyUp> <xref:System.Windows.Input.Key.System?displayProperty=nameWithType>发送事件时, <xref:System.Windows.ContentElement.TextInput>如果击键可能成为事件的一部分 (例如, 按 ALT + S), 则设置为。 <xref:System.Windows.Input.KeyEventArgs.Key%2A> / <xref:System.Windows.ContentElement.KeyDown> 这样, <xref:System.Windows.ContentElement.KeyDown>事件处理程序中的代码就可以<xref:System.Windows.Input.Key.System?displayProperty=nameWithType>检查和 (如果找到) 对随后引发<xref:System.Windows.ContentElement.TextInput>的事件的处理程序保留处理。 在这些情况下, 可以使用<xref:System.Windows.Input.TextCompositionEventArgs>参数的各种属性来确定原始击键。 同样, 如果[!INCLUDE[TLA2#tla_ime](../../../../includes/tla2sharptla-ime-md.md)]处于活动状态, <xref:System.Windows.Input.Key>则的值<xref:System.Windows.Input.Key.ImeProcessed?displayProperty=nameWithType>为, 并<xref:System.Windows.Input.KeyEventArgs.ImeProcessedKey%2A>提供原始击键或击键。
 

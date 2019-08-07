@@ -24,12 +24,12 @@ helpviewer_keywords:
 - programmatic navigation [WPF]
 - hyperlinks [WPF]
 ms.assetid: 86ad2143-606a-4e34-bf7e-51a2594248b8
-ms.openlocfilehash: ee2f6050eeea6eec840156ed5dce9fb9b6172149
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: 145c4e33bd601fa61750df56b949bda5d43cc372
+ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796863"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68817997"
 ---
 # <a name="navigation-overview"></a>导航概述
 
@@ -38,7 +38,7 @@ Windows Presentation Foundation (WPF) 支持可在两种类型的应用程序中
 <xref:System.Windows.Controls.Page>、 <xref:System.Windows.Documents.Hyperlink> [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]、 <xref:System.Windows.Navigation.NavigationService>和日志构成提供的导航支持的核心。 本概述首先详细探讨这些功能, 然后介绍高级导航支持, 其中包括导航[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]到松散文件、HTML 文件和对象。
 
 > [!NOTE]
-> 在本主题中, 术语 "浏览器" 只引用可以承载[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]应用程序的浏览器, 当前包括[!INCLUDE[TLA#tla_ie](../../../../includes/tlasharptla-ie-md.md)]和 Firefox。 仅特定[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]的浏览器支持特定功能的情况下, 浏览器版本被引用。
+> 在本主题中, 术语 "浏览器" 只引用可以托管[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]应用程序的浏览器, 当前包括 Microsoft Internet Explorer 和 Firefox。 仅特定[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]的浏览器支持特定功能的情况下, 浏览器版本被引用。
 
 ## <a name="navigation-in-wpf-applications"></a>WPF 应用程序中的导航
 
@@ -180,7 +180,7 @@ Windows Presentation Foundation (WPF) 支持可在两种类型的应用程序中
 
 ![包含超链接的页面](./media/navigation-overview/xbap-with-a-page-with-a-hyperlink.png "这会显示一个包含超链接的页的 XBAP。")
 
-正如您所期望的那样<xref:System.Windows.Documents.Hyperlink> , 单击[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]将使导航到<xref:System.Windows.Controls.Page>由`NavigateUri`属性标识的。 此外, [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]为中[!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]的 "最近使用的<xref:System.Windows.Controls.Page>页" 列表添加了一个条目。 如下图所示。
+正如您所期望的那样<xref:System.Windows.Documents.Hyperlink> , 单击[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]将使导航到<xref:System.Windows.Controls.Page>由`NavigateUri`属性标识的。 此外, [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]将在 Internet Explorer 中的 " <xref:System.Windows.Controls.Page>最近使用的页" 列表中添加一个条目。 如下图所示。
 
 ![后退和前进按钮](./media/navigation-overview/back-and-forward-navigation.png "用 \"后退\" 和 \"前进\" 按钮导航。")
 
@@ -367,16 +367,16 @@ Windows Presentation Foundation (WPF) 支持可在两种类型的应用程序中
 
 #### <a name="navigating-the-journal-from-internet-explorer"></a>从 Internet Explorer 导航日志
 
-从概念上讲, 日记的工作方式与中[!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]的 "**后退**" 和 "**前进**" 按钮的操作方式相同。 这些在下图中显示。
+从概念上讲, 日记的工作方式与 Internet Explorer 中的 "**后退**" 和 "**前进**" 按钮的操作方式相同。 这些在下图中显示。
 
 ![后退和前进按钮](./media/navigation-overview/back-and-forward-navigation.png "用 \"后退\" 和 \"前进\" 按钮导航。")
 
-对于[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]承载的[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)], 将日记集成到的导航中。 [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] 这允许用户[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]使用中[!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]的 "**后退**"、"**前进**" 和 "**最新页**" 按钮在中导航页面。 日志的集成[!INCLUDE[TLA2#tla_ie6](../../../../includes/tla2sharptla-ie6-md.md)]方式与用于[!INCLUDE[TLA2#tla_ie7](../../../../includes/tla2sharptla-ie7-md.md)]或 Internet Explorer 8 的方式相同。 而是[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]呈现一个替代导航。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]
+对于[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]由 internet explorer 承载的, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]将日记集成到 internet explorer 的[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]导航中。 这样, 用户便可以使用 Internet Explorer [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]中的 "**后退**"、"**前进**" 和 "**最新页**" 按钮在中导航页面。
 
 > [!IMPORTANT]
-> 在[!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]中, 当用户离开并返回[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]到时, 只有未保持活动状态的页的日记条目保留在日志中。 有关保持页处于活动状态的讨论, 请参阅本主题后面的[页生存期和日志](#PageLifetime)。
+> 在 Internet Explorer 中, 当用户离开并返回到[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]时, 只有未保持活动状态的页的日记条目保留在日志中。 有关保持页处于活动状态的讨论, 请参阅本主题后面的[页生存期和日志](#PageLifetime)。
 
-<xref:System.Windows.Controls.Page>默认情况下, 的 "**最新** [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]页" [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]列表中显示的每个的文本都<xref:System.Windows.Controls.Page>是的。 很多情况下这对用户并没有什么特殊的意义。 幸运的是，可以使用以下选项更改文本：
+默认情况下, <xref:System.Windows.Controls.Page> [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] Internet Explorer 的 "**最新页**" 列表中显示的每个文本<xref:System.Windows.Controls.Page>都是的。 很多情况下这对用户并没有什么特殊的意义。 幸运的是，可以使用以下选项更改文本：
 
 1. 附加`JournalEntry.Name`的属性值。
 
@@ -400,7 +400,7 @@ Windows Presentation Foundation (WPF) 支持可在两种类型的应用程序中
 
 #### <a name="navigating-the-journal-using-wpf"></a>使用 WPF 导航日志
 
-尽管用户可以使用[!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]中的 "**后退**"、"**前进**" 和 "**最新" 页**导航日记, 但你也可以使用提供的[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]声明性和编程机制导航日志。 这样做的一个原因是在页面中提供[!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]自定义导航。
+尽管用户可以使用 Internet Explorer 中的 "**后退**"、"**前进**" 和 "**最新" 页**导航日记, 但你也可以使用提供的[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]声明性和编程机制导航日志。 这样做的一个原因是在页面中提供[!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]自定义导航。
 
 您可以使用公开<xref:System.Windows.Input.NavigationCommands>的导航命令以声明方式添加日记本导航支持。 下面的示例演示如何使用`BrowseBack`导航命令。
 
@@ -547,7 +547,7 @@ Windows Presentation Foundation (WPF) 支持可在两种类型的应用程序中
 
 - 对于所有受[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]支持的浏览器, 中的 Cookie 支持都是相同的。
 
-- 在[!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]中, 与 cookie [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]相关的 P3P 策略优先, 特别是对于第一方和第三方[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]。
+- 在 Internet Explorer 中, 与 cookie 相关的 P3P 策略将[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]遵循, 特别是对于第一方和第三方。 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]
 
 <a name="Structured_Navigation"></a>
 
@@ -606,7 +606,7 @@ Windows Presentation Foundation (WPF) 支持可在两种类型的应用程序中
 
 ![一个对话框](./media/navigation-overview/navigation-window-as-dialog-box.png "作为对话框的导航窗口")
 
-如您所见, <xref:System.Windows.Navigation.NavigationWindow>将[!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]显示允许用户导航日记的样式的 "**后退**" 和 "**前进**" 按钮。 这些按钮提供相同的用户体验，如下图所示。
+如您所见, <xref:System.Windows.Navigation.NavigationWindow>会显示允许用户导航日记的 Internet Explorer 样式的 "**后退**" 和 "**前进**" 按钮。 这些按钮提供相同的用户体验，如下图所示。
 
 ![System.windows.navigation.navigationwindow> 中的 "后退" 和 "前进" 按钮](./media/navigation-overview/back-and-forward-buttons-in-navigation-window.png "导航窗口中的 \"后退\" 和 \"前进\" 按钮")
 
@@ -646,7 +646,7 @@ Windows Presentation Foundation (WPF) 支持可在两种类型的应用程序中
 
 ![使用自己的日记的帧](./media/navigation-overview/frame-uses-its-own-journal.png "这显示了在使用其自己的日记的帧中导航的效果。")
 
-请注意[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] <xref:System.Windows.Controls.Frame>, 在中的导航 (而不[!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]是) 中显示日记条目。
+请注意[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] <xref:System.Windows.Controls.Frame>, 在中的导航 (而不是 Internet Explorer) 中显示日记条目。
 
 > [!NOTE]
 > 如果是在中承载的内容的[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]一部分<xref:System.Windows.Controls.Frame>,则使用其自己的日记, 因此会显示自己的导航。 <xref:System.Windows.Window> <xref:System.Windows.Controls.Frame>

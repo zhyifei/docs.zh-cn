@@ -5,19 +5,19 @@ helpviewer_keywords:
 - WPF [WPF], about application development
 - application development [WPF], about
 ms.assetid: 2996ce5e-81e9-49ae-881b-952db3dd1b7e
-ms.openlocfilehash: 56dbdfd70dd335d32224d11c31a5e64abd3124af
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a988baa64025dd9c188e367949c07d861413c197
+ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64655470"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68817982"
 ---
 # <a name="application-development"></a>应用程序开发
 <a name="introduction"></a> Windows Presentation Foundation (WPF) 是一个演示框架，可用于开发以下类型的应用程序：  
   
 - 独立应用程序（传统风格的 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 应用程序，这些应用程序作为要安装到客户端计算机并从客户端计算机运行的可执行程序集来生成）。  
   
-- [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]（由导航页组成的应用程序，这些应用程序作为可执行程序集生成并由 Web 浏览器（如 [!INCLUDE[TLA#tla_ie](../../../../includes/tlasharptla-ie-md.md)] 或 Mozilla Firefox）承载）。  
+- [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)](由导航页面构成的应用程序, 这些页面构建为可执行程序集并由 Web 浏览器 (如 Microsoft Internet Explorer 或 Mozilla Firefox) 承载。  
   
 - 自定义控件库（包含可重用控件的非可执行程序集）。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "64655470"
   
 <a name="WPF_Application_Resource__Content__and_Data_Files"></a>   
 ## <a name="wpf-application-resource-content-and-data-files"></a>WPF 应用程序资源、内容和数据文件  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 扩展支持三种类型的非可执行文件的数据文件中嵌入的资源在 Microsoft.NET Framework 的核心支持： 资源、 内容和数据。 有关详细信息，请参阅 [WPF 应用程序资源、内容和数据文件](wpf-application-resource-content-and-data-files.md)。  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]为嵌入资源扩展了 Microsoft .NET 框架中的核心支持, 并支持三种不可执行的数据文件: 资源、内容和数据。 有关详细信息，请参阅 [WPF 应用程序资源、内容和数据文件](wpf-application-resource-content-and-data-files.md)。  
   
  在对于 WPF 非可执行数据文件的众多支持中，其中的一项重要支持就是能够通过唯一的 [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] 来识别和加载这些文件。 有关详细信息，请参阅 [WPF 中的 Pack URI](pack-uris-in-wpf.md)。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "64655470"
   
  <xref:System.Windows.Window> 支持用于创建被称为对话框的特殊窗口类型的功能。 可以创建两种类型的对话框，即模式和无模式对话框。  
   
- 为方便起见，以及可重用性和跨应用程序一致的用户体验的优势[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]提供了三种常见的 Windows 对话框： <xref:Microsoft.Win32.OpenFileDialog>， <xref:Microsoft.Win32.SaveFileDialog>，和<xref:System.Windows.Controls.PrintDialog>。  
+ 为方便起见, 并提供可重用性和跨应用[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]程序的一致用户体验的优点, 公开了三个常见的 Windows 对话框: <xref:Microsoft.Win32.OpenFileDialog>、 <xref:Microsoft.Win32.SaveFileDialog>和<xref:System.Windows.Controls.PrintDialog>。  
   
  消息框是一种特殊类型的对话框，用于向用户显示重要的文本信息并询问简单的“是/否/确定/取消”问题。 使用 <xref:System.Windows.MessageBox> 类创建并显示消息框。  
   
@@ -108,7 +108,7 @@ ms.locfileid: "64655470"
   
 <a name="Hosting"></a>   
 ## <a name="hosting"></a>宿主  
- [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 可以在 [!INCLUDE[TLA#tla_ie](../../../../includes/tlasharptla-ie-md.md)] 或 Firefox 中承载。 每个承载模型都有各自的一些注意事项和约束，这些内容在[承载](hosting-wpf-applications.md)中均有涵盖。  
+ [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]可在 Microsoft Internet Explorer 或 Firefox 中承载。 每个承载模型都有各自的一些注意事项和约束，这些内容在[承载](hosting-wpf-applications.md)中均有涵盖。  
   
 <a name="Build_and_Deploy"></a>   
 ## <a name="build-and-deploy"></a>生成和部署  

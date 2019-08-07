@@ -2,12 +2,12 @@
 title: 访问控制
 description: 了解如何以F#编程语言控制对编程元素 (如类型、方法和函数) 的访问。
 ms.date: 05/16/2016
-ms.openlocfilehash: ed77a09cf87aabf9a4134276e89e84aa42abd3c3
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 38f8f3fd4114c0428fbe8baca71594cd07740b2c
+ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629968"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68817853"
 ---
 # <a name="access-control"></a>访问控制
 
@@ -40,7 +40,7 @@ ms.locfileid: "68629968"
 
 - 可区分联合中各个事例的可访问性取决于可区分联合本身的可访问性。 也就是说, 特定联合用例的可访问性不如联合本身。
 
-- 记录类型的单个字段的可访问性不能由记录本身的可访问性决定。 也就是说, 特定记录标签的可访问性比记录本身的可访问性低。
+- 记录类型的单个字段的可访问性由记录本身的可访问性决定。 也就是说, 特定记录标签的可访问性比记录本身的可访问性低。
 
 ## <a name="example"></a>示例
 

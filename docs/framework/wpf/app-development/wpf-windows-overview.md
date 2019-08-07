@@ -28,18 +28,18 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-ms.openlocfilehash: 519afa7f39f669b184ccc269546ef930c114c404
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: 6ab547951b00cc4a479034129254e4060486348d
+ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796783"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68817952"
 ---
 # <a name="wpf-windows-overview"></a>WPF Windows 概述
 用户通过 Windows 与 Windows Presentation Foundation (WPF) 独立应用程序交互。 窗口的主要用途是托管使数据可视化并使用户能够与数据交互的内容。 独立[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]应用程序<xref:System.Windows.Window>使用类提供自己的窗口。 本主题将<xref:System.Windows.Window>介绍在独立的应用程序中创建和管理 windows 的基本原理。  
   
 > [!NOTE]
->  浏览器承载[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]的应用程序[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] (包括[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]和松散页面) 不提供其自己的窗口。 而是托管在由提供的[!INCLUDE[TLA#tla_iegeneric](../../../../includes/tlasharptla-iegeneric-md.md)]windows 中。 请参阅[WPF XAML 浏览器应用程序概述](wpf-xaml-browser-applications-overview.md)。  
+>  浏览器承载[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]的应用程序[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] (包括[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]和松散页面) 不提供其自己的窗口。 而是托管在 Windows Internet Explorer 提供的 windows 中。 请参阅[WPF XAML 浏览器应用程序概述](wpf-xaml-browser-applications-overview.md)。  
 
 <a name="TheWindowClass"></a>   
 ## <a name="the-window-class"></a>窗口类  

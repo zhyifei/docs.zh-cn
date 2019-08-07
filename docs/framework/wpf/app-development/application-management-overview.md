@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 32b1c054-5aca-423b-b4b5-ed8dc4dc637d
-ms.openlocfilehash: d8e26ff197e22ffa18b4acdd020b80879023c0f7
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: a5808261ec9fe957ee993177590446389f219609
+ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364091"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68818018"
 ---
 # <a name="application-management-overview"></a>应用程序管理概述
 所有应用程序都可能会共享一组适用于实现和管理应用程序的常见功能。 本主题概述了用于创建和管理应用程序<xref:System.Windows.Application>的类中的功能。  
@@ -293,7 +293,7 @@ ms.locfileid: "68364091"
   
 - 从中导航掉了 XBAP。  
   
-- 在[!INCLUDE[TLA2#tla_ie7](../../../../includes/tla2sharptla-ie7-md.md)]中, 当承载 XBAP 的选项卡关闭时。  
+- 在 Internet Explorer 中, 当承载 XBAP 的选项卡关闭时。  
   
 - 关闭浏览器时。  
   
@@ -312,7 +312,7 @@ ms.locfileid: "68364091"
  [!code-csharp[ApplicationExitSnippets#AppExitCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationExitSnippets/CSharp/MainWindow.xaml.cs#appexitcode)]
  [!code-vb[ApplicationExitSnippets#AppExitCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationExitSnippets/visualbasic/mainwindow.xaml.vb#appexitcode)]  
   
- 可以通过处理<xref:System.Windows.Application.Exit>事件来检测退出代码的值并对其进行更改。 向事件处理程序<xref:System.Windows.ExitEventArgs>传递, 该事件处理程序通过<xref:System.Windows.ExitEventArgs.ApplicationExitCode%2A>属性提供对退出代码的访问。 <xref:System.Windows.Application.Exit> 有关详细信息，请参阅 <xref:System.Windows.Application.Exit>。  
+ 可以通过处理<xref:System.Windows.Application.Exit>事件来检测退出代码的值并对其进行更改。 向事件处理程序<xref:System.Windows.ExitEventArgs>传递, 该事件处理程序通过<xref:System.Windows.ExitEventArgs.ApplicationExitCode%2A>属性提供对退出代码的访问。 <xref:System.Windows.Application.Exit> 有关详细信息，请参阅 <xref:System.Windows.Application.Exit> 。  
   
 > [!NOTE]
 >  可以在独立的应用程序和 Xbap 中设置退出代码。 但对于 Xbap, 将忽略退出代码值。  
