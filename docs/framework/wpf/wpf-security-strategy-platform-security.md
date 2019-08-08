@@ -17,15 +17,15 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: 42b1596082fe3e682a6fa806412ab5837b087bf9
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 65725851cb413e28ceff0d1c9c4b62b76c4fff18
+ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400712"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68817881"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>WPF 安全策略 — 平台安全性
-虽然 Windows Presentation Foundation (WPF) 提供各种安全服务, 但它还利用基础平台 (包括操作系统、CLR 和[!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)]) 的安全功能。 这些层组合在一起旨在提供 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 强大且深层防御的安全模型，尝试避免任何单点故障，如下图所示：  
+虽然 Windows Presentation Foundation (WPF) 提供各种安全服务, 但它还利用基础平台 (包括操作系统、CLR 和 Internet Explorer) 的安全功能。 这些层组合在一起旨在提供 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 强大且深层防御的安全模型，尝试避免任何单点故障，如下图所示：  
   
  ![显示 WPF 安全模型的关系图。](./media/wpf-security-strategy-platform-security/windows-presentation-foundation-security.png)  
   
@@ -75,15 +75,8 @@ ms.locfileid: "68400712"
   
 <a name="Limited_Rights_Process_for_Browser_Hosted_Applications"></a>   
 ### <a name="limited-rights-process-for-browser-hosted-applications"></a>浏览器承载的应用程序的受限权限进程  
- 浏览器承载的 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 应用程序在 Internet 区域沙箱内执行。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 与 [!INCLUDE[TLA#tla_ie](../../../includes/tlasharptla-ie-md.md)] 集成扩展了此保护，可提供其他支持。  
+ 浏览器承载的 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 应用程序在 Internet 区域沙箱内执行。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]与 Microsoft Internet Explorer 的集成扩展了此保护, 并提供了更多支持。  
   
-#### <a name="internet-explorer-6-service-pack-2-and-internet-explorer-7-for-xp"></a>Internet Explorer 6 Service Pack 2 和适用于 XP 的 Internet Explorer 7  
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 通过限制 [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)] 的进程特权利用操作系统安全提供进一步的保护。 在启动浏览器承载的 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 应用程序之前，操作系统会创建一个宿主进程，用于删除进程令牌中不必要的特权。 删除的特权的部分示例包括：关闭用户的计算机、加载驱动程序以及读取计算机上所有文件的访问权限的能力。  
-  
-#### <a name="internet-explorer-7-for-vista"></a>适用于 Vista 的 Internet Explorer 7  
- 在 [!INCLUDE[TLA#tla_ie7](../../../includes/tlasharptla-ie7-md.md)] 中，[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 应用程序以受保护模式运行。 具体而言，[!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)] 以中等级别的完整性运行。  
-  
-#### <a name="defense-in-depth-layer"></a>深层防御层  
  由于 [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)] 通常都是通过 Internet 区域权限集设置的沙盒，因此，删除这些权限不会损害 [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)] 的兼容性。 反而会创建一个附加的深层防御层；如果经过沙箱处理的应用程序能够利用其他层截获此进程，该进程将仍然只有有限特权。  
   
  请参阅[使用最低权限的用户帐户](https://docs.microsoft.com/previous-versions/tn-archive/cc700846%28v=technet.10%29)。  
@@ -186,9 +179,9 @@ ms.locfileid: "68400712"
   
 <a name="Microsoft_Internet_Explorer_Security"></a>   
 ## <a name="microsoft-internet-explorer-security"></a>Microsoft Internet Explorer 安全  
- 除减少安全问题和简化安全配置外，[!INCLUDE[TLA#tla_ie6sp2](../../../includes/tlasharptla-ie6sp2-md.md)] 还包含好几个增强安全的功能，从而提高了 [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)] 用户的安全。 这些功能的主旨是尝试允许用户更好地控制它们的浏览体验。  
+ 除减少安全问题和简化安全配置外, Microsoft Internet Explorer 6 (SP2) 包含多项增强了的用户[!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)]安全性的功能。 这些功能的主旨是尝试允许用户更好地控制它们的浏览体验。  
   
- 在 [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] 之前，用户可能会受限于以下任一项：  
+ 在 IE6 SP2 之前, 用户可能会受到以下任意一项操作:  
   
 - 随机弹出窗口。  
   
@@ -198,13 +191,13 @@ ms.locfileid: "68400712"
   
  在某些情况下, 不受信任的网站将尝试通过欺骗性[!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)]安装或重复显示 Microsoft ActiveX 安装对话框 (即使用户可能已将其取消) 来欺骗用户。 使用这些技术，有可能会有相当多的用户上当受骗，从而导致安装间谍软件应用程序。  
   
- [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] 包括用于缓解围绕用户启动这些问题类型的多个功能。 [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)]检测用户在操作之前单击了某个链接或页面元素 (称为*用户启动*), 并以不同于页面上脚本触发的类似操作的方式对其进行处理。 例如, [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)]合并了一个**弹出窗口阻止**程序, 该程序可检测用户在页面创建弹出窗口之前单击按钮的时间。 此程序可使 [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] 允许大多数没有威胁的弹出窗口，同时阻止用户既没有要求也不需要的弹出窗口。 阻止的弹出窗口会在新的**信息栏**下捕获, 这允许用户手动替代块并查看弹出窗口。  
+ IE6 SP2 包含多项功能, 可用于减少这些类型的问题, 这些问题涉及用户启动的概念。 当用户在操作之前单击了某个链接或页面元素时, IE6 SP2 会检测到该操作 (称为*用户启动*), 并将其视为不同于页面上脚本触发的类似操作。 例如, IE6 SP2 合并了一个**弹出窗口阻止**程序, 用于检测用户在页面创建弹出窗口之前单击按钮的时间。 这样一来, IE6 SP2 便可允许最无害的弹出窗口, 同时阻止用户既不需要也不需要的弹出窗口。 阻止的弹出窗口会在新的**信息栏**下捕获, 这允许用户手动替代块并查看弹出窗口。  
   
  相同的用户启动逻辑也适用于**打开**/**保存**安全提示。 始终在信息栏下捕获 ActiveX 安装对话框, 除非它们表示从以前安装的控件进行升级。 这些度量值组合在一起，可提供用户更安全、更可控的用户体验，因为诱导他们安装不需要的软件或恶意软件的站点受到了保护。  
   
- 这些功能还可以对使用 [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] 浏览网站（允许他们下载和安装 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 应用程序）的用户提供保护。 特别是，这是因为 [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] 提供的用户体验更好，降低了安装恶意或“狡猾”的应用程序的几率，而不考虑用于构建它的技术类型，包括 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]使用 ClickOnce 添加到这些保护, 以便通过 Internet 下载其应用程序。 由于 [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)] 是在 Internet 区域安全沙盒内执行，因此可以无缝地启动它们。 另一方面，独立的 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 应用程序需要完全信任才能执行。 对于这些应用程序, ClickOnce 将在启动过程中显示一个安全对话框, 以通知使用应用程序的其他安全要求。 但是，必须由用户启动，必须由用户启动的逻辑进行管理并且可以取消。  
+ 这些功能还可保护使用 IE6 SP2 浏览网站 (允许他们下载和安装[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]应用程序) 的客户。 具体来说, 这是因为 IE6 SP2 提供了更好的用户体验, 可减少用户安装恶意或狡猾应用程序的可能性, 而不考虑使用哪种技术来[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]构建应用程序, 其中包括。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]使用 ClickOnce 添加到这些保护, 以便通过 Internet 下载其应用程序。 由于 [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)] 是在 Internet 区域安全沙盒内执行，因此可以无缝地启动它们。 另一方面，独立的 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 应用程序需要完全信任才能执行。 对于这些应用程序, ClickOnce 将在启动过程中显示一个安全对话框, 以通知使用应用程序的其他安全要求。 但是，必须由用户启动，必须由用户启动的逻辑进行管理并且可以取消。  
   
- [!INCLUDE[TLA2#tla_ie7](../../../includes/tla2sharptla-ie7-md.md)]包含并扩展了作为持续提供安全承诺一部分的 [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] 的安全功能。  
+ Internet Explorer 7 结合并扩展了 IE6 SP2 的安全功能, 作为对安全性的不断承诺的一部分。  
   
 ## <a name="see-also"></a>请参阅
 
