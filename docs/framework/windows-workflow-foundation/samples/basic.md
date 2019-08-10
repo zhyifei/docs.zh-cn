@@ -1,16 +1,16 @@
 ---
-title: Basic1
+title: 基本-WF
 ms.date: 03/30/2017
 ms.assetid: 84a315b6-3f96-4959-8306-49be37936a23
-ms.openlocfilehash: 6f16bed29928781ec809cb664ca9faae8e2bb08c
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: be8dc4fc66a2adc337ddcd0bcfd0b67fdf9fae41
+ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65637903"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68869033"
 ---
 # <a name="basic"></a>Basic
-本部分提供示例，用于演示 Windows Workflow Foundation (WF) 的基本功能。  
+本部分提供演示基本 Windows Workflow Foundation (WF) 功能的示例。  
   
 ## <a name="in-this-section"></a>本节内容  
  [内置活动](built-in-activities.md)  

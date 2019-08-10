@@ -1,13 +1,13 @@
 ---
-title: Expressions1
+title: 表达式-WF
 ms.date: 03/30/2017
 ms.assetid: c42341a9-43a1-462c-bffb-c5de004aa428
-ms.openlocfilehash: 047f0f5d0214926fde2fe21efd9a24c4b645ed8e
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 092272db2f7979cf12917dfe35e116295db79bf3
+ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66380170"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68868900"
 ---
 # <a name="expressions"></a>表达式
 Windows Workflow Foundation (WF) 表达式是返回结果的任何活动。 从 <xref:System.Activities.Activity%601> 间接派生的所有表达式活动，其中包含名为 <xref:System.Activities.OutArgument> 的 <xref:System.Activities.Activity%601.Result%2A> 属性作为活动的返回值。 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 随附了从简单活动（如 <xref:System.Activities.Expressions.VariableValue%601> 和 <xref:System.Activities.Expressions.VariableReference%601>，它们通过运算符活动提供对单个工作流变量的访问）到复杂活动（如 <xref:Microsoft.VisualBasic.Activities.VisualBasicReference%601> 和 <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601>，它们提供对 Visual Basic 语言的全面访问，以获得结果）的广泛表达式活动。 可以通过从 <xref:System.Activities.CodeActivity%601> 或 <xref:System.Activities.NativeActivity%601> 派生来创建其他表达式活动。  
@@ -16,7 +16,7 @@ Windows Workflow Foundation (WF) 表达式是返回结果的任何活动。 从 
  工作流设计器对 Visual Basic 项目中的所有表达式使用 <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> 和 <xref:Microsoft.VisualBasic.Activities.VisualBasicReference%601>，对 C# 工作流项目中的所有表达式使用 <xref:Microsoft.CSharp.Activities.CSharpValue%601> 和 <xref:Microsoft.CSharp.Activities.CSharpReference%601>。  
   
 > [!NOTE]
->  支持C#.NET Framework 4.5 中引入了工作流项目中的表达式。 有关详细信息，请参阅[C#表达式](csharp-expressions.md)。  
+>  .NET Framework 4.5 C#中引入了对工作流项目中的表达式的支持。 有关详细信息, 请参阅[ C#表达式](csharp-expressions.md)。  
   
  设计器生成的工作流保存在 XAML 中，其中表达式位于方括号中，如以下示例所示。  
   
@@ -165,4 +165,4 @@ Sequence w = new Sequence
 };  
 ```  
   
- 有关在代码中使用表达式的详细信息，请参阅[编写工作流、 活动和表达式使用命令性代码](authoring-workflows-activities-and-expressions-using-imperative-code.md)。
+ 有关在代码中使用表达式的详细信息, 请参阅[使用命令性代码创作工作流、活动和表达式](authoring-workflows-activities-and-expressions-using-imperative-code.md)。

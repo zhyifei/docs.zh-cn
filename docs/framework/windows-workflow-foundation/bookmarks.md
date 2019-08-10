@@ -1,13 +1,13 @@
 ---
-title: Bookmarks1
+title: 书签-WF
 ms.date: 03/30/2017
 ms.assetid: 9b51a346-09ae-455c-a70a-e2264ddeb9e2
-ms.openlocfilehash: 8b7ca9549327087e30d6c72a8b784aa37ad09f3c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a15a28cc39a4227765c238a6f2b86c72197f1a39
+ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61774101"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68868916"
 ---
 # <a name="bookmarks"></a>书签
 书签是使活动能够被动等待输入而无需保持在一个工作流线程上的机制。 如果某个活动发出正在等待刺激的信号，则该活动可以创建书签。 这指示即使返回了当前正在执行的方法（该方法创建了 <xref:System.Activities.Bookmark>），也不应将该活动的执行视为完成。  

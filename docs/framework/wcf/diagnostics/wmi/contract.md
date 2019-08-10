@@ -1,13 +1,13 @@
 ---
-title: Contract1
+title: 协定
 ms.date: 03/30/2017
 ms.assetid: aa00f6b3-7e1f-4213-841a-206463fca20b
-ms.openlocfilehash: 10789f9a2940c239ae20c8fd1e9d48bca0e820ed
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e4a21e95a6f1f1860ed36c968d17bb8ac8465dce
+ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61963691"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68868433"
 ---
 # <a name="contract"></a>协定
 协定  
@@ -38,63 +38,63 @@ class Contract
 ### <a name="appdomainid"></a>AppDomainId  
  数据类型：sint32  
   
- 访问类型：只读  
+ 访问类型:只读  
   
  承载协定的 appdomain 的 appdomain ID。  
   
 ### <a name="behaviors"></a>Behaviors  
- 数据类型：行为数组  
+ 数据类型:行为数组  
   
- 访问类型：只读  
+ 访问类型:只读  
   
  与此协定关联的行为。  
   
 ### <a name="name"></a>名称  
  数据类型：String  
   
- 访问类型：只读  
+ 访问类型:只读  
   
  WSDL 中协定的名称。  
   
 ### <a name="namespace"></a>命名空间  
  数据类型：String  
   
- 访问类型：只读  
+ 访问类型:只读  
   
  WSDL 中 `portType` 元素的命名空间。  
   
 ### <a name="operations"></a>操作  
- 数据类型：操作数组  
+ 数据类型:操作数组  
   
- 访问类型：只读  
+ 访问类型:只读  
   
  此协定的操作。  
   
 ### <a name="processid"></a>ProcessId  
  数据类型：sint32  
   
- 访问类型：只读  
+ 访问类型:只读  
   
  承载此协定的进程的进程 ID。  
   
 ### <a name="ref"></a>ref  
- 数据类型：协定  
+ 数据类型:协定  
   
- 访问类型：只读  
+ 访问类型:只读  
   
  协定为双工协定时的回调类型。  
   
 ### <a name="sessionmode"></a>SessionMode  
  数据类型：String  
   
- 访问类型：只读  
+ 访问类型:只读  
   
  指示协定是否要求与此协定关联的绑定来使用通道会话。  
   
 ### <a name="type"></a>类型  
  数据类型：String  
   
- 访问类型：只读  
+ 访问类型:只读  
   
  协定的类型。  
   
