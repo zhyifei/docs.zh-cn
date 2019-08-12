@@ -1,14 +1,14 @@
 ---
 title: 从文件和其他源加载数据
 description: 本操作说明演示如何将数据加载到 ML.NET 中进行处理和训练。 最初存储在文件或其他数据源（例如数据库、JSON、XML 或内存中集合）中的数据。
-ms.date: 06/25/2019
+ms.date: 08/01/2019
 ms.custom: mvc,how-to, title-hack-0625
-ms.openlocfilehash: fafbe3fed9e3f0b509eda4f9d8967965bde19767
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: d5f3aab14a60a8c9860dc67f1cc98f3b1b3188ed
+ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67397746"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68733377"
 ---
 # <a name="load-data-from-files-and-other-sources"></a>从文件和其他源加载数据
 
@@ -55,7 +55,7 @@ public class HousingData
 - 单个列，例如 `HousingData` 类中的 `Size` 和 `CurrentPrices`。
 - 以向量的形式一次加载多个列，例如 `HousingData` 类中的 `HistoricalPrices`。
 
-如果有一个向量属性，请在数据模型中向该属性应用 [`VectorType`](xref:Microsoft.ML.Data.VectorTypeAttribute) 特性。 请务必注意，向量中的所有元素必须为相同的类型。
+如果有一个向量属性，请在数据模型中向该属性应用 [`VectorType`](xref:Microsoft.ML.Data.VectorTypeAttribute) 特性。 请务必注意，向量中的所有元素必须为相同的类型。 保持列与列之间的分隔状态可以提高特征工程的易用性和灵活性，但是对于非常多的列，在单个列上操作会对训练速度产生影响。
 
 ML.NET 通过列名称进行操作。 如果要将某个列的名称更改为该属性名称以外的其他名称，请使用 [`ColumnName`](xref:Microsoft.ML.Data.ColumnNameAttribute) 特性。 创建内存中对象时，仍然使用该属性名称创建对象。 但是，对于数据处理和生成机器学习模型，ML.NET 使用 [`ColumnName`](xref:Microsoft.ML.Data.ColumnNameAttribute) 特性中提供的值覆盖并引用该属性。
 
@@ -139,6 +139,9 @@ HousingData[] inMemoryCollection = new HousingData[]
 ```
 
 使用 [`LoadFromEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.LoadFromEnumerable*) 方法将内存中集合加载到 [`IDataView`](xref:Microsoft.ML.IDataView) 中：
+
+> [!IMPORTANT]
+> [`LoadFromEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.LoadFromEnumerable*) 假定其所加载的 [`IEnumerable`](xref:System.Collections.IEnumerable) 是线程安全的。 
 
 ```csharp
 // Create MLContext

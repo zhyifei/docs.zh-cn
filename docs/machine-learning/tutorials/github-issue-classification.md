@@ -1,15 +1,15 @@
 ---
 title: 教程：对支持问题进行分类 - 多类分类
 description: 了解如何在多类分类方案中使用 ML.NET 对 GitHub 问题进行分类，将其分配到给定区域。
-ms.date: 05/16/2019
+ms.date: 07/31/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0516
-ms.openlocfilehash: da4f82c1b2c4ebdc8ccc8f307722c2719909cf56
-ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
+ms.openlocfilehash: 3bb556cc591ee35fc14c548e7f53bad58a786e99
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66195578"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710307"
 ---
 # <a name="tutorial-categorize-support-issues-using-multiclass-classification-with-ml-net"></a>教程：将多类分类与 ML .NET 配合使用，对支持问题分类
 
@@ -37,29 +37,29 @@ ms.locfileid: "66195578"
 
 ### <a name="create-a-project"></a>创建项目
 
-1. 打开 Visual Studio 2017。 从菜单栏中选择“文件” > “新建” > “项目”。 在“新项目”对话框中，依次选择“Visual C#”和“.NET Core”节点。 然后，选择“控制台应用程序(.NET Core)”项目模板。 在“名称”文本框中，键入“GitHubIssueClassification”，然后选择“确定”按钮。
+1. 打开 Visual Studio 2017。 从菜单栏中选择“文件”   > “新建”   > “项目”  。 在“新项目”  对话框中，依次选择“Visual C#”  和“.NET Core”  节点。 然后，选择“控制台应用程序(.NET Core)”  项目模板。 在“名称”  文本框中，键入“GitHubIssueClassification”，然后选择“确定”  按钮。
 
-2. 在项目中创建一个名为“数据”的目录来保存数据集文件：
+2. 在项目中创建一个名为“数据”  的目录来保存数据集文件：
 
-    在“解决方案资源管理器”中，右键单击项目，然后选择“添加” > “新文件夹”。 键入“Data”，然后按 Enter。
+    在“解决方案资源管理器”  中，右键单击项目，然后选择“添加”   > “新文件夹”  。 键入“Data”，然后按 Enter。
 
-3. 在项目中创建一个名为“模型”的目录来保存模型：
+3. 在项目中创建一个名为“模型”的目录来保存模型  ：
 
-    在“解决方案资源管理器”中，右键单击项目，然后选择“添加” > “新文件夹”。 键入“模型”，然后按 Enter。
+    在“解决方案资源管理器”  中，右键单击项目，然后选择“添加”   > “新文件夹”  。 键入“模型”，然后按 Enter。
 
-4. 安装“Microsoft.ML NuGet 包”：
+4. 安装“Microsoft.ML NuGet 包”  ：
 
-    在“解决方案资源管理器”中，右键单击项目，然后选择“管理 NuGet 包”。 选择“nuget.org”作为包源，选择“浏览”选项卡并搜索“Microsoft.ML”，再依次选择列表中的“v 1.0.0”包和“安装”按钮。 选择“预览更改”对话框上的“确定”按钮，如果你同意所列包的许可条款，则选择“接受许可”对话框上的“我接受”按钮。
+    在“解决方案资源管理器”中，右键单击项目，然后选择“管理 NuGet 包”  。 选择“nuget.org”作为包源，选择“浏览”选项卡并搜索“Microsoft.ML”，再依次选择列表中的“v 1.0.0”包和“安装”按钮    。 选择“预览更改”  对话框上的“确定”  按钮，如果你同意所列包的许可条款，则选择“接受许可”  对话框上的“我接受”  按钮。
 
 ### <a name="prepare-your-data"></a>准备数据
 
-1. 下载 [issues_train.tsv](https://raw.githubusercontent.com/dotnet/samples/master/machine-learning/tutorials/GitHubIssueClassification/Data/issues_train.tsv) 和 [issues_test.tsv](https://raw.githubusercontent.com/dotnet/samples/master/machine-learning/tutorials/GitHubIssueClassification/Data/issues_test.tsv) 数据集，并将它们保存到先前创建的“数据”文件夹。 第一个数据集定型机器学习模型，第二个数据集可用来评估模型的准确度。
+1. 下载 [issues_train.tsv](https://raw.githubusercontent.com/dotnet/samples/master/machine-learning/tutorials/GitHubIssueClassification/Data/issues_train.tsv) 和 [issues_test.tsv](https://raw.githubusercontent.com/dotnet/samples/master/machine-learning/tutorials/GitHubIssueClassification/Data/issues_test.tsv) 数据集，并将它们保存到先前创建的“数据”文件夹  。 第一个数据集定型机器学习模型，第二个数据集可用来评估模型的准确度。
 
-2. 在“解决方案资源管理器”中，右键单击每个 \*.tsv 文件，然后选择“属性”。 在“高级”下，将“复制到输出目录”的值更改为“如果较新则复制”。
+2. 在“解决方案资源管理器”中，右键单击每个 \*.tsv 文件，然后选择“属性”  。 在“高级”下，将“复制到输出目录”的值更改为“如果较新则复制”    。
 
 ### <a name="create-classes-and-define-paths"></a>创建类和定义路径
 
-将以下附加的 `using` 语句添加到“Program.cs”文件顶部：
+将以下附加的 `using` 语句添加到“Program.cs”  文件顶部：
 
 [!code-csharp[AddUsings](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#AddUsings)]
 
@@ -78,15 +78,15 @@ ms.locfileid: "66195578"
 
 为输入数据和预测创建一些类。 向项目添加一个新类：
 
-1. 在“解决方案资源管理器”中，右键单击项目，然后选择“添加” > “新项”。
+1. 在“解决方案资源管理器”  中，右键单击项目，然后选择“添加”   > “新项”  。
 
-1. 在“添加新项”对话框中，选择“类”并将“名称”字段更改为“GitHubIssueData.cs”。 然后，选择“添加”按钮。
+1. 在“添加新项”对话框中，选择“类”并将“名称”字段更改为“GitHubIssueData.cs”     。 然后，选择“添加”  按钮。
 
-    “GitHubIssueData.cs”文件随即在代码编辑器中打开。 将下面的 `using` 语句添加到 GitHubIssueData.cs 的顶部：
+    “GitHubIssueData.cs”文件随即在代码编辑器中打开  。 将下面的 `using` 语句添加到 GitHubIssueData.cs 的顶部  ：
 
 [!code-csharp[AddUsings](~/samples/machine-learning/tutorials/GitHubIssueClassification/GitHubIssueData.cs#AddUsings)]
 
-删除现有类定义并向“GitHubIssueData.cs”文件添加以下代码，其中有两个类 `GitHubIssue` 和 `IssuePrediction`：
+删除现有类定义并向“GitHubIssueData.cs”文件添加以下代码，其中有两个类 `GitHubIssue` 和 `IssuePrediction`  ：
 
 [!code-csharp[DeclareGlobalVariables](~/samples/machine-learning/tutorials/GitHubIssueClassification/GitHubIssueData.cs#DeclareTypes)]
 
@@ -149,7 +149,7 @@ public static IEstimator<ITransformer> ProcessData()
 
 [!code-csharp[FeaturizeText](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#FeaturizeText)]
 
-数据准备最后一步使用 [Concatenate()](xref:Microsoft.ML.TransformExtensionsCatalog.Concatenate%2A) 方法将所有特征列合并到“特征”列。 默认情况下，学习算法仅处理“特征”列的特征。 使用以下代码将此转换附加到管道：
+数据准备最后一步使用 [Concatenate()](xref:Microsoft.ML.TransformExtensionsCatalog.Concatenate%2A) 方法将所有特征列合并到“特征”列  。 默认情况下，学习算法仅处理“特征”列的特征  。 使用以下代码将此转换附加到管道：
 
 [!code-csharp[Concatenate](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#Concatenate)]
 
@@ -285,6 +285,25 @@ public static void Evaluate(DataViewSchema trainingDataViewSchema)
 
 [!code-csharp[DisplayMetrics](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#DisplayMetrics)]
 
+### <a name="save-the-model-to-a-file"></a>将模型保存到文件
+
+对模型满意后，将其保存到文件中以便稍后或在其他应用程序中进行预测。 将以下代码添加到 `Evaluate` 方法中。 
+
+[!code-csharp[SnippetCallSaveModel](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#SnippetCallSaveModel)]
+
+在 `Evaluate` 方法下创建 `SaveModelAsFile` 方法。
+
+```csharp
+private static void SaveModelAsFile(MLContext mlContext,DataViewSchema trainingDataViewSchema, ITransformer model)
+{
+
+}
+```
+
+将以下代码添加到 `SaveModelAsFile` 方法。 此代码使用 [`Save`](xref:Microsoft.ML.ModelOperationsCatalog.Save*) 方法对训练后的模型进行序列化并将其存储为 zip 文件。
+
+[!code-csharp[SnippetSaveModel](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#SnippetSaveModel)]
+
 ## <a name="deploy-and-predict-with-a-model"></a>使用模型进行部署和预测
 
 使用下面的代码，在 `Evaluate` 方法调用的正下方，从 `Main` 方法中添加对新方法的调用：
@@ -302,10 +321,15 @@ private static void PredictIssue()
 
 `PredictIssue` 方法执行以下任务：
 
+* 加载已保存的模型
 * 创建测试数据的单个问题。
 * 根据测试数据预测区域。
 * 结合测试数据和预测进行报告。
 * 显示预测结果。
+
+通过向 `PredictIssue` 方法中添加以下代码，将保存的模型加载到应用程序中：
+
+[!code-csharp[SnippetLoadModel](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#SnippetLoadModel)]
 
 通过创建一个 `GitHubIssue` 实例，在 `Predict` 方法中添加一个 GitHub 问题来测试定型模型的预测：
 

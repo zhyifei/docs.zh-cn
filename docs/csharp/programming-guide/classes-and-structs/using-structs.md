@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - structs [C#], using
 ms.assetid: cea4a459-9eb9-442b-8d08-490e0797ba38
-ms.openlocfilehash: 4d1acc758f0121e7450351c63538fd47f28ef732
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 5577a5042ba77e133e3c6ee7760f7c3a4cce0537
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398050"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796580"
 ---
 # <a name="using-structs-c-programming-guide"></a>使用结构（C# 编程指南）
 `struct` 类型适用于表示轻量级对象，如 `Point`、 `Rectangle`和 `Color`。 尽管用它来表示一个点就如同具有 [Auto-Implemented Properties（自动实现的属性）](../../../csharp/language-reference/keywords/class.md) 的 [类](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)那样方便，但在某些情况下，使用 [结构](../../../csharp/language-reference/keywords/struct.md) 可能更高效。 例如，如果你声明具有 1000 个 `Point` 对象的数组，那么你将分配额外的内存用于引用每个对象；在这种情况下，使用结构将更为便宜。 因为 .NET Framework 包含一个名为 <xref:System.Drawing.Point> 的对象，所以本示例中的结构名称为“Coords”。  
@@ -21,7 +21,7 @@ ms.locfileid: "67398050"
   
  使用 [new](../../../csharp/language-reference/operators/new-operator.md) 运算符创建结构对象时，会创建结构对象且会遵循[构造函数签名](../../../csharp/programming-guide/classes-and-structs/constructors.md#constructor-syntax)来调用相应的构造函数。 与类不同，可以对结构进行实例化，而无需使用 `new` 运算符。 在这种情况下，没有调用任何构造函数，从而提高了分配效率。 但是，字段将保持为未分配状态且必须在在初始化所有字段之后才可使用对象。 这包括无法通过属性获取或设置值。
 
- 如果使用默认的无参数构造函数实例化结构对象，则根据成员的[默认值](../../../csharp/programming-guide/statements-expressions-operators/default-value-expressions.md)分配所有成员。
+ 如果使用默认的无参数构造函数实例化结构对象，则根据成员的[默认值](../../../csharp/language-reference/keywords/default-values-table.md)分配所有成员。
   
  当为某个结构编写带有参数的构造函数时，必须显式初始化所有成员，否则一个或更多的成员将不被分配，并且不能使用结构，这会生成编译器错误 CS0171。  
   

@@ -1,26 +1,26 @@
 ---
-title: Serialization1
+title: 序列化
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 ms.assetid: bebb27ac-9712-4196-9931-de19fc04dbac
 author: KrzysztofCwalina
-ms.openlocfilehash: f0ef8ab378fb3898f2d2e134f0b38668f6794ef3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0259bf82e74cbca7df8da246ca2e6ba7ef4542b3
+ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61650149"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68868529"
 ---
 # <a name="serialization"></a>序列化
-序列化是将对象转换为可以轻松地保持或传输的格式的过程。 例如，可以将对象序列化，使用 HTTP 在 Internet 上传输它，并在目标计算机上对其进行反序列化。  
+序列化是指将对象转换为可随时保存或传输的格式的过程。 例如，可以将对象序列化，使用 HTTP 在 Internet 上传输它，并在目标计算机上对其进行反序列化。  
   
- .NET Framework 提供了针对各种序列化方案进行了优化的三种主要序列化技术。 下表列出了这些技术以及与这些技术相关的主要框架类型。  
+ .NET Framework 提供了针对各种序列化方案进行优化的三种主要序列化技术。 下表列出了这些技术以及与这些技术相关的主要框架类型。  
   
-|**技术名称**|**主要类型**|**方案**|  
+|**技术名称**|**主要类型**|**各种**|  
 |-------------------------|--------------------|-------------------|  
 |**数据协定序列化**|<xref:System.Runtime.Serialization.DataContractAttribute> <br /> <xref:System.Runtime.Serialization.DataMemberAttribute> <br /> <xref:System.Runtime.Serialization.DataContractSerializer> <br /> <xref:System.Runtime.Serialization.NetDataContractSerializer> <br /> <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> <br /> <xref:System.Runtime.Serialization.ISerializable>|常规持久性<br />Web 服务<br />JSON|  
 |**XML 序列化**|<xref:System.Xml.Serialization.XmlSerializer>|对 XML 的结构具有完全控制的 XML 格式|  
-|**运行时序列化 （二进制和 SOAP）**|<xref:System.SerializableAttribute> <br /> <xref:System.Runtime.Serialization.ISerializable> <br /> <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> <br /> <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>|.NET Remoting|  
+|**运行时序列化 (二进制和 SOAP)**|<xref:System.SerializableAttribute> <br /> <xref:System.Runtime.Serialization.ISerializable> <br /> <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> <br /> <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>|.NET Remoting|  
   
  **✓ 务必**在设计新类型时考虑序列化。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "61650149"
   
  在完全信任的环境中，数据协定序列化程序可以序列化和反序列化非公共类型和成员，但在部分信任的环境中，只能序列化和反序列化公共成员。  
   
- **✓ DO** 实现具有的所有属性的 getter 和 setter <xref:System.Runtime.Serialization.DataMemberAttribute>。 数据协定序列化程序需要 getter 和 setter 要被视为可序列化的类型。 （在.NET Framework 3.5 SP1 中，某些集合属性可以是只读。）如果不会在部分信任模式下使用类型，则这两个属性访问器中的一个或两个都可以是非公共的。  
+ **✓ DO** 实现具有的所有属性的 getter 和 setter <xref:System.Runtime.Serialization.DataMemberAttribute>。 数据协定序列化程序需要将类型的 getter 和 setter 视为可序列化。 (在 .NET Framework 3.5 SP1 中, 某些集合属性可以是只能获取的。)如果不会在部分信任模式下使用类型，则这两个属性访问器中的一个或两个都可以是非公共的。  
   
  **✓ 考虑**使用序列化回调来初始化反序列化的实例。  
   
@@ -58,11 +58,11 @@ ms.locfileid: "61650149"
   
  请确保了解，数据成员（即使是私有的和内部的）在类型的未来版本中不能更改其名称、类型甚至顺序，除非特别注意使用数据协定特性的显式参数来保留协定。  
   
- 对可序列化类型进行更改时，请测试序列化的兼容性。 尝试将新版本反序列化为旧版本，以及将旧版本反序列化为新版本。  
+ 对可序列化类型进行更改时测试序列化的兼容性。 尝试将新版本反序列化为旧版本，以及将旧版本反序列化为新版本。  
   
  **✓ 考虑**实现 <xref:System.Runtime.Serialization.IExtensibleDataObject> 以允许类型的不同版本之间进行转换。  
   
- 序列化程序可通过此接口确保在转换期间不丢失任何数据。 <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A?displayProperty=nameWithType> 属性用来存储类型未来版本中的所有数据，该类型对当前版本来说是未知类型，因此不能将其存储在其数据成员中。 当前版本随后被序列化并反序列化为未来版本时，附加数据将在序列化流中可用。  
+ 序列化程序可通过此接口确保在转换期间不丢失任何数据。           <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A?displayProperty=nameWithType> 属性用来存储类型未来版本中的所有数据，该类型对当前版本来说是未知类型，因此不能将其存储在其数据成员中。 当前版本随后被序列化并反序列化为未来版本时，附加数据将在序列化流中可用。  
   
 ## <a name="supporting-xml-serialization"></a>支持 XML 序列化  
  数据协定序列化是 .NET Framework 中的主要（默认）序列化技术，但也存在数据协定序列化不支持的序列化场景。 例如，它不能让您完全控制序列化程序生成或使用的 XML 的形状。 如果需要这样的精细控制，则必须使用 XML 序列化，并且需要设计类型以支持此序列化技术。  
@@ -97,9 +97,9 @@ public class Person : ISerializable
   
  **✓ 务必**显示实现 <xref:System.Runtime.Serialization.ISerializable> 成员。  
   
- **✓ 务必**向 <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A?displayProperty=nameWithType> 实现应用一个链接要求。 这可确保只有完全受信任的核心应用程序和运行时序列化程序有权访问该成员。  
+ **✓ 务必**向 <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A?displayProperty=nameWithType> 实现应用一个链接要求。 这可确保只有完全受信任的核心和运行时序列化程序才能访问成员。  
   
- *部分版权 © 2005, 2009 Microsoft Corporation。保留所有权利。*  
+ *Portions © 2005, 2009 Microsoft Corporation 版权所有。保留所有权利。*  
   
  *经 Pearson Education, Inc 授权，转载自[框架设计准则：可重用的 .NET 库的约定、习惯用语和模式，第 2 版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 作者：Krzysztof Cwalina 和 Brad Abrams，由 Addison Wesley Professional 于 2008 年 10 月 22 日印发，作为 Microsoft Windows 开发系列的一部分。*  
   

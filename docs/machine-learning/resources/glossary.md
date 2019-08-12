@@ -2,13 +2,14 @@
 title: 机器学习库
 description: 一个重要的机器学习术语表，可在 ML.NET 中生成自定义模型时使用。
 ms.custom: seodec18
-ms.date: 05/09/2019
-ms.openlocfilehash: 7d098dc9d3dc6cb7bb08b5689b50afff01ba1d7f
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.topic: reference
+ms.date: 07/31/2019
+ms.openlocfilehash: 1c979d2c4567285146ab87f359116efb506815a1
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557981"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710543"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>机器学习重要术语词汇表
 
@@ -65,7 +66,7 @@ ML.NET 中实现 <xref:Microsoft.ML.IEstimator%601> 接口的类。
 
 ## <a name="feature"></a>功能
 
-正在对其进行度量的现象的一个可度量属性，通常是一个数（双精度）值。 多个特征被称为“特征向量”且通常存储为 `double[]`。 这些特征定义所度量现象的重要特性。 有关详细信息，请参阅 Wikipedia 上的[特征](https://en.wikipedia.org/wiki/Feature_(machine_learning))一文。
+正在对其进行度量的现象的一个可度量属性，通常是一个数（双精度）值。 多个特征被称为“特征向量”  且通常存储为 `double[]`。 这些特征定义所度量现象的重要特性。 有关详细信息，请参阅 Wikipedia 上的[特征](https://en.wikipedia.org/wiki/Feature_(machine_learning))一文。
 
 ## <a name="feature-engineering"></a>特征工程
 
@@ -77,7 +78,7 @@ ML.NET 中实现 <xref:Microsoft.ML.IEstimator%601> 接口的类。
 
 ## <a name="hyperparameter"></a>超参数
 
-机器学习算法的参数。 示例包括在决策林中学习的树的数量，或者梯度下降算法中的步长。 在对模型进行定型之前，先设置超参数的值，并控制查找预测函数参数的过程，例如，决策树中的比较点或线性回归模型中的权重。 有关详细信息，请参阅 Wikipedia 上的[超参数](https://en.wikipedia.org/wiki/Hyperparameter_(machine_learning))一文。
+机器学习算法的参数。 示例包括在决策林中学习的树的数量，或者梯度下降算法中的步长。 在对模型进行定型之前，先设置超参数  的值，并控制查找预测函数参数的过程，例如，决策树中的比较点或线性回归模型中的权重。 有关详细信息，请参阅 Wikipedia 上的[超参数](https://en.wikipedia.org/wiki/Hyperparameter_(machine_learning))一文。
 
 ## <a name="label"></a>Label
 
@@ -108,6 +109,10 @@ ML.NET 中实现 <xref:Microsoft.ML.IEstimator%601> 接口的类。
 ## <a name="n-gram"></a>N 元语法
 
 文本数据的特征提取方案：N 个单词的任何序列都将转变为[特征](#feature)值。
+
+## <a name="normalization"></a>标准化
+
+标准化是将浮点数据缩放到 0 到 1 之间的值的过程。 ML.NET 中使用的许多训练算法都需要对输入特征数据进行标准化。 ML.NET 提供了一系列[用于标准化的转换](transforms.md#normalization-and-scaling)
 
 ## <a name="numerical-feature-vector"></a>数字特征向量
 
@@ -147,6 +152,10 @@ ML.NET 中实现 <xref:Microsoft.ML.IEstimator%601> 接口的类。
 ## <a name="root-of-mean-squared-error-rmse"></a>均方误差根 (RMSE)
 
 [回归](#regression)中的一项评估指标，即误差平方平均值的平方根。
+
+## <a name="scoring"></a>评分
+
+评分是将新数据应用于经过训练的机器学习模型并生成预测的过程。 评分也称为推断。 根据模型类型，分数可以是原始值、概率或类别。
 
 ## <a name="supervised-machine-learning"></a>监管式机器学习
 

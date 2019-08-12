@@ -2,12 +2,12 @@
 title: API 网关模式与客户端到微服务直接通信
 description: 了解 API 网关模式与客户端到微服务直接通信之间的差异及二者的用途。
 ms.date: 01/07/2019
-ms.openlocfilehash: 4b169d5a9542b10726a36b65328bc6a3dc3839ef
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 9ebd544bdc137a68f03d1ab38cf23bf0d02c420c
+ms.sourcegitcommit: 46c68557bf6395f0ab9915f7558f2faae0097695
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68673164"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892237"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>API 网关模式与客户端到微服务直接通信
 
@@ -55,7 +55,7 @@ ms.locfileid: "68673164"
 
 - **耦合**：如果没有 API 网关模式，客户端应用将与内部微服务相耦合。 客户端应用需要知道如何在微服务中分解应用程序的多个区域。 在演进和重构内部微服务时，这些操作会对维护造成很大的影响，因为它们会导致客户端应用的中断性变更，原因在于直接引用来自客户端应用的内部微服务。 客户端应用需要频繁更新，这使得解决方案更难发展。
 
-- 过多的往返  ：在客户端应用中，单个页面/屏幕可能需要多次调用多个服务。 这可能导致在客户端与服务器之间经历多次网络往返，从而明显增大延迟。 在中级水平处理的聚合可以提高客户端应用的性能和用户体验。
+- 过多的往返  ：在客户端应用中，单个页面/屏幕可能需要多次调用多个服务。 这可能导致客户端和服务器之间的多次网络往返，从而显著增加了延迟时间。 在中级水平处理的聚合可以提高客户端应用的性能和用户体验。
 
 - 安全性问题  ：如果没有网关，所有微服务必定会暴露在“外部世界”中，如此，相较于隐藏客户端应用不直接使用的内部微服务，这种情况下攻击面更大。 攻击面越小，应用程序越安全。
 
@@ -128,7 +128,7 @@ API 网关可以提供多个功能。 然而，根据产品，它可能提供更
 
 [Azure API 管理](https://azure.microsoft.com/services/api-management/)（如图 4-14 所示）不仅能够满足 API 网关需求，还提供从 API 收集见解等功能。 如果正在使用 API 管理解决方案，则 API 网关仅是整个 API 管理解决方案中的一个组成部分。
 
-![Azure API 管理同时满足了 API 网关和管理需求（如日志记录、安全和计量等）。](./media/image14.png)
+![Azure API 管理同时满足了 API 网关和管理需求（如日志记录、安全和计量等）。](./media/api-gateway-azure-api-management.png)
 
 图 4-14  。 为 API 网关使用 Azure API 管理
 

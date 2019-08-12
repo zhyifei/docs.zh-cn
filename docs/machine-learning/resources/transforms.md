@@ -4,16 +4,21 @@ description: 了解在 ML.NET 中受支持的特征工程组件。
 author: natke
 ms.author: nakersha
 ms.date: 04/02/2019
-ms.openlocfilehash: 7ea06e19b4651017079a6ae57136f033e0ce981c
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.openlocfilehash: cbcdef5b8f5f6334d5545f100976347ade9ee6fd
+ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65558018"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68671876"
 ---
 # <a name="data-transformations"></a>数据转换
 
-数据转换用于为定型模型准备数据。 本指南中的数据转换返回实现 [IEstimator](xref:Microsoft.ML.IEstimator%601) 接口的类。 数据转换可以链接在一起。 每个数据转换都需要获取并生成特定类型和格式的数据，链接的参考文档中规定了具体类型和格式。
+数据转换用于：
+- 准备用于模型训练的数据
+- 采用 TensorFlow 或 ONNX 格式应用导入的模型
+- 通过模型传递数据后对其进行后处理
+
+本指南中的数据转换返回实现 [IEstimator](xref:Microsoft.ML.IEstimator%601) 接口的类。 数据转换可以链接在一起。 每个数据转换都需要获取并生成特定类型和格式的数据，链接的参考文档中规定了具体类型和格式。
 
 一些数据转换需要通过定型数据来计算参数。 例如，<xref:Microsoft.ML.NormalizationCatalog.NormalizeMeanVariance%2A> 转换器计算 `Fit()` 操作期间定型数据的平均值和方差，并在 `Transform()` 操作中使用这些参数。 
 
@@ -59,7 +64,7 @@ ms.locfileid: "65558018"
 | <xref:Microsoft.ML.TextCatalog.FeaturizeText*> | 将文本列转换为规范化 ngram 和 char-gram 计数的浮点数组 | 
 | <xref:Microsoft.ML.TextCatalog.TokenizeIntoWords*> | 将一个或多个文本列拆分为各个字词 |
 | <xref:Microsoft.ML.TextCatalog.TokenizeIntoCharactersAsKeys*> | 将一个或多个文本列拆分为关于一组主题的各个字符浮点数 |
-| <xref:Microsoft.ML.TextCatalog.NormalizeText*> | 更改大小写，删除标注字符、标点符号和数字 |
+| <xref:Microsoft.ML.TextCatalog.NormalizeText*> | 更改大小写、删除标注字符、标点符号和数字 |
 | <xref:Microsoft.ML.TextCatalog.ProduceNgrams*> | 将文本列转换为一组 ngram 计数（连续单词的序列）|
 | <xref:Microsoft.ML.TextCatalog.ProduceWordBags*> | 将文本列转换为一组 ngram 向量计数 |
 | <xref:Microsoft.ML.TextCatalog.ProduceHashedNgrams*> | 将文本列转换为已哈希处理的 ngram 计数向量 |
@@ -78,6 +83,7 @@ ms.locfileid: "65558018"
 | <xref:Microsoft.ML.ImageEstimatorsCatalog.ExtractPixels*> | 将输入图像中的像素转换为数字向量 |
 | <xref:Microsoft.ML.ImageEstimatorsCatalog.LoadImages*> | 将图像从文件夹加载到内存中 |
 | <xref:Microsoft.ML.ImageEstimatorsCatalog.ResizeImages*> | 调整图像大小 |
+| <xref:Microsoft.ML.OnnxCatalog.DnnFeaturizeImage*> | 应用预训练的深度神经网络 (DNN) 模型将输入图像转换为特征向量 |
 
 ## <a name="categorical-data-transformations"></a>分类数据转换
 
@@ -85,6 +91,17 @@ ms.locfileid: "65558018"
 | --- | --- |
 | <xref:Microsoft.ML.CategoricalCatalog.OneHotEncoding*> | 将一个或多个文本列转换为[单热](https://en.wikipedia.org/wiki/One-hot)编码向量 |
 | <xref:Microsoft.ML.CategoricalCatalog.OneHotHashEncoding*> | 将一个或多个文本列转换为基于哈希的单热编码向量 |
+
+## <a name="time-series-data-transformations"></a>时序数据转换
+
+| Transform | 定义 |
+| --- | --- |
+| <xref:Microsoft.ML.TimeSeriesCatalog.DetectAnomalyBySrCnn*> | 使用 Spectral Residual (SR) 算法检测输入时序数据中的异常 |
+| <xref:Microsoft.ML.TimeSeriesCatalog.DetectChangePointBySsa*> | 使用奇异谱分析 (SSA) 检测时序数据中的更改点 |
+| <xref:Microsoft.ML.TimeSeriesCatalog.DetectIidChangePoint*> | 使用自适应内核密度估计和鞅评分检测独立同分布 (IID) 的时序数据中的更改点 |
+| <xref:Microsoft.ML.TimeSeriesCatalog.ForecastBySsa*> | 使用奇异谱分析 (SSA) 预测时序数据 |
+| <xref:Microsoft.ML.TimeSeriesCatalog.DetectSpikeBySsa*> | 使用奇异谱分析 (SSA) 检测时序数据中的峰值 |
+| <xref:Microsoft.ML.TimeSeriesCatalog.DetectIidSpike*> | 使用自适应内核密度估计和鞅评分检测独立同分布 (IID) 的时序数据中的峰值 |
 
 ## <a name="missing-values"></a>缺失值
 
@@ -99,6 +116,35 @@ ms.locfileid: "65558018"
 | --- | --- |
 | <xref:Microsoft.ML.FeatureSelectionCatalog.SelectFeaturesBasedOnCount*> | 选择非默认值大于阈值的功能 |
 | <xref:Microsoft.ML.FeatureSelectionCatalog.SelectFeaturesBasedOnMutualInformation*> | 选择标签列中的数据最依赖的功能 |
+
+## <a name="feature-transformations"></a>功能转换
+
+| Transform | 定义 |
+| --- | --- |
+| <xref:Microsoft.ML.KernelExpansionCatalog.ApproximatedKernelMap*> | 将每个输入向量映射到较低维度的特征空间，在该特征空间中，内积近似于内核函数，这样就可以将特征用作线性算法的输入 |
+| <xref:Microsoft.ML.PcaCatalog.ProjectToPrincipalComponents*> | 通过应用主成分分析算法来降低输入特征向量的维度 |
+
+## <a name="explainability-transformations"></a>解释能力转换
+
+| Transform | 定义 |
+| --- | --- |
+| <xref:Microsoft.ML.ExplainabilityCatalog.CalculateFeatureContribution*> | 计算特征向量的每个元素的贡献分数 |
+
+## <a name="calibration-transformations"></a>校准转换
+
+| Transform | 定义 |
+| --- | --- |
+|<xref:Microsoft.ML.BinaryClassificationCatalog.CalibratorsCatalog.Platt%28System.String%2CSystem.String%2CSystem.String%29> | 使用带有使用训练数据的参数估计的逻辑回归将二元分类器原始分数转换为类概率 |
+| <xref:Microsoft.ML.BinaryClassificationCatalog.CalibratorsCatalog.Platt%28System.Double%2CSystem.Double%2CSystem.String%29> | 使用带有固定参数的逻辑回归将二元分类器原始分数转换为类概率 |
+| <xref:Microsoft.ML.BinaryClassificationCatalog.CalibratorsCatalog.Naive*> | 通过将分数分配到箱并根据箱之间的分布计算概率将二元分类器原始分数转换为类概率 |
+| <xref:Microsoft.ML.BinaryClassificationCatalog.CalibratorsCatalog.Isotonic*> | 通过将分数分配到箱将二元分类器原始分数转换为类概率（使用训练数据估计边界位置和箱的大小）  |
+
+## <a name="deep-learning-transformations"></a>深度学习转换
+
+| Transform | 定义 |
+| --- | --- |
+| <xref:Microsoft.ML.OnnxCatalog.ApplyOnnxModel*> | 使用导入的 ONNX 模型转换输入数据 |
+| <xref:Microsoft.ML.TensorflowCatalog.LoadTensorFlowModel*> | 使用导入的 TensorFlow 模型转换输入数据 |
 
 ## <a name="custom-transformations"></a>自定义转换
 

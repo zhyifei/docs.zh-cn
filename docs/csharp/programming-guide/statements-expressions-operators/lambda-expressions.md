@@ -1,7 +1,7 @@
 ---
 title: Lambda 表达式 - C# 编程指南
 ms.custom: seodec18
-ms.date: 03/14/2019
+ms.date: 07/29/2019
 helpviewer_keywords:
 - lambda expressions [C#]
 - outer variables [C#]
@@ -9,38 +9,44 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-ms.openlocfilehash: 546feb6f3c4515ceecdb5b5afa14c0fc99ab7020
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 36dab520d67d08d1b3304f1453bfb2c07a2f1c32
+ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363908"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68671697"
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>Lambda 表达式（C# 编程指南）
 
-Lambda 表达式  是作为对象处理的代码块（表达式或语句块）。 它可作为参数传递给方法，也可通过方法调用返回。 Lambda 表达式广泛用于：
+“Lambda 表达式”是采用以下任意一种形式的表达式： 
 
-- 将要执行的代码传递给异步方法，例如 <xref:System.Threading.Tasks.Task.Run(System.Action)?displayProperty=nameWithType>。
+- [表达式 lambda](#expression-lambdas)，表达式为其主体：
 
-- 编写 [LINQ 查询表达式](../../linq/index.md)。
+  ```csharp
+  (input-parameters) => expression
+  ```
 
-- 创建[表达式树](../concepts/expression-trees/index.md)。
+- [语句 lambda](#statement-lambdas)，语句块作为其主体：
 
-Lambda 表达式是可以表示为委托的代码，或者表示为表达式树的代码，它所表示的表达式树可以编译为委托。 Lambda 表达式的特定委托类型取决于其参数和返回值。 不返回值的 Lambda 表达式对应于 `Action` 委托，具体取决于其参数数量。 返回值的 Lambda 表达式对应于 `Func` 委托，具体取决于其参数数量。 例如，有 2 个参数但不返回值的 Lambda 表达式对应于 <xref:System.Action%602> 委托。 有 1 个参数并返回值的 Lambda 表达式对应于 <xref:System.Func%602> 委托。
+  ```csharp  
+  (input-parameters) => { <sequence-of-statements> }
+  ```
 
-Lambda 表达式使用 [lambda 声明运算符](../../language-reference/operators/lambda-operator.md) `=>` 从其可执行代码中分离 lambda 参数列表。 若要创建 Lambda 表达式，需要在 lambda 运算符左侧指定输入参数（如果有），然后在另一侧输入表达式或语句块。 例如，单行 Lambda 表达式 `x => x * x` 指定名为 `x` 的参数并返回 `x` 的平方值。 如下面的示例所示，你可以将此表达式分配给委托类型：
+使用 [lambda 声明运算符`=>`](../../language-reference/operators/lambda-operator.md) 从其主体中分离 lambda 参数列表。 若要创建 Lambda 表达式，需要在 Lambda 运算符左侧指定输入参数（如果有），然后在另一侧输入表达式或语句块。
+
+任何 Lambda 表达式都可以转换为[委托](../../language-reference/builtin-types/reference-types.md#the-delegate-type)类型。 Lambda 表达式可以转换的委托类型由其参数和返回值的类型定义。 如果 lambda 表达式不返回值，则可以将其转换为 `Action` 委托类型之一；否则，可将其转换为 `Func` 委托类型之一。 例如，有 2 个参数且不返回值的 Lambda 表达式可转换为 <xref:System.Action%602> 委托。 有 1 个参数且不返回值的 Lambda 表达式可转换为 <xref:System.Func%602> 委托。 以下示例中，lambda 表达式 `x => x * x`（指定名为 `x` 的参数并返回 `x` 平方值）将分配给委托类型的变量：
 
 [!code-csharp-interactive[lambda is delegate](~/samples/snippets/csharp/programming-guide/lambda-expressions/Introduction.cs#Delegate)]
 
-还可以将 lambda 表达式分配给表达式树类型：
+表达式 lambda 还可以转换为[表达式树](../concepts/expression-trees/index.md)类型，如下面的示例所示：
 
 [!code-csharp-interactive[lambda is expression tree](~/samples/snippets/csharp/programming-guide/lambda-expressions/Introduction.cs#ExpressionTree)]
 
-或者，可以将其直接作为方法参数传递：
+可在需要委托类型或表达式树的实例的任何代码中使用 lambda 表达式，例如，作为 <xref:System.Threading.Tasks.Task.Run(System.Action)?displayProperty=nameWithType> 方法的参数传递应在后台执行的代码。 编写 [LINQ 查询表达式](../../linq/index.md)时，还可以使用 lambda 表达式，如下例所示：
 
-[!code-csharp-interactive[lambda is argument](~/samples/snippets/csharp/programming-guide/lambda-expressions/Introduction.cs#Argument)]
+[!code-csharp-interactive[lambda is argument in LINQ](~/samples/snippets/csharp/programming-guide/lambda-expressions/Introduction.cs#Argument)]
 
-如果使用基于方法的语法在 <xref:System.Linq.Enumerable?displayProperty=nameWithType> 类中调用 <xref:System.Linq.Enumerable.Select%2A?displayProperty=nameWithType> 方法（就像在 LINQ to Objects 和 LINQ to XML 中一样），参数是委托类型 <xref:System.Func%602?displayProperty=nameWithType>。 使用 Lambda 表达式创建该委托最为方便。 如果在 <xref:System.Linq.Queryable?displayProperty=nameWithType> 类中调用 <xref:System.Linq.Queryable.Select%2A?displayProperty=nameWithType> 方法（就像在 LINQ to SQL 中一样），参数类型是表达式树类型 [`Expression<Func<TSource,TResult>>`](<xref:System.Linq.Expressions.Expression%601>)。 同样，Lambda 表达式只是一种非常简洁的构造该表达式目录树的方式。 尽管事实上通过 Lambda 创建的对象具有不同的类型，但 Lambda 使得 `Select` 调用看起来类似。
+如果使用基于方法的语法在 <xref:System.Linq.Enumerable?displayProperty=nameWithType> 类中（例如，在 LINQ to Objects 和 LINQ to XML 中）调用 <xref:System.Linq.Enumerable.Select%2A?displayProperty=nameWithType> 方法，则参数为委托类型 <xref:System.Func%602?displayProperty=nameWithType>。 如果在 <xref:System.Linq.Queryable?displayProperty=nameWithType> 类中（例如，在 LINQ to SQL 中）调用 <xref:System.Linq.Queryable.Select%2A?displayProperty=nameWithType> 方法，则参数类型为表达式树类型 [`Expression<Func<TSource,TResult>>`](<xref:System.Linq.Expressions.Expression%601>)。 在这两种情况下，都可以使用相同的 lambda 表达式来指定参数值。 尽管通过 Lambda 创建的对象实际具有不同的类型，但其使得 2 个 `Select` 调用看起来类似。
   
 ## <a name="expression-lambdas"></a>表达式 lambda
 
@@ -73,7 +79,7 @@ Lambda 表达式使用 [lambda 声明运算符](../../language-reference/operato
 语句 lambda 与表达式 lambda 表达式类似，只是语句括在大括号中：
 
 ```csharp  
-(input-parameters) => { statement; }
+(input-parameters) => { <sequence-of-statements> }
 ```
 
 语句 lambda 的主体可以包含任意数量的语句；但是，实际上通常不会多于两个或三个。

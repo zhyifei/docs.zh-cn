@@ -2,12 +2,12 @@
 title: dotnet restore 命令
 description: 了解如何使用 dotnet-restore 命令还原依赖项和特定于项目的工具。
 ms.date: 05/29/2018
-ms.openlocfilehash: 3ddb9f679cfcab972483a4cb53ffe2b075867614
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 17bbbe33e7cb7b13d6fb1c0e44bb77dd2bbe7020
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613965"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68626350"
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
@@ -43,13 +43,29 @@ dotnet restore [-h|--help]
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-为了还原依赖项，NuGet 需要包所在的源。 通常通过 *NuGet.config* 配置文件提供源。 安装 CLI 工具时提供一个默认的配置文件。 可以通过在项目目录中创建自己的 *NuGet.config* 文件来指定其他源。 也可以在命令提示符处指定每次调用的其他源。
+为了还原依赖项，NuGet 需要包所在的源。 通常通过“nuGet.config”配置文件提供源  。 安装 CLI 工具时提供一个默认的配置文件。 可以通过在项目目录中创建自己的 nuGet.config 文件来指定其他源  。 也可以在命令提示符处指定每次调用的其他源。
 
-对于依赖项，使用 `--packages` 参数指定还原操作期间放置还原包的位置。 如未指定，将使用默认的 NuGet 包缓存，可在所有操作系统上的用户主目录中的 `.nuget/packages` 目录找到它。 例如 Linux 上的 /home/user1 或 Windows 上的 C:\Users\user1。
+对于依赖项，使用 `--packages` 参数指定还原操作期间放置还原包的位置。 如未指定，将使用默认的 NuGet 包缓存，可在所有操作系统上的用户主目录中的 `.nuget/packages` 目录找到它。 例如 Linux 上的 /home/user1 或 Windows 上的 C:\Users\user1   。
 
 对于特定于项目的工具，`dotnet restore` 首先还原打包工具所在的包，然后继续还原 project 文件中指定的工具依赖项。
 
-`dotnet restore` 命令的行为会受 Nuget.Config 文件（如果有）中某些设置的影响。 例如，在 NuGet.Config 中设置 `globalPackagesFolder` 会将还原的 NuGet 包置于指定的文件夹中。 这是在 `dotnet restore` 命令中指定 `--packages` 选项的替代方法。 有关详细信息，请参阅 [NuGet.Config reference](/nuget/schema/nuget-config-file)（NuGet.Config 引用）。
+### <a name="nugetconfig-differences"></a>nuget.config 差异
+
+`dotnet restore` 命令的行为会受 Nuget.Config 文件（如果有）中某些设置的影响  。 例如，在 NuGet.Config 中设置 `globalPackagesFolder` 会将还原的 NuGet 包置于指定的文件夹中  。 这是在 `dotnet restore` 命令中指定 `--packages` 选项的替代方法。 有关详细信息，请参阅 [nuget.config 参考](/nuget/schema/nuget-config-file)。
+
+有三个 `dotnet restore` 可忽略的特定设置：
+
+* [bindingRedirects](/nuget/schema/nuget-config-file#bindingredirects-section)
+
+  绑定重定向不适用于 `<PackageReference>` 元素，并且 .NET Core 仅支持 NuGet 包的 `<PackageReference>` 元素。
+
+* [解决方案](/nuget/schema/nuget-config-file#solution-section)
+
+  此设置特定于 Visual Studio，不适用于 .NET Core。 .Net Core 不使用 `packages.config` 文件，而是使用 NuGet 包的 `<PackageReference>` 元素。
+
+* [trustedSigners](/nuget/schema/nuget-config-file#trustedsigners-section)
+
+  此设置不适用，如 [NuGet 尚不支持跨平台验证](https://github.com/NuGet/Home/issues/7939)受信任包所述。
 
 ## <a name="implicit-dotnet-restore"></a>隐式 `dotnet restore`
 
@@ -79,7 +95,7 @@ dotnet restore [-h|--help]
 
 `--configfile <FILE>`
 
-供还原操作使用的 NuGet 配置文件 (*NuGet.config*)。
+供还原操作使用的 NuGet 配置文件 (nuget.config)  。
 
 `--disable-parallel`
 
@@ -87,7 +103,7 @@ dotnet restore [-h|--help]
 
 `--force`
 
-强制解析所有依赖项，即使上次还原已成功，也不例外。 指定此标记等同于删除 project.assets.json 文件。
+强制解析所有依赖项，即使上次还原已成功，也不例外。 指定此标记等同于删除 project.assets.json 文件  。
 
 `-h|--help`
 
@@ -115,7 +131,7 @@ dotnet restore [-h|--help]
 
 `-s|--source <SOURCE>`
 
-指定要在还原操作期间使用的 NuGet 包源。 此设置会替代 NuGet.config 文件中指定的所有源。 多次指定此选项可以提供多个源。
+指定要在还原操作期间使用的 NuGet 包源。 此设置会替代 nuget.config 文件中指定的所有源  。 多次指定此选项可以提供多个源。
 
 `--verbosity <LEVEL>`
 
@@ -129,7 +145,7 @@ dotnet restore [-h|--help]
 
 `--configfile <FILE>`
 
-供还原操作使用的 NuGet 配置文件 (*NuGet.config*)。
+供还原操作使用的 NuGet 配置文件 (nuget.config)  。
 
 `--disable-parallel`
 
@@ -161,7 +177,7 @@ dotnet restore [-h|--help]
 
 `-s|--source <SOURCE>`
 
-指定要在还原操作期间使用的 NuGet 包源。 这会替代 NuGet.config 文件中指定的所有源。 多次指定此选项可以提供多个源。
+指定要在还原操作期间使用的 NuGet 包源。 这会替代 nuget.config 文件中指定的所有源  。 多次指定此选项可以提供多个源。
 
 `--verbosity <LEVEL>`
 

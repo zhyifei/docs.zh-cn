@@ -4,12 +4,12 @@ description: 浏览 ML.NET 中支持的不同机器学习任务和关联的任�
 ms.custom: seodec18
 ms.date: 04/23/2019
 author: natke
-ms.openlocfilehash: ed6361fdcbca11c100ee5cae4ca76e152ddfba11
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: bcd967c11156ca9b837631560e78722b13fc7ae0
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063541"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630049"
 ---
 # <a name="machine-learning-tasks-in-mlnet"></a>ML.NET 中的机器学习任务
 
@@ -70,7 +70,7 @@ ms.locfileid: "65063541"
 有关详细信息，请参阅 Wikipedia 上的[多类分类](https://en.wikipedia.org/wiki/Multiclass_classification)一文。
 
 >[!NOTE]
->一个与所有升级任何[二元分类学习器](#binary-classification)，以便对多类数据集进行操作。 有关详细信息，请参阅 [Wikipedia] (https://en.wikipedia.org/wiki/Multiclass_classification#One-vs.-rest)。
+>一个与所有升级任何[二元分类学习器](#binary-classification)，以便对多类数据集进行操作。 有关详细信息，请参阅 [Wikipedia] (https://en.wikipedia.org/wiki/Multiclass_classification#One-vs.-rest) 。
 
 ### <a name="multiclass-classification-trainers"></a>多类分类训练程序
 

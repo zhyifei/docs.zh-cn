@@ -2,12 +2,12 @@
 title: 如何：创建包含命名空间的文档 (C#) (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 37e63c57-f86d-47ac-88a7-2c2d107def30
-ms.openlocfilehash: c64d23e18091ca06a5f345fc603231f442ad849c
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 9b9e81a131d4e17ce2d87dd3f511ed66e370d884
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66485875"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710008"
 ---
 # <a name="how-to-create-a-document-with-namespaces-c-linq-to-xml"></a>如何：创建包含命名空间的文档 (C#) (LINQ to XML)
 本主题演示如何创建包含命名空间的文档。  
@@ -144,4 +144,4 @@ Console.WriteLine(root);
   
 ## <a name="see-also"></a>请参阅
 
-- [使用 XML 命名空间 (C#)](../../../../csharp/programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md)
+- [命名空间概述(LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md)

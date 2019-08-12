@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 30047cba-e2fd-41c6-b9ca-2ad7a49003db
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d9f911f3a2783ec538ef628e10d5c1a4f9b06d0f
-ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.openlocfilehash: 4c0dea7950f86da3d812783abd00d69e5bc38198
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65469484"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796879"
 ---
 # <a name="how-to-handle-multiple-events-using-event-properties"></a>如何：使用事件属性处理多个事件
 若要使用事件属性，请在引发事件的类中定义事件属性，然后在处理事件的类中设置事件属性的委托。 若要在类中实现多个事件属性，此类必须在内部存储和维护为每个事件定义的委托。 典型的方法是实现通过事件键索引的委托集合。  
@@ -43,9 +43,6 @@ ms.locfileid: "65469484"
 ## <a name="example"></a>示例  
  下面的 C# 示例实现事件属性 `MouseDown` 和 `MouseUp`，其中使用 <xref:System.ComponentModel.EventHandlerList> 来存储每个事件的委托。 事件属性构造的关键字是粗体类型。  
   
-> [!NOTE]
->  Visual Basic 不支持事件属性。  
-  
  [!code-cpp[Conceptual.Events.Other#31](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.events.other/cpp/example3.cpp#31)]
  [!code-csharp[Conceptual.Events.Other#31](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.events.other/cs/example3.cs#31)]
  [!code-vb[Conceptual.Events.Other#31](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.events.other/vb/example3.vb#31)]  
@@ -54,5 +51,5 @@ ms.locfileid: "65469484"
 
 - <xref:System.ComponentModel.EventHandlerList?displayProperty=nameWithType>
 - [事件](../../../docs/standard/events/index.md)
-- <xref:System.Web.UI.Control.Events%2A>
+- <xref:System.Web.UI.Control.Events%2A?displayProperty=nameWithType>
 - [如何：声明自定义事件以节省内存](~/docs/visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)

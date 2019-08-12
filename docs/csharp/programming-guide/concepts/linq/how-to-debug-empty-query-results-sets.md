@@ -2,12 +2,12 @@
 title: 如何：调试空查询结果集 (C#)
 ms.date: 07/20/2015
 ms.assetid: b569f0dc-425e-45a6-acbf-770fb761c981
-ms.openlocfilehash: ba82e37ef4f57c78e7ba66676ba90312c2a9400f
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 06c878a7751a14a3043b450d9242037ca91ad754
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66485766"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710133"
 ---
 # <a name="how-to-debug-empty-query-results-sets-c"></a>如何：调试空查询结果集 (C#)
 查询 XML 树时遇到的一个最常见问题是，如果 XML 树具有默认命名空间，开发人员在编写查询时，有时会将 XML 视为不在命名空间内。  
@@ -16,7 +16,7 @@ ms.locfileid: "66485766"
   
  第二个示例集演示必需的更正，以便可以查询命名空间中的 XML。  
   
- 有关详细信息，请参阅[使用 XML 命名空间 (C#)](../../../../csharp/programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md)。  
+ 有关详细信息，请参阅[命名空间概述(LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md)。  
   
 ## <a name="example"></a>示例  
  此示例演示如何在命名空间中创建 XML 和一个返回空结果集的查询。  

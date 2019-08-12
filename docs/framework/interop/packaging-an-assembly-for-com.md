@@ -1,5 +1,5 @@
 ---
-title: 将 COM 的程序集打包
+title: 打包用于 COM 的 .NET Framework 程序集
 ms.date: 03/30/2017
 helpviewer_keywords:
 - exposing .NET Framework components to COM
@@ -18,14 +18,14 @@ helpviewer_keywords:
 ms.assetid: 39dc55aa-f2a1-4093-87bb-f1c0edb6e761
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cb45fc253e24c9770436432d2734ba8fce249453
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 1ca87d688d6802df967ea81b8297b099350f1c86
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67662368"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629322"
 ---
-# <a name="packaging-an-assembly-for-com"></a>将 COM 的程序集打包
+# <a name="packaging-a-net-framework-assembly-for-com"></a>打包用于 COM 的 .NET Framework 程序集
 
 COM 开发人员可从其计划纳入应用程序的托管类型相关信息中受益：
 
@@ -33,13 +33,13 @@ COM 开发人员可从其计划纳入应用程序的托管类型相关信息中�
 
   某些托管类型对 COM 不可见；某些可见但不可创建；某些既可见又可创建。 程序集可以包括不可见、可见、不可创建和可创建类型的任何组合。 为实现完整性，请确定打算公开到 COM 的程序集中的类型，尤其是当这些类型是公开到 .NET framework 中类型的子集时。
 
-  有关其他信息，请参阅[为互操作限定 .NET 类型](qualifying-net-types-for-interoperation.md)。
+  有关其他信息，请参阅[为互操作限定 .NET 类型](../../../docs/standard/native-interop/qualify-net-types-for-interoperation.md)。
 
 - 版本控制说明
 
   实现类接口（COM 互操作生成的接口）的托管类受版本控制限制。
 
-  有关如何使用类接口的指南，请参阅[类接口简介](com-callable-wrapper.md#introducing-the-class-interface)。
+  有关如何使用类接口的指南，请参阅[类接口简介](../../../docs/standard/native-interop/com-callable-wrapper.md#introducing-the-class-interface)。
 
 - 部署说明
 
@@ -94,8 +94,8 @@ TypeLibConverter 类  实现 <xref:System.Runtime.InteropServices.ITypeLibConver
 - <xref:System.Runtime.InteropServices.TypeLibConverter>
 - <xref:System.Runtime.InteropServices.ITypeLibConverter>
 - [向 COM 公开 .NET Framework 组件](exposing-dotnet-components-to-com.md)
-- [为互操作限定 .NET 类型](qualifying-net-types-for-interoperation.md)
-- [类接口简介](com-callable-wrapper.md#introducing-the-class-interface)
+- [为互操作限定 .NET 类型](../../../docs/standard/native-interop/qualify-net-types-for-interoperation.md)
+- [类接口简介](../../../docs/standard/native-interop/com-callable-wrapper.md#introducing-the-class-interface)
 - [程序集安全注意事项](../app-domains/assembly-security-considerations.md)
 - [Tlbexp.exe（类型库导出程序）](../tools/tlbexp-exe-type-library-exporter.md)
 - [向 COM 注册程序集](registering-assemblies-with-com.md)
