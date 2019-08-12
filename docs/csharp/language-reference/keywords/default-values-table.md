@@ -1,75 +1,62 @@
 ---
-title: 默认值表 - C# 参考
+title: 默认值表 - C# 引用
 ms.custom: seodec18
-description: 了解 C# 值类型的默认值。
-ms.date: 08/23/2018
+description: 了解 C# 类型的默认值。
+ms.date: 07/29/2019
 helpviewer_keywords:
-- constructors [C#], return values
-- keywords [C#], new
+- default [C#]
 - parameterless constructor [C#]
-- defaults [C#]
-- value types [C#], initializing
-- variables [C#], value types
-- constructors [C#], parameterless constructor
-- types [C#], parameterless constructor return values
-ms.openlocfilehash: ec5fb4681f0e0562c5aefdf336841416f96bdf98
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 23fba8269670156000cb68b3aa07ae7c770eada1
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661404"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627739"
 ---
-# <a name="default-values-table-c-reference"></a><span data-ttu-id="72371-103">默认值表（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="72371-103">Default values table (C# Reference)</span></span>
+# <a name="default-values-table-c-reference"></a><span data-ttu-id="127f4-103">默认值表（C# 引用）</span><span class="sxs-lookup"><span data-stu-id="127f4-103">Default values table (C# reference)</span></span>
 
-<span data-ttu-id="72371-104">下表显示[值类型](value-types.md)的默认值。</span><span class="sxs-lookup"><span data-stu-id="72371-104">The following table shows the default values of [value types](value-types.md).</span></span>
+<span data-ttu-id="127f4-104">下表显示 C# 类型的默认值：</span><span class="sxs-lookup"><span data-stu-id="127f4-104">The following table shows the default values of C# types:</span></span>
 
-|<span data-ttu-id="72371-105">值类型</span><span class="sxs-lookup"><span data-stu-id="72371-105">Value type</span></span>|<span data-ttu-id="72371-106">默认值</span><span class="sxs-lookup"><span data-stu-id="72371-106">Default value</span></span>|
-|----------------|-------------------|
-|[<span data-ttu-id="72371-107">bool</span><span class="sxs-lookup"><span data-stu-id="72371-107">bool</span></span>](bool.md)|`false`|
-|[<span data-ttu-id="72371-108">byte</span><span class="sxs-lookup"><span data-stu-id="72371-108">byte</span></span>](../builtin-types/integral-numeric-types.md)|<span data-ttu-id="72371-109">0</span><span class="sxs-lookup"><span data-stu-id="72371-109">0</span></span>|
-|[<span data-ttu-id="72371-110">char</span><span class="sxs-lookup"><span data-stu-id="72371-110">char</span></span>](char.md)|<span data-ttu-id="72371-111">'\0'</span><span class="sxs-lookup"><span data-stu-id="72371-111">'\0'</span></span>|
-|[<span data-ttu-id="72371-112">decimal</span><span class="sxs-lookup"><span data-stu-id="72371-112">decimal</span></span>](../builtin-types/floating-point-numeric-types.md)|<span data-ttu-id="72371-113">0M</span><span class="sxs-lookup"><span data-stu-id="72371-113">0M</span></span>|
-|[<span data-ttu-id="72371-114">double</span><span class="sxs-lookup"><span data-stu-id="72371-114">double</span></span>](../builtin-types/floating-point-numeric-types.md)|<span data-ttu-id="72371-115">0.0D</span><span class="sxs-lookup"><span data-stu-id="72371-115">0.0D</span></span>|
-|[<span data-ttu-id="72371-116">enum</span><span class="sxs-lookup"><span data-stu-id="72371-116">enum</span></span>](enum.md)|<span data-ttu-id="72371-117">表达式 `(E)0` 生成的值，其中 `E` 是枚举标识符。</span><span class="sxs-lookup"><span data-stu-id="72371-117">The value produced by the expression `(E)0`, where `E` is the enum identifier.</span></span>|
-|[<span data-ttu-id="72371-118">float</span><span class="sxs-lookup"><span data-stu-id="72371-118">float</span></span>](../builtin-types/floating-point-numeric-types.md)|<span data-ttu-id="72371-119">0.0F</span><span class="sxs-lookup"><span data-stu-id="72371-119">0.0F</span></span>|
-|[<span data-ttu-id="72371-120">int</span><span class="sxs-lookup"><span data-stu-id="72371-120">int</span></span>](../builtin-types/integral-numeric-types.md)|<span data-ttu-id="72371-121">0</span><span class="sxs-lookup"><span data-stu-id="72371-121">0</span></span>|
-|[<span data-ttu-id="72371-122">long</span><span class="sxs-lookup"><span data-stu-id="72371-122">long</span></span>](../builtin-types/integral-numeric-types.md)|<span data-ttu-id="72371-123">0L</span><span class="sxs-lookup"><span data-stu-id="72371-123">0L</span></span>|
-|[<span data-ttu-id="72371-124">sbyte</span><span class="sxs-lookup"><span data-stu-id="72371-124">sbyte</span></span>](../builtin-types/integral-numeric-types.md)|<span data-ttu-id="72371-125">0</span><span class="sxs-lookup"><span data-stu-id="72371-125">0</span></span>|
-|[<span data-ttu-id="72371-126">short</span><span class="sxs-lookup"><span data-stu-id="72371-126">short</span></span>](../builtin-types/integral-numeric-types.md)|<span data-ttu-id="72371-127">0</span><span class="sxs-lookup"><span data-stu-id="72371-127">0</span></span>|
-|[<span data-ttu-id="72371-128">struct</span><span class="sxs-lookup"><span data-stu-id="72371-128">struct</span></span>](struct.md)|<span data-ttu-id="72371-129">通过如下设置生成的值：将所有值类型的字段设置为其默认值，将所有引用类型的字段设置为 `null`。</span><span class="sxs-lookup"><span data-stu-id="72371-129">The value produced by setting all value-type fields to their default values and all reference-type fields to `null`.</span></span>|
-|[<span data-ttu-id="72371-130">uint</span><span class="sxs-lookup"><span data-stu-id="72371-130">uint</span></span>](../builtin-types/integral-numeric-types.md)|<span data-ttu-id="72371-131">0</span><span class="sxs-lookup"><span data-stu-id="72371-131">0</span></span>|
-|[<span data-ttu-id="72371-132">ulong</span><span class="sxs-lookup"><span data-stu-id="72371-132">ulong</span></span>](../builtin-types/integral-numeric-types.md)|<span data-ttu-id="72371-133">0</span><span class="sxs-lookup"><span data-stu-id="72371-133">0</span></span>|
-|[<span data-ttu-id="72371-134">ushort</span><span class="sxs-lookup"><span data-stu-id="72371-134">ushort</span></span>](../builtin-types/integral-numeric-types.md)|<span data-ttu-id="72371-135">0</span><span class="sxs-lookup"><span data-stu-id="72371-135">0</span></span>|
+|<span data-ttu-id="127f4-105">类型</span><span class="sxs-lookup"><span data-stu-id="127f4-105">Type</span></span>|<span data-ttu-id="127f4-106">默认值</span><span class="sxs-lookup"><span data-stu-id="127f4-106">Default value</span></span>|
+|---------|------------------|
+|<span data-ttu-id="127f4-107">任何引用类型</span><span class="sxs-lookup"><span data-stu-id="127f4-107">Any reference type</span></span>|`null`|
+|<span data-ttu-id="127f4-108">任何[内置整数数值类型](../builtin-types/integral-numeric-types.md)</span><span class="sxs-lookup"><span data-stu-id="127f4-108">Any [built-in integral numeric type](../builtin-types/integral-numeric-types.md)</span></span>|<span data-ttu-id="127f4-109">0（零）</span><span class="sxs-lookup"><span data-stu-id="127f4-109">0 (zero)</span></span>|
+|<span data-ttu-id="127f4-110">任何[内置浮点型数值类型](../builtin-types/floating-point-numeric-types.md)</span><span class="sxs-lookup"><span data-stu-id="127f4-110">Any [built-in floating-point numeric type](../builtin-types/floating-point-numeric-types.md)</span></span>|<span data-ttu-id="127f4-111">0（零）</span><span class="sxs-lookup"><span data-stu-id="127f4-111">0 (zero)</span></span>|
+|[<span data-ttu-id="127f4-112">bool</span><span class="sxs-lookup"><span data-stu-id="127f4-112">bool</span></span>](bool.md)|`false`|
+|[<span data-ttu-id="127f4-113">char</span><span class="sxs-lookup"><span data-stu-id="127f4-113">char</span></span>](char.md)|<span data-ttu-id="127f4-114">`'\0'` (U + 0000)</span><span class="sxs-lookup"><span data-stu-id="127f4-114">`'\0'` (U+0000)</span></span>|
+|[<span data-ttu-id="127f4-115">enum</span><span class="sxs-lookup"><span data-stu-id="127f4-115">enum</span></span>](enum.md)|<span data-ttu-id="127f4-116">表达式 `(E)0` 生成的值，其中 `E` 是枚举标识符。</span><span class="sxs-lookup"><span data-stu-id="127f4-116">The value produced by the expression `(E)0`, where `E` is the enum identifier.</span></span>|
+|[<span data-ttu-id="127f4-117">struct</span><span class="sxs-lookup"><span data-stu-id="127f4-117">struct</span></span>](struct.md)|<span data-ttu-id="127f4-118">通过如下设置生成的值：将所有值类型的字段设置为其默认值，将所有引用类型的字段设置为 `null`。</span><span class="sxs-lookup"><span data-stu-id="127f4-118">The value produced by setting all value-type fields to their default values and all reference-type fields to `null`.</span></span>|
+|<span data-ttu-id="127f4-119">任何[可以为 null 的值类型](../../programming-guide/nullable-types/index.md)</span><span class="sxs-lookup"><span data-stu-id="127f4-119">Any [nullable value type](../../programming-guide/nullable-types/index.md)</span></span>|<span data-ttu-id="127f4-120"><xref:System.Nullable%601.HasValue%2A> 属性为 `false` 且 <xref:System.Nullable%601.Value%2A> 属性未定义的实例。</span><span class="sxs-lookup"><span data-stu-id="127f4-120">An instance for which the <xref:System.Nullable%601.HasValue%2A> property is `false` and the <xref:System.Nullable%601.Value%2A> property is undefined.</span></span> <span data-ttu-id="127f4-121">该默认值也称为可以为 null 的值类型的 null 值  。</span><span class="sxs-lookup"><span data-stu-id="127f4-121">That default value is also known as the *null* value of the nullable value type.</span></span>|
 
-## <a name="remarks"></a><span data-ttu-id="72371-136">备注</span><span class="sxs-lookup"><span data-stu-id="72371-136">Remarks</span></span>
-
-<span data-ttu-id="72371-137">无法在 C# 中使用未初始化的变量。</span><span class="sxs-lookup"><span data-stu-id="72371-137">You cannot use uninitialized variables in C#.</span></span> <span data-ttu-id="72371-138">可以使用变量类型的默认值对变量进行初始化。</span><span class="sxs-lookup"><span data-stu-id="72371-138">You can initialize a variable with the default value of its type.</span></span> <span data-ttu-id="72371-139">还可使用类型的默认值来指定方法的[可选参数](../../programming-guide/classes-and-structs/named-and-optional-arguments.md#optional-arguments)的默认值。</span><span class="sxs-lookup"><span data-stu-id="72371-139">You also can use the default value of a type to specify the default value of a method's [optional argument](../../programming-guide/classes-and-structs/named-and-optional-arguments.md#optional-arguments).</span></span>
-
-<span data-ttu-id="72371-140">使用[默认值表达式](../../programming-guide/statements-expressions-operators/default-value-expressions.md)生成类型的默认值，如以下示例所示：</span><span class="sxs-lookup"><span data-stu-id="72371-140">Use the [default value expression](../../programming-guide/statements-expressions-operators/default-value-expressions.md) to produce the default value of a type, as the following example shows:</span></span>
+<span data-ttu-id="127f4-122">使用[默认值表达式](../../programming-guide/statements-expressions-operators/default-value-expressions.md)生成类型的默认值，如以下示例所示：</span><span class="sxs-lookup"><span data-stu-id="127f4-122">Use the [default value expression](../../programming-guide/statements-expressions-operators/default-value-expressions.md) to produce the default value of a type, as the following example shows:</span></span>
 
 ```csharp
 int a = default(int);
 ```
 
-<span data-ttu-id="72371-141">从 C# 7.1 开始，可使用[`default`文本](../../programming-guide/statements-expressions-operators/default-value-expressions.md#default-literal-and-type-inference)来初始化变量，使其具有其类型的默认值：</span><span class="sxs-lookup"><span data-stu-id="72371-141">Beginning with C# 7.1, you can use the [`default` literal](../../programming-guide/statements-expressions-operators/default-value-expressions.md#default-literal-and-type-inference) to initialize a variable with the default value of its type:</span></span>
+<span data-ttu-id="127f4-123">从 C# 7.1 开始，可使用[`default`文本](../../programming-guide/statements-expressions-operators/default-value-expressions.md#default-literal-and-type-inference)来初始化变量，使其具有其类型的默认值：</span><span class="sxs-lookup"><span data-stu-id="127f4-123">Beginning with C# 7.1, you can use the [`default` literal](../../programming-guide/statements-expressions-operators/default-value-expressions.md#default-literal-and-type-inference) to initialize a variable with the default value of its type:</span></span>
 
 ```csharp
 int a = default;
 ```
 
-<span data-ttu-id="72371-142">还可使用无参数构造函数或隐式无参数构造函数来生成值类型的默认值，如以下示例所示。</span><span class="sxs-lookup"><span data-stu-id="72371-142">You also can use the parameterless constructor or the implicit parameterless constructor to produce the default value of a value type, as the following example shows.</span></span> <span data-ttu-id="72371-143">有关构造函数的详细信息，请参阅[构造函数](../../programming-guide/classes-and-structs/constructors.md)一文。</span><span class="sxs-lookup"><span data-stu-id="72371-143">For more information about constructors, see the [Constructors](../../programming-guide/classes-and-structs/constructors.md) article.</span></span>
+<span data-ttu-id="127f4-124">对于值类型，隐式无参数构造函数还可生成类型的默认值，如以下示例所示：</span><span class="sxs-lookup"><span data-stu-id="127f4-124">For a value type, the implicit parameterless constructor also produces the default value of the type, as the following example shows:</span></span>
 
-```csharp
-int a = new int();
+```csharp-interactive
+var n = new System.Numerics.Complex();
+Console.WriteLine(n);  // output: (0, 0)
 ```
 
-<span data-ttu-id="72371-144">任何[引用类型](reference-types.md)的默认值为 `null`。</span><span class="sxs-lookup"><span data-stu-id="72371-144">The default value of any [reference type](reference-types.md) is `null`.</span></span> <span data-ttu-id="72371-145">[可以为 null 的类型](../../programming-guide/nullable-types/index.md)的默认值是 <xref:System.Nullable%601.HasValue%2A> 属性为 `false` 且未定义 <xref:System.Nullable%601.Value%2A> 属性的实例。</span><span class="sxs-lookup"><span data-stu-id="72371-145">The default value of a [nullable type](../../programming-guide/nullable-types/index.md) is an instance for which the <xref:System.Nullable%601.HasValue%2A> property is `false` and the <xref:System.Nullable%601.Value%2A> property is undefined.</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="127f4-125">C# 语言规范</span><span class="sxs-lookup"><span data-stu-id="127f4-125">C# language specification</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="72371-146">请参阅</span><span class="sxs-lookup"><span data-stu-id="72371-146">See also</span></span>
+<span data-ttu-id="127f4-126">有关更多信息，请参阅 [C# 语言规范](~/_csharplang/spec/introduction.md)的以下部分：</span><span class="sxs-lookup"><span data-stu-id="127f4-126">For more information, see the following sections of the [C# language specification](~/_csharplang/spec/introduction.md):</span></span>
 
-- [<span data-ttu-id="72371-147">C# 参考</span><span class="sxs-lookup"><span data-stu-id="72371-147">C# Reference</span></span>](../index.md)
-- [<span data-ttu-id="72371-148">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="72371-148">C# Programming Guide</span></span>](../../programming-guide/index.md)
-- [<span data-ttu-id="72371-149">C# 关键字</span><span class="sxs-lookup"><span data-stu-id="72371-149">C# Keywords</span></span>](index.md)
-- [<span data-ttu-id="72371-150">值类型</span><span class="sxs-lookup"><span data-stu-id="72371-150">Value types</span></span>](value-types.md)
-- [<span data-ttu-id="72371-151">值类型表</span><span class="sxs-lookup"><span data-stu-id="72371-151">Value types table</span></span>](value-types-table.md)
-- [<span data-ttu-id="72371-152">内置类型表</span><span class="sxs-lookup"><span data-stu-id="72371-152">Built-in types table</span></span>](built-in-types-table.md)
+- [<span data-ttu-id="127f4-127">默认值</span><span class="sxs-lookup"><span data-stu-id="127f4-127">Default values</span></span>](~/_csharplang/spec/variables.md#default-values)
+- [<span data-ttu-id="127f4-128">默认构造函数</span><span class="sxs-lookup"><span data-stu-id="127f4-128">Default constructors</span></span>](~/_csharplang/spec/types.md#default-constructors)
+
+## <a name="see-also"></a><span data-ttu-id="127f4-129">请参阅</span><span class="sxs-lookup"><span data-stu-id="127f4-129">See also</span></span>
+
+- [<span data-ttu-id="127f4-130">C# 参考</span><span class="sxs-lookup"><span data-stu-id="127f4-130">C# reference</span></span>](../index.md)
+- [<span data-ttu-id="127f4-131">C# 关键字</span><span class="sxs-lookup"><span data-stu-id="127f4-131">C# keywords</span></span>](index.md)
+- [<span data-ttu-id="127f4-132">内置类型表</span><span class="sxs-lookup"><span data-stu-id="127f4-132">Built-in types table</span></span>](built-in-types-table.md)
+- [<span data-ttu-id="127f4-133">构造函数</span><span class="sxs-lookup"><span data-stu-id="127f4-133">Constructors</span></span>](../../programming-guide/classes-and-structs/constructors.md)
