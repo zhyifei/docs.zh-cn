@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 08/01/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 3e5b6b482dfbd1ff06347883a93a561944200a9f
-ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
+ms.openlocfilehash: e44ea5795beb90bafe3faf0bafb463d49ba1fc41
+ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68733402"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68868728"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>教程：在 ML.NET 中使用 ONNX 检测对象
 
@@ -344,7 +344,6 @@ using (Graphics thumbnailGraphic = Graphics.FromImage(image))
     - `CELL_HEIGHT` 是图像网格中一个单元格的高度。
     - `channelStride` 是网格中当前单元格的起始位置。
 
-
     当模型对图像进行评分时，它会将 `416px x 416px` 输入划分为大小为 `13 x 13` 的单元格网格。 每个单元格都包含 `32px x 32px`。 在每个单元格内，有 5 个边界框，每个边框包含 5 个特征（x、y、宽度、高度、置信度）。 此外，每个边界框包含每个类的概率，在这种情况下为 20。 因此，每个单元包含 125 条信息（5 个特征 + 20 个类概率）。 
 
 为所有 5 个边界框在 `channelStride` 下创建的定位点列表：
@@ -654,7 +653,6 @@ for (var i = 0; i < images.Count(); i++)
 最后，使用 `LogDetectedObjects` 方法添加一些日志记录逻辑。
 
 [!code-csharp [LogPredictionsOutput](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L54)]
-
 
 在 try-catch 语句之后，添加其他逻辑以指示进程已完成运行。
 

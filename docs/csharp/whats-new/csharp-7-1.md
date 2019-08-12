@@ -2,12 +2,12 @@
 title: C# 7.1 中的新增功能
 description: C# 7.1 中的新增功能概述。
 ms.date: 04/09/2019
-ms.openlocfilehash: a95111b6f217a2ca5c520c2d4d70efa0e23742f9
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: 18306da709ea30f03f6c42b4a917e9b39695eb16
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67347607"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796599"
 ---
 # <a name="whats-new-in-c-71"></a>C# 7.1 中的新增功能
 
@@ -86,9 +86,7 @@ Func<string, bool> whereClause = default(Func<string, bool>);
 Func<string, bool> whereClause = default;
 ```
 
-若要详细了解此增强功能，可以参阅 C# 编程指南中的[默认值表达式](../programming-guide/statements-expressions-operators/default-value-expressions.md)一文。
-
-此增强功能也会更改某些[default 关键字](../language-reference/keywords/default.md) 的分析规则。
+有关详细信息，请参阅 [default 运算符](../language-reference/operators/default.md)一文中的 [default 文本](../language-reference/operators/default.md#default-literal)部分。
 
 ## <a name="inferred-tuple-element-names"></a>推断元组元素名称
 

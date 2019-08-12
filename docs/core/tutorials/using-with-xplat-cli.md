@@ -1,16 +1,17 @@
 ---
 title: 通过 CLI 开始使用 .NET Core
 description: 一个分步教程，演示如何使用 .NET Core 命令行接口 (CLI) 开始在 Windows、Linux 或 macOS 上使用 .NET Core。
-author: cartermp
-ms.date: 09/10/2018
+author: thraka
+ms.author: adegeo
+ms.date: 08/07/2019
 ms.technology: dotnet-cli
 ms.custom: seodec18
-ms.openlocfilehash: 92ca5149ad5f0e4a50c809a316123fbf77d4152d
-ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
+ms.openlocfilehash: 88e9501a776a026a311c5002674c15acf2324f2b
+ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58545359"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68868594"
 ---
 # <a name="get-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>通过命令行开始在 Windows/Linux/macOS 上使用 .NET Core
 
@@ -27,7 +28,7 @@ ms.locfileid: "58545359"
 
 若要[查看或下载示例代码](https://github.com/dotnet/samples/tree/master/core/console-apps/HelloMsBuild)，可以访问 dotnet/samples GitHub 存储库。 有关下载说明，请参阅[示例和教程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
 
-打开命令提示符，创建一个名为“Hello”的文件夹。 导航到创建的文件夹，键入下列内容：
+打开命令提示符，创建一个名为“Hello”  的文件夹。 导航到创建的文件夹，键入下列内容：
 
 ```console
 dotnet new console
@@ -59,7 +60,7 @@ dotnet run
 
    [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-   `dotnet new` 隐式调用 [`dotnet restore`](../tools/dotnet-restore.md)。 `dotnet restore` 调用到 [NuGet](https://www.nuget.org/)（.NET 包管理器）以还原依赖项树。 NuGet 分析 Hello.csproj 文件、下载文件中定义的依赖项（或从计算机缓存中获取）并编写 obj/project.assets.json 文件，在编译和运行示例时需要使用该文件。
+   `dotnet new` 隐式调用 [`dotnet restore`](../tools/dotnet-restore.md)。 `dotnet restore` 调用到 [NuGet](https://www.nuget.org/)（.NET 包管理器）以还原依赖项树。 NuGet 分析 Hello.csproj  文件、下载文件中定义的依赖项（或从计算机缓存中获取）并编写 obj/project.assets.json  文件，在编译和运行示例时需要使用该文件。
 
    > [!IMPORTANT]
    > 如果你使用的是 .NET Core 1.x 版本的 SDK，在调用 `dotnet new` 后，必须自行调用 `dotnet restore`。
@@ -153,10 +154,23 @@ dotnet run
    377
    ```
 
-就是这么简单！ 现在，可以开始使用此处学到的基本概念来创建自己的程序了。
+## <a name="publish-your-app"></a>发布应用
 
-请注意，本教程中用来运行应用程序的命令和步骤仅用于开发过程。 准备好部署应用后，需要查看适用于 .NET Core 应用的不同[部署策略](../deploying/index.md)和 [`dotnet publish`](../tools/dotnet-publish.md) 命令。
+准备好分发应用后，使用 [`dotnet publish`](../tools/dotnet-publish.md) 命令在 bin\\debug\\netcoreapp2.1\\publish\\  （非 Windows 系统使用 `/`）处生成 publish  文件夹。 可以将 publish  文件夹的内容分发到其他平台，只要这些平台安装了 dotnet 运行时即可。
+
+可以使用 [dotnet](../tools/dotnet.md) 命令运行已发布的应用：
+
+```console
+$ dotnet bin\Debug\netcoreapp2.1\publish\Hello.dll
+Hello World!
+```
+
+## <a name="conclusion"></a>结束语
+
+这就是所有的操作！ 现在，可以开始使用此处学到的基本概念来创建自己的程序了。
 
 ## <a name="see-also"></a>请参阅
 
 - [使用 .NET Core CLI 工具组织和测试项目](testing-with-cli.md)
+- [使用 CLI 发布 .NET Core 应用](../deploying/deploy-with-cli.md)
+- [详细了解应用部署](../deploying/index.md)

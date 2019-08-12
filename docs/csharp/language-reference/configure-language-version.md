@@ -2,12 +2,12 @@
 title: C# 语言版本控制 - C# 指南
 description: 了解如何根据项目确定 C# 语言版本，以及可以手动调整的不同值。
 ms.date: 07/10/2019
-ms.openlocfilehash: e35fdf2bcdb1a31b752c760f3f6df59232e498a4
-ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
+ms.openlocfilehash: 744cec0aac21f743648cccbdc93cf2977c32d644
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68236100"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796527"
 ---
 # <a name="c-language-versioning"></a>C# 语言版本控制
 
@@ -28,7 +28,7 @@ C# 编译器根据项目的一个或多个目标框架确定默认语言版本�
 
 如果你的项目是以具有相应预览语言版本的预览框架为目标，那么使用的语言版本是预览语言版本。 这可确保你可以使用保证在任何环境中都可用的预览提供的最新功能，而不会影响面向发布的 .NET Core 版本的项目。
 
-## <a name="overriding-a-default"></a>重写默认值
+## <a name="override-a-default"></a>替代默认值
 
 如果必须明确指定 C# 版本，可以通过以下几种方式实现：
 
@@ -38,7 +38,7 @@ C# 编译器根据项目的一个或多个目标框架确定默认语言版本�
 
 ### <a name="edit-the-project-file"></a>编辑项目文件
 
-可在项目文件中设置语言版本。 例如，如果你明确希望访问预览功能，则可以添加如下元素：
+可在项目文件中设置语言版本。 例如，如果你明确希望访问预览功能，请添加如下元素：
 
 ```xml
 <PropertyGroup>
@@ -46,7 +46,7 @@ C# 编译器根据项目的一个或多个目标框架确定默认语言版本�
 </PropertyGroup>
 ```
 
-值 `preview` 使用编译器支持的最新可用的 C# 语言预览版。
+值 `preview` 使用编译器支持的最新可用的预览 C# 语言版本。
 
 ### <a name="configure-multiple-projects"></a>配置多个项目
 
