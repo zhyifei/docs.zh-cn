@@ -6,24 +6,25 @@ dev_langs:
 - vb
 author: thraka
 ms.author: adegeo
-ms.date: 06/14/2019
-ms.openlocfilehash: b1dd243d754bfc3b682c084820547f6b7846f0ea
-ms.sourcegitcommit: 4b9c2d893b45d47048c6598b4182ba87759b1b59
+ms.date: 07/25/2019
+ms.openlocfilehash: 29e62f01ab6a749c252aa488dfbccd5b27cb9dba
+ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68484660"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68733376"
 ---
-# <a name="whats-new-in-net-core-30-preview-6"></a>.NET Core 3.0（预览版 6）中的新增功能
+# <a name="whats-new-in-net-core-30-preview-7"></a>.NET Core 3.0（预览版 7）中的新增功能
 
-本文介绍 .NET Core 3.0（通过预览版 6）的新增功能。 最大的增强功能之一是对 Windows 桌面应用程序（仅限 Windows）的支持。 通过使用 .NET Core 3.0 SDK 组件 Windows 桌面，可以移植 Windows 窗体和 Windows Presentation Foundation (WPF) 应用程序。 为清楚起见，Windows 桌面组件仅在 Windows 上受支持，且仅在 Windows 中包含。 有关详细信息，请参阅本文后面的 [Windows 桌面](#windows-desktop)部分。
+本文介绍 .NET Core 3.0（预览版 7）的新增内容。 最大的增强功能之一是对 Windows 桌面应用程序（仅限 Windows）的支持。 通过使用 .NET Core 3.0 SDK 组件 Windows 桌面，可以移植 Windows 窗体和 Windows Presentation Foundation (WPF) 应用程序。 为清楚起见，Windows 桌面组件仅在 Windows 上受支持，且仅在 Windows 中包含。 有关详细信息，请参阅本文后面的 [Windows 桌面](#windows-desktop)部分。
 
 .NET Core 3.0 添加了对 C#8.0 的支持。 强烈建议使用[最新版本的 Visual Studio 预览版](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+preview)或带有 OmniSharp 扩展的 Visual Studio Code。
 
-立即在 Windows、Mac 和 Linux 上[下载并开始使用 .NET Core 3.0 预览版 6](https://aka.ms/netcore3download)。
+立即在 Windows、Mac 和 Linux 上[下载并开始使用 .NET Core 3.0 预览版 7](https://aka.ms/netcore3download)。
 
 有关每个预览版本的详细信息，请参阅以下公告：
 
+- [.NET Core 3.0 预览版 7 公告](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-7/)
 - [.NET Core 3.0 预览版 6 公告](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-6/)
 - [.NET Core 3.0 预览版 5 公告](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-5/)
 - [.NET Core 3.0 预览版 4 公告](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-4/)
@@ -31,9 +32,13 @@ ms.locfileid: "68484660"
 - [.NET Core 3.0 预览版 2 公告](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-2/)
 - [.NET Core 3.0 预览版 1 公告](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-1-and-open-sourcing-windows-desktop-frameworks/)
 
+## <a name="production-supported-preview"></a>生产支持（预览版）
+
+.NET Core 预览版 7 已由 Microsoft 准备就绪，可用于生产环境并且完全受支持。 从预览版 7 开始，版本将侧重于改进 .NET Core 3.0，而不是添加新功能。 有关预览版 7 的改进内容的详细信息，请参阅[预览版 7 公告](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-7/)。
+
 ## <a name="net-core-sdk-windows-installer"></a>.NET Core SDK Windows Installer
 
-用于 Windows 的 MSI 安装程序已从 .NET Core 3.0 开始更改。 SDK 安装程序现在将对 SDK 功能区段版本进行就地升级。 功能区段在版本号的*补丁*部分中的*数百个*组中定义。 例如，**3.0._101_** 和 **3.0._201_** 是两个不同功能区段中的版本，而 **3.0._101_** 和 **3.0._199_** 则属于同一个功能区段。 并且，当安装 .NET Core SDK **3.0._101_** 时，将从计算机中删除 .NET Core SDK **3.0._100_** （如果存在）。 当 .NET Core SDK **3.0._200_** 安装在同一台计算机上时，不会删除 .NET Core SDK **3.0._101_** 。
+用于 Windows 的 MSI 安装程序已从 .NET Core 3.0 开始更改。 SDK 安装程序现在将对 SDK 功能区段版本进行就地升级。 功能区段在版本号的*补丁*部分中的*数百个*组中定义。 例如，**3.0. _** 和 **3.0. _** 是两个不同功能区段中的版本，而 **3.0. _** 和 **3.0. _** 则属于同一个功能区段。 并且，当安装 .NET Core SDK **3.0. _** 时，将从计算机中删除 .NET Core SDK **3.0. _** （如果存在）。 当 .NET Core SDK **3.0. _** 安装在同一台计算机上时，不会删除 .NET Core SDK **3.0. _** 。
 
 有关版本控制的详细信息，请参阅 [.NET Core 的版本控制方式概述](../versions/index.md)。
 
@@ -174,23 +179,23 @@ TC 的主要优势是使（重新）实时编译方法能够牺牲代码质量�
 
 可以通过将应用程序集编译为 ReadyToRun (R2R) 格式来改进.NET Core 应用程序的启动时间。 R2R 是一种预先 (AOT) 编译形式。
 
-R2R 二进制文件通过减少应用程序加载时实时 (JIT) 编译器需要执行的工作量来改进启动性能。 二进制文件包含与 JIT 将生成的内容类似的本机代码。
+R2R 二进制文件通过减少应用程序加载时实时 (JIT) 编译器需要执行的工作量来改进启动性能。 二进制文件包含与 JIT 将生成的内容类似的本机代码。 但是，R2R 二进制文件更大，因为它们包含中间语言 (IL) 代码（某些情况下仍需要此代码）和相同代码的本机版本。 仅当发布面向特定运行时环境 (RID)（如 Linux x64 或 Windows x64）的自包含应用时 R2R 才可用。
 
-R2R 二进制文件较大，因为它们包含中间语言 (IL) 代码（某些情况下仍需要此代码）和相同代码的本机版本。 仅当发布面向特定运行时环境 (RID)（如 Linux x64 或 Windows x64）的自包含应用时 R2R 才可用。
+若要将项目编译为 ReadyToRun，请执行以下操作：
 
-若要编译你的应用作为 R2R，请添加 `<PublishReadyToRun>` 设置：
+01. 向项目中添加 `<PublishReadyToRun>` 设置
 
-```xml
-<PropertyGroup>
-  <PublishReadyToRun>true</PublishReadyToRun>
-</PropertyGroup>
-```
+    ```xml
+    <PropertyGroup>
+      <PublishReadyToRun>true</PublishReadyToRun>
+    </PropertyGroup>
+    ```
 
-发布自包含应用。 例如，此命令将创建适用于 Windows 64 位版本的自包含应用：
+01. 发布自包含应用。 例如，此命令将创建适用于 Windows 64 位版本的自包含应用：
 
-```console
-dotnet publish -c Release -r win-x64 --self-contained true
-```
+    ```console
+    dotnet publish -c Release -r win-x64 --self-contained true
+    ```
 
 ### <a name="cross-platformarchitecture-restrictions"></a>跨平台/体系结构限制
 
@@ -406,7 +411,7 @@ async IAsyncEnumerable<int> GetBigResultsAsync()
 
 ### <a name="jsonserializer"></a>JsonSerializer
 
-<xref:System.Text.Json.Serialization.JsonSerializer?displayProperty=nameWithType> 在 <xref:System.Text.Json.Utf8JsonReader> 和 <xref:System.Text.Json.Utf8JsonWriter> 的基础上生成，可在处理 JSON 文档和片段时提供快速的低内存序列化选项。
+<xref:System.Text.Json.JsonSerializer?displayProperty=nameWithType> 在 <xref:System.Text.Json.Utf8JsonReader> 和 <xref:System.Text.Json.Utf8JsonWriter> 的基础上生成，可在处理 JSON 文档和片段时提供快速的低内存序列化选项。
 
 查看： https://github.com/dotnet/corefx/blob/master/src/System.Text.Json/docs/SerializerProgrammingModel.md ，获取可移植到本文的示例
 
