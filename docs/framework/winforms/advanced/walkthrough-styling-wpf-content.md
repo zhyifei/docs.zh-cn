@@ -6,14 +6,14 @@ helpviewer_keywords:
 - interoperability [WDF]
 - styles [Windows Forms], WPF content
 ms.assetid: e574aac7-7ea4-4cdb-8034-bab541f000df
-ms.openlocfilehash: b689bb7299d541708db7ae786bff62a1007608e5
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.openlocfilehash: 32ca9658ddf4ab6e8690f29797b7ac7b09df2ca7
+ms.sourcegitcommit: d98fdb087d9c8aba7d2cb93fe4b4ee35a2308cee
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557886"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69012949"
 ---
-# <a name="walkthrough-style-wpf-content"></a>演练：样式的 WPF 内容
+# <a name="walkthrough-style-wpf-content"></a>演练：样式 WPF 内容
 
 本演练显示了如何将样式应用到 Windows 窗体上承载的 Windows Presentation Foundation (WPF) 控件中。
 
@@ -23,7 +23,7 @@ ms.locfileid: "65557886"
 
 - 创建 WPF 控件类型。
 
-- 将样式应用到 WPF control.a
+- 将样式应用到 WPF 控件。
 
 ## <a name="prerequisites"></a>系统必备
 
@@ -31,7 +31,7 @@ ms.locfileid: "65557886"
 
 ## <a name="create-the-project"></a>创建项目
 
-打开 Visual Studio 并创建新的 Windows 窗体应用程序项目在 Visual Basic 或 VisualC#名为`StylingWpfContent`。
+打开 Visual Studio, 并在 Visual Basic 或视觉对象C#中创建一个名为`StylingWpfContent`的新 Windows 窗体应用程序项目。
 
 > [!NOTE]
 > 承载 WPF 内容时，仅支持 C# 和 Visual Basic 项目。
@@ -40,15 +40,15 @@ ms.locfileid: "65557886"
 
 将 WPF 控件类型添加到项目后，就可在 <xref:System.Windows.Forms.Integration.ElementHost> 控件中托管它。
 
-1. 将新的 WPF <xref:System.Windows.Controls.UserControl> 项目添加到解决方案。 使用控件类型的默认名称，`UserControl1.xaml`。 有关详细信息，请参见[演练：在设计时在 Windows 窗体上创建新的 WPF 内容](walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)。
+1. 将新的 WPF <xref:System.Windows.Controls.UserControl> 项目添加到解决方案。 使用控件类型的默认名称，`UserControl1.xaml`。 有关详细信息，请参见[演练：在设计时](walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)在 Windows 窗体上创建新的 WPF 内容。
 
-2. 在设计视图中，请确保已选中 `UserControl1`。 有关详细信息，请参阅[如何：选择并在设计图面上移动元素](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb514527(v=vs.100))。
+2. 在设计视图中，请确保已选中 `UserControl1`。 有关详细信息，请参阅[如何：选择并移动 Design Surface](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb514527(v=vs.100))上的元素。
 
-3. 在中**属性**窗口中，设置的值<xref:System.Windows.FrameworkElement.Width%2A>并<xref:System.Windows.FrameworkElement.Height%2A>属性设置为`200`。
+3. 在 "**属性**" 窗口中, 将<xref:System.Windows.FrameworkElement.Width%2A>和<xref:System.Windows.FrameworkElement.Height%2A>属性的值设置`200`为。
 
-4. 添加<xref:System.Windows.Controls.Button?displayProperty=nameWithType>控制对<xref:System.Windows.Controls.UserControl>并将值设置<xref:System.Windows.Controls.ContentControl.Content%2A>属性设置为**取消**。
+4. 向添加<xref:System.Windows.Controls.Button?displayProperty=nameWithType>一个控件<xref:System.Windows.Controls.UserControl> , 并将属性的值设置<xref:System.Windows.Controls.ContentControl.Content%2A>为 "**取消**"。
 
-5. 添加另一个<xref:System.Windows.Controls.Button?displayProperty=nameWithType>控制对<xref:System.Windows.Controls.UserControl>并将值设置<xref:System.Windows.Controls.ContentControl.Content%2A>属性设置为**确定**。
+5. 将第二<xref:System.Windows.Controls.Button?displayProperty=nameWithType>个控件添加<xref:System.Windows.Controls.UserControl>到, 并<xref:System.Windows.Controls.ContentControl.Content%2A>将属性的值设置为 **"确定"** 。
 
 6. 生成项目。
 
@@ -58,11 +58,11 @@ ms.locfileid: "65557886"
 
 1. 在 Windows 窗体设计器中打开 `Form1`。
 
-1. 在中**工具箱**，双击`UserControl1`若要创建的实例`UserControl1`窗体上。
+1. 在 "**工具箱**" 中, 双击`UserControl1`在窗体上创建`UserControl1`的实例。
 
      `UserControl1` 的实例托管在名为 `elementHost1` 的新 <xref:System.Windows.Forms.Integration.ElementHost> 控件中。
 
-1. 中的智能标记面板`elementHost1`，单击**编辑所承载的内容**从下拉列表。
+1. 在的智能标记面板`elementHost1`中, 单击下拉列表中的 "**编辑托管内容**"。
 
      `UserControl1` 将在 [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)] 中打开。
 
@@ -137,7 +137,7 @@ ms.locfileid: "65557886"
 
 1. 将新样式应用到按钮控件中。
 
-1. 从**调试**菜单中，选择**开始调试**运行该应用程序。
+1. 从 "**调试**" 菜单中, 选择 "**启动调试**" 以运行应用程序。
 
 1. 单击“确定”和“取消”按钮并查看差异。
 
