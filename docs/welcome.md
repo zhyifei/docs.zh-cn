@@ -1,69 +1,71 @@
 ---
-title: "欢迎使用 .NET"
-description: ".NET 系列技术入门。"
-keywords: ".NET, .NET Core, 入门, 资讯"
+title: 欢迎使用 .NET
+description: .NET 系列技术入门。
 author: mairaw
 ms.author: mairaw
-ms.date: 08/14/2017
-ms.topic: article
-ms.prod: .net
-ms.devlang: dotnet
-ms.assetid: cb788dcf-2120-467f-9c34-c02a90e1f68f
+ms.date: 05/06/2019
+ms.custom: updateeachrelease
+ms.openlocfilehash: 8407bedc6b7b9e5e3263b37747050eba82eea653
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
-ms.sourcegitcommit: 03d1e3f0897713e25be7d7f893861a3eb4dac211
-ms.openlocfilehash: 303219086339a059a905e303a4ecd490e91ba7cc
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/11/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "68952240"
 ---
-# <a name="welcome-to-net"></a>欢迎使用 .NET
+# <a name="welcome-to-net"></a><span data-ttu-id="49464-103">欢迎使用 .NET</span><span class="sxs-lookup"><span data-stu-id="49464-103">Welcome to .NET</span></span>
 
-若要了解如何创建 .NET Core 应用，请参阅 [.NET Core 入门](core/get-started.md)。
+<span data-ttu-id="49464-104">要了解如何创建 .NET Core 应用，请参阅 [.NET Core 入门](core/get-started.md)。</span><span class="sxs-lookup"><span data-stu-id="49464-104">See [Get started with .NET Core](core/get-started.md) to learn how to create .NET Core apps.</span></span>
 
-可使用免费的跨平台工具生成各种 .NET 应用，如云、IoT 和游戏应用。 应用可以在 Android、iOS、Linux、macOS 和 Windows 上运行。 请将应用部署到服务器或桌面，然后发布到应用商店中，以供在移动设备上部署。 .NET 可供学生和爱好者使用，欢迎所有人积极参与生机勃勃的国际开发者社区，并对各种 .NET 技术的发展做出直接贡献。
+<span data-ttu-id="49464-105">可使用免费的跨平台工具生成各种 .NET 应用，如云、IoT 和游戏应用。</span><span class="sxs-lookup"><span data-stu-id="49464-105">Build many types of apps with .NET, such as cloud, IoT, and games using free cross-platform tools.</span></span> <span data-ttu-id="49464-106">应用可以在 Android、iOS、Linux、macOS 和 Windows 上运行。</span><span class="sxs-lookup"><span data-stu-id="49464-106">Your apps can run on Android, iOS, Linux, macOS, and Windows.</span></span> <span data-ttu-id="49464-107">请将应用部署到服务器或桌面，然后发布到应用商店中，以供在移动设备上部署。</span><span class="sxs-lookup"><span data-stu-id="49464-107">Deploy apps to servers or desktops and publish to app stores for deployment on mobile devices.</span></span> <span data-ttu-id="49464-108">.NET 可供学生和爱好者使用，欢迎所有人积极参与生机勃勃的国际开发者社区，并对各种 .NET 技术的发展做出直接贡献。</span><span class="sxs-lookup"><span data-stu-id="49464-108">.NET is accessible to students and hobbyists, and all are welcome to participate in a lively international developer community and make direct contributions to many of the .NET technologies.</span></span>
 
-## <a name="news"></a>新闻
+## <a name="news"></a><span data-ttu-id="49464-109">新闻</span><span class="sxs-lookup"><span data-stu-id="49464-109">News</span></span>
 
-- [.NET Core 2.0 已发布！](https://channel9.msdn.com/Blogs/dotnet/NET-Core-20-Released)
-- [宣布发布 .NET Core 2.0](https://blogs.msdn.microsoft.com/dotnet/2017/08/14/announcing-net-core-2-0/)
-- [宣布发布 .NET Standard 2.0](https://blogs.msdn.microsoft.com/dotnet/2017/08/14/announcing-net-standard-2-0/)
-- [宣布发布 ASP.NET Core 2.0](https://blogs.msdn.microsoft.com/webdev/2017/08/14/announcing-asp-net-core-2-0/)
-- [宣布发布 Entity Framework Core 2.0](https://blogs.msdn.microsoft.com/dotnet/2017/08/14/announcing-entity-framework-core-2-0/)
-- [Visual Basic 的新增功能：.NET Standard 类库和 dotnet CLI！](https://blogs.msdn.microsoft.com/vbteam/2017/08/14/new-for-visual-basic-net-standard-class-libraries-and-the-dotnet-cli/)
-- [Visual Studio 2017 版本 15.3 已发布](https://blogs.msdn.microsoft.com/visualstudio/2017/08/14/visual-studio-2017-version-15-3-released/)
-- [.NET Standard 简介](https://blogs.msdn.microsoft.com/dotnet/2016/09/26/introducing-net-standard/)
-- [Visual Studio for Mac：现已全面推出](https://blogs.msdn.microsoft.com/visualstudio/2017/05/10/visual-studio-for-mac-now-generally-available/)
-- [宣布 Visual Studio 2017 已全面推出](https://blogs.msdn.microsoft.com/visualstudio/2017/03/07/announcing-visual-studio-2017-general-availability-and-more/)
-- [.NET Core 和 Visual Studio 2017 中的新增功能（视频）](https://channel9.msdn.com/events/Visual-Studio/Visual-Studio-2017-Launch/T108)
-- [宣布发布 .NET Framework 4.7](https://blogs.msdn.microsoft.com/dotnet/2017/04/05/announcing-the-net-framework-4-7/)
-- [C# 7.0 中的新增功能](https://blogs.msdn.microsoft.com/dotnet/2017/03/09/new-features-in-c-7-0/)
-- [宣布发布适用于 Visual Studio 2017 的 F# 4.1 和 Visual F# 工具](https://blogs.msdn.microsoft.com/dotnet/2017/03/07/announcing-f-4-1-and-the-visual-f-tools-for-visual-studio-2017-2/)
-- [开源 Xamarin 准备就绪！](https://blog.xamarin.com/live-from-evolve-open-source-xamarin-ready-for-you/)
-- [.NET 一周要闻](https://blogs.msdn.microsoft.com/dotnet/tag/week-in-net/)
-- [Channel 9 上的 Build 2017 大会 - 关于 Microsoft 最新技术和资讯的视频！](https://channel9.msdn.com/?wt.mc_id=build_hp#programGuide)
+<span data-ttu-id="49464-110">有关 .NET 的新闻动态，请查看下述博客：</span><span class="sxs-lookup"><span data-stu-id="49464-110">For news about .NET, check the following blogs:</span></span>
 
-## <a name="documentation"></a>文档
+- [<span data-ttu-id="49464-111">.NET 博客</span><span class="sxs-lookup"><span data-stu-id="49464-111">.NET Blog</span></span>](https://devblogs.microsoft.com/dotnet/)
+- [<span data-ttu-id="49464-112">ASP.NET 博客</span><span class="sxs-lookup"><span data-stu-id="49464-112">ASP.NET Blog</span></span>](https://devblogs.microsoft.com/aspnet/)
+- [<span data-ttu-id="49464-113">Visual Studio 博客</span><span class="sxs-lookup"><span data-stu-id="49464-113">The Visual Studio Blog</span></span>](https://devblogs.microsoft.com/visualstudio/)
+- [<span data-ttu-id="49464-114">Visual Basic 团队</span><span class="sxs-lookup"><span data-stu-id="49464-114">The Visual Basic Team</span></span>](https://devblogs.microsoft.com/vbteam/)
 
-本文列出了涉及使用 .NET 的多种平台和语言。  可通过下列任意一节开始了解 .NET 及其语言：
+<span data-ttu-id="49464-115">另请关注最新的 .NET 活动：</span><span class="sxs-lookup"><span data-stu-id="49464-115">Also follow the latest .NET events:</span></span>
 
-- [.NET 指南](standard/index.md)
-- [.NET Core 指南](core/index.md)
-- [.NET Framework 指南](framework/index.md)
-- [C# 指南](csharp/index.md)
-- [F# 指南](fsharp/index.md)
-- [Visual Basic 指南](visual-basic/index.md)
+- [<span data-ttu-id="49464-116">Microsoft Connect()</span><span class="sxs-lookup"><span data-stu-id="49464-116">Microsoft Connect()</span></span>](https://www.microsoft.com/connectevent)
+- [<span data-ttu-id="49464-117">Microsoft Build 2018 大会</span><span class="sxs-lookup"><span data-stu-id="49464-117">Microsoft Build 2018</span></span>](https://channel9.msdn.com/Events/Build/2018)
+- [<span data-ttu-id="49464-118">.NET Conf</span><span class="sxs-lookup"><span data-stu-id="49464-118">.NET Conf</span></span>](https://www.dotnetconf.net/)
 
-此外，还可以浏览 [.NET API 引用](/dotnet/api)。
+<span data-ttu-id="49464-119">要了解添加到 .NET 实现及受支持的语言的最新功能，请参阅以下文章：</span><span class="sxs-lookup"><span data-stu-id="49464-119">For information about the latest features added to the .NET implementations and supported languages, see the following articles:</span></span>
 
-## <a name="open-source"></a>打开源
+- [<span data-ttu-id="49464-120">.NET Core 的新增功能</span><span class="sxs-lookup"><span data-stu-id="49464-120">What's new in .NET Core</span></span>](core/whats-new/index.md)
+- [<span data-ttu-id="49464-121">.NET Framework 的新增功能</span><span class="sxs-lookup"><span data-stu-id="49464-121">What's new in the .NET Framework</span></span>](framework/whats-new/index.md)
+- [<span data-ttu-id="49464-122">C# 中的新增功能</span><span class="sxs-lookup"><span data-stu-id="49464-122">What's new in C#</span></span>](csharp/whats-new/index.md)
+- [<span data-ttu-id="49464-123">Visual Basic 的新增功能</span><span class="sxs-lookup"><span data-stu-id="49464-123">What's new for Visual Basic</span></span>](visual-basic/getting-started/whats-new.md)
 
-此文档是完全[开源](https://github.com/dotnet/docs)的。 可通过任何方式参与此文档，如创建问题、编写文档等。  此外，许多 .NET 本身也是开源的：
+## <a name="documentation"></a><span data-ttu-id="49464-124">文档</span><span class="sxs-lookup"><span data-stu-id="49464-124">Documentation</span></span>
 
-- [.NET Core 主页](https://github.com/dotnet/core)
-- [.NET 库](https://github.com/dotnet/corefx)
-- [.NET Core 运行时](https://github.com/dotnet/coreclr)
-- [Roslyn（C# 和 Visual Basic）编译器平台和 IDE 工具](https://github.com/dotnet/roslyn)
-- [F# 编译器和 IDE 工具](https://github.com/microsoft/visualfsharp)
+<span data-ttu-id="49464-125">本文列出了涉及使用 .NET 的多种平台和语言。</span><span class="sxs-lookup"><span data-stu-id="49464-125">This documentation covers the breadth of .NET across platforms and languages.</span></span> <span data-ttu-id="49464-126">可通过下列任意一节开始了解 .NET 及其语言：</span><span class="sxs-lookup"><span data-stu-id="49464-126">You can get started with .NET and its languages in any of the following sections:</span></span>
 
-可与 [.NET 社区](https://www.microsoft.com/net/community)中其他积极参与的人员一起了解最近更新或寻求帮助。
+- [<span data-ttu-id="49464-127">.NET 指南</span><span class="sxs-lookup"><span data-stu-id="49464-127">.NET Guide</span></span>](standard/index.md)
+- [<span data-ttu-id="49464-128">.NET Core 指南</span><span class="sxs-lookup"><span data-stu-id="49464-128">.NET Core Guide</span></span>](core/index.md)
+- [<span data-ttu-id="49464-129">.NET Framework 指南</span><span class="sxs-lookup"><span data-stu-id="49464-129">.NET Framework Guide</span></span>](framework/index.md)
+- [<span data-ttu-id="49464-130">C# 指南</span><span class="sxs-lookup"><span data-stu-id="49464-130">C# Guide</span></span>](csharp/index.md)
+- [<span data-ttu-id="49464-131">F# 指南</span><span class="sxs-lookup"><span data-stu-id="49464-131">F# Guide</span></span>](fsharp/index.md)
+- [<span data-ttu-id="49464-132">Visual Basic 指南</span><span class="sxs-lookup"><span data-stu-id="49464-132">Visual Basic Guide</span></span>](visual-basic/index.md)
+- [<span data-ttu-id="49464-133">ML.NET 指南</span><span class="sxs-lookup"><span data-stu-id="49464-133">ML.NET Guide</span></span>](machine-learning/index.yml)
+- [<span data-ttu-id="49464-134">.NET for Apache Spark</span><span class="sxs-lookup"><span data-stu-id="49464-134">.NET for Apache Spark</span></span>](spark/index.yml)
 
+<span data-ttu-id="49464-135">此外，还可以浏览 [.NET API 引用](/dotnet/api)。</span><span class="sxs-lookup"><span data-stu-id="49464-135">Additionally, you can browse the [.NET API reference](/dotnet/api).</span></span>
+
+## <a name="open-source"></a><span data-ttu-id="49464-136">开源</span><span class="sxs-lookup"><span data-stu-id="49464-136">Open source</span></span>
+
+<span data-ttu-id="49464-137">此文档是完全[开源](https://github.com/dotnet/docs)的。</span><span class="sxs-lookup"><span data-stu-id="49464-137">This documentation is completely [open source](https://github.com/dotnet/docs).</span></span> <span data-ttu-id="49464-138">可通过任何方式参与此文档，如创建问题、编写文档等。</span><span class="sxs-lookup"><span data-stu-id="49464-138">You can contribute in any way you like, from creating issues to writing documentation.</span></span> <span data-ttu-id="49464-139">此外，许多 .NET 本身也是开源的。</span><span class="sxs-lookup"><span data-stu-id="49464-139">Additionally, much of .NET itself is also open source.</span></span> <span data-ttu-id="49464-140">下表显示了主要的 .NET GitHub 存储库：</span><span class="sxs-lookup"><span data-stu-id="49464-140">The following list shows the main .NET GitHub repositories:</span></span>
+
+- [<span data-ttu-id="49464-141">.NET Core 主页</span><span class="sxs-lookup"><span data-stu-id="49464-141">.NET Core Home</span></span>](https://github.com/dotnet/core)
+- [<span data-ttu-id="49464-142">.NET 库</span><span class="sxs-lookup"><span data-stu-id="49464-142">.NET Libraries</span></span>](https://github.com/dotnet/corefx)
+- [<span data-ttu-id="49464-143">.NET Core 运行时</span><span class="sxs-lookup"><span data-stu-id="49464-143">.NET Core Runtime</span></span>](https://github.com/dotnet/coreclr)
+- [<span data-ttu-id="49464-144">.NET Core CLI</span><span class="sxs-lookup"><span data-stu-id="49464-144">.NET Core CLI</span></span>](https://github.com/dotnet/cli)
+- [<span data-ttu-id="49464-145">Roslyn（C# 和 Visual Basic）编译器平台和 IDE 工具</span><span class="sxs-lookup"><span data-stu-id="49464-145">Roslyn (C# and Visual Basic) Compiler Platform and IDE Tools</span></span>](https://github.com/dotnet/roslyn)
+- [<span data-ttu-id="49464-146">F# 编译器和 IDE 工具</span><span class="sxs-lookup"><span data-stu-id="49464-146">F# Compiler and IDE Tools</span></span>](https://github.com/microsoft/visualfsharp)
+- [<span data-ttu-id="49464-147">Windows 窗体</span><span class="sxs-lookup"><span data-stu-id="49464-147">Windows Forms</span></span>](https://github.com/dotnet/winforms)
+- [<span data-ttu-id="49464-148">WPF</span><span class="sxs-lookup"><span data-stu-id="49464-148">WPF</span></span>](https://github.com/dotnet/wpf)
+
+<span data-ttu-id="49464-149">可与 [.NET 社区](https://www.microsoft.com/net/community)中其他积极参与的人员一起了解最近更新或寻求帮助。</span><span class="sxs-lookup"><span data-stu-id="49464-149">You can join other people who are already active in the [.NET community](https://www.microsoft.com/net/community) to find out what's new or ask for help.</span></span>
