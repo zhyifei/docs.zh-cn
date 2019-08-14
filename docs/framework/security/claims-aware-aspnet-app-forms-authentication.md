@@ -3,12 +3,12 @@ title: 如何：使用基于表单的身份验证生成声明感知 ASP.NET 应�
 ms.date: 03/30/2017
 ms.assetid: 98a3e029-1a9b-4e0c-b5d0-29d3f23f5b15
 author: BrucePerlerMS
-ms.openlocfilehash: ecaf1de0b806d5568d81fac2ddb2b39b697135ab
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 75db96a621d7863ef445efb24814111b34da6960
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61792738"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68971837"
 ---
 # <a name="how-to-build-claims-aware-aspnet-application-using-forms-based-authentication"></a>如何：使用基于表单的身份验证生成声明感知 ASP.NET 应用程序
 
@@ -60,7 +60,7 @@ Forms 身份验证已因包括在 .NET 4.5 中而获益，因为所有通过窗�
 
 在此步骤中，将创建一个新的 ASP.NET Web 窗体应用程序。
 
-#### <a name="to-create-a-simple-aspnet-application"></a>创建一个简单 ASP.NET 应用程序
+### <a name="to-create-a-simple-aspnet-application"></a>创建一个简单 ASP.NET 应用程序
 
 1. 启动 Visual Studio，然后依次单击“文件”、“新建”和“项目”。
 
@@ -72,7 +72,7 @@ Forms 身份验证已因包括在 .NET 4.5 中而获益，因为所有通过窗�
 
 在此步骤中，将向“Web.config”配置文件添加一个配置项并编辑“Default.aspx”文件，以便显示帐户的声明信息。
 
-#### <a name="to-configure-aspnet-application-for-claims-using-forms-authentication"></a>为使用 Forms 身份验证的声明配置 ASP.NET 应用程序
+### <a name="to-configure-aspnet-application-for-claims-using-forms-authentication"></a>为使用 Forms 身份验证的声明配置 ASP.NET 应用程序
 
 1. 在“Default.aspx”文件中，将现有标记替换为以下内容：
 
@@ -126,7 +126,7 @@ Forms 身份验证已因包括在 .NET 4.5 中而获益，因为所有通过窗�
 
 此步骤中将测试 ASP.NET Web 窗体应用程序，并验证用户使用 Forms 身份验证登录时是否呈现声明。
 
-#### <a name="to-test-your-aspnet-web-forms-application-for-claims-using-forms-authentication"></a>为使用 Forms 身份验证的声明测试 ASP.NET Web 窗体应用程序
+### <a name="to-test-your-aspnet-web-forms-application-for-claims-using-forms-authentication"></a>为使用 Forms 身份验证的声明测试 ASP.NET Web 窗体应用程序
 
 1. 按 F5 生成并运行该应用程序。 将显示“Default.aspx”，其页面右上角具有“注册”和“登录”链接。 单击“注册”。
 

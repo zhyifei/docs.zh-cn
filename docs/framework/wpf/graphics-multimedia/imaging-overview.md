@@ -21,17 +21,16 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
-ms.openlocfilehash: 845095567459fc486dd2f1c52e575444612c7bb8
-ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
+ms.openlocfilehash: fcf5e8e68492f4d1ff75221384b08ffad2b939f3
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68869124"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68971952"
 ---
 # <a name="imaging-overview"></a>图像处理概述
 本主题介绍 [!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-md.md)]。 借助 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]，开发人员可以显示、转换图像和设置图像的格式。  
 
-<a name="_wpfImaging"></a>   
 ## <a name="wpf-imaging-component"></a>WPF 图像处理组件  
  [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] 使得 [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] 内的图像处理功能得到了极大改进。 映像功能 (如显示位图或在公共控件上使用图像) 以前依赖于 Microsoft Windows 图形设备接口 (GDI) 或 Microsoft Windows GDI + 库。 这些 API 提供基线映像功能, 但缺乏功能, 如支持编解码器扩展性和高保真图像支持。 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]旨在克服 GDI 和 GDI + 的缺点, 并提供一组新的 API, 用于在应用程序中显示和使用图像。  
   
@@ -39,7 +38,7 @@ ms.locfileid: "68869124"
   
 - 适用于新的或专用图像格式的扩展性模型。  
   
-- 提高了本机映像格式 (包括位图 (BMP [!INCLUDE[TLA#tla_jpegorg](../../../../includes/tlasharptla-jpegorg-md.md)])、 [!INCLUDE[TLA#tla_tiff](../../../../includes/tlasharptla-tiff-md.md)]、 [!INCLUDE[TLA#tla_png](../../../../includes/tlasharptla-png-md.md)] [!INCLUDE[TLA#tla_wdp](../../../../includes/tlasharptla-wdp-md.md)]、、图形交换格式 (GIF) 和图标 (.ico)) 的性能和安全性。  
+- 改善了本机映像格式 (包括位图 (BMP)、联合图像专家组 (JPEG)、 [!INCLUDE[TLA#tla_png](../../../../includes/tlasharptla-png-md.md)] [!INCLUDE[TLA#tla_wdp](../../../../includes/tlasharptla-wdp-md.md)]、 [!INCLUDE[TLA#tla_tiff](../../../../includes/tlasharptla-tiff-md.md)]、、图形交换格式 (GIF) 和图标 (.ico)) 的性能和安全性。  
   
 - 高位深图像数据最多保留 8 位/通道（32 位/像素）。  
   
@@ -165,7 +164,7 @@ ms.locfileid: "68869124"
 ## <a name="image-metadata"></a>图像元数据  
  某些图像文件包含用于描述文件的内容或特征的元数据。 例如，大多数数数字相机创建的图像中包含用于捕获该图像的照相机品牌和型号的元数据。 每种图像格式处理元数据的方式不同，但 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] 为存储和检索每种受支持图像格式的元数据提供了一种统一方式。  
   
- 通过<xref:System.Windows.Media.Imaging.BitmapSource>对象的属性提供对元<xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A>数据的访问。 <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A>返回一个<xref:System.Windows.Media.Imaging.BitmapMetadata>对象, 该对象包含图像所包含的所有元数据。 此数据可以位于一个元数据架构中或位于不同架构的组合中。 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]支持以下图像元数据架构:可交换图像文件 (Exif)、文本 (PNG 文本数据)、图像文件目录 (IFD)、 [!INCLUDE[TLA#tla_iptc](../../../../includes/tlasharptla-iptc-md.md)]和。 [!INCLUDE[TLA#tla_xmp](../../../../includes/tlasharptla-xmp-md.md)]  
+ 通过<xref:System.Windows.Media.Imaging.BitmapSource>对象的属性提供对元<xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A>数据的访问。 <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A>返回一个<xref:System.Windows.Media.Imaging.BitmapMetadata>对象, 该对象包含图像所包含的所有元数据。 此数据可以位于一个元数据架构中或位于不同架构的组合中。 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]支持以下图像元数据架构:可交换图像文件 (Exif)、文本 (PNG 文本数据)、图像文件目录 (IFD)、国际新闻通信委员会 (IPTC) 和[!INCLUDE[TLA#tla_xmp](../../../../includes/tlasharptla-xmp-md.md)]。  
   
  为了简化读取元数据<xref:System.Windows.Media.Imaging.BitmapMetadata>的过程, 提供了多个可以轻松访问的命名属性, <xref:System.Windows.Media.Imaging.BitmapMetadata.Author%2A>如、 <xref:System.Windows.Media.Imaging.BitmapMetadata.Title%2A>和<xref:System.Windows.Media.Imaging.BitmapMetadata.CameraModel%2A>。 许多命名属性还可以用于编写元数据。 元数据查询读取器提供对读取元数据的其他支持。 方法用于检索元数据查询读取器, 方法是提供一个字符串查询, 如 *"/app1/exif/"。* <xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A> 在下面的示例中<xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A> , 用于获取存储在 *"/Text/Description"* 位置中的文本。  
   

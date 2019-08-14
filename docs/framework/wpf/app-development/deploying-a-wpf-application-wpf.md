@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WPF applications [WPF], deployment
 - deployment [WPF], applications
 ms.assetid: 12cadca0-b32c-4064-9a56-e6a306dcc76d
-ms.openlocfilehash: 924553bf457a6668143785c78871ebac6e01efa4
-ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
+ms.openlocfilehash: 16a0436accfb031ddd0bb413e519d80e550786b4
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68818025"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68972267"
 ---
 # <a name="deploying-a-wpf-application-wpf"></a>部署 WPF 应用程序 (WPF)
 生成 Windows Presentation Foundation (WPF) 应用程序后, 需要部署这些应用程序。 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]和 .NET Framework 包括几种部署技术。 用于部署 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 应用程序的部署技术取决于应用程序的类型。 本主题将简要概述各项部署技术，以及如何使用这些技术来满足各类 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 应用程序的部署要求。  
@@ -114,7 +114,7 @@ ms.locfileid: "68818025"
 ## <a name="installing-the-net-framework"></a>安装 .NET Framework  
  若要运行[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]应用程序, Microsoft .NET 框架必须安装在客户端上。 查看浏览器承载的应用程序时[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] , Internet Explorer 会自动检测是否随 .NET Framework 一起安装了客户端。 如果未安装 .NET Framework, Internet Explorer 将提示用户安装。  
   
- 为了检测 .NET Framework 是否已安装, Internet Explorer 包括一个引导程序应用程序, 该应用程序已[!INCLUDE[TLA#tla_mime](../../../../includes/tlasharptla-mime-md.md)]注册为具有以下扩展名的内容文件的回退处理程序: .xaml、.xps、xbap 和.。 如果你导航到这些文件类型, 并且客户端上未安装 .NET Framework, 则引导程序应用程序会请求安装它的权限。 如果未提供权限, 则不会安装 .NET Framework 和应用程序。  
+ 为了检测 .NET Framework 是否已安装, Internet Explorer 包括一个引导程序应用程序, 该应用程序已注册为具有以下扩展名的内容文件的后备多用途 Internet 邮件扩展 (MIME) 处理程序: .xaml、.xps、xbap、和。 如果你导航到这些文件类型, 并且客户端上未安装 .NET Framework, 则引导程序应用程序会请求安装它的权限。 如果未提供权限, 则不会安装 .NET Framework 和应用程序。  
   
  如果授予了权限, Internet Explorer 将使用 Microsoft 后台智能传输服务 (BITS) 下载并安装 .NET Framework。 成功安装 .NET Framework 后, 最初请求的文件将在新的浏览器窗口中打开。  
   

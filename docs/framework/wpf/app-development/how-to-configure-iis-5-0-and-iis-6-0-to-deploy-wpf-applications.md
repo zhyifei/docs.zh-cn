@@ -13,21 +13,21 @@ helpviewer_keywords:
 - file extensions [WPF], registering
 - registering MIME types [WPF]
 ms.assetid: c6e8c2cb-9ba2-4e75-a0d5-180ec9639433
-ms.openlocfilehash: 6fa00c4ced8c05d056703560e5740689c6dcfe39
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a1e58aef6d02b6cf05a126b6afd25ab2a6004002
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61981409"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68972296"
 ---
 # <a name="how-to-configure-iis-50-and-iis-60-to-deploy-wpf-applications"></a>如何：将 IIS 5.0 和 IIS 6.0 配置为部署 WPF 应用程序
 
-可以从大多数 Web 服务器部署 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 应用程序，前提是这些服务器配置了相应的 [!INCLUDE[TLA#tla_mime](../../../../includes/tlasharptla-mime-md.md)] 类型。 默认情况下，[!INCLUDE[TLA#tla_iis70](../../../../includes/tlasharptla-iis70-md.md)] 配置有这些 [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] 类型，但 [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] 和 [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)] 未配置。
+你可以从大多数[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Web 服务器部署应用程序, 前提是这些服务器是使用适当的多用途 Internet 邮件扩展 (MIME) 类型配置的。 默认情况下[!INCLUDE[TLA#tla_iis70](../../../../includes/tlasharptla-iis70-md.md)] , 使用这些 MIME 类型配置, 但[!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)]并[!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)]不配置。
 
 本主题介绍如何配置 [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] 和 [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)] 以部署 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序。
 
 > [!NOTE]
-> 你可以检查*UserAgent*注册表，以确定系统是否已安装.NET Framework 中的字符串。 有关详细信息和检查的脚本*UserAgent*字符串以确定是否在系统上安装.NET Framework，请参阅[检测是否安装.NET Framework 3.0](how-to-detect-whether-the-net-framework-3-0-is-installed.md)。
+> 你可以在注册表中检查*UserAgent*字符串, 以确定系统是否安装了 .NET Framework。 有关详细信息和检查*UserAgent*字符串以确定系统是否安装了 .NET Framework 的脚本, 请参阅[检测是否安装了 .NET Framework 3.0](how-to-detect-whether-the-net-framework-3-0-is-installed.md)。
 
 <a name="content_expiration"></a>
 
@@ -49,7 +49,7 @@ ms.locfileid: "61981409"
 
 ## <a name="register-mime-types-and-file-extensions"></a>注册 MIME 类型和文件扩展名
 
-必须注册几种 [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] 类型和文件扩展名，以便客户端系统上的浏览器才能加载正确的处理程序。 需要添加以下类型：
+必须注册多个 MIME 类型和文件扩展名, 以便客户端系统上的浏览器可以加载正确的处理程序。 需要添加以下类型：
 
 |扩展名|MIME 类型|
 |---------------|---------------|
@@ -61,9 +61,9 @@ ms.locfileid: "61981409"
 |.xps|application/vnd.ms-xpsdocument|
 
 > [!NOTE]
-> 不需要在客户端系统上注册 [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] 类型或文件扩展名。 安装 Microsoft.NET Framework 时，它们会自动注册。
+> 无需在客户端系统上注册 MIME 类型或文件扩展名。 当你安装 Microsoft .NET Framework 时, 它们会自动注册。
 
-下面的 Microsoft Visual Basic Scripting Edition (VBScript) 示例会自动添加所需[!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)]类型与[!INCLUDE[TLA2#tla_iis5](../../../../includes/tla2sharptla-iis5-md.md)]。 若要使用该脚本，请将代码复制到服务器上的 .vbs 文件。 然后，通过从命令行运行该文件或在 [!INCLUDE[TLA#tla_winexpl](../../../../includes/tlasharptla-winexpl-md.md)] 中双击该文件来运行脚本。
+以下 Microsoft Visual Basic Scripting Edition (VBScript) 示例自动向添加所需的 MIME 类型[!INCLUDE[TLA2#tla_iis5](../../../../includes/tla2sharptla-iis5-md.md)]。 若要使用该脚本，请将代码复制到服务器上的 .vbs 文件。 然后，通过从命令行运行该文件或在 [!INCLUDE[TLA#tla_winexpl](../../../../includes/tlasharptla-winexpl-md.md)] 中双击该文件来运行脚本。
 
 ```vb
 ' This script adds the necessary Windows Presentation Foundation MIME types
@@ -126,9 +126,9 @@ End Sub
 ```
 
 > [!NOTE]
-> 多次运行该脚本会在 [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] 或 [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)] 元数据库中创建多个 [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] 映射项。
+> 多次运行此脚本会在[!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)]或[!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)]元数据库中创建多个 MIME 映射条目。
 
-运行该脚本后，可能不会从 [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] 或 [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)] [!INCLUDE[TLA#tla_mmc](../../../../includes/tlasharptla-mmc-md.md)] 中看到其他 [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] 类型。 但是，这些 [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] 类型已添加到 [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] 或 [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)] 元数据库。 以下脚本将显示 [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] 或 [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)] 元数据库中的所有 [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] 类型。
+运行此脚本后, 你可能看不到或[!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)] [!INCLUDE[TLA#tla_mmc](../../../../includes/tlasharptla-mmc-md.md)]中的其他 MIME 类型。 但是, 这些 MIME 类型已添加到[!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)]或[!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)]元数据库中。 以下脚本将显示[!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)]或[!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)]元数据库中的所有 MIME 类型。
 
 ```vb
 ' This script lists the MIME types for an IIS Server.

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, Window control pattern
 - Window control pattern
 ms.assetid: a28cb286-296e-4a62-b4cb-55ad636ebccc
-ms.openlocfilehash: 9cab4dbbcd3302a6e74783eaefdbbd8463332224
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 1d40b133beb68c14e7392139bf0753cedb67a4ef
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710245"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68971823"
 ---
 # <a name="implementing-the-ui-automation-window-control-pattern"></a>实现 UI 自动化 Window 控件模式
 > [!NOTE]
@@ -19,7 +19,7 @@ ms.locfileid: "68710245"
   
  本主题介绍实现 <xref:System.Windows.Automation.Provider.IWindowProvider>的准则和约定，包括有关 <xref:System.Windows.Automation.WindowPattern> 属性、方法和事件的信息。 本主题的结尾列出了指向其他参考资料的链接。  
   
- <xref:System.Windows.Automation.WindowPattern>控件模式用于支持在传统图形用户界面 (GUI) 中提供基于窗口的基本功能的控件。 必须实现此控件模式的控件示例包括顶级应用程序窗口、 [!INCLUDE[TLA#tla_mdi](../../../includes/tlasharptla-mdi-md.md)] 子窗口、大小可调的拆分窗格控件、模式对话框和气球状帮助窗口。  
+ <xref:System.Windows.Automation.WindowPattern>控件模式用于支持在传统图形用户界面 (GUI) 中提供基于窗口的基本功能的控件。 必须实现此控件模式的控件示例包括顶级应用程序窗口、多文档界面 (MDI) 子窗口、大小可调的拆分窗格控件、模式对话框和气球状帮助窗口。  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
 ## <a name="implementation-guidelines-and-conventions"></a>实现准则和约定  
@@ -41,14 +41,14 @@ ms.locfileid: "68710245"
   
 |必需的成员|成员类型|说明|  
 |---------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.InteractionState%2A>|Property|None|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.IsModal%2A>|Property|None|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.IsTopmost%2A>|属性|无|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.Maximizable%2A>|Property|无|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.InteractionState%2A>|属性|无|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.IsModal%2A>|Property|无|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.IsTopmost%2A>|Property|无|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.Maximizable%2A>|属性|None|  
 |<xref:System.Windows.Automation.Provider.IWindowProvider.Minimizable%2A>|Property|None|  
 |<xref:System.Windows.Automation.Provider.IWindowProvider.VisualState%2A>|Property|无|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.Close%2A>|方法|无|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A>|方法|无|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.Close%2A>|方法|None|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A>|方法|None|  
 |<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A>|方法|None|  
 |<xref:System.Windows.Automation.WindowPattern.WindowClosedEvent>|Event|无|  
 |<xref:System.Windows.Automation.WindowPattern.WindowOpenedEvent>|Event|无|  
