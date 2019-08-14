@@ -6,12 +6,12 @@ title: .NET 文档
 description: 了解如何通过 C#、Visual Basic 和 F# 在任意平台上使用 .NET 创建各种应用程序。 浏览 API 引用、代码示例、教程以及其他内容。
 ms.custom: updateeachrelease
 ms.date: 12/04/2018
-ms.openlocfilehash: 7cf46b0c4d88b7657a5c82c7aa0ae30655c9d5ce
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: a6f6bc91a3055ffd0efe9f6b89ba0499921ed1d4
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65589992"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68972386"
 ---
 <!-- markdownlint-disable MD033 -->
 <div id="main" class="v2">
@@ -77,7 +77,7 @@ ms.locfileid: "65589992"
         <h1>.NET 文档</h1>
         <ul class="pivots">
             <li>
-                <a data-default="true" href="#docs">文档</a>
+                <a data-default="true" href="#docs">Docs</a>
                 <ul id="docs">
                     <li>
                         <a href="#getstarted">入门</a>
@@ -309,7 +309,7 @@ ms.locfileid: "65589992"
                                 </a>
                             </li>
                             <li>
-                                <a href="/aspnet/overview">
+                                <a href="/aspnet/core/">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -319,8 +319,8 @@ ms.locfileid: "65589992"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>什么是 ASP.NET？</h3>
-                                                    <p>了解如何生成 ASP.NET Web 应用程序。</p>
+                                                    <h3>什么是 ASP.NET Core？</h3>
+                                                    <p>了解如何生成 ASP.NET Core Web 应用程序。</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -453,7 +453,7 @@ ms.locfileid: "65589992"
                         </ul>
                     </li>
                     <li>
-                        <a href="#mobile">移动</a>
+                        <a href="#mobile">移动型</a>
                         <ul id="mobile" class="cardsC">
                             <li>
                                 <a href="/xamarin/ios">
