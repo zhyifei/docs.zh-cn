@@ -7,26 +7,23 @@ helpviewer_keywords:
 - menu items [Windows Forms], disabling
 - menus [Windows Forms], disabling items
 ms.assetid: 985e311e-7d67-4205-b5a3-d045b68a4a03
-ms.openlocfilehash: 9965825458afcd50b29699c3b89ed506078e04d9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fd80a6543c83ae957cd9c51b068d0702559f0925
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61954240"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69040270"
 ---
 # <a name="how-to-disable-toolstripmenuitems-using-the-designer"></a>如何：使用设计器禁用 ToolStripMenuItem
-您可以限制或扩大用户可通过启用和禁用对用户活动的响应中的菜单项的命令。 菜单项时创建，但这可以通过调整默认情况下启用<xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A>属性。 在设计时使用此属性可**属性**窗口或以编程方式在代码中设置。 有关详细信息，请参阅[如何：禁用 ToolStripMenuItems](how-to-disable-toolstripmenuitems.md)。  
-  
-> [!NOTE]
->  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[个性化设置 Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide)。  
-  
-### <a name="to-disable-a-menu-item-at-design-time"></a>若要在设计时禁用菜单项  
-  
-1. 使用窗体上选择的菜单项，设置<xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A>属性设置为`false`。  
-  
+你可以通过启用和禁用菜单项来限制或放宽用户在响应用户活动时所能执行的命令。 默认情况下, 菜单项在创建时处于启用状态, 但可以通过<xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A>属性进行调整。 可以在设计时在 "**属性**" 窗口中或通过编程方式在代码中设置此属性。 有关详细信息，请参阅[如何：禁用 Toolstripmenuitem](how-to-disable-toolstripmenuitems.md)。
+
+## <a name="to-disable-a-menu-item-at-design-time"></a>在设计时禁用菜单项
+
+1. 在窗体上选中菜单项时, 将<xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A>属性设置为。 `false`
+
     > [!TIP]
-    >  禁用菜单中的第一个或顶级菜单项将禁用菜单内包含的所有菜单项。 同样，禁用具有子菜单项的菜单项将禁用的子菜单项。 如果给定的菜单上的所有命令都都对用户不可用，它视为良好编程习惯，同时隐藏和禁用整个菜单中，这提供了一个清晰的用户界面。 应同时隐藏和禁用菜单上，因为仅隐藏不会阻止到通过快捷键菜单命令的访问权限。 设置<xref:System.Windows.Forms.ToolStripItem.Visible%2A>属性的顶级菜单项`false`若要隐藏整个菜单。  
-  
+    >  禁用菜单中的第一个或顶级菜单项, 将禁用该菜单中包含的所有菜单项。 同样, 禁用具有子菜单项的菜单项将禁用子菜单项。 如果给定菜单上的所有命令均不可供用户使用, 则会被视为良好的编程做法, 隐藏和禁用整个菜单, 因为这会显示一个干净的用户界面。 你应隐藏和禁用菜单, 因为仅隐藏不会阻止通过快捷键访问菜单命令。 将顶级<xref:System.Windows.Forms.ToolStripItem.Visible%2A>菜单项的属性设置为`false`以隐藏整个菜单。
+
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Windows.Forms.MenuStrip>

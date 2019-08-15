@@ -8,50 +8,48 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - ToolBar control [Windows Forms], adding drop-down menus
 ms.assetid: d9ce3040-3e21-4e2d-80ae-b430982b2db8
-ms.openlocfilehash: ed479c04db094b5fc0c42bfecbfe5a7753c16358
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: e5069dd46a31a65f65a17d750b685d82762e3d11
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65960179"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69038210"
 ---
 # <a name="how-to-add-buttons-to-a-toolbar-control-using-the-designer"></a>如何：使用设计器向 ToolBar 控件添加按钮
 
 > [!NOTE]
 > <xref:System.Windows.Forms.ToolStrip> 控件取代了 <xref:System.Windows.Forms.ToolBar> 控件并添加了功能；但是，可以选择保留 <xref:System.Windows.Forms.ToolBar> 控件以实现向后兼容并供将来使用。
 
-不可或缺的一部分<xref:System.Windows.Forms.ToolBar>控件是您向其中添加的按钮。 这些可用于提供方便您访问菜单命令或者，或者，您可以将它们放在另一个区域中的应用程序以向你的菜单结构中不可用的用户公开的命令的用户界面。
+<xref:System.Windows.Forms.ToolBar>控件的一个组成部分是您向其中添加的按钮。 可以使用这些命令来轻松访问菜单命令或, 也可以将其放置在应用程序的用户界面的另一个区域中, 向用户提供菜单结构中不存在的命令。
 
-下面的过程需要**Windows 应用程序**包含一个窗体，其中包含项目<xref:System.Windows.Forms.ToolBar>控件。 有关设置此类项目的信息，请参阅[如何：创建 Windows 窗体应用程序项目](/visualstudio/ide/step-1-create-a-windows-forms-application-project)和[如何：将控件添加到 Windows 窗体](how-to-add-controls-to-windows-forms.md)。
+下面的过程需要一个**Windows 应用程序**项目, 该项目具有<xref:System.Windows.Forms.ToolBar>包含控件的窗体。 有关设置此类项目的信息, 请参阅[如何:创建 Windows 窗体应用程序项目](/visualstudio/ide/step-1-create-a-windows-forms-application-project)以及[如何:将控件添加到](how-to-add-controls-to-windows-forms.md)Windows 窗体。
 
-> [!NOTE]
-> 显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[个性化设置 Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide)。
 
-### <a name="to-add-buttons-at-design-time"></a>若要在设计时添加按钮
+### <a name="to-add-buttons-at-design-time"></a>在设计时添加按钮
 
 1. 选择 <xref:System.Windows.Forms.ToolBar> 控件。
 
-2. 在中**属性**窗口中，单击<xref:System.Windows.Forms.ToolBar.Buttons%2A>属性来选择它，然后单击**省略号**(![Visual Studio 的属性窗口中的省略号按钮 （...）。](./media/visual-studio-ellipsis-button.png))按钮以打开**工具栏按钮集合编辑器**。
+2. 在 "**属性**" 窗口中, <xref:System.Windows.Forms.ToolBar.Buttons%2A>单击属性以将其选中,然后![单击 "Visual Studio](./media/visual-studio-ellipsis-button.png)属性窗口中的省略号按钮 (...)" 以打开**ToolBarButton集合编辑器**。
 
-3. 使用**外**并**删除**按钮来添加和删除按钮从<xref:System.Windows.Forms.ToolBar>控件。
+3. 使用 "**添加**" 和 "**删除**" 按钮可在<xref:System.Windows.Forms.ToolBar>控件中添加和删除按钮。
 
-4. 配置中的各个按钮的属性**属性**编辑器右侧的窗格中显示的窗口。 下表显示了需要考虑一些重要属性。
+4. 在编辑器右侧窗格中显示的 "**属性**" 窗口中, 配置各个按钮的属性。 下表显示要考虑的一些重要属性。
 
     |属性|描述|
     |--------------|-----------------|
-    |<xref:System.Windows.Forms.ToolBarButton.DropDownMenu%2A>|设置要在下拉工具栏按钮中显示的菜单。 工具栏按钮<xref:System.Windows.Forms.ToolBarButton.Style%2A>属性必须设置为<xref:System.Windows.Forms.ToolBarButtonStyle.DropDownButton>。 此属性采用的实例<xref:System.Windows.Forms.ContextMenu>作为引用的类。|
-    |<xref:System.Windows.Forms.ToolBarButton.PartialPush%2A>|设置是否为部分按下切换式工具栏按钮。 工具栏按钮<xref:System.Windows.Forms.ToolBarButton.Style%2A>属性必须设置为<xref:System.Windows.Forms.ToolBarButtonStyle.ToggleButton>。|
-    |<xref:System.Windows.Forms.ToolBarButton.Pushed%2A>|设置是否切换式工具栏按钮当前处于按下状态。 工具栏按钮<xref:System.Windows.Forms.ToolBarButton.Style%2A>属性必须设置为<xref:System.Windows.Forms.ToolBarButtonStyle.ToggleButton>或<xref:System.Windows.Forms.ToolBarButtonStyle.PushButton>。|
-    |<xref:System.Windows.Forms.ToolBarButton.Style%2A>|将工具栏按钮的样式设置。 必须是中的值之一<xref:System.Windows.Forms.ToolBarButtonStyle>枚举。|
-    |<xref:System.Windows.Forms.ToolBarButton.Text%2A>|显示按钮的文本字符串。|
-    |<xref:System.Windows.Forms.ToolBarButton.ToolTipText%2A>|显示为按钮的工具提示文本。|
+    |<xref:System.Windows.Forms.ToolBarButton.DropDownMenu%2A>|设置要显示在下拉工具栏按钮中的菜单。 工具栏按钮的<xref:System.Windows.Forms.ToolBarButton.Style%2A>属性必须设置为<xref:System.Windows.Forms.ToolBarButtonStyle.DropDownButton>。 此属性采用<xref:System.Windows.Forms.ContextMenu>类的实例作为引用。|
+    |<xref:System.Windows.Forms.ToolBarButton.PartialPush%2A>|设置是否部分推送切换样式的工具栏按钮。 工具栏按钮的<xref:System.Windows.Forms.ToolBarButton.Style%2A>属性必须设置为<xref:System.Windows.Forms.ToolBarButtonStyle.ToggleButton>。|
+    |<xref:System.Windows.Forms.ToolBarButton.Pushed%2A>|设置切换样式的工具栏按钮当前是否处于按下状态。 工具栏按钮的<xref:System.Windows.Forms.ToolBarButton.Style%2A>属性必须设置为<xref:System.Windows.Forms.ToolBarButtonStyle.ToggleButton>或<xref:System.Windows.Forms.ToolBarButtonStyle.PushButton>。|
+    |<xref:System.Windows.Forms.ToolBarButton.Style%2A>|设置工具栏按钮的样式。 必须是<xref:System.Windows.Forms.ToolBarButtonStyle>枚举中的值之一。|
+    |<xref:System.Windows.Forms.ToolBarButton.Text%2A>|按钮显示的文本字符串。|
+    |<xref:System.Windows.Forms.ToolBarButton.ToolTipText%2A>|作为按钮的工具提示显示的文本。|
 
-5. 单击**确定**以关闭对话框并创建您指定的面板。
+5. 单击 **"确定"** 以关闭对话框并创建指定的面板。
 
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Windows.Forms.ToolBar>
-- [如何：定义的工具栏按钮的图标](how-to-define-an-icon-for-a-toolbar-button.md)
-- [如何：触发工具栏按钮的菜单事件](how-to-trigger-menu-events-for-toolbar-buttons.md)
+- [如何：定义工具栏按钮的图标](how-to-define-an-icon-for-a-toolbar-button.md)
+- [如何：工具栏按钮的触发器菜单事件](how-to-trigger-menu-events-for-toolbar-buttons.md)
 - [ToolBar 控件概述](toolbar-control-overview-windows-forms.md)
 - [ToolBar 控件](toolbar-control-windows-forms.md)

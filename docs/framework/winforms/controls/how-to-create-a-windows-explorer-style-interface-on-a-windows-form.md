@@ -6,53 +6,50 @@ helpviewer_keywords:
 - SplitContainer control [Windows Forms], Explorer-style interface
 - forms [Windows Forms], Windows Explorer type
 ms.assetid: 9a3d5f4f-5dda-4350-9ad5-57ce5976dc47
-ms.openlocfilehash: 578fdf8e24803db0e0d80ff22aa5cebebbc2663e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: db2c5431dfb0156c1508a18ef13d2af80eb4981b
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616002"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039536"
 ---
 # <a name="how-to-create-a-windows-explorerstyle-interface-on-a-windows-form"></a>如何：在 Windows 窗体上创建 Windows 资源管理器样式的界面
-Windows 资源管理器是由于其比较熟悉的应用程序的一个常见用户界面选择。  
-  
- 从根本上来说，Windows 资源管理器是<xref:System.Windows.Forms.TreeView>控件和一个<xref:System.Windows.Forms.ListView>上单独的面板的控件。 通过拆分器，面板进行可调整大小。 此类控件排列是用于显示和浏览信息非常有效。  
-  
- 以下步骤说明如何在 Windows 资源管理器类似的窗体中排列控件。 它们不显示如何添加 Windows 资源管理器应用程序的文件浏览功能。  
-  
-> [!NOTE]
->  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[个性化设置 Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide)。  
-  
-### <a name="to-create-a-windows-explorer-style-windows-form"></a>若要创建 Windows 资源管理器样式 Windows 窗体  
-  
-1. 创建新的 Windows 应用程序项目 (**文件** > **新建** > **项目** > **Visual C#** 或**Visual Basic** > **经典桌面** > **Windows 窗体应用程序**)。  
-  
-2. 从**工具箱**:  
-  
-    1. 拖动<xref:System.Windows.Forms.SplitContainer>控件拖到窗体上的。  
-  
-    2. 拖动<xref:System.Windows.Forms.TreeView>控制**SplitterPanel1** (的面板<xref:System.Windows.Forms.SplitContainer>控制标记**Panel1**)。  
-  
-    3. 拖动<xref:System.Windows.Forms.ListView>控制**SplitterPanel2** (的面板<xref:System.Windows.Forms.SplitContainer>控制标记**Panel2**)。  
-  
-3. 通过按 CTRL 键并依次单击选择所有三个控件。 当选择<xref:System.Windows.Forms.SplitContainer>控件中，单击拆分条中，而不是面板。  
-  
+Windows 资源管理器是应用程序的一个常见用户界面选项, 因为它已做好了准备。
+
+ Windows 资源管理器本质<xref:System.Windows.Forms.TreeView>上是控件<xref:System.Windows.Forms.ListView>和控件在单独的面板上。 可以通过拆分器调整面板的大小。 这种控件排列对于显示和浏览信息非常有效。
+
+ 以下步骤演示如何在类似 Windows 资源管理器的窗体中排列控件。 它们不显示如何添加 Windows 资源管理器应用程序的文件浏览功能。
+
+## <a name="to-create-a-windows-explorer-style-windows-form"></a>创建 Windows 资源管理器样式的 Windows 窗体
+
+1. 创建新的 Windows 应用程序项目 **(文件** > **新** > **项目** > **视觉C#对象**或**Visual Basic** > **经典桌面** >  **Windows 窗体应用程序**)。
+
+2. 从**工具箱**:
+
+    1. <xref:System.Windows.Forms.SplitContainer>将控件拖到窗体上。
+
+    2. 将控件拖动到**SplitterPanel1** ( <xref:System.Windows.Forms.SplitContainer>控件的面板中标记为**Panel1**)。 <xref:System.Windows.Forms.TreeView>
+
+    3. 将控件拖动到**SplitterPanel2** ( <xref:System.Windows.Forms.SplitContainer>控件的面板中标记为**Panel2**)。 <xref:System.Windows.Forms.ListView>
+
+3. 按住 CTRL 键并依次单击所有三个控件以将其选中。 选择<xref:System.Windows.Forms.SplitContainer>控件时, 请单击拆分条, 而不是面板。
+
     > [!NOTE]
-    >  不要使用**全**命令**编辑**菜单。 如果这样做下, 一步中所需的属性不会出现在**属性**窗口。  
-  
-4. 在“属性”  窗口中，将 <xref:System.Windows.Forms.SplitContainer.Dock%2A> 属性设置为 <xref:System.Windows.Forms.DockStyle.Fill>。  
-  
-5. 按 F5 运行该应用程序。  
-  
-     窗体显示类似于在 Windows 资源管理器的两部分组成用户界面。  
-  
+    >  不要使用 "**编辑**" 菜单上的 "**全选**" 命令。 如果这样做, 下一步中所需的属性将不会显示在 "**属性**" 窗口中。
+
+4. 在“属性” 窗口中，将 <xref:System.Windows.Forms.SplitContainer.Dock%2A> 属性设置为 <xref:System.Windows.Forms.DockStyle.Fill>。
+
+5. 按 F5 运行该应用程序。
+
+     该窗体显示两个部分的用户界面, 与 Windows 资源管理器类似。
+
     > [!NOTE]
-    >  当拖动拆分器时，面板调整自身大小。  
-  
+    >  拖动拆分器时, 面板会调整其自身大小。
+
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Windows.Forms.SplitContainer>
-- [如何：用 Windows 窗体创建多窗格用户界面](how-to-create-a-multipane-user-interface-with-windows-forms.md)
-- [如何：定义大小调整和拆分窗口中定位行为](how-to-define-resize-and-positioning-behavior-in-a-split-window.md)
+- [如何：使用 Windows 窗体创建多窗格用户界面](how-to-create-a-multipane-user-interface-with-windows-forms.md)
+- [如何：定义拆分窗口中的大小调整和定位行为](how-to-define-resize-and-positioning-behavior-in-a-split-window.md)
 - [如何：水平拆分窗口](how-to-split-a-window-horizontally.md)
 - [SplitContainer 控件](splitcontainer-control-windows-forms.md)

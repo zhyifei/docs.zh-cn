@@ -5,26 +5,29 @@ helpviewer_keywords:
 - application settings [Windows Forms], multiple sets
 - application settings [Windows Forms], C#
 ms.assetid: 45007ac6-cf07-4be7-bc38-3f0ef962faf9
-ms.openlocfilehash: 9a4913f635204aac2214d97225c7b8147c6fe9ab
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c6842d11c04e905d42734af939f2c3f0cfeacd47
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61768545"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69040128"
 ---
-# <a name="how-to-add-multiple-sets-of-settings-to-your-application-in-c"></a>如何：将多组设置添加到你在 C 中的应用程序\#
-在某些情况下，你可能想要的应用程序中有多组设置。 例如，如果你正在开发的应用设置的特定组的地方频繁进行更改，可能会比较明智的做法其全都分成单个文件，以便可以成批，替换该文件保持不受影响的其他设置。 Visual Studio，可将多组设置添加到你的项目。 可以通过 Properties.Settings 对象访问更多组设置。  
-  
-### <a name="to-add-an-additional-set-of-setting-to-your-application"></a>若要将一组额外的设置添加到你的应用程序  
-  
-1. 从“项目”菜单中选择“添加新项”。 此时将打开“添加新项”对话框。  
-  
-2. 在中**添加新项**对话框中，选择**设置文件**，键入该文件的名称，然后单击**添加**将新的设置文件添加到你的解决方案。  
-  
-3. 在中**解决方案资源管理器**，将为新的设置文件拖放**属性**文件夹。 这允许你设置可在代码中使用新设置。  
-  
-4. 添加和使用此文件中的设置，也可以是任何其他设置文件。 您可以访问此组通过 Properties.Settings 对象的设置。  
-  
+# <a name="how-to-add-multiple-sets-of-settings-to-your-application-in-c"></a>如何：将多组设置添加到应用程序中的 C\#
+
+在某些情况下, 你可能希望在应用程序中包含多组设置。 例如, 如果你正在开发一个应用程序, 其中一组特定的设置需要频繁更改, 则可能会将它们全部隔开到一个文件中, 以便可以将该文件替换为批发, 而不影响其他设置。 Visual Studio 允许你向项目添加多个设置集。 可以通过`Properties.Settings`对象访问其他设置集。
+
+## <a name="add-an-additional-set-of-settings"></a>添加一组其他设置
+
+1. 在 Visual Studio 的 "**项目**" 菜单中, 选择 "**添加新项**"。
+
+   此时将打开“添加新项”对话框。
+
+2. 在 "**添加新项**" 对话框中, 选择 "**设置文件**", 输入文件的名称, 然后单击 "**添加**" 以将新的设置文件添加到解决方案。
+
+3. 在**解决方案资源管理器**中, 将新的设置文件拖到**Properties**文件夹中。 这允许您的新设置在代码中可用。
+
+4. 像添加任何其他设置文件一样, 在此文件中添加和使用设置。 可以通过`Properties.Settings`对象访问这组设置。
+
 ## <a name="see-also"></a>请参阅
 
 - [使用应用程序设置和用户设置](using-application-settings-and-user-settings.md)

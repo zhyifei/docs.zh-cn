@@ -1,6 +1,6 @@
 ---
-title: GetPropertyHandle 函数 （非托管 API 参考）
-description: GetPropertyHandle 函数将返回唯一的句柄，用于标识属性。
+title: GetPropertyHandle 函数 (非托管 API 参考)
+description: GetPropertyHandle 函数返回标识属性的唯一句柄。
 ms.date: 11/06/2017
 api_name:
 - GetPropertyHandle
@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d1397188b38066bac6375da0c76e7d66724a75d7
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: d6dc2792b572aae30e9989c81967b86f340d7b83
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636246"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69038263"
 ---
 # <a name="getpropertyhandle-function"></a>GetPropertyHandle 函数
 
@@ -44,47 +44,47 @@ HRESULT GetPropertyHandle (
 ## <a name="parameters"></a>参数
 
 `vFunc`\
-[in]此参数是未使用。
+中此参数未使用。
 
 `ptr`\
-[in]一个指向[IWbemObjectAccess](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectaccess)实例。
+中指向[IWbemObjectAccess](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectaccess)实例的指针。
 
 `wszPropertyName`\
-[in]以 null 结尾的字符串的 UTF16 编码字符，其中包含属性名称。
+中以 null 结尾的 UTF16 编码字符的字符串, 其中包含属性名称。
 
 `pType`\
-[out]一个指向[ `CIMTYPE` ](/windows/desktop/api/wbemcli/ne-wbemcli-tag_cimtype_enumeration)表示属性的 CIM 类型的枚举成员。
+弄一个指针, 指向[`CIMTYPE`](/windows/win32/api/wbemcli/ne-wbemcli-cimtype_enumeration)表示属性的 CIM 类型的枚举成员。
 
 `pHandle`\
-[out]指向一个整数，包含属性句柄的指针。
+弄指向包含属性句柄的整数的指针。
 
 ## <a name="return-value"></a>返回值
 
-此函数返回以下值中定义*WbemCli.h*标头文件，也可以在定义它们为常量在代码中：
+此函数返回的以下值是在*WbemCli*头文件中定义的, 也可以在代码中将它们定义为常量:
 
 |返回的常量  |值  |描述  |
 |---------|---------|---------|
-|`WBEM_E_NOT_FOUND` | 0x80041002 | 找不到指定的属性名称。 |
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 参数不是有效的。 |
-|`WBEM_E_NOT_SUPPORTED` | 0x8004100c | 请求的属性属于类型是`CIM_OBJECT`或`CIM_ARRAY`。 |
+|`WBEM_E_NOT_FOUND` | 0x80041002 | 找不到指定的属性名。 |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 参数无效。 |
+|`WBEM_E_NOT_SUPPORTED` | 0x8004100c | 请求的属性的类型`CIM_OBJECT`为或。 `CIM_ARRAY` |
 |`WBEM_S_NO_ERROR` | 0 | 函数调用成功。  |
 
 ## <a name="remarks"></a>备注
 
-此函数包装对的调用[IWbemClassObject::GetPropertyHandle](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemobjectaccess-getpropertyhandle)方法。
+此函数包装对[IWbemClassObject:: GetPropertyHandle](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemobjectaccess-getpropertyhandle)方法的调用。
 
-可以使用此句柄来标识属性，使用时[IWbemObjectAccess](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectaccess)方法来读取或写入属性值。
+使用[IWbemObjectAccess](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectaccess)方法读取或写入属性值时, 可以使用此句柄来确定属性。
 
-句柄可以检索所有数据类型的属性以外`CIM_OBJECT`和`CIM_ARRAY`。 返回一个类的所有实例句柄的工作。
+对于除`CIM_OBJECT`和`CIM_ARRAY`之外的所有数据类型的属性, 可以检索句柄。 返回的句柄在类的所有实例中工作。
 
 ## <a name="requirements"></a>要求
 
-**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。
+**适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。
 
 **标头：** WMINet_Utils.idl
 
-**.NET Framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+**.NET Framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
 ## <a name="see-also"></a>请参阅
 
-- [WMI 和性能计数器 （非托管 API 参考）](index.md)
+- [WMI 和性能计数器 (非托管 API 参考)](index.md)

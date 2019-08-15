@@ -1,6 +1,6 @@
 ---
-title: GetCurrentApartmentType 函数 （非托管 API 参考）
-description: GetCurrentApartmentType 函数检索在其中执行调用方的单元的类型。
+title: GetCurrentApartmentType 函数 (非托管 API 参考)
+description: GetCurrentApartmentType 函数检索要在其中执行调用方的单元的类型。
 ms.date: 11/06/2017
 api_name:
 - GetCurrentApartmentType
@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 76c852ac81126895ea3a2e1b40473722c8445201
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 68eb4ba653098d847022da45e610cb4fa5496a8c
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746553"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69037964"
 ---
 # <a name="getcurrentapartmenttype-function"></a>GetCurrentApartmentType 函数
 检索调用方执行操作所在的单元类型。   
@@ -41,27 +41,27 @@ HRESULT GetCurrentApartmentType (
 ## <a name="parameters"></a>参数
 
 `vFunc`  
-[in]此参数是未使用。
+中此参数未使用。
 
 `ptr`  
-[in]一个指向[IComThreadingInfo](/windows/desktop/api/objidlbase/nn-objidlbase-icomthreadinginfo)实例。
+中指向[IComThreadingInfo](/windows/desktop/api/objidlbase/nn-objidlbase-icomthreadinginfo)实例的指针。
 
 `aptType`  
-[out]一个指向[APTTYPE](/windows/desktop/api/objidlbase/ne-objidlbase-_apttype)枚举值，该值指示调用方的单元。
+弄指向[APTTYPE](/windows/win32/api/objidlbase/ne-objidlbase-apttype)枚举值的指针, 该枚举值指示调用方的单元。
 
 ## <a name="return-value"></a>返回值
 
 |返回的常量  |值  |Description  |
 |---------|---------|---------|
-| `S_OK` | 0 | 已成功完成该函数。 |
-| `E_FAIL` | 0x80000008 | 调用方不在一个单元执行。 |
+| `S_OK` | 0 | 函数已成功完成。 |
+| `E_FAIL` | 0x80000008 | 调用方不在单元中执行。 |
   
 ## <a name="remarks"></a>备注
 
-此函数包装对的调用[IComThreadingInfo::GetCurrentApartmentType](/windows/desktop/api/objidlbase/nf-objidlbase-icomthreadinginfo-getcurrentapartmenttype)方法。
+此函数包装对[IComThreadingInfo:: GetCurrentApartmentType](/windows/desktop/api/objidlbase/nf-objidlbase-icomthreadinginfo-getcurrentapartmenttype)方法的调用。
 
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** WMINet_Utils.idl  
   
@@ -69,4 +69,4 @@ HRESULT GetCurrentApartmentType (
   
 ## <a name="see-also"></a>请参阅
 
-- [WMI 和性能计数器 （非托管 API 参考）](index.md)
+- [WMI 和性能计数器 (非托管 API 参考)](index.md)

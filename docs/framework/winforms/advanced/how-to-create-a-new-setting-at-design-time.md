@@ -5,34 +5,39 @@ helpviewer_keywords:
 - application settings [Windows Forms], design time
 - application settings [Windows Forms], creating
 ms.assetid: c5d60a66-6507-462f-a81f-e3bc0a804e16
-ms.openlocfilehash: e371c60e3fb674e4243cec008e1098172725d4cc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 35a7cd8cc1daaf76a25977751ddc9ec0709e5947
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61937717"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69037909"
 ---
 # <a name="how-to-create-a-new-setting-at-design-time"></a>如何：在设计时创建新设置
-使用设置设计器，可以在设计时创建一个新的设置。 设置设计器是一个网格样式接口，可用于创建新的设置，并指定这些设置的属性。 必须指定名称、 值、 类型和新的设置的作用域。 一旦创建了设置，就可在代码中访问。  
-  
-### <a name="to-create-a-new-setting-at-design-time-in-c"></a>若要在设计时在 C 中创建新的设置\#
-  
-1. 在中**解决方案资源管理器**，展开**属性**在项目节点。  
-  
-2. 双击想要添加新设置.settings 文件。 此文件的默认名称是 Settings.settings。  
-  
-3. 在设置设计器中，设置名称、 值、 类型和您的设置的作用域。 每行代表单个设置。  
-  
-### <a name="to-create-a-new-setting-at-design-time-in-visual-basic"></a>若要在设计时在 Visual Basic 中创建一个新的设置  
-  
-1. 在中**解决方案资源管理器**，右键单击项目节点并选择**属性**。  
-  
-2. 在中**属性**页上，选择**设置**选项卡。  
-  
-3. 在设置设计器中，设置名称、 值、 类型和您的设置的作用域。 每行代表单个设置。  
-  
+
+您可以使用 Visual Studio 中的 "设置设计器" 在设计时创建新设置。 "设置设计器" 是一种网格样式的界面, 它允许您创建新设置并指定这些设置的属性。 您必须指定新设置的名称、值、类型和作用域。 创建设置后, 可在代码中对其进行访问。
+
+## <a name="create-a-new-setting-at-design-time-in-c"></a>在设计时使用 C 创建新设置\#
+
+1. 打开 Visual Studio。
+
+2. 在**解决方案资源管理器**中, 展开项目的 "**属性**" 节点。
+
+3. 双击要在其中添加新设置的 "设置" 文件。 此文件的默认名称为 "设置"。
+
+4. 在设置设计器中, 设置设置的**名称**、**值**、**类型**和**作用域**。 每一行都表示一个设置。
+
+## <a name="create-a-new-setting-at-design-time-in-visual-basic"></a>在设计时在 Visual Basic 中创建新设置
+
+1. 打开 Visual Studio。
+
+2. 在**解决方案资源管理器**中, 右键单击项目节点, 然后选择 "**属性**"。
+
+3. 在 "**属性**" 页中, 选择 "**设置**" 选项卡。
+
+4. 在设置设计器中, 设置设置的**名称**、**值**、**类型**和**作用域**。 每一行都表示一个设置。
+
 ## <a name="see-also"></a>请参阅
 
 - [使用应用程序设置和用户设置](using-application-settings-and-user-settings.md)
 - [应用程序设置概述](application-settings-overview.md)
-- [如何：在设计时的现有设置的值更改](how-to-change-the-value-of-an-existing-setting-at-design-time.md)
+- [如何：在设计时更改现有设置的值](how-to-change-the-value-of-an-existing-setting-at-design-time.md)

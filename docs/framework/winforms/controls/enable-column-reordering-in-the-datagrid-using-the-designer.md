@@ -7,29 +7,26 @@ helpviewer_keywords:
 - columns [Windows Forms], reordering
 - data [Windows Forms], displaying
 ms.assetid: d82bd69c-6799-4439-a32c-91139c5901d1
-ms.openlocfilehash: 4ccd9d0be702289386b6b817da781e255787fffe
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3864ce70f058259b597df904311bd4a48218b151
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614772"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69040349"
 ---
 # <a name="how-to-enable-column-reordering-in-the-windows-forms-datagridview-control-using-the-designer"></a>如何：使用设计器在 Windows 窗体 DataGridView 控件中启用列重新排序
-查看显示在 Windows 窗体中的数据时<xref:System.Windows.Forms.DataGridView>控件，用户有时想要比较的特定列中的值。 这可以是列广泛分散在控件中，如果不方便，尤其是当用户必须来回水平滚动才能看到他们感兴趣的所有列。 可以通过使用户能够对列重新排序比较列的值更容易的任务。 当启用列重新排序时，用户可以将列移到新位置通过拖放列标题中的使用鼠标。  
-  
- 下面的过程需要**Windows 应用程序**包含一个窗体，其中包含项目<xref:System.Windows.Forms.DataGridView>控件。 有关设置此类项目的信息，请参阅[如何：创建 Windows 窗体应用程序项目](/visualstudio/ide/step-1-create-a-windows-forms-application-project)和[如何：将控件添加到 Windows 窗体](how-to-add-controls-to-windows-forms.md)。  
-  
-> [!NOTE]
->  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[个性化设置 Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide)。  
-  
-### <a name="to-enable-column-reordering"></a>若要启用列重新排序  
-  
-- 单击智能标记标志符号 (![智能标记标志符号](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) 上的右上角<xref:System.Windows.Forms.DataGridView>控件，并选择**启用列重新排序**.  
-  
+查看 Windows 窗体<xref:System.Windows.Forms.DataGridView>控件中显示的数据时, 用户有时需要比较特定列中的值。 如果在控件中广泛地分隔列, 则这会很不方便, 尤其是在用户必须水平来回滚动以便查看他们感兴趣的所有列时。 您可以通过使您的用户能够对列进行重新排序, 使比较列值的任务变得更容易。 启用列重新排序后, 用户可以通过用鼠标拖动列标题来将列移动到新位置。
+
+ 下面的过程需要一个**Windows 应用程序**项目, 该项目具有<xref:System.Windows.Forms.DataGridView>包含控件的窗体。 有关设置此类项目的信息, 请参阅[如何:创建 Windows 窗体应用程序项目](/visualstudio/ide/step-1-create-a-windows-forms-application-project)以及[如何:将控件添加到](how-to-add-controls-to-windows-forms.md)Windows 窗体。
+
+## <a name="to-enable-column-reordering"></a>启用列重新排序
+
+- 单击<xref:System.Windows.Forms.DataGridView>控件右上角的智能标记标志符号 (![智能标记字形](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")), 然后选择 "**启用列重新排序**"。
+
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.AllowUserToOrderColumns%2A?displayProperty=nameWithType>
-- [如何：冻结使用设计器在 Windows 窗体 DataGridView 控件中的列](freeze-columns-in-the-datagrid-using-the-designer.md)
+- [如何：使用设计器冻结 Windows 窗体 DataGridView 控件中的列](freeze-columns-in-the-datagrid-using-the-designer.md)
 - [如何：创建 Windows 窗体应用程序项目](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
 - [如何：向 Windows 窗体添加控件](how-to-add-controls-to-windows-forms.md)

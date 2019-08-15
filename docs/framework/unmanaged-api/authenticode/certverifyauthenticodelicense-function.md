@@ -10,12 +10,12 @@ api_type:
 ms.assetid: 00118de7-33c6-41c4-8e1f-5d5e35e0da83
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cf7e997282351cc10dd6da1fc405366ea67c7307
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8736da6c8db876b3dadb3b906a586633be176cf6
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741095"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69038326"
 ---
 # <a name="certverifyauthenticodelicense-function"></a>CertVerifyAuthenticodeLicense 函数
 验证验证码 XrML 许可证的有效性。  
@@ -35,7 +35,7 @@ HRESULT CertVerifyAuthenticodeLicense (
  `pLicenseBlob`  
  [in] 要验证的验证码 XrML 许可证。  
   
- 请参阅[CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob)结构。  
+ 请参阅[CRYPTOAPI_BLOB](/windows/win32/api/dpapi/ns-dpapi-crypt_integer_blob)结构。  
   
  `dwFlags`  
  [in] 可选。 以下值的组合：  
@@ -53,12 +53,12 @@ HRESULT CertVerifyAuthenticodeLicense (
 - AXL_TRUST_MICROSOFT_ROOT_ONLY  
   
  `pSignerInfo`  
- [out] 接收签署人的信息。 如果许可证未进行签名，则 `dwError` 将设置为 TRUST_E_NOSIGNATURE。 它是调用方负责释放使用的资源[CertFreeAuthenticodeSignerInfo](../../../../docs/framework/unmanaged-api/authenticode/certfreeauthenticodesignerinfo-function.md)函数之后，使用。  
+ [out] 接收签署人的信息。 如果许可证未进行签名，则 `dwError` 将设置为 TRUST_E_NOSIGNATURE。 调用方负责在使用后使用[CertFreeAuthenticodeSignerInfo](../../../../docs/framework/unmanaged-api/authenticode/certfreeauthenticodesignerinfo-function.md)函数释放资源。  
   
  请参阅[AXL_AUTHENTICODE_SIGNER_INFO 结构](../../../../docs/framework/unmanaged-api/authenticode/axl-authenticode-signer-info-structure.md)。  
   
  `pTimestamperInfo`  
- [out] 接收时间戳签署人的信息（如果有）。 如果未对许可证签署时间戳，则 `dwError` 将设置为 TRUST_E_NOSIGNATURE。 它是调用方负责释放使用的资源[CertFreeAuthenticodeTimestamperInfo](../../../../docs/framework/unmanaged-api/authenticode/certfreeauthenticodetimestamperinfo-function.md)函数之后，使用。  
+ [out] 接收时间戳签署人的信息（如果有）。 如果未对许可证签署时间戳，则 `dwError` 将设置为 TRUST_E_NOSIGNATURE。 调用方负责在使用后使用[CertFreeAuthenticodeTimestamperInfo](../../../../docs/framework/unmanaged-api/authenticode/certfreeauthenticodetimestamperinfo-function.md)函数释放资源。  
   
  请参阅[AXL_AUTHENTICODE_TIMESTAMPER_INFO 结构](../../../../docs/framework/unmanaged-api/authenticode/axl-authenticode-timestamper-info-structure.md)。  
   

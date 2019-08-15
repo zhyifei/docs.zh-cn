@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 916d62a2b79a44d92611e735c6f9bbb3e01970e2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7da0986269189ba5c2dfa0f10d509bf51deb446d
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782730"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69040207"
 ---
 # <a name="gettypelibinfo-function"></a>GetTypeLibInfo 函数
-返回有关指定的类型库的信息通过检查其[TLIBATTR](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagtlibattr)结构。  
+通过检查指定类型库的[TLIBATTR](https://docs.microsoft.com/windows/win32/api/oaidl/ns-oaidl-tlibattr)结构来返回相关信息。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,34 +41,34 @@ HRESULT GetTypeLibInfo(
   
 ## <a name="parameters"></a>参数  
  `szFile`  
- [in]类型库文件名称。  
+ 中类型库的文件名。  
   
  `pTypeLibID`  
- [out]类型库的 GUID。  
+ 弄类型库的 GUID。  
   
  `pTypeLibLCID`  
- [out]类型库的本地化 ID。  
+ 弄类型库的本地化 ID。  
   
  `pTypeLibPlatform`  
- [out]一个[SYSKIND](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/ne-oaidl-tagsyskind)标识目标操作系统的类型库的标志。 常见的值为 SYS_WIN32 和 SYS_WIN64。  
+ 弄标识库的目标操作系统的[SYSKIND](https://docs.microsoft.com/windows/win32/api/oaidl/ne-oaidl-syskind)标志。 常见值为 SYS_WIN32 和 SYS_WIN64。  
   
  `pTypeLibMajorVer`  
- [out]类型库的主版本号。 例如，对于版本*x.y*，主版本号是*x*。  
+ 弄类型库的主版本号。 例如, 对于版本*x. y*, 主版本号是*x*。  
   
  `pTypeLibMinorVer`  
- [out]类型库的次版本号。 例如，对于版本*x.y*的次版本号是*y*。  
+ 弄类型库的次版本号。 例如, 对于版本*x. y*, 次版本号为*y*。  
   
 ## <a name="remarks"></a>备注  
- `GetTypeLibInfo`调用函数[Tlbexp.exe （类型库导出程序）](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md)。 此工具生成类型库描述公共语言运行时 (CLR) 程序集中的类型。  
+ 此`GetTypeLibInfo`函数由[tlbexp.exe (类型库导出程序)](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md)调用。 此工具将生成一个类型库, 该类型库描述公共语言运行时 (CLR) 程序集中的类型。  
   
- 如果任何参数为 null，该函数返回`HRESULT`的`E_POINTER`。 否则，它将返回 `S_OK`。  
+ 如果任何参数为 null, 则函数返回`HRESULT`的。 `E_POINTER` 否则，它将返回 `S_OK`。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** TlbRef.h  
+ **标头：** TlbRef  
   
- **库：** TlbRef.lib  
+ **类库**TlbRef.lib  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

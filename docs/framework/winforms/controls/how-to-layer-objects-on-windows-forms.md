@@ -12,46 +12,43 @@ helpviewer_keywords:
 - controls [Windows Forms], positioning
 - z-order
 ms.assetid: 1acc4281-2976-4715-86f4-bda68134baaf
-ms.openlocfilehash: 6000adeffcc991557e046461f93fec24e1262f54
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 80973e16445079876e01c89f20b5ecbdca602eb8
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651676"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039724"
 ---
 # <a name="how-to-layer-objects-on-windows-forms"></a>如何：对 Windows 窗体上的对象分层
-当您创建复杂的用户界面，或使用多文档界面 (MDI) 窗体时，通常想要层控件和子窗体以创建更复杂的用户界面 (UI)。 若要移动跟踪的控件和 windows 组的上下文中，可操作其 z 顺序。 *Z 顺序*是沿窗体的 z 轴 （深度） 窗体上控件的可视化分层。 在窗口顶部的 z 顺序重叠所有其他窗口之上。 所有其他窗口重叠窗口底部的 z 顺序。  
-  
+当你创建复杂的用户界面或使用多文档界面 (MDI) 窗体时, 通常需要将控件和子窗体分层以创建更复杂的用户界面 (UI)。 若要在组的上下文中移动和跟踪控件和窗口, 请处理其 z 顺序。 *Z 顺序*是窗体上的控件沿窗体的 Z 轴 (深度) 的可视化分层。 Z 顺序顶部的窗口与所有其他窗口重叠。 所有其他窗口都与 z 顺序底部的窗口重叠。
+
+## <a name="to-layer-controls-at-design-time"></a>在设计时将控件分层
+
+1. 选择要分层的控件。
+
+2. 在 "**格式**" 菜单上, 指向 "**排序**", 然后单击 "**置于顶层**" 或 "**置于底层**"。
+
+## <a name="to-layer-controls-programmatically"></a>以编程方式对控件进行分层
+
+- <xref:System.Windows.Forms.Control.BringToFront%2A>使用和<xref:System.Windows.Forms.Control.SendToBack%2A>方法来操作控件的 z 顺序。
+
+     例如, 如果<xref:System.Windows.Forms.TextBox> `txtFirstName`控件位于另一个控件之下, 并且你想要将其置于顶层, 请使用以下代码:
+
+    ```vb
+    txtFirstName.BringToFront()
+    ```
+
+    ```csharp
+    txtFirstName.BringToFront();
+    ```
+
+    ```cpp
+    txtFirstName->BringToFront();
+    ```
+
 > [!NOTE]
->  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[个性化设置 Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide)。  
-  
-### <a name="to-layer-controls-at-design-time"></a>在设计时排列控件  
-  
-1. 选择你想要层的控件。  
-  
-2. 上**格式**菜单，依次指向**顺序**，然后单击**置于顶层**或者**发送回**。  
-  
-### <a name="to-layer-controls-programmatically"></a>若要以编程方式对控件进行分层  
-  
-- 使用<xref:System.Windows.Forms.Control.BringToFront%2A>和<xref:System.Windows.Forms.Control.SendToBack%2A>操作控件的 z 顺序的方法。  
-  
-     例如，如果<xref:System.Windows.Forms.TextBox>控件， `txtFirstName`，是其下方另一个控件，并想要将其放在顶部，请使用以下代码：  
-  
-    ```vb  
-    txtFirstName.BringToFront()  
-    ```  
-  
-    ```csharp  
-    txtFirstName.BringToFront();  
-    ```  
-  
-    ```cpp  
-    txtFirstName->BringToFront();  
-    ```  
-  
-> [!NOTE]
->  Windows 窗体支持*控件包含*。 控件包含涉及到将放置多个控件内包含的控件，例如的数目<xref:System.Windows.Forms.RadioButton>控件的<xref:System.Windows.Forms.GroupBox>控件。 然后可以层中包含的控件的控件。 移动分组框移动，这些控件，因为它们包含其内部。  
-  
+>  Windows 窗体支持*控件包含*。 控件包含涉及到在包含控件中放置许多控件, 如<xref:System.Windows.Forms.RadioButton> <xref:System.Windows.Forms.GroupBox>控件中的多个控件。 然后, 可以将控件分层到包含控件中。 移动组框也将移动控件, 因为这些控件包含在其中。
+
 ## <a name="see-also"></a>请参阅
 
 - [Windows 窗体控件](index.md)

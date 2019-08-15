@@ -8,23 +8,21 @@ helpviewer_keywords:
 - base forms
 - inheritance [Windows Forms], forms
 ms.assetid: 1c3f2b29-a05c-4c6f-aa1a-4e66b94f343a
-ms.openlocfilehash: 6c87b3d29a1c55b2a7517da78a1951d94676dd68
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5239017eb63ca6360ae8811a76497256fafbd1b1
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61756814"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69040135"
 ---
-# <a name="effects-of-modifying-a-base-forms-appearance"></a>修改基窗体的外观的效果
-在应用程序开发过程中，可能经常需要更改基窗体的外观，该项目（或其他项目）中的其他窗体继承自此基窗体。  
-  
- 在设计时，如果生成了包含基窗体的项目，则对基窗体外观所做更改（属性的设置或控件的增减）将反映在继承的窗体上。 仅将更改保存到基窗体是不够的。 若要生成项目，请从“生成”菜单选择“生成”。  
-  
-> [!NOTE]
->  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[个性化设置 Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide)。  
-  
- 在运行时对基窗体所做修改不影响已实例化的继承窗体。  
-  
+# <a name="effects-of-modifying-a-base-forms-appearance"></a>修改基窗体外观的效果
+
+在应用程序开发过程中，可能经常需要更改基窗体的外观，该项目（或其他项目）中的其他窗体继承自此基窗体。
+
+在设计时，如果生成了包含基窗体的项目，则对基窗体外观所做更改（属性的设置或控件的增减）将反映在继承的窗体上。 仅将更改保存到基窗体是不够的。 若要生成项目，请从“生成”菜单选择“生成”。
+
+在运行时对基窗体所做修改不影响已实例化的继承窗体。
+
 ## <a name="see-also"></a>请参阅
 
 - [base](~/docs/csharp/language-reference/keywords/base.md)

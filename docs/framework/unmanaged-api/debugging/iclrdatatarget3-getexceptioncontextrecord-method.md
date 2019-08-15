@@ -14,15 +14,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4b43ab8cdeff3866bb51e8634f367cf86ee483d4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 07065b15f449c2bcb84df7bbdcce65d61de007ee
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61698013"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69038338"
 ---
 # <a name="iclrdatatarget3getexceptioncontextrecord-method"></a>ICLRDataTarget3::GetExceptionContextRecord 方法
-由公共语言运行时 (CLR) 数据访问服务调用，以检索与目标进程关联的上下文记录。 例如，对于转储目标，这将是等效于上下文记录通过传入`ExceptionParam`自变量[MiniDumpWriteDump](/windows/desktop/api/minidumpapiset/nf-minidumpapiset-minidumpwritedump) Windows 调试帮助库 (DbgHelp) 中的函数。  
+由公共语言运行时 (CLR) 数据访问服务调用，以检索与目标进程关联的上下文记录。 例如, 对于转储目标, 此操作等效于通过`ExceptionParam` Windows 调试帮助库 (dbghelp.dll) 中的[MiniDumpWriteDump](/windows/desktop/api/minidumpapiset/nf-minidumpapiset-minidumpwritedump)函数的参数传入的上下文记录。  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,7 +42,7 @@ HRESULT GetExceptionContextRecord(
  [out] 指向接收实际写入缓冲区的字节数的 `ULONG32` 类型的指针。  
   
  `buffer`  
- [out] 指向接收上下文记录副本的内存缓冲区的指针。 作为返回的异常记录[上下文](/windows/desktop/api/winnt/ns-winnt-_arm64_nt_context)类型。  
+ [out] 指向接收上下文记录副本的内存缓冲区的指针。 异常记录作为[上下文](/windows/win32/api/winnt/ns-winnt-arm64_nt_context)类型返回。  
   
 ## <a name="return-value"></a>返回值  
  如果成功，则返回值是 `S_OK`；如果失败，则返回失败 `HRESULT` 代码。 `HRESULT` 代码可以包括但不限于以下代码：  
@@ -54,18 +54,18 @@ HRESULT GetExceptionContextRecord(
 |`HRESULT_FROM_WIN32(ERROR_BAD_LENGTH)`|输入缓冲区大小不足以容纳上下文记录。|  
   
 ## <a name="remarks"></a>备注  
- [上下文](/windows/desktop/api/winnt/ns-winnt-_arm64_nt_context)是由 Windows SDK 提供的标头中定义的特定于平台的结构。  
+ [上下文](/windows/win32/api/winnt/ns-winnt-arm64_nt_context)是在 Windows SDK 提供的标头中定义的特定于平台的结构。  
   
  此方法由调试应用程序的编写器实现。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** ClrData.idl, ClrData.h  
+ **标头：** ClrData, ClrData  
   
- **库：** CorGuids.lib  
+ **类库**CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[v451_update](../../../../includes/net-current-v451-nov-plus.md)]  
+ **.NET Framework 版本：** [!INCLUDE[v451_update](../../../../includes/net-current-v451-nov-plus.md)]  
   
 ## <a name="see-also"></a>请参阅
 

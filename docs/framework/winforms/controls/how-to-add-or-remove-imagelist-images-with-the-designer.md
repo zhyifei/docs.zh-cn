@@ -6,40 +6,38 @@ helpviewer_keywords:
 - ImageList component [Windows Forms], removing images
 - images [Windows Forms], adding to ImageList component
 ms.assetid: 5699b244-e37c-4d20-bc35-7441e55c1e3a
-ms.openlocfilehash: 57c124f19d208192cb2d4500274f7f897948252a
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: 63692a797ad49f0adc3a0c5b0bfff1aebbc65257
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65960154"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69038267"
 ---
 # <a name="how-to-add-or-remove-imagelist-images-with-the-designer"></a>如何：使用设计器添加或移除 ImageList 图像
 
-您可以将映像添加到<xref:System.Windows.Forms.ImageList>组件多种不同的方式。 您可以通过使用与关联的智能标记非常快速地添加图像<xref:System.Windows.Forms.ImageList>，或如果您在上设置多个其他属性<xref:System.Windows.Forms.ImageList>，可能会发现更方便地添加具有属性窗口的图像。 此外可以通过使用代码来添加映像。 有关如何通过代码添加图像的详细信息，请参阅[如何：添加或删除图像与 Windows 窗体 ImageList 组件](how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)。 通常填充<xref:System.Windows.Forms.ImageList>映像之前它是与控件相关联，但这不是必需组件。
+可以通过多种不同方式向<xref:System.Windows.Forms.ImageList>组件添加图像。 你可以通过使用与<xref:System.Windows.Forms.ImageList>关联的智能标记来非常快速地添加图像, 或者<xref:System.Windows.Forms.ImageList>, 如果你在上设置多个其他属性, 则可以更方便地使用属性窗口添加图像。 你还可以通过使用代码来添加映像。 有关如何添加包含代码的图像的详细信息, 请[参阅如何:添加或删除包含 Windows 窗体 ImageList 组件](how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)的映像。 通常, 在<xref:System.Windows.Forms.ImageList>组件与控件关联之前, 使用图像填充组件, 但这不是必需的。
 
-> [!NOTE]
-> 显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[个性化设置 Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide)。
 
-### <a name="to-add-or-remove-images-by-using-the-properties-window"></a>若要添加或删除映像，通过使用属性窗口
+### <a name="to-add-or-remove-images-by-using-the-properties-window"></a>使用属性窗口添加或删除映像
 
-1. 选择<xref:System.Windows.Forms.ImageList>组件，或添加到窗体。
+1. <xref:System.Windows.Forms.ImageList>选择组件, 或将其添加到窗体。
 
-2. 在属性窗口中，单击省略号按钮 (![的 Visual Studio 属性窗口中的省略号按钮 （...）](./media/visual-studio-ellipsis-button.png)) 旁边<xref:System.Windows.Forms.ImageList.Images%2A>属性。
+2. 在属性窗口中, 单击![ <xref:System.Windows.Forms.ImageList.Images%2A>属性旁边的省略号按钮 (Visual](./media/visual-studio-ellipsis-button.png)Studio 的属性窗口中的省略号按钮 (...)。
 
-3. 在中**图像集合编辑器**，单击**添加**或**删除**来添加或从列表中删除映像。
+3. 在**图像集合编辑器**中, 单击 "**添加**" 或 "**删除**" 以添加或删除列表中的映像。
 
-### <a name="to-add-or-remove-images-using-the-smart-tag"></a>若要添加或删除使用智能标记的图像
+### <a name="to-add-or-remove-images-using-the-smart-tag"></a>使用智能标记添加或删除图像
 
-1. 选择<xref:System.Windows.Forms.ImageList>组件，或添加到窗体。
+1. <xref:System.Windows.Forms.ImageList>选择组件, 或将其添加到窗体。
 
-2. 单击智能标记标志符号 (![智能标记标志符号](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph"))
+2. 单击智能标记字形 (![智能标记字形](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph"))
 
-3. 在中**ImageList 任务**对话框中，选择**选择映像**。
+3. 在 " **ImageList 任务**" 对话框中, 选择 "**选择图像**"。
 
-4. 在中**图像集合编辑器**单击**添加**或**删除**来添加或从列表中删除映像。
+4. 在**图像集合编辑器**中, 单击 "**添加**" 或 "**删除**" 以添加或删除列表中的映像。
 
 ## <a name="see-also"></a>请参阅
 
 - [图像、位图和图元文件](../advanced/images-bitmaps-and-metafiles.md)
-- [演练：执行常见任务使用智能标记在 Windows 窗体控件](performing-common-tasks-using-smart-tags-on-wf-controls.md)
+- [演练：使用 Windows 窗体控件上的智能标记执行常见任务](performing-common-tasks-using-smart-tags-on-wf-controls.md)
 - [ImageList 组件](imagelist-component-windows-forms.md)

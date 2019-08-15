@@ -5,31 +5,28 @@ helpviewer_keywords:
 - shortcut menus [Windows Forms], attaching to TreeNodes
 - TreeNode [Windows Forms], attaching a shortcut menu using Designer
 ms.assetid: 8e45e184-1313-4f8f-90ff-2cd5789b2268
-ms.openlocfilehash: 9be633d14429bc2ceda1f0db2ff09252d55d5dd5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: eb3240d35309e03aa8ce949b9c5000f8581d2c2f
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59337443"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69040444"
 ---
 # <a name="how-to-attach-a-shortcut-menu-to-a-treenode-using-the-designer"></a>如何：使用设计器将快捷菜单附加到 TreeNode
-Windows 窗体<xref:System.Windows.Forms.TreeView>控件显示的节点，类似于文件和 Windows 操作系统中的 Windows 资源管理器功能的左窗格中显示的文件夹层次结构。 通过设置<xref:System.Windows.Forms.Control.ContextMenuStrip%2A>属性，您可以区分上下文的操作向用户提供他们右键单击时<xref:System.Windows.Forms.TreeView>控件。 通过将相关联<xref:System.Windows.Forms.ContextMenuStrip>组件与单个<xref:System.Windows.Forms.TreeNode>项，可以添加到快捷菜单上功能的自定义的级别应用<xref:System.Windows.Forms.TreeView>控件。  
-  
-> [!NOTE]
->  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[个性化设置 Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide)。  
-  
-### <a name="to-associate-a-shortcut-menu-with-a-treenode-at-design-time"></a>要在设计时与树节点关联的快捷菜单  
-  
-1. 添加<xref:System.Windows.Forms.TreeView>控制对窗体中，以及如何将节点<xref:System.Windows.Forms.TreeView>根据需要。 有关详细信息，请参阅[如何：添加和删除节点与 Windows 窗体 TreeView 控件](how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control.md)。  
-  
-2. 添加<xref:System.Windows.Forms.ContextMenuStrip>组件向窗体，然后将菜单项添加到表示你想要在运行时提供节点级别操作的快捷菜单。 有关详细信息，请参阅[如何：向 ContextMenuStrip 添加菜单项](how-to-add-menu-items-to-a-contextmenustrip.md)。  
-  
-3. 重新打开**TreeNodeEditor**对话框<xref:System.Windows.Forms.TreeView>控件中，选择节点以编辑，并设置其<xref:System.Windows.Forms.ContextMenuStrip>属性设置为您添加的快捷菜单。  
-  
-4. 当设置此属性时，右键单击节点时，将显示的快捷菜单。  
-  
-     此外，你将想要编写代码来处理<xref:System.Windows.Forms.ToolStripItem.Click>这些菜单项的事件。  
-  
+Windows 窗体<xref:System.Windows.Forms.TreeView>控件显示节点的层次结构, 这类似于 windows 操作系统中的 windows 资源管理器功能的左窗格中显示的文件和文件夹。 通过设置<xref:System.Windows.Forms.Control.ContextMenuStrip%2A>属性, 您可以在用户右键<xref:System.Windows.Forms.TreeView>单击控件时为用户提供上下文相关的操作。 通过将<xref:System.Windows.Forms.ContextMenuStrip>组件与各个<xref:System.Windows.Forms.TreeNode>项关联, 你可以向<xref:System.Windows.Forms.TreeView>控件添加自定义的快捷菜单功能级别。
+
+## <a name="to-associate-a-shortcut-menu-with-a-treenode-at-design-time"></a>在设计时将快捷菜单与 TreeNode 关联
+
+1. 向窗<xref:System.Windows.Forms.TreeView>体添加一个控件, 并<xref:System.Windows.Forms.TreeView>根据需要将节点添加到。 有关详细信息，请参阅[如何：在 Windows 窗体 TreeView 控件](how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control.md)中添加和删除节点。
+
+2. <xref:System.Windows.Forms.ContextMenuStrip>将组件添加到窗体, 然后将菜单项添加到表示要在运行时提供的节点级操作的快捷菜单。 有关详细信息，请参阅[如何：向 ContextMenuStrip](how-to-add-menu-items-to-a-contextmenustrip.md)添加菜单项。
+
+3. 重新打开该<xref:System.Windows.Forms.TreeView>控件的 "TreeNodeEditor" 对话框, 选择要编辑的节点, 并将<xref:System.Windows.Forms.ContextMenuStrip>其属性设置为添加的快捷菜单。
+
+4. 如果设置此属性, 则当您右键单击该节点时, 将显示快捷菜单。
+
+     此外, 您还需要编写代码来处理这些菜单<xref:System.Windows.Forms.ToolStripItem.Click>项的事件。
+
 ## <a name="see-also"></a>请参阅
 
 - [TreeView 控件](treeview-control-windows-forms.md)

@@ -6,34 +6,31 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms], hiding menu items in designer
 - menu items [Windows Forms], hiding
 ms.assetid: 8f1b057e-3d8a-4f11-88df-935f7b29a836
-ms.openlocfilehash: 31c597a0e2cbf41484f19c8d4179823e9fb929ba
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 968d34a5f79d469ef62beaa8ac96742d73391b22
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61941201"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039749"
 ---
 # <a name="how-to-hide-toolstripmenuitems-using-the-designer"></a>如何：使用设计器隐藏 ToolStripMenuItem
-隐藏菜单项是一种方法来控制你的应用程序的用户界面 (UI) 和限制用户命令。 通常情况下，想要在其上的菜单项都不可用时隐藏整个菜单。 这提供了用户很少会分心。 此外，您可能希望能够同时隐藏和禁用的菜单或菜单项，如仅隐藏不会阻止用户使用的快捷键访问菜单命令。 禁用菜单项的详细信息，请参阅[如何：使用设计器禁用 Toolstripmenuitem](how-to-disable-toolstripmenuitems-using-the-designer.md)。  
-  
+通过隐藏菜单项, 可以控制应用程序的用户界面 (UI) 和限制用户命令。 通常, 当菜单上的所有菜单项均不可用时, 您需要隐藏整个菜单。 这为用户提供的干扰更少。 此外, 您可能还希望隐藏和禁用菜单项或菜单项, 因为仅隐藏不会阻止用户使用快捷键访问菜单命令。 有关禁用菜单项的详细信息, 请[参阅如何:使用设计器](how-to-disable-toolstripmenuitems-using-the-designer.md)禁用 toolstripmenuitem。
+
+## <a name="to-hide-a-top-level-menu-and-its-submenu-items"></a>隐藏顶级菜单及其子菜单项
+
+1. 选择顶级菜单项, 并将其<xref:System.Windows.Forms.ToolStripItem.Visible%2A>或<xref:System.Windows.Forms.ToolStripItem.Available%2A>属性设置为`false`。
+
+     隐藏顶级菜单项时, 该菜单内的所有菜单项也将隐藏。 如果在 "设置<xref:System.Windows.Forms.MenuStrip> <xref:System.Windows.Forms.ToolStripItem.Visible%2A>为`false`" 后单击 "除" 之外的任何位置, 则整个顶级菜单项及其子菜单项将从窗体中消失, 从而显示操作的运行时效果。 若要在设计时显示隐藏的顶级菜单项, 请在<xref:System.Windows.Forms.MenuStrip> **组件栏**、"**文档大纲**" 中或在属性网格顶部单击。
+
 > [!NOTE]
->  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[个性化设置 Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide)。  
-  
-### <a name="to-hide-a-top-level-menu-and-its-submenu-items"></a>若要隐藏顶级菜单及其子菜单项  
-  
-1. 选择的顶级菜单项并设置其<xref:System.Windows.Forms.ToolStripItem.Visible%2A>或<xref:System.Windows.Forms.ToolStripItem.Available%2A>属性设置为`false`。  
-  
-     在隐藏的顶级菜单项时，也会隐藏该菜单中的所有菜单项。 如果单击以外某处上<xref:System.Windows.Forms.MenuStrip>设置之后<xref:System.Windows.Forms.ToolStripItem.Visible%2A>到`false`，将整个顶级菜单项和及其子菜单项从窗体中，从而向您展示你的操作的运行效果中消失。 若要在设计时显示隐藏的顶级菜单项，请单击<xref:System.Windows.Forms.MenuStrip>中**组件栏**，在**文档大纲**，或在属性网格的顶部。  
-  
-> [!NOTE]
->  很少会隐藏整个菜单合并方案中的多文档界面 (MDI) 子菜单除外。  
-  
-### <a name="to-hide-a-submenu-item"></a>若要隐藏子菜单项  
-  
-1. 选择的子菜单项并设置其<xref:System.Windows.Forms.ToolStripItem.Visible%2A>属性设置为`false`。  
-  
-     在隐藏子菜单项时，它仍显示在设计时窗体上，以便可以轻松地选择它来进一步的工作。 它将实际被隐藏在运行时。  
-  
+>  除了合并方案中的多文档界面 (MDI) 子菜单以外, 您几乎不会隐藏整个菜单。
+
+## <a name="to-hide-a-submenu-item"></a>隐藏子菜单项
+
+1. 选择子菜单项, 并将<xref:System.Windows.Forms.ToolStripItem.Visible%2A>其属性`false`设置为。
+
+     隐藏子菜单项时, 它会在设计时在窗体上保持可见, 以便您可以轻松地选择它来进行进一步的工作。 它实际上会在运行时隐藏。
+
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Windows.Forms.ToolStripItem.Visible%2A>

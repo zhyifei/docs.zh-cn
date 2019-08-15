@@ -6,23 +6,24 @@ helpviewer_keywords:
 - split windows [Windows Forms], horizontal
 - windows [Windows Forms], splitting horizontally
 ms.assetid: 3872a176-891f-4c70-9779-b2ce85b0b102
-ms.openlocfilehash: a0dd42f62034ab78407b61e99e2c8940b1b511af
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c86d0417f03b977a4e468aa1251ebed2216c0975
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61912803"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039617"
 ---
 # <a name="how-to-split-a-window-horizontally-using-the-designer"></a>如何：使用设计器水平拆分窗口
-此示例使拆分器将划分<xref:System.Windows.Forms.SplitContainer>控制水平。  
-  
+
+此示例将使<xref:System.Windows.Forms.SplitContainer>控件为水平分隔的拆分器。
+
 > [!NOTE]
->  <xref:System.Windows.Forms.SplitContainer.Orientation%2A>属性的<xref:System.Windows.Forms.SplitContainer>控件将确定拆分器，而不是控件本身的方向。 显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[个性化设置 Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide)。  
-  
-### <a name="to-split-a-window-horizontally"></a>若要水平拆分窗口  
-  
-1. 在中**属性**窗口中，将<xref:System.Windows.Forms.SplitContainer.Orientation%2A>的属性<xref:System.Windows.Forms.SplitContainer>控制对<xref:System.Windows.Forms.Orientation.Horizontal>。  
-  
+> <xref:System.Windows.Forms.SplitContainer>控件<xref:System.Windows.Forms.SplitContainer.Orientation%2A>的属性决定拆分器的方向, 而不是控件本身的方向。
+
+## <a name="to-split-a-window-horizontally"></a>水平拆分窗口
+
+在 "**属性**" 窗口中, <xref:System.Windows.Forms.SplitContainer.Orientation%2A>将<xref:System.Windows.Forms.SplitContainer>控件的属性设置<xref:System.Windows.Forms.Orientation.Horizontal>为。
+
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Windows.Forms.SplitContainer>
