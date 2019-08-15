@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 ms.assetid: 8c0d01d5-67e5-4522-9ccf-c8f3a78cb4fd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6629af393eeadb68292f8f2360ecb60c09a0cd03
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 21a24b3ae3563db09f1f7e9229f388abf8de654c
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764610"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69038313"
 ---
-# <a name="icordebugmutabledatatargetsetthreadcontext-method"></a><span data-ttu-id="e6387-102">ICorDebugMutableDataTarget::SetThreadContext 方法</span><span class="sxs-lookup"><span data-stu-id="e6387-102">ICorDebugMutableDataTarget::SetThreadContext Method</span></span>
-<span data-ttu-id="e6387-103">设置某个线程的上下文（寄存器值）。</span><span class="sxs-lookup"><span data-stu-id="e6387-103">Sets the context (register values) for a thread.</span></span>  
+# <a name="icordebugmutabledatatargetsetthreadcontext-method"></a><span data-ttu-id="c75b8-102">ICorDebugMutableDataTarget::SetThreadContext 方法</span><span class="sxs-lookup"><span data-stu-id="c75b8-102">ICorDebugMutableDataTarget::SetThreadContext Method</span></span>
+<span data-ttu-id="c75b8-103">设置某个线程的上下文（寄存器值）。</span><span class="sxs-lookup"><span data-stu-id="c75b8-103">Sets the context (register values) for a thread.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e6387-104">语法</span><span class="sxs-lookup"><span data-stu-id="e6387-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c75b8-104">语法</span><span class="sxs-lookup"><span data-stu-id="c75b8-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT SetThreadContext(  
@@ -22,29 +22,29 @@ HRESULT SetThreadContext(
    [in] ULONG32 contextSize,   [in, size_is(contextSize)] const BYTE * pContext);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="e6387-105">参数</span><span class="sxs-lookup"><span data-stu-id="e6387-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c75b8-105">参数</span><span class="sxs-lookup"><span data-stu-id="c75b8-105">Parameters</span></span>  
  `dwThreadID`  
- <span data-ttu-id="e6387-106">[in] 由操作系统定义的线程标识符。</span><span class="sxs-lookup"><span data-stu-id="e6387-106">[in] The operating system-defined thread identifier.</span></span>  
+ <span data-ttu-id="c75b8-106">[in] 由操作系统定义的线程标识符。</span><span class="sxs-lookup"><span data-stu-id="c75b8-106">[in] The operating system-defined thread identifier.</span></span>  
   
  `contextSize`  
- <span data-ttu-id="e6387-107">[in] 要写入的 `pContext` 缓冲区的大小。</span><span class="sxs-lookup"><span data-stu-id="e6387-107">[in] The size of the `pContext` buffer to be written.</span></span>  
+ <span data-ttu-id="c75b8-107">[in] 要写入的 `pContext` 缓冲区的大小。</span><span class="sxs-lookup"><span data-stu-id="c75b8-107">[in] The size of the `pContext` buffer to be written.</span></span>  
   
  `pContext`  
- <span data-ttu-id="e6387-108">[in] 指向要写入的字节的指针。</span><span class="sxs-lookup"><span data-stu-id="e6387-108">[in] A pointer to the bytes to be written.</span></span>  
+ <span data-ttu-id="c75b8-108">[in] 指向要写入的字节的指针。</span><span class="sxs-lookup"><span data-stu-id="c75b8-108">[in] A pointer to the bytes to be written.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="e6387-109">备注</span><span class="sxs-lookup"><span data-stu-id="e6387-109">Remarks</span></span>  
- <span data-ttu-id="e6387-110">`SetThreadContext` 方法将更新由操作系统定义的 `dwThreadID` 参数指定的当前线程上下文。</span><span class="sxs-lookup"><span data-stu-id="e6387-110">The `SetThreadContext` method updates the current context for the thread specified by the operating system-defined `dwThreadID` argument.</span></span> <span data-ttu-id="e6387-111">上下文记录的格式由所指示的平台[icordebugdatatarget:: Getplatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="e6387-111">The format of the context record is determined by the platform indicated by the [ICorDebugDataTarget::GetPlatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md) method.</span></span> <span data-ttu-id="e6387-112">这是 Windows，[上下文](/windows/desktop/api/winnt/ns-winnt-_arm64_nt_context)结构。</span><span class="sxs-lookup"><span data-stu-id="e6387-112">On Windows, this is a [CONTEXT](/windows/desktop/api/winnt/ns-winnt-_arm64_nt_context) structure.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c75b8-109">备注</span><span class="sxs-lookup"><span data-stu-id="c75b8-109">Remarks</span></span>  
+ <span data-ttu-id="c75b8-110">`SetThreadContext` 方法将更新由操作系统定义的 `dwThreadID` 参数指定的当前线程上下文。</span><span class="sxs-lookup"><span data-stu-id="c75b8-110">The `SetThreadContext` method updates the current context for the thread specified by the operating system-defined `dwThreadID` argument.</span></span> <span data-ttu-id="c75b8-111">上下文记录的格式由[ICorDebugDataTarget:: GetPlatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md)方法指示的平台决定。</span><span class="sxs-lookup"><span data-stu-id="c75b8-111">The format of the context record is determined by the platform indicated by the [ICorDebugDataTarget::GetPlatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md) method.</span></span> <span data-ttu-id="c75b8-112">在 Windows 上, 这是一个[上下文](/windows/win32/api/winnt/ns-winnt-arm64_nt_context)结构。</span><span class="sxs-lookup"><span data-stu-id="c75b8-112">On Windows, this is a [CONTEXT](/windows/win32/api/winnt/ns-winnt-arm64_nt_context) structure.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e6387-113">要求</span><span class="sxs-lookup"><span data-stu-id="e6387-113">Requirements</span></span>  
- <span data-ttu-id="e6387-114">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="e6387-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c75b8-113">要求</span><span class="sxs-lookup"><span data-stu-id="c75b8-113">Requirements</span></span>  
+ <span data-ttu-id="c75b8-114">**适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="c75b8-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e6387-115">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="e6387-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="c75b8-115">**标头：** Cordebug.idl, Cordebug.idl</span><span class="sxs-lookup"><span data-stu-id="c75b8-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="e6387-116">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e6387-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="c75b8-116">**类库**CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c75b8-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="e6387-117">**.NET Framework 版本：** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e6387-117">**.NET Framework Versions:** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]</span></span>  
+ <span data-ttu-id="c75b8-117">**.NET Framework 版本：** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c75b8-117">**.NET Framework Versions:** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e6387-118">请参阅</span><span class="sxs-lookup"><span data-stu-id="e6387-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c75b8-118">请参阅</span><span class="sxs-lookup"><span data-stu-id="c75b8-118">See also</span></span>
 
-- [<span data-ttu-id="e6387-119">ICorDebugMutableDataTarget 接口</span><span class="sxs-lookup"><span data-stu-id="e6387-119">ICorDebugMutableDataTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmutabledatatarget-interface.md)
-- [<span data-ttu-id="e6387-120">调试接口</span><span class="sxs-lookup"><span data-stu-id="e6387-120">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="c75b8-119">ICorDebugMutableDataTarget 接口</span><span class="sxs-lookup"><span data-stu-id="c75b8-119">ICorDebugMutableDataTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmutabledatatarget-interface.md)
+- [<span data-ttu-id="c75b8-120">调试接口</span><span class="sxs-lookup"><span data-stu-id="c75b8-120">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
