@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - fonts [WPF]
 ms.assetid: 6c766a95-ad03-475e-a36f-2243e9495941
-ms.openlocfilehash: cab39cdb13b92c0bfcb697de4bb8c05feae4c146
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 5bcd2ccd99940a3ce22f0894a1706eccf8627158
+ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68972398"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69545220"
 ---
-# <a name="fonts-wpf"></a><span data-ttu-id="f917a-102">字体 (WPF)</span><span class="sxs-lookup"><span data-stu-id="f917a-102">Fonts (WPF)</span></span>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="f917a-103">包括对使用[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]字体的丰富文本显示的支持。</span><span class="sxs-lookup"><span data-stu-id="f917a-103">includes support for rich presentation of text using [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fonts.</span></span> <span data-ttu-id="f917a-104">Windows SDK 附带一组[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]字体示例。</span><span class="sxs-lookup"><span data-stu-id="f917a-104">A sample pack of [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fonts is included with the Windows SDK.</span></span>  
+# <a name="fonts-wpf"></a><span data-ttu-id="8906d-102">字体 (WPF)</span><span class="sxs-lookup"><span data-stu-id="8906d-102">Fonts (WPF)</span></span>
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="8906d-103">支持使用 OpenType 字体对丰富的文本表示形式。</span><span class="sxs-lookup"><span data-stu-id="8906d-103">includes support for rich presentation of text using OpenType fonts.</span></span> <span data-ttu-id="8906d-104">Windows SDK 附带了一组 OpenType 字体示例。</span><span class="sxs-lookup"><span data-stu-id="8906d-104">A sample pack of OpenType fonts is included with the Windows SDK.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="f917a-105">本节内容</span><span class="sxs-lookup"><span data-stu-id="f917a-105">In This Section</span></span>  
- [<span data-ttu-id="f917a-106">OpenType 字体功能</span><span class="sxs-lookup"><span data-stu-id="f917a-106">OpenType Font Features</span></span>](opentype-font-features.md)  
- [<span data-ttu-id="f917a-107">将字体与应用程序一起打包</span><span class="sxs-lookup"><span data-stu-id="f917a-107">Packaging Fonts with Applications</span></span>](packaging-fonts-with-applications.md)  
- [<span data-ttu-id="f917a-108">示例 OpenType 字体包</span><span class="sxs-lookup"><span data-stu-id="f917a-108">Sample OpenType Font Pack</span></span>](sample-opentype-font-pack.md)  
- [<span data-ttu-id="f917a-109">帮助主题</span><span class="sxs-lookup"><span data-stu-id="f917a-109">How-to Topics</span></span>](fonts-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="8906d-105">本节内容</span><span class="sxs-lookup"><span data-stu-id="8906d-105">In This Section</span></span>  
+ [<span data-ttu-id="8906d-106">OpenType 字体功能</span><span class="sxs-lookup"><span data-stu-id="8906d-106">OpenType Font Features</span></span>](opentype-font-features.md)  
+ [<span data-ttu-id="8906d-107">将字体与应用程序一起打包</span><span class="sxs-lookup"><span data-stu-id="8906d-107">Packaging Fonts with Applications</span></span>](packaging-fonts-with-applications.md)  
+ [<span data-ttu-id="8906d-108">示例 OpenType 字体包</span><span class="sxs-lookup"><span data-stu-id="8906d-108">Sample OpenType Font Pack</span></span>](sample-opentype-font-pack.md)  
+ [<span data-ttu-id="8906d-109">帮助主题</span><span class="sxs-lookup"><span data-stu-id="8906d-109">How-to Topics</span></span>](fonts-how-to-topics.md)  
   
-## <a name="see-also"></a><span data-ttu-id="f917a-110">请参阅</span><span class="sxs-lookup"><span data-stu-id="f917a-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8906d-110">请参阅</span><span class="sxs-lookup"><span data-stu-id="8906d-110">See also</span></span>
 
 - <xref:System.Windows.FontStyle>
 - <xref:System.Windows.SystemFonts>
-- [<span data-ttu-id="f917a-111">WPF 中的文档</span><span class="sxs-lookup"><span data-stu-id="f917a-111">Documents in WPF</span></span>](documents-in-wpf.md)
-- [<span data-ttu-id="f917a-112">WPF 中的版式</span><span class="sxs-lookup"><span data-stu-id="f917a-112">Typography in WPF</span></span>](typography-in-wpf.md)
+- [<span data-ttu-id="8906d-111">WPF 中的文档</span><span class="sxs-lookup"><span data-stu-id="8906d-111">Documents in WPF</span></span>](documents-in-wpf.md)
+- [<span data-ttu-id="8906d-112">WPF 中的版式</span><span class="sxs-lookup"><span data-stu-id="8906d-112">Typography in WPF</span></span>](typography-in-wpf.md)
