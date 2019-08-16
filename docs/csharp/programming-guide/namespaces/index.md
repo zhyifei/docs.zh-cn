@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, namespaces
 - namespaces [C#]
 ms.assetid: b1c4ab46-3fad-4ffa-9deb-dd50a2d8c65a
-ms.openlocfilehash: 79b7057b1f6a9cdba2215124160b28efb9a1c0be
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: cf5a7f239cf7d3cd3a6e39f31d16adb830646afc
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629516"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039493"
 ---
 # <a name="namespaces-c-programming-guide"></a>命名空间（C# 编程指南）
 
@@ -44,13 +44,12 @@ ms.locfileid: "68629516"
 
 ## <a name="c-language-specification"></a>C# 语言规范
 
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/introduction.md)中的[命名空间](~/_csharplang/spec/namespaces.md)部分。
   
 ## <a name="see-also"></a>请参阅
 
 - [C# 编程指南](../index.md)
 - [使用命名空间](using-namespaces.md)
-- [如何：使用全局命名空间别名](how-to-use-the-global-namespace-alias.md)
 - [如何：使用 My 命名空间](how-to-use-the-my-namespace.md)
 - [标识符名称](../inside-a-program/identifier-names.md)
 - [using 指令](../../language-reference/keywords/using-directive.md)
