@@ -15,12 +15,12 @@ helpviewer_keywords:
 - XPSDrv-based printers
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
-ms.openlocfilehash: 4f8fd92105bd5ae09e0c1daa2e0db48b74cde77c
-ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
+ms.openlocfilehash: be82b64581ee178b463950d4b8cdae1f98949161
+ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68672044"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69545304"
 ---
 # <a name="printing-overview"></a>打印概述
 使用 Microsoft .NET 框架, 使用 Windows Presentation Foundation (WPF) 的应用程序开发人员具有丰富的一组新的打印和打印系统管理 Api。 在 [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] 中，还为创建 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 应用程序的开发人员和使用非托管代码的开发人员提供了这些打印系统增强功能中的某些功能。 此新功能的核心是新的 [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] 文件格式和 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 打印路径。  
@@ -29,7 +29,7 @@ ms.locfileid: "68672044"
   
 <a name="introduction_to_XPS"></a>   
 ## <a name="about-xps"></a>关于 XPS  
- XPS 是一种电子文档格式, 是一种假脱机文件格式和页面描述语言。 此格式是开放文档格式，它使用 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]、[!INCLUDE[TLA#tla_opc](../../../../includes/tlasharptla-opc-md.md)] 及其他行业标准来创建跨平台的文档。 XPS 简化了创建、共享、打印、查看和存档数字文档的过程。 有关 XPS 的其他信息, 请参阅[Xps 文档](/windows/desktop/printdocs/documents)。  
+ XPS 是一种电子文档格式, 是一种假脱机文件格式和页面描述语言。 这是一种打开的文档格式[!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)], 它使用、开放打包约定 (OPC) 和其他行业标准来创建跨平台文档。 XPS 简化了创建、共享、打印、查看和存档数字文档的过程。 有关 XPS 的其他信息, 请参阅[Xps 文档](/windows/desktop/printdocs/documents)。  
   
  以[编程方式打印 xps 文件](how-to-programmatically-print-xps-files.md)中演示了[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]使用打印基于 XPS 的内容的几种方法。 在查看本主题中的内容时，参考这些示例会很有帮助。 (非托管代码开发人员应查看[MXDC_ESCAPE 函数](/windows/desktop/printdocs/mxdc-escape)的文档。 Windows 窗体开发人员必须在<xref:System.Drawing.Printing>命名空间中使用 API, 该命名空间不支持完整[!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]的打印路径, 但支持混合的 GDI 到 XPS 打印路径。 请参阅下面的**打印路径体系结构**。）  
   

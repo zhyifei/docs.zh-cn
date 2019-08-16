@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Panel control [WPF], about Panel control
 - controls [WPF], Panel
 ms.assetid: f73644af-9941-4611-8754-6d4cef03fc44
-ms.openlocfilehash: 58dc070e1642773f39f9ab2a9037ca60175b27cf
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 4f54596e1ce3ed40f3a029ea6703147a97be992f
+ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401283"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69545268"
 ---
 # <a name="panels-overview"></a>面板概述
 <xref:System.Windows.Controls.Panel>元素是控制元素 (其大小和尺寸、位置以及其子内容的排列) 的呈现的组件。 提供了许多预定义<xref:System.Windows.Controls.Panel>的元素以及构造自定义<xref:System.Windows.Controls.Panel>元素的功能。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]  
@@ -94,7 +94,7 @@ ms.locfileid: "68401283"
   
 <a name="Panels_overview_Canvas_subsection"></a>   
 ### <a name="canvas"></a>Canvas  
- 元素可根据绝对 x 和*y*坐标定位内容。  <xref:System.Windows.Controls.Canvas> 元素可以在唯一位置绘制；或者，如果元素占用了相同坐标，则这些元素在标记中显示的顺序决定它们的绘制顺序。  
+ 元素可根据绝对 x 和*y*坐标定位内容。 <xref:System.Windows.Controls.Canvas> 元素可以在唯一位置绘制；或者，如果元素占用了相同坐标，则这些元素在标记中显示的顺序决定它们的绘制顺序。  
   
  <xref:System.Windows.Controls.Canvas>提供对的最灵活的<xref:System.Windows.Controls.Panel>布局支持。 "高度" 和 "宽度" 属性用于定义画布的面积, 并为内的元素分配相对于父<xref:System.Windows.Controls.Canvas>区域的绝对坐标。 四个附加属性<xref:System.Windows.Controls.Canvas.Left%2A?displayProperty=nameWithType>: <xref:System.Windows.Controls.Canvas.Top%2A?displayProperty=nameWithType> <xref:System.Windows.Controls.Canvas.Right%2A?displayProperty=nameWithType> 、和<xref:System.Windows.Controls.Canvas.Bottom%2A?displayProperty=nameWithType>, 允许在中<xref:System.Windows.Controls.Canvas>对对象放置进行精细控制, 使开发人员能够在屏幕上精确地定位和排列元素。  
   
@@ -118,7 +118,7 @@ ms.locfileid: "68401283"
 ### <a name="dockpanel"></a>DockPanel  
  元素使用在子<xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> content 元素中设置的附加属性, 沿容器边缘放置内容。 <xref:System.Windows.Controls.DockPanel> 当<xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType>设置为<xref:System.Windows.Controls.Dock.Top> 或<xref:System.Windows.Controls.Dock.Bottom>时, 它将每个子元素的上方或下方放置。 当<xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType>设置为<xref:System.Windows.Controls.Dock.Left> 或<xref:System.Windows.Controls.Dock.Right>时, 它将子元素定位到彼此的左侧或右侧。 属性确定作为的子<xref:System.Windows.Controls.DockPanel>元素添加的最后一个元素的位置。 <xref:System.Windows.Controls.DockPanel.LastChildFill%2A>  
   
- 您可以使用<xref:System.Windows.Controls.DockPanel>来定位一组相关的控件, 例如一组按钮。 或者，可以使用它创建“平移”的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]，类似于 [!INCLUDE[TLA#tla_outlook](../../../../includes/tlasharptla-outlook-md.md)] 中的 UI。  
+ 您可以使用<xref:System.Windows.Controls.DockPanel>来定位一组相关的控件, 例如一组按钮。 或者, 您可以使用它来创建 "平移" [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], 类似于在 Microsoft Outlook 中找到的。  
   
 #### <a name="sizing-to-content"></a>按内容调整大小  
  如果未<xref:System.Windows.FrameworkElement.Height%2A>指定<xref:System.Windows.FrameworkElement.Width%2A>其和属性, <xref:System.Windows.Controls.DockPanel>则调整其内容的大小。 大小可以增大或减小以容纳其子元素的大小。 但是, 如果指定了这些属性, 但没有足够的空间用于下一个指定的子元素<xref:System.Windows.Controls.DockPanel> , 则不会显示该子元素或后续的子元素, 也不会度量后续的子元素。  
@@ -244,7 +244,7 @@ ms.locfileid: "68401283"
 ## <a name="localizationglobalization-support"></a>本地化/全球化支持  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 支持多种有助于创建可本地化的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 的功能。  
   
- 所有 panel 元素都以本机<xref:System.Windows.FrameworkElement.FlowDirection%2A>方式支持属性, 该属性可用于根据用户的区域设置或语言设置动态地重新流动内容。 有关详细信息，请参阅 <xref:System.Windows.FrameworkElement.FlowDirection%2A> 。  
+ 所有 panel 元素都以本机<xref:System.Windows.FrameworkElement.FlowDirection%2A>方式支持属性, 该属性可用于根据用户的区域设置或语言设置动态地重新流动内容。 有关详细信息，请参阅 <xref:System.Windows.FrameworkElement.FlowDirection%2A>。  
   
  属性提供了一种机制, 使应用程序开发人员能够预测本地化[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]需求。 <xref:System.Windows.Window.SizeToContent%2A> 使用此属性的<xref:System.Windows.Window> 值,父级始终动态调整大小以适应内容,并且不受人工高度或宽度限制的限制。<xref:System.Windows.SizeToContent.WidthAndHeight>  
   
