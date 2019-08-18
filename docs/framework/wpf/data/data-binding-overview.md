@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data binding [WPF], about data binding
 - conversion for data binding [WPF]
 ms.assetid: c707c95f-7811-401d-956e-2fffd019a211
-ms.openlocfilehash: e1fbb46c76fbc729818b6ff24b55c0d18f6b05df
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 44a35131273c6f191ab5da5bc1639d97bd961ff1
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400696"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567513"
 ---
 # <a name="data-binding-overview"></a>数据绑定概述
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 数据绑定为应用程序呈现数据并与数据交互提供了一种简单且一致的方式。 元素可以绑定到各种数据源中的数据, 格式为公共语言运行时 (CLR) 对象和[!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]。 <xref:System.Windows.Controls.ContentControl><xref:System.Windows.Controls.Button>等和<xref:System.Windows.Controls.ItemsControl>都具有内置功能,可实现单一数据项或数据项集合的灵活样式。<xref:System.Windows.Controls.ListBox> <xref:System.Windows.Controls.ListView> 可基于数据生成排序、筛选和分组视图。  
@@ -44,7 +44,7 @@ ms.locfileid: "68400696"
   
 - 当用户选择某一项时, <xref:System.Windows.Controls.ContentControl>将显示所选项的详细信息。 这称为*主从方案*。 [主从方案](#master_detail_scenario)部分提供了有关此类型的绑定方案的信息。  
   
-- 开始*属性的*类型为<xref:System.DateTime>, 它返回包含毫秒的时间的日期。 在此应用程序中，使用了一个自定义转换器，以便显示较短的日期字符串。 [数据转换](#data_conversion)部分提供了有关转换器的信息。  
+- 开始属性的类型为<xref:System.DateTime>, 它返回包含毫秒的时间的日期。 在此应用程序中，使用了一个自定义转换器，以便显示较短的日期字符串。 [数据转换](#data_conversion)部分提供了有关转换器的信息。  
   
  当用户单击“添加产品”按钮时，会出现以下窗体：  
   
@@ -70,7 +70,7 @@ ms.locfileid: "68400696"
   
 - 虽然图中未指定, 但应注意, 绑定源对象并不限于自定义 CLR 对象。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]数据绑定支持 CLR 对象和[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]格式的数据。 若要提供一些示例, 绑定源可以是<xref:System.Windows.UIElement>、任何列表对象、与 ADO.NET 数据或 Web 服务关联的 CLR 对象, 也可以是[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]包含数据的 XmlNode。 有关详细信息，请参阅[绑定源概述](binding-sources-overview.md)。  
   
- 在通读其他 [!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)] 主题时，请务必记住：在建立绑定时，需要将绑定目标绑定*到*绑定源。 例如, 如果<xref:System.Windows.Controls.ListBox>使用数据绑定显示某些基础[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]数据<xref:System.Windows.Controls.ListBox> , 则[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]会将绑定到数据。  
+ 当你通读其他 SDK 主题时, 请务必记住, 在建立绑定时, 将绑定目标绑定*到*绑定源。 例如, 如果<xref:System.Windows.Controls.ListBox>使用数据绑定显示某些基础[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]数据<xref:System.Windows.Controls.ListBox> , 则[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]会将绑定到数据。  
   
  若要建立绑定, 请使用<xref:System.Windows.Data.Binding>对象。 本主题的其余部分讨论与相关联的许多概念以及<xref:System.Windows.Data.Binding>对象的一些属性和用法。  
   
@@ -371,7 +371,7 @@ ms.locfileid: "68400696"
  [!code-csharp[DataBindingLab#2](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/FutureDateRule.cs#2)]
  [!code-vb[DataBindingLab#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DataBindingLab/VisualBasic/FutureDateRule.vb#2)]  
   
- *StartDateEntryForm* <xref:System.Windows.Controls.TextBox>使用此*FutureDateRule*, 如以下示例中所示:  
+ StartDateEntryForm<xref:System.Windows.Controls.TextBox>使用此*FutureDateRule*, 如以下示例中所示:  
   
  [!code-xaml[DataBindingLab#CustomValidation](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/AddProductWindow.xaml#customvalidation)]  
   

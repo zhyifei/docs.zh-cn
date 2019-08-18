@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 619ecf1c-1ca5-4d66-8934-62fe7aad78c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f046341b1b02c3552ecf8db7d38d2a0c7bc74fba
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 440debe875a0d00d240849ba4b60b548f46e2c0e
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67306373"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567046"
 ---
 # <a name="serialization-and-metadata"></a>序列化和元数据
 
@@ -39,7 +39,7 @@ ms.locfileid: "67306373"
   
 ### <a name="typeof-used-in-the-constructor"></a>构造函数中使用的 TypeOf
 
- 如果你调用了这些序列化类的构造函数，并包括C# [typeof](~/docs/csharp/language-reference/operators/type-testing-and-conversion-operators.md#typeof-operator)方法调用中的运算符**无需执行任何额外操作**。 例如，在以下对序列化类构造函数的每个调用中，`typeof` 关键字被用作了传递给构造函数的表达式的一部分。  
+ 如果调用这些序列化类的构造函数并在方法C#调用中包含[typeof](~/docs/csharp/language-reference/operators/type-testing-and-cast.md#typeof-operator)运算符,**则无需执行任何其他操作**。 例如，在以下对序列化类构造函数的每个调用中，`typeof` 关键字被用作了传递给构造函数的表达式的一部分。  
   
  [!code-csharp[ProjectN#5](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#5)]  
   
@@ -47,7 +47,7 @@ ms.locfileid: "67306373"
   
 ### <a name="typeof-used-outside-the-constructor"></a>构造函数外部使用的 TypeOf
 
- 如果你调用了这些序列化类的构造函数，并使用C# [typeof](~/docs/csharp/language-reference/operators/type-testing-and-conversion-operators.md#typeof-operator)运算符的表达式提供给构造函数的外部<xref:System.Type>参数，如以下代码，.NET Native 编译器所示无法解析该类型：  
+ 如果调用了这些序列化类的构造函数并在C#提供给构造函数的<xref:System.Type>参数的表达式之外使用[typeof](~/docs/csharp/language-reference/operators/type-testing-and-cast.md#typeof-operator)运算符 (如以下代码所示), 则 .NET Native 编译器无法解析该类型:  
   
  [!code-csharp[ProjectN#6](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#6)]  
   
@@ -57,7 +57,7 @@ ms.locfileid: "67306373"
 <Type Name="DataSet" Browse="Required Public" />  
 ```  
   
- 同样，如果您调用构造函数，如<xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Type%5B%5D%29?displayProperty=nameWithType>并提供了一系列其他<xref:System.Type>要序列化，如下面的代码中.NET Native 编译器无法解析这些类型的对象。  
+ 同样, 如果调用的构造函数 (如<xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Type%5B%5D%29?displayProperty=nameWithType>和) 提供一个要序列<xref:System.Type>化的附加对象数组, 如下面的代码所示, .NET Native 编译器无法解析这些类型。  
   
  [!code-csharp[ProjectN#7](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#7)]  
   

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - testing, UI Automation
 - UI Automation, automated testing
 ms.assetid: 3a0435c0-a791-4ad7-ba92-a4c1d1231fde
-ms.openlocfilehash: 47cba2344071ecf9b85f4b0235e02ea88deb6498
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 3fb5d1107a2dacdc4dfd2210322c312becdfd90b
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710237"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69566947"
 ---
 # <a name="using-ui-automation-for-automated-testing"></a>使用 UI 自动化进行自动化测试
 > [!NOTE]
@@ -103,7 +103,7 @@ ms.locfileid: "68710237"
 ## <a name="related-tools-and-technologies"></a>相关的工具和技术  
  有许多支持使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]进行自动测试的相关工具和技术。  
   
-- 请检查 .exe 是一个图形用户界面 (GUI) 应用程序, 该应用程序可[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]用于收集提供程序和客户端开发和调试的信息。 中包含的[!INCLUDE[TLA#tla_winfxsdk](../../../includes/tlasharptla-winfxsdk-md.md)]检查 .exe。  
+- 请检查 .exe 是一个图形用户界面 (GUI) 应用程序, 该应用程序可[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]用于收集提供程序和客户端开发和调试的信息。 Windows SDK 中包含了 "检查 .exe"。  
   
 - Msaabridge 向向[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Active Accessibility 的客户端公开信息。 桥接[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]到 Active Accessibility 的主要目的是使现有的 Active Accessibility 客户端能够与已实现[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的任何框架进行交互。  
   

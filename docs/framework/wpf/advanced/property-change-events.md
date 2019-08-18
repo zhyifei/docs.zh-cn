@@ -13,18 +13,18 @@ helpviewer_keywords:
 - identifying changed property events [WPF]
 - property triggers [WPF], definition of
 ms.assetid: 0a7989df-9674-4cc1-bc50-5d8ef5d9c055
-ms.openlocfilehash: f8d0d5e65101ffda0edaaeabdea2870287ba0f1f
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 06056b492439531aa60becbb7bca250a439bfb68
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400839"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567423"
 ---
 # <a name="property-change-events"></a>属性更改事件
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 定义几个为响应属性值的更改而引发的事件。 该属性通常是依赖项属性。 事件本身有时是路由事件, 有时是标准公共语言运行时 (CLR) 事件。 事件的定义因具体情况而异，因为有些属性更改更适于通过元素树路由，而其他属性更改则通常只与属性发生更改的对象有关。  
   
 ## <a name="identifying-a-property-change-event"></a>标识属性更改事件  
- 并非所有报告属性更改的事件都通过签名模式或命名模式显式地标识为属性更改事件。 通常，[!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)] 文档中的事件描述会指出事件是否直接与属性值更改相关，以及是否提供属性与事件之间的交叉引用。  
+ 并非所有报告属性更改的事件都通过签名模式或命名模式显式地标识为属性更改事件。 通常, SDK 文档中的事件说明指示事件是否直接绑定到属性值更改, 并在属性和事件之间提供交叉引用。  
   
 ### <a name="routedpropertychanged-events"></a>RoutedPropertyChanged 事件  
  某些事件使用显式用于属性更改事件的事件数据类型和委托。 事件数据类型为<xref:System.Windows.RoutedPropertyChangedEventArgs%601>, 委托为。 <xref:System.Windows.RoutedPropertyChangedEventHandler%601> 事件数据和委托都具有用于在定义处理程序时指定更改属性实际类型的泛型类型参数。 事件数据包含两个属性: <xref:System.Windows.RoutedPropertyChangedEventArgs%601.OldValue%2A>和<xref:System.Windows.RoutedPropertyChangedEventArgs%601.NewValue%2A>, 它们随后作为事件数据中的类型参数进行传递。  
