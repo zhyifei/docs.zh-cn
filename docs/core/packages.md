@@ -134,7 +134,7 @@ ms.locfileid: "59090493"
 
 面向 `netstandard1.3` 却使用 `NETStandard.Library` 1.6.0 版本，这一点很奇怪。 然而，这是一个有效的用例，因为元包支持更旧的 `netstandard` 版本。 可能恰好你已将 1.6.0 版的元包进行了标准化，然后将其用于所有库，而这些库可以面向各种 `netstandard` 版本。 使用此方法，只需还原 `NETStandard.Library` 1.6.0，无需加载早期版本。 
 
-反之，把 `netstandard1.6` 设为目标，却使用 1.3.0 版的 `NETStandard.Library` 也是无效的。 你不能把更高版本的框架设为目标，却使用更低版本的元包，因为更低版本的元包不会公开任何更高版本框架的资产。 元包资产的版本控制方案与描述框架的最高版本匹配。 借助于版本控制方案，`NETStandard.Library` 的第一个版本是 v1.6.0，因为它包含 `netstandard1.6` 资产。 而上例中的 v1.3.0 版本，只是为了举例方便，实际上并不存在。
+反之，把 `netstandard1.6` 设为目标，却使用 1.3.0 版的 `NETStandard.Library` 是无效的。 你不能把更高版本的框架设为目标，却使用更低版本的元包，因为更低版本的元包不会公开任何更高版本框架的资产。 元包资产的版本控制方案与描述框架的最高版本匹配。 借助于版本控制方案，`NETStandard.Library` 的第一个版本是 v1.6.0，因为它包含 `netstandard1.6` 资产。 而上例中的 v1.3.0 版本，只是为了举例方便，实际上并不存在。
 
 ### <a name="net-core-application"></a>.NET Core 应用程序
 
