@@ -67,4 +67,4 @@ ms.locfileid: "59611913"
 ```
 
 ## <a name="removing-a-dependency-from-the-project"></a>从项目中删除依赖项
-从项目文件中删除依赖项仅包含从项目文件中删除 `<PackageReference>`。
+从项目文件中删除依赖项只需从项目文件中删除 `<PackageReference>`。
