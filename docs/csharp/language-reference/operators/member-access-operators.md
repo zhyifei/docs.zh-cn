@@ -25,12 +25,12 @@ helpviewer_keywords:
 - method invocation [C#]
 - delegate invocation [C#]
 - () operator [C#]
-ms.openlocfilehash: 4f1d79497f255f52a87dce44f1b5b8709adfada7
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 763fdb442fa0037dafd51f89badd04436e24d254
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67401473"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69566828"
 ---
 # <a name="member-access-operators-c-reference"></a>成员访问运算符（C# 参考）
 
@@ -147,7 +147,7 @@ if (handler != null)
 
 此外可以使用括号来指定表达式中计算操作的顺序。 有关详细信息，请参阅[运算符](../../programming-guide/statements-expressions-operators/operators.md)一文中的[添加括号](../../programming-guide/statements-expressions-operators/operators.md#adding-parentheses)部分。 对于按优先级排序的运算符列表，请参阅 [C# 运算符](index.md)。
 
-[强制转换表达式](type-testing-and-conversion-operators.md#cast-operator-)，其执行显式类型转换，也可以使用括号。
+[强制转换表达式](type-testing-and-cast.md#cast-operator-)，其执行显式类型转换，也可以使用括号。
 
 ## <a name="operator-overloadability"></a>运算符可重载性
 
@@ -167,3 +167,4 @@ if (handler != null)
 - [C# 参考](../index.md)
 - [C# 运算符](index.md)
 - [??（空合运算符）](null-coalescing-operator.md)
+- [:: 运算符](namespace-alias-qualifier.md)

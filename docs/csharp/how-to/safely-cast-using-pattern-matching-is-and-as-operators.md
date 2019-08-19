@@ -6,16 +6,16 @@ helpviewer_keywords:
 - cast operators [C#], as and is operators
 - as operator [C#]
 - is operator [C#]
-ms.openlocfilehash: 2e81628930afaca62a8614df8ca0f458238c23d6
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 764a69869b8a5b8f76e2f58aced51761af73e50e
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67306352"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69566284"
 ---
 # <a name="how-to-safely-cast-by-using-pattern-matching-and-the-is-and-as-operators"></a>如何：使用模式匹配以及 is 和 as 运算符安全地进行强制转换
 
-由于是多态对象，基类类型的变量可以保存派生[类型](../programming-guide/types/index.md)。 要访问派生类型的实例成员，必须将值[强制转换](../programming-guide/types/casting-and-type-conversions.md)回派生类型。 但是，强制转换会引发 <xref:System.InvalidCastException> 风险。 C# 提供[模式匹配](../pattern-matching.md)语句，该语句只有在成功时才会有条件地执行强制转换。 C# 还提供 [is](../language-reference/operators/type-testing-and-conversion-operators.md#is-operator) 和 [as](../language-reference/operators/type-testing-and-conversion-operators.md#as-operator) 运算符来测试值是否属于特定类型。
+由于是多态对象，基类类型的变量可以保存派生[类型](../programming-guide/types/index.md)。 要访问派生类型的实例成员，必须将值[强制转换](../programming-guide/types/casting-and-type-conversions.md)回派生类型。 但是，强制转换会引发 <xref:System.InvalidCastException> 风险。 C# 提供[模式匹配](../pattern-matching.md)语句，该语句只有在成功时才会有条件地执行强制转换。 C# 还提供 [is](../language-reference/operators/type-testing-and-cast.md#is-operator) 和 [as](../language-reference/operators/type-testing-and-cast.md#as-operator) 运算符来测试值是否属于特定类型。
 
 下面的代码演示模式匹配 `is` 语句。 它包含测试方法参数的方法，以确定它是否是一组可能的派生类型：
 

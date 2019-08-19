@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Azure 构建新式 Web 应用程序 | 测�
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 941c73f9a8b7b4c4336adfaec45775feec738f51
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 46c2e53540c3fd929ad2ad1c5e107b538edd5884
+ms.sourcegitcommit: d98fdb087d9c8aba7d2cb93fe4b4ee35a2308cee
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68672874"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69038123"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>测试 ASP.NET Core MVC 应用
 
@@ -33,32 +33,6 @@ ms.locfileid: "68672874"
 尽管建议封装与数据库和文件系统等基础结构交互的代码，但是仍会剩下一些此类代码，你可能需要对其进行测试。 应用程序依赖项完全解析时，还应验证代码层是否按预期方式交互。 这是集成测试的目的。 与单元测试相比，由于集成测试通常依赖外部依赖项和基础结构，因此其设置速度较慢，难度较大。 因此，应避免测试可以通过集成测试中的单元测试进行测试的项。 如果可通过单元测试测试给定方案，请使用单元测试进行测试。 如果不能，再考虑使用集成测试。
 
 与单元测试相比，集成测试通常具有更复杂的设置和拆卸过程。 例如，针对实际数据库运行的集成测试，在每次运行测试前，需要通过一种方式将数据库返回到已知状态。 随着不断添加新测试以及生产数据库架构不断发展，这些测试脚本的大小和复杂性会逐渐增加。 对于许多大型系统，将签入共享源代码管理更改前，在开发人员工作站上运行一整套集成测试并不实际。 这种情况下，可在生成服务器上运行集成测试。
-
-`LocalFileImageService` 实现类实现从具有给定 ID 的特定文件夹中提取和返回图像文件的字节的逻辑：
-
-```csharp
-public class LocalFileImageService : IImageService
-{
-    private readonly IHostingEnvironment _env;
-    public LocalFileImageService(IHostingEnvironment env)
-    {
-        _env = env;
-    }
-    public byte[] GetImageBytesById(int id)
-    {
-        try
-        {
-            var contentRoot = _env.ContentRootPath + "//Pics";
-            var path = Path.Combine(contentRoot, id + ".png");
-            return File.ReadAllBytes(path);
-        }
-        catch (FileNotFoundException ex)
-        {
-            throw new CatalogImageMissingException(ex);
-        }
-    }
-}
-```
 
 ### <a name="functional-tests"></a>功能测试
 
@@ -152,7 +126,7 @@ public IActionResult GetImage(int id)
 如果无法直接对文件系统行为执行单元测试，且无法测试路由，还能测试什么呢？ 通过重构确保单元测试的可行性后，可能会发现一些测试用例以及缺失行为，例如错误处理。 如未找到文件，此方法会执行什么操作？ 它应执行什么操作？ 本示例中，重构方法如下：
 
 ```csharp
-[HttpGet("[controller]/pic/{id}")\]
+[HttpGet("[controller]/pic/{id}")]
 public IActionResult GetImage(int id)
 {
     byte[] imageBytes;
