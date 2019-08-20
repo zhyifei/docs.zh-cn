@@ -8,33 +8,33 @@ helpviewer_keywords:
 - C# language, reference
 - reference, C# language
 ms.assetid: 06de3167-c16c-4e1a-b3c5-c27841d4569a
-ms.openlocfilehash: 45352d97372e556627ead75d969f088de9c85bd0
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 96fd360342a3bc0f82df37761abb372bdcaa8d7a
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833237"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606123"
 ---
 # <a name="c-reference"></a>C# 参考
 此部分收录了有关 C# 关键字、运算符、特殊字符、预处理器指令、编译器选项以及编译器错误与警告的参考资料。  
   
 ## <a name="in-this-section"></a>本节内容  
- [C# 关键字](../../csharp/language-reference/keywords/index.md)  
+ [C# 关键字](./keywords/index.md)  
  提供指向有关 C# 关键字和语法的信息的链接。  
   
- [C# 运算符](../../csharp/language-reference/operators/index.md)  
+ [C# 运算符](./operators/index.md)  
  提供指向有关 C# 运算符和语法的信息的链接。  
 
- [C# 特殊字符](../../csharp/language-reference/tokens/index.md)  
+ [C# 特殊字符](./tokens/index.md)  
  收录了主题链接，有助于你了解 C# 中的特殊上下文字符及其用法。  
 
- [C# 预处理器指令](../../csharp/language-reference/preprocessor-directives/index.md)  
+ [C# 预处理器指令](./preprocessor-directives/index.md)  
  提供用于嵌入 C# 源代码中的编译器命令有关的信息的链接。  
   
- [C# 编译器选项](../../csharp/language-reference/compiler-options/index.md)  
+ [C# 编译器选项](./compiler-options/index.md)  
  包括有关编译器选项以及如何使用这些选项的信息。  
   
- [C# 编译器错误](../../csharp/language-reference/compiler-messages/index.md)  
+ [C# 编译器错误](./compiler-messages/index.md)  
  包括演示原因和更正 C# 编译器错误和警告的代码片段。  
   
  [C# 语言规范](../../../_csharplang/spec/introduction.md)  
@@ -58,11 +58,11 @@ ms.locfileid: "66833237"
   
 ## <a name="related-sections"></a>相关章节  
 
- [C# 指南](../../csharp/index.md)  
+ [C# 指南](../index.md)  
  提供 Visual C# 文档的入口。  
   
  [使用 Visual Studio C# 开发环境](/visualstudio/csharp-ide/using-the-visual-studio-development-environment-for-csharp)  
  提供指向介绍 IDE 和编辑器的概念性和任务主题的链接。  
   
- [C# 编程指南](../../csharp/programming-guide/index.md)  
+ [C# 编程指南](../programming-guide/index.md)  
  包括有关如何使用 C# 编程语言的信息。

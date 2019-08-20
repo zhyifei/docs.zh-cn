@@ -8,12 +8,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 04/05/2019
 ms.custom: seoapril2019
-ms.openlocfilehash: 0c97a5b843d27258f58d654d35420a262d5b741a
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: ba5d2a9fb74b877c9b847343a9012ccb9624335e
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65062951"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69604219"
 ---
 # <a name="get-started-with-c"></a>C\# 入门
 
@@ -43,15 +43,15 @@ ms.locfileid: "65062951"
 
 ## <a name="related-sections"></a>相关章节
 
-* [C# 编程指南](../../csharp/programming-guide/index.md)
+* [C# 编程指南](../programming-guide/index.md)
 
     提供关于 C# 编程概念的信息并描述如何用 C# 执行各种任务。
 
-* [C# 参考](../../csharp/language-reference/index.md)
+* [C# 参考](../language-reference/index.md)
 
     提供关于 C# 关键字、运算符、预处理器指令、编译器选项以及编译器错误与警告的详细参考信息。
 
-* [演练](../../csharp/walkthroughs.md)
+* [演练](../walkthroughs.md)
 
     提供指向使用 C# 的编程演练和每个演练的简要概述的链接。
 

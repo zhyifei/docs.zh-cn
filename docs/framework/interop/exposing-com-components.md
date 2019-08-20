@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e78b14f1-e487-43cd-9c6d-1a07483f1730
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c4472adf2c309803d4d5ac57f3522cc260782d85
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 230853abf73a368bfcd8b88375c216fdadfc7d46
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833670"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567270"
 ---
 # <a name="exposing-com-components-to-the-net-framework"></a>向 .NET Framework 公开 COM 组件
 本部分概述向托管代码公开现有 COM 组件所需的步骤。 有关编写与 .NET Framework 紧密集成的 COM 服务器的详细信息，请参阅[互操作的设计注意事项](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/61aax4kh(v=vs.100))。
@@ -32,7 +32,7 @@ ms.locfileid: "66833670"
   
 3. [编译互操作项目](compiling-an-interop-project.md)。  
   
-     Windows 软件开发工具包 (SDK) 为符合公共语言规范 (CLS) 的多种语言提供编译器，其中包括 Visual Basic、C# 和 C++。  
+     Windows SDK 为符合公共语言规范 (CLS) 的多种语言提供编译器，其中包括 Visual Basic、C# 和 C++。  
   
 4. [部署互操作应用程序](deploying-an-interop-application.md)。  
   

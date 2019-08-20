@@ -8,12 +8,12 @@ helpviewer_keywords:
 - lambda operator [C#]
 - => operator [C#]
 - lambda expressions [C#], => operator
-ms.openlocfilehash: a7fea9810cb02269278638ec71cd106463b029e9
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 3b3a5c2e96e92271da66cbd8f1039a9ec97544fa
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025023"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68971221"
 ---
 # <a name="-operator-c-reference"></a>=> 运算符（C# 参考）
 
@@ -45,7 +45,7 @@ lambda 表达式的输入变量在编译时是强类型。 当编译器可以推
 member => expression;
 ```
 
-其中“expression”  是有效的表达式。 请注意，仅当成员的返回类型是 `void` 时，或者成员是构造函数、终结器或属性 `set` 访问器时，表达式才可能是语句表达式   。
+其中 `expression` 是有效的表达式。 `expression` 的返回类型必须可隐式转换为成员的返回类型。 如果成员的返回类型是 `void`，或者如果成员是构造函数、终结器或属性 `set` 访问器，则 `expression` 必须是[语句表达式](~/_csharplang/spec/statements.md#expression-statements)；可以是任意类型  。
 
 以下示例演示了用于 `Person.ToString` 方法的表达式主体定义：
 
