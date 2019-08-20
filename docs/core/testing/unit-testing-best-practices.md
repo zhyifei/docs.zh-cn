@@ -173,7 +173,7 @@ Assert.True(mockOrder.Validated);
 [!code-csharp[AfterMagicString](../../../samples/csharp/unit-testing-best-practices/after/StringCalculatorTests.cs#AfterMagicString)]
 
 ### <a name="avoid-logic-in-tests"></a>在测试中应避免逻辑
-编写单元测试时，请避免手动字符串串联和逻辑条件，例如 `if`、`while``for` 和 `switch` 等等。
+编写单元测试时，请避免手动字符串串联和逻辑条件，例如 `if`、`while`、`for` 和 `switch` 等等。
 
 #### <a name="why"></a>为什么？
 - 降低在测试中引入 bug 的可能性。
