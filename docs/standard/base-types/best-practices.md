@@ -14,10 +14,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.custom: serodec18
 ms.openlocfilehash: c782ab0ce5886a95c8c914930d80d66b4839b9b8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.sourcegitcommit: 46c68557bf6395f0ab9915f7558f2faae0097695
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
+ms.lasthandoff: 08/12/2019
 ms.locfileid: "64634720"
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>.NET 中的正则表达式最佳做法
@@ -131,7 +131,7 @@ ms.locfileid: "64634720"
   
  简言之，当你使用特定正则表达式调用正则表达式方法相对不频繁时，建议使用已解释的正则表达式。 当你使用特定正则表达式调用正则表达式方法相对频繁时，应使用已编译的正则表达式。 很难确定已解释的正则表达式执行速度减慢超出启动时间减少带来的性能增益的确切阈值，或已编译的正则表达式启动速度减慢超出执行速度加快带来的性能增益的阈值。 这依赖于各种因素，包括正则表达式的复杂程度和它处理的特定数据。 若要确定已解释或已编译的正则表达式是否可为特定应用程序方案提供最佳性能，可以使用 <xref:System.Diagnostics.Stopwatch> 类来比较其执行时间。  
   
- 下面的示例比较了已编译和已解释正则表达式在读取 Theodore Dreiser 所著《金融家》中前十句文本和所有句文本时的性能。 如示例输出所示，当只对匹配方法的正则表达式进行十次调用时，已解释的正则表达式与已编译的正则表达式相比，可提供更好的性能。 但是，当进行大量调用（在此示例中，超过 13,000 次调用）时，已编译的正则表达式可提供更好的性能。  
+ 下面的示例比较了已编译和已解释正则表达式在读取 Theodore Dreiser 所著《金融家》  中前十句文本和所有句文本时的性能。 如示例输出所示，当只对匹配方法的正则表达式进行十次调用时，已解释的正则表达式与已编译的正则表达式相比，可提供更好的性能。 但是，当进行大量调用（在此示例中，超过 13,000 次调用）时，已编译的正则表达式可提供更好的性能。  
   
  [!code-csharp[Conceptual.RegularExpressions.BestPractices#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/cs/compare1.cs#5)]
  [!code-vb[Conceptual.RegularExpressions.BestPractices#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/vb/compare1.vb#5)]  
@@ -165,7 +165,7 @@ ms.locfileid: "64634720"
  [!code-csharp[Conceptual.RegularExpressions.BestPractices#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/cs/compile1.cs#6)]
  [!code-vb[Conceptual.RegularExpressions.BestPractices#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/vb/compile1.vb#6)]  
   
- 在将示例编译为可执行文件并运行时，它会创建一个名为 `RegexLib.dll` 的程序集。 正则表达式用名为 `Utilities.RegularExpressions.SentencePattern` 并由 <xref:System.Text.RegularExpressions.Regex> 派生的类来表示。 然后，下面的示例使用已编译正则表达式，从 Theodore Dreiser 所著《金融家》文本中提取句子。  
+ 在将示例编译为可执行文件并运行时，它会创建一个名为 `RegexLib.dll` 的程序集。 正则表达式用名为 `Utilities.RegularExpressions.SentencePattern` 并由 <xref:System.Text.RegularExpressions.Regex> 派生的类来表示。 然后，下面的示例使用已编译正则表达式，从 Theodore Dreiser 所著《金融家》  文本中提取句子。  
   
  [!code-csharp[Conceptual.RegularExpressions.BestPractices#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/cs/compile2.cs#7)]
  [!code-vb[Conceptual.RegularExpressions.BestPractices#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/vb/compile2.vb#7)]  
@@ -254,7 +254,7 @@ ms.locfileid: "64634720"
   
 <a name="Capture"></a>   
 ## <a name="capture-only-when-necessary"></a>只在必要时捕获  
- .NET 中的正则表达式支持许多分组构造，这样，便可以将正则表达式模式分组为一个或多个子表达式。 .NET 正则表达式语言中最常用的分组构造为 `(`subexpression`)`（用于定义编号捕获组）和 `(?<`name`>`subexpression`)`（用于定义命名捕获组）。 分组构造是创建反向引用和定义要应用限定符的子表达式时所必需的。  
+ .NET 中的正则表达式支持许多分组构造，这样，便可以将正则表达式模式分组为一个或多个子表达式。 .NET 正则表达式语言中最常用的分组构造为 `(`subexpression  `)`（用于定义编号捕获组）和 `(?<`name  `>`subexpression  `)`（用于定义命名捕获组）。 分组构造是创建反向引用和定义要应用限定符的子表达式时所必需的。  
   
  但是，使用这些语言元素会产生一定的开销。 它们会导致用最近的未命名或已命名捕获来填充 <xref:System.Text.RegularExpressions.GroupCollection> 属性返回的 <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> 对象，如果单个分组构造已捕获输入字符串中的多个子字符串，则还会填充包含多个 <xref:System.Text.RegularExpressions.CaptureCollection> 对象的特定捕获组的 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> 属性返回的 <xref:System.Text.RegularExpressions.Capture> 对象。  
   

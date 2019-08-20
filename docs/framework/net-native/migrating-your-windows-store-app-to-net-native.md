@@ -5,10 +5,10 @@ ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c830b7097d12017348d8669071ec6d7c122bfe44
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2019
+ms.lasthandoff: 07/26/2019
 ms.locfileid: "68364078"
 ---
 # <a name="migrating-your-windows-store-app-to-net-native"></a>将 Windows 应用商店应用迁移到 .NET Native
@@ -55,14 +55,14 @@ ms.locfileid: "68364078"
 
 例如，绑定数据需要一个应用能够将属性名映射到函数。 在 Windows 应用商店应用的 .NET 中，公共语言运行时自动使用反射来向托管类型和公开可用的本机类型提供该能力。 在 .NET Native 中, 编译器将自动包含要将数据绑定到的类型的元数据。
 
-.NET Native 编译器还可以处理通常使用的泛型类型 ( <xref:System.Collections.Generic.List%601>如和<xref:System.Collections.Generic.Dictionary%602>), 而无需任何提示或指令。           [动态](~/docs/csharp/language-reference/keywords/dynamic.md) 关键字在某些限制内也受到支持。
+.NET Native 编译器还可以处理通常使用的泛型类型 ( <xref:System.Collections.Generic.List%601>如和<xref:System.Collections.Generic.Dictionary%602>), 而无需任何提示或指令。 [动态](~/docs/csharp/language-reference/keywords/dynamic.md) 关键字在某些限制内也受到支持。
 
 > [!NOTE]
 > 在将应用程序移植到 .NET Native 时, 应彻底测试所有动态代码路径。
 
 .NET Native 的默认配置对于大多数开发人员来说已经足够, 但某些开发人员可能希望通过使用运行时指令 (. .xml) 文件来微调其配置。 此外, 在某些情况下, .NET Native 编译器无法确定哪些元数据必须可用于反射, 并依赖于提示, 尤其是在以下情况下:
 
--           <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType> 和 <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType> 等一些构造无法静态确定。
+- <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType> 和 <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType> 等一些构造无法静态确定。
 
 - 因为编译器无法确定实例化，因此你想要反射到的泛型类型必须通过运行时指令来指定。 这并不仅是因为所有的代码必须包含在内，还因为在泛型类型上的反射会形成一个无限循环（例如，当某泛型方法在某泛型类型上调用时）。
 
@@ -81,7 +81,7 @@ ms.locfileid: "68364078"
 
 - 反射到 .NET Framework 类库中的类型和成员的私有反射不受支持。 然而，你可以反射到自己的私有类型和成员以及第三方库的类型和成员。
 
--           <xref:System.Reflection.ParameterInfo.HasDefaultValue%2A?displayProperty=nameWithType> 属性为表示返回值的 `false` 对象正确返回 <xref:System.Reflection.ParameterInfo>。 在 Windows 应用商店应用的 .NET 中，它返回 `true`。 中间语言 (IL) 不直接支持此操作，且解释需要由语言来进行。
+- <xref:System.Reflection.ParameterInfo.HasDefaultValue%2A?displayProperty=nameWithType> 属性为表示返回值的 `false` 对象正确返回 <xref:System.Reflection.ParameterInfo>。 在 Windows 应用商店应用的 .NET 中，它返回 `true`。 中间语言 (IL) 不直接支持此操作，且解释需要由语言来进行。
 
 - 位于 <xref:System.RuntimeFieldHandle> 和 <xref:System.RuntimeMethodHandle> 结构上的公共成员不受支持。 这些受到支持的类型仅用于 LINQ、表达式树和静态数组初始化。
 
@@ -147,11 +147,11 @@ ms.locfileid: "68364078"
 
 **序列化**
 
-          <xref:System.Runtime.Serialization.KnownTypeAttribute.%23ctor%28System.String%29> 特性不受支持。 使用 <xref:System.Runtime.Serialization.KnownTypeAttribute.%23ctor%28System.Type%29> 特性。
+<xref:System.Runtime.Serialization.KnownTypeAttribute.%23ctor%28System.String%29> 特性不受支持。 使用 <xref:System.Runtime.Serialization.KnownTypeAttribute.%23ctor%28System.Type%29> 特性。
 
 **资源**
 
-不支持使用带 <xref:System.Diagnostics.Tracing.EventSource> 类的本地化资源。           <xref:System.Diagnostics.Tracing.EventSourceAttribute.LocalizationResources%2A?displayProperty=nameWithType> 属性无法定义本地化资源。
+不支持使用带 <xref:System.Diagnostics.Tracing.EventSource> 类的本地化资源。 <xref:System.Diagnostics.Tracing.EventSourceAttribute.LocalizationResources%2A?displayProperty=nameWithType> 属性无法定义本地化资源。
 
 **委托**
 
@@ -159,7 +159,7 @@ ms.locfileid: "68364078"
 
 **其他 API**
 
-- <xref:System.PlatformNotSupportedException> [](xref:System.Type.GUID) 如果<xref:System.Runtime.InteropServices.GuidAttribute>特性未应用于该类型, 则 TypeInfo 属性将引发异常。 GUID 主要用于 COM 支持。
+- 如果<xref:System.Runtime.InteropServices.GuidAttribute>特性未应用于该类型, 则 [TypeInfo.GUID](xref:System.Type.GUID) 属性将引发<xref:System.PlatformNotSupportedException>异常。 GUID 主要用于 COM 支持。
 
 - 此<xref:System.DateTime.Parse%2A?displayProperty=nameWithType>方法会正确分析在 .NET Native 中包含短日期的字符串。 然而，它不会继续兼容 Microsoft 知识库文章 [KB2803771](https://support.microsoft.com/kb/2803771) 和 [KB2803755](https://support.microsoft.com/kb/2803755)中描述的日期和时间解析的变更。
 
@@ -201,11 +201,11 @@ Cookie 处理由 <xref:System.Net.Http.HttpClient> 和 WinINet 同时执行。  
 
 在 .NET Native 中:
 
--           <xref:System.Net.Http.HttpClientHandler.ClientCertificateOptions%2A?displayProperty=nameWithType> 属性的值始终为 <xref:System.Net.Http.ClientCertificateOption.Automatic>。  在 Windows 应用商店应用的 .NET 中，默认为 <xref:System.Net.Http.ClientCertificateOption.Manual>。
+- <xref:System.Net.Http.HttpClientHandler.ClientCertificateOptions%2A?displayProperty=nameWithType> 属性的值始终为 <xref:System.Net.Http.ClientCertificateOption.Automatic>。  在 Windows 应用商店应用的 .NET 中，默认为 <xref:System.Net.Http.ClientCertificateOption.Manual>。
 
--           <xref:System.Net.Http.HttpClientHandler.MaxRequestContentBufferSize%2A?displayProperty=nameWithType> 属性无法配置。
+- <xref:System.Net.Http.HttpClientHandler.MaxRequestContentBufferSize%2A?displayProperty=nameWithType> 属性无法配置。
 
--           <xref:System.Net.Http.HttpClientHandler.PreAuthenticate%2A?displayProperty=nameWithType> 属性始终为 `true`。  在 Windows 应用商店应用的 .NET 中，默认为 `false`。
+- <xref:System.Net.Http.HttpClientHandler.PreAuthenticate%2A?displayProperty=nameWithType> 属性始终为 `true`。  在 Windows 应用商店应用的 .NET 中，默认为 `false`。
 
 - 响应中的 `SetCookie2` 标题忽略为废弃。
 
