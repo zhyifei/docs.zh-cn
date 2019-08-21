@@ -144,8 +144,8 @@ ms.locfileid: "64664681"
 |替换构造|说明|模式|匹配|  
 |---------------------------|-----------------|-------------|-------------|  
 |<code>&#124;</code>|匹配以竖线 (<code>&#124;</code>) 字符分隔的任何一个元素。|<code>th(e&#124;is&#124;at)</code>|`"this is the day."` 中的 `"the"` 和 `"this"`|  
-|`(?(` *表达式* `)` *yes* <code>&#124;</code> *no* `)`|如果正则表达式模式由 *expression* 匹配指定，则匹配 *yes* ；否则，匹配可选 *no* 部分。 *expression* 被解释为零宽度断言。|<code>(?(A)A\d{2}\b&#124;\b\d{3}\b)</code>|`"A10 C103 910"` 中的 `"A10"` 和 `"910"`|  
-|`(?(` *name* `)` *yes* <code>&#124;</code> *no* `)`|如果 *name* （已命名或已编号的捕获组）具有匹配，则匹配 *yes*；否则，匹配可选 *no*。|<code>(?&lt;quoted&gt;&quot;)?(?(quoted).+&quot;&#124;\S+\s)</code>|`"Dogs.jpg \"Yiska playing.jpg\""` 中的 `"Dogs.jpg "` 和 `"\"Yiska playing.jpg\""`|  
+|`(?(` *expression* `)` *yes* <code>&#124;</code> *no* `)`|如果由 *expression* 指定的正则表达式模式匹配，则匹配 *yes* ；否则，匹配可选的 *no* 部分。 *expression* 解释为零宽度的断言。|<code>(?(A)A\d{2}\b&#124;\b\d{3}\b)</code>|`"A10 C103 910"` 中的 `"A10"` 和 `"910"`|  
+|`(?(` *name* `)` *yes* <code>&#124;</code> *no* `)`|如果 *name*（已命名或已编号的捕获组）具有匹配项，则匹配 *yes*；否则，匹配可选的 *no*。|<code>(?&lt;quoted&gt;&quot;)?(?(quoted).+&quot;&#124;\S+\s)</code>|`"Dogs.jpg \"Yiska playing.jpg\""` 中的 `"Dogs.jpg "` 和 `"\"Yiska playing.jpg\""`|  
   
  [返回页首](#top)  
   
