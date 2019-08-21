@@ -87,7 +87,7 @@ System.Console.WriteLine($"RuntimeInformation.FrameworkDescription: {System.Runt
 ```
 
 > [!WARNING]
-> 重大更改。 这在技术上是一个破坏性的改变，因为版本控制方案已发生变化。
+> 重大变更。这在技术上是一个中断性变更，因为版本控制方案已发生变化。
 
 ## <a name="net-platform-dependent-intrinsics"></a>依赖于 .NET 平台的内部函数
 
