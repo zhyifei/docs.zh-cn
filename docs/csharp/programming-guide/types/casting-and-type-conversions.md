@@ -10,12 +10,12 @@ helpviewer_keywords:
 - casting [C#]
 - converting types [C#]
 ms.assetid: 568df58a-d292-4b55-93ba-601578722878
-ms.openlocfilehash: e46083a9b8261cf8635d07e3b16f9c291bcc69a4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2ec18f9afed04882f26b5d2f34f64c25be042ed5
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67743799"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69566864"
 ---
 # <a name="casting-and-type-conversions-c-programming-guide"></a>强制转换和类型转换（C# 编程指南）
 
@@ -83,7 +83,7 @@ Giraffe g2 = (Giraffe) a;
   
  [!code-csharp[csProgGuideTypes#41](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#41)]  
   
- C# 提供 [is](../../language-reference/operators/type-testing-and-conversion-operators.md#is-operator) 运算符，使你可以在实际执行强制转换之前测试兼容性。 有关详细信息，请参阅[操作说明：使用模式匹配以及 as 和 is 运算符安全地进行强制转换](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md)。  
+ C# 提供 [is](../../language-reference/operators/type-testing-and-cast.md#is-operator) 运算符，使你可以在实际执行强制转换之前测试兼容性。 有关详细信息，请参阅[操作说明：使用模式匹配以及 as 和 is 运算符安全地进行强制转换](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md)。  
   
 ## <a name="c-language-specification"></a>C# 语言规范
 
@@ -93,7 +93,7 @@ Giraffe g2 = (Giraffe) a;
 
 - [C# 编程指南](../../../csharp/programming-guide/index.md)
 - [类型](../../../csharp/programming-guide/types/index.md)
-- [() 强制转换运算符](../../../csharp/language-reference/operators/type-testing-and-conversion-operators.md#cast-operator-)
+- [() 强制转换运算符](../../../csharp/language-reference/operators/type-testing-and-cast.md#cast-operator-)
 - [用户定义转换运算符](../../../csharp/language-reference/operators/user-defined-conversion-operators.md)
 - [通用类型转换](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/yy580hbd(v=vs.120))
 - [如何：将字符串转换为数字](../../../csharp/programming-guide/types/how-to-convert-a-string-to-a-number.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - implicit keyword [C#]
 - conversion operator [C#]
 - user-defined conversion [C#]
-ms.openlocfilehash: 5d1882048b2af12c29a3771055cbeba9565b7dab
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8788883a6c60032de2ffab658fcf2721654fc6f7
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67787393"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69566673"
 ---
 # <a name="user-defined-conversion-operators-c-reference"></a>用户定义转换运算符（C# 引用）
 
@@ -23,7 +23,7 @@ ms.locfileid: "67787393"
 
 隐式转换无需调用特殊语法，并且可以在各种情况（例如，在赋值和方法调用中）下发生。 预定义的 C# 隐式转换始终成功，且永远不会引发异常或丢失信息。 用户定义隐式转换也应如此。 如果自定义转换可能会引发异常或丢失信息，请将其定义为显式转换。
 
-[is](type-testing-and-conversion-operators.md#is-operator) 和 [as](type-testing-and-conversion-operators.md#as-operator) 运算符不考虑使用用户定义转换。 [强制转换运算符 ()](type-testing-and-conversion-operators.md#cast-operator-) 用于调用用户定义显式转换。
+[is](type-testing-and-cast.md#is-operator) 和 [as](type-testing-and-cast.md#as-operator) 运算符不考虑使用用户定义转换。 [强制转换运算符 ()](type-testing-and-cast.md#cast-operator-) 用于调用用户定义显式转换。
 
 `operator` 和 `implicit` 或 `explicit` 关键字分别用于定义隐式转换或显式转换。 定义转换的类型必须是该转换的源类型或目标类型。 可用两种类型中的任何一种类型来定义两种用户定义类型之间的转换。
 
@@ -47,6 +47,6 @@ ms.locfileid: "67787393"
 - [C# 参考](../index.md)
 - [C# 运算符](index.md)
 - [运算符重载](operator-overloading.md)
-- [类型测试和转换运算符](type-testing-and-conversion-operators.md)
+- [类型测试和强制转换运算符](type-testing-and-cast.md)
 - [强制转换和类型转换](../../programming-guide/types/casting-and-type-conversions.md)
 - [Chained user-defined explicit conversions in C#](https://blogs.msdn.microsoft.com/ericlippert/2007/04/16/chained-user-defined-explicit-conversions-in-c/)（C# 中链接在一起的用户定义的显式转换）

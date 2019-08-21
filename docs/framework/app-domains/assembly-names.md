@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 8f8c2c90-f15d-400e-87e7-a757e4f04d0e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 36993a13ed085f59fd6002f33e7884bdb1b5db8d
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 499a64362f7a23f0c4c595469fceaa1612bf44dd
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66832887"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567346"
 ---
 # <a name="assembly-names"></a>程序集名称
 程序集的名称存储在元数据中，它对程序集的范围及应用程序对程序集的使用有重要影响。 强名称程序集有一个完全限定的名称，由程序集的名称、区域性、公钥及版本号组成。 该名称通常称为显示名称，对于加载的程序集，可通过使用 <xref:System.Reflection.Assembly.FullName%2A> 属性来获取它。  
@@ -45,7 +45,7 @@ System.data, version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e08
 ```  
   
 > [!NOTE]
->  绑定到程序集时，运行时不区分程序集名称的大小写，但会保留程序集名称中使用的大小写。 Windows 软件开发工具包 (SDK) 中的几个工具将程序集名称处理为区分大小写。 为获得最佳效果，管理程序集名称时请按区分大小写的方式来处理。  
+>  绑定到程序集时，运行时不区分程序集名称的大小写，但会保留程序集名称中使用的大小写。 Windows SDK 中的几个工具会区分程序集名称的大小写。 为获得最佳效果，管理程序集名称时请按区分大小写的方式来处理。  
   
 ## <a name="naming-application-components"></a>命名应用程序组件  
  运行时在确定程序集的标识时不考虑文件名。 程序集标识（由程序集名称、版本、区域性和强名称组成）对运行时必须清楚明了。  

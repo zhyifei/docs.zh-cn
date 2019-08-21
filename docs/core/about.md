@@ -63,7 +63,9 @@ ms.locfileid: "67421876"
 
 ### <a name="open-source"></a>开源
 
-[.NET Core](https://github.com/dotnet/core) 属于开放源（[MIT 许可证](https://github.com/dotnet/core/blob/master/LICENSE.TXT)），由 Microsoft 于 2014 年提供给 [.NET Foundation](https://dotnetfoundation.org)。 现在它是最活跃的 .NET Foundation 项目之一。 可由个人和企业自由采用，包括用于个人、学术或商业目的。 许多公司已使用 .NET Core 作为应用、工具、新平台和托管服务的一部分。 其中某些公司对 GitHub 上的 .NET Core 做出了巨大贡献，并作为 [.NET Foundation Technical Steering Group](https://dotnetfoundation.org/blog/tsg-welcome)（.NET Foundation 技术控制组）的成员，指导产品方向。
+
+[.NET Core](https://github.com/dotnet/core) 是开源的（[MIT 许可证](https://github.com/dotnet/core/blob/master/LICENSE.TXT)），由 Microsoft 于 2014 年提供给 [.NET Foundation](https://dotnetfoundation.org)。现在它是最活跃的 .NET Foundation 项目之一。可由个人和公司自由采用，包括用于个人、学术或商业目的。许多公司将 .NET Core 用作应用、工具、新平台和托管服务的一部分。其中某些公司在 GitHub 上为 .NET Core 做出了巨大贡献，并作为 [.NET Foundation Technical Steering Group](https://dotnetfoundation.org/blog/tsg-welcome)（.NET Foundation 技术控制组）的成员为产品方向提供指导。
+
 
 ### <a name="designed-for-adaptability"></a>针对适应性而设计
 
@@ -99,7 +101,7 @@ Windows 和 Unix 实现大小相似。 Windows 具有较大的实现，因为 Co
 - **API** -- .NET Core 包含 .NET Framework 基类库的一个大型子集，但具有不同的组成要素（程序集名称不同；类型上公开的成员在关键用例中不同）。 这些差异需要在某些情况下更改 .NET Core 的端口源（请参阅 [microsoft/dotnet-apiport](https://github.com/microsoft/dotnet-apiport)）。 .NET Core 实施 [.NET Standard](../standard/net-standard.md) API 规范。
 - **子系统** -- .NET Core 实现 .NET Framework 中子系统的子级，目的是实现更简单的实现和编程模型。 例如，不支持代码访问安全性 (CAS)，但支持反射。
 - **平台** -- .NET Framework 支持 Windows 和 Windows Server，而 NET Core 还支持 macOS 和 Linux。
-- **开放源** -- .NET Core 属于开放源，而 [.NET Framework 的只读子集](https://github.com/microsoft/referencesource)属于开放源。
+- **开源** -- .NET Core 是开源的，而 [.NET Framework 的只读子集](https://github.com/microsoft/referencesource)是开源的。
 
 虽然 .NET Core 是唯一的且与 .NET Framework 和其他 .NET 实现大不相同，但使用源或二进制共享技术在这些实施之间分享代码仍很简单。
 
@@ -107,12 +109,14 @@ Windows 和 Unix 实现大小相似。 Windows 具有较大的实现，因为 Co
 
 ### <a name="comparison-with-mono"></a>与 Mono 比较
 
-[Mono](https://www.mono-project.com/) 是原始的跨平台和 [开放源](https://github.com/mono/mono) .NET 实现，于 2004 年首次发布。 可以把它看作是 .NET Framework 的社区克隆。 Mono 项目团队依赖于 Microsoft 发布的开放 [.NET 标准](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md)（尤其是 ECMA 335），以便实现兼容性。
+
+[Mono](https://www.mono-project.com/) 是最初的跨平台和[开源](https://github.com/mono/mono) .NET 实现，于 2004 年首次发布。可将它看作是 .NET Framework 的社区克隆。Mono 项目团队依赖于 Microsoft 发布的开放 [.NET 标准](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md)（尤其是 ECMA 335）以实现兼容性。
+
 
 .NET Core 和 Mono 的主要差异在于：
 
 - **应用模型** -- Mono 通过 Xamarin 产品支持 .NET Framework 应用模型（例如，Windows Forms）和其他应用模型（例如，[Xamarin.iOS](https://www.xamarin.com/platform)）的子集。 而 .NET Core 不支持这些内容。
 - **API** -- Mono 使用相同程序集名称和组成要素支持 .NET Framework API 的 [大型子集](http://docs.go-mono.com/?link=root%3a%2fclasslib)。
 - **平台** -- Mono 支持很多平台和 CPU。
-- **开放源** -- Mono 和 .NET Core 两者都使用 MIT 许可证，且都属于 .NET Foundation 项目。
+- **开源** -- Mono 和 .NET Core 两者都使用 MIT 许可证，且都属于 .NET Foundation 项目。
 - **焦点** -- 最近几年，Mono 的主要焦点是移动平台，而 .NET Core 的焦点是云和桌面工作负载。

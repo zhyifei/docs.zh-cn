@@ -87,7 +87,7 @@
           href: keywords/async.md
         - name: const
           href: keywords/const.md
-        - name: Event — 事件
+        - name: 事件
           href: keywords/event.md
         - name: extern
           href: keywords/extern.md
@@ -219,13 +219,13 @@
           href: keywords/true-literal.md
         - name: 'False'
           href: keywords/false-literal.md
-        - name: default
+        - name: 默认值
           href: keywords/default.md
     - name: 上下文关键字
       items:
         - name: 快速参考
           href: keywords/contextual-keywords.md
-        - name: 添加
+        - name: add
           href: keywords/add.md
         - name: 获取
           href: keywords/get.md
@@ -297,9 +297,9 @@
     - name: 成员访问运算符
       href: operators/member-access-operators.md
       displayName: '., [], ?., ?[], (), indexer, null-conditional, Elvis, invocation'
-    - name: 类型测试和转换运算符
-      href: operators/type-testing-and-conversion-operators.md
-      displayName: 'is operator, is keyword, as operator, as keyword, typeof, (), cast'
+    - name: 类型测试和强制转换运算符
+      href: operators/type-testing-and-cast.md
+      displayName: 'is operator, is keyword, as operator, as keyword, typeof, (), conversion'
     - name: 用户定义的转换运算符
       href: operators/user-defined-conversion-operators.md
       displayName: 'implicit, explicit'

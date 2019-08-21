@@ -7,20 +7,20 @@ helpviewer_keywords:
 - browser hosting support [WPF]
 - WPF browser hosting support APIs [WPF]
 ms.assetid: 82c133a8-d760-45fb-a2b9-3a997537f1d4
-ms.openlocfilehash: eed20417b44b9af78c92871a619f2ccf857b6bba
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8b52ec2b1701d03bbcc11048610034a849a315e7
+ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61864452"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68817942"
 ---
 # <a name="native-wpf-browser-hosting-support-apis"></a>承载支持 API 的本机 WPF 浏览器
-托管的[!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)]Web 浏览器中的应用程序可以通过注册从 WPF 宿主的活动文档服务器 (也称为 DocObject) 加速。 [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] 可以直接激活，并将与活动文档集成。 Xbap 和 Mozilla 浏览器中的松散 XAML 文档的托管[!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)]提供了一个 NPAPI 插件，它提供到类似的宿主环境[!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)]活动文档服务器作为[!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]does。 但是，在其他浏览器中的最简单的实用方法，以承载 Xbap 和 XAML 文档，独立应用程序是通过 Internet Explorer Web 浏览器控件。 Web 浏览器控件提供复杂活动文档服务器宿主环境，但它使自己的主机以自定义和扩展该环境，并直接与当前活动文档对象进行通信。  
+在 Web 浏览器中托管应用程序是从WPF宿主注册的活动文档服务器(也称为DocObject)。[!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] Internet Explorer 可以直接激活并与活动文档集成。 对于 Mozilla 浏览器中的 xbap 和松散 XAML 文档的[!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)]宿主, 提供了一个 NPAPI 插件, 该插件提供与 Internet [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] Explorer 相同的活动文档服务器的宿主环境。 但是, 在其他浏览器和独立应用程序中托管 Xbap 和 XAML 文档的最简单的方法是通过 Internet Explorer Web 浏览器控件。 Web 浏览器控件提供了复杂的活动文档服务器宿主环境, 同时它还允许自己的主机自定义和扩展该环境, 并直接与当前活动文档对象进行通信。  
   
- [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)]活动文档服务器实现几个常见的托管接口，包括[IOleObject](https://go.microsoft.com/fwlink/?LinkId=162049)， [IOleDocument](https://go.microsoft.com/fwlink/?LinkId=162050)， [IOleInPlaceActiveObject](https://go.microsoft.com/fwlink/?LinkId=162051)，[IPersistMoniker](https://go.microsoft.com/fwlink/?LinkId=162045)， [IOleCommandTarget](https://go.microsoft.com/fwlink/?LinkId=162047)。 Web 浏览器控件中托管时，这些接口只能从返回的对象的查询[IWebBrowser2::Document](https://go.microsoft.com/fwlink/?LinkId=162048)属性。  
+ [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] 活动文档服务器实现了几个常见的宿主接口, 包括 [IOleObject](https://go.microsoft.com/fwlink/?LinkId=162049)、[IOleDocument](https://go.microsoft.com/fwlink/?LinkId=162050)、[IOleInPlaceActiveObject](https://go.microsoft.com/fwlink/?LinkId=162051)、[IPersistMoniker](https://go.microsoft.com/fwlink/?LinkId=162045)、[IOleCommandTarget](https://go.microsoft.com/fwlink/?LinkId=162047)。 在 Web 浏览器控件中承载时, 可以从[IWebBrowser2::D 文档](https://go.microsoft.com/fwlink/?LinkId=162048)属性返回的对象查询这些接口。  
   
 ## <a name="iolecommandtarget"></a>IOleCommandTarget  
- WPF 活动文档服务器实现[IOleCommandTarget](https://go.microsoft.com/fwlink/?LinkId=162047)支持很多与导航相关的和特定于浏览器的命令 （具有空命令组 GUID） 的标准 OLE 命令组。 此外，它会识别了名为 CGID_PresentationHost 的自定义命令组。 目前，没有定义此组中只有一个命令。  
+ WPF 活动文档服务器的[IOleCommandTarget](https://go.microsoft.com/fwlink/?LinkId=162047)实现支持标准 OLE 命令组的大量与导航相关的命令和特定于浏览器的命令 (使用 null 命令组 GUID)。 此外, 它还识别名为 CGID_PresentationHost 的自定义命令组。 目前, 此组中仅定义了一个命令。  
   
 ```  
 DEFINE_GUID(CGID_PresentationHost, 0xd0288c55, 0xd6, 0x4f5e, 0xa8, 0x51, 0x79, 0xde, 0xc5, 0x1b, 0x10, 0xec);  
@@ -29,7 +29,7 @@ enum PresentationHostCommands {
 };  
 ```  
   
- PHCMDID_TABINTO 指示 PresentationHost 将焦点切换到在其内容，具体取决于 Shift 键的状态中的第一个或最后一个可获得焦点元素。  
+ PHCMDID_TABINTO 指示 Presentationhost.exe 将焦点切换到其内容中的第一个或最后一个可设定焦点的元素, 具体取决于 Shift 键的状态。  
   
 ## <a name="in-this-section"></a>本节内容  
  [IEnumRAWINPUTDEVICE](ienumrawinputdevice.md)  

@@ -9,16 +9,16 @@ helpviewer_keywords:
 ms.assetid: 54832ee9-dca8-4c8b-913c-c0b9d265e9a4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8e544976b0b801b08af238b2aeb36b5611154379
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 314a94be140b392964951299fba2fed4ac7e6e68
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66832904"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69566787"
 ---
 # <a name="creating-assemblies"></a>创建程序集
 
-可以使用 Visual Studio 等 IDE 或 Windows 软件开发工具包 (SDK) 提供的编译器和工具来创建单文件或多文件程序集。 最简单的程序集是具有简单名称并加载到单个应用程序域的单个文件。 此程序集不能被应用程序目录之外的其他程序集引用，并且不执行版本检查。 若要卸载该程序集组成的应用程序，只需删除它所在的目录即可。 对许多开发者来说，拥有这些功能的程序集能够满足他们部署应用程序的所有需要。
+可以使用 Visual Studio 等 IDE 或 Windows SDK 提供的编译器和工具来创建单文件或多文件程序集。 最简单的程序集是具有简单名称并加载到单个应用程序域的单个文件。 此程序集不能被应用程序目录之外的其他程序集引用，并且不执行版本检查。 若要卸载该程序集组成的应用程序，只需删除它所在的目录即可。 对许多开发者来说，拥有这些功能的程序集能够满足他们部署应用程序的所有需要。
 
 可以从多个代码模块和资源文件创建多文件程序集。 也可以创建可以由多个应用程序共享的程序集。 共享程序集必须具有强名称，并且可以部署在全局程序集缓存中。
 

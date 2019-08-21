@@ -16,10 +16,10 @@ ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8d0574c7e0910a658f1dc80d8394f55b472c31a3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.sourcegitcommit: 46c68557bf6395f0ab9915f7558f2faae0097695
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
+ms.lasthandoff: 08/12/2019
 ms.locfileid: "64634558"
 ---
 # <a name="composite-formatting"></a>复合格式设置
@@ -27,7 +27,7 @@ ms.locfileid: "64634558"
 .NET 复合格式设置功能使用对象列表和复合格式字符串作为输入。 复合格式字符串由固定文本和索引占位符混和组成，其中索引占位符称为格式项，对应于列表中的对象。 格式设置操作产生的结果字符串由原始固定文本和列表中对象的字符串表示形式混和组成。  
   
 > [!IMPORTANT]
-> 相较使用复合格式字符串，如果正在使用的语言和语言版本支持，则可使用*内插字符串*。 内插字符串是包含内插表达式的字符串。 每个内插表达式都使用表达式的值进行解析，并在分配字符串时包含在结果字符串中。 有关详细信息，请参阅[字符串内插（C# 参考）](../../csharp/language-reference/tokens/interpolated.md)和[内插字符串（Visual Basic 参考）](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)。
+> 相较使用复合格式字符串，如果正在使用的语言和语言版本支持，则可使用*内插字符串*。 内插字符串是包含内插表达式的字符串  。 每个内插表达式都使用表达式的值进行解析，并在分配字符串时包含在结果字符串中。 有关详细信息，请参阅[字符串内插（C# 参考）](../../csharp/language-reference/tokens/interpolated.md)和[内插字符串（Visual Basic 参考）](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)。
 
 复合格式设置功能受诸如以下方法的支持：  
   
@@ -122,9 +122,9 @@ ms.locfileid: "64634558"
   
 1. 如果要设置格式的值为 `null`，则将返回空字符串 <xref:System.String.Empty?displayProperty=nameWithType>。  
   
-2. 如果 <xref:System.ICustomFormatter> 实现可用，则运行时将调用其 <xref:System.ICustomFormatter.Format%2A> 方法。 它向方法传递格式项的 formatString 值（若有）或 `null`（若无）以及 <xref:System.IFormatProvider> 实现。 如果对 <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> 方法的调用返回 `null`，则继续执行下一步骤，将返回 <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> 调用的结果。
+2. 如果 <xref:System.ICustomFormatter> 实现可用，则运行时将调用其 <xref:System.ICustomFormatter.Format%2A> 方法。 它向方法传递格式项的 formatString 值（若有）或 `null`（若无）以及 <xref:System.IFormatProvider> 实现  。 如果对 <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> 方法的调用返回 `null`，则继续执行下一步骤，将返回 <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> 调用的结果。
   
-3. 如果该值实现 <xref:System.IFormattable> 接口，则调用此接口的 <xref:System.IFormattable.ToString%28System.String%2CSystem.IFormatProvider%29> 方法。 如果格式项中存在 formatString 值，则向方法传递该值；如果不存在该值，则传递 `null`。 按如下方式确定 <xref:System.IFormatProvider> 自变量：  
+3. 如果该值实现 <xref:System.IFormattable> 接口，则调用此接口的 <xref:System.IFormattable.ToString%28System.String%2CSystem.IFormatProvider%29> 方法。 如果格式项中存在 formatString 值，则向方法传递该值；如果不存在该值，则传递 `null`  。 按如下方式确定 <xref:System.IFormatProvider> 自变量：  
   
     - 对于数值，如果调用带非 null <xref:System.IFormatProvider> 自变量的复合格式设置方法，则运行时从其 <xref:System.Globalization.NumberFormatInfo> 方法请求 <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> 对象。 在以下情况下，使用当前线程区域性的 <xref:System.Globalization.NumberFormatInfo> 对象：无法提供该值、参数值为 `null` 或复合格式设置方法没有 <xref:System.IFormatProvider> 参数。  
   
@@ -132,7 +132,7 @@ ms.locfileid: "64634558"
   
     - 对于其他类型的对象，如果调用带 <xref:System.IFormatProvider> 参数的复合格式设置方法，它的值会直接传递到 <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType> 实现。 否则，`null` 传递到 <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType> 实现。  
   
-4. 调用类型的无参数的 `ToString` 方法（该方法将重写 <xref:System.Object.ToString?displayProperty=nameWithType> 或继承其基类的行为）。 在这种情况下，如果格式项中存在 formatString 组件指定的格式字符串，则将忽略该字符串。  
+4. 调用类型的无参数的 `ToString` 方法（该方法将重写 <xref:System.Object.ToString?displayProperty=nameWithType> 或继承其基类的行为）。 在这种情况下，如果格式项中存在 formatString 组件指定的格式字符串，则将忽略该字符串  。  
   
  前面的步骤执行完毕之后应用对齐。  
   

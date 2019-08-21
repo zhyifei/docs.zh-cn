@@ -3,12 +3,12 @@ title: 在 C# 中使用默认接口成员安全地更新接口
 description: 本高级教程探讨了如何安全地向现有接口定义添加新功能，而不破坏实现该接口的所有类和结构。
 ms.date: 05/06/2019
 ms.custom: mvc
-ms.openlocfilehash: 2daa40ead5902454c6d45390233e1491fe6d369b
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 2d7265b7705fc931d356a3b7fe3504ab7f21c0b3
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877907"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68971436"
 ---
 # <a name="tutorial-update-interfaces-with-default-interface-members-in-c-80"></a>教程：在 C# 8.0 中使用默认接口成员更新接口
 
@@ -87,6 +87,6 @@ ms.locfileid: "65877907"
 
 [!code-csharp[VersionTwoImplementation](~/samples/csharp/tutorials/default-interface-members-versions/finished/customer-relationship/SampleCustomer.cs?name=SnippetOverrideAndExtend)]
 
-可以在我们位于 [GitHub 上的示例存储库]中查看整个完成的代码（可以在 [GitHub 上的示例存储库](https://github.com/dotnet/samples/tree/master/csharp/tutorials/default-interface-members-versions/finished/customer-relationship)中获取入门应用程序）。
+可以在 [GitHub 上的示例存储库](https://github.com/dotnet/samples/tree/master/csharp/tutorials/default-interface-members-versions/finished/customer-relationship)中查看整个完成的代码。 可以在 [GitHub 上的示例存储库](https://github.com/dotnet/samples/tree/master/csharp/tutorials/default-interface-members-versions/starter/customer-relationship)中获取入门应用程序。
 
 这些新功能意味着，当这些新成员拥有合理的默认实现时，接口可以安全地更新。 精心设计接口，以表达可由多个类实现的单个功能概念。 这样一来，在发现针对同一功能概念的新要求时，可以更轻松地升级这些接口定义。

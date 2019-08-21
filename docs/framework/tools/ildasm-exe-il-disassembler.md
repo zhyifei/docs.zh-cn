@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: db27f6b2-f1ec-499e-be3a-7eecf95ca42b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2239b73eb8418d469085ad72b8a28093146a1f6b
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: e476e92ba4a9366a8a380c53d7dcd0d4dddb16e4
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025964"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567305"
 ---
 # <a name="ildasmexe-il-disassembler"></a>Ildasm.exe（IL 反汇编程序）
 
@@ -100,7 +100,7 @@ Ildasm.exe 生成的文本文件可以用作 IL 汇编程序 (Ilasm.exe) 的输�
 > [!NOTE]
 > 目前，无法对包含嵌入的本机代码的 PE 文件（例如，由 Visual C++ 生成的 PE 文件）使用此技术。  
 
-你可以使用 IL 反汇编程序中的默认 GUI 在分层树视图中查看任何现有 PE 文件的元数据和反汇编代码。 若要使用此 GUI，请在命令行中键入 ildasm，无需提供 PEfilename 参数或任何选项   。 可从“文件”菜单导航到要加载到 Ildasm.exe 中的 PE 文件   。 若要保存为选定 PE 显示的元数据和反汇编代码，请从“文件”菜单中选择“转储”命令   。 若要仅保存分层树视图，请从“文件”菜单中选择“转储树视图”命令   。 有关将文件加载到 Ildasm.exe 中和解释输出的详细指南，请参阅 Windows 软件开发工具包 (SDK) 附带的 Samples 文件夹中的 Ildasm.exe 教程   。
+你可以使用 IL 反汇编程序中的默认 GUI 在分层树视图中查看任何现有 PE 文件的元数据和反汇编代码。 若要使用此 GUI，请在命令行中键入 ildasm，无需提供 PEfilename 参数或任何选项   。 可从“文件”菜单导航到要加载到 Ildasm.exe 中的 PE 文件   。 若要保存为选定 PE 显示的元数据和反汇编代码，请从“文件”菜单中选择“转储”命令   。 若要仅保存分层树视图，请从“文件”菜单中选择“转储树视图”命令   。 有关将文件加载到 Ildasm.exe 中和解释输出的详细指南，请参见 Windows SDK 附带的 Samples 文件夹中的 Ildasm.exe 教程   。
 
 如果为 Ildasm.exe 提供一个包含嵌入资源的 PEfilename 参数，则此工具生成多个输出文件：一个包含 IL 代码的文本文件，以及与每个嵌入的托管资源对应的 .resources 文件（使用该资源在元数据中的名称生成）   。 如果 PEfilename 中嵌入了非托管资源，则通过 /output 选项使用 IL 输出指定的文件名生成 .res 文件   。
 
