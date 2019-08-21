@@ -1,6 +1,6 @@
 ---
-title: .NET 正则表达式中的备用构造
-description: 了解如何使用备用构造在正则表达式中进行条件匹配。
+title: .NET 正则表达式中的替换构造
+description: 了解如何使用替换构造在正则表达式中进行条件匹配。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -25,8 +25,8 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 07/19/2019
 ms.locfileid: "68331750"
 ---
-# <a name="alternation-constructs-in-regular-expressions"></a>正则表达式中的备用构造
-<a name="top"></a> 替换构造可修改正则表达式以启用 either/or 或条件匹配。 .NET 支持三种备用构造：  
+# <a name="alternation-constructs-in-regular-expressions"></a>正则表达式中的替换构造
+<a name="top"></a> 替换构造可修改正则表达式以启用 either/or 或条件匹配。 .NET 支持三种替换构造：  
   
 - [利用 &#124; 的模式匹配](#Either_Or)  
   
@@ -38,7 +38,7 @@ ms.locfileid: "68331750"
 ## <a name="pattern-matching-with-124"></a>利用 &#124; 的模式匹配  
  可以使用竖线 (`|`) 字符匹配一系列模式中的任何一种模式，其中 `|` 字符用于分隔每个模式。  
   
- 与正向字符集一样， `|` 字符可用于匹配多个字符中的任意一个字符。 以下示例使用正向字符集和 either/or 模式匹配（使用 `|` 字符）查找字符串中单词“gray”或“grey”的匹配项。 在该示例中， `|` 字符生成了更为详细的正则表达式。  
+ 与正向字符集一样， `|` 字符可用于匹配多个字符中的任意一个字符。 以下示例使用正向字符集和 either/or 模式匹配（使用 `|` 字符）查找字符串中单词“gray”或“grey”的匹配项。 在该示例中， `|` 字符生成了更冗长的正则表达式。  
   
  [!code-csharp[RegularExpressions.Language.Alternation#1](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.alternation/cs/alternation1.cs#1)]
  [!code-vb[RegularExpressions.Language.Alternation#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.alternation/vb/alternation1.vb#1)]  
@@ -52,7 +52,7 @@ ms.locfileid: "68331750"
 |<code>(a&#124;e)</code>|匹配“a”或“e”。|  
 |`y\b`|匹配单词边界中的“y”。|  
   
- 还可以使用 `|` 字符执行具有多个字符或子表达式（包含任意组合的字符常量和正则表达式语言元素）的 either/or 匹配。 （字符类不提供此功能。）下面的示例使用 `|` 字符提取美国社会安全号码 (SSN)（格式为 ddd  -dd  -dddd  的 9 位数字），或美国雇主标识号 (EIN)（格式为 dd  -ddddddd  的 9 位数字）。  
+ 还可以使用 `|` 字符执行具有多个字符或子表达式（包含任意组合的字符常量和正则表达式语言元素）的 either/or 匹配。 （字符类不提供此功能。）下面的示例使用 `|` 字符提取美国社会安全号码 (SSN)（格式为 ddd-dd-dddd  的 9 位数字），或美国雇主标识号 (EIN)（格式为 dd-ddddddd  的 9 位数字）。  
   
  [!code-csharp[RegularExpressions.Language.Alternation#2](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.alternation/cs/alternation2.cs#2)]
  [!code-vb[RegularExpressions.Language.Alternation#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.alternation/vb/alternation2.vb#2)]  
@@ -75,7 +75,7 @@ ms.locfileid: "68331750"
   
  其中， *expression* 是要匹配的初始模式， *yes* 是当匹配 *expression* 时要匹配的模式，而 *no* 是未匹配 *expression* 时要匹配的可选模式。 正则表达式引擎将 *expression* 视为一个宽度为零的断言；也就是说，正则表达式引擎在计算 *expression*之后，不再处理输入流的后续数据。 因此，该构造是等效于以下语法：  
   
- `(?(?=` *表达式* `)` *是* `|` *no* `)`  
+ `(?(?=`expression `)` yes `|` *no* `)`  
   
  其中 `(?=`expression  `)` 是宽度为零的断言构造。 （有关详细信息，请参阅[分组构造](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。）由于正则表达式引擎将 expression  解释为定位点（零宽断言），因此 expression  必须是零宽断言（有关详细信息，请参阅[定位标记](../../../docs/standard/base-types/anchors-in-regular-expressions.md)），或者是也包含在 yes  中的子表达式。 否则，无法匹配 *yes* 模式。  
   
@@ -103,11 +103,11 @@ ms.locfileid: "68331750"
 ## <a name="conditional-matching-based-on-a-valid-captured-group"></a>基于有效的捕获组的条件匹配  
  此语言元素尝试根据是否已经匹配指定的捕获组来匹配两种模式之一。 语法为：  
   
- `(?(` *name* `)` *是* `|` *no* `)`  
+ `(?(` *name* `)` *yes* `|` *no* `)`  
   
  or  
   
- `(?(` *数值* `)` *是* `|` *no* `)`  
+ `(?(` *number* `)` *yes* `|` *no* `)`  
   
  其中， *name* 是捕获组的名称， *number* 是捕获组的编号； *yes* 是当 *name* 或 *number* 具有匹配项时要匹配的表达式； *no* 是当不具有匹配项时要匹配的可选表达式。  
   
