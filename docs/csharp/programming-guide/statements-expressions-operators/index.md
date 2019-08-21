@@ -10,12 +10,12 @@ helpviewer_keywords:
 - C# language, expressions
 - statements [C#]
 ms.assetid: 20f8469d-5a6a-4084-ad90-0856b7e97e45
-ms.openlocfilehash: 7073ddc50b47ff239e8b310c0a5a1fbd84504133
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 29d8b11cb82fe795c332afadeda8215cc660abd5
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67743878"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69588669"
 ---
 # <a name="statements-expressions-and-operators-c-programming-guide"></a>语句、表达式和运算符（C# 编程指南）
 
@@ -41,5 +41,5 @@ ms.locfileid: "67743878"
 
 ## <a name="see-also"></a>请参阅
 
-- [C# 编程指南](../../../csharp/programming-guide/index.md)
-- [强制转换和类型转换](../../../csharp/programming-guide/types/casting-and-type-conversions.md)
+- [C# 编程指南](../index.md)
+- [强制转换和类型转换](../types/casting-and-type-conversions.md)

@@ -325,7 +325,7 @@ ms.locfileid: "66490873"
 |\b|在单词边界处开始匹配。|  
 |\w+|匹配一个或多个单词字符。|  
 |(e)?|匹配“e”零次或一次。|  
-|秒|匹配“s”。|  
+|s|匹配“s”。|  
 |(\s&#124;$)|匹配空白字符或输入字符串的末尾。|  
   
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/whitespace1.cs#10)]
@@ -552,7 +552,7 @@ ms.locfileid: "66490873"
 |FFF0 - FFFF|`IsSpecials`|  
   
 <a name="CharacterClassSubtraction"></a>   
-## <a name="character-class-subtraction-basegroup---excludedgroup"></a>字符类减法：[base_group - [excluded_group]]  
+## <a name="character-class-subtraction-base_group---excluded_group"></a>字符类减法：[base_group - [excluded_group]]  
  一个字符类定义一组字符。 字符类减法将产生一组字符，该组字符是从一个字符类中排除另一个字符类中的字符的结果。  
   
  字符类减法表达式具有以下形式：  

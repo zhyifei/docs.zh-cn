@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: 45e37dcb15e178fe37907e00cc14ef48c1bf230d
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: a04105137fad7cd3a25b869c3aa7fcbe91ed20ab
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67306594"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69566306"
 ---
 # <a name="is-c-reference"></a>is（C# 参考）
 
-`is` 运算符检查表达式的结果是否与给定类型兼容，或（从 C# 7.0 开始）针对某个模式测试表达式。 有关类型测试 `is` 运算符的信息，请参阅文章[类型测试和转换运算符](../operators/type-testing-and-conversion-operators.md)的 [is 运算符](../operators/type-testing-and-conversion-operators.md#is-operator)部分。
+`is` 运算符检查表达式的结果是否与给定类型兼容，或（从 C# 7.0 开始）针对某个模式测试表达式。 有关类型测试 `is` 运算符的信息，请参阅文章[类型测试和强制转换运算符](../operators/type-testing-and-cast.md)的 [is 运算符](../operators/type-testing-and-cast.md#is-operator)部分。
 
 ## <a name="pattern-matching-with-is"></a>利用 `is` 的模式匹配
 
@@ -128,4 +128,4 @@ ms.locfileid: "67306594"
 
 - [C# 参考](../index.md)
 - [C# 关键字](index.md)
-- [类型测试和转换运算符](../operators/type-testing-and-conversion-operators.md)
+- [类型测试和强制转换运算符](../operators/type-testing-and-cast.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2cfebe19-7436-49f1-bd99-3c4019f0b676
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a3b516e43c07666f4b52e67f85cb567ab310f020
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: b27a8d89b0345082b8cf06c3eb141e73e2bf0faf
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66832918"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567361"
 ---
 # <a name="assemblies-in-the-common-language-runtime"></a>公共语言运行时中的程序集
 程序集是 .NET Framework 应用程序的构造块；它们形成了部署、版本控制、重复使用、激活范围和安全权限的基本单元。 程序集是为协同工作而生成的类型和资源的集合，这些类型和资源构成了一个逻辑功能单元。 程序集向公共语言运行时提供了解类型实现所需要的信息。 对于运行时，类型不存在于程序集上下文之外。  
@@ -42,7 +42,7 @@ ms.locfileid: "66832918"
   
  程序集可以为静态或动态。 静态程序集可以包括 .NET Framework 类型（接口和类），以及该程序集的资源（位图、JPEG 文件、资源文件等）。 静态程序集存储在磁盘上的可迁移可执行 (PE) 文件中。 你还可以使用 .NET Framework 来创建动态程序集，动态程序集直接从内存运行并且在执行前不存储到磁盘上。 你可以在执行动态程序集后将它们保存在磁盘上。  
   
- 有几种创建程序集的方法。 你可以使用过去用来创建 .dll 或 .exe 文件的开发工具，例如 Visual Studio。 可以使用 Windows 软件开发工具包 (SDK) 中提供的工具创建带有在其他部署环境中创建的模块的程序集。 还可以使用公共语言运行时 API（例如 <xref:System.Reflection.Emit?displayProperty=nameWithType>）来创建动态程序集。  
+ 有几种创建程序集的方法。 你可以使用过去用来创建 .dll 或 .exe 文件的开发工具，例如 Visual Studio。 你可以使用 Windows SDK 中提供的工具创建带有在其他开发环境中创建的模块的程序集。 还可以使用公共语言运行时 API（例如 <xref:System.Reflection.Emit?displayProperty=nameWithType>）来创建动态程序集。  
   
 ## <a name="related-topics"></a>相关主题  
   

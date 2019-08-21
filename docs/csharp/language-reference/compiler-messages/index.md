@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Visual C# compiler, errors
 - errors [C#]
 ms.assetid: 57262ab1-6c50-4f9c-81ad-9fba48477416
-ms.openlocfilehash: c4ece5ccf8c31beb2847a50f9cf894959acf23b2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3714223209a3298706960625ea383e42dc2b2154
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61975255"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69607171"
 ---
 # <a name="c-compiler-errors"></a>C# 编译器错误
 
@@ -21,7 +21,7 @@ ms.locfileid: "61975255"
   
 - 在[“输出窗口”](/visualstudio/ide/reference/output-window)中选择错误号（例如 CS0029），然后按 F1 键。  
   
-- 在“索引”的“查找”框中输入错误号。  
+- 在“索引”的“查找”  框中输入错误号。  
   
  如果通过这些步骤无法找到有关错误的信息，请转到此页末尾，然后发送包含错误号或文本的反馈。  
   
@@ -31,8 +31,8 @@ ms.locfileid: "61975255"
   
 ## <a name="see-also"></a>请参阅
 
-- [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)
-- [很抱歉，我们没有关于此 C# 错误的具体信息](../../../csharp/misc/sorry-we-don-t-have-specifics-on-this-csharp-error.md)
+- [C# 编译器选项](../compiler-options/index.md)
+- [很抱歉，我们没有关于此 C# 错误的具体信息](../../misc/sorry-we-don-t-have-specifics-on-this-csharp-error.md)
 - [“项目设计器”->“生成”页 (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp)
-- [/warn（C# 编译器选项）](../../../csharp/language-reference/compiler-options/warn-compiler-option.md)
-- [/nowarn（C# 编译器选项）](../../../csharp/language-reference/compiler-options/nowarn-compiler-option.md)
+- [/warn（C# 编译器选项）](../compiler-options/warn-compiler-option.md)
+- [/nowarn（C# 编译器选项）](../compiler-options/nowarn-compiler-option.md)

@@ -20,16 +20,19 @@ helpviewer_keywords:
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fd1773b184b9ea39b83b91c139acb09658beae11
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: fb7758a3e59806b246a98c343d78500263433efc
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66832827"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68971476"
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe（本机映像生成器）
 
 本机映像生成器 (Ngen.exe) 是一种提高托管应用程序性能的工具。 Ngen.exe 创建本机映像（包含经编译的特定于处理器的机器代码的文件），并将它们安装到本地计算机上的本机映像缓存中。 运行时可从缓存中使用本机映像，而不必使用实时 (JIT) 编译器编译原始程序集。
+
+> [!NOTE]
+> Ngen.exe 编译仅面向 .NET Framework 的程序集的本机映像。 适用于 .NET Core 的等效本机映像生成器为 [CrossGen](https://github.com/dotnet/coreclr/blob/master/Documentation/building/crossgen.md)。 
 
 .NET Framework 4 中对 Ngen.exe 进行的更改：
 
@@ -62,11 +65,11 @@ ms.locfileid: "66832827"
 
 ## <a name="syntax"></a>语法
 
-```
+```console
 ngen action [options]
 ```
 
-```
+```console
 ngen /? | /help
 ```
 
@@ -429,7 +432,7 @@ Ngen.exe 在生成本机映像时记录这些信息。 当你执行程序集时�
 
 下面的命令为当前目录中的 `ClientApp.exe` 生成本机映像，并在本机映像缓存中安装该映像。 如果该程序集存在配置文件，Ngen.exe 将使用它。 此外，还会为 `ClientApp.exe` 引用的所有 .dll 文件生成本机映像。
 
-```
+```console
 ngen install ClientApp.exe
 ```
 
@@ -437,7 +440,7 @@ ngen install ClientApp.exe
 
 下面的命令生成具有指定路径的 `MyAssembly.exe` 的本机映像。
 
-```
+```console
 ngen install c:\myfiles\MyAssembly.exe
 ```
 
@@ -448,7 +451,7 @@ ngen install c:\myfiles\MyAssembly.exe
 
 程序集可以具有不带引用的依赖项（例如，它使用 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 方法加载 .dll 文件）。 你可以借助 `/ExeConfig` 使用应用程序程序集的配置信息来为这样的 .dll 文件创建本机映像。 下面的命令使用 `MyLib.dll,` 中的配置信息为 `MyApp.exe` 生成一个本机映像。
 
-```
+```console
 ngen install c:\myfiles\MyLib.dll /ExeConfig:c:\myapps\MyApp.exe
 ```
 
@@ -456,20 +459,20 @@ ngen install c:\myfiles\MyLib.dll /ExeConfig:c:\myapps\MyApp.exe
 
 若要卸载依赖项，请使用与安装时相同的命令行选项。 下面的命令卸载上一个示例中的 `MyLib.dll`。
 
-```
+```console
 ngen uninstall c:\myfiles\MyLib.dll /ExeConfig:c:\myapps\MyApp.exe
 ```
 
 若要在全局程序集缓存中为程序集创建本机映像，请使用该程序集的显示名称。 例如:
 
-```
+```console
 ngen install "ClientApp, Version=1.0.0.0, Culture=neutral,
   PublicKeyToken=3c7ba247adcd2081, processorArchitecture=MSIL"
 ```
 
 NGen.exe 会为你安装的每个方案生成一个单独的映像集。 例如，下面的命令为正常操作生成一个完整的本机映像集，为调试生成另一个完整的映像集，并为探测生成第三个映像集：
 
-```
+```console
 ngen install MyApp.exe
 ngen install MyApp.exe /debug
 ngen install MyApp.exe /profile
@@ -479,7 +482,7 @@ ngen install MyApp.exe /profile
 
 一旦本机映像安装到缓存中，就可使用 Ngen.exe 显示它们。 下面的命令显示本机映像缓存中的所有本机映像。
 
-```
+```console
 ngen display
 ```
 
@@ -487,7 +490,7 @@ ngen display
 
 使用程序集的简单名称仅显示该程序集的信息。 下面的命令显示本机映像缓存中与部分名称 `MyAssembly` 匹配的所有本机映像、其依赖项以及所有依赖 `MyAssembly` 的根：
 
-```
+```console
 ngen display MyAssembly
 ```
 
@@ -495,13 +498,13 @@ ngen display MyAssembly
 
 如果指定了程序集的文件扩展名，则必须指定路径，或从包含该程序集的目录执行 Ngen.exe：
 
-```
+```console
 ngen display c:\myApps\MyAssembly.exe
 ```
 
 下面的命令显示本机映像缓存中名为 `MyAssembly`、版本为 1.0.0.0 的所有本机映像。
 
-```
+```console
 ngen display "myAssembly, version=1.0.0.0"
 ```
 
@@ -509,13 +512,13 @@ ngen display "myAssembly, version=1.0.0.0"
 
 映像通常是在共享组件升级之后进行更新的。 若要更新本身发生更改或者其依赖项发生了更改的所有本机映像，请使用不带任何参数的 `update` 操作。
 
-```
+```console
 ngen update
 ```
 
 更新所有映像可能会耗费很长时间。 使用 `/queue` 选项可对更新操作进行排队以等候本机映像服务执行。 有关 `/queue` 选项和安装优先级的详细信息，请参阅[本机映像服务](#native-image-service)。
 
-```
+```console
 ngen update /queue
 ```
 
@@ -525,13 +528,13 @@ Ngen.exe 维护依赖项的列表，因此，只有当依赖于这些共享组�
 
 下面的命令卸载根 `ClientApp.exe` 的所有方案：
 
-```
+```console
 ngen uninstall ClientApp
 ```
 
 `uninstall` 操作可用于移除特定方案。 下面的命令卸载 `ClientApp.exe` 的所有调试方案：
 
-```
+```console
 ngen uninstall ClientApp /debug
 ```
 
@@ -540,13 +543,13 @@ ngen uninstall ClientApp /debug
 
 下面的命令卸载特定版本的 `ClientApp.exe` 的所有方案：
 
-```
+```console
 ngen uninstall "ClientApp, Version=1.0.0.0"
 ```
 
 下面的命令卸载 `"ClientApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=3c7ba247adcd2081, processorArchitecture=MSIL",` 的所有方案，或者只卸载该程序集的调试方案：
 
-```
+```console
 ngen uninstall "ClientApp, Version=1.0.0.0, Culture=neutral,
   PublicKeyToken=3c7ba247adcd2081, processorArchitecture=MSIL"
 ngen uninstall "ClientApp, Version=1.0.0.0, Culture=neutral,
@@ -591,19 +594,19 @@ ngen uninstall "ClientApp, Version=1.0.0.0, Culture=neutral,
 
 在开始安装或升级之前，建议暂停该服务。 这可确保该服务不会在安装程序正在复制文件或将程序集放在全局程序集缓存中时执行。 下面的 Ngen.exe 命令行可以暂停该服务：
 
-```
+```console
 ngen queue pause
 ```
 
 当已排队所有的延迟操作时，下面的命令会允许恢复服务：
 
-```
+```console
 ngen queue continue
 ```
 
 若要在安装新应用程序或更新共享组件时，延迟本机映像生成，请将 `/queue` 选项用于 `install` 或 `update` 操作 。 以下的 Ngen.exe 命令行安装共享组件的本机映像并执行可能已被影响的所有根的更新：
 
-```
+```console
 ngen install MyComponent /queue
 ngen update /queue
 ```
@@ -612,7 +615,7 @@ ngen update /queue
 
 如果你的应用程序包含多个根，则可以控制延迟操作的优先级。 以下命令将三个根的安装进行排队。 首先安装 `Assembly1`，无需等待空闲时间。 此外还可以安装 `Assembly2`，无需等待空闲时间，但要在优先级为 1 的所有操作都完成后。 在服务检测到计算机处于空闲状态时安装 `Assembly3`。
 
-```
+```console
 ngen install Assembly1 /queue:1
 ngen install Assembly2 /queue:2
 ngen install Assembly3 /queue:3
@@ -620,7 +623,7 @@ ngen install Assembly3 /queue:3
 
 可以使用 `executeQueuedItems` 操作强制排队操作同步发生。 如果你提供可选优先级，此操作将仅影响具有相等或较低优先级的已排队操作。 默认优先级为 3，因此下面的 Ngen.exe 命令将立即处理所有排队的操作，并且在完成前不会返回：
 
-```
+```console
 ngen executeQueuedItems
 ```
 

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - operator keyword [C#]
 - operator overloading [C#]
-ms.openlocfilehash: da1e47d7ebdf91084d94fc895f0ce46d773353d7
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: 93e4845cab6735e74c711d720beeb06c8883a44b
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796578"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69566878"
 ---
 # <a name="operator-overloading-c-reference"></a>运算符重载（C# 引用）
 
@@ -37,13 +37,13 @@ ms.locfileid: "68796578"
 
 | 运算符 | 可重载性 |
 | --------- | --------------- |
-|[+](arithmetic-operators.md#unary-plus-and-minus-operators)、[-](arithmetic-operators.md#unary-plus-and-minus-operators)、[!](boolean-logical-operators.md#logical-negation-operator-)、[~](bitwise-and-shift-operators.md#bitwise-complement-operator-)、[++](arithmetic-operators.md#increment-operator-)、[--](arithmetic-operators.md#decrement-operator---)、[true](true-false-operators.md)、[false](true-false-operators.md)|这些一元运算符可以进行重载。|
-|[+](addition-operator.md)、[-](subtraction-operator.md)、[\*](arithmetic-operators.md#multiplication-operator-)、[/](arithmetic-operators.md#division-operator-)、[%](arithmetic-operators.md#remainder-operator-)、[&](boolean-logical-operators.md#logical-and-operator-)、[&#124;](boolean-logical-operators.md#logical-or-operator-)、[^](boolean-logical-operators.md#logical-exclusive-or-operator-)、[\<\<](bitwise-and-shift-operators.md#left-shift-operator-)、[>>](bitwise-and-shift-operators.md#right-shift-operator-)、[==](equality-operators.md#equality-operator-)、[!=](equality-operators.md#inequality-operator-)、[\<](comparison-operators.md#less-than-operator-)、[>](comparison-operators.md#greater-than-operator-)、[\<=](comparison-operators.md#less-than-or-equal-operator-)、[>=](comparison-operators.md#greater-than-or-equal-operator-)|这些二元运算符可以进行重载。 某些运算符必须成对重载；有关详细信息，请查看此表后面的备注。|
-|[&&](boolean-logical-operators.md#conditional-logical-and-operator-), [&#124;&#124;](boolean-logical-operators.md#conditional-logical-or-operator-)|无法重载条件逻辑运算符。 但是，如果具有已重载的 [`true` 和 `false` 运算符](true-false-operators.md)的类型还以某种方式重载了 `&` 或 <code>&#124;</code> 运算符，则可针对此类型的操作数分别计算 `&&` 或 <code>&#124;&#124;</code> 运算符。 有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/introduction.md)的[用户定义条件逻辑运算符](~/_csharplang/spec/expressions.md#user-defined-conditional-logical-operators)部分。|
-|[&#91;&#93;](member-access-operators.md#indexer-operator-)|元素访问不被视为可重载运算符，但你可定义[索引器](../../programming-guide/indexers/index.md)。|
-|[(T)x](type-testing-and-conversion-operators.md#cast-operator-)|强制转换运算符不能重载，但可以定义新的转换运算符。 有关详细信息，请参阅[用户定义转换运算符](user-defined-conversion-operators.md)。|
+|[+x](arithmetic-operators.md#unary-plus-and-minus-operators)、[-x](arithmetic-operators.md#unary-plus-and-minus-operators)、[!x](boolean-logical-operators.md#logical-negation-operator-)、[~x](bitwise-and-shift-operators.md#bitwise-complement-operator-)、[++](arithmetic-operators.md#increment-operator-)、[--](arithmetic-operators.md#decrement-operator---)、[true](true-false-operators.md)、[false](true-false-operators.md)|这些一元运算符可以进行重载。|
+|[x + y](addition-operator.md)、[x - y](subtraction-operator.md)、[x \* y](arithmetic-operators.md#multiplication-operator-)、[x / y](arithmetic-operators.md#division-operator-)、[x % y](arithmetic-operators.md#remainder-operator-)、[x & y](boolean-logical-operators.md#logical-and-operator-)、[x &#124; y](boolean-logical-operators.md#logical-or-operator-)、[x ^ y](boolean-logical-operators.md#logical-exclusive-or-operator-)、[x \<\< y](bitwise-and-shift-operators.md#left-shift-operator-)、[x >> y](bitwise-and-shift-operators.md#right-shift-operator-)、[x == y](equality-operators.md#equality-operator-)、[x != y](equality-operators.md#inequality-operator-)、[x \< y](comparison-operators.md#less-than-operator-)、[x > y](comparison-operators.md#greater-than-operator-)、[x \<= y](comparison-operators.md#less-than-or-equal-operator-)、[x >= y](comparison-operators.md#greater-than-or-equal-operator-)|这些二元运算符可以进行重载。 某些运算符必须成对重载；有关详细信息，请查看此表后面的备注。|
+|[x && y](boolean-logical-operators.md#conditional-logical-and-operator-)、[x &#124;&#124; y](boolean-logical-operators.md#conditional-logical-or-operator-)|无法重载条件逻辑运算符。 但是，如果具有已重载的 [`true` 和 `false` 运算符](true-false-operators.md)的类型还以某种方式重载了 `&` 或 <code>&#124;</code> 运算符，则可针对此类型的操作数分别计算 `&&` 或 <code>&#124;&#124;</code> 运算符。 有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/introduction.md)的[用户定义条件逻辑运算符](~/_csharplang/spec/expressions.md#user-defined-conditional-logical-operators)部分。|
+|[a&#91;i&#93;](member-access-operators.md#indexer-operator-)|元素访问不被视为可重载运算符，但你可定义[索引器](../../programming-guide/indexers/index.md)。|
+|[(T)x](type-testing-and-cast.md#cast-operator-)|强制转换运算符不能重载，但可以定义新的转换运算符。 有关详细信息，请参阅[用户定义转换运算符](user-defined-conversion-operators.md)。|
 |[+=](arithmetic-operators.md#compound-assignment), [-=](arithmetic-operators.md#compound-assignment), [\*=](arithmetic-operators.md#compound-assignment), [/=](arithmetic-operators.md#compound-assignment), [%=](arithmetic-operators.md#compound-assignment), [&=](boolean-logical-operators.md#compound-assignment), [&#124;=](boolean-logical-operators.md#compound-assignment), [^=](boolean-logical-operators.md#compound-assignment), [\<\<=](bitwise-and-shift-operators.md#compound-assignment), [>>=](bitwise-and-shift-operators.md#compound-assignment)|复合赋值运算符不能显式重载。 但在重载二元运算符时，也会隐式重载相应的复合赋值运算符（若有）。 例如，使用 `+`（可以进行重载）计算 `+=`。|
-|[=](assignment-operator.md)、[.](member-access-operators.md#member-access-operator-)、[?:](conditional-operator.md)、[??](null-coalescing-operator.md)、[->](pointer-related-operators.md#pointer-member-access-operator--)、[=>](lambda-operator.md)、[f(x)](member-access-operators.md#invocation-operator-)、[as](type-testing-and-conversion-operators.md#as-operator)、[checked](../keywords/checked.md)、[unchecked](../keywords/unchecked.md)、[default](default.md)、[delegate](delegate-operator.md)、[is](type-testing-and-conversion-operators.md#is-operator)、[nameof](nameof.md)、[new](new-operator.md)、[sizeof](sizeof.md)、[stackalloc](stackalloc.md)、[typeof](type-testing-and-conversion-operators.md#typeof-operator)|这些运算符无法进行重载。|
+|[x = y](assignment-operator.md)、[x.y](member-access-operators.md#member-access-operator-)、[c ? t : f](conditional-operator.md)、[x ?? y](null-coalescing-operator.md)、[x->y](pointer-related-operators.md#pointer-member-access-operator--)、[=>](lambda-operator.md)、[f(x)](member-access-operators.md#invocation-operator-)、[as](type-testing-and-cast.md#as-operator)、[checked](../keywords/checked.md)、[unchecked](../keywords/unchecked.md)、[default](default.md)、[delegate](delegate-operator.md)、[is](type-testing-and-cast.md#is-operator)、[nameof](nameof.md)、[new](new-operator.md)、[sizeof](sizeof.md)、[stackalloc](stackalloc.md)、[typeof](type-testing-and-cast.md#typeof-operator)|这些运算符无法进行重载。|
 
 > [!NOTE]
 > 比较运算符必须成对重载。 也就是说，如果重载一对运算符中的任一一个，则另一个运算符也必须重载。 此类配对如下所示：

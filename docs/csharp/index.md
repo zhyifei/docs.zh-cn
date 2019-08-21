@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Help, Visual C# documentation
 - C# language
 - Visual C#
-ms.openlocfilehash: 0bf9fe8124578ba9bd192e10d517e3b0df7e5982
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2e820a4d08e938aaf21e4f57db63e6b4f1b5225a
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744263"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69608295"
 ---
 # <a name="c-guide"></a>C# 指南
 
@@ -52,16 +52,16 @@ C# 指南分为多个部分。 可以按顺序阅读，也可以直接跳到最�
   * The .NET Compiler Platform SDK enables you to write components that analyze code, and suggest or make improvements to that code. In this section, you'll learn how the APIs are organized, and how you can create code that enables rules and practices for your team. You'll also see samples, end-to-end scenarios, and links to other libraries with more examples using these APIs.
 -->
 
-* [C# 编程指南](../csharp/programming-guide/index.md)
+* [C# 编程指南](./programming-guide/index.md)
   * 提供有关如何使用 C# 语言结构的信息和实例。
 
-* [演练](../csharp/walkthroughs.md)
+* [演练](./walkthroughs.md)
   * 提供指向使用 C# 的编程演练和每个演练的简要概述的链接。
 
 * [语言参考](language-reference/index.md)
   * 此部分收录了 C# 语言参考资料。 此类资料有助于你了解 C# 语法和语义。 它还包含关于以下内容的参资料：类型、运算符、特性、预处理器指令、编译器开关、编译器错误和编译器警告。
 
-* [C# 语言规范](../csharp/language-reference/language-specification/index.md)
+* [C# 语言规范](./language-reference/language-specification/index.md)
   * 指向最新版 C# 语言规范的链接。
 
 ## <a name="see-also"></a>请参阅

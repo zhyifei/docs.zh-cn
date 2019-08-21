@@ -2,12 +2,12 @@
 title: 协变和逆变 (C#)
 ms.date: 07/20/2015
 ms.assetid: 066d9a3c-aab7-4ea6-826d-0b1a85399c74
-ms.openlocfilehash: bfd78b1a32b9d4fe11b1dce129c24ceb5aca6754
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1d5a1de1825e585512f694a0cd72cee9b37cda36
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61668557"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595285"
 ---
 # <a name="covariance-and-contravariance-c"></a>协变和逆变 (C#)
 在 C# 中，协变和逆变能够实现数组类型、委托类型和泛型类型参数的隐式引用转换。 协变保留分配兼容性，逆变则与之相反。  
@@ -45,7 +45,7 @@ object[] array = new String[10];
 // array[0] = 10;  
 ```  
   
- 对方法组的协变和逆变支持允许将方法签名与委托类型相匹配。 这样，不仅可以将具有匹配签名的方法分配给委托，还可以分配与委托类型指定的派生类型相比，返回派生程度更大的类型的方法（协变）或接受具有派生程度更小的类型的参数的方法（逆变）。 有关详细信息，请参阅[委托中的变体 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md) 和[使用委托中的变体 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md)。  
+ 对方法组的协变和逆变支持允许将方法签名与委托类型相匹配。 这样，不仅可以将具有匹配签名的方法分配给委托，还可以分配与委托类型指定的派生类型相比，返回派生程度更大的类型的方法（协变）或接受具有派生程度更小的类型的参数的方法（逆变）。 有关详细信息，请参阅[委托中的变体 (C#)](./variance-in-delegates.md) 和[使用委托中的变体 (C#)](./using-variance-in-delegates.md)。  
   
  以下代码示例演示对方法组的协变和逆变支持。  
   
@@ -68,7 +68,7 @@ static void Test()
 }  
 ```  
   
- 在 .NET Framework 4 或较新的 C# 中，支持在泛型接口和委托中使用协变和逆变，并允许隐式转换泛型类型参数。 有关详细信息，请参阅[泛型接口中的变体 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md) 和[委托中的变体 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)。  
+ 在 .NET Framework 4 或较新的 C# 中，支持在泛型接口和委托中使用协变和逆变，并允许隐式转换泛型类型参数。 有关详细信息，请参阅[泛型接口中的变体 (C#)](./variance-in-generic-interfaces.md) 和[委托中的变体 (C#)](./variance-in-delegates.md)。  
   
  以下代码示例演示泛型接口的隐式引用转换。  
   
@@ -77,15 +77,15 @@ IEnumerable<String> strings = new List<String>();
 IEnumerable<Object> objects = strings;  
 ```  
   
- 如果泛型接口或委托的泛型参数被声明为协变或逆变，该泛型接口或委托则被称为“变体”。 凭借 C#，能够创建自己的变体接口和委托。 有关详细信息，请参阅[创建变体泛型接口 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/creating-variant-generic-interfaces.md) 和[委托中的变体 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)。  
+ 如果泛型接口或委托的泛型参数被声明为协变或逆变，该泛型接口或委托则被称为“变体”  。 凭借 C#，能够创建自己的变体接口和委托。 有关详细信息，请参阅[创建变体泛型接口 (C#)](./creating-variant-generic-interfaces.md) 和[委托中的变体 (C#)](./variance-in-delegates.md)。  
   
 ## <a name="related-topics"></a>相关主题  
   
 |Title|说明|  
 |-----------|-----------------|  
-|[泛型接口中的变体 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)|讨论泛型接口中的协变和逆变，提供 .NET Framework 中的变体泛型接口列表。|  
-|[创建变体泛型接口 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/creating-variant-generic-interfaces.md)|演示如何创建自定义变体接口。|  
-|[在泛型集合的接口中使用变体 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-interfaces-for-generic-collections.md)|演示 <xref:System.Collections.Generic.IEnumerable%601> 接口和 <xref:System.IComparable%601> 接口中对协变和逆变的支持如何帮助重复使用代码。|  
-|[委托中的变体 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)|讨论泛型委托和非泛型委托中的协变和逆变，并提供 .NET Framework 中的变体泛型委托列表。|  
-|[使用委托中的变体 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md)|演示如何使用非泛型委托中的协变和逆变支持以将方法签名与委托类型相匹配。|  
-|[对 Func 和 Action 泛型委托使用变体 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)|演示 `Func` 委托和 `Action` 委托中对协变和逆变的支持如何帮助重复使用代码。|
+|[泛型接口中的变体 (C#)](./variance-in-generic-interfaces.md)|讨论泛型接口中的协变和逆变，提供 .NET Framework 中的变体泛型接口列表。|  
+|[创建变体泛型接口 (C#)](./creating-variant-generic-interfaces.md)|演示如何创建自定义变体接口。|  
+|[在泛型集合的接口中使用变体 (C#)](./using-variance-in-interfaces-for-generic-collections.md)|演示 <xref:System.Collections.Generic.IEnumerable%601> 接口和 <xref:System.IComparable%601> 接口中对协变和逆变的支持如何帮助重复使用代码。|  
+|[委托中的变体 (C#)](./variance-in-delegates.md)|讨论泛型委托和非泛型委托中的协变和逆变，并提供 .NET Framework 中的变体泛型委托列表。|  
+|[使用委托中的变体 (C#)](./using-variance-in-delegates.md)|演示如何使用非泛型委托中的协变和逆变支持以将方法签名与委托类型相匹配。|  
+|[对 Func 和 Action 泛型委托使用变体 (C#)](./using-variance-for-func-and-action-generic-delegates.md)|演示 `Func` 委托和 `Action` 委托中对协变和逆变的支持如何帮助重复使用代码。|

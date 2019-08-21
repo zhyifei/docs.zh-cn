@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ffbf6d9e-4a88-4a8a-9645-4ce0ee1ee5f9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9a3ba9b86a1611408f510098726ac49f543f8451
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 5dcdf6a88b12d12e67056657fd532dfa28c40299
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66832873"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69566811"
 ---
 # <a name="create-and-use-strong-named-assemblies"></a>创建和使用具有强名称的程序集
 
@@ -38,7 +38,7 @@ ms.locfileid: "66832873"
 
     - 使用支持创建强名称的开发环境，如 Visual Studio。
 
-    - 使用[强名称工具 (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) 创建加密密钥对，并使用命令行编译器或[程序集链接器 (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) 将密钥对分配到程序集。 Windows 软件开发工具包 (SDK) 同时提供 Sn.exe 和 Al.exe。
+    - 使用[强名称工具 (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) 创建加密密钥对，并使用命令行编译器或[程序集链接器 (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) 将密钥对分配到程序集。 Windows SDK 同时提供 Sn.exe 和 Al.exe。
 
 2. 开发环境或工具对包含具有开发人员私钥的程序集清单的文件的哈希进行签名。 此数字签名存储在包含程序集 A 的清单的可移植可执行 (PE) 文件中。
 

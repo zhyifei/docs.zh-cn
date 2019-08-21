@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Azure 构建新式 Web 应用程序 | 开�
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 1d58f6ef590e798e52730d79e56b8c16830c1712
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: fd804176a7579fe7c5e226bf5b4feb457cb2df14
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675274"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68971205"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>开发 ASP.NET Core MVC 应用
 
@@ -67,7 +67,7 @@ public class HomeController : Controller
 可以在 [HttpGet] 和类似属性上指定路由，而无需添加单独的 [Route] 属性。 属性路由还可以通过使用令牌来减少重复控制器或操作名称的次数，如下所示：
 
 ```csharp
-[Route("[controller\]")]
+[Route("[controller]")]
 public class ProductsController : Controller
 {
     [Route("")] // Matches 'Products'
@@ -131,7 +131,7 @@ public class Startup
         var builder = new ConfigurationBuilder()
         .SetBasePath(env.ContentRootPath)
         .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
-        .AddJsonFile(\$"appsettings.{env.EnvironmentName}.json", optional: true);
+        .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true);
     }
 }
 ```
@@ -324,11 +324,11 @@ public async Task<IActionResult> Put(int id, [FromBody]Author author)
 > - **MSDN - 真实的 ASP.NET Core MVC 过滤器**  
 >   <https://msdn.microsoft.com/magazine/mt767699.aspx>
 
-## <a name="security"></a>安全
+## <a name="security"></a>安全性
 
 保护 Web 应用程序是一个非常大的主题，涉及到许多问题。 安全性涉及的最基本问题是，确保你知道是谁发出的给定请求，然后确保该请求只对它应访问的资源具有访问权限。 身份验证是将请求提供的凭据与受信任数据存储中的凭据进行对比的过程，目的在于确定该请求是否应被视为来源于已知实体。 授权是根据用户标识限制对某些资源的访问权限的过程。 第三个安全问题是保护请求免遭第三方窃听，对于此问题至少应[确保 SSL 由你的应用程序使用](/aspnet/core/security/enforcing-ssl)。
 
-### <a name="authentication"></a>Authentication
+### <a name="authentication"></a>身份验证
 
 ASP.NET Core 标识是一个成员身份系统，可用于支持应用程序的登录功能。 它支持本地用户帐户，也支持来自 Microsoft Account、Twitter、Facebook 和 Google 等提供者的外部登录。 除 ASP.NET Core 标识之外，应用程序还可以使用 Windows 身份验证或 [Identity Server](https://github.com/IdentityServer/IdentityServer4) 等第三方标识提供者。
 
@@ -447,7 +447,7 @@ public void ConfigureServices(IServiceCollection services)
 
 从 2.1 版开始，ASP.NET Core SignalR 可用于 ASP.NET Core。
 
-无论是直接使用 WebSocket 还是使用其他技术，实时客户端通信在许多应用程序方案中都很有用。 示例包括：
+无论是直接使用 WebSocket 还是使用其他技术，实时客户端通信在许多应用程序方案中都很有用。 一些示例包括：
 
 - 实时聊天室应用程序
 
@@ -476,7 +476,7 @@ public class Program
         StartConnectionAsync();
         _connection.On("receiveMessage", (arguments) =>;
         {
-            Console.WriteLine(\$"{arguments\[0\]} said: {arguments\[1\]}");
+            Console.WriteLine($"{arguments[0]} said: {arguments[1]}");
         });
         Console.ReadLine();
         StopConnectionAsync();
