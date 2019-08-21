@@ -7,12 +7,12 @@ helpviewer_keywords:
 - exceptions [C#]
 - C# language, exceptions
 ms.assetid: 0001887f-4fa2-47e2-8034-2819477e2344
-ms.openlocfilehash: 34357ac313e20c5bab5505984f92ea06df80a5c2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c2b991a45a53ce4a8295d6181da11cb09fda6ddb
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64595405"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590190"
 ---
 # <a name="exceptions-and-exception-handling-c-programming-guide"></a>异常和异常处理（C# 编程指南）
 C# 语言的异常处理功能有助于处理在程序运行期间发生的任何意外或异常情况。 异常处理功能使用 `try`、`catch` 和 `finally` 关键字来尝试执行可能失败的操作、在你确定合理的情况下处理故障，以及在事后清除资源。 公共语言运行时 (CLR)、.NET Framework/任何第三方库或应用程序代码都可以生成异常。 异常是使用 `throw` 关键字创建而成。  
@@ -49,17 +49,17 @@ C# 语言的异常处理功能有助于处理在程序运行期间发生的任�
 ## <a name="related-sections"></a>相关章节  
  若要详细了解异常和异常处理，请参阅以下主题：  
   
-- [使用异常](../../../csharp/programming-guide/exceptions/using-exceptions.md)  
+- [使用异常](./using-exceptions.md)  
   
-- [异常处理](../../../csharp/programming-guide/exceptions/exception-handling.md)  
+- [异常处理](./exception-handling.md)  
   
-- [创建和引发异常](../../../csharp/programming-guide/exceptions/creating-and-throwing-exceptions.md)  
+- [创建和引发异常](./creating-and-throwing-exceptions.md)  
   
-- [编译器生成的异常](../../../csharp/programming-guide/exceptions/compiler-generated-exceptions.md)  
+- [编译器生成的异常](./compiler-generated-exceptions.md)  
   
-- [如何：使用 try/catch 处理异常（C# 编程指南）](../../../csharp/programming-guide/exceptions/how-to-handle-an-exception-using-try-catch.md)  
+- [如何：使用 try/catch 处理异常（C# 编程指南）](./how-to-handle-an-exception-using-try-catch.md)  
   
-- [如何：使用 finally 执行清除代码](../../../csharp/programming-guide/exceptions/how-to-execute-cleanup-code-using-finally.md)  
+- [如何：使用 finally 执行清除代码](./how-to-execute-cleanup-code-using-finally.md)  
   
 ## <a name="c-language-specification"></a>C# 语言规范  
 
@@ -68,10 +68,10 @@ C# 语言的异常处理功能有助于处理在程序运行期间发生的任�
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.SystemException>
-- [C# 编程指南](../../../csharp/programming-guide/index.md)
-- [C# 关键字](../../../csharp/language-reference/keywords/index.md)
-- [throw](../../../csharp/language-reference/keywords/throw.md)
-- [try-catch](../../../csharp/language-reference/keywords/try-catch.md)
-- [try-finally](../../../csharp/language-reference/keywords/try-finally.md)
-- [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md)
+- [C# 编程指南](../index.md)
+- [C# 关键字](../../language-reference/keywords/index.md)
+- [throw](../../language-reference/keywords/throw.md)
+- [try-catch](../../language-reference/keywords/try-catch.md)
+- [try-finally](../../language-reference/keywords/try-finally.md)
+- [try-catch-finally](../../language-reference/keywords/try-catch-finally.md)
 - [异常](../../../standard/exceptions/index.md)

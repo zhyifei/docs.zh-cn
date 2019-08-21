@@ -7,12 +7,12 @@ helpviewer_keywords:
 - international user interface [WPF], XAML
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-ms.openlocfilehash: 099d6b94f9094ac9baed25e5060d8a166e27573b
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: bcd0a11aef2372cc6e5830892eb3b71fa841ba2f
+ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629922"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69545250"
 ---
 # <a name="globalization-for-wpf"></a>WPF 的全球化
 本主题介绍编写[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]全球市场应用程序时应注意的问题。 [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] 中`System.Globalization`定义了全球化编程元素。
@@ -123,9 +123,9 @@ ms.locfileid: "68629922"
 
 - 僧伽罗语
 
- 所有书写系统引擎都支持[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]字体。 [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)]字体可以包括[!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)]布局表格, 这些布局表格使字体创建者能够设计更好的国际化和高端版式字体。 [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)]字体布局表包含有关符号替换、标志符号定位、对齐和基线定位的信息, 使文本处理应用程序能够改进文本布局。
+ 所有书写系统引擎都支持 OpenType 字体。 OpenType 字体可以包含 OpenType 布局表, 它们使字体创建者能够设计更好的国际化和高端版式字体。 OpenType 字体布局表包含有关符号替换、标志符号定位、对齐和基线定位的信息, 使文本处理应用程序能够改进文本布局。
 
- [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)]字体允许使用[!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)]编码处理大字形集。 这种编码享有广泛的国际支持，并支持版式字形变体。
+ OpenType 字体允许使用[!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)]编码处理大字形集。 这种编码享有广泛的国际支持，并支持版式字形变体。
 
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]文本呈现由支持分辨率独立性的 Microsoft ClearType 子像素技术提供支持。 这极大地提高了可读性，并为所有脚本提供了支持高质量杂志样式文档的功能。
 

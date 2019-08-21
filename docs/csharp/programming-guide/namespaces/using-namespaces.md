@@ -8,12 +8,12 @@ helpviewer_keywords:
 - fully qualified names [C#]
 - namespaces [C#], how to use
 ms.assetid: 1fe8bf39-addc-438a-bd9e-86410e32381d
-ms.openlocfilehash: 06ebb9edfaf4753b98c3305a90b52e93ee7b4486
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: 32e36a3ebc0de3e5f4a850e0af0261c1e7fd5a07
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796633"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039462"
 ---
 # <a name="using-namespaces-c-programming-guide"></a>using 命名空间（C# 编程指南）
 
@@ -69,7 +69,7 @@ ms.locfileid: "68796633"
   
  [!code-csharp[csProgGuideNamespaces#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces.cs#10)]  
   
- 一般情况下，使用 `::` 来引用命名空间别名，或使用 `global::` 来引用全局命名空间，以及使用 `.` 来限定类型或成员。  
+ 一般情况下，使用[命名空间别名限定符 `::`](../../language-reference/operators/namespace-alias-qualifier.md) 来引用命名空间别名，或使用 `global::` 来引用全局命名空间，以及使用 `.` 来限定类型或成员。  
   
  将 `::` 与引用类型而非引用命名空间的别名一起使用是错误的。 例如:  
   
@@ -90,9 +90,7 @@ ms.locfileid: "68796633"
  [!code-csharp[csProgGuideNamespaces#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces.cs#15)]  
   
  这是可行的，但如果随后要引入名为 `Alias` 的类型，`Alias.` 将改为绑定到该类型。 使用 `Alias::Exception` 确保 `Alias` 被视为命名空间别名，而不被误解为类型。  
-  
- 请参阅主题[操作说明：使用全局命名空间别名](../../../csharp/programming-guide/namespaces/how-to-use-the-global-namespace-alias.md)，以详细了解 `global` 别名。  
-  
+
 ## <a name="see-also"></a>请参阅
 
 - [C# 编程指南](../../../csharp/programming-guide/index.md)

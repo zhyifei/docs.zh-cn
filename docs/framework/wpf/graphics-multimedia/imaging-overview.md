@@ -21,12 +21,12 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
-ms.openlocfilehash: fcf5e8e68492f4d1ff75221384b08ffad2b939f3
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 6d3dce5c8a34257f8509f239ece4bae3efa02b84
+ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68971952"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69545377"
 ---
 # <a name="imaging-overview"></a>图像处理概述
 本主题介绍 [!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-md.md)]。 借助 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]，开发人员可以显示、转换图像和设置图像的格式。  
@@ -38,7 +38,7 @@ ms.locfileid: "68971952"
   
 - 适用于新的或专用图像格式的扩展性模型。  
   
-- 改善了本机映像格式 (包括位图 (BMP)、联合图像专家组 (JPEG)、 [!INCLUDE[TLA#tla_png](../../../../includes/tlasharptla-png-md.md)] [!INCLUDE[TLA#tla_wdp](../../../../includes/tlasharptla-wdp-md.md)]、 [!INCLUDE[TLA#tla_tiff](../../../../includes/tlasharptla-tiff-md.md)]、、图形交换格式 (GIF) 和图标 (.ico)) 的性能和安全性。  
+- 改进了本机映像格式的性能和安全性, 包括位图 (BMP)、联合图像专家组 (JPEG)、可移植网络图形 ( [!INCLUDE[TLA#tla_tiff](../../../../includes/tlasharptla-tiff-md.md)]PNG [!INCLUDE[TLA#tla_wdp](../../../../includes/tlasharptla-wdp-md.md)])、、、图形交换格式 (GIF) 和图标 (.ico)。  
   
 - 高位深图像数据最多保留 8 位/通道（32 位/像素）。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "68971952"
   
 <a name="_imageformats"></a>   
 ## <a name="wpf-image-formats"></a>WPF 图像格式  
- 编解码器用于对特定媒体格式进行解码或编码。 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]包含 BMP、JPEG、 [!INCLUDE[TLA2#tla_png](../../../../includes/tla2sharptla-png-md.md)] [!INCLUDE[TLA2#tla_tiff](../../../../includes/tla2sharptla-tiff-md.md)] [!INCLUDE[TLA2#tla_wdp](../../../../includes/tla2sharptla-wdp-md.md)]、、、GIF 和图标图像格式的编解码器。 利用上述每个编解码器，应用程序可以对其各自的图像格式进行解码（ICON 除外）和编码。  
+ 编解码器用于对特定媒体格式进行解码或编码。 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]包含 BMP、JPEG、PNG、 [!INCLUDE[TLA2#tla_tiff](../../../../includes/tla2sharptla-tiff-md.md)]、 [!INCLUDE[TLA2#tla_wdp](../../../../includes/tla2sharptla-wdp-md.md)]、GIF 和图标图像格式的编解码器。 利用上述每个编解码器，应用程序可以对其各自的图像格式进行解码（ICON 除外）和编码。  
   
  <xref:System.Windows.Media.Imaging.BitmapSource>是用于对图像进行解码和编码的重要类。 它是 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] 管道的基本构建基块，表示具有特定大小和分辨率的单个不变的像素集。 可以是多个框架图像的单个帧, 也可以是<xref:System.Windows.Media.Imaging.BitmapSource>在上执行的转换的结果。 <xref:System.Windows.Media.Imaging.BitmapSource> 它是在图像 (如) [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] <xref:System.Windows.Media.Imaging.BitmapFrame>中使用的很多主要类的父级。  
   

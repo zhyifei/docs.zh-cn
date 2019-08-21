@@ -12,7 +12,7 @@ ms.locfileid: "59611913"
 ---
 # <a name="managing-dependencies-with-net-core-sdk-10"></a>使用 .NET Core SDK 1.0 管理依赖项
 
-在 .NET Core 项目从 project.json 移动到 csproj 和 MSBuild 的同时，还投入了大笔资金将项目文件和资产统一，以便跟踪依赖项。 对于 .NET Core 项目，这与 project.json 的做法类似。 没有单独的 JSON 或 XML 文件来跟踪 NuGet 依赖项。 通过这种改变，我们还在名为 `<PackageReference>` 的 csproj 语法中引入了另一种类型的引用。 
+在 .NET Core 项目从 project.json 移动到 csproj 和 MSBuild 的同时，还投入了大笔资金将项目文件和资产统一，以便跟踪依赖项。 对于 .NET Core 项目，这与 project.json 的做法类似。 没有单独的 JSON 或 XML 文件来跟踪 NuGet 依赖项。 通过这种改变，我们还在名为 `<PackageReference>` 的 csproj 语法中引入了另一种类型的引用  。 
 
 本文档介绍了新的引用类型。 它还演示了如何使用此新引用类型将包依赖项添加到项目。 
 
@@ -67,4 +67,4 @@ ms.locfileid: "59611913"
 ```
 
 ## <a name="removing-a-dependency-from-the-project"></a>从项目中删除依赖项
-从项目文件中删除依赖项仅包含从项目文件中删除 `<PackageReference>`。
+从项目文件中删除依赖项只需从项目文件中删除 `<PackageReference>`。

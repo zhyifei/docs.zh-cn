@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, generics
 - generics [C#]
 ms.assetid: 75ea8509-a4ea-4e7a-a2b3-cf72482e9282
-ms.openlocfilehash: e32eb7c60e01ca72824ffb3a1e1269cf34650f5a
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 7d212aeaa7d7a8c3f152f8610a7ef3fe5de0fe23
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423402"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69589603"
 ---
 # <a name="generics-c-programming-guide"></a>泛型（C# 编程指南）
 C# 语言和公共语言运行时 (CLR) 的 2.0 版本中添加了泛型。 泛型将类型参数的概念引入 .NET Framework，这样就可以设计具有以下特征的类和方法：在客户端代码声明并初始化这些类和方法之前，这些类和方法会延迟指定一个或多个类型。 例如，通过使用泛型类型参数 T，可以编写其他客户端代码能够使用的单个类，而不会产生运行时转换或装箱操作的成本或风险，如下所示：  
@@ -53,23 +53,23 @@ C# 语言和公共语言运行时 (CLR) 的 2.0 版本中添加了泛型。 泛�
 ## <a name="related-sections"></a>相关章节  
  更多相关信息：  
   
-- [泛型类型参数](../../../csharp/programming-guide/generics/generic-type-parameters.md)  
+- [泛型类型参数](./generic-type-parameters.md)  
   
-- [类型参数的约束](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md)  
+- [类型参数的约束](./constraints-on-type-parameters.md)  
   
-- [泛型类](../../../csharp/programming-guide/generics/generic-classes.md)  
+- [泛型类](./generic-classes.md)  
   
-- [泛型接口](../../../csharp/programming-guide/generics/generic-interfaces.md)  
+- [泛型接口](./generic-interfaces.md)  
   
-- [泛型方法](../../../csharp/programming-guide/generics/generic-methods.md)  
+- [泛型方法](./generic-methods.md)  
   
-- [泛型委托](../../../csharp/programming-guide/generics/generic-delegates.md)  
+- [泛型委托](./generic-delegates.md)  
   
-- [C++ 模板和 C# 泛型之间的区别](../../../csharp/programming-guide/generics/differences-between-cpp-templates-and-csharp-generics.md)  
+- [C++ 模板和 C# 泛型之间的区别](./differences-between-cpp-templates-and-csharp-generics.md)  
   
-- [泛型和反射](../../../csharp/programming-guide/generics/generics-and-reflection.md)  
+- [泛型和反射](./generics-and-reflection.md)  
   
-- [运行时中的泛型](../../../csharp/programming-guide/generics/generics-in-the-run-time.md)  
+- [运行时中的泛型](./generics-in-the-run-time.md)  
   
 ## <a name="c-language-specification"></a>C# 语言规范  
  有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/types.md#constructed-types)。  
@@ -77,8 +77,8 @@ C# 语言和公共语言运行时 (CLR) 的 2.0 版本中添加了泛型。 泛�
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Collections.Generic>
-- [C# 编程指南](../../../csharp/programming-guide/index.md)
-- [类型](../../../csharp/programming-guide/types/index.md)
-- [\<typeparam>](../../../csharp/programming-guide/xmldoc/typeparam.md)
-- [\<typeparamref>](../../../csharp/programming-guide/xmldoc/typeparamref.md)
+- [C# 编程指南](../index.md)
+- [类型](../types/index.md)
+- [\<typeparam>](../xmldoc/typeparam.md)
+- [\<typeparamref>](../xmldoc/typeparamref.md)
 - [.NET 中的泛型](../../../standard/generics/index.md)

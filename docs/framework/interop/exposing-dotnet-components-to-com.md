@@ -8,48 +8,49 @@ helpviewer_keywords:
 ms.assetid: e42a65f7-1e61-411f-b09a-aca1bbce24c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c88466df32a4167b2b32a7cc0f64eb306e392611
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 1879f5b5aa2fbe6b0e51f9b38fca3af1f4c0cedf
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629338"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68971759"
 ---
 # <a name="exposing-net-framework-components-to-com"></a>向 COM 公开 .NET Framework 组件
-对开发人员而言，编写 .NET 类型以及从非托管代码使用该类型是不同的活动。 本部分介绍编写与 COM 客户端互操作的托管代码的几个提示：  
-  
-- [为互操作限定 .NET 类型](../../../docs/standard/native-interop/qualify-net-types-for-interoperation.md)。  
-  
-     要向 COM 公开的所有托管类型、方法、属性、字段和事件都必须是公开的。 各类型必须具有公共无参数默认构造函数，通过 COM 只能调用该构造函数。  
-  
-- [应用互操作属性](../../../docs/standard/native-interop/apply-interop-attributes.md)。  
-  
-     托管代码中的自定义属性可增强组件的互操作性。  
-  
-- [将 COM 的程序集打包](../../../docs/framework/interop/packaging-an-assembly-for-com.md)。  
-  
-     COM 开发人员可能会要求用户总结引用和部署程序集所涉及的步骤。  
-  
- 此外，本部分还确定了从 COM 客户端使用托管类型的相关任务。  
-  
-#### <a name="to-consume-a-managed-type-from-com"></a>从 COM 使用托管类型  
-  
-1. [向 COM 注册程序集](../../../docs/framework/interop/registering-assemblies-with-com.md)。  
-  
-     必须在设计时注册程序集（和类型库）中的类型。 如果安装程序未注册程序集，请指示 COM 开发人员使用 Regasm.exe。  
-  
-2. [从 COM 引用 .NET 类型](../../../docs/framework/interop/how-to-reference-net-types-from-com.md)。  
-  
-     COM 开发人员可使用当前使用的相同工具和技术引用程序集中的类型。  
-  
-3. [调用 .NET 对象](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8hw8h46b(v=vs.100))。  
-  
-     COM 开发人员可采用在任何非托管类型上调用方法的方式在 .NET 对象上调用方法。 例如，COM CoCreateInstance API 激活 .NET 对象  。  
-  
-4. [为 COM 访问部署应用程序](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c2850st8(v=vs.100))。  
-  
-     具有强名称的程序集可安装在全局程序集缓存中，并向其发布者请求签名。 不具有强名称的程序集必须安装在客户端的应用程序目录中。  
-  
+
+对开发人员而言，编写 .NET 类型以及从非托管代码使用该类型是不同的活动。 本部分介绍编写与 COM 客户端互操作的托管代码的几个提示：
+
+- [为互操作限定 .NET 类型](../../../docs/standard/native-interop/qualify-net-types-for-interoperation.md)。
+
+     要向 COM 公开的所有托管类型、方法、属性、字段和事件都必须是公开的。 各类型必须具有公共无参数默认构造函数，通过 COM 只能调用该构造函数。
+
+- [应用互操作属性](../../../docs/standard/native-interop/apply-interop-attributes.md)。
+
+     托管代码中的自定义属性可增强组件的互操作性。
+
+- [将 COM 的程序集打包](../../../docs/framework/interop/packaging-an-assembly-for-com.md)。
+
+     COM 开发人员可能会要求用户总结引用和部署程序集所涉及的步骤。
+
+ 此外，本部分还确定了从 COM 客户端使用托管类型的相关任务。
+
+## <a name="to-consume-a-managed-type-from-com"></a>从 COM 使用托管类型
+
+1. [向 COM 注册程序集](../../../docs/framework/interop/registering-assemblies-with-com.md)。
+
+     必须在设计时注册程序集（和类型库）中的类型。 如果安装程序未注册程序集，请指示 COM 开发人员使用 Regasm.exe。
+
+2. [从 COM 引用 .NET 类型](../../../docs/framework/interop/how-to-reference-net-types-from-com.md)。
+
+     COM 开发人员可使用当前使用的相同工具和技术引用程序集中的类型。
+
+3. [调用 .NET 对象](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8hw8h46b(v=vs.100))。
+
+     COM 开发人员可采用在任何非托管类型上调用方法的方式在 .NET 对象上调用方法。 例如，COM CoCreateInstance API 激活 .NET 对象  。
+
+4. [为 COM 访问部署应用程序](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c2850st8(v=vs.100))。
+
+     具有强名称的程序集可安装在全局程序集缓存中，并向其发布者请求签名。 不具有强名称的程序集必须安装在客户端的应用程序目录中。
+
 ## <a name="see-also"></a>请参阅
 
 - [与非托管代码交互操作](../../../docs/framework/interop/index.md)

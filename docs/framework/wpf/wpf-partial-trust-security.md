@@ -15,12 +15,12 @@ helpviewer_keywords:
 - feature security requirements [WPF]
 - managing permissions [WPF]
 ms.assetid: ef2c0810-1dbf-4511-babd-1fab95b523b5
-ms.openlocfilehash: 683d0a28fa151cf2116b4125dfb7a604605c7c4a
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: b68148b08cf6b5f980bc09e497e845558ae882fb
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68972245"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567529"
 ---
 # <a name="wpf-partial-trust-security"></a>WPF 部分信任安全
 <a name="introduction"></a>一般情况下，应该限制 Internet 应用程序直接访问关键系统资源，防止恶意损坏。 默认情况下, HTML 和客户端脚本语言不能访问关键系统资源。 由于可以从浏览器启动 Windows Presentation Foundation (WPF) 浏览器承载的应用程序, 因此它们应符合一组类似的限制。 若要强制实施这些[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]限制, 需要同时依赖于代码访问安全性 (CAS) 和 ClickOnce (请参阅[WPF 安全策略-平台安全性](wpf-security-strategy-platform-security.md))。 默认情况下, 浏览器承载的应用程序请求 Internet 区域 CA 权限集, 不管它们是从 Internet、本地 intranet 还是本地计算机启动。 如果应用程序的运行权限小于完整权限集，则说明该应用程序正在部分信任环境下运行。  
@@ -50,7 +50,7 @@ ms.locfileid: "68972245"
 |编辑|拼写检查<br /><br /> RichTextBox<br /><br /> 纯文本和墨迹剪贴板支持<br /><br /> 用户启动的粘贴<br /><br /> 复制选定内容|  
 |控件|常规控件|  
   
- 此表包含[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]高级别功能。 有关更多详细信息, Windows 软件开发工具包 (SDK) 记录中[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]每个成员所需的权限。 此外，以下功能含有部分信任执行的相关详细信息，其中包括特殊注意事项。  
+ 此表包含[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]高级别功能。 有关更多详细信息, Windows SDK 记录中[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]每个成员所需的权限。 此外，以下功能含有部分信任执行的相关详细信息，其中包括特殊注意事项。  
   
 - [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)](请参阅[XAML 概述 (WPF)](./advanced/xaml-overview-wpf.md))。  
   

@@ -9,15 +9,15 @@ helpviewer_keywords:
 - .NET Framework application configuration, cryptography
 - default cryptography
 ms.assetid: eee3ccb8-2c0d-4f35-b38d-6892a46c14e5
-ms.openlocfilehash: 23bf831a4374add55258f5fb41c17a5d4a8f14c3
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 77f26405792ac782f2a04e174e8165a09b7f22f6
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66832818"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567333"
 ---
 # <a name="configuring-cryptography-classes"></a>配置加密类
-Windows 软件开发工具包 (SDK)，计算机管理员可以配置的默认加密算法和.NET Framework 和相应地编写的应用程序使用的算法实现。  例如，具有其自己的加密算法的实现的企业可以对 Windows SDK 而不是实现默认提供该实现。 尽管使用加密的托管应用程序始终可以选择显式绑定到特定的实现，但建议他们使用的加密配置系统创建加密对象。  
+Windows SDK 允许计算机管理员配置 .NET Framework 和适当编写的应用程序使用的默认加密算法和算法实现。  例如, 具有自己的加密算法实现的企业可以使该实现成为默认实现, 而不是在 Windows SDK 中提供的实现。 尽管使用加密的托管应用程序始终可以选择显式绑定到特定的实现, 但建议使用加密配置系统来创建加密对象。  
   
 ## <a name="in-this-section"></a>本节内容  
  [将算法名称映射到加密类](../../../docs/framework/configure-apps/map-algorithm-names-to-cryptography-classes.md)  
@@ -28,7 +28,7 @@ Windows 软件开发工具包 (SDK)，计算机管理员可以配置的默认加
   
 ## <a name="related-sections"></a>相关章节  
  [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)  
- 提供加密服务提供的 Windows SDK 的概述。  
+ 概述 Windows SDK 提供的加密服务。  
   
  [加密设置架构](../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
  描述将友好算法名映射到实现密码算法的类的元素。

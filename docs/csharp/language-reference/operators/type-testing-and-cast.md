@@ -1,5 +1,5 @@
 ---
-title: 类型测试和转换运算符 - C# 引用
+title: 类型测试和强制转换运算符 - C# 引用
 description: 了解可用于检查表达式结果的类型并根据需要将其转换为另一种类型的 C# 运算符。
 ms.date: 06/21/2019
 author: pkulikov
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - cast expression [C#]
 - () operator [C#]
 - typeof operator [C#]
-ms.openlocfilehash: 81e7678bc21529c159b8137b06b93774af0ff434
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: 6966d0b7a4f8a96bddb17ce2017fd53fc07ae922
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796503"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69572311"
 ---
-# <a name="type-testing-and-conversion-operators-c-reference"></a>类型测试和转换运算符（C# 引用）
+# <a name="type-testing-and-cast-operators-c-reference"></a>类型测试和强制转换运算符（C# 引用）
 
 可以使用以下运算符来执行类型检查或类型转换：
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cf5eacd0-d3ec-4879-b6da-5fd5e4372202
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 858d651523ac6196aa2dcad008ea53674eb01b04
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 37c6e87ea50f3978bb896c7896a41b2faa9798bc
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66832837"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69566977"
 ---
 # <a name="global-assembly-cache"></a>全局程序集缓存
 安装了公共语言运行时的每台计算机均具有计算机范围的代码缓存，称为全局程序集缓存。 全局程序集缓存中存储专门指定给由计算机中若干应用程序共享的程序集。  
@@ -31,7 +31,7 @@ ms.locfileid: "66832837"
   
 - 使用专用于全局程序集缓存的安装程序。 这是将程序集安装到全局程序集缓存中的首选项。  
   
-- 使用 Windows 软件开发工具包 (SDK) 提供的名为[全局程序集缓存工具 (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) 的开发人员工具。  
+- 使用 Windows SDK 提供的名为[全局程序集缓存工具 (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) 的开发人员工具。  
   
     > [!NOTE]
     >  在部署方案中，使用 Windows Installer 将程序集安装到全局程序集缓存中。 仅在开发方案中使用全局程序集缓存工具，因为它不提供 Windows Installer 所能提供的程序集引用计数等功能。  

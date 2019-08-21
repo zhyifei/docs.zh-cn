@@ -5,18 +5,18 @@ author: ncarandini
 ms.author: wiwagn
 ms.date: 09/08/2017
 ms.custom: seodec18
-ms.openlocfilehash: f6c1580d3f596c638969e668a87ee70d75e6d9bf
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 8100add17b61424624f27de705728935f3a1160b
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68626386"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69038028"
 ---
 # <a name="unit-testing-c-with-mstest-and-net-core"></a>使用 MSTest 和 .NET Core 进行 C# 单元测试
 
 本教程介绍分步构建示例解决方案的交互式体验，以了解单元测试概念。 如果希望使用预构建解决方案学习本教程，请在开始前[查看或下载示例代码](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-mstest/)。 有关下载说明，请参阅[示例和教程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
 
-### <a name="create-the-source-project"></a>创建源项目
+## <a name="create-the-source-project"></a>创建源项目
 
 打开 shell 窗口。 创建一个名为 unit-testing-using-mstest 的目录，用以保存解决方案  。 在此新目录中，运行 [`dotnet new sln`](../tools/dotnet-new.md) 为类库和测试项目创建新的解决方案文件。 接下来，创建 PrimeService  目录。 下图显示了当前的目录和文件结构：
 
@@ -45,7 +45,7 @@ namespace Prime.Services
 
 将目录更改回 unit-testing-using-mstest  目录。 运行 [`dotnet sln add PrimeService/PrimeService.csproj`](../tools/dotnet-sln.md) 向解决方案添加类库项目。 
 
-### <a name="create-the-test-project"></a>创建测试项目
+## <a name="create-the-test-project"></a>创建测试项目
 
 接下来，创建 PrimeService.Tests  目录。 下图显示了它的目录结构：
 

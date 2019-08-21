@@ -9,12 +9,12 @@ helpviewer_keywords:
 - mc:ProcessContent attribute
 - XAML [WPF], mc:ProcessContent attribute
 ms.assetid: acd9a6ef-b7ca-4146-abb6-60f3b366e9ec
-ms.openlocfilehash: 40c1a8513608728a84b6b605f9ad18603123ea2e
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: e99ca09d51f3ba6c01b9e400bfba00749faf62b3
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401527"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567437"
 ---
 # <a name="mcignorable-attribute"></a>mc:Ignorable 特性
 指定在[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]标记文件中遇到的哪些命名空间前缀可能会被[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]处理器忽略。 特性支持用于自定义命名空间映射[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]和版本控制的标记兼容性。 `mc:Ignorable`  
@@ -63,7 +63,7 @@ ms.locfileid: "68401527"
   
  可以使用一个或多个空白字符作为分隔符, 在属性中指定多个前缀, 例如: `mc:Ignorable="ignore1 ignore2"`。  
 
- 命名空间定义了在此区域[!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)]中未记录的其他元素和特性。 [!INCLUDE[TLA#tla_mcxmlnsv1](../../../../includes/tlasharptla-mcxmlnsv1-md.md)] 有关详细信息, 请参阅[XML 标记兼容性规范](/office/open-xml/introduction-to-markup-compatibility#markup-compatibility-in-the-open-xml-file-formats-specification)。  
+ [!INCLUDE[TLA#tla_mcxmlnsv1](../../../../includes/tlasharptla-mcxmlnsv1-md.md)]命名空间定义 SDK 的此区域中未记录的其他元素和特性。 有关详细信息, 请参阅[XML 标记兼容性规范](/office/open-xml/introduction-to-markup-compatibility#markup-compatibility-in-the-open-xml-file-formats-specification)。  
   
 ## <a name="see-also"></a>请参阅
 

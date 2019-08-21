@@ -6,27 +6,27 @@ helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: 21ada083f69b0acf49490b331c5a416361a2ee84
-ms.sourcegitcommit: 46c68557bf6395f0ab9915f7558f2faae0097695
+ms.openlocfilehash: 1b80082d10ad9ee760a184f496793ad5c69202da
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "67802318"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69588480"
 ---
 # <a name="strings-c-programming-guide"></a>字符串（C# 编程指南）
 字符串是值为文本的 <xref:System.String> 类型对象。 文本在内部存储为 <xref:System.Char> 对象的依序只读集合。 在 C# 字符串末尾没有 null 终止字符；因此，一个 C# 字符串可以包含任何数量的嵌入的 null 字符 ('\0')。 字符串的 <xref:System.String.Length%2A> 属性表示其包含的 `Char` 对象数量，而非 Unicode 字符数。 若要访问字符串中的各个 Unicode 码位，请使用 <xref:System.Globalization.StringInfo> 对象。  
   
 ## <a name="string-vs-systemstring"></a>string 与System.String  
- 在 C# 中，`string` 关键字是 <xref:System.String> 的别名。 因此，`String` 和 `string` 是等效的，你可以使用你所喜欢的任何一种命名约定。 `String` 类提供了安全创建、操作和比较字符串的多种方法。 此外，C# 语言重载了部分运算符，以简化常见字符串操作。 有关关键字的详细信息，请参阅 [string](../../../csharp/language-reference/keywords/string.md)。 有关类型及其方法的详细信息，请参阅 <xref:System.String>。  
+ 在 C# 中，`string` 关键字是 <xref:System.String> 的别名。 因此，`String` 和 `string` 是等效的，你可以使用你所喜欢的任何一种命名约定。 `String` 类提供了安全创建、操作和比较字符串的多种方法。 此外，C# 语言重载了部分运算符，以简化常见字符串操作。 有关关键字的详细信息，请参阅 [string](../../language-reference/keywords/string.md)。 有关类型及其方法的详细信息，请参阅 <xref:System.String>。  
   
 ## <a name="declaring-and-initializing-strings"></a>声明和初始化字符串  
  可以使用各种方法声明和初始化字符串，如以下示例中所示：  
   
  [!code-csharp[csProgGuideStrings#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#1)]  
   
- 请注意，不要使用 [new](../../../csharp/language-reference/operators/new-operator.md) 运算符创建字符串对象，除非使用字符数组初始化字符串。  
+ 请注意，不要使用 [new](../../language-reference/operators/new-operator.md) 运算符创建字符串对象，除非使用字符数组初始化字符串。  
   
- 使用 <xref:System.String.Empty> 常量值初始化字符串，以新建字符串长度为零的 <xref:System.String> 对象。 长度为零的字符串文本表示法是“”。 通过使用 <xref:System.String.Empty> 值（而不是 [null](../../../csharp/language-reference/keywords/null.md)）初始化字符串，可以减少 <xref:System.NullReferenceException> 发生的可能性。 尝试访问字符串前，先使用静态 <xref:System.String.IsNullOrEmpty%28System.String%29> 方法验证字符串的值。  
+ 使用 <xref:System.String.Empty> 常量值初始化字符串，以新建字符串长度为零的 <xref:System.String> 对象。 长度为零的字符串文本表示法是“”。 通过使用 <xref:System.String.Empty> 值（而不是 [null](../../language-reference/keywords/null.md)）初始化字符串，可以减少 <xref:System.NullReferenceException> 发生的可能性。 尝试访问字符串前，先使用静态 <xref:System.String.IsNullOrEmpty%28System.String%29> 方法验证字符串的值。  
   
 ## <a name="immutability-of-string-objects"></a>字符串对象的不可变性  
  字符串对象是“不可变的”  ：它们在创建后无法更改。 看起来是在修改字符串的所有 <xref:System.String> 方法和 C# 运算符实际上都是在新的字符串对象中返回结果。 在下面的示例中，当 `s1` 和 `s2` 的内容被串联在一起以形成单个字符串时，两个原始字符串没有被修改。 `+=` 运算符创建一个新的字符串，其中包含组合的内容。 这个新对象被分配给变量 `s1`，而分配给 `s1` 的原始对象被释放，以供垃圾回收，因为没有任何其他变量包含对它的引用。  
@@ -125,7 +125,7 @@ string s = String.Empty;
  [!code-csharp[TestStringBuilder#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/TestStringBuilder.cs)]
   
 ## <a name="strings-extension-methods-and-linq"></a>字符串、扩展方法和 LINQ  
- 由于 <xref:System.String> 类型实现 <xref:System.Collections.Generic.IEnumerable%601>，因此可以对字符串使用 <xref:System.Linq.Enumerable> 类中定义的扩展方法。 为了避免视觉干扰，这些方法已从 <xref:System.String> 类型的 IntelliSense 中排除，但它们仍然可用。 此外，还可以使用字符串上的 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询表达式。 有关详细信息，请参阅 [LINQ 和字符串](../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)。  
+ 由于 <xref:System.String> 类型实现 <xref:System.Collections.Generic.IEnumerable%601>，因此可以对字符串使用 <xref:System.Linq.Enumerable> 类中定义的扩展方法。 为了避免视觉干扰，这些方法已从 <xref:System.String> 类型的 IntelliSense 中排除，但它们仍然可用。 此外，还可以使用字符串上的 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询表达式。 有关详细信息，请参阅 [LINQ 和字符串](../concepts/linq/linq-and-strings.md)。  
   
 ## <a name="related-topics"></a>相关主题  
   
@@ -136,12 +136,12 @@ string s = String.Empty;
 |[如何：连接多个字符串](../../how-to/concatenate-multiple-strings.md)|演示将多个字符串联接成一个字符串的多种方式。|
 |[如何：使用 String.Split 分析字符串](../../how-to/parse-strings-using-split.md)|包含代码示例，演示了如何使用 `String.Split` 方法来分析字符串。|  
 |[如何：搜索字符串](../../how-to/search-strings.md)|说明如何在字符串中使用搜索来搜索特定的文本或模式。|  
-|[如何：确定字符串是否表示数值](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)|演示如何安全地分析一个字符串，以查看其是否具有有效的数值。|  
+|[如何：确定字符串是否表示数值](./how-to-determine-whether-a-string-represents-a-numeric-value.md)|演示如何安全地分析一个字符串，以查看其是否具有有效的数值。|  
 |[字符串内插](../../language-reference/tokens/interpolated.md)|介绍字符串内插功能，它提供了一种方便的语法来格式化字符串。|
-|[基本字符串操作](../../../../docs/standard/base-types/basic-string-operations.md)|收录了介绍如何使用 <xref:System.String?displayProperty=nameWithType> 和 <xref:System.Text.StringBuilder?displayProperty=nameWithType> 方法执行基本字符串操作的主题链接。|  
+|[基本字符串操作](../../../standard/base-types/basic-string-operations.md)|收录了介绍如何使用 <xref:System.String?displayProperty=nameWithType> 和 <xref:System.Text.StringBuilder?displayProperty=nameWithType> 方法执行基本字符串操作的主题链接。|  
 |[分析字符串](../../../standard/base-types/parsing-strings.md)|介绍如何将 .NET 基类型的字符串表示形式转换为相应类型的实例。|  
 |[分析 .NET 中的日期和时间字符串](../../../standard/base-types/parsing-datetime.md)|展示了如何将字符串（如“01/24/2008”）转换为 <xref:System.DateTime?displayProperty=nameWithType> 对象。|  
-|[比较字符串](../../../../docs/standard/base-types/comparing.md)|包括有关如何比较字符串的信息，并提供 C# 和 Visual Basic 中的示例。|  
+|[比较字符串](../../../standard/base-types/comparing.md)|包括有关如何比较字符串的信息，并提供 C# 和 Visual Basic 中的示例。|  
 |[使用 StringBuilder 类](../../../standard/base-types/stringbuilder.md)|介绍了如何使用 <xref:System.Text.StringBuilder> 类创建和修改动态字符串对象。|  
-|[LINQ 和字符串](../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)|提供有关如何使用 LINQ 查询来执行各种字符串操作的信息。|  
-|[C# 编程指南](../../../csharp/programming-guide/index.md)|提供介绍在 C# 中编程构造的主题的链接。|  
+|[LINQ 和字符串](../concepts/linq/linq-and-strings.md)|提供有关如何使用 LINQ 查询来执行各种字符串操作的信息。|  
+|[C# 编程指南](../index.md)|提供介绍在 C# 中编程构造的主题的链接。|  

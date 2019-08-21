@@ -7,16 +7,18 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 07/25/2019
-ms.openlocfilehash: 29e62f01ab6a749c252aa488dfbccd5b27cb9dba
-ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
+ms.openlocfilehash: f1fce2899e9e11b1007d6c270180b27a29eaa167
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68733376"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039436"
 ---
 # <a name="whats-new-in-net-core-30-preview-7"></a>.NET Core 3.0（预览版 7）中的新增功能
 
+
 本文介绍 .NET Core 3.0（预览版 7）的新增功能。最大的增强功能之一是对 Windows 桌面应用程序的支持（仅限 Windows）。通过使用 .NET Core 3.0 SDK Windows 桌面组件，可移植 Windows 窗体和 Windows Presentation Foundation (WPF) 应用程序。明确地说，只有在 Windows 上才支持和包含 Windows 桌面组件。有关详细信息，请参阅本文后面的 [Windows 桌面](#windows-desktop)部分。
+
 
 .NET Core 3.0 添加了对 C#8.0 的支持。 强烈建议使用[最新版本的 Visual Studio 预览版](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+preview)或带有 OmniSharp 扩展的 Visual Studio Code。
 
@@ -38,7 +40,9 @@ ms.locfileid: "68733376"
 
 ## <a name="net-core-sdk-windows-installer"></a>.NET Core SDK Windows Installer
 
+
 从 .NET Core 3.0 开始，用于 Windows 的 MSI 安装程序发生了变化。SDK 安装程序现在将对 SDK 功能区段版本进行就地升级。功能区段在版本号的“修补程序”**部分的“百位”**组中定义。例如，3.0.101**** 和 3.0.201**** 是两个不同功能区段中的版本，而 3.0.101**** 和 3.0.199**** 则属于同一个功能区段。在安装 .NET Core SDK 3.0.101**** 时，将从计算机中删除 .NET Core SDK 3.0.100****（如果存在）。 而在将 .NET Core SDK 3.0.200**** 安装在同一台计算机上时，不会删除 .NET Core SDK 3.0.101**** 。
+
 
 有关版本控制的详细信息，请参阅 [.NET Core 的版本控制方式概述](../versions/index.md)。
 
@@ -149,7 +153,9 @@ dotnet publish -r <rid> -c Release
 
 例如，包含的基本“hello world”新控制台项目模板在发布时命中大小约为 70 MB。 通过使用 `<PublishTrimmed>`，其大小将减少到约 30 MB。
 
+
 请务必考虑到使用反射或相关动态功能的应用程序或框架（包括 ASP.NET Core 和 WPF）通常会在剪裁时损坏。发生此损坏是因为链接器不知道此动态行为，并且不能确定反射需要哪些框架类型。可配置 IL 链接器工具以发现这种情况。
+
 
 最重要的是，剪裁后务必对应用进行测试。
 
@@ -160,6 +166,7 @@ dotnet publish -r <rid> -c Release
 .NET Core 3.0 中默认启用了[分层编译](https://devblogs.microsoft.com/dotnet/tiered-compilation-preview-in-net-core-2-1/) (TC)。 此功能使运行时能够更适应地使用实时 (JIT) 编译器来获得更好的性能。
 
 TC 的主要优势是使（重新）实时编译方法能够要么牺牲代码质量以更快地生成代码，要么以较慢的速度生成更高质量的代码。 这有助于提高应用程序在从启动到稳定状态的各个执行阶段的性能。 这与非 TC 方法完全不同，其中每种方法均以单一方式进行编译（与高质量层相同），这种方法偏向于稳定状态而不是启动性能。
+
 
 若要启用快速 JIT（第 0 层实时编译的代码），请在项目文件中使用此设置：
 
@@ -291,7 +298,7 @@ Visual Studio 2019 添加了适用于 .NET Core 3.0 Windows 窗体和 WPF 的“
 <RuntimeIdentifiers>win-x86;win-x64</RuntimeIdentifiers>
 ```
 
-## <a name="winforms-highdpi"></a>WinForms HighDPI
+## <a name="winforms-high-dpi"></a>WinForms 高 DPI
 
 .NET Core Windows 窗体应用程序可以使用 <xref:System.Windows.Forms.Application.SetHighDpiMode(System.Windows.Forms.HighDpiMode)?displayProperty=nameWithType> 设置高 DPI 模式。 `SetHighDpiMode` 方法可设置相应的高 DPI 模式，除非该设置已通过其他方式（例如使用 `App.Manifest` 或在 `Application.Run` 前面使用 P/Invoke）进行设置。
 
@@ -305,7 +312,7 @@ Visual Studio 2019 添加了适用于 .NET Core 3.0 Windows 窗体和 WPF 的“
 
 有关高 DPI 模式的详细信息，请参阅[在 Windows 上开发高 DPI 桌面应用程序](/windows/desktop/hidpi/high-dpi-desktop-application-development-on-windows)。
 
-### <a name="ranges-and-indices"></a>范围和索引
+## <a name="ranges-and-indices"></a>范围和索引
 
 新 <xref:System.Index?displayProperty=nameWithType> 类型可用于编制索引。可从 `int` 创建一个从开头开始计数的索引，也可使用前缀 `^` 运算符 (C#) 创建一个从末尾开始计数的索引：
 
@@ -324,9 +331,11 @@ var slice = a[i1..i2]; // { 3, 4, 5 }
 
 有关详细信息，请参阅[范围和索引教程](../../csharp/tutorials/ranges-indexes.md)。
 
-### <a name="async-streams"></a>异步流
+## <a name="async-streams"></a>异步流
+
 
 <xref:System.Collections.Generic.IAsyncEnumerable%601> 类型是 <xref:System.Collections.Generic.IEnumerable%601> 的新异步版本。通过该语言，可通过 `IAsyncEnumerable<T>` 执行 `await foreach` 操作来使用其元素，并对其使用 `yield return` 操作来生成元素。
+
 
 下面的示例演示如何生成和使用异步流。 `foreach` 语句为异步语句，它本身使用 `yield return` 为调用方生成异步流。 此模式（使用 `yield return`）是生成异步流的建议模型。
 
@@ -403,17 +412,15 @@ async IAsyncEnumerable<int> GetBigResultsAsync()
 
 下面是可用作起始点的 `JsonDocument` 和 `JsonElement` 的示例用法：
 
-下面的 C# 8.0 示例展示了如何读取 Visual Studio Code 创建的 [**launch.json**](https://github.com/dotnet/samples/blob/master/snippets/core/whats-new/whats-new-in-30/cs/launch.json) 文件：
-
 [!CODE-csharp[JsonDocument](~/samples/snippets/core/whats-new/whats-new-in-30/cs/program.cs#ReadJson)]
+
+下面的 C# 8.0 示例展示了如何读取 Visual Studio Code 创建的 [**launch.json**](https://github.com/dotnet/samples/blob/master/snippets/core/whats-new/whats-new-in-30/cs/launch.json) 文件：
 
 [!CODE-csharp[JsonDocument](~/samples/snippets/core/whats-new/whats-new-in-30/cs/program.cs#ReadJsonCall)]
 
 ### <a name="jsonserializer"></a>JsonSerializer
 
 <xref:System.Text.Json.JsonSerializer?displayProperty=nameWithType> 在 <xref:System.Text.Json.Utf8JsonReader> 和 <xref:System.Text.Json.Utf8JsonWriter> 的基础上生成，可在处理 JSON 文档和片段时提供快速的低内存序列化选项。
-
-查看： https://github.com/dotnet/corefx/blob/master/src/System.Text.Json/docs/SerializerProgrammingModel.md ，获取可移植到本文的示例
 
 下面是一个将对象序列化为 JSON 的示例：
 

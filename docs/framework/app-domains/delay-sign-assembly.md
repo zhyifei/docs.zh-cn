@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9d300e17-5bf1-4360-97da-2aa55efd9070
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eb055285af7365536f7e1ad7c7d9290e51be50db
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: fc4ff8f914f0e049a0fdf27b5008b1e39bc40116
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66832869"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69566779"
 ---
 # <a name="delay-signing-an-assembly"></a>延迟为程序集签名
 组织可以使用严密保护的密钥对，开发人员无法每天对其进行访问。 通常情况下公钥可用，但私钥的访问权限仅限于少数几个人。 开发使用强名称的程序集时，每个引用强名称目标程序集的程序集都包含用于向目标程序集赋予强名称的公钥的标记。 这要求公钥在开发过程中可用。  
@@ -28,7 +28,7 @@ ms.locfileid: "66832869"
   
  以下步骤概述了延迟程序集签名的过程：  
   
-1. 从将执行最终签名的组织处获取密钥对的公钥部分。 此密钥通常是 .snk 文件，可以通过使用 Windows 软件开发工具包 (SDK) 提供的[强名称工具 (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) 创建。  
+1. 从将执行最终签名的组织处获取密钥对的公钥部分。 此密钥通常是 .snk 文件，可以通过使用 Windows SDK 提供的[强名称工具 (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) 创建。  
   
 2. 使用 <xref:System.Reflection> 中的两个自定义属性对程序集的源代码进行注释：  
   

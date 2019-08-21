@@ -9,12 +9,12 @@ helpviewer_keywords:
 - namespace keyword [C#]
 - scope [C#]
 ms.assetid: 0a788423-9110-42e0-97d9-bda41ca4870f
-ms.openlocfilehash: df921ecc670bf12411dc8b0d828d6c19bb0a1aec
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 8cc1d1461a33ab94f8ae399d6ff40f26eaf7f74a
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66422741"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039455"
 ---
 # <a name="namespace-c-reference"></a>命名空间（C# 参考）
 
@@ -52,24 +52,15 @@ ms.locfileid: "66422741"
 
 [!code-csharp[csrefKeywordsNamespace#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace.cs#3)]
 
-## <a name="related-resources"></a>相关资源
-
-有关使用命名空间的详细信息，请参阅以下主题：
-
-- [命名空间](../../programming-guide/namespaces/index.md)
-
-- [使用命名空间](../../programming-guide/namespaces/using-namespaces.md)
-
-- [如何：使用全局命名空间别名](../../programming-guide/namespaces/how-to-use-the-global-namespace-alias.md)
-
 ## <a name="c-language-specification"></a>C# 语言规范
 
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/introduction.md)中的[命名空间](~/_csharplang/spec/namespaces.md)部分。
 
 ## <a name="see-also"></a>请参阅
 
-- [C# 参考](../../language-reference/index.md)
-- [C# 编程指南](../../programming-guide/index.md)
+- [C# 参考](../index.md)
 - [C# 关键字](index.md)
 - [using](using-directive.md)
 - [using static](using-static.md)
+- [命名空间别名限定符 `::`](../operators/namespace-alias-qualifier.md)
+- [命名空间](../../programming-guide/namespaces/index.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: b5382965-0053-47cf-b92f-862860275a01
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 87fcf4221dc5b334c6e9342c2aaac04a417a9f46
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: d75412394ce42f786da88f3d334853b99f266aca
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66832778"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567192"
 ---
 # <a name="alexe-assembly-linker"></a>Al.exe（程序集链接器）
 
@@ -54,7 +54,7 @@ al sources options
 |**/config[uration]:** `text`|为程序集中的“配置”字段指定字符串。 如果 `text` 包含空格，则将字符串放置在双引号 (" ") 中。 此字符串是程序集上的自定义特性，可以使用反射进行查看。<br /><br /> 如果文本是空字符串，则 Win32“配置”资源将显示为一个空格。<br /><br /> 还可以将此选项指定为任何 MSIL 模块的源代码中的自定义特性 (<xref:System.Reflection.AssemblyConfigurationAttribute>)。|
 |**/copy[right]:** `text`|为程序集中的“版权”字段指定字符串。 如果 `text` 包含空格，则将字符串放置在双引号 (" ") 中。 此字符串是程序集上的自定义特性，可以使用反射进行查看。<br /><br /> 如果不指定 **/win32res**，则 **/copyright** 在文件资源管理器中将显示为 Win32“版权”资源。<br /><br /> 如果文本是空字符串，则 Win32 Copyright 资源将显示为一个空格。<br /><br /> 如果指定 **/win32res**，则 **/copyright** 将不会影响 Win32 资源信息。<br /><br /> 还可以将此选项指定为任何 MSIL 模块的源代码中的自定义特性 (<xref:System.Reflection.AssemblyCopyrightAttribute>)。|
 |**/c[ulture]:** `text`|指定要与程序集关联的区域性字符串。 区域性的有效值是名为“Tags for the Identification of Languages”的 Internet Requests for Comments (RFC) 文档 1766 定义的那些值。<br /><br /> 如果 `text` 包含空格，则将字符串放置在双引号 (" ") 中。 没有默认的区域性字符串。 使用反射可以查看此字符串。<br /><br /> 有关有效的 `text` 字符串的信息，请参见 <xref:System.Globalization.CultureInfo>。<br /><br /> 还可以将此选项指定为任何 MSIL 模块的源代码中的自定义特性 (<xref:System.Reflection.AssemblyCultureAttribute>)。|
-|**/delay[sign][+&#124;-]**|指定程序集是完全签名的还是部分签名的。 如果需要完全签名的程序集，请使用 **/delaysign-** 。 如果仅需要将公钥包含在程序集中，则使用 **/delaysign+** 。<br /><br /> 请求完全签名的程序集时，Al.exe 会对包含清单（程序集元数据）的文件进行哈希处理，并使用私钥对哈希进行签名  。 产生的数字签名存储在包含清单的文件中。 在对程序集延迟签名时，Al.exe 不会计算和存储签名，而只是在文件中保留空间以便稍后可添加该签名  。<br /><br /> 默认值为 **/delaysign-** 。<br /><br /> 除非与 **/keyfile** 或 **/keyname** 一同使用，否则 **/delaysign** 选项将不起作用。<br /><br /> 例如，使用 **/delaysign+** 可允许测试人员将程序集放入全局缓存中。 测试完成后，可以通过将私钥包含在程序集中来对程序集进行完全签名。<br /><br /> 注意:使用 [Gacutil.exe（全局程序集缓存工具）](../../../docs/framework/tools/gacutil-exe-gac-tool.md)将延迟签名的程序集放入全局缓存之前，请使用 [Sn.exe（强名称工具）](../../../docs/framework/tools/sn-exe-strong-name-tool.md)来注册该程序集以跳过验证   。 例如 `Sn.exe –Vr delaySignedAssembly`。 仅将它用于开发。<br /><br /> 还可以将此选项指定为任何 MSIL 模块的源代码中的自定义特性 (<xref:System.Reflection.AssemblyDelaySignAttribute>)。|
+|**/delay[sign][+&#124;-]**|指定程序集是完全签名的还是部分签名的。 如果需要完全签名的程序集，请使用 **/delaysign-** 。 如果仅需要将公钥包含在程序集中，则使用 **/delaysign+** 。<br /><br /> 请求完全签名的程序集时，Al.exe 会对包含清单（程序集元数据）的文件进行哈希处理，并使用私钥对哈希进行签名  。 产生的数字签名存储在包含清单的文件中。 在对程序集延迟签名时，Al.exe 不会计算和存储签名，而只是在文件中保留空间以便稍后可添加该签名  。<br /><br /> 默认值为 **/delaysign-** 。<br /><br /> 除非与 **/keyfile** 或 **/keyname** 一同使用，否则 **/delaysign** 选项将不起作用。<br /><br /> 例如，使用 **/delaysign+** 可允许测试人员将程序集放入全局缓存中。 测试完成后，可以通过将私钥包含在程序集中来对程序集进行完全签名。<br /><br /> 注意：使用 [Gacutil.exe（全局程序集缓存工具）](../../../docs/framework/tools/gacutil-exe-gac-tool.md)将延迟签名的程序集放入全局缓存之前，请使用 [Sn.exe（强名称工具）](../../../docs/framework/tools/sn-exe-strong-name-tool.md)来注册该程序集以跳过验证   。 例如 `Sn.exe –Vr delaySignedAssembly`。 仅将它用于开发。<br /><br /> 还可以将此选项指定为任何 MSIL 模块的源代码中的自定义特性 (<xref:System.Reflection.AssemblyDelaySignAttribute>)。|
 |**/descr[iption]:** `text`|为程序集中的 <xref:System.Reflection.AssemblyDescriptionAttribute.Description%2A> 字段指定字符串。 如果 `text` 包含空格，则将字符串放置在双引号 (" ") 中。 此字符串是程序集上的自定义特性，可以使用反射进行查看。<br /><br /> 如果不指定 **/win32res**，则 **/description** 在文件资源管理器中将显示为 Win32“注释”  资源。<br /><br /> 如果文本是空字符串，则 Win32“注释”  资源将显示为一个空格。<br /><br /> 如果指定 **/win32res**，则 **/description** 将不会影响 Win32 资源信息。<br /><br /> 还可以将此选项指定为任何 MSIL 模块的源代码中的自定义特性 (<xref:System.Reflection.AssemblyDescriptionAttribute.Description%2A>)。|
 |**/e[vidence]:** `file`|使用 Security.Evidence 的资源名将 `file` 嵌入程序集中。<br /><br /> 不能对常规资源使用 Security.Evidence。|
 |**/fileversion:** `version`|为程序集中的“文件版本”  字段指定字符串。 此字符串是程序集上的自定义特性，可以使用反射进行查看。<br /><br /> 如果不指定 **/win32res**，则 **/fileversion** 将用作 Win32“文件版本”  资源。 如果不指定 **/fileversion**，则 Win32“文件版本”  资源将由 Win32“程序集版本”  资源填充。<br /><br /> 如果指定 **/win32res**，则 **/fileversion** 不会影响 Win32 资源。<br /><br /> 还可以将此选项指定为任何 MSIL 模块的源代码中的自定义特性 (AssemblyFileVersionAttribute)。|
@@ -89,7 +89,7 @@ al sources options
 
 下表列出了 Al.exe 生成的错误  。
 
-| Error | 说明 |
+| 错误 | 说明 |
 | ----- | ----------- |
 |al1001|内部编译器错误<br /><br /> 尝试确定 Al.exe 是否因为无法分析意外语法而失败  。 然后，请与 Microsoft 产品支持服务联系。|
 |al1002|内存不足<br /><br /> Al.exe 内存不足，已停止  。 增加可用内存量。|
@@ -108,7 +108,7 @@ al sources options
 |al1015|无法找到消息文件“alinkui.dll”<br /><br /> Al.exe 需要 Alinkui.dll   。 确保此文件位于你的路径。 如有必要，请从产品 CD 将其复制。|
 |al1016|未指定有效输入文件<br /><br /> Al.exe 要求不具有程序集信息的一个或多个输入文件  。|
 |al1017|未指定目标文件名<br /><br /> 缺少指定目标文件名必需的 **/out** 选项。|
-|al1018|无法加载所需的文件“file”<br /><br /> 无法加载某些 DLL 文件。 重新安装 Visual Studio 或 Windows 软件开发工具包 (SDK)。|
+|al1018|无法加载所需的文件“file”<br /><br /> 无法加载某些 DLL 文件。 重新安装 Visual Studio 或 Windows SDK。|
 |al1019|创建程序集时元数据失败 — 原因<br /><br /> 由于特定原因，程序集生成中断。 例如，如果未找到用 **/win32res** 选项指定的文件，将发生此错误。|
 |al1020|忽略包含的程序集“file”<br /><br /> 指定了包含程序集的输入文件。 Al.exe 输入文件无法包含程序集  。|
 |al1021|“setting”: 重写以前的设置<br /><br /> 模块具有特定设置的值，该值可能是通过自定义属性分配，并通过使用 Al.exe 命令行选项传递的值进行重写  。|
