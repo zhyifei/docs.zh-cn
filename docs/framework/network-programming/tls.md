@@ -12,18 +12,18 @@ helpviewer_keywords:
 - Internet, security
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
-ms.openlocfilehash: cb2dd26d3f111e8de0dc9c7904837d9b053d17bb
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: f3b0fe20ae9f6eb50f26d044f18e02214ce97757
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724708"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69038463"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>.NET Framework 中的传输层安全性 (TLS) 最佳做法
 
 传输层安全性 (TLS) 协议是一个行业标准，旨在帮助保护通过 Internet 所传输信息的私密性。 [TLS 1.2](https://tools.ietf.org/html/rfc5246) 标准与以前版本相比在安全性方面有了很多提升。 TLS 1.2 最终将被最新发布的标准 [TLS 1.3](https://tools.ietf.org/html/rfc8446) 取代，后者速度更快，安全性更高。 文本介绍了如何保护使用 TLS 协议的 .NET Framework 应用程序安全的建议。
 
-为确保 .NET Framework 应用程序的安全性，TLS 版本不应被硬编码。 .NET Framework 应用程序应使用操作系统 (OS) 支持的 TLS 版本。
+为确保 .NET Framework 应用程序的安全性，TLS 版本不应  被硬编码。 .NET Framework 应用程序应使用操作系统 (OS) 支持的 TLS 版本。
 
 此文档面向以下开发人员：
 
@@ -89,16 +89,16 @@ WCF 使用与 .NET Framework 的其余部分相同的网络堆栈。
 如果你面向 4.7.1，则 WCF 将被配置为默认由操作系统选择最佳安全协议（除非显式对其配置）：
 
 - 在你的应用程序配置文件中。
-- 或者，在你的源代码中的应用程序中。
+-  或者，在你的源代码中的应用程序中。
 
 默认情况下，.NET Framework 4.7 和更高版本将被配置为使用 TLS 1.2，并允许使用 TLS 1.1 或 TLS 1.0 进行连接。 通过将你的绑定配置为使用 <xref:System.Security.Authentication.SslProtocols.None?displayProperty=nameWithType> 来配置 WCF，以允许操作系统选择最佳安全协议。 可在 <xref:System.ServiceModel.TcpTransportSecurity.SslProtocols> 上进行此设置。 `SslProtocols.None` 可以从 <xref:System.ServiceModel.NetTcpSecurity.Transport> 中进行访问。 `NetTcpSecurity.Transport` 可以从 <xref:System.ServiceModel.NetTcpBinding.Security> 中进行访问。
 
 如果你使用自定义绑定：
 
 - 通过将 <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement.SslProtocols> 设置为使用 <xref:System.Security.Authentication.SslProtocols.None?displayProperty=nameWithType> 来配置 WCF，以允许操作系统选择最佳安全协议。
-- 或者，配置在配置路径 `system.serviceModel/bindings/customBinding/binding/sslStreamSecurity:sslProtocols` 中使用的协议。
+-  或者，配置在配置路径 `system.serviceModel/bindings/customBinding/binding/sslStreamSecurity:sslProtocols` 中使用的协议。
 
-如果你没有使用自定义绑定，且正使用配置来设置你的 WCF 绑定，则设置配置路径 `system.serviceModel/bindings/netTcpBinding/binding/security/transport:sslProtocols` 中使用的协议。
+如果你没有  使用自定义绑定，  且正使用配置来设置你的 WCF 绑定，则设置配置路径 `system.serviceModel/bindings/netTcpBinding/binding/security/transport:sslProtocols` 中使用的协议。
 
 ### <a name="for-wcf-message-security-with-certificate-credentials"></a>对于具有证书凭据的 WCF 消息安全性
 
@@ -209,7 +209,7 @@ WCF 框架的这些版本被硬编码为使用值 SSL 3.0 和 TLS 1.0。 这些�
 
 有关 .NET Framework 3.5.1 中的详细信息，请参阅[在 Windows 7 SP1 和 Server 2008 R2 SP1 上的 .NET Framework 3.5.1 中包含对 TLS 系统默认版本的支持](https://support.microsoft.com/help/3154518/support-for-tls-system-default-versions-included-in-the--net-framework)。
 
-以下 .REG 文件将注册表项及其变量设置为其最安全的值：
+以下 .REG  文件将注册表项及其变量设置为其最安全的值：
 
 ```
 Windows Registry Editor Version 5.00
@@ -242,7 +242,7 @@ Windows Registry Editor Version 5.00
 启用后（默认情况下，通过 `AppContext` 开关或 Windows 注册表启动），当你的应用请求 TLS 安全协议时，.NET Framework 将使用 `SCH_USE_STRONG_CRYPTO` 标志。 可以通过 `AppContext` 开关或注册表来默认启用 `SCH_USE_STRONG_CRYPTO` 标志。 操作系统将标志传递到 `Schannel`，以指示它禁用已知弱加密算法、密码套件和 TLS/SSL 协议版本（否则，可能会启用该协议以获得更好的互操作性）。 有关详细信息，请参见:
 
 - [安全通道](/windows/desktop/SecAuthN/secure-channel)
-- [SCHANNEL_CRED 结构](/windows/desktop/api/schannel/ns-schannel-_schannel_cred)
+- [SCHANNEL_CRED 结构](/windows/win32/api/schannel/ns-schannel-schannel_cred)
 
 当你显式使用 <xref:System.Net.SecurityProtocolType> 或 <xref:System.Security.Authentication.SslProtocols> 的 `Tls` (TLS 1.0)、`Tls11` 或 `Tls12` 枚举的值时，`SCH_USE_STRONG_CRYPTO` 标志还将被传递到 `Schannel`。
 
@@ -253,7 +253,7 @@ Windows Registry Editor Version 5.00
 若要更新 .NET Framework，以允许操作系统选择要使用的 TLS 的最佳版本，必须至少安装：
 
 - [.NET Framework 2017 年 8 月质量汇总预览](https://devblogs.microsoft.com/dotnet/net-framework-august-2017-preview-of-quality-rollup/)。
-- 或 [.NET Framework 2017 年 9 月安全和质量汇总](https://devblogs.microsoft.com/dotnet/net-framework-september-2017-security-and-quality-rollup/)。
+-  或 [.NET Framework 2017 年 9 月安全和质量汇总](https://devblogs.microsoft.com/dotnet/net-framework-september-2017-security-and-quality-rollup/)。
 
 另请参阅：
 
@@ -268,7 +268,7 @@ Windows Registry Editor Version 5.00
 
 若要在支持它们的系统上启用或重新启用 TLS 1.2 和/或 TLS 1.1，请参阅[传输层安全性 (TLS) 注册表设置](/windows-server/security/tls/tls-registry-settings)。
 
-| 操作系统 | TLS 1.2 支持 |
+| 操作系统  | TLS 1.2 支持  |
 | --- | --- |
 | Windows 10<br>Windows 2016 Server | 默认情况下支持和启用。 |
 | Windows 8.1<br>Windows Server 2012 R2 | 默认情况下支持和启用。 |
@@ -283,7 +283,7 @@ Windows Registry Editor Version 5.00
 
 下表显示在 .NET Framework 3.5 中支持 TLS 1.2 所需的操作系统更新。 我们建议你应用所有操作系统更新。
 
-| 操作系统 | **.NET Framework 3.5 中支持 TLS 1.2 所需的最低更新** |
+| 操作系统  | **.NET Framework 3.5 中支持 TLS 1.2 所需的最低更新** |
 | --- | --- |
 | Windows 10<br>Windows 2016 Server | [Windows 10 版本 1511 和 Windows Server 2016 Technical Preview 4 的累积更新：2016 年 5 月 10 日](https://support.microsoft.com/help/3156421/cumulative-update-for-windows-10-version-1511-and-windows-server-2016) |
 | Windows 8.1<br>Windows Server 2012 R2 | [在 Windows 8.1 和 Windows Server 2012 R2 上的 .NET Framework 3.5 中包含对 TLS 系统默认版本的支持](https://support.microsoft.com/help/3154520/support-for-tls-system-default-versions-included-in-the--net-framework) |

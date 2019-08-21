@@ -1,51 +1,70 @@
 ---
 title: ':: 运算符 - C# 参考'
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 08/09/2019
 f1_keywords:
 - ::_CSharpKeyword
+- global_CSharpKeyword
 helpviewer_keywords:
 - ':: operator [C#]'
-- 'namespaces [C#], :: operator'
-- namespace alias qualifier operator (::) [C#]
+- namespace alias qualifier [C#]
+- namespace [C#]
+- global keyword [C#]
 ms.assetid: 698b5a73-85cf-4e0e-9e8e-6496887f8527
-ms.openlocfilehash: c494e8dbb18f44ce5520b21800a21d3feb03da59
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 2aceb51747708b12fb3059b097b72206c78a9d5d
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68631361"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68971242"
 ---
 # <a name="-operator-c-reference"></a>:: 运算符（C# 参考）
 
-命名空间别名限定符（`::`）用于查找标识符。 它始终位于两个标识符之间，如本示例所示：
+使用命名空间别名限定符 `::` 访问已设置别名的命名空间的成员。 使用两个标识符之间的 `::` 限定符。 左侧标识符可以是以下任意别名：
 
-[!code-csharp[csRefOperators#27](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#27)]
+- 使用 [using 别名指令](../keywords/using-directive.md)创建的命名空间别名：
+  
+  ```csharp
+  using forwinforms = System.Drawing;
+  using forwpf = System.Windows;
+  
+  public class Converters
+  {
+      public static forwpf::Point Convert(forwinforms::Point point) => new forwpf::Point(point.X, point.Y);
+  }
+  ```
 
-`::` 运算符也可以用于 using alias 指令  ：
+- [外部别名](../keywords/extern-alias.md)。
+- `global` 别名，该别名是全局命名空间别名。 全局命名空间是包含未在命名空间中声明的命名空间和类型的命名空间。 与 `::` 限定符一起使用时，`global` 别名始终引用全局命名空间，即使存在用户定义的 `global` 命名空间别名也是如此。
+  
+  以下示例使用 `global` 别名访问 .NET <xref:System> 命名空间，该命名空间是全局命名空间的成员。 如果没有 `global` 别名，则将访问用户定义的 `System` 命名空间（该命名空间是 `MyCompany.MyProduct` 命名空间的成员）：
 
-```csharp
-// using Col=System.Collections.Generic;
-var numbers = new Col::List<int> { 1, 2, 3 };
-```
+  ```csharp
+  namespace MyCompany.MyProduct.System
+  {
+      class Program
+      {
+          static void Main() => global::System.Console.WriteLine("Using global alias");
+      }
+  
+      class Console
+      {
+          string Suggestion => "Consider renaming this class";
+      }
+  }
+  ```
+  
+  > [!NOTE]
+  > 仅当 `global` 关键字是 `::` 限定符的左侧标识符时，该关键字才是全局命名空间别名。
 
-## <a name="remarks"></a>备注
-
-命名空间别名限定符可以为 `global`。 这将调用全局命名空间（而不是别名命名空间）中的查找。
-
-## <a name="for-more-information"></a>更多相关信息
-
-有关如何使用 `::` 运算符的示例，请参阅以下部分：
-
-- [如何：使用全局命名空间别名](../../programming-guide/namespaces/how-to-use-the-global-namespace-alias.md)
+你还可以使用[成员访问 `.` 运算符](member-access-operators.md#member-access-operator-)来访问别名命名空间的成员。 但是，`.` 运算符还用于访问类型的成员。 `::` 限定符确保其左侧标识符始终引用命名空间别名，即使存在同名的类型或命名空间也是如此。
 
 ## <a name="c-language-specification"></a>C# 语言规范
 
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/introduction.md)中的[命名空间别名限定符](~/_csharplang/spec/namespaces.md#namespace-alias-qualifiers)部分。
 
 ## <a name="see-also"></a>请参阅
 
 - [C# 参考](../index.md)
 - [C# 运算符](index.md)
-- [. 运算符](member-access-operators.md#member-access-operator-)
-- [外部别名](../keywords/extern-alias.md)
+- [using 命名空间](../../programming-guide/namespaces/using-namespaces.md)

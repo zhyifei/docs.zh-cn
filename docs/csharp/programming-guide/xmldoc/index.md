@@ -12,12 +12,12 @@ helpviewer_keywords:
 - C# language, XML code comments
 - XML documentation comments [C#]
 ms.assetid: 803b7f7b-7428-4725-b5db-9a6cff273199
-ms.openlocfilehash: 85d75d6420404f278c4a8b16eb9bf30aff958f7c
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 46dd947ac6ff5a45c7d952acaa55e25c3a46969c
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645775"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69588057"
 ---
 # <a name="xml-documentation-comments-c-programming-guide"></a>XML 文档注释（C# 编程指南）
 在 Visual C# 中，你可以通过以下方式为代码创建文档：将特殊注释字段中的 XML 元素包含在源代码中注释引用的代码块的前面，例如：  
@@ -29,7 +29,7 @@ ms.locfileid: "65645775"
 public class MyClass {}  
 ```  
   
- 使用 [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) 选项进行编译时，编译器会在源代码中搜索所有 XML 标记，并创建一个 XML 文档文件。 若要基于编译器生成的文件创建最终文档，可以创建一个自定义工具，也可以使用 [DocFX](https://dotnet.github.io/docfx/) 或 [Sandcastle](https://github.com/EWSoftware/SHFB) 等工具。  
+ 使用 [/doc](../../language-reference/compiler-options/doc-compiler-option.md) 选项进行编译时，编译器会在源代码中搜索所有 XML 标记，并创建一个 XML 文档文件。 若要基于编译器生成的文件创建最终文档，可以创建一个自定义工具，也可以使用 [DocFX](https://dotnet.github.io/docfx/) 或 [Sandcastle](https://github.com/EWSoftware/SHFB) 等工具。  
   
  若要引用 XML 元素（例如，你的函数将处理你要在 XML 文档注释中描述的特定 XML 元素），你可使用标准引用机制（`<` 和 `>`）。  若要引用代码引用 (`cref`) 元素中的通用标识符，可使用转义字符（例如，`cref="List&lt;T&gt;"`）或大括号 (`cref="List{T}"`)。  作为特例，编译器会将大括号解析为尖括号以在引用通用标识符时使作者能够更轻松地进行文档注释。  
   
@@ -38,22 +38,22 @@ public class MyClass {}
   
 ## <a name="in-this-section"></a>本节内容  
   
-- [建议的文档注释标记](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)  
+- [建议的文档注释标记](./recommended-tags-for-documentation-comments.md)  
   
-- [处理 XML 文件](../../../csharp/programming-guide/xmldoc/processing-the-xml-file.md)  
+- [处理 XML 文件](./processing-the-xml-file.md)  
   
-- [文档标记分隔符](../../../csharp/programming-guide/xmldoc/delimiters-for-documentation-tags.md)  
+- [文档标记分隔符](./delimiters-for-documentation-tags.md)  
   
-- [如何：使用 XML 文档功能](../../../csharp/programming-guide/xmldoc/how-to-use-the-xml-documentation-features.md)  
+- [如何：使用 XML 文档功能](./how-to-use-the-xml-documentation-features.md)  
   
 ## <a name="related-sections"></a>相关章节  
  有关详细信息，请参见:  
   
-- [/doc（处理文档注释）](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)  
+- [/doc（处理文档注释）](../../language-reference/compiler-options/doc-compiler-option.md)  
   
 ## <a name="c-language-specification"></a>C# 语言规范  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 
-- [C# 编程指南](../../../csharp/programming-guide/index.md)
+- [C# 编程指南](../index.md)

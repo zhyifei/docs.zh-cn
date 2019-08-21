@@ -3,16 +3,16 @@ title: .NET Core SDK 概述
 description: 查看有关 .NET Core SDK 的信息，其是一组用于创建 .NET Core 项目的库和工具。
 ms.date: 07/31/2019
 ms.technology: dotnet-cli
-ms.openlocfilehash: 0231c08f780455c4956c044815a2e80cef4d827e
-ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
+ms.openlocfilehash: f4c4982bacaf58c1b8c7db6c5319bd314e89b7ed
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68733390"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69566240"
 ---
 # <a name="net-core-sdk-overview"></a>.NET Core SDK 概述
 
-.NET Core 软件开发工具包 (SDK) 是一组库和工具，使开发人员能够创建 .NET Core 应用程序和库。 它包含以下用于构建和运行应用程序的组件：
+.NET Core SDK 是一组库和工具，开发人员可用其创建 .NET Core 应用程序和库。 它包含以下用于构建和运行应用程序的组件：
 
 - .NET Core CLI 工具。
 - .NET Core 库和运行时。

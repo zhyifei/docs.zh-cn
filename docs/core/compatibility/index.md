@@ -26,7 +26,7 @@ ms.locfileid: "67736557"
 > [!NOTE]
 > 若要查看兼容性类别的定义，如二进制兼容性和向后兼容性，请参阅[中断性变更类别](categories.md)。
 
-以下各个部分说明了 .NET Core API 的变更类别，以及它们对应用程序兼容性的影响。 ✔️ 图标表示允许某个特定的变更类别，表示禁止某个类别，表示可能允许也可能不允许某个变更。 最后一个类别中的变更需要评判之前的行为的可预测性、显著性和一致性。
+以下各个部分说明了 .NET Core API 的变更类别，以及它们对应用程序兼容性的影响。 ✔️ 图标表示允许某个特定的变更类别，❌表示禁止某个类别，❓表示可能允许也可能不允许某个变更。 最后一个类别中的变更需要评判之前的行为的可预测性、显著性和一致性。
 
 > [!NOTE]
 > 除了将这些准则用作 .NET Core 库变更评估指南以外，库开发人员还可以使用它们评估他们自己的面向多个 .NET 实现和版本的库更改。
@@ -147,7 +147,7 @@ ms.locfileid: "67736557"
 
 - **从 `ref` 返回值更改为 `ref readonly` 返回值**
 
-- **️ 在虚拟方法或接口上从 `ref readonly` 更改为 `ref` 返回值**
+- **️❌在虚拟方法或接口上从 `ref readonly` 更改为 `ref` 返回值**
 
 - **从成员添加或删除 [abstract](../../csharp/language-reference/keywords/abstract.md) 关键字**
 
@@ -176,7 +176,7 @@ ms.locfileid: "67736557"
 
 - **只向过去不包含任何构造函数的类添加构造函数而不添加无参数构造函数**
 
-- **️ 向字段添加 [readonly](../../csharp/language-reference/keywords/readonly.md)**
+- **️❌向字段添加 [readonly](../../csharp/language-reference/keywords/readonly.md)**
 
 - **降低成员的可见性**
 

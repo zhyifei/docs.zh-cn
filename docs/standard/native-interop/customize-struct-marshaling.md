@@ -7,12 +7,12 @@ ms.date: 01/18/2019
 dev_langs:
 - csharp
 - cpp
-ms.openlocfilehash: da36f2a703fe817c171e192b9c94e473c93447a3
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 6e3dcaeb71ae32812d3b022fff2bdc4e3e0691bf
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65065980"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69040156"
 ---
 # <a name="customizing-structure-marshaling"></a>自定义结构封送
 
@@ -22,11 +22,11 @@ ms.locfileid: "65065980"
 
 .NET 提供了 <xref:System.Runtime.InteropServices.StructLayoutAttribute?displayProperty=nameWithType> 属性和 <xref:System.Runtime.InteropServices.LayoutKind?displayProperty=nameWithType> 枚举，允许用户自定义字段在内存中的放置方式。 以下指南将帮助你避免常见问题。
 
-✔️ 请考虑尽量使用 `LayoutKind.Sequential`。
+ ✔️ 请考虑尽量使用 `LayoutKind.Sequential`。
 
-✔️ 当本机结构还具有显式布局（如联合）时，请务必仅将 `LayoutKind.Explicit` 用于封送。
+ ✔️ 当本机结构还具有显式布局（如联合）时，请务必仅将 `LayoutKind.Explicit` 用于封送。
 
-❌ 在非 Windows 平台上封送结构时，请避免使用 `LayoutKind.Explicit`。 .NET Core 运行时不支持在 Intel 或 AMD 64 位的非 Windows 系统上按值将显式结构传递到本机函数。 但是，运行时支持在所有平台上按引用传递显式结构。
+ ❌ 在非 Windows 平台上封送结构时，请避免使用 `LayoutKind.Explicit`。 .NET Core 运行时不支持在 Intel 或 AMD 64 位的非 Windows 系统上按值将显式结构传递到本机函数。 但是，运行时支持在所有平台上按引用传递显式结构。
 
 ## <a name="customizing-boolean-field-marshaling"></a>自定义布尔字段封送
 
@@ -319,7 +319,7 @@ struct DefaultString
 
 ## <a name="customizing-decimal-field-marshaling"></a>自定义十进制字段封送
 
-如果在 Windows 上操作，则可能会遇到一些使用本机 [`CY` 或 `CURRENCY`](/windows/desktop/api/wtypes/ns-wtypes-tagcy) 结构的 API。 默认情况下，.NET `decimal` 类型会封送到本机 [`DECIMAL`](/windows/desktop/api/wtypes/ns-wtypes-tagdec) 结构。 但是，可以使用包含 <xref:System.Runtime.InteropServices.UnmanagedType.Currency?displayProperty=nameWithType> 值的 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 来指示封送处理程序将 `decimal` 值转换为本机 `CY` 值。
+如果在 Windows 上操作，则可能会遇到一些使用本机 [`CY` 或 `CURRENCY`](/windows/win32/api/wtypes/ns-wtypes-cy~r1) 结构的 API。 默认情况下，.NET `decimal` 类型会封送到本机 [`DECIMAL`](/windows/win32/api/wtypes/ns-wtypes-decimal~r1) 结构。 但是，可以使用包含 <xref:System.Runtime.InteropServices.UnmanagedType.Currency?displayProperty=nameWithType> 值的 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 来指示封送处理程序将 `decimal` 值转换为本机 `CY` 值。
 
 ```csharp
 public struct Currency
@@ -339,7 +339,7 @@ struct Currency
 ## <a name="marshaling-systemobjects"></a>封送 `System.Object`
 
 在 Windows 上，可以将类型为 `object` 的字段封送到本机代码。 可以将这些字段封送到以下三个类型之一：
-- [`VARIANT`](/windows/desktop/api/oaidl/ns-oaidl-tagvariant)
+- [`VARIANT`](/windows/win32/api/oaidl/ns-oaidl-variant)
 - [`IUnknown*`](/windows/desktop/api/unknwn/nn-unknwn-iunknown)
 - [`IDispatch*`](/windows/desktop/api/oaidl/nn-oaidl-idispatch)
 
