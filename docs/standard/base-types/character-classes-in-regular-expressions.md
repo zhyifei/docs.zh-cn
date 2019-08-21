@@ -332,7 +332,7 @@ ms.locfileid: "66490873"
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/whitespace1.vb#10)]  
   
 <a name="NonWhitespaceCharacter"></a>   
-## <a name="non-whitespace-character-s"></a>非空格字符：\S  
+## <a name="non-whitespace-character-s"></a>非空格字符：\s  
  `\S` 匹配任何非空白字符。 它等效于 `[^\f\n\r\t\v\x85\p{Z}]` 正则表达式模式或与等效于 `\s` 的正则表达式模式（与空白字符匹配）相反。 有关详细信息，请参阅[空白字符：\s](#WhitespaceCharacter)。  
   
  如果指定了符合 ECMAScript 的行为，则 `\S` 等效于 `[^ \f\n\r\t\v]`。 有关 ECMAScript 正则表达式的信息，请参阅[正则表达式选项](../../../docs/standard/base-types/regular-expression-options.md)中的“ECMAScript 匹配行为”部分。  
@@ -552,7 +552,7 @@ ms.locfileid: "66490873"
 |FFF0 - FFFF|`IsSpecials`|  
   
 <a name="CharacterClassSubtraction"></a>   
-## <a name="character-class-subtraction-basegroup---excludedgroup"></a>字符类减法：[base_group - [excluded_group]]  
+## <a name="character-class-subtraction-base_group---excluded_group"></a>字符类减法：[base_group - [excluded_group]]  
  一个字符类定义一组字符。 字符类减法将产生一组字符，该组字符是从一个字符类中排除另一个字符类中的字符的结果。  
   
  字符类减法表达式具有以下形式：  
