@@ -192,7 +192,7 @@ ms.locfileid: "67663984"
 
 ## <a name="single-line-mode"></a>单行模式
 
-<xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> 选项或 `s` 内联选项导致正则表达式引擎将输入字符串视为由单行组成。 它通过更改时间段 (`.`) 语言元素的行为，使其与每个字符匹配，而不是与除换行符 `\n` 或 \u000A 之外的每个字符匹配来执行此操作。
+<xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> 选项或 `s` 内联选项导致正则表达式引擎将输入字符串视为由单行组成。 它通过更改句号 (`.`) 语言元素的行为，使其与每个字符匹配，而不是与除换行符 `\n` 或 \u000A 之外的每个字符匹配来执行此操作。
 
 下面的示例演示了在使用 `.` 选项时如何更改 <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> 语言元素的行为。 正则表达式 `^.+` 在字符串开头开始并匹配每个字符。 默认情况下，匹配在第一行的结尾结束；正则表达式模式匹配回车符、`\r` 或 \u000D，但不匹配 `\n`。 由于 <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> 选项将整个输入字符串解释为单行，因此它匹配输入字符串中的每个字符，包括 `\n`。
 
