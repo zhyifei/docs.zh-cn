@@ -41,7 +41,7 @@ ms.locfileid: "69039436"
 ## <a name="net-core-sdk-windows-installer"></a>.NET Core SDK Windows Installer
 
 
-从 .NET Core 3.0 开始，用于 Windows 的 MSI 安装程序发生了变化。SDK 安装程序现在将对 SDK 功能区段版本进行就地升级。功能区段在版本号的“修补程序”**部分的“百位”**组中定义。例如，3.0.101**** 和 3.0.201**** 是两个不同功能区段中的版本，而 3.0.101**** 和 3.0.199**** 则属于同一个功能区段。在安装 .NET Core SDK 3.0.101**** 时，将从计算机中删除 .NET Core SDK 3.0.100****（如果存在）。 而在将 .NET Core SDK 3.0.200**** 安装在同一台计算机上时，不会删除 .NET Core SDK 3.0.101**** 。
+用于 Windows 的 MSI 安装程序已从 .NET Core 3.0 开始更改。 SDK 安装程序现在将对 SDK 功能区段版本进行就地升级。 功能区段在版本号的*补丁*部分中的*百数*组中定义。 例如，**3.0.101** 和 **3.0.201** 是两个不同功能区段中的版本，而 **3.0.101** 和 **3.0.199** 则属于同一个功能区段。 并且，当安装 .NET Core SDK **3.0.101** 时，将从计算机中删除 .NET Core SDK **3.0.100** （如果存在）。 当 .NET Core SDK **3.0.200** 安装在同一台计算机上时，不会删除 .NET Core SDK **3.0.101** 。
 
 
 有关版本控制的详细信息，请参阅 [.NET Core 的版本控制方式概述](../versions/index.md)。
@@ -91,7 +91,9 @@ System.Console.WriteLine($"RuntimeInformation.FrameworkDescription: {System.Runt
 ```
 
 > [!WARNING]
-> 重大变更。 这在技术上是一个中断性变更，因为版本控制方案已发生变化。
+
+> 重大变更。这在技术上是一个中断性变更，因为版本控制方案已发生变化。
+
 
 ## <a name="net-platform-dependent-intrinsics"></a>.NET 平台相关内部函数
 
@@ -440,7 +442,9 @@ async IAsyncEnumerable<int> GetBigResultsAsync()
 
 ### <a name="windows-native-interop"></a>Windows 本机互操作
 
-Windows 提供丰富的本机 API，包括平面 C API、COM 和 WinRT 的形式。.NET Core 支持 P/Invoke****，.NET Core 3.0 则增加了“共同创建 COM API”****和“激活 WinRT API”****的功能。有关代码示例，请参阅 [Excel 演示](https://github.com/dotnet/samples/tree/master/core/extensions/ExcelDemo)。
+
+Windows 提供丰富的本机 API，包括平面 C API、COM 和 WinRT 的形式。 .NET Core 支持 **P/Invoke**，.NET Core 3.0 则增加了**CoCreate COM API** 和**Activate WinRT API** 的功能。 有关代码示例，请参阅 [Excel 演示](https://github.com/dotnet/samples/tree/master/core/extensions/ExcelDemo)。
+
 
 ## <a name="http2-support"></a>HTTP/2 支持
 
