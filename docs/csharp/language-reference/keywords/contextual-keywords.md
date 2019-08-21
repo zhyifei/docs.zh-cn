@@ -5,14 +5,15 @@ ms.date: 03/07/2017
 helpviewer_keywords:
 - contextual keywords [C#]
 ms.assetid: 7c76bc29-a754-4389-b0ab-f6b441018298
-ms.openlocfilehash: bce8901b4fec4386462ebaa85436b52aedc3f3bf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8f8dc21b407e7286010b7425b835a481cc90287a
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54708436"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68971321"
 ---
 # <a name="contextual-keywords-c-reference"></a>上下文关键字（C# 参考）
+
 上下文关键字用于在代码中提供特定含义，但它不是 C# 中的保留字。 本部分介绍下面这些上下文关键字：  
   
 |关键字|说明|  
@@ -22,7 +23,7 @@ ms.locfileid: "54708436"
 |[await](../../../csharp/language-reference/keywords/await.md)|挂起异步方法，直到等待的任务完成。|  
 |[动态](../../../csharp/language-reference/keywords/dynamic.md)|定义一个引用类型，实现发生绕过编译时类型检查的操作。|  
 |[get](../../../csharp/language-reference/keywords/get.md)|为属性或索引器定义访问器方法。|  
-|[global](../../../csharp/language-reference/keywords/global.md)|指定未以其他方式命名的默认全局命名空间。|  
+|[global](../../../csharp/language-reference/operators/namespace-alias-qualifier.md)|未以其他方式命名的全局命名空间的别名。|  
 |[partial](../../../csharp/language-reference/keywords/partial-type.md)|在整个同一编译单元内定义分部类、结构和接口。|  
 |[remove](../../../csharp/language-reference/keywords/remove.md)|定义一个自定义事件访问器，客户端代码取消订阅事件时会调用该访问器。|  
 |[set](../../../csharp/language-reference/keywords/set.md)|为属性或索引器定义访问器方法。|  

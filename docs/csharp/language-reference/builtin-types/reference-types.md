@@ -20,12 +20,12 @@ helpviewer_keywords:
 - '@ string literal'
 - string literals [C#]
 - string keyword [C#]
-ms.openlocfilehash: 4bc93216d74e2732870e08edd4bdb9570391cf5f
-ms.sourcegitcommit: 6472349821dbe202d01182bc2cfe9d7176eaaa6c
+ms.openlocfilehash: fcfe2dafe588dce57628bff63e3519f70d7a7725
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67872165"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69566254"
 ---
 # <a name="built-in-reference-types-c-reference"></a>内置引用类型（C# 引用）
 
@@ -177,7 +177,7 @@ obj = obj + 3;
 - [有关使用字符串的最佳做法](../../../standard/base-types/best-practices-strings.md)
 - [基本字符串操作](../../../standard/base-types/basic-string-operations.md)
 - [新建字符串](../../../standard/base-types/creating-new.md)
-- [类型测试和转换运算符](../operators/type-testing-and-conversion-operators.md)
+- [类型测试和强制转换运算符](../operators/type-testing-and-cast.md)
 - [如何：使用模式匹配以及 is 和 as 运算符安全地进行强制转换](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md)
 - [演练：创建和使用动态对象](../../programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)
 - <xref:System.Object?displayProperty=nameWithType>

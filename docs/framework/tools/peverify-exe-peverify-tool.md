@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f4f46f9e-8d08-4e66-a94b-0c69c9b0bbfa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e657b8e2a0a9dbe8db703ce97d41a3767191a26f
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 1de17ec2537282fe87b5613a63e2a954383aeab6
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833866"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567317"
 ---
 # <a name="peverifyexe-peverify-tool"></a>Peverify.exe（PEVerify 工具）
 PEVerify 工具有助于生成 Microsoft 中间语言 (MSIL) 的开发人员（如编译器编写者、脚本引擎开发人员等）确定其 MSIL 代码及关联的元数据是否满足类型安全要求。 某些编译器仅当你避免使用某些语言构造时才生成可验证的类型安全代码。 如果你作为开发人员正在使用此类编译器，则可能需要确认你未危害代码的类型安全性。 在这种情况下，你可以对文件运行 PEVerify 工具来检查 MSIL 和元数据。  
@@ -61,7 +61,7 @@ peverify filename [options]
   
  如果既未指定 /md 选项也未指定 /il 选项，则 Peverify.exe 将执行两种类型的检查   。 Peverify.exe 首先执行 /md 检查  。 如果没有错误，则执行 /il 检查  。 如果同时指定了 /md 和 /il，则即使元数据中存在错误，也执行 /il 检查    。 因此，如果没有元数据错误，则 peverify filename 等效于 peverify filename /md /il       。  
   
- Peverify.exe 基于数据流分析和一个包含数百条有关有效元数据的规则的列表来执行全面的 MSIL 验证检查。 有关 Peverify.exe 执行的检查的详细信息，请参阅 Windows 软件开发工具包 (SDK) 中“工具开发人员指南”文件夹中的“元数据验证规范”和“MSIL 指令集规范”。  
+ Peverify.exe 基于数据流分析和一个包含数百条有关有效元数据的规则的列表来执行全面的 MSIL 验证检查。 有关 Peverify.exe 执行的检查的详细信息，请参见 Windows SDK 中“Tools Developers Guide”文件夹中的“元数据验证规范”和“MSIL 指令集规范”。  
   
  注意，.NET Framework 2.0 版或更高版本支持使用如下 MSIL 指令指定的可验证 `byref` 返回值：`dup`、`ldsflda`、`ldflda`、`ldelema`、`call` 和 `unbox`。  
   

@@ -35,8 +35,6 @@
           items:
             - name: 如何：在 Windows 窗体应用程序中响应字体方案更改
               href: how-to-respond-to-font-scheme-changes-in-a-windows-forms-application.md
-            - name: 禁用 Visual Studio 中的 DPI 识别
-              href: disable-dpi-awareness-visual-studio.md
         - name: Windows 窗体中的高 DPI 支持
           href: high-dpi-support-in-windows-forms.md
     - name: 更改 Windows 窗体外观

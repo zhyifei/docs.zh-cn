@@ -2,12 +2,12 @@
 title: C# 6 中的新增功能 - C# 指南
 description: 了解 C# 版本 6 中的新增功能
 ms.date: 12/12/2018
-ms.openlocfilehash: 49247109bd1acbf697f5700b5cfe9a2b85393b2c
-ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
+ms.openlocfilehash: da40b4c9d4af0094fdd907c542e971ba55086e0f
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68235723"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68971388"
 ---
 # <a name="whats-new-in-c-6"></a>C# 6 中的新增功能
 
@@ -21,7 +21,7 @@ C# 6.0 版本包含许多可提高开发人员工作效率的功能。 这些功
 
 [!code-csharp[ReadOnlyAutoProperty](../../../samples/snippets/csharp/new-in-6/newcode.cs#ReadOnlyAutoProperty)]
 
-`FirstName` 和 `LastName` 属性只能在构造函数的主体中设置：
+`FirstName` 和 `LastName` 属性只能在同一个类的构造函数的主体中设置：
 
 [!code-csharp[ReadOnlyAutoPropertyConstructor](../../../samples/snippets/csharp/new-in-6/newcode.cs#ReadOnlyAutoPropertyConstructor)]
 

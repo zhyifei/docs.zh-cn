@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2d69fd06f4048667a05ddbfec571067c16f9e86a
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: ceae33501330719a27e2d0015c21249dca62d551
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833716"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69566852"
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>运行时如何定位程序集
 若要成功部署 .NET Framework 应用程序，必须了解公共语言运行时如何查找和绑定到构成应用程序的程序集。 默认情况下，运行时尝试与生成应用程序的程序集的准确版本绑定。 可通过配置文件设置重写此默认行为。  
@@ -24,7 +24,7 @@ ms.locfileid: "66833716"
  在尝试查找程序集和解析程序集引用时，公共语言运行时会执行多个步骤。 以下各节将分别阐述每个步骤。 描述运行时如何查找程序集时，通常使用术语“探测”；它指一套用于根据名称和区域性查找程序集的试探法。  
   
 > [!NOTE]
->  可使用 Windows 软件开发工具包 (SDK) 中附带的[程序集绑定日志查看器 (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) 查看日志文件中的绑定信息。  
+>  可使用 Windows SDK 中附带的[程序集绑定日志查看器 (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) 查看日志文件中的绑定信息。  
   
 ## <a name="initiating-the-bind"></a>启动绑定  
  在运行时尝试解析其他程序集的引用时，开始查找和绑定到程序集的进程。 此引用可为静态，也可为动态。 编译器在生成时记录程序集清单的元数据中的静态引用。 由于调用各种方法（如 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>），所以将及时构造动态引用。  

@@ -3,12 +3,12 @@ title: .NET Core CLI 扩展性模型
 description: 了解如何扩展命令行接口 (CLI) 工具。
 ms.date: 04/12/2017
 ms.custom: seodec18
-ms.openlocfilehash: 784eb50dfdbc0f88050a9f727ddbf53db34d3209
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 400d47f9d5bca53a23d09eb4eb94519f9824b473
+ms.sourcegitcommit: d98fdb087d9c8aba7d2cb93fe4b4ee35a2308cee
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331000"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69012977"
 ---
 # <a name="net-core-cli-tools-extensibility-model"></a>.NET Core CLI 工具扩展性模型
 
@@ -44,7 +44,7 @@ ms.locfileid: "68331000"
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-对于需要加载用于执行的项目生成输出的工具，通常还有一个依赖项，它位于项目文件中的常规依赖项下。 由于 CLI 使用 MSBuild 作为其生成引擎，因此建议将该工具的这些部分作为自定义 MSBuild [目标](/visualstudio/msbuild/msbuild-targets)和[任务](/visualstudio/msbuild/msbuild-tasks)写入，以便这些部分可以参与整个生成过程。 此外，它们还可以轻松获取通过该生成产生的所有数据（例如，输出文件的位置、正在生成的当前配置等）。所有此类信息将成为一组可从任意目标中读取的 MSBuild 属性。 本文档的后面将介绍如何使用 NuGet 添加自定义目标。
+对于需要加载用于执行的项目生成输出的工具，通常还有一个依赖项，它位于项目文件中的常规依赖项下。 由于 CLI 使用 MSBuild 作为其生成引擎，因此建议将该工具的这些部分作为自定义 MSBuild [目标](/visualstudio/msbuild/msbuild-targets)和[任务](/visualstudio/msbuild/msbuild-tasks)写入，以便这些部分可以参与整个生成过程。 此外，它们还可以轻松获取通过该生成产生的所有数据（例如，输出文件的位置、正在生成的当前配置等）。 所有此类信息将成为一组可从任意目标中读取的 MSBuild 属性。 本文档的后面将介绍如何使用 NuGet 添加自定义目标。
 
 我们来看看将简单的工具专用工具添加到简单项目的示例。 假定示例命令称为 `dotnet-api-search`，通过它可搜索指定 API 的所有 NuGet 包，以下是使用该工具的控制台应用程序的项目文件：
 
@@ -79,7 +79,8 @@ ms.locfileid: "68331000"
 还可以在相同存储库中查看[所用工具的实现](https://github.com/dotnet/cli/tree/release/2.1/TestAssets/TestPackages)。
 
 ## <a name="custom-targets"></a>自定义目标
-NuGet 可将[自定义 MSBuild 目标和属性文件打包](/nuget/create-packages/creating-a-package#including-msbuild-props-and-targets-in-a-package)。 在移动 .NET Core CLI 工具以使用 MSBuild 后，会对 .NET Core 项目应用可扩展性的相同机制。 若要扩展生成过程、访问生成过程中的任何项目（如生成的文件）或检查调用生成时使用的配置等，建议使用该类型的扩展。
+
+NuGet 可将[自定义 MSBuild 目标和属性文件打包](/nuget/create-packages/creating-a-package#include-msbuild-props-and-targets-in-a-package)。 在移动 .NET Core CLI 工具以使用 MSBuild 后，会对 .NET Core 项目应用可扩展性的相同机制。 若要扩展生成过程、访问生成过程中的任何项目（如生成的文件）或检查调用生成时使用的配置等，建议使用该类型的扩展。
 
 在下面的示例中，可看到目标的项目文件，它使用的是 `csproj` 语法。 该语法指示 [`dotnet pack`](dotnet-pack.md) 命令对哪些内容打包，以便将目标文件和程序集放在包中的 build  文件夹内。 请注意将 `Label` 属性设置为 `dotnet pack instructions` 的 `<ItemGroup>` 元素，以及在其下定义的目标。
 

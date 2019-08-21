@@ -8,22 +8,22 @@ helpviewer_keywords:
 ms.assetid: 4ece5c0b-f8fe-4114-9862-ac02cfe5a5d7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 50d76aef201fead37923a65cfeead16638b09842
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e3535e2979d2430fcb434a578f94d8d5b3925631
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62031169"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666573"
 ---
 # <a name="asynchronous-programming-patterns"></a>异步编程模式
 
 .NET 提供了执行异步操作的三种模式：  
 
-- **基于任务的异步模式 (TAP)**，该模式使用单一方法表示异步操作的开始和完成。 TAP 是在 .NET Framework 4 中引入的。 **这是在 .NET 中进行异步编程的推荐方法。** C# 中的 [async](~/docs/csharp/language-reference/keywords/async.md) 和 [await](~/docs/csharp/language-reference/keywords/await.md) 关键词以及 Visual Basic 中的 [Async](~/docs/visual-basic/language-reference/modifiers/async.md) 和 [Await](~/docs/visual-basic/language-reference/operators/await-operator.md) 运算符为 TAP 添加了语言支持。 有关详细信息，请参阅[基于任务的异步模式 (TAP)](task-based-asynchronous-pattern-tap.md)。  
+- **基于任务的异步模式 (TAP)** ，该模式使用单一方法表示异步操作的开始和完成。 TAP 是在 .NET Framework 4 中引入的。 **这是在 .NET 中进行异步编程的推荐方法。** C# 中的 [async](../../csharp/language-reference/keywords/async.md) 和 [await](../../csharp/language-reference/keywords/await.md) 关键词以及 Visual Basic 中的 [Async](../../visual-basic/language-reference/modifiers/async.md) 和 [Await](../../visual-basic/language-reference/operators/await-operator.md) 运算符为 TAP 添加了语言支持。 有关详细信息，请参阅[基于任务的异步模式 (TAP)](task-based-asynchronous-pattern-tap.md)。  
 
-- 基于事件的异步模式 (EAP)，是提供异步行为的基于事件的旧模型。 这种模式需要后缀为 `Async` 的方法，以及一个或多个事件、事件处理程序委托类型和 `EventArg` 派生类型。 EAP 是在 .NET Framework 2.0 中引入的。 建议新开发中不再使用这种模式。 有关详细信息，请参阅[基于事件的异步模式 (EAP)](event-based-asynchronous-pattern-eap.md)。  
+- 基于事件的异步模式 (EAP)  ，是提供异步行为的基于事件的旧模型。 这种模式需要后缀为 `Async` 的方法，以及一个或多个事件、事件处理程序委托类型和 `EventArg` 派生类型。 EAP 是在 .NET Framework 2.0 中引入的。 建议新开发中不再使用这种模式。 有关详细信息，请参阅[基于事件的异步模式 (EAP)](event-based-asynchronous-pattern-eap.md)。  
 
-- 异步编程模型 (APM) 模式（也称为 <xref:System.IAsyncResult> 模式），这是使用 <xref:System.IAsyncResult> 接口提供异步行为的旧模型。 在这种模式下，同步操作需要 `Begin` 和 `End` 方法（例如，`BeginWrite` 和 `EndWrite`以实现异步写入操作）。 不建议新的开发使用此模式。 有关详细信息，请参阅[异步编程模型 (APM)](asynchronous-programming-model-apm.md)。  
+- 异步编程模型 (APM)  模式（也称为 <xref:System.IAsyncResult> 模式），这是使用 <xref:System.IAsyncResult> 接口提供异步行为的旧模型。 在这种模式下，同步操作需要 `Begin` 和 `End` 方法（例如，`BeginWrite` 和 `EndWrite`以实现异步写入操作）。 不建议新的开发使用此模式。 有关详细信息，请参阅[异步编程模型 (APM)](asynchronous-programming-model-apm.md)。  
   
 ## <a name="comparison-of-patterns"></a>模式的比较
 
@@ -70,6 +70,6 @@ public class MyClass
 ## <a name="see-also"></a>请参阅
 
 - [深入了解异步](../async-in-depth.md)
-- [C# 中的异步编程](~/docs/csharp/async.md)
-- [F# 中的异步编程](~/docs/fsharp/tutorials/asynchronous-and-concurrent-programming/async.md)
-- [使用 Async 和 Await 的异步编程 (Visual Basic)](~/docs/visual-basic/programming-guide/concepts/async/index.md)
+- [C# 中的异步编程](../../csharp/async.md)
+- [F# 中的异步编程](../../fsharp/tutorials/asynchronous-and-concurrent-programming/async.md)
+- [使用 Async 和 Await 的异步编程 (Visual Basic)](../../visual-basic/programming-guide/concepts/async/index.md)

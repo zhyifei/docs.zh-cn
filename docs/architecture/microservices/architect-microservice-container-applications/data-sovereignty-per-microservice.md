@@ -2,12 +2,12 @@
 title: 每个微服务的数据主权
 description: 每个微服务的数据主权是微服务的核心内容之一。 每个微服务都必须是其数据库的唯一所有者，不能与任何其他微服务共享该数据库。 当然，某个微服务的所有实例都连接到同一个高可用性数据库。
 ms.date: 09/20/2018
-ms.openlocfilehash: ccb12451cd7cd44938e09d171eb29e614786f469
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: cd7be23800394b231e15bdc503d15a960a25a20a
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68673174"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69566210"
 ---
 # <a name="data-sovereignty-per-microservice"></a>每个微服务的数据主权
 

@@ -1,17 +1,17 @@
 ---
 title: 元组
-description: 了解如何F#元组，可能是不同类型的未命名但有序值的分组。
+description: 了解F#元组, 一组未命名但有序值, 可能不同类型。
 ms.date: 05/16/2016
-ms.openlocfilehash: 950451ad1672e0c9fc609773f1bc32fc13636ddb
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 7a15d7e0c6c9b42118dd75066f02cbb2e05335fc
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645116"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630237"
 ---
 # <a name="tuples"></a>元组
 
-一个*元组*是不同类型的可能是未命名但有序值的分组。  元组可以是引用类型或结构。
+*元组*是未命名但有序值的分组, 可能不同类型。  元组可以是引用类型或结构。
 
 ## <a name="syntax"></a>语法
 
@@ -22,75 +22,75 @@ struct(element, ... ,element )
 
 ## <a name="remarks"></a>备注
 
-每个*元素*在上述语法中可以是任何有效F#表达式。
+前面语法中的每个*元素*可以是任何F#有效的表达式。
 
 ## <a name="examples"></a>示例
 
-元组的示例包括对、 三元组和等等的相同或不同类型。 在下面的代码阐释了一些示例。
+元组的示例包括对相同类型或不同类型的成对、三元组等。 下面的代码演示了一些示例。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/tuples/basic-examples.fsx#L6-L21)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/tuples/basic-examples.fsx#L6-L21)]
 
 ## <a name="obtaining-individual-values"></a>获取单个值
 
-可用于模式匹配访问和分配名称的元组元素，如下面的代码中所示。
+可以使用模式匹配来访问和分配元组元素的名称, 如下面的代码所示。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/tuples/basic-examples.fsx#L27-L29)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/tuples/basic-examples.fsx#L27-L29)]
 
-此外可以通过模式匹配外部的元组析构`match`通过表达式`let`绑定：
+还可以通过`match` `let`绑定, 通过表达式外部的模式匹配析构元组:
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/tuples/basic-examples.fsx#L34-L37)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/tuples/basic-examples.fsx#L34-L37)]
 
-或可以模式作为函数的输入匹配的元组：
+或者, 你可以将元组的匹配方式作为函数的输入进行模式:
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/tuples/basic-examples.fsx#L43-L47)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/tuples/basic-examples.fsx#L43-L47)]
 
-如果您需要的元组只有一个元素，可以使用通配符字符 （下划线） 以避免创建不需要值的新名称。
+如果只需要元组的一个元素, 则可以使用通配符 (下划线) 来避免为不需要的值创建新名称。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/tuples/basic-examples.fsx#L53-L54)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/tuples/basic-examples.fsx#L53-L54)]
 
-将引用元组中的元素复制到结构元组也很简单：
+将引用元组中的元素复制到结构元组中也很简单:
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/tuples/basic-examples.fsx#L62-L66)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/tuples/basic-examples.fsx#L62-L66)]
 
-函数`fst`和`snd`（引用仅元组） 返回第一个和第二个元素元组，分别。
+函数`fst` 和`snd` (仅引用元组) 分别返回元组的第一个和第二个元素。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/tuples/basic-examples.fsx#L72-L73)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/tuples/basic-examples.fsx#L72-L73)]
 
-返回构成三元组的第三个元素没有内置函数，但可轻松编写一个，如下所示。
+没有任何内置函数返回三方的第三个元素, 但您可以按如下所示轻松编写一个元素。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/tuples/basic-examples.fsx#L78-L78)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/tuples/basic-examples.fsx#L78-L78)]
 
-通常情况下，最好使用模式匹配来访问各个元组元素。
+通常情况下, 最好使用模式匹配来访问各个元组元素。
 
 ## <a name="using-tuples"></a>使用元组
 
-元组提供从函数返回多个值的简便方法，如下面的示例中所示。 此示例执行整除并返回该操作，因为元组对的第一个成员，作为第二个成员对其余的舍入的结果。
+元组提供一种从函数返回多个值的便捷方法, 如下面的示例中所示。 此示例执行整数除法运算, 并将运算的舍入结果作为元组对的第一个成员, 并将余数作为成对的第二个成员返回。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/tuples/basic-examples.fsx#L83-L86)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/tuples/basic-examples.fsx#L83-L86)]
 
-时您想要避免隐含的常用函数语法的函数参数的隐式扩充，也可以作为函数参数使用元组。
+如果要避免使用常规函数语法所隐含的函数参数的隐式 currying, 则元组也可以用作函数自变量。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/tuples/basic-examples.fsx#L88-L88)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/tuples/basic-examples.fsx#L88-L88)]
 
-用于定义函数的常见语法`let sum a b = a + b`使您能够定义函数，则部分应用函数的第一个参数，如下面的代码中所示。
+定义函数`let sum a b = a + b`的常用语法允许您定义一个函数, 该函数是函数的第一个自变量的部分应用程序, 如下面的代码所示。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/tuples/basic-examples.fsx#L90-L94)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/tuples/basic-examples.fsx#L90-L94)]
 
-作为参数使用一个元组将禁用扩充。 详细信息，请参阅"的参数的部分应用程序"中[函数](functions/index.md)。
+使用元组作为参数将禁用 currying。 有关详细信息, 请参阅[函数](./functions/index.md)中的 "参数的部分应用"。
 
 ## <a name="names-of-tuple-types"></a>元组类型的名称
 
-在写出为一个元组类型的名称时，您使用`*`符号来分隔元素。 元组组成`int`、 一个`float`，和一个`string`，如`(10, 10.0, "ten")`，将按以下方式编写的类型。
+写出作为元组的类型的名称时, 使用`*`符号分隔元素。 对于包含`int` `string`、 `float`和的元组(如),将按如下`(10, 10.0, "ten")`方式编写类型。
 
 ```fsharp
 int * float * string
 ```
 
-## <a name="interoperation-with-c-tuples"></a>与 C# 元组互操作
+## <a name="interoperation-with-c-tuples"></a>与C#元组互操作
 
-C# 7.0 引入了语言的元组。  中的元组C#是结构，并等效于结构中的元组F#。  如果你需要与 C# 进行互操作，则必须使用结构元组。
+C#7.0 引入了元组到语言。  中C#的元组是结构, 等效于中F#的结构元组。  如果需要与C#进行互操作, 则必须使用结构元组。
 
-这很容易地执行操作。  例如，假设您需要将元组传递给 C# 类，然后使用其结果，这也是一个元组：
+这很简单。  例如, 假设您必须将元组传递给某个C#类, 然后使用它的结果, 这也是一个元组:
 
 ```csharp
 namespace CSharpTupleInterop
@@ -103,7 +103,7 @@ namespace CSharpTupleInterop
 }
 ```
 
-在你F#代码，然后可以将作为参数传递的结构元组，并使用的结构元组形式的结果。
+然后, F#你可以在代码中将结构元组作为参数传递, 并将结果用作结构元组。
 
 ```fsharp
 open TupleInterop
@@ -112,25 +112,25 @@ let struct (newX, newY) = Example.AddOneToXAndY(struct (1, 2))
 // newX is now 2, and newY is now 3
 ```
 
-### <a name="converting-between-reference-tuples-and-struct-tuples"></a>引用的元组和结构元组之间进行转换
+### <a name="converting-between-reference-tuples-and-struct-tuples"></a>引用元组与结构元组之间的转换
 
-引用的元组和结构元组具有完全不同的基础表示形式，因为它们不是隐式转换。  也就是说，将不会编译代码如下所示：
+由于引用元组和结构元组具有完全不同的基础表示形式, 因此它们不能隐式转换。  也就是说, 以下代码将不会编译:
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/tuples/interop.fsx#L5-L12)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/tuples/interop.fsx#L5-L12)]
 
-必须模式匹配上一个元组，并构建另一种具有的构成部分。  例如：
+您必须对一个元组进行匹配模式, 并用构成部分构造另一个元组。  例如:
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/tuples/interop.fsx#L18-L22)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/tuples/interop.fsx#L18-L22)]
 
-## <a name="compiled-form-of-reference-tuples"></a>已编译的形式引用元组
+## <a name="compiled-form-of-reference-tuples"></a>引用元组的编译形式
 
-本部分介绍元组的形式，它们在编译时。  此处的信息不需读取除非面向.NET Framework 3.5 或更低。
+本部分说明元组在编译时的形式。  除非目标 .NET Framework 3.5 或更低, 否则此处不需要阅读此处的信息。
 
-元组被编译到的一种多个泛型类型，所有命名对象`System.Tuple`，该重载上的实参数量或类型参数的数目。 在此窗体中显示的元组类型，查看这些状态时从另一种语言，如C#或 Visual Basic 中，或者当使用的一种工具，并不知道F#构造。 `Tuple`类型在.NET Framework 4 中引入。 如果面向.NET Framework 的早期版本，则编译器将使用的版本[System.Tuple](https://msdn.microsoft.com/library/5ac7953d-acdc-4a58-bfb7-c1f6406c0fa3)从 2.0 版本的F#核心库。 此库中的类型仅用于面向 2.0、 3.0 和 3.5 版本的.NET Framework 的应用程序。 使用类型转发，以确保.NET Framework 2.0 和.NET Framework 4 之间的二进制文件兼容性F#组件。
+元组将编译为多个泛型类型之一的对象, `System.Tuple`这些泛型类型都是在 arity 上重载的, 或者是类型参数的数目。 当你从另一种语言 (如C#或 Visual Basic) 查看这些元组类型时, 或者当你使用的工具无法识别F#构造时, 元组类型会显示在此窗体中。 类型`Tuple`是在 .NET Framework 4 中引入的。 如果以 .NET Framework 的早期版本为目标, 则编译器将使用2.0 版本的[System.Tuple](https://msdn.microsoft.com/library/5ac7953d-acdc-4a58-bfb7-c1f6406c0fa3) F#核心库中的版本。 此库中的类型仅用于面向2.0、3.0 和3.5 版本的 .NET Framework 的应用程序。 类型转发用于确保 .NET Framework 2.0 和 .NET Framework 4 F#组件之间的二进制兼容性。
 
-### <a name="compiled-form-of-struct-tuples"></a>已编译的形式的结构元组
+### <a name="compiled-form-of-struct-tuples"></a>结构元组的编译形式
 
-结构元组 (例如， `struct (x, y)`)，从根本上不同于引用的元组。  编译为<xref:System.ValueTuple>重载的实参数量，或类型参数的数目的类型。  它们等效于[C# 7.0 元组](../../csharp/tuples.md)并[Visual Basic 2017 元组](../../visual-basic/programming-guide/language-features/data-types/tuples.md)，并进行双向互操作。
+结构元组 (例如`struct (x, y)`) 在本质上不同于引用元组。  它们被编译到<xref:System.ValueTuple>类型中, 由 arity 重载或类型参数的数目。  它们等效于[ C# 7.0 元](../../csharp/tuples.md)组和[Visual Basic 2017 元组](../../visual-basic/programming-guide/language-features/data-types/tuples.md), 并互操作双向。
 
 ## <a name="see-also"></a>请参阅
 

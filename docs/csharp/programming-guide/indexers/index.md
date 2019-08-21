@@ -8,23 +8,23 @@ helpviewer_keywords:
 - indexers [C#]
 - C# language, indexers
 ms.assetid: 022cd27d-d5e0-4cfe-8b97-dc018cc3355d
-ms.openlocfilehash: 43cc051eda8c3458d3dc5c529b52104bcd9b807a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 130cc68906be433afc906cfb22759f4ae3dba447
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64596124"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69589459"
 ---
 # <a name="indexers-c-programming-guide"></a>索引器（C# 编程指南）
 
-索引器允许类或结构的实例就像数组一样进行索引。 无需显式指定类型或实例成员，即可设置或检索索引值。 索引器类似于[属性](../../../csharp/programming-guide/classes-and-structs/properties.md)，不同之处在于它们的访问器需要使用参数。  
+索引器允许类或结构的实例就像数组一样进行索引。 无需显式指定类型或实例成员，即可设置或检索索引值。 索引器类似于[属性](../classes-and-structs/properties.md)，不同之处在于它们的访问器需要使用参数。  
  
- 以下示例定义了一个泛型类，其中包含用于赋值和检索值的简单 [get](../../../csharp/language-reference/keywords/get.md) 和 [set](../../../csharp/language-reference/keywords/set.md) 访问器方法。 `Program` 类创建了此类的一个实例，用于存储字符串。  
+ 以下示例定义了一个泛型类，其中包含用于赋值和检索值的简单 [get](../../language-reference/keywords/get.md) 和 [set](../../language-reference/keywords/set.md) 访问器方法。 `Program` 类创建了此类的一个实例，用于存储字符串。  
   
  [!code-csharp[indexers#1](../../../../samples/snippets/csharp/programming-guide/indexers/indexer-1.cs)]  
   
 > [!NOTE]
->  有关更多示例，请参阅[相关部分](../../../csharp/programming-guide/indexers/index.md#BKMK_RelatedSections)。  
+>  有关更多示例，请参阅[相关部分](./index.md#BKMK_RelatedSections)。  
   
 ## <a name="expression-body-definitions"></a>表达式主体定义  
  
@@ -44,9 +44,9 @@ ms.locfileid: "64596124"
   
 - `get` 取值函数返回值。 `set` 取值函数分配值。  
   
-- [this](../../../csharp/language-reference/keywords/this.md) 关键字用于定义索引器。  
+- [this](../../language-reference/keywords/this.md) 关键字用于定义索引器。  
   
-- [value](../../../csharp/language-reference/keywords/value.md) 关键字用于定义 `set` 索引器所赋的值。  
+- [value](../../language-reference/keywords/value.md) 关键字用于定义 `set` 索引器所赋的值。  
   
 - 索引器不必根据整数值进行索引；由你决定如何定义特定的查找机制。  
   
@@ -56,13 +56,13 @@ ms.locfileid: "64596124"
   
 ## <a name="BKMK_RelatedSections"></a>相关部分  
   
-- [使用索引器](../../../csharp/programming-guide/indexers/using-indexers.md)  
+- [使用索引器](./using-indexers.md)  
   
-- [接口中的索引器](../../../csharp/programming-guide/indexers/indexers-in-interfaces.md)  
+- [接口中的索引器](./indexers-in-interfaces.md)  
   
-- [属性与索引器之间的比较](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)  
+- [属性与索引器之间的比较](./comparison-between-properties-and-indexers.md)  
   
-- [限制访问器可访问性](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md)  
+- [限制访问器可访问性](../classes-and-structs/restricting-accessor-accessibility.md)  
   
 ## <a name="c-language-specification"></a>C# 语言规范  
 
@@ -70,5 +70,5 @@ ms.locfileid: "64596124"
   
 ## <a name="see-also"></a>请参阅
 
-- [C# 编程指南](../../../csharp/programming-guide/index.md)
-- [属性](../../../csharp/programming-guide/classes-and-structs/properties.md)
+- [C# 编程指南](../index.md)
+- [属性](../classes-and-structs/properties.md)
