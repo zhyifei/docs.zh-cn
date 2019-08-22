@@ -8,20 +8,20 @@ helpviewer_keywords:
 - <proxy> element
 - proxy element
 ms.assetid: 37a548d8-fade-4ac5-82ec-b49b6c6cb22a
-ms.openlocfilehash: 8df9bbf2615776c2e023f03401785da95b2226eb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a183c4160c4cd55b05c5c23f7a10e3a1d1c74ea4
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674481"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659290"
 ---
-# <a name="proxy-element-network-settings"></a>\<代理 > 元素 （网络设置）
+# <a name="proxy-element-network-settings"></a>\<proxy > 元素 (网络设置)
 定义代理服务器。  
   
  \<configuration>  
 \<system.net>  
 \<defaultProxy >  
-\<proxy>  
+\<代理 >  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,10 +43,10 @@ ms.locfileid: "61674481"
 |**特性**|**说明**|  
 |-------------------|---------------------|  
 |`autoDetect`|指定是否自动检测代理。 默认值为 `unspecified`。|  
-|`bypassonlocal`|指定对于本地资源是否跳过代理。 本地资源包括本地服务器 (`http://localhost`， `http://loopback`，或`http://127.0.0.1`) 和不带句点的 URI (`http://webserver`)。 默认值为 `unspecified`。|  
-|`proxyaddress`|指定代理要使用的 URI。|  
-|`scriptLocation`|指定的配置脚本的位置。 不要使用`bypassonlocal`具有此特性的属性。 |  
-|`usesystemdefault`|指定是否使用 Internet Explorer 代理设置。 如果设置为`true`，后续属性将替代 Internet Explorer 代理设置。 默认值为 `unspecified`。|  
+|`bypassonlocal`|指定对于本地资源是否跳过代理。 本地资源包括本地服务器`http://localhost`(、 `http://loopback`或`http://127.0.0.1`) 和没有句点 (`http://webserver`) 的 URI。 默认值为 `unspecified`。|  
+|`proxyaddress`|指定要使用的代理 URI。|  
+|`scriptLocation`|指定配置脚本的位置。 不要将`bypassonlocal`属性与此属性一起使用。 |  
+|`usesystemdefault`|指定是否使用 Internet Explorer 代理设置。 如果设置为`true`, 则后续特性将重写 Internet Explorer 代理设置。 默认值为 `unspecified`。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  
@@ -55,26 +55,26 @@ ms.locfileid: "61674481"
   
 |**元素**|**说明**|  
 |-----------------|---------------------|  
-|[defaultProxy](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|配置超文本传输协议 (HTTP) 代理服务器。|  
+|[defaultProxy](defaultproxy-element-network-settings.md)|配置超文本传输协议 (HTTP) 代理服务器。|  
   
 ## <a name="text-value"></a>文本值  
   
 ## <a name="remarks"></a>备注  
- `proxy`元素定义为应用程序代理服务器。 如果从配置文件缺少此元素，然后.NET Framework 将使用的代理设置在 Internet Explorer 中。  
+ `proxy`元素为应用程序定义代理服务器。 如果配置文件中缺少此元素, 则 .NET Framework 将使用 Internet Explorer 中的代理设置。  
   
- 值为`proxyaddress`属性应为格式正确的统一资源标识符 (URI)。  
+ `proxyaddress`特性的值应为格式正确的统一资源标识符 (URI)。  
   
- `scriptLocation`特性引用了自动检测代理配置脚本。 <xref:System.Net.WebProxy>类将尝试查找配置脚本 (通常命名 Wpad.dat) 时**使用自动配置脚本**Internet 资源管理器中选择选项。 如果`bypassonlocal`设置为任何值，`scriptLocation`将被忽略。
+ `scriptLocation`属性指自动检测代理配置脚本。 在<xref:System.Net.WebProxy> Internet Explorer 中选择 "**使用自动配置脚本**" 选项后, 类将尝试查找配置脚本 (通常名为 Wpad)。 如果`bypassonlocal`设置为任何值, `scriptLocation`则将被忽略。
   
- 使用`usesystemdefault`要迁移到版本 2.0 的.NET Framework 版本 1.1 应用程序的属性。  
+ 将 .NET Framework 版本1.1 应用程序的属性迁移到版本2.0。`usesystemdefault`  
   
- 如果引发异常`proxyaddress`属性指定了无效的默认代理。 异常的 <xref:System.Exception.InnerException%2A> 属性应具有错误根本原因的详细信息。  
+ 如果`proxyaddress`特性指定了无效的默认代理, 则会引发异常。 异常的 <xref:System.Exception.InnerException%2A> 属性应具有错误根本原因的详细信息。  
   
 ## <a name="configuration-files"></a>配置文件  
  此元素可在应用程序配置文件或计算机配置文件 (Machine.config) 中使用。  
   
 ## <a name="example"></a>示例  
- 以下示例使用从 Internet 资源管理器代理的默认值，指定代理地址，并跳过本地访问的代理。  
+ 以下示例使用 Internet Explorer 代理中的默认值, 指定代理地址, 并绕过代理进行本地访问。  
   
 ```xml  
 <configuration>  
@@ -93,4 +93,4 @@ ms.locfileid: "61674481"
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
-- [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [网络设置架构](index.md)

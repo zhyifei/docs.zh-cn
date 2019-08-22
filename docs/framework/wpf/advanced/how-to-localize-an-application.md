@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LocBaml tool [WPF]
 - applications [WPF], localizing
 ms.assetid: 5001227e-9326-48a4-9dcd-ba1b89ee6653
-ms.openlocfilehash: 749ba2dd9318976289d9d4140cfadd711e0548d4
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 4d7271e792c96dd896d73a52a31ad136acc19e26
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629873"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666793"
 ---
 # <a name="how-to-localize-an-application"></a>如何：对应用程序进行本地化
 本教程介绍如何通过使用 LocBaml 工具创建本地化应用程序。  
@@ -36,7 +36,7 @@ ms.locfileid: "68629873"
   
 <a name="create_sample_app"></a>   
 ## <a name="create-a-sample-application"></a>创建一个简单的应用程序  
- 在此步骤中，你将准备要用于本地化的应用程序。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 示例提供了 HelloApp 示例，将用于本讨论中的代码示例。 如果要使用此示例, 请从[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] [LocBaml 工具示例](https://go.microsoft.com/fwlink/?LinkID=160016)下载文件。  
+ 在此步骤中，你将准备要用于本地化的应用程序。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 示例提供了 HelloApp 示例，将用于本讨论中的代码示例。 如果要使用此示例, 请从[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] [LocBaml 工具示例](https://github.com/microsoft/WPF-Samples/tree/master/Tools/LocBaml)下载文件。  
   
 1. 将应用程序开发到想要开始进行本地化的位置。  
   
@@ -152,7 +152,7 @@ ms.locfileid: "68629873"
    |BAML 名称|资源键|类别|可读性|可修改性|注释|值|  
    |---------------|------------------|--------------|-----------------|-------------------|--------------|-----------|
    |HelloApp.g.en-US.resources:window1.baml|Stack1:System.Windows.Controls.StackPanel.$Content|忽略|FALSE|FALSE||#Text1;#Text2|
-   |HelloApp.g.en-US.resources:window1.baml|Text1:System.Windows.Controls.TextBlock.$Content|None|TRUE|TRUE||Hello World|
+   |HelloApp.g.en-US.resources:window1.baml|Text1:System.Windows.Controls.TextBlock.$Content|无|TRUE|TRUE||Hello World|
    |HelloApp.g.en-US.resources:window1.baml|Text2:System.Windows.Controls.TextBlock.$Content|无|TRUE|TRUE||Goodbye World|
   
    请注意,**注释**字段的所有值不包含任何值;如果字段没有值, 则为空。 另请注意, 第一行中的项既不可读也不可修改, 并且具有 "Ignore" 作为其**类别**值, 所有这些都指示该值不可本地化。  
