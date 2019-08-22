@@ -75,7 +75,7 @@ ms.locfileid: "68331750"
   
  其中， *expression* 是要匹配的初始模式， *yes* 是当匹配 *expression* 时要匹配的模式，而 *no* 是未匹配 *expression* 时要匹配的可选模式。 正则表达式引擎将 *expression* 视为一个宽度为零的断言；也就是说，正则表达式引擎在计算 *expression*之后，不再处理输入流的后续数据。 因此，该构造是等效于以下语法：  
   
- `(?(?=` *表达式* `)` *是* `|` *no* `)`  
+ `(?(?=`expression `)` yes `|` *no* `)`  
   
  其中 `(?=`expression  `)` 是宽度为零的断言构造。 （有关详细信息，请参阅[分组构造](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。）由于正则表达式引擎将 expression  解释为定位点（零宽断言），因此 expression  必须是零宽断言（有关详细信息，请参阅[定位标记](../../../docs/standard/base-types/anchors-in-regular-expressions.md)），或者是也包含在 yes  中的子表达式。 否则，无法匹配 *yes* 模式。  
   
@@ -103,7 +103,7 @@ ms.locfileid: "68331750"
 ## <a name="conditional-matching-based-on-a-valid-captured-group"></a>基于有效的捕获组的条件匹配  
  此语言元素尝试根据是否已经匹配指定的捕获组来匹配两种模式之一。 语法为：  
   
- `(?(` *name* `)` *是* `|` *no* `)`  
+ `(?(` *name* `)` *yes* `|` *no* `)`  
   
  or  
   

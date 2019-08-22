@@ -6,15 +6,15 @@ helpviewer_keywords:
 - C# language, delegates
 - delegates [C#]
 ms.assetid: 97de039b-c76b-4b9c-a27d-8c1e1c8d93da
-ms.openlocfilehash: 62785753cf0eb11965f93e517d6a784081b41a13
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: dfb957247a50d16d2aa4c3c4be147e6badf0703a
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363807"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590613"
 ---
 # <a name="delegates-c-programming-guide"></a>委托（C# 编程指南）
-[委托](../../../csharp/language-reference/keywords/delegate.md)是一种引用类型，表示对具有特定参数列表和返回类型的方法的引用。 在实例化委托时，你可以将其实例与任何具有兼容签名和返回类型的方法相关联。 你可以通过委托实例调用方法。  
+[委托](../../language-reference/keywords/delegate.md)是一种引用类型，表示对具有特定参数列表和返回类型的方法的引用。 在实例化委托时，你可以将其实例与任何具有兼容签名和返回类型的方法相关联。 你可以通过委托实例调用方法。  
   
  委托用于将方法作为参数传递给其他方法。 事件处理程序就是通过委托调用的方法。 你可以创建一个自定义方法，当发生特定事件时，某个类（如 Windows 控件）就可以调用你的方法。 下面的示例演示了一个委托声明：  
   
@@ -38,23 +38,23 @@ ms.locfileid: "68363807"
   
 - 委托可以链接在一起；例如，可以对一个事件调用多个方法。  
   
-- 方法不必与委托类型完全匹配。 有关详细信息，请参阅[使用委托中的变体](../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md)。  
+- 方法不必与委托类型完全匹配。 有关详细信息，请参阅[使用委托中的变体](../concepts/covariance-contravariance/using-variance-in-delegates.md)。  
   
-- C# 2.0 版引入了[匿名方法](../../../csharp/language-reference/operators/delegate-operator.md)的概念，可以将代码块作为参数（而不是单独定义的方法）进行传递。 C# 3.0 引入了 Lambda 表达式，利用它们可以更简练地编写内联代码块。 匿名方法和 Lambda 表达式（在某些上下文中）都可编译为委托类型。 这些功能现在统称为匿名函数。 若要详细了解 lambda 表达式，请参阅 [lambda 表达式](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)。
+- C# 2.0 版引入了[匿名方法](../../language-reference/operators/delegate-operator.md)的概念，可以将代码块作为参数（而不是单独定义的方法）进行传递。 C# 3.0 引入了 Lambda 表达式，利用它们可以更简练地编写内联代码块。 匿名方法和 Lambda 表达式（在某些上下文中）都可编译为委托类型。 这些功能现在统称为匿名函数。 若要详细了解 lambda 表达式，请参阅 [lambda 表达式](../statements-expressions-operators/lambda-expressions.md)。
   
 ## <a name="in-this-section"></a>本节内容  
   
-- [使用委托](../../../csharp/programming-guide/delegates/using-delegates.md)  
+- [使用委托](./using-delegates.md)  
   
 - [何时使用委托，而不是接口（C# 编程指南）](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms173173(v=vs.100))  
   
-- [带有命名方法的委托与带有匿名方法的委托](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md)  
+- [带有命名方法的委托与带有匿名方法的委托](./delegates-with-named-vs-anonymous-methods.md)  
   
-- [使用委托中的变体](../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md)  
+- [使用委托中的变体](../concepts/covariance-contravariance/using-variance-in-delegates.md)  
   
-- [如何：合并委托（多播委托）](../../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)  
+- [如何：合并委托（多播委托）](./how-to-combine-delegates-multicast-delegates.md)  
   
-- [如何：声明、实例化和使用委托](../../../csharp/programming-guide/delegates/how-to-declare-instantiate-and-use-a-delegate.md)  
+- [如何：声明、实例化和使用委托](./how-to-declare-instantiate-and-use-a-delegate.md)  
 
 ## <a name="c-language-specification"></a>C# 语言规范  
 
@@ -68,5 +68,5 @@ ms.locfileid: "68363807"
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Delegate>
-- [C# 编程指南](../../../csharp/programming-guide/index.md)
-- [事件](../../../csharp/programming-guide/events/index.md)
+- [C# 编程指南](../index.md)
+- [事件](../events/index.md)
