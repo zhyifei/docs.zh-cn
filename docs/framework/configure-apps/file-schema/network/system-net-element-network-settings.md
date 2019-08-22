@@ -8,12 +8,12 @@ helpviewer_keywords:
 - system.Net element
 - <system.Net> element
 ms.assetid: 52de4d6c-b24d-44aa-ba7d-6b5061f1357e
-ms.openlocfilehash: febea73ddbc45276f97835eb4af7ee0d0d68dda5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 449146612938700f59f5e2ec761526d1dc66a3fc
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674332"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663961"
 ---
 # <a name="systemnet-element-network-settings"></a>\<system.Net> 元素（网络设置）
 包含指定 .NET Framework 如何连接到网络的设置。  
@@ -38,25 +38,25 @@ ms.locfileid: "61674332"
   
 |**元素**|**说明**|  
 |-----------------|---------------------|  
-|[authenticationModules](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|指定用于对 Internet 请求进行身份验证模块。|  
-|[connectionManagement](../../../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md)|指定的最大数与 Internet 主机的连接。|  
-|[defaultProxy](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|配置超文本传输协议 (HTTP) 代理服务器。|  
-|[mailSettings](../../../../../docs/framework/configure-apps/file-schema/network/mailsettings-element-network-settings.md)|配置简单邮件传输协议 (SMTP) 邮件发送选项。|  
-|[requestCaching](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|控制网络请求的缓存机制。|  
-|[settings](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|配置中的类的基本网络选项<xref:System.Net>和相关子命名空间。|  
-|[webRequestModules](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|指定模块用于从 Internet 主机请求信息。|  
+|[authenticationModules](authenticationmodules-element-network-settings.md)|指定用于对 Internet 请求进行身份验证的模块。|  
+|[connectionManagement](connectionmanagement-element-network-settings.md)|指定与 Internet 主机的最大连接数。|  
+|[defaultProxy](defaultproxy-element-network-settings.md)|配置超文本传输协议 (HTTP) 代理服务器。|  
+|[mailSettings](mailsettings-element-network-settings.md)|配置简单邮件传输协议 (SMTP) 邮件发送选项。|  
+|[requestCaching](requestcaching-element-network-settings.md)|控制网络请求的缓存机制。|  
+|[设置](settings-element-network-settings.md)|为<xref:System.Net>和相关子命名空间中的类配置基本网络选项。|  
+|[webRequestModules](webrequestmodules-element-network-settings.md)|指定用于从 Internet 主机请求信息的模块。|  
   
 ### <a name="parent-elements"></a>父元素  
   
 |**元素**|**说明**|  
 |-----------------|---------------------|  
-|[configuration](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|包含所有命名空间的设置。|  
+|[configuration](../configuration-element.md)|包含所有命名空间的设置。|  
   
 ## <a name="remarks"></a>备注  
- [ \<System.net >](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)元素包含设置中的类<xref:System.Net>和相关子命名空间。 设置配置身份验证模块、 连接管理、 电子邮件设置、 代理服务器和 Internet 请求模块，用于接收来自 Internet 主机的信息。  
+ System.object > 元素包含<xref:System.Net>和相关子命名空间中的类的设置。 [ \<](system-net-element-network-settings.md) 设置配置身份验证模块、连接管理、邮件设置、代理服务器和 Internet 请求模块, 用于接收来自 Internet 主机的信息。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示使用的典型配置<xref:System.Net>类。  
+ 下面的示例演示了<xref:System.Net>类使用的典型配置。  
   
 ```xml  
 <configuration>  
@@ -94,4 +94,4 @@ ms.locfileid: "61674332"
   
 ## <a name="see-also"></a>请参阅
 
-- [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [网络设置架构](index.md)

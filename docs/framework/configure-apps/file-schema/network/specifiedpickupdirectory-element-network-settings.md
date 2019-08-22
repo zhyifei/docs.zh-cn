@@ -8,14 +8,14 @@ helpviewer_keywords:
 - specifiedPickupDirectory element
 - <specifiedPickupDirectory> element
 ms.assetid: 0121f49d-bff2-4bc6-af06-f1628dcd61f1
-ms.openlocfilehash: a459fee557285935c383dcfaf512c8a8a9aea570
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b2e31dee4f5aff2bf6cedf5c4e9ca235695b0a53
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674360"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659098"
 ---
-# <a name="specifiedpickupdirectory-element-network-settings"></a>\<specifiedPickupDirectory > 元素 （网络设置）
+# <a name="specifiedpickupdirectory-element-network-settings"></a>\<specifiedPickupDirectory > 元素 (网络设置)
 配置简单邮件传输协议 (SMTP) 服务器的本地目录。  
   
  \<configuration>  
@@ -39,7 +39,7 @@ ms.locfileid: "61674360"
   
 |特性|描述|  
 |---------------|-----------------|  
-|`pickupDirectoryLocation`|在应用程序在其中保存以供以后处理的 SMTP 服务器的电子邮件的目录。|  
+|`pickupDirectoryLocation`|应用程序在其中保存电子邮件以供 SMTP 服务器稍后处理的目录。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  
@@ -48,13 +48,13 @@ ms.locfileid: "61674360"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<smtp > 元素 （网络设置）](../../../../../docs/framework/configure-apps/file-schema/network/smtp-element-network-settings.md)|配置简单邮件传输协议 (SMTP) 邮件发送选项。|  
+|[\<smtp > 元素 (网络设置)](smtp-element-network-settings.md)|配置简单邮件传输协议 (SMTP) 邮件发送选项。|  
   
 ## <a name="remarks"></a>备注  
  `specifiedPickupDirectory` 特性设置应用程序保存邮件以供 SMTP 服务器处理的目录。  
   
 ## <a name="example"></a>示例  
- 下面的示例指定 c:\maildrop 作为邮件的拾取目录。  
+ 下面的示例将 c:\maildrop 指定为邮件分拣目录。  
   
 ```xml  
 <configuration>  
@@ -75,4 +75,4 @@ ms.locfileid: "61674360"
 - <xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType>
 - <xref:System.Net.Configuration.SmtpSection?displayProperty=nameWithType>
 - <xref:System.Net.Configuration.SmtpSpecifiedPickupDirectoryElement?displayProperty=nameWithType>
-- [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [网络设置架构](index.md)

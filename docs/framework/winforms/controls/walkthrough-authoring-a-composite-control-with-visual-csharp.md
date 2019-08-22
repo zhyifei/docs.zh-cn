@@ -8,17 +8,16 @@ helpviewer_keywords:
 - user controls [C#]
 - custom controls [Windows Forms], creating
 ms.assetid: f88481a8-c746-4a36-9479-374ce5f2e91f
-ms.openlocfilehash: fa6881614725ddf7628ddc484a9a4130bb23bc77
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 12b506e859579a0755c2e9842e792c59968c94a8
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040229"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666755"
 ---
 # <a name="walkthrough-authoring-a-composite-control-with-visual-c"></a>演练：使用 Visual C 创作复合控件\#
 
 复合控件提供了一种创建和重用自定义图形界面的方法。 复合控件本质上是具有可视化表示形式的组件。 因此，它可能包含一个或多个 Windows 窗体控件、组件或代码块，它们能够通过验证用户输入、修改显示属性或执行作者所需的其他任务来扩展功能。 可以按照与其他控件相同的方式将复合控件置于 Windows 窗体中。 在本演练的第一部分，将创建一个名为 `ctlClock` 的简单复合控件。 在本演练的第二部分，将通过继承扩展 `ctlClock` 的功能。
-
 
 ## <a name="creating-the-project"></a>创建项目
 
@@ -55,7 +54,7 @@ ms.locfileid: "69040229"
 
     |属性|更改为|
     |--------------|---------------|
-    |**名称**|`lblDisplay`|
+    |**Name**|`lblDisplay`|
     |**文本**|`(blank space)`|
     |**TextAlign**|`MiddleCenter`|
     |**Font.Size**|`14`|
@@ -66,7 +65,7 @@ ms.locfileid: "69040229"
 
 5. 在 "**组件设计器**" 中, 单击 " **timer1**" <xref:System.Windows.Forms.Timer.Interval%2A> , 然后`1000`将属性设置为`true`, 并<xref:System.Windows.Forms.Timer.Enabled%2A>将属性设置为。
 
-     属性控制<xref:System.Windows.Forms.Timer>组件的计时频率。 <xref:System.Windows.Forms.Timer.Interval%2A>           `timer1` 每走过一个刻度，它都会运行一次 `timer1_Tick` 事件中的代码。 间隔表示计时之间的毫秒数。
+     属性控制<xref:System.Windows.Forms.Timer>组件的计时频率。 <xref:System.Windows.Forms.Timer.Interval%2A> `timer1` 每走过一个刻度，它都会运行一次 `timer1_Tick` 事件中的代码。 间隔表示计时之间的毫秒数。
 
 6. 在“组件设计器”中，双击“timer1”转到 `ctlClock` 的 `timer1_Tick` 事件。
 
@@ -143,7 +142,7 @@ ms.locfileid: "69040229"
     }
     ```
 
-     上述代码使得后续用户能够使用 `ClockForeColor` 和 `ClockBackColor` 这两个自定义属性。           `get` 和 `set` 语句提供了该属性值的存储和检索，还提供了实现适合于该属性的功能的代码。
+     上述代码使得后续用户能够使用 `ClockForeColor` 和 `ClockBackColor` 这两个自定义属性。 `get` 和 `set` 语句提供了该属性值的存储和检索，还提供了实现适合于该属性的功能的代码。
 
 4. 在“文件”菜单上，单击“全部保存”保存项目。
 
@@ -237,7 +236,7 @@ ms.locfileid: "69040229"
 
 1. 在解决方案资源管理器中，右键单击“ctlAlarmClock”，然后单击“视图设计器”。
 
-               `ctlAlarmClock` 的设计器将在主窗口中打开。
+     `ctlAlarmClock` 的设计器将在主窗口中打开。
 
 2. 单击该控件的显示部分，然后查看“属性”窗口。
 
@@ -253,7 +252,7 @@ ms.locfileid: "69040229"
 
     |属性|设置|
     |--------------|-------------|
-    |**名称**|`lblAlarm`|
+    |**Name**|`lblAlarm`|
     |**文本**|**Alarm!**|
     |**TextAlign**|`MiddleCenter`|
     |**可见**|`false`|
@@ -312,7 +311,7 @@ ms.locfileid: "69040229"
     }
     ```
 
-     添加此代码将完成多项任务。           `override` 语句指示控件使用此方法替换从基控件继承的方法。 调用此方法时，它通过调用 `base.timer1_Tick` 语句来调用它重写的方法，从而确保在该控件中重现原始控件包含的所有功能。 然后，运行附加代码以合并警报功能。 警报触发时，将会出现闪烁的标签控件。
+     添加此代码将完成多项任务。 `override` 语句指示控件使用此方法替换从基控件继承的方法。 调用此方法时，它通过调用 `base.timer1_Tick` 语句来调用它重写的方法，从而确保在该控件中重现原始控件包含的所有功能。 然后，运行附加代码以合并警报功能。 警报触发时，将会出现闪烁的标签控件。
 
      警报时钟控件已基本完成。 剩下的唯一事情是实现关闭它的方法。 为此，将向 `lblAlarm_Click` 方法添加代码。
 
@@ -326,7 +325,7 @@ ms.locfileid: "69040229"
 
     |属性|值|
     |--------------|-----------|
-    |**名称**|`btnAlarmOff`|
+    |**Name**|`btnAlarmOff`|
     |**文本**|**禁用警报**|
 
 3. 在设计器中，双击“btnAlarmOff”控件。
@@ -376,8 +375,8 @@ ms.locfileid: "69040229"
     |控件|属性|“值”|
     |-------------|--------------|-----------|
     |`label1`|**文本**|`(blank space)`|
-    ||**名称**|`lblTest`|
-    |`dateTimePicker1`|**名称**|`dtpTest`|
+    ||**Name**|`lblTest`|
+    |`dateTimePicker1`|**Name**|`dtpTest`|
     ||**格式**|<xref:System.Windows.Forms.DateTimePickerFormat.Time>|
 
 10. 在设计器中，双击“dtpTest”。

@@ -9,18 +9,18 @@ helpviewer_keywords:
 - container tags, <codeBase> element
 - codeBase element
 ms.assetid: d48a3983-2297-43ff-a14d-1f29d3995822
-ms.openlocfilehash: b5825efcc613689e73fb56b6695fe7c75ff09136
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a06daa0b2aa5374c9959cbbe778d62856819a40e
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674189"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663863"
 ---
-# <a name="codebase-element"></a>\<b a s e > 元素
+# <a name="codebase-element"></a>\<codeBase > 元素
 
-指定公共语言运行时在哪里可以找到程序集。
+指定公共语言运行时可在何处找到程序集。
 
-\<configuration> \<runtime> \<assemblyBinding> \<dependentAssembly> \<codeBase>
+\<configuration > \<运行时\<> assemblyBinding \<> dependentAssembly \<> codeBase >
 
 ## <a name="syntax"></a>语法
 
@@ -38,14 +38,14 @@ ms.locfileid: "61674189"
 
 |特性|描述|
 |---------------|-----------------|
-|`href`|必需的特性。<br /><br /> 指定运行时在哪里可以找到程序集的指定的版本的 URL。|
-|`version`|必需的特性。<br /><br /> 指定基本代码适用于程序集的版本。 程序集版本号的格式*major.minor.build.revision*。|
+|`href`|必需的特性。<br /><br /> 指定运行时可在其中找到程序集的指定版本的 URL。|
+|`version`|必需的特性。<br /><br /> 指定基本代码所应用的程序集的版本。 程序集版本号的格式为 "主要版本. 次要版本. 内部版本.*修订*版本"。|
 
-## <a name="version-attribute"></a>版本属性
+## <a name="version-attribute"></a>version 特性
 
-|“值”|描述|
+|值|描述|
 |-----------|-----------------|
-|每个部分的版本号的有效值为 0 到 65535。|不适用。|
+|版本号的每个部分的有效值为0至65535。|不适用。|
 
 ### <a name="child-elements"></a>子元素
 
@@ -62,11 +62,11 @@ ms.locfileid: "61674189"
 
 ## <a name="remarks"></a>备注
 
-运行时要使用 **\<b a s e >** 设置计算机配置文件或发布服务器策略文件中，该文件还必须重定向程序集版本。 应用程序配置文件而无需将程序集版本重定向有基本代码设置。 在确定要使用的程序集版本之后, 运行时应用确定版本的文件的基本代码设置。 如果指示没有基本代码，运行时探测程序集以通常的方式。
+为了使运行时使用计算机配置文件或发布服务器策略文件中的 **\<codeBase >** 设置, 该文件还必须重定向程序集版本。 应用程序配置文件可以具有基本代码设置, 而不会重定向程序集版本。 确定要使用的程序集版本后, 运行时将从确定版本的文件应用基本代码设置。 如果未指定基本代码, 则运行时以常规方式探测程序集。
 
-如果该程序集具有强名称，基本代码设置可以是任意位置在本地 intranet 或 Internet 上。 如果程序集私有程序集，基本代码设置必须为应用程序的目录的相对路径。
+如果程序集具有强名称, 则基本代码设置可以是本地 intranet 或 Internet 上的任何位置。 如果程序集是私有程序集, 则 codebase 设置必须是相对于应用程序目录的路径。
 
-对于没有强名称程序集，则忽略版本和加载程序将使用出现的第一个\<o d e b > 内\<dependentAssembly >。 如果在将绑定重定向到另一个程序集的应用程序配置文件中没有条目，因此重定向即使程序集版本不匹配绑定请求将优先。
+对于没有强名称的程序集, 版本会被忽略, 并且加载程序在 dependentAssembly \<> 内\<使用基本代码 > 的第一种外观。 如果应用程序配置文件中存在重定向绑定到另一个程序集的条目, 则即使程序集版本与绑定请求不匹配, 重定向也将优先。
 
 ## <a name="example"></a>示例
 
@@ -90,7 +90,7 @@ ms.locfileid: "61674189"
 
 ## <a name="see-also"></a>请参阅
 
-- [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [指定程序集的位置](../../../../../docs/framework/configure-apps/specify-assembly-location.md)
-- [运行时如何定位程序集](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [运行时设置架构](index.md)
+- [配置文件架构](../index.md)
+- [指定程序集的位置](../../specify-assembly-location.md)
+- [运行时如何定位程序集](../../../deployment/how-the-runtime-locates-assemblies.md)

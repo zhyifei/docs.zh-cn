@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: ad6442f6-1a9d-43b6-b733-04ac1b7f9b82
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6a4741c6a4745bdba00fdb525b39b70d0b15e005
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4aa90a378630c9aff74923d8e8600aed15a77a5e
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704851"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663505"
 ---
-# <a name="qualifyassembly-element"></a>\<qualifyAssembly > 元素
+# <a name="qualifyassembly-element"></a>\<B l y > 元素
 指定使用部分名称时应动态加载的程序集全名。  
   
  \<configuration>  
@@ -41,8 +41,8 @@ ms.locfileid: "61704851"
   
 |特性|描述|  
 |---------------|-----------------|  
-|`partialName`|必需的特性。<br /><br /> 显示在代码中指定的程序集的部分名称。|  
-|`fullName`|必需的特性。<br /><br /> 显示在全局程序集缓存中指定的程序集的全名。|  
+|`partialName`|必需的特性。<br /><br /> 指定程序集在代码中出现的部分名称。|  
+|`fullName`|必需的特性。<br /><br /> 指定程序集在全局程序集缓存中出现时的完整名称。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  
@@ -56,12 +56,12 @@ ms.locfileid: "61704851"
 |`runtime`|包含有关程序集绑定和垃圾回收的信息。|  
   
 ## <a name="remarks"></a>备注  
- 调用<xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>使用部分程序集名称的方法会导致公共语言运行时查找仅在应用程序基目录中的程序集。 使用 **\<qualifyAssembly >** 可提供完整的程序集信息 （名称、 版本、 公钥标记和区域性） 并且使公共语言运行时搜索应用程序配置文件中的元素有关全局程序集缓存中的程序集。  
+ 使用部分程序集名称调用方法会导致公共语言运行时仅查找应用程序基目录中的程序集。<xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 使用应用程序配置文件中的 **\<b l y >** 元素可提供完整的程序集信息 (名称、版本、公钥标记和区域性), 并导致公共语言运行时在全局程序集缓存。  
   
- **FullName**属性必须包含程序集标识的四个字段： 名称、 版本、 公钥标记和区域性。 **PartialName**属性部分必须引用的程序集。 您必须至少指定程序集的文本名称 （最常见的情况），但您还可以包含版本、 公钥标记或区域性 （或四个，但并非所有四个的任意组合）。 **PartialName**的调用中指定的名称必须匹配。 例如，不能指定`"math"`作为**partialName**属性中，配置文件并调用`Assembly.Load("math, Version=3.3.3.3")`在代码中。  
+ **FullName**特性必须包含程序集标识的四个字段: 名称、版本、公钥标记和区域性。 **PartialName**属性必须部分引用程序集。 必须至少指定程序集的文本名称 (最常见的情况), 但也可以包括版本、公钥标记或区域性 (或四个 (但不是全部四个) 的任意组合。 **PartialName**必须与在调用中指定的名称相匹配。 例如, 你不能在`"math"`配置文件中将指定为**partialName**属性, 然后`Assembly.Load("math, Version=3.3.3.3")`在代码中调用。  
   
 ## <a name="example"></a>示例  
- 下面的示例以逻辑方式调用变成`Assembly.Load("math")`到`Assembly.Load("math,version=1.0.0.0,publicKeyToken=a1690a5ea44bab32,culture=neutral")`。  
+ 下面的示例以逻辑方式将`Assembly.Load("math")`调用`Assembly.Load("math,version=1.0.0.0,publicKeyToken=a1690a5ea44bab32,culture=neutral")`转换为。  
   
 ```xml  
 <configuration>  
@@ -77,6 +77,6 @@ ms.locfileid: "61704851"
   
 ## <a name="see-also"></a>请参阅
 
-- [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [运行时如何定位程序集](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [运行时设置架构](index.md)
+- [运行时如何定位程序集](../../../deployment/how-the-runtime-locates-assemblies.md)
 - [部分程序集引用](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/0a7zy9z5(v=vs.100))

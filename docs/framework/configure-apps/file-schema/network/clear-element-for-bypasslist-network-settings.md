@@ -10,21 +10,21 @@ helpviewer_keywords:
 - <bypasslist>, clear element
 - bypasslist, clear element
 ms.assetid: 301584ca-a914-4100-b180-3b288d3b099e
-ms.openlocfilehash: 7499d15f1d57887ffc3e78b83ed686c0c0f46cf4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e5305d9aed09b6c4d1ad4201e5e08e007a14c7c0
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674631"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664190"
 ---
-# <a name="clear-element-for-bypasslist-network-settings"></a>\<清除 > bypasslist （网络设置） 的元素
+# <a name="clear-element-for-bypasslist-network-settings"></a>\<清除 bypasslist 的 > 元素 (网络设置)
 清除代理跳过列表。  
   
  \<configuration>  
 \<system.net>  
 \<defaultProxy >  
 \<bypasslist >  
-\<clear>  
+\<清除 >  
   
 ## <a name="syntax"></a>语法  
   
@@ -45,7 +45,7 @@ ms.locfileid: "61674631"
   
 |**元素**|**说明**|  
 |-----------------|---------------------|  
-|[bypasslist](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|提供一组描述不使用代理的地址的正则表达式。|  
+|[bypasslist](bypasslist-element-network-settings.md)|提供了一组正则表达式, 描述不使用代理的地址。|  
   
 ## <a name="remarks"></a>备注  
  `clear`元素清除跳过列表中的所有条目。  
@@ -54,7 +54,7 @@ ms.locfileid: "61674631"
  此元素可在应用程序配置文件或计算机配置文件 (Machine.config) 中使用。  
   
 ## <a name="example"></a>示例  
- 下面的示例清除跳过列表，然后将两个地址添加到忽略列表。 第一个跳过 contoso.com 域; 中的所有服务器的代理第二个跳过与 192.168 其 IP 地址开始的所有服务器的代理。  
+ 下面的示例清除了跳过列表, 并将两个地址添加到了跳过列表。 首先, 将跳过 contoso.com 域中所有服务器的代理;第二种方式是跳过其 IP 地址以192.168 开头的所有服务器的代理。  
   
 ```xml  
 <configuration>  
@@ -73,4 +73,4 @@ ms.locfileid: "61674631"
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
-- [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [网络设置架构](index.md)

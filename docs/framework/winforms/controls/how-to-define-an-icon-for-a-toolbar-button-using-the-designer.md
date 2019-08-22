@@ -9,12 +9,12 @@ helpviewer_keywords:
 - icons [Windows Forms], toolbar buttons
 - ToolBar control [Windows Forms], adding icons to buttons
 ms.assetid: d848f38e-67f2-49d4-8e88-01c845c06c02
-ms.openlocfilehash: 5de7645ecbf2123df849046a152643cd629b4898
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 49e93f12bebbf409e6b3a06634556b9103c85f44
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69038227"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666207"
 ---
 # <a name="how-to-define-an-icon-for-a-toolbar-button-using-the-designer"></a>如何：使用设计器定义工具栏按钮的图标
 
@@ -24,7 +24,6 @@ ms.locfileid: "69038227"
 <xref:System.Windows.Forms.ToolBar>按钮能够显示它们中的图标, 用户可以轻松识别。 这是通过向<xref:System.Windows.Forms.ImageList>组件添加图像并将其<xref:System.Windows.Forms.ToolBar>与控件相关联实现的。
 
 下面的过程需要一个**Windows 应用程序**项目, 该项目具有<xref:System.Windows.Forms.ToolBar>包含控件和<xref:System.Windows.Forms.ImageList>组件的窗体。 有关设置此类项目的信息, 请参阅[如何:创建 Windows 窗体应用程序项目](/visualstudio/ide/step-1-create-a-windows-forms-application-project)以及[如何:将控件添加到](how-to-add-controls-to-windows-forms.md)Windows 窗体。
-
 
 ### <a name="to-set-an-icon-for-a-toolbar-button-at-design-time"></a>在设计时设置工具栏按钮的图标
 

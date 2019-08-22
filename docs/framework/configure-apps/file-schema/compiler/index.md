@@ -11,31 +11,31 @@ helpviewer_keywords:
 - language providers, settings schema
 - compiler configuration settings
 ms.assetid: c020b139-8699-4f0d-9ac9-70d0c5b2a8c8
-ms.openlocfilehash: fe08ac5dc0600e0861bb349ce99875af8658eb4e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4900c391ae94447cdf4be331a27f6f3398e9129a
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61675268"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659718"
 ---
 # <a name="compiler-and-language-provider-settings-schema"></a>编译器和语言提供程序设置架构
 编译器和语言提供程序设置指定可用语言提供程序的编译器配置元素。 每个编译器配置元素指定代码提供程序类型名称、编译器参数、支持语言名称以及支持的文件扩展名。  
   
  .NET Framework 在计算机配置文件 (Machine.config) 中定义初始编译器设置。 开发人员和编译器供应商可以添加新 <xref:System.CodeDom.Compiler.CodeDomProvider> 实现的配置设置。 使用 <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType> 方法，以编程方式枚举计算机上的语言提供程序和编译器配置设置。  
   
- [\<configuration> 元素](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
+ [\<configuration> 元素](../configuration-element.md)  
   
- [\<system.codedom>](../../../../../docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md)  
+ [\<system.codedom>](system-codedom-element.md)  
   
- [\<compilers>](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)  
+ [\<compilers>](compilers-element.md)  
   
- [\<compiler>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)  
+ [\<compiler>](compiler-element.md)  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<system.codedom>](../../../../../docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md)|指定可用语言提供程序的编译器配置设置。|  
-|[\<compilers>](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)|编译器配置元素的容器；包含零个或多个 [\<compiler>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md) 元素。|  
-|[\<compiler>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)|指定语言提供程序的编译器配置属性。|  
+|[\<system.codedom>](system-codedom-element.md)|指定可用语言提供程序的编译器配置设置。|  
+|[\<compilers>](compilers-element.md)|编译器配置元素的容器；包含零个或多个 [\<compiler>](compiler-element.md) 元素。|  
+|[\<compiler>](compiler-element.md)|指定语言提供程序的编译器配置属性。|  
   
 ## <a name="example"></a>示例  
  以下示例说明典型的编译器配置元素。  
@@ -60,5 +60,5 @@ ms.locfileid: "61675268"
 
 - <xref:System.CodeDom.Compiler.CompilerInfo>
 - <xref:System.CodeDom.Compiler.CodeDomProvider>
-- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [\<compiler> Element](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)
+- [配置文件架构](../index.md)
+- [\<compiler> Element](compiler-element.md)

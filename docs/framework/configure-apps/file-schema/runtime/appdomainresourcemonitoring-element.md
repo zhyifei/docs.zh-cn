@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 02119ab6-1e91-448e-97ad-e7b2e5c4bbbd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ad0ae023215eeb1f42f9351369ee77d41d537b88
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: b82be30c18cde361aa412ee1b631c8368c8de1b3
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66487727"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663933"
 ---
 # <a name="appdomainresourcemonitoring-element"></a>\<appDomainResourceMonitoring > 元素
 指示运行时在过程的生命周期过程中收集所有应用程序域的统计数据。  
@@ -35,14 +35,14 @@ ms.locfileid: "66487727"
   
 |特性|描述|  
 |---------------|-----------------|  
-|`enabled`|必需的特性。<br /><br /> 指定是否在运行时收集的应用程序域资源监视统计信息。|  
+|`enabled`|必需的特性。<br /><br /> 指定运行时是否收集应用程序域资源监视的统计信息。|  
   
 ## <a name="enabled-attribute"></a>enabled 特性  
   
 |值|描述|  
 |-----------|-----------------|  
-|`true`|收集应用程序域资源监控的统计信息。|  
-|`false`|不收集有关应用程序域资源监控的统计信息。|  
+|`true`|收集应用程序域资源监视的统计信息。|  
+|`false`|不收集应用程序域资源监视的统计信息。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  
@@ -55,11 +55,11 @@ ms.locfileid: "66487727"
 |`runtime`|包含有关程序集绑定和垃圾回收的信息。|  
   
 ## <a name="remarks"></a>备注  
- 应用程序域资源监视仅可通过托管应用程序域类中，托管[ICLRAppDomainResourceMonitor](../../../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)接口和事件跟踪的 Windows (ETW)。 启用监视后，在生命周期过程的过程中的所有应用程序域则收集统计信息。  
+ 应用程序域资源监视可通过托管应用程序域类、托管[ICLRAppDomainResourceMonitor](../../../unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)接口和 Windows 事件跟踪 (ETW) 获得。 启用监视后, 会在进程的生存期内收集进程中所有应用程序域的统计信息。  
   
- 若要从托管代码启用监视，请使用<xref:System.AppDomain.MonitoringIsEnabled%2A>属性。  
+ 若要从托管代码启用监视, 请<xref:System.AppDomain.MonitoringIsEnabled%2A>使用属性。  
   
- 此配置元素是仅适用于.NET Framework 4 及更高版本。  
+ 此配置元素仅在 .NET Framework 4 及更高版本中可用。  
   
 ## <a name="example"></a>示例  
  下面的示例演示如何启用应用程序域资源监视。  
@@ -75,5 +75,5 @@ ms.locfileid: "66487727"
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>
-- [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [运行时设置架构](index.md)
+- [配置文件架构](../index.md)

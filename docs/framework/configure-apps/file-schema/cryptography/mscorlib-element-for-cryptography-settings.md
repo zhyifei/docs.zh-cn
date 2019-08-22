@@ -8,15 +8,15 @@ helpviewer_keywords:
 - mscorlib element
 - <mscorlib> element
 ms.assetid: d549668f-31f1-4b92-8021-a9135c09ca3c
-ms.openlocfilehash: ec328bc4c63bd4754c6f975ac03e610718304245
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 312db8ea5ae4b66fd00faad1b788eac0356aeaa7
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674735"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659598"
 ---
-# <a name="mscorlib-element-for-cryptography-settings"></a>\<mscorlib > 加密设置的元素
-包含[ \<cryptographySettings > 元素](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptographysettings-element.md)。  
+# <a name="mscorlib-element-for-cryptography-settings"></a>\<用于加密设置的 mscorlib > 元素
+包含 g s [ >元素。\<](cryptographysettings-element.md)  
   
  \<configuration>  
 \<mscorlib>  
@@ -47,7 +47,7 @@ ms.locfileid: "61674735"
 |`configuration`|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何使用 **\<mscorlib >** 元素来引用一个密码类并配置运行时。 然后可以将字符串"RSA"传递给<xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType>方法，并使用<xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A>方法以返回`MyCryptoRSAClass`对象。  
+ 下面的示例演示如何使用 **\<mscorlib.dll >** 元素来引用加密类并配置运行时。 然后, 你可以将字符串 "RSA" 传递给<xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType>方法, 并<xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A>使用方法返回`MyCryptoRSAClass`对象。  
   
 ```xml  
 <configuration>  
@@ -72,7 +72,7 @@ ms.locfileid: "61674735"
 
 - <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A>
 - <xref:System.Security.Cryptography>
-- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [加密设置架构](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
+- [配置文件架构](../index.md)
+- [加密设置架构](index.md)
 - [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)
-- [配置加密类](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)
+- [配置加密类](../../configure-cryptography-classes.md)

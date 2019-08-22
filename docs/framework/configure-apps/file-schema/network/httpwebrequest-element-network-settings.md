@@ -8,19 +8,19 @@ helpviewer_keywords:
 - <httpWebRequest> element
 - httpWebRequest element
 ms.assetid: 52acd9d2-5bdc-4dc4-9c2a-f0a476ccbb31
-ms.openlocfilehash: 722b2f726c9085f6dee6bad82044da3011b98702
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: de5672e5c6762b1e0742e717a3d499a4f93ee8ec
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674540"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659344"
 ---
-# <a name="httpwebrequest-element-network-settings"></a>\<httpWebRequest > 元素 （网络设置）
+# <a name="httpwebrequest-element-network-settings"></a>\<httpWebRequest > 元素 (网络设置)
 自定义 Web 请求参数。  
   
  \<configuration>  
 \<system.net>  
-\<settings>  
+\<设置 >  
 \<httpWebRequest>  
   
 ## <a name="syntax"></a>语法  
@@ -41,10 +41,10 @@ ms.locfileid: "61674540"
   
 |**特性**|**说明**|  
 |-------------------|---------------------|  
-|`maximumResponseHeadersLength`|指定以千字节为单位的响应标头的最大长度。 默认值为 64。 值为-1 指示没有大小限制将施加的响应标头。|  
-|`maximumErrorResponseLength`|指定的最大长度的错误响应，以千字节为单位。 默认值为 64。 值为-1 指示没有大小限制将施加的错误响应。|  
-|`maximumUnauthorizedUploadLength`|在响应未经授权的错误代码，以字节为单位指定上传的最大长度。 默认值为 -1。 值为-1 指示，将对上载施加没有大小限制。|  
-|`useUnsafeHeaderParsing`|指定是否启用不安全标题解析。 默认值为 `false`。|  
+|`maximumResponseHeadersLength`|指定响应标头的最大长度 (以 kb 为单位)。 默认值为 64。 如果值为-1, 则指示不会对响应标头施加大小限制。|  
+|`maximumErrorResponseLength`|指定错误响应的最大长度 (以 kb 为单位)。 默认值为 64。 如果值为-1, 则表示不对错误响应施加大小限制。|  
+|`maximumUnauthorizedUploadLength`|指定用于响应未经授权的错误代码的上载的最大长度 (以字节为单位)。 默认值为 -1。 如果值为-1, 则表示上传不会施加大小限制。|  
+|`useUnsafeHeaderParsing`|指定是否启用安全标头分析。 默认值为 `false`。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  
@@ -53,16 +53,16 @@ ms.locfileid: "61674540"
   
 |**元素**|**说明**|  
 |-----------------|---------------------|  
-|[settings](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|配置 <xref:System.Net> 命名空间的基本网络选项。|  
+|[设置](settings-element-network-settings.md)|配置 <xref:System.Net> 命名空间的基本网络选项。|  
   
 ## <a name="remarks"></a>备注  
- 默认情况下，.NET Framework 将严格强制执行 RFC 2616 的 URI 分析。 某些服务器响应可能包含控制字符，在被禁止字段中，这将导致<xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType>方法会引发<xref:System.Net.WebException>。 如果**useUnsafeHeaderParsing**设置为**true**，<xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType>不会引发这种情况下; 但是，你的应用程序将很容易受到几种形式的 URI 分析攻击。 最佳解决方案是更改的服务器，以便响应不包含控制字符。  
+ 默认情况下, .NET Framework 严格地强制执行 RFC 2616, 以便进行 URI 分析。 某些服务器响应可能在禁止字段中包含控制字符, 这将导致<xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType>方法<xref:System.Net.WebException>引发。 如果**useUnsafeHeaderParsing**设置为**true**, <xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType>则在这种情况下将不会引发; 但是, 你的应用程序将容易受到多种形式的 URI 分析攻击的攻击。 最佳解决方案是更改服务器, 使响应不包含控制字符。  
   
 ## <a name="configuration-files"></a>配置文件  
  此元素可在应用程序配置文件或计算机配置文件 (Machine.config) 中使用。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何指定一个较大比正常的最大标头长度。  
+ 下面的示例演示如何指定大于标准最大标头长度。  
   
 ```xml  
 <configuration>  
@@ -79,4 +79,4 @@ ms.locfileid: "61674540"
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Net.HttpWebRequest.MaximumResponseHeadersLength%2A>
-- [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [网络设置架构](index.md)

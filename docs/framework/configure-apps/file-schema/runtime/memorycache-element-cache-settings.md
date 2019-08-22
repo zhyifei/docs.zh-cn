@@ -6,15 +6,15 @@ helpviewer_keywords:
 - caching [.NET Framework], configuration
 - memoryCache element
 ms.assetid: 182a622f-f7cf-472d-9d0b-451d2fd94525
-ms.openlocfilehash: 4f1dd270ee1b317ec0d3a32e341680646ff0b69d
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 46f430f7cf112da40aa3b25bfb280c5014612eae
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67423290"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663620"
 ---
-# <a name="memorycache-element-cache-settings"></a>\<memoryCache > 元素 （缓存设置）
-定义一个用于配置基于 <xref:System.Runtime.Caching.MemoryCache> 类的缓存的元素。 <xref:System.Runtime.Caching.Configuration.MemoryCacheElement> 类定义可以用于配置缓存的 [memoryCache](../../../../../docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md) 元素。 可以在单个应用程序中使用 <xref:System.Runtime.Caching.MemoryCache> 类的多个实例。 配置文件中的每个 `memoryCache` 元素可以包含一个命名 <xref:System.Runtime.Caching.MemoryCache> 实例的设置。  
+# <a name="memorycache-element-cache-settings"></a>\<memoryCache > 元素 (缓存设置)
+定义一个用于配置基于 <xref:System.Runtime.Caching.MemoryCache> 类的缓存的元素。 <xref:System.Runtime.Caching.Configuration.MemoryCacheElement> 类定义可以用于配置缓存的 [memoryCache](memorycache-element-cache-settings.md) 元素。 可以在单个应用程序中使用 <xref:System.Runtime.Caching.MemoryCache> 类的多个实例。 配置文件中的每个 `memoryCache` 元素可以包含一个命名 <xref:System.Runtime.Caching.MemoryCache> 实例的设置。  
   
  \<configuration>  
 \<system.runtime.caching>  
@@ -49,16 +49,16 @@ ms.locfileid: "67423290"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<namedCaches>](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)|包含 `namedCache` 实例的配置设置的集合。|  
+|[\<namedCaches>](namedcaches-element-cache-settings.md)|包含 `namedCache` 实例的配置设置的集合。|  
   
 ### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<system.runtime.caching>](../../../../../docs/framework/configure-apps/file-schema/runtime/system-runtime-caching-element-cache-settings.md)|包含使您可以在内置到.NET Framework 的应用程序中实现输出缓存的类型。|  
+|[\<system.runtime.caching>](system-runtime-caching-element-cache-settings.md)|包含使你可以在 .NET Framework 中内置的应用程序中实现输出缓存的类型。|  
   
 ## <a name="remarks"></a>备注  
- <xref:System.Runtime.Caching.MemoryCache> 类是抽象 <xref:System.Runtime.Caching.ObjectCache> 类的具体实现。 <xref:System.Runtime.Caching.MemoryCache> 类的实例可以随来自应用程序配置文件的配置信息一起提供。 [memoryCache](../../../../../docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md) 配置节包含 `namedCaches` 配置集合。  
+ <xref:System.Runtime.Caching.MemoryCache> 类是抽象 <xref:System.Runtime.Caching.ObjectCache> 类的具体实现。 <xref:System.Runtime.Caching.MemoryCache> 类的实例可以随来自应用程序配置文件的配置信息一起提供。 [memoryCache](memorycache-element-cache-settings.md) 配置节包含 `namedCaches` 配置集合。  
   
  基于内存的缓存对象进行初始化时，它首先尝试查找与传递给内存缓存构造函数的参数中的名称进行匹配的 `namedCaches` 项。 如果找到 `namedCaches` 项，则从配置文件检索轮询和内存管理信息。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "67423290"
 - <xref:System.Runtime.Caching.MemoryCache.PollingInterval%2A>  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何设置的名称<xref:System.Runtime.Caching.MemoryCache>对象通过设置默认缓存对象的名称与`name`属性为"Default"。  
+ 下面的示例演示如何通过<xref:System.Runtime.Caching.MemoryCache> `name`将属性设置为 "default", 将对象的名称设置为默认缓存对象名称。  
   
  将 `cacheMemoryLimitMegabytes` 属性和 `physicalMemoryLimitPercentage` 属性设置为零。 将这些特性设置为零意味着默认情况下使用 <xref:System.Runtime.Caching.MemoryCache> 自动调整大小试探法。 每隔两分钟，缓存实现应对当前内存负载和基于百分比的绝对内存限制进行比较。  
   
@@ -93,5 +93,5 @@ ms.locfileid: "67423290"
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Runtime.Caching.MemoryCache>
-- [\<system.runtime.caching > 元素 （缓存设置）](../../../../../docs/framework/configure-apps/file-schema/runtime/system-runtime-caching-element-cache-settings.md)
-- [\<namedCaches > 元素 （缓存设置）](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)
+- [\<system.object > 元素 (缓存设置)](system-runtime-caching-element-cache-settings.md)
+- [\<namedCaches > 元素 (缓存设置)](namedcaches-element-cache-settings.md)

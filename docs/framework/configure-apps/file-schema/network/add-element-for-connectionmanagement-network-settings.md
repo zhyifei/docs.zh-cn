@@ -10,14 +10,14 @@ helpviewer_keywords:
 - add element, connectionManagement
 - connectionManagement, add element
 ms.assetid: 856bf57d-1c63-46c7-a178-03d97b0a4149
-ms.openlocfilehash: 3a046fd386536b29ea2dcad5660c65c08b7e4478
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 608c591b910252dd60950bf2aa7565d6df04d5fc
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705267"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664232"
 ---
-# <a name="add-element-for-connectionmanagement-network-settings"></a>\<添加 > connectionManagement （网络设置） 的元素
+# <a name="add-element-for-connectionmanagement-network-settings"></a>\<为 connectionManagement 添加 > 元素 (网络设置)
 将 IP 地址或 DNS 名称添加到连接管理列表。  
   
  \<configuration>  
@@ -51,7 +51,7 @@ ms.locfileid: "61705267"
   
 |**元素**|**说明**|  
 |-----------------|---------------------|  
-|[connectionManagement](../../../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md)|指定到网络主机的最大连接数。|  
+|[connectionManagement](connectionmanagement-element-network-settings.md)|指定到网络主机的最大连接数。|  
   
 ## <a name="remarks"></a>备注  
  `address` 特性的值应该是一个星号以指示所有连接，或为 `<schema>://<idn_hostname>[:<port>]` 格式的字符串。  
@@ -62,7 +62,7 @@ ms.locfileid: "61705267"
  此元素可在应用程序配置文件或计算机配置文件 (Machine.config) 中使用。  
   
 ## <a name="example"></a>示例  
- 下面的示例配置应用程序使用与服务器的四个连接`www.contoso.com`和两个连接到所有其他服务器。  
+ 下面的示例将应用程序配置为使用四个到服务器`www.contoso.com`的连接, 以及两个与其他服务器的连接。  
   
 ```xml  
 <configuration>  
@@ -79,4 +79,4 @@ ms.locfileid: "61705267"
 
 - <xref:System.Net.ServicePoint>
 - <xref:System.Net.ServicePointManager>
-- [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [网络设置架构](index.md)

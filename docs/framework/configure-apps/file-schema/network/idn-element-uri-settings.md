@@ -2,22 +2,22 @@
 title: <idn> 元素（Uri 设置）
 ms.date: 03/30/2017
 ms.assetid: 16c8e869-1791-4cf5-9244-3d3c738f60ec
-ms.openlocfilehash: 369decf8551c76293ca513b8a3e58b4142a74773
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5fe2eafee702be96bfdca80a06af4a040d9ef0f6
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592752"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664125"
 ---
-# <a name="idn-element-uri-settings"></a>\<idn > 元素 （Uri 设置）
-指定是否对域名应用国际化域名 (IDN) 分析。  
+# <a name="idn-element-uri-settings"></a>\<idn > 元素 (Uri 设置)
+指定是否将国际化域名 (IDN) 分析应用于域名。  
   
 ## <a name="schema-hierarchy"></a>架构层次结构  
- [\<configuration> 元素](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
+ [\<configuration> 元素](../configuration-element.md)  
   
- [\<Uri > 元素 （Uri 设置）](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)  
+ [\<Uri > 元素 (Uri 设置)](uri-element-uri-settings.md)  
   
- [\<idn>](../../../../../docs/framework/configure-apps/file-schema/network/idn-element-uri-settings.md)  
+ [\<idn>](idn-element-uri-settings.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,43 +34,43 @@ ms.locfileid: "64592752"
   
 |**元素**|**说明**|  
 |-----------------|---------------------|  
-|`enabled`|指定对域名应用国际化域名 (IDN) 分析的默认值为 none。|  
+|`enabled`|指定是否将国际化域名 (IDN) 分析应用于域名。默认值为 none。|  
   
 ### <a name="child-elements"></a>子元素  
- None  
+ 无  
   
 ### <a name="parent-elements"></a>父元素  
   
 |**元素**|**说明**|  
 |-----------------|---------------------|  
-|[uri](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)|包含指定.NET Framework 如何处理使用统一资源标识符 (Uri) 表示的 web 地址的设置。|  
+|[oma-uri](uri-element-uri-settings.md)|包含指定 .NET Framework 如何处理使用统一资源标识符 (Uri) 表示的 web 地址的设置。|  
   
 ## <a name="remarks"></a>备注  
- 现有<xref:System.Uri>类具有.NET Framework 3.5 中进行了扩展。 3.0 SP1 和 2.0 SP1 中的对国际资源标识符 (IRI) 和国际化域名 (IDN) 的支持。 当前用户不会看到从.NET Framework 2.0 行为的任何更改，除非专门启用 IRI 和 IDN 支持。 这确保了 NET Framework 以前版本的应用程序兼容性。  
+ 已在<xref:System.Uri> .NET Framework 3.5 中扩展了现有的类。 3.0 SP1 和 2.0 SP1, 支持国际资源标识符 (IRI) 和国际化域名 (IDN)。 当前用户将看不到 .NET Framework 2.0 行为中的任何更改, 除非它们专门启用 IRI 和 IDN 支持。 这确保了 NET Framework 以前版本的应用程序兼容性。  
   
- 若要启用 IRI 支持，以下两项更改是必需的：  
+ 若要启用对 IRI 的支持, 需要以下两项更改:  
   
-1. 将以下行添加到.NET Framework 2.0 目录下的 machine.config 文件  
+1. 将以下行添加到 .NET Framework 2.0 目录下的 machine.config 文件中。  
   
     ```xml  
     <section name="uri" type="System.Configuration.UriSection, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />  
     ```  
   
-2. 指定是否对域名应用国际化域名 (IDN) 分析以及是否应该应用 IRI 分析规则。 这可以在 machine.config 或应用配置文件中完成。  
+2. 指定是否要将国际化域名 (IDN) 分析应用于域名, 以及是否应该应用 IRI 分析规则。 这可以在 machine.config 或应用配置文件中完成。  
   
- 有三个可能的 IDN 值具体取决于使用的 DNS 服务器：  
+ 根据所使用的 DNS 服务器, IDN 有三个可能的值:  
   
-- 启用 idn = All  
+- 已启用 idn = 全部  
   
-     此值会将任何 Unicode 域名转换为 Punycode 等效项 （IDN 名称）。  
+     此值会将任何 Unicode 域名转换为其 Punycode 等效项 (IDN 名称)。  
   
 - 启用 idn = AllExceptIntranet  
   
-     此值会将不在使用 Punycode 等效项 （IDN 名称） 在本地 Intranet 上的所有 Unicode 域名都转换。 在这种情况下若要处理本地 Intranet 上的国际化名称，用于 Intranet 的 DNS 服务器应该支持 Unicode 名称解析。  
+     此值会将本地 Intranet 上的所有 Unicode 域名转换为使用 Punycode 等效项 (IDN 名称)。 在这种情况下, 为了处理本地 Intranet 上的国际名称, 用于 Intranet 的 DNS 服务器应该支持 Unicode 名称解析。  
   
 - 启用 idn = 无  
   
-     此值不会将转换为使用 Punycode 任何 Unicode 域名。 这是默认值是与.NET Framework 2.0 行为一致。  
+     此值不会将任何 Unicode 域名转换为使用 Punycode。 这是与 .NET Framework 2.0 行为一致的默认值。  
   
  启用 IDN 可以将域名中所有 Unicode 标签转换成标签的 Punycode 等同项。 Punycode 名称只包含 ASCII 字符，并且始终以 xn-- 前缀开头。 这样是为了支持 Internet 上的 DNS 服务器，因为大部分 DNS 服务器仅支持 ASCII 字符（参见 RFC 3940）。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "64592752"
 ## <a name="example"></a>示例  
   
 ### <a name="description"></a>描述  
- 下面的示例演示使用的配置<xref:System.Uri>类，以支持分析 IRI 和 IDN 名称。  
+ 下面的示例演示<xref:System.Uri>类使用的配置, 以支持 IRI 分析和 IDN 名称。  
   
 ### <a name="code"></a>代码  
   
@@ -97,4 +97,4 @@ ms.locfileid: "64592752"
 
 - <xref:System.Configuration.IdnElement?displayProperty=nameWithType>
 - <xref:System.Configuration.UriSection?displayProperty=nameWithType>
-- [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [网络设置架构](index.md)

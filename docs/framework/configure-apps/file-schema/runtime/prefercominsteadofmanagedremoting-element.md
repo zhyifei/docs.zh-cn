@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: a279a42a-c415-4e79-88cf-64244ebda613
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2c7a558af17493c955b4f148d0abf7f42c9dd6f8
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: a71c2b87d0bcb488e4e8fa4de928a103a8e9dabd
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629430"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663545"
 ---
 # <a name="prefercominsteadofmanagedremoting-element"></a>\<PreferComInsteadOfManagedRemoting > 元素
 指定运行时是否将对跨应用程序域边界的所有调用使用 COM 互操作而不是远程处理。  
@@ -56,9 +56,9 @@ ms.locfileid: "68629430"
 ## <a name="remarks"></a>备注  
  将`enabled`属性设置为`true`时, 运行时的行为如下所示:  
   
-- 当[iunknown](https://go.microsoft.com/fwlink/?LinkId=148003)接口通过 COM 接口进入域时, 运行时不为[IManagedObject](../../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md)接口调用[iunknown:: QueryInterface](https://go.microsoft.com/fwlink/?LinkID=144867) 。 相反, 它会在对象周围构造一个[运行时可调用包装](../../../../../docs/standard/native-interop/runtime-callable-wrapper.md)器 (RCW)。  
+- 当[iunknown](https://go.microsoft.com/fwlink/?LinkId=148003)接口通过 COM 接口进入域时, 运行时不为[IManagedObject](../../../unmanaged-api/hosting/imanagedobject-interface.md)接口调用[iunknown:: QueryInterface](https://go.microsoft.com/fwlink/?LinkID=144867) 。 相反, 它会在对象周围构造一个[运行时可调用包装](../../../../../docs/standard/native-interop/runtime-callable-wrapper.md)器 (RCW)。  
   
-- 运行时在接收到`QueryInterface`已在此域中创建的任何 COM 可[调用包装](../../../../../docs/standard/native-interop/com-callable-wrapper.md)器 (CCW) 的[IManagedObject](../../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md)接口调用时, 将返回 E_NOINTERFACE。  
+- 运行时在接收到`QueryInterface`已在此域中创建的任何 COM 可[调用包装](../../../../../docs/standard/native-interop/com-callable-wrapper.md)器 (CCW) 的[IManagedObject](../../../unmanaged-api/hosting/imanagedobject-interface.md)接口调用时, 将返回 E_NOINTERFACE。  
   
  这两个行为确保跨应用程序域边界在托管对象之间对 COM 接口进行的所有调用均使用 COM 和 COM 互操作, 而不是远程处理。  
   
@@ -75,5 +75,5 @@ ms.locfileid: "68629430"
   
 ## <a name="see-also"></a>请参阅
 
-- [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [运行时设置架构](index.md)
+- [配置文件架构](../index.md)
