@@ -56,22 +56,22 @@ ms.locfileid: "66378168"
   
 |操作|在模式中的位置|在字符串中的位置|结果|  
 |---------------|-------------------------|------------------------|------------|  
-|1|E|“needing a reed”（索引 0）|无匹配。|  
-|2|E|“eeding a reed”（索引 1）|可能匹配。|  
+|1|e|“needing a reed”（索引 0）|无匹配。|  
+|2|e|“eeding a reed”（索引 1）|可能匹配。|  
 |3|e{2}|“eding a reed”（索引 2）|可能匹配。|  
 |4|\w|“ding a reed”（索引 3）|可能匹配。|  
 |5|\b|“ing a reed”（索引 4）|可能的匹配失败。|  
-|6|E|“eding a reed”（索引 2）|可能匹配。|  
+|6|e|“eding a reed”（索引 2）|可能匹配。|  
 |7|e{2}|“ding a reed”（索引 3）|可能的匹配失败。|  
-|8|E|“ding a reed”（索引 3）|匹配失败。|  
-|9|E|“ing a reed”（索引 4）|无匹配。|  
-|10|E|“ng a reed”（索引 5）|无匹配。|  
-|11|E|“g a reed”（索引 6）|无匹配。|  
-|12|E|“a reed”（索引 7）|无匹配。|  
-|13|E|“a reed”（索引 8）|无匹配。|  
-|14|E|“reed”（索引 9）|无匹配。|  
-|15|E|“reed”（索引 10）|无匹配|  
-|16|E|“eed”（索引 11）|可能匹配。|  
+|8|e|“ding a reed”（索引 3）|匹配失败。|  
+|9|e|“ing a reed”（索引 4）|无匹配。|  
+|10|e|“ng a reed”（索引 5）|无匹配。|  
+|11|e|“g a reed”（索引 6）|无匹配。|  
+|12|e|“a reed”（索引 7）|无匹配。|  
+|13|e|“a reed”（索引 8）|无匹配。|  
+|14|e|“reed”（索引 9）|无匹配。|  
+|15|e|“reed”（索引 10）|无匹配|  
+|16|e|“eed”（索引 11）|可能匹配。|  
 |17|e{2}|“ed”（索引 12）|可能匹配。|  
 |18|\w|“d”（索引 13）|可能匹配。|  
 |19|\b|“”(索引 14)|匹配。|  
@@ -126,7 +126,7 @@ ms.locfileid: "66378168"
   
 <a name="controlling_backtracking"></a>   
 ## <a name="controlling-backtracking"></a>控制回溯  
- 通过回溯可以创建强大、灵活的正则表达式。 但如上一节所示，回溯在提供这些优点的同时，可能也会使性能差的无法接受。 若要防止过度回溯，则应在实例化 <xref:System.Text.RegularExpressions.Regex> 对象或调用静态正则表达式匹配方法时定义超时间隔。 下一节中将对此进行讨论。 此外，.NET 还支持以下三个正则表达式语言元素，这些元素限制或禁止回溯，并支持几乎不会或完全不会导致性能损失的复杂正则表达式：[非回溯子表达式](#Nonbacktracking)、[后行断言](#Lookbehind)和[先行断言](#Lookahead)。 有关每个语言元素的详细信息，请参见 [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。  
+ 通过回溯可以创建强大、灵活的正则表达式。 但如上一节所示，回溯在提供这些优点的同时，可能也会使性能差的无法接受。 若要防止过度回溯，则应在实例化 <xref:System.Text.RegularExpressions.Regex> 对象或调用静态正则表达式匹配方法时定义超时间隔。 下一节中将对此进行讨论。 此外，.NET 还支持以下三个正则表达式语言元素，这些元素限制或禁止回溯，并支持几乎不会或完全不会导致性能损失的复杂正则表达式：[非回溯子表达式](#Nonbacktracking)、[回顾断言](#Lookbehind)和[预测先行断言](#Lookahead)。 有关每个语言元素的详细信息，请参见 [分组构造](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。  
   
 <a name="Timeout"></a>   
 ### <a name="defining-a-time-out-interval"></a>定义超时间隔  
@@ -153,7 +153,7 @@ ms.locfileid: "66378168"
   
 <a name="Lookbehind"></a>   
 ### <a name="lookbehind-assertions"></a>回顾断言  
- .NET 包括两个语言元素（`(?<=`subexpression  `)` 和 `(?<!`subexpression  `)`），它们与输入字符串中之前的一个或多个字符匹配。 这两个语言元素都是零宽度断言；也就是说，它们通过 *subexpression*而而不是前移或回溯来确定当前字符之前紧挨着的一个或多个字符是否匹配。  
+ .NET 包括两个语言元素（`(?<=`subexpression  `)` 和 `(?<!`subexpression  `)`），它们与输入字符串中之前的一个或多个字符匹配。 这两个语言元素都是零宽度断言；也就是说，它们通过 *subexpression*而不是前移或回溯来确定当前字符之前紧挨着的一个或多个字符是否匹配。  
   
  `(?<=` *subexpression* `)` 是正回顾断言；也就是说，当前位置之前的一个或多个字符必须与 *subexpression*匹配。 `(?<!`*subexpression*`)` 是负回顾断言；也就是说，当前位置之前的一个或多个字符不得与 *subexpression*匹配。 当 *subexpression* 为前一个子表达式的子集时，正回顾断言和负回顾断言都最为有用。  
   
@@ -200,7 +200,7 @@ ms.locfileid: "66378168"
 |-------------|-----------------|  
 |`^`|从字符串开头开始匹配。|  
 |`([A-Z]\w*)+\.`|对后跟零个或多个单词字符、句点的字母字符 (A-Z) 匹配一次或多次。 因为 <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> 方法是使用 <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> 选项调用的，所以此比较不区分大小写。|  
-|`(([A-Z]\w*)+\.)*`|对前一个模式匹配一次或多次。|  
+|`(([A-Z]\w*)+\.)*`|对前一个模式匹配零次或多次。|  
 |`[A-Z]\w*`|匹配后跟零个或多个单词字符的字母字符。|  
 |`$`|在输入字符串末尾结束匹配。|  
   
