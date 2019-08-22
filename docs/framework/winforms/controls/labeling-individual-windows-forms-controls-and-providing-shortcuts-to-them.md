@@ -7,31 +7,32 @@ helpviewer_keywords:
 - keyboard shortcuts [Windows Forms], controls
 - Windows Forms controls, labels
 ms.assetid: 6eaf868c-819f-4131-8f59-048e20c286f7
-ms.openlocfilehash: 8d7ae8c807b8c5347a455b81c2c1a1b0897430c2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 892761ae52b8b3546c86a849d2d2eecc7442be53
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013005"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666140"
 ---
-# <a name="labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them"></a><span data-ttu-id="35ae2-102">标记单个 Windows 窗体控件并提供它们的快捷方式</span><span class="sxs-lookup"><span data-stu-id="35ae2-102">Labeling Individual Windows Forms Controls and Providing Shortcuts to Them</span></span>
-<span data-ttu-id="35ae2-103">添加到 Windows 窗体的控件具有用于进一步专用化用户体验的属性和方法。</span><span class="sxs-lookup"><span data-stu-id="35ae2-103">Controls added to Windows Forms have properties and methods that are used to further specialize the user experience.</span></span> <span data-ttu-id="35ae2-104">对于设计良好的 Windows 应用程序而言，自定义用户界面以满足用户需求至关重要。</span><span class="sxs-lookup"><span data-stu-id="35ae2-104">Customizing your user interface to suit the needs of the user is extremely important for well-designed Windows applications.</span></span>  
-  
-## <a name="in-this-section"></a><span data-ttu-id="35ae2-105">本节内容</span><span class="sxs-lookup"><span data-stu-id="35ae2-105">In This Section</span></span>  
- [<span data-ttu-id="35ae2-106">如何：设置显示的文本的 Windows 窗体控件</span><span class="sxs-lookup"><span data-stu-id="35ae2-106">How to: Set the Text Displayed by a Windows Forms Control</span></span>](how-to-set-the-text-displayed-by-a-windows-forms-control.md)  
- <span data-ttu-id="35ae2-107">描述如何将文本标签分配给控件。</span><span class="sxs-lookup"><span data-stu-id="35ae2-107">Describes how to assign a text label to a control.</span></span>  
-  
- [<span data-ttu-id="35ae2-108">如何：设置所显示的图像的 Windows 窗体控件</span><span class="sxs-lookup"><span data-stu-id="35ae2-108">How to: Set the Image Displayed by a Windows Forms Control</span></span>](how-to-set-the-image-displayed-by-a-windows-forms-control.md)  
- <span data-ttu-id="35ae2-109">说明如何配置控件以显示图像。</span><span class="sxs-lookup"><span data-stu-id="35ae2-109">Explains how to configure a control to display images.</span></span>  
-  
- [<span data-ttu-id="35ae2-110">如何：为 Windows 窗体控件创建访问密钥</span><span class="sxs-lookup"><span data-stu-id="35ae2-110">How to: Create Access Keys for Windows Forms Controls</span></span>](how-to-create-access-keys-for-windows-forms-controls.md)  
- <span data-ttu-id="35ae2-111">提供有关创建预定义键盘快捷方式的信息。</span><span class="sxs-lookup"><span data-stu-id="35ae2-111">Gives information about creating predefined keyboard shortcuts.</span></span>  
-  
- [<span data-ttu-id="35ae2-112">提供 Windows 窗体控件的辅助功能信息</span><span class="sxs-lookup"><span data-stu-id="35ae2-112">Providing Accessibility Information for Controls on a Windows Form</span></span>](providing-accessibility-information-for-controls-on-a-windows-form.md)  
- <span data-ttu-id="35ae2-113">提供有关使控件能够使用辅助工具的信息。</span><span class="sxs-lookup"><span data-stu-id="35ae2-113">Gives information about enabling your controls to work with accessibility aids.</span></span>  
-  
-## <a name="related-sections"></a><span data-ttu-id="35ae2-114">相关章节</span><span class="sxs-lookup"><span data-stu-id="35ae2-114">Related Sections</span></span>  
- [<span data-ttu-id="35ae2-115">Windows 窗体控件</span><span class="sxs-lookup"><span data-stu-id="35ae2-115">Windows Forms Controls</span></span>](index.md)  
- <span data-ttu-id="35ae2-116">链接到可用控件执行的其他基本操作。</span><span class="sxs-lookup"><span data-stu-id="35ae2-116">Links to other basic things you can do with controls.</span></span>  
-  
- <span data-ttu-id="35ae2-117">另请参阅[如何：创建 Windows 窗体控件使用设计器的访问键](how-to-create-access-keys-for-windows-forms-controls-using-the-designer.md)，[如何：设置显示的文本的 Windows 窗体控件使用设计器](how-to-set-the-text-displayed-by-a-windows-forms-control-using-the-designer.md)，[如何：设置所显示的图像的 Windows 窗体控件使用设计器](how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer.md)。</span><span class="sxs-lookup"><span data-stu-id="35ae2-117">Also see [How to: Create Access Keys for Windows Forms Controls Using the Designer](how-to-create-access-keys-for-windows-forms-controls-using-the-designer.md), [How to: Set the Text Displayed by a Windows Forms Control Using the Designer](how-to-set-the-text-displayed-by-a-windows-forms-control-using-the-designer.md), [How to: Set the Image Displayed by a Windows Forms Control Using the Designer](how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer.md).</span></span>
+# <a name="label-individual-windows-forms-controls-and-provide-shortcuts"></a><span data-ttu-id="74ee3-102">标签单个 Windows 窗体控件并提供快捷方式</span><span class="sxs-lookup"><span data-stu-id="74ee3-102">Label individual Windows Forms controls and provide shortcuts</span></span>
+
+<span data-ttu-id="74ee3-103">添加到 Windows 窗体的控件具有用于进一步专用化用户体验的属性和方法。</span><span class="sxs-lookup"><span data-stu-id="74ee3-103">Controls added to Windows Forms have properties and methods that are used to further specialize the user experience.</span></span> <span data-ttu-id="74ee3-104">对于设计良好的 Windows 应用程序而言，自定义用户界面以满足用户需求至关重要。</span><span class="sxs-lookup"><span data-stu-id="74ee3-104">Customizing your user interface to suit the needs of the user is extremely important for well-designed Windows applications.</span></span>
+
+## <a name="in-this-section"></a><span data-ttu-id="74ee3-105">本节内容</span><span class="sxs-lookup"><span data-stu-id="74ee3-105">In this section</span></span>
+
+<span data-ttu-id="74ee3-106">[如何：设置 Windows 窗体控件显示的文本](how-to-set-the-text-displayed-by-a-windows-forms-control.md)</span><span class="sxs-lookup"><span data-stu-id="74ee3-106">[How to: Set the Text Displayed by a Windows Forms Control](how-to-set-the-text-displayed-by-a-windows-forms-control.md)</span></span>\
+<span data-ttu-id="74ee3-107">描述如何将文本标签分配给控件。</span><span class="sxs-lookup"><span data-stu-id="74ee3-107">Describes how to assign a text label to a control.</span></span>
+
+<span data-ttu-id="74ee3-108">[如何：设置 Windows 窗体控件显示的图像](how-to-set-the-image-displayed-by-a-windows-forms-control.md)</span><span class="sxs-lookup"><span data-stu-id="74ee3-108">[How to: Set the Image Displayed by a Windows Forms Control](how-to-set-the-image-displayed-by-a-windows-forms-control.md)</span></span>\
+<span data-ttu-id="74ee3-109">说明如何配置控件以显示图像。</span><span class="sxs-lookup"><span data-stu-id="74ee3-109">Explains how to configure a control to display images.</span></span>
+
+<span data-ttu-id="74ee3-110">[如何：为 Windows 窗体控件创建访问键](how-to-create-access-keys-for-windows-forms-controls.md)</span><span class="sxs-lookup"><span data-stu-id="74ee3-110">[How to: Create Access Keys for Windows Forms Controls](how-to-create-access-keys-for-windows-forms-controls.md)</span></span>\
+<span data-ttu-id="74ee3-111">提供有关创建预定义键盘快捷方式的信息。</span><span class="sxs-lookup"><span data-stu-id="74ee3-111">Gives information about creating predefined keyboard shortcuts.</span></span>
+
+<span data-ttu-id="74ee3-112">[为 Windows 窗体上的控件提供辅助功能信息](providing-accessibility-information-for-controls-on-a-windows-form.md)</span><span class="sxs-lookup"><span data-stu-id="74ee3-112">[Providing Accessibility Information for Controls on a Windows Form](providing-accessibility-information-for-controls-on-a-windows-form.md)</span></span>\
+<span data-ttu-id="74ee3-113">提供有关使控件能够使用辅助工具的信息。</span><span class="sxs-lookup"><span data-stu-id="74ee3-113">Gives information about enabling your controls to work with accessibility aids.</span></span>
+
+## <a name="related-sections"></a><span data-ttu-id="74ee3-114">相关章节</span><span class="sxs-lookup"><span data-stu-id="74ee3-114">Related sections</span></span>
+
+<span data-ttu-id="74ee3-115">[Windows 窗体控件](index.md)</span><span class="sxs-lookup"><span data-stu-id="74ee3-115">[Windows Forms Controls](index.md)</span></span>\
+<span data-ttu-id="74ee3-116">链接到可用控件执行的其他基本操作。</span><span class="sxs-lookup"><span data-stu-id="74ee3-116">Links to other basic things you can do with controls.</span></span>
