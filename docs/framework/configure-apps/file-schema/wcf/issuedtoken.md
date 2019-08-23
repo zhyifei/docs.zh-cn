@@ -2,20 +2,20 @@
 title: <issuedToken>
 ms.date: 03/30/2017
 ms.assetid: b6eae4b7-a6cd-4e1a-b0f6-f407022550b0
-ms.openlocfilehash: 83061b283c9430af7bcda9cbc832811fa805ed4c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 68e3a0802a10b14148188a81ee24ed901caa147f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61756281"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69925382"
 ---
 # <a name="issuedtoken"></a>\<issuedToken>
 指定用于向服务验证客户端身份的自定义令牌。  
   
  \<system.ServiceModel>  
-\<behaviors>  
+\<行为 >  
 endpointBehaviors 部分  
-\<behavior>  
+\<行为 >  
 \<clientCredentials>  
 \<issuedToken>  
   
@@ -43,25 +43,25 @@ endpointBehaviors 部分
 |`issuedTokenRenewalThresholdPercentage`|可选的整数属性，指定在续订令牌之前可经过的有效时间段（由令牌颁发者提供）的百分比。 值的范围是 0 到 100。 默认值为 60，指定尝试续订之前经过了 60% 的时间。|  
 |`issuerChannelBehaviors`|可选属性，指定当与颁发者进行通信时所使用的通道行为。|  
 |`localIssuerChannelBehaviors`|可选属性，指定当与本地颁发者进行通信时所使用的通道行为。|  
-|`maxIssuedTokenCachingTime`|可选的 Timespan 属性，指定当令牌颁发者 (STS) 未指定时间时，对颁发的令牌进行缓存的持续时间。 默认值是"10675199.02:48:05.4775807。"|  
+|`maxIssuedTokenCachingTime`|可选的 Timespan 属性，指定当令牌颁发者 (STS) 未指定时间时，对颁发的令牌进行缓存的持续时间。 默认值为 "10675199.02:48: 05.4775807"。|  
   
 ### <a name="child-elements"></a>子元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<localIssuer>](../../../../../docs/framework/configure-apps/file-schema/wcf/localissuer.md)|指定令牌的本地颁发者地址以及用于与终结点进行通信的绑定。|  
-|[\<issuerChannelBehaviors>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuerchannelbehaviors-element.md)|指定当联系本地颁发者时所使用的终结点行为。|  
+|[\<localIssuer>](localissuer.md)|指定令牌的本地颁发者地址以及用于与终结点进行通信的绑定。|  
+|[\<issuerChannelBehaviors>](issuerchannelbehaviors-element.md)|指定当联系本地颁发者时所使用的终结点行为。|  
   
 ### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<clientCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|指定用于向服务验证客户端身份的凭据。|  
+|[\<clientCredentials>](clientcredentials.md)|指定用于向服务验证客户端身份的凭据。|  
   
 ## <a name="remarks"></a>备注  
- 例如，颁发的令牌是在使用联合方案中的安全令牌服务 (STS) 进行身份验证时所使用的自定义凭据类型。 默认情况下，该令牌为 SAML 令牌。 有关详细信息，请参阅[联合身份验证和颁发令牌](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)。 并[联合身份验证和已颁发的令牌](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)。  
+ 例如，颁发的令牌是在使用联合方案中的安全令牌服务 (STS) 进行身份验证时所使用的自定义凭据类型。 默认情况下，该令牌为 SAML 令牌。 有关详细信息, 请参阅[联合和颁发的令牌](../../../wcf/feature-details/federation-and-issued-tokens.md)。 以及[联合和颁发的令牌](../../../wcf/feature-details/federation-and-issued-tokens.md)。  
   
- 本节包含用于配置本地令牌颁发者的元素，或者与安全令牌服务一起使用的行为。 有关配置客户端以使用本地颁发者的说明，请参阅[如何：配置本地颁发者](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)。  
+ 本节包含用于配置本地令牌颁发者的元素，或者与安全令牌服务一起使用的行为。 有关将客户端配置为使用本地颁发者的说明, [请参阅如何:配置本地颁发者](../../../wcf/feature-details/how-to-configure-a-local-issuer.md)。  
   
 ## <a name="see-also"></a>请参阅
 
@@ -71,10 +71,10 @@ endpointBehaviors 部分
 - <xref:System.ServiceModel.Configuration.ClientCredentialsElement.IssuedToken%2A>
 - <xref:System.ServiceModel.Description.ClientCredentials.IssuedToken%2A>
 - <xref:System.ServiceModel.Security.IssuedTokenClientCredential>
-- [安全行为](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
-- [保护服务和客户端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [联合令牌与颁发的令牌](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
-- [保护客户端](../../../../../docs/framework/wcf/securing-clients.md)
-- [如何：创建联合客户端](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
-- [如何：配置本地颁发者](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)
-- [联合令牌与颁发的令牌](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
+- [安全行为](../../../wcf/feature-details/security-behaviors-in-wcf.md)
+- [保护服务和客户端的安全](../../../wcf/feature-details/securing-services-and-clients.md)
+- [联合令牌与颁发的令牌](../../../wcf/feature-details/federation-and-issued-tokens.md)
+- [保护客户端](../../../wcf/securing-clients.md)
+- [如何：创建联合客户端](../../../wcf/feature-details/how-to-create-a-federated-client.md)
+- [如何：配置本地颁发者](../../../wcf/feature-details/how-to-configure-a-local-issuer.md)
+- [联合令牌与颁发的令牌](../../../wcf/feature-details/federation-and-issued-tokens.md)

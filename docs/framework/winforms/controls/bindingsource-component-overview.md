@@ -7,12 +7,12 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], about BindingSource component
 - data binding [Windows Forms], BindingSource component
 ms.assetid: be838caf-fcb0-4b68-827f-58b2c04b747f
-ms.openlocfilehash: 9c9c9fb574b9f3e687b2d8d5c4606bfb66ebfa64
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: bd1b38b434f9932a575745d7a1761ff18b009115
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364447"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917814"
 ---
 # <a name="bindingsource-component-overview"></a>BindingSource 组件概述
 <xref:System.Windows.Forms.BindingSource> 组件旨在简化将控件绑定到基础数据源的过程。 <xref:System.Windows.Forms.BindingSource> 组件同时充当管道和其他控件可以绑定的数据源。 将命令传递到基础数据列表时，它提供窗体数据连接的抽象。 此外，可以直接向其添加数据，以便组件本身可用作数据源。  
@@ -25,7 +25,7 @@ ms.locfileid: "68364447"
  ![绑定源和数据绑定体系结构](./media/net-bindsrcdatabindarch.gif "NET_BindSrcDataBindArch")  
   
 > [!NOTE]
->  在设计时，某些操作（如将数据库表从数据窗口拖到空白的窗体中）会创建 <xref:System.Windows.Forms.BindingSource> 组件，将其绑定到基础数据源，并添加数据识别控件，而这些只需通过一个操作即可完成。 另请参阅[在 Visual Studio 中将 Windows 窗体控件绑定到数据](/visualstudio/data-tools/bind-windows-forms-controls-to-data-in-visual-studio)。  
+> 在设计时，某些操作（如将数据库表从数据窗口拖到空白的窗体中）会创建 <xref:System.Windows.Forms.BindingSource> 组件，将其绑定到基础数据源，并添加数据识别控件，而这些只需通过一个操作即可完成。 另请参阅[在 Visual Studio 中将 Windows 窗体控件绑定到数据](/visualstudio/data-tools/bind-windows-forms-controls-to-data-in-visual-studio)。  
   
 ## <a name="bindingsource-component-as-a-data-source"></a>作为数据源的 BindingSource 组件  
  如果开始将项添加到 <xref:System.Windows.Forms.BindingSource> 组件，而不先指定一个用于绑定的列表，则该组件将充当列表样式的数据源并接受这些添加的项。  

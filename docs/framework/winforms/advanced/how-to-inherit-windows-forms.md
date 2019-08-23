@@ -9,12 +9,12 @@ helpviewer_keywords:
 - inheritance [Windows Forms], forms
 - Windows Forms, inheritance
 ms.assetid: cb3e1c0f-3d2a-4cdc-b0d1-c92eae567ffb
-ms.openlocfilehash: 60c238430d44371bbd3859c3864fd2ef73f70098
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: a6d000bc853046cffbc2bddc54d1f5faec689032
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69037917"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968616"
 ---
 # <a name="how-to-inherit-windows-forms"></a>如何：继承 Windows 窗体
 
@@ -40,12 +40,12 @@ ms.locfileid: "69037917"
     public class Form2 : Namespace1.Form1
     ```
 
- 当继承窗体时，请记住，由于每个事件是由基类和继承类一起进行处理的，所以事件处理程序被调用两次时可能会出现问题。 若要深入了解如何避免此问题，请参阅[有关 Visual Basic 中继承的事件处理程序的疑难解答](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)。
+ 当继承窗体时，请记住，由于每个事件是由基类和继承类一起进行处理的，所以事件处理程序被调用两次时可能会出现问题。 若要深入了解如何避免此问题，请参阅[有关 Visual Basic 中继承的事件处理程序的疑难解答](../../../visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)。
 
 ## <a name="see-also"></a>请参阅
 
-- [Inherits 语句](~/docs/visual-basic/language-reference/statements/inherits-statement.md)
-- [Imports 语句（.NET 命名空间和类型）](~/docs/visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
-- [using](~/docs/csharp/language-reference/keywords/using.md)
+- [Inherits 语句](../../../visual-basic/language-reference/statements/inherits-statement.md)
+- [Imports 语句（.NET 命名空间和类型）](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
+- [using](../../../csharp/language-reference/keywords/using.md)
 - [修改基窗体的外观的效果](effects-of-modifying-base-form-appearance.md)
 - [Windows 窗体可视化继承](windows-forms-visual-inheritance.md)

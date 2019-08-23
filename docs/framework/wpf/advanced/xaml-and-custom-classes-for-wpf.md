@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XAML [WPF], custom classes
 - classes [WPF], custom classes in XAML
 ms.assetid: e7313137-581e-4a64-8453-d44e15a6164a
-ms.openlocfilehash: 8b47c43e897004a6c7eb3d2f8b2a2b9bb625e158
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 9fe53ed4d677f5604911c02d0426ed1b567d51e1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400832"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917323"
 ---
 # <a name="xaml-and-custom-classes-for-wpf"></a>XAML 及 WPF 的自定义类
 在公共语言运行时 (CLR) 框架中实现的 XAML 支持使用任何公共语言运行时 (CLR) 语言定义自定义类或结构, 然后使用 XAML 标记访问该类。 通常通过将自定义类型映射到 XAML 命名空间前缀，可在同一标记文件中混合使用 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 定义类型和自定义类型。 本主题讨论将自定义类用作 XAML 元素必须满足的要求。  
@@ -69,7 +69,7 @@ ms.locfileid: "68400832"
  若要用作 CLR 事件, 事件必须作为支持无参数构造函数的类上的公共事件公开, 或在可在派生类上访问事件的抽象类上公开。 为了方便地用作路由事件, CLR 事件应该实现`add`显式和`remove`方法, 这些方法可为 CLR 事件签名添加和删除处理程序, 并将这些处理程序<xref:System.Windows.UIElement.AddHandler%2A>转发到和<xref:System.Windows.UIElement.RemoveHandler%2A>方法. 这些方法添加或删除事件所附加到的实例上的路由事件处理程序存储的处理程序。  
   
 > [!NOTE]
->  可以使用<xref:System.Windows.UIElement.AddHandler%2A>为路由事件直接注册处理程序, 并特意不定义公开路由事件的 CLR 事件。 通常不建议采用此操作，因为事件不会启用 XAML 特性语法用于附加处理程序，并且生成类提供的类型功能的 XAML 视图透明度较低。  
+> 可以使用<xref:System.Windows.UIElement.AddHandler%2A>为路由事件直接注册处理程序, 并特意不定义公开路由事件的 CLR 事件。 通常不建议采用此操作，因为事件不会启用 XAML 特性语法用于附加处理程序，并且生成类提供的类型功能的 XAML 视图透明度较低。  
   
 <a name="Collection_Properties"></a>   
 ## <a name="writing-collection-properties"></a>编写集合属性  
@@ -92,7 +92,7 @@ ms.locfileid: "68400832"
  CLR 中这些类型每个都具有 `Add` 方法，创建对象图时，XAML 处理器使用该方法将项添加到基础集合。  
   
 > [!NOTE]
->  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] XAML 处理器`List`不`Dictionary`支持泛型<xref:System.Collections.Generic.IList%601>和<xref:System.Collections.Generic.IDictionary%602>接口 (和) 进行集合检测。 但是<xref:System.Collections.Generic.List%601> , 可以将类用作基类, 因为它直接实现<xref:System.Collections.IList>或<xref:System.Collections.Generic.Dictionary%602>作为基类, 因为它直接实现<xref:System.Collections.IDictionary> 。  
+> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] XAML 处理器`List`不`Dictionary`支持泛型<xref:System.Collections.Generic.IList%601>和<xref:System.Collections.Generic.IDictionary%602>接口 (和) 进行集合检测。 但是<xref:System.Collections.Generic.List%601> , 可以将类用作基类, 因为它直接实现<xref:System.Collections.IList>或<xref:System.Collections.Generic.Dictionary%602>作为基类, 因为它直接实现<xref:System.Collections.IDictionary> 。  
   
  声明采用集合的属性时，请注意类型的新实例中如何实例化此属性值。 如果不将此属性实现为依赖属性，则使属性使用调用此集合类型构造函数的支持字段已可满足使用需求。 如果属性为依赖属性，则可能需要将集合属性初始化为默认类型构造函数的一部分。 这是因为依赖属性从元数据获取其默认值，而通常不希望集合属性的初始值为静态共享集合。 每个包含类型实例应具有一个集合实例。 有关详细信息，请参阅[自定义依赖属性](custom-dependency-properties.md)。  
   

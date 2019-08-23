@@ -2,18 +2,18 @@
 title: 设计和实现自定义活动
 ms.date: 03/30/2017
 ms.assetid: 4e30e63d-6e33-4842-a7a4-ce807cef1fad
-ms.openlocfilehash: 61a5de5a15835c728c18c0136952cf7ffdbaf000
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b0d04572c65fd4e3e0ae96241217c9ae9aa0e2c5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945842"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69915351"
 ---
 # <a name="designing-and-implementing-custom-activities"></a>设计和实现自定义活动
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 中自定义活动的创建途径有二：或是将系统提供的活动组装成组合活动，或是创建派生自 <xref:System.Activities.CodeActivity>、<xref:System.Activities.AsyncCodeActivity> 或 <xref:System.Activities.NativeActivity> 的新类型。 本节介绍如何使用任一方法来创建自定义活动。  
   
 > [!IMPORTANT]
->  自定义活动在工作流设计器中默认显示为一个包含活动名称的简单矩形。 若要在工作流设计器中为您的活动提供自定义可视化表示形式，还必须创建自定义设计器。 有关详细信息，请参阅[使用自定义活动设计器和模板](using-custom-activity-designers-and-templates.md)。  
+> 自定义活动在工作流设计器中默认显示为一个包含活动名称的简单矩形。 若要在工作流设计器中为您的活动提供自定义可视化表示形式，还必须创建自定义设计器。 有关详细信息, 请参阅[使用自定义活动设计器和模板](using-custom-activity-designers-and-templates.md)。  
   
 ## <a name="in-this-section"></a>本节内容  
  [活动创建选项](activity-authoring-options-in-wf.md)  

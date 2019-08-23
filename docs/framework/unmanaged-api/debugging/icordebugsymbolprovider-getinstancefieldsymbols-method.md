@@ -1,17 +1,17 @@
 ---
-title: 'Icordebugsymbolprovider:: Getinstancefieldsymbols 方法'
+title: 'ICorDebugSymbolProvider:: GetInstanceFieldSymbols 方法'
 ms.date: 03/30/2017
 ms.assetid: a29b9233-ee67-4b53-b8bc-c00b281e7edb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 02ffabfc43861d3d295a0bd2ea09213b06b6868a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b6bba47500b024bc1f2a2be21d461a6f5933f0ca
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67771411"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964608"
 ---
-# <a name="icordebugsymbolprovidergetinstancefieldsymbols-method"></a>Icordebugsymbolprovider:: Getinstancefieldsymbols 方法
+# <a name="icordebugsymbolprovidergetinstancefieldsymbols-method"></a>ICorDebugSymbolProvider:: GetInstanceFieldSymbols 方法
 获取与 Typespec 签名相对应的实例字段符号。  
   
 ## <a name="syntax"></a>语法  
@@ -40,19 +40,19 @@ HRESULT GetInstanceFieldSymbols(
  [out] 一个指针，指向由方法检索的符号的数量。  
   
  `pSymbols`  
- [out]一个指向[ICorDebugStaticFieldSymbol](../../../../docs/framework/unmanaged-api/debugging/icordebugstaticfieldsymbol-interface.md)数组，其中包含请求的实例字段符号。  
+ 弄指向[ICorDebugStaticFieldSymbol](../../../../docs/framework/unmanaged-api/debugging/icordebugstaticfieldsymbol-interface.md)数组的指针, 该数组包含请求的实例字段符号。  
   
 ## <a name="remarks"></a>备注  
   
 > [!NOTE]
->  此方法仅适用于 .NET Native。  
+> 此方法仅适用于 .NET Native。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头：** Cordebug.idl, Cordebug.idl  
   
- **库：** CorGuids.lib  
+ **类库**CorGuids.lib  
   
  **.NET Framework 版本：** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

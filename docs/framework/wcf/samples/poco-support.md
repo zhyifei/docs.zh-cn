@@ -2,12 +2,12 @@
 title: POCO 支持
 ms.date: 03/30/2017
 ms.assetid: 3846ca73-2819-4ca2-8367-dc739dde5a5b
-ms.openlocfilehash: 8f65f6d2131941d02c773f61f70084059293187c
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 90b55362c1958ea5677e3bc0cdca906bb3af6b3d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363089"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965555"
 ---
 # <a name="poco-support"></a>POCO 支持
 此示例演示对未标记的类型的序列化支持，未标记的类型是指尚未应用序列化属性的类型，有时称作“简单传统 CLR 对象 (POCO)”类型。 为具有无参数构造函数的所有公共未标记类型推断数据协定。<xref:System.Runtime.Serialization.DataContractSerializer> 数据协定允许您在服务中传入和传出结构化数据。 有关未标记类型的详细信息, 请参阅[可序列化类型](../../../../docs/framework/wcf/feature-details/serializable-types.md)。  
@@ -17,7 +17,7 @@ ms.locfileid: "68363089"
  服务是由 Internet 信息服务 (IIS) 承载的，客户端是一个控制台应用程序 (.exe)。  
   
 > [!NOTE]
->  本主题的最后介绍了此示例的设置过程和生成说明。  
+> 本主题的最后介绍了此示例的设置过程和生成说明。  
   
  `ComplexNumber` 类在 `ServiceContract` 中使用。 `ComplexNumber` 类型没有 <xref:System.Runtime.Serialization.DataContractAttribute> 和 <xref:System.Runtime.Serialization.DataMemberAttribute> 属性，如下面的示例代码所示。 默认情况下，所有公共属性和字段均被序列化。  
   

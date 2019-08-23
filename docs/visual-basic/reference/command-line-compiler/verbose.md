@@ -6,15 +6,15 @@ helpviewer_keywords:
 - -verbose compiler option [Visual Basic]
 - /verbose compiler option [Visual Basic]
 ms.assetid: d1aec0c1-0261-421d-9adc-5b13756100be
-ms.openlocfilehash: f6d896fb0d41a8fa3ed613d29bc3fca2bd14cc5e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5b3899462af7c4aa8e0f77377a8d7485975f9867
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61796086"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937263"
 ---
 # <a name="-verbose"></a>-verbose
-会导致编译器生成详细的状态和错误消息。  
+导致编译器生成详细的状态和错误消息。  
   
 ## <a name="syntax"></a>语法  
   
@@ -24,16 +24,16 @@ ms.locfileid: "61796086"
   
 ## <a name="arguments"></a>自变量  
  `+` &#124; `-`  
- 可选。 指定`-verbose`相当于将指定`-verbose+`，这将导致编译器发出详细消息。 此选项的默认值是`-verbose-`。  
+ 可选。 指定`-verbose`与指定`-verbose+`的相同, 这将导致编译器发出详细消息。 此选项的默认值为`-verbose-`。  
   
 ## <a name="remarks"></a>备注  
- `-verbose`选项显示有关由编译器发出的错误总数信息、 报告的程序集加载的模块，并显示当前正在编译的文件。  
+ `-verbose`选项显示编译器发出的错误总数的相关信息, 报告模块正在加载哪些程序集, 并显示当前正在编译的文件。  
   
 > [!NOTE]
->  `-verbose`选项不适用于从 Visual Studio 开发环境中，仅当从命令行编译时便可。  
+> 此`-verbose`选项在 Visual Studio 开发环境中不可用; 它仅在从命令行编译时可用。  
   
 ## <a name="example"></a>示例  
- 下面的代码编译`In.vb`并指示编译器以显示详细的状态信息。  
+ 下面的代码将`In.vb`编译并指示编译器显示详细状态信息。  
   
 ```console  
 vbc -verbose in.vb  

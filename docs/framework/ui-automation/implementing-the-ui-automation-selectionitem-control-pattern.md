@@ -6,26 +6,26 @@ helpviewer_keywords:
 - UI Automation, Selection Item control pattern
 - control patterns, Selection Item
 ms.assetid: 76b0949a-5b23-4cfc-84cc-154f713e2e12
-ms.openlocfilehash: b1d5a0b11510a123d5fbebd656c1fdcd338870e7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: aef1d31499f65834fa1268147e45f82294fe560a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649480"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69935693"
 ---
 # <a name="implementing-the-ui-automation-selectionitem-control-pattern"></a>实现 UI 自动化 SelectionItem 控件模式
 > [!NOTE]
->  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，请参阅[Windows 自动化 API:UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
+> 本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关的最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], 请[参阅 Windows 自动化 API:UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  本主题介绍实现 <xref:System.Windows.Automation.Provider.ISelectionItemProvider>的准则和约定，包括有关属性、方法和事件的信息。 本概述的结尾列出了指向其他参考资料的链接。  
   
- <xref:System.Windows.Automation.SelectionItemPattern> 控件模式用于支持充当实现 <xref:System.Windows.Automation.Provider.ISelectionProvider>的容器控件的独立可选子项的控件。 有关实现此 SelectionItem 控件模式的控件的示例，请参阅[Control Pattern Mapping for UI 自动化客户端](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)  
+ <xref:System.Windows.Automation.SelectionItemPattern> 控件模式用于支持充当实现 <xref:System.Windows.Automation.Provider.ISelectionProvider>的容器控件的独立可选子项的控件。 有关实现 SelectionItem 控件模式的控件的示例, 请参阅[UI 自动化客户端的控件模式映射](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
 ## <a name="implementation-guidelines-and-conventions"></a>实现准则和约定  
  在实现 Selection Item 控件模式时，请注意以下准则和约定：  
   
-- 管理实现 <xref:System.Windows.Automation.Provider.IRawElementProviderFragmentRoot>的子控件的单选控件（如“显示属性”  对话框中的“屏幕分辨率”  滑块）应实现 <xref:System.Windows.Automation.Provider.ISelectionProvider> ，且其子级应实现 <xref:System.Windows.Automation.Provider.IRawElementProviderFragment> 和 <xref:System.Windows.Automation.Provider.ISelectionItemProvider>。  
+- 管理实现 <xref:System.Windows.Automation.Provider.IRawElementProviderFragmentRoot>的子控件的单选控件（如“显示属性” 对话框中的“屏幕分辨率” 滑块）应实现 <xref:System.Windows.Automation.Provider.ISelectionProvider> ，且其子级应实现 <xref:System.Windows.Automation.Provider.IRawElementProviderFragment> 和 <xref:System.Windows.Automation.Provider.ISelectionItemProvider>。  
   
 <a name="Required_Members_for_the_IValueProvider_Interface"></a>   
 ## <a name="required-members-for-iselectionitemprovider"></a>ISelectionItemProvider 必需的成员  
@@ -33,9 +33,9 @@ ms.locfileid: "64649480"
   
 |必需的成员|成员类型|说明|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.ISelectionProvider.CanSelectMultiple%2A>|属性|None|  
-|<xref:System.Windows.Automation.Provider.ISelectionProvider.IsSelectionRequired%2A>|属性|None|  
-|<xref:System.Windows.Automation.Provider.ISelectionProvider.GetSelection%2A>|方法|None|  
+|<xref:System.Windows.Automation.Provider.ISelectionProvider.CanSelectMultiple%2A>|Property|无|  
+|<xref:System.Windows.Automation.Provider.ISelectionProvider.IsSelectionRequired%2A>|Property|无|  
+|<xref:System.Windows.Automation.Provider.ISelectionProvider.GetSelection%2A>|方法|无|  
 |<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|Event|在容器中的选项发生重大更改并需要发送多于 <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent> 常量所允许的 <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementRemovedFromSelectionEvent> 和 <xref:System.Windows.Automation.Provider.AutomationInteropProvider.InvalidateLimit> 事件时引发。|  
   
 - 如果 <xref:System.Windows.Automation.SelectionItemPattern.Select%2A>、 <xref:System.Windows.Automation.SelectionItemPattern.AddToSelection%2A>或 <xref:System.Windows.Automation.SelectionItemPattern.RemoveFromSelection%2A> 的结果是单个的选定的项，则应引发 <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent> ；否则根据需要发送 <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementAddedToSelectionEvent>/ <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementRemovedFromSelectionEvent> 。  

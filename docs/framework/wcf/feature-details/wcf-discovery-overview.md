@@ -2,18 +2,18 @@
 title: WCF Discovery 概述
 ms.date: 03/30/2017
 ms.assetid: 84fad0e4-23b1-45b5-a2d4-c9cdf90bbb22
-ms.openlocfilehash: 80cecec2143d78d9dee13e9071b6ebb5a4b1bdb0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fce16038b4c9ab65047125be1881be4b86976aee
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662507"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69931858"
 ---
 # <a name="wcf-discovery-overview"></a>WCF Discovery 概述
 Discovery API 提供了统一的编程模型来使用 WS-Discovery 协议动态发布和发现 Web 服务。 通过这些 API，服务可以发布自身，客户端可以查找已发布的服务。 服务一旦可供检测，即可发送公告消息，并侦听和响应发现请求。 可检测到的服务可以发送 Hello 消息和 Bye 消息，前者用于公告服务将到达网络，后者用于公告服务将离开网络。 若要查找服务，客户端将在网络上发送包含特定条件（如服务协定类型、关键字和范围）的 `Probe` 请求。 服务接收到此 `Probe` 请求，并确定它们是否匹配该条件。 如果某一服务匹配该条件，该服务会做出响应，向客户端回发一条 `ProbeMatch` 消息，该消息包含与该服务联系所需的信息。 客户端还可以发送 `Resolve` 请求，以便查找可能已更改终结点地址的服务。 匹配的服务会向客户端回发一条 `Resolve` 消息，以此来响应 `ResolveMatch` 请求。  
   
 ## <a name="ad-hoc-and-managed-modes"></a>临时模式和托管模式  
- Discovery API 支持两种不同模式：管理和 Ad Hoc。 托管模式中存在一台称为发现代理的中央服务器，用于维护有关可用服务的信息。 可以采用多种方式使用服务相关信息填充发现代理。 例如，服务可以在启动时向发现代理发送公告消息，或者代理也可以从数据库或配置文件中读取数据以确定可用服务。 发现代理的填充方式完全由开发人员决定。 客户端使用发现代理检索有关可用服务的信息。 当客户端搜索服务时，它会向发现代理发送一条 `Probe` 消息，然后由代理确定已知的任何服务是否与客户端搜索的服务匹配。 如果存在匹配服务，发现代理会向客户端回发 `ProbeMatch` 响应。 然后，客户端可以使用代理返回的服务信息，直接与该服务联系。 托管模式所依据的关键原理是：以单播方式向一个机构（即发现代理）发送发现请求。 通过 .NET Framework 包含的关键组件，您可以生成自己的代理。 客户端和服务可以采用多种方法来定位代理：  
+ 发现 API 支持两种不同的模式:托管和即席。 托管模式中存在一台称为发现代理的中央服务器，用于维护有关可用服务的信息。 可以采用多种方式使用服务相关信息填充发现代理。 例如，服务可以在启动时向发现代理发送公告消息，或者代理也可以从数据库或配置文件中读取数据以确定可用服务。 发现代理的填充方式完全由开发人员决定。 客户端使用发现代理检索有关可用服务的信息。 当客户端搜索服务时，它会向发现代理发送一条 `Probe` 消息，然后由代理确定已知的任何服务是否与客户端搜索的服务匹配。 如果存在匹配服务，发现代理会向客户端回发 `ProbeMatch` 响应。 然后，客户端可以使用代理返回的服务信息，直接与该服务联系。 托管模式所依据的关键原理是：以单播方式向一个机构（即发现代理）发送发现请求。 通过 .NET Framework 包含的关键组件，您可以生成自己的代理。 客户端和服务可以采用多种方法来定位代理：  
   
 - 代理可以响应临时消息。  
   
@@ -146,7 +146,7 @@ class Client
 ```  
   
 ## <a name="discovery-and-message-level-security"></a>发现和消息级别安全  
- 使用消息级别安全时，需要在服务发现终结点上指定 <xref:System.ServiceModel.EndpointIdentity>，并在客户端发现终结点上指定匹配的 <xref:System.ServiceModel.EndpointIdentity>。 有关消息级别安全的详细信息，请参阅[消息安全](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)。  
+ 使用消息级别安全时，需要在服务发现终结点上指定 <xref:System.ServiceModel.EndpointIdentity>，并在客户端发现终结点上指定匹配的 <xref:System.ServiceModel.EndpointIdentity>。 有关消息级别安全性的详细信息, 请参阅[消息安全](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)。  
   
 ## <a name="discovery-and-web-hosted-services"></a>发现和 Web 承载的服务  
  若要使 WCF 服务可发现，这些服务必须正在运行。 在 IIS/WAS 接收到为服务绑定的消息之前，IIS 或 WAS 下承载的 WCF 服务不会运行，因此这些服务在默认情况下不可发现。  使 Web 承载的服务可发现的两种方法：  
@@ -155,9 +155,9 @@ class Client
   
 2. 使用发现代理代表服务进行通信  
   
- Windows Server AppFabric 具有自动启动功能，该功能允许服务在接收到任何消息之前启动。 设置了此自动启动功能时，IIS/WAS 承载的服务可配置为可发现。 详细了解自动启动功能，请参见[Windows Server AppFabric 自动启动功能](https://go.microsoft.com/fwlink/?LinkId=205545)。 必须随打开自动启动功能一起，针对发现配置服务。 有关详细信息，请参阅[如何：以编程方式向 WCF 服务和客户端添加可发现性](../../../../docs/framework/wcf/feature-details/how-to-programmatically-add-discoverability-to-a-wcf-service-and-client.md)[配置文件中配置发现](../../../../docs/framework/wcf/feature-details/configuring-discovery-in-a-configuration-file.md)。  
+ Windows Server AppFabric 具有自动启动功能，该功能允许服务在接收到任何消息之前启动。 设置了此自动启动功能时，IIS/WAS 承载的服务可配置为可发现。 有关自动启动功能的详细信息, 请参阅[Windows Server AppFabric 自动启动功能](https://go.microsoft.com/fwlink/?LinkId=205545)。 必须随打开自动启动功能一起，针对发现配置服务。 有关详细信息，请参阅[如何：以编程方式将发现添加到 WCF 服务](../../../../docs/framework/wcf/feature-details/how-to-programmatically-add-discoverability-to-a-wcf-service-and-client.md), 并[在配置文件中配置发现](../../../../docs/framework/wcf/feature-details/configuring-discovery-in-a-configuration-file.md)。  
   
- 发现代理可以用于在服务未运行时，代表 WCF 服务进行通信。 代理可以为进行探测而侦听，或解析消息及对客户端的响应。 客户端随后可以直接向服务发送消息。 当客户端向服务发送消息时，它将实例化以响应消息。 有关实现发现代理，请参阅详细信息[实现发现代理](../../../../docs/framework/wcf/feature-details/implementing-a-discovery-proxy.md)。  
+ 发现代理可以用于在服务未运行时，代表 WCF 服务进行通信。 代理可以为进行探测而侦听，或解析消息及对客户端的响应。 客户端随后可以直接向服务发送消息。 当客户端向服务发送消息时，它将实例化以响应消息。 有关实现发现代理的详细信息, 请参阅[实现发现代理](../../../../docs/framework/wcf/feature-details/implementing-a-discovery-proxy.md)。  
   
 > [!NOTE]
->  WCF Discovery 才能正常工作，为所有 Nic （网络接口控制器） 只都应有 1 个 IP 地址。
+> 为了使 WCF 发现正常工作, 所有 Nic (网络接口控制器) 都应只有1个 IP 地址。

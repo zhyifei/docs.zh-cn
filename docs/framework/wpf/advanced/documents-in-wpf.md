@@ -10,15 +10,15 @@ helpviewer_keywords:
 - documents [WPF], types of
 - documents [WPF], browser-viewable
 ms.assetid: 6e8db7bc-050a-4070-aa72-bb8c46e87ff8
-ms.openlocfilehash: 020ea101ae38b9be854398a55ddd31e67b9fda35
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: 9fac4e1a98f67c6d5d946ade1b7f2115ce0d5f8e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67859670"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964875"
 ---
 # <a name="documents-in-wpf"></a>WPF 中的文档
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供丰富的文档功能，可创建旨在比前几代 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 更易于访问和读取的高保真内容文档。 除增强功能和质量外，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 还对文档显示、打包和安全性能提供集成服务。 本主题介绍 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 文档类型和文档打包。  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]提供了一系列文档功能, 使创建的高保真内容更易于访问和读取, 而不是在以前的 Windows 版本中使用。 除增强功能和质量外，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 还对文档显示、打包和安全性能提供集成服务。 本主题介绍 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 文档类型和文档打包。  
 
 <a name="types_of_documents"></a>   
 ## <a name="types-of-documents"></a>文档类型  
@@ -30,36 +30,36 @@ ms.locfileid: "67859670"
   
 <a name="document_viewer"></a>   
 ## <a name="document-controls-and-text-layout"></a>文档控件和文本布局  
- .NET Framework 提供了一组预建简化使用固定的文档、 流文档和您的应用程序内常规文本的控件。  使用支持固定的文档内容的显示<xref:System.Windows.Controls.DocumentViewer>控件。  流文档内容的显示由三个不同的控件支持： <xref:System.Windows.Controls.FlowDocumentReader>， <xref:System.Windows.Controls.FlowDocumentPageViewer>，和<xref:System.Windows.Controls.FlowDocumentScrollViewer>它们分别映射到不同的用户方案 （请参阅以下各节）。  其他 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 控件提供简化的布局以支持常规文本使用（请参阅下面的[用户界面中的文本](#text_in_the_user_interface)）。  
+ .NET Framework 提供了一组预建的控件, 这些控件可简化在应用程序中使用固定文档、流文档和常规文本。  使用<xref:System.Windows.Controls.DocumentViewer>控件支持显示固定文档内容。  流文档内容的显示由三个不同的控件支持<xref:System.Windows.Controls.FlowDocumentReader>: <xref:System.Windows.Controls.FlowDocumentPageViewer>、和<xref:System.Windows.Controls.FlowDocumentScrollViewer> , 它们映射到不同的用户方案 (请参阅下面的部分)。  其他 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 控件提供简化的布局以支持常规文本使用（请参阅下面的[用户界面中的文本](#text_in_the_user_interface)）。  
   
 ### <a name="fixed-document-control---documentviewer"></a>固定文档控件 - DocumentViewer  
- <xref:System.Windows.Controls.DocumentViewer>控件旨在显示<xref:System.Windows.Documents.FixedDocument>内容。 <xref:System.Windows.Controls.DocumentViewer>控件提供了直观的用户界面，可为常见操作包括打印输出中，将复制到剪贴板、 缩放和文本搜索功能提供内置支持。 此控件通过常见的滚动机制提供对页面内容的访问。 像所有[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]控件，<xref:System.Windows.Controls.DocumentViewer>支持完整或部分重新设计，这使得控件可以直观地集成到几乎任何应用程序或环境。  
+ 控件设计用于显示<xref:System.Windows.Documents.FixedDocument>内容。 <xref:System.Windows.Controls.DocumentViewer> <xref:System.Windows.Controls.DocumentViewer>控件提供直观的用户界面, 该界面为常见操作 (包括打印输出、复制到剪贴板、缩放和文本搜索功能) 提供内置支持。 此控件通过常见的滚动机制提供对页面内容的访问。 与所有[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]控件一样<xref:System.Windows.Controls.DocumentViewer> , 支持完整或部分 restyling, 这使得控件能够直观地集成到几乎任何应用程序或环境中。  
   
- <xref:System.Windows.Controls.DocumentViewer> 用于以只读方式; 显示内容编辑或修改的内容不可用和不受支持。  
+ <xref:System.Windows.Controls.DocumentViewer>旨在以只读方式显示内容;编辑或修改内容不可用, 因此不受支持。  
   
 <a name="flow_document"></a>   
 ### <a name="flow-document-controls"></a>流文档概述  
 
 > [!NOTE]
->  有关更多详细流文档功能以及如何创建它们的信息，请参阅[流文档概述](flow-document-overview.md)。  
+> 有关流文档功能以及如何创建它们的详细信息, 请参阅[流文档概述](flow-document-overview.md)。  
   
- 流文档内容的显示由三个控件支持： <xref:System.Windows.Controls.FlowDocumentReader>， <xref:System.Windows.Controls.FlowDocumentPageViewer>，和<xref:System.Windows.Controls.FlowDocumentScrollViewer>。  
+ 流文档内容的显示由三个控件支持: <xref:System.Windows.Controls.FlowDocumentReader>、 <xref:System.Windows.Controls.FlowDocumentPageViewer>和<xref:System.Windows.Controls.FlowDocumentScrollViewer>。  
   
 #### <a name="flowdocumentreader"></a>FlowDocumentReader  
- <xref:System.Windows.Controls.FlowDocumentReader> 包括功能，让用户能够动态选择各种查看模式，包括单页 （页--一次） 查看模式、 两个---a-次一页 （书本阅读格式） 查看模式和连续滚动 （无界限） 查看模式。  有关这些查看模式的详细信息，请参阅<xref:System.Windows.Controls.FlowDocumentReaderViewingMode>。  如果不需要进行不同查看模式之间动态切换的功能<xref:System.Windows.Controls.FlowDocumentPageViewer>和<xref:System.Windows.Controls.FlowDocumentScrollViewer>提供的轻量级流内容查看器中使用特定查看模式修复。  
+ <xref:System.Windows.Controls.FlowDocumentReader>包括使用户能够在各种查看模式之间进行动态选择的功能, 包括单页 (一次一页) 查看模式、一次两页 (书籍阅读格式) 查看模式和连续滚动 (无限) 查看模式。  有关这些查看模式的详细信息, 请<xref:System.Windows.Controls.FlowDocumentReaderViewingMode>参阅。  如果不需要在不同查看模式之间动态切换的功能, <xref:System.Windows.Controls.FlowDocumentPageViewer>并<xref:System.Windows.Controls.FlowDocumentScrollViewer>提供了在特定查看模式下固定的轻型流内容查看器。  
   
 #### <a name="flowdocumentpageviewer-and-flowdocumentscrollviewer"></a>FlowDocumentPageViewer 和 FlowDocumentScrollViewer  
- <xref:System.Windows.Controls.FlowDocumentPageViewer> 显示的内容一次一页中查看模式，尽管<xref:System.Windows.Controls.FlowDocumentScrollViewer>以连续滚动模式显示内容。  这两<xref:System.Windows.Controls.FlowDocumentPageViewer>和<xref:System.Windows.Controls.FlowDocumentScrollViewer>都固定使用特定查看模式。 相比<xref:System.Windows.Controls.FlowDocumentReader>，包含的功能使用户能够动态选择各种查看模式 (由提供<xref:System.Windows.Controls.FlowDocumentReaderViewingMode>枚举)，但代价是多个资源占用量比<xref:System.Windows.Controls.FlowDocumentPageViewer>或<xref:System.Windows.Controls.FlowDocumentScrollViewer>。  
+ <xref:System.Windows.Controls.FlowDocumentPageViewer>以一次一页的查看模式显示内容, 同时<xref:System.Windows.Controls.FlowDocumentScrollViewer>以连续滚动模式显示内容。  <xref:System.Windows.Controls.FlowDocumentPageViewer> 和<xref:System.Windows.Controls.FlowDocumentScrollViewer>都固定到特定的查看模式。 比较到<xref:System.Windows.Controls.FlowDocumentReader>, 其中包括使用户能够在各种查看模式 ( <xref:System.Windows.Controls.FlowDocumentReaderViewingMode>由枚举提供) 之间动态选择的功能, 成本比<xref:System.Windows.Controls.FlowDocumentPageViewer>或<xref:System.Windows.Controls.FlowDocumentScrollViewer>更多。  
   
- 默认情况下，总是显示垂直滚动条，而水平滚动条则在需要时显示。 默认值[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]有关<xref:System.Windows.Controls.FlowDocumentScrollViewer>不包括工具栏; 但是，<xref:System.Windows.Controls.FlowDocumentScrollViewer.IsToolBarVisible%2A>属性可以用于启用内置工具栏。  
+ 默认情况下，总是显示垂直滚动条，而水平滚动条则在需要时显示。 的默认[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]值<xref:System.Windows.Controls.FlowDocumentScrollViewer>不包含<xref:System.Windows.Controls.FlowDocumentScrollViewer.IsToolBarVisible%2A>工具栏, 但是, 属性可用于启用内置工具栏。  
   
 <a name="text_in_the_user_interface"></a>   
 ### <a name="text-in-the-user-interface"></a>用户界面中的文本  
- 除可将文本添加到文档外，文本显然还可以用于应用程序 UI（如窗体）中。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 包括多个用于在屏幕中绘制文本的控件。 每个控件都面向不同的方案，并具有自己的功能和限制列表。 一般情况下，<xref:System.Windows.Controls.TextBlock>有限的文本支持是必需的例如中的简短句子时，应使用元素[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]。 <xref:System.Windows.Controls.Label> 需要最少的文本支持时，可以使用。 有关详细信息，请参阅 [TextBlock 概述](../controls/textblock-overview.md)。  
+ 除可将文本添加到文档外，文本显然还可以用于应用程序 UI（如窗体）中。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 包括多个用于在屏幕中绘制文本的控件。 每个控件都面向不同的方案，并具有自己的功能和限制列表。 通常, <xref:System.Windows.Controls.TextBlock>当要求提供有限文本支持时, 应使用元素, 例如[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]中的 brief 句子。 <xref:System.Windows.Controls.Label>需要最少文本支持时, 可以使用。 有关详细信息，请参阅 [TextBlock 概述](../controls/textblock-overview.md)。  
   
 <a name="packaging"></a>   
 ## <a name="document-packaging"></a>文档打包  
- <xref:System.IO.Packaging> Api 提供了一种有效方式组织应用程序数据、 文档内容和相关的资源的访问权限，可移植且易于分发非常简单的单个容器中。 ZIP 文件是举例说明<xref:System.IO.Packaging.Package>类型，能够作为一个单元中包含多个对象。 打包 Api 提供默认<xref:System.IO.Packaging.ZipPackage>设计一种开放打包约定标准使用 XML 和 ZIP 文件体系结构的实现。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]打包 Api 简化了创建包，并存储和访问其中的对象。 中存储的对象<xref:System.IO.Packaging.Package>称为<xref:System.IO.Packaging.PackagePart>（"部件"）。 包还可包括已签名的数字证书，这些证书可用于标识部件的发信方以及验证包内容是否尚未修改。  包还包括<xref:System.IO.Packaging.PackageRelationship>允许附加信息添加到包或与特定部分关联而无需实际修改现有部件内容的功能。  包服务还支持 [!INCLUDE[TLA#tla_rm](../../../../includes/tlasharptla-rm-md.md)]。  
+ 这些<xref:System.IO.Packaging> api 提供了一种高效的方法, 可将应用程序数据、文档内容和相关资源组织到一个易于访问、可移植且易于分发的容器中。 ZIP 文件是能够将多个对象<xref:System.IO.Packaging.Package>保存为单个单元的类型的示例。 打包 api 提供了一个默认<xref:System.IO.Packaging.ZipPackage>实现, 该实现使用开放式打包约定标准和 XML 和 ZIP 文件体系结构设计。 使用[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]打包 api 可以轻松创建包, 并可以存储和访问这些包中的对象。 存储在中<xref:System.IO.Packaging.Package>的对象称为<xref:System.IO.Packaging.PackagePart> "部分"。 包还可包括已签名的数字证书，这些证书可用于标识部件的发信方以及验证包内容是否尚未修改。  包还包括一<xref:System.IO.Packaging.PackageRelationship>项功能, 该功能允许将附加信息添加到包或与特定部分关联, 而无需实际修改现有部件的内容。  包服务还支持 [!INCLUDE[TLA#tla_rm](../../../../includes/tlasharptla-rm-md.md)]。  
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 包体系结构用作大量关键技术的基础：  
   
@@ -69,13 +69,13 @@ ms.locfileid: "67859670"
   
 - 用于个人应用程序设计的自定义存储格式。  
   
- 基于打包 Api，<xref:System.Windows.Xps.Packaging.XpsDocument>专门设计用于存储[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]固定内容文档。 <xref:System.Windows.Xps.Packaging.XpsDocument>是可以在查看器，显示在中打开一个自包含的文档<xref:System.Windows.Controls.DocumentViewer>控件，路由到打印后台处理，或直接输出到[!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]-兼容的打印机。  
+ 基于打包 api, <xref:System.Windows.Xps.Packaging.XpsDocument>专为存储[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]固定内容文档而设计。 是自包含文档, 可在查看器中打开、在<xref:System.Windows.Controls.DocumentViewer>控件中显示、路由到打印假脱机或直接输出到兼容的[!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]打印机。 <xref:System.Windows.Xps.Packaging.XpsDocument>  
   
- 以下各节提供有关的更多信息<xref:System.IO.Packaging.Package>并<xref:System.Windows.Xps.Packaging.XpsDocument>提供 Api 来与[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。  
+ 以下各节提供了有关随提供<xref:System.IO.Packaging.Package> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]的<xref:System.Windows.Xps.Packaging.XpsDocument>和 api 的附加信息。  
   
 <a name="packages"></a>   
 ### <a name="package-components"></a>包组件  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 打包 API 允许将应用程序数据和文档组织成单个可移植单元。 ZIP 文件是最常见的包类型之一，并且是 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 附带的默认包类型。  <xref:System.IO.Packaging.Package> 本身是一个抽象类从其<xref:System.IO.Packaging.ZipPackage>使用开放标准 XML 和 ZIP 文件体系结构实现的。  <xref:System.IO.Packaging.Package.Open%2A>方法使用<xref:System.IO.Packaging.ZipPackage>创建，默认情况下使用 ZIP 文件。 包可以包含三种基本类型的项：  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 打包 API 允许将应用程序数据和文档组织成单个可移植单元。 ZIP 文件是最常见的包类型之一，并且是 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 附带的默认包类型。  <xref:System.IO.Packaging.Package>本身是使用开放标准 XML 和<xref:System.IO.Packaging.ZipPackage> ZIP 文件体系结构实现的抽象类。  默认<xref:System.IO.Packaging.Package.Open%2A>情况下<xref:System.IO.Packaging.ZipPackage> , 该方法使用来创建和使用 ZIP 文件。 包可以包含三种基本类型的项：  
   
 |||  
 |-|-|  
@@ -85,11 +85,11 @@ ms.locfileid: "67859670"
   
 <a name="PackageParts"></a>   
 #### <a name="packageparts"></a>PackageParts  
- 一个<xref:System.IO.Packaging.PackagePart>（"部件"） 是引用的对象存储在一个抽象类<xref:System.IO.Packaging.Package>。 在 ZIP 文件中，包的各个部件与存储在 ZIP 文件中的各个文件相对应。  <xref:System.IO.Packaging.ZipPackagePart> 提供存储在可序列化对象的默认实现<xref:System.IO.Packaging.ZipPackage>。  与文件系统类似，包中包含的部件存储在分层目录或“文件夹样式”组织中。  使用[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]打包 Api，应用程序可以写入、 存储和读取多个<xref:System.IO.Packaging.PackagePart>对象使用单个 ZIP 文件容器。  
+ ("Part") 是一个抽象类, 它引用存储在中的<xref:System.IO.Packaging.Package>对象。 <xref:System.IO.Packaging.PackagePart> 在 ZIP 文件中，包的各个部件与存储在 ZIP 文件中的各个文件相对应。  <xref:System.IO.Packaging.ZipPackagePart>为中<xref:System.IO.Packaging.ZipPackage>存储的可序列化对象提供默认实现。  与文件系统类似，包中包含的部件存储在分层目录或“文件夹样式”组织中。  使用打包 api, 应用程序可以使用单个 ZIP 文件容器来编写<xref:System.IO.Packaging.PackagePart> 、存储和读取多个对象。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]  
   
 <a name="PackageDigitalSignatures"></a>   
 #### <a name="packagedigitalsignatures"></a>PackageDigitalSignatures  
- 为了安全， <xref:System.IO.Packaging.PackageDigitalSignature> （"数字签名"） 可以与软件包中的部件相关联。 一个<xref:System.IO.Packaging.PackageDigitalSignature>融合了 [509] 提供两个功能：  
+ 为安全, <xref:System.IO.Packaging.PackageDigitalSignature> ("数字签名") 可与包中的部件相关联。 <xref:System.IO.Packaging.PackageDigitalSignature>包含提供两个功能的 [509]:  
   
 1. 标识部件的发信方并对其进行身份验证。  
   
@@ -99,7 +99,7 @@ ms.locfileid: "67859670"
   
 <a name="PackageRelationships"></a>   
 #### <a name="packagerelationships"></a>PackageRelationships  
- 一个<xref:System.IO.Packaging.PackageRelationship>（"关系"） 提供了用于将与包或包中的部件关联的其他信息的机制。 关系是一种包级别的设备，可以在未修改实际部件内容的情况下将其他信息与部件关联。 在许多情况下，直接向部件内容中插入新数据通常是不可行的：  
+ <xref:System.IO.Packaging.PackageRelationship> ("关系") 提供了一种机制, 用于将附加信息与包或包中的部件相关联。 关系是一种包级别的设备，可以在未修改实际部件内容的情况下将其他信息与部件关联。 在许多情况下，直接向部件内容中插入新数据通常是不可行的：  
   
 - 部件及其内容架构的实际类型未知。  
   
@@ -113,19 +113,19 @@ ms.locfileid: "67859670"
   
 2. 定义添加注释或与部件相关的其他数据的信息关系。  
   
- 一个<xref:System.IO.Packaging.PackageRelationship>提供了一种快速可发现的方式来定义依赖项并添加与包或包作为一个整体的一部分关联的其他信息。  
+ <xref:System.IO.Packaging.PackageRelationship>提供了一种快速、可发现的方式来定义依赖项, 并添加与包或包的一部分关联的其他信息。  
   
 <a name="Dependency_Relationships"></a>   
 ##### <a name="dependency-relationships"></a>依赖关系  
- 依赖关系用于描述一个部件对其他部件的依赖性。 例如，一个包可能包含一个 HTML 部件，该部件包括一个或多个 \<img> 图像标记。 此图像标记指的是作为包的其他内部部件或外部部件（可通过 Internet 访问）定位的图像。 创建<xref:System.IO.Packaging.PackageRelationship>与 HTML 文件可以使查找和访问从属资源快速而简单。 浏览器或查看器应用程序可以直接访问部件关系，并在无需了解架构或未分析文档的情况下立即开始汇编从属资源。  
+ 依赖关系用于描述一个部件对其他部件的依赖性。 例如，一个包可能包含一个 HTML 部件，该部件包括一个或多个 \<img> 图像标记。 此图像标记指的是作为包的其他内部部件或外部部件（可通过 Internet 访问）定位的图像。 创建与<xref:System.IO.Packaging.PackageRelationship> HTML 文件关联的可快速轻松地发现和访问从属资源。 浏览器或查看器应用程序可以直接访问部件关系，并在无需了解架构或未分析文档的情况下立即开始汇编从属资源。  
   
 <a name="Information_Relationships"></a>   
 ##### <a name="information-relationships"></a>信息关系  
- 类似于注释或批注，<xref:System.IO.Packaging.PackageRelationship>还可以用于存储其他类型的信息，而无需实际修改部件内容本身是与部件关联。  
+ 与注释或批注类似, <xref:System.IO.Packaging.PackageRelationship>还可以用于存储其他类型的信息以与部件关联, 而无需实际修改部件内容本身。  
   
 <a name="XPS_Documents"></a>   
 ## <a name="xps-documents"></a>XPS 文档  
- [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] 文档是一个包，其中包含一个或多个固定文档以及呈现操作所需的所有资源和信息。  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 还是 [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] 的本机后台打印文件格式。  <xref:System.Windows.Xps.Packaging.XpsDocument>存储在标准 ZIP 数据集中，并且可以包括 XML 和二进制组件，如图像和字体文件的组合。 [PackageRelationships](#PackageRelationships) 用于定义内容和完全呈现文档所需的资源之间的依赖关系。  <xref:System.Windows.Xps.Packaging.XpsDocument>设计提供单一的、 高保真文档解决方案，可支持多个用途：  
+ [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] 文档是一个包，其中包含一个或多个固定文档以及呈现操作所需的所有资源和信息。  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 还是 [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] 的本机后台打印文件格式。  <xref:System.Windows.Xps.Packaging.XpsDocument>存储在标准 ZIP 数据集中, 并且可以包含 XML 和二进制组件 (如图像和字体文件) 的组合。 [PackageRelationships](#PackageRelationships) 用于定义内容和完全呈现文档所需的资源之间的依赖关系。  该<xref:System.Windows.Xps.Packaging.XpsDocument>设计提供支持多种用途的单个高保真文档解决方案:  
   
 - 将固定文档内容和资源读取、写入和存储为单个可移植且易于分发的文件。  
   

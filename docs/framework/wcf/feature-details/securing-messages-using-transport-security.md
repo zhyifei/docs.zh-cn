@@ -2,18 +2,18 @@
 title: 使用传输安全保护消息
 ms.date: 03/30/2017
 ms.assetid: 9029771a-097e-448a-a13a-55d2878330b8
-ms.openlocfilehash: a8a7e9422679927636ae2dc9b6a2ab34202ee74c
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: b0507590914e2e8cda7e5e599914a9e3d7b0acd0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331522"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69911711"
 ---
 # <a name="securing-messages-using-transport-security"></a>使用传输安全保护消息
 本节讨论消息队列 (MSMQ) 传输安全，您可将其用于保护发送到队列的消息。  
   
 > [!NOTE]
->  在阅读本主题之前, 建议你阅读[安全概念](../../../../docs/framework/wcf/feature-details/security-concepts.md)。  
+> 在阅读本主题之前, 建议你阅读[安全概念](../../../../docs/framework/wcf/feature-details/security-concepts.md)。  
   
  下图提供了使用 Windows Communication Foundation (WCF) 进行排队通信的概念模型。 此插图和术语用于说明传输安全概念。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "68331522"
  如果选择使用 Windows 安全，则需要 Active Directory 集成。 <xref:System.ServiceModel.MsmqAuthenticationMode.WindowsDomain> 是默认的传输安全模式。 设置此设置后, WCF 通道会将 Windows SID 附加到 MSMQ 消息, 并使用从 Active Directory 获取的内部证书。 MSMQ 将此内部证书用于保护消息。 接收队列管理器使用 Active Directory 来搜索并查找匹配的证书，以便对客户端进行身份验证，并检查 SID 是否还与客户端的 SID 匹配。 如果证书（在 `WindowsDomain` 身份验证模式下在内部生成或在 `Certificate` 身份验证模式下在外部生成）附加到消息中，则即使目标队列未标记为要求身份验证，也将执行此身份验证步骤。  
   
 > [!NOTE]
->  创建队列时，您可以将队列标记为已进行身份验证的队列，以指示队列要求对向队列发送消息的客户端进行身份验证。 这可以确保队列中不接受未经身份验证的消息。  
+> 创建队列时，您可以将队列标记为已进行身份验证的队列，以指示队列要求对向队列发送消息的客户端进行身份验证。 这可以确保队列中不接受未经身份验证的消息。  
   
  附加到消息中的 SID 还用于根据目标队列的 ACL 进行检查，以确保客户端具有向队列发送消息的权限。  
   
@@ -76,13 +76,13 @@ ms.locfileid: "68331522"
  除对消息进行签名外，MSMQ 消息将使用从属于承载目标队列的接收队列管理器的 Active Directory 处获取的证书公钥进行加密。 发送队列管理器可确保在传递过程中对 MSMQ 消息进行加密。 接收队列管理器可使用其内部证书的私钥来解密 MSMQ 消息，并将该消息以明文形式存储在队列中（如果该队列已经过身份验证和授权）。  
   
 > [!NOTE]
->  若要加密消息，必须具有 Active Directory 访问权限（`UseActiveDirectory` 的 <xref:System.ServiceModel.NetMsmqBinding> 属性必须设置为 `true`），并且该权限可与 <xref:System.ServiceModel.MsmqAuthenticationMode.Certificate> 和 <xref:System.ServiceModel.MsmqAuthenticationMode.WindowsDomain> 一起使用。  
+> 若要加密消息，必须具有 Active Directory 访问权限（`UseActiveDirectory` 的 <xref:System.ServiceModel.NetMsmqBinding> 属性必须设置为 `true`），并且该权限可与 <xref:System.ServiceModel.MsmqAuthenticationMode.Certificate> 和 <xref:System.ServiceModel.MsmqAuthenticationMode.WindowsDomain> 一起使用。  
   
 #### <a name="none-protection-level"></a>“无”保护级别  
  这表示 <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> 设置为 <xref:System.Net.Security.ProtectionLevel.None>。 对于任何其他身份验证模式，这都不是一个有效值。  
   
 > [!NOTE]
->  如果已对 MSMQ 消息签名，MSMQ 将检查该消息是否是使用独立于队列状态（即是否是经过身份验证的队列）的附加证书（内部或外部）进行签名的。  
+> 如果已对 MSMQ 消息签名，MSMQ 将检查该消息是否是使用独立于队列状态（即是否是经过身份验证的队列）的附加证书（内部或外部）进行签名的。  
   
 ### <a name="msmq-encryption-algorithm"></a>MSMQ 加密算法  
  加密算法指定用于对网络上的 MSMQ 消息进行加密的算法。 仅当 <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> 设置为 <xref:System.Net.Security.ProtectionLevel.EncryptAndSign> 时，才使用此属性。  

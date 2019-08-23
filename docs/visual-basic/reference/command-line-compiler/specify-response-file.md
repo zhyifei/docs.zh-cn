@@ -4,15 +4,15 @@ ms.date: 03/13/2018
 helpviewer_keywords:
 - '@ (Specify Response File) compiler option [Visual Basic]'
 ms.assetid: a6847eaa-e5f9-4303-9421-45b55484b9ca
-ms.openlocfilehash: 6b993a6399eec4e203821109db153aadf246cbac
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b84d50334e56305c27c5c0bc54578ba871a28365
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61639017"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937284"
 ---
 # <a name="-specify-response-file-visual-basic"></a>@（指定响应文件）(Visual Basic)
-指定包含编译器选项的文件和要编译的源代码文件。  
+指定包含要编译的编译器选项和源代码文件的文件。  
   
 ## <a name="syntax"></a>语法  
   
@@ -22,28 +22,28 @@ ms.locfileid: "61639017"
   
 ## <a name="arguments"></a>自变量  
  `response_file`  
- 必需。 列出编译器选项或要编译的源代码文件的文件。 将文件名括在引号 ("") 如果包含空格。  
+ 必需。 列出编译器选项或要编译的源代码文件的文件。 如果文件名包含空格, 请将文件名用引号 ("") 引起来。  
   
 ## <a name="remarks"></a>备注  
- 编译器处理编译器选项和源代码文件的响应文件中指定，如同它们已在命令行上指定的一样。  
+ 编译器将处理在响应文件中指定的编译器选项和源代码文件, 就好像已在命令行中指定了这些选项。  
   
- 若要指定多个响应文件在编译时，指定多个响应文件选项，如下所示。  
+ 若要在编译中指定多个响应文件, 请指定多个响应文件选项, 如下所示。  
   
 ```  
 @file1.rsp @file2.rsp  
 ```  
   
- 在响应中文件、 多个编译器选项和源代码文件可以出现在同一行中。 单个编译器选项规范必须出现在同一行中 （不能跨多个行）。 响应文件可以具有开头的注释`#`符号。  
+ 在响应文件中, 多个编译器选项和源代码文件可以出现在一行中。 单个编译器选项规范必须出现在一行中 (不能跨多行)。 响应文件可以包含以`#`符号开头的注释。  
   
- 你可以组合使用一个或多个响应文件中指定的选项在命令行上指定的选项。 编译器遇到它们处理命令选项。 因此，命令行参数可以覆盖先前列出的选项响应文件中。 相反，响应文件中的选项重写先前在命令行上或其他响应文件中列出的选项。  
+ 可以将命令行上指定的选项与一个或多个响应文件中指定的选项组合在一起。 编译器在遇到命令选项时进行处理。 因此, 命令行参数可以重写以前在响应文件中列出的选项。 相反, 响应文件中的选项会替代前面的命令行或其他响应文件中列出的选项。  
   
- Visual Basic 提供 Vbc.rsp 文件，位于 Vbc.exe 文件所在的同一目录中。 默认情况下包含 Vbc.rsp 文件，除非`-noconfig`使用选项。 有关详细信息，请参阅[-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)。  
+ Visual Basic 提供了 Vbc 文件, 该文件与 Vbc 文件位于同一目录中。 默认情况下, 将包含 Vbc 文件, 除非使用`-noconfig`了选项。 有关详细信息, 请参阅[-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)。  
   
 > [!NOTE]
->  `@`选项不适用于从 Visual Studio 开发环境中，仅当从命令行编译时便可。  
+> 此`@`选项在 Visual Studio 开发环境中不可用; 它仅在从命令行编译时可用。  
   
 ## <a name="example"></a>示例  
- 下面的行是从示例响应文件。  
+ 以下行来自示例响应文件。  
   
 ```console
 # build the first output file  
@@ -54,7 +54,7 @@ source2.vb
 ```  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何使用`@`具有名为的响应文件选项`File1.rsp`。  
+ 下面的示例演示如何将`@`选项与名为`File1.rsp`的响应文件一起使用。  
   
 ```console
 vbc @file1.rsp  

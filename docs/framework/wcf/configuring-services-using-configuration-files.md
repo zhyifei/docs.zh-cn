@@ -4,31 +4,31 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring services [WCF]
 ms.assetid: c9c8cd32-2c9d-4541-ad0d-16dff6bd2a00
-ms.openlocfilehash: 8f1392a6ee2e8f5b3f85650ee91e20e7ec3436fa
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 68b427a81104d0f5102915002025103ef8d35dc4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592222"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69928595"
 ---
 # <a name="configuring-services-using-configuration-files"></a>使用配置文件配置服务
-使用配置文件配置 Windows Communication Foundation (WCF) 服务使你能够灵活提供终结点，并设计时在部署时而非在服务行为数据。 本主题概述了当前可用的主要技术。  
+使用配置文件配置 Windows Communication Foundation (WCF) 服务使你可以灵活地在部署时 (而不是在设计时) 提供终结点和服务行为数据。 本主题概述了当前可用的主要技术。  
   
- WCF 服务是可配置使用.NET Framework 技术的配置。 大多数情况下，XML 元素添加到托管 WCF 服务的 Internet 信息服务 (IIS) 网站的 Web.config 文件中。 通过这些元素，可以逐台计算机更改详细信息，例如终结点地址（用于与服务进行通信的实际地址）。 此外，WCF 包含多个系统提供的元素，允许您快速选择服务的最基本功能。 从开始[!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)]，WCF 附带了一个新的默认配置模型，简化了 WCF 配置要求。 如果未提供针对特定服务的任何 WCF 配置，运行时自动使用一些标准终结点和默认绑定/行为配置你的服务。 在实践中，编写配置是一个较大编程 WCF 应用程序的一部分。  
+ WCF 服务可使用 .NET Framework 配置技术进行配置。 最常见的情况是, 将 XML 元素添加到承载 WCF 服务的 Internet Information Services (IIS) 站点的 web.config 文件中。 通过这些元素，可以逐台计算机更改详细信息，例如终结点地址（用于与服务进行通信的实际地址）。 此外, WCF 还包含多个系统提供的元素, 可用于快速选择服务的最基本功能。 从开始[!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)], wcf 附带了新的默认配置模型, 该模型可简化 WCF 配置要求。 如果你没有为特定服务提供任何 WCF 配置, 则运行时将自动使用一些标准终结点和默认绑定/行为配置你的服务。 实际上, 编写配置是 WCF 应用程序编程的主要部分。  
   
- 有关详细信息，请参阅[的服务配置绑定](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)。 对于一组最常用元素，请参阅[System-Provided Bindings](../../../docs/framework/wcf/system-provided-bindings.md)。 有关默认终结点、绑定和行为的详细信息，请参阅[简化配置](../../../docs/framework/wcf/simplified-configuration.md)和 [WCF 服务的简化配置](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)。  
+ 有关详细信息, 请参阅[配置服务的绑定](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)。 有关最常使用的元素的列表, 请参阅[系统提供的绑定](../../../docs/framework/wcf/system-provided-bindings.md)。 有关默认终结点、绑定和行为的详细信息，请参阅[简化配置](../../../docs/framework/wcf/simplified-configuration.md)和 [WCF 服务的简化配置](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)。  
   
 > [!IMPORTANT]
->  在部署并行方案（其中部署了服务的两个不同版本）时，必须指定配置文件中引用的程序集的部分名称。 这是因为配置文件将在服务的所有版本间共享，并可在不同版本的 .NET Framework 下运行。  
+> 在部署并行方案（其中部署了服务的两个不同版本）时，必须指定配置文件中引用的程序集的部分名称。 这是因为配置文件将在服务的所有版本间共享，并可在不同版本的 .NET Framework 下运行。  
   
-## <a name="systemconfiguration-webconfig-and-appconfig"></a>System.Configuration:Web.config 和 App.config  
- WCF 使用.NET Framework 的 System.Configuration 配置系统。  
+## <a name="systemconfiguration-webconfig-and-appconfig"></a>系统配置:Web.config 和 app.config  
+ WCF 使用 .NET Framework 的配置系统配置系统。  
   
- 配置服务时在 Visual Studio 中，使用 Web.config 文件或 App.config 文件来指定的设置。 配置文件名称的选择由为服务选择的宿主环境确定。 如果正在使用 IIS 来承载服务，则使用 Web.config 文件。 如果正在使用任何其他宿主环境，则使用 App.config 文件。  
+ 在 Visual Studio 中配置服务时, 使用 web.config 文件或 App.config 文件指定设置。 配置文件名称的选择由为服务选择的宿主环境确定。 如果正在使用 IIS 来承载服务，则使用 Web.config 文件。 如果正在使用任何其他宿主环境，则使用 App.config 文件。  
   
- 在 Visual Studio 中，名为 App.config 文件用于创建最终的配置文件。 实际用于配置的最终名称取决于程序集名称。 例如，名为“Cohowinery.exe”的程序集具有的最终配置文件名称为“Cohowinery.exe.config”。 但是，只需要修改 App.config 文件。 在编译时，对该文件所做的更改会自动应用于最终应用程序配置文件。  
+ 在 Visual Studio 中, 名为 App.config 的文件用于创建最终的配置文件。 实际用于配置的最终名称取决于程序集名称。 例如，名为“Cohowinery.exe”的程序集具有的最终配置文件名称为“Cohowinery.exe.config”。 但是，只需要修改 App.config 文件。 在编译时，对该文件所做的更改会自动应用于最终应用程序配置文件。  
   
- 在使用 App.config 文件的过程中，当应用程序启动并应用配置时，文件配置系统会将 App.config 文件与 Machine.config 文件的内容合并。 此机制允许在 Machine.config 文件中定义计算机范围的设置。 可以使用 App.config 文件重写 Machine.config 文件的设置；也可以锁定 Machine.config 文件中的设置以应用它们。 对于 Web.config，配置系统会将应用程序目录之下的所有目录中的 Web.config 文件合并到要应用的配置中。 有关配置和设置优先级的详细信息，请参阅本节中的主题<xref:System.Configuration>命名空间。  
+ 在使用 App.config 文件的过程中，当应用程序启动并应用配置时，文件配置系统会将 App.config 文件与 Machine.config 文件的内容合并。 此机制允许在 Machine.config 文件中定义计算机范围的设置。 可以使用 App.config 文件重写 Machine.config 文件的设置；也可以锁定 Machine.config 文件中的设置以应用它们。 对于 Web.config，配置系统会将应用程序目录之下的所有目录中的 Web.config 文件合并到要应用的配置中。 有关配置和设置优先级的详细信息, 请参阅命名空间中<xref:System.Configuration>的主题。  
   
 ## <a name="major-sections-of-the-configuration-file"></a>配置文件的主要部分  
  配置文件中的主要部分包括以下元素。  
@@ -64,14 +64,14 @@ ms.locfileid: "65592222"
 ```  
   
 > [!NOTE]
->  绑定部分和行为部分是可选的，只在需要时才包括。  
+> 绑定部分和行为部分是可选的，只在需要时才包括。  
   
-### <a name="the-services-element"></a>\<服务 > 元素  
+### <a name="the-services-element"></a>\<Services > 元素  
  `services` 元素包含应用程序承载的所有服务的规范。 从 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]中的简化配置模型开始，此部分是可选的。  
   
  [\<services>](../../../docs/framework/configure-apps/file-schema/wcf/services.md)  
   
-### <a name="the-service-element"></a>\<服务 > 元素  
+### <a name="the-service-element"></a>\<Service > 元素  
  每个服务都具有以下属性：  
   
 - `name`。 指定提供服务协定的实现的类型。 这是完全限定名称，其中包含命名空间、句点和类型名称。 例如， `"MyNameSpace.myServiceType"`。  
@@ -101,7 +101,7 @@ ms.locfileid: "65592222"
 ### <a name="the-binding-element"></a>\<绑定 > 元素  
  在 `binding` 元素中包含的 `bindings` 元素可以是系统提供的绑定之一（请参阅 [System-Provided Bindings](../../../docs/framework/wcf/system-provided-bindings.md)），也可以是自定义绑定（请参阅 [Custom Bindings](../../../docs/framework/wcf/extending/custom-bindings.md)）。 `binding` 元素具有 `name` 属性，此属性将绑定与 `bindingConfiguration` 元素的 `endpoint` 属性中指定的终结点相关联。 如果未指定任何名称，则该绑定对应于该绑定类型的默认值。  
   
-有关配置服务和客户端的详细信息，请参阅[配置 WCF 服务](configuring-services.md)。
+有关配置服务和客户端的详细信息, 请参阅[配置 WCF 服务](configuring-services.md)。
   
  [\<binding>](../../../docs/framework/misc/binding.md)  
   
@@ -110,13 +110,13 @@ ms.locfileid: "65592222"
   
  [\<behaviors>](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)  
   
-### <a name="the-behavior-element"></a>\<行为 > 元素  
- 每个`behavior`元素由`name`属性，并提供系统提供行为，例如 <`throttling`>，或自定义行为。 如果未提供任何名称，则该行为元素对应于默认服务或终结点行为。  
+### <a name="the-behavior-element"></a>> \<元素的行为  
+ 每`behavior`个元素都`name`由属性标识, 并提供系统提供的行为, 如 <`throttling`> 或自定义行为。 如果未提供任何名称，则该行为元素对应于默认服务或终结点行为。  
   
  [\<behavior>](../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md)  
   
 ## <a name="how-to-use-binding-and-behavior-configurations"></a>如何使用绑定和行为配置  
- WCF 更便于使用的参考系统配置中的终结点之间共享配置。 与绑定相关的配置值在 `bindingConfiguration` 部分的 `<binding>` 元素中进行分组，而不是直接将配置值分配到终结点。 绑定配置是一组命名的绑定设置。 然后，终结点可以通过名称来引用 `bindingConfiguration` 。  
+ 使用 WCF, 可以在配置中使用引用系统轻松地在终结点之间共享配置。 与绑定相关的配置值在 `bindingConfiguration` 部分的 `<binding>` 元素中进行分组，而不是直接将配置值分配到终结点。 绑定配置是一组命名的绑定设置。 然后，终结点可以通过名称来引用 `bindingConfiguration` 。  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -148,7 +148,7 @@ ms.locfileid: "65592222"
 </configuration>  
 ```  
   
- 在 `name` 元素中设置 `bindingConfiguration` 的 `<binding>` 。 `name`必须是绑定类型的作用域内的唯一字符串，在这种情况下[< basicHttpBinding\>](../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)，或为空值来指代的默认绑定。 通过将 `bindingConfiguration` 属性设置为此字符串，终结点链接到该配置。  
+ 在 `name` 元素中设置 `bindingConfiguration` 的 `<binding>` 。 必须是绑定类型 (在本例中为[< basicHttpBinding\>](../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)) 范围内的唯一字符串, 或者是用于引用默认绑定的空值。 `name` 通过将 `bindingConfiguration` 属性设置为此字符串，终结点链接到该配置。  
   
  以相同方式实现 `behaviorConfiguration` ，如以下示例中所示。  
   
@@ -188,7 +188,7 @@ ms.locfileid: "65592222"
   
  `~\Web.config~\Service.svc~\Child\Web.config~\Child\Service.svc`
   
- 和您`~\Web.config`文件包含以下内容：  
+ `~\Web.config`文件包含以下内容:  
   
 ```xml  
 <configuration>  
@@ -222,7 +222,7 @@ ms.locfileid: "65592222"
   
  位于 ~\Child\Service.svc 的服务的行为如同该服务具有 serviceDebug 和 serviceMetadata 行为一样。 位于 ~\Service.svc 的服务只具有 serviceDebug 行为。 发生的情况是，名称相同的两个行为集合（此情况下为空字符串）将合并。  
   
- 您还可以通过清除行为集合\<清除 > 标签中，通过使用从集合中移除各个行为\<删除 > 标记。 例如，子服务中的以下两个配置结果只具有 serviceMetadata 行为：  
+ 还可以通过使用\<clear > 标记来清除行为集合, 并通过\<使用 remove > 标记从集合中删除各个行为。 例如，子服务中的以下两个配置结果只具有 serviceMetadata 行为：  
   
 ```xml  
 <configuration>  
@@ -260,7 +260,7 @@ ms.locfileid: "65592222"
   
  行为合并适用于配置中的终结点行为和服务行为。  
   
- 如果子行为集合包含一个已显示在父行为集合中的行为，则子行为将重写父行为。 因此，如果父行为集合具有`<serviceMetadata httpGetEnabled="False" />`和子行为集合具有`<serviceMetadata httpGetEnabled="True" />`、 子行为将重写行为集合中的父行为并且 httpGetEnabled 将为"true"。  
+ 如果子行为集合包含一个已显示在父行为集合中的行为，则子行为将重写父行为。 因此, 如果父行为集合具有`<serviceMetadata httpGetEnabled="False" />` , 而子行为集合具有`<serviceMetadata httpGetEnabled="True" />`, 则子行为将重写行为集合中的父行为并且 httpGetEnabled 将为 "true"。  
   
 ## <a name="see-also"></a>请参阅
 

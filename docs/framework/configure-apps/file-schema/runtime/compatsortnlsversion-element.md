@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 782cc82e-83f7-404a-80b7-6d3061a8b6e3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0ebc4bf703bc22b642b0950fd60471342a615a5c
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: e3a348ac8da855e458b6208c51f9c51b48da3134
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663854"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927453"
 ---
 # <a name="compatsortnlsversion-element"></a>\<CompatSortNLSVersion > 元素
 指定在执行字符串比较时，运行时应使用旧排序顺序。  
@@ -60,7 +60,7 @@ ms.locfileid: "69663854"
  由于 .NET Framework 4 中的<xref:System.Globalization.CompareInfo?displayProperty=nameWithType>类执行的字符串比较、排序和大小写操作符合 Unicode 5.1 标准, 因此<xref:System.String.Compare%28System.String%2CSystem.String%29?displayProperty=nameWithType>和<xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType>等字符串比较方法的结果可能不同于.NET Framework 的以前版本。 如果你的应用程序依赖于旧行为, 则可以通过在应用程序配置文件中包括`<CompatSortNLSVersion>`元素, 来还原 .NET Framework 3.5 及更早版本中使用的字符串比较和排序规则。  
   
 > [!IMPORTANT]
->  还原旧的字符串比较和排序规则还要求 sort00001000.dll 动态链接库在本地系统上可用。  
+> 还原旧的字符串比较和排序规则还要求 sort00001000.dll 动态链接库在本地系统上可用。  
   
  此外，通过在创建应用程序域时将字符串“NetFx40_Legacy20SortingBehavior”传递到 <xref:System.AppDomainSetup.SetCompatibilitySwitches%2A> 方法，可以在特定的应用程序域中使用旧的字符串排序和比较规则。  
   

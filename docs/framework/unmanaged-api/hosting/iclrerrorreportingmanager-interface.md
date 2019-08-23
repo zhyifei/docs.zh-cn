@@ -16,38 +16,38 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a20b79dd5eda9c431511cc49e7e3adaa9486b2aa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2a9d9cff0360e4eb27584fe0f22c1c20396ff8f0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61969821"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966248"
 ---
 # <a name="iclrerrorreportingmanager-interface"></a>ICLRErrorReportingManager 接口
-提供允许主机配置为错误报告的自定义的堆栈转储的方法。  
+提供允许主机配置自定义堆栈转储以用于错误报告的方法。  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|[BeginCustomDump 方法](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-begincustomdump-method.md)|指定的错误报告的自定义的堆栈转储的配置。|  
-|[EndCustomDump 方法](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-endcustomdump-method.md)|清除以前通过调用所设置的自定义的堆栈转储配置`BeginCustomDump`。|  
+|[BeginCustomDump 方法](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-begincustomdump-method.md)|指定用于错误报告的自定义堆栈转储配置。|  
+|[EndCustomDump 方法](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-endcustomdump-method.md)|清除由先前对的调用`BeginCustomDump`设置的自定义堆栈转储配置。|  
 |[GetBucketParametersForCurrentException 方法](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-getbucketparametersforcurrentexception-method.md)|获取调用线程上的当前异常的 Watson 存储桶。|  
   
 ## <a name="remarks"></a>备注  
- `BeginCustomDump`方法设置自定义的堆栈转储配置。 `EndCustomDump`方法清除自定义的堆栈转储配置，并释放任何关联的状态。 自定义的转储完成后，应调用它。  
+ `BeginCustomDump`方法设置自定义堆栈转储配置。 `EndCustomDump`方法清除自定义堆栈转储配置并释放任何关联的状态。 应在自定义转储完成后调用它。  
   
 > [!IMPORTANT]
->  调用失败`EndCustomDump`导致内存泄漏。  
+> 调用`EndCustomDump`失败会导致内存泄露。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
   
- **库：** 包含为 MSCorEE.dll 中的资源  
+ **类库**作为资源包括在 Mscoree.dll 中  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

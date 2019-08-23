@@ -2,15 +2,15 @@
 title: <add> 的 <baseAddressPrefixFilter>
 ms.date: 03/30/2017
 ms.assetid: b226bede-8459-4de9-b2ac-3d39604ce2bc
-ms.openlocfilehash: a58a29e44fff3d653d04da271e3b240f2969611f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e29db0b2412c9ccbfe83d000077e8d85332955ea
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673731"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69926863"
 ---
 # <a name="add-of-baseaddressprefixfilter"></a>\<add> of \<baseAddressPrefixFilter>
-表示一个配置元素，指定传递筛选器，它提供一种机制，托管在 IIS 中的 Windows Communication Foundation (WCF) 应用程序时可选取适当的 Internet 信息服务 (IIS) 绑定。  
+表示一个配置元素, 该元素指定传递筛选器, 该筛选器提供一种机制, 用于在 IIS 中承载 Windows Communication Foundation (WCF) 应用程序时选择适当的 Internet Information Services (IIS) 绑定。  
   
  \<system.ServiceModel>  
 \<ServiceHostingEnvironment>  
@@ -43,14 +43,14 @@ ms.locfileid: "61673731"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<baseAddressPrefixFilters>](../../../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md)|指定传递筛选器提供了一种机制来承载在 IIS 中的 Windows Communication Foundation (WCF) 应用程序时选择适当的 IIS 绑定的配置元素的集合。|  
+|[\<baseAddressPrefixFilters>](baseaddressprefixfilters.md)|指定传递筛选器的配置元素的集合, 这些筛选器提供一种机制, 用于在 IIS 中承载 Windows Communication Foundation (WCF) 应用程序时选取适当的 IIS 绑定。|  
   
 ## <a name="remarks"></a>备注  
  前缀筛选器为共享的宿主提供程序提供一种指定服务要使用的 URI 的方法。 它使得共享主机可以在同一站点上通过同一方案的不同基址承载多个应用程序。  
   
  IIS 网站是包含虚拟目录的虚拟应用程序的容器。 可通过一个或多个 IIS 绑定访问站点上的应用程序。 IIS 绑定提供两条信息：绑定协议和绑定信息。 绑定协议（例如 HTTP）定义发生通信所基于的方案，而绑定信息（例如 IP 地址、端口、主机头）包含用于访问站点的数据。  
   
- IIS 支持为每个站点指定多个 IIS 绑定，这会导致每个方案有多个基址。 由于一个站点下承载的 WCF 服务允许每个方案只能有一个基址的绑定，可以使用前缀筛选器功能选取所需的托管服务的基址。 根据可选前缀列表筛选器筛选 IIS 提供的传入基址。  
+ IIS 支持为每个站点指定多个 IIS 绑定，这会导致每个方案有多个基址。 因为在站点下承载的 WCF 服务只允许绑定到每个方案的一个基址, 所以您可以使用前缀筛选器功能选取所需的承载服务的基址。 根据可选前缀列表筛选器筛选 IIS 提供的传入基址。  
   
  例如，您的站点可包含以下基址。  
   
@@ -77,11 +77,11 @@ http://test2.fabrikam.com/Service.svc
  默认情况下，未指定前缀时，将传递所有地址。 而指定前缀后，将只允许传递该方案的匹配基址。  
   
 > [!NOTE]
->  筛选器不支持任何通配符。 此外，IIS 提供的基址可能有绑定到在 `baseAddressPrefixFilters` 列表中未列出的其他方案的地址。 不会筛选出这些地址。  
+> 筛选器不支持任何通配符。 此外，IIS 提供的基址可能有绑定到在 `baseAddressPrefixFilters` 列表中未列出的其他方案的地址。 不会筛选出这些地址。  
   
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.ServiceModel.Configuration.BaseAddressPrefixFilterElement>
 - <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>
 - <xref:System.ServiceModel.ServiceHostingEnvironment>
-- [承载](../../../../../docs/framework/wcf/feature-details/hosting.md)
+- [承载](../../../wcf/feature-details/hosting.md)

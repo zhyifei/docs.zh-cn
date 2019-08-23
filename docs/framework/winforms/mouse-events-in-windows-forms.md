@@ -15,16 +15,16 @@ helpviewer_keywords:
 - mouse [Windows Forms], events
 - MouseUp event
 ms.assetid: 8cf0070d-793b-4876-b09e-d20d28280fab
-ms.openlocfilehash: 818364ceddb03df51ed656c8ff7b69fd433ac86a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 181d01f6e688b94876f77155bf598aba129e9fbf
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64750889"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69949913"
 ---
 # <a name="mouse-events-in-windows-forms"></a>Windows 窗体中的鼠标事件
 
-当处理鼠标输入时，通常想要知道鼠标指针的位置和鼠标按钮的状态。 本主题详细介绍如何从鼠标事件获取此信息，并说明在 Windows 窗体控件中引发的鼠标单击事件的顺序。 列表和所有鼠标事件的说明，请参阅[鼠标输入工作原理在 Windows 窗体中](how-mouse-input-works-in-windows-forms.md)。  另请参阅[事件处理程序概述 （Windows 窗体）](event-handlers-overview-windows-forms.md)并[事件概述 （Windows 窗体）](events-overview-windows-forms.md)。
+当处理鼠标输入时，通常想要知道鼠标指针的位置和鼠标按钮的状态。 本主题详细介绍如何从鼠标事件获取此信息，并说明在 Windows 窗体控件中引发的鼠标单击事件的顺序。 有关所有鼠标事件的列表和说明, 请参阅[鼠标输入在 Windows 窗体中的工作原理](how-mouse-input-works-in-windows-forms.md)。  另请参阅[事件处理程序概述 (Windows 窗体)](event-handlers-overview-windows-forms.md)和[事件概述 (Windows 窗体)](events-overview-windows-forms.md)。
 
 ## <a name="mouse-information"></a>鼠标信息
 
@@ -66,7 +66,7 @@ ms.locfileid: "64750889"
 
 8. <xref:System.Windows.Forms.Control.MouseUp> 事件。
 
-有关代码示例演示顺序的鼠标单击事件，请参阅[如何：事件在 Windows 窗体控件中处理用户输入](how-to-handle-user-input-events-in-windows-forms-controls.md)。
+有关演示鼠标单击事件顺序的代码示例, 请参阅[如何:在 Windows 窗体控件](how-to-handle-user-input-events-in-windows-forms-controls.md)中处理用户输入事件。
 
 ### <a name="individual-controls"></a>个别控件
 
@@ -79,11 +79,11 @@ ms.locfileid: "64750889"
 
   - 左键单击：<xref:System.Windows.Forms.Control.Click>、<xref:System.Windows.Forms.Control.MouseClick>
 
-  - 右键单击：引发任何单击事件
+  - 右键单击:未引发任何 click 事件
 
   - 左键双击：<xref:System.Windows.Forms.Control.Click>、<xref:System.Windows.Forms.Control.MouseClick>；<xref:System.Windows.Forms.Control.Click>、<xref:System.Windows.Forms.Control.MouseClick>
 
-  - 右键双击：引发任何单击事件
+  - 右键双击:未引发任何 click 事件
 
 - <xref:System.Windows.Forms.TextBox>、<xref:System.Windows.Forms.RichTextBox>、<xref:System.Windows.Forms.ListBox>、<xref:System.Windows.Forms.MaskedTextBox> 和 <xref:System.Windows.Forms.CheckedListBox> 控件
 
@@ -92,11 +92,11 @@ ms.locfileid: "64750889"
 
   - 左键单击：<xref:System.Windows.Forms.Control.Click>、<xref:System.Windows.Forms.Control.MouseClick>
 
-  - 右键单击：引发任何单击事件
+  - 右键单击:未引发任何 click 事件
 
   - 左键双击：<xref:System.Windows.Forms.Control.Click>、<xref:System.Windows.Forms.Control.MouseClick>、<xref:System.Windows.Forms.Control.DoubleClick>、<xref:System.Windows.Forms.Control.MouseDoubleClick>
 
-  - 右键双击：引发任何单击事件
+  - 右键双击:未引发任何 click 事件
 
 - <xref:System.Windows.Forms.ListView> 控件
 
@@ -145,7 +145,7 @@ ms.locfileid: "64750889"
 8. 引发 <xref:System.Windows.Forms.Control.MouseUp> 事件。
 
     > [!NOTE]
-    >  如果用户在鼠标按钮处于按下状态时将指针移出切换控件（例如在鼠标按下时将鼠标从 <xref:System.Windows.Forms.Button> 控件移出），那么切换控件将以引发状态进行绘制，并且只发生 <xref:System.Windows.Forms.Control.MouseUp> 事件。 在这种情况下，将不会发生 <xref:System.Windows.Forms.Control.Click> 或 <xref:System.Windows.Forms.Control.MouseClick> 事件。
+    > 如果用户在鼠标按钮处于按下状态时将指针移出切换控件（例如在鼠标按下时将鼠标从 <xref:System.Windows.Forms.Button> 控件移出），那么切换控件将以引发状态进行绘制，并且只发生 <xref:System.Windows.Forms.Control.MouseUp> 事件。 在这种情况下，将不会发生 <xref:System.Windows.Forms.Control.Click> 或 <xref:System.Windows.Forms.Control.MouseClick> 事件。
 
 ## <a name="see-also"></a>请参阅
 

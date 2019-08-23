@@ -1,21 +1,21 @@
 ---
-title: <add> WCF 的
+title: <add>WCF 的
 ms.date: 03/30/2017
 ms.assetid: c196f6d7-77f6-4266-973c-305b2b4dd8a2
-ms.openlocfilehash: e9ece03ec9376e6a428ac6a82a3f26020f64d744
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fa94f15a296aa03640bf0a262eb45ea1664944cd
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673837"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69926619"
 ---
-# <a name="add-of-wcf"></a>\<添加 > 的 WCF
+# <a name="add-of-wcf"></a>\<添加 WCF >
 配置一个跟踪参与者，它侦听直接从运行时发出的跟踪记录，并按照配置跟踪参与者的任何方式处理这些记录。 这包括写入特定输出（例如，文件、控制台、ETW）、处理/聚合记录或可能需要的任何其他组合。  
   
- 工作流跟踪和跟踪参与者的详细信息，请参阅[工作流跟踪](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)并[跟踪参与者](../../../../../docs/framework/windows-workflow-foundation/tracking-participants.md)。  
+ 有关工作流跟踪和跟踪参与者的详细信息, 请参阅[工作流跟踪和](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)跟踪和[跟踪参与者](../../../windows-workflow-foundation/tracking-participants.md)。  
   
  \<system.serviceModel>  
-\<tracking>  
+\<跟踪 >  
 \<participants>  
 \<add>  
   
@@ -38,9 +38,9 @@ ms.locfileid: "61673837"
   
 |元素|描述|  
 |-------------|-----------------|  
-|name|一个字符串，指定跟踪参与者的名称。|  
+|NAME|一个字符串，指定跟踪参与者的名称。|  
 |profileName|一个字符串，指定跟踪配置文件的名称，该跟踪配置文件定义跟踪参与者已订阅的跟踪记录。|  
-|类型|一个字符串，指定跟踪参与者的类型。|  
+|type|一个字符串，指定跟踪参与者的类型。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  
@@ -49,7 +49,7 @@ ms.locfileid: "61673837"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<participants>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/participants.md)|跟踪参与者的列表|  
+|[\<participants>](../windows-workflow-foundation/participants.md)|跟踪参与者的列表|  
   
 ## <a name="remarks"></a>备注  
  跟踪参与者用于获取从工作流发出的跟踪数据并将其存储在不同的媒体中。 同样，也可以在跟踪参与者中执行对跟踪记录的任何后续处理。  
@@ -93,5 +93,5 @@ ms.locfileid: "61673837"
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.TrackingSection>
 - <xref:System.ServiceModel.Activities.Description.EtwTrackingBehavior>
 - <xref:System.ServiceModel.Activities.Configuration.EtwTrackingBehaviorElement>
-- [工作流跟踪](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [跟踪参与者](../../../../../docs/framework/windows-workflow-foundation/tracking-participants.md)
+- [工作流跟踪](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [跟踪参与者](../../../windows-workflow-foundation/tracking-participants.md)

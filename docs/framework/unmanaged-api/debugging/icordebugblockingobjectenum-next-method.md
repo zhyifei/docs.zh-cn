@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8fd82418da26ab0cd32b007b4613d588dfa695eb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1e94e4da0eea06ce9cc0110002b1def9e4dd4989
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745302"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939147"
 ---
 # <a name="icordebugblockingobjectenumnext-method"></a>ICorDebugBlockingObjectEnum::Next 方法
-获取指定的数目的[CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md)从当前位置开始枚举中的对象。  
+从当前位置开始, 获取枚举中指定的[CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md)对象数。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,13 +38,13 @@ HRESULT Next([in] ULONG  celt,
   
 ## <a name="parameters"></a>参数  
  `celt`  
- [in]要检索的对象数。  
+ 中要检索的对象的数目。  
   
  `values`  
- [out]指向的指针的数组[CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md)对象。  
+ 弄指向[CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md)对象的指针的数组。  
   
  `pceltFetched`  
- [out]指向已检索到的对象数的指针。  
+ 弄一个指针, 指向已检索到的对象的数目。  
   
 ## <a name="return-value"></a>返回值  
  此方法会返回以下特定的 HRESULT。  
@@ -57,17 +57,17 @@ HRESULT Next([in] ULONG  celt,
 ## <a name="remarks"></a>备注  
  此方法的功能类似于典型的 COM 枚举器。  
   
- 输入的数组值必须至少为大小的`celt`。 数组中将填充是下一步`celt`值的枚举中或其余的所有值，如果少于`celt`保持状态。 此方法返回时，`pceltFetched`检索到的值数目中将填充。 如果`values`包含无效的指针或指向的缓冲区的最小`celt`，或者如果`pceltFetched`是无效的指针，则结果不可确定。  
+ 输入数组值必须至少为大小`celt`。 数组将用枚举中的下一个`celt`值填充, 如果小于`celt`保留, 则用所有剩余值填充。 此方法返回时, `pceltFetched`将用检索到的值的数目进行填充。 如果`values`包含无效指针或指向`celt`小于的缓冲区, 或者如果`pceltFetched`是无效指针, 则结果是不确定的。  
   
 > [!NOTE]
->  尽管[CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md)结构不需要释放，在其内部的"ICorDebugValue"界面确实需要释放。  
+> 尽管不需要释放[CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md)结构, 但它内的 "ICorDebugValue" 接口需要释放。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头：** Cordebug.idl, Cordebug.idl  
   
- **库：** CorGuids.lib  
+ **类库**CorGuids.lib  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

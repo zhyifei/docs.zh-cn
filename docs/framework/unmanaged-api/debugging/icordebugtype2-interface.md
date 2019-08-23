@@ -16,30 +16,30 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9e953fa129308527f63df8dd8c5061252f8be57b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c2f2c1e4c95c61eab4c9da6103d4ac479b4bbdb4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67772442"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69936058"
 ---
 # <a name="icordebugtype2-interface"></a>ICorDebugType2 接口
-扩展 ICorDebugType 接口可检索的基类型或复杂 （用户定义的） 类型的类型标识符。  
+扩展 ICorDebugType 接口以检索基类型或复杂 (用户定义) 类型的类型标识符。  
   
 ## <a name="methods"></a>方法  
   
 |方法||  
 |------------|-|  
-|[GetTypeID 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugtype2-gettypeid-method.md)|获取[COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md)此类型。|  
+|[GetTypeID 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugtype2-gettypeid-method.md)|获取此类型的[COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) 。|  
   
 ## <a name="remarks"></a>备注  
  此接口是 ICorDebugType 接口的逻辑扩展。  
   
 > [!NOTE]
->  此接口不支持跨计算机或跨进程远程调用。  
+> 此接口不支持跨计算机或跨进程远程调用。  
   
 ## <a name="example"></a>示例  
- 下面的代码段演示如何使用[ICorDebugType2::GetTypeID](../../../../docs/framework/unmanaged-api/debugging/icordebugtype2-gettypeid-method.md)方法。  
+ 下面的代码段演示了如何使用[ICorDebugType2:: GetTypeID](../../../../docs/framework/unmanaged-api/debugging/icordebugtype2-gettypeid-method.md)方法。  
   
 ```cpp  
 // (error checking omitted for brevity)  
@@ -55,11 +55,11 @@ pType2->GetTypeID(&id);
 ```  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头：** Cordebug.idl, Cordebug.idl  
   
- **库：** CorGuids.lib  
+ **类库**CorGuids.lib  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   

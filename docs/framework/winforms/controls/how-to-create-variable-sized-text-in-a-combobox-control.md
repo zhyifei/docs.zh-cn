@@ -10,15 +10,15 @@ helpviewer_keywords:
 - ComboBox control [Windows Forms], examples [C#]
 - ComboBox control [Windows Forms], drawing custom text
 ms.assetid: ce39b9ea-e626-49fe-bd5a-f567f6d157df
-ms.openlocfilehash: 1fa9b04063d8f606f674cc54190dad5a669adbeb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7c0dc40f6cac0af1f88e72089865caa3a17fcf2a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64666423"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69914749"
 ---
 # <a name="how-to-create-variable-sized-text-in-a-combobox-control"></a>如何：在 ComboBox 控件中创建大小可变的文本
-此示例演示自定义绘图中的文本<xref:System.Windows.Forms.ComboBox>控件。 在项符合特定条件时，它是绘制中的较大图标，打开红色。  
+此示例演示如何自定义<xref:System.Windows.Forms.ComboBox>控件中的文本绘制。 当某个项满足某个条件时, 它将以较大的字体绘制, 并处于红色状态。  
   
 ## <a name="example"></a>示例  
   
@@ -60,10 +60,10 @@ End Sub
   
 - Windows 窗体。  
   
-- 一个<xref:System.Windows.Forms.ComboBox>名为控件`ListBox1`与中的三个项<xref:System.Windows.Forms.ComboBox.Items%2A>属性。 在此示例中，三个项名为`"One", Two", and Three"`。 <xref:System.Windows.Forms.ComboBox.DrawMode%2A>的属性`ComboBox1`必须设置为<xref:System.Windows.Forms.DrawMode.OwnerDrawVariable>。  
+- 一个<xref:System.Windows.Forms.ComboBox>名为`ListBox1`的控件<xref:System.Windows.Forms.ComboBox.Items%2A> , 其属性中包含三项。 在此示例中, 三个项的`"One", Two", and Three"`名称为。 <xref:System.Windows.Forms.DrawMode.OwnerDrawVariable>的<xref:System.Windows.Forms.ComboBox.DrawMode%2A> 属性`ComboBox1`必须设置为。  
   
     > [!NOTE]
-    >  此方法也是适用于<xref:System.Windows.Forms.ListBox>控件，可以替换<xref:System.Windows.Forms.ListBox>为<xref:System.Windows.Forms.ComboBox>。  
+    > 此方法也适用于<xref:System.Windows.Forms.ListBox>控件, 可以将<xref:System.Windows.Forms.ListBox>替换为<xref:System.Windows.Forms.ComboBox>。  
   
 - 对 <xref:System.Windows.Forms?displayProperty=nameWithType> 和 <xref:System.Drawing?displayProperty=nameWithType> 命名空间的引用。  
   

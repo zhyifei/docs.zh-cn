@@ -29,12 +29,12 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: 2c4e7213ddcffdb026d3d6e6b339bfc91b3c27c6
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 3ac7d79660830601ca69951e56763fc923692b0e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400785"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69958791"
 ---
 # <a name="xaml-syntax-in-detail"></a>XAML 语法详述
 本主题定义用于描述 XAML 语法元素的术语。 在本文档的其余部分中经常使用这些术语, 这两个术语分别适用于 WPF 文档, 适用于使用 XAML 的其他框架或由 system.exception 级别的 XAML 语言支持启用的基本 XAML 概念。 本主题概述了在主题[XAML 概述 (WPF)](xaml-overview-wpf.md)中引入的基本术语。  
@@ -86,7 +86,7 @@ ms.locfileid: "68400785"
  特性语法是 XAML 标记语法, 它通过在现有对象元素上声明特性来设置属性的值。 特性名称必须与支持相关对象元素的类的属性的 CLR 成员名称匹配。 特性名称后跟赋值运算符 (=)。 属性值必须是括在引号内的字符串。  
   
 > [!NOTE]
->  可以使用交替引号将文本引号置于特性中。 例如, 可以将单引号用作一种声明其中包含双引号字符的字符串。 无论使用单引号还是双引号, 都应使用匹配对来打开和关闭属性值字符串。 还提供了一些转义序列或其他技术, 可用于解决任何特定 XAML 语法施加的字符限制。 请参阅[XML 字符实体和 XAML](../../xaml-services/xml-character-entities-and-xaml.md)。  
+> 可以使用交替引号将文本引号置于特性中。 例如, 可以将单引号用作一种声明其中包含双引号字符的字符串。 无论使用单引号还是双引号, 都应使用匹配对来打开和关闭属性值字符串。 还提供了一些转义序列或其他技术, 可用于解决任何特定 XAML 语法施加的字符限制。 请参阅[XML 字符实体和 XAML](../../xaml-services/xml-character-entities-and-xaml.md)。  
   
  为了通过属性语法进行设置, 属性必须是公共的, 并且必须是可写的。 后备类型系统中的属性的值必须是值类型, 或者必须是 XAML 处理器在访问相关支持类型时可以实例化或引用的引用类型。  
   
@@ -169,7 +169,7 @@ ms.locfileid: "68400785"
  隐式集合元素在逻辑树表示形式中创建成员, 即使它不在标记中显示为元素也是如此。 通常, 父类型的构造函数对作为其属性之一的集合执行实例化, 初始空集合将成为对象树的一部分。  
   
 > [!NOTE]
->  集合检测不支持泛型列表和<xref:System.Collections.Generic.IList%601>字典<xref:System.Collections.Generic.IDictionary%602>接口 (和)。 但是<xref:System.Collections.Generic.List%601> , 可以将类用作基类, 因为它直接实现<xref:System.Collections.IList>或<xref:System.Collections.Generic.Dictionary%602>作为基类, 因为它直接实现<xref:System.Collections.IDictionary> 。  
+> 集合检测不支持泛型列表和<xref:System.Collections.Generic.IList%601>字典<xref:System.Collections.Generic.IDictionary%602>接口 (和)。 但是<xref:System.Collections.Generic.List%601> , 可以将类用作基类, 因为它直接实现<xref:System.Collections.IList>或<xref:System.Collections.Generic.Dictionary%602>作为基类, 因为它直接实现<xref:System.Collections.IDictionary> 。  
   
  在集合类型的 .NET 参考页中, 在 XAML 语法节中, 有意省略集合的 object 元素的这一语法被标记为隐式集合语法。  
   
@@ -270,7 +270,7 @@ ms.locfileid: "68400785"
   
 <a name="attached_events"></a>   
 ## <a name="attached-events"></a>附加事件  
- 附加事件是 XAML 中引入的另一种编程概念, 其中事件可以由特定类型定义, 但处理程序可以附加到任何对象元素上。 在 WOF 实现中, 定义附加事件的类型通常为定义服务的静态类型, 有时这些附加事件由公开服务的类型中的路由事件别名公开。 附加事件的处理程序通过特性语法指定。 与附加事件一样, 为附加事件扩展特性语法以允许*typeName*。*事件名称用法,* 其中*typeName*是为附加事件`Add`基础`Remove`结构提供和事件处理程序访问器的类 *, 而事件*名称是事件名称。  
+ 附加事件是 XAML 中引入的另一种编程概念, 其中事件可以由特定类型定义, 但处理程序可以附加到任何对象元素上。 在 WOF 实现中, 定义附加事件的类型通常为定义服务的静态类型, 有时这些附加事件由公开服务的类型中的路由事件别名公开。 附加事件的处理程序通过特性语法指定。 与附加事件一样, 为附加事件扩展特性语法以允许*typeName*。事件名称用法, 其中*typeName*是为附加事件`Add`基础`Remove`结构提供和事件处理程序访问器的类 , 而事件名称是事件名称。  
   
 <a name="anatomy_of_a_xaml_page_root_element"></a>   
 ## <a name="anatomy-of-a-xaml-root-element"></a>XAML 根元素的解析  

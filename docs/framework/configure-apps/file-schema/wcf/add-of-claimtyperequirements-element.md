@@ -1,21 +1,21 @@
 ---
-title: <add> <claimTypeRequirements>元素
+title: <add>of <claimTypeRequirements>元素
 ms.date: 03/30/2017
 ms.assetid: 3234cd45-1478-468e-8b19-5c50815c4786
-ms.openlocfilehash: 47eb9f95fd024b7df24a16781b3d89fe6deb0b8c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 249227c20dd1610cba088017ae39e84d6cb683d3
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701146"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920206"
 ---
-# <a name="add-of-claimtyperequirements-element"></a>\<添加 > 的\<claimTypeRequirements > 元素
+# <a name="add-of-claimtyperequirements-element"></a>\<添加 claimTypeRequirements > \<元素的 >
 指定希望出现在联合凭据中的必选和可选的声明类型。 例如，服务规定有关传入凭据的要求，传入凭据必须具有某组声明类型。  
   
  \<system.ServiceModel>  
 \<bindings>  
 \<wsFederatedBinding>  
-\<binding>  
+\<绑定 >  
 \<安全 >  
 \<message>  
 \<claimTypeRequirements>  
@@ -46,7 +46,7 @@ ms.locfileid: "61701146"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<claimTypeRequirements>](../../../../../docs/framework/configure-apps/file-schema/wcf/claimtyperequirements-for-message.md)|指定所需声明类型的集合。 每个元素的类型都为 <xref:System.ServiceModel.Configuration.ClaimTypeElement>。<br /><br /> 在联合方案中，服务规定有关传入凭据的要求。 例如，传入凭据必须具有某组声明类型。 此集合中的每个元素都指定希望出现在联合凭据中的必选和可选的声明类型。|  
+|[\<claimTypeRequirements>](claimtyperequirements-for-message.md)|指定所需声明类型的集合。 每个元素的类型都为 <xref:System.ServiceModel.Configuration.ClaimTypeElement>。<br /><br /> 在联合方案中，服务规定有关传入凭据的要求。 例如，传入凭据必须具有某组声明类型。 此集合中的每个元素都指定希望出现在联合凭据中的必选和可选的声明类型。|  
   
 ## <a name="remarks"></a>备注  
  在联合方案中，服务规定有关传入凭据的要求。 例如，传入凭据必须具有某组声明类型。 此要求出现在安全策略中。 当客户端请求来自联合服务（例如 CardSpace）的凭据时，它会将需求放置在令牌请求 (RequestSecurityToken) 中，以便联合服务能够相应地颁发符合需求的凭据。  

@@ -2,12 +2,12 @@
 title: <filterTables>
 ms.date: 03/30/2017
 ms.assetid: 41f1ac35-f559-473a-b2c3-8cc83a6a3831
-ms.openlocfilehash: c49c7cf3a196595556c2bf1b4ed4365bfe1e4cbf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b0a344aa69085d50087eefc746236bc8ceacadaa
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704240"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69918858"
 ---
 # <a name="filtertables"></a>\<filterTables>
 表示一个用于定义路由表的配置节，这些路由表包含路由筛选器与在筛选器匹配时消息要发送到的目标终结点之间的映射。  
@@ -43,13 +43,13 @@ ms.locfileid: "61704240"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<filters>](../../../../../docs/framework/configure-apps/file-schema/wcf/filters-of-routing.md)|一个路由表，包含路由筛选器与在筛选器匹配时消息要发送到的目标终结点之间的映射。|  
+|[\<filters>](filters-of-routing.md)|一个路由表，包含路由筛选器与在筛选器匹配时消息要发送到的目标终结点之间的映射。|  
   
 ### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<routing>](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|一个包含路由筛选器和路由表的配置节。|  
+|[\<routing>](routing.md)|一个包含路由筛选器和路由表的配置节。|  
   
 ## <a name="see-also"></a>请参阅
 

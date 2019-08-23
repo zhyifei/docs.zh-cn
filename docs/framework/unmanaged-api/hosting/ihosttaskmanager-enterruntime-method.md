@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2a01779e6203ddfea32e72838b7e02996fd868c2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: aa756c98dc082774f7a8a6e050209525420b359f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67749611"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69913730"
 ---
 # <a name="ihosttaskmanagerenterruntime-method"></a>IHostTaskManager::EnterRuntime 方法
-通知主机，对非托管方法的调用以便为平台调用方法，将执行控制返回到公共语言运行时 (CLR)。  
+通知宿主对非托管方法的调用 (如平台调用方法) 正在将执行控制返回到公共语言运行时 (CLR)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,26 +37,26 @@ HRESULT EnterRuntime ();
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|`EnterRuntime` 已成功返回。|  
-|HOST_E_CLRNOTAVAILABLE|CLR 尚未加载到进程中，或处于不能运行托管的代码或已成功处理调用的状态。|  
-|HOST_E_TIMEOUT|呼叫已超时。|  
+|S_OK|`EnterRuntime`已成功返回。|  
+|HOST_E_CLRNOTAVAILABLE|CLR 未加载到进程中, 或 CLR 处于无法运行托管代码或成功处理调用的状态。|  
+|HOST_E_TIMEOUT|调用超时。|  
 |HOST_E_NOT_OWNER|调用方不拥有该锁。|  
-|HOST_E_ABANDONED|事件已取消时被阻塞的线程或纤程正在等待它。|  
-|E_FAIL|发生未知的灾难性故障。 如果某方法返回 E_FAIL，CLR 不再在进程内可用。 对托管方法的后续调用返回 HOST_E_CLRNOTAVAILABLE。|  
-|E_OUTOFMEMORY|没有足够的内存是可用于完成请求的分配。|  
+|HOST_E_ABANDONED|已阻止的线程或纤程正在等待某个事件时, 该事件被取消。|  
+|E_FAIL|发生未知的灾难性故障。 当方法返回 E_FAIL 时, CLR 在该进程内将不再可用。 对宿主方法的后续调用会返回 HOST_E_CLRNOTAVAILABLE。|  
+|E_OUTOFMEMORY|没有足够的内存可用来完成请求的分配。|  
   
 ## <a name="remarks"></a>备注  
- `EnterRuntime` 调用以通知主机的非托管的函数，为其以前通过调用[LeaveRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-leaveruntime-method.md)方法进行、 已完成执行，以及将执行控制返回到运行时。  
+ `EnterRuntime`调用以通知宿主某个非托管函数 (对该函数进行了之前对[LeaveRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-leaveruntime-method.md)方法的调用) 已完成执行, 并将执行控制返回到运行时。  
   
 > [!NOTE]
->  [ReverseEnterRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseenterruntime-method.md)调用以通知主机的非托管的函数，为其以前通过调用`LeaveRuntime`进行，正在调用非托管代码。  
+> 调用[ReverseEnterRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseenterruntime-method.md)来通知主机, 对其进行之前调用`LeaveRuntime`的非托管函数正在调用托管代码。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
   
- **库：** 包含为 MSCorEE.dll 中的资源  
+ **类库**作为资源包括在 Mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

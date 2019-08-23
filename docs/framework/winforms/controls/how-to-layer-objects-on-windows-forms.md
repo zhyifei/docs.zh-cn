@@ -12,12 +12,12 @@ helpviewer_keywords:
 - controls [Windows Forms], positioning
 - z-order
 ms.assetid: 1acc4281-2976-4715-86f4-bda68134baaf
-ms.openlocfilehash: 80973e16445079876e01c89f20b5ecbdca602eb8
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
-ms.translationtype: MT
+ms.openlocfilehash: 818f36633575b248d92da475c462cc0f211fe969
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039724"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966541"
 ---
 # <a name="how-to-layer-objects-on-windows-forms"></a>如何：对 Windows 窗体上的对象分层
 当你创建复杂的用户界面或使用多文档界面 (MDI) 窗体时, 通常需要将控件和子窗体分层以创建更复杂的用户界面 (UI)。 若要在组的上下文中移动和跟踪控件和窗口, 请处理其 z 顺序。 *Z 顺序*是窗体上的控件沿窗体的 Z 轴 (深度) 的可视化分层。 Z 顺序顶部的窗口与所有其他窗口重叠。 所有其他窗口都与 z 顺序底部的窗口重叠。
@@ -47,7 +47,7 @@ ms.locfileid: "69039724"
     ```
 
 > [!NOTE]
->  Windows 窗体支持*控件包含*。 控件包含涉及到在包含控件中放置许多控件, 如<xref:System.Windows.Forms.RadioButton> <xref:System.Windows.Forms.GroupBox>控件中的多个控件。 然后, 可以将控件分层到包含控件中。 移动组框也将移动控件, 因为这些控件包含在其中。
+> Windows 窗体支持*控件包含*。 控件包含涉及到在包含控件中放置许多控件, 如<xref:System.Windows.Forms.RadioButton> <xref:System.Windows.Forms.GroupBox>控件中的多个控件。 然后, 可以将控件分层到包含控件中。 移动组框也将移动控件, 因为这些控件包含在其中。
 
 ## <a name="see-also"></a>请参阅
 

@@ -1,25 +1,25 @@
 ---
-title: <activityScheduledQuery> WCF 的
+title: <activityScheduledQuery>WCF 的
 ms.date: 03/30/2017
 ms.assetid: 25f6eee1-3d98-4c39-b517-c0813f03f106
-ms.openlocfilehash: 5087d56092296f8c68b719ec0945993adeb3de0a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7787ada68210ff832ff3fd1ec93c9d346e4d2eaa
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704708"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69926931"
 ---
-# <a name="activityscheduledquery-of-wcf"></a>\<activityScheduledQuery > 的 WCF
+# <a name="activityscheduledquery-of-wcf"></a>\<WCF 的 y >
 
 表示一个查询集合，这些查询用于跟踪安排给父活动来执行的活动。 跟踪参与者需要用此查询来订阅活动安排记录。  
   
-有关跟踪配置文件查询的详细信息，请参阅[跟踪配置文件](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
+有关跟踪配置文件查询的详细信息, 请参阅[跟踪配置文件](../../../windows-workflow-foundation/tracking-profiles.md)  
   
 \<system.serviceModel>  
-\<tracking>  
+\<跟踪 >  
 \<配置文件 >  
 \<trackingProfile>  
-\<workflow>  
+\<工作流 >  
 \<activityScheduledQueries>  
 \<activityScheduledQuery>  
   
@@ -59,11 +59,11 @@ ms.locfileid: "61704708"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<activityScheduledQueries>](activityscheduledqueries-of-wcf.md)|用于跟踪父活动的活动计划执行的查询的集合。|  
+|[\<activityScheduledQueries>](activityscheduledqueries-of-wcf.md)|查询的集合, 这些查询用于跟踪计划的父活动执行的活动。|  
   
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.ActivityScheduledQueryElement>
 - <xref:System.Activities.Tracking.ActivityScheduledQuery>
-- [工作流跟踪](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [跟踪配置文件](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+- [工作流跟踪](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [跟踪配置文件](../../../windows-workflow-foundation/tracking-profiles.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - controls [Windows Forms], child
 - child controls [Windows Forms], anchoring and docking
 ms.assetid: a2bcdfca-9b63-45e6-9c0e-3411015cba98
-ms.openlocfilehash: f67733b89d2bde652449e2338362868fdb84bcf3
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 9a00fcd53211dd126c0e9203d6d577959b971e70
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592948"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922911"
 ---
 # <a name="how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control"></a>如何：在 FlowLayoutPanel 控件中锚定和停靠子控件
 <xref:System.Windows.Forms.FlowLayoutPanel> 控件支持其子控件中的 <xref:System.Windows.Forms.Control.Anchor%2A> 和 <xref:System.Windows.Forms.Control.Dock%2A> 属性。  
@@ -21,16 +21,16 @@ ms.locfileid: "65592948"
   
 1. 在窗体上创建一个 <xref:System.Windows.Forms.FlowLayoutPanel> 控件。  
   
-2. 设置<xref:System.Windows.Forms.Control.Width%2A>的<xref:System.Windows.Forms.FlowLayoutPanel>控制对**300**，并设置其<xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A>到<xref:System.Windows.Forms.FlowDirection.TopDown>。  
+2. <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> <xref:System.Windows.Forms.FlowDirection.TopDown>将控件的设置为 300, 并将其设置为。 <xref:System.Windows.Forms.FlowLayoutPanel> <xref:System.Windows.Forms.Control.Width%2A>  
   
 3. 创建两个 <xref:System.Windows.Forms.Button> 控件，并将它们放入 <xref:System.Windows.Forms.FlowLayoutPanel> 控件中。  
   
-4. 设置<xref:System.Windows.Forms.Control.Width%2A>到第一个按钮**200**。  
+4. 将第一个按钮的设置为**200。** <xref:System.Windows.Forms.Control.Width%2A>  
   
 5. 将第二个按钮的 <xref:System.Windows.Forms.Control.Dock%2A> 属性设置为 <xref:System.Windows.Forms.DockStyle.Fill>。  
   
     > [!NOTE]
-    >  第二个按钮采用与第一个按钮相同的宽度。 它不在 <xref:System.Windows.Forms.FlowLayoutPanel> 控件的宽度范围内拉伸。  
+    > 第二个按钮采用与第一个按钮相同的宽度。 它不在 <xref:System.Windows.Forms.FlowLayoutPanel> 控件的宽度范围内拉伸。  
   
 6. 将第二个按钮的 <xref:System.Windows.Forms.Control.Dock%2A> 属性设置为 `None`。 这将导致该按钮采用其原始的宽度。  
   
