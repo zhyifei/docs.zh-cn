@@ -28,18 +28,18 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-ms.openlocfilehash: 6ab547951b00cc4a479034129254e4060486348d
-ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
+ms.openlocfilehash: 16f4155cefea20868185febb3d2a566dc1524cc4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68817952"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956276"
 ---
 # <a name="wpf-windows-overview"></a>WPF Windows 概述
 用户通过 Windows 与 Windows Presentation Foundation (WPF) 独立应用程序交互。 窗口的主要用途是托管使数据可视化并使用户能够与数据交互的内容。 独立[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]应用程序<xref:System.Windows.Window>使用类提供自己的窗口。 本主题将<xref:System.Windows.Window>介绍在独立的应用程序中创建和管理 windows 的基本原理。  
   
 > [!NOTE]
->  浏览器承载[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]的应用程序[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] (包括[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]和松散页面) 不提供其自己的窗口。 而是托管在 Windows Internet Explorer 提供的 windows 中。 请参阅[WPF XAML 浏览器应用程序概述](wpf-xaml-browser-applications-overview.md)。  
+> 浏览器承载[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]的应用程序[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] (包括[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]和松散页面) 不提供其自己的窗口。 而是托管在 Windows Internet Explorer 提供的 windows 中。 请参阅[WPF XAML 浏览器应用程序概述](wpf-xaml-browser-applications-overview.md)。  
 
 <a name="TheWindowClass"></a>   
 ## <a name="the-window-class"></a>窗口类  
@@ -88,14 +88,14 @@ ms.locfileid: "68817952"
   
  若要使[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]标记文件和代码隐藏文件协同工作, 需要满足以下要求:  
   
-- 在标记中, `Window`元素必须`x:Class`包含属性。 生成应用程序`x:Class`后, 标记文件中的存在会导致[!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)]创建一个`partial`派生自<xref:System.Windows.Window>的类, 并具有由`x:Class`特性指定的名称。 这要求[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]为架构 ( `xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"` ) 添加命名空间声明。 生成`partial`的类`InitializeComponent`实现方法, 该方法用于注册事件并设置标记中实现的属性。  
+- 在标记中, `Window`元素必须`x:Class`包含属性。 生成应用程序`x:Class`后, 标记文件中存在会导致 Microsoft 生成引擎 (MSBuild) 创建一个`partial`派生自<xref:System.Windows.Window>的类, 并`x:Class`具有由特性指定的名称。 这要求[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]为架构 ( `xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"` ) 添加命名空间声明。 生成`partial`的类`InitializeComponent`实现方法, 该方法用于注册事件并设置标记中实现的属性。  
   
 - 在代码隐藏中, 类必须是`partial`由标记中的`x:Class`特性指定的同名类, 并且必须派生自<xref:System.Windows.Window>。 这允许在生成应用程序时将代码隐藏文件与`partial`为标记文件生成的类相关联 (请参阅[生成 WPF 应用程序](building-a-wpf-application-wpf.md))。  
   
 - 在代码隐藏中, <xref:System.Windows.Window>该类必须实现`InitializeComponent`调用方法的构造函数。 `InitializeComponent`由标记文件的生成`partial`类实现, 用于注册事件和设置在标记中定义的属性。  
   
 > [!NOTE]
->  使用<xref:System.Windows.Window> <xref:System.Windows.Window>将新添加到项目时, 将使用标记和代码隐藏来实现, 并包含必要的配置以创建标记和代码隐藏文件之间的关联。 [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]此处所述。  
+> 使用<xref:System.Windows.Window> <xref:System.Windows.Window>将新添加到项目时, 将使用标记和代码隐藏来实现, 并包含必要的配置以创建标记和代码隐藏文件之间的关联。 [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]此处所述。  
   
  通过此配置, 你可以专注于定义标记中[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]窗口的外观并在代码隐藏中实现其行为。 下面的示例演示了一个窗口, 其中包含一个按钮[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] , 在标记中实现并在代码隐藏中<xref:System.Windows.Controls.Primitives.ButtonBase.Click>实现了该按钮事件的事件处理程序。  
   
@@ -106,13 +106,13 @@ ms.locfileid: "68817952"
   
 <a name="ConfiguringWindowForMSBuild"></a>   
 ## <a name="configuring-a-window-definition-for-msbuild"></a>为 MSBuild 配置窗口定义  
- 如何实现窗口将决定如何为[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]其配置。 对于使用[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]标记和代码隐藏定义的窗口:  
+ 如何实现窗口将决定如何为 MSBuild 配置它。 对于使用[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]标记和代码隐藏定义的窗口:  
   
-- [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]标记文件配置为[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Page`项。  
+- XAML 标记文件配置为 MSBuild `Page`项。  
   
-- 代码隐藏文件配置为[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Compile`项。  
+- 代码隐藏文件配置为 MSBuild `Compile`项。  
   
- 这将显示在以下[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]项目文件中。  
+ 下面的 MSBuild 项目文件中显示了这种情况。  
   
 ```xml  
 <Project ...  
@@ -149,7 +149,7 @@ ms.locfileid: "68817952"
  通过调用<xref:System.Windows.Window.Show%2A>打开的窗口是一个无模式窗口, 这意味着应用程序以允许用户在同一应用程序中激活其他窗口的模式操作。  
   
 > [!NOTE]
->  <xref:System.Windows.Window.ShowDialog%2A>调用以模式打开 windows, 如对话框。 有关详细信息, 请参阅[对话框概述](dialog-boxes-overview.md)。  
+> <xref:System.Windows.Window.ShowDialog%2A>调用以模式打开 windows, 如对话框。 有关详细信息, 请参阅[对话框概述](dialog-boxes-overview.md)。  
   
  调用<xref:System.Windows.Window.Show%2A>时, 窗口将执行初始化工作, 并显示该工作以建立允许它接收用户输入的基础结构。 初始化窗口时, <xref:System.Windows.Window.SourceInitialized>将引发事件, 并显示窗口。  
   
@@ -205,7 +205,7 @@ ms.locfileid: "68817952"
  第一次打开窗口时, 它将成为活动窗口 (除非显示时显示<xref:System.Windows.Window.ShowActivated%2A> "设置为`false`")。 *活动窗口*是当前正在捕获用户输入的窗口, 例如键击和鼠标单击。 当窗口处于活动状态时, 它会<xref:System.Windows.Window.Activated>引发事件。  
   
 > [!NOTE]
->  首次打开窗口时, <xref:System.Windows.FrameworkElement.Loaded>仅在引发<xref:System.Windows.Window.ContentRendered> <xref:System.Windows.Window.Activated>事件后引发和事件。 考虑到这一点, 当引发时<xref:System.Windows.Window.ContentRendered> , 可以有效地将窗口视为已打开。  
+> 首次打开窗口时, <xref:System.Windows.FrameworkElement.Loaded>仅在引发<xref:System.Windows.Window.ContentRendered> <xref:System.Windows.Window.Activated>事件后引发和事件。 考虑到这一点, 当引发时<xref:System.Windows.Window.ContentRendered> , 可以有效地将窗口视为已打开。  
   
  某个窗口成为活动窗口后，用户可以在同一应用程序内激活其他窗口，或者激活其他应用程序。 发生这种情况时, 将停用当前处于活动状态<xref:System.Windows.Window.Deactivated>的窗口, 并引发事件。 同样, 当用户选择当前已停用的窗口时, 该窗口将再次<xref:System.Windows.Window.Activated>变为活动状态并引发。  
   
@@ -221,7 +221,7 @@ ms.locfileid: "68817952"
  如果后台任务已完成, 则窗口可能需要通过调用<xref:System.Windows.Window.Activate%2A>方法更紧急地通知用户。 如果用户与调用时<xref:System.Windows.Window.Activate%2A>激活的其他应用程序交互, 则窗口的任务栏按钮会闪烁。 如果用户与当前应用程序交互, 则调用<xref:System.Windows.Window.Activate%2A>会将窗口置于前台。  
   
 > [!NOTE]
->  您可以使用<xref:System.Windows.Application.Activated?displayProperty=nameWithType>和<xref:System.Windows.Application.Deactivated?displayProperty=nameWithType>事件处理应用程序范围的激活。  
+> 您可以使用<xref:System.Windows.Application.Activated?displayProperty=nameWithType>和<xref:System.Windows.Application.Deactivated?displayProperty=nameWithType>事件处理应用程序范围的激活。  
   
 <a name="Closing_a_Window"></a>   
 ### <a name="closing-a-window"></a>关闭窗口  
@@ -262,9 +262,9 @@ ms.locfileid: "68817952"
  如果<xref:System.Windows.Window.Closing>未处理, 或者处理但未取消, 则窗口将关闭。 在窗口实际关闭之前, <xref:System.Windows.Window.Closed>将引发。 此时，无法阻止窗口关闭。  
   
 > [!NOTE]
->  在主应用程序窗口关闭 (请参阅<xref:System.Windows.Application.MainWindow%2A>) 或最后一个窗口关闭时, 可以将应用程序配置为自动关闭。 有关详细信息，请参阅 <xref:System.Windows.Application.ShutdownMode%2A>。  
+> 在主应用程序窗口关闭 (请参阅<xref:System.Windows.Application.MainWindow%2A>) 或最后一个窗口关闭时, 可以将应用程序配置为自动关闭。 有关详细信息，请参阅 <xref:System.Windows.Application.ShutdownMode%2A>。  
   
- 尽管可以通过非客户端和客户端区域中提供的机制显式关闭窗口, 但也可以通过应用程序或[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]的其他部分中的行为隐式关闭窗口, 其中包括:  
+ 尽管可以通过非客户端和客户端区域中提供的机制显式关闭窗口, 但也可以通过应用程序或窗口的其他部分中的行为来隐式关闭窗口, 其中包括:  
   
 - 用户注销或关闭 Windows。  
   
@@ -275,7 +275,7 @@ ms.locfileid: "68817952"
 - 调用 <xref:System.Windows.Application.Shutdown%2A>。  
   
 > [!NOTE]
->  窗口在关闭后无法重新打开。  
+> 窗口在关闭后无法重新打开。  
   
 <a name="Window_Lifetime_Events"></a>   
 ### <a name="window-lifetime-events"></a>窗口生存期事件  
@@ -377,7 +377,7 @@ ms.locfileid: "68817952"
  处于最*大化*状态的窗口将扩展为它的最大大小, 这将只是其<xref:System.Windows.FrameworkElement.MaxWidth%2A>、 <xref:System.Windows.FrameworkElement.MaxHeight%2A>和<xref:System.Windows.Window.SizeToContent%2A>属性所规定的大小。 与最小化窗口一样，最大化窗口无法使用重设大小手柄或通过拖动边框来重设大小。  
   
 > [!NOTE]
->  即使窗口当前已<xref:System.Windows.Window.Top%2A>最大化<xref:System.Windows.FrameworkElement.Width%2A>或最<xref:System.Windows.FrameworkElement.Height%2A>小化, 窗口的、 <xref:System.Windows.Window.Left%2A>、和属性的值也始终表示正常状态的值。  
+> 即使窗口当前已<xref:System.Windows.Window.Top%2A>最大化<xref:System.Windows.FrameworkElement.Width%2A>或最<xref:System.Windows.FrameworkElement.Height%2A>小化, 窗口的、 <xref:System.Windows.Window.Left%2A>、和属性的值也始终表示正常状态的值。  
   
  窗口的状态可以通过设置其<xref:System.Windows.Window.WindowState%2A>属性来配置, 该属性可以具有以下<xref:System.Windows.WindowState>枚举值之一:  
   

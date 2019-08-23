@@ -22,12 +22,12 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], handling
 - On Error statement [Visual Basic]
 ms.assetid: ff947930-fb84-40cf-bd66-1ea219561d5c
-ms.openlocfilehash: 170cc4a42eda0b54d1e252104a702e008af7a336
-ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
+ms.openlocfilehash: df2bd232a870e17eeb5106cf0b60a9e77641969d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68671821"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963536"
 ---
 # <a name="on-error-statement-visual-basic"></a>On Error 语句 (Visual Basic)
 启用错误处理例程, 并指定例程在过程中的位置;还可用于禁用错误处理例程。 `On Error`语句用在非结构化错误处理中, 可以使用而不是结构化异常处理。 [结构化异常处理](../../../standard/exceptions/index.md)内置于 .net 中, 通常更高效, 因此在处理应用程序中的运行时错误时建议使用。
@@ -35,7 +35,7 @@ ms.locfileid: "68671821"
  如果没有错误处理或异常处理, 则发生的任何运行时错误都是致命的: 将显示一条错误消息, 并停止执行。
 
 > [!NOTE]
->  关键字还用于[Error 语句](../../../visual-basic/language-reference/statements/error-statement.md), 该语句支持向后兼容性。 `Error`
+> 关键字还用于[Error 语句](../../../visual-basic/language-reference/statements/error-statement.md), 该语句支持向后兼容性。 `Error`
 
 ## <a name="syntax"></a>语法
 
@@ -55,7 +55,7 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
 ## <a name="remarks"></a>备注
 
 > [!NOTE]
->  建议尽可能地在代码中使用结构化异常处理, 而不是使用非结构化异常处理和`On Error`语句。 有关详细信息，请参阅 [Try...Catch...Finally 语句](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)。
+> 建议尽可能地在代码中使用结构化异常处理, 而不是使用非结构化异常处理和`On Error`语句。 有关详细信息，请参阅 [Try...Catch...Finally 语句](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)。
 
  "Enabled" 错误处理程序是指由`On Error`语句打开的错误处理程序。 "活动" 错误处理程序是在处理错误的过程中的已启用处理程序。
 
@@ -66,7 +66,7 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
  每次错误处理程序将控制权返回给调用过程时, 该过程将成为当前过程。 一旦任何过程中的错误处理程序处理错误, 就会在当前过程中的`Resume`语句指定的点继续执行。
   
 > [!NOTE]
->  错误处理例程不`Sub`是过程`Function`或过程。 它是由行标签或行号标记的代码部分。
+> 错误处理例程不`Sub`是过程`Function`或过程。 它是由行标签或行号标记的代码部分。
   
 ## <a name="number-property"></a>Number 属性
  错误处理例程依赖于`Number` `Err`对象的属性中的值来确定错误的原因。 在发生任何其他错误之前, 或在调用可能`Err`导致错误的过程之前, 例程应测试或保存对象中的相关属性值。 `Err`对象中的属性值仅反映最近的错误。 与`Err.Number`关联的错误消息包含在中`Err.Description`。  
@@ -82,7 +82,7 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
  `On Error Resume Next`使执行继续使用紧随导致运行时错误的语句之后的语句, 或紧随包含`On Error Resume Next`语句的过程的最近调用之后的语句。 此语句允许在运行时错误的情况下继续执行。 可以放置错误处理例程, 其中发生错误, 而不是将控制转移到过程内的另一个位置。 当调用另一个过程时, `On Error Resume Next` 语句变为非活动状态,因此,如果您希望在该例程中进行内联错误处理,则应在每个调用的例程中执行语句。`On Error Resume Next`
   
 > [!NOTE]
->  在`On Error Resume Next`处理访问其他对象的`On Error GoTo`过程中生成的错误时, 构造可能更好。 在`Err`每次与对象交互后进行检查将消除代码所访问的对象的歧义。 您可以确定哪个对象放置了错误代码`Err.Number`, 以及哪个对象最初生成了错误 (在中`Err.Source`指定的对象)。
+> 在`On Error Resume Next`处理访问其他对象的`On Error GoTo`过程中生成的错误时, 构造可能更好。 在`Err`每次与对象交互后进行检查将消除代码所访问的对象的歧义。 您可以确定哪个对象放置了错误代码`Err.Number`, 以及哪个对象最初生成了错误 (在中`Err.Source`指定的对象)。
 
 ## <a name="on-error-goto-0"></a>出现错误时转到0
  `On Error GoTo 0`禁用当前过程中的错误处理。 即使过程包含编号为0的行, 它也不会将第0行指定为错误处理代码的开头。 如果没有`On Error GoTo 0`语句, 则在退出过程时, 将自动禁用错误处理程序。

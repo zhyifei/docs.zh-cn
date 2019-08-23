@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5a0e41bf-f99c-4692-8799-f89617f5bcf9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5c947dcd3fa3a71d5bbfdf742b106bf56d8444fc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9b1575d484c58afa3558d9f5b446473b4c89bc51
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64596743"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69947996"
 ---
 # <a name="how-to-create-initialize-and-configure-trace-switches"></a>如何：创建、初始化和配置跟踪开关
 跟踪开关用于启用、禁用和筛选跟踪输出。  
@@ -60,12 +60,12 @@ ms.locfileid: "64596743"
   
  在已部署的应用程序中，应用程序未运行时重新配置开关对象可启用跟踪代码。 通常，这涉及到打开和关闭开关对象或更改跟踪级别，然后重新启动应用程序。  
   
- 创建开关实例时，还可以通过指定 displayName 和 description 这两个参数来初始化此实例。 构造函数的 displayName 参数设置 <xref:System.Diagnostics.Switch> 类实例的 <xref:System.Diagnostics.Switch.DisplayName%2A?displayProperty=nameWithType> 属性。 displayName 是用于在 .config 文件中配置开关的名称，description 参数应返回开关及其所控制的消息的简要说明 。  
+ 创建开关实例时，还可以通过指定 displayName 和 description 这两个参数来初始化此实例。 构造函数的 displayName 参数设置 <xref:System.Diagnostics.Switch> 类实例的 <xref:System.Diagnostics.Switch.DisplayName%2A?displayProperty=nameWithType> 属性。 displayName 是用于在 .config 文件中配置开关的名称，description 参数应返回开关及其所控制的消息的简要说明。  
   
  除了指定要配置的开关名称，还必须指定此开关的值。 此值是一个整数。 对于 <xref:System.Diagnostics.BooleanSwitch>，0 值对应“关闭”，而任何非零值对应“打开”。 对于 <xref:System.Diagnostics.TraceSwitch>，0、1、2、3 和 4 分别对应“关闭”、“错误”、“警告”、“信息”和“详细”。 任何大于 4 的数字将被视为“详细”，而任何小于零的数字将被视为“关闭”。  
   
 > [!NOTE]
->  在 .NET Framework 2.0 版中，你可以使用文本指定开关值。 例如，为 <xref:System.Diagnostics.BooleanSwitch> 指定 `true` 或表示枚举值的文本，例如为 <xref:System.Diagnostics.TraceSwitch> 指定 `Error`。 行 `<add name="myTraceSwitch" value="Error" />` 等于 `<add name="myTraceSwitch" value="1" />`。  
+> 在 .NET Framework 2.0 版中，你可以使用文本指定开关值。 例如，为 <xref:System.Diagnostics.BooleanSwitch> 指定 `true` 或表示枚举值的文本，例如为 <xref:System.Diagnostics.TraceSwitch> 指定 `Error`。 行 `<add name="myTraceSwitch" value="Error" />` 等于 `<add name="myTraceSwitch" value="1" />`。  
   
  为了使最终用户能够配置应用程序的跟踪开关，你必须提供关于应用程序中开关的详细文档。 应该详细说明哪些开关控制哪些内容以及如何将其打开和关闭。 应向你的最终用户提供 .config 文件，此文件在注释中具有适当的帮助。  
   
@@ -75,11 +75,11 @@ ms.locfileid: "64596743"
   
 2. 如果项目不包含配置文件（app.config 或 Web.config），则从“项目”菜单中选择“添加新项”。  
   
-    - **Visual Basic：** 在中**添加新项**对话框框中，选择**应用程序配置文件**。  
+    - **Visual Basic：** 在 "**添加新项**" 对话框中, 选择 "**应用程序配置文件**"。  
   
          创建并打开应用程序配置文件。 这是一个根元素为 `<configuration>.` 的 XML 文档  
   
-    - **Visual C#:** 在中**添加新项**对话框框中，选择**XML 文件**。 将此文件命名为 app.config。XML 编辑器中，在 XML 声明后，添加以下 XML：  
+    - **视觉C#对象:** 在 "**添加新项**" 对话框中, 选择 " **XML 文件**"。 将此文件命名为 app.config。XML 编辑器中，在 XML 声明后，添加以下 XML：  
   
         ```xml  
         <configuration>  
@@ -128,6 +128,6 @@ ms.locfileid: "64596743"
 ## <a name="see-also"></a>请参阅
 
 - [跟踪应用程序和在应用程序中插入检测点](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
-- [如何：将跟踪语句添加到应用程序代码](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
+- [如何：向应用程序代码添加跟踪语句](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
 - [跟踪开关](../../../docs/framework/debug-trace-profile/trace-switches.md)
 - [跟踪和调试设置架构](../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

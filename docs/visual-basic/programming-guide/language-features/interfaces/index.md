@@ -7,12 +7,12 @@ helpviewer_keywords:
 - interfaces
 - interfaces [Visual Basic]
 ms.assetid: 61b06674-12c9-430b-be68-cc67ecee1f5b
-ms.openlocfilehash: ee53e6e5fc360c5155e1682f829a45be922caf22
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 968e5d9bb08f168e3c77b40ea42b16dc66e93e64
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665414"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956294"
 ---
 # <a name="interfaces-visual-basic"></a>接口 (Visual Basic)
 接口定义了类可以实现的属性、方法和事件。 接口允许将功能定义为一些紧密相关的属性、方法和事件的小组；这样就减少了兼容性问题，因为可以在不损害现有代码的情况下开发接口的增强型实现。 在任何时候都可以通过开发附加接口和实现来添加新的功能。  
@@ -33,20 +33,20 @@ ms.locfileid: "64665414"
  在命名空间中，接口语句默认为 `Friend`，但也可以显式声明为 `Public` 或 `Friend`。 在类、模块、接口和结构中定义的接口默认为 `Public`，但也可以显式声明为 `Public`、`Friend`、`Protected` 或 `Private`。  
   
 > [!NOTE]
->  `Shadows` 关键字可应用于所有界面成员。 `Overloads` 关键字可应用于界面定义中声明的 `Sub`、`Function` 和 `Property` 语句。 此外，`Property` 语句可以具有 `Default`、`ReadOnly` 或 `WriteOnly` 修饰符。 不允许使用任何其他修饰符：`Public`、`Private`、`Friend`、`Protected`、`Shared`、`Overrides`、`MustOverride` 或 `Overridable`。 有关详细信息，请参阅[声明上下文和默认访问级别](../../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)。  
+> `Shadows` 关键字可应用于所有界面成员。 `Overloads` 关键字可应用于界面定义中声明的 `Sub`、`Function` 和 `Property` 语句。 此外，`Property` 语句可以具有 `Default`、`ReadOnly` 或 `WriteOnly` 修饰符。 不允许使用任何其他修饰符：`Public`、`Private`、`Friend`、`Protected`、`Shared`、`Overrides`、`MustOverride` 或 `Overridable`。 有关详细信息，请参阅[声明上下文和默认访问级别](../../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)。  
   
  例如，下面的代码定义了一个函数、一个属性和一个事件的接口。  
   
  [!code-vb[VbVbalrOOP#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#17)]  
   
 ## <a name="implementing-interfaces"></a>实现接口  
- Visual Basic 保留字`Implements`两种方式使用。 `Implements` 语句表示类或结构实现接口。 `Implements` 关键字表示类成员或结构成员实现特定的接口成员。  
+ 通过两种方式`Implements`使用 Visual Basic 保留字。 `Implements` 语句表示类或结构实现接口。 `Implements` 关键字表示类成员或结构成员实现特定的接口成员。  
   
 ### <a name="implements-statement"></a>Implements 语句  
  如果一个类或结构实现一个或多个接口，则它必须紧随在 `Class` 或 `Structure` 语句之后包括 `Implements` 语句。 `Implements` 语句需要一个由类实现的接口的逗号分隔列表。 类或结构必须使用 `Implements` 关键字来实现所有的接口成员。  
   
 ### <a name="implements-keyword"></a>Implements 关键字  
- `Implements` 关键字需要一个要实现的接口成员的逗号分隔列表。 通常只指定单个接口成员，但也可以指定多个成员。 接口成员的规范由接口名称（必须在类中的 implements 语句中指定）、句点和要实现的成员函数、属性或事件的名称组成。 实现接口成员的成员的名称可以使用任何合法标识符，并不局限于`InterfaceName_MethodName`早期版本的 Visual Basic 中使用的约定。  
+ `Implements` 关键字需要一个要实现的接口成员的逗号分隔列表。 通常只指定单个接口成员，但也可以指定多个成员。 接口成员的规范由接口名称（必须在类中的 implements 语句中指定）、句点和要实现的成员函数、属性或事件的名称组成。 实现接口成员的成员的名称可以使用任何合法标识符, 但并不限于 Visual Basic 早期版本中使用的`InterfaceName_MethodName`约定。  
   
  例如，以下代码显示了如何声明一个名为 `Sub1` 的用于实现接口方法的子例程：  
   

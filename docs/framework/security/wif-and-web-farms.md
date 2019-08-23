@@ -3,12 +3,12 @@ title: WIF 和 Web 场
 ms.date: 03/30/2017
 ms.assetid: fc3cd7fa-2b45-4614-a44f-8fa9b9d15284
 author: BrucePerlerMS
-ms.openlocfilehash: 656e7b116b9da68dbb38a5a2fc3d1ed90fda576a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e6806971bd2260785d66bfdb54a3e2938043c746
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592278"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69967191"
 ---
 # <a name="wif-and-web-farms"></a>WIF 和 Web 场
 使用 Windows Identity Foundation (WIF) 保护 Web 场中部署的信赖方 (RP) 应用程序的资源时，必须采取特定的步骤确保 WIF 能处理场中不同计算机上运行的信赖方应用程序实例的令牌。 处理过程包括验证会话令牌签名、加密和解密会话令牌、缓存会话令牌以及检测重播的安全令牌。  
@@ -55,10 +55,10 @@ ms.locfileid: "64592278"
 - 如果应用程序检测到重播令牌，则必须为令牌重播缓存采用相似的分布式缓存策略，方法是从 <xref:System.IdentityModel.Tokens.TokenReplayCache> 派生并在 [\<tokenReplayCache>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaycache.md) 配置元素中指向令牌重播缓存服务。  
   
 > [!IMPORTANT]
->  所有示例 XML 和本主题中的代码摘自[ClaimsAwareWebFarm](https://go.microsoft.com/fwlink/?LinkID=248408)示例。  
+> 本主题中的所有示例 XML 和代码都是从[ClaimsAwareWebFarm](https://go.microsoft.com/fwlink/?LinkID=248408)示例获取的。  
   
 > [!IMPORTANT]
->  本主题中的示例按原样提供，不建议在生产代码中不经修改直接使用。  
+> 本主题中的示例按原样提供，不建议在生产代码中不经修改直接使用。  
   
 <a name="BKMK_TheWCFCachingService"></a>   
 ## <a name="the-wcf-caching-service"></a>WCF 缓存服务  

@@ -13,45 +13,45 @@ helpviewer_keywords:
 - data [Windows Forms], sorting
 - ADO.NET [Windows Forms]
 ms.assetid: 6c206daf-d706-4602-9dbe-435343052063
-ms.openlocfilehash: d270155fa1e6b61d8537096a07a4b93fa3b79b35
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: ae331ca9e3fd2aed654659e11434454874eff8fa
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65882200"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69960427"
 ---
 # <a name="how-to-sort-and-filter-adonet-data-with-the-windows-forms-bindingsource-component"></a>如何：使用 Windows 窗体 BindingSource 组件对 ADO.NET 数据进行排序和筛选
-排序和筛选功能可以公开<xref:System.Windows.Forms.BindingSource>通过控制<xref:System.Windows.Forms.BindingSource.Sort%2A>和<xref:System.Windows.Forms.BindingSource.Filter%2A>属性。 您可以将简单排序的基础数据源，则应用<xref:System.ComponentModel.IBindingList>，并可以应用筛选和高级排序数据源时<xref:System.ComponentModel.IBindingListView>。 <xref:System.Windows.Forms.BindingSource.Sort%2A>属性需要使用标准 ADO.NET 语法： 一个表示数据源中数据的列的名称的字符串后跟`ASC`或`DESC`以指示是按升序或降序顺序对列表进行排序。 您可以设置高级排序或通过使用逗号分隔符分隔每个列的多个列排序。 <xref:System.Windows.Forms.BindingSource.Filter%2A>属性采用的字符串表达式。  
+可以<xref:System.Windows.Forms.BindingSource> 通过和<xref:System.Windows.Forms.BindingSource.Filter%2A>属性公开控件的排序和筛选功能。 <xref:System.Windows.Forms.BindingSource.Sort%2A> 如果基础数据源是<xref:System.ComponentModel.IBindingList>, 则可以应用简单排序, 如果数据源<xref:System.ComponentModel.IBindingListView>是, 则可以应用筛选和高级排序。 属性需要标准 ADO.NET 语法: 一个字符串, 表示数据源中的数据列的名称, `ASC`后跟或`DESC`以指示列表应按升序排序还是按降序排序。 <xref:System.Windows.Forms.BindingSource.Sort%2A> 您可以通过用逗号分隔符分隔每一列来设置高级排序或多列排序。 <xref:System.Windows.Forms.BindingSource.Filter%2A>属性采用字符串表达式。  
   
 > [!NOTE]
->  将敏感信息（如密码）存储在连接字符串中可能会影响应用程序的安全性。 若要控制对数据库的访问，一种较为安全的方法是使用 Windows 身份验证（也称为集成安全性）。 有关详细信息，请参阅[保护连接信息](../../data/adonet/protecting-connection-information.md)。  
+> 将敏感信息（如密码）存储在连接字符串中可能会影响应用程序的安全性。 若要控制对数据库的访问，一种较为安全的方法是使用 Windows 身份验证（也称为集成安全性）。 有关详细信息，请参阅[保护连接信息](../../data/adonet/protecting-connection-information.md)。  
   
-### <a name="to-filter-data-with-the-bindingsource"></a>若要使用 BindingSource 的数据进行筛选  
+### <a name="to-filter-data-with-the-bindingsource"></a>用 BindingSource 筛选数据  
   
-- 设置<xref:System.Windows.Forms.BindingSource.Filter%2A>属性设置为所需的表达式。  
+- <xref:System.Windows.Forms.BindingSource.Filter%2A>将属性设置为所需的 expression。  
   
-     在下面的代码示例，该表达式是列名称后跟所需的列的值。  
+     在下面的代码示例中, 表达式是列名, 后跟要用于该列的值。  
   
  [!code-csharp[System.Windows.Forms.DataConnectorFilterAndSort#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorFilterAndSort/CS/form1.cs#11)]
  [!code-vb[System.Windows.Forms.DataConnectorFilterAndSort#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorFilterAndSort/VB/form1.vb#11)]  
   
-### <a name="to-sort-data-with-the-bindingsource"></a>使用 BindingSource 的数据进行排序  
+### <a name="to-sort-data-with-the-bindingsource"></a>用 BindingSource 对数据进行排序  
   
-1. 设置<xref:System.Windows.Forms.BindingSource.Sort%2A>属性设置为你想跟的列名称`ASC`或`DESC`以指示升序或降序排序。  
+1. 将属性设置为所需的列名, `ASC`并将其设置`DESC`为或以指示升序或降序。 <xref:System.Windows.Forms.BindingSource.Sort%2A>  
   
-2. 请用逗号分隔多个列。  
+2. 用逗号分隔多个列。  
   
  [!code-csharp[System.Windows.Forms.DataConnectorFilterAndSort#12](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorFilterAndSort/CS/form1.cs#12)]
  [!code-vb[System.Windows.Forms.DataConnectorFilterAndSort#12](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorFilterAndSort/VB/form1.vb#12)]  
   
 ## <a name="example"></a>示例  
- 下面的代码示例将数据加载到 Northwind 示例数据库的 Customers 表从<xref:System.Windows.Forms.DataGridView>控制，并筛选，并对所显示的数据进行排序。  
+ 下面的代码示例将 Northwind 示例数据库的 Customers 表中的数据加载到<xref:System.Windows.Forms.DataGridView>控件中, 并对显示的数据进行筛选和排序。  
   
  [!code-csharp[System.Windows.Forms.DataConnectorFilterAndSort#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorFilterAndSort/CS/form1.cs#1)]
  [!code-vb[System.Windows.Forms.DataConnectorFilterAndSort#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorFilterAndSort/VB/form1.vb#1)]  
   
 ## <a name="compiling-the-code"></a>编译代码  
- 若要运行此示例，请将代码粘贴到包含一个窗体<xref:System.Windows.Forms.BindingSource>名为`BindingSource1`和一个<xref:System.Windows.Forms.DataGridView>名为`dataGridView1`。 处理<xref:System.Windows.Forms.Form.Load>窗体和调用事件`InitializeSortedFilteredBindingSource`load 事件处理程序方法中。  
+ 若要运行此示例, 请将代码<xref:System.Windows.Forms.BindingSource>粘贴到包含名为`BindingSource1`的和名<xref:System.Windows.Forms.DataGridView> `dataGridView1`为的的窗体中。 处理窗<xref:System.Windows.Forms.Form.Load>体的事件, 并在`InitializeSortedFilteredBindingSource` load 事件处理程序方法中调用。  
   
 ## <a name="see-also"></a>请参阅
 

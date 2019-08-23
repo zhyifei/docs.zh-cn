@@ -9,12 +9,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], freezing columns
 - DataGridView control [Windows Forms], columns always in view
 ms.assetid: 2ef8b1de-782e-4867-af8d-58171ab5c106
-ms.openlocfilehash: 12c73d7344bba3ca36169c2f46134876295dee00
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a83c5078d67be40fda2ae3382b8124594ee78103
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651749"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966649"
 ---
 # <a name="how-to-freeze-columns-in-the-windows-forms-datagridview-control"></a>如何：冻结 Windows 窗体 DataGridView 控件中的列
 用户查看 Windows 窗体 <xref:System.Windows.Forms.DataGridView> 控件中显示的数据时，有时需要频繁地引用单个列或列集。 例如，显示包含许多列的客户信息表时，使其他列可在可使区域外滚动的同时始终显示客户姓名非常有用。  
@@ -22,11 +22,11 @@ ms.locfileid: "64651749"
  若要实现此行为，可冻结控件中的列。 冻结列时，也将冻结其左侧（在从右到左的语言脚本中为右侧）的所有列。 冻结的列保持不变，而所有其他列可以滚动。  
   
 > [!NOTE]
->  如果启用了列重新排序，冻结的列被视为一组不同于未冻结的列。 用户可重新定位任一组中的列，但不能将列从一个组移到另一组。  
+> 如果启用了列重新排序，冻结的列被视为一组不同于未冻结的列。 用户可重新定位任一组中的列，但不能将列从一个组移到另一组。  
   
  列的 <xref:System.Windows.Forms.DataGridViewColumn.Frozen%2A> 属性决定列在网格内是否始终可见。  
   
- Visual Studio 中对此任务提供支持。  另请参阅[如何：冻结列在 Windows 窗体 DataGridView 控件使用设计器](freeze-columns-in-the-datagrid-using-the-designer.md)。  
+ Visual Studio 中对此任务提供支持。  另请[参阅如何:使用设计器](freeze-columns-in-the-datagrid-using-the-designer.md)冻结 Windows 窗体 DataGridView 控件中的列。  
   
 ### <a name="to-freeze-a-column-programmatically"></a>以编程方式冻结列  
   
@@ -47,4 +47,4 @@ ms.locfileid: "64651749"
 - <xref:System.Windows.Forms.DataGridViewColumn.Frozen%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView>
 - [Windows 窗体 DataGridView 控件中的列、行和单元格基本功能](basic-column-row-and-cell-features-wf-datagridview-control.md)
-- [如何：启用 Windows 窗体 DataGridView 控件中的列重新排序](how-to-enable-column-reordering-in-the-windows-forms-datagridview-control.md)
+- [如何：在 Windows 窗体 DataGridView 控件中启用列重新排序](how-to-enable-column-reordering-in-the-windows-forms-datagridview-control.md)

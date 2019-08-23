@@ -4,20 +4,20 @@ ms.date: 03/30/2017
 ms.assetid: e38ae4f3-3e3d-42c3-a4b8-db1aa9d84f85
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 711b4c79b32aa3db4d3681d29e08dbd3d2ddbd02
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1cb53818d0e12d625b0609a80b4d8473713525d0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64660264"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941647"
 ---
 # <a name="net-native-and-compilation"></a>.NET Native 和编译
 面向 .Net Framework 的 Windows 8.1 应用程序和 Windows 桌面应用程序由特定的编程语言进行编写并编译为中间语言 (IL)。 在运行时，实时 (JIT) 编译器负责恰好在首次执行方法前为本地计算机将 IL 编译到本机代码中。 与此相反，.NET 本机工具链在编译时将源代码转换为本机代码。 本主题将 .NET 本机与其他可用于 .NET Framework 应用程序的编译技术进行比较，还提供了 .NET 本机如何生成本机代码的实用概述，可帮助用户了解使用 .NET 本机编译的代码中发生的异常为什么不会出现在 JIT 编译的代码中。  
   
-## <a name="net-native-generating-native-binaries"></a>.NET 本机：生成本机二进制文件  
+## <a name="net-native-generating-native-binaries"></a>.NET Native:正在生成本机二进制文件  
  面向 .NET Framework 且未使用 .NET 本机工具链编译的应用程序包含应用程序的程序集，其中包括以下内容：  
   
-- 用于描述程序集、其依赖项、其包含的类型和其中成员的[元数据](../../../docs/standard/metadata-and-self-describing-components.md)。 元数据用于反射和后期绑定访问，在一些情况下也可用于编译器和生成工具。  
+- 用于描述程序集、其依赖项、其包含的类型和其中成员的[元数据](../../standard/metadata-and-self-describing-components.md)。 元数据用于反射和后期绑定访问，在一些情况下也可用于编译器和生成工具。  
   
 - 实现代码。 这包括中间语言 (IL) 操作码。 在运行时，实时 (JIT) 编译器将它转换为目标平台的本机代码。  
   
@@ -50,16 +50,16 @@ ms.locfileid: "64660264"
 - 它将完整的 CLR 替换为主要包含垃圾回收器的重构运行时。 重构运行时位于应用程序中名为 mrt100_app.dll 本地库，且其大小仅为几百千字节。 这可能是因为静态链接不再需要公共语言运行时执行多个服务。  
   
     > [!NOTE]
-    >  .NET 本机使用的垃圾回收器与标准公共语言运行时使用的相同。 在 .NET 本机垃圾回收器中，默认启用后台垃圾回收。 有关垃圾回收的详细信息，请参阅[垃圾回收的基础知识](../../../docs/standard/garbage-collection/fundamentals.md)。  
+    > .NET 本机使用的垃圾回收器与标准公共语言运行时使用的相同。 在 .NET 本机垃圾回收器中，默认启用后台垃圾回收。 有关垃圾回收的详细信息，请参阅[垃圾回收的基础知识](../../standard/garbage-collection/fundamentals.md)。  
   
 > [!IMPORTANT]
->  .NET 本机将整个应用程序编译到本机应用程序。 它不允许将包含类库的单个程序集编译为本机代码，所以可独立于托管代码进行调用。  
+> .NET 本机将整个应用程序编译到本机应用程序。 它不允许将包含类库的单个程序集编译为本机代码，所以可独立于托管代码进行调用。  
   
  .NET 本机工具链生成的应用程序的写入位置如下：项目目录下 Debug 或 Release 目录中名为 ilc.out 的目录。 它包含以下文件：  
   
-- *\<appName>*.exe，指仅将控件传输到 *\<appName>*.dll 中特定 `Main` 导出的存根可执行文件。  
+- *\<appName>* .exe，指仅将控件传输到 *\<appName>* .dll 中特定 `Main` 导出的存根可执行文件。  
   
-- *\<appName>*.dll，指包含所有应用程序代码以及所依赖的 .NET Framework 类库和任何第三方库中的代码的 Windows 动态链接库。  还包含支持代码，例如与 Windows 互操作和序列化应用程序中的对象的必要代码。  
+- *\<appName>* .dll，指包含所有应用程序代码以及所依赖的 .NET Framework 类库和任何第三方库中的代码的 Windows 动态链接库。  还包含支持代码，例如与 Windows 互操作和序列化应用程序中的对象的必要代码。  
   
 - mrt100_app.dll，指提供运行时服务（如垃圾回收）的重构运行时。  
   
@@ -102,7 +102,7 @@ ms.locfileid: "64660264"
   
 ## <a name="see-also"></a>请参阅
 
-- [元数据和自描述组件](../../../docs/standard/metadata-and-self-describing-components.md)
-- [内部.NET Native （第 9 频道视频）](https://channel9.msdn.com/Shows/Going+Deep/Inside-NET-Native)
+- [元数据和自描述组件](../../standard/metadata-and-self-describing-components.md)
+- [内部 .NET Native (第9频道视频)](https://channel9.msdn.com/Shows/Going+Deep/Inside-NET-Native)
 - [反射和 .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)
 - [.NET Native 一般疑难解答](../../../docs/framework/net-native/net-native-general-troubleshooting.md)

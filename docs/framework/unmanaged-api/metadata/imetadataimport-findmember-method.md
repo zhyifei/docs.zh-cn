@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: caec760cea52cb14d3fdb5d4cf0b59adcae5633b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4eefb7ec1e7d0d130ec64531a59d1d5bbce04963
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782521"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968920"
 ---
 # <a name="imetadataimportfindmember-method"></a>IMetaDataImport::FindMember 方法
-获取一个指针 MemberDef 标记的字段或方法都包含由指定<xref:System.Type>并具有指定的名称和元数据签名。  
+获取一个指针, 该指针指向由指定的和具有指定名称和元数据<xref:System.Type>签名的指定的 MemberDef 标记。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,36 +41,36 @@ HRESULT FindMember (
   
 ## <a name="parameters"></a>参数  
  `td`  
- [in]对类或包含要搜索的成员的接口的 TypeDef 标记。 如果此值为`mdTokenNil`，全局变量或全局函数执行查找。  
+ 中包含要搜索的成员的类或接口的 TypeDef 标记。 如果此值为`mdTokenNil`, 则对全局变量或全局函数执行查找。  
   
  `szName`  
- [in]要搜索的成员的名称。  
+ 中要搜索的成员的名称。  
   
  `pvSigBlob`  
- [in]指向成员的二进制元数据签名的指针。  
+ 中指向成员的二进制元数据签名的指针。  
   
  `cbSigBlob`  
- [in]以字节为单位的大小`pvSigBlob`。  
+ 中的大小 (以字节`pvSigBlob`为单位)。  
   
  `pmb`  
- [out]指向匹配的 MemberDef 标记的指针。  
+ 弄指向匹配的 MemberDef 标记的指针。  
   
 ## <a name="remarks"></a>备注  
- 指定使用封闭类或接口的成员 (`td`)，其名称 (`szName`)，并根据需要它的签名 (`pvSigBlob`)。 可能有多个具有相同名称的类或接口中的成员。 在这种情况下，将传递到唯一的匹配项的成员的签名。  
+ 使用成员的封闭类或接口 (`td`)、其名称 (`szName`) 和 (可选) 的签名 (`pvSigBlob`) 来指定成员。 类或接口中可能存在多个具有相同名称的成员。 在这种情况下, 传递成员的签名以查找唯一匹配项。  
   
- 签名传递给`FindMember`必须已生成在当前范围内，因为这些签名将绑定到特定的作用域。 签名可以嵌入令牌，用于标识封闭类或值类型。 令牌的本地 TypeDef 表中的索引。 不能生成上下文的当前作用域外部的运行时签名并使用该签名一样的输入`FindMember`。  
+ 传递给`FindMember`的签名必须已在当前范围内生成, 因为签名将绑定到特定范围。 签名可以嵌入标识封闭类或值类型的标记。 该令牌是本地 TypeDef 表中的索引。 不能在当前范围的上下文之外生成运行时签名, 并将该签名用作输入以输入到`FindMember`。  
   
- `FindMember` 查找直接在类或接口; 中定义的成员找不到继承的成员。  
+ `FindMember`仅查找直接在类或接口中定义的成员;它不会查找继承成员。  
   
 > [!NOTE]
->  `FindMember` 是一个帮助器方法。 它将调用[imetadataimport:: Findmethod](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-findmethod-method.md); 如果该调用未找到匹配项，`FindMember`然后调用[imetadataimport:: Findfield](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-findfield-method.md)。  
+> `FindMember`是一个帮助器方法。 它调用[IMetaDataImport:: FindMethod](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-findmethod-method.md);如果该调用找不到匹配项, `FindMember`则调用[IMetaDataImport:: FindField](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-findfield-method.md)。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **标头：** Cor  
   
- **库：** 包含为 MsCorEE.dll 中的资源  
+ **类库**作为资源包括在 Mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

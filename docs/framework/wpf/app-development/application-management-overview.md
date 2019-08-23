@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 32b1c054-5aca-423b-b4b5-ed8dc4dc637d
-ms.openlocfilehash: a5808261ec9fe957ee993177590446389f219609
-ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
+ms.openlocfilehash: 448c212e4afe547dc6342b000fe06d5340db112c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68818018"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69958744"
 ---
 # <a name="application-management-overview"></a>应用程序管理概述
 所有应用程序都可能会共享一组适用于实现和管理应用程序的常见功能。 本主题概述了用于创建和管理应用程序<xref:System.Windows.Application>的类中的功能。  
@@ -74,7 +74,7 @@ ms.locfileid: "68818018"
 - 在代码隐藏中, 类必须是`partial`由标记中的`x:Class`特性指定的同名类, 并且必须派生自<xref:System.Windows.Application>。 这允许在生成应用程序时将代码隐藏文件与`partial`为标记文件生成的类相关联 (请参阅[生成 WPF 应用程序](building-a-wpf-application-wpf.md))。  
   
 > [!NOTE]
->  使用 Visual Studio 创建新的 WPF 应用程序项目或 WPF 浏览器应用程序项目时, 默认情况下将包含应用程序定义, 并使用标记和代码隐藏来定义应用程序定义。  
+> 使用 Visual Studio 创建新的 WPF 应用程序项目或 WPF 浏览器应用程序项目时, 默认情况下将包含应用程序定义, 并使用标记和代码隐藏来定义应用程序定义。  
   
  至少要有这段代码，才能实现应用程序定义。 但是, 在生成和运行应用程序之前, 需要对应用程序定义进行附加的 MSBuild 配置。  
   
@@ -148,7 +148,7 @@ ms.locfileid: "68818018"
  [!code-vb[AppShowWindowHardSnippets#StartupEventCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/AppShowWindowHardSnippets/VisualBasic/Application.xaml.vb#startupeventcodebehind)]  
   
 > [!NOTE]
->  默认情况<xref:System.Windows.Window>下, 在独立应用程序中实例化的第一个将成为主应用程序窗口。 此<xref:System.Windows.Window> 对象<xref:System.Windows.Application.MainWindow%2A?displayProperty=nameWithType>由属性引用。 如果不同于第<xref:System.Windows.Application.MainWindow%2A>一个实例化<xref:System.Windows.Window>的窗口应为主窗口, 则可以通过编程方式更改属性的值。  
+> 默认情况<xref:System.Windows.Window>下, 在独立应用程序中实例化的第一个将成为主应用程序窗口。 此<xref:System.Windows.Window> 对象<xref:System.Windows.Application.MainWindow%2A?displayProperty=nameWithType>由属性引用。 如果不同于第<xref:System.Windows.Application.MainWindow%2A>一个实例化<xref:System.Windows.Window>的窗口应为主窗口, 则可以通过编程方式更改属性的值。  
   
  XBAP 首次启动时, 它很可能会导航到<xref:System.Windows.Controls.Page>。 以下代码对此进行了演示。  
   
@@ -170,7 +170,7 @@ ms.locfileid: "68818018"
  此标记的效果等同于用于打开窗口的上一段代码。  
   
 > [!NOTE]
->  有关导航的详细信息, 请参阅[导航概述](navigation-overview.md)。  
+> 有关导航的详细信息, 请参阅[导航概述](navigation-overview.md)。  
   
  如果需要使用非参数<xref:System.Windows.Application.Startup>构造函数来实例化该事件, 或者需要先设置其属性或订阅其事件, 然后再显示该事件, 或需要处理任何命令行参数, 则需要处理该事件以便打开。 <xref:System.Windows.Window>在启动应用程序时提供。  
   
@@ -219,7 +219,7 @@ ms.locfileid: "68818018"
  还<xref:System.Windows.Window>可以激活和停用。 有关更多信息，请参见<xref:System.Windows.Window.Activated?displayProperty=nameWithType>和<xref:System.Windows.Window.Deactivated?displayProperty=nameWithType>。  
   
 > [!NOTE]
->  对于 xbap <xref:System.Windows.Application.Deactivated?displayProperty=nameWithType> ,和都不会引发。<xref:System.Windows.Application.Activated?displayProperty=nameWithType>  
+> 对于 xbap <xref:System.Windows.Application.Deactivated?displayProperty=nameWithType> ,和都不会引发。<xref:System.Windows.Application.Activated?displayProperty=nameWithType>  
   
 <a name="Application_Shutdown"></a>   
 ### <a name="application-shutdown"></a>应用程序关闭  
@@ -236,7 +236,7 @@ ms.locfileid: "68818018"
  为帮助你管理应用程序关闭<xref:System.Windows.Application> , <xref:System.Windows.Application.Shutdown%2A>提供方法、 <xref:System.Windows.Application.ShutdownMode%2A>属性和<xref:System.Windows.Application.SessionEnding>和<xref:System.Windows.Application.Exit>事件。  
   
 > [!NOTE]
->  <xref:System.Windows.Application.Shutdown%2A>只能从具有<xref:System.Security.Permissions.UIPermission>的应用程序调用。 独立 WPF 应用程序始终具有此权限。 但是, 在 Internet 区域部分信任安全沙箱中运行的 Xbap 不会。  
+> <xref:System.Windows.Application.Shutdown%2A>只能从具有<xref:System.Security.Permissions.UIPermission>的应用程序调用。 独立 WPF 应用程序始终具有此权限。 但是, 在 Internet 区域部分信任安全沙箱中运行的 Xbap 不会。  
   
 #### <a name="shutdown-mode"></a>关闭模式  
  大多数应用程序会在所有窗口都关闭后或在主窗口关闭后关闭。 但是，有时，应用程序会在何时关闭取决于特定于应用程序的其他条件。 你可以通过<xref:System.Windows.Application.ShutdownMode%2A>使用以下<xref:System.Windows.ShutdownMode>枚举值之一来指定应用程序将关闭的条件:  
@@ -254,7 +254,7 @@ ms.locfileid: "68818018"
  如果有特定于应用程序的关闭条件, 则<xref:System.Windows.Application.ShutdownMode%2A>将<xref:System.Windows.ShutdownMode.OnExplicitShutdown>设置为。 在这种情况下, 您负责通过显式调用<xref:System.Windows.Application.Shutdown%2A>方法关闭应用程序, 否则即使关闭所有窗口, 应用程序仍将继续运行。 请注意<xref:System.Windows.Application.Shutdown%2A> , <xref:System.Windows.Application.ShutdownMode%2A>当为<xref:System.Windows.ShutdownMode.OnLastWindowClose>或<xref:System.Windows.ShutdownMode.OnMainWindowClose>时, 将隐式调用。  
   
 > [!NOTE]
->  <xref:System.Windows.Application.ShutdownMode%2A>可从 XBAP 设置, 但会被忽略。当在浏览器中离开 XBAP 时, 或者当承载 XBAP 的浏览器关闭时, XBAP 始终关闭。 有关详细信息，请参阅[导航概述](navigation-overview.md)。  
+> <xref:System.Windows.Application.ShutdownMode%2A>可从 XBAP 设置, 但会被忽略。当在浏览器中离开 XBAP 时, 或者当承载 XBAP 的浏览器关闭时, XBAP 始终关闭。 有关详细信息，请参阅[导航概述](navigation-overview.md)。  
   
 #### <a name="session-ending"></a>会话结束  
  <xref:System.Windows.Application.ShutdownMode%2A>属性描述的关闭条件是特定于应用程序的。 不过，在某些情况下，应用程序可能会因外部条件而关闭。 当用户通过以下操作结束 Windows 会话时, 将会出现最常见的外部情况:  
@@ -277,7 +277,7 @@ ms.locfileid: "68818018"
  在此示例中, 代码会检查<xref:System.Windows.SessionEndingCancelEventArgs.ReasonSessionEnding%2A>属性, 以确定如何结束 Windows 会话。 它会根据该值向用户显示确认消息。 如果用户不希望会话结束, 则代码会将设置<xref:System.ComponentModel.CancelEventArgs.Cancel%2A>为`true`以阻止 Windows 会话结束。  
   
 > [!NOTE]
->  <xref:System.Windows.Application.SessionEnding>对于 Xbap, 不会引发。
+> <xref:System.Windows.Application.SessionEnding>对于 Xbap, 不会引发。
 
 #### <a name="exit"></a>Exit  
  应用程序在关闭时可能需要执行一些最终处理，如保持应用程序状态。 对于这些情况, 可以处理<xref:System.Windows.Application.Exit>事件, 如以下示例中的`App_Exit`事件处理程序所示。 它在*应用程序 .xaml*文件中定义为事件处理程序。 它在*App.xaml.cs*和*应用程序 .xaml*文件中突出显示了其实现。
@@ -301,7 +301,7 @@ ms.locfileid: "68818018"
  在大多数情况下，应用程序由操作系统根据用户的请求来启动。 但是，应用程序也可由另一应用程序启动，以执行某项特定任务。 当被启动的应用程序关闭时，执行启动操作的应用程序可能想要了解导致被启动应用程序关闭的条件。 在这些情况下, Windows 允许应用程序在关闭时返回应用程序退出代码。 默认情况下, WPF 应用程序返回退出代码值0。  
   
 > [!NOTE]
->  当你从 Visual Studio 进行调试时, 应用程序退出代码将在应用程序关闭时显示在 "**输出**" 窗口中, 出现如下所示的消息:  
+> 当你从 Visual Studio 进行调试时, 应用程序退出代码将在应用程序关闭时显示在 "**输出**" 窗口中, 出现如下所示的消息:  
 >   
 >  `The program '[5340] AWPFApp.vshost.exe: Managed' has exited with code 0 (0x0).`  
 >   
@@ -315,7 +315,7 @@ ms.locfileid: "68818018"
  可以通过处理<xref:System.Windows.Application.Exit>事件来检测退出代码的值并对其进行更改。 向事件处理程序<xref:System.Windows.ExitEventArgs>传递, 该事件处理程序通过<xref:System.Windows.ExitEventArgs.ApplicationExitCode%2A>属性提供对退出代码的访问。 <xref:System.Windows.Application.Exit> 有关详细信息，请参阅 <xref:System.Windows.Application.Exit> 。  
   
 > [!NOTE]
->  可以在独立的应用程序和 Xbap 中设置退出代码。 但对于 Xbap, 将忽略退出代码值。  
+> 可以在独立的应用程序和 Xbap 中设置退出代码。 但对于 Xbap, 将忽略退出代码值。  
   
 <a name="Unhandled_Exceptions"></a>   
 ### <a name="unhandled-exceptions"></a>未经处理的异常  

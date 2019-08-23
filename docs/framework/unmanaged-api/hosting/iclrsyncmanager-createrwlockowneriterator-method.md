@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1951efecca6c81322c3a0753eaaf06e9651e3d39
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 64179e132cfaffbb1fcdc2cd0a47bbcc11be2ff0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759149"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69943262"
 ---
 # <a name="iclrsyncmanagercreaterwlockowneriterator-method"></a>ICLRSyncManager::CreateRWLockOwnerIterator 方法
-公共语言运行时 (CLR) 创建主机，用于确定读取器 / 编写器锁等待的任务集的迭代器的请求。  
+请求公共语言运行时 (CLR) 为主机创建迭代器, 以用于确定等待读取器-编写器锁的任务集。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,39 +38,39 @@ HRESULT CreateRWLockOwnerIterator (
   
 ## <a name="parameters"></a>参数  
  `cookie`  
- [in]与所需的读取器 / 编写器锁关联的 cookie。  
+ 中与所需的读取器锁关联的 cookie。  
   
  `pIterator`  
- [out]指向一个迭代器，可以传递给[GetRWLockOwnerNext](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-getrwlockownernext-method.md)并[DeleteRWLockOwnerIterator](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-deleterwlockowneriterator-method.md)方法。  
+ 弄指向可传递给[GetRWLockOwnerNext](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-getrwlockownernext-method.md)和[DeleteRWLockOwnerIterator](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-deleterwlockowneriterator-method.md)方法的迭代器的指针。  
   
 ## <a name="return-value"></a>返回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|`CreateRWLockOwnerIterator` 已成功返回。|  
-|HOST_E_CLRNOTAVAILABLE|CLR 尚未加载到进程中，或处于不能运行托管的代码或已成功处理调用的状态。|  
-|HOST_E_TIMEOUT|呼叫已超时。|  
+|S_OK|`CreateRWLockOwnerIterator`已成功返回。|  
+|HOST_E_CLRNOTAVAILABLE|CLR 未加载到进程中, 或 CLR 处于无法运行托管代码或成功处理调用的状态。|  
+|HOST_E_TIMEOUT|调用超时。|  
 |HOST_E_NOT_OWNER|调用方不拥有该锁。|  
-|HOST_E_ABANDONED|事件已取消时被阻塞的线程或纤程正在等待它。|  
-|E_FAIL|发生未知的灾难性故障。 如果某方法返回 E_FAIL，CLR 不再在进程内可用。 对托管方法的后续调用返回 HOST_E_CLRNOTAVAILABLE。|  
-|HOST_E_INVALIDOPERATION|`CreateRWLockOwnerIterator` 当前正在运行托管的代码的线程上调用。|  
+|HOST_E_ABANDONED|已阻止的线程或纤程正在等待某个事件时, 该事件被取消。|  
+|E_FAIL|发生未知的灾难性故障。 当方法返回 E_FAIL 时, CLR 在该进程内将不再可用。 对宿主方法的后续调用会返回 HOST_E_CLRNOTAVAILABLE。|  
+|HOST_E_INVALIDOPERATION|`CreateRWLockOwnerIterator`在当前正在运行托管代码的线程上调用了。|  
   
 ## <a name="remarks"></a>备注  
- 通常情况下调用主机`CreateRWLockOwnerIterator`， `DeleteRWLockOwnerIterator`，和`GetRWLockOwnerNext`期间死锁检测的方法。 主机负责确保读取器 / 编写器锁仍然有效，因为 CLR 不会尝试使读取器 / 编写器锁保持活动状态。 几种策略是可用于主机以确保锁的有效性：  
+ 在死锁检测`CreateRWLockOwnerIterator`期间`DeleteRWLockOwnerIterator`, 主机`GetRWLockOwnerNext`通常会调用、和方法。 宿主负责确保读取器-编写器锁仍有效, 因为 CLR 不会尝试使读取器-编写器锁保持活动状态。 主机可以使用多种策略来确保锁的有效性:  
   
-- 主机可以阻止读取器 / 编写器锁释放调用 (例如， [ihostsemaphore:: Releasesemaphore](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-releasesemaphore-method.md)) 同时确保此块不会导致死锁。  
+- 宿主可以阻止读取器-编写器锁 (例如, [IHostSemaphore:: ReleaseSemaphore](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-releasesemaphore-method.md)) 上的释放调用, 同时确保此块不会导致死锁。  
   
-- 主机可以阻止读取器 / 编写器锁，与关联的事件对象的等待退出同样可以确保此块不会导致死锁。  
+- 宿主可以阻止退出等待与读取器-编写器锁关联的事件对象, 并再次确保此块不会导致死锁。  
   
 > [!NOTE]
->  `CreateRWLockOwnerIterator` 必须仅在当前正在执行非托管的代码的线程上调用。  
+> `CreateRWLockOwnerIterator`只能在当前正在执行非托管代码的线程上调用。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
   
- **库：** 包含为 MSCorEE.dll 中的资源  
+ **类库**作为资源包括在 Mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

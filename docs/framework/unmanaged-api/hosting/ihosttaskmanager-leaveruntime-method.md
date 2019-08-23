@@ -17,18 +17,18 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 959cb541013ca0a26557e849874dbb329489d855
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8b2e8e636915b3921fcd727fc78a3fb18fc69104
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67749530"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69959043"
 ---
 # <a name="ihosttaskmanagerleaveruntime-method"></a>IHostTaskManager::LeaveRuntime 方法
-通知主机当前正在执行的任务是要保持公共语言运行时 (CLR)，然后输入非托管的代码。  
+通知宿主当前正在执行的任务即将离开公共语言运行时 (CLR) 并输入非托管代码。  
   
 > [!IMPORTANT]
->  相应地调用[ihosttaskmanager:: Enterruntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-enterruntime-method.md)通知主机当前正在执行的任务重新进入托管的代码。  
+> 对应的对[IHostTaskManager:: EnterRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-enterruntime-method.md)的调用会通知宿主当前正在执行的任务是重新进入托管代码。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,38 +40,38 @@ HRESULT LeaveRuntime (
   
 ## <a name="parameters"></a>参数  
  `target`  
- [in]要调用的非托管函数的映射可移植可执行文件内的地址。  
+ 中要调用的非托管函数的映射可移植可执行文件中的地址。  
   
 ## <a name="return-value"></a>返回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|`LeaveRuntime` 已成功返回。|  
-|HOST_E_CLRNOTAVAILABLE|CLR 尚未加载到进程中，或处于不能运行托管的代码或已成功处理调用的状态。|  
-|HOST_E_TIMEOUT|呼叫已超时。|  
+|S_OK|`LeaveRuntime`已成功返回。|  
+|HOST_E_CLRNOTAVAILABLE|CLR 未加载到进程中, 或 CLR 处于无法运行托管代码或成功处理调用的状态。|  
+|HOST_E_TIMEOUT|调用超时。|  
 |HOST_E_NOT_OWNER|调用方不拥有该锁。|  
-|HOST_E_ABANDONED|事件已取消时被阻塞的线程或纤程正在等待它。|  
-|E_FAIL|发生未知的灾难性故障。 如果某方法返回 E_FAIL，CLR 不再在进程内可用。 对托管方法的后续调用返回 HOST_E_CLRNOTAVAILABLE。|  
-|E_OUTOFMEMORY|没有足够的内存是可用于完成请求的分配。|  
+|HOST_E_ABANDONED|已阻止的线程或纤程正在等待某个事件时, 该事件被取消。|  
+|E_FAIL|发生未知的灾难性故障。 当方法返回 E_FAIL 时, CLR 在该进程内将不再可用。 对宿主方法的后续调用会返回 HOST_E_CLRNOTAVAILABLE。|  
+|E_OUTOFMEMORY|没有足够的内存可用来完成请求的分配。|  
   
 ## <a name="remarks"></a>备注  
- 可以嵌套到和从非托管代码的调用序列。 例如下, 表列出了在其中的假设情况下对的调用序列`LeaveRuntime`， [ihosttaskmanager:: Reverseenterruntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseenterruntime-method.md)， [ihosttaskmanager:: Reverseleaveruntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseleaveruntime-method.md)，和`IHostTaskManager::EnterRuntime`允许宿主确定嵌套的层。  
+ 与非托管代码之间的调用序列可以嵌套。 例如, 下面的列表描述了一种假设的情况, 在这种情况`LeaveRuntime`下, 对的调用序列、 [IHostTaskManager:: ReverseEnterRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseenterruntime-method.md)、 `IHostTaskManager::EnterRuntime` [IHostTaskManager:: ReverseLeaveRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseleaveruntime-method.md)和允许主机标识嵌套层。  
   
-|操作|相应的方法调用|  
+|操作|对应的方法调用|  
 |------------|-------------------------------|  
-|托管的 Visual Basic 可执行文件调用非托管的函数以 C 编写通过使用平台调用。|`IHostTaskManager::LeaveRuntime`|  
-|非托管的 C 函数调用编写的托管 DLL 中的方法C#。|`IHostTaskManager::ReverseEnterRuntime`|  
-|托管C#函数调用的以 C 编写的另一个非托管的函数，还使用平台调用。|`IHostTaskManager::LeaveRuntime`|  
-|第二个非托管的函数将返回到执行C#函数。|`IHostTaskManager::EnterRuntime`|  
-|C#函数返回第一个非托管函数执行。|`IHostTaskManager::ReverseLeaveRuntime`|  
-|第一个非托管的函数执行返回给 Visual Basic 程序。|`IHostTaskManager::EnterRuntime`|  
+|托管 Visual Basic 可执行文件使用平台调用来调用以 C 编写的非托管函数。|`IHostTaskManager::LeaveRuntime`|  
+|非托管 C 函数在编写的托管 DLL 中调用方法C#。|`IHostTaskManager::ReverseEnterRuntime`|  
+|托管C#函数调用另一个用 C 编写的非托管函数, 同时也使用平台调用。|`IHostTaskManager::LeaveRuntime`|  
+|第二个非托管函数会将C#执行返回给函数。|`IHostTaskManager::EnterRuntime`|  
+|C#函数会将执行返回到第一个非托管函数。|`IHostTaskManager::ReverseLeaveRuntime`|  
+|第一个非托管函数会将执行返回到 Visual Basic 程序。|`IHostTaskManager::EnterRuntime`|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
   
- **库：** 包含为 MSCorEE.dll 中的资源  
+ **类库**作为资源包括在 Mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

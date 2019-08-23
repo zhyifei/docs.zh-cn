@@ -7,28 +7,28 @@ helpviewer_keywords:
 - name conflicts [Visual Basic]
 - element names [Visual Basic], in code
 ms.assetid: 2e4e8e02-23f7-49b9-a1c8-2b0402b6b525
-ms.openlocfilehash: c247ada67f6554362f287cf252dd49856c4995da
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2e3613bd4a74da51cf7dbb63e52eddca811ca8e1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61955579"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69947665"
 ---
 # <a name="keywords-as-element-names-in-code-visual-basic"></a>代码中用作元素名称的关键字 (Visual Basic)
-任何程序元素，如变量、 类或成员，可以具有相同的名称与限制性关键字。 例如，可以创建一个名为变量`Loop`。 但是，来引用它的版本 — 有为受限制的相同名称`Loop`关键字，必须使用完全限定字符串在其之前或将其括在方括号 (`[ ]`)，如下面的示例所示。  
+任何程序元素 (例如变量、类或成员) 可以具有与受限制关键字相同的名称。 例如, 可以创建一个名为`Loop`的变量。 但是, 若要引用您的版本 (其名称与限制`Loop`关键字相同), 必须在其前面加上一个完全限定字符串或将其放在方括号 (`[ ]`) 中, 如下面的示例所示。  
   
  [!code-vb[VbVbcnConventions#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#8)]  
   
- 如果不做其中一种，则 Visual Basic 假设使用的是内部`Loop`关键字，并生成错误，如以下示例所示：  
+ 如果未执行上述任一操作, 则 Visual Basic 假设使用内部`Loop`关键字, 并产生错误, 如以下示例中所示:  
   
  `' The following statement causes a compiler error.`  
   
  `Loop.Visible = True`  
   
- 指窗体和控件，以及在可以使用方括号声明的变量或与限制性关键字定义具有相同名称的过程。 它可以很容易忘记限定名称或包含方括号，并因此将错误引入到你的代码，使其难以阅读。 出于此原因，我们建议不使用受限制的关键字作为程序元素的名称。 但是，如果将来的 Visual Basic 版本定义了一个新的关键字冲突，与现有窗体或控件名称，然后您可以使用这种方法更新你的代码时以使用新版本。  
+ 在引用窗体和控件时, 以及声明变量或定义与受限制关键字同名的过程时, 可以使用方括号。 很容易忘记限定名称或包含方括号, 进而将错误引入代码并使其更难阅读。 出于此原因, 我们建议不要使用受限制的关键字作为程序元素的名称。 但是, 如果 Visual Basic 的将来版本定义了与现有窗体或控件名称冲突的新关键字, 则在更新代码以使用新版本时, 可以使用此方法。  
   
 > [!NOTE]
->  程序还可能包括提供的其他引用的程序集的元素名称。 如果这些名称与受限制的关键字冲突，然后加上方括号括它们会导致 Visual Basic，若要将其解释为您定义的元素。  
+> 您的程序还可能包括由其他引用的程序集提供的元素名称。 如果这些名称与受限制的关键字冲突, 则在它们周围放置方括号会导致 Visual Basic 将它们解释为你定义的元素。  
   
 ## <a name="see-also"></a>请参阅
 

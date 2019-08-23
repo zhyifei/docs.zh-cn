@@ -3,12 +3,12 @@ title: 如何：使用 WIF 生成声明感知 ASP.NET Web 窗体应用程序
 ms.date: 03/30/2017
 ms.assetid: efb264dd-f47b-49a9-85ee-9f45d4425765
 author: BrucePerlerMS
-ms.openlocfilehash: 0d334faabb342ea351c2418c79a86443cb0ce98d
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: 82b0649a7324987581cc3c97570a0fc42ffdf6d6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64910585"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941286"
 ---
 # <a name="how-to-build-claims-aware-aspnet-web-forms-application-using-wif"></a>如何：使用 WIF 生成声明感知 ASP.NET Web 窗体应用程序
 ## <a name="applies-to"></a>适用于  
@@ -161,7 +161,7 @@ ms.locfileid: "64910585"
 2. 保存 Default.aspx 文件，然后打开名为 Default.aspx.cs 的代码隐藏文件。  
   
     > [!NOTE]
-    >  在解决方案资源管理器中，Default.aspx.cs 文件可能隐藏在 Default.aspx 文件下。 如果 Default.aspx.cs 文件不可见，请单击文件旁边的三角形，展开 Default.aspx。  
+    > 在解决方案资源管理器中，Default.aspx.cs 文件可能隐藏在 Default.aspx 文件下。 如果 Default.aspx.cs 文件不可见，请单击文件旁边的三角形，展开 Default.aspx。  
   
 3. 将 Default.aspx.cs 的 Page_Load 方法中的现有代码替换为以下代码：  
   

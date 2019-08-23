@@ -12,12 +12,12 @@ helpviewer_keywords:
 - mouse clicks [Windows Forms], simulating
 - mouse [Windows Forms], event simulation
 ms.assetid: 6abcb67e-3766-4af2-9590-bf5dabd17e41
-ms.openlocfilehash: 1d2e837ec13e6a0b507d004cd75c2f77ae0008dc
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 13ed0e5268f8bcfe2a504040803f3f96909657eb
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583401"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964266"
 ---
 # <a name="how-to-simulate-mouse-and-keyboard-events-in-code"></a>如何：在代码中模拟鼠标和键盘事件
 Windows 窗体提供多个选项，用于以编程方式模拟鼠标和键盘输入。 本主题将简要阐述这些选项。  
@@ -42,7 +42,7 @@ Windows 窗体提供多个选项，用于以编程方式模拟鼠标和键盘输
 >  如果你的应用程序旨在用于全球各种键盘，使用 <xref:System.Windows.Forms.SendKeys.Send%2A?displayProperty=nameWithType> 可能会产生不可预知的结果，应当避免。  
   
 > [!NOTE]
->  <xref:System.Windows.Forms.SendKeys> 类已更新为 .NET Framework 3.0，从而可用于在 Windows Vista 上运行的应用程序。 Windows Vista 增强的安全性（称为用户帐户控件或 UAC）可避免以前的实现按预期运行。  
+> <xref:System.Windows.Forms.SendKeys> 类已更新为 .NET Framework 3.0，从而可用于在 Windows Vista 上运行的应用程序。 Windows Vista 增强的安全性（称为用户帐户控件或 UAC）可避免以前的实现按预期运行。  
 >   
 >  <xref:System.Windows.Forms.SendKeys> 类容易遭受某些开发人员不得不解决的计时问题。 更新后的实现仍然容易遇到计时问题，但速度稍微快一些，并且可能需要更改解决方法。 <xref:System.Windows.Forms.SendKeys> 类先尝试使用以前的实现，失败后再使用新的实现。 因此， <xref:System.Windows.Forms.SendKeys> 类在不同操作系统上的运行方式可能不同。 此外，当 <xref:System.Windows.Forms.SendKeys> 类使用新的实现时， <xref:System.Windows.Forms.SendKeys.SendWait%2A> 方法不会等到消息被处理后才将其发送至其他进程。  
 >   
@@ -69,7 +69,7 @@ Windows 窗体提供多个选项，用于以编程方式模拟鼠标和键盘输
 1. 激活将接收击键的应用程序窗口，然后调用 <xref:System.Windows.Forms.SendKeys.Send%2A> 或 <xref:System.Windows.Forms.SendKeys.SendWait%2A> 方法。 由于托管的方法均不会激活其他应用程序，所以必须使用本机 Windows 方法将焦点强制设置到其他应用程序上。 下面的代码示例使用平台调用来调用 `FindWindow` 和 `SetForegroundWindow` 方法以激活计算器应用程序窗口，然后调用 <xref:System.Windows.Forms.SendKeys.SendWait%2A> 向计算器应用程序发出一系列计算。  
   
     > [!NOTE]
-    >  可查找计算器应用程序的 `FindWindow` 调用的正确参数因 Windows 版本而异。  下面的代码查找 [!INCLUDE[win7](../../../includes/win7-md.md)]上的计算器应用程序。 在 [!INCLUDE[windowsver](../../../includes/windowsver-md.md)]上，将第一个参数更改为“SciCalc”。 可使用 Spy++ 工具（Visual Studio 附带）确定正确的参数。  
+    > 可查找计算器应用程序的 `FindWindow` 调用的正确参数因 Windows 版本而异。  下面的代码查找 [!INCLUDE[win7](../../../includes/win7-md.md)]上的计算器应用程序。 在 [!INCLUDE[windowsver](../../../includes/windowsver-md.md)]上，将第一个参数更改为“SciCalc”。 可使用 Spy++ 工具（Visual Studio 附带）确定正确的参数。  
   
      [!code-cpp[System.Windows.Forms.SimulateKeyPress#5](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/cpp/form1.cpp#5)]
      [!code-csharp[System.Windows.Forms.SimulateKeyPress#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/CS/form1.cs#5)]

@@ -2,23 +2,23 @@
 title: 如何：分析字符串 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 896e1b4b-f9bd-4975-8bc1-55b6badce1ac
-ms.openlocfilehash: 815e94b3b41c2c0cc1d18d598307ab292919bea4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b97ce93c1018ec48649ab8b259d5f1a07109b9fe
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61942592"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956379"
 ---
 # <a name="how-to-parse-a-string-visual-basic"></a>如何：分析字符串 (Visual Basic)
-本主题演示如何创建 XML 树中的C#。  
+本主题说明如何在中C#创建 XML 树。  
   
 ## <a name="example"></a>示例  
- 可以通过分析在 Visual Basic 中的字符串`XElement.Parse`方法。 但是，它是使用 XML 文本中所示下面的代码，因为 XML 文本不会受到相同的性能损失，从字符串分析 XML 那样更加高效。  
+ 您可以使用`XElement.Parse`方法分析 Visual Basic 中的字符串。 但是, 使用 XML 文本比使用 XML 文本更高效, 如以下代码所示, 因为 XML 文本与从字符串分析 XML 相比, 其性能会受到影响。  
   
- 通过使用 XML 文本，可以只需复制并将 XML 粘贴到 Visual Basic 程序。  
+ 通过使用 XML 文本, 只需将 XML 复制并粘贴到 Visual Basic 程序中即可。  
   
 > [!NOTE]
->  分析文本或从文本文件加载 XML 文档比函数构造的效率更低。 如果要从代码初始化 XML 树，使用函数构造比分析文本所占用的处理器时间更少。  
+> 分析文本或从文本文件加载 XML 文档比函数构造的效率更低。 如果要从代码初始化 XML 树，使用函数构造比分析文本所占用的处理器时间更少。  
   
 ```vb  
 Dim contacts as XElement = _  

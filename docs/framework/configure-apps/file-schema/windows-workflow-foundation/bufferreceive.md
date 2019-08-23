@@ -3,20 +3,20 @@ title: <bufferReceive>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: b23c3a54-10d4-4f13-ab6d-98b26b76f22a
-ms.openlocfilehash: 360d26fda964fa33640e833ad22dab7e06e153f6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1d4611d6fee9dad057985f7d8f5ef961d384efcd
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790255"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69945977"
 ---
 # <a name="bufferreceive"></a>\<bufferReceive>
 一种服务行为，允许服务使用缓冲接收处理，以使工作流服务能够处理无序消息。  
   
 \<system.ServiceModel>  
-\<behaviors>  
+\<行为 >  
 \<serviceBehaviors>  
-\<behavior>  
+\<行为 >  
 \<bufferReceive>  
   
 ## <a name="syntax"></a>语法  
@@ -47,7 +47,7 @@ ms.locfileid: "61790255"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<行为 > 的\<serviceBehaviors >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/behavior-of-servicebehaviors-of-workflow.md)|指定行为元素。|  
+|[\<serviceBehaviors > 的\<行为 >](behavior-of-servicebehaviors-of-workflow.md)|指定行为元素。|  
   
 ## <a name="see-also"></a>请参阅
 

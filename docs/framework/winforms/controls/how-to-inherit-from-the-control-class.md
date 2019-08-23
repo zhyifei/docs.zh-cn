@@ -8,12 +8,12 @@ helpviewer_keywords:
 - OnPaint method [Windows Forms]
 - custom controls [Windows Forms], creating
 ms.assetid: 46ba0df3-5cf7-443c-a3b4-a72660172476
-ms.openlocfilehash: 535827db660ab1113a25a01b7a0553a1c4414c74
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 0cb63be6774fd82cd94a1bc59b8a1025efa47df5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69037787"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966571"
 ---
 # <a name="how-to-inherit-from-the-control-class"></a>如何：从 Control 类继承
 如果要创建完全自定义的控件以在 Windows 窗体上使用, 应从<xref:System.Windows.Forms.Control>类继承。 从<xref:System.Windows.Forms.Control>类继承时, 需要执行更多规划和实现, 它还提供了最大范围的选项。 从<xref:System.Windows.Forms.Control>继承时, 您将继承使控件工作的非常基本的功能。 <xref:System.Windows.Forms.Control>类中固有的功能通过键盘和鼠标处理用户输入, 定义控件的边界和大小, 提供 windows 句柄, 并提供消息处理和安全性。 它没有纳入任何绘图功能（这里指的是控件的图形界面的实际呈现），也没有纳入任何特定的用户交互功能。 必须通过自定义代码提供所有的这些功能。
@@ -46,5 +46,5 @@ ms.locfileid: "69037787"
 - [如何：从 UserControl 类继承](how-to-inherit-from-the-usercontrol-class.md)
 - [如何：从现有 Windows 窗体控件继承](how-to-inherit-from-existing-windows-forms-controls.md)
 - [如何：Windows 窗体的创作控件](how-to-author-controls-for-windows-forms.md)
-- [Visual Basic 中继承的事件处理程序疑难解答](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)
+- [Visual Basic 中继承的事件处理程序疑难解答](../../../visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)
 - [设计时开发 Windows 窗体控件](developing-windows-forms-controls-at-design-time.md)

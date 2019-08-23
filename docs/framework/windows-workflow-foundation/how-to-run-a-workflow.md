@@ -5,25 +5,25 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f814ff82-fe2b-4614-aebb-b768c3e61179
-ms.openlocfilehash: a7784f37c9e8009adc3735974a6fb0423f24ea37
-ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
+ms.openlocfilehash: 3badda7afeb25b44b0de574f97452d05efe75bfc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68238517"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962291"
 ---
 # <a name="how-to-run-a-workflow"></a>如何：运行工作流
-本主题是 Windows Workflow Foundation 入门教程的延续，讨论如何创建工作流宿主并运行在以前定义的工作流[如何：创建工作流](how-to-create-a-workflow.md)主题。
+本主题是 Windows Workflow Foundation 入门教程的延续, 讨论如何创建工作流宿主并运行在前面[的如何:创建工作流](how-to-create-a-workflow.md)主题。
 
 > [!NOTE]
->  入门教程中的每个主题都依赖于前面的主题。 若要完成本主题，必须首先完成[如何：创建活动](how-to-create-an-activity.md)和[如何：创建工作流](how-to-create-a-workflow.md)。
+> 入门教程中的每个主题都依赖于前面的主题。 若要完成本主题, 必须先[完成以下操作:创建活动](how-to-create-an-activity.md)和[如何:创建工作流](how-to-create-a-workflow.md)。
 
 > [!NOTE]
->  若要下载完整版教程，请参阅 [Windows Workflow Foundation (WF45) — 入门教程](https://go.microsoft.com/fwlink/?LinkID=248976)。  
+> 若要下载完整版教程，请参阅 [Windows Workflow Foundation (WF45) — 入门教程](https://go.microsoft.com/fwlink/?LinkID=248976)。  
   
 ### <a name="to-create-the-workflow-host-project"></a>创建工作流宿主项目  
   
-1. 从以前打开的解决方案[如何：创建活动](how-to-create-an-activity.md)通过使用 Visual Studio 2012 的主题。  
+1. 打开之前[如何:使用 Visual Studio](how-to-create-an-activity.md) 2012 创建活动主题。  
   
 2. 在 **解决方案资源管理器** 中右键单击 **WF45GettingStartedTutorial** 解决方案，选择 **“添加”** 和 **“新建项目”** 。  
   
@@ -33,9 +33,9 @@ ms.locfileid: "68238517"
 3. 在 **“已安装”** 节点中，选择 **“Visual C#”** 、 **“工作流”** （或 **“Visual Basic”** 、 **“工作流”** ）。
 
     > [!NOTE]
-    >  根据在 Visual Studio 中配置为主要语言的编程语言的不同， **“Visual C#”** 或 **“Visual Basic”** 节点可能位于 **“已安装”** 节点下的 **“其他语言”** 节点中。
+    > 根据在 Visual Studio 中配置为主要语言的编程语言的不同， **“Visual C#”** 或 **“Visual Basic”** 节点可能位于 **“已安装”** 节点下的 **“其他语言”** 节点中。
 
-     请确保在 .NET Framework 版本下拉列表中选择 **“.NET Framework 4.5”** 。 从 **“工作流”** 列表中选择 **“工作流控制台应用程序”** 。 类型`NumberGuessWorkflowHost`成**名称**框，然后单击**确定**。 这将创建适合初学者的工作流应用程序，它具备基本的工作流承载支持。 基本承载代码将修改用于运行工作流应用程序。
+     请确保在 .NET Framework 版本下拉列表中选择 **“.NET Framework 4.5”** 。 从 **“工作流”** 列表中选择 **“工作流控制台应用程序”** 。 在`NumberGuessWorkflowHost` "**名称**" 框中键入, 然后单击 **"确定"** 。 这将创建适合初学者的工作流应用程序，它具备基本的工作流承载支持。 基本承载代码将修改用于运行工作流应用程序。
 
 4. 在 **解决方案资源管理器** 中右键单击新添加的 **NumberGuessWorkflowHost** ，然后选择 **“添加引用”** 。 在 **“添加引用”** 列表中选择 **“解决方案”** ，选中 **NumberGuessWorkflowActivities**旁边的复选框，然后单击 **“确定”** 。
 
@@ -77,7 +77,7 @@ ms.locfileid: "68238517"
      用以下基本 <xref:System.Activities.WorkflowInvoker> 承载代码替换使用 <xref:System.Activities.WorkflowApplication> 的代码行。 此示例承载代码演示承载和调用工作流的基本步骤，但尚不包含用于成功运行本主题中的工作流的功能。 在以下步骤中，将修改此基本代码并添加其他功能，直到完成应用程序。
 
     > [!NOTE]
-    >  请替换`Workflow1`在这些示例中使用`FlowchartNumberGuessWorkflow`， `SequentialNumberGuessWorkflow`，或`StateMachineNumberGuessWorkflow`，具体在以前完成的工作流取决于[如何：创建工作流](how-to-create-a-workflow.md)步骤。 如果不替换 `Workflow1` ，在尝试生成或运行工作流时会出现生成错误。
+    > 请将`Workflow1`这些示例中的`FlowchartNumberGuessWorkflow`替换`SequentialNumberGuessWorkflow`为、 `StateMachineNumberGuessWorkflow`或, 具体取决于你在前面[的如何:创建工作流](how-to-create-a-workflow.md)步骤。 如果不替换 `Workflow1` ，在尝试生成或运行工作流时会出现生成错误。
 
      [!code-csharp[CFX_WF_GettingStarted#4](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/extrasnippets.cs#4)]
      [!code-vb[CFX_WF_GettingStarted#4](~/samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/extrasnippets.vb#4)]
@@ -94,7 +94,7 @@ ms.locfileid: "68238517"
 2. 将创建新 <xref:System.Activities.WorkflowApplication> 的代码行替换为以下代码，该代码创建一个参数字典并在创建后将其传递给工作流。
 
     > [!NOTE]
-    >  请替换`Workflow1`在这些示例中使用`FlowchartNumberGuessWorkflow`， `SequentialNumberGuessWorkflow`，或`StateMachineNumberGuessWorkflow`，具体在以前完成的工作流取决于[如何：创建工作流](how-to-create-a-workflow.md)步骤。 如果不替换 `Workflow1` ，在尝试生成或运行工作流时会出现生成错误。
+    > 请将`Workflow1`这些示例中的`FlowchartNumberGuessWorkflow`替换`SequentialNumberGuessWorkflow`为、 `StateMachineNumberGuessWorkflow`或, 具体取决于你在前面[的如何:创建工作流](how-to-create-a-workflow.md)步骤。 如果不替换 `Workflow1` ，在尝试生成或运行工作流时会出现生成错误。
 
      [!code-csharp[CFX_WF_GettingStarted#6](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/program.cs#6)]
      [!code-vb[CFX_WF_GettingStarted#6](~/samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/module1.vb#6)]
@@ -123,7 +123,7 @@ ms.locfileid: "68238517"
      每次工作流变为空闲状态等待下一个猜测时，都会调用此处理程序并设置 `idleAction` <xref:System.Threading.AutoResetEvent> 。 下面步骤中的代码使用 `idleEvent` 和 `syncEvent` 来确定工作流是在等待下一个猜测还是已完成。
 
     > [!NOTE]
-    >  在本示例中，宿主应用程序在 <xref:System.Activities.WorkflowApplication.Completed%2A> 和 <xref:System.Activities.WorkflowApplication.Idle%2A> 处理程序中使用自动重置事件将宿主应用程序与工作流的进度同步。 在继续执行书签之前，不需要阻止并等待工作流变为空闲状态，但在此示例中需要同步事件，以使宿主知道工作流是否已完成，或是否在等待使用 <xref:System.Activities.Bookmark>的更多用户输入。 有关详细信息，请参阅[书签](bookmarks.md)。
+    > 在本示例中，宿主应用程序在 <xref:System.Activities.WorkflowApplication.Completed%2A> 和 <xref:System.Activities.WorkflowApplication.Idle%2A> 处理程序中使用自动重置事件将宿主应用程序与工作流的进度同步。 在继续执行书签之前，不需要阻止并等待工作流变为空闲状态，但在此示例中需要同步事件，以使宿主知道工作流是否已完成，或是否在等待使用 <xref:System.Activities.Bookmark>的更多用户输入。 有关详细信息, 请参阅[书签](bookmarks.md)。
 
 3. 移除对 `WaitOne`的调用，并替换为收集用户输入并恢复 <xref:System.Activities.Bookmark>的代码。
 
@@ -148,13 +148,13 @@ ms.locfileid: "68238517"
      [!code-csharp[CFX_WF_GettingStarted#6](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/program.cs#6)]
      [!code-vb[CFX_WF_GettingStarted#6](~/samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/module1.vb#6)]
 
-     有关如何向工作流应用程序添加持久性的说明，请参阅下一主题[如何：创建和运行长时间运行工作流](how-to-create-and-run-a-long-running-workflow.md)。
+     有关如何向工作流应用程序添加持久性的说明, 请参阅下一主题[how to:创建并运行长时间运行的](how-to-create-and-run-a-long-running-workflow.md)工作流。
 
 ## <a name="example"></a>示例
  下面的示例是 `Main` 方法的完整代码清单。
 
 > [!NOTE]
->  请替换`Workflow1`在这些示例中使用`FlowchartNumberGuessWorkflow`， `SequentialNumberGuessWorkflow`，或`StateMachineNumberGuessWorkflow`，具体在以前完成的工作流取决于[如何：创建工作流](how-to-create-a-workflow.md)步骤。 如果不替换 `Workflow1` ，在尝试生成或运行工作流时会出现生成错误。
+> 请将`Workflow1`这些示例中的`FlowchartNumberGuessWorkflow`替换`SequentialNumberGuessWorkflow`为、 `StateMachineNumberGuessWorkflow`或, 具体取决于你在前面[的如何:创建工作流](how-to-create-a-workflow.md)步骤。 如果不替换 `Workflow1` ，在尝试生成或运行工作流时会出现生成错误。
 
  [!code-csharp[CFX_WF_GettingStarted#12](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/program.cs#12)]
  [!code-vb[CFX_WF_GettingStarted#12](~/samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/module1.vb#12)]
@@ -166,6 +166,6 @@ ms.locfileid: "68238517"
 - [Windows Workflow Foundation 编程](programming.md)
 - [入门教程](getting-started-tutorial.md)
 - [如何：创建工作流](how-to-create-a-workflow.md)
-- [如何：创建和运行长时间运行工作流](how-to-create-and-run-a-long-running-workflow.md)
+- [如何：创建并运行长时间运行的工作流](how-to-create-and-run-a-long-running-workflow.md)
 - [在工作流中等待输入](waiting-for-input-in-a-workflow.md)
 - [托管工作流](hosting-workflows.md)

@@ -4,21 +4,21 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - attaching extensions using behaviors [WCF]
 ms.assetid: 149b99b6-6eb6-4f45-be22-c967279677d9
-ms.openlocfilehash: 297a951e4678e05da73193133bd6050360b041ff
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 481e0983a40bb551d08894ea32f76f332b8fe5a3
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64587328"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69943137"
 ---
 # <a name="configuring-and-extending-the-runtime-with-behaviors"></a>使用行为配置和扩展运行时
-行为，可以修改默认行为并添加自定义扩展插件的检查和验证服务配置或修改 Windows Communication Foundation (WCF) 客户端和服务应用程序中的运行时行为。 本主题说明行为接口、如何实现这些接口以及如何以编程方式将它们添加到服务说明（在服务应用程序中）或终结点（在客户端应用程序中）或配置文件中。 有关使用系统提供的行为的详细信息，请参阅[指定服务运行时行为](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md)并[指定客户端运行时行为](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md)。  
+利用行为, 你可以修改默认行为, 并添加用于检查和验证服务配置或修改 Windows Communication Foundation (WCF) 客户端和服务应用程序中的运行时行为的自定义扩展。 本主题说明行为接口、如何实现这些接口以及如何以编程方式将它们添加到服务说明（在服务应用程序中）或终结点（在客户端应用程序中）或配置文件中。 有关使用系统提供的行为的详细信息, 请参阅[指定服务运行时行为](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md)和[指定客户端运行时行为](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md)。  
   
 ## <a name="behaviors"></a>Behaviors  
- 行为类型将添加到服务或服务终结点说明对象 (服务或客户端上分别) 这些对象用于通过 Windows Communication Foundation (WCF) 创建的 WCF 服务或 WCF 客户端执行的运行时之前。 在运行时构造过程中调用这些行为时，这些行为可以访问运行时属性和方法以修改由协定、绑定和地址构造的运行时。  
+ 行为类型分别添加到服务或服务终结点说明对象 (在服务或客户端上), 然后 Windows Communication Foundation (WCF) 使用这些对象创建执行 WCF 服务或 WCF 客户端的运行时。 在运行时构造过程中调用这些行为时，这些行为可以访问运行时属性和方法以修改由协定、绑定和地址构造的运行时。  
   
 ### <a name="behavior-methods"></a>行为方法  
- 所有行为都具有`AddBindingParameters`方法，`ApplyDispatchBehavior`方法，`Validate`方法，和一个`ApplyClientBehavior`方法有一个例外：因为<xref:System.ServiceModel.Description.IServiceBehavior>不能执行在客户端，它不实现`ApplyClientBehavior`。  
+ 所有行为都有`AddBindingParameters`一个方法、 `ApplyDispatchBehavior`一个方法、 `Validate` `ApplyClientBehavior`一个方法和一个方法, 但有一个例外:由于<xref:System.ServiceModel.Description.IServiceBehavior>无法在客户端中执行, 因此它不`ApplyClientBehavior`实现。  
   
 - 使用 `AddBindingParameters` 方法可修改自定义对象或将自定义对象添加到集合，在构造运行时时，自定义绑定可以访问该集合以使这些对象。 例如，可能会指定影响通道生成方式的保护要求，但通道开发人员可能并不知道这些保护要求。  
   
@@ -27,16 +27,16 @@ ms.locfileid: "64587328"
 - 使用 `ApplyDispatchBehavior` 和 `ApplyClientBehavior` 方法可检查说明树并在服务或客户端上修改特定范围的运行时。 也可以插入扩展对象。  
   
     > [!NOTE]
-    >  尽管在这些方法中提供了说明树，但它仅限用于检查。 如果修改了说明树，则行为将是不确定的。  
+    > 尽管在这些方法中提供了说明树，但它仅限用于检查。 如果修改了说明树，则行为将是不确定的。  
   
  可以修改的属性和可以实现的自定义接口可通过服务和客户端运行时类访问。 服务类型为 <xref:System.ServiceModel.Dispatcher.DispatchRuntime> 和 <xref:System.ServiceModel.Dispatcher.DispatchOperation> 类。 客户端类型为 <xref:System.ServiceModel.Dispatcher.ClientRuntime> 和 <xref:System.ServiceModel.Dispatcher.ClientOperation> 类。 <xref:System.ServiceModel.Dispatcher.ClientRuntime> 和 <xref:System.ServiceModel.Dispatcher.DispatchRuntime> 类是分别访问客户端范围和服务范围运行时属性和扩展集合的扩展入口点。 同样，<xref:System.ServiceModel.Dispatcher.ClientOperation> 和 <xref:System.ServiceModel.Dispatcher.DispatchOperation> 类分别公开客户端操作和服务操作运行时属性和扩展集合。 但您可以从操作运行时对象访问更广范围的运行时对象，如果需要，反之亦然。  
   
 > [!NOTE]
->  运行时属性和可用于修改客户端的执行行为的扩展类型的讨论，请参阅[扩展客户端](../../../../docs/framework/wcf/extending/extending-clients.md)。 运行时属性和可用于修改服务调度程序的执行行为的扩展类型的讨论，请参阅[扩展调度程序](../../../../docs/framework/wcf/extending/extending-dispatchers.md)。  
+> 有关可用于修改客户端执行行为的运行时属性和扩展类型的讨论, 请参阅[扩展客户端](../../../../docs/framework/wcf/extending/extending-clients.md)。 有关可用于修改服务调度程序执行行为的运行时属性和扩展类型的讨论, 请参阅[扩展调度](../../../../docs/framework/wcf/extending/extending-dispatchers.md)程序。  
   
- 大多数 WCF 用户不直接调用交互与运行时而是使用核心编程模型结构，比如终结点、 协定、 绑定、 地址和行为属性上类或在配置文件中的行为。 这些结构构成*说明树*，这是完整的规范，用于构造运行时以支持服务或客户端所述的说明树。  
+ 大多数 WCF 用户不会直接与运行时交互;相反, 它们在配置文件中使用类或行为的核心编程模型构造, 如终结点、协定、绑定、地址和行为特性。 这些构造构成了*说明树*, 它是构造运行时以支持说明树描述的服务或客户端的完整规范。  
   
- 有四种类型的 WCF 中的行为：  
+ WCF 中有四种行为:  
   
 - 服务行为（<xref:System.ServiceModel.Description.IServiceBehavior> 类型）启用整个服务运行时（包括 <xref:System.ServiceModel.ServiceHostBase>）的自定义。  
   
@@ -65,24 +65,24 @@ ms.locfileid: "64587328"
   
 3. 实现用于扩展配置的自定义 <xref:System.ServiceModel.Configuration.BehaviorExtensionElement>。 这将允许在应用程序配置文件中使用服务行为。  
   
- WCF 中的服务行为的示例包括<xref:System.ServiceModel.ServiceBehaviorAttribute>属性， <xref:System.ServiceModel.Description.ServiceThrottlingBehavior>，和<xref:System.ServiceModel.Description.ServiceMetadataBehavior>行为。  
+ WCF 中服务行为的示例包括<xref:System.ServiceModel.ServiceBehaviorAttribute>属性<xref:System.ServiceModel.Description.ServiceThrottlingBehavior>、和<xref:System.ServiceModel.Description.ServiceMetadataBehavior>行为。  
   
 #### <a name="contract-behaviors"></a>协定行为  
  协定行为实现 <xref:System.ServiceModel.Description.IContractBehavior> 接口，它用于在协定范围内扩展客户端和服务运行时。  
   
- 向协定中添加协定行为有两种方式。  第一种方式是创建要在协定接口上使用的自定义属性。 当协定接口传递给<xref:System.ServiceModel.ServiceHost>或<xref:System.ServiceModel.ChannelFactory%601>，WCF 检查接口上的属性。 如果任何属性是 <xref:System.ServiceModel.Description.IContractBehavior> 的实现，则会将其添加到为该接口创建的 <xref:System.ServiceModel.Description.ContractDescription?displayProperty=nameWithType> 上的行为集合中。  
+ 向协定中添加协定行为有两种方式。  第一种方式是创建要在协定接口上使用的自定义属性。 当协定接口传递到<xref:System.ServiceModel.ServiceHost> <xref:System.ServiceModel.ChannelFactory%601>或时, WCF 将检查该接口上的特性。 如果任何属性是 <xref:System.ServiceModel.Description.IContractBehavior> 的实现，则会将其添加到为该接口创建的 <xref:System.ServiceModel.Description.ContractDescription?displayProperty=nameWithType> 上的行为集合中。  
   
  也可以在自定义协定行为属性上实现 <xref:System.ServiceModel.Description.IContractBehaviorAttribute?displayProperty=nameWithType>。 在这种情况下，当应用于以下对象时，行为如下所述：  
   
- • 协定接口。 在这种情况下，该行为应用到所有终结点中该类型的所有协定，WCF 将忽略的值<xref:System.ServiceModel.Description.IContractBehaviorAttribute.TargetContract%2A?displayProperty=nameWithType>属性。  
+ • 协定接口。 在这种情况下, 该行为将应用到任何终结点中该类型的所有协定, WCF 将忽略<xref:System.ServiceModel.Description.IContractBehaviorAttribute.TargetContract%2A?displayProperty=nameWithType>该属性的值。  
   
  • 服务类。 在此情况下，该行为只应用到其协定是 <xref:System.ServiceModel.Description.IContractBehaviorAttribute.TargetContract%2A> 属性的值的终结点。  
   
- • 回调类。 在这种情况下，该行为应用到双工客户端的终结点和 WCF 将忽略的值<xref:System.ServiceModel.Description.IContractBehaviorAttribute.TargetContract%2A>属性。  
+ • 回调类。 在这种情况下, 该行为将应用到双工客户端的终结点, WCF 将<xref:System.ServiceModel.Description.IContractBehaviorAttribute.TargetContract%2A>忽略属性的值。  
   
  第二种方式是将该行为添加到 <xref:System.ServiceModel.Description.ContractDescription> 上的行为集合中。  
   
- WCF 中的协定行为的示例包括<xref:System.ServiceModel.DeliveryRequirementsAttribute?displayProperty=nameWithType>属性。 有关更多信息和示例，请参见参考主题。  
+ WCF 中协定行为的示例包括<xref:System.ServiceModel.DeliveryRequirementsAttribute?displayProperty=nameWithType>特性。 有关更多信息和示例，请参见参考主题。  
   
 #### <a name="endpoint-behaviors"></a>终结点行为  
  终结点行为实现 <xref:System.ServiceModel.Description.IEndpointBehavior>，它是赖以修改特定终结点的整个服务或客户端运行时的主要机制。  
@@ -98,11 +98,11 @@ ms.locfileid: "64587328"
 #### <a name="operation-behaviors"></a>操作行为  
  操作行为实现 <xref:System.ServiceModel.Description.IOperationBehavior> 接口，用于扩展每个操作的客户端和服务运行时。  
   
- 向操作中添加操作行为有两种方式。 第一种方式是创建要在对操作建模的方法上使用的自定义属性。 当某项操作添加到<xref:System.ServiceModel.ServiceHost>或<xref:System.ServiceModel.ChannelFactory>，WCF 添加所有<xref:System.ServiceModel.Description.IOperationBehavior>上的特性的行为集合到<xref:System.ServiceModel.Description.OperationDescription>创建为该操作。  
+ 向操作中添加操作行为有两种方式。 第一种方式是创建要在对操作建模的方法上使用的自定义属性。 <xref:System.ServiceModel.ServiceHost>将操作添加到<xref:System.ServiceModel.ChannelFactory>或时, WCF 会将所有<xref:System.ServiceModel.Description.IOperationBehavior>特性添加到为该操作创建的<xref:System.ServiceModel.Description.OperationDescription>上的行为集合中。  
   
  第二种方式是直接将该行为添加到所构造的 <xref:System.ServiceModel.Description.OperationDescription> 上的行为集合中。  
   
- WCF 中的操作行为的示例包括<xref:System.ServiceModel.OperationBehaviorAttribute>和<xref:System.ServiceModel.TransactionFlowAttribute>。  
+ WCF 中的操作行为的示例包括<xref:System.ServiceModel.OperationBehaviorAttribute> <xref:System.ServiceModel.TransactionFlowAttribute>和。  
   
  有关更多信息和示例，请参见参考主题。  
   
@@ -110,7 +110,7 @@ ms.locfileid: "64587328"
  服务和终结点以及协定行为可以设计成使用代码或属性进行指定；只有服务和终结点行为才可以使用应用程序或 Web 配置文件进行配置。 使用属性来公开行为可以让开发人员在编辑时指定行为，而该行为在运行时是无法添加、删除或修改的。 这种方式通常适合于服务的正确操作始终需要的那些行为（例如 <xref:System.ServiceModel.ServiceBehaviorAttribute?displayProperty=nameWithType> 属性的事务相关参数）。 使用配置来公开行为可以让开发人员将这些行为的指定和配置留给部署服务的那些人去完成。 这种方式适合于作为可选组件或其他特定于部署的配置的行为，比如是否为服务或服务的特定授权配置公开元数据。  
   
 > [!NOTE]
->  也可以使用支持配置的行为，并通过将这些行为插入到 machine.config 配置文件并锁定这些项来强制执行公司的应用程序策略。 有关说明和示例，请参阅[如何：在企业中的锁定终结点](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md)。  
+> 也可以使用支持配置的行为，并通过将这些行为插入到 machine.config 配置文件并锁定这些项来强制执行公司的应用程序策略。 有关说明和示例, 请参阅[如何:锁定企业](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md)中的终结点。  
   
  若要使用配置来公开行为，开发人员必须创建 <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> 的派生类，然后向配置注册该扩展。  
   
@@ -181,7 +181,7 @@ protected override object CreateBehavior()
 </configuration>  
 ```  
   
- 其中`Microsoft.WCF.Documentation.EndpointBehaviorMessageInspector`是行为扩展类型和`HostApplication`是此类编译到程序集的名称。  
+ 其中`Microsoft.WCF.Documentation.EndpointBehaviorMessageInspector`是行为扩展类型, `HostApplication`是已编译该类的程序集的名称。  
   
 ### <a name="evaluation-order"></a>计算顺序  
  <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType> 和 <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> 负责从编程模型和说明生成运行时。 如前面所述，行为可在服务、终结点、协定和操作中参与该生成过程。  

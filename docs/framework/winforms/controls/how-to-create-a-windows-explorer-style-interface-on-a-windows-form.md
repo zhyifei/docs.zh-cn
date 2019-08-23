@@ -6,12 +6,12 @@ helpviewer_keywords:
 - SplitContainer control [Windows Forms], Explorer-style interface
 - forms [Windows Forms], Windows Explorer type
 ms.assetid: 9a3d5f4f-5dda-4350-9ad5-57ce5976dc47
-ms.openlocfilehash: db2c5431dfb0156c1508a18ef13d2af80eb4981b
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 34a5cd735c350688d9e83003806668e213932c85
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039536"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69960625"
 ---
 # <a name="how-to-create-a-windows-explorerstyle-interface-on-a-windows-form"></a>如何：在 Windows 窗体上创建 Windows 资源管理器样式的界面
 Windows 资源管理器是应用程序的一个常见用户界面选项, 因为它已做好了准备。
@@ -35,7 +35,7 @@ Windows 资源管理器是应用程序的一个常见用户界面选项, 因为�
 3. 按住 CTRL 键并依次单击所有三个控件以将其选中。 选择<xref:System.Windows.Forms.SplitContainer>控件时, 请单击拆分条, 而不是面板。
 
     > [!NOTE]
-    >  不要使用 "**编辑**" 菜单上的 "**全选**" 命令。 如果这样做, 下一步中所需的属性将不会显示在 "**属性**" 窗口中。
+    > 不要使用 "**编辑**" 菜单上的 "**全选**" 命令。 如果这样做, 下一步中所需的属性将不会显示在 "**属性**" 窗口中。
 
 4. 在“属性” 窗口中，将 <xref:System.Windows.Forms.SplitContainer.Dock%2A> 属性设置为 <xref:System.Windows.Forms.DockStyle.Fill>。
 
@@ -44,7 +44,7 @@ Windows 资源管理器是应用程序的一个常见用户界面选项, 因为�
      该窗体显示两个部分的用户界面, 与 Windows 资源管理器类似。
 
     > [!NOTE]
-    >  拖动拆分器时, 面板会调整其自身大小。
+    > 拖动拆分器时, 面板会调整其自身大小。
 
 ## <a name="see-also"></a>请参阅
 

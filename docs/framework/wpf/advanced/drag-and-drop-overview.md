@@ -12,12 +12,12 @@ helpviewer_keywords:
 - drag-and-drop [WPF], events
 - drop targets [WPF], drag-and-drop
 ms.assetid: 1a5b27b0-0ac5-4cdf-86c0-86ac0271fa64
-ms.openlocfilehash: 0a2fae2acd2b190e6133c1f02010a7e3d35bba67
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e8e8b294e05579a91a4557b23be6c65f4d619167
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663352"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940882"
 ---
 # <a name="drag-and-drop-overview"></a>拖放概述
 本主题概述 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 应用程序中的拖放支持。 拖放通常指一种数据传输方法：使用鼠标（或一些其他指针设备）选择一个或多个对象，将其拖至 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 中的某些所需拖放目标之上并放置。  
@@ -30,12 +30,12 @@ ms.locfileid: "64663352"
   
  拖放操作期间执行的特定操作特定于应用程序，并且通常由上下文而定。  例如，将选择的文件从一个文件夹一拖动至相同存储设备上的另一个文件夹将默认移动文件；而将文件从 [!INCLUDE[TLA#tla_unc](../../../../includes/tlasharptla-unc-md.md)] 共享拖动至本地文件夹将默认复制文件。  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供的拖放设施拥有高度的灵活性并可自定义，以便支持各种拖放方案。  拖放支持在单个应用程序内或不同应用程序之间操作对象。 拖放之间[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]也完全支持应用程序和其他 Windows 应用程序。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供的拖放设施拥有高度的灵活性并可自定义，以便支持各种拖放方案。  拖放支持在单个应用程序内或不同应用程序之间操作对象。 也完全支持应用程序和[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]其他 Windows 应用程序之间的拖放。  
   
  在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中，任何 <xref:System.Windows.UIElement> 或 <xref:System.Windows.ContentElement> 都可以参与拖放。 拖放操作所需的事件和方法是在 <xref:System.Windows.DragDrop> 类中定义的。 <xref:System.Windows.UIElement> 和 <xref:System.Windows.ContentElement> 类包含 <xref:System.Windows.DragDrop> 附加事件的别名，从而在 <xref:System.Windows.UIElement> 或 <xref:System.Windows.ContentElement> 作为基元素继承时，这些事件出现在类成员列表中。 附加到这些事件的事件处理程序会附加到基础 <xref:System.Windows.DragDrop> 附加事件，并接收相同的事件数据实例。 有关详细信息，请参阅 <xref:System.Windows.UIElement.Drop?displayProperty=nameWithType> 事件。  
   
 > [!IMPORTANT]
->  在 Internet 区域中 OLE 拖放无效。  
+> 在 Internet 区域中 OLE 拖放无效。  
   
 <a name="Data_Transfer"></a>   
 ## <a name="data-transfer"></a>数据传输  
@@ -122,7 +122,7 @@ ms.locfileid: "64663352"
   
 <a name="Drag_And_Drop_Example"></a>   
 ## <a name="drag-and-drop-example"></a>拖放示例  
- 本节介绍如何实现 <xref:System.Windows.Shapes.Ellipse> 元素的拖放。 <xref:System.Windows.Shapes.Ellipse> 既是拖动源也是拖放目标。 传输的数据是椭圆形的 <xref:System.Windows.Shapes.Shape.Fill%2A> 属性的字符串表示形式。 下面的 XAML 展示 <xref:System.Windows.Shapes.Ellipse> 元素和它处理的拖放相关事件。 有关如何实现拖放的完整步骤，请参阅[演练：对用户控件启用拖放](walkthrough-enabling-drag-and-drop-on-a-user-control.md)。  
+ 本节介绍如何实现 <xref:System.Windows.Shapes.Ellipse> 元素的拖放。 <xref:System.Windows.Shapes.Ellipse> 既是拖动源也是拖放目标。 传输的数据是椭圆形的 <xref:System.Windows.Shapes.Shape.Fill%2A> 属性的字符串表示形式。 下面的 XAML 展示 <xref:System.Windows.Shapes.Ellipse> 元素和它处理的拖放相关事件。 有关如何实现拖放的完整步骤, 请参阅[演练:对用户控件](walkthrough-enabling-drag-and-drop-on-a-user-control.md)启用拖放。  
   
  [!code-xaml[DragDropSnippets#EllipseXaml](~/samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml#ellipsexaml)]  
   
@@ -157,7 +157,7 @@ ms.locfileid: "64663352"
  `allowedEffects` 参数用于指定拖动源允许拖放目标对传输的数据进行什么操作。 拖动源公共值为 <xref:System.Windows.DragDropEffects.Copy><xref:System.Windows.DragDropEffects.Move> 和<xref:System.Windows.DragDropEffects.All>。  
   
 > [!NOTE]
->  拖放目标也能够指定其对放置的数据的预期效果。 例如，如果拖放目标不能识别要放置的数据类型，则可以通过将其允许的效果设置为 <xref:System.Windows.DragDropEffects.None> 来拒绝数据。 通常在其 <xref:System.Windows.DragDrop.DragOver> 事件处理程序中进行此操作。  
+> 拖放目标也能够指定其对放置的数据的预期效果。 例如，如果拖放目标不能识别要放置的数据类型，则可以通过将其允许的效果设置为 <xref:System.Windows.DragDropEffects.None> 来拒绝数据。 通常在其 <xref:System.Windows.DragDrop.DragOver> 事件处理程序中进行此操作。  
   
  拖动源还可以可选地处理 <xref:System.Windows.DragDrop.GiveFeedback> 和 <xref:System.Windows.DragDrop.QueryContinueDrag> 事件。 这些事件都具有使用的默认处理程序，除非将事件标记为已处理。 通常将忽略这些事件，除非有更改其默认行为的特定需要。  
   
@@ -218,6 +218,6 @@ ms.locfileid: "64663352"
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Windows.Clipboard>
-- [演练：启用拖放用户控件](walkthrough-enabling-drag-and-drop-on-a-user-control.md)
+- [演练：对用户控件启用拖放](walkthrough-enabling-drag-and-drop-on-a-user-control.md)
 - [帮助主题](drag-and-drop-how-to-topics.md)
 - [拖放](drag-and-drop.md)

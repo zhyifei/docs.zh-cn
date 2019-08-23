@@ -15,17 +15,17 @@ helpviewer_keywords:
 - execution
 - Resume statement [Visual Basic]
 ms.assetid: e24d058b-1a5c-4274-acb9-7d295d3ea537
-ms.openlocfilehash: 796342d17b0d0f1a642aff381274746d1fda3559
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 884bdaa0c19508b5a6bf6377568a53acc6880518
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783911"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69957682"
 ---
 # <a name="resume-statement"></a>Resume 语句
-错误处理例程完成后恢复执行。  
+完成错误处理例程后, 继续执行。  
   
- 我们建议你使用只要有可能，在代码中的结构化的异常处理，而不是无需使用非结构化的异常处理和`On Error`和`Resume`语句。 有关详细信息，请参阅 [Try...Catch...Finally 语句](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)。  
+ 建议您尽可能地在代码中使用结构化异常处理, 而不是使用非结构化异常处理`On Error`和`Resume`和语句。 有关详细信息，请参阅 [Try...Catch...Finally 语句](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,32 +35,32 @@ Resume [ Next | line ]
   
 ## <a name="parts"></a>部件  
  `Resume`  
- 必需。 如果错误发生在同一过程中作为错误处理程序，将导致错误的语句处继续执行。 如果被调用过程中发生错误的在上一次调用不包含错误处理例程的过程的语句处继续执行。  
+ 必需。 如果错误发生在与错误处理程序相同的过程中, 则执行将继续执行导致错误的语句。 如果错误发生在调用的过程中, 则执行将在最近从包含错误处理例程的过程中调用的语句处继续。  
   
  `Next`  
- 可选。 如果错误发生的错误处理程序与相同的步骤中，将紧跟导致错误的语句的语句处继续执行。 如果被调用过程中发生错误的与上一次调用不包含错误处理例程的过程在语句后立即语句处继续执行 (或`On Error Resume Next`语句)。  
+ 可选。 如果错误发生在与错误处理程序相同的过程中, 则执行将继续执行导致错误的语句之后的语句。 如果在调用的过程中发生错误, 则继续执行, 并在最后调用包含错误处理例程 (或`On Error Resume Next`语句) 的过程后的语句之后的语句之后继续执行。  
   
  `line`  
- 可选。 指定所需的代码行处继续执行`line`参数。 `line`参数是行标签或行号，必须在同一过程中作为错误处理程序。  
+ 可选。 执行在所需`line`参数中指定的行处恢复。 `line`参数是一个行标签或行号, 必须与错误处理程序位于同一过程中。  
   
 ## <a name="remarks"></a>备注  
   
 > [!NOTE]
->  我们建议使用只要有可能，在代码中的结构化的异常处理，而不是使用非结构化的异常处理和`On Error`和`Resume`语句。 有关详细信息，请参阅 [Try...Catch...Finally 语句](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)。  
+> 建议尽可能地在代码中使用结构化异常处理, 而不是使用非结构化异常处理和`On Error`和`Resume`语句。 有关详细信息，请参阅 [Try...Catch...Finally 语句](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)。  
   
- 如果使用`Resume`语句中任何位置以外的其他错误处理例程中，将出错。  
+ 如果在错误处理`Resume`例程中的任意位置使用语句, 则会发生错误。  
   
- `Resume`语句不能包含任何过程中使用`Try...Catch...Finally`语句。  
+ 语句不能在`Try...Catch...Finally`包含语句的任何过程中使用。 `Resume`  
   
 ## <a name="example"></a>示例  
- 此示例使用`Resume`语句来结束的错误处理过程中，然后继续执行导致错误的语句。 错误号 55 生成举例说明使用`Resume`语句。  
+ 此示例使用`Resume`语句来结束过程中的错误处理, 然后使用导致错误的语句继续执行。 生成错误号55以说明`Resume`语句的使用。  
   
  [!code-vb[VbVbalrErrorHandling#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrErrorHandling/VB/Class1.vb#16)]  
   
 ## <a name="requirements"></a>要求  
- **命名空间：**[Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
+ **命名空间：** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
   
- **程序集：** Visual Basic 运行库（在 Microsoft.VisualBasic.dll 中）  
+ **件**Visual Basic 运行库（在 Microsoft.VisualBasic.dll 中）  
   
 ## <a name="see-also"></a>请参阅
 

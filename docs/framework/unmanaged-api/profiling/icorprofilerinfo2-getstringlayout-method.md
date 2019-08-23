@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4d4efa7cb3bc98c54be2889855c3b756fdbf2847
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 63ad2532240c9f18a00421281fae0d111dbfaec5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782245"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963794"
 ---
 # <a name="icorprofilerinfo2getstringlayout-method"></a>ICorProfilerInfo2::GetStringLayout 方法
-获取有关字符串对象布局的信息。 此方法在.NET Framework 4 中，已弃用，并且已被取代[ICorProfilerInfo3::GetStringLayout2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getstringlayout2-method.md)方法。  
+获取有关字符串对象布局的信息。 此方法在 .NET Framework 4 中已弃用, 并且被[ICorProfilerInfo3:: GetStringLayout2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getstringlayout2-method.md)方法取代。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,34 +38,34 @@ HRESULT GetStringLayout(
   
 ## <a name="parameters"></a>参数  
  `pBufferLengthOffset`  
- [out]指向的位置，相对于的偏移量的`ObjectID`指针，用于存储字符串的长度。 长度存储为`DWORD`。  
+ 弄一个指针, 它指向存储字符串长度的相对`ObjectID`于指针的位置偏移量。 长度存储为`DWORD`。  
   
 > [!NOTE]
->  此参数将返回字符串本身，而不是缓冲区的长度的长度。 缓冲区的长度不再可用。  
+> 此参数返回字符串本身的长度, 而不是缓冲区的长度。 缓冲区的长度不再可用。  
   
  `PStringLengthOffset`  
- [out]指向的位置，相对于的偏移量的`ObjectID`指针，用于存储字符串本身的长度。 长度存储为`DWORD`。  
+ 弄指向位置偏移量的指针, 该位置相对`ObjectID`于指针存储字符串本身的长度。 长度存储为`DWORD`。  
   
  `pBufferOffset`  
- [out]指向缓冲区，相对于的偏移量的`ObjectID`指针，存储的宽字符字符串。  
+ 弄一个指针, 它指向存储宽字符字符串的缓冲区相对`ObjectID`于指针的偏移量。  
   
 ## <a name="remarks"></a>备注  
- `GetStringLayout`方法获取偏移量，相对于`ObjectID`指针，以下在其中存储的位置：  
+ 方法获取在其中存储下列位置的相对`ObjectID`于指针的偏移量: `GetStringLayout`  
   
-- 字符串的缓冲区的长度。  
+- 字符串缓冲区的长度。  
   
-- 该字符串本身的长度。  
+- 字符串本身的长度。  
   
-- 包含实际的宽字符字符串的缓冲区。  
+- 包含宽字符实际字符串的缓冲区。  
   
- 字符串可以是以 null 结尾。  
+ 字符串可以以 null 结尾。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorProf.idl, CorProf.h  
+ **标头：** Corprof.idl, Corprof.idl  
   
- **库：** CorGuids.lib  
+ **类库**CorGuids.lib  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

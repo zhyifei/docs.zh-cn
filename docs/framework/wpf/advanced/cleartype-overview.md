@@ -5,12 +5,12 @@ helpviewer_keywords:
 - typography [WPF], ClearType technology
 - ClearType [WPF], technology
 ms.assetid: 7e2392e0-75dc-463d-a716-908772782431
-ms.openlocfilehash: 405d06a8da8ec5c428c1565bcd08236de0f1fa88
-ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
+ms.openlocfilehash: 11019d564e7e658b745aec4254ad9a0c582b8416
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68672047"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964930"
 ---
 # <a name="cleartype-overview"></a>ClearType 概述
 本主题概述了中[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]的 Microsoft ClearType 技术。  
@@ -55,7 +55,7 @@ ms.locfileid: "68672047"
 ## <a name="hardware-acceleration"></a>硬件加速  
  中[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]的 ClearType 可以利用硬件加速来提高性能, 并减少 CPU 负载和系统内存要求。 通过使用图形卡的像素着色器和视频内存, ClearType 可以更快地呈现文本, 尤其是使用动画时。  
   
- Cleartype in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]不会修改系统范围内的 cleartype 设置。 在将抗[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]锯齿[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]设置为灰度模式的情况下禁用 ClearType。 此外, 中[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]的 cleartype 不会修改[cleartype 调谐器 PowerToy](https://www.microsoft.com/typography/ClearTypePowerToy.mspx)的设置。  
+ Cleartype in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]不会修改系统范围内的 cleartype 设置。 在 Windows 中禁用 ClearType [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]会将抗锯齿设置为灰度模式。 此外, 中[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]的 cleartype 不会修改[cleartype 调谐器 PowerToy](https://www.microsoft.com/typography/ClearTypePowerToy.mspx)的设置。  
   
  [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 体系结构设计决策之一是让不依赖于分辨率的布局更好地支持较高分辨率的 DPI 显示器，这种显示器正在日益普及。 此决策的后果是 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 不支持某些东亚字体中抗锯齿的文本呈现或位图，因为它们都依赖于分辨率。  
   
