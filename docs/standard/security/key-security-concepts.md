@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3cfced4f-ea02-4e66-ae98-d69286363e98
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 82a739d3823ff93bf2f797eabf3a8a326b10741c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fe4c2e1775313039e8612ae7efbd3d22af710bab
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64602523"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917260"
 ---
 # <a name="key-security-concepts"></a>安全性的基础概念
 Microsoft .NET Framework 提供基于角色的安全性，帮助解决有关移动代码的安全性问题，并提供支持，使组件可以决定用户有权执行的操作。  
@@ -52,7 +52,7 @@ Microsoft .NET Framework 提供基于角色的安全性，帮助解决有关移�
  下面的示例要求活动主体是管理员。 `name` 参数为 `null`，这使任何身份为管理员的用户均满足该要求。  
   
 > [!NOTE]
->  在 Windows Vista 中，用户帐户控制 (UAC) 决定用户的特权。 如果您是内置的 Administrators 组的成员，将为您分配两个运行时访问令牌：一个标准用户访问令牌和一个管理员访问令牌。 默认情况下，您拥有标准用户角色。 要执行需要管理员身份的代码，必须首先将你的特权从标准用户提升至管理员。 你可以通过以下方式执行此操作：右键单击应用程序图标并指示需以管理员身份运行。  
+> 在 Windows Vista 中，用户帐户控制 (UAC) 决定用户的特权。 如果您是内置的 Administrators 组的成员，将为您分配两个运行时访问令牌：一个标准用户访问令牌和一个管理员访问令牌。 默认情况下，您拥有标准用户角色。 要执行需要管理员身份的代码，必须首先将你的特权从标准用户提升至管理员。 你可以通过以下方式执行此操作：右键单击应用程序图标并指示需以管理员身份运行。  
   
  [!code-cpp[Classic PrincipalPermission Example#1](../../../samples/snippets/cpp/VS_Snippets_CLR_Classic/classic PrincipalPermission Example/CPP/source.cpp#1)]
  [!code-csharp[Classic PrincipalPermission Example#1](../../../samples/snippets/csharp/VS_Snippets_CLR_Classic/classic PrincipalPermission Example/CS/source.cs#1)]
@@ -64,5 +64,5 @@ Microsoft .NET Framework 提供基于角色的安全性，帮助解决有关移�
  [!code-csharp[System.Security.Principal.WindowsBuiltInRole Example#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Principal.WindowsBuiltInRole Example/CS/source.cs#1)]
  [!code-vb[System.Security.Principal.WindowsBuiltInRole Example#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Principal.WindowsBuiltInRole Example/VB/source.vb#1)]  
   
-## <a name="authorization"></a>授权  
+## <a name="authorization"></a>Authorization  
  授权是确定是否同意主体执行所请求的操作的过程。 授权发生在身份验证之后，并使用有关主体的标识和角色的信息来确定主体可以访问的资源。 可使用 .NET Framework 基于角色的安全性实现授权。

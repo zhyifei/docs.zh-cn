@@ -8,12 +8,12 @@ helpviewer_keywords:
 - event handlers [WPF], adding
 - XAML [WPF], adding event handlers
 ms.assetid: 269c61e0-6bd9-4291-9bed-1c5ee66da486
-ms.openlocfilehash: 00b12d9dc25e0704eb73d8bc727ae6647493f494
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 017b32dc07f62cc4553a84f7b91687fb34a53c65
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401166"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937474"
 ---
 # <a name="how-to-add-an-event-handler-using-code"></a>如何：使用代码添加事件处理程序
 此示例演示如何使用代码将事件处理程序添加到元素。  
@@ -35,7 +35,7 @@ ms.locfileid: "68401166"
  [!code-vb[RoutedEventAddRemoveHandler#Handler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RoutedEventAddRemoveHandler/VisualBasic/default.xaml.vb#handler)]  
   
 > [!NOTE]
->  在初始分析[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]页中添加事件处理程序要简单得多。 在要添加事件处理程序的对象元素中, 添加一个与你要处理的事件的名称相匹配的属性。 然后, 将该属性的值指定为在[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]该页的代码隐藏文件中定义的事件处理程序方法的名称。 有关详细信息, 请参阅[XAML 概述 (WPF)](xaml-overview-wpf.md)或[路由事件概述](routed-events-overview.md)。  
+> 在初始分析[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]页中添加事件处理程序要简单得多。 在要添加事件处理程序的对象元素中, 添加一个与你要处理的事件的名称相匹配的属性。 然后, 将该属性的值指定为在[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]该页的代码隐藏文件中定义的事件处理程序方法的名称。 有关详细信息, 请参阅[XAML 概述 (WPF)](xaml-overview-wpf.md)或[路由事件概述](routed-events-overview.md)。  
   
 ## <a name="see-also"></a>请参阅
 

@@ -1,21 +1,21 @@
 ---
-title: <message> 元素 <netTcpBinding>
+title: <message>的元素<netTcpBinding>
 ms.date: 03/30/2017
 ms.assetid: 1d71edd9-c085-4c2e-b6d3-980c313366f9
-ms.openlocfilehash: ac6977a8422055f998c7ed932c853992b7809911
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cbbacee00533b72d9e06ee3a79d1e9c0414b337c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61767554"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69931651"
 ---
-# <a name="message-element-of-nettcpbinding"></a>\<消息 > 元素的\<netTcpBinding >
-定义与配置的终结点的消息级安全性要求的类型[ \<netTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)。  
+# <a name="message-element-of-nettcpbinding"></a>\<netTcpBinding > 的\<消息 > 元素
+定义使用[ \<netTcpBinding >](nettcpbinding.md)配置的终结点的消息级安全性要求的类型。  
   
  \<system.ServiceModel>  
 \<bindings>  
 \<netTcpBinding>  
-\<binding>  
+\<绑定 >  
 \<安全 >  
 \<message>  
   
@@ -38,7 +38,7 @@ ms.locfileid: "61767554"
   
 ## <a name="algorithmsuite-attribute"></a>algorithmSuite 属性  
   
-|“值”|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |Basic128|使用 Aes128 加密，对消息摘要使用 Sha1，对密钥包装使用 Rsa-oaep-mgf1p。|  
 |Basic192|使用 Aes192 加密，对消息摘要使用 Sha1，对密钥包装使用 Rsa-oaep-mgf1p。|  
@@ -59,22 +59,22 @@ ms.locfileid: "61767554"
   
 ## <a name="clientcredentialtype-attribute"></a>clientCredentialType 属性  
   
-|“值”|描述|  
+|值|描述|  
 |-----------|-----------------|  
-|None|允许服务与匿名客户端交互。 对于服务，这表示服务不需要任何客户端凭据。 对于客户端，这表示客户端不提供任何客户端凭据。|  
+|无|允许服务与匿名客户端交互。 对于服务，这表示服务不需要任何客户端凭据。 对于客户端，这表示客户端不提供任何客户端凭据。|  
 |Windows|允许 SOAP 交换在已通过身份验证的 Windows 凭据上下文中执行。|  
-|UserName|允许服务要求使用 UserName 凭据对客户端进行身份验证。 WCF 不支持发送密码摘要，也派生密钥使用的密码并使用此类密钥来提供消息安全性。 在这种情况下，WCF 强制使用 UserName 凭据时，传输的安全性。 这种凭据模式将产生可互操作的交换或不可互操作的协商，具体取决于 `negotiateServiceCredential` 属性。|  
+|UserName|允许服务要求使用 UserName 凭据对客户端进行身份验证。 WCF 不支持发送密码摘要, 也不支持使用密码派生密钥并使用此类密钥来实现消息安全性。 因此, 在使用用户名凭据时, WCF 会强制保护传输。 这种凭据模式将产生可互操作的交换或不可互操作的协商，具体取决于 `negotiateServiceCredential` 属性。|  
 |证书|允许服务要求使用证书对客户端进行身份验证。 如果使用消息安全模式并且将 `negotiateServiceCredential` 属性设置为 `false`，则必须向客户端提供服务证书。|  
 |IssuedToken|指定自定义令牌，该令牌通常由安全令牌服务 (STS) 颁发。|  
   
 ### <a name="child-elements"></a>子元素  
- None  
+ 无  
   
 ### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)|定义 <xref:System.ServiceModel.Configuration.NetTcpBindingElement>的安全功能。|  
+|[\<security>](security-of-nettcpbinding.md)|定义 <xref:System.ServiceModel.Configuration.NetTcpBindingElement>的安全功能。|  
   
 ## <a name="remarks"></a>备注  
  消息使用消息级安全性实现 SOAP 消息的完整性和保密性，还用于通信对等方的相互身份验证。 如果在绑定上选择此安全模式，则使用消息安全性绑定元素配置信道堆栈，并且 SOAP 消息可按照 WS-Security* 标准进行保护。  
@@ -85,8 +85,8 @@ ms.locfileid: "61767554"
 - <xref:System.ServiceModel.Configuration.NetTcpSecurityElement.Message%2A>
 - <xref:System.ServiceModel.NetTcpSecurity.Message%2A>
 - <xref:System.ServiceModel.Configuration.NetTcpSecurityElement>
-- [保护服务和客户端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [绑定](../../../../../docs/framework/wcf/bindings.md)
-- [配置系统提供的绑定](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [使用绑定配置服务和客户端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../../../docs/framework/misc/binding.md)
+- [保护服务和客户端的安全](../../../wcf/feature-details/securing-services-and-clients.md)
+- [绑定](../../../wcf/bindings.md)
+- [配置系统提供的绑定](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [使用绑定配置服务和客户端](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../misc/binding.md)

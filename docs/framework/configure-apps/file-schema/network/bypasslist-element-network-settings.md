@@ -8,12 +8,12 @@ helpviewer_keywords:
 - bypasslist element
 - <bypasslist> element
 ms.assetid: 124446b7-abb1-4e5e-a492-b64398f268f1
-ms.openlocfilehash: 10d2a025096579c6bed64f82cc955deb0542717c
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: bd746f07b4c4eb08bf34b01d555b5799d9af0cf3
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69664206"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927474"
 ---
 # <a name="bypasslist-element-network-settings"></a>\<bypasslist > 元素 (网络设置)
 提供了一组正则表达式, 描述不使用代理的地址。  
@@ -55,7 +55,7 @@ ms.locfileid: "69664206"
   
  为此元素指定正则表达式时, 应格外小心。 正则表达式 "[a-z] +\\\\.com" 与 contoso.com 域中的任何主机匹配, 但它还匹配 contoso.com.cpandl.com 域中的任何主机。 若要只匹配 contoso.com 域中的主机, 请使用定位点 ("$"): "[a-z] +\\\\.com $"。  
   
- 有关正则表达式的详细信息, 请参阅。[.NET Framework 正则表达式](../../../../../docs/standard/base-types/regular-expressions.md)。  
+ 有关正则表达式的详细信息, 请参阅。[.NET Framework 正则表达式](../../../../standard/base-types/regular-expressions.md)。  
   
 ## <a name="configuration-files"></a>配置文件  
  此元素可在应用程序配置文件或计算机配置文件 (Machine.config) 中使用。  

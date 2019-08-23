@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e380edac-da67-4276-80a5-b64decae4947
-ms.openlocfilehash: f2fc69867ae1659a342161b00dfd91852441fa5b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 37641056f2f3110685c24266d2612845ffbf0b3d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772003"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69929245"
 ---
 # <a name="optimistic-concurrency"></a>开放式并发
 在多用户环境中，有两种用于更新数据库中数据的模型：开放式并发和保守式并发。 设计 <xref:System.Data.DataSet> 对象的目的是为了促进将开放式并发用于长时间运行的活动，例如对数据进行远程处理以及与数据进行交互时。  
@@ -20,7 +20,7 @@ ms.locfileid: "61772003"
  因此，在保守式并发模型中，更新行的用户将会建立锁。 在该用户完成更新并释放锁之前，其他任何用户都无法更改锁定行。 因此，如果锁定时间将会比较短（例如在以编程方式处理记录时），最好实现保守式并发。 如果用户与数据进行交互，会使记录锁定相对长的时间，保守式并发并不是可伸缩的选项。  
   
 > [!NOTE]
->  如果你需要在同一个操作中更新多个行，则创建事务要比使用保守式锁定更具伸缩性。  
+> 如果你需要在同一个操作中更新多个行，则创建事务要比使用保守式锁定更具伸缩性。  
   
  对比之下，使用开放式并发的用户在读取行时不会锁定该行。 当用户要更新某行时，应用程序必须确定自读取该行以来，其他用户是否更改了该行。 开放式并发通常用于对数据争用较少的环境。 由于不需要锁定任何记录，开放式并发将会提高性能，因为锁定记录需要更多的服务器资源。 另外，为了维护记录锁，需要与数据库服务器保持持久连接。 由于在开放式并发模型中并不会这样，所以与服务器的连接可以在较少的时间内为更多的客户端提供服务。  
   
@@ -30,11 +30,11 @@ ms.locfileid: "61772003"
   
  下午 1:00，用户 1 从具有以下值的数据库中读取一行：  
   
- **CustID 姓氏 FirstName**  
+ **CustID LastName 名字**  
   
  101 Smith Bob  
   
-|列名称|原始值|当前值|数据库中的值|  
+|列名|原始值|当前值|数据库中的值|  
 |-----------------|--------------------|-------------------|-----------------------|  
 |CustID|101|101|101|  
 |LastName|Smith|Smith|Smith|  
@@ -42,9 +42,9 @@ ms.locfileid: "61772003"
   
  下午 1:01，用户 2 读取同一行。  
   
- 下午 1:03，User2 更改**FirstName**从"Bob"为"Robert"并更新数据库。  
+ 在下午 1:03,, 2-2 将**FirstName**从 "Bob" 更改为 "Robert" 并更新数据库。  
   
-|列名称|原始值|当前值|数据库中的值|  
+|列名|原始值|当前值|数据库中的值|  
 |-----------------|--------------------|-------------------|-----------------------|  
 |CustID|101|101|101|  
 |LastName|Smith|Smith|Smith|  
@@ -54,7 +54,7 @@ ms.locfileid: "61772003"
   
  下午 1:05，用户 1 将“Bob”的名更改为“James”并试图更新该行。  
   
-|列名称|原始值|当前值|数据库中的值|  
+|列名|原始值|当前值|数据库中的值|  
 |-----------------|--------------------|-------------------|-----------------------|  
 |CustID|101|101|101|  
 |LastName|Smith|Smith|Smith|  
@@ -71,7 +71,7 @@ ms.locfileid: "61772003"
 SELECT Col1, Col2, Col3 FROM Table1  
 ```  
   
- 若要更新中的行时测试是否存在开放式并发冲突**Table1**，会发出以下 UPDATE 语句：  
+ 若要在更新表1中的行时测试开放式并发冲突, 需要发出以下 UPDATE 语句:  
   
 ```  
 UPDATE Table1 Set Col1 = @NewCol1Value,  
@@ -96,14 +96,14 @@ UPDATE Table1 Set Col1 = @NewVal1
  当使用开放式并发模型时，也可以选择应用限制较少的条件。 例如，如果只在 WHERE 子句中使用主键列，那么无论自上次查询以来是否已更新其他列，数据都将被重写。 也可以只将 WHERE 子句应用于特定列，除非自上次查询特定字段以来已将其更新，否则数据也会被重写。  
   
 ### <a name="the-dataadapterrowupdated-event"></a>DataAdapter.RowUpdated 事件  
- **RowUpdated**事件的<xref:System.Data.Common.DataAdapter>对象可以与更早版本，介绍如何向开放式并发冲突的应用程序提供通知的技术结合使用。 **RowUpdated**来更新每次尝试后会发生**Modified**一行**数据集**。 它使您能够添加特殊的处理代码，包括在发生异常时进行处理，添加自定义错误信息，添加重试逻辑等。 <xref:System.Data.Common.RowUpdatedEventArgs>对象返回**RecordsAffected**属性包含特定更新命令在表中已修改的行受影响的行数。 通过设置更新命令来测试来进行乐观并发**RecordsAffected**属性将因此，返回值为 0 时发生了开放式并发冲突，因为没有更新任何记录。 如果是这种情况，则将引发异常。 **RowUpdated**事件，可以处理这种情况并避免异常通过设置合适**RowUpdatedEventArgs.Status**值，例如**UpdateStatus.SkipCurrentRow**。 有关详细信息**RowUpdated**事件，请参阅[处理 DataAdapter 事件](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)。  
+ <xref:System.Data.Common.DataAdapter>对象的**RowUpdated**事件可以与前面所述的技术结合使用, 以向应用程序提供有关开放式并发冲突的通知。 **RowUpdated**在每次尝试更新**数据集中** **修改**的行后发生。 它使您能够添加特殊的处理代码，包括在发生异常时进行处理，添加自定义错误信息，添加重试逻辑等。 对象返回一个 RecordsAffected 属性, 该属性包含表中已修改的行的特定更新命令所影响的行数。 <xref:System.Data.Common.RowUpdatedEventArgs> 通过设置 update 命令来测试开放式并发, **RecordsAffected**属性将在发生开放式并发冲突时返回值 0, 因为没有更新任何记录。 如果是这种情况，则将引发异常。 **RowUpdated**事件使你能够处理此事件, 并通过设置适当的**RowUpdatedEventArgs**值 (如**UpdateStatus SkipCurrentRow**) 来避免异常。 有关**RowUpdated**事件的详细信息, 请参阅[处理 DataAdapter 事件](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)。  
   
- 或者，可以设置**DataAdapter.ContinueUpdateOnError**到**true**，然后再调用**更新**，并响应中存储的错误信息**RowError**特定属性时行**更新**完成。 有关详细信息，请参阅[行错误信息](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-error-information.md)。  
+ 或者, 可以在调用**update**之前将**dataadapter.continueupdateonerror**设置为**true**, 并在**更新**完成后响应特定行的**RowError**属性中存储的错误信息。 有关详细信息, 请参阅[行错误信息](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-error-information.md)。  
   
 ## <a name="optimistic-concurrency-example"></a>开放式并发示例  
- 以下是设置一个简单示例**UpdateCommand**的**DataAdapter**来进行乐观并发，测试，然后使用**RowUpdated**事件来测试开放式并发冲突。 当遇到开放式并发冲突时，应用程序设置**RowError**发出更新以反映开放式并发冲突的行。  
+ 下面是一个简单的示例, 它将**DataAdapter**的**UpdateCommand**设置为测试乐观并发, 然后使用**RowUpdated**事件来测试是否存在开放式并发冲突。 当遇到开放式并发冲突时, 应用程序将设置为其发出更新的行的**RowError** , 以反映开放式并发冲突。  
   
- 请注意，传递给 UPDATE 命令的 WHERE 子句的参数值映射到**原始**及其各自的列的值。  
+ 请注意, 传递给 UPDATE 命令的 WHERE 子句的参数值映射到其各自列的**原始**值。  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  

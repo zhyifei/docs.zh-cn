@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c27cb89c-1c1d-4988-9f38-950eda3cb275
-ms.openlocfilehash: eb1680ba8ca2fab5511dc20c94ad997ef04974fe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b9e8cf238d35ec9a6fc9c6d013c4d92b00dced78
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61614981"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69955792"
 ---
 # <a name="query-expression-syntax-examples-filtering"></a>查询表达式语法示例：筛选
-本主题中的示例演示如何使用`Where`并`Where…Contains`方法来查询[AdventureWorks 销售模型](https://archive.codeplex.com/?p=msftdbprodsamples)使用查询表达式语法。 请注意，其中...`Contains` 不能使用作为的一部分[编译查询](../../../../../../docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md)。  
+本主题中的示例演示如何使用`Where`和`Where…Contains`方法通过使用查询表达式语法来查询[AdventureWorks 销售模型](https://archive.codeplex.com/?p=msftdbprodsamples)。 请注意, Where 。`Contains` 不能用作[已编译查询](../../../../../../docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md)的一部分。  
   
  这些示例中使用的 AdventureWorks 销售模型从 AdventureWorks 示例数据库中的 Contact、Address、Product、SalesOrderHeader 和 SalesOrderDetail 等表生成。  
   
- 本主题中的示例使用以下`using` / `Imports`语句：  
+ 本主题中的示例使用以下`using` / `Imports`语句:  
   
  [!code-csharp[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#importsusing)]
  [!code-vb[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#importsusing)]  
@@ -57,7 +57,7 @@ ms.locfileid: "61614981"
  [!code-vb[DP L2E ArraysAndListsInQueries#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp l2e arraysandlistsinqueries/vb/module1.vb#1)]  
   
 > [!NOTE]
->  作为 `Where…Contains` 子句中谓词的一部分，您可以使用 <xref:System.Array>、<xref:System.Collections.Generic.List%601> 或实现 <xref:System.Collections.Generic.IEnumerable%601> 接口的任何类型的集合。 还可以在 LINQ to Entities 查询中声明和初始化集合。 有关更多信息，请参见下一个示例。  
+> 作为 `Where…Contains` 子句中谓词的一部分，您可以使用 <xref:System.Array>、<xref:System.Collections.Generic.List%601> 或实现 <xref:System.Collections.Generic.IEnumerable%601> 接口的任何类型的集合。 还可以在 LINQ to Entities 查询中声明和初始化集合。 有关更多信息，请参见下一个示例。  
   
 ### <a name="example"></a>示例  
  以下示例声明并初始化 `Where…Contains` 子句中的数组，以查找 `ProductModelID` 或 `Size` 与数组中的值匹配的所有产品。  

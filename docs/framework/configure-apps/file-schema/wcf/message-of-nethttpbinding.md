@@ -2,20 +2,20 @@
 title: <message> 的 <netHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 9def5a35-475d-40d6-b716-ccdbd93863c7
-ms.openlocfilehash: 5bc953b4a1fad90aec5db507469368e7b21bb7e4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4a7606c0ebc9fc1bbd34aef619dcb4b8a1d63fa5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61768961"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69931545"
 ---
-# <a name="message-of-nethttpbinding"></a>\<message> of \<netHttpBinding>
-定义的消息级安全性设置[ \<basicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)。  
+# <a name="message-of-nethttpbinding"></a>\<netHttpBinding > 的\<消息 >
+定义[ \<basicHttpBinding >](basichttpbinding.md)的消息级安全性设置。  
   
  \<system.ServiceModel>  
 \<bindings>  
 \<netHttpBinding>  
-\<binding>  
+\<绑定 >  
 \<安全 >  
 \<message>  
   
@@ -38,19 +38,19 @@ ms.locfileid: "61768961"
   
 ## <a name="clientcredentialtype-attribute"></a>clientCredentialType 属性  
   
-|“值”|描述|  
+|值|描述|  
 |-----------|-----------------|  
-|UserName|-要求客户端使用 UserName 凭据向服务器进行身份验证。 此凭据需要使用来指定 <`clientCredentials`> 元素。<br />WCF 不支持发送密码摘要，也派生密钥的密码并使用此类密钥来提供消息安全性。 因此，WCF 强制要求使用 UserName 凭据时保护传输的。 对于 `basicHttpBinding`，这要求设置一个 SSL 通道。|  
-|证书|要求使用证书向服务器对客户端进行身份验证。 在这种情况下，客户端凭据需要使用指定 <`clientCredentials`> 和 <`clientCertificate`>。 此外，在使用消息安全模式时，需要向客户端提供服务证书。 在这种情况下需要使用指定服务凭据<xref:System.ServiceModel.Description.ClientCredentials>类或`ClientCredentials`行为元素并指定服务证书使用\<serviceCertificate > serviceCredentials 的元素。|  
+|UserName|-要求使用用户名凭据对客户端进行身份验证。 需要使用 <`clientCredentials`> 元素来指定此凭据。<br />-WCF 不支持发送密码摘要, 也不支持使用密码派生密钥并使用此类密钥来实现消息安全性。 因此, WCF 强制在使用用户名凭据时确保传输安全。 对于 `basicHttpBinding`，这要求设置一个 SSL 通道。|  
+|证书|要求使用证书向服务器对客户端进行身份验证。 在这种情况下, 需要使用 <`clientCredentials`> 和 <`clientCertificate`> 来指定客户端凭据。 此外，在使用消息安全模式时，需要向客户端提供服务证书。 在这种情况下, 需要使用<xref:System.ServiceModel.Description.ClientCredentials>类或`ClientCredentials`行为元素来指定服务凭据, 并使用 serviceCredentials 的\<serviceCertificate > 元素指定服务证书。|  
   
 ### <a name="child-elements"></a>子元素  
- None  
+ 无  
   
 ### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|<`security`> 元素的 <`netHttpBinding`>|定义的安全功能 <`netHttpBinding`> 元素。|  
+|<`security`< 的 > 元素`netHttpBinding`>|定义 <`netHttpBinding`> 元素的安全功能。|  
   
 ## <a name="example"></a>示例  
  此示例演示如何实现使用 basicHttpBinding 和消息安全性的应用程序。 在下面的服务配置示例中，终结点定义将指定 basicHttpBinding 并引用名为 `Binding1` 的绑定配置。 服务用于向客户端验证自己身份的证书是在配置文件的 `behaviors` 节中 `serviceCredentials` 元素的下面设置的。 应用于证书（客户端使用该证书向服务验证自己的身份）的验证模式也是在 `behaviors` 节中 `clientCertificate` 元素的下面设置的。  
@@ -121,8 +121,8 @@ ms.locfileid: "61768961"
   
 ## <a name="see-also"></a>请参阅
 
-- [保护服务和客户端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [绑定](../../../../../docs/framework/wcf/bindings.md)
-- [配置系统提供的绑定](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [使用绑定配置服务和客户端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../../../docs/framework/misc/binding.md)
+- [保护服务和客户端的安全](../../../wcf/feature-details/securing-services-and-clients.md)
+- [绑定](../../../wcf/bindings.md)
+- [配置系统提供的绑定](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [使用绑定配置服务和客户端](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../misc/binding.md)

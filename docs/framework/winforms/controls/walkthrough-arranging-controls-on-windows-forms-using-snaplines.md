@@ -7,12 +7,12 @@ helpviewer_keywords:
 - SnapLine class [Windows Forms], walkthroughs
 - Windows Forms controls, arranging
 ms.assetid: d5c9edc7-cf30-4a97-8ebe-201d569340f8
-ms.openlocfilehash: 3ce6c250fadbb56b341d5e8dec3a9cb9d28940fe
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
-ms.translationtype: MT
+ms.openlocfilehash: 8ac1ba6b8121aabea3c992ca5b943f231fc19ce2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040260"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950061"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-snaplines"></a>演练：使用对齐线在 Windows 窗体上排列控件
 在窗体上精确地放置控件对于许多应用程序而言是高优先级。 Windows 窗体设计器提供了许多布局工具来实现此目的。 最重要的一项是<xref:System.Windows.Forms.Design.Behavior.SnapLine>功能。
@@ -87,7 +87,7 @@ ms.locfileid: "69040260"
 1. 选择其中一个<xref:System.Windows.Forms.Button>控件, 并将其移动到窗体的右边框, 直到出现对齐线。 对齐线与右边框的距离是控件的<xref:System.Windows.Forms.Control.Margin%2A>属性和窗体的<xref:System.Windows.Forms.Control.Padding%2A>属性值之和。
 
 > [!NOTE]
->  如果窗体的<xref:System.Windows.Forms.Control.Padding%2A>属性设置为 0, 0, 0, 0, 则 Windows 窗体设计器为窗体提供一个阴影<xref:System.Windows.Forms.Control.Padding%2A>值9、9、9、9。 若要重写此行为, 请指定0、0、0、0以外的值。
+> 如果窗体的<xref:System.Windows.Forms.Control.Padding%2A>属性设置为 0, 0, 0, 0, 则 Windows 窗体设计器为窗体提供一个阴影<xref:System.Windows.Forms.Control.Padding%2A>值9、9、9、9。 若要重写此行为, 请指定0、0、0、0以外的值。
 
 1. 通过在 "**属性**" <xref:System.Windows.Forms.Button>窗口中<xref:System.Windows.Forms.Control.Margin%2A>展开<xref:System.Windows.Forms.Control.Margin%2A> <xref:System.Windows.Forms.Padding.All%2A>条目并将属性设置为 0, 可更改控件的属性的值。 有关详细信息, [请参阅演练:通过填充、边距和 AutoSize 属性](windows-forms-controls-padding-autosize.md)对 Windows 窗体控件进行布局。
 

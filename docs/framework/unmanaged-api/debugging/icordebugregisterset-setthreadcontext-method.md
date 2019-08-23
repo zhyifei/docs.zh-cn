@@ -17,18 +17,18 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: debb704900d852df1d66c7bac65ab385e0d72ec5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ff1365ddb46ca28cbcaa4f1383b293681e6ec214
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769939"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956776"
 ---
 # <a name="icordebugregistersetsetthreadcontext-method"></a>ICorDebugRegisterSet::SetThreadContext 方法
-`SetThreadContext` 在.NET Framework 2.0 版中未实现。 请勿调用此方法。  
+`SetThreadContext`在 .NET Framework 版本2.0 中未实现。 请勿调用此方法。  
   
 > [!NOTE]
->  使用更高级别的操作[icordebugnativeframe:: Setip](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe-setip-method.md)设置线程的上下文。  
+> 使用较高级别的操作[ICorDebugNativeFrame:: SetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe-setip-method.md)设置线程的上下文。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,13 +41,13 @@ HRESULT SetThreadContext (
 ```  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头：** Cordebug.idl, Cordebug.idl  
   
- **库：** CorGuids.lib  
+ **类库**CorGuids.lib  
   
- **.NET framework 版本：** 1.1, 1.0  
+ **.NET Framework 版本:** 1.1、1。0  
   
 ## <a name="see-also"></a>请参阅
 

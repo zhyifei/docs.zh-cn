@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: e7733bd3-68da-47f9-82ef-477db5f2e32d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 15269646e967d3b260b305db5999a7b5e63be33b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8bd06dd3f58a1f74fbdb5ec61c4896f5c1696856
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67736432"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69931060"
 ---
 # <a name="icordebugprocess6enablevirtualmodulesplitting-method"></a>ICorDebugProcess6::EnableVirtualModuleSplitting 方法
 启用或禁用虚拟模块拆分。  
@@ -27,12 +27,12 @@ HRESULT EnableVirtualModuleSplitting(
  `true` 来启用虚拟模块拆分；`false` 来将其禁用。  
   
 ## <a name="remarks"></a>备注  
- 虚拟模块拆分导致[ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)识别合并在一起生成的模块处理并将其作为一组单独模块而非单个大型模块呈现。 执行此操作更改的各种行为[ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)如下所述的方法。  
+ 虚拟模块拆分会导致[ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)识别在生成过程中合并在一起的模块, 并将它们显示为一组单独的模块, 而不是单个大模块。 执行此操作将更改以下所述的各种[ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)方法的行为。  
   
 > [!NOTE]
->  此方法仅适用于 .NET Native。  
+> 此方法仅适用于 .NET Native。  
   
- 可随时调用方法并更改 `enableSplitting` 值。 它不会导致任何有状态功能变化[ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)对象，而非更改中列出的方法的行为[虚拟模块拆分和未托管调试 Api](#APIs)在调用它们的时间部分。 调用那些方法时，使用虚拟模块确实会导致性能显著下降。 此外，重要的内存中缓存的虚拟化的元数据可能需要以正确实现[IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)可能保留 Api 和这些缓存，即使虚拟模块拆分已关闭。  
+ 可随时调用方法并更改 `enableSplitting` 值。 它不会在[ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)对象中产生任何有状态的功能更改, 而不是在调用[虚拟模块拆分和非托管调试 api](#APIs)部分中列出的方法的行为。 调用那些方法时，使用虚拟模块确实会导致性能显著下降。 此外, 可能还需要对虚拟化的元数据进行大量的内存中缓存, 才能正确实现[IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) api, 并且即使在关闭虚拟模块拆分后, 这些缓存也会保留。  
   
 ## <a name="terminology"></a>术语  
  描述虚拟模块拆分时会用到下列术语：  
@@ -46,10 +46,10 @@ HRESULT EnableVirtualModuleSplitting(
  普通模块  
  未在生成过程中合并的模块。 它们既不是容器模块也不是子模块。  
   
- ICorDebugModule 接口对象表示容器模块和子模块。 但是，接口的行为是略有不同每种情况下，作为\<x ref 到部分 > 部分介绍。  
+ 容器模块和子模块都由 ICorDebugModule 接口对象表示。 但是, 在每种情况下, 接口的行为稍有不同, 如\<> 部分的 x-引用部分所述。  
   
 ## <a name="modules-and-assemblies"></a>模块和程序集  
- 在程序集合并的情况下，多模块程序集不受支持，因此模块和程序集之间存在一对一的关系。 每个 icor 调试模块对象，不论其代表容器模块还是子模块，具有相应的 icor 调试程序集对象。 [Icordebugmodule:: Getassembly](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getassembly-method.md)方法将从模块转换为程序集。 若要在另一个方向中映射[icordebugassembly:: Enumeratemodules](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly-enumeratemodules-method.md)方法枚举仅 1 个模块。 因为在此情况下的程序集和模块形成了一个紧密耦合对，术语程序集和模块变得在很大程度上可以互换。  
+ 在程序集合并的情况下，多模块程序集不受支持，因此模块和程序集之间存在一对一的关系。 每个 ICorDebugModule 对象无论是表示容器模块还是子模块, 都有相应的 ICorDebugAssembly 对象。 [ICorDebugModule:: GetAssembly](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getassembly-method.md)方法从模块转换为程序集。 若要以其他方向映射, [ICorDebugAssembly:: EnumerateModules](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly-enumeratemodules-method.md)方法只枚举1个模块。 因为在此情况下的程序集和模块形成了一个紧密耦合对，术语程序集和模块变得在很大程度上可以互换。  
   
 ## <a name="behavioral-differences"></a>行为差异  
  容器模块包含以下行为和特征：  
@@ -58,9 +58,9 @@ HRESULT EnableVirtualModuleSplitting(
   
 - 类型名称可能改变。  
   
-- [Icordebugmodule:: Getname](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getname-method.md)方法返回的磁盘上的模块的路径。  
+- [ICorDebugModule:: GetName](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getname-method.md)方法返回磁盘上的模块的路径。  
   
-- [Icordebugmodule:: Getsize](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getsize-method.md)方法将返回该映像的大小。  
+- [ICorDebugModule:: GetSize](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getsize-method.md)方法返回该图像的大小。  
   
 - ICorDebugAssembly3.EnumerateContainedAssemblies 方法列举子模块。  
   
@@ -74,9 +74,9 @@ HRESULT EnableVirtualModuleSplitting(
   
 - 元数据令牌经生成过程合并之前，不大可能与原始程序集中的令牌匹配。  
   
-- [Icordebugmodule:: Getname](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getname-method.md)方法返回程序集名称，而不是文件路径。  
+- [ICorDebugModule:: GetName](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getname-method.md)方法返回程序集名称, 而不是文件路径。  
   
-- [Icordebugmodule:: Getsize](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getsize-method.md)方法将返回原始的未合并的映像大小。  
+- [ICorDebugModule:: GetSize](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getsize-method.md)方法返回未合并的原始图像大小。  
   
 - ICorDebugModule3.EnumerateContainedAssemblies 方法返回 `S_FALSE`。  
   
@@ -85,11 +85,11 @@ HRESULT EnableVirtualModuleSplitting(
 ## <a name="interfaces-retrieved-from-modules"></a>从模块恢复的接口  
  模块可恢复或创建多个接口。 其中包括：  
   
-- ICorDebugClass 对象，该返回的对象[icordebugmodule:: Getclassfromtoken](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getclassfromtoken-method.md)方法。  
+- ICorDebugClass 对象, 由[ICorDebugModule:: GetClassFromToken](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getclassfromtoken-method.md)方法返回。  
   
-- Icor 调试程序集对象，该返回的对象[icordebugmodule:: Getassembly](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getassembly-method.md)方法。  
+- ICorDebugAssembly 对象, 由[ICorDebugModule:: GetAssembly](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getassembly-method.md)方法返回。  
   
- 这些对象始终由缓存[ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)，并且它们将具有相同的指针标识，无论它们是创建还是从容器模块还是子模块查询。 子模块提供了这些缓存对象的筛选视图，而非包含各自副本的单独缓存。  
+ 这些对象始终由[ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)缓存, 它们具有相同的指针标识, 无论是从容器模块还是子模块中创建或查询它们。 子模块提供了这些缓存对象的筛选视图，而非包含各自副本的单独缓存。  
   
 <a name="APIs"></a>   
 ## <a name="virtual-module-splitting-and-the-unmanaged-debugging-apis"></a>虚拟模块拆分和未托管调试 API  
@@ -101,14 +101,14 @@ HRESULT EnableVirtualModuleSplitting(
 |[ICorDebugClass::GetModule](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-getmodule-method.md)|返回最初定义该类的子模块。|返回该类合并到的容器模块。|  
 |ICorDebugModuleDebugEvent::GetModule|返回加载的容器模块。 不管此设置如何，子模块不会收到加载事件。|返回加载的容器模块。|  
 |[ICorDebugAppDomain::EnumerateAssemblies](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain-enumerateassemblies-method.md)|返回一组子程序集和普通程序集；不包含容器程序集。 **注意：** 如果任一容器程序集缺少符号，则其所有的子程序集都不会被枚举。 如果任一普通程序集缺少符号，则其可能被枚举或不枚举。|返回一组子程序集和普通程序集；不包含子程序集。 **注意：** 如果任一普通程序集缺少符号，则其可能被枚举或不枚举。|  
-|[Icordebugcode:: Getcode](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getcode-method.md) （当只指向 IL 代码引用）|返回可能在预合并程序集图像中有效的 IL。 具体来说，当包含 IL 的虚拟模块未定义参考类型时，任一内联元数据令牌都可以作为 TypeRef 或 MemberRef 令牌。 可以查找这些 TypeRef 或 MemberRef 令牌[IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)相应虚拟 icor 调试模块对象的对象。|返回预合并程序集图像中的 IL。|  
+|[ICorDebugCode:: GetCode](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getcode-method.md)(仅当引用 IL 代码时)|返回可能在预合并程序集图像中有效的 IL。 具体来说，当包含 IL 的虚拟模块未定义参考类型时，任一内联元数据令牌都可以作为 TypeRef 或 MemberRef 令牌。 可以在对应的 virtual ICorDebugModule 对象的[IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)对象中查找这些 TypeRef 或 MemberRef 标记。|返回预合并程序集图像中的 IL。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头：** Cordebug.idl, Cordebug.idl  
   
- **库：** CorGuids.lib  
+ **类库**CorGuids.lib  
   
  **.NET Framework 版本：** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

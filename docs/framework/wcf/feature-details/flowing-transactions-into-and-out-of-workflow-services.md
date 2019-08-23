@@ -2,24 +2,24 @@
 title: 使事务流入和流出工作流服务
 ms.date: 03/30/2017
 ms.assetid: 03ced70e-b540-4dd9-86c8-87f7bd61f609
-ms.openlocfilehash: 2a837e446ec65caa6d481d3a5f141f87fe509910
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
-ms.translationtype: MT
+ms.openlocfilehash: 7926c5a8ce1ca1ba3e24c4d1681ae12c18039924
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66421901"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963341"
 ---
 # <a name="flowing-transactions-into-and-out-of-workflow-services"></a>使事务流入和流出工作流服务
 工作流服务和客户端可以参与事务。  对于将成为环境事务一部分的服务操作，将 <xref:System.ServiceModel.Activities.Receive> 活动放到 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 活动内。 由 <xref:System.ServiceModel.Activities.Send> 内的 <xref:System.ServiceModel.Activities.SendReply> 或 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 活动所做的任何调用也将在环境事务中进行。 工作流客户端应用程序可以通过使用 <xref:System.Activities.Statements.TransactionScope> 活动来创建环境事务，并通过使用该环境事务来调用服务操作。 本主题将指导您创建参与事务的工作流服务和工作流客户端。  
   
 > [!WARNING]
->  如果在事务中加载工作流服务实例和工作流包含<xref:System.Activities.Statements.Persist>活动，工作流实例会阻塞，直到事务超时。  
+>  如果在事务内加载工作流服务实例, 且工作流包含<xref:System.Activities.Statements.Persist>活动, 则工作流实例将被阻止, 直到事务超时。  
   
 > [!IMPORTANT]
->  无论何时使用 <xref:System.ServiceModel.Activities.TransactedReceiveScope>，都建议将所有接收都置于工作流内的 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 活动中。  
+> 无论何时使用 <xref:System.ServiceModel.Activities.TransactedReceiveScope>，都建议将所有接收都置于工作流内的 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 活动中。  
   
 > [!IMPORTANT]
->  如果 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 且消息按错误顺序到达，则在尝试提交第一个不按顺序的消息时，工作流会中止。 必须确保工作流在空闲时始终处于一致的停止点。 这会使您可以在工作流中止时，从以前的持久点重新启动工作流。  
+> 如果 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 且消息按错误顺序到达，则在尝试提交第一个不按顺序的消息时，工作流会中止。 必须确保工作流在空闲时始终处于一致的停止点。 这会使您可以在工作流中止时，从以前的持久点重新启动工作流。  
   
 ### <a name="create-a-shared-library"></a>创建共享库  
   
@@ -72,11 +72,11 @@ ms.locfileid: "66421901"
     }  
     ```  
   
-     这是一个本机活动，用于显示有关环境事务的信息，它将在本主题中使用的服务工作流和客户端工作流中使用。 生成解决方案以使此活动中提供**常见**一部分**工具箱**。  
+     这是一个本机活动，用于显示有关环境事务的信息，它将在本主题中使用的服务工作流和客户端工作流中使用。 生成解决方案以使此活动在**工具箱**的 "**常用**" 部分中可用。  
   
 ### <a name="implement-the-workflow-service"></a>实现工作流服务  
   
-1. 添加新的 WCF 工作流服务，名为`WorkflowService`到`Common`项目。 为此，右击`Common`项目，选择**添加**，**新项...** ，选择**工作流**下**已安装的模板**，然后选择**WCF 工作流服务**。  
+1. 向项目添加一个名`WorkflowService`为的`Common`新 WCF 工作流服务。 为此, 请右键单击`Common`项目, 选择 "**添加**"、"**新建项 ...** ", 选择 **"已安装模板**" 下的 "**工作流**", 然后选择 " **WCF 工作流服务**"  
   
      ![添加工作流服务](./media/flowing-transactions-into-and-out-of-workflow-services/add-workflow-service.jpg)  
   
@@ -84,22 +84,22 @@ ms.locfileid: "66421901"
   
 3. 将 <xref:System.Activities.Statements.WriteLine> 活动拖放到 `Sequential Service` 活动中。 将文本属性设置为 `"Workflow Service starting ..."`，如下面的示例所示。  
   
-     ![向顺序服务 activity(./media/flowing-transactions-into-and-out-of-workflow-services/add-writeline-sequential-service.jpg) 添加 WriteLine 活动  
+     ![向顺序服务活动中添加 WriteLine 活动 (./media/flowing-transactions-into-and-out-of-workflow-services/add-writeline-sequential-service.jpg)  
   
-4. 将 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 拖放到 <xref:System.Activities.Statements.WriteLine> 活动后面。 <xref:System.ServiceModel.Activities.TransactedReceiveScope>可以在中找到活动**消息传送**一部分**工具箱**。 <xref:System.ServiceModel.Activities.TransactedReceiveScope>活动组成的两个部分**请求**并**正文**。 **请求**部分包含<xref:System.ServiceModel.Activities.Receive>活动。 **正文**部分包含要在收到一条消息后，在事务中执行的活动。  
+4. 将 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 拖放到 <xref:System.Activities.Statements.WriteLine> 活动后面。 可以在 "**工具箱**" 的 "**消息传送**" 部分找到活动。<xref:System.ServiceModel.Activities.TransactedReceiveScope> 活动由两部分组成:**请求**和**正文。** <xref:System.ServiceModel.Activities.TransactedReceiveScope> "**请求**" 部分包含<xref:System.ServiceModel.Activities.Receive>活动。 **Body**节包含在收到消息后在事务中执行的活动。  
   
      ![添加 TransactedReceiveScope 活动](./media/flowing-transactions-into-and-out-of-workflow-services/transactedreceivescope-activity.jpg)  
   
-5. 选择<xref:System.ServiceModel.Activities.TransactedReceiveScope>活动，然后单击**变量**按钮。 添加以下变量。  
+5. 选择活动, 然后单击 "变量" 按钮。 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 添加以下变量。  
   
      ![向 TransactedReceiveScope 添加变量](./media/flowing-transactions-into-and-out-of-workflow-services/add-transactedreceivescope-variables.jpg)  
   
     > [!NOTE]
-    >  可以删除默认情况下在该处的数据变量。 还可以使用现有句柄变量。  
+    > 可以删除默认情况下在该处的数据变量。 还可以使用现有句柄变量。  
   
-6. 拖放到<xref:System.ServiceModel.Activities.Receive>中的活动**请求**一部分<xref:System.ServiceModel.Activities.TransactedReceiveScope>活动。 设置以下属性：  
+6. 将<xref:System.ServiceModel.Activities.Receive>活动拖放到<xref:System.ServiceModel.Activities.TransactedReceiveScope>活动的 "**请求**" 部分中。 设置以下属性：  
   
-    |属性|值|  
+    |Property|值|  
     |--------------|-----------|  
     |CanCreateInstance|True（选中复选框）|  
     |OperationName|StartSample|  
@@ -109,7 +109,7 @@ ms.locfileid: "66421901"
   
      ![添加 Receive 活动](./media/flowing-transactions-into-and-out-of-workflow-services/add-receive-activity.jpg)  
   
-7. 单击**定义...** 中的链接<xref:System.ServiceModel.Activities.Receive>活动，然后进行以下设置：  
+7. 单击<xref:System.ServiceModel.Activities.Receive>活动中的 "**定义 ...** " 链接, 然后进行以下设置:  
   
      ![设置 Receive 活动的消息设置](./media/flowing-transactions-into-and-out-of-workflow-services/receive-message-settings.jpg)  
   
@@ -117,37 +117,37 @@ ms.locfileid: "66421901"
   
     |活动|值|  
     |--------------|-----------|  
-    |第一个 WriteLine|"服务：接收已完成"|  
-    |第二个 WriteLine|"服务：Received = " + requestMessage|  
+    |第一个 WriteLine|服务已完成接收 "|  
+    |第二个 WriteLine|服务Received = "+ requestMessage|  
   
      现在，该工作流应如下所示：  
   
-     ![添加 WriteLine 活动后进行排序](./media/flowing-transactions-into-and-out-of-workflow-services/after-adding-writelines.jpg)  
+     ![添加 WriteLine 活动后的序列](./media/flowing-transactions-into-and-out-of-workflow-services/after-adding-writelines.jpg)  
   
-9. 拖放到`PrintTransactionInfo`活动后第二个<xref:System.Activities.Statements.WriteLine>中的活动**正文**中<xref:System.ServiceModel.Activities.TransactedReceiveScope>活动。  
+9. 将`PrintTransactionInfo`活动拖放到<xref:System.ServiceModel.Activities.TransactedReceiveScope>活动的**主体**中的第二个<xref:System.Activities.Statements.WriteLine>活动之后。  
   
-     ![添加 PrintTransactionInfo 之后进行排序](./media/flowing-transactions-into-and-out-of-workflow-services/after-adding-printtransactioninfo.jpg )  
+     ![添加 PrintTransactionInfo 后的序列](./media/flowing-transactions-into-and-out-of-workflow-services/after-adding-printtransactioninfo.jpg )  
   
 10. 将 <xref:System.Activities.Statements.Assign> 活动拖放到 `PrintTransactionInfo` 活动后面，然后根据下表设置其属性。  
   
     |属性|值|  
     |--------------|-----------|  
     |功能|replyMessage|  
-    |值|"服务：发送答复。"|  
+    |值|服务正在发送答复。 "|  
   
-11. 拖放到<xref:System.Activities.Statements.WriteLine>活动后面<xref:System.Activities.Statements.Assign>活动，并设置其<xref:System.Activities.Statements.WriteLine.Text%2A>属性设置为"服务：开始答复。"  
+11. 将<xref:System.Activities.Statements.WriteLine>活动拖放到<xref:System.Activities.Statements.Assign>活动后面, 并将其<xref:System.Activities.Statements.WriteLine.Text%2A>属性设置为 "Service:开始答复 "。  
   
      现在，该工作流应如下所示：  
   
      ![添加 Assign 和 WriteLine 后](./media/flowing-transactions-into-and-out-of-workflow-services/after-adding-sbr-writeline.jpg)  
   
-12. 右键单击<xref:System.ServiceModel.Activities.Receive>活动，然后选择**创建 SendReply**并将其粘贴在上一次后<xref:System.Activities.Statements.WriteLine>活动。 单击**定义...** 中的链接`SendReplyToReceive`活动，然后进行以下设置。  
+12. 右键单击该<xref:System.ServiceModel.Activities.Receive>活动, 然后选择 "**创建 SendReply** " 并将其<xref:System.Activities.Statements.WriteLine>粘贴到最后一个活动后面。 单击`SendReplyToReceive`活动中的 "**定义 ...** " 链接, 然后进行以下设置。  
   
      ![回复消息设置](./media/flowing-transactions-into-and-out-of-workflow-services/reply-message-settings.jpg)  
   
-13. 拖放到<xref:System.Activities.Statements.WriteLine>活动后面`SendReplyToReceive`活动，并设置它具有<xref:System.Activities.Statements.WriteLine.Text%2A>属性设置为"服务：发送回复。"  
+13. 将<xref:System.Activities.Statements.WriteLine>活动拖放到`SendReplyToReceive` <xref:System.Activities.Statements.WriteLine.Text%2A>活动后面, 并将其属性设置为 "Service:答复已发送。 "  
   
-14. 拖放到<xref:System.Activities.Statements.WriteLine>活动在底部的工作流并设置其<xref:System.Activities.Statements.WriteLine.Text%2A>属性设置为"服务：工作流结束，按 ENTER 退出。"  
+14. 将<xref:System.Activities.Statements.WriteLine>活动拖放到工作流底部, 并将其<xref:System.Activities.Statements.WriteLine.Text%2A>属性设置为 "Service:工作流结束, 按 ENTER 退出。 "  
   
      完成的服务工作流应如下所示：  
   
@@ -155,7 +155,7 @@ ms.locfileid: "66421901"
   
 ### <a name="implement-the-workflow-client"></a>实现工作流客户端  
   
-1. 将一个名为 `WorkflowClient` 的新 WCF 工作流应用程序添加到 `Common` 项目。 为此，右击`Common`项目，选择**添加**，**新项...** ，选择**工作流**下**已安装的模板**，然后选择**活动**。  
+1. 将一个名为 `WorkflowClient` 的新 WCF 工作流应用程序添加到 `Common` 项目。 要执行此操作, 请`Common`右键单击项目, 选择 "**添加**" "**新建项 ...** ", 选择 "**已安装模板**" 下的 "**工作流**", 然后选择 "**活动**  
   
      ![添加活动项目](./media/flowing-transactions-into-and-out-of-workflow-services/add-activity-project.jpg)  
   
@@ -173,13 +173,13 @@ ms.locfileid: "66421901"
   
 6. 在 `PrintTransactionInfo` 内拖放 <xref:System.Activities.Statements.Sequence> 活动  
   
-7. 拖放到<xref:System.Activities.Statements.WriteLine>活动后面`PrintTransactionInfo`活动，并设置其<xref:System.Activities.Statements.WriteLine.Text%2A>属性设置为"客户端：开始发送"。 现在，该工作流应如下所示：  
+7. 将<xref:System.Activities.Statements.WriteLine>活动拖放到`PrintTransactionInfo`活动后面, 并将其<xref:System.Activities.Statements.WriteLine.Text%2A>属性设置为 "Client:开始发送 "。 现在，该工作流应如下所示：  
   
-     ![添加客户端：从发送活动](./media/flowing-transactions-into-and-out-of-workflow-services/client-add-cbs-writeline.jpg)  
+     ![添加客户端:开始发送活动](./media/flowing-transactions-into-and-out-of-workflow-services/client-add-cbs-writeline.jpg)  
   
 8. 将 <xref:System.ServiceModel.Activities.Send> 活动拖放到 <xref:System.Activities.Statements.Assign> 活动后面，并设置以下属性：  
   
-    |属性|值|  
+    |Property|值|  
     |--------------|-----------|  
     |EndpointConfigurationName|workflowServiceEndpoint|  
     |OperationName|StartSample|  
@@ -189,25 +189,25 @@ ms.locfileid: "66421901"
   
      ![设置 Send 活动属性](./media/flowing-transactions-into-and-out-of-workflow-services/client-send-activity-settings.jpg)  
   
-9. 单击**定义...** 链接，然后进行以下设置：  
+9. 单击 "**定义 ...** " 链接, 然后进行以下设置:  
   
      ![发送活动的消息设置](./media/flowing-transactions-into-and-out-of-workflow-services/send-message-settings.jpg)  
   
-10. 右键单击<xref:System.ServiceModel.Activities.Send>活动，然后选择**创建 ReceiveReply**。 <xref:System.ServiceModel.Activities.ReceiveReply> 活动将自动放在 <xref:System.ServiceModel.Activities.Send> 活动后面。  
+10. 右键单击该<xref:System.ServiceModel.Activities.Send>活动, 然后选择 "**创建 ReceiveReply**"。 <xref:System.ServiceModel.Activities.ReceiveReply> 活动将自动放在 <xref:System.ServiceModel.Activities.Send> 活动后面。  
   
 11. 单击 ReceiveReplyForSend 活动上的“定义...”链接，然后进行以下设置：  
   
      ![设置 ReceiveForSend 消息的设置](./media/flowing-transactions-into-and-out-of-workflow-services/client-reply-message-settings.jpg)  
   
-12. 拖放到<xref:System.Activities.Statements.WriteLine>之间的活动<xref:System.ServiceModel.Activities.Send>并<xref:System.ServiceModel.Activities.ReceiveReply>活动并设置其<xref:System.Activities.Statements.WriteLine.Text%2A>属性设置为"客户端：发送完成。"  
+12. 将<xref:System.Activities.Statements.WriteLine>活动拖放到<xref:System.ServiceModel.Activities.Send>和<xref:System.ServiceModel.Activities.ReceiveReply>活动之间, 并将其<xref:System.Activities.Statements.WriteLine.Text%2A>属性设置为 "Client:发送完成。 "  
   
-13. 拖放到<xref:System.Activities.Statements.WriteLine>活动后面<xref:System.ServiceModel.Activities.ReceiveReply>活动，并设置其<xref:System.Activities.Statements.WriteLine.Text%2A>属性设置为"客户端：收到回复 ="+ replyMessage  
+13. 将<xref:System.Activities.Statements.WriteLine>活动拖放到<xref:System.ServiceModel.Activities.ReceiveReply>活动后面, 并将其<xref:System.Activities.Statements.WriteLine.Text%2A>属性设置为 "客户端:收到的回复 = "+ replyMessage  
   
 14. 将 `PrintTransactionInfo` 活动拖放到 <xref:System.Activities.Statements.WriteLine> 活动后面。  
   
 15. 将 <xref:System.Activities.Statements.WriteLine> 活动拖放到工作流末尾，然后将它的 <xref:System.Activities.Statements.WriteLine.Text%2A> 属性设置为 "Client workflow ends." 完成的客户端工作流应如下图所示。  
   
-     ![已完成客户端工作流](./media/flowing-transactions-into-and-out-of-workflow-services/client-complete-workflow.jpg)  
+     ![已完成的客户端工作流](./media/flowing-transactions-into-and-out-of-workflow-services/client-complete-workflow.jpg)  
   
 16. 生成解决方案。  
   

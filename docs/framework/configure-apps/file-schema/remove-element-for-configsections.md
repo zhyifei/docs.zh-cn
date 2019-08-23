@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: ae4d82e0-e8fe-468c-81ab-46d63c4d66a8
 author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: 7c0173879c692588cc2e15f0b14a5687bb0404fb
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 4ff9bb537a31e28dbd4b878c1bc04c96262f85ac
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66300674"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927460"
 ---
-# <a name="remove-element-for-configsections"></a>\<删除 > 元素\<configSections >
+# <a name="remove-element-for-configsections"></a>\<删除 configSections > 的\<> 元素
 
 删除预定义的节或节组。
 
-[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[ **\<configSections>** ](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)   
+[ **\<configuration>** ](configuration-element.md)   
+&nbsp;&nbsp;[ **\<configSections>** ](configsections-element-for-configuration.md)   
 &nbsp;&nbsp;&nbsp;&nbsp; **\<remove>**
 
 ## <a name="syntax"></a>语法
@@ -34,27 +34,27 @@ ms.locfileid: "66300674"
 
 |           | 描述 |
 | --------- | ----------- |
-| **name**  | 必需的特性。<br><br>指定的节或要删除的节组的名称。 |
+| **名称**  | 必需的特性。<br><br>指定要删除的节或节组的名称。 |
 
 ## <a name="parent-element"></a>父元素
 
 |     | 描述 |
 | --- | ----------- |
-| [ **\<configSections >** 元素](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | 包含配置节和命名空间声明。 |
+| [ **configSections>\<** 元素](configsections-element-for-configuration.md) | 包含配置节和命名空间声明。 |
 
 ## <a name="child-elements"></a>子元素
 
-None
+无
 
 ## <a name="remarks"></a>备注
 
-可以使用 **\<删除 >** 元素从你在配置文件层次结构中较高级别定义的应用程序中删除节和节组。
+可以使用 **\<remove >** 元素从应用程序中删除在配置文件层次结构中较高级别上定义的部分和节组。
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何使用 **\<删除 >** 应用程序配置文件以删除以前在计算机配置文件中定义的节中的元素。
+下面的示例演示如何使用应用程序配置文件中的 **\<remove >** 元素删除之前在计算机配置文件中定义的部分。
 
-下面的计算机配置文件代码声明部分 **\<sampleSection >** :
+以下计算机配置文件代码声明了 **\<sampleSection >** 部分:
 
 ```xml
 <!-- Machine.config file -->
@@ -69,7 +69,7 @@ None
 </configuration>
 ```
 
-下面的应用程序配置文件代码中删除 **\<sampleSection >** 部分。 删除后，应用程序不能检索中的设置 **\<sampleSection >** 。
+以下应用程序配置文件代码将 **\<删除 sampleSection >** 部分。 删除后, 应用程序无法检索 **\<sampleSection >** 中的设置。
 
 ```xml
 <!-- Application configuration file -->
@@ -82,8 +82,8 @@ None
 
 ## <a name="configuration-file"></a>配置文件
 
-在应用程序配置文件中，计算机配置文件可以使用此元素 (*Machine.config*)，并*Web.config*不在应用程序目录级别上的文件。
+此元素可用于应用程序配置文件、计算机配置文件 (*machine.config*) 和不在应用程序目录级别的 web.config 文件。
 
 ## <a name="see-also"></a>请参阅
 
-- [.NET Framework 的配置文件架构](~/docs/framework/configure-apps/file-schema/index.md)
+- [.NET Framework 的配置文件架构](index.md)

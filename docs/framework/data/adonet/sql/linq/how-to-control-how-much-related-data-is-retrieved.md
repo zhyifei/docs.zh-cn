@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: efdc203e-3da9-4477-815e-54f10c3d7c6c
-ms.openlocfilehash: dd59c09185eab003274614dcc30393b060e6b7c0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 342583cdbf6a1501f1bc70c6a9be5d7009c390eb
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61904470"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940252"
 ---
 # <a name="how-to-control-how-much-related-data-is-retrieved"></a>如何：控制检索的相关数据量
 使用 <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A> 方法可指定应同时检索与主目标相关的哪些数据。 例如，如果您了解将需要有关客户订单的信息，则可以使用 <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A> 来确保在检索客户信息时会检索订单信息。 这种方法的结果是只检索一次数据库即可获取这两组信息。  
   
 > [!NOTE]
->  通过将叉积作为一个大型投影检索，可以检索与您的查询主目标相关的数据，例如在以客户为目标时检索订单。 但这种方法往往存在弊端。 例如，所得结果仅仅为投影，而不是可以由 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 更改和持久化的实体。 此外，您可能会检索到您并不需要的大量数据。  
+> 通过将叉积作为一个大型投影检索，可以检索与您的查询主目标相关的数据，例如在以客户为目标时检索订单。 但这种方法往往存在弊端。 例如，所得结果仅仅为投影，而不是可以由 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 更改和持久化的实体。 此外，您可能会检索到您并不需要的大量数据。  
   
 ## <a name="example"></a>示例  
  在下面的示例中，在执行查询时会检索到位于伦敦的所有 `Orders` 所下的所有 `Customers`。 这样一来，连续访问 `Orders` 对象的 `Customer` 属性不会触发新的数据库查询。  

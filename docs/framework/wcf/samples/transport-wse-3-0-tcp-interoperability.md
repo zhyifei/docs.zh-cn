@@ -2,15 +2,15 @@
 title: 传输：WSE 3.0 TCP 互操作性
 ms.date: 03/30/2017
 ms.assetid: 5f7c3708-acad-4eb3-acb9-d232c77d1486
-ms.openlocfilehash: 5ad1f2e55bf0dab2736bbc95933d12be43dddd76
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9b73f9ef93ebfabf2b1c39363bd64785e2892956
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64617352"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941035"
 ---
 # <a name="transport-wse-30-tcp-interoperability"></a>传输：WSE 3.0 TCP 互操作性
-WSE 3.0 TCP 互操作性传输示例演示如何实现 TCP 双工会话作为自定义 Windows Communication Foundation (WCF) 传输。 还演示如何通过网络，使用通道层的扩展性与已经过部署的现有系统进行交互。 以下步骤演示如何生成此自定义 WCF 传输：  
+WSE 3.0 TCP 互操作性传输示例演示如何将 TCP 双工会话实现为自定义 Windows Communication Foundation (WCF) 传输。 还演示如何通过网络，使用通道层的扩展性与已经过部署的现有系统进行交互。 以下步骤演示如何生成此自定义 WCF 传输:  
   
 1. 从 TCP 套接字开始，创建 <xref:System.ServiceModel.Channels.IDuplexSessionChannel> 的客户端和服务器实现以使用 DIME 组帧来描述消息边界。  
   
@@ -20,10 +20,10 @@ WSE 3.0 TCP 互操作性传输示例演示如何实现 TCP 双工会话作为自
   
 4. 请确保将特定于网络的任何异常正常化为 <xref:System.ServiceModel.CommunicationException> 的相应派生类。  
   
-5. 添加一个用来向通道堆栈中添加自定义传输的绑定元素。 有关详细信息，请参阅 [添加绑定元素]。  
+5. 添加一个用来向通道堆栈中添加自定义传输的绑定元素。 有关详细信息, 请参阅 [添加绑定元素]。  
   
 ## <a name="creating-iduplexsessionchannel"></a>创建 IDuplexSessionChannel  
- 编写 WSE 3.0 TCP 互操作性传输的第一步是在 <xref:System.ServiceModel.Channels.IDuplexSessionChannel> 的顶部创建 <xref:System.Net.Sockets.Socket> 的实现。 `WseTcpDuplexSessionChannel` 派生自 <xref:System.ServiceModel.Channels.ChannelBase>。 发送消息的逻辑包含两个主要部分：（1） 将消息编码为字节，和 (2) 这些字节进行组帧并将它们发送在网络上。  
+ 编写 WSE 3.0 TCP 互操作性传输的第一步是在 <xref:System.ServiceModel.Channels.IDuplexSessionChannel> 的顶部创建 <xref:System.Net.Sockets.Socket> 的实现。 `WseTcpDuplexSessionChannel` 派生自 <xref:System.ServiceModel.Channels.ChannelBase>。 发送消息的逻辑包括两个主要部分:(1) 将消息编码为个字节, (2) 将这些字节分成一组帧, 并将其发送到网络上。  
   
  `ArraySegment<byte> encodedBytes = EncodeMessage(message);`  
   
@@ -37,7 +37,7 @@ WSE 3.0 TCP 互操作性传输示例演示如何实现 TCP 双工会话作为自
   
  `return encoder.WriteMessage(message, maxBufferSize, bufferManager);`  
   
- 一旦将 <xref:System.ServiceModel.Channels.Message> 编码为字节，就必须通过线路传输它。 这要求系统定义消息边界。 WSE 3.0 使用的版本[DIME](https://go.microsoft.com/fwlink/?LinkId=94999)作为其框架协议。 `WriteData` 封装框架逻辑以便将 byte[] 包装到一组 DIME 记录中。  
+ 一旦将 <xref:System.ServiceModel.Channels.Message> 编码为字节，就必须通过线路传输它。 这要求系统定义消息边界。 WSE 3.0 使用某个版本的[DIME](https://go.microsoft.com/fwlink/?LinkId=94999)作为其帧协议。 `WriteData` 封装框架逻辑以便将 byte[] 包装到一组 DIME 记录中。  
   
  用来接收消息的逻辑与组帧逻辑非常相似。 其复杂性主要在于，处理读取套接字时所返回的字节数比已请求的更少这一情况。 若要接收消息，`WseTcpDuplexSessionChannel` 读取网络中的字节，对 DIME 组帧进行解码，然后使用 <xref:System.ServiceModel.Channels.MessageEncoder> 将 byte[] 转换为 <xref:System.ServiceModel.Channels.Message>。  
   
@@ -52,7 +52,7 @@ WSE 3.0 TCP 互操作性传输示例演示如何实现 TCP 双工会话作为自
 ## <a name="channel-factory"></a>通道工厂  
  编写 TCP 传输的下一步是为客户端通道创建 <xref:System.ServiceModel.Channels.IChannelFactory> 的实现。  
   
-- `WseTcpChannelFactory` 派生自<xref:System.ServiceModel.Channels.ChannelFactoryBase> \<IDuplexSessionChannel >。 它是一个用来重写 `OnCreateChannel` 以生成客户端通道的工厂。  
+- `WseTcpChannelFactory`派生自<xref:System.ServiceModel.Channels.ChannelFactoryBase> \<IDuplexSessionChannel >。 它是一个用来重写 `OnCreateChannel` 以生成客户端通道的工厂。  
   
  `protected override IDuplexSessionChannel OnCreateChannel(EndpointAddress remoteAddress, Uri via)`  
   
@@ -62,7 +62,7 @@ WSE 3.0 TCP 互操作性传输示例演示如何实现 TCP 双工会话作为自
   
  `}`  
   
-- `ClientWseTcpDuplexSessionChannel` 将逻辑添加到基`WseTcpDuplexSessionChannel`连接到 TCP 服务器`channel.Open`时间。 首先，主机名解析为 IP 地址，如下面的代码所示。  
+- `ClientWseTcpDuplexSessionChannel`向基`WseTcpDuplexSessionChannel`添加逻辑以在`channel.Open`时间连接到 TCP 服务器。 首先，主机名解析为 IP 地址，如下面的代码所示。  
   
  `hostEntry = Dns.GetHostEntry(Via.Host);`  
   
@@ -79,7 +79,7 @@ WSE 3.0 TCP 互操作性传输示例演示如何实现 TCP 双工会话作为自
 ## <a name="channel-listener"></a>通道侦听器  
  编写 TCP 传输的下一步是创建用来接受服务器通道的 <xref:System.ServiceModel.Channels.IChannelListener> 实现。  
   
-- `WseTcpChannelListener` 派生自<xref:System.ServiceModel.Channels.ChannelListenerBase> \<IDuplexSessionChannel > 和替代 [Begin] Open 和 On [Begin] Close 以控制其侦听套接字的生存期。 在 OnOpen 中，需要创建一个用来侦听 IP_ANY 的套接字。 在更高级的实现中，可以再创建一个同时侦听 IPv6 的套接字。 这些高级实现还允许在主机名中指定 IP 地址。  
+- `WseTcpChannelListener`派生自<xref:System.ServiceModel.Channels.ChannelListenerBase> \<IDuplexSessionChannel > 并在 [begin] 上打开和在 [begin] Close 以控制其侦听套接字的生存期。 在 OnOpen 中，需要创建一个用来侦听 IP_ANY 的套接字。 在更高级的实现中，可以再创建一个同时侦听 IPv6 的套接字。 这些高级实现还允许在主机名中指定 IP 地址。  
   
  `IPEndPoint localEndpoint = new IPEndPoint(IPAddress.Any, uri.Port);`  
   
@@ -129,7 +129,7 @@ WSE 3.0 TCP 互操作性传输示例演示如何实现 TCP 双工会话作为自
   
  `binding.Elements.Add(new WseTcpTransportBindingElement());`  
   
- 它由两个测试组成，第一个测试使用从 WSE 3.0 WSDL 生成的代码来设置类型化客户端， 第二个测试将 WCF 用作客户端和服务器通过发送消息直接在通道 Api 之上。  
+ 它由两个测试组成，第一个测试使用从 WSE 3.0 WSDL 生成的代码来设置类型化客户端， 第二个测试通过直接在通道 Api 之上发送消息, 将 WCF 作为客户端和服务器使用。  
   
  运行此示例时，应生成下面的输出。  
   
@@ -172,10 +172,10 @@ Symbols:
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
-1. 若要运行此示例，必须安装有 WSE 3.0 和 WSE `TcpSyncStockService` 示例。 您可以下载[从 MSDN 的 WSE 3.0](https://go.microsoft.com/fwlink/?LinkId=95000)。  
+1. 若要运行此示例，必须安装有 WSE 3.0 和 WSE `TcpSyncStockService` 示例。 可以[从 MSDN 下载 WSE 3.0](https://go.microsoft.com/fwlink/?LinkId=95000)。  
   
 > [!NOTE]
->  由于 [!INCLUDE[lserver](../../../../includes/lserver-md.md)] 上不支持 WSE 3.0，因此不能在该操作系统上安装或运行 `TcpSyncStockService` 示例。  
+> 由于 [!INCLUDE[lserver](../../../../includes/lserver-md.md)] 上不支持 WSE 3.0，因此不能在该操作系统上安装或运行 `TcpSyncStockService` 示例。  
   
 1. 安装了 `TcpSyncStockService` 示例后，请执行下列操作：  
   
@@ -183,7 +183,7 @@ Symbols:
   
     2. 将 StockService 项目设置为启动项目。  
   
-    3. 在 StockService 项目中打开 StockService.cs，并注释掉 `StockService` 类的 [Policy] 属性。 这会禁用该示例中的安全性。 虽然 WCF 可以与 WSE 3.0 安全终结点进行互操作，已禁用安全性来保持此示例将重点放在自定义 TCP 传输上。  
+    3. 在 StockService 项目中打开 StockService.cs，并注释掉 `StockService` 类的 [Policy] 属性。 这会禁用该示例中的安全性。 尽管 WCF 可以与 WSE 3.0 安全终结点进行互操作, 但禁用了安全性来使此示例专注于自定义 TCP 传输。  
   
     4. 按 F5 启动 `TcpSyncStockService`。 该服务将在一个新的控制台窗口中启动。  
   

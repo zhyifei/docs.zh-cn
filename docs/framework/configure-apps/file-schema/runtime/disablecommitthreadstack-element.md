@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 3559d46a-7640-4c72-9a11-7e980768929e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4b1f55f056ef1aed4a5eff655650cefe778c97ae
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: d3071b25392048161ebb40c39842f5da0dce3475
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663784"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920834"
 ---
 # <a name="disablecommitthreadstack-element"></a>\<disableCommitThreadStack > 元素
 指定在线程启动时是否提交完整线程堆栈。  
@@ -60,7 +60,7 @@ ms.locfileid: "69663784"
  公共语言运行时的默认行为是在线程启动时提交完整线程堆栈。 当必须在内存有限的服务器上创建大量线程，并且其中大多数线程都使用非常小的堆栈空间时，如果公共语言运行时在线程启动时不立即提交完整线程堆栈，则服务器可能会表现更好。  
   
 > [!NOTE]
->  非托管主机可以使用 `STARTUP_DISABLE_COMMITTHREADSTACK` STARTUP_FLAGS [枚举中的](../../../unmanaged-api/hosting/startup-flags-enumeration.md) 启动标志实现相同结果。  
+> 非托管主机可以使用 `STARTUP_DISABLE_COMMITTHREADSTACK` STARTUP_FLAGS [枚举中的](../../../unmanaged-api/hosting/startup-flags-enumeration.md) 启动标志实现相同结果。  
   
 ## <a name="example"></a>示例  
  下面的示例演示如何禁用公共语言运行时的默认行为（即在线程启动时提交完整线程堆栈）。  

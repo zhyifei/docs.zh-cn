@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Mid statement [Visual Basic]
 - strings [Visual Basic], replacing
 ms.assetid: 2b82d7a8-9646-4cb0-bec5-80abc98297bf
-ms.openlocfilehash: ff3b908e2805f4d51463a82d90f2305efc9f1608
-ms.sourcegitcommit: c4dfe37032c64a1fba2cc3d5947550d79f95e3b5
+ms.openlocfilehash: 212ce1f06a01c39acbce43d8d069dae3526b1b4d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67041579"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963553"
 ---
 # <a name="mid-statement"></a>Mid 语句
-替换指定的数目的中的字符`String`变量与另一字符串中的字符。  
+将`String`变量中指定数量的字符替换为另一个字符串中的字符。  
   
 ## <a name="syntax"></a>语法  
   
@@ -32,42 +32,42 @@ Mid( _
   
 ## <a name="parts"></a>部件  
  `Target`  
- 必需。 名称`String`变量来修改。  
+ 必需。 要修改的`String`变量的名称。  
   
  `Start`  
- 必需。 `Integer` 表达式。 字符位置`Target`文本替换的开始位置。 `Start` 使用从 1 开始的索引。  
+ 必需。 `Integer`表达式. 中`Target`开始替换文本的字符位置。 `Start`使用从1开始的索引。  
   
  `Length`  
- 可选。 `Integer` 表达式。 要替换的字符数。 如果省略，所有的`String`使用。  
+ 可选。 `Integer`表达式. 要替换的字符数。 如果省略, `String`则使用所有。  
   
  `StringExpression`  
- 必需。 `String` 替换的一部分的表达式`Target`。  
+ 必需。 `String`替换部分的`Target`表达式。  
   
 ## <a name="exceptions"></a>Exceptions  
   
 |异常类型|条件|  
 |--------------------|---------------|  
-|<xref:System.ArgumentException>|`Start` < = 0 或`Length`< 0。|  
+|<xref:System.ArgumentException>|`Start`< = 0 或`Length` < 0。|  
   
 ## <a name="remarks"></a>备注  
- 替换的字符数是始终小于或等于中的字符数`Target`。  
+ 替换的字符数始终小于或等于中`Target`的字符数。  
   
- Visual Basic 具有<xref:Microsoft.VisualBasic.Strings.Mid%2A>函数和一个`Mid`语句。 都按指定数目的字符在字符串中，运行这些元素，但`Mid`函数将返回字符，而`Mid`语句替换的字符。 有关详细信息，请参阅 <xref:Microsoft.VisualBasic.Strings.Mid%2A>。  
+ Visual Basic 具有<xref:Microsoft.VisualBasic.Strings.Mid%2A>函数`Mid`和语句。 这些元素对字符串中的指定数量的字符进行操作, 但`Mid` `Mid`当语句替换这些字符时, 函数将返回字符。 有关详细信息，请参阅 <xref:Microsoft.VisualBasic.Strings.Mid%2A> 。  
   
 > [!NOTE]
->  `MidB`的早期版本的 Visual Basic 语句将替换中字节，而不是字符的子字符串。 它主要用于在双字节字符集 (DBCS) 应用程序中转换字符串。 所有 Visual Basic 字符串都是 Unicode，和`MidB`不再受支持。  
+> 的`MidB`早期 Visual Basic 版本语句将以字节而不是字符来替换子字符串 (而不是字符)。 它主要用于在双字节字符集 (DBCS) 应用程序中转换字符串。 所有 Visual Basic 字符串均采用 Unicode 格式, `MidB`不再受支持。  
   
 ## <a name="example"></a>示例  
- 此示例使用`Mid`语句，以指定的数量的字符串变量中的字符替换为另一字符串中的字符。  
+ 此示例使用`Mid`语句将字符串变量中指定数量的字符替换为另一个字符串中的字符。  
   
  [!code-vb[VbVbalrStrings#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#5)]  
   
 ## <a name="requirements"></a>要求  
  **命名空间：** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
   
- **模块：** `Strings`  
+ **模块:** `Strings`  
   
- **程序集：** Visual Basic 运行库（在 Microsoft.VisualBasic.dll 中）  
+ **件**Visual Basic 运行库（在 Microsoft.VisualBasic.dll 中）  
   
 ## <a name="see-also"></a>请参阅
 

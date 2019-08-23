@@ -3,15 +3,15 @@ title: <claimType>
 ms.date: 03/30/2017
 ms.assetid: d17b5831-9a2c-45c4-b0d1-68f48e72e861
 author: BrucePerlerMS
-ms.openlocfilehash: 6bc185572528d4229ee53f1421eaa5bf27b053e6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4253aec961b812b6893ee201861d2ab38048032a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61667218"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69942881"
 ---
 # <a name="claimtype"></a>\<claimType>
-指定传入安全令牌的一个可选或必需声明。  
+为传入安全令牌指定一个可选的或必需的声明。  
   
  \<system.identityModel>  
 \<identityConfiguration>  
@@ -38,14 +38,14 @@ ms.locfileid: "61667218"
   
 |特性|描述|  
 |---------------|-----------------|  
-|类型|声明类型。 通常一个 URI。 必需。|  
-|可选|一个布尔值，该值指定声明类型是否为可选。 可选。|  
+|type|声明类型。 通常为 URI。 必需。|  
+|可选|指定声明类型是否为可选的布尔值。 可选。|  
   
 ### <a name="child-elements"></a>子元素  
- None  
+ 无  
   
 ### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<claimTypeRequired>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimtyperequired.md)|指定必需的传入安全令牌的声明集。|
+|[\<claimTypeRequired>](claimtyperequired.md)|指定传入安全令牌所需的声明集。|

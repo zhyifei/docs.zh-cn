@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WPF application [WPF], building
 ms.assetid: a58696fd-bdad-4b55-9759-136dfdf8b91c
-ms.openlocfilehash: 02a86ea8d8d6b481044d6ca25d29df7edd2c73ee
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: a5254de07029e53dd6b72bd2c096c38525a661b6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401693"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69958707"
 ---
 # <a name="building-a-wpf-application-wpf"></a>生成 WPF 应用程序 (WPF)
 
@@ -24,7 +24,7 @@ Windows Presentation Foundation (WPF) 应用程序可以生成为 .NET Framework
 
 WPF 应用程序可通过以下方式编译：
 
-- 命令行。 应用程序必须只包含代码（并非 XAML）和一个应用程序定义文件。 有关详细信息，请参阅[在命令行上使用 csc.exe 生成](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)或[从命令行生成 (Visual Basic)](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)。
+- 命令行。 应用程序必须只包含代码（并非 XAML）和一个应用程序定义文件。 有关详细信息，请参阅[在命令行上使用 csc.exe 生成](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)或[从命令行生成 (Visual Basic)](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)。
 
 - Microsoft 生成引擎 (MSBuild)。 除了代码和 XAML 文件之外，应用程序还必须包含一个 MSBuild 项目文件。 有关详细信息，请参阅“MSBuild”。
 
@@ -42,7 +42,7 @@ WPF 应用程序可通过以下方式编译：
 
 ### <a name="pre-build-initializations"></a>预生成初始化
 
-在生成之前，[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] 会先确定重要工具和库的相应位置，其中包括：
+在生成之前, MSBuild 确定重要工具和库的位置, 包括以下各项:
 
 - .NET Framework。
 
@@ -52,7 +52,7 @@ WPF 应用程序可通过以下方式编译：
 
 - 程序集搜索路径的属性。
 
-[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] 首先会在引用程序集目录 (%ProgramFiles%\Reference Assemblies\Microsoft\Framework\v3.0\\) 中搜索程序集。 在执行这个步骤时，生成进程还会初始化各种属性和项组，并执行所有必要的清理工作。
+MSBuild 在其中搜索程序集的第一个位置是引用程序集目录 (\\%ProgramFiles%\Reference Assemblies\Microsoft\Framework\v3.0)。 在执行这个步骤时，生成进程还会初始化各种属性和项组，并执行所有必要的清理工作。
 
 <a name="Resolving_references"></a>
 
@@ -108,7 +108,7 @@ Public Sub InitializeComponent() _
 End Sub
 ```
 
-默认情况下, 标记编译在与<xref:System.AppDomain> [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]引擎相同的情况下运行。 这可以显著提高性能。 此行为可通过 `AlwaysCompileMarkupFilesInSeparateDomain` 属性来切换。 此方法的优点是通过卸载单独<xref:System.AppDomain>的来卸载所有引用程序集。
+默认情况下, 标记编译在与 MSBuild <xref:System.AppDomain>引擎相同的情况下运行。 这可以显著提高性能。 此行为可通过 `AlwaysCompileMarkupFilesInSeparateDomain` 属性来切换。 此方法的优点是通过卸载单独<xref:System.AppDomain>的来卸载所有引用程序集。
 
 <a name="Pass_2_of_Markup_Compilation"></a>
 

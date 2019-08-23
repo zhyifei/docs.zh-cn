@@ -2,15 +2,15 @@
 title: 如何：将元数据导入服务终结点
 ms.date: 03/30/2017
 ms.assetid: b69dbe20-92a1-4911-89d8-ffbc3dad4663
-ms.openlocfilehash: afee3f2236db99b14c0e840d987e4862a260568e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dce65c31134c211c134cbae2b9bd8296f74b1627
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62047823"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69930718"
 ---
 # <a name="how-to-import-metadata-into-service-endpoints"></a>如何：将元数据导入服务终结点
-本主题说明如何导入服务终结点的集合的元数据和使用中定义的服务[Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)。 本主题演示如何创建从服务中导入元数据的客户端应用程序，以及之后如何对该服务调用 `Add` 方法。  
+本主题说明如何将元数据导入服务终结点的集合, 并使用在[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)中定义的服务。 本主题演示如何创建从服务中导入元数据的客户端应用程序，以及之后如何对该服务调用 `Add` 方法。  
   
 ### <a name="to-import-metadata-into-service-endpoints"></a>将元数据导入服务终结点  
   
@@ -27,7 +27,7 @@ ms.locfileid: "62047823"
      [!code-csharp[UE_ImportMetadata#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/ue_importmetadata/cs/client.cs#2)]  
   
     > [!NOTE]
-    >  导入元数据后，将无法创建客户端通道或导出元数据。 这是因为此时没有可用的类型信息。 在实际与服务进行交互或导出元数据时需要类型信息。 若要生成类型信息，需要生成代码，如步骤 4 和 5 所示。 或者可以使用 <xref:System.ServiceModel.Description.MetadataResolver> 帮助器类。 有关详细信息，请参阅[如何：使用 MetadataResolver 动态获取绑定元数据](../../../../docs/framework/wcf/feature-details/how-to-use-metadataresolver-to-obtain-binding-metadata-dynamically.md)。  
+    > 导入元数据后，将无法创建客户端通道或导出元数据。 这是因为此时没有可用的类型信息。 在实际与服务进行交互或导出元数据时需要类型信息。 若要生成类型信息，需要生成代码，如步骤 4 和 5 所示。 或者可以使用 <xref:System.ServiceModel.Description.MetadataResolver> 帮助器类。 有关详细信息，请参阅[如何：使用 MetadataResolver 动态](../../../../docs/framework/wcf/feature-details/how-to-use-metadataresolver-to-obtain-binding-metadata-dynamically.md)获取绑定元数据。  
   
 4. 为每个协定生成类型信息。  
   

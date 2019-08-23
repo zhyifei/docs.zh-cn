@@ -16,40 +16,40 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d3fb1bf3f61c78f4eb157b93363b1c06b25bee04
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d8fe1a25c4bc1f5e19f49f0d660d0aad5a180ea2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61987943"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69911891"
 ---
 # <a name="icordebugmodule2-interface"></a>ICorDebugModule2 接口
 
-用作 icor 调试模块接口的逻辑扩展。  
+用作 ICorDebugModule 接口的逻辑扩展。  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|[ApplyChanges 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-applychanges-method.md)|适用于正在运行的进程中元数据的更改和 Microsoft 中间语言 (MSIL) 代码中的更改。|  
-|[GetJITCompilerFlags 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-getjitcompilerflags-method.md)|获取用于控制实时 (JIT) 编译的标志`ICorDebugModule2`。|  
+|[ApplyChanges 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-applychanges-method.md)|将元数据中的更改和 Microsoft 中间语言 (MSIL) 代码的更改应用到正在运行的进程。|  
+|[GetJITCompilerFlags 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-getjitcompilerflags-method.md)|获取用于控制此`ICorDebugModule2`的实时 (JIT) 编译的标志。|  
 |[ResolveAssembly 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-resolveassembly-method.md)|解析指定的元数据标记所引用的程序集。|  
-|[SetJITCompilerFlags 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-setjitcompilerflags-method.md)|设置用于控制此 JIT 编译的标志`ICorDebugModule2`。|  
-|[SetJMCStatus 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-setjmcstatus-method.md)|在此设置的所有类的所有方法只是我的代码 (JMC) 状态`ICorDebugModule2`为指定的值，除中`pTokens`数组，它将设置为相反值。|  
+|[SetJITCompilerFlags 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-setjitcompilerflags-method.md)|设置控制此`ICorDebugModule2`的 JIT 编译的标志。|  
+|[SetJMCStatus 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-setjmcstatus-method.md)|将此`ICorDebugModule2`中所有类的所有方法的仅我的代码 (JMC) 状态设置为指定的值 ( `pTokens`数组中的所有方法除外, 将其设置为相反的值)。|  
   
 ## <a name="remarks"></a>备注  
   
 > [!NOTE]
->  此接口不支持跨计算机或跨进程远程调用。  
+> 此接口不支持跨计算机或跨进程远程调用。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头：** Cordebug.idl, Cordebug.idl  
   
- **库：** CorGuids.lib  
+ **类库**CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

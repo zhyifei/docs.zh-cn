@@ -9,12 +9,12 @@ helpviewer_keywords:
 - loading non-resource files
 - application management [WPF]
 ms.assetid: 43adb517-21a7-4df3-98e8-09e9cdf764c4
-ms.openlocfilehash: f9ea4acfc7ba86d3424bb11af0de685651f99c61
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: ad928fb223ce22c65bb86a78c7d4cd006651a2d5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796751"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950757"
 ---
 # <a name="pack-uris-in-wpf"></a>WPF 中的 Pack URI
 
@@ -85,7 +85,7 @@ pack://*机构*/*路径*
 
 ## <a name="resource-file-pack-uris"></a>资源文件 Pack URI
 
-资源文件配置为[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Resource`项, 并被编译成程序集。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]支持 pack [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)]的构造, 该构造可用于标识编译到本地程序集中或编译到从本地程序集引用的程序集中的资源文件。
+资源文件配置为 MSBuild `Resource`项并编译为程序集。 WPF 支持构造包 Uri, 这些 Uri 可用于标识编译到本地程序集中或编译到从本地程序集引用的程序集中的资源文件。
 
 <a name="Local_Assembly_Resource_File"></a>
 
@@ -186,9 +186,9 @@ pack://*机构*/*路径*
 
 ## <a name="page-files"></a>页面文件
 
-[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]配置为[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Page`项的文件以与资源文件相同的方式编译成程序集。 因此, [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Page`可以使用资源文件的 pack [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)]标识项。
+配置为 MSBuild `Page`项的 XAML 文件将以与资源文件相同的方式编译到程序集中。 因此, 可以`Page`使用资源文件的 pack uri 来标识 MSBuild 项。
 
-通常配置为[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]项的文件类型具有以下项之一作为其根元素:`Page`
+通常配置为[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] MSBuild`Page`项的文件类型具有以下项之一作为其根元素:
 
 - <xref:System.Windows.Window?displayProperty=nameWithType>
 

@@ -2,12 +2,12 @@
 title: 演练：简单对象模型和查询 (C#)
 ms.date: 03/30/2017
 ms.assetid: 419961cc-92d6-45f5-ae8a-d485bdde3a37
-ms.openlocfilehash: 43092eb7490d5629f1ababac1d8f8b3aff94299b
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 4661dffa037504d9157f30af12d4308a4d7644a2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68971869"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946925"
 ---
 # <a name="walkthrough-simple-object-model-and-query-c"></a>演练：简单对象模型和查询 (C#)
 
@@ -117,7 +117,7 @@ ms.locfileid: "68971869"
 
 ## <a name="creating-a-simple-query"></a>创建简单查询
 
-在此步骤中，您将创建一个查询，查找数据库中的 Customers 表内的哪些客户位于伦敦。 此步骤中的查询代码只描述查询。 它不执行查询。 此方法称为 "*延迟执行*"。 有关详细信息，请参阅 [LINQ 查询简介 (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)。
+在此步骤中，您将创建一个查询，查找数据库中的 Customers 表内的哪些客户位于伦敦。 此步骤中的查询代码只描述查询。 它不执行查询。 此方法称为 "*延迟执行*"。 有关详细信息，请参阅 [LINQ 查询简介 (C#)](../../../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)。
 
 您还将生成一个日志输出，显示 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 生成的 SQL 命令。 此日志记录功能（使用 <xref:System.Data.Linq.DataContext.Log%2A>）对调试有帮助，并有助于确定发送给数据库的命令是否准确地表示您的查询。
 
@@ -140,7 +140,7 @@ ms.locfileid: "68971869"
 2. 按 F5 调试该应用程序。
 
     > [!NOTE]
-    >  如果你的应用程序产生运行时错误, 请参阅[通过演练学习](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)的疑难解答部分。
+    > 如果你的应用程序产生运行时错误, 请参阅[通过演练学习](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)的疑难解答部分。
 
      控制台窗口中的查询结果应显示如下：
 

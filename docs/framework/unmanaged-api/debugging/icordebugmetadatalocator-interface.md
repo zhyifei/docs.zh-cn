@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4e9b9221aa2f5e048a94c225660ba2ac9214549c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 64cf11ec294486fdc14d424e731eac8e4745d892
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780891"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939856"
 ---
 # <a name="icordebugmetadatalocator-interface"></a>ICorDebugMetaDataLocator 接口
 向调试器提供元数据信息。  
@@ -35,16 +35,16 @@ ms.locfileid: "61780891"
 ## <a name="remarks"></a>备注  
   
 > [!NOTE]
->  此接口不支持跨计算机或跨进程远程调用。  
+> 此接口不支持跨计算机或跨进程远程调用。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头：** Cordebug.idl, Cordebug.idl  
   
- **库：** CorGuids.lib  
+ **类库**CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

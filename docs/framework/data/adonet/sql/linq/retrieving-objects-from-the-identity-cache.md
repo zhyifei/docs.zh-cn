@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 96c13903-ccb6-4a0e-ab6a-8ca955ca314d
-ms.openlocfilehash: a8e4fc9b83e11aef4347ab4765f6a2e75c526387
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: ef771d924d9b508c29061f75a45808b5f81abb53
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64910757"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963839"
 ---
 # <a name="retrieving-objects-from-the-identity-cache"></a>从实体缓存检索对象
 本主题介绍从 <xref:System.Data.Linq.DataContext> 管理的标识缓存中返回对象的 LINQ to SQL 查询类型。  
@@ -20,7 +20,7 @@ ms.locfileid: "64910757"
  通常，如果 LINQ to SQL 查询要从标识缓存中返回对象，该查询必须基于对象的主键，并且必须返回单一对象。 特别是，该查询必须具有下面显示的常规形式之一。  
   
 > [!NOTE]
->  预编译的查询不会从标识缓存中返回对象。 有关预编译查询的详细信息，请参阅<xref:System.Data.Linq.CompiledQuery>和[如何：存储和重用查询](../../../../../../docs/framework/data/adonet/sql/linq/how-to-store-and-reuse-queries.md)。  
+> 预编译的查询不会从标识缓存中返回对象。 有关预编译查询的详细信息, 请参阅<xref:System.Data.Linq.CompiledQuery>和[如何:存储和重复使用](../../../../../../docs/framework/data/adonet/sql/linq/how-to-store-and-reuse-queries.md)查询。  
   
  查询必须具有以下常规形式之一，才能从标识缓存中检索对象：  
   

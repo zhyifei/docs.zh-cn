@@ -2,12 +2,12 @@
 title: LINQ to SQL 中的代码生成
 ms.date: 03/30/2017
 ms.assetid: ddcbdaa1-e7fa-4d85-a379-313b49965c07
-ms.openlocfilehash: 63ac0f50b34a5e5d8739adbeb70f2412960227c3
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 12470a8c14e0a41eb6e06fc5d4ba63c12924330b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666127"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939179"
 ---
 # <a name="code-generation-in-linq-to-sql"></a>LINQ to SQL 中的代码生成
 您可以使用对象关系设计器或 SQLMetal 命令行工具生成代码以表示数据库。 在任一情况下，端到端代码生成都分成三个阶段：  
@@ -32,7 +32,7 @@ ms.locfileid: "69666127"
  请将此架构定义文件与用于验证外部映射文件的架构定义文件区分开来。 有关详细信息, 请参阅[外部映射](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md))。  
   
 > [!NOTE]
->  Visual Studio 用户还会在 "XML 架构" 对话框中找到此 XSD 文件, 其形式为 "Dbmlschema.xsd"。 若要正确使用 XSD 文件来验证 DBML 文件, 请参阅[如何:验证 DBML 和外部映射文件](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md)。  
+> Visual Studio 用户还会在 "XML 架构" 对话框中找到此 XSD 文件, 其形式为 "Dbmlschema.xsd"。 若要正确使用 XSD 文件来验证 DBML 文件, 请参阅[如何:验证 DBML 和外部映射文件](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md)。  
   
 ```xml  
 <?xml version="1.0" encoding="utf-16"?>  

@@ -2,12 +2,12 @@
 title: 配置 Net.TCP 端口共享服务
 ms.date: 03/30/2017
 ms.assetid: b6dd81fa-68b7-4e1b-868e-88e5901b7ea0
-ms.openlocfilehash: dbc27f0f15be41c5384d8a1f73f0226c3f0f83ad
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: c5dc80391ec5f655fadd31c59eef76015b9965d8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62040178"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69949607"
 ---
 # <a name="configuring-the-nettcp-port-sharing-service"></a>配置 Net.TCP 端口共享服务
 使用 Net.TCP 传输协议的自承载服务可以控制某些高级设置，如 `ListenBacklog` 和 `MaxPendingAccepts`，这些设置控制用作网络通信的基础 TCP 套接字的行为。 但是，如果传输绑定已禁用端口共享（默认情况下是启用的），则这些针对每个套接字的设置将仅在绑定级别适用。  
@@ -53,10 +53,10 @@ ms.locfileid: "62040178"
   
  但是，有时可能需要更改 Net.TCP 端口共享服务的默认配置。 例如，`maxPendingAccepts` 的默认值为 4 * 处理器数。 承载大量使用端口共享的服务的服务器可以增加此值，以实现最大的吞吐量。 `maxPendingConnections` 的默认值为 100。 如果有多个并发客户端调用服务，并且此服务正在丢弃客户端连接，您还应该考虑增加此值。  
   
- SMSvcHost.exe.config 还包含有关可以使用端口共享服务的进程标识的信息。 当进程连接到端口共享服务以使用共享的 TCP 端口时，将根据允许使用端口共享服务的标识列表来检查连接进程的进程标识。 这些标识作为安全标识符 (Sid) 指定在\<allowAccounts > 在 SMSvcHost.exe.config 文件的部分。 默认情况下，将授予系统帐户（LocalService、LocalSystem 和 NetworkService）和 Administrators 组的成员使用端口共享服务的权限。 允许作为另一个标识（例如，用户标识）运行的进程连接到端口共享服务的应用程序必须将适当的 SID 显式添加到 SMSvcHost.exe.config 中（在重新启动 SMSvc.exe 进程之前不会应用这些更改）。  
+ SMSvcHost.exe.config 还包含有关可以使用端口共享服务的进程标识的信息。 当进程连接到端口共享服务以使用共享的 TCP 端口时，将根据允许使用端口共享服务的标识列表来检查连接进程的进程标识。 这些标识在 smsvchost.exe 文件的\<allowAccounts > 部分中指定为安全标识符 (sid)。 默认情况下，将授予系统帐户（LocalService、LocalSystem 和 NetworkService）和 Administrators 组的成员使用端口共享服务的权限。 允许作为另一个标识（例如，用户标识）运行的进程连接到端口共享服务的应用程序必须将适当的 SID 显式添加到 SMSvcHost.exe.config 中（在重新启动 SMSvc.exe 进程之前不会应用这些更改）。  
   
 > [!NOTE]
->  在启用用户帐户控制 (UAC) 的 [!INCLUDE[wv](../../../../includes/wv-md.md)] 系统上，即使本地用户的帐户是 Administrators 组成员，本地用户也需要提升的权限。 若要允许这些用户必须使用端口共享服务而无需提升用户的 SID （或用户所属组的 SID） 显式添加到\<allowAccounts > SMSvcHost.exe.config 的部分。  
+> 在启用用户帐户控制 (UAC) 的 [!INCLUDE[wv](../../../../includes/wv-md.md)] 系统上，即使本地用户的帐户是 Administrators 组成员，本地用户也需要提升的权限。 若要允许这些用户无需提升即可使用端口共享服务, 必须将用户的 SID (或用户所属的组的 sid) 显式添加到 smsvchost.exe 的\<allowAccounts > 部分。  
   
 > [!WARNING]
 >  默认 SMSvcHost.exe.config 文件指定自定义 `etwProviderId` 以阻止 SMSvcHost.exe 跟踪干扰服务跟踪。  

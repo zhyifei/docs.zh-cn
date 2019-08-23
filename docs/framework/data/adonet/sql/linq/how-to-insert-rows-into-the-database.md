@@ -5,20 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 44d99680-69c7-4879-a732-f6771b334211
-ms.openlocfilehash: cb62522a951afd3a7159114d3b6575f1d83278bc
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2852b0593f8b213f8cad6f9a2ab8f08eeb2a4dec
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67743316"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69943638"
 ---
 # <a name="how-to-insert-rows-into-the-database"></a>如何：将行插入数据库中
-将行插入数据库通过将对象添加到关联[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<xref:System.Data.Linq.Table%601>集合，然后将更改提交到数据库。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 将转换成相应的 SQL 所做的更改`INSERT`命令。  
+您可以通过将对象添加到关联[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Table%601>的集合, 然后将更改提交到数据库, 将这些行插入到数据库中。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]将所做的更改转换为`INSERT`相应的 SQL 命令。  
   
 > [!NOTE]
->  您可以重写 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]、`Insert` 和 `Update` 数据库操作的 `Delete` 默认方法。 有关详细信息，请参阅[自定义插入、 更新和删除操作](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md)。  
+> 您可以重写 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]、`Insert` 和 `Update` 数据库操作的 `Delete` 默认方法。 有关详细信息, 请参阅[自定义插入、更新和删除操作](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md)。  
 >   
->  使用 Visual Studio 的开发人员可以使用对象关系设计器来开发用于同一目的的存储的过程。  
+>  使用 Visual Studio 的开发人员可以使用对象关系设计器来开发用于实现相同目的的存储过程。  
   
  以下步骤假定您已通过有效的 <xref:System.Data.Linq.DataContext> 连接到 Northwind 数据库。 有关详细信息，请参阅[如何：连接到数据库](../../../../../../docs/framework/data/adonet/sql/linq/how-to-connect-to-a-database.md)。  
   
@@ -26,7 +26,7 @@ ms.locfileid: "67743316"
   
 1. 创建一个包含要提交的列数据的新对象。  
   
-2. 向其中添加新对象[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]`Table`与数据库中的目标表关联的集合。  
+2. 将新对象添加到与[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]数据库中的目标表关联的`Table`集合中。  
   
 3. 将更改提交到数据库。  
   

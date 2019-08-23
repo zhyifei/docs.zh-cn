@@ -1,15 +1,15 @@
 ---
-title: <dataContractSerializer> < system.runtime.serialization >
+title: <dataContractSerializer>< 的 >
 ms.date: 03/30/2017
 ms.assetid: d9b3d625-be3f-4768-8e0d-1b7e6929f6a8
-ms.openlocfilehash: c81fdb040f2e0d6c9a3728d8ed3b917443ecb42e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 380d9ba5b8407d78b5045fd34fcdf37c0818d6f9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61700977"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919354"
 ---
-# <a name="datacontractserializer-of-systemruntimeserialization"></a>\<dataContractSerializer> of \<system.runtime.serialization>
+# <a name="datacontractserializer-of-systemruntimeserialization"></a>\<dataContractSerializer > 的\<>
 包含 <xref:System.Runtime.Serialization.DataContractSerializer> 的配置数据。  
   
  \<system.runtime.serialization>  
@@ -49,19 +49,19 @@ ms.locfileid: "61700977"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<declaredTypes>](../../../../../docs/framework/configure-apps/file-schema/wcf/declaredtypes.md)|包含在进行反序列化时 <xref:System.Runtime.Serialization.DataContractSerializer> 使用的已知类型。<br /><br /> 有关数据协定和已知的类型的详细信息，请参阅[Data Contract Known Types](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)。|  
+|[\<declaredTypes>](declaredtypes.md)|包含在进行反序列化时 <xref:System.Runtime.Serialization.DataContractSerializer> 使用的已知类型。<br /><br /> 有关数据协定和已知类型的详细信息, 请参阅[数据协定已知类型](../../../wcf/feature-details/data-contract-known-types.md)。|  
   
 ### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<system.runtime.serialization>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-runtime-serialization.md)|表示 <xref:System.Runtime.Serialization> 命名空间节的根元素，并包含 <xref:System.Runtime.Serialization.DataContractSerializer> 的设置选项的元素。|  
+|[\<system.runtime.serialization>](system-runtime-serialization.md)|表示 <xref:System.Runtime.Serialization> 命名空间节的根元素，并包含 <xref:System.Runtime.Serialization.DataContractSerializer> 的设置选项的元素。|  
   
 ## <a name="remarks"></a>备注  
- 有关已知类型的详细信息，请参阅<xref:System.Runtime.Serialization.DataContractSerializer>并[Data Contract Known Types](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)。  
+ 有关已知类型的详细信息, 请<xref:System.Runtime.Serialization.DataContractSerializer>参阅和[数据协定已知类型](../../../wcf/feature-details/data-contract-known-types.md)。  
   
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>
-- [数据协定已知类型](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
+- [数据协定已知类型](../../../wcf/feature-details/data-contract-known-types.md)

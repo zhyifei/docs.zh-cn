@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 556d29a3-8fc9-4e38-b3ee-c188f7e7b155
-ms.openlocfilehash: 392855e3db2ea10c90784a6f9003805b79db74a6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 2bc0bca55dcdc350537f0826ab3a675747ee5497
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59230572"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69951332"
 ---
 # <a name="adding-a-datatable-to-a-dataset"></a>将数据表添加到数据集中
 ADO.NET 使您能够创建 <xref:System.Data.DataTable> 对象并将其添加到现有 <xref:System.Data.DataSet> 中。 可以使用 <xref:System.Data.DataTable> 和 <xref:System.Data.DataTable.PrimaryKey%2A> 属性为 <xref:System.Data.DataColumn.Unique%2A> 设置约束信息。  
@@ -22,12 +22,12 @@ ADO.NET 使您能够创建 <xref:System.Data.DataTable> 对象并将其添加到
  [!code-vb[DataWorks Data.DataTableAdd#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks Data.DataTableAdd/VB/source.vb#1)]  
   
 ## <a name="case-sensitivity"></a>区分大小写  
- <xref:System.Data.DataSet> 中可以存在两个或两个以上的同名但是大小写不同的表或关系。 在这种情况下，通过名称对表和关系的引用将区分大小写。 例如，如果<xref:System.Data.DataSet>**数据集**包含表**Table1**并**table1**，将引用**Table1**按作为名称**dataSet.Tables["Table1"]**，并**table1**作为**dataSet.Tables["table1"]**。 正在尝试引用表作为任一**dataSet.Tables["TABLE1"]** 会生成异常。  
+ <xref:System.Data.DataSet> 中可以存在两个或两个以上的同名但是大小写不同的表或关系。 在这种情况下，通过名称对表和关系的引用将区分大小写。 例如, 如果<xref:System.Data.DataSet> **数据集**包含表表 1 和表 1, 则将按 name 作为 dataset 引用**table1** 。**表 ["table1"]** ,表1作为**数据集。表 ["table1"]** 。 尝试将其中一个表作为 DataSet 引用 **。表 ["TABLE1"]** 将生成异常。  
   
- 如果只有一个具有特定名称的表或关系，则区分大小写行为不适用。 例如，如果<xref:System.Data.DataSet>只有**Table1**，您可以引用它使用**dataSet.Tables["TABLE1"]**。  
+ 如果只有一个具有特定名称的表或关系，则区分大小写行为不适用。 例如, 如果<xref:System.Data.DataSet>只有**Table1**, 则可以使用 dataSet 引用它 **。表 ["Table1"]** 。  
   
 > [!NOTE]
->  <xref:System.Data.DataSet.CaseSensitive%2A> 的 <xref:System.Data.DataSet> 属性不影响此行为。 <xref:System.Data.DataSet.CaseSensitive%2A> 属性应用于 <xref:System.Data.DataSet> 中的数据，并会影响排序、搜索、筛选、执行约束，等等。  
+> <xref:System.Data.DataSet.CaseSensitive%2A> 的 <xref:System.Data.DataSet> 属性不影响此行为。 <xref:System.Data.DataSet.CaseSensitive%2A> 属性应用于 <xref:System.Data.DataSet> 中的数据，并会影响排序、搜索、筛选、执行约束，等等。  
   
 ## <a name="namespace-support"></a>命名空间支持  
  在 2.0 之前的 ADO.NET 版本中，两个表即使处于不同的命名空间中也不能同名。 ADO.NET 2.0 中取消了此限制。 <xref:System.Data.DataSet> 可以包含具有相同 <xref:System.Data.DataTable.TableName%2A> 属性值但是具有不同 <xref:System.Data.DataTable.Namespace%2A> 属性值的两个表。  

@@ -16,44 +16,44 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 22c3a480e2b68377e300df1083b3178ee4e2d2a9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5a408995793caf879f8d5624ab727102c4859195
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61969853"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69959616"
 ---
 # <a name="iclrdebugmanager-interface"></a>ICLRDebugManager 接口
-提供允许主机以将一组任务标识符和友好名称与相关联的方法。  
+提供允许主机将一组任务与标识符和友好名称关联的方法。  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|[BeginConnection 方法](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-beginconnection-method.md)|建立新连接来将任务与标识符和友好名称相关联的主机与调试器之间。|  
-|[EndConnection 方法](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-endconnection-method.md)|删除任务列表和标识符和友好名称之间的关联。|  
+|[BeginConnection 方法](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-beginconnection-method.md)|在宿主和调试器之间建立新的连接, 以将任务与标识符和友好名称关联起来。|  
+|[EndConnection 方法](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-endconnection-method.md)|删除任务列表与标识符和友好名称之间的关联。|  
 |[GetDacl 方法](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-getdacl-method.md)|未实现此方法。|  
 |[IsDebuggerAttached 方法](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-isdebuggerattached-method.md)|获取一个值，它指示调试器是否已附加到进程。|  
-|[SetConnectionTasks 方法](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setconnectiontasks-method.md)|将一组相关联[ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)实例标识符和友好名称。|  
+|[SetConnectionTasks 方法](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setconnectiontasks-method.md)|将[ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)实例列表与标识符和友好名称关联。|  
 |[SetDacl 方法](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setdacl-method.md)|未实现此方法。|  
-|[SetSymbolReadingPolicy 方法](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setsymbolreadingpolicy-method.md)|设置用于读取程序数据库 (PDB) 文件的策略。 策略将确定是否在调用堆栈中包括行号和文件相关信息。|  
+|[SetSymbolReadingPolicy 方法](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setsymbolreadingpolicy-method.md)|设置用于读取程序数据库 (PDB) 文件的策略。 策略确定有关行号和文件的信息是否包含在调用堆栈中。|  
   
 ## <a name="remarks"></a>备注  
- 在调试方案中，主机可能需要根据其自己的编程逻辑组任务。 例如，一组将允许开发人员若要查看仅由开发人员的 Api，而不是查看在进程中运行的每项任务所需的任务。 `ICLRDebugManager` 允许主机来实现这种类型的分组。  
+ 在调试方案中, 主机可能需要根据任务自己的编程逻辑对任务进行分组。 例如, 分组允许开发人员仅查看开发人员的 Api 所需的任务, 而不是查看在进程中运行的每个任务。 `ICLRDebugManager`允许宿主实现这种分组。  
   
 > [!IMPORTANT]
->  三个`ICLRDebugManager`方法， `BeginConnection`，`SetConnectionTasks`和`EndConnection`，依赖于彼此。 按给定的顺序按预期方式工作，必须调用它们。  
+> 三`ICLRDebugManager`个方法`BeginConnection` (和`EndConnection`)相互依赖。 `SetConnectionTasks` 必须按给定顺序调用它们才能按预期方式工作。  
   
- 分组的标识符和友好名称的主机分配给分组，具有对公共语言运行时 (CLR) 没有意义。 CLR 只是将信息传递到调试器。  
+ 对于公共语言运行时 (CLR), 分组以及宿主分配给分组的标识符和友好名称没有任何意义。 CLR 只会将信息传递到调试器。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
   
- **库：** 包含为 MSCorEE.dll 中的资源  
+ **类库**作为资源包括在 Mscoree.dll 中  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

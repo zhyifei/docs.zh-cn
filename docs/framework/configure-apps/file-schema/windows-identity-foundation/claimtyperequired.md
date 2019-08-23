@@ -3,15 +3,15 @@ title: <claimTypeRequired>
 ms.date: 03/30/2017
 ms.assetid: c469d71f-6c77-4a24-97aa-53efa126ceef
 author: BrucePerlerMS
-ms.openlocfilehash: eafaf253e27db632f17acfce4445a07d18b109aa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 85f3954514fa8b532311b1fbfc34f32ebefa4099
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61778451"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69942830"
 ---
 # <a name="claimtyperequired"></a>\<claimTypeRequired>
-指定必需的传入安全令牌的声明集。  
+指定传入安全令牌所需的声明集。  
   
  \<system.identityModel>  
 \<identityConfiguration>  
@@ -32,16 +32,16 @@ ms.locfileid: "61778451"
  下列各节描述了特性、子元素和父元素。  
   
 ### <a name="attributes"></a>特性  
- None  
+ 无  
   
 ### <a name="child-elements"></a>子元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<claimType>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimtype.md)|指定传入安全令牌的一个可选或必需声明。|  
+|[\<claimType>](claimtype.md)|为传入安全令牌指定一个可选的或必需的声明。|  
   
 ### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<identityConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|指定服务级别标识设置。|
+|[\<identityConfiguration>](identityconfiguration.md)|指定服务级别标识设置。|

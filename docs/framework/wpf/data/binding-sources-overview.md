@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], binding source
 - binding sources [WPF]
 ms.assetid: 2df2cd11-6aac-4bdf-ab7b-ea5f464cd5ca
-ms.openlocfilehash: 9bb77146a55bae4aed17bdd3ef48eca7890d4807
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: eee10cbf3bbfc6f66ec9e0c3f35b27fdc485764b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401446"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69944686"
 ---
 # <a name="binding-sources-overview"></a>绑定源概述
 在数据绑定中，绑定源对象是指用户从其获取数据的对象。 本主题讨论可用作绑定源的对象类型。  
@@ -48,7 +48,7 @@ ms.locfileid: "68401446"
   
 - 不能绑定到公共字段。  
   
-- 类中声明的属性类型是传递给绑定的类型。 不过，绑定最终所用的类型取决于绑定目标属性的类型，而不是绑定源属性的类型。 如果类型不同，可能需要编写一个转换器来处理自定义属性最初传递给绑定的方式。 有关详细信息，请参阅 <xref:System.Windows.Data.IValueConverter> 。  
+- 类中声明的属性类型是传递给绑定的类型。 不过，绑定最终所用的类型取决于绑定目标属性的类型，而不是绑定源属性的类型。 如果类型不同，可能需要编写一个转换器来处理自定义属性最初传递给绑定的方式。 有关详细信息，请参阅 <xref:System.Windows.Data.IValueConverter>。  
   
 <a name="objects"></a>   
 ## <a name="using-entire-objects-as-a-binding-source"></a>将整个对象用作绑定源  
@@ -88,7 +88,7 @@ ms.locfileid: "68401446"
   
  [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 绑定的权限要求非常类似。 在部分信任沙箱中, 当<xref:System.Windows.Data.XmlDataProvider>它无权访问指定数据时, 将失败。  
   
- 具有匿名类型的对象是内部对象。 只有在完全信任级别下运行，才能绑定到匿名类型的属性。 有关匿名类型的详细信息，请参阅[匿名类型（C# 编程指南）](~/docs/csharp/programming-guide/classes-and-structs/anonymous-types.md)或[匿名类型 (Visual Basic)](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md) (Visual Basic)。  
+ 具有匿名类型的对象是内部对象。 只有在完全信任级别下运行，才能绑定到匿名类型的属性。 有关匿名类型的详细信息，请参阅[匿名类型（C# 编程指南）](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)或[匿名类型 (Visual Basic)](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md) (Visual Basic)。  
   
  有关部分信任安全的详细信息，请参阅 [WPF 部分信任安全](../wpf-partial-trust-security.md)。  
   

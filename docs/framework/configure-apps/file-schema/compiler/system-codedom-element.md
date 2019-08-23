@@ -9,12 +9,12 @@ helpviewer_keywords:
 - system.codedom element
 - <system.codedom> element
 ms.assetid: 672a68f7-e69f-4479-ac30-e980085ec4fe
-ms.openlocfilehash: 2bbd81867b3c20d8ac16bdd79fcc9a3cc7bbb55c
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 43bc3c40bfc0b0ce4c0b18683092faf8b67e1c04
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659685"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927698"
 ---
 # <a name="systemcodedom-element"></a>\<system.object > 元素
 指定可用语言提供程序的编译器配置设置。  
@@ -56,7 +56,7 @@ ms.locfileid: "69659685"
  开发人员和编译器供应商可将配置设置添加到计算机配置文件 (machine.config) 中以实现<xref:System.CodeDom.Compiler.CodeDomProvider>新的实现。 <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType>使用方法以编程方式枚举计算机上编译器配置设置标识的默认语言提供程序和语言提供程序。  
   
 > [!NOTE]
->  在 .NET Framework 版本1.0 和1.1 中, .NET Framework 提供的默认语言提供程序在[ \<编译器 >](compilers-element.md)元素中标识。 在 .NET Framework 版本2.0 中, 没有在[ \<编译器 >](compilers-element.md)元素中标识默认语言提供程序, 但可以使用<xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A>方法进行枚举。  
+> 在 .NET Framework 版本1.0 和1.1 中, .NET Framework 提供的默认语言提供程序在[ \<编译器 >](compilers-element.md)元素中标识。 在 .NET Framework 版本2.0 中, 没有在[ \<编译器 >](compilers-element.md)元素中标识默认语言提供程序, 但可以使用<xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A>方法进行枚举。  
   
 ## <a name="net-framework-versions-10-and-11"></a>.NET Framework 版本1.0 和1。1  
  System.object > 元素包含计算机上的语言提供程序的编译器配置设置。 [ \<](system-codedom-element.md) 编译器 > 元素包含零个或多个[ \<编译器 >](compiler-element.md)元素。 [ \<](compilers-element.md) 每个[ \<编译器 >](compiler-element.md)元素指定特定语言提供程序的编译器配置特性。  

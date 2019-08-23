@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ec50083d-44f4-4093-9b23-5eacd601f96e
-ms.openlocfilehash: 788388b93a00cf5393174d35b8a160b4991da3bc
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c2812e261278af7763bc6b2e1a493b97cb35e3ab
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67743730"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69911639"
 ---
 # <a name="working-with-data-definition-language"></a>使用数据定义语言
-从.NET Framework 版本 4 中，开始[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]支持数据定义语言 (DDL)。 这样，您将能够基于连接字符串和存储元数据 (SSDL) 模型创建或删除数据库实例。  
+从 .NET Framework 版本4开始, [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]支持数据定义语言 (DDL)。 这样，您将能够基于连接字符串和存储元数据 (SSDL) 模型创建或删除数据库实例。  
   
  <xref:System.Data.Objects.ObjectContext> 的以下方法使用连接字符串和 SSDL 内容来完成以下操作：创建或删除数据库，检查数据库是否存在，以及查看生成的 DDL 脚本：  
   
@@ -26,7 +26,7 @@ ms.locfileid: "67743730"
 - <xref:System.Data.Objects.ObjectContext.CreateDatabaseScript%2A>  
   
 > [!NOTE]
->  假定有足够的权限可执行 DDL 命令。  
+> 假定有足够的权限可执行 DDL 命令。  
   
  以上列出的方法将大部分工作都委托给基础 ADO.NET 数据提供程序。 该提供程序负责确保用于生成数据库对象的命名约定与用于查询和更新的约定保持一致。  
   
@@ -40,11 +40,11 @@ ms.locfileid: "67743730"
   
 2. 向应用程序中添加现有模型。  
   
-    1. 添加名为一个空模型`SchoolModel`。 若要创建一个空模型，请参阅[如何：创建新的.edmx 文件](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716703(v=vs.100))主题。  
+    1. 添加一个名为`SchoolModel`的空模型。 若要创建空模型, 请参阅[如何:创建新的 .edmx 文件](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716703(v=vs.100))主题。  
   
      将 SchoolModel.edmx 文件添加到您的项目中。  
   
-    1. 复制概念、 存储和映射中的 School 模型的内容[School 模型](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896300(v=vs.100))主题。  
+    1. 从[School 模型](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896300(v=vs.100))主题复制 school 模型的概念、存储和映射内容。  
   
     2. 打开 SchoolModel.edmx 文件并将内容粘贴在 `edmx:Runtime` 标记中。  
   

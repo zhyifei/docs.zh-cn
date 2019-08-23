@@ -6,20 +6,20 @@ helpviewer_keywords:
 - UI Automation, server-side provider implementation
 - provider implementation, UI Automation
 ms.assetid: 6acc6d08-bd67-4e2e-915c-9c1d34eb86fe
-ms.openlocfilehash: f888923736d384af2c6d955a126bacacb16113af
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a5fcceb3c39092deaa4a9dca258ba60117019c36
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651154"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69961222"
 ---
 # <a name="server-side-ui-automation-provider-implementation"></a>服务器端 UI 自动化提供程序的实现
 > [!NOTE]
->  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，请参阅[Windows 自动化 API:UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
+> 本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关的最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], 请[参阅 Windows 自动化 API:UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  本部分将介绍如何实现自定义控件的服务器端 UI 自动化提供程序。  
   
- 实现 Windows Presentation Foundation (WPF) 元素和非-[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]元素 (如那些用于[!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]) 完全不同。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 元素通过从 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 派生的类提供对 <xref:System.Windows.Automation.Peers.AutomationPeer>的支持。 非[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 元素通过提供程序接口的实现提供支持。  
+ Windows Presentation Foundation (WPF) 元素和非[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]元素 (如为设计的[!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]) 的实现在本质上是不同的。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 元素通过从 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 派生的类提供对 <xref:System.Windows.Automation.Peers.AutomationPeer>的支持。 非[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 元素通过提供程序接口的实现提供支持。  
   
 <a name="Security_Considerations"></a>   
 ## <a name="security-considerations"></a>安全注意事项  
@@ -102,7 +102,7 @@ ms.locfileid: "64651154"
 - <xref:System.Windows.Automation.AutomationElementIdentifiers.RuntimeIdProperty>  
   
 > [!NOTE]
->  承载在窗口的简单元素或片段根的 <xref:System.Windows.Automation.AutomationElementIdentifiers.RuntimeIdProperty> 是从窗口中获取的；但是，根下的片段元素（如列表框中的列表项）必须提供自己的标识符。 有关详细信息，请参阅 <xref:System.Windows.Automation.Provider.IRawElementProviderFragment.GetRuntimeId%2A>。  
+> 承载在窗口的简单元素或片段根的 <xref:System.Windows.Automation.AutomationElementIdentifiers.RuntimeIdProperty> 是从窗口中获取的；但是，根下的片段元素（如列表框中的列表项）必须提供自己的标识符。 有关详细信息，请参阅 <xref:System.Windows.Automation.Provider.IRawElementProviderFragment.GetRuntimeId%2A>。  
 >   
 >  应为承载在 <xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty> 控件中的提供程序返回 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] 。 在这种情况下，默认的窗口提供程序可能无法检索正确值。  
 >   
@@ -134,7 +134,7 @@ ms.locfileid: "64651154"
  简单控件的提供程序，例如窗口 (HWND) 中承载的自定义按钮，无需支持 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树中的导航。 导航到元素和从元素导航由主机窗口的默认提供程序处理，此程序在 <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.HostRawElementProvider%2A>的实现中指定。 但是，在实现复杂自定义控件的提供程序时，必须支持片段及其子代的根节点之间的导航，以及同级节点之间的导航。  
   
 > [!NOTE]
->  与根不同，片段的元素必须从 `null` 返回 <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.HostRawElementProvider%2A>引用，因为它们没有直接承载在窗口中，并且没有默认的提供程序可以支持往返它们的导航。  
+> 与根不同，片段的元素必须从 `null` 返回 <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.HostRawElementProvider%2A>引用，因为它们没有直接承载在窗口中，并且没有默认的提供程序可以支持往返它们的导航。  
   
  片段的结构由你的 <xref:System.Windows.Automation.Provider.IRawElementProviderFragment.Navigate%2A>的实现决定。 对于自每个片段的每个可能的方向，此方法返回该方向的元素的提供程序对象。 如果该方向没有任何元素，则方法将返回 `null` 引用。  
   

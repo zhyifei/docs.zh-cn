@@ -8,20 +8,20 @@ helpviewer_keywords:
 - controlling clocks interactively [WPF]
 - clocks [WPF], controlling interactively
 ms.assetid: d0b520e0-2f18-4cef-977f-2909e709548a
-ms.openlocfilehash: 05989b6a03e03fb5723a70c9c36d5e32f9117049
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2d18f395974750a6b85458f636a27f6101e7978f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947233"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69951336"
 ---
 # <a name="how-to-interactively-control-a-clock"></a>如何：以交互方式控制时钟
-一个<xref:System.Windows.Media.Animation.Clock>对象的<xref:System.Windows.Media.Animation.ClockController>属性使您能够以交互方式启动、 暂停、 恢复、 查找，请转到其填充期，时钟和停止时钟。 可以以交互方式控制仅一个计时树的根时钟。  
+<xref:System.Windows.Media.Animation.Clock>对象的<xref:System.Windows.Media.Animation.ClockController>属性使你能够以交互方式启动、暂停、恢复、查找、将时钟推进到其填充期并停止时钟。 只能以交互方式控制计时树的根时钟。  
   
 > [!NOTE]
->  还有其他方法为以交互方式控制动画的不需要您要直接使用时钟： 你还可以使用情节提要。 情节提要支持标记和代码中。 有关示例，请参阅[使用情节提要对属性进行动画处理](how-to-animate-a-property-by-using-a-storyboard.md)或[动画概述](animation-overview.md)。  
+> 还可以通过其他方式以交互方式控制不需要直接使用时钟的动画: 你也可以使用情节提要。 标记和代码都支持情节提要。 有关示例, 请参阅使用情节提要或[动画概述](animation-overview.md)对[属性进行动画处理](how-to-animate-a-property-by-using-a-storyboard.md)。  
   
- 在以下示例中，几个按钮，用于以交互方式控制的动画时钟。  
+ 在下面的示例中, 使用了多个按钮以交互方式控制动画时钟。  
   
 ## <a name="example"></a>示例  
  [!code-csharp[timingbehaviors_procedural_snip#GraphicsMMClockControllerExample](~/samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_procedural_snip/CSharp/ClockControllerExample.cs#graphicsmmclockcontrollerexample)]

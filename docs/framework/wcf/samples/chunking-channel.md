@@ -2,27 +2,27 @@
 title: 通道分块
 ms.date: 03/30/2017
 ms.assetid: e4d53379-b37c-4b19-8726-9cc914d5d39f
-ms.openlocfilehash: 1714b58d290b3dd85e105c60399dabe6c107b50b
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 6de513db82c49821c8f6758509f1bd356035b9c6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878566"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69951006"
 ---
 # <a name="chunking-channel"></a>通道分块
-发送使用 Windows Communication Foundation (WCF) 的大型消息时，它是内存的通常需要限制用于缓冲这些消息量。 一种可能的解决方案是流处理消息正文（假定数据主要集中在正文中）。 不过，有些协议要求对整个消息进行缓冲。 可靠消息和消息安全就是两个这样的示例。 另一个可能的解决方案是将大消息分割成称为消息块的小消息，一次发送一个消息块，并在接收端重建大消息。 应用程序本身就能实现这种分块和取消分块，或者使用自定义通道来实现。 块区通道示例演示如何使用自定义协议或分层通道为任意大的消息进行分块和取消分块。  
+使用 Windows Communication Foundation (WCF) 发送大消息时, 通常需要限制用于缓冲这些消息的内存量。 一种可能的解决方案是流处理消息正文（假定数据主要集中在正文中）。 不过，有些协议要求对整个消息进行缓冲。 可靠消息和消息安全就是两个这样的示例。 另一个可能的解决方案是将大消息分割成称为消息块的小消息，一次发送一个消息块，并在接收端重建大消息。 应用程序本身就能实现这种分块和取消分块，或者使用自定义通道来实现。 块区通道示例演示如何使用自定义协议或分层通道为任意大的消息进行分块和取消分块。  
   
  应始终在构造了要发送的整个消息后才使用块区。 块区通道应始终在安全通道和可靠会话通道之下分层。  
   
 > [!NOTE]
->  本主题的最后介绍了此示例的设置过程和生成说明。  
+> 本主题的最后介绍了此示例的设置过程和生成说明。  
   
 > [!IMPORTANT]
 >  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在, 请参阅[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)以下载所有 Windows Communication Foundation (wcf) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\ChunkingChannel`  
   
@@ -203,11 +203,11 @@ as the ChunkingStart message.
   
  在下一个较低级别，`ChunkingChannel` 依赖于若干组件来实现块区协议。 在发送端，通道使用一个名为 <xref:System.Xml.XmlDictionaryWriter> 的自定义 `ChunkingWriter`，它完成实际的分块。 `ChunkingWriter` 直接使用内部通道发送消息块。 使用自定义 `XmlDictionaryWriter` 可以在编写原始消息的大型正文的同时发送消息块。 这意味着不对整个原始消息进行缓冲。  
   
- ![图示显示块区通道发送体系结构。](./media/chunking-channel/chunking-channel-send.gif)  
+ ![显示分块通道发送体系结构的关系图。](./media/chunking-channel/chunking-channel-send.gif)  
   
  在接收端，`ChunkingChannel` 从内部通道提取消息并将其传递到名为 <xref:System.Xml.XmlDictionaryReader> 的自定义 `ChunkingReader`，后者将从传入的消息块重组原始消息。 `ChunkingChannel` 将此 `ChunkingReader` 包装到一个名为 `Message` 的自定义 `ChunkingMessage` 实现中并将此消息返回到上一层。 通过 `ChunkingReader` 和 `ChunkingMessage` 的这一组合，可以在上一层读取原始消息正文时取消消息的分块，而不必缓冲整个原始消息正文。 `ChunkingReader` 有一个队列可用来将传入的消息块缓冲为缓冲的消息块，缓冲的消息块最多可以达到可配置的最大缓冲消息块数量。 当达到此最大限度时，读取器将等待上一层将消息从队列中排出（即仅从原始消息正文中读取）或等待直到达到最大接收超时值。  
   
- ![图示显示块区通道接收体系结构。](./media/chunking-channel/chunking-channel-receive.gif)  
+ ![显示分块通道接收体系结构的关系图。](./media/chunking-channel/chunking-channel-receive.gif)  
   
 ## <a name="chunking-programming-model"></a>块区编程模型  
  服务开发人员可以通过在协定中对操作应用 `ChunkingBehavior` 属性来指定哪些消息需要分块。 该属性公开一个 `AppliesTo` 属性，允许开发人员指定是否对输入消息和/或输出消息应用分块。 下面的示例演示 `ChunkingBehavior` 属性的用法：  
@@ -248,7 +248,7 @@ interface ITestService
   
 - 传递给 Send 的超时值用作整个发送操作（包括发送所有消息块）的超时值。  
   
-- 为避免对整个原始消息正文进行缓存，选择了自定义 <xref:System.Xml.XmlDictionaryWriter> 设计。 如果要使用 <xref:System.Xml.XmlDictionaryReader> 对正文获取 `message.GetReaderAtBodyContents`，则将缓冲整个正文。 相反，我们有一个自定义<xref:System.Xml.XmlDictionaryWriter>传递给`message.WriteBodyContents`。 由于消息会在该编写器上调用 WriteBase64，因此编写器会将消息块包装成消息并使用内部通道发送消息。 在发送信息块之前，WriteBase64 处于阻止状态。  
+- 为避免对整个原始消息正文进行缓存，选择了自定义 <xref:System.Xml.XmlDictionaryWriter> 设计。 如果要使用 <xref:System.Xml.XmlDictionaryReader> 对正文获取 `message.GetReaderAtBodyContents`，则将缓冲整个正文。 相反, 我们有一个传递<xref:System.Xml.XmlDictionaryWriter>给`message.WriteBodyContents`的自定义。 由于消息会在该编写器上调用 WriteBase64，因此编写器会将消息块包装成消息并使用内部通道发送消息。 在发送信息块之前，WriteBase64 处于阻止状态。  
   
 ## <a name="implementing-the-receive-operation"></a>实现 Receive 操作  
  在高级别上，Receive 操作首先检查传入消息是否不为 `null` 以及其操作是否为 `ChunkingAction`。 如果传入消息不符合这两个条件，则会从 Receive 按原样返回该消息。 否则，Receive 将创建一个新的 `ChunkingReader` 和一个包装在其周围的新的 `ChunkingMessage`（通过调用 `GetNewChunkingMessage`）。 在返回该新 `ChunkingMessage` 之前，Receive 将使用线程池的线程来执行 `ReceiveChunkLoop`，它会循环调用 `innerChannel.Receive` 并将消息块发送到 `ChunkingReader`，直到收到结束消息块消息或达到接收超时值。  
@@ -271,7 +271,7 @@ interface ITestService
  `OnOpen` 调用 `innerChannel.Open` 以打开内部通道。  
   
 ### <a name="onclose"></a>OnClose  
- `OnClose` 首先将 `stopReceive` 设置为 `true` 以通知挂起的 `ReceiveChunkLoop` 停止。 然后等待`receiveStopped` <xref:System.Threading.ManualResetEvent>，时会设置`ReceiveChunkLoop`停止。 如果 `ReceiveChunkLoop` 在指定的超时之内停止，则 `OnClose` 将使用剩余超时调用 `innerChannel.Close`。  
+ `OnClose` 首先将 `stopReceive` 设置为 `true` 以通知挂起的 `ReceiveChunkLoop` 停止。 然后<xref:System.Threading.ManualResetEvent>, 它会等待`receiveStopped` , 后者在停止时`ReceiveChunkLoop`设置。 如果 `ReceiveChunkLoop` 在指定的超时之内停止，则 `OnClose` 将使用剩余超时调用 `innerChannel.Close`。  
   
 ### <a name="onabort"></a>OnAbort  
  `OnAbort` 调用 `innerChannel.Abort` 以中止内部通道。 如果有挂起的 `ReceiveChunkLoop`，则它会从挂起的 `innerChannel.Receive` 调用获取一个异常。  
@@ -290,9 +290,9 @@ interface ITestService
  `ChunkingChannelListener` 是围绕内部通道侦听器的包装程序。 除了将调用委托给该内部通道侦听器以外，其主要功能是在从内部通道侦听器接收的通道周围包装新的 `ChunkingDuplexSessionChannels`。 此操作在 `OnAcceptChannel` 和 `OnEndAcceptChannel` 中完成。 将会向新创建的 `ChunkingDuplexSessionChannel` 传递该内部通道以及前述的其他参数。  
   
 ## <a name="implementing-binding-element-and-binding"></a>实现绑定元素和绑定  
- `ChunkingBindingElement` 负责创建 `ChunkingChannelFactory` 和 `ChunkingChannelListener`。 `ChunkingBindingElement`检查是否在 T `CanBuildChannelFactory` \<T > 和`CanBuildChannelListener` \<T > 的类型`IDuplexSessionChannel`（块区通道支持的唯一通道） 以及绑定中的其他绑定元素支持此通道类型。  
+ `ChunkingBindingElement` 负责创建 `ChunkingChannelFactory` 和 `ChunkingChannelListener`。 `CanBuildChannelFactory` `CanBuildChannelListener`检查 t 中的\<t > 和`IDuplexSessionChannel` t > 是否为类型 (块区通道支持的唯一通道) 以及绑定中的其他绑定元素是否支持此\< `ChunkingBindingElement`通道类型。  
   
- `BuildChannelFactory`\<T > 首先检查请求的通道类型可以生成，然后获取要分割的消息操作列表。 有关更多信息，请参见下一节。 然后它创建一个新的 `ChunkingChannelFactory`，同时为其传递内部通道工厂（从 `context.BuildInnerChannelFactory<IDuplexSessionChannel>` 返回）、消息操作列表和要缓冲的消息块的最大数量。 消息块的最大数量来自一个名为 `MaxBufferedChunks` 的属性，此属性由 `ChunkingBindingElement` 公开。  
+ `BuildChannelFactory`\<T > 首先检查是否可以生成请求的通道类型, 然后获取要分块的消息操作的列表。 有关更多信息，请参见下一节。 然后它创建一个新的 `ChunkingChannelFactory`，同时为其传递内部通道工厂（从 `context.BuildInnerChannelFactory<IDuplexSessionChannel>` 返回）、消息操作列表和要缓冲的消息块的最大数量。 消息块的最大数量来自一个名为 `MaxBufferedChunks` 的属性，此属性由 `ChunkingBindingElement` 公开。  
   
  `BuildChannelListener<T>` 有一个类似的实现，用于创建 `ChunkingChannelListener` 并为其传递内部通道侦听器。  
   
@@ -303,23 +303,23 @@ interface ITestService
 ### <a name="determining-which-messages-to-chunk"></a>确定对哪些消息分块  
  块区通道只对通过 `ChunkingBehavior` 属性标识的消息进行分块。 `ChunkingBehavior` 类实现 `IOperationBehavior` 并通过调用 `AddBindingParameter` 方法来实现。 在此方法中，`ChunkingBehavior` 将检查其 `AppliesTo` 属性（`InMessage` 和/或 `OutMessage`）的值以确定应该对哪些消息进行分块。 然后获取这些消息中每个消息的操作（从 `OperationDescription` 上的消息集合中获取），并将其添加到包含在 `ChunkingBindingParameter` 的实例内的字符串集合中。 然后将此 `ChunkingBindingParameter` 添加到所提供的 `BindingParameterCollection` 中。  
   
- 当绑定元素生成通道工厂或通道侦听器时，会在 `BindingParameterCollection` 内将此 `BindingContext` 传递给绑定中的每个绑定元素。 `ChunkingBindingElement`的实现`BuildChannelFactory<T>`并`BuildChannelListener<T>`拉取这`ChunkingBindingParameter`共`BindingContext’`s `BindingParameterCollection`。 然后将包含在 `ChunkingBindingParameter` 内的操作集合传递给 `ChunkingChannelFactory` 或 `ChunkingChannelListener`，后者又将它传递给 `ChunkingDuplexSessionChannel`。  
+ 当绑定元素生成通道工厂或通道侦听器时，会在 `BindingParameterCollection` 内将此 `BindingContext` 传递给绑定中的每个绑定元素。 `ChunkingBindingElement`的`ChunkingBindingParameter`实现, 并将其`BindingContext’`从`BindingParameterCollection`中提取出来。 `BuildChannelFactory<T>` `BuildChannelListener<T>` 然后将包含在 `ChunkingBindingParameter` 内的操作集合传递给 `ChunkingChannelFactory` 或 `ChunkingChannelListener`，后者又将它传递给 `ChunkingDuplexSessionChannel`。  
   
 ## <a name="running-the-sample"></a>运行示例  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
-1. 安装 ASP.NET 4.0 使用以下命令。  
+1. 使用以下命令安装 ASP.NET 4.0。  
   
     ```  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2. 请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+2. 确保已对[Windows Communication Foundation 示例执行了一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-3. 若要生成解决方案，请按照中的说明[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
+3. 若要生成解决方案, 请按照[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
   
-4. 若要在单或跨计算机配置中运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
+4. 若要以单机配置或跨计算机配置来运行示例, 请按照[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的说明进行操作。  
   
 5. 先运行 Service.exe，然后运行 Client.exe 并观察两个控制台窗口的输出。  
   
