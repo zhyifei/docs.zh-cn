@@ -38,7 +38,7 @@ ms.locfileid: "68331750"
 ## <a name="pattern-matching-with-124"></a>利用 &#124; 的模式匹配  
  可以使用竖线 (`|`) 字符匹配一系列模式中的任何一种模式，其中 `|` 字符用于分隔每个模式。  
   
- 与正向字符集一样， `|` 字符可用于匹配多个字符中的任意一个字符。 以下示例使用正向字符集和 either/or 模式匹配（使用 `|` 字符）查找字符串中单词“gray”或“grey”的匹配项。 在该示例中， `|` 字符生成了更冗长的正则表达式。  
+ 与正向字符集一样， `|` 字符可用于匹配多个字符中的任意一个字符。 以下示例使用正向字符集和 either/or 模式匹配（使用 `|` 字符）查找字符串中单词“gray”或“grey”的匹配项。 在该示例中， `|` 字符生成了更为详细的正则表达式。
   
  [!code-csharp[RegularExpressions.Language.Alternation#1](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.alternation/cs/alternation1.cs#1)]
  [!code-vb[RegularExpressions.Language.Alternation#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.alternation/vb/alternation1.vb#1)]  
