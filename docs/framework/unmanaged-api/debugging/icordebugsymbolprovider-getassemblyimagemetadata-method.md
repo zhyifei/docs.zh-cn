@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 ms.assetid: c3c9de67-b865-4ecf-b887-1f1d0719a0c0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d96aa82e9fd8b651ab005cba4945f6977c1e3d3a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ad86c42d0f23de25fe0e5b9123a0dba3695d8d64
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67771502"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964649"
 ---
-# <a name="icordebugsymbolprovidergetassemblyimagemetadata-method"></a><span data-ttu-id="f1200-102">ICorDebugSymbolProvider::GetAssemblyImageMetadata 方法</span><span class="sxs-lookup"><span data-stu-id="f1200-102">ICorDebugSymbolProvider::GetAssemblyImageMetadata Method</span></span>
-<span data-ttu-id="f1200-103">返回合并程序集中的元数据。</span><span class="sxs-lookup"><span data-stu-id="f1200-103">Returns the metadata from a merged assembly.</span></span>  
+# <a name="icordebugsymbolprovidergetassemblyimagemetadata-method"></a><span data-ttu-id="b6b23-102">ICorDebugSymbolProvider::GetAssemblyImageMetadata 方法</span><span class="sxs-lookup"><span data-stu-id="b6b23-102">ICorDebugSymbolProvider::GetAssemblyImageMetadata Method</span></span>
+<span data-ttu-id="b6b23-103">返回合并程序集中的元数据。</span><span class="sxs-lookup"><span data-stu-id="b6b23-103">Returns the metadata from a merged assembly.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f1200-104">语法</span><span class="sxs-lookup"><span data-stu-id="f1200-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b6b23-104">语法</span><span class="sxs-lookup"><span data-stu-id="b6b23-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetAssemblyImageMetadata(  
@@ -22,25 +22,25 @@ HRESULT GetAssemblyImageMetadata(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="f1200-105">参数</span><span class="sxs-lookup"><span data-stu-id="f1200-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b6b23-105">参数</span><span class="sxs-lookup"><span data-stu-id="b6b23-105">Parameters</span></span>  
  `ppMemoryBuffer`  
- <span data-ttu-id="f1200-106">[out]指向的地址的指针[ICorDebugMemoryBuffer](../../../../docs/framework/unmanaged-api/debugging/icordebugmemorybuffer-interface.md)对象，其中包含有关大小和合并程序集的元数据地址信息。</span><span class="sxs-lookup"><span data-stu-id="f1200-106">[out] A pointer to the address of an [ICorDebugMemoryBuffer](../../../../docs/framework/unmanaged-api/debugging/icordebugmemorybuffer-interface.md) object that contains information about the size and address of the merged assembly's metadata.</span></span>  
+ <span data-ttu-id="b6b23-106">弄指向[ICorDebugMemoryBuffer](../../../../docs/framework/unmanaged-api/debugging/icordebugmemorybuffer-interface.md)对象地址的指针, 该对象包含有关合并的程序集元数据的大小和地址的信息。</span><span class="sxs-lookup"><span data-stu-id="b6b23-106">[out] A pointer to the address of an [ICorDebugMemoryBuffer](../../../../docs/framework/unmanaged-api/debugging/icordebugmemorybuffer-interface.md) object that contains information about the size and address of the merged assembly's metadata.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="f1200-107">备注</span><span class="sxs-lookup"><span data-stu-id="f1200-107">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b6b23-107">备注</span><span class="sxs-lookup"><span data-stu-id="b6b23-107">Remarks</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="f1200-108">此方法仅适用于 .NET Native。</span><span class="sxs-lookup"><span data-stu-id="f1200-108">This method is available with .NET Native only.</span></span>  
+> <span data-ttu-id="b6b23-108">此方法仅适用于 .NET Native。</span><span class="sxs-lookup"><span data-stu-id="b6b23-108">This method is available with .NET Native only.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f1200-109">要求</span><span class="sxs-lookup"><span data-stu-id="f1200-109">Requirements</span></span>  
- <span data-ttu-id="f1200-110">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="f1200-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b6b23-109">要求</span><span class="sxs-lookup"><span data-stu-id="b6b23-109">Requirements</span></span>  
+ <span data-ttu-id="b6b23-110">**适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="b6b23-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f1200-111">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f1200-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="b6b23-111">**标头：** Cordebug.idl, Cordebug.idl</span><span class="sxs-lookup"><span data-stu-id="b6b23-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="f1200-112">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f1200-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="b6b23-112">**类库**CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b6b23-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="f1200-113">**.NET Framework 版本：** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f1200-113">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
+ <span data-ttu-id="b6b23-113">**.NET Framework 版本：** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b6b23-113">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f1200-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="f1200-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b6b23-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="b6b23-114">See also</span></span>
 
-- [<span data-ttu-id="f1200-115">ICorDebugSymbolProvider 接口</span><span class="sxs-lookup"><span data-stu-id="f1200-115">ICorDebugSymbolProvider Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)
-- [<span data-ttu-id="f1200-116">调试接口</span><span class="sxs-lookup"><span data-stu-id="f1200-116">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="b6b23-115">ICorDebugSymbolProvider 接口</span><span class="sxs-lookup"><span data-stu-id="b6b23-115">ICorDebugSymbolProvider Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)
+- [<span data-ttu-id="b6b23-116">调试接口</span><span class="sxs-lookup"><span data-stu-id="b6b23-116">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
