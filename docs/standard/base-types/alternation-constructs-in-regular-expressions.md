@@ -1,5 +1,5 @@
 ---
-title: .NET 正则表达式中的备用构造
+title: .NET 正则表达式中的替换构造
 description: 了解如何使用备用构造在正则表达式中进行条件匹配。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
