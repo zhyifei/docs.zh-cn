@@ -89,7 +89,7 @@ ms.locfileid: "67135683"
 |`(\w+)`|匹配一个或多个单词字符。 这是第一个捕获组。|  
 |`\s`|与空白字符匹配。|  
 |`(\1)`|与第一个捕获组捕获中的字符串匹配。 这是第二个捕获组。 该示例将其指定到捕获组上，以便可从 `Match.Index` 属性返回。|  
-|`\W`|匹配包括空格和标点符号的一个非单词字符。 这样可以防止正则表达式模式匹配以第一个捕获组的单词开头的单词。|  
+|`\W`|匹配包括空格和标点符号的一个非单词字符。 这样可以防止正则表达式模式匹配从第一个捕获组的单词开头的单词。|  
   
 <a name="named_matched_subexpression"></a>   
 ## <a name="named-matched-subexpressions"></a>命名匹配的子表达式  
@@ -157,7 +157,7 @@ ms.locfileid: "67135683"
   
  请注意可在正则表达式中重复组名。 例如，可将多个组命名为 `digit`，如下面的示例所示。 在名称重复的情况下， <xref:System.Text.RegularExpressions.Group> 对象的值由输入字符串中最后一个成功的捕获确定。 此外，如果组名不重复，则使用有关每个捕获的信息填充 <xref:System.Text.RegularExpressions.CaptureCollection> 。  
   
- 在下面的示例中，正则表达式 `\D+(?<digit>\d+)\D+(?<digit>\d+)?` 中两次出现了名为 `digit`的组。 第一个名为 `digit` 的组捕获一个或多个数字字符。 第二个名为 `digit` 的组捕获一个或多个数字字符的零个或一个匹配项。 如示例的输出所示，如果第二个捕获组成功匹配文本，则文本的值定义 <xref:System.Text.RegularExpressions.Group> 对象的值。 如果第二个捕获组无法匹配输入字符串，则最后一个成功匹配的值定义 <xref:System.Text.RegularExpressions.Group> 对象的值。  
+ 在下面的示例中，正则表达式 `\D+(?<digit>\d+)\D+(?<digit>\d+)?` 中两次出现了名为 `digit`的组。 第一个名为 `digit` 的组捕获一个或多个数字字符。 第二个名为 `digit` 的组捕获一个或多个数字字符的零个或一个匹配项。 如示例的输出所示，如果第二个捕获组成功匹配文本，则文本的值定义 <xref:System.Text.RegularExpressions.Group> 对象的值。 如果第二个捕获组无法不匹配输入字符串，则最后一个成功匹配的值定义 <xref:System.Text.RegularExpressions.Group> 对象的值。  
   
  [!code-csharp[RegularExpressions.Language.Grouping#12](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.grouping/cs/duplicate1.cs#12)]
  [!code-vb[RegularExpressions.Language.Grouping#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.grouping/vb/duplicate1.vb#12)]  
@@ -219,7 +219,7 @@ ms.locfileid: "67135683"
 |`(?(Open)(?!))`|如果 `Open` 组存在，并可以匹配空字符串，则放弃匹配，但不前移字符串中的正则表达式引擎的位置。 这是零宽度负预测先行断言。 因为空字符串总是隐式地存在于输入字符串中，所以此匹配始终失败。 此匹配的失败表示尖括号不平衡。|  
 |`$`|匹配输入字符串的末尾部分。|  
   
- 最终子表达式 `(?(Open)(?!))`，指示是否正确平衡输入字符串中的嵌套构造（例如，是否每个左尖括号由右键括号匹配）。 它使用基于有效的捕获组的条件匹配，有关详细信息请参阅 [Alternation Constructs](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)。 如果定义了 `Open` 组，则正则表达式引擎会尝试匹配输入字符串中的子表达式 `(?!)` 。 仅当嵌套构造不均衡时，才应该定义 `Open` 组。 因此，要在输入字符串中匹配的模式应该是一个始终导致匹配失败的模式。 在此情况下， `(?!)` 是始终失败的零宽度负预测先行断言，因为空字符串总是隐式地存在于输入字符串中的下一个位置。  
+ 最终子表达式 `(?(Open)(?!))`，指示是否正确平衡输入字符串中的嵌套构造（例如，是否每个左尖括号由右键括号匹配）。 它使用基于有效的捕获组的条件匹配，有关详细信息请参阅 [替换构造](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)。 如果定义了 `Open` 组，则正则表达式引擎会尝试匹配输入字符串中的子表达式 `(?!)` 。 仅当嵌套构造不均衡时，才应该定义 `Open` 组。 因此，要在输入字符串中匹配的模式应该是一个始终导致匹配失败的模式。 在此情况下， `(?!)` 是始终失败的零宽度负预测先行断言，因为空字符串总是隐式地存在于输入字符串中的下一个位置。  
   
  在此示例中，正则表达式引擎计算输入字符串“\<abc><mno\<xyz>>”，如下表所示。  
   
@@ -468,7 +468,7 @@ ms.locfileid: "67135683"
 |`\W+`|匹配一个或多个非单词字符。|  
 |`(\w+)\W+)+`|一次或多次匹配跟在一个或多个非单词字符后面的一个或多个单词字符的模式。 这是第一个捕获组。|  
   
- 第一个捕获组匹配句子的每个单词。 第二个捕获组匹配每个单词，连同标点符号和该单词后的空白区域。 <xref:System.Text.RegularExpressions.Group> 对象的索引是 2，提供了有关由第二个捕获组匹配的文本的信息。 可从 <xref:System.Text.RegularExpressions.CaptureCollection> 对象获取捕获组捕获的整组单词，该对象由 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> 属性返回。  
+ 第二个捕获组匹配句子的每个单词。 第一个捕获组匹配每个单词，连同标点符号和该单词后的空白区域。 <xref:System.Text.RegularExpressions.Group> 对象的索引是 2，提供了有关由第二个捕获组匹配的文本的信息。 可从 <xref:System.Text.RegularExpressions.CaptureCollection> 对象获取捕获组捕获的整组单词，该对象由 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> 属性返回。  
   
 ## <a name="see-also"></a>请参阅
 

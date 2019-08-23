@@ -42,7 +42,7 @@ ms.locfileid: "48836279"
  如果 `(?imnsx-imnsx)` 构造定义的正则表达式选项有任何更改，更改在封闭组结束前一直有效。  
   
 > [!NOTE]
->  `(?imnsx-imnsx:`subexpression`)` 分组构造为子表达式提供了完全相同的功能。 有关详细信息，请参阅 [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。  
+>  `(?imnsx-imnsx:`subexpression  `)` 分组构造为子表达式提供了完全相同的功能。 有关详细信息，请参阅 [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。  
   
  下面的示例使用 `i`、`n` 和 `x` 选项，启用不区分大小写和显式捕获，并在正则表达式中间忽略正则表达式模式中的空格。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "48836279"
 |`\b`|与字边界匹配。|  
   
 ## <a name="inline-comment"></a>内联注释  
- `(?#` comment`)` 构造可用于在正则表达式中添加内联注释。 正则表达式引擎在模式匹配中不使用注释的任何部分，尽管注释仍包含在 <xref:System.Text.RegularExpressions.Regex.ToString%2A?displayProperty=nameWithType> 方法返回的字符串中。 该注释在第一个右括号处终止。  
+ `(?#` comment  `)` 构造可用于在正则表达式中添加内联注释。 正则表达式引擎在模式匹配中不使用注释的任何部分，尽管注释仍包含在 <xref:System.Text.RegularExpressions.Regex.ToString%2A?displayProperty=nameWithType> 方法返回的字符串中。 该注释在第一个右括号处终止。  
   
  下面的示例重复了上一部分的示例中的第一个正则表达式模式。 它将两个内联注释添加到该正则表达式，以指示比较是否区分大小写。 正则表达式模式 `\b((?# case-sensitive comparison)D\w+)\s(?ixn)((?#case-insensitive comparison)d\w+)\b` 按以下方式定义。  
   
@@ -90,7 +90,7 @@ ms.locfileid: "48836279"
 |-------------|-----------------|  
 |`\{`|匹配左大括号。|  
 |`\d+`|匹配一个或多个十进制数字。|  
-|`(,-*\d+)*`|与零个或一个后跟一个可选负号、再后跟一个或多个十进制数字的逗号匹配。|  
+|`(,-*\d+)*`|与零个或一个后跟一个可选负号、再后跟一个或多个十进制数字的冒号匹配。|  
 |`(\:\w{1,4}?)*`|与零个或一个后跟一到四个（但尽可能少）空白字符的冒号匹配。|  
 |`\}`|匹配右大括号。|  
 |`(?x)`|启用忽略模式空格选项，以便识别行尾注释。|  
