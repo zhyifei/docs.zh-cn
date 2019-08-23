@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Visual Basic code, comments
 - "' comment marker character [Visual Basic]"
 ms.assetid: 34126d7f-e0f9-476d-91e6-b31b398615dc
-ms.openlocfilehash: 3c63c5613b40cb2014c77a0a996e3acb2cc304d4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 16149ce42e3476cf07a62298f83734fee9ec7253
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783925"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69957758"
 ---
 # <a name="rem-statement-visual-basic"></a>REM 语句 (Visual Basic)
-使用要包含在程序的源代码中的说明性备注。  
+用于在程序的源代码中包括解释性注释。  
   
 ## <a name="syntax"></a>语法  
   
@@ -32,18 +32,18 @@ REM comment
   
 ## <a name="parts"></a>部件  
  `comment`  
- 可选。 想要包括的任何注释的文本。 是之间需要空格`REM`关键字和`comment`。  
+ 可选。 要包括的任何注释的文本。 `REM`关键字和`comment`之间必须有一个空格。  
   
 ## <a name="remarks"></a>备注  
- 可以将`REM`上某一行，或在单独的语句可以将其放在另一个语句后的行。 `REM`语句必须是在行上的最后一个语句。 如果它跟在另一个语句，`REM`必须从该语句由空格分隔。  
+ 您可以将`REM`语句放在一行上, 也可以将其放在另一语句后面的行上。 `REM`语句必须是行中的最后一条语句。 如果它跟在另一语句`REM`之后, 则必须用空格将其与该语句分隔开。  
   
- 可以使用单引号 (`'`) 而不是`REM`。 您的评论另一个语句后面的同一行上还是位于单独一行上，也是如此。  
+ 您可以使用单引号 (`'`), `REM`而不是。 无论您的注释是在同一行后面还是单独的行上, 都是如此。  
   
 > [!NOTE]
->  无法继续`REM`语句通过使用行继续符序列 (`_`)。 注释开始后，编译器不检查具有特殊含义的字符。 对于多行注释，使用另一个`REM`语句或注释符号 (`'`) 在每一行上。  
+> 不能使用行`REM`继续符 (`_`) 继续执行语句。 注释开始后, 编译器不会检查字符的特殊含义。 对于多行注释, 请在每行`REM`上使用另一个语句或`'`注释符号 ()。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示`REM`用于解释性备注包含在程序中的语句。 它还演示了替代方法，即使用单引号字符 (`'`) 而不是`REM`。  
+ 下面的示例说明`REM`语句, 该语句用于在程序中包含解释性注释。 它还显示了使用单引号 (`'`) 而不是的`REM`的替代方法。  
   
  [!code-vb[VbVbalrStatements#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#6)]  
   

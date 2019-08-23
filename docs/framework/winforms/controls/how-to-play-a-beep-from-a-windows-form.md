@@ -11,12 +11,12 @@ helpviewer_keywords:
 - forms [Windows Forms], sounds
 - examples [Windows Forms], sounds
 ms.assetid: 7ea5cded-4888-4f35-8f28-5cab1a55c973
-ms.openlocfilehash: 0aa01f600873dd8853e1c33d5443448835e11455
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1a72f88c05fb21c11864058ffbe81c1957525375
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61913427"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966513"
 ---
 # <a name="how-to-play-a-beep-from-a-windows-form"></a>如何：从 Windows 窗体播放提示音
 本示例在运行时播放提示音。  
@@ -37,10 +37,10 @@ public void onePing()
 ```  
   
 > [!NOTE]
->  中播放的声音C#代码示例由<xref:System.Media.SystemSounds.Beep%2A>系统声音设置决定。 有关详细信息，请参阅 <xref:System.Media.SystemSounds>。  
+> C#代码示例中播放的声音由<xref:System.Media.SystemSounds.Beep%2A>系统声音设置确定。 有关详细信息，请参阅 <xref:System.Media.SystemSounds>。  
   
 ## <a name="compiling-the-code"></a>编译代码  
- 有关C#，此示例需要引用<xref:System.Media?displayProperty=nameWithType>命名空间。  
+ 对于C#, 此示例需要引用<xref:System.Media?displayProperty=nameWithType>命名空间。  
   
 ## <a name="see-also"></a>请参阅
 

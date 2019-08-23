@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 29dde982-6d8b-4099-8867-ad0d7733f6dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6ba411114bfb853e06c83adb42713d43f1452d9c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3510cbf0a63a8031669bb7a819a8b3c7321aaea4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704799"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920767"
 ---
 # <a name="etwenable-element"></a>\<etwEnable > 元素
 指定是否为公共语言运行时事件启用 Windows 事件跟踪 (ETW)。  
@@ -38,10 +38,10 @@ ms.locfileid: "61704799"
   
 ## <a name="enabled-attribute"></a>enabled 特性  
   
-|“值”|描述|  
+|值|描述|  
 |-----------|-----------------|  
-|true|启用 ETW。 这是 Windows 从开始，在 Windows Vista 和 Windows Server 2008 操作系统的版本的默认值。|  
-|False|禁用 ETW。 这是早期版本的 Windows 的默认值。|  
+|真|启用 ETW。 这是从 Windows Vista 和 Windows Server 2008 操作系统开始的 Windows 版本的默认值。|  
+|假|禁用 ETW。 这是早期版本的 Windows 的默认设置。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  
@@ -54,13 +54,13 @@ ms.locfileid: "61704799"
 |`runtime`|包含有关程序集绑定和垃圾回收的信息。|  
   
 ## <a name="remarks"></a>备注  
- 从 Windows Vista 开始，默认情况下启用 ETW。 使用此元素用于禁用 ETW 的应用程序。 在早期版本的 Windows 中，使用此元素为应用程序启用 ETW。  
+ 从 Windows Vista 开始, 默认情况下启用 ETW。 使用此元素可禁用应用程序的 ETW。 在早期版本的 Windows 中, 使用此元素为应用程序启用 ETW。  
   
 > [!NOTE]
->  ETW 可以启用或被全局禁用服务器上通过使用注册表设置。 请参阅[控制.NET Framework 日志记录](../../../../../docs/framework/performance/controlling-logging.md)。  
+> 可以通过使用注册表设置在服务器上全局启用或禁用 ETW。 请参阅[控制 .NET Framework 日志记录](../../../performance/controlling-logging.md)。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何启用应用程序的 ETW 跟踪。  
+ 下面的示例演示如何为应用程序启用 ETW 跟踪。  
   
 ```xml  
 <configuration>  
@@ -72,6 +72,6 @@ ms.locfileid: "61704799"
   
 ## <a name="see-also"></a>请参阅
 
-- [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [控制 .NET Framework 日志记录](../../../../../docs/framework/performance/controlling-logging.md)
+- [运行时设置架构](index.md)
+- [配置文件架构](../index.md)
+- [控制 .NET Framework 日志记录](../../../performance/controlling-logging.md)

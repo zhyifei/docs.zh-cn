@@ -10,18 +10,18 @@ helpviewer_keywords:
 - bypasslist, remove element
 - remove element, bypasslist
 ms.assetid: 61dcfb4a-e3d9-4abf-a2cd-7d685fe2f64b
-ms.openlocfilehash: a04cca3e57af5cc422776c5b2444a140e86f98b9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 99c18bd5b779845d52831b4a9591eaf4d5e5530b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674462"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920961"
 ---
-# <a name="remove-element-for-bypasslist-network-settings"></a>\<删除 > bypasslist （网络设置） 的元素
+# <a name="remove-element-for-bypasslist-network-settings"></a>\<删除 bypasslist 的 > 元素 (网络设置)
 
 从代理跳过列表中删除 IP 地址或 DNS 名称。
 
-\<configuration>\
+\<配置 > \
 \<system.net>\
 \<defaultProxy>\
 \<bypasslist>\
@@ -43,7 +43,7 @@ ms.locfileid: "61674462"
 
 |**特性**|**说明**|
 |-------------------|---------------------|
-|`address`|正则表达式描述 IP 地址或 DNS 名称。|
+|`address`|描述 IP 地址或 DNS 名称的正则表达式。|
 
 ### <a name="child-elements"></a>子元素
 
@@ -53,15 +53,15 @@ ms.locfileid: "61674462"
 
 |**元素**|**说明**|
 |-----------------|---------------------|
-|[bypasslist](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|提供一组描述不使用代理的地址的正则表达式。|
+|[bypasslist](bypasslist-element-network-settings.md)|提供了一组正则表达式, 描述不使用代理的地址。|
 
 ## <a name="remarks"></a>备注
 
-`remove`元素中删除描述 IP 地址或 DNS 服务器名称，从列表中的绕过代理服务器的地址的正则表达式。 配置文件中或在配置层次结构中较高级别上，前面已定义地址。
+`remove`元素从绕过代理服务器的地址列表中删除描述 IP 地址或 DNS 服务器名称的正则表达式。 地址在配置文件中或配置层次结构中的更高级别定义。
 
-值为`address`属性应为描述一组 IP 地址或主机名的正则表达式。
+`address`特性的值应为描述一组 IP 地址或主机名的正则表达式。
 
-有关正则表达式的详细信息，请参阅。[.NET framework 正则表达式](../../../../../docs/standard/base-types/regular-expressions.md)。
+有关正则表达式的详细信息, 请参阅。[.NET Framework 正则表达式](../../../../standard/base-types/regular-expressions.md)。
 
 ## <a name="configuration-files"></a>配置文件
 
@@ -69,7 +69,7 @@ ms.locfileid: "61674462"
 
 ## <a name="example"></a>示例
 
-下面的示例删除 adventure-works.com 域中，任何以前定义，然后将 contoso.com 域添加到忽略列表。
+下面的示例删除 adventure-works.com 域的任何先前定义, 然后将 contoso.com 域添加到跳过列表。
 
 ```xml
 <configuration>
@@ -87,4 +87,4 @@ ms.locfileid: "61674462"
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
-- [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [网络设置架构](index.md)

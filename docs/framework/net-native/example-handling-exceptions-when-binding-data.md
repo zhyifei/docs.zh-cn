@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 ms.assetid: bd63ed96-9853-46dc-ade5-7bd1b0f39110
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 137459acc275629bb4608218772ae969e3fcf99a
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: a5be728cbeb0c3378bb35765787b299167069f57
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052697"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910612"
 ---
 # <a name="example-handling-exceptions-when-binding-data"></a>示例:处理绑定数据时出现的异常
 > [!NOTE]
->  该主题是指 .NET Native 开发者预览版这款预发布软件。 可从 [Microsoft Connect 网站](https://go.microsoft.com/fwlink/?LinkId=394611)（需要注册）下载该预览版。  
+> 该主题是指 .NET Native 开发者预览版这款预发布软件。 可从 [Microsoft Connect 网站](https://go.microsoft.com/fwlink/?LinkId=394611)（需要注册）下载该预览版。  
   
- 下面的示例演示如何解决[丢失元数据异常](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)使用.NET Native 工具链编译的应用试图绑定数据时引发的异常。 以下是有关异常的信息：  
+ 下面的示例演示如何解决在使用 .NET Native 工具链编译的应用尝试绑定数据时引发的[MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)异常。 以下是有关异常的信息：  
   
 ```  
 This operation cannot be carried out as metadata for the following type was removed for performance reasons:   
@@ -39,7 +39,7 @@ Windows_UI_Xaml!DirectUI::PropertyPathListener::ConnectPathStep+0x113
 ```  
   
 ## <a name="what-was-the-app-doing"></a>应用过去在执行什么操作？  
- 在堆栈底部帧从<xref:Windows.UI.Xaml?displayProperty=nameWithType>命名空间指示的 XAML 呈现引擎正在运行。   对 <xref:System.Reflection.PropertyInfo.GetValue%2A?displayProperty=nameWithType> 方法的显示了属性值的基于反射的查找，该值位于元数据遭到删除的类型上。  
+ 在堆栈的基础上, <xref:Windows.UI.Xaml?displayProperty=nameWithType>命名空间中的帧指示 XAML 呈现引擎正在运行。   对 <xref:System.Reflection.PropertyInfo.GetValue%2A?displayProperty=nameWithType> 方法的显示了属性值的基于反射的查找，该值位于元数据遭到删除的类型上。  
   
  第一步是提供一个元数据指令，将其添加到该类型的 `serialize` 元数据，使其所有属性都可访问：  
   
@@ -57,9 +57,9 @@ Windows_UI_Xaml!DirectUI::PropertyPathListener::ConnectPathStep+0x113
 ## <a name="could-the-code-be-rewritten-to-not-use-reflection"></a>代码能够重新，改为不使用反射吗？  
  因为数据绑定是反射密集型的，更改代码以避免反射是不可行的。  
   
- 然而，有几种方法可以指定 `ViewModel` 到 XAML 页面，从而让工具链在汇编时间可以将属性绑定与正确的类型关联起来并保存元数据，而不必使用运行时指令。  例如，可以应用<xref:Windows.UI.Xaml.Data.BindableAttribute?displayProperty=nameWithType>属性上的属性。 这会使得 XAML 编译器生成所需的查找信息并避免在 Default.rd.xml 文件中要求一个运行时指令。  
+ 然而，有几种方法可以指定 `ViewModel` 到 XAML 页面，从而让工具链在汇编时间可以将属性绑定与正确的类型关联起来并保存元数据，而不必使用运行时指令。  例如, 可以在属性上应用<xref:Windows.UI.Xaml.Data.BindableAttribute?displayProperty=nameWithType>特性。 这会使得 XAML 编译器生成所需的查找信息并避免在 Default.rd.xml 文件中要求一个运行时指令。  
   
 ## <a name="see-also"></a>请参阅
 
 - [入门](../../../docs/framework/net-native/getting-started-with-net-native.md)
-- [示例：故障诊断动态编程](../../../docs/framework/net-native/example-troubleshooting-dynamic-programming.md)
+- [示例：动态编程疑难解答](../../../docs/framework/net-native/example-troubleshooting-dynamic-programming.md)

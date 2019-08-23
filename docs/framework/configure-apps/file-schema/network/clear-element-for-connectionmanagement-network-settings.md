@@ -10,20 +10,20 @@ helpviewer_keywords:
 - clear element, connectionManagement
 - <connectionManagement>, clear element
 ms.assetid: fb259282-84c4-4dc4-a226-78d904a6edc3
-ms.openlocfilehash: 733c70b0575de7e2635afaab58ad48591f035fc0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 86a7a0ab402c8c40ec3b824402a1dba984412b68
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705233"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659448"
 ---
-# <a name="clear-element-for-connectionmanagement-network-settings"></a>\<清除 > connectionManagement （网络设置） 的元素
+# <a name="clear-element-for-connectionmanagement-network-settings"></a>\<清除 connectionManagement 的 > 元素 (网络设置)
 清除连接管理列表。  
   
  \<configuration>  
 \<system.net>  
 \<connectionManagement>  
-\<clear>  
+\<清除 >  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,7 +44,7 @@ ms.locfileid: "61705233"
   
 |**元素**|**说明**|  
 |-----------------|---------------------|  
-|[connectionManagement](../../../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md)|指定到网络主机的最大连接数。|  
+|[connectionManagement](connectionmanagement-element-network-settings.md)|指定到网络主机的最大连接数。|  
   
 ## <a name="remarks"></a>备注  
  `clear`元素清除连接管理列表中的所有条目。  
@@ -53,7 +53,7 @@ ms.locfileid: "61705233"
  此元素可在应用程序配置文件或计算机配置文件 (Machine.config) 中使用。  
   
 ## <a name="example"></a>示例  
- 以下示例清除连接管理列表中，然后添加新的服务器的连接管理条目`www.contoso.com`和所有其他网络主机。  
+ 下面的示例将清除 "连接管理" 列表, 然后为服务器`www.contoso.com`和所有其他网络主机添加新的连接管理条目。  
   
 ```xml  
 <configuration>  
@@ -71,4 +71,4 @@ ms.locfileid: "61705233"
 
 - <xref:System.Net.ServicePoint>
 - <xref:System.Net.ServicePointManager>
-- [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [网络设置架构](index.md)

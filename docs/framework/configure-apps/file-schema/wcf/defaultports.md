@@ -2,20 +2,20 @@
 title: <defaultPorts>
 ms.date: 03/30/2017
 ms.assetid: 725d4ee5-bd46-4f0e-9c20-30ba75d6eb2c
-ms.openlocfilehash: 4d7fdfb1cccb14f03d11864f1939cb578c79880a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 462a06e5a773310b6364838ae2ebc14da0a2ee1b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704110"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69925890"
 ---
 # <a name="defaultports"></a>\<defaultPorts>
 一个默认端口集合，列出客户端应用程序侦听的默认通信终结点。  
   
 \<system.ServiceModel>  
-\<behaviors>  
+\<行为 >  
 \<serviceBehaviors>  
-\<behavior>  
+\<行为 >  
 \<useRequestHeadersForMetadataAddress>  
 \<defaultPorts>  
   
@@ -40,13 +40,13 @@ ms.locfileid: "61704110"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<add> of \<defaultPorts>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-defaultports.md)|客户端应用程序侦听的默认通信终结点。|  
+|[\<添加 defaultPorts > \<的 >](add-of-defaultports.md)|客户端应用程序侦听的默认通信终结点。|  
   
 ### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<useRequestHeadersForMetadataAddress>](../../../../../docs/framework/configure-apps/file-schema/wcf/userequestheadersformetadataaddress.md)|默认端口列表。|  
+|[\<useRequestHeadersForMetadataAddress>](userequestheadersformetadataaddress.md)|默认端口列表。|  
   
 ## <a name="see-also"></a>请参阅
 

@@ -192,7 +192,7 @@ ms.locfileid: "67663984"
 
 ## <a name="single-line-mode"></a>单行模式
 
-<xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> 选项或 `s` 内联选项导致正则表达式引擎将输入字符串视为由单行组成。 它通过更改时间段 (`.`) 语言元素的行为，使其与每个字符匹配，而不是与除换行符 `\n` 或 \u000A 之外的每个字符匹配来执行此操作。
+<xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> 选项或 `s` 内联选项导致正则表达式引擎将输入字符串视为由单行组成。 它通过更改句号 (`.`) 语言元素的行为，使其与每个字符匹配，而不是与除换行符 `\n` 或 \u000A 之外的每个字符匹配来执行此操作。
 
 下面的示例演示了在使用 `.` 选项时如何更改 <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> 语言元素的行为。 正则表达式 `^.+` 在字符串开头开始并匹配每个字符。 默认情况下，匹配在第一行的结尾结束；正则表达式模式匹配回车符、`\r` 或 \u000D，但不匹配 `\n`。 由于 <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> 选项将整个输入字符串解释为单行，因此它匹配输入字符串中的每个字符，包括 `\n`。
 
@@ -364,7 +364,7 @@ ECMAScript 和规范化正则表达式的行为在三个方面不同：字符类
 
 - 字符类语法。 因为规范的正则表达式支持 Unicode，却不支持 ECMAScript，ECMAScript 中的字符类具有一个受限更多的语法且某些字符类语言元素具有不同的含义。 例如，ECMAScript 不支持语言元素（例如 Unicode 类别或块元素 `\p` 和 `\P`）。 同样，使用 ECMAScript 时，与单词字符匹配的 `\w` 元素等效于 `[a-zA-Z_0-9]` 字符类，使用规范化行为时，该元素等效于 `[\p{Ll}\p{Lu}\p{Lt}\p{Lo}\p{Nd}\p{Pc}\p{Lm}]`。 有关更多信息，请参见 [字符类](../../../docs/standard/base-types/character-classes-in-regular-expressions.md)。
 
-  下面的示例阐释了规范化与 ECMAScript 模式匹配之间的差异。 它定义了正则表达式 `\b(\w+\s*)+`，该表达式与后跟空白字符的单词匹配。 由两个字符串组成的输入，其中一个字符串使用拉丁字符集，另一个则使用西里尔字符集。 如输出所示，对使用 ECMAScript 匹配的 <xref:System.Text.RegularExpressions.Regex.IsMatch%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> 方法的调用无法与西里尔文的单词匹配，而使用规范化匹配的方法调用与这些单词也不匹配。
+  下面的示例阐释了规范化与 ECMAScript 模式匹配之间的差异。 它定义了正则表达式 `\b(\w+\s*)+`，该表达式与后跟空白字符的单词匹配。 由两个字符串组成的输入，其中一个字符串使用拉丁字符集，另一个则使用西里尔字符集。 如输出所示，对使用 ECMAScript 匹配的 <xref:System.Text.RegularExpressions.Regex.IsMatch%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> 方法的调用无法与西里尔文的单词匹配，而使用规范化匹配的方法调用与这些单词匹配。
 
   [!code-csharp[Conceptual.Regex.Language.Options#16](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/ecmascript1.cs#16)]
   [!code-vb[Conceptual.Regex.Language.Options#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/ecmascript1.vb#16)]
@@ -399,7 +399,7 @@ ECMAScript 和规范化正则表达式的行为在三个方面不同：字符类
 
 默认情况下，当正则表达式引擎执行不区分大小写的比较时，它使用当前区域性的大小写约定来确定等效的大写和小写字符。
 
-但是，此行为不需要某些类型的比较，尤其是在比较用户输入与系统资源名称时（如密码、文件或 URL）。 下面的示例阐释此类方案。 该代码旨在阻止对 URL 开头为 **FILE://** 的所有资源的访问。 正则表达式通过使用正则表达式 `$FILE://` 尝试与字符串的区分大小写的匹配。 但是，在当前系统区域性为 tr-TR（土耳其语-土耳其）时，“I”不是“i”的大写等效项。 因此，对 <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> 方法的调用返回 `false`，并允许访问该文件。
+但是，此行为不需要某些类型的比较，尤其是在比较用户输入与系统资源名称时（如密码、文件或 URL）。 下面的示例阐释此类方案。 该代码旨在阻止对 URL 开头为 **FILE://** 的所有资源的访问。 正则表达式通过使用正则表达式 `$FILE://` 尝试与字符串的不区分大小写的匹配。 但是，在当前系统区域性为 tr-TR（土耳其语-土耳其）时，“I”不是“i”的大写等效项。 因此，对 <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> 方法的调用返回 `false`，并允许访问该文件。
 
 [!code-csharp[Conceptual.Regex.Language.Options#14](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/culture1.cs#14)]
 [!code-vb[Conceptual.Regex.Language.Options#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/culture1.vb#14)]

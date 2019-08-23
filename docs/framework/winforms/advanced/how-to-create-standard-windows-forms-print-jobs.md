@@ -10,25 +10,25 @@ helpviewer_keywords:
 - printing [Windows Forms], creating print jobs
 - printing [Visual Basic], in Windows applications
 ms.assetid: 03342b90-9cfe-40b2-838b-b479a13c5dea
-ms.openlocfilehash: 96122302610d143c34404eac105ca9794b1cb15a
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 44673e6b26f088e71813aaac26c4b9a03429597a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053674"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69938231"
 ---
 # <a name="how-to-create-standard-windows-forms-print-jobs"></a>如何：创建标准的 Windows 窗体打印作业
-在 Windows 窗体中打印的基础是<xref:System.Drawing.Printing.PrintDocument>组件 — 具体而言，<xref:System.Drawing.Printing.PrintDocument.PrintPage>事件。 通过编写代码来处理<xref:System.Drawing.Printing.PrintDocument.PrintPage>事件，可以指定打印内容以及如何打印它。  
+Windows 窗体中打印的基础是<xref:System.Drawing.Printing.PrintDocument>组件, 更具体地说<xref:System.Drawing.Printing.PrintDocument.PrintPage> , 是事件。 通过编写代码来处理<xref:System.Drawing.Printing.PrintDocument.PrintPage>事件, 您可以指定要打印的内容以及打印方式。  
   
-### <a name="to-create-a-print-job"></a>若要创建打印作业  
+### <a name="to-create-a-print-job"></a>创建打印作业  
   
-1. 添加<xref:System.Drawing.Printing.PrintDocument>向窗体组件。  
+1. <xref:System.Drawing.Printing.PrintDocument>将组件添加到窗体。  
   
 2. 编写代码以处理 <xref:System.Drawing.Printing.PrintDocument.PrintPage> 事件。  
   
-     必须编写打印逻辑的代码。 此外，必须指定要打印的材料。  
+     您必须编写自己的打印逻辑代码。 此外, 您还必须指定要打印的材料。  
   
-     在下面的代码示例中创建一个红色矩形形状中的示例图形<xref:System.Drawing.Printing.PrintDocument.PrintPage>事件处理程序，使其作为要打印的材料。  
+     在下面的代码示例中, 会在<xref:System.Drawing.Printing.PrintDocument.PrintPage>事件处理程序中创建一个红色矩形的示例图形, 作为要打印的材料。  
   
     ```vb  
     Private Sub PrintDocument1_PrintPage(ByVal sender As Object, ByVal e As System.Drawing.Printing.PrintPageEventArgs) Handles PrintDocument1.PrintPage  
@@ -55,7 +55,7 @@ ms.locfileid: "66053674"
        }  
     ```  
   
-     (VisualC#和 Visual C++)将以下代码放在窗体的构造函数中以注册事件处理程序。  
+     (视觉C#对象和C++视觉对象)将以下代码放在窗体的构造函数中以注册事件处理程序。  
   
     ```csharp  
     this.printDocument1.PrintPage += new  
@@ -69,12 +69,12 @@ ms.locfileid: "66053674"
        (this, &Form1::printDocument1_PrintPage);  
     ```  
   
-     您可能还想要编写代码<xref:System.Drawing.Printing.PrintDocument.BeginPrint>和<xref:System.Drawing.Printing.PrintDocument.EndPrint>事件，可能包括一个整数表示总页数进行打印，即每一页打印会相应减少。  
+     你可能还需要为<xref:System.Drawing.Printing.PrintDocument.BeginPrint>和<xref:System.Drawing.Printing.PrintDocument.EndPrint>事件编写代码, 可能包括一个整数, 该整数表示在每个页面打印时减少的打印页数。  
   
     > [!NOTE]
-    >  您可以添加<xref:System.Windows.Forms.PrintDialog>向窗体以向用户提供干净且高效的用户界面 (UI) 组件。 设置<xref:System.Windows.Forms.PrintDialog.Document%2A>属性的<xref:System.Windows.Forms.PrintDialog>组件允许您设置与打印相关的属性记录你正在使用窗体上。 有关详细信息<xref:System.Windows.Forms.PrintDialog>组件，请参阅[PrintDialog 组件](../controls/printdialog-component-windows-forms.md)。  
+    > 您可以向窗<xref:System.Windows.Forms.PrintDialog>体中添加组件, 以便向用户提供干净且高效的用户界面 (UI)。 设置组件<xref:System.Windows.Forms.PrintDialog>的属性使您能够设置与您在窗体上使用的打印文档<xref:System.Windows.Forms.PrintDialog.Document%2A>相关的属性。 有关<xref:System.Windows.Forms.PrintDialog>组件的详细信息, 请参阅[PrintDialog component](../controls/printdialog-component-windows-forms.md)。  
   
-     有关详细信息的 Windows 窗体的详细信息包括如何以编程方式创建打印作业的打印作业，请参阅<xref:System.Drawing.Printing.PrintPageEventArgs>。  
+     有关 Windows 窗体打印作业的详细信息, 包括如何以编程方式创建打印作业的详细信息, 请<xref:System.Drawing.Printing.PrintPageEventArgs>参阅。  
   
 ## <a name="see-also"></a>请参阅
 

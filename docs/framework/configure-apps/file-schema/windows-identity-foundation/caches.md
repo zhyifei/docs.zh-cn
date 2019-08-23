@@ -3,19 +3,19 @@ title: <caches>
 ms.date: 03/30/2017
 ms.assetid: 4651091b-3a20-40d8-b293-4408c0710143
 author: BrucePerlerMS
-ms.openlocfilehash: b1d04280ef993297102d446ba5a7db54e8404dd8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5ad75ae18772d6e7c724f2cbf40c1e3083d5c345
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61750782"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941967"
 ---
-# <a name="caches"></a>\<caches>
-注册用于会话令牌和令牌重放检测的缓存。  
+# <a name="caches"></a>\<缓存 >
+注册用于会话令牌和令牌重播检测的缓存。  
   
  \<system.identityModel>  
 \<identityConfiguration>  
-\<caches>  
+\<缓存 >  
   
 ## <a name="syntax"></a>语法  
   
@@ -32,29 +32,29 @@ ms.locfileid: "61750782"
  下列各节描述了特性、子元素和父元素。  
   
 ### <a name="attributes"></a>特性  
- None  
+ 无  
   
 ### <a name="child-elements"></a>子元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<sessionSecurityTokenCache>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/sessionsecuritytokencache.md)|使用的服务或安全令牌处理程序集合注册会话令牌的缓存。|  
-|[\<tokenReplayCache>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaycache.md)|使用的服务或安全令牌处理程序集合注册的标记重播缓存。|  
+|[\<sessionSecurityTokenCache>](sessionsecuritytokencache.md)|使用服务或安全标记处理程序集合为会话令牌注册缓存。|  
+|[\<tokenReplayCache>](tokenreplaycache.md)|向服务或安全标记处理程序集合注册令牌重播缓存。|  
   
 ### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<identityConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|指定服务级别标识设置。|  
-|[\<securityTokenHandlerConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|提供配置集合的安全令牌处理程序。|  
+|[\<identityConfiguration>](identityconfiguration.md)|指定服务级别标识设置。|  
+|[\<securityTokenHandlerConfiguration>](securitytokenhandlerconfiguration.md)|为安全标记处理程序的集合提供配置。|  
   
 ## <a name="remarks"></a>备注  
- 一个`<caches>`可以在服务级别下指定元素`<identityConfiguration>`元素下的安全令牌处理程序集合级别上或`<securityTokenHandlerConfiguration>`元素。 标记处理程序集合上的设置将覆盖在服务上指定的。  
+ 可以在元素`<identityConfiguration>`下的服务级别指定元素, 或在`<securityTokenHandlerConfiguration>`元素下的安全令牌处理程序集合级别指定元素。`<caches>` 标记处理程序集合上的设置将重写服务上指定的设置。  
   
- `<caches>`元素表示由<xref:System.IdentityModel.Configuration.IdentityModelCachesElement>类。 表示配置的缓存<xref:System.IdentityModel.Configuration.IdentityModelCaches>类。  
+ 元素由<xref:System.IdentityModel.Configuration.IdentityModelCachesElement>类表示。 `<caches>` 配置的缓存由<xref:System.IdentityModel.Configuration.IdentityModelCaches>类表示。  
   
 ## <a name="example"></a>示例  
- 下面的 XML 演示的用于保存会话安全令牌的自定义缓存配置 (<xref:System.IdentityModel.Tokens.SessionSecurityToken>)。 配置来自`ClaimsAwareWebFarm`示例。  
+ 下面的 XML 演示了用于保存会话安全令牌 (<xref:System.IdentityModel.Tokens.SessionSecurityToken>) 的自定义缓存配置。 此配置取自`ClaimsAwareWebFarm`示例。  
   
 ```xml  
 <caches>  

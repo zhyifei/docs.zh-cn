@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data sources [Windows Forms], binding to Windows Forms controls
 - DataGridView control [Windows Forms], data binding
 ms.assetid: f4f46009-cec2-441b-8668-6b5af057558b
-ms.openlocfilehash: 51e18555a322e32f0877167d42cd30776068c746
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 609878416be26786ce865168c996c78e18b1897f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040034"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917874"
 ---
 # <a name="how-to-bind-data-to-the-windows-forms-datagridview-control-using-the-designer"></a>如何：使用设计器将数据绑定到 Windows 窗体 DataGridView 控件
 您可以使用设计器将<xref:System.Windows.Forms.DataGridView>控件连接到多种不同种类 (包括数据库、业务对象或 Web 服务) 的数据源。 使用设计器将控件绑定到数据源时, 控件将自动绑定到<xref:System.Windows.Forms.BindingSource>表示数据源的组件。 此外，会在控件中自动生成列以匹配数据源提供的架构信息。
@@ -39,7 +39,7 @@ ms.locfileid: "69040034"
 6. 若要创建主/从关系, 请在另<xref:System.Windows.Forms.DataGridView>一个控件的 "**选择数据源**" 下拉窗口中, 展开<xref:System.Windows.Forms.BindingSource>为父表创建的, 然后从显示的列表中选择相关的子表。
 
     > [!NOTE]
-    >  如果项目已有数据源，还可以使用“数据源”窗口创建数据窗体。 有关详细信息，请参阅[数据源窗口](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/6ckyxa83(v=vs.120))。
+    > 如果项目已有数据源，还可以使用“数据源”窗口创建数据窗体。 有关详细信息，请参阅[数据源窗口](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/6ckyxa83(v=vs.120))。
 
 ## <a name="see-also"></a>请参阅
 

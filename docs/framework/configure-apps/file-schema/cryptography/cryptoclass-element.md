@@ -8,22 +8,22 @@ helpviewer_keywords:
 - cryptoClass element
 - <cryptoClass> element
 ms.assetid: 03db52ef-010e-44ea-b6fd-b9c900ecad50
-ms.openlocfilehash: da78140806ab8dbe7b7cb5e321e82755774ff25d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6a868f62c6a327012a6225b86bf0103d178d6ab7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705254"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921173"
 ---
 # <a name="cryptoclass-element"></a>\<cryptoClass > 元素
-包含一个密码类，该类具有到 [\<nameEntry>](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) 元素中的友好名称的映射。  
+包含一个密码类，该类具有到 [\<nameEntry>](nameentry-element.md) 元素中的友好名称的映射。  
   
  \<configuration>  
 \<mscorlib>  
 \<cryptographySettings>  
 \<cryptoNameMapping>  
-\<cryptoClasses>  
-\<cryptoClass>  
+\<cryptoClasses >  
+\<cryptoClass >  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,7 +38,7 @@ ms.locfileid: "61705254"
   
 |特性|描述|  
 |---------------|-----------------|  
-|`customClassName`|必需的特性。<br /><br /> 包含密码类的信息。 此属性用于提供您的类的短名称。 必须指定一个字符串，满足中指定的要求[指定完全限定的类型名称](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)。|  
+|`customClassName`|必需的特性。<br /><br /> 包含加密类的信息。 使用此特性可为你的类提供一个短名称。 您必须指定满足指定[完全限定的类型名称](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md)中指定的要求的字符串。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  
@@ -48,13 +48,13 @@ ms.locfileid: "61705254"
 |元素|描述|  
 |-------------|-----------------|  
 |`configuration`|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
-|`cryptoClasses`|包含密码类的列表，这些类具有到 [\<nameEntry>](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) 元素中的友好名称的映射。|  
+|`cryptoClasses`|包含密码类的列表，这些类具有到 [\<nameEntry>](nameentry-element.md) 元素中的友好名称的映射。|  
 |`cryptographySettings`|包含加密设置。|  
 |`cryptoNameMapping`|包含类到友好名称的映射。|  
-|`mscorlib`|包含 [\<cryptographySettings>](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptographysettings-element.md) 元素。|  
+|`mscorlib`|包含 [\<cryptographySettings>](cryptographysettings-element.md) 元素。|  
   
 ## <a name="example"></a>示例  
- 以下示例演示如何使用 **\<cryptoClass >** 元素来引用一个密码类并配置运行时。 然后可以将字符串"RSA"传递给<xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType>方法，并使用<xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A>方法以返回`MyCryptoRSAClass`对象。  
+ 下面的示例演示如何使用 **\<cryptoClass >** 元素来引用加密类并配置运行时。 然后, 你可以将字符串 "RSA" 传递给<xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType>方法, 并<xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A>使用方法返回`MyCryptoRSAClass`对象。  
   
 ```xml  
 <configuration>  
@@ -77,7 +77,7 @@ ms.locfileid: "61705254"
   
 ## <a name="see-also"></a>请参阅
 
-- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [加密设置架构](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
-- [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)
-- [配置加密类](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)
+- [配置文件架构](../index.md)
+- [加密设置架构](index.md)
+- [Cryptographic Services](../../../../standard/security/cryptographic-services.md)
+- [配置加密类](../../configure-cryptography-classes.md)

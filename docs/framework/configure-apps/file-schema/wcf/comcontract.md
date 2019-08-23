@@ -2,12 +2,12 @@
 title: <comContract>
 ms.date: 03/30/2017
 ms.assetid: 3f8e1c0c-cfdf-4c79-ac65-c64e9323a51c
-ms.openlocfilehash: 5d6bfb1e4aa1651cd8c3a869f681d71cfb15725c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ef980c86efad4fda86cf62148e50688fd22afe49
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64751869"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69926089"
 ---
 # <a name="comcontract"></a>\<comContract>
 指定 COM+ 集成服务协定。  
@@ -49,8 +49,8 @@ ms.locfileid: "64751869"
   
 |特性|描述|  
 |---------------|-----------------|  
-|Contract — 协定|一个包含协定类型的字符串。|  
-|name|一个包含协定名称的字符串。|  
+|协定 (contract)|一个包含协定类型的字符串。|  
+|NAME|一个包含协定名称的字符串。|  
 |namespace|一个包含协定命名空间的字符串。|  
 |requiresSession|一个布尔值，指定是否只能在会话绑定上使用该协定。 在初始化服务时，集成运行库可以确保此设置与要使用的绑定的类型一致。 如果协定的一个或多个绑定存在冲突，则会生成异常。 如果此属性为 `false`、使用的是单向通道并且存在任何 [out] 参数，则也会生成异常。|  
   
@@ -69,7 +69,7 @@ ms.locfileid: "64751869"
 |comContracts|包含 `comContract` 元素的集合。|  
   
 ## <a name="remarks"></a>备注  
- COM + 集成服务协定是当前只限于`http://tempuri.org`命名空间，而从提供支持的 COM 接口派生的协定名称。 但是，可以使用配置文件中的 `comContracts` 节以及 `comContract` 元素来指定替代服务协定。 例如，可以使用下面的配置来指定服务协定的命名空间、协定名称、要包含的用户定义类型以及其他设置。  
+ Com + 集成服务协定当前仅限于`http://tempuri.org`命名空间, 协定名称派生自支持的 COM 接口。 但是，可以使用配置文件中的 `comContracts` 节以及 `comContract` 元素来指定替代服务协定。 例如，可以使用下面的配置来指定服务协定的命名空间、协定名称、要包含的用户定义类型以及其他设置。  
   
 ```xml  
 <comContracts>
@@ -92,6 +92,6 @@ ms.locfileid: "64751869"
 
 - <xref:System.ServiceModel.Configuration.ComContractElementCollection>
 - <xref:System.ServiceModel.Configuration.ComContractElement>
-- [\<comContracts>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)
-- [与 COM+ 应用程序集成](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
-- [如何：配置 COM + 服务设置](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)
+- [\<comContracts>](comcontracts.md)
+- [与 COM+ 应用程序集成](../../../wcf/feature-details/integrating-with-com-plus-applications.md)
+- [如何：配置 COM + 服务设置](../../../wcf/feature-details/how-to-configure-com-service-settings.md)

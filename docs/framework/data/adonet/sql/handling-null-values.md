@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f18b288f-b265-4bbe-957f-c6833c0645ef
-ms.openlocfilehash: 45b123e7b0db4832a1629f8ec0224729ff20f689
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 077cfd9b90df130e0a6090637d5dbd70a70930b1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623462"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69938188"
 ---
 # <a name="handling-null-values"></a>处理 Null 值
 在列中的值未知或缺失时，在关系数据库中使用空值。 空既不是空字符串（对于 character 或 datetime 数据类型），也不是零值（对于 numeric 数据类型）。 ANSI SQL-92 规范规定，空必须对于所有数据类型均相同，以便以一致的方式处理所有空。 <xref:System.Data.SqlTypes> 命名空间通过实现 <xref:System.Data.SqlTypes.INullable> 接口，提供空语义。 <xref:System.Data.SqlTypes> 中的每种数据类型都有其自己的 `IsNull` 属性和可分配给该数据类型的实例的 `Null` 值。  
   
 > [!NOTE]
->  .NET Framework 2.0 版引入了对可以为 null 的类型的支持，这允许程序员扩展值类型以表示基础类型的所有值。 这些 CLR 可以为 null 的类型表示 <xref:System.Nullable> 结构的一个实例。 当值类型为装箱和未装箱，从而增强与对象类型的兼容性时，这个功能特别有用。 CLR 可以为 null 的类型不用于存储数据库 null 值，因为 ANSI SQL null 值的行为与 `null` 引用（或 Visual Basic 中的 `Nothing`）不同。 为了使用数据库 ANSI SQL null 值，请使用 <xref:System.Data.SqlTypes> null 值而不使用 <xref:System.Nullable>。 有关如何使用 CLR 的详细信息请参阅在 Visual Basic 中为 null 的类型[可以为 Null 的值类型](~/docs/visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)，和有关 C#，请参阅[使用可以为 Null 的类型](~/docs/csharp/programming-guide/nullable-types/using-nullable-types.md)。  
+> .NET Framework 2.0 版引入了对可以为 null 的类型的支持，这允许程序员扩展值类型以表示基础类型的所有值。 这些 CLR 可以为 null 的类型表示 <xref:System.Nullable> 结构的一个实例。 当值类型为装箱和未装箱，从而增强与对象类型的兼容性时，这个功能特别有用。 CLR 可以为 null 的类型不用于存储数据库 null 值，因为 ANSI SQL null 值的行为与 `null` 引用（或 Visual Basic 中的 `Nothing`）不同。 为了使用数据库 ANSI SQL null 值，请使用 <xref:System.Data.SqlTypes> null 值而不使用 <xref:System.Nullable>。 若要详细了解如何在 Visual Basic 中使用 CLR 可以为 null 的类型, 请参阅C#可以为 Null 的[值类型](../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md), 有关[使用可以为 null 的类型](../../../../csharp/programming-guide/nullable-types/using-nullable-types.md)  
   
 ## <a name="nulls-and-three-valued-logic"></a>空和三值逻辑  
  在列定义中允许空值将三值逻辑引入您的应用程序。 可以将比较计算为以下三个条件之一：  
@@ -32,12 +32,12 @@ ms.locfileid: "64623462"
 ## <a name="nulls-and-sqlboolean"></a>空和 SqlBoolean  
  任意 <xref:System.Data.SqlTypes> 之间的比较都将返回 <xref:System.Data.SqlTypes.SqlBoolean>。 每个 `IsNull` 的 `SqlType` 函数都可返回一个 <xref:System.Data.SqlTypes.SqlBoolean> 并可用于检查 null 值。 下面的真值表显示在存在空值时 AND、OR 和 NOT 这三个运算符的计算方式。 （T=true，F=false，U=unknown 或空。）  
   
- ![Truth Table](../../../../../docs/framework/data/adonet/sql/media/truthtable-bpuedev11.gif "TruthTable_bpuedev11")  
+ ![事实数据表](../../../../../docs/framework/data/adonet/sql/media/truthtable-bpuedev11.gif "TruthTable_bpuedev11")  
   
-### <a name="understanding-the-ansinulls-option"></a>理解 ANSI_NULLS 选项  
- <xref:System.Data.SqlTypes> 提供与在 SQL Server 中设置 ANSI_NULLS 选项时相同的语义。 所有算术运算符 (+、-，*、 /、 %)，按位运算符 (~，&、 &#124;)，和大多数函数都返回 null，如果任何操作数或参数为 null，但该属性除外`IsNull`。  
+### <a name="understanding-the-ansi_nulls-option"></a>理解 ANSI_NULLS 选项  
+ <xref:System.Data.SqlTypes> 提供与在 SQL Server 中设置 ANSI_NULLS 选项时相同的语义。 如果任何操作数或参数为 null, 则所有算术运算符 (+、-、*、/、 &#124;%)、位运算符 (~、&、) 和大多数函数都返回 null, 属性`IsNull`除外。  
   
- ANSI SQL-92 标准不支持*columnName* = NULL 在 WHERE 子句中。 在 SQL Server 中，ANSI_NULLS 选项既控制数据库中的默认可空性，也控制对空值的比较计算。 如果启用 ANSI_NULLS（这是默认设置），则在测试空值时在表达式中必须使用 IS NULL 运算符。 例如，在 ANSI_NULLS 为 on 时，以下比较始终生成 unknown：  
+ ANSI SQL-92 标准不支持 WHERE 子句中的*columnName* = NULL。 在 SQL Server 中，ANSI_NULLS 选项既控制数据库中的默认可空性，也控制对空值的比较计算。 如果启用 ANSI_NULLS（这是默认设置），则在测试空值时在表达式中必须使用 IS NULL 运算符。 例如，在 ANSI_NULLS 为 on 时，以下比较始终生成 unknown：  
   
 ```  
 colname > NULL  
@@ -80,14 +80,14 @@ WHERE TerritoryID IN (1, 2, 3)
  对于 UDT 列，null 值始终根据与 `DataColumn` 关联的类型来存储。 设想这样的情况：与 `DataColumn` 关联的 UDT 不实现 `INullable`，但其子类实现。 在这种情况下，如果分配了与派生类关联的强类型 null 值，则它被存储为非类型化的 `DbNull.Value`，因为空存储始终与 DataColumn 的数据类型一致。  
   
 > [!NOTE]
->  `Nullable<T>` 中当前不支持 <xref:System.Nullable> 或 `DataSet` 结构。  
+> `Nullable<T>` 中当前不支持 <xref:System.Nullable> 或 `DataSet` 结构。  
   
 ### <a name="multiple-column-row-assignment"></a>多列（行）赋值  
  `DataTable.Add`、`DataTable.LoadDataRow` 或其他接受 <xref:System.Data.DataRow.ItemArray%2A>（映射到行）的 API 会将“null”映射到 DataColumn 的默认值。 如果数组中的对象包含 `DbNull.Value` 或其强类型对应项，则上述规则同样适用。  
   
  此外，下面的规则适用于 `DataRow.["columnName"]` null 赋值的实例：  
   
-1. 默认值*默认*值是`DbNull.Value`所有除了强类型 null 列是相应强类型 null 值。  
+1. 默认值为除强`DbNull.Value`类型 null 列外的所有默认值, 其中为适当的强类型 null 值。  
   
 2. 在序列化为 XML 文件（如在“xsi:nil”中）期间，永远不写出空值。  
   

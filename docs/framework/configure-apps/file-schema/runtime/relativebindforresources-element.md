@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 846ffa47-7257-4ce3-8cac-7ff627e0e34f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 15156eaf883fc9ec162e0a85525564d49522b01d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 859e8a12421ea92aa48c54317e052683eb8e83f8
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592659"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663487"
 ---
 # <a name="relativebindforresources-element"></a>\<relativeBindForResources > 元素
 优化附属程序集的探测。  
@@ -35,14 +35,14 @@ ms.locfileid: "64592659"
   
 |特性|描述|  
 |---------------|-----------------|  
-|`enabled`|必需的特性。<br /><br /> 指定公共语言运行时是否可优化附属程序集的探测。|  
+|`enabled`|必需的特性。<br /><br /> 指定公共语言运行时是否优化附属程序集的探测。|  
   
 ## <a name="enabled-attribute"></a>enabled 特性  
   
 |值|描述|  
 |-----------|-----------------|  
-|`false`|在运行时不会优化附属程序集的探测。 这是默认值。|  
-|`true`|在运行时优化附属程序集探测。|  
+|`false`|运行时不会优化附属程序集的探测。 这是默认值。|  
+|`true`|运行时优化附属程序集的探测。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  
@@ -55,24 +55,24 @@ ms.locfileid: "64592659"
 |`runtime`|包含有关运行时初始化选项的信息。|  
   
 ## <a name="remarks"></a>备注  
- 一般情况下，资源管理器探测的资源，如中所述[打包和部署资源](../../../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)主题。 这意味着，当资源管理器探测程序特定的本地化版本的资源，它可能会在全局程序集缓存中查找、 在应用程序代码基，查询 Windows 安装程序的特定于区域性的文件夹中查找的附属程序集，并引发<xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>事件。 `<relativeBindForResources>`元素对中的资源管理器探测附属程序集的方式进行优化。 在以下情况下的资源探测时，它可以提高性能：  
+ 一般情况下, 资源管理器探测资源, 如[打包和部署资源](../../../resources/packaging-and-deploying-resources-in-desktop-apps.md)主题中所述。 这意味着, 当资源管理器探测某个资源的特定本地化版本时, 它可能会在全局程序集缓存中查找, 在应用程序的基本代码中查找特定于区域性的文件夹, 为附属程序集查询 Windows Installer, 并引发<xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>事件。 `<relativeBindForResources>`元素优化资源管理器探测附属程序集的方式。 当在以下条件下探测资源时, 它可以提高性能:  
   
-- 当附属程序集部署在与代码程序集相同的位置。 换而言之，如果代码程序集安装在全局程序集缓存，附属程序集必须也那里安装。 如果代码程序集安装在应用程序的基本代码，那么还必须在基本代码的特定于区域性的文件夹中安装附属程序集。  
+- 当附属程序集部署在与代码程序集相同的位置时。 换言之, 如果代码程序集安装在全局程序集缓存中, 则还必须在该程序集中安装附属程序集。 如果代码程序集安装在应用程序的代码库中, 则附属程序集还必须安装在基本代码的特定于区域性的文件夹中。  
   
-- Windows 安装程序时未使用或只是偶尔使用按需安装附属程序集。  
+- 如果未使用 Windows Installer 或只是很少使用附属程序集的按需安装。  
   
-- 当应用程序代码不会处理<xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>事件。  
+- 当应用程序代码不处理<xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>事件时。  
   
- 设置`enabled`的属性`<relativeBindForResources>`元素`true`优化资源管理器的探测附属程序集，如下所示：  
+ `<relativeBindForResources>` `true`设置元素的属性,以优化资源管理器的附属程序集探测`enabled` , 如下所示:  
   
 - 它使用父代码程序集的位置来探测附属程序集。  
   
-- 它不会查询 Windows 安装程序的附属程序集。  
+- 它不会为附属程序集查询 Windows Installer。  
   
 - 它不会引发<xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>事件。  
   
 ## <a name="see-also"></a>请参阅
 
-- [打包和部署资源](../../../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)
-- [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [打包和部署资源](../../../resources/packaging-and-deploying-resources-in-desktop-apps.md)
+- [运行时设置架构](index.md)
+- [配置文件架构](../index.md)

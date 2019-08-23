@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 09f2e4ee-1d08-4ba8-8936-83394fee319d
-ms.openlocfilehash: 5b3aca6a71f88762084934d0d9c7cea15b5366c8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 56f6e13763b5230e046c0838892393b3672a54be
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034458"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937044"
 ---
 # <a name="applying-an-xslt-transform-to-a-dataset"></a>将 XSLT 转换应用于 DataSet
-**WriteXml**方法<xref:System.Data.DataSet>使你能够编写的内容**数据集**作为 XML 数据。 随后的一项常见任务是使用 XSL 转换 (XSLT) 将该 XML 转换为另一种格式。 但是，同步**数据集**与<xref:System.Xml.XmlDataDocument>可以将 XSLT 样式表应用到的内容**数据集**而无需首先编写的内容**数据集**与 XML 数据使用**WriteXml**。  
+使用<xref:System.Data.DataSet>的**WriteXml**方法, 可以将**数据集**的内容作为 XML 数据写入。 随后的一项常见任务是使用 XSL 转换 (XSLT) 将该 XML 转换为另一种格式。 但是, 通过将**数据集**与<xref:System.Xml.XmlDataDocument>同步, 可以将 XSLT 样式表应用于**数据集**的内容, 而不必首先使用**WriteXml**以 XML 数据的形式编写**数据集**的内容。  
   
- 下面的示例填充**数据集**与表和关系，同步**数据集**与**XmlDataDocument**，并将写入的一部分**数据集**为 HTML 文件中使用 XSLT 样式表。 下面是该 XSLT 样式表的内容。  
+ 下面的示例使用数据表和关系填充**数据集**, 并将**数据**集与**XMLDATADOCUMENT**同步, 并使用 XSLT 样式表将部分**数据集**作为 HTML 文件写入。 下面是该 XSLT 样式表的内容。  
   
 ```xml  
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">  
@@ -56,10 +56,10 @@ ms.locfileid: "62034458"
 </xsl:stylesheet>  
 ```  
   
- 以下代码填充**数据集**并应用 XSLT 样式表。  
+ 下面的代码填充**数据集**并应用 XSLT 样式表。  
   
 > [!NOTE]
->  如果您要将应用到一个 XSLT 样式表**数据集**，其中包含关系，将获得最佳性能，如果您设置**嵌套**属性<xref:System.Data.DataRelation>到**true**为每个嵌套关系。 此设置使你可以使用 XSLT 样式表，执行正常的由上而下处理以遍历层次结构和转换数据，而不是使用对性能要求较高的 XPath 定位轴（例如，样式表节点测试表达式中前面的同级和后面的同级）来遍历层次结构。 有关嵌套关系的详细信息，请参阅[嵌套 Datarelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)。  
+> 如果要将 XSLT 样式表应用于包含关系的**数据集**, 如果将每个嵌套关系的的<xref:System.Data.DataRelation> **嵌套**属性设置为**true** , 则会获得最佳性能。 此设置使你可以使用 XSLT 样式表，执行正常的由上而下处理以遍历层次结构和转换数据，而不是使用对性能要求较高的 XPath 定位轴（例如，样式表节点测试表达式中前面的同级和后面的同级）来遍历层次结构。 有关嵌套关系的详细信息, 请参阅[嵌套 datarelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)。  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  

@@ -5,19 +5,18 @@ helpviewer_keywords:
 - ListView control [Windows Forms], adding column headers
 - columns [Windows Forms], adding to ListView controls
 ms.assetid: 5b1a8b4d-587e-479a-95c1-f9b90884f13a
-ms.openlocfilehash: e82fbcf63047873ebc6e5c40b8b9fbeb14a672e5
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 10963fcb6d87ed74f73ecf4f1831a56eae5a392d
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69038186"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69658462"
 ---
 # <a name="how-to-add-columns-to-the-windows-forms-listview-control-using-the-designer"></a>如何：使用设计器向 Windows 窗体 ListView 控件添加列
 
 当在<xref:System.Windows.Forms.ListView> **详细信息**视图中时, Windows 窗体控件可以显示每个列表项的多个列。 您可以使用这些列显示有关每个列表项的多种类型的信息。 例如, 文件列表可以显示文件的名称、文件类型、大小和文件的上次修改日期。 有关创建列后进行填充的信息, 请参阅[如何:用 Windows 窗体 ListView 控件](how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md)在列中显示子项。
 
 下面的过程需要一个**Windows 应用程序**项目, 该项目具有<xref:System.Windows.Forms.ListView>包含控件的窗体。 有关设置此类项目的信息, 请参阅[如何:创建 Windows 窗体应用程序项目](/visualstudio/ide/step-1-create-a-windows-forms-application-project)以及[如何:将控件添加到](how-to-add-controls-to-windows-forms.md)Windows 窗体。
-
 
 ### <a name="to-add-columns-in-the-designer"></a>在设计器中添加列
 

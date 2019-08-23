@@ -2,21 +2,21 @@
 title: <dispatcherSynchronization>
 ms.date: 03/30/2017
 ms.assetid: cc030f9c-4e38-4b14-94dc-9a0e41ec8e2d
-ms.openlocfilehash: 6be9752e8102a5d4db4fed31aae8ff6d56fdd24e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7336c9f7d8a117f9a9bfd338e47941eeb648fa51
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673402"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69925844"
 ---
 # <a name="dispatchersynchronization"></a>\<dispatcherSynchronization>
   
 指定允许服务进行异步答复的终结点行为。  
   
 \<system.serviceModel>  
-\<behaviors>  
+\<行为 >  
 \<endpointBehaviors>  
-\<behavior>  
+\<行为 >  
   
 ## <a name="syntax"></a>语法  
   
@@ -48,7 +48,7 @@ ms.locfileid: "61673402"
 
 | 元素 | 描述 |  
 | ------- | ----------- |  
-| [\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|指定终结点行为。 |
+| [\<behavior>](behavior-of-endpointbehaviors.md)|指定终结点行为。 |
 
 ## <a name="see-also"></a>请参阅
 

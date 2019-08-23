@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: bf598873-83b7-48de-8955-00b0504fbad0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6c2ed46e1d26d829fbe832e44efb40844ae7d56f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ba74907e2f6fc2ca14e12a24113fa7654c9b967e
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592716"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663803"
 ---
 # <a name="disablecachingbindingfailures-element"></a>\<disableCachingBindingFailures > 元素
-指定是否禁用缓存绑定故障的原因是通过探测找不到程序集。  
+指定是否禁止缓存发生的绑定故障, 因为探查找不到该程序集。  
   
  \<配置 > 元素  
 \<运行时 > 元素  
@@ -39,14 +39,14 @@ ms.locfileid: "64592716"
   
 |特性|描述|  
 |---------------|-----------------|  
-|enabled|必需的特性。<br /><br /> 指定是否禁用缓存绑定故障的原因是通过探测找不到程序集。|  
+|enabled|必需的特性。<br /><br /> 指定是否禁止缓存发生的绑定故障, 因为探查找不到该程序集。|  
   
 ## <a name="enabled-attribute"></a>enabled 特性  
   
 |值|Description|  
 |-----------|-----------------|  
-|0|不要禁用绑定失败的原因是通过探测找不到程序集缓存。 这是从.NET Framework 2.0 版的默认绑定行为。|  
-|1|禁用的绑定失败的原因是通过探测找不到程序集缓存。 此设置将恢复为.NET Framework 1.1 版的绑定行为。|  
+|0|请勿禁止缓存发生的绑定故障, 因为探查找不到该程序集。 这是默认绑定行为, 从 .NET Framework 版本2.0 开始。|  
+|1|禁止缓存发生的绑定故障, 因为探查找不到该程序集。 此设置将恢复为 .NET Framework 版本1.1 的绑定行为。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  
@@ -59,18 +59,18 @@ ms.locfileid: "64592716"
 |`runtime`|包含有关程序集绑定和垃圾回收的信息。|  
   
 ## <a name="remarks"></a>备注  
- 从.NET Framework 2.0 版开始，加载程序集的默认行为是缓存所有绑定和加载失败。 即，如果尝试加载程序集失败，后续请求同一程序集加载立即失败，而无需任何尝试查找程序集。 此元素将禁用绑定失败的原因是探测路径中找不到程序集的默认行为。 这些失败引发<xref:System.IO.FileNotFoundException>。  
+ 从 .NET Framework 版本2.0 开始, 加载程序集的默认行为是缓存所有绑定和加载失败。 也就是说, 如果尝试加载程序集失败, 则加载同一程序集的后续请求将立即失败, 而不会尝试查找程序集。 此元素将禁用发生的绑定故障的默认行为, 因为在探测路径中找不到该程序集。 这些失败会<xref:System.IO.FileNotFoundException>引发。  
   
- 一些绑定和加载失败不受此元素，并始终进行缓存。 这些失败原因是该程序集已找到，但无法加载。 它们将引发<xref:System.BadImageFormatException>或<xref:System.IO.FileLoadException>。 以下列表包含此类故障的一些示例。  
+ 某些绑定和加载失败不受此元素影响, 并且始终会进行缓存。 出现这些失败是因为程序集已找到, 但无法加载。 它们引发<xref:System.BadImageFormatException>或<xref:System.IO.FileLoadException>。 以下列表包括此类故障的一些示例。  
   
-- 如果你尝试加载文件不是有效的程序集，即使错误的文件将被替换为正确的程序集加载程序集的后续尝试将失败。  
+- 如果尝试加载文件不是有效的程序集, 则即使将错误文件替换为正确的程序集, 以后尝试加载程序集也会失败。  
   
-- 如果尝试加载已锁定的文件系统程序集，加载程序集的后续尝试将失败，即使文件系统发布程序集。  
+- 如果尝试加载文件系统锁定的程序集, 则即使在文件系统释放程序集之后, 加载程序集的后续尝试也将失败。  
   
-- 如果尝试加载的程序集的一个或多个版本位于探测路径中，但在它们之间的不是你请求的特定版本，加载该版本的后续尝试将失败，即使正确的版本将移到探测路径。  
+- 如果尝试加载的程序集的一个或多个版本位于探测路径中, 但你请求的特定版本不在其中, 则即使将正确的版本移入探测路径, 后续尝试加载该版本也会失败。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何禁用的原因是通过探测找不到程序集的程序集绑定故障缓存。  
+ 下面的示例演示如何禁止缓存发生的程序集绑定故障, 因为探查找不到该程序集。  
   
 ```xml  
 <configuration>  
@@ -82,6 +82,6 @@ ms.locfileid: "64592716"
   
 ## <a name="see-also"></a>请参阅
 
-- [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [运行时如何定位程序集](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [运行时设置架构](index.md)
+- [配置文件架构](../index.md)
+- [运行时如何定位程序集](../../../deployment/how-the-runtime-locates-assemblies.md)

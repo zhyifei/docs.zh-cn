@@ -8,12 +8,12 @@ helpviewer_keywords:
 - requestCaching element
 - <requestCaching> element
 ms.assetid: 9962a2fe-cbda-41a6-9377-571811eaea84
-ms.openlocfilehash: af290e4b9258a08425a15e297ff538502edea916
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2a3d0b182acad2351ed095934ca97c6194d344fc
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674423"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659137"
 ---
 # <a name="requestcaching-element-network-settings"></a>\<requestCaching> 元素（网络设置）
 控制网络请求的缓存机制。  
@@ -42,39 +42,39 @@ ms.locfileid: "61674423"
   
 |特性|描述|  
 |---------------|-----------------|  
-|`isPrivateCache`|指定是否缓存之间提供隔离的不同用户的信息。 默认值为 `true`。 此值应为`false`的中间层应用程序。|  
-|`disableAllCaching`|指定缓存禁用的所有 Web 响应，并且不能以编程方式重写。|  
+|`isPrivateCache`|指定缓存是否在不同用户的信息之间提供隔离。 默认值为 `true`。 此值应该`false`适用于中间层应用程序。|  
+|`disableAllCaching`|指定为所有 Web 响应禁用缓存, 且不能以编程方式重写。|  
 |`defaultPolicyLevel`|<xref:System.Net.Cache.RequestCacheLevel> 枚举中的值之一。 默认值为 `BypassCache`。|  
-|`unspecifiedMaximumAge`|指定默认的时间后的内容被标记为已过期。|  
+|`unspecifiedMaximumAge`|指定将内容标记为过期的默认时间。|  
   
-## <a name="policylevel-attribute"></a>policyLevel 属性  
+## <a name="policylevel-attribute"></a>policyLevel 特性  
   
-|“值”|描述|  
+|值|描述|  
 |-----------|-----------------|  
-|`Default`|如果资源是最新、 内容长度是准确的并且存在过期、 修改和内容长度属性将，返回缓存的资源。|  
-|`BypassCache`|从服务器返回的资源。|  
-|`CacheOnly`|如果内容长度存在并且匹配的项大小，则返回缓存的资源。|  
-|`CacheIfAvailable`|如果提供了内容的长度，并且与匹配项的大小;，返回缓存的资源否则为该资源从服务器下载，并返回到调用方。|  
-|`Revalidate`|如果缓存资源的时间戳是与服务器; 上的资源的时间戳相同，则返回缓存的资源否则为该资源从存储在缓存中的服务器下载，并返回到调用方。|  
-|`Reload`|从服务器下载资源、 将其存储在缓存中，并返回给调用方的资源。|  
-|`NoCacheNoStore`|如果缓存的资源存在，将删除它。 资源从服务器下载，并返回到调用方。|  
-|`Revalidate`|如果时间戳服务器; 上的资源的时间戳相同，则使用该资源的缓存的副本满足请求否则为资源在服务器上，提供给调用方，下载并存储在缓存中，|  
+|`Default`|如果资源是最新的, 则返回缓存的资源, 内容长度准确, 并且存在过期、修改和内容长度属性。|  
+|`BypassCache`|从服务器返回资源。|  
+|`CacheOnly`|如果内容长度存在并且与条目大小匹配, 则返回缓存的资源。|  
+|`CacheIfAvailable`|如果提供了内容长度并与条目大小匹配, 则返回缓存的资源;否则, 将从服务器下载资源, 并将其返回给调用方。|  
+|`Revalidate`|如果缓存资源的时间戳与服务器上资源的时间戳相同, 则返回缓存的资源;否则, 将从服务器下载资源, 并将其存储在缓存中, 并将其返回给调用方。|  
+|`Reload`|从服务器下载资源, 将其存储在缓存中, 并将资源返回给调用方。|  
+|`NoCacheNoStore`|如果缓存的资源存在, 则将其删除。 从服务器下载资源, 并将其返回给调用方。|  
+|`Revalidate`|如果时间戳与服务器上资源的时间戳相同, 则使用资源的缓存副本满足请求;否则, 会从服务器下载资源, 并将其提供给调用方, 并存储在缓存中。|  
   
 ### <a name="child-elements"></a>子元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[defaultHttpCachePolicy](../../../../../docs/framework/configure-apps/file-schema/network/defaulthttpcachepolicy-element-network-settings.md)|可选元素。<br /><br /> 描述 HTTP 缓存功能是否处于活动状态并介绍了默认的缓存策略。|  
-|[\<defaultFtpCachePolicy > 元素 （网络设置）](../../../../../docs/framework/configure-apps/file-schema/network/defaultftpcachepolicy-element-network-settings.md)|可选元素。<br /><br /> 介绍 FTP 缓存功能是否处于活动状态并介绍了默认的缓存策略。|  
+|[defaultHttpCachePolicy](defaulthttpcachepolicy-element-network-settings.md)|可选元素。<br /><br /> 描述 HTTP 缓存是否处于活动状态, 并描述默认缓存策略。|  
+|[\<defaultFtpCachePolicy > 元素 (网络设置)](defaultftpcachepolicy-element-network-settings.md)|可选元素。<br /><br /> 介绍 FTP 缓存是否处于活动状态, 并描述默认缓存策略。|  
   
 ### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[system.net](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|包含指定 .NET Framework 如何连接到网络的设置。|  
+|[system.net](system-net-element-network-settings.md)|包含指定 .NET Framework 如何连接到网络的设置。|  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何禁用所有缓存行为。  
+ 下面的示例演示如何禁用所有缓存。  
   
 ```xml  
 <configuration>  
@@ -89,4 +89,4 @@ ms.locfileid: "61674423"
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Net.Cache?displayProperty=nameWithType>
-- [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [网络设置架构](index.md)

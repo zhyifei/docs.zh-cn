@@ -9,18 +9,18 @@ helpviewer_keywords:
 - system.codedom element
 - <system.codedom> element
 ms.assetid: 672a68f7-e69f-4479-ac30-e980085ec4fe
-ms.openlocfilehash: 0f47255bb4073007a847e4a8b85ccfd34100582b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2bbd81867b3c20d8ac16bdd79fcc9a3cc7bbb55c
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674788"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659685"
 ---
-# <a name="systemcodedom-element"></a>\<system.codedom > 元素
+# <a name="systemcodedom-element"></a>\<system.object > 元素
 指定可用语言提供程序的编译器配置设置。  
   
  \<配置 > 元素  
-\<system.codedom > 元素  
+\<system.object > 元素  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,34 +40,34 @@ ms.locfileid: "61674788"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<compilers>](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)|编译器配置元素的容器；包含零个或多个 [\<compiler>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md) 元素。|  
+|[\<compilers>](compilers-element.md)|编译器配置元素的容器；包含零个或多个 [\<compiler>](compiler-element.md) 元素。|  
   
 ### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<configuration>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
+|[\<configuration>](../configuration-element.md)|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
   
 ## <a name="remarks"></a>备注  
   
-## <a name="net-framework-version-20"></a>.NET framework 2.0 版  
- [ \<System.codedom >](../../../../../docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md)元素包含除了如安装.NET Framework 中，使用的默认提供程序的计算机上安装的语言提供程序的编译器配置设置<xref:Microsoft.CSharp.CSharpCodeProvider>和<xref:Microsoft.VisualBasic.VBCodeProvider>。 [\<编译器 >](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)元素包含零个或多[\<编译器 >](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)元素。 每个[\<编译器 >](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)元素指定特定的语言提供程序的编译器配置属性。  
+## <a name="net-framework-version-20"></a>.NET Framework 版本2。0  
+ System codedom > 元素包含计算机上安装的语言提供程序的编译器配置设置<xref:Microsoft.CSharp.CSharpCodeProvider> , 以及随 .NET Framework 安装的默认提供程序, 如和[ \<](system-codedom-element.md)<xref:Microsoft.VisualBasic.VBCodeProvider>. 编译器 > 元素包含零个或多个[ \<编译器 >](compiler-element.md)元素。 [ \<](compilers-element.md) 每个[ \<编译器 >](compiler-element.md)元素指定特定语言提供程序的编译器配置特性。  
   
- 开发人员和编译器供应商可以将配置设置添加到计算机配置文件 (Machine.config) 用于新<xref:System.CodeDom.Compiler.CodeDomProvider>实现。 使用<xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType>方法以编程方式枚举的默认语言提供程序和语言提供程序标识的计算机上的编译器配置设置。  
+ 开发人员和编译器供应商可将配置设置添加到计算机配置文件 (machine.config) 中以实现<xref:System.CodeDom.Compiler.CodeDomProvider>新的实现。 <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType>使用方法以编程方式枚举计算机上编译器配置设置标识的默认语言提供程序和语言提供程序。  
   
 > [!NOTE]
->  在.NET framework 1.0 和 1.1 中，在标识提供程序由.NET Framework 提供的默认语言[\<编译器 >](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)元素。 在.NET Framework 2.0 版中，默认语言提供程序不识别中[\<编译器 >](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)元素，但可以使用枚举<xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A>方法。  
+>  在 .NET Framework 版本1.0 和1.1 中, .NET Framework 提供的默认语言提供程序在[ \<编译器 >](compilers-element.md)元素中标识。 在 .NET Framework 版本2.0 中, 没有在[ \<编译器 >](compilers-element.md)元素中标识默认语言提供程序, 但可以使用<xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A>方法进行枚举。  
   
-## <a name="net-framework-versions-10-and-11"></a>.NET framework 1.0 和 1.1 版  
- [ \<System.codedom >](../../../../../docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md)元素包含的计算机上的语言提供程序的编译器配置设置。 [\<编译器 >](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)元素包含零个或多[\<编译器 >](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)元素。 每个[\<编译器 >](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)元素指定特定的语言提供程序的编译器配置属性。  
+## <a name="net-framework-versions-10-and-11"></a>.NET Framework 版本1.0 和1。1  
+ System.object > 元素包含计算机上的语言提供程序的编译器配置设置。 [ \<](system-codedom-element.md) 编译器 > 元素包含零个或多个[ \<编译器 >](compiler-element.md)元素。 [ \<](compilers-element.md) 每个[ \<编译器 >](compiler-element.md)元素指定特定语言提供程序的编译器配置特性。  
   
  .NET Framework 在计算机配置文件 (Machine.config) 中定义初始编译器设置。 开发人员和编译器供应商可以添加新 <xref:System.CodeDom.Compiler.CodeDomProvider> 实现的配置设置。 使用 <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType> 方法，以编程方式枚举计算机上的语言提供程序和编译器配置设置。  
   
 ## <a name="configuration-file"></a>配置文件  
- 计算机配置文件和应用程序配置文件中，可以使用此元素。  
+ 此元素可在计算机配置文件和应用程序配置文件中使用。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示了典型的编译器配置。  
+ 下面的示例演示了一个典型的编译器配置。  
   
 ```xml  
 <configuration>  
@@ -91,6 +91,6 @@ ms.locfileid: "61674788"
 
 - <xref:System.CodeDom.Compiler.CompilerInfo>
 - <xref:System.CodeDom.Compiler.CodeDomProvider>
-- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [编译器和语言提供程序设置架构](../../../../../docs/framework/configure-apps/file-schema/compiler/index.md)
-- [\<compiler> Element](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)
+- [配置文件架构](../index.md)
+- [编译器和语言提供程序设置架构](index.md)
+- [\<compiler> Element](compiler-element.md)

@@ -1,5 +1,5 @@
 ---
-title: < System.diagnostics > 元素
+title: < > 元素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#system.diagnostics
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - <system.diagnostics> element
 - system.diagnostics element
 ms.assetid: 3f348f42-fa72-4ff2-aa1c-bb9eecad4bb2
-ms.openlocfilehash: 026805ffb9b89aa55e84cf9a5c4afb8ed63cec09
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f3b4238a8d7028d47122a420526b38ee4f327332
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673688"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69926934"
 ---
-# <a name="systemdiagnostics-element"></a>\<system.diagnostics > 元素
+# <a name="systemdiagnostics-element"></a>\<诊断 > 元素
 指定用于收集、存储和路由消息的跟踪侦听器以及对跟踪开关设置的级别。  
   
  \<configuration>  
@@ -38,12 +38,12 @@ ms.locfileid: "61673688"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<assert>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/assert-element.md)|指定调用 <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> 方法时是否显示消息框；另外指定要写入消息的文件的名称。|  
-|[\<performanceCounters>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/performancecounters-element.md)|指定由性能计数器共享的全局内存的大小。|  
-|[\<sharedListeners>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sharedlisteners-element.md)|包含任何源或跟踪元素可以引用的侦听器。 标识为共享的侦听器可以按名称添加到源或跟踪侦听器。|  
-|[\<sources>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sources-element.md)|指定启动跟踪消息的跟踪源。|  
-|[\<switches>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/switches-element.md)|包含跟踪开关和跟踪开关设置其中的级别。|  
-|[\<trace>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md)|包含用于收集、存储和路由跟踪消息的侦听器。|  
+|[\<assert>](assert-element.md)|指定调用 <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> 方法时是否显示消息框；另外指定要写入消息的文件的名称。|  
+|[\<performanceCounters>](performancecounters-element.md)|指定由性能计数器共享的全局内存的大小。|  
+|[\<sharedListeners>](sharedlisteners-element.md)|包含任何源或跟踪元素可以引用的侦听器。 可以按名称将标识为共享侦听器的侦听器添加到源或跟踪。|  
+|[\<sources>](sources-element.md)|指定启动跟踪消息的跟踪源。|  
+|[\<switches>](switches-element.md)|包含跟踪开关和设置跟踪开关的级别。|  
+|[\<trace>](trace-element.md)|包含用于收集、存储和路由跟踪消息的侦听器。|  
   
 ### <a name="parent-elements"></a>父元素  
   
@@ -52,10 +52,10 @@ ms.locfileid: "61673688"
 |`configuration`|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何嵌入跟踪开关和跟踪侦听器 **\<system.diagnostics >** 元素。 `General`跟踪开关设置为<xref:System.Diagnostics.TraceLevel>级别。 跟踪侦听器`myListener`创建一个名为文件`MyListener.log`并将输出写入到该文件。  
+ 下面的示例演示如何在 system.exception  **\<>** 元素中嵌入跟踪开关和跟踪侦听器。 跟踪开关设置<xref:System.Diagnostics.TraceLevel>为级别。 `General` 跟踪侦听器`myListener`会创建一个名`MyListener.log`为的文件, 并将输出写入文件。  
   
 > [!NOTE]
->  在 .NET Framework 2.0 版中，你可以使用文本指定开关值。 例如，可以指定`true`有关<xref:System.Diagnostics.BooleanSwitch>或使用表示一个枚举值，例如文本`Error`为<xref:System.Diagnostics.TraceSwitch>。 行 `<add name="myTraceSwitch" value="Error" />` 等于 `<add name="myTraceSwitch" value="1" />`。  
+> 在 .NET Framework 2.0 版中，你可以使用文本指定开关值。 `true`例如, 你可以<xref:System.Diagnostics.BooleanSwitch>为指定, 也可以使用表示枚举<xref:System.Diagnostics.TraceSwitch>值的文本 (例如) `Error` 。 行 `<add name="myTraceSwitch" value="Error" />` 等于 `<add name="myTraceSwitch" value="1" />`。  
   
 ```xml  
 <configuration>  
@@ -76,4 +76,4 @@ ms.locfileid: "61673688"
 
 - <xref:System.Diagnostics.Trace>
 - <xref:System.Diagnostics.Debug>
-- [跟踪和调试设置架构](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [跟踪和调试设置架构](index.md)

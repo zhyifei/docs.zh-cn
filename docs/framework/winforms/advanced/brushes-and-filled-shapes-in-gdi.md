@@ -13,68 +13,68 @@ helpviewer_keywords:
 - gradient brushes
 - brushes [Windows Forms], gradient
 ms.assetid: e863e2a7-0294-4130-99b6-f1ea3201e7cd
-ms.openlocfilehash: ad3a4af2474ace61bbf35ea1357a2a6037af039a
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: 45ef0b5920e43300e047d363149ea10a7833477b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67506236"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912235"
 ---
 # <a name="brushes-and-filled-shapes-in-gdi"></a>GDI+ 中的画笔和实心形状
-闭合的形状，如矩形或椭圆，由边框和内部组成。 使用笔绘制出轮廓，并使用画笔填充其内部。 GDI + 提供了几个画笔类填充绘制闭合形状的内部： <xref:System.Drawing.SolidBrush>， <xref:System.Drawing.Drawing2D.HatchBrush>， <xref:System.Drawing.TextureBrush>， <xref:System.Drawing.Drawing2D.LinearGradientBrush>，和<xref:System.Drawing.Drawing2D.PathGradientBrush>。 所有这些类继承自<xref:System.Drawing.Brush>类。 下图显示了以实线画笔填充矩形和椭圆用阴影画笔填充。  
+闭合形状 (如矩形或椭圆) 由轮廓和内部组成。 使用笔绘制轮廓, 并使用画笔填充内部。 Gdi + 提供了多个用于填充闭合形状的内部的<xref:System.Drawing.SolidBrush>画笔<xref:System.Drawing.Drawing2D.HatchBrush>类<xref:System.Drawing.TextureBrush>: <xref:System.Drawing.Drawing2D.LinearGradientBrush>、、 <xref:System.Drawing.Drawing2D.PathGradientBrush>、和。 所有这些类都继承自<xref:System.Drawing.Brush>类。 下图显示了使用纯色画笔填充的矩形以及用阴影画笔填充的椭圆。  
   
- ![填充形状](./media/aboutgdip02-art17.gif "Aboutgdip02_art17")  
+ ![实心形状](./media/aboutgdip02-art17.gif "Aboutgdip02_art17")  
   
 ## <a name="solid-brushes"></a>纯色画笔  
- 若要填充闭合的形状，你需要的实例<xref:System.Drawing.Graphics>类和一个<xref:System.Drawing.Brush>。 实例<xref:System.Drawing.Graphics>类提供了方法，如<xref:System.Drawing.Graphics.FillRectangle%2A>并<xref:System.Drawing.Graphics.FillEllipse%2A>，和<xref:System.Drawing.Brush>存储填充，如颜色和模式的特性。 <xref:System.Drawing.Brush>作为一个参数传递给填充方法。 下面的代码示例演示如何用红色纯色填充椭圆。  
+ 若要填充闭合的形状, 需要<xref:System.Drawing.Graphics>类和的<xref:System.Drawing.Brush>实例。 <xref:System.Drawing.Graphics>类的实例提供了方法 ( <xref:System.Drawing.Graphics.FillRectangle%2A>如和<xref:System.Drawing.Graphics.FillEllipse%2A>), 以及<xref:System.Drawing.Brush>存储填充的特性, 如颜色和模式。 <xref:System.Drawing.Brush>作为一个自变量传递给 fill 方法。 下面的代码示例演示如何使用纯红色填充椭圆。  
   
  [!code-csharp[LinesCurvesAndShapes#121](~/samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#121)]
  [!code-vb[LinesCurvesAndShapes#121](~/samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#121)]  
   
 > [!NOTE]
->  在上述示例中的类型是画笔<xref:System.Drawing.SolidBrush>，后者又继承<xref:System.Drawing.Brush>。  
+> 在前面的示例中, 画笔的类型<xref:System.Drawing.SolidBrush>为, 它继承自。 <xref:System.Drawing.Brush>  
   
 ## <a name="hatch-brushes"></a>阴影画笔  
- 当使用阴影画笔填充形状时，您指定前景色、 背景色和阴影样式。 前景颜色为阴影的颜色。  
+ 使用阴影画笔填充形状时, 需要指定前景色、背景色和阴影样式。 前景色是阴影的颜色。  
   
  [!code-csharp[LinesCurvesAndShapes#122](~/samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#122)]
  [!code-vb[LinesCurvesAndShapes#122](~/samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#122)]  
   
- GDI + 提供了超过 50 个阴影样式;以下插图所示的三个样式都<xref:System.Drawing.Drawing2D.HatchStyle.Horizontal>， <xref:System.Drawing.Drawing2D.HatchStyle.ForwardDiagonal>，和<xref:System.Drawing.Drawing2D.HatchStyle.Cross>。  
+ GDI + 提供的阴影样式超过50个;下图中显示的三个样式为<xref:System.Drawing.Drawing2D.HatchStyle.Horizontal>、 <xref:System.Drawing.Drawing2D.HatchStyle.ForwardDiagonal>和<xref:System.Drawing.Drawing2D.HatchStyle.Cross>。  
   
- ![填充形状](./media/aboutgdip02-art18.gif "Aboutgdip02_art18")  
+ ![实心形状](./media/aboutgdip02-art18.gif "Aboutgdip02_art18")  
   
 ## <a name="texture-brushes"></a>纹理画笔  
- 使用纹理画笔，可以使用存储在位图中的模式来填充形状。 例如，假设以下图片存储在名为的磁盘文件`MyTexture.bmp`。  
+ 使用纹理画笔, 可以使用位图中存储的模式来填充形状。 例如, 假设下面的图片存储在名为`MyTexture.bmp`的磁盘文件中。  
   
- ![填充形状](./media/aboutgdip02-art19.gif "Aboutgdip02_Art19")  
+ ![实心形状](./media/aboutgdip02-art19.gif "Aboutgdip02_Art19")  
   
- 下面的代码示例演示如何通过重复图片存储为填充椭圆`MyTexture.bmp`。  
+ 下面的代码示例演示如何通过重复存储在中`MyTexture.bmp`的图片来填充椭圆。  
   
  [!code-csharp[LinesCurvesAndShapes#123](~/samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#123)]
  [!code-vb[LinesCurvesAndShapes#123](~/samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#123)]  
   
- 下图显示了实心的椭圆。  
+ 下图显示了实心椭圆。  
   
- ![填充形状](./media/aboutgdip02-art20.gif "AboutGdip02_Art20")  
+ ![实心形状](./media/aboutgdip02-art20.gif "AboutGdip02_Art20")  
   
 ## <a name="gradient-brushes"></a>渐变画笔  
- GDI + 提供了两种类型的渐变画笔： 线性和路径。 线性渐变画笔用于填充形状更改逐渐水平、 垂直移过图形或沿对角线方向的颜色。 下面的代码示例演示如何用会从蓝色变为绿色，当您从椭圆的左边缘移动到右边缘的水平渐变画笔填充椭圆。  
+ GDI + 提供了两种类型的渐变画笔: 线性和路径。 您可以使用线性渐变画笔来填充形状, 颜色在水平、垂直或对角移动时逐渐变化。 下面的代码示例演示如何使用水平渐变画笔 (当您从椭圆的左边缘向右边缘移动时, 使用从蓝色到绿色的更改) 填充椭圆。  
   
  [!code-csharp[LinesCurvesAndShapes#124](~/samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#124)]
  [!code-vb[LinesCurvesAndShapes#124](~/samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#124)]  
   
- 下图显示了实心的椭圆。  
+ 下图显示了实心椭圆。  
   
- ![填充形状](./media/aboutgdip02-art21.gif "AboutGdip02_Art21")  
+ ![实心形状](./media/aboutgdip02-art21.gif "AboutGdip02_Art21")  
   
- 若要更改颜色，当您从边缘形状的中心，可以配置路径渐变画笔。  
+ 可以将路径渐变画笔配置为在从形状的中心向边缘移动时更改颜色。  
   
- ![填充形状](./media/aboutgdip02-art22.gif "AboutGdip02_Art22")  
+ ![实心形状](./media/aboutgdip02-art22.gif "AboutGdip02_Art22")  
   
- 路径渐变画笔时非常灵活。 渐变画笔用于填充中的以下图更改逐渐从中心的红色向每个顶点在三个不同的颜色的三角形。  
+ 路径渐变画笔非常灵活。 在下图中, 用于填充三角形的渐变画笔在顶点处逐步变化为三种不同颜色中的每一种颜色。  
   
- ![填充形状](./media/aboutgdip02-art23.gif "AboutGdip02_Art23")  
+ ![实心形状](./media/aboutgdip02-art23.gif "AboutGdip02_Art23")  
   
 ## <a name="see-also"></a>请参阅
 
@@ -83,5 +83,5 @@ ms.locfileid: "67506236"
 - <xref:System.Drawing.TextureBrush?displayProperty=nameWithType>
 - <xref:System.Drawing.Drawing2D.LinearGradientBrush?displayProperty=nameWithType>
 - [直线、曲线和形状](lines-curves-and-shapes.md)
-- [如何：Windows 窗体上绘制实心的矩形](how-to-draw-a-filled-rectangle-on-a-windows-form.md)
-- [如何：Windows 窗体上绘制实心的椭圆](how-to-draw-a-filled-ellipse-on-a-windows-form.md)
+- [如何：在 Windows 窗体上绘制实心矩形](how-to-draw-a-filled-rectangle-on-a-windows-form.md)
+- [如何：在 Windows 窗体上绘制实心椭圆](how-to-draw-a-filled-ellipse-on-a-windows-form.md)

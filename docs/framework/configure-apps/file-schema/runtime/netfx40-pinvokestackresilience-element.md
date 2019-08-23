@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 39fb1588-72a4-4479-af74-0605233b68bd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 318473d2913d62404c58b9d3681800ae22a9ecbf
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: cf97cc1ec544c7cf640c43b1b45760fca8cffe89
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66689848"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663554"
 ---
-# <a name="netfx40pinvokestackresilience-element"></a>\<NetFx40_PInvokeStackResilience > 元素
+# <a name="netfx40_pinvokestackresilience-element"></a>\<NetFx40_PInvokeStackResilience > 元素
 
 指定运行时是否以减慢托管和非托管代码之间的转换速度为代价，在运行时自动修复不正确的平台调用声明。
 
-\<configuration>\
-\<runtime>\
+\<配置 > \
+\<运行时 > \
 \<NetFx40_PInvokeStackResilience>
 
 ## <a name="syntax"></a>语法
@@ -36,14 +36,14 @@ ms.locfileid: "66689848"
 
 |特性|描述|
 |---------------|-----------------|
-|`enabled`|必需的特性。<br /><br /> 指定是否在运行时检测到不正确的平台调用声明和 32 位平台上，将自动修复在运行时堆栈。|
+|`enabled`|必需的特性。<br /><br /> 指定运行时是否检测到不正确的平台调用声明, 并在运行时在32位平台上自动修复堆栈。|
 
 ## <a name="enabled-attribute"></a>enabled 特性
 
 |值|描述|
 |-----------|-----------------|
-|`0`|运行时使用的更快的互操作封送处理体系结构引入了在.NET Framework 4 中，不会检测和修复不正确的平台调用声明。 这是默认设置。|
-|`1`|运行时使用的转换速度的检测和修复不正确的平台调用声明。|
+|`0`|运行时使用 .NET Framework 4 中引入的更快互操作封送处理体系结构, 该体系结构不会检测并修复不正确的平台调用声明。 这是默认设置。|
+|`1`|运行时使用检测并修复不正确的平台调用声明的慢速转换。|
 
 ### <a name="child-elements"></a>子元素
 
@@ -58,21 +58,21 @@ ms.locfileid: "66689848"
 
 ## <a name="remarks"></a>备注
 
-此元素可以交换更快地互操作封送处理运行时恢复能力对不正确的平台调用声明。
+此元素使您能够以更快的互操作封送处理为依据不正确的平台调用声明来处理运行时复原。
 
-从.NET Framework 4 开始，简化的互操作封送处理体系结构提供了从托管代码转换到非托管代码一显著的性能改进。 在早期版本的.NET Framework，封送处理层检测到不正确的平台调用在 32 位平台上的声明，并自动修复堆栈。 新的封送处理体系结构消除了此步骤。 因此，转换速度非常快，但不正确的平台调用声明可能会导致程序失败。
+从 .NET Framework 4 开始, 简化的互操作封送处理体系结构可为从托管代码到非托管代码的转换提供显著的性能改进。 在 .NET Framework 的早期版本中, 封送层在32位平台上检测到不正确的平台调用声明, 并自动修复堆栈。 新的封送处理体系结构消除了此步骤。 因此, 转换速度非常快, 但不正确的平台调用声明可能导致程序失败。
 
-为了更加轻松地在开发过程中检测不正确的声明，改进 Visual Studio 调试体验。 [PInvokeStackImbalance](../../../../../docs/framework/debug-trace-profile/pinvokestackimbalance-mda.md)托管调试助手 (MDA) 通知你的应用程序运行带有附加调试程序时，您不正确的平台调用声明。
+为了便于在开发期间检测到不正确的声明, Visual Studio 调试体验也得到了改进。 当应用程序在附加调试器中运行时, [pInvokeStackImbalance](../../../debug-trace-profile/pinvokestackimbalance-mda.md)托管调试助手 (MDA) 将通知您不正确的平台调用声明。
 
-为应用程序使用组件，则不能重新编译，和，具有不正确的平台调用声明，您可以使用其中的解决情况`NetFx40_PInvokeStackResilience`元素。 将此元素添加到应用程序配置文件与`enabled="1"`opts 到与早期版本的.NET Framework 中，转换速度为代价的行为的兼容性模式。 已针对.NET Framework 的早期版本编译的程序集自动选择加入此兼容性模式，并且不需要此元素。
+若要解决您的应用程序使用无法重新编译的组件, 并且具有不正确的平台调用声明的情况, `NetFx40_PInvokeStackResilience`可以使用元素。 将此元素添加到应用程序配置文件`enabled="1"`中, 并将其 "导入" 到兼容模式, 并且具有较早版本的 .NET Framework 的行为, 代价是慢于转换。 已针对早期版本的 .NET Framework 编译的程序集会自动选择进入此兼容模式, 并且不需要此元素。
 
 ## <a name="configuration-file"></a>配置文件
 
-仅在应用程序配置文件中，可以使用此元素。
+此元素只能在应用程序配置文件中使用。
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何对不正确的增强恢复能力选择使用平台调用声明应用程序之间的转换速度为代价托管和非托管代码。
+下面的示例演示如何针对应用程序的不正确的平台调用声明提高复原能力, 降低了托管和非托管代码之间的转换速度。
 
 ```xml
 <configuration>
@@ -84,6 +84,6 @@ ms.locfileid: "66689848"
 
 ## <a name="see-also"></a>请参阅
 
-- [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [pInvokeStackImbalance](../../../../../docs/framework/debug-trace-profile/pinvokestackimbalance-mda.md)
+- [运行时设置架构](index.md)
+- [配置文件架构](../index.md)
+- [pInvokeStackImbalance](../../../debug-trace-profile/pinvokestackimbalance-mda.md)

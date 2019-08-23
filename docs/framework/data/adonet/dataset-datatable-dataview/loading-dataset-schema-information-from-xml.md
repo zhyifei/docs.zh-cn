@@ -5,29 +5,29 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 43dfb23b-5cef-46f2-8d87-78f0fba1eb8c
-ms.openlocfilehash: 06dcbbedf8c1533b3da52b447c121746ce705083
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b895ad59ed0ab2542ecdfb04b6db559e12edc55c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61785445"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69928379"
 ---
 # <a name="loading-dataset-schema-information-from-xml"></a>从 XML 加载数据集架构信息
-架构<xref:System.Data.DataSet>（其表、 列、 关系和约束） 可以定义，以编程方式创建的**填充**或**FillSchema**方法<xref:System.Data.Common.DataAdapter>，或从已加载XML 文档。 若要加载**数据集**架构信息从 XML 文档，您可以使用**ReadXmlSchema**或**InferXmlSchema**方法**数据集**. **ReadXmlSchema**允许您加载或推断**数据集**从包含 XML 架构定义语言 (XSD) 架构或包含内联 XML 架构的 XML 文档的文档的架构信息。 **InferXmlSchema** ，可忽略的某些指定的 XML 命名空间推断 XML 文档中的架构。  
+可以通过编程方式<xref:System.Data.DataSet>定义的架构 (表、列、关系和约束), 也可以通过的**Fill**或**FillSchema**方法<xref:System.Data.Common.DataAdapter>创建, 或从 XML 文档加载。 若要从 XML 文档加载**数据集**架构信息, 可以使用**数据集**的**ReadXmlSchema**或**InferXmlSchema**方法。 通过**ReadXmlSchema** , 您可以从包含 XML 架构定义语言 (XSD) 架构的文档或使用内联 xml 架构的 xml 文档中加载或推断**数据集**架构信息。 **InferXmlSchema**允许从 xml 文档推断架构, 同时忽略指定的某些 XML 命名空间。  
   
 > [!NOTE]
->  中的表顺序**数据集**当你使用 Web 服务或 XML 序列化传输时可能不会保留**数据集**内存中创建的使用 XSD 构造 （如嵌套关系）。 因此的接收方**数据集**不应依赖表顺序在这种情况下。 但是，表如果始终保留顺序的架构**数据集**传输从 XSD 文件，而不是要创建内存中读取。  
+> 使用 Web 服务或 XML 序列化传输在内存中使用 XSD 构造 (如嵌套关系) 创建的**数据集**时, 可能不会保留**数据集中**的表顺序。 因此, 在这种情况下,**数据集**的接收方不应依赖于表排序。 但是, 如果要传输的**数据集**的架构是从 XSD 文件中读取的, 而不是在内存中创建的, 则始终保留表排序。  
   
 ## <a name="readxmlschema"></a>ReadXmlSchema  
- 若要加载的架构**数据集**从 XML 文档，而不加载任何数据，可以使用**ReadXmlSchema**方法**数据集**。 **ReadXmlSchema**创建**数据集**架构使用 XML 架构定义语言 (XSD) 架构定义。  
+ 若要从 XML 文档加载数据**集**的架构而不加载任何数据, 则可以使用该**数据集**的**ReadXmlSchema**方法。 **ReadXmlSchema**创建使用 XML 架构定义语言 (XSD) 架构定义的**数据集**架构。  
   
- **ReadXmlSchema**方法采用单个参数的文件名，流，或**XmlReader**包含要加载的 XML 文档。 XML 文档可以仅包含架构，也可以包含与包含数据的 XML 元素内联的架构。 有关编写内联架构作为 XML 架构的详细信息，请参阅[派生数据集关系结构从 XML 架构 (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)。  
+ **ReadXmlSchema**方法获取文件名、流或包含要加载的 XML 文档的**XmlReader**的单个自变量。 XML 文档可以仅包含架构，也可以包含与包含数据的 XML 元素内联的架构。 有关将内联架构作为 XML 架构写入的详细信息, 请参阅[从 Xml 架构派生数据集关系结构 (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)。  
   
- 如果 XML 文档传递给**ReadXmlSchema**不包含任何内联架构信息， **ReadXmlSchema**将推断 XML 文档中的元素中的架构。 如果**数据集**已包含架构，将通过添加新表，如果它们尚不存在扩展当前架构。 不会将新列添加到现有表中。 如果已添加的列中存在**数据集**但不兼容的类型与列中的 XML 中，将引发异常。 详细了解如何**ReadXmlSchema**推断架构从 XML 文档，请参阅[推断数据集关系结构从 XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)。  
+ 如果传递到**ReadXmlSchema**的 XML 文档不包含内联架构信息, 则**READXMLSCHEMA**将从 XML 文档中的元素推断架构。 如果**数据集**已包含架构, 则将通过添加新表来扩展当前架构 (如果它们尚不存在)。 不会将新列添加到现有表中。 如果要添加的列已存在于**数据集中**, 但其类型与 XML 中的列不兼容, 则会引发异常。 有关**ReadXmlSchema**如何从 xml 文档推断架构的详细信息, 请参阅[从 Xml 推断数据集关系结构](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)。  
   
- 尽管**ReadXmlSchema**加载或推断的架构**数据集**，则**ReadXml**方法**数据集**加载或将它们都推断架构和 XML 文档中包含的数据。 有关详细信息，请参阅[从 XML 加载数据集](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)。  
+ 尽管**ReadXmlSchema**只加载或推断**数据集**的架构, 但**数据集**的**ReadXml**方法会加载或推断 XML 文档中包含的架构和数据。 有关详细信息, 请参阅[从 XML 加载数据集](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)。  
   
- 下面的代码示例显示如何加载**数据集**XML 文档或流中的架构。 第一个示例显示了 XML 架构的文件名传递给**ReadXmlSchema**方法。 第二个示例所示**System.IO.StreamReader**。  
+ 下面的代码示例演示如何从 XML 文档或流加载**数据集**架构。 第一个示例显示了传递给**ReadXmlSchema**方法的 XML 架构文件名。 第二个示例显示了**StreamReader**。  
   
 ```vb  
 Dim dataSet As DataSet = New DataSet  
@@ -54,7 +54,7 @@ xmlStream.Close();
 ```  
   
 ## <a name="inferxmlschema"></a>InferXmlSchema  
- 此外可以指示**数据集**推断 XML 文档使用从其架构**InferXmlSchema**方法**数据集**。 **InferXmlSchema**同时利用这两者的功能相同**ReadXml**与**XmlReadMode**的**InferSchema** （将数据加载以及推断架构），并且**ReadXmlSchema**如果正在读取的文档不包含任何内联架构。 但是， **InferXmlSchema**提供其他功能，使您可以指定特定的 XML 命名空间推断架构时被忽略。 **InferXmlSchema**采用两个必需的参数： 文件名、 流、 指定的 XML 文档的位置或**XmlReader**; 以及要忽略由该操作的 XML 命名空间的字符串数组。  
+ 你还可以使用**dataset**的**InferXmlSchema**方法来指示**数据集**从 XML 文档推断其架构。 **InferXmlSchema**的功能与**ReadXml** **XmlReadMode**的**InferSchema** (加载数据和推断架构) 相同, 如果读取的文档不包含内联架构, 则为**ReadXmlSchema** 。 但是, **InferXmlSchema**提供了额外的功能, 使您可以指定在推断架构时要忽略的特定 XML 命名空间。 **InferXmlSchema**采用两个必需的参数: XML 文档的位置, 由文件名、流或**XmlReader**指定;和要由操作忽略的 XML 命名空间的字符串数组。  
   
  例如，考虑以下 XML：  
   
@@ -73,7 +73,7 @@ xmlStream.Close();
 </NewDataSet>  
 ```  
   
- 由于前面的 XML 文档中的元素指定的属性都**ReadXmlSchema**方法并**ReadXml**方法替换**XmlReadMode**的**InferSchema**会在文档中创建表的每个元素：**类别**， **CategoryID**， **CategoryName**，**说明**，**产品**， **ProductID**， **ReorderLevel**，和**停止使用**。 (有关详细信息，请参阅[推断数据集关系结构从 XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)。)但是，更为合适的结构就是创建仅**类别**并**产品**表，然后创建**CategoryID**， **CategoryName**，并**描述**中的列**类别**表中，和**ProductID**， **ReorderLevel**，和**Discontinued**中的列**产品**表。 若要确保推断的架构忽略在 XML 元素中指定的属性，请使用**InferXmlSchema**方法并指定的 XML 命名空间**officedata**被忽略，如中所示下面的示例。  
+ 由于为前面的 XML 文档中的元素指定了属性, **ReadXmlSchema**方法和**XmlReadMode**为**InferSchema**的**ReadXml**方法将为文档**类别、类别** **id**、**类别名称**、**说明**、**产品**、 **ProductID**、 **ReorderLevel**和**废止**。 (有关详细信息, 请参阅[从 XML 推断数据集关系结构](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)。)但是, 更合适的结构是仅创建 "**类别**" 和 "**产品**" 表, 然后在 "**类别**" 表中创建 "类别**id**"、"**类别名称**" 和 "**说明**" 列, 并 **Products**表中的 ProductID、 **ReorderLevel**和**废止**列。 若要确保推断的架构忽略 XML 元素中指定的属性, 请使用**InferXmlSchema**方法并指定要忽略的**officedata**的 XML 命名空间, 如以下示例中所示。  
   
 ```vb  
 Dim dataSet As DataSet = New DataSet  

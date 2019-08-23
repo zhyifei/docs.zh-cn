@@ -2,20 +2,20 @@
 title: <transport> 的 <peerTransport>
 ms.date: 03/30/2017
 ms.assetid: d7116240-845c-4b6f-b203-262de6b597ef
-ms.openlocfilehash: 9b6f548515afbba5068659bd5c6f7f2b33f80cda
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5dbc55db25c0c49d72ec2cd8dd1041a3f8705d8e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788279"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940636"
 ---
-# <a name="transport-of-peertransport"></a>\<传输 > 的\<peerTransport >
+# <a name="transport-of-peertransport"></a>\<peerTransport > 的\<传输 >
 指定采用此绑定配置的对等方所发送的安全消息的传输类型。  
   
  \<system.serviceModel>  
 \<bindings>  
 \<customBinding>  
-\<binding>  
+\<绑定 >  
 \<peerTransport>  
 \<安全 >  
 \<transport>  
@@ -39,22 +39,22 @@ ms.locfileid: "61788279"
   
 ## <a name="credentialtype-attribute"></a>credentialType 属性  
   
-|“值”|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |证书|对等通道传输的身份验证需要 X509 证书。|  
 |Password|对等通道传输的身份验证需要正确的密码。|  
   
 ### <a name="child-elements"></a>子元素  
- None  
+ 无  
   
 ### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-peertransport.md)|定义对等传输的安全设置。|  
+|[\<security>](security-of-peertransport.md)|定义对等传输的安全设置。|  
   
 ## <a name="remarks"></a>备注  
- 仅当设置此元素的 mode 属性[\<安全 >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-peertransport.md)设置为`Transport`或`TransportWithMessageCredential`。  
+ 仅当[ \<security >](security-of-peertransport.md)的 mode 属性设置为`Transport`或`TransportWithMessageCredential`时, 才设置此元素。  
   
 ## <a name="see-also"></a>请参阅
 
@@ -62,10 +62,10 @@ ms.locfileid: "61788279"
 - <xref:System.ServiceModel.PeerSecuritySettings.Transport%2A>
 - <xref:System.ServiceModel.PeerTransportSecuritySettings>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [传输安全性](../../../../../docs/framework/wcf/feature-details/transport-security.md)
-- [传输](../../../../../docs/framework/wcf/feature-details/transports.md)
-- [选择传输](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
-- [绑定](../../../../../docs/framework/wcf/bindings.md)
-- [扩展绑定](../../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [自定义绑定](../../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [传输安全性](../../../wcf/feature-details/transport-security.md)
+- [传输](../../../wcf/feature-details/transports.md)
+- [选择传输](../../../wcf/feature-details/choosing-a-transport.md)
+- [绑定](../../../wcf/bindings.md)
+- [扩展绑定](../../../wcf/extending/extending-bindings.md)
+- [自定义绑定](../../../wcf/extending/custom-bindings.md)
+- [\<customBinding>](custombinding.md)

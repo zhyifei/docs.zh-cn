@@ -8,30 +8,23 @@ helpviewer_keywords:
 - ElementHost control
 - WPF user control [Windows Forms], hosting in Windows Forms
 ms.assetid: 2e92d8e8-f0e4-4df7-9f07-2acf35cd798c
-ms.openlocfilehash: 889e81053d4e2264755468446a4e1681216ae22e
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+author: gewarren
+ms.author: gewarren
+manager: jillfra
+ms.openlocfilehash: e3fb6e42270cc0a530646b656470ec99fcfc7f1f
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040366"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666244"
 ---
 # <a name="walkthrough-create-new-wpf-content-on-windows-forms-at-design-time"></a>演练：在设计时 Windows 窗体创建新的 WPF 内容
 
 本文介绍如何创建 Windows Presentation Foundation (WPF) 控件, 以便在基于 Windows 窗体的应用程序中使用。
 
-在本演练中，你将要执行以下任务：
-
-- 创建项目。
-
-- 创建一个新的 WPF 控件。
-
-- 将新的 WPF 控件添加到 Windows 窗体。 WPF 控件承载在 <xref:System.Windows.Forms.Integration.ElementHost> 控件中。
-
 ## <a name="prerequisites"></a>系统必备
 
-你需要以下组件来完成本演练：
-
-- Visual Studio
+若要完成本演练，必须具有 Visual Studio。
 
 ## <a name="create-the-project"></a>创建项目
 
@@ -51,17 +44,17 @@ ms.locfileid: "69040366"
 
 1. 在**解决方案资源管理器**中, 将一个新的**WPF 用户控件库 (.NET Framework)** 项目添加到解决方案。 使用控件库默认名称 `WpfControlLibrary1`。 默认控件名称是 `UserControl1.xaml`。
 
-     添加新控件具有以下效果:
+   添加新控件具有以下效果:
 
-    - 添加文件 UserControl1.xaml。
+   - 添加文件 UserControl1.xaml。
 
-    - 添加文件 UserControl1.xaml.cs 或 UserControl1.xaml.vb。 此文件包含事件处理程序和其他实现的代码隐藏。
+   - 添加文件 UserControl1.xaml.cs (或 UserControl1)。 此文件包含事件处理程序和其他实现的代码隐藏。
 
-    - 添加对 WPF 程序集的引用。
+   - 添加对 WPF 程序集的引用。
 
-    - 文件 UserControl1.xaml 在 [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] 中打开。
+   - 文件 UserControl1 在 Visual Studio 的 WPF 设计器中打开。
 
-2. 在设计视图中，请确保已选中 `UserControl1`。 有关详细信息，请参阅[如何：选择并移动 Design Surface](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb514527(v=vs.100))上的元素。
+2. 在设计视图中，请确保已选中 `UserControl1`。
 
 3. 在 "**属性**" 窗口中, 将<xref:System.Windows.FrameworkElement.Width%2A>和<xref:System.Windows.FrameworkElement.Height%2A>属性的值设置为**200**。
 
@@ -69,8 +62,8 @@ ms.locfileid: "69040366"
 
 5. 在 "**属性**" 窗口中, 将<xref:System.Windows.Controls.TextBox.Text%2A>属性的值设置为 "**托管内容**"。
 
-    > [!NOTE]
-    > 一般情况下，你应承载更复杂的 WPF 内容。 此处，<xref:System.Windows.Controls.TextBox?displayProperty=nameWithType> 控件仅为了便于说明。
+   > [!NOTE]
+   > 一般情况下，你应承载更复杂的 WPF 内容。 此处，<xref:System.Windows.Controls.TextBox?displayProperty=nameWithType> 控件仅为了便于说明。
 
 6. 生成项目。
 

@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: 964cbb35-ab49-4498-8471-209689e5dada
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eec77d4dd42a7b95d1e2cd0e353e2e54746676b7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 84ec54eeb8adee90031057dadc4549cb73527be1
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704877"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663898"
 ---
-# <a name="assemblybinding-element-for-runtime"></a>\<assemblyBinding > 元素\<运行库 >
+# <a name="assemblybinding-element-for-runtime"></a>\<运行时 > 的\<assemblyBinding > 元素
 包含有关程序集版本重定向和程序集位置的信息。  
   
  \<configuration>  
@@ -40,16 +40,16 @@ ms.locfileid: "61704877"
 |特性|描述|  
 |---------------|-----------------|  
 |**xmlns**|必需的特性。<br /><br /> 指定程序集绑定所需的 XML 命名空间。 使用字符串“urn: 架构-microsoft-com:asm.v1”作为值。|  
-|**appliesTo**|指定 .NET Framework 程序集重定向适用的运行时版本。 此可选特性用 .NET Framework 版本号来指示其适用的版本。 如果没有指定 **appliesTo** 特性，**\<assemblyBinding>** 元素将适用于 .NET Framework 的所有版本。 **AppliesTo** .NET Framework 版本 1.1 中引入了属性;.NET Framework 1.0 版将忽略它。 这意味着，即使指定了 appliesTo 特性，在使用 .NET Framework 1.0 版时所有的 \<assemblyBinding> 元素也都适用。|  
+|**appliesTo**|指定 .NET Framework 程序集重定向适用的运行时版本。 此可选特性用 .NET Framework 版本号来指示其适用的版本。 如果没有指定 **appliesTo** 特性， **\<assemblyBinding>** 元素将适用于 .NET Framework 的所有版本。 .NET Framework 版本1.1 中引入了**appliesTo**特性;.NET Framework 版本1.0 将忽略它。 这意味着，即使指定了 appliesTo 特性，在使用 .NET Framework 1.0 版时所有的 \<assemblyBinding> 元素也都适用。|  
   
 ### <a name="child-elements"></a>子元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<dependentAssembly>](../../../../../docs/framework/configure-apps/file-schema/runtime/dependentassembly-element.md)|封装程序集的绑定策略和程序集位置。 使用一个 **\<dependentAssembly >** 标记每个程序集。|  
-|[\<probing>](../../../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md)|指定加载程序集时公共语言运行时搜索的子目录。|  
-|[\<publisherPolicy>](../../../../../docs/framework/configure-apps/file-schema/runtime/publisherpolicy-element.md)|指定运行时是否使用发布者策略。|  
-|[\<qualifyAssembly>](../../../../../docs/framework/configure-apps/file-schema/runtime/qualifyassembly-element.md)|指定使用部分名称时应动态加载的程序集全名。|  
+|[\<dependentAssembly>](dependentassembly-element.md)|封装程序集的绑定策略和程序集位置。 为每个程序集使用一个 **\<dependentAssembly >** 标记。|  
+|[\<probing>](probing-element.md)|指定加载程序集时公共语言运行时搜索的子目录。|  
+|[\<publisherPolicy>](publisherpolicy-element.md)|指定运行时是否使用发布者策略。|  
+|[\<qualifyAssembly>](qualifyassembly-element.md)|指定使用部分名称时应动态加载的程序集全名。|  
   
 ### <a name="parent-elements"></a>父元素  
   
@@ -79,7 +79,7 @@ ms.locfileid: "61704877"
 </configuration>  
 ```  
   
- 下面的示例演示如何使用**appliesTo**属性重定向.NET Framework 程序集的绑定。  
+ 下面的示例演示如何使用**appliesTo**特性重定向 .NET Framework 程序集的绑定。  
   
 ```xml  
 <runtime>  
@@ -94,6 +94,6 @@ ms.locfileid: "61704877"
   
 ## <a name="see-also"></a>请参阅
 
-- [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [重定向程序集版本](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)
+- [运行时设置架构](index.md)
+- [配置文件架构](../index.md)
+- [重定向程序集版本](../../redirect-assembly-versions.md)

@@ -2,20 +2,20 @@
 title: <certificate> 的 <identity>
 ms.date: 03/30/2017
 ms.assetid: 4aeccaf7-8f23-495c-aa5f-5bd8b5d4a10c
-ms.openlocfilehash: 76bdcb40d5016d7fcbff6c0d9769819f710065fe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 52d1fa31cebd949c91809464976739ef1334af29
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673339"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919620"
 ---
-# <a name="certificate-for-identity"></a>\<证书 > 为\<标识 >
+# <a name="certificate-for-identity"></a>\<标识 > 的\<证书 >
 指定用于向客户端验证服务器的 X.509 证书。  
   
- 有关设置元素值的详细信息，请参阅[服务标识和身份验证](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。  
+ 有关设置元素值的详细信息, 请参阅[服务标识和身份验证](../../../wcf/feature-details/service-identity-and-authentication.md)。  
   
- \<identity>  
-\<certificate>  
+ \<身份 >  
+\<证书 >  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,7 +39,7 @@ ms.locfileid: "61673339"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<identity>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|指定要由客户端进行身份验证的服务的标识。|  
+|[\<identity>](identity.md)|指定要由客户端进行身份验证的服务的标识。|  
   
 ## <a name="example"></a>示例  
  下面的代码指定用于向客户端验证服务器的证书的编码表示形式。  
@@ -56,5 +56,5 @@ ms.locfileid: "61673339"
 - <xref:System.ServiceModel.EndpointAddress>
 - <xref:System.ServiceModel.EndpointAddress.Identity%2A>
 - <xref:System.ServiceModel.EndpointIdentity>
-- [服务标识和身份验证](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
-- [\<identity>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)
+- [服务标识和身份验证](../../../wcf/feature-details/service-identity-and-authentication.md)
+- [\<identity>](identity.md)

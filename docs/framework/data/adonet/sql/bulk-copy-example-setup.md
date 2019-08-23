@@ -2,22 +2,22 @@
 title: 批量复制示例设置
 ms.date: 03/30/2017
 ms.assetid: d4dde6ac-b8b6-4593-965a-635c8fb2dadb
-ms.openlocfilehash: 6244afff348edbde46fdfda7481910aca2b25939
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2a7c0ddef42ff56306a42288c6960987ce7f714a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61878652"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69918092"
 ---
 # <a name="bulk-copy-example-setup"></a>批量复制示例设置
 <xref:System.Data.SqlClient.SqlBulkCopy> 类只能用于向 SQL Server 表中写入数据。 本主题中所示的代码示例使用 SQL Server 示例数据库**AdventureWorks**。 为避免改变现有表，代码示例将数据写入必须先创建的表。  
   
- **BulkCopyDemoMatchingColumns**并**BulkCopyDemoDifferentColumns**表均基于**AdventureWorks** **Production.Products**表。 在使用这些表的代码示例中，添加数据从**Production.Products**到其中一个示例表的表。 **BulkCopyDemoDifferentColumns**表使用时的示例演示了如何将映射到目标表中; 将源数据列**BulkCopyDemoMatchingColumns**用于大多数其他示例。  
+ **BulkCopyDemoMatchingColumns**和**BulkCopyDemoDifferentColumns**表均基于**AdventureWorks** **Products**表。 在使用这些表的代码示例中, 数据从**Products**表添加到其中一个示例表中。 当示例演示如何将列从源数据映射到目标表时, 将使用**BulkCopyDemoDifferentColumns**表;**BulkCopyDemoMatchingColumns**用于大多数其他示例。  
   
- 一些代码示例演示如何使用一个 <xref:System.Data.SqlClient.SqlBulkCopy> 类写入多个表。 对于这些示例中， **BulkCopyDemoOrderHeader**并**BulkCopyDemoOrderDetail**表用作目标表。 这些表基于**Sales.SalesOrderHeader**并**Sales.SalesOrderDetail**中的表**AdventureWorks**。  
+ 一些代码示例演示如何使用一个 <xref:System.Data.SqlClient.SqlBulkCopy> 类写入多个表。 对于这些示例, **BulkCopyDemoOrderHeader**和**BulkCopyDemoOrderDetail**表用作目标表。 这些表基于**AdventureWorks**中的**SalesOrderHeader**和**SalesOrderDetail**表。  
   
 > [!NOTE]
->  **SqlBulkCopy**提供的代码示例演示了使用语法**SqlBulkCopy**仅。 如果源表和目标表位于同一个 SQL Server 实例中，则使用 Transact-SQL `INSERT … SELECT` 语句复制数据会更加容易、更加迅速。  
+> 提供**SqlBulkCopy**代码示例是为了演示仅使用**SqlBulkCopy**的语法。 如果源表和目标表位于同一个 SQL Server 实例中，则使用 Transact-SQL `INSERT … SELECT` 语句复制数据会更加容易、更加迅速。  
   
 ## <a name="table-setup"></a>表设置  
  若要创建代码示例正确运行所需的表，必须在 SQL Server 数据库中运行下面的 Transact-SQL 语句。  

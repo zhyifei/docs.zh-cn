@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: 1e3f6ec0-1cac-4e1c-9c81-17d948ae5874
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 70113d98c5a4ab41700f6c9842dba89e2b49c297
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 8ee4df12a017429de333dd4e93df27973b658dad
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489326"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920668"
 ---
 # <a name="usesmallinternalthreadstacks-element"></a>\<UseSmallInternalThreadStacks > 元素
-请求公共语言运行时 (CLR)，减少内存使用通过指定显式堆栈大小，当它创建的某些线程，它在内部使用，而不是使用这些线程的默认堆栈大小。  
+请求公共语言运行时 (CLR) 在创建其内部使用的某些线程时, 通过指定显式堆栈大小来减少内存使用, 而不是使用这些线程的默认堆栈大小。  
   
  \<配置 > 元素  
 \<运行时 > 元素  
@@ -34,14 +34,14 @@ ms.locfileid: "66489326"
   
 |特性|描述|  
 |---------------|-----------------|  
-|enabled|必需的特性。<br /><br /> 指定是否要求，CLR 使用显式堆栈大小，而不是默认堆栈大小时创建的某些线程，它在内部使用。 显式堆栈大小都小于 1 MB 的默认堆栈大小。|  
+|enabled|必需的特性。<br /><br /> 指定是否请求 CLR 在创建其内部使用的某些线程时使用显式堆栈大小而不是默认堆栈大小。 显式堆栈大小小于默认堆栈大小 1 MB。|  
   
 ## <a name="enabled-attribute"></a>enabled 特性  
   
 |值|描述|  
 |-----------|-----------------|  
-|true|请求显式堆栈大小。|  
-|False|使用默认堆栈大小。 这是.NET Framework 4 的默认值。|  
+|真|请求显式堆栈大小。|  
+|假|使用默认堆栈大小。 这是 .NET Framework 4 的默认值。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  
@@ -54,15 +54,15 @@ ms.locfileid: "66489326"
 |`runtime`|包含有关程序集绑定和垃圾回收的信息。|  
   
 ## <a name="remarks"></a>备注  
- 此配置元素用于请求降低了的虚拟内存使用在进程中，因为 CLR 如果接受请求，对其内部线程，使用显式线程大小小于默认大小。  
+ 此配置元素用于请求进程中减少的虚拟内存使用, 因为 CLR 用于其内部线程的显式线程大小 (如果请求被接受) 小于默认大小。  
   
 > [!IMPORTANT]
->  此配置元素是对 CLR，而不是绝对要求的请求。 在.NET Framework 4 中，则请求响应仅针对 x86 体系结构。 此元素可能会在 CLR 的未来版本中完全忽略或替换为显式堆栈大小始终用于所选的内部线程。  
+> 此配置元素是对 CLR 的请求, 而不是绝对要求。 在 .NET Framework 4 中, 请求仅适用于 x86 体系结构。 在未来版本的 CLR 中, 可能会完全忽略此元素, 或将其替换为所选内部线程始终使用的显式堆栈大小。  
   
- 指定此配置元素交易的可靠性较小的虚拟内存使用 CLR 允许该请求，但是否因为较小的堆栈大小可能会使堆栈更有可能溢出。  
+ 如果 CLR 接受请求, 则指定此配置元素会在较小的虚拟内存使用情况下提高可靠性, 因为较小的堆栈大小可能会导致堆栈溢出。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何请求 CLR 使用显式堆栈调整某些大小在内部使用的线程。  
+ 下面的示例演示如何请求 CLR 对其内部使用的某些线程使用显式堆栈大小。  
   
 ```xml  
 <configuration>  
@@ -74,5 +74,5 @@ ms.locfileid: "66489326"
   
 ## <a name="see-also"></a>请参阅
 
-- [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [运行时设置架构](index.md)
+- [配置文件架构](../index.md)

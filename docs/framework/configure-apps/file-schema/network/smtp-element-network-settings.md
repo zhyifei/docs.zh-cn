@@ -8,15 +8,15 @@ helpviewer_keywords:
 - <smtp> element
 - smtp element
 ms.assetid: 220b0329-e384-4e0c-86b4-0945ad17efd9
-ms.openlocfilehash: 1b5f7406f995a86f0a192dbf3249c067dff570ea
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ac9405fdc6123a5a1352de06f94fefb6d7d4014b
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674397"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659124"
 ---
-# <a name="smtp-element-network-settings"></a>\<smtp > 元素 （网络设置）
-配置传递格式、 传递方法和发件人发送电子邮件地址。  
+# <a name="smtp-element-network-settings"></a>\<smtp > 元素 (网络设置)
+配置发送电子邮件的传递格式、传递方法和发件人地址。  
   
  \<configuration>  
 \<system.net>  
@@ -43,8 +43,8 @@ ms.locfileid: "61674397"
 |特性|描述|  
 |---------------|-----------------|  
 |`deliveryFormat`|指定传出电子邮件的传递格式。 可接受的值为 SevenBit 和 International。|  
-|`deliveryMethod`|指定电子邮件的传递方法。 可接受的值是网络、 PickupDirectoryFromIis 和 SpecifiedPickupDirectory。|  
-|`from`|指定发件人的传出电子邮件地址。|  
+|`deliveryMethod`|指定电子邮件的传递方法。 可接受的值为 Network、PickupDirectoryFromIis 和 SpecifiedPickupDirectory。|  
+|`from`|指定传出电子邮件的发件人地址。|  
   
 ### <a name="child-elements"></a>子元素  
   
@@ -57,10 +57,10 @@ ms.locfileid: "61674397"
   
 |**元素**|**说明**|  
 |-----------------|---------------------|  
-|[\<mailSettings> 元素（网络设置）](../../../../../docs/framework/configure-apps/file-schema/network/mailsettings-element-network-settings.md)|配置邮件发送选项。|  
+|[\<mailSettings> 元素（网络设置）](mailsettings-element-network-settings.md)|配置邮件发送选项。|  
   
 ## <a name="example"></a>示例  
- 下面的示例指定适当的 SMTP 参数，以使用默认网络凭据发送电子邮件。  
+ 下面的示例指定了使用默认网络凭据发送电子邮件所需的适当 SMTP 参数。  
   
 ```xml  
 <configuration>  
@@ -84,4 +84,4 @@ ms.locfileid: "61674397"
 - <xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType>
 - <xref:System.Net.Mail.SmtpDeliveryFormat>
 - <xref:System.Net.Mail.SmtpDeliveryMethod>
-- [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [网络设置架构](index.md)

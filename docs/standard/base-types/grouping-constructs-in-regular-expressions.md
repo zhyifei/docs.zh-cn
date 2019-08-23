@@ -69,7 +69,7 @@ ms.locfileid: "67135683"
   
 - 通过使用 `$`*数字* $ <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> number <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 替换序列，其中 *数字* 是捕获的表达式的初始数字。  
   
-- 以编程的方式，通过使用 <xref:System.Text.RegularExpressions.GroupCollection> 对象的方式，该对象由 <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> 属性返回。 集合中位置零上的成员表示正则表达式匹配。 每个后续成员表示匹配的子表达式。 有关更多信息，请参见 [Grouping Constructs and Regular Expression Objects](#Objects) 一节。  
+- 以编程的方式，通过使用 <xref:System.Text.RegularExpressions.GroupCollection> 对象的方式，该对象由 <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> 属性返回。 集合中位置零上的成员表示正则表达式匹配。 每个后续成员表示匹配的子表达式。 有关更多信息，请参见 [分组构造和正则表达式对象](#Objects) 一节。  
   
  以下示例阐释表示文本中重复单词的正则表达式。 正则表达式模式的两个捕获组表示重复的单词的两个实例。 捕获第二个实例，以报告它在输入字符串的起始位置。  
   
@@ -89,7 +89,7 @@ ms.locfileid: "67135683"
 |`(\w+)`|匹配一个或多个单词字符。 这是第一个捕获组。|  
 |`\s`|与空白字符匹配。|  
 |`(\1)`|与第一个捕获组捕获中的字符串匹配。 这是第二个捕获组。 该示例将其指定到捕获组上，以便可从 `Match.Index` 属性返回。|  
-|`\W`|匹配包括空格和标点符号的一个非单词字符。 这样可以防止正则表达式模式匹配从第一个捕获组的单词开头的单词。|  
+|`\W`|匹配包括空格和标点符号的一个非单词字符。 这样可以防止正则表达式模式匹配以第一个捕获组的单词开头的单词。|  
   
 <a name="named_matched_subexpression"></a>   
 ## <a name="named-matched-subexpressions"></a>命名匹配的子表达式  
@@ -131,8 +131,8 @@ ms.locfileid: "67135683"
 |0|0（默认名称）|`((?<One>abc)\d+)?(?<Two>xyz)(.*)`|  
 |1|1（默认名称）|`((?<One>abc)\d+)`|  
 |2|2（默认名称）|`(.*)`|  
-|3|一|`(?<One>abc)`|  
-|4|二|`(?<Two>xyz)`|  
+|3|One|`(?<One>abc)`|  
+|4|Two|`(?<Two>xyz)`|  
   
  下面的示例阐释了一个正则表达式，标识出重复的单词和紧随每个重复的单词的单词。 正则表达式模式定义了两个命名的子表达式： `duplicateWord`，它表示重复的单词；和 `nextWord`，它表示后面跟随重复单词的单词。  
   
@@ -157,7 +157,7 @@ ms.locfileid: "67135683"
   
  请注意可在正则表达式中重复组名。 例如，可将多个组命名为 `digit`，如下面的示例所示。 在名称重复的情况下， <xref:System.Text.RegularExpressions.Group> 对象的值由输入字符串中最后一个成功的捕获确定。 此外，如果组名不重复，则使用有关每个捕获的信息填充 <xref:System.Text.RegularExpressions.CaptureCollection> 。  
   
- 在下面的示例中，正则表达式 `\D+(?<digit>\d+)\D+(?<digit>\d+)?` 中两次出现了名为 `digit`的组。 第一个名为 `digit` 的组捕获一个或多个数字字符。 第二个名为 `digit` 的组捕获一个或多个数字字符的零个或一个匹配项。 如示例的输出所示，如果第二个捕获组成功匹配文本，则文本的值定义 <xref:System.Text.RegularExpressions.Group> 对象的值。 如果第二个捕获组无法不匹配输入字符串，则最后一个成功匹配的值定义 <xref:System.Text.RegularExpressions.Group> 对象的值。  
+ 在下面的示例中，正则表达式 `\D+(?<digit>\d+)\D+(?<digit>\d+)?` 中两次出现了名为 `digit`的组。 第一个名为 `digit` 的组捕获一个或多个数字字符。 第二个名为 `digit` 的组捕获一个或多个数字字符的零个或一个匹配项。 如示例的输出所示，如果第二个捕获组成功匹配文本，则文本的值定义 <xref:System.Text.RegularExpressions.Group> 对象的值。 如果第二个捕获组无法匹配输入字符串，则最后一个成功匹配的值定义 <xref:System.Text.RegularExpressions.Group> 对象的值。  
   
  [!code-csharp[RegularExpressions.Language.Grouping#12](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.grouping/cs/duplicate1.cs#12)]
  [!code-vb[RegularExpressions.Language.Grouping#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.grouping/vb/duplicate1.vb#12)]  

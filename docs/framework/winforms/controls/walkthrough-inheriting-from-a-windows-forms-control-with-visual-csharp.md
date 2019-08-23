@@ -8,12 +8,12 @@ helpviewer_keywords:
 - inheritance [Windows Forms], walkthroughs
 - custom controls [Windows Forms], inheritance
 ms.assetid: 09476da0-8d4c-4a4c-b969-649519dfb438
-ms.openlocfilehash: df88f9ae0b32ecd3b79686f3271e09b92ad7d4fd
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: c06639ef2f2ced8bd128adea636efe8be1715764
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040194"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69931022"
 ---
 # <a name="walkthrough-inheriting-from-a-windows-forms-control-with-visual-c"></a>演练：使用 Visual C 从 Windows 窗体控件继承\#
 使用视觉C#对象, 可以通过*继承*来创建功能强大的自定义控件。 通过继承，可以创建不仅保留了标准 Windows 窗体控件的所有固有功能，而且还包含自定义功能的控件。 在本演练中，将创建一个名为 `ValueButton` 的简单继承控件。 此按钮将从标准 Windows 窗体<xref:System.Windows.Forms.Button>控件继承功能, 并将公开一个名`ButtonValue`为的自定义属性。
@@ -42,7 +42,7 @@ ms.locfileid: "69040194"
 8. 在“文件”菜单中，选择“全部保存”以保存项目。
 
     > [!NOTE]
-    >  可视化设计器不再可用。 <xref:System.Windows.Forms.Button>由于控件执行其自己的绘制, 因此无法在设计器中修改其外观。 它的可视化表示形式将与它继承自的类 (即<xref:System.Windows.Forms.Button>) 的可视化表示形式完全相同, 除非在代码中进行了修改。 但仍然可以向设计器图面添加不含 UI 元素的组件。
+    > 可视化设计器不再可用。 <xref:System.Windows.Forms.Button>由于控件执行其自己的绘制, 因此无法在设计器中修改其外观。 它的可视化表示形式将与它继承自的类 (即<xref:System.Windows.Forms.Button>) 的可视化表示形式完全相同, 除非在代码中进行了修改。 但仍然可以向设计器图面添加不含 UI 元素的组件。
 
 ## <a name="adding-a-property-to-your-inherited-control"></a>将属性添加到继承控件
  继承的 Windows 窗体控件的可能用途之一是创建与标准 Windows 窗体控件的外观和感受相同、但公开自定义属性的控件。 在本节中，将向控件中添加名为 `ButtonValue` 的属性。
@@ -73,7 +73,7 @@ ms.locfileid: "69040194"
     }
     ```
 
-     此代码设置存储和检索 `ButtonValue` 属性的方法。           `get` 语句将返回的值设置为存储在私有变量 `varValue` 中的值，而 `set` 语句通过使用 `value` 关键字设置该私有变量的值。
+     此代码设置存储和检索 `ButtonValue` 属性的方法。 `get` 语句将返回的值设置为存储在私有变量 `varValue` 中的值，而 `set` 语句通过使用 `value` 关键字设置该私有变量的值。
 
 3. 在“文件”菜单中，选择“全部保存”以保存项目。
 
@@ -136,7 +136,7 @@ ms.locfileid: "69040194"
 
 12. 单击 `valueButton1`。
 
-               `label1` 中显示数字“5”，表明继承的控件的 `ButtonValue` 属性已通过 `valueButton1_Click` 方法传递给 `label1`。 这样，`ValueButton` 控件便继承了标准 Windows 窗体按钮的所有功能，但是公开了一个附加的自定义属性。
+     `label1` 中显示数字“5”，表明继承的控件的 `ButtonValue` 属性已通过 `valueButton1_Click` 方法传递给 `label1`。 这样，`ValueButton` 控件便继承了标准 Windows 窗体按钮的所有功能，但是公开了一个附加的自定义属性。
 
 ## <a name="see-also"></a>请参阅
 

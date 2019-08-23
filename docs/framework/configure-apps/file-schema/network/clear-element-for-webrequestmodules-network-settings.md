@@ -10,20 +10,20 @@ helpviewer_keywords:
 - webRequestModules, clear element
 - clear element, webRequestModules
 ms.assetid: 48f38bcb-f30c-4b74-a8f0-1a3caf1aa96f
-ms.openlocfilehash: 5dea238629b282776cb45f7b388e655fa557d084
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e175c70bd4932d6a8f9428e8cd9159a47df52558
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674592"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659427"
 ---
-# <a name="clear-element-for-webrequestmodules-network-settings"></a>\<清除 > webRequestModules （网络设置） 的
+# <a name="clear-element-for-webrequestmodules-network-settings"></a>\<清除 webRequestModules 的 > 元素 (网络设置)
 从应用程序中删除所有已注册的 Web 请求模块。  
   
  \<configuration>  
 \<system.net>  
 \<webRequestModules>  
-\<clear>  
+\<清除 >  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,16 +44,16 @@ ms.locfileid: "61674592"
   
 |**元素**|**说明**|  
 |-----------------|---------------------|  
-|[webRequestModules](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|指定模块用于从网络主机请求信息。|  
+|[webRequestModules](webrequestmodules-element-network-settings.md)|指定用于从网络主机请求信息的模块。|  
   
 ## <a name="remarks"></a>备注  
- `clear`元素中删除所有已注册的配置文件中或在配置层次结构中较高级别上前面定义的 Web 请求模块。  
+ `clear`元素删除先前在配置文件中或在配置层次结构中的更高级别定义的所有已注册 Web 请求模块。  
   
 ## <a name="configuration-files"></a>配置文件  
  此元素可在应用程序配置文件或计算机配置文件 (Machine.config) 中使用。  
   
 ## <a name="example"></a>示例  
- 下面的示例将清除所有 Web 请求模块，然后为 HTTP 注册 Web 请求模块。  
+ 下面的示例将清除所有 Web 请求模块, 然后为 HTTP 注册 Web 请求模块。  
   
 ```xml  
 <configuration>  
@@ -72,4 +72,4 @@ ms.locfileid: "61674592"
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Net.WebRequest>
-- [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [网络设置架构](index.md)

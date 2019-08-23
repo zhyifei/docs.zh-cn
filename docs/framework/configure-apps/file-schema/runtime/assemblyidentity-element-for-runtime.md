@@ -9,14 +9,14 @@ helpviewer_keywords:
 - container tags, <assemblyIdentity> element
 - assemblyIdentity element
 ms.assetid: cea4d187-6398-4da4-af09-c1abc6a349c1
-ms.openlocfilehash: d5766b76f18dce441cb260887a753dcf64642a6f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 815e1c26a328d986f91992a1e67e438a563ffea6
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674228"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663890"
 ---
-# <a name="assemblyidentity-element-for-runtime"></a>\<assemblyIdentity > 元素\<运行库 >
+# <a name="assemblyidentity-element-for-runtime"></a>\<运行时 > 的\<assemblyIdentity > 元素
 包含有关程序集的标识信息。  
   
  \<configuration>  
@@ -42,18 +42,18 @@ culture="assembly culture"/>
 |特性|描述|  
 |---------------|-----------------|  
 |`name`|必需的特性。<br /><br /> 程序集的名称|  
-|`culture`|可选特性。<br /><br /> 一个字符串，指定的语言和国家/地区的程序集。|  
-|`publicKeyToken`|可选特性。<br /><br /> 一个十六进制值，该值指定程序集的强名称。|  
-|`processorArchitecture`|可选特性。<br /><br /> 为包含特定于处理器的代码程序集指定的处理器体系结构的值"x86"、"amd64"、"msil"或"ia64"之一。 值不区分大小写。 如果该属性分配任何其他值，则整个`<assemblyIdentity>`元素将被忽略。 请参阅 <xref:System.Reflection.ProcessorArchitecture>。|  
+|`culture`|可选特性。<br /><br /> 一个字符串, 指定程序集的语言和国家/地区。|  
+|`publicKeyToken`|可选特性。<br /><br /> 一个十六进制值, 该值指定程序集的强名称。|  
+|`processorArchitecture`|可选特性。<br /><br /> 值 "x86"、"amd64"、"msil" 或 "ia64" 之一, 为包含特定于处理器的代码的程序集指定处理器体系结构。 这些值不区分大小写。 如果为该属性分配了其他任何值, 则`<assemblyIdentity>`将忽略整个元素。 请参阅 <xref:System.Reflection.ProcessorArchitecture>。|  
   
-## <a name="processorarchitecture-attribute"></a>processorArchitecture 属性  
+## <a name="processorarchitecture-attribute"></a>processorArchitecture 特性  
   
-|“值”|描述|  
+|值|描述|  
 |-----------|-----------------|  
-|`amd64`|AMD x86-64 体系结构仅。|  
-|`ia64`|Intel Itanium 体系结构仅。|  
+|`amd64`|仅适用于 AMD x86-64 体系结构。|  
+|`ia64`|仅限 Intel Itanium 体系结构。|  
 |`msil`|不特定于处理器和每字位数。|  
-|`x86`|32 位 x86 处理器，位于本机或在 Windows 上的 64 位平台上的 Windows (WOW) 环境中。|  
+|`x86`|32位 x86 处理器, 在64位平台上的 Windows on windows (WOW) 环境中。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  
@@ -64,15 +64,15 @@ culture="assembly culture"/>
 |-------------|-----------------|  
 |`assemblyBinding`|包含有关程序集版本重定向和程序集位置的信息。|  
 |`configuration`|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
-|`dependentAssembly`|封装每个程序集的绑定策略和程序集位置。 使用一个`<dependentAssembly>`每个程序集的元素。|  
+|`dependentAssembly`|封装每个程序集的绑定策略和程序集位置。 为每`<dependentAssembly>`个程序集使用一个元素。|  
 |`runtime`|包含有关程序集绑定和垃圾回收的信息。|  
   
 ## <a name="remarks"></a>备注  
  每个 **\<dependentAssembly >** 元素必须有一个 **\<assemblyIdentity >** 子元素。  
   
- 如果`processorArchitecture`属性是否存在、`<assemblyIdentity>`元素仅适用于具有相应的处理器体系结构的程序集。 如果`processorArchitecture`属性不存在，`<assemblyIdentity>`元素可以将应用于具有任何处理器体系结构的程序集。  
+ 如果该`processorArchitecture`属性存在, 则`<assemblyIdentity>`元素仅适用于具有相应处理器体系结构的程序集。 如果该`processorArchitecture`属性不存在, 则该`<assemblyIdentity>`元素可应用于具有任何处理器体系结构的程序集。  
   
- 下面的示例显示了两个程序集具有相同名称的针对两个不同两个处理器的体系结构，且其版本不维护同步配置文件。当应用程序执行 x86 平台第一个`<assemblyIdentity>`元素得到应用，另一个被忽略。 如果应用程序在非 x86 或 ia64 平台上执行，都将被忽略。  
+ 下面的示例显示了两个程序集的配置文件, 这些程序集具有两个不同的两个处理器体系结构, 并且其版本尚未保持同步。当应用程序在 x86 平台上执行时, `<assemblyIdentity>`第一个元素应用, 另一个元素将被忽略。 如果应用程序在 x86 或 ia64 以外的平台上执行, 则会忽略这两者。  
   
 ```xml  
 <configuration>  
@@ -99,10 +99,10 @@ culture="assembly culture"/>
 </configuration>  
 ```  
   
- 如果配置文件包含`<assemblyIdentity>`元素没有`processorArchitecture`属性，并且不包含相匹配的平台，而无需元素的元素`processorArchitecture`使用属性。  
+ 如果配置文件包含`<assemblyIdentity>`没有`processorArchitecture`属性的元素, 并且不包含与平台相匹配的元素`processorArchitecture` , 则使用没有属性的元素。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何提供有关程序集信息。  
+ 下面的示例演示如何提供有关程序集的信息。  
   
 ```xml  
 <configuration>  
@@ -121,6 +121,6 @@ culture="assembly culture"/>
   
 ## <a name="see-also"></a>请参阅
 
-- [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [重定向程序集版本](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)
+- [运行时设置架构](index.md)
+- [配置文件架构](../index.md)
+- [重定向程序集版本](../../redirect-assembly-versions.md)

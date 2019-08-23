@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: abf48c11-1e72-431d-9562-39cf23e1a8ff
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 124641ed32dc2ea953202dbc6a73ee066a6c4a4e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5cdd2f5538be0e39b5dd3a378825ccf81f314c03
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64602511"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916284"
 ---
 # <a name="walkthrough-creating-a-cryptographic-application"></a>演练：创建加密应用程序
 本演练演示如何对内容进行加密和解密。 下面的代码示例是特为 Windows 窗体应用程序设计的。 此应用程序不演示实际方案，例如使用智能卡。 而演示加密和解密的基础知识。  
@@ -29,7 +29,7 @@ ms.locfileid: "64602511"
 - 使用 <xref:System.Security.Cryptography.RSACryptoServiceProvider>（一种非对称算法），对由 <xref:System.Security.Cryptography.RijndaelManaged> 加密的数据的密钥进行加密和解密。 非对称算法最适用于较少的数据，如密钥。  
   
     > [!NOTE]
-    >  如果要保护计算机上的数据（而不是与他人交换加密内容），可考虑使用 <xref:System.Security.Cryptography.ProtectedData> 或 <xref:System.Security.Cryptography.ProtectedMemory> 类。  
+    > 如果要保护计算机上的数据（而不是与他人交换加密内容），可考虑使用 <xref:System.Security.Cryptography.ProtectedData> 或 <xref:System.Security.Cryptography.ProtectedMemory> 类。  
   
  下表总结了本主题中的加密任务。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "64602511"
 ## <a name="creating-a-windows-forms-application"></a>创建 Windows 窗体应用程序  
  本演练中的大多数代码示例均设计为按钮控件的事件处理程序。 下表列出了示例应用程序所需的控件及其匹配代码示例所需的名称。  
   
-|控件|名称|文本属性（根据需要）|  
+|控件|name|文本属性（根据需要）|  
 |-------------|----------|---------------------------------|  
 |<xref:System.Windows.Forms.Button>|`buttonEncryptFile`|加密文件|  
 |<xref:System.Windows.Forms.Button>|`buttonDecryptFile`|解密文件|  
@@ -82,7 +82,7 @@ ms.locfileid: "64602511"
  [!code-vb[CryptoWalkThru#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CryptoWalkThru/vb/Form1.vb#2)]  
   
 ## <a name="encrypting-a-file"></a>加密文件  
- 此任务涉及两个方法： 的事件处理程序方法`Encrypt File`按钮 (`buttonEncryptFile_Click`) 和`EncryptFile`方法。 第一种方法显示一个用于选择文件的对话框，并将文件名传递给第二种方法，后者将执行加密。  
+ 此任务涉及两种方法: `Encrypt File`按钮 (`buttonEncryptFile_Click`) 和`EncryptFile`方法的事件处理程序方法。 第一种方法显示一个用于选择文件的对话框，并将文件名传递给第二种方法，后者将执行加密。  
   
  加密的内容、密钥和 IV 全都保存到一个 <xref:System.IO.FileStream> 中，这被称为加密包。  
   

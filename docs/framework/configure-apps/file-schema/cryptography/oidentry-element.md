@@ -8,14 +8,14 @@ helpviewer_keywords:
 - <oidEntry> element
 - oidEntry element
 ms.assetid: 22fb88b0-bf27-489c-9ca0-e65950ac136c
-ms.openlocfilehash: c686d2b99ad66aec753a356b09fa3c7151193808
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 013994e36c4c63410a753967cbac92c38783ae62
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674741"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659593"
 ---
-# <a name="oidentry-element"></a>\<oidEntry > 元素
+# <a name="oidentry-element"></a>\<y > 元素
 将 ASN.1 对象标识符 (OID) 映射到友好名称。  
   
  \<configuration>  
@@ -37,8 +37,8 @@ ms.locfileid: "61674741"
   
 |特性|描述|  
 |---------------|-----------------|  
-|**OID**|必需的特性。<br /><br /> 指定的 ASN.1 OID 对应于您的类所实现的算法。|  
-|**name**|必需的特性。<br /><br /> 指定的值**名称**属性中[ \<nameEntry >](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md)标记。|  
+|**OID**|必需的特性。<br /><br /> 指定与您的类实现的算法相对应的第1个 OID。|  
+|**名称**|必需的特性。<br /><br /> [指定\<y >](nameentry-element.md)标记中**name**属性的值。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  
@@ -49,14 +49,14 @@ ms.locfileid: "61674741"
 |-------------|-----------------|  
 |`configuration`|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
 |`cryptographySettings`|包含加密设置。|  
-|`mscorlib`|包含`cryptographySettings`元素。|  
-|`oidMap`|包含类的 ASN.1 对象标识符 (OID) 映射。|  
+|`mscorlib`|`cryptographySettings`包含元素。|  
+|`oidMap`|包含与类的 ASN 对象标识符 (OID) 映射。|  
   
 ## <a name="remarks"></a>备注  
- ASN.1 对象标识符标识中某些加密格式的算法。 将对象标识符映射到你想要识别的算法的友好名称。  
+ ASN. 1 对象标识符以某些加密格式标识算法。 将对象标识符映射到要标识的算法的友好名称。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何使用 **\<oidEntry >** 元素将 RIPEMD-160 哈希算法的对象标识符映射到该哈希算法的实现。  
+ 下面的示例演示如何使用 **\<y >** 元素将 RIPEMD-160 哈希算法的对象标识符映射到该哈希算法的实现。  
   
 ```xml  
 <configuration>  
@@ -80,8 +80,8 @@ ms.locfileid: "61674741"
   
 ## <a name="see-also"></a>请参阅
 
-- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [加密设置架构](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
+- [配置文件架构](../index.md)
+- [加密设置架构](index.md)
 - [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)
-- [配置加密类](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)
-- [将对象标识符映射到加密算法](../../../../../docs/framework/configure-apps/map-object-identifiers-to-cryptography-algorithms.md)
+- [配置加密类](../../configure-cryptography-classes.md)
+- [将对象标识符映射到加密算法](../../map-object-identifiers-to-cryptography-algorithms.md)

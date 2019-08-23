@@ -7,18 +7,18 @@ helpviewer_keywords:
 - assemblyBinding Element
 - <assemblyBinding> Element
 ms.assetid: 6cc55983-b894-449b-8e26-b258e53939cd
-ms.openlocfilehash: f5992a6085c32d37f56319cf8b2c361542c441e7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e0b83c4b3573ab6819654e72cac1bf3e4a0ba637
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674826"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921278"
 ---
-# <a name="assemblybinding-element-for-configuration"></a>\<assemblyBinding > 元素\<配置 >
+# <a name="assemblybinding-element-for-configuration"></a>\<用于配置 > 的\<assemblyBinding > 元素
 
 指定配置级的程序集绑定策略。
 
-[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
+[ **\<configuration>** ](configuration-element.md)   
 &nbsp;&nbsp; **\<assemblyBinding>**
 
 ## <a name="syntax"></a>语法
@@ -39,24 +39,24 @@ ms.locfileid: "61674826"
 
 |     | 描述 |
 | --- | ----------- |
-| [ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md) | 公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。 |
+| [ **\<configuration>** ](configuration-element.md) | 公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。 |
 
 ## <a name="child-element"></a>子元素
 
 |     | 描述 |
 | --- | ----------- |
-| [ **\<linkedConfiguration>** ](~/docs/framework/configure-apps/file-schema/linkedconfiguration-element.md) | 指定要包含的配置文件。 |
+| [ **\<linkedConfiguration>** ](linkedconfiguration-element.md) | 指定要包含的配置文件。 |
 
 ## <a name="remarks"></a>备注
 
-[  **\<LinkedConfiguration >** ](~/docs/framework/configure-apps/file-schema/linkedconfiguration-element.md)元素中的配置文件允许应用程序配置文件包含程序集，从而简化管理的组件程序集已知位置，而不是复制的程序集配置设置。
+LinkedConfiguration > 元素通过允许应用程序配置文件在已知位置中包含程序集配置文件来简化组件程序集的管理, 而不是复制程序集[ **\<** ](linkedconfiguration-element.md)配置设置。
 
 > [!NOTE]
-> **\<LinkedConfiguration >** 元素不支持使用 Windows 通过并行清单的应用程序。
+> 对于具有 Windows 并行清单的应用程序, 不支持 **linkedConfiguration>元素。\<**
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何包含本地硬盘上的配置文件：
+下面的示例演示如何在本地硬盘上包含配置文件:
 
 ```xml
 <configuration>
@@ -68,4 +68,4 @@ ms.locfileid: "61674826"
 
 ## <a name="see-also"></a>请参阅
 
-- [.NET Framework 的配置文件架构](~/docs/framework/configure-apps/file-schema/index.md)
+- [.NET Framework 的配置文件架构](index.md)
