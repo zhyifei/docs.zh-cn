@@ -48,7 +48,7 @@ ms.locfileid: "66301507"
   
 <a name="Numbered"></a>   
 ## <a name="substituting-a-numbered-group"></a>替换已编号的组  
- `$`*number* 语言元素包括替换字符串中 *number* 捕获组所匹配的最后一个子字符串，其中 *number* 是捕获组的索引。 例如，替换模式 `$1` 指示匹配的子字符串将由捕获的第一个组替换。 有关为已编号的捕获组的详细信息，请参见 [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。  
+ `$`*number* 语言元素包括替换字符串中 *number* 捕获组所匹配的最后一个子字符串，其中 *number* 是捕获组的索引。 例如，替换模式 `$1` 指示匹配的子字符串将由捕获的第一个组替换。 有关为已编号的捕获组的详细信息，请参见 [分组构造](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。  
   
  `$` 后面的所有数字解释为属于 *number* 组。 如果这不是你想要的结果，可改为替换命名组。 例如，可以使用替换字符串 `${1}1` 而不是 `$11` 来将替换字符串定义为带数字“1”的首个捕获组的值。 有关详细信息，请参阅 [替换命名组](#Named)。  
   
@@ -76,7 +76,7 @@ ms.locfileid: "66301507"
   
 <a name="Named"></a>   
 ## <a name="substituting-a-named-group"></a>替换命名组  
- `${`*name*`}` 语言元素替换 *name* 捕获组匹配的最后一个子字符串，其中 *name* 是 `(?<`*name*`>)` 语言元素所定义的捕获组名称。 有关命名的捕获组的详细信息，请参见 [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。  
+ `${`*name*`}` 语言元素替换 *name* 捕获组匹配的最后一个子字符串，其中 *name* 是 `(?<`*name*`>)` 语言元素所定义的捕获组名称。 有关命名的捕获组的详细信息，请参见 [分组构造](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。  
   
  如果 *name* 未指定正则表达式模式中定义的有效的命名捕获组但包含数字，则 `${`*name*`}` 被解释为已编号的组。  
   
@@ -157,7 +157,7 @@ ms.locfileid: "66301507"
 |2|5|aa1bb|aaaabb**aa1bb**cc3dd4ee5|  
 |3|8|aa1bb2cc|aaaabbaa1bbcc**aa1bb2cc**dd4ee5|  
 |4|11|aa1bb2cc3dd|aaaabbaa1bbccaa1bb2ccdd**aa1bb2cc3dd**ee5|  
-|5|14|aa1bb2cc3dd4ee|aaaabbaa1bbccaa1bb2ccddaa1bb2cc3ddeeaa1bb2cc3dd4ee |  
+|5|14|aa1bb2cc3dd4ee|aaaabbaa1bbccaa1bb2ccddaa1bb2cc3ddee**aa1bb2cc3dd4ee** |  
   
  [返回页首](#Top)  
   
