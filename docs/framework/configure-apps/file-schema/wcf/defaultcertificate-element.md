@@ -2,25 +2,25 @@
 title: <defaultCertificate> 元素
 ms.date: 03/30/2017
 ms.assetid: f1ddf364-9a00-45d3-b989-ff381c154ce6
-ms.openlocfilehash: c94531d10b7c0ef5ca0ee1f2d5683d0a259a2537
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 93410e815a156f91db1962f05fb1aa6baca7f955
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61644448"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919254"
 ---
-# <a name="defaultcertificate-element"></a><span data-ttu-id="589dc-102">\<defaultCertificate > 元素</span><span class="sxs-lookup"><span data-stu-id="589dc-102">\<defaultCertificate> Element</span></span>
-<span data-ttu-id="589dc-103">指定在服务或 STS 未通过协商协议提供证书时要使用的 X.509 证书。</span><span class="sxs-lookup"><span data-stu-id="589dc-103">Specifies an X.509 certificate to be used when a service or STS does not provide one via a negotiation protocol.</span></span>  
+# <a name="defaultcertificate-element"></a><span data-ttu-id="c4819-102">\<defaultCertificate > 元素</span><span class="sxs-lookup"><span data-stu-id="c4819-102">\<defaultCertificate> Element</span></span>
+<span data-ttu-id="c4819-103">指定在服务或 STS 未通过协商协议提供证书时要使用的 X.509 证书。</span><span class="sxs-lookup"><span data-stu-id="c4819-103">Specifies an X.509 certificate to be used when a service or STS does not provide one via a negotiation protocol.</span></span>  
   
- <span data-ttu-id="589dc-104">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="589dc-104">\<system.ServiceModel></span></span>  
-<span data-ttu-id="589dc-105">\<behaviors></span><span class="sxs-lookup"><span data-stu-id="589dc-105">\<behaviors></span></span>  
-<span data-ttu-id="589dc-106">endpointBehaviors 部分</span><span class="sxs-lookup"><span data-stu-id="589dc-106">endpointBehaviors section</span></span>  
-<span data-ttu-id="589dc-107">\<behavior></span><span class="sxs-lookup"><span data-stu-id="589dc-107">\<behavior></span></span>  
-<span data-ttu-id="589dc-108">\<clientCredentials></span><span class="sxs-lookup"><span data-stu-id="589dc-108">\<clientCredentials></span></span>  
-<span data-ttu-id="589dc-109">\<serviceCertificate></span><span class="sxs-lookup"><span data-stu-id="589dc-109">\<serviceCertificate></span></span>  
-<span data-ttu-id="589dc-110">\<defaultCertificate></span><span class="sxs-lookup"><span data-stu-id="589dc-110">\<defaultCertificate></span></span>  
+ <span data-ttu-id="c4819-104">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="c4819-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="c4819-105">\<行为 ></span><span class="sxs-lookup"><span data-stu-id="c4819-105">\<behaviors></span></span>  
+<span data-ttu-id="c4819-106">endpointBehaviors 部分</span><span class="sxs-lookup"><span data-stu-id="c4819-106">endpointBehaviors section</span></span>  
+<span data-ttu-id="c4819-107">\<行为 ></span><span class="sxs-lookup"><span data-stu-id="c4819-107">\<behavior></span></span>  
+<span data-ttu-id="c4819-108">\<clientCredentials></span><span class="sxs-lookup"><span data-stu-id="c4819-108">\<clientCredentials></span></span>  
+<span data-ttu-id="c4819-109">\<serviceCertificate></span><span class="sxs-lookup"><span data-stu-id="c4819-109">\<serviceCertificate></span></span>  
+<span data-ttu-id="c4819-110">\<defaultCertificate></span><span class="sxs-lookup"><span data-stu-id="c4819-110">\<defaultCertificate></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="589dc-111">语法</span><span class="sxs-lookup"><span data-stu-id="589dc-111">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c4819-111">语法</span><span class="sxs-lookup"><span data-stu-id="c4819-111">Syntax</span></span>  
   
 ```xml  
 <defaultCertificate findValue="String"
@@ -29,56 +29,56 @@ ms.locfileid: "61644448"
                     x509FindType="FindByThumbPrint/FindBySubjectName/FindBySubjectDistinguishedName/FindByIssuerName/FindByIssuerDistinguishedName/FindBySerialiNumber/FindByTimeValid/FindByTimeNotYetValid/FindByTimeExpired/FindByTemplateName/FindByApplicationPolicy/FindByCertificatePolicy/FindByExtension/FindByKeyUsage/FindBySubjectKeyIdentifier" />
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="589dc-112">特性和元素</span><span class="sxs-lookup"><span data-stu-id="589dc-112">Attributes and Elements</span></span>  
- <span data-ttu-id="589dc-113">以下几节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="589dc-113">The following sections describe attributes, child elements, and parent elements</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="c4819-112">特性和元素</span><span class="sxs-lookup"><span data-stu-id="c4819-112">Attributes and Elements</span></span>  
+ <span data-ttu-id="c4819-113">以下几节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="c4819-113">The following sections describe attributes, child elements, and parent elements</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="589dc-114">特性</span><span class="sxs-lookup"><span data-stu-id="589dc-114">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="c4819-114">特性</span><span class="sxs-lookup"><span data-stu-id="c4819-114">Attributes</span></span>  
   
-|<span data-ttu-id="589dc-115">特性</span><span class="sxs-lookup"><span data-stu-id="589dc-115">Attribute</span></span>|<span data-ttu-id="589dc-116">描述</span><span class="sxs-lookup"><span data-stu-id="589dc-116">Description</span></span>|  
+|<span data-ttu-id="c4819-115">特性</span><span class="sxs-lookup"><span data-stu-id="c4819-115">Attribute</span></span>|<span data-ttu-id="c4819-116">描述</span><span class="sxs-lookup"><span data-stu-id="c4819-116">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="589dc-117">findValue</span><span class="sxs-lookup"><span data-stu-id="589dc-117">findValue</span></span>|<span data-ttu-id="589dc-118">字符串。</span><span class="sxs-lookup"><span data-stu-id="589dc-118">String.</span></span> <span data-ttu-id="589dc-119">要搜索的值。</span><span class="sxs-lookup"><span data-stu-id="589dc-119">The value to search for.</span></span>|  
-|<span data-ttu-id="589dc-120">x509FindType</span><span class="sxs-lookup"><span data-stu-id="589dc-120">x509FindType</span></span>|<span data-ttu-id="589dc-121">枚举。</span><span class="sxs-lookup"><span data-stu-id="589dc-121">Enumeration.</span></span> <span data-ttu-id="589dc-122">要搜索的证书字段之一。</span><span class="sxs-lookup"><span data-stu-id="589dc-122">One of the certificate fields to search.</span></span>|  
-|<span data-ttu-id="589dc-123">storeLocation</span><span class="sxs-lookup"><span data-stu-id="589dc-123">storeLocation</span></span>|<span data-ttu-id="589dc-124">枚举。</span><span class="sxs-lookup"><span data-stu-id="589dc-124">Enumeration.</span></span> <span data-ttu-id="589dc-125">要搜索的两个系统存储位置之一。</span><span class="sxs-lookup"><span data-stu-id="589dc-125">One of the two system store locations to search.</span></span>|  
-|<span data-ttu-id="589dc-126">storeName</span><span class="sxs-lookup"><span data-stu-id="589dc-126">storeName</span></span>|<span data-ttu-id="589dc-127">枚举。</span><span class="sxs-lookup"><span data-stu-id="589dc-127">Enumeration.</span></span> <span data-ttu-id="589dc-128">要搜索的系统存储之一。</span><span class="sxs-lookup"><span data-stu-id="589dc-128">One of the system stores to search.</span></span>|  
+|<span data-ttu-id="c4819-117">findValue</span><span class="sxs-lookup"><span data-stu-id="c4819-117">findValue</span></span>|<span data-ttu-id="c4819-118">字符串。</span><span class="sxs-lookup"><span data-stu-id="c4819-118">String.</span></span> <span data-ttu-id="c4819-119">要搜索的值。</span><span class="sxs-lookup"><span data-stu-id="c4819-119">The value to search for.</span></span>|  
+|<span data-ttu-id="c4819-120">x509FindType</span><span class="sxs-lookup"><span data-stu-id="c4819-120">x509FindType</span></span>|<span data-ttu-id="c4819-121">枚举。</span><span class="sxs-lookup"><span data-stu-id="c4819-121">Enumeration.</span></span> <span data-ttu-id="c4819-122">要搜索的证书字段之一。</span><span class="sxs-lookup"><span data-stu-id="c4819-122">One of the certificate fields to search.</span></span>|  
+|<span data-ttu-id="c4819-123">storeLocation</span><span class="sxs-lookup"><span data-stu-id="c4819-123">storeLocation</span></span>|<span data-ttu-id="c4819-124">枚举。</span><span class="sxs-lookup"><span data-stu-id="c4819-124">Enumeration.</span></span> <span data-ttu-id="c4819-125">要搜索的两个系统存储位置之一。</span><span class="sxs-lookup"><span data-stu-id="c4819-125">One of the two system store locations to search.</span></span>|  
+|<span data-ttu-id="c4819-126">storeName</span><span class="sxs-lookup"><span data-stu-id="c4819-126">storeName</span></span>|<span data-ttu-id="c4819-127">枚举。</span><span class="sxs-lookup"><span data-stu-id="c4819-127">Enumeration.</span></span> <span data-ttu-id="c4819-128">要搜索的系统存储之一。</span><span class="sxs-lookup"><span data-stu-id="c4819-128">One of the system stores to search.</span></span>|  
   
-## <a name="findvalue-attribute"></a><span data-ttu-id="589dc-129">findValue 属性</span><span class="sxs-lookup"><span data-stu-id="589dc-129">findValue Attribute</span></span>  
+## <a name="findvalue-attribute"></a><span data-ttu-id="c4819-129">findValue 属性</span><span class="sxs-lookup"><span data-stu-id="c4819-129">findValue Attribute</span></span>  
   
-|<span data-ttu-id="589dc-130">“值”</span><span class="sxs-lookup"><span data-stu-id="589dc-130">Value</span></span>|<span data-ttu-id="589dc-131">描述</span><span class="sxs-lookup"><span data-stu-id="589dc-131">Description</span></span>|  
+|<span data-ttu-id="c4819-130">值</span><span class="sxs-lookup"><span data-stu-id="c4819-130">Value</span></span>|<span data-ttu-id="c4819-131">描述</span><span class="sxs-lookup"><span data-stu-id="c4819-131">Description</span></span>|  
 |-----------|-----------------|  
-|<span data-ttu-id="589dc-132">String</span><span class="sxs-lookup"><span data-stu-id="589dc-132">String</span></span>|<span data-ttu-id="589dc-133">值取决于搜索的字段（由 X509FindType 属性指定）。</span><span class="sxs-lookup"><span data-stu-id="589dc-133">The value depends on the field (specified by the X509FindType attribute) being searched.</span></span> <span data-ttu-id="589dc-134">例如，如果搜索指纹，则此值必须为十六进制数字字符串。</span><span class="sxs-lookup"><span data-stu-id="589dc-134">For example, if searching for a thumbprint, the value must be a string of hexadecimal numbers.</span></span>|  
+|<span data-ttu-id="c4819-132">String</span><span class="sxs-lookup"><span data-stu-id="c4819-132">String</span></span>|<span data-ttu-id="c4819-133">值取决于搜索的字段（由 X509FindType 属性指定）。</span><span class="sxs-lookup"><span data-stu-id="c4819-133">The value depends on the field (specified by the X509FindType attribute) being searched.</span></span> <span data-ttu-id="c4819-134">例如，如果搜索指纹，则此值必须为十六进制数字字符串。</span><span class="sxs-lookup"><span data-stu-id="c4819-134">For example, if searching for a thumbprint, the value must be a string of hexadecimal numbers.</span></span>|  
   
-## <a name="x509findtype-attribute"></a><span data-ttu-id="589dc-135">x509FindType 属性</span><span class="sxs-lookup"><span data-stu-id="589dc-135">x509FindType Attribute</span></span>  
+## <a name="x509findtype-attribute"></a><span data-ttu-id="c4819-135">x509FindType 属性</span><span class="sxs-lookup"><span data-stu-id="c4819-135">x509FindType Attribute</span></span>  
   
-|<span data-ttu-id="589dc-136">“值”</span><span class="sxs-lookup"><span data-stu-id="589dc-136">Value</span></span>|<span data-ttu-id="589dc-137">描述</span><span class="sxs-lookup"><span data-stu-id="589dc-137">Description</span></span>|  
+|<span data-ttu-id="c4819-136">值</span><span class="sxs-lookup"><span data-stu-id="c4819-136">Value</span></span>|<span data-ttu-id="c4819-137">描述</span><span class="sxs-lookup"><span data-stu-id="c4819-137">Description</span></span>|  
 |-----------|-----------------|  
-|<span data-ttu-id="589dc-138">枚举</span><span class="sxs-lookup"><span data-stu-id="589dc-138">Enumeration</span></span>|<span data-ttu-id="589dc-139">值包括：FindByThumbprint、 FindBySubjectName、 FindBySubjectDistinguishedName、 FindByIssuerName、 FindByIssuerDistinguishedName、 FindBySerialNumber、 FindByTimeValid、 FindByTimeNotYetValid、 FindBySerialNumber、 FindByTimeExpired、 FindByTemplateNameFindByApplicationPolicy、 FindByCertificatePolicy、 FindByExtension、 FindByKeyUsage、 和 FindBySubjectKeyIdentifier。</span><span class="sxs-lookup"><span data-stu-id="589dc-139">Values include: FindByThumbprint, FindBySubjectName, FindBySubjectDistinguishedName, FindByIssuerName, FindByIssuerDistinguishedName, FindBySerialNumber, FindByTimeValid, FindByTimeNotYetValid, FindBySerialNumber, FindByTimeExpired, FindByTemplateName, FindByApplicationPolicy, FindByCertificatePolicy, FindByExtension, FindByKeyUsage, FindBySubjectKeyIdentifier.</span></span>|  
+|<span data-ttu-id="c4819-138">枚举</span><span class="sxs-lookup"><span data-stu-id="c4819-138">Enumeration</span></span>|<span data-ttu-id="c4819-139">值包括：FindByThumbprint、Findbysubjectname)、FindBySubjectDistinguishedName、FindByIssuerName、FindByIssuerDistinguishedName、FindBySerialNumber、FindByTimeValid、FindByTimeNotYetValid、FindBySerialNumber、FindByTimeExpired、FindByTemplateName, FindByApplicationPolicy, FindByCertificatePolicy, FindByExtension, FindByKeyUsage, FindBySubjectKeyIdentifier.</span><span class="sxs-lookup"><span data-stu-id="c4819-139">Values include: FindByThumbprint, FindBySubjectName, FindBySubjectDistinguishedName, FindByIssuerName, FindByIssuerDistinguishedName, FindBySerialNumber, FindByTimeValid, FindByTimeNotYetValid, FindBySerialNumber, FindByTimeExpired, FindByTemplateName, FindByApplicationPolicy, FindByCertificatePolicy, FindByExtension, FindByKeyUsage, FindBySubjectKeyIdentifier.</span></span>|  
   
-## <a name="storelocation-attribute"></a><span data-ttu-id="589dc-140">storeLocation 属性</span><span class="sxs-lookup"><span data-stu-id="589dc-140">storeLocation Attribute</span></span>  
+## <a name="storelocation-attribute"></a><span data-ttu-id="c4819-140">storeLocation 属性</span><span class="sxs-lookup"><span data-stu-id="c4819-140">storeLocation Attribute</span></span>  
   
-|<span data-ttu-id="589dc-141">“值”</span><span class="sxs-lookup"><span data-stu-id="589dc-141">Value</span></span>|<span data-ttu-id="589dc-142">描述</span><span class="sxs-lookup"><span data-stu-id="589dc-142">Description</span></span>|  
+|<span data-ttu-id="c4819-141">值</span><span class="sxs-lookup"><span data-stu-id="c4819-141">Value</span></span>|<span data-ttu-id="c4819-142">描述</span><span class="sxs-lookup"><span data-stu-id="c4819-142">Description</span></span>|  
 |-----------|-----------------|  
-|<span data-ttu-id="589dc-143">枚举</span><span class="sxs-lookup"><span data-stu-id="589dc-143">Enumeration</span></span>|<span data-ttu-id="589dc-144">CurrentUser 或 LocalMachine。</span><span class="sxs-lookup"><span data-stu-id="589dc-144">CurrentUser or LocalMachine.</span></span>|  
+|<span data-ttu-id="c4819-143">枚举</span><span class="sxs-lookup"><span data-stu-id="c4819-143">Enumeration</span></span>|<span data-ttu-id="c4819-144">CurrentUser 或 LocalMachine。</span><span class="sxs-lookup"><span data-stu-id="c4819-144">CurrentUser or LocalMachine.</span></span>|  
   
-## <a name="storename-attribute"></a><span data-ttu-id="589dc-145">storeName 属性</span><span class="sxs-lookup"><span data-stu-id="589dc-145">storeName Attribute</span></span>  
+## <a name="storename-attribute"></a><span data-ttu-id="c4819-145">storeName 属性</span><span class="sxs-lookup"><span data-stu-id="c4819-145">storeName Attribute</span></span>  
   
-|<span data-ttu-id="589dc-146">“值”</span><span class="sxs-lookup"><span data-stu-id="589dc-146">Value</span></span>|<span data-ttu-id="589dc-147">描述</span><span class="sxs-lookup"><span data-stu-id="589dc-147">Description</span></span>|  
+|<span data-ttu-id="c4819-146">值</span><span class="sxs-lookup"><span data-stu-id="c4819-146">Value</span></span>|<span data-ttu-id="c4819-147">描述</span><span class="sxs-lookup"><span data-stu-id="c4819-147">Description</span></span>|  
 |-----------|-----------------|  
-|<span data-ttu-id="589dc-148">枚举</span><span class="sxs-lookup"><span data-stu-id="589dc-148">Enumeration</span></span>|<span data-ttu-id="589dc-149">值包括：AddressBook、 AuthRoot、 CertificateAuthority、 Disallowed、 My、 根、 TrustedPeople 和 TrustedPublisher。</span><span class="sxs-lookup"><span data-stu-id="589dc-149">Values include: AddressBook, AuthRoot, CertificateAuthority, Disallowed, My, Root, TrustedPeople, and TrustedPublisher.</span></span>|  
+|<span data-ttu-id="c4819-148">枚举</span><span class="sxs-lookup"><span data-stu-id="c4819-148">Enumeration</span></span>|<span data-ttu-id="c4819-149">值包括：通讯簿、AuthRoot、CertificateAuthority、不允许、My、Root、TrustedPeople 和 TrustedPublisher。</span><span class="sxs-lookup"><span data-stu-id="c4819-149">Values include: AddressBook, AuthRoot, CertificateAuthority, Disallowed, My, Root, TrustedPeople, and TrustedPublisher.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="589dc-150">子元素</span><span class="sxs-lookup"><span data-stu-id="589dc-150">Child Elements</span></span>  
- <span data-ttu-id="589dc-151">无。</span><span class="sxs-lookup"><span data-stu-id="589dc-151">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="c4819-150">子元素</span><span class="sxs-lookup"><span data-stu-id="c4819-150">Child Elements</span></span>  
+ <span data-ttu-id="c4819-151">无。</span><span class="sxs-lookup"><span data-stu-id="c4819-151">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="589dc-152">父元素</span><span class="sxs-lookup"><span data-stu-id="589dc-152">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="c4819-152">父元素</span><span class="sxs-lookup"><span data-stu-id="c4819-152">Parent Elements</span></span>  
   
-|<span data-ttu-id="589dc-153">元素</span><span class="sxs-lookup"><span data-stu-id="589dc-153">Element</span></span>|<span data-ttu-id="589dc-154">描述</span><span class="sxs-lookup"><span data-stu-id="589dc-154">Description</span></span>|  
+|<span data-ttu-id="c4819-153">元素</span><span class="sxs-lookup"><span data-stu-id="c4819-153">Element</span></span>|<span data-ttu-id="c4819-154">描述</span><span class="sxs-lookup"><span data-stu-id="c4819-154">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="589dc-155">\<serviceCertificate></span><span class="sxs-lookup"><span data-stu-id="589dc-155">\<serviceCertificate></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md)|<span data-ttu-id="589dc-156">指定客户端对服务进行身份验证时使用的证书。</span><span class="sxs-lookup"><span data-stu-id="589dc-156">Specifies a certificate to use when authenticating a service to the client.</span></span>|  
+|[<span data-ttu-id="c4819-155">\<serviceCertificate></span><span class="sxs-lookup"><span data-stu-id="c4819-155">\<serviceCertificate></span></span>](servicecertificate-of-clientcredentials-element.md)|<span data-ttu-id="c4819-156">指定客户端对服务进行身份验证时使用的证书。</span><span class="sxs-lookup"><span data-stu-id="c4819-156">Specifies a certificate to use when authenticating a service to the client.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="589dc-157">备注</span><span class="sxs-lookup"><span data-stu-id="589dc-157">Remarks</span></span>  
- <span data-ttu-id="589dc-158">对于使用基于证书的消息安全的绑定，此配置元素指定的证书用于加密发送给服务的消息，并期望服务用它来对客户端的应答进行签名。</span><span class="sxs-lookup"><span data-stu-id="589dc-158">For bindings that use certificate-based message security, certificate specified by this configuration element is used to encrypt messages to the service and is expected to be used by the service for signing replies to the client.</span></span> <span data-ttu-id="589dc-159">如果服务未指定任何证书，它只存储要使用的一个证书。</span><span class="sxs-lookup"><span data-stu-id="589dc-159">It stores a single certificate to be used when no certificate is specified by a service.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c4819-157">备注</span><span class="sxs-lookup"><span data-stu-id="c4819-157">Remarks</span></span>  
+ <span data-ttu-id="c4819-158">对于使用基于证书的消息安全的绑定，此配置元素指定的证书用于加密发送给服务的消息，并期望服务用它来对客户端的应答进行签名。</span><span class="sxs-lookup"><span data-stu-id="c4819-158">For bindings that use certificate-based message security, certificate specified by this configuration element is used to encrypt messages to the service and is expected to be used by the service for signing replies to the client.</span></span> <span data-ttu-id="c4819-159">如果服务未指定任何证书，它只存储要使用的一个证书。</span><span class="sxs-lookup"><span data-stu-id="c4819-159">It stores a single certificate to be used when no certificate is specified by a service.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="589dc-160">示例</span><span class="sxs-lookup"><span data-stu-id="589dc-160">Example</span></span>  
- <span data-ttu-id="589dc-161">下面的示例指定证书用于 URI 以开头的终结点 `http://www.contoso.com` 和要使用其他不执行证书协商的所有终结点的证书。</span><span class="sxs-lookup"><span data-stu-id="589dc-161">The following example specifies a certificate to use for endpoints whose URI begins with `http://www.contoso.com` and a certificate to use for all other endpoints that do not perform certificate negotiation.</span></span>  
+## <a name="example"></a><span data-ttu-id="c4819-160">示例</span><span class="sxs-lookup"><span data-stu-id="c4819-160">Example</span></span>  
+ <span data-ttu-id="c4819-161">下面的示例指定证书用于 URI 以开头的终结点 `http://www.contoso.com` 和要使用其他不执行证书协商的所有终结点的证书。</span><span class="sxs-lookup"><span data-stu-id="c4819-161">The following example specifies a certificate to use for endpoints whose URI begins with `http://www.contoso.com` and a certificate to use for all other endpoints that do not perform certificate negotiation.</span></span>  
   
 ```xml  
 <serviceCertificate>
@@ -98,12 +98,12 @@ ms.locfileid: "61644448"
 </serviceCertificate>
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="589dc-162">请参阅</span><span class="sxs-lookup"><span data-stu-id="589dc-162">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c4819-162">请参阅</span><span class="sxs-lookup"><span data-stu-id="c4819-162">See also</span></span>
 
 - <xref:System.ServiceModel.Configuration.X509DefaultServiceCertificateElement>
 - <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>
 - <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.DefaultCertificate%2A>
-- [<span data-ttu-id="589dc-163">使用证书</span><span class="sxs-lookup"><span data-stu-id="589dc-163">Working with Certificates</span></span>](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [<span data-ttu-id="589dc-164">\<authentication></span><span class="sxs-lookup"><span data-stu-id="589dc-164">\<authentication></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md)
-- [<span data-ttu-id="589dc-165">保护客户端</span><span class="sxs-lookup"><span data-stu-id="589dc-165">Securing Clients</span></span>](../../../../../docs/framework/wcf/securing-clients.md)
-- [<span data-ttu-id="589dc-166">保护服务和客户端的安全</span><span class="sxs-lookup"><span data-stu-id="589dc-166">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [<span data-ttu-id="c4819-163">使用证书</span><span class="sxs-lookup"><span data-stu-id="c4819-163">Working with Certificates</span></span>](../../../wcf/feature-details/working-with-certificates.md)
+- [<span data-ttu-id="c4819-164">\<authentication></span><span class="sxs-lookup"><span data-stu-id="c4819-164">\<authentication></span></span>](authentication-of-clientcertificate-element.md)
+- [<span data-ttu-id="c4819-165">保护客户端</span><span class="sxs-lookup"><span data-stu-id="c4819-165">Securing Clients</span></span>](../../../wcf/securing-clients.md)
+- [<span data-ttu-id="c4819-166">保护服务和客户端的安全</span><span class="sxs-lookup"><span data-stu-id="c4819-166">Securing Services and Clients</span></span>](../../../wcf/feature-details/securing-services-and-clients.md)

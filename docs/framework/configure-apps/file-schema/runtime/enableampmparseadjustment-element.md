@@ -4,54 +4,54 @@ ms.date: 03/30/2017
 ms.assetid: fda998a5-f538-4f8b-a18c-ee7f35e16938
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4a62bd3507c14e42798c903ae51edb0187e666c8
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 46cf37ee800c05eb7fe12e8491ad3b2130c3a04d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663766"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920824"
 ---
-# <a name="enableampmparseadjustment-element"></a><span data-ttu-id="fb4bf-102">\<EnableAmPmParseAdjustment > 元素</span><span class="sxs-lookup"><span data-stu-id="fb4bf-102">\<EnableAmPmParseAdjustment> Element</span></span>
-<span data-ttu-id="fb4bf-103">确定日期和时间分析方法是否使用经过调整的规则集来分析包含 day、month、hour 和 AM/PM 指示符的日期字符串。</span><span class="sxs-lookup"><span data-stu-id="fb4bf-103">Determines whether date and time parsing methods use an adjusted set of rules to parse date strings that contain a day, month, hour, and AM/PM designator.</span></span>  
+# <a name="enableampmparseadjustment-element"></a><span data-ttu-id="0cd00-102">\<EnableAmPmParseAdjustment > 元素</span><span class="sxs-lookup"><span data-stu-id="0cd00-102">\<EnableAmPmParseAdjustment> Element</span></span>
+<span data-ttu-id="0cd00-103">确定日期和时间分析方法是否使用经过调整的规则集来分析包含 day、month、hour 和 AM/PM 指示符的日期字符串。</span><span class="sxs-lookup"><span data-stu-id="0cd00-103">Determines whether date and time parsing methods use an adjusted set of rules to parse date strings that contain a day, month, hour, and AM/PM designator.</span></span>  
   
- <span data-ttu-id="fb4bf-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="fb4bf-104">\<configuration></span></span>  
- <span data-ttu-id="fb4bf-105">\<运行时 ></span><span class="sxs-lookup"><span data-stu-id="fb4bf-105">\<runtime></span></span>  
-<span data-ttu-id="fb4bf-106">\<EnableAmPmParseAdjustment></span><span class="sxs-lookup"><span data-stu-id="fb4bf-106">\<EnableAmPmParseAdjustment></span></span>  
+ <span data-ttu-id="0cd00-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="0cd00-104">\<configuration></span></span>  
+ <span data-ttu-id="0cd00-105">\<运行时 ></span><span class="sxs-lookup"><span data-stu-id="0cd00-105">\<runtime></span></span>  
+<span data-ttu-id="0cd00-106">\<EnableAmPmParseAdjustment></span><span class="sxs-lookup"><span data-stu-id="0cd00-106">\<EnableAmPmParseAdjustment></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="fb4bf-107">语法</span><span class="sxs-lookup"><span data-stu-id="fb4bf-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0cd00-107">语法</span><span class="sxs-lookup"><span data-stu-id="0cd00-107">Syntax</span></span>  
   
 ```xml  
 <EnableAmPmParseAdjustment enabled="0"|"1" />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="fb4bf-108">特性和元素</span><span class="sxs-lookup"><span data-stu-id="fb4bf-108">Attributes and Elements</span></span>  
- <span data-ttu-id="fb4bf-109">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="fb4bf-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="0cd00-108">特性和元素</span><span class="sxs-lookup"><span data-stu-id="0cd00-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="0cd00-109">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="0cd00-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="fb4bf-110">特性</span><span class="sxs-lookup"><span data-stu-id="fb4bf-110">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="0cd00-110">特性</span><span class="sxs-lookup"><span data-stu-id="0cd00-110">Attributes</span></span>  
   
-|<span data-ttu-id="fb4bf-111">特性</span><span class="sxs-lookup"><span data-stu-id="fb4bf-111">Attribute</span></span>|<span data-ttu-id="fb4bf-112">描述</span><span class="sxs-lookup"><span data-stu-id="fb4bf-112">Description</span></span>|  
+|<span data-ttu-id="0cd00-111">特性</span><span class="sxs-lookup"><span data-stu-id="0cd00-111">Attribute</span></span>|<span data-ttu-id="0cd00-112">描述</span><span class="sxs-lookup"><span data-stu-id="0cd00-112">Description</span></span>|  
 |---------------|-----------------|  
-|`enabled`|<span data-ttu-id="fb4bf-113">必需的特性。</span><span class="sxs-lookup"><span data-stu-id="fb4bf-113">Required attribute.</span></span><br /><br /> <span data-ttu-id="fb4bf-114">指定日期和时间分析方法是否使用经过调整的规则集来分析只包含 day、month、hour 和 AM/PM 指示符的日期字符串。</span><span class="sxs-lookup"><span data-stu-id="fb4bf-114">Specifies whether date and time parsing methods use an adjusted set of rules to parse date strings that contain only a day, month, hour, and AM/PM designator.</span></span>|  
+|`enabled`|<span data-ttu-id="0cd00-113">必需的特性。</span><span class="sxs-lookup"><span data-stu-id="0cd00-113">Required attribute.</span></span><br /><br /> <span data-ttu-id="0cd00-114">指定日期和时间分析方法是否使用经过调整的规则集来分析只包含 day、month、hour 和 AM/PM 指示符的日期字符串。</span><span class="sxs-lookup"><span data-stu-id="0cd00-114">Specifies whether date and time parsing methods use an adjusted set of rules to parse date strings that contain only a day, month, hour, and AM/PM designator.</span></span>|  
   
-### <a name="enabled-attribute"></a><span data-ttu-id="fb4bf-115">enabled 特性</span><span class="sxs-lookup"><span data-stu-id="fb4bf-115">enabled Attribute</span></span>  
+### <a name="enabled-attribute"></a><span data-ttu-id="0cd00-115">enabled 特性</span><span class="sxs-lookup"><span data-stu-id="0cd00-115">enabled Attribute</span></span>  
   
-|<span data-ttu-id="fb4bf-116">值</span><span class="sxs-lookup"><span data-stu-id="fb4bf-116">Value</span></span>|<span data-ttu-id="fb4bf-117">Description</span><span class="sxs-lookup"><span data-stu-id="fb4bf-117">Description</span></span>|  
+|<span data-ttu-id="0cd00-116">值</span><span class="sxs-lookup"><span data-stu-id="0cd00-116">Value</span></span>|<span data-ttu-id="0cd00-117">Description</span><span class="sxs-lookup"><span data-stu-id="0cd00-117">Description</span></span>|  
 |-----------|-----------------|  
-|<span data-ttu-id="fb4bf-118">0</span><span class="sxs-lookup"><span data-stu-id="fb4bf-118">0</span></span>|<span data-ttu-id="fb4bf-119">日期和时间分析方法不使用调整的规则来分析日期字符串, 这些字符串只包含日、月、小时和 AM/PM 指示符。</span><span class="sxs-lookup"><span data-stu-id="fb4bf-119">Date and time parsing methods do not use adjusted rules for parsing date strings that contain only a day, month, hour, and AM/PM designator.</span></span>|  
-|<span data-ttu-id="fb4bf-120">1</span><span class="sxs-lookup"><span data-stu-id="fb4bf-120">1</span></span>|<span data-ttu-id="fb4bf-121">日期和时间分析方法使用经过调整的规则, 用于分析日期字符串, 这些字符串只包含日、月、小时和 AM/PM 指示符。</span><span class="sxs-lookup"><span data-stu-id="fb4bf-121">Date and time parsing methods use adjusted rules for parsing date strings that contain only a day, month, hour, and AM/PM designator.</span></span>|  
+|<span data-ttu-id="0cd00-118">0</span><span class="sxs-lookup"><span data-stu-id="0cd00-118">0</span></span>|<span data-ttu-id="0cd00-119">日期和时间分析方法不使用调整的规则来分析日期字符串, 这些字符串只包含日、月、小时和 AM/PM 指示符。</span><span class="sxs-lookup"><span data-stu-id="0cd00-119">Date and time parsing methods do not use adjusted rules for parsing date strings that contain only a day, month, hour, and AM/PM designator.</span></span>|  
+|<span data-ttu-id="0cd00-120">1</span><span class="sxs-lookup"><span data-stu-id="0cd00-120">1</span></span>|<span data-ttu-id="0cd00-121">日期和时间分析方法使用经过调整的规则, 用于分析日期字符串, 这些字符串只包含日、月、小时和 AM/PM 指示符。</span><span class="sxs-lookup"><span data-stu-id="0cd00-121">Date and time parsing methods use adjusted rules for parsing date strings that contain only a day, month, hour, and AM/PM designator.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="fb4bf-122">子元素</span><span class="sxs-lookup"><span data-stu-id="fb4bf-122">Child Elements</span></span>  
- <span data-ttu-id="fb4bf-123">无。</span><span class="sxs-lookup"><span data-stu-id="fb4bf-123">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="0cd00-122">子元素</span><span class="sxs-lookup"><span data-stu-id="0cd00-122">Child Elements</span></span>  
+ <span data-ttu-id="0cd00-123">无。</span><span class="sxs-lookup"><span data-stu-id="0cd00-123">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="fb4bf-124">父元素</span><span class="sxs-lookup"><span data-stu-id="fb4bf-124">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="0cd00-124">父元素</span><span class="sxs-lookup"><span data-stu-id="0cd00-124">Parent Elements</span></span>  
   
-|<span data-ttu-id="fb4bf-125">元素</span><span class="sxs-lookup"><span data-stu-id="fb4bf-125">Element</span></span>|<span data-ttu-id="fb4bf-126">描述</span><span class="sxs-lookup"><span data-stu-id="fb4bf-126">Description</span></span>|  
+|<span data-ttu-id="0cd00-125">元素</span><span class="sxs-lookup"><span data-stu-id="0cd00-125">Element</span></span>|<span data-ttu-id="0cd00-126">描述</span><span class="sxs-lookup"><span data-stu-id="0cd00-126">Description</span></span>|  
 |-------------|-----------------|  
-|`configuration`|<span data-ttu-id="fb4bf-127">公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。</span><span class="sxs-lookup"><span data-stu-id="fb4bf-127">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`runtime`|<span data-ttu-id="fb4bf-128">包含有关运行时初始化选项的信息。</span><span class="sxs-lookup"><span data-stu-id="fb4bf-128">Contains information about runtime initialization options.</span></span>|  
+|`configuration`|<span data-ttu-id="0cd00-127">公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。</span><span class="sxs-lookup"><span data-stu-id="0cd00-127">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`runtime`|<span data-ttu-id="0cd00-128">包含有关运行时初始化选项的信息。</span><span class="sxs-lookup"><span data-stu-id="0cd00-128">Contains information about runtime initialization options.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="fb4bf-129">备注</span><span class="sxs-lookup"><span data-stu-id="fb4bf-129">Remarks</span></span>  
- <span data-ttu-id="fb4bf-130">`<EnableAmPmParseAdjustment>`元素控制以下方法如何分析包含数字日和月后跟一个小时和 AM/PM 指示符的日期字符串 (例如 "4/10 6 AM"):</span><span class="sxs-lookup"><span data-stu-id="fb4bf-130">The `<EnableAmPmParseAdjustment>` element controls how the following methods parse a date string that contains a numeric day and month followed by an hour and an AM/PM designator (such as "4/10 6 AM"):</span></span>  
+## <a name="remarks"></a><span data-ttu-id="0cd00-129">备注</span><span class="sxs-lookup"><span data-stu-id="0cd00-129">Remarks</span></span>  
+ <span data-ttu-id="0cd00-130">`<EnableAmPmParseAdjustment>`元素控制以下方法如何分析包含数字日和月后跟一个小时和 AM/PM 指示符的日期字符串 (例如 "4/10 6 AM"):</span><span class="sxs-lookup"><span data-stu-id="0cd00-130">The `<EnableAmPmParseAdjustment>` element controls how the following methods parse a date string that contains a numeric day and month followed by an hour and an AM/PM designator (such as "4/10 6 AM"):</span></span>  
   
 - <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>  
   
@@ -63,25 +63,25 @@ ms.locfileid: "69663766"
   
 - <xref:System.Convert.ToDateTime%2A?displayProperty=nameWithType>  
   
- <span data-ttu-id="fb4bf-131">其他模式不受影响。</span><span class="sxs-lookup"><span data-stu-id="fb4bf-131">No other patterns are affected.</span></span>  
+ <span data-ttu-id="0cd00-131">其他模式不受影响。</span><span class="sxs-lookup"><span data-stu-id="0cd00-131">No other patterns are affected.</span></span>  
   
- <span data-ttu-id="fb4bf-132">`<EnableAmPmParseAdjustment>`元素对<xref:System.DateTime.TryParseExact%2A?displayProperty=nameWithType>、、和<xref:System.DateTimeOffset.ParseExact%2A?displayProperty=nameWithType>方法不起作用<xref:System.DateTimeOffset.TryParseExact%2A?displayProperty=nameWithType>。 <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="fb4bf-132">The `<EnableAmPmParseAdjustment>` element has no effect on the  <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType>,  <xref:System.DateTime.TryParseExact%2A?displayProperty=nameWithType>, <xref:System.DateTimeOffset.ParseExact%2A?displayProperty=nameWithType>, and <xref:System.DateTimeOffset.TryParseExact%2A?displayProperty=nameWithType> methods.</span></span>  
+ <span data-ttu-id="0cd00-132">`<EnableAmPmParseAdjustment>`元素对<xref:System.DateTime.TryParseExact%2A?displayProperty=nameWithType>、、和<xref:System.DateTimeOffset.ParseExact%2A?displayProperty=nameWithType>方法不起作用<xref:System.DateTimeOffset.TryParseExact%2A?displayProperty=nameWithType>。 <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="0cd00-132">The `<EnableAmPmParseAdjustment>` element has no effect on the  <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType>,  <xref:System.DateTime.TryParseExact%2A?displayProperty=nameWithType>, <xref:System.DateTimeOffset.ParseExact%2A?displayProperty=nameWithType>, and <xref:System.DateTimeOffset.TryParseExact%2A?displayProperty=nameWithType> methods.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="fb4bf-133">在.NET Core 和.NET Native，默认情况下启用的调整后的 AM/PM 分析规则。</span><span class="sxs-lookup"><span data-stu-id="fb4bf-133">In .NET Core and .NET Native, the adjusted AM/PM parsing rules are enabled by default.</span></span>  
+> <span data-ttu-id="0cd00-133">在.NET Core 和.NET Native，默认情况下启用的调整后的 AM/PM 分析规则。</span><span class="sxs-lookup"><span data-stu-id="0cd00-133">In .NET Core and .NET Native, the adjusted AM/PM parsing rules are enabled by default.</span></span>  
   
- <span data-ttu-id="fb4bf-134">如果未启用解析调整规则, 则会将字符串的第一个数字解释为12小时制的小时, 而除 AM/PM 指示符之外的字符串的其余部分将被忽略。</span><span class="sxs-lookup"><span data-stu-id="fb4bf-134">If the parsing adjustment rule is not enabled, the first digit of the string is interpreted as the hour of the 12-hour clock, and the remainder of the string except for the AM/PM designator is ignored.</span></span> <span data-ttu-id="fb4bf-135">解析方法返回的日期和时间由当前日期和从日期字符串提取的日期中的小时组成。</span><span class="sxs-lookup"><span data-stu-id="fb4bf-135">The date and time returned by the parsing method consists of the current date and the hour of the day extracted from the date string.</span></span>  
+ <span data-ttu-id="0cd00-134">如果未启用解析调整规则, 则会将字符串的第一个数字解释为12小时制的小时, 而除 AM/PM 指示符之外的字符串的其余部分将被忽略。</span><span class="sxs-lookup"><span data-stu-id="0cd00-134">If the parsing adjustment rule is not enabled, the first digit of the string is interpreted as the hour of the 12-hour clock, and the remainder of the string except for the AM/PM designator is ignored.</span></span> <span data-ttu-id="0cd00-135">解析方法返回的日期和时间由当前日期和从日期字符串提取的日期中的小时组成。</span><span class="sxs-lookup"><span data-stu-id="0cd00-135">The date and time returned by the parsing method consists of the current date and the hour of the day extracted from the date string.</span></span>  
   
- <span data-ttu-id="fb4bf-136">如果启用了解析调整规则, 则分析方法会将日期和月份解释为属于当前年份, 并将时间解释为12小时制的小时。</span><span class="sxs-lookup"><span data-stu-id="fb4bf-136">If the parsing adjustment rule is enabled, parsing method interpret the day and month as belonging to the current year, and interpret the time as the hour of the 12-hour clock.</span></span>  
+ <span data-ttu-id="0cd00-136">如果启用了解析调整规则, 则分析方法会将日期和月份解释为属于当前年份, 并将时间解释为12小时制的小时。</span><span class="sxs-lookup"><span data-stu-id="0cd00-136">If the parsing adjustment rule is enabled, parsing method interpret the day and month as belonging to the current year, and interpret the time as the hour of the 12-hour clock.</span></span>  
   
- <span data-ttu-id="fb4bf-137"><xref:System.DateTime>下表说明了<xref:System.DateTime.Parse%28System.String%29?displayProperty=nameWithType>当使用方法分析字符串 " `<EnableAmPmParseAdjustment>` 4/10 6 AM" (元素的`enabled`属性设置为 "0" 或 "1") 时, 值中的差异。</span><span class="sxs-lookup"><span data-stu-id="fb4bf-137">The following table illustrates the difference in the <xref:System.DateTime> value when the <xref:System.DateTime.Parse%28System.String%29?displayProperty=nameWithType> method is used to parse the string ""4/10 6 AM" with the `<EnableAmPmParseAdjustment>` element's `enabled` property  set to "0" or "1".</span></span> <span data-ttu-id="fb4bf-138">它假定今天的日期为2017年1月5日, 并使用指定的区域性的 "G" 格式字符串来显示日期。</span><span class="sxs-lookup"><span data-stu-id="fb4bf-138">It assumes that today's date is January 5, 2017, and displays the date as if it is formatted using the specified culture's "G" format string.</span></span>  
+ <span data-ttu-id="0cd00-137"><xref:System.DateTime>下表说明了<xref:System.DateTime.Parse%28System.String%29?displayProperty=nameWithType>当使用方法分析字符串 " `<EnableAmPmParseAdjustment>` 4/10 6 AM" (元素的`enabled`属性设置为 "0" 或 "1") 时, 值中的差异。</span><span class="sxs-lookup"><span data-stu-id="0cd00-137">The following table illustrates the difference in the <xref:System.DateTime> value when the <xref:System.DateTime.Parse%28System.String%29?displayProperty=nameWithType> method is used to parse the string ""4/10 6 AM" with the `<EnableAmPmParseAdjustment>` element's `enabled` property  set to "0" or "1".</span></span> <span data-ttu-id="0cd00-138">它假定今天的日期为2017年1月5日, 并使用指定的区域性的 "G" 格式字符串来显示日期。</span><span class="sxs-lookup"><span data-stu-id="0cd00-138">It assumes that today's date is January 5, 2017, and displays the date as if it is formatted using the specified culture's "G" format string.</span></span>  
   
-|<span data-ttu-id="fb4bf-139">区域性名称</span><span class="sxs-lookup"><span data-stu-id="fb4bf-139">Culture name</span></span>|<span data-ttu-id="fb4bf-140">enabled = "0"</span><span class="sxs-lookup"><span data-stu-id="fb4bf-140">enabled="0"</span></span>|<span data-ttu-id="fb4bf-141">enabled = "1"</span><span class="sxs-lookup"><span data-stu-id="fb4bf-141">enabled="1"</span></span>|  
+|<span data-ttu-id="0cd00-139">区域性名称</span><span class="sxs-lookup"><span data-stu-id="0cd00-139">Culture name</span></span>|<span data-ttu-id="0cd00-140">enabled = "0"</span><span class="sxs-lookup"><span data-stu-id="0cd00-140">enabled="0"</span></span>|<span data-ttu-id="0cd00-141">enabled = "1"</span><span class="sxs-lookup"><span data-stu-id="0cd00-141">enabled="1"</span></span>|  
 |------------------|------------------|------------------|  
-|<span data-ttu-id="fb4bf-142">en-US</span><span class="sxs-lookup"><span data-stu-id="fb4bf-142">en-US</span></span>|<span data-ttu-id="fb4bf-143">上午 1/5/2017 4:00:00</span><span class="sxs-lookup"><span data-stu-id="fb4bf-143">1/5/2017 4:00:00 AM</span></span>|<span data-ttu-id="fb4bf-144">上午 4/10/2017 6:00:00</span><span class="sxs-lookup"><span data-stu-id="fb4bf-144">4/10/2017 6:00:00 AM</span></span>|  
-|<span data-ttu-id="fb4bf-145">en-GB</span><span class="sxs-lookup"><span data-stu-id="fb4bf-145">en-GB</span></span>|<span data-ttu-id="fb4bf-146">5/1/2017 6:00:00</span><span class="sxs-lookup"><span data-stu-id="fb4bf-146">5/1/2017 6:00:00</span></span>|<span data-ttu-id="fb4bf-147">10/4/2017 6:00:00</span><span class="sxs-lookup"><span data-stu-id="fb4bf-147">10/4/2017 6:00:00</span></span>|  
+|<span data-ttu-id="0cd00-142">en-US</span><span class="sxs-lookup"><span data-stu-id="0cd00-142">en-US</span></span>|<span data-ttu-id="0cd00-143">上午 1/5/2017 4:00:00</span><span class="sxs-lookup"><span data-stu-id="0cd00-143">1/5/2017 4:00:00 AM</span></span>|<span data-ttu-id="0cd00-144">上午 4/10/2017 6:00:00</span><span class="sxs-lookup"><span data-stu-id="0cd00-144">4/10/2017 6:00:00 AM</span></span>|  
+|<span data-ttu-id="0cd00-145">en-GB</span><span class="sxs-lookup"><span data-stu-id="0cd00-145">en-GB</span></span>|<span data-ttu-id="0cd00-146">5/1/2017 6:00:00</span><span class="sxs-lookup"><span data-stu-id="0cd00-146">5/1/2017 6:00:00</span></span>|<span data-ttu-id="0cd00-147">10/4/2017 6:00:00</span><span class="sxs-lookup"><span data-stu-id="0cd00-147">10/4/2017 6:00:00</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="fb4bf-148">请参阅</span><span class="sxs-lookup"><span data-stu-id="fb4bf-148">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0cd00-148">请参阅</span><span class="sxs-lookup"><span data-stu-id="0cd00-148">See also</span></span>
 
-- [<span data-ttu-id="fb4bf-149">\<运行时 > 元素</span><span class="sxs-lookup"><span data-stu-id="fb4bf-149">\<runtime> Element</span></span>](runtime-element.md)
-- [<span data-ttu-id="fb4bf-150">\<configuration> 元素</span><span class="sxs-lookup"><span data-stu-id="fb4bf-150">\<configuration> Element</span></span>](../configuration-element.md)
+- [<span data-ttu-id="0cd00-149">\<运行时 > 元素</span><span class="sxs-lookup"><span data-stu-id="0cd00-149">\<runtime> Element</span></span>](runtime-element.md)
+- [<span data-ttu-id="0cd00-150">\<configuration> 元素</span><span class="sxs-lookup"><span data-stu-id="0cd00-150">\<configuration> Element</span></span>](../configuration-element.md)

@@ -17,23 +17,23 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 20c7d6a1fd9c1f75f43e42ece59b7fbabd150564
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a886106e5da49e7124dac5c8ea7416859aa441da
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67765496"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69929847"
 ---
-# <a name="iclrruntimeinfogetversionstring-method"></a><span data-ttu-id="f02cb-102">ICLRRuntimeInfo::GetVersionString 方法</span><span class="sxs-lookup"><span data-stu-id="f02cb-102">ICLRRuntimeInfo::GetVersionString Method</span></span>
-<span data-ttu-id="f02cb-103">获取与关联的公共语言运行时 (CLR) 版本信息给定[ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)接口。</span><span class="sxs-lookup"><span data-stu-id="f02cb-103">Gets common language runtime (CLR) version information associated with a given [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) interface.</span></span>  
+# <a name="iclrruntimeinfogetversionstring-method"></a><span data-ttu-id="3e828-102">ICLRRuntimeInfo::GetVersionString 方法</span><span class="sxs-lookup"><span data-stu-id="3e828-102">ICLRRuntimeInfo::GetVersionString Method</span></span>
+<span data-ttu-id="3e828-103">获取与给定的[ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)接口相关联的公共语言运行时 (CLR) 版本信息。</span><span class="sxs-lookup"><span data-stu-id="3e828-103">Gets common language runtime (CLR) version information associated with a given [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) interface.</span></span>  
   
- <span data-ttu-id="f02cb-104">此方法取代了以下函数：</span><span class="sxs-lookup"><span data-stu-id="f02cb-104">This method supersedes the following functions:</span></span>  
+ <span data-ttu-id="3e828-104">此方法取代了以下函数:</span><span class="sxs-lookup"><span data-stu-id="3e828-104">This method supersedes the following functions:</span></span>  
   
-- [<span data-ttu-id="f02cb-105">GetRequestedRuntimeInfo</span><span class="sxs-lookup"><span data-stu-id="f02cb-105">GetRequestedRuntimeInfo</span></span>](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md)  
+- [<span data-ttu-id="3e828-105">GetRequestedRuntimeInfo</span><span class="sxs-lookup"><span data-stu-id="3e828-105">GetRequestedRuntimeInfo</span></span>](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md)  
   
-- [<span data-ttu-id="f02cb-106">GetRequestedRuntimeVersion</span><span class="sxs-lookup"><span data-stu-id="f02cb-106">GetRequestedRuntimeVersion</span></span>](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversion-function.md)  
+- [<span data-ttu-id="3e828-106">GetRequestedRuntimeVersion</span><span class="sxs-lookup"><span data-stu-id="3e828-106">GetRequestedRuntimeVersion</span></span>](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversion-function.md)  
   
-## <a name="syntax"></a><span data-ttu-id="f02cb-107">语法</span><span class="sxs-lookup"><span data-stu-id="f02cb-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3e828-107">语法</span><span class="sxs-lookup"><span data-stu-id="3e828-107">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetVersionString(  
@@ -41,38 +41,38 @@ HRESULT GetVersionString(
     [in, out]  DWORD *pcchBuffer);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="f02cb-108">参数</span><span class="sxs-lookup"><span data-stu-id="f02cb-108">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="3e828-108">参数</span><span class="sxs-lookup"><span data-stu-id="3e828-108">Parameters</span></span>  
  `pwzBuffer`  
- <span data-ttu-id="f02cb-109">[out]格式的.NET Framework 编译版本"v*A*。*B*[。*X*]"。</span><span class="sxs-lookup"><span data-stu-id="f02cb-109">[out] The .NET Framework compilation version in the format "v*A*.*B*[.*X*]".</span></span> <span data-ttu-id="f02cb-110">*一个*， *B*，和*X*是对应于主版本、 次版本和生成号的十进制数字。</span><span class="sxs-lookup"><span data-stu-id="f02cb-110">*A*, *B*, and *X* are decimal numbers that correspond to the major version, the minor version, and the build number.</span></span> <span data-ttu-id="f02cb-111">*X*是可选的。</span><span class="sxs-lookup"><span data-stu-id="f02cb-111">*X* is optional.</span></span> <span data-ttu-id="f02cb-112">如果*X*不是存在，则没有尾随句点。</span><span class="sxs-lookup"><span data-stu-id="f02cb-112">If *X* is not present, there is no trailing period.</span></span>  
+ <span data-ttu-id="3e828-109">弄"V*A*" 格式的 .NET Framework 编译版本。*B*[.*X*] "。</span><span class="sxs-lookup"><span data-stu-id="3e828-109">[out] The .NET Framework compilation version in the format "v*A*.*B*[.*X*]".</span></span> <span data-ttu-id="3e828-110">*A*、 *B*和*X*是与主版本、次版本和生成号对应的十进制数字。</span><span class="sxs-lookup"><span data-stu-id="3e828-110">*A*, *B*, and *X* are decimal numbers that correspond to the major version, the minor version, and the build number.</span></span> <span data-ttu-id="3e828-111">*X*是可选的。</span><span class="sxs-lookup"><span data-stu-id="3e828-111">*X* is optional.</span></span> <span data-ttu-id="3e828-112">如果*X*不存在, 则没有尾随句点。</span><span class="sxs-lookup"><span data-stu-id="3e828-112">If *X* is not present, there is no trailing period.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="f02cb-113">此参数必须与.NET Framework 版本的目录名称匹配，C:\Windows\Microsoft.NET\Framework 下显示。</span><span class="sxs-lookup"><span data-stu-id="f02cb-113">This parameter must match the directory name for the .NET Framework version, as it appears under C:\Windows\Microsoft.NET\Framework.</span></span>  
+> <span data-ttu-id="3e828-113">此参数必须匹配 .NET Framework 版本的目录名称, 因为它显示在 C:\Windows\Microsoft.NET\Framework. 下。</span><span class="sxs-lookup"><span data-stu-id="3e828-113">This parameter must match the directory name for the .NET Framework version, as it appears under C:\Windows\Microsoft.NET\Framework.</span></span>  
   
- <span data-ttu-id="f02cb-114">示例值为"v1.0.3705"、"v1.1.4322"、"v2.0.50727"和"v4.0。*x*"，其中*x*取决于安装的内部版本号。</span><span class="sxs-lookup"><span data-stu-id="f02cb-114">Example values are "v1.0.3705", "v1.1.4322", "v2.0.50727", and "v4.0.*x*", where *x* depends on the build number installed.</span></span> <span data-ttu-id="f02cb-115">请注意，"v"前缀是必需的。</span><span class="sxs-lookup"><span data-stu-id="f02cb-115">Note that the "v" prefix is mandatory.</span></span>  
+ <span data-ttu-id="3e828-114">示例值为 "v1.0.3705"、"v 1.1.4322"、"v 2.0.50727" 和 "v4.0"。*x*", 其中*x*依赖于安装的生成号。</span><span class="sxs-lookup"><span data-stu-id="3e828-114">Example values are "v1.0.3705", "v1.1.4322", "v2.0.50727", and "v4.0.*x*", where *x* depends on the build number installed.</span></span> <span data-ttu-id="3e828-115">请注意, "v" 前缀是必需的。</span><span class="sxs-lookup"><span data-stu-id="3e828-115">Note that the "v" prefix is mandatory.</span></span>  
   
  `pchBuffer`  
- <span data-ttu-id="f02cb-116">[in、 out]指定的大小`pwzBuffer`以避免缓冲区溢出。</span><span class="sxs-lookup"><span data-stu-id="f02cb-116">[in, out] Specifies the size of `pwzBuffer` to avoid buffer overruns.</span></span> <span data-ttu-id="f02cb-117">如果`pwzBuffer`是`null`，`pchBuffer`返回的所需的大小`pwzBuffer`以允许预分配。</span><span class="sxs-lookup"><span data-stu-id="f02cb-117">If `pwzBuffer` is `null`, `pchBuffer` returns the required size of `pwzBuffer` to allow preallocation.</span></span>  
+ <span data-ttu-id="3e828-116">[in, out]指定的大小`pwzBuffer`以避免缓冲区溢出。</span><span class="sxs-lookup"><span data-stu-id="3e828-116">[in, out] Specifies the size of `pwzBuffer` to avoid buffer overruns.</span></span> <span data-ttu-id="3e828-117">如果`pwzBuffer`为`null` `pwzBuffer` ,则返回`pchBuffer`所需的大小以允许预先分配。</span><span class="sxs-lookup"><span data-stu-id="3e828-117">If `pwzBuffer` is `null`, `pchBuffer` returns the required size of `pwzBuffer` to allow preallocation.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="f02cb-118">返回值</span><span class="sxs-lookup"><span data-stu-id="f02cb-118">Return Value</span></span>  
- <span data-ttu-id="f02cb-119">此方法返回以下特定 HRESULT 以及表示方法失败的 HRESULT 错误。</span><span class="sxs-lookup"><span data-stu-id="f02cb-119">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="3e828-118">返回值</span><span class="sxs-lookup"><span data-stu-id="3e828-118">Return Value</span></span>  
+ <span data-ttu-id="3e828-119">此方法返回以下特定 HRESULT 以及表示方法失败的 HRESULT 错误。</span><span class="sxs-lookup"><span data-stu-id="3e828-119">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
   
-|<span data-ttu-id="f02cb-120">HRESULT</span><span class="sxs-lookup"><span data-stu-id="f02cb-120">HRESULT</span></span>|<span data-ttu-id="f02cb-121">描述</span><span class="sxs-lookup"><span data-stu-id="f02cb-121">Description</span></span>|  
+|<span data-ttu-id="3e828-120">HRESULT</span><span class="sxs-lookup"><span data-stu-id="3e828-120">HRESULT</span></span>|<span data-ttu-id="3e828-121">描述</span><span class="sxs-lookup"><span data-stu-id="3e828-121">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="f02cb-122">S_OK</span><span class="sxs-lookup"><span data-stu-id="f02cb-122">S_OK</span></span>|<span data-ttu-id="f02cb-123">该方法已成功完成。</span><span class="sxs-lookup"><span data-stu-id="f02cb-123">The method completed successfully.</span></span>|  
-|<span data-ttu-id="f02cb-124">E_POINTER</span><span class="sxs-lookup"><span data-stu-id="f02cb-124">E_POINTER</span></span>|<span data-ttu-id="f02cb-125">`pwzBuffer` 或 `pchBuffer` 为 null。</span><span class="sxs-lookup"><span data-stu-id="f02cb-125">`pwzBuffer` or `pchBuffer` is null.</span></span>|  
+|<span data-ttu-id="3e828-122">S_OK</span><span class="sxs-lookup"><span data-stu-id="3e828-122">S_OK</span></span>|<span data-ttu-id="3e828-123">该方法已成功完成。</span><span class="sxs-lookup"><span data-stu-id="3e828-123">The method completed successfully.</span></span>|  
+|<span data-ttu-id="3e828-124">E_POINTER</span><span class="sxs-lookup"><span data-stu-id="3e828-124">E_POINTER</span></span>|<span data-ttu-id="3e828-125">`pwzBuffer` 或 `pchBuffer` 为 null。</span><span class="sxs-lookup"><span data-stu-id="3e828-125">`pwzBuffer` or `pchBuffer` is null.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="f02cb-126">要求</span><span class="sxs-lookup"><span data-stu-id="f02cb-126">Requirements</span></span>  
- <span data-ttu-id="f02cb-127">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="f02cb-127">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3e828-126">要求</span><span class="sxs-lookup"><span data-stu-id="3e828-126">Requirements</span></span>  
+ <span data-ttu-id="3e828-127">**适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="3e828-127">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f02cb-128">**标头：** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="f02cb-128">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="3e828-128">**标头：** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="3e828-128">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="f02cb-129">**库：** 包含为 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="f02cb-129">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="3e828-129">**类库**作为资源包括在 Mscoree.dll 中</span><span class="sxs-lookup"><span data-stu-id="3e828-129">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="f02cb-130">**.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f02cb-130">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="3e828-130">**.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3e828-130">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f02cb-131">请参阅</span><span class="sxs-lookup"><span data-stu-id="f02cb-131">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3e828-131">请参阅</span><span class="sxs-lookup"><span data-stu-id="3e828-131">See also</span></span>
 
-- [<span data-ttu-id="f02cb-132">ICLRRuntimeInfo 接口</span><span class="sxs-lookup"><span data-stu-id="f02cb-132">ICLRRuntimeInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
-- [<span data-ttu-id="f02cb-133">承载接口</span><span class="sxs-lookup"><span data-stu-id="f02cb-133">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [<span data-ttu-id="f02cb-134">.NET Framework 4 和 4.5 中添加的 CLR 承载接口</span><span class="sxs-lookup"><span data-stu-id="f02cb-134">CLR Hosting Interfaces Added in the .NET Framework 4 and 4.5</span></span>](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)
-- [<span data-ttu-id="f02cb-135">承载</span><span class="sxs-lookup"><span data-stu-id="f02cb-135">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [<span data-ttu-id="3e828-132">ICLRRuntimeInfo 接口</span><span class="sxs-lookup"><span data-stu-id="3e828-132">ICLRRuntimeInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
+- [<span data-ttu-id="3e828-133">承载接口</span><span class="sxs-lookup"><span data-stu-id="3e828-133">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [<span data-ttu-id="3e828-134">.NET Framework 4 和 4.5 中添加的 CLR 承载接口</span><span class="sxs-lookup"><span data-stu-id="3e828-134">CLR Hosting Interfaces Added in the .NET Framework 4 and 4.5</span></span>](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)
+- [<span data-ttu-id="3e828-135">承载</span><span class="sxs-lookup"><span data-stu-id="3e828-135">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)

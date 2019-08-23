@@ -8,21 +8,21 @@ helpviewer_keywords:
 - UI Automation, custom user interface (UI) elements
 - providers, UI Automation
 ms.assetid: 5f82f731-f1b5-4c8b-b47c-d11279a02574
-ms.openlocfilehash: fc182a5bd16e892a693a3a6d4013473cba483b27
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c8829afda1b2b8c2b82ed9f7d569d1c2357a7b0e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032306"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69914371"
 ---
-# <a name="ui-automation-providers-for-managed-code"></a><span data-ttu-id="37ef2-102">托管代码的 UI 自动化提供程序</span><span class="sxs-lookup"><span data-stu-id="37ef2-102">UI Automation Providers for Managed Code</span></span>
+# <a name="ui-automation-providers-for-managed-code"></a><span data-ttu-id="12b1c-102">托管代码的 UI 自动化提供程序</span><span class="sxs-lookup"><span data-stu-id="12b1c-102">UI Automation Providers for Managed Code</span></span>
 > [!NOTE]
->  <span data-ttu-id="37ef2-103">本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。</span><span class="sxs-lookup"><span data-stu-id="37ef2-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="37ef2-104">有关最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，请参阅[Windows 自动化 API:UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。</span><span class="sxs-lookup"><span data-stu-id="37ef2-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
+> <span data-ttu-id="12b1c-103">本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。</span><span class="sxs-lookup"><span data-stu-id="12b1c-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="12b1c-104">有关的最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], 请[参阅 Windows 自动化 API:UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。</span><span class="sxs-lookup"><span data-stu-id="12b1c-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
   
- <span data-ttu-id="37ef2-105">本部分包含概述和帮助主题，介绍如何编写[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]的自定义提供程序[!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)]元素。</span><span class="sxs-lookup"><span data-stu-id="37ef2-105">This section contains overviews and how-to topics that describe how to write [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] providers for custom [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] elements.</span></span>  
+ <span data-ttu-id="12b1c-105">本部分包含概述和帮助主题, 这些主题介绍如何编写[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]自定义[!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)]元素的提供程序。</span><span class="sxs-lookup"><span data-stu-id="12b1c-105">This section contains overviews and how-to topics that describe how to write [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] providers for custom [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] elements.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="37ef2-106">本节内容</span><span class="sxs-lookup"><span data-stu-id="37ef2-106">In This Section</span></span>  
- [<span data-ttu-id="37ef2-107">服务器端 UI 自动化提供程序实现</span><span class="sxs-lookup"><span data-stu-id="37ef2-107">Server-Side UI Automation Provider Implementation</span></span>](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)  
- [<span data-ttu-id="37ef2-108">UI 自动化提供程序概述</span><span class="sxs-lookup"><span data-stu-id="37ef2-108">UI Automation Providers Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)  
- [<span data-ttu-id="37ef2-109">客户端 UI 自动化提供程序的实现</span><span class="sxs-lookup"><span data-stu-id="37ef2-109">Client-Side UI Automation Provider Implementation</span></span>](../../../docs/framework/ui-automation/client-side-ui-automation-provider-implementation.md)  
- [<span data-ttu-id="37ef2-110">帮助主题</span><span class="sxs-lookup"><span data-stu-id="37ef2-110">How-to Topics</span></span>](../../../docs/framework/ui-automation/ui-automation-providers-for-managed-code-how-to-topics.md)
+## <a name="in-this-section"></a><span data-ttu-id="12b1c-106">本节内容</span><span class="sxs-lookup"><span data-stu-id="12b1c-106">In This Section</span></span>  
+ [<span data-ttu-id="12b1c-107">服务器端 UI 自动化提供程序实现</span><span class="sxs-lookup"><span data-stu-id="12b1c-107">Server-Side UI Automation Provider Implementation</span></span>](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)  
+ [<span data-ttu-id="12b1c-108">UI 自动化提供程序概述</span><span class="sxs-lookup"><span data-stu-id="12b1c-108">UI Automation Providers Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)  
+ [<span data-ttu-id="12b1c-109">客户端 UI 自动化提供程序的实现</span><span class="sxs-lookup"><span data-stu-id="12b1c-109">Client-Side UI Automation Provider Implementation</span></span>](../../../docs/framework/ui-automation/client-side-ui-automation-provider-implementation.md)  
+ [<span data-ttu-id="12b1c-110">帮助主题</span><span class="sxs-lookup"><span data-stu-id="12b1c-110">How-to Topics</span></span>](../../../docs/framework/ui-automation/ui-automation-providers-for-managed-code-how-to-topics.md)

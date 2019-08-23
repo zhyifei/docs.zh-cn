@@ -9,48 +9,48 @@ helpviewer_keywords:
 - Windows Forms controls, adding to form
 - controls [Windows Forms], adding
 ms.assetid: 2af86001-9d62-4154-87fb-66db2c3cd9fd
-ms.openlocfilehash: 5c57d86b2f08733dc4a729bf6091eab23c6035f2
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
-ms.translationtype: MT
+ms.openlocfilehash: 7ee603fa5350ef81c6d32d2f22119bbe526295df
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039713"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912617"
 ---
-# <a name="how-to-add-controls-to-windows-forms"></a><span data-ttu-id="6c60d-102">如何：向 Windows 窗体添加控件</span><span class="sxs-lookup"><span data-stu-id="6c60d-102">How to: Add Controls to Windows Forms</span></span>
-<span data-ttu-id="6c60d-103">大多数窗体都是通过将控件添加到窗体的图面来定义用户界面 (UI) 而设计的。</span><span class="sxs-lookup"><span data-stu-id="6c60d-103">Most forms are designed by adding controls to the surface of the form to define a user interface (UI).</span></span> <span data-ttu-id="6c60d-104">*控件*是窗体上用于显示信息或接受用户输入的组件。</span><span class="sxs-lookup"><span data-stu-id="6c60d-104">A *control* is a component on a form used to display information or accept user input.</span></span> <span data-ttu-id="6c60d-105">有关控件的详细信息, 请参阅[Windows 窗体控件](index.md)。</span><span class="sxs-lookup"><span data-stu-id="6c60d-105">For more information about controls, see [Windows Forms Controls](index.md).</span></span>
+# <a name="how-to-add-controls-to-windows-forms"></a><span data-ttu-id="7722a-102">如何：向 Windows 窗体添加控件</span><span class="sxs-lookup"><span data-stu-id="7722a-102">How to: Add Controls to Windows Forms</span></span>
+<span data-ttu-id="7722a-103">大多数窗体都是通过将控件添加到窗体的图面来定义用户界面 (UI) 而设计的。</span><span class="sxs-lookup"><span data-stu-id="7722a-103">Most forms are designed by adding controls to the surface of the form to define a user interface (UI).</span></span> <span data-ttu-id="7722a-104">*控件*是窗体上用于显示信息或接受用户输入的组件。</span><span class="sxs-lookup"><span data-stu-id="7722a-104">A *control* is a component on a form used to display information or accept user input.</span></span> <span data-ttu-id="7722a-105">有关控件的详细信息, 请参阅[Windows 窗体控件](index.md)。</span><span class="sxs-lookup"><span data-stu-id="7722a-105">For more information about controls, see [Windows Forms Controls](index.md).</span></span>
 
-## <a name="to-draw-a-control-on-a-form"></a><span data-ttu-id="6c60d-106">在窗体上绘制控件</span><span class="sxs-lookup"><span data-stu-id="6c60d-106">To draw a control on a form</span></span>
+## <a name="to-draw-a-control-on-a-form"></a><span data-ttu-id="7722a-106">在窗体上绘制控件</span><span class="sxs-lookup"><span data-stu-id="7722a-106">To draw a control on a form</span></span>
 
-1. <span data-ttu-id="6c60d-107">打开窗体。</span><span class="sxs-lookup"><span data-stu-id="6c60d-107">Open the form.</span></span> <span data-ttu-id="6c60d-108">有关详细信息，请参阅[如何：在设计器](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100))中显示 Windows 窗体。</span><span class="sxs-lookup"><span data-stu-id="6c60d-108">For more information, see [How to: Display Windows Forms in the Designer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100)).</span></span>
+1. <span data-ttu-id="7722a-107">打开窗体。</span><span class="sxs-lookup"><span data-stu-id="7722a-107">Open the form.</span></span> <span data-ttu-id="7722a-108">有关详细信息，请参阅[如何：在设计器](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100))中显示 Windows 窗体。</span><span class="sxs-lookup"><span data-stu-id="7722a-108">For more information, see [How to: Display Windows Forms in the Designer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100)).</span></span>
 
-2. <span data-ttu-id="6c60d-109">在 "**工具箱**" 中, 单击要添加到窗体中的控件。</span><span class="sxs-lookup"><span data-stu-id="6c60d-109">In the **Toolbox**, click the control you want to add to your form.</span></span>
+2. <span data-ttu-id="7722a-109">在 "**工具箱**" 中, 单击要添加到窗体中的控件。</span><span class="sxs-lookup"><span data-stu-id="7722a-109">In the **Toolbox**, click the control you want to add to your form.</span></span>
 
-3. <span data-ttu-id="6c60d-110">在窗体上, 单击要放置控件的左上角的位置, 然后拖动到控件右下角所处的位置。</span><span class="sxs-lookup"><span data-stu-id="6c60d-110">On the form, click where you want the upper-left corner of the control to be located, and drag to where you want the lower-right corner of the control to be located.</span></span>
+3. <span data-ttu-id="7722a-110">在窗体上, 单击要放置控件的左上角的位置, 然后拖动到控件右下角所处的位置。</span><span class="sxs-lookup"><span data-stu-id="7722a-110">On the form, click where you want the upper-left corner of the control to be located, and drag to where you want the lower-right corner of the control to be located.</span></span>
 
-     <span data-ttu-id="6c60d-111">控件将添加到具有指定位置和大小的窗体中。</span><span class="sxs-lookup"><span data-stu-id="6c60d-111">The control is added to the form with the specified location and size.</span></span>
-
-    > [!NOTE]
-    >  <span data-ttu-id="6c60d-112">每个控件都定义了默认大小。</span><span class="sxs-lookup"><span data-stu-id="6c60d-112">Each control has a default size defined.</span></span> <span data-ttu-id="6c60d-113">您可以通过将控件从 "**工具箱**" 拖到窗体上, 将控件添加到控件的默认大小。</span><span class="sxs-lookup"><span data-stu-id="6c60d-113">You can add a control to your form in the control's default size by dragging it from the **Toolbox** to the form.</span></span>
-
-## <a name="to-drag-a-control-to-a-form"></a><span data-ttu-id="6c60d-114">将控件拖动到窗体</span><span class="sxs-lookup"><span data-stu-id="6c60d-114">To drag a control to a form</span></span>
-
-1. <span data-ttu-id="6c60d-115">打开窗体。</span><span class="sxs-lookup"><span data-stu-id="6c60d-115">Open the form.</span></span> <span data-ttu-id="6c60d-116">有关详细信息，请参阅[如何：在设计器](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100))中显示 Windows 窗体。</span><span class="sxs-lookup"><span data-stu-id="6c60d-116">For more information, see [How to: Display Windows Forms in the Designer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100)).</span></span>
-
-2. <span data-ttu-id="6c60d-117">在 "**工具箱**" 中, 单击所需的控件并将其拖到窗体上。</span><span class="sxs-lookup"><span data-stu-id="6c60d-117">In the **Toolbox**, click the control you want and drag it to your form.</span></span>
-
-     <span data-ttu-id="6c60d-118">控件将添加到窗体中指定位置的默认大小。</span><span class="sxs-lookup"><span data-stu-id="6c60d-118">The control is added to the form at the specified location in its default size.</span></span>
+     <span data-ttu-id="7722a-111">控件将添加到具有指定位置和大小的窗体中。</span><span class="sxs-lookup"><span data-stu-id="7722a-111">The control is added to the form with the specified location and size.</span></span>
 
     > [!NOTE]
-    >  <span data-ttu-id="6c60d-119">您可以双击**工具箱**中的控件, 将其以其默认大小添加到窗体的左上角。</span><span class="sxs-lookup"><span data-stu-id="6c60d-119">You can double-click a control in the **Toolbox** to add it to the upper-left corner of the form in its default size.</span></span>
+    > <span data-ttu-id="7722a-112">每个控件都定义了默认大小。</span><span class="sxs-lookup"><span data-stu-id="7722a-112">Each control has a default size defined.</span></span> <span data-ttu-id="7722a-113">您可以通过将控件从 "**工具箱**" 拖到窗体上, 将控件添加到控件的默认大小。</span><span class="sxs-lookup"><span data-stu-id="7722a-113">You can add a control to your form in the control's default size by dragging it from the **Toolbox** to the form.</span></span>
 
-     <span data-ttu-id="6c60d-120">您还可以在运行时将控件动态添加到窗体中。</span><span class="sxs-lookup"><span data-stu-id="6c60d-120">You can also add controls dynamically to a form at run time.</span></span> <span data-ttu-id="6c60d-121">在下面的代码示例中, <xref:System.Windows.Forms.TextBox> <xref:System.Windows.Forms.Button>当单击控件时, 控件将添加到窗体中。</span><span class="sxs-lookup"><span data-stu-id="6c60d-121">In the following code example, a <xref:System.Windows.Forms.TextBox> control will be added to the form when a <xref:System.Windows.Forms.Button> control is clicked.</span></span>
+## <a name="to-drag-a-control-to-a-form"></a><span data-ttu-id="7722a-114">将控件拖动到窗体</span><span class="sxs-lookup"><span data-stu-id="7722a-114">To drag a control to a form</span></span>
+
+1. <span data-ttu-id="7722a-115">打开窗体。</span><span class="sxs-lookup"><span data-stu-id="7722a-115">Open the form.</span></span> <span data-ttu-id="7722a-116">有关详细信息，请参阅[如何：在设计器](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100))中显示 Windows 窗体。</span><span class="sxs-lookup"><span data-stu-id="7722a-116">For more information, see [How to: Display Windows Forms in the Designer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100)).</span></span>
+
+2. <span data-ttu-id="7722a-117">在 "**工具箱**" 中, 单击所需的控件并将其拖到窗体上。</span><span class="sxs-lookup"><span data-stu-id="7722a-117">In the **Toolbox**, click the control you want and drag it to your form.</span></span>
+
+     <span data-ttu-id="7722a-118">控件将添加到窗体中指定位置的默认大小。</span><span class="sxs-lookup"><span data-stu-id="7722a-118">The control is added to the form at the specified location in its default size.</span></span>
 
     > [!NOTE]
-    >  <span data-ttu-id="6c60d-122">下面的过程要求存在具有**按钮**控件`Button1`的窗体。</span><span class="sxs-lookup"><span data-stu-id="6c60d-122">The following procedure requires the existence of a form with a **Button** control, `Button1`, already placed on it.</span></span>
+    > <span data-ttu-id="7722a-119">您可以双击**工具箱**中的控件, 将其以其默认大小添加到窗体的左上角。</span><span class="sxs-lookup"><span data-stu-id="7722a-119">You can double-click a control in the **Toolbox** to add it to the upper-left corner of the form in its default size.</span></span>
 
-## <a name="to-add-a-control-to-a-form-programmatically"></a><span data-ttu-id="6c60d-123">以编程方式将控件添加到窗体</span><span class="sxs-lookup"><span data-stu-id="6c60d-123">To add a control to a form programmatically</span></span>
+     <span data-ttu-id="7722a-120">您还可以在运行时将控件动态添加到窗体中。</span><span class="sxs-lookup"><span data-stu-id="7722a-120">You can also add controls dynamically to a form at run time.</span></span> <span data-ttu-id="7722a-121">在下面的代码示例中, <xref:System.Windows.Forms.TextBox> <xref:System.Windows.Forms.Button>当单击控件时, 控件将添加到窗体中。</span><span class="sxs-lookup"><span data-stu-id="7722a-121">In the following code example, a <xref:System.Windows.Forms.TextBox> control will be added to the form when a <xref:System.Windows.Forms.Button> control is clicked.</span></span>
 
-1. <span data-ttu-id="6c60d-124">在处理窗体的类中的`Click`按钮事件的方法中, 插入类似于下面的代码以添加对控件变量的引用、设置控件的`Location`, 然后添加控件。</span><span class="sxs-lookup"><span data-stu-id="6c60d-124">In the method that handles the button's `Click` event within your form's class, insert code similar to the following to add a reference to your control variable, set the control's `Location`, and add the control.</span></span>
+    > [!NOTE]
+    > <span data-ttu-id="7722a-122">下面的过程要求存在具有**按钮**控件`Button1`的窗体。</span><span class="sxs-lookup"><span data-stu-id="7722a-122">The following procedure requires the existence of a form with a **Button** control, `Button1`, already placed on it.</span></span>
+
+## <a name="to-add-a-control-to-a-form-programmatically"></a><span data-ttu-id="7722a-123">以编程方式将控件添加到窗体</span><span class="sxs-lookup"><span data-stu-id="7722a-123">To add a control to a form programmatically</span></span>
+
+1. <span data-ttu-id="7722a-124">在处理窗体的类中的`Click`按钮事件的方法中, 插入类似于下面的代码以添加对控件变量的引用、设置控件的`Location`, 然后添加控件。</span><span class="sxs-lookup"><span data-stu-id="7722a-124">In the method that handles the button's `Click` event within your form's class, insert code similar to the following to add a reference to your control variable, set the control's `Location`, and add the control.</span></span>
 
     ```vb
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
@@ -81,15 +81,15 @@ ms.locfileid: "69039713"
     ```
 
     > [!NOTE]
-    >  <span data-ttu-id="6c60d-125">你还可以添加代码以初始化控件的其他属性。</span><span class="sxs-lookup"><span data-stu-id="6c60d-125">You can also add code to initialize other properties of the control.</span></span>
+    > <span data-ttu-id="7722a-125">你还可以添加代码以初始化控件的其他属性。</span><span class="sxs-lookup"><span data-stu-id="7722a-125">You can also add code to initialize other properties of the control.</span></span>
 
     > [!IMPORTANT]
-    >  <span data-ttu-id="6c60d-126">你可能会通过引用恶意`UserControl`网络来使你的本地计算机遭受网络安全风险。</span><span class="sxs-lookup"><span data-stu-id="6c60d-126">You might expose your local computer to a security risk through the network by referencing a malicious `UserControl`.</span></span> <span data-ttu-id="6c60d-127">这只是在恶意用户创建有破坏性的自定义控件时, 然后错误地将其添加到项目中时需要注意的问题。</span><span class="sxs-lookup"><span data-stu-id="6c60d-127">This would only be a concern in the case of a malicious person creating a damaging custom control, followed by you mistakenly adding it to your project.</span></span>
+    >  <span data-ttu-id="7722a-126">你可能会通过引用恶意`UserControl`网络来使你的本地计算机遭受网络安全风险。</span><span class="sxs-lookup"><span data-stu-id="7722a-126">You might expose your local computer to a security risk through the network by referencing a malicious `UserControl`.</span></span> <span data-ttu-id="7722a-127">这只是在恶意用户创建有破坏性的自定义控件时, 然后错误地将其添加到项目中时需要注意的问题。</span><span class="sxs-lookup"><span data-stu-id="7722a-127">This would only be a concern in the case of a malicious person creating a damaging custom control, followed by you mistakenly adding it to your project.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="6c60d-128">请参阅</span><span class="sxs-lookup"><span data-stu-id="6c60d-128">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7722a-128">请参阅</span><span class="sxs-lookup"><span data-stu-id="7722a-128">See also</span></span>
 
-- [<span data-ttu-id="6c60d-129">Windows 窗体控件</span><span class="sxs-lookup"><span data-stu-id="6c60d-129">Windows Forms Controls</span></span>](index.md)
-- [<span data-ttu-id="6c60d-130">在 Windows 窗体上排列控件</span><span class="sxs-lookup"><span data-stu-id="6c60d-130">Arranging Controls on Windows Forms</span></span>](arranging-controls-on-windows-forms.md)
-- [<span data-ttu-id="6c60d-131">如何：Windows 窗体上的调整控件大小</span><span class="sxs-lookup"><span data-stu-id="6c60d-131">How to: Resize Controls on Windows Forms</span></span>](how-to-resize-controls-on-windows-forms.md)
-- [<span data-ttu-id="6c60d-132">如何：设置 Windows 窗体控件显示的文本</span><span class="sxs-lookup"><span data-stu-id="6c60d-132">How to: Set the Text Displayed by a Windows Forms Control</span></span>](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
-- [<span data-ttu-id="6c60d-133">在 Windows 窗体上使用的控件</span><span class="sxs-lookup"><span data-stu-id="6c60d-133">Controls to Use on Windows Forms</span></span>](controls-to-use-on-windows-forms.md)
+- [<span data-ttu-id="7722a-129">Windows 窗体控件</span><span class="sxs-lookup"><span data-stu-id="7722a-129">Windows Forms Controls</span></span>](index.md)
+- [<span data-ttu-id="7722a-130">在 Windows 窗体上排列控件</span><span class="sxs-lookup"><span data-stu-id="7722a-130">Arranging Controls on Windows Forms</span></span>](arranging-controls-on-windows-forms.md)
+- [<span data-ttu-id="7722a-131">如何：Windows 窗体上的调整控件大小</span><span class="sxs-lookup"><span data-stu-id="7722a-131">How to: Resize Controls on Windows Forms</span></span>](how-to-resize-controls-on-windows-forms.md)
+- [<span data-ttu-id="7722a-132">如何：设置 Windows 窗体控件显示的文本</span><span class="sxs-lookup"><span data-stu-id="7722a-132">How to: Set the Text Displayed by a Windows Forms Control</span></span>](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
+- [<span data-ttu-id="7722a-133">在 Windows 窗体上使用的控件</span><span class="sxs-lookup"><span data-stu-id="7722a-133">Controls to Use on Windows Forms</span></span>](controls-to-use-on-windows-forms.md)
