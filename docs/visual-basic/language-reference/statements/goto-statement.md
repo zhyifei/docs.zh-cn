@@ -13,61 +13,61 @@ helpviewer_keywords:
 - conditional statements [Visual Basic], GoTo statement
 - GoTo statement [Visual Basic], syntax
 ms.assetid: 313274c2-8ab3-4b9c-9ba3-0fd6798e4f6d
-ms.openlocfilehash: c4dd249620ba1bf445642ce4600498f6beb30461
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3034c84684e94dfe8c334107a16df8cbd227c4d4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61637957"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912453"
 ---
-# <a name="goto-statement"></a><span data-ttu-id="a709e-102">GoTo 语句</span><span class="sxs-lookup"><span data-stu-id="a709e-102">GoTo Statement</span></span>
-<span data-ttu-id="a709e-103">无条件地分支到过程中指定的行。</span><span class="sxs-lookup"><span data-stu-id="a709e-103">Branches unconditionally to a specified line in a procedure.</span></span>  
+# <a name="goto-statement"></a><span data-ttu-id="83bc0-102">GoTo 语句</span><span class="sxs-lookup"><span data-stu-id="83bc0-102">GoTo Statement</span></span>
+<span data-ttu-id="83bc0-103">无条件地分支到过程中的指定行。</span><span class="sxs-lookup"><span data-stu-id="83bc0-103">Branches unconditionally to a specified line in a procedure.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a709e-104">语法</span><span class="sxs-lookup"><span data-stu-id="a709e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="83bc0-104">语法</span><span class="sxs-lookup"><span data-stu-id="83bc0-104">Syntax</span></span>  
   
 ```  
 GoTo line  
 ```  
   
-## <a name="part"></a><span data-ttu-id="a709e-105">部件</span><span class="sxs-lookup"><span data-stu-id="a709e-105">Part</span></span>  
+## <a name="part"></a><span data-ttu-id="83bc0-105">部件</span><span class="sxs-lookup"><span data-stu-id="83bc0-105">Part</span></span>  
  `line`  
- <span data-ttu-id="a709e-106">必需。</span><span class="sxs-lookup"><span data-stu-id="a709e-106">Required.</span></span> <span data-ttu-id="a709e-107">所有行标签。</span><span class="sxs-lookup"><span data-stu-id="a709e-107">Any line label.</span></span>  
+ <span data-ttu-id="83bc0-106">必需。</span><span class="sxs-lookup"><span data-stu-id="83bc0-106">Required.</span></span> <span data-ttu-id="83bc0-107">任何行标签。</span><span class="sxs-lookup"><span data-stu-id="83bc0-107">Any line label.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="a709e-108">备注</span><span class="sxs-lookup"><span data-stu-id="a709e-108">Remarks</span></span>  
- <span data-ttu-id="a709e-109">`GoTo`语句只能跳转到它在其中出现的过程中的行。</span><span class="sxs-lookup"><span data-stu-id="a709e-109">The `GoTo` statement can branch only to lines in the procedure in which it appears.</span></span> <span data-ttu-id="a709e-110">在行必须具有的行标签`GoTo`可以引用。</span><span class="sxs-lookup"><span data-stu-id="a709e-110">The line must have a line label that `GoTo` can refer to.</span></span> <span data-ttu-id="a709e-111">有关详细信息，请参阅[如何：标记语句](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)。</span><span class="sxs-lookup"><span data-stu-id="a709e-111">For more information, see [How to: Label Statements](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="83bc0-108">备注</span><span class="sxs-lookup"><span data-stu-id="83bc0-108">Remarks</span></span>  
+ <span data-ttu-id="83bc0-109">`GoTo`语句只能分支到其出现的过程中的行。</span><span class="sxs-lookup"><span data-stu-id="83bc0-109">The `GoTo` statement can branch only to lines in the procedure in which it appears.</span></span> <span data-ttu-id="83bc0-110">该行必须具有`GoTo`可引用的行标签。</span><span class="sxs-lookup"><span data-stu-id="83bc0-110">The line must have a line label that `GoTo` can refer to.</span></span> <span data-ttu-id="83bc0-111">有关详细信息，请参阅[如何：标签语句](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)。</span><span class="sxs-lookup"><span data-stu-id="83bc0-111">For more information, see [How to: Label Statements](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md).</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="a709e-112">`GoTo` 语句可以使代码难以阅读和维护。</span><span class="sxs-lookup"><span data-stu-id="a709e-112">`GoTo` statements can make code difficult to read and maintain.</span></span> <span data-ttu-id="a709e-113">只要有可能，请改为使用控制结构。</span><span class="sxs-lookup"><span data-stu-id="a709e-113">Whenever possible, use a control structure instead.</span></span> <span data-ttu-id="a709e-114">有关详细信息，请参阅[控制流](../../../visual-basic/programming-guide/language-features/control-flow/index.md)。</span><span class="sxs-lookup"><span data-stu-id="a709e-114">For more information, see [Control Flow](../../../visual-basic/programming-guide/language-features/control-flow/index.md).</span></span>  
+> <span data-ttu-id="83bc0-112">`GoTo`语句可以使代码难以阅读和维护。</span><span class="sxs-lookup"><span data-stu-id="83bc0-112">`GoTo` statements can make code difficult to read and maintain.</span></span> <span data-ttu-id="83bc0-113">请尽可能使用控制结构。</span><span class="sxs-lookup"><span data-stu-id="83bc0-113">Whenever possible, use a control structure instead.</span></span> <span data-ttu-id="83bc0-114">有关详细信息, 请参阅[控制流](../../../visual-basic/programming-guide/language-features/control-flow/index.md)。</span><span class="sxs-lookup"><span data-stu-id="83bc0-114">For more information, see [Control Flow](../../../visual-basic/programming-guide/language-features/control-flow/index.md).</span></span>  
   
- <span data-ttu-id="a709e-115">不能使用`GoTo`语句从外部`For`...`Next`, `For Each`...`Next`, `SyncLock`...`End SyncLock`, `Try`...`Catch`...`Finally`, `With`...`End With`，或`Using`...`End Using`构造中为标签。</span><span class="sxs-lookup"><span data-stu-id="a709e-115">You cannot use a `GoTo` statement to branch from outside a `For`...`Next`, `For Each`...`Next`, `SyncLock`...`End SyncLock`, `Try`...`Catch`...`Finally`, `With`...`End With`, or `Using`...`End Using` construction to a label inside.</span></span>  
+ <span data-ttu-id="83bc0-115">不能使用`GoTo`语句从`For`.。。`Next`, `For Each`...`Next`, `SyncLock`...`End SyncLock`, `Try`...`Catch`...`Finally`, `With`...`End With`, 或`Using`.。。`End Using`构造到中的标签。</span><span class="sxs-lookup"><span data-stu-id="83bc0-115">You cannot use a `GoTo` statement to branch from outside a `For`...`Next`, `For Each`...`Next`, `SyncLock`...`End SyncLock`, `Try`...`Catch`...`Finally`, `With`...`End With`, or `Using`...`End Using` construction to a label inside.</span></span>  
   
-## <a name="branching-and-try-constructions"></a><span data-ttu-id="a709e-116">分支和尝试构造</span><span class="sxs-lookup"><span data-stu-id="a709e-116">Branching and Try Constructions</span></span>  
- <span data-ttu-id="a709e-117">在`Try`...`Catch`...`Finally`构造中，以下规则适用于与分支`GoTo`语句。</span><span class="sxs-lookup"><span data-stu-id="a709e-117">Within a `Try`...`Catch`...`Finally` construction, the following rules apply to branching with the `GoTo` statement.</span></span>  
+## <a name="branching-and-try-constructions"></a><span data-ttu-id="83bc0-116">分支和尝试构造</span><span class="sxs-lookup"><span data-stu-id="83bc0-116">Branching and Try Constructions</span></span>  
+ <span data-ttu-id="83bc0-117">`Try`在 .。。`Catch`...构造, 以下规则适用于`GoTo`使用语句的分支。 `Finally`</span><span class="sxs-lookup"><span data-stu-id="83bc0-117">Within a `Try`...`Catch`...`Finally` construction, the following rules apply to branching with the `GoTo` statement.</span></span>  
   
-|<span data-ttu-id="a709e-118">块或区域</span><span class="sxs-lookup"><span data-stu-id="a709e-118">Block or region</span></span>|<span data-ttu-id="a709e-119">从外部中分支</span><span class="sxs-lookup"><span data-stu-id="a709e-119">Branching in from outside</span></span>|<span data-ttu-id="a709e-120">从内向外分支</span><span class="sxs-lookup"><span data-stu-id="a709e-120">Branching out from inside</span></span>|  
+|<span data-ttu-id="83bc0-118">块或区域</span><span class="sxs-lookup"><span data-stu-id="83bc0-118">Block or region</span></span>|<span data-ttu-id="83bc0-119">从外部分支</span><span class="sxs-lookup"><span data-stu-id="83bc0-119">Branching in from outside</span></span>|<span data-ttu-id="83bc0-120">从内部分支出</span><span class="sxs-lookup"><span data-stu-id="83bc0-120">Branching out from inside</span></span>|  
 |---------------------|-------------------------------|-------------------------------|  
-|<span data-ttu-id="a709e-121">`Try` 块</span><span class="sxs-lookup"><span data-stu-id="a709e-121">`Try` block</span></span>|<span data-ttu-id="a709e-122">只能从`Catch`相同的构造块<sup>1</sup></span><span class="sxs-lookup"><span data-stu-id="a709e-122">Only from a `Catch` block of the same construction <sup>1</sup></span></span>|<span data-ttu-id="a709e-123">只能与整个构造外部</span><span class="sxs-lookup"><span data-stu-id="a709e-123">Only to outside the whole construction</span></span>|  
-|<span data-ttu-id="a709e-124">`Catch` 块</span><span class="sxs-lookup"><span data-stu-id="a709e-124">`Catch` block</span></span>|<span data-ttu-id="a709e-125">永远不允许</span><span class="sxs-lookup"><span data-stu-id="a709e-125">Never allowed</span></span>|<span data-ttu-id="a709e-126">只能与整个构造外部或设置为`Try`相同的构造块<sup>1</sup></span><span class="sxs-lookup"><span data-stu-id="a709e-126">Only to outside the whole construction, or to the `Try` block of the same construction <sup>1</sup></span></span>|  
-|<span data-ttu-id="a709e-127">`Finally` 块</span><span class="sxs-lookup"><span data-stu-id="a709e-127">`Finally` block</span></span>|<span data-ttu-id="a709e-128">永远不允许</span><span class="sxs-lookup"><span data-stu-id="a709e-128">Never allowed</span></span>|<span data-ttu-id="a709e-129">永远不允许</span><span class="sxs-lookup"><span data-stu-id="a709e-129">Never allowed</span></span>|  
+|<span data-ttu-id="83bc0-121">`Try`模块</span><span class="sxs-lookup"><span data-stu-id="83bc0-121">`Try` block</span></span>|<span data-ttu-id="83bc0-122">仅从`Catch`同一构造的块<sup>1</sup></span><span class="sxs-lookup"><span data-stu-id="83bc0-122">Only from a `Catch` block of the same construction <sup>1</sup></span></span>|<span data-ttu-id="83bc0-123">仅限于整个构造之外</span><span class="sxs-lookup"><span data-stu-id="83bc0-123">Only to outside the whole construction</span></span>|  
+|<span data-ttu-id="83bc0-124">`Catch`模块</span><span class="sxs-lookup"><span data-stu-id="83bc0-124">`Catch` block</span></span>|<span data-ttu-id="83bc0-125">不允许</span><span class="sxs-lookup"><span data-stu-id="83bc0-125">Never allowed</span></span>|<span data-ttu-id="83bc0-126">仅对整个构造以外的或`Try`相同构造<sup>1</sup>的块</span><span class="sxs-lookup"><span data-stu-id="83bc0-126">Only to outside the whole construction, or to the `Try` block of the same construction <sup>1</sup></span></span>|  
+|<span data-ttu-id="83bc0-127">`Finally`模块</span><span class="sxs-lookup"><span data-stu-id="83bc0-127">`Finally` block</span></span>|<span data-ttu-id="83bc0-128">不允许</span><span class="sxs-lookup"><span data-stu-id="83bc0-128">Never allowed</span></span>|<span data-ttu-id="83bc0-129">不允许</span><span class="sxs-lookup"><span data-stu-id="83bc0-129">Never allowed</span></span>|  
   
- <span data-ttu-id="a709e-130"><sup>1</sup>如果一个`Try`...`Catch`...`Finally`构造嵌套在另一个，`Catch`块可以分支到`Try`块在其自己的嵌套级别，但不是到任何其他`Try`块。</span><span class="sxs-lookup"><span data-stu-id="a709e-130"><sup>1</sup> If one `Try`...`Catch`...`Finally` construction is nested within another, a `Catch` block can branch into the `Try` block at its own nesting level, but not into any other `Try` block.</span></span> <span data-ttu-id="a709e-131">嵌套`Try`...`Catch`...`Finally`构造必须完全在包含`Try`或`Catch`块在其中嵌套的构造。</span><span class="sxs-lookup"><span data-stu-id="a709e-131">A nested `Try`...`Catch`...`Finally` construction must be contained completely in a `Try` or `Catch` block of the construction within which it is nested.</span></span>  
+ <span data-ttu-id="83bc0-130"><sup>1</sup> (如果`Try`有) .。。`Catch`...构造嵌套在另一个块中`Catch` , `Try`块可以在其自身的嵌套级别 (而不是其他`Try`块) 分支到块。 `Finally`</span><span class="sxs-lookup"><span data-stu-id="83bc0-130"><sup>1</sup> If one `Try`...`Catch`...`Finally` construction is nested within another, a `Catch` block can branch into the `Try` block at its own nesting level, but not into any other `Try` block.</span></span> <span data-ttu-id="83bc0-131">嵌套`Try`.。。`Catch`...构造必须完全包含在它所`Try`嵌套`Catch`到的构造内或块中。 `Finally`</span><span class="sxs-lookup"><span data-stu-id="83bc0-131">A nested `Try`...`Catch`...`Finally` construction must be contained completely in a `Try` or `Catch` block of the construction within which it is nested.</span></span>  
   
- <span data-ttu-id="a709e-132">下图显示了一个`Try`构造嵌套在另一个。</span><span class="sxs-lookup"><span data-stu-id="a709e-132">The following illustration shows one `Try` construction nested within another.</span></span> <span data-ttu-id="a709e-133">在这两个构造块之间的各分支将予以有效或无效。</span><span class="sxs-lookup"><span data-stu-id="a709e-133">Various branches among the blocks of the two constructions are indicated as valid or invalid.</span></span>  
+ <span data-ttu-id="83bc0-132">下图显示了一个`Try`嵌套在另一个构造内的构造。</span><span class="sxs-lookup"><span data-stu-id="83bc0-132">The following illustration shows one `Try` construction nested within another.</span></span> <span data-ttu-id="83bc0-133">这两个构造的块中的各种分支都指示为有效或无效。</span><span class="sxs-lookup"><span data-stu-id="83bc0-133">Various branches among the blocks of the two constructions are indicated as valid or invalid.</span></span>  
   
  ![Try 结构分支示意图](./media/goto-statement/try-construction-branching.gif)  
   
-## <a name="example"></a><span data-ttu-id="a709e-135">示例</span><span class="sxs-lookup"><span data-stu-id="a709e-135">Example</span></span>  
- <span data-ttu-id="a709e-136">下面的示例使用`GoTo`分支到过程中的线条标签的语句。</span><span class="sxs-lookup"><span data-stu-id="a709e-136">The following example uses the `GoTo` statement to branch to line labels in a procedure.</span></span>  
+## <a name="example"></a><span data-ttu-id="83bc0-135">示例</span><span class="sxs-lookup"><span data-stu-id="83bc0-135">Example</span></span>  
+ <span data-ttu-id="83bc0-136">下面的示例使用`GoTo`语句分支到过程中的行标签。</span><span class="sxs-lookup"><span data-stu-id="83bc0-136">The following example uses the `GoTo` statement to branch to line labels in a procedure.</span></span>  
   
  [!code-vb[VbVbalrStatements#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#31)]  
   
-## <a name="see-also"></a><span data-ttu-id="a709e-137">请参阅</span><span class="sxs-lookup"><span data-stu-id="a709e-137">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="83bc0-137">请参阅</span><span class="sxs-lookup"><span data-stu-id="83bc0-137">See also</span></span>
 
-- [<span data-ttu-id="a709e-138">Do...Loop 语句</span><span class="sxs-lookup"><span data-stu-id="a709e-138">Do...Loop Statement</span></span>](../../../visual-basic/language-reference/statements/do-loop-statement.md)
-- [<span data-ttu-id="a709e-139">For...Next 语句</span><span class="sxs-lookup"><span data-stu-id="a709e-139">For...Next Statement</span></span>](../../../visual-basic/language-reference/statements/for-next-statement.md)
-- [<span data-ttu-id="a709e-140">For Each...Next 语句</span><span class="sxs-lookup"><span data-stu-id="a709e-140">For Each...Next Statement</span></span>](../../../visual-basic/language-reference/statements/for-each-next-statement.md)
-- [<span data-ttu-id="a709e-141">If...Then...Else 语句</span><span class="sxs-lookup"><span data-stu-id="a709e-141">If...Then...Else Statement</span></span>](../../../visual-basic/language-reference/statements/if-then-else-statement.md)
-- [<span data-ttu-id="a709e-142">Select...Case 语句</span><span class="sxs-lookup"><span data-stu-id="a709e-142">Select...Case Statement</span></span>](../../../visual-basic/language-reference/statements/select-case-statement.md)
-- [<span data-ttu-id="a709e-143">Try...Catch...Finally 语句</span><span class="sxs-lookup"><span data-stu-id="a709e-143">Try...Catch...Finally Statement</span></span>](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
-- [<span data-ttu-id="a709e-144">While...End While 语句</span><span class="sxs-lookup"><span data-stu-id="a709e-144">While...End While Statement</span></span>](../../../visual-basic/language-reference/statements/while-end-while-statement.md)
-- [<span data-ttu-id="a709e-145">With...End With 语句</span><span class="sxs-lookup"><span data-stu-id="a709e-145">With...End With Statement</span></span>](../../../visual-basic/language-reference/statements/with-end-with-statement.md)
+- [<span data-ttu-id="83bc0-138">Do...Loop 语句</span><span class="sxs-lookup"><span data-stu-id="83bc0-138">Do...Loop Statement</span></span>](../../../visual-basic/language-reference/statements/do-loop-statement.md)
+- [<span data-ttu-id="83bc0-139">For...Next 语句</span><span class="sxs-lookup"><span data-stu-id="83bc0-139">For...Next Statement</span></span>](../../../visual-basic/language-reference/statements/for-next-statement.md)
+- [<span data-ttu-id="83bc0-140">For Each...Next 语句</span><span class="sxs-lookup"><span data-stu-id="83bc0-140">For Each...Next Statement</span></span>](../../../visual-basic/language-reference/statements/for-each-next-statement.md)
+- [<span data-ttu-id="83bc0-141">If...Then...Else 语句</span><span class="sxs-lookup"><span data-stu-id="83bc0-141">If...Then...Else Statement</span></span>](../../../visual-basic/language-reference/statements/if-then-else-statement.md)
+- [<span data-ttu-id="83bc0-142">Select...Case 语句</span><span class="sxs-lookup"><span data-stu-id="83bc0-142">Select...Case Statement</span></span>](../../../visual-basic/language-reference/statements/select-case-statement.md)
+- [<span data-ttu-id="83bc0-143">Try...Catch...Finally 语句</span><span class="sxs-lookup"><span data-stu-id="83bc0-143">Try...Catch...Finally Statement</span></span>](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
+- [<span data-ttu-id="83bc0-144">While...End While 语句</span><span class="sxs-lookup"><span data-stu-id="83bc0-144">While...End While Statement</span></span>](../../../visual-basic/language-reference/statements/while-end-while-statement.md)
+- [<span data-ttu-id="83bc0-145">With...End With 语句</span><span class="sxs-lookup"><span data-stu-id="83bc0-145">With...End With Statement</span></span>](../../../visual-basic/language-reference/statements/with-end-with-statement.md)

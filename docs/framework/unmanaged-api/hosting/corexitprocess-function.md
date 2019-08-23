@@ -20,19 +20,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7aaa0e83de1b1c3e2ce436de04a36addef16c057
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6e1104a98afb32dea687949e9c723124014c1e62
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67758513"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69925320"
 ---
-# <a name="corexitprocess-function"></a><span data-ttu-id="1716e-102">CorExitProcess 函数</span><span class="sxs-lookup"><span data-stu-id="1716e-102">CorExitProcess Function</span></span>
-<span data-ttu-id="1716e-103">关闭当前的非托管进程。</span><span class="sxs-lookup"><span data-stu-id="1716e-103">Shuts down the current unmanaged process.</span></span>  
+# <a name="corexitprocess-function"></a><span data-ttu-id="c8a42-102">CorExitProcess 函数</span><span class="sxs-lookup"><span data-stu-id="c8a42-102">CorExitProcess Function</span></span>
+<span data-ttu-id="c8a42-103">关闭当前的非托管进程。</span><span class="sxs-lookup"><span data-stu-id="c8a42-103">Shuts down the current unmanaged process.</span></span>  
   
- <span data-ttu-id="1716e-104">.NET Framework 4 中已弃用此函数。</span><span class="sxs-lookup"><span data-stu-id="1716e-104">This function has been deprecated in the .NET Framework 4.</span></span> <span data-ttu-id="1716e-105">使用[iclrmetahost:: Exitprocess](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-exitprocess-method.md)方法相反。</span><span class="sxs-lookup"><span data-stu-id="1716e-105">Use the [ICLRMetaHost::ExitProcess](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-exitprocess-method.md) method instead.</span></span>  
+ <span data-ttu-id="c8a42-104">此函数已在 .NET Framework 4 中弃用。</span><span class="sxs-lookup"><span data-stu-id="c8a42-104">This function has been deprecated in the .NET Framework 4.</span></span> <span data-ttu-id="c8a42-105">改为使用[ICLRMetaHost:: ExitProcess](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-exitprocess-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="c8a42-105">Use the [ICLRMetaHost::ExitProcess](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-exitprocess-method.md) method instead.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1716e-106">语法</span><span class="sxs-lookup"><span data-stu-id="1716e-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c8a42-106">语法</span><span class="sxs-lookup"><span data-stu-id="c8a42-106">Syntax</span></span>  
   
 ```cpp  
 void STDMETHODCALLTYPE CorExitProcess (   
@@ -40,24 +40,24 @@ void STDMETHODCALLTYPE CorExitProcess (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="1716e-107">参数</span><span class="sxs-lookup"><span data-stu-id="1716e-107">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c8a42-107">参数</span><span class="sxs-lookup"><span data-stu-id="c8a42-107">Parameters</span></span>  
  `exitCode`  
- <span data-ttu-id="1716e-108">一个整数，指定在进程退出代码。</span><span class="sxs-lookup"><span data-stu-id="1716e-108">An integer that specifies the process exit code.</span></span>  
+ <span data-ttu-id="c8a42-108">一个整数, 指定进程退出代码。</span><span class="sxs-lookup"><span data-stu-id="c8a42-108">An integer that specifies the process exit code.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="1716e-109">备注</span><span class="sxs-lookup"><span data-stu-id="1716e-109">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c8a42-109">备注</span><span class="sxs-lookup"><span data-stu-id="c8a42-109">Remarks</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="1716e-110">从.NET Framework 4 中，开始`CorExitProcess`退出进程，而不仅仅是传统的 Api 已绑定到的运行时中每个已启动运行时。</span><span class="sxs-lookup"><span data-stu-id="1716e-110">Beginning with the .NET Framework 4, `CorExitProcess` exits every started runtime in the process, not just the runtime to which the legacy APIs have been bound.</span></span>  
+> <span data-ttu-id="c8a42-110">从 .NET Framework 4 开始, `CorExitProcess`退出进程中的每个已启动的运行时, 而不只是旧 api 所绑定到的运行时。</span><span class="sxs-lookup"><span data-stu-id="c8a42-110">Beginning with the .NET Framework 4, `CorExitProcess` exits every started runtime in the process, not just the runtime to which the legacy APIs have been bound.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="1716e-111">要求</span><span class="sxs-lookup"><span data-stu-id="1716e-111">Requirements</span></span>  
- <span data-ttu-id="1716e-112">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="1716e-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c8a42-111">要求</span><span class="sxs-lookup"><span data-stu-id="c8a42-111">Requirements</span></span>  
+ <span data-ttu-id="c8a42-112">**适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="c8a42-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="1716e-113">**标头：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="1716e-113">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="c8a42-113">**标头：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="c8a42-113">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="1716e-114">**库：** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="1716e-114">**Library:** MSCorEE.dll</span></span>  
+ <span data-ttu-id="c8a42-114">**类库**MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="c8a42-114">**Library:** MSCorEE.dll</span></span>  
   
- <span data-ttu-id="1716e-115">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1716e-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="c8a42-115">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c8a42-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1716e-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="1716e-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c8a42-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="c8a42-116">See also</span></span>
 
-- [<span data-ttu-id="1716e-117">弃用的 CLR 承载函数</span><span class="sxs-lookup"><span data-stu-id="1716e-117">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [<span data-ttu-id="c8a42-117">弃用的 CLR 承载函数</span><span class="sxs-lookup"><span data-stu-id="c8a42-117">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

@@ -6,20 +6,20 @@ helpviewer_keywords:
 - title of window [WPF], setting from a page
 - pages [WPF], setting window title from
 ms.assetid: fecf0d19-3eb6-4f8c-a44f-ff1b6f2b34b3
-ms.openlocfilehash: 55444de6c61107979307b94910ba944e7001cf9e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0f618af89965822b0df96a264997dabd9cae7608
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62053998"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940789"
 ---
-# <a name="how-to-set-the-title-of-a-window-from-a-page"></a><span data-ttu-id="18d81-102">如何：设置页面窗口标题</span><span class="sxs-lookup"><span data-stu-id="18d81-102">How to: Set the Title of a Window from a Page</span></span>
-<span data-ttu-id="18d81-103">此示例演示如何在其中设置窗口的标题<xref:System.Windows.Controls.Page>托管。</span><span class="sxs-lookup"><span data-stu-id="18d81-103">This example shows how to set the title of the window in which a <xref:System.Windows.Controls.Page> is hosted.</span></span>  
+# <a name="how-to-set-the-title-of-a-window-from-a-page"></a><span data-ttu-id="1a9fb-102">如何：设置页面窗口标题</span><span class="sxs-lookup"><span data-stu-id="1a9fb-102">How to: Set the Title of a Window from a Page</span></span>
+<span data-ttu-id="1a9fb-103">此示例演示如何设置承载的<xref:System.Windows.Controls.Page>窗口的标题。</span><span class="sxs-lookup"><span data-stu-id="1a9fb-103">This example shows how to set the title of the window in which a <xref:System.Windows.Controls.Page> is hosted.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="18d81-104">示例</span><span class="sxs-lookup"><span data-stu-id="18d81-104">Example</span></span>  
- <span data-ttu-id="18d81-105">页上可以更改将通过设置其承载窗口的标题<xref:System.Windows.Controls.Page.WindowTitle%2A>属性，如下所示：</span><span class="sxs-lookup"><span data-stu-id="18d81-105">A page can change the title of the window that is hosting it by setting the <xref:System.Windows.Controls.Page.WindowTitle%2A> property, like so:</span></span>  
+## <a name="example"></a><span data-ttu-id="1a9fb-104">示例</span><span class="sxs-lookup"><span data-stu-id="1a9fb-104">Example</span></span>  
+ <span data-ttu-id="1a9fb-105">页面可以通过设置<xref:System.Windows.Controls.Page.WindowTitle%2A>属性来更改承载它的窗口的标题, 如下所示:</span><span class="sxs-lookup"><span data-stu-id="1a9fb-105">A page can change the title of the window that is hosting it by setting the <xref:System.Windows.Controls.Page.WindowTitle%2A> property, like so:</span></span>  
   
  [!code-xaml[HOWTONavigationSnippets#SetPageWindowTitleXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/HOWTONavigationSnippets/CSharp/SetWindowTitlePage.xaml#setpagewindowtitlexaml)]  
   
 > [!NOTE]
->  <span data-ttu-id="18d81-106">设置<xref:System.Windows.Controls.Page.Title%2A>页的属性不会更改窗口标题的值。</span><span class="sxs-lookup"><span data-stu-id="18d81-106">Setting the <xref:System.Windows.Controls.Page.Title%2A> property of a page does not change the value of the window title.</span></span> <span data-ttu-id="18d81-107">相反，<xref:System.Windows.Controls.Page.Title%2A>导航历史记录中指定的页面条目的名称。</span><span class="sxs-lookup"><span data-stu-id="18d81-107">Instead, <xref:System.Windows.Controls.Page.Title%2A> specifies the name of a page entry in navigation history.</span></span>
+> <span data-ttu-id="1a9fb-106">设置页<xref:System.Windows.Controls.Page.Title%2A>的属性不会更改窗口标题的值。</span><span class="sxs-lookup"><span data-stu-id="1a9fb-106">Setting the <xref:System.Windows.Controls.Page.Title%2A> property of a page does not change the value of the window title.</span></span> <span data-ttu-id="1a9fb-107">而是<xref:System.Windows.Controls.Page.Title%2A>指定导航历史记录中的页面条目的名称。</span><span class="sxs-lookup"><span data-stu-id="1a9fb-107">Instead, <xref:System.Windows.Controls.Page.Title%2A> specifies the name of a page entry in navigation history.</span></span>

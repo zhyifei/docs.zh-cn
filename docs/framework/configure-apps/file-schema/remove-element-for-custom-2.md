@@ -1,5 +1,5 @@
 ---
-title: <remove> NameValueSectionHandler 和 DictionarySectionHandler 的元素
+title: <remove>NameValueSectionHandler 和 DictionarySectionHandler 的元素
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/sectionName/remove
@@ -9,52 +9,52 @@ helpviewer_keywords:
 ms.assetid: 8d8af7f5-26c9-4db9-bbe4-b2a4e6949568
 author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: 062aa3921d29cffd33db2d96096ef25c2b819030
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: cd338ff2d613be31ab1524f6baed6107f803a688
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66300699"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920952"
 ---
-# <a name="remove-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a><span data-ttu-id="bc24c-102">\<删除 > NameValueSectionHandler 和 DictionarySectionHandler 的元素</span><span class="sxs-lookup"><span data-stu-id="bc24c-102">\<remove> element for NameValueSectionHandler and DictionarySectionHandler</span></span>
+# <a name="remove-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a><span data-ttu-id="b4e0b-102">\<删除 NameValueSectionHandler 和 DictionarySectionHandler 的 > 元素</span><span class="sxs-lookup"><span data-stu-id="b4e0b-102">\<remove> element for NameValueSectionHandler and DictionarySectionHandler</span></span>
 
-<span data-ttu-id="bc24c-103">删除以前定义的设置。</span><span class="sxs-lookup"><span data-stu-id="bc24c-103">Removes a previously defined setting.</span></span>
+<span data-ttu-id="b4e0b-103">删除以前定义的设置。</span><span class="sxs-lookup"><span data-stu-id="b4e0b-103">Removes a previously defined setting.</span></span>
 
-<span data-ttu-id="bc24c-104">[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span><span class="sxs-lookup"><span data-stu-id="bc24c-104">[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span></span>  
-<span data-ttu-id="bc24c-105">&nbsp;&nbsp;[ **\<sectionName>** ](~/docs/framework/configure-apps/file-schema/custom-element-2.md) </span><span class="sxs-lookup"><span data-stu-id="bc24c-105">&nbsp;&nbsp;[**\<sectionName>**](~/docs/framework/configure-apps/file-schema/custom-element-2.md) </span></span>  
-<span data-ttu-id="bc24c-106">&nbsp;&nbsp;&nbsp;&nbsp; **\<remove>**</span><span class="sxs-lookup"><span data-stu-id="bc24c-106">&nbsp;&nbsp;&nbsp;&nbsp;**\<remove>**</span></span>
+<span data-ttu-id="b4e0b-104">[ **\<configuration>** ](configuration-element.md) </span><span class="sxs-lookup"><span data-stu-id="b4e0b-104">[**\<configuration>**](configuration-element.md) </span></span>  
+<span data-ttu-id="b4e0b-105">&nbsp;&nbsp;[ **\<sectionName>** ](custom-element-2.md) </span><span class="sxs-lookup"><span data-stu-id="b4e0b-105">&nbsp;&nbsp;[**\<sectionName>**](custom-element-2.md) </span></span>  
+<span data-ttu-id="b4e0b-106">&nbsp;&nbsp;&nbsp;&nbsp; **\<remove>**</span><span class="sxs-lookup"><span data-stu-id="b4e0b-106">&nbsp;&nbsp;&nbsp;&nbsp;**\<remove>**</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="bc24c-107">语法</span><span class="sxs-lookup"><span data-stu-id="bc24c-107">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="b4e0b-107">语法</span><span class="sxs-lookup"><span data-stu-id="b4e0b-107">Syntax</span></span>
 
 ```xml
 <add remove="key" />
 ```
 
-## <a name="attribute"></a><span data-ttu-id="bc24c-108">特性</span><span class="sxs-lookup"><span data-stu-id="bc24c-108">Attribute</span></span>
+## <a name="attribute"></a><span data-ttu-id="b4e0b-108">特性</span><span class="sxs-lookup"><span data-stu-id="b4e0b-108">Attribute</span></span>
 
-|           | <span data-ttu-id="bc24c-109">描述</span><span class="sxs-lookup"><span data-stu-id="bc24c-109">Description</span></span> |
+|           | <span data-ttu-id="b4e0b-109">描述</span><span class="sxs-lookup"><span data-stu-id="b4e0b-109">Description</span></span> |
 | --------- | ----------- |
-| <span data-ttu-id="bc24c-110">**key**</span><span class="sxs-lookup"><span data-stu-id="bc24c-110">**key**</span></span>   | <span data-ttu-id="bc24c-111">必需的特性。</span><span class="sxs-lookup"><span data-stu-id="bc24c-111">Required attribute.</span></span><br><br><span data-ttu-id="bc24c-112">指定要删除的设置的名称。</span><span class="sxs-lookup"><span data-stu-id="bc24c-112">Specifies the name of the setting to remove.</span></span> |
+| <span data-ttu-id="b4e0b-110">**key**</span><span class="sxs-lookup"><span data-stu-id="b4e0b-110">**key**</span></span>   | <span data-ttu-id="b4e0b-111">必需的特性。</span><span class="sxs-lookup"><span data-stu-id="b4e0b-111">Required attribute.</span></span><br><br><span data-ttu-id="b4e0b-112">指定要删除的设置的名称。</span><span class="sxs-lookup"><span data-stu-id="b4e0b-112">Specifies the name of the setting to remove.</span></span> |
 
-## <a name="parent-element"></a><span data-ttu-id="bc24c-113">父元素</span><span class="sxs-lookup"><span data-stu-id="bc24c-113">Parent element</span></span>
+## <a name="parent-element"></a><span data-ttu-id="b4e0b-113">父元素</span><span class="sxs-lookup"><span data-stu-id="b4e0b-113">Parent element</span></span>
 
-| <span data-ttu-id="bc24c-114">元素</span><span class="sxs-lookup"><span data-stu-id="bc24c-114">Element</span></span> | <span data-ttu-id="bc24c-115">描述</span><span class="sxs-lookup"><span data-stu-id="bc24c-115">Description</span></span> |
+| <span data-ttu-id="b4e0b-114">元素</span><span class="sxs-lookup"><span data-stu-id="b4e0b-114">Element</span></span> | <span data-ttu-id="b4e0b-115">描述</span><span class="sxs-lookup"><span data-stu-id="b4e0b-115">Description</span></span> |
 | ------- | ------------|
-| [<span data-ttu-id="bc24c-116"> *\*\<sectionName >** 元素</span><span class="sxs-lookup"><span data-stu-id="bc24c-116">**\<sectionName>** Element</span></span>](~/docs/framework/configure-apps/file-schema/custom-element-2.md) | <span data-ttu-id="bc24c-117">定义使用的自定义配置部分设置<xref:System.Configuration.NameValueSectionHandler>和<xref:System.Configuration.DictionarySectionHandler>类。</span><span class="sxs-lookup"><span data-stu-id="bc24c-117">Defines settings for custom configuration sections that use the <xref:System.Configuration.NameValueSectionHandler> and <xref:System.Configuration.DictionarySectionHandler> classes.</span></span> |
+| [<span data-ttu-id="b4e0b-116"> **sectionName>\<** 元素</span><span class="sxs-lookup"><span data-stu-id="b4e0b-116">**\<sectionName>** Element</span></span>](custom-element-2.md) | <span data-ttu-id="b4e0b-117">定义使用<xref:System.Configuration.NameValueSectionHandler>和<xref:System.Configuration.DictionarySectionHandler>类的自定义配置节的设置。</span><span class="sxs-lookup"><span data-stu-id="b4e0b-117">Defines settings for custom configuration sections that use the <xref:System.Configuration.NameValueSectionHandler> and <xref:System.Configuration.DictionarySectionHandler> classes.</span></span> |
 
-## <a name="child-elements"></a><span data-ttu-id="bc24c-118">子元素</span><span class="sxs-lookup"><span data-stu-id="bc24c-118">Child elements</span></span>
+## <a name="child-elements"></a><span data-ttu-id="b4e0b-118">子元素</span><span class="sxs-lookup"><span data-stu-id="b4e0b-118">Child elements</span></span>
 
-<span data-ttu-id="bc24c-119">None</span><span class="sxs-lookup"><span data-stu-id="bc24c-119">None</span></span>
+<span data-ttu-id="b4e0b-119">无</span><span class="sxs-lookup"><span data-stu-id="b4e0b-119">None</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="bc24c-120">备注</span><span class="sxs-lookup"><span data-stu-id="bc24c-120">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="b4e0b-120">备注</span><span class="sxs-lookup"><span data-stu-id="b4e0b-120">Remarks</span></span>
 
-<span data-ttu-id="bc24c-121">可以使用 **\<删除 >** 元素以删除从应用程序在配置文件层次结构中较高级别定义的设置。</span><span class="sxs-lookup"><span data-stu-id="bc24c-121">You can use the **\<remove>** element to remove settings from your application that were defined at a higher level in the configuration file hierarchy.</span></span>
+<span data-ttu-id="b4e0b-121">你可以使用 **\<remove >** 元素从你的应用程序中删除在配置文件层次结构中较高级别上定义的设置。</span><span class="sxs-lookup"><span data-stu-id="b4e0b-121">You can use the **\<remove>** element to remove settings from your application that were defined at a higher level in the configuration file hierarchy.</span></span>
 
-## <a name="example"></a><span data-ttu-id="bc24c-122">示例</span><span class="sxs-lookup"><span data-stu-id="bc24c-122">Example</span></span>
+## <a name="example"></a><span data-ttu-id="b4e0b-122">示例</span><span class="sxs-lookup"><span data-stu-id="b4e0b-122">Example</span></span>
 
-<span data-ttu-id="bc24c-123">下面的示例演示如何使用 **\<删除 >** 以删除以前在计算机配置文件中定义的设置应用程序配置文件中的元素。</span><span class="sxs-lookup"><span data-stu-id="bc24c-123">The following example shows how to use the **\<remove>** element in an application configuration file to remove settings previously defined in the machine configuration file.</span></span>
+<span data-ttu-id="b4e0b-123">下面的示例演示如何使用应用程序配置文件中的 **\<remove >** 元素删除以前在计算机配置文件中定义的设置。</span><span class="sxs-lookup"><span data-stu-id="b4e0b-123">The following example shows how to use the **\<remove>** element in an application configuration file to remove settings previously defined in the machine configuration file.</span></span>
 
-<span data-ttu-id="bc24c-124">下面的计算机配置文件代码声明部分 **\<mySection >** ，并将添加两个设置`key1`和`key2`，到它：</span><span class="sxs-lookup"><span data-stu-id="bc24c-124">The following machine configuration file code declares the section **\<mySection>** and adds two settings, `key1` and `key2`, to it:</span></span>
+<span data-ttu-id="b4e0b-124">以下计算机配置文件代码声明 **\<> mySection**节, 并向其中`key1`添加`key2`两个设置:</span><span class="sxs-lookup"><span data-stu-id="b4e0b-124">The following machine configuration file code declares the section **\<mySection>** and adds two settings, `key1` and `key2`, to it:</span></span>
 
 ```xml
 <!-- Machine.config file -->
@@ -69,7 +69,7 @@ ms.locfileid: "66300699"
 </configuration>
 ```
 
-<span data-ttu-id="bc24c-125">下面的应用程序配置文件代码中删除`key2`设置从 **\<mySection >** :</span><span class="sxs-lookup"><span data-stu-id="bc24c-125">The following application configuration file code removes the `key2` setting from **\<mySection>**:</span></span>
+<span data-ttu-id="b4e0b-125">以下应用程序配置文件代码将从`key2`  **\<mySection**中删除设置 >:</span><span class="sxs-lookup"><span data-stu-id="b4e0b-125">The following application configuration file code removes the `key2` setting from **\<mySection>**:</span></span>
 
 ```xml
 <!--Application configuration file -->
@@ -80,10 +80,10 @@ ms.locfileid: "66300699"
 </configuration>
 ```
 
-## <a name="configuration-file"></a><span data-ttu-id="bc24c-126">配置文件</span><span class="sxs-lookup"><span data-stu-id="bc24c-126">Configuration file</span></span>
+## <a name="configuration-file"></a><span data-ttu-id="b4e0b-126">配置文件</span><span class="sxs-lookup"><span data-stu-id="b4e0b-126">Configuration file</span></span>
 
-<span data-ttu-id="bc24c-127">在应用程序配置文件中，计算机配置文件可以使用此元素 (*Machine.config*)，并*Web.config*不在应用程序目录级别上的文件。</span><span class="sxs-lookup"><span data-stu-id="bc24c-127">This element can be used in the application configuration file, machine configuration file (*Machine.config*), and *Web.config* files that are not at the application directory level.</span></span>
+<span data-ttu-id="b4e0b-127">此元素可用于应用程序配置文件、计算机配置文件 (*machine.config*) 和不在应用程序目录级别的 web.config 文件。</span><span class="sxs-lookup"><span data-stu-id="b4e0b-127">This element can be used in the application configuration file, machine configuration file (*Machine.config*), and *Web.config* files that are not at the application directory level.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="bc24c-128">请参阅</span><span class="sxs-lookup"><span data-stu-id="bc24c-128">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b4e0b-128">请参阅</span><span class="sxs-lookup"><span data-stu-id="b4e0b-128">See also</span></span>
 
-- [<span data-ttu-id="bc24c-129">.NET Framework 的配置文件架构</span><span class="sxs-lookup"><span data-stu-id="bc24c-129">Configuration file schema for the .NET Framework</span></span>](~/docs/framework/configure-apps/file-schema/index.md)
+- [<span data-ttu-id="b4e0b-129">.NET Framework 的配置文件架构</span><span class="sxs-lookup"><span data-stu-id="b4e0b-129">Configuration file schema for the .NET Framework</span></span>](index.md)

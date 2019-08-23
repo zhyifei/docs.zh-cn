@@ -17,37 +17,37 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3037fc704ffc3aac4d050cef7857261f138f7d35
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: de37bb34aee9b6536ff892ac30855761bcc69445
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738072"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963132"
 ---
-# <a name="icordebugterminate-method"></a><span data-ttu-id="ee08e-102">ICorDebug::Terminate 方法</span><span class="sxs-lookup"><span data-stu-id="ee08e-102">ICorDebug::Terminate Method</span></span>
-<span data-ttu-id="ee08e-103">终止`ICorDebug`对象。</span><span class="sxs-lookup"><span data-stu-id="ee08e-103">Terminates the `ICorDebug` object.</span></span>  
+# <a name="icordebugterminate-method"></a><span data-ttu-id="593dd-102">ICorDebug::Terminate 方法</span><span class="sxs-lookup"><span data-stu-id="593dd-102">ICorDebug::Terminate Method</span></span>
+<span data-ttu-id="593dd-103">`ICorDebug`终止对象。</span><span class="sxs-lookup"><span data-stu-id="593dd-103">Terminates the `ICorDebug` object.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="ee08e-104">`Terminate` 不应调用直到[icordebugmanagedcallback:: Exitprocess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md)回调收到的所有正在调试的进程。</span><span class="sxs-lookup"><span data-stu-id="ee08e-104">`Terminate` should not be called until an [ICorDebugManagedCallback::ExitProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md) callback has been received for all processes being debugged.</span></span>  
+> <span data-ttu-id="593dd-104">`Terminate`在为所有正在调试的进程接收到[ICorDebugManagedCallback:: ExitProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md)回调之前, 不应调用。</span><span class="sxs-lookup"><span data-stu-id="593dd-104">`Terminate` should not be called until an [ICorDebugManagedCallback::ExitProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md) callback has been received for all processes being debugged.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ee08e-105">语法</span><span class="sxs-lookup"><span data-stu-id="ee08e-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="593dd-105">语法</span><span class="sxs-lookup"><span data-stu-id="593dd-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT Terminate ();  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="ee08e-106">备注</span><span class="sxs-lookup"><span data-stu-id="ee08e-106">Remarks</span></span>  
- <span data-ttu-id="ee08e-107">`Terminate` 时，必须调用`ICorDebug`不再需要对象。</span><span class="sxs-lookup"><span data-stu-id="ee08e-107">`Terminate` must be called when the `ICorDebug` object is no longer needed.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="593dd-106">备注</span><span class="sxs-lookup"><span data-stu-id="593dd-106">Remarks</span></span>  
+ <span data-ttu-id="593dd-107">`Terminate`当不再需要`ICorDebug`对象时, 必须调用。</span><span class="sxs-lookup"><span data-stu-id="593dd-107">`Terminate` must be called when the `ICorDebug` object is no longer needed.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ee08e-108">要求</span><span class="sxs-lookup"><span data-stu-id="ee08e-108">Requirements</span></span>  
- <span data-ttu-id="ee08e-109">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="ee08e-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="593dd-108">要求</span><span class="sxs-lookup"><span data-stu-id="593dd-108">Requirements</span></span>  
+ <span data-ttu-id="593dd-109">**适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="593dd-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ee08e-110">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="ee08e-110">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="593dd-110">**标头：** Cordebug.idl, Cordebug.idl</span><span class="sxs-lookup"><span data-stu-id="593dd-110">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="ee08e-111">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ee08e-111">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="593dd-111">**类库**CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="593dd-111">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="ee08e-112">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ee08e-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="593dd-112">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="593dd-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ee08e-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="ee08e-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="593dd-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="593dd-113">See also</span></span>
 
-- [<span data-ttu-id="ee08e-114">ICorDebug 接口</span><span class="sxs-lookup"><span data-stu-id="ee08e-114">ICorDebug Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+- [<span data-ttu-id="593dd-114">ICorDebug 接口</span><span class="sxs-lookup"><span data-stu-id="593dd-114">ICorDebug Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
