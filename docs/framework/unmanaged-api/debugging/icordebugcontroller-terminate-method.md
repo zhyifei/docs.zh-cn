@@ -17,20 +17,20 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 06c91a813a80af5cf09914ca134ac9935ed787c8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ee1c30809567097e67b6b1e40f5534429d748abd
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67750069"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964372"
 ---
-# <a name="icordebugcontrollerterminate-method"></a><span data-ttu-id="d72cd-102">ICorDebugController::Terminate 方法</span><span class="sxs-lookup"><span data-stu-id="d72cd-102">ICorDebugController::Terminate Method</span></span>
-<span data-ttu-id="d72cd-103">终止与指定的退出代码的过程。</span><span class="sxs-lookup"><span data-stu-id="d72cd-103">Terminates the process with the specified exit code.</span></span>  
+# <a name="icordebugcontrollerterminate-method"></a><span data-ttu-id="37eef-102">ICorDebugController::Terminate 方法</span><span class="sxs-lookup"><span data-stu-id="37eef-102">ICorDebugController::Terminate Method</span></span>
+<span data-ttu-id="37eef-103">用指定的退出代码终止进程。</span><span class="sxs-lookup"><span data-stu-id="37eef-103">Terminates the process with the specified exit code.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="d72cd-104">此方法是 Win32 的包装器`TerminateProcess`函数。</span><span class="sxs-lookup"><span data-stu-id="d72cd-104">This method is a wrapper for the Win32 `TerminateProcess` function.</span></span> <span data-ttu-id="d72cd-105">因此，`Terminate`在同一个使用退出代码的方式 Win32`TerminateProcess`函数使用它。</span><span class="sxs-lookup"><span data-stu-id="d72cd-105">Thus, `Terminate` uses the exit code in the same way that the Win32 `TerminateProcess` function uses it.</span></span>  
+> <span data-ttu-id="37eef-104">此方法是 Win32 `TerminateProcess`函数的包装器。</span><span class="sxs-lookup"><span data-stu-id="37eef-104">This method is a wrapper for the Win32 `TerminateProcess` function.</span></span> <span data-ttu-id="37eef-105">因此, `Terminate`使用退出代码的方式与 Win32 `TerminateProcess`函数使用的方式相同。</span><span class="sxs-lookup"><span data-stu-id="37eef-105">Thus, `Terminate` uses the exit code in the same way that the Win32 `TerminateProcess` function uses it.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d72cd-106">语法</span><span class="sxs-lookup"><span data-stu-id="d72cd-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="37eef-106">语法</span><span class="sxs-lookup"><span data-stu-id="37eef-106">Syntax</span></span>  
   
 ```cpp  
 HRESULT Terminate (  
@@ -38,23 +38,23 @@ HRESULT Terminate (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="d72cd-107">参数</span><span class="sxs-lookup"><span data-stu-id="d72cd-107">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="37eef-107">参数</span><span class="sxs-lookup"><span data-stu-id="37eef-107">Parameters</span></span>  
  `exitCode`  
- <span data-ttu-id="d72cd-108">[in]数字值，退出代码。</span><span class="sxs-lookup"><span data-stu-id="d72cd-108">[in] A numeric value that is the exit code.</span></span> <span data-ttu-id="d72cd-109">在 Winbase.h 中定义的有效数值。</span><span class="sxs-lookup"><span data-stu-id="d72cd-109">The valid numeric values are defined in Winbase.h.</span></span>  
+ <span data-ttu-id="37eef-108">中一个表示退出代码的数字值。</span><span class="sxs-lookup"><span data-stu-id="37eef-108">[in] A numeric value that is the exit code.</span></span> <span data-ttu-id="37eef-109">有效的数值是在 Winbase.h 中定义的。</span><span class="sxs-lookup"><span data-stu-id="37eef-109">The valid numeric values are defined in Winbase.h.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="d72cd-110">备注</span><span class="sxs-lookup"><span data-stu-id="d72cd-110">Remarks</span></span>  
- <span data-ttu-id="d72cd-111">如果该进程已停止时`Terminate`是调用，该过程应继续通过使用[icordebugcontroller:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md)方法，以便调试程序将会收到确认通过终止的[Icordebugmanagedcallback:: Exitprocess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md)或[icordebugmanagedcallback:: Exitappdomain](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitappdomain-method.md)回调。</span><span class="sxs-lookup"><span data-stu-id="d72cd-111">If the process is stopped when `Terminate` is called, the process should be continued by using the [ICorDebugController::Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) method so that the debugger receives confirmation of the termination through the [ICorDebugManagedCallback::ExitProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md) or [ICorDebugManagedCallback::ExitAppDomain](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitappdomain-method.md) callback.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="37eef-110">备注</span><span class="sxs-lookup"><span data-stu-id="37eef-110">Remarks</span></span>  
+ <span data-ttu-id="37eef-111">如果在调用时`Terminate`停止该进程, 则应使用[ICorDebugController:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md)方法继续此过程, 以便调试器通过[ICorDebugManagedCallback::ExitProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md)或[ICorDebugManagedCallback:: ExitAppDomain](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitappdomain-method.md)回调。</span><span class="sxs-lookup"><span data-stu-id="37eef-111">If the process is stopped when `Terminate` is called, the process should be continued by using the [ICorDebugController::Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) method so that the debugger receives confirmation of the termination through the [ICorDebugManagedCallback::ExitProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md) or [ICorDebugManagedCallback::ExitAppDomain](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitappdomain-method.md) callback.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="d72cd-112">应用程序域不实现此方法。</span><span class="sxs-lookup"><span data-stu-id="d72cd-112">This method is not implemented by an application domain.</span></span> <span data-ttu-id="d72cd-113">即，未实现在<xref:System.AppDomain>级别。</span><span class="sxs-lookup"><span data-stu-id="d72cd-113">That is, it is not implemented at the <xref:System.AppDomain> level.</span></span>  
+> <span data-ttu-id="37eef-112">此方法不是由应用程序域实现的。</span><span class="sxs-lookup"><span data-stu-id="37eef-112">This method is not implemented by an application domain.</span></span> <span data-ttu-id="37eef-113">也就是说, 它不是在<xref:System.AppDomain>级别实现的。</span><span class="sxs-lookup"><span data-stu-id="37eef-113">That is, it is not implemented at the <xref:System.AppDomain> level.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d72cd-114">要求</span><span class="sxs-lookup"><span data-stu-id="d72cd-114">Requirements</span></span>  
- <span data-ttu-id="d72cd-115">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="d72cd-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="37eef-114">要求</span><span class="sxs-lookup"><span data-stu-id="37eef-114">Requirements</span></span>  
+ <span data-ttu-id="37eef-115">**适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="37eef-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d72cd-116">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="d72cd-116">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="37eef-116">**标头：** Cordebug.idl, Cordebug.idl</span><span class="sxs-lookup"><span data-stu-id="37eef-116">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="d72cd-117">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d72cd-117">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="37eef-117">**类库**CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="37eef-117">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="d72cd-118">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d72cd-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="37eef-118">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="37eef-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d72cd-119">请参阅</span><span class="sxs-lookup"><span data-stu-id="d72cd-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="37eef-119">请参阅</span><span class="sxs-lookup"><span data-stu-id="37eef-119">See also</span></span>

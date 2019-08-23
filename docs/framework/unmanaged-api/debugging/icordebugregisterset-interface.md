@@ -16,42 +16,42 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7b0a5d80d984a3c696b178c4d8c936bd47354945
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6419a525a8a542295751defb97e67a83220730b2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61782871"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965067"
 ---
-# <a name="icordebugregisterset-interface"></a><span data-ttu-id="2edf7-102">ICorDebugRegisterSet 接口</span><span class="sxs-lookup"><span data-stu-id="2edf7-102">ICorDebugRegisterSet Interface</span></span>
-<span data-ttu-id="2edf7-103">表示当前正在执行代码的计算机上可用的寄存器组。</span><span class="sxs-lookup"><span data-stu-id="2edf7-103">Represents the set of registers available on the computer that is currently executing code.</span></span>  
+# <a name="icordebugregisterset-interface"></a><span data-ttu-id="c66f4-102">ICorDebugRegisterSet 接口</span><span class="sxs-lookup"><span data-stu-id="c66f4-102">ICorDebugRegisterSet Interface</span></span>
+<span data-ttu-id="c66f4-103">表示在当前正在执行代码的计算机上可用的寄存器集。</span><span class="sxs-lookup"><span data-stu-id="c66f4-103">Represents the set of registers available on the computer that is currently executing code.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="2edf7-104">方法</span><span class="sxs-lookup"><span data-stu-id="2edf7-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="c66f4-104">方法</span><span class="sxs-lookup"><span data-stu-id="c66f4-104">Methods</span></span>  
   
-|<span data-ttu-id="2edf7-105">方法</span><span class="sxs-lookup"><span data-stu-id="2edf7-105">Method</span></span>|<span data-ttu-id="2edf7-106">描述</span><span class="sxs-lookup"><span data-stu-id="2edf7-106">Description</span></span>|  
+|<span data-ttu-id="c66f4-105">方法</span><span class="sxs-lookup"><span data-stu-id="c66f4-105">Method</span></span>|<span data-ttu-id="c66f4-106">描述</span><span class="sxs-lookup"><span data-stu-id="c66f4-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="2edf7-107">GetRegisters 方法</span><span class="sxs-lookup"><span data-stu-id="2edf7-107">GetRegisters Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-getregisters-method.md)|<span data-ttu-id="2edf7-108">获取每个寄存器的值 （上当前正在执行代码的计算机） 指定的位掩码。</span><span class="sxs-lookup"><span data-stu-id="2edf7-108">Gets the value of each register (on the computer that is currently executing code) that is specified by the bit mask.</span></span>|  
-|[<span data-ttu-id="2edf7-109">GetRegistersAvailable 方法</span><span class="sxs-lookup"><span data-stu-id="2edf7-109">GetRegistersAvailable Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-getregistersavailable-method.md)|<span data-ttu-id="2edf7-110">获取的位掩码，指示用于在此注册`ICorDebugRegisterSet`当前可用。</span><span class="sxs-lookup"><span data-stu-id="2edf7-110">Gets a bit mask indicating which registers in this `ICorDebugRegisterSet` are currently available.</span></span>|  
-|[<span data-ttu-id="2edf7-111">GetThreadContext 方法</span><span class="sxs-lookup"><span data-stu-id="2edf7-111">GetThreadContext Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-getthreadcontext-method.md)|<span data-ttu-id="2edf7-112">获取当前线程的上下文。</span><span class="sxs-lookup"><span data-stu-id="2edf7-112">Gets the context of the current thread.</span></span>|  
-|[<span data-ttu-id="2edf7-113">SetRegisters 方法</span><span class="sxs-lookup"><span data-stu-id="2edf7-113">SetRegisters Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-setregisters-method.md)|<span data-ttu-id="2edf7-114">尚未实现对.NET Framework 2.0 版。</span><span class="sxs-lookup"><span data-stu-id="2edf7-114">Not implemented for the .NET Framework version 2.0.</span></span>|  
-|[<span data-ttu-id="2edf7-115">SetThreadContext 方法</span><span class="sxs-lookup"><span data-stu-id="2edf7-115">SetThreadContext Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-setthreadcontext-method.md)|<span data-ttu-id="2edf7-116">尚未实现对.NET Framework 2.0。</span><span class="sxs-lookup"><span data-stu-id="2edf7-116">Not implemented for the .NET Framework 2.0.</span></span>|  
+|[<span data-ttu-id="c66f4-107">GetRegisters 方法</span><span class="sxs-lookup"><span data-stu-id="c66f4-107">GetRegisters Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-getregisters-method.md)|<span data-ttu-id="c66f4-108">获取位掩码指定的每个寄存器的值 (在当前正在执行代码的计算机上)。</span><span class="sxs-lookup"><span data-stu-id="c66f4-108">Gets the value of each register (on the computer that is currently executing code) that is specified by the bit mask.</span></span>|  
+|[<span data-ttu-id="c66f4-109">GetRegistersAvailable 方法</span><span class="sxs-lookup"><span data-stu-id="c66f4-109">GetRegistersAvailable Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-getregistersavailable-method.md)|<span data-ttu-id="c66f4-110">获取一个位掩码, 指示此`ICorDebugRegisterSet`中的哪些寄存器当前可用。</span><span class="sxs-lookup"><span data-stu-id="c66f4-110">Gets a bit mask indicating which registers in this `ICorDebugRegisterSet` are currently available.</span></span>|  
+|[<span data-ttu-id="c66f4-111">GetThreadContext 方法</span><span class="sxs-lookup"><span data-stu-id="c66f4-111">GetThreadContext Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-getthreadcontext-method.md)|<span data-ttu-id="c66f4-112">获取当前线程的上下文。</span><span class="sxs-lookup"><span data-stu-id="c66f4-112">Gets the context of the current thread.</span></span>|  
+|[<span data-ttu-id="c66f4-113">SetRegisters 方法</span><span class="sxs-lookup"><span data-stu-id="c66f4-113">SetRegisters Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-setregisters-method.md)|<span data-ttu-id="c66f4-114">未实现 .NET Framework 版本2.0。</span><span class="sxs-lookup"><span data-stu-id="c66f4-114">Not implemented for the .NET Framework version 2.0.</span></span>|  
+|[<span data-ttu-id="c66f4-115">SetThreadContext 方法</span><span class="sxs-lookup"><span data-stu-id="c66f4-115">SetThreadContext Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-setthreadcontext-method.md)|<span data-ttu-id="c66f4-116">未实现 2.0 .NET Framework。</span><span class="sxs-lookup"><span data-stu-id="c66f4-116">Not implemented for the .NET Framework 2.0.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="2edf7-117">备注</span><span class="sxs-lookup"><span data-stu-id="2edf7-117">Remarks</span></span>  
- <span data-ttu-id="2edf7-118">`ICorDebugRegisterSet`接口支持仅 32 位寄存器。</span><span class="sxs-lookup"><span data-stu-id="2edf7-118">The `ICorDebugRegisterSet` interface supports only 32-bit registers.</span></span> <span data-ttu-id="2edf7-119">使用[ICorDebugRegisterSet2](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md)需要其他寄存器例如 IA-64 的平台上的接口。</span><span class="sxs-lookup"><span data-stu-id="2edf7-119">Use the [ICorDebugRegisterSet2](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md) interface on platforms such as IA-64 that require additional registers.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c66f4-117">备注</span><span class="sxs-lookup"><span data-stu-id="c66f4-117">Remarks</span></span>  
+ <span data-ttu-id="c66f4-118">`ICorDebugRegisterSet`接口仅支持32位寄存器。</span><span class="sxs-lookup"><span data-stu-id="c66f4-118">The `ICorDebugRegisterSet` interface supports only 32-bit registers.</span></span> <span data-ttu-id="c66f4-119">使用需要额外注册的平台 (如 IA-64) 上的[ICorDebugRegisterSet2](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md)接口。</span><span class="sxs-lookup"><span data-stu-id="c66f4-119">Use the [ICorDebugRegisterSet2](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md) interface on platforms such as IA-64 that require additional registers.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="2edf7-120">此接口不支持跨计算机或跨进程远程调用。</span><span class="sxs-lookup"><span data-stu-id="2edf7-120">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+> <span data-ttu-id="c66f4-120">此接口不支持跨计算机或跨进程远程调用。</span><span class="sxs-lookup"><span data-stu-id="c66f4-120">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="2edf7-121">要求</span><span class="sxs-lookup"><span data-stu-id="2edf7-121">Requirements</span></span>  
- <span data-ttu-id="2edf7-122">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="2edf7-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c66f4-121">要求</span><span class="sxs-lookup"><span data-stu-id="c66f4-121">Requirements</span></span>  
+ <span data-ttu-id="c66f4-122">**适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="c66f4-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="2edf7-123">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="2edf7-123">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="c66f4-123">**标头：** Cordebug.idl, Cordebug.idl</span><span class="sxs-lookup"><span data-stu-id="c66f4-123">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="2edf7-124">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2edf7-124">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="c66f4-124">**类库**CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c66f4-124">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="2edf7-125">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2edf7-125">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="c66f4-125">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c66f4-125">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2edf7-126">请参阅</span><span class="sxs-lookup"><span data-stu-id="2edf7-126">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c66f4-126">请参阅</span><span class="sxs-lookup"><span data-stu-id="c66f4-126">See also</span></span>
 
-- [<span data-ttu-id="2edf7-127">调试接口</span><span class="sxs-lookup"><span data-stu-id="2edf7-127">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [<span data-ttu-id="2edf7-128">ICorDebugRegisterSet2 接口</span><span class="sxs-lookup"><span data-stu-id="2edf7-128">ICorDebugRegisterSet2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md)
+- [<span data-ttu-id="c66f4-127">调试接口</span><span class="sxs-lookup"><span data-stu-id="c66f4-127">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="c66f4-128">ICorDebugRegisterSet2 接口</span><span class="sxs-lookup"><span data-stu-id="c66f4-128">ICorDebugRegisterSet2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md)

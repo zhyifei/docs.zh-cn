@@ -8,30 +8,30 @@ helpviewer_keywords:
 - shortcut menus [Windows Forms], ContextMenuStrip control [Windows Forms]
 - ContextMenuStrip control [Windows Forms], about ContextMenuStrip control
 ms.assetid: 9787cdb3-88f1-4198-972f-eefd9524ce39
-ms.openlocfilehash: 23699c67de616ba3f535d2527a315aebe7448d3f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e4a6add5297ba7db606ca1891e9279141f8d6d20
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61955982"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962160"
 ---
-# <a name="contextmenustrip-control-overview"></a><span data-ttu-id="1c72b-102">ContextMenuStrip 控件概述</span><span class="sxs-lookup"><span data-stu-id="1c72b-102">ContextMenuStrip Control Overview</span></span>
+# <a name="contextmenustrip-control-overview"></a><span data-ttu-id="91e3b-102">ContextMenuStrip 控件概述</span><span class="sxs-lookup"><span data-stu-id="91e3b-102">ContextMenuStrip Control Overview</span></span>
 > [!NOTE]
->  <span data-ttu-id="1c72b-103"><xref:System.Windows.Forms.ContextMenuStrip>控制取代并添加了功能<xref:System.Windows.Forms.ContextMenu>控制; 但是，<xref:System.Windows.Forms.ContextMenu>以备向后兼容性和将来使用保留控件，如果您选择。</span><span class="sxs-lookup"><span data-stu-id="1c72b-103">The <xref:System.Windows.Forms.ContextMenuStrip> control replaces and adds functionality to the <xref:System.Windows.Forms.ContextMenu> control; however, the <xref:System.Windows.Forms.ContextMenu> control is retained for backward compatibility and future use if you choose.</span></span>  
+> <span data-ttu-id="91e3b-103">控件将替换并添加<xref:System.Windows.Forms.ContextMenu>到<xref:System.Windows.Forms.ContextMenu>控件中的功能; 但是, 会保留控件以实现向后兼容性和将来使用 (如果你选择)。 <xref:System.Windows.Forms.ContextMenuStrip></span><span class="sxs-lookup"><span data-stu-id="91e3b-103">The <xref:System.Windows.Forms.ContextMenuStrip> control replaces and adds functionality to the <xref:System.Windows.Forms.ContextMenu> control; however, the <xref:System.Windows.Forms.ContextMenu> control is retained for backward compatibility and future use if you choose.</span></span>  
   
- <span data-ttu-id="1c72b-104">当用户单击鼠标右键，快捷菜单，也称为上下文菜单中，将出现在鼠标位置。</span><span class="sxs-lookup"><span data-stu-id="1c72b-104">Shortcut menus, also called context menus, appear at the mouse position when the user clicks the right mouse button.</span></span> <span data-ttu-id="1c72b-105">快捷方式*菜单*提供用于客户端区域或鼠标指针位置的控件的选项。</span><span class="sxs-lookup"><span data-stu-id="1c72b-105">Shortcut *menus* provide options for the client area or the control at the mouse pointer location.</span></span>  
+ <span data-ttu-id="91e3b-104">当用户单击鼠标右键时, 快捷菜单 (也称为上下文菜单) 出现在鼠标位置。</span><span class="sxs-lookup"><span data-stu-id="91e3b-104">Shortcut menus, also called context menus, appear at the mouse position when the user clicks the right mouse button.</span></span> <span data-ttu-id="91e3b-105">快捷*菜单*为工作区或鼠标指针位置的控件提供选项。</span><span class="sxs-lookup"><span data-stu-id="91e3b-105">Shortcut *menus* provide options for the client area or the control at the mouse pointer location.</span></span>  
   
- <span data-ttu-id="1c72b-106"><xref:System.Windows.Forms.ContextMenuStrip>控件旨在与新无缝<xref:System.Windows.Forms.ToolStrip>和相关的控件，但您可以将相关联<xref:System.Windows.Forms.ContextMenuStrip>与其他控件一样轻松。</span><span class="sxs-lookup"><span data-stu-id="1c72b-106">The <xref:System.Windows.Forms.ContextMenuStrip> control is designed to work seamlessly with the new <xref:System.Windows.Forms.ToolStrip> and related controls, but you can associate a <xref:System.Windows.Forms.ContextMenuStrip> with other controls just as easily.</span></span>  
+ <span data-ttu-id="91e3b-106">控件设计为与新<xref:System.Windows.Forms.ToolStrip>的和相关的控件无缝协作, <xref:System.Windows.Forms.ContextMenuStrip>但你也可以轻松地将与其他控件相关联。 <xref:System.Windows.Forms.ContextMenuStrip></span><span class="sxs-lookup"><span data-stu-id="91e3b-106">The <xref:System.Windows.Forms.ContextMenuStrip> control is designed to work seamlessly with the new <xref:System.Windows.Forms.ToolStrip> and related controls, but you can associate a <xref:System.Windows.Forms.ContextMenuStrip> with other controls just as easily.</span></span>  
   
- <span data-ttu-id="1c72b-107">下表显示了重要<xref:System.Windows.Forms.ContextMenuStrip>伴生类。</span><span class="sxs-lookup"><span data-stu-id="1c72b-107">The following table shows the important <xref:System.Windows.Forms.ContextMenuStrip> companion classes.</span></span>  
+ <span data-ttu-id="91e3b-107">下表显示了重要<xref:System.Windows.Forms.ContextMenuStrip>的伴生类。</span><span class="sxs-lookup"><span data-stu-id="91e3b-107">The following table shows the important <xref:System.Windows.Forms.ContextMenuStrip> companion classes.</span></span>  
   
-|<span data-ttu-id="1c72b-108">类</span><span class="sxs-lookup"><span data-stu-id="1c72b-108">Class</span></span>|<span data-ttu-id="1c72b-109">描述</span><span class="sxs-lookup"><span data-stu-id="1c72b-109">Description</span></span>|  
+|<span data-ttu-id="91e3b-108">类</span><span class="sxs-lookup"><span data-stu-id="91e3b-108">Class</span></span>|<span data-ttu-id="91e3b-109">描述</span><span class="sxs-lookup"><span data-stu-id="91e3b-109">Description</span></span>|  
 |-----------|-----------------|  
-|<xref:System.Windows.Forms.ToolStripMenuItem>|<span data-ttu-id="1c72b-110">表示在显示的可选选项<xref:System.Windows.Forms.MenuStrip>或<xref:System.Windows.Forms.ContextMenuStrip>。</span><span class="sxs-lookup"><span data-stu-id="1c72b-110">Represents a selectable option displayed on a <xref:System.Windows.Forms.MenuStrip> or <xref:System.Windows.Forms.ContextMenuStrip>.</span></span>|  
-|<xref:System.Windows.Forms.ToolStripDropDown>|<span data-ttu-id="1c72b-111">表示使用户能够从用户单击时显示的列表中选择单个项的控件<xref:System.Windows.Forms.ToolStripDropDownButton>或更高级别的菜单项。</span><span class="sxs-lookup"><span data-stu-id="1c72b-111">Represents a control that enables the user to select a single item from a list that is displayed when the user clicks a <xref:System.Windows.Forms.ToolStripDropDownButton> or a higher-level menu item.</span></span>|  
-|<xref:System.Windows.Forms.ToolStripDropDownItem>|<span data-ttu-id="1c72b-112">提供基本功能，用于控件派生自<xref:System.Windows.Forms.ToolStripItem>显示下拉项在单击时。</span><span class="sxs-lookup"><span data-stu-id="1c72b-112">Provides basic functionality for controls derived from <xref:System.Windows.Forms.ToolStripItem> that display drop-down items when clicked.</span></span>|  
+|<xref:System.Windows.Forms.ToolStripMenuItem>|<span data-ttu-id="91e3b-110">表示在<xref:System.Windows.Forms.MenuStrip>或<xref:System.Windows.Forms.ContextMenuStrip>上显示的可选择选项。</span><span class="sxs-lookup"><span data-stu-id="91e3b-110">Represents a selectable option displayed on a <xref:System.Windows.Forms.MenuStrip> or <xref:System.Windows.Forms.ContextMenuStrip>.</span></span>|  
+|<xref:System.Windows.Forms.ToolStripDropDown>|<span data-ttu-id="91e3b-111">表示一个控件, 该控件使用户能够从列表中选择单个项 (当用户单击<xref:System.Windows.Forms.ToolStripDropDownButton>或更高级别菜单项时显示)。</span><span class="sxs-lookup"><span data-stu-id="91e3b-111">Represents a control that enables the user to select a single item from a list that is displayed when the user clicks a <xref:System.Windows.Forms.ToolStripDropDownButton> or a higher-level menu item.</span></span>|  
+|<xref:System.Windows.Forms.ToolStripDropDownItem>|<span data-ttu-id="91e3b-112">为在单击时显示<xref:System.Windows.Forms.ToolStripItem>的下拉项的控件提供基本功能。</span><span class="sxs-lookup"><span data-stu-id="91e3b-112">Provides basic functionality for controls derived from <xref:System.Windows.Forms.ToolStripItem> that display drop-down items when clicked.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="1c72b-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="1c72b-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="91e3b-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="91e3b-113">See also</span></span>
 
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.MenuStrip>

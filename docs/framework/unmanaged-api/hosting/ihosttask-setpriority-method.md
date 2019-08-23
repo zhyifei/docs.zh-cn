@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cf9ecdeb4df6210805490586f1818298025fc036
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 533e3d715b46b4ef6d473795a010fa3ad297ded2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67749949"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69913748"
 ---
-# <a name="ihosttasksetpriority-method"></a><span data-ttu-id="3a729-102">IHostTask::SetPriority 方法</span><span class="sxs-lookup"><span data-stu-id="3a729-102">IHostTask::SetPriority Method</span></span>
-<span data-ttu-id="3a729-103">请求主机调整线程优先级级别表示由当前的任务[IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)实例。</span><span class="sxs-lookup"><span data-stu-id="3a729-103">Requests that the host adjust the thread priority level for the task represented by the current [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) instance.</span></span>  
+# <a name="ihosttasksetpriority-method"></a><span data-ttu-id="295b0-102">IHostTask::SetPriority 方法</span><span class="sxs-lookup"><span data-stu-id="295b0-102">IHostTask::SetPriority Method</span></span>
+<span data-ttu-id="295b0-103">请求宿主调整当前[IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)实例所表示的任务的线程优先级别。</span><span class="sxs-lookup"><span data-stu-id="295b0-103">Requests that the host adjust the thread priority level for the task represented by the current [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) instance.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3a729-104">语法</span><span class="sxs-lookup"><span data-stu-id="3a729-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="295b0-104">语法</span><span class="sxs-lookup"><span data-stu-id="295b0-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT SetPriority (  
@@ -35,59 +35,59 @@ HRESULT SetPriority (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="3a729-105">参数</span><span class="sxs-lookup"><span data-stu-id="3a729-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="295b0-105">参数</span><span class="sxs-lookup"><span data-stu-id="295b0-105">Parameters</span></span>  
  `newPriority`  
- <span data-ttu-id="3a729-106">[in]一个整数，表示由当前任务的请求的线程优先级值`IHostTask`实例。</span><span class="sxs-lookup"><span data-stu-id="3a729-106">[in] An integer that represents the requested thread priority value for the task represented by the current `IHostTask` instance.</span></span>  
+ <span data-ttu-id="295b0-106">中一个整数, 表示当前`IHostTask`实例表示的任务所请求的线程优先级值。</span><span class="sxs-lookup"><span data-stu-id="295b0-106">[in] An integer that represents the requested thread priority value for the task represented by the current `IHostTask` instance.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="3a729-107">返回值</span><span class="sxs-lookup"><span data-stu-id="3a729-107">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="295b0-107">返回值</span><span class="sxs-lookup"><span data-stu-id="295b0-107">Return Value</span></span>  
   
-|<span data-ttu-id="3a729-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="3a729-108">HRESULT</span></span>|<span data-ttu-id="3a729-109">描述</span><span class="sxs-lookup"><span data-stu-id="3a729-109">Description</span></span>|  
+|<span data-ttu-id="295b0-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="295b0-108">HRESULT</span></span>|<span data-ttu-id="295b0-109">描述</span><span class="sxs-lookup"><span data-stu-id="295b0-109">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="3a729-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="3a729-110">S_OK</span></span>|<span data-ttu-id="3a729-111">`SetPriority` 已成功返回。</span><span class="sxs-lookup"><span data-stu-id="3a729-111">`SetPriority` returned successfully.</span></span>|  
-|<span data-ttu-id="3a729-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="3a729-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="3a729-113">公共语言运行时 (CLR) 尚未加载到进程中，或处于不能运行托管的代码或已成功处理调用的状态。</span><span class="sxs-lookup"><span data-stu-id="3a729-113">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="3a729-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="3a729-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="3a729-115">呼叫已超时。</span><span class="sxs-lookup"><span data-stu-id="3a729-115">The call timed out.</span></span>|  
-|<span data-ttu-id="3a729-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="3a729-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="3a729-117">调用方不拥有该锁。</span><span class="sxs-lookup"><span data-stu-id="3a729-117">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="3a729-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="3a729-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="3a729-119">事件已取消时被阻塞的线程或纤程正在等待它。</span><span class="sxs-lookup"><span data-stu-id="3a729-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="3a729-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="3a729-120">E_FAIL</span></span>|<span data-ttu-id="3a729-121">发生未知的灾难性故障。</span><span class="sxs-lookup"><span data-stu-id="3a729-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="3a729-122">如果某方法返回 E_FAIL，CLR 不再在进程内可用。</span><span class="sxs-lookup"><span data-stu-id="3a729-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="3a729-123">对托管方法的后续调用返回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="3a729-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="295b0-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="295b0-110">S_OK</span></span>|<span data-ttu-id="295b0-111">`SetPriority`已成功返回。</span><span class="sxs-lookup"><span data-stu-id="295b0-111">`SetPriority` returned successfully.</span></span>|  
+|<span data-ttu-id="295b0-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="295b0-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="295b0-113">公共语言运行时 (CLR) 未加载到进程中, 或 CLR 处于无法运行托管代码或成功处理调用的状态。</span><span class="sxs-lookup"><span data-stu-id="295b0-113">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="295b0-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="295b0-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="295b0-115">调用超时。</span><span class="sxs-lookup"><span data-stu-id="295b0-115">The call timed out.</span></span>|  
+|<span data-ttu-id="295b0-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="295b0-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="295b0-117">调用方不拥有该锁。</span><span class="sxs-lookup"><span data-stu-id="295b0-117">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="295b0-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="295b0-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="295b0-119">已阻止的线程或纤程正在等待某个事件时, 该事件被取消。</span><span class="sxs-lookup"><span data-stu-id="295b0-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="295b0-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="295b0-120">E_FAIL</span></span>|<span data-ttu-id="295b0-121">发生未知的灾难性故障。</span><span class="sxs-lookup"><span data-stu-id="295b0-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="295b0-122">当方法返回 E_FAIL 时, CLR 在该进程内将不再可用。</span><span class="sxs-lookup"><span data-stu-id="295b0-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="295b0-123">对宿主方法的后续调用会返回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="295b0-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="3a729-124">备注</span><span class="sxs-lookup"><span data-stu-id="3a729-124">Remarks</span></span>  
- <span data-ttu-id="3a729-125">线程授予处理使用部分基于线程的优先级级别的轮循机制系统的时间。</span><span class="sxs-lookup"><span data-stu-id="3a729-125">Threads are granted processing time using a round-robin system that is partly based on a thread's priority level.</span></span> <span data-ttu-id="3a729-126">`SetPriority` 使 CLR 能够设置当前任务的线程优先级别。</span><span class="sxs-lookup"><span data-stu-id="3a729-126">`SetPriority` allows the CLR to set that thread priority level for the current task.</span></span> <span data-ttu-id="3a729-127">以下`newPriority`支持值。</span><span class="sxs-lookup"><span data-stu-id="3a729-127">The following `newPriority` values are supported.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="295b0-124">备注</span><span class="sxs-lookup"><span data-stu-id="295b0-124">Remarks</span></span>  
+ <span data-ttu-id="295b0-125">将使用部分基于线程优先级别的轮循机制为线程授予处理时间。</span><span class="sxs-lookup"><span data-stu-id="295b0-125">Threads are granted processing time using a round-robin system that is partly based on a thread's priority level.</span></span> <span data-ttu-id="295b0-126">`SetPriority`允许 CLR 为当前任务设置该线程优先级别。</span><span class="sxs-lookup"><span data-stu-id="295b0-126">`SetPriority` allows the CLR to set that thread priority level for the current task.</span></span> <span data-ttu-id="295b0-127">支持以下`newPriority`值。</span><span class="sxs-lookup"><span data-stu-id="295b0-127">The following `newPriority` values are supported.</span></span>  
   
-- <span data-ttu-id="3a729-128">THREAD_PRIORITY_ABOVE_NORMAL</span><span class="sxs-lookup"><span data-stu-id="3a729-128">THREAD_PRIORITY_ABOVE_NORMAL</span></span>  
+- <span data-ttu-id="295b0-128">THREAD_PRIORITY_ABOVE_NORMAL</span><span class="sxs-lookup"><span data-stu-id="295b0-128">THREAD_PRIORITY_ABOVE_NORMAL</span></span>  
   
-- <span data-ttu-id="3a729-129">THREAD_PRIORITY_BELOW_NORMAL</span><span class="sxs-lookup"><span data-stu-id="3a729-129">THREAD_PRIORITY_BELOW_NORMAL</span></span>  
+- <span data-ttu-id="295b0-129">THREAD_PRIORITY_BELOW_NORMAL</span><span class="sxs-lookup"><span data-stu-id="295b0-129">THREAD_PRIORITY_BELOW_NORMAL</span></span>  
   
-- <span data-ttu-id="3a729-130">THREAD_PRIORITY_HIGHEST</span><span class="sxs-lookup"><span data-stu-id="3a729-130">THREAD_PRIORITY_HIGHEST</span></span>  
+- <span data-ttu-id="295b0-130">THREAD_PRIORITY_HIGHEST</span><span class="sxs-lookup"><span data-stu-id="295b0-130">THREAD_PRIORITY_HIGHEST</span></span>  
   
-- <span data-ttu-id="3a729-131">THREAD_PRIORITY_IDLE</span><span class="sxs-lookup"><span data-stu-id="3a729-131">THREAD_PRIORITY_IDLE</span></span>  
+- <span data-ttu-id="295b0-131">THREAD_PRIORITY_IDLE</span><span class="sxs-lookup"><span data-stu-id="295b0-131">THREAD_PRIORITY_IDLE</span></span>  
   
-- <span data-ttu-id="3a729-132">THREAD_PRIORITY_LOWEST</span><span class="sxs-lookup"><span data-stu-id="3a729-132">THREAD_PRIORITY_LOWEST</span></span>  
+- <span data-ttu-id="295b0-132">THREAD_PRIORITY_LOWEST</span><span class="sxs-lookup"><span data-stu-id="295b0-132">THREAD_PRIORITY_LOWEST</span></span>  
   
-- <span data-ttu-id="3a729-133">THREAD_PRIORITY_NORMAL</span><span class="sxs-lookup"><span data-stu-id="3a729-133">THREAD_PRIORITY_NORMAL</span></span>  
+- <span data-ttu-id="295b0-133">THREAD_PRIORITY_NORMAL</span><span class="sxs-lookup"><span data-stu-id="295b0-133">THREAD_PRIORITY_NORMAL</span></span>  
   
-- <span data-ttu-id="3a729-134">THREAD_PRIORITY_TIME_CRITICAL</span><span class="sxs-lookup"><span data-stu-id="3a729-134">THREAD_PRIORITY_TIME_CRITICAL</span></span>  
+- <span data-ttu-id="295b0-134">THREAD_PRIORITY_TIME_CRITICAL</span><span class="sxs-lookup"><span data-stu-id="295b0-134">THREAD_PRIORITY_TIME_CRITICAL</span></span>  
   
- <span data-ttu-id="3a729-135">CLR 调用`SetPriority`时的值<xref:System.Threading.Thread.Priority%2A?displayProperty=nameWithType>修改由用户代码。</span><span class="sxs-lookup"><span data-stu-id="3a729-135">The CLR calls `SetPriority` when the value of the <xref:System.Threading.Thread.Priority%2A?displayProperty=nameWithType> is modified by user code.</span></span> <span data-ttu-id="3a729-136">主机可以定义其自己的线程优先级分配算法，并且可以自由地忽略此请求。</span><span class="sxs-lookup"><span data-stu-id="3a729-136">A host can define its own algorithms for thread priority assignment, and is free to ignore this request.</span></span>  
+ <span data-ttu-id="295b0-135">当用户代码`SetPriority`修改了的<xref:System.Threading.Thread.Priority%2A?displayProperty=nameWithType>值时, CLR 将调用。</span><span class="sxs-lookup"><span data-stu-id="295b0-135">The CLR calls `SetPriority` when the value of the <xref:System.Threading.Thread.Priority%2A?displayProperty=nameWithType> is modified by user code.</span></span> <span data-ttu-id="295b0-136">宿主可以定义自己的线程优先级分配算法, 并可以随意忽略此请求。</span><span class="sxs-lookup"><span data-stu-id="295b0-136">A host can define its own algorithms for thread priority assignment, and is free to ignore this request.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="3a729-137">`SetPriority` 不报告线程优先级别是否已更改。</span><span class="sxs-lookup"><span data-stu-id="3a729-137">`SetPriority` does not report whether the thread priority level was changed.</span></span> <span data-ttu-id="3a729-138">调用[ihosttask:: Getpriority](../../../../docs/framework/unmanaged-api/hosting/ihosttask-getpriority-method.md)来确定任务的线程优先级别的值。</span><span class="sxs-lookup"><span data-stu-id="3a729-138">Call [IHostTask::GetPriority](../../../../docs/framework/unmanaged-api/hosting/ihosttask-getpriority-method.md) to determine the value of the task's thread priority level.</span></span>  
+> <span data-ttu-id="295b0-137">`SetPriority`不会报告线程优先级别是否已更改。</span><span class="sxs-lookup"><span data-stu-id="295b0-137">`SetPriority` does not report whether the thread priority level was changed.</span></span> <span data-ttu-id="295b0-138">调用[IHostTask:: GetPriority](../../../../docs/framework/unmanaged-api/hosting/ihosttask-getpriority-method.md)以确定任务的线程优先级别的值。</span><span class="sxs-lookup"><span data-stu-id="295b0-138">Call [IHostTask::GetPriority](../../../../docs/framework/unmanaged-api/hosting/ihosttask-getpriority-method.md) to determine the value of the task's thread priority level.</span></span>  
   
- <span data-ttu-id="3a729-139">线程优先级别值定义由 Win32`SetThreadPriority`函数。</span><span class="sxs-lookup"><span data-stu-id="3a729-139">Thread priority level values are defined by the Win32 `SetThreadPriority` function.</span></span> <span data-ttu-id="3a729-140">有关线程优先级的详细信息，请参阅 Windows 平台文档。</span><span class="sxs-lookup"><span data-stu-id="3a729-140">For more information about thread priority, see the Windows Platform documentation.</span></span>  
+ <span data-ttu-id="295b0-139">线程优先级别值由 Win32 `SetThreadPriority`函数定义。</span><span class="sxs-lookup"><span data-stu-id="295b0-139">Thread priority level values are defined by the Win32 `SetThreadPriority` function.</span></span> <span data-ttu-id="295b0-140">有关线程优先级的详细信息, 请参阅 Windows 平台文档。</span><span class="sxs-lookup"><span data-stu-id="295b0-140">For more information about thread priority, see the Windows Platform documentation.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3a729-141">要求</span><span class="sxs-lookup"><span data-stu-id="3a729-141">Requirements</span></span>  
- <span data-ttu-id="3a729-142">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="3a729-142">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="295b0-141">要求</span><span class="sxs-lookup"><span data-stu-id="295b0-141">Requirements</span></span>  
+ <span data-ttu-id="295b0-142">**适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="295b0-142">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3a729-143">**标头：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="3a729-143">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="295b0-143">**标头：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="295b0-143">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="3a729-144">**库：** 包含为 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="3a729-144">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="295b0-144">**类库**作为资源包括在 Mscoree.dll 中</span><span class="sxs-lookup"><span data-stu-id="295b0-144">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="3a729-145">**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3a729-145">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="295b0-145">**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="295b0-145">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3a729-146">请参阅</span><span class="sxs-lookup"><span data-stu-id="3a729-146">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="295b0-146">请参阅</span><span class="sxs-lookup"><span data-stu-id="295b0-146">See also</span></span>
 
 - <xref:System.Threading.Thread>
-- [<span data-ttu-id="3a729-147">ICLRTask 接口</span><span class="sxs-lookup"><span data-stu-id="3a729-147">ICLRTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
-- [<span data-ttu-id="3a729-148">ICLRTaskManager 接口</span><span class="sxs-lookup"><span data-stu-id="3a729-148">ICLRTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
-- [<span data-ttu-id="3a729-149">IHostTask 接口</span><span class="sxs-lookup"><span data-stu-id="3a729-149">IHostTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
-- [<span data-ttu-id="3a729-150">GetPriority 方法</span><span class="sxs-lookup"><span data-stu-id="3a729-150">GetPriority Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttask-getpriority-method.md)
-- [<span data-ttu-id="3a729-151">IHostTaskManager 接口</span><span class="sxs-lookup"><span data-stu-id="3a729-151">IHostTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)
+- [<span data-ttu-id="295b0-147">ICLRTask 接口</span><span class="sxs-lookup"><span data-stu-id="295b0-147">ICLRTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
+- [<span data-ttu-id="295b0-148">ICLRTaskManager 接口</span><span class="sxs-lookup"><span data-stu-id="295b0-148">ICLRTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
+- [<span data-ttu-id="295b0-149">IHostTask 接口</span><span class="sxs-lookup"><span data-stu-id="295b0-149">IHostTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
+- [<span data-ttu-id="295b0-150">GetPriority 方法</span><span class="sxs-lookup"><span data-stu-id="295b0-150">GetPriority Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttask-getpriority-method.md)
+- [<span data-ttu-id="295b0-151">IHostTaskManager 接口</span><span class="sxs-lookup"><span data-stu-id="295b0-151">IHostTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)

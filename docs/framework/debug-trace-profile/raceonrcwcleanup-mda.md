@@ -11,32 +11,32 @@ helpviewer_keywords:
 ms.assetid: bee1e9b1-50a8-4c89-9cd9-7dd6b2458187
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e6400986d58fcb5f11d06e371a1b58f5256f4c62
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: ca3b28d0d27af0a752de894f5856b76939b01e09
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629367"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69967244"
 ---
-# <a name="raceonrcwcleanup-mda"></a><span data-ttu-id="0abd0-102">raceOnRCWCleanup MDA</span><span class="sxs-lookup"><span data-stu-id="0abd0-102">raceOnRCWCleanup MDA</span></span>
-<span data-ttu-id="0abd0-103">当使用命令（如 <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A?displayProperty=nameWithType> 方法）发出一个调用来发布[运行时可调用包装](../../../docs/standard/native-interop/runtime-callable-wrapper.md) (RCW) 时，如果公共语言运行时 (CLR) 检测到该包装正在使用中，则激活 `raceOnRCWCleanup` 托管调试助手 (MDA)。</span><span class="sxs-lookup"><span data-stu-id="0abd0-103">The `raceOnRCWCleanup` managed debugging assistant (MDA) is activated when the common language runtime (CLR) detects that a [Runtime Callable Wrapper](../../../docs/standard/native-interop/runtime-callable-wrapper.md) (RCW) is in use when a call to release it is made using a command such as the <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A?displayProperty=nameWithType> method.</span></span>  
+# <a name="raceonrcwcleanup-mda"></a><span data-ttu-id="f20bf-102">raceOnRCWCleanup MDA</span><span class="sxs-lookup"><span data-stu-id="f20bf-102">raceOnRCWCleanup MDA</span></span>
+<span data-ttu-id="f20bf-103">当使用命令（如 <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A?displayProperty=nameWithType> 方法）发出一个调用来发布[运行时可调用包装](../../standard/native-interop/runtime-callable-wrapper.md) (RCW) 时，如果公共语言运行时 (CLR) 检测到该包装正在使用中，则激活 `raceOnRCWCleanup` 托管调试助手 (MDA)。</span><span class="sxs-lookup"><span data-stu-id="f20bf-103">The `raceOnRCWCleanup` managed debugging assistant (MDA) is activated when the common language runtime (CLR) detects that a [Runtime Callable Wrapper](../../standard/native-interop/runtime-callable-wrapper.md) (RCW) is in use when a call to release it is made using a command such as the <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A?displayProperty=nameWithType> method.</span></span>  
   
-## <a name="symptoms"></a><span data-ttu-id="0abd0-104">症状</span><span class="sxs-lookup"><span data-stu-id="0abd0-104">Symptoms</span></span>  
- <span data-ttu-id="0abd0-105">使用 <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A> 或类似方法释放 RCW 期间或之后发生访问冲突或内存损坏。</span><span class="sxs-lookup"><span data-stu-id="0abd0-105">Access violations or memory corruption during or after freeing an RCW using <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A> or a similar method.</span></span>  
+## <a name="symptoms"></a><span data-ttu-id="f20bf-104">症状</span><span class="sxs-lookup"><span data-stu-id="f20bf-104">Symptoms</span></span>  
+ <span data-ttu-id="f20bf-105">使用 <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A> 或类似方法释放 RCW 期间或之后发生访问冲突或内存损坏。</span><span class="sxs-lookup"><span data-stu-id="f20bf-105">Access violations or memory corruption during or after freeing an RCW using <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A> or a similar method.</span></span>  
   
-## <a name="cause"></a><span data-ttu-id="0abd0-106">原因</span><span class="sxs-lookup"><span data-stu-id="0abd0-106">Cause</span></span>  
- <span data-ttu-id="0abd0-107">正在另一个线程中或释放线程堆栈中使用 RCW。</span><span class="sxs-lookup"><span data-stu-id="0abd0-107">The RCW is in use on another thread or on the freeing thread stack.</span></span>  <span data-ttu-id="0abd0-108">无法释放使用中的 RCW。</span><span class="sxs-lookup"><span data-stu-id="0abd0-108">An RCW that is in use cannot be released.</span></span>  
+## <a name="cause"></a><span data-ttu-id="f20bf-106">原因</span><span class="sxs-lookup"><span data-stu-id="f20bf-106">Cause</span></span>  
+ <span data-ttu-id="f20bf-107">正在另一个线程中或释放线程堆栈中使用 RCW。</span><span class="sxs-lookup"><span data-stu-id="f20bf-107">The RCW is in use on another thread or on the freeing thread stack.</span></span>  <span data-ttu-id="f20bf-108">无法释放使用中的 RCW。</span><span class="sxs-lookup"><span data-stu-id="f20bf-108">An RCW that is in use cannot be released.</span></span>  
   
-## <a name="resolution"></a><span data-ttu-id="0abd0-109">解决方法</span><span class="sxs-lookup"><span data-stu-id="0abd0-109">Resolution</span></span>  
- <span data-ttu-id="0abd0-110">不要释放在当前或在其他线程中可能使用的 RCW。</span><span class="sxs-lookup"><span data-stu-id="0abd0-110">Do not free an RCW that could be in use either in the current or in other threads.</span></span>  
+## <a name="resolution"></a><span data-ttu-id="f20bf-109">解决方法</span><span class="sxs-lookup"><span data-stu-id="f20bf-109">Resolution</span></span>  
+ <span data-ttu-id="f20bf-110">不要释放在当前或在其他线程中可能使用的 RCW。</span><span class="sxs-lookup"><span data-stu-id="f20bf-110">Do not free an RCW that could be in use either in the current or in other threads.</span></span>  
   
-## <a name="effect-on-the-runtime"></a><span data-ttu-id="0abd0-111">对运行时的影响</span><span class="sxs-lookup"><span data-stu-id="0abd0-111">Effect on the Runtime</span></span>  
- <span data-ttu-id="0abd0-112">此 MDA 对 CLR 无任何影响。</span><span class="sxs-lookup"><span data-stu-id="0abd0-112">This MDA has no effect on the CLR.</span></span>  
+## <a name="effect-on-the-runtime"></a><span data-ttu-id="f20bf-111">对运行时的影响</span><span class="sxs-lookup"><span data-stu-id="f20bf-111">Effect on the Runtime</span></span>  
+ <span data-ttu-id="f20bf-112">此 MDA 对 CLR 无任何影响。</span><span class="sxs-lookup"><span data-stu-id="f20bf-112">This MDA has no effect on the CLR.</span></span>  
   
-## <a name="output"></a><span data-ttu-id="0abd0-113">Output</span><span class="sxs-lookup"><span data-stu-id="0abd0-113">Output</span></span>  
- <span data-ttu-id="0abd0-114">描述错误的消息。</span><span class="sxs-lookup"><span data-stu-id="0abd0-114">A message describing the error.</span></span>  
+## <a name="output"></a><span data-ttu-id="f20bf-113">Output</span><span class="sxs-lookup"><span data-stu-id="f20bf-113">Output</span></span>  
+ <span data-ttu-id="f20bf-114">描述错误的消息。</span><span class="sxs-lookup"><span data-stu-id="f20bf-114">A message describing the error.</span></span>  
   
-## <a name="configuration"></a><span data-ttu-id="0abd0-115">配置</span><span class="sxs-lookup"><span data-stu-id="0abd0-115">Configuration</span></span>  
+## <a name="configuration"></a><span data-ttu-id="f20bf-115">配置</span><span class="sxs-lookup"><span data-stu-id="f20bf-115">Configuration</span></span>  
   
 ```xml  
 <mdaConfig>  
@@ -46,8 +46,8 @@ ms.locfileid: "68629367"
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="0abd0-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="0abd0-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f20bf-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="f20bf-116">See also</span></span>
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [<span data-ttu-id="0abd0-117">使用托管调试助手诊断错误</span><span class="sxs-lookup"><span data-stu-id="0abd0-117">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [<span data-ttu-id="0abd0-118">互操作封送处理</span><span class="sxs-lookup"><span data-stu-id="0abd0-118">Interop Marshaling</span></span>](../../../docs/framework/interop/interop-marshaling.md)
+- [<span data-ttu-id="f20bf-117">使用托管调试助手诊断错误</span><span class="sxs-lookup"><span data-stu-id="f20bf-117">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [<span data-ttu-id="f20bf-118">互操作封送处理</span><span class="sxs-lookup"><span data-stu-id="f20bf-118">Interop Marshaling</span></span>](../../../docs/framework/interop/interop-marshaling.md)

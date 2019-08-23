@@ -9,153 +9,153 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [WPF]
 ms.assetid: dac2c9ce-042b-4d23-91eb-28f584415cef
-ms.openlocfilehash: 4ee973eb5a81a6428ee5a5fcfc00e28425ff2a44
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 2609a54ce8ba2076c35567fe5bc1d9961f6fef3f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457513"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69942062"
 ---
-# <a name="walkthrough-caching-application-data-in-a-wpf-application"></a><span data-ttu-id="e833f-102">演练：在 WPF 应用程序中缓存应用程序数据</span><span class="sxs-lookup"><span data-stu-id="e833f-102">Walkthrough: Caching Application Data in a WPF Application</span></span>
-<span data-ttu-id="e833f-103">缓存可以将数据存储在内存中以便快速访问。</span><span class="sxs-lookup"><span data-stu-id="e833f-103">Caching enables you to store data in memory for rapid access.</span></span> <span data-ttu-id="e833f-104">再次访问数据时，应用程序可以从缓存获取数据，而不是从原始源检索数据。</span><span class="sxs-lookup"><span data-stu-id="e833f-104">When the data is accessed again, applications can get the data from the cache instead of retrieving it from the original source.</span></span> <span data-ttu-id="e833f-105">这可改善性能和可伸缩性。</span><span class="sxs-lookup"><span data-stu-id="e833f-105">This can improve performance and scalability.</span></span> <span data-ttu-id="e833f-106">此外，数据源暂时不可用时，缓存可提供数据。</span><span class="sxs-lookup"><span data-stu-id="e833f-106">In addition, caching makes data available when the data source is temporarily unavailable.</span></span>
+# <a name="walkthrough-caching-application-data-in-a-wpf-application"></a><span data-ttu-id="7b91e-102">演练：在 WPF 应用程序中缓存应用程序数据</span><span class="sxs-lookup"><span data-stu-id="7b91e-102">Walkthrough: Caching Application Data in a WPF Application</span></span>
+<span data-ttu-id="7b91e-103">缓存可以将数据存储在内存中以便快速访问。</span><span class="sxs-lookup"><span data-stu-id="7b91e-103">Caching enables you to store data in memory for rapid access.</span></span> <span data-ttu-id="7b91e-104">再次访问数据时，应用程序可以从缓存获取数据，而不是从原始源检索数据。</span><span class="sxs-lookup"><span data-stu-id="7b91e-104">When the data is accessed again, applications can get the data from the cache instead of retrieving it from the original source.</span></span> <span data-ttu-id="7b91e-105">这可改善性能和可伸缩性。</span><span class="sxs-lookup"><span data-stu-id="7b91e-105">This can improve performance and scalability.</span></span> <span data-ttu-id="7b91e-106">此外，数据源暂时不可用时，缓存可提供数据。</span><span class="sxs-lookup"><span data-stu-id="7b91e-106">In addition, caching makes data available when the data source is temporarily unavailable.</span></span>
 
- <span data-ttu-id="e833f-107">.NET Framework 提供了使你能够使用.NET Framework 应用程序中缓存的类。</span><span class="sxs-lookup"><span data-stu-id="e833f-107">The .NET Framework provides classes that enable you to use caching in .NET Framework applications.</span></span> <span data-ttu-id="e833f-108">这些类都位于<xref:System.Runtime.Caching>命名空间。</span><span class="sxs-lookup"><span data-stu-id="e833f-108">These classes are located in the <xref:System.Runtime.Caching> namespace.</span></span>
+ <span data-ttu-id="7b91e-107">.NET Framework 提供使你能够在 .NET Framework 应用程序中使用缓存的类。</span><span class="sxs-lookup"><span data-stu-id="7b91e-107">The .NET Framework provides classes that enable you to use caching in .NET Framework applications.</span></span> <span data-ttu-id="7b91e-108">这些类位于<xref:System.Runtime.Caching>命名空间中。</span><span class="sxs-lookup"><span data-stu-id="7b91e-108">These classes are located in the <xref:System.Runtime.Caching> namespace.</span></span>
 
 > [!NOTE]
->  <span data-ttu-id="e833f-109"><xref:System.Runtime.Caching>命名空间是.NET Framework 4 中的新增功能。</span><span class="sxs-lookup"><span data-stu-id="e833f-109">The <xref:System.Runtime.Caching> namespace is new in the .NET Framework 4.</span></span> <span data-ttu-id="e833f-110">此命名空间使缓存可供所有.NET Framework 应用程序。</span><span class="sxs-lookup"><span data-stu-id="e833f-110">This namespace makes caching is available to all .NET Framework applications.</span></span> <span data-ttu-id="e833f-111">在以前版本的.NET Framework，缓存是仅适用于<xref:System.Web>命名空间，因此，需要 ASP.NET 类上的依赖项。</span><span class="sxs-lookup"><span data-stu-id="e833f-111">In previous versions of the .NET Framework, caching was available only in the <xref:System.Web> namespace and therefore required a dependency on ASP.NET classes.</span></span>
+> <span data-ttu-id="7b91e-109"><xref:System.Runtime.Caching>命名空间是 .NET Framework 4 中的新命名空间。</span><span class="sxs-lookup"><span data-stu-id="7b91e-109">The <xref:System.Runtime.Caching> namespace is new in the .NET Framework 4.</span></span> <span data-ttu-id="7b91e-110">此命名空间使缓存可供所有 .NET Framework 应用程序使用。</span><span class="sxs-lookup"><span data-stu-id="7b91e-110">This namespace makes caching is available to all .NET Framework applications.</span></span> <span data-ttu-id="7b91e-111">在 .NET Framework 的以前版本中, 仅在<xref:System.Web>命名空间中提供缓存, 因此需要依赖 ASP.NET 类。</span><span class="sxs-lookup"><span data-stu-id="7b91e-111">In previous versions of the .NET Framework, caching was available only in the <xref:System.Web> namespace and therefore required a dependency on ASP.NET classes.</span></span>
 
- <span data-ttu-id="e833f-112">本演练演示如何使用作为的一部分是.NET Framework 中提供的缓存功能[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]应用程序。</span><span class="sxs-lookup"><span data-stu-id="e833f-112">This walkthrough shows you how to use the caching functionality that is available in the .NET Framework as part of a [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] application.</span></span> <span data-ttu-id="e833f-113">在本演练中，你将缓存的文本文件的内容。</span><span class="sxs-lookup"><span data-stu-id="e833f-113">In the walkthrough, you cache the contents of a text file.</span></span>
+ <span data-ttu-id="7b91e-112">本演练演示如何使用 .NET Framework 中提供的缓存功能作为[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]应用程序的一部分。</span><span class="sxs-lookup"><span data-stu-id="7b91e-112">This walkthrough shows you how to use the caching functionality that is available in the .NET Framework as part of a [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] application.</span></span> <span data-ttu-id="7b91e-113">在本演练中, 您将缓存文本文件的内容。</span><span class="sxs-lookup"><span data-stu-id="7b91e-113">In the walkthrough, you cache the contents of a text file.</span></span>
 
- <span data-ttu-id="e833f-114">本演练演示以下任务：</span><span class="sxs-lookup"><span data-stu-id="e833f-114">Tasks illustrated in this walkthrough include the following:</span></span>
+ <span data-ttu-id="7b91e-114">本演练演示以下任务：</span><span class="sxs-lookup"><span data-stu-id="7b91e-114">Tasks illustrated in this walkthrough include the following:</span></span>
 
-- <span data-ttu-id="e833f-115">创建 WPF 应用程序项目。</span><span class="sxs-lookup"><span data-stu-id="e833f-115">Creating a WPF application project.</span></span>
+- <span data-ttu-id="7b91e-115">创建 WPF 应用程序项目。</span><span class="sxs-lookup"><span data-stu-id="7b91e-115">Creating a WPF application project.</span></span>
 
-- <span data-ttu-id="e833f-116">添加对.NET Framework 4 的引用。</span><span class="sxs-lookup"><span data-stu-id="e833f-116">Adding a reference to the .NET Framework 4.</span></span>
+- <span data-ttu-id="7b91e-116">添加对 .NET Framework 4 的引用。</span><span class="sxs-lookup"><span data-stu-id="7b91e-116">Adding a reference to the .NET Framework 4.</span></span>
 
-- <span data-ttu-id="e833f-117">正在初始化缓存。</span><span class="sxs-lookup"><span data-stu-id="e833f-117">Initializing a cache.</span></span>
+- <span data-ttu-id="7b91e-117">初始化缓存。</span><span class="sxs-lookup"><span data-stu-id="7b91e-117">Initializing a cache.</span></span>
 
-- <span data-ttu-id="e833f-118">正在添加的缓存项的包含文本文件的内容。</span><span class="sxs-lookup"><span data-stu-id="e833f-118">Adding a cache entry that contains the contents of a text file.</span></span>
+- <span data-ttu-id="7b91e-118">添加包含文本文件内容的缓存项。</span><span class="sxs-lookup"><span data-stu-id="7b91e-118">Adding a cache entry that contains the contents of a text file.</span></span>
 
-- <span data-ttu-id="e833f-119">提供的缓存项的逐出策略。</span><span class="sxs-lookup"><span data-stu-id="e833f-119">Providing an eviction policy for the cache entry.</span></span>
+- <span data-ttu-id="7b91e-119">为缓存条目提供逐出策略。</span><span class="sxs-lookup"><span data-stu-id="7b91e-119">Providing an eviction policy for the cache entry.</span></span>
 
-- <span data-ttu-id="e833f-120">监视缓存的文件的路径和通知的缓存实例更改为受监视的项目。</span><span class="sxs-lookup"><span data-stu-id="e833f-120">Monitoring the path of the cached file and notifying the cache instance about changes to the monitored item.</span></span>
+- <span data-ttu-id="7b91e-120">监视缓存文件的路径, 并通知缓存实例对被监视项的更改。</span><span class="sxs-lookup"><span data-stu-id="7b91e-120">Monitoring the path of the cached file and notifying the cache instance about changes to the monitored item.</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="e833f-121">系统必备</span><span class="sxs-lookup"><span data-stu-id="e833f-121">Prerequisites</span></span>
- <span data-ttu-id="e833f-122">若要完成本演练，你将需要：</span><span class="sxs-lookup"><span data-stu-id="e833f-122">In order to complete this walkthrough, you will need:</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="7b91e-121">系统必备</span><span class="sxs-lookup"><span data-stu-id="7b91e-121">Prerequisites</span></span>
+ <span data-ttu-id="7b91e-122">若要完成本演练，你将需要：</span><span class="sxs-lookup"><span data-stu-id="7b91e-122">In order to complete this walkthrough, you will need:</span></span>
 
-- <span data-ttu-id="e833f-123">Microsoft Visual Studio 2010。</span><span class="sxs-lookup"><span data-stu-id="e833f-123">Microsoft Visual Studio 2010.</span></span>
+- <span data-ttu-id="7b91e-123">Microsoft Visual Studio 2010。</span><span class="sxs-lookup"><span data-stu-id="7b91e-123">Microsoft Visual Studio 2010.</span></span>
 
-- <span data-ttu-id="e833f-124">包含少量的文本的文本文件。</span><span class="sxs-lookup"><span data-stu-id="e833f-124">A text file that contains a small amount of text.</span></span> <span data-ttu-id="e833f-125">（您将显示文本文件的内容在消息框中。）在本演练中所示的代码假定正在使用以下文件：</span><span class="sxs-lookup"><span data-stu-id="e833f-125">(You will display the contents of the text file in a message box.) The code illustrated in the walkthrough assumes that you are working with the following file:</span></span>
+- <span data-ttu-id="7b91e-124">包含少量文本的文本文件。</span><span class="sxs-lookup"><span data-stu-id="7b91e-124">A text file that contains a small amount of text.</span></span> <span data-ttu-id="7b91e-125">(将在消息框中显示文本文件的内容。)本演练中所示的代码假设您正在使用以下文件:</span><span class="sxs-lookup"><span data-stu-id="7b91e-125">(You will display the contents of the text file in a message box.) The code illustrated in the walkthrough assumes that you are working with the following file:</span></span>
 
      `c:\cache\cacheText.txt`
 
-     <span data-ttu-id="e833f-126">但是，可以使用任何文本文件，并为本演练中的代码进行微小的更改。</span><span class="sxs-lookup"><span data-stu-id="e833f-126">However, you can use any text file and make small changes to the code in this walkthrough.</span></span>
+     <span data-ttu-id="7b91e-126">但是, 您可以使用任何文本文件并对此演练中的代码进行较小的更改。</span><span class="sxs-lookup"><span data-stu-id="7b91e-126">However, you can use any text file and make small changes to the code in this walkthrough.</span></span>
 
-## <a name="creating-a-wpf-application-project"></a><span data-ttu-id="e833f-127">创建 WPF 应用程序项目</span><span class="sxs-lookup"><span data-stu-id="e833f-127">Creating a WPF Application Project</span></span>
- <span data-ttu-id="e833f-128">您将首先创建一个 WPF 应用程序项目。</span><span class="sxs-lookup"><span data-stu-id="e833f-128">You will start by creating a WPF application project.</span></span>
+## <a name="creating-a-wpf-application-project"></a><span data-ttu-id="7b91e-127">创建 WPF 应用程序项目</span><span class="sxs-lookup"><span data-stu-id="7b91e-127">Creating a WPF Application Project</span></span>
+ <span data-ttu-id="7b91e-128">首先创建一个 WPF 应用程序项目。</span><span class="sxs-lookup"><span data-stu-id="7b91e-128">You will start by creating a WPF application project.</span></span>
 
-#### <a name="to-create-a-wpf-application"></a><span data-ttu-id="e833f-129">创建 WPF 应用程序</span><span class="sxs-lookup"><span data-stu-id="e833f-129">To create a WPF application</span></span>
+#### <a name="to-create-a-wpf-application"></a><span data-ttu-id="7b91e-129">创建 WPF 应用程序</span><span class="sxs-lookup"><span data-stu-id="7b91e-129">To create a WPF application</span></span>
 
-1. <span data-ttu-id="e833f-130">启动 Visual Studio。</span><span class="sxs-lookup"><span data-stu-id="e833f-130">Start Visual Studio.</span></span>
+1. <span data-ttu-id="7b91e-130">启动 Visual Studio。</span><span class="sxs-lookup"><span data-stu-id="7b91e-130">Start Visual Studio.</span></span>
 
-2. <span data-ttu-id="e833f-131">在中**文件**菜单上，单击**新建**，然后单击**新项目**。</span><span class="sxs-lookup"><span data-stu-id="e833f-131">In the **File** menu, click **New**, and then click **New Project**.</span></span>
+2. <span data-ttu-id="7b91e-131">在 "**文件**" 菜单中, 单击 "**新建**", 然后单击 "**新建项目**"。</span><span class="sxs-lookup"><span data-stu-id="7b91e-131">In the **File** menu, click **New**, and then click **New Project**.</span></span>
 
-     <span data-ttu-id="e833f-132">随即显示“新建项目”对话框。 </span><span class="sxs-lookup"><span data-stu-id="e833f-132">The **New Project** dialog box is displayed.</span></span>
+     <span data-ttu-id="7b91e-132">随即显示“新建项目”对话框。</span><span class="sxs-lookup"><span data-stu-id="7b91e-132">The **New Project** dialog box is displayed.</span></span>
 
-3. <span data-ttu-id="e833f-133">下**已安装的模板**，选择你想要使用的编程语言 (**Visual Basic**或**Visual C#** )。</span><span class="sxs-lookup"><span data-stu-id="e833f-133">Under **Installed Templates**, select the programming language you want to use (**Visual Basic** or **Visual C#**).</span></span>
+3. <span data-ttu-id="7b91e-133">在 "**已安装的模板**" 下, 选择要使用的编程语言 (**Visual Basic**或**视觉对象C#** )。</span><span class="sxs-lookup"><span data-stu-id="7b91e-133">Under **Installed Templates**, select the programming language you want to use (**Visual Basic** or **Visual C#**).</span></span>
 
-4. <span data-ttu-id="e833f-134">在中**新的项目**对话框中，选择**WPF 应用程序**。</span><span class="sxs-lookup"><span data-stu-id="e833f-134">In the **New Project** dialog box, select **WPF Application**.</span></span>
+4. <span data-ttu-id="7b91e-134">在 "**新建项目**" 对话框中, 选择 " **WPF 应用程序**"。</span><span class="sxs-lookup"><span data-stu-id="7b91e-134">In the **New Project** dialog box, select **WPF Application**.</span></span>
 
     > [!NOTE]
-    >  <span data-ttu-id="e833f-135">如果没有看到**WPF 应用程序**模板，请确保支持 WPF 的.NET framework 版本为目标。</span><span class="sxs-lookup"><span data-stu-id="e833f-135">If you do not see the **WPF Application** template, make sure that you are targeting a version of the .NET Framework that supports WPF.</span></span> <span data-ttu-id="e833f-136">在中**新的项目**对话框中，从列表中选择.NET Framework 4。</span><span class="sxs-lookup"><span data-stu-id="e833f-136">In the **New Project** dialog box, select .NET Framework 4 from the list.</span></span>
+    > <span data-ttu-id="7b91e-135">如果看不到 " **Wpf 应用程序**" 模板, 请确保以支持 WPF 的 .NET Framework 的版本为目标。</span><span class="sxs-lookup"><span data-stu-id="7b91e-135">If you do not see the **WPF Application** template, make sure that you are targeting a version of the .NET Framework that supports WPF.</span></span> <span data-ttu-id="7b91e-136">在 "**新建项目**" 对话框中, 从列表中选择 ".NET Framework 4"。</span><span class="sxs-lookup"><span data-stu-id="7b91e-136">In the **New Project** dialog box, select .NET Framework 4 from the list.</span></span>
 
-5. <span data-ttu-id="e833f-137">在中**名称**文字框中，输入你的项目的名称。</span><span class="sxs-lookup"><span data-stu-id="e833f-137">In the **Name** text box, enter a name for your project.</span></span> <span data-ttu-id="e833f-138">例如，可以输入**WPFCaching**。</span><span class="sxs-lookup"><span data-stu-id="e833f-138">For example, you can enter **WPFCaching**.</span></span>
+5. <span data-ttu-id="7b91e-137">在 "**名称**" 文本框中, 输入项目的名称。</span><span class="sxs-lookup"><span data-stu-id="7b91e-137">In the **Name** text box, enter a name for your project.</span></span> <span data-ttu-id="7b91e-138">例如, 可以输入**WPFCaching**。</span><span class="sxs-lookup"><span data-stu-id="7b91e-138">For example, you can enter **WPFCaching**.</span></span>
 
-6. <span data-ttu-id="e833f-139">选择“为解决方案创建目录”复选框  。</span><span class="sxs-lookup"><span data-stu-id="e833f-139">Select the **Create directory for solution** check box.</span></span>
+6. <span data-ttu-id="7b91e-139">选择“为解决方案创建目录”复选框。</span><span class="sxs-lookup"><span data-stu-id="7b91e-139">Select the **Create directory for solution** check box.</span></span>
 
-7. <span data-ttu-id="e833f-140">单击 **“确定”** 。</span><span class="sxs-lookup"><span data-stu-id="e833f-140">Click **OK**.</span></span>
+7. <span data-ttu-id="7b91e-140">单击 **“确定”** 。</span><span class="sxs-lookup"><span data-stu-id="7b91e-140">Click **OK**.</span></span>
 
-     <span data-ttu-id="e833f-141">WPF 设计器中打开**设计**查看，并显示 MainWindow.xaml 文件。</span><span class="sxs-lookup"><span data-stu-id="e833f-141">The WPF Designer opens in **Design** view and displays the MainWindow.xaml file.</span></span> <span data-ttu-id="e833f-142">Visual Studio 将创建**我的项目**文件夹、 Application.xaml 文件和 MainWindow.xaml 文件。</span><span class="sxs-lookup"><span data-stu-id="e833f-142">Visual Studio creates the **My Project** folder, the Application.xaml file, and the MainWindow.xaml file.</span></span>
+     <span data-ttu-id="7b91e-141">WPF 设计器将在 "**设计**" 视图中打开并显示 mainwindow.xaml 文件。</span><span class="sxs-lookup"><span data-stu-id="7b91e-141">The WPF Designer opens in **Design** view and displays the MainWindow.xaml file.</span></span> <span data-ttu-id="7b91e-142">Visual Studio 将创建 "**我的项目**" 文件夹、应用程序 .xaml 文件和 mainwindow.xaml 文件。</span><span class="sxs-lookup"><span data-stu-id="7b91e-142">Visual Studio creates the **My Project** folder, the Application.xaml file, and the MainWindow.xaml file.</span></span>
 
-## <a name="targeting-the-net-framework-and-adding-a-reference-to-the-caching-assemblies"></a><span data-ttu-id="e833f-143">面向.NET Framework 并添加对缓存程序集的引用</span><span class="sxs-lookup"><span data-stu-id="e833f-143">Targeting the .NET Framework and Adding a Reference to the Caching Assemblies</span></span>
- <span data-ttu-id="e833f-144">默认情况下，WPF 应用程序目标[!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="e833f-144">By default, WPF applications target the [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)].</span></span> <span data-ttu-id="e833f-145">若要使用<xref:System.Runtime.Caching>命名空间中的 WPF 应用程序，该应用程序必须面向.NET Framework 4 (不[!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)])，并且必须包括对命名空间的引用。</span><span class="sxs-lookup"><span data-stu-id="e833f-145">To use the <xref:System.Runtime.Caching> namespace in a WPF application, the application must target the .NET Framework 4 (not the [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]) and must include a reference to the namespace.</span></span>
+## <a name="targeting-the-net-framework-and-adding-a-reference-to-the-caching-assemblies"></a><span data-ttu-id="7b91e-143">针对 .NET Framework 并添加对缓存程序集的引用</span><span class="sxs-lookup"><span data-stu-id="7b91e-143">Targeting the .NET Framework and Adding a Reference to the Caching Assemblies</span></span>
+ <span data-ttu-id="7b91e-144">默认情况下, WPF 应用程序[!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]以为目标。</span><span class="sxs-lookup"><span data-stu-id="7b91e-144">By default, WPF applications target the [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)].</span></span> <span data-ttu-id="7b91e-145">若要在<xref:System.Runtime.Caching> WPF 应用程序中使用命名空间, 应用程序必须针对 .NET Framework 4 (而[!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]不是), 并且必须包括对命名空间的引用。</span><span class="sxs-lookup"><span data-stu-id="7b91e-145">To use the <xref:System.Runtime.Caching> namespace in a WPF application, the application must target the .NET Framework 4 (not the [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]) and must include a reference to the namespace.</span></span>
 
- <span data-ttu-id="e833f-146">因此下, 一步将更改.NET Framework 目标，并添加对引用<xref:System.Runtime.Caching>命名空间。</span><span class="sxs-lookup"><span data-stu-id="e833f-146">Therefore, the next step is to change the .NET Framework target and add a reference to the <xref:System.Runtime.Caching> namespace.</span></span>
+ <span data-ttu-id="7b91e-146">因此, 下一步是更改 .NET Framework 目标并添加对<xref:System.Runtime.Caching>命名空间的引用。</span><span class="sxs-lookup"><span data-stu-id="7b91e-146">Therefore, the next step is to change the .NET Framework target and add a reference to the <xref:System.Runtime.Caching> namespace.</span></span>
 
 > [!NOTE]
->  <span data-ttu-id="e833f-147">.NET Framework 目标更改的过程是不同的 Visual Basic 项目中并在 Visual C# 项目中。</span><span class="sxs-lookup"><span data-stu-id="e833f-147">The procedure for changing the .NET Framework target is different in a Visual Basic project and in a Visual C# project.</span></span>
+> <span data-ttu-id="7b91e-147">Visual Basic 项目和可视化C#项目中更改 .NET Framework 目标的过程有所不同。</span><span class="sxs-lookup"><span data-stu-id="7b91e-147">The procedure for changing the .NET Framework target is different in a Visual Basic project and in a Visual C# project.</span></span>
 
-#### <a name="to-change-the-target-net-framework-in-visual-basic"></a><span data-ttu-id="e833f-148">若要更改的目标在 Visual Basic 中的.NET Framework</span><span class="sxs-lookup"><span data-stu-id="e833f-148">To change the target .NET Framework in Visual Basic</span></span>
+#### <a name="to-change-the-target-net-framework-in-visual-basic"></a><span data-ttu-id="7b91e-148">更改目标 .NET Framework Visual Basic</span><span class="sxs-lookup"><span data-stu-id="7b91e-148">To change the target .NET Framework in Visual Basic</span></span>
 
-1. <span data-ttu-id="e833f-149">在中**解决方案资源管理器**，右键单击项目名称，然后单击**属性**。</span><span class="sxs-lookup"><span data-stu-id="e833f-149">In **Solutions Explorer**, right-click the project name, and then click **Properties**.</span></span>
+1. <span data-ttu-id="7b91e-149">在 "**解决方案资源管理器**" 中, 右键单击项目名称, 然后单击 "**属性**"。</span><span class="sxs-lookup"><span data-stu-id="7b91e-149">In **Solutions Explorer**, right-click the project name, and then click **Properties**.</span></span>
 
-     <span data-ttu-id="e833f-150">显示应用程序的属性窗口。</span><span class="sxs-lookup"><span data-stu-id="e833f-150">The properties window for the application is displayed.</span></span>
+     <span data-ttu-id="7b91e-150">将显示应用程序的 "属性" 窗口。</span><span class="sxs-lookup"><span data-stu-id="7b91e-150">The properties window for the application is displayed.</span></span>
 
-2. <span data-ttu-id="e833f-151">单击“编译”  选项卡。</span><span class="sxs-lookup"><span data-stu-id="e833f-151">Click the **Compile** tab.</span></span>
+2. <span data-ttu-id="7b91e-151">单击“编译”选项卡。</span><span class="sxs-lookup"><span data-stu-id="7b91e-151">Click the **Compile** tab.</span></span>
 
-3. <span data-ttu-id="e833f-152">在窗口的底部，单击**高级编译选项...** .</span><span class="sxs-lookup"><span data-stu-id="e833f-152">At the bottom of the window, click **Advanced Compile Options…**.</span></span>
+3. <span data-ttu-id="7b91e-152">在窗口底部, 单击 "**高级编译选项 ...** "。</span><span class="sxs-lookup"><span data-stu-id="7b91e-152">At the bottom of the window, click **Advanced Compile Options…**.</span></span>
 
-     <span data-ttu-id="e833f-153">**高级编译器设置**显示对话框。</span><span class="sxs-lookup"><span data-stu-id="e833f-153">The **Advanced Compiler Settings** dialog box is displayed.</span></span>
+     <span data-ttu-id="7b91e-153">将显示 "**高级编译器设置**" 对话框。</span><span class="sxs-lookup"><span data-stu-id="7b91e-153">The **Advanced Compiler Settings** dialog box is displayed.</span></span>
 
-4. <span data-ttu-id="e833f-154">在中**目标框架 （所有配置）** 列表中，选择.NET Framework 4。</span><span class="sxs-lookup"><span data-stu-id="e833f-154">In the **Target framework (all configurations)** list, select .NET Framework 4.</span></span> <span data-ttu-id="e833f-155">(不要选择[!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]。)</span><span class="sxs-lookup"><span data-stu-id="e833f-155">(Do not select [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)].)</span></span>
+4. <span data-ttu-id="7b91e-154">在 "**目标框架 (所有配置)** " 列表中, 选择 ".NET Framework 4"。</span><span class="sxs-lookup"><span data-stu-id="7b91e-154">In the **Target framework (all configurations)** list, select .NET Framework 4.</span></span> <span data-ttu-id="7b91e-155">(请勿选择[!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]。)</span><span class="sxs-lookup"><span data-stu-id="7b91e-155">(Do not select [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)].)</span></span>
 
-5. <span data-ttu-id="e833f-156">单击 **“确定”** 。</span><span class="sxs-lookup"><span data-stu-id="e833f-156">Click **OK**.</span></span>
+5. <span data-ttu-id="7b91e-156">单击 **“确定”** 。</span><span class="sxs-lookup"><span data-stu-id="7b91e-156">Click **OK**.</span></span>
 
-     <span data-ttu-id="e833f-157">随即显示“目标框架更改”对话框  。</span><span class="sxs-lookup"><span data-stu-id="e833f-157">The **Target Framework Change** dialog box is displayed.</span></span>
+     <span data-ttu-id="7b91e-157">随即显示“目标框架更改”对话框。</span><span class="sxs-lookup"><span data-stu-id="7b91e-157">The **Target Framework Change** dialog box is displayed.</span></span>
 
-6. <span data-ttu-id="e833f-158">在中**目标 Framework 更改**对话框中，单击**是**。</span><span class="sxs-lookup"><span data-stu-id="e833f-158">In the **Target Framework Change** dialog box, click **Yes**.</span></span>
+6. <span data-ttu-id="7b91e-158">在 "**目标框架更改**" 对话框中, 单击 **"是"** 。</span><span class="sxs-lookup"><span data-stu-id="7b91e-158">In the **Target Framework Change** dialog box, click **Yes**.</span></span>
 
-     <span data-ttu-id="e833f-159">项目已关闭，然后重新打开它。</span><span class="sxs-lookup"><span data-stu-id="e833f-159">The project is closed and is then reopened.</span></span>
+     <span data-ttu-id="7b91e-159">项目已关闭, 然后重新打开。</span><span class="sxs-lookup"><span data-stu-id="7b91e-159">The project is closed and is then reopened.</span></span>
 
-7. <span data-ttu-id="e833f-160">通过执行以下步骤添加对缓存程序集的引用：</span><span class="sxs-lookup"><span data-stu-id="e833f-160">Add a reference to the caching assembly by following these steps:</span></span>
+7. <span data-ttu-id="7b91e-160">按照以下步骤添加对缓存程序集的引用:</span><span class="sxs-lookup"><span data-stu-id="7b91e-160">Add a reference to the caching assembly by following these steps:</span></span>
 
-    1. <span data-ttu-id="e833f-161">在中**解决方案资源管理器**，右键单击项目的名称，然后单击**添加引用**。</span><span class="sxs-lookup"><span data-stu-id="e833f-161">In **Solution Explorer**, right-click the name of the project and then click **Add Reference**.</span></span>
+    1. <span data-ttu-id="7b91e-161">在**解决方案资源管理器**中, 右键单击项目名称, 然后单击 "**添加引用**"。</span><span class="sxs-lookup"><span data-stu-id="7b91e-161">In **Solution Explorer**, right-click the name of the project and then click **Add Reference**.</span></span>
 
-    2. <span data-ttu-id="e833f-162">选择 **.NET**选项卡上，选择`System.Runtime.Caching`，然后单击**确定**。</span><span class="sxs-lookup"><span data-stu-id="e833f-162">Select the **.NET** tab, select `System.Runtime.Caching`, and then click **OK**.</span></span>
+    2. <span data-ttu-id="7b91e-162">选择 " **.net** " 选项卡`System.Runtime.Caching`, 选择, 然后单击 **"确定"** 。</span><span class="sxs-lookup"><span data-stu-id="7b91e-162">Select the **.NET** tab, select `System.Runtime.Caching`, and then click **OK**.</span></span>
 
-#### <a name="to-change-the-target-net-framework-in-a-visual-c-project"></a><span data-ttu-id="e833f-163">若要更改 Visual C# 项目中的目标.NET Framework</span><span class="sxs-lookup"><span data-stu-id="e833f-163">To change the target .NET Framework in a Visual C# project</span></span>
+#### <a name="to-change-the-target-net-framework-in-a-visual-c-project"></a><span data-ttu-id="7b91e-163">更改可视化C#项目中的目标 .NET Framework</span><span class="sxs-lookup"><span data-stu-id="7b91e-163">To change the target .NET Framework in a Visual C# project</span></span>
 
-1. <span data-ttu-id="e833f-164">在中**解决方案资源管理器**，右键单击项目名称，然后单击**属性**。</span><span class="sxs-lookup"><span data-stu-id="e833f-164">In **Solution Explorer**, right-click the project name and then click **Properties**.</span></span>
+1. <span data-ttu-id="7b91e-164">在**解决方案资源管理器**中, 右键单击项目名称, 然后单击 "**属性**"。</span><span class="sxs-lookup"><span data-stu-id="7b91e-164">In **Solution Explorer**, right-click the project name and then click **Properties**.</span></span>
 
-     <span data-ttu-id="e833f-165">显示应用程序的属性窗口。</span><span class="sxs-lookup"><span data-stu-id="e833f-165">The properties window for the application is displayed.</span></span>
+     <span data-ttu-id="7b91e-165">将显示应用程序的 "属性" 窗口。</span><span class="sxs-lookup"><span data-stu-id="7b91e-165">The properties window for the application is displayed.</span></span>
 
-2. <span data-ttu-id="e833f-166">单击“应用程序”  选项卡。</span><span class="sxs-lookup"><span data-stu-id="e833f-166">Click the **Application** tab.</span></span>
+2. <span data-ttu-id="7b91e-166">单击“应用程序” 选项卡。</span><span class="sxs-lookup"><span data-stu-id="7b91e-166">Click the **Application** tab.</span></span>
 
-3. <span data-ttu-id="e833f-167">在中**目标框架**列表中，选择.NET Framework 4。</span><span class="sxs-lookup"><span data-stu-id="e833f-167">In the **Target framework** list, select .NET Framework 4.</span></span> <span data-ttu-id="e833f-168">(不要选择 **.NET Framework 4 Client Profile**。)</span><span class="sxs-lookup"><span data-stu-id="e833f-168">(Do not select **.NET Framework 4 Client Profile**.)</span></span>
+3. <span data-ttu-id="7b91e-167">在 "**目标框架**" 列表中, 选择 ".NET Framework 4"。</span><span class="sxs-lookup"><span data-stu-id="7b91e-167">In the **Target framework** list, select .NET Framework 4.</span></span> <span data-ttu-id="7b91e-168">(请勿选择 **.NET Framework 4 客户端配置文件**。)</span><span class="sxs-lookup"><span data-stu-id="7b91e-168">(Do not select **.NET Framework 4 Client Profile**.)</span></span>
 
-4. <span data-ttu-id="e833f-169">通过执行以下步骤添加对缓存程序集的引用：</span><span class="sxs-lookup"><span data-stu-id="e833f-169">Add a reference to the caching assembly by following these steps:</span></span>
+4. <span data-ttu-id="7b91e-169">按照以下步骤添加对缓存程序集的引用:</span><span class="sxs-lookup"><span data-stu-id="7b91e-169">Add a reference to the caching assembly by following these steps:</span></span>
 
-    1. <span data-ttu-id="e833f-170">右键单击**引用**文件夹，然后单击**添加引用**。</span><span class="sxs-lookup"><span data-stu-id="e833f-170">Right-click the **References** folder and then click **Add Reference**.</span></span>
+    1. <span data-ttu-id="7b91e-170">右键单击 "**引用**" 文件夹, 然后单击 "**添加引用**"。</span><span class="sxs-lookup"><span data-stu-id="7b91e-170">Right-click the **References** folder and then click **Add Reference**.</span></span>
 
-    2. <span data-ttu-id="e833f-171">选择 **.NET**选项卡上，选择`System.Runtime.Caching`，然后单击**确定**。</span><span class="sxs-lookup"><span data-stu-id="e833f-171">Select the **.NET** tab, select `System.Runtime.Caching`, and then click **OK**.</span></span>
+    2. <span data-ttu-id="7b91e-171">选择 " **.net** " 选项卡`System.Runtime.Caching`, 选择, 然后单击 **"确定"** 。</span><span class="sxs-lookup"><span data-stu-id="7b91e-171">Select the **.NET** tab, select `System.Runtime.Caching`, and then click **OK**.</span></span>
 
-## <a name="adding-a-button-to-the-wpf-window"></a><span data-ttu-id="e833f-172">将按钮添加到 WPF 窗口</span><span class="sxs-lookup"><span data-stu-id="e833f-172">Adding a Button to the WPF Window</span></span>
- <span data-ttu-id="e833f-173">接下来，您将添加一个按钮控件，并创建为按钮的事件处理程序`Click`事件。</span><span class="sxs-lookup"><span data-stu-id="e833f-173">Next, you will add a button control and create an event handler for the button's `Click` event.</span></span> <span data-ttu-id="e833f-174">更高版本将添加代码，以便当单击按钮时，缓存并显示文本文件的内容。</span><span class="sxs-lookup"><span data-stu-id="e833f-174">Later you will add code to so when you click the button, the contents of the text file are cached and displayed.</span></span>
+## <a name="adding-a-button-to-the-wpf-window"></a><span data-ttu-id="7b91e-172">将按钮添加到 WPF 窗口</span><span class="sxs-lookup"><span data-stu-id="7b91e-172">Adding a Button to the WPF Window</span></span>
+ <span data-ttu-id="7b91e-173">接下来, 您将添加一个按钮控件, 并为该按钮的`Click`事件创建一个事件处理程序。</span><span class="sxs-lookup"><span data-stu-id="7b91e-173">Next, you will add a button control and create an event handler for the button's `Click` event.</span></span> <span data-ttu-id="7b91e-174">稍后你将向添加代码, 以便在单击按钮时, 将缓存并显示文本文件的内容。</span><span class="sxs-lookup"><span data-stu-id="7b91e-174">Later you will add code to so when you click the button, the contents of the text file are cached and displayed.</span></span>
 
-#### <a name="to-add-a-button-control"></a><span data-ttu-id="e833f-175">若要添加一个按钮控件</span><span class="sxs-lookup"><span data-stu-id="e833f-175">To add a button control</span></span>
+#### <a name="to-add-a-button-control"></a><span data-ttu-id="7b91e-175">添加按钮控件</span><span class="sxs-lookup"><span data-stu-id="7b91e-175">To add a button control</span></span>
 
-1. <span data-ttu-id="e833f-176">在中**解决方案资源管理器**，双击 MainWindow.xaml 文件以将其打开。</span><span class="sxs-lookup"><span data-stu-id="e833f-176">In **Solution Explorer**, double-click the MainWindow.xaml file to open it.</span></span>
+1. <span data-ttu-id="7b91e-176">在**解决方案资源管理器**中, 双击 mainwindow.xaml 文件以将其打开。</span><span class="sxs-lookup"><span data-stu-id="7b91e-176">In **Solution Explorer**, double-click the MainWindow.xaml file to open it.</span></span>
 
-2. <span data-ttu-id="e833f-177">从**工具箱**下**常用 WPF 控件**，将`Button`控制对`MainWindow`窗口。</span><span class="sxs-lookup"><span data-stu-id="e833f-177">From the **Toolbox**, under **Common WPF Controls**, drag a `Button` control to the `MainWindow` window.</span></span>
+2. <span data-ttu-id="7b91e-177">从 "**工具箱**" 的 "**常用 WPF 控件**" 下`Button` , 将控件`MainWindow`拖动到窗口。</span><span class="sxs-lookup"><span data-stu-id="7b91e-177">From the **Toolbox**, under **Common WPF Controls**, drag a `Button` control to the `MainWindow` window.</span></span>
 
-3. <span data-ttu-id="e833f-178">在中**属性**窗口中，将`Content`的属性`Button`控制对**获取缓存**。</span><span class="sxs-lookup"><span data-stu-id="e833f-178">In the **Properties** window, set the `Content` property of the `Button` control to **Get Cache**.</span></span>
+3. <span data-ttu-id="7b91e-178">在 "**属性**" 窗口中, `Content`将`Button`控件的属性设置为 "**获取缓存**"。</span><span class="sxs-lookup"><span data-stu-id="7b91e-178">In the **Properties** window, set the `Content` property of the `Button` control to **Get Cache**.</span></span>
 
-## <a name="initializing-the-cache-and-caching-an-entry"></a><span data-ttu-id="e833f-179">正在初始化缓存和缓存条目</span><span class="sxs-lookup"><span data-stu-id="e833f-179">Initializing the Cache and Caching an Entry</span></span>
- <span data-ttu-id="e833f-180">接下来，将添加代码以执行以下任务：</span><span class="sxs-lookup"><span data-stu-id="e833f-180">Next, you will add the code to perform the following tasks:</span></span>
+## <a name="initializing-the-cache-and-caching-an-entry"></a><span data-ttu-id="7b91e-179">初始化缓存并缓存项</span><span class="sxs-lookup"><span data-stu-id="7b91e-179">Initializing the Cache and Caching an Entry</span></span>
+ <span data-ttu-id="7b91e-180">接下来, 你将添加代码来执行以下任务:</span><span class="sxs-lookup"><span data-stu-id="7b91e-180">Next, you will add the code to perform the following tasks:</span></span>
 
-- <span data-ttu-id="e833f-181">创建缓存类的实例 — 也就是说，您将实例化一个新<xref:System.Runtime.Caching.MemoryCache>对象。</span><span class="sxs-lookup"><span data-stu-id="e833f-181">Create an instance of the cache class—that is, you will instantiate a new <xref:System.Runtime.Caching.MemoryCache> object.</span></span>
+- <span data-ttu-id="7b91e-181">创建缓存类的实例, 即, 将实例化一个新<xref:System.Runtime.Caching.MemoryCache>的对象。</span><span class="sxs-lookup"><span data-stu-id="7b91e-181">Create an instance of the cache class—that is, you will instantiate a new <xref:System.Runtime.Caching.MemoryCache> object.</span></span>
 
-- <span data-ttu-id="e833f-182">指定缓存使用<xref:System.Runtime.Caching.HostFileChangeMonitor>对象来监视在文本文件中的更改。</span><span class="sxs-lookup"><span data-stu-id="e833f-182">Specify that the cache uses a <xref:System.Runtime.Caching.HostFileChangeMonitor> object to monitor changes in the text file.</span></span>
+- <span data-ttu-id="7b91e-182">指定缓存使用<xref:System.Runtime.Caching.HostFileChangeMonitor>对象来监视文本文件中的更改。</span><span class="sxs-lookup"><span data-stu-id="7b91e-182">Specify that the cache uses a <xref:System.Runtime.Caching.HostFileChangeMonitor> object to monitor changes in the text file.</span></span>
 
-- <span data-ttu-id="e833f-183">读取该文本文件并缓存其内容作为缓存项。</span><span class="sxs-lookup"><span data-stu-id="e833f-183">Read the text file and cache its contents as a cache entry.</span></span>
+- <span data-ttu-id="7b91e-183">读取文本文件并将其内容缓存为缓存条目。</span><span class="sxs-lookup"><span data-stu-id="7b91e-183">Read the text file and cache its contents as a cache entry.</span></span>
 
-- <span data-ttu-id="e833f-184">显示缓存的文本文件的内容。</span><span class="sxs-lookup"><span data-stu-id="e833f-184">Display the contents of the cached text file.</span></span>
+- <span data-ttu-id="7b91e-184">显示缓存的文本文件的内容。</span><span class="sxs-lookup"><span data-stu-id="7b91e-184">Display the contents of the cached text file.</span></span>
 
-#### <a name="to-create-the-cache-object"></a><span data-ttu-id="e833f-185">若要创建缓存对象</span><span class="sxs-lookup"><span data-stu-id="e833f-185">To create the cache object</span></span>
+#### <a name="to-create-the-cache-object"></a><span data-ttu-id="7b91e-185">创建缓存对象</span><span class="sxs-lookup"><span data-stu-id="7b91e-185">To create the cache object</span></span>
 
-1. <span data-ttu-id="e833f-186">双击您只是为了在 MainWindow.xaml.cs 或 MainWindow.Xaml.vb 文件创建一个事件处理程序添加的按钮。</span><span class="sxs-lookup"><span data-stu-id="e833f-186">Double-click the button you just added in order to create an event handler in the MainWindow.xaml.cs or MainWindow.Xaml.vb file.</span></span>
+1. <span data-ttu-id="7b91e-186">双击刚才添加的按钮, 以便在 MainWindow.xaml.cs 或 Mainwindow.xaml 文件中创建事件处理程序。</span><span class="sxs-lookup"><span data-stu-id="7b91e-186">Double-click the button you just added in order to create an event handler in the MainWindow.xaml.cs or MainWindow.Xaml.vb file.</span></span>
 
-2. <span data-ttu-id="e833f-187">（在类声明中） 的文件的顶部添加以下`Imports`(Visual Basic) 或`using`(C#) 语句：</span><span class="sxs-lookup"><span data-stu-id="e833f-187">At the top of the file (before the class declaration), add the following `Imports` (Visual Basic) or `using` (C#) statements:</span></span>
+2. <span data-ttu-id="7b91e-187">在文件顶部 (在类声明之前), 添加以下`Imports` (Visual Basic) 或`using` (C#) 语句:</span><span class="sxs-lookup"><span data-stu-id="7b91e-187">At the top of the file (before the class declaration), add the following `Imports` (Visual Basic) or `using` (C#) statements:</span></span>
 
     ```csharp
     using System.Runtime.Caching;
@@ -167,7 +167,7 @@ ms.locfileid: "66457513"
     Imports System.IO
     ```
 
-3. <span data-ttu-id="e833f-188">事件处理程序中，添加以下代码以实例化的缓存对象：</span><span class="sxs-lookup"><span data-stu-id="e833f-188">In the event handler, add the following code to instantiate the cache object:</span></span>
+3. <span data-ttu-id="7b91e-188">在事件处理程序中, 添加以下代码以实例化缓存对象:</span><span class="sxs-lookup"><span data-stu-id="7b91e-188">In the event handler, add the following code to instantiate the cache object:</span></span>
 
     ```csharp
     ObjectCache cache = MemoryCache.Default;
@@ -177,9 +177,9 @@ ms.locfileid: "66457513"
     Dim cache As ObjectCache = MemoryCache.Default
     ```
 
-     <span data-ttu-id="e833f-189"><xref:System.Runtime.Caching.ObjectCache>类是一个内置的类，提供内存中对象缓存。</span><span class="sxs-lookup"><span data-stu-id="e833f-189">The <xref:System.Runtime.Caching.ObjectCache> class is a built-in class that provides an in-memory object cache.</span></span>
+     <span data-ttu-id="7b91e-189"><xref:System.Runtime.Caching.ObjectCache>类是提供内存中对象缓存的内置类。</span><span class="sxs-lookup"><span data-stu-id="7b91e-189">The <xref:System.Runtime.Caching.ObjectCache> class is a built-in class that provides an in-memory object cache.</span></span>
 
-4. <span data-ttu-id="e833f-190">添加以下代码以读取内容的名为某个缓存项`filecontents`:</span><span class="sxs-lookup"><span data-stu-id="e833f-190">Add the following code to read the contents of a cache entry named `filecontents`:</span></span>
+4. <span data-ttu-id="7b91e-190">添加以下代码以读取名为`filecontents`的缓存条目的内容:</span><span class="sxs-lookup"><span data-stu-id="7b91e-190">Add the following code to read the contents of a cache entry named `filecontents`:</span></span>
 
     ```vb
     Dim fileContents As String = TryCast(cache("filecontents"), String)
@@ -189,7 +189,7 @@ ms.locfileid: "66457513"
     string fileContents = cache["filecontents"] as string;
     ```
 
-5. <span data-ttu-id="e833f-191">添加以下代码以检查是否为命名的缓存项`filecontents`存在：</span><span class="sxs-lookup"><span data-stu-id="e833f-191">Add the following code to check whether the cache entry named `filecontents` exists:</span></span>
+5. <span data-ttu-id="7b91e-191">添加以下代码以检查是否存在名为`filecontents`的缓存条目:</span><span class="sxs-lookup"><span data-stu-id="7b91e-191">Add the following code to check whether the cache entry named `filecontents` exists:</span></span>
 
     ```vb
     If fileContents Is Nothing Then
@@ -204,9 +204,9 @@ ms.locfileid: "66457513"
     }
     ```
 
-     <span data-ttu-id="e833f-192">如果指定的缓存条目不存在，必须读取该文本文件并将其作为某个缓存项添加到缓存。</span><span class="sxs-lookup"><span data-stu-id="e833f-192">If the specified cache entry does not exist, you must read the text file and add it as a cache entry to the cache.</span></span>
+     <span data-ttu-id="7b91e-192">如果指定的缓存项不存在, 则必须读取文本文件并将其作为缓存项添加到缓存中。</span><span class="sxs-lookup"><span data-stu-id="7b91e-192">If the specified cache entry does not exist, you must read the text file and add it as a cache entry to the cache.</span></span>
 
-6. <span data-ttu-id="e833f-193">在中`if/then`块中，添加以下代码以创建一个新<xref:System.Runtime.Caching.CacheItemPolicy>对象，它指定缓存项将在 10 秒后过期。</span><span class="sxs-lookup"><span data-stu-id="e833f-193">In the `if/then` block, add the following code to create a new <xref:System.Runtime.Caching.CacheItemPolicy> object that specifies that the cache entry expires after 10 seconds.</span></span>
+6. <span data-ttu-id="7b91e-193">在块中, 添加以下代码, 以创建一个新<xref:System.Runtime.Caching.CacheItemPolicy>的对象, 该对象指定缓存项在10秒后过期。 `if/then`</span><span class="sxs-lookup"><span data-stu-id="7b91e-193">In the `if/then` block, add the following code to create a new <xref:System.Runtime.Caching.CacheItemPolicy> object that specifies that the cache entry expires after 10 seconds.</span></span>
 
     ```vb
     Dim policy As New CacheItemPolicy()
@@ -218,9 +218,9 @@ ms.locfileid: "66457513"
     policy.AbsoluteExpiration = DateTimeOffset.Now.AddSeconds(10.0);
     ```
 
-     <span data-ttu-id="e833f-194">如果未不提供任何逐出或过期的信息，默认值是<xref:System.Runtime.Caching.ObjectCache.InfiniteAbsoluteExpiration>，这意味着缓存项永远不会过期时间取决于只有一个绝对时间。</span><span class="sxs-lookup"><span data-stu-id="e833f-194">If no eviction or expiration information is provided, the default is <xref:System.Runtime.Caching.ObjectCache.InfiniteAbsoluteExpiration>, which means the cache entries never expire based only on an absolute time.</span></span> <span data-ttu-id="e833f-195">相反，缓存条目过期仅当内存压力时。</span><span class="sxs-lookup"><span data-stu-id="e833f-195">Instead, cache entries expire only when there is memory pressure.</span></span> <span data-ttu-id="e833f-196">作为最佳做法，应始终显式提供绝对或可调到期。</span><span class="sxs-lookup"><span data-stu-id="e833f-196">As a best practice, you should always explicitly provide either an absolute or a sliding expiration.</span></span>
+     <span data-ttu-id="7b91e-194">如果未提供任何逐出或过期信息, 则默认值<xref:System.Runtime.Caching.ObjectCache.InfiniteAbsoluteExpiration>为, 这意味着缓存条目永远不会仅基于绝对时间过期。</span><span class="sxs-lookup"><span data-stu-id="7b91e-194">If no eviction or expiration information is provided, the default is <xref:System.Runtime.Caching.ObjectCache.InfiniteAbsoluteExpiration>, which means the cache entries never expire based only on an absolute time.</span></span> <span data-ttu-id="7b91e-195">相反, 缓存项仅在存在内存压力时过期。</span><span class="sxs-lookup"><span data-stu-id="7b91e-195">Instead, cache entries expire only when there is memory pressure.</span></span> <span data-ttu-id="7b91e-196">最佳做法是, 应始终显式提供绝对或可调过期。</span><span class="sxs-lookup"><span data-stu-id="7b91e-196">As a best practice, you should always explicitly provide either an absolute or a sliding expiration.</span></span>
 
-7. <span data-ttu-id="e833f-197">内部`if/then`阻止和上一步中添加的代码，添加以下代码以创建你想要监视，并将文本文件的路径添加到集合的文件路径的集合：</span><span class="sxs-lookup"><span data-stu-id="e833f-197">Inside the `if/then` block and following the code you added in the previous step, add the following code to create a collection for the file paths that you want to monitor, and to add the path of the text file to the collection:</span></span>
+7. <span data-ttu-id="7b91e-197">`if/then`在块中并在上一步中添加的代码后面添加以下代码, 以便为要监视的文件路径创建集合, 并将文本文件的路径添加到集合中:</span><span class="sxs-lookup"><span data-stu-id="7b91e-197">Inside the `if/then` block and following the code you added in the previous step, add the following code to create a collection for the file paths that you want to monitor, and to add the path of the text file to the collection:</span></span>
 
     ```vb
     Dim filePaths As New List(Of String)()
@@ -233,9 +233,9 @@ ms.locfileid: "66457513"
     ```
 
     > [!NOTE]
-    >  <span data-ttu-id="e833f-198">如果不是你想要使用的文本文件`c:\cache\cacheText.txt`，指定的文本文件是你想要使用的路径。</span><span class="sxs-lookup"><span data-stu-id="e833f-198">If the text file you want to use is not `c:\cache\cacheText.txt`, specify the path where the text file is that you want to use.</span></span>
+    > <span data-ttu-id="7b91e-198">如果要使用的文本文件不`c:\cache\cacheText.txt`是, 请指定要使用的文本文件所在的路径。</span><span class="sxs-lookup"><span data-stu-id="7b91e-198">If the text file you want to use is not `c:\cache\cacheText.txt`, specify the path where the text file is that you want to use.</span></span>
 
-8. <span data-ttu-id="e833f-199">在上一步骤中，添加的代码后面添加以下代码以添加新<xref:System.Runtime.Caching.HostFileChangeMonitor>到更改的集合对象监视缓存项：</span><span class="sxs-lookup"><span data-stu-id="e833f-199">Following the code that you added in the previous step, add the following code to add a new <xref:System.Runtime.Caching.HostFileChangeMonitor> object to the collection of change monitors for the cache entry:</span></span>
+8. <span data-ttu-id="7b91e-199">在上一步中添加的代码后面, 添加以下代码以将新<xref:System.Runtime.Caching.HostFileChangeMonitor>对象添加到缓存项的更改监视器集合中:</span><span class="sxs-lookup"><span data-stu-id="7b91e-199">Following the code that you added in the previous step, add the following code to add a new <xref:System.Runtime.Caching.HostFileChangeMonitor> object to the collection of change monitors for the cache entry:</span></span>
 
     ```vb
     policy.ChangeMonitors.Add(New HostFileChangeMonitor(filePaths))
@@ -245,9 +245,9 @@ ms.locfileid: "66457513"
     policy.ChangeMonitors.Add(new HostFileChangeMonitor(filePaths));
     ```
 
-     <span data-ttu-id="e833f-200"><xref:System.Runtime.Caching.HostFileChangeMonitor>对象可监视文本文件的路径并通知缓存，如果在发生更改。</span><span class="sxs-lookup"><span data-stu-id="e833f-200">The <xref:System.Runtime.Caching.HostFileChangeMonitor> object monitors the text file's path and notifies the cache if changes occur.</span></span> <span data-ttu-id="e833f-201">在此示例中，如果文件的内容发生更改，将过期的缓存项。</span><span class="sxs-lookup"><span data-stu-id="e833f-201">In this example, the cache entry will expire if the content of the file changes.</span></span>
+     <span data-ttu-id="7b91e-200"><xref:System.Runtime.Caching.HostFileChangeMonitor>对象监视文本文件的路径, 并在发生更改时通知缓存。</span><span class="sxs-lookup"><span data-stu-id="7b91e-200">The <xref:System.Runtime.Caching.HostFileChangeMonitor> object monitors the text file's path and notifies the cache if changes occur.</span></span> <span data-ttu-id="7b91e-201">在此示例中, 如果文件的内容发生更改, 缓存项将过期。</span><span class="sxs-lookup"><span data-stu-id="7b91e-201">In this example, the cache entry will expire if the content of the file changes.</span></span>
 
-9. <span data-ttu-id="e833f-202">在上一步中添加该代码之后添加以下代码以读取文本文件的内容：</span><span class="sxs-lookup"><span data-stu-id="e833f-202">Following the code that you added in the previous step, add the following code to read the contents of the text file:</span></span>
+9. <span data-ttu-id="7b91e-202">在上一步中添加的代码后面, 添加以下代码以读取文本文件的内容:</span><span class="sxs-lookup"><span data-stu-id="7b91e-202">Following the code that you added in the previous step, add the following code to read the contents of the text file:</span></span>
 
     ```vb
     fileContents = File.ReadAllText("c:\cache\cacheText.txt") & vbCrLf & DateTime.Now.ToString()
@@ -257,9 +257,9 @@ ms.locfileid: "66457513"
     fileContents = File.ReadAllText("c:\\cache\\cacheText.txt") + "\n" + DateTime.Now;
     ```
 
-     <span data-ttu-id="e833f-203">以便你将能够看到该缓存项过期时添加的日期和时间的时间戳。</span><span class="sxs-lookup"><span data-stu-id="e833f-203">The date and time timestamp is added so that you will be able to see when the cache entry expires.</span></span>
+     <span data-ttu-id="7b91e-203">添加了日期和时间戳, 以便您能够查看缓存条目的过期时间。</span><span class="sxs-lookup"><span data-stu-id="7b91e-203">The date and time timestamp is added so that you will be able to see when the cache entry expires.</span></span>
 
-10. <span data-ttu-id="e833f-204">在上一步骤中，添加的代码后面添加以下代码以将该文件的内容插入到缓存对象作为<xref:System.Runtime.Caching.CacheItem>实例：</span><span class="sxs-lookup"><span data-stu-id="e833f-204">Following the code that you added in the previous step, add the following code to insert the contents of the file into the cache object as a <xref:System.Runtime.Caching.CacheItem> instance:</span></span>
+10. <span data-ttu-id="7b91e-204">在上一步中添加的代码后面, 添加以下代码, 以将文件内容作为<xref:System.Runtime.Caching.CacheItem>实例插入到缓存对象中:</span><span class="sxs-lookup"><span data-stu-id="7b91e-204">Following the code that you added in the previous step, add the following code to insert the contents of the file into the cache object as a <xref:System.Runtime.Caching.CacheItem> instance:</span></span>
 
     ```vb
     cache.Set("filecontents", fileContents, policy)
@@ -269,9 +269,9 @@ ms.locfileid: "66457513"
     cache.Set("filecontents", fileContents, policy);
     ```
 
-     <span data-ttu-id="e833f-205">指定有关如何通过将传递逐出缓存项的信息<xref:System.Runtime.Caching.CacheItemPolicy>作为参数前面创建的对象。</span><span class="sxs-lookup"><span data-stu-id="e833f-205">You specify information about how the cache entry should be evicted by passing the <xref:System.Runtime.Caching.CacheItemPolicy> object that you created earlier as a parameter.</span></span>
+     <span data-ttu-id="7b91e-205">可以通过将之前创建的<xref:System.Runtime.Caching.CacheItemPolicy>对象作为参数传递来指定有关如何逐出缓存项的信息。</span><span class="sxs-lookup"><span data-stu-id="7b91e-205">You specify information about how the cache entry should be evicted by passing the <xref:System.Runtime.Caching.CacheItemPolicy> object that you created earlier as a parameter.</span></span>
 
-11. <span data-ttu-id="e833f-206">之后`if/then`块中，添加以下代码以在消息框中显示缓存的文件内容：</span><span class="sxs-lookup"><span data-stu-id="e833f-206">After the `if/then` block, add the following code to display the cached file content in a message box:</span></span>
+11. <span data-ttu-id="7b91e-206">在块`if/then`的后面, 添加以下代码以在消息框中显示缓存的文件内容:</span><span class="sxs-lookup"><span data-stu-id="7b91e-206">After the `if/then` block, add the following code to display the cached file content in a message box:</span></span>
 
     ```vb
     MessageBox.Show(fileContents)
@@ -281,53 +281,53 @@ ms.locfileid: "66457513"
     MessageBox.Show(fileContents);
     ```
 
-12. <span data-ttu-id="e833f-207">在中**构建**菜单上，单击**生成 WPFCaching**生成项目。</span><span class="sxs-lookup"><span data-stu-id="e833f-207">In the **Build** menu, click **Build WPFCaching** to build your project.</span></span>
+12. <span data-ttu-id="7b91e-207">在 "**生成**" 菜单中, 单击 "**生成 WPFCaching** " 以生成项目。</span><span class="sxs-lookup"><span data-stu-id="7b91e-207">In the **Build** menu, click **Build WPFCaching** to build your project.</span></span>
 
-## <a name="testing-caching-in-the-wpf-application"></a><span data-ttu-id="e833f-208">测试在缓存中的 WPF 应用程序</span><span class="sxs-lookup"><span data-stu-id="e833f-208">Testing Caching in the WPF Application</span></span>
- <span data-ttu-id="e833f-209">现在可以测试应用程序。</span><span class="sxs-lookup"><span data-stu-id="e833f-209">You can now test the application.</span></span>
+## <a name="testing-caching-in-the-wpf-application"></a><span data-ttu-id="7b91e-208">在 WPF 应用程序中测试缓存</span><span class="sxs-lookup"><span data-stu-id="7b91e-208">Testing Caching in the WPF Application</span></span>
+ <span data-ttu-id="7b91e-209">现在可以对应用程序进行测试。</span><span class="sxs-lookup"><span data-stu-id="7b91e-209">You can now test the application.</span></span>
 
-#### <a name="to-test-caching-in-the-wpf-application"></a><span data-ttu-id="e833f-210">若要测试的 WPF 应用程序中的缓存</span><span class="sxs-lookup"><span data-stu-id="e833f-210">To test caching in the WPF application</span></span>
+#### <a name="to-test-caching-in-the-wpf-application"></a><span data-ttu-id="7b91e-210">在 WPF 应用程序中测试缓存</span><span class="sxs-lookup"><span data-stu-id="7b91e-210">To test caching in the WPF application</span></span>
 
-1. <span data-ttu-id="e833f-211">按 Ctrl+F5 运行应用程序。</span><span class="sxs-lookup"><span data-stu-id="e833f-211">Press CTRL+F5 to run the application.</span></span>
+1. <span data-ttu-id="7b91e-211">按 Ctrl+F5 运行应用程序。</span><span class="sxs-lookup"><span data-stu-id="7b91e-211">Press CTRL+F5 to run the application.</span></span>
 
-     <span data-ttu-id="e833f-212">`MainWindow`显示窗口。</span><span class="sxs-lookup"><span data-stu-id="e833f-212">The `MainWindow` window is displayed.</span></span>
+     <span data-ttu-id="7b91e-212">随即`MainWindow`显示窗口。</span><span class="sxs-lookup"><span data-stu-id="7b91e-212">The `MainWindow` window is displayed.</span></span>
 
-2. <span data-ttu-id="e833f-213">单击**中获取缓存**。</span><span class="sxs-lookup"><span data-stu-id="e833f-213">Click **Get Cache**.</span></span>
+2. <span data-ttu-id="7b91e-213">单击 "**获取缓存**"。</span><span class="sxs-lookup"><span data-stu-id="7b91e-213">Click **Get Cache**.</span></span>
 
-     <span data-ttu-id="e833f-214">在消息框中显示文本文件中缓存的内容。</span><span class="sxs-lookup"><span data-stu-id="e833f-214">The cached content from the text file is displayed in a message box.</span></span> <span data-ttu-id="e833f-215">请注意，该文件上的时间戳。</span><span class="sxs-lookup"><span data-stu-id="e833f-215">Notice the timestamp on the file.</span></span>
+     <span data-ttu-id="7b91e-214">文本文件中的缓存内容显示在一个消息框中。</span><span class="sxs-lookup"><span data-stu-id="7b91e-214">The cached content from the text file is displayed in a message box.</span></span> <span data-ttu-id="7b91e-215">请注意该文件上的时间戳。</span><span class="sxs-lookup"><span data-stu-id="7b91e-215">Notice the timestamp on the file.</span></span>
 
-3. <span data-ttu-id="e833f-216">关闭消息框，然后单击**获取缓存**试。</span><span class="sxs-lookup"><span data-stu-id="e833f-216">Close the message box and then click **Get Cache** again.</span></span>
+3. <span data-ttu-id="7b91e-216">关闭消息框, 然后再次单击 "**获取缓存**"。</span><span class="sxs-lookup"><span data-stu-id="7b91e-216">Close the message box and then click **Get Cache** again.</span></span>
 
-     <span data-ttu-id="e833f-217">时间戳保持不变。</span><span class="sxs-lookup"><span data-stu-id="e833f-217">The timestamp is unchanged.</span></span> <span data-ttu-id="e833f-218">这将指示显示缓存的内容。</span><span class="sxs-lookup"><span data-stu-id="e833f-218">This indicates the cached content is displayed.</span></span>
+     <span data-ttu-id="7b91e-217">时间戳未更改。</span><span class="sxs-lookup"><span data-stu-id="7b91e-217">The timestamp is unchanged.</span></span> <span data-ttu-id="7b91e-218">这表示显示缓存内容。</span><span class="sxs-lookup"><span data-stu-id="7b91e-218">This indicates the cached content is displayed.</span></span>
 
-4. <span data-ttu-id="e833f-219">等待 10 秒或更长，然后单击**获取缓存**试。</span><span class="sxs-lookup"><span data-stu-id="e833f-219">Wait 10 seconds or more and then click **Get Cache** again.</span></span>
+4. <span data-ttu-id="7b91e-219">等待10秒钟或更多, 然后再次单击 "**获取缓存**"。</span><span class="sxs-lookup"><span data-stu-id="7b91e-219">Wait 10 seconds or more and then click **Get Cache** again.</span></span>
 
-     <span data-ttu-id="e833f-220">此时将显示新时间戳。</span><span class="sxs-lookup"><span data-stu-id="e833f-220">This time a new timestamp is displayed.</span></span> <span data-ttu-id="e833f-221">这表示该策略允许缓存项过期，并且将显示新缓存的内容。</span><span class="sxs-lookup"><span data-stu-id="e833f-221">This indicates that the policy let the cache entry expire and that new cached content is displayed.</span></span>
+     <span data-ttu-id="7b91e-220">此时将显示新的时间戳。</span><span class="sxs-lookup"><span data-stu-id="7b91e-220">This time a new timestamp is displayed.</span></span> <span data-ttu-id="7b91e-221">这表示策略使缓存条目过期, 并显示新的缓存内容。</span><span class="sxs-lookup"><span data-stu-id="7b91e-221">This indicates that the policy let the cache entry expire and that new cached content is displayed.</span></span>
 
-5. <span data-ttu-id="e833f-222">在文本编辑器中，打开您创建的文本文件。</span><span class="sxs-lookup"><span data-stu-id="e833f-222">In a text editor, open the text file that you created.</span></span> <span data-ttu-id="e833f-223">不进行任何更改。</span><span class="sxs-lookup"><span data-stu-id="e833f-223">Do not make any changes yet.</span></span>
+5. <span data-ttu-id="7b91e-222">在文本编辑器中, 打开您创建的文本文件。</span><span class="sxs-lookup"><span data-stu-id="7b91e-222">In a text editor, open the text file that you created.</span></span> <span data-ttu-id="7b91e-223">不要进行任何更改。</span><span class="sxs-lookup"><span data-stu-id="7b91e-223">Do not make any changes yet.</span></span>
 
-6. <span data-ttu-id="e833f-224">关闭消息框，然后单击**获取缓存**试。</span><span class="sxs-lookup"><span data-stu-id="e833f-224">Close the message box and then click **Get Cache** again.</span></span>
+6. <span data-ttu-id="7b91e-224">关闭消息框, 然后再次单击 "**获取缓存**"。</span><span class="sxs-lookup"><span data-stu-id="7b91e-224">Close the message box and then click **Get Cache** again.</span></span>
 
-     <span data-ttu-id="e833f-225">请再次注意时间戳。</span><span class="sxs-lookup"><span data-stu-id="e833f-225">Notice the timestamp again.</span></span>
+     <span data-ttu-id="7b91e-225">再次注意时间戳。</span><span class="sxs-lookup"><span data-stu-id="7b91e-225">Notice the timestamp again.</span></span>
 
-7. <span data-ttu-id="e833f-226">对文本文件进行更改，然后保存该文件。</span><span class="sxs-lookup"><span data-stu-id="e833f-226">Make a change to the text file and then save the file.</span></span>
+7. <span data-ttu-id="7b91e-226">对文本文件进行更改, 然后保存该文件。</span><span class="sxs-lookup"><span data-stu-id="7b91e-226">Make a change to the text file and then save the file.</span></span>
 
-8. <span data-ttu-id="e833f-227">关闭消息框，然后单击**获取缓存**试。</span><span class="sxs-lookup"><span data-stu-id="e833f-227">Close the message box and then click **Get Cache** again.</span></span>
+8. <span data-ttu-id="7b91e-227">关闭消息框, 然后再次单击 "**获取缓存**"。</span><span class="sxs-lookup"><span data-stu-id="7b91e-227">Close the message box and then click **Get Cache** again.</span></span>
 
-     <span data-ttu-id="e833f-228">此消息框包含中的文本文件和新的时间戳的已更新的内容。</span><span class="sxs-lookup"><span data-stu-id="e833f-228">This message box contains the updated content from the text file and a new timestamp.</span></span> <span data-ttu-id="e833f-229">这指示主文件的更改监视器逐出缓存项后更改该文件，将立即即使绝对超时时间尚未过期。</span><span class="sxs-lookup"><span data-stu-id="e833f-229">This indicates that the host-file change monitor evicted the cache entry immediately when you changed the file, even though the absolute timeout period had not expired.</span></span>
+     <span data-ttu-id="7b91e-228">此消息框包含文本文件中的更新内容和新的时间戳。</span><span class="sxs-lookup"><span data-stu-id="7b91e-228">This message box contains the updated content from the text file and a new timestamp.</span></span> <span data-ttu-id="7b91e-229">这表明在更改文件时, 主机文件更改监视器会立即逐出缓存项, 即使绝对超时期限尚未过期。</span><span class="sxs-lookup"><span data-stu-id="7b91e-229">This indicates that the host-file change monitor evicted the cache entry immediately when you changed the file, even though the absolute timeout period had not expired.</span></span>
 
     > [!NOTE]
-    >  <span data-ttu-id="e833f-230">可以增加到 20 秒或更多用于允许更多时间，以便在文件中进行更改的逐出时间。</span><span class="sxs-lookup"><span data-stu-id="e833f-230">You can increase the eviction time to 20 seconds or more to allow more time for you to make a change in the file.</span></span>
+    > <span data-ttu-id="7b91e-230">你可以将逐出时间增加到20秒或更多, 以允许更多的时间来对文件进行更改。</span><span class="sxs-lookup"><span data-stu-id="7b91e-230">You can increase the eviction time to 20 seconds or more to allow more time for you to make a change in the file.</span></span>
 
-## <a name="code-example"></a><span data-ttu-id="e833f-231">代码示例</span><span class="sxs-lookup"><span data-stu-id="e833f-231">Code Example</span></span>
- <span data-ttu-id="e833f-232">完成本演练后，你创建的项目的代码将类似于下面的示例。</span><span class="sxs-lookup"><span data-stu-id="e833f-232">After you have completed this walkthrough, the code for the project you created will resemble the following example.</span></span>
+## <a name="code-example"></a><span data-ttu-id="7b91e-231">代码示例</span><span class="sxs-lookup"><span data-stu-id="7b91e-231">Code Example</span></span>
+ <span data-ttu-id="7b91e-232">完成本演练后, 你创建的项目的代码将与以下示例类似。</span><span class="sxs-lookup"><span data-stu-id="7b91e-232">After you have completed this walkthrough, the code for the project you created will resemble the following example.</span></span>
 
  [!code-csharp[CachingWPFApplications#1](~/samples/snippets/csharp/VS_Snippets_Wpf/CachingWPFApplications/CSharp/MainWindow.xaml.cs#1)]
  [!code-vb[CachingWPFApplications#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CachingWPFApplications/VisualBasic/MainWindow.xaml.vb#1)]
 
-## <a name="see-also"></a><span data-ttu-id="e833f-233">请参阅</span><span class="sxs-lookup"><span data-stu-id="e833f-233">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7b91e-233">请参阅</span><span class="sxs-lookup"><span data-stu-id="7b91e-233">See also</span></span>
 
 - <xref:System.Runtime.Caching.MemoryCache>
 - <xref:System.Runtime.Caching.ObjectCache>
 - <xref:System.Runtime.Caching>
-- [<span data-ttu-id="e833f-234">在 .NET Framework 应用程序中缓存</span><span class="sxs-lookup"><span data-stu-id="e833f-234">Caching in .NET Framework Applications</span></span>](../../performance/caching-in-net-framework-applications.md)
+- [<span data-ttu-id="7b91e-234">在 .NET Framework 应用程序中缓存</span><span class="sxs-lookup"><span data-stu-id="7b91e-234">Caching in .NET Framework Applications</span></span>](../../performance/caching-in-net-framework-applications.md)

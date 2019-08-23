@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b17b36f66a9b8b78b16057ec37d3ee5f484f7ae2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: dd5d2e820bd1d733bb4ab968a89174124bc91357
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779755"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962943"
 ---
-# <a name="iclrmetahostgetversionfromfile-method"></a><span data-ttu-id="9be23-102">ICLRMetaHost::GetVersionFromFile 方法</span><span class="sxs-lookup"><span data-stu-id="9be23-102">ICLRMetaHost::GetVersionFromFile Method</span></span>
-<span data-ttu-id="9be23-103">获取程序集的原始.NET Framework 编译版本 （存储在元数据），给定其文件路径。</span><span class="sxs-lookup"><span data-stu-id="9be23-103">Gets an assembly's original .NET Framework compilation version (stored in the metadata), given its file path.</span></span> <span data-ttu-id="9be23-104">此方法取代[GetFileVersion](../../../../docs/framework/unmanaged-api/hosting/getfileversion-function.md)函数。</span><span class="sxs-lookup"><span data-stu-id="9be23-104">This method supersedes the [GetFileVersion](../../../../docs/framework/unmanaged-api/hosting/getfileversion-function.md) function.</span></span>  
+# <a name="iclrmetahostgetversionfromfile-method"></a><span data-ttu-id="a002e-102">ICLRMetaHost::GetVersionFromFile 方法</span><span class="sxs-lookup"><span data-stu-id="a002e-102">ICLRMetaHost::GetVersionFromFile Method</span></span>
+<span data-ttu-id="a002e-103">在给定程序集的文件路径的情况下, 获取程序集的原始 .NET Framework 编译版本 (存储在元数据中)。</span><span class="sxs-lookup"><span data-stu-id="a002e-103">Gets an assembly's original .NET Framework compilation version (stored in the metadata), given its file path.</span></span> <span data-ttu-id="a002e-104">此方法取代了[GetFileVersion](../../../../docs/framework/unmanaged-api/hosting/getfileversion-function.md)函数。</span><span class="sxs-lookup"><span data-stu-id="a002e-104">This method supersedes the [GetFileVersion](../../../../docs/framework/unmanaged-api/hosting/getfileversion-function.md) function.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9be23-105">语法</span><span class="sxs-lookup"><span data-stu-id="9be23-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a002e-105">语法</span><span class="sxs-lookup"><span data-stu-id="a002e-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetVersionFromFile (  
@@ -37,40 +37,40 @@ HRESULT GetVersionFromFile (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="9be23-106">参数</span><span class="sxs-lookup"><span data-stu-id="9be23-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a002e-106">参数</span><span class="sxs-lookup"><span data-stu-id="a002e-106">Parameters</span></span>  
  `pwzFilePath`  
- <span data-ttu-id="9be23-107">[in]完整的程序集文件路径。</span><span class="sxs-lookup"><span data-stu-id="9be23-107">[in] The complete assembly file path.</span></span>  
+ <span data-ttu-id="a002e-107">中完整的程序集文件路径。</span><span class="sxs-lookup"><span data-stu-id="a002e-107">[in] The complete assembly file path.</span></span>  
   
  `pwzbuffer`  
- <span data-ttu-id="9be23-108">[out]在格式中的元数据中存储的.NET Framework 编译版本"v*A*。*B*[。*X*]"。</span><span class="sxs-lookup"><span data-stu-id="9be23-108">[out] The .NET Framework compilation version stored in the metadata, in the format "v*A*.*B*[.*X*]".</span></span> <span data-ttu-id="9be23-109">*一个*， *B*，和*X*是对应于主版本、 次版本和生成号的十进制数字。</span><span class="sxs-lookup"><span data-stu-id="9be23-109">*A*, *B*, and *X* are decimal numbers that correspond to the major version, the minor version, and the build number.</span></span> <span data-ttu-id="9be23-110">此字符串长度限制为 MAX_PATH。</span><span class="sxs-lookup"><span data-stu-id="9be23-110">The length of this string is limited to MAX_PATH.</span></span>  
+ <span data-ttu-id="a002e-108">弄存储在元数据中的 .NET Framework 编译版本, 格式为 "v*A*"。*B*[.*X*] "。</span><span class="sxs-lookup"><span data-stu-id="a002e-108">[out] The .NET Framework compilation version stored in the metadata, in the format "v*A*.*B*[.*X*]".</span></span> <span data-ttu-id="a002e-109">*A*、 *B*和*X*是与主版本、次版本和生成号对应的十进制数字。</span><span class="sxs-lookup"><span data-stu-id="a002e-109">*A*, *B*, and *X* are decimal numbers that correspond to the major version, the minor version, and the build number.</span></span> <span data-ttu-id="a002e-110">此字符串的长度限制为 MAX_PATH。</span><span class="sxs-lookup"><span data-stu-id="a002e-110">The length of this string is limited to MAX_PATH.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="9be23-111">此输出与.NET Framework 版本中，目录名称相匹配，C:\Windows\Microsoft.NET\Framework 下显示。</span><span class="sxs-lookup"><span data-stu-id="9be23-111">This output matches the directory name for the .NET Framework version, as it appears under C:\Windows\Microsoft.NET\Framework.</span></span>  
+> <span data-ttu-id="a002e-111">此输出匹配 .NET Framework 版本的目录名称, 因为它显示在 C:\Windows\Microsoft.NET\Framework. 下。</span><span class="sxs-lookup"><span data-stu-id="a002e-111">This output matches the directory name for the .NET Framework version, as it appears under C:\Windows\Microsoft.NET\Framework.</span></span>  
   
- <span data-ttu-id="9be23-112">示例值为"v1.0.3705"、"v1.1.4322"、"v2.0.50727"和"v4.0。*X*"，其中*X*取决于安装的内部版本号。</span><span class="sxs-lookup"><span data-stu-id="9be23-112">Example values are "v1.0.3705", "v1.1.4322", "v2.0.50727", and "v4.0.*X*", where *X* depends on the build number installed.</span></span> <span data-ttu-id="9be23-113">请注意，"v"前缀是必需的。</span><span class="sxs-lookup"><span data-stu-id="9be23-113">Note that the "v" prefix is required.</span></span>  
+ <span data-ttu-id="a002e-112">示例值为 "v1.0.3705"、"v 1.1.4322"、"v 2.0.50727" 和 "v4.0"。*X*", 其中*X*依赖于安装的生成号。</span><span class="sxs-lookup"><span data-stu-id="a002e-112">Example values are "v1.0.3705", "v1.1.4322", "v2.0.50727", and "v4.0.*X*", where *X* depends on the build number installed.</span></span> <span data-ttu-id="a002e-113">请注意, "v" 前缀是必需的。</span><span class="sxs-lookup"><span data-stu-id="a002e-113">Note that the "v" prefix is required.</span></span>  
   
  `pcchBuffer`  
- <span data-ttu-id="9be23-114">[in、 out]大小`pwzbuffer`以避免缓冲区溢出。</span><span class="sxs-lookup"><span data-stu-id="9be23-114">[in, out] The size of `pwzbuffer` to avoid buffer overruns.</span></span>  
+ <span data-ttu-id="a002e-114">[in, out]用于避免缓冲区`pwzbuffer`溢出的的大小。</span><span class="sxs-lookup"><span data-stu-id="a002e-114">[in, out] The size of `pwzbuffer` to avoid buffer overruns.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="9be23-115">返回值</span><span class="sxs-lookup"><span data-stu-id="9be23-115">Return Value</span></span>  
- <span data-ttu-id="9be23-116">此方法返回以下特定 HRESULT 以及表示方法失败的 HRESULT 错误。</span><span class="sxs-lookup"><span data-stu-id="9be23-116">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="a002e-115">返回值</span><span class="sxs-lookup"><span data-stu-id="a002e-115">Return Value</span></span>  
+ <span data-ttu-id="a002e-116">此方法返回以下特定 HRESULT 以及表示方法失败的 HRESULT 错误。</span><span class="sxs-lookup"><span data-stu-id="a002e-116">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
   
-|<span data-ttu-id="9be23-117">HRESULT</span><span class="sxs-lookup"><span data-stu-id="9be23-117">HRESULT</span></span>|<span data-ttu-id="9be23-118">描述</span><span class="sxs-lookup"><span data-stu-id="9be23-118">Description</span></span>|  
+|<span data-ttu-id="a002e-117">HRESULT</span><span class="sxs-lookup"><span data-stu-id="a002e-117">HRESULT</span></span>|<span data-ttu-id="a002e-118">描述</span><span class="sxs-lookup"><span data-stu-id="a002e-118">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="9be23-119">S_OK</span><span class="sxs-lookup"><span data-stu-id="9be23-119">S_OK</span></span>|<span data-ttu-id="9be23-120">该方法已成功完成。</span><span class="sxs-lookup"><span data-stu-id="9be23-120">The method completed successfully.</span></span>|  
-|<span data-ttu-id="9be23-121">E_POINTER</span><span class="sxs-lookup"><span data-stu-id="9be23-121">E_POINTER</span></span>|<span data-ttu-id="9be23-122">`pwzbuffer` 或 `pcchBuffer` 为 null。</span><span class="sxs-lookup"><span data-stu-id="9be23-122">`pwzbuffer` or `pcchBuffer` is null.</span></span>|  
-|<span data-ttu-id="9be23-123">HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)</span><span class="sxs-lookup"><span data-stu-id="9be23-123">HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)</span></span>|<span data-ttu-id="9be23-124">缓冲区因过小。</span><span class="sxs-lookup"><span data-stu-id="9be23-124">The buffer is too small.</span></span>|  
+|<span data-ttu-id="a002e-119">S_OK</span><span class="sxs-lookup"><span data-stu-id="a002e-119">S_OK</span></span>|<span data-ttu-id="a002e-120">该方法已成功完成。</span><span class="sxs-lookup"><span data-stu-id="a002e-120">The method completed successfully.</span></span>|  
+|<span data-ttu-id="a002e-121">E_POINTER</span><span class="sxs-lookup"><span data-stu-id="a002e-121">E_POINTER</span></span>|<span data-ttu-id="a002e-122">`pwzbuffer` 或 `pcchBuffer` 为 null。</span><span class="sxs-lookup"><span data-stu-id="a002e-122">`pwzbuffer` or `pcchBuffer` is null.</span></span>|  
+|<span data-ttu-id="a002e-123">HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)</span><span class="sxs-lookup"><span data-stu-id="a002e-123">HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)</span></span>|<span data-ttu-id="a002e-124">缓冲区太小。</span><span class="sxs-lookup"><span data-stu-id="a002e-124">The buffer is too small.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="9be23-125">要求</span><span class="sxs-lookup"><span data-stu-id="9be23-125">Requirements</span></span>  
- <span data-ttu-id="9be23-126">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="9be23-126">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a002e-125">要求</span><span class="sxs-lookup"><span data-stu-id="a002e-125">Requirements</span></span>  
+ <span data-ttu-id="a002e-126">**适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="a002e-126">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9be23-127">**标头：** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="9be23-127">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="a002e-127">**标头：** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="a002e-127">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="9be23-128">**库：** 包含为 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="9be23-128">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="a002e-128">**类库**作为资源包括在 Mscoree.dll 中</span><span class="sxs-lookup"><span data-stu-id="a002e-128">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="9be23-129">**.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9be23-129">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="a002e-129">**.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a002e-129">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9be23-130">请参阅</span><span class="sxs-lookup"><span data-stu-id="9be23-130">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a002e-130">请参阅</span><span class="sxs-lookup"><span data-stu-id="a002e-130">See also</span></span>
 
-- [<span data-ttu-id="9be23-131">ICLRMetaHost 接口</span><span class="sxs-lookup"><span data-stu-id="9be23-131">ICLRMetaHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)
-- [<span data-ttu-id="9be23-132">承载</span><span class="sxs-lookup"><span data-stu-id="9be23-132">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [<span data-ttu-id="a002e-131">ICLRMetaHost 接口</span><span class="sxs-lookup"><span data-stu-id="a002e-131">ICLRMetaHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)
+- [<span data-ttu-id="a002e-132">承载</span><span class="sxs-lookup"><span data-stu-id="a002e-132">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)

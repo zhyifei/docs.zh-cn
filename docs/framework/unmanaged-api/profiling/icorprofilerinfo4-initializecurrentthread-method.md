@@ -17,39 +17,39 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: abcbfaf803e930baaaf798986a585a7da5f9134d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b9bb5a2629e435d76691d48feef6689191b66373
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780801"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69957889"
 ---
-# <a name="icorprofilerinfo4initializecurrentthread-method"></a><span data-ttu-id="68f64-102">ICorProfilerInfo4::InitializeCurrentThread 方法</span><span class="sxs-lookup"><span data-stu-id="68f64-102">ICorProfilerInfo4::InitializeCurrentThread Method</span></span>
-<span data-ttu-id="68f64-103">初始化当前线程提前后续探查器在同一线程调用的 API，因此可以避免该死锁。</span><span class="sxs-lookup"><span data-stu-id="68f64-103">Initializes the current thread in advance of subsequent profiler API calls on the same thread, so that deadlock can be avoided.</span></span>  
+# <a name="icorprofilerinfo4initializecurrentthread-method"></a><span data-ttu-id="c8522-102">ICorProfilerInfo4::InitializeCurrentThread 方法</span><span class="sxs-lookup"><span data-stu-id="c8522-102">ICorProfilerInfo4::InitializeCurrentThread Method</span></span>
+<span data-ttu-id="c8522-103">在同一线程上的后续探查器 API 调用之前初始化当前线程, 以便避免死锁。</span><span class="sxs-lookup"><span data-stu-id="c8522-103">Initializes the current thread in advance of subsequent profiler API calls on the same thread, so that deadlock can be avoided.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="68f64-104">语法</span><span class="sxs-lookup"><span data-stu-id="68f64-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c8522-104">语法</span><span class="sxs-lookup"><span data-stu-id="c8522-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT InitializeCurrentThread ();  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="68f64-105">备注</span><span class="sxs-lookup"><span data-stu-id="68f64-105">Remarks</span></span>  
- <span data-ttu-id="68f64-106">我们建议您调用`InitializeCurrentThread`API 存在时将调用探查器的任何线程上挂起线程。</span><span class="sxs-lookup"><span data-stu-id="68f64-106">We recommend that you call `InitializeCurrentThread` on any thread that will call a profiler API while there are suspended threads.</span></span> <span data-ttu-id="68f64-107">此方法通常由采样探查器可创建自己的线程调用[ICorProfilerInfo2::DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md)方法来执行堆栈遍历目标线程被挂起时。</span><span class="sxs-lookup"><span data-stu-id="68f64-107">This method is typically used by sampling profilers that create their own thread to call the [ICorProfilerInfo2::DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) method to perform stack walks while the target thread is suspended.</span></span> <span data-ttu-id="68f64-108">通过调用`InitializeCurrentThread`探查器后当探查器首先创建采样线程，可以确保每个线程迟缓初始化 CLR 将执行在第一次调用期间`DoStackSnapshot`现在可以发生的安全时没有其他线程是挂起。</span><span class="sxs-lookup"><span data-stu-id="68f64-108">By calling `InitializeCurrentThread` once when the profiler first creates the sampling thread, profilers can ensure that lazy per-thread initialization that the CLR would otherwise perform during the first call to `DoStackSnapshot` can now occur safely when no other threads are suspended.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c8522-105">备注</span><span class="sxs-lookup"><span data-stu-id="c8522-105">Remarks</span></span>  
+ <span data-ttu-id="c8522-106">建议在存在挂起的`InitializeCurrentThread`线程时, 调用将调用探查器 API 的任何线程。</span><span class="sxs-lookup"><span data-stu-id="c8522-106">We recommend that you call `InitializeCurrentThread` on any thread that will call a profiler API while there are suspended threads.</span></span> <span data-ttu-id="c8522-107">此方法通常由创建自己的线程的探查器使用, 用来调用[ICorProfilerInfo2::D ostacksnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md)方法, 在目标线程挂起时执行堆栈遍历。</span><span class="sxs-lookup"><span data-stu-id="c8522-107">This method is typically used by sampling profilers that create their own thread to call the [ICorProfilerInfo2::DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) method to perform stack walks while the target thread is suspended.</span></span> <span data-ttu-id="c8522-108">通过在`InitializeCurrentThread`探查器首次创建采样线程时调用一次, 探查器可以确保在第一次调用时, CLR 将以`DoStackSnapshot`其他方式执行的延迟的每个线程初始化状态.</span><span class="sxs-lookup"><span data-stu-id="c8522-108">By calling `InitializeCurrentThread` once when the profiler first creates the sampling thread, profilers can ensure that lazy per-thread initialization that the CLR would otherwise perform during the first call to `DoStackSnapshot` can now occur safely when no other threads are suspended.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="68f64-109">`InitializeCurrentThread` 执行初始化提前以完成任务采用锁，并可能发生死锁。</span><span class="sxs-lookup"><span data-stu-id="68f64-109">`InitializeCurrentThread` does the initialization in advance to finish tasks that take locks, and may deadlock.</span></span> <span data-ttu-id="68f64-110">调用`InitializeCurrentThread`仅当没有任何挂起的线程时。</span><span class="sxs-lookup"><span data-stu-id="68f64-110">Call `InitializeCurrentThread` only when there are no suspended threads.</span></span>  
+> <span data-ttu-id="c8522-109">`InitializeCurrentThread`预先执行初始化来完成接受锁定的任务, 可能会死锁。</span><span class="sxs-lookup"><span data-stu-id="c8522-109">`InitializeCurrentThread` does the initialization in advance to finish tasks that take locks, and may deadlock.</span></span> <span data-ttu-id="c8522-110">仅`InitializeCurrentThread`当没有挂起的线程时才调用。</span><span class="sxs-lookup"><span data-stu-id="c8522-110">Call `InitializeCurrentThread` only when there are no suspended threads.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="68f64-111">要求</span><span class="sxs-lookup"><span data-stu-id="68f64-111">Requirements</span></span>  
- <span data-ttu-id="68f64-112">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="68f64-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c8522-111">要求</span><span class="sxs-lookup"><span data-stu-id="c8522-111">Requirements</span></span>  
+ <span data-ttu-id="c8522-112">**适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="c8522-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="68f64-113">**标头：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="68f64-113">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="c8522-113">**标头：** Corprof.idl, Corprof.idl</span><span class="sxs-lookup"><span data-stu-id="c8522-113">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="68f64-114">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="68f64-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="c8522-114">**类库**CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c8522-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="68f64-115">**.NET Framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="68f64-115">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="c8522-115">**.NET Framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c8522-115">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="68f64-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="68f64-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c8522-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="c8522-116">See also</span></span>
 
-- [<span data-ttu-id="68f64-117">ICorProfilerInfo4 接口</span><span class="sxs-lookup"><span data-stu-id="68f64-117">ICorProfilerInfo4 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)
-- [<span data-ttu-id="68f64-118">Profiling 接口</span><span class="sxs-lookup"><span data-stu-id="68f64-118">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [<span data-ttu-id="68f64-119">分析</span><span class="sxs-lookup"><span data-stu-id="68f64-119">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [<span data-ttu-id="c8522-117">ICorProfilerInfo4 接口</span><span class="sxs-lookup"><span data-stu-id="c8522-117">ICorProfilerInfo4 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)
+- [<span data-ttu-id="c8522-118">Profiling 接口</span><span class="sxs-lookup"><span data-stu-id="c8522-118">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [<span data-ttu-id="c8522-119">分析</span><span class="sxs-lookup"><span data-stu-id="c8522-119">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)
