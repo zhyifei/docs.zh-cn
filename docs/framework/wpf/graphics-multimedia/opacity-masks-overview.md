@@ -6,12 +6,12 @@ helpviewer_keywords:
 - masks [WPF], opacity
 - opacity [WPF], masks
 ms.assetid: 22367fab-5f59-4583-abfd-db2bf86eaef7
-ms.openlocfilehash: 76ec595b1d2cc732e1c8bc2dc2ca6def904bf94c
-ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
+ms.openlocfilehash: d0fea1aac4efb17811404ce45769615bb2e7234f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69545341"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69929665"
 ---
 # <a name="opacity-masks-overview"></a>不透明蒙板概述
 不透明蒙板能够使部分元素或视觉对象透明或部分透明。 若要创建不透明蒙板, 请<xref:System.Windows.Media.Brush>将应用<xref:System.Windows.UIElement.OpacityMask%2A>到元素或<xref:System.Windows.Media.Visual>的属性。  画笔映射到元素或视觉对象，并且画笔的每个像素的不透明度值用于确定生成的元素或视觉对象的每个相应像素的不透明度。  
@@ -25,7 +25,7 @@ ms.locfileid: "69545341"
  不透明蒙板的工作原理是将其内容映射到元素或视觉对象。 画笔像素的 alpha 通道则用于确定生成的元素或视觉对象相应像素的不透明度；将忽略画笔的实际颜色。 如果画笔的指定部分是透明的，则元素或视觉对象的相应部分将变为透明。 如果画笔的指定部分是不透明的，则元素或视觉对象的相应部分未改变。 不透明蒙板指定的不透明度与元素或视觉对象呈现的任何不透明度设置相结合。 例如：如果某个元素的不透明度是 25% 并且从完全不透明过渡完全透明时应用不透明蒙板，结果是元素从 25% 的不透明过渡到完全透明。  
   
 > [!NOTE]
->  尽管此概述中的示例演示了如何在 image 元素上使用不透明蒙板, 但不透明蒙板可应用<xref:System.Windows.Media.Visual>于任何元素, 包括面板和控件。  
+> 尽管此概述中的示例演示了如何在 image 元素上使用不透明蒙板, 但不透明蒙板可应用<xref:System.Windows.Media.Visual>于任何元素, 包括面板和控件。  
   
  不透明蒙板用于创建有趣的视觉效果，如创建从视图淡入淡出的图像或按钮、向元素添加纹理或结合渐变产生玻璃般的图面。 以下图示演示了不透明蒙板的使用。 棋盘格的背景用于显示蒙板的透明部分。  
   

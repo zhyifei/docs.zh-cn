@@ -6,16 +6,16 @@ helpviewer_keywords:
 - Transform control pattern
 - UI Automation, Transform control pattern
 ms.assetid: 5f49d843-5845-4800-9d9c-56ce0d146844
-ms.openlocfilehash: 6ba12431870fdc247acf08e35908582e8d629c27
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f561f67aed1d024a73d78da26e86110e4cddab2f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64603261"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69932010"
 ---
 # <a name="implementing-the-ui-automation-transform-control-pattern"></a>实现 UI 自动化 Transform 控件模式
 > [!NOTE]
->  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，请参阅[Windows 自动化 API:UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
+> 本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关的最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], 请[参阅 Windows 自动化 API:UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  本主题介绍实现 <xref:System.Windows.Automation.Provider.ITransformProvider>的准则和约定，包括有关属性、方法和事件的信息。 本主题的结尾列出了指向其他参考资料的链接。  
   
@@ -39,12 +39,12 @@ ms.locfileid: "64603261"
   
 |必需的成员|成员类型|说明|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.CanMove%2A>|属性|None|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.CanResize%2A>|属性|None|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.CanRotate%2A>|属性|None|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.Move%2A>|方法|None|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.Resize%2A>|方法|None|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.Rotate%2A>|方法|None|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.CanMove%2A>|Property|无|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.CanResize%2A>|Property|无|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.CanRotate%2A>|属性|无|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.Move%2A>|方法|无|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.Resize%2A>|方法|无|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.Rotate%2A>|方法|无|  
   
  没有与此控件模式关联的事件。  
   

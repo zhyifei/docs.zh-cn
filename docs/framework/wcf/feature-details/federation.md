@@ -8,20 +8,20 @@ helpviewer_keywords:
 - WCF, federation
 - federation [WCF]
 ms.assetid: 2f1e646f-8361-48d4-9d5d-1b961f31ede4
-ms.openlocfilehash: 295e4bd5eca58bc190b31fd96e79f97678e381a4
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: 2331e484f22be7e3154a4cff981ee320a9b143a5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67486775"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69948159"
 ---
 # <a name="federation"></a>联合
-本主题概要介绍联合安全概念。 它还介绍了部署联合的安全体系结构的 Windows Communication Foundation (WCF) 支持。 有关演示联合身份验证的示例应用程序，请参阅[联合身份验证示例](../../../../docs/framework/wcf/samples/federation-sample.md)。  
+本主题概要介绍联合安全概念。 它还介绍了用于部署联合安全体系结构的 Windows Communication Foundation (WCF) 支持。 有关演示联合的示例应用程序, 请参阅[联合示例](../../../../docs/framework/wcf/samples/federation-sample.md)。  
   
 ## <a name="definition-of-federated-security"></a>联合安全的定义  
  联合安全允许客户端访问的服务与关联的身份验证和授权过程完全分离。 联合安全还允许跨不同信任领域内的多个系统、网络和组织进行协作。  
   
- WCF 提供了用于构建和部署使用联合的安全的分布式的系统的支持。  
+ WCF 支持构建和部署采用联合安全的分布式系统。  
   
 ### <a name="elements-of-a-federated-security-architecture"></a>联合安全体系结构的元素  
  联合安全体系结构有三个关键元素，如下表所述。  
@@ -33,14 +33,14 @@ ms.locfileid: "67486775"
 |安全令牌服务 (STS)|颁发安全令牌的 Web 服务；也就是说，该服务基于它所信任的证据向信任服务的人作出断言。 这为域之间的信任代理奠定了基础。|  
   
 ### <a name="example-scenario"></a>示例方案  
- 下图显示了联合安全的示例：  
+ 下图显示了联合安全的示例:  
   
- ![典型的联合的安全方案的图示。](./media/federation/typical-federated-security-scenario.gif)  
+ ![显示典型联合安全方案的关系图。](./media/federation/typical-federated-security-scenario.gif)  
   
- 此方案包括两个组织：A 和 b。 组织 B 拥有组织 A 中的某些用户认为有价值的 Web 资源 （Web 服务）。  
+ 此方案包括两个组织:A 和 B。组织 B 有一个 Web 资源 (Web 服务), 组织 A 中的某些用户会发现这些资源。  
   
 > [!NOTE]
->  本部分中使用两个术语*资源*，*服务*，并*Web 服务*互换。  
+> 本部分使用术语 "*资源*"、"*服务*" 和 " *Web 服务*"。  
   
  通常，组织 B 要求组织 A 中的用户在访问服务之前提供某种有效的身份验证形式。 另外，该组织还可能要求用户获得授权才能访问所说的特定资源。 可解决此问题并使组织 A 中的用户能够访问组织 B 中的资源的一种方法如下所述：  
   
@@ -60,21 +60,21 @@ ms.locfileid: "67486775"
   
  在联合安全体系结构中，组织 A 中的用户知道，如果他们想访问组织 B 中的 Web 服务，就必须提供组织 B 的 STS 颁发的有效安全令牌，此令牌对用户进行身份验证并授权他们访问特定服务。  
   
- 在与 STS B 联系时，用户可通过与 STS 关联的策略获得另一级间接寻址。 用户必须提供 STS A（即客户端信任领域）颁发的有效安全令牌，STS B 才会向他们颁发安全令牌。 这是两个组织之间建立的信任关系的必然结果，同时暗示着组织 B 不必管理组织 A 中用户的标识。实际上，STS B 通常具有空的 `issuerAddress` 和 `issuerMetadataAddress`。 有关详细信息，请参阅[如何：配置本地颁发者](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)。 在这种情况下，客户端可参考本地策略以找到 STS a。这种配置称作*主领域联合*，可以更好地扩展由于 STS B 不必保留有关 STS a。 信息  
+ 在与 STS B 联系时，用户可通过与 STS 关联的策略获得另一级间接寻址。 用户必须提供 STS A（即客户端信任领域）颁发的有效安全令牌，STS B 才会向他们颁发安全令牌。 这是两个组织之间建立的信任关系的必然结果，同时暗示着组织 B 不必管理组织 A 中用户的标识。实际上，STS B 通常具有空的 `issuerAddress` 和 `issuerMetadataAddress`。 有关详细信息，请参阅[如何：配置本地颁发者](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)。 在这种情况下, 客户端会咨询本地策略以查找 STS A。此配置称为 "*主领域联合*", 由于 sts B 不必保留有关 STS A 的信息, 因此可更好地进行缩放。  
   
  然后，用户可与组织 A 的 STS 联系并通过提供他们通常用于访问组织 A 中任何其他资源的身份验证凭据获取安全令牌。这也会缓解用户必须保留多组凭据或在多个服务站点使用同组凭据的问题。  
   
  用户从 STS A 获取安全令牌后，他们可以将该令牌提供给 STS B。组织 B 将继续对用户的请求执行身份验证并从其自己的安全令牌集中向用户颁发安全令牌。 之后，用户可以将他们的令牌提供给组织 B 的资源并访问服务。  
   
 ## <a name="support-for-federated-security-in-wcf"></a>WCF 中的联合安全支持  
- WCF 将部署联合的安全体系结构通过提供统包的支持[ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)。  
+ WCF 为通过[ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)部署联合安全体系结构提供了全包式支持。  
   
- [ \<WsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)元素提供安全、 可靠且可互操作的绑定，需要使用 HTTP 作为请求-答复通信样式的基础传输机制使用文本和 XML 作为连网格式进行编码。  
+ WsFederationHttpBinding > 元素提供安全、可靠且可互操作的绑定, 该绑定要求使用 HTTP 作为请求-答复通信样式的基础传输机制, 使用文本和 XML 作为[ \<](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)用于编码的有线格式。  
   
- 利用[ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)在联合安全方案可分为两个逻辑上独立的阶段，如以下各节中所述。  
+ 可以在联合安全方案中使用[ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) , 如以下各节中所述。  
   
-### <a name="phase-1-design-phase"></a>第 1 阶段：设计阶段  
- 在设计阶段，客户端使用[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)读取服务终结点公开的策略并收集服务的身份验证和授权要求。 构造相应代理以在客户端创建以下联合安全通信模式：  
+### <a name="phase-1-design-phase"></a>阶段 1:设计阶段  
+ 在设计阶段, 客户端使用工作身份[数据实用工具 (svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)来读取服务终结点公开的策略, 并收集服务的身份验证和授权要求。 构造相应代理以在客户端创建以下联合安全通信模式：  
   
 - 从客户端信任领域中的 STS 获取安全令牌。  
   
@@ -85,19 +85,19 @@ ms.locfileid: "67486775"
 - 向服务提供令牌以访问该服务。  
   
 ### <a name="phase-2-run-time-phase"></a>阶段 2:运行时阶段  
- 在运行时阶段中，客户端实例化 WCF 客户端类的对象，并使用 WCF 客户端调用。 WCF 的基础框架处理在联合的安全通信模式中前面所述的步骤，并允许客户端无缝地使用该服务。  
+ 在运行时阶段, 客户端实例化 WCF 客户端类的对象并使用 WCF 客户端进行调用。 WCF 的基础框架在联合安全通信模式中处理前面提到的步骤, 并使客户端能够无缝地使用服务。  
   
 ## <a name="sample-implementation-using-wcf"></a>使用 WCF 的实现示例  
- 下图显示了使用 WCF 的本机支持的联合的安全体系结构的示例实现。  
+ 下图显示了使用 WCF 的本机支持的联合安全体系结构的示例实现。  
   
- ![关系图显示示例联合身份验证安全实现。](./media/federation/federated-security-implementation.gif)  
+ ![显示联合身份验证安全实现示例的关系图。](./media/federation/federated-security-implementation.gif)  
   
 ### <a name="example-myservice"></a>MyService 示例  
  服务 `MyService` 通过 `MyServiceEndpoint` 公开单个终结点。 下图显示与该终结点关联的地址、绑定和协定。  
   
- ![关系图显示 MyServiceEndpoint 详细信息。](./media/federation/myserviceendpoint-details.gif)  
+ ![显示 MyServiceEndpoint 详细信息的关系图。](./media/federation/myserviceendpoint-details.gif)  
   
- 服务终结点`MyServiceEndpoint`使用[ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)并且需要具有有效的安全断言标记语言 (SAML) 令牌`accessAuthorized`由 STS B 颁发的声明这是以声明方式指定服务配置中。  
+ 服务终结点`MyServiceEndpoint` `accessAuthorized`使用[ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) , 并需要有效的安全断言标记语言 (SAML) 令牌, 其中包含由 STS B 颁发的声明。这是以声明方式在服务配置中指定的。  
   
 ```xml  
 <system.serviceModel>  
@@ -148,7 +148,7 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
 ```  
   
 > [!NOTE]
->  对于 `MyService` 要求的声明，有一细微点应加以注意。 第二个图指示 `MyService` 需要具有 `accessAuthorized` 声明的 SAML 令牌。 更确切地说，这指定了 `MyService` 需要的声明类型。 此声明类型的完全限定名称是`http://tempuri.org:accessAuthorized`（以及关联的命名空间），用于在服务配置文件中。 此声明的值指示存在此声明并假定 STS B 将此值设置为 `true`。  
+> 对于 `MyService` 要求的声明，有一细微点应加以注意。 第二个图指示 `MyService` 需要具有 `accessAuthorized` 声明的 SAML 令牌。 更确切地说，这指定了 `MyService` 需要的声明类型。 此声明类型的完全限定名称是`http://tempuri.org:accessAuthorized` (连同关联的命名空间), 在服务配置文件中使用。 此声明的值指示存在此声明并假定 STS B 将此值设置为 `true`。  
   
  在运行时，此策略作为 `MyServiceOperationRequirement` 一部分由 `MyService` 类强制实现。  
   
@@ -160,7 +160,7 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
 #### <a name="sts-b"></a>STS B  
  下图显示 STS B。如前所述，安全令牌服务 (STS) 也是一种 Web 服务，并可具有其自己的关联终结点、策略等。  
   
- ![关系图显示安全令牌服务 b。](./media/federation/myservice-security-token-service-b.gif)  
+ ![显示 security token service B 的关系图。](./media/federation/myservice-security-token-service-b.gif)  
   
  STS B 公开名为 `STSEndpoint` 的单个终结点用于请求安全令牌。 具体地说，STS B 颁发具有 `accessAuthorized` 声明的 SAML 令牌，此令牌可在 `MyService` 服务站点用于访问服务。 但是，STS B 要求用户提供由 STS A 颁发的包含 `userAuthenticated` 声明的有效 SAML 令牌。 这是以声明方式在 STS 配置中指定的。  
   
@@ -207,7 +207,7 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
 ```  
   
 > [!NOTE]
->  同样，`userAuthenticated`声明是 STS b 所需的声明类型此声明类型的完全限定名称是`http://tempuri.org:userAuthenticated`（以及关联的命名空间），用于 STS 配置文件中。 此声明的值指示存在此声明并假定 STS A 将此值设置为 `true`。  
+> 同样, `userAuthenticated`声明是 STS B 所需的声明类型。此声明类型的完全限定名称是`http://tempuri.org:userAuthenticated` (连同关联的命名空间), 用于 STS 配置文件中。 此声明的值指示存在此声明并假定 STS A 将此值设置为 `true`。  
   
  在运行时，此策略作为 STS B 的一部分由 `STS_B_OperationRequirement` 类强制实现。  
   
@@ -224,7 +224,7 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
   
  ![Federation](../../../../docs/framework/wcf/feature-details/media/sts-b.gif "STS_B")  
   
- 与 STS B 类似，STS A 也是一种 Web 服务，该服务颁发安全令牌并为此目的公开单个终结点。 但是，它使用不同的绑定 (`wsHttpBinding`) 并要求用户提供与有效 CardSpace`emailAddress`声明。 作为响应，它会颁发具有 `userAuthenticated` 声明的 SAML 令牌。 这是以声明方式在服务配置中指定的。  
+ 与 STS B 类似，STS A 也是一种 Web 服务，该服务颁发安全令牌并为此目的公开单个终结点。 但是, 它使用不同的绑定 (`wsHttpBinding`), 并要求用户提供`emailAddress`具有声明的有效 CardSpace。 作为响应，它会颁发具有 `userAuthenticated` 声明的 SAML 令牌。 这是以声明方式在服务配置中指定的。  
   
 ```xml  
 <system.serviceModel>  
@@ -284,10 +284,10 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
 ### <a name="client-at-organization-a"></a>组织 A 的客户端  
  下图显示组织 A 的客户端以及进行 `MyService` 服务调用所涉及的步骤。 为保持完整性，还包括了其他功能组件。  
   
- ![关系图显示在 MyService 服务调用中的步骤。](./media/federation/federation-myservice-service-call-process.gif)  
+ ![显示 MyService 服务调用中的步骤的关系图。](./media/federation/federation-myservice-service-call-process.gif)  
   
 ## <a name="summary"></a>总结  
- 联合安全可以清晰划分责任范围并有助于生成安全、可伸缩的服务体系结构。 作为用于生成和部署分布式应用程序平台，WCF 为实现联合的安全提供本机支持。  
+ 联合安全可以清晰划分责任范围并有助于生成安全、可伸缩的服务体系结构。 作为构建和部署分布式应用程序的平台, WCF 为实现联合安全提供本机支持。  
   
 ## <a name="see-also"></a>请参阅
 

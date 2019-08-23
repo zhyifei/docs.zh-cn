@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - XML Reader
 ms.assetid: 60e5848d-7d9c-4ea5-bed9-22758c9ac16c
-ms.openlocfilehash: 03c6949d25497419a55f7baafa33d568817b8f27
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4e0a26436515e9b8d7597c7e39272e6ac77a110b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62007430"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69959494"
 ---
 # <a name="xmlreader-sample"></a>XmlReader 示例
-XmlReader 示例演示如何使用 <xref:System.Xml.XmlReader> 处理消息正文。 该示例基于[Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)，它可实现计算器服务。 示例中还添加了一个服务操作 `Sum`，它接受包含要加在一起的值数组的消息。 该服务使用 <xref:System.Xml.XmlReader> 读取消息。  
+XmlReader 示例演示如何使用 <xref:System.Xml.XmlReader> 处理消息正文。 该示例基于实现计算器服务的[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)。 示例中还添加了一个服务操作 `Sum`，它接受包含要加在一起的值数组的消息。 该服务使用 <xref:System.Xml.XmlReader> 读取消息。  
   
 > [!NOTE]
->  本主题的最后介绍了此示例的设置过程和生成说明。  
+> 本主题的最后介绍了此示例的设置过程和生成说明。  
   
  计算器接口包括名为 `Sum` 的服务操作，它接受 <xref:System.ServiceModel.Channels.Message> 参数，如下面的示例代码所示。  
   
@@ -94,17 +94,17 @@ Press <ENTER> to terminate client.
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
-1. 请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1. 确保已对[Windows Communication Foundation 示例执行了一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
 2. 若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
   
-3. 若要在单或跨计算机配置中运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
+3. 若要以单机配置或跨计算机配置来运行示例, 请按照[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的说明进行操作。  
   
 > [!IMPORTANT]
 >  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在, 请参阅[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)以下载所有 Windows Communication Foundation (wcf) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Message\XmlReader`  

@@ -8,28 +8,28 @@ helpviewer_keywords:
 - invoking print dialogs [WPF]
 - print dialogs [WPF], invoking
 ms.assetid: e3a2c84c-74fe-45a4-8501-5813f9dbfed2
-ms.openlocfilehash: 2ced508eb83e2955fdcd1ad87fb6415e2052446f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cd7b06030e0fb2bba74590ee80c07c34047c5b47
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61757141"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950613"
 ---
 # <a name="how-to-invoke-a-print-dialog"></a>如何：调用打印对话框
-若要提供从你应用程序打印的功能，可以只需创建和打开<xref:System.Windows.Controls.PrintDialog>对象。  
+若要提供从应用程序打印的功能, 只需创建并打开<xref:System.Windows.Controls.PrintDialog>对象即可。  
   
 ## <a name="example"></a>示例  
- <xref:System.Windows.Controls.PrintDialog> 控件为 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]、配置和 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 作业提交提供单一入口点。 该控件是易于使用，可以通过使用实例化[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]标记或代码。 下面的示例演示如何实例化并在 code 中打开该控件以及如何从其打印。 它还演示如何以确保设置特定范围的页面的选项的对话框会给用户。 此代码示例假定 c： 驱动器的根目录中的文件 FixedDocumentSequence.xps。  
+ <xref:System.Windows.Controls.PrintDialog> 控件为 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]、配置和 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 作业提交提供单一入口点。 控件易于使用, 并且可以通过使用[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]标记或代码来实例化。 下面的示例演示如何在代码中实例化和打开控件, 以及如何从代码中进行打印。 它还显示了如何确保对话框将为用户授予设置特定页面范围的选项。 示例代码假定在 C: 驱动器的根目录中有一个文件 FixedDocumentSequence。  
   
  [!code-csharp[printdialog#1](~/samples/snippets/csharp/VS_Snippets_Wpf/PrintDialog/CSharp/Window1.xaml.cs#1)]
  [!code-vb[printdialog#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrintDialog/visualbasic/window1.xaml.vb#1)]  
   
- 打开对话框后，用户将能够从他们的计算机上安装的打印机中选择。 此外将选择的选项[Microsoft XPS Document Writer](https://go.microsoft.com/fwlink/?LinkId=147319)若要创建[!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)]文件而不是打印。  
+ 对话框打开后, 用户将能够从其计算机上安装的打印机中进行选择。 他们还可以选择[Microsoft XPS 文档编写器](https://go.microsoft.com/fwlink/?LinkId=147319)来创建[!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)]文件而不是打印。  
   
 > [!NOTE]
->  <xref:System.Windows.Controls.PrintDialog?displayProperty=nameWithType>控制[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]，本主题中对其进行讨论不应混淆与<xref:System.Windows.Forms.PrintDialog?displayProperty=nameWithType>Windows 窗体的组件。  
+> 本主题中[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]讨论的的<xref:System.Windows.Forms.PrintDialog?displayProperty=nameWithType>控件不应与 Windows 窗体的组件混淆。 <xref:System.Windows.Controls.PrintDialog?displayProperty=nameWithType>  
   
- 严格地说，您可以使用<xref:System.Windows.Controls.PrintDialog.PrintDocument%2A>甚至不用打开对话框的方法。 在此意义上，控件可用作不可见的打印组件。 但出于性能原因，它会更好的做法可以使用两种<xref:System.Printing.PrintQueue.AddJob%2A>方法或多个<xref:System.Windows.Xps.XpsDocumentWriter.Write%2A>并<xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A>方法的<xref:System.Windows.Xps.XpsDocumentWriter>。 有关详细信息，请参阅[以编程方式打印 XPS 文件](how-to-programmatically-print-xps-files.md)和。  
+ 严格地说, 您可以使用<xref:System.Windows.Controls.PrintDialog.PrintDocument%2A>方法, 而不必打开对话框。 在这种意义上, 控件可用作不可见的打印组件。 但出于性能原因, 最好是<xref:System.Printing.PrintQueue.AddJob%2A>使用方法, 或者使用的多个<xref:System.Windows.Xps.XpsDocumentWriter.Write%2A>和<xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A>方法<xref:System.Windows.Xps.XpsDocumentWriter>之一。 有关详细信息, 请参阅[以编程方式打印 XPS 文件](how-to-programmatically-print-xps-files.md)和。  
   
 ## <a name="see-also"></a>请参阅
 

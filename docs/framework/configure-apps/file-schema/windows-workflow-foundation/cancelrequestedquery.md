@@ -3,22 +3,22 @@ title: <cancelRequestedQuery>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 8da9b1c4-338a-4f23-9830-6d257772d340
-ms.openlocfilehash: 5f2e46d5e4cdd64c37219476790b9ff92c606b6b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d9c3f91edb41bd034bcd978b075d62f74b6e308d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790229"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69945884"
 ---
 # <a name="cancelrequestedquery"></a>\<cancelRequestedQuery>
 表示一个查询，该查询用于跟踪父活动取消子活动的请求。 跟踪参与者需要用此查询来订阅取消请求记录对象。  
   
- 有关跟踪配置文件查询的详细信息，请参阅[跟踪配置文件](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)。  
+ 有关跟踪配置文件查询的详细信息, 请参阅[跟踪配置文件](../../../windows-workflow-foundation/tracking-profiles.md)。  
   
 \<system.serviceModel>  
-\<tracking>  
+\<跟踪 >  
 \<trackingProfile>  
-\<workflow>  
+\<工作流 >  
 \<cancelRequestedQueries>  
 \<cancelRequestedQuery>  
   
@@ -54,11 +54,11 @@ ms.locfileid: "61790229"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<faultPropagationQuery>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/faultpropagationquery.md)|表示一个配置元素列表，这些元素用于跟踪父活动取消子活动的请求。 跟踪参与者需要用此查询来订阅取消请求记录对象。|  
+|[\<faultPropagationQuery>](faultpropagationquery.md)|表示一个配置元素列表，这些元素用于跟踪父活动取消子活动的请求。 跟踪参与者需要用此查询来订阅取消请求记录对象。|  
   
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.CancelRequestedQueryElement?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.CancelRequestedQuery?displayProperty=nameWithType>
-- [工作流跟踪](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [跟踪配置文件](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+- [工作流跟踪](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [跟踪配置文件](../../../windows-workflow-foundation/tracking-profiles.md)

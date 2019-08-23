@@ -17,18 +17,18 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1986ed730c6f0a1ba8a2d8e3c688e6872184da9d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f2dceeb2f0b3aa9f3147157e77087dffbf2d5f85
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67736753"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939011"
 ---
 # <a name="isymunmanagedreaderinitialize-method"></a>ISymUnmanagedReader::Initialize 方法
-初始化此读取器将与相关联，以及该模块的文件名称的元数据导入程序接口的符号读取器。  
+用此读取器将与之关联的元数据导入程序接口以及模块的文件名初始化符号读取器。  
   
 > [!NOTE]
->  此方法可以将只调用一次，并必须读取器的任何其他方法之前调用。  
+> 此方法只能调用一次, 并且必须在任何其他读取器方法之前调用。  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,25 +42,25 @@ HRESULT Initialize (
   
 ## <a name="parameters"></a>参数  
  `importer`  
- [in]此读取器将与之关联的元数据导入程序接口。  
+ 中此读取器将与之关联的元数据导入程序接口。  
   
  `filename`  
- [in]模块的文件名。 可以使用`pIStream`参数相反。  
+ 中模块的文件名。 可以改为`pIStream`使用参数。  
   
  `searchPath`  
- [in]要搜索的路径。 此参数可选。  
+ 中要搜索的路径。 此参数可选。  
   
  `pIStream`  
- [in]文件流用作 filename 参数的替代方法。  
+ 中文件流, 用作 filename 参数的替代项。  
   
 ## <a name="return-value"></a>返回值  
- 如果方法成功，则为 S_OK否则为 E_FAIL 或某些其他错误代码。  
+ 如果该方法成功, 则返回 S_OK;否则, E_FAIL 或其他一些错误代码。  
   
 ## <a name="remarks"></a>备注  
- 你需要仅指定一个`filename`或`pIStream`参数不可同时使用两者。 `searchPath` 参数是可选的。  
+ 只需指定`filename` `pIStream`或参数之一, 而不能同时指定两者。 `searchPath` 参数是可选的。  
   
 ## <a name="requirements"></a>要求  
- **标头：** CorSym.idl CorSym.h  
+ **标头：** CorSym, CorSym  
   
 ## <a name="see-also"></a>请参阅
 

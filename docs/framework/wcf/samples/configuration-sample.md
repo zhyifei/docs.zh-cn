@@ -2,25 +2,25 @@
 title: 配置示例
 ms.date: 03/30/2017
 ms.assetid: 75515b4a-8d70-44c8-99e0-7423df41380e
-ms.openlocfilehash: 8c96b41877fa56f486bec03a10dcbf47bac9e37a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b91ae890a5664b69661c76ffe86154f90ac5e5f9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651058"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69969059"
 ---
 # <a name="configuration-sample"></a>配置示例
 此示例演示如何使用配置文件使服务成为可发现的服务。  
   
 > [!NOTE]
->  此示例将在配置中实现发现。 在代码中实现发现的示例，请参阅[基本](../../../../docs/framework/wcf/samples/basic-sample.md)。  
+> 此示例将在配置中实现发现。 有关在代码中实现发现的示例, 请参阅 "[基本](../../../../docs/framework/wcf/samples/basic-sample.md)"。  
   
 > [!IMPORTANT]
 >  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在, 请参阅[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)以下载所有 Windows Communication Foundation (wcf) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\Configuration`  
   
@@ -87,7 +87,7 @@ behaviorConfiguration="endpointBehaviorConfiguration"
         </endpointBehaviors>  
 ```  
   
- 有关作用域的详细信息，请参阅[发现查找和 FindCriteria](../../../../docs/framework/wcf/feature-details/discovery-find-and-findcriteria.md)。  
+ 有关范围的详细信息, 请参阅[发现 Find 和 s](../../../../docs/framework/wcf/feature-details/discovery-find-and-findcriteria.md)。  
   
  还可以控制发现终结点的特定详细信息。 这是通过 <xref:System.ServiceModel.Configuration.StandardEndpointsSection> 完成的。 在此示例中，将修改所用协议的版本并添加一个 `maxResponseDelay` 特性，如以下代码示例所示。  
   
@@ -261,7 +261,7 @@ behaviorConfiguration="endpointBehaviorConfiguration"
   
 #### <a name="to-use-this-sample"></a>使用此示例  
   
-1. 此示例使用 HTTP 终结点，若要运行此示例，正确的 URL Acl 必须添加，请参阅[配置 HTTP 和 HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353)有关详细信息。 使用提升的特权执行下面的命令应添加相应的 ACL。 如果该命令无效，则可能需要使用你的域和用户名替换以下自变量。 `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
+1. 此示例使用 HTTP 终结点, 若要运行此示例, 必须添加正确的 URL Acl, 有关详细信息, 请参阅[配置 HTTP 和 HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353) 。 使用提升的特权执行下面的命令应添加相应的 ACL。 如果该命令无效，则可能需要使用你的域和用户名替换以下自变量。 `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
   
 2. 生成解决方案。  
   

@@ -5,19 +5,19 @@ helpviewer_keywords:
 - WPF applications [WPF], deployment
 - deployment [WPF], applications
 ms.assetid: 12cadca0-b32c-4064-9a56-e6a306dcc76d
-ms.openlocfilehash: 16a0436accfb031ddd0bb413e519d80e550786b4
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: cfb617fde514c93596d52b0ca70da39c6e5be301
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68972267"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69958646"
 ---
 # <a name="deploying-a-wpf-application-wpf"></a>部署 WPF 应用程序 (WPF)
-生成 Windows Presentation Foundation (WPF) 应用程序后, 需要部署这些应用程序。 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]和 .NET Framework 包括几种部署技术。 用于部署 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 应用程序的部署技术取决于应用程序的类型。 本主题将简要概述各项部署技术，以及如何使用这些技术来满足各类 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 应用程序的部署要求。  
+生成 Windows Presentation Foundation (WPF) 应用程序后, 需要部署这些应用程序。 Windows 和 .NET Framework 包括几种部署技术。 用于部署 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 应用程序的部署技术取决于应用程序的类型。 本主题将简要概述各项部署技术，以及如何使用这些技术来满足各类 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 应用程序的部署要求。  
 
 <a name="Deployment_Technologies"></a>   
 ## <a name="deployment-technologies"></a>部署技术  
- [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]和 .NET Framework 包括几种部署技术, 其中包括:  
+ Windows 和 .NET Framework 包括几种部署技术, 其中包括:  
   
 - XCopy 部署。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "68972267"
   
 <a name="Windows_Installer"></a>   
 ### <a name="windows-installer"></a>Windows Installer  
- [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] 允许应用程序打包为可轻松分发到客户端并运行的自包含可执行文件。 此外，[!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] 会随 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 一起安装，并能与桌面、“开始”菜单及“程序”控制面板集成。  
+ [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] 允许应用程序打包为可轻松分发到客户端并运行的自包含可执行文件。 此外, [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]还随 Windows 一起安装, 并允许与桌面、"开始" 菜单和 "程序" 控制面板集成。  
   
  [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] 简化了应用程序的安装和卸载，但它不会提供相应工具以确保已安装的应用程序始终为最新版本。  
   
@@ -96,7 +96,7 @@ ms.locfileid: "68972267"
 - *ApplicationName*.manifest:应用程序清单。  
   
 > [!NOTE]
->  有关部署和应用程序清单的详细信息，请参阅[生成 WPF 应用程序](building-a-wpf-application-wpf.md)。  
+> 有关部署和应用程序清单的详细信息，请参阅[生成 WPF 应用程序](building-a-wpf-application-wpf.md)。  
   
  这些文件在 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 生成时产生。 有关详细信息，请参阅[如何：创建新的 WPF 浏览器应用](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100))程序项目。 与仅[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]标记页面一样, [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]通常会发布到 Web 服务器, 并使用 Internet Explorer 进行查看。  
   

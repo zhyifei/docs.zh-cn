@@ -9,12 +9,12 @@ helpviewer_keywords:
 - printing [Windows Forms], with print preview
 - print preview
 ms.assetid: 4a16f7e2-ae10-4485-b0ae-3d558334d0fe
-ms.openlocfilehash: d803c9bec180f45c80e362af49c8eaa12bb9d985
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 07137d03dd9a20d8eab564757618e48e25b45353
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592956"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69931758"
 ---
 # <a name="how-to-print-in-windows-forms-using-print-preview"></a>如何：使用打印预览在 Windows 窗体中进行打印
 除了打印服务之外，Windows 窗体编程中通常还提供打印预览。 要将打印预览服务添加到你的应用程序有一个简单的方法，就是将 <xref:System.Windows.Forms.PrintPreviewDialog> 控件与用于打印文件的 <xref:System.Drawing.Printing.PrintDocument.PrintPage> 事件处理逻辑结合使用。  
@@ -34,7 +34,7 @@ ms.locfileid: "65592956"
 3. 就像你为了打印文件所执行的操作那样，在 <xref:System.Drawing.Printing.PrintDocument.PrintPage> 事件处理程序中使用 <xref:System.Drawing.Printing.PrintPageEventArgs.Graphics%2A> 类的 <xref:System.Drawing.Printing.PrintPageEventArgs> 属性和文件内容来计算每页行数并呈现文档的内容。 绘制完每一页后，检查它是否是最后一页，并相应地设置 <xref:System.Drawing.Printing.PrintPageEventArgs.HasMorePages%2A> 的 <xref:System.Drawing.Printing.PrintPageEventArgs> 属性。 引发 <xref:System.Drawing.Printing.PrintDocument.PrintPage> 事件，直到 <xref:System.Drawing.Printing.PrintPageEventArgs.HasMorePages%2A> 为 `false`。 当文档已完成呈现时，将字符串重置为已呈现。 此外，确保 <xref:System.Drawing.Printing.PrintDocument.PrintPage> 事件与其事件处理方法关联。  
   
     > [!NOTE]
-    >  如果已在应用程序中实现打印，你可能已完成了步骤 2 和 3。  
+    > 如果已在应用程序中实现打印，你可能已完成了步骤 2 和 3。  
   
      在下列代码示例中，事件处理程序用于打印“testPage.txt”文件的内容，所用字体与窗体上使用的字体相同。  
   
@@ -64,6 +64,6 @@ ms.locfileid: "65592956"
   
 ## <a name="see-also"></a>请参阅
 
-- [如何：打印 Windows 窗体中的多页文本文件](how-to-print-a-multi-page-text-file-in-windows-forms.md)
+- [如何：在 Windows 窗体中打印多页文本文件](how-to-print-a-multi-page-text-file-in-windows-forms.md)
 - [Windows 窗体打印支持](windows-forms-print-support.md)
 - [Windows 窗体中更加安全的打印](../more-secure-printing-in-windows-forms.md)

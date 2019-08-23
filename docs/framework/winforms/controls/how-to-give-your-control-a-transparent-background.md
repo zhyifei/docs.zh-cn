@@ -6,21 +6,21 @@ helpviewer_keywords:
 - custom controls [Windows Forms], transparent background
 - transparency [Windows Forms], Windows Forms custom controls
 ms.assetid: 32433e63-f4e9-4305-9857-6de3edeb944a
-ms.openlocfilehash: 8a03d9afec5340cd77af465c4470b7484b8926be
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a82807ea3873b2217d1f05f6c720c599ea79abdd
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64609705"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966642"
 ---
 # <a name="how-to-give-your-control-a-transparent-background"></a>如何：使控件拥有透明背景
 在早期版本的.NET Framework 中，如果事先未在窗体的构造函数中设置 <xref:System.Windows.Forms.Control.SetStyle%2A> 方法，控件将不支持设置透明背景色。 在当前的框架版本中，可以在设计时在“属性” <xref:System.Drawing.Color.Transparent%2A>**窗口中或在窗体构造函数的代码中将背景色设置为** 。  
   
 > [!NOTE]
->  Windows 窗体控件不支持真正的透明。 透明 Windows 窗体控件的背景由其父级绘制。  
+> Windows 窗体控件不支持真正的透明。 透明 Windows 窗体控件的背景由其父级绘制。  
   
 > [!NOTE]
->  即使将 <xref:System.Windows.Controls.Button> 属性设置为 <xref:System.Windows.Forms.ButtonBase.BackColor%2A> ， <xref:System.Drawing.Color.Transparent%2A>控件也不支持透明背景色。  
+> 即使将 <xref:System.Windows.Controls.Button> 属性设置为 <xref:System.Windows.Forms.ButtonBase.BackColor%2A> ， <xref:System.Drawing.Color.Transparent%2A>控件也不支持透明背景色。  
   
 ### <a name="to-give-your-control-a-transparent-backcolor"></a>使控件拥有透明背景色  
   
