@@ -19,105 +19,105 @@ helpviewer_keywords:
 - floating-point numbers [Visual Basic], comparison
 - floating-point numbers
 ms.assetid: 90040d67-b630-4125-a6ae-37195b079042
-ms.openlocfilehash: 837022cf1675097af5ebce63441cad1ce63eaabb
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 5b2cb0d5270b7e14c3462aeaf54942f939511fd7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591108"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933235"
 ---
 # <a name="troubleshooting-data-types-visual-basic"></a>数据类型疑难解答 (Visual Basic)
-此页列出了你对内部数据类型执行操作时可能发生的一些常见问题。  
+此页列出了对内部数据类型执行操作时可能出现的一些常见问题。  
   
-## <a name="floating-point-expressions-do-not-compare-as-equal"></a>浮点表达式不相等比较  
- 当使用浮点数 ([单一数据类型](../../../../visual-basic/language-reference/data-types/single-data-type.md)并[双精度数据类型](../../../../visual-basic/language-reference/data-types/double-data-type.md))，请记住它们以二进制分数形式存储。 这意味着它们不能保存不是二进制分数任意数量的精确表示 (窗体 k / (2 ^ n) 其中 k 和 n 为整数)。 例如，0.5 （= 1/2） 和 0.3125 （= 5/16） 都将保存为精确值，而 （= 1/5） 的 0.2 和 0.3 （= 3/10） 只能是近似值。  
+## <a name="floating-point-expressions-do-not-compare-as-equal"></a>浮点表达式的比较结果不相等  
+ 使用浮点数 ([单数据类型](../../../../visual-basic/language-reference/data-types/single-data-type.md)和[双精度数据类型](../../../../visual-basic/language-reference/data-types/double-data-type.md)) 时, 请记住, 它们存储为二进制小数。 这意味着, 它们不能保持不是二进制小数的任何数量的精确表示形式 (其形式为 k/(2 ^ n), 其中 k 和 n 为整数)。 例如, 0.5 (= 1/2) 和 0.3125 (= 5/16) 可以作为精确值来保存, 而 0.2 (= 1/5) 和 0.3 (= 3/10) 只能是近似值。  
   
- 由于这不精确性，您不能依赖于确切的结果时对浮点值。 具体而言，理论上相等的两个值可能略有不同的表示形式。  
+ 由于此不精确性, 在对浮点值进行操作时, 不能依赖于准确的结果。 具体而言, 理论上相等的两个值可能具有略微不同的表示形式。  
   
-| 要比较浮点数 | 
+| 比较浮点数量 | 
 |---| 
-|1.使用计算它们的差的绝对值<xref:System.Math.Abs%2A>方法<xref:System.Math>类中<xref:System>命名空间。<br />2.确定可接受的最大差值，以便您可以考虑要相等实用的角度而言它们的差不大于两个数量。<br />3.比较到可接受的差异的差异的绝对值。|  
+|1.使用<xref:System.Math.Abs%2A> 命名<xref:System>空间中的<xref:System.Math>类的方法计算其差异的绝对值。<br />2.确定可接受的最大差异, 以便在其差异不大时, 可以将两个数量视为合理目的。<br />3.将差异的绝对值与可接受的差异进行比较。|  
   
- 下面的示例演示两个错误用法和正确比较`Double`值。  
+ 下面的示例演示了两个`Double`值的错误和正确比较。  
   
  [!code-vb[VbVbalrDataTypes#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#10)]  
   
- 上面的示例使用<xref:System.Double.ToString%2A>方法<xref:System.Double>结构，使它可以指定精度优于`CStr`关键字使用。 默认值为 15 个数字，但是"G17"格式将其扩展到 17 位数字。  
+ 上面的示例使用<xref:System.Double.ToString%2A> <xref:System.Double>结构的方法, 以便它可以`CStr`指定比关键字使用更好的精度。 默认值为15个数字, 但 "G17" 格式将其扩展为17位数字。  
   
-## <a name="mod-operator-does-not-return-accurate-result"></a>Mod 运算符不会返回准确的结果  
- 由于浮点存储的不精确性[Mod 运算符](../../../../visual-basic/language-reference/operators/mod-operator.md)至少其中一个操作数为浮点时可以返回了意外的结果。  
+## <a name="mod-operator-does-not-return-accurate-result"></a>Mod 运算符未返回准确的结果  
+ 由于浮点存储的不精确性, 如果至少有一个操作数为浮点, 则[Mod 运算符](../../../../visual-basic/language-reference/operators/mod-operator.md)可能会返回意外的结果。  
   
- [十进制数据类型](../../../../visual-basic/language-reference/data-types/decimal-data-type.md)不使用浮点表示形式。 在不精确的许多数字`Single`和`Double`精确中`Decimal`（例如 0.2 和 0.3）。 尽管算术中要慢`Decimal`比在浮点数，它可能值得性能下降以实现更好的精度。  
+ [Decimal 数据类型](../../../../visual-basic/language-reference/data-types/decimal-data-type.md)不使用浮点表示形式。 许多在和`Single` `Double`中不精确的数字(例如,0.2和0.3)。`Decimal` 尽管算术`Decimal`比浮点时间慢, 但其性能可能会降低, 从而获得更好的精度。  
   
-|若要查找的浮点数的整数余数|  
+|查找浮点数量的整数余数|  
 |---|  
-|1.将变量声明为`Decimal`。<br />2.使用文本类型字符`D`强制转换为`Decimal`，以防它们的值太大，`Long`数据类型。|  
+|1.将变量声明`Decimal`为。<br />2.如果`D` 数据`Long`类型的值太大`Decimal`, 请使用文本类型字符将文本强制置于。|  
   
- 下面的示例演示可能不精确的浮点操作数。  
+ 下面的示例演示了浮点操作数的潜在不精确性。  
   
  [!code-vb[VbVbalrDataTypes#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#11)]  
   
- 上面的示例使用<xref:System.Double.ToString%2A>方法<xref:System.Double>结构，使它可以指定精度优于`CStr`关键字使用。 默认值为 15 个数字，但是"G17"格式将其扩展到 17 位数字。  
+ 上面的示例使用<xref:System.Double.ToString%2A> <xref:System.Double>结构的方法, 以便它可以`CStr`指定比关键字使用更好的精度。 默认值为15个数字, 但 "G17" 格式将其扩展为17位数字。  
   
- 因为`zeroPointTwo`是`Double`，0.2 其值是使用存储的值是为 0.20000000000000001 的无限重复二进制小数。 此数量除以 2.0 将得到 9.9999999999999995，余数为 0.19999999999999991。  
+ 因为`zeroPointTwo` 为`Double`, 所以, 0.2 的值是0.20000000000000001 的存储值的无限重复二进制小数。 此数量相除2.0 将产生 9.9999999999999995, 剩余0.19999999999999991。  
   
- 中的表达式`decimalRemainder`，文本类型字符`D`强制的两个操作数`Decimal`，，0.2 具有精确的表示形式。 因此`Mod`运算符得到预期的余数为 0.0。  
+ 在的表达式`decimalRemainder`中, 文本类型字符`D`强制两个操作数为`Decimal`, 0.2 具有精确的表示形式。 因此, `Mod`运算符产生了预计的0.0 余数。  
   
- 请注意，不只需声明`decimalRemainder`作为`Decimal`。 你还必须强制执行到文字`Decimal`，或它们使用`Double`默认情况下和`decimalRemainder`接收相同的不准确值`doubleRemainder`。  
+ 请注意, 声明`decimalRemainder`为`Decimal`是不够的。 您还必须强制`Decimal`文本, 或者默认使用`Double` , 并`decimalRemainder`接收与相同的不准确值`doubleRemainder`。  
   
-## <a name="boolean-type-does-not-convert-to-numeric-type-accurately"></a>布尔值类型不会准确地转换为数值类型  
- [Boolean 数据类型](../../../../visual-basic/language-reference/data-types/boolean-data-type.md)值不存储为数字，并存储的值并不等同于数字。 为了与早期版本兼容，Visual Basic 提供转换关键字 ([CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md)， `CBool`，`CInt`等) 之间进行转换`Boolean`与数值类型。 但是，其他语言有时执行这些转换方式不同，.NET Framework 方法一样。  
+## <a name="boolean-type-does-not-convert-to-numeric-type-accurately"></a>布尔类型不会准确地转换为数值类型  
+ [布尔数据类型](../../../../visual-basic/language-reference/data-types/boolean-data-type.md)值不会存储为数字, 并且存储的值不应与数字等效。 为了与早期版本兼容, Visual Basic 提供转换关键字 ([CType 函数](../../../../visual-basic/language-reference/functions/ctype-function.md)、 `CBool` `CInt`、等) 来转换`Boolean`和数值类型。 但是, 其他语言有时会以不同的方式执行这些转换, 这与 .NET Framework 方法相同。  
   
- 绝不应编写依赖于等效的数值的代码`True`和`False`。 只要有可能，应限制的使用情况`Boolean`它们设计的逻辑值的变量。 如果必须混合`Boolean`和数字值，请确保您了解您选择的转换方法。  
+ 永远不应编写依赖于和`True` `False`的等效数值的代码。 应尽可能将`Boolean`变量的使用限制为它们的设计逻辑值。 如果必须混合`Boolean`和数值, 请确保了解所选的转换方法。  
   
-### <a name="conversion-in-visual-basic"></a>在 Visual Basic 中的转换  
- 当你使用`CType`或`CBool`转换关键字将转换为数值数据类型`Boolean`，将 0 变为`False`和所有其他值将成为`True`。 转换时`Boolean`通过使用转换关键字，数值类型的值`False`变为 0 和`True`变得为-1。  
+### <a name="conversion-in-visual-basic"></a>Visual Basic 中的转换  
+ `CType`如果使用`True`或`CBool`转换关键字将数值数据类型转换为`Boolean`, 则0变为`False` , 所有其他值将变为。 使用转换关键字`Boolean`将值转换为数值类型时, `False`将变为 0, 并`True`变为-1。  
   
-### <a name="conversion-in-the-framework"></a>Framework 中的转换  
- <xref:System.Convert.ToInt32%2A>方法<xref:System.Convert>类<xref:System>命名空间将为`True`为 + 1。  
+### <a name="conversion-in-the-framework"></a>框架中的转换  
+ 命名空间中<xref:System.Convert> `True`的类的方法将转换为+1。<xref:System.Convert.ToInt32%2A> <xref:System>  
   
- 如果必须转换`Boolean`值为数值数据类型，请小心使用转换方法。  
+ 如果必须将`Boolean`值转换为数值数据类型, 请注意使用哪种转换方法。  
   
 ## <a name="character-literal-generates-compiler-error"></a>字符文本生成编译器错误  
- 在没有任何类型字符的情况下，Visual Basic 将采用默认的文本数据类型。 默认类型为字符文本，用引号括起来 (`" "`) — 是`String`。  
+ 如果没有任何类型的字符, Visual Basic 会假设文本的默认数据类型。 字符文本的默认类型 (用引号 (`" "`) 引起来) 为。 `String`  
   
- `String`数据类型不会扩大到[Char 数据类型](../../../../visual-basic/language-reference/data-types/char-data-type.md)。 这意味着，如果你想要分配到文字`Char`变量，必须进行收缩转换，或将文本强制转换到`Char`类型。  
+ 数据类型不会扩大到[Char 数据类型。](../../../../visual-basic/language-reference/data-types/char-data-type.md) `String` 这意味着, 如果要将文本分配给`Char`变量, 则必须进行收缩转换或将文本强制转换`Char`为类型。  
 
-|若要创建字符文本要分配给变量或常量|
+|创建要分配给变量或常量的 Char 文本|
 |---|  
-|1.声明变量或常量作为`Char`。<br />2.字符值用引号引起来 (`" "`)。<br />3.请按照右双引号具有文本类型字符`C`若要将文本强制转换到`Char`。 这是必需的如果类型检查开关 ([Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) 是`On`，它非常适合在任何情况下。|  
+|1.将变量或常量声明为`Char`。<br />2.将字符值用引号 (`" "`) 引起来。<br />3.在右双引号后跟文本类型字符`C` , 以强制文本为。 `Char` 如果类型检查开关 ([Option Strict 语句](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) 为`On`, 则这是必需的, 并且在任何情况下都是必需的。|  
   
- 下面的示例演示如何操作和不成功分配到文字的`Char`变量。  
+ 下面的示例演示了将文本成功和成功分配给`Char`变量的情况。  
   
  [!code-vb[VbVbalrDataTypes#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#12)]  
   
- 始终存在风险中没有使用收缩转换，因为它们可以在运行时失败。 例如，从转换`String`到`Char`可能会失败，如果`String`值包含多个字符。 因此，它更好地编程使用`C`键入字符。  
+ 使用收缩转换始终存在风险, 因为它们可能会在运行时失败。 例如, 如果`String` `Char` 值包含多个字符,则从到的转换`String`可能会失败。 因此, 更好的`C`编程方法是使用类型字符。  
   
-## <a name="string-conversion-fails-at-run-time"></a>在运行时将字符串转换失败  
- [字符串数据类型](../../../../visual-basic/language-reference/data-types/string-data-type.md)参与了很少的扩大转换。 `String` 扩大到自身并`Object`，并仅`Char`并`Char()`(`Char`数组) 扩大到`String`。 这是因为`String`变量和常量可以包含其他数据类型不能包含的值。  
+## <a name="string-conversion-fails-at-run-time"></a>字符串转换在运行时失败  
+ [字符串数据类型](../../../../visual-basic/language-reference/data-types/string-data-type.md)参与极少的扩大转换。 `String`仅扩大`Object`到自身, 且仅`Char`和`Char()` ( `Char`数组) 扩大到`String`。 这是因为`String`变量和常量可以包含其他数据类型不能包含的值。  
   
- 当类型检查开关 ([Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) 是`On`，编译器不允许所有隐式收缩转换。 这包括涉及`String`。 你的代码仍可以使用转换关键字如`CStr`并[CType 函数](../../../../visual-basic/language-reference/functions/ctype-function.md)，这指示.NET Framework，才能尝试进行转换。  
+ 如果类型检查开关 ([Option Strict 语句](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) 为, `On`则编译器不允许所有隐式收缩转换。 这包括涉及`String`的内容。 你的代码仍可使用转换关键字 ( `CStr`如和[CType 函数](../../../../visual-basic/language-reference/functions/ctype-function.md)) 来指示 .NET Framework 尝试转换。  
   
 > [!NOTE]
->  收缩转换错误则会取消对从中的元素的转换`For Each…Next`循环控制变量的集合。 有关详细信息和示例，请参阅中的"收缩转换"部分[为每个...下一条语句](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)。  
+> 禁止将从`For Each…Next`集合中的元素转换为循环控制变量的收缩转换错误。 有关详细信息和示例, 请参阅中的 "收缩转换" 一节[。下一语句](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)。  
   
 ### <a name="narrowing-conversion-protection"></a>收缩转换保护  
- 收缩转换的缺点是它们可能会在运行时失败。 例如，如果`String`变量包含的任何内容而不是"True"或"False，"它不能转换为`Boolean`。 如果它包含标点字符，为任何数值类型的转换将失败。 除非您知道您`String`变量始终保存目标类型可以接受的值，否则不应尝试进行转换。  
+ 收缩转换的缺点是它们可能会在运行时失败。 例如, 如果变量包含`String`除 "True" 或 "False" 之外的任何值, 则不能将其`Boolean`转换为。 如果包含标点字符, 则转换为任意数值类型的操作都将失败。 除非您知道`String`变量始终包含目标类型可以接受的值, 否则不应尝试转换。  
   
- 如果必须从转换`String`最安全的过程是将括在尝试的转换为另一个数据类型，[尝试...Catch...Finally 语句](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)。 这允许您处理运行时故障。  
+ 如果必须从`String`转换为另一种数据类型, 最安全的过程是将尝试的转换包含在[Try .。。Catch .。。Finally 语句](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)。 这使你可以处理运行时失败。  
   
 ### <a name="character-arrays"></a>字符数组  
- 将单个`Char`和一个数组`Char`元素均扩大到`String`。 但是，`String`未扩大到`Char()`。 要转换`String`值设为`Char`数组，可以使用<xref:System.String.ToCharArray%2A>方法的<xref:System.String?displayProperty=nameWithType>类。  
+ 一个元素和一个数组, 它们都扩大到`String`。 `Char` `Char` 但是, `String`不会扩大到`Char()`。 若要将`String`值转换`Char`为数组<xref:System.String.ToCharArray%2A> , 可以<xref:System.String?displayProperty=nameWithType>使用类的方法。  
   
-### <a name="meaningless-values"></a>无意义的值  
- 一般情况下，`String`值不是在其他数据类型，有意义，转换是高度人工和危险。 只要有可能，应限制的使用情况`String`它们设计的字符序列的变量。 绝不应编写依赖于其他类型中的等效值的代码。  
+### <a name="meaningless-values"></a>无意义值  
+ 通常情况下`String` , 值在其他数据类型中没有意义, 转换非常有意义。 应尽可能将`String`变量的使用限制为为其设计的字符序列。 永远不应编写依赖于其他类型中的等效值的代码。  
   
 ## <a name="see-also"></a>请参阅
 
 - [数据类型](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [类型字符](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
-- [值类型和引用类型](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
-- [在 Visual Basic 中的类型转换](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [Visual Basic 中的类型转换](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [数据类型](../../../../visual-basic/language-reference/data-types/index.md)
 - [类型转换函数](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)
 - [有效使用数据类型](../../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

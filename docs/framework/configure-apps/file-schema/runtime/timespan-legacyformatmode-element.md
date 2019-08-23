@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 865e7207-d050-4442-b574-57ea29d5e2d6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2bd74460c7d5d077686c723936d140b07ac21dd0
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: f16a2bbd2470b4aec9e95ab67ccb0e736c4c6d02
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663392"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920691"
 ---
 # <a name="timespan_legacyformatmode-element"></a>\<TimeSpan_LegacyFormatMode > 元素
 
@@ -64,7 +64,7 @@ ms.locfileid: "69663392"
 
 从 .NET Framework 4 开始, <xref:System.TimeSpan?displayProperty=nameWithType>结构<xref:System.IFormattable>实现接口, 并支持带有标准和自定义格式字符串的格式设置操作。 如果分析方法遇到不支持的格式说明符或格式字符串, 则将引发<xref:System.FormatException>。
 
-在 .NET Framework 的以前版本中, <xref:System.TimeSpan>结构未实现<xref:System.IFormattable> , 并且不支持格式字符串。 但是, 很多开发人员都<xref:System.TimeSpan>认为确实支持一组格式字符串, 并在[复合格式设置操作](../../../../../docs/standard/base-types/composite-formatting.md)中将它们用于<xref:System.String.Format%2A?displayProperty=nameWithType>方法 (如)。 通常, 如果某个类型实现<xref:System.IFormattable>并支持格式字符串, 则使用不受支持的格式字符串的格式设置<xref:System.FormatException>方法的调用通常会引发。 但是, 因为<xref:System.TimeSpan>未实现<xref:System.IFormattable>, 所以运行时将忽略格式<xref:System.TimeSpan.ToString?displayProperty=nameWithType>字符串, 而改为调用方法。 这意味着, 尽管格式字符串对格式设置操作没有影响, 但它们的<xref:System.FormatException>存在不会导致。
+在 .NET Framework 的以前版本中, <xref:System.TimeSpan>结构未实现<xref:System.IFormattable> , 并且不支持格式字符串。 但是, 很多开发人员都<xref:System.TimeSpan>认为确实支持一组格式字符串, 并在[复合格式设置操作](../../../../standard/base-types/composite-formatting.md)中将它们用于<xref:System.String.Format%2A?displayProperty=nameWithType>方法 (如)。 通常, 如果某个类型实现<xref:System.IFormattable>并支持格式字符串, 则使用不受支持的格式字符串的格式设置<xref:System.FormatException>方法的调用通常会引发。 但是, 因为<xref:System.TimeSpan>未实现<xref:System.IFormattable>, 所以运行时将忽略格式<xref:System.TimeSpan.ToString?displayProperty=nameWithType>字符串, 而改为调用方法。 这意味着, 尽管格式字符串对格式设置操作没有影响, 但它们的<xref:System.FormatException>存在不会导致。
 
 对于旧式代码传递复合格式设置方法和无效格式字符串的情况, 并且无法重新编译该代码, 可以使用`<TimeSpan_LegacyFormatMode>`元素来还原旧<xref:System.TimeSpan>行为。 将此元素的`enabled`特性设置为`true`时, 复合格式设置方法将<xref:System.TimeSpan.ToString?displayProperty=nameWithType>导致调用而<xref:System.TimeSpan.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType>不是, 并且<xref:System.FormatException>不会引发。
 

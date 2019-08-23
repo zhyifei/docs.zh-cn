@@ -2,20 +2,20 @@
 title: <clientVia>
 ms.date: 03/30/2017
 ms.assetid: c27ee94e-babd-459b-9574-2a6d67d11314
-ms.openlocfilehash: b8864760c1700cd785922b922346204d194f56cc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b12a882d942555a24c145b243d2cea764ba106b1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673623"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919509"
 ---
 # <a name="clientvia"></a>\<clientVia>
 指定应为其创建传输通道的 URI。 有关详细信息，请参阅 <xref:System.ServiceModel.Description.ClientViaBehavior>。  
   
  \<system.ServiceModel>  
-\<behaviors>  
+\<行为 >  
 \<endpointBehaviors>  
-\<behavior>  
+\<行为 >  
 \<clientVia>  
   
 ## <a name="syntax"></a>语法  
@@ -34,13 +34,13 @@ ms.locfileid: "61673623"
 |`viaUri`|一个指定 URI 的字符串，此 URI 指示消息应采用的路由。|  
   
 ### <a name="child-elements"></a>子元素  
- None  
+ 无  
   
 ### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|指定终结点行为。|  
+|[\<behavior>](behavior-of-endpointbehaviors.md)|指定终结点行为。|  
   
 ## <a name="see-also"></a>请参阅
 

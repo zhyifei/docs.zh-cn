@@ -2,19 +2,19 @@
 title: <endpoint> 元素
 ms.date: 03/30/2017
 ms.assetid: 2fc8fedc-78d0-4e87-8142-fbfd26c15a4e
-ms.openlocfilehash: 667086cda010daf51cb92116d636b9b526b4b34b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 71ddb3b860870ee8feeeb36c3f64fa7bfebb0f10
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673025"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69925817"
 ---
-# <a name="endpoint-element"></a>\<终结点 > 元素
+# <a name="endpoint-element"></a>\<endpoint > 元素
 指定用于公开服务的服务终结点的绑定、协定和地址属性。  
   
  \<system.ServiceModel>  
 \<service>  
-\<endpoint>  
+\<终结点 >  
   
 ## <a name="syntax"></a>语法  
   
@@ -47,26 +47,26 @@ ms.locfileid: "61673025"
 |bindingConfiguration|一个字符串，指定实例化终结点时所使用的绑定的绑定名称。 定义终结点时，绑定名称必须在作用域内。 默认值为一个空字符串。<br /><br /> 此属性与 `binding` 结合使用，以引用配置文件中的特定绑定配置。 如果尝试使用自定义绑定，请设置此属性。 否则，可能引发异常。|  
 |bindingName|一个字符串，指定绑定的唯一限定名称，用于通过 WSDL 进行的定义导出。 默认值为一个空字符串。|  
 |bindingNamespace|一个字符串，指定绑定的命名空间的限定名称，用于通过 WSDL 进行的定义导出。 默认值为一个空字符串。|  
-|Contract — 协定|一个字符串，指示此终结点公开了哪个协定。 程序集必须实现该协定类型。 如果服务实现所实现的是单个协定类型，则可以省略此属性。 默认值为一个空字符串。|  
+|协定 (contract)|一个字符串，指示此终结点公开了哪个协定。 程序集必须实现该协定类型。 如果服务实现所实现的是单个协定类型，则可以省略此属性。 默认值为一个空字符串。|  
 |endpointConfiguration|一个字符串，指定由 `kind` 特性设置的标准终结点的名称，此名称引用此标准终结点的其他配置信息。 必须在 `<standardEndpoints>` 节中定义相同的名称。|  
 |isSystemEndpoint|一个布尔值，指定终结点是否是基础结构终结点。|  
 |kind|一个字符串，指定应用的标准终结点的类型。 此类型必须在 `<extensions>` 节或 machine.config 中进行注册。如果未指定任何值，则创建常规服务终结点。|  
-|listenUriMode|指定传输如何处理供服务侦听的 `ListenUri`。 有效值为<br /><br /> -   Explicit<br />唯一<br /><br /> 默认值为 Explicit。|  
+|listenUriMode|指定传输如何处理供服务侦听的 `ListenUri`。 有效值为<br /><br /> -Explicit<br />-唯一<br /><br /> 默认值为 Explicit。|  
 |listenUri|一个字符串，指定服务终结点侦听的 URI。 默认值为一个空字符串。|  
-|name|可选特性。 一个指定服务终结点名称的字符串。 默认值为绑定名称和协定说明名称的串联。 服务可能有多个终结点，因此终结点的 `name` 特性是通过服务名称区分的。|  
+|NAME|可选特性。 一个指定服务终结点名称的字符串。 默认值为绑定名称和协定说明名称的串联。 服务可能有多个终结点，因此终结点的 `name` 特性是通过服务名称区分的。|  
   
 ### <a name="child-elements"></a>子元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<headers>](../../../../../docs/framework/configure-apps/file-schema/wcf/headers.md)|一个地址标头集合。|  
-|[\<identity>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|一个标识，与某个终结点交换消息的其他终结点可以使用该标识对该终结点进行身份验证。|  
+|[\<headers>](headers.md)|一个地址标头集合。|  
+|[\<identity>](identity.md)|一个标识，与某个终结点交换消息的其他终结点可以使用该标识对该终结点进行身份验证。|  
   
 ### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<service>](../../../../../docs/framework/configure-apps/file-schema/wcf/service.md)|一个配置节，定义客户端可以连接的终结点的列表。|  
+|[\<service>](service.md)|一个配置节，定义客户端可以连接的终结点的列表。|  
   
 ## <a name="example"></a>示例  
  这是服务终结点配置的一个示例。  
@@ -89,5 +89,5 @@ ms.locfileid: "61673025"
 - <xref:System.ServiceModel.Configuration.ServiceEndpointElement>
 - <xref:System.ServiceModel.EndpointAddress>
 - <xref:System.ServiceModel.Description.ServiceEndpoint>
-- [终结点：地址、 绑定和协定](../../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
-- [如何：在配置中创建的服务终结点](../../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)
+- [终结点地址、绑定和协定](../../../wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
+- [如何：在配置中创建服务终结点](../../../wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)

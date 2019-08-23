@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 71b2ebf6-3843-41e2-ad52-ffa5cd083a40
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aac7079d941e6774ca6c00fbece8ff72fbf3f0e1
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 92873277b4b25e4c1c5981628187078ac7cb5704
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663875"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920891"
 ---
 # <a name="bypasstrustedappstrongnames-element"></a>\<bypassTrustedAppStrongNames> 元素
 指定是否在加载到完全信任<xref:System.AppDomain>的完全信任程序集上绕过强名称验证。  
@@ -70,7 +70,7 @@ ms.locfileid: "69663875"
 - 签名没有延迟。  
   
 > [!NOTE]
->  如果对计算机上的所有应用程序使用注册表项关闭了绕过功能, 则此配置文件设置将不起作用。 有关详细信息，请参阅[如何：禁用强名称绕过功能](../../../app-domains/how-to-disable-the-strong-name-bypass-feature.md)。  
+> 如果对计算机上的所有应用程序使用注册表项关闭了绕过功能, 则此配置文件设置将不起作用。 有关详细信息，请参阅[如何：禁用强名称绕过功能](../../../app-domains/how-to-disable-the-strong-name-bypass-feature.md)。  
   
 ## <a name="example"></a>示例  
  下面的示例演示如何指定对完全信任程序集的强名称签名进行验证的行为。  

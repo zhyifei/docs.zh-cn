@@ -2,12 +2,12 @@
 title: <parameter>
 ms.date: 03/30/2017
 ms.assetid: 0fb41e2d-64f7-44ab-993e-05892eac6d82
-ms.openlocfilehash: 22ef3c3c6d23d6c68c27d6b5d1ed35b7c9910d48
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c3f2179835ad1232e115cad0decdd3d41bbdc160
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783430"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69932837"
 ---
 # <a name="parameter"></a>\<parameter>
 指定当声明类型是泛型类型时的泛型参数。  
@@ -15,7 +15,7 @@ ms.locfileid: "61783430"
  \<system.runtime.serialization>  
 \<dataContractSerializer>  
 \<declaredTypes > 元素  
-\<添加 > 元素\<declaredTypes >  
+\<添加 declaredTypes 的\<> 元素 >  
 \<knownType > 元素  
 \<参数 > 元素  
   
@@ -34,11 +34,11 @@ ms.locfileid: "61783430"
 |特性|描述|  
 |---------------|-----------------|  
 |索引|当声明类型是泛型类型时，指定将返回已知类型的泛型参数。|  
-|类型|一个字符串，描述用于序列化和反序列化的已知类型。|  
+|type|一个字符串，描述用于序列化和反序列化的已知类型。|  
   
 ## <a name="index-attribute"></a>index 特性  
   
-|“值”|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |“0”|泛型类型中的第一个参数。 例如，一个 <xref:System.Collections.Generic.List%601> 仅有一个参数。 如果此参数用作声明类型，则将 index 特性设置为“0”。|  
 |"1"|泛型类型中的第二个参数。 例如，一个 <xref:System.Collections.Generic.Dictionary%602> 有两个参数。 如果通过第二个参数返回已知类型，则将 index 特性设置为“1”。|  
@@ -50,18 +50,18 @@ ms.locfileid: "61783430"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<knownType>](../../../../../docs/framework/configure-apps/file-schema/wcf/knowntype.md)|指定一个可由声明类型的字段或属性返回的已知类型。|  
+|[\<knownType>](knowntype.md)|指定一个可由声明类型的字段或属性返回的已知类型。|  
   
 ## <a name="remarks"></a>备注  
- 有关已知类型的详细信息，请参阅[Data Contract Known Types](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)和<xref:System.Runtime.Serialization.DataContractSerializer>。  
+ 有关已知类型的详细信息, 请参阅[数据协定已知类型](../../../wcf/feature-details/data-contract-known-types.md)和<xref:System.Runtime.Serialization.DataContractSerializer>。  
   
- 请参阅[ \<dataContractSerializer >](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md)有关使用此元素的示例。  
+ 有关使用此元素的示例, 请参阅[ dataContractSerializer>。\<](datacontractserializer-element.md)  
   
  此配置元素不能同时具有两个属性。 如果设置两个属性，则发生 <xref:System.Configuration.ConfigurationErrorsException>。  
   
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Runtime.Serialization.DataContractSerializer>
-- [数据协定已知类型](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
-- [\<dataContractSerializer>](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md)
-- [\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-declaredtypes-element.md)
+- [数据协定已知类型](../../../wcf/feature-details/data-contract-known-types.md)
+- [\<dataContractSerializer>](datacontractserializer-element.md)
+- [\<add>](add-of-declaredtypes-element.md)

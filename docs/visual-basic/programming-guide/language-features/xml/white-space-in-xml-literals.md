@@ -5,38 +5,38 @@ helpviewer_keywords:
 - white space [XML in Visual Basic]
 - XML literals [Visual Basic], white space
 ms.assetid: dfe3a9ff-d69a-418e-a6b5-476f4ed84219
-ms.openlocfilehash: 903928087d5ad9c51040ba6bf65639f44d8c7dd6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f72dcc25b158d793850069e5cc32c3a3c02fad17
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64627443"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939210"
 ---
 # <a name="white-space-in-xml-literals-visual-basic"></a>XML 文本中的空白 (Visual Basic)
-Visual Basic 编译器创建时包含的有意义的空白字符将从 XML 文本[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]对象。 它不会合并无意义的空白字符。  
+Visual Basic 编译器在创建[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]对象时仅合并 XML 文本中的有效空白字符。 不包含无意义的空白字符。  
   
-## <a name="significant-and-insignificant-white-space"></a>有效空白和无关紧要的空白区域  
- 只有三个区域中，XML 文本中的空格字符是有意义：  
+## <a name="significant-and-insignificant-white-space"></a>重要且无意义的空白  
+ XML 文本中的空格字符仅在三个区域中很重要:  
   
-- 它们的特性值中。  
+- 在属性值中。  
   
-- 当它们都属于某个元素的文本内容和文本中还包含其他字符。  
+- 当它们是元素的文本内容的一部分并且文本还包含其他字符时。  
   
-- 它们在嵌入式表达式的元素的文本内容。  
+- 当它们位于元素的文本内容的嵌入式表达式中时。  
   
- 否则为编译器将视为无意义的空白字符，不包括然后中[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]该文字的对象。  
+ 否则, 编译器会将空白字符视为不重要的, 并且不会在文本[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]的对象中包括。  
   
- 若要在 XML 文本中包括无关紧要的空白区域，使用嵌入式的表达式包含了空白字符串。  
+ 若要在 XML 文本中包含无意义的空白, 请使用包含带有空格的字符串文字的嵌入式表达式。  
   
 > [!NOTE]
->  如果`xml:space`特性出现在 XML 元素文本、 Visual Basic 编译器将该特性中的包含<xref:System.Xml.Linq.XElement>对象，而是添加此属性不会更改编译器如何处理空白区域。  
+> 如果属性出现在 XML 元素文本中, 则 Visual Basic 编译器在<xref:System.Xml.Linq.XElement>对象中包括属性, 但添加此属性不会更改编译器处理空白的方式。 `xml:space`  
   
 ## <a name="examples"></a>示例  
- 下面的示例包含两个 XML 元素，外部和内部。 两个元素都包含其文本内容中的空白区域。 外部元素中的空白并不重要，因为它仅包含空格和一个 XML 元素。 内部元素中的空白区域很重要，因为它包含空格和文本。  
+ 下面的示例包含两个 XML 元素: 外部和内部。 这两个元素在其文本内容中都包含空格。 外部元素中的空白是无意义的, 因为它仅包含空格和 XML 元素。 内部元素中的空格非常重要, 因为它包含空格和文本。  
   
  [!code-vb[VbXMLSamples#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#29)]  
   
- 当运行时，此代码将显示以下文本。  
+ 运行时, 此代码显示以下文本。  
   
 ```xml  
 <outer>  

@@ -2,20 +2,20 @@
 title: dataContractSerializer
 ms.date: 03/30/2017
 ms.assetid: a47513a4-a96c-4350-8586-daacb05dee71
-ms.openlocfilehash: 8ba16d9cc30b07d3e6b0924e6013ec01443867d4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8814a48df8933cf08db78e397c24d42f2da26026
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704123"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919234"
 ---
 # <a name="datacontractserializer"></a>dataContractSerializer
 包含 <xref:System.Runtime.Serialization.DataContractSerializer> 的配置数据。  
   
  \<system.ServiceModel>  
-\<behaviors>  
+\<行为 >  
 \<endpointBehaviors>  
-\<behavior>  
+\<行为 >  
 \<dataContractSerializer>  
   
 ## <a name="syntax"></a>语法  
@@ -42,7 +42,7 @@ ms.locfileid: "61704123"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|指定终结点行为。|  
+|[\<behavior>](behavior-of-endpointbehaviors.md)|指定终结点行为。|  
   
 ## <a name="remarks"></a>备注  
  有关已知类型的更多信息，请参见 <xref:System.Runtime.Serialization.DataContractSerializer> 文档。  
@@ -55,5 +55,5 @@ ms.locfileid: "61704123"
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>
 - <xref:System.ServiceModel.Configuration.DataContractSerializerElement>
-- [数据协定已知类型](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
-- [数据传输和序列化](../../../../../docs/framework/wcf/feature-details/data-transfer-and-serialization.md)
+- [数据协定已知类型](../../../wcf/feature-details/data-contract-known-types.md)
+- [数据传输和序列化](../../../wcf/feature-details/data-transfer-and-serialization.md)

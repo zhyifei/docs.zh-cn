@@ -2,15 +2,15 @@
 title: <udpTransportSettings>
 ms.date: 03/30/2017
 ms.assetid: 842d92e9-6199-4ec5-b2d1-58533054e1f0
-ms.openlocfilehash: f5be9681dc69fd68dfdfa90f4eb305dc4aa4514b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ed87db92bcbfa0aa9016e36f391d707c5b17bf2b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788747"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69934497"
 ---
 # <a name="udptransportsettings"></a>\<udpTransportSettings>
-此配置元素公开的 UDP 传输设置[ \<udpDiscoveryEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/udpdiscoveryendpoint.md)。  
+此配置元素显示[ \<udpDiscoveryEndpoint >](udpdiscoveryendpoint.md)的 UDP 传输设置。  
   
 \<system.ServiceModel>  
 \<standardEndpoints>  
@@ -52,7 +52,7 @@ ms.locfileid: "61788747"
 |maxReceivedMessageSize|一个整数，指定绑定可处理的消息的最大大小。<br /><br /> 默认值为 65507。|  
 |maxUnicastRetransmitCount|一个整数，指定应重新传输消息的最大次数（包括第一次发送）。  如果将消息发送到单播地址，并且收到的响应消息中带有相应的 RelatesTo 标头，重新传输可能会提前终止（在达到配置的重新传输次数之前）。<br /><br /> 默认值为 1。|  
 |multicastInterfaceId|一个字符串，唯一标识在多宿主计算机上发送和接收多播流量时应使用的网络适配器。 在运行时，传输将使用此特性值来查找接口索引，然后使用该索引设置 `IP_MULTICAST_IF` 和 `IPV6_MULTICAST_IF` 套接字选项。  加入多播组时将使用相同的接口索引（如果适用）。<br /><br /> 默认值为 `null`。|  
-|socketReceiveBufferSize|一个整数，指定基础 WinSock 套接字上接收缓冲区的大小。<br /><br /> 接收通道的用户可以对绑定使用此特性，以控制系统在接收数据时的行为。  例如，假定应用程序使用入站 WCF 消息时达到了最大阈值，对此特性使用较高的值将允许消息在等待应用程序处理时在 WinSock 缓冲区中堆叠。  在同样的情况下，使用较低的值将导致消息被丢弃。 此特性公开基础 WinSock`SO_RCVBUF`套接字选项。此属性的值必须是至少的大小`maxReceivedMessageSize`。   将其设置为一个值小于`maxReceivedMessageSize`将导致运行时异常。<br /><br /> 默认值为 65536。|  
+|socketReceiveBufferSize|一个整数，指定基础 WinSock 套接字上接收缓冲区的大小。<br /><br /> 接收通道的用户可以对绑定使用此特性，以控制系统在接收数据时的行为。  例如，假定应用程序使用入站 WCF 消息时达到了最大阈值，对此特性使用较高的值将允许消息在等待应用程序处理时在 WinSock 缓冲区中堆叠。  在同样的情况下，使用较低的值将导致消息被丢弃。 此属性公开基础 WinSock `SO_RCVBUF`套接字选项。此属性值必须至少为的`maxReceivedMessageSize`大小。   如果将其设置为小于的`maxReceivedMessageSize`值, 则会导致运行时异常。<br /><br /> 默认值为 65536。|  
 |timeToLive|一个整数，指定多播数据包可以遍历的网络段跃点数。  此特性公开与 `IP_MULTICAST_TTL` 和 `IP_TTL` 套接字选项关联的功能。<br /><br /> 默认值为 1。|  
   
 ### <a name="child-elements"></a>子元素  
@@ -62,7 +62,7 @@ ms.locfileid: "61788747"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<udpDiscoveryEndpoint>](../../../../../docs/framework/configure-apps/file-schema/wcf/udpdiscoveryendpoint.md)|具有固定发现协定和 UDP 传输绑定的标准终结点。|  
+|[\<udpDiscoveryEndpoint>](udpdiscoveryendpoint.md)|具有固定发现协定和 UDP 传输绑定的标准终结点。|  
   
 ## <a name="see-also"></a>请参阅
 

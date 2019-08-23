@@ -1,19 +1,19 @@
 ---
-title: 如何：配置 Windows Communication Foundation 服务，以使用端口共享
+title: 如何：将 Windows Communication Foundation 服务配置为使用端口共享
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 6400bc71-a858-4ac2-8d5a-caa72d3b5482
-ms.openlocfilehash: bc0c822659ee57ac8dd87a2adddcd32e934ea4fb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e92ce3468bd43456ac3f838cfc44ea7c6624502b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61699709"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912222"
 ---
-# <a name="how-to-configure-a-windows-communication-foundation-service-to-use-port-sharing"></a>如何：配置 Windows Communication Foundation 服务，以使用端口共享
-若要使用 net.tcp:// 端口共享在 Windows Communication Foundation (WCF) 应用程序中的最简单方法是公开服务使用<xref:System.ServiceModel.NetTcpBinding>。  
+# <a name="how-to-configure-a-windows-communication-foundation-service-to-use-port-sharing"></a>如何：将 Windows Communication Foundation 服务配置为使用端口共享
+在 Windows Communication Foundation (WCF) 应用程序中使用 net.tcp://端口共享的最简单方法是使用<xref:System.ServiceModel.NetTcpBinding>公开服务。  
   
  此绑定提供了一个 <xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A> 属性，该属性控制是否为配置了此绑定的服务启用 net.tcp:// 端口共享。  
   
@@ -21,7 +21,7 @@ ms.locfileid: "61699709"
   
 ### <a name="to-enable-nettcp-port-sharing-on-a-nettcpbinding-in-code"></a>使用代码在 NetTcpBinding 上启用 net.tcp:// 端口共享  
   
-1. 创建服务，用于实现名为协定`IMyService`，并调用它`MyService`。  
+1. 创建一个服务来实现名`IMyService`为的协定, 并调用它。 `MyService`  
   
      [!code-csharp[c_ConfigurePortSharing#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_configureportsharing/cs/source.cs#1)]
      [!code-vb[c_ConfigurePortSharing#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_configureportsharing/vb/source.vb#1)]  
@@ -37,7 +37,7 @@ ms.locfileid: "61699709"
      [!code-vb[c_ConfigurePortSharing#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_configureportsharing/vb/source.vb#3)]  
   
     > [!NOTE]
-    >  此示例使用默认的 TCP 端口 808，因为终结点地址 URI 未指定其他端口号。 由于在传输绑定上显式启用了端口共享，因此该服务可以与其他进程中的其他服务共享端口 808。 如果不允许使用端口共享并且其他应用程序已在使用端口 808，则该服务在打开时会引发 <xref:System.ServiceModel.AddressAlreadyInUseException>。  
+    > 此示例使用默认的 TCP 端口 808，因为终结点地址 URI 未指定其他端口号。 由于在传输绑定上显式启用了端口共享，因此该服务可以与其他进程中的其他服务共享端口 808。 如果不允许使用端口共享并且其他应用程序已在使用端口 808，则该服务在打开时会引发 <xref:System.ServiceModel.AddressAlreadyInUseException>。  
   
 ### <a name="to-enable-nettcp-port-sharing-on-a-nettcpbinding-in-configuration"></a>使用配置在 NetTcpBinding 上启用 net.tcp:// 端口共享  
   
@@ -63,4 +63,4 @@ ms.locfileid: "61699709"
 ## <a name="see-also"></a>请参阅
 
 - [Net.TCP 端口共享](../../../../docs/framework/wcf/feature-details/net-tcp-port-sharing.md)
-- [如何：启用 Net.TCP 端口共享服务](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)
+- [如何：启用 Net.tcp 端口共享服务](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)

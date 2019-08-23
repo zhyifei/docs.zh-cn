@@ -7,12 +7,12 @@ helpviewer_keywords:
 - cryptographic algorithms
 - names [.NET Framework], algorithm mapping
 ms.assetid: 01327c69-c5e1-4ef6-b73f-0a58351f0492
-ms.openlocfilehash: 49f4b5b4b3634df5e648b5208448d644168e9d19
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 513000169504473aa6dd46feaca214f58502ffd0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69566722"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912868"
 ---
 # <a name="mapping-algorithm-names-to-cryptography-classes"></a>将算法名称映射到加密类
 开发人员可通过以下四种方式使用 Windows SDK 创建加密对象:  
@@ -58,16 +58,16 @@ ms.locfileid: "69566722"
 </configuration>  
 ```  
   
- 您可以在[< 的 cryptoClass\>元素](../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md)中指定属性的名称 (上一个示例将属性`MySHA1Hash`命名为)。 CryptoClass > 元素中 **\<** 属性的值是公共语言运行时用来查找类的字符串。 您可以使用满足指定[完全限定的类型名称](../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)中指定的要求的任何字符串。  
+ 您可以在[< 的 cryptoClass\>元素](./file-schema/cryptography/cryptoclass-element.md)中指定属性的名称 (上一个示例将属性`MySHA1Hash`命名为)。 CryptoClass > 元素中 **\<** 属性的值是公共语言运行时用来查找类的字符串。 您可以使用满足指定[完全限定的类型名称](../reflection-and-codedom/specifying-fully-qualified-type-names.md)中指定的要求的任何字符串。  
   
- 许多算法名称可以映射到同一个类。 Y > 元素将类映射到一个友好算法名称。 [ \<](../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) **Name**属性可以是在调用**CryptoConfig. cryptoconfig.createfromname**方法时使用的字符串, 也可以是<xref:System.Security.Cryptography>命名空间中抽象加密类的名称。 **Class**特性的值是 **\<cryptoClass >** 元素中的特性的名称。  
+ 许多算法名称可以映射到同一个类。 Y > 元素将类映射到一个友好算法名称。 [ \<](./file-schema/cryptography/nameentry-element.md) **Name**属性可以是在调用**CryptoConfig. cryptoconfig.createfromname**方法时使用的字符串, 也可以是<xref:System.Security.Cryptography>命名空间中抽象加密类的名称。 **Class**特性的值是 **\<cryptoClass >** 元素中的特性的名称。  
   
 > [!NOTE]
->  可以通过调用<xref:System.Security.Cryptography.SHA1.Create%2A?displayProperty=nameWithType>或**CryptoConfig. cryptoconfig.createfromname ("SHA1")** 方法获取 SHA1 算法。 每个方法仅保证返回实现 SHA1 算法的对象。 不需要将算法的每个友好名称映射到配置文件中的相同类。  
+> 可以通过调用<xref:System.Security.Cryptography.SHA1.Create%2A?displayProperty=nameWithType>或**CryptoConfig. cryptoconfig.createfromname ("SHA1")** 方法获取 SHA1 算法。 每个方法仅保证返回实现 SHA1 算法的对象。 不需要将算法的每个友好名称映射到配置文件中的相同类。  
   
  有关默认名称及其映射到的类的列表, 请参阅<xref:System.Security.Cryptography.CryptoConfig>。  
   
 ## <a name="see-also"></a>请参阅
 
-- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)
-- [配置加密类](../../../docs/framework/configure-apps/configure-cryptography-classes.md)
+- [Cryptographic Services](../../standard/security/cryptographic-services.md)
+- [配置加密类](configure-cryptography-classes.md)

@@ -2,12 +2,12 @@
 title: <issuer>
 ms.date: 03/30/2017
 ms.assetid: 8c49c6ae-fa1a-4179-a84b-613c3216dcde
-ms.openlocfilehash: 37d935287fa7dfba640c39071295fd660f4db7c1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 08fda249b526961ff711f439cf729a18e15b412b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61756255"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69929377"
 ---
 # <a name="issuer"></a>\<issuer>
 指定颁发安全令牌的安全令牌服务 (STS)。  
@@ -15,7 +15,7 @@ ms.locfileid: "61756255"
  \<system.serviceModel>  
 \<bindings>  
 \<wsFederationHttpBinding>  
-\<binding>  
+\<绑定 >  
 \<安全 >  
 \<message>  
 \<issuer>  
@@ -56,23 +56,23 @@ ms.locfileid: "61756255"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<headers>](../../../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md)|生成器可以创建的终结点的地址标头的集合。|  
-|[\<identity>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|在使用颁发的令牌时，指定能够使客户端对服务器进行身份验证的设置。|  
+|[\<headers>](headers-element.md)|生成器可以创建的终结点的地址标头的集合。|  
+|[\<identity>](identity.md)|在使用颁发的令牌时，指定能够使客户端对服务器进行身份验证的设置。|  
   
 ### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<message>](../../../../../docs/framework/configure-apps/file-schema/wcf/message-element-of-wsfederationhttpbinding.md)|定义的消息级安全性设置[ \<wsFederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)元素。|  
+|[\<message>](message-element-of-wsfederationhttpbinding.md)|定义[ \<wsFederationHttpBinding >](wsfederationhttpbinding.md)元素的消息级安全性设置。|  
   
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.ServiceModel.FederatedMessageSecurityOverHttp>
 - <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement.Issuer%2A>
 - <xref:System.ServiceModel.Configuration.IssuedTokenParametersEndpointAddressElement>
-- [服务标识和身份验证](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
-- [联合令牌与颁发的令牌](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
-- [服务标识和身份验证](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
-- [联合令牌与颁发的令牌](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
-- [使用自定义绑定的安全功能](../../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)
-- [联合令牌与颁发的令牌](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
+- [服务标识和身份验证](../../../wcf/feature-details/service-identity-and-authentication.md)
+- [联合令牌与颁发的令牌](../../../wcf/feature-details/federation-and-issued-tokens.md)
+- [服务标识和身份验证](../../../wcf/feature-details/service-identity-and-authentication.md)
+- [联合令牌与颁发的令牌](../../../wcf/feature-details/federation-and-issued-tokens.md)
+- [使用自定义绑定的安全功能](../../../wcf/feature-details/security-capabilities-with-custom-bindings.md)
+- [联合令牌与颁发的令牌](../../../wcf/feature-details/federation-and-issued-tokens.md)

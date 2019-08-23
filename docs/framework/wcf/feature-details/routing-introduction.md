@@ -2,12 +2,12 @@
 title: 路由简介
 ms.date: 03/30/2017
 ms.assetid: bf6ceb38-6622-433b-9ee7-f79bc93497a1
-ms.openlocfilehash: 478c9aa6563cab4ba7769c56d7084c8716c43c58
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
-ms.translationtype: MT
+ms.openlocfilehash: cc9298c96a5d1dc60ae1f9982b21ce7a160aacbd
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67425369"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933971"
 ---
 # <a name="routing-introduction"></a>路由简介
 路由服务提供的泛型可插入 SOAP 中介能够根据消息内容路由消息。 使用路由服务，您可以创建复杂的路由逻辑，以便实现服务聚合、服务版本管理、优先级路由和多播路由等方案。 路由服务还提供了错误处理功能，使您可以设置备份终结点的列表。如果将消息发送到主目标终结点时失败，则会发送到这些备份终结点。  
@@ -15,13 +15,13 @@ ms.locfileid: "67425369"
  本主题面向不熟悉路由服务的人员，其中涵盖了路由服务的基本配置和承载等内容。  
   
 ## <a name="configuration"></a>配置  
- 路由服务作为公开一个或多个服务终结点的 WCF 服务实现，这些服务终结点接收来自客户端应用程序的消息，并将消息路由到一个或多个目标终结点。 该服务提供应用于服务公开的服务终结点的 <xref:System.ServiceModel.Routing.RoutingBehavior>。 此行为用于配置服务运行方式的各个方面。 为了方便配置使用配置文件时，参数上指定**RoutingBehavior**。 在基于代码的情况下，这些参数将指定作为的一部分<xref:System.ServiceModel.Routing.RoutingConfiguration>对象，然后传递给**RoutingBehavior**。  
+ 路由服务作为公开一个或多个服务终结点的 WCF 服务实现，这些服务终结点接收来自客户端应用程序的消息，并将消息路由到一个或多个目标终结点。 该服务提供应用于服务公开的服务终结点的 <xref:System.ServiceModel.Routing.RoutingBehavior>。 此行为用于配置服务运行方式的各个方面。 为了便于在使用配置文件时进行配置, 请在**RoutingBehavior**上指定参数。 在基于代码的方案中, 这些参数将被指定为<xref:System.ServiceModel.Routing.RoutingConfiguration>对象的一部分, 然后可以将该对象传递给**RoutingBehavior**。  
   
- 在启动时，该行为向客户端终结点添加 <xref:System.ServiceModel.Routing.SoapProcessingBehavior>，用于对消息执行 SOAP 处理。 这样，路由服务将消息传输到需要不同的终结点**MessageVersion**比已接收消息的终结点。 **RoutingBehavior**还会注册一个服务扩展， <xref:System.ServiceModel.Routing.RoutingExtension>，其中修改路由服务配置在运行时提供的可访问性点。  
+ 在启动时，该行为向客户端终结点添加 <xref:System.ServiceModel.Routing.SoapProcessingBehavior>，用于对消息执行 SOAP 处理。 这允许路由服务将消息传输到需要的**MessageVersion**不同于接收消息的终结点的终结点。 **RoutingBehavior**还会注册一个服务扩展, <xref:System.ServiceModel.Routing.RoutingExtension>后者提供了一个可访问点, 用于在运行时修改路由服务配置。  
   
- **RoutingConfiguration**类提供了一致的手段来配置和更新路由服务的配置。  它包含充当路由服务的设置，并用于配置的参数**RoutingBehavior**服务启动时，或传递给**RoutingExtension**来修改路由在运行时配置。  
+ **RoutingConfiguration**类提供了一种一致的方式来配置和更新路由服务的配置。  它包含一些参数, 这些参数用作路由服务的设置, 并用于在服务启动时配置**RoutingBehavior** , 或将其传递给**RoutingExtension**以在运行时修改路由配置。  
   
- 通过将多个 <xref:System.ServiceModel.Dispatcher.MessageFilter> 对象全部组合到筛选器表（<xref:System.ServiceModel.Dispatcher.MessageFilterTable%601> 对象）中，可以定义用于对消息执行基于内容的路由的路由逻辑。 针对包含在筛选器表中，并为每个消息筛选器评估传入消息**MessageFilter**匹配这些消息转发到目标终结点。 通过使用指定应该用于路由消息的筛选器表**RoutingBehavior**配置中或通过代码使用**RoutingConfiguration**对象。  
+ 通过将多个 <xref:System.ServiceModel.Dispatcher.MessageFilter> 对象全部组合到筛选器表（<xref:System.ServiceModel.Dispatcher.MessageFilterTable%601> 对象）中，可以定义用于对消息执行基于内容的路由的路由逻辑。 将针对筛选器表中包含的消息筛选器以及与消息匹配的每个**MessageFilter**来计算传入消息, 并将其转发到目标终结点。 用于路由消息的筛选器表是通过在配置中使用**RoutingBehavior**或使用**RoutingConfiguration**对象通过代码指定的。  
   
 ### <a name="defining-endpoints"></a>定义终结点  
  在开始配置时，您似乎应先定义将要使用的路由逻辑，但是，首要步骤实际应是：确定消息将路由至的目标终结点的形状。 路由服务采用协定来定义用于收发消息的通道的形状，因此，输入通道的形状必须与输出通道的形状相匹配。  例如，如果要路由至的目标终结点采用请求-答复通道形状，您必须在入站终结点上使用兼容协定，例如，<xref:System.ServiceModel.Routing.IRequestReplyRouter>。  
@@ -31,9 +31,9 @@ ms.locfileid: "67425369"
 > [!NOTE]
 > 当使用指定了多种通信模式（例如，单向和双向混合运行模式）的协定时，一种解决方法是在路由服务中使用双工协定，例如，<xref:System.ServiceModel.Routing.IDuplexSessionRouter>。 这意味着绑定必须支持双工通信，而这并非在所有情况下都能够实现。 在不可能实现双工通信的情况下，可能需要在多个终结点中考虑通信方式，或者修改应用程序。  
   
- 有关路由协定的详细信息，请参阅[路由协定](routing-contracts.md)。  
+ 有关路由约定的详细信息, 请参阅[路由约定](routing-contracts.md)。  
   
- 定义服务终结点后，可以使用**RoutingBehavior**关联特定**RoutingConfiguration**与终结点。 通过使用配置文件配置路由服务时**RoutingBehavior**用于指定包含用于处理此终结点上收到的消息的路由逻辑的筛选器表。 如果要以编程方式配置路由服务可以通过使用指定的筛选器表**RoutingConfiguration**。  
+ 定义服务终结点后, 可以使用**RoutingBehavior**将特定**RoutingConfiguration**与终结点相关联。 使用配置文件配置路由服务时, 将使用**RoutingBehavior**来指定筛选器表, 该表包含用于处理此终结点上接收的消息的路由逻辑。 如果以编程方式配置路由服务, 则可以使用**RoutingConfiguration**指定筛选器表。  
   
  下面的示例定义路由服务按编程方式或通过使用配置文件来使用的服务和客户端终结点。  
   
@@ -98,18 +98,18 @@ serviceHost.Description.Behaviors.Add(
      new RoutingBehavior(rc));  
 ```  
   
- 此示例将配置路由服务公开单一终结点地址为`http://localhost:8000/routingservice/router`，用于接收要路由的消息。 由于消息路由到请求-答复终结点，因此该服务终结点使用 <xref:System.ServiceModel.Routing.IRequestReplyRouter> 协定。 此配置还定义的单个客户端终结点`http://localhost:8000/servicemodelsample/service`消息路由到。 名为"routingTable1"筛选器表 （未显示） 包含用于路由消息的路由逻辑，并通过使用是与服务终结点相关联**RoutingBehavior** （适用于配置文件） 或**RoutingConfiguration** （适用于编程配置）。  
+ 此示例将路由服务配置为公开单个终结点`http://localhost:8000/routingservice/router`, 该地址用于接收要路由的消息。 由于消息路由到请求-答复终结点，因此该服务终结点使用 <xref:System.ServiceModel.Routing.IRequestReplyRouter> 协定。 此配置还定义将消息路由到的`http://localhost:8000/servicemodelsample/service`单个客户端终结点。 名为 "routingTable1" 的筛选器表 (未显示) 包含用于路由消息的路由逻辑, 并通过使用**RoutingBehavior** (适用于配置文件) 或**RoutingConfiguration** (适用于编程配置)。  
   
 ### <a name="routing-logic"></a>路由逻辑  
  若要定义用于路由消息的路由逻辑，必须确定传入消息包含的哪些数据可以采用唯一方式执行操作。 例如，如果要路由到的所有目标终结点共享相同的 SOAP 操作，则消息中包含的 Action 的值无法很好地指示应将消息路由到的特定终结点。 如果必须以唯一方式将消息路由至某一特定终结点，您应当根据唯一标识消息将路由至的目标终结点的数据进行筛选。  
   
- 路由服务提供了若干**MessageFilter**检查该消息，如地址、 操作、 终结点名称或甚至 XPath 查询中的特定值的实现。 如果没有这些实现符合你的需求可以创建自定义**MessageFilter**实现。 有关消息筛选器和比较路由服务使用的实现详细信息，请参阅[消息筛选器](message-filters.md)并[选择筛选器](choosing-a-filter.md)。  
+ 路由服务提供多个**MessageFilter**实现, 这些实现检查消息中的特定值, 如地址、操作、终结点名称甚至是 XPath 查询。 如果这些实现都不能满足你的需求, 则可以创建自定义**MessageFilter**实现。 有关消息筛选器和路由服务使用的实现比较的详细信息, 请参阅[消息筛选](message-filters.md)器和[选择筛选器](choosing-a-filter.md)。  
   
- 多个消息筛选器一起组织到筛选器表，将每个相关联**MessageFilter**与目标终结点。 或者，也可以使用筛选器表指定一个备份终结点列表，当传输失败时，路由服务将尝试向这些终结点发送消息。  
+ 多个消息筛选器组合到不同的筛选器表中, 后者将每个**MessageFilter**与目标终结点相关联。 或者，也可以使用筛选器表指定一个备份终结点列表，当传输失败时，路由服务将尝试向这些终结点发送消息。  
   
- 默认情况下，将同时计算筛选器表中的所有消息筛选器；但是，您可以指定 <xref:System.ServiceModel.Routing.Configuration.FilterTableEntryElement.Priority%2A>，以便按特定顺序计算消息筛选器。 将首先计算具有最高优先级的所有条目，如果在较高优先级级别中找到匹配项，则不会计算具有较低优先级的消息筛选器。 有关筛选器表的详细信息，请参阅[消息筛选器](message-filters.md)。  
+ 默认情况下，将同时计算筛选器表中的所有消息筛选器；但是，您可以指定 <xref:System.ServiceModel.Routing.Configuration.FilterTableEntryElement.Priority%2A>，以便按特定顺序计算消息筛选器。 将首先计算具有最高优先级的所有条目，如果在较高优先级级别中找到匹配项，则不会计算具有较低优先级的消息筛选器。 有关筛选器表的详细信息, 请参阅[消息筛选器](message-filters.md)。  
   
- 下面的示例使用 <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter>，它对所有消息的计算结果均为 `true`。 这**MessageFilter**添加到"routingTable1"筛选器表，该表将相关联**MessageFilter**与名为"CalculatorService"的客户端终结点。 **RoutingBehavior**然后指定应由服务终结点处理的消息路由到使用此表。  
+ 下面的示例使用 <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter>，它对所有消息的计算结果均为 `true`。 此**MessageFilter**将添加到 "routingTable1" 筛选器表, 该表将**MessageFilter**与名为 "CalculatorService" 的客户端终结点相关联。 然后, **RoutingBehavior**指定应使用该表来路由由服务终结点处理的消息。  
   
 ```xml  
 <behaviors>  
@@ -150,9 +150,9 @@ rc.FilterTable.Add(new MatchAllMessageFilter(), endpointList);
 ```  
   
 > [!NOTE]
->  默认情况下，路由服务仅计算消息标头。 若要使筛选器访问消息正文，必须将 <xref:System.ServiceModel.Routing.RoutingConfiguration.RouteOnHeadersOnly%2A> 设置为 `false`。  
+> 默认情况下，路由服务仅计算消息标头。 若要使筛选器访问消息正文，必须将 <xref:System.ServiceModel.Routing.RoutingConfiguration.RouteOnHeadersOnly%2A> 设置为 `false`。  
   
- **多播**  
+ **路**  
   
  许多路由服务配置都采用将消息仅路由至一个特定终结点的专有筛选器逻辑，但是，您可能需要将给定消息路由至多个目标终结点。 若要将消息多播到多个目标，必须满足以下条件：  
   
@@ -189,19 +189,19 @@ rc.FilterTable.Add(new EndpointAddressMessageFilter(new EndpointAddress(
 ```  
   
 ### <a name="soap-processing"></a>SOAP 处理  
- 若要支持不同协议之间的消息的路由**RoutingBehavior**默认情况下将添加<xref:System.ServiceModel.Routing.SoapProcessingBehavior>到消息路由到的所有客户端终结点。 此行为会自动创建一个新**MessageVersion**之前将消息路由到终结点，还会创建一个兼容**MessageVersion**的任何响应文档，再将其还原为请求的客户端应用程序。  
+ 为了支持在不同协议之间路由消息, 默认情况下, **RoutingBehavior**将添加<xref:System.ServiceModel.Routing.SoapProcessingBehavior>到消息路由到的所有客户端终结点。 此行为在将消息路由到终结点之前, 会自动创建新的**MessageVersion** , 并在将其返回给发出请求的客户端应用程序之前为任何响应文档创建兼容的**MessageVersion** 。  
   
- 创建一个新所需的步骤**MessageVersion**对于出站消息如下所示：  
+ 为出站消息创建新**MessageVersion**所采取的步骤如下所示:  
   
  **请求处理**  
   
-- 获取**MessageVersion**的出站绑定/通道。  
+- 获取出站绑定/通道的**MessageVersion** 。  
   
 - 获取原始消息的正文读取器。  
   
-- 创建新的消息使用相同的操作、 正文读取器和一个新**MessageVersion**。  
+- 使用相同操作、正文读取器和新的**MessageVersion**创建一条新消息。  
   
-- 如果<xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A>！ = **Addressing.None**，复制收件人、 From、 FaultTo 和 RelatesTo 标头到新消息。  
+- 如果<xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A> ! =**寻址**, 则将从、从、FaultTo 和 RelatesTo 标头复制到新消息。  
   
 - 将所有消息属性复制到新消息。  
   
@@ -211,24 +211,24 @@ rc.FilterTable.Add(new EndpointAddressMessageFilter(new EndpointAddress(
   
  **响应处理**  
   
-- 获取**MessageVersion**的原始请求消息。  
+- 获取原始请求消息的**MessageVersion** 。  
   
 - 获取接收的响应消息的正文读取器。  
   
-- 创建新的响应消息具有相同的操作、 正文读取器和**MessageVersion**的原始请求消息。  
+- 使用相同操作、正文读取器和原始请求消息的**MessageVersion**创建新的响应消息。  
   
-- 如果<xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A>！ = **Addressing.None**，复制收件人、 From、 FaultTo 和 RelatesTo 标头到新消息。  
+- 如果<xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A> ! =**寻址**, 则将从、从、FaultTo 和 RelatesTo 标头复制到新消息。  
   
 - 将所有消息属性复制到新消息。  
   
 - 返回新的响应消息。  
   
- 默认情况下**SoapProcessingBehavior**自动添加到客户端终结点的<xref:System.ServiceModel.Routing.RoutingBehavior>服务启动时; 但是，您可以控制是否 SOAP 处理添加到所有客户端终结点使用<xref:System.ServiceModel.Routing.RoutingConfiguration.SoapProcessingEnabled%2A>属性。 此外，如果需要更为精细地控制 SOAP 处理，您还可以向特定终结点直接添加该行为，并在终结点级别上启用或禁用该行为。  
+ 默认情况下, <xref:System.ServiceModel.Routing.RoutingBehavior>当服务启动时, SoapProcessingBehavior 会自动添加到客户端终结点; 但是, 你可以通过使用<xref:System.ServiceModel.Routing.RoutingConfiguration.SoapProcessingEnabled%2A>属性来控制是否将 SOAP 处理添加到所有客户端终结点. 此外，如果需要更为精细地控制 SOAP 处理，您还可以向特定终结点直接添加该行为，并在终结点级别上启用或禁用该行为。  
   
 > [!NOTE]
->  对于所需的 MessageVersion 不同于原始请求消息的 MessageVersion 的终结点，如果要禁用 SOAP 处理，则必须提供自定义机制，以便在将消息发送到目标终结点之前执行所有必要的 SOAP 修改。  
+> 对于所需的 MessageVersion 不同于原始请求消息的 MessageVersion 的终结点，如果要禁用 SOAP 处理，则必须提供自定义机制，以便在将消息发送到目标终结点之前执行所有必要的 SOAP 修改。  
   
- 在以下示例中， **soapProcessingEnabled**属性用于防止**SoapProcessingBehavior**自动添加到所有客户端终结点。  
+ 在下面的示例中, **soapProcessingEnabled**属性用于阻止**SoapProcessingBehavior**自动添加到所有客户端终结点。  
   
 ```xml  
 <behaviors>  
@@ -250,7 +250,7 @@ rc.SoapProcessingEnabled = false;
 ### <a name="dynamic-configuration"></a>动态配置  
  当添加其他客户端终结点或需要修改用于路由消息的筛选器时，您必须采用某种方法在运行时动态更新配置，以免中断当前正在通过路由服务接收消息的终结点的服务。 修改配置文件或宿主应用程序的代码不一定能够始终满足需求，这是因为两种方法都需要回收应用程序，这可能导致丢失当前正在传输的任何消息，并可能在等待服务重新启动时发生停机。  
   
- 您只能修改**RoutingConfiguration**以编程方式。 虽然最初可以使用配置文件配置服务，您只能修改在运行时配置通过构造一个新**RoutingConfiguration**并将其作为参数传递<xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A>方法公开的<xref:System.ServiceModel.Routing.RoutingExtension>服务扩展。 当前在传输过程中的任何消息将继续使用以前的配置，同时在调用后收到的消息路由**ApplyConfiguration**使用新配置。 下面的示例演示如何创建路由服务的实例并随后修改配置。  
+ 只能以编程方式修改**RoutingConfiguration** 。 虽然最初可以使用配置文件来配置服务, 但只能在运行时通过构造新的**RoutingConfiguration**并将其作为参数传递给公开<xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A> <xref:System.ServiceModel.Routing.RoutingExtension>的方法来修改配置。服务扩展。 当前正在传输的任何消息都将继续使用以前的配置进行路由, 而在对**ApplyConfiguration**的调用后收到的消息将使用新的配置。 下面的示例演示如何创建路由服务的实例并随后修改配置。  
   
 ```csharp  
 RoutingConfiguration routingConfig = new RoutingConfiguration();  
@@ -274,23 +274,23 @@ routerHost.routerHost.Extensions.Find<RoutingExtension>().ApplyConfiguration(rc2
 ```  
   
 > [!NOTE]
->  如果采用此种方式更新路由服务，则只能传递新配置。 无法仅修改当前配置的选定元素，也不能向现有配置追加新条目；必须创建并传递用于替换现有配置的新配置。  
+> 如果采用此种方式更新路由服务，则只能传递新配置。 无法仅修改当前配置的选定元素，也不能向现有配置追加新条目；必须创建并传递用于替换现有配置的新配置。  
   
 > [!NOTE]
->  使用以前的配置打开的所有会话都将继续使用以前的配置。 新配置仅用于新会话。  
+> 使用以前的配置打开的所有会话都将继续使用以前的配置。 新配置仅用于新会话。  
   
 ## <a name="error-handling"></a>错误处理  
- 如果在尝试发送消息时遇到任何 <xref:System.ServiceModel.CommunicationException>，将会进行错误处理。 这些异常通常指示在尝试与定义的客户端终结点进行通信时遇到了问题，例如 <xref:System.ServiceModel.EndpointNotFoundException>、<xref:System.ServiceModel.ServerTooBusyException> 或 <xref:System.ServiceModel.CommunicationObjectFaultedException>。 错误处理代码还将捕获并尝试重新发送何时<xref:System.TimeoutException>发生，这是另一个常见的异常不派生自**CommunicationException**。  
+ 如果在尝试发送消息时遇到任何 <xref:System.ServiceModel.CommunicationException>，将会进行错误处理。 这些异常通常指示在尝试与定义的客户端终结点进行通信时遇到了问题，例如 <xref:System.ServiceModel.EndpointNotFoundException>、<xref:System.ServiceModel.ServerTooBusyException> 或 <xref:System.ServiceModel.CommunicationObjectFaultedException>。 错误处理-代码还将捕获并尝试在<xref:System.TimeoutException>发生时重试发送, 这是不是派生自**CommunicationException**的另一个常见异常。  
   
  如果发生上述一种异常，路由服务会向备份终结点列表进行故障转移。 如果所有备份终结点均失败并出现通信故障，或者如果某个终结点返回指示目标服务内部故障的异常，路由服务则会向客户端应用程序返回错误。  
   
 > [!NOTE]
->  错误处理功能捕获并处理在尝试发送消息和尝试关闭通道时发生的异常。 错误处理代码不应以检测或句柄创建的; 与之通信的应用程序终结点的异常<xref:System.ServiceModel.FaultException>引发的一项服务显示在路由服务作为**FaultMessage**并将其流回到客户端。  
+> 错误处理功能捕获并处理在尝试发送消息和尝试关闭通道时发生的异常。 错误处理代码不用于检测或处理由其通信的应用程序终结点所创建的异常;服务<xref:System.ServiceModel.FaultException>引发的由**FaultMessage**在路由服务中显示, 并流向客户端。  
 >   
 >  如果在路由服务尝试中继消息时出现错误，则您可能会在客户端收到 <xref:System.ServiceModel.FaultException>，而不是在缺少路由服务时通常收到的 <xref:System.ServiceModel.EndpointNotFoundException>。 路由服务因而可能屏蔽异常，不会提供完全透明度，除非您检查嵌套异常。  
   
 ### <a name="tracing-exceptions"></a>跟踪异常  
- 路由服务将发送到列表中的终结点的消息失败时，跟踪生成的异常数据，并作为一个名为消息属性附加异常详细信息**异常**。 这可以保存异常数据，并允许用户通过消息检查器进行编程访问。  异常数据根据消息存储在字典中，该字段将终结点名称映射到在尝试向其发送消息时遇到的异常的详细信息。  
+ 当向列表中的终结点发送消息失败时, 路由服务将跟踪产生的异常数据, 并将异常详细信息作为名为 exception的消息属性附加。 这可以保存异常数据，并允许用户通过消息检查器进行编程访问。  异常数据根据消息存储在字典中，该字段将终结点名称映射到在尝试向其发送消息时遇到的异常的详细信息。  
   
 ### <a name="backup-endpoints"></a>备份终结点  
  筛选器表中的各个筛选器条目可以选择指定一个备份终结点列表，如果在向主终结点发送消息时出现传输故障，则会使用这些备份终结点。 如果出现此类故障，路由服务会尝试将消息传输到备份终结点列表中的第一个条目。 如果此发送尝试同样遇到传输故障，则会尝试备份列表中的下一个终结点。 路由服务将继续向列表中的每个终结点发送消息，直到成功接收此消息、所有终结点均返回传输故障或某个终结点返回非传输故障为止。  
@@ -357,18 +357,18 @@ rc.FilterTable.Add(new MatchAllMessageFilter(), backupList);
 |模式|会话|事务|接收上下文|是否支持备份列表|说明|  
 |-------------|-------------|-----------------|---------------------|---------------------------|-----------|  
 |单向||||是|尝试在备份终结点上重新发送消息。 如果正在多播此消息，则仅将故障通道上的消息移至其备份目标。|  
-|单向||✓||否|引发异常，并回滚事务。|  
+|单向||✓||No|引发异常，并回滚事务。|  
 |单向|||✓|是|尝试在备份终结点上重新发送消息。 成功接收消息后，完成所有接收上下文。 如果任何终结点未成功接收消息，则不会完成接收上下文。<br /><br /> 如果正在多播此消息，仅当至少有一个终结点（主终结点或备份终结点）已成功接收消息时，才会完成接收上下文。 如果所有多播路径中没有任何终结点成功接收消息，则不会完成接收上下文。|  
 |单向||✓|✓|是|中止先前事务，创建新事务，并重新发送所有消息。 遇到错误的消息将传输到备份目标。<br /><br /> 在创建已成功完成其中的所有传输的事务之后，完成接收上下文并提交该事务。|  
 |单向|✓|||是|尝试在备份终结点上重新发送消息。 在多播情况下，仅向备份目标重新发送已遇到错误或其会话关闭失败的消息。|  
-|单向|✓|✓||否|引发异常，并回滚事务。|  
+|单向|✓|✓||No|引发异常，并回滚事务。|  
 |单向|✓||✓|是|尝试在备份终结点上重新发送消息。 在完成所有消息发送操作且未发生错误之后，会话将指示没有任何其他消息，路由服务将成功关闭所有出站会话通道，将完成所有接收上下文，并关闭入站会话通道。|  
 |单向|✓|✓|✓|是|中止当前事务，并创建新事务。 重新发送会话中以前的所有消息。 在创建已成功发送其中的所有消息的事务，并且会话指示没有任何其他消息之后，将关闭所有出站会话通道，使用事务完成所有接收上下文，关闭入站会话通道，并提交该事务。<br /><br /> 如果会话是多播会话，无任何错误的消息将重新发送到与以前相同的目标，而遇到错误的消息将发送到备份目标。|  
 |双向||||是|发送到备份目标。  在通道返回响应消息之后，系统会将响应返回到原始客户端。|  
 |双向|✓|||是|将通道中的所有消息发送到备份目标。  在通道返回响应消息之后，系统会将响应返回到原始客户端。|  
-|双向||✓||否|引发异常，并回滚事务。|  
-|双向|✓|✓||否|引发异常，并回滚事务。|  
-|双工||||否|当前不支持非会话双工通信。|  
+|双向||✓||No|引发异常，并回滚事务。|  
+|双向|✓|✓||No|引发异常，并回滚事务。|  
+|双工||||No|当前不支持非会话双工通信。|  
 |双工|✓|||是|发送到备份目标。|  
   
 ## <a name="hosting"></a>宿主  
@@ -390,9 +390,9 @@ using (ServiceHost serviceHost =
 ```  
   
 ## <a name="routing-service-and-impersonation"></a>路由服务和模拟  
- WCF 路由服务可以与模拟结合使用来发送和接收消息。 模拟的所有常用 Windows 约束将适用。 如果您在编写自己的服务时需要设置服务或帐户权限才能使用模拟，则必须执行这些相同步骤，从而将模拟用于路由服务。 有关详细信息，请参阅[委托和模拟](delegation-and-impersonation-with-wcf.md)。  
+ WCF 路由服务可以与模拟结合使用来发送和接收消息。 模拟的所有常用 Windows 约束将适用。 如果您在编写自己的服务时需要设置服务或帐户权限才能使用模拟，则必须执行这些相同步骤，从而将模拟用于路由服务。 有关详细信息, 请参阅[委派和模拟](delegation-and-impersonation-with-wcf.md)。  
   
- 将模拟用于路由服务要求在 ASP.NET 兼容模式下使用 ASP.NET 模拟，或使用已配置为允许模拟的 Windows 凭据。 有关 ASP.NET 兼容模式的详细信息，请参阅[WCF 服务和 ASP.NET](wcf-services-and-aspnet.md)。  
+ 将模拟用于路由服务要求在 ASP.NET 兼容模式下使用 ASP.NET 模拟，或使用已配置为允许模拟的 Windows 凭据。 有关 ASP.NET 兼容模式的详细信息, 请参阅[WCF 服务和 ASP.NET](wcf-services-and-aspnet.md)。  
   
 > [!WARNING]
 >  WCF 路由服务不支持将模拟用于基本身份验证。  

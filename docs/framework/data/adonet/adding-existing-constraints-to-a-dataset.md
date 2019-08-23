@@ -5,24 +5,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 307d2809-208b-4cf8-b6a9-5d16f15fc16c
-ms.openlocfilehash: 18c391e97baa170b78dcfe0165fb38b6c6d739f4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 05f95a9c4f250100ca97e3ab52e4073d027df1b8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607279"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69932195"
 ---
 # <a name="adding-existing-constraints-to-a-dataset"></a>将现有约束添加到数据集
-**填充**方法**DataAdapter**填充<xref:System.Data.DataSet>只使用表中的列和行从数据源; 但是约束通常设置数据源，**填充**方法不会添加到此架构信息**数据集**默认情况下。 若要填充**数据集**与现有主键约束信息从数据源，可以通过调用**FillSchema**方法**DataAdapter**，或设置**MissingSchemaAction**的属性**DataAdapter**到**AddWithKey**之前调用**填充**。 这将确保该主键中的约束**数据集**反映数据源。 外键约束信息不包含在内，必须显式创建，如中所示[数据表约束](../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md)。  
+**DataAdapter**的<xref:System.Data.DataSet> **Fill**方法只使用表中的列和数据源中的行填充; 虽然约束通常由数据源设置, 但**Fill**方法不会将此架构信息添加到**数据集**。 若要使用数据源中的现有主键约束信息来填充数据**集**, 可以调用**dataadapter**的**FillSchema**方法, 或设置**dataadapter**的**MissingSchemaAction**属性。为, 则在调用**Fill**之前**AddWithKey** 。 这将确保数据**集中**的主键约束反映数据源中的主键约束。 外键约束信息不包括在内, 并且必须显式创建, 如[DataTable 约束](../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md)中所示。  
   
- 添加到架构信息**数据集**用数据填充可确保主键约束所含之前<xref:System.Data.DataTable>中的对象**数据集**。 因此，当再次调用来填充**数据集**设为主要键列的信息用于匹配与当前行中每个数据源的新行**DataTable**，以及在当前数据使用数据源的数据覆盖表。 如果没有架构信息中，从数据源的新行追加到**数据集**，从而导致重复的行。  
+ 在使用数据填充数据**集**之前将架构信息添加到数据集可确保在**数据集中**的<xref:System.Data.DataTable>对象中包含 primary key 约束。 因此, 在进行其他调用以填充**数据集**时, 将使用主键列信息将数据源中的新行与每个**DataTable**中的当前行相匹配, 而表中的当前数据会被数据源。 如果没有架构信息, 数据源中的新行将追加到数据**集**, 从而导致重复的行。  
   
 > [!NOTE]
->  如果数据源中的列被标识为自动递增**FillSchema**方法，或**填充**方法替换**MissingSchemaAction**的**AddWithKey**，创建**DataColumn**与**AutoIncrement**属性设置为`true`。 但是，你将需要设置**AutoIncrementStep**并**AutoIncrementSeed**自己的值。 有关自动递增列的详细信息，请参阅[创建 AutoIncrement 列](../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-autoincrement-columns.md)。  
+> 如果数据源中的列被标识为自动递增、 **FillSchema**方法或**MissingSchemaAction**为**AddWithKey**的**Fill**方法, 则将使用**自动增量**属性创建**DataColumn**设置为`true`。 但是, 您将需要自己设置**AutoIncrementStep**和**AutoIncrementSeed**值。 有关自动递增列的详细信息, 请参阅[创建自动增量列](../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-autoincrement-columns.md)。  
   
- 使用**FillSchema**或设置**MissingSchemaAction**到**AddWithKey**需要额外的处理，在数据源来确定主键列信息。 这一额外的处理可能会降低性能。 如果主键信息在设计时已知，为了实现最佳性能，建议显式指定一个或多个主键列。 有关显式设置表的主键信息的信息，请参阅[定义主键](../../../../docs/framework/data/adonet/dataset-datatable-dataview/defining-primary-keys.md)。  
+ 使用**FillSchema**或将**MissingSchemaAction**设置为**AddWithKey**时, 需要在数据源上进行额外的处理, 以确定主键列信息。 这一额外的处理可能会降低性能。 如果主键信息在设计时已知，为了实现最佳性能，建议显式指定一个或多个主键列。 有关显式设置表的主键信息的信息, 请参阅[定义主键](../../../../docs/framework/data/adonet/dataset-datatable-dataview/defining-primary-keys.md)。  
   
- 下面的代码示例演示如何将架构信息添加**数据集**使用**FillSchema**。  
+ 下面的代码示例演示如何使用**FillSchema**将架构信息添加到**数据集**。  
   
 ```vb  
 Dim custDataSet As DataSet = New DataSet()  
@@ -38,7 +38,7 @@ custAdapter.FillSchema(custDataSet, SchemaType.Source, "Customers");
 custAdapter.Fill(custDataSet, "Customers");  
 ```  
   
- 下面的代码示例演示如何将架构信息添加**数据集**使用**MissingSchemaAction.AddWithKey**属性**填充**方法。  
+ 下面的代码示例演示如何使用**Fill**方法的**MissingSchemaAction. AddWithKey**属性向**数据集**添加架构信息。  
   
 ```vb  
 Dim custDataSet As DataSet = New DataSet()  
@@ -55,10 +55,10 @@ custAdapter.Fill(custDataSet, "Customers");
 ```  
   
 ## <a name="handling-multiple-result-sets"></a>处理多个结果集  
- 如果**DataAdapter**遇到多个结果集返回从**SelectCommand**，它将创建多个表中的**数据集**。 这些表提供的从零开始递增的默认名称**表** *N*，从开始**表**而不是"Table0"。 如果作为参数传递表名**FillSchema**方法，这些表将会提供的从零开始增量名称**TableName** *N*，从开始**TableName**而不是"TableName0"。  
+ 如果**DataAdapter**遇到**SelectCommand**返回的多个结果集, 它将在**数据集中**创建多个表。 表中会提供**表** *N*的从零开始的增量默认名称, 以**表**而不是 "Table0" 开头。 如果表名作为参数传递给**FillSchema**方法, 则会为这些表指定从零开始的名称 (从**tablename**开始,而不是 "TableName0")。  
   
 > [!NOTE]
->  如果**FillSchema**方法**OleDbDataAdapter**返回多个结果集的命令调用对象时，所返回的架构信息将从第一个结果集。 当返回架构信息的多个结果集使用**OleDbDataAdapter**，，则建议您指定**MissingSchemaAction**的**AddWithKey**并获取架构信息时调用**填充**方法。  
+> 如果对返回多个结果集的命令调用**OleDbDataAdapter**对象的**FillSchema**方法, 则仅返回第一个结果集的架构信息。 当使用**OleDbDataAdapter**返回多个结果集的架构信息时, 建议指定**AddWithKey**的**MissingSchemaAction** , 并在调用**Fill**时获取架构信息付款方式.  
   
 ## <a name="see-also"></a>请参阅
 

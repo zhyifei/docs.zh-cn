@@ -12,12 +12,12 @@ helpviewer_keywords:
 - child controls [Windows Forms], anchoring and docking
 - TableLayoutPanel control [Windows Forms], child controls
 ms.assetid: 0d267c35-25f1-49b8-8976-c64e8f0ddc0b
-ms.openlocfilehash: 7adbf9a98b25b237ee49d2689154e903d8fc0b5a
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 0e565b56c31d0776f6e89bbbe0b0681ae184758e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586172"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922822"
 ---
 # <a name="how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control"></a>如何：在 TableLayoutPanel 控件中锚定和停靠子控件
 <xref:System.Windows.Forms.TableLayoutPanel> 控件支持其子控件中的 <xref:System.Windows.Forms.Control.Anchor%2A> 和 <xref:System.Windows.Forms.Control.Dock%2A> 属性。  
@@ -26,25 +26,25 @@ ms.locfileid: "65586172"
   
 1. 在窗体上创建一个 <xref:System.Windows.Forms.TableLayoutPanel> 控件。  
   
-2. 设置的值<xref:System.Windows.Forms.TableLayoutPanel>控件的<xref:System.Windows.Forms.TableLayoutPanel.ColumnCount%2A>并<xref:System.Windows.Forms.TableLayoutPanel.RowCount%2A>属性设置为**1**。  
+2. 将<xref:System.Windows.Forms.TableLayoutPanel>控件的<xref:System.Windows.Forms.TableLayoutPanel.ColumnCount%2A>和<xref:System.Windows.Forms.TableLayoutPanel.RowCount%2A>属性的值设置为**1**。  
   
 3. 在 <xref:System.Windows.Forms.TableLayoutPanel> 控件中创建一个 <xref:System.Windows.Forms.Button> 控件。 <xref:System.Windows.Forms.Button> 占据单元格的左上角。  
   
 4. 将 <xref:System.Windows.Forms.Button> 控件的 <xref:System.Windows.Forms.Control.Anchor%2A> 属性值更改为 `Left`。 <xref:System.Windows.Forms.Button> 控件移动，以便与单元格的左边框对齐。  
   
     > [!NOTE]
-    >  此行为与其他容器控件的行为不同。 在其他容器控件中，设置 <xref:System.Windows.Forms.Control.Anchor%2A> 属性后子控件并不移动，而且锚定控件与父容器边界之间的距离在设置 <xref:System.Windows.Forms.Control.Anchor%2A> 属性后是固定的。  
+    > 此行为与其他容器控件的行为不同。 在其他容器控件中，设置 <xref:System.Windows.Forms.Control.Anchor%2A> 属性后子控件并不移动，而且锚定控件与父容器边界之间的距离在设置 <xref:System.Windows.Forms.Control.Anchor%2A> 属性后是固定的。  
   
 5. 将 <xref:System.Windows.Forms.Button> 控件的 <xref:System.Windows.Forms.Control.Anchor%2A> 属性值更改为 `Top, Left`。 <xref:System.Windows.Forms.Button> 控件移动，以占据单元格的左上角。  
   
-6. 值的有重复步骤 5`Top, Right`移动<xref:System.Windows.Forms.Button>到单元格的右上角的控件。 使用 `Bottom, Left` 和 `Bottom, Right` 值重复步骤。  
+6. 重复步骤 5, `Top, Right`将<xref:System.Windows.Forms.Button>控件移动到单元格的右上角。 使用 `Bottom, Left` 和 `Bottom, Right` 值重复步骤。  
   
 ### <a name="to-stretch-a-child-control-in-a-tablelayoutpanel-cell"></a>若要对齐 TableLayoutPanel 单元格中的某个子控件  
   
 1. 将 <xref:System.Windows.Forms.Button> 控件的 <xref:System.Windows.Forms.Control.Anchor%2A> 属性值更改为 `Left, Right`。 调整 <xref:System.Windows.Forms.Button> 控件的大小，以便在单元格中拉伸。  
   
     > [!NOTE]
-    >  此行为与其他容器控件的行为不同。 在其他容器控件中，子控件不是调整<xref:System.Windows.Forms.Control.Anchor%2A>属性设置为`Left, Right`或`Top, Bottom`。  
+    > 此行为与其他容器控件的行为不同。 在其他容器控件中, 当<xref:System.Windows.Forms.Control.Anchor%2A>属性设置为`Left, Right`或`Top, Bottom`时, 不调整子控件的大小。  
   
 2. 将 <xref:System.Windows.Forms.Button> 控件的 <xref:System.Windows.Forms.Control.Anchor%2A> 属性值更改为 `Top, Bottom`。 调整 <xref:System.Windows.Forms.Button> 控件的大小，以便在单元格中自上而下进行拉伸。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "65586172"
 5. 将 <xref:System.Windows.Forms.Button> 控件的 <xref:System.Windows.Forms.Control.Dock%2A> 属性值更改为 <xref:System.Windows.Forms.DockStyle.Left>。 <xref:System.Windows.Forms.Button> 控件移动，以便与单元格的左边框对齐。 <xref:System.Windows.Forms.Button> 控件的宽度不变，但调整其高度以垂直填充单元格。  
   
     > [!NOTE]
-    >  这与其他容器控件中发生的行为相同。  
+    > 这与其他容器控件中发生的行为相同。  
   
 6. 将 <xref:System.Windows.Forms.Button> 控件的 <xref:System.Windows.Forms.Control.Dock%2A> 属性值更改为 <xref:System.Windows.Forms.DockStyle.Fill>。 调整 <xref:System.Windows.Forms.Button> 控件的大小以填充单元格。  
   

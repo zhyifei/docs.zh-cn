@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 0ffbde0d-701d-45a3-a6fa-dd71f4d9772e
-ms.openlocfilehash: 47f27b71b282fad9d285143bf8306d7bdbb60da2
-ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
+ms.openlocfilehash: d13f4ce37dba45dc99f0481043d80640e73d833d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68671929"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917477"
 ---
 # <a name="wpf-and-win32-interoperation"></a>WPF 和 Win32 互操作
 本主题概述如何互操作 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 和 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 代码。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供了用于创建应用程序的丰富环境。 但是，如果对 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 代码投入很大，重复使用部分此代码可能更有效。  
@@ -44,7 +44,7 @@ ms.locfileid: "68671929"
  请使用最适合你的方法。  
   
 > [!NOTE]
->  如果你之前未使用C++/cli, 你可能会注意到一些 "新建" 关键字 ( `gcnew`例如`nullptr`和) 在互操作代码示例中。 这些关键字将取代旧的双下划线语法 (`__gc`), 并为中C++的托管代码提供更自然的语法。  若要了解有关/Cli C++托管功能的详细信息, 请参阅[运行时平台的组件扩展](/cpp/windows/component-extensions-for-runtime-platforms)和[Hello, C++/cli](https://go.microsoft.com/fwlink/?LinkId=98739)。  
+> 如果你之前未使用C++/cli, 你可能会注意到一些 "新建" 关键字 ( `gcnew`例如`nullptr`和) 在互操作代码示例中。 这些关键字将取代旧的双下划线语法 (`__gc`), 并为中C++的托管代码提供更自然的语法。  若要了解有关/Cli C++托管功能的详细信息, 请参阅[运行时平台的组件扩展](/cpp/windows/component-extensions-for-runtime-platforms)和[Hello, C++/cli](https://go.microsoft.com/fwlink/?LinkId=98739)。  
   
 <a name="hwnds"></a>   
 ## <a name="how-wpf-uses-hwnds"></a>WPF 如何使用 Hwnd  
@@ -83,7 +83,7 @@ ms.locfileid: "68671929"
 8. 通过使用存储在静态字段中的引用设置属性、调用方法等，与 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容对象进行通信。  
   
 > [!NOTE]
->  如果生成一个单独的程序集然后对其进行引用，对于步骤 1，可使用内容类的默认分部类在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中完成部分或全部 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容类定义。 尽管通常在<xref:System.Windows.Application>将对象[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]编译为程序集的过程中包含对象, 但最终<xref:System.Windows.Application>不会将其作为互操作的一部分使用, 只需将[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]一个或多个根类用于所引用的文件应用程序并引用其分部类。 该过程的其余部分基本与上述相似。  
+> 如果生成一个单独的程序集然后对其进行引用，对于步骤 1，可使用内容类的默认分部类在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中完成部分或全部 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容类定义。 尽管通常在<xref:System.Windows.Application>将对象[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]编译为程序集的过程中包含对象, 但最终<xref:System.Windows.Application>不会将其作为互操作的一部分使用, 只需将[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]一个或多个根类用于所引用的文件应用程序并引用其分部类。 该过程的其余部分基本与上述相似。  
 >   
 >  本主题[演练中的代码演示了其中的每个步骤:在 Win32](walkthrough-hosting-wpf-content-in-win32.md)中承载 WPF 内容。  
   

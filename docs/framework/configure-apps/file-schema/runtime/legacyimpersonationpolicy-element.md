@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 6e00af10-42f3-4235-8415-1bb2db78394e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4cf997c8ff13e0a6a4664ea3b538ac0def1baacf
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: da01d0dac2e67d6c0131a2b5965472bbd19213fe
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663629"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927317"
 ---
 # <a name="legacyimpersonationpolicy-element"></a>\<legacyImpersonationPolicy > 元素
 指定 Windows 标识不流经异步点，而不考虑当前线程上执行上下文的流设置。  
@@ -63,7 +63,7 @@ ms.locfileid: "69663629"
  从 .NET Framework 2.0 开始, 可以使用`<legacyImpersonationPolicy>`元素<xref:System.Security.Principal.WindowsIdentity>指定不流经异步点。  
   
 > [!NOTE]
->  公共语言运行时 (CLR) 知道仅使用托管代码执行的模拟操作, 而不是在托管代码之外执行的模拟, 例如通过平台调用到非托管代码或通过直接调用 Win32 函数。 只有托管<xref:System.Security.Principal.WindowsIdentity>对象才能流经异步点, 除非该`alwaysFlowImpersonationPolicy`元素已设置为 true (`<alwaysFlowImpersonationPolicy enabled="true"/>`)。 `alwaysFlowImpersonationPolicy`将元素设置为 true 可指定无论模拟的执行方式如何, Windows 标识总是流经异步点。 有关跨异步点流动非托管模拟的详细信息, 请参阅[ \<alwaysFlowImpersonationPolicy > 元素](alwaysflowimpersonationpolicy-element.md)。  
+> 公共语言运行时 (CLR) 知道仅使用托管代码执行的模拟操作, 而不是在托管代码之外执行的模拟, 例如通过平台调用到非托管代码或通过直接调用 Win32 函数。 只有托管<xref:System.Security.Principal.WindowsIdentity>对象才能流经异步点, 除非该`alwaysFlowImpersonationPolicy`元素已设置为 true (`<alwaysFlowImpersonationPolicy enabled="true"/>`)。 `alwaysFlowImpersonationPolicy`将元素设置为 true 可指定无论模拟的执行方式如何, Windows 标识总是流经异步点。 有关跨异步点流动非托管模拟的详细信息, 请参阅[ \<alwaysFlowImpersonationPolicy > 元素](alwaysflowimpersonationpolicy-element.md)。  
   
  可以通过两种其他方式更改此默认行为:  
   

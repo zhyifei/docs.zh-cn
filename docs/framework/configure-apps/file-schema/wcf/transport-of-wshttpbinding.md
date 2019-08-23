@@ -2,21 +2,21 @@
 title: <transport> 的 <wsHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 21e38acf-450a-4bda-82b6-de305e1f7cd8
-ms.openlocfilehash: ea025751020d6d98292f6bc3ecfe9421af0cb793
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 384267e3d018d714f95356461eb303bc9ec0cb3e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788214"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69934642"
 ---
-# <a name="transport-of-wshttpbinding"></a>\<transport> of \<wsHttpBinding>
+# <a name="transport-of-wshttpbinding"></a>\<wsHttpBinding > 的\<传输 >
 
 定义 HTTP 传输的身份验证设置。
 
 \<system.serviceModel>\
-\<bindings>\
+\<绑定 > \
 \<wsHttpBinding>\
-\<binding>\
+\<绑定 > \
 \<安全 > \
 \<transport>
 
@@ -59,7 +59,7 @@ ms.locfileid: "61788214"
 
 ## <a name="clientcredentialtype-attribute"></a>clientCredentialType 属性
 
-|“值”|描述|
+|值|描述|
 |-----------|-----------------|
 |`None`|禁用安全性。|
 |`Basic`|使用基本身份验证。|
@@ -70,7 +70,7 @@ ms.locfileid: "61788214"
 
 ## <a name="proxycredentialtype-attribute"></a>proxyCredentialType 属性
 
-|“值”|描述|
+|值|描述|
 |-----------|-----------------|
 |`None`|禁用安全性。|
 |`Basic`|使用基本身份验证。|
@@ -87,7 +87,7 @@ ms.locfileid: "61788214"
 
 |元素|描述|
 |-------------|-----------------|
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md)|表示的安全功能[ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)。|
+|[\<security>](security-of-wshttpbinding.md)|表示[ \<wsHttpBinding >](wshttpbinding.md)的安全功能。|
 
 ## <a name="see-also"></a>请参阅
 
@@ -95,8 +95,8 @@ ms.locfileid: "61788214"
 - <xref:System.ServiceModel.WSHttpSecurity.Transport%2A>
 - <xref:System.ServiceModel.Configuration.WSHttpSecurityElement.Transport%2A>
 - <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement>
-- [保护服务和客户端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [绑定](../../../../../docs/framework/wcf/bindings.md)
-- [配置系统提供的绑定](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [使用绑定配置服务和客户端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../../../docs/framework/misc/binding.md)
+- [保护服务和客户端的安全](../../../wcf/feature-details/securing-services-and-clients.md)
+- [绑定](../../../wcf/bindings.md)
+- [配置系统提供的绑定](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [使用绑定配置服务和客户端](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../misc/binding.md)

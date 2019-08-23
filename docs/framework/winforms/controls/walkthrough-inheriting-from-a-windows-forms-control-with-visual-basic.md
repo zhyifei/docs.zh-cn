@@ -10,12 +10,12 @@ helpviewer_keywords:
 - inheritance [Windows Forms], walkthroughs
 - custom controls [Windows Forms], inheritance
 ms.assetid: fb58d7c8-b702-4478-ad31-b00cae118882
-ms.openlocfilehash: 0891b64fdb26953ab90f3da931f04513ac9e8bcf
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 378d7b0c67791e6c48e9859e0546594df3ccc85e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040216"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69931003"
 ---
 # <a name="walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic"></a>演练：使用 Visual Basic 从 Windows 窗体控件继承
 使用 Visual Basic, 可以通过*继承*来创建功能强大的自定义控件。 通过继承，可以创建不仅保留了标准 Windows 窗体控件的所有固有功能，而且还包含自定义功能的控件。 在本演练中，将创建一个名为 `ValueButton` 的简单继承控件。 此按钮将从标准 Windows 窗体<xref:System.Windows.Forms.Button>控件继承功能, 并将公开一个名`ButtonValue`为的自定义属性。
@@ -29,7 +29,7 @@ ms.locfileid: "69040216"
 
 2. 从 Visual Basic 项目的列表中选择 " **Windows 窗体控件库**项目模板", 然后`ValueButtonLib`在 "**名称**" 框中键入。
 
-     默认情况下，项目名称 `ValueButtonLib` 也会分配到根命名空间中。 根命名空间用于限定程序集中的组件名。 例如，如果两个程序集都提供名为 `ValueButton` 的组件，则可以使用 `ValueButtonLib.ValueButton` 指定 `ValueButton` 组件。 有关详细信息，请参阅 [Visual Basic 中的命名空间](~/docs/visual-basic/programming-guide/program-structure/namespaces.md)。
+     默认情况下，项目名称 `ValueButtonLib` 也会分配到根命名空间中。 根命名空间用于限定程序集中的组件名。 例如，如果两个程序集都提供名为 `ValueButton` 的组件，则可以使用 `ValueButtonLib.ValueButton` 指定 `ValueButton` 组件。 有关详细信息，请参阅 [Visual Basic 中的命名空间](../../../visual-basic/programming-guide/program-structure/namespaces.md)。
 
 3. 在“解决方案资源管理器”中，右键单击“UserControl1.vb”，然后从快捷菜单中选择“重命名”。 将文件名更改为 `ValueButton.vb`。 当系统询问是否重命名对代码元素“UserControl1”的所有引用时，单击“是”按钮。
 
@@ -46,7 +46,7 @@ ms.locfileid: "69040216"
      请注意，可视化设计器不再可用。 <xref:System.Windows.Forms.Button>由于控件执行其自己的绘制, 因此无法在设计器中修改其外观。 它的可视化表示形式将与它继承自的类 (即<xref:System.Windows.Forms.Button>) 的可视化表示形式完全相同, 除非在代码中进行了修改。
 
 > [!NOTE]
->  但仍然可以向设计器图面添加不含 UI 元素的组件。
+> 但仍然可以向设计器图面添加不含 UI 元素的组件。
 
 ## <a name="adding-a-property-to-your-inherited-control"></a>将属性添加到继承控件
  继承的 Windows 窗体控件的可能用途之一是创建与标准 Windows 窗体控件的外观和行为相同、但公开自定义属性的控件。 在本节中，将向控件中添加名为 `ButtonValue` 的属性。
@@ -74,7 +74,7 @@ ms.locfileid: "69040216"
     End Property
     ```
 
-     此代码设置存储和检索 `ButtonValue` 属性的方法。           `Get` 语句将返回的值设置为存储在私有变量 `varValue` 中的值，而 `Set` 语句通过使用 `Value` 关键字设置该私有变量的值。
+     此代码设置存储和检索 `ButtonValue` 属性的方法。 `Get` 语句将返回的值设置为存储在私有变量 `varValue` 中的值，而 `Set` 语句通过使用 `Value` 关键字设置该私有变量的值。
 
 3. 在“文件”菜单中，选择“全部保存”以保存项目。
 
@@ -141,11 +141,11 @@ ms.locfileid: "69040216"
 
 12. 单击 `Valuebutton1`。
 
-               `Label1` 中显示数字“5”，表明继承的控件的 `ButtonValue` 属性已通过 `ValueButton1_Click` 方法传递给 `Label1`。 这样，`ValueButton` 控件便继承了标准 Windows 窗体按钮的所有功能，但是公开了一个附加的自定义属性。
+     `Label1` 中显示数字“5”，表明继承的控件的 `ButtonValue` 属性已通过 `ValueButton1_Click` 方法传递给 `Label1`。 这样，`ValueButton` 控件便继承了标准 Windows 窗体按钮的所有功能，但是公开了一个附加的自定义属性。
 
 ## <a name="see-also"></a>请参阅
 
 - [演练：使用 Visual Basic 创作复合控件](walkthrough-authoring-a-composite-control-with-visual-basic.md)
 - [如何：在 "选择工具箱项" 对话框中显示控件](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
 - [使用 .NET Framework 开发自定义 Windows 窗体控件](developing-custom-windows-forms-controls.md)
-- [继承的基础知识 (Visual Basic)](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
+- [继承的基础知识 (Visual Basic)](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)

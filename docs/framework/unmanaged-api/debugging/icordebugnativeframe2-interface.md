@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cc664d308d4db3e97597d785eda159e32255fa54
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 638ce7933ededf2ff7b03b1c5aed7f6bdbfebc6c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61987839"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912790"
 ---
 # <a name="icordebugnativeframe2-interface"></a>ICorDebugNativeFrame2 接口
 提供用于测试子帧与父帧关系的方法。  
@@ -31,23 +31,23 @@ ms.locfileid: "61987839"
 |方法|描述|  
 |------------|-----------------|  
 |[IsChild 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-ischild-method.md)|确定当前帧是否为子框架。|  
-|[IsMatchingParentFrame 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-ismatchingparentframe-method.md)|确定指定的范围是否为当前帧的父级。|  
-|[GetStackParameterSize 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-getstackparametersize-method.md)|返回参数的累积大小 x86 操作系统上的堆栈上。|  
+|[IsMatchingParentFrame 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-ismatchingparentframe-method.md)|确定指定的帧是否为当前帧的父级。|  
+|[GetStackParameterSize 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-getstackparametersize-method.md)|返回 x86 操作系统上堆栈上的参数的累积大小。|  
   
 ## <a name="remarks"></a>备注  
- 此接口进行逻辑扩展"ICorDebugNativeFrame"接口。  
+ 此接口以逻辑方式扩展了 "ICorDebugNativeFrame" 接口。  
   
 > [!NOTE]
->  此接口不支持跨计算机或跨进程远程调用。  
+> 此接口不支持跨计算机或跨进程远程调用。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头：** Cordebug.idl, Cordebug.idl  
   
- **库：** CorGuids.lib  
+ **类库**CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

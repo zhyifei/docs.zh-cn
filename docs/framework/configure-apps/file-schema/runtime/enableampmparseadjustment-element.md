@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: fda998a5-f538-4f8b-a18c-ee7f35e16938
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4a62bd3507c14e42798c903ae51edb0187e666c8
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 46cf37ee800c05eb7fe12e8491ad3b2130c3a04d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663766"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920824"
 ---
 # <a name="enableampmparseadjustment-element"></a>\<EnableAmPmParseAdjustment > 元素
 确定日期和时间分析方法是否使用经过调整的规则集来分析包含 day、month、hour 和 AM/PM 指示符的日期字符串。  
@@ -68,7 +68,7 @@ ms.locfileid: "69663766"
  `<EnableAmPmParseAdjustment>`元素对<xref:System.DateTime.TryParseExact%2A?displayProperty=nameWithType>、、和<xref:System.DateTimeOffset.ParseExact%2A?displayProperty=nameWithType>方法不起作用<xref:System.DateTimeOffset.TryParseExact%2A?displayProperty=nameWithType>。 <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType>  
   
 > [!IMPORTANT]
->  在.NET Core 和.NET Native，默认情况下启用的调整后的 AM/PM 分析规则。  
+> 在.NET Core 和.NET Native，默认情况下启用的调整后的 AM/PM 分析规则。  
   
  如果未启用解析调整规则, 则会将字符串的第一个数字解释为12小时制的小时, 而除 AM/PM 指示符之外的字符串的其余部分将被忽略。 解析方法返回的日期和时间由当前日期和从日期字符串提取的日期中的小时组成。  
   

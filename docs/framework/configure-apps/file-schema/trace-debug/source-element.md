@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - <source> element
 - source element
-ms.openlocfilehash: 8860f5d3ed7ee0c04d1e8afd7614f3f73b470808
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 55120e292ac2a2c822c5510563d1aa167ca921e4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673701"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920456"
 ---
 # <a name="source-element"></a>\<源 > 元素
 指定用于启动跟踪消息的跟踪源。  
   
  \<configuration>  
 \<system.diagnostics>  
-\<sources>  
-\<source>  
+\<源 >  
+\<源 >  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,15 +38,15 @@ ms.locfileid: "61673701"
 |特性|描述|  
 |---------------|-----------------|  
 |`name`|可选特性。<br /><br /> 指定跟踪源的名称。|  
-|`switchName`|可选特性。<br /><br /> 在应用程序中指定跟踪开关实例的名称。 如果此开关不标识中`<switches>`元素，该值指定开关的级别。|  
-|`switchType`|可选特性。<br /><br /> 指定跟踪开关的类型。 如果有，该类型必须是有效的类名称，并不能为空字符串。|  
-|`extraAttribute`|可选特性。<br /><br /> 指定由标识跟踪特定于源的属性的值为<xref:System.Diagnostics.TraceSource.GetSupportedAttributes%2A>方法为该跟踪源。|  
+|`switchName`|可选特性。<br /><br /> 指定应用程序中的跟踪开关实例的名称。 如果未在`<switches>`元素中标识开关, 则值指定开关的级别。|  
+|`switchType`|可选特性。<br /><br /> 指定跟踪开关的类型。 如果存在, 则该类型必须是有效的类名, 并且不能是空字符串。|  
+|`extraAttribute`|可选特性。<br /><br /> 指定跟踪源特定属性的值, 该属性由<xref:System.Diagnostics.TraceSource.GetSupportedAttributes%2A>该跟踪源的方法标识。|  
   
 ### <a name="child-elements"></a>子元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<listeners>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/listeners-element-for-source.md)|包含用于收集、 存储和路由消息的侦听器。|  
+|[\<listeners>](listeners-element-for-source.md)|包含收集、存储和路由消息的侦听器。|  
   
 ### <a name="parent-elements"></a>父元素  
   
@@ -57,10 +57,10 @@ ms.locfileid: "61673701"
 |`sources`|包含用于启动跟踪消息的跟踪源。|  
   
 ## <a name="remarks"></a>备注  
- 计算机配置文件 (Machine.config) 和应用程序配置文件中，可以使用此元素。  
+ 此元素可在计算机配置文件 (Machine.config) 和应用程序配置文件中使用。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何使用`<source>`要添加的跟踪源元素`mySource`，并设置源开关的级别命名为`sourceSwitch`。 控制台跟踪侦听器添加的跟踪信息写入控制台。  
+ 下面的示例演示如何使用`<source>`元素添加跟踪源`mySource` , 并设置名`sourceSwitch`为的源开关的级别。 添加了控制台跟踪侦听器, 用于将跟踪信息写入控制台。  
   
 ```xml  
 <configuration>  
@@ -84,5 +84,5 @@ ms.locfileid: "61673701"
   
 ## <a name="see-also"></a>请参阅
 
-- [跟踪和调试设置架构](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
-- [跟踪开关](../../../../../docs/framework/debug-trace-profile/trace-switches.md)
+- [跟踪和调试设置架构](index.md)
+- [跟踪开关](../../../debug-trace-profile/trace-switches.md)

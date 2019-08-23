@@ -9,19 +9,19 @@ helpviewer_keywords:
 - glyphs [WPF]
 - typography [WPF], GlyphRun object
 ms.assetid: 746ca769-a331-4435-9b95-f72a883b67c1
-ms.openlocfilehash: f8931e26d4c4f3cc52ecb838062d2e1beda74baf
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9e40a9656bd1d89203b167860ef6951d5e30377c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64598839"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69918398"
 ---
 # <a name="introduction-to-the-glyphrun-object-and-glyphs-element"></a>GlyphRun 对象和 Glyphs 元素简介
-本主题介绍<xref:System.Windows.Media.GlyphRun>对象和<xref:System.Windows.Documents.Glyphs>元素。  
+本主题介绍<xref:System.Windows.Media.GlyphRun>对象<xref:System.Windows.Documents.Glyphs>和元素。  
 
 <a name="text_glyphrunovw_intro"></a>   
 ## <a name="introduction-to-glyphrun"></a>GlyphRun 简介  
- [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供高级的文本支持，包括直接访问的字形级标记<xref:System.Windows.Documents.Glyphs>的客户想要拦截和保留格式化后的文本。 这些功能为以下每种方案中不同的文本呈现要求提供关键支持。  
+ [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]提供高级文本支持, 包括可<xref:System.Windows.Documents.Glyphs>直接访问的标志符号级别标记, 以及在设置格式后要截获和保存文本的客户。 这些功能为以下每种方案中不同的文本呈现要求提供关键支持。  
   
 1. 固定格式文档的屏幕显示。  
   
@@ -29,28 +29,28 @@ ms.locfileid: "64598839"
   
     - [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 作为设备打印机语言。  
   
-    - [!INCLUDE[TLA#tla_mxdw](../../../../includes/tlasharptla-mxdw-md.md)]。  
+    - Microsoft XPS 文档编写器。  
   
     - 以前的打印机驱动程序，从 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 应用程序输出为固定格式。  
   
     - 打印后台处理格式。  
   
-3. 固定格式的文档演示，包括以前版本的 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 客户端和其他计算设备。  
+3. 固定格式的文档表示形式, 包括以前版本的 Windows 和其他计算设备的客户端。  
   
 > [!NOTE]
->  <xref:System.Windows.Documents.Glyphs> 和<xref:System.Windows.Media.GlyphRun>专为固定格式文档演示和打印方案。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 为常规布局提供若干元素和[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]如下方案<xref:System.Windows.Controls.Label>和<xref:System.Windows.Controls.TextBlock>。 有关布局和 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 方案的详细信息，请参阅 [WPF 中的版式](typography-in-wpf.md)。  
+> <xref:System.Windows.Documents.Glyphs>和<xref:System.Windows.Media.GlyphRun>专为固定格式的文档演示和打印方案而设计。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]为一般布局和[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]方案<xref:System.Windows.Controls.Label> (例如和<xref:System.Windows.Controls.TextBlock>) 提供了多个元素。 有关布局和 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 方案的详细信息，请参阅 [WPF 中的版式](typography-in-wpf.md)。  
   
 <a name="text_glyphrunovw_glyphrunobject"></a>   
 ## <a name="the-glyphrun-object"></a>GlyphRun 对象  
- <xref:System.Windows.Media.GlyphRun>对象表示来自单个字体按单个大小，并使用一种呈现样式的单个面部的一系列字形。  
+ <xref:System.Windows.Media.GlyphRun>对象表示一系列标志符号, 该标志符号来自单个字体的单个字体, 并且具有一种呈现样式。  
   
- <xref:System.Windows.Media.GlyphRun> 包括如标志符号字体细节<xref:System.Windows.Documents.Glyphs.Indices%2A>和各字形位置。 它还包括原始[!INCLUDE[TLA#tla_unicode](../../../../includes/tlasharptla-unicode-md.md)]码的位从字符到字形缓冲偏移的映射信息，以及每个字符和每字形标志生成运行。  
+ <xref:System.Windows.Media.GlyphRun>同时包含字体详细信息, 如<xref:System.Windows.Documents.Glyphs.Indices%2A>标志符号和单个标志符号位置。 它还包括从生成[!INCLUDE[TLA#tla_unicode](../../../../includes/tlasharptla-unicode-md.md)]运行的原始代码点、字符到标志符号缓冲区偏移量映射信息以及每个字符和每个标志符号的标志。  
   
- <xref:System.Windows.Media.GlyphRun> 具有相应的高级别<xref:System.Windows.FrameworkElement>， <xref:System.Windows.Documents.Glyphs>。 <xref:System.Windows.Documents.Glyphs> 可以在元素树中并在[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]标记来表示<xref:System.Windows.Media.GlyphRun>输出。  
+ <xref:System.Windows.Media.GlyphRun>具有对应的高级级别<xref:System.Windows.FrameworkElement>。 <xref:System.Windows.Documents.Glyphs> <xref:System.Windows.Documents.Glyphs>可在元素树和标记中[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]用于表示<xref:System.Windows.Media.GlyphRun>输出。  
   
 <a name="text_glyphrunovw_glyphselement"></a>   
 ## <a name="the-glyphs-element"></a>Glyphs 元素  
- <xref:System.Windows.Documents.Glyphs>元素表示的输出<xref:System.Windows.Media.GlyphRun>中[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。 下面的标记语法用于描述<xref:System.Windows.Documents.Glyphs>元素。  
+ 元素表示的输出<xref:System.Windows.Media.GlyphRun>。 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] <xref:System.Windows.Documents.Glyphs> 以下标记语法用于描述<xref:System.Windows.Documents.Glyphs>元素。  
   
  [!code-xaml[GlyphsOvwSample1#1](~/samples/snippets/csharp/VS_Snippets_Wpf/GlyphsOvwSample1/CS/default.xaml#1)]  
   
@@ -58,14 +58,14 @@ ms.locfileid: "64598839"
   
 |属性|描述|  
 |--------------|-----------------|  
-|<xref:System.Windows.Documents.Glyphs.FontUri%2A>|指定资源标识符： 文件名、 Web [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]，或在应用程序.exe 或容器中的资源引用。|  
+|<xref:System.Windows.Documents.Glyphs.FontUri%2A>|指定资源标识符: 文件名、Web [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]或应用程序 .exe 或容器中的资源引用。|  
 |<xref:System.Windows.Documents.Glyphs.FontRenderingEmSize%2A>|以绘图图面单位指定字号（默认值为 .96 英寸）。|  
 |<xref:System.Windows.Documents.Glyphs.StyleSimulations%2A>|指定粗体和斜体样式的标志。|  
 |<xref:System.Windows.Documents.Glyphs.BidiLevel%2A>|指定双向布局级别。 偶数和零值表示从左到右布局；奇数值表示从右到左布局。|  
   
 <a name="text_glyphrunovw_indicesproperty"></a>   
 ### <a name="indices-property"></a>Indices 属性  
- <xref:System.Windows.Documents.Glyphs.Indices%2A>属性是字形规范的字符串。 在一系列字形形成单个群集的情况下，群集中第一个字形的规范之前会跟有一个规范，说明组合了多少个字形和多少个代码点来形成群集。 <xref:System.Windows.Documents.Glyphs.Indices%2A>属性收集在一个字符串中的以下属性。  
+ <xref:System.Windows.Documents.Glyphs.Indices%2A>属性是一个字形规范字符串。 在一系列字形形成单个群集的情况下，群集中第一个字形的规范之前会跟有一个规范，说明组合了多少个字形和多少个代码点来形成群集。 <xref:System.Windows.Documents.Glyphs.Indices%2A>属性在一个字符串中收集以下属性。  
   
 - 字形索引  
   
@@ -83,13 +83,13 @@ ms.locfileid: "64598839"
   
 <a name="text_glyphrunovw_glyphmetrics"></a>   
 ## <a name="glyph-metrics"></a>字形度量值  
- 每个字形定义度量值，指定与其他的对齐方式<xref:System.Windows.Documents.Glyphs>。 以下图形定义两种不同字形字符的各种排版品质。  
+ 每个字形都定义了用于指定其与其他<xref:System.Windows.Documents.Glyphs>的对齐方式的指标。 以下图形定义两种不同字形字符的各种排版品质。  
   
  ![字形度量示意图](./media/glyph-example.png "glyph_example")  
   
 <a name="text_glyphrunovw_glyphsmarkup"></a>   
 ## <a name="glyphs-markup"></a>Glyphs 标记  
- 下面的代码示例演示如何使用的各种属性<xref:System.Windows.Documents.Glyphs>中的元素[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。  
+ 下面的代码示例演示如何在中<xref:System.Windows.Documents.Glyphs> [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]使用元素的各种属性。  
   
  [!code-xaml[GlyphsOvwSamp2#1](~/samples/snippets/csharp/VS_Snippets_Wpf/GlyphsOvwSamp2/CS/default.xaml#1)]  
   

@@ -2,20 +2,20 @@
 title: <connectionPoolSettings> 的 <tcpTransport>
 ms.date: 03/30/2017
 ms.assetid: 2fbc3aa7-fcc9-4193-99a3-85d31d60d3f7
-ms.openlocfilehash: 3c17184445aa5cec8a5121252934574add2b3db0
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 787b50296b7ed4f6fdceef244a99dffffae63c61
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67423159"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919403"
 ---
-# <a name="connectionpoolsettings-of-tcptransport"></a>\<connectionPoolSettings> of \<tcpTransport>
+# <a name="connectionpoolsettings-of-tcptransport"></a>\<connectionPoolSettings > \<tcpTransport >
 指定 TCP 传输的其他连接池设置。  
   
  \<system.serviceModel>  
 \<bindings>  
 \<customBinding>  
-\<binding>  
+\<绑定 >  
 \<tcpTransport>  
 \<connectionPoolSettings>  
   
@@ -47,7 +47,7 @@ ms.locfileid: "67423159"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<namedPipeTransport>](../../../../../docs/framework/configure-apps/file-schema/wcf/namedpipetransport.md)|定义传输，该传输使通道使用命名管道传输消息。|  
+|[\<namedPipeTransport>](namedpipetransport.md)|定义传输，该传输使通道使用命名管道传输消息。|  
   
 ## <a name="see-also"></a>请参阅
 
@@ -56,9 +56,9 @@ ms.locfileid: "67423159"
 - <xref:System.ServiceModel.Channels.TcpConnectionPoolSettings>
 - <xref:System.ServiceModel.Channels.TransportBindingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [传输](../../../../../docs/framework/wcf/feature-details/transports.md)
-- [选择传输](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
-- [绑定](../../../../../docs/framework/wcf/bindings.md)
-- [扩展绑定](../../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [自定义绑定](../../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [传输](../../../wcf/feature-details/transports.md)
+- [选择传输](../../../wcf/feature-details/choosing-a-transport.md)
+- [绑定](../../../wcf/bindings.md)
+- [扩展绑定](../../../wcf/extending/extending-bindings.md)
+- [自定义绑定](../../../wcf/extending/custom-bindings.md)
+- [\<customBinding>](custombinding.md)

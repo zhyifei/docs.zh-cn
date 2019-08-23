@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 6453ef66-19b4-41f3-b712-52d0c2abc9ca
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ab9feaa1c46a45471395fd4c6158490a24882a65
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 1848db96b8f466f617c58f0fdd879ffe3b2022bd
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489367"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927246"
 ---
 # <a name="supportportability-element"></a>\<supportPortability > 元素
 通过禁用将程序集视为等效于应用程序可移植性用途的默认行为来指定应用程序可以在两种不同的 .NET Framework 实现中引用同一程序集。  
@@ -35,15 +35,15 @@ ms.locfileid: "66489367"
   
 |特性|描述|  
 |---------------|-----------------|  
-|PKT|必需的特性。<br /><br /> 以字符串形式指定受影响的程序集的公钥标记。|  
-|enabled|可选特性。<br /><br /> 指定是否应启用对指定的.NET Framework 程序集实现之间的可移植性的支持。|  
+|PKT|必需的特性。<br /><br /> 以字符串的形式指定受影响的程序集的公钥标记。|  
+|enabled|可选特性。<br /><br /> 指定是否应启用指定 .NET Framework 程序集的实现之间的可移植性支持。|  
   
 ## <a name="enabled-attribute"></a>enabled 特性  
   
 |值|描述|  
 |-----------|-----------------|  
-|true|启用对指定的.NET Framework 程序集实现之间的可移植性的支持。 这是默认设置。|  
-|False|禁用对指定的.NET Framework 程序集实现之间的可移植性的支持。 这使应用程序具有对指定的程序集的多个实现的引用。|  
+|真|支持指定 .NET Framework 程序集的实现之间的可移植性。 这是默认设置。|  
+|假|禁用支持指定 .NET Framework 程序集的实现之间的可移植性。 这使应用程序可以引用指定程序集的多个实现。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  
@@ -57,15 +57,15 @@ ms.locfileid: "66489367"
 |`assemblyBinding`|包含有关程序集版本重定向和程序集位置的信息。|  
   
 ## <a name="remarks"></a>备注  
- 从.NET Framework 4 开始，支持将自动提供给应用程序可以使用两种实现的.NET Framework 中，例如.NET Framework 实现或.NET Framework for Silverlight 实现。 程序集绑定器将特定的.NET Framework 程序集的两个实现视为等效。 在少数情况下，此应用程序可移植性功能会导致问题。 在这些情况下，`<supportPortability>`元素可用于禁用该功能。  
+ 从 .NET Framework 4 开始, 将自动为可以使用两种 .NET Framework 实现的应用程序 (例如, .NET Framework 实现或 Silverlight 实现的 .NET Framework) 提供支持。 特定 .NET Framework 程序集的两个实现被视为等效于程序集联编程序。 在少数情况下, 此应用程序可移植性功能会导致问题。 在这些情况下, `<supportPortability>`可以使用元素来禁用该功能。  
   
- 其中一种方案是具有要引用的.NET Framework 实现和.NET Framework for Silverlight 实现的特定引用程序集的程序集。 例如，编写 Windows Presentation Foundation (WPF) 中的 XAML 设计器可能需要引用这两个 WPF 桌面实现，用于在设计器用户界面和 Silverlight 实现中包含的 WPF 子集。 默认情况下，单独引用会导致编译器错误，因为程序集绑定将这两个程序集视为等效。 此元素禁用默认行为，并允许编译成功。  
+ 这种情况是必须同时引用特定引用程序集的 Silverlight 实现的 .NET Framework 实现和 .NET Framework 的程序集。 例如, 在 Windows Presentation Foundation (WPF) 中编写的 XAML 设计器可能需要引用 WPF 桌面实现、设计器的用户界面和 Silverlight 实现中包含的 WPF 的子集。 默认情况下，单独引用会导致编译器错误，因为程序集绑定将这两个程序集视为等效。 此元素禁用默认行为, 并允许编译成功。  
   
 > [!IMPORTANT]
->  为了使编译器能够将信息传递到公共语言运行时的程序集绑定逻辑，必须使用`/appconfig`编译器选项指定包含此元素的 app.config 文件的位置。  
+> 为了使编译器能够将信息传递到公共语言运行时的程序集绑定逻辑, 必须使用`/appconfig`编译器选项来指定包含此元素的 app.config 文件的位置。  
   
 ## <a name="example"></a>示例  
- 以下示例启用应用程序能够对.NET Framework 实现和.NET Framework for Silverlight 实现这两个实现中存在任何.NET Framework 程序集的引用。 `/appconfig`编译器选项必须用于指定此 app.config 文件的位置。  
+ 下面的示例使应用程序能够同时引用在两个实现中都存在的任何 .NET Framework 程序集的 .NET Framework 实现和 Silverlight 实现 .NET Framework。 必须`/appconfig`使用编译器选项指定此 app.config 文件的位置。  
   
 ```xml  
 <configuration>  
@@ -80,5 +80,5 @@ ms.locfileid: "66489367"
   
 ## <a name="see-also"></a>请参阅
 
-- [/appconfig （C# 编译器选项）](../../../../../docs/csharp/language-reference/compiler-options/appconfig-compiler-option.md)
-- [.NET framework 程序集统一概述](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/db7849ey(v=vs.100))
+- [/appconfig (C#编译器选项)](../../../../csharp/language-reference/compiler-options/appconfig-compiler-option.md)
+- [.NET Framework 程序集统一概述](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/db7849ey(v=vs.100))

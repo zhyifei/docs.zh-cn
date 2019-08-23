@@ -2,12 +2,12 @@
 title: <webSocketSettings>
 ms.date: 03/30/2017
 ms.assetid: bbf97e02-8dd1-4922-acac-3cd33397b249
-ms.openlocfilehash: 1101d021f3c7436c4f45a22a48e50f6d1553f753
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5c9dbec13dd0d71ba1b92ea971d067540013b6f9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769741"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940322"
 ---
 # <a name="websocketsettings"></a>\<webSocketSettings>
 用来指定 Web Socket 设置的配置元素。  
@@ -51,14 +51,14 @@ ms.locfileid: "61769741"
   
 ## <a name="transportusage-attribute"></a>transportUsage 特性  
   
-|“值”|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |WhenDuplex|如果为双工协定，则使用 Web Socket 协议。|  
 |Always|始终使用 Web Socket 协议，而不管协定类型。|  
 |Never|永远不使用 Web Socket 协议。|  
   
 ### <a name="child-elements"></a>子元素  
- None  
+ 无  
   
 ### <a name="parent-elements"></a>父元素  
   
@@ -67,7 +67,7 @@ ms.locfileid: "61769741"
 |\<netHttpBinding>|指定 NetHttpBinding|  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何使用\<webSocketSettings > 元素。  
+ 下面的示例演示如何使用\<s > 元素。  
   
 ```xml  
 <netHttpBinding>
@@ -90,7 +90,7 @@ ms.locfileid: "61769741"
 - <xref:System.ServiceModel.Channels.BindingElement>
 - <xref:System.ServiceModel.BasicHttpBinding>
 - <xref:System.ServiceModel.Configuration.BasicHttpBindingElement>
-- [绑定](../../../../../docs/framework/wcf/bindings.md)
-- [配置系统提供的绑定](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [使用绑定配置服务和客户端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../../../docs/framework/misc/binding.md)
+- [绑定](../../../wcf/bindings.md)
+- [配置系统提供的绑定](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [使用绑定配置服务和客户端](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../misc/binding.md)

@@ -5,27 +5,27 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: acd71129-5ff0-4b4e-b266-c72cc0c53601
-ms.openlocfilehash: d7d87a3e95cf66efb91b71f6ff3c7c9bb1fbb311
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 66af3395d7ba7271323ad6461e8e1fb8c823a1c6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67662153"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69913898"
 ---
 # <a name="known-issues-and-considerations-in-linq-to-entities"></a>LINQ to Entities 中的已知问题和注意事项
-本部分提供有关使用 LINQ to Entities 查询的已知问题的信息。  
+本部分提供有关 LINQ to Entities 查询的已知问题的信息。  
   
-- [不能缓存的 LINQ 查询](#LINQQueriesThatAreNotCached)  
+- [无法缓存的 LINQ 查询](#LINQQueriesThatAreNotCached)  
   
-- [排序信息丢失](#OrderingInfoLost)  
+- [订单信息丢失](#OrderingInfoLost)  
   
-- [不支持无符号的整数](#UnsignedIntsUnsupported)  
+- [不支持无符号整数](#UnsignedIntsUnsupported)  
   
 - [类型转换错误](#TypeConversionErrors)  
   
 - [不支持引用非标量变量](#RefNonScalarClosures)  
   
-- [嵌套的查询可能会因 SQL Server 2000](#NestedQueriesSQL2000)  
+- [嵌套查询可能会失败, 并 SQL Server 2000](#NestedQueriesSQL2000)  
   
 - [投影到匿名类型](#ProjectToAnonymousType)  
   
@@ -35,14 +35,14 @@ ms.locfileid: "67662153"
   
 <a name="OrderingInfoLost"></a>   
 ## <a name="ordering-information-lost"></a>排序信息丢失  
- 将列投影到匿名类型将导致在对"80"的兼容性级别设置为 SQL Server 2005 数据库执行某些查询中会丢失排序信息。  当 order-by 列表中的列名与选择器中的列名相同时，就会发生这种情况，如下面的示例所示：  
+ 如果将列投影到匿名类型, 则会在某些查询中丢失排序信息, 这些查询将针对设置为兼容级别 "80" 的 SQL Server 2005 数据库执行。  当 order-by 列表中的列名与选择器中的列名相同时，就会发生这种情况，如下面的示例所示：  
   
  [!code-csharp[DP L2E Conceptual Examples#SBUDT543840](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#sbudt543840)]
  [!code-vb[DP L2E Conceptual Examples#SBUDT543840](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#sbudt543840)]  
   
 <a name="UnsignedIntsUnsupported"></a>   
 ## <a name="unsigned-integers-not-supported"></a>不支持无符号整数  
- 因为不支持在 LINQ to Entities 查询中指定无符号的整数类型[!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]不支持无符号的整数。 如果指定无符号的整数，<xref:System.ArgumentException>异常过程中会引发在查询表达式转换，如下面的示例中所示。 此示例查询其 ID 为 48000 的订单。  
+ 不支持在 LINQ to Entities 查询中指定无符号整数类型, 因为[!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]不支持无符号整数。 如果指定无符号整数, <xref:System.ArgumentException>则在查询表达式转换过程中会引发异常, 如下面的示例中所示。 此示例查询其 ID 为 48000 的订单。  
   
  [!code-csharp[DP L2E Conceptual Examples#UIntAsQueryParam](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#uintasqueryparam)]
  [!code-vb[DP L2E Conceptual Examples#UIntAsQueryParam](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#uintasqueryparam)]  
@@ -58,7 +58,7 @@ ms.locfileid: "67662153"
  不支持在查询中引用非标量变量（如实体）。 在此类查询执行时，会引发 <xref:System.NotSupportedException> 异常，并显示以下消息：“无法创建类型为‘`EntityType`’的常量值。 此上下文中仅支持基元类型(‘如 Int32、String 和 Guid’)。”[Unable to create a constant value of type 'Closure type'. Only primitive types ('such as Int32, String, and Guid') are supported in this context.]  
   
 > [!NOTE]
->  支持引用标量变量的集合。  
+> 支持引用标量变量的集合。  
   
  [!code-csharp[DP L2E Conceptual Examples#SBUDT555877](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#sbudt555877)]
  [!code-vb[DP L2E Conceptual Examples#SBUDT555877](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#sbudt555877)]  

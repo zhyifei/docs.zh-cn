@@ -9,31 +9,31 @@ helpviewer_keywords:
 - visual objects [WPF], hit tests on
 - Geometry objects [WPF], visual objects comprising
 ms.assetid: 8bf2643f-d7f9-4cb4-9ea6-5b893c23200d
-ms.openlocfilehash: 87b626e575d889447ef061d1ed62ef28efe5dfeb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 52b9b99b0af38d797e4a3c98dc0979211c930c1f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947337"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923380"
 ---
 # <a name="how-to-hit-test-geometry-in-a-visual"></a>如何：对视觉对象中的几何图形进行命中测试
-此示例演示如何以组成一个或多针对视觉对象执行命中的测试<xref:System.Windows.Media.Geometry>对象。  
+此示例演示如何对由一个或多个<xref:System.Windows.Media.Geometry>对象组成的视觉对象执行命中测试。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何检索<xref:System.Windows.Media.DrawingGroup>使用的视觉对象从<xref:System.Windows.Media.VisualTreeHelper.GetDrawing%2A>方法。 然后，每个绘图的呈现内容执行命中的测试<xref:System.Windows.Media.DrawingGroup>以确定命中了哪个几何图形。  
+ 下面的示例演示如何<xref:System.Windows.Media.DrawingGroup>从<xref:System.Windows.Media.VisualTreeHelper.GetDrawing%2A>使用方法的视觉对象中检索。 然后, 将对中<xref:System.Windows.Media.DrawingGroup>的每个绘图的呈现内容执行命中测试, 以确定命中了哪个几何图形。  
   
 > [!NOTE]
->  在大多数情况下，您将使用<xref:System.Windows.Media.VisualTreeHelper.HitTest%2A>方法，以确定是否在点相交的任何视觉对象呈现内容。  
+> 在大多数情况下, 可以使用<xref:System.Windows.Media.VisualTreeHelper.HitTest%2A>方法来确定某个点是否与视觉对象的任何呈现内容相交。  
   
  [!code-csharp[VisualsOverview#VisualsOverviewSnippet4](~/samples/snippets/csharp/VS_Snippets_Wpf/VisualsOverview/CSharp/Window1.xaml.cs#visualsoverviewsnippet4)]
  [!code-vb[VisualsOverview#VisualsOverviewSnippet4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/VisualsOverview/visualbasic/window1.xaml.vb#visualsoverviewsnippet4)]  
   
- <xref:System.Windows.Media.Geometry.FillContains%2A>方法是重载的方法，您可以使用指定的命中测试<xref:System.Windows.Point>或<xref:System.Windows.Media.Geometry>。 绘制几何图形时，笔画可以延伸到填充边界之外。 在这种情况下，可能想要调用<xref:System.Windows.Media.Geometry.StrokeContains%2A>除了<xref:System.Windows.Media.Geometry.FillContains%2A>。  
+ 方法是一个重载的方法, 它允许使用指定<xref:System.Windows.Point>的或<xref:System.Windows.Media.Geometry>进行命中测试。 <xref:System.Windows.Media.Geometry.FillContains%2A> 绘制几何图形时，笔画可以延伸到填充边界之外。 在这种情况下, <xref:System.Windows.Media.Geometry.StrokeContains%2A> <xref:System.Windows.Media.Geometry.FillContains%2A>除了之外, 您可能还需要调用。  
   
- 此外可以提供<xref:System.Windows.Media.ToleranceType>用于贝塞尔拉平操作目的。  
+ 还可以提供<xref:System.Windows.Media.ToleranceType>用于贝塞尔平展用途的。  
   
 > [!NOTE]
->  此示例并未考虑可能应用到几何图形中的任何变形或剪裁。 此外，此示例不会使用已设置样式的控件，因为这种控件没有与它直接关联的绘图。  
+> 此示例并未考虑可能应用到几何图形中的任何变形或剪裁。 此外，此示例不会使用已设置样式的控件，因为这种控件没有与它直接关联的绘图。  
   
 ## <a name="see-also"></a>请参阅
 

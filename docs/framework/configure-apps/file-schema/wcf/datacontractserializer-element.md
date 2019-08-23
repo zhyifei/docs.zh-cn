@@ -7,20 +7,20 @@ helpviewer_keywords:
 - DataContractSerializer
 - KnownTypes
 ms.assetid: f41fb4d5-24e7-4059-8010-286a30bfea93
-ms.openlocfilehash: b635f03d1e4a6628a76d678f7366482717276376
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7e440810fee1dddb7025d1385b1edb4838d98a39
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704136"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69925914"
 ---
 # <a name="datacontractserializer"></a>\<dataContractSerializer>
 包含 <xref:System.Runtime.Serialization.DataContractSerializer> 的配置数据。 此元素出现在两个不同的层次结构中。 这两个层次结构分别在下面的“架构层次结构”一节和“备注”一节中列出。  
   
  \<system.ServiceModel>  
-\<behaviors>  
+\<行为 >  
 \<serviceBehaviors>  
-\<behavior>  
+\<行为 >  
 \<dataContractSerializer>  
   
 ## <a name="syntax"></a>语法  
@@ -47,15 +47,15 @@ ms.locfileid: "61704136"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md)|服务行为的设置集合。|  
-|[\<system.runtime.serialization>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-runtime-serialization.md)|表示 <xref:System.Runtime.Serialization> 命名空间节的根元素，并包含 <xref:System.Runtime.Serialization.DataContractSerializer> 的设置选项的元素。|  
+|[\<behavior>](behavior-of-servicebehaviors.md)|服务行为的设置集合。|  
+|[\<system.runtime.serialization>](system-runtime-serialization.md)|表示 <xref:System.Runtime.Serialization> 命名空间节的根元素，并包含 <xref:System.Runtime.Serialization.DataContractSerializer> 的设置选项的元素。|  
   
 ## <a name="remarks"></a>备注  
- 如本主题的简介中所述，这是在其中的第二个层次结构\<X509Extension > 元素出现。  
+ 如本主题中所述, 这是\<X509Extension > 元素的第二个层次结构。  
   
- [\<system.runtime.serialization>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-runtime-serialization.md)  
+ [\<system.runtime.serialization>](system-runtime-serialization.md)  
   
- [\<dataContractSerializer>](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md)  
+ [\<dataContractSerializer>](datacontractserializer-element.md)  
   
  有关已知类型的更多信息，请参见 <xref:System.Runtime.Serialization.DataContractSerializer>。  
   
@@ -64,5 +64,5 @@ ms.locfileid: "61704136"
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>
 - <xref:System.ServiceModel.Configuration.DataContractSerializerElement>
-- [数据协定已知类型](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
-- [数据传输和序列化](../../../../../docs/framework/wcf/feature-details/data-transfer-and-serialization.md)
+- [数据协定已知类型](../../../wcf/feature-details/data-contract-known-types.md)
+- [数据传输和序列化](../../../wcf/feature-details/data-transfer-and-serialization.md)

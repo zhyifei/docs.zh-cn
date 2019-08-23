@@ -9,132 +9,132 @@ helpviewer_keywords:
 - unfreezing Freezable objects [WPF]
 - classes [WPF], Freezable
 ms.assetid: 89c71692-4f43-4057-b611-67c6a8a863a2
-ms.openlocfilehash: b2ef3c3dbbfbcef08f58c47948f76cb2c238b48a
-ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
+ms.openlocfilehash: d1fd626921cd17987770ced822be104fb2a42906
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68238528"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937490"
 ---
 # <a name="freezable-objects-overview"></a>Freezable 对象概述
-本主题介绍如何有效地使用和创建<xref:System.Windows.Freezable>对象，它们提供特殊功能，可帮助提高应用程序性能。 Freezable 对象的示例包括画笔、 笔、 转换、 几何和动画。  
+本主题介绍如何有效地使用和创建<xref:System.Windows.Freezable>对象, 这些对象提供有助于提高应用程序性能的特殊功能。 被冻结对象的示例包括画笔、笔、转换、几何图形和动画。  
   
 <a name="whatisafreezable"></a>   
-## <a name="what-is-a-freezable"></a>什么是 Freezable？  
- 一个<xref:System.Windows.Freezable>是一种特殊的对象，它有两种状态： 解冻和冻结。 当未冻结，<xref:System.Windows.Freezable>看起来就像任何其他对象的行为。 当冻结，<xref:System.Windows.Freezable>无法再进行修改。  
+## <a name="what-is-a-freezable"></a>什么是可冻结的？  
+ <xref:System.Windows.Freezable>是具有两种状态的特殊对象类型: 解冻和冻结。 解冻后, 的<xref:System.Windows.Freezable>行为与任何其他对象的行为类似。 冻结后, 将<xref:System.Windows.Freezable>无法再修改。  
   
- 一个<xref:System.Windows.Freezable>提供了<xref:System.Windows.Freezable.Changed>事件，以通知观察者的对对象进行任何修改。 冻结<xref:System.Windows.Freezable>可以提高其性能，因为它不再需要更改通知而消耗资源。 冻结<xref:System.Windows.Freezable>还可以在时未冻结的线程之间共享<xref:System.Windows.Freezable>不能。  
+ <xref:System.Windows.Freezable> 提供事件来通知观察者对<xref:System.Windows.Freezable.Changed>对象的任何修改。 <xref:System.Windows.Freezable>冻结会提高其性能, 因为它不再需要在更改通知上消耗资源。 冻结<xref:System.Windows.Freezable>还可在线程间共享, 而<xref:System.Windows.Freezable>不能冻结。  
   
- 尽管<xref:System.Windows.Freezable>类具有许多应用程序，最<xref:System.Windows.Freezable>中的对象[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]与图形子系统相关。  
+ 尽管类有许多应用程序, 但<xref:System.Windows.Freezable>中[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]的大多数对象均与图形子系统相关。 <xref:System.Windows.Freezable>  
   
- <xref:System.Windows.Freezable>类可以容易地使用某些图形系统对象，并有助于提高应用程序性能。 继承的类型的示例<xref:System.Windows.Freezable>包括<xref:System.Windows.Media.Brush>， <xref:System.Windows.Media.Transform>，和<xref:System.Windows.Media.Geometry>类。 因为它们包含非托管的资源，系统必须监视这些对象的修改，并对原始对象的更改时，然后更新其相应的非托管的资源。 即使你实际上无需修改图形系统对象，系统必须仍需花一些资源来监视对象，以防对其进行更改。  
+ 使用<xref:System.Windows.Freezable>类可以更轻松地使用某些图形系统对象, 并且可以帮助提高应用程序性能。 继承自<xref:System.Windows.Freezable>的类型的示例<xref:System.Windows.Media.Brush>包括、 <xref:System.Windows.Media.Transform>和<xref:System.Windows.Media.Geometry>类。 由于它们包含非托管资源, 因此, 系统必须监视这些对象进行修改, 然后在对原始对象进行更改时更新其相应的非托管资源。 即使您不实际修改图形系统对象, 系统仍必须将它的一些资源用于监视对象, 以防您这样做更改。  
   
- 例如，假设您创建<xref:System.Windows.Media.SolidColorBrush>画笔，并使用它来绘制按钮的背景。  
+ 例如, 假设您创建了一个<xref:System.Windows.Media.SolidColorBrush>画笔, 并使用它来绘制按钮的背景。  
   
  [!code-csharp[freezablesample_procedural#FrozenExamplePart1](~/samples/snippets/csharp/VS_Snippets_Wpf/freezablesample_procedural/CSharp/freezablesample.cs#frozenexamplepart1)]
  [!code-vb[freezablesample_procedural#FrozenExamplePart1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/freezablesample_procedural/visualbasic/freezablesample.vb#frozenexamplepart1)]  
   
- 当呈现该按钮时，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]图形子系统使用您提供要绘制的一组像素，若要创建一个按钮的外观的信息。 尽管使用纯色画笔来描述应如何绘制按钮，但纯色画笔实际上不会进行绘制。 图形系统将生成用于按钮和画笔，快速、 低级别对象并且在屏幕实际显示这些对象。  
+ 呈现按钮时, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]图形子系统将使用您提供的信息来绘制一组像素来创建按钮的外观。 虽然您使用纯色画笔来说明如何绘制按钮, 但您的纯色画笔实际上不会执行绘制操作。 图形系统会为按钮和画笔生成快速、低级别的对象, 并且这些对象确实出现在屏幕上。  
   
- 如果您打算修改画笔，这些低级别对象需要重新生成。 Freezable 类是什么使画笔能够以查找其相应的生成的低级别对象，并且它发生更改时更新它们。 画笔时启用此功能，则称其"未冻结。"  
+ 如果要修改画笔, 则必须重新生成这些低级别对象。 可冻结的类可让画笔查找其相应的已生成低级别对象并在更改时更新这些对象。 启用此功能后, 画笔会被视为 "解冻"。  
   
- Freezable 的<xref:System.Windows.Freezable.Freeze%2A>方法使您能够禁用此自我更新功能。 此方法可用于使画笔变为"冻结"或变为不可修改。  
+ 可冻结的<xref:System.Windows.Freezable.Freeze%2A>方法使您能够禁用此自我更新功能。 您可以使用此方法使画笔变为 "冻结" 或不可修改。  
   
 > [!NOTE]
->  不是每个 Freezable 对象可以被冻结。 若要避免引发<xref:System.InvalidOperationException>，检查 Freezable 对象的值<xref:System.Windows.Freezable.CanFreeze%2A>属性来确定是否它可以冻结然后再尝试冻结它。  
+> 并非每个可冻结的对象都可以冻结。 若要避免引发<xref:System.InvalidOperationException>, 请检查可冻结对象的<xref:System.Windows.Freezable.CanFreeze%2A>属性的值, 以确定它是否可以冻结, 然后再尝试将其冻结。  
   
  [!code-csharp[freezablesample_procedural#FrozenExamplePart2](~/samples/snippets/csharp/VS_Snippets_Wpf/freezablesample_procedural/CSharp/freezablesample.cs#frozenexamplepart2)]
  [!code-vb[freezablesample_procedural#FrozenExamplePart2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/freezablesample_procedural/visualbasic/freezablesample.vb#frozenexamplepart2)]  
   
- 当不再需要进行修改的 freezable 时，冻结它提供性能优势。 如果要冻结的画笔在此示例中，图形系统将不再需要监视的更改。 图形系统还可以进行其他优化，因为它知道画笔不会更改。  
+ 当你不再需要修改可冻结的时, 冻结它可提供性能优势。 如果在此示例中冻结了画笔, 则图形系统将不再需要监视其更改。 图形系统还可以进行其他优化, 因为它知道画笔不会改变。  
   
 > [!NOTE]
->  为方便起见，freezable 对象保持未冻结，除非显式冻结。  
+> 为方便起见, 可冻结对象保持解冻, 除非你显式冻结它们。  
   
 <a name="frozenfreezables"></a>   
-## <a name="using-freezables"></a>使用的可冻结对象  
- 使用解冻 freezable 就像使用任何其他类型的对象。 在下面的示例中，颜色<xref:System.Windows.Media.SolidColorBrush>从黄色更改为红色后它用于绘制按钮背景。 图形系统来自动更改按钮从黄色为红色的下次刷新屏幕时在后台工作。  
+## <a name="using-freezables"></a>使用可冻结对象  
+ 使用未冻结的可冻结对象与使用任何其他类型的对象类似。 在下面的示例中, 在用于绘制<xref:System.Windows.Media.SolidColorBrush>按钮背景后, 的颜色将从黄色更改为红色。 图形系统在幕后工作, 在下次刷新屏幕时, 自动将按钮从黄色更改为红色。  
   
  [!code-csharp[freezablesample_procedural#UnFrozenExampleShort](~/samples/snippets/csharp/VS_Snippets_Wpf/freezablesample_procedural/CSharp/freezablesample.cs#unfrozenexampleshort)]
  [!code-vb[freezablesample_procedural#UnFrozenExampleShort](~/samples/snippets/visualbasic/VS_Snippets_Wpf/freezablesample_procedural/visualbasic/freezablesample.vb#unfrozenexampleshort)]  
   
-### <a name="freezing-a-freezable"></a>冻结 Freezable  
- 若要使<xref:System.Windows.Freezable>变为不可修改，则调用其<xref:System.Windows.Freezable.Freeze%2A>方法。 冻结包含 freezable 对象的对象，这些对象也会冻结起来。 例如，如果冻结<xref:System.Windows.Media.PathGeometry>，数字和其包含的段会被冻结。  
+### <a name="freezing-a-freezable"></a>冻结冻结  
+ 若要使<xref:System.Windows.Freezable>其成为不可修改的<xref:System.Windows.Freezable.Freeze%2A> , 请调用其方法。 冻结包含可冻结对象的对象时, 这些对象也会被冻结。 例如, 如果冻结<xref:System.Windows.Media.PathGeometry>, 则它包含的图形和段也将被冻结。  
   
- Freezable**不能**被冻结，如果以下任何条件成立：  
+ 如果满足以下任一条件, 则**无法**冻结可冻结的:  
   
-- 它具有经过动画处理或数据绑定属性。  
+- 它具有动画或数据绑定属性。  
   
-- 它具有由动态资源设置的属性。 (请参阅[XAML 资源](xaml-resources.md)动态资源有关的详细信息。)  
+- 它包含动态资源设置的属性。 (有关动态资源的详细信息, 请参阅[XAML 资源](xaml-resources.md)。)  
   
-- 它包含<xref:System.Windows.Freezable>不能冻结的子对象。  
+- 它包含<xref:System.Windows.Freezable>无法冻结的子对象。  
   
- 如果这些条件都为 false，并且不打算修改<xref:System.Windows.Freezable>，则应冻结其获得前面所述的性能优势。  
+ 如果这些条件为 false, 并且你不打算修改<xref:System.Windows.Freezable>, 则应该冻结它以获得前面所述的性能优势。  
   
- 一旦调用 freezable 的<xref:System.Windows.Freezable.Freeze%2A>方法，它无法再进行修改。 尝试修改的冻结对象会导致<xref:System.InvalidOperationException>引发。 下面的代码引发异常，因为我们试图修改画笔后已被冻结。  
+ 调用可冻结的<xref:System.Windows.Freezable.Freeze%2A>方法后, 将无法再对其进行修改。 尝试修改冻结对象将导致<xref:System.InvalidOperationException>引发。 下面的代码引发异常, 因为我们尝试在冻结画笔之后修改画笔。  
   
  [!code-csharp[freezablesample_procedural#ExceptionExample](~/samples/snippets/csharp/VS_Snippets_Wpf/freezablesample_procedural/CSharp/freezablesample.cs#exceptionexample)]
  [!code-vb[freezablesample_procedural#ExceptionExample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/freezablesample_procedural/visualbasic/freezablesample.vb#exceptionexample)]  
   
- 若要避免此异常，可以使用<xref:System.Windows.Freezable.IsFrozen%2A>方法，以确定是否<xref:System.Windows.Freezable>处于冻结状态。  
+ 若要避免引发此异常, 可以使用<xref:System.Windows.Freezable.IsFrozen%2A>方法来确定<xref:System.Windows.Freezable>是否已冻结。  
   
  [!code-csharp[freezablesample_procedural#CheckIsFrozenExample](~/samples/snippets/csharp/VS_Snippets_Wpf/freezablesample_procedural/CSharp/freezablesample.cs#checkisfrozenexample)]
  [!code-vb[freezablesample_procedural#CheckIsFrozenExample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/freezablesample_procedural/visualbasic/freezablesample.vb#checkisfrozenexample)]  
   
- 在前面的代码示例中，可修改副本已冻结的对象使用的<xref:System.Windows.Freezable.Clone%2A>方法。 下一节讨论了更详细地克隆。  
+ 在上面的代码示例中, 使用<xref:System.Windows.Freezable.Clone%2A>方法对冻结的对象创建了一个可修改的副本。 下一部分更详细地讨论了克隆。  
   
- **请注意**因为冻结 freezable 不能进行动画处理时，动画系统将自动创建的可修改克隆冻结<xref:System.Windows.Freezable>对象时尝试与它们进行动画处理<xref:System.Windows.Media.Animation.Storyboard>。 若要消除开销引起的克隆的性能，请将解冻如果你想要对其进行动画处理的对象。 有关使用演示图板进行动画处理的详细信息，请参阅[情节提要概述](../graphics-multimedia/storyboards-overview.md)。  
+ **注意**由于不能对冻结的可冻结对象进行动画处理, 因此当你尝试<xref:System.Windows.Freezable> <xref:System.Windows.Media.Animation.Storyboard>使用对它们进行动画处理时, 动画系统将自动创建冻结对象的可修改复本。 若要消除克隆导致的性能开销, 请在要对对象进行动画处理时使对象保持解冻。 有关利用情节提要进行动画处理的详细信息, 请参阅[情节提要概述](../graphics-multimedia/storyboards-overview.md)。  
   
 ### <a name="freezing-from-markup"></a>从标记冻结  
- 若要冻结<xref:System.Windows.Freezable>对象声明在标记中，您使用`PresentationOptions:Freeze`属性。 在以下示例中，<xref:System.Windows.Media.SolidColorBrush>声明为页面资源和冻结。 然后使用来设置按钮的背景。  
+ 若要冻结<xref:System.Windows.Freezable>在标记中声明的对象, 请`PresentationOptions:Freeze`使用特性。 在下面的示例中, <xref:System.Windows.Media.SolidColorBrush>将声明为页资源并冻结。 然后, 将使用它来设置按钮的背景。  
   
  [!code-xaml[FreezableSample#FreezeFromMarkupWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/FreezableSample/CS/FreezeFromMarkupExample.xaml#freezefrommarkupwholepage)]  
   
- 若要使用`Freeze`属性，则必须映射到演示文稿选项命名空间： `http://schemas.microsoft.com/winfx/2006/xaml/presentation/options`。 `PresentationOptions` 是映射此命名空间的建议的前缀：  
+ 若要使用`Freeze`属性, 必须映射到表示选项命名空间:。 `http://schemas.microsoft.com/winfx/2006/xaml/presentation/options` `PresentationOptions`建议用于映射此命名空间的前缀:  
   
 ```  
 xmlns:PresentationOptions="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options"   
 ```  
   
- 因为并非所有 XAML 读取器都识别此特性，建议你使用[mc: Ignorable 特性](mc-ignorable-attribute.md)标记`Presentation:Freeze`为可忽略属性：  
+ 由于并非所有 XAML 读取器都能识别此特性, 因此建议使用[mc: 可忽略属性](mc-ignorable-attribute.md)将`Presentation:Freeze`属性标记为可忽略:  
   
 ```  
 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"  
 mc:Ignorable="PresentationOptions"  
 ```  
   
- 有关详细信息，请参阅[mc: Ignorable 特性](mc-ignorable-attribute.md)页。  
+ 有关详细信息, 请参阅[mc: 忽略属性](mc-ignorable-attribute.md)页。  
   
-### <a name="unfreezing-a-freezable"></a>"解冻"Freezable  
- 一次冻结<xref:System.Windows.Freezable>永远不会修改或解冻; 但是，可以创建使用一个未冻结的克隆<xref:System.Windows.Freezable.Clone%2A>或<xref:System.Windows.Freezable.CloneCurrentValue%2A>方法。  
+### <a name="unfreezing-a-freezable"></a>"解冻"  
+ 一旦冻结, 就<xref:System.Windows.Freezable>永远不能对其进行修改或取消冻结; 不过, 可以<xref:System.Windows.Freezable.Clone%2A>使用或<xref:System.Windows.Freezable.CloneCurrentValue%2A>方法创建未冻结的克隆。  
   
- 在以下示例中，使用一个画笔设置按钮的背景，然后冻结该画笔。 冻结的副本组成画笔使用<xref:System.Windows.Freezable.Clone%2A>方法。 克隆是修改并用于将按钮的背景由黄色更改为红色。  
+ 在下面的示例中, 按钮的背景是使用画笔设置的, 然后该画笔会被冻结。 使用<xref:System.Windows.Freezable.Clone%2A>方法对画笔生成了未冻结的副本。 将修改克隆, 并使用它将按钮的背景从黄色更改为红色。  
   
  [!code-csharp[freezablesample_procedural#CloneExample](~/samples/snippets/csharp/VS_Snippets_Wpf/freezablesample_procedural/CSharp/freezablesample.cs#cloneexample)]
  [!code-vb[freezablesample_procedural#CloneExample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/freezablesample_procedural/visualbasic/freezablesample.vb#cloneexample)]  
   
 > [!NOTE]
->  无论使用哪种克隆方法，动画不会被复制到新<xref:System.Windows.Freezable>。  
+> 不管使用哪种克隆方法, 动画永远都不会复制到新<xref:System.Windows.Freezable>的。  
   
- <xref:System.Windows.Freezable.Clone%2A>和<xref:System.Windows.Freezable.CloneCurrentValue%2A>方法会生成可冻结的深层副本。 如果 freezable 包含其他冻结 freezable 对象，它们是克隆，并且进行可修改的。 例如，如果你克隆的冻结<xref:System.Windows.Media.PathGeometry>使可供修改，数字和其包含的段也复制并进行修改。  
+ <xref:System.Windows.Freezable.Clone%2A> 和<xref:System.Windows.Freezable.CloneCurrentValue%2A>方法会生成一个已冻结的深层副本。 如果可冻结的包含其他冻结的可冻结对象, 则它们也会被克隆, 并可进行修改。 例如, 如果克隆冻结<xref:System.Windows.Media.PathGeometry>的以使其可修改, 则还会复制其包含的图形和线段, 并使其成为可修改的。  
   
 <a name="createyourownfreezableclass"></a>   
-## <a name="creating-your-own-freezable-class"></a>创建您自己的 Freezable 类  
- 从派生的类<xref:System.Windows.Freezable>可以获得以下功能。  
+## <a name="creating-your-own-freezable-class"></a>创建自己的有冻结类  
+ 派生自<xref:System.Windows.Freezable>的类具有以下功能。  
   
-- 特殊状态： 只读 （冻结） 和可写状态。  
+- 特殊状态: 只读 (冻结) 和可写状态。  
   
-- 线程安全： 的冻结<xref:System.Windows.Freezable>可以在线程之间共享。  
+- 线程安全: 冻结<xref:System.Windows.Freezable>可以在线程之间共享。  
   
-- 详细的更改通知：与其他不同<xref:System.Windows.DependencyObject>s，对子属性值更改时 Freezable 对象提供更改通知。  
+- 详细更改通知:与其他<xref:System.Windows.DependencyObject>不同, 可冻结对象会在子属性值更改时提供更改通知。  
   
-- 简单克隆： Freezable 类已经实现生成深层克隆的几种方法。  
+- 轻松克隆: 可冻结的类已经实现了几种生成深层克隆的方法。  
   
- 一个<xref:System.Windows.Freezable>是一种<xref:System.Windows.DependencyObject>，因此使用依赖项属性系统。 类属性不一定要依赖项属性，但使用依赖项属性可以减少需要编写，因为代码量<xref:System.Windows.Freezable>类的设计中考虑的依赖属性了。 有关依赖属性系统的详细信息，请参阅[依赖属性概述](dependency-properties-overview.md)。  
+ 是的一<xref:System.Windows.DependencyObject>种类型, 因此使用了依赖属性系统。 <xref:System.Windows.Freezable> 类属性不一定是依赖属性, 但使用依赖属性将减少您必须编写的代码量, 因为<xref:System.Windows.Freezable>该类是使用依赖属性设计的。 有关依赖属性系统的详细信息, 请参阅[依赖属性概述](dependency-properties-overview.md)。  
   
- 每个<xref:System.Windows.Freezable>子类必须重写<xref:System.Windows.Freezable.CreateInstanceCore%2A>方法。 如果您的类的所有数据使用依赖项属性时，您已完成。  
+ 每<xref:System.Windows.Freezable>个子类必须<xref:System.Windows.Freezable.CreateInstanceCore%2A>重写方法。 如果你的类对所有数据使用依赖属性, 则你已完成。  
   
- 如果您的类包含非依赖项属性数据成员，还必须重写以下方法：  
+ 如果类包含非依赖属性数据成员, 还必须重写以下方法:  
   
 - <xref:System.Windows.Freezable.CloneCore%2A>  
   
@@ -146,20 +146,20 @@ mc:Ignorable="PresentationOptions"
   
 - <xref:System.Windows.Freezable.FreezeCore%2A>  
   
- 此外必须遵守以下规则用于访问和写入不属于依赖项属性的数据成员：  
+ 还必须遵守以下规则, 以便访问和写入不是依赖属性的数据成员:  
   
-- 在读取非依赖项属性数据成员的任何 API 开始时，调用<xref:System.Windows.Freezable.ReadPreamble%2A>方法。  
+- 在读取非依赖属性数据成员的任何 API 的开头, 调用<xref:System.Windows.Freezable.ReadPreamble%2A>方法。  
   
-- 在开始任何 API，它将写入非依赖项属性数据成员时，调用<xref:System.Windows.Freezable.WritePreamble%2A>方法。 (调用后<xref:System.Windows.Freezable.WritePreamble%2A>在 API 中，您不需要进行额外调用<xref:System.Windows.Freezable.ReadPreamble%2A>如果还读取非依赖项属性数据成员。)  
+- 在写入非依赖属性数据成员的任何 API 的开头, 请调用<xref:System.Windows.Freezable.WritePreamble%2A>方法。 (在 API 中调用<xref:System.Windows.Freezable.WritePreamble%2A>后, <xref:System.Windows.Freezable.ReadPreamble%2A>如果还读取非依赖属性数据成员, 则无需额外调用。)  
   
-- 调用<xref:System.Windows.Freezable.WritePostscript%2A>方法，然后再退出写入非依赖项属性数据成员的方法。  
+- 在退出写入非依赖属性数据成员的方法之前调用方法。<xref:System.Windows.Freezable.WritePostscript%2A>  
   
- 如果您的类包含的非依赖项属性数据成员<xref:System.Windows.DependencyObject>对象，还必须调用<xref:System.Windows.Freezable.OnFreezablePropertyChanged%2A>方法每次你更改其中一个其值，即使将该成员设置为`null`。  
+ 如果类包含非依赖属性数据成员 (这些对象是<xref:System.Windows.DependencyObject>对象), 则在每次更改其值时, 您还必须<xref:System.Windows.Freezable.OnFreezablePropertyChanged%2A>调用方法, 即使您要将成员设置为`null`。  
   
 > [!NOTE]
->  务必在开始各个<xref:System.Windows.Freezable>方法通过调用基实现重写。  
+> 使用对基实现的调用来开始<xref:System.Windows.Freezable>重写的每个方法非常重要。  
   
- 有关自定义的示例<xref:System.Windows.Freezable>类，请参阅[自定义动画示例](https://go.microsoft.com/fwlink/?LinkID=159981)。  
+ 有关自定义<xref:System.Windows.Freezable>类的示例, 请参阅[自定义动画示例](https://go.microsoft.com/fwlink/?LinkID=159981)。  
   
 ## <a name="see-also"></a>请参阅
 

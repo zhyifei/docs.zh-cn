@@ -2,19 +2,19 @@
 title: <servicePrincipalName>
 ms.date: 03/30/2017
 ms.assetid: 3f3b85d3-20f2-4cd8-8a6a-ee18befbd165
-ms.openlocfilehash: 75e95bcbaee229f19bdfdd119b548ed612f4ddaa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 28ae27481ea9cb86c31b5be1f12b5491f8ca143e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61758179"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69936158"
 ---
 # <a name="serviceprincipalname"></a>\<servicePrincipalName>
 利用对应的服务主体名称 (SPN) 指定服务的标识。  
   
- 有关设置 SPN 的详细信息，请参阅[服务标识和身份验证](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。  
+ 有关设置 SPN 的详细信息, 请参阅[服务标识和身份验证](../../../wcf/feature-details/service-identity-and-authentication.md)。  
   
- \<identity>  
+ \<身份 >  
 \<servicePrincipalName>  
   
 ## <a name="syntax"></a>语法  
@@ -39,10 +39,10 @@ ms.locfileid: "61758179"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<identity>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|指定要由客户端进行身份验证的服务的标识。|  
+|[\<identity>](identity.md)|指定要由客户端进行身份验证的服务的标识。|  
   
 ## <a name="remarks"></a>备注  
- 执行使用该终结点进行 SSPI 身份验证时，连接到此标识的终结点的安全 Windows Communication Foundation (WCF) 客户端使用 SPN。  
+ 使用此标识连接到终结点的安全 Windows Communication Foundation (WCF) 客户端在使用终结点进行 SSPI 身份验证时使用 SPN。  
   
 ## <a name="see-also"></a>请参阅
 
@@ -50,5 +50,5 @@ ms.locfileid: "61758179"
 - <xref:System.ServiceModel.EndpointAddress>
 - <xref:System.ServiceModel.EndpointAddress.Identity%2A>
 - <xref:System.ServiceModel.SpnEndpointIdentity>
-- [服务标识和身份验证](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
-- [\<identity>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)
+- [服务标识和身份验证](../../../wcf/feature-details/service-identity-and-authentication.md)
+- [\<identity>](identity.md)
