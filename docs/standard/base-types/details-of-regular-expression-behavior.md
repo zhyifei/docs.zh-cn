@@ -54,7 +54,7 @@ ms.locfileid: "69567481"
   
      若要详细了解惰性量符，请参阅[量符](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)。  
   
-- 正向先行断言：`(?=`subexpression  `)`。 此功能允许回溯引擎在匹配子表达式之后返回到文本中的相同位置。 它可用于通过验证从相同位置开始的多个模式来搜索整个文本。 它还允许引擎验证匹配项末尾是否存在某个子字符串，而无需在匹配的文本中包含该子字符串。 下面的示例使用正预测先行提取句子中后面不是标点符号的单词。  
+- 正预测先行断言：`(?=`subexpression `)`。 此功能允许回溯引擎在匹配子表达式之后返回到文本中的相同位置。 它可用于通过验证从相同位置开始的多个模式来搜索整个文本。 它还允许引擎验证匹配项末尾是否存在某个子字符串，而无需在匹配的文本中包含该子字符串。 下面的示例使用正预测先行提取句子中后面不是标点符号的单词。  
   
      [!code-csharp[Conceptual.RegularExpressions.Design#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/lookahead1.cs#2)]
      [!code-vb[Conceptual.RegularExpressions.Design#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/lookahead1.vb#2)]  
@@ -68,9 +68,9 @@ ms.locfileid: "69567481"
     |`\b`|在单词边界处结束匹配。|  
     |`(?=\P{P})`|预测先行以确定下一个字符是否为标点符号。 如果不是，则匹配成功。|  
   
-     若要详细了解正向先行断言，请参阅[分组构造](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。  
+     若要详细了解正预测先行断言，请参阅[分组构造](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。  
   
-- 负向先行断言：`(?!`subexpression  `)`。 通过此功能可以仅当子表达式未能匹配时才匹配表达式。 这对于修剪搜索特别有用，因为针对应消除的情况提供表达式通常比针对必须包括的情况提供表达式要更简单。 例如，难以为不以“non”开头的单词编写表达式。 下面的示例使用负预测先行排除它们。  
+- 负预测先行断言：`(?!`subexpression `)`。通过此功能可以仅当子表达式未能匹配时才匹配表达式。这对于修剪搜索特别有用，因为针对应消除的情况提供表达式通常比针对必须包括的情况提供表达式要更简单。例如，难以为不以“non”开头的单词编写表达式。下面的示例使用负预测先行排除它们。  
   
      [!code-csharp[Conceptual.RegularExpressions.Design#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/lookahead2.cs#3)]
      [!code-vb[Conceptual.RegularExpressions.Design#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/lookahead2.vb#3)]  
@@ -84,7 +84,7 @@ ms.locfileid: "69567481"
     |`(\w+)`|匹配一个或多个单词字符。|  
     |`\b`|在单词边界处结束匹配。|  
   
-     若要详细了解负向先行断言，请参阅[分组构造](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。  
+     若要详细了解负预测先行断言，请参阅[分组构造](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。  
   
 - 条件求值：`(?(`expression  `)`yes  `|`no  `)` 和 `(?(`name  `)`yes  `|`no  `)`，其中 expression  是要匹配的子表达式，name  是捕获组的名称，yes  是在 expression  匹配或 name  是有效的非空捕获组时要匹配的字符串，no  是在 expression  不匹配或 name  不是有效的非空捕获组时要匹配的子表达式。 此功能允许引擎使用多个备用模式进行搜索（具体取决于上一个子表达式匹配的结果或零宽度断言的结果）。 这样可实现功能更强大的反向引用形式，例如，它允许基于上一个子表达式是否匹配来匹配子表达式。 下面示例中的正则表达式匹配旨在供公共和内部使用的段落。 仅供内部使用的段落以 `<PRIVATE>` 标记开头。 正则表达式模式 `^(?<Pvt>\<PRIVATE\>\s)?(?(Pvt)((\w+\p{P}?\s)+)|((\w+\p{P}?\s)+))\r?$` 使用条件评估将旨在供公共使用和内部使用的段落内容分配给不同的捕获组。 这些段落随后可以按不同方式进行处理。  
   
@@ -124,7 +124,7 @@ ms.locfileid: "69567481"
   
      有关从右到左匹配的更多信息，请参见[正则表达式选项](../../../docs/standard/base-types/regular-expression-options.md)。  
   
-- 正负向后行断言：`(?<=`subexpression  `)`（对于正向后行断言）和 `(?<!`subexpression  `)`（对于负向后行断言）。 此功能非常类似于本主题前面讨论的预测先行。 由于正则表达式引擎允许完全的从右到左匹配，因此正则表达式允许无限制回顾。 当嵌套子表达式是外部表达式的超集时，正回顾和负回顾还可以用于避免嵌套限定符。 具有此类嵌套限定符的正则表达式通常性能不佳。 例如，下面的示例验证字符串是否以字母数字字符开头和结尾，以及字符串中的任何其他字符是否为更大子集之一。 它形成用于验证电子邮件地址的正则表达式的一部分内容；有关详细信息，请参阅[如何：确认字符串是有效的电子邮件格式](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md)。  
+- 正负回顾后发断言：`(?<=`subexpression `)`（正回顾后发断言）和 `(?<!`subexpression `)`（负回顾后发断言）。 此功能非常类似于本主题前面讨论的预测先行。 由于正则表达式引擎允许完全的从右到左匹配，因此正则表达式允许无限制回顾。 当嵌套子表达式是外部表达式的超集时，正回顾和负回顾还可以用于避免嵌套限定符。 具有此类嵌套限定符的正则表达式通常性能不佳。 例如，下面的示例验证字符串是否以字母数字字符开头和结尾，以及字符串中的任何其他字符是否为更大子集之一。 它形成用于验证电子邮件地址的正则表达式的一部分内容；有关详细信息，请参阅[如何：确认字符串是有效的电子邮件格式](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md)。  
   
      [!code-csharp[Conceptual.RegularExpressions.Design#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/lookbehind1.cs#5)]
      [!code-vb[Conceptual.RegularExpressions.Design#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/lookbehind1.vb#5)]  
