@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cf9ecdeb4df6210805490586f1818298025fc036
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 533e3d715b46b4ef6d473795a010fa3ad297ded2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67749949"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69913748"
 ---
 # <a name="ihosttasksetpriority-method"></a>IHostTask::SetPriority 方法
-请求主机调整线程优先级级别表示由当前的任务[IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)实例。  
+请求宿主调整当前[IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)实例所表示的任务的线程优先级别。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,21 +37,21 @@ HRESULT SetPriority (
   
 ## <a name="parameters"></a>参数  
  `newPriority`  
- [in]一个整数，表示由当前任务的请求的线程优先级值`IHostTask`实例。  
+ 中一个整数, 表示当前`IHostTask`实例表示的任务所请求的线程优先级值。  
   
 ## <a name="return-value"></a>返回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|`SetPriority` 已成功返回。|  
-|HOST_E_CLRNOTAVAILABLE|公共语言运行时 (CLR) 尚未加载到进程中，或处于不能运行托管的代码或已成功处理调用的状态。|  
-|HOST_E_TIMEOUT|呼叫已超时。|  
+|S_OK|`SetPriority`已成功返回。|  
+|HOST_E_CLRNOTAVAILABLE|公共语言运行时 (CLR) 未加载到进程中, 或 CLR 处于无法运行托管代码或成功处理调用的状态。|  
+|HOST_E_TIMEOUT|调用超时。|  
 |HOST_E_NOT_OWNER|调用方不拥有该锁。|  
-|HOST_E_ABANDONED|事件已取消时被阻塞的线程或纤程正在等待它。|  
-|E_FAIL|发生未知的灾难性故障。 如果某方法返回 E_FAIL，CLR 不再在进程内可用。 对托管方法的后续调用返回 HOST_E_CLRNOTAVAILABLE。|  
+|HOST_E_ABANDONED|已阻止的线程或纤程正在等待某个事件时, 该事件被取消。|  
+|E_FAIL|发生未知的灾难性故障。 当方法返回 E_FAIL 时, CLR 在该进程内将不再可用。 对宿主方法的后续调用会返回 HOST_E_CLRNOTAVAILABLE。|  
   
 ## <a name="remarks"></a>备注  
- 线程授予处理使用部分基于线程的优先级级别的轮循机制系统的时间。 `SetPriority` 使 CLR 能够设置当前任务的线程优先级别。 以下`newPriority`支持值。  
+ 将使用部分基于线程优先级别的轮循机制为线程授予处理时间。 `SetPriority`允许 CLR 为当前任务设置该线程优先级别。 支持以下`newPriority`值。  
   
 - THREAD_PRIORITY_ABOVE_NORMAL  
   
@@ -67,19 +67,19 @@ HRESULT SetPriority (
   
 - THREAD_PRIORITY_TIME_CRITICAL  
   
- CLR 调用`SetPriority`时的值<xref:System.Threading.Thread.Priority%2A?displayProperty=nameWithType>修改由用户代码。 主机可以定义其自己的线程优先级分配算法，并且可以自由地忽略此请求。  
+ 当用户代码`SetPriority`修改了的<xref:System.Threading.Thread.Priority%2A?displayProperty=nameWithType>值时, CLR 将调用。 宿主可以定义自己的线程优先级分配算法, 并可以随意忽略此请求。  
   
 > [!NOTE]
->  `SetPriority` 不报告线程优先级别是否已更改。 调用[ihosttask:: Getpriority](../../../../docs/framework/unmanaged-api/hosting/ihosttask-getpriority-method.md)来确定任务的线程优先级别的值。  
+> `SetPriority`不会报告线程优先级别是否已更改。 调用[IHostTask:: GetPriority](../../../../docs/framework/unmanaged-api/hosting/ihosttask-getpriority-method.md)以确定任务的线程优先级别的值。  
   
- 线程优先级别值定义由 Win32`SetThreadPriority`函数。 有关线程优先级的详细信息，请参阅 Windows 平台文档。  
+ 线程优先级别值由 Win32 `SetThreadPriority`函数定义。 有关线程优先级的详细信息, 请参阅 Windows 平台文档。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
   
- **库：** 包含为 MSCorEE.dll 中的资源  
+ **类库**作为资源包括在 Mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

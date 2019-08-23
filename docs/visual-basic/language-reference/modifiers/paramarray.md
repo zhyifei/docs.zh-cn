@@ -8,23 +8,23 @@ helpviewer_keywords:
 - ParamArray keyword [Visual Basic]
 - ParamArray keyword [Visual Basic], syntax
 ms.assetid: a5f18789-92bd-488f-9c7e-cf3719963635
-ms.openlocfilehash: b9dee0fc876c6e7a02d085db7db4bf1c5dd2c68d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8fc5d1afd9e9723e6b3c58e100b0519ef8fdfab4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62053907"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968365"
 ---
 # <a name="paramarray-visual-basic"></a>ParamArray (Visual Basic)
-指定过程参数采用一个可选的指定类型的元素的数组。 `ParamArray` 可以使用仅在参数列表的最后一个参数上。  
+指定过程参数采用指定类型的可选元素数组。 `ParamArray`只能在参数列表的最后一个参数上使用。  
   
 ## <a name="remarks"></a>备注  
- `ParamArray` 可以将任意数量的参数传递给该过程。 一个`ParamArray`始终使用声明参数[ByVal](../../../visual-basic/language-reference/modifiers/byval.md)。  
+ `ParamArray`允许将任意数量的参数传递给过程。 始终使用[ByVal](../../../visual-basic/language-reference/modifiers/byval.md)声明参数。`ParamArray`  
   
- 您可以提供一个或多个参数`ParamArray`通过传递相应的数据数组的参数类型，则一列以逗号分隔的值或执行任何操作根本。 详细信息，请参阅"调用 ParamArray"中[参数数组](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md)。  
+ 可以通过以下方式向`ParamArray`参数提供一个或多个参数: 传递适当数据类型的数组、以逗号分隔的值列表, 或根本不提供任何参数。 有关详细信息, 请参阅[参数数组](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md)中的 "调用 ParamArray"。  
   
 > [!IMPORTANT]
->  每当处理数组可以是无限期较大，则存在无限大的某种内部容量的应用程序的风险。 如果接受从调用代码的参数数组，应测试它的长度，并采取相应措施，如果你的应用程序太大。  
+> 无论何时处理可能会无限大的阵列, 都有 overrunning 应用程序的一些内部容量的风险。 如果接受来自调用代码的参数数组, 则应测试其长度, 如果应用程序太大, 则应采取适当的措施。  
   
  `ParamArray` 修饰符可用于下面的上下文中：  
   

@@ -8,28 +8,28 @@ helpviewer_keywords:
 - shortcut menus [Windows Forms], ContextMenuStrip control [Windows Forms]
 - ContextMenuStrip control [Windows Forms], about ContextMenuStrip control
 ms.assetid: 9787cdb3-88f1-4198-972f-eefd9524ce39
-ms.openlocfilehash: 23699c67de616ba3f535d2527a315aebe7448d3f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e4a6add5297ba7db606ca1891e9279141f8d6d20
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61955982"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962160"
 ---
 # <a name="contextmenustrip-control-overview"></a>ContextMenuStrip 控件概述
 > [!NOTE]
->  <xref:System.Windows.Forms.ContextMenuStrip>控制取代并添加了功能<xref:System.Windows.Forms.ContextMenu>控制; 但是，<xref:System.Windows.Forms.ContextMenu>以备向后兼容性和将来使用保留控件，如果您选择。  
+> 控件将替换并添加<xref:System.Windows.Forms.ContextMenu>到<xref:System.Windows.Forms.ContextMenu>控件中的功能; 但是, 会保留控件以实现向后兼容性和将来使用 (如果你选择)。 <xref:System.Windows.Forms.ContextMenuStrip>  
   
- 当用户单击鼠标右键，快捷菜单，也称为上下文菜单中，将出现在鼠标位置。 快捷方式*菜单*提供用于客户端区域或鼠标指针位置的控件的选项。  
+ 当用户单击鼠标右键时, 快捷菜单 (也称为上下文菜单) 出现在鼠标位置。 快捷*菜单*为工作区或鼠标指针位置的控件提供选项。  
   
- <xref:System.Windows.Forms.ContextMenuStrip>控件旨在与新无缝<xref:System.Windows.Forms.ToolStrip>和相关的控件，但您可以将相关联<xref:System.Windows.Forms.ContextMenuStrip>与其他控件一样轻松。  
+ 控件设计为与新<xref:System.Windows.Forms.ToolStrip>的和相关的控件无缝协作, <xref:System.Windows.Forms.ContextMenuStrip>但你也可以轻松地将与其他控件相关联。 <xref:System.Windows.Forms.ContextMenuStrip>  
   
- 下表显示了重要<xref:System.Windows.Forms.ContextMenuStrip>伴生类。  
+ 下表显示了重要<xref:System.Windows.Forms.ContextMenuStrip>的伴生类。  
   
 |类|描述|  
 |-----------|-----------------|  
-|<xref:System.Windows.Forms.ToolStripMenuItem>|表示在显示的可选选项<xref:System.Windows.Forms.MenuStrip>或<xref:System.Windows.Forms.ContextMenuStrip>。|  
-|<xref:System.Windows.Forms.ToolStripDropDown>|表示使用户能够从用户单击时显示的列表中选择单个项的控件<xref:System.Windows.Forms.ToolStripDropDownButton>或更高级别的菜单项。|  
-|<xref:System.Windows.Forms.ToolStripDropDownItem>|提供基本功能，用于控件派生自<xref:System.Windows.Forms.ToolStripItem>显示下拉项在单击时。|  
+|<xref:System.Windows.Forms.ToolStripMenuItem>|表示在<xref:System.Windows.Forms.MenuStrip>或<xref:System.Windows.Forms.ContextMenuStrip>上显示的可选择选项。|  
+|<xref:System.Windows.Forms.ToolStripDropDown>|表示一个控件, 该控件使用户能够从列表中选择单个项 (当用户单击<xref:System.Windows.Forms.ToolStripDropDownButton>或更高级别菜单项时显示)。|  
+|<xref:System.Windows.Forms.ToolStripDropDownItem>|为在单击时显示<xref:System.Windows.Forms.ToolStripItem>的下拉项的控件提供基本功能。|  
   
 ## <a name="see-also"></a>请参阅
 

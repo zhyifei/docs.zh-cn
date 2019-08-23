@@ -2,12 +2,12 @@
 title: 了解状态更改
 ms.date: 03/30/2017
 ms.assetid: a79ed2aa-e49a-47a8-845a-c9f436ec9987
-ms.openlocfilehash: 549620ee5317e68735b392ce35b73c92f2474eab
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 154f49e7da059d20d0751a73c664aa2a0f89be12
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363942"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963074"
 ---
 # <a name="understanding-state-changes"></a>了解状态更改
 本节讨论的内容包括通道具有的状态和转换、用于结构通道状态的类型以及实现它们的方式。  
@@ -58,7 +58,7 @@ ms.locfileid: "68363942"
  <xref:System.ServiceModel.Channels.CommunicationObject> 提供 Abort、Close 和 Open 的实现。 它还提供 Fault 方法，该方法可以将状态转换至“出错”状态。 图 2 显示的是 <xref:System.ServiceModel.ICommunicationObject> 状态机，其每个转换都是由导致该转换的方法标记的（未标记转换发生在导致上一个标记转换的方法的实现内部）。  
   
 > [!NOTE]
->  通信状态获取/设置的所有 <xref:System.ServiceModel.Channels.CommunicationObject> 实现都是线程同步的。  
+> 通信状态获取/设置的所有 <xref:System.ServiceModel.Channels.CommunicationObject> 实现都是线程同步的。  
   
  构造函数  
   

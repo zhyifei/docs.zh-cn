@@ -2,12 +2,12 @@
 title: 保证客户端应用程序的安全
 ms.date: 03/30/2017
 ms.assetid: 6239592e-fa7d-4dea-9f00-d296d0048b01
-ms.openlocfilehash: 0c14089247e916b91cb385c7d715cce54acee57c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1312ddc079bdf8f08aebe8eb27e4bab9bf914fa8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61664202"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963159"
 ---
 # <a name="secure-client-applications"></a>保证客户端应用程序的安全
 应用程序通常由多个部件组成，所有这些部件均不能包含漏洞，否则可能导致数据丢失或以其他方式危害系统。 在攻击者可访问数据或系统资源之前将其阻止，以此可创建安全的用户界面来防止出现许多问题。  
@@ -16,18 +16,18 @@ ms.locfileid: "61664202"
  在构建访问数据的应用程序时，除非能够证明其不为恶意输入，否则您应该假定所有用户输入均为恶意输入。 如果未能实现此目的，则可能会使您的应用程序易于受到攻击。 .NET Framework 包含的类可帮助您约束输入控件的值的域，如限制可输入字符的数目。 使用事件挂钩，您可以编写用于检查值的有效性的程序。 可验证和强类型化用户输入数据，从而限制应用程序对脚本和 SQL 注入攻击的公开程度。  
   
 > [!IMPORTANT]
->  您还必须验证数据源和客户端应用程序中的用户输入。 因为攻击者可能选择避开应用程序，而直接攻击数据源。  
+> 您还必须验证数据源和客户端应用程序中的用户输入。 因为攻击者可能选择避开应用程序，而直接攻击数据源。  
   
- [安全性和用户输入](../../../../docs/standard/security/security-and-user-input.md)  
+ [安全性和用户输入](../../../standard/security/security-and-user-input.md)  
  描述如何处理与用户输入相关的细微和潜在危险缺陷。  
   
- [在 ASP.NET Web Pages 中验证用户输入](https://docs.microsoft.com/previous-versions/aspnet/7kh55542(v=vs.100))  
+ [验证 ASP.NET 网页中的用户输入](https://docs.microsoft.com/previous-versions/aspnet/7kh55542(v=vs.100))  
  概述如何使用 ASP.NET 验证控件验证用户输入。  
   
  [Windows 窗体中的用户输入](../../../../docs/framework/winforms/user-input-in-windows-forms.md)  
  提供用于验证 Windows 窗体应用程序中鼠标和键盘输入的链接和信息。  
   
- [.NET Framework 正则表达式](../../../../docs/standard/base-types/regular-expressions.md)  
+ [.NET Framework 正则表达式](../../../standard/base-types/regular-expressions.md)  
  描述如何使用 <xref:System.Text.RegularExpressions.Regex> 类检查用户输入的有效性。  
   
 ## <a name="windows-applications"></a>Windows 应用程序  
@@ -53,7 +53,7 @@ ms.locfileid: "61664202"
 |--------------|-----------------|  
 |[保护 ASP.NET 网站](https://docs.microsoft.com/previous-versions/aspnet/91f66yxt(v=vs.100))|讨论如何保证 ASP.NET 应用程序的安全。|  
 |[保护使用 ASP.NET 创建的 XML Web Services](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w67h0dw7(v=vs.100))|讨论如何实现 ASP.NET Web 服务的安全性。|  
-|[脚本侵入概述](https://docs.microsoft.com/previous-versions/aspnet/w1sw53ds(v=vs.100))|讨论如何抵御脚本攻击，该攻击会尝试将恶意字符插入网页。|  
+|[脚本攻击概述](https://docs.microsoft.com/previous-versions/aspnet/w1sw53ds(v=vs.100))|讨论如何抵御脚本攻击，该攻击会尝试将恶意字符插入网页。|  
 |[Web 应用程序的基本安全实践](https://docs.microsoft.com/previous-versions/aspnet/zdh19h94(v=vs.100))|常规安全信息和指向更多讨论的链接，|  
   
 ## <a name="remoting"></a>远程处理  
@@ -63,12 +63,12 @@ ms.locfileid: "61664202"
 |--------------|-----------------|  
 |[远程应用程序的配置](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/b8tysty8(v=vs.100))|讨论如何配置远程处理应用程序以避免出现常见问题。|  
 |[远程处理中的安全性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/9hwst9th(v=vs.100))|描述身份验证和加密以及与远程处理相关的其他安全主题。|  
-|[安全性和远程处理注意事项](../../../../docs/framework/misc/security-and-remoting-considerations.md)|描述与受保护对象和应用程序域交叉相关的安全问题。|  
+|[安全和远程处理注意事项](../../../../docs/framework/misc/security-and-remoting-considerations.md)|描述与受保护对象和应用程序域交叉相关的安全问题。|  
   
 ## <a name="see-also"></a>请参阅
 
 - [保证 ADO.NET 应用程序的安全](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [有关数据访问策略建议](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))
+- [数据访问策略的建议](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))
 - [保护应用程序](/visualstudio/ide/securing-applications)
 - [保护连接信息](../../../../docs/framework/data/adonet/protecting-connection-information.md)
 - [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

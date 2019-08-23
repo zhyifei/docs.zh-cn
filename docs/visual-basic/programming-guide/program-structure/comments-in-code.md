@@ -14,15 +14,15 @@ helpviewer_keywords:
 - comments
 - code comments
 ms.assetid: 90136fba-22eb-49f9-ba81-63db629b4a47
-ms.openlocfilehash: 2737d9494fb4cd2f0cfaec4da1bca69003c6bad7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3635d52532789133a345d9a9228efae869c8c223
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64753754"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69945614"
 ---
 # <a name="comments-in-code-visual-basic"></a>代码中的注释 (Visual Basic)
-阅读代码示例时，经常会遇到注释符号 (`'`)。 此符号通知 Visual Basic 编译器忽略它，后面的文本或*注释*。 注释是为了方便阅读而为代码添加的简短的解释性说明。  
+阅读代码示例时，经常会遇到注释符号 (`'`)。 此符号指示 Visual Basic 编译器忽略它后面的文本或*注释*。 注释是为了方便阅读而为代码添加的简短的解释性说明。  
   
  在所有过程的开头加入一段说明过程功能特征（过程的作用）的简短注释是一个很好的编程做法。 这对你自己和检查代码的任何其他人都有好处。 应该把实现的详细信息（过程实现的方式）与描述功能特征的注释分开。 若给说明加入了实现的详细信息，切记在更新函数时对这些详细信息进行更新。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "64753754"
  [!code-vb[VbVbcnConventions#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#17)]  
   
 ## <a name="commenting-guidelines"></a>注释原则  
- 下表提供了在一段代码前可以加上哪些类型的注释的一般原则。 这些是一些建议;Visual Basic 不会强制实施有关添加注释的规则。 编写注释时，应编写对你和代码的任何其他读者都最为有效的注释。  
+ 下表提供了在一段代码前可以加上哪些类型的注释的一般原则。 这些是建议;Visual Basic 不会强制添加注释规则。 编写注释时，应编写对你和代码的任何其他读者都最为有效的注释。  
   
 |||  
 |---|---|  
@@ -54,14 +54,14 @@ ms.locfileid: "64753754"
   
 - 注释不能与行继续符同行。  
   
- 您可以添加或删除的代码块的注释符通过选择一个或多个行代码，然后选择**注释**(![Visual Studio 中的 Visual Basic 注释按钮](./media/comments-in-code/visual-basic-comment-button.gif)) 和**取消注释** (![Visual Studio 中的 Visual Basic 取消注释按钮](./media/comments-in-code/visual-basic-uncomment-button.gif)) 上的按钮**编辑**工具栏。  
+ 您可以通过选择一个或多个代码行并选择**注释**![(visual Studio 中的 Visual Basic 注释按钮) 和**取消**注释 (![visual Studio 中的 "注释" 按钮) 来添加或删除代码块的注释符号。](./media/comments-in-code/visual-basic-comment-button.gif)Visual Studio 中的 "基本取消注释" 按钮。) 上的按钮。 ](./media/comments-in-code/visual-basic-uncomment-button.gif)  
   
 > [!NOTE]
->  也可以用在文本前加关键字 `REM` 的方式给代码添加注释。 但是，`'`符号并**注释**/**取消注释**按钮是易于使用和需要较少的空间和内存。  
+> 也可以用在文本前加关键字 `REM` 的方式给代码添加注释。 但是, `'`符号和**注释**/的**取消**注释按钮更易于使用, 并且需要的空间和内存更少。  
   
 ## <a name="see-also"></a>请参阅
 
-- [基本技术-使用 XML 注释记录代码](https://msdn.microsoft.com/magazine/dd722812.aspx)
+- [基本直觉-通过 XML 注释记录代码](https://msdn.microsoft.com/magazine/dd722812.aspx)
 - [如何：创建 XML 文档](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)
 - [XML 注释标记](../../../visual-basic/language-reference/xmldoc/index.md)
 - [程序结构和代码约定](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)

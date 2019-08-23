@@ -5,28 +5,28 @@ helpviewer_keywords:
 - My.Application.Info object
 - My.Application.AssemblyInfo object
 ms.assetid: 2f4782ed-3da2-4d88-b341-0c6f480fb7bb
-ms.openlocfilehash: 560541d6f662988c56c973cc63788da4eefd74da
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 59819eea7e98970a0800ca246bbc253874ed2281
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051827"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963744"
 ---
 # <a name="myapplicationinfo-object"></a>My.Application.Info 对象
-提供用于获取有关应用程序，如版本号、 说明、 加载的程序集等的信息的属性。  
+提供用于获取有关应用程序的信息 (如版本号、说明、已加载程序集等) 的属性。  
   
 ## <a name="remarks"></a>备注  
  有关 `My.Application.Info` 对象所使用方法和属性的信息，请参阅 <xref:Microsoft.VisualBasic.ApplicationServices.AssemblyInfo>。  
   
 > [!NOTE]
->  可以使用的属性<xref:System.Diagnostics.FileVersionInfo?displayProperty=nameWithType>类来获取有关磁盘上的文件的信息。  
+> 可以使用<xref:System.Diagnostics.FileVersionInfo?displayProperty=nameWithType>类的属性获取有关磁盘上的文件的信息。  
   
 ## <a name="requirements"></a>要求  
- **Namespace**：<xref:Microsoft.VisualBasic.ApplicationServices>  
+ **命名空间：** <xref:Microsoft.VisualBasic.ApplicationServices>  
   
- **类：** <xref:Microsoft.VisualBasic.ApplicationServices.AssemblyInfo>  
+ **类:** <xref:Microsoft.VisualBasic.ApplicationServices.AssemblyInfo>  
   
- **程序集：** Visual Basic 运行库（在 Microsoft.VisualBasic.dll 中）  
+ **件**Visual Basic 运行库（在 Microsoft.VisualBasic.dll 中）  
   
 ## <a name="see-also"></a>请参阅
 

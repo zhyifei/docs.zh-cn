@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - CLR attributes for custom types [XAML Services]
 ms.assetid: 5dfb299a-b6e2-41b8-8694-e6ac987547f1
-ms.openlocfilehash: 2f907d097f52f13e733713d8ad68cc2390b051ed
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: a264ec3fa1232a058a3bfbabbe8b84712cf87322
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364227"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956416"
 ---
 # <a name="xaml-related-clr-attributes-for-custom-types-and-libraries"></a>自定义类型和库的 XAML 相关 CLR 特性
 本主题介绍 .NET Framework XAML 服务定义的公共语言运行时 (CLR) 特性。 它还介绍了在 .NET Framework 中定义的、对应用程序的程序集或类型应用了 XAML 相关方案的其他 CLR 特性。 将程序集、类型或成员与这些 CLR 特性相关联可提供与类型相关的 XAML 类型系统信息。 向任何 .NET Framework 使用 xaml 服务的 XAML 使用者提供信息, 以便直接或通过专用的 XAML 读取器和 XAML 编写器处理 XAML 节点流。  
@@ -66,7 +66,7 @@ ms.locfileid: "68364227"
 ### <a name="dependsonattribute"></a>DependsOnAttribute  
  **参考文档:**  <xref:System.Windows.Markup.DependsOnAttribute>  
   
- **适用于:** Property  
+ **适用于:** 属性  
   
  **形参**一个字符串, 指定特性化类型的另一个成员的名称。  
   
@@ -266,7 +266,7 @@ ms.locfileid: "68364227"
 - 在程序集中定义 XAML 语言支持, 并为<xref:System.Windows.Markup.XmlnsDefinitionAttribute> `http://schemas.microsoft.com/winfx/2006/xaml`指定。 在这种情况下, 通常应升级前缀`x`。  
   
 > [!NOTE]
->  .NET Framework XAML 服务还定义了与 XAML 相关的<xref:System.Windows.Markup.RootNamespaceAttribute>属性。 此属性是项目系统支持的程序集级别特性, 它与 XAML 自定义类型无关。  
+> .NET Framework XAML 服务还定义了与 XAML 相关的<xref:System.Windows.Markup.RootNamespaceAttribute>属性。 此属性是项目系统支持的程序集级别特性, 它与 XAML 自定义类型无关。  
   
 ## <a name="see-also"></a>请参阅
 

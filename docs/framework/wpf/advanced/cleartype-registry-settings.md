@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ClearType [WPF], registry settings
 - typography [WPF], ClearType registry settings
 ms.assetid: 56f314bb-b30b-4f67-8492-8b8a9fa432ae
-ms.openlocfilehash: 8f1c4415a834f7eb7c3048a89ab81de6921b7bf6
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: f4b5a0c3764c173afe03adb67fd3df9d17d9fdcb
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629943"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964883"
 ---
 # <a name="cleartype-registry-settings"></a>ClearType 注册表设置
 本主题概述了 WPF 应用程序使用的 Microsoft ClearType 注册表设置。  
@@ -36,12 +36,12 @@ ms.locfileid: "68629943"
 |像素结构|描述显示设备的像素排列。|  
 |文本对比度级别|描述显示文本的对比度级别。|  
   
- 这些设置可由知道如何引用已识别[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ClearType 注册表设置的外部配置实用程序来访问。 还可以直接使用 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 注册表编辑器来访问这些值，从而创建或修改这些设置。  
+ 这些设置可由知道如何引用已识别[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ClearType 注册表设置的外部配置实用程序来访问。 还可以通过使用 Windows 注册表编辑器直接访问这些值来创建或修改这些设置。  
   
- 如果未设置[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] ClearType 注册表设置 (这是默认状态), 则应用程序将查询系统参数信息以实现字体平滑设置。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]  
+ 如果未设置[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ClearType注册表设置(这是默认状态),则应用程序将查询Windows系统参数信息以进行[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]字体平滑设置。  
   
 > [!NOTE]
->  有关枚举显示设备名称的信息, 请参阅`SystemParametersInfo` [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]函数。  
+> 有关枚举显示设备名称的信息, 请参阅`SystemParametersInfo` [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]函数。  
   
 <a name="ClearType_level"></a>   
 ## <a name="cleartype-level"></a>ClearType 级别  
@@ -59,7 +59,7 @@ ms.locfileid: "68629943"
  ![注册表编辑器中的 ClearType 设置。](./media/cleartype-registry-settings/cleartype-settings-registry-editor.png)  
   
 > [!NOTE]
->  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序以两种模式之一呈现文本, 但不带 ClearType。 如果呈现的文本没有 ClearType, 则称为灰度呈现。  
+> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序以两种模式之一呈现文本, 但不带 ClearType。 如果呈现的文本没有 ClearType, 则称为灰度呈现。  
   
 <a name="gamma_level"></a>   
 ## <a name="gamma-level"></a>伽马级别  
@@ -89,7 +89,7 @@ ms.locfileid: "68629943"
  像素结构对应于 0 到 2 之间的一个整数值。 默认级别为 0，表示平面像素结构。  
   
 > [!NOTE]
->  有关枚举显示设备名称的信息, 请参阅`EnumDisplayDevices` [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]函数。  
+> 有关枚举显示设备名称的信息, 请参阅`EnumDisplayDevices` [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]函数。  
   
 ### <a name="registry-setting"></a>注册表设置  
  像素结构的注册表设置位置是对应于特定显示设备名称的本地计算机设置：  

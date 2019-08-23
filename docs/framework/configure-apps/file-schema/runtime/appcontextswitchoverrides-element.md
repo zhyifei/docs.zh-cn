@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3adeb57e853d26415c53b5ac2579f14187e45969
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 5a71277c6e5183f855ef07a6fc3a20e29b06998f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69658974"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920927"
 ---
 # <a name="appcontextswitchoverrides-element"></a>\<AppContextSwitchOverrides > 元素
 定义 <xref:System.AppContext> 类使用的一个或多个开关，用于提供新功能的选择退出机制。  
@@ -138,7 +138,7 @@ ms.locfileid: "69658974"
 |`System.Xml.`<br /><br /> `IgnoreEmptyKeySequences`|控制 XSD 架构验证是否忽略复合键中的空键顺序。 有关详细信息，请参阅[缓解：XML 架构验证](../../../migration-guide/mitigation-xml-schema-validation.md)。|.NET Framework 4.6|  
   
 > [!NOTE]
->  您还可以通过`AppContextSwitchOverrides` `static`调用 (在中C#) 或`Shared` (在 Visual Basic 中) <xref:System.AppContext.SetSwitch%2A?displayProperty=nameWithType>方法, 以编程方式设置交换机, 而不是将元素添加到应用程序配置文件。  
+> 您还可以通过`AppContextSwitchOverrides` `static`调用 (在中C#) 或`Shared` (在 Visual Basic 中) <xref:System.AppContext.SetSwitch%2A?displayProperty=nameWithType>方法, 以编程方式设置交换机, 而不是将元素添加到应用程序配置文件。  
   
  库开发人员还可以定义自定义开关, 使调用方可以选择不更改其库的更高版本中引入的已更改功能。 有关更多信息，请参见 <xref:System.AppContext> 类。  
   

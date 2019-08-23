@@ -6,16 +6,16 @@ helpviewer_keywords:
 - testing, UI Automation
 - UI Automation, automated testing
 ms.assetid: 3a0435c0-a791-4ad7-ba92-a4c1d1231fde
-ms.openlocfilehash: 3fb5d1107a2dacdc4dfd2210322c312becdfd90b
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: d973dd59c1f0612962b89775e1fb2cf6bdd756ad
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69566947"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69953929"
 ---
 # <a name="using-ui-automation-for-automated-testing"></a>使用 UI 自动化进行自动化测试
 > [!NOTE]
->  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关的最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], 请[参阅 Windows 自动化 API:UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
+> 本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关的最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], 请[参阅 Windows 自动化 API:UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  本概述介绍可如何将 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 用作一个用于在自动测试方案中进行编程访问的框架。  
   
@@ -26,7 +26,7 @@ ms.locfileid: "69566947"
  实现 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 需要提供程序和客户端，以便使其可以用作自动测试工具。 UI 自动化提供程序是 Microsoft Word、Excel 等应用程序以及其他第三方应用程序或基于 [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)] 操作系统的控件。 UI 自动化客户端包括自动测试脚本和辅助技术应用程序。  
   
 > [!NOTE]
->  本概述的目的在于展示 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的新增及改进的自动测试功能。 本概述不提供有关辅助功能的信息，只有在必要时才会提到这些功能。  
+> 本概述的目的在于展示 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的新增及改进的自动测试功能。 本概述不提供有关辅助功能的信息，只有在必要时才会提到这些功能。  
   
 <a name="Using_UI_Automation_During_Development"></a>   
 ## <a name="ui-automation-in-a-provider"></a>提供程序中的 UI 自动化  
@@ -35,7 +35,7 @@ ms.locfileid: "69566947"
  确定这些键操作后，应在控件上实现相应的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 控件模式（即将 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 元素的功能和行为进行镜像的控件模式）。 例如，具有组合框控件（如运行对话框）的用户交互通常涉及展开和折叠组合框，以隐藏或显示项列表、从该列表中选择项或通过键盘输入添加新值。  
   
 > [!NOTE]
->  对于其他辅助功能模型，开发人员必须直接从各个按钮、菜单或其他控件收集信息。 不便之处在于，每个控件类型都具有数十个次要变体。 也就是说，尽管某个按钮的十种变体全都以相同的方式工作且执行相同的功能，也必须将它们全部视为唯一控件。 无法知道这些控件在功能上是否相同。 所开发的控件模式可以表示这些常见的控件行为。 有关详细信息，请参阅 [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)。  
+> 对于其他辅助功能模型，开发人员必须直接从各个按钮、菜单或其他控件收集信息。 不便之处在于，每个控件类型都具有数十个次要变体。 也就是说，尽管某个按钮的十种变体全都以相同的方式工作且执行相同的功能，也必须将它们全部视为唯一控件。 无法知道这些控件在功能上是否相同。 所开发的控件模式可以表示这些常见的控件行为。 有关详细信息，请参阅 [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)。  
   
 <a name="Implementing_UI_Automation"></a>   
 ### <a name="implementing-ui-automation"></a>实现 UI 自动化  
@@ -79,7 +79,7 @@ ms.locfileid: "69566947"
  将自动化元素从其同级中单独标识出来。 <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> 不同于 <xref:System.Windows.Automation.AutomationElement.NameProperty> 等属性，前者并未经过本地化；而对于后者，如果产品需要以多种语言提供，则这些属性通常已本地化。 请参阅 [Use the AutomationID Property](../../../docs/framework/ui-automation/use-the-automationid-property.md)。  
   
 > [!NOTE]
->  <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> 不保证整个自动化树使用唯一标识。 例如，一个应用程序可能包含具有多个顶级菜单项的菜单控件，而这些顶级菜单项又具有多个子菜单项。 可以通过常规架构（如“Item1、Item2、Item3 等”）标识这些二级菜单项，并允许顶级菜单项中的子菜单项使用重复的标识符。  
+> <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> 不保证整个自动化树使用唯一标识。 例如，一个应用程序可能包含具有多个顶级菜单项的菜单控件，而这些顶级菜单项又具有多个子菜单项。 可以通过常规架构（如“Item1、Item2、Item3 等”）标识这些二级菜单项，并允许顶级菜单项中的子菜单项使用重复的标识符。  
   
 #### <a name="controltype"></a>ControlType  
  标识由自动化元素表示的控件类型。 通过了解控件类型可以推断出重要的信息。 请参阅 [UI Automation Control Types Overview](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)。  

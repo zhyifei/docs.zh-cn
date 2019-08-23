@@ -5,20 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c33d74b3-530d-421b-a121-96786dd263a5
-ms.openlocfilehash: d38965288884bb72e102d6ec09deca57296c9b0f
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: ebf630c08714a2e5162ba072f88b7fbdef7ca0f4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65882021"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964051"
 ---
 # <a name="how-to-connect-to-a-database"></a>如何：连接到数据库
-<xref:System.Data.Linq.DataContext> 是用来连接到数据库、从中检索对象以及将更改提交回数据库的主要渠道。 您使用<xref:System.Data.Linq.DataContext>就像使用 ADO.NET <xref:System.Data.SqlClient.SqlConnection>。 事实上，<xref:System.Data.Linq.DataContext> 是用您提供的连接或连接字符串初始化的。 有关详细信息，请参阅[DataContext 方法 （O/R 设计器）](/visualstudio/data-tools/datacontext-methods-o-r-designer)。  
+<xref:System.Data.Linq.DataContext> 是用来连接到数据库、从中检索对象以及将更改提交回数据库的主要渠道。 使用的<xref:System.Data.Linq.DataContext>方式与使用 ADO.NET <xref:System.Data.SqlClient.SqlConnection>时相同。 事实上，<xref:System.Data.Linq.DataContext> 是用您提供的连接或连接字符串初始化的。 有关详细信息, 请参阅[DataContext 方法 (O/R 设计器)](/visualstudio/data-tools/datacontext-methods-o-r-designer)。  
   
  <xref:System.Data.Linq.DataContext> 的用途是将您对对象的请求转换成要对数据库执行的 SQL 查询，然后将查询结果汇编成对象。 <xref:System.Data.Linq.DataContext> 通过实现与标准查询运算符（如 [!INCLUDE[vbteclinqext](../../../../../../includes/vbteclinqext-md.md)] 和 `Where`）相同的运算符模式来实现 `Select`。  
   
 > [!IMPORTANT]
->  维护安全连接最为重要。 有关详细信息，请参阅[LINQ to SQL 中的安全](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md)。  
+> 维护安全连接最为重要。 有关详细信息, 请参阅[LINQ to SQL 中的安全性](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md)。  
   
 ## <a name="example"></a>示例  
  在下面的示例中，使用 <xref:System.Data.Linq.DataContext> 连接到 Northwind 示例数据库并检索所在城市为伦敦的客户行。  

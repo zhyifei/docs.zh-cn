@@ -18,12 +18,12 @@ helpviewer_keywords:
 - nested message processing [WPF]
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
-ms.openlocfilehash: da9eaf127a4db02cddbb36e53a0d0ddb5b28b841
-ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
+ms.openlocfilehash: 703fafad283c11e6ee5e6d9c9da3760ea4a36361
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68818050"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966143"
 ---
 # <a name="threading-model"></a>线程处理模型
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 旨在帮助开发人员处理复杂的线程处理问题。 因此, 大多数[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]开发人员无需编写使用多个线程的接口。 由于多线程程序既复杂又难以调试，因此当存在单线程解决方案时，应避免使用多线程程序。  
@@ -31,7 +31,7 @@ ms.locfileid: "68818050"
  当然, 无论架构的设计方式如何, [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]框架都无法为每种类型的问题提供单线程解决方案。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]接近, 但在某些情况下, 多个线程会[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]提高响应能力或应用程序性能。 基于上文所述的背景材料，本文对上述情况进行探讨，然后通过对一些低级别的细节进行讨论作出总结。  
 
 > [!NOTE]
->  本主题介绍了如何使用<xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A>异步调用方法进行线程处理。 还可以通过调用<xref:System.Windows.Threading.Dispatcher.InvokeAsync%2A>方法 ( <xref:System.Action>采用或<xref:System.Func%601>作为参数) 进行异步调用。  <xref:System.Windows.Threading.Dispatcher.InvokeAsync%2A>方法返回<xref:System.Windows.Threading.DispatcherOperation.Task%2A>或,<xref:System.Windows.Threading.DispatcherOperation%601>它具有属性。 <xref:System.Windows.Threading.DispatcherOperation> 可以将`await`关键字与<xref:System.Windows.Threading.DispatcherOperation>或关联<xref:System.Threading.Tasks.Task>的结合使用。 如果<xref:System.Threading.Tasks.Task>需要为<xref:System.Windows.Threading.DispatcherOperation>或<xref:System.Windows.Threading.DispatcherOperation%601>返回的返回同步, 请调用<xref:System.Windows.Threading.TaskExtensions.DispatcherOperationWait%2A>扩展方法。  调用<xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType>将导致死锁。 有关使用<xref:System.Threading.Tasks.Task>执行异步操作的详细信息, 请参阅任务并行。  方法还具有<xref:System.Action>采用或<xref:System.Func%601>作为参数的重载。 <xref:System.Windows.Threading.Dispatcher.Invoke%2A>  可以通过传入委托<xref:System.Windows.Threading.Dispatcher.Invoke%2A>或<xref:System.Func%601>, <xref:System.Action>使用方法进行同步调用。  
+> 本主题介绍了如何使用<xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A>异步调用方法进行线程处理。 还可以通过调用<xref:System.Windows.Threading.Dispatcher.InvokeAsync%2A>方法 ( <xref:System.Action>采用或<xref:System.Func%601>作为参数) 进行异步调用。  <xref:System.Windows.Threading.Dispatcher.InvokeAsync%2A>方法返回<xref:System.Windows.Threading.DispatcherOperation.Task%2A>或,<xref:System.Windows.Threading.DispatcherOperation%601>它具有属性。 <xref:System.Windows.Threading.DispatcherOperation> 可以将`await`关键字与<xref:System.Windows.Threading.DispatcherOperation>或关联<xref:System.Threading.Tasks.Task>的结合使用。 如果<xref:System.Threading.Tasks.Task>需要为<xref:System.Windows.Threading.DispatcherOperation>或<xref:System.Windows.Threading.DispatcherOperation%601>返回的返回同步, 请调用<xref:System.Windows.Threading.TaskExtensions.DispatcherOperationWait%2A>扩展方法。  调用<xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType>将导致死锁。 有关使用<xref:System.Threading.Tasks.Task>执行异步操作的详细信息, 请参阅任务并行。  方法还具有<xref:System.Action>采用或<xref:System.Func%601>作为参数的重载。 <xref:System.Windows.Threading.Dispatcher.Invoke%2A>  可以通过传入委托<xref:System.Windows.Threading.Dispatcher.Invoke%2A>或<xref:System.Func%601>, <xref:System.Action>使用方法进行同步调用。  
   
 <a name="threading_overview"></a>   
 ## <a name="overview-and-the-dispatcher"></a>概述和调度程序  
@@ -43,7 +43,7 @@ ms.locfileid: "68818050"
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序应该如何处理大操作？ 如果代码涉及大型计算，或需要查询某些远程服务器上的数据库，应该怎么办？ 通常情况下, 答案是在单独的线程中处理大操作, 使[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]线程可自由地用于<xref:System.Windows.Threading.Dispatcher>队列中的项。 当大操作完成时, 它可以将其结果报告回[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]线程以便显示。  
   
- 过去, [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]只[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]允许通过创建元素的线程来访问元素。 这意味着，负责长时间运行任务的后台线程无法在任务完成时更新文本框。 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]这样做是为了确保[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]组件的完整性。 如果在绘制过程中后台线程更新了列表框的内容，则此列表框看起来可能会很奇怪。  
+ 以前, Windows 只[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]允许通过创建元素的线程访问元素。 这意味着，负责长时间运行任务的后台线程无法在任务完成时更新文本框。 Windows 这样做是为了确保[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]组件的完整性。 如果在绘制过程中后台线程更新了列表框的内容，则此列表框看起来可能会很奇怪。  
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 具有内置互相排斥机制，此机制能强制执行这种协调。 中的大多数[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]类都<xref:System.Windows.Threading.DispatcherObject>是从派生的。 构造时, 将<xref:System.Windows.Threading.DispatcherObject>对链接的<xref:System.Windows.Threading.Dispatcher>引用存储到当前正在运行的线程。 实际上, <xref:System.Windows.Threading.DispatcherObject>与创建它的线程关联。 在程序执行期间, <xref:System.Windows.Threading.DispatcherObject>可以调用其公共<xref:System.Windows.Threading.DispatcherObject.VerifyAccess%2A>方法。 <xref:System.Windows.Threading.DispatcherObject.VerifyAccess%2A>检查与<xref:System.Windows.Threading.Dispatcher>当前线程关联的, 并将其与在<xref:System.Windows.Threading.Dispatcher>构造过程中存储的引用进行比较。 如果二者不匹配, <xref:System.Windows.Threading.DispatcherObject.VerifyAccess%2A>将引发异常。 <xref:System.Windows.Threading.DispatcherObject.VerifyAccess%2A>用于在属于的<xref:System.Windows.Threading.DispatcherObject>每个方法的开头调用。  
   
@@ -141,7 +141,7 @@ ms.locfileid: "68818050"
 ### <a name="multiple-windows-multiple-threads"></a>多窗口、多线程  
  某些[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序需要多个顶级窗口。 一个线程/<xref:System.Windows.Threading.Dispatcher>组合可用于管理多个窗口是完全可接受的, 但有时多个线程会执行更好的作业。 尤其当这些窗口中的某一个将有可能要独占线程时，更是如此。  
   
- [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 资源管理器以这种方式工作。 每个新资源管理器窗口都属于原始进程，但它是在独立线程的控件下创建的。  
+ Windows 资源管理器以这种方式工作。 每个新资源管理器窗口都属于原始进程，但它是在独立线程的控件下创建的。  
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 使用<xref:System.Windows.Controls.Frame>控件, 可以显示网页。 我们可以轻松创建简单的 Internet Explorer 替换。 让我们从一个重要功能开始：打开新资源管理器窗口的能力。 当用户单击“新建窗口”按钮时，我们将在单独的线程中启动窗口的副本。 这样一来，在其中一个窗口中的长时间运行或阻塞操作将不会锁定其他窗口。  
   

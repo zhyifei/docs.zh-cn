@@ -3,15 +3,15 @@ title: <securityTokenHandlerConfiguration>
 ms.date: 03/30/2017
 ms.assetid: 28724cc6-020c-4a06-9a1f-d7594f315019
 author: BrucePerlerMS
-ms.openlocfilehash: 29e18cdda9e18addef4f0f32fd30e9abf6af78fc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0aefaa808dfc32085a208420fcd582b1671acc64
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793843"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69942447"
 ---
 # <a name="securitytokenhandlerconfiguration"></a>\<securityTokenHandlerConfiguration>
-提供的令牌处理程序集合的配置。  
+为标记处理程序的集合提供配置。  
   
  \<system.identityModel>  
 \<identityConfiguration>  
@@ -39,29 +39,29 @@ ms.locfileid: "61793843"
   
 |特性|描述|  
 |---------------|-----------------|  
-|saveBootstrapContext|指定是否应在会话令牌中包含启动令牌。 值还可以设置标记处理程序集合上设置`saveBootstrapContext`特性，可以在[ \<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)元素。 令牌处理程序集合上设置值将覆盖在服务上设置的值。|  
-|maximumClockSkew|一个<xref:System.TimeSpan>指定最大允许的时钟偏差。 执行时间敏感操作，如验证登录会话的过期时间时，控制最大允许的时钟偏差。 默认为 5 分钟"00: 05:00"。 有关如何指定详细信息<xref:System.TimeSpan>值，请参阅[Timespan 值](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md)。 最大时钟偏差还可以设置在服务级别通过设置`maximumClockSkew`特性，可以在[ \<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)元素。 令牌处理程序集合上设置值将覆盖在服务上设置的值。|  
+|saveBootstrapContext|指定是否应在会话令牌中包含启动令牌。 还可以通过在`saveBootstrapContext` [ \<identityConfiguration >](identityconfiguration.md)元素上设置属性, 在令牌处理程序集合上设置该值。 标记处理程序集合上设置的值将覆盖在服务上设置的值。|  
+|maximumClockSkew|一个<xref:System.TimeSpan> , 它指定允许的最大时钟偏差。 控制执行区分时间的操作时允许的最大时钟偏差, 如验证登录会话的过期时间。 默认值为5分钟 "00:05:00"。 有关如何指定<xref:System.TimeSpan>值的详细信息, 请参阅[Timespan 值](../windows-workflow-foundation/index.md)。 通过在`maximumClockSkew` [ \<identityConfiguration >](identityconfiguration.md)元素上设置属性, 还可以在服务级别设置最大时钟偏差。 标记处理程序集合上设置的值将覆盖在服务上设置的值。|  
   
 ### <a name="child-elements"></a>子元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<audienceUris>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/audienceuris.md)|指定 Uri 是可接受此信赖方标识符的集。 可选。|  
-|[\<caches>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/caches.md)|注册用于会话令牌和令牌重放检测的缓存。 可以指定在服务级别或对安全令牌处理程序集合。 可选。|  
-|[\<certificateValidation>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md)|控制令牌处理程序用来验证证书的设置。 可以指定在服务级别或对安全令牌处理程序集合。 如果特定的处理程序配置了其自己的验证程序，则将重写这些设置。 可选。|  
-|[\<issuerNameRegistry>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuernameregistry.md)|配置颁发者名称注册的标记处理程序集合中的处理程序使用。 可选。|  
-|[\<issuerTokenResolver>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuertokenresolver.md)|注册令牌处理程序集合中的处理程序使用的颁发者令牌解析程序。 颁发者令牌解析程序用于解决签名令牌对传入令牌和消息。 可选。|  
-|[\<serviceTokenResolver>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/servicetokenresolver.md)|注册的服务令牌解析程序使用的令牌处理程序集合中的处理程序。 服务标记解析器用于解析传入的令牌和消息中的加密令牌。 可选。|  
-|[\<tokenReplayDetection>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaydetection.md)|启用令牌重放检测并指定令牌的到期时间。 可以指定在服务级别或对安全令牌处理程序集合。 可选。|  
+|[\<audienceUris>](audienceuris.md)|指定作为此信赖方的可接受标识符的 Uri 集。 可选。|  
+|[\<caches>](caches.md)|注册用于会话令牌和令牌重播检测的缓存。 可在服务级别或安全标记处理程序集合上指定。 可选。|  
+|[\<certificateValidation>](certificatevalidation.md)|控制标记处理程序用于验证证书的设置。 可在服务级别或安全标记处理程序集合上指定。 如果为特定处理程序配置了其自己的验证程序, 则会重写这些设置。 可选。|  
+|[\<issuerNameRegistry>](issuernameregistry.md)|配置标记处理程序集合中的处理程序使用的颁发者名称注册表。 可选。|  
+|[\<issuerTokenResolver>](issuertokenresolver.md)|注册由标记处理程序集合中的处理程序使用的颁发者令牌解析程序。 颁发者令牌解析器用于解析传入令牌和消息的签名令牌。 可选。|  
+|[\<serviceTokenResolver>](servicetokenresolver.md)|注册令牌处理程序集合中的处理程序使用的服务令牌解析程序。 服务令牌解析器用于解析传入令牌和消息的加密令牌。 可选。|  
+|[\<tokenReplayDetection>](tokenreplaydetection.md)|启用令牌重播检测并指定令牌的过期时间。 可在服务级别或安全标记处理程序集合上指定。 可选。|  
   
 ### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<securityTokenHandlers>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlers.md)|指定与该终结点注册的安全令牌处理程序的集合。|  
+|[\<securityTokenHandlers>](securitytokenhandlers.md)|指定注册到终结点的安全令牌处理程序的集合。|  
   
 ## <a name="remarks"></a>备注  
- 本部分提供的属性值<xref:System.IdentityModel.Tokens.SecurityTokenHandlerConfiguration>对象。 在本部分中配置的设置会覆盖服务上配置。 其中某些设置可以反过来，重写由一个处理程序添加到安全标记处理程序集合时指定的设置。  
+ 本部分提供<xref:System.IdentityModel.Tokens.SecurityTokenHandlerConfiguration>对象的属性值。 此部分中配置的设置将覆盖在服务上配置的设置。 其中的某些设置可以通过在将处理程序添加到安全标记处理程序集合时指定的设置重写。  
   
 ## <a name="example"></a>示例  
   

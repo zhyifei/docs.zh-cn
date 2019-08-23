@@ -5,23 +5,23 @@ helpviewer_keywords:
 - control patterns
 - UI Automation, control patterns
 ms.assetid: cc229b33-234b-469b-ad60-f0254f32d45d
-ms.openlocfilehash: 259594858e96897cb377cde4104e17b748f902c4
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 30e8619e70da46cb510fbe28ab2e8bcf27621e19
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68971813"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963302"
 ---
 # <a name="ui-automation-control-patterns-overview"></a>UI 自动化控件模式概述
 > [!NOTE]
->  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关的最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], 请[参阅 Windows 自动化 API:UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
+> 本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关的最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], 请[参阅 Windows 自动化 API:UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  此概述介绍 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 控件模式。 控件模式提供了一种方法，用于独立于控件类型或控件的外观对控件的功能进行分类和公开。  
   
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 使用控件模式表示常见的控件行为。 例如，你针对可被调用的控件（如按钮）使用调用控件模式并针对具有滚动条的控件（如列表框、列表视图或组合框）使用“滚动”控件模式。 由于每个控件模式表示单独的功能，它们可结合使用以描述由特定控件支持的完整功能组合。  
   
 > [!NOTE]
->  聚合控件（由子控件生成，这些子控件提供由父级公开的功能的 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] ）应实现所有与每个子控件正常关联的控件模式。 反过来，不需要由这些子控件实现相同的这些控件模式。  
+> 聚合控件（由子控件生成，这些子控件提供由父级公开的功能的 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] ）应实现所有与每个子控件正常关联的控件模式。 反过来，不需要由这些子控件实现相同的这些控件模式。  
   
 <a name="uiautomation_control_pattern_includes"></a>   
 ## <a name="ui-automation-control-pattern-components"></a>UI 自动化控件模式组件  

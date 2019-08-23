@@ -2,18 +2,18 @@
 title: 查询示例
 ms.date: 03/30/2017
 ms.assetid: 137f8677-494c-4d49-95ce-c17742f2d01f
-ms.openlocfilehash: 74664dd98ac067153894edc934c8f15eec407261
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7be01abf568ed089089b1bc25d2a175f78ae7f7f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783105"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962741"
 ---
 # <a name="query-examples"></a>查询示例
-本部分提供了典型的 Visual Basic 和 C# 示例[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]查询。 在示例部分中，使用 Visual Studio 的开发人员可以提供的示例解决方案中找到更多示例。 有关详细信息，请参阅[示例](../../../../../../docs/framework/data/adonet/sql/linq/samples.md)。  
+本部分提供了 Visual Basic C#和典型[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]查询的示例。 使用 Visual Studio 的开发人员可以在 "示例" 部分中提供的示例解决方案中找到更多示例。 有关详细信息, 请参阅[示例](../../../../../../docs/framework/data/adonet/sql/linq/samples.md)。  
   
 > [!IMPORTANT]
->  *db*中的代码示例中通常使用[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]文档。 *db*被假定为的实例*Northwind*类，该类继承自<xref:System.Data.Linq.DataContext>。  
+> *db*通常用于文档中[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]的代码示例。 *db*假定为*Northwind*类的一个实例, 该类继承自<xref:System.Data.Linq.DataContext>。  
   
 ## <a name="in-this-section"></a>本节内容  
  [聚合查询](../../../../../../docs/framework/data/adonet/sql/linq/aggregate-queries.md)  
@@ -62,14 +62,14 @@ ms.locfileid: "61783105"
  提供在 `from`、`where` 和 `select` 子句中使用外键导航的示例。  
   
  [构建投影](../../../../../../docs/framework/data/adonet/sql/linq/formulate-projections.md)  
- 提供了示例的组合`select`与其他功能 (例如，*匿名类型*) 构建查询投影。  
+ 提供与其他功能`select` (例如,*匿名类型*) 组合以形成查询投影的示例。  
   
 ## <a name="related-sections"></a>相关章节  
  [标准查询运算符概述 (C#)](../../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- 介绍了使用标准查询运算符的概念， C#。  
+ 说明使用C#的标准查询运算符的概念。  
   
  [标准查询运算符概述 (Visual Basic)](../../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- 介绍了使用 Visual Basic 的标准查询运算符的概念。  
+ 介绍使用 Visual Basic 的标准查询运算符的概念。  
   
  [查询概念](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)  
  解释 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 如何使用适用于查询的概念。  

@@ -3,15 +3,15 @@ title: <nameClaimType>
 ms.date: 03/30/2017
 ms.assetid: 17514d95-f0f5-4789-8e28-346640dc227c
 author: BrucePerlerMS
-ms.openlocfilehash: 5202e162a7eb5fc4e36d6a6c0a2c18af48872a69
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 47366c5bb2bd9228268fce3ae6e1fb5ad457dab1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61791594"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69942619"
 ---
 # <a name="nameclaimtype"></a>\<nameClaimType>
-设置指定的声明类型<xref:System.Security.Principal.IIdentity.Name%2A>属性。 声明类型用于搜索<xref:System.Security.Claims.Claim>中的集合<xref:System.Security.Claims.ClaimsIdentity>返回的对象<xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A>此令牌处理程序方法。 然后，将匹配声明的值设置为的名称<xref:System.Security.Principal.IIdentity>生成的此令牌处理程序。  
+设置指定<xref:System.Security.Principal.IIdentity.Name%2A>属性的声明类型。 声明类型用于<xref:System.Security.Claims.Claim>在此标记处理程序的<xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A>方法返回的<xref:System.Security.Claims.ClaimsIdentity>对象集合中搜索。 然后, 将匹配声明的值设置为从此标记处理程序生成<xref:System.Security.Principal.IIdentity>的的名称。  
   
  \<system.identityModel>  
 \<identityConfiguration>  
@@ -44,19 +44,19 @@ ms.locfileid: "61791594"
   
 |特性|描述|  
 |---------------|-----------------|  
-|值|一个字符串，指定表示要使用的声明的声明类型的 URI<xref:System.Security.Principal.IIdentity.Name%2A>属性。 必需。|  
+|值|一个字符串, 指定表示要<xref:System.Security.Principal.IIdentity.Name%2A>用于属性的声明的声明类型的 URI。 必需。|  
   
 ### <a name="child-elements"></a>子元素  
- None  
+ 无  
   
 ### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<samlSecurityTokenRequirement>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/samlsecuritytokenrequirement.md)|提供用于配置<xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler>类，<xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>类或这些类的任何一个的派生的类。|  
+|[\<samlSecurityTokenRequirement>](samlsecuritytokenrequirement.md)|为<xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> 类<xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> 、类或其中任何一个类的派生类提供配置。|  
   
 ## <a name="remarks"></a>备注  
- `<nameClaimType>`元素集<xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement.NameClaimType%2A>属性时<xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement>从配置初始化对象。  
+ 从`<nameClaimType>`配置中初始化<xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement.NameClaimType%2A> <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement>对象时, 元素设置属性。  
   
 ## <a name="example"></a>示例  
   

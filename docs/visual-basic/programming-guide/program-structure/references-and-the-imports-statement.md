@@ -9,50 +9,50 @@ helpviewer_keywords:
 - Imports statement [Visual Basic], referencing assemblies
 - assemblies [Visual Basic], references
 ms.assetid: 38149bd4-0a6f-4b31-b5f8-94a8c33f1600
-ms.openlocfilehash: f3396eb3e758dc456d86de80246de24349680f2e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 99afa42994dd09d0b5faaeaf534fbc4b41816998
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61967747"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962481"
 ---
 # <a name="references-and-the-imports-statement-visual-basic"></a>引用和 Imports 语句 (Visual Basic)
-您可以向外部对象提供你的项目通过选择**添加引用**命令**项目**菜单。 在 Visual Basic 中的引用可以指向程序集，与类似类型库但包含的详细信息。  
+通过选择 "**项目**" 菜单上的 "**添加引用**" 命令, 可以使外部对象对项目可用。 Visual Basic 中的引用可指向程序集, 这些程序集类似于类型库, 但包含更多信息。  
   
 ## <a name="the-imports-statement"></a>Imports 语句  
- 程序集包含一个或多个命名空间。 当添加对程序集的引用时，还可以添加`Imports`控制该程序集的命名空间的模块中的可见性的模块的语句。 `Imports`语句提供了使您可以使用仅需提供的唯一引用的命名空间一部分的作用域上下文。  
+ 程序集包括一个或多个命名空间。 添加对程序集的引用时, 还可以向模块添加`Imports`一个语句, 该模块控制该程序集的命名空间在模块中的可见性。 `Imports`语句提供了一个范围上下文, 该上下文允许只使用提供唯一引用所需的命名空间部分。  
   
- `Imports`语句具有以下语法：  
+ `Imports`语句具有以下语法:  
   
  `Imports [Aliasname =] Namespace`  
   
- `Aliasname` 为短名称，可以使用代码中引用的导入的命名空间的引用。 `Namespace` 是通过在项目中，定义或通过以前的项目引用的命名空间通过提供`Imports`语句。  
+ `Aliasname`引用可以在代码中用来引用导入的命名空间的短名称。 `Namespace`是通过项目引用、项目中的定义或通过上`Imports`一条语句提供的命名空间。  
   
- 模块可以包含任意数量的`Imports`语句。 它们必须出现在任何之后`Option`语句，如果存在，但在之前的任何其他代码。  
+ 模块可以包含任意多个`Imports`语句。 它们必须出现在任何`Option`语句之后 (如果存在), 但在任何其他代码之前。  
   
 > [!NOTE]
->  不要混淆与项目引用`Imports`语句或`Declare`语句。 项目引用使得外部对象，例如，在程序集中，对象可用于 Visual Basic 项目。 `Imports`语句用于简化对项目引用的访问，但不提供对这些对象的访问。 `Declare`语句用于声明对外部过程中动态链接库 (DLL) 的引用。  
+> 不要将`Imports`项目引用与语句`Declare`或语句混淆。 项目引用使外部对象 (如程序集中的对象) 可用于 Visual Basic 项目。 `Imports`语句用于简化对项目引用的访问, 但不提供对这些对象的访问权限。 `Declare`语句用于声明对动态链接库 (DLL) 中外部过程的引用。  
   
-## <a name="using-aliases-with-the-imports-statement"></a>通过导入语句使用别名  
- `Imports`语句，从而更便于访问的类的方法，无需显式类型引用的完全限定的名称。 别名，可将更友好的名称分配到一个命名空间的一部分。 例如，回车/换行序列会导致单个多行上显示的文本是一部分<xref:Microsoft.VisualBasic.ControlChars>中的模块<xref:Microsoft.VisualBasic?displayProperty=nameWithType>命名空间。 若要在不带别名程序中使用此常量，你需要键入以下代码：  
+## <a name="using-aliases-with-the-imports-statement"></a>在 Imports 语句中使用别名  
+ 使用`Imports`语句, 无需显式键入引用的完全限定名, 就能更轻松地访问类的方法。 使用别名可以为一个命名空间的一部分分配更友好的名称。 例如, 在多行上显示一段文本的回车/换行符序列是<xref:Microsoft.VisualBasic.ControlChars> <xref:Microsoft.VisualBasic?displayProperty=nameWithType>命名空间中的模块的一部分。 若要在不带别名的程序中使用此常量, 需要键入以下代码:  
   
  [!code-vb[VbVbalrApplication#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#3)]  
   
- `Imports` 语句必须始终为第一个行紧跟任何`Option`模块中的语句。 以下代码片段演示如何导入和分配的别名<xref:Microsoft.VisualBasic.ControlChars?displayProperty=nameWithType>模块：  
+ `Imports`语句必须始终是紧跟在模块中的任何`Option`语句之后的第一行。 下面的代码段演示了如何导入和分配模块的<xref:Microsoft.VisualBasic.ControlChars?displayProperty=nameWithType>别名:  
   
  [!code-vb[VbVbalrApplication#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#4)]  
   
- 将来对此命名空间的引用可以是简短得多：  
+ 以后引用此命名空间可能会大大缩短:  
   
  [!code-vb[VbVbalrApplication#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#5)]  
   
- 如果`Imports`语句不包括别名名称，而无需限定的模块中可以使用导入的命名空间中定义的元素。 如果指定的别名名称，则它必须用作限定符的名称包含在该命名空间内。  
+ `Imports`如果语句不包含别名, 则在导入的命名空间中定义的元素无需限定即可在模块中使用。 如果指定了别名, 则必须将其用作该命名空间中包含的名称的限定符。  
   
 ## <a name="see-also"></a>请参阅
 
 - <xref:Microsoft.VisualBasic.ControlChars>
 - <xref:Microsoft.VisualBasic>
-- [在 Visual Basic 中的命名空间](../../../visual-basic/programming-guide/program-structure/namespaces.md)
+- [Visual Basic 中的命名空间](../../../visual-basic/programming-guide/program-structure/namespaces.md)
 - [.NET 中的程序集](../../../standard/assembly/index.md)
 - [如何：使用命令行创建和使用程序集](../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md)
 - [Imports 语句（.NET 命名空间和类型）](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)

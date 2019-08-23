@@ -10,31 +10,31 @@ helpviewer_keywords:
 - dialog boxes [Windows Forms], context-sensitive Help
 - Windows Forms, context-sensitive Help
 ms.assetid: 6b10c2cc-c577-4cb5-9669-e37b33416af9
-ms.openlocfilehash: 9e8dc2ee2773b26a7bfef1da209399a8b49de9ad
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: cefc590bb3011b282392504a78ac5c393c58493e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624127"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965698"
 ---
 # <a name="helpprovider-component-overview-windows-forms"></a>HelpProvider 组件概述（Windows 窗体）
-Windows 窗体[HelpProvider](helpprovider-component-windows-forms.md)组件用于将 HTML Help 1.x 帮助文件 （.chm 文件，使用 HTML Help Workshop 生成或.htm 文件） 与 Windows 应用程序相关联。 你可以提供多种方式帮助：  
+Windows 窗体[HelpProvider](helpprovider-component-windows-forms.md)组件用于将 html Help 1.x 帮助文件 (使用 Html 帮助讨论会生成的 .chm 文件或 .htm 文件) 与 Windows 应用程序相关联。 可以通过多种方式提供帮助:  
   
-- 为 Windows 窗体上控件提供上下文相关帮助。  
+- 为 Windows 窗体上的控件提供上下文相关帮助。  
   
-- 提供特定对话框或出现在对话框中的特定控件的上下文相关帮助。  
+- 在特定对话框或对话框中的特定控件上提供区分上下文的帮助。  
   
-- 打开帮助文件的特定区域，如表的内容、 索引或搜索功能的主页。  
+- 在特定区域中打开帮助文件, 例如目录表、索引或搜索函数的主页。  
   
 ## <a name="using-the-help-provider"></a>使用帮助提供程序  
- 添加<xref:System.Windows.Forms.HelpProvider>向 Windows 窗体组件允许要公开的帮助属性的窗体上的其他控件<xref:System.Windows.Forms.HelpProvider>组件。 这使您可以在 Windows 窗体上的控件提供帮助。 可以将帮助文件与相关联<xref:System.Windows.Forms.HelpProvider>组件使用<xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A>属性。 指定通过调用提供的帮助类型<xref:System.Windows.Forms.HelpProvider.SetHelpNavigator%2A>提供的值和<xref:System.Windows.Forms.HelpNavigator>枚举为指定的控件。 你提供的关键字或主题的帮助通过调用<xref:System.Windows.Forms.HelpProvider.SetHelpKeyword%2A>方法。  
+ 将组件添加到 Windows 窗体后, 窗体上的其他控件就可以公开<xref:System.Windows.Forms.HelpProvider>组件的 "帮助" 属性。 <xref:System.Windows.Forms.HelpProvider> 这使您能够为 Windows 窗体上的控件提供帮助。 您可以<xref:System.Windows.Forms.HelpProvider> <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A>使用属性将帮助文件与组件相关联。 您可以通过调用<xref:System.Windows.Forms.HelpProvider.SetHelpNavigator%2A>并提供指定控件的<xref:System.Windows.Forms.HelpNavigator>枚举中的值来指定提供的帮助的类型。 可以通过调用<xref:System.Windows.Forms.HelpProvider.SetHelpKeyword%2A>方法为帮助提供关键字或主题。  
   
- （可选） 若要将特定的帮助字符串与另一个控件相关联，请使用<xref:System.Windows.Forms.HelpProvider.SetHelpString%2A>方法。 在用户按 F1 键在控件有焦点时，您将使用此方法的控件相关联的字符串显示弹出窗口中。  
+ (可选) 若要将特定帮助字符串与另一个控件关联<xref:System.Windows.Forms.HelpProvider.SetHelpString%2A> , 请使用方法。 当控件具有焦点时, 如果用户按 F1 键, 则使用此方法与控件相关联的字符串将显示在弹出窗口中。  
   
- 如果<xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A>尚未设置，必须使用<xref:System.Windows.Forms.HelpProvider.SetHelpString%2A>来提供帮助文本。 如果同时设置了<xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A>和帮助字符串，帮助根据<xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A>将优先。  
+ 如果<xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A>尚未设置, 则必须使用<xref:System.Windows.Forms.HelpProvider.SetHelpString%2A>提供帮助文本。 如果同时<xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A>设置了和帮助字符串, 则基于的<xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A>帮助将优先。  
   
 > [!NOTE]
->  您可能会遇到问题时指定的路径中的帮助文件，使用相对路径<xref:System.Windows.Forms.Help.ShowHelp%2A>方法或<xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A>属性的<xref:System.Windows.Forms.HelpProvider>控件。 在这种情况下，请务必使用绝对文件路径来指定帮助文件。  
+> 在<xref:System.Windows.Forms.Help.ShowHelp%2A> <xref:System.Windows.Forms.HelpProvider>控件的方法或<xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A>属性中指定帮助文件的路径时, 使用相对路径可能会遇到问题。 因此, 请务必使用绝对文件路径来指定帮助文件。  
   
 ## <a name="see-also"></a>请参阅
 

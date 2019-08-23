@@ -2,20 +2,20 @@
 title: <timeOuts>
 ms.date: 03/30/2017
 ms.assetid: 7fccd436-b326-48ec-8de1-c16817a09e0d
-ms.openlocfilehash: b6ae5faa2dd2ffef9669a0245a75227b0f669cf7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b159488efa2a80a9dea625e4c6dfe2f215dfc457
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61758218"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939189"
 ---
 # <a name="timeouts"></a>\<timeOuts>
 表示一个配置元素，该元素指定允许服务主机打开或关闭的时间间隔。  
   
  \<system.ServiceModel>  
-\<client>  
-\<endpoint>  
-\<host>  
+\<客户端 >  
+\<终结点 >  
+\<主机 >  
 \<timeOuts>  
   
 ## <a name="syntax"></a>语法  
@@ -42,10 +42,10 @@ ms.locfileid: "61758218"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<host>](../../../../../docs/framework/configure-apps/file-schema/wcf/host.md)|一个指定服务主机设置的配置元素。|  
+|[\<host>](host.md)|一个指定服务主机设置的配置元素。|  
   
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.ServiceModel.Configuration.HostElement>
 - <xref:System.ServiceModel.ServiceHost>
-- [承载](../../../../../docs/framework/wcf/feature-details/hosting.md)
+- [承载](../../../wcf/feature-details/hosting.md)

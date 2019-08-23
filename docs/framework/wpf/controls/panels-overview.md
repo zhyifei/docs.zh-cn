@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Panel control [WPF], about Panel control
 - controls [WPF], Panel
 ms.assetid: f73644af-9941-4611-8754-6d4cef03fc44
-ms.openlocfilehash: 4f54596e1ce3ed40f3a029ea6703147a97be992f
-ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
+ms.openlocfilehash: 5fe464f2b79fa1f7b0674c049110d32f2ad32335
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69545268"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69944811"
 ---
 # <a name="panels-overview"></a>面板概述
 <xref:System.Windows.Controls.Panel>元素是控制元素 (其大小和尺寸、位置以及其子内容的排列) 的呈现的组件。 提供了许多预定义<xref:System.Windows.Controls.Panel>的元素以及构造自定义<xref:System.Windows.Controls.Panel>元素的功能。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]  
@@ -149,7 +149,7 @@ ms.locfileid: "69545268"
  在中定义的<xref:System.Windows.Controls.Grid>列和行可以<xref:System.Windows.GridUnitType.Star>利用大小调整, 以便按比例分配剩余空间。 如果<xref:System.Windows.GridUnitType.Star>选择作为行或列的高度或宽度, 则该列或行会获得剩余可用空间的加权比例。 这与不同<xref:System.Windows.GridUnitType.Auto>, 后者将基于列或行中内容的大小均匀分配空间。 在使用 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 时，此值以 `*` 或 `2*` 的形式表示。 在第一种情况下，行或列将得到一倍的可用空间，在第二种情况下，将得到两倍的可用空间，依此类推。 通过将此方法组合到一起<xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> , 可以按比例分配空间, 并<xref:System.Windows.FrameworkElement.VerticalAlignment%2A> `Stretch`将布局空间分区为屏幕空间的百分比。 <xref:System.Windows.Controls.Grid>是唯一可以采用这种方式分布空间的布局面板。  
   
 #### <a name="defining-and-using-a-grid"></a>定义和使用 Grid  
- 以下示例演示如何生成 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]，该 UI 类似于 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]“开始”菜单上提供的“运行”对话框上的 UI。  
+ 下面的示例演示如何生成[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]类似于在 Windows "开始" 菜单上提供的 "运行" 对话框中找到的。  
   
  [!code-csharp[GridRunDialog#1](~/samples/snippets/csharp/VS_Snippets_Wpf/GridRunDialog/CSharp/window1.xaml.cs#1)]
  [!code-vb[GridRunDialog#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GridRunDialog/VisualBasic/grid_vb.vb#1)]  
@@ -244,7 +244,7 @@ ms.locfileid: "69545268"
 ## <a name="localizationglobalization-support"></a>本地化/全球化支持  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 支持多种有助于创建可本地化的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 的功能。  
   
- 所有 panel 元素都以本机<xref:System.Windows.FrameworkElement.FlowDirection%2A>方式支持属性, 该属性可用于根据用户的区域设置或语言设置动态地重新流动内容。 有关详细信息，请参阅 <xref:System.Windows.FrameworkElement.FlowDirection%2A>。  
+ 所有 panel 元素都以本机<xref:System.Windows.FrameworkElement.FlowDirection%2A>方式支持属性, 该属性可用于根据用户的区域设置或语言设置动态地重新流动内容。 有关详细信息，请参阅 <xref:System.Windows.FrameworkElement.FlowDirection%2A> 。  
   
  属性提供了一种机制, 使应用程序开发人员能够预测本地化[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]需求。 <xref:System.Windows.Window.SizeToContent%2A> 使用此属性的<xref:System.Windows.Window> 值,父级始终动态调整大小以适应内容,并且不受人工高度或宽度限制的限制。<xref:System.Windows.SizeToContent.WidthAndHeight>  
   

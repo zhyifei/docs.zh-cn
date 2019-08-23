@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f38f9a3ebd88e0a5abb7a6bc8cb4026dc7d0f068
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 21da325ee58df65ac449464f8292f2ba94d99338
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67736933"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69943298"
 ---
 # <a name="icordebugprocess2getreferencevaluefromgchandle-method"></a>ICorDebugProcess2::GetReferenceValueFromGCHandle 方法
-获取指定的托管对象具有垃圾回收句柄引用指向。  
+获取指向具有垃圾回收句柄的指定托管对象的引用指针。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,24 +38,24 @@ HRESULT GetReferenceValueFromGCHandle (
   
 ## <a name="parameters"></a>参数  
  `handle`  
- [in]指向具有垃圾回收句柄的托管对象的指针。 此值是<xref:System.IntPtr>对象，并可以从检索<xref:System.Runtime.InteropServices.GCHandle>托管对象。  
+ 中指向具有垃圾回收句柄的托管对象的指针。 此值是一个<xref:System.IntPtr>对象, 可以从托管对象的<xref:System.Runtime.InteropServices.GCHandle>检索。  
   
  `pOutValue`  
- [out]指向一个 ICorDebugReferenceValue 对象，表示对指定的托管对象的引用的地址的指针。  
+ 弄指向 ICorDebugReferenceValue 对象的地址的指针, 该对象表示对指定托管对象的引用。  
   
 ## <a name="remarks"></a>备注  
- 不要混淆垃圾回收引用值与返回的引用值。  
+ 不要将返回的引用值与垃圾回收引用值混淆。  
   
- 返回的引用的行为类似于普通的引用。 禁用断点后继续执行代码时。 目标对象的生存期由引用值的生存期不受影响。  
+ 返回的引用的行为与常规引用相同。 当代码在断点后面继续执行时, 它会被禁用。 目标对象的生存期不受引用值的生存期的影响。  
   
 > [!NOTE]
->  `GetReferenceValueFromGCHandle`方法不会验证该句柄。 因此，`GetReferenceValueFromGCHandle`方法可能会损坏调试器和正在调试如果传递无效的句柄的代码。  
+> `GetReferenceValueFromGCHandle`方法不会验证句柄。 因此, 如果`GetReferenceValueFromGCHandle`传递的句柄无效, 则该方法可能会损坏调试器和正在调试的代码。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头：** Cordebug.idl, Cordebug.idl  
   
- **库：** CorGuids.lib  
+ **类库**CorGuids.lib  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

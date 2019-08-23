@@ -6,16 +6,16 @@ helpviewer_keywords:
 - UI Automation, Window control pattern
 - Window control pattern
 ms.assetid: a28cb286-296e-4a62-b4cb-55ad636ebccc
-ms.openlocfilehash: 1d40b133beb68c14e7392139bf0753cedb67a4ef
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 0ff8a5002c82b274a95f7e1ae83bb23707d6cb39
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68971823"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968207"
 ---
 # <a name="implementing-the-ui-automation-window-control-pattern"></a>实现 UI 自动化 Window 控件模式
 > [!NOTE]
->  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关的最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], 请[参阅 Windows 自动化 API:UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
+> 本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关的最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], 请[参阅 Windows 自动化 API:UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  本主题介绍实现 <xref:System.Windows.Automation.Provider.IWindowProvider>的准则和约定，包括有关 <xref:System.Windows.Automation.WindowPattern> 属性、方法和事件的信息。 本主题的结尾列出了指向其他参考资料的链接。  
   
@@ -41,15 +41,15 @@ ms.locfileid: "68971823"
   
 |必需的成员|成员类型|说明|  
 |---------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.InteractionState%2A>|属性|无|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.IsModal%2A>|Property|无|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.InteractionState%2A>|Property|无|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.IsModal%2A>|属性|无|  
 |<xref:System.Windows.Automation.Provider.IWindowProvider.IsTopmost%2A>|Property|无|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.Maximizable%2A>|属性|None|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.Minimizable%2A>|Property|None|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.VisualState%2A>|Property|无|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.Close%2A>|方法|None|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A>|方法|None|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A>|方法|None|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.Maximizable%2A>|Property|无|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.Minimizable%2A>|Property|无|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.VisualState%2A>|属性|无|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.Close%2A>|方法|无|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A>|方法|无|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A>|方法|无|  
 |<xref:System.Windows.Automation.WindowPattern.WindowClosedEvent>|Event|无|  
 |<xref:System.Windows.Automation.WindowPattern.WindowOpenedEvent>|Event|无|  
 |<xref:System.Windows.Automation.WindowInteractionState>|Event|不保证为 <xref:System.Windows.Automation.WindowInteractionState.ReadyForUserInteraction>|  

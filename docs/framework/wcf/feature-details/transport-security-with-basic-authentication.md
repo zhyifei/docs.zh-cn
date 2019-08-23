@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b54f491d-196b-4279-876c-76b83ec0442c
-ms.openlocfilehash: 5cbe6ce6e8e36fc9460295c454014d6f3fbf3983
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3340a0f455646357035b0999a12e78acb08c2572
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64635120"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962634"
 ---
 # <a name="transport-security-with-basic-authentication"></a>通过基本身份验证确保的传输安全
-下图显示了 Windows Communication Foundation (WCF) 服务和客户端。 服务器需要一个有效的可用于安全套接字层 (SSL) 的 X.509 证书，并且客户端必须信任此服务器证书。 而且，Web 服务已经有了一个可以使用的 SSL 实现。 有关详细信息启用基本身份验证在 Internet 信息服务 (IIS)，请参阅<https://go.microsoft.com/fwlink/?LinkId=83822>。  
+下图显示 Windows Communication Foundation (WCF) 服务和客户端。 服务器需要一个有效的可用于安全套接字层 (SSL) 的 X.509 证书，并且客户端必须信任此服务器证书。 而且，Web 服务已经有了一个可以使用的 SSL 实现。 有关在 Internet Information Services (IIS) 上启用基本身份验证的详细信息<https://docs.microsoft.com/iis/configuration/system.webserver/security/authentication/basicauthentication>, 请参阅。  
   
- ![屏幕截图，显示使用基本身份验证的传输安全。](./media/transport-security-with-basic-authentication/transport-security-basic-authentication.gif)  
+ ![显示具有基本身份验证的传输安全的屏幕截图。](./media/transport-security-with-basic-authentication/transport-security-basic-authentication.gif)  
   
 |特征|描述|  
 |--------------------|-----------------|  
@@ -35,7 +35,7 @@ ms.locfileid: "64635120"
 - 使用提供的配置创建服务，但不定义任何终结点。  
   
 ### <a name="code"></a>代码  
- 下面的代码演示如何创建使用 Windows 域用户名和密码确保传输安全的服务终结点。 请注意，此服务要求使用 X.509 证书向客户端进行身份验证。 有关详细信息，请参阅[Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)和[如何：使用 SSL 证书配置端口](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)。  
+ 下面的代码演示如何创建使用 Windows 域用户名和密码确保传输安全的服务终结点。 请注意，此服务要求使用 X.509 证书向客户端进行身份验证。 有关详细信息, 请参阅使用[证书](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)和[如何:使用 SSL 证书](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)配置端口。  
   
  [!code-csharp[C_SecurityScenarios#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#1)]
  [!code-vb[C_SecurityScenarios#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#1)]  
@@ -75,7 +75,7 @@ ms.locfileid: "64635120"
  下面的代码演示包括用户名和密码在内的客户端代码。 请注意，此用户必须提供一个有效的 Windows 用户名和密码。 此处不显示用于返回用户名和密码的代码。 使用对话框或其他界面来查询用户的相关信息。  
   
 > [!NOTE]
->  用户名和密码只能使用代码进行设置。  
+> 用户名和密码只能使用代码进行设置。  
   
  [!code-csharp[C_SecurityScenarios#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#2)]
  [!code-vb[C_SecurityScenarios#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#2)]  
@@ -84,7 +84,7 @@ ms.locfileid: "64635120"
  下面的代码演示客户端配置。  
   
 > [!NOTE]
->  不能使用配置来设置用户名和密码。 此处显示的配置必须使用代码进行扩充以设置用户名和密码。  
+> 不能使用配置来设置用户名和密码。 此处显示的配置必须使用代码进行扩充以设置用户名和密码。  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  

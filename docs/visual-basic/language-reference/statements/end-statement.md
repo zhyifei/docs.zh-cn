@@ -14,12 +14,12 @@ helpviewer_keywords:
 - End statement [Visual Basic]
 - execution [Visual Basic], stopping
 ms.assetid: 0e64467c-0f34-4aab-9ddd-43f8b9d55d90
-ms.openlocfilehash: 4fc4fd36fb6b057195e9d8a79eb0a5b3ac9ff95c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9307cf10e6125441bd49baa0e663a5a13f234005
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61638137"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69944468"
 ---
 # <a name="end-statement"></a>End 语句
 立即终止执行。  
@@ -31,24 +31,24 @@ End
 ```  
   
 ## <a name="remarks"></a>备注  
- 可以将放置`End`强制停止正在运行的整个应用程序的过程中的任意位置的语句。 `End` 关闭打开的任何文件`Open`语句，并清除应用程序的所有变量。 在应用程序关闭在没有保存对其对象的引用其他程序并无其代码运行。  
+ 可以将`End`语句放在过程中的任意位置, 以强制整个应用程序停止运行。 `End`关闭使用`Open`语句打开的所有文件, 并清除应用程序的所有变量。 应用程序将立即关闭, 因为没有任何其他程序保留对其对象的引用, 并且没有任何代码正在运行。  
   
 > [!NOTE]
->  `End`语句突然停止执行代码并不会调用`Dispose`或`Finalize`方法或任何其他 Visual Basic 代码。 保留由其他程序的对象引用都将失效。 如果`End`语句中遇到`Try`或`Catch`块中，控件不会将传递给相应`Finally`块。  
+> 语句会突然停止代码执行, 并且不会`Dispose`调用或`Finalize`方法或任何其他 Visual Basic 代码。 `End` 其他程序持有的对象引用已失效。 `Finally`如果在或块`Catch`中遇到语句,控件不会传递给`End`相应 `Try`的块。  
   
- `Stop`语句将暂停执行，但不同于`End`，它不会关闭任何文件或清除任何变量，除非遇到编译可执行文件 (.exe) 文件中。  
+ 语句暂停执行, 但与此`End`不同, 它不会关闭任何文件或清除任何变量, 除非在已编译的可执行 (.exe) 文件中遇到。 `Stop`  
   
- 因为`End`终止而不顾及应用程序对任何可能处于打开状态的资源，您应尝试彻底关闭然后再使用它。 例如，如果你的应用程序具有打开的任何窗体，您应关闭它们再控制达到`End`语句。  
+ 由于`End`终止了你的应用程序而不参与任何可能已打开的资源, 因此, 在使用该应用程序之前, 你应尝试完全关闭。 例如, 如果应用程序打开了任何窗体, 则在控制到达`End`语句之前应关闭它们。  
   
- 应使用`End`尽量少，且仅当需要立即停止。 终止一个过程的正常方法 ([Return 语句](../../../visual-basic/language-reference/statements/return-statement.md)并[退出语句](../../../visual-basic/language-reference/statements/exit-statement.md)) 不仅彻底关闭该过程，但也使调用代码有机会彻底关闭。 控制台应用程序，例如，可以只需`Return`从`Main`过程。  
+ 应慎用, `End`只需在需要立即停止时使用。 终止过程的一般方法 ([Return 语句](../../../visual-basic/language-reference/statements/return-statement.md)和[Exit 语句](../../../visual-basic/language-reference/statements/exit-statement.md)) 不仅完全关闭过程, 而且还使调用代码有机会彻底关闭。 例如, 控制台应用程序可以直接`Return` `Main`从过程开始。  
   
 > [!IMPORTANT]
->  `End`语句也会调用<xref:System.Environment.Exit%2A>方法<xref:System.Environment>类中<xref:System>命名空间。 <xref:System.Environment.Exit%2A> 要求具有`UnmanagedCode`权限。 如果没有，<xref:System.Security.SecurityException>发生错误。  
+> 语句在命名空间中<xref:System> <xref:System.Environment.Exit%2A>调用<xref:System.Environment> `End`类的方法。 <xref:System.Environment.Exit%2A>要求您具有`UnmanagedCode`权限。 否则, <xref:System.Security.SecurityException>会发生错误。  
   
- 当其他关键字后, 跟[最终\<关键字 > 语句](../../../visual-basic/language-reference/statements/end-keyword-statement.md)描述相应的过程或块定义的末尾。 例如，`End Function`终止的定义`Function`过程。  
+ 后跟一个附加关键字后, [end \<关键字 > 语句](../../../visual-basic/language-reference/statements/end-keyword-statement.md)指定相应过程或块定义的末尾。 例如, `End Function`终止`Function`过程的定义。  
   
 ## <a name="example"></a>示例  
- 下面的示例使用`End`语句终止执行代码，如果用户请求它。  
+ 下面的示例使用`End`语句在用户请求代码的情况下终止代码执行。  
   
  [!code-vb[VbVersHelp60Controls#64](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVersHelp60Controls/VB/Form1.vb#64)]  
   
@@ -59,4 +59,4 @@ End
 
 - <xref:System.Security.Permissions.SecurityPermissionFlag>
 - [Stop 语句](../../../visual-basic/language-reference/statements/stop-statement.md)
-- [结束\<关键字 > 语句](../../../visual-basic/language-reference/statements/end-keyword-statement.md)
+- [End \<关键字 > 语句](../../../visual-basic/language-reference/statements/end-keyword-statement.md)
