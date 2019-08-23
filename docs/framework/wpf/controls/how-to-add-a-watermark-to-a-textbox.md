@@ -8,28 +8,28 @@ helpviewer_keywords:
 - displaying a background image inside a text box to aid user input [WPF]
 - aid usability of a TextBox using a background image [WPF]
 ms.assetid: df89bdd8-a0fb-45e0-b312-dd53332d01a8
-ms.openlocfilehash: ef2536f03ba6ed08e27d2fcf30cd1f72df2cf460
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: abe276c686d394ded13ec03f08deae65e4098d03
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61911609"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923573"
 ---
-# <a name="how-to-add-a-watermark-to-a-textbox"></a><span data-ttu-id="e98d6-102">如何：向 TextBox 添加水印</span><span class="sxs-lookup"><span data-stu-id="e98d6-102">How to: Add a Watermark to a TextBox</span></span>
-<span data-ttu-id="e98d6-103">下面的示例演示如何帮助的可用性<xref:System.Windows.Controls.TextBox>通过显示说明性背景图像的内部<xref:System.Windows.Controls.TextBox>直到用户输入文本，此时删除映像。</span><span class="sxs-lookup"><span data-stu-id="e98d6-103">The following example shows how to aid usability of a <xref:System.Windows.Controls.TextBox> by displaying an explanatory background image inside of the <xref:System.Windows.Controls.TextBox> until the user inputs text, at which point the image is removed.</span></span> <span data-ttu-id="e98d6-104">此外，背景图像重新还原如果用户删除其输入。</span><span class="sxs-lookup"><span data-stu-id="e98d6-104">In addition, the background image is restored again if the user removes their input.</span></span> <span data-ttu-id="e98d6-105">请参阅下图。</span><span class="sxs-lookup"><span data-stu-id="e98d6-105">See illustration below.</span></span>  
+# <a name="how-to-add-a-watermark-to-a-textbox"></a><span data-ttu-id="104dc-102">如何：向 TextBox 添加水印</span><span class="sxs-lookup"><span data-stu-id="104dc-102">How to: Add a Watermark to a TextBox</span></span>
+<span data-ttu-id="104dc-103">下面的示例演示了如何<xref:System.Windows.Controls.TextBox>通过在用户输入文本<xref:System.Windows.Controls.TextBox>之前, 在中显示说明性背景图像来帮助的可用性, 此时将删除图像。</span><span class="sxs-lookup"><span data-stu-id="104dc-103">The following example shows how to aid usability of a <xref:System.Windows.Controls.TextBox> by displaying an explanatory background image inside of the <xref:System.Windows.Controls.TextBox> until the user inputs text, at which point the image is removed.</span></span> <span data-ttu-id="104dc-104">此外, 如果用户删除了其输入, 则会再次还原背景图像。</span><span class="sxs-lookup"><span data-stu-id="104dc-104">In addition, the background image is restored again if the user removes their input.</span></span> <span data-ttu-id="104dc-105">请参阅下图。</span><span class="sxs-lookup"><span data-stu-id="104dc-105">See illustration below.</span></span>  
   
- <span data-ttu-id="e98d6-106">![背景图像的文本框](./media/editing-textbox-using-background-image.png "Editing_TextBox_using_background_image")</span><span class="sxs-lookup"><span data-stu-id="e98d6-106">![A TextBox with a background image](./media/editing-textbox-using-background-image.png "Editing_TextBox_using_background_image")</span></span>  
+ <span data-ttu-id="104dc-106">![带有背景图像的文本框](./media/editing-textbox-using-background-image.png "Editing_TextBox_using_background_image")</span><span class="sxs-lookup"><span data-stu-id="104dc-106">![A TextBox with a background image](./media/editing-textbox-using-background-image.png "Editing_TextBox_using_background_image")</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="e98d6-107">在此示例中而不只操作使用的背景图像的原因<xref:System.Windows.Controls.TextBox.Text%2A>属性的<xref:System.Windows.Controls.TextBox>，是背景图像不会干扰数据绑定。</span><span class="sxs-lookup"><span data-stu-id="e98d6-107">The reason a background image is used in this example rather then simply manipulating the <xref:System.Windows.Controls.TextBox.Text%2A> property of <xref:System.Windows.Controls.TextBox>, is that a background image will not interfere with data binding.</span></span>  
+> <span data-ttu-id="104dc-107">在此示例中使用背景图像而不是只是操作<xref:System.Windows.Controls.TextBox.Text%2A>的<xref:System.Windows.Controls.TextBox>属性, 这是因为背景图像不会干扰数据绑定。</span><span class="sxs-lookup"><span data-stu-id="104dc-107">The reason a background image is used in this example rather then simply manipulating the <xref:System.Windows.Controls.TextBox.Text%2A> property of <xref:System.Windows.Controls.TextBox>, is that a background image will not interfere with data binding.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="e98d6-108">示例</span><span class="sxs-lookup"><span data-stu-id="e98d6-108">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="104dc-108">示例</span><span class="sxs-lookup"><span data-stu-id="104dc-108">Example</span></span>  
  [!code-xaml[TextBoxMiscSnippets_snip#TextBoxBackgroundExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/TextBoxMiscSnippets_snip/csharp/textbox_with_background_image.xaml#textboxbackgroundexamplewholepage)]  
   
  [!code-csharp[TextBoxMiscSnippets_snip#TextBoxBackgroundCodeExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/TextBoxMiscSnippets_snip/csharp/textbox_with_background_image.xaml.cs#textboxbackgroundcodeexamplewholepage)]
  [!code-vb[TextBoxMiscSnippets_snip#TextBoxBackgroundCodeExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextBoxMiscSnippets_snip/visualbasic/textbox_with_background_image.xaml.vb#textboxbackgroundcodeexamplewholepage)]  
   
-## <a name="see-also"></a><span data-ttu-id="e98d6-109">请参阅</span><span class="sxs-lookup"><span data-stu-id="e98d6-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="104dc-109">请参阅</span><span class="sxs-lookup"><span data-stu-id="104dc-109">See also</span></span>
 
-- [<span data-ttu-id="e98d6-110">TextBox 概述</span><span class="sxs-lookup"><span data-stu-id="e98d6-110">TextBox Overview</span></span>](textbox-overview.md)
-- [<span data-ttu-id="e98d6-111">RichTextBox 概述</span><span class="sxs-lookup"><span data-stu-id="e98d6-111">RichTextBox Overview</span></span>](richtextbox-overview.md)
+- [<span data-ttu-id="104dc-110">TextBox 概述</span><span class="sxs-lookup"><span data-stu-id="104dc-110">TextBox Overview</span></span>](textbox-overview.md)
+- [<span data-ttu-id="104dc-111">RichTextBox 概述</span><span class="sxs-lookup"><span data-stu-id="104dc-111">RichTextBox Overview</span></span>](richtextbox-overview.md)

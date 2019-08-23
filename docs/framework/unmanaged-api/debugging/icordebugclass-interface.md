@@ -16,42 +16,42 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7e1ad830e728fbe764085a5808a48e4cacedc595
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bc5099af23a2b706694bfcb655d295607c97ea8a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61750833"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69969272"
 ---
-# <a name="icordebugclass-interface"></a><span data-ttu-id="2f634-102">ICorDebugClass 接口</span><span class="sxs-lookup"><span data-stu-id="2f634-102">ICorDebugClass Interface</span></span>
+# <a name="icordebugclass-interface"></a><span data-ttu-id="89e06-102">ICorDebugClass 接口</span><span class="sxs-lookup"><span data-stu-id="89e06-102">ICorDebugClass Interface</span></span>
 
-<span data-ttu-id="2f634-103">表示基类型或复杂类型（即用户定义的类型）。</span><span class="sxs-lookup"><span data-stu-id="2f634-103">Represents a type, which can be either basic or complex (that is, user-defined).</span></span> <span data-ttu-id="2f634-104">如果该类型为泛型类型，则 `ICorDebugClass` 表示实例化的泛型类型。</span><span class="sxs-lookup"><span data-stu-id="2f634-104">If the type is generic, `ICorDebugClass` represents the uninstantiated generic type.</span></span>  
+<span data-ttu-id="89e06-103">表示基类型或复杂类型（即用户定义的类型）。</span><span class="sxs-lookup"><span data-stu-id="89e06-103">Represents a type, which can be either basic or complex (that is, user-defined).</span></span> <span data-ttu-id="89e06-104">如果该类型为泛型类型，则 `ICorDebugClass` 表示实例化的泛型类型。</span><span class="sxs-lookup"><span data-stu-id="89e06-104">If the type is generic, `ICorDebugClass` represents the uninstantiated generic type.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="2f634-105">方法</span><span class="sxs-lookup"><span data-stu-id="2f634-105">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="89e06-105">方法</span><span class="sxs-lookup"><span data-stu-id="89e06-105">Methods</span></span>  
   
-|<span data-ttu-id="2f634-106">方法</span><span class="sxs-lookup"><span data-stu-id="2f634-106">Method</span></span>|<span data-ttu-id="2f634-107">描述</span><span class="sxs-lookup"><span data-stu-id="2f634-107">Description</span></span>|  
+|<span data-ttu-id="89e06-106">方法</span><span class="sxs-lookup"><span data-stu-id="89e06-106">Method</span></span>|<span data-ttu-id="89e06-107">描述</span><span class="sxs-lookup"><span data-stu-id="89e06-107">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="2f634-108">GetModule 方法</span><span class="sxs-lookup"><span data-stu-id="2f634-108">GetModule Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-getmodule-method.md)|<span data-ttu-id="2f634-109">获取定义此类的模块。</span><span class="sxs-lookup"><span data-stu-id="2f634-109">Gets the module that defines this class.</span></span>|  
-|[<span data-ttu-id="2f634-110">GetStaticFieldValue 方法</span><span class="sxs-lookup"><span data-stu-id="2f634-110">GetStaticFieldValue Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-getstaticfieldvalue-method.md)|<span data-ttu-id="2f634-111">获取指定的静态字段的值。</span><span class="sxs-lookup"><span data-stu-id="2f634-111">Gets the value of the specified static field.</span></span>|  
-|[<span data-ttu-id="2f634-112">GetToken 方法</span><span class="sxs-lookup"><span data-stu-id="2f634-112">GetToken Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-gettoken-method.md)|<span data-ttu-id="2f634-113">获取`TypeDef`此类的元数据标记。</span><span class="sxs-lookup"><span data-stu-id="2f634-113">Gets the `TypeDef` metadata token for this class.</span></span>|  
+|[<span data-ttu-id="89e06-108">GetModule 方法</span><span class="sxs-lookup"><span data-stu-id="89e06-108">GetModule Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-getmodule-method.md)|<span data-ttu-id="89e06-109">获取定义此类的模块。</span><span class="sxs-lookup"><span data-stu-id="89e06-109">Gets the module that defines this class.</span></span>|  
+|[<span data-ttu-id="89e06-110">GetStaticFieldValue 方法</span><span class="sxs-lookup"><span data-stu-id="89e06-110">GetStaticFieldValue Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-getstaticfieldvalue-method.md)|<span data-ttu-id="89e06-111">获取指定的静态字段的值。</span><span class="sxs-lookup"><span data-stu-id="89e06-111">Gets the value of the specified static field.</span></span>|  
+|[<span data-ttu-id="89e06-112">GetToken 方法</span><span class="sxs-lookup"><span data-stu-id="89e06-112">GetToken Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-gettoken-method.md)|<span data-ttu-id="89e06-113">获取此`TypeDef`类的元数据标记。</span><span class="sxs-lookup"><span data-stu-id="89e06-113">Gets the `TypeDef` metadata token for this class.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="2f634-114">备注</span><span class="sxs-lookup"><span data-stu-id="2f634-114">Remarks</span></span>  
- <span data-ttu-id="2f634-115">`ICorDebugClass`接口表示未实例化的泛型类型。</span><span class="sxs-lookup"><span data-stu-id="2f634-115">The `ICorDebugClass` interface represents an uninstantiated generic type.</span></span> <span data-ttu-id="2f634-116">ICorDebugType 接口表示实例化泛型类型。</span><span class="sxs-lookup"><span data-stu-id="2f634-116">The ICorDebugType interface represents an instantiated generic type.</span></span> <span data-ttu-id="2f634-117">例如，`Hashtable<K, V>`将由表示`ICorDebugClass`，而`Hashtable<Int32, String>`将由表示`ICorDebugType`。</span><span class="sxs-lookup"><span data-stu-id="2f634-117">For example, `Hashtable<K, V>` would be represented by `ICorDebugClass`, whereas `Hashtable<Int32, String>` would be represented by `ICorDebugType`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="89e06-114">备注</span><span class="sxs-lookup"><span data-stu-id="89e06-114">Remarks</span></span>  
+ <span data-ttu-id="89e06-115">`ICorDebugClass`接口表示未实例化的泛型类型。</span><span class="sxs-lookup"><span data-stu-id="89e06-115">The `ICorDebugClass` interface represents an uninstantiated generic type.</span></span> <span data-ttu-id="89e06-116">ICorDebugType 接口表示一个实例化的泛型类型。</span><span class="sxs-lookup"><span data-stu-id="89e06-116">The ICorDebugType interface represents an instantiated generic type.</span></span> <span data-ttu-id="89e06-117">例如, `Hashtable<K, V>`将由`ICorDebugClass`表示`Hashtable<Int32, String>` ,`ICorDebugType`而将由表示。</span><span class="sxs-lookup"><span data-stu-id="89e06-117">For example, `Hashtable<K, V>` would be represented by `ICorDebugClass`, whereas `Hashtable<Int32, String>` would be represented by `ICorDebugType`.</span></span>  
   
- <span data-ttu-id="2f634-118">非泛型类型表示由`ICorDebugClass`和`ICorDebugType`。</span><span class="sxs-lookup"><span data-stu-id="2f634-118">Non-generic types are represented by both `ICorDebugClass` and `ICorDebugType`.</span></span> <span data-ttu-id="2f634-119">在处理类型实例化在.NET Framework 2.0 版中引入的后一种接口。</span><span class="sxs-lookup"><span data-stu-id="2f634-119">The latter interface was introduced in the .NET Framework version 2.0 to deal with type instantiation.</span></span>  
+ <span data-ttu-id="89e06-118">非泛型类型由`ICorDebugClass`和`ICorDebugType`表示。</span><span class="sxs-lookup"><span data-stu-id="89e06-118">Non-generic types are represented by both `ICorDebugClass` and `ICorDebugType`.</span></span> <span data-ttu-id="89e06-119">后一种接口在 .NET Framework 版本2.0 中引入, 用于处理类型实例化。</span><span class="sxs-lookup"><span data-stu-id="89e06-119">The latter interface was introduced in the .NET Framework version 2.0 to deal with type instantiation.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="2f634-120">此接口不支持跨计算机或跨进程远程调用。</span><span class="sxs-lookup"><span data-stu-id="2f634-120">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+> <span data-ttu-id="89e06-120">此接口不支持跨计算机或跨进程远程调用。</span><span class="sxs-lookup"><span data-stu-id="89e06-120">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="2f634-121">要求</span><span class="sxs-lookup"><span data-stu-id="2f634-121">Requirements</span></span>  
- <span data-ttu-id="2f634-122">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="2f634-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="89e06-121">要求</span><span class="sxs-lookup"><span data-stu-id="89e06-121">Requirements</span></span>  
+ <span data-ttu-id="89e06-122">**适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="89e06-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="2f634-123">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="2f634-123">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="89e06-123">**标头：** Cordebug.idl, Cordebug.idl</span><span class="sxs-lookup"><span data-stu-id="89e06-123">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="2f634-124">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2f634-124">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="89e06-124">**类库**CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="89e06-124">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="2f634-125">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2f634-125">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="89e06-125">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="89e06-125">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2f634-126">请参阅</span><span class="sxs-lookup"><span data-stu-id="2f634-126">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="89e06-126">请参阅</span><span class="sxs-lookup"><span data-stu-id="89e06-126">See also</span></span>
 
-- [<span data-ttu-id="2f634-127">调试接口</span><span class="sxs-lookup"><span data-stu-id="2f634-127">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="89e06-127">调试接口</span><span class="sxs-lookup"><span data-stu-id="89e06-127">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
