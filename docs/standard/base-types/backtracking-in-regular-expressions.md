@@ -223,4 +223,4 @@ ms.locfileid: "66378168"
 - [正则表达式语言 - 快速参考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
 - [数量词](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)
 - [替换构造](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)
-- [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)
+- [分组构造](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)
