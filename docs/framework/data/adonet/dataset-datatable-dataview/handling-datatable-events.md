@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 62f404a5-13ea-4b93-a29f-55b74a16c9d3
-ms.openlocfilehash: 4007a04bf3bd2b130e978415722b0e5b7769cc25
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 210d15187cd539cdae6e38fdcb708b4b9f81c073
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69953270"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988309"
 ---
 # <a name="handling-datatable-events"></a>处理数据表事件
 <xref:System.Data.DataTable> 对象提供一系列可以由应用程序处理的事件。 下表描述了 `DataTable` 事件。  
@@ -33,7 +33,7 @@ ms.locfileid: "69953270"
 > 添加或删除行的大多数操作不会引发 `ColumnChanged` 和 `ColumnChanging` 事件。 但是，当要读取的 XML 文档为 `ReadXml` 时，除非将 `ColumnChanged` 设置为 `ColumnChanging` 或 `XmlReadMode`，否则 `DiffGram` 方法会引发 `Auto` 和 `DiffGram` 事件。  
   
 > [!WARNING]
->  如果在从中引发 `DataSet` 事件的 `RowChanged` 中修改数据，则会发生数据损坏。 出现这类数据损坏并不会引发任何异常。  
+> 如果在从中引发 `DataSet` 事件的 `RowChanged` 中修改数据，则会发生数据损坏。 出现这类数据损坏并不会引发任何异常。  
   
 ## <a name="additional-related-events"></a>其他相关事件  
  <xref:System.Data.DataTable.Constraints%2A> 属性包含 <xref:System.Data.ConstraintCollection> 实例。 <xref:System.Data.ConstraintCollection> 类会公开 <xref:System.Data.ConstraintCollection.CollectionChanged> 事件。 在 `ConstraintCollection` 中添加、修改约束，或从中删除约束时，会激发此事件。  
@@ -71,7 +71,7 @@ ms.locfileid: "69953270"
 > 更改表达式列绝不会引发 `DataTable` 事件。 更改表达式列只会引发 `DataView` 和 `DataRowView` 事件。 表达式列可与多个其他列存在相关性，并且在单个 `DataRow` 操作期间可计算多次。 每个表达式计算都可引发事件，并且当表达式列受影响时，单个 `DataRow` 操作可引发多个 `ListChanged` 和 `PropertyChanged` 事件，其中可能包括同一表达式列的多个事件。  
   
 > [!WARNING]
->  请勿在 <xref:System.NullReferenceException> 事件处理程序中引发 `RowChanged`。 如果在 <xref:System.NullReferenceException> 的 `RowChanged` 事件中引发了 `DataTable`，`DataTable` 将被损坏。  
+> 请勿在 <xref:System.NullReferenceException> 事件处理程序中引发 `RowChanged`。 如果在 <xref:System.NullReferenceException> 的 `RowChanged` 事件中引发了 `DataTable`，`DataTable` 将被损坏。  
   
 ### <a name="example"></a>示例  
  下面的示例演示如何为 `RowChanged`、`RowChanging`、`RowDeleted`、`RowDeleting`、`ColumnChanged`、`ColumnChanging`、`TableNewRow`、`TableCleared` 和 `TableClearing` 事件创建事件处理程序。 在激发每个事件处理程序时，都会在控制台窗口中显示相关输出。  

@@ -6,40 +6,43 @@ helpviewer_keywords:
 - Explorer-style applications [Windows Forms], creating
 - Windows Forms controls, filling client area
 ms.assetid: bc11f2e4-e90a-4830-b0e2-f43b6e2b8bec
-ms.openlocfilehash: dc514fd8b9b7a17bf07a878e42729db4187d2b82
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+author: gewarren
+ms.author: gewarren
+manager: jillfra
+ms.openlocfilehash: 58b61af306385a245bedf16e370e6830c370a622
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963630"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69987484"
 ---
 # <a name="how-to-dock-controls-on-windows-forms"></a>如何：在 Windows 窗体上停靠控件
-您可以将控件停靠到窗体的边缘, 或者使控件填充控件的容器 (窗体或容器控件)。 例如, Windows 资源管理器将<xref:System.Windows.Forms.TreeView>其控件停靠在窗口的左侧, 并将<xref:System.Windows.Forms.ListView>其控件停靠到窗口的右侧。 使用所有<xref:System.Windows.Forms.Control.Dock%2A>可见 Windows 窗体控件的属性来定义停靠模式。  
-  
+
+您可以将控件停靠到窗体的边缘, 或者使控件填充控件的容器 (窗体或容器控件)。 例如, Windows 资源管理器将<xref:System.Windows.Forms.TreeView>其控件停靠在窗口的左侧, 并将<xref:System.Windows.Forms.ListView>其控件停靠到窗口的右侧。 使用所有<xref:System.Windows.Forms.Control.Dock%2A>可见 Windows 窗体控件的属性来定义停靠模式。
+
 > [!NOTE]
-> 控件按 z 顺序反向停靠。  
-  
- <xref:System.Windows.Forms.Control.Dock%2A> 属性<xref:System.Windows.Forms.Control.AutoSize%2A>与属性交互。 有关详细信息, 请参阅[AutoSize 属性概述](autosize-property-overview.md)。  
-  
-### <a name="to-dock-a-control"></a>停靠控件  
-  
-1. 选择要停靠的控件。  
-  
-2. 在属性窗口中, 单击<xref:System.Windows.Forms.Control.Dock%2A>属性右侧的箭头。  
-  
-     将显示一个编辑器, 其中显示一系列表示窗体边缘和中心的框。  
-  
-3. 单击表示要停靠控件的窗体边缘的按钮。 若要填充控件的窗体或容器控件的内容, 请单击中心框。 单击 " **(无)** " 以禁用停靠。  
-  
-     控件会自动调整控件的大小以适应停靠边缘的边界。  
-  
-    > [!NOTE]
-    > 继承的控件必须`Protected`能够停靠。 若要更改控件的访问级别, 请在属性窗口中设置其**修饰符**属性。  
-  
+> 控件按 z 顺序反向停靠。
+
+<xref:System.Windows.Forms.Control.Dock%2A> 属性<xref:System.Windows.Forms.Control.AutoSize%2A>与属性交互。 有关详细信息, 请参阅[AutoSize 属性概述](autosize-property-overview.md)。
+
+## <a name="to-dock-a-control"></a>停靠控件
+
+1. 在 Visual Studio 中, 选择要停靠的控件。
+
+2. 在 "**属性**" 窗口中, 单击<xref:System.Windows.Forms.Control.Dock%2A>属性右侧的箭头。
+
+   将显示一个编辑器, 其中显示一系列表示窗体边缘和中心的框。
+
+3. 单击表示要停靠控件的窗体边缘的按钮。 若要填充控件的窗体或容器控件的内容, 请单击中心框。 单击 " **(无)** " 以禁用停靠。
+
+   控件会自动调整控件的大小以适应停靠边缘的边界。
+
+   > [!NOTE]
+   > 继承的控件必须`Protected`能够停靠。 若要更改控件的访问级别, 请在 "**属性**" 窗口中设置其 "**修饰符**" 属性。
+
 ## <a name="see-also"></a>请参阅
 
 - [Windows 窗体控件](index.md)
-- [在 Windows 窗体上排列控件](arranging-controls-on-windows-forms.md)
 - [标记各个 Windows 窗体控件并创建它们的快捷键](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
 - [在 Windows 窗体上使用的控件](controls-to-use-on-windows-forms.md)
 - [按功能列出的 Windows 窗体控件](windows-forms-controls-by-function.md)

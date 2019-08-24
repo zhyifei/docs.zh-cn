@@ -1,17 +1,17 @@
 ---
-title: 'Icordebugmemorybuffer:: Getstartaddress 方法'
+title: 'ICorDebugMemoryBuffer:: GetStartAddress 方法'
 ms.date: 03/30/2017
 ms.assetid: f804d9ab-8c88-44f0-b278-5fcca7f87726
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9208d07b697c3bb8a99e13582eda70dcb8dd826b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1394624051baa9e7dd21e29788d5fab28332081b
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752769"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69987553"
 ---
-# <a name="icordebugmemorybuffergetstartaddress-method"></a>Icordebugmemorybuffer:: Getstartaddress 方法
+# <a name="icordebugmemorybuffergetstartaddress-method"></a>ICorDebugMemoryBuffer:: GetStartAddress 方法
 获取内存缓冲区的起始地址。  
   
 ## <a name="syntax"></a>语法  
@@ -29,14 +29,14 @@ HRESULT GetStartAddress(
 ## <a name="remarks"></a>备注  
   
 > [!WARNING]
->  此方法仅适用于 .NET Native。  
+> 此方法仅适用于 .NET Native。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头：** Cordebug.idl, Cordebug.idl  
   
- **库：** CorGuids.lib  
+ **类库**CorGuids.lib  
   
  **.NET Framework 版本：** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

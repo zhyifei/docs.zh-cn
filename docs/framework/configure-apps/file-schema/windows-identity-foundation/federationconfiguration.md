@@ -3,12 +3,12 @@ title: <federationConfiguration>
 ms.date: 03/30/2017
 ms.assetid: 8b14054c-6d07-46ab-ab58-03f14beac0f2
 author: BrucePerlerMS
-ms.openlocfilehash: 53d6bdb34ded52e49fcc8c5de98fcd45ddabadaa
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: c4dbb31bb7961f0d33df9d1faee8fe36ecb520a3
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69942769"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988332"
 ---
 # <a name="federationconfiguration"></a>\<federationConfiguration>
 通过 WS 联合身份验证协议使用<xref:System.IdentityModel.Services.SessionAuthenticationModule>联合身份验证时配置(WSFAM)和(SAM)。<xref:System.IdentityModel.Services.WSFederationAuthenticationModule> 当<xref:System.Security.Claims.ClaimsAuthorizationManager> 使用或<xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute>类提供基于声明的访问控制时, 配置。 <xref:System.IdentityModel.Services.ClaimsPrincipalPermission>  
@@ -74,7 +74,7 @@ ms.locfileid: "69942769"
  下面的 XML 演示一个`<federationConfiguration>`元素, 该元素指定 WSFAM 的设置, 并指定 SAM 使用默认 cookie 处理程序 ( <xref:System.IdentityModel.Services.ChunkedCookieHandler>类的实例)。  
   
 > [!WARNING]
->  在此示例中, cookie 处理程序和 WSFAM 都不需要使用 HTTPS。 `requireHttps`这是因为`false` `<cookieHandlerElement>` `requireSsl`元素上的特性和上的特性是。 `<wsFederation>` 对于大多数生产环境, 不建议使用这些设置, 因为它们可能会带来安全风险。  
+> 在此示例中, cookie 处理程序和 WSFAM 都不需要使用 HTTPS。 `requireHttps`这是因为`false` `<cookieHandlerElement>` `requireSsl`元素上的特性和上的特性是。 `<wsFederation>` 对于大多数生产环境, 不建议使用这些设置, 因为它们可能会带来安全风险。  
   
 ```xml  
 <system.identityModel.services>  

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - XmlSerializer [WCF], using
 ms.assetid: c680602d-39d3-44f1-bf22-8e6654ad5069
-ms.openlocfilehash: 966c3c17c3c42e20ad55681e1c17b13d3f466fa3
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 665ede5b5a46c4093382bed5ed28a0d2bba979be
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69967822"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988598"
 ---
 # <a name="using-the-xmlserializer-class"></a>使用 XmlSerializer 类
 Windows Communication Foundation (WCF) 可以使用两种不同的序列化技术, 将应用程序中的数据转换为在客户端和服务之间传输的 XML, 这是一个称为序列化的进程。  
@@ -97,7 +97,7 @@ Windows Communication Foundation (WCF) 可以使用两种不同的序列化技�
  `IXmlSerializable` 完全支持实现 `DataContractSerializer` 接口的类型。 <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> 属性应始终应用于这些类型以控制它们的架构。  
   
 > [!WARNING]
->  如果您要序列化多态类型，则必须将 <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> 应用于该类型以确保序列化正确的类型。  
+> 如果您要序列化多态类型，则必须将 <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> 应用于该类型以确保序列化正确的类型。  
   
  实现 `IXmlSerializable` 的类型有以下三种：表示任意内容的类型、表示单一元素的类型和旧的 <xref:System.Data.DataSet> 类型。  
   

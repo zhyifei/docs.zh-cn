@@ -3,12 +3,12 @@ title: WSFederation 身份验证模块概述
 ms.date: 03/30/2017
 ms.assetid: 02c4d5e8-f0a7-49ee-9cf5-3647578510ad
 author: BrucePerlerMS
-ms.openlocfilehash: 0873e878fca3fe9723c23f78d647aa443f6d0152
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 9ade6b0d9e4aadb353ca148f868d548fbaacfbc3
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69915516"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69987706"
 ---
 # <a name="wsfederation-authentication-module-overview"></a>WSFederation 身份验证模块概述
 Windows Identity Foundation (WIF) 包括通过 WS-联合身份验证模块 (WS-FAM) 对 ASP.NET 应用程序中联合身份验证的支持。 本主题有助于理解联合身份验证的工作原理和使用方法。  
@@ -99,7 +99,7 @@ Windows Identity Foundation (WIF) 包括通过 WS-联合身份验证模块 (WS-F
  以下 XML 演示 ASP.NET 信赖方 (RP) 应用的配置。 <xref:System.IdentityModel.Configuration.SystemIdentityModelSection> 和 <xref:System.IdentityModel.Services.Configuration.SystemIdentityModelServicesSection> 配置部分添加在 `<configSections>` 元素之下。 SAM 和 WS-FAM 添加到 `<system.webServer>`/`<modules>` 元素下的 HTTP 模块。 最后，WIF 组件在 `<system.identityModel>`/`<identityConfiguration>` 和 `<system.identityModel.services>`/`<federationConfiguration>` 元素下进行配置。 此配置指定分块 Cookie 处理程序（因为它是默认 Cookie 处理程序），且 `<cookieHandler>` 元素中没有指定的 Cookie 处理程序类型。  
   
 > [!WARNING]
->  在以下示例中，`<wsFederation>` 元素的 `requireHttps` 属性和 `<cookieHandler>` 元素的 `requireSsl` 属性皆为 `false`。 这表示潜在的安全威胁。 在生产中，这两个值都应设置为 `true`。  
+> 在以下示例中，`<wsFederation>` 元素的 `requireHttps` 属性和 `<cookieHandler>` 元素的 `requireSsl` 属性皆为 `false`。 这表示潜在的安全威胁。 在生产中，这两个值都应设置为 `true`。  
   
 ```xml  
 <configuration>  

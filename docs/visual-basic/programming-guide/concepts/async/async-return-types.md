@@ -2,12 +2,12 @@
 title: 异步返回类型 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 07890291-ee72-42d3-932a-fa4d312f2c60
-ms.openlocfilehash: ef059eca9b97ed0c7c4fdf5a82389eff816d53b6
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: f331546026ac6b0799947611b54e9a147a6fe7f1
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69958219"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988839"
 ---
 # <a name="async-return-types-visual-basic"></a>异步返回类型 (Visual Basic)
 异步方法具有三个可能的返回类型：<xref:System.Threading.Tasks.Task%601>、<xref:System.Threading.Tasks.Task>和 void。 在 Visual Basic 中，void 返回类型被写为 [Sub](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md) 过程。 有关异步方法的详细信息, 请参阅[采用 async 和 Await 的异步编程 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)。  
@@ -57,7 +57,7 @@ Dim result1 As Integer = Await TaskOfT_MethodAsync()
  通过从应用程序 `Await` 中分离对 `TaskOfT_MethodAsync` 的调用，你可以更好地了解此操作，如下面的代码所示。 对非立即等待的方法 `TaskOfT_MethodAsync` 的调用返回 `Task(Of Integer)`，正如你从方法声明预料的一样。 该任务指派给示例中的 `integerTask` 变量。 因为 `integerTask` 是 <xref:System.Threading.Tasks.Task%601>，所以它包含类型 `TResult` 的 <xref:System.Threading.Tasks.Task%601.Result> 属性。 在这种情况下，TResult 表示整数类型。 `Await` 应用于 `integerTask`，await 表达式的计算结果为 `integerTask` 的 <xref:System.Threading.Tasks.Task%601.Result%2A> 属性内容。 此值分配给 `result2` 变量。  
   
 > [!WARNING]
->  <xref:System.Threading.Tasks.Task%601.Result%2A> 属性为阻止属性。 如果你在其任务完成之前尝试访问它，当前处于活动状态的线程将被阻止，直到任务完成且值为可用。 在大多数情况下，应通过使用 `Await` 访问此值，而不是直接访问属性。  
+> <xref:System.Threading.Tasks.Task%601.Result%2A> 属性为阻止属性。 如果你在其任务完成之前尝试访问它，当前处于活动状态的线程将被阻止，直到任务完成且值为可用。 在大多数情况下，应通过使用 `Await` 访问此值，而不是直接访问属性。  
   
 ```vb  
 ' Call and await in separate statements.  

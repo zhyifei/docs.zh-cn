@@ -2,12 +2,12 @@
 title: 对 WCF Web HTTP 服务的缓存支持
 ms.date: 03/30/2017
 ms.assetid: 7f8078e0-00d9-415c-b8ba-c1b6d5c31799
-ms.openlocfilehash: a6a03f20fa6a853f813dc9eff3a4202ab18cad90
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 655e8807a78d542cd7fa586eca3750507891f74b
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69952668"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988778"
 ---
 # <a name="caching-support-for-wcf-web-http-services"></a>对 WCF Web HTTP 服务的缓存支持
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]使你能够使用 WCF Web HTTP 服务的 ASP.NET 中已有的声明性缓存机制。 这样，你可以缓存来自 WCF Web HTTP 服务操作的响应。 如果用户向配置为进行缓存的服务发送了 HTTP GET，ASP.NET 将发送回已缓存的响应且不会调用服务方法。 在缓存过期后，下次用户发送 HTTP GET 时，将会调用服务方法且再次缓存响应。 有关 ASP.NET 缓存的详细信息, 请参阅[ASP.NET 缓存概述](https://go.microsoft.com/fwlink/?LinkId=152534)  
@@ -40,7 +40,7 @@ public class Service
 ```
   
 > [!WARNING]
->  如果未启用 ASP.NET 兼容模式且使用了 <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute>，则会引发异常。  
+> 如果未启用 ASP.NET 兼容模式且使用了 <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute>，则会引发异常。  
   
  <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> 所指定的缓存配置文件名称标识已添加到 Web.config 配置文件的缓存配置文件。 缓存配置文件在 <`outputCacheSetting`> 元素中定义, 如下面的配置示例所示。  
   

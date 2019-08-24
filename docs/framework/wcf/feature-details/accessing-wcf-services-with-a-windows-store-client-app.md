@@ -2,12 +2,12 @@
 title: 使用 Windows Store 应用商店客户端应用访问 WCF 服务
 ms.date: 03/30/2017
 ms.assetid: e2002ef4-5dee-4a54-9d87-03b33d35fc52
-ms.openlocfilehash: a2f1ef37914c932801699bb2f9c2323dd0408e7f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 9316a46f809eec21f73e8eeadb49baf1748c6ca0
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964971"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988248"
 ---
 # <a name="accessing-wcf-services-with-a-windows-store-client-app"></a>使用 Windows Store 应用商店客户端应用访问 WCF 服务
 Windows 8 引入了一种新应用程序，称为 Windows 应用商店应用程序。 这些应用程序是围绕触摸屏界面设计的。 通过 .NET Framework 4.5，Windows 商店应用程序可以调用 WCF 服务。  
@@ -19,7 +19,7 @@ Windows 8 引入了一种新应用程序，称为 Windows 应用商店应用程�
 > 请使用 WinRT 联合 API 而不使用由 WCF 公开的 API。 有关更多信息，请参见 [WinRT 联合 API](https://go.microsoft.com/fwlink/?LinkId=236265)  
   
 > [!WARNING]
->  不支持使用“添加服务引用”向 Windows 运行时组件添加 Web 服务引用。  
+> 不支持使用“添加服务引用”向 Windows 运行时组件添加 Web 服务引用。  
   
 ### <a name="supported-bindings"></a>支持的绑定  
  Windows 应用商店应用程序支持以下 WCF 绑定：  
@@ -104,7 +104,7 @@ public partial class Service1Client : System.ServiceModel.ClientBase<MetroWcfCli
 3. XmlSerializer  
   
 > [!WARNING]
->  XmlDictionaryWriter.Write(DateTime) 现在会将 DateTime 对象作为字符串写入。  
+> XmlDictionaryWriter.Write(DateTime) 现在会将 DateTime 对象作为字符串写入。  
   
 ### <a name="security"></a>安全性  
 
@@ -154,7 +154,7 @@ Windows 应用商店应用程序支持以下客户端凭据类型:
  建议使用基于任务的异步模式仅定义异步服务操作。 这可以确保 Windows 应用商店应用程序在调用服务操作时保持响应。  
   
 > [!WARNING]
->  虽然在定义了同步操作的情况下不会不引发任何异常，但强烈建议仅定义异步操作。  
+> 虽然在定义了同步操作的情况下不会不引发任何异常，但强烈建议仅定义异步操作。  
   
 ### <a name="calling-wcf-services-from-windows-store-applications"></a>从 Windows 应用商店应用程序调用 WCF 服务  
  正如前面所述，必须在生成的代理类中的 GetBindingForEndpoint 方法中用代码完成所有配置。 调用服务操作的方式与调用任何基于任务的异步方法的方式相同，如下面的代码段所示：  

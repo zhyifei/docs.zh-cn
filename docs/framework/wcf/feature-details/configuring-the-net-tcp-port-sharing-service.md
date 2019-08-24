@@ -2,12 +2,12 @@
 title: 配置 Net.TCP 端口共享服务
 ms.date: 03/30/2017
 ms.assetid: b6dd81fa-68b7-4e1b-868e-88e5901b7ea0
-ms.openlocfilehash: c5dc80391ec5f655fadd31c59eef76015b9965d8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 70ebaeb8b41b0191e0352b5ef6a4b1913994100c
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949607"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988232"
 ---
 # <a name="configuring-the-nettcp-port-sharing-service"></a>配置 Net.TCP 端口共享服务
 使用 Net.TCP 传输协议的自承载服务可以控制某些高级设置，如 `ListenBacklog` 和 `MaxPendingAccepts`，这些设置控制用作网络通信的基础 TCP 套接字的行为。 但是，如果传输绑定已禁用端口共享（默认情况下是启用的），则这些针对每个套接字的设置将仅在绑定级别适用。  
@@ -59,7 +59,7 @@ ms.locfileid: "69949607"
 > 在启用用户帐户控制 (UAC) 的 [!INCLUDE[wv](../../../../includes/wv-md.md)] 系统上，即使本地用户的帐户是 Administrators 组成员，本地用户也需要提升的权限。 若要允许这些用户无需提升即可使用端口共享服务, 必须将用户的 SID (或用户所属的组的 sid) 显式添加到 smsvchost.exe 的\<allowAccounts > 部分。  
   
 > [!WARNING]
->  默认 SMSvcHost.exe.config 文件指定自定义 `etwProviderId` 以阻止 SMSvcHost.exe 跟踪干扰服务跟踪。  
+> 默认 SMSvcHost.exe.config 文件指定自定义 `etwProviderId` 以阻止 SMSvcHost.exe 跟踪干扰服务跟踪。  
   
 ## <a name="see-also"></a>请参阅
 

@@ -2,12 +2,12 @@
 title: 重新承载的工作流设计器中新 Workflow Foundation 4.5 功能的支持
 ms.date: 03/30/2017
 ms.assetid: 1a4a4038-d8e6-41dd-99ea-93bd76286772
-ms.openlocfilehash: 69c3577c82c7a0899fb94461255721f4b2ab3ecd
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 20623c8d2f6bf66d2668fd07b0acae67865a3235
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69913693"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69987227"
 ---
 # <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>重新承载的工作流设计器中新 Workflow Foundation 4.5 功能的支持
 .NET Framework 4.5 中的 Windows Workflow Foundation (WF) 引入了许多新功能, 包括工作流设计器体验的多项增强功能。 本主题详细介绍重新承载的设计器中支持哪些功能以及当前不支持哪些功能。
@@ -22,7 +22,7 @@ ms.locfileid: "69913693"
  在 .NET Framework 4.5 之前, 工作流中的所有表达式只能用 Visual Basic 编写。 在 .NET Framework 4.5 中, Visual Basic 表达式仅用于使用 Visual Basic 创建的项目。 Visual C# 项目现在将 C# 用于表达式。 在 Visual Studio 2012 中创作工作流时, 将C#提供一个功能齐全的表达式编辑器, 其中包括语法突出显示和 intellisense 等功能。 在使用 Visual Basic 表达式的以前版本中创建的 C# 工作流项目仍可继续使用。
 
 > [!WARNING]
->  重新承载的设计器不支持 C# 表达式。
+> 重新承载的设计器不支持 C# 表达式。
 
 ## <a name="new-designer-capabilities"></a>新设计器功能
 
@@ -30,7 +30,7 @@ ms.locfileid: "69913693"
  重新承载设计器不支持 .NET Framework 4.5 引入的 "[快速查找](whats-new-in-wf-in-dotnet.md#BKMK_QuickFind)" 和 "[在文件中查找](whats-new-in-wf-in-dotnet.md#BKMK_FindInFiles)" 功能。 重新承载的设计器不支持 `Toolbox` 搜索。 有关这些功能的详细信息, 请参阅[设计器搜索](whats-new-in-wf-in-dotnet.md#BKMK_DesignerSearch)。
 
 > [!WARNING]
->  重新承载设计器不支持[快速查找](whats-new-in-wf-in-dotnet.md#BKMK_QuickFind)和[在文件中查找](whats-new-in-wf-in-dotnet.md#BKMK_FindInFiles)。
+> 重新承载设计器不支持[快速查找](whats-new-in-wf-in-dotnet.md#BKMK_QuickFind)和[在文件中查找](whats-new-in-wf-in-dotnet.md#BKMK_FindInFiles)。
 
 ### <a name="delete-context-menu-item-in-variable-and-argument-designer"></a>删除变量和自变量设计器中的上下文菜单项
  在 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 中，只能使用键盘来删除设计器中的变量和自变量。 从 .NET Framework 4.5 开始, 可以使用上下文菜单来删除变量和参数。 重新承载的编辑器支持此功能。
@@ -103,7 +103,7 @@ ms.locfileid: "69913693"
  在 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 中，不会将生成工作流项目期间的工作流验证错误计为生成错误。 这意味着即使存在工作流验证错误，工作流项目的生成也可能成功。 在 .NET Framework 4.5 中, 工作流验证错误将导致生成失败。
 
 > [!WARNING]
->  重新承载的设计器不支持生成时验证。  
+> 重新承载的设计器不支持生成时验证。  
   
 ### <a name="design-time-background-validation"></a>设计时后台验证  
  在[!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]中, 工作流被验证为前台进程, 这可能会在复杂或耗时的验证过程中阻止 UI。 工作流验证现在发生在后台线程上，因此不会阻止 UI。  
@@ -142,4 +142,4 @@ ms.locfileid: "69913693"
  协定优先工作流开发工具允许开发人员首先在代码中设计协定, 然后, 只需在 Visual Studio 中单击几下鼠标, 就会在工具箱中自动生成表示每个操作的活动模板。 这些活动随后用于创建实现由该协定定义的操作的工作流。 工作流设计器将对该工作流服务进行验证，以确保实现这些操作并且工作流的签名与协定签名匹配。 开发人员还可以将工作流服务与所实现的协定的集合进行关联。 有关协定优先工作流服务开发的详细信息, 请[参阅如何:创建使用现有服务协定](how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)的工作流服务。  
   
 > [!WARNING]
->  工作流设计器不支持协定优先工作流开发。
+> 工作流设计器不支持协定优先工作流开发。

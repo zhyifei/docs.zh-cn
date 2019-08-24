@@ -11,12 +11,12 @@ ms.assetid: 2e92d8e8-f0e4-4df7-9f07-2acf35cd798c
 author: gewarren
 ms.author: gewarren
 manager: jillfra
-ms.openlocfilehash: e3fb6e42270cc0a530646b656470ec99fcfc7f1f
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 5e5112aa0b025648ce68a93f0f3da026ec99fe89
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666244"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69987136"
 ---
 # <a name="walkthrough-create-new-wpf-content-on-windows-forms-at-design-time"></a>演练：在设计时 Windows 窗体创建新的 WPF 内容
 
@@ -28,7 +28,7 @@ ms.locfileid: "69666244"
 
 ## <a name="create-the-project"></a>创建项目
 
-第一步是创建 Windows 窗体项目。 打开 Visual Studio, 并在 Visual Basic 或视觉对象C#中创建一个名为`HostingWpf`的新**Windows 窗体应用程序 (.NET Framework)** 项目。
+打开 Visual Studio, 并在 Visual Basic 或视觉对象C#中创建一个名为`HostingWpf`的新**Windows 窗体应用程序 (.NET Framework)** 项目。
 
 > [!NOTE]
 > 承载 WPF 内容时，仅支持 C# 和 Visual Basic 项目。

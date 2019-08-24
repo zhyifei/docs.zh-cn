@@ -3,12 +3,12 @@ title: <cookieHandler>
 ms.date: 03/30/2017
 ms.assetid: bfdc127f-8d94-4566-8bef-f583c6ae7398
 author: BrucePerlerMS
-ms.openlocfilehash: 6c62100b2445ae10a83ebd9e7d154a6e2aa14e0b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 1c044f7346fabc77d7744f42c5bfd3d86d72402e
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69942803"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988340"
 ---
 # <a name="cookiehandler"></a>\<cookieHandler>
 <xref:System.IdentityModel.Services.CookieHandler> 配置(SAM)用于读取<xref:System.IdentityModel.Services.SessionAuthenticationModule>和写入 cookie 的。  
@@ -77,7 +77,7 @@ ms.locfileid: "69942803"
  下面的 XML 显示了`<cookieHandler>`一个元素。 在此示例中, 由于`mode`未指定属性, SAM 将使用默认的 cookie 处理程序。 这是<xref:System.IdentityModel.Services.ChunkedCookieHandler>类的实例。 由于未指定子元素, 将使用默认的块区大小。 `<chunkedCookieHandler>` 不需要 HTTPS, 因为`requireSsl`已设置`false`属性。  
   
 > [!WARNING]
->  在此示例中, 无需 HTTPS 即可写入会话 cookie。 这是因为`<cookieHandler>`元素`requireSsl`上的特性设置为。 `false` 对于大多数生产环境, 不建议使用此设置, 因为这可能会带来安全风险。  
+> 在此示例中, 无需 HTTPS 即可写入会话 cookie。 这是因为`<cookieHandler>`元素`requireSsl`上的特性设置为。 `false` 对于大多数生产环境, 不建议使用此设置, 因为这可能会带来安全风险。  
   
 ```xml  
 <cookieHandler requireSsl="false" />  

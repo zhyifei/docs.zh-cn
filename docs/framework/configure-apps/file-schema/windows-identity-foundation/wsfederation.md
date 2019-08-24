@@ -3,12 +3,12 @@ title: <wsFederation>
 ms.date: 03/30/2017
 ms.assetid: c537f770-68bd-4f82-96ad-6424ad91369f
 author: BrucePerlerMS
-ms.openlocfilehash: 57a1513f6de7f7bd9ea441b6cbc3db6a06d76fc2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: ace76475b67245a6ac5ef9f5b61db5023ffa0c1f
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69940264"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988316"
 ---
 # <a name="wsfederation"></a>\<wsFederation>
 提供<xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) 的配置。  
@@ -85,7 +85,7 @@ ms.locfileid: "69940264"
  下面的 XML 显示了`<wsFederation>`一个元素, 该元素指定 WSFAM 的设置。  
   
 > [!WARNING]
->  在此示例中, WSFAM 不需要使用 HTTPS。 这是因为已`requireHttps`设置`false`了`<wsFederation>`元素的属性。 对于大多数生产环境, 不建议使用此设置, 因为这可能会带来安全风险。  
+> 在此示例中, WSFAM 不需要使用 HTTPS。 这是因为已`requireHttps`设置`false`了`<wsFederation>`元素的属性。 对于大多数生产环境, 不建议使用此设置, 因为这可能会带来安全风险。  
   
 ```xml
 <wsFederation passiveRedirectEnabled="true"   

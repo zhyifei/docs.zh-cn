@@ -8,12 +8,12 @@ helpviewer_keywords:
 - service contracts [WCF], synchronous operations
 - service contracts [WCF], asynchronous operations
 ms.assetid: db8a51cb-67e6-411b-9035-e5821ed350c9
-ms.openlocfilehash: d9c3492e50a5eba741fa6e241f6b2c57fde35ef0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 14bf9c89fd7142746b93cc45af6c2152e8700571
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69952926"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988536"
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>同步和异步操作
 本主题讨论实现和调用异步服务操作。  
@@ -56,7 +56,7 @@ ms.locfileid: "69952926"
 3. IAsyncResult 异步模式  
   
 #### <a name="task-based-asynchronous-pattern"></a>基于任务的异步模式  
- 基于任务的异步模式是实现异步操作的首选方法，因为它最简单且最直接。 若要使用此方法，只需实现服务操作并指定 Task\<T> 的返回类型，其中，T 是逻辑运算返回的类型。 例如:  
+ 基于任务的异步模式是实现异步操作的首选方法，因为它最简单且最直接。 若要使用此方法，只需实现服务操作并指定 Task\<T> 的返回类型，其中，T 是逻辑运算返回的类型。 例如：  
   
 ```csharp  
 public class SampleService:ISampleService   
@@ -76,7 +76,7 @@ public class SampleService:ISampleService
  SampleMethodTaskAsync 操作返回 Task\<string>，因为逻辑运算返回字符串。 有关基于任务的异步模式的更多信息，请参见[基于任务的异步模式](https://go.microsoft.com/fwlink/?LinkId=232504)。  
   
 > [!WARNING]
->  在使用基于任务的异步模式时，如果在等待操作完成时发生异常，可能会引发 T:System.AggregateException。 该异常可在客户端或服务上发生  
+> 在使用基于任务的异步模式时，如果在等待操作完成时发生异常，可能会引发 T:System.AggregateException。 该异常可在客户端或服务上发生  
   
 #### <a name="event-based-asynchronous-pattern"></a>基于事件的异步模式  
  支持基于事件的异步模式的服务将有一个或多个名为 MethodNameAsync 的操作。 这些方法可能会创建同步版本的镜像，这些同步版本会在当前线程上执行相同的操作。 该类还可能具有 MethodNameCompleted 事件，并且可能会具有 MethodNameAsyncCancel（或只是 CancelAsync）方法。 希望调用操作的客户端将定义操作完成时要调用的事件处理程序，  

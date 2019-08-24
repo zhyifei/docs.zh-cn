@@ -2,12 +2,12 @@
 title: WCF 和国际化域名
 ms.date: 03/30/2017
 ms.assetid: c8a3e10a-8bc2-4a78-8d86-a562ba6e65fa
-ms.openlocfilehash: c53c22e388ec352b1275018c0b945c9608565084
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1db62f3e7d073fd1bf9bf9d4d0e17703310f2e69
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61932517"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988591"
 ---
 # <a name="wcf-and-internationalized-domain-names"></a>WCF 和国际化域名
 添加了允许使用带有国际化域名 (IDN) 的 WCF 服务的支持。 国际化域名称是包含非 ASCII 字符的域名。 这种支持包括能够承载具有 IDN 名称的 WCF 服务以及 WCF 客户端，以便与具有 IDN 名称的 Web 服务进行对话。  
@@ -25,21 +25,21 @@ ms.locfileid: "61932517"
 </configuration>  
 ```  
   
- \<Idn > 元素包含已启用的属性可以设置为以下值之一：  
+ \<Idn > 元素包含可设置为下列值之一的已启用属性:  
   
-1. "None"  
+1. 内容  
   
 2. "AllExceptIntranet"  
   
-3. "全部"  
+3. 一切  
   
- 在 IDN 设置设为"None"，Uri.Host 或 Uri.DnsSafeHost 不执行任何转换。 在 IDN 设置设为"All"，uri。主机保持 Unicode 和 uri。DnsSafeHost 转换为 Punycode。 在 IDN 设置设为"AllExceptIntranet"，uri。DnsSafeHost 转换为 Punycode 以便用于 internet 地址，并保留 Unicode 以便用于 intranet 地址。 此设置对于正确的 DNS 名称解析十分重要。 请注意，无需为 Windows 8 和更新版本配置此设置。  
-  
-> [!WARNING]
->  您应该永远不会使用 Punycode 对地址进行硬代码。 WCF 将会基于您应用的配置设置为您转换它。  
+ 当 IDN 设置设置为 "None" 时, Uri.dnssafehost 或 Uri 不会执行任何转换。 当 IDN 设置设置为 "All" 时, uri。主机保持 Unicode 和 uri。Uri.dnssafehost 转换为 Punycode。 当 IDN 设置设为 "AllExceptIntranet" 时, uri。对于 internet 地址, Uri.dnssafehost 将转换为 Punycode, 并为 intranet 地址保留 Unicode。 此设置对于正确的 DNS 名称解析十分重要。 请注意，无需为 Windows 8 和更新版本配置此设置。  
   
 > [!WARNING]
->  将 Unicode 字符添加到 applicationHost.exe.config 时，使用 UTF-8 编码保存文件。  
+> 您应该永远不会使用 Punycode 对地址进行硬代码。 WCF 将会基于您应用的配置设置为您转换它。  
+  
+> [!WARNING]
+> 将 Unicode 字符添加到 applicationHost.exe.config 时，使用 UTF-8 编码保存文件。  
   
 ## <a name="see-also"></a>请参阅
 

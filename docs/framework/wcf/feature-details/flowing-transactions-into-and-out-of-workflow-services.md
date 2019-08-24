@@ -2,18 +2,18 @@
 title: 使事务流入和流出工作流服务
 ms.date: 03/30/2017
 ms.assetid: 03ced70e-b540-4dd9-86c8-87f7bd61f609
-ms.openlocfilehash: 7926c5a8ce1ca1ba3e24c4d1681ae12c18039924
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: ae99c53bbb859f3ade075d4d60ad2ae7e5e7272b
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963341"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988808"
 ---
 # <a name="flowing-transactions-into-and-out-of-workflow-services"></a>使事务流入和流出工作流服务
 工作流服务和客户端可以参与事务。  对于将成为环境事务一部分的服务操作，将 <xref:System.ServiceModel.Activities.Receive> 活动放到 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 活动内。 由 <xref:System.ServiceModel.Activities.Send> 内的 <xref:System.ServiceModel.Activities.SendReply> 或 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 活动所做的任何调用也将在环境事务中进行。 工作流客户端应用程序可以通过使用 <xref:System.Activities.Statements.TransactionScope> 活动来创建环境事务，并通过使用该环境事务来调用服务操作。 本主题将指导您创建参与事务的工作流服务和工作流客户端。  
   
 > [!WARNING]
->  如果在事务内加载工作流服务实例, 且工作流包含<xref:System.Activities.Statements.Persist>活动, 则工作流实例将被阻止, 直到事务超时。  
+> 如果在事务内加载工作流服务实例, 且工作流包含<xref:System.Activities.Statements.Persist>活动, 则工作流实例将被阻止, 直到事务超时。  
   
 > [!IMPORTANT]
 > 无论何时使用 <xref:System.ServiceModel.Activities.TransactedReceiveScope>，都建议将所有接收都置于工作流内的 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 活动中。  
@@ -179,7 +179,7 @@ ms.locfileid: "69963341"
   
 8. 将 <xref:System.ServiceModel.Activities.Send> 活动拖放到 <xref:System.Activities.Statements.Assign> 活动后面，并设置以下属性：  
   
-    |Property|值|  
+    |属性|值|  
     |--------------|-----------|  
     |EndpointConfigurationName|workflowServiceEndpoint|  
     |OperationName|StartSample|  
