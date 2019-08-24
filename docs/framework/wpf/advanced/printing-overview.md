@@ -15,12 +15,12 @@ helpviewer_keywords:
 - XPSDrv-based printers
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
-ms.openlocfilehash: 43b0ddc8f683e7069207bbb1c47af73976bc4a5a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: bfac0248e6d9dae3ef87f43b2c713e1dc64a9464
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69958547"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70016113"
 ---
 # <a name="printing-overview"></a>打印概述
 使用 Microsoft .NET 框架, 使用 Windows Presentation Foundation (WPF) 的应用程序开发人员具有丰富的一组新的打印和打印系统管理 Api。 在 [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] 中，还为创建 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 应用程序的开发人员和使用非托管代码的开发人员提供了这些打印系统增强功能中的某些功能。 此新功能的核心是新的 [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] 文件格式和 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 打印路径。  
@@ -64,7 +64,7 @@ ms.locfileid: "69958547"
   
  若要通过[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]和 Windows 窗体应用程序启用基于 XPSDrv 的打印机, XPS 打印机驱动程序 (XPSDrv) 支持将 GDI 转换为 xps 格式。 XPSDrv 模型还提供了用于 XPS 到 GDI 格式的转换器, 以便[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]应用程序能够[!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]打印文档。 对于[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]应用程序, 每当写入操作的目标打印队列没有 XPSDrv 驱动<xref:System.Windows.Xps.XpsDocumentWriter.Write%2A>程序<xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A>时, 将<xref:System.Windows.Xps.XpsDocumentWriter>由类的和方法自动完成 XPS 到 GDI 格式的转换。 (Windows 窗体应用程序不[!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]能打印文档。)  
   
- 下图描述了打印子系统, 并定义了提供[!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)]的部分以及由软件和硬件供应商定义的部分:  
+ 下图描述了打印子系统, 并定义了 Microsoft 提供的部分以及由软件和硬件供应商定义的部分:  
   
  ![屏幕截图显示了 XPS 打印系统。](./media/printing-overview/xml-paper-specification-print-system.png)  
   

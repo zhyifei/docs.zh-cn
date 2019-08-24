@@ -5,19 +5,19 @@ helpviewer_keywords:
 - typography [WPF], ClearType technology
 - ClearType [WPF], technology
 ms.assetid: 7e2392e0-75dc-463d-a716-908772782431
-ms.openlocfilehash: 11019d564e7e658b745aec4254ad9a0c582b8416
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: dbef816a995d9f4909a887f017da29bab6fc3702
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964930"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70015643"
 ---
 # <a name="cleartype-overview"></a>ClearType 概述
 本主题概述了中[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]的 Microsoft ClearType 技术。  
 
 <a name="overview"></a>   
 ## <a name="technology-overview"></a>技术概述  
- ClearType 是一种由[!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)]开发的软件技术, 可提高现有 lcd (液晶显示器, 如笔记本电脑屏幕、Pocket PC 屏幕和平板显示器) 上文本的可读性。  ClearType 通过访问 LCD 屏幕的每个像素中的各个垂直色带元素来工作。 在 ClearType 之前, 计算机可以显示的最小细节级别为单个像素, 但在 LCD 监视器上运行 ClearType 时, 我们现在可以将文本的功能显示为小到宽度的一小部分。 超高的分辨率增加了文本显示中细节的清晰度，使其更便于长时间阅读。  
+ ClearType 是由 Microsoft 开发的一种软件技术, 可提高现有 Lcd (液晶显示器上显示的文本) 的可读性, 如笔记本电脑屏幕、Pocket PC 屏幕和平板显示器。  ClearType 通过访问 LCD 屏幕的每个像素中的各个垂直色带元素来工作。 在 ClearType 之前, 计算机可以显示的最小细节级别为单个像素, 但在 LCD 监视器上运行 ClearType 时, 我们现在可以将文本的功能显示为小到宽度的一小部分。 超高的分辨率增加了文本显示中细节的清晰度，使其更便于长时间阅读。  
   
  中[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]可用的 cleartype 是最新一代的 cleartype, 它对 Microsoft Windows 图形设备接口 (GDI) 中找到的版本具有多项改进。  
   

@@ -5,22 +5,22 @@ helpviewer_keywords:
 - data binding [Windows Forms], simple data binding
 - Windows Forms controls, data binding
 ms.assetid: 3bcaded8-0f1a-4cc0-8830-f59be253bf4e
-ms.openlocfilehash: ed1d0e423a3cdf77a242ec3214720f1466f65897
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: df87f00e6e03de67c3fb1adc28472c96f4a47ef4
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039511"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70015636"
 ---
 # <a name="how-to-create-a-simple-bound-control-on-a-windows-form"></a>如何：在 Windows 窗体上创建简单绑定控件
 
 使用*简单绑定*, 可以在控件中显示单个数据元素, 例如数据集表中的列值。 可以简单地将控件的任何属性绑定到数据值。
 
-### <a name="to-simple-bind-a-control"></a>简单-绑定控件
+## <a name="to-simple-bind-a-control"></a>简单-绑定控件
 
 1. 连接到数据源。 有关详细信息, 请参阅[连接到数据源](../data/adonet/connecting-to-a-data-source.md)。
 
-2. 在窗体中, 选择控件并显示 "**属性**" 窗口。
+2. 在 Visual Studio 中, 选择窗体上的控件并显示 "**属性**" 窗口。
 
 3. 展开 " **(databinding)** " 属性。
 

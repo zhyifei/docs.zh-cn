@@ -8,28 +8,30 @@ helpviewer_keywords:
 - assembly folder registration [Windows Forms], Choose Toolbox Items dialog box
 - Choose Toolbox Items dialog box [Windows Forms], display control
 ms.assetid: 01ef6eba-d044-40f0-951d-78eff7ebd9a9
-ms.openlocfilehash: 4ed3f6ffdf8a86d050b81311c9211767d8b179b8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+author: gewarren
+ms.author: gewarren
+manager: jillfra
+ms.openlocfilehash: 9a6938b4fe651e13f3ec96642db6027143f1f028
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623601"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70015885"
 ---
 # <a name="how-to-display-a-control-in-the-choose-toolbox-items-dialog-box"></a>如何：在“选择工具箱项”对话框中显示控件
-在开发和分发控件，您可能希望出现在这些控件**选择工具箱项**对话框中，右键单击时显示**工具箱**，然后选择**选择项**。 可以使控件能够显示在此对话框中的使用 AssemblyFoldersEx 注册过程。  
-  
-### <a name="to-display-your-control-in-the-choose-toolbox-items-dialog-box"></a>若要在选择工具箱项对话框中显示控件  
-  
-- 在控件程序集安装到全局程序集缓存中。 有关详细信息，请参阅[如何：将程序集安装到全局程序集缓存](../../app-domains/how-to-install-an-assembly-into-the-gac.md)  
-  
-     或  
-  
-- 使用 AssemblyFoldersEx 注册过程中注册您的控件和其关联的设计时程序集。 AssemblyFoldersEx 是框架的第三方供应商在其中存储每个版本，它们支持的路径的注册表位置。 设计时间解析度可以查看在此注册表位置，以查找引用程序集。 注册表脚本可以指定你想要显示在工具箱中的控件。 有关详细信息，请参阅[部署自定义控件和设计时程序集](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ee849818(v=vs.100))。  
-  
+
+开发和分发控件时, 可能希望这些控件出现在 Visual Studio 的 "**选择工具箱项**" 对话框中, 当您右键单击 "**工具箱**" 并选择 "**选择项**" 时, 将显示该对话框。 可以通过使用 AssemblyFoldersEx 注册过程, 使控件显示在此对话框中。
+
+若要在 "选择工具箱项" 对话框中显示控件:
+
+- 将控件程序集安装到全局程序集缓存中。 有关详细信息，请参阅[如何：将程序集安装到全局程序集缓存](../../app-domains/how-to-install-an-assembly-into-the-gac.md)
+
+  或
+
+- 使用 AssemblyFoldersEx 注册过程注册控件及其关联的设计时程序集。 AssemblyFoldersEx 是一个注册表位置, 其中第三方供应商为其支持的每个框架版本存储路径。 设计时解决方案可以在此注册表位置查找引用程序集。 注册表脚本可以指定想要在 "工具箱" 中显示的控件。
+
 ## <a name="see-also"></a>请参阅
 
-- [“选择工具箱项”对话框 (Visual Studio)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dyca0t6t(v=vs.100))
-- [部署自定义控件和设计时程序集](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ee849818(v=vs.100))
 - [设计时开发 Windows 窗体控件](developing-windows-forms-controls-at-design-time.md)
 - [如何：将程序集安装到全局程序集缓存](../../app-domains/how-to-install-an-assembly-into-the-gac.md)
-- [演练：自动填充工具箱与自定义组件](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)
+- [演练：用自定义组件自动填充工具箱](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)

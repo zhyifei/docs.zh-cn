@@ -5,19 +5,19 @@ helpviewer_keywords:
 - ClearType [WPF], registry settings
 - typography [WPF], ClearType registry settings
 ms.assetid: 56f314bb-b30b-4f67-8492-8b8a9fa432ae
-ms.openlocfilehash: f4b5a0c3764c173afe03adb67fd3df9d17d9fdcb
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2104cb4e853888efffe6b289ac1400530be25473
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964883"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70015599"
 ---
 # <a name="cleartype-registry-settings"></a>ClearType 注册表设置
 本主题概述了 WPF 应用程序使用的 Microsoft ClearType 注册表设置。  
 
 <a name="overview"></a>   
 ## <a name="technology-overview"></a>技术概述  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]向显示设备呈现文本的应用程序使用 ClearType 功能提供增强的阅读体验。 ClearType 是一种由[!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)]开发的软件技术, 可提高现有 lcd (液晶显示器, 如笔记本电脑屏幕、Pocket PC 屏幕和平板显示器) 上文本的可读性。 ClearType 通过访问 LCD 屏幕的每个像素中的各个垂直色带元素来工作。 有关 ClearType 的详细信息, 请参阅[Cleartype 概述](cleartype-overview.md)。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]向显示设备呈现文本的应用程序使用 ClearType 功能提供增强的阅读体验。 ClearType 是由 Microsoft 开发的一种软件技术, 可提高现有 Lcd (液晶显示器上显示的文本) 的可读性, 如笔记本电脑屏幕、Pocket PC 屏幕和平板显示器。 ClearType 通过访问 LCD 屏幕的每个像素中的各个垂直色带元素来工作。 有关 ClearType 的详细信息, 请参阅[Cleartype 概述](cleartype-overview.md)。  
   
  当在各种显示设备上查看时, 用 ClearType 呈现的文本可能出现明显不同。 例如, 少量监视器以蓝色、绿色、红色顺序而不是更常见的红色、绿色、蓝色 ( [!INCLUDE[TLA#tla_rgb](../../../../includes/tlasharptla-rgb-md.md)]) 顺序实现颜色条带元素。  
   

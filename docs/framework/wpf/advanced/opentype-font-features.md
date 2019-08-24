@@ -9,12 +9,12 @@ helpviewer_keywords:
 - typography [WPF], OpenType font technology
 - OpenType font technology [WPF]
 ms.assetid: 4061a9d1-fe8b-4921-9e17-18ec7d2e3ea2
-ms.openlocfilehash: 7d73176a68d8b4b19b6c980ef52e1f47408127fb
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3f1f0698afce6e64711e37ac60d0662d65bbee6b
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69933690"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70016144"
 ---
 # <a name="opentype-font-features"></a>OpenType 字体功能
 
@@ -22,7 +22,7 @@ ms.locfileid: "69933690"
   
 <a name="overview"></a>   
 ## <a name="opentype-font-format"></a>OpenType 字体格式  
- OpenType 字体格式是[!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)]字体格式的扩展, 添加了对 PostScript 字体数据的支持。 OpenType 字体格式由[!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)]和 Adobe Corporation 共同开发。 Opentype 字体和支持 opentype 字体的操作系统服务为用户提供了一种简单的方法来安装和使用字体, 无论字体是否[!INCLUDE[TLA2#tla_truetype](../../../../includes/tla2sharptla-truetype-md.md)]包含轮廓或 CFF (PostScript) 轮廓。  
+ OpenType 字体格式是[!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)]字体格式的扩展, 添加了对 PostScript 字体数据的支持。 OpenType 字体格式由 Microsoft 和 Adobe Corporation 共同开发。 Opentype 字体和支持 opentype 字体的操作系统服务为用户提供了一种简单的方法来安装和使用字体, 无论字体是否[!INCLUDE[TLA2#tla_truetype](../../../../includes/tla2sharptla-truetype-md.md)]包含轮廓或 CFF (PostScript) 轮廓。  
   
  OpenType 字体格式解决了以下开发人员难题:  
   
@@ -289,7 +289,7 @@ ms.locfileid: "69933690"
 ### <a name="typography-class-properties"></a>版式类属性  
  下表列出了<xref:System.Windows.Documents.Typography>对象的属性、值和默认设置。  
   
-|Property|值|Default Value|  
+|属性|值|Default Value|  
 |--------------|----------------|-------------------|  
 |<xref:System.Windows.Documents.Typography.AnnotationAlternates%2A>|数值 - 字节|0|  
 |<xref:System.Windows.Documents.Typography.Capitals%2A>|<xref:System.Windows.FontCapitals.AllPetiteCaps> &#124; <xref:System.Windows.FontCapitals.AllSmallCaps> &#124; <xref:System.Windows.FontCapitals.Normal> &#124; <xref:System.Windows.FontCapitals.PetiteCaps> &#124; <xref:System.Windows.FontCapitals.SmallCaps> &#124; <xref:System.Windows.FontCapitals.Titling> &#124; <xref:System.Windows.FontCapitals.Unicase>|<xref:System.Windows.FontCapitals.Normal?displayProperty=nameWithType>|  
