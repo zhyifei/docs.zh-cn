@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows Forms controls, adding to form
 - controls [Windows Forms], adding
 ms.assetid: 2af86001-9d62-4154-87fb-66db2c3cd9fd
-ms.openlocfilehash: 7ee603fa5350ef81c6d32d2f22119bbe526295df
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: d20afc6e8a950035cc3c0bf010504d42f401bfbb
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69912617"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69987505"
 ---
 # <a name="how-to-add-controls-to-windows-forms"></a>如何：向 Windows 窗体添加控件
 大多数窗体都是通过将控件添加到窗体的图面来定义用户界面 (UI) 而设计的。 *控件*是窗体上用于显示信息或接受用户输入的组件。 有关控件的详细信息, 请参阅[Windows 窗体控件](index.md)。
@@ -89,7 +89,6 @@ ms.locfileid: "69912617"
 ## <a name="see-also"></a>请参阅
 
 - [Windows 窗体控件](index.md)
-- [在 Windows 窗体上排列控件](arranging-controls-on-windows-forms.md)
 - [如何：Windows 窗体上的调整控件大小](how-to-resize-controls-on-windows-forms.md)
 - [如何：设置 Windows 窗体控件显示的文本](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
 - [在 Windows 窗体上使用的控件](controls-to-use-on-windows-forms.md)

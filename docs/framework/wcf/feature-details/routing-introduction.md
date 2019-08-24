@@ -2,12 +2,12 @@
 title: 路由简介
 ms.date: 03/30/2017
 ms.assetid: bf6ceb38-6622-433b-9ee7-f79bc93497a1
-ms.openlocfilehash: cc9298c96a5d1dc60ae1f9982b21ce7a160aacbd
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: eaf09c0d724521c3c69fde0e90ecd7cd5aadb253
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69933971"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988673"
 ---
 # <a name="routing-introduction"></a>路由简介
 路由服务提供的泛型可插入 SOAP 中介能够根据消息内容路由消息。 使用路由服务，您可以创建复杂的路由逻辑，以便实现服务聚合、服务版本管理、优先级路由和多播路由等方案。 路由服务还提供了错误处理功能，使您可以设置备份终结点的列表。如果将消息发送到主目标终结点时失败，则会发送到这些备份终结点。  
@@ -395,7 +395,7 @@ using (ServiceHost serviceHost =
  将模拟用于路由服务要求在 ASP.NET 兼容模式下使用 ASP.NET 模拟，或使用已配置为允许模拟的 Windows 凭据。 有关 ASP.NET 兼容模式的详细信息, 请参阅[WCF 服务和 ASP.NET](wcf-services-and-aspnet.md)。  
   
 > [!WARNING]
->  WCF 路由服务不支持将模拟用于基本身份验证。  
+> WCF 路由服务不支持将模拟用于基本身份验证。  
   
  要将 ASP 模拟用于路由服务，可对服务承载环境启用 ASP.NET 兼容模式。 路由服务已被标记为允许 ASP.NET 兼容模式，并且模拟会自动启用。 模拟是将 ASP.NET 与路由服务相集成的唯一支持的用法。  
   
