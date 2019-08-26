@@ -6,22 +6,22 @@ helpviewer_keywords:
 - auto-implemented properties [C#]
 - properties [C#], auto-implemented
 ms.assetid: 1dc5a8ad-a4f7-4f32-8506-3fc6d8c8bfed
-ms.openlocfilehash: f9884f353e58ff6119e3bc3b95aa55f0f60d0ad5
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 4cbed8145487325d8b06882bbab843321a49d0d3
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398500"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596901"
 ---
 # <a name="how-to-implement-a-lightweight-class-with-auto-implemented-properties-c-programming-guide"></a>如何：使用自动实现的属性实现轻量类（C# 编程指南）
 
 本示例演示如何创建一个仅用于封装一组自动实现的属性的不可变轻型类。 当你必须使用引用类型语义时，请使用此种构造而不是结构。
 
 可通过两种方法来实现不可变的属性：
-- 可以将 [set](../../../csharp/language-reference/keywords/set.md) 访问器声明为[专用](../../../csharp/language-reference/keywords/private.md)。  属性只能在该类型中设置，但它对于使用者是不可变的。
+- 可以将 [set](../../language-reference/keywords/set.md) 访问器声明为[专用](../../language-reference/keywords/private.md)。  属性只能在该类型中设置，但它对于使用者是不可变的。
 
   当你声明一个 private `set` 取值函数时，你无法使用对象初始值设定项来初始化属性。 你必须使用构造函数或工厂方法。
-- 也可以仅声明 [get](../../../csharp/language-reference/keywords/get.md) 访问器，使属性除了能在该类型的构造函数中可变，在其他任何位置都不可变。
+- 也可以仅声明 [get](../../language-reference/keywords/get.md) 访问器，使属性除了能在该类型的构造函数中可变，在其他任何位置都不可变。
 
 ## <a name="example"></a>示例
 
@@ -120,6 +120,6 @@ public class Program
 
 ## <a name="see-also"></a>请参阅
 
-- [属性](../../../csharp/programming-guide/classes-and-structs/properties.md)
-- [struct](../../../csharp/language-reference/keywords/struct.md)
-- [对象和集合初始值设定项](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
+- [属性](./properties.md)
+- [struct](../../language-reference/keywords/struct.md)
+- [对象和集合初始值设定项](./object-and-collection-initializers.md)

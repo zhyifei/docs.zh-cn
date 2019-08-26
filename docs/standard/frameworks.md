@@ -6,28 +6,28 @@ ms.author: mairaw
 ms.date: 04/02/2019
 ms.custom: updateeachrelease
 ms.technology: dotnet-standard
-ms.openlocfilehash: a7005cfe01d168febd97af5f8b41cfff26b2cfc7
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 20b13bb590a63a807c1894bf08051053f90c0fc4
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641455"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666512"
 ---
 # <a name="target-frameworks"></a>目标框架
 
 以应用或库中的框架为目标时，需要指定想要向应用或库提供的 API 集。 使用目标框架名字对象 (TFM) 在项目文件中指定目标框架。
 
-应用或库可以使用 [.NET Standard](~/docs/standard/net-standard.md) 版本作为目标。 .NET Standard 版本表示所有 .NET 实现中的标准化 API 集。 例如，库可以使用 .NET Standard 1.6 作为目标，并获得对可使用相同基本代码跨 .NET Core 和 .NET Framework 工作的 API 的访问权限。
+应用或库可以使用 [.NET Standard](net-standard.md) 版本作为目标。 .NET Standard 版本表示所有 .NET 实现中的标准化 API 集。 例如，库可以使用 .NET Standard 1.6 作为目标，并获得对可使用相同基本代码跨 .NET Core 和 .NET Framework 工作的 API 的访问权限。
 
 应用或库还能以一个特定 .NET 实现为目标，获得特定于实现的 API 的访问权限。 例如，面向 Xamarin.iOS 的应用（如 `Xamarin.iOS10`）有权访问 Xamarin 提供的适用于 iOS 10 的 iOS API 包装器；面向通用 Windows 平台 (UWP) 的应用（如 `uap10.0`）有权访问为运行 Windows 10 的设备编译的 API。
 
 对于某些目标框架（例如 .NET Framework），API 由框架在系统上安装的程序集定义，并且可能包括应用程序框架 API（例如 ASP.NET）。
 
-对于基于包的目标框架（例如 .NET Standard 和 .NET Core），API 由包含在应用或库中的包定义。 元包是一个 NuGet 包，NuGet 包本身不包含任何内容，只是一个依赖项列表（其他包）。 基于 NuGet 包的目标框架隐式指定一个元包，该元包引用一起构成框架的所有包。
+对于基于包的目标框架（例如 .NET Standard 和 .NET Core），API 由包含在应用或库中的包定义。 元包  是一个 NuGet 包，NuGet 包本身不包含任何内容，只是一个依赖项列表（其他包）。 基于 NuGet 包的目标框架隐式指定一个元包，该元包引用一起构成框架的所有包。
 
 ## <a name="latest-target-framework-versions"></a>最新目标框架版本
 
-下表定义了最常见的目标框架、如何引用这些框架，以及它们实现的 [.NET Standard](~/docs/standard/net-standard.md) 版本。 这些目标框架版本是最新的稳定版本。 预览版不会显示。 目标框架名字对象 (TFM) 是一个标准化令牌格式，用于指定 .NET 应用或库的目标框架。
+下表定义了最常见的目标框架、如何引用这些框架，以及它们实现的 [.NET Standard](net-standard.md) 版本。 这些目标框架版本是最新的稳定版本。 预览版不会显示。 目标框架名字对象 (TFM) 是一个标准化令牌格式，用于指定 .NET 应用或库的目标框架。
 
 | 目标 Framework      | 最新 <br/> 稳定版本 | 目标框架名字对象 (TFM) | 已实现 <br/> .NET Standard 版本 |
 | :-------------------: | :-------------------------: | :----------------------------: | :-------------------------------------: |
@@ -52,7 +52,7 @@ ms.locfileid: "65641455"
 
 ## <a name="how-to-specify-target-frameworks"></a>如何指定目标框架
 
-在项目文件中指定目标框架。 指定单个目标框架时，使用 TargetFramework 元素。 以下控制台应用项目文件演示了如何以 .NET Core 2.2 为目标：
+在项目文件中指定目标框架。 指定单个目标框架时，使用 TargetFramework  元素。 以下控制台应用项目文件演示了如何以 .NET Core 2.2 为目标：
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -65,9 +65,9 @@ ms.locfileid: "65641455"
 </Project>
 ```
 
-指定多个目标框架时，可有条件地为每个目标框架引用程序集。 在代码中，可使用具有 -if-then-else 逻辑的预处理器符号，有条件地针对这些程序集进行编译。
+指定多个目标框架时，可有条件地为每个目标框架引用程序集。 在代码中，可使用具有 -if-then-else  逻辑的预处理器符号，有条件地针对这些程序集进行编译。
 
-以下库项目文件以 .NET Standard (`netstandard1.4`) 的 API 和 .NET Framework（`net40` 和 `net45`）的 API 作为目标。 将复数形式的 TargetFrameworks 元素与多个目标框架一起使用。 请注意为两个 .NET Framework TFM 编译库时，`Condition` 属性包括特定于实现的包的方法：
+以下库项目文件以 .NET Standard (`netstandard1.4`) 的 API 和 .NET Framework（`net40` 和 `net45`）的 API 作为目标。 将复数形式的 TargetFrameworks  元素与多个目标框架一起使用。 请注意为两个 .NET Framework TFM 编译库时，`Condition` 属性包括特定于实现的包的方法：
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">

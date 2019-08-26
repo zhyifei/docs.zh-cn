@@ -15,15 +15,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7ac90473a0bf15173683c45abc8e4a840ea7e733
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5832ec095ea0e96327f6a9636193da9c0c8a5dd2
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61946427"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988267"
 ---
 # <a name="icordebugilframe3getreturnvalueforiloffset-method"></a>ICorDebugILFrame3::GetReturnValueForILOffset 方法
-获取封装函数的返回值的"ICorDebugValue"对象。  
+获取一个 "ICorDebugValue" 对象, 该对象封装函数的返回值。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,38 +39,38 @@ HRESULT GetReturnValueForILOffset(
  IL 偏移量。 请参见“备注”部分。  
   
  `ppReturnValue`  
- 指向提供有关返回值的函数调用信息"ICorDebugValue"接口对象的地址的指针。  
+ 一个指向 "ICorDebugValue" 接口对象地址的指针, 该对象提供有关函数调用的返回值的信息。  
   
 ## <a name="remarks"></a>备注  
- 此方法使用连同[ICorDebugCode3::GetReturnValueLiveOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md)方法以获取一种方法的返回值。 它是在其返回值将被忽略，如以下两个代码示例所示的方法的情况下特别有用。 第一个示例调用<xref:System.Int32.TryParse%2A?displayProperty=nameWithType>方法，但忽略方法的返回值。  
+ 此方法与[ICorDebugCode3:: GetReturnValueLiveOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md)方法一起使用, 以获取方法的返回值。 这对于返回值被忽略的方法特别有用, 如以下两个代码示例所示。 第一个示例调用<xref:System.Int32.TryParse%2A?displayProperty=nameWithType>方法, 但忽略方法的返回值。  
   
  [!code-csharp[Unmanaged.Debugging.MRV#1](../../../../samples/snippets/csharp/VS_Snippets_CLR/unmanaged.debugging.mrv/cs/mrv1.cs#1)]
  [!code-vb[Unmanaged.Debugging.MRV#1](../../../../samples/snippets/visualbasic/VS_Snippets_CLR/unmanaged.debugging.mrv/vb/mrv1.vb#1)]  
   
- 第二个示例说明了在调试更常见的问题。 由于一种方法用作方法调用中的自变量，因此，仅当调试器单步通过调用的方法，才可访问其返回值。 在许多情况下，尤其是在调用的方法定义中的外部库时，不能。  
+ 第二个示例演示了调试中更常见的问题。 因为方法在方法调用中用作参数, 所以仅当调试器逐步执行调用的方法时, 才能访问其返回值。 在许多情况下, 尤其是在外部库中定义了所调用的方法时, 这是不可能的。  
   
  [!code-csharp[Unmanaged.Debugging.MRV#2](../../../../samples/snippets/csharp/VS_Snippets_CLR/unmanaged.debugging.mrv/cs/mrv2.cs#2)]
  [!code-vb[Unmanaged.Debugging.MRV#2](../../../../samples/snippets/visualbasic/VS_Snippets_CLR/unmanaged.debugging.mrv/vb/mrv2.vb#2)]  
   
- 如果传递[ICorDebugCode3::GetReturnValueLiveOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md)一个 IL 偏移量至函数调用站点的方法，它将返回一个或多个本机偏移量。 调试程序然后可以在函数中的本机偏移量上设置断点。 当调试器遇到其中一个断点时，然后可以将相同的 IL 偏移量传递给此方法以获取返回值进行传递。 然后调试器应该清除此设置的所有断点。  
+ 如果将[ICorDebugCode3:: GetReturnValueLiveOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md)方法传递给函数调用站点的 IL 偏移量, 它将返回一个或多个本机偏移量。 然后, 调试器可以在函数中的这些本机偏移量上设置断点。 当调试器遇到其中一个断点时, 您可以传递您传递给此方法的同一 IL 偏移量来获取返回值。 调试器随后应清除它所设置的所有断点。  
   
 > [!WARNING]
->  [ICorDebugCode3::GetReturnValueLiveOffset Method](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md)和`ICorDebugILFrame3::GetReturnValueForILOffset`方法，你可以获得仅为引用类型的返回值信息。 从值类型检索返回值信息 (即，派生的所有类型<xref:System.ValueType>) 不受支持。  
+> [ICorDebugCode3:: GetReturnValueLiveOffset 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md)和`ICorDebugILFrame3::GetReturnValueForILOffset`方法仅允许获取引用类型的返回值信息。 不支持从值类型 (即从<xref:System.ValueType>派生的所有类型) 检索返回值信息。  
   
- 指定的 IL 偏移量`ILOffset`参数应在函数调用站点，并应在返回的本机偏移量处设置断点处停止调试对象[ICorDebugCode3::GetReturnValueLiveOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md)方法为相同的 IL 偏移量。 如果未在指定的 IL 偏移量的正确位置停止调试对象，该 API 将失败。  
+ `ILOffset`参数指定的 IL 偏移量应位于函数调用站点上, 并且调试对象应在[ICorDebugCode3:: GetReturnValueLiveOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md)方法为同一 IL 偏移量返回的本机偏移量处停止。 如果在指定的 IL 偏移量的正确位置没有停止调试对象, 则 API 将失败。  
   
- 如果函数调用不会返回一个值，该 API 将失败。  
+ 如果函数调用不返回值, 则 API 将失败。  
   
- `ICorDebugILFrame3::GetReturnValueForILOffset`方法是仅适用于基于 x86 和 AMD64 系统。  
+ `ICorDebugILFrame3::GetReturnValueForILOffset`方法仅适用于基于 x86 的和 AMD64 系统。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头：** Cordebug.idl, Cordebug.idl  
   
- **库：** CorGuids.lib  
+ **类库**CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v451plus](../../../../includes/net-current-v451plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v451plus](../../../../includes/net-current-v451plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

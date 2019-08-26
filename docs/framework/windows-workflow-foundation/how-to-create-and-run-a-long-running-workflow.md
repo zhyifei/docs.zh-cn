@@ -5,126 +5,126 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c0043c89-2192-43c9-986d-3ecec4dd8c9c
-ms.openlocfilehash: fd7bf92750c6e314a5c9105bb961bf68b68182cb
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 75fa4fcdef9bf8e2773264fff4a8404330909e6b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063827"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962341"
 ---
 # <a name="how-to-create-and-run-a-long-running-workflow"></a>如何：创建和运行长期运行的工作流
-Windows Workflow Foundation (WF) 的主要功能之一是保留和卸载到数据库的空闲工作流运行时的功能。 中的步骤[如何：运行工作流](how-to-run-a-workflow.md)演示工作流承载的控制台应用程序的基础知识。 示例演示了启动工作流、工作流生命周期处理程序和恢复书签。 为了有效演示工作流持久性，需要一个支持启动和恢复多个工作流实例的更为复杂的工作流主机。 教程中此步骤演示了如何创建 Windows 窗体主机应用程序，此 Windows 窗体主机应用程序支持启动和恢复多个工作流实例、工作流持久性，并为高级功能（如在后续教程步骤中演示的跟踪和版本控制）提供基础。  
+Windows Workflow Foundation (WF) 的一个中心功能是运行时能够将空闲工作流保存并卸载到数据库。 [如何:运行工作流](how-to-run-a-workflow.md) , 演示使用控制台应用程序托管工作流的基础知识。 示例演示了启动工作流、工作流生命周期处理程序和恢复书签。 为了有效演示工作流持久性，需要一个支持启动和恢复多个工作流实例的更为复杂的工作流主机。 教程中此步骤演示了如何创建 Windows 窗体主机应用程序，此 Windows 窗体主机应用程序支持启动和恢复多个工作流实例、工作流持久性，并为高级功能（如在后续教程步骤中演示的跟踪和版本控制）提供基础。  
   
 > [!NOTE]
->  此教程步骤和后续步骤使用中的所有三个工作流类型[如何：创建工作流](how-to-create-a-workflow.md)。 如果未完成所有三种类型可以下载完整的版本中的步骤[Windows Workflow Foundation (WF45)-入门教程](https://go.microsoft.com/fwlink/?LinkID=248976)。  
+> 此教程步骤和后续步骤使用[如何:创建工作流](how-to-create-a-workflow.md)。 如果未完成所有这三种类型, 则可以从[Windows Workflow Foundation (WF45)-入门教程](https://go.microsoft.com/fwlink/?LinkID=248976)下载完整的步骤版本。  
   
 > [!NOTE]
->  若要下载完整的版本或观看教程视频演练，请参阅[Windows Workflow Foundation (WF45)-入门教程](https://go.microsoft.com/fwlink/?LinkID=248976)。  
+> 若要下载完整版本或观看教程的视频演练, 请参阅[Windows Workflow Foundation (WF45)-入门教程](https://go.microsoft.com/fwlink/?LinkID=248976)。  
   
 ## <a name="in-this-topic"></a>在本主题中  
   
-- [若要创建持久性数据库](how-to-create-and-run-a-long-running-workflow.md#BKMK_CreatePersistenceDatabase)  
+- [创建持久性数据库](how-to-create-and-run-a-long-running-workflow.md#BKMK_CreatePersistenceDatabase)  
   
-- [若要添加对 DurableInstancing 程序集的引用](how-to-create-and-run-a-long-running-workflow.md#BKMK_AddReference)  
+- [添加对 DurableInstancing 程序集的引用](how-to-create-and-run-a-long-running-workflow.md#BKMK_AddReference)  
   
-- [若要创建工作流主机窗体](how-to-create-and-run-a-long-running-workflow.md#BKMK_CreateForm)  
+- [创建工作流主机窗体](how-to-create-and-run-a-long-running-workflow.md#BKMK_CreateForm)  
   
-- [若要添加的属性和帮助器方法的窗体](how-to-create-and-run-a-long-running-workflow.md#BKMK_AddHelperMethods)  
+- [添加窗体的属性和帮助器方法](how-to-create-and-run-a-long-running-workflow.md#BKMK_AddHelperMethods)  
   
-- [若要配置实例存储、 工作流生命周期处理程序和扩展](how-to-create-and-run-a-long-running-workflow.md#BKMK_ConfigureWorkflowApplication)  
+- [配置实例存储、工作流生命周期处理程序和扩展](how-to-create-and-run-a-long-running-workflow.md#BKMK_ConfigureWorkflowApplication)  
   
-- [若要启用启动和恢复多个工作流类型](how-to-create-and-run-a-long-running-workflow.md#BKMK_WorkflowVersionMap)  
+- [启用和恢复多个工作流类型](how-to-create-and-run-a-long-running-workflow.md#BKMK_WorkflowVersionMap)  
   
-- [若要启动新工作流](how-to-create-and-run-a-long-running-workflow.md#BKMK_StartWorkflow)  
+- [启动新工作流](how-to-create-and-run-a-long-running-workflow.md#BKMK_StartWorkflow)  
   
-- [若要恢复的工作流](how-to-create-and-run-a-long-running-workflow.md#BKMK_ResumeWorkflow)  
+- [恢复工作流](how-to-create-and-run-a-long-running-workflow.md#BKMK_ResumeWorkflow)  
   
 - [终止工作流](how-to-create-and-run-a-long-running-workflow.md#BKMK_TerminateWorkflow)  
   
-- [若要生成并运行应用程序](how-to-create-and-run-a-long-running-workflow.md#BKMK_BuildAndRun)  
+- [生成并运行应用程序](how-to-create-and-run-a-long-running-workflow.md#BKMK_BuildAndRun)  
   
-### <a name="BKMK_CreatePersistenceDatabase"></a> 若要创建持久性数据库  
+### <a name="BKMK_CreatePersistenceDatabase"></a>创建持久性数据库  
   
-1. 打开 SQL Server Management Studio 并连接到本地服务器，例如 **。 \SQLEXPRESS**。 右键单击**数据库**节点，本地服务器，然后选择**新数据库**。 新数据库命名**WF45GettingStartedTutorial**，接受所有其他值，然后选择**确定**。  
+1. 打开 SQL Server Management Studio 并连接到本地服务器, 例如 **.\SQLEXPRESS**。 右键单击本地服务器上的 "**数据库**" 节点, 然后选择 "**新建数据库**"。 将新数据库命名为**WF45GettingStartedTutorial**, 接受所有其他值, 然后选择 **"确定"** 。  
   
     > [!NOTE]
-    >  请确保已**Create Database**本地服务器上创建数据库前的权限。  
+    > 在创建数据库之前, 请确保在本地服务器上具有**Create database**权限。  
   
-2. 选择**开放**，**文件**从**文件**菜单。 浏览到以下文件夹：`C:\Windows\Microsoft.NET\Framework\v4.0.30319\sql\en`  
+2. 从 "**文件**" 菜单中选择 "**打开**"。 浏览到以下文件夹：`C:\Windows\Microsoft.NET\Framework\v4.0.30319\sql\en`  
   
-     选择以下两个文件，然后单击**打开**。  
+     选择以下两个文件, 并单击 "**打开**"。  
   
     - SqlWorkflowInstanceStoreLogic.sql  
   
     - SqlWorkflowInstanceStoreSchema.sql  
   
-3. 选择**SqlWorkflowInstanceStoreSchema.sql**从**窗口**菜单。 絋粄**WF45GettingStartedTutorial**中选择**可用数据库**下拉列表中，选择**Execute**从**查询**菜单。  
+3. 从 "**窗口**" 菜单中选择 " **sqlworkflowinstancestoreschema.sql** "。 确保在 "**可用数据库**" 下拉 WF45GettingStartedTutorial 中选择 " ", 并从 "**查询**" 菜单中选择 "**执行**"。  
   
-4. 选择**SqlWorkflowInstanceStoreLogic.sql**从**窗口**菜单。 絋粄**WF45GettingStartedTutorial**中选择**可用数据库**下拉列表中，选择**Execute**从**查询**菜单。  
+4. 从 "**窗口**" 菜单中选择 " **sqlworkflowinstancestorelogic.sql** "。 确保在 "**可用数据库**" 下拉 WF45GettingStartedTutorial 中选择 " ", 并从 "**查询**" 菜单中选择 "**执行**"。  
   
     > [!WARNING]
     >  请务必按正确顺序执行前面两个步骤。 如果不按顺序执行查询，系统会发生错误，并且持久性数据库会配置不正确。  
   
-### <a name="BKMK_AddReference"></a> 若要添加对 DurableInstancing 程序集的引用  
+### <a name="BKMK_AddReference"></a>添加对 DurableInstancing 程序集的引用  
   
-1. 右键单击**NumberGuessWorkflowHost**中**解决方案资源管理器**，然后选择**添加引用**。  
+1. 在**解决方案资源管理器**中右键单击 " **NumberGuessWorkflowHost** ", 然后选择 "**添加引用**"。  
   
-2. 选择**程序集**从**添加引用**列表中，然后键入`DurableInstancing`到**搜索程序集**框。 这将筛选程序集，使您更易于选择所需引用。  
+2. 从 "**添加引用**" 列表中选择`DurableInstancing` **程序集**, 然后在 "**搜索程序集**" 框中键入。 这将筛选程序集，使您更易于选择所需引用。  
   
-3. 旁边的复选框**System.Activities.DurableInstancing**并**System.Runtime.DurableInstancing**从**搜索结果**列表，然后单击**确定**。  
+3. 选中 " **DurableInstancing** " 和 " **DurableInstancing** " 旁边的复选框, 然后单击 **"确定"** 。  
   
-### <a name="BKMK_CreateForm"></a> 若要创建工作流主机窗体  
+### <a name="BKMK_CreateForm"></a>创建工作流主机窗体  
   
 > [!NOTE]
->  此过程中的步骤描述了如何手动添加和配置窗体。 如果需要，您可以下载教程的解决方案文件并将完成后的窗体添加到项目。 若要下载教程文件，请参阅[Windows Workflow Foundation (WF45)-入门教程](https://go.microsoft.com/fwlink/?LinkID=248976)。 一旦下载文件，右键单击**NumberGuessWorkflowHost** ，然后选择**添加引用**。 添加对的引用**System.Windows.Forms**并**System.Drawing**。 如果添加新的窗体中，将自动添加这些引用**外**，**新项**菜单中，但导入窗体时必须手动添加。 添加引用后，右键单击**NumberGuessWorkflowHost**中**解决方案资源管理器**，然后选择**添加**，**现有项**。 浏览到`Form`文件夹中的项目文件，选择**WorkflowHostForm.cs** (或**WorkflowHostForm.vb**)，然后单击**添加**。 如果您选择导入窗体，则可以跳到下一节[若要添加的属性和帮助器方法的窗体](how-to-create-and-run-a-long-running-workflow.md#BKMK_AddHelperMethods)。  
+> 此过程中的步骤描述了如何手动添加和配置窗体。 如果需要，您可以下载教程的解决方案文件并将完成后的窗体添加到项目。 若要下载教程文件, 请参阅[Windows Workflow Foundation (WF45)-入门教程](https://go.microsoft.com/fwlink/?LinkID=248976)。 下载文件后, 右键单击**NumberGuessWorkflowHost** , 然后选择 "**添加引用**"。 添加对**system.web**和**system.object**的引用。 如果从 "**添加**"、"**新建项**" 菜单添加新的窗体, 但在导入窗体时必须手动添加, 则会自动添加这些引用。 添加引用后, 在**解决方案资源管理器**中右键单击**NumberGuessWorkflowHost** , 然后选择 "**添加**"、"**现有项**"。 浏览到项目`Form`文件中的文件夹, 选择**WorkflowHostForm.cs** (或**WorkflowHostForm**), 然后单击 "**添加**"。 如果选择导入窗体, 则可以跳到下一部分,[添加窗体的属性和帮助器方法](how-to-create-and-run-a-long-running-workflow.md#BKMK_AddHelperMethods)。  
   
-1. 右键单击**NumberGuessWorkflowHost**中**解决方案资源管理器**，然后选择**添加**，**新项**。  
+1. 在**解决方案资源管理器**中右键单击 " **NumberGuessWorkflowHost** ", 然后选择 "**添加**"、"**新建项**"。  
   
-2. 在中**已安装**模板列表中，选择**Windows 窗体**，类型`WorkflowHostForm`中**名称**框中，然后单击**添加**。  
+2. 在 "**已安装**的模板" 列表中, 选择`WorkflowHostForm` **Windows 窗体**, 在 "**名称**" 框中键入, 然后单击 "**添加**"。  
   
 3. 在窗体上配置以下属性。  
   
-    |属性|值|  
+    |Property|值|  
     |--------------|-----------|  
     |FormBorderStyle|FixedSingle|  
     |MaximizeBox|False|  
-    |大小|400, 420|  
+    |Size|400, 420|  
   
 4. 按照指定顺序将以下控件添加到窗体，并根据指示配置这些属性。  
   
-    |控件|属性：值|  
+    |控件|知识产权值|  
     |-------------|---------------------|  
-    |**Button**|姓名:NewGame<br /><br /> 位置：13, 13<br /><br /> 字号:75, 23<br /><br /> 文本：新游戏|  
-    |**标签**|位置：94, 18<br /><br /> 文本：猜测一个数字，从 1 到|  
-    |**组合框**|姓名:NumberRange<br /><br /> DropDownStyle:DropDownList<br /><br /> 项：10, 100, 1000<br /><br /> 位置：228, 12<br /><br /> 字号:143, 21|  
-    |**标签**|位置：13, 43<br /><br /> 文本：工作流类型|  
-    |**组合框**|姓名:WorkflowType<br /><br /> DropDownStyle:DropDownList<br /><br /> 项：StateMachineNumberGuessWorkflow，FlowchartNumberGuessWorkflow，SequentialNumberGuessWorkflow<br /><br /> 位置：94, 40<br /><br /> 字号:277, 21|  
-    |**标签**|姓名:WorkflowVersion<br /><br /> 位置：13, 362<br /><br /> 文本：工作流版本|  
-    |**GroupBox**|位置：13, 67<br /><br /> 字号:358, 287<br /><br /> 文本：游戏|  
+    |**Button**|姓名:NewGame<br /><br /> 位置：13, 13<br /><br /> 字号:75, 23<br /><br /> 全文新游戏|  
+    |**标签**|位置：94, 18<br /><br /> 全文猜测一个数字，从 1 到|  
+    |**组合框**|姓名:NumberRange<br /><br /> DropDownStyleDropDownList<br /><br /> 项：10, 100, 1000<br /><br /> 位置：228, 12<br /><br /> 字号:143, 21|  
+    |**标签**|位置：13, 43<br /><br /> 全文工作流类型|  
+    |**组合框**|姓名:WorkflowType<br /><br /> DropDownStyleDropDownList<br /><br /> 项：Statemachinenumberguessworkflow.xaml、Flowchartnumberguessworkflow.xaml、Sequentialnumberguessworkflow.xaml<br /><br /> 位置：94, 40<br /><br /> 字号:277, 21|  
+    |**标签**|姓名:WorkflowVersion<br /><br /> 位置：13, 362<br /><br /> 全文工作流版本|  
+    |**GroupBox**|位置：13, 67<br /><br /> 字号:358, 287<br /><br /> 全文游戏|  
   
     > [!NOTE]
-    >  在添加以下控件时，请将其放入 GroupBox。  
+    > 添加以下控件时, 将其放入分组框。  
   
-    |控件|属性：值|  
+    |控件|知识产权值|  
     |-------------|---------------------|  
-    |**标签**|位置：7, 20<br /><br /> 文本：工作流实例 ID|  
-    |**组合框**|姓名:InstanceId<br /><br /> DropDownStyle:DropDownList<br /><br /> 位置：121, 17<br /><br /> 字号:227, 21|  
-    |**标签**|位置：7, 47<br /><br /> 文本：猜测|  
+    |**标签**|位置：7, 20<br /><br /> 全文工作流实例 ID|  
+    |**组合框**|姓名:InstanceId<br /><br /> DropDownStyleDropDownList<br /><br /> 位置：121, 17<br /><br /> 字号:227, 21|  
+    |**标签**|位置：7, 47<br /><br /> 全文猜测|  
     |**文本框**|姓名:猜测<br /><br /> 位置：50, 44<br /><br /> 字号:65, 20|  
-    |**Button**|姓名:EnterGuess<br /><br /> 位置：121, 42<br /><br /> 字号:75, 23<br /><br /> 文本：输入猜测|  
-    |**Button**|姓名:QuitGame<br /><br /> 位置：274, 42<br /><br /> 字号:75, 23<br /><br /> 文本：退出|  
-    |**文本框**|姓名:WorkflowStatus<br /><br /> 位置：10, 73<br /><br /> 多行：True<br /><br /> 只读：True<br /><br /> 滚动条：垂直<br /><br /> 字号:338, 208|  
+    |**Button**|姓名:EnterGuess<br /><br /> 位置：121, 42<br /><br /> 字号:75, 23<br /><br /> 全文输入猜测|  
+    |**Button**|姓名:QuitGame<br /><br /> 位置：274, 42<br /><br /> 字号:75, 23<br /><br /> 全文退出|  
+    |**文本框**|姓名:WorkflowStatus<br /><br /> 位置：10, 73<br /><br /> 适用True<br /><br /> 只读True<br /><br /> 条垂直<br /><br /> 字号:338, 208|  
   
-5. 设置**AcceptButton**到窗体的属性**EnterGuess**。  
+5. 将窗体的**AcceptButton**属性设置为**EnterGuess**。  
   
  以下示例展示了完成的窗体。  
   
- ![Windows Workflow Foundation 工作流主机窗体的屏幕截图。](./media/how-to-create-and-run-a-long-running-workflow/windows-workflow-foundation-workflowhostform.png)  
+ ![Windows Workflow Foundation 工作流宿主窗体的屏幕截图。](./media/how-to-create-and-run-a-long-running-workflow/windows-workflow-foundation-workflowhostform.png)  
   
-### <a name="BKMK_AddHelperMethods"></a> 若要添加的属性和帮助器方法的窗体  
+### <a name="BKMK_AddHelperMethods"></a>添加窗体的属性和帮助器方法  
  本节的步骤将属性和帮助器添加至窗体类，此窗体类将配置窗体的 UI，以支持运行和恢复数字猜测工作流。  
   
-1. 右键单击**WorkflowHostForm**中**解决方案资源管理器**，然后选择**查看代码**。  
+1. 在**解决方案资源管理器**中右键单击 " **WorkflowHostForm** ", 然后选择 "**查看代码**"。  
   
 2. 在包含其他 `using`（或 `Imports`）语句的文件的顶部添加以下 `using`（或 `Imports`）语句。  
   
@@ -144,7 +144,7 @@ Windows Workflow Foundation (WF) 的主要功能之一是保留和卸载到数�
     using System.IO;  
     ```  
   
-3. 添加到以下成员声明**WorkflowHostForm**类。  
+3. 将以下成员声明添加到**WorkflowHostForm**类。  
   
     ```vb  
     Const connectionString = "Server=.\SQLEXPRESS;Initial Catalog=WF45GettingStartedTutorial;Integrated Security=SSPI"  
@@ -159,7 +159,7 @@ Windows Workflow Foundation (WF) 的主要功能之一是保留和卸载到数�
     ```  
   
     > [!NOTE]
-    >  如果您的连接字符串不同，请更新 `connectionString` 引用数据库。  
+    > 如果您的连接字符串不同，请更新 `connectionString` 引用数据库。  
   
 4. 将 `WorkflowInstanceId` 属性添加到 `WorkflowFormHost` 类中。  
   
@@ -185,9 +185,9 @@ Windows Workflow Foundation (WF) 的主要功能之一是保留和卸载到数�
     }  
     ```  
   
-     `InstanceId`组合框显示的持久化工作流实例 id 的列表和`WorkflowInstanceId`属性返回当前所选的工作流。  
+     组合框显示持久化工作流实例 id 的列表, `WorkflowInstanceId`属性返回当前选择的工作流。 `InstanceId`  
   
-5. 为窗体 `Load` 事件添加处理程序。 若要添加处理程序，请切换到**设计视图**窗体中，单击**事件**顶部的图标**属性**窗口中，然后双击**负载**.  
+5. 为窗体 `Load` 事件添加处理程序。 若要添加该处理程序, 请切换到窗体的**设计视图**, 单击 "**属性**" 窗口顶部的 "**事件**" 图标, 然后双击 "**加载**"。  
   
     ```vb  
     Private Sub WorkflowHostForm_Load(sender As Object, e As EventArgs) Handles Me.Load  
@@ -232,7 +232,7 @@ Windows Workflow Foundation (WF) 的主要功能之一是保留和卸载到数�
   
      窗体加载时，将配置 `SqlWorkflowInstanceStore`，范围和工作流类型组合框将设置为默认值，持久性工作流实例将添加到 `InstanceId` 组合框。  
   
-7. 为 `SelectedIndexChanged` 添加 `InstanceId` 处理程序。 若要添加处理程序，请切换到**设计视图**窗体中，选择`InstanceId`组合框中，单击**事件**顶部的图标**属性**窗口中，并双击**SelectedIndexChanged**。  
+7. 为 `SelectedIndexChanged` 添加 `InstanceId` 处理程序。 若要添加该处理程序, 请切换到窗体的**设计视图**, 选择`InstanceId`组合框, 单击 "**属性**" 窗口顶部的 "**事件**" 图标, 然后双击 " **SelectedIndexChanged**"。  
   
     ```vb  
     Private Sub InstanceId_SelectedIndexChanged(sender As Object, e As EventArgs) Handles InstanceId.SelectedIndexChanged  
@@ -390,7 +390,7 @@ Windows Workflow Foundation (WF) 的主要功能之一是保留和卸载到数�
     }  
     ```  
   
-11. 将下面的 `GameOver` 方法和对应的委托添加到窗体类中。 工作流完成后，此方法更新窗体用户界面通过删除已完成的工作流的实例 id 从**InstanceId**组合框。  
+11. 将下面的 `GameOver` 方法和对应的委托添加到窗体类中。 当工作流完成时, 此方法将通过从**InstanceId**组合框中删除已完成工作流的实例 id 来更新窗体 UI。  
   
     ```vb  
     Private Delegate Sub GameOverDelegate()  
@@ -422,7 +422,7 @@ Windows Workflow Foundation (WF) 的主要功能之一是保留和卸载到数�
     }  
     ```  
   
-### <a name="BKMK_ConfigureWorkflowApplication"></a> 若要配置实例存储、 工作流生命周期处理程序和扩展  
+### <a name="BKMK_ConfigureWorkflowApplication"></a>配置实例存储、工作流生命周期处理程序和扩展  
   
 1. 向窗体类添加 `ConfigureWorkflowApplication` 方法。  
   
@@ -452,7 +452,7 @@ Windows Workflow Foundation (WF) 的主要功能之一是保留和卸载到数�
     wfApp.InstanceStore = store;  
     ```  
   
-3. 接下来，创建一个 `StringWriter` 实例，并将它添加到 `Extensions` 的 `WorkflowApplication` 集合中。 当`StringWriter`添加到扩展它会捕获所有`WriteLine`活动输出。 当工作流进入空闲状态时，`WriteLine` 输出可从 `StringWriter` 提取并显示在窗体上。  
+3. 接下来，创建一个 `StringWriter` 实例，并将它添加到 `Extensions` 的 `WorkflowApplication` 集合中。 当将添加到扩展时, 它将捕获`WriteLine`所有活动输出。 `StringWriter` 当工作流进入空闲状态时，`WriteLine` 输出可从 `StringWriter` 提取并显示在窗体上。  
   
     ```vb  
     'Add a StringWriter to the extensions. This captures the output  
@@ -691,10 +691,10 @@ Windows Workflow Foundation (WF) 的主要功能之一是保留和卸载到数�
     }  
     ```  
   
-### <a name="BKMK_WorkflowVersionMap"></a> 若要启用启动和恢复多个工作流类型  
- 要恢复工作流实例，主机必须提供工作流定义。 在此教程中有三个工作流类型，且后续教程步骤会介绍这些类型的多个版本。 主机应用程序可通过 `WorkflowIdentity` 将标识信息与持久化工作流实例相关联。 本节中的步骤演示了如何创建一个实用工具类，以帮助将工作流标识从持久化工作流实例映射到对应的工作流定义。 有关详细信息`WorkflowIdentity`和版本控制，请参阅[使用 WorkflowIdentity 和版本控制](using-workflowidentity-and-versioning.md)。  
+### <a name="BKMK_WorkflowVersionMap"></a>启用和恢复多个工作流类型  
+ 要恢复工作流实例，主机必须提供工作流定义。 在此教程中有三个工作流类型，且后续教程步骤会介绍这些类型的多个版本。 主机应用程序可通过 `WorkflowIdentity` 将标识信息与持久化工作流实例相关联。 本节中的步骤演示了如何创建一个实用工具类，以帮助将工作流标识从持久化工作流实例映射到对应的工作流定义。 有关`WorkflowIdentity`和版本控制的详细信息, 请参阅[使用 WorkflowIdentity 和版本控制](using-workflowidentity-and-versioning.md)。  
   
-1. 右键单击**NumberGuessWorkflowHost**中**解决方案资源管理器**，然后选择**添加**，**类**。 类型`WorkflowVersionMap`成**名称**框，然后单击**添加**。  
+1. 在**解决方案资源管理器**中右键单击 " **NumberGuessWorkflowHost** ", 然后选择 "**添加**"、"**类**"。 在`WorkflowVersionMap` "**名称**" 框中键入, 然后单击 "**添加**"。  
   
 2. 在包含其他 `using` 或 `Imports` 语句的文件的顶部添加以下 `using` 或 `Imports` 语句。  
   
@@ -808,9 +808,9 @@ Windows Workflow Foundation (WF) 的主要功能之一是保留和卸载到数�
   
      `WorkflowVersionMap` 包含与此教程中的三个工作流定义对应的三个工作流标识，并在以下各节中工作流启动和恢复时使用。  
   
-### <a name="BKMK_StartWorkflow"></a> 若要启动新工作流  
+### <a name="BKMK_StartWorkflow"></a>启动新工作流  
   
-1. 为 `Click` 添加 `NewGame` 处理程序。 若要添加处理程序，请切换到**设计视图**的窗体，然后双击`NewGame`。 此时将添加 `NewGame_Click` 处理程序，视图将切换为窗体的代码视图。 每当用户单击此按钮时，就会启动新工作流。  
+1. 为 `Click` 添加 `NewGame` 处理程序。 若要添加该处理程序, 请切换到窗体的**设计视图**, 然后`NewGame`双击。 此时将添加 `NewGame_Click` 处理程序，视图将切换为窗体的代码视图。 每当用户单击此按钮时，就会启动新工作流。  
   
     ```vb  
     Private Sub NewGame_Click(sender As Object, e As EventArgs) Handles NewGame.Click  
@@ -1003,9 +1003,9 @@ Windows Workflow Foundation (WF) 的主要功能之一是保留和卸载到数�
     }  
     ```  
   
-### <a name="BKMK_ResumeWorkflow"></a> 若要恢复的工作流  
+### <a name="BKMK_ResumeWorkflow"></a>恢复工作流  
   
-1. 为 `Click` 添加 `EnterGuess` 处理程序。 若要添加处理程序，请切换到**设计视图**的窗体，然后双击`EnterGuess`。 每当用户单击此按钮时，就会恢复工作流。  
+1. 为 `Click` 添加 `EnterGuess` 处理程序。 若要添加该处理程序, 请切换到窗体的**设计视图**, 然后`EnterGuess`双击。 每当用户单击此按钮时，就会恢复工作流。  
   
     ```vb  
     Private Sub EnterGuess_Click(sender As Object, e As EventArgs) Handles EnterGuess.Click  
@@ -1219,9 +1219,9 @@ Windows Workflow Foundation (WF) 的主要功能之一是保留和卸载到数�
     }  
     ```  
   
-### <a name="BKMK_TerminateWorkflow"></a> 终止工作流  
+### <a name="BKMK_TerminateWorkflow"></a>终止工作流  
   
-1. 为 `Click` 添加 `QuitGame` 处理程序。 若要添加处理程序，请切换到**设计视图**的窗体，然后双击`QuitGame`。 每当用户单击此按钮，即终止当前选择的工作流。  
+1. 为 `Click` 添加 `QuitGame` 处理程序。 若要添加该处理程序, 请切换到窗体的**设计视图**, 然后`QuitGame`双击。 每当用户单击此按钮，即终止当前选择的工作流。  
   
     ```vb  
     Private Sub QuitGame_Click(sender As Object, e As EventArgs) Handles QuitGame.Click  
@@ -1295,7 +1295,7 @@ Windows Workflow Foundation (WF) 的主要功能之一是保留和卸载到数�
   
 ### <a name="BKMK_BuildAndRun"></a> 生成并运行应用程序  
   
-1. 双击**Program.cs** (或**Module1.vb**) 中**解决方案资源管理器**以显示其代码。  
+1. 双击**解决方案资源管理器**中的**Program.cs** (或**Module1**) 以显示代码。  
   
 2. 在包含其他 `using`（或 `Imports`）语句的文件的顶部添加以下 `using`（或 `Imports`）语句。  
   
@@ -1307,7 +1307,7 @@ Windows Workflow Foundation (WF) 的主要功能之一是保留和卸载到数�
     using System.Windows.Forms;  
     ```  
   
-3. 删除或注释掉现有的工作流承载代码从[如何：运行工作流](how-to-run-a-workflow.md)，并替换为以下代码。  
+3. 删除或注释掉[如何:运行工作流](how-to-run-a-workflow.md), 并将其替换为以下代码。  
   
     ```vb  
     Sub Main()  
@@ -1324,14 +1324,14 @@ Windows Workflow Foundation (WF) 的主要功能之一是保留和卸载到数�
     }  
     ```  
   
-4. 右键单击**NumberGuessWorkflowHost**中**解决方案资源管理器**，然后选择**属性**。 在中**应用程序**选项卡上，指定**Windows 应用程序**有关**输出类型**。 此步骤是可选的，但如果不执行此步骤，则除了窗体之外还会显示控制台窗口。  
+4. 在**解决方案资源管理器**中右键单击 " **NumberGuessWorkflowHost** ", 然后选择 "**属性**"。 在 "**应用程序**" 选项卡中, 为**输出类型**指定**Windows 应用程序**。 此步骤是可选的，但如果不执行此步骤，则除了窗体之外还会显示控制台窗口。  
   
 5. 按 Ctrl+Shift+B 生成应用程序。  
   
-6. 絋粄**NumberGuessWorkflowHost**是设置为启动应用程序，然后按 Ctrl + F5 启动应用程序。  
+6. 确保将**NumberGuessWorkflowHost**设置为启动应用程序, 然后按 Ctrl + F5 启动该应用程序。  
   
-7. 选择一个范围的猜测和类型的工作流开始，然后单击**新游戏**。 输入在猜测**猜测**框，然后单击**转**提交该值。 请注意，`WriteLine` 活动的输出将显示在窗体上。  
+7. 为推测游戏选择一个范围, 并选择要启动的工作流类型, 然后单击 "**新建游戏**"。 在**推测**框中输入推测, 然后单击 "**开始**" 以提交推测。 请注意，`WriteLine` 活动的输出将显示在窗体上。  
   
-8. 开始使用不同的工作流类型和数字范围的多个工作流，输入一些猜测值，并通过从选择的工作流之间进行切换**工作流实例 Id**列表。  
+8. 使用不同的工作流类型和编号范围启动多个工作流, 输入一些推测, 并通过从 "**工作流实例 Id** " 列表中进行选择来在工作流之间进行切换。  
   
-     请注意，当切换到新工作流时，状态窗口中不会显示以前的猜测值和工作流进度。 状态不可用的原因是未将它捕获并保存在任何位置。 本教程中，在下一步[如何：创建自定义跟踪参与者](how-to-create-a-custom-tracking-participant.md)，创建一个自定义跟踪参与者，它将保存此信息。
+     请注意，当切换到新工作流时，状态窗口中不会显示以前的猜测值和工作流进度。 状态不可用的原因是未将它捕获并保存在任何位置。 在本教程的下一步骤中[, 如何:创建自定义跟踪参与者](how-to-create-a-custom-tracking-participant.md), 创建用于保存此信息的自定义跟踪参与者。

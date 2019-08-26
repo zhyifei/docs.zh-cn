@@ -5,27 +5,27 @@ ms.date: 07/10/2017
 helpviewer_keywords:
 - nested types [C#]
 ms.assetid: f2e1b315-e3d1-48ce-977f-7bae0960ba99
-ms.openlocfilehash: 7269f925b3fc78eea04249984697899b1997c3fb
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: de2e369702c48047835bc49b98df8f48fbd13480
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56976702"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596523"
 ---
 # <a name="nested-types-c-programming-guide"></a>嵌套类型（C# 编程指南）
-在[类](../../../csharp/language-reference/keywords/class.md)或[构造](../../../csharp/language-reference/keywords/struct.md)中定义的类型称为嵌套类型。 例如:  
+在[类](../../language-reference/keywords/class.md)或[构造](../../language-reference/keywords/struct.md)中定义的类型称为嵌套类型。 例如:  
   
  [!code-csharp[csProgGuideObjects#68](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#68)]  
   
-不论外部类型是类还是构造，嵌套类型均默认为 [private](../../../csharp/language-reference/keywords/private.md)；仅可从其包含类型中进行访问。 在上一个示例中，`Nested` 类无法访问外部类型。 
+不论外部类型是类还是构造，嵌套类型均默认为 [private](../../language-reference/keywords/private.md)；仅可从其包含类型中进行访问。 在上一个示例中，`Nested` 类无法访问外部类型。 
 
 还可指定[访问修饰符](../../language-reference/keywords/access-modifiers.md)来定义嵌套类型的可访问性，如下所示：
 
-- “类”的嵌套类型可以是 [public](../../../csharp/language-reference/keywords/public.md)、[protected](../../../csharp/language-reference/keywords/protected.md)、[internal](../../../csharp/language-reference/keywords/internal.md)、[protected internal](../../../csharp/language-reference/keywords/protected-internal.md)、[private](../../../csharp/language-reference/keywords/private.md) 或 [private protected](../../../csharp/language-reference/keywords/private-protected.md)。 
+- “类”的嵌套类型可以是 [public](../../language-reference/keywords/public.md)、[protected](../../language-reference/keywords/protected.md)、[internal](../../language-reference/keywords/internal.md)、[protected internal](../../language-reference/keywords/protected-internal.md)、[private](../../language-reference/keywords/private.md) 或 [private protected](../../language-reference/keywords/private-protected.md)  。 
 
    但是，在[密封类](../../language-reference/keywords/sealed.md)中定义 `protected`、`protected internal` 或 `private protected` 嵌套类将产生编译器警告 [CS0628](../../misc/cs0628.md)“封闭类汇中声明了新的受保护成员”。
   
-- 构造的嵌套类型可以是 [public](../../../csharp/language-reference/keywords/public.md)、[internal](../../../csharp/language-reference/keywords/internal.md) 或 [private](../../../csharp/language-reference/keywords/private.md)。
+- 构造的嵌套类型可以是 [public](../../language-reference/keywords/public.md)、[internal](../../language-reference/keywords/internal.md) 或 [private](../../language-reference/keywords/private.md)  。
   
 以下示例使 `Nested` 类为 public：
   
@@ -43,7 +43,7 @@ ms.locfileid: "56976702"
   
 ## <a name="see-also"></a>请参阅
 
-- [C# 编程指南](../../../csharp/programming-guide/index.md)
-- [类和结构](../../../csharp/programming-guide/classes-and-structs/index.md)
-- [访问修饰符](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)
-- [构造函数](../../../csharp/programming-guide/classes-and-structs/constructors.md)
+- [C# 编程指南](../index.md)
+- [类和结构](./index.md)
+- [访问修饰符](./access-modifiers.md)
+- [构造函数](./constructors.md)

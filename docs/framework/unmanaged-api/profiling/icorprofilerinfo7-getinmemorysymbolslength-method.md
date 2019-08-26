@@ -1,5 +1,5 @@
 ---
-title: ICorProfilerInfo7::GetInMemorySymbolsLength 方法
+title: 'ICorProfilerInfo7:: GetInMemorySymbolsLength 方法'
 ms.date: 03/30/2017
 api_name:
 - ICorProfilerInfo7.GetInMemorySymbolsLength
@@ -11,17 +11,17 @@ api_type:
 ms.assetid: d62c4a4c-8a62-45aa-8f01-a8387cf36159
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 03c70b97e7af9fdc76c579c5940e2436232f6bc2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 157b0e215f8afa58cccb3d54a65baa9c307ba966
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67748649"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69955424"
 ---
-# <a name="icorprofilerinfo7getinmemorysymbolslength-method"></a>ICorProfilerInfo7::GetInMemorySymbolsLength 方法
+# <a name="icorprofilerinfo7getinmemorysymbolslength-method"></a>ICorProfilerInfo7:: GetInMemorySymbolsLength 方法
 [仅在 .NET Framework 4.6.1 及更高版本中受支持]  
   
- 返回内存中的符号流的长度。  
+ 返回内存中符号流的长度。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,28 +34,28 @@ HRESULT GetInMemorySymbolsLength(
   
 ## <a name="parameters"></a>参数  
  `moduleId`  
- [in]包含内存中流的模块标识符。  
+ 中包含内存中流的模块的标识符。  
   
  pCountSymbolBytes  
- [out]一个指向`DWORD`值，该值，方法返回时，包含以字节为单位的流的长度。  
+ 弄一个指向`DWORD`值的指针, 当该方法返回时, 将包含流的长度 (以字节为单位)。  
   
 ## <a name="return-value"></a>返回值  
- 该方法将返回`S_OK`如果内存流的长度就可以确定，即使它是零 (0)。  
+ 如果可以确定`S_OK`内存流的长度 (即使它为零 (0)), 则方法将返回。  
   
- 该方法返回`CORPROF_E_MODULE_IS_DYNAMIC`如果该方法使用创建<xref:System.Reflection.Emit?displayProperty=nameWithType>。  
+ 如果该方法`CORPROF_E_MODULE_IS_DYNAMIC`是使用<xref:System.Reflection.Emit?displayProperty=nameWithType>创建的, 则该方法返回。  
   
 ## <a name="remarks"></a>备注  
- 如果模块有内存中的符号，流的长度位于`pCountSymbolBytes`。 如果该模块没有内存中的符号， `*pCountSymbolBytes = 0`。  
+ 如果模块有内存中符号, 则流的长度将被置于中`pCountSymbolBytes`。 如果模块没有内存中符号, `*pCountSymbolBytes = 0`则为。  
   
 > [!NOTE]
->  当前实现不支持 Reflection.Emit。 如果通过使用 Reflection.Emit 创建模块，该方法返回`CORPROF_E_MODULE_IS_DYNAMIC`。  
+> 当前实现不支持反射。发出。 如果该模块是使用反射创建的, 则该方法返回`CORPROF_E_MODULE_IS_DYNAMIC`。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorProf.idl, CorProf.h  
+ **标头：** Corprof.idl, Corprof.idl  
   
- **库：** CorGuids.lib  
+ **类库**CorGuids.lib  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]  
   

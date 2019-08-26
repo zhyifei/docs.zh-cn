@@ -9,27 +9,27 @@ helpviewer_keywords:
 - OnPaint method [Windows Forms]
 - user-drawn controls [Windows Forms]
 ms.assetid: 034af4b5-457f-4160-a937-22891817faa8
-ms.openlocfilehash: bd7ce150e4dc0ecfe53f92ec8b557459f1e14e3a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 50036f5bef323368b4970a080ca7a70cf94252d6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651568"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966490"
 ---
 # <a name="user-drawn-controls"></a>用户描述的控件
-.NET Framework 为您提供了轻松开发自己的控件的功能。 可以创建一个用户控件，这是一组标准控件绑定到一起的代码，或您可以设计自己的控件的基础知识，设置。 甚至可以使用继承创建继承自现有控件的控件并将添加到其固有的功能。 无论何种方法使用，.NET Framework 提供了用于绘制用于您创建的任何控件的自定义图形界面的功能。  
+.NET Framework 使你能够轻松地开发自己的控件。 您可以创建一个用户控件, 该控件是通过代码绑定在一起的一组标准控件, 或者您可以从头开始设计自己的控件。 甚至可以使用继承来创建一个从现有控件继承的控件并将其添加到其固有的功能中。 无论使用哪种方法, .NET Framework 都提供了为您创建的任何控件绘制自定义图形界面的功能。  
   
- 控件的绘制通过在控件的代码执行来实现<xref:System.Windows.Forms.Control.OnPaint%2A>方法。 单个参数的<xref:System.Windows.Forms.Control.OnPaint%2A>方法是<xref:System.Windows.Forms.PaintEventArgs>对象，它提供的所有信息和呈现控件所需的功能。 <xref:System.Windows.Forms.PaintEventArgs>作为属性提供了将控件的呈现中使用的两个主要对象：  
+ 控件的绘制通过执行控件的<xref:System.Windows.Forms.Control.OnPaint%2A>方法中的代码来实现。 <xref:System.Windows.Forms.Control.OnPaint%2A>方法的单个参数是一个<xref:System.Windows.Forms.PaintEventArgs>对象, 该对象提供了呈现控件所需的所有信息和功能。 <xref:System.Windows.Forms.PaintEventArgs>提供了两个将用于呈现控件的主体对象:  
   
-- <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> 对象的矩形，表示要绘制的控件的一部分。 这可以是整个控件或具体取决于如何绘制控件的控件的一部分。  
+- <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>object-表示要绘制的控件部分的矩形。 这可以是整个控件或控件的一部分, 具体取决于控件的绘制方式。  
   
-- <xref:System.Drawing.Graphics> 对象-封装一些面向图形的对象和提供必要的功能，绘制控件的方法。  
+- <xref:System.Drawing.Graphics>对象-封装一些面向图形的对象和方法, 这些对象和方法提供绘制控件所必需的功能。  
   
- 有关详细信息<xref:System.Drawing.Graphics>对象以及如何使用它，请参阅[如何：创建用于绘制图形对象](../advanced/how-to-create-graphics-objects-for-drawing.md)。  
+ 有关<xref:System.Drawing.Graphics>对象及其使用方法的详细信息, 请参阅[如何:为绘图](../advanced/how-to-create-graphics-objects-for-drawing.md)创建图形对象。  
   
- <xref:System.Windows.Forms.Control.OnPaint%2A>每当绘制或在屏幕上，刷新控件触发事件和<xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>对象表示在其中绘制会发生的矩形。 如果整个控件需要刷新，<xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>将表示整个控件的大小。 如果只有一部分的控件需要刷新，但是，<xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>对象将表示仅在需要重绘的区域。 这种情况的示例将在另一个控件或窗体用户界面中的部分已遮住控件时。  
+ 每当在屏幕上绘制或刷新控件时都会触发<xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> 事件,而对象表示在其中进行绘制的矩形。<xref:System.Windows.Forms.Control.OnPaint%2A> 如果需要刷新整个控件, <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>将表示整个控件的大小。 但是, 如果只需要刷新部分控件, 则<xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>对象只表示需要重新绘制的区域。 此类情况的一个示例就是在用户界面中, 控件被另一个控件或窗体部分遮盖。  
   
- 从继承时<xref:System.Windows.Forms.Control>类，必须重写<xref:System.Windows.Forms.Control.OnPaint%2A>方法并提供图形呈现代码中的。 如果你想要提供到用户控件或继承的控件的自定义图形界面，您可以也会这样通过重写<xref:System.Windows.Forms.Control.OnPaint%2A>方法。 示例如下所示：  
+ 从<xref:System.Windows.Forms.Control>类继承时, 必须<xref:System.Windows.Forms.Control.OnPaint%2A>重写方法, 并在内提供图形呈现代码。 如果要为用户控件或继承的控件提供自定义图形界面, 还可以通过重写<xref:System.Windows.Forms.Control.OnPaint%2A>方法来执行此操作。 下面显示了一个示例:  
   
 ```vb  
 Protected Overrides Sub OnPaint(ByVal e As PaintEventArgs)  
@@ -60,9 +60,9 @@ protected override void OnPaint(PaintEventArgs e)
 }  
 ```  
   
- 前面的示例演示如何呈现控件的非常简单的图形表示形式。 它将调用<xref:System.Windows.Forms.Control.OnPaint%2A>基类的方法，它创建<xref:System.Drawing.Pen>对象用来绘制，并绘制一个椭圆的矩形中由最后<xref:System.Windows.Forms.Control.Location%2A>和<xref:System.Windows.Forms.Control.Size%2A>的控件。 尽管大多数呈现代码都要比这更复杂，但此示例演示如何使用<xref:System.Drawing.Graphics>中包含对象<xref:System.Windows.Forms.PaintEventArgs>对象。 请注意，如果从已有的图形表示形式，例如一个类继承<xref:System.Windows.Forms.UserControl>或<xref:System.Windows.Forms.Button>，并不希望将该表示形式合并到您呈现，不应调用基类的<xref:System.Windows.Forms.Control.OnPaint%2A>方法。  
+ 前面的示例演示如何使用非常简单的图形表示形式呈现控件。 它调用基类<xref:System.Windows.Forms.Control.OnPaint%2A>的方法, 并<xref:System.Drawing.Pen>创建用于绘制的对象, 最后在由<xref:System.Windows.Forms.Control.Location%2A>控件的和<xref:System.Windows.Forms.Control.Size%2A>确定的矩形中绘制一个椭圆。 尽管大多数呈现代码的复杂程度要大得多, 但本示例演示了<xref:System.Drawing.Graphics> <xref:System.Windows.Forms.PaintEventArgs>对象中包含的对象的用法。 请注意, 如果从已具有图形表示形式的类 (如<xref:System.Windows.Forms.UserControl>或<xref:System.Windows.Forms.Button>) 继承, 并且不希望将该表示形式合并到您的呈现中, 则不应调用基类的<xref:System.Windows.Forms.Control.OnPaint%2A>付款方式.  
   
- 中的代码<xref:System.Windows.Forms.Control.OnPaint%2A>控件的方法将执行迁移时首次绘制控件，或每当刷新。 若要确保每次调整大小，重绘控件，请将下行添加到您的控件的构造函数：  
+ 控件的<xref:System.Windows.Forms.Control.OnPaint%2A>方法中的代码将在第一次绘制控件时和每次刷新时执行。 若要确保每次调整控件大小时都重新绘制控件, 请将以下行添加到控件的构造函数中:  
   
 ```vb  
 SetStyle(ControlStyles.ResizeRedraw, True)  
@@ -73,7 +73,7 @@ SetStyle(ControlStyles.ResizeRedraw, true);
 ```  
   
 > [!NOTE]
->  使用<xref:System.Windows.Forms.Control.Region%2A?displayProperty=nameWithType>属性用于实现非矩形控件。  
+> <xref:System.Windows.Forms.Control.Region%2A?displayProperty=nameWithType>使用属性实现非矩形控件。  
   
 ## <a name="see-also"></a>请参阅
 
@@ -82,6 +82,6 @@ SetStyle(ControlStyles.ResizeRedraw, true);
 - <xref:System.Drawing.Graphics>
 - <xref:System.Windows.Forms.Control.OnPaint%2A>
 - <xref:System.Windows.Forms.PaintEventArgs>
-- [如何：创建用于绘制图形对象](../advanced/how-to-create-graphics-objects-for-drawing.md)
+- [如何：为绘图创建图形对象](../advanced/how-to-create-graphics-objects-for-drawing.md)
 - [构成控件](constituent-controls.md)
 - [各种自定义控件](varieties-of-custom-controls.md)

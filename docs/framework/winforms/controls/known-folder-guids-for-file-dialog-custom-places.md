@@ -6,21 +6,21 @@ helpviewer_keywords:
 - Custom Places [Windows Forms], Known Folder GUIDs
 - Windows Vista Known Folder GUIDs [Windows Forms], Custom Places
 ms.assetid: d8d8b544-8b4d-4da5-ba3a-b05e93244778
-ms.openlocfilehash: 09c51341a2b81c21804bcca3b244bbebdb7342b6
-ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
+ms.openlocfilehash: ae4b89eb45a82299b6f35827eb576968f6cc5bae
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66758775"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962584"
 ---
 # <a name="known-folder-guids-for-file-dialog-custom-places"></a>文件对话框自定义区域的已知文件夹 GUID
-您使用<xref:System.Guid>来指定[!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)]已知文件夹添加到文件夹时<xref:System.Windows.Forms.FileDialog.CustomPlaces%2A>集合。 已知的文件夹 Guid 不区分大小写，在 Windows SDK 中的 KnownFolders.h 文件中定义。  
+向<xref:System.Windows.Forms.FileDialog.CustomPlaces%2A>集合中<xref:System.Guid>添加文件夹时[!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] , 可以使用指定已知文件夹。 已知文件夹 Guid 不区分大小写, 并且在 Windows SDK 的 Knownfolders.h 文件中定义。  
   
 > [!NOTE]
->  在某些情况下，已知文件夹添加到<xref:System.Windows.Forms.FileDialogCustomPlacesCollection>不会显示在**收藏夹链接**区域。 例如，如果指定的已知文件夹不存在正在运行该应用程序的计算机上，不显示已知文件夹。  
+> 在某些情况下, 添加到的已知文件夹<xref:System.Windows.Forms.FileDialogCustomPlacesCollection>将不会显示在 "**收藏夹链接**" 区域中。 例如, 如果指定的已知文件夹在运行该应用程序的计算机上不存在, 则不会显示该已知文件夹。  
   
-## <a name="list-of-guids"></a>Guid 的列表  
- 下表列出[!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)]已知文件夹和其关联<xref:System.Guid>。  
+## <a name="list-of-guids"></a>Guid 列表  
+ 下表列出了[!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)]已知文件夹及其关联<xref:System.Guid>的。  
   
  AddNewPrograms  
  DE61D971-5EBC-4F02-A3A9-6C82895E5C04  
@@ -61,7 +61,7 @@ ms.locfileid: "66758775"
  计算机  
  0AC0837C-BBF8-452A-850D-79D08E667CA7  
   
- 冲突  
+ 合并  
  4BFEFB45-347D-4006-A5BE-AC0CB0567192  
   
  连接  
@@ -70,7 +70,7 @@ ms.locfileid: "66758775"
  联系人  
  56784854-C6CB-462B-8169-88E350ACB882  
   
- ControlPanel  
+ 控制面板  
  82A74AEB-AEB4-465C-A014-D097EE346D63  
   
  Cookie  
@@ -130,13 +130,13 @@ ms.locfileid: "66758775"
  PhotoAlbums  
  69D2CF90-FC33-4FB7-9A0C-EBB0F0FCB43C  
   
- 图片  
+ 拍照  
  33E28130-4E1E-4676-835A-98395C3BC3BB  
   
- 播放列表  
+ 音乐播放  
  DE92C1C7-837F-4F69-A3BB-86E631204A23  
   
- 打印机  
+ Printers  
  76FC4E2D-D6AD-4519-A663-37BD56068185  
   
  PrintHood  
@@ -262,7 +262,7 @@ ms.locfileid: "66758775"
  SyncSetup  
  0F214138-B1D3-4A90-BBA9-27CBC0C5389A  
   
- 系统  
+ System  
  1AC14E77-02E7-4E5D-B744-2EB1AE5198B7  
   
  SystemX86  
@@ -289,4 +289,4 @@ ms.locfileid: "66758775"
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Windows.Forms.FileDialogCustomPlace>
-- [如何：将自定义区域添加到文件对话框](how-to-add-a-custom-place-to-a-file-dialog-box.md)
+- [如何：向文件对话框添加自定义位置](how-to-add-a-custom-place-to-a-file-dialog-box.md)

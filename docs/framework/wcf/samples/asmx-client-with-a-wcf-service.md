@@ -2,18 +2,18 @@
 title: 带有 WCF 服务的 ASMX 客户端
 ms.date: 03/30/2017
 ms.assetid: 3ea381ee-ac7d-4d62-8c6c-12dc3650879f
-ms.openlocfilehash: 1eee814b17a7547bbbc07e17dd675c5f37860341
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3c4728eae56a46c620499a1c0ba709e50c255d6c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62002737"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69925283"
 ---
 # <a name="asmx-client-with-a-wcf-service"></a>带有 WCF 服务的 ASMX 客户端
-此示例演示如何创建使用 Windows Communication Foundation (WCF) 服务，然后从非 WCF 客户端，如 ASMX 客户端访问服务。  
+此示例演示如何使用 Windows Communication Foundation (WCF) 创建服务, 然后从非 WCF 客户端 (如 .ASMX 客户端) 访问该服务。  
   
 > [!NOTE]
->  本主题的最后介绍了此示例的设置过程和生成说明。  
+> 本主题的最后介绍了此示例的设置过程和生成说明。  
   
  此示例由客户端控制台程序 (.exe) 和 Internet 信息服务 (IIS) 所承载的服务库 (.dll) 组成。 该服务实现定义“请求-答复”通信模式的协定。 该协定由 `ICalculator` 接口定义，此接口公开数学运算（`Add`、`Subtract`、`Multiply` 和 `Divide`）。 ASMX 客户端向某个数学运算发出同步请求，服务使用结果进行回复。  
   
@@ -34,7 +34,7 @@ public interface ICalculator
 }  
 ```  
   
- <xref:System.Runtime.Serialization.DataContractSerializer> 和 <xref:System.Xml.Serialization.XmlSerializer> 将 CLR 类型映射到 XML 表示形式。 <xref:System.Runtime.Serialization.DataContractSerializer> 对某些 XML 表示形式的解释不同于 XmlSerializer。 在使用 XmlSerializer 时，非 WCF 代理生成器，如 Wsdl.exe 生成更适用的接口。 <xref:System.ServiceModel.XmlSerializerFormatAttribute>应用于`ICalculator`接口，以确保使用 XmlSerializer 将 CLR 类型映射到 XML。 服务实现计算并返回相应的结果。  
+ <xref:System.Runtime.Serialization.DataContractSerializer> 和 <xref:System.Xml.Serialization.XmlSerializer> 将 CLR 类型映射到 XML 表示形式。 <xref:System.Runtime.Serialization.DataContractSerializer> 对某些 XML 表示形式的解释不同于 XmlSerializer。 当使用 XmlSerializer 时, 非 WCF 代理生成器 (如 Wsdl.exe) 会生成一个更易于使用的接口。 <xref:System.ServiceModel.XmlSerializerFormatAttribute> 应用`ICalculator`于接口, 以确保使用 XmlSerializer 将 CLR 类型映射到 XML。 服务实现计算并返回相应的结果。  
   
  服务公开单一终结点，以便与使用配置文件 (Web.config) 定义的服务进行通信。 终结点由地址、绑定和协定组成。 服务在 Internet 信息服务 (IIS) 主机提供的基地址公开该终结点。 `binding` 属性设置为 basicHttpBinding，它使用 SOAP 1.1（符合 WS-I BasicProfile 1.1）提供 HTTP 通信，如下面的示例配置所示。  
   
@@ -50,7 +50,7 @@ public interface ICalculator
 </services>  
 ```  
   
- ASMX 客户端与 WCF 服务使用由 Web 服务描述语言 (WSDL) 实用工具 (Wsdl.exe) 生成的类型化的代理进行通信。 该类型化代理包含在 generatedClient.cs 文件中。 WSDL 实用工具为指定的服务检索元数据并生成一个类型化代理，供客户端用来进行通信。 默认情况下，框架不公开任何元数据。 若要公开生成代理所需的元数据，必须添加[ \<serviceMetadata >](../../../../docs/framework/configure-apps/file-schema/wcf/servicemetadata.md)并设置其`httpGetEnabled`属性为`True`如下面的配置中所示。  
+ 使用由 Web 服务描述语言 (WSDL) 实用程序 (Wsdl.exe) 生成的类型化代理来与 WCF 服务进行通信。 该类型化代理包含在 generatedClient.cs 文件中。 WSDL 实用工具为指定的服务检索元数据并生成一个类型化代理，供客户端用来进行通信。 默认情况下，框架不公开任何元数据。 若要公开生成代理所需的元数据, 必须添加[ \<serviceMetadata >](../../../../docs/framework/configure-apps/file-schema/wcf/servicemetadata.md)并将其`httpGetEnabled`属性设置为`True` , 如下面的配置所示。  
   
 ```xml  
 <behaviors>  
@@ -131,20 +131,20 @@ Press <ENTER> to terminate client.
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
-1. 请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1. 确保已对[Windows Communication Foundation 示例执行了一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
 2. 若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
   
-3. 若要在单或跨计算机配置中运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
+3. 若要以单机配置或跨计算机配置来运行示例, 请按照[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的说明进行操作。  
   
 > [!NOTE]
->  有关传递和返回复杂数据的详细信息请参阅类型：[Windows 中的数据绑定窗体客户端](../../../../docs/framework/wcf/samples/data-binding-in-a-windows-forms-client.md)， [Windows Presentation Foundation 客户端中的数据绑定](../../../../docs/framework/wcf/samples/data-binding-in-a-wpf-client.md)，和[ASP.NET 客户端中的数据绑定](../../../../docs/framework/wcf/samples/data-binding-in-an-aspnet-client.md)  
+> 有关传递和返回复杂数据类型的详细信息, 请参阅:[Windows 窗体客户端中的数据绑定](../../../../docs/framework/wcf/samples/data-binding-in-a-windows-forms-client.md)、 [Windows Presentation Foundation 客户端中的数据](../../../../docs/framework/wcf/samples/data-binding-in-a-wpf-client.md)绑定, 以及[ASP.NET 客户端中的数据绑定](../../../../docs/framework/wcf/samples/data-binding-in-an-aspnet-client.md)  
   
 > [!IMPORTANT]
 >  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在, 请参阅[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)以下载所有 Windows Communication Foundation (wcf) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Interop\ASMX`  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 72771ee494b6be7142ce3f9bec43dcb8aa8a8401
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 2bbbac098096b46c659c4efde2d1c998c8e2d9ae
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363082"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69608376"
 ---
 # <a name="value-types-c-reference"></a>值类型（C# 参考）
 
@@ -32,7 +32,7 @@ ms.locfileid: "68363082"
 
 与引用类型不同，不能从值类型派生新类型。 但是，与引用类型一样，结构可以实现接口。
 
-值类型变量不能默认为 `null`。 但相应的[可以为空的类型](../../../csharp/programming-guide/nullable-types/index.md)的变量可以为 `null`。
+值类型变量不能默认为 `null`。 但相应的[可以为空的类型](../../programming-guide/nullable-types/index.md)的变量可以为 `null`。
 
 每个值类型都有一个隐式无参数构造函数，用于初始化该类型的默认值。 有关值类型的默认值的信息，请参阅[默认值表](default-values-table.md)。
 

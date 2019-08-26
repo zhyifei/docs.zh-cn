@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: 2ed8c28b-b88d-4be7-9c87-92df01f0821f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a941c99e1d22a71dc6d94e73f5402716f41e3a81
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4ff9232272124c8706e64162d096eced8640c806
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647916"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966958"
 ---
 # <a name="insert-xml-data-using-xpathnavigator"></a>使用 XPathNavigator 插入 XML 数据
 <xref:System.Xml.XPath.XPathNavigator> 类提供一组方法用于在 XML 文档中插入同级节点、子节点和属性节点。 要使用这些方法，<xref:System.Xml.XPath.XPathNavigator> 对象必须可编辑，即其 <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> 属性必须为 `true`。  
@@ -236,7 +236,7 @@ navigator.SetTypedValue(DateTime.Now);
 - 如果 <xref:System.Xml.XmlReader> 对象的上下文和 <xref:System.Xml.XPath.XPathNavigator> 对象的上下文中的前缀以及命名空间 URI 相同，则不会向新插入的节点添加新的命名空间声明。  
   
 > [!NOTE]
->  上面的说明同样适用于使用空 `string` 作为前缀的命名空间声明（例如默认的命名空间声明）。  
+> 上面的说明同样适用于使用空 `string` 作为前缀的命名空间声明（例如默认的命名空间声明）。  
   
  以下是可能发生的 `xml:lang` 冲突。  
   

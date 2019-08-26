@@ -5,12 +5,12 @@ ms.date: 08/02/2017
 helpviewer_keywords:
 - Main method [C#], return values
 ms.assetid: c2f5a1d8-1676-4bea-bc7e-44a97e72d5bc
-ms.openlocfilehash: ea6f93e52ade91e61bdfcbc35aeb56de9101e80f
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 1be04f98a4dec1317c485c7e482568cfe48ea9bf
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878931"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69588880"
 ---
 # <a name="main-return-values-c-programming-guide"></a>Main() 返回值（C# 编程指南）
 
@@ -28,7 +28,7 @@ ms.locfileid: "65878931"
 
 此示例使用 [.NET Core](../../../core/index.md) 命令行工具。 如果不熟悉 .NET Core 命令行工具，可通过本[入门主题](../../../core/tutorials/using-with-xplat-cli.md)进行了解。
 
-修改 program.cs 中的 `Main` 方法，如下所示：
+修改 program.cs 中的 `Main` 方法，如下所示  ：
 
  [!code-csharp[csProgGuideMain#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#14)]
 
@@ -95,7 +95,7 @@ private static async Task<int> AsyncConsoleWork()
 
 ## <a name="see-also"></a>请参阅
 
-- [C# 编程指南](../../programming-guide/index.md)
+- [C# 编程指南](../index.md)
 - [C# 参考](../index.md)
 - [Main() 和命令行参数](index.md)
-- [如何：显示命令行参数](../../programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)
+- [如何：显示命令行参数](./how-to-display-command-line-arguments.md)

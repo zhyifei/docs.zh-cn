@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cd337ca6d7b03ad22f178c9c7084cfa2585da73c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2ad2092c902b137df0dfe108743ef4081ca5f04d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782754"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69948118"
 ---
 # <a name="icorprofilerinfogetobjectsize-method"></a>ICorProfilerInfo::GetObjectSize 方法
 获取指定对象的大小。  
@@ -37,30 +37,30 @@ HRESULT GetObjectSize(
   
 ## <a name="parameters"></a>参数  
  `objectId`  
- [in]对象的 ID。  
+ 中对象的 ID。  
   
  `pcSize`  
- [out]指向对象的大小，以字节为单位的指针。  
+ 弄一个指针, 指向对象的大小 (以字节为单位)。  
   
 ## <a name="remarks"></a>备注  
   
 > [!IMPORTANT]
->  此方法已过时。 它返回 COR_E_OVERFLOW 对象大于 4 GB 64 位平台上。 使用[ICorProfilerInfo4::GetObjectSize2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-getobjectsize2-method.md)方法相反。  
+> 此方法已过时。 对于64位平台上大于4GB 的对象, 它将返回 COR_E_OVERFLOW。 改为使用[ICorProfilerInfo4:: GetObjectSize2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-getobjectsize2-method.md)方法。  
   
- 相同类型的不同对象通常具有相同的大小。 但是，某些类型，如数组或字符串，可能具有不同大小的每个对象。  
+ 相同类型的不同对象通常具有相同的大小。 但是, 某些类型 (例如数组或字符串) 对于每个对象可能有不同的大小。  
   
- 返回的大小`GetObjectSize`方法不包括任何可能出现在垃圾回收堆上对象后的对齐方式填充。 如果使用`GetObjectSize`方法上垃圾回收堆，提前对象之间添加根据需要手动填充的对齐方式。  
+ `GetObjectSize`方法返回的大小不包括对象在垃圾回收堆上时可能出现的任何对齐填充。 如果使用`GetObjectSize`方法从对象到垃圾回收堆上的对象前进, 请根据需要手动添加对齐填充。  
   
-- 在 32 位 Windows 上 COR_PRF_GC_GEN_0、 COR_PRF_GC_GEN_1 和 COR_PRF_GC_GEN_2 使用 4 字节对齐方式，并 COR_PRF_GC_LARGE_OBJECT_HEAP 使用 8 字节对齐方式。  
+- 在32位 Windows、COR_PRF_GC_GEN_0、COR_PRF_GC_GEN_1 和 COR_PRF_GC_GEN_2 上, 使用4字节对齐, 而 COR_PRF_GC_LARGE_OBJECT_HEAP 使用8字节对齐。  
   
-- 在 64 位 Windows 上的对齐方式始终是 8 个字节。  
+- 在64位 Windows 上, 对齐始终为8个字节。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorProf.idl, CorProf.h  
+ **标头：** Corprof.idl, Corprof.idl  
   
- **库：** CorGuids.lib  
+ **类库**CorGuids.lib  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

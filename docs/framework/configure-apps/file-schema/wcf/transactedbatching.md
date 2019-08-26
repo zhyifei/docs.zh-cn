@@ -2,22 +2,22 @@
 title: <transactedBatching>
 ms.date: 03/30/2017
 ms.assetid: 2f790a0d-8f03-4b86-81b5-ce1bc1a6c575
-ms.openlocfilehash: 43415d9eac5e61f42006aecb3248dec9811eb3e6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 12369f1053638583a3864fab396869d0e7045732
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61758127"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69918667"
 ---
-# <a name="transactedbatching"></a>\<transactedBatching>
+# <a name="transactedbatching"></a>\<transactedBatching >
 
 指定接收操作是否支持事务批处理。
 
 \<system.ServiceModel>\
-\<behaviors>\
-\<endpointBehaviors>\
-\<behavior>\
-\<transactedBatching>
+\<行为 > \
+\<endpointBehaviors > \
+\<行为 > \
+\<transactedBatching >
 
 ## <a name="syntax"></a>语法
 
@@ -43,7 +43,7 @@ ms.locfileid: "61758127"
 
 |元素|描述|
 |-------------|-----------------|
-|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|指定终结点行为。|
+|[\<behavior>](behavior-of-endpointbehaviors.md)|指定终结点行为。|
 
 ## <a name="remarks"></a>备注
 

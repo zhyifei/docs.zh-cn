@@ -12,12 +12,12 @@ helpviewer_keywords:
 - C# language, XML code comments
 - XML documentation comments [C#]
 ms.assetid: 803b7f7b-7428-4725-b5db-9a6cff273199
-ms.openlocfilehash: 46dd947ac6ff5a45c7d952acaa55e25c3a46969c
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 8f75783f004f3667644a126930fbfbca4acb0787
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69588057"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921684"
 ---
 # <a name="xml-documentation-comments-c-programming-guide"></a>XML 文档注释（C# 编程指南）
 在 Visual C# 中，你可以通过以下方式为代码创建文档：将特殊注释字段中的 XML 元素包含在源代码中注释引用的代码块的前面，例如：  
@@ -34,7 +34,7 @@ public class MyClass {}
  若要引用 XML 元素（例如，你的函数将处理你要在 XML 文档注释中描述的特定 XML 元素），你可使用标准引用机制（`<` 和 `>`）。  若要引用代码引用 (`cref`) 元素中的通用标识符，可使用转义字符（例如，`cref="List&lt;T&gt;"`）或大括号 (`cref="List{T}"`)。  作为特例，编译器会将大括号解析为尖括号以在引用通用标识符时使作者能够更轻松地进行文档注释。  
   
 > [!NOTE]
->  XML 文档注释不是元数据；它们不包括在编译的程序集中，因此无法通过反射对其进行访问。  
+> XML 文档注释不是元数据；它们不包括在编译的程序集中，因此无法通过反射对其进行访问。  
   
 ## <a name="in-this-section"></a>本节内容  
   

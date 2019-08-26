@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5b646751-6ab7-465c-916c-b1a76aefa9f5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fa6cd032ecf3a35c1dc32d9907218c9b6efd4bcc
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: b0de14fd5d576774ed1605784f5f0c6b0fae2c8c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592267"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69948929"
 ---
 # <a name="generic-collections-in-net"></a>.NET 中的泛型集合
 
@@ -40,7 +40,7 @@ ms.locfileid: "65592267"
  <xref:System.Nullable%601> 泛型结构允许使用值类型，如同它们可分配 `null`。 这在处理数据库查询时很有用，其中字段包含可能丢失的值类型。 泛型类型参数可为任意值类型。  
   
 > [!NOTE]
->  在 C# 和 Visual Basic 中，无需显式使用 <xref:System.Nullable%601>，因为语言具有可以为 null 类型的语法。 请参阅[可为 null 的类型（C# 编程指南）](../../csharp/programming-guide/nullable-types/index.md)或 [可为 null 的值类型 (Visual Basic)](../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)。 
+> 在 C# 和 Visual Basic 中，无需显式使用 <xref:System.Nullable%601>，因为语言具有可以为 null 类型的语法。 请参阅[可为 null 的类型（C# 编程指南）](../../csharp/programming-guide/nullable-types/index.md)或 [可为 null 的值类型 (Visual Basic)](../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)。 
   
  <xref:System.ArraySegment%601> 泛型结构提供了分隔任何类型的从零开始的一维数组内的一系列元素的方法。 泛型类型参数是数组中元素的类型。  
   

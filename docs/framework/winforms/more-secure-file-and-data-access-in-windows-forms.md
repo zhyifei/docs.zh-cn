@@ -13,12 +13,12 @@ helpviewer_keywords:
 - file access [Windows Forms]
 - security [Windows Forms], data access
 ms.assetid: 3cd3e55b-2f5e-40dd-835d-f50f7ce08967
-ms.openlocfilehash: 3389261fe9ed3d1653b92c90419033380a403387
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 94b165757de636b2570798a21fd7c483264e37c5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69567409"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69949956"
 ---
 # <a name="more-secure-file-and-data-access-in-windows-forms"></a>Windows 窗体中更加安全的文件和数据访问
 .NET Framework 使用权限来帮助保护资源和数据。 你的应用程序可以读取或写入数据的位置取决于授予该应用程序的权限。 在部分信任环境中运行应用程序时，可能不具有对数据的访问权限，或可能必须更改访问数据的方式。  
@@ -26,7 +26,7 @@ ms.locfileid: "69567409"
  遇到安全限制时，你有两个选择：断言该权限（假设已将该权限授予你的应用程序），或者使用编写为用于部分信任中的功能版本。 以下各节探讨如何使用文件、数据库和在部分信任环境中运行的应用程序中的注册表访问。  
   
 > [!NOTE]
->  默认情况下, 生成 ClickOnce 部署的工具默认情况下, 这些部署从运行它们的计算机请求完全信任。 如果你决定要在部分信任环境中运行所增加的安全优势, 则必须在 Visual Studio 或其中一个 Windows SDK 工具 (Mage.exe 或 Mageui.exe) 中更改此默认值。 有关 Windows 窗体安全性以及如何确定应用程序的适当信任级别的详细信息, 请参阅[Windows 窗体概述中的安全性](security-in-windows-forms-overview.md)。  
+> 默认情况下, 生成 ClickOnce 部署的工具默认情况下, 这些部署从运行它们的计算机请求完全信任。 如果你决定要在部分信任环境中运行所增加的安全优势, 则必须在 Visual Studio 或其中一个 Windows SDK 工具 (Mage.exe 或 Mageui.exe) 中更改此默认值。 有关 Windows 窗体安全性以及如何确定应用程序的适当信任级别的详细信息, 请参阅[Windows 窗体概述中的安全性](security-in-windows-forms-overview.md)。  
   
 ## <a name="file-access"></a>文件访问  
  <xref:System.Security.Permissions.FileIOPermission>类控制 .NET Framework 中的文件和文件夹访问。 默认情况下，安全系统不会向本地 Intranet 和 Internet 区域等部分信任环境授予 <xref:System.Security.Permissions.FileIOPermission>。 但是，如果修改应用程序的设计或使用不同的方法访问文件，那么需要文件访问权限的应用程序仍可以在这些环境中正常工作。 默认情况下，将向本地 Intranet 区域授予以下权限：具有相同的站点访问权限和相同的目录访问权限、连回其源站点、从其安装目录进行读取。 默认情况下，仅向 Internet 区域授予连回其源站点的权限。  
@@ -35,7 +35,7 @@ ms.locfileid: "69567409"
  针对不具有文件访问权限的一种应对方法是：提示用户通过使用 <xref:System.Windows.Forms.OpenFileDialog> 或 <xref:System.Windows.Forms.SaveFileDialog> 类提供特定文件信息。 这种用户交互有助于在一定程度上确保应用程序无法恶意加载专用文件或覆盖重要文件。 <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> 和 <xref:System.Windows.Forms.SaveFileDialog.OpenFile%2A> 方法通过打开用户指定的文件的文件流提供读写文件访问权限。 这些方法还有助于通过隐藏文件路径保护用户文件。  
   
 > [!NOTE]
->  这些权限根据应用程序是位于 Internet 区域中还是 Intranet 区域中而有所不同。 Internet 区域的应用程序只能使用 <xref:System.Windows.Forms.OpenFileDialog>，而 Intranet 应用程序则具有不受限制的文件对话框权限。  
+> 这些权限根据应用程序是位于 Internet 区域中还是 Intranet 区域中而有所不同。 Internet 区域的应用程序只能使用 <xref:System.Windows.Forms.OpenFileDialog>，而 Intranet 应用程序则具有不受限制的文件对话框权限。  
   
  <xref:System.Security.Permissions.FileDialogPermission> 类指定应用程序可使用的文件对话框类型。 下表显示使用每种 <xref:System.Windows.Forms.FileDialog> 类所必须具有的值。  
   
@@ -45,14 +45,14 @@ ms.locfileid: "69567409"
 |<xref:System.Windows.Forms.SaveFileDialog>|<xref:System.Security.Permissions.FileDialogPermissionAccess.Save>|  
   
 > [!NOTE]
->  实际调用 <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> 方法前并不需要这一特定权限。  
+> 实际调用 <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> 方法前并不需要这一特定权限。  
   
  显示文件对话框的权限不会授予应用程序对 <xref:System.Windows.Forms.FileDialog>、<xref:System.Windows.Forms.OpenFileDialog> 和 <xref:System.Windows.Forms.SaveFileDialog> 类所有成员的完全访问权限。 有关调用每个方法所需的确切权限, 请参阅 .NET Framework 类库文档中该方法的参考主题。  
   
  以下代码示例使用 <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> 方法将用户指定的文件打开为 <xref:System.Windows.Forms.RichTextBox> 控件。 该示例需要 <xref:System.Security.Permissions.FileDialogPermission> 和关联的 <xref:System.Security.Permissions.FileDialogPermissionAttribute.Open%2A> 枚举值。 该示例演示如何处理 <xref:System.Security.SecurityException> 以确定是否应禁用保存功能。 此示例要求你的 <xref:System.Windows.Forms.Form> 具有名为 `ButtonOpen` 的 <xref:System.Windows.Forms.Button> 控件和名为 `RtfBoxMain` 的 <xref:System.Windows.Forms.RichTextBox> 控件。  
   
 > [!NOTE]
->  在示例中未展示保存功能的编程逻辑。  
+> 在示例中未展示保存功能的编程逻辑。  
   
 ```vb  
 Private Sub ButtonOpen_Click(ByVal sender As System.Object, _  
@@ -133,7 +133,7 @@ private void ButtonOpen_Click(object sender, System.EventArgs e)
 ```  
   
 > [!NOTE]
->  在视觉C#对象中, 确保添加代码以启用事件处理程序。 通过使用上一示例中的代码，以下代码显示了如何启用事件处理程序。`this.ButtonOpen.Click += newSystem.Windows.Forms.EventHandler(this.ButtonOpen_Click);`  
+> 在视觉C#对象中, 确保添加代码以启用事件处理程序。 通过使用上一示例中的代码，以下代码显示了如何启用事件处理程序。`this.ButtonOpen.Click += newSystem.Windows.Forms.EventHandler(this.ButtonOpen_Click);`  
   
 ### <a name="other-files"></a>其他文件  
  有时你将需要读取或写入到用户未指定的文件，例如当你必须保存应用程序设置时。 在本地 Intranet 和 Internet 区域中，你的应用程序将无权在本地文件中存储数据。 但是，它将能够在独立存储中存储数据。 独立存储是一个抽象的数据隔离舱（而非具体的存储位置），它包含一个或多个独立存储文件（称为存储区），这些文件包含存储数据的实际目录位置。 文件访问权限（如 <xref:System.Security.Permissions.FileIOPermission>）不是必须具有的权限；<xref:System.Security.Permissions.IsolatedStoragePermission> 类控制独立存储权限。 默认情况下，在本地 Intranet 和 Internet 区域中运行的应用程序可以使用独立存储来存储数据；但是，磁盘配额等设置可能有所不同。 有关独立存储的详细信息, 请参阅[独立存储](../../standard/io/isolated-storage.md)。  

@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - COM+ [WCF], configuring service settings
 ms.assetid: f42a55a8-3af8-4394-9fdd-bf12a93780eb
-ms.openlocfilehash: dd5625fd3f2c0cc2e1e2a261b091a029cd4226ed
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 58845ab7b9da7377f4fdaa7da13e7c407226d63c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62039407"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912207"
 ---
 # <a name="how-to-configure-com-service-settings"></a>如何：配置 COM+ 服务设置
-使用 COM+ 服务配置工具添加或移除应用程序接口时，应用程序配置文件中的 Web 服务配置将更新。 在 COM + 承载模式中，Application.config 文件被放置在应用程序根目录中 (应用程序 %PROGRAMFILES%\ComPlus\\{appid} 是默认值)。 无论在哪种 Web 宿主模式中，Web.config 文件均放置在指定的 vroot 目录中。  
+使用 COM+ 服务配置工具添加或移除应用程序接口时，应用程序配置文件中的 Web 服务配置将更新。 在 com + 托管模式下, 将应用程序 .config 文件放在应用程序根目录中 (默认情况\\下%programfiles%\complus applications\ 应用程序 {appid})。 无论在哪种 Web 宿主模式中，Web.config 文件均放置在指定的 vroot 目录中。  
   
 > [!NOTE]
->  应使用消息签名来防止客户端和服务器之间的消息被篡改。 另外，还应该使用消息或传输层加密来防止客户端和服务器之间的消息发生信息泄漏。 与 Windows Communication Foundation (WCF) 服务一样，应使用限制来限制数量的并发调用、 连接、 实例和挂起的操作。 这有助于防止过度消耗资源。 您可以通过设置服务配置文件来指定遏制行为。  
+> 应使用消息签名来防止客户端和服务器之间的消息被篡改。 另外，还应该使用消息或传输层加密来防止客户端和服务器之间的消息发生信息泄漏。 与 Windows Communication Foundation (WCF) 服务一样, 您应该使用限制来限制并发调用、连接、实例和挂起的操作的数量。 这有助于防止过度消耗资源。 您可以通过设置服务配置文件来指定遏制行为。  
   
 ## <a name="example"></a>示例  
  假设有一个实现以下接口的组件：  
@@ -45,17 +45,17 @@ public interface IFinancesContract : IDisposable
 ```  
   
 > [!NOTE]
->  IID 是该协定的初始命名空间的一部分。  
+> IID 是该协定的初始命名空间的一部分。  
   
  使用此服务的客户端应用程序需要遵循此协定，并使用一个与应用程序配置中指定的绑定相兼容的绑定。  
   
- 下面的代码示例演示了默认的配置文件。 作为 Windows Communication Foundation (WCF) Web 服务，这符合标准的服务模型配置架构，并可以编辑其他 WCF 服务配置文件的方式相同。  
+ 下面的代码示例演示了默认的配置文件。 作为 Windows Communication Foundation (WCF) Web 服务, 这符合标准服务模型配置架构, 并可按与其他 WCF 服务配置文件相同的方式进行编辑。  
   
  典型的修改包括：  
   
 - 将终结点地址从默认的 ApplicationName/ComponentName/InterfaceName 形式更改为更可用的形式。  
   
-- 修改的默认值中的服务命名空间`http://tempuri.org/InterfaceID`到更具相关性的窗体的窗体。  
+- 将服务的命名空间从默认`http://tempuri.org/InterfaceID`窗体修改为更相关的窗体。  
   
 - 将终结点更改为使用其他传输绑定。  
   

@@ -1,15 +1,15 @@
 ---
-title: 如何：比较两个文件夹 (LINQ) (Visual Basic 中) 的内容
+title: 如何：比较两个文件夹的内容 (LINQ) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 903c7e9a-f48d-4a07-a8a8-5450d2646efa
-ms.openlocfilehash: 75283faf25e7a26055b1122eb45e23c510fc6b39
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 5db73b57cfa21de4f1d14299ed7956a322876898
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65593004"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940684"
 ---
-# <a name="how-to-compare-the-contents-of-two-folders-linq-visual-basic"></a>如何：比较两个文件夹 (LINQ) (Visual Basic 中) 的内容
+# <a name="how-to-compare-the-contents-of-two-folders-linq-visual-basic"></a>如何：比较两个文件夹的内容 (LINQ) (Visual Basic)
 此示例演示了比较两个文件列表的 3 种方法：  
   
 - 通过查询布尔值指定两个文件列表是否相同。  
@@ -19,7 +19,7 @@ ms.locfileid: "65593004"
 - 通过查询差集检索仅存在于一个文件夹中的文件。  
   
     > [!NOTE]
-    >  此处的方法适用于比较任何类型的对象序列。  
+    > 此处的方法适用于比较任何类型的对象序列。  
   
  此处的 `FileComparer` 类演示如何将自定义比较器类与标准查询运算符结合使用。 此类不适合在实际方案中使用。 它仅使用每个文件的名称和字节长度来确定每个文件夹的内容是否相同。 在实际方案中，应修改此比较器以执行更严格的等同性检查。  
   
@@ -114,7 +114,7 @@ End Module
 ```  
   
 ## <a name="compiling-the-code"></a>编译代码  
- 创建一个 VB.NET 控制台应用程序项目，与`Imports`System.Linq 命名空间的语句。
+ 使用 VB.NET 命名空间的`Imports`语句创建一个控制台应用程序项目。
  
 ## <a name="see-also"></a>请参阅
 

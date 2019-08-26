@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c830b7097d12017348d8669071ec6d7c122bfe44
-ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
+ms.openlocfilehash: ac21e8aa67eabcb3e837cb5eca02d1145b765946
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68364078"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941739"
 ---
 # <a name="migrating-your-windows-store-app-to-net-native"></a>将 Windows 应用商店应用迁移到 .NET Native
 
@@ -55,7 +55,7 @@ ms.locfileid: "68364078"
 
 例如，绑定数据需要一个应用能够将属性名映射到函数。 在 Windows 应用商店应用的 .NET 中，公共语言运行时自动使用反射来向托管类型和公开可用的本机类型提供该能力。 在 .NET Native 中, 编译器将自动包含要将数据绑定到的类型的元数据。
 
-.NET Native 编译器还可以处理通常使用的泛型类型 ( <xref:System.Collections.Generic.List%601>如和<xref:System.Collections.Generic.Dictionary%602>), 而无需任何提示或指令。 [动态](~/docs/csharp/language-reference/keywords/dynamic.md) 关键字在某些限制内也受到支持。
+.NET Native 编译器还可以处理通常使用的泛型类型 ( <xref:System.Collections.Generic.List%601>如和<xref:System.Collections.Generic.Dictionary%602>), 而无需任何提示或指令。 [动态](../../csharp/language-reference/keywords/dynamic.md) 关键字在某些限制内也受到支持。
 
 > [!NOTE]
 > 在将应用程序移植到 .NET Native 时, 应彻底测试所有动态代码路径。
@@ -129,7 +129,7 @@ ms.locfileid: "68364078"
 
 - 不支持动态创建多维数组。 此类数组一般是通过调用包括 <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> 参数的 `lengths` 方法重载来创建，或通过调用 <xref:System.Type.MakeArrayType%28System.Int32%29?displayProperty=nameWithType> 方法来创建。
 
-- 四维或更多维的多维数组不受支持；因为它们的 <xref:System.Array.Rank%2A?displayProperty=nameWithType> 属性值是四或者更大。 可使用 [交错数组](~/docs/csharp/programming-guide/arrays/jagged-arrays.md) （数组的数组）。 例如， `array[x,y,z]` 无效，但 `array[x][y][z]` 有效。
+- 四维或更多维的多维数组不受支持；因为它们的 <xref:System.Array.Rank%2A?displayProperty=nameWithType> 属性值是四或者更大。 可使用 [交错数组](../../csharp/programming-guide/arrays/jagged-arrays.md) （数组的数组）。 例如， `array[x,y,z]` 无效，但 `array[x][y][z]` 有效。
 
 - 多维数组的差异不受支持且会在运行时导致 <xref:System.InvalidCastException> 异常。
 
@@ -668,4 +668,4 @@ Cookie 处理由 <xref:System.Net.Http.HttpClient> 和 WinINet 同时执行。  
 - [入门](../../../docs/framework/net-native/getting-started-with-net-native.md)
 - [运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [适用于 Windows 应用商店应用的 .NET 概述](https://docs.microsoft.com/previous-versions/windows/apps/br230302%28v=vs.140%29)
-- [.NET Framework 对 Windows 应用商店应用和 Windows 运行时的支持情况](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)
+- [.NET Framework 对 Windows 应用商店应用和 Windows 运行时的支持情况](../../standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)

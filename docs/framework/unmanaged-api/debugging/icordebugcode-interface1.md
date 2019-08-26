@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9ca47eb5508907297a78dba1ab2b0a6d2b8ece0d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 75cc8ea9d88dda42362f50b519864b1a78e1a64b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61750241"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69960795"
 ---
 # <a name="icordebugcode-interface"></a>ICorDebugCode 接口
 
@@ -31,30 +31,30 @@ ms.locfileid: "61750241"
   
 |方法|描述|  
 |------------|-----------------|  
-|[CreateBreakpoint 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-createbreakpoint-method.md)|指定的偏移量位置处创建断点。|  
-|[GetAddress 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getaddress-method.md)|获取代码段的相对虚拟地址 (RVA) 这`ICorDebugCode`表示。|  
-|[GetCode 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getcode-method.md)|获取指定的函数的反汇编格式的所有代码。 此方法已弃用;使用[ICorDebugCode2::GetCodeChunks](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md)相反。|  
+|[CreateBreakpoint 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-createbreakpoint-method.md)|按指定的偏移量创建断点。|  
+|[GetAddress 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getaddress-method.md)|获取此`ICorDebugCode`表示的代码段的相对虚拟地址 (RVA)。|  
+|[GetCode 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getcode-method.md)|获取用于反汇编的指定函数的所有代码。 此方法已弃用;改[为使用 ICorDebugCode2:: GetCodeChunks](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md) 。|  
 |[GetEnCRemapSequencePoints 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getencremapsequencepoints-method.md)|未实现。|  
-|[GetFunction 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getfunction-method.md)|获取与此相关联"ICorDebugFunction" `ICorDebugCode`。|  
-|[GetILToNativeMapping 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getiltonativemapping-method.md)|获取表示从 MSIL 偏移量到本机偏移量的映射的"COR_DEBUG_IL_TO_NATIVE_MAP"实例的数组。|  
-|[GetSize 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getsize-method.md)|获取用字节表示，这表示的二进制代码大小， `ICorDebugCode`。|  
-|[GetVersionNumber 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getversionnumber-method.md)|获取标识的代码版本的基于 1 的数，此`ICorDebugCode`表示。|  
-|[IsIL 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-isil-method.md)|获取一个值，该值指示是否此`ICorDebugCode`在 MSIL 中编译。|  
+|[GetFunction 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getfunction-method.md)|获取与此`ICorDebugCode`关联的 "ICorDebugFunction"。|  
+|[GetILToNativeMapping 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getiltonativemapping-method.md)|获取 "COR_DEBUG_IL_TO_NATIVE_MAP" 实例的数组, 这些实例表示从 MSIL 偏移量到本机偏移量的映射。|  
+|[GetSize 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getsize-method.md)|获取此`ICorDebugCode`表示的二进制代码的大小 (以字节为单位)。|  
+|[GetVersionNumber 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getversionnumber-method.md)|获取一个从1开始的数字, 该数字标识此`ICorDebugCode`表示的代码的版本。|  
+|[IsIL 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-isil-method.md)|获取一个值, 该值指示是否`ICorDebugCode`在 MSIL 中编译此。|  
   
 ## <a name="remarks"></a>备注  
- `ICorDebugCode` 可以表示 MSIL 或本机代码。 表示 MSIL 代码的"ICorDebugFunction"对象可以有零个或一个`ICorDebugCode`与它关联的对象。 一个表示本机代码的"ICorDebugFunction"对象可以具有任意数量的`ICorDebugCode`与它关联的对象。  
+ `ICorDebugCode`可以表示 MSIL 或本机代码。 表示 MSIL 代码的 "ICorDebugFunction" 对象可以有零个或一个`ICorDebugCode`关联的对象。 表示本机代码的 "ICorDebugFunction" 对象可以有任意数量的`ICorDebugCode`关联对象。  
   
 > [!NOTE]
->  此接口不支持跨计算机或跨进程远程调用。  
+> 此接口不支持跨计算机或跨进程远程调用。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头：** Cordebug.idl, Cordebug.idl  
   
- **库：** CorGuids.lib  
+ **类库**CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

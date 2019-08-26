@@ -6,29 +6,29 @@ helpviewer_keywords:
 - Matrix properties [WPF], animating with key frames
 - key frames [WPF], animating Matrix properties with
 ms.assetid: b851a4c7-ecb1-420e-9203-83e7afd037fd
-ms.openlocfilehash: ff5320fa5b4441ae3e0f414b274ab9118b77ec50
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6aa3e27cdfda7597c9b6acbf2980a2774f2b667b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62020239"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963027"
 ---
 # <a name="how-to-animate-a-matrix-by-using-key-frames"></a>如何：使用关键帧对矩阵进行动画处理
-此示例演示如何进行动画处理<xref:System.Windows.Media.MatrixTransform.Matrix%2A>属性的<xref:System.Windows.Media.MatrixTransform>使用关键帧。  
+此示例演示如何使用关键帧<xref:System.Windows.Media.MatrixTransform.Matrix%2A>对的属性<xref:System.Windows.Media.MatrixTransform>进行动画处理。  
   
 ## <a name="example"></a>示例  
- 下面的示例使用<xref:System.Windows.Media.Animation.MatrixAnimationUsingKeyFrames>类进行动画处理<xref:System.Windows.Media.MatrixTransform.Matrix%2A>属性的<xref:System.Windows.Media.MatrixTransform>。 该示例使用<xref:System.Windows.Media.MatrixTransform>要转换的外观和位置对象<xref:System.Windows.Controls.Button>。  
+ 下面的示例使用<xref:System.Windows.Media.Animation.MatrixAnimationUsingKeyFrames>类对的<xref:System.Windows.Media.MatrixTransform.Matrix%2A>属性<xref:System.Windows.Media.MatrixTransform>进行动画处理。 该示例使用<xref:System.Windows.Media.MatrixTransform>对象来转换的外观和位置<xref:System.Windows.Controls.Button>。  
   
- 此动画使用<xref:System.Windows.Media.Animation.DiscreteMatrixKeyFrame>类来创建两个关键帧，然后执行以下与它们：  
+ 此动画使用<xref:System.Windows.Media.Animation.DiscreteMatrixKeyFrame>类创建两个关键帧, 并对其执行以下操作:  
   
-1. 进行动画处理的第一个<xref:System.Windows.Media.Matrix>0.2 的第一个秒数内。 此示例更改<xref:System.Windows.Media.Matrix.M11%2A>并<xref:System.Windows.Media.Matrix.M12%2A>的属性<xref:System.Windows.Media.Matrix>。 此更改会导致该按钮拉伸和扭曲。 此示例还更改<xref:System.Windows.Media.Matrix.OffsetX%2A>和<xref:System.Windows.Media.Matrix.OffsetY%2A>属性，以便该按钮将更改位置。  
+1. 在前 0.2 <xref:System.Windows.Media.Matrix>秒内对第一个进行动画处理。 此示例更改<xref:System.Windows.Media.Matrix.M11%2A>的和<xref:System.Windows.Media.Matrix.M12%2A>属性。 <xref:System.Windows.Media.Matrix> 此更改会导致按钮拉伸并变得扭曲。 该示例还更改了<xref:System.Windows.Media.Matrix.OffsetX%2A>和<xref:System.Windows.Media.Matrix.OffsetY%2A>属性, 以使按钮更改位置。  
   
-2. 进行动画处理第二个<xref:System.Windows.Media.Matrix>1.0 秒时。 该按钮将会移到另一个位置，而不再倾斜或拉伸按钮。  
+2. <xref:System.Windows.Media.Matrix>每秒在1.0 秒进行动画处理。 按钮移至另一个位置, 而按钮不再歪斜或拉伸。  
   
 3. 无限期地重复动画。  
   
 > [!NOTE]
->  关键帧派生<xref:System.Windows.Media.Animation.DiscreteMatrixKeyFrame>对象之间创建突然跳跃值，也就是说，移动动画显得很不稳定。  
+> 从<xref:System.Windows.Media.Animation.DiscreteMatrixKeyFrame>对象派生的关键帧会在值之间创建突然跳转, 也就是说, 动画的移动是不平稳的。  
   
  [!code-xaml[keyframes_snip#MatrixAnimationUsingKeyFramesWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/MatrixAnimationUsingKeyFramesExample.xaml#matrixanimationusingkeyframeswholepage)]  
   

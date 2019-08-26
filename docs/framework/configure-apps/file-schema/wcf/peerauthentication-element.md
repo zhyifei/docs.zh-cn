@@ -2,24 +2,24 @@
 title: <peerAuthentication> 元素
 ms.date: 03/30/2017
 ms.assetid: 09a8a9ff-e395-42f6-8ceb-9d44bdc1cbe1
-ms.openlocfilehash: 6aa11c50ef950a8a9d902a0fb77fdf301d18f7cb
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 09094c00b8faa28c37e202112251fee7cb4580be
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67423042"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69934018"
 ---
 # <a name="peerauthentication-element"></a>\<peerAuthentication > 元素
 指定用于对等客户端的身份验证选项。  
   
- 有关对等编程的详细信息，请参阅[对等网络](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)。  
+ 有关对等编程的详细信息, 请参阅对等[网络](../../../wcf/feature-details/peer-to-peer-networking.md)。  
   
  \<system.ServiceModel>  
-\<behaviors>  
+\<行为 >  
 \<endpointBehaviors>  
-\<behavior>  
+\<行为 >  
 \<clientCredentials>  
-\<peer>  
+\<对等 >  
 \<PeerAuthentication>  
   
 ## <a name="syntax"></a>语法  
@@ -41,7 +41,7 @@ ms.locfileid: "67423042"
 |`customCertificateValidatorType`|可选的字符串。 一个用于验证自定义类型的类型和程序集。 当 `certificateValidationMode` 设置为 `Custom` 时，必须设置此属性。|  
 |`certificateValidationMode`|可选的枚举。 指定用来验证凭据的三种模式之一。 如果设置为 `Custom`，则还必须提供 `customCertificateValidator`。 默认值为 `ChainTrust`。|  
 |`revocationMode`|可选的枚举。 用于检查吊销证书列表 (CRL) 的一种模式。 默认值为 `Online`。|  
-|`trustedStoreLocation`|可选的枚举。 两个系统存储位置之一：`LocalMachine` 或 `CurrentUser`。 在向客户端协商服务证书时使用此值。 对执行验证**受信任的人员**将存储在指定的存储位置。 默认值为 `CurrentUser`。|  
+|`trustedStoreLocation`|可选的枚举。 两个系统存储位置之一：`LocalMachine` 或 `CurrentUser`。 在向客户端协商服务证书时使用此值。 针对指定存储位置中的 "**受信任人**" 存储执行验证。 默认值为 `CurrentUser`。|  
   
 ## <a name="customcertificatevalidatortype-attribute"></a>customCertificateValidatorType 属性  
   
@@ -53,13 +53,13 @@ ms.locfileid: "67423042"
   
 |值|描述|  
 |-----------|-----------------|  
-|枚举|下列值之一：`None`、`PeerTrust`、`ChainTrust`、`PeerOrChainTrust` 和 `Custom`。 默认值为 `ChainTrust`。<br /><br /> 有关详细信息，请参阅[Working with Certificates](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)。|  
+|枚举|下列值之一：`None`、`PeerTrust`、`ChainTrust`、`PeerOrChainTrust` 和 `Custom`。 默认值为 `ChainTrust`。<br /><br /> 有关详细信息, 请参阅使用[证书](../../../wcf/feature-details/working-with-certificates.md)。|  
   
 ## <a name="revocationmode-attribute"></a>revocationMode 属性  
   
 |值|描述|  
 |-----------|-----------------|  
-|枚举|下列值之一：`NoCheck`、`Online` 和 `Offline`。 默认值为 `Online`。<br /><br /> 有关详细信息，请参阅[Working with Certificates](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)。|  
+|枚举|下列值之一：`NoCheck`、`Online` 和 `Offline`。 默认值为 `Online`。<br /><br /> 有关详细信息, 请参阅使用[证书](../../../wcf/feature-details/working-with-certificates.md)。|  
   
 ## <a name="trustedstorelocation-attribute"></a>trustedStoreLocation 属性  
   
@@ -74,7 +74,7 @@ ms.locfileid: "67423042"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<peer>](../../../../../docs/framework/configure-apps/file-schema/wcf/peer-of-clientcredentials-element.md)|指定一个用于向对等服务证明客户端身份的凭据。|  
+|[\<peer>](peer-of-clientcredentials-element.md)|指定一个用于向对等服务证明客户端身份的凭据。|  
   
 ## <a name="remarks"></a>备注  
  `<authentication>` 元素与 <xref:System.ServiceModel.Security.X509PeerCertificateAuthentication> 类相对应。 此元素指定一个验证程序，在网格中执行邻居对等身份验证的过程中将调用该验证程序。 当新对等方尝试建立邻居连接时，它会将自己的凭据传递到响应的对等方。 将调用响应方的验证程序来验证远程方的凭据。 每当在网格中建立对等连接时，对等方将会相互进行身份验证，这意味着会同时在两方调用验证程序。  
@@ -107,8 +107,8 @@ ms.locfileid: "67423042"
 - <xref:System.ServiceModel.Security.PeerCredential.PeerAuthentication%2A>
 - <xref:System.ServiceModel.Configuration.PeerCredentialElement.PeerAuthentication%2A>
 - <xref:System.ServiceModel.Configuration.X509PeerCertificateAuthenticationElement>
-- [使用证书](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [对等网络](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)
+- [使用证书](../../../wcf/feature-details/working-with-certificates.md)
+- [对等网络](../../../wcf/feature-details/peer-to-peer-networking.md)
 - [对等通道消息身份验证](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa967730(v=vs.90))
 - [对等通道自定义身份验证](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751447(v=vs.90))
-- [保护对等通道应用程序](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)
+- [保护对等通道应用程序](../../../wcf/feature-details/securing-peer-channel-applications.md)

@@ -19,15 +19,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 03ee275336d3ae71f63d82add694fe1308efbe8b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5aa53d1c9d101544f532c51f43a8b47143117813
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61750043"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988274"
 ---
 # <a name="icordebugcode3getreturnvalueliveoffset-method"></a>ICorDebugCode3::GetReturnValueLiveOffset 方法
-对于指定的 IL 偏移量，获取本机偏移量，以便调试器可以从函数获取返回值应放置一个断点。  
+对于指定的 IL 偏移量, 获取应放置断点的本机偏移量, 以便调试器可以从函数中获取返回值。  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,41 +42,41 @@ HRESULT GetReturnValueLiveOffset(
   
 ## <a name="parameters"></a>参数  
  `ILoffset`  
- IL 偏移量。 它必须是函数调用站点，否则函数调用将失败。  
+ IL 偏移量。 它必须是函数调用站点, 否则函数调用将失败。  
   
  `bufferSize`  
- 可用来存储的字节数`pOffsets`。  
+ 可用于存储`pOffsets`的字节数。  
   
  `pFetched`  
- 指向实际返回的偏移量数的指针。 通常情况下，其值为 1，但单个 IL 指令可以映射到多个`CALL`程序集指令。  
+ 指向实际返回的偏移量的指针。 通常, 其值为 1, 但单个 IL 指令可以映射到多个`CALL`程序集指令。  
   
  `pOffsets`  
- 本机偏移量的数组。 通常情况下，`pOffsets`包含一个偏移量，尽管单个 IL 指令可以映射到多个映射到多个`CALL`程序集指令。  
+ 本机偏移量的数组。 通常, `pOffsets`包含单个偏移量, 但单个 IL 指令可以映射到多个`CALL`程序集指令。  
   
 ## <a name="remarks"></a>备注  
- 此方法使用连同[ICorDebugILFrame3::GetReturnValueForILOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-getreturnvalueforiloffset-method.md)方法以获取返回引用类型的方法的返回值。 传递 IL 偏移量至函数调用站点，此方法返回一个或多个本机偏移量。 调试程序然后可以在函数中的本机偏移量上设置断点。 当调试器遇到其中一个断点时，您可以将传递给此方法的相同的 IL 偏移量[ICorDebugILFrame3::GetReturnValueForILOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-getreturnvalueforiloffset-method.md)方法以获取返回值。 然后调试器应该清除此设置的所有断点。  
+ 此方法与[ICorDebugILFrame3:: GetReturnValueForILOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-getreturnvalueforiloffset-method.md)方法一起使用, 以获取返回引用类型的方法的返回值。 如果将 IL 偏移量传递给函数调用站点, 此方法将返回一个或多个本机偏移量。 然后, 调试器可以在函数中的这些本机偏移量上设置断点。 当调试器遇到其中一个断点时, 可以将传递给此方法的同一 IL 偏移传递给[ICorDebugILFrame3:: GetReturnValueForILOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-getreturnvalueforiloffset-method.md)方法以获取返回值。 调试器随后应清除它所设置的所有断点。  
   
 > [!WARNING]
->  `ICorDebugCode3::GetReturnValueLiveOffset`并[ICorDebugILFrame3::GetReturnValueForILOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-getreturnvalueforiloffset-method.md)方法，你可以获得仅为引用类型的返回值信息。 从值类型检索返回值信息 (即，派生的所有类型<xref:System.ValueType>) 不受支持。  
+> 和 ICorDebugILFrame3 [:: GetReturnValueForILOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-getreturnvalueforiloffset-method.md)方法只允许获取引用类型的返回值信息。 `ICorDebugCode3::GetReturnValueLiveOffset` 不支持从值类型 (即从<xref:System.ValueType>派生的所有类型) 检索返回值信息。  
   
- 该函数将返回`HRESULT`下表中显示的值。  
+ 函数将返回`HRESULT`下表中显示的值。  
   
 |`HRESULT` 值|描述|  
 |---------------------|-----------------|  
 |`S_OK`|成功。|  
-|`CORDBG_E_INVALID_OPCODE`|给定的 IL 偏移量的站点不是调用命令，或该函数将返回`void`。|  
-|`CORDBG_E_UNSUPPORTED`|给定的 IL 偏移量为适当的调用，但返回类型是用于获取返回值不受支持。|  
+|`CORDBG_E_INVALID_OPCODE`|给定的 IL 偏移量站点不是调用指令, 或该函数返回`void`。|  
+|`CORDBG_E_UNSUPPORTED`|给定的 IL 偏移量是正确的调用, 但不支持返回类型来获取返回值。|  
   
- `ICorDebugCode3::GetReturnValueLiveOffset`方法是仅适用于基于 x86 和 AMD64 系统。  
+ `ICorDebugCode3::GetReturnValueLiveOffset`方法仅适用于基于 x86 的和 AMD64 系统。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头：** Cordebug.idl, Cordebug.idl  
   
- **库：** CorGuids.lib  
+ **类库**CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v451plus](../../../../includes/net-current-v451plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v451plus](../../../../includes/net-current-v451plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

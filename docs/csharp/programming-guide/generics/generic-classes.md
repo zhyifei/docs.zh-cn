@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, generic classes
 - generics [C#], classes
 ms.assetid: 27d6f256-cd61-41e3-bc6e-b990a53b0224
-ms.openlocfilehash: cc2beb78cc6594a3de594b50c1c45d23b30966f6
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 6eb4df4489f4b377c68c5d49d1bf0bb01b835e85
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423483"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69589768"
 ---
 # <a name="generic-classes-c-programming-guide"></a>泛型类（C# 编程指南）
 泛型类封装不特定于特定数据类型的操作。 泛型类最常见用法是用于链接列表、哈希表、堆栈、队列和树等集合。 无论存储数据的类型如何，添加项和从集合删除项等操作的执行方式基本相同。  
@@ -24,7 +24,7 @@ ms.locfileid: "66423483"
   
      通常，可参数化的类型越多，代码就越灵活、其可重用性就越高。 但过度泛化会造成其他开发人员难以阅读或理解代码。  
   
-- 要将何种约束（如有）应用到类型参数（请参阅[类型参数的约束](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md)）。  
+- 要将何种约束（如有）应用到类型参数（请参阅[类型参数的约束](./constraints-on-type-parameters.md)）。  
   
      其中一个有用的规则是，应用最大程度的约束，同时仍可处理必须处理的类型。 例如，如果知道泛型类仅用于引用类型，则请应用类约束。 这可防止将类意外用于值类型，并使你可在 `T` 上使用 `as` 运算符和检查 null 值。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "66423483"
   
      例如，如果要设计用于在基于泛型的集合中创建项的类，则可能必须实现一个接口，例如 <xref:System.IComparable%601>，其中 `T` 为类的类型。  
   
- 有关简单泛型类的示例，请参阅[泛型介绍](../../../csharp/programming-guide/generics/index.md)。  
+ 有关简单泛型类的示例，请参阅[泛型介绍](./index.md)。  
   
  类型参数和约束的规则对于泛型类行为具有多种含义，尤其是在继承性和成员可访问性方面。 应当了解一些术语，然后再继续。 对于泛型类 `Node<T>,`客户端代码可通过指定类型参数来引用类，创建封闭式构造类型 (`Node<int>`)。 或者，可以不指定类型参数（例如指定泛型基类时），创建开放式构造类型 (`Node<T>`)。 泛型类可继承自具体的封闭式构造或开放式构造基类：  
   
@@ -69,7 +69,7 @@ ms.locfileid: "66423483"
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Collections.Generic>
-- [C# 编程指南](../../../csharp/programming-guide/index.md)
-- [泛型](../../../csharp/programming-guide/generics/index.md)
+- [C# 编程指南](../index.md)
+- [泛型](./index.md)
 - [Saving the State of Enumerators](https://blogs.msdn.microsoft.com/wesdyer/2006/01/13/saving-the-state-of-enumerators/)（保存枚举器状态）
 - [An Inheritance Puzzle, Part One](https://blogs.msdn.microsoft.com/ericlippert/2007/07/27/an-inheritance-puzzle-part-one/)（继承测验，第一部分）

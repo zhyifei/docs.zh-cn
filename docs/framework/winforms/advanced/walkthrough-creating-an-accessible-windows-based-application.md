@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows applications [Windows Forms], accessibility
 - applications [Windows Forms], accessibility
 ms.assetid: 654c7f2f-1586-480b-9f12-9d9b8f5cc32b
-ms.openlocfilehash: 7dec86c724479fde78fcb2e2881dce40b1bf747a
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 5768177401504f4776a34e499d07b7600597175a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877104"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69957192"
 ---
 # <a name="walkthrough-creating-an-accessible-windows-based-application"></a>演练：创建基于 Windows 的可访问应用程序
 
@@ -43,7 +43,7 @@ ms.locfileid: "65877104"
 
 #### <a name="to-begin-making-the-application"></a>开始生成应用程序
 
-- 在 Visual Basic 或视觉对象中创建新的 Windows 应用程序C#。 将项目命名为 **PizzaOrder**。 （有关详细信息，请参阅[创建新解决方案和项目](/visualstudio/ide/creating-solutions-and-projects)。）
+- 在 Visual Basic 或视觉对象C#中创建新的 Windows 应用程序。 将项目命名为 **PizzaOrder**。 （有关详细信息，请参阅[创建新解决方案和项目](/visualstudio/ide/creating-solutions-and-projects)。）
 
 ## <a name="adding-the-controls-to-the-form"></a>将控件添加到窗体
 
@@ -58,9 +58,9 @@ ms.locfileid: "65877104"
 
 - 确保任何描述 TextBox 控件的 Label 控件均按 Tab 顺序紧排在相应的 TextBox 控件之前。
 
-- 添加访问键，使用"&"字符到<xref:System.Windows.Forms.Control.Text%2A>用户可能想要导航到任何控件的属性。
+- 使用 "&" 字符将访问键添加到用户可能想要<xref:System.Windows.Forms.Control.Text%2A>导航到的任何控件的属性。
 
-- 添加访问键，使用"&"字符到<xref:System.Windows.Forms.Control.Text%2A>的标签位于用户可能想要导航到的控件之前的属性。 将标签的 <xref:System.Windows.Forms.Label.UseMnemonic%2A> 属性设置为 `true`，以便在用户按下访问键时将焦点设置到按 Tab 键顺序的下一控件。
+- 使用 "&" 字符将访问键添加到<xref:System.Windows.Forms.Control.Text%2A>用户可能想要导航到的控件之前的标签属性。 将标签的 <xref:System.Windows.Forms.Label.UseMnemonic%2A> 属性设置为 `true`，以便在用户按下访问键时将焦点设置到按 Tab 键顺序的下一控件。
 
 - 将访问键添加到所有菜单项。
 
@@ -68,85 +68,85 @@ ms.locfileid: "65877104"
 
 - 将控件添加到窗体并如下所述设置属性。 有关如何在窗体上排列控件的模型，请查看表结尾处的图片。
 
-   |对象|属性|值|
+   |Object|属性|值|
    |------------|--------------|-----------|
    |Form1|AccessibleDescription|订购窗体|
    ||AccessibleName|订购窗体|
    ||字号|10|
-   ||Text|比萨饼订购窗体|
-   |PictureBox|名称|徽标|
+   ||文本|比萨饼订购窗体|
+   |PictureBox|name|徽标|
    ||AccessibleDescription|一片比萨饼|
    ||AccessibleName|公司徽标|
    ||图像|任何图标或位图|
-   |Label|名称|companyLabel|
-   ||Text|美味比萨|
+   |Label|name|companyLabel|
+   ||文本|美味比萨|
    ||TabIndex|1|
    ||AccessibleDescription|公司名称|
    ||AccessibleName|公司名称|
    ||背景色|蓝色|
    ||前景色|黄色|
    ||字体大小|18|
-   |Label|名称|customerLabel|
-   ||Text|名称(&N)|
+   |Label|name|customerLabel|
+   ||文本|名称(&N)|
    ||TabIndex|2|
    ||AccessibleDescription|客户名称标签|
    ||AccessibleName|客户名称标签|
    ||UseMnemonic|True|
-   |文本框|名称|CustomerName|
-   ||Text|(无)|
+   |文本框|name|CustomerName|
+   ||文本|(无)|
    ||TabIndex|3|
    ||AccessibleDescription|CustomerName|
    ||AccessibleName|CustomerName|
-   |GroupBox|名称|sizeOptions|
+   |GroupBox|name|sizeOptions|
    ||AccessibleDescription|比萨大小选项|
    ||AccessibleName|比萨大小选项|
-   ||Text|比萨大小|
+   ||文本|比萨大小|
    ||TabIndex|4|
-   |RadioButton|名称|smallPizza|
-   ||Text|小号 $6.00 (&S)|
+   |RadioButton|name|smallPizza|
+   ||文本|小号 $6.00 (&S)|
    ||已选中|True|
    ||TabIndex|0|
    ||AccessibleDescription|小号比萨|
    ||AccessibleName|小号比萨|
-   |RadioButton|名称|largePizza|
-   ||Text|大号 $10.00 (&L)|
+   |RadioButton|name|largePizza|
+   ||文本|大号 $10.00 (&L)|
    ||TabIndex|1|
    ||AccessibleDescription|大号披萨|
    ||AccessibleName|大号披萨|
-   |Label|名称|toppingsLabel|
-   ||Text|浇头(每个$0.75)(&T)|
+   |Label|name|toppingsLabel|
+   ||文本|浇头(每个$0.75)(&T)|
    ||TabIndex|5|
    ||AccessibleDescription|浇头标签|
    ||AccessibleName|浇头标签|
    ||UseMnemonic|True|
-   |CheckedListBox|名称|浇头|
+   |CheckedListBox|name|浇头|
    ||TabIndex|6|
    ||AccessibleDescription|可用浇头|
    ||AccessibleName|可用浇头|
    ||项|意大利辣肠、香肠、蘑菇|
-   |Button|名称|顺序|
-   ||Text|顺序(&O)|
+   |Button|name|顺序|
+   ||文本|顺序(&O)|
    ||TabIndex|7|
    ||AccessibleDescription|订单合计|
    ||AccessibleName|总订单|
-   |Button|名称|cancel|
-   ||Text|取消(&C)|
+   |Button|name|cancel|
+   ||文本|取消(&C)|
    ||TabIndex|8|
    ||AccessibleDescription|取消订单|
    ||AccessibleName|取消订单|
-   |MainMenu|名称|theMainMenu|
-   |MenuItem|名称|fileCommands|
-   ||Text|文件(&F)|
-   |MenuItem|名称|exitApp|
-   ||Text|退出(&X)|
+   |MainMenu|name|theMainMenu|
+   |MenuItem|name|fileCommands|
+   ||文本|文件(&F)|
+   |MenuItem|name|exitApp|
+   ||文本|退出(&X)|
 
-   你的窗体将类似于下图：
+   您的窗体将如下图所示:
 
-   ![使用名称文本框中，以及大小和浇头选择比萨订购窗体。](./media/walkthrough-creating-an-accessible-windows-based-application/visual-basic-pizza-order-form.gif)
+   !["比萨饼订单" 窗体具有 "名称" 文本框, "大小" 和 "浇头" 选项。](./media/walkthrough-creating-an-accessible-windows-based-application/visual-basic-pizza-order-form.gif)
 
 ## <a name="supporting-high-contrast-mode"></a>支持高对比度模式
 
-高对比度模式是一种 Windows 系统设置，它通过使用有益于视力受损用户的对比颜色和字体大小提高可读性。 <xref:System.Windows.Forms.SystemInformation.HighContrast%2A>提供属性以确定是否设置高对比度模式。
+高对比度模式是一种 Windows 系统设置，它通过使用有益于视力受损用户的对比颜色和字体大小提高可读性。 提供<xref:System.Windows.Forms.SystemInformation.HighContrast%2A>属性以确定是否设置了高对比度模式。
 
 如果 SystemInformation.HighContrast 为`true`，则应用程序应：
 
@@ -303,7 +303,7 @@ ms.locfileid: "65877104"
 
 #### <a name="to-supply-information-by-some-other-means-than-sound"></a>以声音以外的其他方式提供信息
 
-1. 使用 Windows API 函数 FlashWindow 使标题栏闪烁。 有关如何调用 Windows API 函数的示例，请参阅[演练：调用 Windows Api](~/docs/visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)。
+1. 使用 Windows API 函数 FlashWindow 使标题栏闪烁。 有关如何调用 Windows API 函数的示例, 请参阅[演练:调用 Windows Api](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)。
 
     > [!NOTE]
     > 用户可能已启用 Windows SoundSentry 服务，它也会在系统声音通过计算机内置扬声器播放时使窗口闪烁。

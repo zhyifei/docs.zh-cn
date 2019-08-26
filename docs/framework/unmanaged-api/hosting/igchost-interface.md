@@ -16,38 +16,38 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 167e2477e5185112408793e145bc5a4fabea7fc8
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 1d3f588bfc9799ed4591114b28d081ab417678b1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66377617"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69914794"
 ---
 # <a name="igchost-interface"></a>IGCHost 接口
-提供方法用于获取有关垃圾回收系统的信息以及用于控制垃圾回收的某些方面。  
+提供一些方法, 用于获取有关垃圾回收系统的信息并控制垃圾回收的某些方面。  
   
 > [!NOTE]
->  从.NET Framework 4.5 开始，你可以使用[IGCHost2::SetGCStartupLimitsEx](../../../../docs/framework/unmanaged-api/hosting/igchost2-setgcstartuplimitsex-method.md)方法设置为值的垃圾回收段的大小和第 0 代垃圾回收系统的最大大小大于`DWORD`施加的限制[SetGCStartupLimits](../../../../docs/framework/unmanaged-api/hosting/igchost-setgcstartuplimits-method.md)方法。  
+> 从 .NET Framework 4.5 开始, 可以使用[IGCHost2:: SetGCStartupLimitsEx](../../../../docs/framework/unmanaged-api/hosting/igchost2-setgcstartuplimitsex-method.md)方法将垃圾回收段的大小和垃圾回收系统的0代的最大大小设置为大于的`DWORD`值。[SetGCStartupLimits](../../../../docs/framework/unmanaged-api/hosting/igchost-setgcstartuplimits-method.md)方法强加的限制。  
   
 > [!NOTE]
->  此接口是仅供专家使用。 如果使用不当，它会影响应用程序的性能。  
+> 此接口仅供专家使用。 如果使用不当, 可能会影响应用程序的性能。  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|[Collect 方法](../../../../docs/framework/unmanaged-api/hosting/igchost-collect-method.md)|强制给定生成，而不考虑当前的垃圾回收状态发生的集合。|  
-|[GetStats 方法](../../../../docs/framework/unmanaged-api/hosting/igchost-getstats-method.md)|获取垃圾回收系统的当前状态的统计信息。|  
-|[GetThreadStats 方法](../../../../docs/framework/unmanaged-api/hosting/igchost-getthreadstats-method.md)|获取垃圾回收的每个线程统计信息。|  
-|[SetGCStartupLimits 方法](../../../../docs/framework/unmanaged-api/hosting/igchost-setgcstartuplimits-method.md)|设置第 0 代段大小和最大大小。|  
+|[Collect 方法](../../../../docs/framework/unmanaged-api/hosting/igchost-collect-method.md)|为给定的生成强制执行回收, 而不考虑当前垃圾回收的状态。|  
+|[GetStats 方法](../../../../docs/framework/unmanaged-api/hosting/igchost-getstats-method.md)|获取垃圾收集系统的当前状态的统计信息。|  
+|[GetThreadStats 方法](../../../../docs/framework/unmanaged-api/hosting/igchost-getthreadstats-method.md)|获取用于垃圾回收的每个线程的统计信息。|  
+|[SetGCStartupLimits 方法](../../../../docs/framework/unmanaged-api/hosting/igchost-setgcstartuplimits-method.md)|设置第0代的段大小和最大大小。|  
 |[SetVirtualMemLimit 方法](../../../../docs/framework/unmanaged-api/hosting/igchost-setvirtualmemlimit-method.md)|设置运行时的虚拟内存的最大大小。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** GCHost.idl GCHost.h  
+ **标头：** GCHost, GCHost  
   
- **库：** 包含为 MSCorEE.dll 中的资源  
+ **类库**作为资源包括在 Mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

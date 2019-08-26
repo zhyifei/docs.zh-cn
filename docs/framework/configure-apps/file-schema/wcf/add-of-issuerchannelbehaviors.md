@@ -2,26 +2,26 @@
 title: <add> 的 <issuerChannelBehaviors>
 ms.date: 03/30/2017
 ms.assetid: 50710506-e28f-45dd-ab7e-bff6f44173db
-ms.openlocfilehash: 5c9937cb6302a194228461f3e2e06ecdf4d43269
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 325d6b8111115384b18547bd11ccec8a4a8af711
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673610"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920115"
 ---
-# <a name="add-of-issuerchannelbehaviors"></a>\<添加 > 的\<issuerChannelBehaviors >
+# <a name="add-of-issuerchannelbehaviors"></a>\<添加 issuerChannelBehaviors > \<的 >
 
 添加在与 STS 进行通信时要使用的终结点行为。
 
 > [!NOTE]
-> 如果任何终结点行为包含[ \<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)元素中，将引发异常。
+> 如果任何终结点行为包含[ \<clientCredentials >](clientcredentials.md)元素, 则会引发异常。
 
 \<system.ServiceModel>\
-\<behaviors>\
+\<行为 > \
 endpointBehaviors 部分\<行为 > \
-\<clientCredentials>\
-\<issuedToken>\
-\<issuerChannelBehaviors > Element\
+\<clientCredentials > \
+\<issuedToken > \
+\<issuerChannelBehaviors > 元素 \
 \<add>
 
 ## <a name="syntax"></a>语法
@@ -50,11 +50,11 @@ endpointBehaviors 部分\<行为 > \
 
 |元素|描述|
 |-------------|-----------------|
-|[\<issuerChannelBehaviors>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuerchannelbehaviors-element.md)|包含与指定的服务令牌服务通信时要使用 Windows Communication Foundation (WCF) 客户端终结点行为的集合。|
+|[\<issuerChannelBehaviors>](issuerchannelbehaviors-element.md)|包含与指定的服务令牌服务通信时要使用的 Windows Communication Foundation (WCF) 客户端终结点行为的集合。|
 
 ## <a name="remarks"></a>备注
 
-`issuerAddress` 包含客户端希望与之进行通信的安全令牌服务的 URI。 `behaviorConfiguration` 指向应用程序用于创建由 Windows Communication Foundation (WCF) 的通道中从安全令牌服务获取已颁发的令牌的终结点行为。
+`issuerAddress` 包含客户端希望与之进行通信的安全令牌服务的 URI。 `behaviorConfiguration`指向应用程序在 Windows Communication Foundation (WCF) 创建的通道中使用的终结点行为, 以从安全令牌服务获取已颁发的令牌。
 
 ## <a name="see-also"></a>请参阅
 
@@ -62,12 +62,12 @@ endpointBehaviors 部分\<行为 > \
 - <xref:System.ServiceModel.Configuration.IssuedTokenClientBehaviorsElement>
 - <xref:System.ServiceModel.Configuration.IssuedTokenClientBehaviorsElementCollection>
 - <xref:System.ServiceModel.Security.IssuedTokenClientCredential.IssuerChannelBehaviors%2A>
-- [服务标识和身份验证](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
-- [安全行为](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
-- [联合令牌与颁发的令牌](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
-- [保护服务和客户端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [保护客户端](../../../../../docs/framework/wcf/securing-clients.md)
-- [如何：创建联合客户端](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
-- [如何：配置本地颁发者](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)
-- [联合令牌与颁发的令牌](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
-- [\<issuerChannelBehaviors>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuerchannelbehaviors-element.md)
+- [服务标识和身份验证](../../../wcf/feature-details/service-identity-and-authentication.md)
+- [安全行为](../../../wcf/feature-details/security-behaviors-in-wcf.md)
+- [联合令牌与颁发的令牌](../../../wcf/feature-details/federation-and-issued-tokens.md)
+- [保护服务和客户端的安全](../../../wcf/feature-details/securing-services-and-clients.md)
+- [保护客户端](../../../wcf/securing-clients.md)
+- [如何：创建联合客户端](../../../wcf/feature-details/how-to-create-a-federated-client.md)
+- [如何：配置本地颁发者](../../../wcf/feature-details/how-to-configure-a-local-issuer.md)
+- [联合令牌与颁发的令牌](../../../wcf/feature-details/federation-and-issued-tokens.md)
+- [\<issuerChannelBehaviors>](issuerchannelbehaviors-element.md)

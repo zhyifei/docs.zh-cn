@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8ad495d4-2941-40cf-bf64-e82e85825890
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aabf2ad437ee8a50614ca27978aa0a031f5d7e55
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5f003795bf2b8987786043a62d48b2623eb64015
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592232"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69949368"
 ---
 # <a name="resources-in-net-apps"></a>.NET 应用中的资源
 几乎每一个生产性应用都需要使用资源。 资源是在逻辑上随应用部署的任何不可执行的数据。 资源可以在应用中作为错误消息显示，或者作为用户界面的一部分显示。 资源可以包含多种形式的数据，包括字符串、图像和持久的对象。 （若要将持久对象写入资源文件，这些对象必须是可序列化的。）通过在资源文件中存储数据，无需重新编译整个应用即可更改这些数据。 还可以将数据存储在一个位置，而无需依赖存储在多个位置的硬编码数据。  
@@ -65,7 +65,7 @@ ms.locfileid: "64592232"
 
 - <xref:System.Globalization.CultureInfo>
 - <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType>
-- [应用程序要点](../../../docs/standard/application-essentials.md)
+- [应用程序要点](../../standard/application-essentials.md)
 - [创建资源文件](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)
 - [打包和部署资源](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)
 - [创建附属程序集](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)

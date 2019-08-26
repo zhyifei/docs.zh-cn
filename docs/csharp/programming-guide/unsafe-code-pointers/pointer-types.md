@@ -5,12 +5,12 @@ ms.date: 04/20/2018
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.openlocfilehash: 704af9aae23571abdb82ae851066e3c03dbe7161
-ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
+ms.openlocfilehash: 4d0801cd81e00c84be278b44730058798b0acfa9
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68433544"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69588190"
 ---
 # <a name="pointer-types-c-programming-guide"></a>指针类型（C# 编程指南）
 
@@ -52,7 +52,7 @@ int* myVariable;
 
 表达式 `*myVariable` 表示在 `int` 中包含的地址处找到的 `myVariable` 变量。
 
-[fixed 语句](../../language-reference/keywords/fixed-statement.md)和[指针转换](../../programming-guide/unsafe-code-pointers/pointer-conversions.md)主题中有几个指针示例。 下面的示例使用 `unsafe` 关键字和 `fixed` 语句，并显示如何递增内部指针。  你可将此代码粘贴到控制台应用程序的 Main 函数中来运行它。 这些示例必须使用 [-unsafe](../../language-reference/compiler-options/unsafe-compiler-option.md) 编译器选项集进行编译。
+[fixed 语句](../../language-reference/keywords/fixed-statement.md)和[指针转换](./pointer-conversions.md)主题中有几个指针示例。 下面的示例使用 `unsafe` 关键字和 `fixed` 语句，并显示如何递增内部指针。  你可将此代码粘贴到控制台应用程序的 Main 函数中来运行它。 这些示例必须使用 [-unsafe](../../language-reference/compiler-options/unsafe-compiler-option.md) 编译器选项集进行编译。
 
 [!code-csharp[Using pointer types](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#5)]
 

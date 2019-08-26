@@ -2,12 +2,12 @@
 title: <pnrpPeerResolver>
 ms.date: 03/30/2017
 ms.assetid: c1b34f3b-68e5-4911-a367-de49fb61dbc6
-ms.openlocfilehash: 2404f00b2a3ba03e89c1e21fb25e13cabb8feed3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e7e82117304ac133e5e84c0fc36b987560bcef96
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783274"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933801"
 ---
 # <a name="pnrppeerresolver"></a>\<pnrpPeerResolver>
 指定要将 PNRP（对等名称解析协议）解析程序用作解析程序。 此元素是可选的，因为 PNRP 是默认解析程序。  
@@ -15,7 +15,7 @@ ms.locfileid: "61783274"
  \<system.serviceModel>  
 \<bindings>  
 \<customBinding>  
-\<binding>  
+\<绑定 >  
 \<pnrpResolver>  
   
 ## <a name="syntax"></a>语法  
@@ -34,13 +34,13 @@ ms.locfileid: "61783274"
 |resolverType|一个字符串，指定要使用的解析程序。 此属性是可选的。 如果不设置，或者将其设置为空字符串，则使用 PNRP。|  
   
 ### <a name="child-elements"></a>子元素  
- None  
+ 无  
   
 ### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<binding>](../../../../../docs/framework/misc/binding.md)|定义自定义绑定的所有绑定功能。|  
+|[\<binding>](../../../misc/binding.md)|定义自定义绑定的所有绑定功能。|  
   
 ## <a name="example"></a>示例  
   
@@ -53,8 +53,8 @@ ms.locfileid: "61783274"
 - <xref:System.ServiceModel.Configuration.PnrpPeerResolverElement>
 - <xref:System.ServiceModel.Channels.PnrpPeerResolverBindingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [绑定](../../../../../docs/framework/wcf/bindings.md)
-- [扩展绑定](../../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [自定义绑定](../../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
-- [对等解析程序](../../../../../docs/framework/wcf/feature-details/peer-resolvers.md)
+- [绑定](../../../wcf/bindings.md)
+- [扩展绑定](../../../wcf/extending/extending-bindings.md)
+- [自定义绑定](../../../wcf/extending/custom-bindings.md)
+- [\<customBinding>](custombinding.md)
+- [对等解析程序](../../../wcf/feature-details/peer-resolvers.md)

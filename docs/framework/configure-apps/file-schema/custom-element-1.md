@@ -1,5 +1,5 @@
 ---
-title: Singletagsectionhandler 的自定义元素
+title: SingleTagSectionHandler 的自定义元素
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/sectionName
@@ -8,18 +8,18 @@ helpviewer_keywords:
 ms.assetid: e62056c6-b351-40eb-afc0-cc13fc44e45e
 author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: ad98617cd4e88d1650f67136536b7dd5994233a4
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 8fae3673fe72d036802cb1a8366aaa2430c38884
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301155"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927505"
 ---
-# <a name="custom-element-for-singletagsectionhandler"></a>Singletagsectionhandler 的自定义元素
+# <a name="custom-element-for-singletagsectionhandler"></a>SingleTagSectionHandler 的自定义元素
 
-在定义的自定义配置节中定义设置\<部分 > 元素，并使用<xref:System.Configuration.SingleTagSectionHandler>类。
+定义自定义配置节中的设置, 该部分由\<> 元素的部分定义, <xref:System.Configuration.SingleTagSectionHandler>并使用类。
 
-[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
+[ **\<configuration>** ](configuration-element.md)   
 &nbsp;&nbsp; *\<sectionName>*
 
 ## <a name="syntax"></a>语法
@@ -36,19 +36,19 @@ ms.locfileid: "66301155"
 
 |     | 描述 |
 | --- | ----------- |
-| [ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md) | 公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。 |
+| [ **\<configuration>** ](configuration-element.md) | 公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。 |
 
 ## <a name="child-elements"></a>子元素
 
-None
+无
 
 ## <a name="remarks"></a>备注
 
-**\<SectionName >** 元素是通过定义的自定义元素[ **\<部分 >** ](~/docs/framework/configure-apps/file-schema/section-element.md)标记中的[ **\<configSections >** ](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)元素。 配置系统返回<xref:System.Collections.IDictionary>对象在调用时<xref:System.Configuration.Configuration.GetSection(System.String)?displayProperty=nameWithType>。
+[ **\<** ](section-element.md)  **SectionName>元素是configSections>元素中>标记\<** 部分定义的自定义元素。 [ **\<** ](configsections-element-for-configuration.md) <xref:System.Collections.IDictionary> 调用<xref:System.Configuration.Configuration.GetSection(System.String)?displayProperty=nameWithType>时, 配置系统返回对象。
 
 ## <a name="example"></a>示例
 
-下面的示例声明一个名为自定义元素 **\<sampleSection >** ，其中包含通过读取设置<xref:System.Configuration.SingleTagSectionHandler>类：
+下面的示例声明一个名<xref:System.Configuration.SingleTagSectionHandler>  **\<为 sampleSection >** 的自定义元素, 该元素包含由类读取的设置:
 
 ```xml
 <configuration>
@@ -64,8 +64,8 @@ None
 
 ## <a name="configuration-file"></a>配置文件
 
-在应用程序配置文件中，计算机配置文件可以使用此元素 (*Machine.config*)，并*Web.config*不在应用程序目录级别上的文件。
+此元素可用于应用程序配置文件、计算机配置文件 (*machine.config*) 和不在应用程序目录级别的 web.config 文件。
 
 ## <a name="see-also"></a>请参阅
 
-- [.NET Framework 的配置文件架构](~/docs/framework/configure-apps/file-schema/index.md)
+- [.NET Framework 的配置文件架构](index.md)

@@ -6,20 +6,20 @@ helpviewer_keywords:
 - cells [Windows Forms], styles
 - data grids [Windows Forms], cell styles
 ms.assetid: dbb75ed6-8804-4232-8382-f9920c2e380c
-ms.openlocfilehash: 98e0ed5f4fe7b0c016b4477ac9f646037b0877ec
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: be4c47db5c56685a84153a9ae4a9a2fe14c6adad
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593437"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917759"
 ---
 # <a name="cell-styles-in-the-windows-forms-datagridview-control"></a>Windows 窗体 DataGridView 控件中的单元格样式
-中的每个单元格<xref:System.Windows.Forms.DataGridView>控件可以有自己的样式，如文本格式、 背景色、 前景色和字体。 但是，通常情况下，多个单元格将共享特定的样式特征。  
+控件中的<xref:System.Windows.Forms.DataGridView>每个单元格都可以有自己的样式, 如文本格式、背景色、前景色和字体。 不过, 通常情况下, 多个单元格将共享特定的样式特征。  
   
- 共享样式的单元格的组可能会在控件中包括特定的行或列、 包含特定值的所有单元格或所有单元格内的所有单元格。 因为这些组重叠，则每个单元格可能从多个位置中获取其样式信息。 例如，可能希望每个单元格<xref:System.Windows.Forms.DataGridView>使用带有负数的相同字体，但仅中要使用货币格式的货币列的单元格和仅货币单元格，才能使用红色前景颜色的控件。  
+ 共享样式的单元格组可以包含特定行或列中的所有单元格、包含特定值的所有单元格或控件中的所有单元格。 由于这些组重叠, 因此每个单元格可能会从多个位置获取其样式信息。 例如, 您可能想要<xref:System.Windows.Forms.DataGridView>控件中的每个单元格都使用同一字体, 但只有货币列中的单元格使用货币格式, 而只有包含负数的货币单元格才能使用红色前景色。  
   
 ## <a name="the-datagridviewcellstyle-class"></a>DataGridViewCellStyle 类  
- <xref:System.Windows.Forms.DataGridViewCellStyle>类包含视觉样式相关的以下属性：  
+ <xref:System.Windows.Forms.DataGridViewCellStyle>类包含以下与视觉样式相关的属性:  
   
 - <xref:System.Windows.Forms.DataGridViewCellStyle.BackColor%2A> 和 <xref:System.Windows.Forms.DataGridViewCellStyle.ForeColor%2A>  
   
@@ -27,7 +27,7 @@ ms.locfileid: "64593437"
   
 - <xref:System.Windows.Forms.DataGridViewCellStyle.Font%2A>  
   
- 此类还包含与格式设置相关的以下属性：  
+ 此类还包含以下与格式设置相关的属性:  
   
 - <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A> 和 <xref:System.Windows.Forms.DataGridViewCellStyle.FormatProvider%2A>  
   
@@ -39,37 +39,37 @@ ms.locfileid: "64593437"
   
 - <xref:System.Windows.Forms.DataGridViewCellStyle.Padding%2A>  
   
- 有关这些属性和其他单元格样式属性的详细信息，请参阅<xref:System.Windows.Forms.DataGridViewCellStyle>下面的另请参见部分中列出的参考文档和主题。  
+ 有关这些属性以及其他单元格样式属性的详细信息, 请参阅<xref:System.Windows.Forms.DataGridViewCellStyle>下面的 "另请参阅" 部分中列出的参考文档和主题。  
   
 ## <a name="using-datagridviewcellstyle-objects"></a>使用 DataGridViewCellStyle 对象  
- 可以检索<xref:System.Windows.Forms.DataGridViewCellStyle>中的各种属性的对象<xref:System.Windows.Forms.DataGridView>， <xref:System.Windows.Forms.DataGridViewColumn>， <xref:System.Windows.Forms.DataGridViewRow>，和<xref:System.Windows.Forms.DataGridViewCell>类和其派生的类。 如果这些属性之一具有尚未设置，检索其值会创建一个新<xref:System.Windows.Forms.DataGridViewCellStyle>对象。 您还可以实例化自己<xref:System.Windows.Forms.DataGridViewCellStyle>对象，并将其分配给这些属性。  
+ 可以从<xref:System.Windows.Forms.DataGridView>、 <xref:System.Windows.Forms.DataGridViewCellStyle> 、<xref:System.Windows.Forms.DataGridViewColumn>和类<xref:System.Windows.Forms.DataGridViewCell>及其派生类的各种属性中检索对象。 <xref:System.Windows.Forms.DataGridViewRow> 如果尚未设置这些属性中的一个, 则检索其值会创建一个新<xref:System.Windows.Forms.DataGridViewCellStyle>的对象。 你还可以实例化你<xref:System.Windows.Forms.DataGridViewCellStyle>自己的对象并将其分配给这些属性。  
   
- 您可以通过共享来避免不必要地重复的样式信息<xref:System.Windows.Forms.DataGridViewCellStyle>多个对象<xref:System.Windows.Forms.DataGridView>元素。 由于样式设置在控件、 列和行级别筛选器下通过到单元格级别的每个级别，因此还可以通过在不同于上面的级别每个级别设置只显示那些样式属性来避免样式重复。 这是在后面的样式继承部分中的更多详细信息中所述。  
+ 通过在多个<xref:System.Windows.Forms.DataGridViewCellStyle> <xref:System.Windows.Forms.DataGridView>元素之间共享对象, 可以避免不必要地重复样式信息。 由于在控件、列和行级别设置的样式会向下筛选每个级别到单元格级别, 因此还可以通过仅设置每个级别上不同于上述级别的样式属性来避免样式重复。 下面的 "样式继承" 部分对此进行了详细介绍。  
   
- 下表列出了用于获取或设置主属性<xref:System.Windows.Forms.DataGridViewCellStyle>对象。  
+ 下表列出了获取或设置<xref:System.Windows.Forms.DataGridViewCellStyle>对象的主要属性。  
   
-|属性|类|描述|  
+|Property|类|描述|  
 |--------------|-------------|-----------------|  
-|`DefaultCellStyle`|<xref:System.Windows.Forms.DataGridView><xref:System.Windows.Forms.DataGridViewColumn>， <xref:System.Windows.Forms.DataGridViewRow>，和派生类|获取或设置使用在整个控件 （包括标题单元格），在列中，或行中的所有单元格的默认样式。|  
-|<xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A>|<xref:System.Windows.Forms.DataGridView>|获取或设置使用的控件中的所有行的默认单元格样式。 这不包括标头单元格。|  
-|<xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A>|<xref:System.Windows.Forms.DataGridView>|获取或设置交替行控件中的使用的默认单元格样式。 用于创建类似于分类帐的效果。|  
-|<xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A>|<xref:System.Windows.Forms.DataGridView>|获取或设置使用的控件的行标题的默认单元格样式。 如果启用了可视样式，替代当前主题。|  
-|<xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A>|<xref:System.Windows.Forms.DataGridView>|获取或设置使用的控件的列标题的默认单元格样式。 如果启用了可视样式，替代当前主题。|  
-|<xref:System.Windows.Forms.DataGridViewCell.Style%2A>|<xref:System.Windows.Forms.DataGridViewCell> 派生类|获取或设置单元格级别指定的样式。 这些样式会覆盖从较高级别继承。|  
-|`InheritedStyle`|<xref:System.Windows.Forms.DataGridViewCell><xref:System.Windows.Forms.DataGridViewRow>， <xref:System.Windows.Forms.DataGridViewColumn>，和派生类|获取当前应用于单元格、 行或列，其中包括从较高级别继承的所有样式。|  
+|`DefaultCellStyle`|<xref:System.Windows.Forms.DataGridView>、 <xref:System.Windows.Forms.DataGridViewColumn> 、<xref:System.Windows.Forms.DataGridViewRow>和派生类|获取或设置整个控件中的所有单元格 (包括标头单元格)、列或行中的默认样式。|  
+|<xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A>|<xref:System.Windows.Forms.DataGridView>|获取或设置控件中的所有行使用的默认单元格样式。 这不包括标头单元格。|  
+|<xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A>|<xref:System.Windows.Forms.DataGridView>|获取或设置控件中的交替行使用的默认单元格样式。 用于创建类似帐目型的效果。|  
+|<xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A>|<xref:System.Windows.Forms.DataGridView>|获取或设置控件的行标题使用的默认单元格样式。 如果启用了视觉样式, 则由当前主题重写。|  
+|<xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A>|<xref:System.Windows.Forms.DataGridView>|获取或设置控件的列标题使用的默认单元格样式。 如果启用了视觉样式, 则由当前主题重写。|  
+|<xref:System.Windows.Forms.DataGridViewCell.Style%2A>|<xref:System.Windows.Forms.DataGridViewCell>和派生类|获取或设置在单元格级别指定的样式。 这些样式会重写从更高级别继承的样式。|  
+|`InheritedStyle`|<xref:System.Windows.Forms.DataGridViewCell>、 <xref:System.Windows.Forms.DataGridViewRow> 、<xref:System.Windows.Forms.DataGridViewColumn>和派生类|获取当前应用于单元格、行或列的所有样式, 包括从更高级别的继承的样式。|  
   
- 如上所述，自动获取样式属性的值实例化新<xref:System.Windows.Forms.DataGridViewCellStyle>对象如果属性尚未之前设置。 若要避免不必要地创建这些对象，在行和列类具有<xref:System.Windows.Forms.DataGridViewBand.HasDefaultCellStyle%2A>属性，您可以通过检查来确定是否<xref:System.Windows.Forms.DataGridViewBand.DefaultCellStyle%2A>设置属性。 同样，单元格类具有<xref:System.Windows.Forms.DataGridViewCell.HasStyle%2A>属性，指示是否<xref:System.Windows.Forms.DataGridViewCell.Style%2A>设置属性。  
+ 如上所述, 如果以前尚未设置属性, 则获取样式属性的值会<xref:System.Windows.Forms.DataGridViewCellStyle>自动实例化新的对象。 若要避免不必要地创建这些对象, 则行和列<xref:System.Windows.Forms.DataGridViewBand.HasDefaultCellStyle%2A>类具有一个属性, 你可以对其<xref:System.Windows.Forms.DataGridViewBand.DefaultCellStyle%2A>进行检查以确定是否已设置该属性。 同样, cell 类具有一个<xref:System.Windows.Forms.DataGridViewCell.HasStyle%2A>属性, 该属性指示<xref:System.Windows.Forms.DataGridViewCell.Style%2A>是否已设置属性。  
   
- 样式属性的每个都有相应*PropertyName* `Changed`上的事件<xref:System.Windows.Forms.DataGridView>控件。 有关行、 列和单元属性，该事件的名称开头"`Row`"，"`Column`"，或"`Cell`"(例如， <xref:System.Windows.Forms.DataGridView.RowDefaultCellStyleChanged>)。 每个事件发生时相应的样式属性设置为另一种<xref:System.Windows.Forms.DataGridViewCellStyle>对象。 在检索时不会发生这些事件<xref:System.Windows.Forms.DataGridViewCellStyle>对象从一个样式属性，并修改其属性值。 若要对单元格样式对象本身的更改做出响应，处理<xref:System.Windows.Forms.DataGridView.CellStyleContentChanged>事件。  
+ 每个样式属性在<xref:System.Windows.Forms.DataGridView>控件上都有一个对应的*PropertyName* `Changed`事件。 对于行、列和单元属性, 事件`Row`的名称以 ""、"`Column`" 或 "`Cell`" (例如<xref:System.Windows.Forms.DataGridView.RowDefaultCellStyleChanged>) 开头。 当相应的样式属性设置为另<xref:System.Windows.Forms.DataGridViewCellStyle>一对象时, 将发生这些事件中的每一个。 从样式属性检索<xref:System.Windows.Forms.DataGridViewCellStyle>对象并修改其属性值时, 不会发生这些事件。 若要对单元格样式对象本身的更改做出响应, <xref:System.Windows.Forms.DataGridView.CellStyleContentChanged>请处理事件。  
   
 ## <a name="style-inheritance"></a>样式继承  
- 每个<xref:System.Windows.Forms.DataGridViewCell>获取从其外观其<xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A>属性。 <xref:System.Windows.Forms.DataGridViewCellStyle>此属性返回的对象继承其属性值的类型的属性层次结构从<xref:System.Windows.Forms.DataGridViewCellStyle>。 下面列出的顺序在这些属性<xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A>非标头单元格获得其值。  
+ 每<xref:System.Windows.Forms.DataGridViewCell>个从其<xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A>属性中获取其外观。 此<xref:System.Windows.Forms.DataGridViewCellStyle>属性返回的对象从类型<xref:System.Windows.Forms.DataGridViewCellStyle>为的属性的层次结构继承其值。 下面列出了这些属性, 这些属性的顺序如下<xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A> : 非标头单元格获取其值的顺序。  
   
 1. <xref:System.Windows.Forms.DataGridViewCell.Style%2A?displayProperty=nameWithType>  
   
 2. <xref:System.Windows.Forms.DataGridViewRow.DefaultCellStyle%2A?displayProperty=nameWithType>  
   
-3. <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A?displayProperty=nameWithType> （仅适用于具有奇数的索引号的行中单元格）  
+3. <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A?displayProperty=nameWithType>(仅适用于具有奇数索引号的行中的单元格)  
   
 4. <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A?displayProperty=nameWithType>  
   
@@ -77,7 +77,7 @@ ms.locfileid: "64593437"
   
 6. <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>  
   
- 为行和列标题单元格<xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A>用从以下列表按给定顺序的源属性的值填充属性。  
+ 对于行标题单元格和列标题<xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A>单元格, 按给定顺序按下面的源属性列表中的值填充属性。  
   
 1. <xref:System.Windows.Forms.DataGridViewCell.Style%2A?displayProperty=nameWithType>  
   
@@ -85,31 +85,31 @@ ms.locfileid: "64593437"
   
 3. <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>  
   
- 下图说明了此过程。  
+ 下图演示了此过程。  
   
- ![类型 DataGridViewCellStyle 的属性](./media/cell-styles-in-the-windows-forms-datagridview-control/datagridviewcells-inheritance-diagram.gif "DataGridViewCells 继承关系图")  
+ ![DataGridViewCellStyle 类型的属性](./media/cell-styles-in-the-windows-forms-datagridview-control/datagridviewcells-inheritance-diagram.gif "DataGridViewCells 继承关系图")  
   
- 此外可以访问继承的特定行和列的样式。 列<xref:System.Windows.Forms.DataGridViewColumn.InheritedStyle%2A>属性从下列属性继承它的值。  
+ 还可以访问特定行和列继承的样式。 列<xref:System.Windows.Forms.DataGridViewColumn.InheritedStyle%2A>属性从以下属性继承其值。  
   
 1. <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A?displayProperty=nameWithType>  
   
 2. <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>  
   
- 行<xref:System.Windows.Forms.DataGridViewRow.InheritedStyle%2A>属性从下列属性继承它的值。  
+ Row <xref:System.Windows.Forms.DataGridViewRow.InheritedStyle%2A>属性从以下属性继承其值。  
   
 1. <xref:System.Windows.Forms.DataGridViewRow.DefaultCellStyle%2A?displayProperty=nameWithType>  
   
-2. <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A?displayProperty=nameWithType> （仅适用于具有奇数的索引号的行中单元格）  
+2. <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A?displayProperty=nameWithType>(仅适用于具有奇数索引号的行中的单元格)  
   
 3. <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A?displayProperty=nameWithType>  
   
 4. <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>  
   
- 中每个属性<xref:System.Windows.Forms.DataGridViewCellStyle>返回的对象`InheritedStyle`属性，属性值从第一个单元格样式在相应的列表具有相应的属性设置为一个值，而不获取<xref:System.Windows.Forms.DataGridViewCellStyle>类的默认值。  
+ 对于<xref:System.Windows.Forms.DataGridViewCellStyle> `InheritedStyle`属性返回的对象中的每个属性, 将从相应列表中的第一个单元格样式获取属性值, 该列表中的相应属性设置为默认值以外<xref:System.Windows.Forms.DataGridViewCellStyle>的值。  
   
- 下表说明了如何将<xref:System.Windows.Forms.DataGridViewCellStyle.ForeColor%2A>示例单元格的属性值继承自其包含的列。  
+ 下表说明了如何从<xref:System.Windows.Forms.DataGridViewCellStyle.ForeColor%2A>其包含列继承示例单元格的属性值。  
   
-|类型的属性 `DataGridViewCellStyle`|示例`ForeColor`检索到的对象的值|  
+|类型的属性`DataGridViewCellStyle`|检索`ForeColor`的对象的示例值|  
 |----------------------------------------------|----------------------------------------------------|  
 |<xref:System.Windows.Forms.DataGridViewCell.Style%2A?displayProperty=nameWithType>|<xref:System.Drawing.Color.Empty?displayProperty=nameWithType>|  
 |<xref:System.Windows.Forms.DataGridViewRow.DefaultCellStyle%2A?displayProperty=nameWithType>|<xref:System.Drawing.Color.Red%2A?displayProperty=nameWithType>|  
@@ -118,31 +118,31 @@ ms.locfileid: "64593437"
 |<xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A?displayProperty=nameWithType>|<xref:System.Drawing.Color.DarkBlue%2A?displayProperty=nameWithType>|  
 |<xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>|<xref:System.Drawing.Color.Black%2A?displayProperty=nameWithType>|  
   
- 在这种情况下，<xref:System.Drawing.Color.Red%2A?displayProperty=nameWithType>从单元格的行的值是列表上的第一个实际值。 这将成为<xref:System.Windows.Forms.DataGridViewCellStyle.ForeColor%2A>属性值的单元格的<xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A>。  
+ 在这种情况下<xref:System.Drawing.Color.Red%2A?displayProperty=nameWithType> , 该单元格的行中的值是列表中的第一个实际值。 这将成为<xref:System.Windows.Forms.DataGridViewCellStyle.ForeColor%2A>该<xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A>单元格的属性值。  
   
- 下图说明了如何将不同<xref:System.Windows.Forms.DataGridViewCellStyle>属性继承其属性值从不同的位置。  
+ 下图说明了不同<xref:System.Windows.Forms.DataGridViewCellStyle>属性如何从不同的位置继承其值。  
   
  ![DataGridView 属性&#45;值继承](./media/cell-styles-in-the-windows-forms-datagridview-control/datagridviewcells-value-inheritance-diagram.gif "DataGridViewCells 值继承关系图")  
   
- 通过利用样式继承，可以为整个控件提供适当的样式，而无需在多个位置指定相同的信息。  
+ 利用样式继承, 可以为整个控件提供适当的样式, 而不必在多个位置指定相同的信息。  
   
- 尽管标头单元格参与样式继承，如所述，通过返回的对象<xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A>并<xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A>的属性<xref:System.Windows.Forms.DataGridView>控件具有重写返回的对象的属性值的初始属性值<xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A>属性。 如果您要返回的对象设置属性<xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A>属性应用到行和列标题，必须设置返回的对象的相应属性<xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A>和<xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A>所指示的默认值的属性有关<xref:System.Windows.Forms.DataGridViewCellStyle>类。  
+ 尽管标头单元格参与到样式继承 (如所述), <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A>但<xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A> <xref:System.Windows.Forms.DataGridView>控件的和属性返回的对象具有初始属性值, 这些值将重写由返回的对象的属性值。<xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A>属性。 如果要将<xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A>属性返回的对象的属性设置为应用于行标题和列标题, 则必须将<xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A>和<xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A>属性返回的对象的相应属性设置为指定的默认值<xref:System.Windows.Forms.DataGridViewCellStyle>对于类, 为。  
   
 > [!NOTE]
->  如果启用了可视样式，行和列标题 (除<xref:System.Windows.Forms.DataGridView.TopLeftHeaderCell%2A>) 样式将自动由当前主题，重写这些属性指定任何样式。  
+> 如果启用了视觉样式, 则行标题和列标题 (除外<xref:System.Windows.Forms.DataGridView.TopLeftHeaderCell%2A>) 将自动按当前主题样式进行样式, 并覆盖这些属性指定的任何样式。  
   
- <xref:System.Windows.Forms.DataGridViewButtonColumn>， <xref:System.Windows.Forms.DataGridViewImageColumn>，并<xref:System.Windows.Forms.DataGridViewCheckBoxColumn>类型还初始化的列返回的对象的某些值<xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A>属性。 有关详细信息，请参阅这些类型的参考文档。  
+ 、和类型还初始化由列<xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A>属性返回的对象的某些值。 <xref:System.Windows.Forms.DataGridViewCheckBoxColumn> <xref:System.Windows.Forms.DataGridViewImageColumn> <xref:System.Windows.Forms.DataGridViewButtonColumn> 有关详细信息, 请参阅这些类型的参考文档。  
   
 ## <a name="setting-styles-dynamically"></a>动态设置样式  
- 若要自定义的具有特定值的单元格的样式，实现的处理程序<xref:System.Windows.Forms.DataGridView.CellFormatting?displayProperty=nameWithType>事件。 此事件处理程序接收的自变量<xref:System.Windows.Forms.DataGridViewCellFormattingEventArgs>类型。 此对象包含属性，可确定其位置以及要设置格式的单元格的值<xref:System.Windows.Forms.DataGridView>控件。 此对象还包含<xref:System.Windows.Forms.DataGridViewCellFormattingEventArgs.CellStyle%2A>初始化为的值的属性<xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A>正在格式化的单元格的属性。 可以修改的单元格样式属性来指定相应的单元格的值和位置的样式信息。  
+ 若要自定义具有特定值的单元格样式, 请实现<xref:System.Windows.Forms.DataGridView.CellFormatting?displayProperty=nameWithType>事件的处理程序。 此事件的处理程序接收<xref:System.Windows.Forms.DataGridViewCellFormattingEventArgs>类型的参数。 此对象包含一些属性, 这些属性使你可以确定要设置格式的单元格的值及其<xref:System.Windows.Forms.DataGridView>在控件中的位置。 此对象还包含一个<xref:System.Windows.Forms.DataGridViewCellFormattingEventArgs.CellStyle%2A>属性, 该属性被初始化为正在格式化<xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A>的单元格的属性值。 您可以修改单元样式属性以指定适合单元值和位置的样式信息。  
   
 > [!NOTE]
->  <xref:System.Windows.Forms.DataGridView.RowPrePaint>并<xref:System.Windows.Forms.DataGridView.RowPostPaint>事件也会收到<xref:System.Windows.Forms.DataGridViewCellStyle>对象在事件数据，但在其大小写，它是行的副本<xref:System.Windows.Forms.DataGridViewRow.InheritedStyle%2A>属性用于只读目的并对它的更改不会影响该控件。  
+> 和事件也会接收<xref:System.Windows.Forms.DataGridViewCellStyle>到事件数据中的对象, 但在这种情况下, 它是行<xref:System.Windows.Forms.DataGridViewRow.InheritedStyle%2A>属性的副本以进行只读的, 并且不会影响控件。 <xref:System.Windows.Forms.DataGridView.RowPostPaint> <xref:System.Windows.Forms.DataGridView.RowPrePaint>  
   
- 如还可以动态修改响应事件的各个单元格的样式<xref:System.Windows.Forms.DataGridView.CellMouseEnter?displayProperty=nameWithType>和<xref:System.Windows.Forms.DataGridView.CellMouseLeave>事件。 例如，在处理程序<xref:System.Windows.Forms.DataGridView.CellMouseEnter>事件，可以存储的单元格背景色的当前值 (通过该单元格的检索<xref:System.Windows.Forms.DataGridViewCell.Style%2A>属性)，然后将其设置为将突出显示该单元格，当鼠标悬停时的新颜色。 中的处理程序<xref:System.Windows.Forms.DataGridView.CellMouseLeave>事件，然后将背景色还原为原始值。  
+ 您还可以动态修改各个单元格的样式, 以响应<xref:System.Windows.Forms.DataGridView.CellMouseEnter?displayProperty=nameWithType>和<xref:System.Windows.Forms.DataGridView.CellMouseLeave>事件之类的事件。 例如, 在<xref:System.Windows.Forms.DataGridView.CellMouseEnter>事件的处理程序中, 您可以存储单元格背景色的当前值 (通过单元格的<xref:System.Windows.Forms.DataGridViewCell.Style%2A>属性检索), 然后将其设置为新的颜色, 当鼠标悬停在该单元格上时, 将突出显示该单元格。 在<xref:System.Windows.Forms.DataGridView.CellMouseLeave>事件的处理程序中, 您可以将背景色还原为原始值。  
   
 > [!NOTE]
->  缓存存储在单元格的值<xref:System.Windows.Forms.DataGridViewCell.Style%2A>属性是非常重要，而不考虑是否设置了特定样式值。 如果您暂时替换样式设置，将其还原到其原始的"未设置"状态可确保，则该单元格将返回到从高级别继承的样式设置。 如果您需要确定有效的而不考虑是否继承样式的单元格的实际样式，使用该单元格的<xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A>属性。  
+> 不管是否设置了某个特定样式值<xref:System.Windows.Forms.DataGridViewCell.Style%2A> , 缓存存储在单元格中的值都非常重要。 如果你暂时替换某个样式设置, 则将其还原到其原始 "未设置" 状态可确保单元格返回到从较高级别继承样式设置。 如果需要确定单元的实际有效样式, 而不管样式是否继承, 请使用单元格的<xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A>属性。  
   
 ## <a name="see-also"></a>请参阅
 

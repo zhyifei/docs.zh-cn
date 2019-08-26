@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ddf4b84d44abb353cb9a5e025291690fb14b9461
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.openlocfilehash: efa3abdcb7aa9db6dee4f772c1c1564947151c96
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67267912"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69949599"
 ---
 # <a name="standard-date-and-time-format-strings"></a>标准日期和时间格式字符串
 标准日期和时间格式字符串使用单个格式说明符来定义日期和时间值的文本表示形式。 包含一个以上字符（包括空白）的任何日期和时间格式字符串都会被解释为自定义日期和时间格式字符串；有关更多信息，请参见[自定义日期和时间格式字符串](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)。 可通过两种方式使用标准或自定义格式字符串：  
@@ -79,7 +79,7 @@ ms.locfileid: "67267912"
      [!code-vb[System.DateTime.Conceptual.Formatting#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/vb/StandardFormats1.vb#3)]  
   
 > [!NOTE]
->  有关自定义用于格式化日期和时间值的模式或字符串的信息，请参见 <xref:System.Globalization.NumberFormatInfo> 类主题。  
+> 有关自定义用于格式化日期和时间值的模式或字符串的信息，请参见 <xref:System.Globalization.NumberFormatInfo> 类主题。  
   
  某些情况下，标准格式字符串用作固定不变的较长自定义格式字符串的简便缩写。 有四个标准格式字符串属于这一类别：“O”（或“o”）、“R”（或“r”）、“s”和“u”。 这些字符串对应于由固定区域性定义的自定义格式字符串。 通过这些字符串得到的日期和时间值的字符串表示形式在各个区域性中都应是相同的。 下表提供了有关这四个标准日期和时间格式字符串的信息。  
   

@@ -9,18 +9,18 @@ helpviewer_keywords:
 - bitmap images [WPF]
 - images [WPF], bitmap
 ms.assetid: be180b56-ca6e-4da3-a839-f6b0bf482f7d
-ms.openlocfilehash: 86e42b5d2fcd5bcb23489bd03a6daf8255d0725f
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: a52e330147b07f26136380821c392d27eec60fae
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457524"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69935242"
 ---
 # <a name="bitmap-effects"></a>位图效果
-在本部分中的主题介绍如何将视觉效果应用到位图图像使用[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]。  
+本节中的主题介绍如何使用[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]将视觉效果应用于位图图像。  
   
 > [!IMPORTANT]
->  在.NET Framework 4 或更高版本，<xref:System.Windows.Media.Effects.BitmapEffect>类已过时。 如果尝试使用<xref:System.Windows.Media.Effects.BitmapEffect>类，您将收到已过时异常。 非过时替代项为<xref:System.Windows.Media.Effects.BitmapEffect>类是<xref:System.Windows.Media.Effects.Effect>类。 在大多数情况下，<xref:System.Windows.Media.Effects.Effect>类是快得多。  
+> 在 .NET Framework 4 或更高版本中<xref:System.Windows.Media.Effects.BitmapEffect> , 类已过时。 如果尝试使用<xref:System.Windows.Media.Effects.BitmapEffect>类, 您将收到过时的异常。 <xref:System.Windows.Media.Effects.BitmapEffect>类的非过时替代方法<xref:System.Windows.Media.Effects.Effect>为类。 在大多数情况下, <xref:System.Windows.Media.Effects.Effect>类的速度要快得多。  
   
 ## <a name="in-this-section"></a>本节内容  
  [位图效果概述](bitmap-effects-overview.md)  

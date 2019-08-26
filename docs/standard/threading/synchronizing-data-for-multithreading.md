@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: b980eb4c-71d5-4860-864a-6dfe3692430a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c83e7abbd9f9425fab70325f7a77abb0f672bd15
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: dc8381f8059e37c6c520c2402289124a506188e8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65638760"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968418"
 ---
 # <a name="synchronizing-data-for-multithreading"></a>为多线程处理同步数据
 
@@ -34,8 +34,8 @@ ms.locfileid: "65638760"
   
 |类别|全局字段|静态字段|静态方法|实例字段|实例方法|特定代码块|  
 |--------------|-------------------|-------------------|--------------------|---------------------|----------------------|--------------------------|  
-|无同步|No|No|No|No|No|No|  
-|同步上下文|No|No|No|是|是|No|  
+|无同步|No|否|否|否|否|No|  
+|同步上下文|No|否|否|是|是|No|  
 |同步代码区域|No|No|仅当标记时|No|仅当标记时|仅当标记时|  
 |手动同步|手动|手动|手动|手动|手动|手动|  
   
@@ -51,17 +51,17 @@ ms.locfileid: "65638760"
  Visual Basic 和 C# 都支持使用特定语言关键字标记代码块，在 C# 中使用的是 `lock` 语句，在 Visual Basic 中使用的是 `SyncLock` 语句。 由线程执行代码时，会尝试获取锁。 如果该锁已由其他线程获取，则在锁变为可用状态之前，该线程一直处于阻止状态。 线程退出同步代码块时，锁会被释放，与线程的退出方式无关。  
   
 > [!NOTE]
->  由于 `lock` 和 `SyncLock` 语句是使用 <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType> 实现，因此 <xref:System.Threading.Monitor> 的其他方法可以在同步区域内与它们结合使用。  
+> 由于 `lock` 和 `SyncLock` 语句是使用 <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType> 实现，因此 <xref:System.Threading.Monitor> 的其他方法可以在同步区域内与它们结合使用。  
   
  还可以使用值为 <xref:System.Runtime.CompilerServices.MethodImplOptions.Synchronized?displayProperty=nameWithType> 的 <xref:System.Runtime.CompilerServices.MethodImplAttribute> 修饰方法，其效果和使用 <xref:System.Threading.Monitor> 或其中一个编译器关键字锁定整个方法正文相同。  
   
- <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> 可用于中断对线程执行阻止操作（如等待访问同步代码区域）。 Thread.Interrupt 还用于中断对线程执行 <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType> 等操作。  
+ <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> 可用于中断对线程执行阻止操作（如等待访问同步代码区域）。 Thread.Interrupt  还用于中断对线程执行 <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType> 等操作。  
   
 > [!IMPORTANT]
->  为保护 `static` 方法（Visual Basic 中的 `Shared` 方法），请不要锁定类型，即：C# 中的 `typeof(MyType)`、Visual Basic 中的 `GetType(MyType)` 或 C++ 中的 `MyType::typeid`。 请改用私有静态对象。 同样，不要使用 C# 中的 `this`（Visual Basic 中的 `Me`）锁定实例方法。 请改用私有对象。 类或实例可由不是你自己的代码锁定，这可能会引起死锁或性能问题。  
+> 为保护 `static` 方法（Visual Basic 中的 `Shared` 方法），请不要锁定类型，即：C# 中的 `typeof(MyType)`、Visual Basic 中的 `GetType(MyType)` 或 C++ 中的 `MyType::typeid`。 请改用私有静态对象。 同样，不要使用 C# 中的 `this`（Visual Basic 中的 `Me`）锁定实例方法。 请改用私有对象。 类或实例可由不是你自己的代码锁定，这可能会引起死锁或性能问题。  
   
 ### <a name="compiler-support"></a>编译器支持  
- Visual Basic 和 C# 均支持使用 <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType> 锁定对象的语言关键字。 Visual Basic 支持 [SyncLock](~/docs/visual-basic/language-reference/statements/synclock-statement.md) 语句；C# 支持 [lock](~/docs/csharp/language-reference/keywords/lock-statement.md) 语句。  
+ Visual Basic 和 C# 均支持使用 <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType> 锁定对象的语言关键字。 Visual Basic 支持 [SyncLock](../../visual-basic/language-reference/statements/synclock-statement.md) 语句；C# 支持 [lock](../../csharp/language-reference/keywords/lock-statement.md) 语句。  
   
  在这两种情况下，如果代码块中引发异常，则 **lock** 或 **SyncLock** 获取的锁将自动释放。 C# 和 Visual Basic 编译器在发出 **try**/**finally** 块时，在 try 的起始处使用 **Monitor.Enter**，在 **finally** 块中使用 **Monitor.Exit**。 如果 **lock** 或 **SyncLock** 块内部引发了异常，则会运行 **finally** 处理程序，从而允许执行任何清除工作。  
   
@@ -74,5 +74,5 @@ ms.locfileid: "65638760"
 - <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute>
 - [线程与线程处理](../../../docs/standard/threading/threads-and-threading.md)
 - [同步基元概述](../../../docs/standard/threading/overview-of-synchronization-primitives.md)
-- [SyncLock 语句](~/docs/visual-basic/language-reference/statements/synclock-statement.md)
-- [lock 语句](~/docs/csharp/language-reference/keywords/lock-statement.md)
+- [SyncLock 语句](../../visual-basic/language-reference/statements/synclock-statement.md)
+- [lock 语句](../../csharp/language-reference/keywords/lock-statement.md)

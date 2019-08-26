@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: af02460f-2a45-496e-bc4e-a1ac4f80fe11
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 848929901e91164bdccda5c1e77069364452a782
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1dc5f8b7fa308bdb0fb270c11e044244839a7b47
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67750249"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910290"
 ---
 # <a name="icordebugdatatarget2enumeratethreadids-method"></a>ICorDebugDataTarget2::EnumerateThreadIDs 方法
 返回一组活动线程 ID。  
@@ -37,12 +37,12 @@ HRESULT EnumerateThreadIDs(
 ## <a name="remarks"></a>备注  
   
 > [!NOTE]
->  此方法仅适用于 .NET Native。  
+> 此方法仅适用于 .NET Native。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。**标头：** CorDebug.idl、 CorDebug.h  
+ **适用**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。**标头:** Cordebug.idl, Cordebug.idl  
   
- **库：** CorGuids.lib  
+ **类库**CorGuids.lib  
   
  **.NET Framework 版本：** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d266cbd8-bf91-41d1-baf0-afbc481a741f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5df468b87c62f454f6a42fa7a80d92e5ec199fd1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: d3424e7a412a79266d3bd9f20061ff4a0cd89115
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59151536"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965760"
 ---
 # <a name="configuring-assembly-binding-redirection"></a>配置程序集绑定重定向
 默认情况下，应用程序使用一组 .NET Framework 程序集，该程序集随用于编译该应用程序的运行时版本一起提供。 可以使用应用程序配置文件中 [\<assemblyBinding>](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) 元素上的 appliesTo 特性，将程序集绑定引用重定向到 .NET Framework 程序集的特定版本  。 此可选特性用 .NET Framework 版本号来指示它应用于哪个版本。 如果没有指定 appliesTo 特性，\<assemblyBinding> 元素将适用于 .NET Framework 的所有版本   。  
@@ -20,7 +20,7 @@ ms.locfileid: "59151536"
  在 .NET Framework 1.1 版中引入了 appliesTo 特性，而在 .NET Framework 1.0 版中则忽略了此特性  。 这意味着，即使指定了 appliesTo 特性，在使用 .NET Framework 1.0 版时所有的 \<assemblyBinding> 元素也都适用   。  
   
 > [!NOTE]
->  使用 appliesTo 特性来限制运行时特定版本的程序集绑定重定向  。  
+> 使用 appliesTo 特性来限制运行时特定版本的程序集绑定重定向  。  
   
  例如，若要重定向 .NET Framework 1.0 版程序集的程序集绑定，应在你的应用程序配置文件中包括以下 XML 代码。  
   

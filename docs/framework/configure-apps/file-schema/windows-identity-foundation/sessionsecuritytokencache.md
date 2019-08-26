@@ -3,19 +3,19 @@ title: <sessionSecurityTokenCache>
 ms.date: 03/30/2017
 ms.assetid: d43e676c-0153-485c-ab31-0257a2db7507
 author: BrucePerlerMS
-ms.openlocfilehash: 5c68fe618f965f364a3716c3bc65de5e165b12ec
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9be3bf980c3756678d26d8652271113d4daaba43
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793791"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69943714"
 ---
 # <a name="sessionsecuritytokencache"></a>\<sessionSecurityTokenCache>
-使用的服务或安全令牌处理程序集合注册会话令牌的缓存。  
+使用服务或安全标记处理程序集合为会话令牌注册缓存。  
   
  \<system.identityModel>  
 \<identityConfiguration>  
-\<caches>  
+\<缓存 >  
 \<sessionSecurityTokenCache>  
   
 ## <a name="syntax"></a>语法  
@@ -38,19 +38,19 @@ ms.locfileid: "61793791"
   
 |特性|描述|  
 |---------------|-----------------|  
-|类型|从派生的类型的<xref:System.IdentityModel.Tokens.SessionSecurityTokenCache>类。|  
+|type|派生自<xref:System.IdentityModel.Tokens.SessionSecurityTokenCache>类的类型。|  
   
 ### <a name="child-elements"></a>子元素  
- None  
+ 无  
   
 ### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<caches>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/caches.md)|注册服务或安全令牌处理程序集合使用的缓存。|  
+|[\<caches>](caches.md)|注册服务使用的缓存或安全标记处理程序集合。|  
   
 ## <a name="example"></a>示例  
- 下面的 XML 演示的用于保存会话安全令牌的自定义缓存配置 (<xref:System.IdentityModel.Tokens.SessionSecurityToken>)。 配置来自`ClaimsAwareWebFarm`示例。 有关此示例的详细信息，请参阅[WIF 代码示例索引](../../../../../docs/framework/security/wif-code-sample-index.md)。  
+ 下面的 XML 演示了用于保存会话安全令牌 (<xref:System.IdentityModel.Tokens.SessionSecurityToken>) 的自定义缓存配置。 此配置取自`ClaimsAwareWebFarm`示例。 有关此示例的详细信息, 请参阅[WIF 代码示例索引](../../../security/wif-code-sample-index.md)。  
   
 ```xml  
 <caches>  

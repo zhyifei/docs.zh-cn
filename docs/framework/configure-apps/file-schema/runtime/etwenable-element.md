@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 29dde982-6d8b-4099-8867-ad0d7733f6dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f24e9a06137744dbc97d5f34cda7ad6eab873700
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 3510cbf0a63a8031669bb7a819a8b3c7321aaea4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663728"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920767"
 ---
 # <a name="etwenable-element"></a>\<etwEnable > 元素
 指定是否为公共语言运行时事件启用 Windows 事件跟踪 (ETW)。  
@@ -57,7 +57,7 @@ ms.locfileid: "69663728"
  从 Windows Vista 开始, 默认情况下启用 ETW。 使用此元素可禁用应用程序的 ETW。 在早期版本的 Windows 中, 使用此元素为应用程序启用 ETW。  
   
 > [!NOTE]
->  可以通过使用注册表设置在服务器上全局启用或禁用 ETW。 请参阅[控制 .NET Framework 日志记录](../../../performance/controlling-logging.md)。  
+> 可以通过使用注册表设置在服务器上全局启用或禁用 ETW。 请参阅[控制 .NET Framework 日志记录](../../../performance/controlling-logging.md)。  
   
 ## <a name="example"></a>示例  
  下面的示例演示如何为应用程序启用 ETW 跟踪。  

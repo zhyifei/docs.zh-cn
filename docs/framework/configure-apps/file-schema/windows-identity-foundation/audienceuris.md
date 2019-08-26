@@ -3,15 +3,15 @@ title: <audienceUris>
 ms.date: 03/30/2017
 ms.assetid: 7a3d8515-d756-4afe-a22d-07cbe2217ee3
 author: BrucePerlerMS
-ms.openlocfilehash: 556c444d5e48e27036c4b49338f6e70de7ef5c5d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 003221ed4dc7f4ccf72d2e0d3a91265e13172813
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61750743"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941959"
 ---
 # <a name="audienceuris"></a>\<audienceUris>
-指定 Uri 都是可接受的信赖方 (RP) 标识符的集。 除非某个允许的受众 Uri 作用域内，将不会接受令牌。  
+指定可接受的信赖方 (RP) 标识符的 Uri 集。 除非令牌的作用域是允许的受众 Uri 之一, 否则不会接受令牌。  
   
  \<system.identityModel>  
 \<identityConfiguration>  
@@ -44,32 +44,32 @@ ms.locfileid: "61750743"
   
 |特性|描述|  
 |---------------|-----------------|  
-|mode|<xref:System.IdentityModel.Selectors.AudienceUriMode>值，该值指定是否应该对传入令牌应用的访问群体限制。 可能的值为"始终"，"从不"，并"BearerKeyOnly"。 默认值为"始终"。 可选。|  
+|mode|一个<xref:System.IdentityModel.Selectors.AudienceUriMode>值, 该值指定是否应将受众限制应用于传入令牌。 可能的值为 "始终"、"从不" 和 "BearerKeyOnly"。 默认值为 "Always"。 可选。|  
   
 ### <a name="child-elements"></a>子元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|`<add value=xs:string>`|添加指定的 URI `value` audienceUris 集合的属性。 需要 `value` 属性。 该 URI 是区分大小写。|  
-|`<clear>`|清除 audienceUris 的集合。 从集合中删除所有标识符。|  
-|`<remove value=xs:string>`|删除指定的 URI `value` audienceUris 集合中的属性。 需要 `value` 属性。 该 URI 是区分大小写。|  
+|`<add value=xs:string>`|将`value`属性指定的 URI 添加到 audienceUris 集合。 需要 `value` 属性。 URI 区分大小写。|  
+|`<clear>`|清除 audienceUris 集合。 所有标识符都将从集合中删除。|  
+|`<remove value=xs:string>`|从 audienceUris 集合中移除`value`特性指定的 URI。 需要 `value` 属性。 URI 区分大小写。|  
   
 ### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<securityTokenHandlerConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|提供配置集合的安全令牌处理程序。|  
+|[\<securityTokenHandlerConfiguration>](securitytokenhandlerconfiguration.md)|为安全标记处理程序的集合提供配置。|  
   
 ## <a name="remarks"></a>备注  
- 默认情况下，该集合为空;使用`<add>`， `<clear>`，和`<remove>`要修改集合的元素。 <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> 并<xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>对象所需配置任何的受众 URI 集合中的值允许的受众 URI 限制中的使用<xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement>对象。  
+ 默认情况下, 集合为空;使用`<add>`、 `<clear>`和`<remove>`元素可修改集合。 <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler>和<xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>对象使用受众 uri 集合中的值来配置对象中允许的<xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement>受众 uri 限制。  
   
- `<audienceUris>`元素表示由<xref:System.IdentityModel.Configuration.AudienceUriElementCollection>类。 表示添加到集合的单个 URI<xref:System.IdentityModel.Configuration.AudienceUriElement>类。  
+ 元素由<xref:System.IdentityModel.Configuration.AudienceUriElementCollection>类表示。 `<audienceUris>` 添加到集合中的单个 URI 由<xref:System.IdentityModel.Configuration.AudienceUriElement>类表示。  
   
 > [!NOTE]
->  利用`<audienceUris>`元素的子元素作为[ \<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)元素已被弃用，但仍然支持向后兼容。 上的设置`<securityTokenHandlerConfiguration>`元素上会覆盖`<identityConfiguration>`元素。  
+> 使用`<audienceUris>`元素作为[ \<identityConfiguration >](identityconfiguration.md)元素的子元素已被弃用, 但仍支持向后兼容。 元素上的`<securityTokenHandlerConfiguration>`设置将替代`<identityConfiguration>`元素上的设置。  
   
 ## <a name="example"></a>示例  
- 下面的 XML 演示如何配置应用程序可接受的受众 Uri。 此示例将配置单个 URI。 将接受令牌作用域为此 URI，所有其他用户将被拒绝。  
+ 下面的 XML 演示如何配置应用程序的可接受受众 Uri。 此示例配置单个 URI。 将接受范围为此 URI 的标记, 所有其他标记将被拒绝。  
   
 ```xml  
 <audienceUris>  

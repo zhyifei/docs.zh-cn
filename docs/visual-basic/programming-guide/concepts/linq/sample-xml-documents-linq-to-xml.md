@@ -2,18 +2,18 @@
 title: 示例 XML 文档 (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: a734cc4e-d95d-4631-91a2-81618c8ad894
-ms.openlocfilehash: d8567d8129dd7ba32e847b8c1e28ffc992d10b1f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c50abcc6ef4c23bcd78c5ab0e5e5deb4a369b164
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787135"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916541"
 ---
 # <a name="sample-xml-documents-linq-to-xml"></a>示例 XML 文档 (LINQ to XML)
 整个 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文档的代码示例和代码段中均使用下面的示例文件。  
   
 > [!NOTE]
->  此处描述的示例公司、组织、产品、域名、电子邮件地址、徽标、人员、地点和事件均属虚构。 无意与任何真实的公司、组织、产品、域名、电子邮件地址、徽标、人物、地点或事件相关联，也不应进行这方面的推断。  
+> 此处描述的示例公司、组织、产品、域名、电子邮件地址、徽标、人员、地点和事件均属虚构。 无意与任何真实的公司、组织、产品、域名、电子邮件地址、徽标、人物、地点或事件相关联，也不应进行这方面的推断。  
   
 ## <a name="in-this-section"></a>本节内容  
   

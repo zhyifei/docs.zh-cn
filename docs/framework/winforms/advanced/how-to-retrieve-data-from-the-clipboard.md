@@ -8,48 +8,48 @@ helpviewer_keywords:
 - pasting Clipboard data
 - Clipboard [Windows Forms], retrieving data
 ms.assetid: 99612537-2c8a-449f-aab5-2b3b28d656e7
-ms.openlocfilehash: 868afc36f08571d16285d0df52f6d1cad8c9c7a6
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: 88c2f2d872ae32b2cb3f0df13ce4816400695385
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67348205"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963788"
 ---
 # <a name="how-to-retrieve-data-from-the-clipboard"></a>如何：从剪贴板检索数据
-<xref:System.Windows.Forms.Clipboard>类提供了可用于与 Windows 操作系统剪贴板功能进行交互的方法。 许多应用程序的数据用作临时存储库使用剪贴板。 例如，文字处理器剪切和粘贴操作期间使用剪贴板。 剪贴板功能也很有用信息传输到另一个应用程序。  
+<xref:System.Windows.Forms.Clipboard>类提供可用于与 Windows 操作系统剪贴板功能进行交互的方法。 许多应用程序使用剪贴板作为数据的临时存储库。 例如, 在剪切和粘贴操作期间, word 处理器使用剪贴板。 剪贴板还有助于将信息从一个应用程序传输到另一个应用程序。  
   
- 某些应用程序以增加数据有可能使用其他应用程序的数量以多种格式剪贴板上存储数据。 剪贴板格式是用于标识格式的字符串。 使用标识的格式的应用程序可以检索剪贴板上的关联的数据。 <xref:System.Windows.Forms.DataFormats>类提供了供你使用的预定义的格式名称。 此外可以使用自己的格式名称，或使用对象的类型作为其格式。 有关将数据添加到剪贴板的信息，请参阅[如何：将数据添加到剪贴板](how-to-add-data-to-the-clipboard.md)。  
+ 某些应用程序以多种格式将数据存储在剪贴板上, 以增加可能使用数据的其他应用程序的数目。 剪贴板格式是标识格式的字符串。 使用标识格式的应用程序可以检索剪贴板上关联的数据。 <xref:System.Windows.Forms.DataFormats>类提供预定义的格式名称供你使用。 你还可以使用自己的格式名, 或者使用对象的类型作为其格式。 有关将数据添加到剪贴板的信息, 请[参阅如何:将数据添加到剪贴板](how-to-add-data-to-the-clipboard.md)。  
   
- 若要确定剪贴板中是否包含特定格式的数据，请使用之一`Contains`*格式*方法或<xref:System.Windows.Forms.Clipboard.GetData%2A>方法。 若要从剪贴板检索数据，请使用之一`Get`*格式*方法或<xref:System.Windows.Forms.Clipboard.GetData%2A>方法。 这些方法是.NET Framework 2.0 中的新增功能。  
+ 若要确定剪贴板是否包含特定格式的数据, 请使用*格式*方法<xref:System.Windows.Forms.Clipboard.GetData%2A>或`Contains`方法之一。 若要从剪贴板检索数据, 请使用*格式*方法`Get`或<xref:System.Windows.Forms.Clipboard.GetData%2A>方法之一。 这些方法是 .NET Framework 2.0 中的新方法。  
   
- 若要使用的版本早于.NET Framework 2.0 从剪贴板访问数据，使用<xref:System.Windows.Forms.Clipboard.GetDataObject%2A?displayProperty=nameWithType>方法调用的方法所返回的<xref:System.Windows.Forms.IDataObject>。 若要确定特定的格式是否可在返回的对象，例如，调用<xref:System.Windows.Forms.IDataObject.GetDataPresent%2A>方法。  
+ 若要使用 .NET Framework 2.0 以前的版本访问剪贴板中的数据, 请使用<xref:System.Windows.Forms.Clipboard.GetDataObject%2A?displayProperty=nameWithType>方法并调用返回<xref:System.Windows.Forms.IDataObject>的的方法。 例如, 若要确定特定格式在返回的对象中是否可用, 请调用<xref:System.Windows.Forms.IDataObject.GetDataPresent%2A>方法。  
   
 > [!NOTE]
->  所有基于 Windows 的应用程序共享系统剪贴板。 因此，可能会有所变动时切换到另一个应用程序。  
+> 所有基于 Windows 的应用程序共享系统剪贴板。 因此, 当你切换到另一个应用程序时, 内容可能会更改。  
 >   
->  <xref:System.Windows.Forms.Clipboard>类仅可在线程设置为单线程单元 (STA) 模式。 若要使用此类，请确保你`Main`方法将标有<xref:System.STAThreadAttribute>属性。  
+>  <xref:System.Windows.Forms.Clipboard>类只能在设置为单线程单元 (STA) 模式的线程中使用。 若要使用此类, 请确保`Main`使用<xref:System.STAThreadAttribute>特性标记方法。  
   
-### <a name="to-retrieve-data-from-the-clipboard-in-a-single-common-format"></a>若要从单个的常见格式在剪贴板中检索数据  
+### <a name="to-retrieve-data-from-the-clipboard-in-a-single-common-format"></a>使用单个公共格式从剪贴板检索数据  
   
-1. 使用<xref:System.Windows.Forms.Clipboard.GetAudioStream%2A>， <xref:System.Windows.Forms.Clipboard.GetFileDropList%2A>， <xref:System.Windows.Forms.Clipboard.GetImage%2A>，或<xref:System.Windows.Forms.Clipboard.GetText%2A>方法。 （可选） 使用的相应`Contains`*格式*首先确定数据是否采用特定格式的方法。 这些方法是仅在.NET Framework 2.0 中可用。  
+1. <xref:System.Windows.Forms.Clipboard.GetAudioStream%2A>使用、 <xref:System.Windows.Forms.Clipboard.GetFileDropList%2A>、 <xref:System.Windows.Forms.Clipboard.GetImage%2A>或方法。<xref:System.Windows.Forms.Clipboard.GetText%2A> (可选) 首先使用`Contains`相应的*格式*方法来确定是否有特定格式的数据。 这些方法仅在 .NET Framework 2.0 中提供。  
   
      [!code-csharp[System.Windows.Forms.Clipboard#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#2)]
      [!code-vb[System.Windows.Forms.Clipboard#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#2)]  
   
-### <a name="to-retrieve-data-from-the-clipboard-in-a-custom-format"></a>若要从自定义格式在剪贴板中检索数据  
+### <a name="to-retrieve-data-from-the-clipboard-in-a-custom-format"></a>以自定义格式从剪贴板检索数据  
   
-1. 使用<xref:System.Windows.Forms.Clipboard.GetData%2A>具有自定义格式名称的方法。 此方法是仅在.NET Framework 2.0 中可用。  
+1. 使用带有自定义格式名称的方法。<xref:System.Windows.Forms.Clipboard.GetData%2A> 此方法仅在 .NET Framework 2.0 中提供。  
   
-     此外可以使用具有预定义的格式名称<xref:System.Windows.Forms.Clipboard.SetData%2A>方法。 有关详细信息，请参阅 <xref:System.Windows.Forms.DataFormats>。  
+     还可以通过<xref:System.Windows.Forms.Clipboard.SetData%2A>方法使用预定义的格式名。 有关详细信息，请参阅 <xref:System.Windows.Forms.DataFormats> 。  
   
      [!code-csharp[System.Windows.Forms.Clipboard#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#3)]
      [!code-vb[System.Windows.Forms.Clipboard#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#3)]  
     [!code-csharp[System.Windows.Forms.Clipboard#100](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#100)]
     [!code-vb[System.Windows.Forms.Clipboard#100](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#100)]  
   
-### <a name="to-retrieve-data-from-the-clipboard-in-multiple-formats"></a>若要从多个格式在剪贴板中检索数据  
+### <a name="to-retrieve-data-from-the-clipboard-in-multiple-formats"></a>以多种格式从剪贴板检索数据  
   
-1. 使用 <xref:System.Windows.Forms.Clipboard.GetDataObject%2A> 方法。 必须使用此方法以从早于.NET Framework 2.0 版本在剪贴板中检索数据。  
+1. 使用 <xref:System.Windows.Forms.Clipboard.GetDataObject%2A> 方法。 必须使用此方法从剪贴板上检索早于 .NET Framework 2.0 的版本的数据。  
   
      [!code-csharp[System.Windows.Forms.Clipboard#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#4)]
      [!code-vb[System.Windows.Forms.Clipboard#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#4)]  

@@ -2,12 +2,12 @@
 title: 版本容错序列化技术示例
 ms.date: 03/30/2017
 ms.assetid: 2a183664-bfbf-4ff0-96f6-c836284ea916
-ms.openlocfilehash: 6c30c39848be02785b6b808ecf4af711c0c9e95d
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 317a47d46b839417e01eed9deca2459a96aaa201
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66482998"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69960777"
 ---
 # <a name="version-tolerant-serialization-technology-sample"></a>版本容错序列化技术示例
 [下载示例](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Runtime%20Serialization/VTS.zip.exe)  
@@ -18,11 +18,11 @@ ms.locfileid: "66482998"
   
 1. 打开命令提示窗口，然后定位到该示例的语言特定子目录（在 V1 Application 或 V2 Application 之下）之一。  
   
-2. 在命令行中键入“msbuild.exe \<ver> application.sln”（其中 \<ver> 为 v1 或 v2）。   
+2. 在命令行中键入“msbuild.exe \<ver> application.sln”（其中 \<ver> 为 v1 或 v2）。  
   
 ### <a name="to-build-the-sample-using-visual-studio"></a>使用 Visual Studio 生成示例  
   
-1. 打开文件资源管理器并导航到示例的特定于语言的子目录之一。  
+1. 打开文件资源管理器并导航到该示例的语言特定子目录之一。  
   
 2. 定位到您在上一步中选择的目录的 V1 Application 子目录。  
   
@@ -38,12 +38,12 @@ ms.locfileid: "66482998"
   
 1. 在命令提示窗口中，定位到您在生成示例应用程序时选择的语言特定的子目录。  
   
-2. 在命令行中键入“runme.cmd”，以同时运行这两个应用程序。   
+2. 在命令行中键入“runme.cmd”，以同时运行这两个应用程序。  
   
  或者，定位到包含新的可执行文件的目录，然后按顺序运行这些文件。  
   
 > [!NOTE]
->  此示例生成控制台应用程序。 必须在命令提示窗口中启动并运行这些应用程序，才能查看相应的输出。  
+> 此示例生成控制台应用程序。 必须在命令提示窗口中启动并运行这些应用程序，才能查看相应的输出。  
   
 ## <a name="see-also"></a>请参阅
 

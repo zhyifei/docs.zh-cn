@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 72bb7aa9-459b-42c4-9163-9312fab4c410
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6663b4875fc2c3698b612a4958140ba199ea2669
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: c27732de448e19c4227062706c7a7d73c98e5f19
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65631925"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966879"
 ---
 # <a name="enhancing-debugging-with-the-debugger-display-attributes"></a>使用调试器显示特性增强调试
 
-最了解且可指定类型运行时行为的类型开发人员还可以使用调试器显示属性指定类型在调试器中的显示外观。 此外，即使不了解源代码，用户也可将提供 `Target` 属性的调试器显示属性应用于程序集级别。 <xref:System.Diagnostics.DebuggerDisplayAttribute> 属性控制类型或成员在调试器变量窗口中的显示方式。 <xref:System.Diagnostics.DebuggerBrowsableAttribute> 属性决定是否在调试器变量窗口中显示字段或属性，若要显示，则决定其显示方式。 <xref:System.Diagnostics.DebuggerTypeProxyAttribute> 属性指定类型的替代类型或代理，并更改类型在调试器窗口中的显示方式。 查看具有代理或替代类型的变量时，代理将代替调试器显示窗口中的原始类型。 调试器变量窗口仅显示代理类型的公共成员。 不会显示私有成员。  
+最了解且可指定类型运行时行为的类型开发人员还可以使用调试器显示属性指定类型在调试器中的显示外观。 此外，即使不了解源代码，用户也可将提供 `Target` 属性的调试器显示属性应用于程序集级别。 <xref:System.Diagnostics.DebuggerDisplayAttribute> 属性控制类型或成员在调试器变量窗口中的显示方式。 <xref:System.Diagnostics.DebuggerBrowsableAttribute> 属性决定是否在调试器变量窗口中显示字段或属性，若要显示，则决定其显示方式。 <xref:System.Diagnostics.DebuggerTypeProxyAttribute> 属性指定类型的替代类型或代理，并更改类型在调试器窗口中的显示方式。 查看具有代理或替代类型的变量时, 代理将在调试器显示窗口中代表原始类型。 调试器变量窗口仅显示代理类型的公共成员。 不会显示私有成员。  
   
 ## <a name="using-the-debuggerdisplayattribute"></a>使用 DebuggerDisplayAttribute  
 
@@ -52,7 +52,7 @@ class MyHashtable
 - <xref:System.Diagnostics.DebuggerBrowsableState.RootHidden> 表示不显示成员本身，但如果成员是一个数组或集合，则会显示其组成对象。
 
 > [!NOTE]
->  在 .NET Framework 2.0 中，Visual Basic 不支持 <xref:System.Diagnostics.DebuggerBrowsableAttribute>。
+> 在 .NET Framework 2.0 中，Visual Basic 不支持 <xref:System.Diagnostics.DebuggerBrowsableAttribute>。
 
 以下代码示例显示如何使用 <xref:System.Diagnostics.DebuggerBrowsableAttribute> 防止其后面的属性出现在该类的调试窗口中。
 
@@ -97,7 +97,7 @@ class MyHashtable : Hashtable
 
 ### <a name="description"></a>描述
 
-可以在 Visual Studio 以查看应用的结果中查看下面的代码示例<xref:System.Diagnostics.DebuggerDisplayAttribute>， <xref:System.Diagnostics.DebuggerBrowsableAttribute>，和<xref:System.Diagnostics.DebuggerTypeProxyAttribute>属性。
+可在 Visual Studio 中查看下面的代码示例<xref:System.Diagnostics.DebuggerDisplayAttribute>, 以查看应用、 <xref:System.Diagnostics.DebuggerBrowsableAttribute>和<xref:System.Diagnostics.DebuggerTypeProxyAttribute>特性的结果。
 
 ### <a name="code"></a>代码
 

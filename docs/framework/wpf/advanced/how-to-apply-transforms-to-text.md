@@ -15,22 +15,22 @@ helpviewer_keywords:
 - scaled text [WPF]
 - typography [WPF], skewed text
 ms.assetid: 0d61678a-4185-4f2a-85c6-c1d020f96fa0
-ms.openlocfilehash: 46a57364e0c18cc4c9fe7884642cd0b718c20f31
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b749d21c1b5940d216e244393eeb3c133dc153b6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61776936"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956471"
 ---
 # <a name="how-to-apply-transforms-to-text"></a>如何：向文本应用转换
-应用变换可以改变应用程序中文本的显示。 下面的示例使用不同类型的呈现变换来影响中文本的显示<xref:System.Windows.Controls.TextBlock>控件。  
+应用变换可以改变应用程序中文本的显示。 下面的示例使用不同类型的呈现转换来影响<xref:System.Windows.Controls.TextBlock>控件中文本的显示。  
   
 ## <a name="example"></a>示例  
  下面的示例演示了在 x-y 二维平面中文本围绕一个特定点进行旋转。  
   
  ![使用 RotateTransform 旋转的文本](./media/how-to-apply-transforms-to-text/text-rotated-ninety-degrees.jpg)  
   
- 下面的代码示例使用<xref:System.Windows.Media.RotateTransform>来旋转文本。 <xref:System.Windows.Media.RotateTransform.Angle%2A>值为 90，则元素会顺时针旋转 90 度。  
+ 下面的代码示例使用<xref:System.Windows.Media.RotateTransform>来旋转文本。 <xref:System.Windows.Media.RotateTransform.Angle%2A>值90将顺时针旋转元素90度。  
   
  [!code-xaml[TextTransformSample#TextTransformSample1](~/samples/snippets/csharp/VS_Snippets_Wpf/TextTransformSample/CS/Window1.xaml#texttransformsample1)]  
   
@@ -38,18 +38,18 @@ ms.locfileid: "61776936"
   
  ![使用 ScaleTransform 缩放的文本](./media/how-to-apply-transforms-to-text/scaled-text-scaletransform.jpg) 
   
- 下面的代码示例使用<xref:System.Windows.Media.ScaleTransform>对文本从其原始大小进行缩放。  
+ 下面的代码示例使用<xref:System.Windows.Media.ScaleTransform>从文本的原始大小进行缩放。  
   
  [!code-xaml[TextTransformSample#TextTransformSample2](~/samples/snippets/csharp/VS_Snippets_Wpf/TextTransformSample/CS/Window1.xaml#texttransformsample2)]  
   
 > [!NOTE]
->  放大文本不同于增大文本字号。 字号的计算相互独立，以便针对不同字号提供最佳分辨率。 而缩放后的文本将按比例保持原始的文本大小。  
+> 放大文本不同于增大文本字号。 字号的计算相互独立，以便针对不同字号提供最佳分辨率。 而缩放后的文本将按比例保持原始的文本大小。  
   
  以下示例演示沿 X 轴倾斜的文本。  
   
  ![使用 SkewTransform 扭曲的文本](./media/how-to-apply-transforms-to-text/skewed-transformed-text.jpg)
    
- 下面的代码示例使用<xref:System.Windows.Media.SkewTransform>来扭曲文本。 扭曲（也称为倾斜）是一种以非均匀方式拉伸坐标空间的变换。 在本示例中，两个文本字符串沿 x 坐标扭曲了 -30° 和 30°。  
+ 下面的代码示例使用<xref:System.Windows.Media.SkewTransform>来倾斜文本。 扭曲（也称为倾斜）是一种以非均匀方式拉伸坐标空间的变换。 在本示例中，两个文本字符串沿 x 坐标扭曲了 -30° 和 30°。  
   
  [!code-xaml[TextTransformSample#TextTransformSample3](~/samples/snippets/csharp/VS_Snippets_Wpf/TextTransformSample/CS/Window1.xaml#texttransformsample3)]  
   
@@ -62,7 +62,7 @@ ms.locfileid: "61776936"
  [!code-xaml[TextTransformSample#TextTransformSample4](~/samples/snippets/csharp/VS_Snippets_Wpf/TextTransformSample/CS/Window1.xaml#texttransformsample4)]  
   
 > [!NOTE]
->  <xref:System.Windows.Media.Effects.DropShadowBitmapEffect>提供丰富的功能来产生阴影效果。 有关详细信息，请参阅[创建具有阴影的文本](how-to-create-text-with-a-shadow.md)。  
+> <xref:System.Windows.Media.Effects.DropShadowBitmapEffect>提供了一组丰富的功能, 用于提供阴影效果。 有关详细信息, 请参阅[使用阴影创建文本](how-to-create-text-with-a-shadow.md)。  
   
 ## <a name="see-also"></a>请参阅
 

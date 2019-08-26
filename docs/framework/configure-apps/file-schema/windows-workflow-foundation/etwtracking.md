@@ -3,20 +3,20 @@ title: <etwTracking>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: cb45c82e-6ea1-4c4d-924c-118a25ae1f35
-ms.openlocfilehash: e7614f158826e3522ac8e17d60c1ea65fefc8612
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 653693fef92072cb1e6e23234359b765f0f18fc9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790190"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940221"
 ---
 # <a name="etwtracking"></a>\<etwTracking>
-一种服务行为，允许服务来利用 ETW 跟踪使用<xref:System.Activities.Tracking.EtwTrackingParticipant>。  
+一种服务行为, 允许服务使用<xref:System.Activities.Tracking.EtwTrackingParticipant>来利用 ETW 跟踪。  
   
 \<system.ServiceModel>  
-\<behaviors>  
+\<行为 >  
 \<serviceBehaviors>  
-\<behavior>  
+\<行为 >  
 \<etwTracking>  
   
 ## <a name="syntax"></a>语法  
@@ -47,7 +47,7 @@ ms.locfileid: "61790190"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<行为 > 的\<serviceBehaviors >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/behavior-of-servicebehaviors-of-workflow.md)|指定行为元素。|  
+|[\<serviceBehaviors > 的\<行为 >](behavior-of-servicebehaviors-of-workflow.md)|指定行为元素。|  
   
 ## <a name="remarks"></a>备注  
  在添加到服务的行为配置后，此配置元素对工作流服务配置跟踪参与者。  
@@ -57,7 +57,7 @@ ms.locfileid: "61790190"
 ## <a name="example"></a>示例  
  下面的配置示例演示在 Web.config 文件中配置的标准 ETW 跟踪参与者。  
   
- 中定义 ETW 跟踪参与者使用跟踪记录写入 ETW 的提供程序 Id **\<诊断 >** 部分。 跟踪参与者具有一个与其关联的配置文件，用来指定跟踪参与者已订阅的跟踪记录。 这由 **profileName** 的属性 **\<添加>** 元素。 这些定义后，跟踪参与者添加到 **\<etwTracking >** 服务行为。 这会将所选跟踪参与者添加到工作流实例的扩展中，以便它们开始接收跟踪记录。  
+ Etw 跟踪参与者用于将跟踪记录写入 etw 的提供程序 Id 在 "  **\<诊断 >** " 部分中定义。 跟踪参与者具有一个与其关联的配置文件，用来指定跟踪参与者已订阅的跟踪记录。 这由 **profileName** 的属性 **\<添加>** 元素。 定义这些后, 跟踪参与者将添加到 **\<etwTracking >** 服务行为。 这会将所选跟踪参与者添加到工作流实例的扩展中，以便它们开始接收跟踪记录。  
   
 ```xml  
 <configuration>   
@@ -88,5 +88,5 @@ ms.locfileid: "61790190"
 
 - <xref:System.ServiceModel.Activities.Description.EtwTrackingBehavior>
 - <xref:System.ServiceModel.Activities.Configuration.EtwTrackingBehaviorElement>
-- [工作流跟踪](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [跟踪参与者](../../../../../docs/framework/windows-workflow-foundation/tracking-participants.md)
+- [工作流跟踪](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [跟踪参与者](../../../windows-workflow-foundation/tracking-participants.md)

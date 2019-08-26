@@ -1,30 +1,30 @@
 ---
-title: 保持 Visual Studio (Visual Basic 中) 中对象
+title: 在 Visual Studio 中保持对象 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: f1d0b562-e349-4dce-ab5f-c05108467030
-ms.openlocfilehash: 3e1ae81b2871899e6efc4be4dfc7c62ed45a133a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6f25c2a6f06b56dcbb5ba7e63165d06ff77d9ca8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624343"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937365"
 ---
-# <a name="walkthrough-persisting-an-object-in-visual-studio-visual-basic"></a>演练：保持 Visual Studio (Visual Basic 中) 中对象
+# <a name="walkthrough-persisting-an-object-in-visual-studio-visual-basic"></a>演练：在 Visual Studio 中保持对象 (Visual Basic)
 虽然可在设计时将对象的属性设置为默认值，但销毁对象时，运行时输入的任何值都将丢失。 可使用序列化在实例之间保持对象的数据，以便可存储值并在下次实例化对象时检索这些值。  
   
 > [!NOTE]
->  在 Visual Basic 中，要存储简单数据（如名称或编号），可以使用 `My.Settings` 对象。 有关详细信息，请参阅 [My.Settings 对象](../../../../visual-basic/language-reference/objects/my-settings-object.md)。  
+> 在 Visual Basic 中，要存储简单数据（如名称或编号），可以使用 `My.Settings` 对象。 有关详细信息，请参阅 [My.Settings 对象](../../../../visual-basic/language-reference/objects/my-settings-object.md)。  
   
  本演练将创建一个简单的 `Loan` 对象，并将其值保留在文件中。 当重新创建该对象时，将检索文件中的数据。  
   
 > [!IMPORTANT]
->  此示例在文件尚未存在时创建新文件。 如果应用程序必须创建文件，则该应用程序必须对文件夹具有 `Create` 权限。 可使用访问控制列表设置权限。 如果文件已存在，则该应用程序只需要 `Write` 权限（这是较弱的权限）。 如有可能，较安全的做法是在部署过程中创建文件并仅向单个文件授予 `Read` 权限（而不是授予文件夹的“创建”权限）。 此外，较安全的做法是将数据写入用户文件夹，而不是根文件夹或“Program Files”文件夹。  
+> 此示例在文件尚未存在时创建新文件。 如果应用程序必须创建文件，则该应用程序必须对文件夹具有 `Create` 权限。 可使用访问控制列表设置权限。 如果文件已存在，则该应用程序只需要 `Write` 权限（这是较弱的权限）。 如有可能，较安全的做法是在部署过程中创建文件并仅向单个文件授予 `Read` 权限（而不是授予文件夹的“创建”权限）。 此外，较安全的做法是将数据写入用户文件夹，而不是根文件夹或“Program Files”文件夹。  
   
 > [!IMPORTANT]
->  此示例将数据存储为二进制格式。 不应将这些格式用于敏感数据，如密码或信用卡信息。  
+> 此示例将数据存储为二进制格式。 不应将这些格式用于敏感数据，如密码或信用卡信息。  
   
 > [!NOTE]
->  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请单击 **“工具”** 菜单上的 **“导入和导出设置”** 。 有关详细信息，请参阅[个性化设置 Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide)。  
+> 显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请单击 **“工具”** 菜单上的 **“导入和导出设置”** 。 有关详细信息，请参阅[个性化设置 Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide)。  
   
 ## <a name="creating-the-loan-object"></a>创建 Loan 对象  
  第一步是创建 `Loan` 类和使用该类的测试应用程序。  
@@ -85,7 +85,7 @@ ms.locfileid: "64624343"
   
 4. 在“项目”菜单上，选择“设为启动项目”。  
   
-5. 在“项目”菜单上，选择“添加引用” 。  
+5. 在“项目”菜单上，选择“添加引用”。  
   
 6. 在“添加引用”对话框中，选择“项目”选项卡，然后选择 LoanClass 项目。  
   

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - jagged arrays [C#]
 - arrays [C#], jagged
 ms.assetid: 537c65a6-0e0a-4a00-a2b8-086f38519c70
-ms.openlocfilehash: 9fc05c8bdebf9c1c6b613db0b6a121e06765ac00
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 8d1be351e3aabea44138323d04c922dd1cccb78a
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57200671"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69597337"
 ---
 # <a name="jagged-arrays-c-programming-guide"></a>交错数组（C# 编程指南）
 
@@ -45,7 +45,7 @@ ms.locfileid: "57200671"
   
  [!code-csharp[csProgGuideArrays#24](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#24)]  
   
- 可以混合使用交错数组和多维数组。 下面声明和初始化一个包含大小不同的三个二维数组元素的一维交错数组。 有关二维数组的详细信息，请参阅[多维数组](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)。  
+ 可以混合使用交错数组和多维数组。 下面声明和初始化一个包含大小不同的三个二维数组元素的一维交错数组。 有关二维数组的详细信息，请参阅[多维数组](./multidimensional-arrays.md)。  
   
  [!code-csharp[csProgGuideArrays#25](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#25)]  
   
@@ -68,7 +68,7 @@ ms.locfileid: "57200671"
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Array>
-- [C# 编程指南](../../../csharp/programming-guide/index.md)
-- [数组](../../../csharp/programming-guide/arrays/index.md)
-- [一维数组](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md)
-- [多维数组](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)
+- [C# 编程指南](../index.md)
+- [数组](./index.md)
+- [一维数组](./single-dimensional-arrays.md)
+- [多维数组](./multidimensional-arrays.md)

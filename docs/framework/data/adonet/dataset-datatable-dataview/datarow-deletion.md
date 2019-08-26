@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c34f531d-4b9b-4071-b2d7-342c402aa586
-ms.openlocfilehash: 57f51ada00bf24617ca3e295a010aae64f0aa849
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7c80294c4bc879e6a1df4c9d1170eef14b8b83de
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879861"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69915811"
 ---
 # <a name="datarow-deletion"></a>DataRow 删除
-有两种方法可用于删除<xref:System.Data.DataRow>对象从<xref:System.Data.DataTable>对象：**删除**方法<xref:System.Data.DataRowCollection>对象，和<xref:System.Data.DataRow.Delete%2A>方法**DataRow**对象。 而<xref:System.Data.DataRowCollection.Remove%2A>方法删除**DataRow**从**DataRowCollection**，则<xref:System.Data.DataRow.Delete%2A>方法仅将标记为删除的行。 当应用程序调用时，会发生实际移除**AcceptChanges**方法。 通过使用 <xref:System.Data.DataRow.Delete%2A>，您可以在实际删除行之前，先以编程方式来检查哪些行已标记为删除。 如果将行标记为删除，则该行的 <xref:System.Data.DataRow.RowState%2A> 属性会设置为 <xref:System.Data.DataRow.Delete%2A>。  
+可以使用两种方法<xref:System.Data.DataRow> <xref:System.Data.DataTable>从对象中删除对象: <xref:System.Data.DataRowCollection>对象的**Remove** <xref:System.Data.DataRow.Delete%2A>方法和**DataRow**对象的方法。 此方法从**DataRowCollection**中删除**DataRow** , 而方法仅<xref:System.Data.DataRow.Delete%2A>将行标记为要删除。 <xref:System.Data.DataRowCollection.Remove%2A> 当应用程序调用**AcceptChanges**方法时, 将发生实际的删除。 通过使用 <xref:System.Data.DataRow.Delete%2A>，您可以在实际删除行之前，先以编程方式来检查哪些行已标记为删除。 如果将行标记为删除，则该行的 <xref:System.Data.DataRow.RowState%2A> 属性会设置为 <xref:System.Data.DataRow.Delete%2A>。  
   
  在 foreach 循环中，不会调用 <xref:System.Data.DataRow.Delete%2A> 和 <xref:System.Data.DataRowCollection.Remove%2A>，而是循环访问 <xref:System.Data.DataRowCollection> 对象。 <xref:System.Data.DataRow.Delete%2A> 和 <xref:System.Data.DataRowCollection.Remove%2A> 不会修改该集合的状态。  
   
- 使用时<xref:System.Data.DataSet>或**DataTable**结合**DataAdapter**和关系数据源，使用**删除**方法的**DataRow**以删除的行。 **删除**方法将行标记为**Deleted**中**数据集**或者**DataTable**但不会删除它。 相反，当**DataAdapter**遇到标记为行**已删除**，它将执行其**DeleteCommand**方法来删除数据源处的行。 行随后便会永久删除使用**AcceptChanges**方法。 如果您使用**删除**若要删除的行，该行是完全从表中删除，但**DataAdapter**不会删除数据源处的行。  
+ <xref:System.Data.DataSet>当将或**DataTable**与**DataAdapter**和关系数据源结合使用时, 请使用**DataRow**的**Delete**方法删除该行。 **Delete**方法会将该行标记为**已**在**DataSet**或**DataTable**中删除, 但不会将其删除。 相反, 当**DataAdapter**遇到标记为**已删除**的行时, 它将执行其**DeleteCommand**方法以删除数据源中的行。 然后, 可以使用**AcceptChanges**方法永久删除该行。 如果使用 "**删除**" 来删除该行, 则会完全从表中删除行, 但**DataAdapter**不会删除数据源中的行。  
   
- **删除**方法**DataRowCollection**采用**DataRow**作为自变量并将其从集合中，删除，如下面的示例中所示。  
+ **DataRowCollection**的**Remove**方法采用**DataRow**作为参数, 并将其从集合中移除, 如下例所示。  
   
 ```vb  
 workTable.Rows.Remove(workRow)  
@@ -29,7 +29,7 @@ workTable.Rows.Remove(workRow)
 workTable.Rows.Remove(workRow);  
 ```  
   
- 与此相反，下面的示例演示如何调用**删除**方法**DataRow**若要更改其**RowState**到**Deleted**.  
+ 与此相反, 下面的示例演示如何对**DataRow**调用**Delete**方法, 以将其**RowState**更改为 "**已删除**"。  
   
 ```vb  
 workRow.Delete  
@@ -39,10 +39,10 @@ workRow.Delete
 workRow.Delete();  
 ```  
   
- 如果将行标记为待删除，并且调用**AcceptChanges**方法**DataTable**对象，从删除行**DataTable**。 相反，如果您调用**RejectChanges**，则**RowState**的行的将恢复为标记为前**Deleted**。  
+ 如果将某行标记为删除, 并且调用**datatable**对象的**AcceptChanges**方法, 则将从**datatable**中删除该行。 与此相反, 如果调用**RejectChanges**, 则行的**RowState**会恢复为标记为**已删除**之前的内容。  
   
 > [!NOTE]
->  如果**RowState**的**DataRow**是**Added**，这意味着它只是已添加到表中，然后将其标记为**Deleted**，它是从表中删除。  
+> 如果**添加**了**DataRow**的**RowState** , 这意味着它刚刚添加到表中, 然后将其标记为**已删除**, 则会将其从表中删除。  
   
 ## <a name="see-also"></a>请参阅
 

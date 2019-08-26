@@ -17,12 +17,12 @@ helpviewer_keywords:
 - minimum freshness policy
 - age of cached resources
 ms.assetid: 74f0bcaf-5c95-40c1-9967-f3bbf1d2360a
-ms.openlocfilehash: 4dc57ae05822a602b4647839da259ca8f469fb82
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1b3e39deca8b483413d2a2c42dbacbf821b3e42e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613836"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69942375"
 ---
 # <a name="time-based-cache-policies"></a>基于时间的缓存策略
 基于时间的缓存策略使用检索资源的时间、随资源返回的标头和当前时间来定义缓存条目的新鲜度。 设置基于时间的缓存策略时，可使用 <xref:System.Net.Cache.HttpRequestCacheLevel.Default> 基于时间的策略，也可创建自定义的基于时间的策略。 当对使用超文本传输协议 (HTTP) 获得的资源使用默认的基于时间的策略时，由缓存响应中包含的标头以及 RFC 2616 第 13 和 14 节（可在 [Internet 工程任务组 (IETF)](https://www.ietf.org/) 网站上找到）中指定的行为来确定精确的缓存行为。 如需深入了解如何为 HTTP 资源设置默认基于时间的策略的代码示例，请参阅[如何：为应用程序设置默认基于时间的缓存策略](../../../docs/framework/network-programming/how-to-set-the-default-time-based-cache-policy-for-an-application.md)。 有关演示如何创建和使用缓存策略的代码示例，请参阅[在网络应用程序中配置缓存](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)。  
@@ -39,7 +39,7 @@ ms.locfileid: "64613836"
 - 缓存同步日期  
   
 > [!NOTE]
->  使用默认的基于时间的缓存策略不应与设置应用程序的默认缓存策略混淆。 默认的基于时间的策略是可在请求级别或应用程序级别使用的特定策略。 应用程序的默认缓存策略是当未在请求中设置任何策略时生效的策略（基于位置或基于时间）。 有关为应用程序设置默认缓存策略的详细信息，请参阅 <xref:System.Net.WebRequest.DefaultCachePolicy%2A>。  
+> 使用默认的基于时间的缓存策略不应与设置应用程序的默认缓存策略混淆。 默认的基于时间的策略是可在请求级别或应用程序级别使用的特定策略。 应用程序的默认缓存策略是当未在请求中设置任何策略时生效的策略（基于位置或基于时间）。 有关为应用程序设置默认缓存策略的详细信息，请参阅 <xref:System.Net.WebRequest.DefaultCachePolicy%2A>。  
   
 ### <a name="maximum-age"></a>最长使用时间  
  最长使用时间策略条件指定资源的缓存副本可使用的时间。 如果资源的缓存副本超过指定的时间，则必须根据服务器上的内容进行检查，重新验证该资源。 如果最长使用时间允许在资源过期后使用资源，则不符合此条件，除非还指定了最长过期时间值。  

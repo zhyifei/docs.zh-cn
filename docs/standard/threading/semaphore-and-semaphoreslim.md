@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7722a333-b974-47a2-a7c0-f09097fb644e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f20ae0b712a5db5cdfb6d5f6a3786af151820294
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 25121ea2b089df49efa77dcf363e2a0e400b3bff
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54550482"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968425"
 ---
 # <a name="semaphore-and-semaphoreslim"></a>Semaphore 和 SemaphoreSlim
 <xref:System.Threading.Semaphore?displayProperty=nameWithType> 类表示一个命名（系统范围内）或本地信号量。 它是环绕 Win32 信号量对象的精简包装器。 Win32 信号量是计数信号量，该可用于控制对资源池的访问。  
@@ -40,7 +40,7 @@ ms.locfileid: "54550482"
  你可以通过使用指定了名称的构造函数之一来创建表示指定了已命名系统信号量的 <xref:System.Threading.Semaphore> 对象。  
   
 > [!NOTE]
->  因为命名信号量是系统范围的，所以它可能有多个 <xref:System.Threading.Semaphore> 对象，这些对象表示同一命名信号量。 每次调用构造函数或 <xref:System.Threading.Semaphore.OpenExisting%2A?displayProperty=nameWithType> 方法都会创建一个新的 <xref:System.Threading.Semaphore> 对象。 反复指定相同的名称会创建多个表示同一命名信号量的对象。  
+> 因为命名信号量是系统范围的，所以它可能有多个 <xref:System.Threading.Semaphore> 对象，这些对象表示同一命名信号量。 每次调用构造函数或 <xref:System.Threading.Semaphore.OpenExisting%2A?displayProperty=nameWithType> 方法都会创建一个新的 <xref:System.Threading.Semaphore> 对象。 反复指定相同的名称会创建多个表示同一命名信号量的对象。  
   
  使用命名信号量时务必谨慎。 因为它们是系统范围的，使用同一名称的另一进程可能会意外地进入你的信号量。 同一台计算机上的恶意代码执行可将此作为拒绝服务攻击的基础。  
   

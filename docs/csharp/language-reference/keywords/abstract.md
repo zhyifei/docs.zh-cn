@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - abstract keyword [C#]
 ms.assetid: b0797770-c1f3-4b4d-9441-b9122602a6bb
-ms.openlocfilehash: 3a4d29ae4814ccceb7b405d9c1749150059a24a0
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: 547ecd9ff823f61bf3995c02959235b65a4a3979
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67859594"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606144"
 ---
 # <a name="abstract-c-reference"></a>abstract（C# 参考）
 `abstract` 修饰符指示被修改内容的实现已丢失或不完整。 abstract 修饰符可用于类、方法、属性、索引和事件。 在类声明中使用 `abstract` 修饰符来指示某个类仅用作其他类的基类，而不用于自行进行实例化。 标记为抽象的成员必须由派生自抽象类的非抽象类来实现。
@@ -29,7 +29,7 @@ ms.locfileid: "67859594"
   
 - 抽象类可能包含抽象方法和访问器。  
   
-- 无法使用 [sealed](../../../csharp/language-reference/keywords/sealed.md) 修饰符来修改抽象类，因为两个修饰符的含义相反。 `sealed` 修饰符阻止类被继承，而 `abstract` 修饰符要求类被继承。  
+- 无法使用 [sealed](./sealed.md) 修饰符来修改抽象类，因为两个修饰符的含义相反。 `sealed` 修饰符阻止类被继承，而 `abstract` 修饰符要求类被继承。  
   
 - 派生自抽象类的非抽象类，必须包含全部已继承的抽象方法和访问器的实际实现。  
   
@@ -47,17 +47,17 @@ ms.locfileid: "67859594"
     public abstract void MyMethod();  
     ```  
   
-     实现由方法 [override](../../../csharp/language-reference/keywords/override.md) 提供，它是非抽象类的成员。  
+     实现由方法 [override](./override.md) 提供，它是非抽象类的成员。  
   
-- 在抽象方法声明中使用 [static](../../../csharp/language-reference/keywords/static.md) 或 [virtual](../../../csharp/language-reference/keywords/virtual.md) 修饰符是错误的。  
+- 在抽象方法声明中使用 [static](./static.md) 或 [virtual](./virtual.md) 修饰符是错误的。  
   
  除了声明和调用语法方面不同外，抽象属性的行为与抽象方法相似。  
   
 - 在静态属性上使用 `abstract` 修饰符是错误的。  
   
-- 通过包含使用 [override](../../../csharp/language-reference/keywords/override.md) 修饰符的属性声明，可在派生类中重写抽象继承属性。  
+- 通过包含使用 [override](./override.md) 修饰符的属性声明，可在派生类中重写抽象继承属性。  
   
- 有关抽象类的详细信息，请参阅[抽象类、密封类及类成员](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)。  
+ 有关抽象类的详细信息，请参阅[抽象类、密封类及类成员](../../programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)。  
   
  抽象类必须为所有接口成员提供实现。  
   
@@ -83,9 +83,9 @@ BaseClass bc = new BaseClass();   // Error
   
 ## <a name="see-also"></a>请参阅
 
-- [C# 参考](../../../csharp/language-reference/index.md)
-- [C# 编程指南](../../../csharp/programming-guide/index.md)
-- [修饰符](../../../csharp/language-reference/keywords/modifiers.md)
-- [virtual](../../../csharp/language-reference/keywords/virtual.md)
-- [override](../../../csharp/language-reference/keywords/override.md)
-- [C# 关键字](../../../csharp/language-reference/keywords/index.md)
+- [C# 参考](../index.md)
+- [C# 编程指南](../../programming-guide/index.md)
+- [修饰符](./modifiers.md)
+- [virtual](./virtual.md)
+- [override](./override.md)
+- [C# 关键字](./index.md)

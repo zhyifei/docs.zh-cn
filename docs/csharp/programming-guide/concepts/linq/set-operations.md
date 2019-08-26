@@ -2,12 +2,12 @@
 title: 集运算 (C#)
 ms.date: 07/20/2015
 ms.assetid: 7c589367-ef8f-4161-9050-642c47e6bf63
-ms.openlocfilehash: 9e507bbaa39bf040a8ce1564630fb5fbb8c0dbe4
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: cea0c0ba4dd6c7f874f69e3ec4a179248397b67d
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58408907"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69591113"
 ---
 # <a name="set-operations-c"></a>集运算 (C#)
 LINQ 中的集运算是指根据相同或不同集合（或集）中是否存在等效元素来生成结果集的查询运算。  
@@ -47,6 +47,6 @@ LINQ 中的集运算是指根据相同或不同集合（或集）中是否存在
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Linq>
-- [标准查询运算符概述 (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [如何：组合和比较字符串集合 (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)
-- [如何：查找两个列表之间的差集 (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-the-set-difference-between-two-lists-linq.md)
+- [标准查询运算符概述 (C#)](./standard-query-operators-overview.md)
+- [如何：组合和比较字符串集合 (LINQ) (C#)](./how-to-combine-and-compare-string-collections-linq.md)
+- [如何：查找两个列表之间的差集 (LINQ) (C#)](./how-to-find-the-set-difference-between-two-lists-linq.md)

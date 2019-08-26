@@ -2,12 +2,12 @@
 title: SQL Server 中的服务器和数据库角色
 ms.date: 03/30/2017
 ms.assetid: 5482dfdb-e498-4614-8652-b174829eed13
-ms.openlocfilehash: e2d0de08f23bc3767e11de31c4ded4a326d060a9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 97ad04b1d081e5635104bdadb2d1a54402ffcca2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61645963"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69961112"
 ---
 # <a name="server-and-database-roles-in-sql-server"></a>SQL Server 中的服务器和数据库角色
 所有版本的 SQL Server 均使用基于角色的安全，它允许您为角色、用户组而不是各个用户分配权限。 固定服务器和固定数据库角色具有分配给它们的一组固定的权限。  
@@ -16,9 +16,9 @@ ms.locfileid: "61645963"
  固定服务器角色具有一组固定的权限，并且适用于整个服务器范围。 它们专门用于管理 SQL Server，且不能更改分配给它们的权限。 可以在数据库中不存在用户帐户的情况下向固定服务器角色分配登录。  
   
 > [!IMPORTANT]
->  `sysadmin` 固定服务器角色包含所有其他角色并且具有无限范围。 请不要将这些主体添加到此角色，除非它们是高度信任的。 `sysadmin` 角色成员对所有服务器数据库和资源有不可撤消的管理特权。  
+> `sysadmin` 固定服务器角色包含所有其他角色并且具有无限范围。 请不要将这些主体添加到此角色，除非它们是高度信任的。 `sysadmin` 角色成员对所有服务器数据库和资源有不可撤消的管理特权。  
   
- 将用户添加到固定服务器角色时，请仔细选择。 例如，`bulkadmin` 角色允许用户将任意本地文件的内容插入表中，这样可能会损坏数据的完整性。 固定的服务器角色和权限的完整列表，请参阅 SQL Server 联机丛书。  
+ 将用户添加到固定服务器角色时，请仔细选择。 例如，`bulkadmin` 角色允许用户将任意本地文件的内容插入表中，这样可能会损坏数据的完整性。 有关固定服务器角色和权限的完整列表, 请参阅 SQL Server 联机丛书。  
   
 ## <a name="fixed-database-roles"></a>固定数据库角色  
  固定数据库角色具有一组预定义的权限，这些权限旨在允许您轻松管理权限组。 `db_owner` 角色的成员可对数据库执行所有配置和维护活动。  
@@ -27,8 +27,8 @@ ms.locfileid: "61645963"
   
 |资源|描述|  
 |--------------|-----------------|  
-|[服务器级别角色](/sql/relational-databases/security/authentication-access/server-level-roles)|介绍了固定的服务器角色和 SQL Server 中与之关联的权限。|  
-|[数据库级别角色](/sql/relational-databases/security/authentication-access/database-level-roles)|描述固定数据库角色及与其关联的权限|  
+|[服务器级别角色](/sql/relational-databases/security/authentication-access/server-level-roles)|描述固定服务器角色以及与 SQL Server 相关联的权限。|  
+|[数据库级角色](/sql/relational-databases/security/authentication-access/database-level-roles)|描述固定数据库角色及与其关联的权限|  
   
 ## <a name="database-roles-and-users"></a>数据库角色和用户  
  要使用数据库对象，必须将登录映射到数据库用户帐户。 这样就可以将数据库用户添加到数据库角色，从而继承与这些角色关联的任何权限集。 可以授予所有权限。  
@@ -42,7 +42,7 @@ ms.locfileid: "61645963"
  `dbo` 或数据库所有者是具有在数据库中执行所有活动的默示权限的用户帐户。 `sysadmin` 固定服务器角色的成员会自动映射到 `dbo`。  
   
 > [!NOTE]
->  `dbo` 也是在架构的名称，如中所述[所有权和 SQL Server 中的用户架构分离](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)。  
+> `dbo`也是架构的名称, 如[SQL Server 中的所有权和用户架构分离](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)中所述。  
   
  `dbo` 用户帐户经常与 `db_owner` 固定数据库角色相混淆。 `db_owner` 的作用域是一个数据库；`sysadmin` 的作用域是整个服务器。 `db_owner` 角色中的成员无法授予 `dbo` 用户特权。  
   
@@ -52,14 +52,14 @@ ms.locfileid: "61645963"
  在所有版本的 SQL Server 中，`guest` 帐户均为内置帐户。 默认情况下，它在新的数据库中是禁用的。 如果启用此帐户，则可以通过撤消其 CONNECT 权限（方法是执行 Transact-SQL REVOKE CONNECT FROM GUEST 语句）来禁用此帐户。  
   
 > [!IMPORTANT]
->  避免使用 `guest` 帐户；没有其自己的数据库权限的所有登录都会获取授予此帐户的数据库权限。 如果必须使用 `guest` 帐户，请为其授予最小权限。  
+> 避免使用 `guest` 帐户；没有其自己的数据库权限的所有登录都会获取授予此帐户的数据库权限。 如果必须使用 `guest` 帐户，请为其授予最小权限。  
   
  有关 SQL Server 登录名、用户和角色的更多信息，请参阅以下资源。  
   
 |资源|描述|  
 |--------------|-----------------|  
-|[数据库引擎权限入门](/sql/relational-databases/security/authentication-access/getting-started-with-database-engine-permissions)|包含指向描述主体、角色、凭据、安全对象和权限的主题的链接。|  
-|[主体](/sql/relational-databases/security/authentication-access/principals-database-engine)|描述主体并包含指向描述服务器和数据库角色的主题的链接。|  
+|[具有数据库引擎权限的入门](/sql/relational-databases/security/authentication-access/getting-started-with-database-engine-permissions)|包含指向描述主体、角色、凭据、安全对象和权限的主题的链接。|  
+|[措施](/sql/relational-databases/security/authentication-access/principals-database-engine)|描述主体并包含指向描述服务器和数据库角色的主题的链接。|  
   
 ## <a name="see-also"></a>请参阅
 

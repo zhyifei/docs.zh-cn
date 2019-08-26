@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: a2ca532d-91f7-426a-9303-417c2ee1247c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 995aeca60d462c96f951411aff9fcb2c772169d1
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 47d6fe1d4c99adaf3313c87e0b3411049e3b2452
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489650"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933638"
 ---
 # <a name="net-framework-tools"></a>.NET Framework 工具
 您可以使用 .NET Framework 工具轻松创建、部署和管理面向 .NET Framework 的应用程序和组件。  
@@ -26,7 +26,7 @@ ms.locfileid: "66489650"
  运行命令行工具的最佳方法是使用 Visual Studio 的开发人员命令提示。 您可以使用这些实用程序轻松运行工具，而不需要导航到安装文件夹。 有关详细信息，请参阅[命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。  
   
 > [!NOTE]
->  某些工具特定于 32 位或 64 位计算机。 确保为你的计算机运行适当的工具版本。  
+> 某些工具特定于 32 位或 64 位计算机。 确保为你的计算机运行适当的工具版本。  
   
 ## <a name="in-this-section"></a>本节内容  
  [Al.exe（程序集链接器）](../../../docs/framework/tools/al-exe-assembly-linker.md)  

@@ -11,41 +11,41 @@ helpviewer_keywords:
 - CurrencyManager class [Windows Forms], navigating Windows Forms data
 - data [Windows Forms], navigating
 ms.assetid: 97360f7b-b181-4084-966a-4c62518f735b
-ms.openlocfilehash: 452aacab4580a3b07168daa6b7c03740dc98620b
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: eb973497f51592b5d34c22e62da77612aec23c35
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583740"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964275"
 ---
 # <a name="how-to-navigate-data-in-windows-forms"></a>如何：在 Windows 窗体中导航数据
-在 Windows 应用程序中，浏览数据源中的记录的最简单方法是将绑定<xref:System.Windows.Forms.BindingSource>到数据源，然后将控件绑定到组件<xref:System.Windows.Forms.BindingSource>。 您然后可以使用内置的导航方法上<xref:System.Windows.Forms.BindingSource>此类<xref:System.Windows.Forms.BindingSource.MoveNext%2A>， <xref:System.Windows.Forms.BindingSource.MoveLast%2A>，<xref:System.Windows.Forms.BindingSource.MovePrevious%2A>和<xref:System.Windows.Forms.BindingSource.MoveFirst%2A>。 使用这些方法将调整<xref:System.Windows.Forms.BindingSource.Position%2A>并<xref:System.Windows.Forms.BindingSource.Current%2A>的属性<xref:System.Windows.Forms.BindingSource>适当。 此外可以查找某个项，并将其设置为当前项，通过设置<xref:System.Windows.Forms.BindingSource.Position%2A>属性。  
+在 Windows 应用程序中, 在数据源中导航记录的最简单方法是将<xref:System.Windows.Forms.BindingSource>组件绑定到数据源, 然后将控件绑定<xref:System.Windows.Forms.BindingSource>到。 然后<xref:System.Windows.Forms.BindingSource> <xref:System.Windows.Forms.BindingSource.MoveNext%2A>, 你可以在、 <xref:System.Windows.Forms.BindingSource.MoveLast%2A> <xref:System.Windows.Forms.BindingSource.MovePrevious%2A>和上使用内置的导航方法。<xref:System.Windows.Forms.BindingSource.MoveFirst%2A> 使用这些方法会<xref:System.Windows.Forms.BindingSource.Position%2A> <xref:System.Windows.Forms.BindingSource>正确地调整<xref:System.Windows.Forms.BindingSource.Current%2A>和属性。 还可以通过设置<xref:System.Windows.Forms.BindingSource.Position%2A>属性来查找项并将其设置为当前项。  
   
-### <a name="to-increment-the-position-in-a-data-source"></a>要递增的数据源中的位置  
+### <a name="to-increment-the-position-in-a-data-source"></a>递增数据源中的位置  
   
-1. 设置<xref:System.Windows.Forms.BindingSource.Position%2A>属性的<xref:System.Windows.Forms.BindingSource>绑定到的记录的位置转到数据。 下面的示例演示如何使用<xref:System.Windows.Forms.BindingSource.MoveNext%2A>方法<xref:System.Windows.Forms.BindingSource>递增<xref:System.Windows.Forms.BindingSource.Position%2A>属性时`nextButton`单击。 <xref:System.Windows.Forms.BindingSource>与相关联`Customers`数据集的表`Northwind`。  
+1. 将绑定数据的的<xref:System.Windows.Forms.BindingSource> 属性设置为要定位到的记录位置。<xref:System.Windows.Forms.BindingSource.Position%2A> <xref:System.Windows.Forms.BindingSource.MoveNext%2A>下面的示例演示<xref:System.Windows.Forms.BindingSource>如何使用的方法在单击时`nextButton`递增<xref:System.Windows.Forms.BindingSource.Position%2A>属性。 <xref:System.Windows.Forms.BindingSource>与dataset 的`Northwind`表相关联。 `Customers`  
   
     > [!NOTE]
-    >  设置<xref:System.Windows.Forms.BindingSource.Position%2A>因为.NET Framework 将允许你将位置设置为的值超出了列表的界限，属性的第一个或最后一个记录之外的值不会导致出现错误。 如果是十分重要的应用程序以了解是否已在第一个或最后一条记录，，包括逻辑来测试是否将超过数据元素计数。  
+    > <xref:System.Windows.Forms.BindingSource.Position%2A>将属性设置为超出第一条或最后一条记录的值不会导致错误, 因为 .NET Framework 不允许将位置设置为列表边界以外的值。 如果你的应用程序中有必要了解你是否已超出第一条或最后一条记录, 请包括用于测试是否会超出数据元素计数的逻辑。  
   
      [!code-csharp[System.Windows.Forms.NavigatingData#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/CS/Form1.cs#4)]
      [!code-vb[System.Windows.Forms.NavigatingData#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/VB/Form1.vb#4)]  
   
-### <a name="to-check-whether-you-have-passed-the-end-or-beginning"></a>若要检查是否已通过的末尾或开头  
+### <a name="to-check-whether-you-have-passed-the-end-or-beginning"></a>检查是否已通过结尾或开头  
   
-1. 为 <xref:System.Windows.Forms.BindingSource.PositionChanged> 事件创建一个事件处理程序。 在处理程序中，你可以测试是否提议的职位值已超出实际数据元素计数。  
+1. 为 <xref:System.Windows.Forms.BindingSource.PositionChanged> 事件创建一个事件处理程序。 在处理程序中, 你可以测试建议的位置值是否超过了实际的数据元素计数。  
   
-     下面的示例说明了如何测试是否已到达最后一个数据元素。 在示例中，如果对象在最后一个元素，**下一步**窗体上的按钮处于禁用状态。  
+     下面的示例演示如何测试是否已到达最后一个数据元素。 在此示例中, 如果您位于最后一个元素, 则窗体上的 "**下一步**" 按钮处于禁用状态。  
   
     > [!NOTE]
-    >  请注意，您应更改在代码中导航的列表，则应重新启用**下一步**按钮，以便用户可以浏览新列表的整个长度。 另外，请注意，上述<xref:System.Windows.Forms.BindingSource.PositionChanged>事件的特定<xref:System.Windows.Forms.BindingSource>你正在使用需要是其事件处理方法关联。 下面是用于处理方法的示例<xref:System.Windows.Forms.BindingSource.PositionChanged>事件：  
+    > 请注意, 如果您在代码中导航列表, 应重新启用 "**下一步**" 按钮, 以便用户可以浏览新列表的整个长度。 此外, 请注意<xref:System.Windows.Forms.BindingSource.PositionChanged> , 所使用的特定<xref:System.Windows.Forms.BindingSource>的事件需要与其事件处理方法关联。 下面是用于处理<xref:System.Windows.Forms.BindingSource.PositionChanged>事件的方法的示例:  
   
      [!code-csharp[System.Windows.Forms.NavigatingData#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.NavigatingData#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/VB/Form1.vb#3)]  
   
-### <a name="to-find-an-item-and-set-it-as-the-current-item"></a>若要查找某个项并将其设置为当前项  
+### <a name="to-find-an-item-and-set-it-as-the-current-item"></a>查找项并将其设置为当前项  
   
-1. 查找你想要设置为当前项的记录。 你可以使用<xref:System.Windows.Forms.BindingSource.Find%2A>方法<xref:System.Windows.Forms.BindingSource>，如果你的数据源实现<xref:System.ComponentModel.IBindingList>。 一些示例数据源实现<xref:System.ComponentModel.IBindingList>都<xref:System.ComponentModel.BindingList%601>和<xref:System.Data.DataView>。  
+1. 查找要设置为当前项的记录。 如果数据源实现<xref:System.Windows.Forms.BindingSource.Find%2A> <xref:System.Windows.Forms.BindingSource> <xref:System.ComponentModel.IBindingList>, 则可以使用的方法执行此操作。 实现<xref:System.ComponentModel.IBindingList>的数据源的一些示例包括<xref:System.ComponentModel.BindingList%601>和<xref:System.Data.DataView>。  
   
      [!code-csharp[System.Windows.Forms.NavigatingData#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.NavigatingData#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/VB/Form1.vb#2)]  

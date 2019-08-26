@@ -69,7 +69,7 @@ ms.locfileid: "67135683"
   
 - 通过使用 `$`*数字* $ <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> number <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 替换序列，其中 *数字* 是捕获的表达式的初始数字。  
   
-- 以编程的方式，通过使用 <xref:System.Text.RegularExpressions.GroupCollection> 对象的方式，该对象由 <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> 属性返回。 集合中位置零上的成员表示正则表达式匹配。 每个后续成员表示匹配的子表达式。 有关更多信息，请参见 [Grouping Constructs and Regular Expression Objects](#Objects) 一节。  
+- 以编程的方式，通过使用 <xref:System.Text.RegularExpressions.GroupCollection> 对象的方式，该对象由 <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> 属性返回。 集合中位置零上的成员表示正则表达式匹配。 每个后续成员表示匹配的子表达式。 有关更多信息，请参见 [分组构造和正则表达式对象](#Objects) 一节。  
   
  以下示例阐释表示文本中重复单词的正则表达式。 正则表达式模式的两个捕获组表示重复的单词的两个实例。 捕获第二个实例，以报告它在输入字符串的起始位置。  
   
@@ -131,8 +131,8 @@ ms.locfileid: "67135683"
 |0|0（默认名称）|`((?<One>abc)\d+)?(?<Two>xyz)(.*)`|  
 |1|1（默认名称）|`((?<One>abc)\d+)`|  
 |2|2（默认名称）|`(.*)`|  
-|3|一|`(?<One>abc)`|  
-|4|二|`(?<Two>xyz)`|  
+|3|One|`(?<One>abc)`|  
+|4|Two|`(?<Two>xyz)`|  
   
  下面的示例阐释了一个正则表达式，标识出重复的单词和紧随每个重复的单词的单词。 正则表达式模式定义了两个命名的子表达式： `duplicateWord`，它表示重复的单词；和 `nextWord`，它表示后面跟随重复单词的单词。  
   
@@ -219,7 +219,7 @@ ms.locfileid: "67135683"
 |`(?(Open)(?!))`|如果 `Open` 组存在，并可以匹配空字符串，则放弃匹配，但不前移字符串中的正则表达式引擎的位置。 这是零宽度负预测先行断言。 因为空字符串总是隐式地存在于输入字符串中，所以此匹配始终失败。 此匹配的失败表示尖括号不平衡。|  
 |`$`|匹配输入字符串的末尾部分。|  
   
- 最终子表达式 `(?(Open)(?!))`，指示是否正确平衡输入字符串中的嵌套构造（例如，是否每个左尖括号由右键括号匹配）。 它使用基于有效的捕获组的条件匹配，有关详细信息请参阅 [Alternation Constructs](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)。 如果定义了 `Open` 组，则正则表达式引擎会尝试匹配输入字符串中的子表达式 `(?!)` 。 仅当嵌套构造不均衡时，才应该定义 `Open` 组。 因此，要在输入字符串中匹配的模式应该是一个始终导致匹配失败的模式。 在此情况下， `(?!)` 是始终失败的零宽度负预测先行断言，因为空字符串总是隐式地存在于输入字符串中的下一个位置。  
+ 最终子表达式 `(?(Open)(?!))`，指示是否正确平衡输入字符串中的嵌套构造（例如，是否每个左尖括号由右键括号匹配）。 它使用基于有效的捕获组的条件匹配，有关详细信息请参阅 [替换构造](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)。 如果定义了 `Open` 组，则正则表达式引擎会尝试匹配输入字符串中的子表达式 `(?!)` 。 仅当嵌套构造不均衡时，才应该定义 `Open` 组。 因此，要在输入字符串中匹配的模式应该是一个始终导致匹配失败的模式。 在此情况下， `(?!)` 是始终失败的零宽度负预测先行断言，因为空字符串总是隐式地存在于输入字符串中的下一个位置。  
   
  在此示例中，正则表达式引擎计算输入字符串“\<abc><mno\<xyz>>”，如下表所示。  
   
@@ -468,7 +468,7 @@ ms.locfileid: "67135683"
 |`\W+`|匹配一个或多个非单词字符。|  
 |`(\w+)\W+)+`|一次或多次匹配跟在一个或多个非单词字符后面的一个或多个单词字符的模式。 这是第一个捕获组。|  
   
- 第一个捕获组匹配句子的每个单词。 第二个捕获组匹配每个单词，连同标点符号和该单词后的空白区域。 <xref:System.Text.RegularExpressions.Group> 对象的索引是 2，提供了有关由第二个捕获组匹配的文本的信息。 可从 <xref:System.Text.RegularExpressions.CaptureCollection> 对象获取捕获组捕获的整组单词，该对象由 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> 属性返回。  
+ 第二个捕获组匹配句子的每个单词。 第一个捕获组匹配每个单词，连同标点符号和该单词后的空白区域。 <xref:System.Text.RegularExpressions.Group> 对象的索引是 2，提供了有关由第二个捕获组匹配的文本的信息。 可从 <xref:System.Text.RegularExpressions.CaptureCollection> 对象获取捕获组捕获的整组单词，该对象由 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> 属性返回。  
   
 ## <a name="see-also"></a>请参阅
 

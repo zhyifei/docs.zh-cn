@@ -2,18 +2,18 @@
 title: 在 SQL Server 中创建应用程序角色
 ms.date: 03/30/2017
 ms.assetid: 27442435-dfb2-4062-8c59-e2960833a638
-ms.openlocfilehash: 7934c58f837cd5a4b01f823701025190be3dfe6d
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: e7060e1b171ee1791b9986250fe6f2050ec77acd
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64910713"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69961169"
 ---
 # <a name="creating-application-roles-in-sql-server"></a>在 SQL Server 中创建应用程序角色
 应用程序角色可提供对应用程序（而不是数据库角色或用户）分配权限的方法。 用户可以连接到数据库、激活应用程序角色以及采用授予应用程序的权限。 授予应用程序角色的权限在连接期间有效。  
   
 > [!IMPORTANT]
->  当客户端应用程序在连接字符串中提供应用程序角色名称和密码时，可激活应用程序角色。 因为密码必须存储在客户端计算机上，所以这些角色在二层应用程序上导致一个安全漏洞。 在三层应用程序中，您可以存储密码，以便其他应用程序用户将无法对其进行访问。  
+> 当客户端应用程序在连接字符串中提供应用程序角色名称和密码时，可激活应用程序角色。 因为密码必须存储在客户端计算机上，所以这些角色在二层应用程序上导致一个安全漏洞。 在三层应用程序中，您可以存储密码，以便其他应用程序用户将无法对其进行访问。  
   
 ## <a name="application-role-features"></a>应用程序角色功能  
  应用程序角色具有以下功能：  
@@ -47,9 +47,9 @@ ms.locfileid: "64910713"
   
  可能需要考虑以下替代方法。  
   
-- 使用通过 EXECUTE AS 语句及其 NO REVERT 和 WITH COOKIE 字句切换的上下文。 您可以在未映射为登录名的数据库中创建用户帐户。 然后，向此帐户分配权限。 对于很少登录的用户使用 EXECUTE AS 比较安全，因为它基于权限，而不基于密码。 有关详细信息，请参阅[SQL Server 中使用模拟自定义权限](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)。  
+- 使用通过 EXECUTE AS 语句及其 NO REVERT 和 WITH COOKIE 字句切换的上下文。 您可以在未映射为登录名的数据库中创建用户帐户。 然后，向此帐户分配权限。 对于很少登录的用户使用 EXECUTE AS 比较安全，因为它基于权限，而不基于密码。 有关详细信息, 请参阅[在 SQL Server 中通过模拟自定义权限](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)。  
   
-- 使用证书对存储过程进行签名，并仅授予执行这些过程的权限。 有关详细信息，请参阅[SQL Server 中的签名存储过程](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)。  
+- 使用证书对存储过程进行签名，并仅授予执行这些过程的权限。 有关详细信息, 请参阅[SQL Server 中的签名存储过程](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)。  
   
 ## <a name="external-resources"></a>外部资源  
  有关更多信息，请参见以下资源。  

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms, mouse input
 ms.assetid: 743c2f3c-219e-4a52-b6b8-2657096a2da6
-ms.openlocfilehash: 3b4e9eff3f5c4c032e75ded0913ce2cc6051498d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 91bbf61029d52cf1d434136ee72ef389ca499ebc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61800720"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69949903"
 ---
 # <a name="mouse-input-in-a-windows-forms-application"></a>Windows 窗体应用程序中的鼠标输入
 Windows 窗体包含各种鼠标事件，另外还支持自定义的鼠标光标、鼠标捕获和拖放行为。  
@@ -34,5 +34,5 @@ Windows 窗体包含各种鼠标事件，另外还支持自定义的鼠标光标
  描述如何实现拖放行为。  
   
 ## <a name="related-sections"></a>相关章节  
- [访问鼠标](~/docs/visual-basic/developing-apps/programming/computer-resources/accessing-the-mouse.md)  
+ [访问鼠标](../../visual-basic/developing-apps/programming/computer-resources/accessing-the-mouse.md)  
  列出使用 Visual Basic 访问鼠标的主题。

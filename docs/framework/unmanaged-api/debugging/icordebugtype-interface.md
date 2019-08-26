@@ -16,44 +16,44 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 74863af1096f8600b8095e593c1f3c820c512e9d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b830af5d59c0eb177d815451ecedbdc14121aaad
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61663851"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964761"
 ---
 # <a name="icordebugtype-interface"></a>ICorDebugType 接口
-表示的类型，基本或复杂 （是，用户定义的）。 如果该类型是泛型类型，则 `ICorDebugType` 表示未实例化的泛型类型。  
+表示基本或复杂类型 (即用户定义的类型)。 如果该类型是泛型类型，则 `ICorDebugType` 表示未实例化的泛型类型。  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|[EnumerateTypeParameters 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-enumeratetypeparameters-method.md)|获取一个接口指针到引用泛型 ICorDebugTypeEnum<xref:System.Type>引用此类参数`ICorDebugType`。|  
-|[GetBase 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getbase-method.md)|获取到的接口指针`ICorDebugType`引用此引用的类的基类`ICorDebugType`，如果存在一个。|  
-|[GetClass 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getclass-method.md)|获取一个接口指针到引用此类型化的构造函数 ICorDebugClass `ICorDebugType`。|  
-|[GetFirstTypeParameter 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getfirsttypeparameter-method.md)|获取到的接口指针`ICorDebugType`引用的第一个泛型<xref:System.Type>此引用的类，构造函数参数`ICorDebugType`。|  
+|[EnumerateTypeParameters 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-enumeratetypeparameters-method.md)|获取一个接口指针, 该指针指向引用此<xref:System.Type> `ICorDebugType`所引用类的泛型参数的 ICorDebugTypeEnum。|  
+|[GetBase 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getbase-method.md)|获取一个接口指针, `ICorDebugType`该指针指向引用此引用的类 (如果存在此`ICorDebugType`类) 的基类。|  
+|[GetClass 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getclass-method.md)|获取一个接口指针, 该指针指向引用此`ICorDebugType`的类型化构造函数的 ICorDebugClass。|  
+|[GetFirstTypeParameter 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getfirsttypeparameter-method.md)|获取一个接口指针`ICorDebugType` , 该指针指向引用此`ICorDebugType`引用<xref:System.Type>的类的构造函数的第一个泛型参数。|  
 |[GetRank 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getrank-method.md)|获取数组类型中的维度数。|  
-|[GetStaticFieldValue 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getstaticfieldvalue-method.md)|获取为包含值的按指定字段引用的静态字段 ICorDebugValue 接口指针标记中指定的堆栈帧。|  
-|[GetType 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-gettype-method.md)|获取用于描述公共语言运行时的本机类型的 CorElementType 值<xref:System.Type>引用此`ICorDebugType`。|  
+|[GetStaticFieldValue 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getstaticfieldvalue-method.md)|获取一个指向 ICorDebugValue 的接口指针, 该指针包含指定的堆栈帧中指定字段标记所引用的静态字段的值。|  
+|[GetType 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-gettype-method.md)|获取一个 CorElementType 值, 该值描述此<xref:System.Type> `ICorDebugType`所引用的公共语言运行时的本机类型。|  
   
 ## <a name="remarks"></a>备注  
- 如果类型是泛型，`ICorDebugClass`表示未实例化的类型。 `ICorDebugType`接口表示实例化泛型类型。 例如，哈希表\<K，V > 将由表示`ICorDebugClass`，而哈希表\<Int32，String > 将由表示`ICorDebugType`。  
+ 如果类型为泛型, `ICorDebugClass`则表示未实例化的类型。 `ICorDebugType`接口表示一个实例化的泛型类型。 例如, 哈希\<表 K, V > 将由`ICorDebugClass`表示, 而哈\<希表`ICorDebugType`Int32, 字符串 > 将由表示。  
   
- 非泛型类型表示由`ICorDebugClass`和`ICorDebugType`。 在处理类型实例化在.NET Framework 2.0 版中引入的后一种接口。  
+ 非泛型类型由`ICorDebugClass`和`ICorDebugType`表示。 后一种接口在 .NET Framework 版本2.0 中引入, 用于处理类型实例化。  
   
 > [!NOTE]
->  此接口不支持跨计算机或跨进程远程调用。  
+> 此接口不支持跨计算机或跨进程远程调用。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头：** Cordebug.idl, Cordebug.idl  
   
- **库：** CorGuids.lib  
+ **类库**CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

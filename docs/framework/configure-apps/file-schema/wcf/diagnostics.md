@@ -2,12 +2,12 @@
 title: <diagnostics>
 ms.date: 03/30/2017
 ms.assetid: 0c2f95c4-cc12-4fb5-a70c-7fc6fa95db58
-ms.openlocfilehash: 3fc7828d399555f7c459f6dd067ce9a24b8998b6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 170cae5b328c86073c1d8e7710bb19e98ab5688c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704047"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69925877"
 ---
 # <a name="diagnostics"></a>\<diagnostics>
 `diagnostics` 元素定义管理员可以用来进行运行时检查和控制的设置。  
@@ -47,15 +47,15 @@ ms.locfileid: "61704047"
 |特性|描述|  
 |---------------|-----------------|  
 |etwProviderId|一个字符串，指定将事件写入到 ETW 会话的事件跟踪提供程序的标识符。|  
-|performanceCounters|指定是否启用程序集的性能计数器。 有效值为<br /><br /> -关闭：性能计数器被禁用。<br />-ServiceOnly:只启用与此服务相关的性能计数器。<br />-所有：可以在运行时查看性能计数器。<br />-默认值：创建单个性能计数器实例 _WCF_Admin。 此实例用于启用基础结构所使用的 SQM 数据的集合。 此实例的计数器值均未进行更新，因此将保持为零。 这是在 WCF 没有配置的情况下的默认值。|  
+|performanceCounters|指定是否启用程序集的性能计数器。 有效值为<br /><br /> 非性能计数器被禁用。<br />ServiceOnly只启用与此服务相关的性能计数器。<br />一切可以在运行时查看性能计数器。<br />缺省值创建单个性能计数器实例 _WCF_Admin。 此实例用于启用基础结构所使用的 SQM 数据的集合。 此实例的计数器值均未进行更新，因此将保持为零。 这是在 WCF 没有配置的情况下的默认值。|  
 |wmiProviderEnabled|一个布尔值，指定是否启用程序集的 WMI 提供程序。 用户要获得在运行时访问 Windows Communication Foundation (WCF) 的检查和控制功能的权限，需要使用 WMI 提供程序。 默认值为 `false`。|  
   
 ### <a name="child-elements"></a>子元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<endToEndTracing>](../../../../../docs/framework/configure-apps/file-schema/wcf/endtoendtracing.md)|一个配置元素，用于启用和禁用服务应用程序运行过程中端对端跟踪的不同方面。|  
-|[\<messageLogging>](../../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)|描述 WCF 消息日志记录的设置。|  
+|[\<endToEndTracing>](endtoendtracing.md)|一个配置元素，用于启用和禁用服务应用程序运行过程中端对端跟踪的不同方面。|  
+|[\<messageLogging>](messagelogging.md)|描述 WCF 消息日志记录的设置。|  
   
 ### <a name="parent-elements"></a>父元素  
   

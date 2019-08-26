@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - bool keyword [C#]
 ms.assetid: 551cfe35-2632-4343-af49-33ad12da08e2
-ms.openlocfilehash: a6aae34433ee6f5d141d95f0c434af1825e9bf4b
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 3e4e83b52cd6b275e68039693c774f6490f2b88f
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67424438"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606056"
 ---
 # <a name="bool-c-reference"></a>bool（C# 参考）
 
@@ -52,10 +52,10 @@ ms.locfileid: "67424438"
 
 ## <a name="see-also"></a>请参阅
 
-- [C# 参考](../../../csharp/language-reference/index.md)
-- [C# 编程指南](../../../csharp/programming-guide/index.md)
-- [C# 关键字](../../../csharp/language-reference/keywords/index.md)
-- [整型类型](../../../csharp/language-reference/builtin-types/integral-numeric-types.md)
-- [内置类型表](../../../csharp/language-reference/keywords/built-in-types-table.md)
-- [隐式数值转换表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)
-- [显式数值转换表](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
+- [C# 参考](../index.md)
+- [C# 编程指南](../../programming-guide/index.md)
+- [C# 关键字](./index.md)
+- [整型类型](../builtin-types/integral-numeric-types.md)
+- [内置类型表](./built-in-types-table.md)
+- [隐式数值转换表](./implicit-numeric-conversions-table.md)
+- [显式数值转换表](./explicit-numeric-conversions-table.md)

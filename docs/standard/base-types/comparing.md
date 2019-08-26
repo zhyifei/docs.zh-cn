@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 977dc094-fe19-4955-98ec-d2294d04a4ba
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 48331c1b62fa536b905f1288ebb1632f8da15615
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: dd5ec18147c074400457581618bacba11d9ee40a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053593"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963424"
 ---
 # <a name="comparing-strings-in-net"></a>比较 .NET 中的字符串
 .NET 提供几种方法来比较字符串的值。 下表列出和描述值比较方法。  
@@ -46,12 +46,12 @@ ms.locfileid: "66053593"
   
 |返回值|条件|  
 |------------------|---------------|  
-|负整数|在排序顺序中，第一个字符串在第二个字符串之前。<br /><br /> 或<br /><br /> 第一个字符串是 `null`。|  
-|0|第一个字符串和第二个字符串相等。<br /><br /> 或<br /><br /> 两个字符串都是 `null`。|  
-|正整数<br /><br /> 或<br /><br /> 1|在排序顺序中，第一个字符串在第二个字符串之后。<br /><br /> 或<br /><br /> 第二个字符串是 `null`。|  
+|负整数|在排序顺序中，第一个字符串在第二个字符串之前。<br /><br /> -或-<br /><br /> 第一个字符串是 `null`。|  
+|0|第一个字符串和第二个字符串相等。<br /><br /> -或-<br /><br /> 两个字符串都是 `null`。|  
+|正整数<br /><br /> -或-<br /><br /> 1|在排序顺序中，第一个字符串在第二个字符串之后。<br /><br /> -或-<br /><br /> 第二个字符串是 `null`。|  
   
 > [!IMPORTANT]
->  <xref:System.String.Compare%2A?displayProperty=nameWithType> 方法主要用于对字符串进行排序。 不应使用 <xref:System.String.Compare%2A?displayProperty=nameWithType> 方法来测试相等性（即，显式查找返回值 0 而不考虑一个字符串是否小于或大于另一个）。 相反，若要确定两个字符串是否相等，请使用 <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> 方法。  
+> <xref:System.String.Compare%2A?displayProperty=nameWithType> 方法主要用于对字符串进行排序。 不应使用 <xref:System.String.Compare%2A?displayProperty=nameWithType> 方法来测试相等性（即，显式查找返回值 0 而不考虑一个字符串是否小于或大于另一个）。 相反，若要确定两个字符串是否相等，请使用 <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> 方法。  
   
  下面的示例使用 <xref:System.String.Compare%2A?displayProperty=nameWithType> 方法来确定两个字符串的相对值。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "66053593"
  <xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType> 方法比较两个字符串对象而不考虑本地区域性。 此方法的返回值与上表中 **Compare** 方法返回的值相等。  
   
 > [!IMPORTANT]
->  <xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType> 方法主要用于对字符串进行排序。 不应使用 <xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType> 方法来测试相等性（即，显式查找返回值 0 而不考虑一个字符串是否小于或大于另一个）。 相反，若要确定两个字符串是否相等，请使用 <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> 方法。  
+> <xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType> 方法主要用于对字符串进行排序。 不应使用 <xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType> 方法来测试相等性（即，显式查找返回值 0 而不考虑一个字符串是否小于或大于另一个）。 相反，若要确定两个字符串是否相等，请使用 <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> 方法。  
   
  以下示例使用 **CompareOrdinal** 方法来比较两个字符串的值。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "66053593"
  <xref:System.String.CompareTo%2A?displayProperty=nameWithType> 方法比较当前字符串对象封装到另一个字符串或对象的字符串。 此方法的返回值与上表中 <xref:System.String.Compare%2A?displayProperty=nameWithType> 方法返回的值相同。  
   
 > [!IMPORTANT]
->  <xref:System.String.CompareTo%2A?displayProperty=nameWithType> 方法主要用于对字符串进行排序。 不应使用 <xref:System.String.CompareTo%2A?displayProperty=nameWithType> 方法来测试相等性（即，显式查找返回值 0 而不考虑一个字符串是否小于或大于另一个）。 相反，若要确定两个字符串是否相等，请使用 <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> 方法。  
+> <xref:System.String.CompareTo%2A?displayProperty=nameWithType> 方法主要用于对字符串进行排序。 不应使用 <xref:System.String.CompareTo%2A?displayProperty=nameWithType> 方法来测试相等性（即，显式查找返回值 0 而不考虑一个字符串是否小于或大于另一个）。 相反，若要确定两个字符串是否相等，请使用 <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> 方法。  
   
  下面的示例使用 <xref:System.String.CompareTo%2A?displayProperty=nameWithType> 方法来比较 `string1` 对象和 `string2` 对象。  
   

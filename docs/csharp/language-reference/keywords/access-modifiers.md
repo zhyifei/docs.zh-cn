@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - access modifiers [C#]
 ms.assetid: 61c3fa51-c00f-48cb-9b49-c805dedd62d7
-ms.openlocfilehash: 587f1b03292db643d721e599ea93c39ba188117d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5568d79c4a13b7b0db5a46bb4ebb2168ea66a2c9
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593022"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606092"
 ---
 # <a name="access-modifiers-c-reference"></a>访问修饰符（C# 参考）
 访问修饰符是关键字，用于指定成员或类型已声明的可访问性。 本部分介绍四个访问修饰符：  
@@ -36,17 +36,17 @@ ms.locfileid: "64593022"
   
  本部分还介绍以下内容：  
   
-- [可访问性级别](../../../csharp/language-reference/keywords/accessibility-levels.md)：使用四个访问修饰符声明六个可访问性级别。  
+- [可访问性级别](./accessibility-levels.md)：使用四个访问修饰符声明六个可访问性级别。  
   
-- [可访问性域](../../../csharp/language-reference/keywords/accessibility-domain.md)：指定可以在程序段中的何处引用成员。  
+- [可访问性域](./accessibility-domain.md)：指定可以在程序段中的何处引用成员。  
   
-- [可访问性级别的使用限制](../../../csharp/language-reference/keywords/restrictions-on-using-accessibility-levels.md)：汇总了已声明可访问性级别的使用限制。  
+- [可访问性级别的使用限制](./restrictions-on-using-accessibility-levels.md)：汇总了已声明可访问性级别的使用限制。  
   
 ## <a name="see-also"></a>请参阅
 
-- [C# 参考](../../../csharp/language-reference/index.md)
-- [C# 编程指南](../../../csharp/programming-guide/index.md)
-- [C# 关键字](../../../csharp/language-reference/keywords/index.md)
-- [访问修饰符](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)
-- [访问关键字](../../../csharp/language-reference/keywords/access-keywords.md)
-- [修饰符](../../../csharp/language-reference/keywords/modifiers.md)
+- [C# 参考](../index.md)
+- [C# 编程指南](../../programming-guide/index.md)
+- [C# 关键字](./index.md)
+- [访问修饰符](../../programming-guide/classes-and-structs/access-modifiers.md)
+- [访问关键字](./access-keywords.md)
+- [修饰符](./modifiers.md)

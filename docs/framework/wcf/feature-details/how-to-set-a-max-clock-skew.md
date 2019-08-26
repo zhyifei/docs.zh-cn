@@ -8,12 +8,12 @@ helpviewer_keywords:
 - MaxClockSkew property
 - WCF, custom bindings
 ms.assetid: 491d1705-eb29-43c2-a44c-c0cf996f74eb
-ms.openlocfilehash: 1a8d99e5d2bd21a74318718f43b5d1c091ed073e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3bcd128e6e9f53f662dd3fc99336b5b45faebf5f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62047537"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69943122"
 ---
 # <a name="how-to-set-a-max-clock-skew"></a>如何：设置最大时钟偏差
 如果两台计算机上的时钟设置不同，时间关键函数可能无法正常执行。 若要减小这种可能性，可以将 `MaxClockSkew` 属性设置为一个 <xref:System.TimeSpan>。 可在两个类上获得此属性：  
@@ -23,16 +23,16 @@ ms.locfileid: "62047537"
  <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>  
   
 > [!IMPORTANT]
->  重要事项对于安全对话，更改为`MaxClockSkew`引导服务或客户端时，必须考虑属性。 若要执行此操作，必须设置该属性上<xref:System.ServiceModel.Channels.SecurityBindingElement>返回的<xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters.BootstrapSecurityBindingElement%2A>。  
+> 对于安全对话, 在引导服务或`MaxClockSkew`客户端时必须进行对属性的更改。 为此, 必须在<xref:System.ServiceModel.Channels.SecurityBindingElement> <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters.BootstrapSecurityBindingElement%2A?displayProperty=nameWithType>属性返回的上设置属性。  
   
- 若要更改系统提供的绑定之一上的属性，必须在绑定集合中找到安全绑定元素，然后将 `MaxClockSkew` 属性设置为一个新值。 两个类派生自 <xref:System.ServiceModel.Channels.SecurityBindingElement>: <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> 和 <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>。 从该集合中检索安全绑定时，必须将其强制转换为上述类型之一，以便正确设置 `MaxClockSkew` 属性。 下面的示例使用了一个 <xref:System.ServiceModel.WSHttpBinding>，它使用了 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>。 指定哪种类型的安全绑定，以在每个系统提供的绑定中使用的列表，请参阅[System-Provided Bindings](../../../../docs/framework/wcf/system-provided-bindings.md)。  
+ 若要更改系统提供的绑定之一上的属性，必须在绑定集合中找到安全绑定元素，然后将 `MaxClockSkew` 属性设置为一个新值。 两个类派生自 <xref:System.ServiceModel.Channels.SecurityBindingElement>: <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> 和 <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>。 从该集合中检索安全绑定时，必须将其强制转换为上述类型之一，以便正确设置 `MaxClockSkew` 属性。 下面的示例使用了一个 <xref:System.ServiceModel.WSHttpBinding>，它使用了 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>。 有关指定要在每个系统提供的绑定中使用哪种类型的安全绑定的列表, 请参阅[系统提供的绑定](../../../../docs/framework/wcf/system-provided-bindings.md)。  
   
-### <a name="to-create-a-custom-binding-with-a-new-clock-skew-value-in-code"></a>在代码中使用新的时钟偏差值创建自定义绑定  
+## <a name="to-create-a-custom-binding-with-a-new-clock-skew-value-in-code"></a>在代码中使用新的时钟偏差值创建自定义绑定  
   
-1. > [!WARNING]
-    >  请注意添加到你的代码中的以下命名空间的引用： <xref:System.ServiceModel.Channels>， <xref:System.ServiceModel.Description>， <xref:System.Security.Permissions>，和<xref:System.ServiceModel.Security.Tokens>。  
+> [!WARNING]
+> 在代码中添加对以下命名空间的引用<xref:System.ServiceModel.Channels>: <xref:System.ServiceModel.Description>、 <xref:System.Security.Permissions>、和<xref:System.ServiceModel.Security.Tokens>。  
   
-     创建 <xref:System.ServiceModel.WSHttpBinding> 类的一个实例，并将其安全模式设置为 <xref:System.ServiceModel.SecurityMode.Message>。  
+1. 创建 <xref:System.ServiceModel.WSHttpBinding> 类的一个实例，并将其安全模式设置为 <xref:System.ServiceModel.SecurityMode.Message?displayProperty=nameWithType>。  
   
 2. 调用 <xref:System.ServiceModel.Channels.BindingElementCollection> 方法，以此创建 <xref:System.ServiceModel.WSHttpBinding.CreateBindingElements%2A> 的一个新实例。  
   
@@ -49,21 +49,21 @@ ms.locfileid: "62047537"
      [!code-csharp[c_MaxClockSkew#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_maxclockskew/cs/source.cs#1)]
      [!code-vb[c_MaxClockSkew#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_maxclockskew/vb/source.vb#1)]  
   
-### <a name="to-set-the-maxclockskew-in-configuration"></a>在配置中设置 MaxClockSkew  
+## <a name="to-set-the-maxclockskew-in-configuration"></a>在配置中设置 MaxClockSkew  
   
-1. 创建[ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)中[\<绑定 >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)元素节的配置。  
+1. 在绑定 > 元素部分创建[customBinding >。 \<](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)  
   
-2. 创建[\<绑定 >](../../../../docs/framework/misc/binding.md)元素，并设置`name`属性为适当的值。 下面的示例将其设置为 `MaxClockSkewBinding`。  
+2. 创建[绑定 > 元素, 并将属性设置为合适的值。 \<](../../../../docs/framework/misc/binding.md) `name` 下面的示例将其设置为 `MaxClockSkewBinding`。  
   
-3. 添加一个编码元素。 下面的示例添加[ \<textMessageEncoding >](../../../../docs/framework/configure-apps/file-schema/wcf/textmessageencoding.md)。  
+3. 添加一个编码元素。 下面的示例添加了一个[ \<textMessageEncoding >](../../../../docs/framework/configure-apps/file-schema/wcf/textmessageencoding.md)。  
   
-4. 添加[\<安全 >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)元素，并设置`authenticationMode`属性为适当的设置。 下面的示例将该属性设置为 `Kerberos`，以指定服务使用 Windows 身份验证。  
+4. 添加[security > 元素, 并将属性设置为适当的设置。 \<](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) `authenticationMode` 下面的示例将该属性设置为 `Kerberos`，以指定服务使用 Windows 身份验证。  
   
-5. 添加[ \<localServiceSettings >](../../../../docs/framework/configure-apps/file-schema/wcf/localservicesettings-element.md)并设置`maxClockSkew`属性中的窗体的值为`"##:##:##"`。 下面的示例将其设置为 7 分钟。 （可选） 添加[ \<localServiceSettings >](../../../../docs/framework/configure-apps/file-schema/wcf/localservicesettings-element.md)并设置`maxClockSkew`属性为适当的设置。  
+5. 添加一个[ \<localServiceSettings >](../../../../docs/framework/configure-apps/file-schema/wcf/localservicesettings-element.md) , 并将`maxClockSkew`属性设置为形式的`"##:##:##"`值。 下面的示例将其设置为 7 分钟。 (可选) 添加[ \<localServiceSettings >](../../../../docs/framework/configure-apps/file-schema/wcf/localservicesettings-element.md)并将`maxClockSkew`属性设置为适当的设置。  
   
 6. 添加一个传输元素。 下面的示例使用[ \<httpTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/httptransport.md)。  
   
-7. 对于安全对话安全设置必须出现在中 bootstrap [ \<secureConversationBootstrap >](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md)元素。  
+7. 对于安全对话, 安全设置必须出现在[ \<secureConversationBootstrap >](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md)元素中的启动时。  
   
     ```xml  
     <bindings>  
@@ -89,4 +89,4 @@ ms.locfileid: "62047537"
 - <xref:System.ServiceModel.Channels.LocalClientSecuritySettings>
 - <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [如何：创建自定义绑定使用 SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [如何：使用 SecurityBindingElement 创建自定义绑定](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)

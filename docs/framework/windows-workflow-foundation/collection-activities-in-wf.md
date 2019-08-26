@@ -2,18 +2,18 @@
 title: WF 中的集合活动
 ms.date: 03/30/2017
 ms.assetid: 2680c3e2-9902-4968-b98d-cab776103dbe
-ms.openlocfilehash: 6e4b9ce6f967ba9405f55dbf5fd4708d3319b458
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b14d6f8bdebd349467004a8fa950927f848d0f21
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945972"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69935458"
 ---
 # <a name="collection-activities-in-wf"></a>WF 中的集合活动
-集合活动用于使用工作流中的集合对象。 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]包含多个系统提供的活动，用于在集合中添加和移除项、测试集合中是否存在某个项以及清除集合。 `ExistsInCollection` 并`RemoveFromCollection`具有<xref:System.Activities.OutArgument%601>类型的<xref:System.Boolean>，它指示结果。  
+集合活动用于使用工作流中的集合对象。 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]包含多个系统提供的活动，用于在集合中添加和移除项、测试集合中是否存在某个项以及清除集合。 `ExistsInCollection`和`RemoveFromCollection` 具有类型<xref:System.Boolean>为的, 它表示结果。 <xref:System.Activities.OutArgument%601>  
   
 > [!IMPORTANT]
->  如果在设置基础集合对象之前执行集合活动，则会引发 <xref:System.InvalidOperationException>，并且活动将发生错误。  
+> 如果在设置基础集合对象之前执行集合活动，则会引发 <xref:System.InvalidOperationException>，并且活动将发生错误。  
   
 ## <a name="collection-activities"></a>集合活动  
   

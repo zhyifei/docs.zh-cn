@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <oidEntry> element
 - oidEntry element
 ms.assetid: 22fb88b0-bf27-489c-9ca0-e65950ac136c
-ms.openlocfilehash: 013994e36c4c63410a753967cbac92c38783ae62
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: cbdf6150010ca2dace3f0610d9caa90c2bf52746
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659593"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921045"
 ---
 # <a name="oidentry-element"></a>\<y > 元素
 将 ASN.1 对象标识符 (OID) 映射到友好名称。  
@@ -82,6 +82,6 @@ ms.locfileid: "69659593"
 
 - [配置文件架构](../index.md)
 - [加密设置架构](index.md)
-- [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)
+- [Cryptographic Services](../../../../standard/security/cryptographic-services.md)
 - [配置加密类](../../configure-cryptography-classes.md)
 - [将对象标识符映射到加密算法](../../map-object-identifiers-to-cryptography-algorithms.md)

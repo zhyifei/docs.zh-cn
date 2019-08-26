@@ -3,15 +3,15 @@ title: <x509SecurityTokenHandlerRequirement>
 ms.date: 03/30/2017
 ms.assetid: aca22c2c-5ae7-42af-9bbd-15c2524692ce
 author: BrucePerlerMS
-ms.openlocfilehash: 6e8267f170dbb26381564be7b66df5f617156885
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2851820460a34d62175929b48ad57914df557059
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790437"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69945185"
 ---
 # <a name="x509securitytokenhandlerrequirement"></a>\<x509SecurityTokenHandlerRequirement>
-提供的可选配置<xref:System.IdentityModel.Tokens.X509SecurityTokenHandler>类或派生的类。  
+提供<xref:System.IdentityModel.Tokens.X509SecurityTokenHandler>类或派生类的可选配置。  
   
  \<system.identityModel>  
 \<identityConfiguration>  
@@ -46,20 +46,20 @@ ms.locfileid: "61790437"
   
 |特性|描述|  
 |---------------|-----------------|  
-|certificateValidationMode|<xref:System.ServiceModel.Security.X509CertificateValidationMode>值，该值指定要使用的 X.509 证书验证模式。 默认值为"PeerOrChainTrust"。|  
-|mapToWindows|指定的标记处理程序是否应使用传入 UPN 声明到 Windows 帐户映射验证令牌。 默认值为"false"。|  
-|revocationMode|<xref:System.Security.Cryptography.X509Certificates.X509RevocationMode>值，该值指定要使用的 X.509 证书的吊销模式。 默认值为"联机"。|  
-|trustedStoreLocation|一个<xref:System.Security.Cryptography.X509Certificates.StoreLocation>值，该值指定 X.509 证书存储区。 默认值为"LocalMachine"。|  
-|certificateValidator|派生的自定义类型<xref:System.IdentityModel.Selectors.X509CertificateValidator>。 如果`certificateValidationMode`属性为"自定义"，此类型的实例用于颁发者证书验证。|  
+|certificateValidationMode|一个<xref:System.ServiceModel.Security.X509CertificateValidationMode>值, 该值指定要用于 x.509 证书的验证模式。 默认值为 "PeerOrChainTrust"。|  
+|mapToWindows|指定令牌处理程序是否应使用传入 UPN 声明将验证令牌映射到 Windows 帐户。 默认值为 "false"。|  
+|revocationMode|一个<xref:System.Security.Cryptography.X509Certificates.X509RevocationMode>值, 该值指定要用于 x.509 证书的吊销模式。 默认值为 "Online"。|  
+|trustedStoreLocation|一个<xref:System.Security.Cryptography.X509Certificates.StoreLocation>值, 该值指定 x.509 证书存储区。 默认值为 "LocalMachine"。|  
+|certificateValidator|派生自的自定义类型<xref:System.IdentityModel.Selectors.X509CertificateValidator>。 如果该`certificateValidationMode`属性为 "Custom", 则此类型的实例将用于颁发者证书验证。|  
   
 ### <a name="child-elements"></a>子元素  
- None  
+ 无  
   
 ### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/add.md)|将指定的安全令牌处理程序添加到令牌处理程序集合。|  
+|[\<add>](add.md)|将指定的安全令牌处理程序添加到令牌处理程序集合。|  
   
 ## <a name="example"></a>示例  
   

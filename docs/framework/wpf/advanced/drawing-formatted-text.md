@@ -10,12 +10,12 @@ helpviewer_keywords:
 - formatted text [WPF]
 - drawing [WPF], formatted text
 ms.assetid: b1d851c1-331c-4814-9964-6fe769db6f1f
-ms.openlocfilehash: 3b410bcf609aca2cb201042247b8768f243ac93a
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: eeba54ebd63b26a50c8c01a2478e847b3e660a3f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629739"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937696"
 ---
 # <a name="drawing-formatted-text"></a>绘制格式化文本
 本主题概述<xref:System.Windows.Media.FormattedText>对象的功能。 此对象为在 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 应用程序中绘制文本提供低级别控制。  
@@ -26,7 +26,7 @@ ms.locfileid: "68629739"
  ![使用 FormattedText 对象显示的文本](./media/typography-in-wpf/text-formatted-linear-gradient.jpg)  
   
 > [!NOTE]
->  对于从 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] API 迁移的开发人员，[Win32 迁移](#win32_migration)一节中的表列出了 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] DrawText 标志和 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中的近似等效项。  
+> 对于从 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] API 迁移的开发人员，[Win32 迁移](#win32_migration)一节中的表列出了 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] DrawText 标志和 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中的近似等效项。  
   
 ### <a name="reasons-for-using-formatted-text"></a>使用格式化文本的原因  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 包括多个用于在屏幕中绘制文本的控件。 每个控件都面向不同的方案，并具有自己的功能和限制列表。 通常, <xref:System.Windows.Controls.TextBlock>当要求提供有限文本支持时, 应使用元素, 例如[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]中的 brief 句子。 <xref:System.Windows.Controls.Label>需要最少文本支持时, 可以使用。 有关详细信息，请参阅 [WPF 中的文档](documents-in-wpf.md)。  
@@ -95,17 +95,17 @@ ms.locfileid: "68629739"
 |DT_CENTER|<xref:System.Windows.Media.FormattedText.TextAlignment%2A>|使用属性, 其值设置为<xref:System.Windows.TextAlignment.Center>。 <xref:System.Windows.Media.FormattedText.TextAlignment%2A>|  
 |DT_EDITCONTROL|无|不要求。 间距宽度和最后一行的呈现与框架编辑控件中的相同。|  
 |DT_END_ELLIPSIS|<xref:System.Windows.Media.FormattedText.Trimming%2A>|使用带有值<xref:System.Windows.TextTrimming.CharacterEllipsis>的属性。<xref:System.Windows.Media.FormattedText.Trimming%2A><br /><br /> 用于<xref:System.Windows.TextTrimming.WordEllipsis> 获取[!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]带有 DT_WORD_ELIPSIS END 省略号的 DT_END_ELLIPSIS, 在这种情况下, 字符省略号仅出现在不适合单个行的单词上。|  
-|DT_EXPAND_TABS|None|不要求。 制表符自动扩展为在每 4 个 em 后停止，这大约为 8 个与语言无关的字符的宽度。|  
-|DT_EXTERNALLEADING|None|不要求。 行距中始终包括外部间隙。 <xref:System.Windows.Media.FormattedText.LineHeight%2A>使用属性可创建用户定义的行距。|  
-|DT_HIDEPREFIX|无|不支持。 构造<xref:System.Windows.Media.FormattedText>对象之前, 请从字符串中删除 "&"。|  
+|DT_EXPAND_TABS|无|不要求。 制表符自动扩展为在每 4 个 em 后停止，这大约为 8 个与语言无关的字符的宽度。|  
+|DT_EXTERNALLEADING|无|不要求。 行距中始终包括外部间隙。 <xref:System.Windows.Media.FormattedText.LineHeight%2A>使用属性可创建用户定义的行距。|  
+|DT_HIDEPREFIX|无|不受支持。 构造<xref:System.Windows.Media.FormattedText>对象之前, 请从字符串中删除 "&"。|  
 |DT_LEFT|<xref:System.Windows.Media.FormattedText.TextAlignment%2A>|这是默认文本对齐方式。 使用属性, 其值设置为<xref:System.Windows.TextAlignment.Left>。 <xref:System.Windows.Media.FormattedText.TextAlignment%2A> （仅限 WPF）|  
-|DT_MODIFYSTRING|无|不支持。|  
+|DT_MODIFYSTRING|无|不受支持。|  
 |DT_NOCLIP|<xref:System.Windows.Media.Visual.VisualClip%2A>|剪辑不会自动发生。 如果要剪裁文本, 请使用<xref:System.Windows.Media.Visual.VisualClip%2A>属性。|  
-|DT_NOFULLWIDTHCHARBREAK|无|不支持。|  
-|DT_NOPREFIX|None|不要求。 字符串中的“&”字符始终作为正常字符处理。|  
+|DT_NOFULLWIDTHCHARBREAK|无|不受支持。|  
+|DT_NOPREFIX|无|不要求。 字符串中的“&”字符始终作为正常字符处理。|  
 |DT_PATHELLIPSIS|无|使用带有值<xref:System.Windows.TextTrimming.WordEllipsis>的属性。<xref:System.Windows.Media.FormattedText.Trimming%2A>|  
-|DT_PREFIX|None|不支持。 如果要将下划线用于文本 (如快捷键或链接), 请使用<xref:System.Windows.Media.FormattedText.SetTextDecorations%2A>方法。|  
-|DT_PREFIXONLY|无|不支持。|  
+|DT_PREFIX|无|不受支持。 如果要将下划线用于文本 (如快捷键或链接), 请使用<xref:System.Windows.Media.FormattedText.SetTextDecorations%2A>方法。|  
+|DT_PREFIXONLY|无|不受支持。|  
 |DT_RIGHT|<xref:System.Windows.Media.FormattedText.TextAlignment%2A>|使用属性, 其值设置为<xref:System.Windows.TextAlignment.Right>。 <xref:System.Windows.Media.FormattedText.TextAlignment%2A> （仅限 WPF）|  
 |DT_RTLREADING|<xref:System.Windows.Media.FormattedText.FlowDirection%2A>|将 <xref:System.Windows.Media.FormattedText.FlowDirection%2A> 属性设置为 <xref:System.Windows.FlowDirection.RightToLeft>。|  
 |DT_SINGLELINE|无|不要求。 <xref:System.Windows.Media.FormattedText>除非设置了<xref:System.Windows.Media.FormattedText.MaxTextWidth%2A>属性, 或者文本包含回车符/换行符 (CR/LF), 否则对象将表现为单行控件。|  

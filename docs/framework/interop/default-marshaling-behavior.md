@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 13f1b2c3e3e651cb6c25b966d778cb436967509e
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: c6de6091b8970fde4a958148acf32dcefe1a6726
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629416"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946560"
 ---
 # <a name="default-marshaling-behavior"></a>默认封送处理行为
 互操作封送处理根据规则进行操作，该规则指定与方法参数相关联的数据在托管和非托管内存之间传递时的行为方式。 这些内置规则控制诸如此类的封送处理活动：数据类型转换、被调用方是否可以更改传递给它的数据并将这些更改返回给调用方以及在何种情况下封送拆收器提供性能优化。  
@@ -24,7 +24,7 @@ ms.locfileid: "68629416"
  本部分确定互操作封送处理服务的默认行为特征。 它提供有关封送处理数组、布尔值类型、char 类型、委托、类、对象、字符串和结构的详细信息。  
   
 > [!NOTE]
->  不支持泛型类型的封送处理。 有关详细信息，请参阅[使用泛型类型进行交互操作](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229590(v=vs.100))。  
+> 不支持泛型类型的封送处理。 有关详细信息，请参阅[使用泛型类型进行交互操作](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229590(v=vs.100))。  
   
 ## <a name="memory-management-with-the-interop-marshaler"></a>使用互操作封送拆收器进行内存管理  
  互操作封送拆收器始终尝试释放由非托管代码分配的内存。 此行为符合 COM 内存管理规则，但不同于用于管理本机 C++ 的规则。  
@@ -117,7 +117,7 @@ interface DelegateTest : IDispatch {
 在此示例中，当两个委托作为 <xref:System.Runtime.InteropServices.UnmanagedType.FunctionPtr?displayProperty=nameWithType> 封送时，得到的结果是一个 `int` 和一个指向 `int` 的指针。 由于要封送委托类型，此处 `int` 表示指向 void (`void*`) 的指针，这是该委托在内存中的地址。 也就是说，此结果是针对 32 位 Windows 系统的，因为此处 `int` 表示的是函数指针大小。
 
 > [!NOTE]
->  对指向由非托管代码持有的托管委托的函数指针的引用不会阻止公共语言运行时对托管对象执行垃圾收集。  
+> 对指向由非托管代码持有的托管委托的函数指针的引用不会阻止公共语言运行时对托管对象执行垃圾收集。  
   
  例如，下面的代码是错误的，因为对传递给 `SetChangeHandler` 方法的 `cb` 对象的引用不会使 `cb` 在超出 `Test` 方法的生存期时仍保持活动。 一旦对 `cb` 对象进行垃圾收集，传递给 `SetChangeHandler` 的函数指针将不再有效。  
   
@@ -246,12 +246,12 @@ internal static class NativeMethods
  必须由引用传递 `Rect` 值类型，因为非托管 API 预期有一个指向 `RECT` 的指针被传递给函数。 由值传递 `Point` 值类型，因为非托管的 API 需要在堆栈上传递 `POINT`。 此细微差别非常重要。 引用作为指针传递到非托管代码。 值传递到堆栈上的非托管代码。  
   
 > [!NOTE]
->  当格式化的类型作为结构进行封送处理时，仅可访问类型中的字段。 如果该类型具有方法、属性或事件，无法从非托管代码对它们进行访问。  
+> 当格式化的类型作为结构进行封送处理时，仅可访问类型中的字段。 如果该类型具有方法、属性或事件，无法从非托管代码对它们进行访问。  
   
  类也可以作为 C 样式结构封送到非托管代码，只要它们具有固定成员布局。 类的成员布局信息也通过 <xref:System.Runtime.InteropServices.StructLayoutAttribute> 属性提供。 具有固定布局的值类型与具有固定布局的类之间的主要区别在于它们被封送到非托管代码的方式。 由值（在堆栈上）传递值类型，由此，调用方看不到任何由被调用方对该类型的成员所做的更改。 由引用（在堆栈上传递对该类型的引用）传递引用类型；由此，调用方将看到被调用方对该类型的可直接复制到本机结构中的类型成员所做的所有更改。  
   
 > [!NOTE]
->  如果引用类型具有非直接复制到本机结构中的类型成员，则需要进行两次转换：第一次是当参数传递到非托管端时，第二次是从调用返回时。 由于此增加的开销，如果调用方想要查看被调用方所做的更改，必须将输入/输出参数显式应用到某个参数。  
+> 如果引用类型具有非直接复制到本机结构中的类型成员，则需要进行两次转换：第一次是当参数传递到非托管端时，第二次是从调用返回时。 由于此增加的开销，如果调用方想要查看被调用方所做的更改，必须将输入/输出参数显式应用到某个参数。  
   
  在以下示例中，`SystemTime` 类具有顺序成员布局，并且可以被传递给 Windows API GetSystemTime 函数  。  
   
@@ -351,7 +351,7 @@ interface _Graphics {
  当通过 COM 接口进行封送处理时，使用用于封送值和封送对平台调用的调用的引用的规则。 例如，当 `Point` 值类型的实例从 .NET Framework 传递到 COM 时，则由值传递 `Point`。 如果 `Point` 值类型由引用传递，则在堆栈上传递指向 `Point` 的指针。 互操作封送拆收器不支持任一方向更高级别的间接寻址 (Point  \*\*)。  
   
 > [!NOTE]
->  将 <xref:System.Runtime.InteropServices.LayoutKind> 枚举值设置为显式的结构无法用于 COM 互操作，因为导出的类型库不能表达显式布局  。  
+> 将 <xref:System.Runtime.InteropServices.LayoutKind> 枚举值设置为显式的结构无法用于 COM 互操作，因为导出的类型库不能表达显式布局  。  
   
 ### <a name="system-value-types"></a>系统值类型  
  <xref:System> 命名空间具有多个表示运行时原始类型装箱形式的值类型。 例如，值类型 <xref:System.Int32?displayProperty=nameWithType> 结构表示 ELEMENT_TYPE_I4 的装箱形式  。 不像其他格式化类型将这些类型作为结构进行封送处理，而是以它们装箱的原始类型的相同方式将它们封送处理。 因此，System.Int32 作为 ELEMENT_TYPE_I4 封送处理，而不是作为包含长类型的单个成员的结构封送处理    。 下表包含系统命名空间中的值类型列表，这些值类型是基元类型的装箱表示形式  。  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - properties [C#]
 - C# language, properties
 ms.assetid: e295a8a2-b357-4ee7-a12e-385a44146fa8
-ms.openlocfilehash: c7374b77526a31c2c508516d5a3cb7cc3e29339a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: dec4d4239fd1a953da6e64a1e1aff9593e2863e2
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64583069"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596149"
 ---
 # <a name="properties-c-programming-guide"></a>属性（C# 编程指南）
 
@@ -23,12 +23,12 @@ ms.locfileid: "64583069"
   
 - 属性允许类公开获取和设置值的公共方法，而隐藏实现或验证代码。  
   
-- [get](../../../csharp/language-reference/keywords/get.md) 属性访问器用于返回属性值，而 [set](../../../csharp/language-reference/keywords/set.md) 属性访问器用于分配新值。 这些访问器可以具有不同的访问级别。 有关详细信息，请参阅[限制访问器可访问性](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md)。  
+- [get](../../language-reference/keywords/get.md) 属性访问器用于返回属性值，而 [set](../../language-reference/keywords/set.md) 属性访问器用于分配新值。 这些访问器可以具有不同的访问级别。 有关详细信息，请参阅[限制访问器可访问性](./restricting-accessor-accessibility.md)。  
   
-- [value](../../../csharp/language-reference/keywords/value.md) 关键字用于定义由 `set` 访问器分配的值。  
+- [value](../../language-reference/keywords/value.md) 关键字用于定义由 `set` 访问器分配的值。  
 - 属性可以是*读-写*属性（既有 `get` 访问器又有 `set` 访问器）、*只读*属性（有 `get` 访问器，但没有 `set` 访问器）或*只写*访问器（有 `set` 访问器，但没有 `get` 访问器）。 只写属性很少出现，常用于限制对敏感数据的访问。
 
-- 不需要自定义访问器代码的简单属性可以作为表达式主体定义或[自动实现的属性](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)来实现。
+- 不需要自定义访问器代码的简单属性可以作为表达式主体定义或[自动实现的属性](./auto-implemented-properties.md)来实现。
  
 ## <a name="properties-with-backing-fields"></a>具有支持字段的属性
 
@@ -60,15 +60,15 @@ ms.locfileid: "64583069"
 
 ## <a name="related-sections"></a>相关章节  
   
-- [使用属性](../../../csharp/programming-guide/classes-and-structs/using-properties.md)  
+- [使用属性](./using-properties.md)  
   
-- [接口属性](../../../csharp/programming-guide/classes-and-structs/interface-properties.md)  
+- [接口属性](./interface-properties.md)  
   
-- [属性与索引器之间的比较](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)  
+- [属性与索引器之间的比较](../indexers/comparison-between-properties-and-indexers.md)  
   
-- [限制访问器可访问性](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md)  
+- [限制访问器可访问性](./restricting-accessor-accessibility.md)  
   
-- [自动实现的属性](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)  
+- [自动实现的属性](./auto-implemented-properties.md)  
   
 ## <a name="c-language-specification"></a>C# 语言规范  
 
@@ -76,8 +76,8 @@ ms.locfileid: "64583069"
   
 ## <a name="see-also"></a>请参阅
 
-- [C# 编程指南](../../../csharp/programming-guide/index.md)
-- [使用属性](../../../csharp/programming-guide/classes-and-structs/using-properties.md)
-- [索引器](../../../csharp/programming-guide/indexers/index.md)
-- [get 关键字](../../../csharp/language-reference/keywords/get.md)
-- [set 关键字](../../../csharp/language-reference/keywords/set.md)
+- [C# 编程指南](../index.md)
+- [使用属性](./using-properties.md)
+- [索引器](../indexers/index.md)
+- [get 关键字](../../language-reference/keywords/get.md)
+- [set 关键字](../../language-reference/keywords/set.md)

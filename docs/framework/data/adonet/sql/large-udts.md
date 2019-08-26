@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 420ae24e-762b-4e09-b4c3-2112c470ee49
-ms.openlocfilehash: 2114efcc4d39cb4d2ea9ca33d7ff244c81a7097f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 97df0bee10440dd03f07b980589d9dda85ce121e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650579"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69909871"
 ---
 # <a name="large-udts"></a>大型 UDT
 通过用户定义类型 (UDT)，开发人员可通过在 SQL Server 数据库中存储公共语言运行时 (CLR) 对象来扩展服务器的标量类型系统。 UDT 可以包含多个元素并可具有多种行为，与传统别名数据类型不同，它们由单一 SQL Server 系统数据类型组成。  
   
 > [!NOTE]
->  必须安装 .NET Framework 3.5 SP1（或更高版本）才能利用针对大型 UDT 增强的 SqlClient 支持。  
+> 必须安装 .NET Framework 3.5 SP1（或更高版本）才能利用针对大型 UDT 增强的 SqlClient 支持。  
   
  以前，UDT 的最大大小限制为 8KB。 在 SQL Server 2008 中，对于具有 <xref:Microsoft.SqlServer.Server.Format.UserDefined> 格式的 UDT，此限制已被取消。  
   
@@ -27,7 +27,7 @@ ms.locfileid: "64650579"
 1. [CLR 用户定义的类型](https://go.microsoft.com/fwlink/?LinkId=98366)  
   
 ## <a name="retrieving-udt-schemas-using-getschema"></a>使用 GetSchema 检索 UDT 架构  
- <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> 的 <xref:System.Data.SqlClient.SqlConnection> 方法可返回 <xref:System.Data.DataTable> 中的数据库架构信息。 有关详细信息，请参阅[SQL Server 架构集合](../../../../../docs/framework/data/adonet/sql-server-schema-collections.md)。  
+ <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> 的 <xref:System.Data.SqlClient.SqlConnection> 方法可返回 <xref:System.Data.DataTable> 中的数据库架构信息。 有关详细信息, 请参阅[SQL Server 架构集合](../../../../../docs/framework/data/adonet/sql-server-schema-collections.md)。  
   
 ### <a name="getschematable-column-values-for-udts"></a>UDT 的 GetSchemaTable 列值  
  <xref:System.Data.SqlClient.SqlDataReader.GetSchemaTable%2A> 的 <xref:System.Data.SqlClient.SqlDataReader> 方法可返回描述列元数据的 <xref:System.Data.DataTable>。 下表介绍了 SQL Server 2005 与 SQL Server 2008 中大型 UDT 的列元数据的差异。  
@@ -41,11 +41,11 @@ ms.locfileid: "64650579"
 |`ProviderSpecificDataType`|`SqlTypes.SqlBinary`|UDT 实例|  
 |`ProviderType`|21 (`SqlDbType.VarBinary`)|29 (`SqlDbType.Udt`)|  
 |`NonVersionedProviderType`|29 (`SqlDbType.Udt`)|29 (`SqlDbType.Udt`)|  
-|`DataTypeName`|`SqlDbType.VarBinary`|由三部分名称指定为*Database.SchemaName.TypeName*。|  
+|`DataTypeName`|`SqlDbType.VarBinary`|指定为*SchemaName*的三部分名称。|  
 |`IsLong`|不定|不定|  
   
 ## <a name="sqldatareader-considerations"></a>SqlDataReader 注意事项  
- 从 SQL Server 2008 开始，<xref:System.Data.SqlClient.SqlDataReader> 已得到扩展，可支持检索大型 UDT 值。 <xref:System.Data.SqlClient.SqlDataReader> 处理大型 UDT 值的方式取决于您所使用的 SQL Server 版本以及连接字符串中指定的 `Type System Version`。 有关详细信息，请参阅 <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>。  
+ 从 SQL Server 2008 开始，<xref:System.Data.SqlClient.SqlDataReader> 已得到扩展，可支持检索大型 UDT 值。 <xref:System.Data.SqlClient.SqlDataReader> 处理大型 UDT 值的方式取决于您所使用的 SQL Server 版本以及连接字符串中指定的 `Type System Version`。 有关详细信息，请参阅 <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> 。  
   
  当 <xref:System.Data.SqlClient.SqlDataReader> 设置为 SQL Server 2005 时，<xref:System.Data.SqlTypes.SqlBinary> 的以下方法将返回 `Type System Version` 而不是 UDT：  
   

@@ -2,18 +2,18 @@
 title: SQL Server 中的所有权和用户架构分离
 ms.date: 03/30/2017
 ms.assetid: 242830c1-31b5-4427-828c-cc22ff339f30
-ms.openlocfilehash: 2702f56e8b3b339487ffacf7bc1ceb077d4d8b30
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 520772acc5edd812f64c61cc7fdda9db3441c87c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645723"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69961085"
 ---
 # <a name="ownership-and-user-schema-separation-in-sql-server"></a>SQL Server 中的所有权和用户架构分离
 SQL Server 安全性的核心概念是对象的所有者具有管理这些对象的不可撤消的权限。 您不能取消对象所有者的特权，并且如果用户在数据库中拥有对象，您也不能将用户从数据库中删除。  
   
 ## <a name="user-schema-separation"></a>用户架构分离  
- 通过用户架构分离，可实现管理数据库对象权限的更大灵活性。 一个*架构*是数据库对象，它允许您对对象进行分组为单独的命名空间的命名的容器。 例如，AdventureWorks 示例数据库包含 Production、Sales 和 HumanResources 的架构。  
+ 通过用户架构分离，可实现管理数据库对象权限的更大灵活性。 *架构*是数据库对象的命名容器, 使你能够将对象分组到不同的命名空间中。 例如，AdventureWorks 示例数据库包含 Production、Sales 和 HumanResources 的架构。  
   
  用于引用对象的由四部分组成的命名语法指定架构名称。  
   
@@ -40,7 +40,7 @@ Server.Database.DatabaseSchema.DatabaseObject
  如果从模型数据库中删除这些架构，它们将不会显示在新数据库中。  
   
 > [!NOTE]
->  `sys` 和 `INFORMATION_SCHEMA` 架构是为系统对象而保留的。 您不能在这些架构中创建对象，而且不能删除它们。  
+> `sys` 和 `INFORMATION_SCHEMA` 架构是为系统对象而保留的。 您不能在这些架构中创建对象，而且不能删除它们。  
   
 #### <a name="the-dbo-schema"></a>dbo 架构  
  `dbo` 是新创建的数据库的默认架构。 `dbo` 架构由 `dbo` 用户帐户拥有。 默认情况下，使用 CREATE USER Transact-SQL 命令创建的用户的默认架构为 `dbo`。  
@@ -48,7 +48,7 @@ Server.Database.DatabaseSchema.DatabaseObject
  分配了 `dbo` 架构的用户不继承 `dbo` 用户帐户的权限。 用户不从架构继承权限；架构权限由架构中包含的数据库对象继承。  
   
 > [!NOTE]
->  当使用部分名称来引用数据库对象时，SQL Server 首先在用户的默认架构中查找。 如果在此处未找到该对象，则 SQL Server 其次将在 `dbo` 架构中查找。 如果对象不在 `dbo` 架构中，则会返回一个错误。  
+> 当使用部分名称来引用数据库对象时，SQL Server 首先在用户的默认架构中查找。 如果在此处未找到该对象，则 SQL Server 其次将在 `dbo` 架构中查找。 如果对象不在 `dbo` 架构中，则会返回一个错误。  
   
 ## <a name="external-resources"></a>外部资源  
  有关对象所有权和架构的更多信息，请参见下列资源。  

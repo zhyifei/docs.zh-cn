@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e35c7f9e-648b-4fcc-9361-d365c3e42c9a
-ms.openlocfilehash: 3038e35947cd8f97266d374a367a77380df440dd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ec4f0527b73a506b3c98675f77f8f49a1eeb1e1f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772172"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69934459"
 ---
 # <a name="modifying-data-with-a-dbdataadapter"></a>使用 DbDataAdapter 修改数据
 <xref:System.Data.Common.DbProviderFactory.CreateDataAdapter%2A> 对象的 <xref:System.Data.Common.DbProviderFactory> 方法为您提供 <xref:System.Data.Common.DbDataAdapter> 对象，该对象强类型化为创建工厂时指定的基础数据提供程序。 然后您可以使用 <xref:System.Data.Common.DbCommandBuilder> 创建命令，以插入、更新和删除数据源的 <xref:System.Data.DataSet> 中的数据。  
@@ -40,7 +40,7 @@ ms.locfileid: "61772172"
  工厂模型对于创建参数化 `DbCommand` 和 `DbDataAdapter` 对象不具有帮助价值。 你需要编写分支代码来创建针对数据提供程序定制的参数。  
   
 > [!IMPORTANT]
->  出于安全原因，建议不要通过采用字符串串联的形式构造直接 SQL 语句来完全避免提供程序特定的参数。 使用字符串串联代替参数会使您的应用程序容易受到 SQL 注入攻击。  
+> 出于安全原因，建议不要通过采用字符串串联的形式构造直接 SQL 语句来完全避免提供程序特定的参数。 使用字符串串联代替参数会使您的应用程序容易受到 SQL 注入攻击。  
   
 ## <a name="see-also"></a>请参阅
 

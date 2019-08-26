@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: 03a7c5a1-b296-4af4-b209-043c958dc0a5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 72cbcf1294f3d13f406d8db177f66fdc367c0758
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ba6393d19909d8be762ee38b4c925987528d6304
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54724442"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69967353"
 ---
 # <a name="modify-xml-data-using-xpathnavigator"></a>使用 XPathNavigator 修改 XML 数据
 <xref:System.Xml.XPath.XPathNavigator> 类提供一组方法用于修改 XML 文档中的节点和值。 要使用这些方法，<xref:System.Xml.XPath.XPathNavigator> 对象必须可编辑，即其 <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> 属性必须为 `true`。  
@@ -39,7 +39,7 @@ ms.locfileid: "54724442"
 |<xref:System.Xml.XPath.XPathNodeType.Namespace>|不受支持。|  
   
 > [!NOTE]
->  不支持编辑 <xref:System.Xml.XPath.XPathNodeType.Namespace> 节点或 <xref:System.Xml.XPath.XPathNodeType.Root> 节点。  
+> 不支持编辑 <xref:System.Xml.XPath.XPathNodeType.Namespace> 节点或 <xref:System.Xml.XPath.XPathNodeType.Root> 节点。  
   
  <xref:System.Xml.XPath.XPathNavigator> 类还提供一组方法，用于插入和移除节点。 若要详细了解如何在 XML 文档中插入和删除节点，请参阅[使用 XPathNavigator 插入 XML 数据](../../../../docs/standard/data/xml/insert-xml-data-using-xpathnavigator.md)和[使用 XPathNavigator 删除 XML 数据](../../../../docs/standard/data/xml/remove-xml-data-using-xpathnavigator.md)主题。  
   
@@ -109,7 +109,7 @@ navigator.SetTypedValue(DateTime.Now);
  <xref:System.Xml.XPath.XPathNavigator> 类使用 W3C XML 架构作为描述强类型 XML 的基础。 元素和属性可以基于对 W3C XML 架构文档的验证，使用类型信息添加批注。 可以包含其他元素或属性的元素称为复杂类型，而只能包含文本内容的元素称为简单类型。  
   
 > [!NOTE]
->  属性只能具有简单类型。  
+> 属性只能具有简单类型。  
   
  如果元素或属性符合其类型定义特定的所有规则，将被认为架构有效。 具有简单类型 `xs:int` 的元素必须包含介于 -2147483648 到 2147483647 之间的数值，才属于架构有效。 对于复杂类型，元素的架构有效性取决于其子元素和属性的架构有效性。 因此，如果元素符合其复杂类型定义，其所有子元素和属性也符合各自的类型定义。 同样，即使元素只有一个子元素或属性不符合其类型定义，或有效性未知，该元素也将无效或属于有效性未知。  
   
@@ -243,7 +243,7 @@ Console.WriteLine(navigator.OuterXml);
  如果使用 <xref:System.Xml.XPath.XPathNavigator> 对象向 `xsi:nil` 属性值为 `true` 的有效元素中添加内容，其 `xsi:nil` 属性的值将设置为 `false`。  
   
 > [!NOTE]
->  如果 `xsi:nil` 属性设置为 `false` 的元素的内容已删除，该属性的值不会更改为 `true`。  
+> 如果 `xsi:nil` 属性设置为 `false` 的元素的内容已删除，该属性的值不会更改为 `true`。  
   
 ## <a name="saving-an-xml-document"></a>保存 XML 文档  
  使用 <xref:System.Xml.XmlDocument> 类的方法保存本主题中所述的编辑方法对 <xref:System.Xml.XmlDocument> 对象的更改。 若要详细了解如何保存对 <xref:System.Xml.XmlDocument> 对象所做的更改，请参阅[保存和编写文档](../../../../docs/standard/data/xml/saving-and-writing-a-document.md)。  

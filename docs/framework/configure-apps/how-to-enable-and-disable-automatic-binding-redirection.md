@@ -5,12 +5,12 @@ helpviewer_keywords:
 - side-by-side execution, assembly binding redirection
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 5fca42f3-bdce-4b81-a704-61e42c89d3ba
-ms.openlocfilehash: d914310559403fba2f1fe8e4a60469ec3a867c24
-ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
+ms.openlocfilehash: 178d5070dd7018bbc0fce474cdd0b31ba3d17f77
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68733442"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69913036"
 ---
 # <a name="how-to-enable-and-disable-automatic-binding-redirection"></a>如何：启用和禁用自动绑定重定向
 
@@ -91,15 +91,15 @@ Web 应用的自动绑定重定向实现方式有所不同。 由于必须为 we
 
 1. 在 Visual Studio 中，编译应用，然后检查生成警告。
 
-   ![程序集引用冲突的生成警告](../../../docs/framework/configure-apps/media/clr-assemblyrefwarning.png "CLR_AssemblyRefWarning")
+   ![程序集引用冲突的生成警告](./media/clr-assemblyrefwarning.png "CLR_AssemblyRefWarning")
 
 2. 如果存在程序集绑定冲突，则将显示警告。 双击警告, 或选择警告, 然后按**enter**。
 
    一个对话框, 使你能够自动将必要的绑定重定向添加到源**web.config**文件中。
 
-   ![绑定重定向权限对话框](../../../docs/framework/configure-apps/media/clr-addbindingredirect.png "CLR_AddBindingRedirect")
+   ![绑定重定向权限对话框](./media/clr-addbindingredirect.png "CLR_AddBindingRedirect")
 
 ## <a name="see-also"></a>请参阅
 
-- [\<bindingRedirect > 元素](../../../docs/framework/configure-apps/file-schema/runtime/bindingredirect-element.md)
-- [重定向程序集版本](../../../docs/framework/configure-apps/redirect-assembly-versions.md)
+- [\<bindingRedirect > 元素](./file-schema/runtime/bindingredirect-element.md)
+- [重定向程序集版本](redirect-assembly-versions.md)

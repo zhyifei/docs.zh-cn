@@ -6,18 +6,18 @@ helpviewer_keywords:
 - templates, Windows Service
 ms.assetid: 0f5e2cbb-d95d-477c-b2b5-4b990e6b86ff
 author: ghogen
-ms.openlocfilehash: 124e8a0dff18f02c178b56167cd12faa1fc97992
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 960d30f4e484238e9e7c23741578650a8c3005c8
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649401"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69987157"
 ---
 # <a name="how-to-create-windows-services"></a>如何：创建 Windows 服务
-创建服务时，可使用名为“Windows 服务”的 Visual Studio 项目模板。 通过引用适当的类和命名空间、为服务设置来自基类的继承和替代你可能想要替代的几个方法，此模板自动为你完成了许多工作。  
+创建服务时，可使用名为“Windows 服务”  的 Visual Studio 项目模板。 通过引用适当的类和命名空间、为服务设置来自基类的继承和替代你可能想要替代的几个方法，此模板自动为你完成了许多工作。  
   
 > [!WARNING]
->  Visual Studio 的速成版中未提供 Windows 服务项目模板。  
+> Visual Studio 的速成版中未提供 Windows 服务项目模板。  
   
  要创建功能性服务，你至少必须：  
   
@@ -29,17 +29,17 @@ ms.locfileid: "64649401"
   
 ### <a name="to-create-a-windows-service-application"></a>要创建 Windows 服务应用程序  
   
-1. 创建“Windows 服务”项目。  
+1. 创建“Windows 服务”  项目。  
   
     > [!NOTE]
-    >  有关不使用模板编写服务的说明，请参阅[如何：以编程方式编写服务](../../../docs/framework/windows-services/how-to-write-services-programmatically.md)。  
+    > 有关不使用模板编写服务的说明，请参阅[如何：以编程方式编写服务](../../../docs/framework/windows-services/how-to-write-services-programmatically.md)。  
   
-2. 在“属性”窗口中，为服务设置 <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> 属性。  
+2. 在“属性”  窗口中，为服务设置 <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> 属性。  
   
      ![设置 ServiceName 属性。](../../../docs/framework/windows-services/media/windowsservice-servicename.PNG "WindowsService_ServiceName")  
   
     > [!NOTE]
-    >  <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> 属性的值必须始终与记录在安装程序类中的名称相匹配。 如果更改此属性，你还必须更新安装程序类的 <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> 属性。  
+    > <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> 属性的值必须始终与记录在安装程序类中的名称相匹配。 如果更改此属性，你还必须更新安装程序类的 <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> 属性。  
   
 3. 设置下列任何一个属性，确定你的服务的运行方式。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "64649401"
     |<xref:System.ServiceProcess.ServiceBase.AutoLog%2A>|`True` 将在你的服务执行操作时向应用程序事件日志写入信息条目；`false` 将禁用该功能。 有关详细信息，请参阅[如何：记录关于服务的信息](../../../docs/framework/windows-services/how-to-log-information-about-services.md)。 **注意：** 默认情况下，<xref:System.ServiceProcess.ServiceBase.AutoLog%2A> 设置为 `true`。|  
   
     > [!NOTE]
-    >  当 <xref:System.ServiceProcess.ServiceBase.CanStop%2A> 或 <xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A> 设置为 `false` 时，“服务控制管理器”将禁用相应的菜单选项来停止、暂停或继续该服务。  
+    > 当 <xref:System.ServiceProcess.ServiceBase.CanStop%2A> 或 <xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A> 设置为 `false` 时，“服务控制管理器”  将禁用相应的菜单选项来停止、暂停或继续该服务。  
   
 4. 访问代码编辑器，并填写你想要对 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 和 <xref:System.ServiceProcess.ServiceBase.OnStop%2A> 过程的处理。  
   
@@ -60,10 +60,10 @@ ms.locfileid: "64649401"
   
 6. 添加服务应用程序所必需的安装程序。 有关详细信息，请参阅[如何：将安装程序添加到服务应用程序](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)。  
   
-7. 通过从“生成”菜单选择“生成解决方案”来生成项目。  
+7. 通过从“生成”  菜单选择“生成解决方案”  来生成项目。  
   
     > [!NOTE]
-    >  不要通过按 F5 来运行你的项目 — 你无法通过这种方式运行服务项目。  
+    > 不要通过按 F5 来运行你的项目 — 你无法通过这种方式运行服务项目。  
   
 8. 安装服务。 有关详细信息，请参阅[如何：安装和卸载服务](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)。  
   

@@ -2,12 +2,12 @@
 title: <peerTransport>
 ms.date: 03/30/2017
 ms.assetid: c1a5013a-9dd4-4a27-b114-795b8b323177
-ms.openlocfilehash: 6765259f290047a4199a422b4ad0cced2ffee9ae
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1ad05fd9125ecc8b3d5797e0dd335adbf808db84
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783346"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933846"
 ---
 # <a name="peertransport"></a>\<peerTransport>
 定义自定义绑定的对等传输。  
@@ -15,7 +15,7 @@ ms.locfileid: "61783346"
  \<system.serviceModel>  
 \<bindings>  
 \<customBinding>  
-\<binding>  
+\<绑定 >  
 \<peerTransport>  
   
 ## <a name="syntax"></a>语法  
@@ -46,13 +46,13 @@ ms.locfileid: "61783346"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-peertransport.md)|定义此传输的安全设置。 此元素的类型为 <xref:System.ServiceModel.Configuration.PeerSecurityElement>。|  
+|[\<security>](security-of-peertransport.md)|定义此传输的安全设置。 此元素的类型为 <xref:System.ServiceModel.Configuration.PeerSecurityElement>。|  
   
 ### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<binding>](../../../../../docs/framework/misc/binding.md)|定义自定义绑定的所有绑定功能。|  
+|[\<binding>](../../../misc/binding.md)|定义自定义绑定的所有绑定功能。|  
   
 ## <a name="remarks"></a>备注  
  此传输不可用于包含请求/答复操作的协定。  
@@ -63,9 +63,9 @@ ms.locfileid: "61783346"
 - <xref:System.ServiceModel.Channels.PeerTransportBindingElement>
 - <xref:System.ServiceModel.Channels.TransportBindingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [传输](../../../../../docs/framework/wcf/feature-details/transports.md)
-- [选择传输](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
-- [绑定](../../../../../docs/framework/wcf/bindings.md)
-- [扩展绑定](../../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [自定义绑定](../../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [传输](../../../wcf/feature-details/transports.md)
+- [选择传输](../../../wcf/feature-details/choosing-a-transport.md)
+- [绑定](../../../wcf/bindings.md)
+- [扩展绑定](../../../wcf/extending/extending-bindings.md)
+- [自定义绑定](../../../wcf/extending/custom-bindings.md)
+- [\<customBinding>](custombinding.md)

@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS Security
 ms.assetid: c321cbf9-8c05-4cce-b5a5-4bf7b230ee03
-ms.openlocfilehash: b9345de7961689e15e60c6bf2d1916c8c8d56ba3
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: fdcf0c25e4e6cab2c99457112b892f5d2c5bd3b4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65876783"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69930621"
 ---
 # <a name="message-security-anonymous"></a>匿名消息安全
-匿名消息安全的示例演示如何实现 Windows Communication Foundation (WCF) 应用程序使用消息级安全的无客户端身份验证，但需要使用服务器的 X.509 服务器身份验证证书。 客户端与服务器之间的所有应用程序消息均已进行签名和加密。 此示例基于[WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md)示例。 此示例由客户端控制台程序 (.exe) 和 Internet 信息服务 (IIS) 所承载的服务库 (.dll) 组成。 该服务实现定义“请求-答复”通信模式的协定。
+消息安全匿名示例演示如何实现一个 Windows Communication Foundation (WCF) 应用程序, 该应用程序使用不带客户端身份验证的消息级安全性, 但需要使用服务器的 x.509 进行服务器身份验证证书. 客户端与服务器之间的所有应用程序消息均已进行签名和加密。 此示例基于[WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md)示例。 此示例由客户端控制台程序 (.exe) 和 Internet 信息服务 (IIS) 所承载的服务库 (.dll) 组成。 该服务实现定义“请求-答复”通信模式的协定。
 
 > [!NOTE]
->  本主题的最后介绍了此示例的设置过程和生成说明。
+> 本主题的最后介绍了此示例的设置过程和生成说明。
 
  如果不对客户端进行身份验证，则本示例向返回 `True` 的计算器接口添加新运算。
 
@@ -57,7 +57,7 @@ public class CalculatorService : ICalculator
 </system.serviceModel>
 ```
 
- 中指定要用于服务身份验证的凭据[\<行为 >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)。 服务器证书包含的 `SubjectName` 的值必须与为 `findValue` 属性指定的值相同，如下面的示例代码所示。
+ 用于服务身份验证的凭据在 " [ \<行为" >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)中指定。 服务器证书包含的 `SubjectName` 的值必须与为 `findValue` 属性指定的值相同，如下面的示例代码所示。
 
 ```xml
 <behaviors>
@@ -108,7 +108,7 @@ public class CalculatorService : ICalculator
 
  本示例将 <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CertificateValidationMode%2A> 设置为 <xref:System.ServiceModel.Security.X509CertificateValidationMode.PeerOrChainTrust> 以便对服务的证书进行身份验证。 这是在`behaviors`一节中的客户端的 App.config 文件中实现的。 这意味着如果证书在用户的“受信任人”存储中，则信任此证书，而不对证书的颁发者链执行身份验证。 此处使用的设置是为了方便起见，使示例可以不需要证书颁发机构 (CA) 颁发的证书就能运行。 此设置没有默认设置 ChainTrust 安全。 在生产代码中使用 `PeerOrChainTrust` 之前，应仔细考虑此设置的安全含义。
 
- 客户端实现添加到调用`IsCallerAnonymous`方法，否则与并无差异[WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md)示例。
+ 客户端实现添加对方法的`IsCallerAnonymous`调用, 否则不同于[WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md)示例。
 
 ```csharp
 // Create a client with a client endpoint configuration.
@@ -174,7 +174,7 @@ Press <ENTER> to terminate client.
 
 - 授予对证书私钥的权限。
 
-     Setup.bat 批处理文件中的以下行进行 ASP.NET 工作进程帐户访问 LocalMachine 存储区中存储的服务器证书。
+     ASP.NET 批处理文件中的以下行使在 LocalMachine 存储区中存储的服务器证书可供工作进程帐户访问。
 
     ```bat
     echo ************
@@ -187,11 +187,11 @@ Press <ENTER> to terminate client.
     ```
 
 > [!NOTE]
->  如果您使用的是非美国英文版本的 Windows，则必须编辑 Setup.bat 文件，并用与您所在的区域对应的帐户名替换 `NT AUTHORITY\NETWORK SERVICE` 帐户名。
+> 如果您使用的是非美国英文版本的 Windows，则必须编辑 Setup.bat 文件，并用与您所在的区域对应的帐户名替换 `NT AUTHORITY\NETWORK SERVICE` 帐户名。
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例
 
-1. 请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。
+1. 确保已对[Windows Communication Foundation 示例执行了一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。
 
 2. 若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。
 
@@ -199,16 +199,16 @@ Press <ENTER> to terminate client.
 
 1. 请确保路径包括 Makecert.exe 和 FindPrivateKey.exe 所在的文件夹。
 
-2. 使用管理员特权运行 Visual Studio，请从示例安装文件夹在开发人员命令提示符上运行 Setup.bat。 这将安装运行示例所需的所有证书。
+2. 从 Visual Studio 的开发人员命令提示中的示例安装文件夹运行安装程序。使用管理员权限运行。 这将安装运行示例所需的所有证书。
 
     > [!NOTE]
-    > Setup 批处理文件设计为 Visual Studio 的开发人员命令提示符运行。 这要求路径环境变量指向 SDK 的安装目录。 此环境变量自动设置为 Visual Studio 在开发人员命令提示中。  
+    > 安装批处理文件设计为从 Visual Studio 的开发人员命令提示中运行。 这要求路径环境变量指向 SDK 的安装目录。 在 Visual Studio 开发人员命令提示中自动设置此环境变量。  
   
 3. 验证是否可以通过输入地址使用浏览器的服务访问 `http://localhost/servicemodelsamples/service.svc` 。  
   
 4. 启动 \client\bin 中的 Client.exe。 客户端活动将显示在客户端控制台应用程序上。  
   
-5. 如果客户端和服务能够进行通信，请参见[WCF 示例的故障排除提示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
+5. 如果客户端和服务无法进行通信, 请参阅[WCF 示例的故障排除提示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
   
 ### <a name="to-run-the-sample-across-computers"></a>跨计算机运行示例  
   
@@ -220,21 +220,21 @@ Press <ENTER> to terminate client.
   
 4. 将客户端程序文件复制到客户端计算机上的客户端目录中。 另外，将 Setup.bat、Cleanup.bat 和 ImportServiceCert.bat 文件复制到客户端上。  
   
-5. 在服务器上运行`setup.bat service`使用管理员特权打开在 Visual Studio 的开发人员命令提示。 运行`setup.bat`与`service`参数与计算机的名称的完全限定域名创建一个服务证书并将服务证书导出到名为 Service.cer 的文件。  
+5. 在服务器上, 在`setup.bat service`使用管理员特权打开的 Visual Studio 开发人员命令提示中运行。 使用`setup.bat`参数运行将使用计算机的完全限定的域名创建一个服务证书, 并将服务证书导出到名为的文件。 `service`  
   
-6. 编辑 Web.config 以反映新的证书名称 (在`findValue`中的属性[ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md))，这是与计算机的名称的完全限定域名相同。  
+6. 编辑 web.config 以反映新的证书名称 (在`findValue` [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)的属性中), 该名称与计算机的完全限定域名相同。  
   
 7. 将服务目录中的 Service.cer 文件复制到客户端计算机上的客户端目录中。  
   
 8. 在客户端计算机上的 Client.exe.config 文件中，更改终结点的地址值，使其与服务的新地址相匹配。  
   
-9. 在客户端上运行 ImportServiceCert.bat 在开发人员命令提示符下使用管理员特权打开 Visual Studio。 这会将 Service.cer 文件中的服务证书导入 CurrentUser – TrustedPeople 存储区。  
+9. 在客户端上, 在使用管理员特权打开的 Visual Studio 开发人员命令提示中运行 Importservicecert.bat。 这会将 Service.cer 文件中的服务证书导入 CurrentUser – TrustedPeople 存储区。  
   
-10. 在客户端计算机上，在命令提示符下启动 Client.exe。 如果客户端和服务能够进行通信，请参见[WCF 示例的故障排除提示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
+10. 在客户端计算机上，在命令提示符下启动 Client.exe。 如果客户端和服务无法进行通信, 请参阅[WCF 示例的故障排除提示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
   
 ### <a name="to-clean-up-after-the-sample"></a>运行示例后进行清理  
   
 - 运行完示例后运行示例文件夹中的 Cleanup.bat。  
   
 > [!NOTE]
->  此脚本不会在跨计算机运行此示例时移除客户端上的服务证书。 如果有运行在计算机之间使用证书的 Windows Communication Foundation (WCF) 示例，请确保清除已安装在 CurrentUser-TrustedPeople 存储区中的服务证书。 若要执行此操作，请使用以下命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` 例如： `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com.`
+> 此脚本不会在跨计算机运行此示例时移除客户端上的服务证书。 如果你已运行跨计算机使用证书 Windows Communication Foundation (WCF) 示例, 请确保清除已安装在 CurrentUser-TrustedPeople 存储中的服务证书。 为此, 请使用以下命令:`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` 例如： `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com.`

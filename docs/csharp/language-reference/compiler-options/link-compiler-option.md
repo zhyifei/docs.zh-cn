@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -link compiler option [C#]
 - link compiler option [C#]
 ms.assetid: 00da70c6-9ea1-43c2-86f2-aa7f26c03475
-ms.openlocfilehash: 049d1ce7a27a812b58fb09802e1ce520e96ed925
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 724a848d4c31b2c4f6fc3427d70fc84f4fd944c6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586016"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924764"
 ---
 # <a name="-link-c-compiler-options"></a>-link（C# 编译器选项）
 使编译器让指定程序集中的 COM 类型信息可供当前正在编译的项目使用。  
@@ -41,9 +41,9 @@ ms.locfileid: "65586016"
  `-link` 选项只嵌入接口、结构和委托。 不支持嵌入 COM 类。  
   
 > [!NOTE]
->  在代码中创建嵌入 COM 类型的实例时，必须使用适当的接口创建该实例。 尝试使用组件类创建嵌入 COM 类型的实例会导致错误。  
+> 在代码中创建嵌入 COM 类型的实例时，必须使用适当的接口创建该实例。 尝试使用组件类创建嵌入 COM 类型的实例会导致错误。  
   
- 若要在 Visual Studio 中设置 `-link` 选项，请添加程序集引用并将 `Embed Interop Types` 属性设置为“true”。 `Embed Interop Types` 属性的默认值为 **false**。  
+ 若要在 Visual Studio 中设置 `-link` 选项，请添加程序集引用并将 `Embed Interop Types` 属性设置为“true”  。 `Embed Interop Types` 属性的默认值为 **false**。  
   
  如果链接到本身引用了其他 COM 程序集（程序集 B）的 COM 程序集（程序集 A），则在满足以下任一条件时，还必须链接到程序集 B：  
   
@@ -51,7 +51,7 @@ ms.locfileid: "65586016"
   
 - 调用具有程序集 B 中的返回类型或参数类型的字段、属性、事件或方法。  
   
- 与 [-reference](../../../csharp/language-reference/compiler-options/reference-compiler-option.md) 编译器选项类似，`-link` 编译器选项使用引用常用 .NET Framework 程序集的 Csc.rsp 响应文件。 如果不希望编译器使用 Csc.rsp 文件，则使用 [-noconfig](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md) 编译器选项。  
+ 与 [-reference](./reference-compiler-option.md) 编译器选项类似，`-link` 编译器选项使用引用常用 .NET Framework 程序集的 Csc.rsp 响应文件。 如果不希望编译器使用 Csc.rsp 文件，则使用 [-noconfig](./noconfig-compiler-option.md) 编译器选项。  
   
  `-link` 的缩写形式是 `-l`。  
   
@@ -83,9 +83,9 @@ csc -link:COMData1.dll,COMData2.dll -out:OfficeApp.exe OfficeApp.cs
   
 ## <a name="see-also"></a>请参阅
 
-- [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)
+- [C# 编译器选项](./index.md)
 - [演练：嵌入托管程序集中的类型](../../programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)
-- [-reference（C# 编译器选项）](../../../csharp/language-reference/compiler-options/reference-compiler-option.md)
-- [-noconfig（C# 编译器选项）](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md)
-- [在命令行上使用 csc.exe 生成](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)
-- [互操作性概述](../../../csharp/programming-guide/interop/interoperability-overview.md)
+- [-reference（C# 编译器选项）](./reference-compiler-option.md)
+- [-noconfig（C# 编译器选项）](./noconfig-compiler-option.md)
+- [在命令行上使用 csc.exe 生成](./command-line-building-with-csc-exe.md)
+- [互操作性概述](../../programming-guide/interop/interoperability-overview.md)

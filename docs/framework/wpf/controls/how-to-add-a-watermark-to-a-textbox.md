@@ -8,20 +8,20 @@ helpviewer_keywords:
 - displaying a background image inside a text box to aid user input [WPF]
 - aid usability of a TextBox using a background image [WPF]
 ms.assetid: df89bdd8-a0fb-45e0-b312-dd53332d01a8
-ms.openlocfilehash: ef2536f03ba6ed08e27d2fcf30cd1f72df2cf460
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: abe276c686d394ded13ec03f08deae65e4098d03
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61911609"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923573"
 ---
 # <a name="how-to-add-a-watermark-to-a-textbox"></a>如何：向 TextBox 添加水印
-下面的示例演示如何帮助的可用性<xref:System.Windows.Controls.TextBox>通过显示说明性背景图像的内部<xref:System.Windows.Controls.TextBox>直到用户输入文本，此时删除映像。 此外，背景图像重新还原如果用户删除其输入。 请参阅下图。  
+下面的示例演示了如何<xref:System.Windows.Controls.TextBox>通过在用户输入文本<xref:System.Windows.Controls.TextBox>之前, 在中显示说明性背景图像来帮助的可用性, 此时将删除图像。 此外, 如果用户删除了其输入, 则会再次还原背景图像。 请参阅下图。  
   
- ![背景图像的文本框](./media/editing-textbox-using-background-image.png "Editing_TextBox_using_background_image")  
+ ![带有背景图像的文本框](./media/editing-textbox-using-background-image.png "Editing_TextBox_using_background_image")  
   
 > [!NOTE]
->  在此示例中而不只操作使用的背景图像的原因<xref:System.Windows.Controls.TextBox.Text%2A>属性的<xref:System.Windows.Controls.TextBox>，是背景图像不会干扰数据绑定。  
+> 在此示例中使用背景图像而不是只是操作<xref:System.Windows.Controls.TextBox.Text%2A>的<xref:System.Windows.Controls.TextBox>属性, 这是因为背景图像不会干扰数据绑定。  
   
 ## <a name="example"></a>示例  
  [!code-xaml[TextBoxMiscSnippets_snip#TextBoxBackgroundExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/TextBoxMiscSnippets_snip/csharp/textbox_with_background_image.xaml#textboxbackgroundexamplewholepage)]  

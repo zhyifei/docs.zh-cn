@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: 6c27f9e2-809c-4bc9-aca9-72f90360e7a3
 author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: 750708483f9680745eef4531d86fa7ecaa329f51
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 4e28e8ccea1090e6a5704b541e09dc11681278ed
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301196"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920649"
 ---
-# <a name="sectiongroup-element-for-configsections"></a>\<sectionGroup > 元素\<configSections >
+# <a name="sectiongroup-element-for-configsections"></a>\<configSections 的\<sectionGroup > 元素 >
 
 定义配置节的命名空间。
 
-[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[ **\<configSections>** ](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)   
+[ **\<configuration>** ](configuration-element.md)   
+&nbsp;&nbsp;[ **\<configSections>** ](configsections-element-for-configuration.md)   
 &nbsp;&nbsp;&nbsp;&nbsp; **\<sectionGroup>**
 
 ## <a name="syntax"></a>语法
@@ -36,27 +36,27 @@ ms.locfileid: "66301196"
 
 |           | 描述 |
 | --------- | ----------- |
-| **name**  | 必需的特性。<br><br>指定正在定义的节组的名称。 |
+| **名称**  | 必需的特性。<br><br>指定正在定义的节组的名称。 |
 
 ## <a name="parent-element"></a>父元素
 
 |     | 描述 |
 | --- | ----------- |
-| [ **\<configSections >** 元素](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | 包含配置节和命名空间声明。 |
+| [ **configSections>\<** 元素](configsections-element-for-configuration.md) | 包含配置节和命名空间声明。 |
 
 ## <a name="child-elements"></a>子元素
 
 |     | 描述 |
 | --- | ----------- |
-| [ **\<section>** ](~/docs/framework/configure-apps/file-schema/section-element.md) | 包含配置部分声明。 |
+| [ **\<节 >** ](section-element.md) | 包含配置节声明。 |
 
 ## <a name="remarks"></a>备注
 
-声明部分组创建的配置节的容器标记，并可确保不存在命名冲突与定义的其他人配置节。 可以嵌套 **\<sectionGroup >** 中每个其他元素。
+声明节组将为配置节创建容器标记, 并确保与其他人定义的配置节之间没有命名冲突。 可以将 **\<sectionGroup >** 元素嵌套在一起。
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何声明节组和声明组内的节的节：
+下面的示例演示如何声明一个节组, 并在节组中声明部分:
 
 ```xml
 <configuration>
@@ -76,8 +76,8 @@ ms.locfileid: "66301196"
 
 ## <a name="configuration-file"></a>配置文件
 
-在应用程序配置文件中，计算机配置文件可以使用此元素 (*Machine.config*)，并*Web.config*不在应用程序目录级别上的文件。
+此元素可用于应用程序配置文件、计算机配置文件 (*machine.config*) 和不在应用程序目录级别的 web.config 文件。
 
 ## <a name="see-also"></a>请参阅
 
-- [.NET Framework 的配置文件架构](~/docs/framework/configure-apps/file-schema/index.md)
+- [.NET Framework 的配置文件架构](index.md)

@@ -7,20 +7,20 @@ helpviewer_keywords:
 ms.assetid: bdf89bea-1623-45ee-a57b-cf7c90395efa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f4ae9710b99c85cfcbe3de2669c7ee85d0d24ef4
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 7a6af73a5251cdc52589967178218f8675cac869
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629359"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946464"
 ---
 # <a name="how-to-create-com-wrappers"></a>如何：创建 COM 包装
 
 可以通过使用 Visual Studio 2005 功能或 .NET Framework 工具 Tlbimp.exe 和 Regasm.exe 创建组件对象模型 (COM) 包装器。 这两种方法都会生成两种类型的 COM 包装器：
 
-- 从类型库中生成一个[运行时可调用包装器](../../../docs/standard/native-interop/runtime-callable-wrapper.md)以在托管代码中运行 COM 对象。
+- 从类型库中生成一个[运行时可调用包装器](../../standard/native-interop/runtime-callable-wrapper.md)以在托管代码中运行 COM 对象。
 
-- 生成具有所需注册表设置的一个 [COM 可调用包装器](../../../docs/standard/native-interop/com-callable-wrapper.md)以在本机应用程序中运行托管对象。
+- 生成具有所需注册表设置的一个 [COM 可调用包装器](../../standard/native-interop/com-callable-wrapper.md)以在本机应用程序中运行托管对象。
 
 在 Visual Studio 2005 中，可以将 COM 包装器作为引用添加到项目中。
 
@@ -75,5 +75,5 @@ ms.locfileid: "68629359"
   
 ## <a name="see-also"></a>请参阅
 
-- [运行时可调用包装器](../../../docs/standard/native-interop/runtime-callable-wrapper.md)
-- [COM 可调用包装器](../../../docs/standard/native-interop/com-callable-wrapper.md)
+- [运行时可调用包装器](../../standard/native-interop/runtime-callable-wrapper.md)
+- [COM 可调用包装器](../../standard/native-interop/com-callable-wrapper.md)

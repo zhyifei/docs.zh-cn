@@ -2,20 +2,20 @@
 title: <scopes>
 ms.date: 03/30/2017
 ms.assetid: 9a0dd3ce-e383-4ac3-b7be-7d604388304a
-ms.openlocfilehash: 8bc720238ca3039106345783381cd26134fc46b5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dd6513930798e9e1ab263f75c9350511c2dcdcd5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61670620"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69935188"
 ---
 # <a name="scopes"></a>\<scopes>
 包含一个配置元素集合，这些元素指定可用于在查询时筛选服务终结点的自定义范围 URI。  
   
 \<system.ServiceModel>  
-\<behaviors>  
+\<行为 >  
 \<endpointBehaviors>  
-\<behavior>  
+\<行为 >  
 \<endpointDiscovery>  
 \<scopes>  
   
@@ -45,13 +45,13 @@ ms.locfileid: "61670620"
   
 |特性|描述|  
 |---------------|-----------------|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-scopes.md)|添加可在匹配条件以查找服务时使用的终结点的范围信息。|  
+|[\<add>](add-of-scopes.md)|添加可在匹配条件以查找服务时使用的终结点的范围信息。|  
   
 ### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<endpointDiscovery>](../../../../../docs/framework/configure-apps/file-schema/wcf/endpointdiscovery.md)|指定终结点的各种发现设置，例如终结点的可发现性、范围以及对终结点元数据的任何自定义扩展。|  
+|[\<endpointDiscovery>](endpointdiscovery.md)|指定终结点的各种发现设置，例如终结点的可发现性、范围以及对终结点元数据的任何自定义扩展。|  
   
 ## <a name="see-also"></a>请参阅
 

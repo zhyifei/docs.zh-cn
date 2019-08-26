@@ -3,12 +3,12 @@ title: 使用 LINQ
 description: 此教程将介绍如何使用 LINQ 生成序列、编写用于 LINQ 查询的方法，以及如何区分及早计算和惰性计算。
 ms.date: 10/29/2018
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: e37c013add02f651875db7b908ae2b49711d996d
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 3cbafbb6aeed3abdd6d83ead613b29de738d5604
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67609312"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69587177"
 ---
 # <a name="working-with-linq"></a>使用 LINQ
 
@@ -142,7 +142,7 @@ public static void Main(string[] args)
 
 但标准库中没有可供使用的洗牌方法，因此必须自行编写。 将要创建的洗牌方法体现了要对基于 LINQ 的程序执行的几种操作，因此我们将逐步介绍此过程的每个部分。
 
-需要编写几种特殊的方法，我们称之为<xref:System.Collections.Generic.IEnumerable%601>扩展方法[，来添加一些功能，以便于与 LINQ 查询返回的 ](../../csharp/programming-guide/classes-and-structs/extension-methods.md) 交互。 简而言之，扩展方法是具有特殊用途的静态方法，借助它无需修改你想要为其添加功能的已有原始类型，即可向其添加功能。 
+需要编写几种特殊的方法，我们称之为<xref:System.Collections.Generic.IEnumerable%601>扩展方法[，来添加一些功能，以便于与 LINQ 查询返回的 ](../programming-guide/classes-and-structs/extension-methods.md) 交互。 简而言之，扩展方法是具有特殊用途的静态方法，借助它无需修改你想要为其添加功能的已有原始类型，即可向其添加功能。 
 
 向程序添加新的静态类文件（名称为 `Extensions.cs`），以用于存放扩展方法，然后开始生成第一个扩展方法： 
 

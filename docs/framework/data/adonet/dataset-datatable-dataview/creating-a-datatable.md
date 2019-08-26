@@ -5,28 +5,28 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: eecf9d78-60e3-4fdc-8de0-e56c13a89414
-ms.openlocfilehash: 272976d3c581d3e8a5860ba5cf3f9695ca370d8c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b56d2f8cd46f3184f1001c8bd6a70dbfc4968968
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034406"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937033"
 ---
 # <a name="creating-a-datatable"></a>创建数据表
 <xref:System.Data.DataTable> 表示一个内存内关系数据的表，可以独立创建和使用，也可以由其他 .NET Framework 对象使用，最常见的情况是作为 <xref:System.Data.DataSet> 的成员使用。  
   
- 您可以创建**DataTable**通过使用相应的对象**DataTable**构造函数。 您可以将其添加到**数据集**通过使用**添加**方法以将其添加到**DataTable**对象的**表**集合。  
+ 您可以使用相应的**datatable**构造函数创建**datatable**对象。 您可以通过使用**add**方法将其添加到**DataTable**对象的**Tables**集合中, 将其添加到**数据集**。  
   
- 此外可以创建**DataTable**对象内**数据集**通过**填充**或**FillSchema**方法**DataAdapter**对象，或从预定义或推断 XML 架构使用**ReadXml**， **ReadXmlSchema**，或**InferXmlSchema**方法**数据集**。 请注意，添加之后**DataTable**作为的成员**表**之一集合**数据集**，不能将其添加到的任何其他表集合**数据集**。  
+ 您还可以通过使用**DataAdapter**对象的**Fill**或**FillSchema**方法, 或使用**ReadXml**的预定义或推断 XML 架构在**数据集中**创建**DataTable**对象**ReadXmlSchema** **数据集**的**InferXmlSchema**方法。 请注意, 将**DataTable**添加为一个**数据集**的**tables**集合的成员后, 不能将其添加到任何其他**数据集**的表的集合中。  
   
- 当你首次创建**DataTable**，它没有架构 （即结构）。 若要定义的表的架构，必须创建并添加<xref:System.Data.DataColumn>对象添加到**列**表的集合。 此外可以定义表的主键列和创建并添加**约束**对象添加到**约束**表的集合。 定义的架构后**DataTable**，可以通过添加到表中添加数据行**DataRow**对象添加到**行**表的集合。  
+ 首次创建**DataTable**时, 它没有架构 (即结构)。 若要定义表的架构, 必须创建对象并将其<xref:System.Data.DataColumn>添加到表的**Columns**集合中。 您还可以为表定义主键列, 并创建**约束**对象并将其添加到表的**约束**集合。 为**DataTable**定义了架构之后, 可以通过将**DataRow**对象添加到表的**rows**集合中来向表中添加数据行。  
   
- 不要求您提供的值<xref:System.Data.DataTable.TableName%2A>属性在创建时**DataTable**; 可以在另一个时，指定该属性或者可以将其留空。 但是，您添加的表，而无需**TableName**值设置为**数据集**，该表会得到表的递增的默认名称*N*，从开始 Table0"表"。  
+ 创建<xref:System.Data.DataTable.TableName%2A> **DataTable**时, 不需要提供属性的值; 您可以在其他时间指定该属性, 也可以将其留空。 但是, 当您将没有**TableName**值的表添加到**数据集**时, 将为该表给定增量默认名称表*N*, 并以 "table" 作为 Table0。  
   
 > [!NOTE]
->  我们建议你避免"表*N*"命名约定，在提供时**TableName**值，因为所提供的名称可能与中现有的默认表名称冲突**数据集**. 如果提供的名称已经存在，将引发异常。  
+> 当你提供**TableName**值时, 我们建议你避免使用 "Table*N*" 命名约定, 因为所提供的名称可能与**数据集中**的现有默认表名称冲突。 如果提供的名称已经存在，将引发异常。  
   
- 下面的示例创建的实例**DataTable**对象，并将其分配名称"Customers。  
+ 下面的示例创建**DataTable**对象的一个实例, 并为其分配名称 "Customers"。  
   
 ```vb  
 Dim workTable as DataTable = New DataTable("Customers")  
@@ -36,7 +36,7 @@ Dim workTable as DataTable = New DataTable("Customers")
 DataTable workTable = new DataTable("Customers");  
 ```  
   
- 下面的示例创建的实例**DataTable**通过将其添加到**表**的集合**数据集**。  
+ 下面的示例通过将 DataTable 添加到**DataSet**的**Tables**集合来创建**DataTable**的实例。  
   
 ```vb  
 Dim customers As DataSet = New DataSet  

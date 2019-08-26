@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cf5eacd0-d3ec-4879-b6da-5fd5e4372202
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 37c6e87ea50f3978bb896c7896a41b2faa9798bc
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: e5b99597a857f4c7926f783a6531f44fdb1fb7bc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69566977"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921590"
 ---
 # <a name="global-assembly-cache"></a>全局程序集缓存
 安装了公共语言运行时的每台计算机均具有计算机范围的代码缓存，称为全局程序集缓存。 全局程序集缓存中存储专门指定给由计算机中若干应用程序共享的程序集。  
@@ -25,7 +25,7 @@ ms.locfileid: "69566977"
  只能在需要时才通过将程序集安装到全局程序集缓存中来共享程序集。 一般原则是：程序集依赖项保持专用，并将程序集放在应用程序目录中，除非明确要求共享该程序集。 另外，无需为了使 COM 互操作或非托管代码可以访问程序集而将程序集安装到全局程序集缓存。  
   
 > [!NOTE]
->  在有些情况下，很明显不需要将程序集安装到全局程序集缓存中。 将组成应用程序的某个程序集置于全局程序集缓存中之后，无法再通过使用 xcopy 命令复制应用程序目录来复制或安装应用程序  。 必须同时移动全局程序集缓存中的程序集。  
+> 在有些情况下，很明显不需要将程序集安装到全局程序集缓存中。 将组成应用程序的某个程序集置于全局程序集缓存中之后，无法再通过使用 xcopy 命令复制应用程序目录来复制或安装应用程序  。 必须同时移动全局程序集缓存中的程序集。  
   
  可以通过两种方法将程序集部署到全局程序集缓存：  
   
@@ -34,7 +34,7 @@ ms.locfileid: "69566977"
 - 使用 Windows SDK 提供的名为[全局程序集缓存工具 (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) 的开发人员工具。  
   
     > [!NOTE]
-    >  在部署方案中，使用 Windows Installer 将程序集安装到全局程序集缓存中。 仅在开发方案中使用全局程序集缓存工具，因为它不提供 Windows Installer 所能提供的程序集引用计数等功能。  
+    > 在部署方案中，使用 Windows Installer 将程序集安装到全局程序集缓存中。 仅在开发方案中使用全局程序集缓存工具，因为它不提供 Windows Installer 所能提供的程序集引用计数等功能。  
   
  从 .NET Framework 4 开始，全局程序集缓存的默认位置为 %windir%\Microsoft.NET\assembly  。 在 .NET Framework 的早期版本中，默认位置为 %windir%\assembly  。  
   

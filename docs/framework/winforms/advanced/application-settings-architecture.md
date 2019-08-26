@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application settings [Windows Forms], architecture
 ms.assetid: c8eb2ad0-fac6-4ea2-9140-675a4a44d562
-ms.openlocfilehash: b5d5a4456bef925cd8093fe9c696145aff83660e
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: c3858cfab59b63761f43f6b3eaad9bf8ca4c1dbc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039420"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916695"
 ---
 # <a name="application-settings-architecture"></a>应用程序设置体系结构
 本主题介绍应用程序设置体系结构的工作原理，并探讨了体系结构的高级功能，如分组设置和设置键。
@@ -142,7 +142,7 @@ ms.locfileid: "69039420"
  提供程序可能会同时从多个线程调用，但其始终会写入同一存储位置；因此，应用程序设置体系结构在任何时候都仅实例化提供程序类的单个实例。
 
 > [!IMPORTANT]
->  应确保提供程序是线程安全的，并且一次只允许一个线程写入配置文件。
+> 应确保提供程序是线程安全的，并且一次只允许一个线程写入配置文件。
 
  你的提供<xref:System.Configuration?displayProperty=nameWithType>程序不需要支持命名空间中定义的所有设置属性, 但必须至少<xref:System.Configuration.ApplicationScopedSettingAttribute>支持和<xref:System.Configuration.UserScopedSettingAttribute>, 并且还应支持<xref:System.Configuration.DefaultSettingValueAttribute>。 对于其不支持的特性，提供程序应直接失败，而不另行通知；提供程序不应引发异常。 如果设置类使用了无效的属性组合 (如将和<xref:System.Configuration.ApplicationScopedSettingAttribute> <xref:System.Configuration.UserScopedSettingAttribute>应用到相同的设置), 则提供程序应引发异常和停止操作。
 

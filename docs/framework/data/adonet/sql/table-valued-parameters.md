@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 370c16d5-db7b-43e3-945b-ccaab35b739b
-ms.openlocfilehash: a7a39677bbd975ac384357481ef419f57b96d977
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 59c6732dacf225097e22957ebe6536308a2798d4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489806"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69938446"
 ---
 # <a name="table-valued-parameters"></a>表值参数
 表值参数提供一种将客户端应用程序中的多行数据封送到 SQL Server 的简单方式，不需要多次往返或特殊服务器端逻辑来处理数据。 您可以使用表值参数来包装客户端应用程序中的数据行，并使用单个参数化命令将数据发送到服务器。 传入的数据行存储在一个表变量中，然后您可以通过使用 Transact-SQL 对该表变量进行操作。  
@@ -18,17 +18,17 @@ ms.locfileid: "66489806"
  可以使用标准的 Transact-SQL SELECT 语句来访问表值参数中的列值。 表值参数为强类型，其结构会自动进行验证。 表值参数的大小仅受服务器内存的限制。  
   
 > [!NOTE]
->  无法在表值参数中返回数据。 表值参数是只可输入的参数；不支持 OUTPUT 关键字。  
+> 无法在表值参数中返回数据。 表值参数是只可输入的参数；不支持 OUTPUT 关键字。  
   
  有关表值参数的更多信息，请参见下列资源。  
   
 |资源|描述|  
 |--------------|-----------------|  
-|[表值参数 （数据库引擎）](https://go.microsoft.com/fwlink/?LinkId=98363) SQL Server 联机丛书中|说明如何创建和使用表值参数。|  
-|[用户定义表类型](https://go.microsoft.com/fwlink/?LinkId=98364)SQL Server 联机丛书中|说明用于声明表值参数的用户定义的表类型。|  
+|SQL Server 联机丛书中的[表值参数 (数据库引擎)](https://go.microsoft.com/fwlink/?LinkId=98363)|说明如何创建和使用表值参数。|  
+|SQL Server 联机丛书中的[用户定义表类型](https://go.microsoft.com/fwlink/?LinkId=98364)|说明用于声明表值参数的用户定义的表类型。|  
   
 ## <a name="passing-multiple-rows-in-previous-versions-of-sql-server"></a>在 SQL Server 的早期版本中传递多行  
- 到 SQL Server 2008 引入了表值参数之前，用于将多行数据传递到存储的过程或参数化的 SQL 命令的选项受到限制。 开发人员可以选择使用以下选项，将多个行传递给服务器：  
+ 在将表值参数引入 SQL Server 2008 之前, 将多行数据传递到存储过程或参数化 SQL 命令的选项受到限制。 开发人员可以选择使用以下选项，将多个行传递给服务器：  
   
 - 使用一系列单个参数表示多个数据列和行中的值。 使用此方法传递的数据量受所允许的参数数量的限制。 SQL Server 过程最多可以有 2100 个参数。 必须使用服务器端逻辑才能将这些单个值组合到表变量或临时表中以进行处理。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "66489806"
 - 使用 `bcp` 实用工具程序或 <xref:System.Data.SqlClient.SqlBulkCopy> 对象将很多行数据加载到表中。 尽管这项技术非常有效，但不支持服务器端处理，除非将数据加载到临时表或表变量中。  
   
 ## <a name="creating-table-valued-parameter-types"></a>创建表值参数类型  
- 表值参数以通过使用 Transact-SQL CREATE TYPE 语句定义的强类型表结构为基础。 您必须先在 SQL Server 中创建一个表类型并定义结构，才能在客户端应用程序中使用表值参数。 有关创建表类型的详细信息，请参阅[用户定义表类型](https://go.microsoft.com/fwlink/?LinkID=98364)SQL Server 联机丛书中。  
+ 表值参数以通过使用 Transact-SQL CREATE TYPE 语句定义的强类型表结构为基础。 您必须先在 SQL Server 中创建一个表类型并定义结构，才能在客户端应用程序中使用表值参数。 有关创建表类型的详细信息, 请参阅 SQL Server 联机丛书中的[用户定义表类型](https://go.microsoft.com/fwlink/?LinkID=98364)。  
   
  下面的语句可创建一个名为 CategoryTableType 的表类型，其中包括 CategoryID 和 CategoryName 列：  
   
@@ -77,7 +77,7 @@ INSERT INTO dbo.Categories (CategoryID, CategoryName)
 ## <a name="limitations-of-table-valued-parameters"></a>表值参数的限制  
  以下是表值参数的几个限制：  
   
-- 不能将传递到表值参数[CLR 用户定义函数](/sql/relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions)。  
+- 不能将表值参数传递给[CLR 用户定义函数](/sql/relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions)。  
   
 - 只有对表值参数进行索引才能支持 UNIQUE 或 PRIMARY KEY 约束。 SQL Server 不维护有关表值参数的统计信息。  
   
@@ -86,9 +86,9 @@ INSERT INTO dbo.Categories (CategoryID, CategoryName)
 - 无法使用 ALTER TABLE 语句来修改表值参数的设计。  
   
 ## <a name="configuring-a-sqlparameter-example"></a>配置 SqlParameter 示例  
- <xref:System.Data.SqlClient> 支持填充表值参数从<xref:System.Data.DataTable>，<xref:System.Data.Common.DbDataReader>或<xref:System.Collections.Generic.IEnumerable%601>  \  <xref:Microsoft.SqlServer.Server.SqlDataRecord>对象。 必须通过使用 <xref:System.Data.SqlClient.SqlParameter.TypeName%2A> 的 <xref:System.Data.SqlClient.SqlParameter> 属性指定表值参数的类型名称。 `TypeName` 必须与以前在服务器上创建的兼容类型的名称相匹配。 下面的代码段演示如何配置 <xref:System.Data.SqlClient.SqlParameter> 以插入数据。  
+ <xref:System.Data.SqlClient><xref:System.Data.DataTable>支持从<xref:System.Data.Common.DbDataReader>或对象填充<xref:System.Collections.Generic.IEnumerable%601>表值参数。  \  <xref:Microsoft.SqlServer.Server.SqlDataRecord> 必须通过使用 <xref:System.Data.SqlClient.SqlParameter.TypeName%2A> 的 <xref:System.Data.SqlClient.SqlParameter> 属性指定表值参数的类型名称。 `TypeName` 必须与以前在服务器上创建的兼容类型的名称相匹配。 下面的代码段演示如何配置 <xref:System.Data.SqlClient.SqlParameter> 以插入数据。  
  
-在以下示例中，`addedCategories`变量包含<xref:System.Data.DataTable>。 若要查看如何填充该变量，请参阅下一节中的示例[将表值参数传递给存储过程](#passing)。
+在下面的示例中, `addedCategories`变量包含一个<xref:System.Data.DataTable>。 若要查看如何填充变量, 请参阅下一节中的示例, 将[表值参数传递给存储过程](#passing)。
 
 ```csharp  
 // Configure the command and parameter.  
@@ -128,7 +128,7 @@ Dim tvpParam As SqlParameter = _
 tvpParam.SqlDbType = SqlDbType.Structured  
 ```  
   
-## <a name="passing"></a> 将表值参数传递给存储过程  
+## <a name="passing"></a>将表值参数传递给存储过程  
  此示例演示如何将表值参数数据传递给存储过程。 示例代码通过使用 <xref:System.Data.DataTable> 方法，将已添加的行提取到新的 <xref:System.Data.DataTable.GetChanges%2A> 中。 然后，示例代码定义一个 <xref:System.Data.SqlClient.SqlCommand>，并将 <xref:System.Data.SqlClient.SqlCommand.CommandType%2A> 属性设置为 <xref:System.Data.CommandType.StoredProcedure>。 示例代码通过使用 <xref:System.Data.SqlClient.SqlParameter> 方法对 <xref:System.Data.SqlClient.SqlParameterCollection.AddWithValue%2A> 进行填充，并将 <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> 设置为 `Structured`。 然后，通过使用 <xref:System.Data.SqlClient.SqlCommand> 方法执行 <xref:System.Data.SqlClient.SqlCommand.ExecuteNonQuery%2A>。  
   
 ```csharp  
@@ -174,7 +174,7 @@ End Using
  下面的示例演示如何通过使用带有 SELECT 子查询（具有作为数据源的表值参数）的 INSERT 语句将数据插入 dbo.Categories 表中。 将表值参数传递给参数化 SQL 语句时，必须通过使用 <xref:System.Data.SqlClient.SqlParameter.TypeName%2A> 的新 <xref:System.Data.SqlClient.SqlParameter> 属性指定表值参数的类型名称。 此 `TypeName` 必须与以前在服务器上创建的兼容类型的名称相匹配。 此示例中的代码使用 `TypeName` 属性来引用 dbo.CategoryTableType 中定义的类型结构。  
   
 > [!NOTE]
->  如果为表值参数中的标识列提供值，则必须为该会话发出 SET IDENTITY_INSERT 语句。  
+> 如果为表值参数中的标识列提供值，则必须为该会话发出 SET IDENTITY_INSERT 语句。  
   
 ```csharp  
 // Assumes connection is an open SqlConnection.  

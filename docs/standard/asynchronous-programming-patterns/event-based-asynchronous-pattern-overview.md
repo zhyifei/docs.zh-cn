@@ -16,12 +16,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 792aa8da-918b-458e-b154-9836b97735f3
-ms.openlocfilehash: dfc8e1cfa6050a6e45373ad023ee8f358e388735
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 7dba7afe9ab0348082ec9538b268a387b64ad050
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423865"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950692"
 ---
 # <a name="event-based-asynchronous-pattern-overview"></a>基于事件的异步模式概述
 那些同时执行多项任务、但仍能响应用户交互的应用程序通常需要实施一种使用多线程的设计方案。 <xref:System.Threading> 命名空间提供了创建高性能多线程应用程序所必需的所有工具，但要想有效地使用这些工具，需要有丰富的使用多线程软件工程的经验。 对于相对简单的多线程应用程序，<xref:System.ComponentModel.BackgroundWorker> 组件提供了一个简单的解决方案。 对于更复杂的异步应用程序，请考虑实现一个符合基于事件的异步模式的类。  
@@ -115,7 +115,7 @@ public class AsyncExample
  如果你使用多调用重载，你的代码将需要跟踪挂起任务的 `userState` 对象（任务 ID）。 对于各个 `Method1Async(string param, object userState)` 调用，通常会生成新的唯一 `userState` 对象，并将它添加到集合中。 当对应于此 `userState` 对象的任务引发完成事件时，你的完成方法实现将检查 <xref:System.ComponentModel.AsyncCompletedEventArgs.UserState%2A?displayProperty=nameWithType> 并将此对象从集合中删除。 在以这种方式使用时，`userState` 参数充当任务 ID 的角色。  
   
 > [!NOTE]
->  在为你对多调用重载的调用中的 `userState` 提供唯一值时，一定要小心。 如果任务 ID 不唯一，将导致异步类引发 <xref:System.ArgumentException>。  
+> 在为你对多调用重载的调用中的 `userState` 提供唯一值时，一定要小心。 如果任务 ID 不唯一，将导致异步类引发 <xref:System.ArgumentException>。  
   
 ### <a name="canceling-pending-operations"></a>取消挂起的操作  
  我们必须能够在异步操作完成之前随时取消它们，这一点很重要。 实现基于事件的异步模式的类包含 `CancelAsync` 方法（如果只有一个异步方法），或 _MethodName_**AsyncCancel** 方法（如果有多个异步方法）。  

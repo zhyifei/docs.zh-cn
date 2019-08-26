@@ -2,20 +2,20 @@
 title: <endpointDiscovery>
 ms.date: 03/30/2017
 ms.assetid: 70812717-888a-4748-9640-0df6715ff029
-ms.openlocfilehash: 125baba917a49135aaa426df2cfa1a4dbe8ac1e8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5cb64c54067ba695f67d86c0026db77ebbe7d5ee
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61700905"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919054"
 ---
 # <a name="endpointdiscovery"></a>\<endpointDiscovery>
 指定终结点的各种发现设置，例如终结点的可发现性、范围以及对终结点元数据的任何自定义扩展。  
   
 \<system.ServiceModel>  
-\<behaviors>  
+\<行为 >  
 \<endpointBehaviors>  
-\<behavior>  
+\<行为 >  
 \<endpointDiscovery>  
   
 ## <a name="syntax"></a>语法  
@@ -42,27 +42,27 @@ ms.locfileid: "61700905"
   
 |特性|描述|  
 |---------------|-----------------|  
-|enabled|一个布尔值，该值指定是否在此终结点上启用可发现性。 默认值为 `false`。|  
+|enabled|一个布尔值, 指定是否在此终结点上启用可发现性。 默认值为 `false`。|  
   
 ### <a name="child-elements"></a>子元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<scopes>](../../../../../docs/framework/configure-apps/file-schema/wcf/scopes.md)|终结点的范围 URI 集合。 一个终结点可以与多个范围 URI 关联。|  
-|[\<extensions>](../../../../../docs/framework/configure-apps/file-schema/wcf/extensions.md) [of \<endpointDiscovery>]|一个 XML 元素集合，用于指定要对终结点发布的自定义元数据。|  
+|[\<scopes>](scopes.md)|终结点的范围 URI 集合。 一个终结点可以与多个范围 URI 关联。|  
+|扩展 > [of endpointDiscovery>]\< [ \<](extensions.md)|一个 XML 元素集合，用于指定要对终结点发布的自定义元数据。|  
 |\<types>|要搜索的接口集合。|  
   
 ### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|指定行为元素。|  
+|[\<behavior>](behavior-of-endpointbehaviors.md)|指定行为元素。|  
 |||  
   
 ## <a name="remarks"></a>备注  
- 如果将此配置元素添加到终结点的行为配置，并将 `enabled` 特性设置为 `true`，此配置元素将启用该终结点的可发现性。 此外，还可以使用[\<作用域 >](../../../../../docs/framework/configure-apps/file-schema/wcf/scopes.md)子元素指定自定义范围可用于在查询期间筛选服务终结点的 Uri 并将[\<扩展 >](../../../../../docs/framework/configure-apps/file-schema/wcf/extensions.md)子元素指定应随标准可发现元数据 （EPR、 ContractTypeName、 BindingName、 范围和 ListenURI） 一起发布的自定义元数据。  
+ 如果将此配置元素添加到终结点的行为配置，并将 `enabled` 特性设置为 `true`，此配置元素将启用该终结点的可发现性。 此外, 您还可以使用[ \<范围 >](scopes.md)子元素指定可用于在查询期间筛选服务终结点的自定义范围 uri, 以及用于指定自定义的[ \<扩展 >](extensions.md)子元素应与标准可发现元数据 (EPR、ContractTypeName、BindingName、Scope 和 ListenURI) 一起发布的元数据。  
   
- 此配置元素是依赖于[ \<serviceDiscovery >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md)元素，它提供服务级别控制的可发现性。 这意味着，如果将忽略此元素的设置[ \<serviceDiscovery >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md)配置中不存在。  
+ 此配置元素依赖[ \<](servicediscovery.md)于提供可发现性服务级别控制的 serviceDiscovery > 元素。 这意味着, 如果[ \<](servicediscovery.md)配置中不存在 serviceDiscovery >, 将忽略此元素的设置。  
   
 ## <a name="example"></a>示例  
  下面的配置示例指定要对终结点发布的筛选范围和扩展元数据。  

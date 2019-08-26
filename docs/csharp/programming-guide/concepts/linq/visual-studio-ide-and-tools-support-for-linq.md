@@ -2,18 +2,18 @@
 title: 对 LINQ 的 Visual Studio IDE 和工具支持 (C#)
 ms.date: 07/20/2015
 ms.assetid: c1f6cfdf-c96f-417f-acc8-4a049772ead3
-ms.openlocfilehash: f2d27bfaa6c9199d29c1566e0e157cf08c1ccd3b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a42d6711e34564f03aaf07c295bc682965513619
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54561044"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590915"
 ---
 # <a name="visual-studio-ide-and-tools-support-for-linq-c"></a>对 LINQ 的 Visual Studio IDE 和工具支持 (C#)
 Visual Studio 集成开发环境 (IDE) 提供支持 LINQ 应用程序开发的以下功能：  
   
 ## <a name="object-relational-designer"></a>Object Relational Designer  
- 对象关系设计器是一个可视化设计工具，可用于在 [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md) 应用程序中通过 C# 生成表示底层数据库中关系数据的类。 有关详细信息，请参阅 [Visual Studio 中的 LINQ to SQL 工具](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)。  
+ 对象关系设计器是一个可视化设计工具，可用于在 [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md) 应用程序中通过 C# 生成表示底层数据库中关系数据的类。 有关详细信息，请参阅 [Visual Studio 中的 LINQ to SQL 工具](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)。  
   
 ## <a name="sqlmetal-command-line-tool"></a>SQLMetal 命令行工具  
  SQLMetal 是一个命令行工具，可用于在生成过程中从现有数据库生成供 LINQ to SQL 应用程序使用的类。 有关详细信息，请参阅 [SqlMetal.exe（代码生成工具）](../../../../framework/tools/sqlmetal-exe-code-generation-tool.md)。  
@@ -26,4 +26,4 @@ Visual Studio 集成开发环境 (IDE) 提供支持 LINQ 应用程序开发的�
   
 ## <a name="see-also"></a>请参阅
 
-- [语言集成查询 (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)
+- [语言集成查询 (LINQ) (C#)](./index.md)

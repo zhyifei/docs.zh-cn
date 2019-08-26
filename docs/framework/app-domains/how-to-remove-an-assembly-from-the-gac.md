@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: acdcc588-b458-436d-876c-726de68244c1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bfa0cd7041f61e9848804f74d59b85a60450ea92
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 66df15f7a33acac85804d6abf2e2878c1132f5d4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593569"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921471"
 ---
 # <a name="how-to-remove-an-assembly-from-the-global-assembly-cache"></a>如何：从全局程序集缓存中删除程序集
 有两种方法可以从全局程序集缓存 (GAC) 中移除程序集：  
@@ -31,9 +31,9 @@ ms.locfileid: "64593569"
   
 1. 在命令提示符处，键入下列命令：  
   
-     gacutil –u \<assembly name>  
+     gacutil –u \<assembly name>    
   
-     在此命令中，“assembly name”是要从全局程序集缓存中删除的程序集的名称。  
+     在此命令中，“assembly name”是要从全局程序集缓存中删除的程序集的名称  。  
   
     > [!WARNING]
     >  不应使用 Gacutil.exe 来移除生产系统上的程序集，因为一些应用程序可能仍需要该程序集。 应改为使用 Windows Installer，它保留了它在 GAC 中安装的每个程序集的引用计数。  
@@ -46,10 +46,10 @@ gacutil -u hello
   
 ### <a name="removing-an-assembly-with-windows-installer"></a>使用 Windows Installer 移除程序集  
   
-1. 在“控制面板”的“程序和功能”应用中，选择要卸载的应用。 如果安装包将程序集放入 GAC，在没有其他应用程序使用这些程序集的情况下，Windows Installer 将移除它们。  
+1. 在“控制面板”的“程序和功能”应用中，选择要卸载的应用   。 如果安装包将程序集放入 GAC，在没有其他应用程序使用这些程序集的情况下，Windows Installer 将移除它们。  
   
     > [!NOTE]
-    >  Windows Installer 保留了安装在 GAC 中的程序集的引用计数。 仅当程序集的引用计数为零时才可将其从 GAC 移除，计数为零时意味着它没有被任何 Windows Installer 包安装的应用程序所使用。  
+    > Windows Installer 保留了安装在 GAC 中的程序集的引用计数。 仅当程序集的引用计数为零时才可将其从 GAC 移除，计数为零时意味着它没有被任何 Windows Installer 包安装的应用程序所使用。  
   
 ## <a name="see-also"></a>请参阅
 

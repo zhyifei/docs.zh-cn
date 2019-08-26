@@ -15,38 +15,41 @@ helpviewer_keywords:
 - snaplines
 - controls [Windows Forms], positioning
 ms.assetid: 4693977e-34a4-4f19-8221-68c3120c2b2b
-ms.openlocfilehash: 241edbe60c327493c9123c6cf7bdc19b7ba2b724
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+author: gewarren
+ms.author: gewarren
+manager: jillfra
+ms.openlocfilehash: 1cc2cb4c749b7290a6edf914a8e6a697006ef43c
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211655"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69987081"
 ---
-# <a name="how-to-position-controls-on-windows-forms"></a>如何：在 Windows 窗体上定位控件
+# <a name="how-to-position-controls-on-windows-forms"></a>如何：将控件置于 Windows 窗体
 
-若要定位控件，在 Visual Studio 中使用 Windows 窗体设计器或指定<xref:System.Windows.Forms.Control.Location%2A>属性。
+若要定位控件, 请使用 Visual Studio 中的 Windows 窗体设计器或<xref:System.Windows.Forms.Control.Location%2A>指定属性。
 
-## <a name="position-a-control-on-the-design-surface-of-the-windows-forms-designer"></a>Windows 窗体设计器在设计图面上的将控件放
+## <a name="position-a-control-on-the-design-surface-of-the-windows-forms-designer"></a>在 Windows 窗体设计器的设计图面上放置控件
 
-在 Visual Studio 中，将控件拖动到用鼠标的适当位置。
+在 Visual Studio 中, 用鼠标将控件拖到适当的位置。
 
 > [!NOTE]
-> 选择控件并移动它带有箭头键以更精确地放置。 此外，*对齐线*帮助您在放置在窗体上精确的控制。 有关详细信息，请参见[演练：在 Windows 上排列控件窗体使用对齐线](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)。
+> 选择控件, 并将其与箭头键一起移动, 以便更精确地定位。 此外,*对齐线*还有助于在窗体上准确放置控件。 有关详细信息，请参见[演练：使用对齐线](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)排列 Windows 窗体上的控件。
 
-## <a name="position-a-control-using-the-properties-window"></a>定位控件的使用属性窗口
+## <a name="position-a-control-using-the-properties-window"></a>使用属性窗口定位控件
 
-1. 在 Visual Studio 中，单击你想要定位的控件。
+1. 在 Visual Studio 中, 选择要定位的控件。
 
-2. 在中**属性**窗口中，类型值<xref:System.Windows.Forms.Control.Location%2A>属性，由逗号分隔，以放置在其容器内的控件。
+2. 在 "**属性**" 窗口中, 输入<xref:System.Windows.Forms.Control.Location%2A>属性的值 (用逗号分隔), 以将控件放置在其容器中。
 
-     第一个数字 (X) 是容器的从左边框; 的距离第二个数字 (Y) 是上边界的容器区域中，以像素为单位的距离。
+   第一个数字 (X) 是距容器左边框的距离;第二个数字 (Y) 是与容器区域的上边框的距离 (以像素为单位)。
 
-    > [!NOTE]
-    > 您可以展开<xref:System.Windows.Forms.Control.Location%2A>属性键入**X**并**Y**单独值。
+   > [!NOTE]
+   > 您可以展开<xref:System.Windows.Forms.Control.Location%2A>属性以单独键入**X**和**Y**值。
 
 ## <a name="position-a-control-programmatically"></a>以编程方式定位控件
 
-1. 设置<xref:System.Windows.Forms.Control.Location%2A>到控件属性<xref:System.Drawing.Point>。
+1. 将控件<xref:System.Windows.Forms.Control.Location%2A>的属性设置<xref:System.Drawing.Point>为。
 
     ```vb
     Button1.Location = New Point(100, 100)
@@ -60,7 +63,7 @@ ms.locfileid: "65211655"
     button1->Location = Point(100, 100);
     ```
 
-2. 更改控件的位置的 X 坐标使用<xref:System.Windows.Forms.Control.Left%2A>子属性。
+2. 使用<xref:System.Windows.Forms.Control.Left%2A>子属性更改控件位置的 X 坐标。
 
     ```vb
     Button1.Left = 300
@@ -76,7 +79,7 @@ ms.locfileid: "65211655"
 
 ## <a name="increment-a-controls-location-programmatically"></a>以编程方式递增控件的位置
 
-设置<xref:System.Windows.Forms.Control.Left%2A>子属性要递增的控件的 X 坐标。
+设置子<xref:System.Windows.Forms.Control.Left%2A>属性以增加控件的 X 坐标。
 
 ```vb
 Button1.Left += 200
@@ -91,16 +94,15 @@ button1->Left += 200;
 ```
 
 > [!NOTE]
-> 使用<xref:System.Windows.Forms.Control.Location%2A>要设置控件的 X 和 Y 属性将同时定位。 若要单独设置位置，请使用控件的<xref:System.Windows.Forms.Control.Left%2A>(**X**) 或<xref:System.Windows.Forms.Control.Top%2A>(**Y**) 子属性。 不要尝试隐式设置的 X 和 Y 坐标<xref:System.Drawing.Point>结构，它表示该按钮的位置，因为此结构包含按钮的坐标的副本。
+> <xref:System.Windows.Forms.Control.Location%2A>使用属性同时设置控件的 X 和 Y 位置。 若要单独设置位置, 请使用控件的<xref:System.Windows.Forms.Control.Left%2A> (**X**) 或<xref:System.Windows.Forms.Control.Top%2A> (**Y**) 子属性。 不要尝试隐式设置表示按钮位置的<xref:System.Drawing.Point>结构的 X 和 Y 坐标, 因为此结构包含按钮坐标的副本。
 
 ## <a name="see-also"></a>请参阅
 
 - [Windows 窗体控件](index.md)
-- [演练：使用对齐线的 Windows 窗体上排列控件](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
-- [演练：使用 TableLayoutPanel 的 Windows 窗体上排列控件](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
-- [演练：使用 FlowLayoutPanel 的 Windows 窗体上排列控件](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
-- [在 Windows 窗体上排列控件](arranging-controls-on-windows-forms.md)
+- [演练：使用对齐线排列 Windows 窗体上的控件](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [演练：使用 TableLayoutPanel 排列 Windows 窗体上的控件](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [演练：使用 FlowLayoutPanel 排列 Windows 窗体上的控件](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
 - [标记各个 Windows 窗体控件并创建它们的快捷键](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
 - [在 Windows 窗体上使用的控件](controls-to-use-on-windows-forms.md)
 - [按功能列出的 Windows 窗体控件](windows-forms-controls-by-function.md)
-- [如何：设置 Windows 窗体的屏幕位置](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/52aha046(v=vs.100))
+- [如何：设置屏幕位置 Windows 窗体](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/52aha046(v=vs.100))

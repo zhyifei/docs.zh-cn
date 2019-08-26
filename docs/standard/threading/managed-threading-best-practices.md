@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: e51988e7-7f4b-4646-a06d-1416cee8d557
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d8319424c82327fd9743c573846663bdd76ed1b9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: bb262f5a02343aeb91c28eb21c939edef8a70f61
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64644625"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666301"
 ---
 # <a name="managed-threading-best-practices"></a>托管线程处理的最佳做法
 多线程处理需在编程时倍加注意。 对于多数任务，通过将执行请求以线程池线程的方式排队，可以降低复杂性。 本主题将探讨更复杂的情形，比如协调多个线程的工作或处理造成阻止的线程。  
@@ -96,7 +96,7 @@ else {
   
 - 锁定实例时要谨慎，例如，C# 中的 `lock(this)` 或 Visual Basic 中的 `SyncLock(Me)`。 如果应用程序中不属于该类型的其他代码锁定了该对象，则会发生死锁。  
   
-- 请务必确保已进入监视器的线程始终离开该监视器，即使线程在监视器中时发生异常也是如此。 C# 的 [lock](~/docs/csharp/language-reference/keywords/lock-statement.md) 语句和 Visual Basic 的 [SyncLock](~/docs/visual-basic/language-reference/statements/synclock-statement.md) 语句可自动提供此行为，同时使用 **finally** 块来确保调用 <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType>。 如果无法确保调用 **Exit**，请考虑将设计更改为使用 **Mutex**。 Mutex 在当前拥有它的线程终止后会自动释放。  
+- 请务必确保已进入监视器的线程始终离开该监视器，即使线程在监视器中时发生异常也是如此。 C# 的 [lock](../../csharp/language-reference/keywords/lock-statement.md) 语句和 Visual Basic 的 [SyncLock](../../visual-basic/language-reference/statements/synclock-statement.md) 语句可自动提供此行为，同时使用 **finally** 块来确保调用 <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType>。 如果无法确保调用 **Exit**，请考虑将设计更改为使用 **Mutex**。 Mutex 在当前拥有它的线程终止后会自动释放。  
   
 - 请务必针对需要不同资源的任务使用多线程，避免向单个资源指定多个线程。 例如，任何涉及 I/O 的任务都会从其拥有自己的线程这一点得到好处，因为此线程在 I/O 操作期间将阻止，从而允许其他线程执行。 用户输入是另一种可从专用线程获益的资源。 在单处理器计算机上，涉及大量计算的任务可与用户输入和涉及 I/O 的任务并存，但多个计算量大的任务将相互竞争。  
   

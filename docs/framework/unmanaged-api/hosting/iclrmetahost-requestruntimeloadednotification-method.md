@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7e7c1de620979b387e969f4b8c9f17f493e7bcb8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 539f69c33b67ad1a8a514062c5d777deaced1599
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776543"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965006"
 ---
 # <a name="iclrmetahostrequestruntimeloadednotification-method"></a>ICLRMetaHost::RequestRuntimeLoadedNotification 方法
-提供保证在首次加载，但尚未启动的公共语言运行时 (CLR) 版本时要调用的回调函数。 此方法取代[LockClrVersion](../../../../docs/framework/unmanaged-api/hosting/lockclrversion-function.md)函数。  
+提供一个回调函数, 保证在第一次加载公共语言运行时 (CLR) 版本时, 但尚未启动。 此方法取代了[LockClrVersion](../../../../docs/framework/unmanaged-api/hosting/lockclrversion-function.md)函数。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,7 +36,7 @@ HRESULT RequestRuntimeLoadedNotification (
   
 ## <a name="parameters"></a>参数  
  `pCallbackFunction`  
- [in]当加载新的运行时调用的回调函数。  
+ 中已加载新的运行时调用的回调函数。  
   
 ## <a name="return-value"></a>返回值  
  此方法返回以下特定 HRESULT 以及表示方法失败的 HRESULT 错误。  
@@ -47,15 +47,15 @@ HRESULT RequestRuntimeLoadedNotification (
 |E_POINTER|`pCallbackFunction` 为 null。|  
   
 ## <a name="remarks"></a>备注  
- 回调的工作原理如下所示：  
+ 回调的工作方式如下:  
   
-- 仅当首次加载运行时调用回调。  
+- 只有首次加载运行时才会调用回调。  
   
-- 对同一个运行时的可重入加载不调用回调。  
+- 对于同一运行时的可重入加载, 不调用回调。  
   
-- 非可重入运行时负载时，序列化对回调函数的调用。  
+- 对于非重入的运行时加载, 对回调函数的调用将进行序列化。  
   
- 回调函数具有以下原型：  
+ 回调函数具有以下原型:  
   
 ```cpp  
 typedef void (__stdcall *RuntimeLoadedCallbackFnPtr)(  
@@ -64,7 +64,7 @@ typedef void (__stdcall *RuntimeLoadedCallbackFnPtr)(
                      CallbackThreadUnsetFnPtr pfnCallbackThreadUnset);  
 ```  
   
- 回调函数的原型如下所示：  
+ 回调函数的原型如下所示:  
   
 - `pfnCallbackThreadSet`：  
   
@@ -78,23 +78,23 @@ typedef void (__stdcall *RuntimeLoadedCallbackFnPtr)(
     typedef HRESULT (__stdcall *CallbackThreadUnsetFnPtr)();  
     ```  
   
- 如果主机尝试加载或导致另一个运行时可重入的方式加载`pfnCallbackThreadSet`和`pfnCallbackThreadUnset`提供在回调函数必须使用如下所示的参数：  
+ 如果宿主打算加载或导致以重入方式加载另一个运行时, 则必须按`pfnCallbackThreadSet`以下`pfnCallbackThreadUnset`方式使用回调函数中提供的和参数:  
   
-- `pfnCallbackThreadSet` 必须通过尝试此类负载之前可能会导致运行时加载的线程调用。  
+- `pfnCallbackThreadSet`在尝试执行此类加载之前, 必须由可能导致运行时加载的线程调用。  
   
-- `pfnCallbackThreadUnset` 必须在调用时该线程将不再导致出现运行时负载 （和从初始的回调返回之前）。  
+- `pfnCallbackThreadUnset`当线程不再导致此类运行时加载 (在从初始回调返回之前) 时, 必须调用。  
   
-- `pfnCallbackThreadSet` 和`pfnCallbackThreadUnset`都是不可重入。  
+- `pfnCallbackThreadSet`和`pfnCallbackThreadUnset`都是不可重入的。  
   
 > [!NOTE]
->  不能调用主机应用程序`pfnCallbackThreadSet`并`pfnCallbackThreadUnset`范围外的`pCallbackFunction`参数。  
+> 主机应用程序不得调用`pfnCallbackThreadSet` `pCallbackFunction`参数`pfnCallbackThreadUnset`范围和参数范围之外的。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MetaHost.h  
   
- **库：** 包含为 MSCorEE.dll 中的资源  
+ **类库**作为资源包括在 Mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

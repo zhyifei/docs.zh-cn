@@ -47,22 +47,17 @@
           href: how-to-add-activex-controls-to-windows-forms.md
         - name: 在 Windows 窗体上承载 ActiveX 控件时的注意事项
           href: considerations-when-hosting-an-activex-control-on-a-windows-form.md
-    - name: 标记单个 Windows 窗体控件并提供它们的快捷方式
-      href: labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md
+    - name: 标记控件和提供快捷方式
       items:
-        - name: 如何：创建 Windows 窗体控件的访问键
+        - name: 概述
+          href: labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md
+        - name: 创建控件访问键
           href: how-to-create-access-keys-for-windows-forms-controls.md
-        - name: 如何：使用设计器为 Windows 窗体控件创建访问键
-          href: how-to-create-access-keys-for-windows-forms-controls-using-the-designer.md
-        - name: 如何：设置 Windows 窗体控件显示的文本
+        - name: 设置控件显示的文本
           href: how-to-set-the-text-displayed-by-a-windows-forms-control.md
-        - name: 如何：使用设计器设置 Windows 窗体控件显示的文本
-          href: how-to-set-the-text-displayed-by-a-windows-forms-control-using-the-designer.md
-        - name: 如何：设置 Windows 窗体控件显示的图像
+        - name: 设置控件显示的图像
           href: how-to-set-the-image-displayed-by-a-windows-forms-control.md
-        - name: 如何：使用设计器设置 Windows 窗体控件显示的图像
-          href: how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer.md
-        - name: 为 Windows 窗体上的控件提供辅助功能信息
+        - name: 提供控件可访问性信息
           href: providing-accessibility-information-for-controls-on-a-windows-form.md
     - name: 在 Windows 窗体上使用的控件
       href: controls-to-use-on-windows-forms.md

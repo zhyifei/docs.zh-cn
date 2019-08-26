@@ -40,12 +40,12 @@ helpviewer_keywords:
 ms.assetid: cf624c1f-c160-46a1-bb2b-213587688da7
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9b46404ee791855301611c1d883f26514b9b9d2f
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 2e24cd05bb1c1ed9425c9be8bc02cb92dc488005
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833803"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69935730"
 ---
 # <a name="reliability-best-practices"></a>可靠性最佳做法
 
@@ -117,7 +117,7 @@ ms.locfileid: "66833803"
 
 CLR 必须知道代码何时在锁中，这样它便知道关闭 <xref:System.AppDomain>，而不仅仅是中止线程。  中止线程可能是危险的操作，因为可能会使由线程运行的数据处于不一致的状态。 因此，必须回收整个 <xref:System.AppDomain>。  未能成功识别锁可能导致死锁或者出现不正确的结果。 使用方法 <xref:System.Threading.Thread.BeginCriticalRegion%2A> 和 <xref:System.Threading.Thread.EndCriticalRegion%2A> 以识别锁定区域。  它们是仅应用于当前线程的 <xref:System.Threading.Thread> 类上的静态方法，帮助防止某个线程编辑另一线程的锁计数。
 
-<xref:System.Threading.Monitor.Enter%2A> 和 <xref:System.Threading.Monitor.Exit%2A> 内置有此 CLR 通知，所以建议使用它们，并且也建议采用使用这些方法的 [lock 语句](~/docs/csharp/language-reference/keywords/lock-statement.md)。
+<xref:System.Threading.Monitor.Enter%2A> 和 <xref:System.Threading.Monitor.Exit%2A> 内置有此 CLR 通知，所以建议使用它们，并且也建议采用使用这些方法的 [lock 语句](../../csharp/language-reference/keywords/lock-statement.md)。
 
 其他锁定机制（如旋转锁和 <xref:System.Threading.AutoResetEvent>）必须调用这些方法才能对 CLR 发出正在进入临界区的通知。  这些方法不采用任何锁；它们通知 CLR 代码正在临界区中执行，中止线程可能导致共享状态不一致。  如果定义了自己的锁类型（如自定义 <xref:System.Threading.ReaderWriterLock> 类），那么则使用这些锁计数方法。
 
@@ -143,7 +143,7 @@ CLR 必须知道代码何时在锁中，这样它便知道关闭 <xref:System.Ap
 
 ### <a name="locks-do-not-work-process-wide-or-between-application-domains"></a>锁在进程范围或应用程序域之间不起作用。
 
-过去，<xref:System.Threading.Monitor.Enter%2A> 和 [lock 语句](~/docs/csharp/language-reference/keywords/lock-statement.md)用于创建全局进程锁定。  例如，在对 <xref:System.AppDomain> 敏捷类进行锁定时会发生这种情况，例如来自非共享程序集的 <xref:System.Type> 实例、<xref:System.Threading.Thread> 对象、暂存的字符串以及某些使用远程处理跨应用程序域共享的字符串。  这些锁不再属于进程范围。  若要识别进程范围的应用程序间域锁的存在，请确定锁中的代码是否使用任何外部持久化资源，如磁盘上的文件或者可能使用一个数据库。
+过去，<xref:System.Threading.Monitor.Enter%2A> 和 [lock 语句](../../csharp/language-reference/keywords/lock-statement.md)用于创建全局进程锁定。  例如，在对 <xref:System.AppDomain> 敏捷类进行锁定时会发生这种情况，例如来自非共享程序集的 <xref:System.Type> 实例、<xref:System.Threading.Thread> 对象、暂存的字符串以及某些使用远程处理跨应用程序域共享的字符串。  这些锁不再属于进程范围。  若要识别进程范围的应用程序间域锁的存在，请确定锁中的代码是否使用任何外部持久化资源，如磁盘上的文件或者可能使用一个数据库。
 
 请注意，如果受保护的代码使用了外部资源，那么在 <xref:System.AppDomain> 中采用锁可能导致出现问题，因为该代码可能同时跨多个应用程序域运行。  在写入到一个日志文件或绑定到整个进程的套接字时，这可能是个问题。  这些更改意味着除了使用命名的 <xref:System.Threading.Mutex> 或 <xref:System.Threading.Semaphore> 实例外，没有简单的方法使用托管代码来获取全局进程的锁。  创建不在两个应用程序域中同时运行的代码，或使用 <xref:System.Threading.Mutex> 或 <xref:System.Threading.Semaphore> 类。  如果无法更改现有代码，请不要使用 Win32 命名的互斥以实现此同步，因为在纤程模式中运行意味着无法保证同一操作系统线程将获取并释放互斥。  必须使用托管 <xref:System.Threading.Mutex> 类、命名的 <xref:System.Threading.ManualResetEvent>、<xref:System.Threading.AutoResetEvent>，或 <xref:System.Threading.Semaphore>，以 CLR 能识别的方式同步代码锁，而不是使用非托管代码进行同步。
 
@@ -241,11 +241,11 @@ HPA 仅影响可托管公共语言运行时且实现主机保护的非托管应�
 
 ### <a name="do-not-block-indefinitely-in-unmanaged-code"></a>不要在非托管代码中无限期阻塞
 
-在非托管代码中而不是在托管代码中阻塞可能导致拒绝服务攻击，因为 CLR 无法中止线程。  已阻塞的线程会阻止 CLR 卸载 <xref:System.AppDomain>，至少是在没有执行某些极端不安全操作的情况下。  阻止使用 Windows 同步基元是我们不允许的一个明显示例。  对的调用中阻塞`ReadFile`套接字上应避免在可能的情况 — 理想情况下 Windows API 应提供用于此类似的操作超时的机制。
+在非托管代码中而不是在托管代码中阻塞可能导致拒绝服务攻击，因为 CLR 无法中止线程。  已阻塞的线程会阻止 CLR 卸载 <xref:System.AppDomain>，至少是在没有执行某些极端不安全操作的情况下。  使用 Windows 同步基元进行阻止是我们无法允许的一个清晰的示例。  如果可能, 应尽可能`ReadFile`避免在对套接字的调用中进行阻止, 理想情况下, Windows API 应为此类操作提供一种机制来超时。
 
 理想情况下，任何调入本机的方法应使用具有合理、有限的超时的 Win32 调用。  如果允许用户指定超时，则在没有某些特定安全权限的情况下，不应该允许用户指定无限期的超时。  按照一般准则，如果方法将阻塞超过 10 秒，你则需要使用支持超时的版本，或需要其他的 CLR 支持。
 
-以下是一些示例有问题的 Api。  虽然在超时的情况下可以创建管道（匿名和命名管道皆可）；但是，代码必须确保它永不使用 NMPWAIT_WAIT_FOREVER 调用 `CreateNamedPipe` 或 `WaitNamedPipe`。  此外，即使指定了超时也可能出现意外的阻塞。  在匿名管道上调用 `WriteFile` 将会在全部字节被写入之前阻塞，这意味着如果缓冲区在其中有未读数据，那么在读取器释放管道缓冲区中的空间之前，`WriteFile` 调用将阻塞。  套接字应该始终使用一些提供超时机制的 API。
+下面是一些有问题的 Api 的示例。  虽然在超时的情况下可以创建管道（匿名和命名管道皆可）；但是，代码必须确保它永不使用 NMPWAIT_WAIT_FOREVER 调用 `CreateNamedPipe` 或 `WaitNamedPipe`。  此外，即使指定了超时也可能出现意外的阻塞。  在匿名管道上调用 `WriteFile` 将会在全部字节被写入之前阻塞，这意味着如果缓冲区在其中有未读数据，那么在读取器释放管道缓冲区中的空间之前，`WriteFile` 调用将阻塞。  套接字应该始终使用一些提供超时机制的 API。
 
 #### <a name="code-analysis-rule"></a>代码分析规则
 
@@ -265,7 +265,7 @@ HPA 仅影响可托管公共语言运行时且实现主机保护的非托管应�
 
 ### <a name="avoid-unmanaged-memory-if-possible"></a>如有可能，请避免使用非托管内存
 
-非托管内存可能会被泄露，正如操作系统句柄一样。 如有可能，请使用 [stackalloc](~/docs/csharp/language-reference/operators/stackalloc.md) 或固定的托管对象（如 [fixed 语句](~/docs/csharp/language-reference/keywords/fixed-statement.md)或使用 byte[] 的 <xref:System.Runtime.InteropServices.GCHandle>）在堆栈上尝试使用内存。 <xref:System.GC> 最终会清理这些内容。 但是，如果必须要分配非托管内存，请考虑使用派生自 <xref:System.Runtime.InteropServices.SafeHandle> 的类以包装内存分配。
+非托管内存可能会被泄露，正如操作系统句柄一样。 如有可能，请使用 [stackalloc](../../csharp/language-reference/operators/stackalloc.md) 或固定的托管对象（如 [fixed 语句](../../csharp/language-reference/keywords/fixed-statement.md)或使用 byte[] 的 <xref:System.Runtime.InteropServices.GCHandle>）在堆栈上尝试使用内存。 <xref:System.GC> 最终会清理这些内容。 但是，如果必须要分配非托管内存，请考虑使用派生自 <xref:System.Runtime.InteropServices.SafeHandle> 的类以包装内存分配。
 
 请注意，至少存在一种 <xref:System.Runtime.InteropServices.SafeHandle> 不适用的情况。  对于分配或释放内存的 COM 方法调用，通常是一个 DLL 通过 `CoTaskMemAlloc` 分配内存，然后另一个 DLL 使用 `CoTaskMemFree` 释放内存。  在这些位置中使用 <xref:System.Runtime.InteropServices.SafeHandle> 可能不适合，因为它会尝试将非托管内存的生存期绑定到 <xref:System.Runtime.InteropServices.SafeHandle> 的生存期，而不是允许其他 DLL 控制内存的生存期。
 
@@ -277,7 +277,7 @@ HPA 仅影响可托管公共语言运行时且实现主机保护的非托管应�
 
 #### <a name="code-analysis-rule"></a>代码分析规则
 
-查看托管代码中捕获所有对象或捕获所有异常的所有 catch 块。  在C#，这意味着同时标记`catch`{}并`catch(Exception)` {}。  请考虑将异常类型描述得非常具体，或者查看代码以确保在它捕获到意外异常类型时不会以错误的方式执行。
+查看托管代码中捕获所有对象或捕获所有异常的所有 catch 块。  在C#中, 这意味着标记`catch` {}和`catch(Exception)` {}。  请考虑将异常类型描述得非常具体，或者查看代码以确保在它捕获到意外异常类型时不会以错误的方式执行。
 
 ### <a name="do-not-assume-a-managed-thread-is-a-win32-thread--it-is-a-fiber"></a>不要假设托管线程是 Win32 线程 – 它是纤程
 

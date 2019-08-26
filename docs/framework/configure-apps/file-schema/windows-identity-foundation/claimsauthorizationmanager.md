@@ -3,15 +3,15 @@ title: <claimsAuthorizationManager>
 ms.date: 03/30/2017
 ms.assetid: 9354eee3-f692-4ad6-8427-3169686b8bcc
 author: BrucePerlerMS
-ms.openlocfilehash: 59d47eda97e97629408ece12a1d1dfbe804feb3e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 74ca031f7017d51adaa7a71593f537b64abbeae6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61667309"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69942894"
 ---
 # <a name="claimsauthorizationmanager"></a>\<claimsAuthorizationManager>
-注册的传入声明的声明授权管理器。  
+为传入声明注册声明授权管理器。  
   
  \<system.identityModel>  
 \<identityConfiguration>  
@@ -36,27 +36,27 @@ ms.locfileid: "61667309"
   
 |特性|描述|  
 |---------------|-----------------|  
-|类型|派生的自定义类型<xref:System.Security.Claims.ClaimsAuthorizationManager>类。 有关如何指定详细信息`type`属性，请参阅[自定义类型引用](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md)。|  
+|type|派生<xref:System.Security.Claims.ClaimsAuthorizationManager>自类的自定义类型。 有关如何指定`type`属性的详细信息, 请参阅[自定义类型引用](../windows-workflow-foundation/index.md)。|  
   
 ### <a name="child-elements"></a>子元素  
- 如果没有任何`type`属性，或者如果`type`属性引用<xref:System.Security.Claims.ClaimsAuthenticationManager>类，`<claimsAuthorizationManager>`元素不接受子元素; 但是，类派生自<xref:System.Security.Claims.ClaimsAuthorizationManager>可以定义子配置元素。  
+ <xref:System.Security.Claims.ClaimsAuthenticationManager> `<claimsAuthorizationManager>` <xref:System.Security.Claims.ClaimsAuthorizationManager>如果没有`type`属性, 或者如果特性引用类, 则元素不采用子元素; 但是, 从派生的类可以定义子配置元素。 `type`  
   
 ### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<identityConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|指定服务级别标识设置。|  
+|[\<identityConfiguration>](identityconfiguration.md)|指定服务级别标识设置。|  
   
 ## <a name="remarks"></a>备注  
- 通过提供的默认行为<xref:System.Security.Claims.ClaimsAuthorizationManager>类始终授权的传入声明。 如果没有`type`指定属性或如果`type`特性指定<xref:System.Security.Claims.ClaimsAuthorizationManager>类，`<claimsAuthorizationManager>`元素不接受子元素。 您可以指定`type`属性来注册一个类型派生自<xref:System.Security.Claims.ClaimsAuthorizationManager>类，以实现自定义行为。 派生的类可以支持的子元素通过配置`<claimsAuthorizationManager>`通过重写元素<xref:System.Security.Claims.ClaimsAuthorizationManager.LoadCustomConfiguration%2A>方法来处理这些元素。 为子元素定义的架构由类的设计器。  
+ 通过<xref:System.Security.Claims.ClaimsAuthorizationManager>类提供的默认行为始终授权传入声明。 如果未`type`指定任何特性或`type`特性指定了<xref:System.Security.Claims.ClaimsAuthorizationManager>类, 则`<claimsAuthorizationManager>`元素不采用子元素。 可以指定`type`用于注册派生<xref:System.Security.Claims.ClaimsAuthorizationManager>自类的类型的属性, 以实现自定义行为。 派生类可以通过`<claimsAuthorizationManager>` <xref:System.Security.Claims.ClaimsAuthorizationManager.LoadCustomConfiguration%2A>重写方法来处理这些元素, 从而支持通过元素的子元素进行的配置。 为子元素定义的架构位于类的设计器中。  
   
 > [!IMPORTANT]
->  使用时<xref:System.IdentityModel.Services.ClaimsPrincipalPermission>或<xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute>类以提供在代码中，引用的标识配置的基于声明的访问控制`<federationConfiguration>`元素配置的声明授权管理器和用于进行的策略授权决策。 这是为 true，即使在不是被动 Web 方案中，例如 Windows Communication Foundation (WCF) 应用程序或不是基于 Web 的应用程序的方案中。 如果应用程序不是被动的 Web 应用程序，`<claimsAuthorizationManager>`元素 （和其子策略元素，如果存在） 的引用的标识配置是应用的唯一设置。 将忽略所有其他设置。 有关详细信息，请参阅[ \<federationConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md)元素。  
+> 当使用<xref:System.IdentityModel.Services.ClaimsPrincipalPermission> <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute>或类在代码中提供基于声明的访问控制时, `<federationConfiguration>`元素引用的标识配置将配置声明授权管理器和策略, 该策略用于进行授权决定。 即使在非被动 Web 方案 (例如 Windows Communication Foundation (WCF) 应用程序或不是基于 Web 的应用程序) 情况下, 也是如此。 如果应用程序不是被动 Web 应用程序, `<claimsAuthorizationManager>`则仅应用所引用标识配置的元素 (及其子策略元素, 如果存在)。 将忽略所有其他设置。 有关详细信息, 请参阅[ \<federationConfiguration >](federationconfiguration.md)元素。  
   
  此元素设置<xref:System.IdentityModel.Configuration.IdentityConfiguration.ClaimsAuthorizationManager%2A?displayProperty=nameWithType>属性。  
   
 ## <a name="example"></a>示例  
- 下面的 XML 演示声明授权的配置管理器实现策略组成资源操作对其中每个指定的请求者必须拥有对资源执行操作的声明的布尔组合。 实现声明授权管理器可以使用此策略的代码可在`ClaimsBasedAuthorization`示例。  
+ 下面的 XML 显示了一个声明授权管理器的配置, 该管理器实现由资源操作对组成的策略, 其中每个规则都指定请求者为对资源执行操作而必须拥有的声明的布尔组合。 `ClaimsBasedAuthorization`示例中可找到实现声明授权管理器的代码, 该代码可使用此策略。  
   
 ```xml  
 <system.identityModel>  

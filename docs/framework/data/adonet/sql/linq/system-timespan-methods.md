@@ -2,12 +2,12 @@
 title: System.TimeSpan 方法
 ms.date: 03/30/2017
 ms.assetid: 9333fee8-1454-4374-855b-8c14c002f48f
-ms.openlocfilehash: dd693a64550293d6894e1d2abc3f651a53fc17fc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ec27f8f17a6709efef1a8230b521778095ae1257
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61917431"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69947089"
 ---
 # <a name="systemtimespan-methods"></a>System.TimeSpan 方法
 对 <xref:System.TimeSpan?displayProperty=nameWithType> 的成员支持在很大程度上取决于您正在使用的 .NET Framework 和 Microsoft SQL Server 的版本。  
@@ -17,7 +17,7 @@ ms.locfileid: "61917431"
 ## <a name="previous-limitations"></a>以前的限制  
  将 LINQ to SQL 与 .NET Framework 3.5 SP1 之前的 .NET Framework 版本一起使用时，您无法将 SQL Server 数据库字段映射到 <xref:System.TimeSpan?displayProperty=nameWithType>。 但是，支持对 <xref:System.TimeSpan> 的操作，原因是可以通过 <xref:System.TimeSpan> 减法运算返回 <xref:System.DateTime> 值或将这些值作为文本或绑定变量引入表达式。  
   
-## <a name="supported-systemtimespan-member-support"></a>受支持的 system.timespan 值成员支持
+## <a name="supported-systemtimespan-member-support"></a>支持的 TimeSpan 成员支持
 
  以下受 LINQ to SQL 支持的方法、运算符和属性可供您在 LINQ to SQL 查询中使用。 在对象模型或外部映射文件中进行映射后，LINQ to SQL 允许您从 LINQ to SQL 查询内调用许多 <xref:System.TimeSpan?displayProperty=nameWithType> 成员。  
   
@@ -31,10 +31,10 @@ ms.locfileid: "61917431"
 ||<xref:System.TimeSpan.op_LessThanOrEqual%2A>|<xref:System.TimeSpan.MinValue>|  
   
 > [!NOTE]
->  需要安装 .NET Framework 3.5 SP1 和更高版本，才能使用 LINQ to SQL 将 <xref:System.TimeSpan?displayProperty=nameWithType> 映射到 SQL `TIME` 列。 SQL `TIME` 数据类型仅在 Microsoft SQL Server 2008 和更高版本中提供。  
+> 需要安装 .NET Framework 3.5 SP1 和更高版本，才能使用 LINQ to SQL 将 <xref:System.TimeSpan?displayProperty=nameWithType> 映射到 SQL `TIME` 列。 SQL `TIME` 数据类型仅在 Microsoft SQL Server 2008 和更高版本中提供。  
   
 ### <a name="addition-and-subtraction"></a>加法和减法  
- 尽管 CLR <xref:System.TimeSpan?displayProperty=nameWithType> 类型支持加减运算，但 SQL `TIME` 类型不支持。 因此，将 LINQ to SQL 查询映射到 SQL `TIME` 类型后，如果这些查询尝试执行加减运算，则将生成错误。 您可以找到使用中的 SQL 日期和时间类型的其他注意事项[SQL-CLR 类型映射](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)。  
+ 尽管 CLR <xref:System.TimeSpan?displayProperty=nameWithType> 类型支持加减运算，但 SQL `TIME` 类型不支持。 因此，将 LINQ to SQL 查询映射到 SQL `TIME` 类型后，如果这些查询尝试执行加减运算，则将生成错误。 在[sql-CLR 类型映射](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)中, 可以找到有关使用 sql 日期和时间类型的其他注意事项。  
   
 ## <a name="see-also"></a>请参阅
 

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a7e4493fca5b73cfd0bdc59ceab9de097de799aa
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 08e6458f0a14b78c6d05f706afa710931d60094a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490743"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69948790"
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>泛型中的协变和逆变
 <a name="top"></a> 协变和逆变都是术语，前者指能够使用比原始指定的派生类型的派生程度更大（更具体的）的类型，后者指能够使用比原始指定的派生类型的派生程度更小（不太具体的）的类型。 泛型类型参数支持协变和逆变，可在分配和使用泛型类型方面提供更大的灵活性。 在引用类型系统时，协变、逆变和不变性具有如下定义。 这些示例假定一个名为 `Base` 的基类和一个名为 `Derived`的派生类。  
@@ -41,7 +41,7 @@ ms.locfileid: "66490743"
   
      你无法向 `List<Base>` 类型的变量分配 `List(Of Base)`（在 Visual Basic 中为 `List<Derived>`）的实例，反之亦然。  
   
- 利用协变类型参数，你可以执行非常类似于普通的[多态性](~/docs/csharp/programming-guide/classes-and-structs/polymorphism.md)的分配，如以下代码中所示。  
+ 利用协变类型参数，你可以执行非常类似于普通的[多态性](../../csharp/programming-guide/classes-and-structs/polymorphism.md)的分配，如以下代码中所示。  
   
  [!code-csharp[CoContraSimpleIEnum#1](../../../samples/snippets/csharp/VS_Snippets_CLR/cocontrasimpleienum/cs/example.cs#1)]
  [!code-vb[CoContraSimpleIEnum#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/cocontrasimpleienum/vb/example.vb#1)]  
@@ -110,7 +110,7 @@ ms.locfileid: "66490743"
  在 .NET Framework 4 中，`Func` 泛型委托（如 <xref:System.Func%602>）具有协变返回类型和逆变参数类型。 `Action` 泛型委托（如 <xref:System.Action%602>）具有逆变参数类型。 这意味着，可以将委托指派给具有派生程度较高的参数类型和（对于 `Func` 泛型委托）派生程度较低的返回类型的变量。  
   
 > [!NOTE]
->  `Func` 泛型委托的最后一个泛型类型参数指定委托签名中返回值的类型。 该参数是协变的（`out` 关键字），而其他泛型类型参数是逆变的（`in` 关键字）。  
+> `Func` 泛型委托的最后一个泛型类型参数指定委托签名中返回值的类型。 该参数是协变的（`out` 关键字），而其他泛型类型参数是逆变的（`in` 关键字）。  
   
  下面的代码阐释这一点。 第一段代码定义了一个名为 `Base`的类、一个名为 `Derived` 的类（此类继承 `Base`）和另一个具有名为 `static` 的`Shared` 方法（在 Visual Basic 中为 `MyMethod`）的类。 该方法采用 `Base` 的实例，并返回 `Derived` 的实例。 （如果参数是 `Derived` 的实例，则 `MyMethod` 将返回该实例；如果参数是 `Base` 的实例，则 `MyMethod` 将返回 `Derived` 的新实例。）在 `Main()` 中，该示例创建一个表示 `Func<Base, Derived>` 的 `Func(Of Base, Derived)`（在 Visual Basic 中为 `MyMethod`）的实例，并将此实例存储在变量 `f1` 中。  
   
@@ -149,12 +149,12 @@ ms.locfileid: "66490743"
  从 .NET Framework 4 开始，Visual Basic 和 C# 提供了一些关键字，利用这些关键字，可以将接口和委托的泛型类型参数标记为协变或逆变。  
   
 > [!NOTE]
->  从 .NET Framework 2.0 版开始，公共语言运行时支持泛型类型参数上的变化批注。 在 .NET Framework 4 之前，定义包含这些批注的泛型类的唯一方法就是利用 [Ilasm.exe（IL 汇编程序）](../../../docs/framework/tools/ilasm-exe-il-assembler.md) 编译该类或在动态程序集中发出该类，从而使用 Microsoft 中间语言 (MSIL)。  
+> 从 .NET Framework 2.0 版开始，公共语言运行时支持泛型类型参数上的变化批注。 在 .NET Framework 4 之前，定义包含这些批注的泛型类的唯一方法就是利用 [Ilasm.exe（IL 汇编程序）](../../../docs/framework/tools/ilasm-exe-il-assembler.md) 编译该类或在动态程序集中发出该类，从而使用 Microsoft 中间语言 (MSIL)。  
   
  协变类型参数用 `out` 关键字（在 Visual Basic 中为`Out` 关键字，在 `+` MSIL 汇编程序 [中为](../../../docs/framework/tools/ilasm-exe-il-assembler.md)）标记。 可以将协变类型参数用作属于接口的方法的返回值，或用作委托的返回类型。 但不能将协变类型参数用作接口方法的泛型类型约束。  
   
 > [!NOTE]
->  如果接口的方法具有泛型委托类型的参数，则接口类型的协变类型参数可用于指定委托类型的逆变类型参数。  
+> 如果接口的方法具有泛型委托类型的参数，则接口类型的协变类型参数可用于指定委托类型的逆变类型参数。  
   
  逆变类型参数用 `in` 关键字（在 Visual Basic 中为`In` 关键字，在 `-` MSIL 汇编程序 [中为](../../../docs/framework/tools/ilasm-exe-il-assembler.md)）标记。 可以将逆变类型参数用作属于接口的方法的参数类型，或用作委托的参数类型。 也可以将逆变类型参数用作接口方法的泛型类型约束。  
   

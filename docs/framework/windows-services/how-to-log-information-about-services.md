@@ -13,12 +13,12 @@ helpviewer_keywords:
 - logs, service applications
 ms.assetid: c0d8140f-c055-4d8e-a2e0-37358a550116
 author: ghogen
-ms.openlocfilehash: c8a744337803a7a26397c999a6d9c6d10f69a1c5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1ffc698910fe722fe761c62b87b059068d5f243f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591655"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69935525"
 ---
 # <a name="how-to-log-information-about-services"></a>如何：记录关于服务的信息
 默认情况下，所有 Windows 服务项目都具有与应用程序事件日志进行交互并向其中写入信息和异常的功能。 使用 <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> 属性可指示是否希望应用程序具有此功能。 默认情况下，用 Windows 服务项目模板创建的所有服务的记录都是打开的。 可以使用静态形式的 <xref:System.Diagnostics.EventLog> 类将服务信息写入日志，而无需创建 <xref:System.Diagnostics.EventLog> 组件的实例或手动注册源。  
@@ -28,14 +28,14 @@ ms.locfileid: "64591655"
  如果要向事件日志而不是应用程序日志中写入，则必须将 <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> 属性设置为 `false`，在服务代码内创建自定义事件日志，并将服务注册为该日志的有效项源。 然后必须编写代码，以在相关操作发生时将项记入日志。  
   
 > [!NOTE]
->  如果使用一个自定义事件日志并配置服务应用程序写入该日志，则在代码中设置服务的 <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> 属性之前，不要尝试访问该事件日志。 事件日志需要此属性的值才可将服务注册为一个有效的事件源。  
+> 如果使用一个自定义事件日志并配置服务应用程序写入该日志，则在代码中设置服务的 <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> 属性之前，不要尝试访问该事件日志。 事件日志需要此属性的值才可将服务注册为一个有效的事件源。  
   
 ### <a name="to-enable-default-event-logging-for-your-service"></a>为服务启用默认事件记录  
   
 - 将组件的 <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> 属性设置为 `true`。  
   
     > [!NOTE]
-    >  默认情况下，此属性设置为 `true`。 不需要显式设置此属性，除非正在生成更复杂的处理，如计算一个条件然后根据该条件的结果设置 <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> 属性。  
+    > 默认情况下，此属性设置为 `true`。 不需要显式设置此属性，除非正在生成更复杂的处理，如计算一个条件然后根据该条件的结果设置 <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> 属性。  
   
 ### <a name="to-disable-event-logging-for-your-service"></a>为服务禁用默认事件记录  
   
@@ -49,7 +49,7 @@ ms.locfileid: "64591655"
 1. 将 <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> 属性设置为 `false`。  
   
     > [!NOTE]
-    >  若要使用自定义日志，必须将 <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> 设置为 false 。  
+    > 若要使用自定义日志，必须将 <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> 设置为 false 。  
   
 2. 在 Windows 服务应用程序中设置 <xref:System.Diagnostics.EventLog> 组件的一个实例。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "64591655"
      下面的代码演示如何将记录设置为自定义日志。  
   
     > [!NOTE]
-    >  在此代码示例中，一个 <xref:System.Diagnostics.EventLog> 组件实例命名为 `eventLog1` （在 Visual Basic 中为`EventLog1` ）。 如果在步骤 2 中创建具有另一名称的实例，请相应地更改代码。  
+    > 在此代码示例中，一个 <xref:System.Diagnostics.EventLog> 组件实例命名为 `eventLog1` （在 Visual Basic 中为`EventLog1` ）。 如果在步骤 2 中创建具有另一名称的实例，请相应地更改代码。  
   
      [!code-csharp[VbRadconService#14](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#14)]
      [!code-vb[VbRadconService#14](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#14)]  

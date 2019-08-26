@@ -2,12 +2,12 @@
 title: <namedPipeTransport>
 ms.date: 03/30/2017
 ms.assetid: 9fc3f42f-43e2-4ab1-8bc7-3c95a9220df1
-ms.openlocfilehash: 819639eabf0332a34d6a7250159d24e42552f874
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 473d0fbd543a056ec2b152f43a76a0417a18016f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67423089"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933206"
 ---
 # <a name="namedpipetransport"></a>\<namedPipeTransport>
 定义传输，使通道在被包括到自定义绑定中时使用命名管道来传输消息。  
@@ -15,7 +15,7 @@ ms.locfileid: "67423089"
 \<system.serviceModel>  
 \<bindings>  
 \<customBinding>  
-\<binding>  
+\<绑定 >  
 \<namePipeTransport>  
   
 ## <a name="syntax"></a>语法  
@@ -48,24 +48,24 @@ ms.locfileid: "67423089"
   
 |元素|描述|  
 |-------------|-----------------|  
-|ChannelInitializationTimeout|获取或设置<xref:System.TimeSpan>，它确定在断开连接前通道可处于初始化状态的最长时间。|  
+|ChannelInitializationTimeout|获取或设置一个<xref:System.TimeSpan> , 它确定通道在断开连接前可处于初始化状态的最大时间。|  
 |ConnectionBufferSize|获取或设置用于从客户端或服务传输网络上的序列化消息块的缓冲区大小。|  
 |hostNameComparisonMode|获取或设置一个值，该值指示在对 URI 进行匹配时，是否使用主机名来访问服务。|  
 |manualAddressing|获取或设置一个值，该值指示是否要求对消息进行手动寻址。|  
-|maxBufferPoolSize|获取或设置最大大小，以字节为任何的单位传输使用的缓冲池。|  
+|maxBufferPoolSize|获取或设置传输使用的任何缓冲池的最大大小 (以字节为单位)。|  
 |maxBufferSize|获取或设置要使用的缓冲区的最大大小。 对于经过流处理的消息，该值最少应为以缓冲模式读取的消息头的最大可能大小。|  
 |maxOutputDelay|获取或设置消息块或完整消息在发出之前可以在内存中保持缓冲的最大时间间隔。|  
-|maxPendingAccepts|获取或设置一个服务可以有一个侦听器上等待用于处理传入连接到服务的通道的最大数目。|  
+|maxPendingAccepts|获取或设置服务在侦听器上等待处理到服务的传入连接的最大通道数。|  
 |maxPendingConnections|获取或设置在服务上等待调度的最大连接数。|  
-|maxReceivedMessageSize|获取和设置最大消息大小，以字节为单位，可以接收。|  
+|maxReceivedMessageSize|获取和设置允许接收的最大消息大小 (以字节为单位)。|  
 |transferMode|获取或设置一个值，该值指示通过面向连接的传输对消息进行缓冲还是流处理。|  
-|[\<connectionPoolSettings> of \<namedPipeTransport>](../../../../../docs/framework/configure-apps/file-schema/wcf/connectionpoolsettings.md)|指定命名管道绑定的其他连接池设置。|  
+|[\<connectionPoolSettings > \<namedPipeTransport >](connectionpoolsettings.md)|指定命名管道绑定的其他连接池设置。|  
   
 ### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<binding>](../../../../../docs/framework/misc/binding.md)|定义自定义绑定的所有绑定功能。|  
+|[\<binding>](../../../misc/binding.md)|定义自定义绑定的所有绑定功能。|  
   
 ## <a name="remarks"></a>备注  
 此传输使用“net.pipe://hostname/path”形式的 URI。 其他 URI 组件是可选的。  
@@ -78,9 +78,9 @@ ms.locfileid: "67423089"
 - <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>
 - <xref:System.ServiceModel.Channels.TransportBindingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [传输](../../../../../docs/framework/wcf/feature-details/transports.md)
-- [选择传输](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
-- [绑定](../../../../../docs/framework/wcf/bindings.md)
-- [扩展绑定](../../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [自定义绑定](../../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [传输](../../../wcf/feature-details/transports.md)
+- [选择传输](../../../wcf/feature-details/choosing-a-transport.md)
+- [绑定](../../../wcf/bindings.md)
+- [扩展绑定](../../../wcf/extending/extending-bindings.md)
+- [自定义绑定](../../../wcf/extending/custom-bindings.md)
+- [\<customBinding>](custombinding.md)

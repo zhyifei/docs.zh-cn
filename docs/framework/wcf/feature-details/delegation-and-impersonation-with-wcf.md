@@ -8,18 +8,18 @@ helpviewer_keywords:
 - impersonation [WCF]
 - delegation [WCF]
 ms.assetid: 110e60f7-5b03-4b69-b667-31721b8e3152
-ms.openlocfilehash: 13e58339e55b2071e4c1979de6c4e130fe4c9e32
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: 6e79346a448012255020cc28b6534e734980b1db
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67486952"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968851"
 ---
 # <a name="delegation-and-impersonation-with-wcf"></a>WCF 的委派和模拟
-模拟  是一种常用技术，服务可使用该技术限制客户端对服务域资源的访问。 服务域资源可以是计算机资源，如本地文件（模拟），也可以是其他计算机上的资源，如文件共享（委托）。 有关示例应用程序，请参见 [Impersonating the Client](../../../../docs/framework/wcf/samples/impersonating-the-client.md)。 有关如何使用模拟的示例，请参阅[如何：模拟客户端在服务上的](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)。  
+模拟 是一种常用技术，服务可使用该技术限制客户端对服务域资源的访问。 服务域资源可以是计算机资源，如本地文件（模拟），也可以是其他计算机上的资源，如文件共享（委托）。 有关示例应用程序，请参见 [Impersonating the Client](../../../../docs/framework/wcf/samples/impersonating-the-client.md)。 有关如何使用模拟的示例, 请参阅[如何:模拟服务](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)上的客户端。  
   
 > [!IMPORTANT]
->  请注意，在对某一服务模拟客户端时，该服务会使用客户端的凭据运行，因此可能具有高于服务器进程的权限。  
+> 请注意，在对某一服务模拟客户端时，该服务会使用客户端的凭据运行，因此可能具有高于服务器进程的权限。  
   
 ## <a name="overview"></a>概述  
  通常，客户端会调用某个服务，使该服务代表客户端执行某个操作。 模拟使服务可在执行操作时充当客户端。 委托使前端服务可采用某种方式将客户端的请求转发到后端服务，以使后端服务也能模拟客户端。 模拟是检查客户端是否有权执行特定操作的最常用的方法，而委托是一种使模拟功能以及客户端的标识流向后端服务的方法。 委托是一种 Windows 域功能，可在执行基于 Kerberos 的身份验证时使用。 委托不同于标识流，因为委托可传送无需拥有客户端密码即可模拟客户端的能力。与标识流相比，委托是一种权限更高的操作。  
@@ -27,12 +27,12 @@ ms.locfileid: "67486952"
  模拟和委托都要求客户端具有 Windows 标识。 如果客户端没有 Windows 标识，则唯一的选择就是使客户端的标识流向第二个服务。  
   
 ## <a name="impersonation-basics"></a>模拟基础知识  
- Windows Communication Foundation (WCF) 支持模拟各种客户端凭据。 本主题说明在实现某一服务方法的过程中支持模拟调用方的服务模型。 此外讨论了涉及模拟以及 SOAP 安全以及在这些方案中的 WCF 选项的常见部署方案。  
+ Windows Communication Foundation (WCF) 支持模拟各种客户端凭据。 本主题说明在实现某一服务方法的过程中支持模拟调用方的服务模型。 本文还讨论了涉及模拟和 SOAP 安全的常见部署方案以及这些方案中的 WCF 选项。  
   
- 本主题着重于模拟和 WCF 中的委托时使用的 SOAP 安全。 您还可以使用模拟和委托与 WCF 结合使用时使用传输安全模式，如中所述[使用 Impersonation with Transport Security](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md)。  
+ 本主题重点介绍使用 SOAP 安全时 WCF 中的模拟和委托。 使用传输安全时, 还可以对 WCF 使用模拟和委托, 如在[传输安全中使用模拟](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md)中所述。  
   
 ## <a name="two-methods"></a>两种方法  
- WCF SOAP 安全有两个不同的执行模拟方法。 所用的方法取决于绑定。 一种方法是从 Windows 令牌模拟，此令牌从安全支持提供程序接口 (SSPI) 或 Kerberos 身份验证获取，然后在服务上缓存。 另一种方法是从 Windows 令牌模拟，此令牌从 Kerberos 扩展获取，统称为“Service-for-User”  (S4U)。  
+ WCF SOAP 安全性有两种不同的方法来执行模拟。 所用的方法取决于绑定。 一种方法是从 Windows 令牌模拟，此令牌从安全支持提供程序接口 (SSPI) 或 Kerberos 身份验证获取，然后在服务上缓存。 另一种方法是从 Windows 令牌模拟，此令牌从 Kerberos 扩展获取，统称为“Service-for-User” (S4U)。  
   
 ### <a name="cached-token-impersonation"></a>缓存的令牌模拟  
  您可以对以下各项执行缓存的令牌模拟：  
@@ -57,27 +57,27 @@ ms.locfileid: "67486952"
  服务可以模拟客户端的范围取决于服务帐户在尝试模拟时拥有的权限、使用的模拟类型和客户端可能允许的模拟范围。  
   
 > [!NOTE]
->  当客户端和服务在同一计算机上运行，并且客户端在系统帐户（例如 `Local System` 或 `Network Service`）下运行时，如果安全会话是使用有状态安全上下文令牌建立的，则不能模拟客户端。 Windows 窗体或控制台应用程序通常在当前登录的帐户下运行，因此默认情况下可以模拟该帐户。 但是，如果客户端是 ASP.NET 页，该页面托管在 IIS 6.0 或 IIS 7.0，则下运行客户端`Network Service`默认情况下的帐户。 默认情况下，系统提供的所有支持安全会话的绑定都使用无状态安全上下文令牌 (SCT)。 但是，如果客户端是 ASP.NET 页，并使用有状态 Sct 的安全会话，则不能模拟该客户端。 有关在安全会话中使用有状态 Sct 的详细信息，请参阅[如何：创建安全上下文令牌的安全会话](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)。  
+> 当客户端和服务在同一计算机上运行，并且客户端在系统帐户（例如 `Local System` 或 `Network Service`）下运行时，如果安全会话是使用有状态安全上下文令牌建立的，则不能模拟客户端。 Windows 窗体或控制台应用程序通常在当前登录的帐户下运行，因此默认情况下可以模拟该帐户。 但是, 当客户端为 ASP.NET 页, 并且该页承载在 iis 6.0 或 iis 7.0 中时, 默认情况下, 客户端将`Network Service`在帐户下运行。 默认情况下，系统提供的所有支持安全会话的绑定都使用无状态安全上下文令牌 (SCT)。 但是, 如果客户端是 ASP.NET 页, 并且使用了具有有状态 Sct 的安全会话, 则不能模拟客户端。 有关在安全会话中使用有状态 sct 的详细信息, [请参阅如何:创建安全会话](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)的安全上下文令牌。  
   
-## <a name="impersonation-in-a-service-method-declarative-model"></a>服务方法中的模拟：声明性模型  
- 大多数模拟方案都涉及在调用方上下文中执行服务方法。 WCF 提供了一种模拟功能，这可以更轻松地通过允许用户指定模拟要求在执行<xref:System.ServiceModel.OperationBehaviorAttribute>属性。 例如，在下面的代码中，WCF 基础结构模拟调用方执行前`Hello`方法。 只有当本机资源的访问控制列表 (ACL) 允许调用方访问权限时，在 `Hello` 方法内访问该本机资源的任何尝试才能成功。 若要启用模拟，请将 <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> 属性设置为 <xref:System.ServiceModel.ImpersonationOption> 枚举值之一（ <xref:System.ServiceModel.ImpersonationOption.Required?displayProperty=nameWithType> 或 <xref:System.ServiceModel.ImpersonationOption.Allowed?displayProperty=nameWithType>），如下面的示例所示。  
+## <a name="impersonation-in-a-service-method-declarative-model"></a>服务方法中的模拟:声明性模型  
+ 大多数模拟方案都涉及在调用方上下文中执行服务方法。 WCF 提供了模拟功能, 使用户可以在<xref:System.ServiceModel.OperationBehaviorAttribute>属性中指定模拟要求, 从而轻松实现此目的。 例如, 在下面的代码中, WCF 基础结构在执行`Hello`方法之前模拟调用方。 只有当本机资源的访问控制列表 (ACL) 允许调用方访问权限时，在 `Hello` 方法内访问该本机资源的任何尝试才能成功。 若要启用模拟，请将 <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> 属性设置为 <xref:System.ServiceModel.ImpersonationOption> 枚举值之一（ <xref:System.ServiceModel.ImpersonationOption.Required?displayProperty=nameWithType> 或 <xref:System.ServiceModel.ImpersonationOption.Allowed?displayProperty=nameWithType>），如下面的示例所示。  
   
 > [!NOTE]
->  当服务具有比远程客户端更高的凭据时，在 <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> 属性设置为 <xref:System.ServiceModel.ImpersonationOption.Allowed>的情况下将使用服务的凭据。 也就是说，如果低权限的用户提供其凭据，则较高权限的服务会使用服务的凭据执行该方法，并可以使用低权限的用户不能使用的资源。  
+> 当服务具有比远程客户端更高的凭据时，在 <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> 属性设置为 <xref:System.ServiceModel.ImpersonationOption.Allowed>的情况下将使用服务的凭据。 也就是说，如果低权限的用户提供其凭据，则较高权限的服务会使用服务的凭据执行该方法，并可以使用低权限的用户不能使用的资源。  
   
  [!code-csharp[c_ImpersonationAndDelegation#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_impersonationanddelegation/cs/source.cs#1)]
  [!code-vb[c_ImpersonationAndDelegation#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_impersonationanddelegation/vb/source.vb#1)]  
   
- 仅当调用方使用可以映射到 Windows 用户帐户的凭据进行身份验证，WCF 基础结构可以模拟调用方。 如果将服务配置为使用无法映射到 Windows 用户帐户的凭据进行身份验证，则不会执行服务方法。  
+ 仅当调用方使用可以映射到 Windows 用户帐户的凭据进行身份验证时, WCF 基础结构才能模拟调用方。 如果将服务配置为使用无法映射到 Windows 用户帐户的凭据进行身份验证，则不会执行服务方法。  
   
 > [!NOTE]
->  在 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]中，如果创建了有状态 SCT，则模拟会失败，导致 <xref:System.InvalidOperationException>。 有关详细信息，请参阅[不支持的方案](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)。  
+> 在 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]中，如果创建了有状态 SCT，则模拟会失败，导致 <xref:System.InvalidOperationException>。 有关详细信息, 请参阅[不支持的方案](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)。  
   
-## <a name="impersonation-in-a-service-method-imperative-model"></a>服务方法中的模拟：命令性模型  
+## <a name="impersonation-in-a-service-method-imperative-model"></a>服务方法中的模拟:命令性模型  
  有时，调用方不需要模拟整个服务方法，只需模拟它的一部分就行。 在这种情况下，请获取服务方法中调用方的 Windows 标识并以强制方式执行模拟。 为此，请使用 <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> 的 <xref:System.ServiceModel.ServiceSecurityContext> 属性返回 <xref:System.Security.Principal.WindowsIdentity> 类的实例并在使用该实例前调用 <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A> 方法。  
   
 > [!NOTE]
->  请务必使用 Visual Basic`Using`语句或 C#`using`语句以自动还原模拟操作。 如果不使用该语句，或使用非 Visual Basic 或 C# 编程语言，请确保还原模拟级别。 否则可导致拒绝服务和特权升级攻击。  
+> 请确保使用 Visual Basic`Using`语句C# `using`或语句以自动还原模拟操作。 如果不使用语句, 或者使用 Visual Basic 或C#以外的编程语言, 请确保还原模拟级别。 否则可导致拒绝服务和特权升级攻击。  
   
  [!code-csharp[c_ImpersonationAndDelegation#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_impersonationanddelegation/cs/source.cs#2)]
  [!code-vb[c_ImpersonationAndDelegation#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_impersonationanddelegation/vb/source.vb#2)]  
@@ -88,21 +88,21 @@ ms.locfileid: "67486952"
  [!code-csharp[c_ImpersonationAndDelegation#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_impersonationanddelegation/cs/source.cs#3)]
  [!code-vb[c_ImpersonationAndDelegation#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_impersonationanddelegation/vb/source.vb#3)]  
   
- 下表描述了所有可能的组合的 WCF 行为`ImpersonationOption`和`ImpersonateCallerForAllServiceOperations`。  
+ 下表描述了和`ImpersonationOption` `ImpersonateCallerForAllServiceOperations`的所有可能组合的 WCF 行为。  
   
 |`ImpersonationOption`|`ImpersonateCallerForAllServiceOperations`|行为|  
 |---------------------------|------------------------------------------------|--------------|  
 |必需|n/a|WCF 模拟调用方|  
-|Allowed|False|WCF 不模拟调用方|  
-|Allowed|true|WCF 模拟调用方|  
-|NotAllowed|False|WCF 不模拟调用方|  
-|NotAllowed|true|不允许。 （引发 <xref:System.InvalidOperationException> 。）|  
+|Allowed|假|WCF 不模拟调用方|  
+|Allowed|真|WCF 模拟调用方|  
+|NotAllowed|假|WCF 不模拟调用方|  
+|NotAllowed|真|不允许。 （引发 <xref:System.InvalidOperationException> 。）|  
   
 ## <a name="impersonation-level-obtained-from-windows-credentials-and-cached-token-impersonation"></a>从 Windows 凭据和缓存的令牌模拟获取的模拟级别  
  在某些情况下，当使用 Windows 凭据时，客户端能够部分控制服务执行的模拟级别。 情况之一是客户端指定 Anonymous 模拟级别。 另一种情况是执行缓存的令牌模拟。 这是通过设置 <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> 类的 <xref:System.ServiceModel.Security.WindowsClientCredential> 属性来完成的，此类可作为通用 <xref:System.ServiceModel.ChannelFactory%601> 类的属性进行访问。  
   
 > [!NOTE]
->  指定 Anonymous 模拟级别可导致客户端匿名登录到服务。 因此，无论是否执行模拟，服务都必须允许匿名登录。  
+> 指定 Anonymous 模拟级别可导致客户端匿名登录到服务。 因此，无论是否执行模拟，服务都必须允许匿名登录。  
   
  客户端可以将模拟级别指定为 <xref:System.Security.Principal.TokenImpersonationLevel.Anonymous>、 <xref:System.Security.Principal.TokenImpersonationLevel.Identification>、 <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>或 <xref:System.Security.Principal.TokenImpersonationLevel.Delegation>。 只在指定的级别产生令牌，如下面的代码所示。  
   
@@ -114,30 +114,30 @@ ms.locfileid: "67486952"
 |`AllowedImpersonationLevel` 值|服务具有 `SeImpersonatePrivilege`|服务和客户端能够委托|缓存的令牌 `ImpersonationLevel`|  
 |---------------------------------------|------------------------------------------|--------------------------------------------------|---------------------------------------|  
 |匿名|是|n/a|Impersonation|  
-|匿名|否|n/a|标识|  
+|匿名|No|n/a|标识|  
 |标识|n/a|n/a|标识|  
 |Impersonation|是|n/a|Impersonation|  
-|Impersonation|否|n/a|标识|  
+|Impersonation|No|n/a|标识|  
 |委托|是|是|委托|  
-|委托|是|否|Impersonation|  
-|委托|否|n/a|标识|  
+|委托|是|No|Impersonation|  
+|委托|No|n/a|标识|  
   
 ## <a name="impersonation-level-obtained-from-user-name-credentials-and-cached-token-impersonation"></a>从用户名凭据和缓存的令牌模拟获取的模拟级别  
- 客户端通过向服务传递其用户名和密码，使 WCF 作为等效于设置该用户登录`AllowedImpersonationLevel`属性设置为<xref:System.Security.Principal.TokenImpersonationLevel.Delegation>。 （`AllowedImpersonationLevel` 在 <xref:System.ServiceModel.Security.WindowsClientCredential> 和 <xref:System.ServiceModel.Security.HttpDigestClientCredential> 类中可用。）下表提供了当服务接收用户名凭据时获取的模拟级别。  
+ 通过向服务传递其用户名和密码, 客户端可以使 WCF 以该用户身份登录, 这等效于将`AllowedImpersonationLevel`属性设置为。 <xref:System.Security.Principal.TokenImpersonationLevel.Delegation> （`AllowedImpersonationLevel` 在 <xref:System.ServiceModel.Security.WindowsClientCredential> 和 <xref:System.ServiceModel.Security.HttpDigestClientCredential> 类中可用。）下表提供了当服务接收用户名凭据时获取的模拟级别。  
   
 |`AllowedImpersonationLevel`|服务具有 `SeImpersonatePrivilege`|服务和客户端能够委托|缓存的令牌 `ImpersonationLevel`|  
 |---------------------------------|------------------------------------------|--------------------------------------------------|---------------------------------------|  
 |n/a|是|是|委托|  
-|n/a|是|否|Impersonation|  
-|无|否|n/a|标识|  
+|n/a|是|No|Impersonation|  
+|无|No|n/a|标识|  
   
 ## <a name="impersonation-level-obtained-from-s4u-based-impersonation"></a>从基于 S4U 的模拟获取的模拟级别  
   
 |服务具有 `SeTcbPrivilege`|服务具有 `SeImpersonatePrivilege`|服务和客户端能够委托|缓存的令牌 `ImpersonationLevel`|  
 |----------------------------------|------------------------------------------|--------------------------------------------------|---------------------------------------|  
 |是|是|n/a|Impersonation|  
-|是|否|n/a|标识|  
-|否|n/a|n/a|标识|  
+|是|No|n/a|标识|  
+|No|n/a|n/a|标识|  
   
 ## <a name="mapping-a-client-certificate-to-a-windows-account"></a>将客户端证书映射到 Windows 帐户  
  客户端有可能使用证书向服务验证自己的身份，并让服务通过 Active Directory 将客户端映射到现有帐户。 下面的 XML 演示如何将服务配置为使用映射证书。  
@@ -173,13 +173,13 @@ sh.Credentials.ClientCertificate.Authentication.MapClientCertificateToWindowsAcc
  若要委托给后端服务，服务必须使用客户端的 Windows 标识对后端服务执行 Kerberos 多段（不带 NTLM 回退的 SSPI）身份验证或 Kerberos 直接身份验证。 若要委托给后端服务，可以创建 <xref:System.ServiceModel.ChannelFactory%601> 和通道，然后在模拟客户端时通过该通道进行通信。 采用这种形式的委托时，后端服务与前端服务之间可以保持的距离取决于前端服务实现的模拟级别。 如果模拟级别为 <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>，则前端服务和后端服务必须在同一台计算机上运行。 如果模拟级别为 <xref:System.Security.Principal.TokenImpersonationLevel.Delegation>，则前端服务和后端服务既可以在不同的计算机上运行，也可以在同一台计算机上运行。 启用委托级别的模拟需要将 Windows 域策略配置为允许委托。 有关配置 Active Directory 以提供委托支持的详细信息，请参阅 [Enabling Delegated Authentication](https://go.microsoft.com/fwlink/?LinkId=99690)（启用委托的身份验证）。  
   
 > [!NOTE]
->  如果客户端使用与后端服务上的 Windows 帐户相对应的用户名和密码向前端服务进行身份验证，则前端服务可通过重用客户端的用户名和密码，向后端服务进行身份验证。 这是一种功能特别强大的标识流形式，因为将用户名和密码传递到后端服务会使后端服务可以执行模拟，但它不会形成委托，因为未使用 Kerberos。 Active Directory 对委托的控制不适用于用户名和密码的身份验证。  
+> 如果客户端使用与后端服务上的 Windows 帐户相对应的用户名和密码向前端服务进行身份验证，则前端服务可通过重用客户端的用户名和密码，向后端服务进行身份验证。 这是一种功能特别强大的标识流形式，因为将用户名和密码传递到后端服务会使后端服务可以执行模拟，但它不会形成委托，因为未使用 Kerberos。 Active Directory 对委托的控制不适用于用户名和密码的身份验证。  
   
 ### <a name="delegation-ability-as-a-function-of-impersonation-level"></a>作为模拟级别功能的委托功能  
   
 |模拟级别|服务可以执行跨进程的委托|服务可以执行跨计算机的委托|  
 |-------------------------|---------------------------------------------------|---------------------------------------------------|  
-|<xref:System.Security.Principal.TokenImpersonationLevel.Identification>|否|否|  
+|<xref:System.Security.Principal.TokenImpersonationLevel.Identification>|No|No|  
 |<xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>|是|No|  
 |<xref:System.Security.Principal.TokenImpersonationLevel.Delegation>|是|是|  
   

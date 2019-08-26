@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
-ms.openlocfilehash: 7c83cfa22770695861b07e3bff29a38fcd125dd2
-ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
+ms.openlocfilehash: b4ae0d03c0207413d826e62de1d157f938b4d775
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69545246"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70016129"
 ---
 # <a name="typography-in-wpf"></a>WPF 中的版式
 本主题介绍 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 的主要版式功能。 这些功能包括改进的文本呈现质量和性能、OpenType 版式支持、增强的国际文本、增强的字体支持以及新的文本应用程序编程接口 (Api)。  
   
 <a name="Improved_Quality_and_Performance_of_Text"></a>   
 ## <a name="improved-quality-and-performance-of-text"></a>改进的文本质量和性能  
- 中[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]的文本使用 Microsoft ClearType 呈现, 从而增强了文本的清晰度和可读性。 ClearType 是一种由[!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)]开发的软件技术, 可提高现有 lcd (液晶显示器, 如笔记本电脑屏幕、Pocket PC 屏幕和平板显示器) 上文本的可读性。 ClearType 使用子像素呈现, 这允许通过在像素的小数部分对齐字符, 以更高的保真度将文本显示为真正的形状。 超高的分辨率增加了文本显示中细节的清晰度，使其更便于长时间阅读。 中[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ClearType 的另一个改进是 y 方向抗锯齿, 这会平滑文本字符中浅曲线的顶部和底部。 有关 ClearType 功能的更多详细信息, 请参阅[Cleartype 概述](cleartype-overview.md)。  
+ 中[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]的文本使用 Microsoft ClearType 呈现, 从而增强了文本的清晰度和可读性。 ClearType 是由 Microsoft 开发的一种软件技术, 可提高现有 Lcd (液晶显示器上显示的文本) 的可读性, 如笔记本电脑屏幕、Pocket PC 屏幕和平板显示器。 ClearType 使用子像素呈现, 这允许通过在像素的小数部分对齐字符, 以更高的保真度将文本显示为真正的形状。 超高的分辨率增加了文本显示中细节的清晰度，使其更便于长时间阅读。 中[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ClearType 的另一个改进是 y 方向抗锯齿, 这会平滑文本字符中浅曲线的顶部和底部。 有关 ClearType 功能的更多详细信息, 请参阅[Cleartype 概述](cleartype-overview.md)。  
   
  ![采用 ClearType y 向抗锯齿的文本](./media/typography-in-wpf/text-y-direction-antialiasing.gif)  
 采用 ClearType y 向抗锯齿的文本  
@@ -29,7 +29,7 @@ ms.locfileid: "69545246"
   
 <a name="Rich_Typography"></a>   
 ## <a name="rich-typography"></a>丰富的版式  
- OpenType 字体格式是[!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)]字体格式的扩展。 OpenType 字体格式由[!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)]和 Adobe 共同开发, 提供丰富的高级版式功能。 <xref:System.Windows.Documents.Typography>对象公开了 OpenType 字体的许多高级功能, 如样式替代和花体。 Windows SDK 提供了一组结合了丰富功能的示例 OpenType 字体, 如 Pericles 和 Pescadero 字体。 有关详细信息，请参阅[示例 OpenType 字体包](sample-opentype-font-pack.md)。  
+ OpenType 字体格式是[!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)]字体格式的扩展。 OpenType 字体格式由 Microsoft 和 Adobe 共同开发, 提供丰富的高级版式功能。 <xref:System.Windows.Documents.Typography>对象公开了 OpenType 字体的许多高级功能, 如样式替代和花体。 Windows SDK 提供了一组结合了丰富功能的示例 OpenType 字体, 如 Pericles 和 Pescadero 字体。 有关详细信息，请参阅[示例 OpenType 字体包](sample-opentype-font-pack.md)。  
   
  Pericles OpenType 字体包含其他一些标志符号, 它们提供标准字形集的样式备用项。 以下文本显示样式备用字形。  
   

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8d56ff9b-a571-4d31-b41f-80c0b51b70a5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ef107ae0dceb7ee937b21d65cba92cbcf6a9a96c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 416ed968d9fe2b7149c90fb6d1fa37547db735dc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64629002"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962512"
 ---
 # <a name="how-to-handle-exceptions-in-a-plinq-query"></a>如何：处理 PLINQ 查询中的异常
 本主题中的第一个示例展示了如何处理 PLINQ 查询在执行时可能会抛出的 <xref:System.AggregateException?displayProperty=nameWithType>。 第二个示例展示了如何将 try-catch 块置于委托中，并尽可能靠近抛出异常的代码位置。 这样一来，可以在异常发生时尽快捕获它们，并继续执行查询。 如果允许异常向上冒泡回到联接线程，则查询也许可以在引发异常后继续处理一些项。  
@@ -23,7 +23,7 @@ ms.locfileid: "64629002"
  如果 PLINQ 回退到顺序执行且发生异常，异常可能会直接传播，而不会被包装在 <xref:System.AggregateException> 中。 此外，<xref:System.Threading.ThreadAbortException> 始终都会直接传播。  
   
 > [!NOTE]
->  选中“仅我的代码”后，Visual Studio 会在抛出异常的代码行处中断，并显示错误消息“用户代码未处理异常”。 此错误是良性的。 可以按 F5 继续运行，并请参阅下面示例中所示的异常处理行为。 为了阻止 Visual Studio 在第一个错误出现时中断，只需依次转到“工具”、“选项”、“调试”、“常规”下，取消选中“仅我的代码”复选框即可。  
+> 选中“仅我的代码”后，Visual Studio 会在抛出异常的代码行处中断，并显示错误消息“用户代码未处理异常”。 此错误是良性的。 可以按 F5 继续运行，并请参阅下面示例中所示的异常处理行为。 为了阻止 Visual Studio 在第一个错误出现时中断，只需依次转到“工具”、“选项”、“调试”、“常规”  下，取消选中“仅我的代码”复选框即可。  
 >   
 >  本示例旨在演示用法，运行速度可能不如等效的顺序 LINQ to Objects 查询快。 若要详细了解加速，请参阅[了解 PLINQ 中的加速](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md)。  
   

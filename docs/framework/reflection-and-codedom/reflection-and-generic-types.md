@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: f7180fc5-dd41-42d4-8a8e-1b34288e06de
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 05b1d80887186466044acdb088d7f45a386b37f7
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: eb16097ab5a452a554cc7dfe039db1858e46de00
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364041"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69967205"
 ---
 # <a name="reflection-and-generic-types"></a>反射类型和泛型类型
 <a name="top"></a> 从反射的角度来说，泛型类型和普通类型之间的区别在于泛型类型具有与之关联的一组类型形参（若是泛型类型定义）或类型实参（若是构造类型）。 泛型方法和普通方法以相同方式互不相同。  
@@ -32,7 +32,7 @@ ms.locfileid: "68364041"
 - 泛型类型定义和泛型方法定义的类型参数由 <xref:System.Type> 类的实例表示。  
   
     > [!NOTE]
-    >  <xref:System.Type> 对象表示泛型类型参数时， <xref:System.Type> 的很多属性和方法具有不同的行为。 这些差异记录在属性和方法主题中。 有关示例，请参阅 <xref:System.Type.IsAutoClass%2A> 和 <xref:System.Type.DeclaringType%2A>。 此外，某些成员仅在 <xref:System.Type> 对象表示泛型类型参数时有效。 有关示例，请参阅 <xref:System.Type.GetGenericTypeDefinition%2A>。  
+    > <xref:System.Type> 对象表示泛型类型参数时， <xref:System.Type> 的很多属性和方法具有不同的行为。 这些差异记录在属性和方法主题中。 有关示例，请参阅 <xref:System.Type.IsAutoClass%2A> 和 <xref:System.Type.DeclaringType%2A>。 此外，某些成员仅在 <xref:System.Type> 对象表示泛型类型参数时有效。 有关示例，请参阅 <xref:System.Type.GetGenericTypeDefinition%2A>。  
   
 - 如果 <xref:System.Type> 的实例表示泛型类型，则它包含表示类型形参（对于泛型类型定义）或类型实参（对于构造类型）的类型数组。 这同样适用于表示泛型方法的 <xref:System.Reflection.MethodInfo> 的类的实例。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "68364041"
   
  有关演示此处讨论的方法的示例代码，请参阅[如何：使用反射检查和实例化泛型类型](../../../docs/framework/reflection-and-codedom/how-to-examine-and-instantiate-generic-types-with-reflection.md)中提供的其他信息。  
   
- 以下讨论假定熟悉泛型的术语，例如类型形参和实参之间的差异以及开放式或封闭式构造类型之间的差异。 有关详细信息，请参阅[泛型](../../../docs/standard/generics/index.md)。  
+ 以下讨论假定熟悉泛型的术语，例如类型形参和实参之间的差异以及开放式或封闭式构造类型之间的差异。 有关详细信息，请参阅[泛型](../../standard/generics/index.md)。  
   
  本概述包含以下几节：  
   
@@ -131,7 +131,7 @@ generic<typename V, typename W> ref class D : B<int, V> {};
  <xref:System.Type.GenericParameterAttributes%2A> 属性获取 <xref:System.Reflection.GenericParameterAttributes> 值，该值指示类型形参的方差（协变或逆变）和特殊约束。  
   
 #### <a name="covariance-and-contravariance"></a>协变和逆变  
- 若要确定类型形参是协变还是逆变，请将 <xref:System.Reflection.GenericParameterAttributes.VarianceMask?displayProperty=nameWithType> 掩码应用到 <xref:System.Reflection.GenericParameterAttributes> 属性返回的 <xref:System.Type.GenericParameterAttributes%2A> 值。 如果结果为 <xref:System.Reflection.GenericParameterAttributes.None?displayProperty=nameWithType>，则类型形参不变。 请参阅 [协变和逆变](../../../docs/standard/generics/covariance-and-contravariance.md)。  
+ 若要确定类型形参是协变还是逆变，请将 <xref:System.Reflection.GenericParameterAttributes.VarianceMask?displayProperty=nameWithType> 掩码应用到 <xref:System.Reflection.GenericParameterAttributes> 属性返回的 <xref:System.Type.GenericParameterAttributes%2A> 值。 如果结果为 <xref:System.Reflection.GenericParameterAttributes.None?displayProperty=nameWithType>，则类型形参不变。 请参阅 [协变和逆变](../../standard/generics/covariance-and-contravariance.md)。  
   
 #### <a name="special-constraints"></a>特殊约束  
  若要确定类型形参的特殊约束，请将 <xref:System.Reflection.GenericParameterAttributes.SpecialConstraintMask?displayProperty=nameWithType> 掩码应用到 <xref:System.Reflection.GenericParameterAttributes> 属性返回的 <xref:System.Type.GenericParameterAttributes%2A> 值。 如果结果为 <xref:System.Reflection.GenericParameterAttributes.None?displayProperty=nameWithType>，则没有任何特殊约束。 可将类型形参约束为引用类型、不可以为 null 的类型以及具有无参数构造函数。  
@@ -150,6 +150,6 @@ generic<typename V, typename W> ref class D : B<int, V> {};
 |Title|说明|  
 |-----------|-----------------|  
 |[如何：使用反射检查和实例化泛型类型](../../../docs/framework/reflection-and-codedom/how-to-examine-and-instantiate-generic-types-with-reflection.md)|演示如何使用 <xref:System.Type> 和 <xref:System.Reflection.MethodInfo> 的属性和方法来检查泛型类型。|  
-|[泛型](../../../docs/standard/generics/index.md)|描述泛型功能以及 .NET Framework 如何支持它。|  
+|[泛型](../../standard/generics/index.md)|描述泛型功能以及 .NET Framework 如何支持它。|  
 |[如何：使用反射发出定义泛型类型](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)|演示如何在动态程序集中使用反射发出生成泛型类型。|  
 |[查看类型信息](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)|介绍 <xref:System.Type> 类并提供演示如何使用具有各种反射类的 <xref:System.Type> 来获取有关构造函数、方法、字段、属性和事件的信息的代码示例。|

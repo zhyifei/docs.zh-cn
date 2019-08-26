@@ -8,17 +8,17 @@ helpviewer_keywords:
 - KnownTypes
 - <declaredTypes> element
 ms.assetid: f35184e4-9d9e-4d37-8fb4-d5b58220eb3e
-ms.openlocfilehash: 8919ee717012f8badcf7015bf8d850ed431c5943
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cef34a8836c7b17fe9a85cac190090f42653df14
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701159"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919240"
 ---
 # <a name="declaredtypes"></a>\<declaredTypes>
 包含在进行反序列化时 <xref:System.Runtime.Serialization.DataContractSerializer> 使用的已知类型。  
   
- 有关数据协定和已知的类型的详细信息，请参阅[Data Contract Known Types](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)。  
+ 有关数据协定和已知类型的详细信息, 请参阅[数据协定已知类型](../../../wcf/feature-details/data-contract-known-types.md)。  
   
  system.runtime.serialization  
 \<dataContractSerializer>  
@@ -52,19 +52,19 @@ ms.locfileid: "61701159"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-declaredtypes-element.md)|添加需要已知类型的类型。|  
+|[\<add>](add-of-declaredtypes-element.md)|添加需要已知类型的类型。|  
   
 ### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<dataContractSerializer>](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-of-system-runtime-serialization.md)|包含 <xref:System.Runtime.Serialization.DataContractSerializer> 的配置数据。|  
+|[\<dataContractSerializer>](datacontractserializer-of-system-runtime-serialization.md)|包含 <xref:System.Runtime.Serialization.DataContractSerializer> 的配置数据。|  
   
 ## <a name="remarks"></a>备注  
- 有关已知类型的详细信息，请参阅[Data Contract Known Types](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)和<xref:System.Runtime.Serialization.DataContractSerializer>。  
+ 有关已知类型的详细信息, 请参阅[数据协定已知类型](../../../wcf/feature-details/data-contract-known-types.md)和<xref:System.Runtime.Serialization.DataContractSerializer>。  
   
 ## <a name="example"></a>示例  
- 下面的 XML 代码演示声明的类型和添加到已知的类型`DataContractSerializer`元素。 此示例演示要添加的三个类型。 第一个类型是名为“Orders”的自定义类型，它使用一个名为“Item”的已知类型。 第二个声明类型 <xref:System.Collections.Generic.List%601>，它使用 `Item` 作为已知类型。 最后，第三个声明类型是 <xref:System.Collections.Generic.Dictionary%602>。 <xref:System.Collections.Generic.Dictionary%602> 类类型是泛型类型，并带有两个类型参数。 第一个参数表示键，第二个参数表示值。 下面的示例将第二个类型的 <xref:System.Collections.Generic.List%601>（值）添加到已知类型的列表中。 必须使用 `index` 属性来指定在已知类型中使用的类型参数。 在此例中，通过将 index 属性设置为“1”（基于零的集合）来指示值类型。  
+ 以下 XML 代码显示了已声明的类型和添加到元素`DataContractSerializer`的已知类型。 此示例演示要添加的三个类型。 第一个类型是名为“Orders”的自定义类型，它使用一个名为“Item”的已知类型。 第二个声明类型 <xref:System.Collections.Generic.List%601>，它使用 `Item` 作为已知类型。 最后，第三个声明类型是 <xref:System.Collections.Generic.Dictionary%602>。 <xref:System.Collections.Generic.Dictionary%602> 类类型是泛型类型，并带有两个类型参数。 第一个参数表示键，第二个参数表示值。 下面的示例将第二个类型的 <xref:System.Collections.Generic.List%601>（值）添加到已知类型的列表中。 必须使用 `index` 属性来指定在已知类型中使用的类型参数。 在此例中，通过将 index 属性设置为“1”（基于零的集合）来指示值类型。  
   
 ```xml  
 <configuration>
@@ -91,6 +91,6 @@ ms.locfileid: "61701159"
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Runtime.Serialization.DataContractSerializer>
-- [\<dataContractSerializer>](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md)
-- [数据协定已知类型](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
-- [\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-declaredtypes-element.md)
+- [\<dataContractSerializer>](datacontractserializer-element.md)
+- [数据协定已知类型](../../../wcf/feature-details/data-contract-known-types.md)
+- [\<add>](add-of-declaredtypes-element.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], changing column type
 - data [Windows Forms], displaying
 ms.assetid: 7f994d45-600d-4190-a187-35803214b40c
-ms.openlocfilehash: f40ab6fe000f9104b10d5841f52eadf102a91a6b
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: e0b0b01a3c6da0680a3ec5fcd591344e04658a37
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040470"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917624"
 ---
 # <a name="how-to-change-the-type-of-a-windows-forms-datagridview-column-using-the-designer"></a>如何：使用设计器更改 Windows 窗体 DataGridView 列的类型
 有时, 您将需要更改已添加到 Windows 窗体<xref:System.Windows.Forms.DataGridView>控件的列的类型。 例如, 你可能想要修改在将控件绑定到数据源时自动生成的某些列的类型。 当所显示的表中的列包含对相关表中的行的外键时, 这非常有用。 在这种情况下, 您可能需要将显示这些外键的文本框列替换为组合框列, 这些列显示了来自相关表的更有意义的值。
@@ -28,7 +28,7 @@ ms.locfileid: "69040470"
 3. 在 "**列属性**" 网格中, `ColumnType`将属性设置为新的列类型。
 
     > [!NOTE]
-    >  `ColumnType`属性是一个仅限设计时的属性, 它指示表示列类型的类。 它不是列类中定义的实际属性。
+    > `ColumnType`属性是一个仅限设计时的属性, 它指示表示列类型的类。 它不是列类中定义的实际属性。
 
 ## <a name="see-also"></a>请参阅
 

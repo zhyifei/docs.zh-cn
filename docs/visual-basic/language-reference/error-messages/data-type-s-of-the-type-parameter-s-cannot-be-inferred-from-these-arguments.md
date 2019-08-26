@@ -10,20 +10,20 @@ helpviewer_keywords:
 - BC36644
 - BC36647
 ms.assetid: 0e0050f2-2039-4311-b260-f0ebfde84189
-ms.openlocfilehash: 4167905ca6ddab66b2cbc6c8c40dc7c984e94b8b
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: 81535e3272eaed587288c26c4a4b9649467abed8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64913193"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963563"
 ---
 # <a name="data-types-of-the-type-parameters-cannot-be-inferred-from-these-arguments"></a>无法根据这些实参推断类型形参的数据类型
-不能从这些实参推断类型参数的数据类型。 显式指定数据类型可更正此错误。  
+无法根据这些参数推断出类型参数的数据类型。 显式指定数据类型可更正此错误。  
   
- 当重载决策失败时发生此错误。 它以从属消息的形式发生，该消息指出已消除特定的重载候选。 此错误消息解释编译器无法使用类型推理来确定数据类型的类型参数。  
+ 当重载决策失败时发生此错误。 它以从属消息的形式发生，该消息指出已消除特定的重载候选。 错误消息说明编译器无法使用类型推理来查找类型参数的数据类型。  
   
 > [!NOTE]
->  当无法指定实参时（例如，对于查询表达式中的查询运算符），显示的错误消息不包括第二个句子。  
+> 当无法指定实参时（例如，对于查询表达式中的查询运算符），显示的错误消息不包括第二个句子。  
   
  下面的代码演示了此错误。  
   
@@ -61,4 +61,4 @@ End Interface
 
 - [宽松委托转换](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
 - [Generic Procedures in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)
-- [在 Visual Basic 中的类型转换](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Visual Basic 中的类型转换](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)

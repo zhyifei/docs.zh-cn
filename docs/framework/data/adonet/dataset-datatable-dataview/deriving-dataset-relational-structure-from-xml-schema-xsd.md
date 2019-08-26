@@ -2,19 +2,19 @@
 title: 从 XML 架构派生数据集关系结构 (XSD)
 ms.date: 03/30/2017
 ms.assetid: 8f6cd04d-6197-4bc4-9096-8c51c7e4acae
-ms.openlocfilehash: 549579fca0179994191987097c12b6085ee91756
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 98c43b6af2913b9737085d2d983b37c6da4c1724
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59119686"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69934468"
 ---
 # <a name="deriving-dataset-relational-structure-from-xml-schema-xsd"></a>从 XML 架构派生数据集关系结构 (XSD)
-本节将概述如何从 XML 架构定义语言 (XSD) 架构文档生成 `DataSet` 的关系架构。 一般情况下，为每个`complexType`架构元素的子元素，将生成一个表中`DataSet`。 表结构取决于复杂类型的定义。 在中创建表`DataSet`架构中的顶级元素。 但是，一个表只能创建为顶级`complexType`元素时`complexType`元素嵌套在另一个`complexType`元素，在这种情况下嵌套`complexType`元素映射到`DataTable`内`DataSet`。  
+本节将概述如何从 XML 架构定义语言 (XSD) 架构文档生成 `DataSet` 的关系架构。 通常, 对于 schema 元素`complexType`的每个子元素, 将`DataSet`在中生成一个表。 表结构取决于复杂类型的定义。 对于架构中的顶级`DataSet`元素, 将在中创建表。 但是, 仅`complexType`当元素嵌套在另一个`complexType`元素中时`complexType` , 才会为顶级元素创建一个表, 在这`DataTable`种情况下`complexType` , `DataSet`嵌套元素将映射到中的。  
   
- 有关 XSD 的详细信息，请参阅 World Wide Web 联合会 (W3C) [XML 架构第 0 部分：入门建议](https://www.w3.org/TR/xmlschema-0/)，则[XML 架构第 1 部分：结构建议](https://www.w3.org/TR/xmlschema-1/)，和[XML 架构第 2 部分：数据类型建议](https://www.w3.org/TR/xmlschema-2/)。  
+ 有关 XSD 的详细信息, 请参阅万维网联合会 (W3C) [XML 架构第0部分:入门建议](https://www.w3.org/TR/xmlschema-0/) [, XML 架构第1部分:结构建议](https://www.w3.org/TR/xmlschema-1/) [和 XML 架构第2部分:数据类型](https://www.w3.org/TR/xmlschema-2/)建议。  
   
- 下面的示例演示一个 XML 架构位置`customers`子元素的`MyDataSet`元素，即**数据集**元素。  
+ 下面的示例演示了一个 XML 架构`customers` , 其中是`MyDataSet`元素的子元素, 它是一个**数据集**元素。  
   
 ```xml  
 <xs:schema id="SomeID"   
@@ -50,9 +50,9 @@ Customers (CustomerID , CompanyName, Phone)
  该表中各列的数据类型是从所指定的相应元素或属性的 XML 架构类型派生的。  
   
 > [!NOTE]
->  如果该元素`customers`是简单的 XML 架构数据类型，如**整数**，不生成任何表。 表仅为属于复杂类型的顶级元素而创建。  
+> 如果该元素`customers`是一个简单的 XML 架构数据类型 (如**integer**), 则不会生成表。 表仅为属于复杂类型的顶级元素而创建。  
   
- 在下面的 XML 架构中，**架构**元素具有两个子元素`InStateCustomers`和`OutOfStateCustomers`。  
+ 在下面的 XML 架构中, **Schema**元素具有两个子元素: `InStateCustomers`和`OutOfStateCustomers`。  
   
 ```xml  
 <xs:schema id="SomeID"   
@@ -75,7 +75,7 @@ Customers (CustomerID , CompanyName, Phone)
  </xs:schema>  
 ```  
   
- `InStateCustomers` 和 `OutOfStateCustomers` 两个子元素都是复杂类型元素 (`customerType`)。 因此，映射过程生成中的以下两个相同表`DataSet`。  
+ `InStateCustomers` 和 `OutOfStateCustomers` 两个子元素都是复杂类型元素 (`customerType`)。 因此, 映射过程会在中`DataSet`生成以下两个相同的表。  
   
 ```  
 InStateCustomers (CustomerID , CompanyName, Phone)  
@@ -84,17 +84,17 @@ OutOfStateCustomers (CustomerID , CompanyName, Phone)
   
 ## <a name="in-this-section"></a>本节内容  
  [将 XML 架构 (XSD) 约束映射到数据集约束](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
- 描述用于创建唯一约束和外键约束中的 XML 架构元素`DataSet`。  
+ 介绍用于在中`DataSet`创建唯一约束和外键约束的 XML 架构元素。  
   
  [从 XML 架构生成数据集关系 (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
- 描述用于创建表中的列之间的关系的 XML 架构元素`DataSet`。  
+ 介绍用于在中的`DataSet`表列之间创建关系的 XML 架构元素。  
   
  [XML 架构约束和关系](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/xml-schema-constraints-and-relationships.md)  
- 描述如何关系创建隐式使用 XML 架构元素创建中的约束时`DataSet`。  
+ 描述在使用 XML 架构元素在中`DataSet`创建约束时如何隐式地创建关系。  
   
 ## <a name="related-sections"></a>相关章节  
  [在数据集中使用 XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
- 介绍如何加载和保持关系的结构和中的数据`DataSet`作为 XML 数据。  
+ 描述如何以 XML 数据的`DataSet`形式加载和保存关系结构和数据。  
   
 ## <a name="see-also"></a>请参阅
 

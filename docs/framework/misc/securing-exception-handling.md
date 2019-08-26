@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 1f3da743-9742-47ff-96e6-d0dd1e9e1c19
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bc8cd20a4183ffd002f1399b6b50c8956208a21b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 95dbaddc59a80b4f499a629dd00a52be678b4665
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868793"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910876"
 ---
 # <a name="securing-exception-handling"></a>保护异常处理
-视觉对象中C++和 Visual Basic 中之前, 运行的筛选器表达式进一步在堆栈中向上**最后**语句。 **捕获**与关联的块之后运行该筛选器**最后**语句。 有关详细信息，请参阅[使用用户筛选异常](../../../docs/standard/exceptions/using-user-filtered-exception-handlers.md)。 本部分中检查此顺序的安全隐患。 请考虑下面的伪代码示例说明了哪些筛选器语句中的顺序，并**最后**运行的语句。  
+在 Visual C++和 Visual Basic 中, 堆栈中的一个筛选器表达式将在任何**finally**语句之前运行。 与该筛选器相关联的**catch**块在**finally**语句之后运行。 有关详细信息, 请参阅[使用用户筛选的异常](../../standard/exceptions/using-user-filtered-exception-handlers.md)。 本部分将介绍此顺序的安全隐患。 请考虑以下伪代码示例, 该示例演示 filter 语句和**finally**语句的运行顺序。  
   
 ```cpp  
 void Main()   
@@ -51,7 +51,7 @@ void Sub()
 }                        
 ```  
   
- 此代码将打印以下。  
+ 此代码将打印以下代码。  
   
 ```  
 Throw  
@@ -60,7 +60,7 @@ Finally
 Catch  
 ```  
   
- 筛选器之前运行**最后**语句，因此安全问题可能会造成的任何内容会使更改在其中执行其他代码无法充分利用状态。 例如：  
+ 该筛选器在**finally**语句之前运行, 因此, 在执行其他代码的情况下, 可能会发生状态更改的任何内容引入安全问题。 例如:  
   
 ```cpp  
 try   
@@ -79,7 +79,7 @@ finally
 }  
 ```  
   
- 此伪代码允许运行任意代码的堆栈较高的筛选器。 将具有类似的效果的操作的其他示例包括临时模拟另一标识，绕过某些安全检查，内部标志设置或更改区域性与线程关联。 建议的解决方案是引入了一个异常处理程序，以隔离到线程的状态从向调用方的筛选器块的代码的更改。 但是，很重要的异常处理程序必须正确地引入或将不会修复此问题。 下面的示例切换的 UI 区域性，但无法类似的方式公开任何类型的线程状态更改。  
+ 此伪代码允许堆栈上较高的筛选器运行任意代码。 具有类似效果的其他操作示例是对其他标识的临时模拟、设置跳过某些安全检查的内部标志或更改与线程关联的区域性。 建议的解决方案是引入异常处理程序, 以将代码的更改从调用方的筛选器块隔离到线程状态。 但是, 必须正确地引入异常处理程序, 否则不会解决此问题。 下面的示例将切换 UI 区域性, 但任何类型的线程状态更改都可能会以同样的方式公开。  
   
 ```cpp  
 YourObject.YourMethod()  
@@ -116,7 +116,7 @@ Thread.CurrentThread.CurrentUICulture)
 End Class  
 ```  
   
- 正确的解决方法在这种情况下是包装现有**尝试**/**最后**块中**尝试**/**捕获**块。 只需引入**catch throw**到现有的子句**尝试**/**最后**块不能解决此问题，如下面的示例中所示。  
+ 在这种情况下, 正确的修复方法是在**try**/**catch**块中包装现有**try**/**finally**块。 只需将**catch throw**子句引入现有**try**/**finally**块中, 就不能解决问题, 如以下示例中所示。  
   
 ```cpp  
 YourObject.YourMethod()  
@@ -136,9 +136,9 @@ YourObject.YourMethod()
 }  
 ```  
   
- 此操作未修复问题，因为**最后**以前未运行语句`FilterFunc`获取控件。  
+ 这并不能解决此问题,因为在`FilterFunc`获取控件之前, finally 语句尚未运行。  
   
- 下面的示例通过确保修复此问题**最后**子句已提供异常向调用方的异常筛选器块之前执行。  
+ 下面的示例通过确保在将异常提供给调用方的异常筛选器块之前执行了**finally**子句来解决此问题。  
   
 ```cpp  
 YourObject.YourMethod()  
@@ -162,4 +162,4 @@ YourObject.YourMethod()
   
 ## <a name="see-also"></a>请参阅
 
-- [安全编码准则](../../../docs/standard/security/secure-coding-guidelines.md)
+- [安全编码准则](../../standard/security/secure-coding-guidelines.md)

@@ -9,46 +9,46 @@ helpviewer_keywords:
 ms.assetid: 9f963c1b-dc3f-4220-a8b6-2dd7a5a8e039
 author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: d522d004630dee942e24c39a936feae7dc957bd5
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 31b53837e24029fc7ff0b576d95c0213041a434e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66300791"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927671"
 ---
-# <a name="configsections-element-for-configuration"></a>\<configSections > 元素\<配置 >
+# <a name="configsections-element-for-configuration"></a>\<用于配置 > 的\<configSections > 元素
 
 包含配置节和命名空间声明。
 
-[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
+[ **\<configuration>** ](configuration-element.md)   
 &nbsp;&nbsp; **\<configSections>**
 
 ## <a name="attributes"></a>特性
 
-None
+无
 
 ## <a name="parent-element"></a>父元素
 
 |     | 描述 |
 | --- | ----------- |
-| [ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md) | 公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。 |
+| [ **\<configuration>** ](configuration-element.md) | 公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。 |
 
 ## <a name="child-elements"></a>子元素
 
 |     | 描述 |
 | --- | ----------- |
-| [ **\<section>** ](~/docs/framework/configure-apps/file-schema/section-element.md) | 包含配置部分声明。 |
-| [ **\<sectionGroup>** ](~/docs/framework/configure-apps/file-schema/sectiongroup-element-for-configsections.md) | 定义配置节的命名空间。 |
-| [ **\<remove>** ](~/docs/framework/configure-apps/file-schema/remove-element-for-configsections.md) | 删除预定义的节或节组。 |
-| [ **\<clear>** ](~/docs/framework/configure-apps/file-schema/clear-element-for-configsections.md) | 清除所有以前定义的节和节组。 |
+| [ **\<节 >** ](section-element.md) | 包含配置节声明。 |
+| [ **\<sectionGroup>** ](sectiongroup-element-for-configsections.md) | 定义配置节的命名空间。 |
+| [ **\<remove>** ](remove-element-for-configsections.md) | 删除预定义的节或节组。 |
+| [ **\<clear>** ](clear-element-for-configsections.md) | 清除所有之前定义的部分和节组。 |
 
 ## <a name="remarks"></a>备注
 
-如果此元素是在配置文件中，它必须是第一个子元素 **\<配置 >** 元素。
+如果此元素在配置文件中, 则它必须是 **\<配置 >** 元素的第一个子元素。
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何定义配置节和定义该部分的设置：
+下面的示例演示如何定义配置节并定义该部分的设置:
 
 ```xml
 <configuration>
@@ -64,8 +64,8 @@ None
 
 ## <a name="configuration-file"></a>配置文件
 
-在应用程序配置文件中，计算机配置文件可以使用此元素 (*Machine.config*)，并*Web.config*不在应用程序目录级别上的文件。
+此元素可用于应用程序配置文件、计算机配置文件 (*machine.config*) 和不在应用程序目录级别的 web.config 文件。
 
 ## <a name="see-also"></a>请参阅
 
-- [.NET Framework 的配置文件架构](~/docs/framework/configure-apps/file-schema/index.md)
+- [.NET Framework 的配置文件架构](index.md)

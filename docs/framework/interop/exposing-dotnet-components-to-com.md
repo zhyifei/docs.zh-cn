@@ -8,22 +8,22 @@ helpviewer_keywords:
 ms.assetid: e42a65f7-1e61-411f-b09a-aca1bbce24c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1879f5b5aa2fbe6b0e51f9b38fca3af1f4c0cedf
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 48d550a526336cf3e9de9cb53a16ddcf86f3af5d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68971759"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946518"
 ---
 # <a name="exposing-net-framework-components-to-com"></a>向 COM 公开 .NET Framework 组件
 
 对开发人员而言，编写 .NET 类型以及从非托管代码使用该类型是不同的活动。 本部分介绍编写与 COM 客户端互操作的托管代码的几个提示：
 
-- [为互操作限定 .NET 类型](../../../docs/standard/native-interop/qualify-net-types-for-interoperation.md)。
+- [为互操作限定 .NET 类型](../../standard/native-interop/qualify-net-types-for-interoperation.md)。
 
      要向 COM 公开的所有托管类型、方法、属性、字段和事件都必须是公开的。 各类型必须具有公共无参数默认构造函数，通过 COM 只能调用该构造函数。
 
-- [应用互操作属性](../../../docs/standard/native-interop/apply-interop-attributes.md)。
+- [应用互操作属性](../../standard/native-interop/apply-interop-attributes.md)。
 
      托管代码中的自定义属性可增强组件的互操作性。
 

@@ -6,15 +6,15 @@ helpviewer_keywords:
 - indexers [C#], in interfaces
 - accessors [C#], indexers
 ms.assetid: e16b54bd-4a83-4f52-bd75-65819fca79e8
-ms.openlocfilehash: f277758a10b045a6365adfe931ce95d64eb8e445
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: cea8d157e89597ddf4633cf7f7d3df7044db9ec7
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64608579"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69589441"
 ---
 # <a name="indexers-in-interfaces-c-programming-guide"></a>接口中的索引器（C# 编程指南）
-可以在[接口](../../../csharp/language-reference/keywords/interface.md)上声明索引器。 接口索引器的访问器与[类](../../../csharp/language-reference/keywords/class.md)索引器的访问器有所不同，差异如下：  
+可以在[接口](../../language-reference/keywords/interface.md)上声明索引器。 接口索引器的访问器与[类](../../language-reference/keywords/class.md)索引器的访问器有所不同，差异如下：  
   
 - 接口访问器不使用修饰符。  
   
@@ -61,7 +61,7 @@ string ICitizen.this[int index]
   
 ## <a name="see-also"></a>请参阅
 
-- [C# 编程指南](../../../csharp/programming-guide/index.md)
-- [索引器](../../../csharp/programming-guide/indexers/index.md)
-- [属性](../../../csharp/programming-guide/classes-and-structs/properties.md)
-- [接口](../../../csharp/programming-guide/interfaces/index.md)
+- [C# 编程指南](../index.md)
+- [索引器](./index.md)
+- [属性](../classes-and-structs/properties.md)
+- [接口](../interfaces/index.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 54edefe0-bc38-419b-b486-3d8a0c356f13
-ms.openlocfilehash: 5e1de3effcae5700aa25f5dbb84f2dec3a0b20f1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8b93b0564bbd6d760193f11d23d97ccb2cb4c943
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879679"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69928516"
 ---
 # <a name="handling-dataset-events"></a>处理数据集事件
 <xref:System.Data.DataSet> 对象提供三个事件： <xref:System.ComponentModel.MarshalByValueComponent.Disposed>、 <xref:System.Data.DataSet.Initialized>和 <xref:System.Data.DataSet.MergeFailed>。  
@@ -45,15 +45,15 @@ private static void DataSetMergeFailed(
 ## <a name="the-initialized-event"></a>初始化事件  
  在 <xref:System.Data.DataSet.Initialized> 构造函数初始化 `DataSet` 的新实例后会发生 `DataSet`事件。  
   
- 如果 <xref:System.Data.DataSet.IsInitialized%2A> 已完成初始化， `true` 属性会返回 `DataSet` ；否则，返回 `false`。 <xref:System.Data.DataSet.BeginInit%2A> 方法，它开始初始化 `DataSet`，将 <xref:System.Data.DataSet.IsInitialized%2A> 设置为 `false`。 <xref:System.Data.DataSet.EndInit%2A> 方法（用于结束 `DataSet`的初始化）将它设置为 `true`。 这些方法由 Visual Studio 设计环境，以初始化`DataSet`，正由另一个组件。 通常不会在代码中使用这些方法。  
+ 如果 <xref:System.Data.DataSet.IsInitialized%2A> 已完成初始化， `true` 属性会返回 `DataSet` ；否则，返回 `false`。 <xref:System.Data.DataSet.BeginInit%2A> 方法，它开始初始化 `DataSet`，将 <xref:System.Data.DataSet.IsInitialized%2A> 设置为 `false`。 <xref:System.Data.DataSet.EndInit%2A> 方法（用于结束 `DataSet`的初始化）将它设置为 `true`。 Visual Studio 设计环境使用这些方法初始化`DataSet`其他组件使用的。 通常不会在代码中使用这些方法。  
   
 ## <a name="the-disposed-event"></a>释放事件  
- `DataSet` 派生自 <xref:System.ComponentModel.MarshalByValueComponent> 类，该类可公开 <xref:System.ComponentModel.MarshalByValueComponent.Dispose%2A> 方法和 <xref:System.ComponentModel.MarshalByValueComponent.Disposed> 事件。 <xref:System.ComponentModel.MarshalByValueComponent.Disposed>事件添加事件处理程序以侦听组件上已释放的事件。 可以使用<xref:System.ComponentModel.MarshalByValueComponent.Disposed>的事件`DataSet`如果你想要执行代码时<xref:System.ComponentModel.MarshalByValueComponent.Dispose%2A>调用方法。 <xref:System.ComponentModel.MarshalByValueComponent.Dispose%2A> 释放使用的资源<xref:System.ComponentModel.MarshalByValueComponent>。  
+ `DataSet` 派生自 <xref:System.ComponentModel.MarshalByValueComponent> 类，该类可公开 <xref:System.ComponentModel.MarshalByValueComponent.Dispose%2A> 方法和 <xref:System.ComponentModel.MarshalByValueComponent.Disposed> 事件。 <xref:System.ComponentModel.MarshalByValueComponent.Disposed>事件添加事件处理程序以侦听组件上已释放的事件。 如果要在调用<xref:System.ComponentModel.MarshalByValueComponent.Disposed> <xref:System.ComponentModel.MarshalByValueComponent.Dispose%2A>方法时执行代码, 则可以使用的事件。 `DataSet` <xref:System.ComponentModel.MarshalByValueComponent.Dispose%2A>释放由<xref:System.ComponentModel.MarshalByValueComponent>使用的资源。  
   
 > [!NOTE]
->  `DataSet`并`DataTable`对象继承自<xref:System.ComponentModel.MarshalByValueComponent>和支持<xref:System.Runtime.Serialization.ISerializable>远程处理的接口。 这两个对象是唯一可远程处理的 ADO.NET 对象。 有关详细信息，请参阅[.NET 远程处理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))。  
+> 和对象从<xref:System.Runtime.Serialization.ISerializable>继承并且支持用于远程处理的接口。 <xref:System.ComponentModel.MarshalByValueComponent> `DataTable` `DataSet` 这两个对象是唯一可远程处理的 ADO.NET 对象。 有关详细信息, 请参阅[.Net 远程处理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))。  
   
- 有关可用时使用的其他事件信息`DataSet`，请参阅[处理数据表事件](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)并[处理 DataAdapter 事件](../../../../../docs/framework/data/adonet/handling-dataadapter-events.md)。  
+ 有关使用时`DataSet`的其他可用事件的信息, 请参阅[处理 DataTable 事件](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)和[处理 DataAdapter 事件](../../../../../docs/framework/data/adonet/handling-dataadapter-events.md)。  
   
 ## <a name="see-also"></a>请参阅
 

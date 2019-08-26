@@ -2,12 +2,12 @@
 title: 文本 (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 092ef693-6e5f-41b4-b868-5b9e82928abf
-ms.openlocfilehash: bff9b1907d3424dc2e3df80480b6ab12f5ab9261
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6196c1b026b49847bd06cc9cda5ea6b6af289858
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61760657"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69953291"
 ---
 # <a name="literals-entity-sql"></a>文本 (Entity SQL)
 本主题介绍 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 对于文字的支持。  
@@ -15,9 +15,9 @@ ms.locfileid: "61760657"
 ## <a name="null"></a>null  
  空文字用于表示对任何类型均为空的值。 空文字与任何类型兼容。  
   
- 强制转换可以在空文字之上创建类型空值。 有关详细信息，请参阅[强制转换](../../../../../../docs/framework/data/adonet/ef/language-reference/cast-entity-sql.md)。  
+ 强制转换可以在空文字之上创建类型空值。 有关详细信息, 请参阅[CAST](../../../../../../docs/framework/data/adonet/ef/language-reference/cast-entity-sql.md)。  
   
- 有关在何处规则自由浮动 null 文本可用，请参阅[Null 文本和类型推理](../../../../../../docs/framework/data/adonet/ef/language-reference/null-literals-and-type-inference-entity-sql.md)。  
+ 有关可以使用自由浮动 null 文本的规则, 请参阅[Null 文本和类型推理](../../../../../../docs/framework/data/adonet/ef/language-reference/null-literals-and-type-inference-entity-sql.md)。  
   
 ## <a name="boolean"></a>Boolean  
  布尔值文字由关键字 `true` 和 `false` 表示。  
@@ -25,7 +25,7 @@ ms.locfileid: "61760657"
 ## <a name="integer"></a>整数  
  整型文字可以为类型 <xref:System.Int32> 或 <xref:System.Int64>。 <xref:System.Int32> 文字是一系列数字字符。 <xref:System.Int64> 文字是一系列数字字符，后跟一个大写 L。  
   
-## <a name="decimal"></a>十进制  
+## <a name="decimal"></a>Decimal  
  固定点数字（小数）是一系列数字字符、一个圆点 (.) 和另一系列数字字符，后跟一个大写“M”。  
   
 ## <a name="float-double"></a>浮点，双精度  
@@ -45,7 +45,7 @@ N"This is a string!"
 ## <a name="datetime"></a>DateTime  
  日期时间文字独立于区域设置并由日期部分和时间部分组成。 日期部分和时间部分都是必需的，并且没有默认值。  
   
- 日期部分必须采用格式： `YYYY` - `MM` - `DD`，其中`YYYY`是介于 0001 与 9999 之间的四位年度值`MM`是介于 1 和 12 之间的月份和`DD`是对给定月份有效日期值`MM`。  
+ 日期`YYYY`部分的格式必须为: - - `MM` `DD` `MM` , 其中是`YYYY`介于0001和9999之间的四位数年份值, 是介于1和12之间的月份, 是`DD`给定月份`MM`有效的日期值。  
   
  时间部分的格式必须为：`HH`:`MM`[:`SS`[.fffffff]]，其中 `HH` 为介于 0 至 23 之间的小时值，`MM` 为介于 0 至 59 之间的分钟值，`SS` 为介于 0 至 59 之间的秒值，而 fffffff 为介于 0 至 9999999 之间的秒的小数部分值。 所有值范围都包含两端。 秒的小数部分是可选的。 除非指定了秒的小数部分，否则秒是可选的；在指定了秒的小数部分时秒是必需的。 在未指定秒或秒的小数部分时，将使用默认值零。  
   
@@ -67,7 +67,7 @@ TIME‘01:01:00.1234567’
 ```  
   
 ## <a name="datetimeoffset"></a>DateTimeOffset  
- datetimeoffset 文字独立于区域设置并由日期部分、时间部分和偏移量部分组成。 所有日期、时间和偏移量部分都是必选项，并且没有默认值。 日期部分的格式必须为 YYYY-MM-DD，其中 YYYY 是介于 0001 与 9999 之间的四位年度值，MM 是介于 1 与 12 之间的月份，而 DD 是对给定月份有效的日期值。 时间部分的格式必须为 HH:MM[:SS[.fffffff]]，其中 HH 为介于 0 至 23 之间的小时值，MM 为介于 0 至 59 之间的分钟值，SS 为介于 0 至 59 之间的秒值，而 fffffff 为介于 0 至 9999999 之间的秒的小数部分值。 所有值范围都包含两端。 秒的小数部分是可选的。 除非指定了秒的小数部分，否则秒是可选的；在指定了秒的小数部分时秒是必需的。 在未指定秒或秒的小数部分时，将使用默认值零。 偏移量的部分必须具有格式 {+&#124;-} hh: mm，其中 HH 和 MM 具有相同的意义与时间部分。 但是，偏移量的范围必须介于 -14:00 至 + 14:00 之间。  
+ datetimeoffset 文字独立于区域设置并由日期部分、时间部分和偏移量部分组成。 所有日期、时间和偏移量部分都是必选项，并且没有默认值。 日期部分的格式必须为 YYYY-MM-DD，其中 YYYY 是介于 0001 与 9999 之间的四位年度值，MM 是介于 1 与 12 之间的月份，而 DD 是对给定月份有效的日期值。 时间部分的格式必须为 HH:MM[:SS[.fffffff]]，其中 HH 为介于 0 至 23 之间的小时值，MM 为介于 0 至 59 之间的分钟值，SS 为介于 0 至 59 之间的秒值，而 fffffff 为介于 0 至 9999999 之间的秒的小数部分值。 所有值范围都包含两端。 秒的小数部分是可选的。 除非指定了秒的小数部分，否则秒是可选的；在指定了秒的小数部分时秒是必需的。 在未指定秒或秒的小数部分时，将使用默认值零。 偏移量部分的格式必须为 {+&#124;-} HH: MM, 其中 HH 和 MM 与时间部分具有相同的含义。 但是，偏移量的范围必须介于 -14:00 至 + 14:00 之间。  
   
  在 DATETIMEOFFSET 符号与文字负载之间可以存在任意数目的空格，但是不能存在新行。  
   
@@ -77,7 +77,7 @@ DATETIMEOFFSET‘2006-12-25 01:01:00.0000000 -08:30’
 ```  
   
 > [!NOTE]
->  有效的 Entity SQL 文字值可能处于 CLR 或数据源所支持的范围之外。 这可能会导致异常。  
+> 有效的 Entity SQL 文字值可能处于 CLR 或数据源所支持的范围之外。 这可能会导致异常。  
   
 ## <a name="binary"></a>二进制  
  二进制字符串文字是由单引号分隔的一系列十六进制数字，后跟关键字“binary”或快捷方式符号 `X`/`x`。 快捷方式符号 `X` 是不区分大小写的。 在关键字 `binary` 与二进制字符串值之间可以有零个或零个以上空格。  
@@ -91,8 +91,8 @@ BINARY    '0f0f0f0F0F0F0F0F0F0F'
 X'' –- empty binary string  
 ```  
   
-## <a name="guid"></a>GUID  
- `GUID` 文本表示全局唯一标识符。 它是一个序列，由关键字`GUID`跟十六进制数字构成，采用称为*注册表*格式：包含在单引号内的 8-4-4-4-12。 十六进制数字区分大小写。  
+## <a name="guid"></a>Guid  
+ `GUID` 文本表示全局唯一标识符。 它是由关键字`GUID`构成的序列, 后跟十六进制数字, 格式称为*注册表*格式:包含在单引号内的 8-4-4-4-12。 十六进制数字区分大小写。  
   
  在 GUID 符号与文字负载之间可以存在任意数目的空格，但是不能存在新行。  
   

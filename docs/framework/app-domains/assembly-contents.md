@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 28116714-da77-45f7-826d-fa035d121948
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dd41051bd770d3579137aa158e70cef41aed49f8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d1334f8c8e1b5898e93697461f609429d4aae764
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64607829"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921704"
 ---
 # <a name="assembly-contents"></a>程序集内容
 通常，静态程序集可能由以下四个元素组成：  
@@ -40,7 +40,7 @@ ms.locfileid: "64607829"
  ![显示多文件程序集的图表。](./media/assembly-contents/multifile-assembly-diagram.gif) 
   
 > [!NOTE]
->  构成多文件程序集的那些文件实际上并非由文件系统来链接。 它们而是通过程序集清单进行链接，公共语言运行时将这些文件作为一个单元来管理。  
+> 构成多文件程序集的那些文件实际上并非由文件系统来链接。 它们而是通过程序集清单进行链接，公共语言运行时将这些文件作为一个单元来管理。  
   
  在此插图中，所有三个文件均属于一个程序集，如 MyAssembly.dll 所包含的程序集清单文件中所述。 对于该文件系统，这三个文件是三个独立的文件。 请注意，文件 Util.netmodule 被编译为一个模块，因为它不包含任何程序集信息。 创建程序集之后，已将该程序集清单添加到指示程序集与 Util.netmodule 和 Graphic.bmp 之间关系的 MyAssembly.dll 中。  
   

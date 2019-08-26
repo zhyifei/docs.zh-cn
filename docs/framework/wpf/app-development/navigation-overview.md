@@ -24,12 +24,12 @@ helpviewer_keywords:
 - programmatic navigation [WPF]
 - hyperlinks [WPF]
 ms.assetid: 86ad2143-606a-4e34-bf7e-51a2594248b8
-ms.openlocfilehash: 145c4e33bd601fa61750df56b949bda5d43cc372
-ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
+ms.openlocfilehash: 574449f95ee9632d37f277d61806802457494df0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68817997"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964593"
 ---
 # <a name="navigation-overview"></a>导航概述
 
@@ -106,7 +106,7 @@ Windows Presentation Foundation (WPF) 支持可在两种类型的应用程序中
 
 要允许标记文件和代码隐藏文件协同工作，需要进行以下配置：
 
-- 在标记中, `Page`元素必须`x:Class`包含属性。 生成应用程序`x:Class`后, 标记文件中的存在会导致[!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)]创建一个`partial`派生自<xref:System.Windows.Controls.Page>的类, 并具有由`x:Class`特性指定的名称。 这要求[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]为架构 ( `xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"` ) 添加命名空间声明。 生成`partial`的类实现`InitializeComponent`, 调用它来注册事件并设置标记中实现的属性。
+- 在标记中, `Page`元素必须`x:Class`包含属性。 生成应用程序`x:Class`后, 标记文件中存在会导致 Microsoft 生成引擎 (MSBuild) 创建一个`partial`派生自<xref:System.Windows.Controls.Page>的类, 并`x:Class`具有由特性指定的名称。 这要求[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]为架构 ( `xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"` ) 添加命名空间声明。 生成`partial`的类实现`InitializeComponent`, 调用它来注册事件并设置标记中实现的属性。
 
 - 在代码隐藏中, 类必须是`partial`由标记中的`x:Class`特性指定的同名类, 并且必须派生自<xref:System.Windows.Controls.Page>。 这允许在生成应用程序时将代码隐藏文件与`partial`为标记文件生成的类相关联 (请参阅[生成 WPF 应用程序](building-a-wpf-application-wpf.md))。
 
@@ -123,7 +123,7 @@ Windows Presentation Foundation (WPF) 支持可在两种类型的应用程序中
 
 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 需要一定数量的应用程序结构以在浏览器中托管。 在[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]中<xref:System.Windows.Application> , 类是建立所需的应用程序基础结构的应用程序定义的一部分 (请参阅[应用程序管理概述](application-management-overview.md))。
 
-通常使用标记和代码隐藏来实现应用程序定义, 并将标记文件配置为[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `ApplicationDefinition`项。 下面是的应用程序定义[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]。
+通常使用标记和代码隐藏来实现应用程序定义, 并将标记文件配置为 MSBuild`ApplicationDefinition`项。 下面是的应用程序定义[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]。
 
 [!code-xaml[XBAPAppDefSnippets#XBAPApplicationDefinitionMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/XBAPAppDefSnippets/CSharp/App.xaml#xbapapplicationdefinitionmarkup)]
 
@@ -527,7 +527,7 @@ Windows Presentation Foundation (WPF) 支持可在两种类型的应用程序中
 
 *NAME* `=` *VALUE* `; expires=DAY, DD-MMM-YYYY HH:MM:SS GMT`
 
-带有过期日期的 cookie 存储在当前[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]安装的 Internet 临时文件文件夹中, 直到 cookie 过期。 此类 cookie 称为*永久性 cookie* , 因为它在应用程序会话之间保持不变。
+在 cookie 过期之前, 具有到期日期的 cookie 存储在当前的 Windows 安装程序的临时 Internet Files 文件夹中。 此类 cookie 称为*永久性 cookie* , 因为它在应用程序会话之间保持不变。
 
 可以通过调用<xref:System.Windows.Application.GetCookie%2A>方法来检索会话和持久 cookie, 同时<xref:System.Uri>传递使用<xref:System.Windows.Application.SetCookie%2A>方法设置 cookie 的位置的。
 

@@ -4,12 +4,12 @@ description: 了解在 .NET Core 上不可用的 .NET Framework 技术
 author: cartermp
 ms.author: mairaw
 ms.date: 04/30/2019
-ms.openlocfilehash: bfeea58f4d80b789a7174a77e0784f2326906416
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 87c3dd337ad44fd21b255afa7c03b528cd8a42ad
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737089"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69660601"
 ---
 # <a name="net-framework-technologies-unavailable-on-net-core"></a>.NET Framework 技术在 .NET Core 上不可用
 
@@ -33,13 +33,13 @@ ms.locfileid: "67737089"
 
 ## <a name="code-access-security-cas"></a>代码访问安全性 (CAS)
 
-沙盒依赖为托管应用程序或库使用或运行提供资源的运行时或框架进行限制，其[在 .NET Framework 上不受支持](~/docs/framework/misc/code-access-security.md)，因此在 .NET Core 上也不受支持。 .NET Framework 和运行时中存在太多发生特权提升以继续将 CAS 视为安全边界的情况。 此外，CAS 使实现更加复杂，通常会对无意使用它的应用程序造成正确性-性能影响。
+沙盒依赖为托管应用程序或库使用或运行提供资源的运行时或框架进行限制，其[在 .NET Framework 上不受支持](../../framework/misc/code-access-security.md)，因此在 .NET Core 上也不受支持。 .NET Framework 和运行时中存在太多发生特权提升以继续将 CAS 视为安全边界的情况。 此外，CAS 使实现更加复杂，通常会对无意使用它的应用程序造成正确性-性能影响。
 
 可使用操作系统提供的安全边界，例如虚拟化、容器或具有最少特权集的用于运行进程的用户帐户。
 
 ## <a name="security-transparency"></a>安全透明度
 
-与 CAS 相似，借助安全透明度可以以声明性方式将沙盒代码与安全关键代码隔离，但是[不再支持将它作为安全边界](~/docs/framework/misc/security-transparent-code.md)。 Silverlight 大规模使用了此功能。 
+与 CAS 相似，借助安全透明度可以以声明性方式将沙盒代码与安全关键代码隔离，但是[不再支持将它作为安全边界](../../framework/misc/security-transparent-code.md)。 Silverlight 大规模使用了此功能。 
 
 可使用操作系统提供的安全边界，例如虚拟化、容器或用于运行进程的用户帐户具有最少的一组特权。
 

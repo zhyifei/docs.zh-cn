@@ -11,26 +11,26 @@ helpviewer_keywords:
 - ToolBar control [Windows Forms], coding button click events
 - toolbars [Windows Forms], click event handlers
 ms.assetid: 98374f70-993d-4ca4-89fb-48fea6ce5b45
-ms.openlocfilehash: 0f5afde1cc0be772baff373c84c82f81df284b9b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 381b8ba08db6ff5bb817c9c89008dacb1085ac1b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61785822"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956038"
 ---
 # <a name="how-to-trigger-menu-events-for-toolbar-buttons"></a>如何：触发工具栏按钮的菜单事件
 > [!NOTE]
->  <xref:System.Windows.Forms.ToolStrip> 控件取代了 <xref:System.Windows.Forms.ToolBar> 控件并添加了功能；但是，可以选择保留 <xref:System.Windows.Forms.ToolBar> 控件以实现向后兼容并供将来使用。  
+> <xref:System.Windows.Forms.ToolStrip> 控件取代了 <xref:System.Windows.Forms.ToolBar> 控件并添加了功能；但是，可以选择保留 <xref:System.Windows.Forms.ToolBar> 控件以实现向后兼容并供将来使用。  
   
- 如果您的 Windows 窗体功能<xref:System.Windows.Forms.ToolBar>控件使用工具栏按钮时，你将想要知道哪个按钮用户单击。  
+ 如果 Windows 窗体使用工具栏<xref:System.Windows.Forms.ToolBar>按钮作为控件的功能, 则需要知道用户单击了哪个按钮。  
   
- 上<xref:System.Windows.Forms.ToolBar.ButtonClick>的事件<xref:System.Windows.Forms.ToolBar>控件，您可以评估<xref:System.Windows.Forms.ToolBarButtonClickEventArgs.Button%2A>属性的<xref:System.Windows.Forms.ToolBarButtonClickEventArgs>类。 在下面的示例中，将显示一个消息框，指示单击了哪个按钮。 有关详细信息，请参阅 <xref:System.Windows.Forms.MessageBox>。  
+ <xref:System.Windows.Forms.ToolBar> <xref:System.Windows.Forms.ToolBar.ButtonClick>在控件的事件<xref:System.Windows.Forms.ToolBarButtonClickEventArgs> <xref:System.Windows.Forms.ToolBarButtonClickEventArgs.Button%2A>中, 可以计算类的属性。 在下面的示例中，将显示一个消息框，指示单击了哪个按钮。 有关详细信息，请参阅 <xref:System.Windows.Forms.MessageBox>。  
   
- 下面的示例假定<xref:System.Windows.Forms.ToolBar>控件已添加到 Windows 窗体。  
+ 下面的示例假定<xref:System.Windows.Forms.ToolBar>已将控件添加到 Windows 窗体。  
   
 ### <a name="to-handle-the-click-event-on-a-toolbar"></a>处理工具栏上的单击事件  
   
-1. 在过程中，将添加到工具栏按钮<xref:System.Windows.Forms.ToolBar>控件。  
+1. 在过程中, 将工具栏按钮添加到<xref:System.Windows.Forms.ToolBar>控件。  
   
     ```vb  
     Public Sub ToolBarConfig()  
@@ -70,10 +70,10 @@ ms.locfileid: "61785822"
        }  
     ```  
   
-2. 添加事件处理程序<xref:System.Windows.Forms.ToolBar>控件的<xref:System.Windows.Forms.ToolBar.ButtonClick>事件。 使用 case 开关语句和<xref:System.Windows.Forms.ToolBarButtonClickEventArgs>类，以确定被单击的工具栏按钮。 并据此显示相应的消息框。  
+2. 为<xref:System.Windows.Forms.ToolBar>控件的<xref:System.Windows.Forms.ToolBar.ButtonClick>事件添加事件处理程序。 使用 case 切换语句和<xref:System.Windows.Forms.ToolBarButtonClickEventArgs>类来确定单击的工具栏按钮。 并据此显示相应的消息框。  
   
     > [!NOTE]
-    >  在本示例中，消息框仅用作占位符。 可随意添加在单击工具栏按钮时要执行的其他代码。  
+    > 在本示例中，消息框仅用作占位符。 可随意添加在单击工具栏按钮时要执行的其他代码。  
   
     ```vb  
     Protected Sub ToolBar1_ButtonClick(ByVal sender As Object, _  
@@ -137,6 +137,6 @@ ms.locfileid: "61785822"
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Windows.Forms.ToolBar>
-- [如何：向 ToolBar 控件添加按钮](how-to-add-buttons-to-a-toolbar-control.md)
-- [如何：定义的工具栏按钮的图标](how-to-define-an-icon-for-a-toolbar-button.md)
+- [如何：向工具栏控件添加按钮](how-to-add-buttons-to-a-toolbar-control.md)
+- [如何：定义工具栏按钮的图标](how-to-define-an-icon-for-a-toolbar-button.md)
 - [ToolBar 控件](toolbar-control-windows-forms.md)

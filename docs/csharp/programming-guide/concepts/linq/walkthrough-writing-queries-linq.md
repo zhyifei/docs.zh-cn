@@ -7,12 +7,12 @@ helpviewer_keywords:
 - queries [LINQ in C#], writing
 - writing LINQ queries
 ms.assetid: 2962a610-419a-4276-9ec8-4b7f2af0c081
-ms.openlocfilehash: 083c1e4b6ab8c25956ffcf2288ac32d940f23bc2
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 9b6592405d3047c8663b48137aa5b1f0eb14bdb4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66483220"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924112"
 ---
 # <a name="walkthrough-writing-queries-in-c-linq"></a>演练：用 C# 编写查询 (LINQ)
 此演练演示用于编写 LINQ 查询表达式的 C# 语言功能。  
@@ -20,7 +20,7 @@ ms.locfileid: "66483220"
 ## <a name="create-a-c-project"></a>创建 C# 项目  
   
 > [!NOTE]
->  以下说明适用于 Visual Studio。 如果使用其他开发环境，请创建包含对 System.Core.dll 的引用的控制台项目和用于 <xref:System.Linq?displayProperty=nameWithType> 命名空间的 `using` 指令。  
+> 以下说明适用于 Visual Studio。 如果使用其他开发环境，请创建包含对 System.Core.dll 的引用的控制台项目和用于 <xref:System.Linq?displayProperty=nameWithType> 命名空间的 `using` 指令。  
   
 #### <a name="to-create-a-project-in-visual-studio"></a>在 Visual Studio 中创建项目  
   
@@ -47,7 +47,7 @@ ms.locfileid: "66483220"
   
 - 列表本身可使用集合初始值设定项进行初始化。  
   
- 将在不显式调用任何构造函数和使用显式成员访问的情况下初始化并实例化整个数据结构。 有关这些新功能的详细信息，请参阅[自动实现的属性](../../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)与[对象和集合初始值设定项](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)。  
+ 将在不显式调用任何构造函数和使用显式成员访问的情况下初始化并实例化整个数据结构。 有关这些新功能的详细信息，请参阅[自动实现的属性](../../classes-and-structs/auto-implemented-properties.md)与[对象和集合初始值设定项](../../classes-and-structs/object-and-collection-initializers.md)。  
   
 #### <a name="to-add-the-data-source"></a>添加数据源  
   
@@ -63,7 +63,7 @@ ms.locfileid: "66483220"
   
 #### <a name="to-create-a-simple-query"></a>创建简单查询  
   
-- 在应用程序的 `Main` 方法中，创建简单查询，执行该查询时，将生成所有在第一次测试中分数高于 90 的学生的列表。 注意，由于选定全部 `Student` 对象，所以查询的类型为 `IEnumerable<Student>`。 尽管该代码也可以通过使用 [var](../../../../csharp/language-reference/keywords/var.md) 关键字来使用隐式类型化，但可以使用显式类型化清楚地展示结果。 （有关 `var` 的详细信息，请参阅[隐式类型化局部变量](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md)。）  
+- 在应用程序的 `Main` 方法中，创建简单查询，执行该查询时，将生成所有在第一次测试中分数高于 90 的学生的列表。 注意，由于选定全部 `Student` 对象，所以查询的类型为 `IEnumerable<Student>`。 尽管该代码也可以通过使用 [var](../../../language-reference/keywords/var.md) 关键字来使用隐式类型化，但可以使用显式类型化清楚地展示结果。 （有关 `var` 的详细信息，请参阅[隐式类型化局部变量](../../classes-and-structs/implicitly-typed-local-variables.md)。）  
   
      另请注意，查询的范围变量 `student` 用作指向源中每个 `Student` 引用，提供对每个对象的成员访问。  
   
@@ -91,7 +91,7 @@ ms.locfileid: "66483220"
     where student.Scores[0] > 90 && student.Scores[3] < 80  
     ```  
   
-     有关详细信息，请参阅 [where 子句](../../../../csharp/language-reference/keywords/where-clause.md)。  
+     有关详细信息，请参阅 [where 子句](../../../language-reference/keywords/where-clause.md)。  
   
 ## <a name="modify-the-query"></a>修改查询  
   
@@ -115,7 +115,7 @@ ms.locfileid: "66483220"
     Console.WriteLine("{0}, {1} {2}", student.Last, student.First, student.Scores[0]);  
     ```  
   
-     有关详细信息，请参阅 [orderby 子句](../../../../csharp/language-reference/keywords/orderby-clause.md)。  
+     有关详细信息，请参阅 [orderby 子句](../../../language-reference/keywords/orderby-clause.md)。  
   
 #### <a name="to-group-the-results"></a>对结果进行分组  
   
@@ -129,7 +129,7 @@ ms.locfileid: "66483220"
   
 3. 在“控制台”  窗口中运行应用程序并查看结果。  
   
-     有关详细信息，请参阅 [group 子句](../../../../csharp/language-reference/keywords/group-clause.md)。  
+     有关详细信息，请参阅 [group 子句](../../../language-reference/keywords/group-clause.md)。  
   
 #### <a name="to-make-the-variables-implicitly-typed"></a>对变量进行隐式类型化  
   
@@ -137,7 +137,7 @@ ms.locfileid: "66483220"
   
      [!code-csharp[CsLINQGettingStarted#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#16)]  
   
-     有关 [var](../../../../csharp/language-reference/keywords/var.md) 的详细信息，请参阅[隐式类型化局部变量](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md)。  
+     有关 [var](../../../language-reference/keywords/var.md) 的详细信息，请参阅[隐式类型化局部变量](../../classes-and-structs/implicitly-typed-local-variables.md)。  
   
 #### <a name="to-order-the-groups-by-their-key-value"></a>按照键值对组进行排序  
   
@@ -153,11 +153,11 @@ ms.locfileid: "66483220"
   
      [!code-csharp[csLINQGettingStarted#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#18)]  
   
-     有关详细信息，请参阅 [let 子句](../../../../csharp/language-reference/keywords/let-clause.md)。  
+     有关详细信息，请参阅 [let 子句](../../../language-reference/keywords/let-clause.md)。  
   
 #### <a name="to-use-method-syntax-in-a-query-expression"></a>在查询表达式中使用方法语法  
   
-1. 如 [LINQ 中的查询语法和方法语法](../../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md) 中所述，某些查询操作只能使用方法语法来表示。 以下代码为源序列中的每个 `Student` 计算总分，然后对该查询的结果调用 `Average()` 方法来计算班级平均分。
+1. 如 [LINQ 中的查询语法和方法语法](./query-syntax-and-method-syntax-in-linq.md) 中所述，某些查询操作只能使用方法语法来表示。 以下代码为源序列中的每个 `Student` 计算总分，然后对该查询的结果调用 `Average()` 方法来计算班级平均分。
   
      [!code-csharp[csLINQGettingStarted#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#19)]  
   
@@ -174,15 +174,15 @@ ms.locfileid: "66483220"
 ## <a name="next-steps"></a>后续步骤  
  熟悉了在 C# 中使用查询的基本情况后，便可以开始阅读你感兴趣的具体类型的 LINQ 提供程序的文档和示例：  
   
- [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)  
+ [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)  
   
  [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)  
   
- [LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md)  
+ [LINQ to XML (C#)](./linq-to-xml-overview.md)  
   
- [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)  
+ [LINQ to Objects (C#)](./linq-to-objects.md)  
   
 ## <a name="see-also"></a>请参阅
 
-- [语言集成查询 (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)
-- [LINQ 查询表达式](../../../../csharp/programming-guide/linq-query-expressions/index.md)
+- [语言集成查询 (LINQ) (C#)](./index.md)
+- [LINQ 查询表达式](../../linq-query-expressions/index.md)

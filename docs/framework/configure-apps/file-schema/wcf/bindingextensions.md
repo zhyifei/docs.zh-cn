@@ -2,12 +2,12 @@
 title: <bindingExtensions>
 ms.date: 03/30/2017
 ms.assetid: 8373f94d-d095-486f-8f1e-4ac2f72b58c7
-ms.openlocfilehash: ed55701e45d8580e37cf4776de6b9c5241e0548c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 34ba198de33ae4aa1882d13f74bd2d538999a0c9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673467"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919779"
 ---
 # <a name="bindingextensions"></a>\<bindingExtensions>
 本节为使用计算机或应用程序配置文件中的用户定义绑定提供支持。 通过使用 `add` 关键字，并将元素的 `type` 属性设置为用户定义的绑定，将 `name` 属性设置为用户定义的绑定的名称，可以将用户定义的绑定添加到此集合中。  
@@ -43,4 +43,4 @@ ms.locfileid: "61673467"
   
 ## <a name="see-also"></a>请参阅
 
-- [扩展绑定](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [扩展绑定](../../../wcf/extending/extending-bindings.md)

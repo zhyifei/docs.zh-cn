@@ -4,23 +4,23 @@ ms.date: 03/30/2017
 ms.assetid: 408f25c4-6d60-475c-92b1-7b52b777c6db
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 079718c96a4818285c0b469da9f23213a6915c19
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: fb9300917f06ec8e48f2dd412e008efec4dc6917
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052506"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941675"
 ---
 # <a name="missingmetadataexception-class-net-native"></a>丢失元数据异常类 (.NET Native)
 
-**适用于面向 Windows 10，仅限.NET 本机 Windows 应用程序的.NET**
+**适用于 Windows 10 的 .NET for Windows apps, 仅 .NET Native**
 
 当反射用于检索不存在的元数据时会引起此异常。
 
 **命名空间：** System.Reflection
 
 > [!IMPORTANT]
-> `MissingMetadataException`类旨在仅供内部使用.NET Native 工具链。 它不用于在第三方代码中使用，也不应用它处理应用程序代码中的异常。 相反，你可以通过将条目添加到[运行时指令文件](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)来消除异常。 有关详细信息，请参阅“备注”部分。
+> `MissingMetadataException`类仅供 .NET Native 工具链内部使用。 它不用于在第三方代码中使用，也不应用它处理应用程序代码中的异常。 相反，你可以通过将条目添加到[运行时指令文件](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)来消除异常。 有关详细信息，请参阅“备注”部分。
 
 ## <a name="syntax"></a>语法
 
@@ -34,8 +34,8 @@ ms.locfileid: "66052506"
 
 |构造函数|描述|
 |-----------------|-----------------|
-|`public MissingMetadataException()`|通过使用一个系统提供的、描述该错误的消息，来初始化 `MissingMetadataException` 类的一个实例。<br /><br /> 此构造函数是由.NET Native 工具链内部使用。|
-|`public MissingMetadataException(String message)`|用指定的错误消息初始化 `MissingMetadataException` 类的新实例。<br /><br /> 此构造函数是由.NET Native 工具链内部使用。|
+|`public MissingMetadataException()`|通过使用一个系统提供的、描述该错误的消息，来初始化 `MissingMetadataException` 类的一个实例。<br /><br /> 此构造函数仅供 .NET Native 工具链内部使用。|
+|`public MissingMetadataException(String message)`|用指定的错误消息初始化 `MissingMetadataException` 类的新实例。<br /><br /> 此构造函数仅供 .NET Native 工具链内部使用。|
 
 ## <a name="properties"></a>属性
 
@@ -74,7 +74,7 @@ ms.locfileid: "66052506"
 
 当反射用于访问程序集中不可用的元数据时，会引起 `MissingMetadataException` 异常。
 
-在运行时间一个应用可使用的元数据由运行时指令（XML 配置）文件、*.rd.xml 来定义。 为防止应用引发此异常，应该修改\*.rd.xml 来定义在运行时间必须存在的元数据。 有关 \*.rd.xml 文件的格式信息，请参阅[运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)。
+在运行时可用于应用程序的元数据由运行时指令 (XML 配置) 文件 ( \*web.config) 定义。 为防止应用引发此异常，应该修改\*.rd.xml 来定义在运行时间必须存在的元数据。 有关 \*.rd.xml 文件的格式信息，请参阅[运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)。
 
 > [!IMPORTANT]
 > 由于此异常表示应用程序需要的元数据在运行时间不可用，因此不应在 `try`/`catch` 块中处理此异常。 相反，你应该诊断引起此异常的原因并通过使用运行时指令文件删除它。 若要获取可以添加到可消除异常的运行时指令文件的项，有两个疑难解答程序可供使用：

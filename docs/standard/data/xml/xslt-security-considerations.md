@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: fea695be-617c-4977-9567-140e820436fc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 69ee0743f7b0c64efbfd8a75e8dc463d79323d4c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 683cf4a38ed08e0c569df62778c2ff80323ef261
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615323"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910490"
 ---
 # <a name="xslt-security-considerations"></a>XSLT 安全注意事项
 XSLT 语言具有一组丰富的功能，为您带来强大的功能和灵活性。 其中的许多功能尽管非常有用，但是也可能会被外部源利用。 为了安全地使用 XSLT，必须了解在使用 XSLT 时出现的安全问题类型以及可以用于缓解这些风险的基本策略。  
@@ -39,7 +39,7 @@ XSLT 语言具有一组丰富的功能，为您带来强大的功能和灵活性
 - 在执行转换时，<xref:System.Xml.XmlResolver> 用于解析 `document()` 函数。  
   
     > [!NOTE]
-    >  默认情况下，`document()` 类禁用 <xref:System.Xml.Xsl.XslCompiledTransform> 函数。 通过将 <xref:System.Xml.Xsl.XsltSettings.EnableDocumentFunction%2A?displayProperty=nameWithType> 属性设置为 `true` 并将 <xref:System.Xml.Xsl.XsltSettings> 对象传递给 <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> 方法，可以启用此功能。  
+    > 默认情况下，`document()` 类禁用 <xref:System.Xml.Xsl.XslCompiledTransform> 函数。 通过将 <xref:System.Xml.Xsl.XsltSettings.EnableDocumentFunction%2A?displayProperty=nameWithType> 属性设置为 `true` 并将 <xref:System.Xml.Xsl.XsltSettings> 对象传递给 <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> 方法，可以启用此功能。  
   
  <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> 和 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> 方法均包括接受 <xref:System.Xml.XmlResolver> 作为一个参数的重载。 如果未指定 <xref:System.Xml.XmlResolver>，将使用没有用户凭据的默认 <xref:System.Xml.XmlUrlResolver>。  
   

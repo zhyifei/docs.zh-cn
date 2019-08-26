@@ -6,12 +6,12 @@ helpviewer_keywords:
 - using Memory&lt;T&gt; and Span&lt;T&gt;
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5aa778477abf3b91e32d9cb8ffdf50baaca5f001
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 171f6fd5a8b55d2e96a90a90d011a8166be6759d
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68362902"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666418"
 ---
 # <a name="memoryt-and-spant-usage-guidelines"></a>内存\<T> 和跨度\<T> 使用准则
 
@@ -78,7 +78,7 @@ class Program
 
 [!code-csharp[ownership](~/samples/snippets/standard/buffers/memory-t/owner/owner.cs)]
 
-也可以使用 [`using`](~/docs/csharp/language-reference/keywords/using-statement.md) 编写此示例：
+也可以使用 [`using`](../../csharp/language-reference/keywords/using-statement.md) 编写此示例：
 
 [!code-csharp[ownership-using](~/samples/snippets/standard/buffers/memory-t/owner-using/owner-using.cs)]
 
@@ -138,7 +138,7 @@ void DisplayBufferToConsole(ReadOnlyMemory<char> buffer);
 void DisplayBufferToConsole(ReadOnlySpan<char> buffer);
 ```
 
-`DisplayBufferToConsole` 方法现在几乎适用于每一个能够想到的缓冲区类型：`T[]`，使用 [stackalloc](~/docs/csharp/language-reference/operators/stackalloc.md) 分配的存储等。 甚至可以向其直接传递 <xref:System.String>！
+`DisplayBufferToConsole` 方法现在几乎适用于每一个能够想到的缓冲区类型：`T[]`，使用 [stackalloc](../../csharp/language-reference/operators/stackalloc.md) 分配的存储等。 甚至可以向其直接传递 <xref:System.String>！
 
 **规则 3：如果方法接受内存\<T> 并返回 `void`，则在方法返回之后不得使用内存\<T> 实例。**
 
@@ -246,7 +246,7 @@ class Person
 
 **规则 9：如果正在包装同步 P/Invoke 方法，则 API 应接受跨度\<T> 作为参数。**
 
-根据规则 1，<xref:System.Span%601> 通常是用于同步 API 的正确类型。 可以通过 [`fixed`](~/docs/csharp/language-reference/keywords/fixed-statement.md) 关键字固定 <xref:System.Span%601> 实例，如下面的示例所示。
+根据规则 1，<xref:System.Span%601> 通常是用于同步 API 的正确类型。 可以通过 [`fixed`](../../csharp/language-reference/keywords/fixed-statement.md) 关键字固定 <xref:System.Span%601> 实例，如下面的示例所示。
 
 ```csharp
 using System.Runtime.InteropServices;
@@ -286,7 +286,7 @@ public unsafe int ManagedWrapper(Span<byte> data)
 
 **规则 10：如果正在包装异步 P/Invoke 方法，则 API 应接受内存\<T> 作为参数。**
 
-由于不能在异步操作中使用 [`fixed`](~/docs/csharp/language-reference/keywords/fixed-statement.md) 关键字，因此使用 <xref:System.Memory%601.Pin%2A?displayProperty=nameWithType> 方法固定 <xref:System.Memory%601> 实例，无论该实例表示的连续内存类型为何。 下面的示例演示了如何使用此 API 执行异步 P/Invoke 调用。
+由于不能在异步操作中使用 [`fixed`](../../csharp/language-reference/keywords/fixed-statement.md) 关键字，因此使用 <xref:System.Memory%601.Pin%2A?displayProperty=nameWithType> 方法固定 <xref:System.Memory%601> 实例，无论该实例表示的连续内存类型为何。 下面的示例演示了如何使用此 API 执行异步 P/Invoke 调用。
 
 ```csharp
 using System.Runtime.InteropServices;

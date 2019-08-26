@@ -7,12 +7,12 @@ helpviewer_keywords:
 - metadata [WPF], for dependency properties
 - overriding metadata [WPF]
 ms.assetid: d01ed009-b722-41bf-b82f-fe1a8cdc50dd
-ms.openlocfilehash: 800bf80e5ba3e697c122bcf4b1bc0f302357d087
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 154a2543c62de545e8b2df711d6ad51989d0689d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401625"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964854"
 ---
 # <a name="dependency-property-metadata"></a>依赖项属性元数据
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]属性系统包含一个元数据报告系统, 该系统超出了可通过反射或一般公共语言运行时 (CLR) 特征报告的属性的内容。 依赖属性的元数据还可以由定义依赖属性的类来唯一地分配，可以在依赖属性添加到另一个类时进行更改，可以由所有从定义基类继承依赖属性的派生类来明确地重写。  
@@ -38,7 +38,7 @@ ms.locfileid: "68401625"
  然后从派生类, 以便为体系结构分部 (如 WPF 框架级类) 提供更具体的元数据。 <xref:System.Windows.PropertyMetadata> <xref:System.Windows.UIPropertyMetadata>添加动画报告, 并<xref:System.Windows.FrameworkPropertyMetadata>提供上一节中提到的 WPF 框架级属性。 当注册依赖属性时, 可以将它们注册到这些<xref:System.Windows.PropertyMetadata>派生类。 检查元数据时, 可以将基<xref:System.Windows.PropertyMetadata>类型强制转换为派生类, 以便可以检查更具体的属性。  
   
 > [!NOTE]
->  在<xref:System.Windows.FrameworkPropertyMetadata>此文档中, 可以指定的属性特征有时被称为 "标志"。 当你创建新的元数据实例以便在依赖属性注册或元数据重写中使用时, 你可以<xref:System.Windows.FrameworkPropertyMetadataOptions>使用 flagwise 枚举指定这些值, 然后提供可能连接的枚举值到<xref:System.Windows.FrameworkPropertyMetadata>构造函数。 但是, 一旦构造后, 这些选项特征在中<xref:System.Windows.FrameworkPropertyMetadata>作为一系列布尔属性公开, 而不是构造枚举值。 使用布尔属性，可以检查每个条件，而不必为了获得感兴趣的信息而向按标志枚举值应用掩码。 构造函数使用串联<xref:System.Windows.FrameworkPropertyMetadataOptions>以便保持构造函数签名的长度合理, 而实际构造的元数据公开了离散属性, 使查询元数据更加直观。  
+> 在<xref:System.Windows.FrameworkPropertyMetadata>此文档中, 可以指定的属性特征有时被称为 "标志"。 当你创建新的元数据实例以便在依赖属性注册或元数据重写中使用时, 你可以<xref:System.Windows.FrameworkPropertyMetadataOptions>使用 flagwise 枚举指定这些值, 然后提供可能连接的枚举值到<xref:System.Windows.FrameworkPropertyMetadata>构造函数。 但是, 一旦构造后, 这些选项特征在中<xref:System.Windows.FrameworkPropertyMetadata>作为一系列布尔属性公开, 而不是构造枚举值。 使用布尔属性，可以检查每个条件，而不必为了获得感兴趣的信息而向按标志枚举值应用掩码。 构造函数使用串联<xref:System.Windows.FrameworkPropertyMetadataOptions>以便保持构造函数签名的长度合理, 而实际构造的元数据公开了离散属性, 使查询元数据更加直观。  
   
 <a name="override_or_subclass"></a>   
 ## <a name="when-to-override-metadata-when-to-derive-a-class"></a>何时重写元数据以及何时派生类  
@@ -78,7 +78,7 @@ ms.locfileid: "68401625"
  在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中，附加属性作为依赖属性来实现。 这意味着它们还具有能够由个别类重写的属性元数据。 中[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]附加属性的作用域注意事项通常<xref:System.Windows.DependencyObject>是在其上设置附加属性。 因此, 任何<xref:System.Windows.DependencyObject>派生类都可以重写任何附加属性的元数据, 因为它可能是在类的实例上设置的。 可以重写默认值、回叫或 WPF 框架级别的特征报告属性。 如果针对类的实例设置了附加属性，则这些重写属性元数据特征将适用。 例如，可以重写默认值，这样，只要未以其他方式设置附加属性，重写值就会报告为类实例的附加属性的值。  
   
 > [!NOTE]
->  <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>属性与附加属性无关。  
+> <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>属性与附加属性无关。  
   
 <a name="dp_add_owner"></a>   
 ### <a name="adding-a-class-as-an-owner-of-an-existing-dependency-property"></a>将类作为现有依赖属性的所有者来添加  

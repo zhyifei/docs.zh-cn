@@ -10,53 +10,53 @@ helpviewer_keywords:
 - custom controls [Windows Forms], exposing properties
 - constituent controls
 ms.assetid: 5c1ec98b-aa48-4823-986e-4712551cfdf1
-ms.openlocfilehash: 44b96218e674c754a1985f2f22a36707cd1776b6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f006e42771a5ecc71f6a508fd78d0e2dd8f2d2f2
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61941370"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70015883"
 ---
 # <a name="how-to-expose-properties-of-constituent-controls"></a>如何：公开构成控件的属性
-构成复合控件的控件称为*构成控件*。 这些控件通常被声明为私有的并因此不能由开发人员访问。 如果你想要使这些控件的属性可供将来的用户，必须向用户公开它们。 通过在用户控件中，创建属性并使用公开构成控件的属性`get`和`set`该属性的访问器以构成控件的私有属性更改生效。  
-  
- 有一个用户控件，请考虑使用名为的构成按钮`MyButton`。 在此示例中，当用户请求`ConstituentButtonBackColor`属性中，存储中的值<xref:System.Windows.Forms.Control.BackColor%2A>属性的`MyButton`传送。 当用户将分配给此属性的值时，该值将自动传递给<xref:System.Windows.Forms.Control.BackColor%2A>的属性`MyButton`和`set`将会执行代码，更改颜色`MyButton`。  
-  
- 下面的示例演示如何公开<xref:System.Windows.Forms.Control.BackColor%2A>构成按钮的属性：  
-  
-```vb  
-Public Property ButtonColor() as System.Drawing.Color  
-   Get  
-      Return MyButton.BackColor  
-   End Get  
-   Set(Value as System.Drawing.Color)  
-      MyButton.BackColor = Value  
-   End Set  
-End Property  
-```  
-  
-```csharp  
-public Color ButtonColor  
-{  
-   get  
-   {  
-      return(myButton.BackColor);  
-   }  
-   set  
-   {  
-      myButton.BackColor = value;  
-   }  
-}  
-```  
-  
-### <a name="to-expose-a-property-of-a-constituent-control"></a>若要公开构成控件的属性  
-  
-1. 创建你的用户控件的公共属性。  
-  
-2. 在`get`一部分的属性，编写代码，以检索你想要公开的属性的值。  
-  
-3. 在`set`一部分的属性，编写代码，将属性的值传递给构成控件的公开的属性。  
-  
+构成复合控件的控件称为*构成控件*。 这些控件通常声明为私有, 因此开发人员无法访问这些控件。 如果要使这些控件的属性可供未来用户使用, 则必须将这些控件公开给用户。 通过在用户控件中创建一个属性, 并使用`get`该属性的和`set`访问器来影响构成控件的 private 属性中的更改, 可以公开构成控件的属性。
+
+ 假设有一个名为`MyButton`的 "构成" 按钮的假设用户控件。 在此示例中, 当用户请求`ConstituentButtonBackColor`属性时, 将传递<xref:System.Windows.Forms.Control.BackColor%2A>在的属性`MyButton`中存储的值。 当用户将值分配给此属性时, 该值将自动传递<xref:System.Windows.Forms.Control.BackColor%2A>到的`MyButton`属性, 并`set`将执行`MyButton`代码, 从而更改的颜色。
+
+ 下面的示例演示如何公开<xref:System.Windows.Forms.Control.BackColor%2A> "构成" 按钮的属性:
+
+```vb
+Public Property ButtonColor() as System.Drawing.Color
+   Get
+      Return MyButton.BackColor
+   End Get
+   Set(Value as System.Drawing.Color)
+      MyButton.BackColor = Value
+   End Set
+End Property
+```
+
+```csharp
+public Color ButtonColor
+{
+   get
+   {
+      return(myButton.BackColor);
+   }
+   set
+   {
+      myButton.BackColor = value;
+   }
+}
+```
+
+### <a name="to-expose-a-property-of-a-constituent-control"></a>公开构成控件的属性
+
+1. 为用户控件创建公共属性。
+
+2. 在属性的部分, 编写用于检索要公开的属性的值的代码。 `get`
+
+3. 在属性的部分, 编写将属性的值传递给构成控件的公开属性的代码。 `set`
+
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Windows.Forms.UserControl>

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 619ecf1c-1ca5-4d66-8934-62fe7aad78c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 440debe875a0d00d240849ba4b60b548f46e2c0e
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 937577f86ec854f5a458fe6067836a85a540695a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69567046"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69913805"
 ---
 # <a name="serialization-and-metadata"></a>序列化和元数据
 
@@ -39,7 +39,7 @@ ms.locfileid: "69567046"
   
 ### <a name="typeof-used-in-the-constructor"></a>构造函数中使用的 TypeOf
 
- 如果调用这些序列化类的构造函数并在方法C#调用中包含[typeof](~/docs/csharp/language-reference/operators/type-testing-and-cast.md#typeof-operator)运算符,**则无需执行任何其他操作**。 例如，在以下对序列化类构造函数的每个调用中，`typeof` 关键字被用作了传递给构造函数的表达式的一部分。  
+ 如果调用这些序列化类的构造函数并在方法C#调用中包含[typeof](../../csharp/language-reference/operators/type-testing-and-cast.md#typeof-operator)运算符,**则无需执行任何其他操作**。 例如，在以下对序列化类构造函数的每个调用中，`typeof` 关键字被用作了传递给构造函数的表达式的一部分。  
   
  [!code-csharp[ProjectN#5](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#5)]  
   
@@ -47,7 +47,7 @@ ms.locfileid: "69567046"
   
 ### <a name="typeof-used-outside-the-constructor"></a>构造函数外部使用的 TypeOf
 
- 如果调用了这些序列化类的构造函数并在C#提供给构造函数的<xref:System.Type>参数的表达式之外使用[typeof](~/docs/csharp/language-reference/operators/type-testing-and-cast.md#typeof-operator)运算符 (如以下代码所示), 则 .NET Native 编译器无法解析该类型:  
+ 如果调用了这些序列化类的构造函数并在C#提供给构造函数的<xref:System.Type>参数的表达式之外使用[typeof](../../csharp/language-reference/operators/type-testing-and-cast.md#typeof-operator)运算符 (如以下代码所示), 则 .NET Native 编译器无法解析该类型:  
   
  [!code-csharp[ProjectN#6](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#6)]  
   

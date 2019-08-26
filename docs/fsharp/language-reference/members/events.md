@@ -2,12 +2,12 @@
 title: 事件
 description: 了解事件F#如何使你能够将函数调用与用户操作关联, 这在 GUI 编程中非常重要。
 ms.date: 05/16/2016
-ms.openlocfilehash: eed2caff569638ea5aa972a000dfa71a3b64f60b
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 7c3f16204b762609323fc2bcdc05f80e85a298e8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627578"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917281"
 ---
 # <a name="events"></a>事件
 
@@ -175,7 +175,7 @@ Application.Run(appForm)
 ## <a name="see-also"></a>请参阅
 
 - [成员](index.md)
-- [处理和引发事件](../../../../docs/standard/events/index.md)
+- [处理和引发事件](../../../standard/events/index.md)
 - [Lambda 表达式:`fun` 关键字](../functions/lambda-expressions-the-fun-keyword.md)
 - [控件。事件模块](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event-module-%5bfsharp%5d)
 - [控件。事件&#60;不&#62;是类](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event%5b%27t%5d-class-%5bfsharp%5d)

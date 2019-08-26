@@ -2,12 +2,12 @@
 title: 如何：创建未签名的友元程序集 (C#)
 ms.date: 07/20/2015
 ms.assetid: 78cbc4f0-b021-4141-a4ff-eb4edbd814ca
-ms.openlocfilehash: 6bc2d807b3d1cf6c82a9ba6303139b9758581f35
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 5dadd725234048c4b6a4f9a0fa9b38dbf92671aa
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59318229"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595921"
 ---
 # <a name="how-to-create-unsigned-friend-assemblies-c"></a>如何：创建未签名的友元程序集 (C#)
 本示例演示如何将友元程序集和未签名的程序集一起使用。  
@@ -81,7 +81,7 @@ ms.locfileid: "59318229"
     csc /r:friend_unsigned_A.dll /out:friend_unsigned_B.exe friend_unsigned_B.cs  
     ```  
   
-     编译器生成的程序集的名称必须与传递给 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性的友元程序集的名称匹配。 必须使用 `/out` 编译器选项显式指定输出程序集（.exe 或 .dll）的名称。 有关详细信息，请参阅 [/out（C# 编译器选项）](../../../../csharp/language-reference/compiler-options/out-compiler-option.md)。  
+     编译器生成的程序集的名称必须与传递给 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性的友元程序集的名称匹配。 必须使用 `/out` 编译器选项显式指定输出程序集（.exe 或 .dll）的名称。 有关详细信息，请参阅 [/out（C# 编译器选项）](../../../language-reference/compiler-options/out-compiler-option.md)。  
   
 6. 运行 friend_unsigned_B.exe 文件。  
   
@@ -95,5 +95,5 @@ ms.locfileid: "59318229"
 - <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
 - [.NET 中的程序集](../../../../standard/assembly/index.md)
 - [友元程序集](../../../../standard/assembly/friend-assemblies.md)
-- [如何：创建签名的友元程序集 (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)
-- [C# 编程指南](../../../../csharp/programming-guide/index.md)
+- [如何：创建签名的友元程序集 (C#)](./how-to-create-signed-friend-assemblies.md)
+- [C# 编程指南](../../index.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00c12376-cb26-4317-86ad-e6e9c089be57
-ms.openlocfilehash: eb9b61f0c0b787a2de0a39a0d47c5767acad9cc5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f76b1f0a09be2f745156437919f43ebaa8840519
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645879"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69938481"
 ---
 # <a name="sql-server-express-user-instances"></a>SQL Server Express 用户实例
 Microsoft SQL Server 学习版 (SQL Server Express) 支持用户实例功能，只有在使用用于 SQL Server 的 .NET Framework 数据提供程序 (`SqlClient`) 时该功能才可用。 用户实例是 SQL Server Express 数据库引擎的单独实例，该单独实例由父实例生成。 不是其本地计算机的管理员的用户可以将用户实例附加和连接到 SQL Server Express 数据库。 在每个用户一个实例的基础上，每个实例在单个用户的安全上下文中运行。  
@@ -21,10 +21,10 @@ Microsoft SQL Server 学习版 (SQL Server Express) 支持用户实例功能，�
  有关更多信息，请参见 SQL Server 2005 联机丛书中的“用户实例”。  
   
 > [!NOTE]
->  对于已经是其各自计算机的管理员的用户不需要用户实例，而且对于涉及多个数据库用户的方案也不需要用户实例。  
+> 对于已经是其各自计算机的管理员的用户不需要用户实例，而且对于涉及多个数据库用户的方案也不需要用户实例。  
   
 ## <a name="enabling-user-instances"></a>启用用户实例  
- 若要生成用户实例，必须运行 SQL Server Express 的父实例。 当 SQL Server Express 已安装，并且它们可以显式启用或禁用由系统管理员执行时，默认情况下启用了用户实例**sp_configure**系统存储过程对父实例。  
+ 若要生成用户实例，必须运行 SQL Server Express 的父实例。 默认情况下, 用户实例在安装 SQL Server Express 时处于启用状态, 并且可以由在父实例上执行**sp_configure**系统存储过程的系统管理员显式启用或禁用用户实例。  
   
 ```  
 -- Enable user instances.  
@@ -37,7 +37,7 @@ sp_configure 'user instances enabled','0'
  用于用户实例的网络协议必须为本地命名管道。 无法对 SQL Server 的远程实例启动用户实例，且不允许使用 SQL Server 登录名。  
   
 ## <a name="connecting-to-a-user-instance"></a>连接到用户实例  
- `User Instance`并`AttachDBFilename`<xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>关键字允许<xref:System.Data.SqlClient.SqlConnection>连接到用户实例。 <xref:System.Data.SqlClient.SqlConnectionStringBuilder>`UserInstance` 和 `AttachDBFilename` 属性也支持用户实例。  
+ `User Instance`和`AttachDBFilename` 关键字允许<xref:System.Data.SqlClient.SqlConnection>连接到用户实例。 <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> <xref:System.Data.SqlClient.SqlConnectionStringBuilder>`UserInstance` 和 `AttachDBFilename` 属性也支持用户实例。  
   
  请注意如下所示的有关连接字符串示例的内容：  
   
@@ -58,9 +58,9 @@ Initial Catalog=InstanceDB;
 ```  
   
 > [!NOTE]
->  您也可以使用 <xref:System.Data.SqlClient.SqlConnectionStringBuilder><xref:System.Data.SqlClient.SqlConnectionStringBuilder.UserInstance%2A> 和 <xref:System.Data.SqlClient.SqlConnectionStringBuilder.AttachDBFilename%2A> 属性在运行时构建连接字符串。  
+> 您也可以使用 <xref:System.Data.SqlClient.SqlConnectionStringBuilder><xref:System.Data.SqlClient.SqlConnectionStringBuilder.UserInstance%2A> 和 <xref:System.Data.SqlClient.SqlConnectionStringBuilder.AttachDBFilename%2A> 属性在运行时构建连接字符串。  
   
-### <a name="using-the-124datadirectory124-substitution-string"></a>使用&#124;DataDirectory&#124;替代字符串  
+### <a name="using-the-124datadirectory124-substitution-string"></a>使用&#124;DataDirectory&#124;替换字符串  
  在 ADO.NET 2.0 中，随着 `AttachDbFileName`（包含在管道符号中）替代字符串的引入，对 `|DataDirectory|` 进行了扩展。 `DataDirectory` 与 `AttachDbFileName` 结合使用可指示数据文件的相对路径，从而允许开发人员创建基于数据源的相对路径（而无需指定完整路径）的连接字符串。  
   
  `DataDirectory` 点的物理位置取决于应用程序的类型。 在此示例中，要附加的 Northwind.mdf 文件位于应用程序的 \app_data 文件夹中。  
@@ -77,12 +77,12 @@ Initial Catalog=Northwind;
  如果连接字符串的替代字符串格式不正确，将会引发 <xref:System.ArgumentException>。  
   
 > [!NOTE]
->  <xref:System.Data.SqlClient> 会将替代字符串解析为本地计算机文件系统的完整路径。 因此，不支持远程服务器、HTTP 和 UNC 路径名。 如果在服务器未在本地计算机上的情况下打开连接，会引发异常。  
+> <xref:System.Data.SqlClient> 会将替代字符串解析为本地计算机文件系统的完整路径。 因此，不支持远程服务器、HTTP 和 UNC 路径名。 如果在服务器未在本地计算机上的情况下打开连接，会引发异常。  
   
  打开 <xref:System.Data.SqlClient.SqlConnection> 时，会将其从默认 SQL Server Express 实例重定向到在调用方帐户下运行的已启动运行时的实例。  
   
 > [!NOTE]
->  可能需要增大 <xref:System.Data.SqlClient.SqlConnection.ConnectionTimeout%2A> 值，因为加载用户实例所用时间可能比常规实例所用时间要长。  
+> 可能需要增大 <xref:System.Data.SqlClient.SqlConnection.ConnectionTimeout%2A> 值，因为加载用户实例所用时间可能比常规实例所用时间要长。  
   
  以下代码段打开新的 `SqlConnection`，在控制台窗口中显示连接字符串，然后在退出 `using` 代码块时关闭连接。  
   
@@ -116,23 +116,23 @@ private static void OpenSqlConnection()
 ```  
   
 > [!NOTE]
->  在 SQL Server 内运行的公共语言运行库 (CLR) 代码中不支持用户实例。 如果对在连接字符串中具有 <xref:System.InvalidOperationException> 的 `Open` 调用 <xref:System.Data.SqlClient.SqlConnection>，则会引发 `User Instance=true`。  
+> 在 SQL Server 内运行的公共语言运行库 (CLR) 代码中不支持用户实例。 如果对在连接字符串中具有 <xref:System.InvalidOperationException> 的 `Open` 调用 <xref:System.Data.SqlClient.SqlConnection>，则会引发 `User Instance=true`。  
   
 ## <a name="lifetime-of-a-user-instance-connection"></a>用户实例连接的生存期  
- 与作为服务运行的其他 SQL Server 版本不同，SQL Server Express 实例不需要手动启动和停止。 每次用户登录和连接到用户实例时，如果该用户实例尚未运行，则会启动该用户实例。 用户实例数据库设置 `AutoClose` 选项，这样数据库就会在一段非活动期后自动关闭。 已启动的 sqlservr.exe 进程会在实例的上一次连接关闭后的有限超时期限内继续运行，因此，如果在超时过期之前打开了另一连接，则不需要重新启动 sqlservr.exe 进程。 如果在超时过期之前没有打开新连接，则用户实例将自动关闭。 父实例上的系统管理员可以通过设置用户实例超时期限的持续时间**sp_configure**若要更改**用户实例超时值**选项。 默认值为 60 分钟。  
+ 与作为服务运行的其他 SQL Server 版本不同，SQL Server Express 实例不需要手动启动和停止。 每次用户登录和连接到用户实例时，如果该用户实例尚未运行，则会启动该用户实例。 用户实例数据库设置 `AutoClose` 选项，这样数据库就会在一段非活动期后自动关闭。 已启动的 sqlservr.exe 进程会在实例的上一次连接关闭后的有限超时期限内继续运行，因此，如果在超时过期之前打开了另一连接，则不需要重新启动 sqlservr.exe 进程。 如果在超时过期之前没有打开新连接，则用户实例将自动关闭。 父实例上的系统管理员可以使用**sp_configure**更改**用户实例超时**选项来设置用户实例的超时时间。 默认值为 60 分钟。  
   
 > [!NOTE]
->  如果 `Min Pool Size` 用于其值大于 0 的连接字符串中，则连接池将始终保持几个打开的连接，且用户实例将不会自动关闭。  
+> 如果 `Min Pool Size` 用于其值大于 0 的连接字符串中，则连接池将始终保持几个打开的连接，且用户实例将不会自动关闭。  
   
 ## <a name="how-user-instances-work"></a>用户实例工作方式  
- 第一次为每个用户生成用户实例**主**并**msdb**系统数据库从 Template Data 文件夹复制到用户的本地应用程序数据存储库下的路径以供用户实例独占使用的目录。 此路径通常为 `C:\Documents and Settings\<UserName>\Local Settings\Application Data\Microsoft\Microsoft SQL Server Data\SQLEXPRESS`。 用户实例启动时**tempdb**、 日志和跟踪文件也会写入到此目录。 将为该实例生成一个名称，且保证此名称对每个用户均是唯一的。  
+ 首次为每个用户生成用户实例时, **master**和**msdb**系统数据库将从模板数据文件夹复制到用户的本地应用程序数据存储库目录下的路径, 以供用户实例独占使用。 此路径通常为 `C:\Documents and Settings\<UserName>\Local Settings\Application Data\Microsoft\Microsoft SQL Server Data\SQLEXPRESS`。 启动用户实例时, **tempdb**、日志和跟踪文件也会写入此目录。 将为该实例生成一个名称，且保证此名称对每个用户均是唯一的。  
   
  默认情况下，会授予 Windows Builtin\Users 组的所有成员在本地实例上连接的权限，以及对 SQL Server 二进制文件进行读取和执行的权限。 验证持有用户实例的调用用户的凭据后，该用户就会成为该实例的 `sysadmin`。 只为用户实例启用共享内存，这意味着只能对本地计算机执行操作。  
   
  必须授予用户对连接字符串中指定的 .mdf 和 .ldf 文件的读写权限。  
   
 > [!NOTE]
->  .mdf 和 .ldf 文件分别表示数据库和日志文件。 这两个文件为一个匹配集，因此在备份和还原操作期间必须小心谨慎。 数据库文件包含有关日志文件确切版本的信息，如果数据库与错误的日志文件耦合，则该数据库打不开。  
+> .mdf 和 .ldf 文件分别表示数据库和日志文件。 这两个文件为一个匹配集，因此在备份和还原操作期间必须小心谨慎。 数据库文件包含有关日志文件确切版本的信息，如果数据库与错误的日志文件耦合，则该数据库打不开。  
   
  若要避免数据损坏，则应使用独占访问权打开用户实例中的数据库。 如果两个不同的用户实例共享同一计算机上的同一个数据库，则第一个实例上的用户必须在关闭该数据库后，才能在第二个实例中打开该数据库。  
   
@@ -140,13 +140,13 @@ private static void OpenSqlConnection()
  用户实例向数据库应用程序开发人员提供 SQL Server 数据存储区，该数据存储区不依赖于在开发计算机上拥有管理员帐户的开发人员。 用户实例基于 Access/Jet 模型，在该模型中，数据库应用程序仅连接到某个文件，且用户会自动拥有对所有数据库对象的完全权限，而无需系统管理员干预来授予权限。 用户实例应在以下情形中工作：用户在最小特权的用户帐户 (LUA) 下运行，没有对服务器或本地计算机的管理员权限，但需要创建数据库对象和应用程序。 用户实例允许用户在运行时创建在用户自己的安全上下文中运行的实例，而不是在较大权限系统服务的安全上下文中运行的实例。  
   
 > [!IMPORTANT]
->  仅当所有使用应用程序均完全受信任时，才应使用用户实例。  
+> 仅当所有使用应用程序均完全受信任时，才应使用用户实例。  
   
  用户实例方案包括：  
   
 - 不需要共享数据的任何单用户应用程序。  
   
-- ClickOnce 部署。 如果 .NET Framework 2.0（或更高版本）和 SQL Server Express 已安装在目标计算机上，则可以由非管理员用户安装并使用通过 ClickOnce 操作而下载的安装程序包。 请注意，如果 SQL Server Express 为安装程序的一部分，则管理员必须安装 SQL Server Express。 有关详细信息，请参阅[ClickOnce 部署适用于 Windows Forms](../../../winforms/clickonce-deployment-for-windows-forms.md)。
+- ClickOnce 部署。 如果 .NET Framework 2.0（或更高版本）和 SQL Server Express 已安装在目标计算机上，则可以由非管理员用户安装并使用通过 ClickOnce 操作而下载的安装程序包。 请注意，如果 SQL Server Express 为安装程序的一部分，则管理员必须安装 SQL Server Express。 有关详细信息, 请参阅[ClickOnce Deployment for Windows 窗体](../../../winforms/clickonce-deployment-for-windows-forms.md)。
   
 - 使用 Windows 身份验证的专用 ASP.NET 宿主。 Intranet 上可以承载单个 SQL Server Express 实例。 应用程序使用 ASPNET Windows 帐户进行连接，而不是使用模拟进行连接。 用户实例不应用于第三方或共享宿主方案中，在这样的方案中，所有应用程序将共享同一用户实例，而不再保持彼此独立。  
   

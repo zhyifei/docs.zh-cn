@@ -8,12 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: 49c39e12aa67b1f36fc46c21f5d2b23223b3264d
-ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
+ms.openlocfilehash: 20d403e4a6410257068cc3414fcb8dc1e45709e9
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68238639"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666868"
 ---
 # <a name="whats-new-for-visual-basic"></a>Visual Basic 的新增功能
 
@@ -51,7 +51,7 @@ Visual Basic / Visual Studio .NET 2002 初版 Visual Basic .NET
 
 **优化的浮点到整数转换**
 
-在以前版本的 Visual Basic 中，[双精度](../language-reference/data-types/double-data-type.md)和[单精度](../language-reference/data-types/single-data-type.md)值到整数的转换的性能相对较差。 Visual Basic 15.8 显著增强了以下情况下的浮点到整数转换的性能：将以下任何方法返回的值传递到一个 [Visual Basic 内部整数转换函数](../language-reference/functions/type-conversion-functions.md)（CByte、CShort、CInt、CLng、CSByte、CUShort、CUInt、CULng）时，或是在 [Option Strict](~/docs/visual-basic/language-reference/statements/option-strict-statement.md) 设置为 `Off` 的情况下将以下任何方法返回的值隐式强制转换为整型类型时：
+在以前版本的 Visual Basic 中，[双精度](../language-reference/data-types/double-data-type.md)和[单精度](../language-reference/data-types/single-data-type.md)值到整数的转换的性能相对较差。 Visual Basic 15.8 显著增强了以下情况下的浮点到整数转换的性能：将以下任何方法返回的值传递到一个 [Visual Basic 内部整数转换函数](../language-reference/functions/type-conversion-functions.md)（CByte、CShort、CInt、CLng、CSByte、CUShort、CUInt、CULng）时，或是在 [Option Strict](../language-reference/statements/option-strict-statement.md) 设置为 `Off` 的情况下将以下任何方法返回的值隐式强制转换为整型类型时：
 
 - <xref:Microsoft.VisualBasic.Conversion.Fix(System.Double)?displayProperty=nameWithType>
 - <xref:Microsoft.VisualBasic.Conversion.Fix(System.Object)?displayProperty=nameWithType>

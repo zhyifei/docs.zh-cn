@@ -19,12 +19,12 @@ ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: e916d7d335bcdeff64393a25ab697748209d147c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 050b2c2b8b55bc79cf388ce7a8c197b14f3437d7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782635"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69934762"
 ---
 # <a name="common-type-system"></a>常规类型系统
 通用类型系统定义了如何在公共语言运行时中声明、使用和管理类型，同时也是运行时跨语言集成支持的一个重要组成部分。 常规类型系统执行以下功能：  
@@ -82,7 +82,7 @@ ms.locfileid: "67782635"
 |exported 或 not exported|指出某个类在定义它的程序集之外是否可见。 此特征仅适用于顶级类，不适用于嵌套类。|  
   
 > [!NOTE]
->  类也可以嵌套在父类或结构中。 嵌套类也有成员特征。 有关详细信息，请参阅[嵌套类型](#NestedTypes)。  
+> 类也可以嵌套在父类或结构中。 嵌套类也有成员特征。 有关详细信息，请参阅[嵌套类型](#NestedTypes)。  
   
  没有实现的类成员是抽象成员。 有一个或更多抽象成员的类其本身也是抽象的；不可以创建它的新实例。 以运行时为目标的某些语言允许将类标记为抽象类，即使其成员都不是抽象成员也是如此。 当要封装一组派生类可在适当时候继承或重写的基本功能时，可以使用抽象类。 非抽象的类称为具体类。  
   
@@ -115,7 +115,7 @@ ms.locfileid: "67782635"
 - 枚举不能是泛型，除非它嵌套在泛型类型中，才能是泛型。 也就是说，枚举不能有自己的类型参数。  
   
     > [!NOTE]
-    >  用 Visual Basic、C# 和 C++ 创建的嵌套类型（包括枚举）包含所有封闭泛型类型的类型参数，因此即使这些嵌套类型没有自己的类型参数，它们也是泛型的。 有关更多信息，请参见 <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType> 参考主题中的“嵌套类型”。  
+    > 用 Visual Basic、C# 和 C++ 创建的嵌套类型（包括枚举）包含所有封闭泛型类型的类型参数，因此即使这些嵌套类型没有自己的类型参数，它们也是泛型的。 有关更多信息，请参见 <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType> 参考主题中的“嵌套类型”。  
   
  <xref:System.FlagsAttribute> 特性表示一种特殊的枚举，称为位域。 运行时本身不区分传统枚举与位域，但您的语言可能会区分二者。 当区分二者的时候，可以对位域（而不是枚举）使用位操作符以产生未命名的值。 枚举一般用于列出唯一的元素，如一周的各天、国家/地区名称，等等。 位域一般用于列出可能联合发生的质量或数量，比如 `Red And Big And Fast`。  
   
@@ -157,14 +157,14 @@ ms.locfileid: "67782635"
  由于委托从 <xref:System.MulticastDelegate> 继承，因此委托具有一个调用列表，其中列出了委托表示的方法，在调用委托时将执行该列表中的方法。 列表中的所有方法接收调用委托时提供的自变量。  
   
 > [!NOTE]
->  没有为在调用列表中包含多个方法的委托（即使委托具有返回类型）定义返回值。  
+> 没有为在调用列表中包含多个方法的委托（即使委托具有返回类型）定义返回值。  
   
  在许多情况下（例如使用回调方法），一个委托只表示一个方法，而您需要做的就是创建委托并调用它。  
   
  对于表示多个方法的委托，.NET 提供了 <xref:System.Delegate> 和 <xref:System.MulticastDelegate> 委托类的方法，以支持如下操作：将方法添加到委托的调用列表（<xref:System.Delegate.Combine%2A?displayProperty=nameWithType> 方法）、移除方法（<xref:System.Delegate.Remove%2A?displayProperty=nameWithType> 方法）、获取调用列表（<xref:System.Delegate.GetInvocationList%2A?displayProperty=nameWithType> 方法）。  
   
 > [!NOTE]
->  不需要将这些方法用于 C#、C++ 和 Visual Basic 中的事件处理程序委托，因为这些语言为添加和移除事件处理程序提供了语法。  
+> 不需要将这些方法用于 C#、C++ 和 Visual Basic 中的事件处理程序委托，因为这些语言为添加和移除事件处理程序提供了语法。  
 
 <a name="type_definitions"></a>   
 ## <a name="type-definitions"></a>类型定义  
@@ -193,7 +193,7 @@ ms.locfileid: "67782635"
 |可访问性|说明|  
 |-------------------|-----------------|  
 |public|所有程序集都可以访问此类型。|  
-|程序集|只能在其程序集内访问此类型。|  
+|程序集 (assembly)|只能在其程序集内访问此类型。|  
   
  嵌套类型的可访问性依赖于它的可访问域，该域是由已声明的成员可访问性和直接包含类型的可访问域这二者共同确定的。 但是，嵌套类型的可访问域不能超出包含类型的可访问域。  
   
@@ -307,7 +307,7 @@ ms.locfileid: "67782635"
  每个类型成员都有一个唯一的签名。 方法签名由方法名称和一个参数列表（方法的参数的顺序和类型）组成。 可以在一种类型内定义具有相同名称的多种方法，只要这些方法的签名不同。 当定义两种或多种具有相同名称的方法时，就称作重载。 例如，在 <xref:System.Char?displayProperty=nameWithType> 中，重载了 <xref:System.Char.IsDigit%2A> 方法。 一个方法采用 <xref:System.Char>。 另一个方法采用 <xref:System.String> 和 <xref:System.Int32>。  
   
 > [!NOTE]
->  返回类型不被视为方法签名的一部分。 这意味着如果方法只是返回类型不同，就不能重载。  
+> 返回类型不被视为方法签名的一部分。 这意味着如果方法只是返回类型不同，就不能重载。  
   
 ### <a name="inheriting-overriding-and-hiding-members"></a>继承，重写和隐藏成员  
  派生类型继承其基类型的所有成员；也就是说，会在派生类型上定义这些成员，并供派生类型使用。 继承成员的行为和质量可以通过以下两种方式来修改：  

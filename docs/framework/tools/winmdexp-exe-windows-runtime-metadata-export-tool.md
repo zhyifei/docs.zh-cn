@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d2ce0683-343d-403e-bb8d-209186f7a19d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 01cdcbb93fde0d2d2f1c800613d9709da0d695f6
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 7e6f9f553af4899d502584cbde5341f7061f169d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67026007"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937957"
 ---
 # <a name="winmdexpexe-windows-runtime-metadata-export-tool"></a>Winmdexp.exe（Windows 运行时元数据导出工具）
 Windows 运行时元数据导出工具 (Winmdexp.exe) 可将 .NET Framework 模块转换为包含 Windows 运行时元数据的文件。 尽管 .NET Framework 程序集和 Windows 运行时元数据文件使用相同的物理格式，但元数据表的内容有差别，这意味着 .NET Framework 程序集不可自动用作 Windows 运行时组件。 将 .NET Framework 模块转换为 Windows 运行时组件的过程称为“导出”  。 在 .NET Framework 4.5 和 .NET Framework 4.5.1 中，生成的 Windows 元数据 (.winmd) 文件同时包含元数据和实现。  
@@ -33,7 +33,7 @@ winmdexp [options] winmdmodule
   
 |自变量或选项|说明|  
 |------------------------|-----------------|  
-|`winmdmodule`|指定要导出的模块 (.winmdobj)。 仅允许一个模块。 若要创建此模块，请将 `/target` 编译器选项与 `winmdobj` 目标一起使用。 请参阅 [/target:winmdobj（C# 编译器选项）](~/docs/csharp/language-reference/compiler-options/target-winmdobj-compiler-option.md)或 [/target (Visual Basic)](~/docs/visual-basic/reference/command-line-compiler/target.md)。|  
+|`winmdmodule`|指定要导出的模块 (.winmdobj)。 仅允许一个模块。 若要创建此模块，请将 `/target` 编译器选项与 `winmdobj` 目标一起使用。 请参阅 [/target:winmdobj（C# 编译器选项）](../../csharp/language-reference/compiler-options/target-winmdobj-compiler-option.md)或 [/target (Visual Basic)](../../visual-basic/reference/command-line-compiler/target.md)。|  
 |`/docfile:` `docfile`<br /><br /> `/d:` `docfile`|指定 Winmdexp.exe 将生成的输出 XML 文档文件。 在 .NET Framework 4.5 中，输出文件实质上与输入 XML 文档文件相同。|  
 |`/moduledoc:` `docfile`<br /><br /> `/md:` `docfile`|指定编译器使用 `winmdmodule` 生成的 XML 文档文件的名称。|  
 |`/modulepdb:` `symbolfile`<br /><br /> `/mp:` `symbolfile`|指定包含 `winmdmodule` 的符号的程序数据库 (PDB) 文件的名称。|  
@@ -48,11 +48,11 @@ winmdexp [options] winmdmodule
 ## <a name="remarks"></a>备注  
  Winmdexp.exe 未被设计将任意 .NET Framework 程序集转换为 .winmd 文件。 它需要使用 `/target:winmdobj` 选项编译的模块，并且其他限制也适用。 这些限制中最重要的是，程序集的 API 图面中公开的所有类型都必须是 Windows 运行时类型。 有关详细信息，请参阅 Windows 开发人员中心的文章[在 C# 和 Visual Basic 中创建 Windows 运行时组件](https://go.microsoft.com/fwlink/p/?LinkID=238313)的“在 Windows 运行时组件中声明类型”一节。  
   
- 当你使用 C# 或 Visual Basic 编写 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]应用或 Windows 运行时组件时，.NET Framework 将提供支持，使得利用 Windows 运行时进行编程更加自然。 [Windows 应用商店应用和 Windows 运行时的 .NET Framework 支持](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)一文中对此进行了讨论。 在该过程中，某些常用的 Windows 运行时类型将映射到 .NET Framework 类型。 Winmdexp.exe 将反转此过程并生成使用对应的 Windows 运行时类型的 API 图面。 例如，从 <xref:System.Collections.Generic.IList%601> 接口构造的类型将映射到从 Windows 运行时 [IVector\<T>](https://go.microsoft.com/fwlink/p/?LinkId=251132) 接口构造的类型。  
+ 当你使用 C# 或 Visual Basic 编写 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]应用或 Windows 运行时组件时，.NET Framework 将提供支持，使得利用 Windows 运行时进行编程更加自然。 [Windows 应用商店应用和 Windows 运行时的 .NET Framework 支持](../../standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)一文中对此进行了讨论。 在该过程中，某些常用的 Windows 运行时类型将映射到 .NET Framework 类型。 Winmdexp.exe 将反转此过程并生成使用对应的 Windows 运行时类型的 API 图面。 例如，从 <xref:System.Collections.Generic.IList%601> 接口构造的类型将映射到从 Windows 运行时 [IVector\<T>](https://go.microsoft.com/fwlink/p/?LinkId=251132) 接口构造的类型。  
   
 ## <a name="see-also"></a>请参阅
 
-- [.NET Framework 对 Windows 应用商店应用和 Windows 运行时的支持情况](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)
+- [.NET Framework 对 Windows 应用商店应用和 Windows 运行时的支持情况](../../standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)
 - [用 C# 和 Visual Basic 创建 Windows 运行时组件](https://go.microsoft.com/fwlink/p/?LinkID=238313)
 - [Winmdexp.exe 错误消息](../../../docs/framework/tools/winmdexp-exe-error-messages.md)
 - [生成、部署和配置工具 (.NET Framework)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd233108(v=vs.100))

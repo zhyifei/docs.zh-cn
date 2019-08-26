@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0ccc45482f691d9950c641ef126a657052a280e8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 05900f55885f8f3a4c470d6842c42d0fc3e0171e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61987696"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69957447"
 ---
 # <a name="icordebugprocess3-interface"></a>ICorDebugProcess3 接口
 控制自定义调试器通知。  
@@ -30,22 +30,22 @@ ms.locfileid: "61987696"
   
 |方法|描述|  
 |------------|-----------------|  
-|[SetEnableCustomNotification 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess3-setenablecustomnotification-method.md)|启用和禁用的指定类型的自定义调试器通知。|  
+|[SetEnableCustomNotification 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess3-setenablecustomnotification-method.md)|启用和禁用指定类型的自定义调试器通知。|  
   
 ## <a name="remarks"></a>备注  
- 此接口进行逻辑扩展的 ICorDebugProcess 和 ICorDebugProcess2 接口。  
+ 此接口以逻辑方式扩展 ICorDebugProcess 和 ICorDebugProcess2 接口。  
   
 > [!NOTE]
->  此接口不支持跨计算机或跨进程远程调用。  
+> 此接口不支持跨计算机或跨进程远程调用。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头：** Cordebug.idl, Cordebug.idl  
   
- **库：** CorGuids.lib  
+ **类库**CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

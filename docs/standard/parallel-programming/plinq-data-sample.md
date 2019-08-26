@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4fccbb35-eaa5-44e9-a252-a5c3d4bc7604
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 46865e398c3868e21b743cf45f42e8b9063a0cbe
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 5b5cf6f0ae66141957d545134a2f8ff8eb799097
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298900"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946457"
 ---
 # <a name="plinq-data-sample"></a>PLINQ 数据示例
 此示例包含 .csv 格式的示例数据，以及将它转换为“客户”、“产品”、“订单”和“订单详情”内存中集合的方法。 若要进一步试验 PLINQ，可以将其他一些主题中的代码示例粘贴到本主题的代码中，并通过 `Main` 方法调用它。 也可以将此类数据用于自己的 PLINQ 查询。  
@@ -23,7 +23,7 @@ ms.locfileid: "59298900"
  数据表示 Northwind 数据库中的一部分。 其中包含五十 (50) 个客户记录，但并不包含所有字段。 此外，还包含“订单”中的一部分行和每个客户的相应 Order_Detail 数据。 所有产品都包含在内。  
   
 > [!NOTE]
->  数据集不是非常大，无法证明对于仅包含基本 `where` 和 `select` 子句的查询，PLINQ 比 LINQ to Objects 快。 为了观察此类小型数据集的加速，请使用包含对数据集中每个元素执行计算成本高的操作的查询。  
+> 数据集不是非常大，无法证明对于仅包含基本 `where` 和 `select` 子句的查询，PLINQ 比 LINQ to Objects 快。 为了观察此类小型数据集的加速，请使用包含对数据集中每个元素执行计算成本高的操作的查询。  
   
 ### <a name="to-set-up-this-sample"></a>设置此示例  
   
@@ -31,7 +31,7 @@ ms.locfileid: "59298900"
   
 2. 通过运行下面这些步骤后面的代码，替换 Module1.vb 或 Program.cs 的内容。  
   
-3. 在 **“项目”** 菜单上，单击 **“添加新项”**。 选择“文本文件”，再单击“确定”。 复制此主题中的数据，再将它粘贴到新的文本文件中。 在“文件”菜单上，单击“保存”，将文件命名为“Plinqdata.csv”，再将它保存到包含源代码文件的文件夹中。  
+3. 在 **“项目”** 菜单上，单击 **“添加新项”** 。 选择“文本文件”  ，再单击“确定”  。 复制此主题中的数据，再将它粘贴到新的文本文件中。 在“文件”  菜单上，单击“保存”  ，将文件命名为“Plinqdata.csv”，再将它保存到包含源代码文件的文件夹中。  
   
 4. 按 F5 以验证项目是否正确生成和运行。 下面的输出应显示在控制台窗口中。  
   

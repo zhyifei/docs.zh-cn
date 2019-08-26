@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 9b44daee-874a-4bd1-954e-83bf53565590
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 91a97807d45d3cafdac0c0608dc9590533b185dc
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 67ead643afd34b4c3422d85e6f7876879de477ba
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663435"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927243"
 ---
 # <a name="systemruntimecaching-element-cache-settings"></a>\<system.object > 元素 (缓存设置)
 
@@ -55,7 +55,7 @@ ms.locfileid: "69663435"
 此命名空间中的类提供一种使用诸如 ASP.NET 中缓存功能的方法，但不会在 `System.Web` 程序集上产生依赖。 有关详细信息，请参阅 [Caching in .NET Framework Applications](../../../performance/caching-in-net-framework-applications.md)。  
   
 > [!NOTE]
->  <xref:System.Runtime.Caching>命名空间中的输出缓存功能和类型是 .NET Framework 4 中的新增功能。  
+> <xref:System.Runtime.Caching>命名空间中的输出缓存功能和类型是 .NET Framework 4 中的新增功能。  
   
 ## <a name="example"></a>示例
 

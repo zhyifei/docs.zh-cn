@@ -2,12 +2,12 @@
 title: 如何：查询一组文件夹中的总字节数 (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: a01bd1d4-133c-4ca2-aa4e-e93e81d6076c
-ms.openlocfilehash: 04eed82041dc3c0818b0205f5198abe6e9eb228e
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 2db979c10eae9ecc5d4e154ae58248ca95a7cdc3
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65585681"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69592737"
 ---
 # <a name="how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq-c"></a>如何：查询一组文件夹中的总字节数 (LINQ) (C#)
 此示例演示如何检索由指定文件夹及其所有子文件夹中的所有文件使用的字节总数。  
@@ -78,5 +78,5 @@ class QuerySize
   
 ## <a name="see-also"></a>请参阅
 
-- [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
-- [LINQ 和文件目录 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ to Objects (C#)](./linq-to-objects.md)
+- [LINQ 和文件目录 (C#)](./linq-and-file-directories.md)

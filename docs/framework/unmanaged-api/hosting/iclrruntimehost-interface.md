@@ -16,46 +16,46 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ba02373aae33baf77b72323fabf1f6ca1fe4eecf
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 0f159c0b57f2087b608fac8cbc9b9c64ceb063a1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490241"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965996"
 ---
 # <a name="iclrruntimehost-interface"></a>ICLRRuntimeHost 接口
-提供的功能类似于[ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)接口提供在.NET Framework 版本 1，有以下更改：  
+提供与 .NET Framework 版本1中提供的[ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)接口类似的功能, 其中包含以下更改:  
   
-- 添加了[SetHostControl](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-sethostcontrol-method.md)方法设置主机控件接口。  
+- 用于设置宿主控件接口的[SetHostControl](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-sethostcontrol-method.md)方法的添加。  
   
-- 提供的一些方法省略`ICorRuntimeHost`。  
+- 省略提供`ICorRuntimeHost`的某些方法。  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|[ExecuteApplication 方法](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-executeapplication-method.md)|基于清单的 ClickOnce 部署方案中使用，以指定要在新域中激活的应用程序。|  
-|[ExecuteInAppDomain 方法](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-executeinappdomain-method.md)|指定<xref:System.AppDomain>在其中执行指定的托管的代码。|  
-|[ExecuteInDefaultAppDomain 方法](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-executeindefaultappdomain-method.md)|调用中指定的程序集的指定类型的指定的方法。|  
-|[GetCLRControl 方法](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-getclrcontrol-method.md)|获取类型的接口指针[ICLRControl](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)主机可用于自定义的公共语言运行时 (CLR) 方面。|  
-|[GetCurrentAppDomainId 方法](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-getcurrentappdomainid-method.md)|获取的数字标识符<xref:System.AppDomain>当前正在执行。|  
-|[SetHostControl 方法](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-sethostcontrol-method.md)|设置主机控件接口。 必须调用`SetHostControl`之前调用`Start`。|  
-|[Start 方法](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md)|初始化到进程中 CLR。|  
-|[Stop 方法](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-stop-method.md)|由运行时将停止执行代码。|  
-|[UnloadAppDomain 方法](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-unloadappdomain-method.md)|卸载<xref:System.AppDomain>对应于指定的数字标识符。|  
+|[ExecuteApplication 方法](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-executeapplication-method.md)|在基于清单的 ClickOnce 部署方案中用于指定要在新域中激活的应用程序。|  
+|[ExecuteInAppDomain 方法](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-executeinappdomain-method.md)|指定要<xref:System.AppDomain>在其中执行指定的托管代码的。|  
+|[ExecuteInDefaultAppDomain 方法](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-executeindefaultappdomain-method.md)|在指定的程序集中调用指定类型的指定方法。|  
+|[GetCLRControl 方法](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-getclrcontrol-method.md)|获取宿主可用于自定义公共语言运行时 (CLR) 的各个方面的[ICLRControl](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)类型的接口指针。|  
+|[GetCurrentAppDomainId 方法](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-getcurrentappdomainid-method.md)|获取当前正在执行的的<xref:System.AppDomain>数值标识符。|  
+|[SetHostControl 方法](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-sethostcontrol-method.md)|设置宿主控件接口。 `SetHostControl` 调用`Start`之前必须调用。|  
+|[Start 方法](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md)|将 CLR 初始化为一个进程。|  
+|[Stop 方法](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-stop-method.md)|停止由运行时执行的代码。|  
+|[UnloadAppDomain 方法](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-unloadappdomain-method.md)|<xref:System.AppDomain>卸载对应于指定数值标识符的。|  
   
 ## <a name="remarks"></a>备注  
- 从.NET Framework 4 开始，使用[ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)接口，用于获取一个指向[ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)接口，然后再调用[iclrruntimeinfo:: Getinterface](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getinterface-method.md)方法以获取一个指向`ICLRRuntimeHost`。 在早期版本的.NET Framework 中，主机获取一个指向`ICLRRuntimeHost`实例通过调用[CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)或[CorBindToCurrentRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtocurrentruntime-function.md)。 若要提供的任何.NET Framework 2.0 版中提供的技术实现，必须使用`ICLRRuntimeHost`而不是`ICorRuntimeHost`。  
+ 从 .NET Framework 4 开始, 使用[ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)接口获取指向[ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)接口的指针, 然后调用[ICLRRuntimeInfo:: GetInterface](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getinterface-method.md)方法`ICLRRuntimeHost`以获取指向的指针。 在 .NET Framework 的早期版本中, 主机通过调用[CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)或[CorBindToCurrentRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtocurrentruntime-function.md)获取`ICLRRuntimeHost`指向实例的指针。 若要提供 .NET Framework 版本2.0 中提供的任何技术的实现, 必须使用`ICLRRuntimeHost` `ICorRuntimeHost`而不是。  
   
 > [!IMPORTANT]
->  不要调用[启动](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md)方法之前调用[ExecuteApplication](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-executeapplication-method.md)方法，以激活基于清单的应用程序。 如果`Start`首先，调用方法`ExecuteApplication`方法调用将失败。  
+> 请不要在调用[ExecuteApplication](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-executeapplication-method.md)方法之前调用[Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md)方法来激活基于清单的应用程序。 如果首先调用`ExecuteApplication`方法,方法调用将失败。 `Start`  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
   
- **库：** 包含为 MSCorEE.dll 中的资源  
+ **类库**作为资源包括在 Mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

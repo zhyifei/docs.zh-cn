@@ -7,20 +7,20 @@ helpviewer_keywords:
 - listeners element for <source>
 - <listeners> element for <source>
 ms.assetid: a2991f43-b4d3-4614-a8e7-da392de9697f
-ms.openlocfilehash: b15a30fb6d356f92312bf33bc1964c7922ba1383
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 853bc94978218fd4d426e6070b3a36e20435cd6d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673739"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920490"
 ---
-# <a name="listeners-element-for-source"></a>\<侦听器 > 元素\<源 >
-添加或删除中的侦听器<xref:System.Diagnostics.TraceSource.Listeners%2A>集合<xref:System.Diagnostics.TraceSource>。 侦听器将定向到适当的目标，如日志、 窗口或文本文件的跟踪输出。  
+# <a name="listeners-element-for-source"></a>\<源 > 的\<侦听器 > 元素
+在的<xref:System.Diagnostics.TraceSource.Listeners%2A>集合<xref:System.Diagnostics.TraceSource>中添加或移除侦听器。 侦听器将跟踪输出定向到适当的目标, 如日志、窗口或文本文件。  
   
  \<configuration>  
 \<system.diagnostics>  
-\<sources>  
-\<source>  
+\<源 >  
+\<源 >  
 \<侦听器 > 元素  
   
 ## <a name="syntax"></a>语法  
@@ -43,9 +43,9 @@ ms.locfileid: "61673739"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-listeners-for-source.md)|将侦听器添加到 `Listeners` 集合中。|  
-|[\<remove>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/remove-element-for-listeners-for-source.md)|删除从侦听器`Listeners`集合。|  
-|[\<clear>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/clear-element-for-listeners-for-source.md)|清除跟踪源的 `Listeners` 集合。|  
+|[\<add>](add-element-for-listeners-for-source.md)|将侦听器添加到 `Listeners` 集合中。|  
+|[\<remove>](remove-element-for-listeners-for-source.md)|从`Listeners`集合中移除侦听器。|  
+|[\<clear>](clear-element-for-listeners-for-source.md)|清除跟踪源的 `Listeners` 集合。|  
   
 ### <a name="parent-elements"></a>父元素  
   
@@ -59,10 +59,10 @@ ms.locfileid: "61673739"
 ## <a name="remarks"></a>备注  
   
 ## <a name="configuration-file"></a>配置文件  
- 计算机配置文件 (Machine.config) 和应用程序配置文件中，可以使用此元素。  
+ 此元素可在计算机配置文件 (Machine.config) 和应用程序配置文件中使用。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何使用`<listeners>`元素添加到控制台跟踪侦听器`mySource`源，并删除默认跟踪侦听器。  
+ 下面的示例演示如何使用`<listeners>`元素将控制台跟踪侦听器添加`mySource`到源, 并删除默认的跟踪侦听器。  
   
 ```xml  
 <configuration>  
@@ -90,5 +90,5 @@ ms.locfileid: "61673739"
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Diagnostics.TraceListener>
-- [跟踪和调试设置架构](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
-- [跟踪侦听器](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+- [跟踪和调试设置架构](index.md)
+- [跟踪侦听器](../../../debug-trace-profile/trace-listeners.md)

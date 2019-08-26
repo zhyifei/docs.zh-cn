@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: c67eccc7-004d-4b2f-987e-919cbbd62ef7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 30be9fc661ce05a664f9e901edef621d9de62e34
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7416f2f9c200d687d3f2c1f14b01cafdb48f85b1
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54713439"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988184"
 ---
 # <a name="how-to-control-ordering-in-a-plinq-query"></a>如何：在 PLINQ 查询中控制排序
 这些示例展示了如何使用 <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> 扩展方法控制 PLINQ 查询中的顺序。  
   
 > [!WARNING]
->  这些示例主要用于演示用法，可能会或可能不会比相当的顺序 LINQ to Objects 查询快。  
+> 这些示例主要用于演示用法，可能会或可能不会比相当的顺序 LINQ to Objects 查询快。  
   
 ## <a name="example"></a>示例  
  下面的示例暂留了源序列的顺序。 有时，这样做是有必要的；例如，一些查询运算符需要有序的源序列，才能生成正确结果。  

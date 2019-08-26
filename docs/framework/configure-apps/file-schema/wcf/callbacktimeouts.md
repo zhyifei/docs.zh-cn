@@ -2,20 +2,20 @@
 title: <callbackTimeouts>
 ms.date: 03/30/2017
 ms.assetid: d7fcfc5f-6d35-491e-8fa6-2f964c1e792f
-ms.openlocfilehash: e666bac0be772e417f140e1482649f82ea70e2f6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d57a888a19e684ac13632c1ab2476e304667c3e3
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673415"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919665"
 ---
 # <a name="callbacktimeouts"></a>\<callbackTimeouts>
 在双工回调协定方案中指定使事务从服务器流动到客户端时的超时值。  
   
  \<system.ServiceModel>  
-\<behaviors>  
+\<行为 >  
 \<endpointBehaviors>  
-\<behavior>  
+\<行为 >  
 \<callbackTimeOuts>  
   
 ## <a name="syntax"></a>语法  
@@ -34,7 +34,7 @@ ms.locfileid: "61673415"
   
 |特性|描述|  
 |---------------|-----------------|  
-|`transactionTimeout`|一个 <xref:System.TimeSpan> 值，指定时间间隔，事务必须在此期间完成，否则会自动终止。 默认值是"00: 00:00"。|  
+|`transactionTimeout`|一个 <xref:System.TimeSpan> 值，指定时间间隔，事务必须在此期间完成，否则会自动终止。 默认值为 "00:00:00"。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  
@@ -43,7 +43,7 @@ ms.locfileid: "61673415"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|指定终结点行为。|  
+|[\<behavior>](behavior-of-endpointbehaviors.md)|指定终结点行为。|  
   
 ## <a name="see-also"></a>请参阅
 

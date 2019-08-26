@@ -2,12 +2,12 @@
 title: <tcpTransport>
 ms.date: 03/30/2017
 ms.assetid: 8fcd18c1-9958-42e7-b442-7903f7bdb563
-ms.openlocfilehash: 4b56da9abc4f7bf30601fec7d0c79f454124f41a
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: b85f3b77ca42eaaae8eae261df6414b5f9378560
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67423148"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69938956"
 ---
 # <a name="tcptransport"></a>\<tcpTransport>
 定义通道用于传输自定义绑定消息的 TCP 传输。  
@@ -15,7 +15,7 @@ ms.locfileid: "67423148"
  \<system.serviceModel>  
 \<bindings>  
 \<customBinding>  
-\<binding>  
+\<绑定 >  
 \<tcpTransport>  
   
 ## <a name="syntax"></a>语法  
@@ -49,10 +49,10 @@ ms.locfileid: "67423148"
   
 |特性|描述|  
 |---------------|-----------------|  
-|channelInitializationTimeout|获取或设置对要接受的通道进行初始化的时间限制。  通道在断开连接前可处于初始化状态的最长时间（秒）。 此配额包括 TCP 连接可能需要进行身份验证使用.NET Message Framing 协议本身的时间。 客户端需要发送一些初始数据，然后服务器才有足够的信息来执行身份验证。 默认值为 30 秒。|  
+|channelInitializationTimeout|获取或设置对要接受的通道进行初始化的时间限制。  通道在断开连接前可处于初始化状态的最长时间（秒）。 此配额包括 TCP 连接可以使用 .NET 消息帧协议对自身进行身份验证所需的时间。 客户端需要发送一些初始数据，然后服务器才有足够的信息来执行身份验证。 默认值为 30 秒。|  
 |connectionBufferSize|获取或设置用于从客户端或服务传输网络上的序列化消息块的缓冲区大小。|  
 |hostNameComparisonMode|获取或设置一个值，该值指示在对 URI 进行匹配时，是否使用主机名来访问服务。|  
-|listenBacklog|可为 Web 服务挂起的最大排队连接请求数。 `connectionLeaseTimeout` 属性限制客户端在引发连接异常之前将等待连接的持续时间。 这是一个套接字级别属性，控制可能为 Web 服务挂起的最大排队连接请求数。 ListenBacklog 太低时，WCF 将停止接受请求并因此删除新连接，直到服务器确认一些现有队列连接。 默认值为 16 * 处理器数。|  
+|listenBacklog|可为 Web 服务挂起的最大排队连接请求数。 `connectionLeaseTimeout` 属性限制客户端在引发连接异常之前将等待连接的持续时间。 这是一个套接字级别属性，控制可能为 Web 服务挂起的最大排队连接请求数。 当 ListenBacklog 太低时, WCF 将停止接受请求, 因此, 在服务器确认某些现有的排队连接之前, 将删除新连接。 默认值为 16 * 处理器数。|  
 |manualAddressing|获取或设置一个值，该值指示是否要求对消息进行手动寻址。|  
 |maxBufferPoolSize|获取或设置传输使用的任何缓冲池的最大大小。|  
 |maxBufferSize|获取或设置要使用的缓冲区的最大大小。 对于经过流处理的消息，该值最少应为以缓冲模式读取的消息头的最大可能大小。|  
@@ -61,18 +61,18 @@ ms.locfileid: "67423148"
 |maxPendingConnections|获取或设置在服务上等待调度的最大连接数。|  
 |maxReceivedMessageSize|获取和设置允许接收的最大消息大小。|  
 |portSharingEnabled|一个布尔值，指定是否为此连接启用 TCP 端口共享。 如果此值为 `false`，则每个绑定都将使用自己的独占端口。 默认值为 `false`。<br /><br /> 此设置只与服务相关。 客户端并不会受影响。<br /><br /> 使用此设置要求通过将 Windows Communication Foundation (WCF) TCP 端口共享服务的“启动类型”设置为“手动”或“自动”来启用该服务。|  
-|teredoEnabled|一个布尔值，指定是否启用 Teredo（一种用于对防火墙后的客户端进行寻址的技术）。 默认值为 `false`。<br /><br /> 此属性为基础 TCP 套接字启用 Teredo。 有关详细信息，请参阅[Teredo 概述](https://go.microsoft.com/fwlink/?LinkId=95339)。<br /><br /> 此属性仅适用于 [!INCLUDE[wxpsp2](../../../../../includes/wxpsp2-md.md)] 和 [!INCLUDE[ws2003](../../../../../includes/ws2003-md.md)]。 [!INCLUDE[wv](../../../../../includes/wv-md.md)] 具有用于 Teredo 的计算机范围的配置选项，因此运行 Vista 时将忽略此属性。 Teredo 要求客户端和服务计算机都安装 Microsoft IPv6 堆栈，并进行正确的配置以便使用 Teredo。 有关配置 Teredo 的详细信息，请参阅[Teredo 概述](https://go.microsoft.com/fwlink/?LinkId=95339)。 有关详细信息，请参阅[Windows Server 2003 技术中心](https://go.microsoft.com/fwlink/?LinkId=49888)。|  
+|teredoEnabled|一个布尔值，指定是否启用 Teredo（一种用于对防火墙后的客户端进行寻址的技术）。 默认值为 `false`。<br /><br /> 此属性为基础 TCP 套接字启用 Teredo。 有关详细信息, 请参阅[Teredo 概述](https://go.microsoft.com/fwlink/?LinkId=95339)。<br /><br /> 此属性仅适用于 [!INCLUDE[wxpsp2](../../../../../includes/wxpsp2-md.md)] 和 [!INCLUDE[ws2003](../../../../../includes/ws2003-md.md)]。 [!INCLUDE[wv](../../../../../includes/wv-md.md)] 具有用于 Teredo 的计算机范围的配置选项，因此运行 Vista 时将忽略此属性。 Teredo 要求客户端和服务计算机都安装 Microsoft IPv6 堆栈，并进行正确的配置以便使用 Teredo。 有关配置 Teredo 的详细信息, 请参阅[Teredo 概述](https://go.microsoft.com/fwlink/?LinkId=95339)。 有关详细信息, 请参阅[Windows Server 2003 技术中心](https://go.microsoft.com/fwlink/?LinkId=49888)。|  
 |transferMode|获取或设置一个值，该值指示通过面向连接的传输对消息进行缓冲还是流处理。|  
 |connectionPoolSettings|指定命名管道绑定的其他连接池设置。|  
   
 ### <a name="child-elements"></a>子元素  
- None  
+ 无  
   
 ### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<binding>](../../../../../docs/framework/misc/binding.md)|定义自定义绑定的所有绑定功能。|  
+|[\<binding>](../../../misc/binding.md)|定义自定义绑定的所有绑定功能。|  
   
 ## <a name="remarks"></a>备注  
  此传输使用“net.tcp://hostname:port/path”形式的 URI。 其他 URI 组件是可选的。  
@@ -85,9 +85,9 @@ ms.locfileid: "67423148"
 - <xref:System.ServiceModel.Channels.TcpTransportBindingElement>
 - <xref:System.ServiceModel.Channels.TransportBindingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [传输](../../../../../docs/framework/wcf/feature-details/transports.md)
-- [选择传输](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
-- [绑定](../../../../../docs/framework/wcf/bindings.md)
-- [扩展绑定](../../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [自定义绑定](../../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [传输](../../../wcf/feature-details/transports.md)
+- [选择传输](../../../wcf/feature-details/choosing-a-transport.md)
+- [绑定](../../../wcf/bindings.md)
+- [扩展绑定](../../../wcf/extending/extending-bindings.md)
+- [自定义绑定](../../../wcf/extending/custom-bindings.md)
+- [\<customBinding>](custombinding.md)

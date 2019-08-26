@@ -2,12 +2,12 @@
 title: 标准查询运算符概述 (C#)
 ms.date: 07/20/2015
 ms.assetid: 812fa119-5f65-4139-b4fa-55dccd8dc3ac
-ms.openlocfilehash: 7ce3a13c98bf08eae79906f1806427741568155e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e6419fef5c211995aa4d2bd0796a0d0336dc47a9
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54537954"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590978"
 ---
 # <a name="standard-query-operators-overview-c"></a>标准查询运算符概述 (C#)
 *标准查询运算符*是组成 LINQ 模式的方法。 这些方法中的大多数都作用于序列；其中序列指其类型实现 <xref:System.Collections.Generic.IEnumerable%601> 接口或 <xref:System.Linq.IQueryable%601> 接口的对象。 标准查询运算符提供包括筛选、投影、聚合、排序等在内的查询功能。  
@@ -67,7 +67,7 @@ foreach (var obj in query)
 ```  
   
 ## <a name="query-expression-syntax"></a>查询表达式语法  
- 某些使用更频繁的标准查询运算符具有专用的 C# 和 Visual Basic 语言关键字语法，使用这些语法可以在*查询* *表达式*中调用这些运算符。 有关具有专用关键字及其对应语法的标准查询运算符的详细信息，请参阅[标准查询运算符的查询表达式语法 (C#)](../../../../csharp/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)。  
+ 某些使用更频繁的标准查询运算符具有专用的 C# 和 Visual Basic 语言关键字语法，使用这些语法可以在*查询* *表达式*中调用这些运算符。 有关具有专用关键字及其对应语法的标准查询运算符的详细信息，请参阅[标准查询运算符的查询表达式语法 (C#)](./query-expression-syntax-for-standard-query-operators.md)。  
   
 ## <a name="extending-the-standard-query-operators"></a>扩展标准查询运算符  
  通过创建适合于目标域或技术的特定于域的方法，可以增大标准查询运算符的集合。 也可以用自己的实现来替换标准查询运算符，这些实现提供诸如远程计算、查询转换和优化之类的附加服务。 有关示例，请参见 <xref:System.Linq.Enumerable.AsEnumerable%2A>。  
@@ -75,39 +75,39 @@ foreach (var obj in query)
 ## <a name="related-sections"></a>相关章节  
  通过以下链接可转到一些主题，这些主题基于功能提供有关各种标准查询运算符的附加信息。  
   
- [对数据进行排序 (C#)](../../../../csharp/programming-guide/concepts/linq/sorting-data.md)  
+ [对数据进行排序 (C#)](./sorting-data.md)  
   
- [集运算 (C#)](../../../../csharp/programming-guide/concepts/linq/set-operations.md)  
+ [集运算 (C#)](./set-operations.md)  
   
- [筛选数据 (C#)](../../../../csharp/programming-guide/concepts/linq/filtering-data.md)  
+ [筛选数据 (C#)](./filtering-data.md)  
   
- [限定符运算 (C#)](../../../../csharp/programming-guide/concepts/linq/quantifier-operations.md)  
+ [限定符运算 (C#)](./quantifier-operations.md)  
   
- [投影运算 (C#)](../../../../csharp/programming-guide/concepts/linq/projection-operations.md)  
+ [投影运算 (C#)](./projection-operations.md)  
   
- [数据分区 (C#)](../../../../csharp/programming-guide/concepts/linq/partitioning-data.md)  
+ [数据分区 (C#)](./partitioning-data.md)  
   
- [联接运算 (C#)](../../../../csharp/programming-guide/concepts/linq/join-operations.md)  
+ [联接运算 (C#)](./join-operations.md)  
   
- [数据分组 (C#)](../../../../csharp/programming-guide/concepts/linq/grouping-data.md)  
+ [数据分组 (C#)](./grouping-data.md)  
   
- [生成运算 (C#)](../../../../csharp/programming-guide/concepts/linq/generation-operations.md)  
+ [生成运算 (C#)](./generation-operations.md)  
   
- [相等运算 (C#)](../../../../csharp/programming-guide/concepts/linq/equality-operations.md)  
+ [相等运算 (C#)](./equality-operations.md)  
   
- [元素运算 (C#)](../../../../csharp/programming-guide/concepts/linq/element-operations.md)  
+ [元素运算 (C#)](./element-operations.md)  
   
- [转换数据类型 (C#)](../../../../csharp/programming-guide/concepts/linq/converting-data-types.md)  
+ [转换数据类型 (C#)](./converting-data-types.md)  
   
- [串联运算 (C#)](../../../../csharp/programming-guide/concepts/linq/concatenation-operations.md)  
+ [串联运算 (C#)](./concatenation-operations.md)  
   
- [聚合运算 (C#)](../../../../csharp/programming-guide/concepts/linq/aggregation-operations.md)  
+ [聚合运算 (C#)](./aggregation-operations.md)  
   
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Linq.Enumerable>
 - <xref:System.Linq.Queryable>
-- [LINQ 查询简介 (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)
-- [标准查询运算符的查询表达式语法 (C#)](../../../../csharp/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)
-- [标准查询运算符按执行方式的分类 (C#)](../../../../csharp/programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md)
-- [扩展方法](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)
+- [LINQ 查询简介 (C#)](./introduction-to-linq-queries.md)
+- [标准查询运算符的查询表达式语法 (C#)](./query-expression-syntax-for-standard-query-operators.md)
+- [标准查询运算符按执行方式的分类 (C#)](./classification-of-standard-query-operators-by-manner-of-execution.md)
+- [扩展方法](../../classes-and-structs/extension-methods.md)

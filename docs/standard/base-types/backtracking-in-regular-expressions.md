@@ -20,18 +20,18 @@ ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 289b6997a4d17463072418fbf17f5f99874f4988
-ms.sourcegitcommit: 46c68557bf6395f0ab9915f7558f2faae0097695
+ms.openlocfilehash: 0831a22b0c1d3333cc37f86a764006c934597390
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "66378168"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968562"
 ---
 # <a name="backtracking-in-regular-expressions"></a>正则表达式中的回溯
 <a name="top"></a> 当正则表达式模式包含可选 [限定符](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) 或 [替换构造](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)时，会发生回溯，并且正则表达式引擎会返回以前保存的状态，以继续搜索匹配项。 回溯是正则表达式的强大功能的中心；它使得表达式强大、灵活，可以匹配非常复杂的模式。 同时，这种强大功能需要付出一定代价。 通常，回溯是影响正则表达式引擎性能的单个最重要的因素。 幸运的是，开发人员可以控制正则表达式引擎的行为及其使用回溯的方式。 本主题说明回溯的工作方式以及如何对其进行控制。  
   
 > [!NOTE]
->  通常情况下，非确定性有限自动机 (NFA) 引擎（如 .NET 正则表达式引擎）会将构造快速高效的正则表达式的职责交给开发人员。  
+> 通常情况下，非确定性有限自动机 (NFA) 引擎（如 .NET 正则表达式引擎）会将构造快速高效的正则表达式的职责交给开发人员。  
   
  本主题包含以下各节：  
   
@@ -56,22 +56,22 @@ ms.locfileid: "66378168"
   
 |操作|在模式中的位置|在字符串中的位置|结果|  
 |---------------|-------------------------|------------------------|------------|  
-|1|E|“needing a reed”（索引 0）|无匹配。|  
-|2|E|“eeding a reed”（索引 1）|可能匹配。|  
+|1|e|“needing a reed”（索引 0）|无匹配。|  
+|2|e|“eeding a reed”（索引 1）|可能匹配。|  
 |3|e{2}|“eding a reed”（索引 2）|可能匹配。|  
 |4|\w|“ding a reed”（索引 3）|可能匹配。|  
 |5|\b|“ing a reed”（索引 4）|可能的匹配失败。|  
-|6|E|“eding a reed”（索引 2）|可能匹配。|  
+|6|e|“eding a reed”（索引 2）|可能匹配。|  
 |7|e{2}|“ding a reed”（索引 3）|可能的匹配失败。|  
-|8|E|“ding a reed”（索引 3）|匹配失败。|  
-|9|E|“ing a reed”（索引 4）|无匹配。|  
-|10|E|“ng a reed”（索引 5）|无匹配。|  
-|11|E|“g a reed”（索引 6）|无匹配。|  
-|12|E|“a reed”（索引 7）|无匹配。|  
-|13|E|“a reed”（索引 8）|无匹配。|  
-|14|E|“reed”（索引 9）|无匹配。|  
-|15|E|“reed”（索引 10）|无匹配|  
-|16|E|“eed”（索引 11）|可能匹配。|  
+|8|e|“ding a reed”（索引 3）|匹配失败。|  
+|9|e|“ing a reed”（索引 4）|无匹配。|  
+|10|e|“ng a reed”（索引 5）|无匹配。|  
+|11|e|“g a reed”（索引 6）|无匹配。|  
+|12|e|“a reed”（索引 7）|无匹配。|  
+|13|e|“a reed”（索引 8）|无匹配。|  
+|14|e|“reed”（索引 9）|无匹配。|  
+|15|e|“reed”（索引 10）|无匹配|  
+|16|e|“eed”（索引 11）|可能匹配。|  
 |17|e{2}|“ed”（索引 12）|可能匹配。|  
 |18|\w|“d”（索引 13）|可能匹配。|  
 |19|\b|“”(索引 14)|匹配。|  
@@ -126,14 +126,14 @@ ms.locfileid: "66378168"
   
 <a name="controlling_backtracking"></a>   
 ## <a name="controlling-backtracking"></a>控制回溯  
- 通过回溯可以创建强大、灵活的正则表达式。 但如上一节所示，回溯在提供这些优点的同时，可能也会使性能差的无法接受。 若要防止过度回溯，则应在实例化 <xref:System.Text.RegularExpressions.Regex> 对象或调用静态正则表达式匹配方法时定义超时间隔。 下一节中将对此进行讨论。 此外，.NET 还支持以下三个正则表达式语言元素，这些元素限制或禁止回溯，并支持几乎不会或完全不会导致性能损失的复杂正则表达式：[非回溯子表达式](#Nonbacktracking)、[后行断言](#Lookbehind)和[先行断言](#Lookahead)。 有关每个语言元素的详细信息，请参见 [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。  
+ 通过回溯可以创建强大、灵活的正则表达式。 但如上一节所示，回溯在提供这些优点的同时，可能也会使性能差的无法接受。 若要防止过度回溯，则应在实例化 <xref:System.Text.RegularExpressions.Regex> 对象或调用静态正则表达式匹配方法时定义超时间隔。 下一节中将对此进行讨论。 此外，.NET 还支持以下三个正则表达式语言元素，这些元素限制或禁止回溯，并支持几乎不会或完全不会导致性能损失的复杂正则表达式：[非回溯子表达式](#Nonbacktracking)、[回顾断言](#Lookbehind)和[预测先行断言](#Lookahead)。 有关每个语言元素的详细信息，请参见 [分组构造](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。  
   
 <a name="Timeout"></a>   
 ### <a name="defining-a-time-out-interval"></a>定义超时间隔  
  从 .NET Framework 4.5 开始，可以设置超时值，该值表示正则表达式引擎在放弃尝试并引发 <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> 异常之前将搜索单个匹配项的最长间隔。 你可以通过向实例正则表达式的 <xref:System.TimeSpan> 构造函数提供 <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType> 值来指定超时间隔。 此外，每种静态模式匹配方法都具有带 <xref:System.TimeSpan> 参数的重载，该参数允许你指定超时值。 默认情况下，超时间隔设置为 <xref:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout?displayProperty=nameWithType> 且正则表达式引擎不会超时。  
   
 > [!IMPORTANT]
->  如果正则表达式依赖回溯，建议你始终设置超时间隔。  
+> 如果正则表达式依赖回溯，建议你始终设置超时间隔。  
   
  <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> 异常指示正则表达式引擎无法在指定的超时间隔内找到匹配项，但不指示引发异常的原因。 原因可能是过度回溯，但也可能是超时间隔设置得过小（在引发异常时产生系统负载）。 在处理异常时，你可以选择放弃与输入字符串的进一步匹配或增大超时间隔，然后重试匹配操作。  
   
@@ -153,7 +153,7 @@ ms.locfileid: "66378168"
   
 <a name="Lookbehind"></a>   
 ### <a name="lookbehind-assertions"></a>回顾断言  
- .NET 包括两个语言元素（`(?<=`subexpression  `)` 和 `(?<!`subexpression  `)`），它们与输入字符串中之前的一个或多个字符匹配。 这两个语言元素都是零宽度断言；也就是说，它们通过 *subexpression*而而不是前移或回溯来确定当前字符之前紧挨着的一个或多个字符是否匹配。  
+ .NET 包括两个语言元素（`(?<=`subexpression  `)` 和 `(?<!`subexpression  `)`），它们与输入字符串中之前的一个或多个字符匹配。 这两个语言元素都是零宽度断言；也就是说，它们通过 *subexpression*而不是前移或回溯来确定当前字符之前紧挨着的一个或多个字符是否匹配。  
   
  `(?<=` *subexpression* `)` 是正回顾断言；也就是说，当前位置之前的一个或多个字符必须与 *subexpression*匹配。 `(?<!`*subexpression*`)` 是负回顾断言；也就是说，当前位置之前的一个或多个字符不得与 *subexpression*匹配。 当 *subexpression* 为前一个子表达式的子集时，正回顾断言和负回顾断言都最为有用。  
   

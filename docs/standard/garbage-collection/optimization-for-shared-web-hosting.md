@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: be98c0ab-7ef8-409f-8a0d-cb6e5b75ff20
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7831e383a3048523909b79ac5a4706f3c1c48371
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: affdbb357cac14f258822591c3817c93ce6077f8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48033475"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69915904"
 ---
 # <a name="optimization-for-shared-web-hosting"></a>针对共享 Web 承载优化
 如果是通过托管多个小型网站进行共享的服务器的管理员，可以将下列 `gcTrimCommitOnLowMemory` 设置添加到 .NET 目录中 Aspnet.config 文件内的 `runtime` 节点，从而优化性能和增加网站容量：  
@@ -22,7 +22,7 @@ ms.locfileid: "48033475"
  `<gcTrimCommitOnLowMemory enabled="true|false"/>`  
   
 > [!NOTE]
->  此建议设置仅适用于共享 Web 托管方案。  
+> 此建议设置仅适用于共享 Web 托管方案。  
   
  由于垃圾回收器保留内存以供将来分配，因此它提交的空间可能会超过真正所需。 可以减少此空间来适应系统内存负载过重的情况。 减少提交的此空间可提升性能，并将容量扩展为托管更多网站。  
   

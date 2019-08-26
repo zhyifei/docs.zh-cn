@@ -5,29 +5,29 @@ helpviewer_keywords:
 - animation [WPF], objects with key frames
 - key frames [WPF], animating objects with
 ms.assetid: b1f15ba9-cac7-4cea-8699-5c6b55c05c5e
-ms.openlocfilehash: b0a0f7c00125a43228a2658415b72f4d541f37be
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ffbe1845b634c8f94eb6a10dfa44fcf9903e0cd5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62020148"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933912"
 ---
 # <a name="how-to-animate-an-object-by-using-key-frames"></a>如何：使用关键帧对对象进行动画处理
-此示例演示如何对一个对象，其在此示例中为进行动画处理<xref:System.Windows.Controls.Page.Background%2A>属性的<xref:System.Windows.Controls.Page>控件，使用关键帧。  
+此示例演示如何使用关键帧对对象 (在此示例中为<xref:System.Windows.Controls.Page.Background%2A> <xref:System.Windows.Controls.Page>控件的属性) 进行动画处理。  
   
 ## <a name="example"></a>示例  
- 下面的示例使用<xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames>类进行动画处理颜色更改为<xref:System.Windows.Controls.Page.Background%2A>属性的<xref:System.Windows.Controls.Page>控件。 示例动画按固定间隔更改为不同的背景画笔。 此动画使用<xref:System.Windows.Media.Animation.DiscreteObjectKeyFrame>类，以创建三个不同的关键帧。 动画使用关键帧按以下方式：  
+ 下面的示例使用<xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames>类对<xref:System.Windows.Controls.Page>控件的<xref:System.Windows.Controls.Page.Background%2A>属性的颜色更改进行动画处理。 该示例动画会按固定的时间间隔更改为不同的背景画笔。 此动画使用<xref:System.Windows.Media.Animation.DiscreteObjectKeyFrame>类创建三个不同的关键帧。 动画按以下方式使用关键帧:  
   
-1. 在第一秒结束时，进行动画处理的实例<xref:System.Windows.Media.LinearGradientBrush>类。 以便颜色黄色从过渡为红色的橙色到，该示例的此部分适用于的背景色线性渐变。  
+1. 在第一秒结束时, 对<xref:System.Windows.Media.LinearGradientBrush>类的实例进行动画处理。 此部分示例对背景色应用线性渐变, 使颜色从黄色转换为橙色。  
   
-2. 在下一步秒结束时，进行动画处理的实例<xref:System.Windows.Media.RadialGradientBrush>类。 此部分示例适用范围径向渐变的背景色，以便从白色到黑色蓝色颜色转换。  
+2. 在下一秒结束时, 对<xref:System.Windows.Media.RadialGradientBrush>类的实例进行动画处理。 此部分示例对背景色应用径向渐变, 使颜色从白色过渡到蓝色。  
   
-3. 在第三个秒结束时，进行动画处理的实例<xref:System.Windows.Media.DrawingBrush>类。 该示例的此部分适用于在后台棋盘图案。  
+3. 在第三秒结束时, 对<xref:System.Windows.Media.DrawingBrush>类的实例进行动画处理。 此部分示例将棋盘模式应用于背景。  
   
-4. 动画将重新开始并无限期地重复。  
+4. 动画将再次开始, 并无限期地重复。  
   
 > [!NOTE]
->  <xref:System.Windows.Media.Animation.DiscreteObjectKeyFrame> 是唯一的您可以使用关键帧类型<xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames>类。 关键帧等<xref:System.Windows.Media.Animation.DiscreteObjectKeyFrame>，它是在值中，创建突然变化，突然发生在此示例中的颜色更改。  
+> <xref:System.Windows.Media.Animation.DiscreteObjectKeyFrame>是唯一可与<xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames>类一起使用的关键帧类型。 关键帧 ( <xref:System.Windows.Media.Animation.DiscreteObjectKeyFrame>如创建值的突然变化) 即, 此示例中的颜色更改突然发生。  
   
  [!code-xaml[keyframes_snip#ObjectAnimationUsingKeyFramesWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/ObjectAnimationUsingKeyFramesExample.xaml#objectanimationusingkeyframeswholepage)]  
   

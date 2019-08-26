@@ -2,23 +2,23 @@
 title: 自定义插入、更新和删除操作
 ms.date: 03/30/2017
 ms.assetid: 07eef055-8f6c-414d-850e-d323ff946cd0
-ms.openlocfilehash: 114447fd45806e567b4fde8e9e74138c096bff07
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f75f4b4caf6b72076a83bde2f2c659aab4c9707d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67743569"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912567"
 ---
 # <a name="customizing-insert-update-and-delete-operations"></a>自定义插入、更新和删除操作
 默认情况下，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 会生成动态 SQL 来实现插入、读取、更新和删除操作。 但实际上，您通常要自定义应用程序以满足您的业务需要。  
   
 > [!NOTE]
->  如果使用的 Visual Studio，可以使用对象关系设计器自定义插入、 更新和删除操作。  
+> 如果使用的是 Visual Studio, 则可以使用对象关系设计器自定义插入、更新和删除操作。  
   
  本节中的主题介绍了 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 提供的用于在应用程序中自定义插入、读取、更新和删除操作的技术。  
   
 ## <a name="in-this-section"></a>本节内容  
- [自定义操作：概述](../../../../../../docs/framework/data/adonet/sql/linq/customizing-operations-overview.md)  
+ [自定义操作:概述](../../../../../../docs/framework/data/adonet/sql/linq/customizing-operations-overview.md)  
  介绍 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 提供的用于自定义插入、读取、更新和删除操作的各种技术。  
   
  [插入、更新和删除操作](../../../../../../docs/framework/data/adonet/sql/linq/insert-update-and-delete-operations.md)  

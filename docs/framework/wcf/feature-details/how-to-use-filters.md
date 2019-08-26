@@ -2,12 +2,12 @@
 title: 如何：使用筛选器
 ms.date: 03/30/2017
 ms.assetid: f2c7255f-c376-460e-aa20-14071f1666e5
-ms.openlocfilehash: 42145e58eb35233aefb8f7805570d329abb7d71a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6c357f2f410362d56fc931529a9fe731df0a477e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645489"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968772"
 ---
 # <a name="how-to-use-filters"></a>如何：使用筛选器
 本主题概述创建使用多个筛选器的路由配置所需执行的基本步骤。 在本示例中，消息将路由到两个计算器服务实现，即 regularCalc 和 roundingCalc。 这两个实现都支持相同的运算；但其中一个服务在返回计算结果前会将所有计算结果舍入到最接近的整数值。 客户端应用程序必须能够指示是否使用服务的舍入版本；如果未表示任何服务首选项，则消息将在这两个服务间执行负载平衡。 这两个服务公开的运算包括：  
@@ -71,7 +71,7 @@ ms.locfileid: "64645489"
     </services>  
     ```  
   
-     通过此配置，路由服务公开三个单独的终结点。 客户端应用程序根据运行时选项将消息发送到其中一个地址。 到达某个"虚拟"服务终结点 （"舍入/calculator"或"regular/calculator"） 上的消息将转发到相应的计算器实现。 如果客户端应用程序未将请求发送到特定终结点，则将消息发送到常规终结点。 不论选择哪个终结点，客户端应用程序还可以选择包括自定义标头，以指示应将消息转发到舍入计算器实现。  
+     通过此配置，路由服务公开三个单独的终结点。 客户端应用程序根据运行时选项将消息发送到其中一个地址。 到达某个 "虚拟" 服务终结点 ("舍入/计算器" 或 "常规/计算器") 的消息将转发给相应的计算器实现。 如果客户端应用程序未将请求发送到特定终结点，则将消息发送到常规终结点。 不论选择哪个终结点，客户端应用程序还可以选择包括自定义标头，以指示应将消息转发到舍入计算器实现。  
   
 2. 下面的示例定义路由服务将消息路由到的客户端（目标）终结点。  
   
@@ -93,7 +93,7 @@ ms.locfileid: "64645489"
   
 ### <a name="define-filters"></a>定义筛选器  
   
-1. 若要将基于客户端应用程序将添加到消息的"RoundingCalculator"自定义标头的消息路由，定义使用 XPath 查询来检查存在此标头的筛选器。 由于此标头使用定义的自定义的命名空间，还添加命名空间定义项的自定义命名空间前缀"custom"，可在 XPath 查询。 下面的示例定义所需的路由节、命名空间表和 XPath 筛选器。  
+1. 若要根据客户端应用程序添加到消息的 "RoundingCalculator" 自定义标头路由消息, 请定义一个筛选器, 该筛选器使用 XPath 查询来检查是否存在此标头。 由于此标头是使用自定义命名空间定义的, 因此还添加了一个命名空间项, 用于定义在 XPath 查询中使用的自定义命名空间前缀 "custom"。 下面的示例定义所需的路由节、命名空间表和 XPath 筛选器。  
   
     ```xml  
     <routing>  
@@ -110,21 +110,21 @@ ms.locfileid: "64645489"
     </routing>  
     ```  
   
-     这**MessageFilter**寻找 RoundingCalculator 标头中包含的值为"rounding"的消息。 此标头由客户端设置，用于指示应将消息路由到 roundingCalc 服务。  
+     此**MessageFilter**在包含值 "舍入" 的消息中查找 RoundingCalculator 标头。 此标头由客户端设置，用于指示应将消息路由到 roundingCalc 服务。  
   
     > [!NOTE]
-    > S12 命名空间前缀在命名空间表中，默认情况下定义和表示的命名空间`http://www.w3.org/2003/05/soap-envelope`。
+    > 默认情况下, 在命名空间表中定义 s12 命名空间前缀, 表示命名`http://www.w3.org/2003/05/soap-envelope`空间。
   
-2. 您还必须定义用于查找在两个虚拟终结点上接收到的消息的筛选器。 第一个虚拟终结点是"regular/calculator"终结点。 客户端可以将请求发送到此终结点，以指示应将消息路由到 regularCalc 服务。 下面的配置定义一个筛选器，该筛选器使用 <xref:System.ServiceModel.Dispatcher.EndpointNameMessageFilter> 确定消息是否通过具有 filterData 中指定的名称的终结点到达。  
+2. 您还必须定义用于查找在两个虚拟终结点上接收到的消息的筛选器。 第一个虚拟终结点是 "常规/计算器" 终结点。 客户端可以将请求发送到此终结点，以指示应将消息路由到 regularCalc 服务。 下面的配置定义一个筛选器，该筛选器使用 <xref:System.ServiceModel.Dispatcher.EndpointNameMessageFilter> 确定消息是否通过具有 filterData 中指定的名称的终结点到达。  
   
     ```xml  
     <!--define an endpoint name filter looking for messages that show up on the virtual regular calculator endpoint-->  
     <filter name="EndpointNameFilter" filterType="EndpointName" filterData="calculatorEndpoint"/>  
     ```  
   
-     如果名为"calculatorEndpoint"的服务终结点收到一条消息时，此筛选器计算结果为`true`。  
+     如果名为 "calculatorEndpoint" 的服务终结点收到消息, 此筛选器的计算`true`结果为。  
   
-3. 接着，定义一个筛选器，该筛选器查找发送到 roundingEndpoint 地址的消息。 客户端可以将请求发送到此终结点，以指示应将消息路由到 roundingCalc 服务。 下面的配置定义使用的筛选器<xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter>以确定是否消息到达"舍入/calculator"终结点。  
+3. 接着，定义一个筛选器，该筛选器查找发送到 roundingEndpoint 地址的消息。 客户端可以将请求发送到此终结点，以指示应将消息路由到 roundingCalc 服务。 下面的配置定义一个筛选器, 该<xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter>筛选器使用来确定消息是否到达 "舍入/计算器" 终结点。  
   
     ```xml  
     <!--define a filter looking for messages that show up with the address prefix.  The corresponds to the rounding calc virtual endpoint-->  
@@ -132,17 +132,17 @@ ms.locfileid: "64645489"
             filterData="http://localhost/routingservice/router/rounding/"/>  
     ```  
   
-     如果以开头的地址上收到一条消息`http://localhost/routingservice/router/rounding/`则此筛选器的计算结果为**true**。 因为此配置使用的基址`http://localhost/routingservice/router`，并且为 roundingEndpoint"舍入/calculator"指定地址，用于与此终结点进行通信的完整地址是`http://localhost/routingservice/router/rounding/calculator`，与此筛选器相匹配。  
+     如果在以开头`http://localhost/routingservice/router/rounding/`的地址收到消息, 则此筛选器的计算结果为**true**。 由于此配置使用的基址为`http://localhost/routingservice/router` , 为 roundingEndpoint 指定的地址为 "舍入/计算器", 用于与此终结点通信的完整地址为`http://localhost/routingservice/router/rounding/calculator`, 与此筛选器匹配。  
   
     > [!NOTE]
-    >  PrefixEndpointAddress 筛选器在执行匹配时不会计算主机名，因为可以使用多种主机名形式引用单个主机，而所有这些主机名可能都是从客户端应用程序引用主机的有效方式。 例如，下面的所有主机名可能引用同一主机：  
+    > PrefixEndpointAddress 筛选器在执行匹配时不会计算主机名，因为可以使用多种主机名形式引用单个主机，而所有这些主机名可能都是从客户端应用程序引用主机的有效方式。 例如，下面的所有主机名可能引用同一主机：  
     >   
     > - localhost  
     > - 127.0.0.1  
     > - `www.contoso.com`  
     > - ContosoWeb01  
   
-4. 最后一个筛选器必须支持路由到达常规终结点但没有自定义标头的消息。 对于此种情况，消息应在 regularCalc 和 roundingCalc 服务之间交替。 若要支持这些消息的"轮循机制"路由，使用一个允许一个筛选器实例要与匹配的处理每条消息的自定义筛选器。  下面定义了 RoundRobinMessageFilter 的两个实例，这两个实例组合在一起以指示它们应彼此交替。  
+4. 最后一个筛选器必须支持路由到达常规终结点但没有自定义标头的消息。 对于此种情况，消息应在 regularCalc 和 roundingCalc 服务之间交替。 若要支持这些消息的 "轮循机制" 路由, 请使用自定义筛选器, 以允许一个筛选器实例与每个已处理消息匹配。  下面定义了 RoundRobinMessageFilter 的两个实例，这两个实例组合在一起以指示它们应彼此交替。  
   
     ```xml  
     <!-- Set up the custom message filters.  In this example,   
@@ -156,16 +156,16 @@ ms.locfileid: "64645489"
                     filterData="group1"/>  
     ```  
   
-     在运行期间，此筛选器类型在定义的此类型的所有筛选器实例（这些实例在一个集合中配置为同一组）之间交替。 这将导致返回之间进行交替此自定义筛选器处理的消息`true`有关`RoundRobinFilter1`和`RoundRobinFilter2`。  
+     在运行期间，此筛选器类型在定义的此类型的所有筛选器实例（这些实例在一个集合中配置为同一组）之间交替。 这会导致此自定义筛选器处理的消息在`true`和`RoundRobinFilter1` `RoundRobinFilter2`的返回之间交替。  
   
 ### <a name="define-filter-tables"></a>定义筛选器表  
   
 1. 若要将筛选器与特定客户端终结点关联，必须将筛选器放置到筛选器表中。 此示例方案还采用筛选器优先级设置，该可选设置用于指示筛选器的处理顺序。 如果未指定筛选器优先级，则将同时计算所有筛选器。  
   
     > [!NOTE]
-    >  虽然指定筛选器优先级可以控制筛选器的处理顺序，但可能会对路由服务的性能产生负面影响。 如有可能，请构造筛选器逻辑，以免使用筛选器优先级。  
+    > 虽然指定筛选器优先级可以控制筛选器的处理顺序，但可能会对路由服务的性能产生负面影响。 如有可能，请构造筛选器逻辑，以免使用筛选器优先级。  
   
-     以下定义筛选器表并添加到具有优先级 2 表之前定义的"XPathFilter"。 此条目还指定，如果`XPathFilter`匹配消息，消息将路由到`roundingCalcEndpoint`。  
+     下面定义了筛选器表, 并将之前定义的 "XPathFilter" 添加到优先级为2的表中。 此项还指定, 如果`XPathFilter`与消息匹配, 消息将路由`roundingCalcEndpoint`到。  
   
     ```xml  
     <routing>  

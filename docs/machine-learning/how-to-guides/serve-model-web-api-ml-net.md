@@ -1,16 +1,16 @@
 ---
 title: 在 ASP.NET Core Web API 中部署模型
 description: 使用 ASP.NET Core Web API 通过 Internet 提供 ML.NET 情绪分析机器学习模型
-ms.date: 05/03/2019
+ms.date: 08/20/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to
-ms.openlocfilehash: f8b8f74f752aeb243d4a2987929bd28ddc5f7d5a
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: e1dcc719738a2beb3e63463245d4721c5298cf85
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641079"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666665"
 ---
 # <a name="deploy-a-model-in-an-aspnet-core-web-api"></a>在 ASP.NET Core Web API 中部署模型
 
@@ -27,43 +27,43 @@ ms.locfileid: "65641079"
 
 ## <a name="create-aspnet-core-web-api-project"></a>创建 ASP.NET Core Web API 项目
 
-1. 打开 Visual Studio 2017。 从菜单栏中依次选择“文件”>“新建”>“项目”。 在“新项目”对话框中，依次选择“Visual C#”节点和“Web”节点。 然后，选择“ASP.NET Core Web 应用程序”项目模板。 在“名称”文本框中，键入“SentimentAnalysisWebAPI”，再选择“确定”按钮。
+1. 打开 Visual Studio 2017。 从菜单栏中依次选择“文件”>“新建”>“项目”  。 在“新项目”对话框中，依次选择“Visual C#”  节点和“Web”  节点。 然后，选择“ASP.NET Core Web 应用程序”  项目模板。 在“名称”  文本框中，键入“SentimentAnalysisWebAPI”，再选择“确定”  按钮。
 
-1. 在显示不同类型 ASP.NET Core 项目的窗口中，依次选择“API”和“确定”按钮。
+1. 在显示不同类型 ASP.NET Core 项目的窗口中，依次选择“API”  和“确定”  按钮。
 
-1. 在项目中创建“MLModels”目录，用于保存预生成的机器学习模型文件：
+1. 在项目中创建“MLModels”  目录，用于保存预生成的机器学习模型文件：
 
     在“解决方案资源管理器”中，右键单击项目，并依次选择“添加”>“新文件夹”。 键入“MLModels”，再按 Enter。
 
-1. 安装“Microsoft.ML NuGet 包”：
+1. 安装“Microsoft.ML NuGet 包”  ：
 
-    在“解决方案资源管理器”中，右键单击项目，然后选择“管理 NuGet 包”。 选择“nuget.org”作为“包源”，选择“浏览”选项卡并搜索“Microsoft.ML”，再依次选择列表中的相应包和“安装”按钮。 选择“预览更改”对话框中的“确定”按钮；如果同意所列包的许可条款，请选择“接受许可”对话框中的“我接受”按钮。
+    在“解决方案资源管理器”中，右键单击项目，然后选择“管理 NuGet 包”  。 选择“nuget.org”作为“包源”，选择“浏览”选项卡并搜索“Microsoft.ML”  ，再依次选择列表中的相应包和“安装”按钮。 选择“预览更改”  对话框中的“确定”  按钮；如果同意所列包的许可条款，请选择“接受许可”对话框中的“我接受”  按钮。
 
 1. 安装 **Microsoft.Extensions.ML Nuget 包**：
 
-    在“解决方案资源管理器”中，右键单击项目，然后选择“管理 NuGet 包”。 选择“nuget.org”作为包源，然后选择“浏览”选项卡并搜索“Microsoft.Extensions.ML”，在列表中选择包，再选择“安装”按钮。 选择“预览更改”对话框中的“确定”按钮；如果同意所列包的许可条款，请选择“接受许可”对话框中的“我接受”按钮。
+    在“解决方案资源管理器”中，右键单击项目，然后选择“管理 NuGet 包”  。 选择“nuget.org”作为包源，然后选择“浏览”选项卡并搜索“Microsoft.Extensions.ML”，在列表中选择包，再选择“安装”按钮  。 选择“预览更改”  对话框中的“确定”  按钮；如果同意所列包的许可条款，请选择“接受许可”对话框中的“我接受”  按钮。
 
 ### <a name="add-model-to-aspnet-core-web-api-project"></a>将模型添加到 ASP.NET Core Web API 项目
 
-1. 将预生成的模型复制到 MLModels 目录
+1. 将预生成的模型复制到 MLModels  目录
 1. 在“解决方案资源管理器”中，右键单击模型 zip 文件，并选择“属性”。 在“高级”下，将“复制到输出目录”的值更改为“如果较新则复制”。
 
 ## <a name="create-data-models"></a>创建数据模型
 
 需要为输入数据和预测创建一些类。 向项目添加一个新类：
 
-1. 在项目中创建“DataModels”目录，用于保存数据模型：
+1. 在项目中创建“DataModels”  目录，用于保存数据模型：
 
-    在“解决方案资源管理器”中，右键单击项目，并依次选择“添加”>“新文件夹”。 键入“DataModels”，再按 Enter。
+    在“解决方案资源管理器”中，右键单击项目，并依次选择“添加”>“新文件夹”。 键入“DataModels”，再按 Enter  。
 
-2. 在“解决方案资源管理器”中，右键单击“DataModels”目录，再依次选择“添加”>“新项”。
-3. 在“添加新项”对话框中，选择“类”并将“名称”字段更改为“SentimentData.cs”。 然后，选择“添加”按钮。 “SentimentData.cs”文件随即在代码编辑器中打开。 将以下 using 语句添加到 SentimentData.cs 顶部：
+2. 在“解决方案资源管理器”中，右键单击“DataModels”  目录，再依次选择“添加”>“新项”。
+3. 在“添加新项”  对话框中，选择“类”  并将“名称”  字段更改为“SentimentData.cs”  。 然后，选择“添加”  按钮。 “SentimentData.cs”  文件随即在代码编辑器中打开。 将以下 using 语句添加到 SentimentData.cs  顶部：
 
     ```csharp
     using Microsoft.ML.Data;
     ```
     
-    删除现有类定义，并将以下代码添加到 SentimentData.cs 文件：
+    删除现有类定义，并将以下代码添加到 SentimentData.cs  文件：
     
     ```csharp
     public class SentimentData
@@ -77,14 +77,14 @@ ms.locfileid: "65641079"
     }
     ```
 
-4. 在“解决方案资源管理器”中，右键单击“DataModels”目录，再依次选择“添加”>“新项”。
-5. 在“添加新项”对话框中，选择“类”，并将“名称”字段更改为“SentimentPrediction.cs”。 然后，选择“添加”按钮。 此时，SentimentPrediction.cs 文件在代码编辑器中打开。 将以下 using 语句添加到 SentimentPrediction.cs 顶部：
+4. 在“解决方案资源管理器”中，右键单击“DataModels”  目录，再依次选择“添加”>“新项”  。
+5. 在“添加新项”  对话框中，选择“类”  ，并将“名称”  字段更改为“SentimentPrediction.cs”  。 然后，选择“添加”按钮。 此时，SentimentPrediction.cs  文件在代码编辑器中打开。 将以下 using 语句添加到 SentimentPrediction.cs  顶部：
 
     ```csharp
     using Microsoft.ML.Data;
     ```
     
-    删除现有类定义，并将以下代码添加到 SentimentPrediction.cs 文件：
+    删除现有类定义，并将以下代码添加到 SentimentPrediction.cs  文件：
     
     ```csharp
     public class SentimentPrediction : SentimentData
@@ -107,7 +107,7 @@ ms.locfileid: "65641079"
 
 如果想要了解 [ASP.NET Core 中的依赖项注入](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-2.1)，以下链接提供详细信息。
 
-1. 打开 Startup.cs 类，并将以下 using 语句添加到文件顶部：
+1. 打开 Startup.cs  类，并将以下 using 语句添加到文件顶部：
 
     ```csharp
     using Microsoft.AspNetCore.Builder;
@@ -139,9 +139,9 @@ ms.locfileid: "65641079"
 
 若要处理传入的 HTTP 请求，请创建控制器。
 
-1. 在“解决方案资源管理器”中，右键单击“Controllers”目录，再依次选择“添加”>“控制器”。
-1. 在“添加新项”对话框中，依次选择“空 API 控制器”和“添加”。
-1. 在提示窗口中，将“控制器名称”字段更改为“PredictController.cs”。 然后，选择“添加”按钮。 此时，PredictController.cs 文件在代码编辑器中打开。 将以下 using 语句添加到 PredictController.cs 顶部：
+1. 在“解决方案资源管理器”中，右键单击“Controllers”  目录，再依次选择“添加”>“控制器”  。
+1. 在“添加新项”  对话框中，依次选择“空 API 控制器”  和“添加”  。
+1. 在提示窗口中，将“控制器名称”  字段更改为“PredictController.cs”  。 然后，选择“添加”按钮。 此时，PredictController.cs  文件在代码编辑器中打开。 将以下 using 语句添加到 PredictController.cs  顶部：
 
     ```csharp
     using System;
@@ -150,7 +150,7 @@ ms.locfileid: "65641079"
     using SentimentAnalysisWebAPI.DataModels;
     ```
 
-    删除现有类定义，并将以下代码添加到 PredictController.cs 文件：
+    删除现有类定义，并将以下代码添加到 PredictController.cs  文件：
     
     ```csharp
     public class PredictController : ControllerBase
@@ -189,7 +189,7 @@ ms.locfileid: "65641079"
 1. 打开 Powershell，并输入以下代码（其中，PORT 是应用程序正在侦听的端口）。
 
     ```powershell
-    Invoke-RestMethod "https://localhost:<PORT>/api/predict" -Method Post -Body (@{Text="This was a very bad steak"} | ConvertTo-Json) -ContentType "application/json"
+    Invoke-RestMethod "https://localhost:<PORT>/api/predict" -Method Post -Body (@{SentimentText="This was a very bad steak"} | ConvertTo-Json) -ContentType "application/json"
     ```
 
     如果成功，输出文本应如下所示：

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1b5439c1-f3d5-4529-bd69-01814703d067
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6b78b770417b9599719ea219041a9fd6adaf5a84
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 53b33bdc70f00d5c824d502043a69f4ee05acc71
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67423406"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927968"
 ---
 # <a name="assembly-security-considerations"></a>程序集安全注意事项
 <a name="top"></a>在生成程序集时，可指定该程序集运行所需的一组权限。 是否将特定的权限授予程序集是基于证据的。  
@@ -40,7 +40,7 @@ ms.locfileid: "67423406"
 - 不要使用权限请求来获取您的代码可能需要的权限，但一定要准备处理在未授予权限时发生的安全异常。  
   
     > [!NOTE]
-    >  安全性是一个较为复杂的领域，您将要作出很多选择。 有关详细信息，请参阅[安全性的基础概念](../../../docs/standard/security/key-security-concepts.md)。  
+    > 安全性是一个较为复杂的领域，您将要作出很多选择。 有关详细信息，请参阅[安全性的基础概念](../../standard/security/key-security-concepts.md)。  
   
  在加载时，程序集的证据用作安全策略的输入。 安全策略是由企业和计算机的管理员以及用户策略设置建立的，它在执行时确定向所有托管代码授予的权限组。 可以为该程序集（如果该程序集具有签名工具生成的签名）的发行者建立安全策略，或者为该程序集的下载网站和区域（就 Internet Explorer 而言）建立安全策略，也可以为该程序集的强名称建立该策略。 例如，一台计算机的管理员可以建立这样一种安全策略：它允许从某一网站下载由指定软件公司签发用以访问计算机上的数据库的所有代码，但不授予对该计算机磁盘的写访问权。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "67423406"
  可将强名称和使用 [SignTool.exe（签名工具）](../../../docs/framework/tools/signtool-exe.md)创建的数字签名一起提供给程序集，或者可以单独使用其中之一。 这两个签名工具一次只能对一个文件进行签名，对于多文件程序集，您可以对包含程序集清单的文件进行签名。 强名称存储在包含程序集清单的文件中，但使用 [SignTool.exe（签名工具）](../../../docs/framework/tools/signtool-exe.md)创建的签名存储在该程序集清单所在的可迁移可执行 (PE) 文件中保留的槽中。 在已具有依赖于 [SignTool.exe（签名工具）](../../../docs/framework/tools/signtool-exe.md)生成的签名的信任层次结构时，或者当策略只使用密钥部分并且不检查信任链时，就可以使用 [SignTool.exe（签名工具）](../../../docs/framework/tools/signtool-exe.md)对程序集进行的签名（带或不带强名称）。  
   
 > [!NOTE]
->  在一个程序集上同时使用强名称和签名工具签名时，必须首先分配强名称。  
+> 在一个程序集上同时使用强名称和签名工具签名时，必须首先分配强名称。  
   
  公共语言运行时还将执行哈希验证；程序集清单包含构成该程序集的所有文件的列表，包括当生成清单时存在的每一文件的散列。 在加载每个文件时，将对文件的内容进行哈希处理，并将该内容与存储在清单中的哈希值进行比较。 如果两个哈希值不匹配，则将无法加载该程序集。  
   

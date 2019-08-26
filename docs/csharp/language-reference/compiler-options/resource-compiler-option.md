@@ -11,12 +11,12 @@ helpviewer_keywords:
 - res compiler option [C#]
 - resource compiler option [C#]
 ms.assetid: 5212666e-98ab-47e4-a497-b5545ab15c7f
-ms.openlocfilehash: ed9f4648ae632786ce860ce2c02637977f709c55
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: e14bf59f5922a918b627af22c052c8efd9081e84
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59302564"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69602524"
 ---
 # <a name="-resource-c-compiler-options"></a>-resource（C# 编译器选项）
 将指定资源嵌入输出文件。  
@@ -38,13 +38,13 @@ ms.locfileid: "59302564"
  资源的可访问性：public 或 private。 默认值为 public。  
   
 ## <a name="remarks"></a>备注  
- 使用 [linkresource](../../../csharp/language-reference/compiler-options/linkresource-compiler-option.md) 将资源链接至程序集，不向输出文件添加资源文件。  
+ 使用 [linkresource](./linkresource-compiler-option.md) 将资源链接至程序集，不向输出文件添加资源文件。  
   
  默认情况下，如果使用 C# 编译器创建资源，则这些资源在程序集中是公有的。 若要使资源变为私有，请将 `private` 指定为可访问性修饰符。 不允许使用 `public` 或 `private` 以外的任何其他可访问性。  
   
- 例如，如果 `filename` 是由 [Resgen.exe](../../../framework/tools/resgen-exe-resource-file-generator.md) 创建的或在开发环境中创建的 .NET Framework 资源文件，则可使用 <xref:System.Resources> 命名空间中的成员来访问它。 有关更多信息，请参见<xref:System.Resources.ResourceManager?displayProperty=nameWithType>。 对于所有其他资源，请使用 <xref:System.Reflection.Assembly> 类中的 `GetManifestResource` 方法在运行时访问资源。  
+ 例如，如果 `filename` 是由 [Resgen.exe](../../../framework/tools/resgen-exe-resource-file-generator.md) 创建的或在开发环境中创建的 .NET Framework 资源文件，则可使用 <xref:System.Resources> 命名空间中的成员来访问它。 有关详细信息，请参阅 <xref:System.Resources.ResourceManager?displayProperty=nameWithType>。 对于所有其他资源，请使用 <xref:System.Reflection.Assembly> 类中的 `GetManifestResource` 方法在运行时访问资源。  
   
- /res 是 /resource 的缩写形式。  
+ /res 是 /resource 的缩写形式   。  
   
  输出文件中资源的顺序由命令行所指定的顺序决定。  
   
@@ -52,11 +52,11 @@ ms.locfileid: "59302564"
   
 1. 向项目添加资源文件。  
   
-2. 选择要嵌入解决方案资源管理器的文件。  
+2. 选择要嵌入解决方案资源管理器的文件  。  
   
-3. 在“属性”窗口中为文件选择“生成操作”。  
+3. 在“属性”窗口中为文件选择“生成操作”   。  
   
-4. 将“生成操作”设置为“嵌入的资源”。  
+4. 将“生成操作”设置为“嵌入的资源”   。  
   
  有关如何以编程方式设置此编译器选项的信息，请参阅 <xref:VSLangProj80.FileProperties2.BuildAction%2A>。  
   
@@ -69,5 +69,5 @@ csc -resource:rf.resource in.cs
   
 ## <a name="see-also"></a>请参阅
 
-- [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)
+- [C# 编译器选项](./index.md)
 - [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties)

@@ -2,19 +2,19 @@
 title: <identity>
 ms.date: 03/30/2017
 ms.assetid: c1d2ae56-e231-4a07-9c3f-9f13381dc0d8
-ms.openlocfilehash: 0f5eace346fd0ed2c0532fb602585c4593d97291
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 262ac9be6d5ce6466cf9aff33c0c2791c0e149dd
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61756684"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988380"
 ---
-# <a name="identity"></a>\<identity>
-标识元素允许客户端开发人员在设计时指定服务的期望标识。 在客户端和服务之间的握手过程中，Windows Communication Foundation (WCF) 基础结构将确保预期的服务匹配此元素的值的标识，因此可以进行身份验证。 有关详细信息，请参阅[服务标识和身份验证](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。  
+# <a name="identity"></a>\<身份 >
+标识元素允许客户端开发人员在设计时指定服务的期望标识。 在客户端与服务之间的握手过程中, Windows Communication Foundation (WCF) 基础结构将确保预期服务的标识与此元素的值相匹配, 因而可以进行身份验证。 有关详细信息, 请参阅[服务标识和身份验证](../../../wcf/feature-details/service-identity-and-authentication.md)。  
   
  \<system.ServiceModel>  
-\<client>  
-\<endpoint>  
+\<客户端 >  
+\<终结点 >  
   
 ## <a name="syntax"></a>语法  
   
@@ -29,7 +29,7 @@ ms.locfileid: "61756684"
   <dns value="String" />
   <rsa value="String" />
   <servicePrincipalName value="String" />
-  <usePrincipalName value="String" />
+  <userPrincipalName value="String" />
 </identity>
 ```  
   
@@ -43,29 +43,29 @@ ms.locfileid: "61756684"
   
 |元素|描述|  
 |-------------|-----------------|  
-|证书|指定 X.509 证书的设置。 此元素的类型为 <xref:System.ServiceModel.Configuration.CertificateElement>。 它包含一个 `encodedValue` 属性，该属性是一个字符串，用于指定此证书编码的值。|  
+|证书 (certificate)|指定 X.509 证书的设置。 此元素的类型为 <xref:System.ServiceModel.Configuration.CertificateElement>。 它包含一个 `encodedValue` 属性，该属性是一个字符串，用于指定此证书编码的值。|  
 |certificateReference|指定 X.509 证书验证的设置。 此元素的类型为 <xref:System.ServiceModel.Configuration.CertificateReferenceElement>。|  
 |dns|指定用于对服务进行身份验证的 X.509 证书的 DNS。 此元素包含一个字符串属性 `value`，并包含实际的标识。|  
 |rsa|指定用于向客户端验证服务身份的 X.509 证书的 RSA 字段的值。 此元素包含一个字符串属性 `value`，并包含实际的标识。|  
 |servicePrincipalName|指定服务器主体名称 (SPN) 标识，它是客户端用来唯一标识一个服务实例的主体名称。 此元素包含一个 `value` 属性，该属性是一个字符串，其中包含实际的主体名称。 此元素的类型为 <xref:System.ServiceModel.Configuration.ServicePrincipalNameElement>。|  
-|userPrincipalName|指定用户主体名称 (UPN) 标识，它是网络上的用户登录名类型。 用户主体名称包含用户对象名称后跟的 Active Directory 中使用 at 符号 (\@)，然后，通常情况下，域名系统父域。 例如，Fabrikam.com 域树中的 Jeff 可能具有用户主体名称[ jeff@fabrikam.com ](mailto:jeffsmith@fabrikam.com)。  此元素包含一个 `value` 属性，该属性是一个字符串，其中包含实际的主体名称。 此元素的类型为 <xref:System.ServiceModel.Configuration.UserPrincipalNameElement>。|  
+|userPrincipalName|指定用户主体名称 (UPN) 标识，它是网络上的用户登录名类型。 用户主体名称包含 Active Directory 中使用的用户对象名称, 后跟 at 符号 (\@), 然后通常是域名系统的父域。 例如, Fabrikam.com 域树中的 Jeff 可能具有用户主体名称[jeff@fabrikam.com](mailto:jeffsmith@fabrikam.com)。  此元素包含一个 `value` 属性，该属性是一个字符串，其中包含实际的主体名称。 此元素的类型为 <xref:System.ServiceModel.Configuration.UserPrincipalNameElement>。|  
   
 ### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<custom>](../../../../../docs/framework/configure-apps/file-schema/wcf/custom.md)|指定 netPeerTcpBinding 的自定义对等解析程序。|  
+|[\<custom>](custom.md)|指定 netPeerTcpBinding 的自定义对等解析程序。|  
 |[\<endpoint>](endpoint-element.md)|配置服务终结点。|  
-|[\<终结点 > 的\<客户端 >](endpoint-of-client.md)|配置通道终结点。|  
-|[\<issuer>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuer.md)|指定联合服务的安全令牌服务 (STS)。|  
-|[\<issuerMetadata>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuermetadata.md)|指定联合服务的安全令牌服务 (STS) 的元数据终结点。|  
-|[\<issuedTokenParameters>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md)|定义自定义绑定中的已颁发令牌的参数。|  
-|[\<localIssuer>](../../../../../docs/framework/configure-apps/file-schema/wcf/localissuer.md)|指定本地安全令牌服务 (STS)。|  
+|[\<\<客户端 > > 终结点](endpoint-of-client.md)|配置通道终结点。|  
+|[\<issuer>](issuer.md)|指定联合服务的安全令牌服务 (STS)。|  
+|[\<issuerMetadata>](issuermetadata.md)|指定联合服务的安全令牌服务 (STS) 的元数据终结点。|  
+|[\<issuedTokenParameters>](issuedtokenparameters.md)|定义自定义绑定中的已颁发令牌的参数。|  
+|[\<localIssuer>](localissuer.md)|指定本地安全令牌服务 (STS)。|  
   
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.ServiceModel.Configuration.IdentityElement>
 - <xref:System.ServiceModel.EndpointAddress>
 - <xref:System.ServiceModel.EndpointAddress.Identity%2A>
-- [服务标识和身份验证](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
-- [终结点：地址、 绑定和协定](../../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
+- [服务标识和身份验证](../../../wcf/feature-details/service-identity-and-authentication.md)
+- [终结点地址、绑定和协定](../../../wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)

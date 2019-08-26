@@ -8,20 +8,20 @@ helpviewer_keywords:
 - C# Language, enums
 - bit flags [C#]
 ms.assetid: 64a9b731-9e3c-4336-8a09-018db2aa10b7
-ms.openlocfilehash: 669357bbd6527324bbedbcf1f537bf570c63ce5b
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: fea12a32d39f98ddc575e2d538e7501d2ff49768
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67423670"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590544"
 ---
 # <a name="enumeration-types-c-programming-guide"></a>枚举类型（C# 编程指南）
 
-枚举类型（也称为枚举）提供了一种有效的方式来定义可能分配给变量的一组已命名整数常量。 例如，假设你需要定义一个变量，其值表示一周内的某一天。 该变量只会存储七个有意义的值。 若要定义这些值，可以使用枚举类型，该类型是使用 [enum](../../csharp/language-reference/keywords/enum.md) 关键字声明的。
+枚举类型（也称为枚举）提供了一种有效的方式来定义可能分配给变量的一组已命名整数常量。 例如，假设你需要定义一个变量，其值表示一周内的某一天。 该变量只会存储七个有意义的值。 若要定义这些值，可以使用枚举类型，该类型是使用 [enum](../language-reference/keywords/enum.md) 关键字声明的。
 
 [!code-csharp[csProgGuideEnums#1](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideEnums/CS/Enums.cs#1)]
 
-默认情况下，枚举中每个元素的基础类型都为 [int](../../csharp/language-reference/builtin-types/integral-numeric-types.md)。可以使用冒号指定另一种整数类型，如上例所示。 有关可能的类型的完整列表，请参阅 [enum（C# 参考）](../../csharp/language-reference/keywords/enum.md)。
+默认情况下，枚举中每个元素的基础类型都为 [int](../language-reference/builtin-types/integral-numeric-types.md)。可以使用冒号指定另一种整数类型，如上例所示。 有关可能的类型的完整列表，请参阅 [enum（C# 参考）](../language-reference/keywords/enum.md)。
 
 可以通过转换为基础类型来验证基础数值，如下例所示。
 
@@ -86,10 +86,10 @@ Console.WriteLine("{0} is month number #{1}.", thisMonth, monthNumber);
 
 有关详细信息，请参阅 <xref:System.Enum?displayProperty=nameWithType>。
 
-还可以使用扩展方法创建枚举的新方法。 有关详细信息，请参阅[如何：为枚举创建新方法](../../csharp/programming-guide/classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md)。
+还可以使用扩展方法创建枚举的新方法。 有关详细信息，请参阅[如何：为枚举创建新方法](./classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md)。
 
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Enum?displayProperty=nameWithType>
-- [C# 编程指南](../../csharp/programming-guide/index.md)
-- [enum](../../csharp/language-reference/keywords/enum.md)
+- [C# 编程指南](./index.md)
+- [enum](../language-reference/keywords/enum.md)

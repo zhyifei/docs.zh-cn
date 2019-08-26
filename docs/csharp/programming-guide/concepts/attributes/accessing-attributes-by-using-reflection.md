@@ -2,15 +2,15 @@
 title: 使用反射访问特性 (C#)
 ms.date: 07/20/2015
 ms.assetid: dce3a696-4ceb-489a-b5e4-322a83052f18
-ms.openlocfilehash: f7c7b89be13022471f4e17bcb6ed9a90bcbc1c54
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 990b6487e50bfb2d123c3871e5f85da063711d9e
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54660406"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595504"
 ---
 # <a name="accessing-attributes-by-using-reflection-c"></a>使用反射访问特性 (C#)
-你可以定义自定义特性并将其放入源代码中这一事实，在没有检索该信息并对其进行操作的方法的情况下将没有任何价值。 通过使用反射，可以检索通过自定义特性定义的信息。 主要方法是 `GetCustomAttributes`，它返回对象数组，这些对象在运行时等效于源代码特性。 此方法有多个重载版本。 有关更多信息，请参见<xref:System.Attribute>。  
+你可以定义自定义特性并将其放入源代码中这一事实，在没有检索该信息并对其进行操作的方法的情况下将没有任何价值。 通过使用反射，可以检索通过自定义特性定义的信息。 主要方法是 `GetCustomAttributes`，它返回对象数组，这些对象在运行时等效于源代码特性。 此方法有多个重载版本。 有关详细信息，请参阅 <xref:System.Attribute>。  
   
  特性规范，例如：  
   
@@ -117,8 +117,8 @@ class TestAuthorAttribute
 
 - <xref:System.Reflection>
 - <xref:System.Attribute>
-- [C# 编程指南](../../../../csharp/programming-guide/index.md)
+- [C# 编程指南](../../index.md)
 - [检索存储在特性中的信息](../../../../standard/attributes/retrieving-information-stored-in-attributes.md)
-- [反射 (C#)](../../../../csharp/programming-guide/concepts/reflection.md)
-- [特性 (C#)](../../../../csharp/programming-guide/concepts/attributes/index.md)
-- [创建自定义特性 (C#)](../../../../csharp/programming-guide/concepts/attributes/creating-custom-attributes.md)
+- [反射 (C#)](../reflection.md)
+- [特性 (C#)](./index.md)
+- [创建自定义特性 (C#)](./creating-custom-attributes.md)

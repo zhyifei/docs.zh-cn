@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 ms.assetid: cb52b1ef-47fd-4609-b69d-0586c818ac9e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 93352fffbe155183687a9b666d2fe5541428fca9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fe78e2bd9c31bfb122e90b97977117adfc0235d5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64752012"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69967893"
 ---
 # <a name="runtime-directive-policy-settings"></a>运行时指令策略设置
 
 > [!NOTE]
->  该主题是指 .NET Native 开发者预览版这款预发布软件。 可从 [Microsoft Connect 网站](https://go.microsoft.com/fwlink/?LinkId=394611)（需要注册）下载该预览版。
+> 该主题是指 .NET Native 开发者预览版这款预发布软件。 可从 [Microsoft Connect 网站](https://go.microsoft.com/fwlink/?LinkId=394611)（需要注册）下载该预览版。
 
 .NET Native 的运行时指令策略设置决定在运行时间类型和类型成员的元数据的可用性。 如果没有必要的元数据，依赖于反射、序列化和反序列化的操作或 .NET 框架类型到 COM 的封送或 Windows 运行时会失败并引发一个异常。 最常见的异常是 [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) 和（在互操作的情况下）[MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)。
 

@@ -5,22 +5,22 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - cref [C#]
 ms.assetid: 66a6b0e5-b961-4504-a461-3a4cf481fc8b
-ms.openlocfilehash: 332fd7499a9948bb9ab418a3ab8b6c40ad0bcb85
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: d088e1fcd0a1d1910b1284909dccf7b7d7b1d479
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634817"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69588165"
 ---
 # <a name="cref-attribute-c-programming-guide"></a>cref 特性（C# 编程指南）
 XML 文档标记中的 `cref` 属性是指“代码引用”。 它指定标记的内部文本是一个代码元素，例如类型、方法或属性。 文档工具（例如 [DocFX](https://dotnet.github.io/docfx/) 和 [Sandcastle](https://github.com/EWSoftware/SHFB)）使用 `cref` 属性自动生成指向记录类型或成员的页面的超链接。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示了在 [\<see>](../../../csharp/programming-guide/xmldoc/see.md) 标记中使用的 `cref` 属性。  
+ 下面的示例演示了在 [\<see>](./see.md) 标记中使用的 `cref` 属性。  
   
  [!code-csharp[csProgGuideDocComments#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#3)]  
   
- 在编译时，该程序生成以下 XML 文件。 请注意，例如 `GetZero` 方法的 `cref` 属性已被编译器转换为 `"M:TestNamespace.TestClass.GetZero"`。 “M:”前缀表示“方法”，并且是一种由文档工具（例如 DocFX 和 Sandcastle）识别的约定。 有关前缀的完整列表，请参阅[处理 XML 文件](../../../csharp/programming-guide/xmldoc/processing-the-xml-file.md)。  
+ 在编译时，该程序生成以下 XML 文件。 请注意，例如 `GetZero` 方法的 `cref` 属性已被编译器转换为 `"M:TestNamespace.TestClass.GetZero"`。 “M:”前缀表示“方法”，并且是一种由文档工具（例如 DocFX 和 Sandcastle）识别的约定。 有关前缀的完整列表，请参阅[处理 XML 文件](./processing-the-xml-file.md)。  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -121,5 +121,5 @@ XML 文档标记中的 `cref` 属性是指“代码引用”。 它指定标记�
   
 ## <a name="see-also"></a>请参阅
 
-- [XML 文档注释](../../../csharp/programming-guide/xmldoc/index.md)
-- [建议的文档注释标记](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+- [XML 文档注释](./index.md)
+- [建议的文档注释标记](./recommended-tags-for-documentation-comments.md)

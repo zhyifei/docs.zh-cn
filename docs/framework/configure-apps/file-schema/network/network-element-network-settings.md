@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <network> element
 - network element
 ms.assetid: 2c2c6ad4-ed11-48ab-b28e-2bc0ba9b42c7
-ms.openlocfilehash: 40d89f7bd7a1f4a38a1c4030a86405e09c497899
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: ee60b990bc749dbb9c5d0e7426c57e9392ddf9d4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659318"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920973"
 ---
 # <a name="network-element-network-settings"></a>\<network > 元素 (网络设置)
 配置外部简单邮件传输协议 (SMTP) 服务器的网络选项。  
@@ -70,7 +70,7 @@ ms.locfileid: "69659318"
  你还可以使用基本身份验证 (用户名和密码) 对 SMTP 服务器进行身份验证。 若要使用此选项, 你必须为指定的 SMTP 服务器指定有效的用户名和密码。  
   
 > [!NOTE]
->  基本身份验证将`userName`和`password`值发送到未加密的服务器。 监视网络流量的任何人都可以查看凭据并使用它们连接到服务器。 你应考虑使用更安全的身份验证机制, 如 Kerberos 或 NT LAN Manager (NTLM)。如果`defaultCredentials` 为`true`, 则如果服务器支持这些协议, 则将使用 Kerberos 或 NTLM。  
+> 基本身份验证将`userName`和`password`值发送到未加密的服务器。 监视网络流量的任何人都可以查看凭据并使用它们连接到服务器。 你应考虑使用更安全的身份验证机制, 如 Kerberos 或 NT LAN Manager (NTLM)。如果`defaultCredentials` 为`true`, 则如果服务器支持这些协议, 则将使用 Kerberos 或 NTLM。  
   
  基本身份验证和默认网络凭据选项相互排斥;如果将设置`defaultCredentials`为`true`并指定用户名和密码, 则将使用默认网络凭据, 并忽略基本身份验证数据。  
   

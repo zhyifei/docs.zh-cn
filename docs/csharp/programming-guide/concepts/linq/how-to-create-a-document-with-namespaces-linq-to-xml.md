@@ -2,12 +2,12 @@
 title: 如何：创建包含命名空间的文档 (C#) (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 37e63c57-f86d-47ac-88a7-2c2d107def30
-ms.openlocfilehash: 9b9e81a131d4e17ce2d87dd3f511ed66e370d884
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 180dc5138f8f21b3e52e4a8b3cee4748cafdd0f5
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710008"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69593892"
 ---
 # <a name="how-to-create-a-document-with-namespaces-c-linq-to-xml"></a>如何：创建包含命名空间的文档 (C#) (LINQ to XML)
 本主题演示如何创建包含命名空间的文档。  
@@ -123,7 +123,7 @@ Console.WriteLine(root);
   
  这种方法的性能较低。 每次将包含扩展名的字符串传递给 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 时，[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 都必须分析名称，查找原子化命名空间，再查找原子化名称。 这个过程会占用 CPU 时间。 如果性能很重要，则您可能希望显式声明和使用 <xref:System.Xml.Linq.XNamespace> 对象。  
   
- 如果性能是重要问题，请参阅 [XName 对象的预先原子化 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/pre-atomization-of-xname-objects-linq-to-xml.md) 了解详细信息  
+ 如果性能是重要问题，请参阅 [XName 对象的预先原子化 (LINQ to XML) (C#)](./pre-atomization-of-xname-objects-linq-to-xml.md) 了解详细信息  
   
 ```csharp  
 // Create an XML tree in a namespace, with a specified prefix  

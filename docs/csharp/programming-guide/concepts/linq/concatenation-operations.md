@@ -2,12 +2,12 @@
 title: 串联运算 (C#)
 ms.date: 07/20/2015
 ms.assetid: 890ee104-c590-457e-8a7f-b2b5da0fb417
-ms.openlocfilehash: 3df591e6c69ac764656aa193404a435900f7ffa7
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 43fb9c2768dd3b055b693967a548cc2826972f9c
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65064066"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594672"
 ---
 # <a name="concatenation-operations-c"></a>串联运算 (C#)
 串联是指将一个序列附加到另一个序列的操作。  
@@ -27,5 +27,5 @@ ms.locfileid: "65064066"
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Linq>
-- [标准查询运算符概述 (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [如何：组合和比较字符串集合 (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)
+- [标准查询运算符概述 (C#)](./standard-query-operators-overview.md)
+- [如何：组合和比较字符串集合 (LINQ) (C#)](./how-to-combine-and-compare-string-collections-linq.md)

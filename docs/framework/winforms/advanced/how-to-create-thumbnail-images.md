@@ -8,47 +8,47 @@ helpviewer_keywords:
 - thumbnail images [Windows Forms], creating
 - images [Windows Forms], creating thumbnails
 ms.assetid: e956242a-1e5b-4217-a3cf-5f3fb45d00ba
-ms.openlocfilehash: 275041372bd5e7da5dd0b32dc0a3d70a38bd0dcd
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 786a92d99f5e7a0c27f502efa9a5fe617ac4d4d6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063774"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923755"
 ---
 # <a name="how-to-create-thumbnail-images"></a>如何：创建缩略图图像
-缩略图是映像的小版本。 您可以通过调用创建缩略图<xref:System.Drawing.Image.GetThumbnailImage%2A>方法的<xref:System.Drawing.Image>对象。  
+缩略图是图像的小型版本。 可以通过调用<xref:System.Drawing.Image.GetThumbnailImage%2A> <xref:System.Drawing.Image>对象的方法来创建缩略图。  
   
 ## <a name="example"></a>示例  
- 下面的示例构造<xref:System.Drawing.Image>JPG 文件中的对象。 原始图像的宽度为 640 像素，高度为 479 像素。 代码将创建具有 100 个像素的宽度和高度为 100 像素的缩略图。  
+ 下面的示例从 JPG <xref:System.Drawing.Image>文件构造对象。 原始图像的宽度为640像素, 高度为479像素。 此代码创建一个宽度为100像素、高度为100像素的缩略图。  
   
- 下图显示了缩略图：  
+ 下图显示了缩略图:  
   
- ![显示在输出缩略图的屏幕截图。](./media/how-to-create-thumbnail-images/construct-thumbnail-image.png)  
+ ![显示输出缩略图的屏幕截图。](./media/how-to-create-thumbnail-images/construct-thumbnail-image.png)  
   
 > [!NOTE]
->  在此示例中，回调方法，声明，但从未使用。 这支持所有版本的 GDI +。  
+> 在此示例中, 声明了回调方法, 但从未使用过。 这支持所有版本的 GDI +。  
   
  [!code-csharp[System.Drawing.WorkingWithImages#71](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#71)]
  [!code-vb[System.Drawing.WorkingWithImages#71](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#71)]  
   
 ## <a name="compiling-the-code"></a>编译代码  
- 前面的示例专用于 Windows 窗体，并且它需要<xref:System.Windows.Forms.PaintEventArgs> `e`，这是一个参数的<xref:System.Windows.Forms.Control.Paint>事件处理程序。 若要运行该示例，请按照下列步骤：  
+ 前面的示例旨在与 Windows 窗体一起使用, 并且它需要<xref:System.Windows.Forms.PaintEventArgs> `e`作为<xref:System.Windows.Forms.Control.Paint>事件处理程序的参数。 若要运行该示例, 请执行以下步骤:  
   
 1. 创建新的 Windows 窗体应用程序。  
   
 2. 将示例代码添加到窗体。  
   
-3. 创建窗体的一个处理程序<xref:System.Windows.Forms.Control.Paint>事件  
+3. 为窗体<xref:System.Windows.Forms.Control.Paint>事件创建处理程序  
   
-4. 在中<xref:System.Windows.Forms.Control.Paint>处理程序，请调用`GetThumbnail`方法并传入`e`为<xref:System.Windows.Forms.PaintEventArgs>。  
+4. 在处理程序中, `GetThumbnail`调用方法并传递<xref:System.Windows.Forms.PaintEventArgs>。 `e` <xref:System.Windows.Forms.Control.Paint>  
   
-5. 找到你想要的缩略图图像文件。  
+5. 查找要建立缩略图的图像文件。  
   
-6. 在`GetThumbnail`方法中，指定的路径和文件到你的映像的名称。  
+6. `GetThumbnail`在方法中, 指定映像的路径和文件名。  
   
-7. 按 F5 以运行该示例。  
+7. 按 F5 运行该示例。  
   
-     100 的 100 缩略图显示在窗体。  
+     窗体上将显示 100 x 100 缩略图图像。  
   
 ## <a name="see-also"></a>请参阅
 

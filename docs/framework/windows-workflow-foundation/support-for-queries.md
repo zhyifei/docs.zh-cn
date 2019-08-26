@@ -2,12 +2,12 @@
 title: 查询支持
 ms.date: 03/30/2017
 ms.assetid: 093c22f5-3294-4642-857a-5252233d6796
-ms.openlocfilehash: db3580d0a29353aac027bddd8f040d3085d674af
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e281b5ae7a41bd282f8e7c7eb9db6f99ef5487f3
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665305"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69948942"
 ---
 # <a name="support-for-queries"></a>查询支持
 SQL 工作流实例存储中记录了存储区中的一组已知属性。 用户可以根据这些属性查询实例。 下面的列表包含这些已知属性的一部分：  
@@ -20,21 +20,21 @@ SQL 工作流实例存储中记录了存储区中的一组已知属性。 用户
   
 - **服务名称。** 服务的名称。  
   
-- **服务 Namespace。** 服务使用的命名空间的名称。  
+- **服务命名空间。** 服务使用的命名空间的名称。  
   
 - **当前计算机。**  
   
-- **上一计算机**。 上次运行工作流服务实例的计算机。  
+- **上一台计算机**。 上次运行工作流服务实例的计算机。  
   
 > [!NOTE]
->  对于使用工作流服务主机的自承载方案，仅填充最后四个属性。 对于工作流应用程序方案，仅填充最后一个属性。  
+> 对于使用工作流服务主机的自承载方案，仅填充最后四个属性。 对于工作流应用程序方案，仅填充最后一个属性。  
   
- 工作流运行时为前三个属性提供值。 工作流服务主机提供的值**挂起原因**属性。 SQL 工作流实例存储自身提供值的**上次更新的计算机**属性。  
+ 工作流运行时为前三个属性提供值。 工作流服务主机提供 "**挂起原因**" 属性的值。 SQL 工作流实例存储区本身提供**上次更新的计算机**属性的值。  
   
- 使用 SQL 工作流实例存储的功能还可以指定自定义属性，您可以在持久性数据库中存储这些属性的值并且在查询中使用这些属性。 有关自定义促销的详细信息，请参阅[存储扩展性](store-extensibility.md)。  
+ 使用 SQL 工作流实例存储的功能还可以指定自定义属性，您可以在持久性数据库中存储这些属性的值并且在查询中使用这些属性。 有关自定义促销的详细信息, 请参阅[存储扩展性](store-extensibility.md)。  
   
 ## <a name="views"></a>Views  
- 实例存储区包含下列视图。 请参阅[暂留数据库架构](persistence-database-schema.md)的更多详细信息。  
+ 实例存储区包含下列视图。 有关更多详细信息, 请参阅[持久性数据库架构](persistence-database-schema.md)。  
   
 ### <a name="the-instances-view"></a>Instances 视图  
  Instances 视图包含下列字段：  
@@ -91,7 +91,7 @@ SQL 工作流实例存储中记录了存储区中的一组已知属性。 用户
 5. **ServiceNamespace**  
   
 ### <a name="the-instancepromotedproperties-view"></a>InstancePromotedProperties 视图  
- InstancePromotedProperties 视图包含下列字段。 有关升级的属性的详细信息，请参阅[存储扩展性](store-extensibility.md)主题。  
+ InstancePromotedProperties 视图包含下列字段。 有关升级属性的详细信息, 请参阅[存储扩展性](store-extensibility.md)主题。  
   
 1. **InstanceId**  
   
@@ -99,4 +99,4 @@ SQL 工作流实例存储中记录了存储区中的一组已知属性。 用户
   
 3. **PromotionName**  
   
-4. **Value #** (一系列中的字段**Value1**到**Value64**)。
+4. **值 #** (从**Value1**到**Value64**的字段范围)。

@@ -3,15 +3,15 @@ title: <system.identityModel>
 ms.date: 03/30/2017
 ms.assetid: 210ce7e9-d07b-400c-800f-5f525dcf95e8
 author: BrucePerlerMS
-ms.openlocfilehash: 2f0040fb7084b9d53adbd1a114f1cfc62d58e5a1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 286ae88946692e6894ca3c7ee9e1348415c84ade
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793752"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69943601"
 ---
 # <a name="systemidentitymodel"></a>\<system.identityModel>
-提供用于启用应用程序中的 Windows Identity Foundation (WIF) 选项的配置。  
+为在应用程序中启用 Windows Identity Foundation (WIF) 选项提供配置。  
   
  \<system.identityModel>  
   
@@ -26,13 +26,13 @@ ms.locfileid: "61793752"
  下列各节描述了特性、子元素和父元素。  
   
 ### <a name="attributes"></a>特性  
- None  
+ 无  
   
 ### <a name="child-elements"></a>子元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<identityConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|指定服务级别标识设置。|  
+|[\<identityConfiguration>](identityconfiguration.md)|指定服务级别标识设置。|  
   
 ### <a name="parent-elements"></a>父元素  
   
@@ -41,10 +41,10 @@ ms.locfileid: "61793752"
 |`<configuration>`|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
   
 ## <a name="remarks"></a>备注  
- 添加`<system.identityModel>`到配置文件来配置服务或应用程序以使用 Windows Identity Foundation (WIF) 部分。 `<system.identityModel>`元素表示由<xref:System.IdentityModel.Configuration.SystemIdentityModelSection>类。  
+ `<system.identityModel>`将部分添加到配置文件, 以将服务或应用程序配置为使用 Windows Identity Foundation (WIF)。 元素由<xref:System.IdentityModel.Configuration.SystemIdentityModelSection>类表示。 `<system.identityModel>`  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何添加`<system.identityModel>`到配置文件的部分。 必须首先添加下的配置节和命名空间声明`<configSections>`元素。 然后，可以添加`<system.IdentityModel>`为配置文件指定一个或多个标识配置元素。  
+ 下面的示例演示如何将`<system.identityModel>`节添加到配置文件。 必须首先在`<configSections>`元素下添加配置节和命名空间声明。 然后, 可以将`<system.IdentityModel>`元素添加到配置文件中, 以指定一个或多个标识配置。  
   
 ```xml  
 <configuration>  

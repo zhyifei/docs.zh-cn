@@ -224,10 +224,10 @@ ms.locfileid: "64634720"
   
 |语言元素|说明|  
 |----------------------|-----------------|  
-|`(?=` `subexpression` `)`|零宽度正预测先行。 查看当前位置，以确定 `subexpression` 是否与输入字符串匹配。|  
-|`(?!` `subexpression` `)`|零宽度负预测先行。 查看当前位置，以确定 `subexpression` 是否不与输入字符串匹配。|  
-|`(?<=` `subexpression` `)`|零宽度正回顾。 回顾当前位置，以确定 `subexpression` 是否与输入字符串匹配。|  
-|`(?<!` `subexpression` `)`|零宽度负回顾。 回顾当前位置，以确定 `subexpression` 是否不与输入字符串匹配。|  
+|`(?=` `subexpression` `)`|零宽度正预测先行。 预测先行当前位置，以确定 `subexpression` 是否与输入字符串匹配。|  
+|`(?!` `subexpression` `)`|零宽度负预测先行。 预测先行当前位置，以确定 `subexpression` 是否不与输入字符串匹配。|  
+|`(?<=` `subexpression` `)`|零宽度正回顾。 回顾后发当前位置，以确定 `subexpression` 是否与输入字符串匹配。|  
+|`(?<!` `subexpression` `)`|零宽度负回顾。 回顾后发当前位置，以确定 `subexpression` 是否不与输入字符串匹配。|  
   
  [返回页首](#top)  
   
@@ -285,9 +285,9 @@ ms.locfileid: "64634720"
   
 - 使用 <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture> 选项。 在正则表达式模式中禁用所有未命名或隐式捕获。 使用此选项时，只能捕获与使用 `(?<name>subexpression)` 语言元素定义的命名组匹配的子字符串。 可将 <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture> 标记传递给 `options` 类构造函数的 <xref:System.Text.RegularExpressions.Regex> 参数或 `options` 静态匹配方法的 <xref:System.Text.RegularExpressions.Regex> 参数。  
   
-- 在 `n` 语言元素中使用 `(?imnsx)` 选项。 此选项将在元素出现的正则表达式模式中的点处禁用所有未命名或隐式捕获。 捕获将一直禁用到模式结束或 `(-n)` 选项启用未命名或隐式捕获。 有关详细信息，请参阅 [其他构造](../../../docs/standard/base-types/miscellaneous-constructs-in-regular-expressions.md)。  
+- 在 `(?imnsx)` 语言元素中使用 `n` 选项。 此选项将在元素出现的正则表达式模式中的点处禁用所有未命名或隐式捕获。 捕获将一直禁用到模式结束或 `(-n)` 选项启用未命名或隐式捕获。 有关详细信息，请参阅 [其他构造](../../../docs/standard/base-types/miscellaneous-constructs-in-regular-expressions.md)。  
   
-- 在 `n` 语言元素中使用 `(?imnsx:subexpression)` 选项。 此选项可在 `subexpression` 中禁用所有未命名或隐式捕获。 同时禁用任何未命名或隐式的嵌套捕获组进行的任何捕获。  
+- 在 `(?imnsx:subexpression)` 语言元素中使用 `n` 选项。 此选项可在 `subexpression` 中禁用所有未命名或隐式捕获。 同时禁用任何未命名或隐式的嵌套捕获组进行的任何捕获。  
   
  [返回页首](#top)  
   

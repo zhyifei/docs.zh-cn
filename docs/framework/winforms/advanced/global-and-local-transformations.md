@@ -9,49 +9,49 @@ helpviewer_keywords:
 - transformations [Windows Forms], global
 - transformations [Windows Forms], local
 ms.assetid: b601d66d-d572-4f11-9d2e-92f0dc8893f3
-ms.openlocfilehash: e4ed103e781cc2e59d62c11f3233357c77b81cb9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f62efb31e95b0797272997fadbc28459579a0de0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62004537"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69955191"
 ---
 # <a name="global-and-local-transformations"></a>全局变换和局部变换
-全局转换是适用于由绘制每个项的转换给定<xref:System.Drawing.Graphics>对象。 与此相反，本地转换是适用于特定项要绘制的转换。  
+全局转换是应用于给定<xref:System.Drawing.Graphics>对象绘制的每个项的转换。 与此相反, 本地转换是应用于要绘制的特定项的转换。  
   
 ## <a name="global-transformations"></a>全局转换  
- 若要创建全局转换，请构造<xref:System.Drawing.Graphics>对象，并处理其<xref:System.Drawing.Graphics.Transform%2A>属性。 <xref:System.Drawing.Graphics.Transform%2A>属性是<xref:System.Drawing.Drawing2D.Matrix>对象，因此它可以保存任何仿射转换的序列。 转换存储在<xref:System.Drawing.Graphics.Transform%2A>属性称为世界转换。 <xref:System.Drawing.Graphics>类提供了构建复合世界转换的几种方法： <xref:System.Drawing.Graphics.MultiplyTransform%2A>， <xref:System.Drawing.Graphics.RotateTransform%2A>， <xref:System.Drawing.Graphics.ScaleTransform%2A>，和<xref:System.Drawing.Graphics.TranslateTransform%2A>。 下面的示例绘制一个椭圆两次： 一次之前创建世界转换和之后的一次。 转换首先按 y 方向的 0.5 的比例缩放然后将为 50 个单位 x 方向，然后将旋转 30 度。  
+ 若要创建全局转换, 请构造<xref:System.Drawing.Graphics>对象, 然后操作其<xref:System.Drawing.Graphics.Transform%2A>属性。 属性是一个<xref:System.Drawing.Drawing2D.Matrix>对象, 因此它可以保存任何仿射转换序列。 <xref:System.Drawing.Graphics.Transform%2A> 存储在<xref:System.Drawing.Graphics.Transform%2A>属性中的转换称为 "世界转换"。 <xref:System.Drawing.Graphics.RotateTransform%2A> <xref:System.Drawing.Graphics.MultiplyTransform%2A> <xref:System.Drawing.Graphics.TranslateTransform%2A> <xref:System.Drawing.Graphics.ScaleTransform%2A>类提供若干用于构建复合世界转换的方法:、、和。 <xref:System.Drawing.Graphics> 下面的示例将一个椭圆绘制两次: 在创建世界变换之前和之后。 变换首先在 y 方向上按比例为 0.5, 然后在 x 方向上平移50个单位, 然后旋转30度。  
   
  [!code-csharp[System.Drawing.CoordinateSystems#21](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/CS/Class1.cs#21)]
  [!code-vb[System.Drawing.CoordinateSystems#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/VB/Class1.vb#21)]  
   
- 下图显示矩阵涉及在转换中。  
+ 下图显示了转换中涉及的矩阵。  
   
  ![Transformations](./media/aboutgdip05-art14.gif "AboutGdip05_art14")  
   
 > [!NOTE]
->  在前面的示例中，椭圆围绕位于工作区的左上角的坐标系的原点。 这将产生比旋转椭圆围绕其自身中心不同的结果。  
+> 在前面的示例中, 椭圆围绕坐标系统的原点旋转, 后者位于工作区的左上角。 这产生的结果与围绕椭圆中心旋转椭圆的结果不同。  
   
 ## <a name="local-transformations"></a>本地转换  
- 本地转换应用到要绘制的特定项。 例如，<xref:System.Drawing.Drawing2D.GraphicsPath>对象具有<xref:System.Drawing.Drawing2D.GraphicsPath.Transform%2A>，可以将该路径的数据点的方法。 下面的示例绘制一个具有任何转换的矩形和具有旋转转换的路径。 （假定没有任何世界转换。）  
+ 局部转换应用于要绘制的特定项。 例如, <xref:System.Drawing.Drawing2D.GraphicsPath>对象具有一个<xref:System.Drawing.Drawing2D.GraphicsPath.Transform%2A>可用于转换该路径的数据点的方法。 下面的示例绘制一个没有转换的矩形和一个带有旋转转换的路径。 (假定没有世界转换。)  
   
  [!code-csharp[System.Drawing.CoordinateSystems#22](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/CS/Class1.cs#22)]
  [!code-vb[System.Drawing.CoordinateSystems#22](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/VB/Class1.vb#22)]  
   
- 你可以组合使用本地转换，以实现各种结果的世界转换。 例如，可以使用世界转换修改坐标系统，并使用本地转换来旋转和缩放新的坐标系统上绘制的对象。  
+ 可以结合使用世界转换和局部转换来实现各种结果。 例如, 您可以使用世界变换来修改坐标系统, 使用局部转换来旋转和缩放在新坐标系统上绘制的对象。  
   
- 假设您希望具有其源为 200 像素从工作区左边缘和从客户端区域的顶部 150 像素坐标系统。 此外，假定您需要的度量单位为像素，且 x 轴指向右，y 轴指向上方。 默认坐标系统具有 y 轴指向下方，因此您需要在水平轴上执行反射。 下图显示了此类反射的矩阵。  
+ 假设您想要一个坐标系统, 该系统的原点为200像素, 距工作区的左边缘和工作区顶部150像素。 而且, 假设您希望度量单位为像素, 而 x 轴指向右侧, y 轴指向上方, 则为。 默认坐标系统的 y 轴向下移动, 因此您需要在水平轴上执行反射。 下图显示了此类反射的矩阵。  
   
  ![Transformations](./media/aboutgdip05-art15.gif "AboutGdip05_art15")  
   
- 接下来，假定您需要执行转换 200 个单位的向右和向下的 150 个单位。  
+ 接下来, 假设你需要向右和150个单位执行平移200单元。  
   
- 下面的示例建立刚刚介绍通过设置世界转换的坐标系统<xref:System.Drawing.Graphics>对象。  
+ 下面的示例通过设置<xref:System.Drawing.Graphics>对象的世界变换来确定刚刚介绍的坐标系统。  
   
  [!code-csharp[System.Drawing.CoordinateSystems#23](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/CS/Class1.cs#23)]
  [!code-vb[System.Drawing.CoordinateSystems#23](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/VB/Class1.vb#23)]  
   
- 下面的代码 （放在上面的示例末尾） 创建包含新的坐标系统的原点位于其左下角的一个矩形的路径。 与任何本地转换和局部转换一次，一次填充矩形。 水平缩放到原来的 2 的 30 度旋转后跟包含本地转换。  
+ 下面的代码 (位于前面的示例的末尾) 创建一个路径, 该路径包含一个矩形, 其左下角位于新坐标系统的原点。 该矩形只填充一次, 不使用本地转换, 一次则使用本地转换。 局部转换由2的水平缩放, 后跟30度的旋转。  
   
  [!code-csharp[System.Drawing.CoordinateSystems#24](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/CS/Class1.cs#24)]
  [!code-vb[System.Drawing.CoordinateSystems#24](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/VB/Class1.vb#24)]  

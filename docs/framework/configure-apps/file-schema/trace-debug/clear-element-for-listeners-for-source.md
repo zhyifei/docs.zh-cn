@@ -1,5 +1,5 @@
 ---
-title: <clear> 元素<listeners>为 <source>
+title: <clear><listeners>的元素<source>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners/clear
@@ -7,22 +7,22 @@ helpviewer_keywords:
 - <clear> element for <listeners> for <source>
 - clear element for <listeners> for <source>
 ms.assetid: 76796bb2-9c0b-4526-8135-8bf18b16d8d9
-ms.openlocfilehash: 63d3bb272fcdbee2c59b0569c85f8183cdac8666
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 768d51a74b4c31d1250d2f5d6517f760f886e0a0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673780"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920563"
 ---
-# <a name="clear-element-for-listeners-for-source"></a>\<清除 > 元素\<侦听器 > 为\<源 >
+# <a name="clear-element-for-listeners-for-source"></a>\<清除\< \<源 > 侦听器 > > 元素
 清除跟踪源的 `Listeners` 集合。  
   
  \<configuration>  
 \<system.diagnostics>  
-\<sources>  
-\<source>  
-\<listeners>  
-\<clear>  
+\<源 >  
+\<源 >  
+\<侦听器 >  
+\<清除 >  
   
 ## <a name="syntax"></a>语法  
   
@@ -47,16 +47,16 @@ ms.locfileid: "61673780"
 |`system.diagnostics`|指定用于收集、存储和路由消息的跟踪侦听器以及对跟踪开关设置的级别。|  
 |`sources`|包含用于启动跟踪消息的跟踪源。|  
 |`source`|指定用于启动跟踪消息的跟踪源。|  
-|`listeners`|指定侦听器，用于收集、 存储和路由消息。|  
+|`listeners`|指定用于收集、存储和路由消息的侦听器。|  
   
 ## <a name="remarks"></a>备注  
- `<clear>`元素中移除所有侦听器`Listeners`集合跟踪源，包括<xref:System.Diagnostics.DefaultTraceListener>。 可以使用`<clear>`元素之前使用`<add>`元素为特定集合中没有任何其他活动的侦听器。  
+ 元素从跟踪源的集合中移除所有侦听器,包括。<xref:System.Diagnostics.DefaultTraceListener> `Listeners` `<clear>` 可以在`<clear>` `<add>`使用元素之前使用元素, 以确定集合中没有其他活动的侦听器。  
   
 ## <a name="configuration-file"></a>配置文件  
- 计算机配置文件 (Machine.config) 和应用程序配置文件中，可以使用此元素。  
+ 此元素可在计算机配置文件 (Machine.config) 和应用程序配置文件中使用。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何使用`<clear>`之前使用的元素`<add>`元素添加侦听器`console`并`textListener`到`Listeners`跟踪源集合`TraceSourceApp`。  
+ 下面的示例演示`<clear>`如何在`<add>`使用元素将侦听器`console`和`textListener` `Listeners`集合添加到跟踪源`TraceSourceApp`之前使用元素。  
   
 ```xml  
 <configuration>  
@@ -88,5 +88,5 @@ ms.locfileid: "61673780"
 
 - <xref:System.Diagnostics.TraceSource>
 - <xref:System.Diagnostics.TraceListener>
-- [跟踪和调试设置架构](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
-- [跟踪侦听器](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+- [跟踪和调试设置架构](index.md)
+- [跟踪侦听器](../../../debug-trace-profile/trace-listeners.md)

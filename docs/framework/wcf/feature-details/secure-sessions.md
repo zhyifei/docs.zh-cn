@@ -2,18 +2,18 @@
 title: 安全会话
 ms.date: 03/30/2017
 ms.assetid: 7b50602f-d7b5-42e9-8e92-1f0413df0d8b
-ms.openlocfilehash: 8f5cf9a965951bcc1049c2e96ae6cfa80b0113ba
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d511a45d990e441c5dcfd8405794ec937c0278d1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61990972"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966076"
 ---
 # <a name="secure-sessions"></a>安全会话
-Windows Communication Foundation (WCF) 的一项功能是保证按发送的顺序接收消息的可靠会话。 本节中的主题讨论在创建可靠会话时要考虑的安全性问题。 有关可靠会话的详细信息，请参阅[使用会话的](../../../../docs/framework/wcf/using-sessions.md)。  
+Windows Communication Foundation (WCF) 的一项功能是可靠会话, 可保证按消息发送顺序接收消息。 本节中的主题讨论在创建可靠会话时要考虑的安全性问题。 有关可靠会话的详细信息, 请参阅[使用会话](../../../../docs/framework/wcf/using-sessions.md)。  
   
 > [!NOTE]
->  当需要在 Windows XP 上进行模拟时，请不要在安全会话中使用有状态安全令牌上下文 (SCT)。 如果在模拟时使用有状态 SCT，则会引发 <xref:System.InvalidOperationException>。 有关详细信息，请参阅[不支持的方案](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)。  
+> 当需要在 Windows XP 上进行模拟时，请不要在安全会话中使用有状态安全令牌上下文 (SCT)。 如果在模拟时使用有状态 SCT，则会引发 <xref:System.InvalidOperationException>。 有关详细信息, 请参阅[不支持的方案](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)。  
   
 ## <a name="in-this-section"></a>本节内容  
   
@@ -21,7 +21,7 @@ Windows Communication Foundation (WCF) 的一项功能是保证按发送的顺�
 |-|-|  
 |[安全对话和安全会话](../../../../docs/framework/wcf/feature-details/secure-conversations-and-secure-sessions.md)|安全对话和安全会话是同义词。 本主题解释安全对话的工作方式以及使用该模式的时机和原因。|  
 |[如何：创建安全会话](../../../../docs/framework/wcf/feature-details/how-to-create-a-secure-session.md)|演练创建安全会话的基本操作。|  
-|[如何：创建安全上下文令牌的安全会话](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)|演练创建能够保持状态以及与客户端之间会话的网络场的步骤。|  
+|[如何：创建安全会话的安全上下文令牌](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)|演练创建能够保持状态以及与客户端之间会话的网络场的步骤。|  
 |[安全会话的安全性注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-for-secure-sessions.md)|描述安全会话的特殊注意事项。|  
   
 ## <a name="reference"></a>参考  
@@ -38,4 +38,4 @@ Windows Communication Foundation (WCF) 的一项功能是保证按发送的顺�
 
 - [如何：启用消息重播检测](../../../../docs/framework/wcf/feature-details/how-to-enable-message-replay-detection.md)
 - [重放攻击](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
-- [如何：创建要求会话的服务](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md)
+- [如何：创建需要会话的服务](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md)

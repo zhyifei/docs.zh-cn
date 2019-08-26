@@ -2,20 +2,20 @@
 title: <routing> 的 <serviceBehavior>
 ms.date: 03/30/2017
 ms.assetid: d8f9c844-4629-4a45-9599-856dc8f01794
-ms.openlocfilehash: b7a9be18395ef8878900d754b5aa5afdeee0cff8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 73a610056f94efe144705968eaf97c8314c1ae0d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783053"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69934189"
 ---
-# <a name="routing-of-servicebehavior"></a>\<路由 > 的\<serviceBehavior >
+# <a name="routing-of-servicebehavior"></a>\<serviceBehavior > 的\<路由 >
 提供对路由服务的运行时访问以允许对路由配置进行动态修改。  
   
  \<system.ServiceModel>  
-\<behaviors>  
+\<行为 >  
 \<serviceBehaviors>  
-\<behavior>  
+\<行为 >  
 \<路由 >  
   
 ## <a name="syntax"></a>语法  
@@ -39,7 +39,7 @@ ms.locfileid: "61783053"
   
 |特性|描述|  
 |---------------|-----------------|  
-|filterTable|一个字符串，指定路由服务要计算的筛选器所在的路由表的名称。 此值必须匹配`name`的属性[ \<filterTable >](../../../../../docs/framework/configure-apps/file-schema/wcf/filtertable.md)中的元素[ \<filterTables >](../../../../../docs/framework/configure-apps/file-schema/wcf/filtertables.md)部分。|  
+|filterTable|一个字符串，指定路由服务要计算的筛选器所在的路由表的名称。 此值必须与`name` [filterTables > 部分中 filterTable > 元素的属性相匹配。 \<](filtertables.md) [ \<](filtertable.md)|  
 |routeOnHeaderOnly|一个布尔值，指定筛选器将同时检查消息正文和标头，还是仅检查标头。 默认值为 `true`。|  
 |soapProcessingEnabled|一个布尔值，指定是否应进行 SOAP 处理。|  
   
@@ -50,7 +50,7 @@ ms.locfileid: "61783053"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|指定行为元素。|  
+|[\<behavior>](behavior-of-endpointbehaviors.md)|指定行为元素。|  
   
 ## <a name="remarks"></a>备注  
  将此配置元素添加到服务的行为配置中后，此配置元素将对该服务启用路由。 您可以在此元素中指定服务要使用的实际路由表。  

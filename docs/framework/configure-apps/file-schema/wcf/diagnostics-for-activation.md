@@ -1,15 +1,15 @@
 ---
-title: <diagnostics> 用于激活
+title: <diagnostics>用于激活
 ms.date: 03/30/2017
 ms.assetid: 1486e0eb-fe2a-46c3-b584-c924889477dd
-ms.openlocfilehash: 30456963a7d74a93e39bb1fddc0910daae97f039
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 543c41936921eda39017e07f1c97294b268a9141
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704253"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919221"
 ---
-# <a name="diagnostics-for-activation"></a>\<诊断 > 激活
+# <a name="diagnostics-for-activation"></a>\<用于激活的诊断 >
 配置 Windows Communication Foundation (WCF) 侦听器的诊断功能。  
   
  \<system.serviceModel.activation>  
@@ -44,7 +44,7 @@ ms.locfileid: "61704253"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<system.serviceModel.activation>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel-activation.md)|包含侦听器进程 SMSvcHost.exe 的配置设置。|  
+|[\<system.serviceModel.activation>](system-servicemodel-activation.md)|包含侦听器进程 SMSvcHost.exe 的配置设置。|  
   
 ## <a name="see-also"></a>请参阅
 

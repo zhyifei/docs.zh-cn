@@ -2,16 +2,16 @@
 title: <add> 的 <serviceActivations>
 ms.date: 03/30/2017
 ms.assetid: e5b01fc8-ee84-48b7-95fd-95ab54fa871f
-ms.openlocfilehash: 2a3ba6d41059a480fe610254c0407df16d149e3b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 929773fcb6b6a3ee5c75aa970147277d9dbe7b45
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701458"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920029"
 ---
-# <a name="add-of-serviceactivations"></a>\<add> of \<serviceActivations>
+# <a name="add-of-serviceactivations"></a>\<添加 serviceActivations > \<的 >
 
-一个配置元素，允许你定义虚拟服务激活设置映射到 Windows Communication Foundation (WCF) 服务类型。 使用此配置元素可以在不使用 .svc 文件的情况下激活承载在 WAS/IIS 中的服务。
+一个配置元素, 允许您定义映射到 Windows Communication Foundation (WCF) 服务类型的虚拟服务激活设置。 使用此配置元素可以在不使用 .svc 文件的情况下激活承载在 WAS/IIS 中的服务。
 
 \<system.ServiceModel>\
 \<serviceHostingEnvironment>
@@ -47,7 +47,7 @@ ms.locfileid: "61701458"
 
 |元素|描述|
 |-------------|-----------------|
-|[\<serviceHostingEnvironment>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)|一个描述激活设置的配置节。|
+|[\<serviceHostingEnvironment>](servicehostingenvironment.md)|一个描述激活设置的配置节。|
 
 ## <a name="remarks"></a>备注
 
@@ -67,9 +67,9 @@ ms.locfileid: "61701458"
 
 使用此配置，您可以在不使用 .svc 文件的情况下激活 GreetingService。
 
-请注意，`<serviceHostingEnvironment>` 是应用程序级配置。 必须将包含此配置的 `web.config` 放置到虚拟应用程序的根目录下。 此外，`serviceHostingEnvironment`是继承的 machineToApplication 节。 如果在计算机的根目录中注册了一个服务，应用程序中的每个服务都将继承此服务。
+请注意，`<serviceHostingEnvironment>` 是应用程序级配置。 必须将包含此配置的 `web.config` 放置到虚拟应用程序的根目录下。 此外, `serviceHostingEnvironment`是 machineToApplication 可继承部分。 如果在计算机的根目录中注册了一个服务，应用程序中的每个服务都将继承此服务。
 
-基于配置的激活支持通过 http 协议和非 http 协议进行激活。 它要求在 relativeAddress，即.svc、.xoml 或.xamlx。 您可以将自己的扩展名映射到已知的 buildProviders，然后就可以通过任意扩展名激活服务。 如果发生冲突，`<serviceActivations>` 节将重写 .svc 注册。
+基于配置的激活支持通过 http 协议和非 http 协议进行激活。 它需要 relativeAddress 中的扩展, 即 xoml 或 .xamlx。 您可以将自己的扩展名映射到已知的 buildProviders，然后就可以通过任意扩展名激活服务。 如果发生冲突，`<serviceActivations>` 节将重写 .svc 注册。
 
 ## <a name="see-also"></a>请参阅
 

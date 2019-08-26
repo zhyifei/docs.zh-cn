@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 9dd06e25-12c0-4a9e-855a-452dc83803e2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dededed9bcd4558296323532c0ecbfb60bf5b311
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8b2edf1f06873796bd63fceaca9a4bb99e509589
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54567914"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910349"
 ---
 # <a name="mutexes"></a>Mutexes
 <xref:System.Threading.Mutex> 对象可用于提供对资源的独占访问权限。 虽然 <xref:System.Threading.Mutex> 类使用的系统资源比 <xref:System.Threading.Monitor> 类更多，但它可以跨应用域边界进行封送，可用于多个等待操作以及同步不同进程中的线程。 有关托管同步机制的比较，请参阅[同步基元概述](../../../docs/standard/threading/overview-of-synchronization-primitives.md)。  
@@ -35,7 +35,7 @@ ms.locfileid: "54567914"
  如果线程终止而未释放 <xref:System.Threading.Mutex>，则认为已放弃 mutex。 这通常指示存在严重的编程错误，因为该 mutex 正在保护的资源可能会处于不一致状态。 在 .NET Framework 版本 2.0 中，<xref:System.Threading.AbandonedMutexException> 在下一个获取 mutex 的线程中抛出。  
   
 > [!NOTE]
->  在 .NET Framework 版本 1.0 和 1.1 中，放弃的 <xref:System.Threading.Mutex> 设置为处于已收到信号状态，且下一个等待线程获得所有权。 如果没有等待线程，<xref:System.Threading.Mutex> 一直处于已收到信号状态。 不引发异常。  
+> 在 .NET Framework 版本 1.0 和 1.1 中，放弃的 <xref:System.Threading.Mutex> 设置为处于已收到信号状态，且下一个等待线程获得所有权。 如果没有等待线程，<xref:System.Threading.Mutex> 一直处于已收到信号状态。 不引发异常。  
   
  对于系统范围的 mutex，放弃的 mutex 可能指示应用程序已突然终止（例如，通过使用 Windows 任务管理器终止）。  
   

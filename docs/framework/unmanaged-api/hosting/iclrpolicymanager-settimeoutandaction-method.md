@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c58c14dbc11272a40de01140db72ac3605bfbc67
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 120dbfdc463a7441cce8ca7d87561998a8e28eda
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67757255"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916952"
 ---
 # <a name="iclrpolicymanagersettimeoutandaction-method"></a>ICLRPolicyManager::SetTimeoutAndAction 方法
-设置指定的操作的超时值，并指定该操作发生时，应执行公共语言运行时 (CLR) 的策略操作。  
+设置指定操作的超时值, 并指定操作发生时公共语言运行时 (CLR) 应执行的策略操作。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,7 +39,7 @@ HRESULT SetTimeoutAndAction (
   
 ## <a name="parameters"></a>参数  
  `operation`  
- [in]之一[EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md)值，它指示要为其设置的超时和策略操作`action`。 支持以下值：  
+ 中[EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md)值之一, 指示要设置超时和策略`action`的操作。 支持以下值:  
   
 - OPR_AppDomainUnload  
   
@@ -50,35 +50,35 @@ HRESULT SetTimeoutAndAction (
 - OPR_ThreadRudeAbortInNonCriticalRegion  
   
  `dwMilliseconds`  
- [in]新的超时值，以毫秒为单位。 值为无限原因`operation`永远不会为超时时间。  
+ 中新的超时值 (以毫秒为单位)。 如果值为 "无限`operation` ", 则永远不会超时。  
   
  `action`  
- [in]之一[EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md)值，指示 CLR 应执行时指定的策略操作`operation`时发生。  
+ 中[EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md)值之一, 指示发生时`operation` CLR 应执行的策略操作。  
   
 ## <a name="return-value"></a>返回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|`SetTimeoutAndAction` 已成功返回。|  
-|HOST_E_CLRNOTAVAILABLE|CLR 尚未加载到进程中，或处于不能运行托管的代码或已成功处理调用的状态。|  
-|HOST_E_TIMEOUT|呼叫已超时。|  
+|S_OK|`SetTimeoutAndAction`已成功返回。|  
+|HOST_E_CLRNOTAVAILABLE|CLR 未加载到进程中, 或 CLR 处于无法运行托管代码或成功处理调用的状态。|  
+|HOST_E_TIMEOUT|调用超时。|  
 |HOST_E_NOT_OWNER|调用方不拥有该锁。|  
-|HOST_E_ABANDONED|事件已取消时被阻塞的线程或纤程正在等待它。|  
-|E_FAIL|发生未知的灾难性故障。 方法返回 E_FAIL 后，CLR 不再在进程中使用。 对托管方法的后续调用返回 HOST_E_CLRNOTAVAILABLE。|  
-|E_INVALIDARG|超时值不能设置为指定`operation`，或对于提供的值无效`action`。|  
+|HOST_E_ABANDONED|已阻止的线程或纤程正在等待某个事件时, 该事件被取消。|  
+|E_FAIL|发生未知的灾难性故障。 方法返回 E_FAIL 后, CLR 在该进程内将不再可用。 对宿主方法的后续调用会返回 HOST_E_CLRNOTAVAILABLE。|  
+|E_INVALIDARG|无法为指定`operation`的设置超时, 或者为`action`提供的值无效。|  
   
 ## <a name="remarks"></a>备注  
- `SetTimeoutAndAction` 封装的功能[iclrpolicymanager:: Settimeout](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-settimeout-method.md)并[iclrpolicymanager:: Setactionontimeout](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setactionontimeout-method.md)方法，并且可以调用来对这两种方法的顺序调用替代。  
+ `SetTimeoutAndAction`封装了[ICLRPolicyManager:: SetTimeout](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-settimeout-method.md)和[ICLRPolicyManager:: SetActionOnTimeout](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setactionontimeout-method.md)方法的功能, 可调用这些方法来代替对这两个方法的顺序调用。  
   
 > [!IMPORTANT]
->  并非所有策略操作值可以都指定为对于 CLR 操作的超时行为。 请参阅有关有效值的这两种方法的主题的备注部分。  
+> 并非所有策略操作值都可以指定为 CLR 操作的超时行为。 有关有效值, 请参阅主题的 "备注" 部分。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
   
- **库：** 包含为 MSCorEE.dll 中的资源  
+ **类库**作为资源包括在 Mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics rendering tiers [WPF]
 - graphics [WPF], rendering tiers
 ms.assetid: 08dd1606-02a2-4122-9351-c0afd2ec3a70
-ms.openlocfilehash: fa59621aaf73922af957961af5401170c2872aa9
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 9da519f8d258673498f45a425c13863437cac597
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68972349"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937522"
 ---
 # <a name="graphics-rendering-tiers"></a>图形呈现层
 呈现层为运行 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序的设备定义图形硬件功能和性能级别。  
@@ -48,7 +48,7 @@ ms.locfileid: "68972349"
 ### <a name="rendering-tier-1-and-rendering-tier-2"></a>呈现层 1 与呈现层 2  
   
 > [!NOTE]
->  从 .NET Framework 4 开始, 呈现层1已重新定义为仅包括支持 DirectX 9.0 或更高版本的图形硬件。 现在, 支持 DirectX 7 或8的图形硬件定义为呈现层0。  
+> 从 .NET Framework 4 开始, 呈现层1已重新定义为仅包括支持 DirectX 9.0 或更高版本的图形硬件。 现在, 支持 DirectX 7 或8的图形硬件定义为呈现层0。  
   
  呈现层的值为 1 或 2 意味着，如果必要的系统资源可用并且尚未耗尽，则 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 的大部分图形功能会使用硬件加速。 这对应于大于或等于9.0 的 DirectX 版本。  
   
@@ -105,7 +105,7 @@ ms.locfileid: "68972349"
 |**必需的视频驱动程序日期设置**|指定系统是否对 2004 年 11 月之前发布的驱动程序禁用硬件加速。|  
 |**使用参考光栅器选项**|指定 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 是否应使用参考光栅器。|  
   
- 知道如何引用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 注册表设置的任何外部配置实用工具都可以访问这些设置。 还可以直接使用 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 注册表编辑器来访问这些值，从而创建或修改这些设置。 有关详细信息，请参阅[图形呈现注册表设置](../graphics-multimedia/graphics-rendering-registry-settings.md)。  
+ 知道如何引用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 注册表设置的任何外部配置实用工具都可以访问这些设置。 还可以通过使用 Windows 注册表编辑器直接访问这些值来创建或修改这些设置。 有关详细信息，请参阅[图形呈现注册表设置](../graphics-multimedia/graphics-rendering-registry-settings.md)。  
   
 ### <a name="wpf-performance-profiling-tools"></a>WPF 性能分析工具  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供了一套性能分析工具，此工具可帮助分析应用程序的运行时行为，并确定可应用的性能优化类型。 下表列出了 Windows SDK 工具 WPF 性能套件中包含的性能分析工具:  

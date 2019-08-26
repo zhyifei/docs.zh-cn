@@ -17,18 +17,18 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c9104550438a2a066cdf052b8d6592e86b831194
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 87ba947b9564f82f8daf8cd2ba0acac5cc3587ca
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67749996"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69928665"
 ---
 # <a name="igchostsetgcstartuplimits-method"></a>IGCHost::SetGCStartupLimits 方法
-设置第 0 代段大小和最大大小。  
+设置第0代的段大小和最大大小。  
   
 > [!IMPORTANT]
->  从.NET Framework 4.5 开始，你可以设置片段的大小和最大第 0 代大小为值大于`DWORD`通过使用[IGCHost2::SetGCStartupLimitsEx](../../../../docs/framework/unmanaged-api/hosting/igchost2-setgcstartuplimitsex-method.md)方法。  
+> 从 .NET Framework 4.5 开始, 可以使用[IGCHost2:: SetGCStartupLimitsEx](../../../../docs/framework/unmanaged-api/hosting/igchost2-setgcstartuplimitsex-method.md)方法将段大小和最大第 0 `DWORD`代大小设置为大于的值。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,20 +41,20 @@ HRESULT SetGCStartupLimits (
   
 ## <a name="parameters"></a>参数  
  `SegmentSize`  
- [in]由垃圾回收系统段的大小。  
+ 中垃圾收集系统使用的段大小。  
   
  `MaxGen0Size`  
- [in]第 0 代最大大小。  
+ 中第0代的最大大小。  
   
 ## <a name="remarks"></a>备注  
- `SetGCStartupLimits`可能只有一次调用方法。 以后无法更改这些值。  
+ `SetGCStartupLimits`方法只能调用一次。 以后不能更改这些值。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** GCHost.idl GCHost.h  
+ **标头：** GCHost, GCHost  
   
- **库：** 包含为 MSCorEE.dll 中的资源  
+ **类库**作为资源包括在 Mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -7,45 +7,45 @@ dev_langs:
 helpviewer_keywords:
 - endpoints [WCF], addressing
 ms.assetid: ac24f5ad-9558-4298-b168-c473c68e819b
-ms.openlocfilehash: b570d07639846e67c4e352debc2314140b40faff
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1a2d15f3c13d75d4e1e27ae561749ce8444cba2b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592512"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922960"
 ---
 # <a name="specifying-an-endpoint-address"></a>指定终结点地址
-与 Windows Communication Foundation (WCF) 服务的所有通信都是通过其终结点。 每个 <xref:System.ServiceModel.Description.ServiceEndpoint> 都包含一个 <xref:System.ServiceModel.Description.ServiceEndpoint.Address%2A>、一个 <xref:System.ServiceModel.Description.ServiceEndpoint.Binding%2A> 和一个 <xref:System.ServiceModel.Description.ServiceEndpoint.Contract%2A>。 协定指定可用的操作。 绑定指定如何与服务进行通信，而地址指定查找服务的位置。 每个终结点都必须具有一个唯一的地址。 终结点的地址由 <xref:System.ServiceModel.EndpointAddress> 类表示，该类包含一个表示服务地址的统一资源定位符 (URI)，一个表示服务的安全标识的 <xref:System.ServiceModel.EndpointAddress.Identity%2A> 和一个可选的 <xref:System.ServiceModel.EndpointAddress.Headers%2A> 集合。 可选标头提供用于标识终结点或与终结点交互的更多详细寻址信息。 例如，标头可指示如何处理传入消息，终结点应发送答复消息的位置，或在多个实例可用时应使用哪个服务实例处理来自特定用户的传入消息。  
+与 Windows Communication Foundation (WCF) 服务的所有通信都通过其终结点进行。 每个 <xref:System.ServiceModel.Description.ServiceEndpoint> 都包含一个 <xref:System.ServiceModel.Description.ServiceEndpoint.Address%2A>、一个 <xref:System.ServiceModel.Description.ServiceEndpoint.Binding%2A> 和一个 <xref:System.ServiceModel.Description.ServiceEndpoint.Contract%2A>。 协定指定可用的操作。 绑定指定如何与服务进行通信，而地址指定查找服务的位置。 每个终结点都必须具有一个唯一的地址。 终结点的地址由 <xref:System.ServiceModel.EndpointAddress> 类表示，该类包含一个表示服务地址的统一资源定位符 (URI)，一个表示服务的安全标识的 <xref:System.ServiceModel.EndpointAddress.Identity%2A> 和一个可选的 <xref:System.ServiceModel.EndpointAddress.Headers%2A> 集合。 可选标头提供用于标识终结点或与终结点交互的更多详细寻址信息。 例如，标头可指示如何处理传入消息，终结点应发送答复消息的位置，或在多个实例可用时应使用哪个服务实例处理来自特定用户的传入消息。  
   
 ## <a name="definition-of-an-endpoint-address"></a>终结点地址的定义  
- 在 WCF 中，<xref:System.ServiceModel.EndpointAddress>模型的 Ws-addressing 标准中定义的终结点引用 (EPR)。  
+ 在 WCF 中, <xref:System.ServiceModel.EndpointAddress>对 ws-addressing 标准中定义的终结点引用 (EPR) 建模。  
   
- 大多数传输的地址 URI 包含四个部分。 例如，此 URI`http://www.fabrikam.com:322/mathservice.svc/secureEndpoint`有以下四个部分：  
+ 大多数传输的地址 URI 包含四个部分。 例如, 此 URI `http://www.fabrikam.com:322/mathservice.svc/secureEndpoint`具有以下四个部分:  
   
 - 方案：http:  
   
-- 计算机： `www.fabrikam.com`  
+- 设备`www.fabrikam.com`  
   
-- （可选）端口：322  
+- 可有可无口322  
   
 - 路径：/mathservice.svc/secureEndpoint  
   
- 作为 EPR 模型的一部分，每个终结点引用都可以包含一些添加额外标识信息的引用参数。 在 WCF 中，这些引用参数建模为的实例<xref:System.ServiceModel.Channels.AddressHeader>类。  
+ 作为 EPR 模型的一部分，每个终结点引用都可以包含一些添加额外标识信息的引用参数。 在 WCF 中, 这些引用参数建模为<xref:System.ServiceModel.Channels.AddressHeader>类的实例。  
   
  可以通过使用代码以强制方式或通过配置以声明方式指定服务的终结点地址。 在代码中定义终结点通常是不可行的，因为已部署服务的绑定和地址通常与在部署服务时所用的绑定和地址不同。 一般而言，使用配置定义服务终结点比使用代码更为可行。 通过将绑定和寻址信息放置在代码之外，可以在更改这些信息之后不必重新编译和重新部署应用程序。 如果在代码或配置中未指定任何终结点，则运行时在该服务实现的每个协定的每个基地址上添加一个默认终结点。  
   
- 有两种方法在 WCF 中指定服务的终结点地址。 可以为每个与服务关联的终结点指定一个绝对地址，也可以为服务的 <xref:System.ServiceModel.ServiceHost> 提供一个基址，然后再为每个与此服务关联的终结点指定一个地址（该地址是相对于此基址定义的）。 可以在配置或代码中使用这两种过程来为服务指定终结点地址。 如果不指定相对地址，则服务会使用基址。 也可以为一个服务指定多个基址，但是对于每个传输协议，每个服务只允许有一个基址。 如果有多个终结点，则会使用不同的绑定来配置每个终结点，它们的地址必须是唯一的。 使用相同绑定但使用不同协定的终结点可以使用相同的地址。  
+ 可以通过两种方法在 WCF 中指定服务的终结点地址。 可以为每个与服务关联的终结点指定一个绝对地址，也可以为服务的 <xref:System.ServiceModel.ServiceHost> 提供一个基址，然后再为每个与此服务关联的终结点指定一个地址（该地址是相对于此基址定义的）。 可以在配置或代码中使用这两种过程来为服务指定终结点地址。 如果不指定相对地址，则服务会使用基址。 也可以为一个服务指定多个基址，但是对于每个传输协议，每个服务只允许有一个基址。 如果有多个终结点，则会使用不同的绑定来配置每个终结点，它们的地址必须是唯一的。 使用相同绑定但使用不同协定的终结点可以使用相同的地址。  
   
- 使用 IIS 承载时，您不用自己管理 <xref:System.ServiceModel.ServiceHost> 实例。 在 IIS 中承载时，基址始终为在服务的 .svc 文件中指定的地址。 因此，必须对 IIS 承载的服务终结点使用相对终结点地址。 提供完全限定的终结点地址会在服务的部署过程中导致错误。 有关详细信息，请参阅[部署服务承载的 WCF 服务](../../../docs/framework/wcf/feature-details/deploying-an-internet-information-services-hosted-wcf-service.md)。  
+ 使用 IIS 承载时，您不用自己管理 <xref:System.ServiceModel.ServiceHost> 实例。 在 IIS 中承载时，基址始终为在服务的 .svc 文件中指定的地址。 因此，必须对 IIS 承载的服务终结点使用相对终结点地址。 提供完全限定的终结点地址会在服务的部署过程中导致错误。 有关详细信息, 请参阅[部署 Internet Information Services 承载的 WCF 服务](../../../docs/framework/wcf/feature-details/deploying-an-internet-information-services-hosted-wcf-service.md)。  
   
 ## <a name="defining-endpoint-addresses-in-configuration"></a>在配置中定义终结点地址  
- 若要在配置文件中定义终结点，请使用[\<终结点 >](../configure-apps/file-schema/wcf/endpoint-element.md)元素。  
+ 若要在配置文件中定义终结点, 请使用[ \<终结点 >](../configure-apps/file-schema/wcf/endpoint-element.md)元素。  
   
  [!code-xml[S_UEHelloWorld#5](../../../samples/snippets/common/VS_Snippets_CFX/s_uehelloworld/common/serviceapp2.config#5)]  
   
- 当<xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>方法调用 （即，当主机应用程序尝试启动服务时），系统将查找[\<服务 >](../../../docs/framework/configure-apps/file-schema/wcf/service.md)元素具有名称属性，指定"UE。Samples.HelloService"。 如果[\<服务 >](../../../docs/framework/configure-apps/file-schema/wcf/service.md)找到元素，则系统加载指定的类，并使用配置文件中提供的终结点定义创建终结点。 此机制允许您将绑定和寻址信息放置在代码之外，而用两行代码来加载和启动服务。 此方法的优点是在进行这些更改后不必重新编译或重新部署应用程序。  
+ 调用方法时 (即, 当宿主应用程序尝试启动服务时), 系统将查找[ \<](../../../docs/framework/configure-apps/file-schema/wcf/service.md)名称属性为 "UE" 的服务 > 元素。 <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>HelloService "。 如果找到服务 > 元素, 系统将加载指定的类并使用配置文件中提供的终结点定义创建终结点。 [ \<](../../../docs/framework/configure-apps/file-schema/wcf/service.md) 此机制允许您将绑定和寻址信息放置在代码之外，而用两行代码来加载和启动服务。 此方法的优点是在进行这些更改后不必重新编译或重新部署应用程序。  
   
- 可选标头中声明[\<标头 >](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md)。 以下是用来区分两个标头的配置文件中指定的服务终结点元素的示例：从"黄金"客户端`http://tempuri1.org/`和"标准"客户端从`http://tempuri2.org/`。 客户端调用此服务必须具有适当[\<标头 >](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md)其配置文件中。  
+ 可选标头在[ \<标头](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md)中声明 >。 下面是一个元素的示例, 用于在配置文件中指定服务的终结点, 以区分两个标头:"黄金" 客户端`http://tempuri1.org/`和 "标准" `http://tempuri2.org/`客户端。 调用此服务的客户端必须在其配置文件中[ \<> 相应的标头](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md)。  
   
  [!code-xml[S_UEHelloWorld#1](../../../samples/snippets/common/VS_Snippets_CFX/s_uehelloworld/common/serviceapp.config#1)]  
   
@@ -69,7 +69,7 @@ ms.locfileid: "64592512"
  [!code-csharp[S_UEHelloWorld#3](../../../samples/snippets/csharp/VS_Snippets_CFX/s_uehelloworld/cs/snippet.cs#3)]  
   
 > [!NOTE]
->  服务应用程序中 <xref:System.ServiceModel.Description.ServiceDescription> 的属性不能在 <xref:System.ServiceModel.Channels.CommunicationObject.OnOpening%2A> 上的 <xref:System.ServiceModel.ServiceHostBase> 方法之后进行修改。 如果在该点之后修改某些成员（如 <xref:System.ServiceModel.ServiceHostBase.Credentials%2A> 属性以及 `AddServiceEndpoint` 和 <xref:System.ServiceModel.ServiceHostBase> 上的 <xref:System.ServiceModel.ServiceHost> 方法），则将引发异常。 允许修改其他成员，但结果不可确定。  
+> 服务应用程序中 <xref:System.ServiceModel.Description.ServiceDescription> 的属性不能在 <xref:System.ServiceModel.Channels.CommunicationObject.OnOpening%2A> 上的 <xref:System.ServiceModel.ServiceHostBase> 方法之后进行修改。 如果在该点之后修改某些成员（如 <xref:System.ServiceModel.ServiceHostBase.Credentials%2A> 属性以及 `AddServiceEndpoint` 和 <xref:System.ServiceModel.ServiceHostBase> 上的 <xref:System.ServiceModel.ServiceHost> 方法），则将引发异常。 允许修改其他成员，但结果不可确定。  
 >   
 >  同样，在调用 <xref:System.ServiceModel.Description.ServiceEndpoint> 上的 <xref:System.ServiceModel.Channels.CommunicationObject.OnOpening%2A> 之后不能在客户端上修改 <xref:System.ServiceModel.ChannelFactory> 值。 如果在该点之后修改 <xref:System.ServiceModel.ChannelFactory.Credentials%2A> 属性，则该属性将引发异常。 可以对其他客户端说明值进行修改而不会出现错误，但结果不可确定。  
 >   

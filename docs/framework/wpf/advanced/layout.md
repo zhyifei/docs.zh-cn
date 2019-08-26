@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [WPF], layout system
 - layout system [WPF]
 ms.assetid: 3eecdced-3623-403a-a077-7595453a9221
-ms.openlocfilehash: 648adb34664ccb2a475e32aba4d0d76d99cf49d8
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: eb254503f5ce2240a03179da693c66f7ada876be
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666768"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69918297"
 ---
 # <a name="layout"></a>布局
 本主题介绍 Windows Presentation Foundation (WPF) 布局系统。 了解布局计算的发生方式和时间是在 WPF 中创建用户界面所必需的。  
@@ -89,7 +89,7 @@ ms.locfileid: "69666768"
  其次, 会处理在上<xref:System.Windows.FrameworkElement>定义的框架属性, 这会影响`constraintSize`的值。 这些属性通常<xref:System.Windows.UIElement>描述基础的大小调整特征, 例如<xref:System.Windows.FrameworkElement.Height%2A> <xref:System.Windows.FrameworkElement.Width%2A> <xref:System.Windows.FrameworkElement.Margin%2A>,、、和<xref:System.Windows.FrameworkElement.Style%2A>。 其中每个属性都可以更改显示元素所需的空间。 <xref:System.Windows.FrameworkElement.MeasureOverride%2A>然后, 将`constraintSize`作为参数调用。  
   
 > [!NOTE]
->  <xref:System.Windows.FrameworkElement.Height%2A>和<xref:System.Windows.FrameworkElement.Width%2A>和的<xref:System.Windows.FrameworkElement.ActualHeight%2A>属性之间存在差异。 <xref:System.Windows.FrameworkElement.ActualWidth%2A> 例如, <xref:System.Windows.FrameworkElement.ActualHeight%2A>属性是基于其他高度输入和布局系统的计算值。 此值是由布局系统本身基于实际呈现传递设置的, 因此可能会略微滞后于属性的设置值, 例如, 作为<xref:System.Windows.FrameworkElement.Height%2A>输入更改的基础。  
+> <xref:System.Windows.FrameworkElement.Height%2A>和<xref:System.Windows.FrameworkElement.Width%2A>和的<xref:System.Windows.FrameworkElement.ActualHeight%2A>属性之间存在差异。 <xref:System.Windows.FrameworkElement.ActualWidth%2A> 例如, <xref:System.Windows.FrameworkElement.ActualHeight%2A>属性是基于其他高度输入和布局系统的计算值。 此值是由布局系统本身基于实际呈现传递设置的, 因此可能会略微滞后于属性的设置值, 例如, 作为<xref:System.Windows.FrameworkElement.Height%2A>输入更改的基础。  
 >   
 >  由于<xref:System.Windows.FrameworkElement.ActualHeight%2A>是一个计算值, 因此应注意到, 由于布局系统的各种操作, 可能会有多个或增量报告的更改。 布局系统可能会计算子元素所需的测量空间、父元素的约束等。  
   

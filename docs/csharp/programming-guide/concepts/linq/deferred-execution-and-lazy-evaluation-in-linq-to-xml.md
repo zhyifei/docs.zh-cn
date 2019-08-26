@@ -2,12 +2,12 @@
 title: LINQ to XML 中的延迟执行和迟缓计算 (C#)
 ms.date: 07/20/2015
 ms.assetid: 8683d1b4-b7ec-407b-be12-906ebe958a09
-ms.openlocfilehash: 1f68a6c7de943d4a38ad0e5777298368e1c4e554
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 9cf28afb5b7b8b3047c8b1b21915ffe7409eb25e
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66487567"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594564"
 ---
 # <a name="deferred-execution-and-lazy-evaluation-in-linq-to-xml-c"></a>LINQ to XML 中的延迟执行和迟缓计算 (C#)
 实现查询和轴操作通常是为了使用延迟执行。 本主题解释延迟执行的要求和优点，以及某些实现注意事项。  
@@ -17,7 +17,7 @@ ms.locfileid: "66487567"
   
  LINQ 技术广泛应用了延迟执行，包括在核心 <xref:System.Linq?displayProperty=nameWithType> 类的成员和不同 LINQ 命名空间中的扩展方法（如 <xref:System.Xml.Linq.Extensions?displayProperty=nameWithType>）中使用。  
   
- 在迭代器块内使用时，C# 语言可以通过 [yield](../../../../csharp/language-reference/keywords/yield.md) 关键字（以 `yield-return` 语句形式），直接支持延迟执行。 此类迭代器必须返回类型为 <xref:System.Collections.IEnumerator> 或 <xref:System.Collections.Generic.IEnumerator%601>（或派生类型）的集合。  
+ 在迭代器块内使用时，C# 语言可以通过 [yield](../../../language-reference/keywords/yield.md) 关键字（以 `yield-return` 语句形式），直接支持延迟执行。 此类迭代器必须返回类型为 <xref:System.Collections.IEnumerator> 或 <xref:System.Collections.Generic.IEnumerator%601>（或派生类型）的集合。  
   
 ## <a name="eager-vs-lazy-evaluation"></a>积极计算与迟缓计算  
  当您编写实现延迟执行的方法时，还必须确定是使用迟缓计算还是积极计算来实现该方法。  
@@ -31,11 +31,11 @@ ms.locfileid: "66487567"
 ## <a name="next-steps"></a>后续步骤  
  本教程的下一个主题将解释延迟执行：  
   
-- [延迟执行示例 (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-example.md)  
+- [延迟执行示例 (C#)](./deferred-execution-example.md)  
   
 ## <a name="see-also"></a>请参阅
 
-- [教程：将查询链接在一起 (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)
-- [概念和术语（功能转换）(C#)](../../../../csharp/programming-guide/concepts/linq/concepts-and-terminology-functional-transformation.md)
-- [聚合运算 (C#)](../../../../csharp/programming-guide/concepts/linq/aggregation-operations.md)
-- [yield](../../../../csharp/language-reference/keywords/yield.md)
+- [教程：将查询链接在一起 (C#)](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)
+- [概念和术语（功能转换）(C#)](./concepts-and-terminology-functional-transformation.md)
+- [聚合运算 (C#)](./aggregation-operations.md)
+- [yield](../../../language-reference/keywords/yield.md)

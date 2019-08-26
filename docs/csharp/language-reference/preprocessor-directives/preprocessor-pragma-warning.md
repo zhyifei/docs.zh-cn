@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - '#pragma warning [C#]'
 ms.assetid: 723493d5-9753-4cec-babb-54e2b8eb36b6
-ms.openlocfilehash: 0145df533572ff9d5004a653bb232a7ff60af5f1
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: dc221235e78a187f921815ed6e6c7750778014d8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57495099"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922278"
 ---
 # <a name="pragma-warning-c-reference"></a>#pragma warning（C# 参考）
 `#pragma warning` 可以启用或禁用特定警告。  
@@ -31,7 +31,7 @@ ms.locfileid: "57495099"
  未指定警告编号时，`disable` 会禁用所有警告，`restore` 会启用所有警告。  
   
 > [!NOTE]
->  若要在 Visual Studio 中查找警告编号，请生成项目，然后在“输出”窗口中查找警告编号。  
+> 若要在 Visual Studio 中查找警告编号，请生成项目，然后在“输出”  窗口中查找警告编号。  
   
 ## <a name="example"></a>示例  
   
@@ -61,7 +61,7 @@ public class D
   
 ## <a name="see-also"></a>请参阅
 
-- [C# 参考](../../../csharp/language-reference/index.md)
-- [C# 编程指南](../../../csharp/programming-guide/index.md)
-- [C# 预处理器指令](../../../csharp/language-reference/preprocessor-directives/index.md)
-- [C# 编译器错误](../../../csharp/language-reference/compiler-messages/index.md)
+- [C# 参考](../index.md)
+- [C# 编程指南](../../programming-guide/index.md)
+- [C# 预处理器指令](./index.md)
+- [C# 编译器错误](../compiler-messages/index.md)

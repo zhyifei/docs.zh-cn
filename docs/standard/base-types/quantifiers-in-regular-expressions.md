@@ -248,7 +248,7 @@ ms.locfileid: "64633644"
  [!code-csharp[RegularExpressions.Quantifiers.Greedy#2](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Quantifiers.Greedy/cs/Greedy.cs#2)]
  [!code-vb[RegularExpressions.Quantifiers.Greedy#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Quantifiers.Greedy/vb/Greedy.vb#2)]  
   
- 在大多数情况下，具有贪婪和惰性限定符的正则表达式返回相同匹配项。 与匹配任何字符的通配符 (`.`) 元字符一起使用时，最常见的情况是，它们返回不同的结果。  
+ 在大多数情况下，具有贪婪和惰性限定符的正则表达式返回相同匹配项。 与匹配任何字符的通配符 (`.`) 元字符一起使用时，它们通常会返回不同的结果。  
   
 ## <a name="quantifiers-and-empty-matches"></a>限定符和空匹配项  
  如果已找到最小捕获数，限定符 `*`、`+` 和 `{`n`,`m`}` 及对应的惰性限定符绝不会在空匹配项后重复。 此规则会在最大可能组捕获数是无限或接近无限时，阻止限定符在空的子表达式匹配项上进入无限循环。  

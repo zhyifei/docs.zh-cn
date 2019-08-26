@@ -2,12 +2,12 @@
 title: 特性概述 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 1449f69b-c063-41de-8d89-f0bbdcf96ac6
-ms.openlocfilehash: 2ecc3fb0a3bf7365b6eec39e1c5086d99f2c5a19
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c799b9be9b936beadde28374bd9882ebc6e2d9a2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64642457"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966320"
 ---
 # <a name="attributes-overview-visual-basic"></a>特性概述 (Visual Basic)
 使用特性，可以有效地将元数据或声明性信息与代码（程序集、类型、方法、属性等）相关联。 将特性与程序实体相关联后，可以在运行时使用*反射*这项技术查询特性。 有关详细信息，请参阅[反射 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)。  
@@ -67,7 +67,7 @@ End Sub
 ```  
   
 > [!NOTE]
->  按照约定，所有特性名称均以“Attribute”一词结尾，以便与 .NET Framework 中的其他项区分开来。 不过，在代码中使用特性时，无需指定特性后缀。 例如，`[DllImport]` 等同于 `[DllImportAttribute]`，但 `DllImportAttribute` 是此特性在 .NET Framework 中的实际名称。  
+> 按照约定，所有特性名称均以“Attribute”一词结尾，以便与 .NET Framework 中的其他项区分开来。 不过，在代码中使用特性时，无需指定特性后缀。 例如，`[DllImport]` 等同于 `[DllImportAttribute]`，但 `DllImportAttribute` 是此特性在 .NET Framework 中的实际名称。  
   
 ### <a name="attribute-parameters"></a>特性参数  
  许多属性都有参数，可以是位置参数、未命名参数或已命名参数。 所有位置参数都必须按特定的顺序指定，不能省略；已命名参数是可选的，可以按任意顺序指定。 首先指定的是位置参数。 例如，下面这三个特性是等同的：  
@@ -107,9 +107,9 @@ Module: CLSCompliant(True)>
 ## <a name="common-uses-for-attributes"></a>特性的常见用途  
  下面列出了代码中特性的一些常见用途：  
   
-- 在 Web 服务中使用 `WebMethod` 特性标记方法，以指明方法应可通过 SOAP 协议进行调用。 有关详细信息，请参阅 <xref:System.Web.Services.WebMethodAttribute>。  
+- 在 Web 服务中使用 `WebMethod` 特性标记方法，以指明方法应可通过 SOAP 协议进行调用。 有关详细信息，请参阅 <xref:System.Web.Services.WebMethodAttribute> 。  
   
-- 描述在与本机代码互操作时如何封送方法参数。 有关详细信息，请参阅 <xref:System.Runtime.InteropServices.MarshalAsAttribute>。  
+- 描述在与本机代码互操作时如何封送方法参数。 有关详细信息，请参阅 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 。  
   
 - 描述类、方法和接口的 COM 属性。  
   
@@ -136,7 +136,7 @@ Module: CLSCompliant(True)>
   
 - [使用反射访问特性 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)  
   
-- [如何：创建 C /C++联合使用特性 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/how-to-create-a-c-cpp-union-by-using-attributes.md)  
+- [如何：使用特性创建 CC++ /联合 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/how-to-create-a-c-cpp-union-by-using-attributes.md)  
   
 - [常见特性 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/common-attributes.md)  
   
@@ -146,4 +146,4 @@ Module: CLSCompliant(True)>
 
 - [Visual Basic 编程指南](../../../../visual-basic/programming-guide/index.md)
 - [反射 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)
-- [属性](../../../../standard/attributes/index.md)
+- [特性](../../../../standard/attributes/index.md)

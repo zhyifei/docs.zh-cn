@@ -2,12 +2,12 @@
 title: 数据分区 (C#)
 ms.date: 07/20/2015
 ms.assetid: 2a5c507b-fe22-443c-a768-dec7f9ec568d
-ms.openlocfilehash: b857c8c6e6b56a7263e6725a747e98ccfe4ff4fc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: d9330e9973b2f25903e1f81a7296362e2a7c756b
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58832458"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69591588"
 ---
 # <a name="partitioning-data-c"></a>数据分区 (C#)
 LINQ 中的分区是指将输入序列划分为两个部分的操作，无需重新排列元素，然后返回其中一个部分。  
@@ -30,4 +30,4 @@ LINQ 中的分区是指将输入序列划分为两个部分的操作，无需重
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Linq>
-- [标准查询运算符概述 (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [标准查询运算符概述 (C#)](./standard-query-operators-overview.md)

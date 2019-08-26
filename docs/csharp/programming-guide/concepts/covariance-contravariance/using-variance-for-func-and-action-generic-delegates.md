@@ -2,17 +2,17 @@
 title: 对 Func 和 Action 泛型委托使用变体 (C#)
 ms.date: 07/20/2015
 ms.assetid: 1826774f-2b7a-470f-b110-17cfdd6abdae
-ms.openlocfilehash: f517eea07588bb01ef903c8311126eab872bd735
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bbfc41fb8ab3e7d800f1eb03098e02056e694872
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540593"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659912"
 ---
 # <a name="using-variance-for-func-and-action-generic-delegates-c"></a>对 Func 和 Action 泛型委托使用变体 (C#)
 这些示例演示如何使用 `Func` 和 `Action` 泛型委托中的协变和逆变来启用重用方法并为代码中提供更多的灵活性。  
   
- 有关协变和逆变的详细信息，请参阅[委托中的变体 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)。  
+ 有关协变和逆变的详细信息，请参阅[委托中的变体 (C#)](./variance-in-delegates.md)。  
   
 ## <a name="using-delegates-with-covariant-type-parameters"></a>使用具有协变类型参数的委托  
  下例阐释了泛型 `Func` 委托中的协变支持的益处。 `FindByTitle` 方法采用 `String` 类型的一个参数，并返回 `Employee` 类型的一个对象。 但是，可将此方法分配给 `Func<String, Person>` 委托，因为 `Employee` 继承 `Person`。  
@@ -83,5 +83,5 @@ class Program
   
 ## <a name="see-also"></a>请参阅
 
-- [协变和逆变 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/index.md)
-- [泛型](~/docs/standard/generics/index.md)
+- [协变和逆变 (C#)](./index.md)
+- [泛型](../../../../standard/generics/index.md)

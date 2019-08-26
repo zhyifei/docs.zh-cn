@@ -6,30 +6,30 @@ helpviewer_keywords:
 - C# Language, access modifiers
 - access modifiers [C#], about
 ms.assetid: 6e81ee82-224f-4a12-9baf-a0dca2656c5b
-ms.openlocfilehash: 6622612e927b800e1a4769c99df0e2fa7d99a33d
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 266ece1e63bf6d32bf59406dbc72a9e6bd92eb45
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67609641"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924544"
 ---
 # <a name="access-modifiers-c-programming-guide"></a>访问修饰符（C# 编程指南）
 所有类型和类型成员都具有可访问性级别，该级别可以控制是否可以从你的程序集或其他程序集中的其他代码中使用它们。 可以使用以下访问修饰符在进行声明时指定类型或成员的可访问性：  
   
- [public](../../../csharp/language-reference/keywords/public.md)  
+ [public](../../language-reference/keywords/public.md)  
  同一程序集中的任何其他代码或引用该程序集的其他程序集都可以访问该类型或成员。 
   
- [private](../../../csharp/language-reference/keywords/private.md)  
+ [private](../../language-reference/keywords/private.md)  
  只有同一类或结构中的代码可以访问该类型或成员。  
   
- [受保护](../../../csharp/language-reference/keywords/protected.md)  
+ [受保护](../../language-reference/keywords/protected.md)  
  只有同一类或者从该类派生的类中的代码可以访问该类型或成员。  
- [internal](../../../csharp/language-reference/keywords/internal.md)  
+ [internal](../../language-reference/keywords/internal.md)  
  同一程序集中的任何代码都可以访问该类型或成员，但其他程序集中的代码不可以。  
   
- [受保护的内部](../../../csharp/language-reference/keywords/protected-internal.md) 该类型或成员可由对其进行声明的程序集或另一程序集中的派生类中的任何代码访问。 
+ [受保护的内部](../../language-reference/keywords/protected-internal.md) 该类型或成员可由对其进行声明的程序集或另一程序集中的派生类中的任何代码访问。 
 
- [专用受保护](../../../csharp/language-reference/keywords/private-protected.md)只有在其声明程序集内，通过相同类中的代码或派生自该类的类型，才能访问类型或成员。
+ [专用受保护](../../language-reference/keywords/private-protected.md)只有在其声明程序集内，通过相同类中的代码或派生自该类的类型，才能访问类型或成员。
   
  下面的示例演示如何在类型和成员上指定访问修饰符：  
   
@@ -53,7 +53,7 @@ ms.locfileid: "67609641"
   
  为字段、属性或事件的任何成员的类型必须至少与该成员本身具有相同的可访问性。 同样，为方法、索引器或委托的任何成员的返回类型和参数类型必须至少与该成员本身具有相同的可访问性。 例如，不能具有返回类 `C` 的公共方法 `M`，除非 `C` 也是公共的。 同样，如果 `A` 声明为私有，则不能具有类型 `A` 的受保护的属性。  
   
- 用户定义的运算符始终必须声明为公共和静态。 有关详细信息，请参阅[运算符重载](../../../csharp/language-reference/operators/operator-overloading.md)。  
+ 用户定义的运算符始终必须声明为公共和静态。 有关详细信息，请参阅[运算符重载](../../language-reference/operators/operator-overloading.md)。  
   
  终结器不能具有可访问性修饰符。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "67609641"
  [!code-csharp[csProgGuideObjects#73](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#73)]  
   
 > [!NOTE]
->  受保护的内部可访问性级别意味着受保护或内部，而非受保护和内部。 换而言之，可以从同一程序集中的任何类（包括派生类）访问受保护的内部成员。 若要将同一程序集中的可访问性限制为仅派生类，请声明类本身为内部，并声明其成员为受保护。 此外，从 C# 7.2 开始，可以使用专用受保护的访问修饰符实现相同的效果，而无需使包含的类属于内部。  
+> 受保护的内部可访问性级别意味着受保护或内部，而非受保护和内部。 换而言之，可以从同一程序集中的任何类（包括派生类）访问受保护的内部成员。 若要将同一程序集中的可访问性限制为仅派生类，请声明类本身为内部，并声明其成员为受保护。 此外，从 C# 7.2 开始，可以使用专用受保护的访问修饰符实现相同的效果，而无需使包含的类属于内部。  
   
 ## <a name="other-types"></a>其他类型  
  在命名空间内直接声明的接口可以声明为公共或内部，就像类和结构一样，接口默认设置为内部访问。 接口成员始终为公共的，因为接口的用途是启用其他类型以访问类或结构。 没有访问修饰符可以应用于接口成员。  
@@ -76,15 +76,15 @@ ms.locfileid: "67609641"
   
 ## <a name="see-also"></a>请参阅
 
-- [C# 编程指南](../../../csharp/programming-guide/index.md)
-- [类和结构](../../../csharp/programming-guide/classes-and-structs/index.md)
-- [接口](../../../csharp/programming-guide/interfaces/index.md)
-- [private](../../../csharp/language-reference/keywords/private.md)
-- [public](../../../csharp/language-reference/keywords/public.md)
-- [internal](../../../csharp/language-reference/keywords/internal.md)
-- [受保护](../../../csharp/language-reference/keywords/protected.md)
-- [protected internal](../../../csharp/language-reference/keywords/protected-internal.md)
-- [private protected](../../../csharp/language-reference/keywords/private-protected.md)
-- [class](../../../csharp/language-reference/keywords/class.md)
-- [struct](../../../csharp/language-reference/keywords/struct.md)
-- [interface](../../../csharp/language-reference/keywords/interface.md)
+- [C# 编程指南](../index.md)
+- [类和结构](./index.md)
+- [接口](../interfaces/index.md)
+- [private](../../language-reference/keywords/private.md)
+- [public](../../language-reference/keywords/public.md)
+- [internal](../../language-reference/keywords/internal.md)
+- [受保护](../../language-reference/keywords/protected.md)
+- [protected internal](../../language-reference/keywords/protected-internal.md)
+- [private protected](../../language-reference/keywords/private-protected.md)
+- [class](../../language-reference/keywords/class.md)
+- [struct](../../language-reference/keywords/struct.md)
+- [interface](../../language-reference/keywords/interface.md)

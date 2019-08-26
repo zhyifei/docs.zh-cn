@@ -2,20 +2,20 @@
 title: <transport> 的 <ws2007HttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 692befa3-8b0b-4ec5-b601-755874e98eb0
-ms.openlocfilehash: a1540b53d4af76141c1daee60a6bddbbecd9d6da
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ce8b2acb7d87b094958e20ca0b6cca9fc8266a8d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788292"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69911986"
 ---
-# <a name="transport-of-ws2007httpbinding"></a>\<传输 > 的\<ws2007HttpBinding >
+# <a name="transport-of-ws2007httpbinding"></a>\<ws2007HttpBinding > 的\<传输 >
 定义 HTTP 传输的身份验证设置。  
   
  \<system.serviceModel>  
 \<bindings>  
 \<ws2007HttpBinding>  
-\<binding>  
+\<绑定 >  
 \<安全 >  
 \<transport>  
   
@@ -43,10 +43,10 @@ ms.locfileid: "61788292"
   
 ## <a name="clientcredentialtype-attribute"></a>clientCredentialType 属性  
   
-|“值”|描述|  
+|值|描述|  
 |-----------|-----------------|  
-|None|禁用安全性。|  
-|Basic|使用基本身份验证。|  
+|无|禁用安全性。|  
+|基本|使用基本身份验证。|  
 |摘要|使用摘要式身份验证。|  
 |Ntlm|对 Windows 域使用 NTLM 身份验证作为回退。|  
 |Windows|使用集成 Windows 身份验证。|  
@@ -54,23 +54,23 @@ ms.locfileid: "61788292"
   
 ## <a name="proxycredentialtype-attribute"></a>proxyCredentialType 属性  
   
-|“值”|描述|  
+|值|描述|  
 |-----------|-----------------|  
-|None|禁用安全性。|  
-|Basic|使用基本身份验证。|  
+|无|禁用安全性。|  
+|基本|使用基本身份验证。|  
 |摘要|使用摘要式身份验证。|  
 |Ntlm|对 Windows 域使用 NTLM 作为回退。|  
 |Windows|使用集成 Windows 身份验证。|  
 |证书|使用 X.509 证书对客户端进行身份验证。|  
   
 ### <a name="child-elements"></a>子元素  
- None  
+ 无  
   
 ### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-ws2007httpbinding.md)|表示的安全功能[ \<ws2007HttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md)元素。|  
+|[\<security>](security-of-ws2007httpbinding.md)|表示[ \<ws2007HttpBinding >](ws2007httpbinding.md)元素的安全功能。|  
   
 ## <a name="see-also"></a>请参阅
 
@@ -78,8 +78,8 @@ ms.locfileid: "61788292"
 - <xref:System.ServiceModel.Configuration.BasicHttpSecurityElement.Transport%2A>
 - <xref:System.ServiceModel.WSHttpSecurity.Transport%2A>
 - <xref:System.ServiceModel.Configuration.WSHttpTransportSecurityElement>
-- [保护服务和客户端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [绑定](../../../../../docs/framework/wcf/bindings.md)
-- [配置系统提供的绑定](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [使用绑定配置服务和客户端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../../../docs/framework/misc/binding.md)
+- [保护服务和客户端的安全](../../../wcf/feature-details/securing-services-and-clients.md)
+- [绑定](../../../wcf/bindings.md)
+- [配置系统提供的绑定](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [使用绑定配置服务和客户端](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../misc/binding.md)

@@ -2,12 +2,12 @@
 title: 保证 ADO.NET 应用程序的安全
 ms.date: 03/30/2017
 ms.assetid: 005a1d43-6ee5-471e-ad98-1d30a44d49d5
-ms.openlocfilehash: 32d3de15242aaf9cfacd9371289a5a0a675f884b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d4c9c21f4d1f4a08ca6d676ee7b4c9e80709ba19
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61664189"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963125"
 ---
 # <a name="securing-adonet-applications"></a>保证 ADO.NET 应用程序的安全
 编写安全 ADO.NET 应用程序不仅仅是避免常见的编码缺陷（如不验证用户输入）。 访问数据的应用程序具有许多潜在的故障点，攻击者可以利用这些故障点来检索、操作或损坏敏感数据。 因此，了解安全性的各个方面（从应用程序设计阶段期间的威胁建模过程到应用程序的最终部署和不断的维护）非常重要。  
@@ -39,7 +39,7 @@ ms.locfileid: "61664189"
  [安全注意事项](../../../../docs/framework/data/adonet/ef/security-considerations.md)  
  描述实体框架应用程序的安全性。  
   
- [安全性](../../../../docs/standard/security/index.md)  
+ [安全性](../../../standard/security/index.md)  
  包含描述 .NET 中各个安全方面的主题的链接。  
   
  [安全性工具](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/7w3fd0wb(v=vs.90))  

@@ -1,5 +1,5 @@
 ---
-title: '#如果......#Else 指令 (Visual Basic)'
+title: '#If .。。Then ... #Else 指令 (Visual Basic)'
 ms.date: 04/11/2018
 f1_keywords:
 - vb.#EndIf
@@ -18,12 +18,12 @@ helpviewer_keywords:
 - else directive (#else)
 - '#Else directive [Visual Basic]'
 ms.assetid: 10bba104-e3fd-451b-b672-faa472530502
-ms.openlocfilehash: 8c0aece749edf144fdd5c8ede9ec7e2e4c96ad54
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 697521276e2d5a8d0a4aaae38789a21b7aa87fcb
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61746705"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940761"
 ---
 # <a name="ifthenelse-directives"></a>#If...Then...#Else 指令
 有条件地编译选定的 Visual Basic 代码块。  
@@ -45,25 +45,25 @@ ms.locfileid: "61746705"
   
 ## <a name="parts"></a>部件  
  `expression`  
- 所需`#If`和`#ElseIf`语句，可选其他位置。 任何表达式，只包含一个或多个条件编译器常量、 文本和运算符的计算结果为`True`或`False`。  
+ 对于和`#If` `#ElseIf`语句是必需的, 在其他位置为可选。 任何表达式 (仅由一个或多个条件编译器常量、文本和运算符组成), 其计算`True`结果`False`为或。  
   
  `statements`  
- 所需的`#If`块语句，可选其他位置。 Visual Basic 程序行或如果关联的表达式的计算结果为编译的编译器指令`True`。  
+ 语句块`#If`必需, 在其他位置为可选。 如果关联的表达式的计算结果为`True`, 则 Visual Basic 编译的程序行或编译器指令。  
   
  `#End If`  
- 终止`#If`语句块。  
+ `#If`终止语句块。  
   
 ## <a name="remarks"></a>备注  
- 表面上看的行为`#If...Then...#Else`指令出现相同的`If...Then...Else`语句。 但是，`#If...Then...#Else`指令评估要编译的编译器，内容而`If...Then...Else`语句在运行时评估条件。  
+ 在表面上, `#If...Then...#Else`指令的行为将与`If...Then...Else`语句的行为相同。 但是, `#If...Then...#Else`指令将计算编译器编译的内容, `If...Then...Else`而语句则计算运行时的条件。  
   
- 条件编译通常用于编译不同平台的同一个程序。 它还用来防止调试代码，使其不显示可执行文件。 在条件编译过程中排除的代码完全省略从最终的可执行文件，因此它具有大小或性能没有影响。  
+ 条件编译通常用于针对不同平台编译相同的程序。 它还用于阻止调试代码出现在可执行文件中。 在条件编译期间排除的代码在最终可执行文件中被完全省略, 因此它不会对大小或性能产生任何影响。  
   
- 不考虑任何评估结果，将计算所有表达式使用`Option Compare Binary`。 `Option Compare`语句不会影响中的表达式`#If`和`#ElseIf`语句。  
+ 不管任何计算结果如何, 都将使用`Option Compare Binary`计算所有表达式。 语句`Option Compare`不影响和`#ElseIf`语句中`#If`的表达式。  
   
 > [!NOTE]
->  任何单行形式的`#If`， `#Else`， `#ElseIf`，和`#End If`指令存在。 没有其他代码可以出现在任何指令所在的行。 
+> `#If`不存在`#Else` 、、和`#End If`指令的单行形式。 `#ElseIf` 任何其他代码都不能与任何指令出现在同一行上。 
 
-条件编译块中的语句必须是完整逻辑语句。 例如，不能有条件地编译仅函数的属性，但可以有条件地声明以及其属性的函数：
+条件编译块内的语句必须是完整的逻辑语句。 例如, 你无法有条件地仅编译函数的属性, 但你可以有条件地声明函数及其属性:
 
 ```vb
    #If DEBUG Then

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - handwriting recognition [WPF]
 - recognition of handwriting [WPF]
 ms.assetid: f4e8576d-e731-4bac-9818-22e2ae636636
-ms.openlocfilehash: 417af272514ac9ce68c8faa72339f2befc2dd7c1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d6c09f063b6bd0eef2cb9f6bb444eac980ad4832
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61923378"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956530"
 ---
 # <a name="handwriting-recognition"></a>手写识别
 本节介绍了识别基础知识，因为这与 WPF 平台中数字墨迹有关。  
@@ -22,7 +22,7 @@ ms.locfileid: "61923378"
  以下示例演示如何使用 [Microsoft.Ink.InkCollector](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms583683(v=vs.90)) 类识别墨迹。  
   
 > [!NOTE]
->  此示例要求在系统上安装手写识别器。  
+> 此示例要求在系统上安装手写识别器。  
   
  在 Visual Studio 中创建一个名为 **InkRecognition** 的新 WPF 应用程序项目。 用下列 XAML 代码替换 Window1.xaml 文件的内容。 此代码呈现应用程序的用户界面。  
   

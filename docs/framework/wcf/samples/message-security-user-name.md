@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS Security
 ms.assetid: c63cfc87-6b20-4949-93b3-bcd4b732b0a2
-ms.openlocfilehash: 48d2bddb11873524c8a74748c787e61eec5eb870
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 53836e473fa09e88b4e8266923247db337387944
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65876688"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69930453"
 ---
 # <a name="message-security-user-name"></a>用户名消息安全
 本示例演示如何实现一个应用程序，该应用程序对客户端使用具有用户名身份验证的 WS-Security，并要求使用服务器的 X.509v3 证书对服务器进行身份验证。 客户端与服务器之间的所有应用程序消息均已进行签名和加密。 默认情况下，使用客户端提供的用户名和密码登录有效的 Windows 帐户。 此示例基于[WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md)。 本示例由客户端控制台程序 (Client.exe) 和 Internet 信息服务 (IIS) 所承载的服务库 (Service.dll) 组成。 该服务实现定义“请求-答复”通信模式的协定。  
   
 > [!NOTE]
->  本主题的最后介绍了此示例的设置过程和生成说明。  
+> 本主题的最后介绍了此示例的设置过程和生成说明。  
   
  本示例还演示：  
   
@@ -23,7 +23,7 @@ ms.locfileid: "65876688"
   
 - 如何访问服务代码中的调用方标识信息。  
   
- 服务会公开一个单一终结点以便与使用 Web.config 配置文件定义的服务进行通信。终结点由地址、绑定和协定组成。 使用标准配置的绑定[ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)，其默认值为使用消息安全。 此示例会将设置标准[ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)为使用客户端用户名身份验证。 该行为指定使用用户凭据对服务进行身份验证。 服务器证书必须包含相同的值作为使用者名称`findValue`中的属性[ \<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)。  
+ 服务会公开一个单一终结点以便与使用 Web.config 配置文件定义的服务进行通信。终结点由地址、绑定和协定组成。 绑定配置有标准[ \<的 wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md), 默认为使用消息安全性。 此示例将标准[ \<的 wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)设置为使用客户端用户名身份验证。 该行为指定使用用户凭据对服务进行身份验证。 服务器证书必须包含与`findValue` [ \<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)中的属性相同的使用者名称值。  
   
 ```xml  
 <system.serviceModel>  
@@ -173,7 +173,7 @@ Press <ENTER> to terminate client.
   
 - 授予对证书私钥的权限  
   
-     Setup.bat 批处理文件中的以下行进行 ASP.NET 工作进程帐户访问 LocalMachine 存储区中存储的服务器证书。  
+     ASP.NET 批处理文件中的以下行使在 LocalMachine 存储区中存储的服务器证书可供工作进程帐户访问。  
   
     ```bat
     echo ************  
@@ -191,7 +191,7 @@ Press <ENTER> to terminate client.
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
-1. 请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1. 确保已对[Windows Communication Foundation 示例执行了一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
 2. 若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
   
@@ -199,16 +199,16 @@ Press <ENTER> to terminate client.
   
 1. 请确保路径包括 Makecert.exe 和 FindPrivateKey.exe 所在的文件夹。  
   
-2. 使用管理员特权打开 Visual Studio，请从示例安装文件夹在开发人员命令提示符上运行 Setup.bat。 这将安装运行示例所需的所有证书。  
+2. 从开发人员命令提示中的示例安装文件夹运行安装程序, 并使用管理员权限打开 Visual Studio。 这将安装运行示例所需的所有证书。  
   
     > [!NOTE]
-    >  Setup.bat 批处理文件设计为 Visual Studio 的开发人员命令提示符运行。 这要求路径环境变量指向 SDK 的安装目录。 此环境变量自动设置为 Visual Studio 在开发人员命令提示中。  
+    >  设置 bat 批处理文件设计为从 Visual Studio 的开发人员命令提示中运行。 这要求路径环境变量指向 SDK 的安装目录。 在 Visual Studio 开发人员命令提示中自动设置此环境变量。  
   
 3. 验证是否可以通过输入地址使用浏览器的服务访问 `http://localhost/servicemodelsamples/service.svc` 。
   
 4. 启动 \client\bin 中的 Client.exe。 客户端活动将显示在客户端控制台应用程序上。  
   
-5. 如果客户端和服务能够进行通信，请参见[WCF 示例的故障排除提示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
+5. 如果客户端和服务无法进行通信, 请参阅[WCF 示例的故障排除提示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
   
 ### <a name="to-run-the-sample-across-computers"></a>跨计算机运行示例  
   
@@ -220,7 +220,7 @@ Press <ENTER> to terminate client.
   
 4. 将客户端程序文件复制到客户端计算机上的客户端目录中。 另外，将 Setup.bat、Cleanup.bat 和 ImportServiceCert.bat 文件复制到客户端上。  
   
-5. 在服务器上运行`setup.bat service`使用管理员特权打开在 Visual Studio 的开发人员命令提示。 运行`setup.bat`与`service`参数与计算机的名称的完全限定域名创建一个服务证书并将服务证书导出到名为 Service.cer 的文件。  
+5. 在服务器上, 在`setup.bat service`使用管理员特权打开的 Visual Studio 开发人员命令提示中运行。 使用`setup.bat`参数运行将使用计算机的完全限定的域名创建一个服务证书, 并将服务证书导出到名为的文件。 `service`  
   
 6. 编辑 Web.config 以反映新的证书名称（在 serviceCertificate 元素的 findValue 属性中），该名称与计算机的完全限定域名相同`.`。  
   
@@ -228,13 +228,13 @@ Press <ENTER> to terminate client.
   
 8. 在客户端计算机上的 Client.exe.config 文件中，更改终结点的地址值，使其与服务的新地址相匹配。  
   
-9. 在客户端上运行 ImportServiceCert.bat 在开发人员命令提示符下使用管理员特权打开 Visual Studio。 这会将 Service.cer 文件中的服务证书导入 CurrentUser – TrustedPeople 存储区。  
+9. 在客户端上, 在使用管理员特权打开的 Visual Studio 开发人员命令提示中运行 Importservicecert.bat。 这会将 Service.cer 文件中的服务证书导入 CurrentUser – TrustedPeople 存储区。  
   
-10. 在客户端计算机上，在命令提示符下启动 Client.exe。 如果客户端和服务能够进行通信，请参见[WCF 示例的故障排除提示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
+10. 在客户端计算机上，在命令提示符下启动 Client.exe。 如果客户端和服务无法进行通信, 请参阅[WCF 示例的故障排除提示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
   
 ### <a name="to-clean-up-after-the-sample"></a>运行示例后进行清理  
   
 - 运行完示例后运行示例文件夹中的 Cleanup.bat。  
   
     > [!NOTE]
-    >  此脚本不会在跨计算机运行此示例时移除客户端上的服务证书。 如果有运行在计算机之间使用证书的 Windows Communication Foundation (WCF) 示例，请确保清除已安装在 CurrentUser-TrustedPeople 存储区中的服务证书。 若要执行此操作，请使用以下命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` 例如： `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`。  
+    >  此脚本不会在跨计算机运行此示例时移除客户端上的服务证书。 如果你已运行跨计算机使用证书 Windows Communication Foundation (WCF) 示例, 请确保清除已安装在 CurrentUser-TrustedPeople 存储中的服务证书。 为此, 请使用以下命令:`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`例如: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`。  

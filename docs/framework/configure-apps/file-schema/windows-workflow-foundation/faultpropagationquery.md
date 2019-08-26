@@ -3,21 +3,21 @@ title: <faultPropagationQuery>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 4fb5c2b1-3dad-4eca-9c7f-3efb51899813
-ms.openlocfilehash: f3e281ff8a9de9be41dd6ad9d01ab52798d8e89e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f77a613f4eb0456a0085096aa478d37c78122217
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61794545"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946304"
 ---
 # <a name="faultpropagationquery"></a>\<faultPropagationQuery>
 
 表示一个用于跟踪在活动中发生的错误的处理的查询。  每次 FaultHandler 处理错误时，都会发生此事件。 应使用此类查询来跟踪对在活动中出现的错误进行的处理。 跟踪参与者需要用此查询来订阅错误传播记录。
 
- 有关跟踪配置文件查询的详细信息，请参阅[跟踪配置文件](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)。
+ 有关跟踪配置文件查询的详细信息, 请参阅[跟踪配置文件](../../../windows-workflow-foundation/tracking-profiles.md)。
 
 \<system.serviceModel>\
-\<tracking>\
+\<跟踪 > \
 \<trackingProfile>\
 \<工作流 > \
 \<faultPropagationQueries>\
@@ -46,7 +46,7 @@ ms.locfileid: "61794545"
 
 |特性|描述|
 |---------------|-----------------|
-|activityName|一个字符串，指定传播错误的错误处理程序活动的名称。 默认值为 *，指示为所有活动返回错误传播记录。|
+|activityName|一个字符串, 指定传播错误的错误处理程序活动的名称。 默认值为 *，指示为所有活动返回错误传播记录。|
 |faultHandlerActivityName|一个字符串，指定导致错误的活动的名称。|
 
 ### <a name="child-elements"></a>子元素
@@ -57,11 +57,11 @@ ms.locfileid: "61794545"
 
 |元素|描述|
 |-------------|-----------------|
-|[\<faultPropagationQueries>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/faultpropagationqueries.md)|表示一个配置元素列表，这些元素用于跟踪某个活动中发生的错误的处理。  每次 FaultHandler 处理错误时，都会发生此事件。|
+|[\<faultPropagationQueries>](faultpropagationqueries.md)|表示一个配置元素列表，这些元素用于跟踪某个活动中发生的错误的处理。  每次 FaultHandler 处理错误时，都会发生此事件。|
 
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.FaultPropagationQueryElement?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.FaultPropagationQuery?displayProperty=nameWithType>
-- [工作流跟踪](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [跟踪配置文件](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+- [工作流跟踪](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [跟踪配置文件](../../../windows-workflow-foundation/tracking-profiles.md)

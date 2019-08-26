@@ -15,12 +15,12 @@ helpviewer_keywords:
 - feature security requirements [WPF]
 - managing permissions [WPF]
 ms.assetid: ef2c0810-1dbf-4511-babd-1fab95b523b5
-ms.openlocfilehash: b68148b08cf6b5f980bc09e497e845558ae882fb
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: c3ec6ca6feba975517a9f982bb58e4b061516a61
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69567529"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962808"
 ---
 # <a name="wpf-partial-trust-security"></a>WPF 部分信任安全
 <a name="introduction"></a>一般情况下，应该限制 Internet 应用程序直接访问关键系统资源，防止恶意损坏。 默认情况下, HTML 和客户端脚本语言不能访问关键系统资源。 由于可以从浏览器启动 Windows Presentation Foundation (WPF) 浏览器承载的应用程序, 因此它们应符合一组类似的限制。 若要强制实施这些[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]限制, 需要同时依赖于代码访问安全性 (CAS) 和 ClickOnce (请参阅[WPF 安全策略-平台安全性](wpf-security-strategy-platform-security.md))。 默认情况下, 浏览器承载的应用程序请求 Internet 区域 CA 权限集, 不管它们是从 Internet、本地 intranet 还是本地计算机启动。 如果应用程序的运行权限小于完整权限集，则说明该应用程序正在部分信任环境下运行。  
@@ -87,7 +87,7 @@ ms.locfileid: "69567529"
 |Internet|失败，并显示“未授予信任”|使用证书对 XBAP 进行签名。|  
   
 > [!NOTE]
->  上表中描述的行为针对不遵循 ClickOnce 受信任部署模型的完全信任 XBAP。  
+> 上表中描述的行为针对不遵循 ClickOnce 受信任部署模型的完全信任 XBAP。  
   
  通常，超出允许权限的代码可能是在独立应用程序和浏览器托管的应用程序之间共享的公用代码。 Ca 并[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]提供多种方法来管理这种情况。  
   
@@ -120,7 +120,7 @@ ms.locfileid: "69567529"
  当你需要按权限检查时, 使用 CA 检查权限是一种合适的方法。 然而，这一技巧依赖于在正常处理过程中捕获异常（通常不鼓励这样做），并且可能导致性能问题。 相反, 如果你[!INCLUDE[TLA#tla_xbap](../../../includes/tlasharptla-xbap-md.md)]仅在 Internet 区域沙盒中运行, 则可以<xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A?displayProperty=nameWithType>使用属性[!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)], 该属性将返回 true。  
   
 > [!NOTE]
->  <xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A>仅区分应用程序是否在浏览器中运行, 而不区分应用程序运行时使用的权限集。  
+> <xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A>仅区分应用程序是否在浏览器中运行, 而不区分应用程序运行时使用的权限集。  
   
 <a name="Managing_Permissions"></a>   
 ## <a name="managing-permissions"></a>管理权限  
@@ -149,7 +149,7 @@ ms.locfileid: "69567529"
 |Web 浏览器|HTML 中的安全框架导航|是|是|  
   
 > [!NOTE]
->  如果由用户启动，则剪切和粘贴只允许以部分信任方式执行。  
+> 如果由用户启动，则剪切和粘贴只允许以部分信任方式执行。  
   
  如果需要增加权限，则需要更改项目设置和 ClickOnce 应用程序清单。 有关详细信息，请参阅 [WPF XAML 浏览器应用程序概述](./app-development/wpf-xaml-browser-applications-overview.md)。 以下各个文档可能也会有帮助。  
   

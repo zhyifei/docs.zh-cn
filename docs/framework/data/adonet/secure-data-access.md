@@ -2,12 +2,12 @@
 title: 安全数据访问
 ms.date: 03/30/2017
 ms.assetid: 473ebd69-21a3-4627-b95e-4e04d035c56f
-ms.openlocfilehash: 32106f83785759f4e9aaadcf2198afdcdb24363d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7aa68842ab3733943f84e9d6d9157f7a3d65cac7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61664215"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963140"
 ---
 # <a name="secure-data-access"></a>安全数据访问
 要编写安全的 ADO.NET 代码，必须了解基础数据存储（即数据库）中提供的安全机制。 您还需要考虑应用程序可能包含的其他功能或组件对安全性的影响。  
@@ -24,7 +24,7 @@ ms.locfileid: "61664215"
 |资源|描述|  
 |--------------|-----------------|  
 |[保护连接信息](../../../../docs/framework/data/adonet/protecting-connection-information.md)|描述用于保护连接信息的最佳安全做法和技术，例如使用受保护配置来加密连接字符串。|  
-|[有关数据访问策略建议](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))|提供用于访问数据和执行数据库操作的建议。|  
+|[数据访问策略的建议](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))|提供用于访问数据和执行数据库操作的建议。|  
 |[连接字符串生成器](../../../../docs/framework/data/adonet/connection-string-builders.md)|描述如何在运行时根据用户输入生成连接字符串。|  
 |[SQL Server 安全性概述](../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)|描述 SQL Server 安全架构。|  
   
@@ -46,7 +46,7 @@ ms.locfileid: "61664215"
   
 |资源|描述|  
 |--------------|-----------------|  
-|[脚本侵入概述](https://docs.microsoft.com/previous-versions/aspnet/w1sw53ds(v=vs.100))|描述如何抵御脚本攻击和 SQL 语句攻击。|  
+|[脚本攻击概述](https://docs.microsoft.com/previous-versions/aspnet/w1sw53ds(v=vs.100))|描述如何抵御脚本攻击和 SQL 语句攻击。|  
   
 ## <a name="probing-attacks"></a>探测攻击  
  攻击者通常使用异常信息（如服务器、数据库或表的名称）来发动对系统的攻击。 由于异常包含有关您的应用程序或数据源的特定信息，因此您可以通过仅向客户端公开必要信息来帮助更好地保护应用程序和数据源。  
@@ -55,8 +55,8 @@ ms.locfileid: "61664215"
   
 |资源|描述|  
 |--------------|-----------------|  
-|[异常处理基础知识](../../../../docs/standard/exceptions/exception-handling-fundamentals.md)|描述 try/catch/finally 结构化异常处理的基本形式。|  
-|[与异常有关的最佳做法](../../../../docs/standard/exceptions/best-practices-for-exceptions.md)|描述处理异常的最佳做法。|  
+|[异常处理基础知识](../../../standard/exceptions/exception-handling-fundamentals.md)|描述 try/catch/finally 结构化异常处理的基本形式。|  
+|[与异常有关的最佳做法](../../../standard/exceptions/best-practices-for-exceptions.md)|描述处理异常的最佳做法。|  
   
 ## <a name="protecting-microsoft-access-and-excel-data-sources"></a>保护 Microsoft Access 和 Excel 数据源  
  当具有最少的安全要求或没有安全要求时，Microsoft Access 和 Microsoft Excel 可充当 ADO.NET 应用程序的数据存储区。 其安全功能作为一种阻止手段固然有效，但其作用仅限于阻止不了解情况的用户乱摸乱动而已。 Access 和 Excel 的物理数据文件位于文件系统上，并且注定可供所有用户访问。 这使得这些文件易受到攻击，从而导致文件失窃或数据丢失，因为他人可轻松复制或更改这些文件。 如果需要强有力的安全措施，请使用 SQL Server 或其他基于服务器的数据库，这样便无法从文件系统读取物理数据文件。  
@@ -65,9 +65,9 @@ ms.locfileid: "61664215"
   
 |资源|描述|  
 |--------------|-----------------|  
-|[安全注意事项和 Access 2007 中的指南](https://go.microsoft.com/fwlink/?LinkId=98354)|描述 Access 2007 的安全技术，如加密文件、管理密码、将数据库转换为新的 ACCDB 和 ACCDE 格式以及使用其他安全选项。|  
-|[访问安全性理解工作组信息文件的角色](https://support.microsoft.com/kb/305542)|说明工作组信息文件在 Access 2003 安全性中的作用和关系。|  
-|[经常询问的问题的 Microsoft Access 安全性的 Microsoft Access 2.0 至 2000年版](https://go.microsoft.com/fwlink/?LinkId=47698)|Microsoft Access 可下载版本的安全性常见问题。|  
+|[Access 2007 的安全注意事项和指南](https://go.microsoft.com/fwlink/?LinkId=98354)|描述 Access 2007 的安全技术，如加密文件、管理密码、将数据库转换为新的 ACCDB 和 ACCDE 格式以及使用其他安全选项。|  
+|[了解访问安全性中工作组信息文件的角色](https://support.microsoft.com/kb/305542)|说明工作组信息文件在 Access 2003 安全性中的作用和关系。|  
+|[Microsoft access Security for Microsoft Access 2.0 到2000的常见问题](https://go.microsoft.com/fwlink/?LinkId=47698)|Microsoft Access 可下载版本的安全性常见问题。|  
 ## <a name="enterprise-services"></a>企业服务  
  COM+ 包含其自己的安全模型，该模型依赖于 Windows NT 帐户和进程/线程模拟。 <xref:System.EnterpriseServices> 命名空间提供的包装允许 .NET 应用程序通过 <xref:System.EnterpriseServices.ServicedComponent> 类来集成托管代码与 COM+ 安全服务。  
   
@@ -91,7 +91,7 @@ ms.locfileid: "61664215"
 
 - [保证 ADO.NET 应用程序的安全](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [SQL Server 安全性](../../../../docs/framework/data/adonet/sql/sql-server-security.md)
-- [有关数据访问策略建议](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))
+- [数据访问策略的建议](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))
 - [保护连接信息](../../../../docs/framework/data/adonet/protecting-connection-information.md)
 - [连接字符串生成器](../../../../docs/framework/data/adonet/connection-string-builders.md)
 - [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

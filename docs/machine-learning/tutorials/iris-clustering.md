@@ -2,16 +2,15 @@
 title: 教程：对鸢尾花进行分类 - K 平均值聚类分析
 description: 了解如何在聚类分析方案中使用 ML.NET
 author: pkulikov
-ms.author: johalex
 ms.date: 05/16/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18, title-hack-0516
-ms.openlocfilehash: 965408a180245712ceda2c3c17bdf42755af1c2c
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 772558be14d207475d20083f5a6b729f03766471
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67402457"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666649"
 ---
 # <a name="tutorial-categorize-iris-flowers-using-k-means-clustering-with-mlnet"></a>教程：配合使用 K 平均值聚类分析和 ML.NET 来对鸢尾花分类
 

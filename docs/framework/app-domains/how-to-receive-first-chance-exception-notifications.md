@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 66f002b8-a97d-4a6e-a503-2cec01689113
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 862a224c696ebafb23b30add7c8e8d66e1846b4c
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: a17fae64f8cad58b09908212bae4cf62a156ed95
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65584455"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921522"
 ---
 # <a name="how-to-receive-first-chance-exception-notifications"></a>如何：接收第一机会异常通知
 通过 <xref:System.AppDomain> 类的 <xref:System.AppDomain.FirstChanceException> 事件，可在公共语言运行时开始搜索异常处理程序之前，收到已引发异常的通知。
@@ -91,7 +91,7 @@ ms.locfileid: "65584455"
  每当 `Thrower` 方法在 `AD1` 中引发异常时，`AD1` 中就会引发 <xref:System.AppDomain.FirstChanceException> 事件，并且事件处理程序会显示一条消息。 然后，运行时将查找异常处理程序。 在第一种情况下，可在 `AD1` 中找到异常处理程序。 在第二种情况下，不会在 `AD1` 中处理异常，而是在默认应用程序域中捕获异常。
 
 > [!NOTE]
->  默认应用程序域的名称与可执行文件的名称相同。
+> 默认应用程序域的名称与可执行文件的名称相同。
 
  如果将 <xref:System.AppDomain.FirstChanceException> 事件的处理程序添加到默认应用程序域，则在默认应用程序域处理异常之前，系统将引发并处理该事件。 为此，请将 C# 代码 `AppDomain.CurrentDomain.FirstChanceException += FirstChanceException;`（在 Visual Basic 中为 `AddHandler AppDomain.CurrentDomain.FirstChanceException, FirstChanceException`）添加到 `Main()` 的开头。
 

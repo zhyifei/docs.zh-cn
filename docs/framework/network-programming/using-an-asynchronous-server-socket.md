@@ -17,19 +17,19 @@ helpviewer_keywords:
 - protocols, sockets
 - Internet, sockets
 ms.assetid: 813489a9-3efd-41b6-a33f-371d55397676
-ms.openlocfilehash: 32a2a99d5f71cb500dca467433f138a893d01e5b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 58c9e0846e09774d8c97089016086ecddd2d17ee
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59119920"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69938402"
 ---
 # <a name="using-an-asynchronous-server-socket"></a>使用异步服务器套接字
 异步服务器套接字使用 .NET Framework 异步编程模型处理网络服务请求。 <xref:System.Net.Sockets.Socket> 类遵循标准 .NET Framework 异步命名模式；例如，同步 <xref:System.Net.Sockets.Socket.Accept%2A> 方法对应于异步 <xref:System.Net.Sockets.Socket.BeginAccept%2A> 和 <xref:System.Net.Sockets.Socket.EndAccept%2A> 方法。  
   
  异步服务器套接字需要一个开始接受网络连接请求的方法、一个处理连接请求并开始接收网络数据的回调方法，以及一个结束接收数据的回调方法。 本部分将进一步讨论所有这些方法。  
   
- 在下面的示例中，要开始接受来自网络的连接请求，`StartListening` 方法会初始化 Socket ，然后使用 BeginAccept 方法开始接受新的连接。 当套接字上接收到新的连接请求时，将调用接受回调方法。 它负责获取将要处理连接的 Socket 实例，并将该 Socket 提交给将处理请求的线程。 接受回调方法实现 <xref:System.AsyncCallback> 委托；它返回 void，并取一个 <xref:System.IAsyncResult> 类型的参数。 下面的示例是接受回调方法的 shell。  
+ 在下面的示例中，要开始接受来自网络的连接请求，`StartListening` 方法会初始化 Socket ，然后使用 BeginAccept 方法开始接受新的连接。   当套接字上接收到新的连接请求时，将调用接受回调方法。 它负责获取将要处理连接的 Socket 实例，并将该 Socket 提交给将处理请求的线程。   接受回调方法实现 <xref:System.AsyncCallback> 委托；它返回 void，并取一个 <xref:System.IAsyncResult> 类型的参数。 下面的示例是接受回调方法的 shell。  
   
 ```vb  
 Sub AcceptCallback(ar As IAsyncResult)  
@@ -44,7 +44,7 @@ void AcceptCallback(IAsyncResult ar)
 }  
 ```  
   
- BeginAccept 方法取两个参数：一个指向接受回调方法的 AsyncCallback 委托和一个用于将状态信息传递给回调方法的对象。 在下面的示例中，侦听 Socket 通过 state 参数传递给回调方法。 此示例会创建一个 AsyncCallback 委托并开始接受来自网络的连接。  
+ BeginAccept 方法取两个参数：一个指向接受回调方法的 AsyncCallback 委托和一个用于将状态信息传递给回调方法的对象。   在下面的示例中，侦听 Socket 通过 state 参数传递给回调方法。   此示例会创建一个 AsyncCallback 委托并开始接受来自网络的连接。   
   
 ```vb  
 listener.BeginAccept( _  
@@ -58,7 +58,7 @@ listener.BeginAccept(new AsyncCallback(SocketListener.AcceptCallback), listener)
   
  异步套接字使用系统线程池中的线程处理传入的连接。 一个线程负责接受连接，另一个线程则用于处理每个传入的连接，还有一个线程负责接收来自连接的数据。 这些线程可以是同一个线程，具体取决于线程池分配了哪一个线程。 在下面的示例中，<xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> 类将挂起主线程的执行并在执行可以继续时发出信号。  
   
- 下面的示例演示在本地计算机上创建异步 TCP/IP 套接字并开始接受连接的异步方法。 它假定存在一个名为 `allDone` 的全局 ManualResetEvent，该方法是名为 `SocketListener` 的类的成员，并且假定定义了一个名为 `AcceptCallback` 的回调方法。  
+ 下面的示例演示在本地计算机上创建异步 TCP/IP 套接字并开始接受连接的异步方法。 它假定存在一个名为 `allDone` 的全局 ManualResetEvent，该方法是名为 `SocketListener` 的类的成员，并且假定定义了一个名为 `AcceptCallback` 的回调方法。   
   
 ```vb  
 Public Sub StartListening()  
@@ -125,7 +125,7 @@ public void StartListening()
 }  
 ```  
   
- 接受回调方法（即前例中的 `AcceptCallback`）负责向主应用程序线程发出信号，使其继续处理、建立与客户端的连接并开始异步读取客户端数据。 下面的示例是 `AcceptCallback` 方法的实现的第一部分。 这部分方法向主应用程序线程发出信号，使其继续处理并建立与客户端的连接。 它假定一个名为 `allDone` 的全局 ManualResetEvent。  
+ 接受回调方法（即前例中的 `AcceptCallback`）负责向主应用程序线程发出信号，使其继续处理、建立与客户端的连接并开始异步读取客户端数据。 下面的示例是 `AcceptCallback` 方法的实现的第一部分。 这部分方法向主应用程序线程发出信号，使其继续处理并建立与客户端的连接。 它假定一个名为 `allDone` 的全局 ManualResetEvent。   
   
 ```vb  
 Public Sub AcceptCallback(ar As IAsyncResult)  
@@ -173,7 +173,7 @@ public class StateObject
   
  `AcceptCallback` 方法的这部分（即开始从客户端套接字接收数据的部分）首先初始化 `StateObject` 类的实例，然后调用 <xref:System.Net.Sockets.Socket.BeginReceive%2A> 方法开始从客户端套接字异步读取数据。  
   
- 以下示例显示完整的 `AcceptCallback` 方法。 它假定存在一个名为 `allDone,` 且定义了 `StateObject` 类的全局 ManualResetEvent，并且假定在名为 `SocketListener` 的类中定义了 `ReadCallback` 方法。  
+ 以下示例显示完整的 `AcceptCallback` 方法。 它假定存在一个名为 `allDone,` 且定义了 `StateObject` 类的全局 ManualResetEvent，并且假定在名为 `SocketListener` 的类中定义了 `ReadCallback` 方法。   
   
 ```vb  
 Public Shared Sub AcceptCallback(ar As IAsyncResult)  
@@ -210,7 +210,7 @@ public static void AcceptCallback(IAsyncResult ar)
 }  
 ```  
   
- 需要为异步套接字服务器实现的最终方法是返回客户端发送的数据的读取回调方法。 与接受回调方法一样，读取回调方法也是 AsyncCallback 委托。 此方法将来自客户端套接字的一个或多个字节读入数据缓冲区，然后再次调用 BeginReceive 方法，直到客户端完成数据发送为止。 从客户端读取了整个消息后，将在控制台上显示字符串，且会关闭处理客户端连接的服务器套接字。  
+ 需要为异步套接字服务器实现的最终方法是返回客户端发送的数据的读取回调方法。 与接受回调方法一样，读取回调方法也是 AsyncCallback 委托。  此方法将来自客户端套接字的一个或多个字节读入数据缓冲区，然后再次调用 BeginReceive 方法，直到客户端完成数据发送为止。  从客户端读取了整个消息后，将在控制台上显示字符串，且会关闭处理客户端连接的服务器套接字。  
   
  下面的示例实现 `ReadCallback` 方法。 它假定定义了 `StateObject` 类。  
   
@@ -272,5 +272,5 @@ public static void ReadCallback(IAsyncResult ar)
 
 - [使用同步服务器套接字](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)
 - [异步服务器套接字示例](../../../docs/framework/network-programming/asynchronous-server-socket-example.md)
-- [线程处理](../../../docs/standard/threading/index.md)
+- [线程处理](../../standard/threading/index.md)
 - [使用套接字侦听](../../../docs/framework/network-programming/listening-with-sockets.md)

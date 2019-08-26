@@ -7,40 +7,40 @@ helpviewer_keywords:
 - IsTrue operator [Visual Basic]
 - OrElse operator [Visual Basic]
 ms.assetid: b6cec0f2-61b1-4331-a7f0-4d07ee3179d6
-ms.openlocfilehash: 6c5ec6d953d174b525dee7ad3034d2d01ae4950f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1152f4b512a85ae183f8fc8d476b69685e2926ef
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61768363"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966922"
 ---
 # <a name="istrue-operator-visual-basic"></a>IsTrue 运算符 (Visual Basic)
 确定表达式是否为`True`。  
   
- 不能调用`IsTrue`显式中你的代码，而 Visual Basic 编译器可以使用它来生成代码从`OrElse`子句。 如果你定义类或结构，然后使用在该类型的变量`OrElse`子句，则必须定义`IsTrue`类或结构上。  
+ 你不能`IsTrue`在代码中显式调用, 但是 Visual Basic 编译器可以使用它来生成代码 from `OrElse`子句。 如果定义类或结构, 然后在`OrElse`子句中使用该类型的变量, 则必须在该类或结构上进行定义。 `IsTrue`  
   
- 编译器会考虑`IsTrue`并`IsFalse`作为运算符*匹配对*。 这意味着，如果其中一个定义，您还必须定义另一个。  
+ 编译器将`IsTrue`和`IsFalse`运算符视为匹配的*对*。 这意味着, 如果定义其中一个类型, 则还必须定义另一个。  
   
-## <a name="compiler-use-of-istrue"></a>为 true 时的编译器使用  
- 如果已定义类或结构，可以使用中该类型的变量`For`， `If`， `Else If`，或`While`语句，或在`When`子句。 如果这样做，则编译器会要求将转换到类型的运算符`Boolean`值以便可以测试条件。 它会搜索合适的运算符按以下顺序：  
+## <a name="compiler-use-of-istrue"></a>IsTrue 的编译器使用  
+ 定义了类或结构后, 可以在`For`、 `If`、 `Else If`或`While`语句或`When`子句中使用该类型的变量。 如果执行此操作, 则编译器需要一个运算符, 该运算符将您的`Boolean`类型转换为值, 以便可以测试条件。 它按以下顺序搜索合适的运算符:  
   
-1. 在类或结构的扩大转换运算符`Boolean`。  
+1. 从你的类或结构到`Boolean`的扩大转换运算符。  
   
-2. 在类或结构的扩大转换运算符`Boolean?`。  
+2. 从你的类或结构到`Boolean?`的扩大转换运算符。  
   
-3. `IsTrue`运算符在类或结构上的。  
+3. 类`IsTrue`或结构中的运算符。  
   
-4. 收缩转换到`Boolean?`，并不涉及从转换`Boolean`到`Boolean?`。  
+4. 到`Boolean?`的收缩转换不涉及从`Boolean`到`Boolean?`的转换。  
   
-5. 在类或结构的收缩转换运算符`Boolean`。  
+5. 类或结构`Boolean`中的收缩转换运算符。  
   
- 如果您未定义任何转换为`Boolean`或`IsTrue`运算符，编译器会引发错误。  
+ 如果未定义任何到`Boolean` `IsTrue`或运算符的转换, 则编译器会发出错误消息。  
   
 > [!NOTE]
->  `IsTrue`运算符可以被*重载*，这意味着，某个类或结构可以重新定义其行为时，其操作数的类或结构的类型。 如果你的代码对此类的类或结构使用此运算符，请确保了解其被重新定义的行为。 有关详细信息，请参阅 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
+> 运算符可以重载, 这意味着当类或结构的操作数具有该类或结构的类型时, 该类或结构可以重新定义它的行为。 `IsTrue` 如果你的代码在该类或结构上使用此运算符, 请确保了解其重新定义的行为。 有关详细信息，请参阅 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
   
 ## <a name="example"></a>示例  
- 下面的代码示例定义一个结构，其中包含定义大纲`IsFalse`和`IsTrue`运算符。  
+ 下面的代码示例定义了包含`IsFalse`和`IsTrue`运算符定义的结构的轮廓。  
   
  [!code-vb[VbVbalrOperators#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#28)]  
   

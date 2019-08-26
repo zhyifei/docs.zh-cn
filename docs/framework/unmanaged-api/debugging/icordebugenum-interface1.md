@@ -16,46 +16,46 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eb3aca0713b8b11bdfaa23bf33c8e1a0b302e272
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b25c47e101ad0fb8e8cbdbb2718a41c9be6c0c22
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64606527"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69931987"
 ---
 # <a name="icordebugenum-interface"></a>ICorDebugEnum 接口
 
-调试应用程序所使用的枚举数作为抽象的基接口。  
+用作调试应用程序所使用的枚举器的抽象基接口。  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|[Clone 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-clone-method.md)|创建一份`ICorDebugEnum`对象。|  
-|[GetCount 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-getcount-method.md)|枚举中获取项的数目。|  
+|[Clone 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-clone-method.md)|创建此`ICorDebugEnum`对象的副本。|  
+|[GetCount 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-getcount-method.md)|获取枚举中的项数。|  
 |[Reset 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-reset-method.md)|将光标移到枚举的开头。|  
-|[Skip 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-skip-method.md)|将光标向前移动在枚举中指定数目的项。|  
+|[Skip 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-skip-method.md)|按指定的项数在枚举中向前移动光标。|  
   
 ## <a name="remarks"></a>备注  
- 派生自以下枚举器`ICorDebugEnum`:  
+ 以下枚举器派生自`ICorDebugEnum`:  
   
-- "ICorDebugAppDomainEnum"  
+- ICorDebugAppDomainEnum  
   
-- "ICorDebugAssemblyEnum"  
+- ICorDebugAssemblyEnum  
   
 - [ICorDebugBlockingObjectEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugblockingobjectenum-interface.md)  
   
-- "ICorDebugBreakpointEnum"  
+- ICorDebugBreakpointEnum  
   
-- "ICorDebugChainEnum"  
+- ICorDebugChainEnum  
   
-- "ICorDebugCodeEnum"  
+- ICorDebugCodeEnum  
   
-- "ICorDebugErrorInfoEnum"  
+- ICorDebugErrorInfoEnum  
   
 - [ICorDebugExceptionObjectCallStackEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptionobjectcallstackenum-interface.md)  
   
-- "ICorDebugFrameEnum"  
+- ICorDebugFrameEnum  
   
 - [ICorDebugGCReferenceEnum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md)  
   
@@ -65,33 +65,33 @@ ms.locfileid: "64606527"
   
 - [ICorDebugHeapSegmentEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapsegmentenum-interface.md)  
   
-- "ICorDebugModuleEnum"  
+- ICorDebugModuleEnum  
   
-- "ICorDebugObjectEnum"  
+- ICorDebugObjectEnum  
   
-- "ICorDebugProcessEnum"  
+- ICorDebugProcessEnum  
   
-- "ICorDebugStepperEnum"  
+- ICorDebugStepperEnum  
   
-- "ICorDebugThreadEnum"  
+- ICorDebugThreadEnum  
   
-- "ICorDebugTypeEnum"  
+- ICorDebugTypeEnum  
   
-- "ICorDebugValueEnum"  
+- ICorDebugValueEnum  
   
 - [ICorDebugVariableHomeEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-interface.md)  
   
 > [!NOTE]
->  此接口不支持跨计算机或跨进程远程调用。  
+> 此接口不支持跨计算机或跨进程远程调用。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头：** Cordebug.idl, Cordebug.idl  
   
- **库：** CorGuids.lib  
+ **类库**CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

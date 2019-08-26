@@ -2,12 +2,12 @@
 title: LINQ to XML 概述 (C#)
 ms.date: 10/30/2018
 ms.assetid: 716b94d3-0091-4de1-8e05-41bc069fa9dd
-ms.openlocfilehash: 6a7d681b52bbc6ce515e2202f3f448ce4ba79ced
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.openlocfilehash: 46a2c0282da01000f3f524614a7a4cf851b7f4e1
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67267959"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69591897"
 ---
 # <a name="linq-to-xml-overview-c"></a>LINQ to XML 概述 (C#)
 
@@ -116,11 +116,11 @@ new XElement("Contacts",
 );
 ```
 
-有关详细信息，请参阅[创建 XML 树 (C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees-linq-to-xml-2.md)。
+有关详细信息，请参阅[创建 XML 树 (C#)](./creating-xml-trees-linq-to-xml-2.md)。
 
 ## <a name="see-also"></a>请参阅
 
-- [参考 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/reference-linq-to-xml.md)
-- [LINQ to XML 与DOM (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-vs-dom.md)
-- [LINQ to XML 与其他 XML 技术](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-vs-other-xml-technologies.md)
+- [参考 (LINQ to XML)](./reference-linq-to-xml.md)
+- [LINQ to XML 与DOM (C#)](./linq-to-xml-vs-dom.md)
+- [LINQ to XML 与其他 XML 技术](./linq-to-xml-vs-other-xml-technologies.md)
 - <xref:System.Xml.Linq>

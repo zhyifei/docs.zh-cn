@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c48a7f93-83bb-4a06-aea0-d8e7bd1502ad
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6851ac334d439f2e5c0f6056f5226e3faa1503d5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6b47abc2adb7b515e4d1d76da58c150703a8693d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392572"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69957440"
 ---
 # <a name="composition-analysis-tool-mefx"></a>结构分析工具 (Mefx)
 组合分析工具 (Mefx) 是一款命令行应用程序，用于分析包含 Managed Extensibility Framework (MEF) 部件的库 (.dll) 和应用程序 (.exe) 文件。 Mefx 的主要用途是为开发人员提供一种无需向应用程序本身添加繁琐的跟踪代码即可诊断其 MEF 应用程序中组合失败情况的方法。 它还可用于帮助你了解第三方所提供库中的部件。 本主题介绍如何使用 Mefx，并提供其语法参考。  
@@ -37,7 +37,7 @@ mefx /file:MyAddIn.dll /directory:Program\AddIns [action...]
 ```  
   
 > [!NOTE]
->  每个 .dll 或 .exe 应仅加载一次。 如果多次加载文件，则该工具可能返回错误信息。  
+> 每个 .dll 或 .exe 应仅加载一次。 如果多次加载文件，则该工具可能返回错误信息。  
   
  列出文件和目录后，必须指定一个命令并为该命令指定一个选项。  
   
@@ -72,7 +72,7 @@ MyAddin.AddIn
   
 <a name="finding_rejected_parts"></a>   
 ## <a name="finding-rejected-parts"></a>查找拒绝的部件  
- 一旦加载可用部件，Mefx 将使用 MEF 组合引擎将它们组合起来。 不能成功组合的部件称为 *“拒绝的部件”*。 若要列出所有拒绝的部件，请使用 `/rejected` 操作。  
+ 一旦加载可用部件，Mefx 将使用 MEF 组合引擎将它们组合起来。 不能成功组合的部件称为 *“拒绝的部件”* 。 若要列出所有拒绝的部件，请使用 `/rejected` 操作。  
   
  你可以结合使用 `/verbose` 选项和 `/rejected` 选项打印关于拒绝的部件的详细信息。 在下面的示例中， `ClassLibrary1` DLL 包含 `AddIn` 部件，该部件导入 `MemberPart` 和 `ChainOne` 部件。 `ChainOne` 导入 `ChainTwo`，但 `ChainTwo` 不存在。 这意味着， `ChainOne` 被拒绝，这将导致 `AddIn` 被拒绝。  
   
@@ -114,7 +114,7 @@ from: ClassLibrary1.ChainOne from: AssemblyCatalog (Assembly="ClassLibrary1, Ver
  在前面的示例中使用 `/causes` 操作将仅列出 `ChainOne`的信息，其未填充导入是 `AddIn`被拒的根源。 `/causes` 操作可在正常选项和 `/verbose` 选项中使用。  
   
 > [!NOTE]
->  在大多数情况下，Mefx 将能够诊断级联失败的根源。 但是，在以编程方式将部件添加到容器的情况下，在涉及层次结构容器的情况下，或者在涉及自定义 `ExportProvider` 实现的情况下，Mefx 将不能诊断原因。 一般情况下，因尽可能避免前面所述的各种情况，因为失败原因通常很难诊断。  
+> 在大多数情况下，Mefx 将能够诊断级联失败的根源。 但是，在以编程方式将部件添加到容器的情况下，在涉及层次结构容器的情况下，或者在涉及自定义 `ExportProvider` 实现的情况下，Mefx 将不能诊断原因。 一般情况下，因尽可能避免前面所述的各种情况，因为失败原因通常很难诊断。  
   
 <a name="white_lists"></a>   
 ## <a name="white-lists"></a>白名单  

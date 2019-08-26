@@ -2,17 +2,17 @@
 title: 在 C# 中创建 XML 树 (LINQ to XML)
 ms.date: 08/31/2018
 ms.assetid: cc74234a-0bac-4327-9c8c-5a2ead15b595
-ms.openlocfilehash: 37970b58519f5ff28165b45ebc729cc0a7f447d3
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: a77171ebbc07e54f6988fb97aff197b4c6d31721
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66487503"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594621"
 ---
 # <a name="creating-xml-trees-in-c-linq-to-xml"></a>在 C# 中创建 XML 树 (LINQ to XML)
 本节提供有关使用 C# 来创建 XML 树的信息。  
   
- 有关使用 LINQ 查询结果作为 <xref:System.Xml.Linq.XElement> 内容的信息，请参阅[功能构造 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/functional-construction-linq-to-xml.md)。  
+ 有关使用 LINQ 查询结果作为 <xref:System.Xml.Linq.XElement> 内容的信息，请参阅[功能构造 (LINQ to XML) (C#)](./functional-construction-linq-to-xml.md)。  
   
 ## <a name="constructing-elements"></a>构造元素
  通过 <xref:System.Xml.Linq.XElement> 和 <xref:System.Xml.Linq.XAttribute> 构造函数的签名，可以将元素或属性的内容作为参数传递到构造函数。 由于其中一个构造函数使用可变数目的参数，因此可以传递任意数目的子元素。 当然，这些子元素中的每一个都可以包含它们自己的子元素。 对任意元素，可以添加任意多个属性。  
@@ -236,4 +236,4 @@ Console.WriteLine("Child2 was {0}",
 
 ## <a name="see-also"></a>请参阅
 
-- [创建 XML 树 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md)
+- [创建 XML 树 (C#)](./linq-to-xml-overview.md)

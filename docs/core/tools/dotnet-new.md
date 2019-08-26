@@ -2,12 +2,12 @@
 title: dotnet new 命令
 description: dotnet new 命令可根据指定模板新建 .NET Core 项目。
 ms.date: 05/06/2019
-ms.openlocfilehash: f8bc8cb59ae6e421f4e9bd05925376399939056d
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: c9e960bab0e28e88b0cc8d431dad3b9f3f00c9c0
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878319"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69660543"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -66,7 +66,7 @@ dotnet new [-h|--help]
 
 调用命令时要实例化的模板。 每个模板可能具有可传递的特定选项。 有关详细信息，请参阅[模板选项](#template-options)。
 
-如果 `TEMPLATE` 值与“模板”或“短名称”列中的文本不完全匹配，则会对这两列执行 substring 匹配。
+如果 `TEMPLATE` 值与“模板”或“短名称”列中的文本不完全匹配，则会对这两列执行 substring 匹配   。
 
 # <a name="net-core-22tabnetcore22"></a>[.NET Core 2.2](#tab/netcore22)
 
@@ -220,7 +220,7 @@ dotnet new [-h|--help]
 从提供的 `PATH` 或 `NUGET_ID` 卸载源或模板包。 如果排除 `<PATH|NUGET_ID>` 值，将显示所有当前安装的模板包及其关联的模板。
 
 > [!NOTE]
-> 若要使用 `PATH` 卸载模板，需要完全限定路径。 例如，C:/Users/\<USER>/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp 有效，但是包含文件夹中的 ./GarciaSoftware.ConsoleTemplate.CSharp 无效。
+> 若要使用 `PATH` 卸载模板，需要完全限定路径。 例如，C:/Users/\<USER>/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp  有效，但是包含文件夹中的 ./GarciaSoftware.ConsoleTemplate.CSharp  无效。
 > 此外，模板路径中不要包含最后的终止目录斜杠。
 
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
@@ -271,7 +271,7 @@ dotnet new [-h|--help]
 从提供的 `PATH` 或 `NUGET_ID` 卸载源或模板包。
 
 > [!NOTE]
-> 若要使用 `PATH` 卸载模板，需要完全限定路径。 例如，C:/Users/\<USER>/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp 有效，但是包含文件夹中的 ./GarciaSoftware.ConsoleTemplate.CSharp 无效。
+> 若要使用 `PATH` 卸载模板，需要完全限定路径。 例如，C:/Users/\<USER>/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp  有效，但是包含文件夹中的 ./GarciaSoftware.ConsoleTemplate.CSharp  无效。
 > 此外，模板路径中不要包含最后的终止目录斜杠。
 
 # <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
@@ -318,7 +318,7 @@ dotnet new [-h|--help]
 从提供的 `PATH` 或 `NUGET_ID` 卸载源或模板包。
 
 > [!NOTE]
-> 若要使用源 `PATH` 卸载模板，需要完全限定路径。 例如，C:/Users/\<USER>/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp 有效，但是包含文件夹中的 ./GarciaSoftware.ConsoleTemplate.CSharp 无效。 此外，模板路径中不要包含最后的终止目录斜杠。
+> 若要使用源 `PATH` 卸载模板，需要完全限定路径。 例如，C:/Users/\<USER>/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp  有效，但是包含文件夹中的 ./GarciaSoftware.ConsoleTemplate.CSharp  无效。 此外，模板路径中不要包含最后的终止目录斜杠。
 > 
 > 如果无法确定卸载模板所需的 `PATH` 或 `NUGET_ID` 参数，则在没有参数的情况下运行 `dotnet new --uninstall` 将列出所有已安装的模板以及卸载它们所需的参数。
 
@@ -367,7 +367,7 @@ dotnet new [-h|--help]
 
 **angular、react、reactredux**
 
-`--exclude-launch-settings` - 从生成的模板中排除 launchSettings.json。
+`--exclude-launch-settings` - 从生成的模板中排除 launchSettings.json  。
 
 `--no-restore` - 在项目创建期间不执行隐式还原。
 
@@ -411,7 +411,7 @@ dotnet new [-h|--help]
 
 **web**
 
-`--exclude-launch-settings` - 从生成的模板中排除 launchSettings.json。
+`--exclude-launch-settings` - 从生成的模板中排除 launchSettings.json  。
 
 `--no-restore` - 在项目创建期间不执行隐式还原。
 
@@ -448,7 +448,7 @@ dotnet new [-h|--help]
 
 `-r|--org-read-access` - 允许此应用程序对目录进行读取访问。 仅适用于 `SingleOrg` 或 `MultiOrg` 身份验证。
 
-`--exclude-launch-settings` - 从生成的模板中排除 launchSettings.json。
+`--exclude-launch-settings` - 从生成的模板中排除 launchSettings.json  。
 
 `--no-https` - 项目不需要 HTTPS。 `app.UseHsts` 和 `app.UseHttpsRedirection` 未添加到 `Startup.Configure` 中。 此选项仅适用于未使用 `Individual`、`IndividualB2C``SingleOrg` 和 `MultiOrg` 的情况。
 
@@ -479,7 +479,7 @@ dotnet new [-h|--help]
 
 `-r|--org-read-access` - 允许此应用程序对目录进行读取访问。 仅适用于 `SingleOrg` 或 `MultiOrg` 身份验证。
 
-`--exclude-launch-settings` - 从生成的模板中排除 launchSettings.json。
+`--exclude-launch-settings` - 从生成的模板中排除 launchSettings.json  。
 
 `--no-https` - 项目不需要 HTTPS。 `app.UseHsts` 和 `app.UseHttpsRedirection` 未添加到 `Startup.Configure` 中。 此选项仅适用于未使用 `Individual`、`IndividualB2C``SingleOrg` 和 `MultiOrg` 的情况。
 
@@ -489,11 +489,11 @@ dotnet new [-h|--help]
 
 **globaljson**
 
-`--sdk-version <VERSION_NUMBER>` - 指定要在 global.json 文件中使用的 .NET Core SDK 版本。
+`--sdk-version <VERSION_NUMBER>` - 指定要在 global.json  文件中使用的 .NET Core SDK 版本。
 
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
-console、angular、react、reactredux、razorclasslib
+console、angular、react、reactredux、razorclasslib 
 
 `--no-restore` - 在项目创建期间不执行隐式还原。
 
@@ -511,11 +511,11 @@ console、angular、react、reactredux、razorclasslib
 
 **globaljson**
 
-`--sdk-version <VERSION_NUMBER>` - 指定要在 global.json 文件中使用的 .NET Core SDK 版本。
+`--sdk-version <VERSION_NUMBER>` - 指定要在 global.json  文件中使用的 .NET Core SDK 版本。
 
 **web**
 
-`--exclude-launch-settings` - 从生成的模板中排除 launchSettings.json。
+`--exclude-launch-settings` - 从生成的模板中排除 launchSettings.json  。
 
 `--no-restore` - 在项目创建期间不执行隐式还原。
 
@@ -544,7 +544,7 @@ console、angular、react、reactredux、razorclasslib
 
 `-r|--org-read-access` - 允许此应用程序对目录进行读取访问。 仅适用于 `SingleOrg` 或 `MultiOrg` 身份验证。
 
-`--exclude-launch-settings` - 从生成的模板中排除 launchSettings.json。
+`--exclude-launch-settings` - 从生成的模板中排除 launchSettings.json  。
 
 `-uld|--use-local-db` - 指定应使用 LocalDB，而不使用 SQLite。 仅适用于 `Individual` 或 `IndividualB2C` 身份验证。
 
@@ -583,7 +583,7 @@ console、angular、react、reactredux、razorclasslib
 
 `-r|--org-read-access` - 允许此应用程序对目录进行读取访问。 仅适用于 `SingleOrg` 或 `MultiOrg` 身份验证。
 
-`--exclude-launch-settings` - 从生成的模板中排除 launchSettings.json。
+`--exclude-launch-settings` - 从生成的模板中排除 launchSettings.json  。
 
 `--use-browserlink` - 在项目中添加 BrowserLink。
 
@@ -623,11 +623,11 @@ console、angular、react、reactredux、razorclasslib
 
 **globaljson**
 
-`--sdk-version <VERSION_NUMBER>` - 指定要在 global.json 文件中使用的 .NET Core SDK 版本。
+`--sdk-version <VERSION_NUMBER>` - 指定要在 global.json  文件中使用的 .NET Core SDK 版本。
 
 **web**
 
-`--use-launch-settings` - 在生成的模板输出中添加 launchSettings.json。
+`--use-launch-settings` - 在生成的模板输出中添加 launchSettings.json  。
 
 `--no-restore` - 在项目创建期间不执行隐式还原。
 
@@ -654,7 +654,7 @@ console、angular、react、reactredux、razorclasslib
 
 `-r|--org-read-access` - 允许此应用程序对目录进行读取访问。 仅适用于 `SingleOrg` 或 `MultiOrg` 身份验证。
 
-`--use-launch-settings` - 在生成的模板输出中添加 launchSettings.json。
+`--use-launch-settings` - 在生成的模板输出中添加 launchSettings.json  。
 
 `-uld|--use-local-db` - 指定应使用 LocalDB，而不使用 SQLite。 仅适用于 `Individual` 或 `IndividualB2C` 身份验证。
 
@@ -691,7 +691,7 @@ console、angular、react、reactredux、razorclasslib
 
 `-r|--org-read-access` - 允许此应用程序对目录进行读取访问。 仅适用于 `SingleOrg` 或 `MultiOrg` 身份验证。
 
-`--use-launch-settings` - 在生成的模板输出中添加 launchSettings.json。
+`--use-launch-settings` - 在生成的模板输出中添加 launchSettings.json  。
 
 `--use-browserlink` - 在项目中添加 BrowserLink。
 
@@ -755,11 +755,11 @@ console、angular、react、reactredux、razorclasslib
 
 `dotnet new mvc -l`
 
-列出与“we”子字符串匹配的所有模板。 找不到完全匹配，因此子字符串匹配针对短名称和名称列运行。
+列出与“we”子字符串匹配的所有模板  。 找不到完全匹配，因此子字符串匹配针对短名称和名称列运行。
 
 `dotnet new we -l`
 
-尝试调用与 ng 匹配的模板。 如果无法确定单个匹配项，请列出部分匹配项的模板。
+尝试调用与 ng 匹配的模板  。 如果无法确定单个匹配项，请列出部分匹配项的模板。
 
 `dotnet new ng`
 
@@ -767,13 +767,13 @@ console、angular、react、reactredux、razorclasslib
 
 `dotnet new -i Microsoft.DotNet.Web.Spa.ProjectTemplates::2.0.0`
 
-在当前目录中创建 global.json，将 SDK 版本设为 2.0.0（仅适用于 .NET Core SDK 2.0 或更高版本）：
+在当前目录中创建 global.json，将 SDK 版本设为 2.0.0（仅适用于 .NET Core SDK 2.0 或更高版本）  ：
 
 `dotnet new globaljson --sdk-version 2.0.0`
 
 ## <a name="see-also"></a>请参阅
 
 - [dotnet new 自定义模板](custom-templates.md)
-- [创建 dotnet new 自定义模板](~/docs/core/tutorials/create-custom-template.md)
+- [创建 dotnet new 自定义模板](../tutorials/create-custom-template.md)
 - [dotnet/dotnet-template-samples GitHub 存储库](https://github.com/dotnet/dotnet-template-samples)
 - [dotnet new 可用模板](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new)

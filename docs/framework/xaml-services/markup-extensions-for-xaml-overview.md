@@ -5,12 +5,12 @@ helpviewer_keywords:
 - markup extensions [XAML Services], custom
 - XAML [XAML Services], markup extensions
 ms.assetid: 261b2b11-2dc0-462f-8c66-55b8c9c6e436
-ms.openlocfilehash: 29cf4e03c1e4f91cd4390b84dd62c07268fe0189
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 5c29899846e7210c02b6bcc2b677b05581a5c6b1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364327"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939708"
 ---
 # <a name="markup-extensions-for-xaml-overview"></a>XAML 的标记扩展概述
 标记扩展是一种用于获取既不是基元也不是特定 XAML 类型的值的 XAML 方法。 对于特性用法，标记扩展使用已知的左大括号 `{` 字符序列输入标记扩展范围，并使用右大括号 `}` 退出。 使用 .NET Framework XAML 服务时，可以使用 System.Xaml 程序集中的某些预定义 XAML 语言标记扩展。 还可以使用 <xref:System.Windows.Markup.MarkupExtension> 类（在 System.Xaml 中定义）的子类，并定义自己的标记扩展。 或者，如果已在引用特定框架，则可以使用由该框架定义的标记扩展。  
@@ -22,7 +22,7 @@ ms.locfileid: "68364327"
  .NET Framework XAML 服务实现了几个标记扩展来实现 XAML 语言支持。 这些标记扩展与作为一种语言的 XAML 规范各部分相对应。 这些扩展通常在语法中可由 `x:` 前缀进行标识（如常见用法中所见）。 这些 XAML 语言元素的 .NET Framework XAML 服务实现都派生自  <xref:System.Windows.Markup.MarkupExtension> 基类。  
   
 > [!NOTE]
->  `x:` 前缀用于 XAML 语言命名空间中的典型 XAML 命名空间映射（在 XAML 生成的根元素中）。 例如, 用于各种特定框架的 Visual Studio 项目和页面模板会使用此`x:`映射启动一个 XAML 文件。 可以在自己的 XAML 命名空间映射中选择不同的前缀标记，但是本文档采用默认值 `x:` 映射来标识作为 XAML 语言 XAML 命名空间的已定义部分的实体，而不是采用特定框架的默认 XAML 命名空间或其他任意 CLR 或 XML 命名空间。  
+> `x:` 前缀用于 XAML 语言命名空间中的典型 XAML 命名空间映射（在 XAML 生成的根元素中）。 例如, 用于各种特定框架的 Visual Studio 项目和页面模板会使用此`x:`映射启动一个 XAML 文件。 可以在自己的 XAML 命名空间映射中选择不同的前缀标记，但是本文档采用默认值 `x:` 映射来标识作为 XAML 语言 XAML 命名空间的已定义部分的实体，而不是采用特定框架的默认 XAML 命名空间或其他任意 CLR 或 XML 命名空间。  
   
 ### <a name="xtype"></a>x:Type  
  `x:Type` 为命名类型提供 <xref:System.Type> 对象。 此功能最常在使用基础 CLR 类型和类型派生作为分组名字对象或标识符的延迟机制中使用。 WPF 样式和模板以及其 `TargetType` 属性的用法是一个具体示例。 有关详细信息，请参阅 [x:Type Markup Extension](x-type-markup-extension.md)。  

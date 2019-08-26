@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: f93b03b0-1778-43fc-bc6d-35983d210e74
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 41070b5d51f0b613d7a6bbbc72b24a8c1793964d
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: d6517edcc2784b7d70c08c4d15d837fc1f209c49
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586109"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69928243"
 ---
 # <a name="how-to-examine-and-instantiate-generic-types-with-reflection"></a>如何：使用反射检查和实例化泛型类型
 获取泛型类型信息的方式与获取其他类型信息的方式相同：检查表示泛型类型的 <xref:System.Type> 对象。 主要的差异在于，泛型类型具有表示其泛型类型参数的 <xref:System.Type> 对象列表。 本部分的第一个过程是检查泛型类型。  
@@ -121,4 +121,4 @@ ms.locfileid: "65586109"
 - <xref:System.Reflection.MethodInfo>
 - [反射类型和泛型类型](../../../docs/framework/reflection-and-codedom/reflection-and-generic-types.md)
 - [查看类型信息](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)
-- [泛型](../../../docs/standard/generics/index.md)
+- [泛型](../../standard/generics/index.md)

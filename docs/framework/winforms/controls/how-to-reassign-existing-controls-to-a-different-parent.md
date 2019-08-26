@@ -6,29 +6,27 @@ helpviewer_keywords:
 - layout [Windows Forms], resizing
 - layout [Windows Forms], child controls
 ms.assetid: 5a5723ff-34e0-4b6f-a57b-be4ebe35cb34
-ms.openlocfilehash: a65b3c2b596a2d88ce4236aeadd86993bb268aa6
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+author: gewarren
+ms.author: gewarren
+manager: jillfra
+ms.openlocfilehash: 84e662e0bd2689115abe128c6442e4462eed3e18
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039790"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69987036"
 ---
-# <a name="how-to-reassign-existing-controls-to-a-different-parent"></a>如何：将现有的控件重新分配给不同的父控件
+# <a name="how-to-reassign-existing-controls-to-a-different-parent"></a>如何：将现有控件重新分配给不同的父控件
+
 可以将你窗体中的控件分配到新容器控件。
 
-## <a name="to-reassign-existing-controls-to-a-different-parent"></a>若要将现有的控件重新分配给不同的父控件
+1. 在 Visual Studio 中, 将<xref:System.Windows.Forms.Button> **"工具箱**" 中的三个控件拖到窗体上。 将其相邻放置，但不用对齐它们。
 
-1. 将三个 <xref:System.Windows.Forms.Button> 控件从“工具箱” 拖到窗体上。
-
-     将其相邻放置，但不用对齐它们。
-
-2. 在“工具箱”中，单击 <xref:System.Windows.Forms.FlowLayoutPanel> 控件图标。
-
-     请勿将该图标拖动到窗体上。
+2. 在“工具箱”中，单击 <xref:System.Windows.Forms.FlowLayoutPanel> 控件图标。 (请勿将该图标拖动到窗体上。)
 
 3. 将鼠标指针移至靠近这 3 个 <xref:System.Windows.Forms.Button> 控件。
 
-     指针更改为十字线时就会附上 <xref:System.Windows.Forms.FlowLayoutPanel> 控件图标。
+   指针更改为十字线时就会附上 <xref:System.Windows.Forms.FlowLayoutPanel> 控件图标。
 
 4. 单击并按住鼠标按钮。
 
@@ -38,12 +36,11 @@ ms.locfileid: "69039790"
 
 7. 释放鼠标按钮。
 
-     这三种 <xref:System.Windows.Forms.Button> 控件现在插入到 <xref:System.Windows.Forms.FlowLayoutPanel> 控件中。
+   这三种 <xref:System.Windows.Forms.Button> 控件现在插入到 <xref:System.Windows.Forms.FlowLayoutPanel> 控件中。
 
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Windows.Forms.FlowLayoutPanel>
 - <xref:System.Windows.Forms.TableLayoutPanel>
-- [在 Windows 窗体上排列控件](arranging-controls-on-windows-forms.md)
 - [演练：使用 TableLayoutPanel 排列 Windows 窗体上的控件](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
 - [演练：使用对齐线排列 Windows 窗体上的控件](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)

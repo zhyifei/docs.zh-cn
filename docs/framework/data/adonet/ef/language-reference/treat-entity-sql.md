@@ -2,12 +2,12 @@
 title: TREAT (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 5b77f156-55de-4cb4-8154-87f707d4c635
-ms.openlocfilehash: e1382c4daa513477011a1d1c2132840dfae84de0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 15664da02189dd618784d55c07aaf4db38a2f656
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879562"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69929291"
 ---
 # <a name="treat-entity-sql"></a>TREAT (Entity SQL)
 将特定基类型的对象视为指定派生类型的对象。  
@@ -23,13 +23,13 @@ TREAT ( expression as type)
  任何返回实体的有效查询表达式。  
   
 > [!NOTE]
->  指定表达式的类型必须为指定数据类型的子类型，或者该数据类型必须为表达式的类型的子类型。  
+> 指定表达式的类型必须为指定数据类型的子类型，或者该数据类型必须为表达式的类型的子类型。  
   
  `type`  
  一个实体类型。 该类型必须由命名空间进行限定。  
   
 > [!NOTE]
->  指定表达式必须为指定数据类型的子类型，或者该数据类型必须为该表达式的子类型。  
+> 指定表达式必须为指定数据类型的子类型，或者该数据类型必须为该表达式的子类型。  
   
 ## <a name="return-value"></a>返回值  
  一个具有指定数据类型的值。  
@@ -48,7 +48,7 @@ WHERE p IS OF (NamespaceName.Employee)
  此查询将 `Person` 实体向上转换为 `Employee` 类型。 如果 p 的值的实际类型不是 `Employee`，则表达式会生成值 `null`。  
   
 > [!NOTE]
->  指定的表达式`Employee`必须是指定的数据类型的子类型`Person`，或者该数据类型必须为表达式的子类型。 否则，表达式会导致编译时错误。  
+> 指定的表达式`Employee`必须为指定数据类型`Person`的子类型, 或者该数据类型必须为该表达式的子类型。 否则，表达式会导致编译时错误。  
   
  下表显示了 TREAT 在某些典型模式和非常见模式下的行为。 所有异常都在调用提供程序之前从客户端引发：  
   

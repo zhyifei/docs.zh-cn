@@ -10,15 +10,15 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], codes
 - errors [Visual Basic], simulating
 ms.assetid: 85cd5c59-5224-4f02-aaf5-fcfefab17a29
-ms.openlocfilehash: 8ac7cee2f9959bc75df165d00d3a0a67e1dd9af0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7b926214d3be7f5f57783a8599acf1bb1042f956
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61982392"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69944446"
 ---
 # <a name="error-statement"></a>Error 语句
-模拟错误的匹配项。  
+模拟出现错误的情况。  
   
 ## <a name="syntax"></a>语法  
   
@@ -31,26 +31,26 @@ Error errornumber
  必需。 可以是任何有效的错误号。  
   
 ## <a name="remarks"></a>备注  
- `Error`语句支持向后兼容性。 在新代码，尤其是在创建对象时，使用`Err`对象的`Raise`方法以生成运行时错误。  
+ 支持`Error`语句, 以便向后兼容。 在新代码中, 特别是在创建对象时`Err` , 使用`Raise`对象的方法来生成运行时错误。  
   
- 如果`errornumber`定义，则`Error`语句的属性后调用错误处理程序`Err`对象分配以下默认值：  
+ 如果`errornumber`定义了`Error` , 则在为`Err`对象的属性分配以下默认值之后, 语句将调用错误处理程序:  
   
-|属性|“值”|  
+|属性|值|  
 |--------------|-----------|  
-|`Number`|值指定为参数`Error`语句。 可以是任何有效的错误号。|  
-|`Source`|当前的 Visual Basic 项目的名称。|  
-|`Description`|字符串表达式的返回值对应`Error`函数为指定`Number`，如果存在此字符串。 如果字符串不存在，`Description`包含一个零长度字符串 ("")。|  
-|`HelpFile`|完全限定的驱动器、 路径和相应的 Visual Basic 帮助文件的文件名。|  
-|`HelpContext`|相应的 Visual Basic 帮助文件上下文 ID 的错误相对应的`Number`属性。|  
-|`LastDLLError`|为零。|  
+|`Number`|指定为`Error`语句的参数的值。 可以是任何有效的错误号。|  
+|`Source`|当前 Visual Basic 项目的名称。|  
+|`Description`|对应于指定`Error` `Number`的函数的返回值的字符串表达式 (如果此字符串存在)。 如果该字符串不存在, `Description`则包含一个长度为零的字符串 ("")。|  
+|`HelpFile`|适当的 Visual Basic 帮助文件的完全限定驱动器、路径和文件名。|  
+|`HelpContext`|对应于`Number`属性的错误的相应 Visual Basic 帮助文件上下文 ID。|  
+|`LastDLLError`|无.|  
   
- 如果没有错误处理程序存在，或者如果未启用，一条错误消息创建并显示从`Err`对象属性。  
+ 如果没有错误处理程序, 或者未启用任何错误处理程序, 则将创建错误消息并将`Err`其显示在对象属性中。  
   
 > [!NOTE]
->  某些 Visual Basic 主机应用程序无法创建对象。 请参阅主机应用程序的文档以确定其是否可以创建类和对象。  
+> 某些 Visual Basic 主机应用程序无法创建对象。 请参阅宿主应用程序的文档, 以确定它是否可以创建类和对象。  
   
 ## <a name="example"></a>示例  
- 此示例使用`Error`语句生成错误号 11。  
+ 此示例使用`Error`语句生成错误号11。  
   
 ```  
 On Error Resume Next   ' Defer error handling.  
@@ -58,9 +58,9 @@ Error 11   ' Simulate the "Division by zero" error.
 ```  
   
 ## <a name="requirements"></a>要求  
- **命名空间：**[Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
+ **命名空间：** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
   
- **程序集：** Visual Basic 运行库（在 Microsoft.VisualBasic.dll 中）  
+ **件**Visual Basic 运行库（在 Microsoft.VisualBasic.dll 中）  
   
 ## <a name="see-also"></a>请参阅
 

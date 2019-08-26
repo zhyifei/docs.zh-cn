@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 ms.assetid: 42ed860a-a022-4682-8b7f-7c9870784671
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e482303e684813574a092f0a2d5812445ed7fa6e
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: fef5894f7452bd32cc4e43433aa60166db241a12
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052621"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910606"
 ---
 # <a name="example-troubleshooting-dynamic-programming"></a>示例:动态编程疑难解答
 > [!NOTE]
->  该主题是指 .NET Native 开发者预览版这款预发布软件。 可从 [Microsoft Connect 网站](https://go.microsoft.com/fwlink/?LinkId=394611)（需要注册）下载该预览版。  
+> 该主题是指 .NET Native 开发者预览版这款预发布软件。 可从 [Microsoft Connect 网站](https://go.microsoft.com/fwlink/?LinkId=394611)（需要注册）下载该预览版。  
   
- 在应用中的不是所有元数据查找失败开发使用.NET Native 工具链结果引发异常。  有些可能会在一个应用中以不可预知的方式显示。  以下实例展示了由引用一个空对象造成的访问冲突：  
+ 并非所有使用 .NET Native 工具链开发的应用中的元数据查找失败都会导致异常。  有些可能会在一个应用中以不可预知的方式显示。  以下实例展示了由引用一个空对象造成的访问冲突：  
   
 ```  
 Access violation - code c0000005 (first chance)  
@@ -52,7 +52,7 @@ AppViewModel.Current.LayoutVM.PageMap
   
  在这种情况下，添加一个运行时指令让 `App.Core.ViewModels` 解决这一问题。 根本原因在于 API 调用了返回 null 的 <xref:System.Type.GetType%28System.String%29?displayProperty=nameWithType> 方法，且该应用默认忽略这一问题直到发生故障。  
   
- 在动态编程中，使用反射 Api 在.NET Native 时较好的做法是使用<xref:System.Type.GetType%2A?displayProperty=nameWithType>在失败时引发异常的重载。  
+ 在动态编程中, 在 .NET Native 下使用反射 api 是一种很好的<xref:System.Type.GetType%2A?displayProperty=nameWithType>做法, 就是使用在失败时引发异常的重载。  
   
 ## <a name="is-this-an-isolated-case"></a>这是一个孤立情形吗？  
  当使用 `App.Core.ViewModels` 时，可能也会出现其他问题。  你必须决定是否值得确定并修复每个丢失的元数据异常，或节省时间并为类型的一个更大类添加指令。  此处，为 `dynamic` 添加 `App.Core.ViewModels` 元数据可能最好的方法，前提是输出的二进制代码变大不会产生问题。  
@@ -63,4 +63,4 @@ AppViewModel.Current.LayoutVM.PageMap
 ## <a name="see-also"></a>请参阅
 
 - [入门](../../../docs/framework/net-native/getting-started-with-net-native.md)
-- [示例：绑定数据时处理异常](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)
+- [示例：在绑定数据时处理异常](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)

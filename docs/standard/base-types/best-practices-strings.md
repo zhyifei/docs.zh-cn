@@ -21,12 +21,12 @@ ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 68bcc9321d5a97620d0e8d24befbd24f4f350f94
-ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
+ms.openlocfilehash: 50127f24bfee0c2fe49da8f285e5052d2f753696
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66250823"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69934930"
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>有关使用 .NET 中字符串的最佳做法
 <a name="top"></a> .NET 为开发本地化和全球化应用提供广泛支持，并方便用户在执行排序和显示字符串等常见操作时，轻松应用当前区域性或特定区域性的约定。 但排序或比较字符串并不总是区分区域性的操作。 例如，对于应用程序内部使用的字符串，通常应该跨所有区域性以相同的方式对其进行处理。 如果将 XML 标记、HTML 标记、用户名、文件路径和系统对象名称等与区域性无关的字符串数据解释为区分区域性，则应用程序代码会遭遇细微的错误、不佳的性能，在某些情况下，还会遭遇安全性问题。  
@@ -185,7 +185,7 @@ ms.locfileid: "66250823"
  .NET 中的字符串可以包括嵌入的空字符。 序号比较与区分区域性的比较（包括使用固定区域性的比较）之间最明显的区别之一是对字符串中嵌入的空字符的处理方式。 当使用 <xref:System.String.Compare%2A?displayProperty=nameWithType> 和 <xref:System.String.Equals%2A?displayProperty=nameWithType> 方法执行区分区域性的比较（包括使用固定区域性的比较）时，将忽略这些字符。 因此，在区分区域性的比较中，包含嵌入的空字符的字符串可视为等于不包含空字符的字符串。  
   
 > [!IMPORTANT]
->  尽管字符串比较方法忽略嵌入的空字符，但是 <xref:System.String.Contains%2A?displayProperty=nameWithType>、 <xref:System.String.EndsWith%2A?displayProperty=nameWithType>、 <xref:System.String.IndexOf%2A?displayProperty=nameWithType>、 <xref:System.String.LastIndexOf%2A?displayProperty=nameWithType>和 <xref:System.String.StartsWith%2A?displayProperty=nameWithType> 等字符串搜索方法并不会忽略这些字符。  
+> 尽管字符串比较方法忽略嵌入的空字符，但是 <xref:System.String.Contains%2A?displayProperty=nameWithType>、 <xref:System.String.EndsWith%2A?displayProperty=nameWithType>、 <xref:System.String.IndexOf%2A?displayProperty=nameWithType>、 <xref:System.String.LastIndexOf%2A?displayProperty=nameWithType>和 <xref:System.String.StartsWith%2A?displayProperty=nameWithType> 等字符串搜索方法并不会忽略这些字符。  
   
  下面的示例对字符串“Aa”与在“A”和“a”之间嵌入了多个空字符的相似字符串进行区分区域性的比较，并显示如何将这两个字符串视为相等的字符串。  
   
@@ -210,7 +210,7 @@ ms.locfileid: "66250823"
  这些比较仍非常快。  
   
 > [!NOTE]
->  文件系统、注册表项和值以及环境变量的字符串行为可由 <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType>很好地表现出来。  
+> 文件系统、注册表项和值以及环境变量的字符串行为可由 <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType>很好地表现出来。  
   
  <xref:System.StringComparison.Ordinal?displayProperty=nameWithType> 和 <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> 均直接使用二进制值并最适合匹配。 当不确定比较设置时，请使用这两个值中的其中一个。 不过，由于它们执行逐字节比较，因此不会按照语言排序顺序（如英语词典）进行排序，而是按照二进制排序顺序。 如果向用户显示结果，则在大多数上下文中结果都看上去不正常。  
   
@@ -244,8 +244,8 @@ ms.locfileid: "66250823"
 |----------|--------------|-----------------------------------------------------|  
 |区分大小写的内部标识符。<br /><br /> 区分大小写的标准标识符（例如 XML 和 HTTP）。<br /><br /> 区分大小写的安全相关设置。|字节完全匹配的非语言标识符。|<xref:System.StringComparison.Ordinal>|  
 |不区分大小写的内部标识符。<br /><br /> 不区分大小写的标准标识符（例如 XML 和 HTTP）。<br /><br /> 文件路径。<br /><br /> 注册表项和值。<br /><br /> 环境变量。<br /><br /> 资源标识符（例如，句柄名称）。<br /><br /> 不区分大小写的安全相关设置。|无关大小写的非语言标识符；尤其是存储在大多数 Windows 系统服务中的数据。|<xref:System.StringComparison.OrdinalIgnoreCase>|  
-|某些保留的、与语言相关的数据。<br /><br /> 需要固定排序顺序的语言数据的显示。|仍与语言相关的区域性不明确数据。|<xref:System.StringComparison.InvariantCulture><br /><br /> 或<br /><br /> <xref:System.StringComparison.InvariantCultureIgnoreCase>|  
-|向用户显示的数据。<br /><br /> 大多数用户输入。|需要本地语言自定义的数据。|<xref:System.StringComparison.CurrentCulture><br /><br /> 或<br /><br /> <xref:System.StringComparison.CurrentCultureIgnoreCase>|  
+|某些保留的、与语言相关的数据。<br /><br /> 需要固定排序顺序的语言数据的显示。|仍与语言相关的区域性不明确数据。|<xref:System.StringComparison.InvariantCulture><br /><br /> -或-<br /><br /> <xref:System.StringComparison.InvariantCultureIgnoreCase>|  
+|向用户显示的数据。<br /><br /> 大多数用户输入。|需要本地语言自定义的数据。|<xref:System.StringComparison.CurrentCulture><br /><br /> -或-<br /><br /> <xref:System.StringComparison.CurrentCultureIgnoreCase>|  
   
  [返回页首](#top)  
   

@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 55c4b175-3170-4071-9d60-dd5a42f79b54
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 742f031961a24475d67718c595431e36bfca8c22
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f0e05b09d5ce788b9a3da262d5890a0694b49375
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615376"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69969033"
 ---
 # <a name="xmlschemaset-for-schema-compilation"></a>用于编译架构的 XmlSchemaSet
 介绍 <xref:System.Xml.Schema.XmlSchemaSet>，一个可以存储和验证 XML 架构定义语言 (XSD) 架构的缓存。  
@@ -133,12 +133,12 @@ foreach (XmlSchema schema in schemaSet.Schemas("http://www.contoso.com/books"))
  <xref:System.Xml.Schema.XmlSchemaSet> 中的架构通过 <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> 的 <xref:System.Xml.Schema.XmlSchemaSet> 方法编译为一个逻辑架构。  
   
 > [!NOTE]
->  与过时的 <xref:System.Xml.Schema.XmlSchemaCollection> 类不同，架构在调用 <xref:System.Xml.Schema.XmlSchemaSet.Add%2A> 方法时不编译。  
+> 与过时的 <xref:System.Xml.Schema.XmlSchemaCollection> 类不同，架构在调用 <xref:System.Xml.Schema.XmlSchemaSet.Add%2A> 方法时不编译。  
   
  如果 <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> 方法成功执行，<xref:System.Xml.Schema.XmlSchemaSet.IsCompiled%2A> 的 <xref:System.Xml.Schema.XmlSchemaSet> 属性将设置为 `true`。  
   
 > [!NOTE]
->  如果架构在 <xref:System.Xml.Schema.XmlSchemaSet.IsCompiled%2A> 中编辑，<xref:System.Xml.Schema.XmlSchemaSet> 属性不受影响。 不跟踪对 <xref:System.Xml.Schema.XmlSchemaSet> 中各个架构的更新。 因此，只要 <xref:System.Xml.Schema.XmlSchemaSet.IsCompiled%2A> 中没有添加或移除任何架构，即使 `true` 中包含的一个架构已更改，<xref:System.Xml.Schema.XmlSchemaSet> 属性也可以为 <xref:System.Xml.Schema.XmlSchemaSet>。  
+> 如果架构在 <xref:System.Xml.Schema.XmlSchemaSet.IsCompiled%2A> 中编辑，<xref:System.Xml.Schema.XmlSchemaSet> 属性不受影响。 不跟踪对 <xref:System.Xml.Schema.XmlSchemaSet> 中各个架构的更新。 因此，只要 <xref:System.Xml.Schema.XmlSchemaSet.IsCompiled%2A> 中没有添加或移除任何架构，即使 `true` 中包含的一个架构已更改，<xref:System.Xml.Schema.XmlSchemaSet> 属性也可以为 <xref:System.Xml.Schema.XmlSchemaSet>。  
   
  以下示例将 `books.xsd` 文件添加到 <xref:System.Xml.Schema.XmlSchemaSet> 中，然后调用 <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> 方法。  
   

@@ -9,21 +9,21 @@ helpviewer_keywords:
 - Canvas control [WPF], creating
 - Canvas control [WPF], using
 ms.assetid: 420b9487-9a15-477c-9489-a22a4dec7779
-ms.openlocfilehash: 33b98024699a88f56d27b7e5ab8d5216c906e7ec
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: edef660b2da2f09e0a6edbc0a87f0d1f26eb03da
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62000995"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964218"
 ---
 # <a name="how-to-create-and-use-a-canvas"></a>如何：创建和使用画布
-此示例演示如何创建和使用的实例<xref:System.Windows.Controls.Canvas>。  
+此示例演示如何创建和使用的<xref:System.Windows.Controls.Canvas>实例。  
   
 ## <a name="example"></a>示例  
- 下面的示例显式定位两<xref:System.Windows.Controls.TextBlock>通过使用元素<xref:System.Windows.Controls.Canvas.SetTop%2A>并<xref:System.Windows.Controls.Canvas.SetLeft%2A>方法的<xref:System.Windows.Controls.Canvas>。 该示例还将分配<xref:System.Windows.Controls.Control.Background%2A>色`LightSteelBlue`到<xref:System.Windows.Controls.Canvas>。  
+ <xref:System.Windows.Controls.TextBlock>下面的示例通过<xref:System.Windows.Controls.Canvas.SetTop%2A>使用的和<xref:System.Windows.Controls.Canvas.SetLeft%2A>方法<xref:System.Windows.Controls.Canvas>显式定位两个元素。 该示例还将的<xref:System.Windows.Controls.Control.Background%2A> `LightSteelBlue`颜色分配给<xref:System.Windows.Controls.Canvas>。  
   
 > [!NOTE]
->  当你使用[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]到位置<xref:System.Windows.Controls.TextBlock>元素，使用<xref:System.Windows.Controls.Canvas.Top%2A>和<xref:System.Windows.Controls.Canvas.Left%2A>属性。  
+> 当你使用[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]来放置<xref:System.Windows.Controls.TextBlock>元素时, 请<xref:System.Windows.Controls.Canvas.Top%2A>使用<xref:System.Windows.Controls.Canvas.Left%2A>和属性。  
   
  [!code-csharp[CanvasCode#1](~/samples/snippets/csharp/VS_Snippets_Wpf/CanvasCode/CSharp/Canvas_Code.cs#1)]
  [!code-vb[CanvasCode#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CanvasCode/VisualBasic/canvas_vb.vb#1)]  

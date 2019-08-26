@@ -7,8 +7,6 @@
       href: expressions.md
     - name: Expression-Bodied 成员
       href: expression-bodied-members.md
-    - name: 运算符
-      href: operators.md
     - name: 匿名函数
       items:
         - name: 概述

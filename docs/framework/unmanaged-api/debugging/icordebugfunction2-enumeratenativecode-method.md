@@ -17,18 +17,18 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 61dcf014a65f524d2b2e7b92bcc7f007d1a47125
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: fb7e2ed7b076cfa20064902b3592c8f958efc0ee
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754509"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917051"
 ---
 # <a name="icordebugfunction2enumeratenativecode-method"></a>ICorDebugFunction2::EnumerateNativeCode 方法
-ICorDebugCodeEnum 对象，包含此 ICorDebugFunction2 对象引用的函数中的本机代码语句获取的接口指针。  
+获取一个指向 ICorDebugCodeEnum 对象的接口指针, 该对象包含此 ICorDebugFunction2 对象引用的函数中的本机代码语句。  
   
 > [!NOTE]
->  `EnumerateNativeCode` .NET Framework 的当前版本中未实现。  
+> `EnumerateNativeCode`在 .NET Framework 的当前版本中未实现。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,4 +39,4 @@ HRESULT EnumerateNativeCode (
 ```  
   
 ## <a name="requirements"></a>要求  
- **标头：** CorDebug.idl、 CorDebug.h
+ **标头：** Cordebug.idl, Cordebug.idl

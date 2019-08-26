@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 643575d0-d26d-4c35-8de7-a9c403e97dd6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7058e7857c03a2fc82a3d978ef7c8066a9e272bc
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 8fc88b06ee1e206208e6d6950f640966f53df3a1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65589656"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924907"
 ---
 # <a name="dataflow-task-parallel-library"></a>数据流（任务并行库）
-<a name="top"></a> 任务并行库 (TPL) 提供数据流组件，可帮助提高启用并发的应用程序的可靠性。 这些数据流组件统称为 TPL 数据流库。 这种数据流模型通过向粗粒度的数据流和管道任务提供进程内消息传递来促进基于角色的编程。 数据流组件基于 TPL 的类型和计划基础结构，并集成了 C#、Visual Basic 和 F# 语言的异步编程支持。 当您有必须相互异步沟通的多个操作或者想要在数据可用时对其处理时，这些数据流组件就非常有用。 例如，请考虑一个处理网络摄像机图像数据的应用程序。 通过使用数据流模型，当图像帧可用时，应用程序就可以处理它们。 如果应用程序增强图像帧（例如执行灯光修正或消除红眼），则可以创建数据流组件的管道。 管道的每个阶段可以使用更粗粒度的并行功能（例如 TPL 提供的功能）来转换图像。  
+<a name="top"></a> 任务并行库 (TPL) 提供数据流组件，可帮助提高启用并发的应用程序的可靠性。 这些数据流组件统称为 TPL 数据流库  。 这种数据流模型通过向粗粒度的数据流和管道任务提供进程内消息传递来促进基于角色的编程。 数据流组件基于 TPL 的类型和计划基础结构，并集成了 C#、Visual Basic 和 F# 语言的异步编程支持。 当您有必须相互异步沟通的多个操作或者想要在数据可用时对其处理时，这些数据流组件就非常有用。 例如，请考虑一个处理网络摄像机图像数据的应用程序。 通过使用数据流模型，当图像帧可用时，应用程序就可以处理它们。 如果应用程序增强图像帧（例如执行灯光修正或消除红眼），则可以创建数据流组件的管道  。 管道的每个阶段可以使用更粗粒度的并行功能（例如 TPL 提供的功能）来转换图像。  
   
  本文档对 TPL 数据流库进行了概述。 它介绍编程模型，预定义的数据流块类型，以及如何配置数据流块来满足应用程序的特定要求。  
 
@@ -40,12 +40,12 @@ ms.locfileid: "65589656"
  TPL 数据流库向具有高吞吐量和低滞后时间的占用大量 CPU 和 I/O 操作的应用程序的并行化和消息传递提供了基础。 它还能显式控制缓存数据的方式以及在系统中移动的方式。 为了更好地了解数据流编程模型，请考虑一个以异步方式从磁盘加载图像并创建复合图像的应用程序。 传统编程模型通常需要使用回调和同步对象（例如锁）来协调任务和访问共享数据。 通过使用数据流编程模型，您可以从磁盘读取时创建处理图像的数据流对象。 在数据流模型下，您可以声明当数据可用时的处理方式，以及数据之间的所有依赖项。 由于运行时管理数据之间的依赖项，因此通常可以避免这种要求来同步访问共享数据。 此外，因为运行时计划基于数据的异步到达，所以数据流可以通过有效管理基础线程提高响应能力和吞吐量。 有关在 Windows 窗体应用程序中使用数据流编程模型实现图像处理的示例，请参阅[演练：在 Windows 窗体应用程序中使用数据流](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md)。  
   
 ### <a name="sources-and-targets"></a>源和目标  
- TPL 数据流库包括*数据流块*，它是缓冲并处理数据的数据结构。 TPL 定义了三种数据流块：源块、目标块和传播器块。 源块作为数据源，可以读取。 目标块作为数据接收方，可以写入。 传播器块作为源块和目标块，可以读取和写入。 TPL 定义 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601?displayProperty=nameWithType> 接口来表示源，<xref:System.Threading.Tasks.Dataflow.ITargetBlock%601?displayProperty=nameWithType> 表示目标以及 <xref:System.Threading.Tasks.Dataflow.IPropagatorBlock%602?displayProperty=nameWithType> 表示传播器。 <xref:System.Threading.Tasks.Dataflow.IPropagatorBlock%602> 继承自 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601> 和 <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601>。  
+ TPL 数据流库包括*数据流块*，它是缓冲并处理数据的数据结构。 TPL 定义了三种数据流块：源块  、目标块  和传播器块  。 源块作为数据源，可以读取。 目标块作为数据接收方，可以写入。 传播器块作为源块和目标块，可以读取和写入。 TPL 定义 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601?displayProperty=nameWithType> 接口来表示源，<xref:System.Threading.Tasks.Dataflow.ITargetBlock%601?displayProperty=nameWithType> 表示目标以及 <xref:System.Threading.Tasks.Dataflow.IPropagatorBlock%602?displayProperty=nameWithType> 表示传播器。 <xref:System.Threading.Tasks.Dataflow.IPropagatorBlock%602> 继承自 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601> 和 <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601>。  
   
  TPL 数据流库提供了多个预定义的数据流块类型，可以实现 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601>、<xref:System.Threading.Tasks.Dataflow.ITargetBlock%601> 和 <xref:System.Threading.Tasks.Dataflow.IPropagatorBlock%602> 接口。 这些数据流块类型在本文档的[预定义的数据流块类型](#predefined_types)部分进行了说明。  
   
 ### <a name="connecting-blocks"></a>连接块  
- 可以连接数据流块来形成管道（这是数据流块的线性序列），或网络（这是数据流块的图形）。 管道是网络的一种形式。 在管道或网络中，当数据可用时源向目标异步传播数据。 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A?displayProperty=nameWithType> 方法将源数据流块链接到目标块。 源可以链接到零个或多个目标；目标可以从零个或多个源进行链接。 您可以同时向管道或网络中添加或从其移除数据流块。 预定义的数据流块类型处理所有的建立或释放链接的线程安全性。  
+ 可以连接数据流块来形成管道  （这是数据流块的线性序列），或网络  （这是数据流块的图形）。 管道是网络的一种形式。 在管道或网络中，当数据可用时源向目标异步传播数据。 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A?displayProperty=nameWithType> 方法将源数据流块链接到目标块。 源可以链接到零个或多个目标；目标可以从零个或多个源进行链接。 您可以同时向管道或网络中添加或从其移除数据流块。 预定义的数据流块类型处理所有的建立或释放链接的线程安全性。  
   
  有关连接数据流块以形成基本管道的示例，请参阅[演练：创建数据流管道](../../../docs/standard/parallel-programming/walkthrough-creating-a-dataflow-pipeline.md)。 有关连接数据流块以形成更复杂网络的示例，请参阅[演练：在 Windows 窗体应用程序中使用数据流](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md)。 有关在源向目标传递消息后从源取消目标链接的示例，请参阅[如何：取消链接数据流块](../../../docs/standard/parallel-programming/how-to-unlink-dataflow-blocks.md)。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "65589656"
  当您调用 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A?displayProperty=nameWithType> 方法将源链接到目标时，您可以根据消息的值提供一个委托来决定目标块是接受还是拒绝该消息。 这种筛选机制很有用，它可以保证数据流块只接收特定值。 对于大多数预定义的数据流块类型，如果源块连接到多个目标块，那么当目标块拒绝消息时，源将向下一个目标提供该消息。 源向目标提供消息的顺序是按源定义的，可以根据源类型的不同而不同。 一个目标接受消息后，大多数源块类型会停止提供该消息。 此规则的例外情况是 <xref:System.Threading.Tasks.Dataflow.BroadcastBlock%601> 类，这个类向所有目标提供每条消息，即使某些目标拒绝消息。 有关使用筛选功能来仅处理特定消息的示例，请参阅[演练：在 Windows 窗体应用程序中使用数据流](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md)。  
   
 > [!IMPORTANT]
->  由于每个预定义源数据流块类型确保了消息是按照它们接收的顺序来传播的，因此每一条消息都必须在源块可以处理下一条消息之前从源块读取。 因此，当您使用筛选向一个源连接多个目标时，请确保至少一个目标块能够接收每一条消息。 否则，您的应用程序可能发生死锁。  
+> 由于每个预定义源数据流块类型确保了消息是按照它们接收的顺序来传播的，因此每一条消息都必须在源块可以处理下一条消息之前从源块读取。 因此，当您使用筛选向一个源连接多个目标时，请确保至少一个目标块能够接收每一条消息。 否则，您的应用程序可能发生死锁。  
   
 ### <a name="message-passing"></a>消息传递  
  数据流编程模型与*消息传递*这一概念相关，其中程序的独立组件通过发送消息相互通信。 在应用组件间传播消息的一种方法是，调用 <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Post%2A> 和 <xref:System.Threading.Tasks.Dataflow.DataflowBlock.SendAsync%2A?displayProperty=nameWithType> 方法，向目标数据流块发送消息（<xref:System.Threading.Tasks.Dataflow.DataflowBlock.Post%2A> 同步运行，<xref:System.Threading.Tasks.Dataflow.DataflowBlock.SendAsync%2A> 异步运行），再调用 <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Receive%2A>、<xref:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync%2A> 和 <xref:System.Threading.Tasks.Dataflow.DataflowBlock.TryReceive%2A> 方法接收源数据流块发送的消息。 您可以通过向头节点（目标块）发送输入数据，从管道的终端节点或网络的终端节点（一个或多个源块）接收输出数据来使用数据流管道或网络组合使用这些方法。 您还可以使用 <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Choose%2A> 方法从提供的第一个拥有可用数据的源读取数据，并对该数据执行操作。  
@@ -63,7 +63,7 @@ ms.locfileid: "65589656"
  当目标块推迟消息以备日后使用时，<xref:System.Threading.Tasks.Dataflow.ITargetBlock%601.OfferMessage%2A> 方法会返回 <xref:System.Threading.Tasks.Dataflow.DataflowMessageStatus.Postponed>。 推迟消息的目标块可以稍后调用 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.ReserveMessage%2A?displayProperty=nameWithType> 方法，以尝试暂留所提供的消息。 此时，消息仍可用，并且可由该目标块使用，否则表明该消息已由另一个目标接收。 如果目标数据流块稍后需要消息或不再需要消息，它会分别调用 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.ConsumeMessage%2A?displayProperty=nameWithType> 或 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.ReleaseReservation%2A> 方法。 消息预留通常由以非贪婪模式运行的数据流块类型使用。 非贪婪模式将在本文档的后面详细介绍。 除了保留推迟的消息，目标块也可以使用 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.ConsumeMessage%2A?displayProperty=nameWithType> 方法来尝试直接使用推迟的消息。  
   
 ### <a name="dataflow-block-completion"></a>数据流块完成  
- 数据流块也支持完成概念。 完成状态的数据流块不执行任何进一步的工作。 每个数据流块都有相关的 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 对象（称为“完成任务”），表示数据流块的完成状态。 因为您可以使用完成任务等待 <xref:System.Threading.Tasks.Task> 对象完成，所以您可以等待数据流网络的一个或更多终端节点来完成任务。 <xref:System.Threading.Tasks.Dataflow.IDataflowBlock> 接口定义 <xref:System.Threading.Tasks.Dataflow.IDataflowBlock.Complete%2A> 方法（该方法向数据流块通知它完成的请求）和 <xref:System.Threading.Tasks.Dataflow.IDataflowBlock.Completion%2A> 属性（该属性返回数据流块的完成任务）。 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601> 和 <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601> 都继承 <xref:System.Threading.Tasks.Dataflow.IDataflowBlock> 接口。  
+ 数据流块也支持完成  概念。 完成状态的数据流块不执行任何进一步的工作。 每个数据流块都有相关的 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 对象（称为“完成任务”  ），表示数据流块的完成状态。 因为您可以使用完成任务等待 <xref:System.Threading.Tasks.Task> 对象完成，所以您可以等待数据流网络的一个或更多终端节点来完成任务。 <xref:System.Threading.Tasks.Dataflow.IDataflowBlock> 接口定义 <xref:System.Threading.Tasks.Dataflow.IDataflowBlock.Complete%2A> 方法（该方法向数据流块通知它完成的请求）和 <xref:System.Threading.Tasks.Dataflow.IDataflowBlock.Completion%2A> 属性（该属性返回数据流块的完成任务）。 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601> 和 <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601> 都继承 <xref:System.Threading.Tasks.Dataflow.IDataflowBlock> 接口。  
   
  有两种方法来确定数据流块完成时是否没有出错、遇到一个或多个错误或已取消。 第一种方法是在 `try`-`catch` 块（在 Visual Basic 中为 `Try`-`Catch`）中对完成任务调用 <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> 方法。 下面的示例创建一个 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> 对象，该对象在其输入值小于零时会引发 <xref:System.ArgumentOutOfRangeException>。 当此示例在完成任务后调用 <xref:System.AggregateException> 时，将引发 <xref:System.Threading.Tasks.Task.Wait%2A>。 通过 <xref:System.ArgumentOutOfRangeException> 对象的 <xref:System.AggregateException.InnerExceptions%2A> 属性来访问 <xref:System.AggregateException>。  
   
@@ -85,7 +85,7 @@ ms.locfileid: "65589656"
   
 <a name="predefined_types"></a>   
 ## <a name="predefined-dataflow-block-types"></a>预定义的数据流块类型  
- TPL 数据流库提供了多个预定义的数据流块类型。 这些类型分为三个类别：缓冲块、执行块和分组块。 以下部分描述了组成这些类别的块类型。  
+ TPL 数据流库提供了多个预定义的数据流块类型。 这些类型分为三个类别：缓冲块  、执行块  和分组块  。 以下部分描述了组成这些类别的块类型。  
   
 ### <a name="buffering-blocks"></a>缓冲块  
  缓冲块存放的数据供数据使用者使用。 TPL 数据流库提供三种缓冲块类型：<xref:System.Threading.Tasks.Dataflow.BufferBlock%601?displayProperty=nameWithType>、<xref:System.Threading.Tasks.Dataflow.BroadcastBlock%601?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601?displayProperty=nameWithType>。  
@@ -111,7 +111,7 @@ ms.locfileid: "65589656"
  有关演示如何使用 <xref:System.Threading.Tasks.Dataflow.BroadcastBlock%601> 来将一条消息广播给多个目标块的完整示例，请参阅[如何：在数据流块中指定任务计划程序](../../../docs/standard/parallel-programming/how-to-specify-a-task-scheduler-in-a-dataflow-block.md)。  
   
 #### <a name="writeonceblockt"></a>WriteOnceBlock(T)  
- <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> 类与 <xref:System.Threading.Tasks.Dataflow.BroadcastBlock%601> 类相似，不同之处在于 <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> 对象仅可被写入一次。 可以将 <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> 视作类似于 C# 中的 [readonly](~/docs/csharp/language-reference/keywords/readonly.md)（Visual Basic 中的 [ReadOnly](~/docs/visual-basic/language-reference/modifiers/readonly.md)）关键字，不同之处在于 <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> 对象在收到值后（而不是在构造时）成为不可变对象。 与 <xref:System.Threading.Tasks.Dataflow.BroadcastBlock%601> 类相似，在目标收到来自 <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> 对象的消息时，不会从该目标删除此消息。 因此，多个目标将接收到该消息的副本。 当您想要仅传播多条消息中的第一条时，<xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> 类很有用。  
+ <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> 类与 <xref:System.Threading.Tasks.Dataflow.BroadcastBlock%601> 类相似，不同之处在于 <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> 对象仅可被写入一次。 可以将 <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> 视作类似于 C# 中的 [readonly](../../csharp/language-reference/keywords/readonly.md)（Visual Basic 中的 [ReadOnly](../../visual-basic/language-reference/modifiers/readonly.md)）关键字，不同之处在于 <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> 对象在收到值后（而不是在构造时）成为不可变对象。 与 <xref:System.Threading.Tasks.Dataflow.BroadcastBlock%601> 类相似，在目标收到来自 <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> 对象的消息时，不会从该目标删除此消息。 因此，多个目标将接收到该消息的副本。 当您想要仅传播多条消息中的第一条时，<xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> 类很有用。  
   
  下面的基本示例将多个 <xref:System.String> 值发送给 <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> 对象，然后从该对象读回该值。 由于 <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> 对象在 <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> 对象接收消息后只能写入一次，因此它放弃后续消息。  
   
@@ -173,7 +173,7 @@ ms.locfileid: "65589656"
 #### <a name="batchblockt"></a>BatchBlock(T)  
  <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> 类将一系列输入数据合并到输出数据数组，即批处理。 在创建 <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> 对象时，指定每个批的大小。 当 <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> 对象接收指定数量的输入元素时，它会异步传播含这些元素的数组。 如果 <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> 对象设置为已完成状态，但不包含足够的元素形成批，则会传播包含其余输入元素的最终数组。  
   
- <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> 类可以在贪婪或非贪婪模式下运行。 在默认贪婪模式下，<xref:System.Threading.Tasks.Dataflow.BatchBlock%601> 对象接受它提供的每条消息，并在接收指定数量的元素后传播数组。 在非贪婪模式下，<xref:System.Threading.Tasks.Dataflow.BatchBlock%601> 对象推迟所有传入的消息，直到足够的源给块提供消息来形成批。 贪婪模式处理开销较少，所以通常比非贪婪模式执行得更有效。 但是，当您必须以基本方式协调来自多个源的消耗时，可以使用非贪婪模式。 在 <xref:System.Threading.Tasks.Dataflow.GroupingDataflowBlockOptions.Greedy%2A> 构造函数的 `False` 参数中，通过将 `dataflowBlockOptions` 设置为 <xref:System.Threading.Tasks.Dataflow.BatchBlock%601.%23ctor%2A> 来指定非贪婪模式。  
+ <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> 类可以在贪婪  或非贪婪  模式下运行。 在默认贪婪模式下，<xref:System.Threading.Tasks.Dataflow.BatchBlock%601> 对象接受它提供的每条消息，并在接收指定数量的元素后传播数组。 在非贪婪模式下，<xref:System.Threading.Tasks.Dataflow.BatchBlock%601> 对象推迟所有传入的消息，直到足够的源给块提供消息来形成批。 贪婪模式处理开销较少，所以通常比非贪婪模式执行得更有效。 但是，当您必须以基本方式协调来自多个源的消耗时，可以使用非贪婪模式。 在 <xref:System.Threading.Tasks.Dataflow.GroupingDataflowBlockOptions.Greedy%2A> 构造函数的 `False` 参数中，通过将 `dataflowBlockOptions` 设置为 <xref:System.Threading.Tasks.Dataflow.BatchBlock%601.%23ctor%2A> 来指定非贪婪模式。  
   
  下面的基本示例将多个 <xref:System.Int32> 值发送给一批中能容纳十个元素的 <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> 对象。 为了确保所有值从 <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> 传播，此示例调用 <xref:System.Threading.Tasks.Dataflow.IDataflowBlock.Complete%2A> 方法。 <xref:System.Threading.Tasks.Dataflow.IDataflowBlock.Complete%2A> 方法将 <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> 对象设置为已完成状态，因此，<xref:System.Threading.Tasks.Dataflow.BatchBlock%601> 对象作为最终批传播剩余的所有元素。  
   
@@ -235,7 +235,7 @@ ms.locfileid: "65589656"
  <xref:System.Threading.Tasks.Dataflow.ExecutionDataflowBlockOptions.MaxDegreeOfParallelism%2A> 的默认值为 1，这保证了数据流块一次处理一条消息。 将该属性设置为大于 1 的值将使数据流块可以同时处理多条消息。 将该属性设置为 <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.Unbounded?displayProperty=nameWithType> 将使基础任务计划程序管理最大并发程度。  
   
 > [!IMPORTANT]
->  当指定大于 1 的最大并行度时，会同时处理多条消息，因此，消息可能不会按照接收的顺序进行处理。 然而，从块输出消息的顺序与接收消息的顺序相同。  
+> 当指定大于 1 的最大并行度时，会同时处理多条消息，因此，消息可能不会按照接收的顺序进行处理。 然而，从块输出消息的顺序与接收消息的顺序相同。  
   
  由于 <xref:System.Threading.Tasks.Dataflow.ExecutionDataflowBlockOptions.MaxDegreeOfParallelism%2A> 属性表示最大并行度，因此数据流块执行时的并行度可能小于指定的值。 为了达到功能要求或因为缺少可用的系统资源，数据流块可能使用较小的并行度。 数据流块选择的并行度不会超过您指定的值。  
   
@@ -252,7 +252,7 @@ ms.locfileid: "65589656"
  有关演示如何在 Windows 窗体应用程序中使用取消的示例，请参阅[如何：取消数据流块](../../../docs/standard/parallel-programming/how-to-cancel-a-dataflow-block.md)。 若要深入了解 TPL 中的取消，请参阅[任务取消](../../../docs/standard/parallel-programming/task-cancellation.md)。  
   
 ### <a name="specifying-greedy-versus-non-greedy-behavior"></a>指定贪婪与非贪婪行为  
- 几个分组数据流块类型可以在贪婪或非贪婪模式下运行。 默认情况下，预定义的数据流块类型在贪婪模式下运行。  
+ 几个分组数据流块类型可以在贪婪  或非贪婪  模式下运行。 默认情况下，预定义的数据流块类型在贪婪模式下运行。  
   
  对于联接块类型（如 <xref:System.Threading.Tasks.Dataflow.JoinBlock%602>），贪婪模式意味着块立即接受数据，即使相应的数据联接不可用。 非贪婪模式意味着块推迟所有传入的消息，直到在其每个目标上有一个可完成联接。 如果任何推迟的消息不再可用，则联接块会释放所有推迟的消息并重新启动该过程。 对于 <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> 类，贪婪和非贪婪行为非常相似，不同之处在于在非贪婪模式下，<xref:System.Threading.Tasks.Dataflow.BatchBlock%601> 对象推迟所有传入的消息，直到不同源中有足够消息可用于完成批作业。  
   

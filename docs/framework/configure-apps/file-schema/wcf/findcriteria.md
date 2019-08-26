@@ -2,15 +2,15 @@
 title: <findCriteria>
 ms.date: 03/30/2017
 ms.assetid: 5454cd19-6bf5-4ba8-94d1-f58d10dc1917
-ms.openlocfilehash: eaa3998d3d0b1642c0c92380ec1228eea69d4da8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: eb8ff3905f7696f4c71a79e31db1b8f82c9f0d3b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61700886"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69925586"
 ---
 # <a name="findcriteria"></a>\<findCriteria>
-一个配置元素，提供客户端应用程序用于搜索发现服务的一组条件。 条件可以划分为搜索条件 （指定要查找的服务） 和查找终止条件 （搜索应持续多久）。  
+一个配置元素，提供客户端应用程序用于搜索发现服务的一组条件。 可以将条件分组为搜索条件 (指定要查找的服务) 和查找终止条件 (搜索应持续的时间长度)。  
   
  \<system.ServiceModel>  
 \<standardEndpoints>  
@@ -57,15 +57,15 @@ ms.locfileid: "61700886"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<contractTypeNames>](../../../../../docs/framework/configure-apps/file-schema/wcf/contracttypenames.md)|包含工作流服务协定类型的名称的配置元素的集合。|  
-|\<扩展 > 的\<findCriteria >|一个 XML 元素对象集合，这些对象提供扩展。|  
-|[\<scopes>](../../../../../docs/framework/configure-apps/file-schema/wcf/scopes.md)|一个对象集合，这些对象包含在查找操作过程中用于查找一个或多个特定服务的绝对 URI。<br /><br /> 如果找到特定服务，则表示已在服务 URI 和范围 URI 之间进行了成功的匹配，此匹配操作有时是借助处理匹配复杂性的范围规则完成的。|  
+|[\<contractTypeNames>](contracttypenames.md)|一个配置元素的集合, 这些元素包含工作流服务协定类型的名称。|  
+|\<s > 的\<扩展 >|一个 XML 元素对象集合，这些对象提供扩展。|  
+|[\<scopes>](scopes.md)|一个对象集合，这些对象包含在查找操作过程中用于查找一个或多个特定服务的绝对 URI。<br /><br /> 如果找到特定服务，则表示已在服务 URI 和范围 URI 之间进行了成功的匹配，此匹配操作有时是借助处理匹配复杂性的范围规则完成的。|  
   
 ### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<standardEndpoints>](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|包含应用程序以客户端形式参与服务发现过程所需的设置。|  
+|[\<standardEndpoints>](standardendpoints.md)|包含应用程序以客户端形式参与服务发现过程所需的设置。|  
   
 ## <a name="see-also"></a>请参阅
 
