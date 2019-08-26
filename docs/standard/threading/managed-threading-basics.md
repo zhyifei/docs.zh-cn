@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: b2944911-0e8f-427d-a8bb-077550618935
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a47946ab8eb26045e641c44642bfe7a026269f3d
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: f55057e40a251be49898b9b1b7862bd243b2a70c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66486338"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69913182"
 ---
 # <a name="managed-threading-basics"></a>托管线程处理基本知识
 
@@ -24,7 +24,7 @@ ms.locfileid: "66486338"
  本节中的剩余主题涵盖了高级主题，其中包括托管线程与 Windows 操作系统的交互。  
   
 > [!NOTE]
->  在 .NET Framework 4 中，任务并行库和 PLINQ 提供了多线程程序中的任务并行和数据并行 API。 有关详细信息，请参阅[并行编程](../../../docs/standard/parallel-programming/index.md)。  
+> 在 .NET Framework 4 中，任务并行库和 PLINQ 提供了多线程程序中的任务并行和数据并行 API。 有关详细信息，请参阅[并行编程](../../../docs/standard/parallel-programming/index.md)。  
   
 ## <a name="in-this-section"></a>本节内容
 

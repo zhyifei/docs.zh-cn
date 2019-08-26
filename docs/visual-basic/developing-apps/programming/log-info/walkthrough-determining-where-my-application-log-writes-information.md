@@ -9,12 +9,12 @@ helpviewer_keywords:
 - application event logs, output location
 - applications [Visual Basic], output location
 ms.assetid: 5b70143a-7741-45f2-ae1d-03324a3a4189
-ms.openlocfilehash: 895c49fb1fde56a1c9bf8b3a0ecf9de4f29f9972
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 305c29e33f6cd421f39004e09d27c75b02ba8354
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591211"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912558"
 ---
 # <a name="walkthrough-determining-where-myapplicationlog-writes-information-visual-basic"></a>演练：确定 My.Application.Log 写入信息的位置 (Visual Basic)
 
@@ -24,10 +24,10 @@ ms.locfileid: "65591211"
 
 ### <a name="to-determine-the-listeners-for-myapplicationlog"></a>确定 My.Application.Log 的侦听器
 
-1. 找到程序集的配置文件。 如果正在开发程序集，则可通过“解决方案资源管理器”访问 Visual Studio 中的 app.config。 否则，配置文件名称即为程序集的名称附加“.config”，并且与程序集位于相同的目录中。
+1. 找到程序集的配置文件。 如果正在开发程序集，则可通过“解决方案资源管理器”访问 Visual Studio 中的 app.config  。 否则，配置文件名称即为程序集的名称附加“.config”，并且与程序集位于相同的目录中。
 
     > [!NOTE]
-    >  不是每个程序集都有配置文件。
+    > 不是每个程序集都有配置文件。
 
     配置文件是一个 XML 文件。
 
@@ -55,7 +55,7 @@ ms.locfileid: "65591211"
 
     - <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType> 侦听器将信息写入文件日志，如简介中所述。
 
-    - <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType> 侦听器将信息写入 `initializeData` 参数指定的计算机事件日志。 若要查看事件日志，可以使用“服务器资源管理器”  或“Windows 事件查看器” 。 有关详细信息，请参阅 [ETW Events in the .NET Framework](../../../../framework/performance/etw-events.md)。
+    - <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType> 侦听器将信息写入 `initializeData` 参数指定的计算机事件日志。 若要查看事件日志，可以使用“服务器资源管理器”  或“Windows 事件查看器”  。 有关详细信息，请参阅 [ETW Events in the .NET Framework](../../../../framework/performance/etw-events.md)。
 
     - <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType> 和 <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType> 侦听器将信息写入 `initializeData` 参数指定的文件。
 

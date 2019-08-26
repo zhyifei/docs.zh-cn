@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 8a18e5c2-d41d-49ef-abcb-7c27e2469433
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 363410baea1706211acaa639f1704e91230723a8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 62760cb9fe5832ee018ebdebf6275ea61691c738
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592745"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927803"
 ---
 # <a name="working-with-assemblies-and-the-global-assembly-cache"></a>使用程序集和全局程序集缓存
 如果需要在几个应用程序间共享程序集，可将其安装到全局程序集缓存中。 安装了公共语言运行时的每台计算机均具有此计算机范围的代码缓存。 全局程序集缓存中存储专门指定给由计算机中若干应用程序共享的程序集。 程序集必须具有强名称才可安装到全局程序集缓存中。  
   
 > [!NOTE]
->  全局程序集缓存中放置的程序集必须具有相同的程序集名称和文件名（不包括文件扩展名）。 例如，程序集名称为 myAssembly 的程序集必须具有名为 myAssembly.exe 或 myAssembly.dll 的文件。  
+> 全局程序集缓存中放置的程序集必须具有相同的程序集名称和文件名（不包括文件扩展名）。 例如，程序集名称为 myAssembly 的程序集必须具有名为 myAssembly.exe 或 myAssembly.dll 的文件。  
   
  只能在需要时才通过将程序集安装到全局程序集缓存中来共享程序集。 一般原则是：程序集依赖项保持专用，并在应用程序目录中定位程序集，除非明确要求共享程序集。 另外，无需为了使程序集可以访问 COM 互操作或非托管代码而将程序集安装到全局程序集缓存。  
   

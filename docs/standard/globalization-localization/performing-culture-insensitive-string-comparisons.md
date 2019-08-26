@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: abae50ef-32f7-4a50-a540-fd256fd1aed0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c7726164e998ea917c8f539b5768aa7e3f1ae12c
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 7b68d079413168b042412a67e8732e8afed66ffa
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053202"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69915878"
 ---
 # <a name="performing-culture-insensitive-string-comparisons"></a>执行不区分区域性的字符串比较
 默认情况下，<xref:System.String.Compare%2A?displayProperty=nameWithType> 方法执行区分区域性和区分大小写的比较。 此方法还包括多个重载，这些重载提供了一个 `culture` 参数和一个 `comparisonType` 参数，前者允许你指定要使用的区域性，后者允许你指定要使用的比较规则。 调用这些方法（而非调用默认重载）将消除与特定方法调用中使用的规则相关的任何歧义，并阐明某个特定比较是区分区域性的还是不区分区域性的。  
   
 > [!NOTE]
->  <xref:System.String.CompareTo%2A?displayProperty=nameWithType> 方法的两种重载都执行区分区域性且区分大小写的比较；你不能使用此方法来执行不区分区域性的比较。 为了使代码简单明了，建议你改用 <xref:System.String.Compare%2A?displayProperty=nameWithType> 方法。  
+> <xref:System.String.CompareTo%2A?displayProperty=nameWithType> 方法的两种重载都执行区分区域性且区分大小写的比较；你不能使用此方法来执行不区分区域性的比较。 为了使代码简单明了，建议你改用 <xref:System.String.Compare%2A?displayProperty=nameWithType> 方法。  
   
  对于区分区域性的操作，请将 <xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType> 或 <xref:System.StringComparison.CurrentCultureIgnoreCase?displayProperty=nameWithType> 枚举值指定为 `comparisonType` 参数。 若要使用除当前区域性之外的指定区域性来执行区域性敏感型比较，请将表示相应区域性的 <xref:System.Globalization.CultureInfo> 对象指定为 `culture` 参数。  
   

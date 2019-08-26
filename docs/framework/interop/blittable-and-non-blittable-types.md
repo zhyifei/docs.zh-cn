@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: d03b050e-2916-49a0-99ba-f19316e5c1b3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 519ce34fc1f86220dfd0f3f7e19e3a50fba06087
-ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.openlocfilehash: e2cdaa312c037714a34e25e62ad318c9bc745ea7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65469459"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69953182"
 ---
 # <a name="blittable-and-non-blittable-types"></a>可直接复制到本机结构中的类型和非直接复制到本机结构中的类型
-大多数数据类型在托管和非托管内存中具有共同的表示形式，而且不需要互操作封送处理程序进行特殊处理。 这些类型称为 blittable 类型，因为它们在托管和非托管代码之间传递时不需要进行转换。  
+大多数数据类型在托管和非托管内存中具有共同的表示形式，而且不需要互操作封送处理程序进行特殊处理。 这些类型称为 blittable 类型，因为它们在托管和非托管代码之间传递时不需要进行转换  。  
   
  从平台调用返回的结构必须是 blittable 类型。 平台调用不支持返回类型为 non-blittable 结构。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "65469459"
 |[System.Valuetype](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/0t2cwe11(v=vs.100))|转换为具有固定内存布局的结构。|  
 |[System.Szarray](../../../docs/framework/interop/default-marshaling-for-arrays.md)|转换为 C 样式数组或 `SAFEARRAY`。|  
   
- 类和对象类型仅受 COM 互操作支持。 有关 Visual Basic、C# 和 C++ 中的相应类型的信息，请参阅[类库概述](../../../docs/standard/class-library-overview.md)。  
+ 类和对象类型仅受 COM 互操作支持。 有关 Visual Basic、C# 和 C++ 中的相应类型的信息，请参阅[类库概述](../../standard/class-library-overview.md)。  
   
 ## <a name="see-also"></a>请参阅
 

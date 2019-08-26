@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - interface keyword [C#]
 ms.assetid: 7da38e81-4f99-4bc5-b07d-c986b687eeba
-ms.openlocfilehash: ce3cb95617c87d1bf66879f4a2432b4de4ac40f2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 058d6b96e96a3237ebac2ca079807fd154715d68
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54586457"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69608648"
 ---
 # <a name="interface-c-reference"></a>接口（C# 参考）
 
@@ -54,7 +54,7 @@ ms.locfileid: "54586457"
 
 ## <a name="see-also"></a>请参阅
 
-- [C# 参考](../../../csharp/language-reference/index.md)
+- [C# 参考](../index.md)
 - [C# 编程指南](../../programming-guide/index.md)
 - [C# 关键字](index.md)
 - [引用类型](reference-types.md)

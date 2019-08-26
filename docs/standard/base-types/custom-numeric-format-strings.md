@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6f74fd32-6c6b-48ed-8241-3c2b86dea5f4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4e55ae32fc83d7879de9d1ecb743d17598bc175d
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.openlocfilehash: 9f05d91dd53d9dee534e5dd429bf6399fd677258
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67268214"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963401"
 ---
 # <a name="custom-numeric-format-strings"></a>自定义数字格式字符串
 
@@ -175,7 +175,7 @@ ms.locfileid: "67268214"
  若在要结果字符串中包括反斜杠，必须使用另一个反斜杠 (`\\`) 对其转义。  
   
 > [!NOTE]
->  一些编译器（如 C++ 和 C# 编译器）也可能会将单个反斜杠字符解释为转义字符。 若要确保在设置格式时正确解释字符串，在 C# 中，可以在字符串之前使用原义字符串文本字符（@ 字符），或者在 C# 和 C++ 中，在每个反斜杠之前另外添加一个反斜杠字符。 下面的 C# 示例阐释了这两种方法。  
+> 一些编译器（如 C++ 和 C# 编译器）也可能会将单个反斜杠字符解释为转义字符。 若要确保在设置格式时正确解释字符串，在 C# 中，可以在字符串之前使用原义字符串文本字符（@ 字符），或者在 C# 和 C++ 中，在每个反斜杠之前另外添加一个反斜杠字符。 下面的 C# 示例阐释了这两种方法。  
   
  下面的示例使用转义字符，以防格式设置操作将“#”、“0”和“\\”字符解释为转义字符或格式说明符。 C# 示例使用附加的反斜杠以确保将原反斜杠解释为文本字符。  
   

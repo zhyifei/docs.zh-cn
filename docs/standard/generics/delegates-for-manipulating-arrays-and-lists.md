@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 416be383-cc61-4102-9b1b-88b51adb963e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2752ecd05caec207955b2366ed19b3713f571f91
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f37f55f5af70a232952bdb94f0c111a27fcbab1d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54613904"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69948785"
 ---
 # <a name="generic-delegates-for-manipulating-arrays-and-lists"></a>用于操作数组和列表的泛型委托
 此主题概述了用于转换的泛型委托、搜索谓词以及对数组或集合中的元素所采取的操作。  
@@ -28,7 +28,7 @@ ms.locfileid: "54613904"
  <xref:System.Collections.Generic.List%601> 泛型类还提供了 <xref:System.Collections.Generic.List%601.ForEach%2A> 方法，该方法使用 <xref:System.Action%601> 委托。 此方法不属泛型方法。  
   
 > [!NOTE]
->  这使泛型类型和方法变得有趣。 <xref:System.Array.ForEach%2A?displayProperty=nameWithType> 方法必须是静态（在 Visual Basic 中为 `Shared`）和泛型的，因为 <xref:System.Array> 不是泛型类型；你可以对 <xref:System.Array.ForEach%2A?displayProperty=nameWithType> 指定一种类型以继续运行的唯一原因是该方法有自己的类型参数列表。 与之相反，非泛型 <xref:System.Collections.Generic.List%601.ForEach%2A?displayProperty=nameWithType> 方法属于泛型类 <xref:System.Collections.Generic.List%601>，因此它仅使用其类的类型参数。 该类为强类型，因此此方法可以作为实例方法。  
+> 这使泛型类型和方法变得有趣。 <xref:System.Array.ForEach%2A?displayProperty=nameWithType> 方法必须是静态（在 Visual Basic 中为 `Shared`）和泛型的，因为 <xref:System.Array> 不是泛型类型；你可以对 <xref:System.Array.ForEach%2A?displayProperty=nameWithType> 指定一种类型以继续运行的唯一原因是该方法有自己的类型参数列表。 与之相反，非泛型 <xref:System.Collections.Generic.List%601.ForEach%2A?displayProperty=nameWithType> 方法属于泛型类 <xref:System.Collections.Generic.List%601>，因此它仅使用其类的类型参数。 该类为强类型，因此此方法可以作为实例方法。  
   
  <xref:System.Predicate%601> 泛型委托表示的是用于确定特定元素是否满足你定义的标准的方法。 你可以将其用于 <xref:System.Array> 的以下静态泛型方法来搜索一个或一组元素：<xref:System.Array.Exists%2A>、<xref:System.Array.Find%2A>、<xref:System.Array.FindAll%2A>、<xref:System.Array.FindIndex%2A>、<xref:System.Array.FindLast%2A>、<xref:System.Array.FindLastIndex%2A> 和<xref:System.Array.TrueForAll%2A>。  
   

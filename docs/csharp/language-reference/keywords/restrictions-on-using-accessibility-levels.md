@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - access modifiers [C#], accessibility level restrictions
 ms.assetid: 987e2f22-46bf-4fea-80ee-270b9cd01045
-ms.openlocfilehash: 3a5915d23fea02a031cedd9063018fffbdc34180
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 13adfbb96cea2c192b84931b529bf92fd2b50116
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633778"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922332"
 ---
 # <a name="restrictions-on-using-accessibility-levels-c-reference"></a>可访问性级别的使用限制（C# 参考）
 
@@ -34,7 +34,7 @@ public class MyClass: BaseClass {...} // Error
 |[属性](../../programming-guide/classes-and-structs/properties.md)|属性的类型必须至少具有与属性本身相同的可访问性。|
 |[事件](../../programming-guide/events/index.md)|事件的类型必须至少具有与事件本身相同的可访问性。|
 |[索引器](../../programming-guide/indexers/index.md)|索引器的类型和参数类型必须至少具有与索引器本身相同的可访问性。|
-|[运算符](../../programming-guide/statements-expressions-operators/operators.md)|运算符的类型和参数类型必须至少具有与运算符本身相同的可访问性。|
+|[运算符](../operators/index.md)|运算符的类型和参数类型必须至少具有与运算符本身相同的可访问性。|
 |[构造函数](../../programming-guide/classes-and-structs/constructors.md)|构造函数的参数类型必须至少具有与构造函数本身相同的可访问性。|
 
 ## <a name="example"></a>示例

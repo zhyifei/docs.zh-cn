@@ -15,12 +15,12 @@ helpviewer_keywords:
 - text files [Visual Basic], reading
 - I/O [Visual Basic], reading text from files
 ms.assetid: 7d2109eb-f98a-4389-b43d-30f384aaa7d5
-ms.openlocfilehash: fc96baaff3b70fcb32e19e2ce08bdb0187c86c01
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0b9a899a579a1a38cee3be7b742fd9f0dfa197fb
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67783203"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966049"
 ---
 # <a name="walkthrough-manipulating-files-by-using-net-framework-methods-visual-basic"></a>演练：使用 .NET Framework 方法操作文件 (Visual Basic)
 此演练演示了如何使用 <xref:System.IO.StreamReader> 类打开和读取文件，如何查看文件是否正被访问，如何在使用 <xref:System.IO.StreamReader> 类实例读取的文件中搜索字符串，以及如何使用 <xref:System.IO.StreamWriter> 类写入文件。  
@@ -44,9 +44,9 @@ ms.locfileid: "67783203"
   
 |**对象**|**属性**|**值**|  
 |---|---|---|   
-|<xref:System.Windows.Forms.Button>|**名称**<br /><br /> **文本**|`Submit`<br /><br /> **提交项**|  
-|<xref:System.Windows.Forms.Button>|**名称**<br /><br /> **文本**|`Clear`<br /><br /> **清除项**|  
-|<xref:System.Windows.Forms.TextBox>|**名称**<br /><br /> **文本**<br /><br /> **多行**|`Entry`<br /><br /> **请输入内容。**<br /><br /> `False`|  
+|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **文本**|`Submit`<br /><br /> **提交项**|  
+|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **文本**|`Clear`<br /><br /> **清除项**|  
+|<xref:System.Windows.Forms.TextBox>|**Name**<br /><br /> **文本**<br /><br /> **多行**|`Entry`<br /><br /> **请输入内容。**<br /><br /> `False`|  
   
 ## <a name="writing-to-the-file"></a>写入文件  
  若要通过应用程序添加写入文件的功能，请使用 <xref:System.IO.StreamWriter> 类。 <xref:System.IO.StreamWriter> 设计用于特定编码的字符输出，而 <xref:System.IO.Stream> 类设计用于字节的输入和输出。 使用 <xref:System.IO.StreamWriter> 可将多行信息写入标准的文本文件。 有关 <xref:System.IO.StreamWriter> 类的详细信息，请参阅 <xref:System.IO.StreamWriter>。  
@@ -66,7 +66,7 @@ ms.locfileid: "67783203"
      [!code-vb[VbVbcnMyFileSystem#36](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#36)]  
   
 > [!NOTE]
->  Visual Studio 集成开发环境 (IDE) 将返回代码编辑器，并将插入点放在应在其中添加代码的事件处理程序内。  
+> Visual Studio 集成开发环境 (IDE) 将返回代码编辑器，并将插入点放在应在其中添加代码的事件处理程序内。  
   
 1. 若要写入该文件，请使用 <xref:System.IO.StreamWriter> 类的 <xref:System.IO.StreamWriter.Write%2A> 方法。 在 `Dim fw As StreamWriter` 后直接添加以下代码。 不需要担心如果找不到该文件会引发异常，因为如果它不存在，将创建该文件。  
   
@@ -91,10 +91,10 @@ ms.locfileid: "67783203"
   
 |控件|属性|值|  
 |-------------|----------------|------------|  
-|<xref:System.Windows.Forms.TextBox>|**名称**<br /><br /> **可见**<br /><br /> **Size**<br /><br /> **多行**|`DisplayEntry`<br /><br /> `False`<br /><br /> `120,60`<br /><br /> `True`|  
-|<xref:System.Windows.Forms.Button>|**名称**<br /><br /> **文本**|`Display`<br /><br /> **显示**|  
-|<xref:System.Windows.Forms.Button>|**名称**<br /><br /> **文本**|`GetEntries`<br /><br /> **获取项**|  
-|<xref:System.Windows.Forms.ComboBox>|**名称**<br /><br /> **文本**<br /><br /> **启用**|`PickEntries`<br /><br /> **选择一项**<br /><br /> `False`|  
+|<xref:System.Windows.Forms.TextBox>|**Name**<br /><br /> **可见**<br /><br /> **Size**<br /><br /> **多行**|`DisplayEntry`<br /><br /> `False`<br /><br /> `120,60`<br /><br /> `True`|  
+|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **文本**|`Display`<br /><br /> **显示**|  
+|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **文本**|`GetEntries`<br /><br /> **获取项**|  
+|<xref:System.Windows.Forms.ComboBox>|**Name**<br /><br /> **文本**<br /><br /> **启用**|`PickEntries`<br /><br /> **选择一项**<br /><br /> `False`|  
   
 ### <a name="to-populate-the-combo-box"></a>填充组合框  
   
@@ -119,9 +119,9 @@ ms.locfileid: "67783203"
   
 |控件|属性|值|  
 |-------------|----------------|------------|  
-|<xref:System.Windows.Forms.Button>|**名称**<br /><br /> **文本**<br /><br /> **启用**|`DeleteEntry`<br /><br /> **删除项**<br /><br /> `False`|  
-|<xref:System.Windows.Forms.Button>|**名称**<br /><br /> **文本**<br /><br /> **启用**|`EditEntry`<br /><br /> **编辑项**<br /><br /> `False`|  
-|<xref:System.Windows.Forms.Button>|**名称**<br /><br /> **文本**<br /><br /> **启用**|`SubmitEdit`<br /><br /> **提交编辑**<br /><br /> `False`|  
+|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **文本**<br /><br /> **启用**|`DeleteEntry`<br /><br /> **删除项**<br /><br /> `False`|  
+|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **文本**<br /><br /> **启用**|`EditEntry`<br /><br /> **编辑项**<br /><br /> `False`|  
+|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **文本**<br /><br /> **启用**|`SubmitEdit`<br /><br /> **提交编辑**<br /><br /> `False`|  
   
 ### <a name="to-enable-deletion-and-modification-of-entries"></a>允许删除和修改项  
   

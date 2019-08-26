@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 458b5e69-5210-45e5-bc44-3888f86abd6f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ad13a5771adbfbd389feeccd3e8c833c4c2f778a
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: ab754da005dcc16fc71c3a59728e4ff6848fbbb1
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66300635"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666307"
 ---
 # <a name="task-based-asynchronous-programming"></a>基于任务的异步编程
 
@@ -256,11 +256,11 @@ ms.locfileid: "66300635"
 
 ## <a name="tasks-without-delegates"></a>无委托的任务
 
-在某些情况下，可能需要使用 <xref:System.Threading.Tasks.Task> 封装由外部组件（而不是你自己的用户委托）执行的某个异步操作。 如果该操作基于异步编程模型 Begin/End 模式，你可以使用 <xref:System.Threading.Tasks.TaskFactory.FromAsync%2A> 方法。 如果不是这种情况，你可以使用 <xref:System.Threading.Tasks.TaskCompletionSource%601> 对象将该操作包装在任务中，并因而获得 <xref:System.Threading.Tasks.Task> 可编程性的一些好处，例如对异常传播和延续的支持。 有关更多信息，请参见<xref:System.Threading.Tasks.TaskCompletionSource%601>。
+在某些情况下，可能需要使用 <xref:System.Threading.Tasks.Task> 封装由外部组件（而不是你自己的用户委托）执行的某个异步操作。 如果该操作基于异步编程模型 Begin/End 模式，你可以使用 <xref:System.Threading.Tasks.TaskFactory.FromAsync%2A> 方法。 如果不是这种情况，你可以使用 <xref:System.Threading.Tasks.TaskCompletionSource%601> 对象将该操作包装在任务中，并因而获得 <xref:System.Threading.Tasks.Task> 可编程性的一些好处，例如对异常传播和延续的支持。 有关详细信息，请参阅 <xref:System.Threading.Tasks.TaskCompletionSource%601>。
 
 ## <a name="custom-schedulers"></a>自定义计划程序
 
-大多数应用程序或库开发人员并不关心任务在哪个处理器上运行、任务如何将其工作与其他任务同步以及如何在 <xref:System.Threading.ThreadPool?displayProperty=nameWithType> 中计划任务。 他们只需要它在主机上尽可能高效地执行。 如果需要对计划细节进行更细化的控制，可以使用任务并行库在默认任务计划程序上配置一些设置，甚至是提供自定义计划程序。 有关更多信息，请参见<xref:System.Threading.Tasks.TaskScheduler>。
+大多数应用程序或库开发人员并不关心任务在哪个处理器上运行、任务如何将其工作与其他任务同步以及如何在 <xref:System.Threading.ThreadPool?displayProperty=nameWithType> 中计划任务。 他们只需要它在主机上尽可能高效地执行。 如果需要对计划细节进行更细化的控制，可以使用任务并行库在默认任务计划程序上配置一些设置，甚至是提供自定义计划程序。 有关详细信息，请参阅 <xref:System.Threading.Tasks.TaskScheduler>。
 
 ## <a name="related-data-structures"></a>相关数据结构
 
@@ -268,7 +268,7 @@ TPL 有几种在并行和顺序方案中都有用的新公共类型。 它们包
 
 ## <a name="custom-task-types"></a>自定义任务类型
 
-建议不要从 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 或 <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> 继承。 相反，我们建议你使用 <xref:System.Threading.Tasks.Task.AsyncState%2A> 属性将其他数据或状态与 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601> 对象相关联。 还可以使用扩展方法扩展 <xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601> 类的功能。 有关扩展方法的详细信息，请参阅[扩展方法](~/docs/csharp/programming-guide/classes-and-structs/extension-methods.md)和[扩展方法](~/docs/visual-basic/programming-guide/language-features/procedures/extension-methods.md)。
+建议不要从 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 或 <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> 继承。 相反，我们建议你使用 <xref:System.Threading.Tasks.Task.AsyncState%2A> 属性将其他数据或状态与 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601> 对象相关联。 还可以使用扩展方法扩展 <xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601> 类的功能。 有关扩展方法的详细信息，请参阅[扩展方法](../../csharp/programming-guide/classes-and-structs/extension-methods.md)和[扩展方法](../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)。
 
 如果必须从 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601> 继承，则不能使用 <xref:System.Threading.Tasks.Task.Run%2A>、<xref:System.Threading.Tasks.Task.Run%2A> 或 <xref:System.Threading.Tasks.TaskFactory?displayProperty=nameWithType>、<xref:System.Threading.Tasks.TaskFactory%601?displayProperty=nameWithType> 或 <xref:System.Threading.Tasks.TaskCompletionSource%601?displayProperty=nameWithType> 类创建自定义任务类型的实例，因为这些类仅创建 <xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601> 对象。 此外，不能使用 <xref:System.Threading.Tasks.Task>、<xref:System.Threading.Tasks.Task%601>、<xref:System.Threading.Tasks.TaskFactory> 和 <xref:System.Threading.Tasks.TaskFactory%601> 提供的任务延续机制创建自定义任务类型的实例，因为这些机制也只创建 <xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601> 对象。
 

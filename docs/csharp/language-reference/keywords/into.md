@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - into keyword [C#]
 ms.assetid: 81ec62c1-f0b1-4755-8a31-959876e77f65
-ms.openlocfilehash: b209062a2a3e563ea8e70cb7883d9bbfa3662231
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dc1e2ee004c21bb3d05155eec3e42ea80bf641a1
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54631511"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69608640"
 ---
 # <a name="into-c-reference"></a>into（C# 参考）
 
-可使用 `into` 上下文关键字创建临时标识符，将 [group](group-clause.md)、[join](join-clause.md) 或 [select](select-clause.md) 子句的结果存储至新标识符。 此标识符本身可以是附加查询命令的生成器。 有时称在 `group` 或 `select` 子句中使用新标识符为“延续”。
+可使用 `into` 上下文关键字创建临时标识符，将 [group](group-clause.md)、[join](join-clause.md) 或 [select](select-clause.md) 子句的结果存储至新标识符。 此标识符本身可以是附加查询命令的生成器。 有时称在 `group` 或 `select` 子句中使用新标识符为“延续”  。
 
 ## <a name="example"></a>示例
 
@@ -32,5 +32,5 @@ ms.locfileid: "54631511"
 ## <a name="see-also"></a>请参阅
 
 - [查询关键字 (LINQ)](query-keywords.md)
-- [LINQ 查询表达式](../../../csharp/programming-guide/linq-query-expressions/index.md)
+- [LINQ 查询表达式](../../programming-guide/linq-query-expressions/index.md)
 - [group 子句](group-clause.md)

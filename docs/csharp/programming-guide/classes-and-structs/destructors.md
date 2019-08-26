@@ -7,15 +7,15 @@ helpviewer_keywords:
 - C# language, finalizers
 - finalizers [C#]
 ms.assetid: 1ae6e46d-a4b1-4a49-abe5-b97f53d9e049
-ms.openlocfilehash: 87755eadeaebb72c5a8ce147ba2e6faf109e6c12
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9936d56582afd160bf3464d18efd3acf47c7af60
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64584389"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924501"
 ---
 # <a name="finalizers-c-programming-guide"></a>终结器（C# 编程指南）
-终结器（也称为析构函数）用于在垃圾回收器收集类实例时执行任何必要的最终清理操作。  
+终结器（也称为  析构函数）用于在垃圾回收器收集类实例时执行任何必要的最终清理操作。  
   
 ## <a name="remarks"></a>备注  
   
@@ -56,7 +56,7 @@ protected override void Finalize()
  这意味着，对继承链（从派生程度最高到派生程度最低）中的所有实例以递归方式调用 `Finalize` 方法。  
   
 > [!NOTE]
->  不应使用空终结器。 如果类包含终结器，会在 `Finalize` 队列中创建一个条目。 调用终结器时，会调用垃圾回收器来处理该队列。 空终结器只会导致不必要的性能损失。  
+> 不应使用空终结器。 如果类包含终结器，会在 `Finalize` 队列中创建一个条目。 调用终结器时，会调用垃圾回收器来处理该队列。 空终结器只会导致不必要的性能损失。  
   
  程序员无法控制何时调用终结器，因为这由垃圾回收器决定。 垃圾回收器检查应用程序不再使用的对象。 如果它认为某个对象符合终止条件，则调用终结器（如果有），并回收用来存储此对象的内存。 
  
@@ -76,7 +76,7 @@ protected override void Finalize()
   
 - [实现 Dispose 方法](../../../standard/garbage-collection/implementing-dispose.md)  
   
-- [using 语句](../../../csharp/language-reference/keywords/using-statement.md)  
+- [using 语句](../../language-reference/keywords/using-statement.md)  
   
 ## <a name="example"></a>示例  
  以下示例创建了三个类，并且这三个类构成了一个继承链。 类 `First` 是基类，`Second` 派生自 `First`，`Third` 派生自 `Second`。 这三个类都具有终结器。 在 `Main` 中，已创建派生程度最高的类的一个实例。 程序运行时，请注意，将按顺序（从派生程度最高到派生程度最低）自动调用这三个类的终结器。  
@@ -90,6 +90,6 @@ protected override void Finalize()
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.IDisposable>
-- [C# 编程指南](../../../csharp/programming-guide/index.md)
-- [构造函数](../../../csharp/programming-guide/classes-and-structs/constructors.md)
+- [C# 编程指南](../index.md)
+- [构造函数](./constructors.md)
 - [垃圾回收](../../../standard/garbage-collection/index.md)

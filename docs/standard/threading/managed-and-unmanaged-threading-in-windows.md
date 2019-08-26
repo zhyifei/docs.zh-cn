@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4fb6452f-c071-420d-9e71-da16dee7a1eb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 04ef2ea6bf9d10baabea39133b2e0a9a72a6ce4f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: da32d514b19424487cebc1d113388cfa9a2dbdf0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674841"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69913233"
 ---
 # <a name="managed-and-unmanaged-threading-in-windows"></a>Windows 中的托管和非托管线程处理
 
@@ -27,7 +27,7 @@ ms.locfileid: "54674841"
  在托管线程处理中， <xref:System.Threading.Thread.GetHashCode%2A?displayProperty=nameWithType> 是稳定的托管线程标识。 在线程的生存期内，它不会与来自其他任何线程的值相冲突，不管你是从哪个应用程序域获取该值。  
   
 > [!NOTE]
->  因为非托管宿主可以控制托管线程和非托管线程之间的关系，所以操作系统 **ThreadId** 与托管线程之间没有固定的关系。 具体而言，一个复杂的主机可以使用 Fiber API 针对同一操作系统线程调度多个托管线程，或在不同的操作系统线程之间移动托管线程。  
+> 因为非托管宿主可以控制托管线程和非托管线程之间的关系，所以操作系统 **ThreadId** 与托管线程之间没有固定的关系。 具体而言，一个复杂的主机可以使用 Fiber API 针对同一操作系统线程调度多个托管线程，或在不同的操作系统线程之间移动托管线程。  
   
 ## <a name="mapping-from-win32-threading-to-managed-threading"></a>从 Win32 线程处理到托管线程处理的映射
 
@@ -40,7 +40,7 @@ ms.locfileid: "54674841"
 |**SuspendThread**|<xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType>|  
 |**ResumeThread**|<xref:System.Threading.Thread.Resume%2A?displayProperty=nameWithType>|  
 |**休眠**|<xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType>|  
-|线程句柄上的**WaitForSingleObject** |<xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType>|  
+|线程句柄上的**WaitForSingleObject**|<xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType>|  
 |**ExitThread**|无等效项|  
 |**GetCurrentThread**|<xref:System.Threading.Thread.CurrentThread%2A?displayProperty=nameWithType>|  
 |**SetThreadPriority**|<xref:System.Threading.Thread.Priority%2A?displayProperty=nameWithType>|  
@@ -57,7 +57,7 @@ ms.locfileid: "54674841"
  如果在启动线程之前未设置单元状态，则该线程被初始化为多线程单元 (MTA)。 终结器线程和由 <xref:System.Threading.ThreadPool> 控制的所有线程都是 MTA。  
   
 > [!IMPORTANT]
->  对于应用程序启动代码，控制单元状态的唯一方式是将 <xref:System.MTAThreadAttribute> 或 <xref:System.STAThreadAttribute> 应用于入口点过程。 在 .NET Framework 1.0 和 1.1 中， <xref:System.Threading.Thread.ApartmentState%2A> 属性可以设置为代码的第一行。 此属性在 .NET Framework 2.0 中是不允许的。  
+> 对于应用程序启动代码，控制单元状态的唯一方式是将 <xref:System.MTAThreadAttribute> 或 <xref:System.STAThreadAttribute> 应用于入口点过程。 在 .NET Framework 1.0 和 1.1 中， <xref:System.Threading.Thread.ApartmentState%2A> 属性可以设置为代码的第一行。 此属性在 .NET Framework 2.0 中是不允许的。  
   
  向 COM 公开的托管对象的行为就如同它们聚合了自由线程封送拆收器一样。 换言之，它们可以通过自由线程的方式从任何 COM 单元中调用。 唯一不显示这种自由线程行为的托管对象是那些从 <xref:System.EnterpriseServices.ServicedComponent> 或 <xref:System.Runtime.InteropServices.StandardOleMarshalObject> 派生的对象。  
   

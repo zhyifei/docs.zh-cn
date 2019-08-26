@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 113a8bbf-6875-4a72-a49d-ca2d92e19cc8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fe56c0ec3b8a5a150a999e7de98f283436a0ba9d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 571b049300a7c7de963bd762e0266f66060479fe
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64607910"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927999"
 ---
 # <a name="application-domains"></a>应用程序域
 
@@ -46,9 +46,9 @@ ms.locfileid: "64607910"
 - 能够在不停止整个进程的情况下停止单个应用程序。 使用应用程序域使您可以卸载在单个应用程序中运行的代码。  
   
     > [!NOTE]
-    >  不能卸载单个程序集或类型。 只能卸载整个域。  
+    > 不能卸载单个程序集或类型。 只能卸载整个域。  
   
-- 在一个应用程序中运行的代码不能直接访问其他应用程序中的代码或资源。 为了强制实施此隔离，公共语言运行时禁止在不同应用程序域中的对象之间进行直接调用。 要在各域之间传递对象，可以复制这些对象，或通过代理访问这些对象。 如果复制对象，那么对该对象的调用为本地调用。 也就是说，调用方和被引用的对象位于同一应用程序域中。 如果通过代理访问对象，那么对该对象的调用为远程调用。 在此情况下，调用方和被引用的对象位于不同的应用程序域中。 域间调用所采用的远程调用基础结构与两个进程间的调用或两台计算机间的调用的基础结构相同。 因此，被引用的对象的元数据必须对于两个应用程序域均可用，以便用 JIT 正确编译该方法调用。 如果调用域对被调用对象的元数据没有访问权，则编译可能失败，并引发类型为 <xref:System.IO.FileNotFoundException> 的异常。 有关详细信息，请参阅 [Remote Objects](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))。 确定如何跨域访问对象的机制是由该对象决定的。 有关更多信息，请参见<xref:System.MarshalByRefObject?displayProperty=nameWithType>。  
+- 在一个应用程序中运行的代码不能直接访问其他应用程序中的代码或资源。 为了强制实施此隔离，公共语言运行时禁止在不同应用程序域中的对象之间进行直接调用。 要在各域之间传递对象，可以复制这些对象，或通过代理访问这些对象。 如果复制对象，那么对该对象的调用为本地调用。 也就是说，调用方和被引用的对象位于同一应用程序域中。 如果通过代理访问对象，那么对该对象的调用为远程调用。 在此情况下，调用方和被引用的对象位于不同的应用程序域中。 域间调用所采用的远程调用基础结构与两个进程间的调用或两台计算机间的调用的基础结构相同。 因此，被引用的对象的元数据必须对于两个应用程序域均可用，以便用 JIT 正确编译该方法调用。 如果调用域对被调用对象的元数据没有访问权，则编译可能失败，并引发类型为 <xref:System.IO.FileNotFoundException> 的异常。 有关详细信息，请参阅 [Remote Objects](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))。 确定如何跨域访问对象的机制是由该对象决定的。 有关详细信息，请参阅 <xref:System.MarshalByRefObject?displayProperty=nameWithType>。  
   
 - 代码行为的作用范围由它运行所在的应用程序决定。 换言之，应用程序域将提供应用程序版本策略等配置设置、它所访问的任意远程程序集的位置，以及加载到该域中的程序集的位置信息。  
   
@@ -118,11 +118,11 @@ ms.locfileid: "64607910"
 |<xref:System.AppDomain.Unload%2A>|执行域的正常关闭。 只有应用程序域中正在运行的所有线程都已停止或域中不再有运行的线程之后，才卸载该应用程序域。|  
   
 > [!NOTE]
->  公共语言运行时不支持全局方法序列化，因此不能使用委托来执行其他应用程序域中的全局方法。  
+> 公共语言运行时不支持全局方法序列化，因此不能使用委托来执行其他应用程序域中的全局方法。  
   
  公共语言运行时承载接口规范中介绍的非托管接口也提供对应用程序域的访问。 运行时宿主可以使用非托管代码的接口在进程内创建应用程序域和获取对这些应用程序域的访问。  
   
-## <a name="the-complusloaderoptimization-environment-variable"></a>COMPLUS_LoaderOptimization 环境变量
+## <a name="the-complus_loaderoptimization-environment-variable"></a>COMPLUS_LoaderOptimization 环境变量
 
  用于设置可执行应用程序的默认加载程序优化策略的环境变量。  
   

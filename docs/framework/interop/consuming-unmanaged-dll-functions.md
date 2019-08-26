@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: eca7606e-ebfb-4f47-b8d9-289903fdc045
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f2b2d5a935c2608b2315633538fc93dd62595558
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 9e9308d6bf0eefaa60af17a721cd1c26827469eb
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59340030"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946849"
 ---
 # <a name="consuming-unmanaged-dll-functions"></a>使用非托管 DLL 函数
 平台调用是一项服务，使托管代码能够调用动态链接库 (DLL) 中实现的非托管函数，例如 Windows API 中的非托管函数。 此服务定位并调用导出的函数，并根据需要跨交互操作边界封送其自变量（整数、字符串、数组、结构等）。  
@@ -39,11 +39,11 @@ ms.locfileid: "59340030"
   
 3. [在托管代码中创建原型](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)。  
   
-     [Visual Basic] 使用 Declare 语句以及 Function 和 Lib 关键字。 在极少数情况下，可以使用 DllImportAttribute 和 Shared Function 关键字。 本节稍后会对这些情况进行说明。  
+     [Visual Basic] 使用 Declare 语句以及 Function 和 Lib 关键字    。 在极少数情况下，可以使用 DllImportAttribute 和 Shared Function 关键字   。 本节稍后会对这些情况进行说明。  
   
-     [C#] 使用 DllImportAttribute 标识 DLL 和函数。 为此方法标记 static 和 extern 修饰符。  
+     [C#] 使用 DllImportAttribute 标识 DLL 和函数  。 为此方法标记 static 和 extern 修饰符   。  
   
-     [C++] 使用 DllImportAttribute 标识 DLL 和函数。 用 extern "C" 标记此包装方法或函数。  
+     [C++] 使用 DllImportAttribute 标识 DLL 和函数  。 用 extern "C" 标记此包装方法或函数  。  
   
 4. [调用 DLL 函数](../../../docs/framework/interop/calling-a-dll-function.md)。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "59340030"
 3. 在内存中定位函数的地址并将其参数推送到堆栈上，从而根据需要封送数据。  
   
     > [!NOTE]
-    >  定位和加载 DLL，并定位仅在首次调用函数时内存中出现的函数地址。  
+    > 定位和加载 DLL，并定位仅在首次调用函数时内存中出现的函数地址。  
   
 4. 将控件传输到非托管函数。  
   

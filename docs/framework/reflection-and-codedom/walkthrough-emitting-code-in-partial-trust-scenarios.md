@@ -16,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: c45be261-2a9d-4c4e-9bd6-27f0931b7d25
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f13a07be13294cc408cd381bef6eec1f9095365f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5aca9d3eae3f566e02e7bf3dae4ac971b8fae5c0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742460"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956627"
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>演练：在部分信任应用场景中发出代码
 反射发出以完全信任或部分信任形式使用相同的 API 集，但某些功能在部分受信任代码中需要特殊权限。 此外，反射发出具有一个功能，即匿名托管动态方法，旨在由安全透明的程序集采用部分信任的形式使用。  
   
 > [!NOTE]
->  在 .NET Framework 3.5 之前，发出代码需要带 <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> 标志的 <xref:System.Security.Permissions.ReflectionPermission>。 默认情况下，此权限包含在 `FullTrust` 和 `Intranet` 命名权限集中，而不在 `Internet` 权限集中。 因此，只有当库具有 <xref:System.Security.SecurityCriticalAttribute> 特性并对 <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit> 执行了 <xref:System.Security.PermissionSet.Assert%2A> 方法时，才能在部分信任环境下使用该库。 这种库需要进行仔细的安全检查，因为编码错误可能会导致安全漏洞。 .NET Framework 3.5 允许以部分信任形式发出代码而无需发出任何安全请求，因为生成代码本身不是一项特权操作。 也就是说，生成的代码不会具有比发出它的程序集更多的权限。 这使发出代码的库具有安全-透明性且无需断言 <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>，因此编写安全库无需彻底的安全检查。  
+> 在 .NET Framework 3.5 之前，发出代码需要带 <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> 标志的 <xref:System.Security.Permissions.ReflectionPermission>。 默认情况下，此权限包含在 `FullTrust` 和 `Intranet` 命名权限集中，而不在 `Internet` 权限集中。 因此，只有当库具有 <xref:System.Security.SecurityCriticalAttribute> 特性并对 <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit> 执行了 <xref:System.Security.PermissionSet.Assert%2A> 方法时，才能在部分信任环境下使用该库。 这种库需要进行仔细的安全检查，因为编码错误可能会导致安全漏洞。 .NET Framework 3.5 允许以部分信任形式发出代码而无需发出任何安全请求，因为生成代码本身不是一项特权操作。 也就是说，生成的代码不会具有比发出它的程序集更多的权限。 这使发出代码的库具有安全-透明性且无需断言 <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>，因此编写安全库无需彻底的安全检查。  
   
  本演练阐释了以下任务：  
   
@@ -85,7 +85,7 @@ ms.locfileid: "67742460"
  例如，主机可能授予 Internet 应用程序 Internet 权限和 RMA，以便 Internet 应用程序能发出访问自身程序集中专用数据的代码。 由于访问仅限于具有相同和较低信任级别的程序集，因此 Internet 应用程序无法访问完全信任的程序集（如 .NET Framework 程序集）的成员。  
   
 > [!NOTE]
->  为防止特权提升，在构造匿名托管动态方法时，将包含发出程序集的堆栈信息。 调用方法时检查堆栈信息。 因此，从完全信任的代码调用的匿名托管动态方法仍被限制为发出程序集的信任等级。  
+> 为防止特权提升，在构造匿名托管动态方法时，将包含发出程序集的堆栈信息。 调用方法时检查堆栈信息。 因此，从完全信任的代码调用的匿名托管动态方法仍被限制为发出程序集的信任等级。  
   
 #### <a name="to-create-an-application-domain-with-partial-trust-plus-rma"></a>创建部分信任的应用程序域和 RMA  
   
@@ -97,7 +97,7 @@ ms.locfileid: "67742460"
      如果授予集中尚未包含该权限，则 <xref:System.Security.PermissionSet.AddPermission%2A> 方法向其中添加该权限。 如果授予集中已包含该权限，则向现有权限添加指定的标记。  
   
     > [!NOTE]
-    >  RMA 是匿名托管动态方法的一项功能。 当普通动态方法跳过 JIT 可见性检查时，发出的代码要求完全信任。  
+    > RMA 是匿名托管动态方法的一项功能。 当普通动态方法跳过 JIT 可见性检查时，发出的代码要求完全信任。  
   
 2. 创建应用程序域，指定应用程序域设置信息和授予集。  
   
@@ -135,7 +135,7 @@ ms.locfileid: "67742460"
      <xref:System.AppDomain.CreateInstanceAndUnwrap%2A> 方法在目标应用程序域中创建该对象，并返回一个可用于调用该对象的属性和方法的代理。  
   
     > [!NOTE]
-    >  如果在 Visual Studio 中使用该代码，则必须更改类名，使其包括命名空间。 默认情况下，命名空间是项目的名称。 例如，如果项目是“PartialTrust”，那么类名必须为“PartialTrust.Worker”。  
+    > 如果在 Visual Studio 中使用该代码，则必须更改类名，使其包括命名空间。 默认情况下，命名空间是项目的名称。 例如，如果项目是“PartialTrust”，那么类名必须为“PartialTrust.Worker”。  
   
 6. 添加用于调用 `SimpleEmitDemo` 方法的代码。 跨应用程序域边界对调用进行封送，并在沙盒应用程序域中执行该代码。  
   
@@ -147,7 +147,7 @@ ms.locfileid: "67742460"
  匿名托管动态方法与系统提供的透明程序集相关联。 因此，它们所包含的代码是透明的。 普通动态方法则相反，它必须与现有模块（无论是直接指定，还是从关联的类型推断而出）相关联，并从该模块获取安全级别。  
   
 > [!NOTE]
->  将动态方法与提供匿名托管的程序集相关联的唯一途径，是使用下列过程中所述的构造函数。 在匿名托管程序集中，不可显式指定模块。  
+> 将动态方法与提供匿名托管的程序集相关联的唯一途径，是使用下列过程中所述的构造函数。 在匿名托管程序集中，不可显式指定模块。  
   
  普通动态方法可以访问与之相关联的模块的内部成员，或访问与之相关联的类型的私有成员。 由于匿名托管动态方法独立于其他代码，因此它们无需访问专用数据。 但是，它们拥有跳过 JIT 可见性检查，访问专用数据的有限能力。 此功能仅限具有与发出代码的程序集相同或较低信任等级的程序集。  
   
@@ -174,12 +174,12 @@ ms.locfileid: "67742460"
      仅当主机应用程序通过 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> 标记授予 <xref:System.Security.Permissions.ReflectionPermission> 时，匿名托管动态方法才可使用此受限能力跳过 JIT 可见性检查。 调用方法时发出对此权限的请求。  
   
     > [!NOTE]
-    >  构造动态方法时，包括发出程序集的调用堆栈信息。 因此，是针对发出程序集的权限提出请求，而不是针对调用方法的程序集提出请求。 这样可防止使用提升的权限执行发出的代码。  
+    > 构造动态方法时，包括发出程序集的调用堆栈信息。 因此，是针对发出程序集的权限提出请求，而不是针对调用方法的程序集提出请求。 这样可防止使用提升的权限执行发出的代码。  
   
      此演练末的[完整代码示例](#Example)说明了受限成员访问的使用和限制。 它的 `Worker` 类包括可创建具有或不具有跳过可见性检查这一受限能力的匿名托管动态方法，且示例显示在具有不同信任级别的应用程序域中执行此方法的结果。  
   
     > [!NOTE]
-    >  跳过可见性检查这一受限能力是匿名托管动态方法的一种功能。 当普通动态方法跳过 JIT 可见性检查时，向它们授予的信任级别必须是完全信任。  
+    > 跳过可见性检查这一受限能力是匿名托管动态方法的一种功能。 当普通动态方法跳过 JIT 可见性检查时，向它们授予的信任级别必须是完全信任。  
   
 <a name="Example"></a>   
 ## <a name="example"></a>示例  

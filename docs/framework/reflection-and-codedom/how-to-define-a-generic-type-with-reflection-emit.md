@@ -12,18 +12,18 @@ helpviewer_keywords:
 ms.assetid: 07d5f01a-7b5b-40ea-9b15-f21561098fe4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8527f5f4a52c02744b02fea7ffaf833c223fa3f1
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 544d04236a8f1b824a15c6ee7912020346841076
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586218"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912532"
 ---
 # <a name="how-to-define-a-generic-type-with-reflection-emit"></a>如何：使用反射发出定义泛型类型
 此主题说明如何创建具有两个参数的简单泛型类型、如何对类型参数应用类约束、接口约束和特殊约束，以及如何创建使用类的类型参数作为参数类型和返回类型的成员。  
   
 > [!IMPORTANT]
->  某方法只要属于泛型类型，且使用该类型的类型参数，就不是泛型方法。 只有当方法有属于自己的类型参数列表时才是泛型方法。 多数泛型类型上的方法都不是泛型方法，如本示例所示。 有关发出泛型方法的示例，请参阅[如何：使用反射发出定义泛型方法](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-method-with-reflection-emit.md)。  
+> 某方法只要属于泛型类型，且使用该类型的类型参数，就不是泛型方法。 只有当方法有属于自己的类型参数列表时才是泛型方法。 多数泛型类型上的方法都不是泛型方法，如本示例所示。 有关发出泛型方法的示例，请参阅[如何：使用反射发出定义泛型方法](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-method-with-reflection-emit.md)。  
   
 ### <a name="to-define-a-generic-type"></a>定义泛型类型  
   
@@ -84,7 +84,7 @@ ms.locfileid: "65586218"
      用于此代码示例的构造函数接收 `IEnumerable<T>`。 但请注意，这不是 <xref:System.Collections.Generic.IEnumerable%601> 泛型接口的泛型类型定义；相反，必须将 `List<T>` 的类型参数 `T` 替代为 `IEnumerable<T>` 的类型参数 `T`。 （这似乎容易混淆，因为这两个类型都具有名为 `T` 的类型参数。 这就是此代码示例使用名称 `TFirst` 和 `TSecond` 的原因。）若要获取构造函数的参数类型，请从泛型类型定义 `IEnumerable<T>` 开始并使用 `List<T>` 的第一个泛型类型参数调用 <xref:System.Type.MakeGenericType%2A>。 构造函数参数列表必须作为数组进行传递，在本例中只有一个参数。  
   
     > [!NOTE]
-    >  在 C# 中使用 `typeof` 运算符时，泛型类型定义将表达为 `IEnumerable<>`；在 Visual Basic 中使用 `GetType` 运算符时，泛型类型定义将表达为 `IEnumerable(Of )`。  
+    > 在 C# 中使用 `typeof` 运算符时，泛型类型定义将表达为 `IEnumerable<>`；在 Visual Basic 中使用 `GetType` 运算符时，泛型类型定义将表达为 `IEnumerable(Of )`。  
   
      现在，可以通过调用泛型类型定义上的 <xref:System.Type.GetConstructor%2A> 来获取 `List<T>` 的构造函数。 若要将此构造函数转换为 `List<TFirst>` 对应的构造函数，请将 `List<TFirst>` 和 `List<T>` 的构造函数传递给静态 <xref:System.Reflection.Emit.TypeBuilder.GetConstructor%28System.Type%2CSystem.Reflection.ConstructorInfo%29?displayProperty=nameWithType> 方法。  
   

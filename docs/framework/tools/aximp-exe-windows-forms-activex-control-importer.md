@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 482c0d83-7144-4497-b626-87d2351b78d0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 69cc2459f1944c8101be9c58b1462217ee7ac78f
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: cd3d7ea4d9639c5c68ecf977b4e95e816d99a4f6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629578"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69915422"
 ---
 # <a name="aximpexe-windows-forms-activex-control-importer"></a>Aximp.exe（Windows 窗体 ActiveX 控件导入程序）
 ActiveX 控件导入程序将 ActiveX 控件的 COM 类型库中的类型定义转换为 Windows 窗体控件。  
@@ -49,7 +49,7 @@ aximp [options]{file.dll | file.ocx}
 |`/nologo`|取消显示 Microsoft 启动版权标志。|  
 |`/out:` filename |指定要创建的程序集的名称。|  
 |`/publickey:` filename |使用在 filename 指定的文件中找到的公钥，对生成的控件进行强名称签名  。|  
-|`/rcw:` filename |使用指定的运行时可调用包装器，而不用生成新的包装器。 你可以指定多个实例。 当前目录用于相对路径。 有关详细信息，请参阅[运行时可调用包装器](../../../docs/standard/native-interop/runtime-callable-wrapper.md)。|  
+|`/rcw:` filename |使用指定的运行时可调用包装器，而不用生成新的包装器。 你可以指定多个实例。 当前目录用于相对路径。 有关详细信息，请参阅[运行时可调用包装器](../../standard/native-interop/runtime-callable-wrapper.md)。|  
 |`/silent`|取消显示成功消息。|  
 |`/source`|生成 Windows 窗体包装器的 C# 源代码。|  
 |`/verbose`|指定详细模式；显示更多进度信息。|  
@@ -62,7 +62,7 @@ aximp [options]{file.dll | file.ocx}
  ActiveX 控件的 Windows 窗体代理（其中 Ax 表示 ActiveX）：Axprogid.dll   
   
 > [!NOTE]
->  如果 ActiveX 控件的成员名称与 .NET Framework 中定义的名称匹配，则 Aximp.exe 在创建 AxHost 派生类时，将在成员名称前加上前缀“Ctl”。 例如，如果 ActiveX 控件有一个名为“Layout”的成员，由于在 .NET Framework 中定义了 Layout 事件，因此该成员在 AxHost 派生类中将重命名为“CtlLayout”。  
+> 如果 ActiveX 控件的成员名称与 .NET Framework 中定义的名称匹配，则 Aximp.exe 在创建 AxHost 派生类时，将在成员名称前加上前缀“Ctl”。 例如，如果 ActiveX 控件有一个名为“Layout”的成员，由于在 .NET Framework 中定义了 Layout 事件，因此该成员在 AxHost 派生类中将重命名为“CtlLayout”。  
   
  可以使用 [Ildasm.exe（IL 反汇编程序）](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)之类的工具检查这些生成的文件。  
   

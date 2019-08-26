@@ -11,18 +11,18 @@ helpviewer_keywords:
 - Network Resources
 - WebRequest class, asynchronous access
 ms.assetid: 735d3fce-f80c-437f-b02c-5c47f5739674
-ms.openlocfilehash: bf5c603dfc6668f8378ba7997df543889b733482
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 2bfb33944007f84992d95ebc35c04ab9b97b3a7d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422442"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963971"
 ---
 # <a name="making-asynchronous-requests"></a>发出异步请求
 <xref:System.Net> 类为异步访问 Internet 资源使用 .NET Framework 的标准异步编程模型。 <xref:System.Net.WebRequest> 类的 <xref:System.Net.WebRequest.BeginGetResponse%2A> 和 <xref:System.Net.WebRequest.EndGetResponse%2A> 方法启动和完成 Internet 资源的异步请求。  
   
 > [!NOTE]
->  在异步回调方法中使用同步调用会导致严重的性能损失。 用 WebRequest  提出的 Internet 请求及其后代必须使用 <xref:System.IO.Stream.BeginRead%2A?displayProperty=nameWithType> 读取 <xref:System.Net.WebResponse.GetResponseStream%2A?displayProperty=nameWithType> 方法返回的流。  
+> 在异步回调方法中使用同步调用会导致严重的性能损失。 用 WebRequest  提出的 Internet 请求及其后代必须使用 <xref:System.IO.Stream.BeginRead%2A?displayProperty=nameWithType> 读取 <xref:System.Net.WebResponse.GetResponseStream%2A?displayProperty=nameWithType> 方法返回的流。  
   
  以下示例代码演示如何将异步调用与  WebRequest 类一起使用。 此示例是一个控制台程序从命令行获取 URI，请求位于 URI 处的资源，然后打印控制台的数据（数据是从 Internet 接收的）。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "67422442"
 - `ReadCallBack()` 方法实现用于读取响应流的异步调用方法。 它将从 Internet 资源接收到的数据传输到  RequestState 实例的  ResponseData 属性中，然后开始对响应流的另一次异步读取，直到不再返回数据。 已读取全部数据后，`ReadCallBack()` 关闭响应流并调用 `allDone.Set()` 方法，指示整个响应存在于 ResponseData 中  。  
   
     > [!NOTE]
-    >  所有网络流均已关闭，这一点非常重要。 如果未关闭每个请求和响应流，应用程序将耗尽与服务器的连接，无法处理其他请求。  
+    > 所有网络流均已关闭，这一点非常重要。 如果未关闭每个请求和响应流，应用程序将耗尽与服务器的连接，无法处理其他请求。  
   
 ```csharp  
 using System;  

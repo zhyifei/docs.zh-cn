@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#]
 ms.assetid: 0e597e0d-ea7a-41ba-a38a-0198122f3c26
-ms.openlocfilehash: 8216e144dfcaeaf9b480d681ae91ce59832ae9e3
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 345840ad45add21c6088abd0fb45e2e591b7df21
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877540"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923889"
 ---
 # <a name="command-line-arguments-c-programming-guide"></a>命令行参数（C# 编程指南）
 可以通过以下方式之一定义方法来将自变量发送到 `Main` 方法：  
@@ -20,7 +20,7 @@ ms.locfileid: "65877540"
  [!code-csharp[csProgGuideMain#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#3)]  
   
 > [!NOTE]
->  若要在 Windows 窗体应用程序中的 `Main` 方法中启用命令行参数，必须手动修改 program.cs 中 `Main` 的签名。 Windows 窗体设计器生成的代码创建没有输入参数的 `Main`。 还可使用 <xref:System.Environment.CommandLine%2A?displayProperty=nameWithType> 或 <xref:System.Environment.GetCommandLineArgs%2A?displayProperty=nameWithType> 从控制台或 Windows 应用程序的任意位置访问命令行参数。  
+> 若要在 Windows 窗体应用程序中的 `Main` 方法中启用命令行参数，必须手动修改 program.cs 中 `Main` 的签名。 Windows 窗体设计器生成的代码创建没有输入参数的 `Main`。 还可使用 <xref:System.Environment.CommandLine%2A?displayProperty=nameWithType> 或 <xref:System.Environment.GetCommandLineArgs%2A?displayProperty=nameWithType> 从控制台或 Windows 应用程序的任意位置访问命令行参数。  
   
  `Main` 方法的参数是一个表示命令行参数的 <xref:System.String> 数组。 通常，通过测试 `Length` 属性来确定参数是否存在，例如：  
   
@@ -55,7 +55,7 @@ long num = Convert.ToInt64(s);
   
      [!code-csharp[csProgGuideMain#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class1.cs#16)]  
   
-2. 从“开始”屏幕或“开始”菜单中，打开 Visual Studio“开发人员命令提示”窗口，然后导航到包含刚刚创建的文件的文件夹。  
+2. 从“开始”  屏幕或“开始”  菜单中，打开 Visual Studio“开发人员命令提示”  窗口，然后导航到包含刚刚创建的文件的文件夹。  
   
 3. 输入以下命令以编译应用程序。  
   
@@ -70,15 +70,15 @@ long num = Convert.ToInt64(s);
 5. 该命令将生成以下输出：`The factorial of 3 is 6.`  
   
 > [!NOTE]
->  在 Visual Studio 中运行应用程序时，可在[“项目设计器”->“调试”页](/visualstudio/ide/reference/debug-page-project-designer)中指定命令行参数。  
+> 在 Visual Studio 中运行应用程序时，可在[“项目设计器”->“调试”页](/visualstudio/ide/reference/debug-page-project-designer)中指定命令行参数。  
   
- 有关如何使用命令行参数的更多示例，请参阅[操作说明：使用命令行创建和使用程序集](../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md)。  
+ 有关如何使用命令行参数的更多示例，请参阅[操作说明：使用命令行创建和使用程序集](../concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md)。  
   
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Environment?displayProperty=nameWithType>
-- [C# 编程指南](../../../csharp/programming-guide/index.md)
-- [Main() 和命令行参数](../../../csharp/programming-guide/main-and-command-args/index.md)
-- [如何：显示命令行参数](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)
-- [Main() 返回值](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)
-- [类](../../../csharp/programming-guide/classes-and-structs/classes.md)
+- [C# 编程指南](../index.md)
+- [Main() 和命令行参数](./index.md)
+- [如何：显示命令行参数](./how-to-display-command-line-arguments.md)
+- [Main() 返回值](./main-return-values.md)
+- [类](../classes-and-structs/classes.md)

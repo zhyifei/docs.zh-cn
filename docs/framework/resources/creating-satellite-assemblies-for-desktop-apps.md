@@ -25,18 +25,18 @@ helpviewer_keywords:
 ms.assetid: 8d5c6044-2919-41d2-8321-274706b295ac
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 843b61257229bb3bf8c3852554f19c34dccc7496
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 77dff7af6a5d869c6635d5fe0caaf70bc31c3ff8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592353"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69949404"
 ---
 # <a name="creating-satellite-assemblies-for-desktop-apps"></a>创建桌面应用程序的附属程序集
 资源文件在本地化的应用程序中具有核心作用。 通过资源文件，应用程序可以使用用户自己的语言和区域性显示字符串、图像及其他数据，并且在用户自己的语言或区域性资源不可用时，提供备用数据。 .NET Framework 使用中心辐射型模型来查找和检索已本地化的资源。 中心即主程序集，包含不可本地化的可执行代码和单个区域性（称作非特定区域性或默认区域性）的资源。 默认区域性是应用程序的回退区域性；没有任何已本地化的资源可用时，则使用默认区域性。 使用 <xref:System.Resources.NeutralResourcesLanguageAttribute> 属性来指定应用程序默认区域性的区域性。 每条轮辐均连接到一个附属程序集，该附属程序集包含单个本地化区域性的资源，但不包含任何代码。 因为附属程序集不是主程序集的一部分，所以不必替换该应用程序的主程序集即可轻松更新或替换与特定区域性相对应的资源。  
   
 > [!NOTE]
->  应用程序默认区域性的资源也可以存储在附属程序集中。 为此，可为 <xref:System.Resources.NeutralResourcesLanguageAttribute> 属性分配一个 <xref:System.Resources.UltimateResourceFallbackLocation.Satellite?displayProperty=nameWithType> 值。  
+> 应用程序默认区域性的资源也可以存储在附属程序集中。 为此，可为 <xref:System.Resources.NeutralResourcesLanguageAttribute> 属性分配一个 <xref:System.Resources.UltimateResourceFallbackLocation.Satellite?displayProperty=nameWithType> 值。  
   
 ## <a name="satellite-assembly-name-and-location"></a>附属程序集名称和位置  
  中心辐射型模型要求将资源放在特定位置，以便轻松查找和使用资源。 如果未按预期编译和命名资源，或未将其放在正确的位置，则公共语言运行时将无法定位它们，并改为使用默认区域性的资源。 .NET Framework 资源管理器由 <xref:System.Resources.ResourceManager> 对象表示，用于自动访问本地化的资源。 该资源管理器的相关要求如下：  
@@ -46,7 +46,7 @@ ms.locfileid: "64592353"
 - 存储区域性资源的每个本地化区域性的应用程序目录中必须有一个单独的子目录。 该子目录名称必须与区域性名称相同。 或者，也可以将附属程序集存储在全局程序集缓存中。 在这种情况下，程序集强名称的区域性信息组件必须指明其区域性。 （请参阅本主题后面的[在全局程序集缓存中安装附属程序集](#SN)部分。）  
   
     > [!NOTE]
-    >  如果应用程序中包含了子区域性的资源，则将每个子区域性放在应用程序目录下的单独子目录中。 不要将子区域性放在其主区域性目录下的子目录中。  
+    > 如果应用程序中包含了子区域性的资源，则将每个子区域性放在应用程序目录下的单独子目录中。 不要将子区域性放在其主区域性目录下的子目录中。  
   
 - 附属程序集的名称必须与应用程序相同，并且必须使用文件扩展名“.resources.dll”。 例如，如果应用程序名为 Example.exe，则每个附属程序集的名称应该为 Example.resources.dll。 请注意附属程序集名称不指示其资源文件的区域性。 但是，附属程序集会显示在不指定区域性的目录中。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "64592353"
 al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dll  
 ```  
   
- 下面的 Al.exe 命令也从文件 strings.de.resources 为 `Example` 应用程序创建了一个附属程序集。 /Template 选项会导致附属程序集从父程序集 (Example.dll) 继承除区域性信息之外的所有程序集元数据。  
+ 下面的 Al.exe 命令也从文件 strings.de.resources 为 `Example` 应用程序创建了一个附属程序集。 /Template 选项会导致附属程序集从父程序集 (Example.dll) 继承除区域性信息之外的所有程序集元数据  。  
   
 ```console
 al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dll -template:Example.dll  
@@ -77,11 +77,11 @@ al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dl
   
 |选项|说明|  
 |------------|-----------------|  
-|-target:lib|指定将附属程序集编译成库 (.dll) 文件。 因为附属程序集不包含可执行代码，并且不是应用程序的主程序集，所以必须将附属程序集另存为 DLL。|  
-|-embed:strings.de.resources|指定在 Al.exe 编译程序集时要嵌入的资源文件名。 可在附属程序集中嵌入多个 .resources 文件，但如果依循中心辐射模型，则必须为每个区域性编译一个附属程序集。 但是，可以为字符串和对象创建单独的 .resources 文件。|  
-|-culture:de|指定要编译的资源的区域性。 公共语言运行时搜索特定区域性的资源时会使用此信息。 如果省略此选项，Al.ex e 仍然会编译资源，但当用户请求资源时，运行时将无法找到该资源。|  
-|-out:Example.resources.dll|指定输出文件的名称。 名称必须遵循命名标准 baseName.resources.extension，其中 baseName 是主程序集的名称，extension 是有效的文件扩展名（例如 .dll）。 请注意，运行时无法根据输出文件名确定附属程序集的区域性，必须使用 /culture 选项指定。|  
-|-template:Example.dll|指定程序集，附属程序集将从该程序集继承除区域性字段之外的所有程序集元数据。 仅当指定了具有[强名称](../../../docs/framework/app-domains/strong-named-assemblies.md)的程序集时，此选项才会影响附属程序集。|  
+|-target:lib |指定将附属程序集编译成库 (.dll) 文件。 因为附属程序集不包含可执行代码，并且不是应用程序的主程序集，所以必须将附属程序集另存为 DLL。|  
+|-embed:strings.de.resources |指定在 Al.exe 编译程序集时要嵌入的资源文件名。 可在附属程序集中嵌入多个 .resources 文件，但如果依循中心辐射模型，则必须为每个区域性编译一个附属程序集。 但是，可以为字符串和对象创建单独的 .resources 文件。|  
+|-culture:de |指定要编译的资源的区域性。 公共语言运行时搜索特定区域性的资源时会使用此信息。 如果省略此选项，Al.ex e 仍然会编译资源，但当用户请求资源时，运行时将无法找到该资源。|  
+|-out:Example.resources.dll |指定输出文件的名称。 名称必须遵循命名标准 baseName.resources.extension，其中 baseName 是主程序集的名称，extension 是有效的文件扩展名（例如 .dll）     。 请注意，运行时无法根据输出文件名确定附属程序集的区域性，必须使用 /culture 选项指定  。|  
+|-template:Example.dll |指定程序集，附属程序集将从该程序集继承除区域性字段之外的所有程序集元数据。 仅当指定了具有[强名称](../../../docs/framework/app-domains/strong-named-assemblies.md)的程序集时，此选项才会影响附属程序集。|  
   
  有关 Al.exe 可用选项的完整列表，请参阅[程序集链接器 (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md)。  
   
@@ -142,7 +142,7 @@ al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dl
     al -target:lib -embed:Greeting.culture.resources -culture:culture -out:culture\Example.resources.dll  
     ```  
   
-     其中 culture 是由附属程序集包含了资源的区域性的名称。 Visual Studio 会自动处理这一过程。  
+     其中 culture 是由附属程序集包含了资源的区域性的名称  。 Visual Studio 会自动处理这一过程。  
   
  然后便可运行该示例。 它会随机将某种支持的区域性设为当前区域性，并显示本地化的问候语。  
   
@@ -157,7 +157,7 @@ al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dl
 ### <a name="obtaining-the-public-key"></a>获取公钥  
  若要延迟程序集签名，必须具有公钥访问权限。 可以从公司中将进行最终签名的组织处获取真正的公钥，也可以使用[强名称工具 (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) 创建一个公钥。  
   
- 下面的 Sn.exe 命令创建一个测试公钥/私钥对。 –k 选项指定 Sn.exe 应新建一个密钥对，并将其保存在 TestKeyPair.snk 文件中。  
+ 下面的 Sn.exe 命令创建一个测试公钥/私钥对。 –k 选项指定 Sn.exe 应新建一个密钥对，并将其保存在 TestKeyPair.snk 文件中  。  
   
 ```console
 sn –k TestKeyPair.snk   
@@ -178,12 +178,12 @@ sn –p TestKeyPair.snk PublicKey.snk
 al -target:lib -embed:strings.ja.resources -culture:ja -out:StringLibrary.resources.dll -delay+ -keyfile:PublicKey.snk  
 ```  
   
- -delay+ 选项指定程序集链接器应延迟对程序集签名。 -keyfile 选项指定密钥文件的名称，该文件包含用以延迟程序集签名的公钥。  
+ -delay+ 选项指定程序集链接器应延迟对程序集签名  。 -keyfile 选项指定密钥文件的名称，该文件包含用以延迟程序集签名的公钥  。  
   
 ### <a name="re-signing-an-assembly"></a>对程序集重新签名  
  部署应用程序之前，必须使用真正的密钥对对延迟签名的附属程序集重新签名。 可以使用 Sn.exe 执行此操作。  
   
- 下面的 Sn.exe 命令使用 RealKeyPair.snk 文件中存储的密钥对对 StringLibrary.resources.dll 进行签名。 – R 选项指定对之前已签名或延迟签名的程序集进行重新签名。  
+ 下面的 Sn.exe 命令使用 RealKeyPair.snk 文件中存储的密钥对对 StringLibrary.resources.dll 进行签名。 – R 选项指定对之前已签名或延迟签名的程序集进行重新签名  。  
   
 ```console
 sn –R StringLibrary.resources.dll RealKeyPair.snk   
@@ -198,7 +198,7 @@ sn –R StringLibrary.resources.dll RealKeyPair.snk
 gacutil -i:StringLibrary.resources.dll  
 ```  
   
- /I 选项指定 Gacutil.exe 应将指定的程序集安装到全局程序集缓存中。 在缓存中安装了附属程序集之后，要使用附属程序集的应用程序便能够使用该附属程序集所包含的资源。  
+ /I 选项指定 Gacutil.exe 应将指定的程序集安装到全局程序集缓存中  。 在缓存中安装了附属程序集之后，要使用附属程序集的应用程序便能够使用该附属程序集所包含的资源。  
   
 ### <a name="resources-in-the-global-assembly-cache-an-example"></a>全局程序集缓存中的资源：示例  
  以下示例使用 .NET Framework 类库中的方法从资源文件中提取和返回本地化的问候语。 在全局程序集缓存中注册库及其资源。 示例包括了英语（美国）、法语（法国）、俄语（俄罗斯）和英语区域性的资源。 英语是默认区域性；其资源存储在主程序集中。 此示例最初使用公钥延迟对库及其附属程序集签名，然后使用公钥/私钥对为其重新签名。 要创建示例，请执行以下操作：  
@@ -209,7 +209,7 @@ gacutil -i:StringLibrary.resources.dll
     sn –k ResKey.snk  
     ```  
   
-     如果使用的是 Visual Studio，则使用项目“属性”对话框中的“签名”选项卡生成密钥文件。  
+     如果使用的是 Visual Studio，则使用项目“属性”对话框中的“签名”选项卡生成密钥文件   。  
   
 2. 使用以下[强名称工具 (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) 命令创建名为 PublicKey.snk 的公钥文件：  
   
@@ -238,7 +238,7 @@ gacutil -i:StringLibrary.resources.dll
     resgen filename  
     ```  
   
-     其中 filename 是 .resx 或文本文件的可选路径、文件名和扩展名。  
+     其中 filename 是 .resx 或文本文件的可选路径、文件名和扩展名  。  
   
 7. 将以下 StringLibrary.vb 或 StringLibrary.cs 的源代码连同默认区域性的资源编译到名为 StringLibrary.dll 的延迟签名库程序集中：  
   
@@ -268,7 +268,7 @@ gacutil -i:StringLibrary.resources.dll
     al -target:lib -embed:Strings.culture.resources -culture:culture -out:culture\StringLibrary.resources.dll -delay+ -keyfile:publickey.snk  
     ```  
   
-     其中 culture 是区域性的名称。 在此示例中，区域性名称是 en-US、fr-FR 和 ru-RU。  
+     其中 culture 是区域性的名称  。 在此示例中，区域性名称是 en-US、fr-FR 和 ru-RU。  
   
 10. 使用[强名称工具 (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) 对 StringLibrary.dll 重新签名，如下所示：  
   
@@ -288,9 +288,9 @@ gacutil -i:StringLibrary.resources.dll
     gacutil -i filename  
     ```  
   
-     其中 filename 是要注册的文件的名称。  
+     其中 filename 是要注册的文件的名称  。  
   
-13. 如果使用的是 Visual Studio，则新建一个名为 `Example` 的控制台应用程序项目，向其添加对 StringLibrary.dll 的引用和以下源代码，然后进行编译。  
+13. 如果使用的是 Visual Studio，则新建一个名为 `Example` 的控制台应用程序项目，向其添加对 StringLibrary.dll 的引用和以下源代码，然后进行编译  。  
   
      [!code-csharp[Conceptual.Resources.Satellites#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.satellites/cs/example.cs#3)]
      [!code-vb[Conceptual.Resources.Satellites#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.satellites/vb/example.vb#3)]  

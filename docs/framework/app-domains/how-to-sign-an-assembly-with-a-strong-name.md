@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2c30799a-a826-46b4-a25d-c584027a6c67
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 458b18ad34cfff6ab136408ab8e8b2e7953b35cb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0b109ec82d139e3b3eb321c90d5f41dd1eae216f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593566"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927924"
 ---
 # <a name="how-to-sign-an-assembly-with-a-strong-name"></a>如何：使用强名称为程序集签名
 可通过许多方法为程序集签署强名称：  
@@ -35,22 +35,22 @@ ms.locfileid: "64593566"
   
 ### <a name="to-create-and-sign-an-assembly-with-a-strong-name-by-using-visual-studio"></a>使用 Visual Studio 创建程序集并为程序集签署强名称  
   
-1. 在“解决方案资源管理器” 中，打开项目的快捷菜单，然后选择“属性” 。  
+1. 在“解决方案资源管理器”  中，打开项目的快捷菜单，然后选择“属性”  。  
   
 2. 选择 **“签名”** 选项卡。  
   
-3. 选择“为程序集签名”框。  
+3. 选择“为程序集签名”  框。  
   
-4. 在“选择强名称密钥文件”框中，选择“\<浏览…>”，然后导航到该密钥文件。 若要创建新的密钥文件，请选择“\<新建…>”，然后在“创建强名称密钥”对话框中输入其名称。  
+4. 在“选择强名称密钥文件”  框中，选择“\<浏览…>”  ，然后导航到该密钥文件。 若要创建新的密钥文件，请选择“\<新建…>”  ，然后在“创建强名称密钥”  对话框中输入其名称。  
   
 > [!NOTE]
->  为了[延迟为程序集签名](../../../docs/framework/app-domains/delay-sign-assembly.md)，请选择公钥文件。  
+> 为了[延迟为程序集签名](../../../docs/framework/app-domains/delay-sign-assembly.md)，请选择公钥文件。  
   
 ### <a name="to-create-and-sign-an-assembly-with-a-strong-name-by-using-the-assembly-linker"></a>使用程序集链接器创建程序集并为程序集签署强名称  
   
 - 在 [Visual Studio 开发人员命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)处，键入以下命令：  
   
-     **al** **/out:**\<*assemblyName*> *\<moduleName>* **/keyfile:**\<*keyfileName*>  
+     **al** **/out:** \<*assemblyName*>  *\<moduleName>* **/keyfile:** \<*keyfileName*>  
   
      其中：  
   
@@ -78,7 +78,7 @@ al /out:MyAssembly.dll MyModule.netmodule /keyfile:sgKey.snk
 2. 通常会编译源代码文件。  
   
 > [!NOTE]
->  当 C# 和 Visual Basic 编译器在源代码中遇到 <xref:System.Reflection.AssemblyKeyFileAttribute> 或 <xref:System.Reflection.AssemblyKeyNameAttribute> 特性时，会发出编译器警告（分别为 CS1699 和 BC41008）。 你可以忽略这些警告。  
+> 当 C# 和 Visual Basic 编译器在源代码中遇到 <xref:System.Reflection.AssemblyKeyFileAttribute> 或 <xref:System.Reflection.AssemblyKeyNameAttribute> 特性时，会发出编译器警告（分别为 CS1699 和 BC41008）。 你可以忽略这些警告。  
   
  下面的代码示例将 <xref:System.Reflection.AssemblyKeyFileAttribute> 特性用于名为 `keyfile.snk`的密钥文件（位于编译程序集的目录中）。  
   

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: cb8bc835-9221-4888-af53-1a4f5fad6c48
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1c9a14c2ea2d7d817aacca1fa25b04ac643f16bf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 775a8b63a0ba7cd021c9e5072ef98c20f6ab2e81
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296649"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937921"
 ---
 # <a name="winresexe-windows-resource-localization-editor"></a>Winres.exe（Windows 资源本地化编辑器）
 
@@ -57,21 +57,21 @@ winres /?
 
 Winres.exe 不能将 .resx 文件转换成相应的 .resources 文件；请改用 Resgen.exe 工具。 有关 Resgen.exe 的详细信息，请参阅 [Resgen.exe（资源文件生成器）](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)。
 
-Winres.exe 是一种图形应用程序，它只需使用资源文件即可重新创建 Windows 窗体的设计时版本，而不必访问源代码。 Winres.exe 可托管 Visual Studio 的“Windows 窗体设计器”和“属性”窗口。 使用这些功能，可以对包含 Windows 窗体的 .resources 或 .resx 文件进行可视编辑。 通常，本地化人员使用 Winres.exe 编辑控件标签并调整控件的位置和大小，以适应目标区域性的标签。
+Winres.exe 是一种图形应用程序，它只需使用资源文件即可重新创建 Windows 窗体的设计时版本，而不必访问源代码。 Winres.exe 可托管 Visual Studio 的“Windows 窗体设计器”和“属性”窗口   。 使用这些功能，可以对包含 Windows 窗体的 .resources 或 .resx 文件进行可视编辑。 通常，本地化人员使用 Winres.exe 编辑控件标签并调整控件的位置和大小，以适应目标区域性的标签。
 
-如果 Winres.exe 无法解析某个控件的类型，它会在本地化的 .resx 或 .resources 文件中创建一个占位符控件。 占位符控件将作为一个阴影窗口显示在 Windows 窗体上。 阴影窗口的大小和位置与实际控件的大小和位置一致。 占位符控件的所有可用的可本地化属性都显示在“属性”窗口中。 对占位符控件所做的任何更改均会为实际控件保存下来。
+如果 Winres.exe 无法解析某个控件的类型，它会在本地化的 .resx 或 .resources 文件中创建一个占位符控件。 占位符控件将作为一个阴影窗口显示在 Windows 窗体上。 阴影窗口的大小和位置与实际控件的大小和位置一致。 占位符控件的所有可用的可本地化属性都显示在“属性”窗口中  。 对占位符控件所做的任何更改均会为实际控件保存下来。
 
 ## <a name="winresexe-versus-visual-studio"></a>Winres.exe 对比 Visual Studio
 
 一般而言，在开始对应用程序的 Windows 窗体进行本地化之前，应先确定是使用 Visual Studio 还是使用 Winres.exe 作为本地化工具。 稍后介绍的版本兼容性可能会阻止从一个工具切换到另外一个工具。
 
-Visual Studio 的优点在于，它既可以用来开发应用程序，也可以用来本地化应用程序。 若要对某个窗体进行本地化，在完成开发之后，可以将该窗体的 <xref:System.ComponentModel.LocalizableAttribute>（“属性”编辑器中的 Localizable 属性）设置为 `true`，并将其 Language 属性改为所需的目标区域性。 然后，编辑字符串并调整控件的位置和大小，以适应目标区域性的字符串。 保存本地化后的 .resx 文件时，Visual Studio 只将可本地化的属性（已在目标区域性中更改的属性）写入该文件。 Visual Studio 将在正确的目录位置为本地化的 .resx 文件自动创建附属程序集。
+Visual Studio 的优点在于，它既可以用来开发应用程序，也可以用来本地化应用程序。 若要对某个窗体进行本地化，在完成开发之后，可以将该窗体的 <xref:System.ComponentModel.LocalizableAttribute>（“属性”编辑器中的  Localizable 属性）设置为 `true`，并将其 Language 属性改为所需的目标区域性   。 然后，编辑字符串并调整控件的位置和大小，以适应目标区域性的字符串。 保存本地化后的 .resx 文件时，Visual Studio 只将可本地化的属性（已在目标区域性中更改的属性）写入该文件。 Visual Studio 将在正确的目录位置为本地化的 .resx 文件自动创建附属程序集。
 
 虽然 Visual Studio 提供了一个集成的开发和本地化环境，但是，如果本地化工作由第三方本地化人员完成，则建议使用 Winres.exe 作为工具。 因为 Winres.exe 只是一个本地化工具，所以使用它可以将应用程序的代码与要本地化的窗体更加彻底地分离开来，这对于管理大型项目更为实用。
 
 ## <a name="using-winresexe"></a>使用 Winres.exe
 
-若要使用 Winres.exe 进行本地化，必须先使用 Visual Studio 中“Windows 窗体设计器”之类的可视化设计器来开发应用程序。 开发完成后，将窗体的 <xref:System.ComponentModel.LocalizableAttribute>（“属性”编辑器中的 Localizable属性）设置为 `true`，然后将默认区域性的 .resx 文件交给第三方本地化人员。 此 .resx 文件包含 Winres.exe 用于重新创建原始窗体的设计时版本的其他信息。
+若要使用 Winres.exe 进行本地化，必须先使用 Visual Studio 中“Windows 窗体设计器”之类的可视化设计器来开发应用程序  。 开发完成后，将窗体的 <xref:System.ComponentModel.LocalizableAttribute>（“属性”编辑器中的 Localizable属性）设置为 `true`，然后将默认区域性的 .resx 文件交给第三方本地化人员   。 此 .resx 文件包含 Winres.exe 用于重新创建原始窗体的设计时版本的其他信息。
 
 > [!NOTE]
 > Winres.exe 不能用于编辑默认的资源文件。 Winres.exe 将所有更改后的属性都阐释为本地化属性，并将其保存到目标区域性资源文件中。
@@ -84,7 +84,7 @@ Winres.exe 具有下列特性和功能：
 
 - 错误报告窗口，该窗口停靠在主窗口的左下方。
 
-- 可以通过以下方法检查热键是否重复：在“格式”菜单上单击“检查热键”命令。
+- 可以通过以下方法检查热键是否重复：在“格式”菜单上单击“检查热键”命令   。
 
 ## <a name="version-compatibility"></a>版本兼容性
 
@@ -108,9 +108,9 @@ Winres.exe 具有下列特性和功能：
 
 1. 在开发人员命令提示符处键入 `winres` 以运行 Winres.exe。
 
-2. 若要打开要本地化的窗体的默认资源，请单击“文件”菜单中的“打开”命令，然后导航到该文件打开它。
+2. 若要打开要本地化的窗体的默认资源，请单击“文件”  菜单中的“打开”  命令，然后导航到该文件打开它。
 
-     或
+     -或-
 
      指定启动 Winres.exe 时在命令行提示符处要打开的文件。
 
@@ -131,9 +131,9 @@ Winres.exe 具有下列特性和功能：
 
 3. 选择窗体中的控件，然后更改其 <xref:System.Windows.Forms.Control.Text%2A> 和其他属性，以便反映本地化的区域性及其语言。 根据需要移动控件或调整其大小，以适应本地化后的文本。
 
-4. 若要保存 .resx 或 .resources 文件的本地化版本，请单击“保存”图标或“文件”菜单中的相同命令。 该工具会显示“选择区域性”窗口。
+4. 若要保存 .resx 或 .resources 文件的本地化版本，请单击“保存”  图标或“文件”  菜单中的相同命令。 该工具会显示“选择区域性”  窗口。
 
-5. 选择相应的区域性和文件模式，然后单击“确定”。
+5. 选择相应的区域性和文件模式，然后单击“确定”  。
 
    该工具会使用运行时希望用于本地化资源文件的命名约定来保存文件。 例如，如果将 `TestApp.resources` 本地化为德语（德国），则该工具将该文件保存为 `TestApp.de-DE.resources`。 如果将 `TestApp.resx` 本地化为德语（德国），则该工具将该文件保存为 `TestApp.de-DE.resx`。 有关资源命名约定的详细信息，请参阅[打包和部署资源](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)。 有关运行时使用的预定义区域性名称的列表，请参阅 <xref:System.Globalization.CultureInfo> 类。
 
@@ -146,4 +146,4 @@ Winres.exe 具有下列特性和功能：
 - <xref:System.Resources.ResourceWriter>
 - [工具](../../../docs/framework/tools/index.md)
 - [桌面应用中的资源](../../../docs/framework/resources/index.md)
-- [全球化和本地化](../../../docs/standard/globalization-localization/index.md)
+- [全球化和本地化](../../standard/globalization-localization/index.md)

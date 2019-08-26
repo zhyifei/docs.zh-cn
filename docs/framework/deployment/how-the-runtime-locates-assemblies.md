@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ceae33501330719a27e2d0015c21249dca62d551
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 2ddec748dc400418c21bfa8fab6fd2735d74af6d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69566852"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941787"
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>运行时如何定位程序集
 若要成功部署 .NET Framework 应用程序，必须了解公共语言运行时如何查找和绑定到构成应用程序的程序集。 默认情况下，运行时尝试与生成应用程序的程序集的准确版本绑定。 可通过配置文件设置重写此默认行为。  
@@ -24,7 +24,7 @@ ms.locfileid: "69566852"
  在尝试查找程序集和解析程序集引用时，公共语言运行时会执行多个步骤。 以下各节将分别阐述每个步骤。 描述运行时如何查找程序集时，通常使用术语“探测”；它指一套用于根据名称和区域性查找程序集的试探法。  
   
 > [!NOTE]
->  可使用 Windows SDK 中附带的[程序集绑定日志查看器 (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) 查看日志文件中的绑定信息。  
+> 可使用 Windows SDK 中附带的[程序集绑定日志查看器 (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) 查看日志文件中的绑定信息。  
   
 ## <a name="initiating-the-bind"></a>启动绑定  
  在运行时尝试解析其他程序集的引用时，开始查找和绑定到程序集的进程。 此引用可为静态，也可为动态。 编译器在生成时记录程序集清单的元数据中的静态引用。 由于调用各种方法（如 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>），所以将及时构造动态引用。  
@@ -36,7 +36,7 @@ ms.locfileid: "69566852"
  最后，可使用 <xref:System.Reflection.Assembly.Load*?displayProperty=nameWithType> 等方法执行动态引用并仅提供部分信息；然后在应用程序配置文件中用 [\<qualifyAssembly>](../../../docs/framework/configure-apps/file-schema/runtime/qualifyassembly-element.md) 元素限定该引用。 借助此元素，你可以提供应用程序配置文件（而不是代码）中的完全引用信息（名称、版本、区域性和公钥标记（若适用））。 如果想要完全限定应用程序目录之外的程序集引用，或者如果想要引用全局程序集缓存中的程序集且轻松指定配置文件（而不是代码）中的完全引用，可使用此技术。  
   
 > [!NOTE]
->  多个应用程序间共享的程序集不应使用此类型的部分引用。 因为配置设置是基于每个应用程序（而非每个程序集）应用的，所以使用此类部分引用的共享程序集需要使用共享程序集的每个应用程序的配置文件中都具有限定信息。  
+> 多个应用程序间共享的程序集不应使用此类型的部分引用。 因为配置设置是基于每个应用程序（而非每个程序集）应用的，所以使用此类部分引用的共享程序集需要使用共享程序集的每个应用程序的配置文件中都具有限定信息。  
   
  运行时使用以下步骤解析程序集引用：  
   
@@ -45,7 +45,7 @@ ms.locfileid: "69566852"
 2. [检查之前是否已绑定程序集名称](#step2) ，若如此，请使用先前加载的程序集。 如果加载程序集的先前请求失败，此请求会立即失败且不会尝试加载程序集。  
   
     > [!NOTE]
-    >  程序集绑定故障缓存是 .NET Framework 2.0 版本中的新增功能。  
+    > 程序集绑定故障缓存是 .NET Framework 2.0 版本中的新增功能。  
   
 3. [检查全局程序集缓存](#step3)。 如果此处存在程序集，则运行时使用此程序集。  
   
@@ -73,7 +73,7 @@ ms.locfileid: "69566852"
  这些文件遵循相同的语法，并提供绑定重定向、代码位置和特定程序集的绑定模式等信息。 每个配置文件均可包含用于重定向绑定过程的 [\<assemblyBinding> 元素](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md)。 [\<assemblyBinding> 元素](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md)的子元素包括 [\<dependentAssembly> 元素](../../../docs/framework/configure-apps/file-schema/runtime/dependentassembly-element.md)。 [\<dependentAssembly> 元素](../../../docs/framework/configure-apps/file-schema/runtime/dependentassembly-element.md)的子元素包括 [\<assemblyIdentity> 元素](/visualstudio/deployment/assemblyidentity-element-clickonce-deployment)、[\<bindingRedirect> 元素](../../../docs/framework/configure-apps/file-schema/runtime/bindingredirect-element.md)和 [\<codeBase> 元素](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md)。  
   
 > [!NOTE]
->  这 3 个配置文件中均存在配置信息；并非所有配置文件中的所有元素都有效。 例如，绑定模式和专用路径信息仅存在于应用程序配置文件。 有关包含在每个文件内的完整信息列表，请参阅 [使用配置文件配置应用](../../../docs/framework/configure-apps/index.md)。  
+> 这 3 个配置文件中均存在配置信息；并非所有配置文件中的所有元素都有效。 例如，绑定模式和专用路径信息仅存在于应用程序配置文件。 有关包含在每个文件内的完整信息列表，请参阅 [使用配置文件配置应用](../../../docs/framework/configure-apps/index.md)。  
   
 ### <a name="application-configuration-file"></a>应用程序配置文件  
  首先，公共语言运行时检查应用程序配置文件是否存在重写调用程序集清单中存储的版本信息的相关信息。 可借助应用程序部署应用程序配置文件，但执行应用程序时不需要此文件。 通常几乎可瞬时完成此文件的检索，但如果应用程序基位于完成计算机上（例如，在基于 Internet Explorer Web 的方案中），必须下载配置文件。  
@@ -123,7 +123,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
  `compatkey.dat` 是一个强名称密钥文件。 此命令创建可置于全局程序集缓存中的强名称程序集。  
   
 > [!NOTE]
->  发布服务器策略会影响所有使用共享组件的应用程序。  
+> 发布服务器策略会影响所有使用共享组件的应用程序。  
   
  发布服务器策略配置文件会重写来自应用程序（即，来自程序集清单或应用程序配置文件）的版本信息。 如果应用程序配置文件中不存在重定向程序集清单中指定版本的语句，发布服务器策略文件将重写程序集清单中指定的版本。 但是，如果应用程序配置文件中存在重定向语句，发布服务器策略将重写此版本（而不是清单中指定的版本）。  
   
@@ -144,7 +144,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
  如果先前的程序集请求失败，此程序集的后续请求立即失败且不会尝试加载程序集。 从 .NET Framework 2.0 版开始，将缓存程序集绑定故障，且缓存的信息用于确定是否尝试加载此程序集。  
   
 > [!NOTE]
->  若要还原到 .NET framework 1.0 和 1.1 版的行为（即，不缓存绑定故障），请将 [\<disableCachingBindingFailures> 元素](../../../docs/framework/configure-apps/file-schema/runtime/disablecachingbindingfailures-element.md)包括到配置文件中。  
+> 若要还原到 .NET framework 1.0 和 1.1 版的行为（即，不缓存绑定故障），请将 [\<disableCachingBindingFailures> 元素](../../../docs/framework/configure-apps/file-schema/runtime/disablecachingbindingfailures-element.md)包括到配置文件中。  
   
 <a name="step3"></a>   
 ## <a name="step-3-checking-the-global-assembly-cache"></a>步骤 3：检查全局程序集缓存  
@@ -159,7 +159,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 2. 然后，运行时使用本节稍后指定的规则探测引用的程序集。  
   
 > [!NOTE]
->  如果目录中有多个版本的程序集，并且要引用该程序集的某个特定版本，则必须使用 [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) 元素而不是 [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) 元素的 `privatePath` 特性。 如果使用 [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) 元素，则运行时首次找到与引用的简单程序集名称匹配的程序集时，无论此匹配项是否正确，运行时都会停止探测。 如果此匹配项正确，则使用此程序集。 如果此匹配项不正确，则停止探测且绑定失败。  
+> 如果目录中有多个版本的程序集，并且要引用该程序集的某个特定版本，则必须使用 [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) 元素而不是 [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) 元素的 `privatePath` 特性。 如果使用 [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) 元素，则运行时首次找到与引用的简单程序集名称匹配的程序集时，无论此匹配项是否正确，运行时都会停止探测。 如果此匹配项正确，则使用此程序集。 如果此匹配项不正确，则停止探测且绑定失败。  
   
 ### <a name="locating-the-assembly-through-codebases"></a>通过基本代码查找程序集  
  通过使用配置文件中的 [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) 元素，可提供基本代码信息。 在运行时尝试探测引用的程序集之前，始终检查此基本代码。 如果包含最终版本重定向的发布服务器策略文件也包含 [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) 元素，则使用该 [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) 元素。 例如，如果应用程序配置文件指定一个 [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) 元素，而重写应用程序信息的发布服务器策略文件也指定一个 [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) 元素，则使用发布服务器策略文件中的 [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) 元素。  
@@ -167,7 +167,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
  如果在 [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) 元素指定的位置找不到匹配项，则绑定请求失败，且不再执行任何步骤。 如果运行时确定程序集与调用程序集的条件相匹配，则使用此程序集。 加载由给定 [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) 元素指定的文件时，运行时执行检查，确保名称、版本、区域性和公钥与调用程序集的引用相匹配。  
   
 > [!NOTE]
->  应用程序根目录外的被引用程序集必须具有强名称，并且必须安装在全局程序集缓存中，或者使用 [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) 元素指定。  
+> 应用程序根目录外的被引用程序集必须具有强名称，并且必须安装在全局程序集缓存中，或者使用 [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) 元素指定。  
   
 ### <a name="locating-the-assembly-through-probing"></a>通过探测查找程序集  
  如果应用程序配置文件中没有 [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) 元素，则运行时使用以下 4 个条件来探测程序集：  

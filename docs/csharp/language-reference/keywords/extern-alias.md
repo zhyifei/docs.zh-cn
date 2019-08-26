@@ -9,18 +9,18 @@ helpviewer_keywords:
 - aliases [C#], extern keyword
 - aliases, extern keyword
 ms.assetid: f487bf4f-c943-4fca-851b-e540c83d9027
-ms.openlocfilehash: cfb662203216aa6ca208ceec20d55164c65163dc
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: a701ae02adebfa2dda8fb65053dbf2ebbe83328b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68626644"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924685"
 ---
 # <a name="extern-alias-c-reference"></a>外部别名（C# 参考）
 有时你可能不得不引用具有相同的完全限定类型名称的程序集的两个版本。 例如，可能需要在同一应用程序中使用某程序集的两个或多个版本。 通过使用外部程序集别名，可在别名命名的根级别命名空间内包装每个程序集的命名空间，使其能够在同一文件中使用。  
   
 > [!NOTE]
->  [外部](../../../csharp/language-reference/keywords/extern.md)关键字还被用作方法修饰符，用于声明在非托管代码中编写的方法。  
+> [外部](./extern.md)关键字还被用作方法修饰符，用于声明在非托管代码中编写的方法。  
   
  若要引用具有相同的完全限定类型名称的两个程序集，必须在命令提示符处指定别名，如下所示：  
   
@@ -43,8 +43,8 @@ ms.locfileid: "68626644"
   
 ## <a name="see-also"></a>请参阅
 
-- [C# 参考](../../../csharp/language-reference/index.md)
-- [C# 编程指南](../../../csharp/programming-guide/index.md)
-- [C# 关键字](../../../csharp/language-reference/keywords/index.md)
-- [::运算符](../../../csharp/language-reference/operators/namespace-alias-qualifier.md)
-- [/reference（C# 编译器选项）](../../../csharp/language-reference/compiler-options/reference-compiler-option.md)
+- [C# 参考](../index.md)
+- [C# 编程指南](../../programming-guide/index.md)
+- [C# 关键字](./index.md)
+- [::运算符](../operators/namespace-alias-qualifier.md)
+- [/reference（C# 编译器选项）](../compiler-options/reference-compiler-option.md)

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 39dc55aa-f2a1-4093-87bb-f1c0edb6e761
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 11777f21d34da8b529352122bbf185f1938d3eb5
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: df8f82605118f1af0f085aef6e76c1e4bedb2904
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69567228"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69988166"
 ---
 # <a name="packaging-a-net-framework-assembly-for-com"></a>打包用于 COM 的 .NET Framework 程序集
 
@@ -33,13 +33,13 @@ COM 开发人员可从其计划纳入应用程序的托管类型相关信息中�
 
   某些托管类型对 COM 不可见；某些可见但不可创建；某些既可见又可创建。 程序集可以包括不可见、可见、不可创建和可创建类型的任何组合。 为实现完整性，请确定打算公开到 COM 的程序集中的类型，尤其是当这些类型是公开到 .NET framework 中类型的子集时。
 
-  有关其他信息，请参阅[为互操作限定 .NET 类型](../../../docs/standard/native-interop/qualify-net-types-for-interoperation.md)。
+  有关其他信息，请参阅[为互操作限定 .NET 类型](../../standard/native-interop/qualify-net-types-for-interoperation.md)。
 
 - 版本控制说明
 
   实现类接口（COM 互操作生成的接口）的托管类受版本控制限制。
 
-  有关如何使用类接口的指南，请参阅[类接口简介](../../../docs/standard/native-interop/com-callable-wrapper.md#introducing-the-class-interface)。
+  有关如何使用类接口的指南，请参阅[类接口简介](../../standard/native-interop/com-callable-wrapper.md#introducing-the-class-interface)。
 
 - 部署说明
 
@@ -94,8 +94,8 @@ TypeLibConverter 类  实现 <xref:System.Runtime.InteropServices.ITypeLibConver
 - <xref:System.Runtime.InteropServices.TypeLibConverter>
 - <xref:System.Runtime.InteropServices.ITypeLibConverter>
 - [向 COM 公开 .NET Framework 组件](exposing-dotnet-components-to-com.md)
-- [为互操作限定 .NET 类型](../../../docs/standard/native-interop/qualify-net-types-for-interoperation.md)
-- [类接口简介](../../../docs/standard/native-interop/com-callable-wrapper.md#introducing-the-class-interface)
+- [为互操作限定 .NET 类型](../../standard/native-interop/qualify-net-types-for-interoperation.md)
+- [类接口简介](../../standard/native-interop/com-callable-wrapper.md#introducing-the-class-interface)
 - [程序集安全注意事项](../app-domains/assembly-security-considerations.md)
 - [Tlbexp.exe（类型库导出程序）](../tools/tlbexp-exe-type-library-exporter.md)
 - [向 COM 注册程序集](registering-assemblies-with-com.md)
