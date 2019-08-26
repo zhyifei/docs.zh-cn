@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: eea11fe5-d8b0-4314-bb5d-8a58166fb1c3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bdf8d41a99328a8c8fd31eca974e52082abb7e79
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 3e39ee597f5142f2b3ccbd4ded49e59d6700ec8a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490785"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69960145"
 ---
 # <a name="cancellation-in-managed-threads"></a>托管线程中的取消
 从 .NET Framework 4 开始，.NET Framework 在协作取消异步操作或长时间运行的同步操作时使用统一的模型。 此模型基于被称为取消标记的轻量对象。 调用一个或多个可取消操作的对象（例如通过创建新线程或任务）将标记传递给每个操作。 单个操作反过来可将标记的副本传递给其他操作。 稍后，创建标记的对象可使用此标记请求停止执行操作内容。 只有发出请求的对象，才能发出取消请求，而每个侦听器负责侦听是否有请求，并及时适当地响应请求。  
@@ -31,7 +31,7 @@ ms.locfileid: "66490785"
 - 调用 <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> 方法以提供取消通知。  
   
 > [!IMPORTANT]
->  <xref:System.Threading.CancellationTokenSource> 类实现 <xref:System.IDisposable> 接口。 使用取消标记源释放所包含的任何非托管资源后，应确保调用 <xref:System.Threading.CancellationTokenSource.Dispose%2A?displayProperty=nameWithType> 方法。  
+> <xref:System.Threading.CancellationTokenSource> 类实现 <xref:System.IDisposable> 接口。 使用取消标记源释放所包含的任何非托管资源后，应确保调用 <xref:System.Threading.CancellationTokenSource.Dispose%2A?displayProperty=nameWithType> 方法。  
   
  下图显示了标记源与标记的所有副本之间的关系。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "66490785"
  在以下示例中，请求对象创建 <xref:System.Threading.CancellationTokenSource> 对象，然后传递其 <xref:System.Threading.CancellationTokenSource.Token%2A> 属性到可取消操作中。 接收请求的操作通过轮询监视标记的 <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> 属性的值。 值变为 `true` 后，侦听器可以适当方式终止操作。 在此示例中，方法只需退出，很多情况下都只需执行此操作。  
   
 > [!NOTE]
->  此示例使用 <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A> 方法演示新的取消框架与旧版 API 兼容。 有关使用新的首选 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 类型的示例，请参阅[如何：取消任务及其子级](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md)。  
+> 此示例使用 <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A> 方法演示新的取消框架与旧版 API 兼容。 有关使用新的首选 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 类型的示例，请参阅[如何：取消任务及其子级](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md)。  
   
  [!code-csharp[Cancellation#1](../../../samples/snippets/csharp/VS_Snippets_Misc/cancellation/cs/cancellationex1.cs#1)]
  [!code-vb[Cancellation#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cancellation/vb/cancellationex1.vb#1)]  

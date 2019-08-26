@@ -2,12 +2,12 @@
 title: 将 NoSQL 数据库用作持久性基础结构
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 大致了解 NoSQL 数据库（特别是 Azure Cosmos DB）作为持久性实现选项的使用情况。
 ms.date: 10/08/2018
-ms.openlocfilehash: 023904319651ec91000ff036850c773f66d1a267
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 2ea3841aa3bdbad3b67b529e0e9820b96f0fa038
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68676334"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70015077"
 ---
 # <a name="use-nosql-databases-as-a-persistence-infrastructure"></a>将 NoSQL 数据库用作持久性基础结构
 
@@ -333,7 +333,7 @@ services:
   <https://hub.docker.com/r/microsoft/azure-cosmosdb-emulator/>
 
 - **The MongoDB Docker image (Linux and Windows Container)**   \（MongoDB Docker 映像 [Linux 和 Windows 容器]）
-  <https://hub.docker.com/\_/mongo/>
+  <https://hub.docker.com/_/mongo/>
 
 - **Use MongoChef (Studio 3T) with an Azure Cosmos DB:API for MongoDB account**  \（将 MongoChef [Studio 3T] 用于 Azure Cosmos DB：适用于 MongoDB 的 API 帐户）
   <https://docs.microsoft.com/azure/cosmos-db/mongodb-mongochef>

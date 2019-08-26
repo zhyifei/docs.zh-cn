@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 3db965b2-36a6-4b12-b76e-7f074ff7275a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 96841d23da342fdb4da6c7d53420d6c3319f75c6
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: c49b3fcd5b50cc5b48497dcf97862e80b066ab46
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66491018"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69957884"
 ---
 # <a name="sorted-collection-types"></a>已排序的集合类型
 <xref:System.Collections.SortedList?displayProperty=nameWithType> 类、<xref:System.Collections.Generic.SortedList%602?displayProperty=nameWithType> 泛型类和 <xref:System.Collections.Generic.SortedDictionary%602?displayProperty=nameWithType> 泛型类与 <xref:System.Collections.Hashtable> 类和 <xref:System.Collections.Generic.Dictionary%602> 泛型类的相似之处在于均实现 <xref:System.Collections.IDictionary> 接口，不同之处在于它们让元素一直按键的排序顺序排列，并且不具备哈希表的 O(1) 插入和检索特性。 这三个类具有若干共性：  
@@ -26,7 +26,7 @@ ms.locfileid: "66491018"
 - 每个元素都是用于枚举的键/值对。  
   
     > [!NOTE]
-    >  枚举时，非泛型 <xref:System.Collections.SortedList> 类返回 <xref:System.Collections.DictionaryEntry> 对象，尽管两个泛型类型返回 <xref:System.Collections.Generic.KeyValuePair%602> 对象。  
+    > 枚举时，非泛型 <xref:System.Collections.SortedList> 类返回 <xref:System.Collections.DictionaryEntry> 对象，尽管两个泛型类型返回 <xref:System.Collections.Generic.KeyValuePair%602> 对象。  
   
 - 元素按 <xref:System.Collections.IComparer?displayProperty=nameWithType> 实现代码（对于非泛型 <xref:System.Collections.SortedList>）或 <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> 实现代码（对于两个泛型类）进行排序。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "66491018"
  对于必须可通过多个线程并发访问的已排序列表或字典，可以向派生自 <xref:System.Collections.Concurrent.ConcurrentDictionary%602> 的类添加排序逻辑。  
   
 > [!NOTE]
->  对于包含自己的键的值（例如，包含雇员 ID 编号的雇员记录），可以通过派生自 <xref:System.Collections.ObjectModel.KeyedCollection%602> 泛型类，创建具有列表和字典的某些特性的键控集合。  
+> 对于包含自己的键的值（例如，包含雇员 ID 编号的雇员记录），可以通过派生自 <xref:System.Collections.ObjectModel.KeyedCollection%602> 泛型类，创建具有列表和字典的某些特性的键控集合。  
   
  从 .NET Framework 4 开始，<xref:System.Collections.Generic.SortedSet%601> 类提供在执行插入、删除和搜索操作之后让数据一直按排序顺序排列的自平衡树。 此类和 <xref:System.Collections.Generic.HashSet%601> 类实现 <xref:System.Collections.Generic.ISet%601> 接口。  
   

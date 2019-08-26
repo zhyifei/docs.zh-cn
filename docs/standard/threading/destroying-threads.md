@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: df54e648-c5d1-47c9-bd29-8e4438c1db6d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 93832a296f9b80a5374bc729c04e19d1f178e99f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 986b4dee17c41928327e7b2672d641bbb8b16f1d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54502541"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69960094"
 ---
 # <a name="destroying-threads"></a>销毁线程
-<xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> 方法用于永久停止托管线程。 调用 <xref:System.Threading.Thread.Abort%2A> 时，公共语言运行时在目标线程中抛出目标线程可以捕获的 <xref:System.Threading.ThreadAbortException>。 有关更多信息，请参见<xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>。  
+<xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> 方法用于永久停止托管线程。 调用 <xref:System.Threading.Thread.Abort%2A> 时，公共语言运行时在目标线程中抛出目标线程可以捕获的 <xref:System.Threading.ThreadAbortException>。 有关详细信息，请参阅 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>。  
   
 > [!NOTE]
->  如果线程在调用 <xref:System.Threading.Thread.Abort%2A> 方法时执行的是非托管代码，运行时将它标记为 <xref:System.Threading.ThreadState.AbortRequested?displayProperty=nameWithType>。 当线程返回到托管代码时，异常就会抛出。  
+> 如果线程在调用 <xref:System.Threading.Thread.Abort%2A> 方法时执行的是非托管代码，运行时将它标记为 <xref:System.Threading.ThreadState.AbortRequested?displayProperty=nameWithType>。 当线程返回到托管代码时，异常就会抛出。  
   
  一旦线程中止，就无法再重启。  
   

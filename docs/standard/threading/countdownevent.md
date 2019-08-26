@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: eec3812a-e20f-4ecd-bfef-6921d508b708
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b996b60a08a55b1d8e86878974be4887ea2684f8
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: ac1f2283ad30499748511e6fed6d5ce98da7fd14
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490830"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69960106"
 ---
 # <a name="countdownevent"></a>CountdownEvent
 <xref:System.Threading.CountdownEvent?displayProperty=nameWithType> 是在收到信号特定次数后取消阻止等待线程的同步基元。 <xref:System.Threading.CountdownEvent> 适用于以下情况：不得不先使用 <xref:System.Threading.ManualResetEvent> 或 <xref:System.Threading.ManualResetEventSlim> 并手动递减变量，然后再向事件发出信号。 例如，在分支/联接方案中，可以只创建信号计数为 5 的 <xref:System.Threading.CountdownEvent>，然后在线程池中启动五个工作项，并让每个工作项在完成时调用 <xref:System.Threading.CountdownEvent.Signal%2A>。 每次调用 <xref:System.Threading.CountdownEvent.Signal%2A> 都会让信号计数递减 1。 在主线程上，<xref:System.Threading.CountdownEvent.Wait%2A> 调用一直阻止到信号计数为零。  
   
 > [!NOTE]
->  对于不需要与旧 .NET Framework 同步 API 交互的代码，请考虑使用 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 对象或 <xref:System.Threading.Tasks.Parallel.Invoke%2A> 方法，以更轻松地表示分支-联接并行度。  
+> 对于不需要与旧 .NET Framework 同步 API 交互的代码，请考虑使用 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 对象或 <xref:System.Threading.Tasks.Parallel.Invoke%2A> 方法，以更轻松地表示分支-联接并行度。  
   
  <xref:System.Threading.CountdownEvent> 还有以下功能：  
   

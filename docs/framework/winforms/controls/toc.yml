@@ -1,33 +1,28 @@
 - name: Windows 窗体控件
   href: index.md
   items:
-    - name: 排列 Windows 窗体上的控件
-      href: arranging-controls-on-windows-forms.md
+    - name: 排列 Windows 窗体上控件
       items:
-        - name: 如何：在 Windows 窗体上对齐多个控件
+        - name: 如何：对齐多个控件
           href: how-to-align-multiple-controls-on-windows-forms.md
-        - name: 如何：在 Windows 窗体上锚定控件
+        - name: 如何：定位控件
           href: how-to-anchor-controls-on-windows-forms.md
-        - name: 如何：在 Windows 窗体之间复制控件
-          href: how-to-copy-controls-between-windows-forms.md
-        - name: 如何：在 Windows 窗体上停靠控件
+        - name: 如何：停靠控件
           href: how-to-dock-controls-on-windows-forms.md
-        - name: 如何：对 Windows 窗体上的对象分层
+        - name: 如何：对对象进行分层
           href: how-to-layer-objects-on-windows-forms.md
-        - name: 如何：将控件锁定到 Windows 窗体
+        - name: 如何：锁定控件
           href: how-to-lock-controls-to-windows-forms.md
-        - name: 如何：在 Windows 窗体上定位控件
+        - name: 如何：放置控件
           href: how-to-position-controls-on-windows-forms.md
-        - name: 如何：调整 Windows 窗体上控件的大小
+        - name: 如何：调整控件大小
           href: how-to-resize-controls-on-windows-forms.md
         - name: 如何：设置所有 Windows 窗体的网格选项
           href: how-to-set-grid-options-for-all-windows-forms.md
-        - name: 如何：设置 Windows 窗体上的 Tab 键顺序
+        - name: 如何：设置 Tab 键顺序
           href: how-to-set-the-tab-order-on-windows-forms.md
-        - name: 演练：使用对齐线在 Windows 窗体上排列控件
+        - name: 演练：使用对齐线排列控件
           href: walkthrough-arranging-controls-on-windows-forms-using-snaplines.md
-        - name: 如何：在 Windows 窗体中使用对齐线和网格排列控件
-          href: how-to-arrange-controls-with-snaplines-and-the-grid-in-windows-forms.md
         - name: 如何：将现有的控件重新分配给不同的父控件
           href: how-to-reassign-existing-controls-to-a-different-parent.md
         - name: 演练：使用 Padding、Margins 和 AutoSize 属性对 Windows 窗体控件进行布局
@@ -35,15 +30,15 @@
     - name: 将控件放在 Windows 窗体上
       href: putting-controls-on-windows-forms.md
       items:
-        - name: 如何：向 Windows 窗体添加控件
+        - name: 如何：添加控件
           href: how-to-add-controls-to-windows-forms.md
-        - name: 如何：向 Windows 窗体添加无用户界面的控件
+        - name: 如何：不使用用户界面而添加控件
           href: how-to-add-controls-without-a-user-interface-to-windows-forms.md
         - name: 如何：在运行时在控件的集合中进行添加或删除
           href: how-to-add-to-or-remove-from-a-collection-of-controls-at-run-time.md
         - name: 演练：使用自定义组件自动填充工具箱
           href: walkthrough-automatically-populating-the-toolbox-with-custom-components.md
-        - name: 如何：向 Windows 窗体添加 ActiveX 控件
+        - name: 如何：添加 ActiveX 控件
           href: how-to-add-activex-controls-to-windows-forms.md
         - name: 在 Windows 窗体上承载 ActiveX 控件时的注意事项
           href: considerations-when-hosting-an-activex-control-on-a-windows-form.md
@@ -140,7 +135,7 @@
               href: how-to-designate-a-windows-forms-button-as-the-cancel-button.md
             - name: 如何：使用设计器将 Windows 窗体按钮指定为“取消”按钮
               href: designate-a-wf-button-as-the-cancel-button-using-the-designer.md
-            - name: 如何：响应 Windows 窗体按钮的单击
+            - name: 如何：响应按钮单击
               href: how-to-respond-to-windows-forms-button-clicks.md
             - name: 选择 Windows 窗体 Button 控件的方法
               href: ways-to-select-a-windows-forms-button-control.md
@@ -149,9 +144,9 @@
           items:
             - name: CheckBox 控件概述
               href: checkbox-control-overview-windows-forms.md
-            - name: 如何：响应 Windows 窗体 CheckBox 的单击
+            - name: 如何：响应 CheckBox 单击
               href: how-to-respond-to-windows-forms-checkbox-clicks.md
-            - name: 如何：使用 Windows 窗体 CheckBox 控件设置选项
+            - name: 如何：使用 CheckBox 控件设置选项
               href: how-to-set-options-with-windows-forms-checkbox-controls.md
         - name: CheckedListBox 控件
           href: checkedlistbox-control-windows-forms.md
@@ -330,9 +325,9 @@
                   href: how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control.md
                 - name: 如何：将未绑定的列添加到已绑定数据的 Windows 窗体 DataGridView 控件
                   href: unbound-column-to-a-data-bound-datagridview.md
-                - name: 如何：将对象绑定到 Windows 窗体 DataGridView 控件
+                - name: 如何：将对象绑定到 DataGridView 控件
                   href: how-to-bind-objects-to-windows-forms-datagridview-controls.md
-                - name: 如何：访问绑定到 Windows 窗体 DataGridView 行的对象
+                - name: 如何：访问绑定到 DataGridView 行的对象
                   href: how-to-access-objects-bound-to-windows-forms-datagridview-rows.md
                 - name: 如何：访问 Windows 窗体 DataGridViewComboBoxCell 下拉列表中的对象
                   href: access-objects-in-a-wf-datagridviewcomboboxcell-drop-down-list.md
@@ -462,7 +457,7 @@
           items:
             - name: DomainUpDown 控件概述
               href: domainupdown-control-overview-windows-forms.md
-            - name: 如何：以编程方式向 Windows 窗体 DomainUpDown 控件添加项
+            - name: 如何：以编程方式向 DomainUpDown 控件添加项
               href: how-to-add-items-to-windows-forms-domainupdown-controls-programmatically.md
             - name: 如何：从 Windows 窗体 DomainUpDown 控件移除项
               href: how-to-remove-items-from-windows-forms-domainupdown-controls.md

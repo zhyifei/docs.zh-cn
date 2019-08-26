@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7d10d11f-680f-4721-b047-fb136316b4cd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8956726915ebe1c0b1c7654e62e2e28620274b4a
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 7b7783d3360bfb042880f5d1e74bfac77e729299
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836279"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69959485"
 ---
 # <a name="miscellaneous-constructs-in-regular-expressions"></a>正则表达式中的其他构造
 .NET 中的正则表达式包括三个其他语言构造。 其中一个使你可以在正则表达式模式中间启用或禁用特定匹配选项。 其余两个使你可以在正则表达式中包含注释。  
@@ -31,7 +31,7 @@ ms.locfileid: "48836279"
   
  在问号后列出要启用的选项，在负号后列出要禁用的选项。 下表对每个选项进行了描述。 有关每个选项的更多信息，请参见[正则表达式选项](../../../docs/standard/base-types/regular-expression-options.md)。  
   
-|选项|描述|  
+|选项|说明|  
 |------------|-----------------|  
 |`i`|不区分大小写的匹配。|  
 |`m`|多行模式。|  
@@ -42,7 +42,7 @@ ms.locfileid: "48836279"
  如果 `(?imnsx-imnsx)` 构造定义的正则表达式选项有任何更改，更改在封闭组结束前一直有效。  
   
 > [!NOTE]
->  `(?imnsx-imnsx:`subexpression  `)` 分组构造为子表达式提供了完全相同的功能。 有关详细信息，请参阅 [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。  
+> `(?imnsx-imnsx:`subexpression  `)` 分组构造为子表达式提供了完全相同的功能。 有关详细信息，请参阅 [分组构造](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。  
   
  下面的示例使用 `i`、`n` 和 `x` 选项，启用不区分大小写和显式捕获，并在正则表达式中间忽略正则表达式模式中的空格。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "48836279"
   
  该示例定义两个正则表达式。 第一个 `\b(D\w+)\s(d\w+)\b` 匹配以一个大写“D”和一个小写“d”开头的两个连续单词。 第二个正则表达式 `\b(D\w+)(?ixn) \s (d\w+) \b` 使用内联选项修改此模式，如下表所述。 结果的比较会确认 `(?ixn)` 构造的效果。  
   
-|模式|描述|  
+|模式|说明|  
 |-------------|-----------------|  
 |`\b`|在单词边界处开始。|  
 |`(D\w+)`|匹配后跟一个或多个单词字符的大写“D”。 这是第一个捕获组。|  
@@ -65,7 +65,7 @@ ms.locfileid: "48836279"
   
  下面的示例重复了上一部分的示例中的第一个正则表达式模式。 它将两个内联注释添加到该正则表达式，以指示比较是否区分大小写。 正则表达式模式 `\b((?# case-sensitive comparison)D\w+)\s(?ixn)((?#case-insensitive comparison)d\w+)\b` 按以下方式定义。  
   
-|模式|描述|  
+|模式|说明|  
 |-------------|-----------------|  
 |`\b`|在单词边界处开始。|  
 |`(?# case-sensitive comparison)`|注释。 它不影响模式匹配行为。|  
@@ -86,7 +86,7 @@ ms.locfileid: "48836279"
   
  `\{\d+(,-*\d+)*(\:\w{1,4}?)*\}(?x) # Looks for a composite format item.`  
   
-|模式|描述|  
+|模式|说明|  
 |-------------|-----------------|  
 |`\{`|匹配左大括号。|  
 |`\d+`|匹配一个或多个十进制数字。|  

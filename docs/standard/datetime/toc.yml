@@ -39,3 +39,5 @@
       href: resolve-ambiguous-times.md
     - name: 如何：让用户解析不明确的时间
       href: let-users-resolve-ambiguous-times.md
+    - name: System.Text.Json 中的 DateTime 和 DateTimeOffset 支持
+      href: system-text-json-support.md

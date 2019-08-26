@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: d74ce896-717d-4871-8fd9-b070e2f53cb0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1c2f28490203bcc4853bc6736ce7089f308bc275
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 6c68cd98b496143e6b964383f8fa0c3af5d2c87d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59338704"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939646"
 ---
 # <a name="rules-for-inferring-schema-node-types-and-structure"></a>推断架构节点类型和结构的规则
 本主题介绍架构推断过程如何将 XML 文档中的节点类型转换为 XML 架构定义语言 (XSD) 结构。  
@@ -35,7 +35,7 @@ ms.locfileid: "59338704"
 8. 具有一系列子元素和属性选择的元素  
   
 > [!NOTE]
->  所有 `complexType` 声明均推断为匿名类型。 唯一推断的全局元素是根元素；所有其他元素都是局部元素。  
+> 所有 `complexType` 声明均推断为匿名类型。 唯一推断的全局元素是根元素；所有其他元素都是局部元素。  
   
  若要详细了解架构推理进程，请参阅[从 XML 文档推理架构](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "59338704"
  下表显示 <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A> 方法的 XML 输入以及生成的 XML 架构。 粗体的元素显示为具有一系列子元素的元素推断的架构。  
   
 > [!NOTE]
->  即使元素只有一个子元素，仍作为一系列子元素对待。  
+> 即使元素只有一个子元素，仍作为一系列子元素对待。  
   
  若要详细了解架构推理进程，请参阅[从 XML 文档推理架构](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)。  
   
@@ -91,7 +91,7 @@ ms.locfileid: "59338704"
  下表显示 <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A> 方法的 XML 输入以及生成的 XML 架构。 粗体的元素显示为具有一系列子元素和属性的元素推断的架构。  
   
 > [!NOTE]
->  即使元素只有一个子元素，仍作为一系列子元素对待。  
+> 即使元素只有一个子元素，仍作为一系列子元素对待。  
   
  若要详细了解架构推理进程，请参阅[从 XML 文档推理架构](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)。  
   
@@ -103,7 +103,7 @@ ms.locfileid: "59338704"
  下表显示 <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A> 方法的 XML 输入以及生成的 XML 架构。 粗体的元素显示为具有一系列子元素选择的元素推断的架构。  
   
 > [!NOTE]
->  在推断出的架构中，`maxOccurs` 元素的 `xs:choice` 属性设置为 `"unbounded"`。  
+> 在推断出的架构中，`maxOccurs` 元素的 `xs:choice` 属性设置为 `"unbounded"`。  
   
  若要详细了解架构推理进程，请参阅[从 XML 文档推理架构](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)。  
   
@@ -115,7 +115,7 @@ ms.locfileid: "59338704"
  下表显示 <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A> 方法的 XML 输入以及生成的 XML 架构。 粗体的元素显示为具有一系列子元素和属性选择的元素推断的架构。  
   
 > [!NOTE]
->  在推断出的架构中，`maxOccurs` 元素的 `xs:choice` 属性设置为 `"unbounded"`。  
+> 在推断出的架构中，`maxOccurs` 元素的 `xs:choice` 属性设置为 `"unbounded"`。  
   
  若要详细了解架构推理进程，请参阅[从 XML 文档推理架构](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)。  
   

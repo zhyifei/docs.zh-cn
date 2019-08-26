@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e12d8e74-31e3-4035-a87d-f3e66f0a9b89
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cc4850ff87d9ea827e86a16ee6b3a6953c1e3552
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: edf519621c2113843b89d96948243e9c095d2a57
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622710"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988864"
 ---
 # <a name="garbage-collection-notifications"></a>垃圾回收通知
 在有些情况下，公共语言运行时执行的完整垃圾回收（即第 2 代回收）可能会对性能产生负面影响。 特别是，处理大量请求的服务器可能会出现此问题；在这种情况下，长时间垃圾回收会导致请求超时。为了防止在关键时期发生完全回收，可以接收即将执行完全垃圾回收的通知，再采取措施将工作负载重定向到另一个服务器实例。 也可以自行诱导回收，前提是当前服务器实例不需要处理请求。  
@@ -24,7 +24,7 @@ ms.locfileid: "64622710"
  <xref:System.GC.RegisterForFullGCNotification%2A> 方法注册为，在运行时检测到即将执行完全垃圾回收时发出通知。 此通知分为两个部分：完全垃圾回收何时即将执行，以及完全垃圾回收何时完成。  
   
 > [!WARNING]
->  只有阻止垃圾回收会引发通知。 如果 [\<gcConcurrent>](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) 配置元素已启用，后台垃圾回收不会发出通知。  
+> 只有阻止垃圾回收会引发通知。 如果 [\<gcConcurrent>](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) 配置元素已启用，后台垃圾回收不会发出通知。  
   
  若要确定何时发出通知，请使用 <xref:System.GC.WaitForFullGCApproach%2A> 和 <xref:System.GC.WaitForFullGCComplete%2A> 方法。 通常，在 `while` 循环中使用这些方法，以持续获取表示通知状态的 <xref:System.GCNotificationStatus> 枚举。 如果值为 <xref:System.GCNotificationStatus.Succeeded>，可以执行下列操作：  
   
@@ -94,7 +94,7 @@ ms.locfileid: "64622710"
  [!code-csharp[GCNotification#8](../../../samples/snippets/csharp/VS_Snippets_CLR/GCNotification/cs/Program.cs#8)]
  [!code-vb[GCNotification#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GCNotification/vb/program.vb#8)]  
   
- 下面的代码包含 `OnFullGCApproachNotify` 方法，调用自   
+ 下面的代码包含 `OnFullGCApproachNotify` 方法，调用自  
   
  `WaitForFullGCProc` 方法。  
   
@@ -102,7 +102,7 @@ ms.locfileid: "64622710"
  [!code-csharp[GCNotification#5](../../../samples/snippets/csharp/VS_Snippets_CLR/GCNotification/cs/Program.cs#5)]
  [!code-vb[GCNotification#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GCNotification/vb/program.vb#5)]  
   
- 下面的代码包含 `OnFullGCApproachComplete` 方法，调用自   
+ 下面的代码包含 `OnFullGCApproachComplete` 方法，调用自  
   
  `WaitForFullGCProc` 方法。  
   

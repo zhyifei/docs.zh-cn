@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: fde6f43f-c594-486f-abcb-2211197fae20
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 32c76ae4556467759dad111b47e3ad8f6cf6df92
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1488fb6b7671acd86286bcac6fbfce8bee9429ad
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64589969"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939588"
 ---
 # <a name="script-blocks-using-msxslscript"></a>使用 msxsl:script 的脚本块
 <xref:System.Xml.Xsl.XslCompiledTransform> 类使用 `msxsl:script` 元素支持嵌入的脚本。 在加载样式表式，任何已定义的函数将通过代码文档对象模型 (CodeDOM) 编译为 Microsoft 中间语言 (MSIL) 并在运行时执行。 从嵌入的脚本块生成的程序集比为样式表生成的程序集独立。  
@@ -22,7 +22,7 @@ ms.locfileid: "64589969"
  支持嵌入式脚本是 <xref:System.Xml.Xsl.XslCompiledTransform> 类上可选的 XSLT 设置。 默认情况下禁用脚本支持。 要启用脚本支持，创建一个 <xref:System.Xml.Xsl.XsltSettings> 对象，将 <xref:System.Xml.Xsl.XsltSettings.EnableScript%2A> 属性设置为 `true`，然后将该对象传递给 <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> 方法。  
   
 > [!NOTE]
->  只有要求脚本支持并且处于完全可信的环境下时，才应启用 XSLT 脚本。  
+> 只有要求脚本支持并且处于完全可信的环境下时，才应启用 XSLT 脚本。  
   
 ## <a name="msxslscript-element-definition"></a>msxsl:script 元素定义  
  `msxsl:script` 元素是 Microsoft 对 XSLT 1.0 建议的扩展，包括以下定义：  
@@ -38,7 +38,7 @@ ms.locfileid: "64589969"
  `implements-prefix` 属性是必选项。 此属性用于声明命名空间并将其与脚本块关联。 此属性的值是表示命名空间的前缀。 此前缀可以在样式表中的某一位置定义。  
   
 > [!NOTE]
->  当使用 `msxsl:script` 元素时，强烈建议无论使用何种语言，都应将脚本放置在 CDATA 节内。 因为脚本可以包含给定语言的运算符、标识符或分隔符，如果不包含在 CDATA 节中，可能会错误地作为 XML 解释。 以下 XML 显示可以放入代码的 CDATA 节的模板。  
+> 当使用 `msxsl:script` 元素时，强烈建议无论使用何种语言，都应将脚本放置在 CDATA 节内。 因为脚本可以包含给定语言的运算符、标识符或分隔符，如果不包含在 CDATA 节中，可能会错误地作为 XML 解释。 以下 XML 显示可以放入代码的 CDATA 节的模板。  
   
 ```xml  
 <msxsl:script implements-prefix='your-prefix' language='CSharp'>  
@@ -61,7 +61,7 @@ ms.locfileid: "64589969"
 |`Result Tree Fragment`|<xref:System.Xml.XPath.XPathNavigator>|  
 |`Node Set`|<xref:System.Xml.XPath.XPathNodeIterator>|  
   
- CLR 数字类型转换为 <xref:System.Double>。 <xref:System.DateTime> 类型转换为 <xref:System.String>。 <xref:System.Xml.XPath.IXPathNavigable> 类型转换为 <xref:System.Xml.XPath.XPathNavigator>。 XPathNavigator[] 转换为 <xref:System.Xml.XPath.XPathNodeIterator>。  
+ CLR 数字类型转换为 <xref:System.Double>。 <xref:System.DateTime> 类型转换为 <xref:System.String>。 <xref:System.Xml.XPath.IXPathNavigable> 类型转换为 <xref:System.Xml.XPath.XPathNavigator>。 XPathNavigator[]  转换为 <xref:System.Xml.XPath.XPathNodeIterator>。  
   
  所有其他类型均将引发错误。  
   
@@ -94,7 +94,7 @@ ms.locfileid: "64589969"
 #### <a name="namespaces"></a>命名空间  
  默认情况下包括下列命名空间：  
   
-- 系统  
+- System  
   
 - System.Collection  
   

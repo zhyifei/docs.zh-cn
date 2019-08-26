@@ -1,35 +1,42 @@
 ---
 title: C# 运算符 - C# 参考
-ms.date: 04/30/2019
+ms.date: 08/20/2019
 f1_keywords:
 - cs.operators
 helpviewer_keywords:
-- boolean operators [C#]
-- expressions [C#], operators
-- logical operators [C#]
 - operators [C#]
-- Visual C#, operators
-- indirection operators [C#]
-- assignment operators [C#]
-- shift operators [C#]
-- relational operators [C#]
-- bitwise operators [C#]
-- address operators [C#]
-- keywords [C#], operators
-- arithmetic operators [C#]
+- operator precedence [C#]
+- operator associativity [C#]
+- expressions [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 7db61e530ba5c3e0b5ae0ee0002621e369e1833b
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 75697a7a52fbfb04e1b44ecf591e271217a69bf4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69566836"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924654"
 ---
 # <a name="c-operators-c-reference"></a>C# 运算符（C# 参考）
 
-C# 提供了许多由内置类型支持的预定义运算符。 例如，[算术运算符](arithmetic-operators.md)使用内置数值类型的操作数执行算术运算，[布尔逻辑运算符](boolean-logical-operators.md)使用 [bool](../keywords/bool.md) 操作数执行逻辑运算。
+C# 提供了许多由内置类型支持的运算符。 例如，[算术运算符](arithmetic-operators.md)使用数值操作数执行算术运算，[布尔逻辑运算符](boolean-logical-operators.md)使用 [bool](../keywords/bool.md) 操作数执行逻辑运算。 特定的运算符可[重载](operator-overloading.md)。 使用运算符重载，可以为用户定义类型的操作数指定运算符行为。
 
-用户定义类型可以重载某些运算符来定义该类型的操作数的相应行为。 有关详细信息，请参阅[运算符重载](operator-overloading.md)。
+在[表达式](../../programming-guide/statements-expressions-operators/expressions.md)中，运算符优先级和结合性决定了操作的执行顺序。 可以使用括号更改由运算符优先级和结合性决定的计算顺序。
+
+## <a name="operator-precedence"></a>运算符优先级
+
+在包含多个运算符的表达式中，先按优先级较高的运算符计算，再按优先级较低的运算符计算。 在下面的示例中，首先执行乘法，因为其优先级高于加法：
+
+```csharp-interactive
+var a = 2 + 2 * 2;
+Console.WriteLine(a); //  output: 6
+```
+
+使用括号更改运算符优先级所施加的计算顺序：
+
+```csharp-interactive
+var a = (2 + 2) * 2;
+Console.WriteLine(a); //  output: 8
+```
 
 下表按最高优先级到最低优先级的顺序列出 C# 运算符。 每行中运算符的优先级相同。
 
@@ -51,7 +58,39 @@ C# 提供了许多由内置类型支持的预定义运算符。 例如，[算术
 | [c ? t : f](conditional-operator.md) | 条件运算符 |
 | [x = y](assignment-operator.md)、[x += y](arithmetic-operators.md#compound-assignment)、[x -= y](arithmetic-operators.md#compound-assignment)、[x *= y](arithmetic-operators.md#compound-assignment)、[x /= y](arithmetic-operators.md#compound-assignment)、[x %= y](arithmetic-operators.md#compound-assignment)、[x &= y](boolean-logical-operators.md#compound-assignment)、[x &#124;= y](boolean-logical-operators.md#compound-assignment)、[x ^= y](boolean-logical-operators.md#compound-assignment)、[x <<= y](bitwise-and-shift-operators.md#compound-assignment)、[x >>= y](bitwise-and-shift-operators.md#compound-assignment)、[=>](lambda-operator.md) | 赋值和 lambda 声明 |
 
+## <a name="operator-associativity"></a>运算符结合性
+
+当运算符的优先级相同，运算符的结合性决定了运算的执行顺序：
+
+- 左结合运算符按从左到右的顺序计算。  除[赋值运算符](assignment-operator.md)和 [null 合并运算符 `??`](null-coalescing-operator.md)外，所有二元运算符都是左结合运算符。 例如，`a + b - c` 将计算为 `(a + b) - c`。
+- 右结合运算符按从右到左的顺序计算。  赋值运算符、null 合并运算符 `??` 和[条件运算符 `?:`](conditional-operator.md)是右结合运算符。 例如，`x = y = z` 将计算为 `x = (y = z)`。
+
+使用括号更改运算符结合性所施加的计算顺序：
+
+```csharp-interactive
+int a = 13 / 5 / 2;
+int b = 13 / (5 / 2);
+Console.WriteLine($"a = {a}, b = {b}");  // output: a = 1, b = 6
+```
+
+## <a name="operand-evaluation"></a>操作数计算
+
+与运算符的优先级和结合性无关，从左到右计算表达式中的操作数。 以下示例展示了运算符和操作数的计算顺序：
+
+| 表达式 | 计算顺序 |
+| ---------- | ------------------- |
+|`a + b`|a, b, +|
+|`a + b * c`|a, b, c, *, +|
+|`a / b + c * d`|a, b, /, c, d, *, +|
+|`a / (b + c) * d`|a, b, c, +, /, d, *|
+
+通常，会计算所有运算符操作数。 某些运算符有条件地计算操作数。 也就是说，此类运算符的第一个操作数的值定义了是否应计算其他操作数，或计算其他哪些操作数。 这些运算符有条件逻辑 [AND (`&&`)](boolean-logical-operators.md#conditional-logical-and-operator-) 和 [OR (`||`)](boolean-logical-operators.md#conditional-logical-or-operator-) 运算符、[null 合并运算符 `??`](null-coalescing-operator.md)、[null 条件运算符 `?.` 和和 `?[]`](member-access-operators.md#null-conditional-operators--and-)，以及[条件运算符 `?:`](conditional-operator.md)。 有关更多详细信息，请参阅每个运算符的说明。
+
+## <a name="c-language-specification"></a>C# 语言规范
+
+有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/introduction.md)中的[运算符](~/_csharplang/spec/expressions.md#operators)部分。
+
 ## <a name="see-also"></a>请参阅
 
 - [C# 参考](../index.md)
-- [运算符](../../programming-guide/statements-expressions-operators/operators.md)
+- [表达式](../../programming-guide/statements-expressions-operators/expressions.md)
