@@ -6,20 +6,20 @@ helpviewer_keywords:
 - generics [C#], type parameters
 - type parameters [C#]
 ms.assetid: a03b0ab2-0606-4b41-b7bf-e64d5bb4d18f
-ms.openlocfilehash: 096fce3affb9461c57ae9c0ffd57367d1b4349df
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 27cd89c8e82036bf6353030b4f235c2ebe738e6d
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423417"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69589683"
 ---
 # <a name="generic-type-parameters-c-programming-guide"></a>泛型类型参数 -（C# 编程指南）
 
-在泛型类型或方法定义中，类型参数是在其创建泛型类型的一个实例时，客户端指定的特定类型的占位符。 泛型类（例如[泛型介绍](../../../csharp/programming-guide/generics/index.md)中列出的 `GenericList<T>`）无法按原样使用，因为它不是真正的类型；它更像是类型的蓝图。 若要使用 `GenericList<T>`，客户端代码必须通过指定尖括号内的类型参数来声明并实例化构造类型。 此特定类的类型参数可以是编译器可识别的任何类型。 可创建任意数量的构造类型实例，其中每个使用不同的类型参数，如下所示：  
+在泛型类型或方法定义中，类型参数是在其创建泛型类型的一个实例时，客户端指定的特定类型的占位符。 泛型类（例如[泛型介绍](./index.md)中列出的 `GenericList<T>`）无法按原样使用，因为它不是真正的类型；它更像是类型的蓝图。 若要使用 `GenericList<T>`，客户端代码必须通过指定尖括号内的类型参数来声明并实例化构造类型。 此特定类的类型参数可以是编译器可识别的任何类型。 可创建任意数量的构造类型实例，其中每个使用不同的类型参数，如下所示：  
   
 [!code-csharp[csProgGuideGenerics#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#7)]  
   
-在 `GenericList<T>` 的每个实例中，类中出现的每个 `T` 在运行时均会被替换为类型参数。 通过这种替换，我们已通过使用单个类定义创建了三个单独的类型安全的有效对象。 有关 CLR 如何执行此替换的详细信息，请参阅[运行时中的泛型](../../../csharp/programming-guide/generics/generics-in-the-run-time.md)。  
+在 `GenericList<T>` 的每个实例中，类中出现的每个 `T` 在运行时均会被替换为类型参数。 通过这种替换，我们已通过使用单个类定义创建了三个单独的类型安全的有效对象。 有关 CLR 如何执行此替换的详细信息，请参阅[运行时中的泛型](./generics-in-the-run-time.md)。  
   
 ## <a name="type-parameter-naming-guidelines"></a>类型参数命名指南  
   
@@ -42,6 +42,6 @@ ms.locfileid: "66423417"
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Collections.Generic>
-- [C# 编程指南](../../../csharp/programming-guide/index.md)
-- [泛型](../../../csharp/programming-guide/generics/index.md)
-- [C++ 模板和 C# 泛型之间的区别](../../../csharp/programming-guide/generics/differences-between-cpp-templates-and-csharp-generics.md)
+- [C# 编程指南](../index.md)
+- [泛型](./index.md)
+- [C++ 模板和 C# 泛型之间的区别](./differences-between-cpp-templates-and-csharp-generics.md)

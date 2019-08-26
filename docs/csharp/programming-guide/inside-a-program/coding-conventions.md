@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C#, coding conventions
 - C# language, coding conventions
 ms.assetid: f4f60de9-d49b-4fb6-bab1-20e19ea24710
-ms.openlocfilehash: a37109ab2712ea824baab95ca0b175cfa82aab3a
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.openlocfilehash: 27001d1697def083580ecdc742b4b8db924545aa
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67267903"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69589412"
 ---
 # <a name="c-coding-conventions-c-programming-guide"></a>C# 编码约定（C# 编程指南）
  编码约定可实现以下目的：  
@@ -29,7 +29,7 @@ ms.locfileid: "67267903"
   
 ## <a name="naming-conventions"></a>命名约定  
   
-- 在不包括 [using 指令](../../../csharp/language-reference/keywords/using-directive.md)的短示例中，使用命名空间限定。 如果你知道命名空间默认导入项目中，则不必完全限定来自该命名空间的名称。 如果对于单行来说过长，则可以在点 (.) 后中断限定名称，如下面的示例所示。  
+- 在不包括 [using 指令](../../language-reference/keywords/using-directive.md)的短示例中，使用命名空间限定。 如果你知道命名空间默认导入项目中，则不必完全限定来自该命名空间的名称。 如果对于单行来说过长，则可以在点 (.) 后中断限定名称，如下面的示例所示。  
   
      [!code-csharp[csProgGuideCodingConventions#1](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#1)]  
   
@@ -81,11 +81,11 @@ ms.locfileid: "67267903"
   
 ### <a name="implicitly-typed-local-variables"></a>隐式类型的局部变量  
   
-- 当变量类型明显来自赋值的右侧时，或者当精度类型不重要时，请对本地变量进行[隐式类型化](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md)。  
+- 当变量类型明显来自赋值的右侧时，或者当精度类型不重要时，请对本地变量进行[隐式类型化](../classes-and-structs/implicitly-typed-local-variables.md)。  
   
      [!code-csharp[csProgGuideCodingConventions#8](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#8)]  
   
-- 当类型并非明显来自赋值的右侧时，请勿使用 [var](../../../csharp/language-reference/keywords/var.md)。  
+- 当类型并非明显来自赋值的右侧时，请勿使用 [var](../../language-reference/keywords/var.md)。  
   
      [!code-csharp[csProgGuideCodingConventions#9](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#9)]  
   
@@ -93,9 +93,9 @@ ms.locfileid: "67267903"
   
      [!code-csharp[csProgGuideCodingConventions#10](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#10)]  
   
-- 避免使用 `var` 来代替 [dynamic](../../../csharp/language-reference/keywords/dynamic.md)。  
+- 避免使用 `var` 来代替 [dynamic](../../language-reference/keywords/dynamic.md)。  
   
-- 使用隐式类型化来确定 [for](../../../csharp/language-reference/keywords/for.md) 和 [foreach](../../../csharp/language-reference/keywords/foreach-in.md) 循环中循环变量的类型。  
+- 使用隐式类型化来确定 [for](../../language-reference/keywords/for.md) 和 [foreach](../../language-reference/keywords/foreach-in.md) 循环中循环变量的类型。  
   
      下面的示例在 `for` 语句中使用隐式类型化。  
   
@@ -125,11 +125,11 @@ ms.locfileid: "67267903"
   
 ### <a name="try-catch-and-using-statements-in-exception-handling"></a>异常处理中的 try-catch 和 using 语句  
   
-- 对大多数异常处理使用 [try-catch](../../../csharp/language-reference/keywords/try-catch.md) 语句。  
+- 对大多数异常处理使用 [try-catch](../../language-reference/keywords/try-catch.md) 语句。  
   
      [!code-csharp[csProgGuideCodingConventions#16](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#16)]  
   
-- 通过使用 C# [using 语句](../../../csharp/language-reference/keywords/using-statement.md)简化你的代码。 如果具有 [try-finally](../../../csharp/language-reference/keywords/try-finally.md) 语句（该语句中 `finally` 块的唯一代码是对 <xref:System.IDisposable.Dispose%2A> 方法的调用），请使用 `using` 语句代替。  
+- 通过使用 C# [using 语句](../../language-reference/keywords/using-statement.md)简化你的代码。 如果具有 [try-finally](../../language-reference/keywords/try-finally.md) 语句（该语句中 `finally` 块的唯一代码是对 <xref:System.IDisposable.Dispose%2A> 方法的调用），请使用 `using` 语句代替。  
   
      [!code-csharp[csProgGuideCodingConventions#17](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#17)]  
   
@@ -163,7 +163,7 @@ ms.locfileid: "67267903"
   
 ### <a name="static-members"></a>静态成员  
   
-- 使用类名调用 [static](../../../csharp/language-reference/keywords/static.md) 成员：ClassName.StaticMember  。 这种做法通过明确静态访问使代码更易于阅读。  请勿使用派生类的名称限定基类中定义的静态成员。  编译该代码时，代码可读性具有误导性，如果向派生类添加具有相同名称的静态成员，代码可能会被破坏。  
+- 使用类名调用 [static](../../language-reference/keywords/static.md) 成员：ClassName.StaticMember  。 这种做法通过明确静态访问使代码更易于阅读。  请勿使用派生类的名称限定基类中定义的静态成员。  编译该代码时，代码可读性具有误导性，如果向派生类添加具有相同名称的静态成员，代码可能会被破坏。  
   
 ### <a name="linq-queries"></a>LINQ 查询  
   
@@ -183,13 +183,13 @@ ms.locfileid: "67267903"
   
      [!code-csharp[csProgGuideCodingConventions#25](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#25)]  
   
-- 对齐 [from](../../../csharp/language-reference/keywords/from-clause.md) 子句下的查询子句，如上面的示例所示。  
+- 对齐 [from](../../language-reference/keywords/from-clause.md) 子句下的查询子句，如上面的示例所示。  
   
-- 在其他查询子句之前使用 [where](../../../csharp/language-reference/keywords/where-clause.md) 子句，以确保后面的查询子句作用于经过减少和筛选的数据集。  
+- 在其他查询子句之前使用 [where](../../language-reference/keywords/where-clause.md) 子句，以确保后面的查询子句作用于经过减少和筛选的数据集。  
   
      [!code-csharp[csProgGuideCodingConventions#29](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#29)]  
   
-- 使用多行 `from` 子句代替 [join](../../../csharp/language-reference/keywords/join-clause.md) 子句以访问内部集合。 例如，`Student` 对象的集合可能包含测验分数的集合。 当执行以下查询时，它返回高于 90 的分数，并返回得到该分数的学生的姓氏。  
+- 使用多行 `from` 子句代替 [join](../../language-reference/keywords/join-clause.md) 子句以访问内部集合。 例如，`Student` 对象的集合可能包含测验分数的集合。 当执行以下查询时，它返回高于 90 的分数，并返回得到该分数的学生的姓氏。  
   
      [!code-csharp[csProgGuideCodingConventions#30](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#30)]  
   

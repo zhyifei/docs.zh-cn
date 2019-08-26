@@ -2,19 +2,19 @@
 title: 示例 XML 文件：客户和订单 (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: d6d1c9ea-be74-4e6d-bfdd-d4bcc2d301cf
-ms.openlocfilehash: 6e7eea99a59a4cb1a5d62e728d4812ce3377c09f
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: e6c1dd026a99c21afa788d6eea73cbc9d240987f
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66483763"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69591152"
 ---
 # <a name="sample-xml-file-customers-and-orders-linq-to-xml"></a>示例 XML 文件：客户和订单 (LINQ to XML)
 下面的 XML 文件用在 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文档的很多示例中。 此文件包含客户和订单。  
   
- 主题[示例 XSD 文件：客户和订单](../../../../csharp/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders1.md)包含可用于验证此文档的 XSD。 它使用 XSD 的 `xs:key` 和 `xs:keyref` 功能，将 `CustomerID` 元素的 `Customer` 属性设置为键，并在每个 `CustomerID` 元素的 `Order` 元素和每个 `CustomerID` 元素的 `Customer` 属性之间建立关系。  
+ 主题[示例 XSD 文件：客户和订单](./sample-xsd-file-customers-and-orders1.md)包含可用于验证此文档的 XSD。 它使用 XSD 的 `xs:key` 和 `xs:keyref` 功能，将 `CustomerID` 元素的 `Customer` 属性设置为键，并在每个 `CustomerID` 元素的 `Order` 元素和每个 `CustomerID` 元素的 `Customer` 属性之间建立关系。  
   
- 有关使用 `Join` 子句编写利用此关系的 LINQ 查询的示例，请参阅[如何：联接两个集合 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-two-collections-linq-to-xml.md)。  
+ 有关使用 `Join` 子句编写利用此关系的 LINQ 查询的示例，请参阅[如何：联接两个集合 (LINQ to XML) (C#)](./how-to-join-two-collections-linq-to-xml.md)。  
   
 ## <a name="customersordersxml"></a>CustomersOrders.xml  
   

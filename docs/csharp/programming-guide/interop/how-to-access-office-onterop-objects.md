@@ -10,12 +10,12 @@ helpviewer_keywords:
 - named arguments [C#], Office programming
 - Office programming [C#]
 ms.assetid: 041b25c2-3512-4e0f-a4ea-ceb2999e4d5e
-ms.openlocfilehash: 765a150953075cf9afb2dd3bde7a66cfe3ff6eb5
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 19fff39969933baa2510458400cabf9646e0c48d
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398167"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69589135"
 ---
 # <a name="how-to-access-office-interop-objects-by-using-visual-c-features-c-programming-guide"></a>如何：使用 Visual C# 功能访问 Office 互操作对象（C# 编程指南）
 
@@ -95,7 +95,7 @@ Visual C# 具有一些功能，可简化对 Office API 对象的访问。 这些
 
      [!code-csharp[csProgGuideOfficeHowTo#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#14)]
 
-     C# 4 及更高版本自动将返回的 `Object` 转换为 `dynamic`，前提是程序集由 [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) 编译器选项引用，或 Excel 的“嵌入互操作类型”  属性设置为 true。 True 是此属性的默认值。
+     C# 4 及更高版本自动将返回的 `Object` 转换为 `dynamic`，前提是程序集由 [/link](../../language-reference/compiler-options/link-compiler-option.md) 编译器选项引用，或 Excel 的“嵌入互操作类型”  属性设置为 true。 True 是此属性的默认值。
 
 ## <a name="to-run-the-project"></a>运行项目
 
@@ -137,9 +137,9 @@ Visual C# 具有一些功能，可简化对 Office API 对象的访问。 这些
 
 ## <a name="to-set-the-embed-interop-types-property"></a>设置嵌入互操作类型属性
 
-1. 当调用运行时不需要主互操作程序集 (PIA) 的 COM 类型时，可能实现其他增强。 删除 PIA 的依赖项可实现版本独立性并且更易于部署。 若要详细了解不使用 PIA 编程的优势，请参阅[演练：嵌入托管程序集中的类型](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)。
+1. 当调用运行时不需要主互操作程序集 (PIA) 的 COM 类型时，可能实现其他增强。 删除 PIA 的依赖项可实现版本独立性并且更易于部署。 若要详细了解不使用 PIA 编程的优势，请参阅[演练：嵌入托管程序集中的类型](../concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)。
 
-     此外，由于可以通过使用类型 `dynamic`（而非 `Object`）表示 COM 方法必需并返回的类型，因此更易于编程。 具有类型 `dynamic` 的变量在运行时以前均不会计算，从而消除了显式强制转换的需要。 有关更多信息，请参见[使用类型 dynamic](../../../csharp/programming-guide/types/using-type-dynamic.md)。
+     此外，由于可以通过使用类型 `dynamic`（而非 `Object`）表示 COM 方法必需并返回的类型，因此更易于编程。 具有类型 `dynamic` 的变量在运行时以前均不会计算，从而消除了显式强制转换的需要。 有关更多信息，请参见[使用类型 dynamic](../types/using-type-dynamic.md)。
 
      在 C# 4 中，默认行为是嵌入类型信息，而不是使用 PIA。 由于该默认行为，因此不需要显式强制转换，之前的几个示例也得到简化。 例如，`worksheet` 中 `DisplayInExcel` 的声明会写为 `Excel._Worksheet workSheet = excelApp.ActiveSheet` 而非 `Excel._Worksheet workSheet = (Excel.Worksheet)excelApp.ActiveSheet`。 在相同方法中对 `AutoFit` 的调用还将要求在不进行默认行为的情况下显式强制转换，因为 `ExcelApp.Columns[1]` 返回 `Object`，并且 `AutoFit` 为 Excel 方法。 以下代码显示强制转换。
 
@@ -149,7 +149,7 @@ Visual C# 具有一些功能，可简化对 Office API 对象的访问。 这些
 
 3. 如果看不到“属性”  窗口，请按“F4”  。
 
-4. 在属性列表中找到“嵌入互操作类型”  ，将其值更改为“False”  。 同样地，你还可以通过在命令提示符下使用 [/reference](../../../csharp/language-reference/compiler-options/reference-compiler-option.md) 编译器选项代替 [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) 进行编译。
+4. 在属性列表中找到“嵌入互操作类型”  ，将其值更改为“False”  。 同样地，你还可以通过在命令提示符下使用 [/reference](../../language-reference/compiler-options/reference-compiler-option.md) 编译器选项代替 [/link](../../language-reference/compiler-options/link-compiler-option.md) 进行编译。
 
 ## <a name="to-add-additional-formatting-to-the-table"></a>将其他格式添加到表格
 
@@ -176,7 +176,7 @@ Visual C# 具有一些功能，可简化对 Office API 对象的访问。 这些
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Type.Missing?displayProperty=nameWithType>
-- [dynamic](../../../csharp/language-reference/keywords/dynamic.md)
-- [使用类型 dynamic](../../../csharp/programming-guide/types/using-type-dynamic.md)
-- [命名参数和可选参数](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)
-- [如何：在 Office 编程中使用命名参数和可选参数](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)
+- [dynamic](../../language-reference/keywords/dynamic.md)
+- [使用类型 dynamic](../types/using-type-dynamic.md)
+- [命名参数和可选参数](../classes-and-structs/named-and-optional-arguments.md)
+- [如何：在 Office 编程中使用命名参数和可选参数](../classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)

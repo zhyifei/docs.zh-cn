@@ -2,12 +2,12 @@
 title: 在异步任务完成时对其进行处理
 ms.date: 09/12/2018
 ms.assetid: 25331850-35a7-43b3-ab76-3908e4346b9d
-ms.openlocfilehash: 562da04b48af6f6cbaaca8ea8eccf062b470696e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 35b4e42d7da5b8bc9069083ffc47d990bcb637a8
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64600286"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595597"
 ---
 # <a name="start-multiple-async-tasks-and-process-them-as-they-complete-c"></a>启动多个异步任务并在其完成时进行处理 (C#)
 
@@ -27,21 +27,21 @@ ms.locfileid: "64600286"
 
 1. 从 .zip 文件中提取已下载的文件，然后启动 Visual Studio。
 
-2. 在菜单栏上，依次选择“文件” > “打开” > “项目/解决方案”。
+2. 在菜单栏上，依次选择  “文件” >   “打开” >   “项目/解决方案”。
 
-3. 在“打开项目”对话框中，打开保存已下载的示例代码的文件夹，然后打开 AsyncFineTuningCS 的解决方案 (.sln) 文件。
+3. 在“打开项目”  对话框中，打开保存已下载的示例代码的文件夹，然后打开 AsyncFineTuningCS 的解决方案 (.sln) 文件。
 
-4. 在“解决方案资源管理器”中，打开“ProcessTasksAsTheyFinish”项目的快捷菜单，选择“设为启动项目”。
+4. 在“解决方案资源管理器”中，打开“ProcessTasksAsTheyFinish”项目的快捷菜单，选择“设为启动项目”。   
 
-5. 选择 F5 键以运行此程序（或按 Ctrl+F5 键以运行此程序，而不对其进行调试）。
+5. 选择 F5  键以运行此程序（或按  Ctrl+  F5 键以运行此程序，而不对其进行调试）。
 
 6. 多次运行此项目以验证并不总是以相同顺序显示已下载的长度。
 
 ## <a name="create-the-program-yourself"></a>自行创建程序
 
-本示例对[在一个任务完成后取消剩余异步任务 (C#)](../../../../csharp/programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md) 中开发的代码进行了补充，并使用了相同的 UI。
+本示例对[在一个任务完成后取消剩余异步任务 (C#)](./cancel-remaining-async-tasks-after-one-is-complete.md) 中开发的代码进行了补充，并使用了相同的 UI。
 
-若要自行生成示例，请按[下载示例](../../../../csharp/programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md#downloading-the-example)部分的说明逐步操作，但将“CancelAfterOneTask”设置为“启动项目”。 将此主题中的更改添加到项目中的 `AccessTheWebAsync` 方法。 这些更改标有星号。
+若要自行生成示例，请按[下载示例](./cancel-remaining-async-tasks-after-one-is-complete.md#downloading-the-example)部分的说明逐步操作，但将“CancelAfterOneTask”  设置为“启动项目”。 将此主题中的更改添加到项目中的 `AccessTheWebAsync` 方法。 这些更改标有星号。
 
 **CancelAfterOneTask** 项目已包含一个查询，执行此查询时，将创建任务集合。 每次对以下代码中的 `ProcessURLAsync` 进行调用都会返回 <xref:System.Threading.Tasks.Task%601>，其中 `TResult` 是一个整数：
 
@@ -228,6 +228,6 @@ namespace ProcessTasksAsTheyFinish
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Threading.Tasks.Task.WhenAny%2A>
-- [微调异步应用程序 (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)
-- [使用 Async 和 Await 的异步编程 (C#)](../../../../csharp/programming-guide/concepts/async/index.md)
+- [微调异步应用程序 (C#)](./fine-tuning-your-async-application.md)
+- [使用 Async 和 Await 的异步编程 (C#)](./index.md)
 - [异步示例：微调应用程序](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)
