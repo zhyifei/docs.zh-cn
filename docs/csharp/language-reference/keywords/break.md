@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - break keyword [C#]
 ms.assetid: be2571ed-efb0-4965-b122-81e5b09db0b9
-ms.openlocfilehash: 15b193d9f294c01826b6b60587678ad76248e976
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 77d18d12cd0fabb26906a5b58dc3939da6214a29
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66422074"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69602243"
 ---
 # <a name="break-c-reference"></a>break（C# 参考）
 
-`break` 语句将终止其所在位置的最接近封闭循环或 [switch](../../../csharp/language-reference/keywords/switch.md) 语句。 控制权将传递给已终止语句后面的语句（若有）。
+`break` 语句将终止其所在位置的最接近封闭循环或 [switch](./switch.md) 语句。 控制权将传递给已终止语句后面的语句（若有）。
 
 ## <a name="example"></a>示例
 
@@ -33,7 +33,7 @@ ms.locfileid: "66422074"
 
 ## <a name="example"></a>示例
 
-本示例演示 `break` 在 [switch](../../../csharp/language-reference/keywords/switch.md) 语句中的用法。
+本示例演示 `break` 在 [switch](./switch.md) 语句中的用法。
 
 [!code-csharp[csrefKeywordsJump#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsJump/CS/csrefKeywordsJump.cs#2)]
 
@@ -50,7 +50,7 @@ Sorry, invalid selection.
 
 ## <a name="see-also"></a>请参阅
 
-- [C# 参考](../../../csharp/language-reference/index.md)
-- [C# 编程指南](../../../csharp/programming-guide/index.md)
-- [C# 关键字](../../../csharp/language-reference/keywords/index.md)
-- [switch](../../../csharp/language-reference/keywords/switch.md)
+- [C# 参考](../index.md)
+- [C# 编程指南](../../programming-guide/index.md)
+- [C# 关键字](./index.md)
+- [switch](./switch.md)

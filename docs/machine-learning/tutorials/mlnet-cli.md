@@ -6,12 +6,12 @@ ms.author: cesardl
 ms.date: 04/24/2019
 ms.custom: mvc
 ms.topic: tutorial
-ms.openlocfilehash: 029685be9d44ad947d4291912d7da1d8ce73d52a
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 403b1759164d588cb5af49c6cb05e001b030235f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053648"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963603"
 ---
 # <a name="auto-generate-a-binary-classifier-using-the-cli"></a>使用 CLI 自动生成二元分类器
 
@@ -47,7 +47,7 @@ ML.NET CLI 是 ML.NET 的一部分，其主要目标是在学习 ML.NET 时为 .
 1. 下载 [UCI Sentiment Labeled Sentences 数据集 zip 文件（参见以下备注中的引文）](https://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip)并在选择的任何文件夹中解压缩文件。
 
     > [!NOTE]
-    > 本教程使用的数据集摘自 KDD 2015 中由 Kotzias 等提出的“From Group to Individual Labels using Deep Features”， 并托管在 UCI 机器学习存储库中（Dua, D. 和 Karra Taniskidou, E.(2017)）。 UCI 机器学习存储库 [http://archive.ics.uci.edu/ml]。 加利福尼亚州，加利福尼亚大学：欧文分校，信息与计算机科学学院。
+    > 本教程使用的数据集摘自 KDD 2015 中由 Kotzias 等提出的“From Group to Individual Labels using Deep Features”， 并托管在 UCI 机器学习存储库中（Dua, D. 和 Karra Taniskidou, E.(2017)）。 UCI 机器学习存储库 [http://archive.ics.uci.edu/ml ]。 加利福尼亚州，加利福尼亚大学：欧文分校，信息与计算机科学学院。
 
 2. 将 `yelp_labelled.txt` 文件复制到之前创建的任何文件夹（例如 `/cli-test`）。
 
@@ -75,7 +75,7 @@ ML.NET CLI 是 ML.NET 的一部分，其主要目标是在学习 ML.NET 时为 .
     现在，已准备好开始将 CLI 用于此“情绪分析”方案。
 
     > [!NOTE]
-    > 完成本教程后，还可以尝试使用自己的数据集，前提是它们可供用于 ML.NET CLI 预览版目前支持的任何 ML 任务，即 *“二元分类”、“多类分类”和“回归”*）。
+    > 完成本教程后，还可以尝试使用自己的数据集，前提是它们可供用于 ML.NET CLI 预览版目前支持的任何 ML 任务，即 *“二元分类”、“多类分类”和“回归”* ）。
 
 ## <a name="run-the-mlnet-auto-train-command"></a>运行“mlnet auto-train”命令
 
@@ -88,7 +88,7 @@ ML.NET CLI 是 ML.NET 的一部分，其主要目标是在学习 ML.NET 时为 .
     此命令运行 **`mlnet auto-train` 命令**：
     - 用于 **`binary-classification`** 类型的 **ML 任务**
     - 使用**数据集文件 `yelp_labelled.txt`** 作为训练和测试数据集（CLI 在内部将使用交叉验证或将其拆分为两个数据集，一个用于训练，另一个用于测试）
-    - 想要预测的**目的/目标列**（通常称为 **“标签”**）是**索引为 1 的列**（这是第二列，因为索引从 0 开始）
+    - 想要预测的**目的/目标列**（通常称为 **“标签”** ）是**索引为 1 的列**（这是第二列，因为索引从 0 开始）
     - **不使用带有列名的文件标头**，因为此特定数据集文件没有标头
     - 试验的**目标探索时间**为 **10 秒**
 
@@ -116,7 +116,7 @@ ML.NET CLI 是 ML.NET 的一部分，其主要目标是在学习 ML.NET 时为 .
     如需其他指标和更多**有关指标的详细信息**（例如准确性、AUC、AUCPR、用于评估不同模型的 F1 分数），可以阅读[了解 ML.NET 指标](../resources/metrics.md)
 
     > [!NOTE]
-    >  可以尝试使用完全相同的数据集并为 `--max-exploration-time` 指定数分钟时间（例如三分钟，因此指定 180 秒），这将找到一个更好的“最佳模型”，其具有用于此数据集（非常小，1,000 行）的不同训练管道配置。 
+    > 可以尝试使用完全相同的数据集并为 `--max-exploration-time` 指定数分钟时间（例如三分钟，因此指定 180 秒），这将找到一个更好的“最佳模型”，其具有用于此数据集（非常小，1,000 行）的不同训练管道配置。 
         
     为了找到针对较大数据集的“生产就绪模型”“最佳/优质”模型，应该使用 CLI 进行试验，其通常根据数据集的大小指定更多探索时间。 实际上，在许多情况下，可能需要进行多个小时的探索，特别是在数据集的行数和列数很多的情况下。 
 
@@ -174,7 +174,7 @@ ML.NET CLI 是 ML.NET 的一部分，其主要目标是在学习 ML.NET 时为 .
 
 - 第一行代码创建运行 ML.NET 代码时需要的 `MLContext` 对象。 
 
-- 第二行代码因不需要训练模型而被注释，这是因为模型已经由 CLI 工具进行训练并保存到模型的序列化 .zip 文件中。 但是，如果想要查看 CLI *“如何训练模型”*，可以取消注释该行并运行/调试用于该特定 ML 模型的训练代码。
+- 第二行代码因不需要训练模型而被注释，这是因为模型已经由 CLI 工具进行训练并保存到模型的序列化 .zip 文件中。 但是，如果想要查看 CLI *“如何训练模型”* ，可以取消注释该行并运行/调试用于该特定 ML 模型的训练代码。
 
 - 在第三行代码中，通过提供序列化模型 .zip 文件的路径，使用 `mlContext.Model.Load()` API 从模型 .zip 文件加载模型。
 
@@ -219,7 +219,7 @@ ML.NET CLI 是 ML.NET 的一部分，其主要目标是在学习 ML.NET 时为 .
 
 可以使用类似的“ML 模型评分代码”在最终用户应用程序中运行模型并进行预测。 
 
-例如，可以直接将该代码移至任何 Windows 桌面应用程序（例如 WPF 和 WinForms），并以与在控制台应用中相同的方式运行模型。
+例如，可以直接将该代码移至任何 Windows 桌面应用程序（例如 WPF  和 WinForms  ），并以与在控制台应用中相同的方式运行模型。
 
 但是，应该优化实现这些代码行来运行 ML 模型的方式（即，缓存模型 .zip 文件并加载一次），并使用单一实例对象，而不是在每个请求上创建它们，特别是在应用程序需要具有可伸缩性（例如 Web 应用程序或分布式服务）的情况下，如以下部分所述。
 
@@ -229,7 +229,7 @@ ML.NET CLI 是 ML.NET 的一部分，其主要目标是在学习 ML.NET 时为 .
 
 对于第二个对象（`PredictionEngine` 对象），优化并不容易，因为 `PredictionEngine` 对象不为线程安全型，所以无法在 ASP.NET Core 应用中将此对象实例化为单一实例或静态对象。 此[博客文章](https://devblogs.microsoft.com/cesardelatorre/how-to-optimize-and-run-ml-net-models-on-scalable-asp-net-core-webapis-or-web-apps/)深入讨论了此线程安全和可伸缩性问题。 
 
-然而，事情已经变得比博客文章中解释的容易得多。 我们开发出一个更简单的方法，并创建了一个很不错的 **“.NET Core 集成包”**，用户可通过在应用程序 DI 服务（依赖项注入服务）中注册它来轻松地在 ASP.NET Core 应用和服务中使用它，然后可通过代码直接使用它。 查看以下相关教程和示例：
+然而，事情已经变得比博客文章中解释的容易得多。 我们开发出一个更简单的方法，并创建了一个很不错的 **“.NET Core 集成包”** ，用户可通过在应用程序 DI 服务（依赖项注入服务）中注册它来轻松地在 ASP.NET Core 应用和服务中使用它，然后可通过代码直接使用它。 查看以下相关教程和示例：
 
 - [教程：在可缩放的 ASP.NET Core Web 应用和 WebAPI 上运行 ML.NET 模型](https://aka.ms/mlnet-tutorial-netcoreintegrationpkg)
 - [示例：ASP.NET Core WebAPI 上的可缩放 ML.NET 模型](https://aka.ms/mlnet-sample-netcoreintegrationpkg)

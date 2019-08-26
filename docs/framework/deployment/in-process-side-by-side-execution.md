@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b7964b2a59c67380d7f19077c01efa0a4a636cff
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: 5d9d77ef20090e007e22a0d2f90b29f32ff94b46
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67170516"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69911117"
 ---
 # <a name="in-process-side-by-side-execution"></a>进程内并行执行
 从 .NET Framework 4 开始，可使用进程内并行承载在单个进程中运行多个公共语言运行时 (CLR) 版本。 默认情况下，托管 COM 组件使用其生成所用的 .NET Framework 版本运行，而不考虑为进程加载的 .NET Framework 版本。  
@@ -45,7 +45,7 @@ ms.locfileid: "67170516"
     |4|是|是|不适用|  
   
 > [!NOTE]
->  .NET Framework 版本 3.0 和 3.5 是以版本 2.0 为基础逐步生成的，不需要并行运行。 这些版本本来就是同一版本。  
+> .NET Framework 版本 3.0 和 3.5 是以版本 2.0 为基础逐步生成的，不需要并行运行。 这些版本本来就是同一版本。  
   
 <a name="scenarios"></a>   
 ## <a name="common-side-by-side-hosting-scenarios"></a>常见的并行承载方案  

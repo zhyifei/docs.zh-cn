@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - char data type [C#]
 ms.assetid: b51cf4fb-124c-4067-af48-afbac122b228
-ms.openlocfilehash: b58730d945582ded7b76fcd5c4c65bc1dd9324da
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 754c04bfc3b4090906420d55d55e51606b72f187
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661455"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69605949"
 ---
 # <a name="char-c-reference"></a>char（C# 参考）
 
@@ -44,12 +44,12 @@ ms.locfileid: "67661455"
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Char>
-- [C# 参考](../../../csharp/language-reference/index.md)
-- [C# 编程指南](../../../csharp/programming-guide/index.md)
-- [C# 关键字](../../../csharp/language-reference/keywords/index.md)
-- [整型类型](../../../csharp/language-reference/builtin-types/integral-numeric-types.md)
-- [内置类型表](../../../csharp/language-reference/keywords/built-in-types-table.md)
-- [隐式数值转换表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)
-- [显式数值转换表](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
-- [可以为 null 的类型](../../../csharp/programming-guide/nullable-types/index.md)
-- [字符串](../../../csharp/programming-guide/strings/index.md)
+- [C# 参考](../index.md)
+- [C# 编程指南](../../programming-guide/index.md)
+- [C# 关键字](./index.md)
+- [整型类型](../builtin-types/integral-numeric-types.md)
+- [内置类型表](./built-in-types-table.md)
+- [隐式数值转换表](./implicit-numeric-conversions-table.md)
+- [显式数值转换表](./explicit-numeric-conversions-table.md)
+- [可以为 null 的类型](../../programming-guide/nullable-types/index.md)
+- [字符串](../../programming-guide/strings/index.md)

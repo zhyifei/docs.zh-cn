@@ -2,12 +2,12 @@
 title: 面向对象的编程 (C#)
 ms.date: 07/20/2015
 ms.assetid: 89574786-65ef-4335-88bc-fbacd094f183
-ms.openlocfilehash: 8bf02cbfca30d6dfc29c4e5e6c30a5013931e71b
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 50b38833582ebe46836ccfab4e1ebeb98b53a96e
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398067"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659870"
 ---
 # <a name="object-oriented-programming-c"></a>面向对象的编程 (C#)
 
@@ -79,9 +79,9 @@ struct SampleStruct
 
 有关详细信息，请参见:
 
-- [class](../../../csharp/language-reference/keywords/class.md)
+- [class](../../language-reference/keywords/class.md)
 
-- [struct](../../../csharp/language-reference/keywords/struct.md)
+- [struct](../../language-reference/keywords/struct.md)
 
 ### <a name="Members"></a> 类成员
 
@@ -133,9 +133,9 @@ class SampleClass
 
 有关详细信息，请参见:
 
-- [get](../../../csharp/language-reference/keywords/get.md)
+- [get](../../language-reference/keywords/get.md)
 
-- [set](../../../csharp/language-reference/keywords/set.md)
+- [set](../../language-reference/keywords/set.md)
 
 #### <a name="Methods"></a> 方法
 
@@ -166,9 +166,9 @@ public int sampleMethod(int sampleParam) {}
 
 有关详细信息，请参见:
 
-- [方法](../../../csharp/programming-guide/classes-and-structs/methods.md)
+- [方法](../classes-and-structs/methods.md)
 
-- [扩展方法](../../../csharp/programming-guide/classes-and-structs/extension-methods.md)
+- [扩展方法](../classes-and-structs/extension-methods.md)
 
 #### <a name="Constructors"></a> 构造函数
 
@@ -188,7 +188,7 @@ public class SampleClass
 
 有关详细信息，请参见:
 
-[构造函数](../../../csharp/programming-guide/classes-and-structs/constructors.md)。
+[构造函数](../classes-and-structs/constructors.md)。
 
 #### <a name="Finalizers"></a>终结器
 
@@ -200,7 +200,7 @@ public class SampleClass
 
 类或对象可以通过事件向其他类或对象通知发生的相关事情。 发送（或引发）事件的类称为“发行者”  ，接收（或处理）事件的类称为“订户”  。 有关事件以及如何引发和处理事件的详细信息，请参阅[事件](../../../standard/events/index.md)。
 
-- 若要在类中声明事件，请使用 [event](../../../csharp/language-reference/keywords/event.md) 关键字。
+- 若要在类中声明事件，请使用 [event](../../language-reference/keywords/event.md) 关键字。
 
 - 若要引发事件，请调用事件委托。
 
@@ -234,14 +234,14 @@ Container.Nested nestedInstance = new Container.Nested()
 
 |C# 修饰符|定义|
 |------------------|----------------|
-|[public](../../../csharp/language-reference/keywords/public.md)|同一程序集中的任何其他代码或引用该程序集的其他程序集都可以访问该类型或成员。|
-|[private](../../../csharp/language-reference/keywords/private.md)|只有同一类中的代码可以访问该类型或成员。|
-|[受保护](../../../csharp/language-reference/keywords/protected.md)|只有同一类或派生类中的代码可以访问该类型或成员。|
-|[internal](../../../csharp/language-reference/keywords/internal.md)|同一程序集中的任何代码都可以访问该类型或成员，但其他程序集中的代码不可以。|
-|[protected internal](../../../csharp/language-reference/keywords/protected-internal.md)|同一程序集中的任何代码或其他程序集中的任何派生类都可以访问该类型或成员。|
-|[private protected](../../../csharp/language-reference/keywords/private-protected.md)|同一类或基类程序集内派生类中的代码可以访问该类型或成员。|
+|[public](../../language-reference/keywords/public.md)|同一程序集中的任何其他代码或引用该程序集的其他程序集都可以访问该类型或成员。|
+|[private](../../language-reference/keywords/private.md)|只有同一类中的代码可以访问该类型或成员。|
+|[受保护](../../language-reference/keywords/protected.md)|只有同一类或派生类中的代码可以访问该类型或成员。|
+|[internal](../../language-reference/keywords/internal.md)|同一程序集中的任何代码都可以访问该类型或成员，但其他程序集中的代码不可以。|
+|[protected internal](../../language-reference/keywords/protected-internal.md)|同一程序集中的任何代码或其他程序集中的任何派生类都可以访问该类型或成员。|
+|[private protected](../../language-reference/keywords/private-protected.md)|同一类或基类程序集内派生类中的代码可以访问该类型或成员。|
 
-有关详细信息，请参阅[访问修饰符](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)。
+有关详细信息，请参阅[访问修饰符](../classes-and-structs/access-modifiers.md)。
 
 ### <a name="InstantiatingClasses"></a> 实例化类
 
@@ -270,9 +270,9 @@ SampleClass sampleObject = new SampleClass
 
 有关详细信息，请参见:
 
-- [new 运算符](../../../csharp/language-reference/operators/new-operator.md)
+- [new 运算符](../../language-reference/operators/new-operator.md)
 
-- [对象和集合初始值设定项](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
+- [对象和集合初始值设定项](../classes-and-structs/object-and-collection-initializers.md)
 
 ### <a name="Static"></a> 静态类和成员
 
@@ -295,7 +295,7 @@ Console.WriteLine(SampleClass.SampleString);
 
 C# 中的静态类只有静态成员，无法进行实例化。 静态成员也无法访问非静态属性、字段或方法
 
-有关详细信息，请参阅：[static](../../../csharp/language-reference/keywords/static.md)。
+有关详细信息，请参阅：[static](../../language-reference/keywords/static.md)。
 
 ### <a name="AnonymousTypes"></a> 匿名类型
 
@@ -309,7 +309,7 @@ var sampleObject =
     new { FirstProperty = "A", SecondProperty = "B" };
 ```
 
-有关详细信息，请参见:[匿名类型](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)。
+有关详细信息，请参见:[匿名类型](../classes-and-structs/anonymous-types.md)。
 
 ## <a name="Inheritance"></a> 继承
 
@@ -340,9 +340,9 @@ public abstract class B { }
 
 有关详细信息，请参见:
 
-- [sealed](../../../csharp/language-reference/keywords/sealed.md)
+- [sealed](../../language-reference/keywords/sealed.md)
 
-- [abstract](../../../csharp/language-reference/keywords/abstract.md)
+- [abstract](../../language-reference/keywords/abstract.md)
 
 ### <a name="Overriding"></a> 重写成员
 
@@ -352,10 +352,10 @@ public abstract class B { }
 
 |C# 修饰符|定义|
 |------------------|----------------|
-|[virtual](../../../csharp/language-reference/keywords/virtual.md)|允许在派生类中重写类成员。|
-|[override](../../../csharp/language-reference/keywords/override.md)|重写基类中定义的虚拟（可重写）成员。|
-|[abstract](../../../csharp/language-reference/keywords/abstract.md)|要求在派生类中重写类成员。|
-|[new 修饰符](../../../csharp/language-reference/keywords/new-modifier.md)|隐藏继承自基类的成员|
+|[virtual](../../language-reference/keywords/virtual.md)|允许在派生类中重写类成员。|
+|[override](../../language-reference/keywords/override.md)|重写基类中定义的虚拟（可重写）成员。|
+|[abstract](../../language-reference/keywords/abstract.md)|要求在派生类中重写类成员。|
+|[new 修饰符](../../language-reference/keywords/new-modifier.md)|隐藏继承自基类的成员|
 
 ## <a name="Interfaces"></a> 接口
 
@@ -384,9 +384,9 @@ class SampleClass : ISampleInterface
 
 有关详细信息，请参见:
 
-[接口](../../../csharp/programming-guide/interfaces/index.md)
+[接口](../interfaces/index.md)
 
-[interface](../../../csharp/language-reference/keywords/interface.md)
+[interface](../../language-reference/keywords/interface.md)
 
 ## <a name="Generics"></a> 泛型
 
@@ -410,9 +410,9 @@ sampleObject.Field = "Sample string";
 
 有关详细信息，请参见:
 
-- [泛型](~/docs/standard/generics/index.md)
+- [泛型](../../../standard/generics/index.md)
 
-- [泛型](../../../csharp/programming-guide/generics/index.md)
+- [泛型](../generics/index.md)
 
 ## <a name="Delegates"></a> 委托
 
@@ -448,10 +448,10 @@ class SampleClass
 
 有关详细信息，请参见:
 
-- [委托](../../../csharp/programming-guide/delegates/index.md)
+- [委托](../delegates/index.md)
 
-- [delegate](../../../csharp/language-reference/keywords/delegate.md)
+- [delegate](../../language-reference/keywords/delegate.md)
 
 ## <a name="see-also"></a>请参阅
 
-- [C# 编程指南](../../../csharp/programming-guide/index.md)
+- [C# 编程指南](../index.md)

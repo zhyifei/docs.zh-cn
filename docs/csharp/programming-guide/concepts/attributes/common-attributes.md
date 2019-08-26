@@ -2,12 +2,12 @@
 title: 通用属性 (C#)
 ms.date: 07/20/2015
 ms.assetid: 785a0526-6c0e-4599-8c61-ccdc88dd9965
-ms.openlocfilehash: bb06fc72fc336df257c6b674d3eaa4fa47801da0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7988dad410c6e51869ec9d7e40d94e874443a5f8
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64603336"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595456"
 ---
 # <a name="common-attributes-c"></a>通用属性 (C#)
 本主题介绍在 C# 程序中最常用的属性。  
@@ -225,15 +225,15 @@ class SampleClass
 |---|---|---|  
 |<xref:System.Runtime.CompilerServices.CallerFilePathAttribute>|包含调用方的源文件的完整路径。 这是编译时的路径。|`String`|  
 |<xref:System.Runtime.CompilerServices.CallerLineNumberAttribute>|源文件中调用方法的行号。|`Integer`|  
-|<xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>|调用方的方法名称或属性名称。 有关详细信息，请参阅[调用方信息 (C#)](../../../../csharp/programming-guide/concepts/caller-information.md)。|`String`|  
+|<xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>|调用方的方法名称或属性名称。 有关详细信息，请参阅[调用方信息 (C#)](../caller-information.md)。|`String`|  
   
- 有关调用方信息特性的详细信息，请参阅[调用方信息 (C#)](../../../../csharp/programming-guide/concepts/caller-information.md)。  
+ 有关调用方信息特性的详细信息，请参阅[调用方信息 (C#)](../caller-information.md)。  
   
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Reflection>
 - <xref:System.Attribute>
-- [C# 编程指南](../../../../csharp/programming-guide/index.md)
-- [特性](../../../../../docs/standard/attributes/index.md)
-- [反射 (C#)](../../../../csharp/programming-guide/concepts/reflection.md)
-- [使用反射访问特性 (C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
+- [C# 编程指南](../../index.md)
+- [特性](../../../../standard/attributes/index.md)
+- [反射 (C#)](../reflection.md)
+- [使用反射访问特性 (C#)](./accessing-attributes-by-using-reflection.md)

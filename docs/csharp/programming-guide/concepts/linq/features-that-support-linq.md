@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - LINQ [C#], features supporting LINQ
 ms.assetid: 524b0078-ebfd-45a7-b390-f2ceb9d84797
-ms.openlocfilehash: bf9af90c9695ad9428a887a901a95282672a4f75
-ms.sourcegitcommit: 90f0bee0e8a416e45c78fa3ad4c91ef00e5228d5
+ms.openlocfilehash: 1029d34ae8823fe91c7e4bc92e168fcc1061c707
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66722534"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594414"
 ---
 # <a name="c-features-that-support-linq"></a>支持 LINQ 的 C# 功能
 
@@ -26,11 +26,11 @@ var query = from str in stringArray
             select stringGroup;
 ```
 
-有关详细信息，请参阅 [LINQ 查询表达式](../../../../csharp/programming-guide/linq-query-expressions/index.md)。
+有关详细信息，请参阅 [LINQ 查询表达式](../../linq-query-expressions/index.md)。
 
 ## <a name="implicitly-typed-variables-var"></a>隐式类型化变量 (var)
 
-可以使用 [var](../../../../csharp/language-reference/keywords/var.md) 修饰符来指示编译器推断并分配类型，而不必在声明并初始化变量时显式指定类型，如下所示：
+可以使用 [var](../../../language-reference/keywords/var.md) 修饰符来指示编译器推断并分配类型，而不必在声明并初始化变量时显式指定类型，如下所示：
 
 ```csharp
 var number = 5;
@@ -42,7 +42,7 @@ var query = from str in stringArray
 
 声明为 `var` 的变量与显式指定其类型的变量一样都是强类型。 通过使用 `var`，可以创建匿名类型，但它只能用于本地变量。 也可以使用隐式类型声明数组。
 
-有关详细信息，请参阅[隐式类型局部变量](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md)。
+有关详细信息，请参阅[隐式类型局部变量](../../classes-and-structs/implicitly-typed-local-variables.md)。
 
 ## <a name="object-and-collection-initializers"></a>对象和集合初始值设定项
 
@@ -68,9 +68,9 @@ var newLargeOrderCustomers = IncomingOrders.Where(x => x.OrderSize > 5).Select(y
 
 有关详细信息，请参见:
 
-- [对象和集合初始值设定项](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
+- [对象和集合初始值设定项](../../classes-and-structs/object-and-collection-initializers.md)
 
-- [标准查询运算符的查询表达式语法](../../../../csharp/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)
+- [标准查询运算符的查询表达式语法](./query-expression-syntax-for-standard-query-operators.md)
 
 ## <a name="anonymous-types"></a>匿名类型
 
@@ -80,13 +80,13 @@ var newLargeOrderCustomers = IncomingOrders.Where(x => x.OrderSize > 5).Select(y
 select new {name = cust.Name, phone = cust.Phone};
 ```
 
-有关详细信息，请参阅[匿名类型](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)。
+有关详细信息，请参阅[匿名类型](../../classes-and-structs/anonymous-types.md)。
 
 ## <a name="extension-methods"></a>扩展方法
 
 扩展方法是一种可与类型关联的静态方法，因此可以像实例方法那样对类型调用它。 实际上，利用此功能，可以将新方法“添加”到现有类型，而不会实际修改它们。 标准查询运算符是一组扩展方法，它们为实现 <xref:System.Collections.Generic.IEnumerable%601> 的任何类型提供 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询功能。
 
-有关详细信息，请参阅[扩展方法](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)。
+有关详细信息，请参阅[扩展方法](../../classes-and-structs/extension-methods.md)。
 
 ## <a name="lambda-expressions"></a>Lambda 表达式
 
@@ -94,12 +94,12 @@ Lambda 表达式是一种内联函数，该函数使用 => 运算符将输入参
 
 有关详细信息，请参见:
 
-- [匿名函数](../../../../csharp/programming-guide/statements-expressions-operators/anonymous-functions.md)
+- [匿名函数](../../statements-expressions-operators/anonymous-functions.md)
 
-- [Lambda 表达式](../../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)
+- [Lambda 表达式](../../statements-expressions-operators/lambda-expressions.md)
 
-- [表达式树 (C#)](../../../../csharp/programming-guide/concepts/expression-trees/index.md)
+- [表达式树 (C#)](../expression-trees/index.md)
 
 ## <a name="see-also"></a>请参阅
 
-- [语言集成查询 (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)
+- [语言集成查询 (LINQ) (C#)](./index.md)

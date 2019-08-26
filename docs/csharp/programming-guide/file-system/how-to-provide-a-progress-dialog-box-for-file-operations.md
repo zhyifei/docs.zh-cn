@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - progress dialog [C#]
 ms.assetid: 01b71fe7-8178-4dc8-aeb1-12053be7b51c
-ms.openlocfilehash: 882e4ea71331fe0513f3be71c371bbc0f714b44f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 028e779f3cd8a17f162a79791b0c84abae14cf44
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59309532"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590048"
 ---
 # <a name="how-to-provide-a-progress-dialog-box-for-file-operations-c-programming-guide"></a>如何：提供文件操作进度对话框（C# 编程指南）
 如果在 <xref:Microsoft.VisualBasic?displayProperty=nameWithType> 命名空间中使用 <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyFile%28System.String%2CSystem.String%2CMicrosoft.VisualBasic.FileIO.UIOption%29> 方法，可以在 Windows 中提供显示文件操作进度的标准对话框。  
@@ -19,13 +19,13 @@ ms.locfileid: "59309532"
   
 ### <a name="to-add-a-reference-in-visual-studio"></a>在 Visual Studio 中添加引用  
   
-1. 在菜单栏上，依次选择“项目”、“添加引用”。  
+1. 在菜单栏上，依次选择“项目”  、“添加引用”  。  
   
-     此时将显示“引用管理器”对话框。  
+     此时将显示“引用管理器”  对话框。  
   
-2. 在“程序集”区域，选择“Framework”（如果尚未选择它）。  
+2. 在“程序集”  区域，选择“Framework”  （如果尚未选择它）。  
   
-3. 在名称列表中，选择“Microsoft.VisualBasic”复选框，然后再选择“确定”按钮以关闭对话框。  
+3. 在名称列表中，选择“Microsoft.VisualBasic”  复选框，然后再选择“确定”  按钮以关闭对话框。  
   
 ## <a name="example"></a>示例  
  以下代码将 `sourcePath` 指定的目录复制到 `destinationPath` 指定的目录。 此代码还提供了标准的对话框，其中显示在操作完成前估计的剩余时间量。  
@@ -34,4 +34,4 @@ ms.locfileid: "59309532"
   
 ## <a name="see-also"></a>请参阅
 
-- [文件系统和注册表（C# 编程指南）](../../../csharp/programming-guide/file-system/index.md)
+- [文件系统和注册表（C# 编程指南）](./index.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7e953b43-1374-4bbc-814f-53ca1b6b52bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 12415c6d461f3c8040aaa407edf9567633c5b108
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7ad7ce5dd3739b1edcf8a8a03a2f57376ceba138
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591577"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69948584"
 ---
 # <a name="certmgrexe-certificate-manager-tool"></a>Certmgr.exe（证书管理器工具）
 证书管理器工具 (Certmgr.exe) 管理证书、证书信任列表 (CTL) 和证书吊销列表 (CRL)。  
@@ -28,7 +28,7 @@ ms.locfileid: "64591577"
  安装 Visual Studio 时，将会自动安装证书管理器。 若要启动该工具，请使用[命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。  
   
 > [!NOTE]
->  证书管理器工具 (Certmgr.exe) 是命令行实用程序，而“证书”(Certmgr.msc) 则是 Microsoft 管理控制台 (MMC) 管理单元。 由于 Certmgr.msc 通常位于 Windows 系统目录中，因此在命令行上输入 `certmgr` 可加载“证书”MMC 管理单元（即使已打开 Visual Studio 开发人员命令提示）。 出现这种情况的原因是，在 PATH 环境变量中，“证书”管理单元的路径出现在证书管理器工具的路径之前。 如果你遇到此问题，则可以通过指定可执行文件的路径来执行 Certmgr.exe 命令。  
+> 证书管理器工具 (Certmgr.exe) 是命令行实用程序，而“证书”(Certmgr.msc) 则是 Microsoft 管理控制台 (MMC) 管理单元。 由于 Certmgr.msc 通常位于 Windows 系统目录中，因此在命令行上输入 `certmgr` 可加载“证书”MMC 管理单元（即使已打开 Visual Studio 开发人员命令提示）。 出现这种情况的原因是，在 PATH 环境变量中，“证书”管理单元的路径出现在证书管理器工具的路径之前。 如果你遇到此问题，则可以通过指定可执行文件的路径来执行 Certmgr.exe 命令。  
   
  此工具会自动随 Visual Studio 一起安装。 若要运行此工具，请使用 Visual Studio 开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示）。 有关详细信息，请参阅[命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。  
   
@@ -55,19 +55,19 @@ ms.locfileid: "64591577"
 |------------|-----------------|  
 |**/add**|将证书、CTL 和 CRL 添加到证书存储中。|  
 |**/all**|当与 **/add** 一起使用时添加所有项。 当与 **/del** 一起使用时删除所有项。当不与 **/add** 或 **/del** 选项一起使用时显示所有项。 **/all** 选项不能与 **/put** 一起使用。|  
-|**/c**|当与 **/add** 一起使用时添加证书。 当与 **/del** 一起使用时删除证书。当与 **/put** 一起使用时保存证书。 当不与 **/add**、**/del** 或 **/put** 选项一起使用时显示证书。|  
-|**/CRL**|当与 **/add** 一起使用时添加 CRL。 当与 **/del** 一起使用时删除 CRL。当与 **/put** 一起使用时保存 CRL。 当不与 **/add**、**/del** 或 **/put** 选项一起使用时显示 CRL。|  
-|**/CTL**|当与 **/add** 一起使用时添加 CTL。 当与 **/del** 一起使用时删除 CTL。当与 **/put** 一起使用时保存 CTL。 当不与 **/add**、**/del** 或 **/put** 选项一起使用时显示 CTL。|  
+|**/c**|当与 **/add** 一起使用时添加证书。 当与 **/del** 一起使用时删除证书。当与 **/put** 一起使用时保存证书。 当不与 **/add**、 **/del** 或 **/put** 选项一起使用时显示证书。|  
+|**/CRL**|当与 **/add** 一起使用时添加 CRL。 当与 **/del** 一起使用时删除 CRL。当与 **/put** 一起使用时保存 CRL。 当不与 **/add**、 **/del** 或 **/put** 选项一起使用时显示 CRL。|  
+|**/CTL**|当与 **/add** 一起使用时添加 CTL。 当与 **/del** 一起使用时删除 CTL。当与 **/put** 一起使用时保存 CTL。 当不与 **/add**、 **/del** 或 **/put** 选项一起使用时显示 CTL。|  
 |**/del**|从证书存储中删除证书、CTL 和 CRL。|  
 |**/e** *encodingType*|指定证书编码类型。 默认值为 `X509_ASN_ENCODING`。|  
 |**/f** *dwFlags*|指定存储打开标志。 这是传递到 **CertOpenStore** 的 *dwFlags* 参数。 默认值为 CERT_SYSTEM_STORE_CURRENT_USER。 仅当使用 **/y** 选项时才考虑此选项。|  
 |**/h**[**elp**]|显示该工具的命令语法和选项。|  
 |**/n** *nam*|指定要添加、删除或保存的证书的公用名。 此选项只能用于证书，不能用于 CTL 或 CRL。|  
-|**/put**|将证书存储中的 X.509 证书、CTL 或 CRL 保存到文件。 文件以 X.509 格式保存。 **/7** 选项可与 **/put** 选项一起使用，以便用 PKCS #7 格式保存文件。 **/put** 选项后面必须有 **/c**、**/CTL** 或 **/CRL**。 **/all** 选项不能与 **/put** 一起使用。|  
+|**/put**|将证书存储中的 X.509 证书、CTL 或 CRL 保存到文件。 文件以 X.509 格式保存。 **/7** 选项可与 **/put** 选项一起使用，以便用 PKCS #7 格式保存文件。 **/put** 选项后面必须有 **/c**、 **/CTL** 或 **/CRL**。 **/all** 选项不能与 **/put** 一起使用。|  
 |**/r** *location*|标识系统存储的注册表位置。 仅当指定 **/s** 选项时才考虑此选项。 *location* 必须是以下项之一：<br /><br /> -   `currentUser` 指示证书存储在 HKEY_CURRENT_USER 项下。 这是默认设置。<br />-   `localMachine` 指示证书存储在 HKEY_LOCAL_MACHINE 项下。|  
 |**/s**|指示证书存储是系统存储。 如果未指定此选项，则会将存储视为 **StoreFile**。|  
 |**/sha1** *sha1Hash*|指定要添加、删除或保存的证书、CTL 或 CRL 的 SHA1 哈希。|  
-|**/v**|指定详细模式；显示有关证书、CTL 和 CRL 的详细信息。 此选项不能与 **/add**、**/del** 或 **/put** 选项一起使用。|  
+|**/v**|指定详细模式；显示有关证书、CTL 和 CRL 的详细信息。 此选项不能与 **/add**、 **/del** 或 **/put** 选项一起使用。|  
 |**/y** *provider*|指定存储提供程序名称。|  
 |**/7**|将目标存储保存为 PKCS #7 对象。|  
 |**/?**|显示该工具的命令语法和选项。|  
@@ -83,7 +83,7 @@ ms.locfileid: "64591577"
   
 - 将证书存储中的 X.509 证书、CTL 或 CRL 保存到文件。  
   
- Certmgr.exe 适用于两类证书存储：StoreFile 和系统存储。 不必指定证书存储的类型；Certmgr.exe 能够识别存储类型并执行适当的操作。  
+ Certmgr.exe 适用于两类证书存储：StoreFile 和系统存储  。 不必指定证书存储的类型；Certmgr.exe 能够识别存储类型并执行适当的操作。  
   
  运行 Certmgr.exe 时若不指定任何选项，则将启动 certmgr.msc 管理单元，该管理单元具有一个 GUI，可帮助执行也可通过命令行访问的证书管理任务。 该 GUI 提供了一个导入向导，此向导会将证书、CTL 和 CRL 从磁盘复制到证书存储中。  
   

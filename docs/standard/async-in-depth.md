@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
-ms.openlocfilehash: 79154713e370029ff31591523525fb05422571d8
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 6f1900eaabafe2931d88959bf79bf4ca1f5bc98b
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57844731"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666585"
 ---
 # <a name="async-in-depth"></a>深入了解异步
 
@@ -30,7 +30,7 @@ ms.locfileid: "57844731"
 
 任务运行时，使用 `await` 在任务完成前将控制让步于其调用方，可让应用程序和服务执行有用工作。 任务完成后代码无需依靠回调或事件便可继续执行。 语言和任务 API 集成会为你完成此操作。 如果正在使用 `Task<T>`，任务完成时，`await` 关键字还将“打开”返回的值。  下面进一步详细介绍了此工作原理。
 
-可在[基于任务的异步模式 (TAP)](~/docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) 主题中了解有关任务以及与任务交互的不同方法的详细信息。
+可在[基于任务的异步模式 (TAP)](./asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) 主题中了解有关任务以及与任务交互的不同方法的详细信息。
 
 ## <a name="deeper-dive-into-tasks-for-an-io-bound-operation"></a>深入了解针对绑定 I/O 的操作的任务
 
@@ -146,7 +146,7 @@ public async Task<int> CalculateResult(InputData data)
 
 ## <a name="see-also"></a>请参阅
 
-- [C# 中的异步编程](~/docs/csharp/async.md)
+- [C# 中的异步编程](../csharp/async.md)
 - [使用 Async 和 Await 的异步编程 (C#)](../csharp/programming-guide/concepts/async/index.md)
-- [F# 中的异步编程](~/docs/fsharp/tutorials/asynchronous-and-concurrent-programming/async.md)
-- [使用 Async 和 Await 的异步编程 (Visual Basic)](~/docs/visual-basic/programming-guide/concepts/async/index.md)
+- [F# 中的异步编程](../fsharp/tutorials/asynchronous-and-concurrent-programming/async.md)
+- [使用 Async 和 Await 的异步编程 (Visual Basic)](../visual-basic/programming-guide/concepts/async/index.md)

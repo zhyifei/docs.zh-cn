@@ -2,12 +2,12 @@
 title: 函数编程与过程编程 (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: fc64e39c-a487-4882-9169-da4de97917d9
-ms.openlocfilehash: 1f713e54cefed5b1fcf8c29cd88aa7587a737327
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: e87114d2edcda4b2df14eb2d84f62ebe9638b5eb
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66486947"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594249"
 ---
 # <a name="functional-vs-procedural-programming-linq-to-xml-c"></a>函数编程与过程编程 (LINQ to XML) (C#)
 XML 应用程序有多种类型：  
@@ -36,10 +36,10 @@ XML 应用程序有多种类型：
   
  可以对任一方法使用 LINQ to XML。 使用的类相同，在某些情况下使用的方法也相同。 但这两种方法的结构和目标却大相径庭。 例如，在不同情况下，其中一种方法通常具有更好的性能，使用更多或更少的内存。 另外，其中一种方法会更容易编写并生成更容易维护的代码。  
   
- 若要对比查看这两种方法，请参阅[内存中 XML 树修改与函数构造 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml.md)。  
+ 若要对比查看这两种方法，请参阅[内存中 XML 树修改与函数构造 (LINQ to XML) (C#)](./in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml.md)。  
   
- 有关编写功能转换的教程，请参阅 [XML 的纯功能转换 (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)。  
+ 有关编写功能转换的教程，请参阅 [XML 的纯功能转换 (C#)](./introduction-to-pure-functional-transformations.md)。  
   
 ## <a name="see-also"></a>请参阅
 
-- [LINQ to XML 编程概述 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md)
+- [LINQ to XML 编程概述 (C#)](./linq-to-xml-overview.md)

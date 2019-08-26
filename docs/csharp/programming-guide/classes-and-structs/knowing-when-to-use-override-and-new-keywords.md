@@ -7,16 +7,16 @@ helpviewer_keywords:
 - new keyword [C#]
 - polymorphism [C#], using override and new [C#]
 ms.assetid: 323db184-b136-46fc-8839-007886e7e8b0
-ms.openlocfilehash: eae57ae1f285e7f0e44c49e3d54fbd81bb4be591
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 00751cd8eac7979fe94d890ddeb7d13edb233f9e
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398433"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596470"
 ---
 # <a name="knowing-when-to-use-override-and-new-keywords-c-programming-guide"></a>了解何时使用 Override 和 New 关键字（C# 编程指南）
 
-在 C# 中，派生类中的方法可具有与基类中的方法相同的名称。 可使用 [new](../../../csharp/language-reference/keywords/new-modifier.md) 和 [override](../../../csharp/language-reference/keywords/override.md) 关键字指定方法的交互方式。 `override` 修饰符用于扩展基类 `virtual` 方法，而 `new` 修饰符用于隐藏可访问的基类方法   。 本主题中的示例阐释了这种差异。  
+在 C# 中，派生类中的方法可具有与基类中的方法相同的名称。 可使用 [new](../../language-reference/keywords/new-modifier.md) 和 [override](../../language-reference/keywords/override.md) 关键字指定方法的交互方式。 `override` 修饰符用于扩展基类 `virtual` 方法，而 `new` 修饰符用于隐藏可访问的基类方法   。 本主题中的示例阐释了这种差异。  
   
  在控制台应用程序中，声明以下两个类：`BaseClass` 和 `DerivedClass`。 `DerivedClass` 继承自 `BaseClass`。  
   
@@ -115,7 +115,7 @@ public new void Method2()
 }  
 ```  
   
- 再次运行该程序，确认输出未发生更改。 此外，确认不再显示警告。 通过使用 `new`，断言你知道它修饰的成员将隐藏从基类继承的成员。 有关通过继承隐藏名称的详细信息，请参阅 [new 修饰符](../../../csharp/language-reference/keywords/new-modifier.md)。  
+ 再次运行该程序，确认输出未发生更改。 此外，确认不再显示警告。 通过使用 `new`，断言你知道它修饰的成员将隐藏从基类继承的成员。 有关通过继承隐藏名称的详细信息，请参阅 [new 修饰符](../../language-reference/keywords/new-modifier.md)。  
   
  若要将此行为与使用 `override` 的效果进行对比，请将以下方法添加到 `DerivedClass`。 可在 `public` 前后添加 `override` 修饰符。  
   
@@ -545,8 +545,8 @@ namespace OverrideAndNew2
   
 ## <a name="see-also"></a>请参阅
 
-- [C# 编程指南](../../../csharp/programming-guide/index.md)
-- [类和结构](../../../csharp/programming-guide/classes-and-structs/index.md)
-- [使用 Override 和 New 关键字进行版本控制](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)
-- [base](../../../csharp/language-reference/keywords/base.md)
-- [abstract](../../../csharp/language-reference/keywords/abstract.md)
+- [C# 编程指南](../index.md)
+- [类和结构](./index.md)
+- [使用 Override 和 New 关键字进行版本控制](./versioning-with-the-override-and-new-keywords.md)
+- [base](../../language-reference/keywords/base.md)
+- [abstract](../../language-reference/keywords/abstract.md)

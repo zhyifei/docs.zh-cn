@@ -27,12 +27,12 @@ helpviewer_keywords:
 - + operator [C#]
 - subtraction operator [C#]
 - '- operator [C#]'
-ms.openlocfilehash: 02b27270c93550278308900382ae05091edb2543
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: ac04ba72ed0c25aa576bf10150fc80410890eda0
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661537"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69608371"
 ---
 # <a name="arithmetic-operators-c-reference"></a>算术运算符（C# 参考）
 
@@ -45,7 +45,7 @@ ms.locfileid: "67661537"
 
 ## <a name="increment-operator-"></a>增量运算符 ++
 
-一元增量运算符 `++` 按 1 递增其操作数。 操作数必须是变量、[属性](../../programming-guide/classes-and-structs/properties.md)访问或[索引器](../../../csharp/programming-guide/indexers/index.md)访问。
+一元增量运算符 `++` 按 1 递增其操作数。 操作数必须是变量、[属性](../../programming-guide/classes-and-structs/properties.md)访问或[索引器](../../programming-guide/indexers/index.md)访问。
 
 增量运算符以两种形式进行支持：后缀增量运算符 `x++` 和前缀增量运算符 `++x`。
 
@@ -63,7 +63,7 @@ ms.locfileid: "67661537"
 
 ## <a name="decrement-operator---"></a>减量运算符 --
 
-一元减量运算符 `--` 按 1 递减其操作数。 操作数必须是变量、[属性](../../programming-guide/classes-and-structs/properties.md)访问或[索引器](../../../csharp/programming-guide/indexers/index.md)访问。
+一元减量运算符 `--` 按 1 递减其操作数。 操作数必须是变量、[属性](../../programming-guide/classes-and-structs/properties.md)访问或[索引器](../../programming-guide/indexers/index.md)访问。
 
 减量运算符以两种形式进行支持：后缀减量运算符`x--` 和前缀减量运算符 `--x`。
 

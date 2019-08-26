@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /moduleassemblyname compiler option [C#]
 - .moduleassemblyname compiler option [C#]
 ms.assetid: d464d9b9-f18d-423b-95e9-66c7878fd53a
-ms.openlocfilehash: 9e4768b598f6046ffb7a0ac014d8594eac40309f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d57279128c0909ba3e62d55d596705cfde6be75c
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593059"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606662"
 ---
 # <a name="-moduleassemblyname-c-compiler-option"></a>-moduleassemblyname（C# 编译器选项）
 指定一个程序集，.netmodule 可以访问其非公共类型。  
@@ -29,7 +29,7 @@ ms.locfileid: "64593059"
  .netmodule 可以访问其非公共类型的程序集的名称。  
   
 ## <a name="remarks"></a>备注  
- 生成 .netmodule 时，应使用 -moduleassemblyname 并满足以下条件：  
+ 生成 .netmodule 时，应使用 -moduleassemblyname 并满足以下条件  ：  
   
 - .netmodule 需要具有访问现有程序集中非公共类型的权限。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "64593059"
   
 - 现有程序集已经获得有元程序集访问权限，可访问生成后的 .netmodule 所在的程序集。  
   
- 有关生成 .netmodule 的详细信息，请参阅 [-target: module（C# 编译器选项）](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md)。  
+ 有关生成 .netmodule 的详细信息，请参阅 [-target: module（C# 编译器选项）](./target-module-compiler-option.md)。  
   
  有关友元程序集的详细信息，请参阅[友元程序集](../../../standard/assembly/friend-assemblies.md)。  
   
@@ -66,7 +66,7 @@ class An_Internal_Class
 ```  
   
 ## <a name="example"></a>示例  
- 该例生成一个可访问程序集 moduleassemblyname_1.dll 中非公共类型的 .netmodule。 通过了解此 .netmodule 在生成后所在的程序集（名为 csman_an_assembly），可以指定 -moduleassemblyname，以便 .netmodule 在已经获得 csman_an_assembly 的友元程序集访问权限的程序集中访问非公共类型。  
+ 该例生成一个可访问程序集 moduleassemblyname_1.dll 中非公共类型的 .netmodule。 通过了解此 .netmodule 在生成后所在的程序集（名为 csman_an_assembly），可以指定 -moduleassemblyname，以便 .netmodule 在已经获得 csman_an_assembly 的友元程序集访问权限的程序集中访问非公共类型  。  
   
 ```csharp  
 // moduleassemblyname_2.cs  
@@ -93,9 +93,9 @@ class A {
 }  
 ```  
   
-已调用 An_Internal_Class.Test
+已调用 An_Internal_Class.Test 
 
 ## <a name="see-also"></a>请参阅
 
-- [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)
+- [C# 编译器选项](./index.md)
 - [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties)

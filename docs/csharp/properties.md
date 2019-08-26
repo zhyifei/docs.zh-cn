@@ -2,12 +2,12 @@
 title: 属性
 description: 了解 C# 属性，包括验证功能、计算值、迟缓计算及属性更改通知。
 ms.date: 04/25/2018
-ms.openlocfilehash: e8b6955da1f36673962339785b0bfb012343acf8
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 6638ae74516d7546882c8a380eed9b03ff3d18e9
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878281"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69587398"
 ---
 # <a name="properties"></a>属性
 
@@ -38,7 +38,7 @@ ms.locfileid: "65878281"
 
 [!code-csharp[Person class with properties and backing field](../../samples/snippets/csharp/properties/Person.cs#4)]
 
-属性实现是单个表达式时，可为 getter 或 setter 使用 expression-bodied 成员：
+属性实现是单个表达式时，可为 getter 或 setter 使用 expression-bodied 成员  ：
 
 [!code-csharp[Person class with properties and expression bodied getters and setters](../../samples/snippets/csharp/properties/Person.cs#5)]
 
@@ -104,17 +104,17 @@ public class Measurements
 
 [!code-csharp[A computed property](../../samples/snippets/csharp/properties/Person.cs#10)]
 
-上面的示例使用[字符串内插](../csharp/language-reference/tokens/interpolated.md)功能来创建全名的格式化字符串。
+上面的示例使用[字符串内插](./language-reference/tokens/interpolated.md)功能来创建全名的格式化字符串。
 
-也可以使用 expression-bodied 成员，以更简洁的方式来创建 `FullName` 计算属性：
+也可以使用 expression-bodied 成员，以更简洁的方式来创建 `FullName` 计算属性  ：
 
 [!code-csharp[A computed property using an expression bodied member](../../samples/snippets/csharp/properties/Person.cs#11)]
 
-expression-bodied 成员使用 lambda 表达式语法来定义包含单个表达式的方法。 在这里，该表达式返回 person 对象的全名。
+expression-bodied 成员使用 lambda 表达式语法来定义包含单个表达式的方法   。 在这里，该表达式返回 person 对象的全名。
 
 ### <a name="cached-evaluated-properties"></a>缓存的计算属性
 
-可以将计算属性和存储的概念混合起来，创建“缓存的计算属性”。  例如，可以更新 `FullName` 属性，以便仅在第一次访问该属性时进行字符串格式设置：
+可以将计算属性和存储的概念混合起来，创建“缓存的计算属性”  。  例如，可以更新 `FullName` 属性，以便仅在第一次访问该属性时进行字符串格式设置：
 
 [!code-csharp[Caching the value of a computed property](../../samples/snippets/csharp/properties/Person.cs#12)]
 

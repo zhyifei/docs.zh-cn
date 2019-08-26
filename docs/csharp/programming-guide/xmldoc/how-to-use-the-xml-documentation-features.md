@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XML documentation [C#]
 - C# language, XML documentation features
 ms.assetid: 8f33917b-9577-4c9a-818a-640dbbb0b399
-ms.openlocfilehash: 047207e495f542108d6f41247b25009d9c9bb909
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 259f0d5e7e1a67a273bccc7847c38a4d694c69ba
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634788"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69588103"
 ---
 # <a name="how-to-use-the-xml-documentation-features"></a>如何：使用 XML 文档功能
 
@@ -113,7 +113,7 @@ ms.locfileid: "65634788"
 
 `csc XMLsample.cs /doc:XMLsample.xml`
 
-此命令创建 XML 文件 XMLsample.xml，可在浏览器中或使用 TYPE 命令查看该文件。
+此命令创建 XML 文件 XMLsample.xml，可在浏览器中或使用 TYPE 命令查看该文件  。
 
 ## <a name="robust-programming"></a>可靠编程
 
@@ -134,6 +134,6 @@ XML 文档以 /// 开头。 创建新项目时，向导会放置一些以 /// �
 
 ## <a name="see-also"></a>请参阅
 
-- [C# 编程指南](../../../csharp/programming-guide/index.md)
-- [/doc（C# 编译器选项）](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)
-- [XML 文档注释](../../../csharp/programming-guide/xmldoc/index.md)
+- [C# 编程指南](../index.md)
+- [/doc（C# 编译器选项）](../../language-reference/compiler-options/doc-compiler-option.md)
+- [XML 文档注释](./index.md)

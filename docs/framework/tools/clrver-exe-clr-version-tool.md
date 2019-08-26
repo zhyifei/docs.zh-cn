@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: cbc2ee86-bdc8-4a65-a8f1-ba23bce3a699
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 28ac90eadcc7a13fe946aabf17973ebc602c9d4a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: c627b128430342c25396d01f23f2eea7956d5e3d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59084591"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933757"
 ---
 # <a name="clrverexe-clr-version-tool"></a>Clrver.exe（CLR 版本工具）
 CLR 版本工具 (Clrver.exe) 报告计算机上的公共语言运行时 (CLR) 的所有已安装版本。  
@@ -32,14 +32,14 @@ clrver [option]
 |选项|说明|  
 |------------|-----------------|  
 |`-all`|显示正在使用的 CLR 的计算机上的所有进程。|  
-|pid|显示具有指定的进程 ID (PID) 的进程所使用的 CLR 版本。|  
+|pid |显示具有指定的进程 ID (PID) 的进程所使用的 CLR 版本。|  
 |`-?`|显示该工具的命令语法和选项。|  
   
 ## <a name="remarks"></a>备注  
  如果你未使用任何选项调用 Clrver.exe，则它将显示所有已安装的 CLR 版本。 如果你指定了另一个用户的 PID，则你必须具有管理权限才能获取版本信息。  
   
 > [!NOTE]
->  在 Windows Vista 或更高版本中，用户帐户控制 (UAC) 决定用户的特权。 如果您是内置的 Administrators 组的成员，将为您分配两个运行时访问令牌：一个标准用户访问令牌和一个管理员访问令牌。 默认情况下，您拥有标准用户角色。 要执行需要管理权限的代码，首先必须将你的特权从标准用户提升至管理员。 你可以通过以下方式执行此操作：在启动命令提示符时，右键单击命令提示符图标并指示你希望以管理员身份运行。  
+> 在 Windows Vista 或更高版本中，用户帐户控制 (UAC) 决定用户的特权。 如果您是内置的 Administrators 组的成员，将为您分配两个运行时访问令牌：一个标准用户访问令牌和一个管理员访问令牌。 默认情况下，您拥有标准用户角色。 要执行需要管理权限的代码，首先必须将你的特权从标准用户提升至管理员。 你可以通过以下方式执行此操作：在启动命令提示符时，右键单击命令提示符图标并指示你希望以管理员身份运行。  
   
  尝试确定 SYSTEM、LOCAL SERVICE 和 NETWORK SERVICE 过程的 CLR 版本会导致出现一条消息，指示该 PID 不存在。  
   

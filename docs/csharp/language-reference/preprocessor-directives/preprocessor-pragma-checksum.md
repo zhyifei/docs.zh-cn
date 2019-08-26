@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - '#pragma checksum [C#]'
 ms.assetid: 3673e4ca-6098-4ec1-890f-8fceb2a794a2
-ms.openlocfilehash: 36e5602f0a0b872a4aa6cdac64b49b1d1c708795
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 4103b6262fc5085c1204f423a36c9c5c2053b497
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877523"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69605652"
 ---
 # <a name="pragma-checksum-c-reference"></a>#pragma checksum（C# 参考）
 生成源文件的校验和以帮助调试 ASP.NET 页面。  
@@ -56,6 +56,6 @@ class TestClass
   
 ## <a name="see-also"></a>请参阅
 
-- [C# 参考](../../../csharp/language-reference/index.md)
-- [C# 编程指南](../../../csharp/programming-guide/index.md)
-- [C# 预处理器指令](../../../csharp/language-reference/preprocessor-directives/index.md)
+- [C# 参考](../index.md)
+- [C# 编程指南](../../programming-guide/index.md)
+- [C# 预处理器指令](./index.md)

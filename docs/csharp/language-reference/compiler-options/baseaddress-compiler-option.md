@@ -8,15 +8,15 @@ helpviewer_keywords:
 - -baseaddress compiler option [C#]
 - /baseaddress compiler option [C#]
 ms.assetid: ce13c965-dfe4-4433-94f5-63b476e3a608
-ms.openlocfilehash: aa76e3d1d30e394f28b5112e45fc72229e9a78fc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: e96ab3ece6edc36c913a8efc0097ff9c4a1e3c22
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295778"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69607027"
 ---
 # <a name="-baseaddress-c-compiler-options"></a>-baseaddress（C# 编译器选项）
-通过 -baseaddress 选项可指定加载 DLL 的首选基址。 若要深入了解何时且为何要使用此选项，请参阅 [Larry Osterman 的网络日志](https://blogs.msdn.microsoft.com/larryosterman/2004/07/06/why-should-i-even-bother-to-use-dlls-in-my-system/)。  
+通过 -baseaddress 选项可指定加载 DLL 的首选基址  。 若要深入了解何时且为何要使用此选项，请参阅 [Larry Osterman 的网络日志](https://blogs.msdn.microsoft.com/larryosterman/2004/07/06/why-should-i-even-bother-to-use-dlls-in-my-system/)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,18 +37,18 @@ ms.locfileid: "59295778"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项  
   
-1. 打开项目的“属性”页。  
+1. 打开项目的“属性”  页。  
   
-2. 单击“生成”属性页。  
+2. 单击“生成”  属性页。  
   
-3. 单击“高级”按钮。  
+3. 单击“高级”  按钮。  
   
-4. 修改“DLL 基址”属性。  
+4. 修改“DLL 基址”  属性。  
   
      若要以编程方式设置此编译器选项，请参阅 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.BaseAddress%2A>。  
   
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Diagnostics.ProcessModule.BaseAddress%2A?displayProperty=nameWithType>
-- [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)
+- [C# 编译器选项](./index.md)
 - [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties)

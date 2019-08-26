@@ -6,12 +6,12 @@ helpviewer_keywords:
 - walkthroughs [Visual Studio], Visual C#
 - Visual C#, walkthroughs
 ms.assetid: 2d07b972-ef69-4676-9aef-e1784728e1ff
-ms.openlocfilehash: 77ecab9738afd7ff5cfd4f8ef0cd0e49a302eb27
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 0c666d62c21d3e4f7b1041c1d5360ac43d2cf03f
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025412"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69587068"
 ---
 # <a name="c-walkthroughs"></a>C# 演练
 演练提供有关常见方案的分步说明，这使它们成为了解产品或特定功能部分的良好开端。  
@@ -21,33 +21,33 @@ ms.locfileid: "67025412"
 ## <a name="in-this-section"></a>本节内容  
 
  [使用 Async 和 Await 访问 Web](./programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
- 演示如何使用 [async](../csharp/language-reference/keywords/async.md) 和 [await](../csharp/language-reference/keywords/await.md) 创建异步解决方案。  
+ 演示如何使用 [async](./language-reference/keywords/async.md) 和 [await](./language-reference/keywords/await.md) 创建异步解决方案。  
   
  [用 C# 或 Visual Basic 创建一个 Windows 运行时组件，然后从 JavaScript 中调用该组件](/windows/uwp/winrt-components/walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript)  
  演示如何创建 Windows 运行时类型，将其打包到 Windows 运行时组件中，然后从使用 JavaScript 为 Windows 生成的 [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] 应用调用该组件。  
   
- [Office 编程（C# 和 Visual Basic）](../csharp/programming-guide/interop/walkthrough-office-programming.md)  
+ [Office 编程（C# 和 Visual Basic）](./programming-guide/interop/walkthrough-office-programming.md)  
  演示如何通过使用 C# 和 Visual Basic 创建 Excel 工作薄和 Word 文档。  
   
- [创建并使用动态对象（C# 和 Visual Basic）](../csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)  
+ [创建并使用动态对象（C# 和 Visual Basic）](./programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)  
  演示如何创建动态公开文本文件内容的自定义对象、如何创建使用 `IronPython` 库的项目。  
    
- [使用 Visual C# 创作复合控件](../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp.md)  
+ [使用 Visual C# 创作复合控件](../framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp.md)  
  演示如何创建简单复合控件以及通过继承扩展其功能。  
   
- [创建利用 Visual Studio 设计时功能的 Windows 窗体控件](../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md)  
+ [创建利用 Visual Studio 设计时功能的 Windows 窗体控件](../framework/winforms/controls/creating-a-wf-control-design-time-features.md)  
  演示如何为自定义控件创建自定义设计器。  
   
- [使用 Visual C# 从 Windows 窗体控件继承](../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)  
+ [使用 Visual C# 从 Windows 窗体控件继承](../framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)  
  演示如何创建简单的集成按钮控件。 此按钮从标准 Windows 窗体按钮集成功能并公开自定义成员。  
   
- [在设计时调试自定义 Windows 窗体控件](../../docs/framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)  
+ [在设计时调试自定义 Windows 窗体控件](../framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)  
  描述如何调试自定义控件的设计时行为。
 
- [使用 Windows 窗体控件上的智能标记执行常规任务](../../docs/framework/winforms/controls/performing-common-tasks-using-smart-tags-on-wf-controls.md)  
+ [使用 Windows 窗体控件上的智能标记执行常规任务](../framework/winforms/controls/performing-common-tasks-using-smart-tags-on-wf-controls.md)  
  演示通常执行的部分任务，如在 `TabControl` 上添加或删除选项卡、将控件停靠在其父级，以及更改 `SplitContainer` 控件的方向。  
   
- [用 C# 编写查询 (LINQ)](../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
+ [用 C# 编写查询 (LINQ)](./programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
  演示用于编写 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询表达式的 C# 语言功能。  
   
  [操作数据 (C#) (LINQ to SQL)](../framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)  
@@ -71,5 +71,5 @@ ms.locfileid: "67025412"
   
 ## <a name="see-also"></a>请参阅
 
-- [C# 编程指南](../csharp/programming-guide/index.md)
+- [C# 编程指南](./programming-guide/index.md)
 - [Visual Studio 示例](/visualstudio/ide/visual-studio-samples)

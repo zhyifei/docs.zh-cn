@@ -8,15 +8,15 @@ f1_keywords:
 helpviewer_keywords:
 - internal keyword [C#]
 ms.assetid: 6ee0785c-d7c8-49b8-bb72-0a4dfbcb6461
-ms.openlocfilehash: 9cfbea03a305dd17c07f549901bc91be0e05b792
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 7d97b7b05645b02a31af848c97758c7a1f6423b9
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661173"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69602082"
 ---
 # <a name="internal-c-reference"></a>internal（C# 参考）
-`internal` 关键字是类型和类型成员的[访问修饰符](../../../csharp/language-reference/keywords/access-modifiers.md)。 
+`internal` 关键字是类型和类型成员的[访问修饰符](./access-modifiers.md)。 
   
  > 本页涵盖 `internal` 访问。 `internal` 关键字也是 [`protected internal`](./protected-internal.md) 访问修饰符的一部分。
   
@@ -30,7 +30,7 @@ public class BaseClass
 }  
 ```  
 
- 有关 `internal` 和其他访问修饰符的比较，请参阅[可访问性级别](../../../csharp/language-reference/keywords/accessibility-levels.md)和[访问修饰符](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)。  
+ 有关 `internal` 和其他访问修饰符的比较，请参阅[可访问性级别](./accessibility-levels.md)和[访问修饰符](../../programming-guide/classes-and-structs/access-modifiers.md)。  
   
  有关程序集的详细信息，请参阅 [.NET 中的程序集](../../../standard/assembly/index.md)。  
   
@@ -93,12 +93,12 @@ public class TestAccess
   
 ## <a name="see-also"></a>请参阅
 
-- [C# 参考](../../../csharp/language-reference/index.md)
-- [C# 编程指南](../../../csharp/programming-guide/index.md)
-- [C# 关键字](../../../csharp/language-reference/keywords/index.md)
-- [访问修饰符](../../../csharp/language-reference/keywords/access-modifiers.md)
-- [可访问性级别](../../../csharp/language-reference/keywords/accessibility-levels.md)
-- [修饰符](../../../csharp/language-reference/keywords/modifiers.md)
-- [public](../../../csharp/language-reference/keywords/public.md)
-- [专用](../../../csharp/language-reference/keywords/private.md)
-- [受保护](../../../csharp/language-reference/keywords/protected.md)
+- [C# 参考](../index.md)
+- [C# 编程指南](../../programming-guide/index.md)
+- [C# 关键字](./index.md)
+- [访问修饰符](./access-modifiers.md)
+- [可访问性级别](./accessibility-levels.md)
+- [修饰符](./modifiers.md)
+- [public](./public.md)
+- [专用](./private.md)
+- [受保护](./protected.md)

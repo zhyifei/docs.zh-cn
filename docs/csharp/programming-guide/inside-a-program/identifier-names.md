@@ -2,16 +2,16 @@
 title: 标识符名称
 description: 了解 C# 编程语言中有效标识符名称的规则。
 ms.date: 08/21/2018
-ms.openlocfilehash: 2147b3846d4ba6d5471b81448489c6d716e3cd61
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f8a27ddae0437ed037b59f76d60dc7e420ddc2eb
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54606947"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69589354"
 ---
 # <a name="identifier-names"></a>标识符名称
 
-标识符是分配给类型（类、接口、结构、委托或枚举）、成员、变量或命名空间的名称。 有效标识符必须遵循以下规则：
+标识符是分配给类型（类、接口、结构、委托或枚举）、成员、变量或命名空间的名称  。 有效标识符必须遵循以下规则：
 
 - 标识符必须以字母或 `_` 开头。
 - 标识符可以包含 Unicode 字母字符、十进制数字字符、Unicode 连接字符、Unicode 组合字符或 Unicode 格式字符。 有关 Unicode 类别的详细信息，请参阅 [Unicode 类别数据库](https://www.unicode.org/reports/tr44/)。
@@ -35,7 +35,7 @@ ms.locfileid: "54606947"
 ## <a name="see-also"></a>请参阅
 
 - [C# 编程指南](../index.md)
-- [在 C# 程序内部](../inside-a-program/index.md)
+- [在 C# 程序内部](./index.md)
 - [C# 参考](../../language-reference/index.md)
 - [类](../classes-and-structs/classes.md)
 - [结构](../classes-and-structs/structs.md)

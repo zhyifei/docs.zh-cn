@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: db27f6b2-f1ec-499e-be3a-7eecf95ca42b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e476e92ba4a9366a8a380c53d7dcd0d4dddb16e4
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 38a6b27ea0ba8b9d9e2af883db1fc3350d60494a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69567305"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912495"
 ---
 # <a name="ildasmexe-il-disassembler"></a>Ildasm.exe（IL 反汇编程序）
 
@@ -53,7 +53,7 @@ ildasm [options] [PEfilename] [options]
 |/linenum |包含对原始源行的引用。|
 |/nobar |禁止显示反汇编进度指示器弹出窗口。|
 |/noca |禁止显示自定义特性的输出。|
-|/project |以托管代码的方式显示元数据，而不是以本机 Windows 运行时的方式显示。 如果 `PEfilename` 不是 Windows 元数据 (.winmd) 文件，此选项将不起任何作用  。 请参阅 [Windows 应用商店应用和 Windows 运行时的 .NET Framework 支持](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)。|
+|/project |以托管代码的方式显示元数据，而不是以本机 Windows 运行时的方式显示。 如果 `PEfilename` 不是 Windows 元数据 (.winmd) 文件，此选项将不起任何作用  。 请参阅 [Windows 应用商店应用和 Windows 运行时的 .NET Framework 支持](../../standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)。|
 |/pubonly |仅反汇编公共类型和公共成员。 等效于 /visibility:PUB  。|
 |/quoteallnames |在单引号中包含所有名称。|
 |/raweh |以原始格式显示异常处理子句。|
@@ -188,5 +188,5 @@ ildasm /item:"MyClass::MyMethod(class [mscorlib]System.AppDomain(class [mscorlib
 
 - [工具](../../../docs/framework/tools/index.md)
 - [Ilasm.exe（IL 汇编程序）](../../../docs/framework/tools/ilasm-exe-il-assembler.md)
-- [托管执行过程](../../../docs/standard/managed-execution-process.md)
+- [托管执行过程](../../standard/managed-execution-process.md)
 - [命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

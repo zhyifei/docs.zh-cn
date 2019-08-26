@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 9f436bca-1b96-494b-a6d2-e102c7551752
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b9a94e0db3598cb5e2d00298144fa4826035a8e9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 27c19c82270b9d67b6cd308386aa93c6112d59ee
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674136"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69909687"
 ---
 # <a name="remove-xml-data-using-xpathnavigator"></a>使用 XPathNavigator 移除 XML 数据
 <xref:System.Xml.XPath.XPathNavigator> 类提供一组方法用于移除 XML 文档中的节点和值。 要使用这些方法，<xref:System.Xml.XPath.XPathNavigator> 对象必须可编辑，即其 <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> 属性必须为 `true`。  
@@ -33,7 +33,7 @@ ms.locfileid: "54674136"
  删除操作不会影响位于所删除节点上的任何 <xref:System.Xml.XPath.XPathNavigator> 对象的位置。 这些 <xref:System.Xml.XPath.XPathNavigator> 对象可以在已删除的子树内移动，在这方面看是有效的，但是不能使用 <xref:System.Xml.XPath.XPathNavigator> 类常规的节点集浏览方法移至主节点树。  
   
 > [!NOTE]
->  <xref:System.Xml.XPath.XPathNavigator.MoveTo%2A> 类的 <xref:System.Xml.XPath.XPathNavigator> 方法可以用于将这些 <xref:System.Xml.XPath.XPathNavigator> 对象移回主节点树，或从主节点树移至已删除的子树。  
+> <xref:System.Xml.XPath.XPathNavigator.MoveTo%2A> 类的 <xref:System.Xml.XPath.XPathNavigator> 方法可以用于将这些 <xref:System.Xml.XPath.XPathNavigator> 对象移回主节点树，或从主节点树移至已删除的子树。  
   
  在以下示例中，`price` 文件的第一个 `book` 元素的 `contosoBooks.xml` 元素使用 <xref:System.Xml.XPath.XPathNavigator.DeleteSelf%2A> 方法删除。 在 <xref:System.Xml.XPath.XPathNavigator> 元素删除之后，`price` 对象的位置位于父级的 `book` 元素上。  
   

@@ -2,12 +2,12 @@
 title: 如何：修改 Office Open XML 文档 (C#)
 ms.date: 07/20/2015
 ms.assetid: 467d489c-2b1b-453b-a757-8ac180e82a96
-ms.openlocfilehash: 3a6edd31ff2a22e32c979e1a6a548b212406cbf5
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: ac46dc1b0051613457b7306a9fe0e8d419afe35f
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66486645"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69593137"
 ---
 # <a name="how-to-modify-an-office-open-xml-document-c"></a>如何：修改 Office Open XML 文档 (C#)
 本主题显演示一个打开、修改和保存 Office Open XML 文档的示例。  
@@ -141,7 +141,7 @@ class Program
   
  如果在运行此程序之后打开 `SampleDoc.docx`，则可以看到此程序已将文档中的第一个段落转换为大写。  
   
- 当针对[创建 Source Office Open XML 文档 (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md) 中说明的示例 Open XML 文档运行时，此示例生成以下输出：  
+ 当针对[创建 Source Office Open XML 文档 (C#)](./creating-the-source-office-open-xml-document.md) 中说明的示例 Open XML 文档运行时，此示例生成以下输出：  
   
 ```  
 New first paragraph: >PARSING WORDPROCESSINGML WITH LINQ TO XML<  

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - types [C#], built-in
 - built-in C# types
 ms.assetid: 54f901f2-bf2f-472c-ae8d-73e8ecfc57fe
-ms.openlocfilehash: 61701cc38c38b5e7235fbadb6d2a86e0e66b09ac
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 1f7248a23d53fb90202595defbf70e231bd1d5d3
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69566362"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69605978"
 ---
 # <a name="built-in-types-table-c-reference"></a>内置类型表（C# 参考）
 
@@ -63,8 +63,8 @@ Console.WriteLine(doubleType.FullName);
 
 ## <a name="see-also"></a>请参阅
 
-- [C# 参考](../../../csharp/language-reference/index.md)
-- [C# 编程指南](../../../csharp/programming-guide/index.md)
+- [C# 参考](../index.md)
+- [C# 编程指南](../../programming-guide/index.md)
 - [C# 关键字](index.md)
 - [值类型](value-types.md)
 - [引用类型](reference-types.md)

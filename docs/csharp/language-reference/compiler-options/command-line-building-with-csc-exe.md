@@ -5,19 +5,19 @@ helpviewer_keywords:
 - builds [C#]
 - command line [C#]
 ms.assetid: 66e70056-dd20-453c-a9b3-507e0478b015
-ms.openlocfilehash: 0ebc4fa3029e16c5ee89da7d9af8b89924b2c4dc
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 54306c79bc2856996925756ee4261fbe67692aea
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833359"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606973"
 ---
 # <a name="command-line-build-with-cscexe"></a>使用 csc.exe 实现命令行生成
 通过在命令提示符处键入 C# 编译器的可执行文件名称 (csc.exe  )，可调用该编译器。
 
 如果使用“Visual Studio 开发人员命令提示”  窗口，系统将设置所有必需的环境变量。 有关如何访问此工具的信息，请参阅 [Visual Studio 开发人员命令提示](../../../framework/tools/developer-command-prompt-for-vs.md)主题。 
 
-如果使用标准命令提示符窗口，则必须调整路径，然后才能从计算机的任意子目录调用 csc.exe  。 还必须运行 vsvars32.bat  来设置适当的环境变量以支持命令行生成操作。 有关 vsvars32.bat  的详细信息，包括它的查找和运行说明，请参阅[如何：设置 Visual Studio 命令行的环境变量](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)。
+如果使用标准命令提示符窗口，则必须调整路径，然后才能从计算机的任意子目录调用 csc.exe  。 还必须运行 vsvars32.bat  来设置适当的环境变量以支持命令行生成操作。 有关 vsvars32.bat  的详细信息，包括它的查找和运行说明，请参阅[如何：设置 Visual Studio 命令行的环境变量](./how-to-set-environment-variables-for-the-visual-studio-command-line.md)。
 
 如果你使用的计算机只安装有 Windows 软件开发工具包 (SDK)，则可以在“SDK 命令提示符”  处使用 C# 编译器，该窗口可通过“Microsoft .NET Framework SDK”  菜单选项打开。
 
@@ -97,10 +97,10 @@ csc -target:library -out:Something.xyz *.cs
 
 ## <a name="see-also"></a>请参阅
 
-- [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)
-- [按字母顺序列出的 C# 编译器选项](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)
-- [按类别列出的 C# 编译器选项](../../../csharp/language-reference/compiler-options/listed-by-category.md)
-- [Main() 和命令行参数](../../../csharp/programming-guide/main-and-command-args/index.md)
-- [命令行参数](../../../csharp/programming-guide/main-and-command-args/command-line-arguments.md)
-- [如何：显示命令行参数](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)
-- [Main() 返回值](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)
+- [C# 编译器选项](./index.md)
+- [按字母顺序列出的 C# 编译器选项](./listed-alphabetically.md)
+- [按类别列出的 C# 编译器选项](./listed-by-category.md)
+- [Main() 和命令行参数](../../programming-guide/main-and-command-args/index.md)
+- [命令行参数](../../programming-guide/main-and-command-args/command-line-arguments.md)
+- [如何：显示命令行参数](../../programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)
+- [Main() 返回值](../../programming-guide/main-and-command-args/main-return-values.md)

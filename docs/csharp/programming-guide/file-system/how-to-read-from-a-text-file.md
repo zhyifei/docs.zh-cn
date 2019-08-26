@@ -10,20 +10,20 @@ helpviewer_keywords:
 - reading data, text files
 - text files, reading
 ms.assetid: 92246c5b-e819-4eea-9370-1a9460e12de3
-ms.openlocfilehash: 236e730eaae0bc73c715e9b1c2c71d6c870d78e3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2b98f24da7f13ae752f248eb8f26c75c1d47a824
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64608539"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923955"
 ---
 # <a name="how-to-read-from-a-text-file-c-programming-guide"></a>如何：读取文本文件中的内容（C# 编程指南）
 此示例通过使用 <xref:System.IO.File?displayProperty=nameWithType> 类的 <xref:System.IO.File.ReadAllText%2A> 和 <xref:System.IO.File.ReadAllLines%2A> 静态方法来确定文本文件的内容。  
   
- 有关使用 <xref:System.IO.StreamReader> 的示例，请参阅[操作说明：一次一行地读取文本文件](../../../csharp/programming-guide/file-system/how-to-read-a-text-file-one-line-at-a-time.md)。  
+ 有关使用 <xref:System.IO.StreamReader> 的示例，请参阅[操作说明：一次一行地读取文本文件](./how-to-read-a-text-file-one-line-at-a-time.md)。  
   
 > [!NOTE]
->  此示例所用的文件是在主题[操作说明：写入到文本文件](../../../csharp/programming-guide/file-system/how-to-write-to-a-text-file.md)中创建。  
+> 此示例所用的文件是在主题[操作说明：写入到文本文件](./how-to-write-to-a-text-file.md)中创建。  
   
 ## <a name="example"></a>示例  
  [!code-csharp[csFilesandFolders#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csFilesAndFolders/CS/FileIteration.cs#4)]  
@@ -31,7 +31,7 @@ ms.locfileid: "64608539"
 ## <a name="compiling-the-code"></a>编译代码  
  将代码复制并粘贴到 C# 控制台应用程序。  
   
- 如果不使用[操作说明：写入到文本文件](../../../csharp/programming-guide/file-system/how-to-write-to-a-text-file.md)中的文本文件，请将 `ReadAllText` 和 `ReadAllLines` 的参数替换为计算机上的适当路径和文件名。  
+ 如果不使用[操作说明：写入到文本文件](./how-to-write-to-a-text-file.md)中的文本文件，请将 `ReadAllText` 和 `ReadAllLines` 的参数替换为计算机上的适当路径和文件名。  
   
 ## <a name="robust-programming"></a>可靠编程  
  以下情况可能会导致异常：  
@@ -44,5 +44,5 @@ ms.locfileid: "64608539"
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.IO?displayProperty=nameWithType>
-- [C# 编程指南](../../../csharp/programming-guide/index.md)
-- [文件系统和注册表（C# 编程指南）](../../../csharp/programming-guide/file-system/index.md)
+- [C# 编程指南](../index.md)
+- [文件系统和注册表（C# 编程指南）](./index.md)

@@ -2,12 +2,12 @@
 title: 泛型接口中的变体 (C#)
 ms.date: 06/06/2019
 ms.assetid: 4828a8f9-48c0-4128-9749-7fcd6bf19a06
-ms.openlocfilehash: 9cbbea35003e86e05d618f5e6000ba2788359cb0
-ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
+ms.openlocfilehash: 12a8b58983256be0ca2b56ea6ed09e724e0814c8
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67539498"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595158"
 ---
 # <a name="variance-in-generic-interfaces-c"></a>泛型接口中的变体 (C#)
 
@@ -76,7 +76,7 @@ class Program
 }
 ```
 
-有关更多示例，请参阅[在泛型集合的接口中使用变体 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-interfaces-for-generic-collections.md)。
+有关更多示例，请参阅[在泛型集合的接口中使用变体 (C#)](./using-variance-in-interfaces-for-generic-collections.md)。
 
 只有引用类型才支持使用泛型接口中的变体。 值类型不支持变体。 例如，无法将 `IEnumerable<int>` 隐式转换为 `IEnumerable<object>`，因为整数由值类型表示。
 
@@ -100,7 +100,7 @@ IEnumerable<Object> listObjects = new List<String>();
 
 ## <a name="see-also"></a>请参阅
 
-- [在泛型集合的接口中使用变体 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-interfaces-for-generic-collections.md)
-- [创建变体泛型接口 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/creating-variant-generic-interfaces.md)
+- [在泛型集合的接口中使用变体 (C#)](./using-variance-in-interfaces-for-generic-collections.md)
+- [创建变体泛型接口 (C#)](./creating-variant-generic-interfaces.md)
 - [泛型接口](../../../../standard/generics/interfaces.md)
-- [委托中的变体 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)
+- [委托中的变体 (C#)](./variance-in-delegates.md)

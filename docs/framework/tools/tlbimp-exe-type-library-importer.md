@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ec0a8d63-11b3-4acd-b398-da1e37e97382
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4f9741944dcf8a5fcc05c169a1c3c3f679902474
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: f9c34b237655eb49b6a44c366586b3cabb5a684f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67859683"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937975"
 ---
 # <a name="tlbimpexe-type-library-importer"></a>Tlbimp.exe（类型库导入程序）
 类型库导入程序将 COM 类型库中的类型定义转换为公共语言运行时程序集中的等效定义。 Tlbimp.exe 的输出是一个二进制文件（程序集），其中包含在原始类型库中定义的类型的运行时元数据。 可以使用 [Ildasm.exe](ildasm-exe-il-disassembler.md) 这样的工具检查此文件。  
@@ -71,7 +71,7 @@ tlbimp tlbFile [options]
 |**/?**|显示该工具的命令语法和选项。|  
   
 > [!NOTE]
->  Tlbimp.exe 的命令行选项不区分大小写，并可以按任意顺序提供。 只需指定足够的选项来唯一标识它。 因此， **/n** 等效于 **/nologo**，而 **/ou:** *outfile.dll* 等效于 **/out:** *outfile.dll*。  
+> Tlbimp.exe 的命令行选项不区分大小写，并可以按任意顺序提供。 只需指定足够的选项来唯一标识它。 因此， **/n** 等效于 **/nologo**，而 **/ou:** *outfile.dll* 等效于 **/out:** *outfile.dll*。  
   
 ## <a name="remarks"></a>备注  
  Tlbimp.exe 同时执行整个类型库的转换。 不能使用该工具为在单个类型库中定义的类型的子集生成类型信息。  

@@ -6,15 +6,15 @@ helpviewer_keywords:
 - static constructors [C#]
 - constructors [C#], static
 ms.assetid: 151ec95e-3c4d-4ed7-885d-95b7a3be2e7d
-ms.openlocfilehash: f8924f5a1e93a616b114506f383242fd2fde615c
-ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
+ms.openlocfilehash: 6d1a39008ebb965649104c2e74241780731911bb
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68433576"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596032"
 ---
 # <a name="static-constructors-c-programming-guide"></a>静态构造函数（C# 编程指南）
-静态构造函数用于初始化任何[静态](../../../csharp/language-reference/keywords/static.md)数据，或执行仅需执行一次的特定操作。 将在创建第一个实例或引用任何静态成员之前自动调用静态构造函数。  
+静态构造函数用于初始化任何[静态](../../language-reference/keywords/static.md)数据，或执行仅需执行一次的特定操作。 将在创建第一个实例或引用任何静态成员之前自动调用静态构造函数。  
   
  [!code-csharp[csProgGuideObjects#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#14)]  
  
@@ -31,9 +31,9 @@ ms.locfileid: "68433576"
 
 - 用户无法控制在程序中执行静态构造函数的时间。
   
-- 在创建第一个实例或引用任何静态成员之前，将自动调用静态构造函数以初始化[类](../../../csharp/language-reference/keywords/class.md)。 静态构造函数应在实例构造函数之前运行。 请注意，分配给事件或委托的静态方法被调用（而不是分配）时，将调用类型的静态构造函数。 如果静态构造函数类中存在静态字段变量初始值设定项，它们将在执行静态构造函数之前立即以在类声明中显示的文本顺序执行。
+- 在创建第一个实例或引用任何静态成员之前，将自动调用静态构造函数以初始化[类](../../language-reference/keywords/class.md)。 静态构造函数应在实例构造函数之前运行。 请注意，分配给事件或委托的静态方法被调用（而不是分配）时，将调用类型的静态构造函数。 如果静态构造函数类中存在静态字段变量初始值设定项，它们将在执行静态构造函数之前立即以在类声明中显示的文本顺序执行。
 
-- 如果未提供静态构造函数来初始化静态字段，会将所有静态字段初始化为其默认值，如[默认值表](../../../csharp/language-reference/keywords/default-values-table.md)中所列。 
+- 如果未提供静态构造函数来初始化静态字段，会将所有静态字段初始化为其默认值，如[默认值表](../../language-reference/keywords/default-values-table.md)中所列。 
   
 - 如果静态构造函数引发异常，运行时将不会再次调用该函数，并且类型在程序运行所在的应用程序域的生存期内将保持未初始化。 大多数情况下，当静态构造函数无法实例化一个类型时，或者当静态构造函数中发生未经处理的异常时，将引发 <xref:System.TypeInitializationException> 异常。 对于未在源代码中显式定义的隐式静态构造函数，故障排除可能需要检查中间语言 (IL) 代码。
 
@@ -61,10 +61,10 @@ ms.locfileid: "68433576"
   
 ## <a name="see-also"></a>请参阅
 
-- [C# 编程指南](../../../csharp/programming-guide/index.md)
-- [类和结构](../../../csharp/programming-guide/classes-and-structs/index.md)
-- [构造函数](../../../csharp/programming-guide/classes-and-structs/constructors.md)
-- [静态类和静态类成员](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)
-- [终结器](../../../csharp/programming-guide/classes-and-structs/destructors.md)
+- [C# 编程指南](../index.md)
+- [类和结构](./index.md)
+- [构造函数](./constructors.md)
+- [静态类和静态类成员](./static-classes-and-static-class-members.md)
+- [终结器](./destructors.md)
 - [构造函数设计准则](../../../standard/design-guidelines/constructor.md#type-constructor-guidelines)
 - [安全警告 - CA2121：静态构造函数应为私有](https://docs.microsoft.com/visualstudio/code-quality/ca2121-static-constructors-should-be-private)

@@ -2,15 +2,15 @@
 title: 联接运算 (C#)
 ms.date: 07/20/2015
 ms.assetid: 5105e0da-1267-4c00-837a-f0e9602279b8
-ms.openlocfilehash: db42874becaf9760b7060d7f306cc20f950f143a
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 95661e2d0d7f4f0e75c1fa1b10e1f322923189b1
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411455"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69592077"
 ---
 # <a name="join-operations-c"></a>联接运算 (C#)
-联接两个数据源就是将一个数据源中的对象与另一个数据源中具有相同公共属性的对象相关联。  
+联接  两个数据源就是将一个数据源中的对象与另一个数据源中具有相同公共属性的对象相关联。  
   
  当查询所面向的数据源相互之间具有无法直接领会的关系时，联接就成为一项重要的运算。 在面向对象的编程中，这可能意味着在未建模对象之间进行关联，例如对单向关系进行反向推理。 下面是单向关系的一个示例：Customer 类有一个类型为 City 的属性，但 City 类没有作为 Customer 对象集合的属性。 如果你具有一个 City 对象列表，并且要查找每个城市中的所有客户，则可以使用联接运算完成此项查找。  
   
@@ -30,15 +30,15 @@ ms.locfileid: "58411455"
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Linq>
-- [标准查询运算符概述 (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [匿名类型](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)
+- [标准查询运算符概述 (C#)](./standard-query-operators-overview.md)
+- [匿名类型](../../classes-and-structs/anonymous-types.md)
 - [构建联接和叉积查询](../../../../framework/data/adonet/sql/linq/formulate-joins-and-cross-product-queries.md)
-- [join 子句](../../../../csharp/language-reference/keywords/join-clause.md)
-- [如何：使用组合键进行联接](../../../../csharp/programming-guide/linq-query-expressions/how-to-join-by-using-composite-keys.md)
-- [如何：联接不同文件的内容 (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)
-- [如何：对 join 子句的结果进行排序](../../../../csharp/programming-guide/linq-query-expressions/how-to-order-the-results-of-a-join-clause.md)
-- [如何：执行自定义联接操作](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-custom-join-operations.md)
-- [如何：执行分组联接](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-grouped-joins.md)
-- [如何：执行内部联接](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-inner-joins.md)
-- [如何：执行左外部联接](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-left-outer-joins.md)
-- [如何：从多个源填充对象集合 (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md)
+- [join 子句](../../../language-reference/keywords/join-clause.md)
+- [如何：使用组合键进行联接](../../linq-query-expressions/how-to-join-by-using-composite-keys.md)
+- [如何：联接不同文件的内容 (LINQ) (C#)](./how-to-join-content-from-dissimilar-files-linq.md)
+- [如何：对 join 子句的结果进行排序](../../linq-query-expressions/how-to-order-the-results-of-a-join-clause.md)
+- [如何：执行自定义联接操作](../../linq-query-expressions/how-to-perform-custom-join-operations.md)
+- [如何：执行分组联接](../../linq-query-expressions/how-to-perform-grouped-joins.md)
+- [如何：执行内部联接](../../linq-query-expressions/how-to-perform-inner-joins.md)
+- [如何：执行左外部联接](../../linq-query-expressions/how-to-perform-left-outer-joins.md)
+- [如何：从多个源填充对象集合 (LINQ) (C#)](./how-to-populate-object-collections-from-multiple-sources-linq.md)

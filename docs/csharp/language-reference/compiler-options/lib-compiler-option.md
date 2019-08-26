@@ -8,15 +8,15 @@ helpviewer_keywords:
 - -lib compiler option [C#]
 - /lib compiler option [C#]
 ms.assetid: b0efcc88-e8aa-4df4-a00b-8bdef70b7673
-ms.openlocfilehash: 49920a46f1d970c3f00025c3dc3eb384c937aa99
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 0c230147be055170ca015f27bd42bb096399405d
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59319399"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606819"
 ---
 # <a name="-lib-c-compiler-options"></a>-lib（C# 编译器选项）
--lib 选项指定通过 [-reference（C# 编译器选项）](../../../csharp/language-reference/compiler-options/reference-compiler-option.md)选项引用的程序集的位置。  
+-lib 选项指定通过 [-reference（C# 编译器选项）](./reference-compiler-option.md)选项引用的程序集的位置  。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,15 +38,15 @@ ms.locfileid: "59319399"
   
 2. 公共语言运行时系统目录。  
   
-3. 由 -lib 指定的目录。  
+3. 由 -lib 指定的目录  。  
   
 4. 由 LIB 环境变量指定的目录。  
   
- 使用 -reference 指定程序集引用。  
+ 使用 -reference 指定程序集引用  。  
   
- -lib 是累加的；每一次指定的值都追加到以前的值中。  
+ -lib 是累加的；每一次指定的值都追加到以前的值中  。  
   
- 另一种使用 -lib 的方法是，将任何所需的程序集复制到工作目录中；这样可以仅将程序集名称传递给 -reference。 然后可以从工作目录中删除这些程序集。 由于程序集清单中未指定依赖程序集的路径，因此应用程序可以在目标计算机上启动，然后查找并使用全局程序集缓存中的程序集。  
+ 另一种使用 -lib 的方法是，将任何所需的程序集复制到工作目录中；这样可以仅将程序集名称传递给 -reference   。 然后可以从工作目录中删除这些程序集。 由于程序集清单中未指定依赖程序集的路径，因此应用程序可以在目标计算机上启动，然后查找并使用全局程序集缓存中的程序集。  
   
  编译器可以引用程序集并不表示公共语言运行时可以在运行时找到并加载程序集。 有关运行时如何搜索引用的程序集的详细信息，请参阅[运行时如何定位程序集](../../../framework/deployment/how-the-runtime-locates-assemblies.md)。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "59319399"
   
 1. 打开项目的“属性页”  对话框。  
   
-2. 单击“引用路径”属性页。  
+2. 单击“引用路径”  属性页。  
   
 3. 修改列表框的内容。  
   
@@ -69,5 +69,5 @@ csc -lib:c:\ -reference:t2.dll t2.cs
   
 ## <a name="see-also"></a>请参阅
 
-- [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)
+- [C# 编译器选项](./index.md)
 - [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties)

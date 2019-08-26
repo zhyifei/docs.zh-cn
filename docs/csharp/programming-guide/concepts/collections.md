@@ -2,18 +2,18 @@
 title: 集合 (C#)
 ms.date: 07/20/2015
 ms.assetid: 317d7dc3-8587-4873-8b3e-556f86497939
-ms.openlocfilehash: a256b2f23bca973d1ed489724bf4d34ab35449f1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 712ae4c9b4cf577ab728e4b78582445070e08049
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59481101"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595294"
 ---
 # <a name="collections-c"></a>集合 (C#)
 
 对于许多应用程序，你会想要创建和管理相关对象的组。 有两种方法对对象进行分组：通过创建对象的数组，以及通过创建对象的集合。
 
-数组最适用于创建和使用固定数量的强类型化对象。 有关数组的信息，请参阅[数组](../../../csharp/programming-guide/arrays/index.md)。
+数组最适用于创建和使用固定数量的强类型化对象。 有关数组的信息，请参阅[数组](../arrays/index.md)。
 
 集合提供更灵活的方式来使用对象组。 与数组不同，你使用的对象组随着应用程序更改的需要动态地放大和缩小。 对于某些集合，你可以为放入集合中的任何对象分配一个密钥，这样你便可以使用该密钥快速检索此对象。
 
@@ -22,7 +22,7 @@ ms.locfileid: "59481101"
 如果集合中只包含一种数据类型的元素，则可以使用 <xref:System.Collections.Generic?displayProperty=nameWithType> 命名空间中的一个类。 泛型集合强制类型安全，因此无法向其添加任何其他数据类型。 当你从泛型集合检索元素时，你无需确定其数据类型或对其进行转换。
 
 > [!NOTE]
-> 在本主题的示例中，针对 `System.Collections.Generic` 和 `System.Linq` 命名空间包括 [using](../../../csharp/language-reference/keywords/using-directive.md) 指令。
+> 在本主题的示例中，针对 `System.Collections.Generic` 和 `System.Linq` 命名空间包括 [using](../../language-reference/keywords/using-directive.md) 指令。
 
  **在本主题中**
 
@@ -52,7 +52,7 @@ ms.locfileid: "59481101"
 
 本部分中的示例使用泛型 <xref:System.Collections.Generic.List%601> 类，通过此类可使用对象的强类型列表。
 
-以下示例创建字符串列表，并通过使用 [foreach](../../../csharp/language-reference/keywords/foreach-in.md) 语句循环访问字符串。
+以下示例创建字符串列表，并通过使用 [foreach](../../language-reference/keywords/foreach-in.md) 语句循环访问字符串。
 
 ```csharp
 // Create a list of strings.
@@ -70,7 +70,7 @@ foreach (var salmon in salmons)
 // Output: chinook coho pink sockeye
 ```
 
-如果集合中的内容是事先已知的，则可以使用集合初始值设定项来初始化集合。 有关详细信息，请参阅[对象和集合初始值设定项](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)。
+如果集合中的内容是事先已知的，则可以使用集合初始值设定项  来初始化集合。 有关详细信息，请参阅[对象和集合初始值设定项](../classes-and-structs/object-and-collection-initializers.md)。
 
 以下示例与上一示例相同，除了有一个集合初始值设定项用于将元素添加到集合。
 
@@ -87,7 +87,7 @@ foreach (var salmon in salmons)
 // Output: chinook coho pink sockeye
 ```
 
-可以使用 [for](../../../csharp/language-reference/keywords/for.md) 语句，而不是 `foreach` 语句来循环访问集合。 通过按索引位置访问集合元素实现此目的。 元素的索引开始于 0，结束于元素计数减 1。
+可以使用 [for](../../language-reference/keywords/for.md) 语句，而不是 `foreach` 语句来循环访问集合。 通过按索引位置访问集合元素实现此目的。 元素的索引开始于 0，结束于元素计数减 1。
 
 以下示例通过使用 `for` 而不是 `foreach` 循环访问集合中的元素。
 
@@ -122,7 +122,7 @@ foreach (var salmon in salmons)
 // Output: chinook pink sockeye
 ```
 
-以下示例从一个泛型列表中删除元素。 使用以降序进行循环访问的 [for](../../../csharp/language-reference/keywords/for.md) 语句，而非 `foreach` 语句。 这是因为 <xref:System.Collections.Generic.List%601.RemoveAt%2A> 方法将导致已移除的元素后的元素的索引值减小。
+以下示例从一个泛型列表中删除元素。 使用以降序进行循环访问的 [for](../../language-reference/keywords/for.md) 语句，而非 `foreach` 语句。 这是因为 <xref:System.Collections.Generic.List%601.RemoveAt%2A> 方法将导致已移除的元素后的元素的索引值减小。
 
 ```csharp
 var numbers = new List<int> { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
@@ -351,7 +351,7 @@ private static void FindInDictionary2(string symbol)
 
 ## <a name="using-linq-to-access-a-collection"></a>使用 LINQ 访问集合
 
-可以使用 LINQ（语言集成查询）来访问集合。 LINQ 查询提供筛选、排序和分组功能。 有关详细信息，请参阅 [C# 中的 LINQ 入门](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)。
+可以使用 LINQ（语言集成查询）来访问集合。 LINQ 查询提供筛选、排序和分组功能。 有关详细信息，请参阅 [C# 中的 LINQ 入门](./linq/getting-started-with-linq.md)。
 
 以下示例运行一个对泛型 `List` 的 LINQ 查询。 LINQ 查询返回一个包含结果的不同集合。
 
@@ -563,13 +563,13 @@ public class Color
 
 ## <a name="iterators"></a>Iterators
 
-迭代器用于对集合执行自定义迭代。 迭代器可以是一种方法，或是一个 `get` 访问器。 迭代器使用 [yield return](../../../csharp/language-reference/keywords/yield.md) 语句返回集合的每一个元素，每次返回一个元素。
+迭代器  用于对集合执行自定义迭代。 迭代器可以是一种方法，或是一个 `get` 访问器。 迭代器使用 [yield return](../../language-reference/keywords/yield.md) 语句返回集合的每一个元素，每次返回一个元素。
 
-通过使用 [foreach](../../../csharp/language-reference/keywords/foreach-in.md) 语句调用迭代器。 `foreach` 循环的每次迭代都会调用迭代器。 迭代器中到达 `yield return` 语句时，会返回一个表达式，并保留当前在代码中的位置。 下次调用迭代器时，将从该位置重新开始执行。
+通过使用 [foreach](../../language-reference/keywords/foreach-in.md) 语句调用迭代器。 `foreach` 循环的每次迭代都会调用迭代器。 迭代器中到达 `yield return` 语句时，会返回一个表达式，并保留当前在代码中的位置。 下次调用迭代器时，将从该位置重新开始执行。
 
-有关详细信息，请参阅[迭代器 (C#)](../../../csharp/programming-guide/concepts/iterators.md)。
+有关详细信息，请参阅[迭代器 (C#)](./iterators.md)。
 
-下面的示例使用迭代器方法。 迭代器方法具有位于 [for](../../../csharp/language-reference/keywords/for.md) 循环中的 `yield return` 语句。 在 `ListEvenNumbers` 方法中，`foreach` 语句体的每次迭代都会创建对迭代器方法的调用，并将继续到下一个 `yield return` 语句。
+下面的示例使用迭代器方法。 迭代器方法具有位于 [for](../../language-reference/keywords/for.md) 循环中的 `yield return` 语句。 在 `ListEvenNumbers` 方法中，`foreach` 语句体的每次迭代都会创建对迭代器方法的调用，并将继续到下一个 `yield return` 语句。
 
 ```csharp
 private static void ListEvenNumbers()
@@ -598,10 +598,10 @@ private static IEnumerable<int> EvenSequence(
 
 ## <a name="see-also"></a>请参阅
 
-- [对象和集合初始值设定项](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
-- [编程概念 (C#)](../../../csharp/programming-guide/concepts/index.md)
+- [对象和集合初始值设定项](../classes-and-structs/object-and-collection-initializers.md)
+- [编程概念 (C#)](./index.md)
 - [Option Strict 语句](../../../visual-basic/language-reference/statements/option-strict-statement.md)
-- [LINQ to Objects (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
+- [LINQ to Objects (C#)](./linq/linq-to-objects.md)
 - [并行 LINQ (PLINQ)](../../../standard/parallel-programming/parallel-linq-plinq.md)
 - [集合和数据结构](../../../standard/collections/index.md)
 - [选择集合类](../../../standard/collections/selecting-a-collection-class.md)

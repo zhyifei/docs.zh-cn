@@ -6,18 +6,18 @@ helpviewer_keywords:
 - anonymous types [C#]
 - C# Language, anonymous types
 ms.assetid: 59c9d7a4-3b0e-475e-b620-0ab86c088e9b
-ms.openlocfilehash: 7d8bdc5ceef5d82e4bc7e13ee932985cae6c2c10
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 93f02b8a0f828be89c6a1b7bfcdc6ba2a2a93e81
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398548"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69597191"
 ---
 # <a name="anonymous-types-c-programming-guide"></a>匿名类型（C# 编程指南）
 
 匿名类型提供了一种方便的方法，可用来将一组只读属性封装到单个对象中，而无需首先显式定义一个类型。 类型名由编译器生成，并且不能在源代码级使用。 每个属性的类型由编译器推断。  
   
- 可通过使用 [new](../../../csharp/language-reference/operators/new-operator.md) 运算符和对象初始值创建匿名类型。 有关对象初始值设定项的详细信息，请参阅[对象和集合初始值设定项](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)。  
+ 可通过使用 [new](../../language-reference/operators/new-operator.md) 运算符和对象初始值创建匿名类型。 有关对象初始值设定项的详细信息，请参阅[对象和集合初始值设定项](./object-and-collection-initializers.md)。  
   
  以下示例显示了用两个名为 `Amount` 和 `Message` 的属性进行初始化的匿名类型。  
   
@@ -29,7 +29,7 @@ var v = new { Amount = 108, Message = "Hello" };
 Console.WriteLine(v.Amount + v.Message);  
 ```  
   
- 匿名类型通常用在查询表达式的 [select](../../../csharp/language-reference/keywords/select-clause.md) 子句中，以便返回源序列中每个对象的属性子集。 有关查询的详细信息，请参阅 [LINQ 查询表达式](../../../csharp/programming-guide/linq-query-expressions/index.md)。  
+ 匿名类型通常用在查询表达式的 [select](../../language-reference/keywords/select-clause.md) 子句中，以便返回源序列中每个对象的属性子集。 有关查询的详细信息，请参阅 [LINQ 查询表达式](../linq-query-expressions/index.md)。  
   
  匿名类型包含一个或多个公共只读属性。 包含其他种类的类成员（如方法或事件）为无效。 用来初始化属性的表达式不能为 `null`、匿名函数或指针类型。  
   
@@ -39,7 +39,7 @@ Console.WriteLine(v.Amount + v.Message);
   
  [!code-csharp[csRef30Features#81](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csRef30Features/CS/csref30.cs#81)]  
   
- 通常，当使用匿名类型来初始化变量时，可以通过使用 [var](../../../csharp/language-reference/keywords/var.md) 将变量作为隐式键入的本地变量来进行声明。 类型名称无法在变量声明中给出，因为只有编译器能访问匿名类型的基础名称。 有关 `var` 的详细信息，请参阅[隐式类型本地变量](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md)。  
+ 通常，当使用匿名类型来初始化变量时，可以通过使用 [var](../../language-reference/keywords/var.md) 将变量作为隐式键入的本地变量来进行声明。 类型名称无法在变量声明中给出，因为只有编译器能访问匿名类型的基础名称。 有关 `var` 的详细信息，请参阅[隐式类型本地变量](./implicitly-typed-local-variables.md)。  
   
  可通过将隐式键入的本地变量与隐式键入的数组相结合创建匿名键入的元素的数组，如下面的示例所示。  
   
@@ -48,7 +48,7 @@ var anonArray = new[] { new { name = "apple", diam = 4 }, new { name = "grape", 
 ```  
   
 ## <a name="remarks"></a>备注  
- 匿名类型是直接从[对象](../../../csharp/language-reference/keywords/object.md)派生的[类](../../../csharp/language-reference/keywords/class.md)类型，并且其无法强制转换为除[对象](../../../csharp/language-reference/keywords/object.md)外的任意类型。 虽然你的应用程序不能访问它，编译器还是提供了每一个匿名类型的名称。 从公共语言运行时的角度来看，匿名类型与任何其他引用类型没有什么不同。  
+ 匿名类型是直接从[对象](../../language-reference/keywords/object.md)派生的[类](../../language-reference/keywords/class.md)类型，并且其无法强制转换为除[对象](../../language-reference/keywords/object.md)外的任意类型。 虽然你的应用程序不能访问它，编译器还是提供了每一个匿名类型的名称。 从公共语言运行时的角度来看，匿名类型与任何其他引用类型没有什么不同。  
   
  如果程序集中的两个或多个匿名对象初始值指定了属性序列，这些属性采用相同顺序且具有相同的名称和类型，则编译器将对象视为相同类型的实例。 它们共享同一编译器生成的类型信息。  
   
@@ -58,7 +58,7 @@ var anonArray = new[] { new { name = "apple", diam = 4 }, new { name = "grape", 
   
 ## <a name="see-also"></a>请参阅
 
-- [C# 编程指南](../../../csharp/programming-guide/index.md)
-- [对象和集合初始值设定项](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
-- [C# 中的 LINQ 入门](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
-- [LINQ 查询表达式](../../../csharp/programming-guide/linq-query-expressions/index.md)
+- [C# 编程指南](../index.md)
+- [对象和集合初始值设定项](./object-and-collection-initializers.md)
+- [C# 中的 LINQ 入门](../concepts/linq/getting-started-with-linq.md)
+- [LINQ 查询表达式](../linq-query-expressions/index.md)

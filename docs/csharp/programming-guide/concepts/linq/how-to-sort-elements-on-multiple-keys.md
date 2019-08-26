@@ -2,12 +2,12 @@
 title: 如何：对多个键上的元素进行排序 (C#)
 ms.date: 07/20/2015
 ms.assetid: 3b2760b6-d607-4ac7-b784-5c6524e2a0e0
-ms.openlocfilehash: 2325417fa2ed8a6c3ca13504cada4d4e1a49be42
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 4029e88ced11cdc2e95fdfd212fecb3e3b194436
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68709911"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69592442"
 ---
 # <a name="how-to-sort-elements-on-multiple-keys-c"></a>如何：对多个键上的元素进行排序 (C#)
 
@@ -17,7 +17,7 @@ ms.locfileid: "68709911"
 
 在本示例中，首先按运输邮政编码，然后再按订单日期对结果进行排序。
 
-此示例使用下面的 XML 文档：[示例 XML 文件：客户和订单 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md)。
+此示例使用下面的 XML 文档：[示例 XML 文件：客户和订单 (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md)。
 
 ```csharp
 XElement co = XElement.Load("CustomersOrders.xml");
@@ -67,7 +67,7 @@ CustomerID:LAZYK EmployeeID:8 ShipPostalCode:99362 OrderDate:5/22/1997
 
 下面的示例演示如何对命名空间中的 XML 进行同样的查询。 有关详细信息，请参阅[命名空间概述(LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md)。
 
-此示例使用下面的 XML 文档：[示例 XML 文件：命名空间中的客户和订单](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-in-a-namespace.md)。
+此示例使用下面的 XML 文档：[示例 XML 文件：命名空间中的客户和订单](./sample-xml-file-customers-and-orders-in-a-namespace.md)。
 
 ```csharp
 XElement co = XElement.Load("CustomersOrdersInNamespace.xml");

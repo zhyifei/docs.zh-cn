@@ -6,15 +6,15 @@ helpviewer_keywords:
 - properties [C#], abstract
 - abstract properties [C#]
 ms.assetid: 672a90eb-47b9-4ae0-9914-af53852fddcb
-ms.openlocfilehash: ef19b80e7f4c32830aabfcf1ad595348c2107228
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fae526f5dcd452fbc381ee86c892b72e61956f0b
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64599998"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596864"
 ---
 # <a name="how-to-define-abstract-properties-c-programming-guide"></a>如何：定义抽象属性（C# 编程指南）
-以下示例演示如何定义[抽象](../../../csharp/language-reference/keywords/abstract.md)属性。 抽象属性声明不提供属性访问器的实现，它声明该类支持属性，而将访问器实现留给派生类。 以下示例演示如何实现从基类继承抽象属性。  
+以下示例演示如何定义[抽象](../../language-reference/keywords/abstract.md)属性。 抽象属性声明不提供属性访问器的实现，它声明该类支持属性，而将访问器实现留给派生类。 以下示例演示如何实现从基类继承抽象属性。  
   
  此示例由三个文件组成，其中每个文件都单独编译，产生的程序集由下一次编译引用：  
   
@@ -41,7 +41,7 @@ ms.locfileid: "64599998"
     public abstract double Area  
     ```  
   
-- 声明抽象属性时（如本示例中的 `Area`），只需指明哪些属性访问器可用即可，不要实现它们。 在此示例中，仅 [get](../../../csharp/language-reference/keywords/get.md) 访问器可用，因此该属性是只读属性。  
+- 声明抽象属性时（如本示例中的 `Area`），只需指明哪些属性访问器可用即可，不要实现它们。 在此示例中，仅 [get](../../language-reference/keywords/get.md) 访问器可用，因此该属性是只读属性。  
   
 ## <a name="example"></a>示例  
  下面的代码演示 `Shape` 的三个子类，并演示它们如何替代 `Area` 属性来提供自己的实现。  
@@ -55,8 +55,8 @@ ms.locfileid: "64599998"
   
 ## <a name="see-also"></a>请参阅
 
-- [C# 编程指南](../../../csharp/programming-guide/index.md)
-- [类和结构](../../../csharp/programming-guide/classes-and-structs/index.md)
-- [抽象类、密封类及类成员](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)
-- [属性](../../../csharp/programming-guide/classes-and-structs/properties.md)
+- [C# 编程指南](../index.md)
+- [类和结构](./index.md)
+- [抽象类、密封类及类成员](./abstract-and-sealed-classes-and-class-members.md)
+- [属性](./properties.md)
 - [如何：使用命令行创建和使用程序集](../concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md)

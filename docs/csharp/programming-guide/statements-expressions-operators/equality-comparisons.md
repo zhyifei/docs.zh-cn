@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - object equality [C#]
 ms.assetid: 10b865ea-4e7b-4127-9242-c9b8f57d9f04
-ms.openlocfilehash: 4a634f99542b2cf1a2cca9314c5eb648e841b158
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: bc3ce4b94bfc72e058d4660d01eb16ef0e0f11db
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661197"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69588714"
 ---
 # <a name="equality-comparisons-c-programming-guide"></a>相等性比较（C# 编程指南）
 
@@ -24,11 +24,11 @@ ms.locfileid: "67661197"
   
  在此代码中，创建了两个对象，但在赋值语句后，这两个引用所引用的是同一对象。 因此，它们具有引用相等性。 使用 <xref:System.Object.ReferenceEquals%2A> 方法确定两个引用是否引用同一对象。  
   
- 引用相等性的概念仅适用于引用类型。 由于在将值类型的实例赋给变量时将产生值的副本，因此值类型对象无法具有引用相等性。 因此，永远不会有两个未装箱结构引用内存中的同一位置。 此外，如果使用 <xref:System.Object.ReferenceEquals%2A> 比较两个值类型，结果将始终为 `false`，即使对象中包含的值都相同也是如此。 这是因为会将每个变量装箱到单独的对象实例中。 有关详细信息，请参阅[如何：测试引用相等性（标识）](../../../csharp/programming-guide/statements-expressions-operators/how-to-test-for-reference-equality-identity.md)。  
+ 引用相等性的概念仅适用于引用类型。 由于在将值类型的实例赋给变量时将产生值的副本，因此值类型对象无法具有引用相等性。 因此，永远不会有两个未装箱结构引用内存中的同一位置。 此外，如果使用 <xref:System.Object.ReferenceEquals%2A> 比较两个值类型，结果将始终为 `false`，即使对象中包含的值都相同也是如此。 这是因为会将每个变量装箱到单独的对象实例中。 有关详细信息，请参阅[如何：测试引用相等性（标识）](./how-to-test-for-reference-equality-identity.md)。  
 
 ## <a name="value-equality"></a>值相等性
 
- 值相等性指两个对象包含相同的一个或多个值。 对于基元值类型（例如 [int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md) 或 [bool](../../../csharp/language-reference/keywords/bool.md)），针对值相等性的测试简单明了。 可以使用 [==](../../../csharp/language-reference/operators/equality-operators.md#equality-operator-) 运算符，如下面的示例所示。  
+ 值相等性指两个对象包含相同的一个或多个值。 对于基元值类型（例如 [int](../../language-reference/builtin-types/integral-numeric-types.md) 或 [bool](../../language-reference/keywords/bool.md)），针对值相等性的测试简单明了。 可以使用 [==](../../language-reference/operators/equality-operators.md#equality-operator-) 运算符，如下面的示例所示。  
   
 ```csharp  
 int a = GetOriginalValue();  
@@ -43,21 +43,21 @@ if( b == a)
   
  对于大多数其他类型，针对值相等性的测试较为复杂，因为它需要用户了解类型对值相等性的定义方式。 对于具有多个字段或属性的类和结构，值相等性的定义通常指所有字段或属性都具有相同的值。 例如，如果 pointA.X 等于 pointB.X，并且 pointA.Y 等于 pointB.Y，则可以将两个 `Point` 对象定义为相等。  
   
- 但是，并不要求类型中的所有字段均相等。 只需子集相等即可。 比较不具所有权的类型时，应确保明确了解相等性对于该类型是如何定义的。 若要详细了解如何在自己的类和结构中定义值相等性，请参阅[操作说明：为类型定义值相等性](../../../csharp/programming-guide/statements-expressions-operators/how-to-define-value-equality-for-a-type.md)。  
+ 但是，并不要求类型中的所有字段均相等。 只需子集相等即可。 比较不具所有权的类型时，应确保明确了解相等性对于该类型是如何定义的。 若要详细了解如何在自己的类和结构中定义值相等性，请参阅[操作说明：为类型定义值相等性](./how-to-define-value-equality-for-a-type.md)。  
   
 ### <a name="value-equality-for-floating-point-values"></a>浮点值的值相等性
 
- 由于二进制计算机上的浮点算法不精确，因此浮点值（[double](../../../csharp/language-reference/builtin-types/floating-point-numeric-types.md) 和 [float](../../../csharp/language-reference/builtin-types/floating-point-numeric-types.md)）的相等比较会出现问题。 有关更多信息，请参阅 <xref:System.Double?displayProperty=nameWithType> 主题中的备注部分。  
+ 由于二进制计算机上的浮点算法不精确，因此浮点值（[double](../../language-reference/builtin-types/floating-point-numeric-types.md) 和 [float](../../language-reference/builtin-types/floating-point-numeric-types.md)）的相等比较会出现问题。 有关更多信息，请参阅 <xref:System.Double?displayProperty=nameWithType> 主题中的备注部分。  
   
 ## <a name="related-topics"></a>相关主题  
   
 |Title|说明|  
 |-----------|-----------------|  
-|[如何：测试引用相等性（标识）](../../../csharp/programming-guide/statements-expressions-operators/how-to-test-for-reference-equality-identity.md)|介绍如何确定两个变量是否具有引用相等性。|  
-|[如何：为类型定义值相等性](../../../csharp/programming-guide/statements-expressions-operators/how-to-define-value-equality-for-a-type.md)|介绍如何为类型提供值相等性的自定义定义。|  
-|[C# 编程指南](../../../csharp/programming-guide/index.md)|提供一些链接，这些链接指向重要 C# 语言功能以及通过 .NET Framework 提供给 C# 的功能的相关详细信息。|  
-|[类型](../../../csharp/programming-guide/types/index.md)|提供有关 C# 类型系统的信息以及指向附加信息的链接。|  
+|[如何：测试引用相等性（标识）](./how-to-test-for-reference-equality-identity.md)|介绍如何确定两个变量是否具有引用相等性。|  
+|[如何：为类型定义值相等性](./how-to-define-value-equality-for-a-type.md)|介绍如何为类型提供值相等性的自定义定义。|  
+|[C# 编程指南](../index.md)|提供一些链接，这些链接指向重要 C# 语言功能以及通过 .NET Framework 提供给 C# 的功能的相关详细信息。|  
+|[类型](../types/index.md)|提供有关 C# 类型系统的信息以及指向附加信息的链接。|  
   
 ## <a name="see-also"></a>请参阅
 
-- [C# 编程指南](../../../csharp/programming-guide/index.md)
+- [C# 编程指南](../index.md)

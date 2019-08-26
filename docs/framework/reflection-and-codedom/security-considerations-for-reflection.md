@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 42d9dc2a-8fcc-4ff3-b002-4ff260ef3dc5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 26a581cc17859f7f4e0215017bfc405eae3cc15e
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 791c6c8b0396ec958ff0c8378038051b23d486d1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67660889"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956707"
 ---
 # <a name="security-considerations-for-reflection"></a>反射的安全注意事项
 
@@ -98,7 +98,7 @@ ms.locfileid: "67660889"
 
 ## <a name="serialization"></a>序列化
 
-对于序列化，带 <xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter%2A?displayProperty=nameWithType> 标志的 <xref:System.Security.Permissions.SecurityPermission>，无论其访问级别是什么，都能够获取和设置序列化类型的成员。 此权限使代码可以发现并更改实例的私有状态。 （除被授予适当权限以外，在元数据中该类型必须[标记](../../../docs/standard/attributes/applying-attributes.md)为可序列化。）
+对于序列化，带 <xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter%2A?displayProperty=nameWithType> 标志的 <xref:System.Security.Permissions.SecurityPermission>，无论其访问级别是什么，都能够获取和设置序列化类型的成员。 此权限使代码可以发现并更改实例的私有状态。 （除被授予适当权限以外，在元数据中该类型必须[标记](../../standard/attributes/applying-attributes.md)为可序列化。）
 
 ## <a name="parameters-of-type-methodinfo"></a>类型 MethodInfo 的参数
 
@@ -121,5 +121,5 @@ ms.locfileid: "67660889"
 - [代码访问安全性](../../../docs/framework/misc/code-access-security.md)
 - [反射发出中的安全问题](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)
 - [查看类型信息](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)
-- [应用特性](../../../docs/standard/attributes/applying-attributes.md)
+- [应用特性](../../standard/attributes/applying-attributes.md)
 - [访问自定义属性](../../../docs/framework/reflection-and-codedom/accessing-custom-attributes.md)

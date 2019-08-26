@@ -2,12 +2,12 @@
 title: 如何：创建已签名的友元程序集 (C#)
 ms.date: 07/20/2015
 ms.assetid: bab62063-61e6-453f-905f-77673df9534e
-ms.openlocfilehash: df04f6f5a006c7eea7984004e20578c85e51efe0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7715726a200150b044fb8e97216fa02d0e784838
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64582983"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595924"
 ---
 # <a name="how-to-create-signed-friend-assemblies-c"></a>如何：创建已签名的友元程序集 (C#)
 本示例演示如何将友元程序集和具有强名称的程序集一起使用。 这两种程序集必须都使用强名称。 尽管本示例中的两种程序集使用相同的密钥，但可以对这两种程序集使用不同的密钥。  
@@ -79,7 +79,7 @@ ms.locfileid: "64582983"
     csc /keyfile:FriendAssemblies.snk /r:friend_signed_A.dll /out:friend_signed_B.exe friend_signed_B.cs  
     ```  
   
-     编译器生成的程序集的名称必须与传递给 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性的友元程序集的名称匹配。 必须使用 `/out` 编译器选项显式指定输出程序集（.exe 或 .dll）的名称。  有关详细信息，请参阅 [/out（C# 编译器选项）](../../../../csharp/language-reference/compiler-options/out-compiler-option.md)。  
+     编译器生成的程序集的名称必须与传递给 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性的友元程序集的名称匹配。 必须使用 `/out` 编译器选项显式指定输出程序集（.exe 或 .dll）的名称。  有关详细信息，请参阅 [/out（C# 编译器选项）](../../../language-reference/compiler-options/out-compiler-option.md)。  
   
 7. 运行 friend_signed_B.exe 文件。  
   
@@ -93,8 +93,8 @@ ms.locfileid: "64582983"
 - <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
 - [.NET 中的程序集](../../../../standard/assembly/index.md)
 - [友元程序集](../../../../standard/assembly/friend-assemblies.md)
-- [如何：创建未签名的友元程序集 (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)
-- [/keyfile](../../../../csharp/language-reference/compiler-options/keyfile-compiler-option.md)
+- [如何：创建未签名的友元程序集 (C#)](./how-to-create-unsigned-friend-assemblies.md)
+- [/keyfile](../../../language-reference/compiler-options/keyfile-compiler-option.md)
 - [Sn.exe（强名称工具）](../../../../framework/tools/sn-exe-strong-name-tool.md)
-- [创建和使用具有强名称的程序集](../../../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
-- [C# 编程指南](../../../../csharp/programming-guide/index.md)
+- [创建和使用具有强名称的程序集](../../../../framework/app-domains/create-and-use-strong-named-assemblies.md)
+- [C# 编程指南](../../index.md)

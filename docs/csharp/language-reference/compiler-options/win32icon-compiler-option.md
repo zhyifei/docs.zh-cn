@@ -8,15 +8,15 @@ helpviewer_keywords:
 - /win32icon compiler option [C#]
 - -win32icon compiler option [C#]
 ms.assetid: 756d9b6d-ab07-41b7-ba58-5bd88f711138
-ms.openlocfilehash: 7bc7da8121ec1190908d9b94fc7c987f9888c020
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: f3df92d8d0b0135eac1a055afafffa0015fecc2b
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59317442"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606275"
 ---
 # <a name="-win32icon-c-compiler-options"></a>-win32icon（C# 编译器选项）
--win32icon 选项在输出文件中插入 .ico 文件，为输出文件赋予其在文件资源管理器中所需的外观。  
+-win32icon 选项在输出文件中插入 .ico 文件，为输出文件赋予其在文件资源管理器中所需的外观  。  
   
 ## <a name="syntax"></a>语法  
   
@@ -31,15 +31,15 @@ ms.locfileid: "59317442"
 ## <a name="remarks"></a>备注  
  可以使用[资源编译器](/windows/desktop/menurc/resource-compiler)创建的 .ico 文件。 在编译 Visual C++ 程序时会调用资源编译器；.ico 文件是从 .rc 文件创建的。  
   
- 请参阅 [-linkresource](../../../csharp/language-reference/compiler-options/linkresource-compiler-option.md)（引用）或 [-resource](../../../csharp/language-reference/compiler-options/resource-compiler-option.md)（附加）.NET Framework 资源文件。 请参阅 [-win32res](../../../csharp/language-reference/compiler-options/win32res-compiler-option.md) 导入 .res 文件。  
+ 请参阅 [-linkresource](./linkresource-compiler-option.md)（引用）或 [-resource](./resource-compiler-option.md)（附加）.NET Framework 资源文件。 请参阅 [-win32res](./win32res-compiler-option.md) 导入 .res 文件。  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项  
   
-1. 打开项目的“属性”页。  
+1. 打开项目的“属性”页  。  
   
-2. 单击“应用程序”属性页。  
+2. 单击“应用程序”  属性页。  
   
-3. 修改“应用程序图标”属性。  
+3. 修改“应用程序图标”属性  。  
   
  有关如何以编程方式设置此编译器选项的信息，请参阅 <xref:VSLangProj80.ProjectProperties3.ApplicationIcon%2A>。  
   
@@ -52,5 +52,5 @@ csc -win32icon:rf.ico in.cs
   
 ## <a name="see-also"></a>请参阅
 
-- [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)
+- [C# 编译器选项](./index.md)
 - [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties)

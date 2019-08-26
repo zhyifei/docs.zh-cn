@@ -5,25 +5,25 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], how to use
 ms.assetid: 99a2fc27-a32e-4a34-921c-e65497520eec
-ms.openlocfilehash: 1e77c994062c7ac9ee009bc0e12d39e530e8af80
-ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
+ms.openlocfilehash: 6f4044591c2cd8d59970d8d2f6e65c51ce7498ff
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68868840"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590557"
 ---
 # <a name="using-delegates-c-programming-guide"></a>使用委托（C# 编程指南）
-[委托](../../../csharp/language-reference/keywords/delegate.md)是安全封装方法的类型，类似于 C 和 C++ 中的函数指针。 与 C 函数指针不同的是，委托是面向对象的、类型安全的和可靠的。 委托的类型由委托的名称确定。 以下示例声明名为 `Del` 的委托，该委托可以封装采用[字符串](../../../csharp/language-reference/keywords/string.md)作为参数并返回 [void](../../../csharp/language-reference/keywords/void.md) 的方法：  
+[委托](../../language-reference/keywords/delegate.md)是安全封装方法的类型，类似于 C 和 C++ 中的函数指针。 与 C 函数指针不同的是，委托是面向对象的、类型安全的和可靠的。 委托的类型由委托的名称确定。 以下示例声明名为 `Del` 的委托，该委托可以封装采用[字符串](../../language-reference/keywords/string.md)作为参数并返回 [void](../../language-reference/keywords/void.md) 的方法：  
   
  [!code-csharp[csProgGuideDelegates#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#21)]  
   
- 委托对象通常通过提供委托将封装的方法的名称或使用[匿名函数](../../../csharp/programming-guide/statements-expressions-operators/anonymous-functions.md)构造。 对委托进行实例化后，委托会将对其进行的方法调用传递到该方法。 调用方传递到委托的参数将传递到该方法，并且委托会将方法的返回值（如果有）返回到调用方。 这被称为调用委托。 实例化的委托可以按封装的方法本身进行调用。 例如:  
+ 委托对象通常通过提供委托将封装的方法的名称或使用[匿名函数](../statements-expressions-operators/anonymous-functions.md)构造。 对委托进行实例化后，委托会将对其进行的方法调用传递到该方法。 调用方传递到委托的参数将传递到该方法，并且委托会将方法的返回值（如果有）返回到调用方。 这被称为调用委托。 实例化的委托可以按封装的方法本身进行调用。 例如:  
   
  [!code-csharp[csProgGuideDelegates#22](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#22)]  
   
  [!code-csharp[csProgGuideDelegates#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#23)]  
   
- 委托类型派生自 .NET Framework 中的 <xref:System.Delegate> 类。 委托类型是[密封的](../../../csharp/language-reference/keywords/sealed.md)，它们不能派生自 <xref:System.Delegate>，也不能从其派生出自定义类。 由于实例化的委托是一个对象，因此可以作为参数传递或分配给一个属性。 这允许方法接受委托作为参数并在稍后调用委托。 这被称为异步回调，是在长进程完成时通知调用方的常用方法。 当以这种方式使用委托时，使用委托的代码不需要知道要使用的实现方法。 功能类似于封装接口提供的功能。  
+ 委托类型派生自 .NET Framework 中的 <xref:System.Delegate> 类。 委托类型是[密封的](../../language-reference/keywords/sealed.md)，它们不能派生自 <xref:System.Delegate>，也不能从其派生出自定义类。 由于实例化的委托是一个对象，因此可以作为参数传递或分配给一个属性。 这允许方法接受委托作为参数并在稍后调用委托。 这被称为异步回调，是在长进程完成时通知调用方的常用方法。 当以这种方式使用委托时，使用委托的代码不需要知道要使用的实现方法。 功能类似于封装接口提供的功能。  
   
  回调的另一个常见用途是定义自定义比较方法并将该委托传递到短方法。 它允许调用方的代码成为排序算法的一部分。 以下示例方法使用 `Del` 类型作为参数：  
   
@@ -59,7 +59,7 @@ ms.locfileid: "68868840"
   
  调用列表中具有多个方法的委托派生自 <xref:System.MulticastDelegate>，该类属于 `System.Delegate` 的子类。 由于这两个类都支持 `GetInvocationList`，因此在其他情况下，上述代码也将产生作用。  
   
- 多播委托广泛用于事件处理中。 事件源对象将事件通知发送到已注册接收该事件的接收方对象。 若要注册一个事件，接收方需要创建用于处理该事件的方法，然后为该方法创建委托并将委托传递到事件源。 事件发生时，源调用委托。 然后，委托将对接收方调用事件处理方法，从而提供事件数据。 给定事件的委托类型由事件源确定。 有关详细信息，请参阅[事件](../../../csharp/programming-guide/events/index.md)。  
+ 多播委托广泛用于事件处理中。 事件源对象将事件通知发送到已注册接收该事件的接收方对象。 若要注册一个事件，接收方需要创建用于处理该事件的方法，然后为该方法创建委托并将委托传递到事件源。 事件发生时，源调用委托。 然后，委托将对接收方调用事件处理方法，从而提供事件数据。 给定事件的委托类型由事件源确定。 有关详细信息，请参阅[事件](../events/index.md)。  
   
  在编译时比较分配的两个不同类型的委托将导致编译错误。 如果委托实例是静态的 `System.Delegate` 类型，则允许比较，但在运行时将返回 false。 例如:  
   
@@ -67,9 +67,9 @@ ms.locfileid: "68868840"
   
 ## <a name="see-also"></a>请参阅
 
-- [C# 编程指南](../../../csharp/programming-guide/index.md)
-- [委托](../../../csharp/programming-guide/delegates/index.md)
-- [使用委托中的变体](../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md)
-- [委托中的变体](../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)
-- [对 Func 和 Action 泛型委托使用变体](../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)
-- [事件](../../../csharp/programming-guide/events/index.md)
+- [C# 编程指南](../index.md)
+- [委托](./index.md)
+- [使用委托中的变体](../concepts/covariance-contravariance/using-variance-in-delegates.md)
+- [委托中的变体](../concepts/covariance-contravariance/variance-in-delegates.md)
+- [对 Func 和 Action 泛型委托使用变体](../concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)
+- [事件](../events/index.md)

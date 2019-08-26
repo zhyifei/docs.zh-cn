@@ -2,12 +2,12 @@
 title: 链接查询示例 (C#)
 ms.date: 07/20/2015
 ms.assetid: abbca162-d95e-43af-b92c-e46e6aa2540e
-ms.openlocfilehash: 8685db7461a1ce97c7a9c0045ed842fa4ac1a1f6
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 90c2ba1c9125114f9e26f4afeb3ff6373ff01d9c
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66486195"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594818"
 ---
 # <a name="chaining-queries-example-c"></a>链接查询示例 (C#)
 此示例建立在前一示例的基础上，演示两个都使用延迟执行和迟缓计算的查询链接到一起时会发生什么情况。  
@@ -84,8 +84,8 @@ Main: str >GHI!!!<
   
  本教程下一主题演示中间具体化：  
   
-- [中间具体化 (C#)](../../../../csharp/programming-guide/concepts/linq/intermediate-materialization.md)  
+- [中间具体化 (C#)](./intermediate-materialization.md)  
   
 ## <a name="see-also"></a>请参阅
 
-- [教程：将查询链接在一起 (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)
+- [教程：将查询链接在一起 (C#)](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)

@@ -8,20 +8,20 @@ helpviewer_keywords:
 - await keyword [C#]
 - await [C#]
 ms.assetid: 50725c24-ac76-4ca7-bca1-dd57642ffedb
-ms.openlocfilehash: 91d76309fedb2a6f3d877a47f230fda74060107e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 2f6fb9fb8c29013165298c186ec072aa1e750ab9
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59122884"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69602300"
 ---
 # <a name="await-c-reference"></a>await（C# 参考）
 `await` 运算符应用于异步方法中的任务，在方法的执行中插入挂起点，直到所等待的任务完成。 任务表示正在进行的工作。  
   
-`await` 仅可用于由 [async](../../../csharp/language-reference/keywords/async.md) 关键字修改的异步方法中。 使用 `async` 修饰符定义并且通常包含一个或多个 `await` 表达式的这类方法称为异步方法。  
+`await` 仅可用于由 [async](./async.md) 关键字修改的异步方法中。 使用 `async` 修饰符定义并且通常包含一个或多个 `await` 表达式的这类方法称为异步方法  。  
   
 > [!NOTE]
-> `async` 和 `await` 关键字是在 C# 5 中引入的。 有关异步编程的说明，请参阅[使用 Async 和 Await 的异步编程](../../../csharp/programming-guide/concepts/async/index.md)。  
+> `async` 和 `await` 关键字是在 C# 5 中引入的。 有关异步编程的说明，请参阅[使用 Async 和 Await 的异步编程](../../programming-guide/concepts/async/index.md)。  
   
 应用 `await` 运算符的任务通常由实现[基于任务的异步模式](../../../standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)的方法调用返回。 包括返回 <xref:System.Threading.Tasks.Task>、<xref:System.Threading.Tasks.Task%601>、<xref:System.Threading.Tasks.ValueTask> 和 <xref:System.Threading.Tasks.ValueTask%601> 对象的方法。  
 
@@ -30,7 +30,7 @@ ms.locfileid: "59122884"
 [!code-csharp[await-example](../../../../samples/snippets/csharp/language-reference/keywords/await/await1.cs)]  
 
 > [!IMPORTANT]
-> 有关完整示例，请参阅[演练：使用 Async 和 Await 访问 Web](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)。 可以从 Microsoft 网站的[开发者代码示例](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)中下载示例。 该示例处于 AsyncWalkthrough_HttpClient 项目中。  
+> 有关完整示例，请参阅[演练：使用 Async 和 Await 访问 Web](../../programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)。 可以从 Microsoft 网站的[开发者代码示例](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)中下载示例。 该示例处于 AsyncWalkthrough_HttpClient 项目中。  
   
 如前一示例所示，如果 `await` 应用于返回 `Task<TResult>` 的方法调用的结果，则 `await` 表达式的类型为 `TResult`。 如果 `await` 应用于返回 `Task` 的方法调用的结果，则 `await` 表达式的类型为 `void`。 以下示例演示了差异。  
   
@@ -47,7 +47,7 @@ TResult result = await AsyncMethodThatReturnsValueTaskTResult();
   
 `await` 表达式不阻止正在执行它的线程。 而是使编译器将剩下的异步方法注册为等待任务的延续任务。 控制权随后会返回给异步方法的调用方。 任务完成时，它会调用其延续任务，异步方法的执行会在暂停的位置处恢复。  
   
-`await` 表达式只能在由 `async` 修饰符标记的封闭方法体、lambda 表达式或异步方法中出现。 术语 await 在该上下文中仅用作关键字。 在其他位置，它会解释为标识符。 在方法、Lambda 表达式或匿名方法中，`await` 表达式不能在同步函数体、查询表达式、[lock 语句](../../../csharp/language-reference/keywords/lock-statement.md)块或[不安全](../../../csharp/language-reference/keywords/unsafe.md)上下文中出现。  
+`await` 表达式只能在由 `async` 修饰符标记的封闭方法体、lambda 表达式或异步方法中出现。 术语 await 在该上下文中仅用作关键字。  在其他位置，它会解释为标识符。 在方法、Lambda 表达式或匿名方法中，`await` 表达式不能在同步函数体、查询表达式、[lock 语句](./lock-statement.md)块或[不安全](./unsafe.md)上下文中出现。  
   
 ## <a name="exceptions"></a>异常  
 大多数异步方法返回 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601>。 返回任务的属性携带有关其状态和历史记录的信息，如任务是否完成、异步方法是否导致异常或已取消以及最终结果是什么。 `await` 运算符通过在由 `GetAwaiter` 方法返回的对象上调用方法来访问那些属性。  
@@ -58,7 +58,7 @@ TResult result = await AsyncMethodThatReturnsValueTaskTResult();
   
 处于故障状态的单个任务可以反映多个异常。 例如，任务可能是对 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> 调用的结果。 等待此类任务时，等待操作仅重新引发异常之一。 但是，无法预测重新引发的异常。  
   
-有关异步方法中的错误处理的示例，请参阅 [try catch](../../../csharp/language-reference/keywords/try-catch.md)。  
+有关异步方法中的错误处理的示例，请参阅 [try catch](./try-catch.md)。  
   
 ## <a name="example"></a>示例  
 下面的示例返回页面（页面 URL 作为命令行参数传递给页面）中的字符总数。 此示例调用 `GetPageLengthsAsync` 方法，此方法标记有 `async` 关键字。 而 `GetPageLengthsAsync` 方法使用 `await` 关键字等待对 <xref:System.Net.Http.HttpClient.GetStringAsync%2A?displayProperty=nameWithType> 方法的调用。  
@@ -69,6 +69,6 @@ TResult result = await AsyncMethodThatReturnsValueTaskTResult();
 
 ## <a name="see-also"></a>请参阅
 
-- [使用 async 和 await 的异步编程](../../../csharp/programming-guide/concepts/async/index.md)
-- [演练：使用 Async 和 Await 访问 Web](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
-- [async](../../../csharp/language-reference/keywords/async.md)
+- [使用 async 和 await 的异步编程](../../programming-guide/concepts/async/index.md)
+- [演练：使用 Async 和 Await 访问 Web](../../programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [async](./async.md)

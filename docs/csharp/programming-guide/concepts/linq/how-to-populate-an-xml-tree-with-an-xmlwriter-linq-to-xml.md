@@ -2,12 +2,12 @@
 title: 如何：用 XmlWriter 填充 XML 树 (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: cd5674d1-5c54-4efc-ba68-e23b2875295f
-ms.openlocfilehash: 6e121b246729b2b671d0d07dfed6a31602bfe565
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 88b088ddad54d1fef67cb4c86f8df4eee7bf3662
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66485215"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69593103"
 ---
 # <a name="how-to-populate-an-xml-tree-with-an-xmlwriter-linq-to-xml-c"></a>如何：用 XmlWriter 填充 XML 树 (LINQ to XML) (C#)
 填充 XML 树的一种方式是使用 <xref:System.Xml.Linq.XContainer.CreateWriter%2A> 创建一个 <xref:System.Xml.XmlWriter>，然后写入 <xref:System.Xml.XmlWriter>。 XML 树将用写入到 <xref:System.Xml.XmlWriter> 的所有节点进行填充。  
@@ -67,4 +67,4 @@ Console.WriteLine(newTree);
 - <xref:System.Xml.Linq.XContainer.CreateWriter%2A>
 - <xref:System.Xml.XmlWriter>
 - <xref:System.Xml.Xsl.XslCompiledTransform>
-- [创建 XML 树 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md)
+- [创建 XML 树 (C#)](./linq-to-xml-overview.md)

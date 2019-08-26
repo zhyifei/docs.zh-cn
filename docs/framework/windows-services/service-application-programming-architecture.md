@@ -15,12 +15,12 @@ helpviewer_keywords:
 - Windows Service applications, states
 ms.assetid: 83230026-d068-4174-97ff-e264c896eb2f
 author: ghogen
-ms.openlocfilehash: df969a634c84a7bccb048542cb768c920203e423
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d5dc690cfe460be79251d60850319e5232379f3c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64599279"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69935446"
 ---
 # <a name="service-application-programming-architecture"></a>服务应用程序编程体系结构
 Windows 服务应用程序基于从 <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> 类继承的类。 可以替代此类中的方法并为其定义功能，以确定服务的行为方式。  
@@ -47,7 +47,7 @@ Windows 服务应用程序基于从 <xref:System.ServiceProcess.ServiceBase?disp
 |<xref:System.ServiceProcess.ServiceBase.OnPowerEvent%2A>|指示服务在收到电源管理事件时应如何响应，如电池电量不足或已挂起的操作。|  
   
 > [!NOTE]
->  这些方法表示服务在其生存期中不断变化的状态；服务从一个状态转换到下一个状态。 例如，在调用 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 之前，将永远无法获得该服务来响应 <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> 命令。  
+> 这些方法表示服务在其生存期中不断变化的状态；服务从一个状态转换到下一个状态。 例如，在调用 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 之前，将永远无法获得该服务来响应 <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> 命令。  
   
  还有其他几个令人感兴趣的属性和方法。 这些方法包括：  
   
@@ -57,12 +57,12 @@ Windows 服务应用程序基于从 <xref:System.ServiceProcess.ServiceBase?disp
      [!code-vb[VbRadconService#6](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#6)]  
   
     > [!NOTE]
-    >  这些示例使用 <xref:System.ServiceProcess.ServiceBase> 类型的数组，可将应用程序包含的每项服务添加到其中，然后所有服务均可一同运行。 但是，如果仅创建单个服务，则可以选择不使用该数组，然后只声明从 <xref:System.ServiceProcess.ServiceBase> 继承的新对象，然后运行它。 有关示例，请参见 [如何：以编程方式编写服务](../../../docs/framework/windows-services/how-to-write-services-programmatically.md)。  
+    > 这些示例使用 <xref:System.ServiceProcess.ServiceBase> 类型的数组，可将应用程序包含的每项服务添加到其中，然后所有服务均可一同运行。 但是，如果仅创建单个服务，则可以选择不使用该数组，然后只声明从 <xref:System.ServiceProcess.ServiceBase> 继承的新对象，然后运行它。 有关示例，请参见 [如何：以编程方式编写服务](../../../docs/framework/windows-services/how-to-write-services-programmatically.md)。  
   
 - <xref:System.ServiceProcess.ServiceBase> 类的一系列属性。 这些属性确定可对服务调用的方法。 例如，当 <xref:System.ServiceProcess.ServiceBase.CanStop%2A> 属性设置为 `true` 时，可以调用服务上的 <xref:System.ServiceProcess.ServiceBase.OnStop%2A> 方法。 当 <xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A> 属性设置为 `true` 时，可以调用 <xref:System.ServiceProcess.ServiceBase.OnPause%2A> 和 <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> 方法。 在将其中一个属性设置为 `true` 时，应该替代并定义关联方法的处理进程。  
   
     > [!NOTE]
-    >  服务必须至少替代 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 和 <xref:System.ServiceProcess.ServiceBase.OnStop%2A> 才有用。  
+    > 服务必须至少替代 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 和 <xref:System.ServiceProcess.ServiceBase.OnStop%2A> 才有用。  
   
  还可以使用名为 <xref:System.ServiceProcess.ServiceController> 的组件与现有服务进行通信并控制其行为。  
   
