@@ -7,12 +7,12 @@ ms.date: 08/07/2017
 dev_langs:
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 32e2acedb0f837703fb716c45887672494f8d40f
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: 7787121afcfae4978141d36d25ddfa0a4f54df56
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65959278"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69660435"
 ---
 # <a name="build-a-visual-basic-hello-world-application-with-the-net-core-sdk-in-visual-studio-2017"></a>在 Visual Studio 2017 中使用 .NET Core SDK 生成 Visual Basic Hello World 应用程序
 
@@ -22,13 +22,13 @@ ms.locfileid: "65959278"
 
 安装了“.NET Core 跨平台开发”工作负载的 [Visual Studio 2017](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)。 可以使用 .NET Core 2.0 开发应用程序。
 
-有关详细信息，请参阅 [Windows 上 .NET Core 的先决条件](../../core/windows-prerequisites.md)。
+有关详细信息，请参阅 [Windows 上 .NET Core 的先决条件](../windows-prerequisites.md)。
 
 ## <a name="a-simple-hello-world-application"></a>简单的“Hello World”应用程序
 
 首先创建简单的“Hello World”控制台应用程序。 请执行这些步骤：
 
-1. 启动 Visual Studio 2017。 从菜单栏中选择“文件” > “新建” > “项目”。 在“新项目”*对话框中，依次选择“Visual Basic”和“.NET Core”节点。 然后，选择“控制台应用程序(.NET Core)”项目模板。 在“名称”文本框中，键入“HelloWorld”。 选择“确定”按钮。
+1. 启动 Visual Studio 2017。 从菜单栏中选择“文件”   > “新建”   > “项目”  。 在“新项目”  *对话框中，依次选择“Visual Basic”  和“.NET Core”  节点。 然后，选择“控制台应用程序(.NET Core)”  项目模板。 在“名称”  文本框中，键入“HelloWorld”。 选择“确定”  按钮。
 
    ![选择了“控制台应用”的“新建项目”对话框](./media/vb-with-visual-studio/visual-studio-new-project.png)
 
@@ -36,7 +36,7 @@ ms.locfileid: "65959278"
 
    ![Visual Studio 和新建的 HelloWorld 项目](./media/vb-with-visual-studio/visual-studio-main-window.png)
 
-   用于创建简单的“Hello World”应用程序的模板。 它通过调用 <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> 方法在控制台窗口中 显示文本字符串“Hello World!”。 现在，选择工具栏上含绿色箭头的“HelloWorld”按钮，可以在调试模式下运行程序。 如果这样操作，控制台窗口只在较短的时间内可见，然后就会关闭。 这是因为在执行 `Main` 方法中的单个语句后，`Main` 方法和应用程序将立即终止。
+   用于创建简单的“Hello World”应用程序的模板。 它通过调用 <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> 方法在控制台窗口中 显示文本字符串“Hello World!”。 现在，选择工具栏上含绿色箭头的“HelloWorld”  按钮，可以在调试模式下运行程序。 如果这样操作，控制台窗口只在较短的时间内可见，然后就会关闭。 这是因为在执行 `Main` 方法中的单个语句后，`Main` 方法和应用程序将立即终止。
 
 1. 若要在应用程序关闭控制台窗口前将其暂停，请在调用 <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> 方法后立即添加下列代码：
 
@@ -47,9 +47,9 @@ ms.locfileid: "65959278"
 
    此代码会提示用户按任意键，然后在用户按键前暂停程序。
 
-1. 在菜单栏中，选择“生成” > “生成解决方案”。 这会将程序编译成一种中间语言 (IL)，然后由实时 (JIT) 编译器转换成二进制代码。
+1. 在菜单栏中，选择“生成”   > “生成解决方案”  。 这会将程序编译成一种中间语言 (IL)，然后由实时 (JIT) 编译器转换成二进制代码。
 
-1. 选择工具栏上含绿色箭头的“HelloWorld”按钮，从而运行程序。
+1. 选择工具栏上含绿色箭头的“HelloWorld”  按钮，从而运行程序。
 
    ![控制台窗口，其中显示 Hello World Press any key to continue](./media/with-visual-studio/hello-world-console.png)
 
@@ -69,9 +69,9 @@ ms.locfileid: "65959278"
 
    此代码在控制台中显示“What is your name?”， 然后等待用户输入字符串并按 Enter 键。 它将此字符串存储到名为 `name` 的变量中。 它还会检索 <xref:System.DateTime.Now?displayProperty=nameWithType> 属性的值（其中包含当前的本地时间），并将此值赋给 `currentDate` 变量。 最后，使用[内插字符串](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)在控制台窗口中显示这些值。
 
-1. 依次选择 **“生成”** > **“生成解决方案”**，编译此程序。
+1. 依次选择 **“生成”**  >  **“生成解决方案”** ，编译此程序。
 
-1. 选择工具栏上的绿色箭头、按 F5 或选择“调试” > “启动调试”菜单项，在 Visual Studio 的调试模式下运行程序。 出现提示时，输入名称并按 Enter 键。
+1. 选择工具栏上的绿色箭头、按 F5 或选择“调试”   > “启动调试”  菜单项，在 Visual Studio 的调试模式下运行程序。 出现提示时，输入名称并按 Enter 键。
 
    ![控制台窗口，含已修改程序的输出](./media/with-visual-studio/hello-world-update.png)
 

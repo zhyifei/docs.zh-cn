@@ -4,12 +4,12 @@ description: 本主题演示了构建包含可重用的库和单元测试的 .NE
 author: mairaw
 ms.date: 06/12/2017
 ms.custom: seodec18
-ms.openlocfilehash: 44ade71a257f5c4fdcb8da9b572adf7133448fb8
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 454f67b39b3558b3f34519bdc018118738b99f6b
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66300148"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69660694"
 ---
 # <a name="building-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac"></a>使用 Visual Studio for Mac 在 macOS 上构建完整的 .NET Core 解决方案
 
@@ -28,7 +28,7 @@ Visual Studio for Mac 提供用于开发 .NET Core 应用程序的功能全面�
 - [.NET Core SDK 1.1 或更高版本](https://www.microsoft.com/net/core#macos)
 - [Visual Studio 2017 for Mac](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)
 
-有关先决条件的详细信息，请参阅 [Mac 上的 .NET Core 的先决条件](../../core/macos-prerequisites.md)。 有关 Visual Studio 2017 for Mac 完整系统要求的信息，请参阅 [Visual Studio 2017 for Mac 产品系列系统要求](/visualstudio/productinfo/vs2017-system-requirements-mac)。
+有关先决条件的详细信息，请参阅 [Mac 上的 .NET Core 的先决条件](../macos-prerequisites.md)。 有关 Visual Studio 2017 for Mac 完整系统要求的信息，请参阅 [Visual Studio 2017 for Mac 产品系列系统要求](/visualstudio/productinfo/vs2017-system-requirements-mac)。
 
 ## <a name="building-a-library"></a>生成库
 
