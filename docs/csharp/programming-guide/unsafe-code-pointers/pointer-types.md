@@ -5,87 +5,87 @@ ms.date: 04/20/2018
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.openlocfilehash: 704af9aae23571abdb82ae851066e3c03dbe7161
-ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
+ms.openlocfilehash: 4d0801cd81e00c84be278b44730058798b0acfa9
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68433544"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69588190"
 ---
-# <a name="pointer-types-c-programming-guide"></a><span data-ttu-id="d1525-102">指针类型（C# 编程指南）</span><span class="sxs-lookup"><span data-stu-id="d1525-102">Pointer types (C# Programming Guide)</span></span>
+# <a name="pointer-types-c-programming-guide"></a><span data-ttu-id="4498c-102">指针类型（C# 编程指南）</span><span class="sxs-lookup"><span data-stu-id="4498c-102">Pointer types (C# Programming Guide)</span></span>
 
-<span data-ttu-id="d1525-103">在不安全的上下文中，类型可以是指针类型、值类型或引用类型。</span><span class="sxs-lookup"><span data-stu-id="d1525-103">In an unsafe context, a type may be a pointer type, a value type, or a reference type.</span></span> <span data-ttu-id="d1525-104">指针类型声明采用下列形式之一：</span><span class="sxs-lookup"><span data-stu-id="d1525-104">A pointer type declaration takes one of the following forms:</span></span>
+<span data-ttu-id="4498c-103">在不安全的上下文中，类型可以是指针类型、值类型或引用类型。</span><span class="sxs-lookup"><span data-stu-id="4498c-103">In an unsafe context, a type may be a pointer type, a value type, or a reference type.</span></span> <span data-ttu-id="4498c-104">指针类型声明采用下列形式之一：</span><span class="sxs-lookup"><span data-stu-id="4498c-104">A pointer type declaration takes one of the following forms:</span></span>
 
 ``` csharp
 type* identifier;
 void* identifier; //allowed but not recommended
 ```
 
-<span data-ttu-id="d1525-105">在指针类型中的 `*` 之前指定的类型被称为“referent 类型”  。</span><span class="sxs-lookup"><span data-stu-id="d1525-105">The type specified before the `*` in a pointer type is called the **referent type**.</span></span> <span data-ttu-id="d1525-106">只有[非托管类型](../../language-reference/builtin-types/unmanaged-types.md)可为引用类型。</span><span class="sxs-lookup"><span data-stu-id="d1525-106">Only an [unmanaged type](../../language-reference/builtin-types/unmanaged-types.md) can be a referent type.</span></span>
+<span data-ttu-id="4498c-105">在指针类型中的 `*` 之前指定的类型被称为“referent 类型”  。</span><span class="sxs-lookup"><span data-stu-id="4498c-105">The type specified before the `*` in a pointer type is called the **referent type**.</span></span> <span data-ttu-id="4498c-106">只有[非托管类型](../../language-reference/builtin-types/unmanaged-types.md)可为引用类型。</span><span class="sxs-lookup"><span data-stu-id="4498c-106">Only an [unmanaged type](../../language-reference/builtin-types/unmanaged-types.md) can be a referent type.</span></span>
 
-<span data-ttu-id="d1525-107">指针类型不从[对象](../../language-reference/keywords/object.md)继承，并且指针类型与 `object` 之间不存在转换。</span><span class="sxs-lookup"><span data-stu-id="d1525-107">Pointer types do not inherit from [object](../../language-reference/keywords/object.md) and no conversions exist between pointer types and `object`.</span></span> <span data-ttu-id="d1525-108">此外，装箱和取消装箱不支持指针。</span><span class="sxs-lookup"><span data-stu-id="d1525-108">Also, boxing and unboxing do not support pointers.</span></span> <span data-ttu-id="d1525-109">但是，你可在不同的指针类型之间以及指针类型和整型之间进行转换。</span><span class="sxs-lookup"><span data-stu-id="d1525-109">However, you can convert between different pointer types and between pointer types and integral types.</span></span>
+<span data-ttu-id="4498c-107">指针类型不从[对象](../../language-reference/keywords/object.md)继承，并且指针类型与 `object` 之间不存在转换。</span><span class="sxs-lookup"><span data-stu-id="4498c-107">Pointer types do not inherit from [object](../../language-reference/keywords/object.md) and no conversions exist between pointer types and `object`.</span></span> <span data-ttu-id="4498c-108">此外，装箱和取消装箱不支持指针。</span><span class="sxs-lookup"><span data-stu-id="4498c-108">Also, boxing and unboxing do not support pointers.</span></span> <span data-ttu-id="4498c-109">但是，你可在不同的指针类型之间以及指针类型和整型之间进行转换。</span><span class="sxs-lookup"><span data-stu-id="4498c-109">However, you can convert between different pointer types and between pointer types and integral types.</span></span>
 
-<span data-ttu-id="d1525-110">在同一个声明中声明多个指针时，星号 (\*) 仅与基础类型一起写入；而不是用作每个指针名称的前缀。</span><span class="sxs-lookup"><span data-stu-id="d1525-110">When you declare multiple pointers in the same declaration, the asterisk (\*) is written together with the underlying type only; it is not used as a prefix to each pointer name.</span></span> <span data-ttu-id="d1525-111">例如:</span><span class="sxs-lookup"><span data-stu-id="d1525-111">For example:</span></span>
+<span data-ttu-id="4498c-110">在同一个声明中声明多个指针时，星号 (\*) 仅与基础类型一起写入；而不是用作每个指针名称的前缀。</span><span class="sxs-lookup"><span data-stu-id="4498c-110">When you declare multiple pointers in the same declaration, the asterisk (\*) is written together with the underlying type only; it is not used as a prefix to each pointer name.</span></span> <span data-ttu-id="4498c-111">例如:</span><span class="sxs-lookup"><span data-stu-id="4498c-111">For example:</span></span>
 
 ```csharp
 int* p1, p2, p3;   // Ok
 int *p1, *p2, *p3;   // Invalid in C#
 ```
 
-<span data-ttu-id="d1525-112">指针不能指向引用或包含引用的[结构](../../language-reference/keywords/struct.md)，因为无法对对象引用进行垃圾回收，即使有指针指向它也是如此。</span><span class="sxs-lookup"><span data-stu-id="d1525-112">A pointer cannot point to a reference or to a [struct](../../language-reference/keywords/struct.md) that contains references, because an object reference can be garbage collected even if a pointer is pointing to it.</span></span> <span data-ttu-id="d1525-113">垃圾回收器并不跟踪是否有任何类型的指针指向对象。</span><span class="sxs-lookup"><span data-stu-id="d1525-113">The garbage collector does not keep track of whether an object is being pointed to by any pointer types.</span></span>
+<span data-ttu-id="4498c-112">指针不能指向引用或包含引用的[结构](../../language-reference/keywords/struct.md)，因为无法对对象引用进行垃圾回收，即使有指针指向它也是如此。</span><span class="sxs-lookup"><span data-stu-id="4498c-112">A pointer cannot point to a reference or to a [struct](../../language-reference/keywords/struct.md) that contains references, because an object reference can be garbage collected even if a pointer is pointing to it.</span></span> <span data-ttu-id="4498c-113">垃圾回收器并不跟踪是否有任何类型的指针指向对象。</span><span class="sxs-lookup"><span data-stu-id="4498c-113">The garbage collector does not keep track of whether an object is being pointed to by any pointer types.</span></span>
 
-<span data-ttu-id="d1525-114">`myType*` 类型的指针变量的值为 `myType` 类型的变量的地址。</span><span class="sxs-lookup"><span data-stu-id="d1525-114">The value of the pointer variable of type `myType*` is the address of a variable of type `myType`.</span></span> <span data-ttu-id="d1525-115">下面是指针类型声明的示例：</span><span class="sxs-lookup"><span data-stu-id="d1525-115">The following are examples of pointer type declarations:</span></span>
+<span data-ttu-id="4498c-114">`myType*` 类型的指针变量的值为 `myType` 类型的变量的地址。</span><span class="sxs-lookup"><span data-stu-id="4498c-114">The value of the pointer variable of type `myType*` is the address of a variable of type `myType`.</span></span> <span data-ttu-id="4498c-115">下面是指针类型声明的示例：</span><span class="sxs-lookup"><span data-stu-id="4498c-115">The following are examples of pointer type declarations:</span></span>
 
-|<span data-ttu-id="d1525-116">示例</span><span class="sxs-lookup"><span data-stu-id="d1525-116">Example</span></span>|<span data-ttu-id="d1525-117">说明</span><span class="sxs-lookup"><span data-stu-id="d1525-117">Description</span></span>|
+|<span data-ttu-id="4498c-116">示例</span><span class="sxs-lookup"><span data-stu-id="4498c-116">Example</span></span>|<span data-ttu-id="4498c-117">说明</span><span class="sxs-lookup"><span data-stu-id="4498c-117">Description</span></span>|
 |-------------|-----------------|
-|`int* p`|<span data-ttu-id="d1525-118">`p` 是指向整数的指针。</span><span class="sxs-lookup"><span data-stu-id="d1525-118">`p` is a pointer to an integer.</span></span>|
-|`int** p`|<span data-ttu-id="d1525-119">`p` 是指向整数的指针的指针。</span><span class="sxs-lookup"><span data-stu-id="d1525-119">`p` is a pointer to a pointer to an integer.</span></span>|
-|`int*[] p`|<span data-ttu-id="d1525-120">`p` 是指向整数的指针的一维数组。</span><span class="sxs-lookup"><span data-stu-id="d1525-120">`p` is a single-dimensional array of pointers to integers.</span></span>|
-|`char* p`|<span data-ttu-id="d1525-121">`p` 是指向字符的指针。</span><span class="sxs-lookup"><span data-stu-id="d1525-121">`p` is a pointer to a char.</span></span>|
-|`void* p`|<span data-ttu-id="d1525-122">`p` 是指向未知类型的指针。</span><span class="sxs-lookup"><span data-stu-id="d1525-122">`p` is a pointer to an unknown type.</span></span>|
+|`int* p`|<span data-ttu-id="4498c-118">`p` 是指向整数的指针。</span><span class="sxs-lookup"><span data-stu-id="4498c-118">`p` is a pointer to an integer.</span></span>|
+|`int** p`|<span data-ttu-id="4498c-119">`p` 是指向整数的指针的指针。</span><span class="sxs-lookup"><span data-stu-id="4498c-119">`p` is a pointer to a pointer to an integer.</span></span>|
+|`int*[] p`|<span data-ttu-id="4498c-120">`p` 是指向整数的指针的一维数组。</span><span class="sxs-lookup"><span data-stu-id="4498c-120">`p` is a single-dimensional array of pointers to integers.</span></span>|
+|`char* p`|<span data-ttu-id="4498c-121">`p` 是指向字符的指针。</span><span class="sxs-lookup"><span data-stu-id="4498c-121">`p` is a pointer to a char.</span></span>|
+|`void* p`|<span data-ttu-id="4498c-122">`p` 是指向未知类型的指针。</span><span class="sxs-lookup"><span data-stu-id="4498c-122">`p` is a pointer to an unknown type.</span></span>|
 
-<span data-ttu-id="d1525-123">指针间接寻址运算符 \* 可用于访问位于指针变量所指向的位置的内容。</span><span class="sxs-lookup"><span data-stu-id="d1525-123">The pointer indirection operator \* can be used to access the contents at the location pointed to by the pointer variable.</span></span> <span data-ttu-id="d1525-124">例如，请考虑以下声明：</span><span class="sxs-lookup"><span data-stu-id="d1525-124">For example, consider the following declaration:</span></span>
+<span data-ttu-id="4498c-123">指针间接寻址运算符 \* 可用于访问位于指针变量所指向的位置的内容。</span><span class="sxs-lookup"><span data-stu-id="4498c-123">The pointer indirection operator \* can be used to access the contents at the location pointed to by the pointer variable.</span></span> <span data-ttu-id="4498c-124">例如，请考虑以下声明：</span><span class="sxs-lookup"><span data-stu-id="4498c-124">For example, consider the following declaration:</span></span>
 
 ```csharp
 int* myVariable;
 ```
 
-<span data-ttu-id="d1525-125">表达式 `*myVariable` 表示在 `int` 中包含的地址处找到的 `myVariable` 变量。</span><span class="sxs-lookup"><span data-stu-id="d1525-125">The expression `*myVariable` denotes the `int` variable found at the address contained in `myVariable`.</span></span>
+<span data-ttu-id="4498c-125">表达式 `*myVariable` 表示在 `int` 中包含的地址处找到的 `myVariable` 变量。</span><span class="sxs-lookup"><span data-stu-id="4498c-125">The expression `*myVariable` denotes the `int` variable found at the address contained in `myVariable`.</span></span>
 
-<span data-ttu-id="d1525-126">[fixed 语句](../../language-reference/keywords/fixed-statement.md)和[指针转换](../../programming-guide/unsafe-code-pointers/pointer-conversions.md)主题中有几个指针示例。</span><span class="sxs-lookup"><span data-stu-id="d1525-126">There are several examples of pointers in the topics [fixed Statement](../../language-reference/keywords/fixed-statement.md) and [Pointer Conversions](../../programming-guide/unsafe-code-pointers/pointer-conversions.md).</span></span> <span data-ttu-id="d1525-127">下面的示例使用 `unsafe` 关键字和 `fixed` 语句，并显示如何递增内部指针。</span><span class="sxs-lookup"><span data-stu-id="d1525-127">The following example uses the `unsafe` keyword and the `fixed` statement, and shows how to increment an interior pointer.</span></span>  <span data-ttu-id="d1525-128">你可将此代码粘贴到控制台应用程序的 Main 函数中来运行它。</span><span class="sxs-lookup"><span data-stu-id="d1525-128">You can paste this code into the Main function of a console application to run it.</span></span> <span data-ttu-id="d1525-129">这些示例必须使用 [-unsafe](../../language-reference/compiler-options/unsafe-compiler-option.md) 编译器选项集进行编译。</span><span class="sxs-lookup"><span data-stu-id="d1525-129">These examples must be compiled with the [-unsafe](../../language-reference/compiler-options/unsafe-compiler-option.md) compiler option set.</span></span>
+<span data-ttu-id="4498c-126">[fixed 语句](../../language-reference/keywords/fixed-statement.md)和[指针转换](./pointer-conversions.md)主题中有几个指针示例。</span><span class="sxs-lookup"><span data-stu-id="4498c-126">There are several examples of pointers in the topics [fixed Statement](../../language-reference/keywords/fixed-statement.md) and [Pointer Conversions](./pointer-conversions.md).</span></span> <span data-ttu-id="4498c-127">下面的示例使用 `unsafe` 关键字和 `fixed` 语句，并显示如何递增内部指针。</span><span class="sxs-lookup"><span data-stu-id="4498c-127">The following example uses the `unsafe` keyword and the `fixed` statement, and shows how to increment an interior pointer.</span></span>  <span data-ttu-id="4498c-128">你可将此代码粘贴到控制台应用程序的 Main 函数中来运行它。</span><span class="sxs-lookup"><span data-stu-id="4498c-128">You can paste this code into the Main function of a console application to run it.</span></span> <span data-ttu-id="4498c-129">这些示例必须使用 [-unsafe](../../language-reference/compiler-options/unsafe-compiler-option.md) 编译器选项集进行编译。</span><span class="sxs-lookup"><span data-stu-id="4498c-129">These examples must be compiled with the [-unsafe](../../language-reference/compiler-options/unsafe-compiler-option.md) compiler option set.</span></span>
 
 [!code-csharp[Using pointer types](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#5)]
 
-<span data-ttu-id="d1525-130">你无法对 `void*` 类型的指针应用间接寻址运算符。</span><span class="sxs-lookup"><span data-stu-id="d1525-130">You cannot apply the indirection operator to a pointer of type `void*`.</span></span> <span data-ttu-id="d1525-131">但是，你可以使用强制转换将 void 指针转换为任何其他指针类型，反之亦然。</span><span class="sxs-lookup"><span data-stu-id="d1525-131">However, you can use a cast to convert a void pointer to any other pointer type, and vice versa.</span></span>
+<span data-ttu-id="4498c-130">你无法对 `void*` 类型的指针应用间接寻址运算符。</span><span class="sxs-lookup"><span data-stu-id="4498c-130">You cannot apply the indirection operator to a pointer of type `void*`.</span></span> <span data-ttu-id="4498c-131">但是，你可以使用强制转换将 void 指针转换为任何其他指针类型，反之亦然。</span><span class="sxs-lookup"><span data-stu-id="4498c-131">However, you can use a cast to convert a void pointer to any other pointer type, and vice versa.</span></span>
 
-<span data-ttu-id="d1525-132">指针可以为 `null`。</span><span class="sxs-lookup"><span data-stu-id="d1525-132">A pointer can be `null`.</span></span> <span data-ttu-id="d1525-133">将间接寻址运算符应用于 null 指针将导致由实现定义的行为。</span><span class="sxs-lookup"><span data-stu-id="d1525-133">Applying the indirection operator to a null pointer causes an implementation-defined behavior.</span></span>
+<span data-ttu-id="4498c-132">指针可以为 `null`。</span><span class="sxs-lookup"><span data-stu-id="4498c-132">A pointer can be `null`.</span></span> <span data-ttu-id="4498c-133">将间接寻址运算符应用于 null 指针将导致由实现定义的行为。</span><span class="sxs-lookup"><span data-stu-id="4498c-133">Applying the indirection operator to a null pointer causes an implementation-defined behavior.</span></span>
 
-<span data-ttu-id="d1525-134">在方法之间传递指针会导致未定义的行为。</span><span class="sxs-lookup"><span data-stu-id="d1525-134">Passing pointers between methods can cause undefined behavior.</span></span> <span data-ttu-id="d1525-135">考虑这种方法，该方法通过 `in`、`out` 或 `ref` 参数或作为函数结果返回一个指向局部变量的指针。</span><span class="sxs-lookup"><span data-stu-id="d1525-135">Consider a method that returns a pointer to a local variable through an `in`, `out`, or `ref` parameter or as the function result.</span></span> <span data-ttu-id="d1525-136">如果已在固定块中设置指针，则它指向的变量不再是固定的。</span><span class="sxs-lookup"><span data-stu-id="d1525-136">If the pointer was set in a fixed block, the variable to which it points may no longer be fixed.</span></span>
+<span data-ttu-id="4498c-134">在方法之间传递指针会导致未定义的行为。</span><span class="sxs-lookup"><span data-stu-id="4498c-134">Passing pointers between methods can cause undefined behavior.</span></span> <span data-ttu-id="4498c-135">考虑这种方法，该方法通过 `in`、`out` 或 `ref` 参数或作为函数结果返回一个指向局部变量的指针。</span><span class="sxs-lookup"><span data-stu-id="4498c-135">Consider a method that returns a pointer to a local variable through an `in`, `out`, or `ref` parameter or as the function result.</span></span> <span data-ttu-id="4498c-136">如果已在固定块中设置指针，则它指向的变量不再是固定的。</span><span class="sxs-lookup"><span data-stu-id="4498c-136">If the pointer was set in a fixed block, the variable to which it points may no longer be fixed.</span></span>
 
-<span data-ttu-id="d1525-137">下表列出了可在不安全的上下文中对指针执行的运算符和语句：</span><span class="sxs-lookup"><span data-stu-id="d1525-137">The following table lists the operators and statements that can operate on pointers in an unsafe context:</span></span>
+<span data-ttu-id="4498c-137">下表列出了可在不安全的上下文中对指针执行的运算符和语句：</span><span class="sxs-lookup"><span data-stu-id="4498c-137">The following table lists the operators and statements that can operate on pointers in an unsafe context:</span></span>
 
-|<span data-ttu-id="d1525-138">运算符/语句</span><span class="sxs-lookup"><span data-stu-id="d1525-138">Operator/Statement</span></span>|<span data-ttu-id="d1525-139">使用</span><span class="sxs-lookup"><span data-stu-id="d1525-139">Use</span></span>|
+|<span data-ttu-id="4498c-138">运算符/语句</span><span class="sxs-lookup"><span data-stu-id="4498c-138">Operator/Statement</span></span>|<span data-ttu-id="4498c-139">使用</span><span class="sxs-lookup"><span data-stu-id="4498c-139">Use</span></span>|
 |-------------------------|---------|
-|`*`|<span data-ttu-id="d1525-140">执行指针间接寻址。</span><span class="sxs-lookup"><span data-stu-id="d1525-140">Performs pointer indirection.</span></span>|
-|`->`|<span data-ttu-id="d1525-141">通过指针访问结构的成员。</span><span class="sxs-lookup"><span data-stu-id="d1525-141">Accesses a member of a struct through a pointer.</span></span>|
-|`[]`|<span data-ttu-id="d1525-142">为指针建立索引。</span><span class="sxs-lookup"><span data-stu-id="d1525-142">Indexes a pointer.</span></span>|
-|`&`|<span data-ttu-id="d1525-143">获取变量的地址。</span><span class="sxs-lookup"><span data-stu-id="d1525-143">Obtains the address of a variable.</span></span>|
-|<span data-ttu-id="d1525-144">`++` 和 `--`</span><span class="sxs-lookup"><span data-stu-id="d1525-144">`++` and `--`</span></span>|<span data-ttu-id="d1525-145">递增和递减指针。</span><span class="sxs-lookup"><span data-stu-id="d1525-145">Increments and decrements pointers.</span></span>|
-|<span data-ttu-id="d1525-146">`+` 和 `-`</span><span class="sxs-lookup"><span data-stu-id="d1525-146">`+` and `-`</span></span>|<span data-ttu-id="d1525-147">执行指针算法。</span><span class="sxs-lookup"><span data-stu-id="d1525-147">Performs pointer arithmetic.</span></span>|
-|<span data-ttu-id="d1525-148">`==`、`!=`、`<``>`、`<=` 和 `>=`</span><span class="sxs-lookup"><span data-stu-id="d1525-148">`==`, `!=`, `<`, `>`, `<=`, and `>=`</span></span>|<span data-ttu-id="d1525-149">比较指针。</span><span class="sxs-lookup"><span data-stu-id="d1525-149">Compares pointers.</span></span>|
-|[<span data-ttu-id="d1525-150">`stackalloc` 运算符</span><span class="sxs-lookup"><span data-stu-id="d1525-150">`stackalloc` operator</span></span>](../../language-reference/operators/stackalloc.md)|<span data-ttu-id="d1525-151">在堆栈上分配内存。</span><span class="sxs-lookup"><span data-stu-id="d1525-151">Allocates memory on the stack.</span></span>|
-|[<span data-ttu-id="d1525-152">`fixed` 语句</span><span class="sxs-lookup"><span data-stu-id="d1525-152">`fixed` statement</span></span>](../../language-reference/keywords/fixed-statement.md)|<span data-ttu-id="d1525-153">临时固定变量以便找到其地址。</span><span class="sxs-lookup"><span data-stu-id="d1525-153">Temporarily fixes a variable so that its address may be found.</span></span>|
+|`*`|<span data-ttu-id="4498c-140">执行指针间接寻址。</span><span class="sxs-lookup"><span data-stu-id="4498c-140">Performs pointer indirection.</span></span>|
+|`->`|<span data-ttu-id="4498c-141">通过指针访问结构的成员。</span><span class="sxs-lookup"><span data-stu-id="4498c-141">Accesses a member of a struct through a pointer.</span></span>|
+|`[]`|<span data-ttu-id="4498c-142">为指针建立索引。</span><span class="sxs-lookup"><span data-stu-id="4498c-142">Indexes a pointer.</span></span>|
+|`&`|<span data-ttu-id="4498c-143">获取变量的地址。</span><span class="sxs-lookup"><span data-stu-id="4498c-143">Obtains the address of a variable.</span></span>|
+|<span data-ttu-id="4498c-144">`++` 和 `--`</span><span class="sxs-lookup"><span data-stu-id="4498c-144">`++` and `--`</span></span>|<span data-ttu-id="4498c-145">递增和递减指针。</span><span class="sxs-lookup"><span data-stu-id="4498c-145">Increments and decrements pointers.</span></span>|
+|<span data-ttu-id="4498c-146">`+` 和 `-`</span><span class="sxs-lookup"><span data-stu-id="4498c-146">`+` and `-`</span></span>|<span data-ttu-id="4498c-147">执行指针算法。</span><span class="sxs-lookup"><span data-stu-id="4498c-147">Performs pointer arithmetic.</span></span>|
+|<span data-ttu-id="4498c-148">`==`、`!=`、`<``>`、`<=` 和 `>=`</span><span class="sxs-lookup"><span data-stu-id="4498c-148">`==`, `!=`, `<`, `>`, `<=`, and `>=`</span></span>|<span data-ttu-id="4498c-149">比较指针。</span><span class="sxs-lookup"><span data-stu-id="4498c-149">Compares pointers.</span></span>|
+|[<span data-ttu-id="4498c-150">`stackalloc` 运算符</span><span class="sxs-lookup"><span data-stu-id="4498c-150">`stackalloc` operator</span></span>](../../language-reference/operators/stackalloc.md)|<span data-ttu-id="4498c-151">在堆栈上分配内存。</span><span class="sxs-lookup"><span data-stu-id="4498c-151">Allocates memory on the stack.</span></span>|
+|[<span data-ttu-id="4498c-152">`fixed` 语句</span><span class="sxs-lookup"><span data-stu-id="4498c-152">`fixed` statement</span></span>](../../language-reference/keywords/fixed-statement.md)|<span data-ttu-id="4498c-153">临时固定变量以便找到其地址。</span><span class="sxs-lookup"><span data-stu-id="4498c-153">Temporarily fixes a variable so that its address may be found.</span></span>|
 
-<span data-ttu-id="d1525-154">要详细了解与指针相关的运算符，请参阅[与指针相关的运算符](../../language-reference/operators/pointer-related-operators.md)。</span><span class="sxs-lookup"><span data-stu-id="d1525-154">For more information about pointer related operators, see [Pointer related operators](../../language-reference/operators/pointer-related-operators.md).</span></span>
+<span data-ttu-id="4498c-154">要详细了解与指针相关的运算符，请参阅[与指针相关的运算符](../../language-reference/operators/pointer-related-operators.md)。</span><span class="sxs-lookup"><span data-stu-id="4498c-154">For more information about pointer related operators, see [Pointer related operators](../../language-reference/operators/pointer-related-operators.md).</span></span>
 
-## <a name="c-language-specification"></a><span data-ttu-id="d1525-155">C# 语言规范</span><span class="sxs-lookup"><span data-stu-id="d1525-155">C# language specification</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="4498c-155">C# 语言规范</span><span class="sxs-lookup"><span data-stu-id="4498c-155">C# language specification</span></span>
 
-<span data-ttu-id="d1525-156">有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/introduction.md)的[指针类型](~/_csharplang/spec/unsafe-code.md#pointer-types)部分。</span><span class="sxs-lookup"><span data-stu-id="d1525-156">For more information, see the [Pointer types](~/_csharplang/spec/unsafe-code.md#pointer-types) section of the [C# language specification](~/_csharplang/spec/introduction.md).</span></span>
+<span data-ttu-id="4498c-156">有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/introduction.md)的[指针类型](~/_csharplang/spec/unsafe-code.md#pointer-types)部分。</span><span class="sxs-lookup"><span data-stu-id="4498c-156">For more information, see the [Pointer types](~/_csharplang/spec/unsafe-code.md#pointer-types) section of the [C# language specification](~/_csharplang/spec/introduction.md).</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="d1525-157">请参阅</span><span class="sxs-lookup"><span data-stu-id="d1525-157">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4498c-157">请参阅</span><span class="sxs-lookup"><span data-stu-id="4498c-157">See also</span></span>
 
-- [<span data-ttu-id="d1525-158">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="d1525-158">C# Programming Guide</span></span>](../index.md)
-- [<span data-ttu-id="d1525-159">不安全代码和指针</span><span class="sxs-lookup"><span data-stu-id="d1525-159">Unsafe Code and Pointers</span></span>](index.md)
-- [<span data-ttu-id="d1525-160">指针转换</span><span class="sxs-lookup"><span data-stu-id="d1525-160">Pointer Conversions</span></span>](pointer-conversions.md)
-- [<span data-ttu-id="d1525-161">类型</span><span class="sxs-lookup"><span data-stu-id="d1525-161">Types</span></span>](../../language-reference/keywords/types.md)
-- [<span data-ttu-id="d1525-162">unsafe</span><span class="sxs-lookup"><span data-stu-id="d1525-162">unsafe</span></span>](../../language-reference/keywords/unsafe.md)
+- [<span data-ttu-id="4498c-158">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="4498c-158">C# Programming Guide</span></span>](../index.md)
+- [<span data-ttu-id="4498c-159">不安全代码和指针</span><span class="sxs-lookup"><span data-stu-id="4498c-159">Unsafe Code and Pointers</span></span>](index.md)
+- [<span data-ttu-id="4498c-160">指针转换</span><span class="sxs-lookup"><span data-stu-id="4498c-160">Pointer Conversions</span></span>](pointer-conversions.md)
+- [<span data-ttu-id="4498c-161">类型</span><span class="sxs-lookup"><span data-stu-id="4498c-161">Types</span></span>](../../language-reference/keywords/types.md)
+- [<span data-ttu-id="4498c-162">unsafe</span><span class="sxs-lookup"><span data-stu-id="4498c-162">unsafe</span></span>](../../language-reference/keywords/unsafe.md)
