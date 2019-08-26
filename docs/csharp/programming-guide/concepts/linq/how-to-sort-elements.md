@@ -2,18 +2,18 @@
 title: 如何：对元素进行排序 (C#)
 ms.date: 07/20/2015
 ms.assetid: aee6fbbc-81fd-4b3e-b40f-6ed7b3bd3fee
-ms.openlocfilehash: ac79690ce45f6875900418b39e0f5e86596dceff
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 074428413fa57d8f0e5ae94970c2aeeeb9e4cc7c
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710053"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69592455"
 ---
-# <a name="how-to-sort-elements-c"></a><span data-ttu-id="b757e-102">如何：对元素进行排序 (C#)</span><span class="sxs-lookup"><span data-stu-id="b757e-102">How to: Sort Elements (C#)</span></span>
-<span data-ttu-id="b757e-103">本示例演示如何编写对查询结果进行排序的查询。</span><span class="sxs-lookup"><span data-stu-id="b757e-103">This example shows how to write a query that sorts its results.</span></span>  
+# <a name="how-to-sort-elements-c"></a><span data-ttu-id="d80b7-102">如何：对元素进行排序 (C#)</span><span class="sxs-lookup"><span data-stu-id="d80b7-102">How to: Sort Elements (C#)</span></span>
+<span data-ttu-id="d80b7-103">本示例演示如何编写对查询结果进行排序的查询。</span><span class="sxs-lookup"><span data-stu-id="d80b7-103">This example shows how to write a query that sorts its results.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="b757e-104">示例</span><span class="sxs-lookup"><span data-stu-id="b757e-104">Example</span></span>  
- <span data-ttu-id="b757e-105">此示例使用下面的 XML 文档：[示例 XML 文件：数值数据 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="b757e-105">This example uses the following XML document: [Sample XML File: Numerical Data (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).</span></span>  
+## <a name="example"></a><span data-ttu-id="d80b7-104">示例</span><span class="sxs-lookup"><span data-stu-id="d80b7-104">Example</span></span>  
+ <span data-ttu-id="d80b7-105">此示例使用下面的 XML 文档：[示例 XML 文件：数值数据 (LINQ to XML)](./sample-xml-file-numerical-data-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="d80b7-105">This example uses the following XML document: [Sample XML File: Numerical Data (LINQ to XML)](./sample-xml-file-numerical-data-linq-to-xml.md).</span></span>  
   
 ```csharp  
 XElement root = XElement.Load("Data.xml");  
@@ -26,7 +26,7 @@ foreach (decimal el in prices)
     Console.WriteLine(el);  
 ```  
   
- <span data-ttu-id="b757e-106">此代码生成以下输出：</span><span class="sxs-lookup"><span data-stu-id="b757e-106">This code produces the following output:</span></span>  
+ <span data-ttu-id="d80b7-106">此代码生成以下输出：</span><span class="sxs-lookup"><span data-stu-id="d80b7-106">This code produces the following output:</span></span>  
   
 ```  
 0.99  
@@ -38,10 +38,10 @@ foreach (decimal el in prices)
 89.99  
 ```  
   
-## <a name="example"></a><span data-ttu-id="b757e-107">示例</span><span class="sxs-lookup"><span data-stu-id="b757e-107">Example</span></span>  
- <span data-ttu-id="b757e-108">下面的示例演示如何对命名空间中的 XML 进行同样的查询。</span><span class="sxs-lookup"><span data-stu-id="b757e-108">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="b757e-109">有关详细信息，请参阅[命名空间概述(LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="b757e-109">For more information, see [Namespaces Overview (LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md).</span></span>  
+## <a name="example"></a><span data-ttu-id="d80b7-107">示例</span><span class="sxs-lookup"><span data-stu-id="d80b7-107">Example</span></span>  
+ <span data-ttu-id="d80b7-108">下面的示例演示如何对命名空间中的 XML 进行同样的查询。</span><span class="sxs-lookup"><span data-stu-id="d80b7-108">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="d80b7-109">有关详细信息，请参阅[命名空间概述(LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="d80b7-109">For more information, see [Namespaces Overview (LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md).</span></span>  
   
- <span data-ttu-id="b757e-110">此示例使用下面的 XML 文档：[示例 XML 文件：命名空间中的数值数据](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md)。</span><span class="sxs-lookup"><span data-stu-id="b757e-110">This example uses the following XML document: [Sample XML File: Numerical Data in a Namespace](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md).</span></span>  
+ <span data-ttu-id="d80b7-110">此示例使用下面的 XML 文档：[示例 XML 文件：命名空间中的数值数据](./sample-xml-file-numerical-data-in-a-namespace.md)。</span><span class="sxs-lookup"><span data-stu-id="d80b7-110">This example uses the following XML document: [Sample XML File: Numerical Data in a Namespace](./sample-xml-file-numerical-data-in-a-namespace.md).</span></span>  
   
 ```csharp  
 XElement root = XElement.Load("DataInNamespace.xml");  
@@ -55,7 +55,7 @@ foreach (decimal el in prices)
     Console.WriteLine(el);  
 ```  
   
- <span data-ttu-id="b757e-111">此代码生成以下输出：</span><span class="sxs-lookup"><span data-stu-id="b757e-111">This code produces the following output:</span></span>  
+ <span data-ttu-id="d80b7-111">此代码生成以下输出：</span><span class="sxs-lookup"><span data-stu-id="d80b7-111">This code produces the following output:</span></span>  
   
 ```  
 0.99  
@@ -67,6 +67,6 @@ foreach (decimal el in prices)
 89.99  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="b757e-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="b757e-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d80b7-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="d80b7-112">See also</span></span>
 
-- [<span data-ttu-id="b757e-113">对数据进行排序 (C#)</span><span class="sxs-lookup"><span data-stu-id="b757e-113">Sorting Data (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/sorting-data.md)
+- [<span data-ttu-id="d80b7-113">对数据进行排序 (C#)</span><span class="sxs-lookup"><span data-stu-id="d80b7-113">Sorting Data (C#)</span></span>](./sorting-data.md)

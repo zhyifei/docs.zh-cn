@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - '#endregion directive [C#]'
 ms.assetid: 16099660-91b2-49e5-9646-77f9ef069526
-ms.openlocfilehash: 4f08672003a15e51cb3a5a990a2e760878689ba5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ba99d2df7e5cf1b40cc240da391b9dc8655ab2e2
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54727880"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69605678"
 ---
-# <a name="endregion-c-reference"></a><span data-ttu-id="72dc2-102">#endregion（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="72dc2-102">#endregion (C# Reference)</span></span>
-<span data-ttu-id="72dc2-103">`#endregion` 标记 [#region](../../../csharp/language-reference/preprocessor-directives/preprocessor-region.md) 块的结尾。</span><span class="sxs-lookup"><span data-stu-id="72dc2-103">`#endregion` marks the end of a [#region](../../../csharp/language-reference/preprocessor-directives/preprocessor-region.md) block.</span></span> <span data-ttu-id="72dc2-104">例如:</span><span class="sxs-lookup"><span data-stu-id="72dc2-104">For example:</span></span>  
+# <a name="endregion-c-reference"></a><span data-ttu-id="f46f0-102">#endregion（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="f46f0-102">#endregion (C# Reference)</span></span>
+<span data-ttu-id="f46f0-103">`#endregion` 标记 [#region](./preprocessor-region.md) 块的结尾。</span><span class="sxs-lookup"><span data-stu-id="f46f0-103">`#endregion` marks the end of a [#region](./preprocessor-region.md) block.</span></span> <span data-ttu-id="f46f0-104">例如:</span><span class="sxs-lookup"><span data-stu-id="f46f0-104">For example:</span></span>  
   
 ```csharp
 #region MyClass definition  
@@ -28,8 +28,8 @@ class MyClass
 #endregion  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="72dc2-105">请参阅</span><span class="sxs-lookup"><span data-stu-id="72dc2-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f46f0-105">请参阅</span><span class="sxs-lookup"><span data-stu-id="f46f0-105">See also</span></span>
 
-- [<span data-ttu-id="72dc2-106">C# 参考</span><span class="sxs-lookup"><span data-stu-id="72dc2-106">C# Reference</span></span>](../../../csharp/language-reference/index.md)
-- [<span data-ttu-id="72dc2-107">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="72dc2-107">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
-- [<span data-ttu-id="72dc2-108">C# 预处理器指令</span><span class="sxs-lookup"><span data-stu-id="72dc2-108">C# Preprocessor Directives</span></span>](../../../csharp/language-reference/preprocessor-directives/index.md)
+- [<span data-ttu-id="f46f0-106">C# 参考</span><span class="sxs-lookup"><span data-stu-id="f46f0-106">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="f46f0-107">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="f46f0-107">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="f46f0-108">C# 预处理器指令</span><span class="sxs-lookup"><span data-stu-id="f46f0-108">C# Preprocessor Directives</span></span>](./index.md)

@@ -2,30 +2,30 @@
 title: XAttribute 类概述 (C#)
 ms.date: 07/20/2015
 ms.assetid: 5a630f24-f9ad-400e-831e-c14ebfc9e142
-ms.openlocfilehash: 0440e8271edcf54d00a56e2987235afd260f9156
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 79ef00aa79be0c743423cfba1a911b238ff9a7ca
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66483193"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590923"
 ---
-# <a name="xattribute-class-overview-c"></a><span data-ttu-id="2c6fd-102">XAttribute 类概述 (C#)</span><span class="sxs-lookup"><span data-stu-id="2c6fd-102">XAttribute Class Overview (C#)</span></span>
-<span data-ttu-id="2c6fd-103">属性是与元素关联的名称/值对。</span><span class="sxs-lookup"><span data-stu-id="2c6fd-103">Attributes are name/value pairs that are associated with an element.</span></span> <span data-ttu-id="2c6fd-104"><xref:System.Xml.Linq.XAttribute> 类表示 XML 属性。</span><span class="sxs-lookup"><span data-stu-id="2c6fd-104">The <xref:System.Xml.Linq.XAttribute> class represents XML attributes.</span></span>  
+# <a name="xattribute-class-overview-c"></a><span data-ttu-id="17d29-102">XAttribute 类概述 (C#)</span><span class="sxs-lookup"><span data-stu-id="17d29-102">XAttribute Class Overview (C#)</span></span>
+<span data-ttu-id="17d29-103">属性是与元素关联的名称/值对。</span><span class="sxs-lookup"><span data-stu-id="17d29-103">Attributes are name/value pairs that are associated with an element.</span></span> <span data-ttu-id="17d29-104"><xref:System.Xml.Linq.XAttribute> 类表示 XML 属性。</span><span class="sxs-lookup"><span data-stu-id="17d29-104">The <xref:System.Xml.Linq.XAttribute> class represents XML attributes.</span></span>  
   
-## <a name="overview"></a><span data-ttu-id="2c6fd-105">概述</span><span class="sxs-lookup"><span data-stu-id="2c6fd-105">Overview</span></span>  
- <span data-ttu-id="2c6fd-106">使用 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 中的属性，与使用元素非常相似。</span><span class="sxs-lookup"><span data-stu-id="2c6fd-106">Working with attributes in [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] is similar to working with elements.</span></span> <span data-ttu-id="2c6fd-107">它们的构造函数相似。</span><span class="sxs-lookup"><span data-stu-id="2c6fd-107">Their constructors are similar.</span></span> <span data-ttu-id="2c6fd-108">用于检索它们的集合的方法相似。</span><span class="sxs-lookup"><span data-stu-id="2c6fd-108">The methods that you use to retrieve collections of them are similar.</span></span> <span data-ttu-id="2c6fd-109">属性集合的 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询表达式与元素集合的 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询表达式看起来非常相似。</span><span class="sxs-lookup"><span data-stu-id="2c6fd-109">A [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query expression for a collection of attributes looks very similar to a [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query expression for a collection of elements.</span></span>  
+## <a name="overview"></a><span data-ttu-id="17d29-105">概述</span><span class="sxs-lookup"><span data-stu-id="17d29-105">Overview</span></span>  
+ <span data-ttu-id="17d29-106">使用 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 中的属性，与使用元素非常相似。</span><span class="sxs-lookup"><span data-stu-id="17d29-106">Working with attributes in [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] is similar to working with elements.</span></span> <span data-ttu-id="17d29-107">它们的构造函数相似。</span><span class="sxs-lookup"><span data-stu-id="17d29-107">Their constructors are similar.</span></span> <span data-ttu-id="17d29-108">用于检索它们的集合的方法相似。</span><span class="sxs-lookup"><span data-stu-id="17d29-108">The methods that you use to retrieve collections of them are similar.</span></span> <span data-ttu-id="17d29-109">属性集合的 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询表达式与元素集合的 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询表达式看起来非常相似。</span><span class="sxs-lookup"><span data-stu-id="17d29-109">A [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query expression for a collection of attributes looks very similar to a [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query expression for a collection of elements.</span></span>  
   
- <span data-ttu-id="2c6fd-110">将属性添加到元素中的顺序会保留下来。</span><span class="sxs-lookup"><span data-stu-id="2c6fd-110">The order in which attributes were added to an element is preserved.</span></span> <span data-ttu-id="2c6fd-111">也就是说，当循环访问属性时，所见到的属性顺序与它们的添加顺序相同。</span><span class="sxs-lookup"><span data-stu-id="2c6fd-111">That is, when you iterate through the attributes, you see them in the same order that they were added.</span></span>  
+ <span data-ttu-id="17d29-110">将属性添加到元素中的顺序会保留下来。</span><span class="sxs-lookup"><span data-stu-id="17d29-110">The order in which attributes were added to an element is preserved.</span></span> <span data-ttu-id="17d29-111">也就是说，当循环访问属性时，所见到的属性顺序与它们的添加顺序相同。</span><span class="sxs-lookup"><span data-stu-id="17d29-111">That is, when you iterate through the attributes, you see them in the same order that they were added.</span></span>  
   
-## <a name="the-xattribute-constructor"></a><span data-ttu-id="2c6fd-112">XAttribute 构造函数</span><span class="sxs-lookup"><span data-stu-id="2c6fd-112">The XAttribute Constructor</span></span>  
- <span data-ttu-id="2c6fd-113">下面的 <xref:System.Xml.Linq.XAttribute> 类构造函数是您将最常使用的构造函数之一：</span><span class="sxs-lookup"><span data-stu-id="2c6fd-113">The following constructor of the <xref:System.Xml.Linq.XAttribute> class is the one that you will most commonly use:</span></span>  
+## <a name="the-xattribute-constructor"></a><span data-ttu-id="17d29-112">XAttribute 构造函数</span><span class="sxs-lookup"><span data-stu-id="17d29-112">The XAttribute Constructor</span></span>  
+ <span data-ttu-id="17d29-113">下面的 <xref:System.Xml.Linq.XAttribute> 类构造函数是您将最常使用的构造函数之一：</span><span class="sxs-lookup"><span data-stu-id="17d29-113">The following constructor of the <xref:System.Xml.Linq.XAttribute> class is the one that you will most commonly use:</span></span>  
   
-|<span data-ttu-id="2c6fd-114">构造函数</span><span class="sxs-lookup"><span data-stu-id="2c6fd-114">Constructor</span></span>|<span data-ttu-id="2c6fd-115">说明</span><span class="sxs-lookup"><span data-stu-id="2c6fd-115">Description</span></span>|  
+|<span data-ttu-id="17d29-114">构造函数</span><span class="sxs-lookup"><span data-stu-id="17d29-114">Constructor</span></span>|<span data-ttu-id="17d29-115">说明</span><span class="sxs-lookup"><span data-stu-id="17d29-115">Description</span></span>|  
 |-----------------|-----------------|  
-|`XAttribute(XName name, object content)`|<span data-ttu-id="2c6fd-116">创建一个 <xref:System.Xml.Linq.XAttribute> 对象。</span><span class="sxs-lookup"><span data-stu-id="2c6fd-116">Creates an <xref:System.Xml.Linq.XAttribute> object.</span></span> <span data-ttu-id="2c6fd-117">`name` 参数指定属性的名称；`content` 指定属性的内容。</span><span class="sxs-lookup"><span data-stu-id="2c6fd-117">The `name` argument specifies the name of the attribute; `content` specifies the content of the attribute.</span></span>|  
+|`XAttribute(XName name, object content)`|<span data-ttu-id="17d29-116">创建一个 <xref:System.Xml.Linq.XAttribute> 对象。</span><span class="sxs-lookup"><span data-stu-id="17d29-116">Creates an <xref:System.Xml.Linq.XAttribute> object.</span></span> <span data-ttu-id="17d29-117">`name` 参数指定属性的名称；`content` 指定属性的内容。</span><span class="sxs-lookup"><span data-stu-id="17d29-117">The `name` argument specifies the name of the attribute; `content` specifies the content of the attribute.</span></span>|  
   
-### <a name="creating-an-element-with-an-attribute"></a><span data-ttu-id="2c6fd-118">创建具有属性的元素</span><span class="sxs-lookup"><span data-stu-id="2c6fd-118">Creating an Element with an Attribute</span></span>  
- <span data-ttu-id="2c6fd-119">下面的代码演示创建包含属性的元素的常见任务：</span><span class="sxs-lookup"><span data-stu-id="2c6fd-119">The following code shows the common task of creating an element that contains an attribute:</span></span>  
+### <a name="creating-an-element-with-an-attribute"></a><span data-ttu-id="17d29-118">创建具有属性的元素</span><span class="sxs-lookup"><span data-stu-id="17d29-118">Creating an Element with an Attribute</span></span>  
+ <span data-ttu-id="17d29-119">下面的代码演示创建包含属性的元素的常见任务：</span><span class="sxs-lookup"><span data-stu-id="17d29-119">The following code shows the common task of creating an element that contains an attribute:</span></span>  
   
 ```csharp  
 XElement phone = new XElement("Phone",  
@@ -34,14 +34,14 @@ XElement phone = new XElement("Phone",
 Console.WriteLine(phone);  
 ```  
   
- <span data-ttu-id="2c6fd-120">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="2c6fd-120">This example produces the following output:</span></span>  
+ <span data-ttu-id="17d29-120">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="17d29-120">This example produces the following output:</span></span>  
   
 ```xml  
 <Phone Type="Home">555-555-5555</Phone>  
 ```  
   
-### <a name="functional-construction-of-attributes"></a><span data-ttu-id="2c6fd-121">属性的函数构造</span><span class="sxs-lookup"><span data-stu-id="2c6fd-121">Functional Construction of Attributes</span></span>  
- <span data-ttu-id="2c6fd-122">可以构造与 <xref:System.Xml.Linq.XAttribute> 对象的构造一致的 <xref:System.Xml.Linq.XElement> 对象，如下所示：</span><span class="sxs-lookup"><span data-stu-id="2c6fd-122">You can construct <xref:System.Xml.Linq.XAttribute> objects in-line with the construction of <xref:System.Xml.Linq.XElement> objects, as follows:</span></span>  
+### <a name="functional-construction-of-attributes"></a><span data-ttu-id="17d29-121">属性的函数构造</span><span class="sxs-lookup"><span data-stu-id="17d29-121">Functional Construction of Attributes</span></span>  
+ <span data-ttu-id="17d29-122">可以构造与 <xref:System.Xml.Linq.XAttribute> 对象的构造一致的 <xref:System.Xml.Linq.XElement> 对象，如下所示：</span><span class="sxs-lookup"><span data-stu-id="17d29-122">You can construct <xref:System.Xml.Linq.XAttribute> objects in-line with the construction of <xref:System.Xml.Linq.XElement> objects, as follows:</span></span>  
   
 ```csharp  
 XElement c = new XElement("Customers",  
@@ -60,7 +60,7 @@ XElement c = new XElement("Customers",
 Console.WriteLine(c);  
 ```  
   
- <span data-ttu-id="2c6fd-123">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="2c6fd-123">This example produces the following output:</span></span>  
+ <span data-ttu-id="17d29-123">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="17d29-123">This example produces the following output:</span></span>  
   
 ```xml  
 <Customers>  
@@ -74,11 +74,11 @@ Console.WriteLine(c);
 </Customers>  
 ```  
   
-### <a name="attributes-are-not-nodes"></a><span data-ttu-id="2c6fd-124">属性不是节点</span><span class="sxs-lookup"><span data-stu-id="2c6fd-124">Attributes Are Not Nodes</span></span>  
- <span data-ttu-id="2c6fd-125">属性与元素之间有些区别。</span><span class="sxs-lookup"><span data-stu-id="2c6fd-125">There are some differences between attributes and elements.</span></span> <span data-ttu-id="2c6fd-126"><xref:System.Xml.Linq.XAttribute> 对象不是 XML 树中的节点。</span><span class="sxs-lookup"><span data-stu-id="2c6fd-126"><xref:System.Xml.Linq.XAttribute> objects are not nodes in the XML tree.</span></span> <span data-ttu-id="2c6fd-127">它们是与 XML 元素关联的名称/值对。</span><span class="sxs-lookup"><span data-stu-id="2c6fd-127">They are name/value pairs associated with an XML element.</span></span> <span data-ttu-id="2c6fd-128">与文档对象模型 (DOM) 相比，这更加贴切地反映了 XML 结构。</span><span class="sxs-lookup"><span data-stu-id="2c6fd-128">In contrast to the Document Object Model (DOM), this more closely reflects the structure of XML.</span></span> <span data-ttu-id="2c6fd-129">虽然 <xref:System.Xml.Linq.XAttribute> 对象实际上不是 XML 树的节点，但使用 <xref:System.Xml.Linq.XAttribute> 对象与使用 <xref:System.Xml.Linq.XElement> 对象非常相似。</span><span class="sxs-lookup"><span data-stu-id="2c6fd-129">Although <xref:System.Xml.Linq.XAttribute> objects are not actually nodes in the XML tree, working with <xref:System.Xml.Linq.XAttribute> objects is very similar to working with <xref:System.Xml.Linq.XElement> objects.</span></span>  
+### <a name="attributes-are-not-nodes"></a><span data-ttu-id="17d29-124">属性不是节点</span><span class="sxs-lookup"><span data-stu-id="17d29-124">Attributes Are Not Nodes</span></span>  
+ <span data-ttu-id="17d29-125">属性与元素之间有些区别。</span><span class="sxs-lookup"><span data-stu-id="17d29-125">There are some differences between attributes and elements.</span></span> <span data-ttu-id="17d29-126"><xref:System.Xml.Linq.XAttribute> 对象不是 XML 树中的节点。</span><span class="sxs-lookup"><span data-stu-id="17d29-126"><xref:System.Xml.Linq.XAttribute> objects are not nodes in the XML tree.</span></span> <span data-ttu-id="17d29-127">它们是与 XML 元素关联的名称/值对。</span><span class="sxs-lookup"><span data-stu-id="17d29-127">They are name/value pairs associated with an XML element.</span></span> <span data-ttu-id="17d29-128">与文档对象模型 (DOM) 相比，这更加贴切地反映了 XML 结构。</span><span class="sxs-lookup"><span data-stu-id="17d29-128">In contrast to the Document Object Model (DOM), this more closely reflects the structure of XML.</span></span> <span data-ttu-id="17d29-129">虽然 <xref:System.Xml.Linq.XAttribute> 对象实际上不是 XML 树的节点，但使用 <xref:System.Xml.Linq.XAttribute> 对象与使用 <xref:System.Xml.Linq.XElement> 对象非常相似。</span><span class="sxs-lookup"><span data-stu-id="17d29-129">Although <xref:System.Xml.Linq.XAttribute> objects are not actually nodes in the XML tree, working with <xref:System.Xml.Linq.XAttribute> objects is very similar to working with <xref:System.Xml.Linq.XElement> objects.</span></span>  
   
- <span data-ttu-id="2c6fd-130">这一区别仅对编写在节点级使用 XML 树的代码的开发人员特别重要。</span><span class="sxs-lookup"><span data-stu-id="2c6fd-130">This distinction is primarily important only to developers who are writing code that works with XML trees at the node level.</span></span> <span data-ttu-id="2c6fd-131">许多开发人员不会关心这种区别。</span><span class="sxs-lookup"><span data-stu-id="2c6fd-131">Many developers will not be concerned with this distinction.</span></span>  
+ <span data-ttu-id="17d29-130">这一区别仅对编写在节点级使用 XML 树的代码的开发人员特别重要。</span><span class="sxs-lookup"><span data-stu-id="17d29-130">This distinction is primarily important only to developers who are writing code that works with XML trees at the node level.</span></span> <span data-ttu-id="17d29-131">许多开发人员不会关心这种区别。</span><span class="sxs-lookup"><span data-stu-id="17d29-131">Many developers will not be concerned with this distinction.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2c6fd-132">请参阅</span><span class="sxs-lookup"><span data-stu-id="2c6fd-132">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="17d29-132">请参阅</span><span class="sxs-lookup"><span data-stu-id="17d29-132">See also</span></span>
 
-- [<span data-ttu-id="2c6fd-133">LINQ to XML 编程概述 (C#)</span><span class="sxs-lookup"><span data-stu-id="2c6fd-133">LINQ to XML Programming Overview (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md)
+- [<span data-ttu-id="17d29-133">LINQ to XML 编程概述 (C#)</span><span class="sxs-lookup"><span data-stu-id="17d29-133">LINQ to XML Programming Overview (C#)</span></span>](./linq-to-xml-overview.md)
