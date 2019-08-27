@@ -440,6 +440,28 @@
           href: core/porting/winforms.md
         - name: 移植 WPF 项目
           href: core/porting/wpf.md
+    - name: 依赖项加载
+      items:
+        - name: 概述
+          href: core/dependency-loading/overview.md
+        - name: 了解 AssemblyLoadContext
+          href: core/dependency-loading/understanding-assemblyloadcontext.md
+        - name: 加载详细信息
+          items:
+            - name: 默认依赖项探测
+              href: core/dependency-loading/default-probing.md
+            - name: 加载托管程序集
+              href: core/dependency-loading/loading-managed.md
+            - name: 加载附属程序集
+              href: core/dependency-loading/loading-resources.md
+            - name: 加载非托管库
+              href: core/dependency-loading/loading-unmanaged.md
+        - name: 教程
+          items:
+            - name: 使用插件创建 .NET Core 应用程序
+              href: core/tutorials/creating-app-with-plugin-support.md
+            - name: 如何在 .NET Core 中使用和调试程序集可卸载性
+              href: standard/assembly/unloadability-howto.md
     - name: 从源生成 .NET Core
       href: core/build/index.md
       items:
