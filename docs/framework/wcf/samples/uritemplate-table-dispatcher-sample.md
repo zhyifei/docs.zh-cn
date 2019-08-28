@@ -2,40 +2,40 @@
 title: UriTemplate 表调度程序示例
 ms.date: 03/30/2017
 ms.assetid: 3b32975d-ba90-4c5c-83bc-2fbb48f11c0c
-ms.openlocfilehash: 4c5f7172543f575655faafad781a272e355224b6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 724a13504cea2672aef7ff155fbbff055aac34e6
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662418"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044579"
 ---
-# <a name="uritemplate-table-dispatcher-sample"></a><span data-ttu-id="5934d-102">UriTemplate 表调度程序示例</span><span class="sxs-lookup"><span data-stu-id="5934d-102">UriTemplate Table Dispatcher Sample</span></span>
-<span data-ttu-id="5934d-103"><xref:System.UriTemplateTable> 类提供了一个类似字典的关联表结构，该结构可用来处理一组 <xref:System.UriTemplate> 实例。</span><span class="sxs-lookup"><span data-stu-id="5934d-103">The <xref:System.UriTemplateTable> class provides a dictionary-like associative table structure for working with a set of <xref:System.UriTemplate> instances.</span></span> <span data-ttu-id="5934d-104">此示例演示使用 `UriTemplateTable` 生成的基本调度引擎，这是 `UriTemplateTable` 类的常见使用方案。</span><span class="sxs-lookup"><span data-stu-id="5934d-104">This sample demonstrates a basic dispatching engine built using `UriTemplateTable`, a common usage scenario for the `UriTemplateTable` class.</span></span>  
+# <a name="uritemplate-table-dispatcher-sample"></a><span data-ttu-id="c8acc-102">UriTemplate 表调度程序示例</span><span class="sxs-lookup"><span data-stu-id="c8acc-102">UriTemplate Table Dispatcher Sample</span></span>
+<span data-ttu-id="c8acc-103"><xref:System.UriTemplateTable> 类提供了一个类似字典的关联表结构，该结构可用来处理一组 <xref:System.UriTemplate> 实例。</span><span class="sxs-lookup"><span data-stu-id="c8acc-103">The <xref:System.UriTemplateTable> class provides a dictionary-like associative table structure for working with a set of <xref:System.UriTemplate> instances.</span></span> <span data-ttu-id="c8acc-104">此示例演示使用 `UriTemplateTable` 生成的基本调度引擎，这是 `UriTemplateTable` 类的常见使用方案。</span><span class="sxs-lookup"><span data-stu-id="c8acc-104">This sample demonstrates a basic dispatching engine built using `UriTemplateTable`, a common usage scenario for the `UriTemplateTable` class.</span></span>  
   
- <span data-ttu-id="5934d-105">此示例演示 `UriTemplateTable` 类的以下关键概念：</span><span class="sxs-lookup"><span data-stu-id="5934d-105">This sample demonstrates the following key concepts for the `UriTemplateTable` class:</span></span>  
+ <span data-ttu-id="c8acc-105">此示例演示 `UriTemplateTable` 类的以下关键概念：</span><span class="sxs-lookup"><span data-stu-id="c8acc-105">This sample demonstrates the following key concepts for the `UriTemplateTable` class:</span></span>  
   
-- <span data-ttu-id="5934d-106">将委托与 `UriTemplates` 中的 `UriTemplateTable` 关联。</span><span class="sxs-lookup"><span data-stu-id="5934d-106">Associating delegates with `UriTemplates` in a `UriTemplateTable`.</span></span>  
+- <span data-ttu-id="c8acc-106">将委托与 `UriTemplates` 中的 `UriTemplateTable` 关联。</span><span class="sxs-lookup"><span data-stu-id="c8acc-106">Associating delegates with `UriTemplates` in a `UriTemplateTable`.</span></span>  
   
-- <span data-ttu-id="5934d-107">使用 <xref:System.UriTemplateTable.MatchSingle%2A> 获取特定 URI 的正确处理程序委托。</span><span class="sxs-lookup"><span data-stu-id="5934d-107">Using <xref:System.UriTemplateTable.MatchSingle%2A> to obtain the correct handler delegate for a particular URI.</span></span>  
+- <span data-ttu-id="c8acc-107">使用 <xref:System.UriTemplateTable.MatchSingle%2A> 获取特定 URI 的正确处理程序委托。</span><span class="sxs-lookup"><span data-stu-id="c8acc-107">Using <xref:System.UriTemplateTable.MatchSingle%2A> to obtain the correct handler delegate for a particular URI.</span></span>  
   
-- <span data-ttu-id="5934d-108">调用处理程序委托以处理请求。</span><span class="sxs-lookup"><span data-stu-id="5934d-108">Invoking the handler delegate to process the request.</span></span>  
+- <span data-ttu-id="c8acc-108">调用处理程序委托以处理请求。</span><span class="sxs-lookup"><span data-stu-id="c8acc-108">Invoking the handler delegate to process the request.</span></span>  
   
-### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="5934d-109">设置、生成和运行示例</span><span class="sxs-lookup"><span data-stu-id="5934d-109">To set up, build, and run the sample</span></span>  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="c8acc-109">设置、生成和运行示例</span><span class="sxs-lookup"><span data-stu-id="c8acc-109">To set up, build, and run the sample</span></span>  
   
-1. <span data-ttu-id="5934d-110">若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。</span><span class="sxs-lookup"><span data-stu-id="5934d-110">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
+1. <span data-ttu-id="c8acc-110">若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。</span><span class="sxs-lookup"><span data-stu-id="c8acc-110">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-2. <span data-ttu-id="5934d-111">若要在单或跨计算机配置中运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="5934d-111">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
+2. <span data-ttu-id="c8acc-111">若要以单机配置或跨计算机配置来运行示例, 请按照[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的说明进行操作。</span><span class="sxs-lookup"><span data-stu-id="c8acc-111">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="5934d-112">您的计算机上可能已安装这些示例。</span><span class="sxs-lookup"><span data-stu-id="5934d-112">The samples may already be installed on your machine.</span></span> <span data-ttu-id="5934d-113">在继续操作之前，请先检查以下（默认）目录：</span><span class="sxs-lookup"><span data-stu-id="5934d-113">Check for the following (default) directory before continuing.</span></span>  
+> <span data-ttu-id="c8acc-112">您的计算机上可能已安装这些示例。</span><span class="sxs-lookup"><span data-stu-id="c8acc-112">The samples may already be installed on your machine.</span></span> <span data-ttu-id="c8acc-113">在继续操作之前，请先检查以下（默认）目录：</span><span class="sxs-lookup"><span data-stu-id="c8acc-113">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="5934d-114">如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。</span><span class="sxs-lookup"><span data-stu-id="5934d-114">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="5934d-115">此示例位于以下目录：</span><span class="sxs-lookup"><span data-stu-id="5934d-115">This sample is located in the following directory.</span></span>  
+> <span data-ttu-id="c8acc-114">如果此目录不存在, 请参阅[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)以下载所有 Windows Communication Foundation (wcf) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。</span><span class="sxs-lookup"><span data-stu-id="c8acc-114">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="c8acc-115">此示例位于以下目录：</span><span class="sxs-lookup"><span data-stu-id="c8acc-115">This sample is located in the following directory.</span></span>  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\UriTemplateDispatcher`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\UriTemplateDispatcher`  
   
-## <a name="see-also"></a><span data-ttu-id="5934d-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="5934d-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c8acc-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="c8acc-116">See also</span></span>
 
-- [<span data-ttu-id="5934d-117">UriTemplate 表</span><span class="sxs-lookup"><span data-stu-id="5934d-117">UriTemplate Table</span></span>](../../../../docs/framework/wcf/samples/uritemplate-table-sample.md)
-- [<span data-ttu-id="5934d-118">UriTemplate</span><span class="sxs-lookup"><span data-stu-id="5934d-118">UriTemplate</span></span>](../../../../docs/framework/wcf/samples/uritemplate-sample.md)
+- [<span data-ttu-id="c8acc-117">UriTemplate 表</span><span class="sxs-lookup"><span data-stu-id="c8acc-117">UriTemplate Table</span></span>](../../../../docs/framework/wcf/samples/uritemplate-table-sample.md)
+- [<span data-ttu-id="c8acc-118">UriTemplate</span><span class="sxs-lookup"><span data-stu-id="c8acc-118">UriTemplate</span></span>](../../../../docs/framework/wcf/samples/uritemplate-sample.md)
