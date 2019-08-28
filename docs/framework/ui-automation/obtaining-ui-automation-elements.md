@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation, obtaining elements
 - elements, UI Automation, obtaining
 ms.assetid: c2caaf45-e59c-42a1-bc9b-77a6de520171
-ms.openlocfilehash: 8c222cb2cf70502024a5934c4c527334c9f24165
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9adf8078f52653940fe9ba5caa4a256a08cc489c
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966384"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044147"
 ---
 # <a name="obtaining-ui-automation-elements"></a>获取 UI 自动化元素
 > [!NOTE]
@@ -19,7 +19,7 @@ ms.locfileid: "69966384"
  本主题描述获取 <xref:System.Windows.Automation.AutomationElement> 元素的 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 对象的各种方法。  
   
 > [!CAUTION]
->  如果客户端应用程序可以尝试在其自己的用户界面中查找元素，则必须在一个单独的线程上进行所有 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 调用。 有关更多信息，请参见 [UI Automation Threading Issues](../../../docs/framework/ui-automation/ui-automation-threading-issues.md)。  
+> 如果客户端应用程序可以尝试在其自己的用户界面中查找元素，则必须在一个单独的线程上进行所有 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 调用。 有关更多信息，请参见 [UI Automation Threading Issues](../../../docs/framework/ui-automation/ui-automation-threading-issues.md)。  
   
 <a name="The_Root_Element"></a>   
 ## <a name="root-element"></a>根元素  
@@ -28,7 +28,7 @@ ms.locfileid: "69966384"
  所有元素所起源于的桌面根元素是从静态的 <xref:System.Windows.Automation.AutomationElement.RootElement%2A?displayProperty=nameWithType> 属性中获取的。  
   
 > [!CAUTION]
->  通常，你应当尝试只获取 <xref:System.Windows.Automation.AutomationElement.RootElement%2A>的直接子项。 对后代的搜索可能循环访问数百个甚至数千个元素，这可能导致堆栈溢出。 如果尝试在较低级别上获取特定元素，应该从应用程序窗口或者从较低级别的容器中开始搜索。  
+> 通常，你应当尝试只获取 <xref:System.Windows.Automation.AutomationElement.RootElement%2A>的直接子项。 对后代的搜索可能循环访问数百个甚至数千个元素，这可能导致堆栈溢出。 如果尝试在较低级别上获取特定元素，应该从应用程序窗口或者从较低级别的容器中开始搜索。  
   
 <a name="Using_Conditions"></a>   
 ## <a name="conditions"></a>条件  

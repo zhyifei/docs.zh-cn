@@ -2,12 +2,12 @@
 title: 服务标识示例
 ms.date: 03/30/2017
 ms.assetid: 79fa8c1c-85bb-4b67-bc67-bfaf721303f8
-ms.openlocfilehash: 999e05918eb7ac852336136a1e7512a2e9d7b9db
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0d5fce313200cdfdb8007ceffe9ff97b033d9f82
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964539"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70045518"
 ---
 # <a name="service-identity-sample"></a>服务标识示例
 此服务标识示例演示如何为服务设置标识。 客户端可以在设计时使用服务的元数据来检索标识，然后在运行时对服务的标识进行身份验证。 服务标识的概念是允许客户端在调用服务的任何操作之前对服务进行身份验证，从而保护客户端，防止进行未经身份验证的调用。 在安全连接中，服务还在允许客户端访问其之前对客户端的凭据进行身份验证，但这不是此示例要介绍的重点。 请参阅[客户端](../../../../docs/framework/wcf/samples/client.md)中显示服务器身份验证的示例。
@@ -24,7 +24,7 @@ ms.locfileid: "69964539"
 - 如何在客户端设置自定义标识。 自定义标识通常是对现有标识类型的自定义，客户端可以通过它检查服务凭据中提供的其他声明信息，以便在调用服务之前做出身份验证决策。
 
     > [!NOTE]
-    >  此示例检查称为 identity.com 的特定证书的标识以及此证书中包含的 RSA 密钥。 在客户端上的配置中使用证书和 RSA 标识类型时，获取这些值的简便方法是检查在其中序列化这些值的服务的 WSDL。
+    > 此示例检查称为 identity.com 的特定证书的标识以及此证书中包含的 RSA 密钥。 在客户端上的配置中使用证书和 RSA 标识类型时，获取这些值的简便方法是检查在其中序列化这些值的服务的 WSDL。
 
  下面的示例代码演示如何使用 WSHttpBinding 向证书的域名服务器 (DNS) 配置服务终结点的标识。
 
@@ -120,7 +120,7 @@ class CustomIdentityVerifier : IdentityVerifier
 2. 在[!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]上, 使用管理员权限在 Visual Studio 2012 命令提示符下的示例安装文件夹中运行安装程序。 这将安装运行示例所需的所有证书。
 
     > [!NOTE]
-    >  设置 bat 批处理文件设计为在 Visual Studio 2012 命令提示符下运行。 在 Visual Studio 2012 命令提示符中设置的 PATH 环境变量指向包含安装程序 bat 脚本所需的可执行文件的目录。 请确保在运行完该示例后通过运行 Cleanup.bat 来移除证书。 其他安全示例使用相同的证书。  
+    > 设置 bat 批处理文件设计为在 Visual Studio 2012 命令提示符下运行。 在 Visual Studio 2012 命令提示符中设置的 PATH 环境变量指向包含安装程序 bat 脚本所需的可执行文件的目录。 请确保在运行完该示例后通过运行 Cleanup.bat 来移除证书。 其他安全示例使用相同的证书。  
   
 3. 启动 \service\bin 目录中的 Service.exe。 确保该服务指示它已准备就绪, 并显示按\<enter > 以终止服务的提示。  
   
@@ -157,4 +157,4 @@ class CustomIdentityVerifier : IdentityVerifier
 - 运行完示例后运行示例文件夹中的 Cleanup.bat。  
   
     > [!NOTE]
-    >  此脚本不会在跨计算机运行此示例时移除客户端上的服务证书。 如果你已运行跨计算机使用证书 Windows Communication Foundation (WCF) 示例, 请确保清除已安装在 CurrentUser-TrustedPeople 存储中的服务证书。 为此, 请使用以下命令:`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`例如: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`。
+    > 此脚本不会在跨计算机运行此示例时移除客户端上的服务证书。 如果你已运行跨计算机使用证书 Windows Communication Foundation (WCF) 示例, 请确保清除已安装在 CurrentUser-TrustedPeople 存储中的服务证书。 为此, 请使用以下命令:`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`例如: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`。

@@ -2,12 +2,12 @@
 title: 持久性数据库架构
 ms.date: 03/30/2017
 ms.assetid: 34f69f4c-df81-4da7-b281-a525a9397a5c
-ms.openlocfilehash: 384a9aceaf0b5619bbc4eca5929b6e6d7855e3d3
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 65d8b2f7a6283d65823e1a186239d398ee4a530a
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962884"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70038335"
 ---
 # <a name="persistence-database-schema"></a>持久性数据库架构
 本主题介绍 SQL 工作流实例存储区支持的公共视图。  
@@ -44,7 +44,7 @@ ms.locfileid: "69962884"
 |Revision|BigInt|工作流版本的修订号。|  
   
 > [!CAUTION]
->  **实例**视图还包含 Delete 触发器。 具有适当权限的用户可以对此视图执行 Delete 语句，这将从数据库中强制移除工作流实例。 由于从工作流运行时的下面删除实例可能会导致意外的结果，所以，建议不到万不得已，不要直接从视图删除， 而应使用工作流实例管理终结点来使工作流运行时终止实例。 如果需要从视图中删除大量实例，请确保没有可能正在对这些实例进行操作的活动的运行时。  
+> **实例**视图还包含 Delete 触发器。 具有适当权限的用户可以对此视图执行 Delete 语句，这将从数据库中强制移除工作流实例。 由于从工作流运行时的下面删除实例可能会导致意外的结果，所以，建议不到万不得已，不要直接从视图删除， 而应使用工作流实例管理终结点来使工作流运行时终止实例。 如果需要从视图中删除大量实例，请确保没有可能正在对这些实例进行操作的活动的运行时。  
   
 ## <a name="servicedeployments-view"></a>ServiceDeployments 视图  
  **ServiceDeployments**视图包含所有 WEB (IIS/WAS) 承载的工作流服务的部署信息。 Web 承载的每个工作流实例都将包含引用此视图中的行的**ServiceDeploymentId** 。  

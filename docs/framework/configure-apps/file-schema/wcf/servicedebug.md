@@ -2,12 +2,12 @@
 title: <serviceDebug>
 ms.date: 03/30/2017
 ms.assetid: 6d7ea986-f232-49fe-842c-f934d9966889
-ms.openlocfilehash: cbeb0d254bf6716296f34020ea8796885e0f368a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5ca1d4e7f9107c798213d760d9780dbeded9eae0
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69936257"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70041270"
 ---
 # <a name="servicedebug"></a>\<serviceDebug>
 指定 Windows Communication Foundation (WCF) 服务的调试和帮助信息功能。  
@@ -62,7 +62,7 @@ ms.locfileid: "69936257"
  如果`includeExceptionDetailInFaults`设置`true`为, 则允许服务返回应用程序代码引发的任何异常, 即使未使用<xref:System.ServiceModel.FaultContractAttribute>声明异常也是如此。 此设置在调试服务器引发意外异常的事例时很有用。 通过使用此属性，可以返回未知异常的序列化形式，从而可以检查该异常的更多详细信息。  
   
 > [!CAUTION]
->  将托管异常信息返回给客户端可能存在安全风险，因为异常详细信息会公开有关内部服务实现的信息，而未经授权的客户端可能会利用这些信息。 由于涉及到安全问题，强烈建议您仅在受控调试情况下执行此操作。 部署应用程序时应将 `includeExceptionDetailInFaults` 设置为 `false`。  
+> 将托管异常信息返回给客户端可能存在安全风险，因为异常详细信息会公开有关内部服务实现的信息，而未经授权的客户端可能会利用这些信息。 由于涉及到安全问题，强烈建议您仅在受控调试情况下执行此操作。 部署应用程序时应将 `includeExceptionDetailInFaults` 设置为 `false`。  
   
  有关与托管异常相关的安全问题的详细信息, 请参阅[在协定和服务中指定和处理错误](../../../wcf/specifying-and-handling-faults-in-contracts-and-services.md)。 有关代码示例, 请参阅[服务调试行为](../../../wcf/samples/service-debug-behavior.md)。  
   

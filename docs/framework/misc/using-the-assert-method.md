@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1e40f4d3-fb7d-4f19-b334-b6076d469ea9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5b5a13b362f565cfae9247908bcf3cf35c899ae4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e2a86fbcd78c6768a91cc0d12e45053f8da6cdec
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910722"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70041149"
 ---
 # <a name="using-the-assert-method"></a>使用 Assert 方法
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -31,7 +31,7 @@ ms.locfileid: "69910722"
  <xref:System.Security.CodeAccessPermission.Assert%2A> 是一种可在代码访问权限类和 <xref:System.Security.PermissionSet> 类上调用的方法。 您可以使用**Assert**来实现您的代码 (和下游调用方) 执行您的代码有权执行的操作, 但其调用方可能无权执行此操作。 安全断言会更改在安全检查期间运行时所执行的正常过程。 断言权限时，它会通知安全系统不检查断言权限的代码的调用方。  
   
 > [!CAUTION]
->  请谨慎使用断言，因为它们会打开安全漏洞并破坏运行时强制执行安全限制的机制。  
+> 请谨慎使用断言，因为它们会打开安全漏洞并破坏运行时强制执行安全限制的机制。  
   
  当库调用非托管代码或所执行的调用需要与库的预期用途不明显关联的权限时，断言非常有用。 例如, 调用到非托管代码的所有托管代码都必须具有指定了**UnmanagedCode**标志的**SecurityPermission** 。 默认情况下，如果代码不是来自本地计算机（如从本地 intranet 下载的代码），则不会对其授予此权限。 因此，为了使从本地 intranet 下载的代码能调用使用非托管代码的库，它必须具有由该库断言的权限。 此外，某些库可能会执行对调用方不可见且需要特殊权限的调用。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "69910722"
  例如，假设你的高度受信任的库类具有删除文件的方法。 它通过调用非托管的 Win32 函数来访问文件。 调用方调用你的代码的**Delete**方法, 并传入要删除的文件的名称, c:\test.txt。 在**Delete**方法中, 你的代码将<xref:System.Security.Permissions.FileIOPermission>创建一个对象, 该对象表示对 c:\test.txt。的写访问权限。 （需要写权限来删除文件。）然后, 你的代码通过调用**FileIOPermission**对象的**要求**方法来调用命令性安全检查。 如果调用堆栈中的某个调用方不具有此权限，则会引发 <xref:System.Security.SecurityException>。 如果未引发任何异常，你会知道所有调用方都有权限访问 C:\Test.txt。 由于你认为大多数调用方不具有访问非托管代码的权限, 因此你的代码会创建一个<xref:System.Security.Permissions.SecurityPermission>对象, 该对象表示调用非托管代码和调用该对象的**断言**方法的权限。 最后，它会调用非托管的 Win32 函数来删除 C:\Text.txt，并将控件返回给调用方。  
   
 > [!CAUTION]
->  你必须确保你的代码在以下情况下不使用断言：其他代码可使用你的代码来访问由你正在断言的权限所保护的资源。 例如, 在写入文件 (其名称由调用方指定为参数) 的代码中, 你将不会断言**FileIOPermission**来写入文件, 因为你的代码将被第三方滥用。  
+> 你必须确保你的代码在以下情况下不使用断言：其他代码可使用你的代码来访问由你正在断言的权限所保护的资源。 例如, 在写入文件 (其名称由调用方指定为参数) 的代码中, 你将不会断言**FileIOPermission**来写入文件, 因为你的代码将被第三方滥用。  
   
  使用命令性安全语法时, 对同一方法中的多个权限调用**Assert**方法会引发安全异常。 相反, 应创建**PermissionSet**对象, 向其传递要调用的单个权限, 然后调用**PermissionSet**对象上的**Assert**方法。 使用声明性安全语法时, 可以多次调用**断言**方法。  
   

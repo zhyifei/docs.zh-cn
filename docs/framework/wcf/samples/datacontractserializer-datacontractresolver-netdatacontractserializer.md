@@ -2,12 +2,12 @@
 title: 使用 DataContractSerializer 和 DataContractResolver 实现 NetDataContractSerializer 的功能
 ms.date: 03/30/2017
 ms.assetid: 1376658f-f695-45f7-a7e0-94664e9619ff
-ms.openlocfilehash: 0378f8d6e21f44eb1f39e9ebf51ef0dfaf8d8e8a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d7102e60c8b5302d4f3bc83b356dbc7de117f57a
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61990400"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70039866"
 ---
 # <a name="using-datacontractserializer-and-datacontractresolver-to-provide-the-functionality-of-netdatacontractserializer"></a>使用 DataContractSerializer 和 DataContractResolver 实现 NetDataContractSerializer 的功能
 此示例演示如何将 <xref:System.Runtime.Serialization.DataContractSerializer> 与相应的 <xref:System.Runtime.Serialization.DataContractResolver> 结合使用来提供与 <xref:System.Runtime.Serialization.NetDataContractSerializer> 相同的功能。 此示例演示如何创建相应的 <xref:System.Runtime.Serialization.DataContractResolver> 以及如何将其添加到 <xref:System.Runtime.Serialization.DataContractSerializer>。
@@ -57,27 +57,27 @@ class MyDataContractResolver : DataContractResolver
 
 #### <a name="to-use-this-sample"></a>使用此示例
 
-1. 使用 Visual Studio 2012 打开 DCRSample.sln 解决方案文件。
+1. 使用 Visual Studio 2012 打开 DCRSample 解决方案文件。
 
-2. 右键单击解决方案文件，然后选择**属性**。
+2. 右键单击该解决方案文件, 然后选择 "**属性**"。
 
-3. 在中**解决方案属性页**对话框下**通用属性**，**启动项目**，选择**多个启动项目：**。
+3. 在 "**解决方案属性页**" 对话框中, 在 "**通用属性**、**启动项目**" 下, 选择 "**多个启动项目:** "。
 
-4. 下一步**DCSwithDCR**项目，选择**启动**从**操作**下拉列表。
+4. 在 " **DCSwithDCR** " 项目旁边, 从 "**操作**" 下拉列表中选择 "**启动**"。
 
-5. 下一步**NetDCS**项目，选择**启动**从**操作**下拉列表。
+5. 在 " **NetDCS** " 项目旁边, 从 "**操作**" 下拉列表中选择 "**启动**"。
 
-6. 单击**确定**关闭对话框。
+6. 单击 **"确定"** 以关闭对话框。
 
 7. 要生成解决方案，按 Ctrl+Shift+B。
 
 8. 若要运行解决方案，请按 Ctrl+F5。
 
 > [!IMPORTANT]
->  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
+> 您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+> 如果此目录不存在, 请参阅[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)以下载所有 Windows Communication Foundation (wcf) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\NetDcSasDcSwithDCR`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\NetDcSasDcSwithDCR`  

@@ -22,12 +22,12 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], handling
 - On Error statement [Visual Basic]
 ms.assetid: ff947930-fb84-40cf-bd66-1ea219561d5c
-ms.openlocfilehash: df2bd232a870e17eeb5106cf0b60a9e77641969d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4474b217147aca74f2c6e5376c8f55318a05bf4a
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963536"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70046503"
 ---
 # <a name="on-error-statement-visual-basic"></a>On Error 语句 (Visual Basic)
 启用错误处理例程, 并指定例程在过程中的位置;还可用于禁用错误处理例程。 `On Error`语句用在非结构化错误处理中, 可以使用而不是结构化异常处理。 [结构化异常处理](../../../standard/exceptions/index.md)内置于 .net 中, 通常更高效, 因此在处理应用程序中的运行时错误时建议使用。
@@ -104,7 +104,7 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
  [!code-vb[VbVbalrErrorHandling#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrErrorHandling/VB/Class1.vb#19)]
 
 > [!CAUTION]
->  调用 Windows 动态链接库 (Dll) 时出现系统错误, 不会引发异常, 并且不会因 Visual Basic 错误捕获而捕获。 调用 DLL 函数时, 应检查每个返回值的成功或失败情况 (根据 API 规范), 并在发生故障时检查`Err` `LastDLLError`对象的属性中的值。
+> 调用 Windows 动态链接库 (Dll) 时出现系统错误, 不会引发异常, 并且不会因 Visual Basic 错误捕获而捕获。 调用 DLL 函数时, 应检查每个返回值的成功或失败情况 (根据 API 规范), 并在发生故障时检查`Err` `LastDLLError`对象的属性中的值。
 
 ## <a name="example"></a>示例
  此示例首先使用`On Error GoTo`语句在过程中指定错误处理例程的位置。 在此示例中, 被零除的尝试将生成错误编号6。 错误在错误处理例程中进行处理, 然后将控件返回给导致错误的语句。 `On Error GoTo 0`语句会关闭错误捕获。 然后, `On Error Resume Next`使用语句将错误捕获延迟, 以便对下一条语句所生成的错误上下文具有特定的已知上下文。 请注意`Err.Clear` , 在处理错误后`Err` , 用于清除对象的属性。

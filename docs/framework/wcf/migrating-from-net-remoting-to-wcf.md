@@ -2,12 +2,12 @@
 title: 从 .NET 远程处理迁移到 WCF
 ms.date: 03/30/2017
 ms.assetid: 16902a42-ef80-40e9-8c4c-90e61ddfdfe5
-ms.openlocfilehash: 71e26ddd93605b02031aecba280e382528378ba6
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c42255a14a23cb50f3fe8be434efab4af7361daa
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69943033"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70045855"
 ---
 # <a name="migrating-from-net-remoting-to-wcf"></a>从 .NET 远程处理迁移到 WCF
 本文介绍如何迁移借助 .NET 远程处理来使用 Windows Communication Foundation (WCF) 的应用程序。 本文对这些产品之间的相似概念进行比较，并介绍如何在 WCF 中完成若干常见的远程处理方案。  
@@ -466,7 +466,7 @@ public class RemotingServer : MarshalByRefObject
    ```  
   
     > [!TIP]
-    >  请注意该会话对象用 [ServiceContract] 进行了标记，使其成为普通的 WCF 服务接口。 设置 SessionMode 属性指示其将为会话服务。 在 WCF 中，会话是使两个终结点之间发送的多个消息关联的一种方法。 这意味着一旦客户端获取与此服务的连接，将会建立客户端和服务器之间的会话。 对于此单个会话中的所有交互，客户端都将使用服务器端对象的单个唯一实例。  
+    > 请注意该会话对象用 [ServiceContract] 进行了标记，使其成为普通的 WCF 服务接口。 设置 SessionMode 属性指示其将为会话服务。 在 WCF 中，会话是使两个终结点之间发送的多个消息关联的一种方法。 这意味着一旦客户端获取与此服务的连接，将会建立客户端和服务器之间的会话。 对于此单个会话中的所有交互，客户端都将使用服务器端对象的单个唯一实例。  
   
 2. 接下来，需要提供此服务接口的实现。 通过使用 [ServiceBehavior] 进行表示，并设置 InstanceContextMode，将告知 WCF 希望使用每个会话的此类型的唯一实例。  
   

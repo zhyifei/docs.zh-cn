@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - service contracts [WCF]
 ms.assetid: 8e89cbb9-ac84-4f0d-85ef-0eb6be0022fd
-ms.openlocfilehash: ddaa49e65a164c7bf074a541c9a4df8f3dace1d4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a764b18cc3016610b8a149631b4de89923a7a5b4
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965616"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70040620"
 ---
 # <a name="designing-service-contracts"></a>设计服务协定
 本主题介绍什么是服务协定、如何定义服务协定、可用的操作（以及基础消息交换的含义）、使用的数据类型以及可帮助您设计能满足方案需求的操作的其他问题。  
@@ -146,7 +146,7 @@ Sub Hello (ByVal greeting As String)
  有关创建服务和访问该服务的客户端的示例, 请参阅[如何:创建双工协定](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md) , [以及如何:使用双工协定](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)访问服务。 有关工作示例, 请参阅[双工](../../../docs/framework/wcf/samples/duplex.md)。 有关使用双工协定的问题的详细信息, 请参阅[双工服务](../../../docs/framework/wcf/feature-details/duplex-services.md)。  
   
 > [!CAUTION]
->  当服务接收双工消息时，它会在该传入消息中查找 `ReplyTo` 元素，以确定要发送答复的位置。 如果用于接收消息的通道不安全，则不受信任的客户端可能使用目标计算机的 `ReplyTo` 发送恶意消息，从而导致该目标计算机发生拒绝服务 (DOS)。  
+> 当服务接收双工消息时，它会在该传入消息中查找 `ReplyTo` 元素，以确定要发送答复的位置。 如果用于接收消息的通道不安全，则不受信任的客户端可能使用目标计算机的 `ReplyTo` 发送恶意消息，从而导致该目标计算机发生拒绝服务 (DOS)。  
   
 ##### <a name="out-and-ref-parameters"></a>Out 和 Ref 参数  
  在大多数情况下, 可以使用`in`参数 (`ByVal` `ref`在 Visual Basic 中) `out`和参数 (`ByRef`在 Visual Basic 中)。 由于 `out` 和 `ref` 参数都指示数据是从操作返回的，类似如下的操作签名会指定需要请求/答复操作，即使操作签名返回 `void` 也是如此。  

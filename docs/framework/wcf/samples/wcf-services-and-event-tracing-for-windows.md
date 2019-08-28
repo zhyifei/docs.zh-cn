@@ -2,63 +2,63 @@
 title: 针对 Windows 的 WCF 服务和事件跟踪
 ms.date: 03/30/2017
 ms.assetid: eda4355d-0bd0-4dc9-80a2-d2c832152272
-ms.openlocfilehash: 35d0202a3b9cf4060240dc521554644d419a5c23
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e1ee7154e2ad5b22ff0debcdd15d5809fc55df13
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61723168"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044519"
 ---
 # <a name="wcf-services-and-event-tracing-for-windows"></a>针对 Windows 的 WCF 服务和事件跟踪
-此示例演示如何使用 Windows Communication Foundation (WCF) 中的分析跟踪来发出事件中事件跟踪 Windows (ETW)。 分析跟踪是 WCF 堆栈中允许在生产环境中的 WCF 服务的故障排除的关键点处发出的事件。
+此示例演示如何使用 Windows Communication Foundation (WCF) 中的分析跟踪在 Windows 事件跟踪 (ETW) 中发出事件。 分析跟踪是在 WCF 堆栈中的关键点处发出的事件, 可用于在生产环境中对 WCF 服务进行故障排除。
 
- WCF 服务中的分析跟踪跟踪，可以打开在生产环境中使用最小性能影响。 这些跟踪都以事件的形式向 ETW 会话发出。
+ WCF 服务中的分析跟踪是跟踪, 可以在生产环境中打开, 对性能的影响最小。 这些跟踪都以事件的形式向 ETW 会话发出。
 
- 此示例包括在其中事件从服务发出到事件日志，可以使用事件查看器查看基本的 WCF 服务。 还有可能开始侦听来自 WCF 服务的事件的专用的 ETW 会话。 该示例包括一个用于创建专用 ETW 会话的脚本，该会话将事件存储在可以使用事件查看器读取的二进制文件中。
+ 此示例包括一个基本 WCF 服务, 在该服务中, 事件从服务发出到事件日志, 可以使用事件查看器查看。 还可以启动一个专用的 ETW 会话, 用于侦听 WCF 服务中的事件。 该示例包括一个用于创建专用 ETW 会话的脚本，该会话将事件存储在可以使用事件查看器读取的二进制文件中。
 
 #### <a name="to-use-this-sample"></a>使用此示例
 
-1. 使用 Visual Studio 2012 打开 EtwAnalyticTraceSample.sln 解决方案文件。
+1. 使用 Visual Studio 2012 打开 EtwAnalyticTraceSample 解决方案文件。
 
 2. 要生成解决方案，按 Ctrl+Shift+B。
 
 3. 若要运行解决方案，请按 Ctrl+F5。
 
-     在 Web 浏览器中，单击**calculator.svc**。 服务的 WSDL 文档的 URI 应出现在浏览器中。 复制该 URI。
+     在 Web 浏览器中, 单击 "**计算器**"。 服务的 WSDL 文档的 URI 应出现在浏览器中。 复制该 URI。
 
-     默认情况下，在服务启动端口 1378年上侦听请求`http://localhost:1378/Calculator.svc`。
+     默认情况下, 服务开始侦听端口 1378 `http://localhost:1378/Calculator.svc`上的请求。
 
-4. 运行 WCF 测试客户端 (WcfTestClient.exe)。
+4. 运行 WCF 测试客户端 (Wcftestclient.exe)。
 
-     WCF 测试客户端 (WcfTestClient.exe) 位于`\<Visual Studio 2012 Install Dir>\Common7\IDE\WcfTestClient.exe`。  默认 Visual Studio 2012 安装目录是`C:\Program Files\Microsoft Visual Studio 10.0`。
+     WCF 测试客户端 (Wcftestclient.exe) 位于上`\<Visual Studio 2012 Install Dir>\Common7\IDE\WcfTestClient.exe`。  默认 Visual Studio 2012 安装目录为`C:\Program Files\Microsoft Visual Studio 10.0`。
 
-5. 在 WCF 测试客户端，通过选择添加服务**文件**，然后**添加的服务**。
+5. 在 WCF 测试客户端中, 通过依次选择 "**文件**" 和 "**添加服务**" 来添加服务。
 
      在输入框中添加终结点地址。 默认值为 `http://localhost:1378/Calculator.svc`。
 
 6. 打开事件查看器应用程序。
 
-     然后再调用该服务，启动事件查看器，并确保事件日志正在侦听从 WCF 服务发出的跟踪事件。
+     在调用服务之前, 请启动事件查看器并确保事件日志正在侦听从 WCF 服务发出的跟踪事件。
 
-7. 从**启动**菜单中，选择**管理工具**，然后**事件查看器**。  启用**Analytic**并**调试**日志。
+7. 从 "**开始**" 菜单中选择 "**管理工具**", 然后**事件查看器**"。  启用**分析**日志和**调试**日志。
 
-8. 在事件查看器中树视图中，导航到**事件查看器**，**应用程序和服务日志**， **Microsoft**， **Windows**，，然后**应用程序服务器-应用程序**。 右键单击**应用程序服务器-应用程序**，选择**视图**，然后**显示分析和调试日志**。
+8. 在事件查看器的树视图中, 导航到 "**事件查看器**"、"**应用程序和服务日志**"、" **Microsoft**"、" **Windows**" 和 "**应用程序服务器应用程序**"。 右键单击 "**应用程序服务器-应用程序**", 选择 "**查看**", 然后**显示 "分析日志和调试日志**"。
 
-     絋粄**显示分析和调试日志**选项处于选中状态。
+     确保选中 "**显示分析和调试日志**" 选项。
 
 9. 启用**分析**日志。
 
-     在事件查看器中树视图中，导航到**事件查看器**，**应用程序和服务日志**， **Microsoft**， **Windows**，，然后**应用程序服务器-应用程序**。 右键单击**Analytic** ，然后选择**启用日志**。
+     在事件查看器的树视图中, 导航到 "**事件查看器**"、"**应用程序和服务日志**"、" **Microsoft**"、" **Windows**" 和 "**应用程序服务器应用程序**"。 右键单击 "**分析**", 然后选择 "**启用日志**"。
 
 #### <a name="to-test-the-service"></a>测试服务
 
-1. 切换回 WCF 测试客户端并双击`Divide`并保留默认值，指定分母为 0。
+1. 切换回 " `Divide` WCF 测试客户端", 然后双击并保留默认值, 该值指定分母为0。
 
      如果分母为 0，则服务引发错误。
 
 2. 观察从服务发出的事件。
 
-     切换回事件查看器并导航到**事件查看器**，**应用程序和服务日志**， **Microsoft**， **Windows**，，然后**应用程序服务器-应用程序**。 右键单击**Analytic** ，然后选择**刷新**。
+     切换回事件查看器, 导航到**事件查看器**、**应用程序和服务日志**、 **Microsoft**、 **Windows**, 然后**应用程序服务器应用程序**。 右键单击 "**分析**", 然后选择 "**刷新**"。
 
      WCF 分析跟踪事件显示在事件查看器中。 请注意，因为服务引发了错误，所以事件查看器中会显示错误跟踪事件。
 
@@ -72,20 +72,20 @@ ms.locfileid: "61723168"
 
 1. 打开事件查看器。
 
-2. 导航到**事件查看器**，**应用程序和服务日志**， **Microsoft**， **Windows**，，然后**应用程序服务器-应用程序**。 右键单击**Analytic** ，然后选择**禁用日志**。
+2. 导航到**事件查看器**、**应用程序和服务日志**、 **Microsoft**、 **Windows**, 然后**应用程序服务器应用程序**。 右键单击 "**分析**", 然后选择 "**禁用日志**"。
 
-3. 导航到**事件查看器**，**应用程序和服务日志**， **Microsoft**， **Windows**，，然后**应用程序服务器-应用程序**。 右键单击**Analytic** ，然后选择**清除日志**。
+3. 导航到**事件查看器**、**应用程序和服务日志**、 **Microsoft**、 **Windows**, 然后**应用程序服务器应用程序**。 右键单击 "**分析**", 然后选择 "**清除日志**"。
 
-4. 选择**清除**选项可清除这些事件。
+4. 选择 "**清除**" 选项可清除事件。
 
 > [!IMPORTANT]
->  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
+> 您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+> 如果此目录不存在, 请参阅[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)以下载所有 Windows Communication Foundation (wcf) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ETWTracing`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ETWTracing`  
   
 ## <a name="see-also"></a>请参阅
 

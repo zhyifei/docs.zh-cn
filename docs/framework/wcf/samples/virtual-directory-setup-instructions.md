@@ -2,12 +2,12 @@
 title: 虚拟目录设置说明
 ms.date: 03/30/2017
 ms.assetid: 3c62cab5-81a4-48b6-ac8c-9ce33a85a157
-ms.openlocfilehash: f755fadf6bef2bdd58fd31f3460a143b8f52eddf
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6dccc5174e3fb9ab67023310d8c060d598a707c9
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966741"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70038648"
 ---
 # <a name="virtual-directory-setup-instructions"></a>虚拟目录设置说明
 Windows Communication Foundation (WCF) 示例旨在共享一个名为 servicemodelsamples 的公共虚拟目录, 该目录映射到%SystemDrive%\inetpub\wwwroot\servicemodelsamples 文件夹。  
@@ -36,10 +36,10 @@ Windows Communication Foundation (WCF) 示例旨在共享一个名为 servicemod
 7. 单击 **“确定”** 。 现在已为 WCF 示例创建 Web 应用程序。  
   
     > [!NOTE]
-    >  此任务仅需执行一次, 因为所有 WCF 示例都使用相同的 servicemodelsamples Web 应用程序。  
+    > 此任务仅需执行一次, 因为所有 WCF 示例都使用相同的 servicemodelsamples Web 应用程序。  
   
     > [!NOTE]
-    >  在本文档中，术语`virtual directory`和 `Web application`是同义词。  
+    > 在本文档中，术语`virtual directory`和 `Web application`是同义词。  
   
      除了创建虚拟目录以外, 还必须设置其属性以使 WCF 服务能够运行。 有关详细信息，请参见以下内容。  
   
@@ -66,7 +66,7 @@ Windows Communication Foundation (WCF) 示例旨在共享一个名为 servicemod
 8. 单击 "**下一步**", 然后单击 "**完成**" 以完成向导。  
   
     > [!NOTE]
-    >  此任务仅需执行一次, 因为所有 WCF 示例都使用相同的 servicemodelsamples 虚拟目录。  
+    > 此任务仅需执行一次, 因为所有 WCF 示例都使用相同的 servicemodelsamples 虚拟目录。  
   
 #### <a name="to-set-additional-virtual-directory-properties-in-iis-70-or-75"></a>在 IIS 7.0 或7.5 中设置附加虚拟目录属性  
   

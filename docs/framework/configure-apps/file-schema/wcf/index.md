@@ -2,12 +2,12 @@
 title: WCF 配置架构
 ms.date: 03/30/2017
 ms.assetid: c282aeb5-91f0-4522-8e2f-704c1ef3651f
-ms.openlocfilehash: 8d7b4cbad1876888e7a22a92bdb28a17b880e159
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 37330b571553bb5e8f17ffad85faafbcaf19d217
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69925390"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70041289"
 ---
 # <a name="wcf-configuration-schema"></a>WCF 配置架构
 Windows Communication Foundation (WCF) 配置元素使您能够配置 WCF 服务和客户端应用程序。 可以使用[配置编辑器工具 (SvcConfigEditor.exe)](../../../wcf/configuration-editor-tool-svcconfigeditor-exe.md) 创建和修改客户端和服务的配置文件。 由于配置文件的格式都是以 XML 形式设置的，因此，如果要使用文本编辑器手动编辑这些文件，则您必须熟悉 XML。 否则，您可能会遇到一些问题，如找不到某个 XML 元素标记或特性。 这是因为 XML 元素标记和特性是区分大小写的。  
@@ -23,7 +23,7 @@ Windows Communication Foundation (WCF) 配置元素使您能够配置 WCF 服务
  ![显示 WCF 配置架构的关系图。](./media/index/windows-communication-foundation-configuration-schema.gif)  
   
 > [!CAUTION]
->  你应使用适当的访问控制列表 (ACL) 来保护应用程序配置文件 (app.config) 中的 WCF 配置节, 以防止任何潜在的安全威胁。  例如，你应确保仅有适当的人员可以访问或修改有关应用程序绑定的安全设置或服务的配置文件的服务模型节。  
+> 你应使用适当的访问控制列表 (ACL) 来保护应用程序配置文件 (app.config) 中的 WCF 配置节, 以防止任何潜在的安全威胁。  例如，你应确保仅有适当的人员可以访问或修改有关应用程序绑定的安全设置或服务的配置文件的服务模型节。  
   
 ## <a name="in-this-section"></a>本节内容  
  [\<system.serviceModel>](system-servicemodel.md)  

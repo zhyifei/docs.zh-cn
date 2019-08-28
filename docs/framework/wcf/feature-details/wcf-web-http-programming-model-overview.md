@@ -2,12 +2,12 @@
 title: WCF Web HTTP 编程模型概述
 ms.date: 03/30/2017
 ms.assetid: 381fdc3a-6e6c-4890-87fe-91cca6f4b476
-ms.openlocfilehash: e63a6c4a68da2b7e51dc1fc24353922912262806
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 8c13ad943bf4ef272c28266e12e175a0a21d5d40
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988578"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70045234"
 ---
 # <a name="wcf-web-http-programming-model-overview"></a>WCF Web HTTP 编程模型概述
 Windows Communication Foundation (WCF) WEB HTTP 编程模型提供了用 WCF 生成 WEB HTTP 服务所需的基本元素。 WCF WEB HTTP 服务旨在由最大范围的可能客户端 (包括 Web 浏览器) 访问, 并且具有以下独特要求:  
@@ -23,7 +23,7 @@ Windows Communication Foundation (WCF) WEB HTTP 编程模型提供了用 WCF 生
  对于可从 WEB HTTP 服务返回的数据的类型没有额外的限制。 任何可序列化类型都可以从 WEB HTTP 服务操作返回。 因为 WEB HTTP 服务操作可以通过 Web 浏览器调用，所以对可在 URL 中指定的数据类型有一个限制。 有关默认情况下支持的类型的详细信息, 请参阅下面的**UriTemplate 查询字符串参数和 url**部分。 通过提供您自己的 T:System.ServiceModel.Dispatcher.QueryStringConverter 实现来指定如何将 URL 中指定的参数转换为实际参数类型，可以更改默认行为。 有关详细信息，请参阅<xref:System.ServiceModel.Dispatcher.QueryStringConverter>。  
   
 > [!CAUTION]
->  使用 WCF WEB HTTP 编程模型编写的服务不使用 SOAP 消息。 由于不使用 SOAP, 因此不能使用 WCF 提供的安全功能。 然而，您可以通过使用 HTTPS 承载服务来使用基于传输的安全性。 有关 WCF 安全的详细信息, 请参阅[安全性概述](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+> 使用 WCF WEB HTTP 编程模型编写的服务不使用 SOAP 消息。 由于不使用 SOAP, 因此不能使用 WCF 提供的安全功能。 然而，您可以通过使用 HTTPS 承载服务来使用基于传输的安全性。 有关 WCF 安全的详细信息, 请参阅[安全性概述](../../../../docs/framework/wcf/feature-details/security-overview.md)  
   
 > [!WARNING]
 > 为 IIS 安装 WebDAV 扩展会导致 Web HTTP 服务返回 HTTP 405 错误，因为 WebDAV 扩展试图处理所有 PUT 请求。 若要解决此问题，你可卸载 WebDAV 扩展或为网站禁用 WebDAV 扩展。 有关详细信息, 请参阅[IIS 和 WebDav](https://learn.iis.net/page.aspx/357/webdav-for-iis-70/)  

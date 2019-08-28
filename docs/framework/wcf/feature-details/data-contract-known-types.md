@@ -9,12 +9,12 @@ helpviewer_keywords:
 - KnownTypeAttribute [WCF]
 - KnownTypes [WCF]
 ms.assetid: 1a0baea1-27b7-470d-9136-5bbad86c4337
-ms.openlocfilehash: 054beab97a77bd466d2c3d8c734e37f8ded7eb62
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2ab0a41e87a9b14d1beac9fb0c39586f0ea16a4a
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69945276"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70040185"
 ---
 # <a name="data-contract-known-types"></a>数据协定已知类型
 <xref:System.Runtime.Serialization.KnownTypeAttribute> 类允许您预先指定应该在反序列化期间包括在考虑范围内的类型。 有关工作示例，请参阅 [Known Types](../../../../docs/framework/wcf/samples/known-types.md) 示例。  
@@ -77,7 +77,7 @@ ms.locfileid: "69945276"
  在下面的示例中，数据协定存储一个数字和要对该数字执行的操作。 `Numbers` 数据成员可以是整数、整数数组或包含整数的 <xref:System.Collections.Generic.List%601> 。  
   
 > [!CAUTION]
->  仅当使用 SVCUTIL.EXE 来生成 WCF 代理时，此方法才能在客户端使用。 SVCUTIL.EXE 从包含任何已知类型的服务中检索元数据。 如果没有此信息，客户端将不能反序列化该类型。  
+> 仅当使用 SVCUTIL.EXE 来生成 WCF 代理时，此方法才能在客户端使用。 SVCUTIL.EXE 从包含任何已知类型的服务中检索元数据。 如果没有此信息，客户端将不能反序列化该类型。  
   
  [!code-csharp[C_KnownTypeAttribute#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_knowntypeattribute/cs/source.cs#6)]
  [!code-vb[C_KnownTypeAttribute#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_knowntypeattribute/vb/source.vb#6)]  

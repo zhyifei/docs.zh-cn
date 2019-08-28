@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - tracing [WCF]
 ms.assetid: 82922010-e8b3-40eb-98c4-10fc05c6d65d
-ms.openlocfilehash: b433263cc4d72b6418cf75c278316444c83ada8c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: bc23aff2f049f205d02e2fb1b5f8798c7f6a9931
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69933510"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044239"
 ---
 # <a name="configuring-tracing"></a>配置跟踪
 本主题描述您可以如何启用跟踪，配置要发出跟踪的跟踪源并设置跟踪级别，设置活动跟踪和传播以支持端对端的跟踪关联，以及设置要访问跟踪的跟踪侦听器。  
@@ -145,7 +145,7 @@ ms.locfileid: "69933510"
  您也可以通过编程方式配置跟踪侦听器。 有关详细信息，请参阅[如何：创建和初始化跟踪侦听器](https://go.microsoft.com/fwlink/?LinkId=94648) , 并[创建自定义 TraceListener](https://go.microsoft.com/fwlink/?LinkId=96239)。  
   
 > [!CAUTION]
->  由于 `System.Diagnostics.XmlWriterTraceListener` 不是线程安全的，因此，跟踪源可能会在输出跟踪时以独占方式锁定资源。 当多个线程输出对配置为使用此侦听器的跟踪源的跟踪时，可能会出现资源争用，这会致使重大的性能问题。 若要解决此问题，应实现一个线程安全的自定义侦听器。  
+> 由于 `System.Diagnostics.XmlWriterTraceListener` 不是线程安全的，因此，跟踪源可能会在输出跟踪时以独占方式锁定资源。 当多个线程输出对配置为使用此侦听器的跟踪源的跟踪时，可能会出现资源争用，这会致使重大的性能问题。 若要解决此问题，应实现一个线程安全的自定义侦听器。  
   
 ## <a name="trace-level"></a>跟踪级别  
  跟踪级别由跟踪源的 `switchValue` 设置控制。 下表中描述了可用的跟踪级别。  
@@ -164,7 +164,7 @@ ms.locfileid: "69933510"
  从“详细”到“严重”的级别彼此堆叠，即每个跟踪级别都包括其上除“禁用”级别以外的所有级别。 例如，在“警告”级别进行侦听的侦听器会接收到“严重”、“错误”和“警告”跟踪。 “全部”级别包括从“详细”到“严重”的事件以及活动跟踪事件。  
   
 > [!CAUTION]
->  “信息”、“详细”和“ActivityTracing”级别会生成大量跟踪，这可能会对消息吞吐量产生不利影响（如果计算机上的所有可用资源均已用尽）。  
+> “信息”、“详细”和“ActivityTracing”级别会生成大量跟踪，这可能会对消息吞吐量产生不利影响（如果计算机上的所有可用资源均已用尽）。  
   
 ## <a name="configuring-activity-tracing-and-propagation-for-correlation"></a>配置用于关联的活动跟踪和传播  
  为 `activityTracing` 属性指定的 `switchValue` 值用于启用活动跟踪，这会在终结点内发出活动边界跟踪和传输跟踪。  

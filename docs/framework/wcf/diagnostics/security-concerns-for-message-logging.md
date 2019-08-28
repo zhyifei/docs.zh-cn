@@ -2,12 +2,12 @@
 title: 消息日志记录的安全问题
 ms.date: 03/30/2017
 ms.assetid: 21f513f2-815b-47f3-85a6-03c008510038
-ms.openlocfilehash: c5db9fbf0dfb91ecb903660ebfb42c33f55b27bc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b635591b7a3b07385ed48c6b1ea556139c6d77c5
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69933614"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044255"
 ---
 # <a name="security-concerns-for-message-logging"></a>消息日志记录的安全问题
 本主题描述如何防止在消息日志以及由消息日志记录生成的事件中公开敏感数据。  
@@ -91,7 +91,7 @@ ms.locfileid: "69933614"
  计算机管理员和应用程序部署人员应谨慎使用这两个开关。 如果启用了 PII 日志记录，则会记录安全密钥和 PII。 如果禁用了 PII 日志记录，仍会在消息头和正文中记录敏感数据和特定于应用程序的数据。 有关隐私和保护 PII 的详细讨论, 请参阅[用户隐私](https://go.microsoft.com/fwlink/?LinkID=94647)。  
   
 > [!CAUTION]
->  在格式不正确的消息中不会隐藏 PII。 这样的消息按原样记录，不进行任何修改。 前面提到的属性对此没有影响。  
+> 在格式不正确的消息中不会隐藏 PII。 这样的消息按原样记录，不进行任何修改。 前面提到的属性对此没有影响。  
   
 ### <a name="custom-trace-listener"></a>自定义跟踪侦听器  
  在消息日志记录跟踪源上添加定义跟踪侦听器是一种只限于管理员的特权。 这是因为恶意自定义侦听器可以配置为远程发送消息，从而导致敏感信息泄漏。 此外，如果您将自定义侦听器配置为在网络上发送消息（例如发送到远程数据库），您应该对远程计算机上的消息日志施加适当的访问控制。  

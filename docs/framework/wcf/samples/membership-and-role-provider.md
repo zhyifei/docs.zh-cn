@@ -2,12 +2,12 @@
 title: 成员资格和角色提供程序
 ms.date: 03/30/2017
 ms.assetid: 0d11a31c-e75f-4fcf-9cf4-b7f26e056bcd
-ms.openlocfilehash: 894fcef0cbb25f85043aa6f5c55c45bae5161546
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 139d85a1ec36509690f35f24c7ddf04716a7e909
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69948552"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70039439"
 ---
 # <a name="membership-and-role-provider"></a>成员资格和角色提供程序
 成员资格和角色提供程序示例演示服务如何使用 ASP.NET 成员资格和角色提供程序来对客户端进行身份验证和授权。  
@@ -123,10 +123,10 @@ ms.locfileid: "69948552"
 2. 确保已将 ASP.NET 配置为[数据库应用程序服务](https://go.microsoft.com/fwlink/?LinkId=94997)。  
   
     > [!NOTE]
-    >  如果运行的是 SQL Server Express Edition，则服务器名称为 .\SQLEXPRESS。 在配置 ASP.NET 应用程序服务数据库和 web.config 连接字符串时, 应使用此服务器。  
+    > 如果运行的是 SQL Server Express Edition，则服务器名称为 .\SQLEXPRESS。 在配置 ASP.NET 应用程序服务数据库和 web.config 连接字符串时, 应使用此服务器。  
   
     > [!NOTE]
-    >  ASP.NET 工作进程帐户必须对此步骤中创建的数据库具有权限。 使用 sqlcmd 实用工具或 SQL Server Management Studio 来完成该工作。  
+    > ASP.NET 工作进程帐户必须对此步骤中创建的数据库具有权限。 使用 sqlcmd 实用工具或 SQL Server Management Studio 来完成该工作。  
   
 3. 若要用单一计算机配置或跨计算机配置来运行示例，请按照下列说明进行操作。  
   

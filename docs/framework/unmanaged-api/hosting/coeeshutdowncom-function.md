@@ -20,15 +20,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 74548df512f68761b006e064a6db968e82b03813
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 164384f043a1722ace6e5c4098cb31c4327cba1e
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779118"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044059"
 ---
 # <a name="coeeshutdowncom-function"></a>CoEEShutDownCOM 函数
-强制公共语言运行时 (CLR) 以释放它在运行时可调用包装 (RCW) 内所持有的所有接口指针。 释放所有 RCW 缓存效果。 .NET Framework 4 中已弃用此全局函数。 相反，对于特定的运行时使用的入口点。  
+强制公共语言运行时 (CLR) 释放它在运行时可调用包装 (RCW) 内包含的所有接口指针。 这就产生了释放所有 RCW 缓存的效果。 此全局函数在 .NET Framework 4 中已弃用。 相反, 请使用特定运行时的入口点。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,19 +37,19 @@ void CoEEShutDownCOM ();
 ```  
   
 ## <a name="remarks"></a>备注  
- `CoEEShutDownCOM`函数首先释放所有上下文和所有缓存中的所有 Rcw，并删除现有的安装程序中的任何关闭的通知。 没有 DLL 卸载时发生。  
+ `CoEEShutDownCOM`函数首先释放所有上下文和所有缓存中的所有 rcw, 然后删除安装程序中的任何现有的弹出通知。 不发生 DLL 卸载。  
   
 > [!CAUTION]
->  此函数会影响加载到进程的所有运行时。  
+> 此函数影响加载到进程中的所有运行时。  
   
- 从.NET Framework 4 开始，此函数在你想要影响的特定运行时调用的入口点。 若要获取的入口点，请调用[iclrruntimeinfo:: Getprocaddress](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getprocaddress-method.md)方法并指定"CoEEShutDownCOM"。  
+ 从 .NET Framework 4 开始, 在你想要影响的特定运行时上调用此函数的入口点。 若要获取入口点, 请调用[ICLRRuntimeInfo:: GetProcAddress](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getprocaddress-method.md)方法, 并指定 "CoEEShutDownCOM"。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **标头：** Cor  
   
- **库：** 包含为 MsCorEE.dll 中的资源  
+ **类库**作为资源包括在 Mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

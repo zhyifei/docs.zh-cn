@@ -2,30 +2,30 @@
 title: Net.TCP 端口共享示例
 ms.date: 03/30/2017
 ms.assetid: 03da5959-0574-4e91-8a53-05854b6c55dc
-ms.openlocfilehash: 62642daffb7e41fb4e023bdd18c221c9dcfd9f2f
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 56d248a8349e4f38bfdef6a887fc41b117402d02
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65876384"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70039185"
 ---
 # <a name="nettcp-port-sharing-sample"></a>Net.TCP 端口共享示例
 TCP/IP 协议使用一个称为端口的 16 位数字来区分与在同一台计算机上运行的多个网络应用程序的连接。 如果某个应用程序正在侦听一个端口，则此端口的所有 TCP 通信将转至该应用程序。 其他应用程序无法同时侦听此端口。  
   
 > [!IMPORTANT]
->  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
+> 您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+> 如果此目录不存在, 请参阅[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)以下载所有 Windows Communication Foundation (wcf) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\TCP\PortSharing`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\TCP\PortSharing`  
   
  许多协议具有所使用的标准或默认端口号。 例如，HTTP 协议通常使用 TCP 端口 80。 Internet 信息服务 (IIS) 具有一个侦听器，可在多个 HTTP 应用程序之间共享一个端口。 IIS 直接侦听此端口，并基于消息流内的信息将消息转发到适当的应用程序。 这就允许多个 HTTP 应用程序使用相同的端口号，而不必竞相保留此端口来接收消息。  
   
- NetTcp 端口共享是一项 Windows Communication Foundation (WCF) 功能，同样允许多个网络应用程序共享一个端口。 NetTcp Port Sharing Service 接受使用 net.tcp 协议的连接，并基于消息的目标地址来转发消息。  
+ Wcf-nettcp 端口共享是一种 Windows Communication Foundation (WCF) 功能, 与此类似, 它允许多个网络应用程序共享一个端口。 NetTcp Port Sharing Service 接受使用 net.tcp 协议的连接，并基于消息的目标地址来转发消息。  
   
- 默认情况下不会启用 NetTcp Port Sharing Service。 运行该示例之前，必须手动启用此服务。 有关详细信息，请参阅[如何：启用 Net.TCP 端口共享服务](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)。 如果禁用了此服务，则在启动服务器应用程序时将引发异常。  
+ 默认情况下不会启用 NetTcp Port Sharing Service。 运行该示例之前，必须手动启用此服务。 有关详细信息，请参阅[如何：启用 Net.tcp 端口共享服务](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)。 如果禁用了此服务，则在启动服务器应用程序时将引发异常。  
   
 ```  
 Unhandled Exception: System.ServiceModel.CommunicationException: The TransportManager failed to listen on the supplied URI using the NetTcpPortSharing service: failed to start the service because it is disabled. An administrator can enable it by running 'sc.exe config NetTcpPortSharing start= demand'.. ---> System.InvalidOperationException: Cannot start service NetTcpPortSharing on computer '.'. ---> System.ComponentModel.Win32Exception: The service cannot be started, either because it is disabled or because it has no enabled devices associated with it  
@@ -125,16 +125,16 @@ Press <ENTER> to terminate client.
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
-1. 安装 ASP.NET 4.0 使用以下命令。  
+1. 使用以下命令安装 ASP.NET 4.0。  
   
     ```  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2. 请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+2. 确保已对[Windows Communication Foundation 示例执行了一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
 3. 按照前面的简介部分中的说明启用 NetTcp Port Sharing Service。  
   
 4. 若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
   
-5. 若要在单或跨计算机配置中运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。 前面的“运行示例”部分中包含有关运行该示例的特定详细信息。  
+5. 若要以单机配置或跨计算机配置来运行示例, 请按照[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的说明进行操作。 前面的“运行示例”部分中包含有关运行该示例的特定详细信息。  

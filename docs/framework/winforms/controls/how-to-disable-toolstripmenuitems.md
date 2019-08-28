@@ -13,19 +13,19 @@ helpviewer_keywords:
 - menu items [Windows Forms], enabling
 - menus [Windows Forms], disabling menu items
 ms.assetid: bcc1da84-50fd-41d2-8475-103b581d5654
-ms.openlocfilehash: a4bc24c5a514beaa17fdb201329b9729ec712406
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f86a2934e799e4604693491dacbecc517d44d810
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64603544"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70046222"
 ---
 # <a name="how-to-disable-toolstripmenuitems"></a>如何：禁用 ToolStripMenuItem
-您可以限制或扩大用户可通过启用和禁用对用户活动的响应中的菜单项的命令。 菜单项时创建，但这可以通过调整默认情况下启用<xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A>属性。 在设计时使用此属性可**属性**窗口或以编程方式在代码中设置。  
+你可以通过启用和禁用菜单项来限制或放宽用户在响应用户活动时所能执行的命令。 默认情况下, 菜单项在创建时处于启用状态, 但可以通过<xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A>属性进行调整。 可以在设计时在 "**属性**" 窗口中或通过编程方式在代码中设置此属性。  
   
-### <a name="to-disable-a-menu-item-programmatically"></a>若要以编程方式禁用菜单项  
+### <a name="to-disable-a-menu-item-programmatically"></a>以编程方式禁用菜单项  
   
-- 在其中设置菜单项的属性方法中，添加代码以设置<xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A>属性设置为`false`。  
+- 在设置菜单项属性的方法中, 添加要将属性设置为<xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A> `false`的代码。  
   
     ```vb  
     MenuItem1.Enabled = False  
@@ -40,7 +40,7 @@ ms.locfileid: "64603544"
     ```  
   
     > [!TIP]
-    >  禁用菜单中的第一个或顶级菜单项隐藏菜单中包含的所有菜单项，但不会禁用。 同样，禁用具有子菜单项的菜单项隐藏子菜单项，但不会禁用。 如果给定的菜单上的所有命令都都对用户不可用，它视为良好编程习惯，同时隐藏和禁用整个菜单中，这提供了一个清晰的用户界面。 应隐藏和禁用菜单，并禁用每个项目和子菜单项在菜单中，因为仅靠隐藏不会向菜单命令的快捷键通过阻止访问。 设置<xref:System.Windows.Forms.ToolStripItem.Visible%2A>属性的顶级菜单项`false`若要隐藏整个菜单。  
+    > 禁用菜单中的第一个或顶级菜单项将隐藏菜单中包含的所有菜单项, 但不会将其禁用。 同样, 禁用具有子菜单项的菜单项将隐藏子菜单项, 但不会禁用子菜单项。 如果给定菜单上的所有命令均不可供用户使用, 则会被视为良好的编程做法, 隐藏和禁用整个菜单, 因为这会显示一个干净的用户界面。 你应隐藏和禁用菜单, 并禁用菜单中的每个项和子菜单项, 因为仅限隐藏不会阻止通过快捷键访问菜单命令。 将顶级<xref:System.Windows.Forms.ToolStripItem.Visible%2A>菜单项的属性设置为`false`以隐藏整个菜单。  
   
 ## <a name="see-also"></a>请参阅
 

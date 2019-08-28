@@ -2,24 +2,24 @@
 title: 通过路由服务进行通信
 ms.date: 03/30/2017
 ms.assetid: 0f4b0d5b-6522-4ad5-9f3a-baa78316d7d1
-ms.openlocfilehash: 802135f61e1744acbfe5ae5fe4a6e92ec49d46b2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1ab3da97bc94f864bbd28ca072f4df8f7d854ea1
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650027"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044942"
 ---
 # <a name="hello-world-with-the-routing-service"></a>通过路由服务进行通信
-此示例演示 Windows Communication Foundation (WCF) 路由服务。 路由服务是一个 WCF 组件，它可以轻松地在应用程序中包含基于内容的路由器。 此示例采用标准的 WCF 计算器示例，用于使用路由服务进行通信。 在此示例中，计算器客户端配置为将消息发送到由路由器公开的一个终结点。 路由服务配置为接受发送给它的所有消息，然后将这些消息转发至与计算器服务对应的终结点。 因此，从客户端发送的消息将由路由器接收，并重新路由到实际的计算器服务。 来自计算器服务的消息将发回到路由器，后者又将这些消息传回到计算器客户端。
+此示例演示 Windows Communication Foundation (WCF) 路由服务。 路由服务是一个 WCF 组件, 使您可以轻松地在应用程序中包含基于内容的路由器。 此示例改编了标准 WCF 计算器示例, 以使用路由服务进行通信。 在此示例中，计算器客户端配置为将消息发送到由路由器公开的一个终结点。 路由服务配置为接受发送给它的所有消息，然后将这些消息转发至与计算器服务对应的终结点。 因此，从客户端发送的消息将由路由器接收，并重新路由到实际的计算器服务。 来自计算器服务的消息将发回到路由器，后者又将这些消息传回到计算器客户端。
 
 ### <a name="to-use-this-sample"></a>使用此示例
 
-1. 使用 Visual Studio 2012 打开 HelloRoutingService.sln。
+1. 使用 Visual Studio 2012, 打开 HelloRoutingService。
 
 2. 按 F5 或 Ctrl+Shift+B。
 
     > [!NOTE]
-    >  如果按 F5，则计算器客户端将自动启动。 如果按 Ctrl+Shift+B（生成），则您必须自己启动以下应用程序。
+    > 如果按 F5，则计算器客户端将自动启动。 如果按 Ctrl+Shift+B（生成），则您必须自己启动以下应用程序。
     >
     > 1. 计算器客户端 (./CalculatorClient/bin/client.exe)
     > 2. 计算器服务 (./CalculatorService/bin/service.exe)
@@ -42,21 +42,21 @@ ms.locfileid: "64650027"
 ## <a name="configurable-via-code-or-appconfig"></a>可通过代码或 App.Config 进行配置
  所提供的示例配置为使用 App.config 文件来定义路由器行为。 也可将 App.config 文件的名称更改为无法识别的其他名称，并将对 ConfigureRouterViaCode() 的方法调用取消注释。 以上任一方法都可产生相同的路由器行为。
 
-### <a name="scenario"></a>方案
+### <a name="scenario"></a>应用场景
  此示例演示作为基本消息泵的路由器。 路由服务用作透明的代理节点，该节点配置为将消息直接传递到目标终结点的预配置集。
 
 ### <a name="real-world-scenario"></a>实际方案
  Contoso 希望提高其服务的命名、寻址、配置和安全方面的灵活性。 为此，他们将基本消息泵放在其服务的前面，作为面向公共的终结点。 这样，他们就可以将附加安全性放在其实际服务的前面，以便以后更轻松地实现扩展的解决方案或服务版本控制。
 
 > [!IMPORTANT]
->  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
+> 您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+> 如果此目录不存在, 请参阅[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)以下载所有 Windows Communication Foundation (wcf) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\RoutingServices\HelloRoutingService`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\RoutingServices\HelloRoutingService`  
   
 ## <a name="see-also"></a>请参阅
 
-- [AppFabric 承载和持久性示例](https://go.microsoft.com/fwlink/?LinkId=193961)
+- [AppFabric 宿主和持久性示例](https://go.microsoft.com/fwlink/?LinkId=193961)

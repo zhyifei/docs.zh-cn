@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3d71814c-bda7-424b-85b7-15084ff9377a
-ms.openlocfilehash: a6bbc2fe4bf68b50153075a251d23deebda78de5
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 085186eae034314437d5a0c1fe90e6cdf6902c5e
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988652"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70045841"
 ---
 # <a name="serialization-and-deserialization"></a>序列化和反序列化
 Windows Communication Foundation (WCF) 包含一个新的<xref:System.Runtime.Serialization.DataContractSerializer>序列化引擎。 双向 .NET Framework 对象和 XML 之间进行转换。<xref:System.Runtime.Serialization.DataContractSerializer> 本主题说明序列化程序的工作原理。  
@@ -138,7 +138,7 @@ Windows Communication Foundation (WCF) 包含一个新的<xref:System.Runtime.Se
 - 此功能可能导致序列化和反序列化进程运行速度减慢。 尽管不必复制数据，但是在此模式中必须执行额外的对象比较。  
   
 > [!CAUTION]
->  当启用 `preserveObjectReferences` 模式时，需要将 `maxItemsInObjectGraph` 值设置为正确的配额，这一点特别重要。 由于在此模式中处理数组的方式方面的原因，攻击者很容易构造一条小的恶意消息来造成内存大量消耗（仅通过 `maxItemsInObjectGraph` 配额来限制）。  
+> 当启用 `preserveObjectReferences` 模式时，需要将 `maxItemsInObjectGraph` 值设置为正确的配额，这一点特别重要。 由于在此模式中处理数组的方式方面的原因，攻击者很容易构造一条小的恶意消息来造成内存大量消耗（仅通过 `maxItemsInObjectGraph` 配额来限制）。  
   
 ### <a name="specifying-a-data-contract-surrogate"></a>指定数据协定代理项  
  一些 `DataContractSerializer` 构造函数重载具有 `dataContractSurrogate` 参数，该参数可以设置为 `null`。 此外，可以使用它来指定数据协定代理项，数据协定代理项是一种实现 <xref:System.Runtime.Serialization.IDataContractSurrogate> 接口的类型。 然后可以使用该接口来自定义序列化和反序列化进程。 有关详细信息, 请参阅[数据协定代理](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)项。  

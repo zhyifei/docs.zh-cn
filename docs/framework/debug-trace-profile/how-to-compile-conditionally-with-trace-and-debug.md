@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 56d051c3-012c-42c1-9a58-7270edc624aa
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: df1f1c7e28464781a73a0939c3413f4c9d620d7d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1692b93e09ec972e537e4a375774eeeb865bd58c
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69942387"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70043434"
 ---
 # <a name="how-to-compile-conditionally-with-trace-and-debug"></a>如何：使用跟踪和调试执行有条件编译
 在开发过程中调试应用程序时，跟踪和调试输出都会出现在 Visual Studio 的“输出”窗口中。 但是，若要在已部署的应用程序中包含跟踪功能，则必须在 TRACE 编译器指令处于启动状态下编译已检测应用程序。 这样就可以将跟踪代码编译成应用程序的发布版本。 如果未启用 TRACE 指令，将在编译过程中忽略所有跟踪代码，并且不会将其包含在将部署的可执行代码中。  
@@ -55,7 +55,7 @@ ms.locfileid: "69942387"
      对于C#: **csc-r:System.dll-d:TRACE-d:DEBUG = FALSE MyApplication.cs**  
   
     > [!TIP]
-    >  若要编译多个应用程序文件，请在文件名之间留一个空格，例如 MyApplication1.vb MyApplication2.vb MyApplication3.vb 或 MyApplication1.cs MyApplication2.cs MyApplication3.cs。  
+    > 若要编译多个应用程序文件，请在文件名之间留一个空格，例如 MyApplication1.vb MyApplication2.vb MyApplication3.vb 或 MyApplication1.cs MyApplication2.cs MyApplication3.cs。  
   
      以上示例所使用的条件编译指令具有如下含义：  
   

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - drag-and-drop [WPF], events
 - drop targets [WPF], drag-and-drop
 ms.assetid: 1a5b27b0-0ac5-4cdf-86c0-86ac0271fa64
-ms.openlocfilehash: e8e8b294e05579a91a4557b23be6c65f4d619167
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: bb5766a3efc38750458ef0d354e8a2e3ab204000
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69940882"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70046409"
 ---
 # <a name="drag-and-drop-overview"></a>拖放概述
 本主题概述 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 应用程序中的拖放支持。 拖放通常指一种数据传输方法：使用鼠标（或一些其他指针设备）选择一个或多个对象，将其拖至 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 中的某些所需拖放目标之上并放置。  
@@ -166,7 +166,7 @@ ms.locfileid: "69940882"
  对拖动源进行拖动时，持续引发 <xref:System.Windows.DragDrop.QueryContinueDrag> 事件。 你可以根据 ESC、SHIFT、CTRL 和 ALT 键以及鼠标按钮的状态处理此事件，以确定结束拖放操作的操作。 此事件的默认处理程序在按下 ESC 键后取消拖放操作，并且在释放鼠标按钮后放置数据。  
   
 > [!CAUTION]
->  在拖放操作过程中，将持续引发这些事件。 因此，应避免事件处理程序中的资源密集型任务。  例如，每次引发 <xref:System.Windows.DragDrop.GiveFeedback> 事件时，请使用缓存的光标，而不是创建新光标。  
+> 在拖放操作过程中，将持续引发这些事件。 因此，应避免事件处理程序中的资源密集型任务。  例如，每次引发 <xref:System.Windows.DragDrop.GiveFeedback> 事件时，请使用缓存的光标，而不是创建新光标。  
   
 ### <a name="enabling-an-element-to-be-a-drop-target"></a>使元素作为拖放目标  
  作为拖放目标的对象用于：  

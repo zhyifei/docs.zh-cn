@@ -2,12 +2,12 @@
 title: PII 安全锁定
 ms.date: 03/30/2017
 ms.assetid: c44fb338-9527-4dd0-8607-b8787d15acb4
-ms.openlocfilehash: 16e7c564373eaf241b500c0e3de40ee8fb38f05a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f82d3f19a3bf6fc6a5ac038034880dafc03fcce1
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964597"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044790"
 ---
 # <a name="pii-security-lockdown"></a>PII 安全锁定
 此示例演示如何通过以下方法控制 Windows Communication Foundation (WCF) 服务的多个安全相关功能:  
@@ -19,13 +19,13 @@ ms.locfileid: "69964597"
 - 控制跟踪和消息日志中的个人身份信息 (PII) 日志记录。  
   
 > [!IMPORTANT]
->  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
+> 您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在, 请参阅[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)以下载所有 Windows Communication Foundation (wcf) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+> 如果此目录不存在, 请参阅[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)以下载所有 Windows Communication Foundation (wcf) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\SecurityLockdown`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\SecurityLockdown`  
   
 ## <a name="discussion"></a>讨论  
  这些功能中的每种功能都可以单独使用，也可以一起使用来控制服务安全的各个方面。 这不是用于保护 WCF 服务的权威指南。  
@@ -120,7 +120,7 @@ ms.locfileid: "69964597"
 > 除配置文件中列出的第一个属性外，System.Diagnostics 将忽略所有源上的所有属性。 向配置文件中的第二个源添加 `logKnownPii` 属性不起作用。  
   
 > [!IMPORTANT]
->  运行此示例需要手动修改 Machine.config。修改 Machine.config 时应小心，因为不正确的值或语法可能会阻止所有 .NET Framework 应用程序运行。  
+> 运行此示例需要手动修改 Machine.config。修改 Machine.config 时应小心，因为不正确的值或语法可能会阻止所有 .NET Framework 应用程序运行。  
   
  使用 DPAPI 和 RSA 也可以对配置文件元素进行加密。 有关更多信息，请参见以下链接：  
   

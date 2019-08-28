@@ -2,12 +2,12 @@
 title: 令牌提供程序
 ms.date: 03/30/2017
 ms.assetid: 947986cf-9946-4987-84e5-a14678d96edb
-ms.openlocfilehash: e1520ef3e2faca88b06cc82ef5ab3035a857314a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9f008204c6ff8d3d134dbb17fc445b460f757f13
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69969360"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70038749"
 ---
 # <a name="token-provider"></a>令牌提供程序
 此示例演示如何实现自定义令牌提供程序。 Windows Communication Foundation (WCF) 中的令牌提供程序用于向安全基础结构提供凭据。 令牌提供程序一般检查目标并颁发相应的凭据，以使安全基础结构能够确保消息的安全。 WCF 附带了默认的凭据管理器令牌提供程序。 WCF 还附带了一个 CardSpace 令牌提供程序。 自定义令牌提供程序在下列情况下有用：
@@ -255,7 +255,7 @@ static void DisplayIdentityInformation()
 1. 从使用管理员特权打开的 Visual Studio 2012 命令提示符下的示例安装文件夹中运行安装程序。 这将安装运行示例所需的所有证书。
 
     > [!NOTE]
-    >  设置 bat 批处理文件设计为在 Visual Studio 2012 命令提示符下运行。 在 Visual Studio 2012 命令提示符中设置的 PATH 环境变量指向包含安装程序 bat 脚本所需的可执行文件的目录。  
+    > 设置 bat 批处理文件设计为在 Visual Studio 2012 命令提示符下运行。 在 Visual Studio 2012 命令提示符中设置的 PATH 环境变量指向包含安装程序 bat 脚本所需的可执行文件的目录。  
   
 2. 启动 service\bin 中的 service.exe。  
   

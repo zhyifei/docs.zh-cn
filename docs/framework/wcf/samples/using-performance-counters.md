@@ -2,12 +2,12 @@
 title: 使用性能计数器
 ms.date: 03/30/2017
 ms.assetid: 00a787af-1876-473c-a48d-f52b51e28a3f
-ms.openlocfilehash: 2d714af8802bd290b54d0bf3667220b25b24c3fc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 724580c1725cf6513e1d85f03b0abfdefb4d040a
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966771"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044532"
 ---
 # <a name="using-performance-counters"></a>使用性能计数器
 此示例演示如何访问 Windows Communication Foundation (WCF) 性能计数器以及如何创建用户定义的性能计数器。 此示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)。  
@@ -44,14 +44,14 @@ ms.locfileid: "69966771"
 1. 通过依次单击 "**开始**"、"**运行 ...** " `perfmon` , 输入并单击 **"确定**", 或从 "控制面板" 中选择 "**管理工具**", 然后双击 "**性能**"。  
   
     > [!NOTE]
-    >  在示例代码运行之前无法添加计数器。  
+    > 在示例代码运行之前无法添加计数器。  
   
 2. 选择列出的性能计数器并按 Delete 键以移除它们。  
   
 3. 通过右键单击 "关系图" 窗格并选择 "**添加计数器**" 来添加 WCF 计数器。 在 "**添加计数器**" 对话框中, 选择 "性能对象" 下拉列表框中的**ServiceModelOperation 3.0.0.0、ServiceModelEndpoint 3.0.0.0 或 ServiceModelService 3.0.0.0** 。 从列表中选择要查看的计数器。  
   
     > [!NOTE]
-    >  如果未在计算机上运行任何 WCF 服务, 则不会为服务提供 WCF 性能计数器。  
+    > 如果未在计算机上运行任何 WCF 服务, 则不会为服务提供 WCF 性能计数器。  
   
 ### <a name="to-use-the-configuration-editor-to-enable-counters"></a>使用配置编辑器来启用计数器  
   
@@ -68,13 +68,13 @@ ms.locfileid: "69966771"
 6. 保存该配置文件并退出编辑器。  
   
 > [!IMPORTANT]
->  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
+> 您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在, 请参阅[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)以下载所有 Windows Communication Foundation (wcf) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+> 如果此目录不存在, 请参阅[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)以下载所有 Windows Communication Foundation (wcf) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\PerfCounters`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\PerfCounters`  
   
 ## <a name="see-also"></a>请参阅
 

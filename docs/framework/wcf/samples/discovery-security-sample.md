@@ -2,12 +2,12 @@
 title: 发现安全示例
 ms.date: 03/30/2017
 ms.assetid: b8db01f4-b4a1-43fe-8e31-26d4e9304a65
-ms.openlocfilehash: 8512dbddc5d27e75d98d281c0bdccf142a113d7f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: dfc0dfcd3b4d814a158b328ef202d5438e583a8c
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69961728"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70039819"
 ---
 # <a name="discovery-security-sample"></a>发现安全示例
 Discovery 规范不要求参与发现过程的终结点是安全的。 增强发现消息的安全性可缓解各种类型的攻击（消息更改、拒绝服务、重播、欺骗）。 本示例实现自定义通道，这些通道计算和验证使用精简签名格式（在 WS-Discovery 规范的第 8.2 节中进行了介绍）的消息签名。 该示例支持[2005 发现规范](https://go.microsoft.com/fwlink/?LinkId=177912)和[1.1 版本](https://go.microsoft.com/fwlink/?LinkId=179677)。  
@@ -67,10 +67,10 @@ Discovery 规范不要求参与发现过程的终结点是安全的。 增强发
 3. 完成示例后，执行 Cleanup.bat 脚本移除为此示例创建的证书。  
   
 > [!IMPORTANT]
->  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
+> 您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在, 请参阅[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)以下载所有 Windows Communication Foundation (wcf) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+> 如果此目录不存在, 请参阅[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)以下载所有 Windows Communication Foundation (wcf) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DiscoveryScenario`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DiscoveryScenario`  

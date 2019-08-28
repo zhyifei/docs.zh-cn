@@ -2,12 +2,12 @@
 title: 分布式事务
 ms.date: 03/30/2017
 ms.assetid: 718b257c-bcb2-408e-b004-a7b0adb1c176
-ms.openlocfilehash: f5ed99928534dc31832ac0baf1bb1bfa7e83ded2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 60a455d51d7ae80f5434f9564ca7416c70bef9f5
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69956760"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70041239"
 ---
 # <a name="distributed-transactions"></a>分布式事务
 事务是一组相关的任务，作为独立于其他任务的独立单元成功（提交）或失败（中止）。 *分布式事务*是影响若干资源的事务。 要提交分布式事务，所有参与者都必须保证对数据的任何更改是永久的。 即使发生系统崩溃或其他不可预见的事件，更改也必须是永久的。 即使只有一个参与者无法保证这一点，整个事务也将失败，在事务范围内对数据的任何更改均将回滚。  
@@ -39,7 +39,7 @@ ms.locfileid: "69956760"
 > 在某个事务中显式登记了连接之后，在该事务完成之前，连接将无法取消登记或在另一个事务中登记。  
   
 > [!CAUTION]
->  如果连接已使用连接的 `EnlistTransaction` 方法开始了某个事务，<xref:System.Data.Common.DbConnection.BeginTransaction%2A> 将引发异常。 但是，如果事务是在数据源上开始的本地事务（例如使用 <xref:System.Data.SqlClient.SqlCommand> 显式执行 BEGIN TRANSACTION 语句），`EnlistTransaction` 将回滚该本地事务并根据请求在现有分布式事务中登记。 你不会接收本地事务已回滚的通知，必须管理任何未使用 <xref:System.Data.Common.DbConnection.BeginTransaction%2A> 开始的本地事务。 如果您将用于 SQL Server 的 .NET Framework 数据提供程序 (`SqlClient`) 与 SQL Server 结合使用，则尝试登记会引发异常。 所有其他情况将无法发现。  
+> 如果连接已使用连接的 `EnlistTransaction` 方法开始了某个事务，<xref:System.Data.Common.DbConnection.BeginTransaction%2A> 将引发异常。 但是，如果事务是在数据源上开始的本地事务（例如使用 <xref:System.Data.SqlClient.SqlCommand> 显式执行 BEGIN TRANSACTION 语句），`EnlistTransaction` 将回滚该本地事务并根据请求在现有分布式事务中登记。 你不会接收本地事务已回滚的通知，必须管理任何未使用 <xref:System.Data.Common.DbConnection.BeginTransaction%2A> 开始的本地事务。 如果您将用于 SQL Server 的 .NET Framework 数据提供程序 (`SqlClient`) 与 SQL Server 结合使用，则尝试登记会引发异常。 所有其他情况将无法发现。  
   
 ## <a name="promotable-transactions-in-sql-server"></a>SQL Server 中的可提升事务  
  SQL Server 支持可提升的事务，在此类事务中，本地轻型事务可以仅在需要时自动提升为分布式事务。 可提升的事务不会调用分布式事务增加的系统开销，除非需要增加的系统开销。 有关详细信息和代码示例, 请参阅[System. 事务与 SQL Server 的集成](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)。  

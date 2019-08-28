@@ -2,12 +2,12 @@
 title: ETW 跟踪
 ms.date: 03/30/2017
 ms.assetid: ac99a063-e2d2-40cc-b659-d23c2f783f92
-ms.openlocfilehash: d2df3d08e80dda04470af5062cab53f4b19ac9b7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c484e3438ad3512bd6186297f3edf8068a60795e
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69961615"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70045004"
 ---
 # <a name="etw-tracing"></a>ETW 跟踪
 本示例演示如何通过使用 Windows 事件跟踪 (ETW) 和本示例提供的 `ETWTraceListener` 来实现端对端 (E2E) 跟踪。 该示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md), 并包括 ETW 跟踪。  
@@ -85,7 +85,7 @@ Logman stop Wcf
 2. 若要生成解决方案, 请按照[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
   
     > [!NOTE]
-    >  若要使用 RegisterProvider.bat、SetupETW.bat 和 CleanupETW.bat 命令，必须在本地管理员帐户下运行。 如果使用的是 [!INCLUDE[wv](../../../../includes/wv-md.md)] 或更高版本，则还必须用提升的特权运行命令提示。 为此, 请右键单击 "命令提示符" 图标, 然后单击 "以**管理员身份运行**"。  
+    > 若要使用 RegisterProvider.bat、SetupETW.bat 和 CleanupETW.bat 命令，必须在本地管理员帐户下运行。 如果使用的是 [!INCLUDE[wv](../../../../includes/wv-md.md)] 或更高版本，则还必须用提升的特权运行命令提示。 为此, 请右键单击 "命令提示符" 图标, 然后单击 "以**管理员身份运行**"。  
   
 3. 运行示例之前，在客户端和服务器上运行 RegisterProvider.bat。 这会设置生成的 ETWTracingSampleLog.etl 文件以生成可由服务跟踪查看器读取的跟踪。 此文件可以在 C:\logs 文件夹中找到。 如果此文件夹不存在，则必须创建此文件夹；否则将不会生成跟踪。 然后，在客户端和服务器计算机上运行 SetupETW.bat 以开始 ETW 跟踪会话。 SetupETW.bat 文件可以在 CS\Client 文件夹下找到。  
   
@@ -98,13 +98,13 @@ Logman stop Wcf
 7. 从服务跟踪查看器中打开新创建的 .svclog 文件以查看 ETW 和 ServiceModel 跟踪。  
   
 > [!IMPORTANT]
->  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
+> 您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在, 请参阅[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)以下载所有 Windows Communication Foundation (wcf) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+> 如果此目录不存在, 请参阅[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)以下载所有 Windows Communication Foundation (wcf) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\AnalyticTrace`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\AnalyticTrace`  
   
 ## <a name="see-also"></a>请参阅
 

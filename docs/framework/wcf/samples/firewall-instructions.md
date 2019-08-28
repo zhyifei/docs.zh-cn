@@ -2,12 +2,12 @@
 title: 防火墙说明
 ms.date: 03/30/2017
 ms.assetid: a7dc429f-65ac-4faf-974a-77d5fb977fe1
-ms.openlocfilehash: 5e557963c415cf39c4f25b4854c9863652201146
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2c07d17ebb6bbefa78d12bb128e354112311891a
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69961404"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044955"
 ---
 # <a name="firewall-instructions"></a>防火墙说明
 你必须在防火墙中启用多个端口或程序, 以便 Windows Communication Foundation (WCF) 示例可以正常工作。 其中许多示例使用范围 8000-8003 中的端口和端口 9000 进行通信。 防火墙默认情况下会打开，阻止对这些端口进行访问。 若要针对这些示例启用防火墙，请完成以下过程之一，具体情况取决于您的需求和安全环境：  
@@ -21,7 +21,7 @@ ms.locfileid: "69961404"
  如果不确定要使用哪个过程，请选择第一个选项。 如果运行其他供应商提供的防火墙，您可能需要进行类似的更改。  
   
 > [!IMPORTANT]
->  更改防火墙配置会对安全产生影响。 建议您记录所做的更改，并在使用完示例后移除这些更改。  
+> 更改防火墙配置会对安全产生影响。 建议您记录所做的更改，并在使用完示例后移除这些更改。  
   
 ### <a name="to-enable-samples-programs-in-advance"></a>预先启用示例程序  
   
@@ -30,7 +30,7 @@ ms.locfileid: "69961404"
 2. 单击 "**开始**", 再单击 " `firewall.cpl`**运行**", 然后键入。 这将打开 " **Windows 防火墙控制面板**" 小程序。  
   
     > [!NOTE]
-    >  必须具有更改防火墙设置的权限，才能运行需要能够通过 Windows 防火墙进行通信的示例。 如果某些防火墙设置不可用，并且您的计算机连接到域，则系统管理员可以通过组策略控制这些设置。  
+    > 必须具有更改防火墙设置的权限，才能运行需要能够通过 Windows 防火墙进行通信的示例。 如果某些防火墙设置不可用，并且您的计算机连接到域，则系统管理员可以通过组策略控制这些设置。  
   
 3. 完成以下特定于操作系统的步骤之一，允许程序通过 Windows 防火墙：  
   

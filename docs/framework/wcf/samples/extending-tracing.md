@@ -2,12 +2,12 @@
 title: 扩展跟踪
 ms.date: 03/30/2017
 ms.assetid: 2b971a99-16ec-4949-ad2e-b0c8731a873f
-ms.openlocfilehash: 4cec7ddcdd75bf7601524c107597d0feb4af3103
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 957ba3f1fc8c778ebb5b481d329af9906a36fde9
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69961444"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044956"
 ---
 # <a name="extending-tracing"></a>扩展跟踪
 此示例演示如何通过在客户端和服务代码中编写用户定义的活动跟踪来扩展 Windows Communication Foundation (WCF) 跟踪功能。 这样使用户可以创建跟踪活动，并将跟踪分组为逻辑工作单元。 还可以通过传输（在同一个终结点内）和传播（在终结点之间）来关联活动。 在此示例中，同时为客户端和服务启用了跟踪。 有关如何在客户端和服务配置文件中启用跟踪的详细信息, 请参阅[跟踪和消息日志记录](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md)。  
@@ -18,13 +18,13 @@ ms.locfileid: "69961444"
 > 本主题的最后介绍了此示例的设置过程和生成说明。  
   
 > [!IMPORTANT]
->  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
+> 您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在, 请参阅[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)以下载所有 Windows Communication Foundation (wcf) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+> 如果此目录不存在, 请参阅[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)以下载所有 Windows Communication Foundation (wcf) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ExtendingTracing`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ExtendingTracing`  
   
 ## <a name="tracing-and-activity-propagation"></a>跟踪和活动传播  
  用户定义的活动跟踪允许用户创建自己的跟踪活动, 以便将跟踪分组为逻辑工作单元, 通过传输和传播关联活动, 并降低 WCF 跟踪的性能成本 (例如, 磁盘空间成本日志文件)。  

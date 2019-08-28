@@ -2,12 +2,12 @@
 title: 安装“消息队列 (MSMQ)”
 ms.date: 03/30/2017
 ms.assetid: 7ddcd497-3e04-427e-bc04-3610ad98b01e
-ms.openlocfilehash: 42e66029f8538877ded424f72cb6c829444d1ee0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 118143f2d434e9f4399c3e9141743fc0254b61ab
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69935982"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70039614"
 ---
 # <a name="installing-message-queuing-msmq"></a>安装“消息队列 (MSMQ)”
 以下过程介绍如何安装“消息队列 4.0”和“消息队列 3.0”。  
@@ -54,7 +54,7 @@ ms.locfileid: "69935982"
 3. 选择 "消息队列", 然后单击 "**详细信息**"。  
   
     > [!NOTE]
-    >  如果运行的是 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]，请选择“应用程序服务器”来访问消息队列。  
+    > 如果运行的是 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]，请选择“应用程序服务器”来访问消息队列。  
   
 4. 确保在详细信息页上已选中“MSMQ HTTP 支持”选项。  
   
