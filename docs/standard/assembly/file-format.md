@@ -6,12 +6,12 @@ ms.author: mairaw
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 6520323e-ff28-4c8a-ba80-e64a413199e6
-ms.openlocfilehash: 0bde31a004b1952be488569f89cfd3b129c82771
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5ef5d459195bea752ec5380f2853d8011cb189aa
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68671222"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666634"
 ---
 # <a name="net-assembly-file-format"></a>.NET 程序集文件格式
 
@@ -35,4 +35,4 @@ ms.locfileid: "68671222"
 
 ## <a name="processing-the-assemblies"></a>处理程序集
 
-可以编写工具或 API 来处理程序集。 程序集信息能够在运行时做出程序化决策、重新编写程序集、在编辑器中提供 API IntelliSense 以及生成文档。 <xref:System.Reflection?displayProperty=nameWithType> 和 [Mono.Cecil](https://www.mono-project.com/docs/tools+libraries/libraries/Mono.Cecil/) 是常用于此目的的典型工具。
+可以编写工具或 API 来处理程序集。 程序集信息能够在运行时做出程序化决策、重新编写程序集、在编辑器中提供 API IntelliSense 以及生成文档。 <xref:System.Reflection?displayProperty=nameWithType>、<xref:System.Reflection.MetadataLoadContext?displayProperty=nameWithType> 和 [Mono.Cecil](https://www.mono-project.com/docs/tools+libraries/libraries/Mono.Cecil/) 是常用于此目的的典型工具。

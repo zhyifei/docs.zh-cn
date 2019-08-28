@@ -5,16 +5,16 @@ author: cartermp
 ms.author: mairaw
 ms.date: 08/23/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: b35db12c8da1f333b481d2bd2e7633026ae30c30
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: baeb091f7c1757e62ba049afc7a92ae8e73d3925
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54570718"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70014942"
 ---
 # <a name="net-architectural-components"></a>.NET 体系结构组件
 
-.NET 应用开发用于并运行于一个或多个 .NET 实现。  .NET 实现包括 .NET Framework、.NET Core 和 Mono。 .NET 的所有实现都有一个名为 .NET Standard 的通用 API 规范。 本文简要介绍了每个概念。
+.NET 应用开发用于并运行于一个或多个 .NET 实现  。  .NET 实现包括 .NET Framework、.NET Core 和 Mono。 .NET 的所有实现都有一个名为 .NET Standard 的通用 API 规范。 本文简要介绍了每个概念。
 
 ## <a name="net-standard"></a>.NET Standard
 
@@ -30,20 +30,20 @@ ms.locfileid: "54570718"
 
 - 一个或多个运行时。 示例：CLR 用于 .NET Framework，CoreCLR 和 CoreRT 用于 .NET Core。
 - 实现 .NET Standard 并且可实现其他 API 的类库。 示例：.NET Framework 基类库、.NET Core 基类库。
-- 可选择包含一个或多个应用程序框架。 示例：[ASP.NET](https://www.asp.net/)、[Windows 窗体](../framework/winforms/windows-forms-overview.md)和 [Windows Presentation Foundation (WPF)](../framework/wpf/index.md) 包含在 .NET Framework 中。
+- 可选择包含一个或多个应用程序框架。 示例：[ASP.NET](https://www.asp.net/)、[Windows 窗体](../framework/winforms/windows-forms-overview.md)和 [Windows Presentation Foundation (WPF)](../framework/wpf/index.md) 包含在 .NET Framework 和 .NET Core 中。
 - 可包含开发工具。 某些开发工具在多个实现之间共享。
 
 Microsoft 积极开发和维护的主要 .NET 实现有 4 个：.NET Core、.NET Framework、Mono 和 UWP。
 
 ### <a name="net-core"></a>.NET Core
 
-.NET Core 是 .NET 的跨平台实现，专用于处理大规模的服务器和云工作负荷。 可在 Windows、macOS 和 Linux 上运行。 它实现 .NET Standard，因此面向 .NET Standard 的代码都可在 .NET Core 上运行。 ASP.NET Core 在 .NET Core 上运行。 
+.NET Core 是 .NET 的跨平台实现，专用于处理大规模的服务器和云工作负荷。 可在 Windows、macOS 和 Linux 上运行。 它实现 .NET Standard，因此面向 .NET Standard 的代码都可在 .NET Core 上运行。 [ASP.NET Core](https://dotnet.microsoft.com/learn/aspnet/what-is-aspnet-core)、[Windows 窗体](../framework/winforms/windows-forms-overview.md)和 [Windows Presentation Foundation (WPF)](../framework/wpf/index.md) 都在 .NET Core 上运行。
 
 要了解有关 .NET Core 的详细信息，请参阅 [.NET Core 指南](../core/index.md)和[为服务器应用选择 .NET Core 或 .NET Framework](choosing-core-framework-server.md)。
 
 ### <a name="net-framework"></a>.NET Framework
 
-.Net Framework 是自 2002 年起就已存在的原始 .NET 实现。 它是当前 .NET 开发人员经常使用的 .NET Framework。 4.5 版以及更高版本实现 .NET Standard，因此面向 .NET Standard 的代码都可在这些版本的 .NET Framework 上运行。 它还包含一些特定于 Windows 的 API，如通过 Windows 窗体和 WPF 进行 Windows 桌面开发的 API。 .NET Framework 非常适合用于生成 Windows 桌面应用程序。
+.Net Framework 是自 2002 年起就已存在的原始 .NET 实现。 它是当前 .NET 开发人员经常使用的 .NET Framework。 4\.5 版以及更高版本实现 .NET Standard，因此面向 .NET Standard 的代码都可在这些版本的 .NET Framework 上运行。 它还包含一些特定于 Windows 的 API，如通过 Windows 窗体和 WPF 进行 Windows 桌面开发的 API。 .NET Framework 非常适合用于生成 Windows 桌面应用程序。
 
 若要了解有关 .NET Framework 的详细信息，请参阅 [.NET Framework 指南](../framework/index.md)。
 
@@ -79,7 +79,7 @@ UWP 是用于为物联网 (IoT) 生成新式触控 Windows 应用程序和软件
 可访问一整套适用于每种 .NET 实现的工具和基础结构组件。 包括（但不限于）以下几种：
 
 - .NET 语言及其编译器
-- .NET 项目系统（基于 .csproj.vbproj 和 .fsproj 文件）
+- .NET 项目系统（基于 .csproj  .vbproj  和 .fsproj  文件）
 - [MSBuild](/visualstudio/msbuild/msbuild)（用于生成项目的生成引擎）
 - [NuGet](/nuget/)（适用于.NET 的 Microsoft 程序包管理器）
 - 开放源生成业务流程工具，例如 [CAKE](https://cakebuild.net/) 和 [FAKE](https://fake.build/)

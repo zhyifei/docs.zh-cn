@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - class keyword [C#]
 ms.assetid: b95d8815-de18-4c3f-a8cc-a0a53bdf8690
-ms.openlocfilehash: 83e7d278b38e17dac668b32687a368211399d437
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0c4fc9645e43f23e340804b46bbe8a5faa19525d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54652067"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922388"
 ---
 # <a name="class-c-reference"></a>class（C# 参考）
 
@@ -38,43 +38,43 @@ class TestClass
 |无，实现两个接口|`class ImplClass: IFace1, IFace2 { }`|
 |单一，实现一个接口|`class ImplDerivedClass: BaseClass, IFace1 { }`|
 
-直接在命名空间中声明的、未嵌套在其它类中的类，可以是[公共](../../../csharp/language-reference/keywords/public.md)或[内部](../../../csharp/language-reference/keywords/internal.md)。 默认情况下类为 `internal`。
+直接在命名空间中声明的、未嵌套在其它类中的类，可以是[公共](./public.md)或[内部](./internal.md)。 默认情况下类为 `internal`。
 
 类成员（包括嵌套的类）可以是 [public](public.md)、[protected internal](protected-internal.md)、[protected](protected.md)、[internal](internal.md)、[private](private.md) 或 [private protected](private-protected.md)。 默认情况下成员为 `private`。
 
-有关详细信息，请参阅[访问修饰符](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)。
+有关详细信息，请参阅[访问修饰符](../../programming-guide/classes-and-structs/access-modifiers.md)。
 
-可以声明具有类型参数的泛型类。 有关更多信息，请参见[泛型类](../../../csharp/programming-guide/generics/generic-classes.md)。
+可以声明具有类型参数的泛型类。 有关更多信息，请参见[泛型类](../../programming-guide/generics/generic-classes.md)。
 
 一个类可包含下列成员的声明：
 
-- [构造函数](../../../csharp/programming-guide/classes-and-structs/constructors.md)
+- [构造函数](../../programming-guide/classes-and-structs/constructors.md)
 
-- [常量](../../../csharp/programming-guide/classes-and-structs/constants.md)
+- [常量](../../programming-guide/classes-and-structs/constants.md)
 
-- [字段](../../../csharp/programming-guide/classes-and-structs/fields.md)
+- [字段](../../programming-guide/classes-and-structs/fields.md)
 
-- [终结器](../../../csharp/programming-guide/classes-and-structs/destructors.md)
+- [终结器](../../programming-guide/classes-and-structs/destructors.md)
 
-- [方法](../../../csharp/programming-guide/classes-and-structs/methods.md)
+- [方法](../../programming-guide/classes-and-structs/methods.md)
 
-- [属性](../../../csharp/programming-guide/classes-and-structs/properties.md)
+- [属性](../../programming-guide/classes-and-structs/properties.md)
 
-- [索引器](../../../csharp/programming-guide/indexers/index.md)
+- [索引器](../../programming-guide/indexers/index.md)
 
-- [运算符](../../../csharp/programming-guide/statements-expressions-operators/operators.md)
+- [运算符](../operators/index.md)
 
-- [事件](../../../csharp/programming-guide/events/index.md)
+- [事件](../../programming-guide/events/index.md)
 
-- [委托](../../../csharp/programming-guide/delegates/index.md)
+- [委托](../../programming-guide/delegates/index.md)
 
-- [类](../../../csharp/programming-guide/classes-and-structs/classes.md)
+- [类](../../programming-guide/classes-and-structs/classes.md)
 
-- [接口](../../../csharp/programming-guide/interfaces/index.md)
+- [接口](../../programming-guide/interfaces/index.md)
 
-- [结构](../../../csharp/programming-guide/classes-and-structs/structs.md)
+- [结构](../../programming-guide/classes-and-structs/structs.md)
 
-- [枚举](../../../csharp/programming-guide/enumeration-types.md)
+- [枚举](../../programming-guide/enumeration-types.md)
 
 ## <a name="example"></a>示例
 
@@ -94,7 +94,7 @@ Console.Write(child1.name);   // Error
 
 类中不具有访问修饰符的已声明类型默认为 `private`，因此如果已删除关键字，则此示例中的数据成员将仍为 `private`。
 
-最后要注意的是，默认情况下，对于使用默认构造函数 (`child3`) 创建的对象，`age` 字段初始化为零。
+最后要注意的是，默认情况下，对于使用无参数构造函数 (`child3`) 创建的对象，`age` 字段初始化为零。
 
 ## <a name="c-language-specification"></a>C# 语言规范
 
@@ -102,7 +102,7 @@ Console.Write(child1.name);   // Error
 
 ## <a name="see-also"></a>请参阅
 
-- [C# 参考](../../../csharp/language-reference/index.md)
-- [C# 编程指南](../../../csharp/programming-guide/index.md)
-- [C# 关键字](../../../csharp/language-reference/keywords/index.md)
-- [引用类型](../../../csharp/language-reference/keywords/reference-types.md)
+- [C# 参考](../index.md)
+- [C# 编程指南](../../programming-guide/index.md)
+- [C# 关键字](./index.md)
+- [引用类型](./reference-types.md)
