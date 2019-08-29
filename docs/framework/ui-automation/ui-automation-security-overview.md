@@ -5,17 +5,17 @@ helpviewer_keywords:
 - UI Automation, security model
 - security model, UI Automation
 ms.assetid: 1d853695-973c-48ae-b382-4132ae702805
-ms.openlocfilehash: c74f770f917fc3b2a7d3a18c08270745dac68b12
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 8b798aef528cccdedb1fcaa53c1782632037600d
+ms.sourcegitcommit: 77e33b682db39955e331b8e8eda4ef1925a24e78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422431"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70133789"
 ---
 # <a name="ui-automation-security-overview"></a>UI 自动化安全性概述
 
 > [!NOTE]
-> 本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，请参阅[Windows 自动化 API:UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。
+> 本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关的最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], 请[参阅 Windows 自动化 API:UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。
 
 此概述介绍了的安全模式 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 中 [!INCLUDE[TLA#tla_winvista](../../../includes/tlasharptla-winvista-md.md)]的安全模式。
 
@@ -41,7 +41,7 @@ UI 自动化客户端必须与其他进程通信，其中某些进程可能正�
 
 ## <a name="manifest-files"></a>清单文件
 
-若要访问受保护的系统 UI，应用程序必须生成与包括清单文件`uiAccess`属性中`requestedExecutionLevel`标记，按如下所示：
+若要获取对受保护的系统 UI 的访问权限, 必须使用包含`uiAccess` `requestedExecutionLevel`标记中属性的清单文件生成应用程序, 如下所示:
 
 ```xml
 <trustInfo xmlns="urn:schemas-microsoft-com:asm.v3">
@@ -57,6 +57,4 @@ UI 自动化客户端必须与其他进程通信，其中某些进程可能正�
 
 此代码中的 `level` 属性值只是一个示例。
 
-`uiAccess` 为"false"默认设置。也就是说，如果省略该属性，或者没有为程序集没有清单，应用程序不会无法访问受保护的用户界面。
-
-有关详细信息[!INCLUDE[TLA#tla_longhorn2](../../../includes/tlasharptla-longhorn2-md.md)]安全性、 签名应用程序和创建程序集清单，请参阅[开发人员最佳实践和最小特权环境中的应用程序的准则](https://docs.microsoft.com/previous-versions/dotnet/articles/aa480150(v=msdn.10))。
+`uiAccess`默认为 "false";也就是说, 如果省略该属性, 或如果没有程序集清单, 则应用程序将无法访问受保护的 UI。

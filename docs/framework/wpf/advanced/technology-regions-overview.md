@@ -9,12 +9,12 @@ helpviewer_keywords:
 - interoperability [WPF], airspace
 - Win32 code [WPF], window regions
 ms.assetid: b7cc350f-b9e2-48b1-be14-60f3d853222e
-ms.openlocfilehash: a169064052a567694b1cbd1e2f8ac2f00b047a68
-ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
+ms.openlocfilehash: 4f1489065a70065700d2f8ceb974e66ecceeebd0
+ms.sourcegitcommit: 77e33b682db39955e331b8e8eda4ef1925a24e78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68671837"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70133818"
 ---
 # <a name="technology-regions-overview"></a>技术区概述
 如果在应用程序中使用多种呈现技术（例如 WPF、Win32 或 DirectX），则这些呈现技术必须共享公共顶级窗口中的呈现区域。 本主题介绍可能会对 WPF 互操作应用程序的呈现和输入造成影响的问题。  
@@ -54,11 +54,9 @@ ms.locfileid: "68671837"
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 分层窗口在不同操作系统上具有不同的功能。 这是因为[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]使用 DirectX 呈现, 而分层窗口主要是为 GDI 呈现而不是 DirectX 呈现设计的。  
   
-- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 支持 [!INCLUDE[TLA#tla_longhorn](../../../../includes/tlasharptla-longhorn-md.md)] 及更高版本上的硬件加速分层窗口。 上[!INCLUDE[TLA2#tla_winxp](../../../../includes/tla2sharptla-winxp-md.md)]的硬件加速分层窗口需要 Microsoft directx 支持, 因此这些功能将取决于该计算机上的 Microsoft directx 版本。  
+- WPF 支持硬件加速分层窗口。  
   
 - [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 不支持透明度颜色键，因为 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 无法保证准确呈现所请求的颜色，尤其当呈现采用了硬件加速时更是如此。  
-  
-- 如果你的应用程序在[!INCLUDE[TLA2#tla_winxp](../../../../includes/tla2sharptla-winxp-md.md)]上运行, 在 directx 应用程序呈现时, 位于 directx 表面之上的分层窗口会闪烁。  (实际呈现顺序是 Microsoft Windows 图形设备接口 (GDI) 隐藏分层窗口, 然后 DirectX 绘制, 然后 Microsoft Windows 图形设备接口 (GDI) 将分层窗口返回。  非 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 分层窗口也有此限制。  
   
 ## <a name="see-also"></a>请参阅
 

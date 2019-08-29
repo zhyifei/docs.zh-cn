@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: 65725851cb413e28ceff0d1c9c4b62b76c4fff18
-ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
+ms.openlocfilehash: 44f98a6d7bf8358baf3b123b2d3b1d13009098a6
+ms.sourcegitcommit: 77e33b682db39955e331b8e8eda4ef1925a24e78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68817881"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70133761"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>WPF 安全策略 — 平台安全性
 虽然 Windows Presentation Foundation (WPF) 提供各种安全服务, 但它还利用基础平台 (包括操作系统、CLR 和 Internet Explorer) 的安全功能。 这些层组合在一起旨在提供 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 强大且深层防御的安全模型，尝试避免任何单点故障，如下图所示：  
@@ -33,7 +33,7 @@ ms.locfileid: "68817881"
 
 <a name="Operating_System_Security"></a>   
 ## <a name="operating-system-security"></a>操作系统安全  
-           [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 要求的操作系统最低级别是 [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)]。 的核心[!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)]提供了几种安全功能, 这些功能构成了所有 Windows 应用程序的安全基础, [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]包括用构建的应用程序。 [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] 包含 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 的安全功能并对其进行了进一步扩展。 本主题详细介绍了对 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 至关重要的这些安全功能，以及 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 如何与这些功能集成从而提供深层防御方面的知识。  
+Windows 的核心提供了几种安全功能, 这些功能构成了所有 Windows 应用程序 (包括用 WPF 构建的应用程序) 的安全基础。 本主题讨论了对 WPF 重要的这些安全功能的广度, 以及 WPF 如何与它们集成以提供进一步的深层防御。  
   
 <a name="Microsoft_Windows_XP_Service_Pack_2__SP2_"></a>   
 ### <a name="microsoft-windows-xp-service-pack-2-sp2"></a>Microsoft Windows XP Service Pack 2 (SP2)  
@@ -57,21 +57,21 @@ ms.locfileid: "68817881"
   
 <a name="Windows_Vista"></a>   
 ### <a name="windows-vista"></a>Windows Vista  
- [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] 上的 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 用户将从操作系统其他的安全增强功能中受益，这些功能包括“Least-Privilege User Access(最小特权用户访问)”、代码完整性检查以及特权隔离。  
+Windows Vista 上的 WPF 用户将受益于操作系统的附加安全增强功能, 其中包括 "最小特权用户访问权限"、代码完整性检查和特权隔离。  
   
 #### <a name="user-account-control-uac"></a>用户帐户控制 (UAC)  
  目前, Windows 用户倾向于以管理员权限运行, 因为许多应用程序都需要它们进行安装或执行, 或者两者都需要。 其中一个示例就是，可以将默认应用程序设置写入到注册表。  
   
  使用管理员特权运行实际上就是指应用程序从授予管理员特权的进程执行。 此方法的安全影响在于，可截获使用管理员特权运行的进程的任何恶意代码都将自动继承这些特权，包括对关键系统资源的访问权限。  
   
- 保护计算机免受此安全威胁的一种方法就是使用所需的最少特权数运行应用程序。 这就是通常所说的最低特权原则，也是 [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] 操作系统的核心功能。 此功能称为用户帐户控制 (UAC)，被 [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] UAC 使用，主要有两种使用方式：  
+ 保护计算机免受此安全威胁的一种方法就是使用所需的最少特权数运行应用程序。 这称为最小特权原则, 是 Windows 操作系统的核心功能。 此功能称为用户帐户控制 (UAC), 由 Windows UAC 用两种主要方式使用:  
   
 - 若要在默认情况下使用 UAC 特权运行大多数应用程序，即使用户是管理员，也只有需要使用管理员特权的应用程序才会使用管理员特权运行。 要使用管理特权运行，必须以应用程序清单形式或作为安全策略中的一个条目显式标记应用程序。  
   
 - 提供兼容性解决方案(如虚拟化)。 例如，许多应用程序尝试写入受限位置，例如 C:\Program Files。 对于在 UAC 中执行的应用程序，存在基于用户的可选位置无需管理员特权就能写入。 对于在 UAC 中运行的应用程序，UAC 可虚拟化 C:\Program Files，这样认为其写入到其中的应用程序实际上是写入到基于用户的可选位置。 这种兼容性工作可使操作系统来运行许多以前无法在 UAC 中运行的应用程序。  
   
 #### <a name="code-integrity-checks"></a>代码完整性检查  
- [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] 集成了更深入的代码完整性检查，有助于防止恶意代码在负载/运行时注入到系统文件或内核。 这超出了系统文件保护。  
+ Windows Vista 合并了更深入的代码完整性检查, 以帮助防止恶意代码在负载/运行时注入到系统文件或内核中。 这超出了系统文件保护。  
   
 <a name="Limited_Rights_Process_for_Browser_Hosted_Applications"></a>   
 ### <a name="limited-rights-process-for-browser-hosted-applications"></a>浏览器承载的应用程序的受限权限进程  

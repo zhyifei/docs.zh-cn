@@ -6,12 +6,12 @@ helpviewer_keywords:
 - user interface, see UI
 - accessibility, UI automation
 ms.assetid: 65847654-9994-4a9e-b36d-2dd5d998770b
-ms.openlocfilehash: af4abf060e9a8606f69a94f27ecd76487a2ff51c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 968660f2fa043ee4028cb144f368d9380729ffef
+ms.sourcegitcommit: 77e33b682db39955e331b8e8eda4ef1925a24e78
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69914589"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70133805"
 ---
 # <a name="ui-automation-overview"></a>UI 自动化概述
 > [!NOTE]
@@ -26,7 +26,7 @@ ms.locfileid: "69914589"
   
  UI 自动化客户端应用程序可在保证其将在多个框架上运行的情况下进行编写。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 核心掩盖位于 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]各组成部分之下的框架中的任何差异。 例如在 `Content` 视图中， [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 按钮的 `Caption` 属性、 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 按钮的 `ALT` 属性、HTML 图像的 <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name%2A>属性全部映射到单个属性， [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 。  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 在 [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)]、 [!INCLUDE[TLA#tla_winxp](../../../includes/tlasharptla-winxp-md.md)]和 [!INCLUDE[TLA2#tla_winnetsvrfam](../../../includes/tla2sharptla-winnetsvrfam-md.md)]中提供完整功能。  
+UI 自动化在运行 .NET Framework 的受支持的 Windows 操作系统上提供了完整的功能 (请参阅从 .NET Core 3.0 开始[.NET Framework 系统要求](../get-started/system-requirements.md)或 .net core 版本。  
   
  UI 自动化提供程序通过内置的桥接服务提供对 Microsoft Active Accessibility 客户端应用程序的一些支持。  
   
