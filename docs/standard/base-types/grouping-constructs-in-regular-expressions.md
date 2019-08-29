@@ -335,7 +335,7 @@ ms.locfileid: "67135683"
   
  零宽度负预测先行断言通常用在正则表达式的开头或结尾。 正则表达式的开头可以定义当其定义了要被匹配的相似但更常规的模式时，不应被匹配的特定模式。 在这种情况下，它通常用于限制回溯。 正则表达式的末尾可以定义不能出现在匹配项末尾处的子表达式。  
   
- 下面的示例定义了正则表达式匹配，其在正则表达式的开头使用零宽度负预测先行断言，以匹配未以“un”开头的单词。  
+ 下面的示例定义了正则表达式匹配，其在正则表达式的开头使用零宽度预测先行断言，以匹配未以“un”开头的单词。  
   
  [!code-csharp[RegularExpressions.Language.Grouping#7](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.grouping/cs/negativelookahead1.cs#7)]
  [!code-vb[RegularExpressions.Language.Grouping#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.grouping/vb/negativelookahead1.vb#7)]  
@@ -349,7 +349,7 @@ ms.locfileid: "67135683"
 |`\w+`|匹配一个或多个单词字符。|  
 |`\b`|在单词边界处结束匹配。|  
   
- 下面的示例定义了正则表达式匹配，其在正则表达式的末尾使用零宽度负预测先行断言，以匹配未以标点字符结束的单词。  
+ 下面的示例定义了正则表达式匹配，其在正则表达式的末尾使用零宽度预测先行断言，以匹配未以标点字符结束的单词。
   
  [!code-csharp[RegularExpressions.Language.Grouping#8](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.grouping/cs/negativelookahead2.cs#8)]
  [!code-vb[RegularExpressions.Language.Grouping#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.grouping/vb/negativelookahead2.vb#8)]  
