@@ -296,7 +296,7 @@ ms.locfileid: "69963382"
 |模式|说明|  
 |-------------|-----------------|  
 |`\b`|在单词边界处开始匹配。|  
-|`(?ix: d \w+)`|使用不区分大小写的匹配并忽略此模式中的白色空间，匹配后跟一个或多个单词字符的“d”。|  
+|`(?ix: d \w+)`|使用不区分大小写的匹配并忽略此模式中的空白，匹配后跟一个或多个单词字符的“d”。|  
 |`\s`|与空白字符匹配。|  
   
  [!code-csharp[Conceptual.Regex.Language.Options#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/example1.cs#8)]
