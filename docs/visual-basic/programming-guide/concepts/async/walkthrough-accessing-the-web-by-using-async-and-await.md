@@ -2,12 +2,12 @@
 title: 演练：使用 Async 和 Await 访问 Web (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 84fd047f-fab8-4d89-8ced-104fb7310a91
-ms.openlocfilehash: 7240e78614353249c82e84feac66137828a589ed
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 225046992badba7013193163a191dbf068f0da6a
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630995"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106968"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-visual-basic"></a>演练：使用 Async 和 Await 访问 Web (Visual Basic)
 
@@ -22,17 +22,17 @@ ms.locfileid: "68630995"
 在本演练中，你将完成下列任务：
 
 > [!div class="checklist"]
-> * [创建 WPF 应用程序](#create-a-wpf-application)
-> * [设计简单的 WPF Mainwindow.xaml](#design-a-simple-wpf-mainwindow)
-> * [添加引用](#add-a-reference)
-> * [添加必要的 Imports 语句](#add-necessary-imports-statements)
-> * [创建同步应用程序](#create-a-synchronous-application)
-> * [测试同步解决方案](#test-the-synchronous-solution)
-> * [将 Geturlcontents 转换转换为异步方法](#convert-geturlcontents-to-an-asynchronous-method)
-> * [将 Sumpagesizes 转换转换为异步方法](#convert-sumpagesizes-to-an-asynchronous-method)
-> * [将 startButton_Click 转换为异步方法](#convert-startbutton_click-to-an-asynchronous-method)
-> * [测试异步解决方案](#test-the-asynchronous-solution)
-> * [将 GetURLContentsAsync 方法替换为 .NET Framework 方法](#replace-the-geturlcontentsasync-method-with-a-net-framework-method)
+> - [创建 WPF 应用程序](#create-a-wpf-application)
+> - [设计简单的 WPF Mainwindow.xaml](#design-a-simple-wpf-mainwindow)
+> - [添加引用](#add-a-reference)
+> - [添加必要的 Imports 语句](#add-necessary-imports-statements)
+> - [创建同步应用程序](#create-a-synchronous-application)
+> - [测试同步解决方案](#test-the-synchronous-solution)
+> - [将 Geturlcontents 转换转换为异步方法](#convert-geturlcontents-to-an-asynchronous-method)
+> - [将 Sumpagesizes 转换转换为异步方法](#convert-sumpagesizes-to-an-asynchronous-method)
+> - [将 startButton_Click 转换为异步方法](#convert-startbutton_click-to-an-asynchronous-method)
+> - [测试异步解决方案](#test-the-asynchronous-solution)
+> - [将 GetURLContentsAsync 方法替换为 .NET Framework 方法](#replace-the-geturlcontentsasync-method-with-a-net-framework-method)
 
 有关完整的异步示例, 请参阅 "[示例](#example)" 部分。
 
@@ -50,53 +50,53 @@ ms.locfileid: "68630995"
 
 3. 在 "**已安装的模板**" 窗格中选择 "Visual Basic", 然后从项目类型列表中选择 " **WPF 应用程序**"。
 
-4. 在“名称”  文本框中，输入 `AsyncExampleWPF`，然后选择“确定”  按钮。
+4. 在“名称”文本框中，输入 `AsyncExampleWPF`，然后选择“确定”按钮。
 
-    新项目将出现在“解决方案资源管理器”  中。
+    新项目将出现在“解决方案资源管理器”中。
 
 ## <a name="design-a-simple-wpf-mainwindow"></a>设计简单的 WPF MainWindow
 
 1. 在 Visual Studio 代码编辑器中，选择 **“MainWindow.xaml”** 选项卡。
 
-2. 如果“工具箱”  窗口不可见，则打开“视图”  菜单，然后选择“工具箱”  。
+2. 如果“工具箱”窗口不可见，则打开“视图”菜单，然后选择“工具箱”。
 
-3. 向“MainWindow”  窗口添加一个“Button”  控件和一个“TextBox”  控件。
+3. 向“MainWindow”窗口添加一个“Button”控件和一个“TextBox”控件。
 
-4. 突出显示“TextBox”  控件，在“属性”  窗口中，设置下列值：
+4. 突出显示“TextBox”控件，在“属性”窗口中，设置下列值：
 
-    - 将“名称”  属性设置为 `resultsTextBox`。
+    - 将“名称”属性设置为 `resultsTextBox`。
 
-    - 将“高度”  属性设置为 250。
+    - 将“高度”属性设置为 250。
 
-    - 将“宽度”  属性设置为 500。
+    - 将“宽度”属性设置为 500。
 
-    - 在“文本”  选项卡中，指定等宽字体，例如 Lucida Console 或 Global Monospace。
+    - 在“文本”选项卡中，指定等宽字体，例如 Lucida Console 或 Global Monospace。
 
-5. 突出显示“Button”  控件，在“属性”  窗口中，设置下列值：
+5. 突出显示“Button”控件，在“属性”窗口中，设置下列值：
 
-    - 将“名称”  属性设置为 `startButton`。
+    - 将“名称”属性设置为 `startButton`。
 
-    - 将“内容”  属性的值从“Button”  更改为“Start”  。
+    - 将“内容”属性的值从“Button”更改为“Start”。
 
-6. 确定文本框和按钮的位置，以便它们都在“MainWindow”  窗口中显示。
+6. 确定文本框和按钮的位置，以便它们都在“MainWindow”窗口中显示。
 
     有关 WPF XAML 设计器的详细信息，请参阅[使用 XAML 设计器创建 UI](/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio)。
 
 ## <a name="add-a-reference"></a>添加引用
 
-1. 在“解决方案资源管理器”  中，突出显示项目的名称。
+1. 在“解决方案资源管理器”中，突出显示项目的名称。
 
-2. 在菜单栏上，依次选择“项目”  、“添加引用”  。
+2. 在菜单栏上，依次选择“项目”、“添加引用”。
 
-    此时将显示“引用管理器”  对话框。
+    此时将显示“引用管理器”对话框。
 
 3. 在对话框顶部，验证项目是否以 .NET Framework 4.5 或更高版本为目标。
 
-4. 在“程序集”  区域，选择“Framework”  （如果尚未选择它）。
+4. 在“程序集”区域，选择“Framework”（如果尚未选择它）。
 
-5. 在名称列表中，选中“System.Net.Http”  复选框。
+5. 在名称列表中，选中“System.Net.Http”复选框。
 
-6. 选择“确定”  按钮关闭对话框。
+6. 选择“确定”按钮关闭对话框。
 
 ## <a name="add-necessary-imports-statements"></a>添加必要的 Imports 语句
 
@@ -233,7 +233,7 @@ ms.locfileid: "68630995"
     Control returned to startButton_Click.
     ```
 
-    请注意，显示计数需要几秒钟时间。 与此同时，在等待请求的资源下载时，UI 线程处于被阻止状态。 因此，选择“启动”  按钮后，将无法移动、最大化、最小化显示窗口，甚至也无法关闭显示窗口。 在字节计数开始显示之前，这些操作都会失败。 如果网站没有响应，将不会指示哪个网站失败。 甚至停止等待和关闭程序也会很困难。
+    请注意，显示计数需要几秒钟时间。 与此同时，在等待请求的资源下载时，UI 线程处于被阻止状态。 因此，选择“启动”按钮后，将无法移动、最大化、最小化显示窗口，甚至也无法关闭显示窗口。 在字节计数开始显示之前，这些操作都会失败。 如果网站没有响应，将不会指示哪个网站失败。 甚至停止等待和关闭程序也会很困难。
 
 ## <a name="convert-geturlcontents-to-an-asynchronous-method"></a>将 GetURLContents 转换为异步方法
 
@@ -355,7 +355,7 @@ ms.locfileid: "68630995"
 
     从 `SumPageSizes` 到 `SumPageSizesAsync` 的转换完成。
 
-## <a name="convert-startbuttonclick-to-an-asynchronous-method"></a>将 startButton_Click 转换为异步方法
+## <a name="convert-startbutton_click-to-an-asynchronous-method"></a>将 startButton_Click 转换为异步方法
 
 1. 在事件处理程序中，将调用的方法的名称从 `SumPageSizes` 更改为 `SumPageSizesAsync`（如果尚未执行此操作）。
 
@@ -374,7 +374,7 @@ ms.locfileid: "68630995"
     Await sumTask
     ```
 
-3. 要防止意外重新进入操作，请在 `startButton_Click` 顶部添加下列语句，以禁用“启动”  按钮。
+3. 要防止意外重新进入操作，请在 `startButton_Click` 顶部添加下列语句，以禁用“启动”按钮。
 
     ```vb
     ' Disable the button until the operation is complete.
@@ -406,9 +406,9 @@ ms.locfileid: "68630995"
 
 2. 此时应显示类似于同步解决方案的输出的输出。 但是，请注意下列差异。
 
-    - 处理完成后，所有结果不会同时出现。 例如，两个程序都在 `startButton_Click` 中包含一行可以清除文本框的代码。 目的在于，在一组结果显示后，第二次选择“启动”  按钮时，可以清除运行之间的文本框。 在同步版本中，下载完成且 UI 线程可以自由完成其他工作时，文本框在计数第二次显示之前即被清除。 在异步版本中，选择“启动”  按钮后立即清除文本框。
+    - 处理完成后，所有结果不会同时出现。 例如，两个程序都在 `startButton_Click` 中包含一行可以清除文本框的代码。 目的在于，在一组结果显示后，第二次选择“启动”按钮时，可以清除运行之间的文本框。 在同步版本中，下载完成且 UI 线程可以自由完成其他工作时，文本框在计数第二次显示之前即被清除。 在异步版本中，选择“启动”按钮后立即清除文本框。
 
-    - 最重要的是，UI 线程在下载过程中未被阻止。 在 Web 资源下载、计数和显示期间，可以移动窗口或调整窗口大小。 如果其中一个网站速度缓慢或没有响应，则可以通过选择“关闭”  按钮取消操作（右上角红色字段中的 x）。
+    - 最重要的是，UI 线程在下载过程中未被阻止。 在 Web 资源下载、计数和显示期间，可以移动窗口或调整窗口大小。 如果其中一个网站速度缓慢或没有响应，则可以通过选择“关闭”按钮取消操作（右上角红色字段中的 x）。
 
 ## <a name="replace-the-geturlcontentsasync-method-with-a-net-framework-method"></a>将 GetURLContentsAsync 方法替换为 .NET Framework 方法
 

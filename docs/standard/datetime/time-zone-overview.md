@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: c4b7ed01-5e38-4959-a3b6-ef9765d6ccf1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e5fa4376cdb0496cfd25f4764257c4f3afbc7268
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 64fce738556fa68c54f5f7d7dcba79fc30d03bbe
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61795273"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106726"
 ---
 # <a name="time-zone-overview"></a>时区概述
 
-<xref:System.TimeZoneInfo>类简化了创建时区感知应用程序。 <xref:System.TimeZone>类支持使用本地时区与协调世界时 (UTC)。 <xref:System.TimeZoneInfo>类支持这两个有关哪些信息以及任何时区在注册表中预定义这些区域。 此外可以使用<xref:System.TimeZoneInfo>来定义系统没有有关的任何信息的自定义时区。
+<xref:System.TimeZoneInfo>类可简化时区感知应用程序的创建过程。 <xref:System.TimeZone>类支持使用本地时区和协调世界时 (UTC)。 <xref:System.TimeZoneInfo>该类同时支持这两个区域, 以及在注册表中预定义了哪些信息的任何时区。 你还可以使用<xref:System.TimeZoneInfo>来定义系统不具有其相关信息的自定义时区。
 
 ## <a name="time-zone-essentials"></a>时区概要
 
@@ -36,7 +36,7 @@ ms.locfileid: "61795273"
 
 特定时区中针对夏令时的来回转换可通过固定或浮动调整规则进行定义。 固定调整规则设定一个特定日期，每年都会在此时进行夏令时来回转换。 例如，每年 10 月 25 日从夏令时转换到标准时间，这一案例就是遵循的固定调整规则。 浮动调整规则更为常见，该规则会设定在特定月特定星期的某一天进行夏令时转换。 例如，在 3 月的第三个星期日从标准时间转换到夏令时，这一案例遵循的就是浮动调整规则。
 
-对于实施调整规则的时区而言，夏令时的来回转换会导致两种反常时间：无效时间和不明确时间。 无效时间是指，从标准时间转换到夏令时而产生的不存在的时间。 例如，如果此转换发生在特定日期的凌晨 2:00， 导致时间变为凌晨 3:00，则每次凌晨 2:00  与凌晨 2:59:99  之间的时间间隔无效。 不明确时间是指一个时区内可映射到两个不同时间的时间。 从夏令时转换到标准时间后，便会产生不明确时间。 例如，如果此转换发生在特定日期的凌晨 2:00， 导致时间变为凌晨 1:00，则每次凌晨 1:00  与凌晨 1:59:99  之间的时间间隔既可理解为标准时间，也可以是夏令时时间。
+对于实施调整规则的时区而言，夏令时的来回转换会导致两种反常时间：无效时间和不明确时间。 无效时间是指，从标准时间转换到夏令时而产生的不存在的时间。 例如，如果此转换发生在特定日期的凌晨 2:00， 导致时间变为凌晨 3:00，则每次凌晨 2:00 与凌晨 2:59:99 之间的时间间隔无效。 不明确时间是指一个时区内可映射到两个不同时间的时间。 从夏令时转换到标准时间后，便会产生不明确时间。 例如，如果此转换发生在特定日期的凌晨 2:00， 导致时间变为凌晨 1:00，则每次凌晨 1:00 与凌晨 1:59:99 之间的时间间隔既可理解为标准时间，也可以是夏令时时间。
 
 ## <a name="time-zone-terminology"></a>时区术语
 
@@ -44,32 +44,32 @@ ms.locfileid: "61795273"
 
 | 术语            | 定义 |
 | --------------- | ---------- |
-| 调整规则 | 用于定义何时从标准时间转换为夏令时，以及何时从夏令时转换回标准时间的规则。 每个调整规则都定义了该规则已到位的开始和结束日期 （例如，调整规则是在 1986 年 1 月 1，从到 2006 年 12 月 31 日的位置），增量 （的标准时间更改由于个应用程序所依据的时间量e 调整规则），以及有关的特定日期和时间的转换来调整期间，会出现的信息。 转换可遵循固定规则或浮动规则。 |
-| 不明确时间  | 一个时区内可映射到两个不同时间的时间。 在向后调整时钟时间时，例如从时区的夏令时调整到标准时间这段转换期间，便会出现不明确时间。 例如，如果此转换发生在特定日期的凌晨 2:00， 导致时间变为凌晨 1:00，则每次凌晨 1:00  与凌晨 1:59:99  之间的时间间隔既可理解为标准时间，也可以是夏令时时间。 |
+| 调整规则 | 用于定义何时从标准时间转换为夏令时，以及何时从夏令时转换回标准时间的规则。 每个调整规则都有一个开始日期和结束日期, 该日期定义规则的位置 (例如, 调整规则在1986年1月1日到12月 2006 31 日), 增量 (标准时间作为应用的应用程序的结果更改的时间量e 调整规则) 以及有关在调整期间发生转换的具体日期和时间的信息。 转换可遵循固定规则或浮动规则。 |
+| 不明确时间  | 一个时区内可映射到两个不同时间的时间。 在向后调整时钟时间时，例如从时区的夏令时调整到标准时间这段转换期间，便会出现不明确时间。 例如，如果此转换发生在特定日期的凌晨 2:00， 导致时间变为凌晨 1:00，则每次凌晨 1:00 与凌晨 1:59:99 之间的时间间隔既可理解为标准时间，也可以是夏令时时间。 |
 | 固定规则      | 该调整规则设定发生夏令时来回转换的特定日期。 例如，每年 10 月 25 日从夏令时转换到标准时间，这一案例就是遵循的固定调整规则。 |
 | 浮动规则   | 该规则设定在特定月特定星期的某一天发生夏令时来回转换。 例如，在 3 月的第三个星期日从标准时间转换到夏令时，这一案例遵循的就是浮动调整规则。 |
-| 无效时间    | 从标准时间转换到夏令时而导致产生的不存在的时间。 在向前调整时钟时间时，例如从时区的标准时间转换到夏令时这段转换期间，便会出现无效时间。 例如，如果此转换发生在特定日期的凌晨 2:00， 导致时间变为凌晨 3:00，则每次凌晨 2:00  与凌晨 2:59:99  之间的时间间隔无效。 |
+| 无效时间    | 从标准时间转换到夏令时而导致产生的不存在的时间。 在向前调整时钟时间时，例如从时区的标准时间转换到夏令时这段转换期间，便会出现无效时间。 例如，如果此转换发生在特定日期的凌晨 2:00， 导致时间变为凌晨 3:00，则每次凌晨 2:00 与凌晨 2:59:99 之间的时间间隔无效。 |
 | 转换时间 | 有关某一特定时区中特定时间更改（例如从夏令时更改为标准时间，或者从标准时间更改为夏令时）的信息。 |
 
 ## <a name="time-zones-and-the-timezoneinfo-class"></a>时区和 TimeZoneInfo 类
 
-在.NET 中，<xref:System.TimeZoneInfo>对象都表示一个时区。 <xref:System.TimeZoneInfo>类包括<xref:System.TimeZoneInfo.GetAdjustmentRules%2A>方法返回的数组<xref:System.TimeZoneInfo.AdjustmentRule>对象。 此数组的每个元素提供了有关特定时间段内从夏令时的来回转换的信息。 （对于不支持夏令时的时区，该方法返回空数组。）每个<xref:System.TimeZoneInfo.AdjustmentRule>对象具有<xref:System.TimeZoneInfo.AdjustmentRule.DaylightTransitionStart%2A>和一个<xref:System.TimeZoneInfo.AdjustmentRule.DaylightTransitionEnd%2A>属性，用于定义特定日期和时间转换到和从夏时制。 <xref:System.TimeZoneInfo.TransitionTime.IsFixedDateRule%2A>属性指示该转换是固定或浮动。
+在 .net 中, <xref:System.TimeZoneInfo>对象表示时区。 类包含方法, 该方法返回对象的<xref:System.TimeZoneInfo.AdjustmentRule>数组。 <xref:System.TimeZoneInfo.GetAdjustmentRules%2A> <xref:System.TimeZoneInfo> 此数组的每个元素都提供有关特定时间段内与夏令时之间来回转换的信息。 (对于不支持夏令时的时区, 该方法返回一个空数组。)每<xref:System.TimeZoneInfo.AdjustmentRule>个对象都<xref:System.TimeZoneInfo.AdjustmentRule.DaylightTransitionStart%2A>有一个<xref:System.TimeZoneInfo.AdjustmentRule.DaylightTransitionEnd%2A>和一个属性, 该属性定义与夏令时之间来回转换的特定日期和时间。 <xref:System.TimeZoneInfo.TransitionTime.IsFixedDateRule%2A>属性指示该转换是固定的还是浮动的。
 
-.NET 依赖于 Windows 操作系统提供的、 在注册表中存储的时区信息。 由于地球的时区的数量，而不是所有的现有时区表示在注册表中。 此外，由于注册表是一个动态结构，可以添加到预定义的时区，或从中移除。 最后，注册表不一定包含历史时区数据。 例如，在 Windows XP 注册表包含只运行一时区调整组有关的数据。 Windows Vista 支持动态时区数据，这意味着一个时区可以有多个调整规则应用于特定的年的时间间隔。 但是，大多数 Windows Vista 注册表和支持夏时制中定义的时区必须只能将一个或两个预定义的调整规则。
+.NET 依赖于 Windows 操作系统提供的时区信息, 并将其存储在注册表中。 由于地球的时区数, 并非所有现有时区都在注册表中表示。 此外, 因为注册表是动态结构, 所以可以在其中添加或删除预定义的时区。 最后, 注册表不一定包含历史时区数据。 例如, 在 Windows XP 中, 注册表只包含有关一组时区调整的数据。 Windows Vista 支持动态时区数据, 这意味着单个时区可以有多个适用于特定年间隔的调整规则。 但是, 在 Windows Vista 注册表和支持夏令时中定义的大多数时区只有一个或两个预定义的调整规则。
 
-集的依赖性<xref:System.TimeZoneInfo>类对注册表意味着，时区感知应用程序不能为某些特定时区在注册表中定义。 因此，尝试实例化某个特定时区（除了本地时区或表示 UTC 的时区）时，应使用异常处理。 它还应提供一些方法，以便让应用程序继续，则所需<xref:System.TimeZoneInfo>无法从注册表实例化对象。
+在注册表中, <xref:System.TimeZoneInfo>类依赖于时区感知应用程序无法确定是否在注册表中定义了特定时区。 因此，尝试实例化某个特定时区（除了本地时区或表示 UTC 的时区）时，应使用异常处理。 它还应提供一些方法, 使应用程序在无法从注册表中<xref:System.TimeZoneInfo>实例化所需的对象时继续运行。
 
-处理所需的时间区域，缺少<xref:System.TimeZoneInfo>类包括<xref:System.TimeZoneInfo.CreateCustomTimeZone%2A>方法，可用于创建在注册表中找不到的自定义时区。 有关创建自定义时区的详细信息，请参阅[如何：创建不含调整规则的时区](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md)和[如何：创建含调整规则的时区](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md)。 此外，还可以使用<xref:System.TimeZoneInfo.ToSerializedString%2A>方法将新创建的时区转换为一个字符串，并将其保存在数据存储中 （如数据库、 文本文件、 注册表中或应用程序资源）。 然后，可以使用<xref:System.TimeZoneInfo.FromSerializedString%2A>方法将此字符串转换回<xref:System.TimeZoneInfo>对象。 有关详细信息，请参阅[如何：将时区保存到嵌入的资源](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md)和[如何：从嵌入的资源还原时区](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md)。
+为了处理缺少所需的时区, 此<xref:System.TimeZoneInfo>类<xref:System.TimeZoneInfo.CreateCustomTimeZone%2A>包含方法, 可用于创建在注册表中找不到的自定义时区。 有关创建自定义时区的详细信息, 请[参阅如何:创建不含调整规则](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md)的时区和[如何:创建具有调整规则](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md)的时区。 此外, 还可以使用<xref:System.TimeZoneInfo.ToSerializedString%2A>方法将新创建的时区转换为字符串, 并将其保存在数据存储区 (例如数据库、文本文件、注册表或应用程序资源) 中。 然后, 可以使用<xref:System.TimeZoneInfo.FromSerializedString%2A>方法将此字符串转换回<xref:System.TimeZoneInfo>对象。 有关详细信息，请参阅[如何：将时区保存到嵌入的资源](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md) , [以及如何:从嵌入的资源](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md)还原时区。
 
-由于每个时区均由与 UTC 之间的基本时差表示，同时也可由与反映任何现有调整规则的 UTC 之间的时差表示，因此，可轻易将一个时区内的时间转换为另一时区的时间。 为此，<xref:System.TimeZoneInfo>对象包含多个转换方法，包括：
+由于每个时区均由与 UTC 之间的基本时差表示，同时也可由与反映任何现有调整规则的 UTC 之间的时差表示，因此，可轻易将一个时区内的时间转换为另一时区的时间。 出于此目的, <xref:System.TimeZoneInfo>对象包括多种转换方法, 包括:
 
-* <xref:System.TimeZoneInfo.ConvertTimeFromUtc%2A>它将 UTC 转换为指定的时区中的时间。
+- <xref:System.TimeZoneInfo.ConvertTimeFromUtc%2A>, 它将 UTC 转换为指定时区中的时间。
 
-* <xref:System.TimeZoneInfo.ConvertTimeToUtc%2A>它将在指定的时区的时间转换为 UTC。
+- <xref:System.TimeZoneInfo.ConvertTimeToUtc%2A>, 它将指定时区中的时间转换为 UTC。
 
-* <xref:System.TimeZoneInfo.ConvertTime%2A>它将一个指定的时区的时间转换为另一个指定的时区中的时间。
+- <xref:System.TimeZoneInfo.ConvertTime%2A>, 它将一个指定时区中的时间转换为另一个指定时区中的时间。
 
-* <xref:System.TimeZoneInfo.ConvertTimeBySystemTimeZoneId%2A>它使用时区标识符 (而不是<xref:System.TimeZoneInfo>对象) 作为参数，可将一个指定的时区的时间转换为另一个指定的时区中的时间。
+- <xref:System.TimeZoneInfo.ConvertTimeBySystemTimeZoneId%2A>, 它使用时区标识符 (而不是<xref:System.TimeZoneInfo>对象) 作为参数将一个指定时区中的时间转换为另一个指定时区中的时间。
 
 有关如何在时区之间转换时间的详细信息，请参阅[在不同时区间转换时间](../../../docs/standard/datetime/converting-between-time-zones.md)。
 

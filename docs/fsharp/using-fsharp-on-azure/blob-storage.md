@@ -3,12 +3,12 @@ title: 通过 F# 实现 Azure Blob 入门
 description: 通过 Azure Blob 存储将非结构化数据存储在云中。
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: c8b42339ff1d76f262e956b5e34cc598e0fc855d
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: c765f38cba7642e813a5966d3b7754c5ce45abbd
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630509"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70107111"
 ---
 # <a name="get-started-with-azure-blob-storage-using-f"></a>使用 F 开始使用 Azure Blob 存储\#
 
@@ -186,9 +186,9 @@ Block blob of length 505623: https://<accountname>.blob.core.windows.net/photos/
 
 若要支持从多个客户端或多个进程实例并发访问某个 blob, 可以使用**etag**或**租约**。
 
-* **Etag** -用于检测 blob 或容器是否已被其他进程修改
+- **Etag** -用于检测 blob 或容器是否已被其他进程修改
 
-* **租约**-提供一种在一段时间内获取对 blob 的独占、可续订、写入或删除访问的方法
+- **租约**-提供一种在一段时间内获取对 blob 的独占、可续订、写入或删除访问的方法
 
 有关详细信息, 请参阅[Microsoft Azure 存储中的 "管理并发](https://azure.microsoft.com/blog/managing-concurrency-in-microsoft-azure-storage-2/)"。
 
