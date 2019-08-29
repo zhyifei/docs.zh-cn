@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 25918b15-701d-42c7-95fc-c290d08648d6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f6a20a2e678c10157fed7da6f5de9f3ffee0c9ad
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: f427e2260fb26be7db0a29c47f38a3cb32dd34e9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32751865"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921422"
 ---
 # <a name="programming-with-assemblies"></a>使用程序集编程
 程序集是 .NET Framework 的构造块；它们构成了部署、版本控制、重复使用、激活范围和安全权限的基本单元。 程序集向公共语言运行时提供了解类型实现所需要的信息。 程序集是为协同工作而生成的类型和资源的集合，这些类型和资源构成了一个逻辑功能单元。 对于运行时，类型不存在于程序集上下文之外。  
@@ -20,7 +20,7 @@ ms.locfileid: "32751865"
  本节说明如何创建模块、根据模块创建程序集、创建密钥对并使用强名称为程序集签名，以及如何将程序集安装到全局程序集缓存中。 此外，本节还说明如何使用 [MSIL 反汇编程序 (Ildasm.exe)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) 查看程序集清单信息。  
   
 > [!NOTE]
->  从 .NET Framework 2.0 版开始，对于使用版本号高于当前已加载运行时的 .NET Framework 版本所编译的程序集，运行时将不再加载此类程序集。 这同样适用于主版本号和次版本号的组合。  
+> 从 .NET Framework 2.0 版开始，对于使用版本号高于当前已加载运行时的 .NET Framework 版本所编译的程序集，运行时将不再加载此类程序集。 这同样适用于主版本号和次版本号的组合。  
   
 ## <a name="in-this-section"></a>本节内容  
  [创建程序集](../../../docs/framework/app-domains/create-assemblies.md)  
@@ -29,7 +29,7 @@ ms.locfileid: "32751865"
  [程序集名称](../../../docs/framework/app-domains/assembly-names.md)  
  提供程序集命名的概述。  
   
- [如何：确定程序集的完全限定的名称](../../../docs/framework/app-domains/how-to-determine-assembly-fully-qualified-name.md)  
+ [如何：确定程序集的完全限定名](../../../docs/framework/app-domains/how-to-determine-assembly-fully-qualified-name.md)  
  介绍如何确定程序集的完全限定的名称。  
   
  [以完全信任的形式运行 Intranet 应用程序](../../../docs/framework/app-domains/running-intranet-applications-in-full-trust.md)  
@@ -44,7 +44,7 @@ ms.locfileid: "32751865"
  [多文件程序集](../../../docs/framework/app-domains/multifile-assemblies.md)  
  描述创建多文件程序集的原因。  
   
- [如何：生成多文件程序集](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)  
+ [如何：生成单文件程序集](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)  
  介绍如何创建多文件程序集。  
   
  [设置程序集特性](../../../docs/framework/app-domains/set-assembly-attributes.md)  
@@ -70,7 +70,7 @@ ms.locfileid: "32751865"
  表示程序集的 .NET Framework 类。  
   
 ## <a name="related-sections"></a>相关章节  
- [如何：从程序集获取类型和成员信息](../../../docs/framework/app-domains/how-to-obtain-type-and-member-information-from-an-assembly.md)  
+ [如何：从程序集获得类型和成员信息](../../../docs/framework/app-domains/how-to-obtain-type-and-member-information-from-an-assembly.md)  
  介绍如何以编程方式从程序集获得类型和其他信息。  
   
  [Assemblies in the Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)（公共语言运行时中的程序集）  

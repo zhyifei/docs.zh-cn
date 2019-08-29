@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 061d98b2-baa7-4336-8ad2-c14de8134d91
-ms.openlocfilehash: efb7b86c3add99e596e6798c8267c09689899d56
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 21ed620ab5b7a78fc4f396cc474e7c62b70f1ddd
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61923924"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946626"
 ---
 # <a name="what-you-can-do-with-linq-to-sql"></a>使用 LINQ to SQL 可执行的操作
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 支持您作为 SQL 开发人员所期望的所有关键功能。 您可以查询表中的信息、在表中插入信息以及更新和删除表中的信息。  
@@ -43,7 +43,7 @@ ms.locfileid: "61923924"
  若要 `Delete` 某一项，请从其所属集合中移除该项，然后对 <xref:System.Data.Linq.DataContext.SubmitChanges%2A> 调用 <xref:System.Data.Linq.DataContext> 以提交所做的更改。  
   
 > [!NOTE]
->  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 无法识别级联删除操作。 如果你想要删除表中的行有约束它，请参阅[如何：从数据库中删除行](../../../../../../docs/framework/data/adonet/sql/linq/how-to-delete-rows-from-the-database.md)。  
+> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 无法识别级联删除操作。 如果要删除表中具有约束的行, 请参阅[如何:删除数据库](../../../../../../docs/framework/data/adonet/sql/linq/how-to-delete-rows-from-the-database.md)中的行。  
   
  在下面的示例中，从数据库中检索 `CustomerID` 为 `98128` 的客户。 然后，在确认检索到客户行之后，调用 <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A> 以将该对象从集合中移除。 最后，调用 <xref:System.Data.Linq.DataContext.SubmitChanges%2A> 以将删除内容转发至数据库。  
   

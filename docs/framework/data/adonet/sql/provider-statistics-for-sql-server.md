@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 429c9d09-92ac-46ec-829a-fbff0a9575a2
-ms.openlocfilehash: de05a8783fa957c459006e3ec27d9e8668e7226c
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: e13c4df87909629a45830e3b7950551434ed5ab1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422647"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946578"
 ---
 # <a name="provider-statistics-for-sql-server"></a>用于 SQL Server 的提供程序统计信息
 从 .NET Framework 2.0 版开始，适用于 SQL Server 的 .NET Framework 数据提供程序支持运行时统计信息。 必须在创建了有效的连接对象后将 <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> 对象的 <xref:System.Data.SqlClient.SqlConnection> 属性设置为 `True`，以启用统计信息。 启用了统计信息之后，可以通过 <xref:System.Collections.IDictionary> 对象的 <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> 方法检索 <xref:System.Data.SqlClient.SqlConnection> 引用，以将统计信息作为“实时快照”查看。 通过列表作为一组名称/值对字典条目进行枚举。 这些名称/值对不排序。 可以随时调用 <xref:System.Data.SqlClient.SqlConnection.ResetStatistics%2A> 对象的 <xref:System.Data.SqlClient.SqlConnection> 方法，以重置计数器。 如果尚未启用统计信息收集功能，则不会生成异常。 此外，如果调用 <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> 之前没有先调用 <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A>，检索到的值是每个条目的初始值。 如果启用了统计信息，运行应用程序一段时间，然后禁用统计信息，检索到的值将反映在禁用统计信息之前收集的值。 所有统计信息值按照连接进行收集。  
   
 ## <a name="statistical-values-available"></a>可用的统计信息值  
- 当前，Microsoft SQL Server 提供程序中共有 18 个不同的可用项。 可以通过访问可用的项的数目**计数**的属性<xref:System.Collections.IDictionary>接口引用返回<xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A>。 所有提供程序统计信息计数器使用公共语言运行时<xref:System.Int64>类型 (**长**C# 和 Visual Basic 中)，其宽度为 64 位。 最大值**int64**数据类型，如由定义**int64。MaxValue**字段中，为 ((2^63) 1))。 计数器的值达到此最大值时，应不再将这些值作为准确的值。 这意味着， **int64。MaxValue**-1((2^63)-2) 实际上是任何统计信息的最大有效值。  
+ 当前，Microsoft SQL Server 提供程序中共有 18 个不同的可用项。 可以通过返回的<xref:System.Collections.IDictionary> <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A>接口引用的 "**计数**" 属性访问可用项的数目。 提供程序统计信息的所有计数器均使用公共语言运行<xref:System.Int64>时类型 (long C# in 和 Visual Basic), 这是64位宽。 Int64 定义的**int64**数据类型的最大值 **。** 此字段为 ((2 ^ 63)-1))。 计数器的值达到此最大值时，应不再将这些值作为准确的值。 这意味着**int64。** 同为 1 ((2 ^ 63)-2) 实际上是任何统计信息的最大有效值。  
   
 > [!NOTE]
->  字典用于返回提供程序统计信息，因为以后可能会更改返回的统计信息的数目、名称和顺序。 应用程序不应依靠字典中找到的特定值，而应检查该值是否存在并相应进行分支。  
+> 字典用于返回提供程序统计信息，因为以后可能会更改返回的统计信息的数目、名称和顺序。 应用程序不应依靠字典中找到的特定值，而应检查该值是否存在并相应进行分支。  
   
  下表说明当前可用的统计信息值。 注意，在 Microsoft .NET Framework 的地区版本中，各个值的键名未本地化。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "67422647"
  以下控制台应用程序显示如何在连接上启用统计信息，如何分别检索四个统计信息值，以及如何将统计信息输出到控制台窗口。  
   
 > [!NOTE]
->  下面的示例使用示例**AdventureWorks** SQL Server 中包含的数据库。 示例代码中提供的连接字符串假定数据库在本地计算机上已安装并且可用。 根据环境的需要修改连接字符串。  
+> 下面的示例使用 SQL Server 附带的**AdventureWorks**示例数据库。 示例代码中提供的连接字符串假定数据库在本地计算机上已安装并且可用。 根据环境的需要修改连接字符串。  
   
 ```vb  
 Option Strict On  
@@ -204,7 +204,7 @@ namespace CS_Stats_Console_GetValue
  以下控制台应用程序显示如何在连接上启用统计信息，如何使用枚举器检索所有可用统计信息值，以及如何将统计信息输出到控制台窗口。  
   
 > [!NOTE]
->  下面的示例使用示例**AdventureWorks** SQL Server 中包含的数据库。 示例代码中提供的连接字符串假定数据库在本地计算机上已安装并且可用。 根据环境的需要修改连接字符串。  
+> 下面的示例使用 SQL Server 附带的**AdventureWorks**示例数据库。 示例代码中提供的连接字符串假定数据库在本地计算机上已安装并且可用。 根据环境的需要修改连接字符串。  
   
 ```vb  
 Option Strict On  

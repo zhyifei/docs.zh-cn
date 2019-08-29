@@ -12,15 +12,15 @@ helpviewer_keywords:
 - w compiler option [C#]
 - warn compiler option [C#]
 ms.assetid: 5f80ff59-4991-4382-9f9a-77da18446e71
-ms.openlocfilehash: 17dd992edbec5ce444b53ed42b2b486282618672
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 5b05e944a37e16fc1fcc422271be00c09a271a33
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59315798"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69602404"
 ---
 # <a name="-warn-c-compiler-options"></a>-warn（C# 编译器选项）
--warn 选项指定编译器显示的警告等级。  
+-warn 选项指定编译器显示的警告等级  。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,19 +41,19 @@ ms.locfileid: "59315798"
 |4（默认值）|显示所有等级 3 警告以及信息性警告。|  
   
 ## <a name="remarks"></a>备注  
- 若要获取有关错误或警告的信息，可以在帮助索引中查找错误代码。 有关获取错误或警告信息的其他方法，请参阅 [C# 编译器错误](../../../csharp/language-reference/compiler-messages/index.md)。  
+ 若要获取有关错误或警告的信息，可以在帮助索引中查找错误代码。 有关获取错误或警告信息的其他方法，请参阅 [C# 编译器错误](../compiler-messages/index.md)。  
   
- 使用 [-warnaserror](../../../csharp/language-reference/compiler-options/warnaserror-compiler-option.md) 将所有警告视为错误。 使用 [-nowarn](../../../csharp/language-reference/compiler-options/nowarn-compiler-option.md) 禁用某些警告。  
+ 使用 [-warnaserror](./warnaserror-compiler-option.md) 将所有警告视为错误。 使用 [-nowarn](./nowarn-compiler-option.md) 禁用某些警告。  
   
- -w 是 -warn 的缩写形式。  
+ -w 是 -warn 的缩写形式   。  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项  
   
-1. 打开项目的“属性”页。  
+1. 打开项目的“属性”  页。  
   
-2. 单击“生成”属性页。  
+2. 单击“生成”  属性页。  
   
-3. 修改警告等级属性。  
+3. 修改警告等级  属性。  
   
  有关如何以编程方式设置此编译器选项的信息，请参阅 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.WarningLevel%2A>。  
   
@@ -66,5 +66,5 @@ csc -warn:1 in.cs
   
 ## <a name="see-also"></a>请参阅
 
-- [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)
+- [C# 编译器选项](./index.md)
 - [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties)

@@ -16,108 +16,108 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e2f474317493b3aac421ca1270ff461b97cfe027
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3119818934df765a8bbd9c05caaee04f9476069f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61598061"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963520"
 ---
 # <a name="icorprofilercallback-interface"></a>ICorProfilerCallback 接口
-提供了公共语言运行时 (CLR) 用于探查器已订阅的事件发生时通知代码探查器的方法。  
+提供公共语言运行时 (CLR) 用于在探查器订阅的事件发生时通知代码探查器的方法。  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|[AppDomainCreationFinished 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-appdomaincreationfinished-method.md)|通知探查器已创建的应用程序域。|  
+|[AppDomainCreationFinished 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-appdomaincreationfinished-method.md)|通知探查器已创建应用程序域。|  
 |[AppDomainCreationStarted 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-appdomaincreationstarted-method.md)|通知探查器正在创建应用程序域。|  
 |[AppDomainShutdownFinished 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-appdomainshutdownfinished-method.md)|通知探查器已从进程中卸载应用程序域。|  
-|[AppDomainShutdownStarted 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-appdomainshutdownstarted-method.md)|通知探查器正在从进程卸载程序的应用程序域。|  
+|[AppDomainShutdownStarted 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-appdomainshutdownstarted-method.md)|通知探查器正在从进程中卸载应用程序域。|  
 |[AssemblyLoadFinished 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-assemblyloadfinished-method.md)|通知探查器程序集已完成加载。|  
 |[AssemblyLoadStarted 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-assemblyloadstarted-method.md)|通知探查器正在加载程序集。|  
-|[AssemblyUnloadFinished 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-assemblyunloadfinished-method.md)|通知探查器程序集已被卸载。|  
+|[AssemblyUnloadFinished 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-assemblyunloadfinished-method.md)|通知探查器已卸载程序集。|  
 |[AssemblyUnloadStarted 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-assemblyunloadstarted-method.md)|通知探查器正在卸载程序集。|  
-|[ClassLoadFinished 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadfinished-method.md)|通知探查器加载已完成某个类。|  
-|[ClassLoadStarted 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadstarted-method.md)|通知探查器正在加载的类。|  
-|[ClassUnloadFinished 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classunloadfinished-method.md)|通知探查器类已完成卸载。|  
-|[ClassUnloadStarted 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classunloadstarted-method.md)|通知探查器卸载某个类。|  
-|[COMClassicVTableCreated 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-comclassicvtablecreated-method.md)|通知探查器已创建了指定的 IID 和类的运行时可调用包装 (RCW)。|  
-|[COMClassicVTableDestroyed 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-comclassicvtabledestroyed-method.md)|通知探查器正在销毁 RCW。|  
-|[ExceptionCatcherEnter 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptioncatcherenter-method.md)|通知探查器将控制权传递到相应`catch`块。|  
-|[ExceptionCatcherLeave 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptioncatcherleave-method.md)|通知探查器将控制权传递带相应`catch`块。|  
-|[ExceptionCLRCatcherExecute 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionclrcatcherexecute-method.md)|在.NET Framework 2.0 版中已过时。|  
-|[ExceptionCLRCatcherFound 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionclrcatcherfound-method.md)|在.NET Framework 2.0 中已过时。|  
-|[ExceptionOSHandlerEnter 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionoshandlerenter-method.md)|未实现。 需要非托管的异常信息的探查器必须获取此信息通过其他方式。|  
-|[ExceptionOSHandlerLeave 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionoshandlerleave-method.md)|未实现。 需要非托管的异常信息的探查器必须获取此信息通过其他方式。|  
-|[ExceptionSearchCatcherFound 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchcatcherfound-method.md)|通知探查器的异常处理的搜索阶段已找到的处理程序引发的异常。|  
+|[ClassLoadFinished 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadfinished-method.md)|通知探查器类已经完成加载。|  
+|[ClassLoadStarted 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadstarted-method.md)|通知探查器正在加载某个类。|  
+|[ClassUnloadFinished 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classunloadfinished-method.md)|通知探查器类已经完成卸载。|  
+|[ClassUnloadStarted 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classunloadstarted-method.md)|通知探查器正在卸载某个类。|  
+|[COMClassicVTableCreated 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-comclassicvtablecreated-method.md)|通知探查器已创建指定 IID 和类的运行时可调用包装 (RCW)。|  
+|[COMClassicVTableDestroyed 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-comclassicvtabledestroyed-method.md)|通知探查器正在销毁某个 RCW。|  
+|[ExceptionCatcherEnter 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptioncatcherenter-method.md)|通知探查器控制正在传递到适当`catch`的块。|  
+|[ExceptionCatcherLeave 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptioncatcherleave-method.md)|通知探查器控制正在传递到适当`catch`的块。|  
+|[ExceptionCLRCatcherExecute 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionclrcatcherexecute-method.md)|在 .NET Framework 版本2.0 中已过时。|  
+|[ExceptionCLRCatcherFound 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionclrcatcherfound-method.md)|在 .NET Framework 2.0 中已过时。|  
+|[ExceptionOSHandlerEnter 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionoshandlerenter-method.md)|未实现。 需要非托管异常信息的探查器必须通过其他方式获取此信息。|  
+|[ExceptionOSHandlerLeave 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionoshandlerleave-method.md)|未实现。 需要非托管异常信息的探查器必须通过其他方式获取此信息。|  
+|[ExceptionSearchCatcherFound 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchcatcherfound-method.md)|通知探查器, 异常处理的搜索阶段已找到引发的异常的处理程序。|  
 |[ExceptionSearchFilterEnter 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfilterenter-method.md)|通知探查器正在执行用户筛选器。|  
-|[ExceptionSearchFilterLeave 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfilterleave-method.md)|通知探查器的用户筛选器只需执行完毕。|  
-|[ExceptionSearchFunctionEnter 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfunctionenter-method.md)|通知探查器的异常处理的搜索阶段已进入一个函数。|  
-|[ExceptionSearchFunctionLeave 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfunctionleave-method.md)|通知探查器的异常处理的搜索阶段已完成搜索函数。|  
-|[ExceptionThrown 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionthrown-method.md)|通知探查器已引发异常。|  
-|[ExceptionUnwindFinallyEnter 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionunwindfinallyenter-method.md)|通知探查器处理的异常展开阶段进入`finally`子句包含在指定的函数。|  
-|[ExceptionUnwindFinallyLeave 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionunwindfinallyleave-method.md)|通知探查器的异常展开阶段处理已离开`finally`子句。|  
-|[ExceptionUnwindFunctionEnter 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionunwindfunctionenter-method.md)|通知探查器的异常处理展开阶段已进入一个函数。|  
-|[ExceptionUnwindFunctionLeave 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionunwindfunctionleave-method.md)|通知探查器的异常处理展开阶段已完成展开函数。|  
+|[ExceptionSearchFilterLeave 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfilterleave-method.md)|通知探查器用户筛选器刚刚执行完毕。|  
+|[ExceptionSearchFunctionEnter 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfunctionenter-method.md)|通知探查器异常处理的搜索阶段已输入一个函数。|  
+|[ExceptionSearchFunctionLeave 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfunctionleave-method.md)|通知探查器异常处理的搜索阶段已经完成了对函数的搜索。|  
+|[ExceptionThrown 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionthrown-method.md)|通知探查器引发了异常。|  
+|[ExceptionUnwindFinallyEnter 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionunwindfinallyenter-method.md)|通知探查器异常处理的展开阶段正在输入`finally`指定函数中包含的子句。|  
+|[ExceptionUnwindFinallyLeave 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionunwindfinallyleave-method.md)|通知探查器异常处理的展开阶段已离开`finally`子句。|  
+|[ExceptionUnwindFunctionEnter 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionunwindfunctionenter-method.md)|通知探查器异常处理的展开阶段已输入一个函数。|  
+|[ExceptionUnwindFunctionLeave 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionunwindfunctionleave-method.md)|通知探查器异常处理的展开阶段已完成展开某个函数。|  
 |[FunctionUnloadStarted 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-functionunloadstarted-method.md)|通知探查器运行时已开始卸载某个函数。|  
-|[Initialize 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md)|调用以初始化探查器每次启动新的 CLR 应用程序时。|  
-|[JITCachedFunctionSearchFinished 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcachedfunctionsearchfinished-method.md)|通知探查器搜索已完成以前使用 NGen.exe 编译的函数。|  
-|[JITCachedFunctionSearchStarted 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcachedfunctionsearchstarted-method.md)|通知探查器在编译时以前使用 NGen.exe 的函数已开始搜索。|  
-|[JITCompilationFinished 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationfinished-method.md)|通知探查器 JIT 编译器已完成编译函数。|  
-|[JITCompilationStarted 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md)|通知探查器在实时 (JIT) 编译器已开始编译函数。|  
-|[JITFunctionPitched 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitfunctionpitched-method.md)|通知探查器已从内存中删除已进行 JIT 编译的函数。|  
-|[JITInlining 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitinlining-method.md)|通知探查器 JIT 编译器将要插入一个嵌入另一个函数。|  
+|[Initialize 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md)|调用以在新的 CLR 应用程序启动时初始化探查器。|  
+|[JITCachedFunctionSearchFinished 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcachedfunctionsearchfinished-method.md)|通知探查器搜索已完成以前使用 Ngen.exe 编译的函数。|  
+|[JITCachedFunctionSearchStarted 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcachedfunctionsearchstarted-method.md)|通知探查器已开始搜索先前使用 Ngen.exe 编译的函数。|  
+|[JITCompilationFinished 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationfinished-method.md)|通知探查器 JIT 编译器已经完成了对函数的编译。|  
+|[JITCompilationStarted 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md)|通知探查器实时 (JIT) 编译器已开始编译函数。|  
+|[JITFunctionPitched 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitfunctionpitched-method.md)|通知探查器已从内存中删除了已进行 JIT 编译的函数。|  
+|[JITInlining 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitinlining-method.md)|通知探查器 JIT 编译器即将使用另一个函数插入一个函数。|  
 |[ManagedToUnmanagedTransition 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-managedtounmanagedtransition-method.md)|通知探查器已发生从托管代码到非托管代码的转换。|  
-|[ModuleAttachedToAssembly 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleattachedtoassembly-method.md)|通知探查器模块，已附加到其父程序集。|  
+|[ModuleAttachedToAssembly 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleattachedtoassembly-method.md)|通知探查器模块正在附加到其父程序集。|  
 |[ModuleLoadFinished 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md)|通知探查器模块已完成加载。|  
-|[ModuleLoadStarted 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadstarted-method.md)|通知探查器正在加载的模块。|  
+|[ModuleLoadStarted 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadstarted-method.md)|通知探查器正在加载模块。|  
 |[ModuleUnloadFinished 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleunloadfinished-method.md)|通知探查器模块已完成卸载。|  
 |[ModuleUnloadStarted 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleunloadstarted-method.md)|通知探查器正在卸载模块。|  
-|[MovedReferences 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-movedreferences-method.md)|通知垃圾回收期间移动的对象引用有关探查器。|  
-|[ObjectAllocated 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectallocated-method.md)|通知探查器内存中堆分配的对象。|  
-|[ObjectReferences 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectreferences-method.md)|通知有关的对象的引用指定对象的内存探查器。|  
-|[ObjectsAllocatedByClass 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectsallocatedbyclass-method.md)|通知事件探查器关于自上次垃圾回收以来已创建的每个指定的类的实例数。|  
-|[RemotingClientInvocationFinished 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientinvocationfinished-method.md)|通知探查器的远程处理调用已在客户端上完成运行。|  
-|[RemotingClientInvocationStarted 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientinvocationstarted-method.md)|通知探查器已启动的远程处理调用。|  
-|[RemotingClientReceivingReply 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientreceivingreply-method.md)|通知探查器的远程处理调用的服务器端部分已完成，而客户端正在接收并即将处理回复。|  
-|[RemotingClientSendingMessage 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientsendingmessage-method.md)|通知探查器客户端向服务器发送请求。|  
-|[RemotingServerInvocationReturned 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserverinvocationreturned-method.md)|通知探查器进程已完成调用远程方法调用请求响应中的方法。|  
-|[RemotingServerInvocationStarted 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserverinvocationstarted-method.md)|通知探查器进程正在调用远程方法调用请求响应中的方法。|  
+|[MovedReferences 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-movedreferences-method.md)|通知探查器有关垃圾回收期间移动的对象引用。|  
+|[ObjectAllocated 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectallocated-method.md)|通知探查器已为对象分配堆中的内存。|  
+|[ObjectReferences 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectreferences-method.md)|通知探查器有关指定的对象引用的内存中的对象。|  
+|[ObjectsAllocatedByClass 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectsallocatedbyclass-method.md)|通知探查器自上次垃圾回收后已创建的每个指定类的实例数。|  
+|[RemotingClientInvocationFinished 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientinvocationfinished-method.md)|通知探查器远程处理调用已在客户端上完成运行。|  
+|[RemotingClientInvocationStarted 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientinvocationstarted-method.md)|通知探查器已开始远程调用。|  
+|[RemotingClientReceivingReply 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientreceivingreply-method.md)|通知探查器远程处理调用的服务器端部分已完成, 并且客户端现在正在接收, 并即将处理答复。|  
+|[RemotingClientSendingMessage 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientsendingmessage-method.md)|通知探查器客户端正在向服务器发送请求。|  
+|[RemotingServerInvocationReturned 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserverinvocationreturned-method.md)|通知探查器进程已完成调用方法以响应远程方法调用请求。|  
+|[RemotingServerInvocationStarted 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserverinvocationstarted-method.md)|通知探查器进程正在调用方法以响应远程方法调用请求。|  
 |[RemotingServerReceivingMessage 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserverreceivingmessage-method.md)|通知探查器进程正在接收远程方法调用或激活请求。|  
-|[RemotingServerSendingReply 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserversendingreply-method.md)|通知探查器进程已完成处理远程方法调用请求，并将要通过通道答复传输。|  
-|[RootReferences 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-rootreferences-method.md)|通知探查器与垃圾回收后根引用的信息。|  
-|[RuntimeResumeFinished 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimeresumefinished-method.md)|通知探查器运行时已恢复运行时的所有线程，并已返回到正常操作。|  
-|[RuntimeResumeStarted 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimeresumestarted-method.md)|通知探查器运行时继续运行时的所有线程。|  
-|[RuntimeSuspendAborted 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendaborted-method.md)|通知探查器运行时已中止已发生的运行时挂起。|  
-|[RuntimeSuspendFinished 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendfinished-method.md)|通知探查器运行时已完成的运行时的所有线程挂起。|  
-|[RuntimeSuspendStarted 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendstarted-method.md)|通知探查器运行时即将挂起运行时的所有线程。|  
-|[RuntimeThreadResumed 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimethreadresumed-method.md)|通知探查器正在挂起之后已恢复指定的线程。|  
-|[RuntimeThreadSuspended 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimethreadsuspended-method.md)|指定的线程，或者将要被，挂起通知探查器。|  
-|[Shutdown 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-shutdown-method.md)|通知探查器正在关闭应用程序。|  
-|[ThreadAssignedToOSThread 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threadassignedtoosthread-method.md)|通知探查器正在使用特定操作系统 (OS) 线程实现一个托管的线程。|  
+|[RemotingServerSendingReply 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserversendingreply-method.md)|通知探查器进程已处理完远程方法调用请求, 即将通过通道传输答复。|  
+|[RootReferences 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-rootreferences-method.md)|在垃圾回收后通知探查器有关根引用的信息。|  
+|[RuntimeResumeFinished 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimeresumefinished-method.md)|通知探查器运行时已恢复所有运行时线程并返回到正常操作。|  
+|[RuntimeResumeStarted 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimeresumestarted-method.md)|通知探查器运行时正在恢复所有运行时线程。|  
+|[RuntimeSuspendAborted 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendaborted-method.md)|通知探查器运行时已中止所发生的运行时挂起。|  
+|[RuntimeSuspendFinished 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendfinished-method.md)|通知探查器运行时已完成所有运行时线程的挂起。|  
+|[RuntimeSuspendStarted 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendstarted-method.md)|通知探查器运行时将要挂起所有运行时线程。|  
+|[RuntimeThreadResumed 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimethreadresumed-method.md)|通知探查器指定的线程在挂起后已恢复。|  
+|[RuntimeThreadSuspended 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimethreadsuspended-method.md)|通知探查器指定的线程已或即将挂起。|  
+|[Shutdown 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-shutdown-method.md)|通知探查器应用程序正在关闭。|  
+|[ThreadAssignedToOSThread 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threadassignedtoosthread-method.md)|通知探查器使用特定操作系统 (OS) 线程实现了托管线程。|  
 |[ThreadCreated 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threadcreated-method.md)|通知探查器已创建一个线程。|  
 |[ThreadDestroyed 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threaddestroyed-method.md)|通知探查器线程已销毁。|  
 |[UnmanagedToManagedTransition 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-unmanagedtomanagedtransition-method.md)|通知探查器已发生从非托管代码到托管代码的转换。|  
   
 ## <a name="remarks"></a>备注  
- CLR 调用中的方法`ICorProfilerCallback`(或[ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)) 接口以通知探查器在某一事件，探查器订阅，会发生。 这是通过其 CLR 代码探查器与进行通信的主回调接口。  
+ CLR 调用`ICorProfilerCallback` (或[ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)) 接口中的方法, 在事件发生时通知探查器。 这是 CLR 与代码探查器进行通信时所使用的主回调接口。  
   
- 代码探查器必须实现的方法`ICorProfilerCallback`接口。 为.NET Framework 2.0 或更高版本中，探查器还必须实现`ICorProfilerCallback2`方法。 每个方法的实现必须返回失败 HRESULT，它的值为成功，则为 S_OK 和 e_fail 两者之一。 目前，CLR 将忽略除每个回调返回的 HRESULT [icorprofilercallback:: Objectreferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectreferences-method.md)。  
+ 代码探查器必须实现`ICorProfilerCallback`接口的方法。 对于 .NET Framework 版本2.0 或更高版本, 探查器还必须实现`ICorProfilerCallback2`方法。 如果成功, 则每个方法实现都必须返回值为 S_OK 的 HRESULT, 否则返回 E_FAIL。 目前, CLR 将忽略每个回调返回的 HRESULT ( [ICorProfilerCallback:: ObjectReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectreferences-method.md)除外)。  
   
- 在 Microsoft Windows 注册表中，代码探查器必须注册实现其组件对象模型 (COM) 对象`ICorProfilerCallback`和`ICorProfilerCallback2`接口。 代码探查器订阅它需要通过调用接收通知的事件[icorprofilerinfo:: Seteventmask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md)。 这通常是在探查器的实现中的[icorprofilercallback:: Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md)。 然后，探查器是能够从运行时接收通知事件即将发生或正在执行的运行时进程中只发生时。  
+ 在 Microsoft Windows 注册表中, 代码探查器必须注册其用于实现`ICorProfilerCallback`和`ICorProfilerCallback2`接口的组件对象模型 (COM) 对象。 代码探查器通过调用[ICorProfilerInfo:: SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md)订阅要接收通知的事件。 通常在探查器的[ICorProfilerCallback:: Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md)实现中完成此操作。 然后, 探查器可以在事件即将发生或刚刚发生在正在执行的运行时进程中时接收来自运行时的通知。  
   
 > [!NOTE]
->  探查器注册的单个 COM 对象。 如果探查器面向.NET Framework 版本 1.0 或 1.1，COM 对象需要实现的方法`ICorProfilerCallback`。 如果它面向.NET Framework 2.0 或更高版本，COM 对象还必须实现的方法`ICorProfilerCallback2`。  
+> 探查器将注册一个 COM 对象。 如果探查器面向 .NET Framework 版本1.0 或 1.1, 则该 COM 对象只需实现的`ICorProfilerCallback`方法。 如果目标 .NET Framework 版本2.0 或更高版本, 则 COM 对象还必须实现的`ICorProfilerCallback2`方法。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorProf.idl, CorProf.h  
+ **标头：** Corprof.idl, Corprof.idl  
   
- **库：** CorGuids.lib  
+ **类库**CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

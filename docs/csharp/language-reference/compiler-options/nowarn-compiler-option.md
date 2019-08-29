@@ -8,15 +8,15 @@ helpviewer_keywords:
 - /nowarn compiler option [C#]
 - -nowarn compiler option [C#]
 ms.assetid: 6dcbc5e8-ae67-4566-9df3-f63cfdd9c4e4
-ms.openlocfilehash: b455a2f719e7350c51cf4a1f095d4669529d0e5e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fa3079bf1431ba1a16b5a2eef0dd5500fe95909c
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592810"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606614"
 ---
 # <a name="-nowarn-c-compiler-options"></a>-nowarn（C# 编译器选项）
-使用 -nowarn 选项可以禁止编译器显示一个或多个警告。 使用逗号分隔多个警告编号。  
+使用 -nowarn 选项可以禁止编译器显示一个或多个警告  。 使用逗号分隔多个警告编号。  
   
 ## <a name="syntax"></a>语法  
   
@@ -45,14 +45,14 @@ ms.locfileid: "64592810"
   
 1. 打开项目的“属性”  页。 有关详细信息，请参阅[“项目设计器”->“生成”页 (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp)。  
   
-2. 单击“生成”属性页。  
+2. 单击“生成”  属性页。  
   
-3. 修改“禁止显示警告”属性。  
+3. 修改“禁止显示警告”  属性。  
   
  有关如何以编程方式设置此编译器选项的信息，请参阅 <xref:VSLangProj80.ProjectProperties3.DelaySign%2A>。  
   
 ## <a name="see-also"></a>请参阅
 
-- [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)
+- [C# 编译器选项](./index.md)
 - [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties)
-- [C# 编译器错误](../../../csharp/language-reference/compiler-messages/index.md)
+- [C# 编译器错误](../compiler-messages/index.md)

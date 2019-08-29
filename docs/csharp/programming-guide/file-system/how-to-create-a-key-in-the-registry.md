@@ -6,12 +6,12 @@ helpviewer_keywords:
 - registry keys, creating [C#]
 - keys, creating in registry
 ms.assetid: 8fa475b0-e01f-483a-9327-fd03488fdf5d
-ms.openlocfilehash: 0982baea2327daf23726ef269d53388d6011703d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e67a80fa8f9a088f0eefe2dd2eeaa983e0a5a2c3
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64596149"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590037"
 ---
 # <a name="how-to-create-a-key-in-the-registry-visual-c"></a>如何：在注册表中创建注册表项 (Visual C#)
 本示例将值对“Name”和“Isabella”添加到当前用户注册表中的项“Names”之下。  
@@ -58,6 +58,6 @@ key.Close();
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.IO?displayProperty=nameWithType>
-- [C# 编程指南](../../../csharp/programming-guide/index.md)
-- [文件系统和注册表（C# 编程指南）](../../../csharp/programming-guide/file-system/index.md)
+- [C# 编程指南](../index.md)
+- [文件系统和注册表（C# 编程指南）](./index.md)
 - [Read, write and delete from the registry with C#](https://www.codeproject.com/Articles/3389/Read-write-and-delete-from-registry-with-C)（使用 C# 在注册表中执行读取、写入和删除操作）

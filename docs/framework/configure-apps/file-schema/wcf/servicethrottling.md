@@ -2,20 +2,20 @@
 title: <serviceThrottling>
 ms.date: 03/30/2017
 ms.assetid: a337d064-1e64-4209-b4a9-db7fdb7e3eaf
-ms.openlocfilehash: 995ff9979096757225c9241e977f86f755955945
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 77ed5e91f09d9e658deeb7996baaca445b4e0c90
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61758101"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937106"
 ---
 # <a name="servicethrottling"></a>\<serviceThrottling>
 指定 Windows Communication Foundation (WCF) 服务的限制机制。  
   
  \<system.ServiceModel>  
-\<behaviors>  
+\<行为 >  
 \<serviceBehaviors>  
-\<behavior>  
+\<行为 >  
 \<serviceThrottling>  
   
 ## <a name="syntax"></a>语法  
@@ -44,7 +44,7 @@ ms.locfileid: "61758101"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|指定行为元素。|  
+|[\<behavior>](behavior-of-endpointbehaviors.md)|指定行为元素。|  
   
 ## <a name="remarks"></a>备注  
  限制控件会对并发调用、实例或会话的数目施加限制以防止过度使用资源。  
@@ -52,7 +52,7 @@ ms.locfileid: "61758101"
  每次达到属性值时，就会记录一个跟踪。 第一个跟踪将记录为警告。  
   
 ## <a name="example"></a>示例  
- 下面的配置示例指定服务将最大并发调用数限制为 2，并将最大并发实例数限制为 10。 运行此示例的详细示例，请参阅[限制](../../../../../docs/framework/wcf/samples/throttling.md)。  
+ 下面的配置示例指定服务将最大并发调用数限制为 2，并将最大并发实例数限制为 10。 有关运行此示例的详细示例, 请参阅[限制](../../../wcf/samples/throttling.md)。  
   
 ```xml  
 <behaviors>
@@ -72,4 +72,4 @@ ms.locfileid: "61758101"
 
 - <xref:System.ServiceModel.Description.ServiceThrottlingBehavior>
 - <xref:System.ServiceModel.Configuration.ServiceThrottlingElement>
-- [使用 ServiceThrottlingBehavior 控制 WCF 服务性能](../../../../../docs/framework/wcf/feature-details/using-servicethrottlingbehavior-to-control-wcf-service-performance.md)
+- [使用 ServiceThrottlingBehavior 控制 WCF 服务性能](../../../wcf/feature-details/using-servicethrottlingbehavior-to-control-wcf-service-performance.md)

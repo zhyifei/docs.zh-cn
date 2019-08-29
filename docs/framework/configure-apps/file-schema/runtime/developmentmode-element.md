@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 60e79a8c-415a-497d-be29-b9d0fd9bdee3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fdf840035150f08c894c984213af9a0abe6e95af
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d7c7f866cdbcd39194d61a3db821bf973b4e057e
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704760"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663806"
 ---
 # <a name="developmentmode-element"></a>\<developmentMode > 元素
 指定运行时是否搜索由 DEVPATH 环境变量指定的目录中的程序集。  
@@ -40,12 +40,12 @@ ms.locfileid: "61704760"
 |---------------|-----------------|  
 |**developerInstallation**|指定运行时是否搜索由 DEVPATH 环境变量指定的目录中的程序集。|  
   
-## <a name="developerinstallation-attribute"></a>developerInstallation 属性  
+## <a name="developerinstallation-attribute"></a>developerInstallation 特性  
   
-|“值”|描述|  
+|值|描述|  
 |-----------|-----------------|  
-|**true**|搜索由 DEVPATH 环境变量指定的目录中的程序集。|  
-|**false**|不会搜索由 DEVPATH 环境变量指定的目录中的程序集。 这是默认值|  
+|**true**|在由 DEVPATH 环境变量指定的目录中搜索程序集。|  
+|**false**|不搜索由 DEVPATH 环境变量指定的目录中的程序集。 这是默认值|  
   
 ### <a name="child-elements"></a>子元素  
  无。  
@@ -58,10 +58,10 @@ ms.locfileid: "61704760"
 |`runtime`|包含有关程序集绑定和垃圾回收的信息。|  
   
 ## <a name="remarks"></a>备注  
- 仅在开发期间使用此设置。 在运行时不会检查位于 devpath 查找程序集强名称的程序集上的版本。 它只需使用它找到的第一个程序集。  
+ 仅在开发时使用此设置。 运行时不检查在 DEVPATH 中找到的具有强名称的程序集的版本。 它只使用它找到的第一个程序集。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何会导致运行时用于搜索由 DEVPATH 环境变量指定的目录中的程序集。  
+ 下面的示例演示如何使运行时在由 DEVPATH 环境变量指定的目录中搜索程序集。  
   
 ```xml  
 <configuration>  
@@ -73,6 +73,6 @@ ms.locfileid: "61704760"
   
 ## <a name="see-also"></a>请参阅
 
-- [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [如何：通过使用 devpath 查找程序集查找程序集](../../../../../docs/framework/configure-apps/how-to-locate-assemblies-by-using-devpath.md)
+- [运行时设置架构](index.md)
+- [配置文件架构](../index.md)
+- [如何：使用 DEVPATH 查找程序集](../../how-to-locate-assemblies-by-using-devpath.md)

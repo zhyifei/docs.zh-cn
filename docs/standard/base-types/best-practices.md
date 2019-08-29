@@ -13,12 +13,12 @@ ms.assetid: 618e5afb-3a97-440d-831a-70e4c526a51c
 author: rpetrusha
 ms.author: ronpet
 ms.custom: serodec18
-ms.openlocfilehash: c782ab0ce5886a95c8c914930d80d66b4839b9b8
-ms.sourcegitcommit: 46c68557bf6395f0ab9915f7558f2faae0097695
+ms.openlocfilehash: 8d887bb32d1bdd398353d00aba16c2cc8adfcacb
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "64634720"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988822"
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>.NET 中的正则表达式最佳做法
 <a name="top"></a> .NET 中的正则表达式引擎是一款功能强大且完备的工具，根据模式匹配（而不是比较和匹配文本）处理文本。 在大多数情况下，它可以快速、高效地执行模式匹配。 但在某些情况下，正则表达式引擎的速度似乎很慢。 在极端情况下，它甚至看似停止响应，因为它会用若干个小时甚至若干天处理相对小的输入。  
@@ -54,7 +54,7 @@ ms.locfileid: "64634720"
  对于为了处理受约束的输入而编写的正则表达式，最后一种文本类型尤其存在问题。 如果该正则表达式还依赖大量[回溯](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)，则正则表达式引擎可能会花费大量时间（在有些情况下，需要许多个小时或许多天）来处理看似无害的文本。  
   
 > [!WARNING]
->  下面的示例使用容易过度回溯并可能拒绝有效电子邮件地址的正则表达式。 不应在电子邮件验证例程中使用。 如需可验证电子邮件地址的正则表达式，请参阅[如何：确认字符串是有效的电子邮件格式](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md)。  
+> 下面的示例使用容易过度回溯并可能拒绝有效电子邮件地址的正则表达式。 不应在电子邮件验证例程中使用。 如需可验证电子邮件地址的正则表达式，请参阅[如何：确认字符串是有效的电子邮件格式](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md)。  
   
  例如，考虑一种很常用但很有问题的用于验证电子邮件地址别名的正则表达式。 编写正则表达式 `^[0-9A-Z]([-.\w]*[0-9A-Z])*$` 的目的是处理被视为有效的电子邮件地址，该地址包含一个字母数字字符，后跟零个或多个可为字母数字、句点或连字符的字符。 该正则表达式必须以字母数字字符结束。 但正如下面的示例所示，尽管此正则表达式可以轻松处理有效输入，但在处理接近有效的输入时性能非常低效。  
   
@@ -78,7 +78,7 @@ ms.locfileid: "64634720"
  .NET 正则表达式对象模型的核心是 <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> 类，表示正则表达式引擎。 通常，影响正则表达式性能的单个最大因素是 <xref:System.Text.RegularExpressions.Regex> 引擎的使用方式。 定义正则表达式需要将正则表达式引擎与正则表达式模式紧密耦合。 无论该耦合过程是需要通过向其构造函数传递正则表达式模式来实例化 <xref:System.Text.RegularExpressions.Regex> 还是通过向其传递正则表达式模式和要分析的字符串来调用静态方法，都必然会消耗大量资源。  
   
 > [!NOTE]
->  若要详细了解使用已解释和已编译正则表达式造成的性能影响，请参阅 BCL 团队博客中的 [Optimizing Regular Expression Performance, Part II:Taking Charge of Backtracking](https://blogs.msdn.microsoft.com/bclteam/2010/08/03/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha/)（优化正则表达式性能，第 II 部分：控制回溯）。  
+> 若要详细了解使用已解释和已编译正则表达式造成的性能影响，请参阅 BCL 团队博客中的 [Optimizing Regular Expression Performance, Part II:Taking Charge of Backtracking](https://blogs.msdn.microsoft.com/bclteam/2010/08/03/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha/)（优化正则表达式性能，第 II 部分：控制回溯）。  
   
  可将正则表达式引擎与特定正则表达式模式耦合，然后使用该引擎以若干种方式匹配文本：  
   
@@ -93,7 +93,7 @@ ms.locfileid: "64634720"
  这种调用正则表达式匹配方法的特殊方式会对应用程序产生显著影响。 以下各节讨论何时使用静态方法调用、已解释的正则表达式和已编译的正则表达式，以改进应用程序的性能。  
   
 > [!IMPORTANT]
->  如果方法调用中重复使用同一正则表达式或者应用程序大量使用正则表达式对象，则方法调用的形式（静态、已解释、已编译）会影响性能。  
+> 如果方法调用中重复使用同一正则表达式或者应用程序大量使用正则表达式对象，则方法调用的形式（静态、已解释、已编译）会影响性能。  
   
 ### <a name="static-regular-expressions"></a>静态正则表达式  
  建议将静态正则表达式方法用作使用同一正则表达式重复实例化正则表达式对象的替代方法。 与正则表达式对象使用的正则表达式模式不同，实例方法调用所使用的模式中的操作代码或已编译的 Microsoft 中间语言 (MSIL) 由正则表达式引擎缓存在内部。  
@@ -177,7 +177,7 @@ ms.locfileid: "64634720"
  通常，正则表达式引擎使用线性进度在输入字符串中移动并将其编译为正则表达式模式。 但是，当在正则表达式模式中使用不确定限定符（如 `*`、`+` 和 `?`）时，正则表达式引擎可能会放弃一部分成功的分部匹配，并返回以前保存的状态，以便为整个模式搜索成功匹配。 此过程称为回溯。  
   
 > [!NOTE]
->  若要详细了解回溯，请参阅[正则表达式行为的详细信息](../../../docs/standard/base-types/details-of-regular-expression-behavior.md)和[回溯](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)。 若要详细了解回溯，请参阅 BCL 团队博客中的 [Optimizing Regular Expression Performance, Part II:Taking Charge of Backtracking](https://blogs.msdn.microsoft.com/bclteam/2010/08/03/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha/)（优化正则表达式性能，第 II 部分：控制回溯）。  
+> 若要详细了解回溯，请参阅[正则表达式行为的详细信息](../../../docs/standard/base-types/details-of-regular-expression-behavior.md)和[回溯](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)。 若要详细了解回溯，请参阅 BCL 团队博客中的 [Optimizing Regular Expression Performance, Part II:Taking Charge of Backtracking](https://blogs.msdn.microsoft.com/bclteam/2010/08/03/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha/)（优化正则表达式性能，第 II 部分：控制回溯）。  
   
  支持回溯可为正则表达式提供强大的功能和灵活性。 还可将控制正则表达式引擎操作的职责交给正则表达式开发人员来处理。 由于开发人员通常不了解此职责，因此其误用回溯或依赖过多回溯通常会显著降低正则表达式的性能。 在最糟糕的情况下，输入字符串中每增加一个字符，执行时间会加倍。 实际上，如果过多使用回溯，则在输入与正则表达式模式近似匹配时很容易创建无限循环的编程等效形式；正则表达式引擎可能需要几小时甚至几天来处理相对短的输入字符串。  
   
@@ -200,7 +200,7 @@ ms.locfileid: "64634720"
  在许多情况下，在将正则表达式模式与输入文本匹配时，回溯很重要。 但是，过度回溯会严重降低性能，并且会产生应用程序已停止响应的感觉。 特别需要指出的是，当嵌套限定符并且与外部子表达式匹配的文本为与内部子表达式匹配的文本的子集时，尤其会出现这种情况。  
   
 > [!WARNING]
->  除避免过度回溯之外，还应使用超时功能以确保过度回溯不会严重降低正则表达式性能。 有关详细信息，请参阅[使用超时值](#Timeouts)部分。  
+> 除避免过度回溯之外，还应使用超时功能以确保过度回溯不会严重降低正则表达式性能。 有关详细信息，请参阅[使用超时值](#Timeouts)部分。  
   
  例如，正则表达式模式 `^[0-9A-Z]([-.\w]*[0-9A-Z])*\$$` 用于匹配至少包括一个字母数字字符的部件号。 任何附加字符可以包含字母数字字符、连字符、下划线或句号，但最后一个字符必须为字母数字。 美元符号用于终止部件号。 在某些情况下，由于限定符嵌套并且子表达式 `[0-9A-Z]` 是子表达式 `[-.\w]*` 的子集，因此此正则表达式模式会表现出极差的性能。  
   
@@ -224,10 +224,10 @@ ms.locfileid: "64634720"
   
 |语言元素|说明|  
 |----------------------|-----------------|  
-|`(?=` `subexpression` `)`|零宽度正预测先行。 查看当前位置，以确定 `subexpression` 是否与输入字符串匹配。|  
-|`(?!` `subexpression` `)`|零宽度负预测先行。 查看当前位置，以确定 `subexpression` 是否不与输入字符串匹配。|  
-|`(?<=` `subexpression` `)`|零宽度正回顾。 回顾当前位置，以确定 `subexpression` 是否与输入字符串匹配。|  
-|`(?<!` `subexpression` `)`|零宽度负回顾。 回顾当前位置，以确定 `subexpression` 是否不与输入字符串匹配。|  
+|`(?=` `subexpression` `)`|零宽度正预测先行。 预测先行当前位置，以确定 `subexpression` 是否与输入字符串匹配。|  
+|`(?!` `subexpression` `)`|零宽度负预测先行。 预测先行当前位置，以确定 `subexpression` 是否不与输入字符串匹配。|  
+|`(?<=` `subexpression` `)`|零宽度正回顾。 回顾后发当前位置，以确定 `subexpression` 是否与输入字符串匹配。|  
+|`(?<!` `subexpression` `)`|零宽度负回顾。 回顾后发当前位置，以确定 `subexpression` 是否不与输入字符串匹配。|  
   
  [返回页首](#top)  
   

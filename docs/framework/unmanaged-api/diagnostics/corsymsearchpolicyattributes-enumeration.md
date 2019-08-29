@@ -16,18 +16,18 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 29766636cd151744d25cf66deb60cd2e066e1b32
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7188c516d3d0a5192251697ec743e9d41f8d9072
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67775777"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69913743"
 ---
 # <a name="corsymsearchpolicyattributes-enumeration"></a>CorSymSearchPolicyAttributes 枚举
-指定要执行的符号读取器的搜索时使用的策略。 通过使用这些常量[ISymUnmanagedBinder2::GetReaderForFile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md)并[ISymUnmanagedBinder3::GetReaderFromCallback](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-getreaderfromcallback-method.md)方法。  
+指定在搜索符号读取器时要使用的策略。 [ISymUnmanagedBinder2:: GetReaderForFile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md)和[ISymUnmanagedBinder3:: GetReaderFromCallback](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-getreaderfromcallback-method.md)方法使用这些常量。  
   
 > [!IMPORTANT]
->  它是从受信任的源打开程序数据库 (PDB) 文件会带来安全风险。  
+> 打开不受信任的源中的程序数据库 (PDB) 文件会带来安全风险。  
   
 ## <a name="syntax"></a>语法  
   
@@ -45,13 +45,13 @@ typedef enum CorSymSearchPolicyAttributes
   
 |成员|描述|  
 |------------|-----------------|  
-|`AllowRegistryAccess`|查询符号搜索路径的注册表。|  
+|`AllowRegistryAccess`|在注册表中查询符号搜索路径。|  
 |`AllowSymbolServerAccess`|访问符号服务器。|  
-|`AllowOriginalPathAccess`|搜索中的调试目录指定的路径。|  
-|`AllowReferencePathAccess`|搜索 PDB 中的.exe 文件所在的位置。|  
+|`AllowOriginalPathAccess`|搜索在调试目录中指定的路径。|  
+|`AllowReferencePathAccess`|搜索 .exe 文件所在位置的 PDB。|  
   
 ## <a name="requirements"></a>要求  
- **标头：** CorSym.idl CorSym.h  
+ **标头：** CorSym, CorSym  
   
 ## <a name="see-also"></a>请参阅
 

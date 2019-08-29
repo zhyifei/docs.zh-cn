@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: acab49097059081540ec364d7f134d31432988a3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 138ac80a9abb64d4c004e83e53ed1eea2b124ff2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61723246"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69909899"
 ---
 # <a name="icordebugmanagedcallback3-interface"></a>ICorDebugManagedCallback3 接口
 提供一个回调方法，该方法指示已发出启用的自定义调试器通知。  
@@ -30,22 +30,22 @@ ms.locfileid: "61723246"
   
 |方法|描述|  
 |------------|-----------------|  
-|[CustomNotification 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback3-customnotification-method.md)|指示已引发的已启用自定义调试器通知。|  
+|[CustomNotification 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback3-customnotification-method.md)|指示已引发启用的自定义调试器通知。|  
   
 ## <a name="remarks"></a>备注  
- 此接口为的逻辑扩展[ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)并[ICorDebugManagedCallback2](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)接口。  
+ 此接口是[ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)和[ICorDebugManagedCallback2](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)接口的逻辑扩展。  
   
 > [!NOTE]
->  此接口不支持跨计算机或跨进程远程调用。  
+> 此接口不支持跨计算机或跨进程远程调用。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头：** Cordebug.idl, Cordebug.idl  
   
- **库：** CorGuids.lib  
+ **类库**CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

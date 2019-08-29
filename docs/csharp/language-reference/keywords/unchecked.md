@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - unchecked keyword [C#]
 ms.assetid: 0c021f7c-923f-4b3d-a58f-55336f5ac27e
-ms.openlocfilehash: 0d96b9af0eaee81da8532c1facbfa8b1d1a8128f
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: c31f1243b1394bfe826b02c14c73faf402640849
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633501"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69608414"
 ---
 # <a name="unchecked-c-reference"></a>unchecked（C# 参考）
 
@@ -41,8 +41,8 @@ ms.locfileid: "65633501"
 
 ## <a name="see-also"></a>请参阅
 
-- [C# 参考](../../../csharp/language-reference/index.md)
-- [C# 编程指南](../../../csharp/programming-guide/index.md)
+- [C# 参考](../index.md)
+- [C# 编程指南](../../programming-guide/index.md)
 - [C# 关键字](index.md)
 - [Checked and Unchecked](checked-and-unchecked.md)
 - [checked](checked.md)

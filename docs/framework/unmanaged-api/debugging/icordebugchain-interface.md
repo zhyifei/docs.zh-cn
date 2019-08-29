@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 01dded47fca26df11781153eb45693057a25ad01
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 93ada40bd88e53cd06f5e8d8136b2d527d7741e6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61989373"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69969296"
 ---
 # <a name="icordebugchain-interface"></a>ICorDebugChain 接口
 
@@ -31,33 +31,33 @@ ms.locfileid: "61989373"
   
 |方法|描述|  
 |------------|-----------------|  
-|[EnumerateFrames 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-enumerateframes-method.md)|获取一个枚举器包含在链中的所有托管的堆栈帧并从最新帧开始。|  
-|[GetActiveFrame 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getactiveframe-method.md)|获取活动 (即，最新) 链上的帧。|  
-|[GetCallee 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getcallee-method.md)|获取此链调用链。|  
+|[EnumerateFrames 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-enumerateframes-method.md)|获取一个枚举数, 该枚举数包含链中所有托管堆栈帧 (从最新帧开始)。|  
+|[GetActiveFrame 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getactiveframe-method.md)|获取链上的活动 (即最近的) 帧。|  
+|[GetCallee 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getcallee-method.md)|获取此链调用的链。|  
 |[GetCaller 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getcaller-method.md)|获取调用此链的链。|  
 |[GetContext 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getcontext-method.md)|未实现。|  
-|[GetNext 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getnext-method.md)|获取线程的下一帧链。|  
-|[GetPrevious 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getprevious-method.md)|获取线程的上一帧链。|  
-|[GetReason 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getreason-method.md)|获取生成此调用链的原因。|  
-|[GetRegisterSet 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getregisterset-method.md)|获取为此证书链的活动部分设置的寄存器。|  
-|[GetStackRange 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getstackrange-method.md)|获取此链堆栈段的地址范围。|  
-|[GetThread 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getthread-method.md)|获取此调用链的物理线程的一部分。|  
-|[IsManaged 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-ismanaged-method.md)|获取一个值，该值指示此链是否正在运行托管的代码。|  
+|[GetNext 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getnext-method.md)|获取线程的下一个帧链。|  
+|[GetPrevious 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getprevious-method.md)|获取线程的上一个帧链。|  
+|[GetReason 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getreason-method.md)|获取此调用链的 genesis 的原因。|  
+|[GetRegisterSet 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getregisterset-method.md)|获取此链的活动部分的寄存器集。|  
+|[GetStackRange 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getstackrange-method.md)|获取此链的堆栈段的地址范围。|  
+|[GetThread 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getthread-method.md)|获取此调用链所属的物理线程。|  
+|[IsManaged 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-ismanaged-method.md)|获取一个值, 该值指示此链是否正在运行托管代码。|  
   
 ## <a name="remarks"></a>备注  
- 在一个链中的堆栈帧占据相邻的堆栈空间，并共享相同的线程和上下文。 链可以表示任一托管或非托管代码链。 一个空`ICorDebugChain`实例表示的非托管的代码链。  
+ 链中的堆栈帧占用连续堆栈空间并共享相同的线程和上下文。 链可以表示托管或非托管代码链。 空`ICorDebugChain`实例表示非托管代码链。  
   
 > [!NOTE]
->  此接口不支持跨计算机或跨进程远程调用。  
+> 此接口不支持跨计算机或跨进程远程调用。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头：** Cordebug.idl, Cordebug.idl  
   
- **库：** CorGuids.lib  
+ **类库**CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

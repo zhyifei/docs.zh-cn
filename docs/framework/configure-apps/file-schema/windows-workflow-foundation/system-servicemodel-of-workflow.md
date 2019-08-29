@@ -1,16 +1,16 @@
 ---
-title: < system.serviceModel > 的工作流
+title: < System.servicemodel > 工作流
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 6a8eb2bf-f925-40e1-ba5c-a49b1d3a3ac6
-ms.openlocfilehash: 5580bf570c4c728b526bd62109b48c3ccc18943a
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: faa8154c4d7ac5c6aa2f9f1707cf8f0d39eefad5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422890"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69947368"
 ---
-# <a name="systemservicemodel-of-workflow"></a>\<system.serviceModel > 的工作流
+# <a name="systemservicemodel-of-workflow"></a>\<工作流的 System.servicemodel >
 此配置节包含所有工作流配置元素。  
   
 ## <a name="syntax"></a>语法  
@@ -95,14 +95,14 @@ ms.locfileid: "67422890"
  下列各节描述了特性、子元素和父元素。  
   
 ### <a name="attributes"></a>特性  
- None  
+ 无  
   
 ### <a name="child-elements"></a>子元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<behaviors>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/behaviors-of-workflow.md)|本部分将定义**serviceBehaviors**集合。  集合中的每个元素定义服务所使用的行为元素。 每个行为元素由其唯一**名称**属性。|  
-|[\<tracking>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/tracking.md)|表示一个配置节，用于定义工作流服务的跟踪设置。<br /><br /> 工作流跟踪和其配置的详细信息，请参阅[工作流跟踪](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)并[工作流配置跟踪](../../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md)。|  
+|[\<behaviors>](behaviors-of-workflow.md)|本节定义**serviceBehaviors**集合。  集合中的每个元素定义服务所使用的行为元素。 每个行为元素都由其唯一**名称**属性标识。|  
+|[\<tracking>](tracking.md)|表示一个配置节，用于定义工作流服务的跟踪设置。<br /><br /> 有关工作流跟踪及其配置的详细信息, 请参阅工作流[跟踪和跟踪](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)和[配置工作流跟踪](../../../windows-workflow-foundation/configuring-tracking-for-a-workflow.md)。|  
   
 ### <a name="parent-elements"></a>父元素  
   

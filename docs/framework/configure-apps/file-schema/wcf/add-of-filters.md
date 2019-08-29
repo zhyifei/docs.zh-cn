@@ -2,18 +2,18 @@
 title: <add> 的 <filters>
 ms.date: 03/30/2017
 ms.assetid: e3bf437c-dd99-49f3-9792-9a8721e6eaad
-ms.openlocfilehash: 399fc4e22a9253469a5494af61dac862e33814a3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e7975bea1435abdb77528628e7b96c65a72cbbc2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704539"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69926690"
 ---
-# <a name="add-of-filters"></a>\<添加 > 的\<筛选器 >
+# <a name="add-of-filters"></a>\<添加\<筛选器 > >
 一个 XPath 筛选器，用于指定要记录的消息的种类。  
   
  \<system.ServiceModel>  
-\<diagnostic>  
+\<诊断 >  
 \<messageLogging>  
 \<filters>  
 \<add>  
@@ -33,7 +33,7 @@ ms.locfileid: "61704539"
   
 |特性|描述|  
 |---------------|-----------------|  
-|筛选器|一个字符串，用于指定由 XPath 1.0 表达式定义的 XML 文档的查询。 有关详细信息，请参阅 <xref:System.ServiceModel.Dispatcher.XPathMessageFilter>。|  
+|筛选器|一个字符串，用于指定由 XPath 1.0 表达式定义的 XML 文档的查询。 有关详细信息，请参阅 <xref:System.ServiceModel.Dispatcher.XPathMessageFilter> 。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  
@@ -42,7 +42,7 @@ ms.locfileid: "61704539"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<filters>](../../../../../docs/framework/configure-apps/file-schema/wcf/filters.md)|包含用于控制所记录的消息类型的 XPath 筛选器集合。|  
+|[\<filters>](filters.md)|包含用于控制所记录的消息类型的 XPath 筛选器集合。|  
   
 ## <a name="remarks"></a>备注  
  如果将 `logMessagesAtTransportLevel` 指定为 `true`，筛选器将只应用于传输层。 筛选器不影响服务级别和格式不正确的消息日志记录。  
@@ -79,5 +79,5 @@ ms.locfileid: "61704539"
 - <xref:System.ServiceModel.Configuration.MessageLoggingElement.Filters%2A>
 - <xref:System.ServiceModel.Configuration.XPathMessageFilterElement>
 - <xref:System.ServiceModel.Dispatcher.XPathMessageFilter>
-- [配置消息日志记录](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md)
-- [\<messageLogging>](../../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)
+- [配置消息日志记录](../../../wcf/diagnostics/configuring-message-logging.md)
+- [\<messageLogging>](messagelogging.md)

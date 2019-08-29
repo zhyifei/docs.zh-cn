@@ -16,40 +16,40 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a68e061c6def61746ee65f8a25818f8dbcd785b5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 608c2cea79c20a43d65fcbf37ba13242fa465100
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61645352"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69969313"
 ---
 # <a name="icordebugbreakpoint-interface"></a>ICorDebugBreakpoint 接口
 
-表示一个函数或对值的观察点中的断点。  
+表示函数中的断点或某个值的监视点。  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|[Activate 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugbreakpoint-activate-method.md)|设置此活动的状态`ICorDebugBreakpoint`。|  
-|[IsActive 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugbreakpoint-isactive-method.md)|获取一个值，该值指示是否此`ICorDebugBreakpoint`处于活动状态。|  
+|[Activate 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugbreakpoint-activate-method.md)|设置此`ICorDebugBreakpoint`的活动状态。|  
+|[IsActive 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugbreakpoint-isactive-method.md)|获取一个值, 该值指示此`ICorDebugBreakpoint`是否处于活动状态。|  
   
 ## <a name="remarks"></a>备注  
- 断点不直接支持条件表达式。 如果需要此类功能，则调试程序必须实现它的`ICorDebugBreakpoint`。  
+ 断点不直接支持条件表达式。 如果需要此类功能, 调试程序必须在顶层`ICorDebugBreakpoint`实现它。  
   
- ICorDebugFunctionBreakpoint 接口扩展`ICorDebugBreakpoint`以支持函数中的断点。  
+ ICorDebugFunctionBreakpoint 接口扩展`ICorDebugBreakpoint`以支持函数内的断点。  
   
 > [!NOTE]
->  此接口不支持跨计算机或跨进程远程调用。  
+> 此接口不支持跨计算机或跨进程远程调用。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头：** Cordebug.idl, Cordebug.idl  
   
- **库：** CorGuids.lib  
+ **类库**CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

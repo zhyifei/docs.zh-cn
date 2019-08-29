@@ -12,19 +12,19 @@ helpviewer_keywords:
 - data transformations [LINQ in C#]
 - LINQ [C#], type relationships
 ms.assetid: 99118938-d47c-4d7e-bb22-2657a9f95268
-ms.openlocfilehash: b58219a8a4d45ce01f80fd367ed56b13a773e4bc
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 42519a74be1bd6934bc7a3304d154321697d128c
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66483397"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69591020"
 ---
 # <a name="type-relationships-in-linq-query-operations-c"></a>LINQ 查询操作中的类型关系 (C#)
 若要有效编写查询，应了解完整的查询操作中的变量类型是如何全部彼此关联的。 如果了解这些关系，就能够更容易地理解文档中的 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 示例和代码示例。 另外，还能了解在使用 `var` 隐式对变量进行类型化时的后台操作。  
   
  [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询操作在数据源、查询本身及查询执行中是强类型化的。 查询中变量的类型必须与数据源中元素的类型和 `foreach` 语句中迭代变量的类型兼容。 此强类型保证在编译时捕获类型错误，以便可以在用户遇到这些错误之前更正它们。  
   
- 为了演示这些类型关系，下面的大多数示例对所有变量使用显式类型。 最后一个示例演示在利用使用 [var](../../../../csharp/language-reference/keywords/var.md) 的隐式类型时，如何应用相同的原则。  
+ 为了演示这些类型关系，下面的大多数示例对所有变量使用显式类型。 最后一个示例演示在利用使用 [var](../../../language-reference/keywords/var.md) 的隐式类型时，如何应用相同的原则。  
   
 ## <a name="queries-that-do-not-transform-the-source-data"></a>不转换源数据的查询  
  下图演示不对数据执行转换的 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] to Objects 查询操作。 源包含一个字符串序列，查询输出也是一个字符串序列。  
@@ -59,8 +59,8 @@ ms.locfileid: "66483397"
 3. 因为查询变量的类型是隐式的，所以 `foreach` 循环中的迭代变量也必须是隐式的。  
   
 ## <a name="letting-the-compiler-infer-type-information"></a>让编译器推断类型信息  
- 虽然需要了解查询操作中的类型关系，但是也可以选择让编译器执行全部工作。 关键字 [var](../../../../csharp/language-reference/keywords/var.md) 可用于查询操作中的任何本地变量。 下图与前面讨论的第二个示例相似。 但是，编译器为查询操作中的各个变量提供强类型。  
+ 虽然需要了解查询操作中的类型关系，但是也可以选择让编译器执行全部工作。 关键字 [var](../../../language-reference/keywords/var.md) 可用于查询操作中的任何本地变量。 下图与前面讨论的第二个示例相似。 但是，编译器为查询操作中的各个变量提供强类型。  
   
  ![关系图显示具有隐式类型的类型流。](./media/type-relationships-in-linq-query-operations/linq-type-flow-implicit-typing.png)  
   
- 有关 `var` 的详细信息，请参阅[隐式类型本地变量](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md)。  
+ 有关 `var` 的详细信息，请参阅[隐式类型本地变量](../../classes-and-structs/implicitly-typed-local-variables.md)。  

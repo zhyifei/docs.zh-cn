@@ -24,22 +24,22 @@ helpviewer_keywords:
 - Keys.Alt enumeration member
 - modifier keys
 ms.assetid: 1e184048-0ae3-4067-a200-d4ba31dbc2cb
-ms.openlocfilehash: 947f3d3172744764feb0045459151c7769f07336
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 37fa897f5a2e1c65cbd5db9189f1500e3427c920
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591589"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964311"
 ---
 # <a name="how-to-determine-which-modifier-key-was-pressed"></a>如何：确定按下了哪个修改键
-在创建接受用户的击键的应用程序时，可能还想要监视修改键，如 SHIFT、 ALT 和 CTRL 键。 修改键按下时结合使用其他密钥，或者单击鼠标，你的应用程序做出正确响应。 例如，如果按下字母 S 时，这只是可能导致"s"出现在屏幕上，但如果按下了 CTRL + S 的密钥，可能会保存当前文档。 如果处理<xref:System.Windows.Forms.Control.KeyDown>事件，<xref:System.Windows.Forms.KeyEventArgs.Modifiers%2A>属性的<xref:System.Windows.Forms.KeyEventArgs>收到的事件处理程序指定哪个修改键被按下。 或者，<xref:System.Windows.Forms.KeyEventArgs.KeyData%2A>属性的<xref:System.Windows.Forms.KeyEventArgs>指定按下了也与按位 OR 组合与任何修改键的字符。 但是，如果你是<xref:System.Windows.Forms.Control.KeyPress>事件或鼠标事件，事件处理程序不会接收此信息。 在这种情况下，必须使用<xref:System.Windows.Forms.Control.ModifierKeys%2A>属性的<xref:System.Windows.Forms.Control>类。 在任一情况下，您必须执行相应的按位 AND<xref:System.Windows.Forms.Keys>值和要测试的值。 <xref:System.Windows.Forms.Keys>枚举提供了变体的每个修改键，因此，必须执行的按位并使用正确的值。 例如，由表示 SHIFT 键<xref:System.Windows.Forms.Keys.Shift>， <xref:System.Windows.Forms.Keys.ShiftKey>，<xref:System.Windows.Forms.Keys.RShiftKey>并<xref:System.Windows.Forms.Keys.LShiftKey>正确的值来测试 SHIFT 修改键原样<xref:System.Windows.Forms.Keys.Shift>。 同样，若要测试 CTRL 和 ALT 修饰符作为您应使用<xref:System.Windows.Forms.Keys.Control>和<xref:System.Windows.Forms.Keys.Alt>值，分别。  
+当创建接受用户击键的应用程序时, 可能还需要监视修改键, 如 SHIFT、ALT 和 CTRL 键。 当修改键与其他键结合使用时, 或通过鼠标单击时, 应用程序可以相应地做出响应。 例如, 如果按下字母, 这可能只是导致屏幕上出现 "S", 但如果按下键 CTRL + S, 则可能会保存当前文档。 如果处理<xref:System.Windows.Forms.Control.KeyDown>事件<xref:System.Windows.Forms.KeyEventArgs.Modifiers%2A> , 事件处理程序接收的的<xref:System.Windows.Forms.KeyEventArgs>属性将指定按下的修改键。 或者, <xref:System.Windows.Forms.KeyEventArgs.KeyData%2A>的<xref:System.Windows.Forms.KeyEventArgs>属性指定按下的字符以及与按位 "或" 组合的所有修改键。 但是, 如果要处理<xref:System.Windows.Forms.Control.KeyPress>事件或鼠标事件, 事件处理程序不会收到此信息。 在这种情况下, 必须使用<xref:System.Windows.Forms.Control.ModifierKeys%2A> <xref:System.Windows.Forms.Control>类的属性。 在任一情况下, 都必须对适当<xref:System.Windows.Forms.Keys>的值和要测试的值执行按位 "与" 运算。 <xref:System.Windows.Forms.Keys>枚举提供每个修改键的变体, 因此, 请务必按正确的值执行按位 "与"。 例如, shift 键由<xref:System.Windows.Forms.Keys.Shift> <xref:System.Windows.Forms.Keys.RShiftKey> 、 <xref:System.Windows.Forms.Keys.ShiftKey>和<xref:System.Windows.Forms.Keys.LShiftKey>表示, 用于测试移位作为修改键的正确值为<xref:System.Windows.Forms.Keys.Shift>。 同样, 若要测试 CTRL 和 ALT 作为修饰符, 应分别使用<xref:System.Windows.Forms.Keys.Control>和<xref:System.Windows.Forms.Keys.Alt>值。  
   
 > [!NOTE]
->  Visual Basic 编程人员也可以访问密钥信息通过<xref:Microsoft.VisualBasic.Devices.Computer.Keyboard%2A>属性  
+> Visual Basic 程序员还可以通过<xref:Microsoft.VisualBasic.Devices.Computer.Keyboard%2A>属性访问密钥信息  
   
-### <a name="to-determine-which-modifier-key-was-pressed"></a>若要确定哪个修改键已按下  
+### <a name="to-determine-which-modifier-key-was-pressed"></a>确定按下了哪个修改键  
   
-- 使用按位`AND`运算符，其中<xref:System.Windows.Forms.Control.ModifierKeys%2A>属性和值为<xref:System.Windows.Forms.Keys>枚举来确定是否按下某个特定修改键。 下面的代码示例演示如何确定是否在按下 SHIFT 键<xref:System.Windows.Forms.Control.KeyPress>事件处理程序。  
+- 对<xref:System.Windows.Forms.Control.ModifierKeys%2A>属性使用`AND`位运算符<xref:System.Windows.Forms.Keys> , 并使用枚举的值来确定是否按下某个特定的修改键。 下面的代码示例演示如何确定<xref:System.Windows.Forms.Control.KeyPress>事件处理程序中是否按下了 SHIFT 键。  
   
      [!code-cpp[System.Windows.Forms.DetermineModifierKey#5](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DetermineModifierKey/cpp/form1.cpp#5)]
      [!code-csharp[System.Windows.Forms.DetermineModifierKey#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DetermineModifierKey/CS/form1.cs#5)]
@@ -50,4 +50,4 @@ ms.locfileid: "64591589"
 - <xref:System.Windows.Forms.Keys>
 - <xref:System.Windows.Forms.Control.ModifierKeys%2A>
 - [Windows 窗体应用程序中的键盘输入](keyboard-input-in-a-windows-forms-application.md)
-- [如何：确定如果 CapsLock 在 Visual Basic 中已启用](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/9c9d1fz9(v=vs.100))
+- [如何：确定 CapsLock 是否在 Visual Basic](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/9c9d1fz9(v=vs.100))

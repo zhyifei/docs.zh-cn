@@ -10,14 +10,14 @@ helpviewer_keywords:
 - <add> element, bypasslist
 - add element, bypasslist
 ms.assetid: a0b86e28-86b4-4497-abe8-d5fd614c7926
-ms.openlocfilehash: 904c8e23f7a09a975a6f3b9322ed6bc4148d9ba4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: da234402c6ec7e2c1f85e4bd674517b1147f0d18
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674658"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927484"
 ---
-# <a name="add-element-for-bypasslist-network-settings"></a>\<添加 > bypasslist （网络设置） 的元素
+# <a name="add-element-for-bypasslist-network-settings"></a>\<为 bypasslist 添加 > 元素 (网络设置)
 将 IP 地址或 DNS 名称添加到代理跳过列表。  
   
  \<configuration>  
@@ -41,7 +41,7 @@ ms.locfileid: "61674658"
   
 |**特性**|**说明**|  
 |-------------------|---------------------|  
-|**address**|正则表达式描述 IP 地址或 DNS 名称。|  
+|**address**|描述 IP 地址或 DNS 名称的正则表达式。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  
@@ -50,22 +50,22 @@ ms.locfileid: "61674658"
   
 |**元素**|**说明**|  
 |-----------------|---------------------|  
-|[bypasslist](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|提供一组描述不使用代理的地址的正则表达式。|  
+|[bypasslist](bypasslist-element-network-settings.md)|提供了一组正则表达式, 描述不使用代理的地址。|  
   
 ## <a name="remarks"></a>备注  
- `add`元素插入正则表达式描述 IP 地址或 DNS 服务器名称的绕过代理服务器的地址的列表。  
+ `add`元素将描述 IP 地址或 DNS 服务器名称的正则表达式插入绕过代理服务器的地址列表。  
   
- 值`address`属性应为描述一组 IP 地址或主机名的正则表达式。  
+ `address`特性的值应为描述一组 IP 地址或主机名的正则表达式。  
   
- 指定此元素的正则表达式时应十分小心。 正则表达式"[a-z] +\\.contoso\\.com"匹配任意主机在 contoso.com 域，但它还将匹配 contoso.com.cpandl.com 域中的任何主机。 若要匹配仅在 contoso.com 域中的主机，使用的定位点 （"$"）:"[a-z] +\\.contoso\\.com$"。  
+ 为此元素指定正则表达式时, 应格外小心。 正则表达式 "[a-z] +\\\\.com" 与 contoso.com 域中的任何主机匹配, 但它还匹配 contoso.com.cpandl.com 域中的任何主机。 若要只匹配 contoso.com 域中的主机, 请使用定位点 ("$"): "[a-z] +\\\\.com $"。  
   
- 有关正则表达式的详细信息，请参阅。[.NET framework 正则表达式](../../../../../docs/standard/base-types/regular-expressions.md)。  
+ 有关正则表达式的详细信息, 请参阅。[.NET Framework 正则表达式](../../../../standard/base-types/regular-expressions.md)。  
   
 ## <a name="configuration-files"></a>配置文件  
  此元素可在应用程序配置文件或计算机配置文件 (Machine.config) 中使用。  
   
 ## <a name="example"></a>示例  
- 下面的示例将两个地址添加到忽略列表。 第一个跳过 contoso.com 域; 中的所有服务器的代理第二个跳过与 192.168 其 IP 地址开始的所有服务器的代理。  
+ 下面的示例将两个地址添加到跳过列表。 首先, 将跳过 contoso.com 域中所有服务器的代理;第二种方式是跳过其 IP 地址以192.168 开头的所有服务器的代理。  
   
 ```xml  
 <configuration>  
@@ -83,4 +83,4 @@ ms.locfileid: "61674658"
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
-- [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [网络设置架构](index.md)

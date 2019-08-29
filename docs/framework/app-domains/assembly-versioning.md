@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 775ad4fb-914f-453c-98ef-ce1089b6f903
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 920787c00a12a56de2766ec9ea104241a5722852
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1d295f394a9ce7f038e2c64d42193e2d18040a98
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593657"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921663"
 ---
 # <a name="assembly-versioning"></a>程序集版本控制
 使用公共语言运行时的程序集的所有版本控制都在程序集级别上进行。 一个程序集的特定版本和依赖程序集的版本在该程序集的清单中记录下来。 除非被配置文件（应用程序配置文件、发行者策略文件和计算机的管理员配置文件）中的显式版本策略重写，否则运行时的默认版本策略是，应用程序只与它们生成和测试时所用的程序集版本一起运行。  
   
 > [!NOTE]
->  仅对具有强名称的程序集进行版本控制。  
+> 仅对具有强名称的程序集进行版本控制。  
   
  运行时执行以下几步来解析程序集绑定请求：  
   
@@ -65,7 +65,7 @@ ms.locfileid: "64593657"
  信息性版本是一个字符串，它仅出于提醒的目的将附加的版本信息附加到一个程序集；此信息不在运行时使用。 基于文本的信息性版本相当于产品的营销广告、包装或产品名称，不被运行时使用。 例如，信息性版本可以是“公共语言运行时 1.0 版”或“NET Control SP 2”。 在 Microsoft Windows 中的文件属性对话框的“版本”选项卡上，此信息显示在“产品版本”项中。  
   
 > [!NOTE]
->  虽然可以指定任意文本，但是如果字符串的格式不是程序集版本号使用的格式，或者虽然是这种格式但包含通配符，则在编译时会显示一条警告消息。 此警告无碍。  
+> 虽然可以指定任意文本，但是如果字符串的格式不是程序集版本号使用的格式，或者虽然是这种格式但包含通配符，则在编译时会显示一条警告消息。 此警告无碍。  
   
  信息性版本用自定义特性 <xref:System.Reflection.AssemblyInformationalVersionAttribute?displayProperty=nameWithType> 表示。 有关信息性版本特性的更多信息，请参阅[设置程序集特性](../../../docs/framework/app-domains/set-assembly-attributes.md)。  
   

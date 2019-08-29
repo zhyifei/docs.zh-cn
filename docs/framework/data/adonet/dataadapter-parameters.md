@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f21e6aba-b76d-46ad-a83e-2ad8e0af1e12
-ms.openlocfilehash: 0cdca872e9e76b7491dc571209292a692a06d8f8
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 772763b5927ca845d6c2ccba50382652e410ae4f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583752"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69951233"
 ---
 # <a name="dataadapter-parameters"></a>DataAdapter 参数
 <xref:System.Data.Common.DbDataAdapter> 具有四个用于从数据源检索数据和更新数据源中数据的属性：<xref:System.Data.Common.DbDataAdapter.SelectCommand%2A> 属性返回数据源中的数据；<xref:System.Data.Common.DbDataAdapter.InsertCommand%2A>、<xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A> 和 <xref:System.Data.Common.DbDataAdapter.DeleteCommand%2A> 属性用于管理数据源中的更改。 调用 `SelectCommand` 的 `Fill` 方法之前必须设置 `DataAdapter` 属性。 在调用 `InsertCommand` 的 `UpdateCommand` 方法之前必须设置 `DeleteCommand`、`Update` 或 `DataAdapter` 属性，具体取决于对 <xref:System.Data.DataTable> 中的数据做了哪些更改。 例如，如果已添加行，在调用 `InsertCommand` 之前必须设置 `Update`。 当 `Update` 正在处理已插入、已更新或已删除的行时，`DataAdapter` 将使用相应的 `Command` 属性来处理该操作。 有关已修改行的当前信息将通过 `Command` 集合传递到 `Parameters` 对象。  
   
- 在更新的行的数据源时，可调用 UPDATE 语句，使用的唯一标识符来标识要更新的表中的行。 该唯一标识符通常是主键字段的值。 UPDATE 语句使用的参数既包含唯一标识符又包含要更新的列和值，如下面的 Transact-SQL 语句所示。  
+ 当您在数据源中更新行时, 将调用 UPDATE 语句, 该语句使用唯一标识符来标识要更新的表中的行。 该唯一标识符通常是主键字段的值。 UPDATE 语句使用的参数既包含唯一标识符又包含要更新的列和值，如下面的 Transact-SQL 语句所示。  
   
 ```sql
 UPDATE Customers SET CompanyName = @CompanyName   
@@ -23,9 +23,9 @@ UPDATE Customers SET CompanyName = @CompanyName
 ```  
   
 > [!NOTE]
->  参数占位符的语法取决于数据源。 此示例显示 SQL Server 数据源的占位符。 使用问号 (?) 占位符代表 <xref:System.Data.OleDb> 和 <xref:System.Data.Odbc> 参数。  
+> 参数占位符的语法取决于数据源。 此示例显示 SQL Server 数据源的占位符。 使用问号 (?) 占位符代表 <xref:System.Data.OleDb> 和 <xref:System.Data.Odbc> 参数。  
   
- 在此 Visual Basic 示例中，`CompanyName`字段已更新的值`@CompanyName`行的参数位置`CustomerID`等于的值`@CustomerID`参数。 检索信息从已修改的行中使用的参数<xref:System.Data.SqlClient.SqlParameter.SourceColumn%2A>属性的<xref:System.Data.SqlClient.SqlParameter>对象。 下面是上一示例 UPDATE 语句的参数。 代码假定变量 `adapter` 表示有效的 <xref:System.Data.SqlClient.SqlDataAdapter> 对象。  
+ 在此 Visual Basic 示例中, `CompanyName`将用`CustomerID`等于`@CustomerID`参数值的行的`@CompanyName`参数值更新字段。 参数使用<xref:System.Data.SqlClient.SqlParameter.SourceColumn%2A> <xref:System.Data.SqlClient.SqlParameter>对象的属性从修改的行中检索信息。 下面是上一示例 UPDATE 语句的参数。 代码假定变量 `adapter` 表示有效的 <xref:System.Data.SqlClient.SqlDataAdapter> 对象。  
   
 ```vb
 adapter.Parameters.Add( _  
@@ -39,7 +39,7 @@ parameter.SourceVersion = DataRowVersion.Original
  `Add` 集合的 `Parameters` 方法接受参数的名称、数据类型、大小（如果适用于该类型）以及 <xref:System.Data.Common.DbParameter.SourceColumn%2A> 中的 `DataTable` 的名称。 请注意，<xref:System.Data.Common.DbParameter.SourceVersion%2A> 参数的 `@CustomerID` 设置为 `Original`。 这样可以保证，如果标识列的值已经在修改后的 <xref:System.Data.DataRow> 中被更改，就一定会更新数据源中的现有行。 在这种情况下，`Original` 行值将匹配数据源中的当前值，而 `Current` 行值将包含更新的值。 没有设置 `SourceVersion` 参数的 `@CompanyName`，而将使用默认的 `Current` 行值。  
   
 > [!NOTE]
->  两个`Fill`的操作`DataAdapter`并`Get`方法的`DataReader`，从.NET Framework 数据提供程序返回的类型推断的.NET Framework 类型。 中所述的.NET Framework 的推断的类型和 Microsoft SQL Server、 OLE DB 和 ODBC 数据类型的访问器方法[ADO.NET 中的数据类型映射](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)。  
+> `DataAdapter`对于的`Fill` 操作`Get`和的方法,将从.NETFramework数据提供程序返回的类型推断.NETFramework类型。`DataReader` ADO.NET 中的[数据类型映射](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)中介绍了 Microsoft SQL Server、OLE DB 和 ODBC 数据类型的推断 .NET Framework 类型和访问器方法。  
   
 ## <a name="parametersourcecolumn-parametersourceversion"></a>Parameter.SourceColumn，Parameter.SourceVersion  
  `SourceColumn` 和 `SourceVersion` 可以作为自变量传递给 `Parameter` 构造函数，也可以设置为现有 `Parameter` 的属性。 `SourceColumn` 是将要从中检索 <xref:System.Data.DataColumn> 值的 <xref:System.Data.DataRow> 中的 `Parameter` 的名称。 `SourceVersion` 指定 `DataRow` 用于检索该值的 `DataAdapter` 版本。  
@@ -53,7 +53,7 @@ parameter.SourceVersion = DataRowVersion.Original
 |`Original`|该参数使用列的原始值。|  
 |`Proposed`|该参数使用建议值。|  
   
- 下一节中的 `SqlClient` 代码示例为 <xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A> 定义了一个参数，在该示例中 `CustomerID` 列用作以下两个参数的 `SourceColumn`：`@CustomerID` (`SET CustomerID = @CustomerID`) 和 `@OldCustomerID` (`WHERE CustomerID = @OldCustomerID`)。 `@CustomerID`参数用于更新**CustomerID**列中的当前值`DataRow`。 因此， `CustomerID` `SourceColumn`与`SourceVersion`的`Current`使用。 `@OldCustomerID`参数用于标识数据源中的当前行。 由于在该行的 `Original` 版本中找到了匹配列值，所以将使用 `SourceColumn` 为 `CustomerID` 的相同 `SourceVersion` (`Original`)。  
+ 下一节中的 `SqlClient` 代码示例为 <xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A> 定义了一个参数，在该示例中 `CustomerID` 列用作以下两个参数的 `SourceColumn`：`@CustomerID` (`SET CustomerID = @CustomerID`) 和 `@OldCustomerID` (`WHERE CustomerID = @OldCustomerID`)。 参数用于将**CustomerID**列更新为中的`DataRow`当前值。 `@CustomerID` `CustomerID`因此, `SourceColumn`使用带有`SourceVersion`的。 `Current` `@OldCustomerID`参数用于标识数据源中的当前行。 由于在该行的 `Original` 版本中找到了匹配列值，所以将使用 `SourceColumn` 为 `CustomerID` 的相同 `SourceVersion` (`Original`)。  
   
 ## <a name="working-with-sqlclient-parameters"></a>使用 SqlClient 参数  
  下面的示例演示如何创建 <xref:System.Data.SqlClient.SqlDataAdapter> 并将 <xref:System.Data.Common.DataAdapter.MissingSchemaAction%2A> 设置为 <xref:System.Data.MissingSchemaAction.AddWithKey>，以便从数据库中检索其他架构信息。 <xref:System.Data.SqlClient.SqlDataAdapter.SelectCommand%2A>、<xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A>、<xref:System.Data.SqlClient.SqlDataAdapter.UpdateCommand%2A> 和 <xref:System.Data.SqlClient.SqlDataAdapter.DeleteCommand%2A> 属性集及其相应的 <xref:System.Data.SqlClient.SqlParameter> 对象已添加到 <xref:System.Data.SqlClient.SqlCommand.Parameters%2A> 集合。 该方法返回一个 `SqlDataAdapter` 对象。  
@@ -162,7 +162,7 @@ adapter.Fill(customers, "Customers");
 ```  
   
 > [!NOTE]
->  如果未为参数提供参数名称，该参数提供参数的默认名称*N* *，* 使用从"Parameter1"开始。 我们建议避免使用 Parameter*N*命名约定时提供参数名称，因为所提供的名称可能与中现有的默认参数名称发生冲突`ParameterCollection`。 如果提供的名称已经存在，将引发异常。  
+> 如果没有为参数提供参数名称, 则会为该参数指定增量默认名称 parameter*N* *,* 以 "Parameter1" 开头。 建议在提供参数名称时避免使用参数*N*命名约定, 因为所提供的名称可能会与中`ParameterCollection`现有的默认参数名称冲突。 如果提供的名称已经存在，将引发异常。  
   
 ## <a name="see-also"></a>请参阅
 

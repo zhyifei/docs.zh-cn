@@ -3,12 +3,12 @@ title: <system.identityModel.services>
 ms.date: 03/30/2017
 ms.assetid: fa1624dd-2d74-4ae3-942e-498cee261ac5
 author: BrucePerlerMS
-ms.openlocfilehash: 9728f3caee4dba367e4fc4a3e68213b1055cc3d1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bef061c5c982fb0e740f889336a3b334bc19225e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793778"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69943659"
 ---
 # <a name="systemidentitymodelservices"></a>\<system.identityModel.services>
 使用 WS 联合身份验证协议进行身份验证的配置节。  
@@ -28,27 +28,27 @@ ms.locfileid: "61793778"
  下列各节描述了特性、子元素和父元素。  
   
 ### <a name="attributes"></a>特性  
- None  
+ 无  
   
 ### <a name="child-elements"></a>子元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<federationConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md)|包含配置的设置<xref:System.IdentityModel.Services.WSFederationAuthenticationModule>(WSFAM) 和<xref:System.IdentityModel.Services.SessionAuthenticationModule>(SAM) HTTP 模块。|  
+|[\<federationConfiguration>](federationconfiguration.md)|包含配置<xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) <xref:System.IdentityModel.Services.SessionAuthenticationModule>和 (SAM) HTTP 模块的设置。|  
   
 ### <a name="parent-elements"></a>父元素  
- None  
+ 无  
   
 ## <a name="remarks"></a>备注  
- 添加`<system.identityModel.services>`SAM 和 WSFAM 提供设置应用程序的配置文件的部分。  
+ `<system.identityModel.services>`将部分添加到应用程序的配置文件, 以提供 SAM 和 WSFAM 的设置。  
   
 > [!IMPORTANT]
->  使用时<xref:System.IdentityModel.Services.ClaimsPrincipalPermission>或<xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute>类以提供在代码中，声明授权管理器的基于声明的访问控制 (<xref:System.Security.Claims.ClaimsAuthorizationManager>) 和用于做出授权决定的策略被配置通过`<identityConfiguration>`隐式或显式从引用的元素`<federationConfiguration>`在本部分中的元素。 有关详细信息，请参阅**备注**下[ \<federationConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md)元素。  
+> 当使用<xref:System.IdentityModel.Services.ClaimsPrincipalPermission> <xref:System.Security.Claims.ClaimsAuthorizationManager>或类在代码中提供基于声明的访问控制时, 用于做出授权决定的声明授权管理器 () 和策略通过`<identityConfiguration>` <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute>此部分中的`<federationConfiguration>`元素隐式或显式引用的元素。 有关详细信息, 请参阅[ \<federationConfiguration >](federationconfiguration.md)元素下的 "**备注**"。  
   
- `<system.identityModel.services>`由表示部分<xref:System.IdentityModel.Services.Configuration.SystemIdentityModelServicesSection>类。 子集合`<federationConfiguration>`元素的部分配置为由<xref:System.IdentityModel.Services.Configuration.FederationConfigurationElementCollection>类。  
+ 部分由<xref:System.IdentityModel.Services.Configuration.SystemIdentityModelServicesSection>类表示。 `<system.identityModel.services>` 在部分中配置`<federationConfiguration>`的子元素的集合由<xref:System.IdentityModel.Services.Configuration.FederationConfigurationElementCollection>类表示。  
   
 ## <a name="example"></a>示例  
- 下面的 XML 演示如何添加`<system.identityModel.services>`到配置文件的部分。 必须首先添加两个部分声明`<system.identityModel.services>`部分和`<system.identityModel>`部分。 (当您将添加`<system.identityModel.services>`部分中，您还应添加的声明`<system.identityModel>`部分，以确保默认值`<identityConfiguration>`运行时可创建部分，如有必要。)已添加部分声明后，可以配置下的联合身份验证设置`<system.identityModel.services>`元素。  
+ 下面的 XML 演示如何将`<system.identityModel.services>`节添加到配置文件。 必须首先为`<system.identityModel.services>`节`<system.identityModel>`和部分添加节声明。 (添加`<system.identityModel.services>`部分时, 还应为`<system.identityModel>`节添加声明, 以确保运行时可以根据需要创建默认`<identityConfiguration>`节。)添加了节声明后, 可以在`<system.identityModel.services>`元素下配置联合身份验证设置。  
   
 ```xml  
 <configuration>  

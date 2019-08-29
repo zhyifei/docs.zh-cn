@@ -17,18 +17,18 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cb95c11900b84b78a3f862bcb73f0700aaabeeaa
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 01e407b726ce4426f3b58bc29854b30bd6add257
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755976"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69953875"
 ---
 # <a name="icorprofilercallbackexceptionthrown-method"></a>ICorProfilerCallback::ExceptionThrown 方法
-通知探查器已引发异常。  
+通知探查器引发了异常。  
   
 > [!NOTE]
->  仅当异常到达托管的代码调用此函数。  
+> 仅当异常到达托管代码时, 才调用此函数。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,19 +39,19 @@ HRESULT ExceptionThrown(
   
 ## <a name="parameters"></a>参数  
  `thrownObjectId`  
- [in]导致引发异常的对象的 ID。  
+ 中导致引发异常的对象的 ID。  
   
 ## <a name="remarks"></a>备注  
- 探查器不应在其实现此方法阻止因为堆栈可能未处于允许垃圾回收的状态，因此不能启用抢先式垃圾回收。 如果探查器进行阻止并尝试执行垃圾回收，运行时将阻塞，直到此回调返回。  
+ 探查器不应在此方法的实现中被阻止, 因为堆栈可能不处于允许垃圾回收的状态, 因此无法启用抢先垃圾回收。 如果探查器在此处阻止并且试图进行垃圾回收, 则运行时将被阻止, 直到此回调返回。  
   
- 为托管代码或以任何方式导致托管内存分配，不应调用此方法的探查器的实现。  
+ 探查器的此方法的实现不应调入托管代码或以任何方式导致托管内存分配。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorProf.idl, CorProf.h  
+ **标头：** Corprof.idl, Corprof.idl  
   
- **库：** CorGuids.lib  
+ **类库**CorGuids.lib  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

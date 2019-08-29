@@ -7,16 +7,16 @@ helpviewer_keywords:
 - UI Automation, Microsoft Active Accessibility
 - Active Accessibility, UI Automation compared to
 ms.assetid: 87bee662-0a3e-4232-a421-20e7a5968321
-ms.openlocfilehash: ef00c80cd51551fe12283835b3c3d51317c2aa6d
-ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
+ms.openlocfilehash: 8aadcc213e92fd53490f639f37dc8d8f62762c2c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68434026"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946484"
 ---
 # <a name="ui-automation-and-microsoft-active-accessibility"></a>UI 自动化和 Microsoft Active Accessibility
 > [!NOTE]
->  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关的最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], 请[参阅 Windows 自动化 API:UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
+> 本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关的最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], 请[参阅 Windows 自动化 API:UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  Microsoft Active Accessibility 是使应用程序可访问的早期解决方案。 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 是 [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)] 的新辅助功能模型，旨在满足对辅助技术产品和自动测试工具的需求。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]通过 Active Accessibility 提供了许多改进。  
   
@@ -247,7 +247,7 @@ ms.locfileid: "68434026"
 ## <a name="security"></a>安全性  
  某些 `IAccessible` 自定义应用场景需要包装一个基本 `IAccessible` 并对其调用。 这具有安全隐患，因为部分受信任的组件不应为代码路径上的中介。  
   
-           [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 模型使提供程序不再需要通过其他提供程序代码调用。           [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 核心服务将进行所有必要的聚合。  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 模型使提供程序不再需要通过其他提供程序代码调用。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 核心服务将进行所有必要的聚合。  
   
 ## <a name="see-also"></a>请参阅
 

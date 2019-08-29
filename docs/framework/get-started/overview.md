@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 29848c96-fc36-462d-8072-ba223a40b697
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f50a469327a06eabdb6a80821203f2222dcd2921
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 46dd9c0c1f9f5759bc9160aadeb0538b5403fb52
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878035"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917973"
 ---
 # <a name="overview-of-the-net-framework"></a>.NET Framework 概述
 
@@ -75,7 +75,7 @@ Internet Explorer 是承载运行时（以 MIME 类型扩展的形式）的非�
 
 正如您对面向对象的类库所希望的那样，.NET Framework 类型使您能够完成一系列常见编程任务（包括诸如字符串管理、数据收集、数据库连接以及文件访问等任务）。 除这些常规任务之外，类库还包括支持多种专用开发方案的类型。 使用 .NET Framework 开发下列类型的应用和服务：
 
-- Console 应用。 请参阅[生成控制台应用程序](../../../docs/standard/building-console-apps.md)。
+- Console 应用。 请参阅[生成控制台应用程序](../../standard/building-console-apps.md)。
 
 - Windows GUI 应用（Windows 窗体）。 请参阅 [Windows 窗体](../../../docs/framework/winforms/index.md)。
 

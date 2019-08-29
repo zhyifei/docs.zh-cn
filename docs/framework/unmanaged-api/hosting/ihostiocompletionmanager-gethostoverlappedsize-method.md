@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 54e72205f8f976498df3b1fe1e055fb7df12d68e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c43f906961b9e76d5f0f34ba5a5b2f656f5b1488
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780684"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937504"
 ---
 # <a name="ihostiocompletionmanagergethostoverlappedsize-method"></a>IHostIoCompletionManager::GetHostOverlappedSize 方法
-获取宿主要追加到输入/输出请求的任何自定义数据的大小。  
+获取宿主打算追加到 i/o 请求的任何自定义数据的大小。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,38 +37,38 @@ HRESULT GetHostOverlappedSize (
   
 ## <a name="parameters"></a>参数  
  `pcbSize`  
- [out]指向公共语言运行时 (CLR) 除了 Win32 的大小应分配的字节数的`OVERLAPPED`对象。  
+ 弄一个指针, 指向公共语言运行时 (CLR) 除 Win32 `OVERLAPPED`对象的大小外应分配的字节数。  
   
 ## <a name="return-value"></a>返回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|`GetHostOverlappedSize` 已成功返回。|  
-|HOST_E_CLRNOTAVAILABLE|CLR 尚未加载到进程中，或处于不能运行托管的代码或已成功处理调用的状态。|  
-|HOST_E_TIMEOUT|呼叫已超时。|  
+|S_OK|`GetHostOverlappedSize`已成功返回。|  
+|HOST_E_CLRNOTAVAILABLE|CLR 未加载到进程中, 或 CLR 处于无法运行托管代码或成功处理调用的状态。|  
+|HOST_E_TIMEOUT|调用超时。|  
 |HOST_E_NOT_OWNER|调用方不拥有该锁。|  
-|HOST_E_ABANDONED|事件已取消时被阻塞的线程或纤程正在等待它。|  
-|E_FAIL|发生未知的灾难性故障。 如果某方法返回 E_FAIL，CLR 不再在进程内可用。 对托管方法的后续调用返回 HOST_E_CLRNOTAVAILABLE。|  
+|HOST_E_ABANDONED|已阻止的线程或纤程正在等待某个事件时, 该事件被取消。|  
+|E_FAIL|发生未知的灾难性故障。 当方法返回 E_FAIL 时, CLR 在该进程内将不再可用。 对宿主方法的后续调用会返回 HOST_E_CLRNOTAVAILABLE。|  
   
 ## <a name="remarks"></a>备注  
- 所有 Windows 平台 Api 的异步 I/O 调用都采用 Win32`OVERLAPPED`对象，它提供的文件指针位置等信息。 若要维护状态，通常进行异步 I/O 调用的应用程序，请向结构中添加自定义数据。 `GetHostOverlappedSize` 并[ihostiocompletionmanager:: Initializehostoverlapped](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-initializehostoverlapped-method.md)提供要包括此类自定义数据的主机的机会。  
+ 对 Windows 平台 api 的所有异步 i/o 调用都采用 Win32 `OVERLAPPED`对象, 后者提供了文件指针位置等信息。 若要维护状态, 执行异步 i/o 调用的应用程序通常会将自定义数据添加到该结构中。 `GetHostOverlappedSize`和[IHostIoCompletionManager:: InitializeHostOverlapped](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-initializehostoverlapped-method.md)为主机提供了一个机会, 使其包括此类自定义数据。  
   
- CLR 调用`GetHostOverlappedSize`方法，以确定要附加到主机的自定义数据的大小`OVERLAPPED`对象。  
+ CLR 调用`GetHostOverlappedSize`方法来确定宿主打算追加`OVERLAPPED`到对象的自定义数据的大小。  
   
 > [!NOTE]
->  `GetHostOverlappedSize` 一次调用。 主机的自定义数据必须为每个 I/O 请求大小相同。  
+> `GetHostOverlappedSize`只调用一次。 主机的自定义数据必须与每个 i/o 请求的大小相同。  
   
 > [!IMPORTANT]
->  大小`OVERLAPPED`中的值不包括对象本身`pcbSize`。  
+> `OVERLAPPED`对象本身的大小不包含在的`pcbSize`值中。  
   
- 有关详细信息`OVERLAPPED`结构，请参阅 Windows 平台文档。  
+ 有关`OVERLAPPED`结构的详细信息, 请参阅 Windows 平台文档。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
   
- **库：** 包含为 MSCorEE.dll 中的资源  
+ **类库**作为资源包括在 Mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -1,5 +1,5 @@
 ---
-title: <filter> 元素<add>为 <sharedListeners>
+title: <filter><add>的元素<sharedListeners>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sharedListeners/add/filter
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - filters, trace listeners
 - trace listeners, filters
 ms.assetid: 7d4e7faa-2e4e-4379-ac76-f6cd7f2f8fac
-ms.openlocfilehash: 2bef729f179b41509d3c0381b26e38e364dbf86b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 571a3add232f3e4f9747040dc104b85e8cc3085e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673714"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920514"
 ---
-# <a name="filter-element-for-add-for-sharedlisteners"></a>\<筛选器 > 元素\<添加 > 为\<sharedListeners >
+# <a name="filter-element-for-add-for-sharedlisteners"></a>\<筛选 sharedListeners 的\< \<add > > 元素 >
 将筛选器添加到 `sharedListeners` 集合中的侦听器。  
   
  \<configuration>  
@@ -40,8 +40,8 @@ ms.locfileid: "61673714"
   
 |特性|描述|  
 |---------------|-----------------|  
-|**type**|必需的特性。<br /><br /> 指定筛选器的类型。 可以使用仅该类型的完整名称 (格式为<xref:System.Type.FullName%2A?displayProperty=nameWithType>属性)，也可以使用完全限定的类型名称包括程序集信息 (格式为<xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType>属性)。 有关创建完全限定的类型名称的信息，请参阅[指定完全限定的类型名称](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)。|  
-|**initializeData**|可选特性。<br /><br /> 传递给构造函数为指定类的字符串。|  
+|**type**|必需的特性。<br /><br /> 指定筛选器的类型。 您只能使用该类型的完整名称 (采用<xref:System.Type.FullName%2A?displayProperty=nameWithType>属性格式), 也可以使用包含程序集信息 (采用<xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType>属性格式) 的完全限定的类型名称。 有关创建完全限定类型名称的信息, 请参阅[指定完全限定的类型](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md)名称。|  
+|**initializeData**|可选特性。<br /><br /> 传递到指定类的构造函数的字符串。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  
@@ -52,16 +52,16 @@ ms.locfileid: "61673714"
 |-------------|-----------------|  
 |`configuration`|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
 |`system.diagnostics`|指定用于收集、存储和路由消息的跟踪侦听器以及对跟踪开关设置的级别。|  
-|`sharedListeners`|任何源或跟踪元素可以引用的侦听器集合。|  
+|`sharedListeners`|任何源或跟踪元素都可以引用的侦听器的集合。|  
 |`add`|将侦听器添加到**sharedListeners**集合。|  
   
 ## <a name="remarks"></a>备注  
- 如果在中定义一个侦听器`<add>`的元素`<sharedListeners>`元素中，应在定义该侦听器的筛选器`<filter>`的子元素`<add>`元素。  
+ `<add>`如果侦听器是在`<sharedListeners>`元素的元素中定义的, 则`<filter>`应在作为`<add>`元素的子元素的元素中定义该侦听器的筛选器。  
   
- 计算机配置文件 (Machine.config) 和应用程序配置文件中，可以使用此元素。  
+ 此元素可在计算机配置文件 (Machine.config) 和应用程序配置文件中使用。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何使用`<filter>`元素添加到跟踪侦听器的筛选器`console`中`sharedListeners`集合。  
+ 下面的示例演示如何使用`<filter>`元素将筛选器添加到`sharedListeners`集合中的跟踪侦听器`console` 。  
   
 ```xml  
 <configuration>  
@@ -90,4 +90,4 @@ ms.locfileid: "61673714"
 - <xref:System.Diagnostics.TraceFilter>
 - <xref:System.Diagnostics.TraceListener>
 - <xref:System.Diagnostics.TraceSource>
-- [跟踪和调试设置架构](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [跟踪和调试设置架构](index.md)

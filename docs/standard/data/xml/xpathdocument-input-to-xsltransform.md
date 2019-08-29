@@ -8,18 +8,18 @@ dev_langs:
 ms.assetid: 7d1bbe8b-ed43-4e62-a5ba-d602d244f4ae
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: beefaffa0365efbb808fd15c1253027e4d5b09a1
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: 3c7c8f6739fc5132af2c8cf1af2c111d51565db0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67170922"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923303"
 ---
 # <a name="xpathdocument-input-to-xsltransform"></a>XslTransform 的 XPathDocument 输入
 <xref:System.Xml.XPath.XPathDocument> 是只读缓存，配合 <xref:System.Xml.Xsl.XslTransform> 处理文档。 它在结构上与 XML 文档对象模型 (DOM) 类似，但是已使用 <xref:System.Xml.XPath.XPathNavigator> 上的 XPath 优化功能，针对可扩展样式表语言转换 (XSLT) 处理和 XML 路径语言 (XPath) 数据模型进行了高度优化。  
   
 > [!NOTE]
->  <xref:System.Xml.Xsl.XslTransform> 类在 .NET Framework 2.0 中已过时。 可以使用 <xref:System.Xml.Xsl.XslCompiledTransform> 类执行可扩展样式表语言转换 (XSLT) 转换。 请参阅[使用 XslCompiledTransform 类](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)和[从 XslTransform 类迁移](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)，以获取详细信息。  
+> <xref:System.Xml.Xsl.XslTransform> 类在 .NET Framework 2.0 中已过时。 可以使用 <xref:System.Xml.Xsl.XslCompiledTransform> 类执行可扩展样式表语言转换 (XSLT) 转换。 请参阅[使用 XslCompiledTransform 类](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)和[从 XslTransform 类迁移](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)，以获取详细信息。  
   
  下面的代码示例创建 <xref:System.Xml.XPath.XPathDocument> 作为转换的输入。  
   

@@ -16,18 +16,18 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a62199563c620156885c941204207b185834beb4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 30500e8ea55f8298b9a980e34dc611b58a51bdcc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752146"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916401"
 ---
-# <a name="corprfjitcache-enumeration"></a>COR_PRF_JIT_CACHE 枚举
+# <a name="cor_prf_jit_cache-enumeration"></a>COR_PRF_JIT_CACHE 枚举
 指示缓存的函数搜索的结果。  
   
 > [!NOTE]
->  `COR_PRF_CACHED_FUNCTION_FOUND` 具有值为零，因此`COR_PRF_JIT_CACHE`不能用作布尔代理项。  
+> `COR_PRF_CACHED_FUNCTION_FOUND`的值为零, 因此`COR_PRF_JIT_CACHE`不能用作布尔代理项。  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,15 +42,15 @@ typedef enum {
   
 |成员|描述|  
 |------------|-----------------|  
-|`COR_PRF_FUNCTION_FOUND`|搜索找到该函数。|  
-|`COR_PRF_FUNCTION_NOT_FOUND`|搜索未找到该函数。|  
+|`COR_PRF_FUNCTION_FOUND`|搜索找到函数。|  
+|`COR_PRF_FUNCTION_NOT_FOUND`|搜索找不到函数。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorProf.idl, CorProf.h  
+ **标头：** Corprof.idl, Corprof.idl  
   
- **库：** CorGuids.lib  
+ **类库**CorGuids.lib  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

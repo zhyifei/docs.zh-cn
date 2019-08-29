@@ -2,12 +2,12 @@
 title: <unrecognizedPolicyAssertion>
 ms.date: 03/30/2017
 ms.assetid: 043c3c8f-f263-4ac7-a1af-945d03413f0b
-ms.openlocfilehash: 9de33512f4240dffdd9e549a49f3daf106418258
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1f57465e6ce0f1fd7887f4adb90ec25d505efbdc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769858"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941087"
 ---
 # <a name="unrecognizedpolicyassertion"></a>\<unrecognizedPolicyAssertion>
 表示用于指定策略断言的绑定元素。 此元素没有属性并且以空开关形式存在。  
@@ -15,7 +15,7 @@ ms.locfileid: "61769858"
  \<system.serviceModel>  
 \<bindings>  
 \<customBinding>  
-\<binding>  
+\<绑定 >  
 \<unrecognizedPolicyAssertion>  
   
 ## <a name="syntax"></a>语法  
@@ -34,18 +34,18 @@ ms.locfileid: "61769858"
  无。  
   
 ### <a name="child-elements"></a>子元素  
- None  
+ 无  
   
 ### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<binding>](../../../../../docs/framework/misc/binding.md)|定义自定义绑定的所有绑定功能。|  
+|[\<binding>](../../../misc/binding.md)|定义自定义绑定的所有绑定功能。|  
   
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [绑定](../../../../../docs/framework/wcf/bindings.md)
-- [扩展绑定](../../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [自定义绑定](../../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [绑定](../../../wcf/bindings.md)
+- [扩展绑定](../../../wcf/extending/extending-bindings.md)
+- [自定义绑定](../../../wcf/extending/custom-bindings.md)
+- [\<customBinding>](custombinding.md)

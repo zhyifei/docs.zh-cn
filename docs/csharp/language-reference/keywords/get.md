@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - get keyword [C#]
 ms.assetid: a52de048-fbe0-41b0-82ec-8e4ac04d3a71
-ms.openlocfilehash: 280b818534238207f901e1dcd125e03f5ce1d1fe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 783814a575e95fc9deb5c9cdef235a5636f5f529
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54675175"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69602142"
 ---
 # <a name="get-c-reference"></a>get（C# 参考）
 
-`get` 关键字在属性或索引器中定义访问器方法，它将返回属性值或索引器元素。 有关详细信息，请参阅[属性](../../../csharp/programming-guide/classes-and-structs/properties.md)、[自动实现的属性](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)和[索引器](../../../csharp/programming-guide/indexers/index.md)。  
+`get` 关键字在属性或索引器中定义访问器  方法，它将返回属性值或索引器元素。 有关详细信息，请参阅[属性](../../programming-guide/classes-and-structs/properties.md)、[自动实现的属性](../../programming-guide/classes-and-structs/auto-implemented-properties.md)和[索引器](../../programming-guide/indexers/index.md)。  
   
 以下示例为名为 `Seconds` 的属性同时定义 `get` 和 `set` 访问器。 它使用名为 `_seconds` 的私有字段备份属性值。  
  
@@ -37,7 +37,7 @@ ms.locfileid: "54675175"
   
 ## <a name="see-also"></a>请参阅
 
-- [C# 参考](../../../csharp/language-reference/index.md)
-- [C# 编程指南](../../../csharp/programming-guide/index.md)
-- [C# 关键字](../../../csharp/language-reference/keywords/index.md)
-- [属性](../../../csharp/programming-guide/classes-and-structs/properties.md)
+- [C# 参考](../index.md)
+- [C# 编程指南](../../programming-guide/index.md)
+- [C# 关键字](./index.md)
+- [属性](../../programming-guide/classes-and-structs/properties.md)

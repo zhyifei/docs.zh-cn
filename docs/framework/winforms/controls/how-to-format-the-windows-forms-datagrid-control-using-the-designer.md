@@ -9,12 +9,12 @@ helpviewer_keywords:
 - tables [Windows Forms], formatting in DataGrid control
 - formatting [Windows Forms]
 ms.assetid: 533b9814-6124-49dc-9fda-085f1502609f
-ms.openlocfilehash: d6e31d55ab271376501064c3aa9a9ce38c14063d
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: b3a85f5f9e51dae50a40058b8f07f92976da66f2
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039739"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666163"
 ---
 # <a name="how-to-format-the-windows-forms-datagrid-control-using-the-designer"></a>如何：使用设计器设置 Windows 窗体 DataGrid 控件的格式
 
@@ -35,14 +35,13 @@ ms.locfileid: "69039739"
 
 下面的过程需要一个**Windows 应用程序**项目, 该项目具有<xref:System.Windows.Forms.DataGrid>包含控件的窗体。 有关设置此类项目的信息, 请参阅[如何:创建 Windows 窗体应用程序项目](/visualstudio/ide/step-1-create-a-windows-forms-application-project)以及[如何:将控件添加到](how-to-add-controls-to-windows-forms.md)Windows 窗体。 在 Visual Studio 2005 中, <xref:System.Windows.Forms.DataGrid>默认情况下控件不在**工具箱**中。 有关详细信息，请参阅[如何：向 "工具箱](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms165355(v=vs.100))" 添加项。
 
-
 ### <a name="to-establish-a-default-style-for-the-datagrid-control"></a>为 DataGrid 控件建立默认样式
 
 1. 选择 <xref:System.Windows.Forms.DataGrid> 控件。
 
 2. 根据需要, 在 "**属性**" 窗口中设置以下属性。
 
-    |Property|描述|
+    |属性|描述|
     |--------------|-----------------|
     |<xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A>|`BackColor`属性定义网格中偶数行的颜色。 将<xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A>属性设置为其他颜色时, 每个其他行将设置为此新颜色 (第1行、第3、第5行等)。|
     |<xref:System.Windows.Forms.DataGrid.BackColor%2A>|网格中偶数行的背景色 (行0、2、4、6, 等等)。|

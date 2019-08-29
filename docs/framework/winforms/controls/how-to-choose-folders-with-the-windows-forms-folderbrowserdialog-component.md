@@ -12,60 +12,61 @@ helpviewer_keywords:
 - folders [Windows Forms], choosing
 - directories [Windows Forms], selecting
 ms.assetid: 4593670e-7c7d-4661-b46b-4ffb63258adb
-ms.openlocfilehash: 050af6d10faec3dd09998349dcf96e96ea0f9201
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fc19ea466f535f783d3b0537a973ce41c223902d
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61746909"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70046135"
 ---
 # <a name="how-to-choose-folders-with-the-windows-forms-folderbrowserdialog-component"></a>如何：使用 Windows 窗体 FolderBrowserDialog 组件选择文件夹
-通常，在创建的 Windows 应用程序内，需要提示用户选择文件夹，最常用于保存一组文件。 Windows 窗体<xref:System.Windows.Forms.FolderBrowserDialog>组件可轻松完成此任务。  
-  
-### <a name="to-choose-folders-with-the-folderbrowserdialog-component"></a>使用 FolderBrowserDialog 组件选择文件夹  
-  
-1. 在过程中，检查<xref:System.Windows.Forms.FolderBrowserDialog>组件的<xref:System.Windows.Forms.Form.DialogResult%2A>属性，请参阅如何关闭对话框并获取的值<xref:System.Windows.Forms.FolderBrowserDialog>组件的<xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A>属性。  
-  
-2. 如果需要将对话框中的树视图中显示的集最顶层文件夹，则设置<xref:System.Windows.Forms.FolderBrowserDialog.RootFolder%2A>属性，它使用的成员<xref:System.Environment.SpecialFolder>枚举。  
-  
-3. 此外，可以设置<xref:System.Windows.Forms.FolderBrowserDialog.Description%2A>属性，用于指定文本字符串显示在文件夹浏览器树视图的顶部。  
-  
-     在以下示例中，<xref:System.Windows.Forms.FolderBrowserDialog>组件用于选择文件夹，类似于当在 Visual Studio 中创建项目和系统会提示选择要将其保存在一个文件夹。 在此示例中，文件夹名称然后显示在<xref:System.Windows.Forms.TextBox>窗体上的控件。 它是一个好办法将位置放在可编辑区域中，例如<xref:System.Windows.Forms.TextBox>控制，以便用户可以编辑其选择在出现错误或其他问题。 此示例假定窗体<xref:System.Windows.Forms.FolderBrowserDialog>组件和一个<xref:System.Windows.Forms.TextBox>控件。  
-  
-    ```vb  
-    Public Sub ChooseFolder()  
-        If FolderBrowserDialog1.ShowDialog() = DialogResult.OK Then  
-            TextBox1.Text = FolderBrowserDialog1.SelectedPath  
-        End If  
-    End Sub  
-    ```  
-  
-    ```csharp  
-    public void ChooseFolder()  
-    {  
-        if (folderBrowserDialog1.ShowDialog() == DialogResult.OK)   
-        {  
-            textBox1.Text = folderBrowserDialog1.SelectedPath;  
-        }  
-    }  
-    ```  
-  
-    ```cpp  
-    public:  
-       void ChooseFolder()  
-       {  
-          if (folderBrowserDialog1->ShowDialog() == DialogResult::OK)  
-          {  
-             textBox1->Text = folderBrowserDialog1->SelectedPath;  
-          }  
-       }  
-    ```  
-  
+
+通常，在创建的 Windows 应用程序内，需要提示用户选择文件夹，最常用于保存一组文件。 Windows 窗体<xref:System.Windows.Forms.FolderBrowserDialog>组件允许你轻松完成此任务。
+
+### <a name="to-choose-folders-with-the-folderbrowserdialog-component"></a>使用 FolderBrowserDialog 组件选择文件夹
+
+1. 在过程<xref:System.Windows.Forms.FolderBrowserDialog>中, 检查组件的<xref:System.Windows.Forms.Form.DialogResult%2A>属性以查看对话框的关闭方式, 并<xref:System.Windows.Forms.FolderBrowserDialog>获取组件的<xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A>属性的值。
+
+2. 如果需要设置将在对话框的树视图中显示的最顶层文件夹, 请设置<xref:System.Windows.Forms.FolderBrowserDialog.RootFolder%2A>属性, 该属性采用<xref:System.Environment.SpecialFolder>枚举的成员。
+
+3. 此外, 您还可以设置<xref:System.Windows.Forms.FolderBrowserDialog.Description%2A>属性, 该属性指定在文件夹浏览器树视图顶部显示的文本字符串。
+
+    在下面的示例中, <xref:System.Windows.Forms.FolderBrowserDialog>组件用于选择文件夹, 类似于在 Visual Studio 中创建项目时, 系统会提示选择要保存的文件夹。 在此示例中, 文件夹名称随后显示在窗体<xref:System.Windows.Forms.TextBox>上的控件中。 最好将该位置放置在可编辑的区域 (例如<xref:System.Windows.Forms.TextBox>控件) 中, 以便用户在出现错误或其他问题时可以编辑其选择。 此示例假设窗体具有一个<xref:System.Windows.Forms.FolderBrowserDialog>组件和一个<xref:System.Windows.Forms.TextBox>控件。
+
+    ```vb
+    Public Sub ChooseFolder()
+        If FolderBrowserDialog1.ShowDialog() = DialogResult.OK Then
+            TextBox1.Text = FolderBrowserDialog1.SelectedPath
+        End If
+    End Sub
+    ```
+
+    ```csharp
+    public void ChooseFolder()
+    {
+        if (folderBrowserDialog1.ShowDialog() == DialogResult.OK)
+        {
+            textBox1.Text = folderBrowserDialog1.SelectedPath;
+        }
+    }
+    ```
+
+    ```cpp
+    public:
+       void ChooseFolder()
+       {
+          if (folderBrowserDialog1->ShowDialog() == DialogResult::OK)
+          {
+             textBox1->Text = folderBrowserDialog1->SelectedPath;
+          }
+       }
+    ```
+
     > [!IMPORTANT]
-    >  若要使用此类，您的程序集需要的特权等级授予通过<xref:System.Security.Permissions.FileIOPermissionAttribute.PathDiscovery%2A>属性，它是一部分的<xref:System.Security.Permissions.FileIOPermissionAccess>枚举。 如果在部分信任上下文中运行，该进程可能会因特权不足而引发异常。 有关详细信息，请参阅[代码访问安全性基础知识](../../misc/code-access-security-basics.md)。  
-  
- 有关如何保存文件的信息，请参阅[如何：使用 SaveFileDialog 组件保存文件](how-to-save-files-using-the-savefiledialog-component.md)。  
-  
+    > 若要使用此类, 程序集需要由<xref:System.Security.Permissions.FileIOPermissionAttribute.PathDiscovery%2A>属性授予的权限级别, 该属性是<xref:System.Security.Permissions.FileIOPermissionAccess>枚举的一部分。 如果在部分信任上下文中运行，该进程可能会因特权不足而引发异常。 有关详细信息，请参阅[代码访问安全性基础知识](../../misc/code-access-security-basics.md)。
+
+有关如何保存文件的信息, 请参阅[如何:使用 SaveFileDialog 组件](how-to-save-files-using-the-savefiledialog-component.md)保存文件。
+
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Windows.Forms.FolderBrowserDialog>

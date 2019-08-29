@@ -13,12 +13,12 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-ms.openlocfilehash: 6bd597cd2719fb96b8633f724da46a76e416b454
-ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
+ms.openlocfilehash: 019035247b1316eb236b025d4527c42bb6ef526c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68817897"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962824"
 ---
 # <a name="security-wpf"></a>安全性 (WPF)
 <a name="introduction"></a>开发 Windows Presentation Foundation (WPF) 独立应用程序和浏览器托管应用程序时, 必须考虑安全模型。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]无论是使用 Windows Installer (.msi)、XCopy 还是 ClickOnce 部署的, 独立应用程序都以无限制权限 (CA**FullTrust**权限集) 执行。 不支持使用 ClickOnce 部署部分信任的独立 WPF 应用程序。 但是, 完全信任的主机应用程序可以使用 .NET Framework 外接程序<xref:System.AppDomain>模型创建部分信任。 有关详细信息, 请参阅[WPF 外接程序概述](./app-development/wpf-add-ins-overview.md)。  
@@ -65,7 +65,7 @@ ms.locfileid: "68817897"
 |应用程序代码|具有已编译代码隐藏的 XAML 资源。<br /><br /> 或<br /><br /> 添加到具有**页**的生成类型的项目中的 XAML 文件。|`pack://application:,,,/MyResourceFile` `.xaml`|  
   
 > [!NOTE]
->  有关应用程序数据文件和包[!INCLUDE[TLA2#tla_uri#plural](../../../includes/tla2sharptla-urisharpplural-md.md)]的详细信息, 请参阅[WPF 应用程序资源、内容和数据文件](./app-development/wpf-application-resource-content-and-data-files.md)。  
+> 有关应用程序数据文件和包[!INCLUDE[TLA2#tla_uri#plural](../../../includes/tla2sharptla-urisharpplural-md.md)]的详细信息, 请参阅[WPF 应用程序资源、内容和数据文件](./app-development/wpf-application-resource-content-and-data-files.md)。  
   
  可以由用户导航到这些内容类型的文件，也可以通过编程方式导航到这些内容类型的文件：  
   
@@ -118,7 +118,7 @@ ms.locfileid: "68817897"
      ![显示 "安全设置" 对话框的屏幕截图。](./media/security-wpf/windows-presentation-foundation-security-settings.png)  
   
 > [!NOTE]
->  也可以从 Internet Explorer 中进入“Internet 选项”对话框。 单击 "**工具**", 然后单击 " **Internet 选项**"。  
+> 也可以从 Internet Explorer 中进入“Internet 选项”对话框。 单击 "**工具**", 然后单击 " **Internet 选项**"。  
   
  从 Windows Internet Explorer 7 开始, 包含了专门针对 .NET Framework 的以下安全设置:  
   
@@ -151,7 +151,7 @@ ms.locfileid: "68817897"
  WPF <xref:System.Windows.Controls.WebBrowser>控件可用于承载 Web 内容。 WPF <xref:System.Windows.Controls.WebBrowser>控件包装基础 WebBrowser ActiveX 控件。 当你使用 wpf <xref:System.Windows.Controls.WebBrowser>控件来承载不受信任的 Web 内容时, WPF 提供了一些对保护应用程序的支持。 但是, 某些安全功能必须由使用<xref:System.Windows.Controls.WebBrowser>控件的应用程序直接应用。 有关 WebBrowser ActiveX 控件的详细信息, 请参阅[Webbrowser 控件概述和教程](https://go.microsoft.com/fwlink/?LinkId=179388)。  
   
 > [!NOTE]
->  本节还适用<xref:System.Windows.Controls.Frame>于控件, 因为它<xref:System.Windows.Controls.WebBrowser>使用导航到 HTML 内容。  
+> 本节还适用<xref:System.Windows.Controls.Frame>于控件, 因为它<xref:System.Windows.Controls.WebBrowser>使用导航到 HTML 内容。  
   
  如果使用 WPF <xref:System.Windows.Controls.WebBrowser>控件来承载不受信任的 Web 内容, 你的应用程序应使用部分<xref:System.AppDomain>信任, 以帮助你将应用程序代码与可能的恶意 HTML 脚本代码隔离。 如果你的应用程序通过使用<xref:System.Windows.Controls.WebBrowser.InvokeScript%2A>方法<xref:System.Windows.Controls.WebBrowser.ObjectForScripting%2A>和属性与托管脚本进行交互, 则更是如此。 有关详细信息, 请参阅[WPF 外接程序概述](./app-development/wpf-add-ins-overview.md)。  
   
@@ -184,7 +184,7 @@ ms.locfileid: "68817897"
  功能控件由实例化 WebBrowser ActiveX 对象的过程应用。 因此，如果要创建可导航到不受信任的内容的独立应用程序，则应该认真考虑启用附加功能控件。  
   
 > [!NOTE]
->  此建议是根据 MSHTML 和 SHDOCVW 主机安全性的一般性建议提出的。 有关详细信息, 请[参阅 MSHTML 主机安全性常见问题:II](https://go.microsoft.com/fwlink/?LinkId=179396)部分和[MSHTML 主机安全性常见问题:II](https://go.microsoft.com/fwlink/?LinkId=179415)的第 ii 部分。  
+> 此建议是根据 MSHTML 和 SHDOCVW 主机安全性的一般性建议提出的。 有关详细信息, 请[参阅 MSHTML 主机安全性常见问题:II](https://go.microsoft.com/fwlink/?LinkId=179396)部分和[MSHTML 主机安全性常见问题:II](https://go.microsoft.com/fwlink/?LinkId=179415)的第 ii 部分。  
   
  对于可执行文件，请考虑通过将注册表值设置为 1 来启用以下功能控件。  
   
@@ -212,7 +212,7 @@ ms.locfileid: "68817897"
  与普通的独立应用程序相比，运行于 Internet Explorer 中的 XBAP 还将另外获得一层安全保护。 这种附加安全性是因为 Internet Explorer 和 WebBrowser ActiveX 控件在默认情况下在和[!INCLUDE[TLA#tla_winvista](../../../includes/tlasharptla-winvista-md.md)] [!INCLUDE[win7](../../../includes/win7-md.md)]上以受保护模式运行。 有关保护模式的详细信息, 请参阅[了解和使用受保护模式的 Internet Explorer](https://go.microsoft.com/fwlink/?LinkId=179393)。  
   
 > [!NOTE]
->  如果尝试在 Firefox 中运行包含 WPF <xref:System.Windows.Controls.WebBrowser>控件的 XBAP, 则在 Internet 区域中<xref:System.Security.SecurityException> , 将会引发。 这是由于 WPF 安全策略造成的。  
+> 如果尝试在 Firefox 中运行包含 WPF <xref:System.Windows.Controls.WebBrowser>控件的 XBAP, 则在 Internet 区域中<xref:System.Security.SecurityException> , 将会引发。 这是由于 WPF 安全策略造成的。  
   
 <a name="APTCA"></a>   
 ## <a name="disabling-aptca-assemblies-for-partially-trusted-client-applications"></a>对部分受信任的客户端应用程序禁用 APTCA 程序集  
@@ -241,7 +241,7 @@ ms.locfileid: "68817897"
  如果必须为部分受信任的客户端应用程序禁用某程序集，可以编写一个用于创建注册表项和值的更新。  
   
 > [!NOTE]
->  核心 .NET Framework 程序集不受以这种方式的影响, 因为运行托管应用程序时需要这些程序集。 对禁用 APTCA 程序集的支持主要面向第三方应用程序。  
+> 核心 .NET Framework 程序集不受以这种方式的影响, 因为运行托管应用程序时需要这些程序集。 对禁用 APTCA 程序集的支持主要面向第三方应用程序。  
   
 <a name="LooseContentSandboxing"></a>   
 ## <a name="sandbox-behavior-for-loose-xaml-files"></a>宽松 XAML 文件的沙盒行为  
@@ -258,7 +258,7 @@ ms.locfileid: "68817897"
  使用此设置，外部内容将加载到不同于承载应用程序的进程的进程中。 此进程被限制在默认 Internet 区域权限集中，从而有效地将其与承载应用程序和客户端计算机隔离。  
   
 > [!NOTE]
->  即使导航到[!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] <xref:System.Windows.Navigation.NavigationWindow>或<xref:System.Windows.Controls.Frame>独立应用程序中的松散文件是基于 WPF 浏览器宿主基础结构 (涉及 presentationhost.exe 进程) 实现的, 安全级别也是当内容直接加载到和[!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] [!INCLUDE[win7](../../../includes/win7-md.md)]上的 Internet Explorer (仍通过 presentationhost.exe) 时, 稍微少一些。 这是因为使用 Web 浏览器的独立 WPF 应用程序不提供 Internet Explorer 的额外“保护模式”安全功能。  
+> 即使导航到[!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] <xref:System.Windows.Navigation.NavigationWindow>或<xref:System.Windows.Controls.Frame>独立应用程序中的松散文件是基于 WPF 浏览器宿主基础结构 (涉及 presentationhost.exe 进程) 实现的, 安全级别也是当内容直接加载到和[!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] [!INCLUDE[win7](../../../includes/win7-md.md)]上的 Internet Explorer (仍通过 presentationhost.exe) 时, 稍微少一些。 这是因为使用 Web 浏览器的独立 WPF 应用程序不提供 Internet Explorer 的额外“保护模式”安全功能。  
   
 <a name="BestPractices"></a>   
 ## <a name="resources-for-developing-wpf-applications-that-promote-security"></a>用于开发可提高安全性的 WPF 应用程序的资源  

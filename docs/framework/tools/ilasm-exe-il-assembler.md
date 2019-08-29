@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 4ca3a4f0-4400-47ce-8936-8e219961c76f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 36de7dd2d97eb532717d52bd3903d3e5acd19d2d
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 13b0ab04eba75a322d584bcc20cc6e90a54fb6fc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69567065"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933656"
 ---
 # <a name="ilasmexe-il-assembler"></a>Ilasm.exe（IL 汇编程序）
 
-IL 汇编程序可利用中间语言 (IL) 生成可移植可执行 (PE) 文件。 （有关 IL 的详细信息，请参阅[托管执行过程](../../../docs/standard/managed-execution-process.md)。）可以运行生成的可执行文件（包含 IL 和所需的元数据）以确定 IL 是否按预期执行。
+IL 汇编程序可利用中间语言 (IL) 生成可移植可执行 (PE) 文件。 （有关 IL 的详细信息，请参阅[托管执行过程](../../standard/managed-execution-process.md)。）可以运行生成的可执行文件（包含 IL 和所需的元数据）以确定 IL 是否按预期执行。
 
 此工具会自动随 Visual Studio 一起安装。 若要运行此工具，请使用 Visual Studio 开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示）。 有关详细信息，请参阅[命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。
 
@@ -231,5 +231,5 @@ public class Hello
 
 - [工具](../../../docs/framework/tools/index.md)
 - [Ildasm.exe（IL 反汇编程序）](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) 
-- [托管执行过程](../../../docs/standard/managed-execution-process.md)
+- [托管执行过程](../../standard/managed-execution-process.md)
 - [命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

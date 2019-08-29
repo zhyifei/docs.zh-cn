@@ -3,12 +3,12 @@ title: 元组类型 - C# 指南
 description: 了解 C# 中的未命名元组类型和命名元组类型
 ms.date: 05/15/2018
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.openlocfilehash: 4000228507bf7925083147ddd49dd10914ef2449
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: dc02fceb2901fb9cb7bf71869213d8b178520900
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65882053"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988414"
 ---
 # <a name="c-tuple-types"></a>C# 元组类型
 
@@ -42,7 +42,7 @@ C# 元组是使用轻量语法定义的类型。 其优点包括：更简单的�
 
 [!code-csharp[UnnamedTuple](../../samples/snippets/csharp/tuples/tuples/program.cs#01_UnNamedTuple "Unnamed tuple")]
 
-上例中的元组已使用文本常量进行初始化，并且不会有 C# 7.1 中使用“元组字段名称投影”创建的元素名称。
+上例中的元组已使用文本常量进行初始化，并且不会有 C# 7.1 中使用“元组字段名称投影”  创建的元素名称。
 
 但是，在初始化元组时，可以使用新语言功能为每个字段提供更好的名称。 如此便创建了*命名元组*。
 命名元组仍将元素命名为 `Item1`、`Item2`、`Item3` 等。
@@ -53,7 +53,7 @@ C# 元组是使用轻量语法定义的类型。 其优点包括：更简单的�
 
 这些同义词由编译器和语言处理，因此，你可以高效地使用命名元组。 IDE 和编辑器可以使用 Roslyn API 读取这些语义名称。 可以在同一程序集中的任何位置通过这些语义名称引用命名元组的元素。 编译器在生成已编译的输出时，会将已定义的名称替换为 `Item*` 等效项。 已编译的 Microsoft 中间语言 (MSIL) 不包括为这些元素赋予的名称。
 
-从 C# 7.1 开始，元组的字段名称可能会通过用于初始化此元组的变量提供。 这称为[元组投影初始值设定项](#tuple-projection-initializers)。 以下代码用于创建名为 `accumulation` 的元组，包含元素 `count`（整数）和 `sum`（双精度）。
+从 C# 7.1 开始，元组的字段名称可能会通过用于初始化此元组的变量提供。 这称为[元组投影初始值设定项](#tuple-projection-initializers)  。 以下代码用于创建名为 `accumulation` 的元组，包含元素 `count`（整数）和 `sum`（双精度）。
 
 [!code-csharp[ProjectedTuple](../../samples/snippets/csharp/tuples/tuples/program.cs#ProjectedTupleNames "Named tuple")]
 
@@ -216,7 +216,7 @@ private static (double, double, int) ComputeSumAndSumOfSquares(IEnumerable<doubl
 
 ## <a name="deconstruction"></a>析构
 
-通过对方法返回的元组进行析构，可以解封元组中的所有项。 有三种元组析构方法。  首先，可在括号内显式声明每个字段的类型，为元组中的每个元素创建离散变量：
+通过对方法返回的元组进行析构，可以解封元组中的所有项  。 有三种元组析构方法。  首先，可在括号内显式声明每个字段的类型，为元组中的每个元素创建离散变量：
 
 [!code-csharp[Deconstruct](../../samples/snippets/csharp/tuples/tuples/statistics.cs#10_Deconstruct "Deconstruct")]
 
@@ -245,7 +245,7 @@ public class Point
 ```
 
 > [!WARNING]
->  不能混合现有声明和括号内的声明。 例如，不允许以下内容：`(var x, y) = MyMethod();`。 这将产生错误 CS8184，因为 x 在括号内声明，且 y 以前在其他位置声明。
+> 不能混合现有声明和括号内的声明。 例如，不允许以下内容：`(var x, y) = MyMethod();`。 这将产生错误 CS8184，因为 x  在括号内声明，且 y  以前在其他位置声明。
 
 ### <a name="deconstructing-user-defined-types"></a>析构用户定义类型
 

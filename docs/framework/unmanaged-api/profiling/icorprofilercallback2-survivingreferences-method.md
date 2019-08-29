@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5070dba7e7e1218fedf24d350c0461a1cd3835e1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: fc3ec00f11582ede1dc4b3d481a4eb9dcc4dd1d9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755518"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963917"
 ---
 # <a name="icorprofilercallback2survivingreferences-method"></a>ICorProfilerCallback2::SurvivingReferences 方法
 将堆中对象的布局报告为非压缩垃圾回收的结果。  
@@ -50,12 +50,12 @@ HRESULT SurvivingReferences(
  `cObjectIDRangeLength`  
  [in] 整数数组，其中每个整数均为内存中保留下来的连续对象块的大小。  
   
-           `objectIDRangeStart` 数组中引用的每个块均指定了大小。  
+ `objectIDRangeStart` 数组中引用的每个块均指定了大小。  
   
 ## <a name="remarks"></a>备注  
   
 > [!IMPORTANT]
->  此方法将 64 位平台上大于 4 GB 的对象的大小报告为 `MAX_ULONG`。 对于大于 4 GB 的对象，使用[ICorProfilerCallback4::SurvivingReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-survivingreferences2-method.md)方法相反。  
+> 此方法将 64 位平台上大于 4 GB 的对象的大小报告为 `MAX_ULONG`。 对于大于 4 GB 的对象, 请改用[ICorProfilerCallback4:: SurvivingReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-survivingreferences2-method.md)方法。  
   
  应按以下方式解释 `objectIDRangeStart` 和 `cObjectIDRangeLength` 数组的元素，以确定垃圾回收后对象是否仍存在。 假定 `ObjectID` 值 (`ObjectID`) 在以下范围内：  
   
@@ -67,16 +67,16 @@ HRESULT SurvivingReferences(
   
  非压缩垃圾回收将回收“死”对象占用的内存，但不会压缩释放的空间。 由此，内存返回到堆中，但“活”对象不会移动。  
   
- 公共语言运行时 (CLR) 调用 `SurvivingReferences` 进行非压缩垃圾回收。 对于压缩垃圾回收， [icorprofilercallback:: Movedreferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-movedreferences-method.md)改为调用。 单个垃圾回收可针对一个生成进行压缩，而针对另一个生成不进行压缩。 对于任何特定代的垃圾回收，探查器均会收到 `SurvivingReferences` 回调或 `MovedReferences` 回调，但不会同时收到二者。  
+ 公共语言运行时 (CLR) 调用 `SurvivingReferences` 进行非压缩垃圾回收。 对于压缩垃圾回收, 改为调用[ICorProfilerCallback:: MovedReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-movedreferences-method.md) 。 单个垃圾回收可针对一个生成进行压缩，而针对另一个生成不进行压缩。 对于任何特定代的垃圾回收，探查器均会收到 `SurvivingReferences` 回调或 `MovedReferences` 回调，但不会同时收到二者。  
   
  由于内部缓冲有限、服务器垃圾回收期间的多个线程报告以及其他原因，在特定的垃圾回收过程中，可能收到多个 `SurvivingReferences` 回调。 如果在垃圾回收期间收到多个回调，则信息是累积的 — 任何 `SurvivingReferences` 回调中报告的任何引用都将在垃圾回收后仍然存在。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorProf.idl, CorProf.h  
+ **标头：** Corprof.idl, Corprof.idl  
   
- **库：** CorGuids.lib  
+ **类库**CorGuids.lib  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

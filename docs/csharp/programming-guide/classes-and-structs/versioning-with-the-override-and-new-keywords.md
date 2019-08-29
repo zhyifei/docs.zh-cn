@@ -6,21 +6,21 @@ helpviewer_keywords:
 - C# language, versioning
 - C# language, override and new
 ms.assetid: 88247d07-bd0d-49e9-a619-45ccbbfdf0c5
-ms.openlocfilehash: 6b5097df8ee559f11bc29c12570e938965e6a9a5
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 58023498c499569eebb9a0506bea434d2669de45
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398075"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596007"
 ---
 # <a name="versioning-with-the-override-and-new-keywords-c-programming-guide"></a>使用 Override 和 New 关键字进行版本控制（C# 编程指南）
-C# 语言经过专门设计，以便不同库中的[基类](../../../csharp/language-reference/keywords/base.md)与派生类之间的版本控制可以不断向前发展，同时保持后向兼容。 这具有多方面的意义。例如，这意味着在基[类](../../../csharp/language-reference/keywords/class.md)中引入与派生类中的某个成员具有相同名称的新成员在 C# 中是完全支持的，不会导致意外行为。 它还意味着类必须显式声明某方法是要替代一个继承方法，还是本身就是一个隐藏具有类似名称的继承方法的新方法。  
+C# 语言经过专门设计，以便不同库中的[基类](../../language-reference/keywords/base.md)与派生类之间的版本控制可以不断向前发展，同时保持后向兼容。 这具有多方面的意义。例如，这意味着在基[类](../../language-reference/keywords/class.md)中引入与派生类中的某个成员具有相同名称的新成员在 C# 中是完全支持的，不会导致意外行为。 它还意味着类必须显式声明某方法是要替代一个继承方法，还是本身就是一个隐藏具有类似名称的继承方法的新方法。  
   
  在 C# 中，派生类可以包含与基类方法同名的方法。  
   
-- 基类方法必须定义为 [virtual](../../../csharp/language-reference/keywords/virtual.md)。  
+- 基类方法必须定义为 [virtual](../../language-reference/keywords/virtual.md)。  
   
-- 如果派生类中的方法前面没有 [new](../../../csharp/language-reference/keywords/new-modifier.md) 或 [override](../../../csharp/language-reference/keywords/override.md) 关键字，则编译器将发出警告，该方法将如同存在 `new` 关键字一样执行操作。  
+- 如果派生类中的方法前面没有 [new](../../language-reference/keywords/new-modifier.md) 或 [override](../../language-reference/keywords/override.md) 关键字，则编译器将发出警告，该方法将如同存在 `new` 关键字一样执行操作。  
   
 - 如果派生类中的方法前面带有 `new` 关键字，则该方法被定义为独立于基类中的方法。  
   
@@ -77,11 +77,11 @@ C# 语言经过专门设计，以便不同库中的[基类](../../../csharp/lang
   
  [!code-csharp[csProgGuideInheritance#34](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#34)]  
   
- 有关 `new` 和 `override` 的更多示例，请参阅[了解何时使用 Override 和 New 关键字](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md)。  
+ 有关 `new` 和 `override` 的更多示例，请参阅[了解何时使用 Override 和 New 关键字](./knowing-when-to-use-override-and-new-keywords.md)。  
   
 ## <a name="see-also"></a>请参阅
 
-- [C# 编程指南](../../../csharp/programming-guide/index.md)
-- [类和结构](../../../csharp/programming-guide/classes-and-structs/index.md)
-- [方法](../../../csharp/programming-guide/classes-and-structs/methods.md)
-- [继承](../../../csharp/programming-guide/classes-and-structs/inheritance.md)
+- [C# 编程指南](../index.md)
+- [类和结构](./index.md)
+- [方法](./methods.md)
+- [继承](./inheritance.md)

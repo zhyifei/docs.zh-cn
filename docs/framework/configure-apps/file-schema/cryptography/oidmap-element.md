@@ -8,15 +8,15 @@ helpviewer_keywords:
 - <oidMap> element
 - oidMap element
 ms.assetid: 7f0c2246-c070-4748-b96a-2f66a296c539
-ms.openlocfilehash: 80564c5895e08884f78a4ec7c955ecdb11126e35
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d2929167f5a7de96a868cd1ac884d2203d09dfb6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705163"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927528"
 ---
 # <a name="oidmap-element"></a>\<oidMap > 元素
-包含类的 ASN.1 对象标识符 (OID) 映射。  
+包含与类的 ASN 对象标识符 (OID) 映射。  
   
  \<configuration>  
 \<mscorlib>  
@@ -40,7 +40,7 @@ ms.locfileid: "61705163"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<oidEntry>](../../../../../docs/framework/configure-apps/file-schema/cryptography/oidentry-element.md)|将 ASN.1 OID 映射到友好名称。|  
+|[\<oidEntry>](oidentry-element.md)|将一个 asn.1 OID 映射到友好名称。|  
   
 ### <a name="parent-elements"></a>父元素  
   
@@ -48,10 +48,10 @@ ms.locfileid: "61705163"
 |-------------|-----------------|  
 |`configuration`|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
 |`cryptographySettings`|包含加密设置。|  
-|`mscorlib`|包含`cryptographySettings`元素。|  
+|`mscorlib`|`cryptographySettings`包含元素。|  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何使用 **\<oidMap >** 元素以包含该哈希算法的实现将 RIPEMD-160 哈希算法的 OID 的映射。  
+ 下面的示例演示如何使用 **\<oidMap >** 元素包含 RIPEMD-160 哈希算法的 OID 到哈希算法的实现的映射。  
   
 ```xml  
 <configuration>  
@@ -75,8 +75,8 @@ ms.locfileid: "61705163"
   
 ## <a name="see-also"></a>请参阅
 
-- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [加密设置架构](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
-- [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)
-- [配置加密类](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)
-- [将对象标识符映射到加密算法](../../../../../docs/framework/configure-apps/map-object-identifiers-to-cryptography-algorithms.md)
+- [配置文件架构](../index.md)
+- [加密设置架构](index.md)
+- [Cryptographic Services](../../../../standard/security/cryptographic-services.md)
+- [配置加密类](../../configure-cryptography-classes.md)
+- [将对象标识符映射到加密算法](../../map-object-identifiers-to-cryptography-algorithms.md)

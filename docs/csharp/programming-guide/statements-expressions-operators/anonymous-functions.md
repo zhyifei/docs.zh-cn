@@ -7,12 +7,12 @@ helpviewer_keywords:
 - anonymous functions [C#]
 - anonymous methods [C#]
 ms.assetid: 6ce3f04d-0c71-4728-9127-634c7e9a8365
-ms.openlocfilehash: 4d266584e1867a512e4b61e8839fe948aafb007f
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 078596dcbfd907be53cae2ab3e7dcaa9e311c3f4
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363924"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69588816"
 ---
 # <a name="anonymous-functions-c-programming-guide"></a>匿名函数 -（C# 编程指南）
 
@@ -34,7 +34,7 @@ ms.locfileid: "68363924"
   
 ## <a name="see-also"></a>请参阅
 
-- [语句、表达式和运算符](../../../csharp/programming-guide/statements-expressions-operators/index.md)
-- [Lambda 表达式](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)
-- [委托](../../../csharp/programming-guide/delegates/index.md)
+- [语句、表达式和运算符](./index.md)
+- [Lambda 表达式](./lambda-expressions.md)
+- [委托](../delegates/index.md)
 - [表达式树 (C#)](../concepts/expression-trees/index.md)

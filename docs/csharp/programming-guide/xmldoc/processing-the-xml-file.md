@@ -6,16 +6,16 @@ helpviewer_keywords:
 - XML processing [C#]
 - XML [C#], processing
 ms.assetid: 60c71193-9dac-4cd3-98c5-100bd0edcc42
-ms.openlocfilehash: f40e14163850716204584f5d5651a08715b80241
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 4592fa9350ff9b03620a0739388f59652062235f
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634770"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69587862"
 ---
 # <a name="processing-the-xml-file-c-programming-guide"></a>处理 XML 文件（C# 编程指南）
 
-编译器为代码（已标记以生成文档）中的每个构造生成一个 ID 字符串。 （有关如何标记代码的信息，请参阅[文档注释的建议标记](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)。）ID 字符串唯一标识构造。 处理 XML 文件的程序可以使用 ID 字符串来标识文档应用于的相应 .NET Framework 元数据/反射项目。
+编译器为代码（已标记以生成文档）中的每个构造生成一个 ID 字符串。 （有关如何标记代码的信息，请参阅[文档注释的建议标记](./recommended-tags-for-documentation-comments.md)。）ID 字符串唯一标识构造。 处理 XML 文件的程序可以使用 ID 字符串来标识文档应用于的相应 .NET Framework 元数据/反射项目。
 
  XML 文件不是代码的分层表示形式；它是具有每个元素生成的 ID 的简单列表。
 
@@ -32,7 +32,7 @@ ms.locfileid: "65634770"
     |F|Field — 字段|
     |P|属性（包括索引器或其他的索引属性）|
     |M|方法（包括构造函数、运算符等特殊方法）|
-    |E|Event — 事件|
+    |E|事件|
     |!|错误字符串<br /><br /> 字符串的其余部分提供有关错误的信息。 C# 编译器将生成无法解析的链接的错误信息。|
 
 - 该字符串的第二部分是项目的完全限定名称，从命名空间的根开始。 用句点分隔项目名称、其封闭类型和命名空间。 如果项目名称本身包含句点，会将其替换为哈希符号 ('#')。 假定没有名称中恰好包含哈希符号的项目。 例如，String 构造函数的完全限定名称将是“System.String.#ctor”。
@@ -85,6 +85,6 @@ ms.locfileid: "65634770"
 
 ## <a name="see-also"></a>请参阅
 
-- [C# 编程指南](../../../csharp/programming-guide/index.md)
-- [/doc（C# 编译器选项）](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)
-- [XML 文档注释](../../../csharp/programming-guide/xmldoc/index.md)
+- [C# 编程指南](../index.md)
+- [/doc（C# 编译器选项）](../../language-reference/compiler-options/doc-compiler-option.md)
+- [XML 文档注释](./index.md)

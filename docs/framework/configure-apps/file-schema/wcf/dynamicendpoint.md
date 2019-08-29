@@ -2,12 +2,12 @@
 title: <dynamicEndpoint>
 ms.date: 03/30/2017
 ms.assetid: 929f223d-176d-4205-9505-234ddb6dbff4
-ms.openlocfilehash: e1a53869faa1997d2e79c3d2869a15001ee29626
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3dc7fb19c5c7729620a5d9f3df1111b2dbdacf78
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673155"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69925838"
 ---
 # <a name="dynamicendpoint"></a>\<dynamicEndpoint>
 此配置元素定义一个标准终结点，应用程序通过利用该终结点包含的信息，能够充当可在运行时动态查找终结点地址的客户端程序。  
@@ -52,13 +52,13 @@ ms.locfileid: "61673155"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<discoveryClientSettings>](../../../../../docs/framework/configure-apps/file-schema/wcf/discoveryclientsettings.md)|包含应用程序以客户端形式参与服务发现过程所需的设置。|  
+|[\<discoveryClientSettings>](discoveryclientsettings.md)|包含应用程序以客户端形式参与服务发现过程所需的设置。|  
   
 ### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<standardEndpoints>](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|具有一个或多个固定属性（地址、绑定和协定）的预定义终结点的标准终结点集合。|  
+|[\<standardEndpoints>](standardendpoints.md)|具有一个或多个固定属性（地址、绑定和协定）的预定义终结点的标准终结点集合。|  
   
 ## <a name="see-also"></a>请参阅
 

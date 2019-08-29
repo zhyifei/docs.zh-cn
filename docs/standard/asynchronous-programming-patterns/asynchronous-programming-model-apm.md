@@ -13,23 +13,23 @@ helpviewer_keywords:
 ms.assetid: c9b3501e-6bc6-40f9-8efd-4b6d9e39ccf0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 16e500a645df2b58fb2d2fd402120556922d1800
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3c03a6dadae98d75b06b96bb3cde67db4747b8c7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64628940"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950871"
 ---
 # <a name="asynchronous-programming-model-apm"></a>异步编程模型 (APM)
-使用 <xref:System.IAsyncResult> 设计模式的异步操作是通过名为 `BeginOperationName` 和 `EndOperationName` 的两个方法来实现的，这两个方法分别开始和结束异步操作 OperationName。 例如， <xref:System.IO.FileStream> 类提供 <xref:System.IO.FileStream.BeginRead%2A> 和 <xref:System.IO.FileStream.EndRead%2A> 方法来从文件异步读取字节。 这两个方法实现了 <xref:System.IO.FileStream.Read%2A> 方法的异步版本。  
+使用 <xref:System.IAsyncResult> 设计模式的异步操作是通过名为 `BeginOperationName` 和 `EndOperationName` 的两个方法来实现的，这两个方法分别开始和结束异步操作 OperationName  。 例如， <xref:System.IO.FileStream> 类提供 <xref:System.IO.FileStream.BeginRead%2A> 和 <xref:System.IO.FileStream.EndRead%2A> 方法来从文件异步读取字节。 这两个方法实现了 <xref:System.IO.FileStream.Read%2A> 方法的异步版本。  
   
 > [!NOTE]
->  从 .NET Framework 4 开始，任务并行库为异步和并行编程提供了一种新模型。 有关详细信息，请参阅 [Task Parallel Library (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md) 和 [Task-based Asynchronous Pattern (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)。  
+> 从 .NET Framework 4 开始，任务并行库为异步和并行编程提供了一种新模型。 有关详细信息，请参阅 [Task Parallel Library (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md) 和 [Task-based Asynchronous Pattern (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)。  
   
  在调用 `BeginOperationName` 后，应用程序可以继续在调用线程上执行指令，同时异步操作在另一个线程上执行。 每次调用 `BeginOperationName` 时，应用程序还应调用 `EndOperationName` 来获取操作的结果。  
   
 ## <a name="beginning-an-asynchronous-operation"></a>开始异步操作  
- `BeginOperationName` 方法开始异步操作 OperationName，并返回实现 <xref:System.IAsyncResult> 接口的对象。 <xref:System.IAsyncResult> 对象存储有关异步操作的信息。 下表显示有关异步操作的信息。  
+ `BeginOperationName` 方法开始异步操作 OperationName  ，并返回实现 <xref:System.IAsyncResult> 接口的对象。 <xref:System.IAsyncResult> 对象存储有关异步操作的信息。 下表显示有关异步操作的信息。  
   
 |成员|说明|  
 |------------|-----------------|  
@@ -43,15 +43,15 @@ ms.locfileid: "64628940"
  `BeginOperationName` 立即返回对调用线程的控制。 如果 `BeginOperationName` 方法引发异常，则会在开始异步操作之前引发异常。 如果 `BeginOperationName` 方法引发异常，则意味着没有调用回调方法。  
   
 ## <a name="ending-an-asynchronous-operation"></a>结束异步操作  
- `EndOperationName` 方法用于结束异步操作 OperationName。 `EndOperationName` 方法的返回值与其同步对应方法的返回值类型相同，并且是特定于异步操作的。 例如， <xref:System.IO.FileStream.EndRead%2A> 方法返回从 <xref:System.IO.FileStream> 读取的字节数， <xref:System.Net.Dns.EndGetHostByName%2A> 方法返回包含有关主机的信息的 <xref:System.Net.IPHostEntry> 对象。 `EndOperationName` 方法采用该方法同步版本的签名中声明的所有输出参数或引用参数。 除了来自同步方法的参数外，`EndOperationName` 方法还包括 <xref:System.IAsyncResult> 参数。 调用方必须将对应调用返回的实例传递给 `BeginOperationName`。  
+ `EndOperationName` 方法用于结束异步操作 OperationName  。 `EndOperationName` 方法的返回值与其同步对应方法的返回值类型相同，并且是特定于异步操作的。 例如， <xref:System.IO.FileStream.EndRead%2A> 方法返回从 <xref:System.IO.FileStream> 读取的字节数， <xref:System.Net.Dns.EndGetHostByName%2A> 方法返回包含有关主机的信息的 <xref:System.Net.IPHostEntry> 对象。 `EndOperationName` 方法采用该方法同步版本的签名中声明的所有输出参数或引用参数。 除了来自同步方法的参数外，`EndOperationName` 方法还包括 <xref:System.IAsyncResult> 参数。 调用方必须将对应调用返回的实例传递给 `BeginOperationName`。  
   
  如果调用 `EndOperationName` 时 <xref:System.IAsyncResult> 对象表示的异步操作尚未完成，则 `EndOperationName` 将在异步操作完成之前阻止调用线程。 异步操作引发的异常是从 `EndOperationName` 方法引发的。 未定义多次使用同一 <xref:System.IAsyncResult> 调用 `EndOperationName` 方法的效果。 同样，也未定义使用 <xref:System.IAsyncResult>（相关 Begin 方法未返回）调用 `EndOperationName` 方法的效果。  
   
 > [!NOTE]
->  对于这两种未定义的情况，实施者应考虑引发 <xref:System.InvalidOperationException>。  
+> 对于这两种未定义的情况，实施者应考虑引发 <xref:System.InvalidOperationException>。  
   
 > [!NOTE]
->  此设计模式的实施者应通知调用方异步操作已通过以下步骤完成：将 <xref:System.IAsyncResult.IsCompleted%2A> 设置为 true，调用异步回调方法（如果已指定一个回调方法），然后发送 <xref:System.IAsyncResult.AsyncWaitHandle%2A>信号。  
+> 此设计模式的实施者应通知调用方异步操作已通过以下步骤完成：将 <xref:System.IAsyncResult.IsCompleted%2A> 设置为 true，调用异步回调方法（如果已指定一个回调方法），然后发送 <xref:System.IAsyncResult.AsyncWaitHandle%2A>信号。  
   
  对于访问异步操作的结果，应用程序开发人员有若干种设计选择。 正确的选择取决于应用程序是否有可以在操作完成时执行的指令。 如果应用程序在接收到异步操作结果之前不能进行任何其他工作，则必须在获得这些结果之前先阻止该应用程序进行其他工作。 若要在异步操作完成之前阻止应用程序，可以使用下列方法之一：  
   

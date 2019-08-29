@@ -2,21 +2,21 @@
 title: 如何：动态更新
 ms.date: 03/30/2017
 ms.assetid: 9b8f6e0d-edab-4a7e-86e3-8c66bebc64bb
-ms.openlocfilehash: 7e2fbd6c179444ef4c6e1df5e5068dbd1c5d29fa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3c651bc4ff23b2534e81f190fc8b63771c7587d6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61773043"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69911152"
 ---
 # <a name="how-to-dynamic-update"></a>如何：动态更新
 本主题概述了创建和动态更新路由配置所需的基本步骤。 在本示例中，从配置文件中获取初始路由配置，并将所有消息路由至 regularCalc 计算器服务；不过，本示例随后以编程方式更新该路由配置，以便更改 roundingCalc 服务的目标终结点。  
   
 > [!NOTE]
->  在许多实现中，配置完全是动态配置，而不依赖于默认配置；但在某些情况下（如本主题中的情况），启动服务时需要处于默认配置状态。  
+> 在许多实现中，配置完全是动态配置，而不依赖于默认配置；但在某些情况下（如本主题中的情况），启动服务时需要处于默认配置状态。  
   
 > [!NOTE]
->  动态更新仅在内存中进行，并且不会导致修改配置文件。  
+> 动态更新仅在内存中进行，并且不会导致修改配置文件。  
   
  regularCalc 和 roundingCalc 均支持相同的加减乘除运算，区别是 roundingCalc 在返回所有计算结果前，会将计算结果舍入到最接近的整数值。 配置文件用于配置服务，以便将所有消息路由至 regularCalc 服务。 启动路由服务之后，将使用 <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A> 重新配置此服务，以便将消息路由至 roundingCalc 服务。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "61773043"
     </filterTables>  
     ```  
   
-3. 若要根据筛选器表中包含的筛选器评估传入消息，必须使用路由行为将筛选器表与服务终结点关联。 下面的示例演示将"filterTable1"与服务终结点。  
+3. 若要根据筛选器表中包含的筛选器评估传入消息，必须使用路由行为将筛选器表与服务终结点关联。 下面的示例演示如何将 "filterTable1" 与服务终结点相关联。  
   
     ```xml  
     <behaviors>  

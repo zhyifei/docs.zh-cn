@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 5c7ea24a-39ac-4e5f-83b7-b9f9a1b556ab
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 70c60461f3ddd6bdabd151f60c7bc81eef18e650
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 643e28217d41e825f0b3a3f4a4f062c30835cae8
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629466"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70040663"
 ---
 # <a name="gcallowverylargeobjects-element"></a>\<gcAllowVeryLargeObjects > 元素
 在 64 位平台上，启用总大小大于 2 千兆字节 (GB) 的数组。  
@@ -64,7 +64,7 @@ ms.locfileid: "68629466"
 - 字符串和其他非数组对象的最大大小不变。  
   
 > [!CAUTION]
->  在启用此功能之前, 请确保应用程序不包含不安全代码, 该代码假定所有数组大小均小于 2 GB。 例如, 使用数组作为缓冲区的不安全代码可能容易受到缓冲区溢出的攻击, 因为假设数组不会超过 2 GB。  
+> 在启用此功能之前, 请确保应用程序不包含不安全代码, 该代码假定所有数组大小均小于 2 GB。 例如, 使用数组作为缓冲区的不安全代码可能容易受到缓冲区溢出的攻击, 因为假设数组不会超过 2 GB。  
   
 ## <a name="example"></a>示例  
  下面的示例演示如何为应用程序启用此功能。  
@@ -83,5 +83,5 @@ ms.locfileid: "68629466"
 
 ## <a name="see-also"></a>请参阅
 
-- [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [运行时设置架构](index.md)
+- [配置文件架构](../index.md)

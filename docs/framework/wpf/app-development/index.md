@@ -5,17 +5,17 @@ helpviewer_keywords:
 - WPF [WPF], about application development
 - application development [WPF], about
 ms.assetid: 2996ce5e-81e9-49ae-881b-952db3dd1b7e
-ms.openlocfilehash: a988baa64025dd9c188e367949c07d861413c197
-ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
+ms.openlocfilehash: 519ff6f40ea303b64864683db222b55c6e5a23aa
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68817982"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964804"
 ---
 # <a name="application-development"></a>应用程序开发
 <a name="introduction"></a> Windows Presentation Foundation (WPF) 是一个演示框架，可用于开发以下类型的应用程序：  
   
-- 独立应用程序（传统风格的 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 应用程序，这些应用程序作为要安装到客户端计算机并从客户端计算机运行的可执行程序集来生成）。  
+- 独立应用程序 (传统样式 Windows 应用程序, 内置于安装到客户端计算机并从客户端计算机运行的可执行程序集。  
   
 - [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)](由导航页面构成的应用程序, 这些页面构建为可执行程序集并由 Web 浏览器 (如 Microsoft Internet Explorer 或 Mozilla Firefox) 承载。  
   
@@ -24,7 +24,7 @@ ms.locfileid: "68817982"
 - 类库（包含可重用类的非可执行程序集）。  
   
 > [!NOTE]
->  强烈建议不要在 Windows 服务中使用 WPF 类型。 如果尝试在 Windows 服务中使用这些功能，这些功能可能无法按预期工作。  
+> 强烈建议不要在 Windows 服务中使用 WPF 类型。 如果尝试在 Windows 服务中使用这些功能，这些功能可能无法按预期工作。  
   
  为了生成这样一组应用程序，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 要实现众多服务。 本主题对这些服务以及在何处可以找到更多相关信息进行了概述。  
 

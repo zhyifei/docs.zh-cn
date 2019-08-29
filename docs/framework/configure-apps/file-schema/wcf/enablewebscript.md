@@ -2,20 +2,20 @@
 title: <enableWebScript>
 ms.date: 03/30/2017
 ms.assetid: 9c7e96e1-af70-4e6e-ac5c-d67929dddbaa
-ms.openlocfilehash: b2cdd29cda7f82ce555b0f6c1a963567b41ff81b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 123f58ee3d77bf605db21fa0d9537b3196d56468
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673246"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919117"
 ---
 # <a name="enablewebscript"></a>\<enableWebScript>
 通过此元素启用的终结点行为可以使用 ASP.NET AJAX 网页中的服务。  
   
  \<system.ServiceModel>  
-\<behaviors>  
+\<行为 >  
 \<endpointBehaviors>  
-\<behavior>  
+\<行为 >  
 \<enableWebScript>  
   
 ## <a name="syntax"></a>语法  
@@ -37,14 +37,14 @@ ms.locfileid: "61673246"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|指定终结点行为集。|  
+|[\<behavior>](behavior-of-endpointbehaviors.md)|指定终结点行为集。|  
   
 ## <a name="remarks"></a>备注  
- 此行为只应通过结合[ \<webHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)标准绑定或[ \<webMessageEncoding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webmessageencoding.md)绑定元素。  有关此行为的更多信息，请参见 <xref:System.ServiceModel.Description.WebScriptEnablingBehavior>。  
+ 此行为只应与[ \<webHttpBinding >](webhttpbinding.md)标准[ \<绑定或 w >](webmessageencoding.md)绑定元素一起使用。  有关此行为的更多信息，请参见 <xref:System.ServiceModel.Description.WebScriptEnablingBehavior>。  
   
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.ServiceModel.Configuration.WebScriptEnablingElement>
 - <xref:System.ServiceModel.Description.WebScriptEnablingBehavior>
-- [AJAX 集成和 JSON 支持](../../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)
-- [\<webHttp>](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttp.md)
+- [AJAX 集成和 JSON 支持](../../../wcf/feature-details/ajax-integration-and-json-support.md)
+- [\<webHttp>](webhttp.md)

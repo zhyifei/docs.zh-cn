@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 73d2980e-e73c-4987-913a-8ddc93d09144
-ms.openlocfilehash: b5044d39d1dc5d2fa7d2ce691cdda7075fa0e32a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1a2c32d133799ee5338c18d0f51bced49cb3dc4b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61878405"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963187"
 ---
 # <a name="schema-restrictions"></a>架构限制
-第二个可选参数**GetSchema**方法将返回用于限制架构信息的量的限制，并将它传递到**GetSchema**方法作为一个字符串数组. 在数组中的位置确定可以传递的值，这等效于限制数。  
+**GetSchema**方法的第二个可选参数是用于限制返回的架构信息量的限制, 并将其作为字符串数组传递到**GetSchema**方法。 在数组中的位置确定可以传递的值，这等效于限制数。  
   
  例如，下表说明使用适用于 SQL Server 的 .NET Framework 数据提供程序时“Tables”架构集合支持的限制。 SQL Server 架构集合的其他限制在本主题的结尾处列出。  
   
@@ -25,18 +25,18 @@ ms.locfileid: "61878405"
 |TableType|@TableType|TABLE_TYPE|4|  
   
 ## <a name="specifying-restriction-values"></a>指定限制值  
- 要使用“Tables”架构集合的一个限制，只需创建一个包含四个元素的字符串数组，然后在与限制数匹配的元素中填充值。 例如，若要限制的表返回的**GetSchema**仅在"Sales"架构中，这些表的方法将其传递给之前设置为"Sales"数组的第二个元素**GetSchema**方法。  
+ 要使用“Tables”架构集合的一个限制，只需创建一个包含四个元素的字符串数组，然后在与限制数匹配的元素中填充值。 例如, 若要将**GetSchema**方法返回的表仅限制为 "sales" 架构中的表, 请先将数组的第二个元素设置为 "sales", 然后再将其传递给**GetSchema**方法。  
   
 > [!NOTE]
->  `SqlClient` 和 `OracleClient` 的限制集合还有附加的 `ParameterName` 列。 为了向后兼容，仍提供限制默认列，但是目前忽略该列。 在指定限制值时，应使用参数化查询（而不是字符串替换）来最大程度地降低受到 SQL 注入式攻击的风险。  
+> `SqlClient` 和 `OracleClient` 的限制集合还有附加的 `ParameterName` 列。 为了向后兼容，仍提供限制默认列，但是目前忽略该列。 在指定限制值时，应使用参数化查询（而不是字符串替换）来最大程度地降低受到 SQL 注入式攻击的风险。  
   
 > [!NOTE]
->  数组中的元素数必须小于或等于指定架构集合支持的限制数，否则，将引发 <xref:System.ArgumentException>。 可以小于最大限制数。 缺少的限制假定为空（无限制）。  
+> 数组中的元素数必须小于或等于指定架构集合支持的限制数，否则，将引发 <xref:System.ArgumentException>。 可以小于最大限制数。 缺少的限制假定为空（无限制）。  
   
- 您可以查询的.NET Framework 托管提供程序来确定受支持的限制列表中，通过调用**GetSchema**方法替换为"限制"限制架构集合的名称。 此时将返回 <xref:System.Data.DataTable>，包含集合名称、限制名称、默认限制值和限制数的列表。  
+ 可以通过将**GetSchema**方法与限制架构集合的名称 (即 "限制") 一起调用, 来 .NET Framework 查询受支持的限制列表。 此时将返回 <xref:System.Data.DataTable>，包含集合名称、限制名称、默认限制值和限制数的列表。  
   
 ### <a name="example"></a>示例  
- 下面的示例演示如何使用<xref:System.Data.SqlClient.SqlConnection.GetSchema%2A>的 SQL Server 的.NET Framework 数据提供程序方法<xref:System.Data.SqlClient.SqlConnection>类来检索有关的所有表中包含的架构信息**AdventureWorks**示例数据库，并且能够限制的信息返回到"Sales"的架构中的这些表：  
+ 下面的示例演示如何使用<xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> SQL Server <xref:System.Data.SqlClient.SqlConnection>类的 .NET Framework 数据提供程序的方法来检索与**AdventureWorks**示例数据库中包含的所有表有关的架构信息。并且将返回的信息仅限于 "销售" 架构中的表:  
   
 ```vb  
 Imports System.Data.SqlClient  
@@ -137,13 +137,13 @@ class Program
   
 |限制名称|参数名称|限制默认值|限制数|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|User_Name|@Name|name|1|  
+|User_Name|@Name|NAME|1|  
   
 ### <a name="databases"></a>数据库  
   
 |限制名称|参数名称|限制默认值|限制数|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|名称|@Name|名称|1|  
+|name|@Name|name|1|  
   
 ### <a name="tables"></a>表  
   
@@ -195,7 +195,7 @@ class Program
 |----------------------|--------------------|-------------------------|------------------------|  
 |Catalog|@Catalog|SPECIFIC_CATALOG|1|  
 |Owner|@Owner|SPECIFIC_SCHEMA|2|  
-|名称|@Name|SPECIFIC_NAME|3|  
+|name|@Name|SPECIFIC_NAME|3|  
 |参数|@Parameter|PARAMETER_NAME|4|  
   
 ### <a name="procedures"></a>过程  
@@ -204,7 +204,7 @@ class Program
 |----------------------|--------------------|-------------------------|------------------------|  
 |Catalog|@Catalog|SPECIFIC_CATALOG|1|  
 |Owner|@Owner|SPECIFIC_SCHEMA|2|  
-|名称|@Name|SPECIFIC_NAME|3|  
+|name|@Name|SPECIFIC_NAME|3|  
 |类型|@Type|ROUTINE_TYPE|4|  
   
 ### <a name="indexcolumns"></a>IndexColumns  
@@ -239,9 +239,9 @@ class Program
 |Catalog|@Catalog|CONSTRAINT_CATALOG|1|  
 |Owner|@Owner|CONSTRAINT_SCHEMA|2|  
 |表|@Table|TABLE_NAME|3|  
-|名称|@Name|CONSTRAINT_NAME|4|  
+|name|@Name|CONSTRAINT_NAME|4|  
   
-## <a name="sql-server-2008-schema-restrictions"></a>SQL Server 2008       
+## <a name="sql-server-2008-schema-restrictions"></a>SQL Server 2008  
  下表列出了 SQL Server 2008 架构集合的限制。 这些限制从 .NET Framework 版本 3.5 SP1 和 SQL Server 2008 开始生效。 .NET Framework 和 SQL Server 的早期版本不支持这些限制。  
   
 ### <a name="columnsetcolumns"></a>ColumnSetColumns  

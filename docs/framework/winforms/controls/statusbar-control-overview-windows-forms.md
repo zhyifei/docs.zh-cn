@@ -7,26 +7,26 @@ helpviewer_keywords:
 - StatusBar control [Windows Forms], about StatusBar control
 - status bars
 ms.assetid: b7b9852c-633d-4416-bb2e-94852b989c6c
-ms.openlocfilehash: 4e1816ef221641f5ad54fb429442ed43289b592a
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: bd58d4c70e3a3c88e57fe242957f669d1944fd71
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67505422"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964434"
 ---
 # <a name="statusbar-control-overview-windows-forms"></a>StatusBar 控件概述（Windows 窗体）
 > [!IMPORTANT]
->  <xref:System.Windows.Forms.StatusStrip>并<xref:System.Windows.Forms.ToolStripStatusLabel>控件替换，并将功能添加到<xref:System.Windows.Forms.StatusBar>并<xref:System.Windows.Forms.StatusBarPanel>控制; 但是，<xref:System.Windows.Forms.StatusBar>和<xref:System.Windows.Forms.StatusBarPanel>控件将保留用于向后兼容性并供将来使用，如果你选择。  
+> <xref:System.Windows.Forms.StatusBarPanel> <xref:System.Windows.Forms.StatusBar> <xref:System.Windows.Forms.StatusBar>和控件替换和添加了和控件的功能; 但是, 和<xref:System.Windows.Forms.StatusBarPanel>控件将保留以实现向后兼容性和将来使用, 前提是你<xref:System.Windows.Forms.ToolStripStatusLabel> <xref:System.Windows.Forms.StatusStrip>.  
   
- Windows 窗体[StatusBar 控件](statusbar-control-windows-forms.md)窗体上用作区域，通常显示在底部窗口中，应用程序可以在其中显示各种类型的状态信息。 <xref:System.Windows.Forms.StatusBar> 控件可以具有状态栏面板上显示的文本或图标，用于指示状态或一系列的动画中的图标指示进程正在运行;例如，Microsoft Word，该值指示是要保存文档。  
+ Windows 窗体[状态栏控件](statusbar-control-windows-forms.md)在窗体上用作区域, 通常显示在窗口底部, 应用程序可在窗口中显示各种类型的状态信息。 <xref:System.Windows.Forms.StatusBar>控件可在其上具有状态栏面板, 这些面板显示用于指示状态的文本或图标, 或动画中指示进程工作的一系列图标。例如, Microsoft Word 表明文档正在保存。  
   
-## <a name="using-the-statusbar-control"></a>使用 StatusBar 控件  
- Internet Explorer 使用状态栏来指示当鼠标滚动超链接; 时的页的 URLMicrosoft Word 为您提供信息页的位置、 部分位置和编辑模式，例如改写和修订跟踪;和 Visual Studio 将使用状态栏向提供上下文相关的信息，例如告诉您如何操作为停靠或浮动的可停靠窗口。  
+## <a name="using-the-statusbar-control"></a>使用 "状态栏" 控件  
+ 当鼠标滚动到超链接上时, Internet Explorer 将使用状态栏来指示页面的 URL;Microsoft Word 提供了有关页面位置、分区位置和编辑模式 (如改写和修订跟踪) 的信息;Visual Studio 使用状态栏为上下文相关的信息, 如告诉您如何操作停靠或浮动的窗口。  
   
- 可以在状态栏上显示一条消息，通过设置<xref:System.Windows.Forms.StatusBar.ShowPanels%2A>属性设置为`false`（默认值） 和设置<xref:System.Windows.Forms.StatusBar.Text%2A>到你想要在状态栏中显示的文本的状态栏的属性。 可以将状态栏划分为多个面板，以通过设置显示的信息的多个类型<xref:System.Windows.Forms.StatusBar.ShowPanels%2A>属性设置为`true`并使用<xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection.Add%2A>方法的<xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>。  
+ 您可以通过将<xref:System.Windows.Forms.StatusBar.ShowPanels%2A>属性设置为`false` ( <xref:System.Windows.Forms.StatusBar.Text%2A>默认值), 然后将状态栏的属性设置为要在状态栏中显示的文本, 在状态栏上显示一条消息。 <xref:System.Windows.Forms.StatusBar.ShowPanels%2A>您可以通过将属性设置为`true` <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>并使用<xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection.Add%2A>的方法, 将状态栏划分为多个面板以显示多种类型的信息。  
   
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Windows.Forms.StatusBar>
 - <xref:System.Windows.Forms.ToolStripStatusLabel>
-- [如何：确定已单击 Windows 窗体 StatusBar 控件中的面板](determine-which-panel-wf-statusbar-control-was-clicked.md)
+- [如何：确定单击 Windows 窗体状态栏控件中的哪个面板](determine-which-panel-wf-statusbar-control-was-clicked.md)

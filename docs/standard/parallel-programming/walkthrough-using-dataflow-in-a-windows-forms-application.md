@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 9c65cdf7-660c-409f-89ea-59d7ec8e127c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f4f8e25edb7d61e21406a5f7719f6dc98f686a9e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: dbe5b5db580e06bfd3e5723addd404eae7950e6c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755049"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946354"
 ---
 # <a name="walkthrough-using-dataflow-in-a-windows-forms-application"></a>演练：在 Windows 窗体应用程序中使用数据流
 本文档演示如何创建在 Windows 窗体应用程序中执行图像处理的数据流块网络。  
@@ -82,7 +82,7 @@ ms.locfileid: "67755049"
      [!code-csharp[TPLDataflow_CompositeImages#5](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#5)]  
   
     > [!NOTE]
-    >  C# 版本的 `CreateCompositeBitmap` 方法使用指针启用高效处理 <xref:System.Drawing.Bitmap?displayProperty=nameWithType> 对象。 因此，若要使用 [unsafe](~/docs/csharp/language-reference/keywords/unsafe.md) 关键字，必须在项目中启用“允许不安全代码”  选项。 有关如何在 Visual C# 项目中启用不安全代码的详细信息，请参阅[“项目设计器”->“生成”页 (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp)。  
+    > C# 版本的 `CreateCompositeBitmap` 方法使用指针启用高效处理 <xref:System.Drawing.Bitmap?displayProperty=nameWithType> 对象。 因此，若要使用 [unsafe](../../csharp/language-reference/keywords/unsafe.md) 关键字，必须在项目中启用“允许不安全代码”  选项。 有关如何在 Visual C# 项目中启用不安全代码的详细信息，请参阅[“项目设计器”->“生成”页 (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp)。  
   
  下表描述了网络的成员。  
   

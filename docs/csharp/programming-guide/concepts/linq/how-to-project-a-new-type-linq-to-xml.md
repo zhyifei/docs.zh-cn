@@ -2,12 +2,12 @@
 title: 如何：投影新类型 (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 48145cf9-1e0b-4e73-bbfd-28fc04800dc4
-ms.openlocfilehash: 2bb521d1445dcecdad8b9c7b28bed90e1e38c8e8
-ms.sourcegitcommit: d98fdb087d9c8aba7d2cb93fe4b4ee35a2308cee
+ms.openlocfilehash: bec4e7c7d87dffb90b49b76aa00a5de093d68436
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69012928"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69593047"
 ---
 # <a name="how-to-project-a-new-type-linq-to-xml-c"></a>如何：投影新类型 (LINQ to XML) (C#)
 
@@ -17,7 +17,7 @@ ms.locfileid: "69012928"
 
 此示例演示如何在 `select` 子句中实例化对象。 代码首先定义一个具有一个构造函数的新类，然后修改 `select` 语句，使该表达式成为新类的新实例。
 
-此示例使用下面的 XML 文档：[示例 XML 文件：典型采购订单 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml-1.md)。
+此示例使用下面的 XML 文档：[示例 XML 文件：典型采购订单 (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md)。
 
 ```csharp
 class NameQty 

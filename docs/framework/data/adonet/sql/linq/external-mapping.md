@@ -2,15 +2,15 @@
 title: 外部映射
 ms.date: 03/30/2017
 ms.assetid: 076606b8-d889-4ba0-b5da-ae577b146f23
-ms.openlocfilehash: 0b6ced31f5534bd040917ecc5d241d54d9bee95f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 70372473eb2de5d3c4751e237e7beb66315b690e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64619714"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950329"
 ---
 # <a name="external-mapping"></a>外部映射
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 支持*外部映射*，依据你使用单独的 XML 文件指定的数据库的数据模型与您的对象模型之间的映射的进程。 使用外部映射文件具有以下优点：  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]支持*外部映射*, 这是使用单独的 XML 文件指定数据库的数据模型和对象模型之间的映射的过程。 使用外部映射文件具有以下优点：  
   
 - 可以将映射代码放在应用程序代码外部。 此方法可以降低应用程序代码的混乱程度。  
   
@@ -32,10 +32,10 @@ ms.locfileid: "64619714"
 ## <a name="xml-schema-definition-file"></a>XML 架构定义文件  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中的外部映射必须能够通过以下 XML 架构定义的验证。  
   
- 请将此架构定义文件与用于验证 DBML 文件的架构定义文件区分开来。 有关详细信息，请参阅[LINQ to SQL 中的代码生成](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md))。  
+ 请将此架构定义文件与用于验证 DBML 文件的架构定义文件区分开来。 有关详细信息, 请参阅[LINQ to SQL 中的代码生成](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)。  
   
 > [!NOTE]
->  Visual Studio 用户还会发现此 XSD 文件在 XML 架构对话框中为"LinqToSqlMapping.xsd"。 若要正确使用此文件，来验证外部映射文件，请参阅[如何：验证 DBML 和外部映射文件](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md)。  
+> Visual Studio 用户还会在 "XML 架构" 对话框中找到此 XSD 文件, 其形式为 "Linqtosqlmapping.xsd"。 若要正确使用此文件来验证外部映射文件, 请[参阅如何:验证 DBML 和外部映射文件](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md)。  
   
 ```  
 ?<?xml version="1.0" encoding="utf-16"?>  
@@ -145,4 +145,4 @@ elementFormDefault="qualified" >
 
 - [LINQ to SQL 中的代码生成](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)
 - [引用](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
-- [如何：对象模型作为外部文件生成](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)
+- [如何：生成对象模型作为外部文件](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)

@@ -5,33 +5,33 @@ helpviewer_keywords:
 - StatusBar control [Windows Forms]
 - status bars [Windows Forms], creating
 ms.assetid: 6f543e27-cf78-4b7f-b4d0-6a8030155d48
-ms.openlocfilehash: 9ef6bc125a641538e7fd2da4c17c5f25dfc62709
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 72a93fc32715596efc7fb0f8b941e62f7019d06c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62009651"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964425"
 ---
 # <a name="statusbar-control-windows-forms"></a>StatusBar 控件（Windows 窗体）
 > [!NOTE]
->  <xref:System.Windows.Forms.ToolStripStatusLabel> 控件取代了 <xref:System.Windows.Forms.StatusBar> 控件并添加了功能；但是，可以选择保留 <xref:System.Windows.Forms.StatusBar> 控件以实现向后兼容并供将来使用。  
+> <xref:System.Windows.Forms.ToolStripStatusLabel> 控件取代了 <xref:System.Windows.Forms.StatusBar> 控件并添加了功能；但是，可以选择保留 <xref:System.Windows.Forms.StatusBar> 控件以实现向后兼容并供将来使用。  
   
- Windows 窗体 <xref:System.Windows.Forms.StatusBar> 控件在窗体中用作区域，通常显示在窗口底部，应用程序可在此显示各种状态信息。 <xref:System.Windows.Forms.StatusBar> 控件可以具有状态栏面板上显示的图标来指示状态或一系列的动画中的图标指示进程正在运行;例如，Microsoft Word，该值指示是要保存文档。  
+ Windows 窗体 <xref:System.Windows.Forms.StatusBar> 控件在窗体中用作区域，通常显示在窗口底部，应用程序可在此显示各种状态信息。 <xref:System.Windows.Forms.StatusBar>控件可在其上具有状态栏面板, 这些面板显示用于指示状态的图标, 或动画中指示进程工作的一系列图标。例如, Microsoft Word 表明文档正在保存。  
   
 ## <a name="in-this-section"></a>本节内容  
  [StatusBar 控件概述](statusbar-control-overview-windows-forms.md)  
- 引入了的一般概念<xref:System.Windows.Forms.StatusBar>控件，让用户可查看具有焦点的控件的相关信息。  
+ 介绍<xref:System.Windows.Forms.StatusBar>控件的一般概念, 该控件使用户能够查看具有焦点的控件的相关信息。  
   
- [如何：向 StatusBar 控件添加面板](how-to-add-panels-to-a-statusbar-control.md)  
- 介绍如何添加到可编程面板<xref:System.Windows.Forms.StatusBar>控件。  
+ [如何：向状态栏控件添加面板](how-to-add-panels-to-a-statusbar-control.md)  
+ 说明如何向<xref:System.Windows.Forms.StatusBar>控件添加可编程面板。  
   
- [如何：确定已单击 Windows 窗体 StatusBar 控件中的面板](determine-which-panel-wf-statusbar-control-was-clicked.md)  
- 说明如何处理<xref:System.Windows.Forms.Control.Click>事件引发从<xref:System.Windows.Forms.StatusBar>控件。  
+ [如何：确定单击 Windows 窗体状态栏控件中的哪个面板](determine-which-panel-wf-statusbar-control-was-clicked.md)  
+ 说明如何处理<xref:System.Windows.Forms.Control.Click> <xref:System.Windows.Forms.StatusBar>从控件引发的事件。  
   
  [如何：设置状态栏面板的大小](how-to-set-the-size-of-status-bar-panels.md)  
- 提供的属性的控件的宽度和在运行时重设大小行为的状态栏面板的详细信息。  
+ 提供有关属性的详细信息, 这些属性控制运行时状态栏面板的宽度和大小调整行为。  
   
- [演练：在运行时的更新状态栏信息](walkthrough-updating-status-bar-information-at-run-time.md)  
+ [演练：在运行时更新状态栏信息](walkthrough-updating-status-bar-information-at-run-time.md)  
  说明如何以编程方式控制状态栏面板中的数据。  
   
 ## <a name="reference"></a>参考  
@@ -39,7 +39,7 @@ ms.locfileid: "62009651"
  提供类及其成员的相关引用信息。  
   
  <xref:System.Windows.Forms.ToolStripStatusLabel>  
- 替换并添加了功能<xref:System.Windows.Forms.StatusBar>控件。  
+ 替换<xref:System.Windows.Forms.StatusBar>控件并向其中添加功能。  
   
 ## <a name="related-sections"></a>相关章节  
  [在 Windows 窗体上使用的控件](controls-to-use-on-windows-forms.md)  

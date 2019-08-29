@@ -18,12 +18,12 @@ helpviewer_keywords:
 - cast expression [C#]
 - () operator [C#]
 - typeof operator [C#]
-ms.openlocfilehash: 6966d0b7a4f8a96bddb17ce2017fd53fc07ae922
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 62186409fdc1abb2275af535be3ae939a1e63323
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69572311"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922284"
 ---
 # <a name="type-testing-and-cast-operators-c-reference"></a>类型测试和强制转换运算符（C# 引用）
 
@@ -115,7 +115,7 @@ E is T ? (T)(E) : (T)null
 
 你还可以使用括号[调用方法或调用委托](member-access-operators.md#invocation-operator-)。
 
-括号的其他用法是指定表达式中计算操作的顺序。 有关详细信息，请参阅[运算符](../../programming-guide/statements-expressions-operators/operators.md)一文中的[添加括号](../../programming-guide/statements-expressions-operators/operators.md#adding-parentheses)部分。 对于按优先级排序的运算符列表，请参阅 [C# 运算符](index.md)。
+括号的其他用法是调整表达式中计算操作的顺序。 有关详细信息，请参阅 [C# 运算符](index.md)。
 
 ## <a name="typeof-operator"></a>TypeOf 运算符
 

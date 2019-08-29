@@ -16,41 +16,41 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 49b3bb51f307093ea1cc8cc45064d5c405974822
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5519714ff2b4ee67d0e59001bf5b454cdc25d648
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61948832"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69961082"
 ---
 # <a name="icordebugprocess2-interface"></a>ICorDebugProcess2 接口
-ICorDebugProcess 接口，它表示进程正在运行托管的代码的逻辑扩展。  
+ICorDebugProcess 接口的逻辑扩展, 它表示运行托管代码的进程。  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|[ClearUnmanagedBreakpoint 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-clearunmanagedbreakpoint-method.md)|删除指定的偏移量对的早期调用所设置的断点`ICorDebugProcess2::SetUnmanagedBreakpoint`。|  
-|[GetDesiredNGENCompilerFlags 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-getdesiredngencompilerflags-method.md)|获取必须为公共语言运行时 (CLR) 设置，以将图像加载到此引用的进程的标志`ICorDebugProcess2`。|  
-|[GetReferenceValueFromGCHandle 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-getreferencevaluefromgchandle-method.md)|获取指定的托管对象具有垃圾回收句柄引用指向。|  
-|[GetThreadForTaskID 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-getthreadfortaskid-method.md)|获取对其执行具有指定标识符的任务的线程。|  
-|[GetVersion 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-getversion-method.md)|获取正在调试的进程正在运行的 CLR 版本。|  
-|[SetDesiredNGENCompilerFlags 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setdesiredngencompilerflags-method.md)|设置所需的图像加载到正在调试的进程中实时 (JIT) 编译器的标志。|  
-|[SetUnmanagedBreakpoint 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setunmanagedbreakpoint-method.md)|设置指定的本机映像的偏移量处的非托管的断点。|  
+|[ClearUnmanagedBreakpoint 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-clearunmanagedbreakpoint-method.md)|删除由之前对的调用`ICorDebugProcess2::SetUnmanagedBreakpoint`所设置的指定偏移量处的断点。|  
+|[GetDesiredNGENCompilerFlags 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-getdesiredngencompilerflags-method.md)|获取必须为公共语言运行时 (CLR) 设置的标志, 以将图像加载到此`ICorDebugProcess2`所引用的进程中。|  
+|[GetReferenceValueFromGCHandle 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-getreferencevaluefromgchandle-method.md)|获取指向具有垃圾回收句柄的指定托管对象的引用指针。|  
+|[GetThreadForTaskID 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-getthreadfortaskid-method.md)|获取执行具有指定标识符的任务的线程。|  
+|[GetVersion 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-getversion-method.md)|获取正在运行正在调试的进程的 CLR 的版本。|  
+|[SetDesiredNGENCompilerFlags 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setdesiredngencompilerflags-method.md)|将实时 (JIT) 编译器所需的标志设置为将图像加载到正在调试的进程中。|  
+|[SetUnmanagedBreakpoint 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setunmanagedbreakpoint-method.md)|在指定的本机映像偏移量处设置非托管断点。|  
   
 ## <a name="remarks"></a>备注  
   
 > [!NOTE]
->  此接口不支持跨计算机或跨进程远程调用。  
+> 此接口不支持跨计算机或跨进程远程调用。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头：** Cordebug.idl, Cordebug.idl  
   
- **库：** CorGuids.lib  
+ **类库**CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

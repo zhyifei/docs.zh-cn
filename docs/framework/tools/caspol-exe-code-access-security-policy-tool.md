@@ -17,21 +17,21 @@ helpviewer_keywords:
 ms.assetid: d2bf6123-7b0c-4e60-87ad-a39a1c3eb2e0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ccb1d78f939d2faf90013392fc60d5597bc3922e
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: f70682150905c411be5618ab368a87e71d0e8e13
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489678"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69959057"
 ---
 # <a name="caspolexe-code-access-security-policy-tool"></a>Caspol.exe（代码访问安全策略工具）
 代码访问安全性 (CAS) 策略工具 (Caspol.exe) 使用户和管理员可修改计算机策略级别、用户策略级别和企业策略级别的安全策略。  
   
 > [!IMPORTANT]
->  从 .NET Framework 4 开始，Caspol.exe 不再影响 CAS 策略，除非将 [\<legacyCasPolicy> 元素](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md)设置为 `true`。 CasPol.exe 显示或修改的任何设置将只会影响选择使用 CAS 策略的应用程序。 有关详细信息，请参阅[安全更改](../../../docs/framework/security/security-changes.md)。  
+> 从 .NET Framework 4 开始，Caspol.exe 不再影响 CAS 策略，除非将 [\<legacyCasPolicy> 元素](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md)设置为 `true`。 CasPol.exe 显示或修改的任何设置将只会影响选择使用 CAS 策略的应用程序。 有关详细信息，请参阅[安全更改](../../../docs/framework/security/security-changes.md)。  
   
 > [!NOTE]
->  64 位计算机同时包括 64 位和 32 位版本的安全策略。 若要确保你的策略更改同时应用于 32 位和 64 位应用程序，请同时运行 Caspol.exe 的 32 位和 64 位版本。  
+> 64 位计算机同时包括 64 位和 32 位版本的安全策略。 若要确保你的策略更改同时应用于 32 位和 64 位应用程序，请同时运行 Caspol.exe 的 32 位和 64 位版本。  
   
  代码访问安全性策略工具自动随 .NET Framework 和 Visual Studio 一起安装。 可以在 32 位系统的 %windir%\Microsoft.NET\Framework\\*version* 中或是 64 位系统的 %windir%\Microsoft.NET\Framework64\\*version* 中找到 Caspol.exe。 （例如，对于 64 位系统上的 .NET Framework 4，相应的位置是 %windir%\Microsoft.NET\Framework64\v4.030319\caspol.exe。）如果计算机并行运行多个 .NET Framework 版本，则可能会安装该工具的多个版本。 可以从安装目录运行该工具。 但是，建议使用[命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)，这样就不需要导航到安装文件夹。  
   

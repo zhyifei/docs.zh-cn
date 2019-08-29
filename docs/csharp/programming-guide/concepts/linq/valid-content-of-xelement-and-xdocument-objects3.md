@@ -2,12 +2,12 @@
 title: XElement 和 XDocument 对象的有效内容3
 ms.date: 07/20/2015
 ms.assetid: 0d253586-2b97-459f-b1a7-f30f38f3ed9f
-ms.openlocfilehash: c179f2e57abf0e2028ec58428e75c8df786b4214
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 1ad5b18e3bbc2143a56f9c8e7b34354761b4e42f
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66483268"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590933"
 ---
 # <a name="valid-content-of-xelement-and-xdocument-objects"></a>XElement 和 XDocument 对象的有效内容
 本主题描述可以传递给构造函数以及用于向元素和文档添加内容的方法的有效参数。  
@@ -90,4 +90,4 @@ ms.locfileid: "66483268"
   
 ## <a name="see-also"></a>请参阅
 
-- [创建 XML 树 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md)
+- [创建 XML 树 (C#)](./linq-to-xml-overview.md)

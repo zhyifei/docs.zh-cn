@@ -15,12 +15,12 @@ helpviewer_keywords:
 - characters [WPF], curly brace
 - DynamicResource markup extensions [WPF]
 ms.assetid: 618dc745-8b14-4886-833f-486d2254bb78
-ms.openlocfilehash: 25f6cbbc1df8a4a2b4ad9025b2381d26153e4b66
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: f0eb4a90b09f49ced45fa8453356e1d6fb3b4af1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364442"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965278"
 ---
 # <a name="markup-extensions-and-wpf-xaml"></a>标记扩展和 WPF XAML
 本主题介绍 XAML 的标记扩展概念，包括其语法规则、用途以及作为其基础的类对象模型。 标记扩展是 XAML 语言以及 XAML 服务的 .NET 实现的常规功能。 本主题专门详细讨论用于 WPF XAML 的标记扩展。  
@@ -50,7 +50,7 @@ ms.locfileid: "68364442"
 - 在特意不使用 WPF 基元素和控件模型提供的集合支持的情况下，`x:Array` 为 XAML 语法中常规数组的创建提供支持。 有关详细信息，请参阅 [x:Array 标记扩展](../../xaml-services/x-array-markup-extension.md)。  
   
 > [!NOTE]
->  `x:` 前缀在 XAML 文件或生成的根元素中用于 XAML 语言内部函数的典型 XAML 命名空间映射。 例如, 用于 WPF 应用程序的 Visual Studio 模板会使用此`x:`映射启动一个 XAML 文件。 可以在自己的 XAML 命名空间映射中选择不同的前缀标记，但本文档将采用默认的 `x:` 映射，并通过它来标识属于 XAML 语言的 XAML 命名空间已定义部分的那些实体，这与 WPF 默认命名空间或与特定框架不相关的其他 XAML 命名空间相反。  
+> `x:` 前缀在 XAML 文件或生成的根元素中用于 XAML 语言内部函数的典型 XAML 命名空间映射。 例如, 用于 WPF 应用程序的 Visual Studio 模板会使用此`x:`映射启动一个 XAML 文件。 可以在自己的 XAML 命名空间映射中选择不同的前缀标记，但本文档将采用默认的 `x:` 映射，并通过它来标识属于 XAML 语言的 XAML 命名空间已定义部分的那些实体，这与 WPF 默认命名空间或与特定框架不相关的其他 XAML 命名空间相反。  
   
 <a name="WPF_Specific_Markup_Extensions"></a>   
 ## <a name="wpf-specific-markup-extensions"></a>特定于 WPF 的标记扩展  
@@ -71,7 +71,7 @@ ms.locfileid: "68364442"
 - `ComponentResourceKey` 和 `ThemeDictionary` 支持资源查找的各个方面，特别是支持查找与自定义控件一起打包的资源和主题。 有关详细信息，请参阅 [ComponentResourceKey 标记扩展](componentresourcekey-markup-extension.md)、[ThemeDictionary 标记扩展](themedictionary-markup-extension.md)或[控件创作概述](../controls/control-authoring-overview.md)。  
   
 <a name="StarExtension"></a>   
-## <a name="extension-classes"></a>*Extension 类  
+## <a name="extension-classes"></a>\*扩展类  
  对于常规 XAML 语言和特定于 WPF 的标记扩展, 每个标记扩展的行为通过`*Extension`派生自<xref:System.Windows.Markup.MarkupExtension>的类标识为 XAML 处理器, 并提供<xref:System.Windows.Markup.StaticExtension.ProvideValue%2A>付款方式. 每个扩展上的此方法都会提供在计算标记扩展时返回的对象。 通常会基于传递给标记扩展的各个字符串标记来计算返回的对象。  
   
  例如, <xref:System.Windows.StaticResourceExtension>类提供实际资源查找的表面实现, 以便其<xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A>实现返回所请求的对象, 并将该特定实现的输入指定为一个字符串, 该字符串用于按资源查找资源`x:Key`。 如果使用的是现有标记扩展，则其大部分实现详细信息都无关紧要。  
@@ -88,11 +88,11 @@ ms.locfileid: "68364442"
 - 如果各个分隔的标记不包含任何等号，则每个标记都将被视为构造函数参数。 必须按该签名所期望的类型和该签名所期望的适当顺序给出每个构造函数参数。  
   
     > [!NOTE]
-    >  XAML 处理器必须调用与对的数量这一参数计数匹配的构造函数。 出于此原因, 如果要实现自定义标记扩展, 请不要提供具有相同参数计数的多个构造函数。 如果多个标记扩展构造函数路径具有相同的参数计数，则不会定义 XAML 处理器的行为方式，但应预计到如果这种情况存在于标记扩展类型定义中，则会允许 XAML 处理器引发有关使用情况的异常。  
+    > XAML 处理器必须调用与对的数量这一参数计数匹配的构造函数。 出于此原因, 如果要实现自定义标记扩展, 请不要提供具有相同参数计数的多个构造函数。 如果多个标记扩展构造函数路径具有相同的参数计数，则不会定义 XAML 处理器的行为方式，但应预计到如果这种情况存在于标记扩展类型定义中，则会允许 XAML 处理器引发有关使用情况的异常。  
   
 - 如果单个分隔标记包含等号, 则 XAML 处理器首先调用标记扩展的无参数构造函数。 之后，每个“名称=值”对会解释为标记扩展上存在的属性名称以及赋给该属性的值。  
   
-- 如果标记扩展中的构造函数行为与属性设置行为之间存在并行结果，则使用哪个行为都无关紧要。 较常见的用法是将“属性`=`值”   对用于具有多个可设置属性的标记扩展，因为这可使标记意图性更强，并减少意外转置构造函数参数的可能性。 （当指定“属性=值”对时，这些属性可以按任意顺序排列。）另外，无法保证标记扩展提供设置其每个可设置属性的构造函数参数。 例如, <xref:System.Windows.Data.Binding>是一个标记扩展, 其中的多个属性可通过 "*属性*`=`*值*" 窗体中的扩展<xref:System.Windows.Data.Binding>进行设置, 但仅支持两个构造函数: 一个无参数的构造函数和一个这会设置初始路径。  
+- 如果标记扩展中的构造函数行为与属性设置行为之间存在并行结果，则使用哪个行为都无关紧要。 较常见的用法是将“属性`=`值”对用于具有多个可设置属性的标记扩展，因为这可使标记意图性更强，并减少意外转置构造函数参数的可能性。 （当指定“属性=值”对时，这些属性可以按任意顺序排列。）另外，无法保证标记扩展提供设置其每个可设置属性的构造函数参数。 例如, <xref:System.Windows.Data.Binding>是一个标记扩展, 其中的多个属性可通过 "*属性*`=`*值*" 窗体中的扩展<xref:System.Windows.Data.Binding>进行设置, 但仅支持两个构造函数: 一个无参数的构造函数和一个这会设置初始路径。  
   
 - 文本逗号在未转义的情况下无法传递给标记扩展。  
   

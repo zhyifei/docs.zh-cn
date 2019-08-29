@@ -2,12 +2,12 @@
 title: 如何：从多个源填充对象集合 (LINQ) (C#)
 ms.date: 06/12/2018
 ms.assetid: 8ad7d480-b46c-4ccc-8c57-76f2d04ccc6d
-ms.openlocfilehash: 0789dee28cc2be5e72d2f99e2265e0181e351d8a
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: c00257db7f3c06cab55cd48f7472f07dd7b2a664
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65584388"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69593053"
 ---
 # <a name="how-to-populate-object-collections-from-multiple-sources-linq-c"></a>如何：从多个源填充对象集合 (LINQ) (C#)
 
@@ -18,7 +18,7 @@ ms.locfileid: "65584388"
 
 ## <a name="to-create-the-data-file"></a>创建数据文件
 
-按照后列文章中的说明将 names.csv 和 scores.csv 文件复制到项目文件夹：[如何：联接不同文件中的内容 (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)。
+按照后列文章中的说明将 names.csv 和 scores.csv 文件复制到项目文件夹：[如何：联接不同文件中的内容 (LINQ) (C#)](./how-to-join-content-from-dissimilar-files-linq.md)。
 
 ## <a name="example"></a>示例
 
@@ -107,7 +107,7 @@ class PopulateCollection
  */
 ```
 
-在 [select](../../../../csharp/language-reference/keywords/select-clause.md) 子句中，对象初始值设定项使用来自两个源的数据实例化每个新的 `Student` 对象。
+在 [select](../../../language-reference/keywords/select-clause.md) 子句中，对象初始值设定项使用来自两个源的数据实例化每个新的 `Student` 对象。
 
 如果不需要存储查询的结果，那么和命名类型相比，匿名类型使用起来更方便。 如果在执行查询的方法外部传递查询结果，则需要使用命名类型。 下面的示例执行与前面示例相同的任务，但使用的是匿名类型，而不是命名类型：
 
@@ -141,6 +141,6 @@ foreach (var student in queryNamesScores2)
 
 ## <a name="see-also"></a>请参阅
 
-- [LINQ 和字符串 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
-- [对象和集合初始值设定项](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
-- [匿名类型](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)
+- [LINQ 和字符串 (C#)](./linq-and-strings.md)
+- [对象和集合初始值设定项](../../classes-and-structs/object-and-collection-initializers.md)
+- [匿名类型](../../classes-and-structs/anonymous-types.md)

@@ -2,12 +2,12 @@
 title: 演练和技术入门概述
 description: 通过 Azure 云和 Windows 容器实现现有 .NET 应用程序的现代化 |演练和技术入门概述
 ms.date: 04/28/2018
-ms.openlocfilehash: 81f7d9fbf596a23b83e2dc9251788b33a8817e16
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 190b33c4307b09bab0543d481e66ac9328074a0d
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "69577850"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69660887"
 ---
 # <a name="walkthroughs-and-technical-get-started-overview"></a>演练和技术入门概述
 
@@ -308,4 +308,4 @@ EShopModernizing GitHub 存储库 wiki 中提供了完整的技术演练:
 
 > [!div class="step-by-step"]
 > [上一页](modernize-existing-apps-to-cloud-optimized/migrate-to-hybrid-cloud-scenarios.md)
-> [下一页](conclusions.md)
+> [下一页](conclusions.md) <!-- Next Chapter -->

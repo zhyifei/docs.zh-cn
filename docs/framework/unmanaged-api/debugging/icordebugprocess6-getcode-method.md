@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: faa538c2-60c9-4064-b996-1b4c24ebd751
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 810590f0d1f7f74b778d73d98a9f7f9b1988b75f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5d896cc4316c2de6fa1cb0bacc9ff8b1f3713129
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67736449"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69967548"
 ---
 # <a name="icordebugprocess6getcode-method"></a>ICorDebugProcess6::GetCode 方法
 获取特定代码地址上的托管代码的相关信息。  
@@ -24,22 +24,22 @@ HRESULT GetCode(
   
 ## <a name="parameters"></a>参数  
  `codeAddress`  
- [in]一个[CORDB_ADDRESS](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md)值，该值指定托管的代码段的起始地址。  
+ 中一个[CORDB_ADDRESS](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md)值, 该值指定托管代码段的起始地址。  
   
  `ppCode`  
- [out]指向表示托管代码段"ICorDebugCode"对象的地址的指针。  
+ 弄指向表示托管代码段的 "ICorDebugCode" 对象地址的指针。  
   
 ## <a name="remarks"></a>备注  
   
 > [!NOTE]
->  此方法仅适用于 .NET Native。  
+> 此方法仅适用于 .NET Native。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头：** Cordebug.idl, Cordebug.idl  
   
- **库：** CorGuids.lib  
+ **类库**CorGuids.lib  
   
  **.NET Framework 版本：** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

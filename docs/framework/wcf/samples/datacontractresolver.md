@@ -2,12 +2,12 @@
 title: DataContractResolver
 ms.date: 03/30/2017
 ms.assetid: 6c200c02-bc14-4b8d-bbab-9da31185b805
-ms.openlocfilehash: 981b70011979e1e0fbd8fc6b22ba54774c824342
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 224ffcf277f9ceaf6b1f970ad6f92480f5857999
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61608458"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70045082"
 ---
 # <a name="datacontractresolver"></a>DataContractResolver
 此示例演示如何使用 <xref:System.Runtime.Serialization.DataContractResolver> 类来自定义序列化和反序列化过程。 此示例演示在序列化和反序列化过程中，如何使用 DataContractResolver 在 CLR 类型与 xsi:type 表示形式之间进行映射。
@@ -152,18 +152,18 @@ class MyDataContractResolver : DataContractResolver
 
 #### <a name="to-use-this-sample"></a>使用此示例
 
-1. 使用 Visual Studio 2012 打开 DCRSample.sln 解决方案文件。
+1. 使用 Visual Studio 2012 打开 DCRSample 解决方案文件。
 
 2. 若要运行解决方案，请按 F5。
 
 > [!IMPORTANT]
->  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
+> 您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+> 如果此目录不存在, 请参阅[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)以下载所有 Windows Communication Foundation (wcf) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\DataContractResolver`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\DataContractResolver`  
   
 ## <a name="see-also"></a>请参阅
 

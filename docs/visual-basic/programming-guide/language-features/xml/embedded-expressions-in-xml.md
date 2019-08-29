@@ -8,21 +8,21 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], embedded expressions
 - XML literals [Visual Basic], embedded expressions
 ms.assetid: bf2eb779-b751-4b7c-854f-9f2161482352
-ms.openlocfilehash: ef8ac62d9d969ce4463931d69b0302376ca0ccc4
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 525fa04db86a299d88e1612aac76d014f35124eb
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65881554"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922622"
 ---
 # <a name="embedded-expressions-in-xml-visual-basic"></a>XML 中的嵌入式表达式 (Visual Basic)
-嵌入的表达式，可以创建包含在运行时计算的表达式的 XML 文本。 嵌入式表达式的语法是`<%=` `expression` `%>`，即在 ASP.NET 中使用的语法相同。  
+使用嵌入式表达式可以创建包含在运行时计算的表达式的 XML 文本。 嵌入式表达式的语法是`<%=` `expression` `%>`, 这与 ASP.NET 中使用的语法相同。  
   
- 例如，您可以创建一个 XML 元素文本，组合嵌入式的表达式包含文字文本内容。  
+ 例如, 可以创建 XML 元素文本, 并将嵌入式表达式与文本内容组合在一起。  
   
  [!code-vb[VbXMLSamples#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#27)]  
   
- 如果`isbnNumber`包含整数 12345 并`modifiedDate`包含的日期 3/5/2006，当此代码执行时，值`book`是：  
+ 如果`isbnNumber`包含整数 12345, 并且`modifiedDate`包含日期 3/5/2006, 则在此代码`book`执行时, 的值为:  
   
 ```xml  
 <book category="fiction" isbn="12345">  
@@ -30,55 +30,55 @@ ms.locfileid: "65881554"
 </book>  
 ```  
   
-## <a name="embedded-expression-location-and-validation"></a>嵌入的表达式的位置和验证  
- 嵌入的表达式只能出现在 XML 文本表达式中的某些位置。 可以返回该类型的表达式的表达式位置控件以及如何`Nothing`进行处理。 下表介绍了允许的位置和嵌入表达式的类型。  
+## <a name="embedded-expression-location-and-validation"></a>嵌入式表达式位置和验证  
+ 嵌入式表达式只能出现在 XML 文本表达式中的某些位置。 表达式位置控制表达式可以返回的类型以及处理方式`Nothing` 。 下表描述了嵌入表达式的允许位置和类型。  
   
-|在文本中的位置|表达式的类型|处理 `Nothing`|  
+|文本中的位置|表达式的类型|处理`Nothing`|  
 |---|---|---|  
 |XML 元素名称|<xref:System.Xml.Linq.XName>|Error|  
-|XML 元素内容|`Object` 或数组 `Object`|忽略|  
-|XML 元素属性名称|<xref:System.Xml.Linq.XName>|错误，除非也是属性值 `Nothing`|  
-|XML 元素特性值|`Object`|忽略的属性声明|  
-|XML 元素特性|<xref:System.Xml.Linq.XAttribute> 或一系列 <xref:System.Xml.Linq.XAttribute>|忽略|  
-|XML 文档根元素|<xref:System.Xml.Linq.XElement> 或其中一个集合<xref:System.Xml.Linq.XElement>对象和任意数量<xref:System.Xml.Linq.XProcessingInstruction>和<xref:System.Xml.Linq.XComment>对象|忽略|  
+|XML 元素内容|`Object`或数组`Object`|忽略|  
+|XML 元素特性名称|<xref:System.Xml.Linq.XName>|错误, 除非该属性值也为`Nothing`|  
+|XML 元素特性值|`Object`|忽略属性声明|  
+|XML 元素特性|<xref:System.Xml.Linq.XAttribute>或的集合<xref:System.Xml.Linq.XAttribute>|忽略|  
+|XML 文档根元素|<xref:System.Xml.Linq.XElement>或一个<xref:System.Xml.Linq.XElement>对象的集合, 以及任意数量的<xref:System.Xml.Linq.XProcessingInstruction>和<xref:System.Xml.Linq.XComment>对象|忽略|  
   
-- XML 元素名称中嵌入表达式的示例：  
+- XML 元素名称中的嵌入表达式的示例:  
   
      [!code-vb[VbXMLSamples#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#32)]  
   
-- XML 元素的内容中嵌入表达式的示例：  
+- XML 元素内容中的嵌入表达式的示例:  
   
      [!code-vb[VbXMLSamples#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#33)]  
   
-- XML 元素属性名称中嵌入表达式的示例：  
+- XML 元素属性名称中的嵌入式表达式的示例:  
   
      [!code-vb[VbXMLSamples#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#34)]  
   
-- 嵌入表达式的 XML 元素特性值中的示例：  
+- XML 元素特性值中的嵌入式表达式的示例:  
   
      [!code-vb[VbXMLSamples#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#35)]  
   
-- XML 元素特性中嵌入表达式的示例：  
+- XML 元素特性中的嵌入式表达式的示例:  
   
      [!code-vb[VbXMLSamples#36](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#36)]  
   
-- XML 文档的根元素中的嵌入式表达式的示例：  
+- XML 文档根元素中的嵌入式表达式的示例:  
   
      [!code-vb[VbXMLSamples#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#37)]  
   
- 如果启用`Option Strict`，编译器会检查每个嵌入表达式的类型加宽到所需的类型。 唯一的例外是在代码运行时验证 XML 文档的根元素。 如果编译而无需`Option Strict`，可以将嵌入类型的表达式`Object`和在运行时验证它们的类型。  
+ 如果启用`Option Strict`, 编译器会检查每个嵌入式表达式的类型是否扩大到了所需的类型。 唯一的例外是在代码运行时验证的 XML 文档的根元素。 如果在不进行`Option Strict`编译的情况下进行编译, `Object`则可以嵌入类型的表达式, 并在运行时验证其类型。  
   
- 可选的内容的位置中嵌入表达式包含`Nothing`将被忽略。 这意味着不需要检查该元素内容中，属性值，并且数组元素不是`Nothing`使用 XML 文本之前。 所需的值，例如元素和属性名称不能为`Nothing`。  
+ 在内容可选的位置中, 将忽略包含`Nothing`的嵌入表达式。 这意味着, 在使用 XML 文本`Nothing`之前, 无需检查元素内容、特性值和数组元素。 必需的值 (如元素和属性名称) 不能`Nothing`为。  
   
- 有关在特定类型的文本中使用嵌入式的表达式的详细信息，请参阅[XML 文档文本](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)， [XML 元素文本](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)。  
+ 有关使用特定类型文本中的嵌入表达式的详细信息, 请参阅[Xml 文档文本](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)和[xml 元素文本](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)。  
   
 ## <a name="scoping-rules"></a>作用域规则  
- 编译器将每个 XML 文本转换为相应的文本类型的构造函数调用。 文本内容和 XML 文本中的嵌入式的表达式作为参数传递给构造函数。 这意味着所有 Visual Basic 编程元素可用于 XML 文本也都都可在其嵌入式表达式。  
+ 编译器将每个 XML 文本转换为相应文本类型的构造函数调用。 XML 文本中的文本内容和嵌入式表达式作为参数传递给构造函数。 这意味着, XML 文本可用的所有 Visual Basic 编程元素也可用于其嵌入式表达式。  
   
- 在 XML 文本中，可以访问的 XML 命名空间前缀声明与`Imports`语句。 您可以声明新的 XML 命名空间前缀，或现有的 XML 命名空间前缀，使用的元素中的卷影`xmlns`属性。 新的命名空间是可用的子节点的该元素，而不是属于 XML 文本中嵌入的表达式。  
+ 在 xml 文本中, 可以访问用`Imports`语句声明的 xml 命名空间前缀。 您可以使用`xmlns`属性在元素中声明新的 xml 命名空间前缀或隐藏现有的 xml 命名空间前缀。 新命名空间可用于该元素的子节点, 但不适用于嵌入的表达式中的 XML 文本。  
   
 > [!NOTE]
->  当使用声明 XML 命名空间前缀`xmlns`命名空间属性的属性值必须是常量字符串。 在这方面，使用`xmlns`属性就像使用`Imports`语句声明 XML 命名空间。 不能使用嵌入式的表达式来指定 XML 命名空间值。  
+> 使用`xmlns` namespace 特性声明 XML 命名空间前缀时, 属性值必须是常量字符串。 在这方面, 使用`xmlns`属性的方式类似于`Imports`使用语句声明 XML 命名空间。 不能使用嵌入的表达式来指定 XML 命名空间值。  
   
 ## <a name="see-also"></a>请参阅
 

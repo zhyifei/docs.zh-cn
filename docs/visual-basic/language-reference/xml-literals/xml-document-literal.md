@@ -9,15 +9,15 @@ helpviewer_keywords:
 - XML documents [Visual Basic], creating
 - document literal [Visual Basic]
 ms.assetid: f7bbee56-0911-41de-b907-96f20450137b
-ms.openlocfilehash: f58c1365e145166dfe122d455854d44526300a1e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8a489be46295c213b7a8b355eb3c9786d49dd8f1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61799302"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69958504"
 ---
 # <a name="xml-document-literal-visual-basic"></a>XML 文档文本 (Visual Basic)
-一个文本表示<xref:System.Xml.Linq.XDocument>对象。  
+表示<xref:System.Xml.Linq.XDocument>对象的文本。  
   
 ## <a name="syntax"></a>语法  
   
@@ -32,26 +32,26 @@ rootElement
   
 |术语|定义|  
 |---|---|  
-|`encoding`|可选。 声明的编码文档使用的文字文本。|  
-|`standalone`|可选。 文字文本。 必须为"yes"或"no"。|  
-|`piCommentList`|可选。 XML 处理指令和 XML 注释的列表。 采用以下格式：<br /><br /> `piComment [` `piComment` `... ]`<br /><br /> 每个`piComment`可以是以下之一：<br /><br /> -   [XML 处理指令文本](../../../visual-basic/language-reference/xml-literals/xml-processing-instruction-literal.md)。<br />-   [XML 注释文本](../../../visual-basic/language-reference/xml-literals/xml-comment-literal.md)。|  
-|`rootElement`|必需。 文档的根元素。 格式为以下值之一：<br /><br /> <ul><li>[XML 元素文本](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)。</li><li>嵌入形式的表达式`<%=` `elementExp` `%>`。 `elementExp`返回以下值之一：<br /><br /> <ul><li>一个 <xref:System.Xml.Linq.XElement> 对象。</li><li>一个集合，包含一个<xref:System.Xml.Linq.XElement>对象和任意数量的<xref:System.Xml.Linq.XProcessingInstruction>和<xref:System.Xml.Linq.XComment>对象。</li></ul></li></ul><br /> 有关详细信息，请参阅[XML 中的嵌入式表达式](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)。|  
+|`encoding`|可选。 声明文档使用的编码的文本文本。|  
+|`standalone`|可选。 文本。 必须是 "是" 或 "否"。|  
+|`piCommentList`|可选。 XML 处理指令和 XML 注释的列表。 采用以下格式:<br /><br /> `piComment [` `piComment` `... ]`<br /><br /> 每`piComment`个可以是以下各项之一:<br /><br /> -   [XML 处理指令文本](../../../visual-basic/language-reference/xml-literals/xml-processing-instruction-literal.md)。<br />-   [XML 注释文本](../../../visual-basic/language-reference/xml-literals/xml-comment-literal.md)。|  
+|`rootElement`|必需。 文档的根元素。 格式为以下格式之一:<br /><br /> <ul><li>[XML 元素文本](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)。</li><li>窗体`<%=` `elementExp`的嵌入式表达式。`%>` `elementExp`返回以下内容之一:<br /><br /> <ul><li>一个 <xref:System.Xml.Linq.XElement> 对象。</li><li>一个集合, 其中包含<xref:System.Xml.Linq.XElement>一个对象和任意数量<xref:System.Xml.Linq.XProcessingInstruction>的<xref:System.Xml.Linq.XComment>和对象。</li></ul></li></ul><br /> 有关详细信息, 请参阅[XML 中的嵌入式表达式](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)。|  
   
 ## <a name="return-value"></a>返回值  
  一个 <xref:System.Xml.Linq.XDocument> 对象。  
   
 ## <a name="remarks"></a>备注  
- XML 文档文本的文本开头的 XML 声明标识。 尽管每个 XML 文档文本必须有且只有一个根 XML 元素，但它可以有任意数量的 XML 处理指令和 XML 注释。  
+ XML 文档文本由文本开头的 XML 声明标识。 虽然每个 XML 文档文本必须只有一个根 XML 元素, 但是它可以有任意数量的 XML 处理指令和 XML 注释。  
   
- XML 文档文本不能出现在一个 XML 元素。  
+ Xml 文档文字不能出现在 XML 元素中。  
   
 > [!NOTE]
->  XML 文本可以跨多个行，而无需使用行继续符。 这使您可以从 XML 文档中复制内容并将其粘贴到 Visual Basic 程序直接。  
+> XML 文本可以跨多行, 而无需使用行继续符。 这使你可以从 XML 文档复制内容并将其直接粘贴到 Visual Basic 程序。  
   
- Visual Basic 编译器将调用转换为 XML 文档文本<xref:System.Xml.Linq.XDocument.%23ctor%2A>和<xref:System.Xml.Linq.XDeclaration.%23ctor%2A>构造函数。  
+ Visual Basic 编译器将 XML 文档文本转换为对和<xref:System.Xml.Linq.XDocument.%23ctor%2A> <xref:System.Xml.Linq.XDeclaration.%23ctor%2A>构造函数的调用。  
   
 ## <a name="example"></a>示例  
- 以下示例创建具有 XML 声明、 处理指令、 注释和一个包含另一个元素的元素的 XML 文档。  
+ 下面的示例创建一个 XML 文档, 该文档具有 XML 声明、处理指令、注释以及包含其他元素的元素。  
   
  [!code-vb[VbXMLSamples#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#30)]  
   

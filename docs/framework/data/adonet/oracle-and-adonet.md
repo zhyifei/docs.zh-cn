@@ -5,22 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8ee8e389-53cf-45cf-80bd-1df63ef34f2e
-ms.openlocfilehash: 012a5b55d052f5f06da5c152da79f4676b2bff4e
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 381f796bec31bece354001ad46bf5079381d1b3d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877952"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69914557"
 ---
 # <a name="oracle-and-adonet"></a>Oracle 和 ADO.NET
 > [!NOTE]
->  <xref:System.Data.OracleClient> 中的类型已过时。 当前版本的 .NET Framework 仍支持这些类型，但以后的版本会将这些类型删除。 Microsoft 建议您使用第三方 Oracle 提供程序。  
+> <xref:System.Data.OracleClient> 中的类型已过时。 当前版本的 .NET Framework 仍支持这些类型，但以后的版本会将这些类型删除。 Microsoft 建议您使用第三方 Oracle 提供程序。  
   
- 本部分介绍功能和特定于 Oracle.NET Framework 数据提供程序的行为。  
+ 本节介绍特定于 Oracle .NET Framework 数据提供程序的功能和行为。  
   
- 适用于 Oracle 的.NET Framework 数据提供程序提供了对使用 Oracle 调用接口 (OCI) 提供的 Oracle 客户端软件的 Oracle 数据库的访问。 数据提供程序的功能被设计为类似于 SQL Server、 OLE DB 和 ODBC 的.NET Framework 数据提供程序。  
+ 用于 Oracle 的 .NET Framework 数据提供程序使用 oracle 客户端软件提供的 Oracle 调用接口 (OCI) 来访问 Oracle 数据库。 数据提供程序的功能与 SQL Server、OLE DB 和 ODBC 的 .NET Framework 数据提供程序的功能类似。  
   
- 若要使用用于 Oracle 的.NET Framework 数据提供程序，应用程序必须引用<xref:System.Data.OracleClient>命名空间，如下所示：  
+ 若要使用适用于 Oracle 的 .NET Framework 数据提供程序, 应用程序<xref:System.Data.OracleClient>必须引用命名空间, 如下所示:  
   
 ```vb  
 Imports System.Data.OracleClient  
@@ -38,7 +38,7 @@ csc /r:System.Data.OracleClient.dll
   
 ## <a name="in-this-section"></a>本节内容  
  [系统要求](../../../../docs/framework/data/adonet/system-requirements-for-the-dotnet-data-provider-for-oracle.md)  
- 介绍了对于 Oracle，使用.NET Framework 数据提供程序的要求以及要使用它时应注意的问题数。  
+ 描述使用适用于 Oracle 的 .NET Framework 数据提供程序的要求, 并介绍使用它时要注意的一些问题。  
   
  [Oracle BFILEs](../../../../docs/framework/data/adonet/oracle-bfiles.md)  
  描述用于使用 Oracle BFILE 数据类型的 <xref:System.Data.OracleClient.OracleBFile> 类。  

@@ -1,25 +1,25 @@
 ---
-title: <customTrackingQuery> WCF 的
+title: <customTrackingQuery>WCF 的
 ms.date: 03/30/2017
 ms.assetid: 164446ae-8440-4b67-b217-6786cfae1e01
-ms.openlocfilehash: 0a5e7c034ce1ef12a8d7d5b1753e2e441e48e293
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b034727dc89b58794ec2834cb0ff39cd7e5f1dca
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673168"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919365"
 ---
-# <a name="customtrackingquery-of-wcf"></a>\<customTrackingQuery > 的 WCF
+# <a name="customtrackingquery-of-wcf"></a>\<WCF 的 customTrackingQuery >
 
-表示用于跟踪你代码活动中定义的事件的查询。 跟踪参与者需要用此查询来订阅自定义跟踪记录。
+表示一个查询, 该查询用于跟踪您在代码活动中定义的事件。 跟踪参与者需要用此查询来订阅自定义跟踪记录。
 
-有关跟踪配置文件查询的详细信息，请参阅[跟踪配置文件](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
+有关跟踪配置文件查询的详细信息, 请参阅[跟踪配置文件](../../../windows-workflow-foundation/tracking-profiles.md)  
   
 \<system.serviceModel>  
-\<tracking>  
+\<跟踪 >  
 \<配置文件 >  
 \<trackingProfile>  
-\<workflow>  
+\<工作流 >  
 \<customTrackingQueries>  
 \<customTrackingQuery>  
   
@@ -65,5 +65,5 @@ ms.locfileid: "61673168"
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.CustomTrackingQueryElementCollection?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.CustomTrackingQuery?displayProperty=nameWithType>
-- [工作流跟踪](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [跟踪配置文件](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+- [工作流跟踪](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [跟踪配置文件](../../../windows-workflow-foundation/tracking-profiles.md)

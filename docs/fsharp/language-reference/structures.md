@@ -2,12 +2,12 @@
 title: 结构
 description: 了解F#结构, 对于具有少量数据和简单行为的类型, 精简对象类型通常比类更有效。
 ms.date: 05/16/2016
-ms.openlocfilehash: e638b450fe43e0993c9980cade246c3f26d25e2d
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 1e9652cc4776e4d1d52eb20e41b6dd87a6c5ba05
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630769"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106814"
 ---
 # <a name="structures"></a>结构
 
@@ -66,16 +66,16 @@ type S(count1: Span<int>, count2: Span<int>) =
 
 中F#的`byref`"like" 结构是堆栈绑定值类型。 永远不会在托管堆上分配。 `byref`类似的结构可用于实现高性能编程, 因为它是针对生存期和非捕获的一组强检查强制实施的。 规则如下:
 
-* 它们可用作函数参数、方法参数、局部变量、方法返回。
-* 它们不能是类或普通结构的静态成员或实例成员。
-* 它们不能由任何闭包构造 (`async`方法或 lambda 表达式) 捕获。
-* 它们不能用作泛型参数。
+- 它们可用作函数参数、方法参数、局部变量、方法返回。
+- 它们不能是类或普通结构的静态成员或实例成员。
+- 它们不能由任何闭包构造 (`async`方法或 lambda 表达式) 捕获。
+- 它们不能用作泛型参数。
 
 尽管这些规则非常严格地限制使用, 但它们会以安全的方式满足高性能计算的承诺。
 
 ## <a name="readonly-structs"></a>ReadOnly 结构
 
-您可以用<xref:System.Runtime.CompilerServices.IsReadOnlyAttribute>属性批注结构。 例如：
+您可以用<xref:System.Runtime.CompilerServices.IsReadOnlyAttribute>属性批注结构。 例如:
 
 ```fsharp
 [<IsReadOnly; Struct>]

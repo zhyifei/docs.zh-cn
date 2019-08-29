@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0fc18634-f590-4062-8d5c-f0b71abe405b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 63a3ee099d4256a4bc800f74615fca8eaec2a77f
-ms.sourcegitcommit: ced0cccf15adfd492f8196cb739f01dde52c9252
+ms.openlocfilehash: 57198cb9fb0042a3a74589e2781b3db1a2b829f1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67135683"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963382"
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>正则表达式中的分组构造
 分组构造描述了正则表达式的子表达式，用于捕获输入字符串的子字符串。 你可以使用分组构造来完成下列任务：  
@@ -59,7 +59,7 @@ ms.locfileid: "67135683"
  其中 *子表达式* 为任何有效正则表达式模式。 使用括号的捕获按正则表达式中左括号的顺序从一开始从左到右自动编号。 捕获元素编号为零的捕获是由整个正则表达式模式匹配的文本。  
   
 > [!NOTE]
->  默认情况下， `(`*子表达式*`)` 语言元素捕获匹配的子表达式。 但是，如果正则表达式模式匹配方法的 <xref:System.Text.RegularExpressions.RegexOptions> 参数包含 <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> 标志，或者如果 `n` 选项应用于此子表达式（参见本主题后面的 [组选项](#group_options) ），则不会捕获匹配的子表达式。  
+> 默认情况下， `(`*子表达式*`)` 语言元素捕获匹配的子表达式。 但是，如果正则表达式模式匹配方法的 <xref:System.Text.RegularExpressions.RegexOptions> 参数包含 <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> 标志，或者如果 `n` 选项应用于此子表达式（参见本主题后面的 [组选项](#group_options) ），则不会捕获匹配的子表达式。  
   
  可以四种方法访问捕获的组：  
   
@@ -69,7 +69,7 @@ ms.locfileid: "67135683"
   
 - 通过使用 `$`*数字* $ <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> number <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 替换序列，其中 *数字* 是捕获的表达式的初始数字。  
   
-- 以编程的方式，通过使用 <xref:System.Text.RegularExpressions.GroupCollection> 对象的方式，该对象由 <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> 属性返回。 集合中位置零上的成员表示正则表达式匹配。 每个后续成员表示匹配的子表达式。 有关更多信息，请参见 [Grouping Constructs and Regular Expression Objects](#Objects) 一节。  
+- 以编程的方式，通过使用 <xref:System.Text.RegularExpressions.GroupCollection> 对象的方式，该对象由 <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> 属性返回。 集合中位置零上的成员表示正则表达式匹配。 每个后续成员表示匹配的子表达式。 有关更多信息，请参见 [分组构造和正则表达式对象](#Objects) 一节。  
   
  以下示例阐释表示文本中重复单词的正则表达式。 正则表达式模式的两个捕获组表示重复的单词的两个实例。 捕获第二个实例，以报告它在输入字符串的起始位置。  
   
@@ -108,7 +108,7 @@ ms.locfileid: "67135683"
  其中 *名称* 是有效的组名称，而 *子表达式* 是任何有效的正则表达式模式。 *名称* 不得包含任何标点符号字符，并且不能以数字开头。  
   
 > [!NOTE]
->  如果正则表达式模式匹配方法的 <xref:System.Text.RegularExpressions.RegexOptions> 参数包含 <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> 标志，或者如果 `n` 选项应用于此子表达式（参见本主题后面的 [组选项](#group_options) ），则捕获子表达式的唯一方法就是显式命名捕获组。  
+> 如果正则表达式模式匹配方法的 <xref:System.Text.RegularExpressions.RegexOptions> 参数包含 <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> 标志，或者如果 `n` 选项应用于此子表达式（参见本主题后面的 [组选项](#group_options) ），则捕获子表达式的唯一方法就是显式命名捕获组。  
   
  可用以下方式访问已命名的捕获组：  
   
@@ -131,8 +131,8 @@ ms.locfileid: "67135683"
 |0|0（默认名称）|`((?<One>abc)\d+)?(?<Two>xyz)(.*)`|  
 |1|1（默认名称）|`((?<One>abc)\d+)`|  
 |2|2（默认名称）|`(.*)`|  
-|3|一|`(?<One>abc)`|  
-|4|二|`(?<Two>xyz)`|  
+|3|One|`(?<One>abc)`|  
+|4|Two|`(?<Two>xyz)`|  
   
  下面的示例阐释了一个正则表达式，标识出重复的单词和紧随每个重复的单词的单词。 正则表达式模式定义了两个命名的子表达式： `duplicateWord`，它表示重复的单词；和 `nextWord`，它表示后面跟随重复单词的单词。  
   
@@ -190,7 +190,7 @@ ms.locfileid: "67135683"
  平衡组定义将 *name2* 作为堆栈使用。 将每个嵌套构造的开头字符放在组中，并放在其 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> 集合中。 当匹配结束字符时，从组中删除其相应的开始字符，并且 <xref:System.Text.RegularExpressions.Group.Captures%2A> 集合减少 1。 所有嵌套构造的开始和结束字符匹配完后，name2  为空。  
   
 > [!NOTE]
->  通过修改下面示例中的正则表达式来使用合适的嵌套构造的开始和结束字符后，你可以用它来处理多数嵌套构造，如数学表达式或包括多个嵌套方法调用的程序代码行。  
+> 通过修改下面示例中的正则表达式来使用合适的嵌套构造的开始和结束字符后，你可以用它来处理多数嵌套构造，如数学表达式或包括多个嵌套方法调用的程序代码行。  
   
  下面的示例使用平衡组定义匹配输入字符串中的左右尖括号 (<>)。 该示例定义两个已命名的组， `Open` 和 `Close`，用作堆栈来跟踪配对的尖括号。 将每个已捕获的左尖括号推入到 `Open` 组的捕获集合，而将每个已捕获的右尖括号推入到 `Close` 组的捕获集合。 平衡组定义确保每个左尖括号都有一个匹配的右尖角括号。 如果没有，则仅会在 `(?(Open)(?!))`组不为空的情况下计算最终子模式 `Open` 的值（因此，如果所有嵌套构造尚未关闭）。 如果计算了最终子模式的值，则匹配将失败，因为 `(?!)` 子模式是始终失败的零宽度负预测先行断言。  
   
@@ -211,7 +211,7 @@ ms.locfileid: "67135683"
 |`[^<>]*`|匹配零个或多个不是左侧或右侧角度方括号的字符。|  
 |`(?'Open'<)`|匹配左尖括号并分配给名为 `Open`的组。|  
 |`[^<>]*`|匹配零个或多个不是左侧或右侧角度方括号的字符。|  
-|`((?'Open'<)[^<>]*) +`|匹配跟在非左尖括号或非右尖括号的零个或多个字符后面的一个或多个左尖括号匹配项。 这是第二个捕获组。|  
+|`((?'Open'<)[^<>]*)+`|匹配跟在非左尖括号或非右尖括号的零个或多个字符后面的一个或多个左尖括号匹配项。 这是第二个捕获组。|  
 |`(?'Close-Open'>)`|匹配右尖括号，将 `Open` 组和当前组分配给 `Close` 组并删除 `Open` 组的定义。|  
 |`[^<>]*`|匹配非左尖括号或非右尖括号的任何字符的零个或多个匹配项。|  
 |`((?'Close-Open'>)[^<>]*)+`|匹配跟在零后面或跟在非左尖括号或非右尖括号的多个字符后面的一个或多个右尖括号匹配项。 在匹配右尖括号时，将 `Open` 组和当前组分配给 `Close` 组并删除 `Open` 组的定义。 这是第三个捕获组。|  
@@ -219,7 +219,7 @@ ms.locfileid: "67135683"
 |`(?(Open)(?!))`|如果 `Open` 组存在，并可以匹配空字符串，则放弃匹配，但不前移字符串中的正则表达式引擎的位置。 这是零宽度负预测先行断言。 因为空字符串总是隐式地存在于输入字符串中，所以此匹配始终失败。 此匹配的失败表示尖括号不平衡。|  
 |`$`|匹配输入字符串的末尾部分。|  
   
- 最终子表达式 `(?(Open)(?!))`，指示是否正确平衡输入字符串中的嵌套构造（例如，是否每个左尖括号由右键括号匹配）。 它使用基于有效的捕获组的条件匹配，有关详细信息请参阅 [Alternation Constructs](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)。 如果定义了 `Open` 组，则正则表达式引擎会尝试匹配输入字符串中的子表达式 `(?!)` 。 仅当嵌套构造不均衡时，才应该定义 `Open` 组。 因此，要在输入字符串中匹配的模式应该是一个始终导致匹配失败的模式。 在此情况下， `(?!)` 是始终失败的零宽度负预测先行断言，因为空字符串总是隐式地存在于输入字符串中的下一个位置。  
+ 最终子表达式 `(?(Open)(?!))`，指示是否正确平衡输入字符串中的嵌套构造（例如，是否每个左尖括号由右键括号匹配）。 它使用基于有效的捕获组的条件匹配，有关详细信息请参阅 [替换构造](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)。 如果定义了 `Open` 组，则正则表达式引擎会尝试匹配输入字符串中的子表达式 `(?!)` 。 仅当嵌套构造不均衡时，才应该定义 `Open` 组。 因此，要在输入字符串中匹配的模式应该是一个始终导致匹配失败的模式。 在此情况下， `(?!)` 是始终失败的零宽度负预测先行断言，因为空字符串总是隐式地存在于输入字符串中的下一个位置。  
   
  在此示例中，正则表达式引擎计算输入字符串“\<abc><mno\<xyz>>”，如下表所示。  
   
@@ -234,13 +234,13 @@ ms.locfileid: "67135683"
 |7|`[^<>]*`|查找右尖括号之后的非尖括号字符；未找到匹配项。|  
 |8|`)+`|第三个捕获组的值是“>”。<br /><br /> 输入字符串中的下一个字符不是右尖括号，因此正则表达式引擎不会循环回到 `((?'Close-Open'>)[^<>]*)` 子模式。|  
 |9|`)*`|第一个捕获组的值是“\<abc>”。<br /><br /> 输入字符串中的下一个字符是左尖括号，因此正则表达式引擎会循环回到 `(((?'Open'<)` 子模式。|  
-|10|`(((?'Open'<)`|匹配“\<mno>”中的左尖括号，并将它分配给 `Open` 组。 其 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> 集合现在具有单个值“<”。|  
+|10|`(((?'Open'<)`|匹配“\<mno”中的左尖括号，并将它分配给 `Open` 组。 其 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> 集合现在具有单个值“<”。|  
 |11|`[^<>]*`|与“mno”匹配。|  
 |12|`)+`|“<mno”是第二个捕获组的值。<br /><br /> 输入字符串中的下一个字符是左尖括号，因此正则表达式引擎会循环回到 `(?'Open'<)[^<>]*)` 子模式。|  
-|13|`(((?'Open'<)`|匹配“\<xyz>”中的左尖括号，并将它分配给 `Open` 组。 `Open` 组的 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> 集合现在包括两个捕获：“\<mno>”中的左尖括号和“\<xyz>”中的左尖括号。|  
+|13|`(((?'Open'<)`|匹配“\<xyz>”中的左尖括号，并将它分配给 `Open` 组。 `Open` 组的 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> 集合现在包括两个捕获：“\<mno”中的左尖括号和“\<xyz>”中的左尖括号。|  
 |14|`[^<>]*`|与“xyz”匹配。|  
 |15|`)+`|“<xyz”是第二个捕获组的值。<br /><br /> 输入字符串中的下一个字符不是左尖括号，因此正则表达式引擎不会循环回到 `(?'Open'<)[^<>]*)` 子模式。|  
-|16|`((?'Close-Open'>)`|匹配“\<xyz>”中的右尖括号。 “xyz”将 `Open` 组合右尖括号之间的子字符串分配给 `Close` 组，并删除 `Open` 组的当前值。 前一个捕获的值（“\<mno>”中的左尖括号）成为 `Open` 组的当前值。 `Open` 组的 <xref:System.Text.RegularExpressions.Group.Captures%2A> 集合现在包括一个捕获，即“\<xyz>”中的左尖括号。|  
+|16|`((?'Close-Open'>)`|匹配“\<xyz>”中的右尖括号。 “xyz”将 `Open` 组合右尖括号之间的子字符串分配给 `Close` 组，并删除 `Open` 组的当前值。 前一个捕获的值（“\<mno”中的左尖括号）成为 `Open` 组的当前值。 `Open` 组的 <xref:System.Text.RegularExpressions.Group.Captures%2A> 集合现在包括一个捕获，即“\<xyz>”中的左尖括号。|  
 |17|`[^<>]*`|查找非尖括号字符；未找到匹配项。|  
 |18|`)+`|第三个捕获组的值是“>”。<br /><br /> 输入字符串中的下一个字符是右尖括号，因此正则表达式引擎会循环回到 `((?'Close-Open'>)[^<>]*)` 子模式。|  
 |19|`((?'Close-Open'>)`|匹配“xyz>>”中的最后一个右尖括号，将“mno\<xyz>”（`Open` 组和右尖括号之间的子字符串）分配给 `Close` 组，并删除 `Open` 组的当前值。 `Open` 组现在为空。|  
@@ -261,7 +261,7 @@ ms.locfileid: "67135683"
  其中 *子表达式* 为任何有效正则表达式模式。 当一个限定符应用到一个组，但组捕获的子字符串并非所需时，通常会使用非捕获组构造。  
   
 > [!NOTE]
->  如果正则表达式包含嵌套的分组构造，则外部非捕获组构造不适用于内部嵌套组构造。  
+> 如果正则表达式包含嵌套的分组构造，则外部非捕获组构造不适用于内部嵌套组构造。  
   
  下面的示例阐释包括非捕获组的正则表达式。 请注意输出不包含任何已捕获的组。  
   
@@ -287,7 +287,7 @@ ms.locfileid: "67135683"
  其中 *子表达式* 为任何有效正则表达式模式。 例如， `(?i-s:)` 将打开不区分大小写并禁用单行模式。 有关可以指定的内联选项的更多信息，请参见 [正则表达式选项](../../../docs/standard/base-types/regular-expression-options.md)。  
   
 > [!NOTE]
->  可以指定将应用于整个正则表达式，而不是子表达式的选项，方法是使用 <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> 类构造函数或静态方法。 也可指定在正则表达式特定点后使用的内联选项，方法是使用 `(?imnsx-imnsx)` 语言构造。  
+> 可以指定将应用于整个正则表达式，而不是子表达式的选项，方法是使用 <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> 类构造函数或静态方法。 也可指定在正则表达式特定点后使用的内联选项，方法是使用 `(?imnsx-imnsx)` 语言构造。  
   
  组的选项构造并非捕获组。 即尽管 *子表达式* 捕获的字符串的任意部分包含在匹配中，但不会包含在捕获的组中也不会用于填充 <xref:System.Text.RegularExpressions.GroupCollection> 对象。  
   
@@ -296,7 +296,7 @@ ms.locfileid: "67135683"
 |模式|说明|  
 |-------------|-----------------|  
 |`\b`|在单词边界处开始匹配。|  
-|`(?ix: d \w+)`|使用不区分大小写的匹配并忽略此模式中的白色空间，匹配后跟一个或多个单词字符的“d”。|  
+|`(?ix: d \w+)`|使用不区分大小写的匹配并忽略此模式中的空白，匹配后跟一个或多个单词字符的“d”。|  
 |`\s`|与空白字符匹配。|  
   
  [!code-csharp[Conceptual.Regex.Language.Options#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/example1.cs#8)]
@@ -396,7 +396,7 @@ ms.locfileid: "67135683"
   
  其中 *子表达式* 为任何正则表达式模式。 若要成功匹配，则 *子表达式* 不得在输入字符串当前位置的左侧出现。 但是，任何不匹配 `subexpression` 的子字符串不包含在匹配结果中。  
   
- 零宽度负回顾后发断言通常在正则表达式的开头使用。 它们定义的模式预先排除在后面的字符串中的匹配项。 它们还用于在捕获组中的最后一个或多个字符不得为与该捕获组的正则表达式模式相匹配的其中一个或多个字符时限制回溯。 例如，如果如果组捕获了所有的连续单词字符，可以使用零宽度正回顾后发断言要求最后一个字符不是下划线 (_)。  
+ 零宽度负回顾后发断言通常在正则表达式的开头使用。 它们定义的模式预先排除在后面的字符串中的匹配项。 它们还用于在捕获组中的最后一个或多个字符不得为与该捕获组的正则表达式模式相匹配的其中一个或多个字符时限制回溯。 例如，如果如果组捕获了所有的连续单词字符，可以使用零宽度正回顾后发断言要求最后一个字符不是下划线 (\_)。  
   
  下面的示例匹配除周末之外的一周的任何一天（也就是星期六和星期日都没有）。  
   
@@ -466,7 +466,9 @@ ms.locfileid: "67135683"
 |`\b`|在单词边界处开始匹配。|  
 |`(\w+)`|匹配一个或多个单词字符。 这些字符一起构成一个单词。 这是第二个捕获组。|  
 |`\W+`|匹配一个或多个非单词字符。|  
+
 |`(\b(\w+)\W+)`|匹配一个或多个单词字符的模式，然后匹配一个或多个非单词字符一次或多次。 这是第一个捕获组。|  
+
   
  第二个捕获组匹配句子的每个单词。 第一个捕获组匹配每个单词，连同标点符号和该单词后的空白区域。 <xref:System.Text.RegularExpressions.Group> 对象的索引是 2，提供了有关由第二个捕获组匹配的文本的信息。 可从 <xref:System.Text.RegularExpressions.CaptureCollection> 对象获取捕获组捕获的整组单词，该对象由 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> 属性返回。  
   

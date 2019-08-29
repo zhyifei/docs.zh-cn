@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 2e7ca21f-786c-4367-96be-0cf3f3dcc6bd
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0bc333a828a9d18cd5ad98af42a91c1d53c2569b
-ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
+ms.openlocfilehash: 4c7ffa98aec115db2d8c9a40e977f8cb7d33441a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66816205"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962984"
 ---
 # <a name="thread-safe-collections"></a>线程安全集合
 .NET Framework 4 引入了 <xref:System.Collections.Concurrent?displayProperty=nameWithType> 命名空间，其中包含多个线程安全且可缩放的集合类。 多个线程可以安全高效地从这些集合添加或删除项，而无需在用户代码中进行其他同步。 编写新代码时，只要将多个线程同时写入到集合时，就使用并发集合类。 如果仅从共享集合进行读取，则可使用 <xref:System.Collections.Generic?displayProperty=nameWithType> 命名空间中的类。 建议不要使用 1.0 集合类，除非需要定位 .NET Framework 1.1 或更低版本运行时。  
@@ -30,7 +30,7 @@ ms.locfileid: "66816205"
  <xref:System.Collections.Concurrent.ConcurrentQueue%601> 和 <xref:System.Collections.Concurrent.ConcurrentStack%601> 类完全不使用锁定。 相反，它们依赖于 <xref:System.Threading.Interlocked> 操作来实现线程安全性。  
   
 > [!NOTE]
->  由于并发集合类支持 <xref:System.Collections.ICollection>，因此该类可提供针对 <xref:System.Collections.ICollection.IsSynchronized%2A> 和 <xref:System.Collections.ICollection.SyncRoot%2A> 属性的实现，即使这些属性不相关。 `IsSynchronized` 始终返回 `false`，而 `SyncRoot` 始终为 `null`（在 Visual Basic 中是 `Nothing`）。  
+> 由于并发集合类支持 <xref:System.Collections.ICollection>，因此该类可提供针对 <xref:System.Collections.ICollection.IsSynchronized%2A> 和 <xref:System.Collections.ICollection.SyncRoot%2A> 属性的实现，即使这些属性不相关。 `IsSynchronized` 始终返回 `false`，而 `SyncRoot` 始终为 `null`（在 Visual Basic 中是 `Nothing`）。  
   
  下表列出了 <xref:System.Collections.Concurrent?displayProperty=nameWithType> 命名空间中的集合类型。  
   

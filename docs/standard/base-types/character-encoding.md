@@ -14,12 +14,12 @@ ms.assetid: bf6d9823-4c2d-48af-b280-919c5af66ae9
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: ac4de843b3a134b840fc37e3c1d8327fe0010d79
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: 82b936b753dff4230be6162583a50524e8c5254b
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65960330"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69987180"
 ---
 # <a name="character-encoding-in-net"></a>.NET 中的字符编码
 字符是可以许多不同的方式表示的抽象实体。 字符编码是用代表字符的某个值与受支持的字符集中的每个字符配对的系统。 例如，莫尔斯电码就是一种用点线模式与罗马字母表中的每个字符（适合通过电报线路进行传输）进行配对的字符编码。 计算机的字符编码将代表字符的数字值与受支持的字符集中的每个字符配对。 一种字符编码有两个不同组件：  
@@ -31,7 +31,7 @@ ms.locfileid: "65960330"
  字符编码描述编码器和解码器操作所依据的规则。 例如， <xref:System.Text.UTF8Encoding> 类描述编码为 8 位 Unicode 转换格式 (UTF-8) 和从其进行解码的规则，该格式使用一至四个字节来表示单个 Unicode 字符。 编码和解码还可以包括验证。 例如， <xref:System.Text.UnicodeEncoding> 类将检查所有代理项以确保它们构成有效的代理项对。 （代理项对由码位范围从 U + D800 到 U + DBFF 的字符后跟码位范围从 U + DC00 到 U + DFFF 的字符组成。）回退策略确定编码器处理无效字符的方式或解码器处理无效字节的方式。  
   
 > [!WARNING]
->  .NET 编码类可用于存储和转换字符数据。 它们不应用于存储字符串形式的二进制数据。 根据所使用的编码，用编码类将二进制数据转换为字符串格式可引起意外的行为，并生成不准确或损坏的数据。 若要将二进制数据转换为字符串形式，请使用 <xref:System.Convert.ToBase64String%2A?displayProperty=nameWithType> 方法。  
+> .NET 编码类可用于存储和转换字符数据。 它们不应用于存储字符串形式的二进制数据。 根据所使用的编码，用编码类将二进制数据转换为字符串格式可引起意外的行为，并生成不准确或损坏的数据。 若要将二进制数据转换为字符串形式，请使用 <xref:System.Convert.ToBase64String%2A?displayProperty=nameWithType> 方法。  
   
  .NET 使用 UTF-16 编码（由 <xref:System.Text.UnicodeEncoding> 类表示）来表示字符和字符串。 面向公共语言运行时的应用程序使用编码器将公共语言运行时支持的 Unicode 字符表示形式映射为其他的编码模式。 它们使用解码器将来自非 Unicode 的编码映射为 Unicode 字符。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "65960330"
 - 调用 <xref:System.Text.Encoding.GetEncoding%2A?displayProperty=nameWithType> 方法，此方法返回 .NET 中的任何标准编码、代码页编码或 DBCS 编码。 可通过重载同时指定编码器和解码器的回退对象。  
   
 > [!NOTE]
->  Unicode Standard 将码位（数字）和名称指派给每个受支持脚本中的各字符。 例如，码位 U+0041 表示字符“A”，“LATIN CAPITAL LETTER A”表示名称。 Unicode 转换格式 (UTF) 编码定义将码位编码为一系列一个或多个字节的方式。 Unicode 编码方案简化全球通用的应用程序的开发，因为它允许以单个编码表示任何字符集中的字符。 应用程序开发人员不再需要跟踪用于为特定语言或写入系统生成字符的编码方案，且数据可以在全球系统间共享，而不被损坏。  
+> Unicode Standard 将码位（数字）和名称指派给每个受支持脚本中的各字符。 例如，码位 U+0041 表示字符“A”，“LATIN CAPITAL LETTER A”表示名称。 Unicode 转换格式 (UTF) 编码定义将码位编码为一系列一个或多个字节的方式。 Unicode 编码方案简化全球通用的应用程序的开发，因为它允许以单个编码表示任何字符集中的字符。 应用程序开发人员不再需要跟踪用于为特定语言或写入系统生成字符的编码方案，且数据可以在全球系统间共享，而不被损坏。  
 >   
 >  .NET 支持由 Unicode 标准定义的三种编码：UTF-8、UTF-16 和 UTF-32。 有关详细信息，请访问 [Unicode 主页](https://www.unicode.org/)，以了解 Unicode Standard。  
   
@@ -137,19 +137,19 @@ ms.locfileid: "65960330"
 - Exception Fallback  
   
 > [!IMPORTANT]
->  当某一 Unicode 字符不能映射到特定代码页编码时，在编码操作中将发生最常见的问题。 当无效的字节序列无法转换为有效的 Unicode 字符，在解码操作中将发生最常见的问题。 出于这些原因，应该了解特定的编码对象使用哪种回退策略。 只要有可能，应指定实例化对象时编码对象使用的回退策略。  
+> 当某一 Unicode 字符不能映射到特定代码页编码时，在编码操作中将发生最常见的问题。 当无效的字节序列无法转换为有效的 Unicode 字符，在解码操作中将发生最常见的问题。 出于这些原因，应该了解特定的编码对象使用哪种回退策略。 只要有可能，应指定实例化对象时编码对象使用的回退策略。  
   
 <a name="BestFit"></a>   
 ### <a name="best-fit-fallback"></a>Best-Fit Fallback  
  当一个字符在目标编码中不具有准确匹配时，编码器可以尝试将其映射到类似的字符。 （最佳回退主要是编码问题而非解码问题。 很少有代码页包含无法成功映射到 Unicode 的字符。）最佳回退是代码页的默认设置，以及 <xref:System.Text.Encoding.GetEncoding%28System.Int32%29?displayProperty=nameWithType> 和 <xref:System.Text.Encoding.GetEncoding%28System.String%29?displayProperty=nameWithType> 重载检索的双字节字符集编码。  
   
 > [!NOTE]
->  从理论上讲，.NET 中的 Unicode 编码类（<xref:System.Text.UTF8Encoding>、<xref:System.Text.UnicodeEncoding> 和 <xref:System.Text.UTF32Encoding>）支持所有字符集中的每个字符，因此可用于消除最佳匹配回退问题。  
+> 从理论上讲，.NET 中的 Unicode 编码类（<xref:System.Text.UTF8Encoding>、<xref:System.Text.UnicodeEncoding> 和 <xref:System.Text.UTF32Encoding>）支持所有字符集中的每个字符，因此可用于消除最佳匹配回退问题。  
   
  最佳匹配策略因代码页而异。 例如，对于某些代码页，全角拉丁字符映射到更常见的半角拉丁字符。 对于其他代码页，不进行此映射。 即使是在积极的最佳策略下，也不能完全适合某些编码中的某些字符。 例如，中文象形文字不具有到代码页 1252 的合理映射。 在这种情况下，使用替换字符串。 默认情况下，此字符串只是一个问号 (U+003F)。  
   
 > [!NOTE]
->  最佳匹配策略不会得到详细记录。 不过，[Unicode 联盟](https://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/WindowsBestFit/)网站上记录了多个代码页。 若要了解如何解释映射文件，请查看相应文件夹中的 readme.txt 文件。
+> 最佳匹配策略不会得到详细记录。 不过，[Unicode 联盟](https://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/WindowsBestFit/)网站上记录了多个代码页。 若要了解如何解释映射文件，请查看相应文件夹中的 readme.txt  文件。
   
  下面的示例使用代码页 1252 （适合西欧语言 Windows 代码页）演示最佳映射及其缺点。 <xref:System.Text.Encoding.GetEncoding%28System.Int32%29?displayProperty=nameWithType> 方法用于检索代码页 1252 的编码对象。 默认情况下，它使用其不支持的 Unicode 字符的最佳映射。 该示例将包含三个非 ASCII 字符的字符串实例化，这三个字符分别为带圆圈拉丁文大写字母 S (U+24C8)、上标五 (U+2075) 和无穷大 (U+221E) 且由空格分隔。 如示例输出所示，当对字符串进行编码时，三个原始的非空格字符替换为问号 (U+003F)、数字五 (U+0035) 和数字八 (U+0038)。 数字八是对不受支持的无穷大字符的不良替换，问号指示没有映射可用于原始字符。  
   
@@ -159,7 +159,7 @@ ms.locfileid: "65960330"
  最佳映射是 <xref:System.Text.Encoding> 对象的默认行为，该对象将 Unicode 数据编码为代码页数据，并且存在依赖此行为的旧版应用程序。 但是，为了安全起见，大多数新应用程序应避免最佳行为。 例如，应用程序不应通过最佳编码放置域名。  
   
 > [!NOTE]
->  还可实现编码的自定义最佳回退映射。 有关详细信息，请参阅 [Implementing a Custom Fallback Strategy](../../../docs/standard/base-types/character-encoding.md#Custom) 一节。  
+> 还可实现编码的自定义最佳回退映射。 有关详细信息，请参阅 [Implementing a Custom Fallback Strategy](../../../docs/standard/base-types/character-encoding.md#Custom) 一节。  
   
  如果最佳回退是编码对象的默认设置，当通过调用 <xref:System.Text.Encoding> 或 <xref:System.Text.Encoding.GetEncoding%28System.Int32%2CSystem.Text.EncoderFallback%2CSystem.Text.DecoderFallback%29?displayProperty=nameWithType> 重载检索. <xref:System.Text.Encoding.GetEncoding%28System.String%2CSystem.Text.EncoderFallback%2CSystem.Text.DecoderFallback%29?displayProperty=nameWithType> 对象时，可选择另一个回退策略。 以下一节的内容包括一个示例，该示例用星号 (*) 替换每个不可映射到代码页 1252 的每个字符。  
   
@@ -179,7 +179,7 @@ ms.locfileid: "65960330"
  [!code-vb[Conceptual.Encoding#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.encoding/vb/bestfit1a.vb#3)]  
   
 > [!NOTE]
->  还可以实现编码的替换类。 有关详细信息，请参阅 [Implementing a Custom Fallback Strategy](../../../docs/standard/base-types/character-encoding.md#Custom) 一节。  
+> 还可以实现编码的替换类。 有关详细信息，请参阅 [Implementing a Custom Fallback Strategy](../../../docs/standard/base-types/character-encoding.md#Custom) 一节。  
   
  除了问号 (U+003F) 外，Unicode 替换字符 (U+FFFD) 通常用作替换字符串，特别是当解码无法成功转换为 Unicode 字符的字节序列时。 但是，你可以自由选择任何替换字符串，并且它可以包含多个字符。  
   
@@ -191,7 +191,7 @@ ms.locfileid: "65960330"
  [!code-vb[Conceptual.Encoding#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.encoding/vb/exceptionascii.vb#4)]  
   
 > [!NOTE]
->  还可以实现编码操作的自定义异常处理程序。 有关详细信息，请参阅 [Implementing a Custom Fallback Strategy](../../../docs/standard/base-types/character-encoding.md#Custom) 一节。  
+> 还可以实现编码操作的自定义异常处理程序。 有关详细信息，请参阅 [Implementing a Custom Fallback Strategy](../../../docs/standard/base-types/character-encoding.md#Custom) 一节。  
   
  <xref:System.Text.EncoderFallbackException> 和 <xref:System.Text.DecoderFallbackException> 对象提供以下有关导致异常的条件的信息：  
   

@@ -2,12 +2,12 @@
 title: <userDefinedType>
 ms.date: 03/30/2017
 ms.assetid: 0f70ec06-8249-4f0c-9f49-b4df59985fb8
-ms.openlocfilehash: 46beb88cedf051ed1683161b6ed9b37273ed01f1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d1a48fa2ed90999a66f4c1f84b7cfaa9a0e79f6a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769832"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940581"
 ---
 # <a name="userdefinedtype"></a>\<userDefinedType>
 表示一个要包括到服务协定中的用户定义类型 (UDT)。  
@@ -59,7 +59,7 @@ ms.locfileid: "61769832"
   
  若要避免此问题，可以将 UDT 添加到配置文件，以使 UDT 作为已知类型包括到相应的服务协定中。 为此，必须唯一地标识 UDT 和协定（即使用它的原始 COM 接口）。  
   
- 下面的示例演示如何添加两个特定的 Udt 添加到 <`userDefinedTypes`> 为此配置文件的部分。  
+ 下面的示例演示如何将两个特定的 udt`userDefinedTypes`添加到配置文件的 < > 部分以实现此目的。  
   
 ```xml  
 <comContracts>
@@ -95,6 +95,6 @@ ms.locfileid: "61769832"
 - <xref:System.ServiceModel.Configuration.ComContractElement.UserDefinedTypes%2A>
 - <xref:System.ServiceModel.Configuration.ComUdtElementCollection>
 - <xref:System.ServiceModel.Configuration.ComUdtElement>
-- [\<comContracts>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)
-- [与 COM+ 应用程序集成](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
-- [如何：配置 COM + 服务设置](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)
+- [\<comContracts>](comcontracts.md)
+- [与 COM+ 应用程序集成](../../../wcf/feature-details/integrating-with-com-plus-applications.md)
+- [如何：配置 COM + 服务设置](../../../wcf/feature-details/how-to-configure-com-service-settings.md)

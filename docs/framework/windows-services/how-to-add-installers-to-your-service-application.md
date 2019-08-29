@@ -11,33 +11,33 @@ helpviewer_keywords:
 - ServiceProcessInstaller class, adding installers to services
 ms.assetid: 8b698e9a-b88e-4f44-ae45-e0c5ea0ae5a8
 author: ghogen
-ms.openlocfilehash: af56e01c1c8c1e23bb80413ce6f52a5f6d467b4b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 335bff660e401d8fbaf531f1c1f3ccc166d1c70a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307246"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69952513"
 ---
 # <a name="how-to-add-installers-to-your-service-application"></a>如何：将安装程序添加到服务应用程序
 Visual Studio 提供可安装与服务应用程序关联资源的安装组件。 安装组件在安装它的系统上注册单个服务，并让服务控制管理器知道存在该服务。 当使用服务应用程序时，你可以在“属性”窗口中选择一个链接，以将相应的安装程序自动添加到项目中。  
   
 > [!NOTE]
->  将服务的属性值从服务类复制到安装程序类。 如果更新服务类的属性值，这些值不会在安装程序中自动更新。  
+> 将服务的属性值从服务类复制到安装程序类。 如果更新服务类的属性值，这些值不会在安装程序中自动更新。  
   
  将安装程序添加到项目时，会在项目中创建一个新类（默认情况下名为 `ProjectInstaller`），并在其中创建适当安装组件的实例。 该类用作项目所需的所有安装组件的中心点。 例如，如果向应用程序添加第二项服务并单击“添加安装程序”链接，则不会创建第二个安装程序类；相反，会将第二项服务必需的附加安装组件添加到现有类中。  
   
  无需在安装程序中执行任何特殊编码就可以正确安装服务。 但是，如果需要为安装进程添加特殊功能，则可能偶尔需要修改安装程序的内容。  
   
 > [!NOTE]
->  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[个性化设置 Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide)。  
+> 显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[个性化设置 Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide)。  
   
 ### <a name="to-add-installers-to-your-service-application"></a>将安装程序添加到服务应用程序  
   
-1. 在“解决方案资源管理器”中，访问要为其添加安装组件的服务的“设计”视图。  
+1. 在“解决方案资源管理器”  中，访问要为其添加安装组件的服务的“设计”  视图。  
   
 2. 单击设计器的背景以选择服务本身，而不是它的任何内容。  
   
-3. 设计器具有焦点时，右键单击，然后单击“添加安装程序”。  
+3. 设计器具有焦点时，右键单击，然后单击“添加安装程序”  。  
   
      将新类 `ProjectInstaller` 和两个安装组件 <xref:System.ServiceProcess.ServiceProcessInstaller> 和 <xref:System.ServiceProcess.ServiceInstaller> 添加到项目中，并将该服务的属性值复制到组件。  
   
@@ -58,7 +58,7 @@ Visual Studio 提供可安装与服务应用程序关联资源的安装组件。
 8. 对项目中的每项其他服务执行步骤 1 至 7。  
   
     > [!NOTE]
-    >  对于项目中的每项其他服务，必须向项目的 `ProjectInstaller` 类添加一个附加 <xref:System.ServiceProcess.ServiceInstaller> 组件。 在步骤 3 中添加的 <xref:System.ServiceProcess.ServiceProcessInstaller> 组件可与项目中的所有单个服务安装程序一起使用。  
+    > 对于项目中的每项其他服务，必须向项目的 `ProjectInstaller` 类添加一个附加 <xref:System.ServiceProcess.ServiceInstaller> 组件。 在步骤 3 中添加的 <xref:System.ServiceProcess.ServiceProcessInstaller> 组件可与项目中的所有单个服务安装程序一起使用。  
   
 ## <a name="see-also"></a>请参阅
 

@@ -2,18 +2,18 @@
 title: 服务标识示例
 ms.date: 03/30/2017
 ms.assetid: 79fa8c1c-85bb-4b67-bc67-bfaf721303f8
-ms.openlocfilehash: 587c1b8f5cd509db343266f5903847d3b94b7460
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0d5fce313200cdfdb8007ceffe9ff97b033d9f82
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664684"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70045518"
 ---
 # <a name="service-identity-sample"></a>服务标识示例
-此服务标识示例演示如何为服务设置标识。 客户端可以在设计时使用服务的元数据来检索标识，然后在运行时对服务的标识进行身份验证。 服务标识的概念是允许客户端在调用服务的任何操作之前对服务进行身份验证，从而保护客户端，防止进行未经身份验证的调用。 在安全连接中，服务还在允许客户端访问其之前对客户端的凭据进行身份验证，但这不是此示例要介绍的重点。 请参阅中的示例[客户端](../../../../docs/framework/wcf/samples/client.md)演示服务器身份验证。
+此服务标识示例演示如何为服务设置标识。 客户端可以在设计时使用服务的元数据来检索标识，然后在运行时对服务的标识进行身份验证。 服务标识的概念是允许客户端在调用服务的任何操作之前对服务进行身份验证，从而保护客户端，防止进行未经身份验证的调用。 在安全连接中，服务还在允许客户端访问其之前对客户端的凭据进行身份验证，但这不是此示例要介绍的重点。 请参阅[客户端](../../../../docs/framework/wcf/samples/client.md)中显示服务器身份验证的示例。
 
 > [!NOTE]
->  本主题的最后介绍了此示例的设置过程和生成说明。
+> 本主题的最后介绍了此示例的设置过程和生成说明。
 
  此示例介绍以下功能：
 
@@ -24,7 +24,7 @@ ms.locfileid: "64664684"
 - 如何在客户端设置自定义标识。 自定义标识通常是对现有标识类型的自定义，客户端可以通过它检查服务凭据中提供的其他声明信息，以便在调用服务之前做出身份验证决策。
 
     > [!NOTE]
-    >  此示例检查称为 identity.com 的特定证书的标识以及此证书中包含的 RSA 密钥。 在客户端上的配置中使用证书和 RSA 标识类型时，获取这些值的简便方法是检查在其中序列化这些值的服务的 WSDL。
+    > 此示例检查称为 identity.com 的特定证书的标识以及此证书中包含的 RSA 密钥。 在客户端上的配置中使用证书和 RSA 标识类型时，获取这些值的简便方法是检查在其中序列化这些值的服务的 WSDL。
 
  下面的示例代码演示如何使用 WSHttpBinding 向证书的域名服务器 (DNS) 配置服务终结点的标识。
 
@@ -107,26 +107,26 @@ class CustomIdentityVerifier : IdentityVerifier
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例
 
-1. 请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。
+1. 确保已对[Windows Communication Foundation 示例执行了一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。
 
 2. 若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。
 
-3. 若要在单或跨计算机配置中运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。
+3. 若要以单机配置或跨计算机配置来运行示例, 请按照[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的说明进行操作。
 
 ### <a name="to-run-the-sample-on-the-same-computer"></a>在同一计算机上运行示例
 
-1. 在 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 或 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上，使用 MMC 管理单元工具将 Identity 解决方案文件夹中的 Identity.pfx 证书文件导入 LocalMachine/My（个人）证书存储区中。 此文件受密码保护。 在导入过程中，将提示您输入密码。 类型`xyz`到密码框。 有关详细信息，请参阅[如何：使用 MMC 管理单元查看证书](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)主题。 完成此操作后，运行 Setup.bat 在开发人员命令提示符针对 Visual Studio 使用管理员权限，将此证书复制到 CurrentUser/Trusted People 存储中以便在客户端上使用。
+1. 在 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 或 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上，使用 MMC 管理单元工具将 Identity 解决方案文件夹中的 Identity.pfx 证书文件导入 LocalMachine/My（个人）证书存储区中。 此文件受密码保护。 在导入过程中，将提示您输入密码。 在`xyz` "密码" 框中键入。 有关详细信息，请参阅[如何：通过 MMC 管理单元](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)主题查看证书。 完成此操作后, 在 Visual Studio 的开发人员命令提示中, 使用管理员权限运行 Setup.exe, 此操作将此证书复制到 CurrentUser/受信任的人员存储区, 以便在客户端上使用。
 
-2. 在[!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]，从示例安装文件夹中具有管理员权限的 Visual Studio 2012 命令提示符中运行 Setup.bat。 这将安装运行示例所需的所有证书。
+2. 在[!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]上, 使用管理员权限在 Visual Studio 2012 命令提示符下的示例安装文件夹中运行安装程序。 这将安装运行示例所需的所有证书。
 
     > [!NOTE]
-    >  Setup.bat 批处理文件旨在为从 Visual Studio 2012 命令提示运行。 在 Visual Studio 2012 命令提示符点设置为包含 Setup.bat 脚本所需的可执行文件的目录路径环境变量。 请确保在运行完该示例后通过运行 Cleanup.bat 来移除证书。 其他安全示例使用相同的证书。  
+    > 设置 bat 批处理文件设计为在 Visual Studio 2012 命令提示符下运行。 在 Visual Studio 2012 命令提示符中设置的 PATH 环境变量指向包含安装程序 bat 脚本所需的可执行文件的目录。 请确保在运行完该示例后通过运行 Cleanup.bat 来移除证书。 其他安全示例使用相同的证书。  
   
-3. 启动 \service\bin 目录中的 Service.exe。 请确保该服务指示它已准备并按显示一条提示\<Enter > 以终止服务。  
+3. 启动 \service\bin 目录中的 Service.exe。 确保该服务指示它已准备就绪, 并显示按\<enter > 以终止服务的提示。  
   
 4. 启动 \client\bin 目录中的 Client.exe，或在 Visual Studio 中按 F5 以生成并运行。 客户端活动将显示在客户端控制台应用程序上。  
   
-5. 如果客户端和服务能够进行通信，请参见[WCF 示例的故障排除提示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
+5. 如果客户端和服务无法进行通信, 请参阅[WCF 示例的故障排除提示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
   
 ### <a name="to-run-the-sample-across-computers"></a>跨计算机运行示例  
   
@@ -140,21 +140,21 @@ class CustomIdentityVerifier : IdentityVerifier
   
 5. 将客户端程序文件复制到客户端计算机上的客户端目录中。 另外，将 Setup.bat、Cleanup.bat 和 ImportServiceCert.bat 文件复制到客户端上。  
   
-6. 在服务上，运行`setup.bat service`使用管理员特权打开在 Visual Studio 的开发人员命令提示。 运行`setup.bat`与`service`参数与计算机的名称的完全限定域名创建一个服务证书并将服务证书导出到名为 Service.cer 的文件。  
+6. 在服务上, 在`setup.bat service`使用管理员特权打开的 Visual Studio 开发人员命令提示中运行。 使用`setup.bat`参数运行将使用计算机的完全限定的域名创建一个服务证书, 并将服务证书导出到名为的文件。 `service`  
   
 7. 将服务目录中的 Service.cer 文件复制到客户端计算机上的客户端目录中。  
   
 8. 在客户端计算机上的 Client.exe.config 文件中，更改终结点的地址值，使其与服务的新地址相匹配。 必须更改多个实例。  
   
-9. 在客户端上运行 ImportServiceCert.bat 在开发人员命令提示符下使用管理员特权打开 Visual Studio。 这会将 Service.cer 文件中的服务证书导入 CurrentUser – TrustedPeople 存储区。  
+9. 在客户端上, 在使用管理员特权打开的 Visual Studio 开发人员命令提示中运行 Importservicecert.bat。 这会将 Service.cer 文件中的服务证书导入 CurrentUser – TrustedPeople 存储区。  
   
 10. 在服务计算机上，在命令提示符下启动 Service.exe。  
   
-11. 在客户端计算机上，在命令提示符下启动 Client.exe。 如果客户端和服务能够进行通信，请参见[WCF 示例的故障排除提示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
+11. 在客户端计算机上，在命令提示符下启动 Client.exe。 如果客户端和服务无法进行通信, 请参阅[WCF 示例的故障排除提示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
   
 ### <a name="to-clean-up-after-the-sample"></a>运行示例后进行清理  
   
 - 运行完示例后运行示例文件夹中的 Cleanup.bat。  
   
     > [!NOTE]
-    >  此脚本不会在跨计算机运行此示例时移除客户端上的服务证书。 如果有运行在计算机之间使用证书的 Windows Communication Foundation (WCF) 示例，请确保清除已安装在 CurrentUser-TrustedPeople 存储区中的服务证书。 若要执行此操作，请使用以下命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` 例如： `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`。
+    > 此脚本不会在跨计算机运行此示例时移除客户端上的服务证书。 如果你已运行跨计算机使用证书 Windows Communication Foundation (WCF) 示例, 请确保清除已安装在 CurrentUser-TrustedPeople 存储中的服务证书。 为此, 请使用以下命令:`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`例如: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`。

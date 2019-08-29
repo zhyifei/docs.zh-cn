@@ -2,12 +2,12 @@
 title: <resolver>
 ms.date: 03/30/2017
 ms.assetid: 0c00200c-f135-4e5c-a024-76b72bcbc021
-ms.openlocfilehash: 39dcb868bd3ff25451509616e1dac7d41f94cfa1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e3a9ee00aab6ab48a1ba891565b63824e62b20fe
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783118"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69934218"
 ---
 # <a name="resolver"></a>\<resolver>
 指定对等解析程序，对等解析程序用于将对等网格 ID 解析为一组对等节点地址，这些地址表示参与网格的若干节点。  
@@ -15,7 +15,7 @@ ms.locfileid: "61783118"
  \<system.ServiceModel>  
 \<bindings>  
 \<netPeerBinding>  
-\<binding>  
+\<绑定 >  
 \<resolver>  
   
 ## <a name="syntax"></a>语法  
@@ -40,16 +40,16 @@ ms.locfileid: "61783118"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<headers>](../../../../../docs/framework/configure-apps/file-schema/wcf/headers.md)|指定自定义对等解析程序服务的设置。|  
+|[\<headers>](headers.md)|指定自定义对等解析程序服务的设置。|  
   
 ### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<binding>](../../../../../docs/framework/misc/binding.md)|定义的所有绑定功能[ \<netPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md)。|  
+|[\<binding>](../../../misc/binding.md)|定义[ \<netPeerTcpBinding >](netpeertcpbinding.md)的所有绑定功能。|  
   
 ## <a name="remarks"></a>备注  
- 对等名解析程序是对等通道用于查找参与对等网格的对等节点的发现服务。 它还可以用于在对等网格中“注册”节点，即对等节点在对等网格中变为已知和可用的机制。 对等解析程序的详细信息，请参阅[对等解析程序](../../../../../docs/framework/wcf/feature-details/peer-resolvers.md)。  
+ 对等名解析程序是对等通道用于查找参与对等网格的对等节点的发现服务。 它还可以用于在对等网格中“注册”节点，即对等节点在对等网格中变为已知和可用的机制。 有关对等解析程序的详细信息, 请参阅[对等解析](../../../wcf/feature-details/peer-resolvers.md)程序。  
   
 ## <a name="see-also"></a>请参阅
 
@@ -58,5 +58,5 @@ ms.locfileid: "61783118"
 - <xref:System.ServiceModel.NetPeerTcpBinding.Resolver%2A>
 - <xref:System.ServiceModel.Configuration.NetPeerTcpBindingElement.Resolver%2A>
 - <xref:System.ServiceModel.Configuration.PeerResolverElement>
-- [对等解析程序](../../../../../docs/framework/wcf/feature-details/peer-resolvers.md)
-- [对等通道应用程序中添加自定义冲突解决程序](https://docs.microsoft.com/previous-versions/ms730105(v=vs.90))
+- [对等解析程序](../../../wcf/feature-details/peer-resolvers.md)
+- [向 PeerChannel 应用程序添加自定义冲突解决程序](https://docs.microsoft.com/previous-versions/ms730105(v=vs.90))

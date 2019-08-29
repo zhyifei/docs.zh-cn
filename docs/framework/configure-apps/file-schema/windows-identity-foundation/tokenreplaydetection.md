@@ -3,15 +3,15 @@ title: <tokenReplayDetection>
 ms.date: 03/30/2017
 ms.assetid: ac3f588e-5f75-4275-b969-2d492ecc3b47
 author: BrucePerlerMS
-ms.openlocfilehash: 4deeb1d84f2621adb7ff1b649a505138b6856ec1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2e2159a73ca79fc362a8138eea95dbd173dafb11
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790489"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69944294"
 ---
 # <a name="tokenreplaydetection"></a>\<tokenReplayDetection>
-启用令牌重放检测并指定令牌的到期时间。  
+启用令牌重播检测并指定令牌的过期时间。  
   
  \<system.identityModel>  
 \<identityConfiguration>  
@@ -38,20 +38,20 @@ ms.locfileid: "61790489"
   
 |特性|描述|  
 |---------------|-----------------|  
-|enabled|一个值，指定是否启用令牌重放检测;"true"以启用令牌重放检测。|  
-|expirationPeriod|一个<xref:System.TimeSpan>指定最大的前一个项目被认为过期并从缓存中删除的时间量。  有关如何指定详细信息<xref:System.TimeSpan>值，请参阅[Timespan 值](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md)。|  
+|enabled|一个值, 该值指定是否启用令牌重放检测;"true" 表示启用令牌重播检测。|  
+|expirationPeriod|一个<xref:System.TimeSpan> , 指定项目被视为过期并从缓存中删除之前的最大时间量。  有关如何指定<xref:System.TimeSpan>值的详细信息, 请参阅[Timespan 值](../windows-workflow-foundation/index.md)。|  
   
 ### <a name="child-elements"></a>子元素  
- None  
+ 无  
   
 ### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<identityConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|指定服务级别标识设置。|  
-|[\<securityTokenHandlerConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|提供配置集合的安全令牌处理程序。|  
+|[\<identityConfiguration>](identityconfiguration.md)|指定服务级别标识设置。|  
+|[\<securityTokenHandlerConfiguration>](securitytokenhandlerconfiguration.md)|为安全标记处理程序的集合提供配置。|  
   
 ## <a name="remarks"></a>备注  
- 一个`<tokenReplayDetection>`可以在服务级别下指定元素`<identityConfiguration>`元素下的安全令牌处理程序集合级别上或`<securityTokenHandlerConfiguration>`元素。 标记处理程序集合上的设置将覆盖在服务上指定的。  
+ 可以在元素`<identityConfiguration>`下的服务级别指定元素, 或在`<securityTokenHandlerConfiguration>`元素下的安全令牌处理程序集合级别指定元素。`<tokenReplayDetection>` 标记处理程序集合上的设置将重写服务上指定的设置。  
   
- 通过指定的标记重播缓存类型[ \<tokenReplayCache >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaycache.md)元素。
+ 令牌重播缓存的类型由[ \<tokenReplayCache >](tokenreplaycache.md)元素指定。

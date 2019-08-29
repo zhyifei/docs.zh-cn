@@ -2,19 +2,19 @@
 title: <httpListener> 元素（网络设置）
 ms.date: 03/30/2017
 ms.assetid: 62f121fd-3f2e-4033-bb39-48ae996bfbd9
-ms.openlocfilehash: 8257b0311e18a21fbc04185f8297ee8e5f38b86b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: cb24dc7296e2f2f6ea292566330d3d6ae4f25f85
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592743"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664138"
 ---
-# <a name="httplistener-element-network-settings"></a>\<httpListener > 元素 （网络设置）
-自定义使用参数<xref:System.Net.HttpListener>类。  
+# <a name="httplistener-element-network-settings"></a>\<httpListener > 元素 (网络设置)
+自定义<xref:System.Net.HttpListener>类使用的参数。  
   
  \<configuration>  
 \<system.net>  
-\<settings>  
+\<设置 >  
 \<httpListener>  
   
 ## <a name="syntax"></a>语法  
@@ -34,7 +34,7 @@ ms.locfileid: "64592743"
   
 |特性|描述|  
 |---------------|-----------------|  
-|unescapeRequestUrl|一个布尔值，该值指示如果<xref:System.Net.HttpListener>实例使用未经转义的原始 URI，而不是经过转换的 URI。|  
+|unescapeRequestUrl|一个布尔值, 该值指示<xref:System.Net.HttpListener>实例是否使用未转义的原始 uri 而不是已转换的 uri。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  
@@ -43,78 +43,78 @@ ms.locfileid: "64592743"
   
 |**元素**|**说明**|  
 |-----------------|---------------------|  
-|[settings](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|配置 <xref:System.Net> 命名空间的基本网络选项。|  
+|[设置](settings-element-network-settings.md)|配置 <xref:System.Net> 命名空间的基本网络选项。|  
   
 ## <a name="remarks"></a>备注  
- **UnescapeRequestUrl**属性指示如果<xref:System.Net.HttpListener>使用未经转义的原始 URI，而不是经过转换的 URI 其中任何百分比编码值转换和执行其他任何规范化步骤。  
+ **UnescapeRequestUrl**特性指示是否<xref:System.Net.HttpListener>使用原始非转义 uri 而不是转换的 uri (其中任何百分比编码值都已转换) 并执行其他规范化步骤。  
   
- 当<xref:System.Net.HttpListener>实例收到的请求通过`http.sys`服务，它创建的提供的 URI 字符串实例`http.sys`，并将其作为公开<xref:System.Net.HttpListenerRequest.Url%2A?displayProperty=nameWithType>属性。  
+ 当某个<xref:System.Net.HttpListener>实例通过该`http.sys`服务收到请求时, 它将创建由`http.sys`提供的 URI 字符串的实例, 并将<xref:System.Net.HttpListenerRequest.Url%2A?displayProperty=nameWithType>其公开为属性。  
   
- `http.sys`服务公开两个请求的 URI 字符串：  
+ `http.sys`服务公开两个请求 URI 字符串:  
   
 - 原始 URI  
   
-- 经过转换的 URI  
+- 转换的 URI  
   
- 原始 URI 是<xref:System.Uri?displayProperty=nameWithType>HTTP 请求的请求行中提供：  
+ 原始 URI 是在 HTTP <xref:System.Uri?displayProperty=nameWithType>请求的请求行中提供的:  
   
  `GET /path/`  
   
  `Host: www.contoso.com`  
   
- 提供的原始 URI`http.sys`前面所述的请求是"/ 路径 /"。 这表示在通过网络发送以下 HTTP 谓词字符串。  
+ `http.sys`为上述请求提供的原始 URI 为 "/path/"。 这表示 HTTP 谓词后的字符串, 因为它是通过网络发送的。  
   
- `http.sys`服务从使用 HTTP 请求行中提供的 URI 请求中提供的信息创建经过转换的 URI，并要确定源服务器请求的主机标头应转发到。 这是通过比较已注册的 URI 前缀的一组与请求中的信息。 HTTP 服务器 SDK 文档引用此经过转换的 URI 作为 HTTP_COOKED_URL 结构。  
+ `http.sys`服务通过使用 HTTP 请求行中提供的 uri 和主机标头来确定请求应转发到的源服务器, 从请求中提供的信息创建转换的 uri。 这是通过将请求中的信息与一组已注册的 URI 前缀进行比较来完成的。 HTTP 服务器 SDK 文档将此转换的 URI 称为 HTTP_COOKED_URL 结构。  
   
- 以便可以请求与已注册的 URI 前缀进行比较，需要完成一些规范化到请求。 对于以上经过转换的 URI 示例将按如下所示：  
+ 为了能够将请求与已注册的 URI 前缀进行比较, 需要对请求进行一些规范化。 对于上面的示例, 转换后的 URI 如下所示:  
   
  `http://www.contoso.com/path/`  
   
- `http.sys`服务结合<xref:System.Uri.Host%2A?displayProperty=nameWithType>属性值和要创建一个已转换的 URI 的请求行中的字符串。 此外，`http.sys`和<xref:System.Uri?displayProperty=nameWithType>类还执行以下操作：  
+ 服务将<xref:System.Uri.Host%2A?displayProperty=nameWithType>属性值和请求行中的字符串结合起来, 以创建转换的 URI。 `http.sys` 此外, `http.sys` <xref:System.Uri?displayProperty=nameWithType>类还会执行以下操作:  
   
-- 取消转义所有百分比编码的值。  
+- 取消转义所有百分比编码值。  
   
-- 将百分比编码为 utf-16 字符表示形式的非 ASCII 字符。 请注意，Unicode 字符 （Unicode 编码使用 %uxxxx 格式） 以及支持 utf-8 和 ANSI/DBCS 字符。  
+- 将百分号编码的非 ASCII 字符转换为 UTF-16 字符表示形式。 请注意, 支持 UTF-8 和 ANSI/DBCS 字符以及 Unicode 字符 (使用% uXXXX 格式的 Unicode 编码)。  
   
-- 执行其他规范化步骤，如路径压缩。  
+- 执行其他规范化步骤, 如路径压缩。  
   
- 请求不包含有关使用百分比编码值的编码的任何信息，因为它可能无法确定正确的编码只是通过分析百分比编码值。  
+ 由于请求不包含任何有关用于百分比编码值的编码的信息, 因此只需分析百分比编码的值就不能确定正确的编码。  
   
- 因此`http.sys`提供了用于修改该过程的两个注册表项：  
+ 因此`http.sys` , 提供了两个用于修改进程的注册表项:  
   
-|注册表项|默认值|描述|  
+|注册表项|Default Value|描述|  
 |------------------|-------------------|-----------------|  
-|EnableNonUTF8|1|如果为零，`http.sys`接受只有 UTF-8 编码的 Url。<br /><br /> 如果非零`http.sys`还接受请求中的 ANSI 编码或 DBCS 编码 Url。|  
-|FavorUTF8|1|如果非零`http.sys`始终尝试解码 URL 为 utf-8 第一次; 如果该转换失败，并且 EnableNonUTF8 为非零，Http.sys 然后尝试将其解码为 ANSI 或者与 DBCS。<br /><br /> 如果为零 （和 EnableNonUTF8 为非零），`http.sys`尝试对其进行解码为 ANSI 或者与 DBCS; 如果该操作不成功，它会尝试 utf-8 转换。|  
+|EnableNonUTF8|1|如果为零`http.sys` , 则只接受 utf-8 编码的 url。<br /><br /> 如果非零, `http.sys`则还接受请求中 ANSI 编码或 DBCS 编码的 url。|  
+|FavorUTF8|1|如果非零, `http.sys`则始终首先尝试将 URL 解码为 utf-8; 如果该转换失败并且 EnableNonUTF8 为非零, 则 http.sys 会尝试将其解码为 ANSI 或 DBCS。<br /><br /> 如果为零 (并且 EnableNonUTF8 为非零), `http.sys`则尝试将它解码为 ANSI 或 DBCS; 如果不成功, 则它将尝试 utf-8 转换。|  
   
- 当<xref:System.Net.HttpListener>收到请求时，它使用从经过转换的 URI`http.sys`作为输入到<xref:System.Net.HttpListenerRequest.Url%2A>属性。  
+ 当<xref:System.Net.HttpListener>收到请求时, 它将使用转换后的`http.sys` URI 作为<xref:System.Net.HttpListenerRequest.Url%2A>属性的输入。  
   
- 没有需要在 Uri 中支持除字符和数字的字符。 例如，以下 URI，用于检索客户的客户信息数字"1/3812":  
+ 除了 Uri 中的字符和数字以外, 还需要支持字符。 例如, 以下 URI 用于检索客户编号 "1/3812" 的客户信息:  
   
  `http://www.contoso.com/Customer('1%2F3812')/`  
   
- 请注意 Uri (%2f) 中的百分号编码斜杠。 这是有必要，请因为在这种情况下包含斜杠字符表示数据而不是路径分隔符。  
+ 请注意 Uri (% 2F) 中的百分号编码的斜杠。 这是必需的, 因为在这种情况下, 斜杠字符表示数据而不是路径分隔符。  
   
- 将字符串传递给 Uri 构造函数将导致以下 URI:  
+ 将字符串传递到 Uri 构造函数将导致以下 URI:  
   
  `http://www.contoso.com/Customer('1/3812')/`  
   
- 将路径拆分为其段将导致以下元素：  
+ 将路径拆分为其段将导致以下元素:  
   
  `Customer('1`  
   
  `3812')`  
   
- 这不是请求的发件人的意图。  
+ 这不是请求发送方的意图。  
   
- 如果**unescapeRequestUrl**属性设置为**false**，然后当<xref:System.Net.HttpListener>收到请求时，它使用的原始 URI 而不是从经过转换的 URI`http.sys`作为的输入<xref:System.Net.HttpListenerRequest.Url%2A>属性。  
+ 如果将**unescapeRequestUrl**特性设置为**false**, 则当<xref:System.Net.HttpListener>收到请求时, 它将使用原始 URI, `http.sys`而不是转换的<xref:System.Net.HttpListenerRequest.Url%2A> uri 作为属性的输入。  
   
- 默认值为**unescapeRequestUrl**属性是**true**。  
+ **UnescapeRequestUrl**属性的默认值为**true**。  
   
- <xref:System.Net.Configuration.HttpListenerElement.UnescapeRequestUrl%2A>属性可以用于获取的当前值**unescapeRequestUrl**适用的配置文件中的属性。  
+ 属性可用于从适用的配置文件中获取 unescapeRequestUrl 特性的当前值。 <xref:System.Net.Configuration.HttpListenerElement.UnescapeRequestUrl%2A>  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何配置<xref:System.Net.HttpListener>类在收到请求使用的原始 URI，而不是从经过转换的 URI 后`http.sys`作为输入到<xref:System.Net.HttpListenerRequest.Url%2A>属性。  
+ 下面的示例演示当<xref:System.Net.HttpListener>类接收到使用原始 URI 的请求而不是转换的`http.sys` uri 作为<xref:System.Net.HttpListenerRequest.Url%2A>属性的输入时, 如何配置类。  
   
 ```xml  
 <configuration>  
@@ -142,4 +142,4 @@ ms.locfileid: "64592743"
 - <xref:System.Net.Configuration.HttpListenerElement>
 - <xref:System.Net.HttpListener>
 - <xref:System.Net.HttpListenerRequest.Url%2A>
-- [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [网络设置架构](index.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1e357177-e699-4b8f-9e49-56d3513ed128
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f6cf6120af21c6b8fcaf09203fcb3b77e4dcdfac
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4ee939096ef4e24397d03aa8a64405d66c740580
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64621003"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946330"
 ---
 # <a name="potential-pitfalls-in-data-and-task-parallelism"></a>数据并行和任务并行中的潜在缺陷
 在许多情况下，与普通的顺序循环相比，<xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> 可以显著提升性能。 但是，对循环进行并行化的工作增加了复杂性，可能会导致在顺序代码中出现不常见或根本不会遇到的问题。 本主题列出了一些在编写并行循环时要避免的做法。  
@@ -49,7 +49,7 @@ ms.locfileid: "64621003"
  .NET Framework 中的大多数静态方法是线程安全的，并且可以同时从多个线程中调用。 但是，即使在这些情况下，所涉及到的同步也可能会导致查询速度大幅度下降。  
   
 > [!NOTE]
->  可以自行对此进行测试，具体方法是在查询中插入一些 <xref:System.Console.WriteLine%2A> 调用。 尽管出于演示目的，在文档示例中使用了此方法，但除非必要，否则不要在并行循环中使用它。  
+> 可以自行对此进行测试，具体方法是在查询中插入一些 <xref:System.Console.WriteLine%2A> 调用。 尽管出于演示目的，在文档示例中使用了此方法，但除非必要，否则不要在并行循环中使用它。  
   
 ## <a name="be-aware-of-thread-affinity-issues"></a>注意线程关联问题  
  某些技术（例如，单线程单元 (STA) 组件的 COM 互操作性、Windows 窗体以及 Windows Presentation Foundation (WPF)）具有要求代码在特定线程上运行的线程关联限制。 例如，在 Windows 窗体和 WPF 中，只能在创建控件的线程上访问该控件。 举例来说，这意味着，除非将线程调度器配置为仅将工作安排在 UI 线程上，否则你将无法从并行循环中更新列表控件。 有关详细信息，请参阅[指定同步上下文](xref:System.Threading.Tasks.TaskScheduler#specifying-a-synchronization-context)。  

@@ -6,29 +6,29 @@ helpviewer_keywords:
 - text files [Visual Basic], writing event information to a text file
 - events [Visual Basic], writing event information to a text file
 ms.assetid: 9ca7cc03-bf99-4933-9e5e-61ee28e9a6b4
-ms.openlocfilehash: f9abf99a06437f08c65eca69e54760e44a217023
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4a34b57eb0a22dcf206456775cdd5817431292e8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665751"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956821"
 ---
 # <a name="how-to-write-event-information-to-a-text-file-visual-basic"></a>如何：将事件信息写入文本文件 (Visual Basic)
 可以使用 `My.Application.Log` 和 `My.Log` 对象来记录有关应用程序中所发生事件的信息。 本示例演示如何使用 `My.Application.Log.WriteEntry` 方法将跟踪信息记录到日志文件中。  
   
 ### <a name="to-add-and-configure-the-file-log-listener"></a>添加和配置文件日志侦听器  
   
-1. 在“解决方案资源管理器” 中右键单击 app.config，然后选择“打开”。  
+1. 在“解决方案资源管理器” 中右键单击 app.config，然后选择“打开”。    
   
      \- 或 -  
   
      如果其中没有 app.config 文件：  
   
-    1. 在 **“项目”** 菜单上选择 **“添加新项”**。  
+    1. 在 **“项目”** 菜单上选择 **“添加新项”** 。  
   
-    2. 在“添加新项”  对话框中，选择“应用程序配置文件” 。  
+    2. 在“添加新项”  对话框中，选择“应用程序配置文件”  。  
   
-    3. 单击 **“添加”**。  
+    3. 单击 **“添加”** 。  
   
 2. 在应用程序配置文件中找到 `<listeners>` 部分。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "64665751"
      将 `customlocation` 属性的值更改为日志目录。  
   
     > [!NOTE]
-    >  若要设置侦听器属性的值，请使用与该属性具有相同名称的特性，名称中的所有字母都为小写。 例如，`location` 和 `customlocation` 属性设置 <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.Location%2A> 和 <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.CustomLocation%2A> 属性的值。  
+    > 若要设置侦听器属性的值，请使用与该属性具有相同名称的特性，名称中的所有字母都为小写。 例如，`location` 和 `customlocation` 属性设置 <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.Location%2A> 和 <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.CustomLocation%2A> 属性的值。  
   
 ### <a name="to-write-event-information-to-the-file-log"></a>将事件信息写入文件日志  
   

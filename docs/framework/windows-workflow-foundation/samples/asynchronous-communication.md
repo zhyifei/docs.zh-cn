@@ -2,15 +2,15 @@
 title: 异步通信
 ms.date: 03/30/2017
 ms.assetid: 128dc092-9eb2-4e33-9470-9a7f62b60df6
-ms.openlocfilehash: a9da04e2c6d3c131603211f53c54fd25dde8d338
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b5cf788ce4587dacb5a7642e25cb1b5b1e6f3e3c
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62005584"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044366"
 ---
 # <a name="asynchronous-communication"></a>异步通信
-此示例演示如何两个不同的 Windows Workflow Foundation (WF) 服务之间的通信默认情况下以异步方式完成。  
+此示例演示如何在默认情况下异步执行两个不同 Windows Workflow Foundation (WF) 服务之间的通信。  
   
 ## <a name="demonstrates"></a>演示  
  [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 服务间的异步通信。  
@@ -31,19 +31,19 @@ ms.locfileid: "62005584"
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
-1. 右键单击**AsynchronousCommunication**解决方案并选择**属性**。  
+1. 右键单击**AsynchronousCommunication**解决方案, 然后选择 "**属性**"。  
   
-2. 在**常见属性**，选择**启动项目**，然后选择**多个启动项目**。  
+2. 在 "**通用属性**" 中, 选择 "**启动项目**", 然后选择 "**多启动项目**"。  
   
-3. 移动**RentalApprovalService**列表中的第一个位置后, 接**CreditCheckService**后, 跟**客户端**。 设置**启动**上所有三个项目的操作。  
+3. 将**RentalApprovalService**移动到列表中的第一个位置, 后跟**CreditCheckService**, 后跟**客户端**。 在所有三个项目上设置 "**启动**" 操作。  
   
-4. 单击**确定**，然后按 F5 以运行示例。  
+4. 单击 **"确定"** , 然后按 F5 运行示例。  
   
 > [!IMPORTANT]
->  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
+> 您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+> 如果此目录不存在, 请参阅[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)以下载所有 Windows Communication Foundation (wcf) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Services\AsynchronousCommunication`
+> `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Services\AsynchronousCommunication`

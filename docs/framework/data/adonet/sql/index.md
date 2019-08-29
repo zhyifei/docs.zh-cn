@@ -2,12 +2,12 @@
 title: SQL Server 和 ADO.NET
 ms.date: 03/30/2017
 ms.assetid: c18b1fb1-2af1-4de7-80a4-95e56fd976cb
-ms.openlocfilehash: f30d9d715a2d94deee788f92cfc8eed0cba706de
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c58c6da7a6028c9167c73af820e922f59b528f15
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033886"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69938084"
 ---
 # <a name="sql-server-and-adonet"></a>SQL Server 和 ADO.NET
 本节描述适用于 SQL Server 的 .NET Framework 数据提供程序 (<xref:System.Data.SqlClient>) 特定的功能和行为。  
@@ -15,7 +15,7 @@ ms.locfileid: "62033886"
  <xref:System.Data.SqlClient> 提供了对 SQL Server 各版本的访问，而 SQL Server 封装了数据库特定协议。 该数据提供程序设计的功能与 OLE DB、ODBC 和 Oracle 的 .NET Framework 数据提供程序的功能类似。 <xref:System.Data.SqlClient> 包括一个表格格式数据流 (TDS) 分析器以直接与 SQL Server 进行通信。  
   
 > [!NOTE]
->  要使用 SQL Server .NET Framework 数据提供程序，应用程序必须引用 <xref:System.Data.SqlClient> 命名空间。  
+> 要使用 SQL Server .NET Framework 数据提供程序，应用程序必须引用 <xref:System.Data.SqlClient> 命名空间。  
   
 ## <a name="in-this-section"></a>本节内容  
  [SQL Server 安全性](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)  

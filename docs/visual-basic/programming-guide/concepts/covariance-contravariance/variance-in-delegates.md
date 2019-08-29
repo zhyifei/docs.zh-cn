@@ -1,17 +1,17 @@
 ---
-title: 委托 (Visual Basic) 中的变体
+title: 委托中的变体 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 38e9353f-74f8-4211-a8f0-7a495414df4a
-ms.openlocfilehash: 6d341c7c2b5adeebcafc5b0787b132ab6bd57e41
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0c52fd3fb36162de16a91a85088018f4f579611c
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787226"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664341"
 ---
-# <a name="variance-in-delegates-visual-basic"></a>委托 (Visual Basic) 中的变体
+# <a name="variance-in-delegates-visual-basic"></a>委托中的变体 (Visual Basic)
 
-.NET framework 3.5 引入了对匹配方法签名和委托类型中的所有委托中的变体支持C#和 Visual Basic。 这表明不仅可以将具有匹配签名的方法分配给委托，还可以将返回多个派生类型（协变）的方法分配给委托，或者将所接受参数的派生类型（逆变）数目比委托类型指定的数目少的方法分配给委托。 这包括泛型委托和非泛型委托。
+.NET Framework 3.5 介绍了在C#和 Visual Basic 的所有委托中匹配方法签名与委托类型的差异支持。 这表明不仅可以将具有匹配签名的方法分配给委托，还可以将返回派生程度较大的派生类型的方法分配给委托（协变），或者如果方法所接受参数的派生类型所具有的派生程度小于委托类型指定的程度（逆变），也可将其分配给委托。 这包括泛型委托和非泛型委托。
 
 例如，思考以下代码，该代码具有两个类和两个委托：泛型和非泛型。
 
@@ -76,11 +76,11 @@ Dim dGeneric As SampleGenericDelegate(Of Second, First) = AddressOf ASecondRFirs
 Dim dGenericConversion As SampleGenericDelegate(Of Second, First) = AddressOf AFirstRSecond
 ```
 
-有关更多示例，请参阅[使用委托 (Visual Basic 中) 中的变体](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md)并[对 Func 和 Action 泛型委托 (Visual Basic 中) 使用变体](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)。
+有关更多示例, 请参阅[在委托中使用变体 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md)和[对 Func 和 Action 泛型委托使用变体 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)。
 
 ## <a name="variance-in-generic-type-parameters"></a>泛型类型参数中的变体
 
-在.NET Framework 4 及更高版本，以便可以为具有指定的泛型类型参数的不同类型的泛型委托分配到对方，，如果类型继承自对方所需的可以启用委托之间的隐式转换方差。
+在 .NET Framework 4 和更高版本中, 你可以启用委托之间的隐式转换, 以便可以将具有不同类型的泛型委托分配给不同的类型, 前提是这些类型从彼此继承时是必需的变动.
 
 若要启用隐式转换，必须使用 `in` 或 `out` 关键字将委托中的泛型参数显式声明为协变或逆变。
 
@@ -99,7 +99,7 @@ End Sub
 
 如果仅使用变体支持来匹配方法签名和委托类型，且不使用 `in` 和 `out` 关键字，则可能会发现有时可以使用相同的 lambda 表达式或方法实例化委托，但不能将一个委托分配给另一个委托。
 
-在下面的代码示例中，`SampleGenericDelegate(Of String)`不能显式转换为`SampleGenericDelegate(Of Object)`，尽管`String`继承`Object`。 可以使用 `out` 关键字标记 泛型参数 `T` 解决此问题。
+在下面的代码示例中`SampleGenericDelegate(Of String)` , 虽然继承`Object`, 但`SampleGenericDelegate(Of Object)` `String`不能显式转换为。 可以使用 `out` 关键字标记 泛型参数 `T` 解决此问题。
 
 ```vb
 Public Delegate Function SampleGenericDelegate(Of T)() As T
@@ -133,7 +133,7 @@ End Sub
 
 - <xref:System.Converter%602> 委托
 
-有关详细信息和示例，请参阅[对 Func 和 Action 泛型委托 (Visual Basic 中) 使用变体](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)。
+有关详细信息和示例, 请参阅对[Func 和 Action 泛型委托使用变体 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)。
 
 ### <a name="declaring-variant-type-parameters-in-generic-delegates"></a>声明泛型委托中的变体类型参数
 
@@ -152,7 +152,7 @@ Public Delegate Sub DContravariant(Of In A)(ByVal a As A)
 ```
 
 > [!IMPORTANT]
-> `ByRef` 在 Visual Basic 中的参数不能标记为变体。
+> `ByRef`Visual Basic 中的参数不能标记为变体。
 
 可以在同一个委托中支持变体和协变，但这只适用于不同类型的参数。 这在下面的示例中显示。
 
@@ -171,7 +171,7 @@ dvariant("test")
 
 ### <a name="combining-variant-generic-delegates"></a>合并变体泛型委托
 
-不应合并变体委托。 <xref:System.Delegate.Combine%2A> 方法不支持变体委托转换，并且要求委托的类型完全相同。 这可能会导致运行时异常时合并委托可通过使用<xref:System.Delegate.Combine%2A>方法 (在C#和 Visual Basic) 或使用`+`运算符 (在C#)，如下面的代码示例中所示。
+不应合并变体委托。 <xref:System.Delegate.Combine%2A> 方法不支持变体委托转换，并且要求委托的类型完全相同。 这可能会导致<xref:System.Delegate.Combine%2A>运行时异常, 方法是使用方法 (在C#和 Visual Basic) `+`或使用运算符 (在中C#为) 组合委托, 如下面的代码示例中所示。
 
 ```vb
 Dim actObj As Action(Of Object) = Sub(x) Console.WriteLine("object: {0}", x)
@@ -183,7 +183,7 @@ Dim actStr As Action(Of String) = Sub(x) Console.WriteLine("string: {0}", x)
 
 ## <a name="variance-in-generic-type-parameters-for-value-and-reference-types"></a>泛型类型参数中用于值和引用类型的变体
 
-泛型类型参数的变体仅支持引用类型。 例如，`DVariant(Of Int)`不能隐式转换为`DVariant(Of Object)`或`DVariant(Of Long)`，因为整数是值类型。
+泛型类型参数的变体仅支持引用类型。 例如, `DVariant(Of Int)`不能隐式转换为`DVariant(Of Object)`或`DVariant(Of Long)`, 因为 integer 是值类型。
 
 以下示例演示了泛型类型参数中的变体不支持值类型。
 
@@ -207,11 +207,11 @@ Sub Test()
 End Sub
 ```
 
-## <a name="relaxed-delegate-conversion-in-visual-basic"></a>在 Visual Basic 中的宽松的委托转换
+## <a name="relaxed-delegate-conversion-in-visual-basic"></a>Visual Basic 中的宽松委托转换
 
-宽松的委托转换，更灵活地匹配方法签名和委托类型。 例如，它允许您忽略参数规范和到委托分配方法时省略函数返回值。 有关详细信息，请参阅[宽松委托转换](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)。
+通过宽松委托转换, 可以更灵活地将方法签名与委托类型相匹配。 例如, 可以在将方法分配给委托时省略参数规范并省略函数返回值。 有关详细信息, 请参阅[宽松委托转换](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)。
 
 ## <a name="see-also"></a>请参阅
 
-- [泛型](~/docs/standard/generics/index.md)
+- [泛型](../../../../standard/generics/index.md)
 - [对 Func 和 Action 泛型委托使用变体 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)

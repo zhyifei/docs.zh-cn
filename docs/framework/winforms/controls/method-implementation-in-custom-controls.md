@@ -11,12 +11,12 @@ helpviewer_keywords:
 - methods [Windows Forms]
 - methods [Windows Forms], custom controls
 ms.assetid: 35d14fca-4bb4-4a27-8211-1f7a98ea27de
-ms.openlocfilehash: 38dcad25af31b87afc1cc6ef4f89a1f7903bc0ed
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 867bf97ea13654de6f9c0209c64b9320824f9665
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012758"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69931756"
 ---
 # <a name="method-implementation-in-custom-controls"></a>自定义控件中的方法实现
 控件中方法的实现与任何其他组件中方法的实现方式相同。  
@@ -48,7 +48,7 @@ public int ConvertMatterToEnergy(int matter)
  如果想允许控件的用户为某个方法提供参数的不同组合，则应使用显式数据类型提供该方法的多个重载。 应避免创建声明 `As Object` 的参数，这样声明的参数可以包含任何数据类型，从而会产生测试时无法捕获的错误。  
   
 > [!NOTE]
->  公共语言运行时中的通用数据类型是 `Object` 而不是 `Variant`。 `Variant` 已从该语言中移除。  
+> 公共语言运行时中的通用数据类型是 `Object` 而不是 `Variant`。 `Variant` 已从该语言中移除。  
   
  例如，有一个假想的 `Spin` 控件，其 `Widget` 方法可能允许直接指定旋转方向和速度，或者允许指定另一个 `Widget` 对象作为角动力的来源：  
   

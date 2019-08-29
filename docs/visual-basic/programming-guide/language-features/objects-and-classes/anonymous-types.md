@@ -8,129 +8,129 @@ helpviewer_keywords:
 - anonymous types [Visual Basic]
 - types [Visual Basic], anonymous
 ms.assetid: 7b87532c-4b3e-4398-8503-6ea9d67574a4
-ms.openlocfilehash: ef48ff1bbf79be981b8b8d4148f818fe40b72353
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2d134b8c8ef202a91b35ad8645bf63622b5e8030
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64632187"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70040844"
 ---
 # <a name="anonymous-types-visual-basic"></a>匿名类型 (Visual Basic)
-Visual Basic 支持匿名类型，以便你能够而无需编写的数据类型的类定义创建对象。 此时，编译器将为你生成类。 类已没有可用的名称，直接继承自<xref:System.Object>，且包含在声明该对象指定的属性。 由于未指定数据类型的名称，因此将它称为*匿名类型*。  
+Visual Basic 支持匿名类型, 这使您无需为数据类型编写类定义即可创建对象。 此时，编译器将为你生成类。 该类没有可使用的名称, 直接从<xref:System.Object>继承, 并且包含在声明对象时指定的属性。 由于未指定数据类型的名称, 因此它被称为*匿名类型*。  
   
- 以下示例声明并创建变量`product`视为具有两个属性的匿名类型的实例`Name`和`Price`。  
+ 下面的示例声明一个变量`product` , 并将其创建为具有两个属性 (和`Price`) `Name`的匿名类型的实例。  
   
  [!code-vb[VbVbalrAnonymousTypes#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#1)]  
   
- 一个*查询表达式*使用匿名类型将合并的查询所选择的数据列。 因为无法预测的特定查询可能选择的列，不能提前，定义结果的类型。 匿名类型，可以编写选择任意数量的列，按任意顺序的查询。 编译器创建的数据类型与指定的属性和指定的顺序匹配。  
+ *查询表达式*使用匿名类型来合并查询选择的数据列。 不能提前定义结果类型, 因为无法预测特定查询可能选择的列。 利用匿名类型, 您可以编写一个查询, 以任意顺序选择任意数量的列。 编译器将创建与指定的属性和指定的顺序相匹配的数据类型。  
   
- 在以下示例中，`products`是一系列产品对象，其中每个有许多属性。 变量`namePriceQuery`保存的查询在执行时返回的实例具有两个属性的匿名类型集合的定义`Name`和`Price`。  
+ 在下面的示例中`products` , 是产品对象的列表, 其中每个对象都有多个属性。 变量`namePriceQuery`包含查询的定义, 该查询在执行时返回具有两个属性 (和`Price`) `Name`的匿名类型的实例的集合。  
   
  [!code-vb[VbVbalrAnonymousTypes#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#2)]  
   
- 变量`nameQuantityQuery`保存的查询在执行时返回的实例具有两个属性的匿名类型集合的定义`Name`和`OnHand`。  
+ 变量`nameQuantityQuery`包含查询的定义, 该查询在执行时返回具有两个属性 (和`OnHand`) `Name`的匿名类型的实例的集合。  
   
  [!code-vb[VbVbalrAnonymousTypes#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#3)]  
   
- 有关创建由编译器为匿名类型的代码的详细信息，请参阅[匿名类型定义](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-type-definition.md)。  
+ 有关编译器为匿名类型创建的代码的详细信息, 请参阅[匿名类型定义](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-type-definition.md)。  
   
 > [!CAUTION]
->  匿名类型的名称是编译器生成和编译的而有所不同。 你的代码不应使用或依赖的匿名类型的名称，因为重新编译项目时，可能会更改名称。  
+> 匿名类型的名称是编译器生成的, 可能因编译而异。 你的代码不应使用或依赖于匿名类型的名称, 因为在重新编译项目时, 名称可能会更改。  
   
 ## <a name="declaring-an-anonymous-type"></a>声明匿名类型  
- 匿名类型的实例的声明使用初始值设定项列表来指定类型的属性。 当你声明匿名类型、 不其他类元素，如方法或事件时，可以指定仅属性。 在以下示例中，`product1`是具有两个属性的匿名类型的实例：`Name`和`Price`。  
+ 匿名类型的实例的声明使用初始值设定项列表指定该类型的属性。 当你声明匿名类型而不是其他类元素 (如方法或事件) 时, 只能指定属性。 在下面的示例中`product1` , 是具有两个属性的匿名类型的实例: `Name`和`Price`。  
   
  [!code-vb[VbVbalrAnonymousTypes#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#4)]  
   
- 如果将属性指定为键属性，可以使用它们来比较两个匿名类型实例相等。 但是，不能更改键属性的值。 请参阅后面本主题的详细信息的键属性部分。  
+ 如果将属性指定为键属性, 则可以使用这些属性来比较两个匿名类型实例是否相等。 但是, 不能更改键属性的值。 有关详细信息, 请参阅本主题后面的 "关键属性" 一节。  
   
- 请注意，声明匿名类型的实例是类似于通过使用对象初始值设定项声明命名类型的实例：  
+ 请注意, 声明匿名类型的实例类似于通过使用对象初始值设定项声明命名类型的实例:  
   
  [!code-vb[VbVbalrAnonymousTypes#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#5)]  
   
- 有关指定匿名类型属性的其他方法的详细信息，请参阅[如何：推断属性名和匿名类型声明中的类型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)。  
+ 有关指定匿名类型属性的其他方法的详细信息, 请[参阅如何:推断匿名类型声明](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)中的属性名称和类型。  
   
 ## <a name="key-properties"></a>键属性  
- 键属性不同于非键属性多个重要方面：  
+ 键属性在几个基本方面不同于非键属性:  
   
-- 只有键属性的值进行比较以确定两个实例是否相等。  
+- 仅比较键属性的值, 以确定两个实例是否相等。  
   
-- 键属性的值是只读的并且不能更改。  
+- 键属性的值是只读的, 无法更改。  
   
-- 仅匿名类型的编译器生成的哈希代码算法中包括键属性值。  
+- 编译器生成的匿名类型的哈希代码算法中只包含密钥属性值。  
   
 ### <a name="equality"></a>相等  
- 匿名类型的实例可以是同一匿名类型的实例才相等。 编译器将两个实例视为相同类型的实例，如果满足以下条件：  
+ 仅当匿名类型的实例是同一匿名类型的实例时, 才可以相等。 如果两个实例满足以下条件, 则编译器会将两个实例视为相同类型的实例:  
   
-- 在同一程序集中声明它们。  
+- 它们是在同一程序集中声明的。  
   
-- 它们的属性具有相同的名称相同的推断类型和声明顺序相同。 名称比较不区分大小写。  
+- 它们的属性具有相同的名称、相同的推断类型, 并按相同顺序进行声明。 名称比较不区分大小写。  
   
-- 在每个相同的属性都标记为键属性。  
+- 每个中的相同属性都标记为键属性。  
   
-- 每个声明中的至少一个属性是键属性。  
+- 每个声明中至少有一个属性是键属性。  
   
- 具有任何键属性的匿名类型的实例是只等于其自身。  
+ 没有键属性的匿名类型的实例仅等于其自身。  
   
  [!code-vb[VbVbalrAnonymousTypes#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#6)]  
   
- 如果其键属性的值相等，则同一匿名类型的两个实例相等。 以下示例说明了如何测试相等。  
+ 如果其键属性的值相等, 则同一匿名类型的两个实例相等。 下面的示例演示如何测试相等性。  
   
  [!code-vb[VbVbalrAnonymousTypes#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#7)]  
   
-### <a name="read-only-values"></a>只读的值  
- 不能更改键属性的值。 例如，在`prod8`在上一示例中，`Name`并`Price`字段`read-only`，但`OnHand`可以更改。  
+### <a name="read-only-values"></a>只读值  
+ 键属性的值不能更改。 `prod8`例如, 在前面的示例`Price` `Name`中, 和字段为`read-only`, 但`OnHand`可以更改。  
   
  [!code-vb[VbVbalrAnonymousTypes#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#8)]  
   
 ## <a name="anonymous-types-from-query-expressions"></a>查询表达式中的匿名类型  
- 查询表达式始终不需要创建匿名类型。 如果可能，它们使用现有类型以保存列数据。 查询从数据源或每条记录中的只有一个字段返回任一整条记录时，将发生这种情况。 在下面的代码示例中，`customers`是一系列的对象`Customer`类。 类具有许多属性，并可在查询结果中，按任意顺序包含一个或多个。 在前两个示例中，任何匿名类型不是必需，因为查询中选择的命名类型的元素：  
+ 查询表达式并不总是需要创建匿名类型。 如果可能, 它们使用现有类型来保存列数据。 如果查询返回数据源中的全部记录, 或者只返回每个记录中的一个字段, 则会发生这种情况。 在下面的代码示例中`customers` , 是`Customer`类的对象的集合。 类具有很多属性, 并且可以按任意顺序在查询结果中包含一个或多个属性。 在前两个示例中, 不需要匿名类型, 因为查询选择了命名类型的元素:  
   
-- `custs1` 包含一系列字符串，因为`cust.Name`是一个字符串。  
+- `custs1`包含字符串的集合, 因为`cust.Name`是一个字符串。  
   
      [!code-vb[VbVbalrAnonymousTypes#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#30)]  
   
-- `custs2` 包含一系列`Customer`对象，因为每个元素的`customers`是`Customer`查询选择对象，并且整个元素。  
+- `custs2`包含`Customer`对象的集合, 因为的`customers`每个元素都是`Customer`一个对象, 并且整个元素都由查询选择。  
   
      [!code-vb[VbVbalrAnonymousTypes#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#31)]  
   
- 但是，相应的命名的类型并非始终可用。 您可能想要选择客户名称和地址的一种用途、 客户 ID 号和位置，以及客户名称、 地址和订单历史记录中的第三个。 匿名类型，可选择任意组合的属性，按任意顺序，而无需第一个声明新的命名的类型以保存结果。 相反，编译器会创建每个编译属性的匿名类型。 以下查询从每个选择仅客户的姓名和 ID 号`Customer`对象中`customers`。 因此，编译器会创建包含仅这两个属性的匿名类型。  
+ 但是, 相应的命名类型并不始终可用。 你可能想要选择客户名称和地址以实现一个目的、为其他客户 ID 编号和位置, 并为第三个帐户选择客户名称、地址和订单历史记录。 匿名类型使你可以按任意顺序选择任何属性组合, 而无需首先声明新的命名类型来保存结果。 相反, 编译器会为每个属性编译创建一个匿名类型。 下面的查询从中的每个`Customer`对象中`customers`仅选择客户的名称和 ID 号。 因此, 编译器将创建仅包含这两个属性的匿名类型。  
   
  [!code-vb[VbVbalrAnonymousTYpes#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#32)]  
   
- 名称和匿名类型中的属性的数据类型执行的参数从`Select`，`cust.Name`和`cust.ID`。 由查询创建的匿名类型中的属性始终是键属性。 当`custs3`在下面的示例执行`For Each`循环中，结果是具有两个键属性的匿名类型的实例的集合`Name`和`ID`。  
+ 匿名类型中的属性的名称和数据类型都是从到`Select`、 `cust.Name`和`cust.ID`的参数中获取的。 由查询创建的匿名类型中的属性始终是键属性。 当`custs3`在以下`For Each`循环中执行时, 结果是`Name`具有两个键属性和`ID`的匿名类型的实例的集合。  
   
  [!code-vb[VbVbalrAnonymousTypes#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#33)]  
   
- 表示的集合中的元素`custs3`强类型，以及您可以使用 IntelliSense 来浏览可用的属性和以验证它们的类型。  
+ 由表示`custs3`的集合中的元素是强类型的, 您可以使用 IntelliSense 浏览可用属性并验证其类型。  
   
  有关详细信息，请参阅[Visual Basic 中的 LINQ 简介](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)。  
   
 ## <a name="deciding-whether-to-use-anonymous-types"></a>确定是否使用匿名类型  
- 作为匿名类的实例创建对象之前，请考虑这是否是最佳选择。 例如，如果你想要创建临时对象，以包含相关的数据，并且具有无需其他字段和完整的类可能包含的方法，匿名类型是一个不错的解决方案。 如果你想选择不同的属性对于每个声明，或如果你想要更改属性的顺序，匿名类型是还方便。 但是，如果你的项目包含几个对象有相同的属性，按固定顺序，您可以声明它们更轻松地通过类构造函数中使用命名的类型。 例如，与相应的构造函数，它是更轻松地声明的多个实例`Product`类不是它是声明匿名类型的多个实例。  
+ 在将对象创建为匿名类的实例之前, 请考虑这是否是最佳选项。 例如, 如果想要创建一个临时对象来包含相关数据, 并且不需要完整类可能包含的其他字段和方法, 则匿名类型是一个不错的解决方案。 如果需要为每个声明选择不同的属性, 或者要更改属性的顺序, 则匿名类型也是非常方便的。 但是, 如果你的项目包含多个具有相同属性的对象 (按固定顺序), 则可以通过将命名类型用于类构造函数来更轻松地声明它们。 例如, 使用适当的构造函数时, 声明`Product`类的多个实例比声明匿名类型的多个实例更容易。  
   
  [!code-vb[VbVbalrAnonymousTypes#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#9)]  
   
- 命名类型的另一个优点是编译器可以捕获属性名称的无意拼写错误。 在上一示例中， `firstProd2`， `secondProd2`，和`thirdProd2`都应是相同的匿名类型的实例。 但是，如果您意外声明`thirdProd2`通过以下方式之一，其类型应为不同于`firstProd2`和`secondProd2`。  
+ 命名类型的另一个优点是编译器可能会捕获属性名称的意外的误。 在前面的示例中`firstProd2`, `secondProd2`、和`thirdProd2`旨在作为相同匿名类型的实例。 但是, 如果您意外声明`thirdProd2`为以下某种方法, 其类型将不同于`firstProd2`和`secondProd2`的类型。  
   
  [!code-vb[VbVbalrAnonymousTypes#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#10)]  
   
- 更重要的是，有的不适用于已命名类型的实例的匿名类型的使用限制。 `firstProd2``secondProd2`，和`thirdProd2`是相同的匿名类型的实例。 但是，共享的匿名类型的名称不可用，并且不能出现在代码中预期的类型名称的。 例如，匿名类型不能用于定义方法签名，若要声明另一个变量或字段，或任何类型声明中。 因此，如果您不得不在方法之间共享的信息匿名类型不适合。  
+ 更重要的是, 对不适用于命名类型实例的匿名类型的使用存在一些限制。 `firstProd2`、 `secondProd2`和`thirdProd2`是相同匿名类型的实例。 但是, 共享匿名类型的名称不可用, 因此不能出现在代码中需要类型名称的位置。 例如, 匿名类型不能用于定义方法签名, 也不能声明其他变量或字段, 也不能用于任何类型声明。 因此, 当必须跨方法共享信息时, 匿名类型不适用。  
   
 ## <a name="an-anonymous-type-definition"></a>匿名类型定义  
- 在响应的匿名类型的实例声明时，编译器会创建包含指定的属性的新类定义。  
+ 在响应匿名类型的实例的声明时, 编译器会创建一个新的类定义, 其中包含指定的属性。  
   
- 如果匿名类型包含至少一个键属性，定义将重写继承的三个成员<xref:System.Object>: <xref:System.Object.Equals%2A>， <xref:System.Object.GetHashCode%2A>，和<xref:System.Object.ToString%2A>。 代码生成测试相等性，并确定哈希代码值将视为仅的键属性。 如果匿名类型包含任何键属性，仅<xref:System.Object.ToString%2A>被重写。 显式命名的匿名类型属性不能与这些生成的方法发生冲突。 也就是说，不能使用`.Equals`， `.GetHashCode`，或`.ToString`命名属性。  
+ 如果匿名类型至少包含一个键属性, 则定义将重<xref:System.Object>写继承自的三个成员: <xref:System.Object.Equals%2A>、 <xref:System.Object.ToString%2A> <xref:System.Object.GetHashCode%2A>和。 为测试相等性和确定哈希代码值而生成的代码只考虑键属性。 如果匿名类型不包含键属性, 则只<xref:System.Object.ToString%2A>会重写。 匿名类型的显式命名属性不能与这些生成的方法冲突。 也就是说, 不能使用`.Equals`、 `.GetHashCode`或`.ToString`对属性命名。  
   
- 具有至少一个匿名类型定义的键属性还实现<xref:System.IEquatable%601?displayProperty=nameWithType>接口，其中`T`是匿名类型的类型。  
+ 至少具有一个键属性的匿名类型定义还实现<xref:System.IEquatable%601?displayProperty=nameWithType>接口, 其中`T`是匿名类型的类型。  
   
- 有关由编译器和重写方法的功能创建的代码的详细信息，请参阅[匿名类型定义](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-type-definition.md)。  
+ 有关编译器创建的代码和重写的方法的功能的详细信息, 请参阅[匿名类型定义](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-type-definition.md)。  
   
 ## <a name="see-also"></a>请参阅
 
-- [对象初始值设定项：命名和匿名类型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
+- [对象初始值设定项:命名类型和匿名类型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
 - [局部类型推理](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
 - [Visual Basic 中的 LINQ 简介](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
-- [如何：推断属性名和匿名类型声明中的类型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)
+- [如何：推断匿名类型声明中的属性名称和类型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)
 - [匿名类型定义](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-type-definition.md)
 - [Key](../../../../visual-basic/language-reference/modifiers/key.md)

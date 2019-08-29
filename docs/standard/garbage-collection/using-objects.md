@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 81b2cdb5-c91a-4a31-9c83-eadc52da5cf0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 25c5ffa89e6ce4e589b8f12a7b8518272426c9e9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 074b97f29946390170abe3c40d71d2ee2cb214ce
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54597785"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666479"
 ---
 # <a name="using-objects-that-implement-idisposable"></a>使用实现 IDisposable 的对象
 
@@ -63,5 +63,5 @@ C# 中的 `using` 语句和 Visual Basic 中的 `Using` 语句可以简化创建
 ## <a name="see-also"></a>请参阅
 
 - [清理未托管资源](../../../docs/standard/garbage-collection/unmanaged.md)（清理未托管资源）
-- [using 语句（C# 参考）](~/docs/csharp/language-reference/keywords/using-statement.md)
-- [Using 语句 (Visual Basic)](~/docs/visual-basic/language-reference/statements/using-statement.md)
+- [using 语句（C# 参考）](../../csharp/language-reference/keywords/using-statement.md)
+- [Using 语句 (Visual Basic)](../../visual-basic/language-reference/statements/using-statement.md)

@@ -63,7 +63,9 @@ ms.locfileid: "67421876"
 
 ### <a name="open-source"></a>开源
 
-[.NET Core](https://github.com/dotnet/core) 是开源的（[MIT 许可证](https://github.com/dotnet/core/blob/master/LICENSE.TXT)），由 Microsoft 于 2014 年提供给 [.NET Foundation](https://dotnetfoundation.org)。 现在它是最活跃的 .NET Foundation 项目之一。 可由个人和公司自由采用，包括用于个人、学术或商业目的。 许多公司将 .NET Core 用作应用、工具、新平台和托管服务的一部分。 其中某些公司在 GitHub 上为 .NET Core 做出了巨大贡献，并作为 [.NET Foundation Technical Steering Group](https://dotnetfoundation.org/blog/tsg-welcome)（.NET Foundation 技术控制组）的成员为产品方向提供指导。
+
+[.NET Core](https://github.com/dotnet/core) 是开源的（[MIT 许可证](https://github.com/dotnet/core/blob/master/LICENSE.TXT)），由 Microsoft 于 2014 年提供给 [.NET Foundation](https://dotnetfoundation.org)。现在它是最活跃的 .NET Foundation 项目之一。可由个人和公司自由采用，包括用于个人、学术或商业目的。许多公司将 .NET Core 用作应用、工具、新平台和托管服务的一部分。其中某些公司在 GitHub 上为 .NET Core 做出了巨大贡献，并作为 [.NET Foundation Technical Steering Group](https://dotnetfoundation.org/blog/tsg-welcome)（.NET Foundation 技术控制组）的成员为产品方向提供指导。
+
 
 ### <a name="designed-for-adaptability"></a>针对适应性而设计
 
@@ -107,7 +109,9 @@ Windows 和 Unix 实现大小相似。 Windows 具有较大的实现，因为 Co
 
 ### <a name="comparison-with-mono"></a>与 Mono 比较
 
-[Mono](https://www.mono-project.com/) 是最初的跨平台和[开源](https://github.com/mono/mono) .NET 实现，于 2004 年首次发布。 可将它看作是 .NET Framework 的社区克隆。 Mono 项目团队依赖于 Microsoft 发布的开放 [.NET 标准](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md)（尤其是 ECMA 335）以实现兼容性。
+
+[Mono](https://www.mono-project.com/) 是最初的跨平台和[开源](https://github.com/mono/mono) .NET 实现，于 2004 年首次发布。可将它看作是 .NET Framework 的社区克隆。Mono 项目团队依赖于 Microsoft 发布的开放 [.NET 标准](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md)（尤其是 ECMA 335）以实现兼容性。
+
 
 .NET Core 和 Mono 的主要差异在于：
 

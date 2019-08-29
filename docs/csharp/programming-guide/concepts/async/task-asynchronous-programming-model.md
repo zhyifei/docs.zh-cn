@@ -2,12 +2,12 @@
 title: 使用 Async和 Await 的任务异步编程模型 (TAP) (C#)
 ms.date: 05/22/2017
 ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
-ms.openlocfilehash: dcb5148e7f91d07bc038e5304ab65f5f3c59b216
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: bfe32b2eaefb9ce813ca74bed450a935e33dc9d4
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67347687"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595601"
 ---
 # <a name="task-asynchronous-programming-model"></a>异步编程模型
 
@@ -38,7 +38,7 @@ ms.locfileid: "67347687"
 
 ## <a name="BKMK_HowtoWriteanAsyncMethod"></a> 异步方法更容易编写
 
-C# 中的 [Async](../../../../csharp/language-reference/keywords/async.md) 和 [Await](../../../../csharp/language-reference/keywords/await.md) 关键字是异步编程的核心。 通过这两个关键字，可以使用 .NET Framework、.NET Core 或 Windows 运行时中的资源，轻松创建异步方法（几乎与创建同步方法一样轻松）。 使用 `async` 关键字定义的异步方法简称为“异步方法”  。
+C# 中的 [Async](../../../language-reference/keywords/async.md) 和 [Await](../../../language-reference/keywords/await.md) 关键字是异步编程的核心。 通过这两个关键字，可以使用 .NET Framework、.NET Core 或 Windows 运行时中的资源，轻松创建异步方法（几乎与创建同步方法一样轻松）。 使用 `async` 关键字定义的异步方法简称为“异步方法”  。
 
 下面的示例演示了一种异步方法。 你应对代码中的几乎所有内容都非常熟悉。
 
@@ -136,7 +136,7 @@ string urlContents = await client.GetStringAsync("https://docs.microsoft.com");
 8. 当 `AccessTheWebAsync` 具有字符串结果时，该方法可以计算字符串长度。 然后，`AccessTheWebAsync` 工作也将完成，并且等待事件处理程序可继续使用。 在此主题结尾处的完整示例中，可确认事件处理程序检索并打印长度结果的值。
 如果你不熟悉异步编程，请花 1 分钟时间考虑同步行为和异步行为之间的差异。 当其工作完成时（第 5 步）会返回一个同步方法，但当其工作挂起时（第 3 步和第 6 步），异步方法会返回一个任务值。 在异步方法最终完成其工作时，任务会标记为已完成，而结果（如果有）将存储在任务中。
 
-若要详细了解控制流，请参阅[异步程序中的控制流 (C#)](../../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md)。
+若要详细了解控制流，请参阅[异步程序中的控制流 (C#)](./control-flow-in-async-programs.md)。
 
 ## <a name="BKMK_APIAsyncMethods"></a> API 异步方法
 
@@ -154,9 +154,9 @@ Windows 运行时也包含许多可以在 Windows 应用中与 `async` 和 `awai
 
 ## <a name="BKMK_AsyncandAwait"></a>async 和 await
 
-如果使用 [async](../../../../csharp/language-reference/keywords/async.md) 修饰符将某种方法指定为异步方法，即启用以下两种功能。
+如果使用 [async](../../../language-reference/keywords/async.md) 修饰符将某种方法指定为异步方法，即启用以下两种功能。
 
-- 标记的异步方法可以使用 [await](../../../../csharp/language-reference/keywords/await.md) 来指定暂停点。 `await` 运算符通知编译器异步方法：在等待的异步过程完成后才能继续通过该点。 同时，控制返回至异步方法的调用方。
+- 标记的异步方法可以使用 [await](../../../language-reference/keywords/await.md) 来指定暂停点。 `await` 运算符通知编译器异步方法：在等待的异步过程完成后才能继续通过该点。 同时，控制返回至异步方法的调用方。
 
      异步方法在 `await` 表达式执行时暂停并不构成方法退出，只会导致 `finally` 代码块不运行。
 
@@ -166,15 +166,15 @@ Windows 运行时也包含许多可以在 Windows 应用中与 `async` 和 `awai
 
 `async` 和 `await` 都是上下文关键字。 有关更多信息和示例，请参见以下主题：
 
-- [async](../../../../csharp/language-reference/keywords/async.md)
+- [async](../../../language-reference/keywords/async.md)
 
-- [await](../../../../csharp/language-reference/keywords/await.md)
+- [await](../../../language-reference/keywords/await.md)
 
 ## <a name="BKMK_ReturnTypesandParameters"></a> 返回类型和参数
 
 异步方法通常返回 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601>。 在异步方法中，`await` 运算符应用于通过调用另一个异步方法返回的任务。
 
-如果方法包含指定 `TResult` 类型操作数的 [`return`](../../../../csharp/language-reference/keywords/return.md) 语句，将 <xref:System.Threading.Tasks.Task%601> 指定为返回类型。
+如果方法包含指定 `TResult` 类型操作数的 [`return`](../../../language-reference/keywords/return.md) 语句，将 <xref:System.Threading.Tasks.Task%601> 指定为返回类型。
 
 如果方法不含任何 return 语句或包含不返回操作数的 return 语句，将 <xref:System.Threading.Tasks.Task> 用作返回类型。
 
@@ -218,9 +218,9 @@ await GetTaskAsync();
 
 无法等待具有 `void` 返回类型的异步方法，并且无效返回方法的调用方捕获不到异步方法抛出的任何异常。
 
-异步方法无法声明 [in](../../../../csharp/language-reference/keywords/in-parameter-modifier.md)、[ref](../../../../csharp/language-reference/keywords/ref.md) 或 [out](../../../../csharp/language-reference/keywords/out-parameter-modifier.md) 参数，但可以调用包含此类参数的方法。 同样，异步方法无法通过引用返回值，但可以调用包含 ref 返回值的方法。
+异步方法无法声明 [in](../../../language-reference/keywords/in-parameter-modifier.md)、[ref](../../../language-reference/keywords/ref.md) 或 [out](../../../language-reference/keywords/out-parameter-modifier.md) 参数，但可以调用包含此类参数的方法。 同样，异步方法无法通过引用返回值，但可以调用包含 ref 返回值的方法。
 
-有关详细信息和示例，请参阅[异步返回类型 (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md)。 若要详细了解如何在异步方法中捕获异常，请参阅 [try-catch](../../../../csharp/language-reference/keywords/try-catch.md)。
+有关详细信息和示例，请参阅[异步返回类型 (C#)](./async-return-types.md)。 若要详细了解如何在异步方法中捕获异常，请参阅 [try-catch](../../../language-reference/keywords/try-catch.md)。
 
 Windows 运行时编程中的异步 API 具有下列返回类型之一（类似于任务）：
 
@@ -242,16 +242,16 @@ Windows 运行时编程中的异步 API 具有下列返回类型之一（类似�
 
 |标题|说明|示例|
 |-----------|-----------------|------------|
-|[演练：使用 Async 和 Await 访问 Web (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)|演示如何将一个同步 WPF 解决方案转换成一个异步 WPF 解决方案。 应用程序下载一系列网站。|[异步示例：“访问 Web”演练](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)|
-|[如何：使用 Task.WhenAll 扩展异步演练 (C#)](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)|将 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> 添加到上一个演练。 使用 `WhenAll` 同时启动所有下载。||
-|[如何：使用 Async 和 Await 并行发出多个 Web 请求 (C#)](../../../../csharp/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)|演示如何同时开始几个任务。|[异步示例：并行发出多个 Web 请求](https://code.msdn.microsoft.com/Async-Make-Multiple-Web-49adb82e)|
-|[异步返回类型 (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md)|描述异步方法可返回的类型，并解释每种类型适用于的情况。||
-|[异步程序中的控制流 (C#)](../../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md)|通过异步程序中的一系列 await 表达式来详细跟踪控制流。|[异步示例：异步程序中的控制流](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)|
-|[微调异步应用程序 (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)|演示如何将以下功能添加到异步解决方案：<br /><br /> - [取消一个异步任务或一组任务(C#)](../../../../csharp/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)<br />- [在一段时间后取消异步任务 (C#)](../../../../csharp/programming-guide/concepts/async/cancel-async-tasks-after-a-period-of-time.md)<br />- [在完成一个异步任务后取消剩余任务 (C#)](../../../../csharp/programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md)<br />- [启动多个异步任务并在其完成时进行处理 (C#)](../../../../csharp/programming-guide/concepts/async/start-multiple-async-tasks-and-process-them-as-they-complete.md)|[异步示例：微调应用程序](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)|
-|[在异步应用程序中处理重入 (C#)](../../../../csharp/programming-guide/concepts/async/handling-reentrancy-in-async-apps.md)|演示如何处理有效的异步操作在运行时重启的情况。||
+|[演练：使用 Async 和 Await 访问 Web (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)|演示如何将一个同步 WPF 解决方案转换成一个异步 WPF 解决方案。 应用程序下载一系列网站。|[异步示例：“访问 Web”演练](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)|
+|[如何：使用 Task.WhenAll 扩展异步演练 (C#)](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md)|将 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> 添加到上一个演练。 使用 `WhenAll` 同时启动所有下载。||
+|[如何：使用 Async 和 Await 并行发出多个 Web 请求 (C#)](./how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)|演示如何同时开始几个任务。|[异步示例：并行发出多个 Web 请求](https://code.msdn.microsoft.com/Async-Make-Multiple-Web-49adb82e)|
+|[异步返回类型 (C#)](./async-return-types.md)|描述异步方法可返回的类型，并解释每种类型适用于的情况。||
+|[异步程序中的控制流 (C#)](./control-flow-in-async-programs.md)|通过异步程序中的一系列 await 表达式来详细跟踪控制流。|[异步示例：异步程序中的控制流](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)|
+|[微调异步应用程序 (C#)](./fine-tuning-your-async-application.md)|演示如何将以下功能添加到异步解决方案：<br /><br /> - [取消一个异步任务或一组任务(C#)](./cancel-an-async-task-or-a-list-of-tasks.md)<br />- [在一段时间后取消异步任务 (C#)](./cancel-async-tasks-after-a-period-of-time.md)<br />- [在完成一个异步任务后取消剩余任务 (C#)](./cancel-remaining-async-tasks-after-one-is-complete.md)<br />- [启动多个异步任务并在其完成时进行处理 (C#)](./start-multiple-async-tasks-and-process-them-as-they-complete.md)|[异步示例：微调应用程序](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)|
+|[在异步应用程序中处理重入 (C#)](./handling-reentrancy-in-async-apps.md)|演示如何处理有效的异步操作在运行时重启的情况。||
 |[WhenAny：综合运用 .NET Framework 和 Windows 运行时](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/jj635140(v=vs.120))|展示了如何在 .NET Framework 与 Windows 运行时中的 IAsyncOperations 之间桥接任务类型，以便可以将 <xref:System.Threading.Tasks.Task.WhenAny%2A> 与 Windows 运行时方法结合使用。|[异步示例：综合运用 .NET 和 Windows 运行时（AsTask 和 WhenAny）](https://code.msdn.microsoft.com/Async-Sample-Bridging-d6a2f739)|
 |异步取消：综合运用 .NET Framework 和 Windows 运行时|展示了如何在 .NET Framework 与 Windows 运行时中的 IAsyncOperations 之间桥接任务类型，以便可以将 <xref:System.Threading.CancellationTokenSource> 与 Windows 运行时方法结合使用。|[异步示例：综合运用 .NET 和 Windows 运行时（AsTask 和 Cancellation）](https://code.msdn.microsoft.com/Async-Sample-Bridging-9479eca3)|
-|[使用 Async 进行文件访问 (C#)](../../../../csharp/programming-guide/concepts/async/using-async-for-file-access.md)|列出并演示使用 async 和 await 访问文件的好处。||
+|[使用 Async 进行文件访问 (C#)](./using-async-for-file-access.md)|列出并演示使用 async 和 await 访问文件的好处。||
 |[基于任务的异步模式 (TAP)](../../../../standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)|描述 .NET Framework 中异步的新模式。 该模式基于 <xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601> 类型。||
 |[Channel 9 上的异步相关视频](https://channel9.msdn.com/search?term=async%20&type=All#pubDate=year&ch9Search&lang-en=en)|提供指向有关异步编程的各种视频的链接。||
 
@@ -342,7 +342,7 @@ namespace AsyncFirstExample
 
 ## <a name="see-also"></a>请参阅
 
-- [async](../../../../csharp/language-reference/keywords/async.md)
-- [await](../../../../csharp/language-reference/keywords/await.md)
-- [异步编程](../../../../csharp/async.md)
+- [async](../../../language-reference/keywords/async.md)
+- [await](../../../language-reference/keywords/await.md)
+- [异步编程](../../../async.md)
 - [异步概述](../../../../standard/async.md)

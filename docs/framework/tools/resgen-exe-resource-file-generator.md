@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8ef159de-b660-4bec-9213-c3fbc4d1c6f4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c6b908cadc02e0d1739d8b36b6904bb47c5ea090
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: b018672fbc9e669f6010871a150dd9b060babd88
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66378468"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69957996"
 ---
 # <a name="resgenexe-resource-file-generator"></a>Resgen.exe（资源文件生成器）
 资源文件生成器 (Resgen.exe) 将文本（.txt 或 .restext）文件和基于 XML 的资源格式 (.resx) 文件转换为公共语言运行时二进制 (.resources) 文件，后者可嵌入到运行时二进制可执行文件或附属程序集中。 （请参阅[创建资源文件](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)。）  
@@ -90,7 +90,7 @@ resgen filename.extension [outputDirectory]
  文本（.txt 或 .restext）文件只能包含字符串资源。 如果编写必须具有已翻译成多种语言的字符串的应用程序，则字符串资源很有用。 例如，通过使用适当的字符串资源，可以轻松区域化菜单字符串。 Resgen.exe 读取包含名称/值对的文本文件，其中名称是描述资源的字符串，值是资源字符串本身。  
   
 > [!NOTE]
->  有关 .txt 和 .restext 文件的格式信息，请参阅[创建资源文件](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)中的“文本文件中的资源”部分。  
+> 有关 .txt 和 .restext 文件的格式信息，请参阅[创建资源文件](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)中的“文本文件中的资源”部分。  
   
  包含资源的文本文件必须使用 UTF-8 或 Unicode (UTF-16) 编码进行保存，除非它仅包含 Basic Latin 范围（到 U+007F）中的字符。 当 Resgen.exe 处理使用 ANSI 编码保存的文本文件时，它会移除扩展的 ANSI 字符。  
   
@@ -220,7 +220,7 @@ resgen /compile StringResources.txt TableResources.resx ImageResources.resx
  如果正在开发 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]应用，你可能需要使用现有桌面应用中的资源。 但是，这两种应用程序支持不同的文件格式。 在桌面应用中，文本（.txt 或 .restext）文件或 .resx 文件中的资源将编译为二进制 .resources 文件。 在 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]应用中，.resw 文件将编译为二进制包资源索引 (PRI) 文件。 可以使用 Resgen.exe 从可执行程序集或附属程序集中提取资源，并将资源写入一个或多个 .resw 文件（在开发 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]应用时可使用这些文件）中来填补此间隙。  
   
 > [!IMPORTANT]
->  Visual Studio 自动处理将可移植库中的资源并入 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]应用中所需的所有转换。 仅需要在 Visual Studio 外部开发 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]应用的开发人员对直接使用 Resgen.exe 将程序集中的资源转换为 .resw 文件格式感兴趣。  
+> Visual Studio 自动处理将可移植库中的资源并入 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]应用中所需的所有转换。 仅需要在 Visual Studio 外部开发 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]应用的开发人员对直接使用 Resgen.exe 将程序集中的资源转换为 .resw 文件格式感兴趣。  
   
  用于从程序集生成 .resw 文件的语法是：  
   
@@ -302,7 +302,7 @@ resgen inputFilename [outputFilename] /str:language[,namespace,[classname[,filen
  classname   
  强类型资源类的名称。 这应对应于 .resources 文件的根名称。 例如，如果 Resgen.exe 生成名为 MyCompany.Libraries.Strings.resources 的 .resources 文件，则强类型资源类的名称为 Strings。 如果省略 classname，则生成的类是从 `outputFilename` 的根名称派生的  。 如果省略 `outputFilename`，则生成的类是从 `inputFilename` 的根名称派生的。  
   
- classname 不能包含无效字符（如嵌入的空格）  。 如果 classname 包含嵌入的空格，或者从 inputFilename 中生成 classname（默认情况），并且 inputFilename 包含嵌入的空格，则 Resgen.exe 会将所有无效字符替换为下划线 (_)     。  
+ classname 不能包含无效字符（如嵌入的空格）  。 如果 classname 包含嵌入的空格，或者从 inputFilename 中生成 classname（默认情况），并且 inputFilename 包含嵌入的空格，则 Resgen.exe 会将所有无效字符替换为下划线 (\_)     。  
   
  *filename*  
  类文件的名称。  
@@ -311,7 +311,7 @@ resgen inputFilename [outputFilename] /str:language[,namespace,[classname[,filen
  使强类型资源类成为公共类而不是 `internal`（在 C# 中）或 `Friend`（在 Visual Basic 中）。 这允许从资源嵌入到的程序集外部访问这些资源。  
   
 > [!IMPORTANT]
->  创建强类型资源类时，.resources 文件的名称必须与生成的代码的命名空间和类名匹配。 但是，Resgen.exe 允许你指定可生成具有不兼容的名称的 .resources 文件的选项。 若要解决此行为，请在生成输出文件后重命名此文件。  
+> 创建强类型资源类时，.resources 文件的名称必须与生成的代码的命名空间和类名匹配。 但是，Resgen.exe 允许你指定可生成具有不兼容的名称的 .resources 文件的选项。 若要解决此行为，请在生成输出文件后重命名此文件。  
   
  强类型资源类具有下列成员：  
   

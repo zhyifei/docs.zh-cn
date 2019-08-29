@@ -2,15 +2,15 @@
 title: 如何：确定文件是否为程序集 (C#)
 ms.date: 07/20/2015
 ms.assetid: ea5186bb-5bff-4dcb-bde9-d6ba4e2edd00
-ms.openlocfilehash: e8026ab5fa44b7601e54b5e76ebf9eb434596a07
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 803159eed25a7785b1a2b4433e6950fa65e0a734
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59340134"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595859"
 ---
 # <a name="how-to-determine-if-a-file-is-an-assembly-c"></a>如何：确定文件是否为程序集 (C#)
-当且仅当程序集处于托管状态，并在其元数据中包含程序集条目时，该文件才为程序集。 有关程序集和元数据的详细信息，请参阅主题[程序集清单](../../../../../docs/framework/app-domains/assembly-manifest.md)。  
+当且仅当程序集处于托管状态，并在其元数据中包含程序集条目时，该文件才为程序集。 有关程序集和元数据的详细信息，请参阅主题[程序集清单](../../../../framework/app-domains/assembly-manifest.md)。  
   
 ### <a name="how-to-manually-determine-if-a-file-is-an-assembly"></a>如何手动确定文件是否为程序集  
   
@@ -69,5 +69,5 @@ class TestAssembly
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Reflection.AssemblyName>
-- [C# 编程指南](../../../../csharp/programming-guide/index.md)
+- [C# 编程指南](../../index.md)
 - [.NET 中的程序集](../../../../standard/assembly/index.md)

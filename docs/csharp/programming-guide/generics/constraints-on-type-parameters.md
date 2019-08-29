@@ -7,12 +7,12 @@ helpviewer_keywords:
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: f09f93f27aa4f50cfb7e09b9d6d4f98f22e1ac9a
-ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
+ms.openlocfilehash: 4f0277ef5883a238cf2579d2d9ea956bc06061e2
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68433557"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69589872"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>类型参数的约束（C# 编程指南）
 
@@ -24,8 +24,8 @@ ms.locfileid: "68433557"
 |`where T : class`|类型参数必须是引用类型。 此约束还应用于任何类、接口、委托或数组类型。|
 |`where T : unmanaged`|类型参数必须是[非托管类型](../../language-reference/builtin-types/unmanaged-types.md)。|
 |`where T : new()`|类型参数必须具有公共无参数构造函数。 与其他约束一起使用时，`new()` 约束必须最后指定。|
-|`where T :` \<基类名>|类型参数必须是指定的基类或派生自指定的基类。|
-|`where T :` \<接口名称>|类型参数必须是指定的接口或实现指定的接口。 可指定多个接口约束。 约束接口也可以是泛型。|
+|`where T :` \<基类名> |类型参数必须是指定的基类或派生自指定的基类。|
+|`where T :` \<接口名称> |类型参数必须是指定的接口或实现指定的接口。 可指定多个接口约束。 约束接口也可以是泛型。|
 |`where T : U`|为 T 提供的类型参数必须是为 U 提供的参数或派生自为 U 提供的参数。|
 
 某些约束是互斥的。 所有值类型必须具有可访问的无参数构造函数。 `struct` 约束包含 `new()` 约束，且 `new()` 约束不能与 `struct` 约束结合使用。 `unmanaged` 约束包含 `struct` 约束。 `unmanaged` 约束不能与 `struct` 或 `new()` 约束结合使用。
@@ -113,7 +113,7 @@ ms.locfileid: "68433557"
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Collections.Generic>
-- [C# 编程指南](../../../csharp/programming-guide/index.md)
-- [泛型介绍](../../../csharp/programming-guide/generics/index.md)
-- [泛型类](../../../csharp/programming-guide/generics/generic-classes.md)
-- [new 约束](../../../csharp/language-reference/keywords/new-constraint.md)
+- [C# 编程指南](../index.md)
+- [泛型介绍](./index.md)
+- [泛型类](./generic-classes.md)
+- [new 约束](../../language-reference/keywords/new-constraint.md)

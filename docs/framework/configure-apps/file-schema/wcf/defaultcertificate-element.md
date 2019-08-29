@@ -2,20 +2,20 @@
 title: <defaultCertificate> 元素
 ms.date: 03/30/2017
 ms.assetid: f1ddf364-9a00-45d3-b989-ff381c154ce6
-ms.openlocfilehash: c94531d10b7c0ef5ca0ee1f2d5683d0a259a2537
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 93410e815a156f91db1962f05fb1aa6baca7f955
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61644448"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919254"
 ---
 # <a name="defaultcertificate-element"></a>\<defaultCertificate > 元素
 指定在服务或 STS 未通过协商协议提供证书时要使用的 X.509 证书。  
   
  \<system.ServiceModel>  
-\<behaviors>  
+\<行为 >  
 endpointBehaviors 部分  
-\<behavior>  
+\<行为 >  
 \<clientCredentials>  
 \<serviceCertificate>  
 \<defaultCertificate>  
@@ -43,27 +43,27 @@ endpointBehaviors 部分
   
 ## <a name="findvalue-attribute"></a>findValue 属性  
   
-|“值”|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |String|值取决于搜索的字段（由 X509FindType 属性指定）。 例如，如果搜索指纹，则此值必须为十六进制数字字符串。|  
   
 ## <a name="x509findtype-attribute"></a>x509FindType 属性  
   
-|“值”|描述|  
+|值|描述|  
 |-----------|-----------------|  
-|枚举|值包括：FindByThumbprint、 FindBySubjectName、 FindBySubjectDistinguishedName、 FindByIssuerName、 FindByIssuerDistinguishedName、 FindBySerialNumber、 FindByTimeValid、 FindByTimeNotYetValid、 FindBySerialNumber、 FindByTimeExpired、 FindByTemplateNameFindByApplicationPolicy、 FindByCertificatePolicy、 FindByExtension、 FindByKeyUsage、 和 FindBySubjectKeyIdentifier。|  
+|枚举|值包括：FindByThumbprint、Findbysubjectname)、FindBySubjectDistinguishedName、FindByIssuerName、FindByIssuerDistinguishedName、FindBySerialNumber、FindByTimeValid、FindByTimeNotYetValid、FindBySerialNumber、FindByTimeExpired、FindByTemplateName, FindByApplicationPolicy, FindByCertificatePolicy, FindByExtension, FindByKeyUsage, FindBySubjectKeyIdentifier.|  
   
 ## <a name="storelocation-attribute"></a>storeLocation 属性  
   
-|“值”|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |枚举|CurrentUser 或 LocalMachine。|  
   
 ## <a name="storename-attribute"></a>storeName 属性  
   
-|“值”|描述|  
+|值|描述|  
 |-----------|-----------------|  
-|枚举|值包括：AddressBook、 AuthRoot、 CertificateAuthority、 Disallowed、 My、 根、 TrustedPeople 和 TrustedPublisher。|  
+|枚举|值包括：通讯簿、AuthRoot、CertificateAuthority、不允许、My、Root、TrustedPeople 和 TrustedPublisher。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  
@@ -72,7 +72,7 @@ endpointBehaviors 部分
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<serviceCertificate>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md)|指定客户端对服务进行身份验证时使用的证书。|  
+|[\<serviceCertificate>](servicecertificate-of-clientcredentials-element.md)|指定客户端对服务进行身份验证时使用的证书。|  
   
 ## <a name="remarks"></a>备注  
  对于使用基于证书的消息安全的绑定，此配置元素指定的证书用于加密发送给服务的消息，并期望服务用它来对客户端的应答进行签名。 如果服务未指定任何证书，它只存储要使用的一个证书。  
@@ -103,7 +103,7 @@ endpointBehaviors 部分
 - <xref:System.ServiceModel.Configuration.X509DefaultServiceCertificateElement>
 - <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>
 - <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.DefaultCertificate%2A>
-- [使用证书](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [\<authentication>](../../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md)
-- [保护客户端](../../../../../docs/framework/wcf/securing-clients.md)
-- [保护服务和客户端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [使用证书](../../../wcf/feature-details/working-with-certificates.md)
+- [\<authentication>](authentication-of-clientcertificate-element.md)
+- [保护客户端](../../../wcf/securing-clients.md)
+- [保护服务和客户端的安全](../../../wcf/feature-details/securing-services-and-clients.md)

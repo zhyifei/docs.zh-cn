@@ -2,17 +2,17 @@
 title: 检索段落及其样式 (C#)
 ms.date: 07/20/2015
 ms.assetid: c2f767f8-57b1-4b4b-af04-89ffb1f7067d
-ms.openlocfilehash: 9edbaaf004018a26b84539d1e8ab133af5dca934
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 4accbf3325ad4db95c028249c7071cb9fedd19cd
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66483880"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69591191"
 ---
 # <a name="retrieving-the-paragraphs-and-their-styles-c"></a>检索段落及其样式 (C#)
 在本示例中，我们编写一个从 WordprocessingML 文档检索段落节点的查询。 它还标识每个段落的样式。  
   
- 此查询建立在前一示例[查找默认段落样式 (C#)](../../../../csharp/programming-guide/concepts/linq/finding-the-default-paragraph-style.md) 中的查询的基础之上，该查询从样式列表中检索默认样式。 这些信息是必需的，以便查询能标识未显式设置样式的段落样式。 段落样式通过 `w:pPr` 元素来设置；如果段落未包含此元素，则它会使用默认样式的格式。  
+ 此查询建立在前一示例[查找默认段落样式 (C#)](./finding-the-default-paragraph-style.md) 中的查询的基础之上，该查询从样式列表中检索默认样式。 这些信息是必需的，以便查询能标识未显式设置样式的段落样式。 段落样式通过 `w:pPr` 元素来设置；如果段落未包含此元素，则它会使用默认样式的格式。  
   
  本主题解释某些查询的意义，然后作为一个完整工作示例的一部分来显示查询。  
   
@@ -23,7 +23,7 @@ ms.locfileid: "66483880"
 xDoc.Root.Element(w + "body").Descendants(w + "p")  
 ```  
   
- 此表达式与前一示例[查找默认段落样式 (C#)](../../../../csharp/programming-guide/concepts/linq/finding-the-default-paragraph-style.md) 中的查询的源相似。 主要区别是它使用 <xref:System.Xml.Linq.XContainer.Descendants%2A> 轴，而不是 <xref:System.Xml.Linq.XContainer.Elements%2A> 轴。 该查询使用 <xref:System.Xml.Linq.XContainer.Descendants%2A> 轴，因为在包含节的文档中，段落将不是正文元素的直接子元素；而是在层次结构中的两个级别之下。 通过使用 <xref:System.Xml.Linq.XContainer.Descendants%2A> 轴，无论文档是否使用节，代码都能运行。  
+ 此表达式与前一示例[查找默认段落样式 (C#)](./finding-the-default-paragraph-style.md) 中的查询的源相似。 主要区别是它使用 <xref:System.Xml.Linq.XContainer.Descendants%2A> 轴，而不是 <xref:System.Xml.Linq.XContainer.Elements%2A> 轴。 该查询使用 <xref:System.Xml.Linq.XContainer.Descendants%2A> 轴，因为在包含节的文档中，段落将不是正文元素的直接子元素；而是在层次结构中的两个级别之下。 通过使用 <xref:System.Xml.Linq.XContainer.Descendants%2A> 轴，无论文档是否使用节，代码都能运行。  
   
 ## <a name="example"></a>示例  
  该查询使用 `let` 子句来确定包含样式节点的元素。 如果没有任何元素，则将 `styleNode` 设置为 `null`：  
@@ -39,7 +39,7 @@ let styleNode = para.Elements(w + "pPr").Elements(w + "pStyle").FirstOrDefault()
 ## <a name="example"></a>示例  
  本示例处理一个 WordprocessingML 文档，它从 WordprocessingML 文档中检索段落节点。 它还标识每个段落的样式。 本示例以本教程中前面的一些示例为基础构建。 下面代码中的注释标识出了这个新查询。  
   
- 若要查找用于创建此示例的源文档的说明，请参阅[创建源 Office Open XML 文档 (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)。  
+ 若要查找用于创建此示例的源文档的说明，请参阅[创建源 Office Open XML 文档 (C#)](./creating-the-source-office-open-xml-document.md)。  
   
  本示例使用 WindowsBase 程序集中的类。 它使用 <xref:System.IO.Packaging?displayProperty=nameWithType> 命名空间中的类型。  
   
@@ -109,7 +109,7 @@ foreach (var p in paragraphs)
     Console.WriteLine("StyleName:{0}", p.StyleName);  
 ```  
   
- 当此示例应用于[创建源 Office Open XML 文档 (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md) 中说明的文档时，会生成以下输出。  
+ 当此示例应用于[创建源 Office Open XML 文档 (C#)](./creating-the-source-office-open-xml-document.md) 中说明的文档时，会生成以下输出。  
   
 ```  
 StyleName:Heading1  
@@ -130,8 +130,8 @@ StyleName:Code
 ```  
   
 ## <a name="next-steps"></a>后续步骤  
- 在下一主题[检索段落的文本 (C#)](../../../../csharp/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md) 中，将创建一个查询来检索段落的文本。  
+ 在下一主题[检索段落的文本 (C#)](./retrieving-the-text-of-the-paragraphs.md) 中，将创建一个查询来检索段落的文本。  
   
 ## <a name="see-also"></a>请参阅
 
-- [教程：操作 WordprocessingML 文档中的内容 (C#)](../../../../csharp/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md)
+- [教程：操作 WordprocessingML 文档中的内容 (C#)](./shape-of-wordprocessingml-documents.md)

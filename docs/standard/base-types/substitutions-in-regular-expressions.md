@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d1f52431-1c7d-4dc6-8792-6b988256892e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5c06a20e3d6cf3030da1cc63435423e087408aa6
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 4b079809fa76097cd575d96c70d17d1c6c85e3a1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301507"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968532"
 ---
 # <a name="substitutions-in-regular-expressions"></a>正则表达式中的替代
 <a name="Top"></a> 替换是只能在替换模式中识别的语言元素。 它们使用正则表达式模式定义全部或部分用于替换输入字符串中的匹配文本的文本。 替换模式可以包含一个或多个替换以及本文字符。 提供替换模式以将拥有 <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 参数的 `replacement` 方法重载至 <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 方法。 该方法将匹配的模式替换为 `replacement` 参数定义的模式。  
@@ -44,11 +44,11 @@ ms.locfileid: "66301507"
  可以出现在正则表达式模式或替换中的唯一字符是 `$` 字符，尽管它在每个上下文中具有不同的含义。 在正则表达式模式中， `$` 是与字符串的末尾匹配的定位点。 在替换模式中， `$` 指示替换的开头。  
   
 > [!NOTE]
->  对于类似于正则表达式中替换模式的功能，使用反向引用。 有关反向引用的更多信息，请参见 [反向引用构造](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md)。  
+> 对于类似于正则表达式中替换模式的功能，使用反向引用。 有关反向引用的更多信息，请参见 [反向引用构造](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md)。  
   
 <a name="Numbered"></a>   
 ## <a name="substituting-a-numbered-group"></a>替换已编号的组  
- `$`*number* 语言元素包括替换字符串中 *number* 捕获组所匹配的最后一个子字符串，其中 *number* 是捕获组的索引。 例如，替换模式 `$1` 指示匹配的子字符串将由捕获的第一个组替换。 有关为已编号的捕获组的详细信息，请参见 [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。  
+ `$`*number* 语言元素包括替换字符串中 *number* 捕获组所匹配的最后一个子字符串，其中 *number* 是捕获组的索引。 例如，替换模式 `$1` 指示匹配的子字符串将由捕获的第一个组替换。 有关为已编号的捕获组的详细信息，请参见 [分组构造](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。  
   
  `$` 后面的所有数字解释为属于 *number* 组。 如果这不是你想要的结果，可改为替换命名组。 例如，可以使用替换字符串 `${1}1` 而不是 `$11` 来将替换字符串定义为带数字“1”的首个捕获组的值。 有关详细信息，请参阅 [替换命名组](#Named)。  
   
@@ -76,7 +76,7 @@ ms.locfileid: "66301507"
   
 <a name="Named"></a>   
 ## <a name="substituting-a-named-group"></a>替换命名组  
- `${`*name*`}` 语言元素替换 *name* 捕获组匹配的最后一个子字符串，其中 *name* 是 `(?<`*name*`>)` 语言元素所定义的捕获组名称。 有关命名的捕获组的详细信息，请参见 [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。  
+ `${`*name*`}` 语言元素替换 *name* 捕获组匹配的最后一个子字符串，其中 *name* 是 `(?<`*name*`>)` 语言元素所定义的捕获组名称。 有关命名的捕获组的详细信息，请参见 [分组构造](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。  
   
  如果 *name* 未指定正则表达式模式中定义的有效的命名捕获组但包含数字，则 `${`*name*`}` 被解释为已编号的组。  
   

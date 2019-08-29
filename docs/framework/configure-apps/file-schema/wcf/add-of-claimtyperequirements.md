@@ -2,20 +2,20 @@
 title: <add> 的 <claimTypeRequirements>
 ms.date: 03/30/2017
 ms.assetid: c68e83c9-39e8-4264-b1ce-b6a9eb5b98aa
-ms.openlocfilehash: 97d3ecca369aeffb7b2e8464f385eeae13bd470f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7e7f0eac41e69e959aa6c4f8f3cfb488d4ea2917
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704474"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69926801"
 ---
-# <a name="add-of-claimtyperequirements"></a>\<添加 > 的\<claimTypeRequirements >
+# <a name="add-of-claimtyperequirements"></a>\<添加 claimTypeRequirements > \<的 >
 指定希望出现在联合凭据中的必选和可选的声明类型。 例如，服务规定有关传入凭据的要求，传入凭据必须具有某组声明类型。  
   
  \<system.serviceModel>  
 \<bindings>  
 \<customBinding>  
-\<binding>  
+\<绑定 >  
 \<安全 >  
 \<issuedTokenParameters>  
 \<claimTypeRequirements>  
@@ -46,7 +46,7 @@ ms.locfileid: "61704474"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<claimTypeRequirements>](../../../../../docs/framework/configure-apps/file-schema/wcf/claimtyperequirements-element.md)|指定所需声明类型的集合。<br /><br /> 在联合方案中，服务规定有关传入凭据的要求。 例如，传入凭据必须具有某组声明类型。 此集合中的每个元素都指定希望出现在联合凭据中的必选和可选的声明类型。|  
+|[\<claimTypeRequirements>](claimtyperequirements-element.md)|指定所需声明类型的集合。<br /><br /> 在联合方案中，服务规定有关传入凭据的要求。 例如，传入凭据必须具有某组声明类型。 此集合中的每个元素都指定希望出现在联合凭据中的必选和可选的声明类型。|  
   
 ## <a name="remarks"></a>备注  
  在联合方案中，服务规定有关传入凭据的要求。 例如，传入凭据必须具有某组声明类型。 此要求出现在安全策略中。 当客户端请求来自联合服务（例如 CardSpace）的凭据时，它会将需求放置在令牌请求 (RequestSecurityToken) 中，以便联合服务能够相应地颁发符合需求的凭据。  
@@ -80,10 +80,10 @@ ms.locfileid: "61704474"
 - <xref:System.ServiceModel.Configuration.ClaimTypeElementCollection>
 - <xref:System.ServiceModel.Configuration.ClaimTypeElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [\<claimTypeRequirements>](../../../../../docs/framework/configure-apps/file-schema/wcf/claimtyperequirements-element.md)
-- [绑定](../../../../../docs/framework/wcf/bindings.md)
-- [扩展绑定](../../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [自定义绑定](../../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
-- [如何：创建自定义绑定使用 SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
-- [自定义绑定安全性](../../../../../docs/framework/wcf/samples/custom-binding-security.md)
+- [\<claimTypeRequirements>](claimtyperequirements-element.md)
+- [绑定](../../../wcf/bindings.md)
+- [扩展绑定](../../../wcf/extending/extending-bindings.md)
+- [自定义绑定](../../../wcf/extending/custom-bindings.md)
+- [\<customBinding>](custombinding.md)
+- [如何：使用 SecurityBindingElement 创建自定义绑定](../../../wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [自定义绑定安全性](../../../wcf/samples/custom-binding-security.md)

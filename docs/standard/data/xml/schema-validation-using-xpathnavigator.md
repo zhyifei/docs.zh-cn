@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 81fa0e41-d9c9-46f0-b22b-50da839c77f5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 335e6578767c130760f322aa2b015ea7b0f317f9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0199efb172466305af22c4ade7c47115a5cefd8f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54557926"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939609"
 ---
 # <a name="schema-validation-using-xpathnavigator"></a>使用 XPathNavigator 验证架构
 使用 <xref:System.Xml.XmlDocument> 类，可以通过两种方式验证 <xref:System.Xml.XmlDocument> 对象中包含的 XML 内容。 第一种方式是使用验证 <xref:System.Xml.XmlReader> 对象验证 XML 内容，第二种方式是使用 <xref:System.Xml.XmlDocument.Validate%2A> 类的 <xref:System.Xml.XmlDocument> 方法。 还可以使用 <xref:System.Xml.XPath.XPathDocument> 类对 XML 内容执行只读验证。  
@@ -129,7 +129,7 @@ class ValidatingReaderExample
  <xref:System.Xml.Schema.XmlSchemaInfo.Validity%2A> 属性可用于确定用 <xref:System.Xml.XPath.XPathNavigator> 访问属性或元素时单个属性或元素是否有效。  
   
 > [!NOTE]
->  如果 XML 文档加载到 <xref:System.Xml.XmlDocument> 对象，并且具有关联的架构来定义默认值，<xref:System.Xml.XmlDocument> 对象对待这些默认值就像出现在 XML 文档中一样。 这意味着对于架构中的默认元素，<xref:System.Xml.XPath.XPathNavigator.IsEmptyElement%2A> 属性始终返回 `false`，即使在 XML 文档中，也将编写为空元素。  
+> 如果 XML 文档加载到 <xref:System.Xml.XmlDocument> 对象，并且具有关联的架构来定义默认值，<xref:System.Xml.XmlDocument> 对象对待这些默认值就像出现在 XML 文档中一样。 这意味着对于架构中的默认元素，<xref:System.Xml.XPath.XPathNavigator.IsEmptyElement%2A> 属性始终返回 `false`，即使在 XML 文档中，也将编写为空元素。  
   
 ### <a name="validating-a-document-using-the-validate-method"></a>使用验证方法验证文档  
  <xref:System.Xml.XmlDocument.Validate%2A> 类的 <xref:System.Xml.XmlDocument> 方法针对 <xref:System.Xml.XmlDocument> 对象的 <xref:System.Xml.XmlDocument> 属性中指定的架构验证 <xref:System.Xml.XmlDocument.Schemas%2A> 对象中包含的 XML 文档，然后执行信息集增加。 结果是 <xref:System.Xml.XmlDocument> 中以前非类型化的 XML 文档由类型化的文档取代。  

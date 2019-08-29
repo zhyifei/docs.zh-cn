@@ -2,12 +2,12 @@
 title: <reliableSession>
 ms.date: 03/30/2017
 ms.assetid: 129b4a59-37f0-4030-b664-03795d257d29
-ms.openlocfilehash: 324c46d88d084605dc2b873c65d2a7e7c7a2c4fb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 548c4884ecd2f4b9a71fcc9d6647a9e258b183c1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783144"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69934251"
 ---
 # <a name="reliablesession"></a>\<reliableSession>
 定义 WS-ReliableMessaging 的设置。 如果将该元素添加到自定义绑定，则生成的通道可支持一次性传递保证。  
@@ -15,7 +15,7 @@ ms.locfileid: "61783144"
  \<system.serviceModel>  
 \<bindings>  
 \<customBinding>  
-\<binding>  
+\<绑定 >  
 \<reliableSession>  
   
 ## <a name="syntax"></a>语法  
@@ -48,20 +48,20 @@ ms.locfileid: "61783144"
 |reliableMessagingVersion|<xref:System.ServiceModel.ReliableMessagingVersion> 中的一个有效值，指定要使用的 WS-ReliableMessaging 版本。|  
   
 ### <a name="child-elements"></a>子元素  
- None  
+ 无  
   
 ### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<binding>](../../../../../docs/framework/misc/binding.md)|定义自定义绑定的所有绑定功能。|  
+|[\<binding>](../../../misc/binding.md)|定义自定义绑定的所有绑定功能。|  
   
 ## <a name="remarks"></a>备注  
  可靠会话提供可靠的消息和会话功能。 可靠消息在失败时重新尝试通信并允许指定传递保证（如消息按顺序抵达）。 会话在调用之间将保持客户端的状态。 此元素还可以选择提供有序消息传递。 这个已实现的会话可通过 SOAP 和传输中介。  
   
  发送或接收消息时，每个绑定元素都表示一个处理步骤。 在运行时，绑定元素会创建必要的通道工厂和侦听器，用以生成发送和接收消息所需的传出和传入通道堆栈。 `reliableSession` 会在堆栈中提供一个可选层，该可选层可在终结点之间建立可靠会话并配置此会话的行为。  
   
- 有关详细信息，请参阅[可靠会话](../../../../../docs/framework/wcf/feature-details/reliable-sessions.md)。  
+ 有关详细信息, 请参阅[可靠会话](../../../wcf/feature-details/reliable-sessions.md)。  
   
 ## <a name="example"></a>示例  
  下面的示例演示如何用各种传输和消息编码元素配置自定义绑定，并特别启用可靠会话，这将保持客户端状态并指定按顺序传递保证。 此功能是在客户端和服务的应用程序配置文件中配置的。 此示例显示了服务配置。  
@@ -124,8 +124,8 @@ ms.locfileid: "61783144"
 - <xref:System.ServiceModel.Configuration.ReliableSessionElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - <xref:System.ServiceModel.Channels.ReliableSessionBindingElement>
-- [可靠会话](../../../../../docs/framework/wcf/feature-details/reliable-sessions.md)
-- [绑定](../../../../../docs/framework/wcf/bindings.md)
-- [扩展绑定](../../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [自定义绑定](../../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [可靠会话](../../../wcf/feature-details/reliable-sessions.md)
+- [绑定](../../../wcf/bindings.md)
+- [扩展绑定](../../../wcf/extending/extending-bindings.md)
+- [自定义绑定](../../../wcf/extending/custom-bindings.md)
+- [\<customBinding>](custombinding.md)

@@ -1,5 +1,5 @@
 ---
-title: <clear> NameValueSectionHandler 和 DictionarySectionHandler 的元素
+title: <clear>NameValueSectionHandler 和 DictionarySectionHandler 的元素
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/sectionName/clear
@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: ff2294ec-fb82-4b0c-933e-ae185433fc7b
 author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: e5ab12150c5200dc346e950541443d5286f739c8
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: fbb689db4abc5d59729d9a4d9807a02a0983d40b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301238"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927711"
 ---
-# <a name="clear-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<清除 > NameValueSectionHandler 和 DictionarySectionHandler 的元素
+# <a name="clear-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<清除 NameValueSectionHandler 和 DictionarySectionHandler 的 > 元素
 
-清除部分中的所有以前定义的设置。
+清除节中所有先前定义的设置。
 
-[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[ **\<sectionName>** ](~/docs/framework/configure-apps/file-schema/custom-element-2.md)   
+[ **\<configuration>** ](configuration-element.md)   
+&nbsp;&nbsp;[ **\<sectionName>** ](custom-element-2.md)   
 &nbsp;&nbsp;&nbsp;&nbsp; **\<clear>**
 
 ## <a name="syntax"></a>语法
@@ -32,27 +32,27 @@ ms.locfileid: "66301238"
 
 ## <a name="attributes"></a>特性
 
-None
+无
 
 ## <a name="parent-element"></a>父元素
 
 |     | 描述 |
 | --- | ------------|
-| [ **\<sectionName >** 元素](~/docs/framework/configure-apps/file-schema/custom-element-2.md) | 定义使用的自定义配置部分设置<xref:System.Configuration.NameValueSectionHandler>和<xref:System.Configuration.DictionarySectionHandler>类。 |
+| [ **sectionName>\<** 元素](custom-element-2.md) | 定义使用<xref:System.Configuration.NameValueSectionHandler>和<xref:System.Configuration.DictionarySectionHandler>类的自定义配置节的设置。 |
 
 ## <a name="child-elements"></a>子元素
 
-None
+无
 
 ## <a name="remarks"></a>备注
 
-可以使用 **\<清除 >** 元素从你在配置文件层次结构中较高级别定义的应用程序中删除所有设置。
+你可以使用 **\<clear >** 元素从你的应用程序中删除在配置文件层次结构中较高级别上定义的所有设置。
 
 ## <a name="example"></a>示例
 
-此示例定义了计算机配置文件和应用程序配置文件，演示如何使用 **\<清除 >** 清除以前在中定义的部分应用程序配置文件中的元素计算机配置文件。
+此示例定义了计算机配置文件和应用程序配置文件, 并演示了如何使用应用程序配置文件中的 **\<clear >** 元素清除之前在计算机配置中定义的部分文件.
 
-下面的计算机配置文件代码声明部分 **\<mySection >** :
+以下计算机配置文件代码声明了 **\<mySection >** 部分:
 
 ```xml
 <!-- Machine.config file -->
@@ -67,7 +67,7 @@ None
 </configuration>
 ```
 
-下面的应用程序配置文件代码删除所有设置从 **\<mySection >** 。 应用程序无法检索的任何声明，因此在设置中 **\<mySection >** 部分中的计算机配置文件。
+以下应用程序配置文件代码将从 **\<mySection >** 删除所有设置。 应用程序无法检索在计算机配置文件的 **\<mySection >** 部分中的中声明的任何设置。
 
 ```xml
 <!-- Application configuration file -->
@@ -80,8 +80,8 @@ None
 
 ## <a name="configuration-file"></a>配置文件
 
-在应用程序配置文件中，计算机配置文件可以使用此元素 (*Machine.config*)，并*Web.config*不在应用程序目录级别上的文件。
+此元素可用于应用程序配置文件、计算机配置文件 (*machine.config*) 和不在应用程序目录级别的 web.config 文件。
 
 ## <a name="see-also"></a>请参阅
 
-- [.NET Framework 的配置文件架构](~/docs/framework/configure-apps/file-schema/index.md)
+- [.NET Framework 的配置文件架构](index.md)

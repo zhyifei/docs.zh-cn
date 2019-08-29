@@ -10,20 +10,20 @@ helpviewer_keywords:
 - user controls [Windows Forms], painting
 - visual styles [Windows Forms], rendering Windows Forms controls
 ms.assetid: a5b178ba-610e-46c4-a6c0-509c0886a744
-ms.openlocfilehash: 558600c9256f205598288f9e20d38cb94608c920
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: 32bcbab585c39be4a72150bf49820d4a16f1691f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67348484"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968252"
 ---
 # <a name="rendering-controls-with-visual-styles"></a>使用视觉样式呈现控件
-.NET Framework 支持为呈现控件和其他 Windows 用户界面 (UI) 元素提供支持它们的操作系统中使用视觉样式。 本主题讨论使用操作系统当前视觉样式呈现控件和其他 UI 元素的.NET Framework 中支持的多个级别。  
+.NET Framework 在支持使用视觉样式的操作系统中使用视觉样式为呈现控件和其他 Windows 用户界面 (UI) 元素提供支持。 本主题讨论了在 .NET Framework 中的几个级别的支持, 这些控件和其他 UI 元素都具有操作系统的当前视觉样式。  
   
 ## <a name="rendering-classes-for-common-controls"></a>公共控件的呈现类  
  呈现控件是指绘制控件的用户界面。 <xref:System.Windows.Forms?displayProperty=nameWithType> 命名空间提供了用来呈现某些公共 Windows 窗体控件的 <xref:System.Windows.Forms.ControlPaint> 类。 但是，此类以经典 Windows 样式绘制的控件，当在启用了视觉样式的应用程序中绘制自定义控件时，难以维护 UI 体验的一致性。  
   
- .NET Framework 2.0 还包括中的类<xref:System.Windows.Forms?displayProperty=nameWithType>呈现部件和状态的视觉样式的公共控件的命名空间。 每个这样的类都包括使用操作系统当前视觉样式绘制控件和特定状态控件部件的 `static` 方法。  
+ .NET Framework 2.0 包括<xref:System.Windows.Forms?displayProperty=nameWithType>命名空间中的类, 这些类可呈现具有视觉样式的公共控件的部件和状态。 每个这样的类都包括使用操作系统当前视觉样式绘制控件和特定状态控件部件的 `static` 方法。  
   
  其中一些类旨在绘制相关控件，而不考虑视觉样式是否可用。 如果启用了视觉样式，类成员将使用视觉样式绘制相关控件；如果禁用了视觉样式，类成员将以经典 Windows 样式绘制控件。 这些类包括：  
   
@@ -49,19 +49,19 @@ ms.locfileid: "67348484"
   
 - <xref:System.Windows.Forms.TrackBarRenderer>  
   
- 有关使用这些类绘制控件的详细信息，请参阅[如何：使用控件呈现类](how-to-use-a-control-rendering-class.md)。  
+ 有关使用这些类绘制控件的详细信息, 请参阅[如何:使用控件呈现类](how-to-use-a-control-rendering-class.md)。  
   
 ## <a name="visual-style-element-and-rendering-classes"></a>视觉样式元素和呈现类  
- <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> 命名空间包含用于绘制和获取视觉样式支持的任何控件或 UI 元素信息的类。 支持的控件包括在 <xref:System.Windows.Forms?displayProperty=nameWithType> 命名空间中具有呈现类的公共控件（请参阅上一节）以及诸如选项卡控件和 rebar 控件的其他控件。 其他受支持的 UI 元素包括“开始”  菜单、任务栏和 Windows 非工作区的各部分。  
+ <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> 命名空间包含用于绘制和获取视觉样式支持的任何控件或 UI 元素信息的类。 支持的控件包括在 <xref:System.Windows.Forms?displayProperty=nameWithType> 命名空间中具有呈现类的公共控件（请参阅上一节）以及诸如选项卡控件和 rebar 控件的其他控件。 其他受支持的 UI 元素包括“开始” 菜单、任务栏和 Windows 非工作区的各部分。  
   
  <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> 命名空间的主要类为 <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> 和 <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>。 <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> 是一个基础类，用于标识视觉样式支持的任何控件或用户界面元素。 除了 <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> 本身， <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> 命名空间包含许多 <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> 嵌套类，这些类具有为视觉样式支持的控件、控件部件或其他 UI 元素的状态返回 `static` 的 <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> 属性。  
   
- <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> 提供一些方法，这些方法可以绘制和获取由操作系统当前视觉样式定义的每个 <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> 的信息。 可以检索的元素信息包括其默认大小、背景类型和颜色定义。 <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> 包装来自 Windows Platform SDK 的 Windows Shell 部分的视觉样式 (UxTheme) API 的功能。 有关详细信息，请参阅[启用视觉样式](/windows/desktop/controls/cookbook-overview)。  
+ <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> 提供一些方法，这些方法可以绘制和获取由操作系统当前视觉样式定义的每个 <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> 的信息。 可以检索的元素信息包括其默认大小、背景类型和颜色定义。 <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> 包装来自 Windows Platform SDK 的 Windows Shell 部分的视觉样式 (UxTheme) API 的功能。 有关详细信息, 请参阅[启用视觉样式](/windows/desktop/controls/cookbook-overview)。  
   
- 有关使用详细信息<xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>并<xref:System.Windows.Forms.VisualStyles.VisualStyleElement>，请参阅[如何：呈现的视觉样式元素](how-to-render-a-visual-style-element.md)。  
+ 有关使用<xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>和<xref:System.Windows.Forms.VisualStyles.VisualStyleElement>的详细信息, 请[参阅如何:呈现视觉样式元素](how-to-render-a-visual-style-element.md)。  
   
 ## <a name="enabling-visual-styles"></a>启用视觉样式  
- 若要启用针对.NET Framework 版本 1.0 编写的应用程序的可视样式，程序员必须包括指定将使用 ComCtl32.dll 版本 6 或更高版本绘制控件的应用程序清单。 使用.NET Framework 1.1 或更高版本生成的应用程序可以使用<xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType>方法的<xref:System.Windows.Forms.Application>类。  
+ 若要为 .NET Framework 版本1.0 编写的应用程序启用视觉样式, 程序员必须包括一个应用程序清单, 该清单指定 Comctl32.dll 版本6或更高版本将用于绘制控件。 使用 .NET Framework 版本1.1 或更高版本生成的应用程序<xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType>可以使用<xref:System.Windows.Forms.Application>类的方法。  
   
 ## <a name="checking-for-visual-styles-support"></a>检查视觉样式支持  
  <xref:System.Windows.Forms.Application.RenderWithVisualStyles%2A> 类的 <xref:System.Windows.Forms.Application> 属性指示当前应用程序是否正在使用视觉样式绘制控件。 绘制自定义控件时，可以检查 <xref:System.Windows.Forms.Application.RenderWithVisualStyles%2A> 的值来确定是否应使用视觉样式呈现控件。 下表列出了 <xref:System.Windows.Forms.Application.RenderWithVisualStyles%2A> 返回 `true`必须存在的四个条件。  
@@ -76,7 +76,7 @@ ms.locfileid: "67348484"
  若要确定用户何时启用或禁用视觉样式，或何时从一种视觉样式切换到另种，请检查 <xref:Microsoft.Win32.UserPreferenceCategory.VisualStyle?displayProperty=nameWithType> 或 <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanging?displayProperty=nameWithType> 事件处理程序中的 <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged?displayProperty=nameWithType> 值。  
   
 > [!IMPORTANT]
->  如果想要在用户启用或切换视觉样式时使用 <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> 来呈现控件或 UI 元素，请确保在处理 <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> 事件而非 <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanging> 事件时这样做。 处理 <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> 时如果使用 <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanging>类，则会引发异常。  
+> 如果想要在用户启用或切换视觉样式时使用 <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> 来呈现控件或 UI 元素，请确保在处理 <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> 事件而非 <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanging> 事件时这样做。 处理 <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> 时如果使用 <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanging>类，则会引发异常。  
   
 ## <a name="see-also"></a>请参阅
 

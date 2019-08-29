@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 51f8ffa3-c253-4201-a3d3-c4fad85ae097
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5e378eb36e633575d5afa886e886aed302cbdab9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: b1b05a5548beb7e7c1f0ec8e96b6e02350318ef9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59310975"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921419"
 ---
 # <a name="type-forwarding-in-the-common-language-runtime"></a>公共语言运行时中的类型转发
 使用类型转发可以将类型移到另一个程序集，而不必重新编译使用原始程序集的应用程序。  
@@ -25,7 +25,7 @@ ms.locfileid: "59310975"
  `Utility.dll` 开发者可使用 <xref:System.Runtime.CompilerServices.TypeForwardedToAttribute> 属性转发 `Example` 类的请求，从而避免这种情况。 如果已向新版本的 `Utility.dll` 应用了该属性，则对 `Example` 类的请求会转发到该类目前所属的程序集。 现有应用程序将继续正常运行，无需重新编译。  
   
 > [!NOTE]
->  在 .NET Framework 2.0 版中，无法从使用 Visual Basic 编写的程序集转发类型。 但是，用 Visual Basic 编写的应用程序可以使用转发的类型。 也就是说，如果应用程序使用通过 C# 或 C++ 编码的程序集，并且该程序集中的某类型被转发至另一个程序集，则 Visual Basic 应用程序可以使用该转发的类型。  
+> 在 .NET Framework 2.0 版中，无法从使用 Visual Basic 编写的程序集转发类型。 但是，用 Visual Basic 编写的应用程序可以使用转发的类型。 也就是说，如果应用程序使用通过 C# 或 C++ 编码的程序集，并且该程序集中的某类型被转发至另一个程序集，则 Visual Basic 应用程序可以使用该转发的类型。  
   
 ## <a name="forwarding-types"></a>转发类型  
  转发类型有四个步骤：  
@@ -44,7 +44,7 @@ ms.locfileid: "59310975"
   
 3. 编译该类型目前所属的程序集。  
   
-4. 重新编译该类型原来所属的程序集，其中带有对该类型目前所属的程序集的引用。 例如，如果从命令行编译一个 C# 文件，则使用 [/reference（C# 编译器选项）](~/docs/csharp/language-reference/compiler-options/reference-compiler-option.md)选项指定包含类型的程序集。 在 C++ 中，在源文件中使用 [#using](/cpp/preprocessor/hash-using-directive-cpp) 指令指定包含类型的程序集。  
+4. 重新编译该类型原来所属的程序集，其中带有对该类型目前所属的程序集的引用。 例如，如果从命令行编译一个 C# 文件，则使用 [/reference（C# 编译器选项）](../../csharp/language-reference/compiler-options/reference-compiler-option.md)选项指定包含类型的程序集。 在 C++ 中，在源文件中使用 [#using](/cpp/preprocessor/hash-using-directive-cpp) 指令指定包含类型的程序集。  
   
 ## <a name="see-also"></a>请参阅
 

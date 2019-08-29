@@ -5,50 +5,24 @@ helpviewer_keywords:
 - Windows Forms Designer [Windows Forms], interoperability with WPF
 - interoperability [WPF]
 ms.assetid: 03c85dce-26ad-44cd-bc1d-8e0cb56de096
-ms.openlocfilehash: 149a2da1303e6b801a439494254a416a38b145a7
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+author: gewarren
+ms.author: gewarren
+manager: jillfra
+ms.openlocfilehash: 5ea92b24a2ca30c0ad137d83c8f521a952ad0c6b
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211313"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69658491"
 ---
-# <a name="use-wpf-controls"></a>使用 WPF 控件
+# <a name="use-wpf-controls-in-windows-forms-apps"></a>在 Windows 窗体应用中使用 WPF 控件
 
-基于 Windows 窗体的应用程序中，可以使用 Windows Presentation Foundation (WPF) 控件。 尽管这些是两个不同的视图技术，则它们平稳地相互操作。
+您可以在基于 Windows 窗体的应用程序中使用 Windows Presentation Foundation (WPF) 控件。 尽管这是两种不同的视图技术, 但它们可以顺畅地互操作。
 
-Visual Studio 中的 Windows 窗体设计器提供了用于承载 Windows Presentation Foundation 控件的可视化设计环境。 由名为的特殊 Windows 窗体控件承载 WPF 控件<xref:System.Windows.Forms.Integration.ElementHost>。 此控件，WPF 控件来参与窗体的布局并接收键盘和鼠标消息。 在设计时，可以安排<xref:System.Windows.Forms.Integration.ElementHost>控制就像对待任何 Windows 窗体控件。
+Visual Studio 中的 Windows 窗体设计器提供了用于承载 Windows Presentation Foundation 控件的可视化设计环境。 WPF 控件由名为<xref:System.Windows.Forms.Integration.ElementHost>的特殊 Windows 窗体控件承载。 此控件允许 WPF 控件参与窗体的布局以及接收键盘和鼠标消息。 在设计时, 您可以像对<xref:System.Windows.Forms.Integration.ElementHost>任何 Windows 窗体控件一样来排列控件。
 
-此外可以基于 WPF 的应用程序中使用 Windows 窗体控件。 有关详细信息，请参阅[Visual Studio 中设计 XAML](/visualstudio/designers/designing-xaml-in-visual-studio)。
+你还可以在基于 WPF 的应用程序中使用 Windows 窗体控件。 有关详细信息, 请参阅[在 Visual Studio 中设计 XAML](/visualstudio/designers/designing-xaml-in-visual-studio)。
 
-## <a name="in-this-section"></a>本节内容
+## <a name="see-also"></a>请参阅
 
-[如何：复制并粘贴 ElementHost 控件在设计时](how-to-copy-and-paste-an-elementhost-control-at-design-time.md)\
-演示如何将复制在 Windows 窗体上的 Windows Presentation Foundation 控件。
-
-[演练：在设计时排列 Windows 窗体上的 WPF 内容](walkthrough-arranging-wpf-content-on-windows-forms-at-design-time.md)\
-演示如何使用 Windows 窗体布局功能，例如锚定和对齐线，排列 Windows Presentation Foundation 控件。
-
-[演练：在设计时在 Windows 窗体上创建新的 WPF 内容](walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)\
-演示如何创建基于 Windows 窗体的应用程序中使用的 Windows Presentation Foundation 控件。
-
-[演练：在设计时分配在 Windows 窗体上的 WPF 内容](walkthrough-assigning-wpf-content-on-windows-forms-at-design-time.md)\
-演示如何选择想要显示窗体上的 Windows Presentation Foundation 控件类型。
-
-[演练：WPF 内容的样式](walkthrough-styling-wpf-content.md)\
-显示 Windows 窗体设计器之间的工作流和[!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]用于将样式应用到 Windows Presentation Foundation 控件。
-
-## <a name="reference"></a>参考
-
-<xref:System.Windows.Forms.Integration.ElementHost>\
-介绍可以承载 Windows Presentation Foundation 控件使用基于 Windows 窗体的应用程序中的类。
-
-<xref:System.Windows.Forms.Integration.WindowsFormsHost>\
-介绍可用于在基于 Windows Presentation Foundation 的应用程序中承载 Windows 窗体控件的类。
-
-## <a name="related-sections"></a>相关章节
-
-[迁移和互操作性](../../wpf/advanced/migration-and-interoperability.md)\
-介绍 Windows Presentation Foundation 和 Windows 窗体技术之间的互操作。
-
-[在 Visual Studio 中的 XAML 设计](/visualstudio/designers/designing-xaml-in-visual-studio)\
-介绍如何设计在 Visual Studio 中的 Windows Presentation Foundation 控件。
+- [WPF 和 Windows 窗体互操作](/dotnet/framework/wpf/advanced/wpf-and-windows-forms-interoperation)

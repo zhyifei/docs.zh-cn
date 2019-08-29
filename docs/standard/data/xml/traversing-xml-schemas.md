@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: cce69574-5861-4a30-b730-2e18d915d8ee
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f444dd512dc27f1b7cda017e2c2848ac41eb56de
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 5fd81a7eaf299217a17cd8051d77cd7a3695441e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59305034"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939464"
 ---
 # <a name="traversing-xml-schemas"></a>遍历 XML 架构
 使用架构对象模型 (SOM) API 遍历 XML 架构，可以访问 SOM 中存储的元素、属性和类型。 遍历加载到 SOM 的 XML 架构也是使用 SOM API 编辑 XML 架构的第一步。  
@@ -35,7 +35,7 @@ ms.locfileid: "59305034"
 |<xref:System.Xml.Schema.XmlSchema.UnhandledAttributes%2A>|<xref:System.Xml.XmlAttribute>（提供对不属于架构命名空间的属性的访问）|  
   
 > [!NOTE]
->  上表列出的所有属性（<xref:System.Xml.Schema.XmlSchema.Items%2A> 属性除外）是后架构编译信息集 (PSCI) 属性，直到架构编译后才可用。 <xref:System.Xml.Schema.XmlSchema.Items%2A> 属性是前架构编译属性，可以在架构编译之前使用，以访问和编辑所有全局级元素、属性和类型。  
+> 上表列出的所有属性（<xref:System.Xml.Schema.XmlSchema.Items%2A> 属性除外）是后架构编译信息集 (PSCI) 属性，直到架构编译后才可用。 <xref:System.Xml.Schema.XmlSchema.Items%2A> 属性是前架构编译属性，可以在架构编译之前使用，以访问和编辑所有全局级元素、属性和类型。  
 >   
 >  <xref:System.Xml.Schema.XmlSchema.UnhandledAttributes%2A> 属性提供对不属于架构命名空间的所有属性的访问。 架构处理器不处理这些属性。  
   

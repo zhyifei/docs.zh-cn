@@ -14,12 +14,12 @@ helpviewer_keywords:
 - parameters [C#], optional
 - named and optional arguments [C#]
 ms.assetid: 839c960c-c2dc-4d05-af4d-ca5428e54008
-ms.openlocfilehash: 74cfc6a425e82014bbcf5093f52f476ff09db130
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: ad3f7949e01a387c3c7de2a0702d11b106ea0040
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796555"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922212"
 ---
 # <a name="named-and-optional-arguments-c-programming-guide"></a>命名实参和可选实参（C# 编程指南）
 C# 4 介绍命名实参和可选实参。 通过*命名实参*，你可以为特定形参指定实参，方法是将实参与该形参的名称关联，而不是与形参在形参列表中的位置关联。 通过*可选参数*，你可以为某些形参省略实参。 这两种技术都可与方法、索引器、构造函数和委托一起使用。  
@@ -70,9 +70,9 @@ C# 4 介绍命名实参和可选实参。 通过*命名实参*，你可以为特
   
 - 常量表达式；  
   
-- `new ValType()` 形式的表达式，其中 `ValType` 是值类型，例如 [enum](../../../csharp/language-reference/keywords/enum.md) 或 [struct](../../../csharp/programming-guide/classes-and-structs/structs.md)；  
+- `new ValType()` 形式的表达式，其中 `ValType` 是值类型，例如 [enum](../../language-reference/keywords/enum.md) 或 [struct](./structs.md)；  
   
-- [default(ValType)](../../../csharp/language-reference/operators/default.md) 形式的表达式，其中 `ValType` 是值类型。  
+- [default(ValType)](../../language-reference/operators/default.md) 形式的表达式，其中 `ValType` 是值类型。  
   
  可选参数定义于参数列表的末尾和必需参数之后。 如果调用方为一系列可选形参中的任意一个形参提供了实参，则它必须为前面的所有可选形参提供实参。 实参列表中不支持使用逗号分隔的间隔。 例如，在以下代码中，使用一个必选形参和两个可选形参定义实例方法 `ExampleMethod`。  
   
@@ -91,7 +91,7 @@ C# 4 介绍命名实参和可选实参。 通过*命名实参*，你可以为特
  ![显示 ExampleMethod 方法的 IntelliSense 快速信息的屏幕截图。](./media/named-and-optional-arguments/optional-examplemethod-parameters.png)  
   
 > [!NOTE]
->  此外，还可通过使用 .NET <xref:System.Runtime.InteropServices.OptionalAttribute> 类声明可选参数。 `OptionalAttribute` 形参不需要默认值。  
+> 此外，还可通过使用 .NET <xref:System.Runtime.InteropServices.OptionalAttribute> 类声明可选参数。 `OptionalAttribute` 形参不需要默认值。  
   
 ## <a name="example"></a>示例  
  在以下示例中，`ExampleClass` 的构造函数具有一个可选形参。 实例方法 `ExampleMethod` 具有一个必选形参（`required`）和两个可选形参（`optionalstr` 和 `optionalint`）。 `Main` 中的代码演示了可用于调用构造函数和方法的不同方式。  
@@ -113,7 +113,7 @@ C# 4 介绍命名实参和可选实参。 通过*命名实参*，你可以为特
   
  [!code-csharp[csProgGuideNamedAndOptional#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/namedandoptcom.cs#13)]  
   
- 有关详细信息和示例，请参阅[操作说明：在 Office 编程中使用命名参数和可选参数](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)和[操作说明：使用 Visual C# 功能访问 Office 互操作对象](../../../csharp/programming-guide/interop/how-to-access-office-onterop-objects.md)。  
+ 有关详细信息和示例，请参阅[操作说明：在 Office 编程中使用命名参数和可选参数](./how-to-use-named-and-optional-arguments-in-office-programming.md)和[操作说明：使用 Visual C# 功能访问 Office 互操作对象](../interop/how-to-access-office-onterop-objects.md)。  
   
 ## <a name="overload-resolution"></a>重载决策  
  使用命名实参和可选实参将在以下方面对重载决策产生影响：  
@@ -129,7 +129,7 @@ C# 4 介绍命名实参和可选实参。 通过*命名实参*，你可以为特
   
 ## <a name="see-also"></a>请参阅
 
-- [如何：在 Office 编程中使用命名参数和可选参数](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)
-- [使用类型 dynamic](../../../csharp/programming-guide/types/using-type-dynamic.md)
-- [使用构造函数](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)
-- [使用索引器](../../../csharp/programming-guide/indexers/using-indexers.md)
+- [如何：在 Office 编程中使用命名参数和可选参数](./how-to-use-named-and-optional-arguments-in-office-programming.md)
+- [使用类型 dynamic](../types/using-type-dynamic.md)
+- [使用构造函数](./using-constructors.md)
+- [使用索引器](../indexers/using-indexers.md)

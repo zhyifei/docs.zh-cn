@@ -13,22 +13,22 @@ helpviewer_keywords:
 - flicker
 - bit-block transfer
 ms.assetid: 33b76910-13a3-4521-be98-5c097341ae3b
-ms.openlocfilehash: e3d1c2b681e98dc7c45467683924dd4022eb377e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5a18539153c64a5059d8079f6e245115b026bb91
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61937743"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950151"
 ---
 # <a name="how-to-copy-pixels-for-reducing-flicker-in-windows-forms"></a>如何：在 Windows 窗体中复制像素以减少闪烁
-当对简单的图形进行动画处理时，用户有时可能会遇到闪烁或其他不需要的视觉效果。 若要限制此问题的一种方法是在图形上使用"bitblt"过程。 Bitblt 是"位块传输"的颜色数据从一个源矩形的像素为单位向目标矩形的像素为单位。  
+当您对一个简单的图形进行动画处理时, 用户有时可能会遇到闪烁或其他不需要的视觉效果。 限制此问题的一种方法是在图形上使用 "bitblt" 进程。 Bitblt 是颜色数据的 "位块传输", 它将像素的源矩形转换为像素的目标矩形。  
   
- 使用 Windows 窗体 bitblt 通过<xref:System.Drawing.Graphics.CopyFromScreen%2A>方法的<xref:System.Drawing.Graphics>类。 在该方法的参数，指定源和目标 （以磅为单位）、 要复制的区域的大小和用于绘制新形状的图形对象。  
+ 使用 Windows 窗体, 可以使用<xref:System.Drawing.Graphics.CopyFromScreen%2A> <xref:System.Drawing.Graphics>类的方法来实现 bitblt。 在方法的参数中, 指定源和目标 (如点)、要复制的区域的大小以及用于绘制新形状的图形对象。  
   
- 在下面的示例中，在窗体上绘制一个形状其<xref:System.Windows.Forms.Control.Paint>事件处理程序。 然后，<xref:System.Drawing.Graphics.CopyFromScreen%2A>方法用于复制了该形状。  
+ 在下面的示例中, 在窗体的<xref:System.Windows.Forms.Control.Paint>事件处理程序中绘制形状。 然后, <xref:System.Drawing.Graphics.CopyFromScreen%2A>使用方法来复制形状。  
   
 > [!NOTE]
->  将窗体<xref:System.Windows.Forms.Control.DoubleBuffered%2A>属性设置为`true`会使基于图形的代码中<xref:System.Windows.Forms.Control.Paint>事件是双缓冲。 使用下面的代码时，这并不会任何会造成明显的性能提升，而这是一个需要使用更复杂的图形操作代码时，请记住。  
+> 将窗体<xref:System.Windows.Forms.Control.DoubleBuffered%2A>的属性设置`true`为将使<xref:System.Windows.Forms.Control.Paint>事件中基于图形的代码双缓冲。 当使用下面的代码时, 这将不会有任何明显的性能提升, 而是在使用更复杂的图形操作代码时需要注意的事项。  
   
 ## <a name="example"></a>示例  
   
@@ -60,7 +60,7 @@ private void Form1_Paint(System.Object sender,
 ```  
   
 ## <a name="compiling-the-code"></a>编译代码  
- 上面的代码运行在窗体的<xref:System.Windows.Forms.Control.Paint>事件处理程序，以便当重新绘制窗体时，仍然会保持图形。 在这种情况下，不要调用与图形相关的方法<xref:System.Windows.Forms.Form.Load>事件处理程序，因为如果窗体进行大小调整或另一个窗体被遮盖，不重绘绘制的内容。  
+ 上面的代码在窗体的<xref:System.Windows.Forms.Control.Paint>事件处理程序中运行, 以便在重绘窗体时保持图形。 因此, 请不要在<xref:System.Windows.Forms.Form.Load>事件处理程序中调用图形相关方法, 因为如果窗体调整大小或被其他窗体遮住, 则不会重新绘制所绘制的内容。  
   
 ## <a name="see-also"></a>请参阅
 

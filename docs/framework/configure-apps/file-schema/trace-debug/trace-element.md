@@ -10,14 +10,14 @@ helpviewer_keywords:
 - trace element
 - trace listener, <trace> element
 ms.assetid: 7931c942-63c1-47c3-a045-9d9de3cacdbf
-ms.openlocfilehash: 5faf352dce2a459a999b3cf54209f6bd9793bde0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fd90d271591a47849b3f70aea50cbe909b6fd613
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673792"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920401"
 ---
-# <a name="trace-element"></a>\<跟踪 > 元素
+# <a name="trace-element"></a>\<trace > 元素
 包含用于收集、存储和路由跟踪消息的侦听器。  
   
  \<configuration>  
@@ -39,29 +39,29 @@ ms.locfileid: "61673792"
   
 |特性|描述|  
 |---------------|-----------------|  
-|`autoflush`|可选特性。<br /><br /> 指定的跟踪侦听器是否在每个写入操作后会自动刷新输出缓冲区。|  
-|`indentsize`|可选特性。<br /><br /> 指定要缩进空格的数。|  
+|`autoflush`|可选特性。<br /><br /> 指定跟踪侦听器是否在每次写入操作后自动刷新输出缓冲区。|  
+|`indentsize`|可选特性。<br /><br /> 指定缩进的空格数。|  
 |`useGlobalLock`|可选特性。<br /><br /> 指示是否应使用全局锁。|  
   
-## <a name="autoflush-attribute"></a>自动刷新属性  
+## <a name="autoflush-attribute"></a>autoflush 特性  
   
-|“值”|描述|  
+|值|描述|  
 |-----------|-----------------|  
-|`false`|不自动刷新输出缓冲区。 这是默认设置。|  
+|`false`|不会自动刷新输出缓冲区。 这是默认设置。|  
 |`true`|自动刷新输出缓冲区。|  
   
-## <a name="usegloballock-attribute"></a>useGlobalLock Attribute  
+## <a name="usegloballock-attribute"></a>useGlobalLock 特性  
   
-|“值”|描述|  
+|值|描述|  
 |-----------|-----------------|  
-|`false`|侦听器是线程安全; 如果不使用全局锁否则，将使用全局锁。|  
-|`true`|使用全局锁，而不管侦听器是线程安全。 这是默认设置。|  
+|`false`|如果侦听器是线程安全的, 则不使用全局锁定;否则, 将使用全局锁。|  
+|`true`|无论侦听器是否是线程安全的, 都使用全局锁。 这是默认设置。|  
   
 ### <a name="child-elements"></a>子元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<listeners>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/listeners-element-for-trace.md)|指定的侦听器，可收集、 存储，并将消息路由。|  
+|[\<listeners>](listeners-element-for-trace.md)|指定用于收集、存储和路由消息的侦听器。|  
   
 ### <a name="parent-elements"></a>父元素  
   
@@ -71,7 +71,7 @@ ms.locfileid: "61673792"
 |`system.diagnostics`|指定用于收集、存储和路由消息的跟踪侦听器以及对跟踪开关设置的级别。|  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何使用`<trace>`元素添加侦听器`MyListener`到`Listeners`集合。 `MyListener` 创建一个名为的文件`MyListener.log`并将输出写入到该文件。 `useGlobalLock`属性设置为`false`，这将导致非用于如果跟踪侦听器是线程安全的全局锁。 `autoflush`属性设置为`true`，这将导致跟踪侦听器写入到文件而不考虑是否<xref:System.Diagnostics.Trace.Flush%2A?displayProperty=nameWithType>调用方法。 `indentsize`属性设置为 0 （零），这会导致要缩进没有任何空间的侦听器时<xref:System.Diagnostics.Trace.Indent%2A?displayProperty=nameWithType>调用方法。  
+ 下面的示例演示如何使用`<trace>`元素将侦听器`MyListener`添加到`Listeners`集合中。 `MyListener`创建一个名`MyListener.log`为的文件, 并将输出写入文件。 如果跟踪侦听器是线程`false`安全的, 则属性设置为,这将导致不会使用全局锁。`useGlobalLock` 特性设置为`true`, 这将导致跟踪侦听器写入文件, 而不管是否调用了<xref:System.Diagnostics.Trace.Flush%2A?displayProperty=nameWithType>方法。 `autoflush` 特性设置为 0 (零), 这会导致侦听器<xref:System.Diagnostics.Trace.Indent%2A?displayProperty=nameWithType>在调用方法时缩进零个空格。 `indentsize`  
   
 ```xml  
 <configuration>  
@@ -91,4 +91,4 @@ ms.locfileid: "61673792"
 - <xref:System.Diagnostics.DefaultTraceListener>
 - <xref:System.Diagnostics.TextWriterTraceListener>
 - <xref:System.Diagnostics.EventLogTraceListener>
-- [跟踪和调试设置架构](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [跟踪和调试设置架构](index.md)

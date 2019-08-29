@@ -2,18 +2,18 @@
 title: 通过演练学习
 ms.date: 03/30/2017
 ms.assetid: a8ae2965-6a49-4155-89b0-7fab2c488ab1
-ms.openlocfilehash: e6b5f77d6d918ae1402074c9c3037ccadec8ac02
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f1061842343d7a700d3af5da5fdc6aec2f79396d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67743030"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69929216"
 ---
 # <a name="learning-by-walkthroughs"></a>通过演练学习
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]文档提供了一些演练。 本主题介绍一些一般性的演练问题（包括疑难解答），并提供指向用于了解 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 的一些入门级演练的链接。  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]文档提供了几个演练。 本主题介绍一些一般性的演练问题（包括疑难解答），并提供指向用于了解 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 的一些入门级演练的链接。  
   
 > [!NOTE]
->  此“入门”部分中的演练向您展示了支持 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 技术的基本代码。 在实际操作中，您将通常使用对象关系设计器和 Windows 窗体项目来实现您[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]应用程序。 在 O/R 设计器文档提供了实现此目的的示例和演练。  
+> 此“入门”部分中的演练向您展示了支持 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 技术的基本代码。 在实际操作中, 您通常会使用对象关系设计器和 Windows 窗体项目来实现您[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]的应用程序。 O/R 设计器文档提供了用于此目的的示例和演练。  
   
 ## <a name="getting-started-walkthroughs"></a>入门演练  
  本节中提供了若干演练。 这些演练基于 Northwind 示例数据库，以最不复杂的方式循序渐进地展示了 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 的功能。  
@@ -30,20 +30,20 @@ ms.locfileid: "67743030"
 ## <a name="general"></a>常规  
  以下信息大致介绍了这些演练：  
   
-- 环境:每个[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]演练使用 Visual Studio 作为其集成的开发环境 (IDE)。  
+- 环境:每[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]个演练使用 Visual Studio 作为其集成开发环境 (IDE)。  
   
-- SQL 引擎：这些演练旨在实现通过使用 SQL Server Express。 如果您没有 SQL Server Express，可以免费下载。 有关详细信息，请参阅[下载示例数据库](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)。  
+- SQL 引擎:这些演练编写为通过使用 SQL Server Express 来实现。 如果您没有 SQL Server Express，可以免费下载。 有关详细信息, 请参阅[下载示例数据库](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)。  
   
     > [!NOTE]
-    >  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 演练使用文件名作为连接字符串。 只需指定文件名即可，这是 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 为 SQL Server Express 用户提供的便捷之处。 始终要注意安全问题。 有关详细信息，请参阅[LINQ to SQL 中的安全](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md)。  
+    > [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 演练使用文件名作为连接字符串。 只需指定文件名即可，这是 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 为 SQL Server Express 用户提供的便捷之处。 始终要注意安全问题。 有关详细信息, 请参阅[LINQ to SQL 中的安全性](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md)。  
   
-- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 演练通常需要 Northwind 示例数据库。 有关详细信息，请参阅[下载示例数据库](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)。  
+- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 演练通常需要 Northwind 示例数据库。 有关详细信息, 请参阅[下载示例数据库](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)。  
   
-- 从中所述的帮助，具体取决于您现用的设置或 Visual Studio 版本可能不同的对话框和菜单命令在演练中看到。 若要更改设置，请单击 **“工具”** 菜单上的 **“导入和导出设置”** 。 有关详细信息，请参阅[个性化设置 Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide)。  
+- 您在演练中看到的对话框和菜单命令可能与 "帮助" 中描述的不同, 具体取决于您的活动设置或 Visual Studio 版本。 若要更改设置，请单击 **“工具”** 菜单上的 **“导入和导出设置”** 。 有关详细信息，请参阅[个性化设置 Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide)。  
   
 - 对于介绍多层方案的演练，服务器必须位于与开发计算机不同的计算机上，并且您必须具有访问此服务器的相应权限。  
   
-- 通常表示 Northwind 示例数据库中 Orders 表的类名为 `[Order]`。 这种转义是必需的因为`Order`是在 Visual Basic 中的关键字。  
+- 通常表示 Northwind 示例数据库中 Orders 表的类名为 `[Order]`。 转义是必需的, `Order`因为是 Visual Basic 中的关键字。  
   
 ## <a name="troubleshooting"></a>疑难解答  
  发生运行时错误的原因可能是您没有足够的权限来访问这些演练中使用的数据库。 请参见以下步骤以帮助解决最常见的此类问题。  
@@ -53,26 +53,26 @@ ms.locfileid: "67743030"
   
 ##### <a name="to-verify-or-change-the-database-log-on"></a>验证或更改数据库登录名  
   
-1. 在 Windows 上**启动**菜单，依次指向**所有程序**， **Microsoft SQL Server 2005**，指向**配置工具**，然后单击**SQL Server 配置管理器**。  
+1. 在 Windows 的 "**开始**" 菜单上, 依次指向 "**所有程序**"、 **Microsoft SQL Server 2005**"和"**配置工具**", 然后单击" **SQL Server 配置管理器**"。  
   
-2. 在左窗格中**SQL Server 配置管理器**，单击**SQL Server 2005 Services**。  
+2. 在**SQL Server 配置管理器**的左窗格中, 单击 " **SQL Server 2005 服务**"。  
   
-3. 在右窗格中，右键单击**SQL Server (SQLEXPRESS)** ，然后单击**属性**。  
+3. 在右侧窗格中, 右键单击 " **SQL Server (SQLEXPRESS)** ", 然后单击 "**属性**"。  
   
-4. 单击**Log On**选项卡并验证您尝试登录到服务器的方式。  
+4. 单击 "**登录**" 选项卡, 然后验证尝试登录到服务器的方式。  
   
-     在大多数情况下，**本地系统**工作原理。  
+     在大多数情况下,**本地系统**工作正常。  
   
-     如果进行了更改，请单击**重新启动**重新启动服务。  
+     如果进行了更改, 请单击 "**重新启动**" 以重新启动该服务。  
   
 ### <a name="protocols"></a>协议  
- 有时，您的应用程序用来访问数据库的协议可能未设置正确。 例如， **Named Pipes**协议，该演练中需要的协议[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]，默认情况下不启用。  
+ 有时，您的应用程序用来访问数据库的协议可能未设置正确。 例如, 默认情况下不启用中[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]的演练所需的**Named Pipes**协议。  
   
 ##### <a name="to-enable-the-named-pipes-protocol"></a>启用 Named Pipes 协议  
   
-1. 在左窗格中**SQL Server 配置管理器**，展开**SQL Server 2005 网络配置**，然后单击**SQLEXPRESS 的协议**。  
+1. 在**SQL Server 配置管理器**的左窗格中, 展开 " **SQL Server 2005 网络配置**", 然后单击 " **SQLEXPRESS 的协议**"。  
   
-2. 在右窗格中，请确保**Named Pipes**协议处于启用状态。 如果不存在，请右击**Name Pipes** ，然后单击**启用**。  
+2. 在右侧窗格中, 确保已启用**Named Pipes**协议。 如果不是, 请右键单击 "**命名管道**", 然后单击 "**启用**"。  
   
      您将需要停止此服务，再重新启动它。 请按下一部分中的步骤操作。  
   
@@ -81,11 +81,11 @@ ms.locfileid: "67743030"
   
 ##### <a name="to-stop-and-restart-the-service"></a>停止并重新启动服务  
   
-1. 在左窗格中**SQL Server 配置管理器**，单击**SQL Server 2005 Services**。  
+1. 在**SQL Server 配置管理器**的左窗格中, 单击 " **SQL Server 2005 服务**"。  
   
-2. 在右窗格中，右键单击**SQL Server (SQLEXPRESS)** ，然后单击**停止**。  
+2. 在右侧窗格中, 右键单击 " **SQL Server (SQLEXPRESS)** ", 然后单击 "**停止**"。  
   
-3. 右键单击**SQL Server (SQLEXPRESS)** ，然后单击**重新启动**。  
+3. 右键单击**SQL Server (SQLEXPRESS)** , 然后单击 "**重新启动**"。  
   
 ## <a name="see-also"></a>请参阅
 

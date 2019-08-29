@@ -6,29 +6,26 @@ helpviewer_keywords:
 - bound controls [Windows Forms], creating
 - bound controls [Windows Forms], formatting data
 ms.assetid: d5a56228-899d-41d9-8af8-87b3f4ec2f94
-ms.openlocfilehash: 052e619acb23fb2e25f42daf7b4eaaacb0688f31
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 543775894994c518d6069f697b145cedaa7af5b0
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039428"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70015653"
 ---
 # <a name="how-to-create-a-bound-control-and-format-the-displayed-data"></a>如何：创建绑定控件并设置显示数据的格式
 
 使用 Windows 窗体数据绑定, 可以通过使用 "**格式设置和高级绑定**" 对话框来设置数据绑定控件中显示的数据的格式。
 
+## <a name="to-bind-a-control-and-format-the-displayed-data"></a>绑定控件并设置显示的数据的格式
 
-### <a name="to-bind-a-control-and-format-the-displayed-data"></a>绑定控件并设置显示的数据的格式
+1. 连接到数据源。 有关详细信息, 请参阅[连接到数据源](../data/adonet/connecting-to-a-data-source.md)。
 
-1. 连接到数据源。
-
-     有关详细信息, 请参阅[连接到数据源](../data/adonet/connecting-to-a-data-source.md)。
-
-2. 在窗体中，选择控件，然后打开“属性”窗口。
+2. 在 Visual Studio 中, 选择窗体上的控件, 然后打开 "**属性**" 窗口。
 
 3. 展开 " **(databinding)** " 属性, 然后在 " **(高级)** " 框中, 单击省略号按钮![(Visual Studio](./media/how-to-create-a-bound-control-and-format-the-displayed-data/visual-studio-ellipsis-button.png)的属性窗口中的省略号按钮 (...), 以显示**格式设置和高级"绑定**" 对话框, 该对话框具有该控件的属性的完整列表。
 
-4. 选择要绑定的属性, 然后单击 "**绑定**" 箭头。
+4. 选择要绑定的属性, 然后选择 "**绑定**" 箭头。
 
      此时将显示可用数据源的列表。
 
@@ -36,9 +33,9 @@ ms.locfileid: "69039428"
 
      例如，如果你正在绑定到数据集表中的列值，请展开该数据集的名称，然后展开表名以显示列名。
 
-6. 单击要绑定到的元素的名称。
+6. 选择要绑定到的元素的名称。
 
-7. 在 "**格式类型**" 框中, 单击要应用于控件中显示的数据的格式。
+7. 在 "**格式类型**" 框中, 选择要应用于控件中显示的数据的格式。
 
      在任何情况下，如果数据源包含 <xref:System.DBNull>，都可以指定控件中显示的值。 否则，选项会略有不同，具体取决于你选择的格式类型。 下表显示了格式类型和选项。
 
@@ -51,7 +48,7 @@ ms.locfileid: "69039428"
     |科学记数法|使用 "**小数位数**" up-down 控件指定小数位数。|
     |自定义|指定一个自定义格式字符串用法。<br /><br /> 有关详细信息，请参阅[类型格式设置](../../standard/base-types/formatting-types.md)。 **注意：** 无法保证自定义格式字符串能成功往返于数据源和绑定控件之间。 请改为处理该绑定的 <xref:System.Windows.Forms.Binding.Parse> 或 <xref:System.Windows.Forms.Binding.Format> 事件，并在事件处理代码中应用自定义格式设置。|
 
-8. 单击 **"确定"** 以关闭 "**格式设置和高级绑定**" 对话框并返回到属性窗口。
+8. 选择 **"确定"** 以关闭 "**格式设置和高级绑定**" 对话框并返回到属性窗口。
 
 ## <a name="see-also"></a>请参阅
 

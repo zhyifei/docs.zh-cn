@@ -8,15 +8,15 @@ helpviewer_keywords:
 - bypasslist element
 - <bypasslist> element
 ms.assetid: 124446b7-abb1-4e5e-a492-b64398f268f1
-ms.openlocfilehash: d3d986dae478f49504dae21b9f39574b7887b4d2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bd746f07b4c4eb08bf34b01d555b5799d9af0cf3
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674618"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927474"
 ---
-# <a name="bypasslist-element-network-settings"></a>\<bypasslist > 元素 （网络设置）
-提供一组描述不使用代理的地址的正则表达式。  
+# <a name="bypasslist-element-network-settings"></a>\<bypasslist > 元素 (网络设置)
+提供了一组正则表达式, 描述不使用代理的地址。  
   
  \<configuration>  
 \<system.net>  
@@ -40,28 +40,28 @@ ms.locfileid: "61674618"
   
 |**元素**|**说明**|  
 |-----------------|---------------------|  
-|[add](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-bypasslist-network-settings.md)|将 IP 地址或 DNS 名称添加到代理跳过列表。|  
-|[clear](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-bypasslist-network-settings.md)|清除跳过列表。|  
-|[remove](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-bypasslist-network-settings.md)|从代理跳过列表中删除 IP 地址或 DNS 名称。|  
+|[add](add-element-for-bypasslist-network-settings.md)|将 IP 地址或 DNS 名称添加到代理跳过列表。|  
+|[clear](clear-element-for-bypasslist-network-settings.md)|清除跳过列表。|  
+|[remove](remove-element-for-bypasslist-network-settings.md)|从代理跳过列表中删除 IP 地址或 DNS 名称。|  
   
 ### <a name="parent-elements"></a>父元素  
   
 |**元素**|**说明**|  
 |-----------------|---------------------|  
-|[defaultProxy](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|配置超文本传输协议 (HTTP) 代理服务器。|  
+|[defaultProxy](defaultproxy-element-network-settings.md)|配置超文本传输协议 (HTTP) 代理服务器。|  
   
 ## <a name="remarks"></a>备注  
- 跳过列表包含描述 Uri 的正则表达式的<xref:System.Net.WebRequest>实例而不是直接访问通过代理服务器。  
+ 绕过列表包含用于描述<xref:System.Net.WebRequest>实例直接访问而不是通过代理服务器访问的 uri 的正则表达式。  
   
- 指定此元素的正则表达式时应十分小心。 正则表达式"[a-z] +\\.contoso\\.com"匹配任意主机在 contoso.com 域，但它还将匹配 contoso.com.cpandl.com 域中的任何主机。 若要匹配仅在 contoso.com 域中的主机，使用的定位点 （"$"）:"[a-z] +\\.contoso\\.com$"。  
+ 为此元素指定正则表达式时, 应格外小心。 正则表达式 "[a-z] +\\\\.com" 与 contoso.com 域中的任何主机匹配, 但它还匹配 contoso.com.cpandl.com 域中的任何主机。 若要只匹配 contoso.com 域中的主机, 请使用定位点 ("$"): "[a-z] +\\\\.com $"。  
   
- 有关正则表达式的详细信息，请参阅。[.NET framework 正则表达式](../../../../../docs/standard/base-types/regular-expressions.md)。  
+ 有关正则表达式的详细信息, 请参阅。[.NET Framework 正则表达式](../../../../standard/base-types/regular-expressions.md)。  
   
 ## <a name="configuration-files"></a>配置文件  
  此元素可在应用程序配置文件或计算机配置文件 (Machine.config) 中使用。  
   
 ## <a name="example"></a>示例  
- 下面的示例将两个地址添加到忽略列表。 第一个跳过 contoso.com 域; 中的所有服务器的代理第二个跳过与 192.168 其 IP 地址开始的所有服务器的代理。  
+ 下面的示例将两个地址添加到跳过列表。 首先, 将跳过 contoso.com 域中所有服务器的代理;第二种方式是跳过其 IP 地址以192.168 开头的所有服务器的代理。  
   
 ```xml  
 <configuration>  
@@ -79,4 +79,4 @@ ms.locfileid: "61674618"
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
-- [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [网络设置架构](index.md)

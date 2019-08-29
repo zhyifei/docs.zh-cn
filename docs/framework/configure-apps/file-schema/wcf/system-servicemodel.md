@@ -8,15 +8,15 @@ helpviewer_keywords:
 - <system.serviceModel> element
 - system.serviceModel element
 ms.assetid: 78519531-ad7a-40d3-b3e7-42f1103d8854
-ms.openlocfilehash: c176f7f470cc65bb135e5f92935102e09c7e8485
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4fa6916437bb569029efe270ba8296703d89c539
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61758439"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69938909"
 ---
 # <a name="systemservicemodel"></a>\<system.serviceModel>
-此配置节包含所有 Windows Communication Foundation (WCF) ServiceModel 配置元素。  
+此配置节包含所有 Windows Communication Foundation (WCF) 配置元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -55,25 +55,25 @@ ms.locfileid: "61758439"
  下列各节描述了特性、子元素和父元素。  
   
 ### <a name="attributes"></a>特性  
- None  
+ 无  
   
 ### <a name="child-elements"></a>子元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<behaviors>](../../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)|此节定义名为 `endpointBehaviors` 和 `serviceBehaviors` 的两个子集合。  每个集合分别定义终结点和服务所使用的行为元素。 每个行为元素由其唯一的 `name` 属性标识。|  
-|[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|此节包含标准绑定和自定义绑定的集合。 每一项均由其唯一的 `name` 进行标识。 服务通过用 `name` 与绑定进行链接来使用绑定。|  
-|[\<client>](../../../../../docs/framework/configure-apps/file-schema/wcf/client.md)|此节包含客户端用来连接到服务的终结点的列表。|  
-|[\<comContracts>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)|此节定义支持 WCF 和 COM 互操作的 COM 协定。|  
-|[\<commonBehaviors>](../../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md)|此节只能在 machine.config 文件中定义。 它定义了名为 `endpointBehaviors` 和 `serviceBehaviors` 的两个子集合。  每个集合定义分别由所有 WCF 终结点和计算机上的服务所使用的行为元素。  如果在这种定义了某个行为`<commonBehaviors>`并`<behaviors>`部分中的行为\<行为 > 部分优先。|  
-|[\<diagnostics>](../../../../../docs/framework/configure-apps/file-schema/wcf/diagnostics.md)|此节包含 WCF 的诊断功能设置。 用户可以启用/禁用跟踪、性能计数器和 WMI 提供程序，还可以添加自定义消息筛选器。|  
-|[\<extensions>](../../../../../docs/framework/configure-apps/file-schema/wcf/extensions-section.md)|此节包含一个扩展集合，这些扩展使用户能够创建扩展的用户定义绑定、行为和其他方面。|  
-|[\<protocolMapping>](../../../../../docs/framework/configure-apps/file-schema/wcf/protocolmapping.md)|本部分中定义一的组传输协议方案 （例如，http、 net.tcp、 net.pipe 等） 和 WCF 绑定之间的默认协议映射。|  
-|[\<routing>](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|本部分将定义一组路由筛选器，确定类型的 Windows Communication Foundation (WCF)<xref:System.ServiceModel.Dispatcher.MessageFilter>时计算传入消息，以及路由表定义的目标终结点将消息发送到时要使用筛选器匹配。|  
-|[\<serviceHostingEnvironment>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)|此节定义服务承载环境要为特定传输实例化的类型。 如果此节为空，则使用默认类型。|  
-|[\<services>](../../../../../docs/framework/configure-apps/file-schema/wcf/services.md)|此节包含服务的集合。 对于程序集中定义的每个服务，此元素包含一个为服务指定设置的 `service` 元素。|  
-|[\<standardEndpoints>](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|此节定义一个标准终结点集合，这些终结点是预配置的可重用终结点。 标准终结点具有一个或多个设置为固定值的地址、绑定和协定特性。 例如，发现终结点具有固定的协定。 此外，还可以使用标准终结点用新属性扩展服务终结点，这与定义自定义绑定相似。|
-|[\<tracking>](../../../../../docs/framework/configure-apps/file-schema/wcf/tracking-of-wcf.md)|本部分中定义的工作流服务的跟踪设置。|
+|[\<behaviors>](behaviors.md)|此节定义名为 `endpointBehaviors` 和 `serviceBehaviors` 的两个子集合。  每个集合分别定义终结点和服务所使用的行为元素。 每个行为元素由其唯一的 `name` 属性标识。|  
+|[\<bindings>](bindings.md)|此节包含标准绑定和自定义绑定的集合。 每一项均由其唯一的 `name` 进行标识。 服务通过用 `name` 与绑定进行链接来使用绑定。|  
+|[\<client>](client.md)|此节包含客户端用来连接到服务的终结点的列表。|  
+|[\<comContracts>](comcontracts.md)|此节定义支持 WCF 和 COM 互操作的 COM 协定。|  
+|[\<commonBehaviors>](commonbehaviors.md)|此节只能在 machine.config 文件中定义。 它定义了名为 `endpointBehaviors` 和 `serviceBehaviors` 的两个子集合。  每个集合分别定义计算机上所有 WCF 终结点和服务所使用的行为元素。  如果在`<commonBehaviors>`和`<behaviors>`节中定义了某个行为, 则会优先使用\<"行为" > 部分中的行为。|  
+|[\<diagnostics>](diagnostics.md)|此节包含 WCF 的诊断功能设置。 用户可以启用/禁用跟踪、性能计数器和 WMI 提供程序，还可以添加自定义消息筛选器。|  
+|[\<扩展 >](extensions-section.md)|此节包含一个扩展集合，这些扩展使用户能够创建扩展的用户定义绑定、行为和其他方面。|  
+|[\<protocolMapping>](protocolmapping.md)|本部分定义传输协议方案 (例如, http、net.tcp、net.pipe 等) 和 WCF 绑定之间的一组默认协议映射。|  
+|[\<routing>](routing.md)|本节定义一组路由筛选器, 这些筛选器确定计算传入消息时要使用<xref:System.ServiceModel.Dispatcher.MessageFilter>的 Windows Communication Foundation (WCF) 的类型, 以及用于定义在筛选器匹配项。|  
+|[\<serviceHostingEnvironment>](servicehostingenvironment.md)|此节定义服务承载环境要为特定传输实例化的类型。 如果此节为空，则使用默认类型。|  
+|[\<services>](services.md)|此节包含服务的集合。 对于程序集中定义的每个服务，此元素包含一个为服务指定设置的 `service` 元素。|  
+|[\<standardEndpoints>](standardendpoints.md)|此节定义一个标准终结点集合，这些终结点是预配置的可重用终结点。 标准终结点具有一个或多个设置为固定值的地址、绑定和协定特性。 例如，发现终结点具有固定的协定。 此外，还可以使用标准终结点用新属性扩展服务终结点，这与定义自定义绑定相似。|
+|[\<tracking>](tracking-of-wcf.md)|本部分为工作流服务定义跟踪设置。|
 
 ### <a name="parent-elements"></a>父元素  
   
@@ -84,7 +84,7 @@ ms.locfileid: "61758439"
 ## <a name="remarks"></a>备注  
  WCF 不会向其他产品的配置节添加元素。  
   
- WCF 服务中定义`services`配置文件的部分。 程序集可以包含任意多个服务。 每个服务都有自己的 `service` 配置节。 本节及其内容定义特定服务的服务协定、行为和终结点。  
+ WCF 服务在配置文件的`services`部分中定义。 程序集可以包含任意多个服务。 每个服务都有自己的 `service` 配置节。 本节及其内容定义特定服务的服务协定、行为和终结点。  
   
  只有服务的 `name` 属性是必需的。  默认情况下，服务的名称描述用于实现服务的基础 CLR 类型；但是，您可以更改 <xref:System.ServiceModel.ServiceContractAttribute> 上的 ConfigurationName 属性以重写 CLR 类型需求。  
   

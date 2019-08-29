@@ -5,12 +5,12 @@ ms.date: 03/07/2017
 helpviewer_keywords:
 - contextual keywords [C#]
 ms.assetid: 7c76bc29-a754-4389-b0ab-f6b441018298
-ms.openlocfilehash: 8f8dc21b407e7286010b7425b835a481cc90287a
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 1052ab7d7c6fd948f59c5956b918fbfd01899a1a
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68971321"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69608679"
 ---
 # <a name="contextual-keywords-c-reference"></a>上下文关键字（C# 参考）
 
@@ -18,25 +18,25 @@ ms.locfileid: "68971321"
   
 |关键字|说明|  
 |-------------|-----------------|  
-|[add](../../../csharp/language-reference/keywords/add.md)|定义一个自定义事件访问器，客户端代码订阅事件时会调用该访问器。|  
-|[async](../../../csharp/language-reference/keywords/async.md)|指示修改后的方法、lambda 表达式或匿名方法是异步的。|  
-|[await](../../../csharp/language-reference/keywords/await.md)|挂起异步方法，直到等待的任务完成。|  
-|[动态](../../../csharp/language-reference/keywords/dynamic.md)|定义一个引用类型，实现发生绕过编译时类型检查的操作。|  
-|[get](../../../csharp/language-reference/keywords/get.md)|为属性或索引器定义访问器方法。|  
-|[global](../../../csharp/language-reference/operators/namespace-alias-qualifier.md)|未以其他方式命名的全局命名空间的别名。|  
-|[partial](../../../csharp/language-reference/keywords/partial-type.md)|在整个同一编译单元内定义分部类、结构和接口。|  
-|[remove](../../../csharp/language-reference/keywords/remove.md)|定义一个自定义事件访问器，客户端代码取消订阅事件时会调用该访问器。|  
-|[set](../../../csharp/language-reference/keywords/set.md)|为属性或索引器定义访问器方法。|  
-|[值](../../../csharp/language-reference/keywords/value.md)|用于设置访问器和添加或删除事件处理程序。|  
-|[var](../../../csharp/language-reference/keywords/var.md)|使编译器能够确定在方法作用域中声明的变量类型。|  
+|[add](./add.md)|定义一个自定义事件访问器，客户端代码订阅事件时会调用该访问器。|  
+|[async](./async.md)|指示修改后的方法、lambda 表达式或匿名方法是异步的。|  
+|[await](./await.md)|挂起异步方法，直到等待的任务完成。|  
+|[动态](./dynamic.md)|定义一个引用类型，实现发生绕过编译时类型检查的操作。|  
+|[get](./get.md)|为属性或索引器定义访问器方法。|  
+|[global](../operators/namespace-alias-qualifier.md)|未以其他方式命名的全局命名空间的别名。|  
+|[partial](./partial-type.md)|在整个同一编译单元内定义分部类、结构和接口。|  
+|[remove](./remove.md)|定义一个自定义事件访问器，客户端代码取消订阅事件时会调用该访问器。|  
+|[set](./set.md)|为属性或索引器定义访问器方法。|  
+|[值](./value.md)|用于设置访问器和添加或删除事件处理程序。|  
+|[var](./var.md)|使编译器能够确定在方法作用域中声明的变量类型。|  
 |[when](when.md)|指定 `catch` 块的筛选条件或 `switch` 语句的 `case` 标签。|
-|[where](../../../csharp/language-reference/keywords/where-generic-type-constraint.md)|将约束添加到泛型声明。 （另请参阅 [where](../../../csharp/language-reference/keywords/where-clause.md)）。|  
-|[yield](../../../csharp/language-reference/keywords/yield.md)|在迭代器块中使用，用于向枚举数对象返回值或用于表示迭代结束。|  
+|[where](./where-generic-type-constraint.md)|将约束添加到泛型声明。 （另请参阅 [where](./where-clause.md)）。|  
+|[yield](./yield.md)|在迭代器块中使用，用于向枚举数对象返回值或用于表示迭代结束。|  
   
- C# 3.0 中引入的所有查询关键字也都是上下文相关的。 有关详细信息，请参阅[查询关键字 (LINQ)](../../../csharp/language-reference/keywords/query-keywords.md)。  
+ C# 3.0 中引入的所有查询关键字也都是上下文相关的。 有关详细信息，请参阅[查询关键字 (LINQ)](./query-keywords.md)。  
   
 ## <a name="see-also"></a>请参阅
 
-- [C# 参考](../../../csharp/language-reference/index.md)
-- [C# 编程指南](../../../csharp/programming-guide/index.md)
-- [C# 关键字](../../../csharp/language-reference/keywords/index.md)
+- [C# 参考](../index.md)
+- [C# 编程指南](../../programming-guide/index.md)
+- [C# 关键字](./index.md)

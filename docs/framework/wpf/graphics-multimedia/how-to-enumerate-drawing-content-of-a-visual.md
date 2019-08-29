@@ -5,21 +5,21 @@ helpviewer_keywords:
 - retrieving the DrawingGroup value of a Visual [WPF]
 - enumerating the contents of a Visual [WPF]
 ms.assetid: 2974ddb3-2997-4713-8fd2-e93d549c58a8
-ms.openlocfilehash: 4f0afc1075fe66c7f154fcef3cd883709db55316
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 25aa0c3706005c1e16cedd7e06914db764545ebb
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947467"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69930074"
 ---
 # <a name="how-to-enumerate-drawing-content-of-a-visual"></a>如何：枚举视觉对象的绘图内容
-<xref:System.Windows.Media.Drawing>对象提供用于枚举的内容的对象模型<xref:System.Windows.Media.Visual>。  
+对象提供用于枚举的内容<xref:System.Windows.Media.Visual>的对象模型。 <xref:System.Windows.Media.Drawing>  
   
 ## <a name="example"></a>示例  
- 下面的示例使用<xref:System.Windows.Media.VisualTreeHelper.GetDrawing%2A>方法来检索<xref:System.Windows.Media.DrawingGroup>的值<xref:System.Windows.Media.Visual>并枚举该值。  
+ 下面的示例使用<xref:System.Windows.Media.VisualTreeHelper.GetDrawing%2A>方法来<xref:System.Windows.Media.DrawingGroup>检索的<xref:System.Windows.Media.Visual>值并对其进行枚举。  
   
 > [!NOTE]
->  当枚举视觉对象的内容时，就在检索<xref:System.Windows.Media.Drawing>对象和表示形式呈现数据作为矢量图形指令列表不基础。 有关详细信息，请参阅 [WPF 图形呈现概述](wpf-graphics-rendering-overview.md)。  
+> 枚举视觉对象的内容时, 您是在检索<xref:System.Windows.Media.Drawing>对象, 而不是以矢量图形指令列表的形式呈现数据。 有关详细信息，请参阅 [WPF 图形呈现概述](wpf-graphics-rendering-overview.md)。  
   
  [!code-csharp[DrawingMiscSnippets_snip#GraphicsMMRetrieveDrawings](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/EnumerateDrawingsExample.xaml.cs#graphicsmmretrievedrawings)]  
   

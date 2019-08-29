@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: ba36154f-064c-47d3-9f05-72f93a7ca96d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 519b92cd24d75dd8e98fc28dbce3701c521a041d
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: a8fc6f59b7a295cb73489a644da80976345cb172
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65593517"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922693"
 ---
 # <a name="type-conversion-in-the-net-framework"></a>.NET Framework 中的类型转换
 <a name="top"></a>每个值都有与之关联的类型，此类型定义分配给该值的空间大小、它可以具有的可能值的范围以及它可以提供的成员等属性。 许多值可以表示为多种类型。 例如，值 4 可以表示为整数或浮点值。 类型转换可以创建一个等同于旧类型值的新类型值，但却不必保留原始对象的恒等值（或精确值）。  
@@ -63,7 +63,7 @@ ms.locfileid: "65593517"
  扩大转换涉及从现有类型的值创建一个新值，该现有类型比目标类型具有限制性更强的范围或限制性更强的成员列表。 扩大转换不会导致数据丢失（但可能导致精度损失）。 由于不会丢失数据，因此编译器可以隐式或透明地处理转换，无需使用显式转换方法或强制转换运算符。  
   
 > [!NOTE]
->  虽然执行隐式转换的代码可以调用转换方法或使用强制转换运算符，但支持隐式转换的编译器不需要调用转换方法或使用强制转换运算符。  
+> 虽然执行隐式转换的代码可以调用转换方法或使用强制转换运算符，但支持隐式转换的编译器不需要调用转换方法或使用强制转换运算符。  
   
  例如，<xref:System.Decimal> 类型支持从 <xref:System.Byte>、<xref:System.Char>、<xref:System.Int16>、<xref:System.Int32>、<xref:System.Int64>、<xref:System.SByte>、<xref:System.UInt16>、<xref:System.UInt32> 和 <xref:System.UInt64> 值进行的隐式转换。 下面的示例通过为 <xref:System.Decimal> 变量赋值演示了其中的一些隐式转换。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "65593517"
  收缩转换涉及从现有类型的值创建一个新值，该现有类型比目标类型具有更大的范围和更大的成员列表。 由于收缩转换可以导致数据丢失，因此编译器通常需要通过调用转换方法或使用强制转换运算符来进行显式转换。 也就是说，必须在开发人员代码中显式处理收缩转换。  
   
 > [!NOTE]
->  收缩转换之所以需要使用转换方法或强制转换运算符，主要是为提醒开发人员可能会丢失数据或引发 <xref:System.OverflowException>，以便可以在代码中对其进行处理。 但是，有些编译器可以放宽此要求。 例如，在 Visual Basic 中，如果 `Option Strict` 关闭（其默认设置），则 Visual Basic 编译器会尝试隐式执行收缩转换。  
+> 收缩转换之所以需要使用转换方法或强制转换运算符，主要是为提醒开发人员可能会丢失数据或引发 <xref:System.OverflowException>，以便可以在代码中对其进行处理。 但是，有些编译器可以放宽此要求。 例如，在 Visual Basic 中，如果 `Option Strict` 关闭（其默认设置），则 Visual Basic 编译器会尝试隐式执行收缩转换。  
   
  例如，<xref:System.UInt32>、<xref:System.Int64> 和 <xref:System.UInt64> 数据类型均具有超过 <xref:System.Int32> 数据类型的范围，如下表所示。  
   
@@ -107,7 +107,7 @@ ms.locfileid: "65593517"
  大多数编译器允许以有检查或无检查的方式执行显式转换。 当执行有检查转换时，如果被转换类型的值超出了目标类型的范围，则会引发 <xref:System.OverflowException>。 在相同条件下执行无检查转换时，转换可能不会引发异常，但无法确定确切的行为，并且可能产生不正确的值。  
   
 > [!NOTE]
->  在 C# 中，可将 `checked` 关键字与强制转换运算符一起使用来执行有检查转换，也可通过指定 `/checked+` 编译器选项来执行有检查转换。 反过来，可将 `unchecked` 关键字与强制转换运算符一起使用来执行无检查转换，或者通过指定 `/checked-` 编译器选项来执行无检查转换。 默认情况下，显式转换将为无检查转换。 在 Visual Basic 中，通过清除项目的“高级编译器设置”对话框中的“不做整数溢出检查”复选框或指定 `/removeintchecks-` 编译器选项，可以执行有检查转换。 反之，通过选中项目的“高级编译器设置”对话框中的“不做整数溢出检查”复选框，或者指定 `/removeintchecks+` 编译器选项，可以执行无检查转换。 默认情况下，显式转换将为有检查转换。  
+> 在 C# 中，可将 `checked` 关键字与强制转换运算符一起使用来执行有检查转换，也可通过指定 `/checked+` 编译器选项来执行有检查转换。 反过来，可将 `unchecked` 关键字与强制转换运算符一起使用来执行无检查转换，或者通过指定 `/checked-` 编译器选项来执行无检查转换。 默认情况下，显式转换将为无检查转换。 在 Visual Basic 中，通过清除项目的“高级编译器设置”  对话框中的“不做整数溢出检查”  复选框或指定 `/removeintchecks-` 编译器选项，可以执行有检查转换。 反之，通过选中项目的“高级编译器设置”  对话框中的“不做整数溢出检查”  复选框，或者指定 `/removeintchecks+` 编译器选项，可以执行无检查转换。 默认情况下，显式转换将为有检查转换。  
   
  下面的 C# 示例使用 `checked` 和 `unchecked` 关键字阐释了将 <xref:System.Byte> 范围外的值转换为 <xref:System.Byte> 时的行为差异。 有检查转换会引发异常，但无检查转换会向 <xref:System.Byte.MaxValue?displayProperty=nameWithType> 变量赋予 <xref:System.Byte>。  
   
@@ -143,7 +143,7 @@ ms.locfileid: "65593517"
  对转换方法的接口（而不是实现类型）调用转换方法的要求使显式接口实现成为一种代价相对较大的操作。 因此，在公共语言运行时基类型之间进行转换时，建议您调用 <xref:System.Convert> 类的适当成员。 有关详细信息，请参阅下一部分 [Convert 类](#Convert)。  
   
 > [!NOTE]
->  除了 .NET Framework 提供的 <xref:System.IConvertible> 接口和 <xref:System.Convert> 类，各种语言还可能会提供其他方法来执行转换。 例如，C# 使用强制转换运算符；Visual Basic 使用编译器实现的转换函数，例如 `CType`、`CInt` 和 `DirectCast`。  
+> 除了 .NET Framework 提供的 <xref:System.IConvertible> 接口和 <xref:System.Convert> 类，各种语言还可能会提供其他方法来执行转换。 例如，C# 使用强制转换运算符；Visual Basic 使用编译器实现的转换函数，例如 `CType`、`CInt` 和 `DirectCast`。  
   
  大多数情况下，<xref:System.IConvertible> 接口设计为支持 .NET Framework 中基类型之间的转换。 但是，通过自定义类型也可以实现该接口，以便支持该类型到其他自定义类型的转换。 有关详细信息，请参阅本主题后面的[使用 ChangeType 方法的自定义转换](#ChangeType)部分。  
   
@@ -157,7 +157,7 @@ ms.locfileid: "65593517"
  <xref:System.Convert> 类提供了一种与语言无关的方式来执行基类型之间的转换，并且该类可用于面向公共语言运行时的所有语言。 它为扩大转换和收缩转换提供了一组完整的方法，并且会对不支持的转换（例如 <xref:System.InvalidCastException> 值到整数值的转换）引发 <xref:System.DateTime>。 收缩转换是在已检查的上下文中执行的，如果转换失败，将引发 <xref:System.OverflowException>。  
   
 > [!IMPORTANT]
->  由于 <xref:System.Convert> 类包含用于转换为每个基类型和从每个基类型进行转换的方法，因此不再需要调用每个基类型的 <xref:System.IConvertible> 显式接口实现。  
+> 由于 <xref:System.Convert> 类包含用于转换为每个基类型和从每个基类型进行转换的方法，因此不再需要调用每个基类型的 <xref:System.IConvertible> 显式接口实现。  
   
  下面的示例演示如何使用 <xref:System.Convert?displayProperty=nameWithType> 类来执行 .NET Framework 基类型之间的多种扩大转换和收缩转换。  
   
@@ -176,7 +176,7 @@ ms.locfileid: "65593517"
  除了支持到每个基类型的转换外，<xref:System.Convert> 类还可用于将一个自定义类型转换为一个或多个预定义类型。 此转换是通过 <xref:System.Convert.ChangeType%28System.Object%2CSystem.Type%2CSystem.IFormatProvider%29?displayProperty=nameWithType> 方法执行的，而此方法包装了对 <xref:System.IConvertible.ToType%2A?displayProperty=nameWithType> 参数的 `value` 方法的调用。 这意味着 `value` 参数所表示的对象必须提供 <xref:System.IConvertible> 接口的实现。  
   
 > [!NOTE]
->  由于 <xref:System.Convert.ChangeType%28System.Object%2CSystem.Type%29?displayProperty=nameWithType> 和 <xref:System.Convert.ChangeType%28System.Object%2CSystem.Type%2CSystem.IFormatProvider%29?displayProperty=nameWithType> 方法使用 <xref:System.Type> 对象来指定 `value` 将转换为的目标类型，因此它们可用于执行对象（其类型在编译时是未知的）的动态转换。 但请注意，<xref:System.IConvertible> 的 `value` 实现必须仍支持此转换。  
+> 由于 <xref:System.Convert.ChangeType%28System.Object%2CSystem.Type%29?displayProperty=nameWithType> 和 <xref:System.Convert.ChangeType%28System.Object%2CSystem.Type%2CSystem.IFormatProvider%29?displayProperty=nameWithType> 方法使用 <xref:System.Type> 对象来指定 `value` 将转换为的目标类型，因此它们可用于执行对象（其类型在编译时是未知的）的动态转换。 但请注意，<xref:System.IConvertible> 的 `value` 实现必须仍支持此转换。  
   
  下面的示例演示 <xref:System.IConvertible> 接口的一个可能实现，该实现允许将 `TemperatureCelsius` 对象转换为 `TemperatureFahrenheit` 对象，反之亦然。 此示例定义一个基类 `Temperature`，该基类实现 <xref:System.IConvertible> 接口并重写 <xref:System.Object.ToString%2A?displayProperty=nameWithType> 方法。 派生的 `TemperatureCelsius` 和 `TemperatureFahrenheit` 类分别重写该基类的 `ToType` 和 `ToString` 方法。  
   
@@ -195,7 +195,7 @@ ms.locfileid: "65593517"
  .NET Framework 还允许您通过下面的方法为自定义类型定义类型转换器：扩展 <xref:System.ComponentModel.TypeConverter?displayProperty=nameWithType> 类，然后通过 <xref:System.ComponentModel.TypeConverterAttribute?displayProperty=nameWithType> 特性将类型转换器与该类型关联。 下表列出了此方法与为自定义类型实现 <xref:System.IConvertible> 接口之间的差异。  
   
 > [!NOTE]
->  只能为已定义了类型转换器的自定义类型提供设计时支持。  
+> 只能为已定义了类型转换器的自定义类型提供设计时支持。  
   
 |使用 TypeConverter 转换|使用 IConvertible 转换|  
 |------------------------------------|-----------------------------------|  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - target compiler options [C#], /target:module
 - /target compiler options [C#], /target:module
 ms.assetid: 9af1e4fa-c749-44e7-ae58-90a3d05d4e72
-ms.openlocfilehash: 89139867cb0a207dbe82168015629fcb9e2fa6eb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 25421df2e9306071ce3506aaf7affd1b259d1c32
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54601891"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69602441"
 ---
 # <a name="-targetmodule-c-compiler-options"></a>-target:module（C# 编译器选项）
 此选项会导致编译器不生成程序集清单。  
@@ -27,9 +27,9 @@ ms.locfileid: "54601891"
 ## <a name="remarks"></a>备注  
  默认情况下，使用此选项编译时所创建的输出文件具有扩展名 .netmodule。  
   
- .NET Framework 公共语言运行时无法加载不含程序集清单的文件。 但是，此类文件可以通过 [-addmodule](../../../csharp/language-reference/compiler-options/addmodule-compiler-option.md) 合并到程序集的程序集清单中。  
+ .NET Framework 公共语言运行时无法加载不含程序集清单的文件。 但是，此类文件可以通过 [-addmodule](./addmodule-compiler-option.md) 合并到程序集的程序集清单中。  
   
- 如果在一次编译中创建了多个模块，某个模块中的[内部](../../../csharp/language-reference/keywords/internal.md)类型将适用于编译中的其他模块。 如果一个模块中的代码引用另一模块中的 `internal` 类型，则两个模块必须通过 -addmodule 合并到一个程序集清单中。  
+ 如果在一次编译中创建了多个模块，某个模块中的[内部](../keywords/internal.md)类型将适用于编译中的其他模块。 如果一个模块中的代码引用另一模块中的 `internal` 类型，则两个模块必须通过 -addmodule 合并到一个程序集清单中  。  
   
  Visual Studio 开发环境中不支持创建模块。  
   
@@ -44,5 +44,5 @@ csc -target:module in.cs
   
 ## <a name="see-also"></a>请参阅
 
-- [-target（C# 编译器选项）](../../../csharp/language-reference/compiler-options/target-compiler-option.md)
-- [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)
+- [-target（C# 编译器选项）](./target-compiler-option.md)
+- [C# 编译器选项](./index.md)

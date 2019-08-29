@@ -2,20 +2,20 @@
 title: <userNameAuthentication>
 ms.date: 03/30/2017
 ms.assetid: 24d8b398-770f-418f-ba23-c4325419cfa6
-ms.openlocfilehash: 5a4cf8d429198b889f2bb362294ba3841c814b26
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 399158632d5c17a35ded02691ba35a231e6cdc6e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788695"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940533"
 ---
 # <a name="usernameauthentication"></a>\<userNameAuthentication>
 指定基于用户名和密码的服务凭据。  
   
  \<system.ServiceModel>  
-\<behaviors>  
+\<行为 >  
 \<serviceBehaviors>  
-\<behavior>  
+\<行为 >  
 \<serviceCredentials>  
 \<userNameAuthentication>  
   
@@ -44,7 +44,7 @@ ms.locfileid: "61788695"
 |`includeWindowsGroups`|一个布尔值，指定 Windows 组是否包含在安全上下文中。 默认值为 `true`。<br /><br /> 将此属性设置为 `true` 会影响性能，因为这会导致完全组扩展。 如果不需要建立用户所属组的列表，请将此属性设置为 `false`。|  
 |`maxCacheLogonTokens`|一个整数，指定要缓存的最大登录令牌数。 此值应大于零。 默认值为 128。|  
 |`membershipProviderName`|如果将绑定的 `clientCredentialType` 属性设置为 `username`，则用户名将映射到 Windows 帐户。 可以使用此属性重写此行为，此属性是一个包含 <xref:System.Web.Security.MembershipProvider> 值的名称的字符串，该值提供相关的密码验证机制。|  
-|`userNamePasswordValidationMode`|指定对用户名密码进行验证的方式。 有效值为：<br /><br /> -   Windows<br />-   MembershipProvider<br />自定义<br /><br /> 默认值为 Windows。 此属性的类型为 <xref:System.ServiceModel.Security.UserNamePasswordValidationMode>。|  
+|`userNamePasswordValidationMode`|指定对用户名密码进行验证的方式。 有效值包括：<br /><br /> -   Windows<br />-MembershipProvider<br />-Custom<br /><br /> 默认值为 Windows。 此属性的类型为 <xref:System.ServiceModel.Security.UserNamePasswordValidationMode>。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  
@@ -53,7 +53,7 @@ ms.locfileid: "61788695"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<serviceCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)|指定要用于对服务进行身份验证的凭据以及与客户端凭据验证相关的设置。|  
+|[\<serviceCredentials>](servicecredentials.md)|指定要用于对服务进行身份验证的凭据以及与客户端凭据验证相关的设置。|  
   
 ## <a name="remarks"></a>备注  
  如果没有为基于用户名/密码的身份验证配置服务所用的任何绑定，则忽略此元素的一些属性， 其中包括 `customUserNamePasswordValidatorType`、`includeWindowsGroups`、`membershipProviderName` 和 `userNamePasswordValidationMode`。  

@@ -16,38 +16,38 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9a9eb63e681b47f058901b0ff002015baffe6048
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3219554cf953b8de31e236b2f484478172673f7b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775656"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69915006"
 ---
 # <a name="icordebughandlevalue-interface"></a>ICorDebugHandleValue 接口
 
-ICorDebugReferenceValue 表示调试器已为其创建垃圾回收的句柄的引用值的子类。  
+ICorDebugReferenceValue 的子类, 表示调试器已为其创建了垃圾回收句柄的引用值。  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|[Dispose 方法](../../../../docs/framework/unmanaged-api/debugging/icordebughandlevalue-dispose-method.md)|释放此引用的句柄`ICorDebugHandleValue`而无需显式地释放接口指针的对象。|  
-|[GetHandleType 方法](../../../../docs/framework/unmanaged-api/debugging/icordebughandlevalue-gethandletype-method.md)|获取说明的句柄引用的类型的 CorDebugHandleType 值`ICorDebugHandleValue`。|  
+|[Dispose 方法](../../../../docs/framework/unmanaged-api/debugging/icordebughandlevalue-dispose-method.md)|释放此`ICorDebugHandleValue`对象所引用的句柄, 而不显式释放接口指针。|  
+|[GetHandleType 方法](../../../../docs/framework/unmanaged-api/debugging/icordebughandlevalue-gethandletype-method.md)|获取一个 CorDebugHandleType 值, 该值描述此`ICorDebugHandleValue`所引用的句柄的类型。|  
   
 ## <a name="remarks"></a>备注  
- `ICorDebugReferenceValue`对象失效的调试代码执行过程中中断。 `ICorDebugHandleValue`显式释放前将保留在中断和继续符，其引用。  
+ 当执行调试的代码时,对象会失效。`ICorDebugReferenceValue` 通过中断和继续来维护其引用,直到显式释放它。`ICorDebugHandleValue`  
   
 > [!NOTE]
->  此接口不支持跨计算机或跨进程远程调用。  
+> 此接口不支持跨计算机或跨进程远程调用。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头：** Cordebug.idl, Cordebug.idl  
   
- **库：** CorGuids.lib  
+ **类库**CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

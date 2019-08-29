@@ -2,20 +2,20 @@
 title: 循环访问 C# 中的集合
 ms.date: 08/14/2018
 ms.assetid: c93f6dd4-e72a-4a06-be1c-a98b3255b734
-ms.openlocfilehash: 931f0662b71b4dd99ac4a419c279be5058c61e92
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: d47dcf6e7748f85978b1b0bcf739b5d1280263f3
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65635511"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594964"
 ---
 # <a name="iterators-c"></a>迭代器 (C#)
 
-迭代器可用于逐步迭代集合，例如列表和数组。
+迭代器  可用于逐步迭代集合，例如列表和数组。
 
-迭代器方法或 `get` 访问器可对集合执行自定义迭代。 迭代器方法使用 [yield return](../../../csharp/language-reference/keywords/yield.md) 语句返回元素，每次返回一个。 到达 `yield return` 语句时，会记住当前在代码中的位置。 下次调用迭代器函数时，将从该位置重新开始执行。
+迭代器方法或 `get` 访问器可对集合执行自定义迭代。 迭代器方法使用 [yield return](../../language-reference/keywords/yield.md) 语句返回元素，每次返回一个。 到达 `yield return` 语句时，会记住当前在代码中的位置。 下次调用迭代器函数时，将从该位置重新开始执行。
 
-通过 [foreach](../../../csharp/language-reference/keywords/foreach-in.md) 语句或 LINQ 查询从客户端代码中使用迭代器。
+通过 [foreach](../../language-reference/keywords/foreach-in.md) 语句或 LINQ 查询从客户端代码中使用迭代器。
 
 在以下示例中，`foreach` 循环的首次迭代导致 `SomeNumbers` 迭代器方法继续执行，直至到达第一个 `yield return` 语句。 此迭代返回的值为 3，并保留当前在迭代器方法中的位置。 在循环的下次迭代中，迭代器方法的执行将从其暂停的位置继续，直至到达 `yield return` 语句后才会停止。 此迭代返回的值为 5，并再次保留当前在迭代器方法中的位置。 到达迭代器方法的结尾时，循环便已完成。
 
@@ -43,11 +43,11 @@ public static System.Collections.IEnumerable SomeNumbers()
 可以使用 `yield break` 语句来终止迭代。
 
 > [!NOTE]
-> 对于本主题中除简单迭代器示例以外的所有示例，请为 `System.Collections` 和 `System.Collections.Generic` 命名空间加入 [using](../../../csharp/language-reference/keywords/using-directive.md) 指令。
+> 对于本主题中除简单迭代器示例以外的所有示例，请为 `System.Collections` 和 `System.Collections.Generic` 命名空间加入 [using](../../language-reference/keywords/using-directive.md) 指令。
 
 ## <a name="simple-iterator"></a>简单的迭代器
 
-下例包含一个位于 [for](../../../csharp/language-reference/keywords/for.md) 循环内的 `yield return` 语句。 在 `Main` 中，`foreach` 语句体的每次迭代都会创建一个对迭代器函数的调用，并将继续到下一个 `yield return` 语句。
+下例包含一个位于 [for](../../language-reference/keywords/for.md) 循环内的 `yield return` 语句。 在 `Main` 中，`foreach` 语句体的每次迭代都会创建一个对迭代器函数的调用，并将继续到下一个 `yield return` 语句。
 
 ```csharp
 static void Main()
@@ -336,7 +336,7 @@ public class Stack<T> : IEnumerable<T>
 
 若要查看编译器执行的操作，可使用 Ildasm.exe 工具查看为迭代器方法生成的 Microsoft 中间语言代码。
 
-为[类](../../../csharp/language-reference/keywords/class.md)或[结构](../../../csharp/language-reference/keywords/struct.md)创建迭代器时，不必实现整个 <xref:System.Collections.IEnumerator> 接口。 编译器检测到迭代器时，会自动生成 <xref:System.Collections.IEnumerator> 或 <xref:System.Collections.Generic.IEnumerator%601> 接口的 `Current`、`MoveNext` 和 `Dispose` 方法。
+为[类](../../language-reference/keywords/class.md)或[结构](../../language-reference/keywords/struct.md)创建迭代器时，不必实现整个 <xref:System.Collections.IEnumerator> 接口。 编译器检测到迭代器时，会自动生成 <xref:System.Collections.IEnumerator> 或 <xref:System.Collections.Generic.IEnumerator%601> 接口的 `Current`、`MoveNext` 和 `Dispose` 方法。
 
 在 `foreach` 循环（或对 `IEnumerator.MoveNext` 的直接调用）的每次后续迭代中，下一个迭代器代码体都会在上一个 `yield return` 语句之后恢复。 然后继续下一个 `yield return` 语句，直至到达迭代器体的结尾，或直至遇到 `yield break` 语句。
 
@@ -358,7 +358,7 @@ public class Stack<T> : IEnumerable<T>
 
 - <xref:System.Collections.Generic>
 - <xref:System.Collections.Generic.IEnumerable%601>
-- [foreach, in](../../../csharp/language-reference/keywords/foreach-in.md)
-- [yield](../../../csharp/language-reference/keywords/yield.md)
-- [对数组使用 foreach](../../../csharp/programming-guide/arrays/using-foreach-with-arrays.md)
-- [泛型](../../../csharp/programming-guide/generics/index.md)
+- [foreach, in](../../language-reference/keywords/foreach-in.md)
+- [yield](../../language-reference/keywords/yield.md)
+- [对数组使用 foreach](../arrays/using-foreach-with-arrays.md)
+- [泛型](../generics/index.md)

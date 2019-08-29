@@ -2,12 +2,12 @@
 title: 如何：联接不同文件的内容 (LINQ) (C#)
 ms.date: 06/27/2018
 ms.assetid: aa2d12a6-70a9-492f-a6db-b2b850d46811
-ms.openlocfilehash: dd7287abce7fca803dd87d23f1f58151cf4ec2f5
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 14f9c9917aedbc0beeeddae789b835613d1badc8
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65585733"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69593157"
 ---
 # <a name="how-to-join-content-from-dissimilar-files-linq-c"></a>如何：联接不同文件的内容 (LINQ) (C#)
 
@@ -15,7 +15,7 @@ ms.locfileid: "65585733"
   
 ## <a name="to-create-the-data-files"></a>创建数据文件
   
-1. 将以下行复制到名为 scores.csv 的文件，并将文件保存到项目文件夹。 此文件表示电子表格数据。 第 1 列是学生的 ID，第 2 至 5 列是测验分数。  
+1. 将以下行复制到名为 scores.csv 的文件，并将文件保存到项目文件夹  。 此文件表示电子表格数据。 第 1 列是学生的 ID，第 2 至 5 列是测验分数。  
   
     ```  
     111, 97, 92, 81, 60  
@@ -32,7 +32,7 @@ ms.locfileid: "65585733"
     122, 94, 92, 91, 91  
     ```  
   
-2. 将以下行复制到名为 names.csv 的文件，并将文件保存到项目文件夹。 此文件表示电子表格，其中包含学生的姓氏、名字和学生 ID。  
+2. 将以下行复制到名为 names.csv 的文件，并将文件保存到项目文件夹  。 此文件表示电子表格，其中包含学生的姓氏、名字和学生 ID。  
   
     ```  
     Omelchenko,Svetlana,111  
@@ -126,5 +126,5 @@ Tucker, 94, 92, 91, 91
 
 ## <a name="see-also"></a>请参阅
 
-- [LINQ 和字符串 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
-- [LINQ 和文件目录 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ 和字符串 (C#)](./linq-and-strings.md)
+- [LINQ 和文件目录 (C#)](./linq-and-file-directories.md)

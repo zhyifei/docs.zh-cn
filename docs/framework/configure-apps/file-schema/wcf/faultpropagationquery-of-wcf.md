@@ -1,22 +1,22 @@
 ---
-title: <faultPropagationQuery> WCF 的
+title: <faultPropagationQuery>WCF 的
 ms.date: 03/30/2017
 ms.assetid: fabafbc8-3e45-4feb-8321-0725e9f4079c
-ms.openlocfilehash: e5793852d49a052d05f6cb2f4efbe166d67afc62
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6ba6478ca500c0a8ef150966a97898f8743ffdf8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701042"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69925622"
 ---
-# <a name="faultpropagationquery-of-wcf"></a>\<faultPropagationQuery > 的 WCF
+# <a name="faultpropagationquery-of-wcf"></a>\<WCF 的 y >
 
 表示一个用于跟踪在活动中发生的错误的处理的查询。  每次 FaultHandler 处理错误时，都会发生此事件。 应使用此类查询来跟踪对在活动中出现的错误进行的处理。 跟踪参与者需要用此查询来订阅错误传播记录。
 
-有关跟踪配置文件查询的详细信息，请参阅[跟踪配置文件](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)。
+有关跟踪配置文件查询的详细信息, 请参阅[跟踪配置文件](../../../windows-workflow-foundation/tracking-profiles.md)。
 
 \<system.serviceModel>\
-\<tracking>\
+\<跟踪 > \
 \<配置文件 > \
 \<trackingProfile>\
 \<工作流 > \
@@ -48,7 +48,7 @@ ms.locfileid: "61701042"
 
 |特性|描述|
 |---------------|-----------------|
-|`faultSourceActivityName`|一个字符串，指定传播错误的错误处理程序活动的名称。 默认值是\*，这指示为所有活动返回错误传播记录。|
+|`faultSourceActivityName`|一个字符串, 指定传播错误的错误处理程序活动的名称。 默认值为\*, 指示为所有活动返回错误传播记录。|
 |`faultHandlerActivityName`|一个字符串，指定导致错误的活动的名称。|
 
 ### <a name="child-elements"></a>子元素
@@ -65,5 +65,5 @@ ms.locfileid: "61701042"
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.FaultPropagationQueryElement?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.FaultPropagationQuery?displayProperty=nameWithType>
-- [工作流跟踪](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [跟踪配置文件](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+- [工作流跟踪](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [跟踪配置文件](../../../windows-workflow-foundation/tracking-profiles.md)

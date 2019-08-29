@@ -1,5 +1,5 @@
 ---
-title: 如何：在字符串 （Windows 窗体） 中放置引号
+title: 如何：用引号将引号引起来 (Windows 窗体)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,23 +10,23 @@ helpviewer_keywords:
 - TextBox control [Windows Forms], displaying quotation marks
 - quotation marks [Windows Forms], adding to strings in text boxes
 ms.assetid: 68bdc3f3-4177-4eab-99cd-cac17a82b515
-ms.openlocfilehash: 0148f9fde9d69bb1605776f1ab617079be96b59e
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 20828f75eeae9df33fcc22d8558b26a8a1ab2bdc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053457"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910424"
 ---
-# <a name="how-to-put-quotation-marks-in-a-string-windows-forms"></a>如何：在字符串 （Windows 窗体） 中放置引号
-有时可能需要将引号（“”）放入文本字符串中。 例如：  
+# <a name="how-to-put-quotation-marks-in-a-string-windows-forms"></a>如何：用引号将引号引起来 (Windows 窗体)
+有时可能需要将引号（“”）放入文本字符串中。 例如:  
   
  她说：“该好好款待你了！”  
   
- 或者，还可以使用<xref:Microsoft.VisualBasic.ControlChars.Quote>字段作为常数。  
+ 作为替代方法, 还可以将<xref:Microsoft.VisualBasic.ControlChars.Quote>字段用作常量。  
   
 ### <a name="to-place-quotation-marks-in-a-string-in-your-code"></a>在代码中的字符串内放置引号  
   
-1. 在 Visual Basic 中，将作为嵌入引号插入行中的两个引号。 视觉对象中C#和 Visual C++，插入转义序列\\"作为嵌入的引号。 例如，若要创建前面提到的字符串，请使用下面的代码。  
+1. 在 Visual Basic 中, 在行中插入两个用引号引起来的引号。 在 visual C#和视觉C++对象中, 插入转义\\序列 "作为嵌入的引号。 例如，若要创建前面提到的字符串，请使用下面的代码。  
   
     ```vb  
     Private Sub InsertQuote()  
@@ -50,7 +50,7 @@ ms.locfileid: "66053457"
   
      或  
   
-2. 插入 ASCII 字符或 Unicode 字符表示引号。 在 Visual Basic 中，使用 ASCII 字符 (34)。 视觉对象中C#，使用 Unicode 字符 (\u0022)。  
+2. 插入 ASCII 字符或 Unicode 字符表示引号。 在 Visual Basic 中, 使用 ASCII 字符 (34)。 在视觉C#对象中, 使用 Unicode 字符 (\u0022)。  
   
     ```vb  
     Private Sub InsertAscii()  
@@ -65,7 +65,7 @@ ms.locfileid: "66053457"
     ```  
   
     > [!NOTE]
-    >  在本示例中，不能使用 \u0022，因为不能使用指定基本字符集中字符的通用字符名。 否则，将产生 C3851。 有关详细信息，请参阅[编译器错误 C3851](/cpp/error-messages/compiler-errors-2/compiler-error-c3851)。  
+    > 在本示例中，不能使用 \u0022，因为不能使用指定基本字符集中字符的通用字符名。 否则，将产生 C3851。 有关详细信息，请参阅[编译器错误 C3851](/cpp/error-messages/compiler-errors-2/compiler-error-c3851)。  
   
      或  
   
@@ -94,8 +94,8 @@ ms.locfileid: "66053457"
 - <xref:Microsoft.VisualBasic.ControlChars.Quote>
 - [TextBox 控件概述](textbox-control-overview-windows-forms.md)
 - [如何：控制 Windows 窗体 TextBox 控件中的插入点](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
-- [如何：使用 Windows 窗体 TextBox 控件创建密码文本框](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
+- [如何：使用 "Windows 窗体 TextBox" 控件创建密码文本框](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
 - [如何：创建只读文本框](how-to-create-a-read-only-text-box-windows-forms.md)
 - [如何：在 Windows 窗体 TextBox 控件中选择文本](how-to-select-text-in-the-windows-forms-textbox-control.md)
-- [如何：查看 Windows 窗体 TextBox 控件中的多个行](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
+- [如何：在 "Windows 窗体 TextBox" 控件中查看多行](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
 - [TextBox 控件](textbox-control-windows-forms.md)

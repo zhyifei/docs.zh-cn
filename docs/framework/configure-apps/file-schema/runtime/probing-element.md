@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 09c80fc9-1ba5-4192-89f7-3a79b2e4b024
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9402c9f28c123affb7b90fc189484bb1fd43db46
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2b00a5349e22feb3cce404ff504edd798ff9e304
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704604"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663521"
 ---
 # <a name="probing-element"></a>\<探测 > 元素
-指定公共语言运行时在加载程序集时要搜索的应用程序基子目录。  
+指定加载程序集时要搜索的公共语言运行时的应用程序基子目录。  
   
  \<configuration>  
 \<运行时 >  
@@ -39,7 +39,7 @@ ms.locfileid: "61704604"
   
 |特性|描述|  
 |---------------|-----------------|  
-|`privatePath`|必需的特性。<br /><br /> 指定可能包含程序集的应用程序的基目录的子目录。 分隔每个子目录以分号结尾。|  
+|`privatePath`|必需的特性。<br /><br /> 指定可能包含程序集的应用程序基目录的子目录。 用分号分隔每个子目录。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  
@@ -67,7 +67,7 @@ ms.locfileid: "61704604"
   
 ## <a name="see-also"></a>请参阅
 
-- [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [指定程序集的位置](../../../../../docs/framework/configure-apps/specify-assembly-location.md)
-- [运行时如何定位程序集](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [运行时设置架构](index.md)
+- [配置文件架构](../index.md)
+- [指定程序集的位置](../../specify-assembly-location.md)
+- [运行时如何定位程序集](../../../deployment/how-the-runtime-locates-assemblies.md)

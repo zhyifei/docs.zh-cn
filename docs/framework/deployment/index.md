@@ -11,16 +11,16 @@ helpviewer_keywords:
 ms.assetid: 238d8284-6042-4a38-a7f6-1ee8efd719da
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b7380556e13e17e26ffb2f8c5fbbc7136a1fb5e9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e7da023c5ab9247cde0ccd1126d4d639c6f355e7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61771850"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910974"
 ---
 # <a name="deploying-the-net-framework-and-applications"></a>部署 .NET Framework 和应用程序
 
-本文有助于你开始部署应用程序的 .NET Framework。 大部分信息都是供开发人员、OEM 和企业管理人员使用的。 想在其自己的计算机上安装 .NET Framework 的用户应阅读[安装 .NET Framework](~/docs/framework/install/index.md)。
+本文有助于你开始部署应用程序的 .NET Framework。 大部分信息都是供开发人员、OEM 和企业管理人员使用的。 想在其自己的计算机上安装 .NET Framework 的用户应阅读[安装 .NET Framework](../install/index.md)。
 
 ## <a name="key-deployment-resources"></a>关键部署资源
 
@@ -32,9 +32,9 @@ ms.locfileid: "61771850"
 
   - 安装程序选项：
 
-    - [Web 安装程序](~/docs/framework/install/guide-for-developers.md#to-install-or-download-the-net-framework-redistributable)
+    - [Web 安装程序](../install/guide-for-developers.md#to-install-or-download-the-net-framework-redistributable)
 
-    - [脱机安装程序](~/docs/framework/install/guide-for-developers.md#to-install-or-download-the-net-framework-redistributable)
+    - [脱机安装程序](../install/guide-for-developers.md#to-install-or-download-the-net-framework-redistributable)
 
   - 安装模式：
 
@@ -44,7 +44,7 @@ ms.locfileid: "61771850"
 
   - [在 .NET Framework 4.5 安装期间减少系统重新启动次数](../../../docs/framework/deployment/reducing-system-restarts.md)
 
-  - [安装和卸载 .NET Framework 受阻疑难解答](~/docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)
+  - [安装和卸载 .NET Framework 受阻疑难解答](../install/troubleshoot-blocked-installations-and-uninstallations.md)
 
 - 部署客户端应用程序中的 .NET Framework（适用于开发人员）：
 

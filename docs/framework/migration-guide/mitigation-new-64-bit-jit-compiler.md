@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 0332dabc-72c5-4bdc-8975-20d717802b17
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 22c98e41624abc931bd03e4ddea09ed55d0d3f39
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6df750872e90572b00cdf427461b4a9782c47d63
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648488"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968526"
 ---
 # <a name="mitigation-new-64-bit-jit-compiler"></a>缓解：新的 64 位 JIT 编译器
 自 .NET Framework 4.6 起，运行时包括新版 64 位 JIT 编译器，用于执行实时编译。 此更改不会影响 32 位 JIT 编译器的编译。  
@@ -22,7 +22,7 @@ ms.locfileid: "64648488"
  在某些情况下，使用新版 64 位 JIT 编译器进行编译会导致运行时异常抛出，或导致执行旧版 64 位 JIT 编译器编译的代码时无法观察到的行为发生。 已知差异如下：  
   
 > [!IMPORTANT]
->  所有这些已知问题已在随 .NET Framework 4.6.2 一起发布的新版 64 位编译器中得到了解决。 大多数问题也已在 Windows 更新随附的 .NET Framework 4.6 和 4.6.1 的服务版本中得到解决。 若要消除这些问题，请确保 Windows 是最新版本，或升级到 .NET Framework 4.6.2。  
+> 所有这些已知问题已在随 .NET Framework 4.6.2 一起发布的新版 64 位编译器中得到了解决。 大多数问题也已在 Windows 更新随附的 .NET Framework 4.6 和 4.6.1 的服务版本中得到解决。 若要消除这些问题，请确保 Windows 是最新版本，或升级到 .NET Framework 4.6.2。  
   
 - 在某些情况下，在启用优化的发布版本中，取消装箱操作可能会引发 <xref:System.NullReferenceException>。  
   

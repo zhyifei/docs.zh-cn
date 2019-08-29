@@ -3,12 +3,12 @@ title: 使用集合 - C# 教程简介
 description: 在本教程中通过探索列表集合了解 C#。
 ms.date: 10/13/2017
 ms.custom: mvc
-ms.openlocfilehash: 064b01a30410b147e89b0f87180d5af9269a3a87
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 160e34ddb529a8515a08d6aab838ba107936c616
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634512"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69587254"
 ---
 # <a name="learn-to-manage-data-collections-using-the-generic-list-type"></a>了解如何使用泛型列表类型管理数据集合
 
@@ -18,9 +18,9 @@ ms.locfileid: "65634512"
 
 ## <a name="a-basic-list-example"></a>基本列表示例
 
-创建名为 list-tutorial 的目录。 将新建的目录设为当前目录，并运行 `dotnet new console`。
+创建名为 list-tutorial  的目录。 将新建的目录设为当前目录，并运行 `dotnet new console`。
 
-在常用编辑器中，打开 Program.cs，并将现有代码替换为以下代码：
+在常用编辑器中，打开 Program.cs  ，并将现有代码替换为以下代码：
 
 ```csharp
 using System;
@@ -42,7 +42,7 @@ namespace list_tutorial
 }
 ```
 
-将 `<name>` 替换为自己的名称。 保存 Program.cs。 在控制台窗口中键入 `dotnet run`，试运行看看。
+将 `<name>` 替换为自己的名称。 保存 Program.cs  。 在控制台窗口中键入 `dotnet run`，试运行看看。
 
 刚刚创建了一个字符串列表，并向其中添加了三个名称，再输出了全部大写的名称。 循环读取整个列表需要用到在前面的教程中学到的概念。
 
@@ -69,7 +69,7 @@ foreach (var name in names)
 
 又向列表的末尾添加了两个名称。 同时，也删除了一个名称。 保存此文件，并键入 `dotnet run`，试运行看看。
 
-借助 <xref:System.Collections.Generic.List%601>，还可以按索引引用各项。 索引位于列表名称后面的 `[` 和 `]` 令牌之间。 C# 对第一个索引使用 0。 将以下代码添加到刚才添加的代码的正下方，并试运行看看：
+借助 <xref:System.Collections.Generic.List%601>，还可以按索引  引用各项。 索引位于列表名称后面的 `[` 和 `]` 令牌之间。 C# 对第一个索引使用 0。 将以下代码添加到刚才添加的代码的正下方，并试运行看看：
 
 ```csharp
 Console.WriteLine($"My name is {names[0]}");
@@ -93,7 +93,8 @@ var index = names.IndexOf("Felipe");
 if (index == -1)
 {
     Console.WriteLine($"When an item is not found, IndexOf returns {index}");
-} else
+}
+else
 {
     Console.WriteLine($"The name {names[index]} is at index {index}");
 }
@@ -102,7 +103,8 @@ index = names.IndexOf("Not Found");
 if (index == -1)
 {
     Console.WriteLine($"When an item is not found, IndexOf returns {index}");
-} else
+}
+else
 {
     Console.WriteLine($"The name {names[index]} is at index {index}");
 
@@ -184,7 +186,7 @@ namespace list_tutorial
 var fibonacciNumbers = new List<int> {1, 1};
 ```
 
-这会创建一个整数列表，并将头两个整数设置为值 1。 这些是斐波那契数列（一系列数字）的头两个值。 斐波那契数列中的每个数字都是前两个数字之和。 添加以下代码：
+这会创建一个整数列表，并将头两个整数设置为值 1。 这些是斐波那契数列  （一系列数字）的头两个值。 斐波那契数列中的每个数字都是前两个数字之和。 添加以下代码：
 
 ```csharp
 var previous = fibonacciNumbers[fibonacciNumbers.Count - 1];
@@ -192,7 +194,7 @@ var previous2 = fibonacciNumbers[fibonacciNumbers.Count - 2];
 
 fibonacciNumbers.Add(previous + previous2);
 
-foreach(var item in fibonacciNumbers)
+foreach (var item in fibonacciNumbers)
     Console.WriteLine(item);
 ```
 
@@ -207,7 +209,7 @@ foreach(var item in fibonacciNumbers)
 
 ## <a name="complete-challenge"></a>完成挑战
 
-可以[查看 GitHub 上的完成示例代码](https://github.com/dotnet/samples/tree/master/csharp/list-quickstart/Program.cs#L13-L23)，了解示例解决方案
+可以[查看 GitHub 上的完成示例代码](https://github.com/dotnet/samples/tree/master/csharp/list-quickstart/Program.cs#L13-L23)，了解示例解决方案。
 
 在循环的每次迭代中，取此列表中的最后两个整数进行求和，并将计算出的总和值添加到列表中。 循环会一直重复运行到列表中有 20 个项为止。
 

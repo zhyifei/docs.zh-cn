@@ -4,15 +4,15 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - exceptions [C#], non-CLS
 ms.assetid: db4630b3-5240-471a-b3a7-c7ff6ab31e8d
-ms.openlocfilehash: 27b36d85b2ece957c8ef3fce70a6fd794bb3d4e2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d0ba212610372a89c2a3b4c6a249c6d8a02fa507
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64595671"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590288"
 ---
 # <a name="how-to-catch-a-non-cls-exception"></a>如何：捕捉非 CLS 异常
-包括 C++/CLI 在内的某些 .NET 语言允许对象引发并非派生自 <xref:System.Exception> 的异常。 这类异常被称为非 CLS 异常或非异常。 无法在 C# 中引发非 CLS 异常，但有两种方式可以捕获它们：  
+包括 C++/CLI 在内的某些 .NET 语言允许对象引发并非派生自 <xref:System.Exception> 的异常。 这类异常被称为非 CLS 异常或非异常。   无法在 C# 中引发非 CLS 异常，但有两种方式可以捕获它们：  
   
 - 在 `catch (RuntimeWrappedException e)` 块内捕获。
   
@@ -52,4 +52,4 @@ catch (RuntimeWrappedException e)
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Runtime.CompilerServices.RuntimeWrappedException>
-- [异常和异常处理](../../../csharp/programming-guide/exceptions/index.md)
+- [异常和异常处理](./index.md)

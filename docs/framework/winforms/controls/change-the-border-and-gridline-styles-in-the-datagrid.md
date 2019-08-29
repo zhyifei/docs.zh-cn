@@ -11,36 +11,36 @@ helpviewer_keywords:
 - data grids [Windows Forms], changing border styles
 - DataGridView control [Windows Forms], gridline styles
 ms.assetid: 2f413c7a-4025-4171-8e3a-66ef908ea583
-ms.openlocfilehash: 7e68bb2f6a3bff0a0a5ff7f8011c2642c141eaf3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ebeca5f933eac4da2bf3d4f300866fd2ff52b32a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593446"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917675"
 ---
 # <a name="how-to-change-the-border-and-gridline-styles-in-the-windows-forms-datagridview-control"></a>如何：更改 Windows 窗体 DataGridView 控件中的边框和网格线的样式
-使用<xref:System.Windows.Forms.DataGridView>控件，您可以自定义控件的边框和网格，以改善用户体验的外观。 您可以修改网格线颜色和除了在控件内的单元格的边框样式的控件边框样式。 您还可以应用不同的单元格普通单元格、 行标题单元格和列标题单元格的边框样式。  
+<xref:System.Windows.Forms.DataGridView>在控件中, 您可以自定义控件的边框和网格线的外观, 以改善用户体验。 除了控件中单元格的边框样式外, 还可以修改网格线颜色和控件边框样式。 对于普通单元格、行标题单元格和列标题单元, 还可以应用不同的单元格边框样式。  
   
 > [!NOTE]
->  网格线颜色仅用于<xref:System.Windows.Forms.DataGridViewCellBorderStyle.Single>， <xref:System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal>，并<xref:System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical>的值<xref:System.Windows.Forms.DataGridViewCellBorderStyle>枚举并<xref:System.Windows.Forms.DataGridViewHeaderBorderStyle.Single>的值<xref:System.Windows.Forms.DataGridViewHeaderBorderStyle>枚举。 这些枚举的其他值使用由操作系统指定的颜色。 此外，当启用了可视样式在 Windows XP 和通过 Windows Server 2003 家族<xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType>方法，<xref:System.Windows.Forms.DataGridView.GridColor%2A>不使用属性值。  
+> 网格线颜色<xref:System.Windows.Forms.DataGridViewCellBorderStyle.Single>仅与<xref:System.Windows.Forms.DataGridViewCellBorderStyle>枚举的、 <xref:System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal>和<xref:System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical>值以及<xref:System.Windows.Forms.DataGridViewHeaderBorderStyle.Single> <xref:System.Windows.Forms.DataGridViewHeaderBorderStyle>枚举的值一起使用。 这些枚举的其他值使用操作系统指定的颜色。 此外, 当通过<xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType>方法在 windows XP 和 windows Server 2003 家族上启用视觉样式时<xref:System.Windows.Forms.DataGridView.GridColor%2A> , 不使用属性值。  
   
-### <a name="to-change-the-gridline-color-programmatically"></a>若要以编程方式更改网格线颜色  
+### <a name="to-change-the-gridline-color-programmatically"></a>以编程方式更改网格线颜色  
   
 - 设置 <xref:System.Windows.Forms.DataGridView.GridColor%2A> 属性。  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#031](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#031)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#031](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#031)]  
   
-### <a name="to-change-the-border-style-of-the-entire-datagridview-control-programmatically"></a>若要以编程方式更改整个 DataGridView 控件的边框样式  
+### <a name="to-change-the-border-style-of-the-entire-datagridview-control-programmatically"></a>以编程方式更改整个 DataGridView 控件的边框样式  
   
 - 将 <xref:System.Windows.Forms.DataGridView.BorderStyle%2A> 属性设置为 <xref:System.Windows.Forms.BorderStyle> 枚举值之一。  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#032](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#032)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#032](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#032)]  
   
-### <a name="to-change-the-border-styles-for-datagridview-cells-programmatically"></a>若要以编程方式更改 DataGridView 单元格的边框样式  
+### <a name="to-change-the-border-styles-for-datagridview-cells-programmatically"></a>以编程方式更改 DataGridView 单元格的边框样式  
   
-- 设置<xref:System.Windows.Forms.DataGridView.CellBorderStyle%2A>， <xref:System.Windows.Forms.DataGridView.RowHeadersBorderStyle%2A>，和<xref:System.Windows.Forms.DataGridView.ColumnHeadersBorderStyle%2A>属性。  
+- <xref:System.Windows.Forms.DataGridView.CellBorderStyle%2A>设置、 <xref:System.Windows.Forms.DataGridView.RowHeadersBorderStyle%2A>和属性。<xref:System.Windows.Forms.DataGridView.ColumnHeadersBorderStyle%2A>  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#033](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#033)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#033](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#033)]  

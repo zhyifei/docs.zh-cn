@@ -4,31 +4,31 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Reliable session
 ms.assetid: 86e914f2-060b-432b-bd17-333695317745
-ms.openlocfilehash: 3b80fc18fdabe0817c49f3e692ba678435d6761b
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: cc5afdeeeea2601eb22be316302aeacee570e5f7
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65876025"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70045380"
 ---
 # <a name="ws-reliable-session"></a>WS 可靠会话
 此示例演示可靠会话的用法。 可靠会话为可靠消息传递和会话提供支持。 可靠消息传递在失败时会重新尝试通信，并允许指定传递保证（如消息按顺序抵达）。 会话在调用之间将保持客户端的状态。 此示例实现了用来保持客户端状态的会话，并指定了按顺序传递保证。  
   
 > [!IMPORTANT]
->  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
+> 您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+> 如果此目录不存在, 请参阅[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)以下载所有 Windows Communication Foundation (wcf) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\WS\wsReliableSession`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\WS\wsReliableSession`  
   
- 此示例基于[Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)实现计算器服务。 可靠会话功能是在客户端和服务的应用程序配置文件中启用和配置的。  
+ 此示例基于实现计算器服务的[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)。 可靠会话功能是在客户端和服务的应用程序配置文件中启用和配置的。  
   
  在此示例中，服务由 Internet 信息服务 (IIS) 承载，客户端是一个控制台应用程序 (.exe)。  
   
 > [!NOTE]
->  本主题的最后介绍了此示例的设置过程和生成说明。  
+> 本主题的最后介绍了此示例的设置过程和生成说明。  
   
  此示例使用 `wsHttpBinding`。 绑定是在客户端和服务的配置文件中指定的。 绑定类型是在终结点元素的 `binding` 属性中指定的，如下面的示例配置中所示。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "65876025"
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- 终结点包含一个 `bindingConfiguration` 属性，该属性引用一个名为“Binding1”的绑定配置。 绑定配置的设置来启用可靠会话`enabled`的属性[ \<reliableSession >](../../../../docs/framework/configure-apps/file-schema/wcf/reliablesession.md)到`true`。 有序会话的传递保证是通过将有序属性设置为 `true` 或 `false` 来控制的。 默认值为 `true`。  
+ 终结点包含一个 `bindingConfiguration` 属性，该属性引用一个名为“Binding1”的绑定配置。 绑定配置通过将`enabled` [ \<reliableSession >](../../../../docs/framework/configure-apps/file-schema/wcf/reliablesession.md)的属性设置为来`true`启用可靠会话。 有序会话的传递保证是通过将有序属性设置为 `true` 或 `false` 来控制的。 默认值为 `true`。  
   
 ```xml  
 <bindings>  
@@ -73,14 +73,14 @@ Press <ENTER> to terminate client.
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
-1. 安装 ASP.NET 4.0 使用以下命令。  
+1. 使用以下命令安装 ASP.NET 4.0。  
   
     ```  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2. 请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+2. 确保已对[Windows Communication Foundation 示例执行了一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
 3. 若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
   
-4. 若要在单或跨计算机配置中运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
+4. 若要以单机配置或跨计算机配置来运行示例, 请按照[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的说明进行操作。  

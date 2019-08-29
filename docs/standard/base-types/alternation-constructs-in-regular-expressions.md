@@ -1,5 +1,5 @@
 ---
-title: .NET 正则表达式中的备用构造
+title: .NET 正则表达式中的替换构造
 description: 了解如何使用备用构造在正则表达式中进行条件匹配。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
@@ -18,15 +18,15 @@ ms.assetid: 071e22e9-fbb0-4ecf-add1-8d2424f9f2d1
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 61f1b93d2f54923f0dfc4832a79fe35dc319d0f6
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 560597770d667cf8c7668bf2338ac4bac3eb192f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331750"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968571"
 ---
-# <a name="alternation-constructs-in-regular-expressions"></a>正则表达式中的备用构造
-<a name="top"></a> 替换构造可修改正则表达式以启用 either/or 或条件匹配。 .NET 支持三种备用构造：  
+# <a name="alternation-constructs-in-regular-expressions"></a>正则表达式中的替换构造
+<a name="top"></a> 替换构造可修改正则表达式以启用 either/or 或条件匹配。 .NET 支持三种替换构造：  
   
 - [利用 &#124; 的模式匹配](#Either_Or)  
   
@@ -80,7 +80,7 @@ ms.locfileid: "68331750"
  其中 `(?=`expression  `)` 是宽度为零的断言构造。 （有关详细信息，请参阅[分组构造](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。）由于正则表达式引擎将 expression  解释为定位点（零宽断言），因此 expression  必须是零宽断言（有关详细信息，请参阅[定位标记](../../../docs/standard/base-types/anchors-in-regular-expressions.md)），或者是也包含在 yes  中的子表达式。 否则，无法匹配 *yes* 模式。  
   
 > [!NOTE]
->  如果 *expression*是命名捕获组或带编号的捕获组，则替换构造将被解释为捕获测试；有关详细信息，请参阅下一节 [基于有效捕获组的条件匹配](#Conditional_Group)。 换而言之，正则表达式引擎不会尝试匹配捕获的子字符串，而是测试该组是否存在。  
+> 如果 *expression*是命名捕获组或带编号的捕获组，则替换构造将被解释为捕获测试；有关详细信息，请参阅下一节 [基于有效捕获组的条件匹配](#Conditional_Group)。 换而言之，正则表达式引擎不会尝试匹配捕获的子字符串，而是测试该组是否存在。  
   
  下面的示例是[利用 &#124; 的 Either/Or 模式匹配](#Either_Or)一节中的示例变体。 它使用条件匹配来确定单词边界之后的前三个字符是否是后接一个连字符的两个数字。 如果是，则将尝试匹配美国雇主标识号 (EIN)。 如果不是，则将尝试匹配美国社会保障号 (SSN)。  
   
@@ -103,7 +103,7 @@ ms.locfileid: "68331750"
 ## <a name="conditional-matching-based-on-a-valid-captured-group"></a>基于有效的捕获组的条件匹配  
  此语言元素尝试根据是否已经匹配指定的捕获组来匹配两种模式之一。 语法为：  
   
- `(?(` *name* `)` *是* `|` *no* `)`  
+ `(?(` *name* `)` *yes* `|` *no* `)`  
   
  or  
   

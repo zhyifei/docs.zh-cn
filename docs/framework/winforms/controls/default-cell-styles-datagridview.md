@@ -7,12 +7,12 @@ helpviewer_keywords:
 - data formats
 - data [Windows Forms], setting formats
 ms.assetid: fc6da49f-8942-41da-b49f-b2afc38cc656
-ms.openlocfilehash: 53faf31c8dd3be1606c491e95594c4aae5aedf98
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 6d7d867b7c9e83b68589e046565bfb0199692f5f
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039675"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69658504"
 ---
 # <a name="how-to-set-default-cell-styles-and-data-formats-for-the-windows-forms-datagridview-control-using-the-designer"></a>如何：使用设计器设置 Windows 窗体 DataGridView 控件的默认单元格样式和数据格式
 
@@ -23,7 +23,6 @@ ms.locfileid: "69039675"
 你还可以使用<xref:System.Windows.Forms.DataGridView.RowTemplate%2A>属性设置样式, 以影响将添加到控件中的所有行。 有关行模板的详细信息, 请参阅[如何:使用行模板自定义 Windows 窗体 DataGridView 控件](use-the-row-template-to-customize-rows-in-the-datagrid.md)中的行。
 
 下面的过程需要一个**Windows 应用程序**项目, 该项目具有<xref:System.Windows.Forms.DataGridView>包含控件的窗体。 有关设置此类项目的信息, 请参阅[如何:创建 Windows 窗体应用程序项目](/visualstudio/ide/step-1-create-a-windows-forms-application-project)以及[如何:将控件添加到](how-to-add-controls-to-windows-forms.md)Windows 窗体。
-
 
 ### <a name="to-set-default-styles-for-all-cells-in-the-control"></a>设置控件中所有单元格的默认样式
 

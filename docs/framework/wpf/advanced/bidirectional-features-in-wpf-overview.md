@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Span elements [WPF]
 - bidirectional features [WPF]
 ms.assetid: fd850e25-7dba-408c-b521-8873e51dc968
-ms.openlocfilehash: d2b35a50d9d09bffd69ae8b8217d6e778ce66ea0
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: b009c2503c7cbf6aca847fc7318135842a060f69
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796399"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965044"
 ---
 # <a name="bidirectional-features-in-wpf-overview"></a>WPF 中的双向功能概述
 与任何其他开发平台不同[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] , 具有支持快速开发双向内容的许多功能, 例如, 在同一文档中从左到右和从右到左数据。 同时, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]为需要双向功能 (如阿拉伯语和希伯来语用户) 的用户创建了极佳的体验。  
@@ -154,9 +154,9 @@ ms.locfileid: "68796399"
   
 <a name="NumberSubstitution"></a>   
 ## <a name="number-substitution"></a>数字替换  
- 过去, [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]通过允许不同区域性形状的表示形式为同一位数, 同时使这些数字的内部存储在不同的区域设置中统一, 实现了支持的数字替换, 例如, 数字存储在它们已知的十六进制值0x40、0x41 向, 但会根据所选的语言显示。  
+ 从历史上看, Windows 提供了支持的数字替换, 允许不同的区域性形状以相同的位数表示, 同时保持这些数字在不同区域设置中统一的内部存储, 例如, 数字存储在众所周知的十六进制值, 0x40, 0x41 向, 但会根据所选的语言显示。  
   
- 这样, 应用程序就可以处理数值, 而无需将其从一种语言转换为另一种语言, 例如, [!INCLUDE[TLA#tla_xl](../../../../includes/tlasharptla-xl-md.md)]用户可以在本地化的[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]阿拉伯语中打开电子表格, 并查看阿拉伯语中的数字, 但在中将其打开的[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]欧洲版本, 并查看相同数字的欧洲表示形式。 这对其他符号（如逗号分隔符和百分比符号）来说也是必需的，因为在同一文档中它们通常随数字一起出现。  
+ 这使应用程序可以处理数值, 而无需将其从一种语言转换为另一种语言, 例如, 用户[!INCLUDE[TLA#tla_xl](../../../../includes/tlasharptla-xl-md.md)]可以在本地化的阿拉伯语窗口中打开电子表格, 并查看阿拉伯语中的数字, 但在欧洲版本的 Windows, 并查看相同数字的欧洲表示形式。 这对其他符号（如逗号分隔符和百分比符号）来说也是必需的，因为在同一文档中它们通常随数字一起出现。  
   
  [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 沿承了这一传统，并为此功能提供了进一步支持，以允许更多的用户对使用替换的时间和方式进行控制。 虽然此功能适用于任何语言，但它对双向内容尤其有用；由于应用程序可能会在各种区域性下运行，因此针对特定语言来设置数字形状通常是应用程序开发人员所面临的难题。  
   
@@ -190,7 +190,7 @@ ms.locfileid: "68796399"
   
 - <xref:System.Windows.Media.NumberSubstitutionMethod.Traditional>：使用数字区域性的传统数字呈现数字。 对于大多数区域性, 这与相同<xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational>。 但是, <xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational>会对某些阿拉伯语区域性产生拉丁数字, 而此值将导致所有阿拉伯区域性的阿拉伯数字。  
   
- 这些值对双向内容开发人员意味着什么？ 在大多数情况下, 开发人员可能只需要定义<xref:System.Windows.FlowDirection>每个文本[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]元素的语言和语言<xref:System.Windows.Media.NumberSubstitution> , 例如`Language="ar-SA"`逻辑负责根据正确[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]的显示数字。 下面的示例演示了在的阿拉伯语[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]版本中运行的应用程序中使用阿拉伯和英文数字。  
+ 这些值对双向内容开发人员意味着什么？ 在大多数情况下, 开发人员可能只需要定义<xref:System.Windows.FlowDirection>每个文本[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]元素的语言和语言<xref:System.Windows.Media.NumberSubstitution> , 例如`Language="ar-SA"`逻辑负责根据正确[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]的显示数字。 下面的示例演示在 Windows 的阿拉伯语版本中运行[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]的应用程序中使用阿拉伯和英文数字。  
   
  [!code-xaml[Numbers#Numbers](~/samples/snippets/csharp/VS_Snippets_Wpf/Numbers/CS/Window1.xaml#numbers)]  
   

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4c6a406a-b5eb-44fa-b4ed-4e95bb95a813
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 281cfa6507d293658e436a95a5ded0174154a13c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 080d05a27b9e0b6ad4ff52d67ef8d9209dc1c697
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59301017"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927956"
 ---
 # <a name="how-to-reference-a-strong-named-assembly"></a>如何：引用具有强名称的程序集
 引用强名称程序集中的类型或资源的过程通常是透明的。 可在编译时（早期绑定）或在运行时进行引用。  
@@ -26,15 +26,15 @@ ms.locfileid: "59301017"
  向编译器表明程序集显式引用另一程序集时，发生编译时引用。 使用编译时引用时，编译器会自动获取目标强名称程序集的公钥，并将其放在正在编译的程序集的程序集引用中。  
   
 > [!NOTE]
->  具有强名称的程序集只能使用其他具有强名称的程序集的类型。 否则，将会危害具有强名称的程序集的安全性。  
+> 具有强名称的程序集只能使用其他具有强名称的程序集的类型。 否则，将会危害具有强名称的程序集的安全性。  
   
 ### <a name="to-make-a-compile-time-reference-to-a-strong-named-assembly"></a>对强名称程序集进行编译时引用  
   
 1. 在命令提示符处，键入下列命令：  
   
-     \<compiler command> /reference:\<assembly name>  
+     \<compiler command> /reference:\<assembly name>     
   
-     在此命令中，compiler command 是所用语言的编译器命令，assembly name 是引用的强名称程序集的名称。 还可使用其他编译器选项，如用于创建库程序集的 /t:library 选项。  
+     在此命令中，compiler command 是所用语言的编译器命令，assembly name 是引用的强名称程序集的名称   。 还可使用其他编译器选项，如用于创建库程序集的 /t:library 选项  。  
   
  下例创建名为 `myAssembly.dll` 的程序集，该程序集从名为 `myAssembly.cs` 的代码模块中，引用名为 `myLibAssembly.dll` 的强名称程序集。  
   
@@ -46,7 +46,7 @@ csc /t:library myAssembly.cs /reference:myLibAssembly.dll
   
 1. 对强名称程序集进行运行时引用时（例如，通过使用 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 或 <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType> 方法），必须使用引用的强名称程序集的显示名称。 显示名称的语法如下：  
   
-     \<assembly name>, \<version number>, \<culture>, \<public key token>  
+     \<assembly name>, \<version number>, \<culture>, \<public key token>         
   
      例如:  
   
@@ -64,7 +64,7 @@ csc /t:library myAssembly.cs /reference:myLibAssembly.dll
   
  可使用以下[强名称 (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) 命令为特定程序集打印十六进制格式的公钥和公钥标记：  
   
- sn -Tp \< assembly >  
+ sn -Tp \< assembly >     
   
  如果有公钥文件，则可改用以下命令（请注意命令行选项大小写的区别）：  
   

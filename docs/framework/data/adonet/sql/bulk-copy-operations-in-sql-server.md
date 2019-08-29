@@ -2,15 +2,15 @@
 title: SQL Server 中的批量复制操作
 ms.date: 03/30/2017
 ms.assetid: 83a7a0d2-8018-4354-97b9-0b1d99f8342b
-ms.openlocfilehash: e538e48400d955a0013a12dbf2d10f1f96c3ddfe
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: efa13eb1633fce3b59040ef8da79dba0f6ea81d5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649547"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69918064"
 ---
 # <a name="bulk-copy-operations-in-sql-server"></a>SQL Server 中的批量复制操作
-Microsoft SQL Server 包含名为的常用命令行实用工具**bcp**的快速大容量复制大型文件到表或视图中的 SQL Server 数据库。 使用 <xref:System.Data.SqlClient.SqlBulkCopy> 类可以编写提供类似功能的托管代码解决方案。 还可以通过其他方式将数据加载到 SQL Server 表中（例如 INSERT 语句），但是 <xref:System.Data.SqlClient.SqlBulkCopy> 提供的性能要明显优于这些方式。  
+Microsoft SQL Server 包括一个名为**bcp**的常用命令行实用程序, 用于快速将大型文件大容量复制到 SQL Server 数据库中的表或视图中。 使用 <xref:System.Data.SqlClient.SqlBulkCopy> 类可以编写提供类似功能的托管代码解决方案。 还可以通过其他方式将数据加载到 SQL Server 表中（例如 INSERT 语句），但是 <xref:System.Data.SqlClient.SqlBulkCopy> 提供的性能要明显优于这些方式。  
   
  <xref:System.Data.SqlClient.SqlBulkCopy> 类只能用于向 SQL Server 表中写入数据。 但是，数据源不限于 SQL Server；可以使用任何数据源，只要数据可以加载到 <xref:System.Data.DataTable> 实例或使用 <xref:System.Data.IDataReader> 实例读取即可。  
   
@@ -23,7 +23,7 @@ Microsoft SQL Server 包含名为的常用命令行实用工具**bcp**的快速�
 - 事务中的批量复制操作  
   
 > [!NOTE]
->  使用.NET Framework 1.1 或更早版本时 (不支持<xref:System.Data.SqlClient.SqlBulkCopy>类)，可以执行 SQL Server TRANSACT-SQL **BULK INSERT**语句使用<xref:System.Data.SqlClient.SqlCommand>对象。  
+> 当使用 .NET Framework 版本1.1 或更早版本 (不支持<xref:System.Data.SqlClient.SqlBulkCopy>类) 时, 可以使用<xref:System.Data.SqlClient.SqlCommand>对象执行 SQL Server transact-sql **BULK INSERT**语句。  
   
 ## <a name="in-this-section"></a>本节内容  
  [大容量复制示例设置](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md)  

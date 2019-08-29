@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: fd4026bc-2c3d-4b27-86dc-ec5e96018181
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 11295f4b0d1a425fd3859c904b8ebc7830c64d1f
-ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
+ms.openlocfilehash: 4ff02c5856e4ee48c8e5cf375cc68d92c76737c7
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66815943"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988390"
 ---
 # <a name="64-bit-applications"></a>64 位应用程序
 编译应用程序时，您可以将其指定为在 Windows 64 位操作系统上作为本机应用程序或在 WOW64（Windows 64 位下的 Windows 32 位）下运行。 WOW64 是一种兼容性环境，它使 32 位应用能够在 64 位系统上运行。 WOW64 包括在所有 64 位版本的 Windows 操作系统中。  
@@ -24,7 +24,7 @@ ms.locfileid: "66815943"
  在 x86 计算机上，Visual Studio 会安装 32 位版本的 CLR，而在 64 位 Windows 计算机上会同时安装 32 位版本和适当的 64 位版本的 CLR。 （因为 Visual Studio 是一个 32 位应用程序，所以当安装到 64 位系统上时，它会在 WOW64 下运行。）  
   
 > [!NOTE]
->  由于 Itanium 处理器系列的 x86 仿真和 WOW64 子系统设计，仅限在一个处理器上执行应用程序。 这些因素会降低在基于 Itanium 的系统上运行的 32 位 .NET Framework 应用程序的性能和可伸缩性。 我们建议你使用 .NET Framework 4，它包括对基于 Itanium 的系统的本机 64 位支持，以提升性能和可伸缩性。  
+> 由于 Itanium 处理器系列的 x86 仿真和 WOW64 子系统设计，仅限在一个处理器上执行应用程序。 这些因素会降低在基于 Itanium 的系统上运行的 32 位 .NET Framework 应用程序的性能和可伸缩性。 我们建议你使用 .NET Framework 4，它包括对基于 Itanium 的系统的本机 64 位支持，以提升性能和可伸缩性。  
   
  默认情况下，在 64 位 Windows 操作系统上运行 64 位托管应用程序时，您可以创建一个不超过 2 GB 的对象。 然而，在 .NET Framework 4.5 中，你可以增加该限制。  有关详细信息，请参阅 [\<gcAllowVeryLargeObjects> 元素](../../docs/framework/configure-apps/file-schema/runtime/gcallowverylargeobjects-element.md)。  
   
@@ -56,8 +56,8 @@ ms.locfileid: "66815943"
   
 |编译器|编译器选项|  
 |--------------|---------------------|  
-|Visual Basic|[/platform (Visual Basic)](~/docs/visual-basic/reference/command-line-compiler/platform.md)|  
-|Visual C#|[/platform（C# 编译器选项）](~/docs/csharp/language-reference/compiler-options/platform-compiler-option.md)|  
+|Visual Basic|[/platform (Visual Basic)](../visual-basic/reference/command-line-compiler/platform.md)|  
+|Visual C#|[/platform（C# 编译器选项）](../csharp/language-reference/compiler-options/platform-compiler-option.md)|  
 |Visual C++|可以通过使用 **/clr:safe** 创建与平台无关的 Microsoft 中间语言 (MSIL) 应用程序。 有关详细信息，请参阅 [/clr（公共语言运行时编译）](/cpp/build/reference/clr-common-language-runtime-compilation)。<br /><br /> Visual c++ 为每个 64 位操作系统均包括一个单独的编译器。 有关如何使用 Visual C++ 创建可在 64 位 Windows 操作系统上运行的本机应用程序的详细信息，请参阅 [64 位编程](/cpp/build/configuring-programs-for-64-bit-visual-cpp)。|  
   
 ## <a name="determining-the-status-of-an-exe-file-or-dll-file"></a>确定 .exe 文件或 .dll 文件的状态  

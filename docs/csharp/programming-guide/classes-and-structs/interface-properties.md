@@ -6,15 +6,15 @@ helpviewer_keywords:
 - properties [C#], on interfaces
 - interfaces [C#], properties
 ms.assetid: 6503e9ed-33d7-44ec-b4c1-cc16c084b795
-ms.openlocfilehash: c02e4f62aabb17213ce172e7e3a773e86d1e9908
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: cdd425970442e284d6fd6488bbb13394c12e939a
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57201594"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596448"
 ---
 # <a name="interface-properties-c-programming-guide"></a>接口属性（C# 编程指南）
-可以在[接口](../../../csharp/language-reference/keywords/interface.md)上声明属性。 下面是接口属性访问器的示例：  
+可以在[接口](../../language-reference/keywords/interface.md)上声明属性。 下面是接口属性访问器的示例：  
   
  [!code-csharp[csProgGuideProperties#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#14)]  
   
@@ -27,7 +27,7 @@ ms.locfileid: "57201594"
   
  [!code-csharp[csProgGuideProperties#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#16)]  
   
- 这称为[显式接口实现](../../../csharp/programming-guide/interfaces/explicit-interface-implementation.md)。 例如，如果 `Employee` 类正在实现接口 `ICitizen` 和接口 `IEmployee`，而这两个接口都具有 `Name` 属性，则需要用到显式接口成员实现。 即是说下列属性声明：  
+ 这称为[显式接口实现](../interfaces/explicit-interface-implementation.md)。 例如，如果 `Employee` 类正在实现接口 `ICitizen` 和接口 `IEmployee`，而这两个接口都具有 `Name` 属性，则需要用到显式接口成员实现。 即是说下列属性声明：  
   
  [!code-csharp[csProgGuideProperties#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#16)]  
   
@@ -53,9 +53,9 @@ ms.locfileid: "57201594"
   
 ## <a name="see-also"></a>请参阅
 
-- [C# 编程指南](../../../csharp/programming-guide/index.md)
-- [属性](../../../csharp/programming-guide/classes-and-structs/properties.md)
-- [使用属性](../../../csharp/programming-guide/classes-and-structs/using-properties.md)
-- [属性与索引器之间的比较](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)
-- [索引器](../../../csharp/programming-guide/indexers/index.md)
-- [接口](../../../csharp/programming-guide/interfaces/index.md)
+- [C# 编程指南](../index.md)
+- [属性](./properties.md)
+- [使用属性](./using-properties.md)
+- [属性与索引器之间的比较](../indexers/comparison-between-properties-and-indexers.md)
+- [索引器](../indexers/index.md)
+- [接口](../interfaces/index.md)

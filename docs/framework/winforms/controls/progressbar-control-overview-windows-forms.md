@@ -7,33 +7,33 @@ helpviewer_keywords:
 - ProgressBar control [Windows Forms], about ProgressBar control
 - progress controls [Windows Forms], about progress controls
 ms.assetid: a05d9cba-3a6a-4f8f-94b8-8ec12799fb80
-ms.openlocfilehash: 24b47669cdf8ed0a8f0f936b0b3b9c354e62445f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7dd434492cd688527ddbce5aaffa442a0b40a9e4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61666338"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968308"
 ---
 # <a name="progressbar-control-overview-windows-forms"></a>ProgressBar 控件概述（Windows 窗体）
 > [!IMPORTANT]
->  <xref:System.Windows.Forms.ToolStripProgressBar> 控件取代了 <xref:System.Windows.Forms.ProgressBar> 控件并添加了功能；但是，可以选择保留 <xref:System.Windows.Forms.ProgressBar> 控件以实现向后兼容并供将来使用。  
+> <xref:System.Windows.Forms.ToolStripProgressBar> 控件取代了 <xref:System.Windows.Forms.ProgressBar> 控件并添加了功能；但是，可以选择保留 <xref:System.Windows.Forms.ProgressBar> 控件以实现向后兼容并供将来使用。  
   
- Windows 窗体<xref:System.Windows.Forms.ProgressBar>控件通过显示适当数量的水平栏中排列矩形指示过程的进度。 该过程完成后，填充栏。 进度条通常用于为用户提供的思路很长时间才能等待进程完成;例如，大型文件正在加载时。  
+ "Windows 窗体<xref:System.Windows.Forms.ProgressBar> " 控件通过在水平栏中显示适当数量的矩形来指示进程的进度。 完成此过程后, 将填充该条形。 进度栏通常用于使用户了解等待进程完成的时间,例如, 在加载大型文件时。  
   
 > [!NOTE]
->  <xref:System.Windows.Forms.ProgressBar>控件可以只能水平放置在窗体上。  
+> <xref:System.Windows.Forms.ProgressBar>控件只能在窗体上水平定向。  
   
 ## <a name="key-properties-and-methods"></a>键属性和方法  
- 键属性<xref:System.Windows.Forms.ProgressBar>控制是在<xref:System.Windows.Forms.ProgressBar.Value%2A>， <xref:System.Windows.Forms.ProgressBar.Minimum%2A>，和<xref:System.Windows.Forms.ProgressBar.Maximum%2A>。 <xref:System.Windows.Forms.ProgressBar.Minimum%2A>和<xref:System.Windows.Forms.ProgressBar.Maximum%2A>属性设置可以显示进度栏的最大和最小值。 <xref:System.Windows.Forms.ProgressBar.Value%2A>属性表示已完成该操作方面的进度。 通过在控件中显示的栏组成块，因为显示的值<xref:System.Windows.Forms.ProgressBar>控件仅近似于<xref:System.Windows.Forms.ProgressBar.Value%2A>属性的当前值。 基于大小<xref:System.Windows.Forms.ProgressBar>控件，<xref:System.Windows.Forms.ProgressBar.Value%2A>属性确定何时显示下一个块。  
+ <xref:System.Windows.Forms.ProgressBar>控件的键属性为<xref:System.Windows.Forms.ProgressBar.Value%2A>、 <xref:System.Windows.Forms.ProgressBar.Minimum%2A>和<xref:System.Windows.Forms.ProgressBar.Maximum%2A>。 <xref:System.Windows.Forms.ProgressBar.Minimum%2A> 和<xref:System.Windows.Forms.ProgressBar.Maximum%2A>属性设置进度栏可显示的最大值和最小值。 <xref:System.Windows.Forms.ProgressBar.Value%2A>属性表示完成该操作所进行的进度。 由于控件中显示的栏是由块组成的, 因此<xref:System.Windows.Forms.ProgressBar>控件显示的值仅<xref:System.Windows.Forms.ProgressBar.Value%2A>接近属性的当前值。 根据<xref:System.Windows.Forms.ProgressBar>控件的大小, 属性将<xref:System.Windows.Forms.ProgressBar.Value%2A>确定何时显示下一个块。  
   
- 更新当前的进度值的最常见方法是编写代码来设置<xref:System.Windows.Forms.ProgressBar.Value%2A>属性。 在加载大型文件的示例中，可能设置最大值为千字节为单位中的文件的大小。 例如，如果<xref:System.Windows.Forms.ProgressBar.Maximum%2A>属性设置为 100，<xref:System.Windows.Forms.ProgressBar.Minimum%2A>属性设置为 10，和<xref:System.Windows.Forms.ProgressBar.Value%2A>属性设置为 50，将显示 5 个矩形。 这是数目的可以显示的一半。  
+ 更新当前进度值的最常见方法是编写代码以设置<xref:System.Windows.Forms.ProgressBar.Value%2A>属性。 在加载大型文件的示例中, 可以将最大大小设置为文件大小 (kb)。 例如, 如果<xref:System.Windows.Forms.ProgressBar.Maximum%2A>将属性设置为 100, 则<xref:System.Windows.Forms.ProgressBar.Minimum%2A>属性设置为 10, <xref:System.Windows.Forms.ProgressBar.Value%2A>属性设置为 50, 将显示5个矩形。 这是可显示的数字的一半。  
   
- 但是，还有其他方法来修改显示的值<xref:System.Windows.Forms.ProgressBar>控件，除了设置<xref:System.Windows.Forms.ProgressBar.Value%2A>直接属性。 <xref:System.Windows.Forms.ProgressBar.Step%2A>属性可以用于指定一个值，以递增<xref:System.Windows.Forms.ProgressBar.Value%2A>属性。 然后，调用<xref:System.Windows.Forms.ProgressBar.PerformStep%2A>方法将递增的值。 若要改变的增量值，可以使用<xref:System.Windows.Forms.ProgressBar.Increment%2A>方法并指定具有要递增的值<xref:System.Windows.Forms.ProgressBar.Value%2A>属性。  
+ 不过, 还可以通过其他方式修改<xref:System.Windows.Forms.ProgressBar>控件显示的值, 而不是直接<xref:System.Windows.Forms.ProgressBar.Value%2A>设置属性。 属性可用于指定值以<xref:System.Windows.Forms.ProgressBar.Value%2A>递增属性。 <xref:System.Windows.Forms.ProgressBar.Step%2A> 然后, 调用<xref:System.Windows.Forms.ProgressBar.PerformStep%2A>方法会递增值。 若要更改增量值, 可以使用<xref:System.Windows.Forms.ProgressBar.Increment%2A>方法并指定一个值, 以便为<xref:System.Windows.Forms.ProgressBar.Value%2A>属性递增。  
   
- 以图形方式通知用户有关当前操作的另一个控件是<xref:System.Windows.Forms.StatusBar>控件。  
+ 以图形方式向用户通知当前操作的另一个控件是<xref:System.Windows.Forms.StatusBar>控件。  
   
 > [!IMPORTANT]
->  <xref:System.Windows.Forms.StatusStrip>并<xref:System.Windows.Forms.ToolStripStatusLabel>控件替换，并将功能添加到<xref:System.Windows.Forms.StatusBar>并<xref:System.Windows.Forms.StatusBarPanel>控制; 但是，<xref:System.Windows.Forms.StatusBar>和<xref:System.Windows.Forms.StatusBarPanel>控件将保留用于向后兼容性并供将来使用，如果你选择。  
+> <xref:System.Windows.Forms.StatusBarPanel> <xref:System.Windows.Forms.StatusBar> <xref:System.Windows.Forms.StatusBar>和控件替换和添加了和控件的功能; 但是, 和<xref:System.Windows.Forms.StatusBarPanel>控件将保留以实现向后兼容性和将来使用, 前提是你<xref:System.Windows.Forms.ToolStripStatusLabel> <xref:System.Windows.Forms.StatusStrip>.  
   
 ## <a name="see-also"></a>请参阅
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - ToolBar control [Windows Forms], adding drop-down menus
 ms.assetid: d9ce3040-3e21-4e2d-80ae-b430982b2db8
-ms.openlocfilehash: e5069dd46a31a65f65a17d750b685d82762e3d11
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 4d7a49633599aabc96153e4793e50c1a4d6d092d
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69038210"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666223"
 ---
 # <a name="how-to-add-buttons-to-a-toolbar-control-using-the-designer"></a>如何：使用设计器向 ToolBar 控件添加按钮
 
@@ -23,7 +23,6 @@ ms.locfileid: "69038210"
 <xref:System.Windows.Forms.ToolBar>控件的一个组成部分是您向其中添加的按钮。 可以使用这些命令来轻松访问菜单命令或, 也可以将其放置在应用程序的用户界面的另一个区域中, 向用户提供菜单结构中不存在的命令。
 
 下面的过程需要一个**Windows 应用程序**项目, 该项目具有<xref:System.Windows.Forms.ToolBar>包含控件的窗体。 有关设置此类项目的信息, 请参阅[如何:创建 Windows 窗体应用程序项目](/visualstudio/ide/step-1-create-a-windows-forms-application-project)以及[如何:将控件添加到](how-to-add-controls-to-windows-forms.md)Windows 窗体。
-
 
 ### <a name="to-add-buttons-at-design-time"></a>在设计时添加按钮
 

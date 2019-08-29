@@ -2,15 +2,15 @@
 title: PII 安全锁定
 ms.date: 03/30/2017
 ms.assetid: c44fb338-9527-4dd0-8607-b8787d15acb4
-ms.openlocfilehash: 83c100459ca5cf522b9040a807008e66e1a5c9d8
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: f82d3f19a3bf6fc6a5ac038034880dafc03fcce1
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67425424"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044790"
 ---
 # <a name="pii-security-lockdown"></a>PII 安全锁定
-此示例演示如何控制通过 Windows Communication Foundation (WCF) 服务的多个安全相关的功能：  
+此示例演示如何通过以下方法控制 Windows Communication Foundation (WCF) 服务的多个安全相关功能:  
   
 - 加密服务配置文件中的敏感信息。  
   
@@ -19,35 +19,35 @@ ms.locfileid: "67425424"
 - 控制跟踪和消息日志中的个人身份信息 (PII) 日志记录。  
   
 > [!IMPORTANT]
->  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
+> 您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+> 如果此目录不存在, 请参阅[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)以下载所有 Windows Communication Foundation (wcf) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\SecurityLockdown`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\SecurityLockdown`  
   
 ## <a name="discussion"></a>讨论  
- 这些功能中的每种功能都可以单独使用，也可以一起使用来控制服务安全的各个方面。 这不是 WCF 服务的安全的确定性指导。  
+ 这些功能中的每种功能都可以单独使用，也可以一起使用来控制服务安全的各个方面。 这不是用于保护 WCF 服务的权威指南。  
   
  .NET Framework 配置文件可以包含敏感信息，如用于连接到数据库的连接字符串。 在 Web 承载的共享方案中，可能需要对服务配置文件中的此信息进行加密，以避免他人无意中查看配置文件中包含的数据。 .NET Framework 2.0 和更高版本可以通过使用 Windows 数据保护应用程序编程接口 (DPAPI) 或 RSA 加密提供程序对配置文件的部分进行加密。 使用 DPAPI 或 RSA 的 aspnet_regiis.exe 可以对配置文件的选择部分进行加密。  
   
- 在 Web 承载的方案中，可以使服务位于其他服务的子目录中。 用于确定配置值的默认语义允许嵌套目录中的配置文件重写父目录中的配置值。 在某些情况下，出于各种原因可能不希望这样做。 WCF 服务配置支持锁定配置值，以使嵌套的配置会生成异常，运行某一嵌套的服务时使用重写配置值。  
+ 在 Web 承载的方案中，可以使服务位于其他服务的子目录中。 用于确定配置值的默认语义允许嵌套目录中的配置文件重写父目录中的配置值。 在某些情况下，出于各种原因可能不希望这样做。 WCF 服务配置支持锁定配置值, 以便在使用重写的配置值运行嵌套的服务时, 嵌套的配置会生成异常。  
   
- 此示例演示如何在跟踪和消息日志中控制已知个人身份信息 (PII) 日志记录，如用户名和密码。 默认情况下禁用已知 PII 的日志记录，但在特定情况下，PII 日志记录可能会对应用程序的调试大有帮助。 此示例基于[Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)。 此外，此示例还使用跟踪和消息日志记录。 有关详细信息，请参阅[跟踪和消息日志记录](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md)示例。  
+ 此示例演示如何在跟踪和消息日志中控制已知个人身份信息 (PII) 日志记录，如用户名和密码。 默认情况下禁用已知 PII 的日志记录，但在特定情况下，PII 日志记录可能会对应用程序的调试大有帮助。 此示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)。 此外，此示例还使用跟踪和消息日志记录。 有关详细信息, 请参阅[跟踪和消息日志记录](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md)示例。  
   
 ## <a name="encrypting-configuration-file-elements"></a>对配置文件元素进行加密  
- 出于安全目的，在以 Web 为宿主的共享环境中，可能需要对包含敏感信息的特定配置元素（如数据库连接字符串）进行加密。 使用.NET Framework 文件夹，如 %windir%\microsoft.net\framework\v4.0.20728 中的 aspnet_regiis.exe 工具配置元素进行加密。  
+ 出于安全目的，在以 Web 为宿主的共享环境中，可能需要对包含敏感信息的特定配置元素（如数据库连接字符串）进行加密。 可以使用在 .NET Framework 文件夹中找到的 aspnet_regiis 工具对配置元素进行加密, 例如%WINDIR%\Microsoft.NET\Framework\v4.0.20728。  
   
 #### <a name="to-encrypt-the-values-in-the-appsettings-section-in-webconfig-for-the-sample"></a>对示例的 Web.config 中的 appSettings 节中的值进行加密  
   
-1. 打开命令提示符下使用-> 运行... 在键入`cmd`然后单击**确定**。  
+1. 使用 "开始-> 运行 ..." 打开命令提示符。 键入, 然后单击 **"确定"。** `cmd`  
   
 2. 通过发出下面的命令导航到当前的 .NET Framework 目录：`cd %WINDIR%\Microsoft.NET\Framework\v4.0.20728`。  
   
 3. 通过发出下面的命令对 Web.config 文件夹中的 appSettings 配置设置进行加密：`aspnet_regiis -pe "appSettings" -app "/servicemodelsamples" -prov "DataProtectionConfigurationProvider"`。  
   
- 可以通过读取操作方式上 DPAPI ASP.NET 配置中的找到有关加密配置文件节的详细信息 ([Building Secure ASP.NET Applications:身份验证、 授权和安全通信](https://go.microsoft.com/fwlink/?LinkId=95137)) 和 ASP.NET 配置中的操作方法上 RSA ([How To:加密 ASP.NET 2.0 中的配置节，可使用 RSA](https://go.microsoft.com/fwlink/?LinkId=95138))。  
+ 有关配置文件加密节的详细信息, 请阅读 ASP.NET 配置中的操作方法 ([构建安全 ASP.NET 应用程序:身份验证、授权和安全通信](https://go.microsoft.com/fwlink/?LinkId=95137)) 以及 ASP.NET 配置中 RSA 的操作指南 ([如何:使用 RSA](https://go.microsoft.com/fwlink/?LinkId=95138)加密 ASP.NET 2.0 中的配置节。  
   
 ## <a name="locking-configuration-file-elements"></a>锁定配置文件元素  
  在 Web 承载的方案中，可以使服务位于其他服务的子目录中。 在这些情况下，通过检查 Machine.config 中的值并依次与父目录中的任何 Web.config 文件合并，然后沿目录树向下移动，最后合并包含该服务的目录中的 Web.config 文件，来计算子目录中服务的配置值。 多数配置元素的默认行为都允许子目录中的配置文件重写父目录中设置的值。 在特定情况下，可能需要阻止子目录中的配置文件重写父目录配置中设置的值。  
@@ -87,7 +87,7 @@ ms.locfileid: "67425424"
 ```  
   
 > [!NOTE]
->  Machine.config 文件具有一个默认位置：%WINDIR%\Microsoft.NET\Framework\v2.0.50727\CONFIG。  
+> Machine.config 文件具有一个默认位置：%WINDIR%\Microsoft.NET\Framework\v2.0.50727\CONFIG。  
   
  如果 Machine.config 中没有 `enableLoggingKnownPii` 属性，则不允许使用 PII 日志记录。  
   
@@ -117,26 +117,26 @@ ms.locfileid: "67425424"
  仅当 `enableLoggingKnownPii` 设置为 `true` 且 `logKnownPii` 设置为 `true` 时才会记录 PII。  
   
 > [!NOTE]
->  除配置文件中列出的第一个属性外，System.Diagnostics 将忽略所有源上的所有属性。 向配置文件中的第二个源添加 `logKnownPii` 属性不起作用。  
+> 除配置文件中列出的第一个属性外，System.Diagnostics 将忽略所有源上的所有属性。 向配置文件中的第二个源添加 `logKnownPii` 属性不起作用。  
   
 > [!IMPORTANT]
->  运行此示例需要手动修改 Machine.config。修改 Machine.config 时应小心，因为不正确的值或语法可能会阻止所有 .NET Framework 应用程序运行。  
+> 运行此示例需要手动修改 Machine.config。修改 Machine.config 时应小心，因为不正确的值或语法可能会阻止所有 .NET Framework 应用程序运行。  
   
  使用 DPAPI 和 RSA 也可以对配置文件元素进行加密。 有关更多信息，请参见以下链接：  
   
-- [构建安全的 ASP.NET 应用程序：身份验证、 授权和安全通信](https://go.microsoft.com/fwlink/?LinkId=95137)  
+- [构建安全的 ASP.NET 应用程序:身份验证、授权和安全通信](https://go.microsoft.com/fwlink/?LinkId=95137)  
   
-- [如何：加密 ASP.NET 2.0 中的配置节，可使用 RSA](https://go.microsoft.com/fwlink/?LinkId=95138)  
+- [如何：使用 RSA 加密 ASP.NET 2.0 中的配置节](https://go.microsoft.com/fwlink/?LinkId=95138)  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
-1. 请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1. 确保已对[Windows Communication Foundation 示例执行了一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
 2. 编辑 Machine.config，将 `enableLoggingKnownPii` 属性设置为 `true`，需要时添加父节点。  
   
 3. 若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
   
-4. 若要在单或跨计算机配置中运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
+4. 若要以单机配置或跨计算机配置来运行示例, 请按照[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的说明进行操作。  
   
 #### <a name="to-clean-up-the-sample"></a>清除示例  
   

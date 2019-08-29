@@ -2,12 +2,12 @@
 title: <connectionPoolSettings>
 ms.date: 03/30/2017
 ms.assetid: 6fa7fa65-2c6e-4eab-b8cf-7690112c0be5
-ms.openlocfilehash: 0e56bb5c9e485559d712281a51e79f54c9661b5a
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 3c8d905a04f8f6d7ecff9b0ef9e7d3c8afa727e3
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67423140"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69925964"
 ---
 # <a name="connectionpoolsettings"></a>\<connectionPoolSettings>
 指定命名管道绑定的其他连接池设置。  
@@ -15,7 +15,7 @@ ms.locfileid: "67423140"
  \<system.serviceModel>  
 \<bindings>  
 \<customBinding>  
-\<binding>  
+\<绑定 >  
 \<namePipeTransport>  
 \<connectionPoolSettings>  
   
@@ -45,7 +45,7 @@ ms.locfileid: "67423140"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<namedPipeTransport>](../../../../../docs/framework/configure-apps/file-schema/wcf/namedpipetransport.md)|定义传输，该传输使通道使用命名管道传输消息。|  
+|[\<namedPipeTransport>](namedpipetransport.md)|定义传输，该传输使通道使用命名管道传输消息。|  
   
 ## <a name="see-also"></a>请参阅
 
@@ -54,9 +54,9 @@ ms.locfileid: "67423140"
 - <xref:System.ServiceModel.Channels.NamedPipeConnectionPoolSettings>
 - <xref:System.ServiceModel.Channels.TransportBindingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [传输](../../../../../docs/framework/wcf/feature-details/transports.md)
-- [选择传输](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
-- [绑定](../../../../../docs/framework/wcf/bindings.md)
-- [扩展绑定](../../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [自定义绑定](../../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [传输](../../../wcf/feature-details/transports.md)
+- [选择传输](../../../wcf/feature-details/choosing-a-transport.md)
+- [绑定](../../../wcf/bindings.md)
+- [扩展绑定](../../../wcf/extending/extending-bindings.md)
+- [自定义绑定](../../../wcf/extending/custom-bindings.md)
+- [\<customBinding>](custombinding.md)

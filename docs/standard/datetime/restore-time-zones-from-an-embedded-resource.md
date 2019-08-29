@@ -11,49 +11,49 @@ helpviewer_keywords:
 ms.assetid: 6b7b4de9-da07-47e3-8f4c-823f81798ee7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 71fc4e04c87dfa3b83eabb06361d1da94a512a5e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 98813bf6685be78d33ebd5cc5e8c07a61a811c25
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62026531"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106754"
 ---
 # <a name="how-to-restore-time-zones-from-an-embedded-resource"></a>如何：从嵌入的资源还原时区
 
-本主题介绍如何还原已保存的资源文件中的时区。 有关信息和有关保存时区的说明，请参阅[如何：将时区保存到嵌入的资源](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md)。
+本主题介绍如何还原已保存到资源文件中的时区。 有关保存时区的信息和说明, 请参阅[如何:将时区保存到嵌入的资源](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md)。
 
-### <a name="to-deserialize-a-timezoneinfo-object-from-an-embedded-resource"></a>要反序列化 TimeZoneInfo 对象从嵌入的资源
+### <a name="to-deserialize-a-timezoneinfo-object-from-an-embedded-resource"></a>反序列化嵌入资源中的 TimeZoneInfo 对象
 
-1. 如果要检索时区不是自定义时区，请尝试使用来实例化它<xref:System.TimeZoneInfo.FindSystemTimeZoneById%2A>方法。
+1. 如果要检索的时区不是自定义时区, 请尝试使用<xref:System.TimeZoneInfo.FindSystemTimeZoneById%2A>方法对其进行实例化。
 
-2. 实例化<xref:System.Resources.ResourceManager>通过将嵌入的资源文件和对包含资源文件的程序集的引用的完全限定的名称传递的对象。
+2. 通过传递嵌入资源文件的完全限定名和对包含资源文件的程序集的引用来实例化对象。<xref:System.Resources.ResourceManager>
 
-   如果您不能确定嵌入的资源文件的完全限定的名称，请使用[Ildasm.exe （IL 反汇编程序）](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)来检查程序集的清单。 `.mresource`条目标识的资源。 在示例中，资源的完全限定的名称是`SerializeTimeZoneData.SerializedTimeZones`。
+   如果无法确定嵌入资源文件的完全限定名称, 请使用[Ildasm (IL 拆装器)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)检查程序集的清单。 一`.mresource`项标识资源。 在此示例中, 该资源的完全限定名`SerializeTimeZoneData.SerializedTimeZones`为。
 
-   如果包含时区实例化代码在同一程序集中嵌入资源文件，可以通过调用来检索对它的引用`static`(`Shared`在 Visual Basic 中)<xref:System.Reflection.Assembly.GetExecutingAssembly%2A>方法。
+   如果资源文件嵌入到包含时区实例化代码的同一程序集中, 则可以通过调用`static` (`Shared`在 Visual Basic 中) <xref:System.Reflection.Assembly.GetExecutingAssembly%2A>方法来检索对它的引用。
 
-3. 如果在调用<xref:System.TimeZoneInfo.FindSystemTimeZoneById%2A>方法失败，或如果要实例化自定义时区，检索一个字符串，通过调用包含序列化的时区<xref:System.Resources.ResourceManager.GetString%2A?displayProperty=nameWithType>方法。
+3. 如果对<xref:System.TimeZoneInfo.FindSystemTimeZoneById%2A>方法的调用失败, 或者如果要实例化自定义时区, 则通过<xref:System.Resources.ResourceManager.GetString%2A?displayProperty=nameWithType>调用方法来检索包含序列化时区的字符串。
 
-4. 通过调用所在的时区数据反序列化<xref:System.TimeZoneInfo.FromSerializedString%2A>方法。
+4. 通过调用<xref:System.TimeZoneInfo.FromSerializedString%2A>方法反序列化时区数据。
 
 ## <a name="example"></a>示例
 
-下面的示例进行反序列化<xref:System.TimeZoneInfo>嵌入.NET XML 资源文件中存储对象。
+下面的示例对嵌入<xref:System.TimeZoneInfo>的 .net XML 资源文件中存储的对象进行反序列化。
 
 [!code-csharp[TimeZone2.Serialization#3](../../../samples/snippets/csharp/VS_Snippets_CLR/TimeZone2.Serialization/cs/SerializeTimeZoneData.cs#3)]
 [!code-vb[TimeZone2.Serialization#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/TimeZone2.Serialization/vb/SerializeTimeZoneData.vb#3)]
 
-以下代码说明了异常处理，以确保<xref:System.TimeZoneInfo>应用程序所需的对象是否存在。 它首先尝试实例化<xref:System.TimeZoneInfo>通过从注册表中使用检索的对象<xref:System.TimeZoneInfo.FindSystemTimeZoneById%2A>方法。 如果不能实例化时区，代码会检索它从嵌入的资源文件。
+此代码演示异常处理, 以确保应用<xref:System.TimeZoneInfo>程序所需的对象存在。 它首先尝试<xref:System.TimeZoneInfo.FindSystemTimeZoneById%2A>使用方法通过<xref:System.TimeZoneInfo>从注册表中检索来实例化对象。 如果无法实例化时区, 则代码会从嵌入的资源文件中检索该时区。
 
-因为自定义时区的数据 (通过使用实例化时区<xref:System.TimeZoneInfo.CreateCustomTimeZone%2A>方法) 不存储在注册表中，代码不调用<xref:System.TimeZoneInfo.FindSystemTimeZoneById%2A>帕默南极洲实例化时区。 相反，它立即查找到嵌入的资源文件，以检索一个字符串，包含时区的数据，调用之前<xref:System.TimeZoneInfo.FromSerializedString%2A>方法。
+由于自定义时区 (使用<xref:System.TimeZoneInfo.CreateCustomTimeZone%2A>方法实例化的时区) 的数据不会存储在注册表中, 因此该代码不会<xref:System.TimeZoneInfo.FindSystemTimeZoneById%2A>调用来实例化 Palmer, 南极洲的时区。 相反, 它会在调用<xref:System.TimeZoneInfo.FromSerializedString%2A>方法之前, 立即查看嵌入的资源文件以检索包含时区数据的字符串。
 
 ## <a name="compiling-the-code"></a>编译代码
 
 此示例需要：
 
-* 对 system.windows.forms.dll 的引用和 System.Core.dll 的引用将添加到项目。
+- 对该项目的引用将被添加到该项目中的。
 
-* 将导入以下命名空间：
+- 导入以下命名空间:
 
   [!code-csharp[TimeZone2.Serialization#2](../../../samples/snippets/csharp/VS_Snippets_CLR/TimeZone2.Serialization/cs/SerializeTimeZoneData.cs#2)]
   [!code-vb[TimeZone2.Serialization#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/TimeZone2.Serialization/vb/SerializeTimeZoneData.vb#2)]

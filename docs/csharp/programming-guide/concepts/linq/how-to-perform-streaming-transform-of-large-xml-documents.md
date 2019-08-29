@@ -2,24 +2,24 @@
 title: 如何：执行大型 XML 文档的流式转换 (C#)
 ms.date: 07/20/2015
 ms.assetid: 5f16d1f8-5370-4b55-b0c8-e497df163037
-ms.openlocfilehash: 033665d14938bc3970b83eddccc159f89e6451d1
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 3ddafc0e053a5dc18d024588e9f71081c8d6da14
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66486640"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69593191"
 ---
 # <a name="how-to-perform-streaming-transform-of-large-xml-documents-c"></a>如何：执行大型 XML 文档的流式转换 (C#)
 有时，你必须转换任意大的 XML 文件并在编写你的应用程序时可以预测应用程序的内存需求量。 如果您试图用大 XML 文件填充 XML 树，则内存占用量将与文件大小成正比，也就是说会占用过多内存。 因此，您应改用流处理技术。  
   
  流处理技术最适合只需处理一次源文档的情况，您可以按文档顺序处理各个元素。 某些标准查询运算符（如 <xref:System.Linq.Enumerable.OrderBy%2A>）可以循环访问其源、收集所有数据、对数据排序，最后生成序列中的第一项。 请注意，如果使用可在生成第一项之前具体化源的查询运算符，则不会使应用程序保持小的内存需求量。  
   
- 即使使用[如何：通过对标头信息的访问流式处理 XML 片段 (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md) 中说明的技术，在试图装配包含转换的文档的 XML 树时，内存占用量也会过大。  
+ 即使使用[如何：通过对标头信息的访问流式处理 XML 片段 (C#)](./how-to-stream-xml-fragments-with-access-to-header-information.md) 中说明的技术，在试图装配包含转换的文档的 XML 树时，内存占用量也会过大。  
   
  主要方法有两种。 一种方法是使用 <xref:System.Xml.Linq.XStreamingElement> 的延迟处理特性。 另一种方法是创建一个 <xref:System.Xml.XmlWriter> 并使用 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 的功能将元素写入 <xref:System.Xml.XmlWriter>。 本主题演示这两种方法。  
   
 ## <a name="example"></a>示例  
- 以下示例基于[如何：通过对标头信息的访问流式处理 XML 片段 (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md) 中的示例。  
+ 以下示例基于[如何：通过对标头信息的访问流式处理 XML 片段 (C#)](./how-to-stream-xml-fragments-with-access-to-header-information.md) 中的示例。  
   
  本示例使用 <xref:System.Xml.Linq.XStreamingElement> 的延迟执行功能对输出进行流式处理。 本示例可在保持很小的内存需求量的同时转换非常大的文档。  
   
@@ -189,7 +189,7 @@ static void Main(string[] args)
 ```  
   
 ## <a name="example"></a>示例  
- 以下示例也基于[如何：通过对标头信息的访问流式处理 XML 片段 (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md) 中的示例。  
+ 以下示例也基于[如何：通过对标头信息的访问流式处理 XML 片段 (C#)](./how-to-stream-xml-fragments-with-access-to-header-information.md) 中的示例。  
   
  本示例使用 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 的功能将元素写入 <xref:System.Xml.XmlWriter>。 本示例可在保持很小的内存需求量的同时转换非常大的文档。  
   

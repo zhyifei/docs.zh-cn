@@ -6,17 +6,17 @@ helpviewer_keywords:
 - C# language, generic interfaces
 - generics [C#], interfaces
 ms.assetid: a8fa49a1-6e78-4a09-87e5-84a0b9f5ffbe
-ms.openlocfilehash: 7fc79874c8e1ff24c38d288d3f6708e2851419e3
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 47eba90eba670d2f735c2f5ca24053e23d34e871
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423472"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659810"
 ---
 # <a name="generic-interfaces-c-programming-guide"></a>泛型接口（C# 编程指南）
 为泛型集合类或表示集合中的项的泛型类定义接口通常很有用处。 为避免对值类型的装箱和取消装箱操作，泛型类的首选项使用泛型接口，例如 <xref:System.IComparable%601>而不是 <xref:System.IComparable>。 .NET Framework 类库定义多个泛型接口，以将其用于 <xref:System.Collections.Generic> 命名空间中的集合类。  
   
- 接口被指定为类型参数上的约束时，仅可使用实现接口的类型。 如下代码示例演示一个派生自 `GenericList<T>` 类的 `SortedList<T>` 类。 有关详细信息，请参阅[泛型介绍](../../../csharp/programming-guide/generics/index.md)。 `SortedList<T>` 添加约束 `where T : IComparable<T>`。 这可使 `SortedList<T>` 中的 `BubbleSort` 方法在列表元素上使用泛型 <xref:System.IComparable%601.CompareTo%2A> 方法。 在此示例中，列表元素是一个实现 `IComparable<Person>` 的简单类 `Person`。  
+ 接口被指定为类型参数上的约束时，仅可使用实现接口的类型。 如下代码示例演示一个派生自 `GenericList<T>` 类的 `SortedList<T>` 类。 有关详细信息，请参阅[泛型介绍](./index.md)。 `SortedList<T>` 添加约束 `where T : IComparable<T>`。 这可使 `SortedList<T>` 中的 `BubbleSort` 方法在列表元素上使用泛型 <xref:System.IComparable%601.CompareTo%2A> 方法。 在此示例中，列表元素是一个实现 `IComparable<Person>` 的简单类 `Person`。  
   
  [!code-csharp[csProgGuideGenerics#29](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics2.cs#29)]  
   
@@ -42,11 +42,11 @@ ms.locfileid: "66423472"
   
  [!code-csharp[csProgGuideGenerics#34](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#34)]  
   
- 控制方法重载的规则对泛型类、泛型结构或泛型接口内的方法一样。 有关详细信息，请参阅[泛型方法](../../../csharp/programming-guide/generics/generic-methods.md)。  
+ 控制方法重载的规则对泛型类、泛型结构或泛型接口内的方法一样。 有关详细信息，请参阅[泛型方法](./generic-methods.md)。  
   
 ## <a name="see-also"></a>请参阅
 
-- [C# 编程指南](../../../csharp/programming-guide/index.md)
-- [泛型介绍](../../../csharp/programming-guide/generics/index.md)
-- [interface](../../../csharp/language-reference/keywords/interface.md)
-- [泛型](~/docs/standard/generics/index.md)
+- [C# 编程指南](../index.md)
+- [泛型介绍](./index.md)
+- [interface](../../language-reference/keywords/interface.md)
+- [泛型](../../../standard/generics/index.md)

@@ -10,40 +10,40 @@ helpviewer_keywords:
 - Protected Friend keyword combination
 - Friend keyword [Visual Basic], and Protected
 ms.assetid: b664605e-1c79-4728-b996-aa59c50846bc
-ms.openlocfilehash: 18681935d0380f9be3970fdb5d17ffb089152f59
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3e30267c8aa11ce97b3b3064ff0954378dab57af
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61802539"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69959805"
 ---
 # <a name="friend-visual-basic"></a>Friend (Visual Basic)
-指定一个或多个声明的编程元素只能在包含其声明的程序集内访问。  
+指定只能从包含其声明的程序集内部访问一个或多个已声明的编程元素。  
   
 ## <a name="remarks"></a>备注  
- 在许多情况下，所需编程元素，如类和结构由整个程序集，不只通过其声明的组件。 但是，您可能不希望其可由程序集外部的代码 （例如，如果应用程序是专有）。 如果你想要限制对这种方式中的元素的访问，可以将其声明使用`Friend`修饰符。  
+ 在许多情况下, 需要由整个程序集使用的编程元素 (如类和结构), 而不是由声明它们的组件使用。 但是, 可能不希望程序集外部的代码 (例如, 应用程序是专有的) 可以访问这些文件。 如果要以这种方式限制对某个元素的访问, 则可以使用`Friend`修饰符来声明它。  
   
- 其他类、 结构和编译到同一模块中的代码程序集可以访问所有`Friend`中该程序集的元素。  
+ 编译为同一程序集的其他类、结构和模块中的代码可以访问该程序集中`Friend`的所有元素。  
   
- `Friend` 访问通常是应用程序的编程元素的首选的级别和`Friend`是默认访问接口、 模块、 类或结构的级别。  
+ `Friend`访问通常是应用程序编程元素的首选级别, `Friend`是接口、模块、类或结构的默认访问级别。  
   
- 可以使用`Friend`仅在模块、 接口或命名空间级别。 因此，对于声明上下文`Friend`元素必须是源文件、 命名空间、 接口、 模块、 类或结构，不能为一个过程。  
+ 只能在模块`Friend` 、接口或命名空间级别使用。 因此, `Friend`元素的声明上下文必须是源文件、命名空间、接口、模块、类或结构; 它不能是过程。  
 
 > [!NOTE]
-> 此外可以使用[Protected Friend](protected-friend.md)访问修饰符，这使得可以从该类中，从派生类中，和在其中定义类的相同程序集内访问类成员。 若要限制中的成员在它的类并从同一程序集中的派生类访问，您可以使用[Private Protected](private-protected.md)访问修饰符。
+> 你还可以使用[受保护的 Friend](protected-friend.md)访问修饰符, 使类成员可从该类、派生类和类定义的同一程序集中访问。 若要从同一程序集中的类和派生类中限制对成员的访问, 请使用[私有受保护](private-protected.md)的访问修饰符。
 
- 有关的比较`Friend`和其他访问修饰符，请参阅[访问 Visual Basic 中的级别](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
+ 有关和其他访问`Friend`修饰符的比较, 请参阅[Visual Basic 中的访问级别](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
   
 > [!NOTE]
->  你可以指定另一个程序集为友元程序集，这使它可以访问所有类型和成员标记为`Friend`。 有关详细信息，请参阅[友元程序集](../../../standard/assembly/friend-assemblies.md)。  
+> 可以指定另一个程序集是友元程序集, 该程序集允许其访问标记为`Friend`的所有类型和成员。 有关详细信息，请参阅[友元程序集](../../../standard/assembly/friend-assemblies.md)。  
   
 ## <a name="example"></a>示例  
- 下面的类使用`Friend`修饰符来允许访问某些成员在同一程序集中的其他编程元素。  
+ 下面的类使用`Friend`修饰符允许同一程序集中的其他编程元素访问某些成员。  
   
  [!code-vb[VbVbalrAccessModifiers#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalraccessmodifiers/vb/class1.vb#1)]  
   
 ## <a name="usage"></a>用法  
- 可以使用`Friend`修饰符在这些上下文中：  
+ 可以在以下上下文`Friend`中使用修饰符:  
   
  [Class 语句](../../../visual-basic/language-reference/statements/class-statement.md)  
   
@@ -79,7 +79,7 @@ ms.locfileid: "61802539"
 - [Private](../../../visual-basic/language-reference/modifiers/private.md)
 - [Private Protected](./private-protected.md)
 - [Protected Friend](./protected-friend.md)
-- [在 Visual Basic 中的访问级别](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Visual Basic 中的访问级别](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [过程](../../../visual-basic/programming-guide/language-features/procedures/index.md)
 - [结构](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [对象和类](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

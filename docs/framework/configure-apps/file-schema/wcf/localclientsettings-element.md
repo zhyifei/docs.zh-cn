@@ -2,12 +2,12 @@
 title: <localClientSettings> 元素
 ms.date: 03/30/2017
 ms.assetid: 4680ace5-f4e1-4fcb-b9d8-a4a4af5cd7ae
-ms.openlocfilehash: c5caf183e37edda6efc79ec81f1628180379fd46
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e7331105582a4a48b7edd8cd4f6a691771b0b8ff
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61765773"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69930801"
 ---
 # <a name="localclientsettings-element"></a>\<localClientSettings > 元素
 指定此绑定的本地客户端安全设置。  
@@ -15,7 +15,7 @@ ms.locfileid: "61765773"
  \<system.serviceModel>  
 \<bindings>  
 \<customBinding>  
-\<binding>  
+\<绑定 >  
 \<安全 >  
   
 ## <a name="syntax"></a>语法  
@@ -56,14 +56,14 @@ ms.locfileid: "61765773"
 |`timestampValidityDuration`|一个值为正的 <xref:System.TimeSpan>，指定时间戳有效的持续时间。 默认值为“00:15:00”。|  
   
 ### <a name="child-elements"></a>子元素  
- None  
+ 无  
   
 ### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|指定自定义绑定的安全选项。|  
-|[\<secureConversationBootstrap>](../../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md)|指定用于启动安全对话服务的默认值。|  
+|[\<security>](security-of-custombinding.md)|指定自定义绑定的安全选项。|  
+|[\<secureConversationBootstrap>](secureconversationbootstrap.md)|指定用于启动安全对话服务的默认值。|  
   
 ## <a name="remarks"></a>备注  
  这些设置不是从服务的安全策略派生而来的，从这个意义上说，它们是本地的。  
@@ -75,9 +75,9 @@ ms.locfileid: "61765773"
 - <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalClientSettings%2A>
 - <xref:System.ServiceModel.Channels.LocalClientSecuritySettings>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [绑定](../../../../../docs/framework/wcf/bindings.md)
-- [扩展绑定](../../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [自定义绑定](../../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
-- [如何：创建自定义绑定使用 SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
-- [自定义绑定安全性](../../../../../docs/framework/wcf/samples/custom-binding-security.md)
+- [绑定](../../../wcf/bindings.md)
+- [扩展绑定](../../../wcf/extending/extending-bindings.md)
+- [自定义绑定](../../../wcf/extending/custom-bindings.md)
+- [\<customBinding>](custombinding.md)
+- [如何：使用 SecurityBindingElement 创建自定义绑定](../../../wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [自定义绑定安全性](../../../wcf/samples/custom-binding-security.md)

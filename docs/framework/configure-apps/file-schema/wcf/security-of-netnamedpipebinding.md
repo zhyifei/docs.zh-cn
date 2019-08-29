@@ -2,20 +2,20 @@
 title: <security> 的 <netNamedPipeBinding>
 ms.date: 03/30/2017
 ms.assetid: bb3cb022-637e-49fd-92e8-6766038affa7
-ms.openlocfilehash: fa31dda3274c9768694bdf5232f31554899e1d82
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0996a98438dc344d96d640abced52ac99709adbf
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61670516"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69936677"
 ---
-# <a name="security-of-netnamedpipebinding"></a>\<安全 > 的\<netNamedPipeBinding >
+# <a name="security-of-netnamedpipebinding"></a>\<netNamedPipeBinding 的\<安全 > >
 定义绑定的安全设置。  
   
  \<system.ServiceModel>  
 \<bindings>  
 \<netNamedPipeBinding>  
-\<binding>  
+\<绑定 >  
 \<安全 >  
   
 ## <a name="syntax"></a>语法  
@@ -37,7 +37,7 @@ ms.locfileid: "61670516"
   
 |特性|描述|  
 |---------------|-----------------|  
-|mode|指定应用于此绑定的安全类型。 包括以下有效值：<br /><br /> -None:这将禁用安全性。<br />-传输：使用基础传输基于安全提供安全性。 可以通过此模式来控制保护级别。<br />-默认值为传输。 此属性的类型为 <xref:System.ServiceModel.NetNamedPipeSecurityMode>。|  
+|mode|指定应用于此绑定的安全类型。 包括以下有效值：<br /><br /> 内容这将禁用安全性。<br />Transport使用基础的基于传输的安全性提供安全性。 可以通过此模式来控制保护级别。<br />-默认值为 Transport。 此属性的类型为 <xref:System.ServiceModel.NetNamedPipeSecurityMode>。|  
   
 ### <a name="child-elements"></a>子元素  
   
@@ -49,7 +49,7 @@ ms.locfileid: "61670516"
   
 |元素|描述|  
 |-------------|-----------------|  
-|绑定|绑定元素[ \<netNamedPipeBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netnamedpipebinding.md)。|  
+|绑定|NetNamedPipeBinding > 的 binding 元素。 [ \<](netnamedpipebinding.md)|  
   
 ## <a name="see-also"></a>请参阅
 
@@ -57,9 +57,9 @@ ms.locfileid: "61670516"
 - <xref:System.ServiceModel.NetNamedPipeBinding.Security%2A>
 - <xref:System.ServiceModel.Configuration.NetNamedPipeBindingElement.Security%2A>
 - <xref:System.ServiceModel.Configuration.NetNamedPipeSecurityElement>
-- [保护服务和客户端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [选择凭据类型](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
-- [绑定](../../../../../docs/framework/wcf/bindings.md)
-- [配置系统提供的绑定](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [使用绑定配置服务和客户端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../../../docs/framework/misc/binding.md)
+- [保护服务和客户端的安全](../../../wcf/feature-details/securing-services-and-clients.md)
+- [选择凭据类型](../../../wcf/feature-details/selecting-a-credential-type.md)
+- [绑定](../../../wcf/bindings.md)
+- [配置系统提供的绑定](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [使用绑定配置服务和客户端](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../misc/binding.md)

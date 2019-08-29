@@ -2,12 +2,12 @@
 title: 工作流执行属性
 ms.date: 03/30/2017
 ms.assetid: a50e088e-3a45-4267-bd51-1a3e6c2d246d
-ms.openlocfilehash: 0f87e58a034cbc11565fc74347e6b4362952093c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 61bf53d9cab3ddefae3709958bd1e445fb4e69dd
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61669376"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69913614"
 ---
 # <a name="workflow-execution-properties"></a>工作流执行属性
 通过线程本地存储区 (TLS)，CLR 可为每个线程维护一个执行上下文。 此执行上下文管理已知的线程属性，例如，线程标识、环境事务、当前权限集以及用户定义的线程属性（如已命名的槽）。  
@@ -157,7 +157,7 @@ End default text.
 ```  
   
 > [!NOTE]
->  尽管没有显示在前面的输出中，但是会在控制台窗口中以指定颜色显示每个文本行。  
+> 尽管没有显示在前面的输出中，但是会在控制台窗口中以指定颜色显示每个文本行。  
   
  工作流执行属性可由自定义活动创作者使用，并且这些属性还提供用于处理活动（如 <xref:System.ServiceModel.Activities.CorrelationScope> 和 <xref:System.Activities.Statements.TransactionScope> 活动）的管理的机制。  
   

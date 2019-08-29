@@ -2,12 +2,12 @@
 title: 跟踪参与者
 ms.date: 03/30/2017
 ms.assetid: f13e360c-eeb7-4a49-98a0-8f6a52d64f68
-ms.openlocfilehash: 6c42712300baa6d7e12b9a29d94c925caaad5141
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 45a92c3ab710fc9bc86fbf269a4672f1d34737cc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61699796"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963676"
 ---
 # <a name="tracking-participants"></a>跟踪参与者
 跟踪参与者是扩展点，允许工作流开发人员访问 <xref:System.Activities.Tracking.InteropTrackingRecord.TrackingRecord%2A> 对象并对其进行处理。 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 包括一个标准跟踪参与者，可将跟踪记录作为 Windows 事件跟踪 (ETW) 事件写入。 如果这不能满足您的需求，您还可以编写自定义跟踪参与者。  
@@ -15,7 +15,7 @@ ms.locfileid: "61699796"
 ## <a name="tracking-participants"></a>跟踪参与者  
  跟踪基础结构允许对传出跟踪记录应用筛选器，以便参与者可订阅该记录的子集。 应用筛选器的机制是通过跟踪配置文件来实现的。  
   
- 中的 Windows Workflow Foundation (WF)[!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]提供跟踪参与者的跟踪记录写入 ETW 会话。 通过在配置文件中添加特定于跟踪的行为，可以对工作流服务配置参与者。 通过启用 ETW 跟踪参与者，可以在事件查看器中查看跟踪记录。 基于 ETW 的跟踪的 SDK 示例是一种很好的方法，可使用基于 ETW 的跟踪参与者来熟悉 WF 跟踪。  
+ 中[!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]的 Windows Workflow Foundation (WF) 提供了一个跟踪参与者, 该参与者将跟踪记录写入 ETW 会话。 通过在配置文件中添加特定于跟踪的行为，可以对工作流服务配置参与者。 通过启用 ETW 跟踪参与者，可以在事件查看器中查看跟踪记录。 基于 ETW 的跟踪的 SDK 示例是一种很好的方法，可使用基于 ETW 的跟踪参与者来熟悉 WF 跟踪。  
   
 ## <a name="etw-tracking-participant"></a>ETW 跟踪参与者  
  [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 包括一个 ETW 跟踪参与者，可将跟踪记录写入 ETW 会话。 它的实现方式非常高效，对应用程序的性能或对服务器的吞吐量影响非常小。 使用标准 ETW 跟踪参与者的一个优点是，它接收的跟踪记录可以在 Windows 事件查看器中与其他应用程序日志及系统日志一起查看。  
@@ -47,7 +47,7 @@ ms.locfileid: "61699796"
 ```  
   
 > [!NOTE]
->  如果未指定 `trackingProfile` 名称，例如只使用 `<etwTracking/>` 或 `<etwTracking profileName=""/>`，则使用 Machine.config 文件中随 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 安装的默认跟踪配置文件。  
+> 如果未指定 `trackingProfile` 名称，例如只使用 `<etwTracking/>` 或 `<etwTracking profileName=""/>`，则使用 Machine.config 文件中随 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 安装的默认跟踪配置文件。  
   
  在 Machine.config 文件中，默认跟踪配置文件订阅工作流实例记录和错误。  
   
@@ -60,14 +60,14 @@ ms.locfileid: "61699796"
   
  下图显示了通过 ETW 跟踪参与者的跟踪数据流。 跟踪数据到达 ETW 会话后，可以采用多种方法进行访问。 访问这些事件最有用的方法之一是通过事件查看器，这是一个常用的 Windows 工具，用于查看来自应用程序和服务的日志和跟踪。  
   
- ![跟踪通过 ETW 跟踪提供程序的数据的流。](./media/tracking-participants/tracking-data-event-tracing-windows-provider.gif)  
+ ![通过 ETW 跟踪提供程序跟踪数据的流。](./media/tracking-participants/tracking-data-event-tracing-windows-provider.gif)  
   
 ## <a name="tracking-participant-event-data"></a>跟踪参与者事件数据  
- 跟踪参与者将跟踪的事件数据序列化为 ETW 会话，格式为每个跟踪记录一个事件。  标识事件所使用的 ID 在从 100 到 199 的范围内。 有关跟踪事件的定义记录发出的跟踪参与者，请参阅[跟踪事件参考](tracking-events-reference.md)主题。  
+ 跟踪参与者将跟踪的事件数据序列化为 ETW 会话，格式为每个跟踪记录一个事件。  标识事件所使用的 ID 在从 100 到 199 的范围内。 有关跟踪参与者发出的跟踪事件记录的定义, 请参阅[跟踪事件参考](tracking-events-reference.md)主题。  
   
  ETW 事件的大小受到 ETW 缓冲区大小或 ETW 事件最大负载的限制，以二者中较小的值为限。 如果事件的大小超出其中任何一个 ETW 限制，则事件将被截断，其内容将以任意方式移除。 不可有选择性地移除变量、参数、批注和自定义数据。 发生截断时，所有这些内容都将被截断，无论导致事件大小超出 ETW 限制的是哪个值。  移除的数据用 `<item>..<item>` 代替。  
   
- 变量、 参数中的复杂类型和自定义数据项都序列化为 ETW 事件记录使用[NetDataContractSerializer 类](https://go.microsoft.com/fwlink/?LinkId=177537)。 此类在序列化的 XML 流中包括 CLR 类型的信息。  
+ 变量、参数和自定义数据项中的复杂类型使用[NetDataContractSerializer 类](https://go.microsoft.com/fwlink/?LinkId=177537)序列化为 ETW 事件记录。 此类在序列化的 XML 流中包括 CLR 类型的信息。  
   
  由于 ETW 限制而截断负载数据可导致向同一 ETW 会话发送重复的跟踪记录。 如果多个会话在侦听事件，而且这些会话对事件有不同的负载限制，则会发生上述情况。  
   
@@ -77,17 +77,17 @@ ms.locfileid: "61699796"
  由 ETW 跟踪参与者写入 ETW 会话的事件可通过事件查看器进行访问（用于使用默认提供程序 ID 时）。 这可以快速查看工作流已发出的跟踪记录。  
   
 > [!NOTE]
->  向 ETW 会话发出的跟踪记录事件使用从 100 到 199 范围内的事件 ID。  
+> 向 ETW 会话发出的跟踪记录事件使用从 100 到 199 范围内的事件 ID。  
   
 #### <a name="to-enable-viewing-the-tracking-records-in-event-viewer"></a>启用在事件查看器中查看跟踪记录  
   
 1. 启动事件查看器 (EVENTVWR.EXE)  
   
-2. 选择**事件查看器、 应用程序和服务日志 Microsoft，Windows，应用程序服务器-应用程序**。  
+2. 选择 "**事件查看器、应用程序和服务日志"、"Microsoft"、"Windows"、"应用程序服务器"** 。  
   
-3. 右击并确保**视图，显示分析和调试日志**处于选中状态。 如果未选中，请选中它以使选中标记显示在它旁边。 这将显示**Analytic**，**性能**，并**调试**日志。  
+3. 右键单击并确保选中 **"查看、显示分析和调试日志"** 。 如果未选中，请选中它以使选中标记显示在它旁边。 这会显示 "**分析**"、"**性能**" 和 "**调试**" 日志。  
   
-4. 右键单击**Analytic**日志，然后选择**启用日志**。 该日志将存在于 %SystemRoot%\System32\Winevt\Logs\Microsoft-Windows-Application Server-Applications%4Analytic.etl 文件中。  
+4. 右键单击**分析**日志, 然后选择 "**启用日志**"。 该日志将存在于 %SystemRoot%\System32\Winevt\Logs\Microsoft-Windows-Application Server-Applications%4Analytic.etl 文件中。  
   
 ## <a name="custom-tracking-participant"></a>自定义跟踪参与者  
  跟踪参与者 API 允许以用户提供的跟踪参与者扩展跟踪运行时，该用户提供的跟踪参与者可包括用于对工作流运行时发出的跟踪记录进行处理的自定义逻辑。 若要编写自定义跟踪参与者，开发人员必须对 `Track` 类实现 <xref:System.Activities.Tracking.TrackingParticipant> 方法。 此方法在工作流运行时发出跟踪记录时调用。  
@@ -143,4 +143,4 @@ instance.Extensions.Add(new ConsoleTrackingParticipant());
 ## <a name="see-also"></a>请参阅
 
 - [Windows Server App Fabric 监视](https://go.microsoft.com/fwlink/?LinkId=201273)
-- [使用 App Fabric 监视应用程序](https://go.microsoft.com/fwlink/?LinkId=201275)
+- [用 App Fabric 监视应用程序](https://go.microsoft.com/fwlink/?LinkId=201275)

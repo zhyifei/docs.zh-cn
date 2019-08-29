@@ -8,12 +8,12 @@ helpviewer_keywords:
 - examples [Visual Basic], reading text files
 - text files [Visual Basic], reading
 ms.assetid: 735fe9d7-0f7a-4185-ba02-f35e580ec4b8
-ms.openlocfilehash: 1d3fbe3ab8ff59d73dc5ec4f33e4dde2437bcbec
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f830a0794f67c0f8f7aca24a181e323317901923
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623332"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69955954"
 ---
 # <a name="how-to-read-from-text-files-in-visual-basic"></a>如何：在 Visual Basic 中读取文本文件
 通过 <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.ReadAllText%2A> 对象的 `My.Computer.FileSystem` 方法，可以读取文本文件。 如果文件的内容使用类似 ASCII 或 UTF-8 的编码，则可以指定文件编码。  
@@ -21,7 +21,7 @@ ms.locfileid: "64623332"
  若要读取包含扩展字符的文件，则需要指定文件编码。  
   
 > [!NOTE]
->  若要以一次读取一行文本的方式读取文件，请使用 <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.OpenTextFileReader%2A> 对象的 `My.Computer.FileSystem` 方法。 `OpenTextFileReader` 方法返回 <xref:System.IO.StreamReader> 对象。 可以使用 <xref:System.IO.StreamReader.ReadLine%2A> 对象的 `StreamReader` 方法以一次读取一行的方式读取文件。 可以使用 <xref:System.IO.StreamReader.EndOfStream%2A> 对象的 `StreamReader` 方法测试文件的结尾。  
+> 若要以一次读取一行文本的方式读取文件，请使用 <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.OpenTextFileReader%2A> 对象的 `My.Computer.FileSystem` 方法。 `OpenTextFileReader` 方法返回 <xref:System.IO.StreamReader> 对象。 可以使用 <xref:System.IO.StreamReader.ReadLine%2A> 对象的 `StreamReader` 方法以一次读取一行的方式读取文件。 可以使用 <xref:System.IO.StreamReader.EndOfStream%2A> 对象的 `StreamReader` 方法测试文件的结尾。  
   
 ### <a name="to-read-from-a-text-file"></a>读取文本文件  
   

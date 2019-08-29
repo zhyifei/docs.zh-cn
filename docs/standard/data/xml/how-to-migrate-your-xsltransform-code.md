@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 910beb2f-cfb3-4e8e-9936-f7e0c5f4064a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 67cf4636a8b947bc6ad0ce0475c53bc25cd0f678
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7022a0f55cd7994141148bc6b2faefb10bfea416
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647930"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966982"
 ---
 # <a name="how-to-migrate-your-xsltransform-code"></a>如何：迁移 XslTransform 代码
 业已设计的新 XSLT 类与现有类非常相似。 <xref:System.Xml.Xsl.XslCompiledTransform> 类替换 <xref:System.Xml.Xsl.XslTransform> 类。 样式表使用 <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> 方法进行编译。 使用 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> 方法执行转换。 下面的过程演示常见 XSLT 任务，并比较使用 <xref:System.Xml.Xsl.XslTransform> 类和使用 <xref:System.Xml.Xsl.XslCompiledTransform> 类的代码。  
@@ -76,7 +76,7 @@ ms.locfileid: "64647930"
 - 使用 <xref:System.Xml.Xsl.XslCompiledTransform> 类编码。  
   
     > [!NOTE]
-    >  <xref:System.Xml.Xsl.XslCompiledTransform> 类没有以 <xref:System.Xml.XmlReader> 对象形式返回 XSLT 转换结果的方法。 不过，您可以将结果输出到 XML 文件并将该 XML 文件加载到其他对象。  
+    > <xref:System.Xml.Xsl.XslCompiledTransform> 类没有以 <xref:System.Xml.XmlReader> 对象形式返回 XSLT 转换结果的方法。 不过，您可以将结果输出到 XML 文件并将该 XML 文件加载到其他对象。  
   
      [!code-csharp[XML_Migration#20](../../../../samples/snippets/csharp/VS_Snippets_Data/XML_Migration/CS/migration.cs#20)]
      [!code-vb[XML_Migration#20](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XML_Migration/VB/migration.vb#20)]  

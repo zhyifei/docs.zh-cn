@@ -2,12 +2,12 @@
 title: 形参和实参
 description: 了解用于F#定义参数和将参数传递给函数、方法和属性的语言支持。
 ms.date: 05/16/2016
-ms.openlocfilehash: 561cefb1d437b2f38f6ee4ca37cd955235ca06fa
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 67e82d031c4b22bc30a6f278d9698298ccff2e21
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627317"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106596"
 ---
 # <a name="parameters-and-arguments"></a>形参和实参
 
@@ -163,9 +163,9 @@ type C =
 
 按引用F#传递值涉及[byref](byrefs.md), 它们是托管指针类型。 使用哪种类型的指南如下:
 
-* 如果`inref<'T>`只需要读取指针, 请使用。
-* 如果`outref<'T>`只需要写入指针, 请使用。
-* 如果`byref<'T>`需要读取和写入指针, 请使用。
+- 如果`inref<'T>`只需要读取指针, 请使用。
+- 如果`outref<'T>`只需要写入指针, 请使用。
+- 如果`byref<'T>`需要读取和写入指针, 请使用。
 
 ```fsharp
 let example1 (x: inref<int>) = printfn "It's %d" x

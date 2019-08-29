@@ -7,18 +7,18 @@ dev_langs:
 helpviewer_keywords:
 - ListView controls [WPF], MouseDoubleClick event
 ms.assetid: 81b39369-655a-4585-ac58-4640e5bb8fed
-ms.openlocfilehash: 443e5c620ef5bf240d3e317f0234aac0b29b456f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7e51c810a2e1e4bf4157aa1311255c5547021b60
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61770989"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962066"
 ---
 # <a name="how-to-handle-the-mousedoubleclick-event-for-each-item-in-a-listview"></a>如何：处理 ListView 中每一项的 MouseDoubleClick 事件
-若要处理的事件中的项<xref:System.Windows.Controls.ListView>，需要将事件处理程序添加到每个<xref:System.Windows.Controls.ListViewItem>。 当<xref:System.Windows.Controls.ListView>绑定到数据源，您无需显式创建<xref:System.Windows.Controls.ListViewItem>，可以通过添加处理每个项的事件，但<xref:System.Windows.EventSetter>样式的<xref:System.Windows.Controls.ListViewItem>。  
+若要在中处理项的事件<xref:System.Windows.Controls.ListView>, 需要向每个<xref:System.Windows.Controls.ListViewItem>中添加一个事件处理程序。 当绑定到数据源时, 您不会显式<xref:System.Windows.Controls.ListViewItem>创建, 但您可以通过将添加<xref:System.Windows.EventSetter>到的样式<xref:System.Windows.Controls.ListViewItem>来处理每个项的事件。 <xref:System.Windows.Controls.ListView>  
   
 ## <a name="example"></a>示例  
- 下面的示例创建数据绑定<xref:System.Windows.Controls.ListView>，并创建<xref:System.Windows.Style>若要将事件处理程序添加到每个<xref:System.Windows.Controls.ListViewItem>。  
+ 下面的示例创建一个数据绑定<xref:System.Windows.Controls.ListView> , 并创建一个<xref:System.Windows.Style>来向每个<xref:System.Windows.Controls.ListViewItem>中添加一个事件处理程序。  
   
  [!code-xaml[ListViewHowTos#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewHowTos/CSharp/Window1.xaml#1)]  
 [!code-xaml[ListViewHowTos#5](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewHowTos/CSharp/Window1.xaml#5)]  
@@ -30,7 +30,7 @@ ms.locfileid: "61770989"
  [!code-vb[ListViewHowTos#6](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ListViewHowTos/VisualBasic/Window1.xaml.vb#6)]  
   
 > [!NOTE]
->  尽管最常见的绑定<xref:System.Windows.Controls.ListView>到数据源，可以使用一种样式，将事件处理程序添加到每个<xref:System.Windows.Controls.ListViewItem>在非数据绑定到的<xref:System.Windows.Controls.ListView>无论是否显式创建<xref:System.Windows.Controls.ListViewItem>。  有关详细信息创建显式和隐式<xref:System.Windows.Controls.ListViewItem>控件，请参阅<xref:System.Windows.Controls.ItemsControl>。  
+> 虽然将绑定<xref:System.Windows.Controls.ListView>到数据源最常见, 但你可以使用样式将事件处理程序添加到非数据<xref:System.Windows.Controls.ListView>绑定中的<xref:System.Windows.Controls.ListViewItem>每个, 无论你是否显式创建。 <xref:System.Windows.Controls.ListViewItem>  有关显式和隐式创建<xref:System.Windows.Controls.ListViewItem>的控件的详细信息, 请参阅。 <xref:System.Windows.Controls.ItemsControl>  
   
 ## <a name="see-also"></a>请参阅
 

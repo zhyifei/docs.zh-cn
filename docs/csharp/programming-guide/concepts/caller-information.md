@@ -2,12 +2,12 @@
 title: 调用方信息 (C#)
 ms.date: 07/20/2015
 ms.assetid: ffad3d24-2fb7-4641-9124-53b5bc91d339
-ms.openlocfilehash: 4a0e4d6ecad1863832a33ba91485d0c12675cd57
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 4b2c34945b47db01b0e655f68f92e4dae7445c2c
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50185269"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595348"
 ---
 # <a name="caller-information-c"></a>调用方信息 (C#)
 
@@ -15,7 +15,7 @@ ms.locfileid: "50185269"
 
 若要获取此信息，可以使用应用于可选参数的特性，每个特性都具有默认值。 下表列出在 <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> 命名空间中定义的调用方信息特性：
 
-|特性|描述|类型|
+|特性|说明|类型|
 |---|---|---|
 |<xref:System.Runtime.CompilerServices.CallerFilePathAttribute>|包含调用方的源文件的完整路径。 这是编译时的文件路径。|`String`|
 |<xref:System.Runtime.CompilerServices.CallerLineNumberAttribute>|源文件中调用方法的行号。|`Integer`|
@@ -61,7 +61,7 @@ public void TraceMessage(string message,
 
 ### <a name="member-names"></a>成员名称
 
-可以使用 `CallerMemberName` 特性来避免将成员名称指定为所调用的方法的 `String` 参数。 通过使用这种技术，可以避免“重命名重构”不更改 `String` 值的问题。 此好处对于以下任务特别有用：
+可以使用 `CallerMemberName` 特性来避免将成员名称指定为所调用的方法的 `String` 参数。 通过使用这种技术，可以避免“重命名重构”  不更改 `String` 值的问题。 此好处对于以下任务特别有用：
 
 - 使用跟踪和诊断例程。
 
@@ -81,7 +81,7 @@ public void TraceMessage(string message,
 
 ## <a name="see-also"></a>请参阅
 
-- [特性 (C#)](../../../csharp/programming-guide/concepts/attributes/index.md)
-- [通用特性 (C#)](../../../csharp/programming-guide/concepts/attributes/common-attributes.md)
-- [命名参数和可选参数](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)
-- [编程概念 (C#)](../../../csharp/programming-guide/concepts/index.md)
+- [特性 (C#)](./attributes/index.md)
+- [通用特性 (C#)](./attributes/common-attributes.md)
+- [命名参数和可选参数](../classes-and-structs/named-and-optional-arguments.md)
+- [编程概念 (C#)](./index.md)

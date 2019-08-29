@@ -2,12 +2,12 @@
 title: 215 - MessageReceivedByTransport
 ms.date: 03/30/2017
 ms.assetid: bb32aa60-5207-4711-9f08-110e8ac327e5
-ms.openlocfilehash: a8ba90b88ef8dbe3c8651bc565da61aae16a0a4a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: aa1ad30526aa65501e5d9875d3877631ca00879b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61781831"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964189"
 ---
 # <a name="215---messagereceivedbytransport"></a>215 - MessageReceivedByTransport
 ## <a name="properties"></a>属性  
@@ -16,14 +16,14 @@ ms.locfileid: "61781831"
 |-|-|  
 |Id|215|  
 |关键字|疑难解答，ServiceModel|  
-|级别|信息|  
+|级别|Information|  
 |通道|Microsoft-Windows-应用程序服务器-应用程序/分析|  
   
 ## <a name="description"></a>描述  
  基于 TCP 的传输接收消息时将发生此事件。 请注意，在传输级别上，单个操作可在客户端和服务之间交换多条消息。 这可能是由于基础结构行为的特点，在此方面，安全性是一个很好的例子。 因此，发出的 `MessageReceivedByTransport` 事件数目根据服务绑定及其配置而变化。  
   
 > [!NOTE]
->  不会为单向传输发出此事件。  
+> 不会为单向传输发出此事件。  
   
 ## <a name="message"></a>消息  
  传输从“%1”收到了一条消息。  
@@ -33,5 +33,5 @@ ms.locfileid: "61781831"
 |数据项名称|数据项类型|描述|  
 |--------------------|--------------------|-----------------|  
 |侦听地址|`xs:string`|接收了消息的地址。|  
-|HostReference|`xs:string`|对于 Web 承载的服务，此字段唯一标识 Web 层次结构中的服务。 其格式定义为网站名称应用程序虚拟路径&#124;服务虚拟路径&#124;ServiceName。 示例:默认网站/CalculatorApplication&#124;/CalculatorService.svc&#124;CalculatorService。|  
+|HostReference|`xs:string`|对于 Web 承载的服务，此字段唯一标识 Web 层次结构中的服务。 其格式定义为 "网站名称应用程序虚拟路径&#124;服务虚拟路径&#124;ServiceName"。 示例:"Default Web Site//Calculatorapplication&#124;/CalculatorService.svc&#124;CalculatorService"。|  
 |应用程序域|`xs:string`|由 AppDomain.CurrentDomain.FriendlyName 返回的字符串。|

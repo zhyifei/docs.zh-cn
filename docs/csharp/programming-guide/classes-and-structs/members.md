@@ -6,12 +6,12 @@ helpviewer_keywords:
 - types [C#], nested types
 - C# language, type members
 ms.assetid: 4a30a4ab-d690-4936-9124-92ce9448665a
-ms.openlocfilehash: affe2752712bfd40516861abf84bdee11528168c
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: acd992cba67a79f2a63c28c1d9d9ac70e4f4d029
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67609492"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922159"
 ---
 # <a name="members-c-programming-guide"></a>成员（C# 编程指南）
 
@@ -21,27 +21,18 @@ ms.locfileid: "67609492"
   
 |成员|说明|  
 |------------|-----------------|  
-|[字段](../../../csharp/programming-guide/classes-and-structs/fields.md)|字段是在类范围声明的变量。 字段可以是内置数值类型或其他类的实例。 例如，日历类可能具有一个包含当前日期的字段。|  
-|[常量](../../../csharp/programming-guide/classes-and-structs/constants.md)|常量是在编译时设置其值并且不能更改其值的字段。|  
-|[属性](../../../csharp/programming-guide/classes-and-structs/properties.md)|属性是类中可以像类中的字段一样访问的方法。 属性可以为类字段提供保护，以避免字段在对象不知道的情况下被更改。|  
-|[方法](../../../csharp/programming-guide/classes-and-structs/methods.md)|方法定义类可以执行的操作。 方法可接受提供输入数据的参数，并可通过参数返回输出数据。 方法还可以不使用参数而直接返回值。|  
-|[事件](../../../csharp/programming-guide/events/index.md)|事件向其他对象提供有关发生的事情（如单击按钮或成功完成某个方法）的通知。 事件是使用委托定义和触发的。|  
-|[运算符](../../../csharp/programming-guide/statements-expressions-operators/operators.md)|重载运算符被视为类型成员。 重载运算符时，将其定义为类型中的公共静态方法。 有关详细信息，请参阅[运算符重载](../../../csharp/language-reference/operators/operator-overloading.md)。|  
-|[索引器](../../../csharp/programming-guide/indexers/index.md)|使用索引器可以用类似于数组的方式为对象建立索引。|  
-|[构造函数](../../../csharp/programming-guide/classes-and-structs/constructors.md)|构造函数是首次创建对象时调用的方法。 它们通常用于初始化对象的数据。|  
-|[终结器](../../../csharp/programming-guide/classes-and-structs/destructors.md)|C# 中很少使用终结器。 终结器是当对象即将从内存中移除时由运行时执行引擎调用的方法。 它们通常用来确保任何必须释放的资源都得到适当的处理。|  
-|[嵌套类型](../../../csharp/programming-guide/classes-and-structs/nested-types.md)|嵌套类型是在其他类型中声明的类型。 嵌套类型通常用于描述仅由包含它们的类型使用的对象。|  
+|[字段](./fields.md)|字段是在类范围声明的变量。 字段可以是内置数值类型或其他类的实例。 例如，日历类可能具有一个包含当前日期的字段。|  
+|[常量](./constants.md)|常量是在编译时设置其值并且不能更改其值的字段。|  
+|[属性](./properties.md)|属性是类中可以像类中的字段一样访问的方法。 属性可以为类字段提供保护，以避免字段在对象不知道的情况下被更改。|  
+|[方法](./methods.md)|方法定义类可以执行的操作。 方法可接受提供输入数据的参数，并可通过参数返回输出数据。 方法还可以不使用参数而直接返回值。|  
+|[事件](../events/index.md)|事件向其他对象提供有关发生的事情（如单击按钮或成功完成某个方法）的通知。 事件是使用委托定义和触发的。|  
+|[运算符](../../language-reference/operators/index.md)|重载运算符被视为类型成员。 重载运算符时，将其定义为类型中的公共静态方法。 有关详细信息，请参阅[运算符重载](../../language-reference/operators/operator-overloading.md)。|  
+|[索引器](../indexers/index.md)|使用索引器可以用类似于数组的方式为对象建立索引。|  
+|[构造函数](./constructors.md)|构造函数是首次创建对象时调用的方法。 它们通常用于初始化对象的数据。|  
+|[终结器](./destructors.md)|C# 中很少使用终结器。 终结器是当对象即将从内存中移除时由运行时执行引擎调用的方法。 它们通常用来确保任何必须释放的资源都得到适当的处理。|  
+|[嵌套类型](./nested-types.md)|嵌套类型是在其他类型中声明的类型。 嵌套类型通常用于描述仅由包含它们的类型使用的对象。|  
   
 ## <a name="see-also"></a>请参阅
 
-- [C# 编程指南](../../../csharp/programming-guide/index.md)
-- [类](../../../csharp/programming-guide/classes-and-structs/classes.md)
-- [方法](../../../csharp/programming-guide/classes-and-structs/methods.md)
-- [构造函数](../../../csharp/programming-guide/classes-and-structs/constructors.md)
-- [终结器](../../../csharp/programming-guide/classes-and-structs/destructors.md)
-- [属性](../../../csharp/programming-guide/classes-and-structs/properties.md)
-- [字段](../../../csharp/programming-guide/classes-and-structs/fields.md)
-- [索引器](../../../csharp/programming-guide/indexers/index.md)
-- [事件](../../../csharp/programming-guide/events/index.md)
-- [嵌套类型](../../../csharp/programming-guide/classes-and-structs/nested-types.md)
-- [运算符](../../../csharp/programming-guide/statements-expressions-operators/operators.md)
+- [C# 编程指南](../index.md)
+- [类](./classes.md)

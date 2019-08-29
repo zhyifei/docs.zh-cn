@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9074201cb56ad9e6c4ddadc8468d2ceadbafcb75
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4af3d73a4c45654d1d40ef2fbf44a0e2b3e1bf32
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67749310"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69913718"
 ---
 # <a name="ihosttaskmanagerswitchtotask-method"></a>IHostTaskManager::SwitchToTask 方法
-通知主机应切换当前任务。  
+通知宿主应切换到当前任务。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,31 +37,31 @@ HRESULT SwitchToTask (
   
 ## <a name="parameters"></a>参数  
  `option`  
- [in]之一[WAIT_OPTION](../../../../docs/framework/unmanaged-api/hosting/wait-option-enumeration.md)枚举值，它指示主机时应采取的操作的请求的操作块。  
+ 中[WAIT_OPTION](../../../../docs/framework/unmanaged-api/hosting/wait-option-enumeration.md)枚举值之一, 指示请求的操作阻止时主机应执行的操作。  
   
 ## <a name="return-value"></a>返回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|`SwitchToTask` 已成功返回。|  
-|HOST_E_CLRNOTAVAILABLE|公共语言运行时 (CLR) 尚未加载到进程中，或处于不能运行托管的代码或已成功处理调用的状态。|  
-|HOST_E_TIMEOUT|呼叫已超时。|  
+|S_OK|`SwitchToTask`已成功返回。|  
+|HOST_E_CLRNOTAVAILABLE|公共语言运行时 (CLR) 未加载到进程中, 或 CLR 处于无法运行托管代码或成功处理调用的状态。|  
+|HOST_E_TIMEOUT|调用超时。|  
 |HOST_E_NOT_OWNER|调用方不拥有该锁。|  
-|HOST_E_ABANDONED|事件已取消时被阻塞的线程或纤程正在等待它。|  
-|E_FAIL|发生未知的灾难性故障。 如果某方法返回 E_FAIL，CLR 不再在进程内可用。 对托管方法的后续调用返回 HOST_E_CLRNOTAVAILABLE。|  
+|HOST_E_ABANDONED|已阻止的线程或纤程正在等待某个事件时, 该事件被取消。|  
+|E_FAIL|发生未知的灾难性故障。 当方法返回 E_FAIL 时, CLR 在该进程内将不再可用。 对宿主方法的后续调用会返回 HOST_E_CLRNOTAVAILABLE。|  
   
 ## <a name="remarks"></a>备注  
- 主机可以在作为所需的或所需的另一个任务切换。  
+ 宿主可以根据需要切换到其他任务。  
   
 > [!NOTE]
->  `SwitchToTask` 未指定主机应切换到; 的任务它指定只应从切换任务。  
+> `SwitchToTask`不指定宿主应切换到的任务;它仅指定应从其切换的任务。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
   
- **库：** 包含为 MSCorEE.dll 中的资源  
+ **类库**作为资源包括在 Mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

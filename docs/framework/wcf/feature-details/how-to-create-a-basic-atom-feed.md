@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6e0cacc1-9b11-4665-adb7-577a62626fd6
-ms.openlocfilehash: 11aa71f82af5a1bd764a4cc9e3514a795d559fc2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 82095f397195fbf333bab8d043da18114e2a5dba
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62000852"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968474"
 ---
 # <a name="how-to-create-a-basic-atom-feed"></a>如何：创建基本 Atom 源
-Windows Communication Foundation (WCF) 可以创建公开联合源的服务。 本主题讨论如何创建公开 Atom 联合源的联合服务。  
+Windows Communication Foundation (WCF) 允许您创建公开联合源的服务。 本主题讨论如何创建公开 Atom 联合源的联合服务。  
   
 ### <a name="to-create-a-basic-syndication-service"></a>创建基本联合服务  
   
@@ -23,7 +23,7 @@ Windows Communication Foundation (WCF) 可以创建公开联合源的服务。 �
      [!code-vb[htAtomBasic#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htatombasic/vb/program.vb#0)]  
   
     > [!NOTE]
-    >  应用 <xref:System.ServiceModel.Web.WebGetAttribute> 的所有服务操作将映射到 HTTP GET 请求。 若要将操作映射到不同的 HTTP 方法，请改用 <xref:System.ServiceModel.Web.WebInvokeAttribute>。 有关详细信息，请参阅[如何：创建基本 WCF Web HTTP 服务](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md)。  
+    > 应用 <xref:System.ServiceModel.Web.WebGetAttribute> 的所有服务操作将映射到 HTTP GET 请求。 若要将操作映射到不同的 HTTP 方法，请改用 <xref:System.ServiceModel.Web.WebInvokeAttribute>。 有关详细信息，请参阅[如何：创建基本 WCF Web HTTP 服务](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md)。  
   
 2. 实现服务协定。  
   
@@ -64,9 +64,9 @@ Windows Communication Foundation (WCF) 可以创建公开联合源的服务。 �
   
 ### <a name="to-call-getblog-with-an-http-get"></a>使用 HTTP GET 调用 GetBlog()  
   
-1. 打开 Internet Explorer 中，键入以下 URL，并按 ENTER: `http://localhost:8000/BlogService/GetBlog`  
+1. 打开 Internet Explorer, 键入以下 URL, 然后按 ENTER:`http://localhost:8000/BlogService/GetBlog`  
   
-     URL 包含服务的基址 (`http://localhost:8000/BlogService`)，终结点和要调用的服务操作的相对地址。  
+     URL 包含服务的基址 (`http://localhost:8000/BlogService`)、终结点的相对地址以及要调用的服务操作。  
   
 ### <a name="to-call-getblog-from-code"></a>从代码中调用 GetBlog()  
   

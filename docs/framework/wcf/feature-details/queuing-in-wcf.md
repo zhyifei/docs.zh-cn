@@ -2,35 +2,35 @@
 title: 在 WCF 中排队
 ms.date: 03/30/2017
 ms.assetid: e98d76ba-1acf-42cd-b137-0f8214661112
-ms.openlocfilehash: c390970d66e442eb413d238691896608dcf27e03
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 27c92b0f728b909de16a059485a38ff7fb0fb765
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64643500"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69913394"
 ---
 # <a name="queuing-in-wcf"></a>在 WCF 中排队
-本部分介绍如何使用 Windows Communication Foundation (WCF) 中的排队的通信。  
+本部分介绍如何在 Windows Communication Foundation (WCF) 中使用排队的通信。  
   
 ## <a name="queues-as-a-wcf-transport-binding"></a>作为 WCF 传输绑定进行排队  
- 在 WCF 中，协定指定要交换的内容。 协定是业务相关或应用程序特定的消息交换。 用于交换消息的机制（或“方式”）在绑定中指定。 WCF 中的绑定封装消息交换的详细信息。 它们为用户公开配置旋钮以控制绑定所表示的传输或协议的各个方面。 在 WCF 中排队都被视为其他任何传输绑定，这是很多排队应用程序一大优势。 当今，很多排队应用程序的编写方式不同于其他远程过程调用 (RPC) 样式的分布式应用程序，这使得遵循和维护更加困难。 使用 WCF，编写分布式应用程序的样式非常相似，使其更易于遵循和维护。 而且，将交换机制从业务逻辑中单独分离出来后，就可以更为轻松地配置传输或对其进行更改，而不会影响应用程序特定的代码。 下图演示将 MSMQ 用作传输的 WCF 服务和客户端的结构。  
+ 在 WCF 中, 协定指定正在交换的内容。 协定是业务相关或应用程序特定的消息交换。 用于交换消息的机制（或“方式”）在绑定中指定。 WCF 中的绑定封装消息交换的详细信息。 它们为用户公开配置旋钮以控制绑定所表示的传输或协议的各个方面。 WCF 中的队列被视为任何其他传输绑定, 这对于许多队列应用程序而言都是一个很大的优势。 当今，很多排队应用程序的编写方式不同于其他远程过程调用 (RPC) 样式的分布式应用程序，这使得遵循和维护更加困难。 使用 WCF, 编写分布式应用程序的样式大致相同, 使其更易于理解和维护。 而且，将交换机制从业务逻辑中单独分离出来后，就可以更为轻松地配置传输或对其进行更改，而不会影响应用程序特定的代码。 下图演示将 MSMQ 用作传输的 WCF 服务和客户端的结构。  
   
- ![排队应用程序关系图](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "分布式队列图")  
+ ![排队应用程序关系图](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "分布式队列-图表")  
   
- 如前图所示，客户端和服务必须仅定义应用程序语义，即协定及实现。 服务用首选设置来配置排队绑定。 客户端使用[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)生成 WCF 客户端到服务并生成描述用于将消息发送到服务的绑定的配置文件。 因此，若要发送排队的消息，客户端实例化 WCF 客户端并调用其上的操作。 这会导致将消息发送到传输队列，然后再传输到目标队列。 排队通信的所有复杂程度都将从发送和接收消息的应用程序中隐藏。  
+ 如前图所示，客户端和服务必须仅定义应用程序语义，即协定及实现。 服务用首选设置来配置排队绑定。 客户端使用配置的[元数据实用工具 (svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)为服务生成 WCF 客户端, 并生成一个配置文件, 用于描述用于向服务发送消息的绑定。 因此, 若要发送排队消息, 客户端将实例化 WCF 客户端, 并对其调用操作。 这会导致将消息发送到传输队列，然后再传输到目标队列。 排队通信的所有复杂程度都将从发送和接收消息的应用程序中隐藏。  
   
- 有关 WCF 中排队绑定需要注意的问题包括：  
+ 有关 WCF 中排队绑定的注意事项包括:  
   
-- 必须单向操作，因为默认排队绑定 WCF 中的所有服务不支持使用队列的双工通信。 双向通信示例 ([双向通信](../../../../docs/framework/wcf/samples/two-way-communication.md)) 说明了如何使用两个单向协定来实现使用队列的双工通信。  
+- 所有服务操作都必须是单向的, 因为 WCF 中的默认排队绑定不支持使用队列进行双工通信。 双向通信示例 (双向[通信](../../../../docs/framework/wcf/samples/two-way-communication.md)) 演示了如何使用 2 1 的协定来实现使用队列的双工通信。  
   
-- 若要生成 WCF 客户端使用元数据交换需要服务上的其他 HTTP 终结点，以便它可以查询直接生成 WCF 客户端并获取用于适当配置排队的通信的绑定信息。  
+- 若要使用元数据交换生成 WCF 客户端, 需要在服务上添加一个 HTTP 终结点, 以便可以直接查询该终结点以生成 WCF 客户端, 并获取绑定信息以适当地配置排队通信。  
   
-- 根据排队绑定，WCF 之外额外的配置是必需的。 例如，<xref:System.ServiceModel.NetMsmqBinding>随附于 WCF 的类需要配置绑定，以及按最小方式配置消息队列 (MSMQ)。  
+- 根据排队绑定, 需要在 WCF 之外进行额外配置。 例如, <xref:System.ServiceModel.NetMsmqBinding> WCF 附带的类要求你配置绑定, 并配置消息队列 (MSMQ) 的最低要求。  
   
- 以下部分介绍的特定排队的绑定附带的 WCF 中，基于 MSMQ。  
+ 以下各节介绍 WCF 附带的、基于 MSMQ 的特定排队绑定。  
   
 ### <a name="msmq"></a>MSMQ  
- WCF 中的排队的传输使用 MSMQ 进行排队通信。  
+ WCF 中的排队传输使用 MSMQ 进行排队的通信。  
   
  MSMQ 作为可选组件随 Windows 提供，并作为 NT 服务运行。 它在传输队列中捕获传输消息，并在目标队列中捕获传递消息。 MSMQ 队列管理器实现可靠的消息传输协议，以使消息不会在传输过程中丢失。 此协议可以是本机的，也可以是基于 SOAP 的，如 SOAP 可靠消息协议 (SRMP)。  
   
@@ -38,61 +38,61 @@ ms.locfileid: "64643500"
   
  也可以使用向 Active Directory 目录服务注册的 Windows 标识对 MSMQ 队列进行保护。 安装 MSMQ 时，可以安装 Active Directory 集成，这要求计算机加入 Windows 域网络。  
   
- 有关 MSMQ 的详细信息，请参阅[安装消息队列 (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)。  
+ 有关 MSMQ 的详细信息, 请参阅[安装消息队列 (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)。  
   
 ### <a name="netmsmqbinding"></a>NetMsmqBinding  
- [ \<NetMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md)是 WCF 提供了用于两个 WCF 终结点使用 MSMQ 进行通信的排队的绑定。 因此，该绑定将公开特定于 MSMQ 的属性。 然而，并非所有 MSMQ 功能和属性都在 `NetMsmqBinding` 中公开。 紧凑 `NetMsmqBinding` 设计为具有一组大多数客户都认为足够的最佳功能。  
+ NetMsmqBinding > 是排队的绑定, wcf 提供两个 wcf 终结点才能使用 MSMQ 进行通信。 [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md) 因此，该绑定将公开特定于 MSMQ 的属性。 然而，并非所有 MSMQ 功能和属性都在 `NetMsmqBinding` 中公开。 紧凑 `NetMsmqBinding` 设计为具有一组大多数客户都认为足够的最佳功能。  
   
- `NetMsmqBinding` 以绑定上的属性形式阐明了迄今为止所讨论的核心队列概念。 而这些属性又向 MSMQ 传达如何传输和传递消息。 后面几节将讨论属性类别。 有关详细信息，请参阅更完整地描述特定属性的概念性主题。  
+ `NetMsmqBinding` 以绑定上的属性形式阐明了迄今为止所讨论的核心队列概念。 而这些属性又向 MSMQ 传达如何传输和传递消息。 后面几节将讨论属性类别。 有关详细信息, 请参阅更完整地描述特定属性的概念性主题。  
   
 #### <a name="exactlyonce-and-durable-properties"></a>ExactlyOnce 和 Durable 属性  
  `ExactlyOnce` 和 `Durable` 属性影响消息在队列之间的传输方式：  
   
-- `ExactlyOnce`：如果设置为`true`（默认值），则排队的通道可确保确认消息，如果传递，不重复。 还可确保消息不会丢失。 如果无法传递消息，或在传递消息前已超过消息的生存时间，则将在死信队列中记录传递失败的消息以及失败原因。 当设置为 `false` 时，排队通道将尽量传输消息。 在这种情况下，可以任意选择一个死信队列。  
+- `ExactlyOnce`：当设置为`true` (默认值) 时, 排队通道可确保消息 (如果传递) 不重复。 还可确保消息不会丢失。 如果无法传递消息，或在传递消息前已超过消息的生存时间，则将在死信队列中记录传递失败的消息以及失败原因。 当设置为 `false` 时，排队通道将尽量传输消息。 在这种情况下，可以任意选择一个死信队列。  
   
 - `Durable:`：当设置为 `true`（默认值）时，排队通道确保 MSMQ 将消息永久存储在磁盘上。 因而，如果 MSMQ 服务要停止并重新启动，则磁盘上的消息将传输到目标队列或传递到服务。 当设置为 `false` 时，消息将存储在可变存储区中，而且会在停止并重新启动 MSMQ 服务时丢失。  
   
  对于 `ExactlyOnce` 可靠传输，MSMQ 要求队列是事务性队列。 同时，MSMQ 还需要一个从事务性队列中进行读取的事务。 同样，在使用 `NetMsmqBinding` 时，请记住，如果将 `ExactlyOnce` 设置为 `true`，则需要使用事务来发送或接收消息。 与此类似，MSMQ 要求队列为非事务性队列来实现高效保证，例如，当 `ExactlyOnce` 为 `false` 以及进行可变消息传递时。 因此，将 `ExactlyOnce` 设置为 `false`，或将 durable 设置为 `false` 时，将无法使用事务发送或接收消息。  
   
 > [!NOTE]
->  确保基于绑定中的设置创建正确的队列（事务性或非事务性）。 如果 `ExactlyOnce` 为 `true`，则使用事务性队列；否则，使用非事务性队列。  
+> 确保基于绑定中的设置创建正确的队列（事务性或非事务性）。 如果 `ExactlyOnce` 为 `true`，则使用事务性队列；否则，使用非事务性队列。  
   
 #### <a name="dead-letter-queue-properties"></a>死信队列属性  
  死信队列用于存储传递失败的消息。 用户可以编写补偿逻辑来从死信队列中读取消息。  
   
  很多队列系统都提供系统级死信队列。 MSMQ 为向非事务性队列传递失败的消息提供一个系统级非事务性死信队列，为向事务性队列传递失败的消息提供一个系统级事务性死信队列。  
   
- 如果向不同目标队列发送消息的多个客户端共享 MSMQ 服务，则客户端发送的所有消息将转到同一个死信队列。 这并不总是可取的。 为更好地隔离，WCF 和 MSMQ 中的[!INCLUDE[wv](../../../../includes/wv-md.md)]提供自定义死信队列 （或特定于应用程序的死信队列），用户可以指定用于存储传递失败的消息。 因此，不同的客户端并不共享同一个死信队列。  
+ 如果向不同目标队列发送消息的多个客户端共享 MSMQ 服务，则客户端发送的所有消息将转到同一个死信队列。 这并不总是可取的。 为了更好地进行隔离, 中[!INCLUDE[wv](../../../../includes/wv-md.md)]的 WCF 和 MSMQ 提供了一个自定义死信队列 (或特定于应用程序的死信队列), 用户可以指定该队列来存储传递失败的消息。 因此，不同的客户端并不共享同一个死信队列。  
   
  绑定具有两个相关属性：  
   
-- `DeadLetterQueue`：此属性是一个枚举，指示是否请求死信队列。 如果请求某类死信队列，则该枚举还包含这种死信队列。 该属性的值为 `None`、`System` 和 `Custom`。 有关这些属性的解释的详细信息，请参阅[使用死信队列来处理消息传输失败](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
+- `DeadLetterQueue`：此属性是一个枚举, 指示是否请求死信队列。 如果请求某类死信队列，则该枚举还包含这种死信队列。 该属性的值为 `None`、`System` 和 `Custom`。 有关这些属性的解释的详细信息, 请参阅[使用死信队列处理消息传输故障](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
   
-- `CustomDeadLetterQueue`：此属性是特定于应用程序的死信队列的统一资源标识符 (URI) 地址。 如果这是必需`DeadLetterQueue`。`Custom` 选择。  
+- `CustomDeadLetterQueue`：此属性是特定于应用程序的死信队列的统一资源标识符 (URI) 地址。 这是必需`DeadLetterQueue`的。`Custom` 已选择。  
   
 #### <a name="poison-message-handling-properties"></a>病毒消息处理属性  
- 当服务从事务中的目标队列读取消息时，服务可能由于种种原因而无法处理消息。 然后，将消息放回队列以备再次读取。 若要处理反复失败的消息，可以在绑定中配置一组病毒消息处理属性。 有如下四个属性：`ReceiveRetryCount`、`MaxRetryCycles`、`RetryCycleDelay` 和 `ReceiveErrorHandling`。 有关这些属性的详细信息，请参阅[病毒消息处理](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)。  
+ 当服务从事务中的目标队列读取消息时，服务可能由于种种原因而无法处理消息。 然后，将消息放回队列以备再次读取。 若要处理反复失败的消息，可以在绑定中配置一组病毒消息处理属性。 有如下四个属性：`ReceiveRetryCount`、`MaxRetryCycles`、`RetryCycleDelay` 和 `ReceiveErrorHandling`。 有关这些属性的详细信息, 请参阅[病毒消息处理](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)。  
   
 #### <a name="security-properties"></a>安全属性  
- MSMQ 公开其自己的安全模型，如队列上的访问控制列表 (ACL) 或发送经过验证身份的消息。 `NetMsmqBinding` 将这些安全属性作为其传输安全设置的一部分而公开。 绑定中有两个用于传输安全的属性：`MsmqAuthenticationMode` 和 `MsmqProtectionLevel`。 这些属性中的设置取决于 MSMQ 的配置方式。 有关详细信息，请参阅[使用传输安全保护消息](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)。  
+ MSMQ 公开其自己的安全模型，如队列上的访问控制列表 (ACL) 或发送经过验证身份的消息。 `NetMsmqBinding` 将这些安全属性作为其传输安全设置的一部分而公开。 绑定中有两个用于传输安全的属性：`MsmqAuthenticationMode` 和 `MsmqProtectionLevel`。 这些属性中的设置取决于 MSMQ 的配置方式。 有关详细信息, 请参阅[使用传输安全保护消息](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)。  
   
- 除了传输安全，实际的 SOAP 消息本身也可以使用消息安全来进行保护。 有关详细信息，请参阅[使用消息安全保护消息](../../../../docs/framework/wcf/feature-details/securing-messages-using-message-security.md)。  
+ 除了传输安全，实际的 SOAP 消息本身也可以使用消息安全来进行保护。 有关详细信息, 请参阅[使用消息安全保护消息](../../../../docs/framework/wcf/feature-details/securing-messages-using-message-security.md)。  
   
  `MsmqTransportSecurity` 还公开两个属性，即 `MsmqEncryptionAlgorithm` 和 `MsmqHashAlgorithm`。 这些是要为消息的队列到队列传输加密和签名的哈希选择的不同算法的枚举。  
   
 #### <a name="other-properties"></a>其他属性  
  除了上述各属性，在绑定中公开的其他 MSMQ 特定的属性还包括：  
   
-- `UseSourceJournal`：打开以指示源日记记录的属性。 源日记记录是一项 MSMQ 功能，用于跟踪从传输队列成功传输的消息。  
+- `UseSourceJournal`：一个属性, 用于指示源日志记录已打开。 源日记记录是一项 MSMQ 功能，用于跟踪从传输队列成功传输的消息。  
   
-- `UseMsmqTracing`：要指示已打开 MSMQ 跟踪的属性。 每当消息离开或到达承载 MSMQ 队列管理器的计算机时，MSMQ 跟踪都会向报告队列发送报告消息。  
+- `UseMsmqTracing`：一个属性, 用于指示已启用 MSMQ 跟踪。 每当消息离开或到达承载 MSMQ 队列管理器的计算机时，MSMQ 跟踪都会向报告队列发送报告消息。  
   
-- `QueueTransferProtocol`：要用于队列到队列的消息传输协议的枚举。 MSMQ 实现本机队列到队列的传输协议和称为 SOAP 可靠消息传输协议 (SRMP) 的基于 SOAP 的协议。 当使用 HTTP 传输进行队列到队列的传输时将使用 SRMP。 当使用 HTTPS 进行队列到队列的传输时将使用 SRMP 安全。  
+- `QueueTransferProtocol`：用于队列到队列消息传输的协议的枚举。 MSMQ 实现本机队列到队列的传输协议和称为 SOAP 可靠消息传输协议 (SRMP) 的基于 SOAP 的协议。 当使用 HTTP 传输进行队列到队列的传输时将使用 SRMP。 当使用 HTTPS 进行队列到队列的传输时将使用 SRMP 安全。  
   
-- `UseActiveDirectory`：一个布尔值以指示是否必须使用 Active Directory 进行队列地址解析。 默认情况下，此功能处于关闭状态。 有关详细信息，请参阅[服务终结点和队列寻址](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)。  
+- `UseActiveDirectory`：一个布尔值, 指示是否必须将 Active Directory 用于队列地址解析。 默认情况下，此功能处于关闭状态。 有关详细信息, 请参阅[服务终结点和队列寻址](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)。  
   
 ### <a name="msmqintegrationbinding"></a>MsmqIntegrationBinding  
- `MsmqIntegrationBinding`希望 WCF 终结点与在 C 中，编写的现有 MSMQ 应用程序进行通信时使用C++，COM 或 System.Messaging Api。  
+ 如果希望 WCF 终结点与用 C、 C++、COM 或 system.web api 编写的现有 MSMQ 应用程序通信, 则使用。 `MsmqIntegrationBinding`  
   
  对于 `NetMsmqBinding`，绑定属性基本相同。 不过，存在以下差异：  
   
@@ -105,9 +105,9 @@ ms.locfileid: "64643500"
 ### <a name="sample-code"></a>代码示例  
  有关编写使用 MSMQ 的 WCF 服务的分步指导，请参见下列主题：  
   
-- [如何：使用 WCF 终结点和消息队列应用程序交换消息](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
+- [如何：与 WCF 终结点和消息队列应用程序交换消息](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
   
-- [如何：使用 WCF 终结点交换排队消息](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
+- [如何：与 WCF 终结点交换排队消息](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
   
  有关说明 MSMQ 在 WCF 中的用法的完整代码示例，请参见下列主题：  
   

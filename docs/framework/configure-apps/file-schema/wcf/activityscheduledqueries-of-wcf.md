@@ -1,24 +1,24 @@
 ---
-title: <activityScheduledQueries> WCF 的
+title: <activityScheduledQueries>WCF 的
 ms.date: 03/30/2017
 ms.assetid: e351329f-9676-4f11-9b19-f4bac82f36fc
-ms.openlocfilehash: 1c9c292080016d7a2d0014ed07be371c0e247621
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 83e71e2038377ae4c1c3b17334eece3f30c919f6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701120"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920319"
 ---
-# <a name="activityscheduledqueries-of-wcf"></a>\<activityScheduledQueries > 的 WCF
+# <a name="activityscheduledqueries-of-wcf"></a>\<WCF 的 activityScheduledQueries >
 表示一个查询集合，这些查询用于跟踪安排给父活动来执行的活动。 跟踪参与者需要用此查询来订阅活动安排记录。  
   
-有关跟踪配置文件查询的详细信息，请参阅[跟踪配置文件](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
+有关跟踪配置文件查询的详细信息, 请参阅[跟踪配置文件](../../../windows-workflow-foundation/tracking-profiles.md)  
   
 \<system.serviceModel>  
-\<tracking>  
+\<跟踪 >  
 \<配置文件 >  
 \<trackingProfile>  
-\<workflow>  
+\<工作流 >  
 \<activityScheduledQueries>  
   
 ## <a name="syntax"></a>语法  
@@ -56,11 +56,11 @@ ms.locfileid: "61701120"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<workflow>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|一个配置元素，包含 `activityDefinitionId` 属性所标识的特定工作流的所有查询。|  
+|[\<workflow>](../windows-workflow-foundation/workflow.md)|一个配置元素，包含 `activityDefinitionId` 属性所标识的特定工作流的所有查询。|  
   
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.ActivityScheduledQueryElementCollection>
 - <xref:System.Activities.Tracking.ActivityScheduledQuery>
-- [工作流跟踪](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [跟踪配置文件](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+- [工作流跟踪](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [跟踪配置文件](../../../windows-workflow-foundation/tracking-profiles.md)

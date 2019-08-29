@@ -12,39 +12,39 @@ helpviewer_keywords:
 - properties [Visual Basic], setting at run time
 - CallByName function
 ms.assetid: 79a7b8b4-b8c7-4ad8-aca8-12a9a2b32f03
-ms.openlocfilehash: 92430f23b3d4d6237d0b6ec606ce2cb9b945f6f8
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 0683047865f520a09b2d2fe196096286b7d78714
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65590029"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965395"
 ---
 # <a name="calling-a-property-or-method-using-a-string-name-visual-basic"></a>使用字符串名调用属性或方法 (Visual Basic)
-在大多数情况下，可以在设计时发现的属性和方法的一个对象，并编写代码来处理它们。 但是，在某些情况下您可能事先不知道有关对象的属性和方法，或者您可能只是想启用最终用户可以指定属性或在运行时执行方法的灵活性。  
+在大多数情况下, 你可以在设计时发现对象的属性和方法, 并编写代码来处理它们。 但是, 在某些情况下, 您可能事先不知道对象的属性和方法, 或者您可能只是想让最终用户能够在运行时指定属性或执行方法。  
   
 ## <a name="callbyname-function"></a>CallByName 函数  
- 例如，考虑通过将运算符传递给 COM 组件的用户输入的表达式的计算结果的客户端应用程序。 假设您正在向组件需要新的运算符的不断添加新的函数。 当使用标准的对象的访问技术时，必须重新编译和重新分发客户端应用程序，可以使用新的运算符之前。 若要避免此问题，可以使用`CallByName`函数的新运算符作为字符串来传递，而无需更改应用程序。  
+ 例如, 考虑一个客户端应用程序, 该应用程序通过将运算符传递到 COM 组件来计算用户输入的表达式。 假设您不断地向需要新运算符的组件添加新函数。 使用标准对象访问技术时, 必须先重新编译并重新发布客户端应用程序, 然后才能使用新的运算符。 若要避免这种情况, 可以`CallByName`使用函数将新运算符作为字符串传递, 而无需更改应用程序。  
   
- `CallByName`函数允许您使用一个字符串，在运行时指定的属性或方法。 签名`CallByName`函数如下所示：  
+ `CallByName`函数使您可以在运行时使用字符串来指定属性或方法。 `CallByName`函数的签名如下所示:  
   
- *结果* = `CallByName`(*对象*，*过程名称*， *CallType*，*参数*（)）  
+ *Result*(Object、ProcedureName、CallType、Arguments ()) = `CallByName`  
   
- 第一个参数，*对象*，采用你想要对其执行操作的对象的名称。 *过程名称*参数采用一个字符串，包含要调用的方法或属性过程的名称。 *CallType*参数采用一个常量，它表示要调用过程的类型： 一种方法 (`Microsoft.VisualBasic.CallType.Method`)，读取的属性 (`Microsoft.VisualBasic.CallType.Get`)，或设置一个属性 (`Microsoft.VisualBasic.CallType.Set`)。 *自变量*参数，这是可选的采用的类型数组`Object`，其中包含任何参数的过程。  
+ 第一个参数 "*对象*" 采用要对其执行操作的对象的名称。 *ProcedureName*参数采用一个字符串, 该字符串包含要调用的方法或属性过程的名称。 *CallType*参数采用一个常数, 该常数表示要调用的过程的类型: 方法 (`Microsoft.VisualBasic.CallType.Method`)、属性读取 (`Microsoft.VisualBasic.CallType.Get`) 或属性集 (`Microsoft.VisualBasic.CallType.Set`)。 *参数*自变量是可选的, 它采用类型`Object`为的数组, 该数组包含过程的所有参数。  
   
- 可以使用`CallByName`与中您当前的解决方案，但它的类是最常用于从.NET Framework 程序集访问 COM 对象。  
+ 你可以在`CallByName`当前解决方案中将与类一起使用, 但它通常用于从 .NET Framework 程序集访问 COM 对象或对象。  
   
- 假设您添加对包含一个名为类的程序集的引用`MathClass`，其中包含一个名为的新函数`SquareRoot`，如下面的代码中所示：  
+ 假设你添加对程序集的引用, 该程序集包含`MathClass`名为的类, 该类具有`SquareRoot`名为的新函数, 如以下代码所示:  
   
  [!code-vb[VbVbalrOOP#53](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#53)]  
   
- 你的应用程序可以使用文本框控件来控制将调用哪些方法和其参数。 例如，如果`TextBox1`包含要计算的表达式并`TextBox2`是用于输入的函数的名称，可以使用以下代码来调用`SquareRoot`函数中的表达式`TextBox1`:  
+ 应用程序可以使用文本框控件控制将调用的方法及其参数。 例如, 如果`TextBox1`包含要计算的表达式, 并`TextBox2`用于输入函数的名称, 则可以使用`SquareRoot`以下代码在中`TextBox1`对表达式调用函数:  
   
  [!code-vb[VbVbalrOOP#54](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#54)]  
   
- 如果在输入"64" `TextBox1`，"SquareRoot"中的`TextBox2`，然后调用`CallMath`过程中，数字的平方根`TextBox1`进行评估。 在示例代码会调用`SquareRoot`函数 （采用一个字符串，包含要评估为必需的参数的表达式），并返回"8"中`TextBox1`（64 的平方根）。 当然，如果用户输入中的无效字符串`TextBox2`，如果该字符串包含名称的属性而不是一种方法，或如果该方法具有一个额外的必需的参数，会发生运行时错误。 您必须使用时添加可靠的错误处理代码`CallByName`以应对预期的这些或任何其他错误。  
+ 如果在中输入 "64" `TextBox1`, 在中`TextBox2`输入 "SquareRoot", 然后调用`CallMath`该过程, 则计算中`TextBox1`的数字的平方根。 该示例中的代码调用`SquareRoot`函数 (该函数采用包含要作为必选参数进行计算的表达式的字符串) 并返回中`TextBox1`的 "8" (64 的平方根)。 当然, 如果用户在中`TextBox2`输入了无效的字符串, 且该字符串包含属性的名称而不是方法, 或者如果该方法有额外的必需参数, 则会发生运行时错误。 使用`CallByName`来预见这些错误或任何其他错误时, 必须添加可靠的错误处理代码。  
   
 > [!NOTE]
->  虽然`CallByName`函数可能会在某些情况下很有用，您必须权衡对性能产生影响其有用性 — 使用`CallByName`调用的过程是比后期绑定调用稍慢。 如果所调用的函数被重复调用，例如在循环中，如`CallByName`会对性能产生严重。  
+> 尽管函数在某些情况下可能有用, 但你必须权衡其对性能影响的有用性, 使用`CallByName`调用过程比后期绑定调用略慢。 `CallByName` 如果调用的是重复调用的函数 (如循环`CallByName`内), 则可能会对性能产生严重影响。  
   
 ## <a name="see-also"></a>请参阅
 

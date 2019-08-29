@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9f6c95eb-63ae-4dcc-9c32-f81985c75794
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3e67861a32d5863e4c1b4d9b147c507c1bb54c39
-ms.sourcegitcommit: 46c68557bf6395f0ab9915f7558f2faae0097695
+ms.openlocfilehash: bc2ca7a94ffb19f62f354bdfc3040490b57e2689
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "66491096"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968548"
 ---
 # <a name="standard-timespan-format-strings"></a>标准 TimeSpan 格式字符串
 <a name="Top"></a> 标准 <xref:System.TimeSpan> 格式字符串使用一个格式说明符，定义格式设置操作生成的 <xref:System.TimeSpan> 值的文本表示形式。 任何包含一个以上字符（包括空格）的格式字符串都被解释为自定义 <xref:System.TimeSpan> 格式字符串。 有关详细信息，请参阅[自定义 TimeSpan 格式字符串](../../../docs/standard/base-types/custom-timespan-format-strings.md)。  
@@ -67,7 +67,7 @@ ms.locfileid: "66491096"
  与“g”和“G”格式说明符不同，“c”格式说明符不区分区域性。 它生成 <xref:System.TimeSpan> 值的字符串表示形式，该值不变且对 .NET Framework 4 之前的所有 .NET Framework 先前版本均通用。 “c”是默认的 <xref:System.TimeSpan> 格式字符串；<xref:System.TimeSpan.ToString?displayProperty=nameWithType> 方法使用“c”格式字符串设置时间间隔值的格式。  
   
 > [!NOTE]
->  <xref:System.TimeSpan> 也支持“t”和“T”标准格式字符串，其行为与“c”标准格式字符串相同。  
+> <xref:System.TimeSpan> 也支持“t”和“T”标准格式字符串，其行为与“c”标准格式字符串相同。  
   
  以下示例对两个 <xref:System.TimeSpan> 对象进行了实例化，使用它们来执行算术运算并显示结果。 在每种情况下，它都通过“c”格式说明符使用复合格式设置来显示 <xref:System.TimeSpan> 值。  
   

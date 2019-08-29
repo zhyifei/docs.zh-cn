@@ -2,12 +2,12 @@
 title: Seedwork（适用于域模型的可重用基类和接口）
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 使用 seedwork 概念作为开始实现面向 DDD 的域模型的起点。
 ms.date: 10/08/2018
-ms.openlocfilehash: 298f79383e477df0cfeeaada5c4657a9274b3df3
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: a49f9e0b40ea306a846d9fb472bac388eedbfe02
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68676304"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69660765"
 ---
 # <a name="seedwork-reusable-base-classes-and-interfaces-for-your-domain-model"></a>Seedwork（适用于域模型的可重用基类和接口）
 
@@ -23,7 +23,7 @@ ms.locfileid: "68676304"
 
 ## <a name="the-custom-entity-base-class"></a>自定义实体基类
 
-以下代码是实体基类的示例，可在其中放置可由任何域实体以相同方式使用的代码，例如实体 ID、[相等运算符](~/docs/csharp/language-reference/operators/equality-operators.md)、每个实体的域事件列表等。
+以下代码是实体基类的示例，可在其中放置可由任何域实体以相同方式使用的代码，例如实体 ID、[相等运算符](../../../csharp/language-reference/operators/equality-operators.md)、每个实体的域事件列表等。
 
 ```csharp
 // COMPATIBLE WITH ENTITY FRAMEWORK CORE (1.1 and later)

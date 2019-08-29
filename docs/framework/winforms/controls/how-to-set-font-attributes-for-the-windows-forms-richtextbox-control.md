@@ -14,25 +14,25 @@ helpviewer_keywords:
 - text boxes [Windows Forms], formatting text
 - formatting [Windows Forms]
 ms.assetid: 2bc23ddb-0529-4489-a1a2-ad253cb43f9a
-ms.openlocfilehash: a6fe5b30c457fae2d53c946092b214f492fe5e9b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4919e94c23b1a67680ea0f360304ee0f75c7f425
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013265"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963225"
 ---
 # <a name="how-to-set-font-attributes-for-the-windows-forms-richtextbox-control"></a>如何：设置 Windows 窗体 RichTextBox 控件的字体特性
-Windows 窗体<xref:System.Windows.Forms.RichTextBox>控件具有许多选项用于设置所显示的文本的格式。 您可以使所选的字符粗体、 带下划线或斜体，使用<xref:System.Windows.Forms.RichTextBox.SelectionFont%2A>属性。 也可以使用此属性来更改所选字符的大小和字样。 <xref:System.Windows.Forms.RichTextBox.SelectionColor%2A>属性使您能够更改所选的字符的颜色。  
+Windows 窗体<xref:System.Windows.Forms.RichTextBox>控件具有很多用于设置其显示文本格式的选项。 您可以使用<xref:System.Windows.Forms.RichTextBox.SelectionFont%2A>属性将所选字符设置为粗体、下划线或斜体。 也可以使用此属性来更改所选字符的大小和字样。 <xref:System.Windows.Forms.RichTextBox.SelectionColor%2A>属性使您可以更改所选字符的颜色。  
   
 ### <a name="to-change-the-appearance-of-characters"></a>更改字符的外观  
   
-1. 设置<xref:System.Windows.Forms.RichTextBox.SelectionFont%2A>属性设置为合适的字体。  
+1. <xref:System.Windows.Forms.RichTextBox.SelectionFont%2A>将属性设置为合适的字体。  
   
-     若要使用户能够在应用程序中设置字体系列、 大小和字样，通常可以使用<xref:System.Windows.Forms.FontDialog>组件。 有关概述，请参阅 [FontDialog 组件概述](fontdialog-component-overview-windows-forms.md)。  
+     若要使用户能够在应用程序中设置字体系列、字号和字体, 通常应使用<xref:System.Windows.Forms.FontDialog>组件。 有关概述，请参阅 [FontDialog 组件概述](fontdialog-component-overview-windows-forms.md)。  
   
-2. 设置<xref:System.Windows.Forms.RichTextBox.SelectionColor%2A>属性设置为适当的颜色。  
+2. <xref:System.Windows.Forms.RichTextBox.SelectionColor%2A>将属性设置为适当的颜色。  
   
-     若要使用户能够在应用程序中设置颜色，通常可以使用<xref:System.Windows.Forms.ColorDialog>组件。 有关概述，请参阅 [ColorDialog 组件概述](colordialog-component-overview-windows-forms.md)。  
+     若要使用户能够在应用程序中设置颜色, 通常应使用<xref:System.Windows.Forms.ColorDialog>组件。 有关概述，请参阅 [ColorDialog 组件概述](colordialog-component-overview-windows-forms.md)。  
   
     ```vb  
     RichTextBox1.SelectionFont = New Font("Tahoma", 12, FontStyle.Bold)  
@@ -51,7 +51,7 @@ Windows 窗体<xref:System.Windows.Forms.RichTextBox>控件具有许多选项用
     ```  
   
     > [!NOTE]
-    >  这些属性只影响所选的文本，如果未选择文本，则只影响当前插入点位置处键入的文本。 有关以编程方式选择文本的信息，请参阅<xref:System.Windows.Forms.TextBoxBase.Select%2A>。  
+    > 这些属性只影响所选的文本，如果未选择文本，则只影响当前插入点位置处键入的文本。 有关以编程方式选择文本的信息<xref:System.Windows.Forms.TextBoxBase.Select%2A>, 请参阅。  
   
 ## <a name="see-also"></a>请参阅
 

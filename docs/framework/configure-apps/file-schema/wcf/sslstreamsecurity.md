@@ -2,12 +2,12 @@
 title: <sslStreamSecurity>
 ms.date: 03/30/2017
 ms.assetid: 430a378b-a742-4858-8a12-9f9b235fd627
-ms.openlocfilehash: 67ec30b2bf3c322b949700789ce942e4281b77a4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5ed87adfb3963513602844fc69afce8f7994fa8e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61757984"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69932425"
 ---
 # <a name="sslstreamsecurity"></a>\<sslStreamSecurity>
 表示一个自定义绑定元素，它支持使用 SSL 流的通道安全。  
@@ -15,7 +15,7 @@ ms.locfileid: "61757984"
  \<system.serviceModel>  
 \<bindings>  
 \<customBinding>  
-\<binding>  
+\<绑定 >  
 \<sslStreamSecurity>  
   
 ## <a name="syntax"></a>语法  
@@ -33,7 +33,7 @@ ms.locfileid: "61757984"
 |特性|描述|  
 |---------------|-----------------|  
 |requireClientCertificate|一个布尔值，指定此绑定是否需要客户端证书。 默认值为 `false`。|  
-|sslProtocols|指定支持哪些 SslProtocols 的 SslProtocols 枚举标志值。 默认值是 Ssl3&#124;Tls&#124;Tls11&#124;Tls12。|  
+|sslProtocols|指定支持哪些 SslProtocols 的 SslProtocols 枚举标志值。 默认值为 Ssl3&#124;Tls&#124;Tls11&#124;Tls12。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  
@@ -42,14 +42,14 @@ ms.locfileid: "61757984"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<binding>](../../../../../docs/framework/misc/binding.md)|定义自定义绑定的所有绑定功能。|  
+|[\<binding>](../../../misc/binding.md)|定义自定义绑定的所有绑定功能。|  
   
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.ServiceModel.Configuration.SslStreamSecurityElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>
-- [绑定](../../../../../docs/framework/wcf/bindings.md)
-- [扩展绑定](../../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [自定义绑定](../../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [绑定](../../../wcf/bindings.md)
+- [扩展绑定](../../../wcf/extending/extending-bindings.md)
+- [自定义绑定](../../../wcf/extending/custom-bindings.md)
+- [\<customBinding>](custombinding.md)

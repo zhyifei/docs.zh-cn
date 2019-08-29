@@ -5,21 +5,21 @@ helpviewer_keywords:
 - UI Automation, obtaining elements
 - elements, UI Automation, obtaining
 ms.assetid: c2caaf45-e59c-42a1-bc9b-77a6de520171
-ms.openlocfilehash: 89c9397ba579f04d81eee7af6363f8fee3abfe1d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9adf8078f52653940fe9ba5caa4a256a08cc489c
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033187"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044147"
 ---
 # <a name="obtaining-ui-automation-elements"></a>获取 UI 自动化元素
 > [!NOTE]
->  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，请参阅[Windows 自动化 API:UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
+> 本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关的最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], 请[参阅 Windows 自动化 API:UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  本主题描述获取 <xref:System.Windows.Automation.AutomationElement> 元素的 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 对象的各种方法。  
   
 > [!CAUTION]
->  如果客户端应用程序可以尝试在其自己的用户界面中查找元素，则必须在一个单独的线程上进行所有 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 调用。 有关更多信息，请参见 [UI Automation Threading Issues](../../../docs/framework/ui-automation/ui-automation-threading-issues.md)。  
+> 如果客户端应用程序可以尝试在其自己的用户界面中查找元素，则必须在一个单独的线程上进行所有 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 调用。 有关更多信息，请参见 [UI Automation Threading Issues](../../../docs/framework/ui-automation/ui-automation-threading-issues.md)。  
   
 <a name="The_Root_Element"></a>   
 ## <a name="root-element"></a>根元素  
@@ -28,7 +28,7 @@ ms.locfileid: "62033187"
  所有元素所起源于的桌面根元素是从静态的 <xref:System.Windows.Automation.AutomationElement.RootElement%2A?displayProperty=nameWithType> 属性中获取的。  
   
 > [!CAUTION]
->  通常，你应当尝试只获取 <xref:System.Windows.Automation.AutomationElement.RootElement%2A>的直接子项。 对后代的搜索可能循环访问数百个甚至数千个元素，这可能导致堆栈溢出。 如果尝试在较低级别上获取特定元素，应该从应用程序窗口或者从较低级别的容器中开始搜索。  
+> 通常，你应当尝试只获取 <xref:System.Windows.Automation.AutomationElement.RootElement%2A>的直接子项。 对后代的搜索可能循环访问数百个甚至数千个元素，这可能导致堆栈溢出。 如果尝试在较低级别上获取特定元素，应该从应用程序窗口或者从较低级别的容器中开始搜索。  
   
 <a name="Using_Conditions"></a>   
 ## <a name="conditions"></a>条件  
@@ -36,7 +36,7 @@ ms.locfileid: "62033187"
   
  最简单的条件是 <xref:System.Windows.Automation.Condition.TrueCondition>，这是一个指定要返回搜索范围内的所有元素的预定义对象。 <xref:System.Windows.Automation.Condition.FalseCondition>是 <xref:System.Windows.Automation.Condition.TrueCondition>的对立条件，其作用不大，因为它将阻止找到任何元素。  
   
- 下面是三个其他的预定义条件，这些条件既可以单独使用，也可以与其他条件一起使用： <xref:System.Windows.Automation.Automation.ContentViewCondition>、 <xref:System.Windows.Automation.Automation.ControlViewCondition>和 <xref:System.Windows.Automation.Automation.RawViewCondition>。 单独使用的<xref:System.Windows.Automation.Automation.RawViewCondition>等效于 <xref:System.Windows.Automation.Condition.TrueCondition>，因为它不根据元素的 <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsControlElement%2A> 或 <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsContentElement%2A> 属性来筛选元素。  
+ 下面是三个其他的预定义条件，这些条件既可以单独使用，也可以与其他条件一起使用： <xref:System.Windows.Automation.Automation.ContentViewCondition>、 <xref:System.Windows.Automation.Automation.ControlViewCondition>和 <xref:System.Windows.Automation.Automation.RawViewCondition>。 单独使用的<xref:System.Windows.Automation.Automation.RawViewCondition>等效于 <xref:System.Windows.Automation.Condition.TrueCondition>，因为它不根据元素的  或  属性来筛选元素。  
   
  其他条件是根据一个或多个 <xref:System.Windows.Automation.PropertyCondition> 对象（每个对象都指定一个属性值）建立的。 例如，个 <xref:System.Windows.Automation.PropertyCondition> 可以指定元素处于启用状态或元素支持某种控件模式。  
   

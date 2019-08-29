@@ -11,19 +11,19 @@ helpviewer_keywords:
 - linked configuration files
 - linkedConfiguration Element
 ms.assetid: 8eb34f3b-427e-4288-a7ff-c73f489deb45
-ms.openlocfilehash: 909ee7cbb7cd31cf213f305b23237cb69e295882
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a0b56ac66302f11c59c149197a84bb96691282a5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674644"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921018"
 ---
 # <a name="linkedconfiguration-element"></a>\<linkedConfiguration > 元素
 
 指定要包含的配置文件。
 
-[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[ **\<assemblyBinding>** ](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md)   
+[ **\<configuration>** ](configuration-element.md)   
+&nbsp;&nbsp;[ **\<assemblyBinding>** ](assemblybinding-element-for-configuration.md)   
 &nbsp;&nbsp;&nbsp;&nbsp; **\<linkedConfiguration>**
 
 ## <a name="syntax"></a>语法
@@ -36,42 +36,42 @@ ms.locfileid: "61674644"
 
 |           | 描述 |
 | --------- | ----------- |
-| **href**  | 必需的特性。<br><br>要包括在配置文件的 URL。 有关支持的唯一格式**href**属性是`file://`。 支持本地文件和 UNC 文件。 |
+| **href**  | 必需的特性。<br><br>要包含的配置文件的 URL。 **Href**特性支持的唯一格式为`file://`。 支持本地文件和 UNC 文件。 |
 
 ## <a name="parent-element"></a>父元素
 
 |     | 描述 |
 | --- | ----------- |
-| [ **\<assemblyBinding >** 元素](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md) | 指定配置级的程序集绑定策略。 |
+| [ **assemblyBinding>\<** 元素](assemblybinding-element-for-configuration.md) | 指定配置级的程序集绑定策略。 |
 
 ## <a name="child-elements"></a>子元素
 
-None
+无
 
 ## <a name="remarks"></a>备注
 
-**\<LinkedConfiguration >** 元素可简化维护组件程序集。 如果一个或多个应用程序使用的程序集都驻留在已知位置中的配置文件，可以使用的应用程序使用的程序集的配置文件 **\<linkedConfiguration >** 若要包括程序集配置文件，而不是直接包含配置信息的元素。 组件程序集已维修，更新常见的配置文件提供所有应用程序使用的程序集的更新的配置的信息。
+LinkedConfiguration > 元素简化了组件程序集的服务。  **\<** 如果一个或多个应用程序使用的程序集具有驻留在众所周知位置的配置文件, 则使用该程序集的应用程序的配置文件可以使用 **\<linkedConfiguration >** 元素包括程序集配置文件, 而不是直接包含配置信息。 处理组件程序集时, 更新公共配置文件会为使用该程序集的所有应用程序提供更新的配置信息。
 
 > [!NOTE]
-> **\<LinkedConfiguration >** 元素不支持使用 Windows 通过并行清单的应用程序。
+> 对于具有 Windows 并行清单的应用程序, 不支持 **linkedConfiguration>元素。\<**
 
-链接的配置文件的使用遵循以下规则：
+以下规则控制链接配置文件的使用:
 
-- 包含的配置文件中设置只会影响加载程序绑定策略，并且仅由加载程序。 包含的配置文件可以具有设置不是绑定策略，但这些设置不产生任何影响。
+- 包含的配置文件中的设置只会影响加载程序绑定策略并仅由加载程序使用。 包含的配置文件可以包含绑定策略以外的设置, 但这些设置不会产生任何影响。
 
-- 有关支持的唯一格式`href`属性是`file://`。 支持本地文件和 UNC 文件。
+- `href`特性支持的唯一格式为`file://`。 支持本地文件和 UNC 文件。
 
-- 没有任何约束的每个配置文件的链接配置数量上。
+- 每个配置文件的链接配置数没有限制。
 
-- 所有链接的配置文件经过合并以形成一个文件的行为类似`#include`指令在 C /C++。
+- 所有链接的配置文件合并到一个文件中, 这与 C/ `#include` C++中指令的行为类似。
 
-- **\<LinkedConfiguration >** 元素允许仅在应用程序配置文件中; 在将被忽略*Machine.config*。
+- 仅允许在应用程序配置文件中使用  **linkedConfiguration>元素;它在machine.config中被\<** 忽略。
 
-- 检测到并终止循环引用。 也就是说，如果 **\<linkedConfiguration >** 一系列配置文件中的元素形成循环，循环将检测并停止。
+- 检测和终止循环引用。 也就是说, 如果 **\<> linkedConfiguration**的一系列配置文件的元素形成循环, 则检测并停止循环。
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何包含配置文件从本地硬盘：
+下面的示例演示如何包括本地硬盘中的配置文件:
 
 ```xml
 <configuration>
@@ -83,5 +83,5 @@ None
 
 ## <a name="see-also"></a>请参阅
 
-- [ **\<assemblyBinding >** 元素](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md)
-- [.NET Framework 的配置文件架构](~/docs/framework/configure-apps/file-schema/index.md)
+- [ **assemblyBinding>\<** 元素](assemblybinding-element-for-configuration.md)
+- [.NET Framework 的配置文件架构](index.md)

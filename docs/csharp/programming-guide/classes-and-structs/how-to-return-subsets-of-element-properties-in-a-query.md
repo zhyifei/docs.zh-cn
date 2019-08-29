@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - anonymous types [C#], for subsets of element properties
 ms.assetid: fabdf349-f443-4e3f-8368-6c471be1dd7b
-ms.openlocfilehash: acff804d87d67bf8758b97ad04805359bb3f2e32
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 9238e2e312021958ad62eeba89fe8b72c113e0d7
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586077"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596845"
 ---
 # <a name="how-to-return-subsets-of-element-properties-in-a-query-c-programming-guide"></a>如何：在查询中返回元素属性的子集（C# 编程指南）
 当下列两个条件都满足时，可在查询表达式中使用匿名类型：  
@@ -48,6 +48,6 @@ Console.WriteLine(student.First + " " + student.Last);
   
 ## <a name="see-also"></a>请参阅
 
-- [C# 编程指南](../../../csharp/programming-guide/index.md)
-- [匿名类型](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)
-- [LINQ 查询表达式](../../../csharp/programming-guide/linq-query-expressions/index.md)
+- [C# 编程指南](../index.md)
+- [匿名类型](./anonymous-types.md)
+- [LINQ 查询表达式](../linq-query-expressions/index.md)

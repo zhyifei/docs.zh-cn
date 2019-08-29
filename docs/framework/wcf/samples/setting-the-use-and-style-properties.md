@@ -2,19 +2,19 @@
 title: 设置 Use 和 Style 属性-WCF 示例
 ms.date: 03/30/2017
 ms.assetid: c09a0600-116f-41cf-900a-1b7e4ea4e300
-ms.openlocfilehash: 654bba8535ab253bdd34f64e7b6ab2fab66fd33b
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 946f8f6aab253eb881faaba7adfdc68dc54d7f0b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65637699"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69958806"
 ---
 # <a name="setting-the-use-and-style-properties"></a>设置 Use 和 Style 属性
 
 本示例演示如何使用 <xref:System.ServiceModel.XmlSerializerFormatAttribute> 和 <xref:System.ServiceModel.DataContractFormatAttribute> 的 Use 和 Style 属性。 这些属性影响如何格式化消息。 默认情况下，使用设置为 <xref:System.ServiceModel.OperationFormatStyle.Document> 的样式格式化消息正文。 可以在服务协定级别或在操作协定级别指定这些设置。
 
 > [!NOTE]
->  本主题的最后介绍了此示例的设置过程和生成说明。
+> 本主题的最后介绍了此示例的设置过程和生成说明。
 
 <xref:System.ServiceModel.DataContractFormatAttribute.Style%2A> 样式属性确定如何设置服务的 WSDL 元数据格式。 可能的值为 <xref:System.ServiceModel.OperationFormatStyle.Document> 和 <xref:System.ServiceModel.OperationFormatStyle.Rpc>。 RPC 意味着与操作交换的消息的 WSDL 表示形式包含参数，如同远程过程调用那样。 下面是一个示例。
 
@@ -53,7 +53,7 @@ ms.locfileid: "65637699"
 
 WS-I 基本配置文件 1.0 禁止使用 <xref:System.ServiceModel.OperationFormatUse.Encoded>，只能在旧式服务需要时使用它。 仅当使用 XmlSerializer 时，`Encoded` 消息格式才可用。
 
-若要允许您看到正在发送和接收消息，此示例为基础[跟踪和消息日志记录](tracing-and-message-logging.md)。 已将服务配置和源代码修改为启用和使用跟踪和消息日志记录。 此外，配置 <xref:System.ServiceModel.WSHttpBinding> 时没有使用安全性，因此可以以未加密的格式查看记录的消息。 应通过查看生成的跟踪日志 （System.ServiceModel.e2e 和 Message.log） [Service Trace Viewer Tool (SvcTraceViewer.exe)](../service-trace-viewer-tool-svctraceviewer-exe.md)。 将跟踪配置为在 C:\LOGS 文件夹中创建。 请在运行示例之前创建该文件夹。 若要在跟踪查看器工具中查看消息内容，请选择**消息**中的左窗格和右窗格的工具。
+为了使你能够看到正在发送和接收的消息, 此示例基于[跟踪和消息日志记录](tracing-and-message-logging.md)。 已将服务配置和源代码修改为启用和使用跟踪和消息日志记录。 此外，配置 <xref:System.ServiceModel.WSHttpBinding> 时没有使用安全性，因此可以以未加密的格式查看记录的消息。 应使用[服务跟踪查看器工具 (svctraceviewer.exe)](../service-trace-viewer-tool-svctraceviewer-exe.md)来查看生成的跟踪日志 (E2e 和 Message)。 将跟踪配置为在 C:\LOGS 文件夹中创建。 请在运行示例之前创建该文件夹。 若要在跟踪查看器工具中查看消息内容, 请在工具的左窗格和右窗格中选择 "**消息**"。
 
 下面的代码显示服务协定，该协定的 <xref:System.ServiceModel.XmlSerializerFormatAttribute.Use%2A> 属性设置为 <xref:System.ServiceModel.OperationFormatUse>，消息正文格式从默认的 <xref:System.ServiceModel.OperationFormatStyle> 更改为 <xref:System.ServiceModel.OperationFormatStyle.Document>。
 
@@ -78,19 +78,19 @@ public interface IUseAndStyleCalculator
 
 ## <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例
 
-1. 请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](one-time-setup-procedure-for-the-wcf-samples.md)。
+1. 确保已对[Windows Communication Foundation 示例执行了一次性安装过程](one-time-setup-procedure-for-the-wcf-samples.md)。
 
 2. 创建一个 C:\LOGS 目录，用于记录消息。 向用户授予对该目录的“网络服务”写权限。
 
 3. 若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](building-the-samples.md)中的说明进行操作。
 
-4. 若要在单或跨计算机配置中运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](running-the-samples.md)。
+4. 若要以单机配置或跨计算机配置来运行示例, 请按照[运行 Windows Communication Foundation 示例](running-the-samples.md)中的说明进行操作。
 
 > [!IMPORTANT]
 > 您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> 如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：
+> 如果此目录不存在, 请参阅[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)以下载所有 Windows Communication Foundation (wcf) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：
 > 
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Message\UseAndStyle`

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - typography [WPF], OpenType font technology
 - OpenType font technology [WPF]
 ms.assetid: 4061a9d1-fe8b-4921-9e17-18ec7d2e3ea2
-ms.openlocfilehash: 580f9ce81e9b3652a9defec25dfd05f47e296d7a
-ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
+ms.openlocfilehash: 3f1f0698afce6e64711e37ac60d0662d65bbee6b
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69545388"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70016144"
 ---
 # <a name="opentype-font-features"></a>OpenType 字体功能
 
@@ -22,7 +22,7 @@ ms.locfileid: "69545388"
   
 <a name="overview"></a>   
 ## <a name="opentype-font-format"></a>OpenType 字体格式  
- OpenType 字体格式是[!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)]字体格式的扩展, 添加了对 PostScript 字体数据的支持。 OpenType 字体格式由[!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)]和 Adobe Corporation 共同开发。 Opentype 字体和支持 opentype 字体的操作系统服务为用户提供了一种简单的方法来安装和使用字体, 无论字体是否[!INCLUDE[TLA2#tla_truetype](../../../../includes/tla2sharptla-truetype-md.md)]包含轮廓或 CFF (PostScript) 轮廓。  
+ OpenType 字体格式是[!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)]字体格式的扩展, 添加了对 PostScript 字体数据的支持。 OpenType 字体格式由 Microsoft 和 Adobe Corporation 共同开发。 Opentype 字体和支持 opentype 字体的操作系统服务为用户提供了一种简单的方法来安装和使用字体, 无论字体是否[!INCLUDE[TLA2#tla_truetype](../../../../includes/tla2sharptla-truetype-md.md)]包含轮廓或 CFF (PostScript) 轮廓。  
   
  OpenType 字体格式解决了以下开发人员难题:  
   
@@ -37,7 +37,7 @@ ms.locfileid: "69545388"
 - 更广泛的高级版式控件支持。  
   
 > [!NOTE]
->  Windows SDK 包含一组可用于[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]应用程序的示例 OpenType 字体。 这些字体提供本主题余下部分所述的大多数功能。 有关详细信息，请参阅[示例 OpenType 字体包](sample-opentype-font-pack.md)。  
+> Windows SDK 包含一组可用于[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]应用程序的示例 OpenType 字体。 这些字体提供本主题余下部分所述的大多数功能。 有关详细信息，请参阅[示例 OpenType 字体包](sample-opentype-font-pack.md)。  
   
  有关 OpenType 字体格式的详细信息, 请参阅[Opentype 规范](https://go.microsoft.com/fwlink/?LinkId=96731)。  
   

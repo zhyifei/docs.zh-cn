@@ -2,20 +2,20 @@
 title: <serviceDiscovery>
 ms.date: 03/30/2017
 ms.assetid: a3c68a4a-fc95-43c5-aacb-785936c0cf39
-ms.openlocfilehash: 54a9833f56927568af711a103bd3831b767711e4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a99edd3a62a40c2efbc63a166b8c0b0d124e8a72
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788409"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69936276"
 ---
 # <a name="servicediscovery"></a>\<serviceDiscovery>
 指定服务终结点的可发现性。  
   
  \<system.ServiceModel>  
-\<behaviors>  
+\<行为 >  
 \<serviceBehaviors>  
-\<behavior>  
+\<行为 >  
 \<serviceDiscovery>  
   
 ## <a name="syntax"></a>语法  
@@ -49,17 +49,17 @@ ms.locfileid: "61788409"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<announcementEndpoint>](../../../../../docs/framework/configure-apps/file-schema/wcf/announcementendpoint.md)|一个公告终结点集合。 使用此节可指定用于发送公告消息的终结点。|  
-|[\<discoveryEndpoint>](../../../../../docs/framework/configure-apps/file-schema/wcf/discoveryendpoint.md)|一个发现终结点集合。 使用此节可指定要在其上侦听发现消息的终结点。|  
+|[\<announcementEndpoint>](announcementendpoint.md)|一个公告终结点集合。 使用此节可指定用于发送公告消息的终结点。|  
+|[\<discoveryEndpoint>](discoveryendpoint.md)|一个发现终结点集合。 使用此节可指定要在其上侦听发现消息的终结点。|  
   
 ### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|指定行为元素。|  
+|[\<behavior>](behavior-of-endpointbehaviors.md)|指定行为元素。|  
   
 ## <a name="remarks"></a>备注  
- 将此配置元素添加到服务的行为配置后，此元素可使系统检测到此服务的所有终结点。 您可以进一步配置此类终结点的发现功能，通过使用[ \<discoveryEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/discoveryendpoint.md)或[ \<announcementEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/announcementendpoint.md)子元素。 使用[ \<announcementEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/announcementendpoint.md)部分，以通过指定要用于发送服务公告 （联机 /hello 和脱机 /bye） 的终结点配置来配置公告。 使用[ \<discoveryEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/discoveryendpoint.md)节可以手动指定上用来侦听发现消息的终结点。  
+ 将此配置元素添加到服务的行为配置后，此元素可使系统检测到此服务的所有终结点。 可以通过使用[ \<discoveryEndpoint >](discoveryendpoint.md)或[ \<announcementEndpoint >](announcementendpoint.md)子元素, 进一步配置此类终结点的发现功能。 使用 " [ \<announcementEndpoint >](announcementendpoint.md) " 部分, 通过指定要用于发送服务公告的终结点配置 (online/Hello 和 offline/再见) 来配置公告。 使用 " [ \<discoveryEndpoint >](discoveryendpoint.md) " 部分, 手动指定要在其上侦听发现消息的终结点。  
   
 ## <a name="example"></a>示例  
  下面的配置示例指定 CalculatorService 可供检测，并选择指定要使用的公告终结点。  

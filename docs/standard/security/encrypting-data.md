@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7ecce51f-db5f-4bd4-9321-cceb6fcb2a77
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: eeb92845d9b4eb40eef496ffaf5b35e38ed91423
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: fd74da9be6d6b02817c8969befdc292f6e814628
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301172"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968708"
 ---
 # <a name="encrypting-data"></a>加密数据
 对称加密和非对称加密是使用不同的进程执行的。 对称加密是对流执行的，因此适用于加密大量数据。 非对称加密是对少数字节执行的，因此仅适用于加密少量数据。  
@@ -43,7 +43,7 @@ CryptoStream cryptStream = new CryptoStream(myStream, rmCrypto.CreateEncryptor()
  下面的示例演示创建流、加密流、写入流和关闭流的整个过程。 此示例创建使用 **CryptoStream** 类和 **RijndaelManaged** 类加密的网络流。 使用 <xref:System.IO.StreamWriter> 类将消息写入到加密流。  
   
 > [!NOTE]
->  此示例还可用于写入文件。 若要执行该操作，请删除 <xref:System.Net.Sockets.TcpClient> 引用，并将 <xref:System.Net.Sockets.NetworkStream> 替换为 <xref:System.IO.FileStream>。  
+> 此示例还可用于写入文件。 若要执行该操作，请删除 <xref:System.Net.Sockets.TcpClient> 引用，并将 <xref:System.Net.Sockets.NetworkStream> 替换为 <xref:System.IO.FileStream>。  
   
 ```vb  
 Imports System  

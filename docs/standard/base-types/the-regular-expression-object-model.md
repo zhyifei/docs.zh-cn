@@ -187,7 +187,7 @@ ms.locfileid: "64664665"
      [!code-csharp[Conceptual.RegularExpressions.ObjectModel#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/match2.cs#7)]
      [!code-vb[Conceptual.RegularExpressions.ObjectModel#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/match2.vb#7)]  
   
-- 通过调用 <xref:System.Text.RegularExpressions.Regex.Match%2A?displayProperty=nameWithType> 方法，此方法返回一个 <xref:System.Text.RegularExpressions.Match> 对象，该对象表示字符串中的第一个匹配项或字符串的一部分。 可以通过检索 `Match.Success` 属性的值确定是否已找到匹配项。 若要检索表示后续匹配项的 <xref:System.Text.RegularExpressions.Match> 对象，请重复调用 <xref:System.Text.RegularExpressions.Match.NextMatch%2A?displayProperty=nameWithType> 方法，直到返回的 `Success` 对象的 <xref:System.Text.RegularExpressions.Match> 属性为 `false`。  
+- 通过调用 <xref:System.Text.RegularExpressions.Regex.Match%2A?displayProperty=nameWithType> 方法，此方法返回一个 <xref:System.Text.RegularExpressions.Match> 对象，该对象表示字符串中的第一个匹配项或字符串的一部分。 可以通过检索 `Match.Success` 属性的值确定是否已找到匹配项。 若要检索表示后续匹配项的 <xref:System.Text.RegularExpressions.Match> 对象，请重复调用 <xref:System.Text.RegularExpressions.Match.NextMatch%2A?displayProperty=nameWithType> 方法，直到返回的 <xref:System.Text.RegularExpressions.Match> 对象的 `Success` 属性为 `false`。  
   
      下面的示例使用 <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%29?displayProperty=nameWithType> 和 <xref:System.Text.RegularExpressions.Match.NextMatch%2A?displayProperty=nameWithType> 方法来匹配输入字符串中的字符串“abc”。  
   
@@ -198,7 +198,9 @@ ms.locfileid: "64664665"
   
 - <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> 属性返回一个 <xref:System.Text.RegularExpressions.GroupCollection> 对象，该对象包含有关与正则表达式模式中的捕获组匹配的子字符串的信息。  
   
-- `Match.Captures` 属性返回一个 <xref:System.Text.RegularExpressions.CaptureCollection> 对象，该对象的使用是有限制的。 不会为其 <xref:System.Text.RegularExpressions.Match> 属性为 `Success` 的 `false` 对象填充集合。 否则，它将包含一个 <xref:System.Text.RegularExpressions.Capture> 对象，该对象具有的信息与 <xref:System.Text.RegularExpressions.Match> 对象具有的信息相同。  
+
+- `Match.Captures` 属性返回一个 <xref:System.Text.RegularExpressions.CaptureCollection> 对象，该对象的使用是有限制的。不会为其 `Success` 属性为 `false` 的 <xref:System.Text.RegularExpressions.Match> 的对象填充集合。否则，它将包含一个 <xref:System.Text.RegularExpressions.Capture> 对象，该对象具有的信息与 <xref:System.Text.RegularExpressions.Match> 对象具有的信息相同。
+
   
  有关这些对象的更多信息，请参阅本主题后面的[组集合](#GroupCollection)和[捕获集合](#CaptureCollection)部分。  
   

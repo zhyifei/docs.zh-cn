@@ -2,20 +2,20 @@
 title: <add> 的 <baseAddresses>
 ms.date: 03/30/2017
 ms.assetid: 1bd7426f-5f4f-43fc-b8e9-de842219aa32
-ms.openlocfilehash: fbcb3a07bf40c96a4cd1b2ec87277b6fefdfb89d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a94c5144d907c26e6f5eef09b1a17b17eb6c9e0f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704448"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920218"
 ---
-# <a name="add-of-baseaddresses"></a>\<add> of \<baseAddresses>
+# <a name="add-of-baseaddresses"></a>\<添加 baseAddresses > \<的 >
 表示一个配置元素，该元素指定服务主机所使用的基址。  
   
  \<system.ServiceModel>  
-\<client>  
-\<endpoint>  
-\<host>  
+\<客户端 >  
+\<终结点 >  
+\<主机 >  
 \<baseAddresses>  
 \<baseAddress>  
   
@@ -44,11 +44,11 @@ ms.locfileid: "61704448"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<baseAddresses>](../../../../../docs/framework/configure-apps/file-schema/wcf/baseaddresses.md)|一个 `baseAddress` 元素集合。|  
+|[\<baseAddresses>](baseaddresses.md)|一个 `baseAddress` 元素集合。|  
   
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.ServiceModel.Configuration.HostElement>
 - <xref:System.ServiceModel.ServiceHost>
 - <xref:System.ServiceModel.ServiceHostBase.BaseAddresses%2A>
-- [承载](../../../../../docs/framework/wcf/feature-details/hosting.md)
+- [承载](../../../wcf/feature-details/hosting.md)

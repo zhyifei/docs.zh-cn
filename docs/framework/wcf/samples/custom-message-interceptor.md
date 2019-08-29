@@ -2,12 +2,12 @@
 title: 自定义消息拦截器
 ms.date: 03/30/2017
 ms.assetid: 73f20972-53f8-475a-8bfe-c133bfa225b0
-ms.openlocfilehash: 530c626a1f134190bb90fcee3a4e3bbba91d9516
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 4a91078ddb8eb66f1ee0f957005e9a0d290370c8
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878302"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70045600"
 ---
 # <a name="custom-message-interceptor"></a>自定义消息拦截器
 此示例演示通道扩展模型的使用。 特别是，演示如何实现可创建通道工厂和通道侦听器的自定义绑定元素，以便在运行时堆栈的特定点截获所有传入和传出消息。 此示例还包括一个客户端和一个服务器，用于演示这些自定义工厂的使用。  
@@ -15,18 +15,18 @@ ms.locfileid: "65878302"
  在此示例中，客户端和服务都是控制台程序 (.exe)。 客户端和服务都使用一个通用库 (.dll)，其中包含自定义绑定元素及其关联的运行库对象。  
   
 > [!NOTE]
->  本主题的最后介绍了此示例的设置过程和生成说明。  
+> 本主题的最后介绍了此示例的设置过程和生成说明。  
   
 > [!IMPORTANT]
->  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
+> 您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+> 如果此目录不存在, 请参阅[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)以下载所有 Windows Communication Foundation (wcf) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\MessageInterceptor`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\MessageInterceptor`  
   
- 此示例介绍了使用通道框架并遵循 WCF 最佳做法在 Windows Communication Foundation (WCF) 创建自定义分层的通道的推荐的过程。 创建自定义分层通道的步骤如下所示：  
+ 该示例介绍了使用通道框架和以下 WCF 最佳方案在 Windows Communication Foundation (WCF) 中创建自定义分层通道的建议过程。 创建自定义分层通道的步骤如下所示：  
   
 1. 确定您的通道工厂和通道侦听器将要支持哪些通道形状。  
   
@@ -52,7 +52,7 @@ class InterceptingChannelListener<TChannel> : ListenerFactoryBase<TChannel>
 ```  
   
 ## <a name="adding-a-binding-element"></a>添加绑定元素  
- 此示例定义了一个自定义绑定元素：`InterceptingBindingElement`。 `InterceptingBindingElement` 采用`ChannelMessageInterceptor`作为输入，并使用此`ChannelMessageInterceptor`来处理通过它传递的消息。 这是唯一必须公开的类。 工厂、侦听器和通道都可以是公共运行库接口的内部实现。  
+ 此示例定义了一个自定义绑定元素：`InterceptingBindingElement`。 `InterceptingBindingElement`采用作为输入, 并`ChannelMessageInterceptor`使用它来处理通过它的消息。 `ChannelMessageInterceptor` 这是唯一必须公开的类。 工厂、侦听器和通道都可以是公共运行库接口的内部实现。  
   
 ```  
 public class InterceptingBindingElement : BindingElement  
@@ -68,7 +68,7 @@ public abstract class InterceptingElement : BindingElementExtensionElement { ...
 ## <a name="adding-policy"></a>添加策略  
  为了与我们的策略系统集成，`InterceptingBindingElement` 实现了 IPolicyExportExtension，以表明我们应参与生成策略。 若要支持在生成的客户端导入策略，用户可以注册 `InterceptingBindingElementImporter` 的派生类并重写 `CreateMessageInterceptor`()，以生成启用策略的 `ChannelMessageInterceptor` 类。  
   
-## <a name="example-droppable-message-inspector"></a>示例:消息拦截器  
+## <a name="example-droppable-message-inspector"></a>示例:拦截消息检查器  
  此示例中包括了丢弃消息的 `ChannelMessageInspector` 的示例实现。  
   
 ```  
@@ -147,16 +147,16 @@ Dangerous wind detected! Reported speed (70) is greater than 64 kph.
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
-1. 安装 ASP.NET 4.0 使用以下命令。  
+1. 使用以下命令安装 ASP.NET 4.0。  
   
     ```  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2. 请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+2. 确保已对[Windows Communication Foundation 示例执行了一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-3. 若要生成解决方案，请按照中的说明[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
+3. 若要生成解决方案, 请按照[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
   
-4. 若要在单或跨计算机配置中运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
+4. 若要以单机配置或跨计算机配置来运行示例, 请按照[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的说明进行操作。  
   
 5. 先运行 Service.exe，然后运行 Client.exe 并观察两个控制台窗口的输出。  

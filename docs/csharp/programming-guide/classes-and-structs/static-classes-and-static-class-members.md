@@ -9,16 +9,16 @@ helpviewer_keywords:
 - C# language, static classes
 - static class members [C#]
 ms.assetid: 235614b5-1371-4dbd-9abd-b406a8b0298b
-ms.openlocfilehash: 11cbe6600a75b2db6174841790aa69efdf5da035
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 57ab0282c88a85b59c8fed7506ef811c8cced58f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398283"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924444"
 ---
 # <a name="static-classes-and-static-class-members-c-programming-guide"></a>静态类和静态类成员（C# 编程指南）
 
-[静态](../../../csharp/language-reference/keywords/static.md)类基本上与非静态类相同，但存在一个差异：静态类无法实例化。 换句话说，无法使用 [new](../../../csharp/language-reference/operators/new-operator.md) 运算符创建类类型的变量。 由于不存在任何实例变量，因此可以使用类名本身访问静态类的成员。 例如，如果你具有一个静态类，该类名为 `UtilityClass`，并且具有一个名为 `MethodA` 的公共静态方法，如下面的示例所示：  
+[静态](../../language-reference/keywords/static.md)类基本上与非静态类相同，但存在一个差异：静态类无法实例化。 换句话说，无法使用 [new](../../language-reference/operators/new-operator.md) 运算符创建类类型的变量。 由于不存在任何实例变量，因此可以使用类名本身访问静态类的成员。 例如，如果你具有一个静态类，该类名为 `UtilityClass`，并且具有一个名为 `MethodA` 的公共静态方法，如下面的示例所示：  
   
 ```csharp  
 UtilityClass.MethodA();  
@@ -41,7 +41,7 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
  与所有类类型的情况一样，加载引用该类的程序时，.NET Framework 公共语言运行时 (CLR) 会加载静态类的类型信息。 程序无法确切指定类加载的时间。 但是，可保证进行加载，以及在程序中首次引用类之前初始化其字段并调用其静态构造函数。 静态构造函数只调用一次，在程序所驻留的应用程序域的生存期内，静态类会保留在内存中。  
   
 > [!NOTE]
->  若要创建仅允许创建本身的一个实例的非静态类，请参阅[在 C# 中实现单一实例](https://docs.microsoft.com/previous-versions/msp-n-p/ff650316%28v=pandp.10%29)。  
+> 若要创建仅允许创建本身的一个实例的非静态类，请参阅[在 C# 中实现单一实例](https://docs.microsoft.com/previous-versions/msp-n-p/ff650316%28v=pandp.10%29)。  
   
  以下列表提供静态类的主要功能：  
   
@@ -51,11 +51,11 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
   
 - 会进行密封。  
   
-- 不能包含[实例构造函数](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md)。  
+- 不能包含[实例构造函数](./instance-constructors.md)。  
   
  因此，创建静态类基本上与创建只包含静态成员和私有构造函数的类相同。 私有构造函数可防止类进行实例化。 使用静态类的优点是编译器可以进行检查，以确保不会意外地添加任何实例成员。 编译器可保证无法创建此类的实例。  
   
- 静态类会进行密封，因此不能继承。 它们不能继承自任何类（除了 <xref:System.Object>）。 静态类不能包含实例构造函数；但是，它们可以包含静态构造函数。 如果非静态类包含了需要进行有意义的初始化的静态成员，则它也应该定义一个静态构造器。 有关详细信息，请参阅[静态构造函数](../../../csharp/programming-guide/classes-and-structs/static-constructors.md)。  
+ 静态类会进行密封，因此不能继承。 它们不能继承自任何类（除了 <xref:System.Object>）。 静态类不能包含实例构造函数；但是，它们可以包含静态构造函数。 如果非静态类包含了需要进行有意义的初始化的静态成员，则它也应该定义一个静态构造器。 有关详细信息，请参阅[静态构造函数](./static-constructors.md)。  
   
 ## <a name="example"></a>示例  
  下面是静态类的示例，该类包含将温度从摄氏度从华氏度以及从华氏度转换为摄氏度的两个方法：  
@@ -69,7 +69,7 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
   
  静态方法可以进行重载，但不能进行替代，因为它们属于类，而不属于类的任何实例。  
   
- 虽然字段不能声明为 `static const`，不过 [const](../../../csharp/language-reference/keywords/const.md) 字段在其行为方面本质上是静态的。 它属于类型，而不属于类型的实例。 因此，可以使用用于静态字段的相同 `ClassName.MemberName` 表示法来访问常量字段。 无需进行对象实例化。  
+ 虽然字段不能声明为 `static const`，不过 [const](../../language-reference/keywords/const.md) 字段在其行为方面本质上是静态的。 它属于类型，而不属于类型的实例。 因此，可以使用用于静态字段的相同 `ClassName.MemberName` 表示法来访问常量字段。 无需进行对象实例化。  
   
  C# 不支持静态局部变量（在方法范围中声明的变量）。  
   
@@ -91,9 +91,9 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
   
 ## <a name="see-also"></a>请参阅
 
-- [C# 编程指南](../../../csharp/programming-guide/index.md)
-- [static](../../../csharp/language-reference/keywords/static.md)
-- [类](../../../csharp/programming-guide/classes-and-structs/classes.md)
-- [class](../../../csharp/language-reference/keywords/class.md)
-- [静态构造函数](../../../csharp/programming-guide/classes-and-structs/static-constructors.md)
-- [实例构造函数](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md)
+- [C# 编程指南](../index.md)
+- [static](../../language-reference/keywords/static.md)
+- [类](./classes.md)
+- [class](../../language-reference/keywords/class.md)
+- [静态构造函数](./static-constructors.md)
+- [实例构造函数](./instance-constructors.md)

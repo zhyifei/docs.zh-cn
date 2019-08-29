@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: 8a5ea56c-0140-4b51-8997-875ae6a8e0cb
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 451893cf09b0d1ebdfb33d0020376aa35240b6d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e8c8e1b0d9a79ff22f3194e86cd580f3a7e199b2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54650988"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962030"
 ---
 # <a name="building-xml-schemas"></a>生成 XML 架构
 <xref:System.Xml.Schema?displayProperty=nameWithType> 命名空间中的类映射到万维网联合会 (W3C) XML 架构建议中定义的结构，可以用于在内存中生成 XML 架构。  
@@ -35,14 +35,14 @@ ms.locfileid: "54650988"
  元素和属性的内容通过其类型定义。 要创建类型属于一种内置架构类型的元素和属性，<xref:System.Xml.Schema.XmlSchemaElement.SchemaTypeName%2A> 或 <xref:System.Xml.Schema.XmlSchemaElement> 类的 <xref:System.Xml.Schema.XmlSchemaAttribute> 属性应使用 <xref:System.Xml.XmlQualifiedName> 类设置该内置类型相应的限定名。 要为元素和属性创建用户定义类型，应使用 <xref:System.Xml.Schema.XmlSchemaSimpleType> 或 <xref:System.Xml.Schema.XmlSchemaComplexType> 类创建新的简单类型或复杂类型。  
   
 > [!NOTE]
->  要创建未命名的简单类型或复杂类型，并且属于元素或属性的匿名子级（只有简单类型适用于属性），应将 <xref:System.Xml.Schema.XmlSchemaElement.SchemaType%2A> 或 <xref:System.Xml.Schema.XmlSchemaElement> 类的 <xref:System.Xml.Schema.XmlSchemaAttribute> 属性设置为未命名的简单类型或复杂类型，而不是设置 <xref:System.Xml.Schema.XmlSchemaElement.SchemaTypeName%2A> 或 <xref:System.Xml.Schema.XmlSchemaElement> 类的 <xref:System.Xml.Schema.XmlSchemaAttribute> 属性。  
+> 要创建未命名的简单类型或复杂类型，并且属于元素或属性的匿名子级（只有简单类型适用于属性），应将 <xref:System.Xml.Schema.XmlSchemaElement.SchemaType%2A> 或 <xref:System.Xml.Schema.XmlSchemaElement> 类的 <xref:System.Xml.Schema.XmlSchemaAttribute> 属性设置为未命名的简单类型或复杂类型，而不是设置 <xref:System.Xml.Schema.XmlSchemaElement.SchemaTypeName%2A> 或 <xref:System.Xml.Schema.XmlSchemaElement> 类的 <xref:System.Xml.Schema.XmlSchemaAttribute> 属性。  
   
  XML 架构允许通过限制从其他简单类型（内置或用户定义）派生的匿名和命名的简单类型，或作为其他简单类型的列表或联合构造的匿名和命名的简单类型。 <xref:System.Xml.Schema.XmlSchemaSimpleTypeRestriction> 类用于通过限制内置 `xs:string` 类型来创建简单类型。 也可以使用 <xref:System.Xml.Schema.XmlSchemaSimpleTypeList> 或 <xref:System.Xml.Schema.XmlSchemaSimpleTypeUnion> 类创建列表或联合类型。 <xref:System.Xml.Schema.XmlSchemaSimpleType.Content%2A?displayProperty=nameWithType> 属性表明属于简单类型限制、列表还是联合。  
   
  在下面的代码示例中，`FirstName` 元素的类型是内置类型 `xs:string`，`LastName` 元素的类型是命名的简单类型，属于内置类型 `xs:string` 的限制，`MaxLength` 方面的值为 20，`CustomerId` 属性的类型是内置类型 `xs:positiveInteger`。 `Customer` 元素是匿名的复杂类型，其粒子是 `FirstName` 和 `LastName` 元素的序列，其属性包含 `CustomerId` 属性。  
   
 > [!NOTE]
->  也可以使用 <xref:System.Xml.Schema.XmlSchemaChoice> 或 <xref:System.Xml.Schema.XmlSchemaAll> 类作为复杂类型的粒子，以复制 `<xs:choice />` 或 `<xs:all />` 语义。  
+> 也可以使用 <xref:System.Xml.Schema.XmlSchemaChoice> 或 <xref:System.Xml.Schema.XmlSchemaAll> 类作为复杂类型的粒子，以复制 `<xs:choice />` 或 `<xs:all />` 语义。  
   
  [!code-cpp[XmlSchemaCreateExample#3](../../../../samples/snippets/cpp/VS_Snippets_Data/XmlSchemaCreateExample/CPP/XmlSchemaCreateExample.cpp#3)]
  [!code-csharp[XmlSchemaCreateExample#3](../../../../samples/snippets/csharp/VS_Snippets_Data/XmlSchemaCreateExample/CS/XmlSchemaCreateExample.cs#3)]
@@ -58,7 +58,7 @@ ms.locfileid: "54650988"
  <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A?displayProperty=nameWithType> 方法针对 XML 架构的规则验证客户架构，并使后架构编译属性可用。  
   
 > [!NOTE]
->  SOM API 中的所有后架构编译属性与后架构验证信息集不同。  
+> SOM API 中的所有后架构编译属性与后架构验证信息集不同。  
   
  添加到 <xref:System.Xml.Schema.ValidationEventHandler> 的 <xref:System.Xml.Schema.XmlSchemaSet> 是一个委托，用于调用回调方法 `ValidationCallback` 来处理架构验证警告和错误。  
   

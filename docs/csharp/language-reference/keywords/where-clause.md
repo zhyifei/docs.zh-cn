@@ -8,16 +8,16 @@ helpviewer_keywords:
 - where keyword [C#]
 - where clause [C#]
 ms.assetid: 7f9bf952-7744-4f91-b676-cddb55d107c3
-ms.openlocfilehash: fc259f0e0a83d2f55bf2d50fa336c9201b8b5bef
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: aceda6cfd33a53388a5afb046359c4dcfddfd1f8
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633228"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69602021"
 ---
 # <a name="where-clause-c-reference"></a>where 子句（C# 参考）
 
-`where` 子句用在查询表达式中，用于指定将在查询表达式中返回数据源中的哪些元素。 它将一个布尔条件（谓词）应用于每个源元素（由范围变量引用），并返回满足指定条件的元素。 一个查询表达式可以包含多个 `where` 子句，一个子句可以包含多个谓词子表达式。
+`where` 子句用在查询表达式中，用于指定将在查询表达式中返回数据源中的哪些元素。 它将一个布尔条件（谓词  ）应用于每个源元素（由范围变量引用），并返回满足指定条件的元素。 一个查询表达式可以包含多个 `where` 子句，一个子句可以包含多个谓词子表达式。
 
 ## <a name="example"></a>示例
 
@@ -51,5 +51,5 @@ ms.locfileid: "65633228"
 - [from 子句](from-clause.md)
 - [select 子句](select-clause.md)
 - [筛选数据](../../programming-guide/concepts/linq/filtering-data.md)
-- [LINQ 查询表达式](../../../csharp/programming-guide/linq-query-expressions/index.md)
+- [LINQ 查询表达式](../../programming-guide/linq-query-expressions/index.md)
 - [C# 中的 LINQ 入门](../../programming-guide/concepts/linq/getting-started-with-linq.md)

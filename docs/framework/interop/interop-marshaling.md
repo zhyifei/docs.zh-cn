@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 115f7a2f-d422-4605-ab36-13a8dd28142a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3d6ddc2978078fd307ad79cffe14d53619d8be9e
-ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.openlocfilehash: 20766f4f7971d8aa304c7c3eead94f089f059d64
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65469718"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946707"
 ---
 # <a name="interop-marshaling"></a>互操作封送处理
 <a name="top"></a> 互操作封送处理控制调用期间，通过方法自变量和返回值在托管内存和非托管内存之间传递数据的方式。 互操作封送处理是由公共语言运行时的封送处理服务执行的运行时活动。  
@@ -91,7 +91,7 @@ ms.locfileid: "65469718"
 - 通过将客户端线程设置为 STA 或 MTA 改变主线程。 如，如果 C# 客户端调用许多 STA COM 组件，则可以通过将主线程设置为 STA 来避免跨单元封送。  
   
     > [!NOTE]
-    >  将 C# 客户端的线程设置为 STA 后，对 MTA COM 组件的调用将需要跨单元封送。  
+    > 将 C# 客户端的线程设置为 STA 后，对 MTA COM 组件的调用将需要跨单元封送。  
   
  有关显式选择单元模型的说明， 请参阅 [托管和非托管线程处理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5s8ee185(v=vs.100))。  
   
@@ -121,7 +121,7 @@ ms.locfileid: "65469718"
 - 托管客户端从一个 COM 对象获取一个对托管对象的引用，而该 COM 对象是从一台远程主机获取该引用的。 远程处理机制为 DCOM。  
   
     > [!NOTE]
-    >  必须注册该托管服务器的导出类型库。  
+    > 必须注册该托管服务器的导出类型库。  
   
  调用方和被调用方之间的进程边界的数目并不相干；对于进程内和进程外调用都会发生相同的直接引用处理。  
   

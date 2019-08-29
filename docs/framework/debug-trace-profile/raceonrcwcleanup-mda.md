@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: bee1e9b1-50a8-4c89-9cd9-7dd6b2458187
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e6400986d58fcb5f11d06e371a1b58f5256f4c62
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: ca3b28d0d27af0a752de894f5856b76939b01e09
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629367"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69967244"
 ---
 # <a name="raceonrcwcleanup-mda"></a>raceOnRCWCleanup MDA
-当使用命令（如 <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A?displayProperty=nameWithType> 方法）发出一个调用来发布[运行时可调用包装](../../../docs/standard/native-interop/runtime-callable-wrapper.md) (RCW) 时，如果公共语言运行时 (CLR) 检测到该包装正在使用中，则激活 `raceOnRCWCleanup` 托管调试助手 (MDA)。  
+当使用命令（如 <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A?displayProperty=nameWithType> 方法）发出一个调用来发布[运行时可调用包装](../../standard/native-interop/runtime-callable-wrapper.md) (RCW) 时，如果公共语言运行时 (CLR) 检测到该包装正在使用中，则激活 `raceOnRCWCleanup` 托管调试助手 (MDA)。  
   
 ## <a name="symptoms"></a>症状  
  使用 <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A> 或类似方法释放 RCW 期间或之后发生访问冲突或内存损坏。  

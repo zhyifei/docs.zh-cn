@@ -10,19 +10,19 @@ helpviewer_keywords:
 ms.assetid: b782bcb8-da6a-4c6a-805f-2eb46d504309
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 24df4140e515483adb94fa542a7063bd2ae2120b
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: 31d5df6521b7c420943a7d3d0efcf6e4bee2d3a2
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55479773"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666278"
 ---
 # <a name="overview-of-synchronization-primitives"></a>同步基元概述
 
 .NET 提供了一系列可用于同步对共享资源或协调线程交互的访问的类型。
 
 > [!IMPORTANT]
-> 使用相同的同步基元实例保护每次对共享资源的访问。 如果使用不同的同步基元实例保护对资源的访问或代码的某些部分直接访问资源，则多个线程可以同时访问资源。
+> 使用相同的同步基元实例保护对共享资源的访问。 如果使用不同的同步基元实例保护同一资源，则将避开同步基元提供的保护。
 
 ## <a name="waithandle-class-and-lightweight-synchronization-types"></a>WaitHandle 类和轻量同步类型
 

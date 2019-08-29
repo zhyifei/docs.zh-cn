@@ -2,20 +2,20 @@
 title: <windowsAuthentication> 的 <serviceCredentials>
 ms.date: 03/30/2017
 ms.assetid: e0709473-0997-4de3-8f49-783527309a48
-ms.openlocfilehash: ffddbae7effabcdafdc2638d588bbbf3e42d2c2a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 81793b0d58a95166bc23f98d46ce94a5f1e1d018
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769689"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940295"
 ---
-# <a name="windowsauthentication-of-servicecredentials"></a>\<windowsAuthentication> of \<serviceCredentials>
+# <a name="windowsauthentication-of-servicecredentials"></a>\<windowsAuthentication > \<serviceCredentials >
 指定 Windows 服务凭据的设置。  
   
  \<system.ServiceModel>  
-\<behaviors>  
+\<行为 >  
 \<serviceBehaviors>  
-\<behavior>  
+\<行为 >  
 \<serviceCredentials>  
 \<windowsAuthentication>  
   
@@ -43,7 +43,7 @@ ms.locfileid: "61769689"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<serviceCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)|指定要用于对服务进行身份验证的凭据以及与客户端凭据验证相关的设置。|  
+|[\<serviceCredentials>](servicecredentials.md)|指定要用于对服务进行身份验证的凭据以及与客户端凭据验证相关的设置。|  
   
 ## <a name="remarks"></a>备注  
  通过设置 `allowAnonymousLogons` 属性，使用此元素可指定是否允许匿名 Windows 用户访问。 此外，通过设置 `includeWindowsGroups` 属性还可以指定是否在 AuthorizationContext 中包含用户所属的组信息。 如果将它设置为 `true`（默认设置），服务就可以确定客户端所属的 Windows 组。  

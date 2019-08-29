@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 11ee0b38-d663-4617-b793-35eb6c64e9fc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dc2ed1a450921452dee894caeb52c477d501b573
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: d9c90a3bd272b54d2884d013e62123dd67d836e3
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55758620"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69960057"
 ---
 # <a name="eventwaithandle"></a>EventWaitHandle
 借助 <xref:System.Threading.EventWaitHandle> 类，线程可以通过发出信号和等待信号进行相互通信。 事件等待句柄（亦简称为“事件”）是可以收到信号以释放一个或多个等待线程的等待句柄。 收到信号后，事件等待句柄便会进行手动或自动重置。 <xref:System.Threading.EventWaitHandle> 类可以表示本地事件等待句柄（本地事件），也可以表示命名系统事件等待句柄（对所有进程可见的命名事件或系统事件）。  
   
 > [!NOTE]
->  事件等待句柄不是 .NET [事件](../events/index.md)。 并不涉及任何委托或事件处理程序。 之所以使用“事件”一词是因为，它们一直都被称为操作系统事件，并且向等待句柄发出信号可以向等待线程指明事件已发生。  
+> 事件等待句柄不是 .NET [事件](../events/index.md)。 并不涉及任何委托或事件处理程序。 之所以使用“事件”一词是因为，它们一直都被称为操作系统事件，并且向等待句柄发出信号可以向等待线程指明事件已发生。  
   
  本地和命名事件等待句柄均使用系统同步对象。为了确保资源获得释放，这些对象受 <xref:Microsoft.Win32.SafeHandles.SafeWaitHandle> 包装器保护。 可以使用 <xref:System.Threading.WaitHandle.Dispose%2A> 方法，在使用完对象后立即释放资源。  
   
@@ -31,7 +31,7 @@ ms.locfileid: "55758620"
  自动重置事件通常用于一次向一个线程提供对资源的独占访问权限。 线程通过调用 <xref:System.Threading.WaitHandle.WaitOne%2A> 方法来请求获取资源。 如果其他线程都没有等待句柄，此方法返回 `true`，且调用线程可以控制资源。  
   
 > [!IMPORTANT]
->  与所有同步机制一样，必须确保在访问受保护的资源前，所有代码路径都在相应的等待句柄上等待。 线程同步具有协作性。  
+> 与所有同步机制一样，必须确保在访问受保护的资源前，所有代码路径都在相应的等待句柄上等待。 线程同步具有协作性。  
   
  如果向自动重置事件发出信号时没有线程正在等待，此信号会一直发出到有线程尝试在等待句柄上等待。 此时，事件会释放相应线程并立即重置自身，同时阻止后续线程。  
   
@@ -53,14 +53,14 @@ ms.locfileid: "55758620"
  可以使用指定事件名称的构造函数之一，创建表示命名系统事件的 <xref:System.Threading.EventWaitHandle> 对象。  
   
 > [!NOTE]
->  由于命名事件的范围覆盖整个系统，因此可能有多个 <xref:System.Threading.EventWaitHandle> 对象表示同一命名事件。 每次调用构造函数或 <xref:System.Threading.EventWaitHandle.OpenExisting%2A> 方法，都会新建一个 <xref:System.Threading.EventWaitHandle> 对象。 重复指定相同的名称也会创建多个表示同一命名事件的对象。  
+> 由于命名事件的范围覆盖整个系统，因此可能有多个 <xref:System.Threading.EventWaitHandle> 对象表示同一命名事件。 每次调用构造函数或 <xref:System.Threading.EventWaitHandle.OpenExisting%2A> 方法，都会新建一个 <xref:System.Threading.EventWaitHandle> 对象。 重复指定相同的名称也会创建多个表示同一命名事件的对象。  
   
  建议谨慎使用命名事件。 由于命名事件的范围覆盖整个系统，因此同名的另一进程可能会意外阻止线程。 同一台计算机上的恶意代码执行可将此作为拒绝服务攻击的基础。  
   
  借助访问控制安全性，可以保护表示命名事件的 <xref:System.Threading.EventWaitHandle> 对象，最好使用指定 <xref:System.Security.AccessControl.EventWaitHandleSecurity> 对象的构造函数。 还可以使用 <xref:System.Threading.EventWaitHandle.SetAccessControl%2A> 方法应用访问控制安全性，但这会导致在创建和保护事件等待句柄的时间间隔易受攻击。 虽然应用访问控制安全性来保护事件有助于防止恶意攻击，但不能解决无意间的名称冲突问题。  
   
 > [!NOTE]
->  与 <xref:System.Threading.EventWaitHandle> 类不同，派生类 <xref:System.Threading.AutoResetEvent> 和 <xref:System.Threading.ManualResetEvent> 只能表示本地等待句柄。 无法表示命名系统事件。  
+> 与 <xref:System.Threading.EventWaitHandle> 类不同，派生类 <xref:System.Threading.AutoResetEvent> 和 <xref:System.Threading.ManualResetEvent> 只能表示本地等待句柄。 无法表示命名系统事件。  
   
 ## <a name="see-also"></a>请参阅
 

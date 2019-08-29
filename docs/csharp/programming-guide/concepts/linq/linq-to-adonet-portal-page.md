@@ -2,18 +2,18 @@
 title: LINQ to ADO.NET（门户网站页）
 ms.date: 07/20/2015
 ms.assetid: 6bd269b4-3509-4688-b672-836008704182
-ms.openlocfilehash: 8c39582ee95619bfddc7b89380e0a86305eeac27
-ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
+ms.openlocfilehash: 3bea3dffb98f0745947e4a672f70df5010bc2824
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67539506"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924262"
 ---
 # <a name="linq-to-adonet-portal-page"></a>LINQ to ADO.NET（门户网站页）
 通过 LINQ to ADO.NET，可使用 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 编程模型在 ADO.NET 中跨任何可枚举对象进行查询。  
   
 > [!NOTE]
->  LINQ to ADO.NET 文档位于 .NET Framework SDK 的 ADO.NET 部分：[LINQ 和 ADO.NET](../../../../framework/data/adonet/linq-and-ado-net.md)。  
+> LINQ to ADO.NET 文档位于 .NET Framework SDK 的 ADO.NET 部分：[LINQ 和 ADO.NET](../../../../framework/data/adonet/linq-and-ado-net.md)。  
   
  有三种独立的 ADO.NET [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 技术：LINQ to DataSet、[!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] 和 LINQ to Entities。 LINQ to DataSet 提供针对 <xref:System.Data.DataSet> 的形式多样的优化查询，[!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] 可用于直接查询 SQL Server 数据库架构，而 LINQ to Entities 可实现实体数据模型的查询。  
   
@@ -29,7 +29,7 @@ ms.locfileid: "67539506"
   
  [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] 包括对数据库中的已存储过程和用户定义的函数和对象模型中的继承的支持。  
   
- 有关详细信息，请参阅 [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)。  
+ 有关详细信息，请参阅 [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)。  
   
 ## <a name="linq-to-entities"></a>LINQ to Entities  
  通过实体数据模型，在 .NET 环境中将关系数据作为对象公开。 这使得对象层成为实现 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 支持的理想目标，开发人员可以采用生成业务逻辑所用的语言来构建数据库查询。 此功能称为 LINQ to Entities。 有关详细信息，请参阅 [LINQ to Entities](../../../../framework/data/adonet/ef/language-reference/linq-to-entities.md)。  
@@ -37,4 +37,4 @@ ms.locfileid: "67539506"
 ## <a name="see-also"></a>请参阅
 
 - [LINQ 和 ADO.NET](../../../../framework/data/adonet/linq-and-ado-net.md)
-- [语言集成查询 (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)
+- [语言集成查询 (LINQ) (C#)](./index.md)

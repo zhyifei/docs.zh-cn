@@ -8,19 +8,19 @@ helpviewer_keywords:
 - providerOptions
 - provideroption element
 ms.assetid: 014f2e0b-c0b5-4fc4-92d3-73f02978b2a1
-ms.openlocfilehash: 9c69ea7bf95b311a796ec29d90410a77b748c3c6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 37f4d8c5eeacd82f8fc37179c478d026ca25f459
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705319"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664307"
 ---
 # <a name="provideroption-element"></a>\<providerOption > 元素
 指定语言提供程序的编译器版本特性。  
   
  \<配置元素 >  
-\<system.codedom 元素 >  
-\<compilers 元素 >  
+\<system.object 元素 >  
+\<编译器元素 >  
 \<编译器 > 元素  
 \<providerOption > 元素  
   
@@ -40,8 +40,8 @@ ms.locfileid: "61705319"
   
 |特性|描述|  
 |---------------|-----------------|  
-|`name`|必需的特性。<br /><br /> 指定的选项; 的名称例如，"CompilerVersion"。|  
-|`value`|必需的特性。<br /><br /> 指定选项; 的值例如，"v3.5"。|  
+|`name`|必需的特性。<br /><br /> 指定选项的名称;例如 "CompilerVersion"。|  
+|`value`|必需的特性。<br /><br /> 指定选项的值;例如, "v 3.5"。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  
@@ -50,22 +50,22 @@ ms.locfileid: "61705319"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<configuration> 元素](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|公共语言运行库和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
-|[\<system.codedom > 元素](../../../../../docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md)|指定可用语言提供程序的编译器配置设置。|  
-|[\<编译器 > 元素](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)|编译器配置元素; 容器包含零个或多`<compiler>`元素。|  
-|[\<compiler> Element](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)|指定语言提供程序的编译器配置属性。|  
+|[\<configuration> 元素](../configuration-element.md)|公共语言运行库和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
+|[\<system.object > 元素](system-codedom-element.md)|指定可用语言提供程序的编译器配置设置。|  
+|[\<编译器 > 元素](compilers-element.md)|编译器配置元素的容器;包含零个或`<compiler>`多个元素。|  
+|[\<compiler> Element](compiler-element.md)|指定语言提供程序的编译器配置属性。|  
   
 ## <a name="remarks"></a>备注  
- 在.NET Framework 版本 3.5 中，代码文档对象模型 (CodeDOM) 的代码提供程序可以支持特定于提供程序的选项通过使用`<providerOption>`元素。  
+ 在 .NET Framework 版本3.5 中, 代码文档对象模型 (CodeDOM) 代码提供程序可以使用`<providerOption>`元素支持特定于提供程序的选项。  
   
- .NET Framework 3.5 包括更新的.NET Framework 2.0 程序集，并提供包含新类型的新版本 3.5 程序集。 Microsoft C# 和 Visual Basic 代码提供程序包含在.NET Framework 2.0 程序集，但已更新，以支持版本 3.5 编译器。 默认情况下，更新后的代码提供程序生成为版本 2.0 编译器的代码。 可以使用`<providerOption>`元素更改目标编译器版本为 3.5。 若要执行此操作，指定"CompilerVersion"对于`name`属性和"v3.5"为`value`属性。 必须在之前使用小写字母"v"的版本号。  
+ 3\.5 .NET Framework 包括更新的 .NET Framework 2.0 程序集, 并提供包含新类型的3.5 版本的新程序集。 Microsoft C#和 Visual Basic 代码提供程序包含在 .NET Framework 2.0 程序集中, 但已更新为支持版本3.5 编译器。 默认情况下, 更新的代码提供程序为版本2.0 编译器生成代码。 您可以使用`<providerOption>`元素将目标编译器版本更改为3.5。 为此, 请将`name`属性指定为 "CompilerVersion", 并`value`为属性指定 "v 3.5"。 必须在版本号前面加上小写 "v"。  
   
- 您可以使版本规范全局通过添加`<providerOption>`到.NET Framework 2.0 Machine.config 或根 Web.config 文件的元素。 默认编译器版本更新至 3.5 在 Machine.config 文件中时，如果您可以将其更改回为 2.0 基于每个应用程序使用`<providerOption>`应用程序配置文件中的元素。  
+ 可以通过将`<providerOption>`元素添加到 .NET Framework 2.0 machine.config 或根 web.config 文件来使版本规范成为全局版本。 如果在 machine.config 文件中将默认编译器版本更新为 3.5, 则可使用应用程序配置文件中的`<providerOption>`元素, 将其更改为每个应用程序的2.0。  
   
- CodeDOM 代码提供程序实施者可以通过提供的构造函数来处理自定义选项`providerOptions`类型的参数<xref:System.Collections.Generic.IDictionary%602>。  
+ CodeDOM 代码提供程序实现者可以通过提供采用`providerOptions`类型<xref:System.Collections.Generic.IDictionary%602>为的参数的构造函数来处理自定义选项。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何指定应使用 3.5 版的 C# 代码提供程序。  
+ 下面的示例演示如何指定应该使用C#代码提供程序的3.5 版。  
   
 ```xml  
 <configuration>  
@@ -93,7 +93,7 @@ ms.locfileid: "61705319"
 
 - <xref:System.CodeDom.Compiler.CompilerInfo>
 - <xref:System.CodeDom.Compiler.CodeDomProvider>
-- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [\<编译器 > 元素](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)
-- [指定完全限定的类型名称](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)
-- [（ASP.NET 设置架构） compilation 的 compilers 的 compiler 元素](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/a15ebt6c(v=vs.100))
+- [配置文件架构](../index.md)
+- [\<编译器 > 元素](compilers-element.md)
+- [指定完全限定的类型名称](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md)
+- [用于编译的编译器的编译器元素 (ASP.NET 设置架构)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/a15ebt6c(v=vs.100))

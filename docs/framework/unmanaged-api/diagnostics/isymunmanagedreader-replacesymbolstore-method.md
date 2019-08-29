@@ -17,18 +17,18 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 525ec4828fb942aeb447940ea68a523cd7c69140
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8721f7c30061fbfd4a761bed090b761762c3c13c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67736736"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939023"
 ---
 # <a name="isymunmanagedreaderreplacesymbolstore-method"></a>ISymUnmanagedReader::ReplaceSymbolStore 方法
-用增量符号存储区替换现有的符号存储区。 此方法是类似于[UpdateSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md)方法，只不过给定的增量充当完全替换而不是更新。  
+用增量符号存储区替换现有的符号存储区。 此方法类似于[UpdateSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md)方法, 不同之处在于给定增量充当完全替换而不是更新。  
   
 > [!NOTE]
->  你需要仅指定一个`filename`或`pIStream`参数不可同时使用两者。 如果`filename`指定，则将使用该文件中的符号更新符号存储区。 如果`pIStream`中的数据将更新存储的指定<xref:System.Runtime.InteropServices.ComTypes.IStream>。  
+> 只需指定`filename`或`pIStream`参数之一, 而不能同时指定两者。 如果`filename`指定了, 则将用该文件中的符号更新符号存储区。 如果`pIStream`指定了, 则将用<xref:System.Runtime.InteropServices.ComTypes.IStream>中的数据更新存储区。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,16 +40,16 @@ HRESULT ReplaceSymbolStore (
   
 ## <a name="parameters"></a>参数  
  `filename`  
- [in]包含符号存储区的文件的名称。  
+ 中包含符号存储区的文件的名称。  
   
  `pIStream`  
- [in]作为一种替代方法使用的文件流`filename`参数。  
+ 中文件流, 用作`filename`参数的替代项。  
   
 ## <a name="return-value"></a>返回值  
- 如果方法成功，则为 S_OK否则为 E_FAIL 或某些其他错误代码。  
+ 如果该方法成功, 则返回 S_OK;否则, E_FAIL 或其他一些错误代码。  
   
 ## <a name="requirements"></a>要求  
- **标头：** CorSym.idl CorSym.h  
+ **标头：** CorSym, CorSym  
   
 ## <a name="see-also"></a>请参阅
 

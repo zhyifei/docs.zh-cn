@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d59b93a9-50c8-4770-a114-d902f6a0ea76
-ms.openlocfilehash: 8f645232d2ae9d9bad8c26a5b9fec2243c6cf9d0
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: f6f112a63dd976a1d6ae91f2fafd6678a9f40846
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66380025"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69945093"
 ---
 # <a name="sort-elements-in-a-sequence"></a>在序列中对元素进行排序
 使用 <xref:System.Linq.Enumerable.OrderBy%2A> 运算符可按一个或多个键对序列进行排序。  
   
 > [!NOTE]
->  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 设计为支持按简单的基元类型（如 `string`、`int` 等）进行排序。 它不支持对复杂的多值类（如匿名类型）进行排序。 它也不支持 `byte` 数据类型。  
+> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 设计为支持按简单的基元类型（如 `string`、`int` 等）进行排序。 它不支持对复杂的多值类（如匿名类型）进行排序。 它也不支持 `byte` 数据类型。  
   
 ## <a name="example"></a>示例  
  下面的示例按雇佣日期对 `Employees` 进行排序。  
@@ -43,7 +43,7 @@ ms.locfileid: "66380025"
  [!code-vb[DLinqQueryExamples#24](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#24)]  
   
 ## <a name="example"></a>示例  
- 下面的示例对订单进行排序`EmployeeID 1`通过`ShipCountry`，然后再按最高到最低运费。  
+ 下面的示例按从`EmployeeID 1` `ShipCountry`到最高到最低的运费对订单进行排序。  
   
  [!code-csharp[DLinqQueryExamples#25](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#25)]
  [!code-vb[DLinqQueryExamples#25](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#25)]  

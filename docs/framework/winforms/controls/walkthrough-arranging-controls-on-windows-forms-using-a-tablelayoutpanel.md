@@ -6,12 +6,12 @@ helpviewer_keywords:
 - TableLayoutPanel control [Windows Forms], walkthroughs
 - Windows Forms controls, arranging
 ms.assetid: d474885e-12cc-4ab7-b997-2a23a643049b
-ms.openlocfilehash: 7566f19282ffd5a3cac86693a64899f25ce37b9f
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 289a8427540c713758c3f155e72efffe9f3c85bc
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040282"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666803"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel"></a>演练：使用 TableLayoutPanel 在 Windows 窗体上排列控件
 
@@ -19,7 +19,7 @@ ms.locfileid: "69040282"
 
 <xref:System.Windows.Forms.FlowLayoutPanel> 控件和 <xref:System.Windows.Forms.TableLayoutPanel> 控件提供可用于排列窗体上的控件的直观方式。 两种控件均提供一种自动的可配置能力来控制包含在控件内的子控件的相对位置，并且两种控件均在运行时提供动态布局功能，以便它们可以在父窗体的尺寸更改时重新调整子控件的大小和对其进行重新定位。 布局面板可以嵌套在布局面板内，从而实现复杂的用户界面。
 
-          <xref:System.Windows.Forms.FlowLayoutPanel> 以特定的流向排列其内容：水平或垂直。 可从一行到下一行，或从一列到下列进行内容换行。 还可以剪切内容，而不是进行换行。 有关详细信息，请参见[演练：使用 FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)排列 Windows 窗体上的控件。
+<xref:System.Windows.Forms.FlowLayoutPanel> 以特定的流向排列其内容：水平或垂直。 可从一行到下一行，或从一列到下列进行内容换行。 还可以剪切内容，而不是进行换行。 有关详细信息，请参见[演练：使用 FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)排列 Windows 窗体上的控件。
 
 在网格中\<排列其内容,提供类似于HTML表><xref:System.Windows.Forms.TableLayoutPanel>元素的功能。 <xref:System.Windows.Forms.TableLayoutPanel>控件允许您在网格布局中放置控件, 而无需精确指定每个控件的位置。 其单元格排列为行和列，并且这些行和列可具有不同的大小。 可以跨行和列合并单元。 单元可以包含表单可以包含的任何内容, 并在大多数其他方面作为容器。
 
@@ -46,7 +46,6 @@ ms.locfileid: "69040282"
 - 将现有控件重新分配给另一个父控件
 
 完成上述操作后，你将会了解这些重要布局功能所发挥的作用。
-
 
 ## <a name="creating-the-project"></a>创建项目
 

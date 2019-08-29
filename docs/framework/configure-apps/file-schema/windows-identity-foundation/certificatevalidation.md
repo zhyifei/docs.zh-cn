@@ -3,15 +3,15 @@ title: <certificateValidation>
 ms.date: 03/30/2017
 ms.assetid: 6c54c704-b55e-4631-88ff-4d4a5621554c
 author: BrucePerlerMS
-ms.openlocfilehash: 7b8823d792e3f15846a9483d670994be4b368980
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8185153eb02c5794b0f6ac02a6837806f2073c07
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61667348"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941911"
 ---
 # <a name="certificatevalidation"></a>\<certificateValidation>
-控制令牌处理程序用来验证证书的设置。 如果特定的处理程序配置了其自己的验证程序，则将重写这些设置。  
+控制标记处理程序用于验证证书的设置。 如果为特定处理程序配置了其自己的验证程序, 则会重写这些设置。  
   
  \<system.identityModel>  
 \<identityConfiguration>  
@@ -38,25 +38,25 @@ ms.locfileid: "61667348"
   
 |特性|描述|  
 |---------------|-----------------|  
-|certificateValidationMode|<xref:System.ServiceModel.Security.X509CertificateValidationMode>值，该值指定要使用的 X.509 证书验证模式。 默认值为"PeerOrChainTrust"。 若要指定自定义验证程序，此特性设置为"Custom"并指定使用的验证程序[ \<certificateValidator >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidator.md)元素。 可选。|  
-|revocationMode|<xref:System.Security.Cryptography.X509Certificates.X509RevocationMode>值，该值指定要使用的 X.509 证书的吊销模式。 默认值为"联机"。 可选。|  
-|trustedStoreLocation|一个<xref:System.Security.Cryptography.X509Certificates.StoreLocation>值，该值指定 X.509 证书存储区。 默认值为"LocalMachine"。 可选。|  
+|certificateValidationMode|一个<xref:System.ServiceModel.Security.X509CertificateValidationMode>值, 该值指定要用于 x.509 证书的验证模式。 默认值为 "PeerOrChainTrust"。 若要指定自定义验证程序, 请将此属性设置为 "custom", 并使用[ \<certificateValidator >](certificatevalidator.md)元素指定验证程序。 可选。|  
+|revocationMode|一个<xref:System.Security.Cryptography.X509Certificates.X509RevocationMode>值, 该值指定要用于 x.509 证书的吊销模式。 默认值为 "Online"。 可选。|  
+|trustedStoreLocation|一个<xref:System.Security.Cryptography.X509Certificates.StoreLocation>值, 该值指定 x.509 证书存储区。 默认值为 "LocalMachine"。 可选。|  
   
 ### <a name="child-elements"></a>子元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<certificateValidator>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidator.md)|指定证书验证的自定义类型。 仅当使用此类型`certificateValidationMode`的属性[ \<certificatevalidation 设置 >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md)元素设置为"自定义"。|  
+|[\<certificateValidator>](certificatevalidator.md)|指定证书验证的自定义类型。 仅当`certificateValidationMode` [ \<certificateValidation >](certificatevalidation.md)元素的属性设置为 "Custom" 时才使用此类型。|  
   
 ### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<identityConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|指定服务级别标识设置。|  
-|[\<securityTokenHandlerConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|提供配置集合的安全令牌处理程序。|  
+|[\<identityConfiguration>](identityconfiguration.md)|指定服务级别标识设置。|  
+|[\<securityTokenHandlerConfiguration>](securitytokenhandlerconfiguration.md)|为安全标记处理程序的集合提供配置。|  
   
 ## <a name="remarks"></a>备注  
- 一个`<certificateValidation>`可以在服务级别下指定元素`<identityConfiguration>`元素下的安全令牌处理程序集合级别上或`<securityTokenHandlerConfiguration>`元素。 标记处理程序集合上的设置将覆盖在服务上指定的。 一些令牌处理程序，可在配置中指定的证书验证设置。 在服务级别和对安全令牌处理程序集合上单个令牌处理程序设置将覆盖指定的维数。  
+ 可以在元素`<identityConfiguration>`下的服务级别指定元素, 或在`<securityTokenHandlerConfiguration>`元素下的安全令牌处理程序集合级别指定元素。`<certificateValidation>` 标记处理程序集合上的设置将重写服务上指定的设置。 某些标记处理程序允许您在配置中指定证书验证设置。 各个标记处理程序上的设置将覆盖在服务级别和安全令牌处理程序集合上指定的设置。  
   
 ## <a name="example"></a>示例  
   

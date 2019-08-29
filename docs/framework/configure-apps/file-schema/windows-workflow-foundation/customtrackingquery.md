@@ -3,22 +3,22 @@ title: <customTrackingQuery>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 4e108e89-1132-46b7-868a-c7f5c69dc89f
-ms.openlocfilehash: 92060260075017359d8a5f0500d52e52c2217d3f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9605f5d050baf046ff3c549c19191934299a65e2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790177"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69945756"
 ---
 # <a name="customtrackingquery"></a>\<customTrackingQuery>
 表示一个查询集合，这些查询用于跟踪你在代码活动中定义的事件。 跟踪参与者需要用此查询来订阅自定义跟踪记录。  
   
- 有关跟踪配置文件查询的详细信息，请参阅[跟踪配置文件](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
+ 有关跟踪配置文件查询的详细信息, 请参阅[跟踪配置文件](../../../windows-workflow-foundation/tracking-profiles.md)  
   
 \<system.serviceModel>  
-\<tracking>  
+\<跟踪 >  
 \<trackingProfile>  
-\<workflow>  
+\<工作流 >  
 \<customTrackingQueries>  
 \<customTrackingQuery>  
   
@@ -45,7 +45,7 @@ ms.locfileid: "61790177"
 |特性|描述|  
 |---------------|-----------------|  
 |activityName|一个字符串，指定生成跟踪记录的活动的名称。|  
-|name|一个字符串，指定发出的自定义跟踪记录的名称。|  
+|NAME|一个字符串，指定发出的自定义跟踪记录的名称。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  
@@ -54,11 +54,11 @@ ms.locfileid: "61790177"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<customTrackingQuery>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/customtrackingquery.md)|一个查询，用于跟踪你在代码活动中定义的事件。|  
+|[\<customTrackingQuery>](customtrackingquery.md)|一个查询，用于跟踪你在代码活动中定义的事件。|  
   
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.CustomTrackingQueryElementCollection?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.CustomTrackingQuery?displayProperty=nameWithType>
-- [工作流跟踪](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [跟踪配置文件](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+- [工作流跟踪](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [跟踪配置文件](../../../windows-workflow-foundation/tracking-profiles.md)

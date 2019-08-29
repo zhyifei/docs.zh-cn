@@ -6,17 +6,17 @@ helpviewer_keywords:
 - object identity [C#]
 - reference equality [C#]
 ms.assetid: 91307fda-267b-4fd2-a338-2aada39ee791
-ms.openlocfilehash: 057532cae42d7a0b6d11750ae0e33e43108cfda9
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 2b4b7b7bdd03077a78aa2a6375764fa86a885ef5
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203582"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69588640"
 ---
 # <a name="how-to-test-for-reference-equality-identity-c-programming-guide"></a>如何：测试引用相等性（标识）（C# 编程指南）
 无需实现任何自定义逻辑，即可支持类型中的引用相等性比较。 此功能由静态 <xref:System.Object.ReferenceEquals%2A?displayProperty=nameWithType> 方法向所有类型提供。  
   
- 以下示例演示如何确定两个变量是否具有引用相等性，即它们引用内存中的同一对象。  
+ 以下示例演示如何确定两个变量是否具有引用相等性，即它们引用内存中的同一对象  。  
   
  该示例还演示 <xref:System.Object.ReferenceEquals%2A?displayProperty=nameWithType> 为何始终为值类型返回 `false`，以及您为何不应使用 <xref:System.Object.ReferenceEquals%2A> 来确定字符串相等性。  
   
@@ -29,4 +29,4 @@ ms.locfileid: "57203582"
   
 ## <a name="see-also"></a>请参阅
 
-- [相等比较](../../../csharp/programming-guide/statements-expressions-operators/equality-comparisons.md)
+- [相等比较](./equality-comparisons.md)

@@ -21,12 +21,12 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
-ms.openlocfilehash: 6d3dce5c8a34257f8509f239ece4bae3efa02b84
-ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
+ms.openlocfilehash: 13d5ea2735a799332edd8e552198de0f2b970dad
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69545377"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69914099"
 ---
 # <a name="imaging-overview"></a>图像处理概述
 本主题介绍 [!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-md.md)]。 借助 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]，开发人员可以显示、转换图像和设置图像的格式。  
@@ -99,7 +99,7 @@ ms.locfileid: "69545377"
  以下示例演示如何使用代码呈现宽度为 200 像素的图像。  
   
 > [!NOTE]
->  <xref:System.Windows.Media.Imaging.BitmapImage><xref:System.ComponentModel.ISupportInitialize>实现接口, 以优化多个属性的初始化。 只能在对象初始化过程中进行属性更改。 调用<xref:System.Windows.Media.Imaging.BitmapImage.BeginInit%2A>以发送初始化已开始的信号<xref:System.Windows.Media.Imaging.BitmapImage.EndInit%2A> , 并通知初始化已完成。 初始化后，将忽略所做的属性更改。  
+> <xref:System.Windows.Media.Imaging.BitmapImage><xref:System.ComponentModel.ISupportInitialize>实现接口, 以优化多个属性的初始化。 只能在对象初始化过程中进行属性更改。 调用<xref:System.Windows.Media.Imaging.BitmapImage.BeginInit%2A>以发送初始化已开始的信号<xref:System.Windows.Media.Imaging.BitmapImage.EndInit%2A> , 并通知初始化已完成。 初始化后，将忽略所做的属性更改。  
   
  [!code-csharp[ImageElementExample_snip#ImageSimpleExampleInlineCode1](~/samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/ImageSimpleExample.xaml.cs#imagesimpleexampleinlinecode1)]
  [!code-vb[ImageElementExample_snip#ImageSimpleExampleInlineCode1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImageElementExample_snip/VB/ImageSimpleExample.xaml.vb#imagesimpleexampleinlinecode1)]  
@@ -185,7 +185,7 @@ ms.locfileid: "69545377"
  有关扩展性 API 的示例, 请参阅[Win32 示例编解码器](https://go.microsoft.com/fwlink/?LinkID=160052)。 此示例演示如何为自定义图像格式创建解码器和编码器。  
   
 > [!NOTE]
->  编解码器必须进行数字签名，系统才能够识别它。  
+> 编解码器必须进行数字签名，系统才能够识别它。  
   
 ## <a name="see-also"></a>请参阅
 

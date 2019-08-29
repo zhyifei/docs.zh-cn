@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d4a80263-f3e0-4d81-9b61-f0cbeae3797b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3f87fb330fbea1344cc8532519d358fe8580a9fd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f283aad7c6727aff111aaaf78beb1e8da4b45898
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592704"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988363"
 ---
 # <a name="strong-named-assemblies"></a>具有强名称的程序集
 强命名一个程序集可为程序集创建唯一的标识，并且可以防止程序集冲突。  
@@ -25,7 +25,7 @@ ms.locfileid: "64592704"
  在创建强名称程序集时，它包含程序集的简单文本名称、版本号、可选区域性信息、数字签名，以及对应于用于签名的私钥的公钥。  
   
 > [!WARNING]
->  不要依赖于通过强名称实现安全性。 它们仅提供唯一的标识。  
+> 不要依赖于通过强名称实现安全性。 它们仅提供唯一的标识。  
   
 ## <a name="why-strong-name-your-assemblies"></a>为何强命名程序集？  
  在引用具有强名称的程序集时，你应该可以从中获得某些益处，例如版本控制和命名保护。 强名称程序集可安装在需要启用一些方案的全局程序集缓存中。  

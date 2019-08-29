@@ -8,18 +8,18 @@ helpviewer_keywords:
 - ASP.NET configuration system
 - configuration files [ASP.NET]
 ms.assetid: 24c4cf4f-ad32-42b2-b040-8e4549e2855e
-ms.openlocfilehash: b9a43c5f5141e364ab9aac1cfdff577a8fb8a161
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: 41a638afa93e605221d5ef8172e243b1c61676bf
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67486682"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941382"
 ---
-# <a name="systemweb-element-web-settings"></a>\<system.web > 元素 （Web 设置）
-包含有关 ASP.NET 托管层管理进程范围的行为方式的信息。  
+# <a name="systemweb-element-web-settings"></a>\<system.web > 元素 (Web 设置)
+包含有关 ASP.NET 承载层如何管理进程范围的行为的信息。  
   
  \<configuration>  
-\<system.web > 元素 （Web 设置）  
+\<system.web > 元素 (Web 设置)  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,19 +38,19 @@ ms.locfileid: "67486682"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<applicationPool>](../../../../../docs/framework/configure-apps/file-schema/web/applicationpool-element-web-settings.md)|在 aspnet.config 文件中指定 IIS 应用程序池配置的设置。|  
+|[\<applicationPool>](applicationpool-element-web-settings.md)|为 aspnet 文件中的 IIS 应用程序池指定配置设置。|  
   
 ### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<configuration>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|在公共语言运行时和.NET Framework 应用程序使用每个配置文件中指定的根元素。|  
+|[\<configuration>](../configuration-element.md)|指定公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
   
 ## <a name="remarks"></a>备注  
- `system.web`元素及其子`applicationPool`元素已添加到.NET Framework 对于.NET Framework 3.5 SP1。 当在集成模式下运行 IIS 7.0 或更高版本时，此元素组合可让你可以配置 ASP.NET 如何管理线程以及当 ASP.NET 承载于 IIS 应用程序池进行排队请求的方式。 如果在经典或 ISAPI 模式下运行 IIS 7.0 或更高版本，将忽略这些设置。  
+ 元素及其子`applicationPool`元素已添加到 .NET Framework 3.5 SP1 中的 .NET Framework。 `system.web` 在集成模式下运行 IIS 7.0 或更高版本时, 此元素组合可让你配置 ASP.NET 管理线程的方式, 以及在 ASP.NET 托管在 IIS 应用程序池中时, 如何将请求排队。 如果在经典或 ISAPI 模式下运行 IIS 7.0 或更高版本, 则将忽略这些设置。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何配置 ASP.NET 进程范围行为的 aspnet.config 文件中，当 ASP.NET 承载于 IIS 应用程序池。 该示例假定 IIS 正在运行以集成模式和应用程序使用.NET Framework 3.5 SP1 或更高版本。 在.NET Framework 3.5 SP1 之前的.NET framework 的版本中不出现此行为。 在示例中的值是默认值。  
+ 下面的示例演示当 ASP.NET 托管在 IIS 应用程序池中时, 如何在 ASP.NET 文件中配置进程范围行为。 该示例假设 IIS 在集成模式下运行, 并且该应用程序正在使用 .NET Framework 3.5 SP1 或更高版本。 此行为不会在早于 .NET Framework 3.5 SP1 的 .NET Framework 版本中发生。 示例中的值为默认值。  
   
 ```xml  
 <configuration>  
@@ -74,4 +74,4 @@ ms.locfileid: "67486682"
   
 ## <a name="see-also"></a>请参阅
 
-- [\<applicationPool> 元素（Web 设置）](../../../../../docs/framework/configure-apps/file-schema/web/applicationpool-element-web-settings.md)
+- [\<applicationPool> 元素（Web 设置）](applicationpool-element-web-settings.md)

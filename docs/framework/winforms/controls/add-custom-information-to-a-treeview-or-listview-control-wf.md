@@ -13,19 +13,19 @@ helpviewer_keywords:
 - ListView control [Windows Forms], adding custom information
 - TreeView control [Windows Forms], adding custom information
 ms.assetid: 68be11de-1d5b-430e-901f-cfbe48d14b19
-ms.openlocfilehash: 5f51744878da526147dd742e98117e8e87c94e20
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: f588a00c430eb1ae1f0cdcde6b7dd22f0c8671c5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052242"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69957002"
 ---
 # <a name="how-to-add-custom-information-to-a-treeview-or-listview-control-windows-forms"></a>如何：向 TreeView 或 ListView 控件添加自定义信息（Windows 窗体）
-可以在 Windows 窗体中创建派生的节点<xref:System.Windows.Forms.TreeView>控件或中的派生的项<xref:System.Windows.Forms.ListView>控件。 通过派生可添加任何所需字段，以及添加处理这些字段的自定义方法和构造函数。 此功能的用途之一是将 Customer 对象附加到每个树节点或列表项。 此处的示例是有关<xref:System.Windows.Forms.TreeView>控件，但相同的方法可用来进行<xref:System.Windows.Forms.ListView>控件。  
+可以在<xref:System.Windows.Forms.TreeView> <xref:System.Windows.Forms.ListView>控件中 Windows 窗体控件或派生项中创建派生节点。 通过派生可添加任何所需字段，以及添加处理这些字段的自定义方法和构造函数。 此功能的用途之一是将 Customer 对象附加到每个树节点或列表项。 此处的示例适用于<xref:System.Windows.Forms.TreeView>控件, 但相同的方法可用于<xref:System.Windows.Forms.ListView>控件。  
   
 ### <a name="to-derive-a-tree-node"></a>派生树节点  
   
-- 创建一个新的节点类，派生自<xref:System.Windows.Forms.TreeNode>类，该类包含要记录的文件路径的自定义字段。  
+- 创建一个从<xref:System.Windows.Forms.TreeNode>类派生的新节点类, 该类具有一个用于记录文件路径的自定义字段。  
   
     ```vb  
     Class myTreeNode  
@@ -100,7 +100,7 @@ ms.locfileid: "66052242"
        "\\TextFile.txt")));  
     ```  
   
-2. 如果传递的树节点和其类型为<xref:System.Windows.Forms.TreeNode>类，则将需要强制转换为派生类。 强制转换是从一种对象类型到另一种对象类型的显式转换。 强制转换的详细信息，请参阅[隐式转换和显式转换](~/docs/visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)(Visual Basic 中)，[强制转换和类型转换](~/docs/csharp/programming-guide/types/casting-and-type-conversions.md)(Visual C#)，或[强制转换运算符: （)](/cpp/cpp/cast-operator-parens) (Visual C++)。  
+2. 如果传递的是树节点, 并且它被类型化为<xref:System.Windows.Forms.TreeNode>类, 则需要强制转换为派生类。 强制转换是从一种对象类型到另一种对象类型的显式转换。 有关强制转换的详细信息, 请参阅[隐式和显式转换](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)(Visual Basic)、[强制转换和类型转换](../../../csharp/programming-guide/types/casting-and-type-conversions.md)(视觉对象C#) 或[强制转换运算符: ()](/cpp/cpp/cast-operator-parens) (视觉对象C++)。  
   
     ```vb  
     Public Sub TreeView1_AfterSelect(ByVal sender As Object, ByVal e As System.Windows.Forms.TreeViewEventArgs) Handles TreeView1.AfterSelect  

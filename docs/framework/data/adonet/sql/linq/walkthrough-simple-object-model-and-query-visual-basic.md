@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: c878e457-f715-46e4-a136-ff14d6c86018
-ms.openlocfilehash: a7d278dd424fbb3167a30d627379f78d0c65476f
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: e0840adba62e10640ef16908db6b57519191f7f7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68971790"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946782"
 ---
 # <a name="walkthrough-simple-object-model-and-query-visual-basic"></a>演练：简单对象模型和查询 (Visual Basic)
 
@@ -121,7 +121,7 @@ ms.locfileid: "68971790"
 
 ## <a name="creating-a-simple-query"></a>创建简单查询
 
-在此步骤中，您将创建一个查询，查找数据库中的 Customers 表内的哪些客户位于伦敦。 此步骤中的查询代码只描述查询。 它不执行查询。 此方法称为 "*延迟执行*"。 有关详细信息，请参阅 [LINQ 查询简介 (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)。
+在此步骤中，您将创建一个查询，查找数据库中的 Customers 表内的哪些客户位于伦敦。 此步骤中的查询代码只描述查询。 它不执行查询。 此方法称为 "*延迟执行*"。 有关详细信息，请参阅 [LINQ 查询简介 (C#)](../../../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)。
 
 您还将生成一个日志输出，显示 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 生成的 SQL 命令。 此日志记录功能（使用 <xref:System.Data.Linq.DataContext.Log%2A>）对调试有帮助，并有助于确定发送给数据库的命令是否准确地表示您的查询。
 

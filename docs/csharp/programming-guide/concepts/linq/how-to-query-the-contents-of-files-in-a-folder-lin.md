@@ -2,15 +2,15 @@
 title: 如何：查询文件夹中文本文件的内容 (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: f5b4dce7-1a34-4eb4-9bf1-60d5bdda264c
-ms.openlocfilehash: 1be896f257395cb1e70718ac55e3199da09d8961
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: ad0be3b4206d0aca649987bc3fbbc26102de77c4
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65585829"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69592680"
 ---
 # <a name="how-to-query-the-contents-of-text-files-in-a-folder-linq-c"></a>如何：查询文件夹中文本文件的内容 (LINQ) (C#)
-此示例演示如何查询指定目录树中的所有文件、打开每个文件并检查其内容。 此类技术可用于对目录树的内容创建索引或反向索引。 此示例中执行的是简单的字符串搜索。 但是，可使用正则表达式执行类型更复杂的模式匹配。 有关详细信息，请参阅[如何：将 LINQ 查询与正则表达式合并 (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-combine-linq-queries-with-regular-expressions.md)。  
+此示例演示如何查询指定目录树中的所有文件、打开每个文件并检查其内容。 此类技术可用于对目录树的内容创建索引或反向索引。 此示例中执行的是简单的字符串搜索。 但是，可使用正则表达式执行类型更复杂的模式匹配。 有关详细信息，请参阅[如何：将 LINQ 查询与正则表达式合并 (C#)](./how-to-combine-linq-queries-with-regular-expressions.md)。  
   
 ## <a name="example"></a>示例  
   
@@ -75,5 +75,5 @@ class QueryContents
   
 ## <a name="see-also"></a>请参阅
 
-- [LINQ 和文件目录 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
-- [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
+- [LINQ 和文件目录 (C#)](./linq-and-file-directories.md)
+- [LINQ to Objects (C#)](./linq-to-objects.md)

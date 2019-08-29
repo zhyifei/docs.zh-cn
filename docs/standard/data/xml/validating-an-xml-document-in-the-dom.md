@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: 2c61c920-d0f8-4c72-bfcc-6524570f3060
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fabd95d8fee6f6d8590036001ce2b0c7c23b12da
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2ea3bdea9c65b326953d16d7824114763ff4d017
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64589852"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939413"
 ---
 # <a name="validating-an-xml-document-in-the-dom"></a>在 DOM 中验证 XML 文档
 默认情况下，在文档对象模型 (DOM) 中，<xref:System.Xml.XmlDocument> 类不针对 XML 架构定义语言 (XSD) 架构或文档类型定义 (DTD) 验证 XML；只验证 XML 的格式是否正确。  
@@ -76,7 +76,7 @@ ms.locfileid: "64589852"
  验证错误由 <xref:System.Xml.Schema.ValidationEventHandler> 进行处理。 如果 <xref:System.Xml.Schema.ValidationEventHandler> 已分配给 <xref:System.Xml.XmlReaderSettings> 实例或传递给 <xref:System.Xml.XmlDocument.Validate%2A> 类的 <xref:System.Xml.XmlDocument> 方法，<xref:System.Xml.Schema.ValidationEventHandler> 将处理架构验证错误；否则，在遇到架构验证错误时，将引发 <xref:System.Xml.Schema.XmlSchemaValidationException>。  
   
 > [!NOTE]
->  尽管遇到架构验证错误，XML 数据仍会加载到 DOM 中，<xref:System.Xml.Schema.ValidationEventHandler> 引发异常来停止该进程时除外。  
+> 尽管遇到架构验证错误，XML 数据仍会加载到 DOM 中，<xref:System.Xml.Schema.ValidationEventHandler> 引发异常来停止该进程时除外。  
 >   
 >  除非为 <xref:System.Xml.Schema.XmlSchemaValidationFlags.ReportValidationWarnings> 对象指定了 <xref:System.Xml.XmlReaderSettings> 标志，否则，不会报告架构验证警告。  
   

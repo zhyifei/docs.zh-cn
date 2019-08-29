@@ -6,18 +6,18 @@ helpviewer_keywords:
 ms.assetid: 26e3d285-24c3-435c-a797-9fe5affb8525
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 032958c24e03025fc3fc3eee2aae40bdd4491e7b
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: efbb99027004221bff1985bba8372c4415c02d4f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052738"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950304"
 ---
 # <a name="net-framework-development-guide"></a>.NET Framework 开发指南
 本节介绍了如何创建、配置、调试、保护和部署 .NET Framework 应用。 本节还提供有关技术领域的信息，例如，动态编程、互操作性、扩展性、内存管理和线程处理。  
   
 ## <a name="in-this-section"></a>本节内容  
- [应用程序要点](../../docs/standard/application-essentials.md)  
+ [应用程序要点](../standard/application-essentials.md)  
  提供有关基本应用开发任务的信息，例如利用应用域和程序集编程、使用特性、格式化和分析基类型、使用集合、处理事件和异常、使用文件和数据流以及使用泛型。  
   
  [数据和建模](../../docs/framework/data/index.md)  
@@ -38,7 +38,7 @@ ms.locfileid: "66052738"
  [Windows 服务应用程序](../../docs/framework/windows-services/index.md)  
  介绍如何使用 Visual Studio 和 .NET Framework 创建作为服务安装的应用，以及如何开始、停止和以其他方式控制其行为。  
   
- [.NET 中的并行处理、并发和异步编程](../../docs/standard/parallel-processing-and-concurrency.md)  
+ [.NET 中的并行处理、并发和异步编程](../standard/parallel-processing-and-concurrency.md)  
  提供有关托管线程处理、并行编程和异步编程设计模式的信息。  
   
  [.NET Framework 中的网络编程](../../docs/framework/network-programming/index.md)  
@@ -50,13 +50,13 @@ ms.locfileid: "66052738"
  [使用 .NET Native 编译应用程序](../../docs/framework/net-native/index.md)  
  介绍如何使用 .NET Native 预编译技术生成和部署 Windows 应用商店应用。 .NET Native 编译在托管代码 (C#) 中编写并使 .NET Framework 面向本机代码的应用。  
   
- [安全性](../../docs/standard/security/index.md)  
+ [安全性](../standard/security/index.md)  
  提供有关 .NET Framework 中的类和服务的信息，这些类和服务可以帮助确保应用开发的安全。  
   
  [调试、跟踪和分析](../../docs/framework/debug-trace-profile/index.md)  
  介绍如何测试、优化和分析 .NET Framework 应用和应用环境。 本节包括供管理员和开发人员使用的信息。  
   
- [开发多平台应用程序](../../docs/standard/cross-platform/index.md)  
+ [开发多平台应用程序](../standard/cross-platform/index.md)  
  介绍有关如何使用 .NET Framework 生成可在手机、桌面和 Web 等多种平台和多种设备之间共享的程序集的信息。  
   
  [部署](../../docs/framework/deployment/index.md)  

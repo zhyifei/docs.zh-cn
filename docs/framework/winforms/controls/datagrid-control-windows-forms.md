@@ -8,18 +8,18 @@ helpviewer_keywords:
 - displaying data [Windows Forms], on forms
 - data [Windows Forms], displaying on Windows Forms
 ms.assetid: 1d9d5683-43d2-42dd-b6c3-e43f4cf0de99
-ms.openlocfilehash: 5a69605901eef7366c7a9ff9930e5f4ec6cece23
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: f50f32ad65dd621dee3847d72b5a186afcc4a86d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878772"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69969159"
 ---
 # <a name="datagrid-control-windows-forms"></a>DataGrid 控件（Windows 窗体）
 > [!NOTE]
->  <xref:System.Windows.Forms.DataGridView> 控件取代了 `DataGrid` 控件并添加了功能；但是，可以选择保留 `DataGrid` 控件以实现向后兼容并供将来使用。 有关详细信息，请参阅 [Windows 窗体 DataGridView 控件与 DataGrid 控件之间的区别](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)。  
+> <xref:System.Windows.Forms.DataGridView> 控件取代了 `DataGrid` 控件并添加了功能；但是，可以选择保留 `DataGrid` 控件以实现向后兼容并供将来使用。 有关详细信息，请参阅 [Windows 窗体 DataGridView 控件与 DataGrid 控件之间的区别](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)。  
   
- Windows 窗体`DataGrid`控件提供了 ADO.NET 数据集，显示表格数据和启用对数据源的更新的用户界面。  
+ Windows 窗体`DataGrid`控件提供一个用户界面, 用于 ADO.NET 数据集, 并显示表格数据和启用数据源更新。  
   
  `DataGrid` 控件设置为有效数据源时，则自动填充该控件，同时根据数据的形状创建列和行。 `DataGrid` 控件可用于显示单个表或显示一组表之间的分层关系。  
   
@@ -27,31 +27,31 @@ ms.locfileid: "65878772"
  [DataGrid 控件概述](datagrid-control-overview-windows-forms.md)  
  描述 `DataGrid` 控件的基本功能。  
   
- [如何：向使用设计器在 Windows 窗体 DataGrid 控件添加表和列](add-tables-and-columns-to-wf-datagrid-control-using-the-designer.md)  
+ [如何：使用设计器向 Windows 窗体 DataGrid 控件添加表和列](add-tables-and-columns-to-wf-datagrid-control-using-the-designer.md)  
  描述如何使用设计器向 `DataGrid` 控件添加表和列。  
   
  [如何：向 Windows 窗体 DataGrid 控件添加表和列](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)  
  描述如何以编程方式向 `DataGrid` 控件添加表和列。  
   
- [如何：将 Windows 窗体 DataGrid 控件绑定到数据源使用设计器](bind-wf-datagrid-control-to-a-data-source-using-the-designer.md)  
- 介绍如何将绑定到 ADO.NET dataset`DataGrid`控制使用设计器。  
+ [如何：使用设计器将 Windows 窗体 DataGrid 控件绑定到数据源](bind-wf-datagrid-control-to-a-data-source-using-the-designer.md)  
+ 介绍如何使用设计器将 ADO.NET 数据集`DataGrid`绑定到控件。  
   
  [如何：将 Windows 窗体 DataGrid 控件绑定到数据源](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)  
- 介绍如何将绑定到 ADO.NET dataset`DataGrid`控件。  
+ 介绍如何将 ADO.NET 数据集绑定到`DataGrid`控件。  
   
- [如何：更改在运行时在 Windows 窗体 DataGrid 控件中显示的数据](change-displayed-data-at-run-time-wf-datagrid-control.md)  
+ [如何：在运行时更改 "Windows 窗体 DataGrid" 控件中显示的数据](change-displayed-data-at-run-time-wf-datagrid-control.md)  
  描述如何在 `DataGrid` 控件中以编程方式更改数据。  
   
- [如何：与使用设计器在 Windows 窗体 DataGrid 控件创建主-详细信息列表](create-master-details-lists-with-wf-datagrid-control-using-the-designer.md)  
+ [如何：使用设计器通过 Windows 窗体 DataGrid 控件创建主/详细信息列表](create-master-details-lists-with-wf-datagrid-control-using-the-designer.md)  
  描述如何使用设计器在两个独立的 `DataGrid` 控件中显示以父/子关系关联在一起的两个表。  
   
- 如何：使用 Windows 窗体 DataGrid 控件创建主-详细信息列表  
+ 如何：通过 Windows 窗体 DataGrid 控件创建主/详细信息列表  
  描述如何在两个独立的 `DataGrid` 控件中显示以父/子关系关联在一起的两个表。  
   
  [如何：删除或隐藏 Windows 窗体 DataGrid 控件中的列](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)  
  描述如何在 `DataGrid` 控件中删除列。  
   
- [如何：设置 Windows 窗体 DataGrid 控件使用设计器的格式](how-to-format-the-windows-forms-datagrid-control-using-the-designer.md)  
+ [如何：使用设计器设置 Windows 窗体 DataGrid 控件的格式](how-to-format-the-windows-forms-datagrid-control-using-the-designer.md)  
  描述如何使用设计器更改 `DataGrid` 控件与外观相关的属性。  
   
  [如何：设置 Windows 窗体 DataGrid 控件的格式](how-to-format-the-windows-forms-datagrid-control.md)  
@@ -68,10 +68,10 @@ ms.locfileid: "65878772"
   
 ## <a name="reference"></a>参考  
  <xref:System.Windows.Forms.DataGrid>  
- 提供的概述<xref:System.Windows.Forms.DataGrid>类。  
+ 提供<xref:System.Windows.Forms.DataGrid>类的概述。  
   
  <xref:System.Windows.Forms.DataGrid.DataSource%2A>  
- 提供有关使用此属性将绑定的详细信息<xref:System.Windows.Forms.DataGrid>控件的数据。  
+ 提供有关使用此属性将控件绑定到<xref:System.Windows.Forms.DataGrid>数据的详细信息。  
   
 ## <a name="related-sections"></a>相关章节  
  [Windows 窗体数据绑定](../windows-forms-data-binding.md)  

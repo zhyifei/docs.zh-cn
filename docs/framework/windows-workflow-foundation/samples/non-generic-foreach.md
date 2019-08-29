@@ -2,12 +2,12 @@
 title: 非泛型 ForEach
 ms.date: 03/30/2017
 ms.assetid: 576cd07a-d58d-4536-b514-77bad60bff38
-ms.openlocfilehash: 46db1d455bcbdd28e02d3cddfe0c9248b4abd91c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e467534ba2b233f1f3c279e89badf12846c6b7f7
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64620845"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70038076"
 ---
 # <a name="non-generic-foreach"></a>非泛型 ForEach
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 的工具箱中附带了一组控制流活动，其中包括可用来循环访问 <xref:System.Activities.Statements.ForEach%601> 集合的 <xref:System.Collections.Generic.IEnumerable%601>。  
@@ -67,12 +67,12 @@ Activity sampleUsage =
    };  
 ```  
   
-|条件|消息|严重性|异常类型|  
+|条件|消息|Severity|异常类型|  
 |---------------|-------------|--------------|--------------------|  
 |Values 为 `null`|未提供必需活动自变量“Values”的值。|Error|<xref:System.InvalidOperationException>|  
   
 ## <a name="foreach-designer"></a>ForEachT 设计器  
- 此示例的活动设计器的外观与为内置 <xref:System.Activities.Statements.ForEach%601> 活动提供的设计器的外观相似。 在设计器将显示在工具箱中**示例**，**非泛型活动**类别。 名为设计器**ForEachWithBodyFactory**在工具箱中，因为该活动公开<xref:System.Activities.Presentation.IActivityTemplateFactory>在工具箱中，这将创建该活动使用正确配置<xref:System.Activities.ActivityAction>。  
+ 此示例的活动设计器的外观与为内置 <xref:System.Activities.Statements.ForEach%601> 活动提供的设计器的外观相似。 设计器将显示在工具箱中的 "**示例**"、"**非泛型" 活动**类别。 设计器在 "工具箱" 中名为 " **ForEachWithBodyFactory** ", 因为<xref:System.Activities.Presentation.IActivityTemplateFactory>活动在工具箱中公开, 这将使用正确配置<xref:System.Activities.ActivityAction>的来创建活动。  
   
 ```  
 public sealed class ForEachWithBodyFactory : IActivityTemplateFactory  
@@ -93,21 +93,21 @@ public sealed class ForEachWithBodyFactory : IActivityTemplateFactory
 }  
 ```  
   
-#### <a name="to-run-this-sample"></a>运行此示例  
+#### <a name="to-run-this-sample"></a>运行本示例的步骤  
   
 1. 将您选择的项目设置为解决方案的启动项目：  
   
-    1. **Codetestclient**演示如何使用活动使用代码。  
+    1. **CodeTestClient**演示如何使用代码使用活动。  
   
-    2. **Designertestclient**演示如何使用设计器中的活动。  
+    2. **DesignerTestClient**演示如何在设计器中使用活动。  
   
 2. 生成并运行该项目。  
   
 > [!IMPORTANT]
->  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
+> 您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+> 如果此目录不存在, 请参阅[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)以下载所有 Windows Communication Foundation (wcf) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\NonGenericForEach`
+> `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\NonGenericForEach`

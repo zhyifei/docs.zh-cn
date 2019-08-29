@@ -7,16 +7,16 @@ helpviewer_keywords:
 - partial classes [C#]
 - C# language, partial classes and methods
 ms.assetid: 804cecb7-62db-4f97-a99f-60975bd59fa1
-ms.openlocfilehash: 0a0cf7c3b6024f75196abed5fdb7d18a058c58db
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 53c3ac6e4fa6313488c47d851e0897bd512521b7
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398385"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596286"
 ---
 # <a name="partial-classes-and-methods-c-programming-guide"></a>分部类和方法（C# 编程指南）
 
-拆分一个[类](../../../csharp/language-reference/keywords/class.md)、一个[结构](../../../csharp/language-reference/keywords/struct.md)、一个[接口](../../../csharp/language-reference/keywords/interface.md)或一个方法的定义到两个或更多的文件中是可能的。 每个源文件包含类型或方法定义的一部分，编译应用程序时将把所有部分组合起来。
+拆分一个[类](../../language-reference/keywords/class.md)、一个[结构](../../language-reference/keywords/struct.md)、一个[接口](../../language-reference/keywords/interface.md)或一个方法的定义到两个或更多的文件中是可能的。 每个源文件包含类型或方法定义的一部分，编译应用程序时将把所有部分组合起来。
 
 ## <a name="partial-classes"></a>分部类
 
@@ -26,7 +26,7 @@ ms.locfileid: "67398385"
 
 - 当使用自动生成的源文件时，你可以添加代码而不需要重新创建源文件。 Visual Studio 在创建Windows 窗体、Web 服务包装器代码等时会使用这种方法。 你可以创建使用这些类的代码，这样就不需要修改由Visual Studio生成的文件。
 
-- 若要拆分类定义，请使用 [partial](../../../csharp/language-reference/keywords/partial-type.md) 关键字修饰符，如下所示：
+- 若要拆分类定义，请使用 [partial](../../language-reference/keywords/partial-type.md) 关键字修饰符，如下所示：
 
   [!code-csharp[csProgGuideObjects#26](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#26)]
 
@@ -91,25 +91,25 @@ ms.locfileid: "67398385"
 
 - 下面用于分部类型定义中的关键字是可选的，但是如果某关键字出现在一个分部类型定义中，则该关键字不能与在同一类型的其他分部定义中指定的关键字冲突：
 
-  - [public](../../../csharp/language-reference/keywords/public.md)
+  - [public](../../language-reference/keywords/public.md)
 
-  - [专用](../../../csharp/language-reference/keywords/private.md)
+  - [专用](../../language-reference/keywords/private.md)
 
-  - [受保护](../../../csharp/language-reference/keywords/protected.md)
+  - [受保护](../../language-reference/keywords/protected.md)
 
-  - [internal](../../../csharp/language-reference/keywords/internal.md)
+  - [internal](../../language-reference/keywords/internal.md)
 
-  - [abstract](../../../csharp/language-reference/keywords/abstract.md)
+  - [abstract](../../language-reference/keywords/abstract.md)
 
-  - [sealed](../../../csharp/language-reference/keywords/sealed.md)
+  - [sealed](../../language-reference/keywords/sealed.md)
 
   - 基类
 
-  - [new](../../../csharp/language-reference/keywords/new-modifier.md) 修饰符（嵌套部分）
+  - [new](../../language-reference/keywords/new-modifier.md) 修饰符（嵌套部分）
 
   - 泛型约束
 
-有关详细信息，请参阅[类型参数的约束](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md)。
+有关详细信息，请参阅[类型参数的约束](../generics/constraints-on-type-parameters.md)。
 
 ## <a name="example-1"></a>示例 1
 
@@ -152,19 +152,19 @@ partial void onNameChanged()
 }
 ```
 
-- 分部方法声明必须以上下文关键字 [partial](../../../csharp/language-reference/keywords/partial-type.md) 开头，并且方法必须返回 [void](../../../csharp/language-reference/keywords/void.md)。
+- 分部方法声明必须以上下文关键字 [partial](../../language-reference/keywords/partial-type.md) 开头，并且方法必须返回 [void](../../language-reference/keywords/void.md)。
 
-- 分部方法可以有 [in](../../../csharp/language-reference/keywords/in-parameter-modifier.md) 或 [ref](../../../csharp/language-reference/keywords/ref.md) 参数，但不能有 [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md) 参数。
+- 分部方法可以有 [in](../../language-reference/keywords/in-parameter-modifier.md) 或 [ref](../../language-reference/keywords/ref.md) 参数，但不能有 [out](../../language-reference/keywords/out-parameter-modifier.md) 参数。
 
-- 分部方法为隐式 [private](../../../csharp/language-reference/keywords/private.md) 方法，因此不能为 [virtual](../../../csharp/language-reference/keywords/virtual.md) 方法。
+- 分部方法为隐式 [private](../../language-reference/keywords/private.md) 方法，因此不能为 [virtual](../../language-reference/keywords/virtual.md) 方法。
 
-- 分部方法不能为 [extern](../../../csharp/language-reference/keywords/extern.md) 方法，因为主体的存在确定了方法是在定义还是在实现。
+- 分部方法不能为 [extern](../../language-reference/keywords/extern.md) 方法，因为主体的存在确定了方法是在定义还是在实现。
 
-- 分部方法可以有 [static](../../../csharp/language-reference/keywords/static.md) 和 [unsafe](../../../csharp/language-reference/keywords/unsafe.md) 修饰符。
+- 分部方法可以有 [static](../../language-reference/keywords/static.md) 和 [unsafe](../../language-reference/keywords/unsafe.md) 修饰符。
 
 - 分部方法可以是泛型的。 约束将放在定义分部方法声明上，但也可以选择重复放在实现声明上。 参数和类型参数名称在实现声明和定义声明中不必相同。
 
-- 你可以为已定义并实现的分部方法生成[委托](../../../csharp/language-reference/keywords/delegate.md)，但不能为已经定义但未实现的分部方法生成委托。
+- 你可以为已定义并实现的分部方法生成[委托](../../language-reference/keywords/delegate.md)，但不能为已经定义但未实现的分部方法生成委托。
 
 ## <a name="c-language-specification"></a>C# 语言规范
 
@@ -172,8 +172,8 @@ partial void onNameChanged()
 
 ## <a name="see-also"></a>请参阅
 
-- [C# 编程指南](../../../csharp/programming-guide/index.md)
-- [类](../../../csharp/programming-guide/classes-and-structs/classes.md)
-- [结构](../../../csharp/programming-guide/classes-and-structs/structs.md)
-- [接口](../../../csharp/programming-guide/interfaces/index.md)
-- [分部（类型）](../../../csharp/language-reference/keywords/partial-type.md)
+- [C# 编程指南](../index.md)
+- [类](./classes.md)
+- [结构](./structs.md)
+- [接口](../interfaces/index.md)
+- [分部（类型）](../../language-reference/keywords/partial-type.md)

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - custom drawing
 - owner drawing
 ms.assetid: 94e7d7bd-a752-441c-b5b3-7acf98881163
-ms.openlocfilehash: fee3ee901f3f882091464d7c450f4f144d69a6e7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 810a680a1a9d9065e80ed87453a728fe628a953d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64666407"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69935370"
 ---
 # <a name="how-to-custom-draw-a-toolstrip-control"></a>如何：自定义绘制 ToolStrip 控件
 <xref:System.Windows.Forms.ToolStrip> 控件具有以下关联的呈现（绘制）类：  
@@ -47,7 +47,7 @@ ms.locfileid: "64666407"
 - 重写 <xref:System.Windows.Forms.ToolStripProfessionalRenderer.OnRenderToolStripBorder%2A?displayProperty=nameWithType>，但不调用基类。  
   
 > [!NOTE]
->  此方法没有针对 <xref:System.Windows.Forms.ToolStripRenderer>、<xref:System.Windows.Forms.ToolStripSystemRenderer> 和 <xref:System.Windows.Forms.ToolStripProfessionalRenderer> 的版本。  
+> 此方法没有针对 <xref:System.Windows.Forms.ToolStripRenderer>、<xref:System.Windows.Forms.ToolStripSystemRenderer> 和 <xref:System.Windows.Forms.ToolStripProfessionalRenderer> 的版本。  
   
 ### <a name="to-change-the-professionalcolortable"></a>更改 ProfessionalColorTable  
   
@@ -139,5 +139,5 @@ ms.locfileid: "64666407"
 - <xref:System.Windows.Forms.ToolStripProfessionalRenderer>
 - <xref:System.Windows.Forms.ToolStripRenderer>
 - [具有内置所有者描述支持的控件](controls-with-built-in-owner-drawing-support.md)
-- [如何：创建并设置自定义呈现器在 Windows 窗体的 ToolStrip 控件](create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)
+- [如何：在 Windows 窗体中为 ToolStrip 控件创建和设置自定义呈现器](create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)
 - [ToolStrip 控件概述](toolstrip-control-overview-windows-forms.md)

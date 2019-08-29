@@ -2,20 +2,20 @@
 title: <serviceAuthenticationManager>
 ms.date: 03/30/2017
 ms.assetid: 5d69e64f-f325-4d55-8e2d-0fb30f222dda
-ms.openlocfilehash: 0940248364488bb38a329c5e461d72463c574e74
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 65488c34931f6d7c424ece58a4855e746ea455bc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61670373"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69936416"
 ---
 # <a name="serviceauthenticationmanager"></a>\<serviceAuthenticationManager>
 提供一个工作流配置元素，该元素在服务级别建立传输、消息或发起方的有效性。  
   
 \<system.ServiceModel>  
-\<behaviors>  
+\<行为 >  
 \<serviceBehaviors>  
-\<behavior>  
+\<行为 >  
 \<serviceAuthenticationManager>  
   
 ## <a name="syntax"></a>语法  
@@ -46,7 +46,7 @@ ms.locfileid: "61670373"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|指定行为元素。|  
+|[\<behavior>](behavior-of-endpointbehaviors.md)|指定行为元素。|  
   
 ## <a name="see-also"></a>请参阅
 

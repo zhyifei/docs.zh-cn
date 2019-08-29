@@ -5,20 +5,20 @@ helpviewer_keywords:
 - events [Visual Basic], about events
 - events [Visual Basic]
 ms.assetid: 8fb0353a-e41b-4e23-b78f-da65db832f70
-ms.openlocfilehash: 76d074d2870a2d7efa62516b5868cdd7faaacd79
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 65b4f5633e589ae02e9ed495074000181864428a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586703"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956360"
 ---
 # <a name="events-visual-basic"></a>事件 (Visual Basic)
-虽然你可能会作为一系列按顺序执行，在现实中的过程进行可视化的 Visual Studio 项目大多数程序都是事件驱动的这意味着执行流由外部发生*事件*。  
+虽然你可以将 Visual Studio 项目可视化为一系列按顺序执行的过程, 但实际上, 大多数程序都是事件驱动型的, 这意味着执行流是由称为*事件*的外部事件确定的。  
   
  事件是一种信号，可指示应用程序某重要事件已发生。 例如，当用户单击窗体控件时，窗体会引发 `Click` 事件，并调用可处理此事件的过程。 借助事件，各个不同的任务还可以相互通信。 例如，应用程序执行的排序任务与主应用程序是分开的。 如果用户取消排序，应用程序便会发送 cancel 事件，指示停止排序过程。  
   
 ## <a name="event-terms-and-concepts"></a>事件术语和概念  
- 本部分介绍的术语和概念与在 Visual Basic 中的事件一起使用。  
+ 本部分介绍与 Visual Basic 中的事件一起使用的术语和概念。  
   
 ### <a name="declaring-events"></a>声明事件  
  可以使用 `Event` 关键字在类、结构、模块和接口中声明事件，如以下示例所示：  
@@ -26,7 +26,7 @@ ms.locfileid: "65586703"
  [!code-vb[VbVbalrEvents#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#24)]  
   
 ### <a name="raising-events"></a>引发事件  
- 事件类似于消息，指示某重要事件已发生。 广播消息的行为称为*引发*事件。 在 Visual Basic 中，你将提升与事件`RaiseEvent`语句，如以下示例所示：  
+ 事件类似于消息，指示某重要事件已发生。 广播消息的行为称为*引发*事件。 在 Visual Basic 中, 将引发包含`RaiseEvent`语句的事件, 如以下示例中所示:  
   
  [!code-vb[VbVbalrEvents#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#25)]  
   
@@ -38,10 +38,10 @@ ms.locfileid: "65586703"
 ### <a name="event-handlers"></a>事件处理程序  
  *事件处理程序*是在相应事件发生时调用的过程。 可以将签名一致的任意有效子例程用作事件处理程序。 不过，不能将函数用作事件处理程序，因为它不能向事件源返回值。  
   
- Visual Basic 对事件处理程序将事件发送方、 下划线和事件的名称组合起来使用标准命名约定。 例如，`button1` 按钮的 `Click` 事件将命名为 `Sub button1_Click`。  
+ Visual Basic 对事件处理程序使用标准命名约定, 这些事件处理程序将事件发送方的名称、下划线和事件的名称组合在一起。 例如，`button1` 按钮的 `Click` 事件将命名为 `Sub button1_Click`。  
   
 > [!NOTE]
->  我们建议在为你自己的事件定义事件处理程序时采用此命名约定，但这不是一项强制性要求；可以命名任意有效的子例程名称。  
+> 我们建议在为你自己的事件定义事件处理程序时采用此命名约定，但这不是一项强制性要求；可以命名任意有效的子例程名称。  
   
 ## <a name="associating-events-with-event-handlers"></a>关联事件与事件处理程序  
  必须先使用 `Handles` 或 `AddHandler` 语句关联事件处理程序与事件，然后才能使用事件处理程序。  
@@ -55,7 +55,7 @@ ms.locfileid: "65586703"
   
 - 不能将 `WithEvents` 变量用作对象变量。 也就是说，不能将其声明为 `Object`，必须在声明变量时指定类名。  
   
-- 由于共享的事件未绑定到类实例中，不能使用`WithEvents`以声明性方式处理共享的事件。 同样，不能使用 `WithEvents` 或 `Handles` 处理 `Structure` 中的事件。 在这两种情况下，均可使用 `AddHandler` 语句处理这些事件。  
+- 由于共享事件不与类实例相关联, 因此不能`WithEvents`使用以声明方式处理共享事件。 同样，不能使用 `WithEvents` 或 `Handles` 处理 `Structure` 中的事件。 在这两种情况下，均可使用 `AddHandler` 语句处理这些事件。  
   
 - 无法创建 `WithEvents` 变量的数组。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "65586703"
   
  虽然 `Handles` 子句是关联事件与事件处理程序的标准方法，但只能在编译时关联事件与事件处理程序。  
   
- 在某些情况下，例如窗体或控件，与关联的事件与 Visual Basic 会自动存根空事件处理程序和将其与事件相关联。 例如，当双击设计模式中的窗体上的命令按钮时，Visual Basic 创建一个空事件处理程序和一个`WithEvents`变量命令按钮，如以下代码所示：  
+ 在某些情况下, 例如, 对于与窗体或控件关联的事件, Visual Basic 会自动将空事件处理程序置入, 并将其与事件相关联。 例如, 当你在设计模式下双击窗体上的命令按钮时, Visual Basic 将为命令按钮创建一个空的`WithEvents`事件处理程序和一个变量, 如以下代码所示:  
   
  [!code-vb[VbVbalrEvents#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#26)]  
   
@@ -74,7 +74,7 @@ ms.locfileid: "65586703"
   
  [!code-vb[VbVbalrEvents#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#28)]  
   
- `RemoveHandler` 用于解除事件与事件处理程序的关联，所用语法与 `AddHandler` 一样。 例如：  
+ `RemoveHandler` 用于解除事件与事件处理程序的关联，所用语法与 `AddHandler` 一样。 例如:  
   
  [!code-vb[VbVbalrEvents#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#29)]  
   
@@ -91,7 +91,7 @@ ms.locfileid: "65586703"
   
 ### <a name="to-handle-events-from-a-base-class"></a>处理继承自基类的事件的具体操作  
   
-- 向事件处理程序过程的声明行添加 `Handles MyBase.` *eventname* 语句，在派生类中声明事件处理程序，其中 *eventname* 是要处理的继承自基类的事件名称。 例如：  
+- 向事件处理程序过程的声明行添加 `Handles MyBase.` *eventname* 语句，在派生类中声明事件处理程序，其中 *eventname* 是要处理的继承自基类的事件名称。 例如:  
   
      [!code-vb[VbVbalrEvents#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#12)]  
   

@@ -3,12 +3,12 @@ title: 分支和循环 - C# 教程简介
 description: 在本教程的“分支和循环”中，将编写 C# 代码以研究支持条件分支和循环重复执行语句的语言语法。
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: 4a116ae5294915770dec742c147cf2ba1bf6e284
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 0da446a71f5d7a7183a8323c470087c8726bc02f
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59427248"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69587225"
 ---
 # <a name="learn-conditional-logic-with-branch-and-loop-statements"></a>通过分支和循环语句了解条件逻辑
 
@@ -18,9 +18,9 @@ ms.locfileid: "59427248"
 
 ## <a name="make-decisions-using-the-if-statement"></a>使用 `if` 语句做出决定
 
-创建名为 branches-tutorial 的目录。 将新建的目录设为当前目录，并运行 `dotnet new console -n BranchesAndLoops -o .`。 此命令会在当前目录中创建一个新的 .NET Core 控制台应用程序。
+创建名为 branches-tutorial  的目录。 将新建的目录设为当前目录，并运行 `dotnet new console -n BranchesAndLoops -o .`。 此命令会在当前目录中创建一个新的 .NET Core 控制台应用程序。
 
-在常用编辑器中，打开 Program.cs，并将行 `Console.WriteLine("Hello World!");` 替换为以下代码：
+在常用编辑器中，打开 Program.cs  ，并将行 `Console.WriteLine("Hello World!");` 替换为以下代码：
 
 ```csharp
 int a = 5;
@@ -37,12 +37,12 @@ if (a + b > 10)
 int b = 3;
 ```
 
-再次键入 `dotnet run`。 由于答案小于 10，因此什么也没有打印出来。 要测试的条件为 false。 没有任何可供执行的代码，因为仅为 `if` 语句编写了一个可能分支，即 true 分支。
+再次键入 `dotnet run`。 由于答案小于 10，因此什么也没有打印出来。 要测试的条件  为 false。 没有任何可供执行的代码，因为仅为 `if` 语句编写了一个可能分支，即 true 分支。
 
 > [!TIP]
 > 在探索 C#（或任何编程语言）的过程中，可能会在编写代码时犯错。 编译器会发现并报告这些错误。 仔细查看错误输出和生成错误的代码。 编译器错误通常可帮助你找出问题。
 
-第一个示例展示了 `if` 和布尔类型的用途。 布尔变量可以包含下列两个值之一：`true` 或 `false`。 C# 为布尔变量定义了特殊类型 `bool`。 `if` 语句检查 `bool` 的值。 如果值为 `true`，执行 `if` 后面的语句。 否则，跳过上述语句。
+第一个示例展示了 `if` 和布尔类型的用途。 布尔  变量可以包含下列两个值之一：`true` 或 `false`。 C# 为布尔变量定义了特殊类型 `bool`。 `if` 语句检查 `bool` 的值。 如果值为 `true`，执行 `if` 后面的语句。 否则，跳过上述语句。
 
 这种检查条件并根据条件执行语句的过程非常强大。
 
@@ -100,7 +100,7 @@ else
 }
 ```
 
-`==` 符号执行相等测试。 使用 `==` 将相等测试与赋值测试区分开来，如在 `a = 5` 中所见。
+`==` 符号执行相等  测试。 使用 `==` 将相等测试与赋值测试区分开来，如在 `a = 5` 中所见。
 
 `&&` 表示“且”。 也就是说，两个条件必须都为 true，才能执行 true 分支中的语句。  这些示例还表明，可以在每个条件分支中添加多个语句，前提是将它们用 `{` 和 `}` 括住。
 
@@ -143,6 +143,7 @@ namespace BranchesAndLoops
                 Console.WriteLine("The answer is not greater than 10");
             }
 
+            int c = 4;
             if ((a + b + c > 10) && (a > b))
             {
                 Console.WriteLine("The answer is greater than 10");
@@ -180,11 +181,11 @@ namespace BranchesAndLoops
 //ExploreIf();
 ```
 
-`//` 在 C# 中启动 注释。 注释是你想要保留在源代码中但不能作为代码执行的任何文本。 编译器不会从注释中生成任何可执行代码。
+`//` 在 C# 中启动  注释。 注释是你想要保留在源代码中但不能作为代码执行的任何文本。 编译器不会从注释中生成任何可执行代码。
 
 ## <a name="use-loops-to-repeat-operations"></a>使用循环重复执行运算
 
-在本节使用循环以重复执行语句。 请在 `Main` 方法中试用以下代码：
+在本节使用循环  以重复执行语句。 请在 `Main` 方法中试用以下代码：
 
 ```csharp
 int counter = 0;
@@ -197,15 +198,15 @@ while (counter < 10)
 
 `while` 语句会检查条件，并执行 `while` 后面的语句或语句块。 除非条件为 false，否则它会重复检查条件并执行这些语句。
 
-此示例新引入了另外一个运算符。 `counter` 变量后面的 `++` 是增量运算符。 它将 `counter` 值加 1，并将计算后的值存储在 `counter` 变量中。
+此示例新引入了另外一个运算符。 `counter` 变量后面的 `++` 是增量  运算符。 它将 `counter` 值加 1，并将计算后的值存储在 `counter` 变量中。
 
 > [!IMPORTANT]
-> 请确保 `while` 循环条件在你执行代码时更改为 false。 否则，创建的就是无限循环，即程序永不结束。 本示例中没有演示上述情况，因为你必须使用 CTRL-C 或其他方法强制退出程序。
+> 请确保 `while` 循环条件在你执行代码时更改为 false。 否则，创建的就是无限循环  ，即程序永不结束。 本示例中没有演示上述情况，因为你必须使用  CTRL-C 或其他方法强制退出程序。
 
 `while` 循环先测试条件，然后再执行 `while` 后面的代码。 `do` ... `while` 循环先执行代码，然后再检查条件。 下面的代码对 Do While 循环进行了演示：
 
 ```csharp
-counter = 0;
+int counter = 0;
 do
 {
     Console.WriteLine($"Hello World! The counter is {counter}");
@@ -217,10 +218,10 @@ do
 
 ## <a name="work-with-the-for-loop"></a>使用 for 循环
 
-For 循环通常用在 C# 中。 请在 Main() 方法中试用以下代码：
+ For 循环通常用在 C# 中。 请在 Main() 方法中试用以下代码：
 
 ```csharp
-for(int index = 0; index < 10; index++)
+for (int index = 0; index < 10; index++)
 {
     Console.WriteLine($"Hello World! The index is {index}");
 }
@@ -228,11 +229,11 @@ for(int index = 0; index < 10; index++)
 
 此循环的工作原理与已用过的 `while` 循环和 `do` 循环相同。 `for` 语句包含三个控制具体工作方式的部分。
 
-第一部分是 for 初始值设定项：`int index = 0;` 声明 `index` 是循环变量，并将它的初始值设置为 `0`。
+第一部分是 for 初始值设定项  ：`int index = 0;` 声明 `index` 是循环变量，并将它的初始值设置为 `0`。
 
-中间部分是 for 条件：`index < 10` 声明只要计数器值小于 10，此 `for` 循环就会继续执行。
+中间部分是 for 条件  ：`index < 10` 声明只要计数器值小于 10，此 `for` 循环就会继续执行。
 
-最后一部分是 for 迭代器：`index++` 指定在执行 `for` 语句后面的代码块后，如何修改循环变量。 在此示例中，它指定 `index` 应在代码块每次执行时递增 1。
+最后一部分是 for 迭代器  ：`index++` 指定在执行 `for` 语句后面的代码块后，如何修改循环变量。 在此示例中，它指定 `index` 应在代码块每次执行时递增 1。
 
 亲自试运行这些部分的代码。 试着执行下列两项操作：
 

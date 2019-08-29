@@ -1,27 +1,27 @@
 ---
-title: <states> WCF <workflowInstanceQuery>
+title: <states>WCF,<workflowInstanceQuery>
 ms.date: 03/30/2017
 ms.assetid: d17f7525-8035-4e9e-85a0-4cddae59f85d
-ms.openlocfilehash: fad6f9c8871f79e4a1e26c893eed86ba168f6d01
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ef4ce4b6fa6e60ead10b196b10a7c1489e15ac25
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61757945"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69938981"
 ---
-# <a name="states-of-wcf-workflowinstancequery"></a>\<状态 > 的 WCF， \<workflowInstanceQuery >
+# <a name="states-of-wcf-workflowinstancequery"></a>\<WCF、 \<workflowInstanceQuery > 的状态 >
 
 表示创建跟踪记录时已跟踪工作流实例中已订阅状态的集合。  
   
-有关跟踪配置文件查询的详细信息，请参阅[跟踪配置文件](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
+有关跟踪配置文件查询的详细信息, 请参阅[跟踪配置文件](../../../windows-workflow-foundation/tracking-profiles.md)  
   
 \<system.serviceModel> \<tracking>  
 \<配置文件 >  
 \<trackingProfile>  
-\<workflow>  
+\<工作流 >  
 \<workflowInstanceQueries>  
 \<workflowInstanceQuery>  
-\<states>  
+\<状态 >  
   
 ## <a name="syntax"></a>语法  
   
@@ -61,7 +61,7 @@ ms.locfileid: "61757945"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<workflowInstanceQuery>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflowinstancequery.md)|一个查询，该查询跟踪工作流实例生命周期的更改，例如已开始或已完成的事件。|  
+|[\<workflowInstanceQuery>](../windows-workflow-foundation/workflowinstancequery.md)|一个查询，该查询跟踪工作流实例生命周期的更改，例如已开始或已完成的事件。|  
   
 ## <a name="remarks"></a>备注
 
@@ -104,5 +104,5 @@ ms.locfileid: "61757945"
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElement?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.StateElementCollection?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.WorkflowInstanceQuery?displayProperty=nameWithType>
-- [工作流跟踪](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [跟踪配置文件](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+- [工作流跟踪](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [跟踪配置文件](../../../windows-workflow-foundation/tracking-profiles.md)

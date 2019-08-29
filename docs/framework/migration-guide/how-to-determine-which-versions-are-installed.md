@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3e6086772b807440570b94cfff268aa1d78fa048
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 5ead6db2c3df3662c4d689bd6ac2466c99b02a15
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490005"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968264"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>如何：确定已安装的 .NET Framework 版本
 
@@ -26,7 +26,7 @@ ms.locfileid: "66490005"
 
 - 一组程序集，它们是为应用提供功能的类型与资源的集合。 .NET Framework 和程序集使用相同的版本号。
 
-- 公共语言运行时 (CLR)，可管理并执行应用的代码。 CLR 由其自己的版本号标识（请参阅[版本和依赖关系](~/docs/framework/migration-guide/versions-and-dependencies.md)）。
+- 公共语言运行时 (CLR)，可管理并执行应用的代码。 CLR 由其自己的版本号标识（请参阅[版本和依赖关系](versions-and-dependencies.md)）。
 
 > [!NOTE]
 > 每个新版本的 .NET Framework 都会保留早期版本中的功能并会添加新功能。 可在同一台计算机上同时加载多个版本的 .NET Framework，这意味着可安装 .NET Framework 而无需卸载以前的版本。 通常，你不应卸载以前版本的 .NET Framework，因为你使用的应用程序可能依赖于特定版本，如果删除该版本，可能会中断。

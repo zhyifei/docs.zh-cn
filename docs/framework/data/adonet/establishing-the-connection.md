@@ -5,26 +5,26 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3af512f3-87d9-4005-9e2f-abb1060ff43f
-ms.openlocfilehash: 50cf5011376576d371dba558a602187201395bd0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b4a61306cd9b61f84eff16ffaac302317b6dfe44
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64599592"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69959179"
 ---
 # <a name="establishing-the-connection"></a>建立连接
-要连接到 Microsoft SQL Server，请使用 SQL Server .NET Framework 数据提供程序的 <xref:System.Data.SqlClient.SqlConnection> 对象。 要连接到 OLE DB 数据源，请使用 OLE DB .NET Framework 数据提供程序的 <xref:System.Data.OleDb.OleDbConnection> 对象。 要连接到 ODBC 数据源，请使用 ODBC .NET Framework 数据提供程序的 <xref:System.Data.Odbc.OdbcConnection> 对象。 要连接到 Oracle 数据源，请使用 Oracle .NET Framework 数据提供程序的 <xref:System.Data.OracleClient.OracleConnection> 对象。 有关安全地存储和检索连接字符串，请参阅[保护连接信息](../../../../docs/framework/data/adonet/protecting-connection-information.md)。  
+要连接到 Microsoft SQL Server，请使用 SQL Server .NET Framework 数据提供程序的 <xref:System.Data.SqlClient.SqlConnection> 对象。 要连接到 OLE DB 数据源，请使用 OLE DB .NET Framework 数据提供程序的 <xref:System.Data.OleDb.OleDbConnection> 对象。 要连接到 ODBC 数据源，请使用 ODBC .NET Framework 数据提供程序的 <xref:System.Data.Odbc.OdbcConnection> 对象。 要连接到 Oracle 数据源，请使用 Oracle .NET Framework 数据提供程序的 <xref:System.Data.OracleClient.OracleConnection> 对象。 为了安全地存储和检索连接字符串, 请参阅[保护连接信息](../../../../docs/framework/data/adonet/protecting-connection-information.md)。  
   
 ## <a name="closing-connections"></a>关闭连接  
- 我们建议您在使用完连接时一定要关闭连接，以便连接可以返回池。 如果 Visual Basic 或 C# 的代码中存在 `Using` 块，将自动断开连接，即使发生无法处理的异常。 请参阅[using 语句](~/docs/csharp/language-reference/keywords/using-statement.md)并[Using 语句](~/docs/visual-basic/language-reference/statements/using-statement.md)有关详细信息。  
+ 我们建议您在使用完连接时一定要关闭连接，以便连接可以返回池。 如果 Visual Basic 或 C# 的代码中存在 `Using` 块，将自动断开连接，即使发生无法处理的异常。 有关详细信息, 请参阅[Using 语句](../../../csharp/language-reference/keywords/using-statement.md)和[using 语句](../../../visual-basic/language-reference/statements/using-statement.md)。  
   
- 也可以使用适合所使用的提供程序的连接对象的 `Close` 或 `Dispose` 方法。 不是显式关闭的连接可能不会添加或返回到池中。 例如，如果连接已超出范围但没有显式关闭，则仅当达到最大池大小而该连接仍然有效时，该连接才会返回到连接池中。 有关详细信息，请参阅[OLE DB、 ODBC 和 Oracle 连接池](../../../../docs/framework/data/adonet/ole-db-odbc-and-oracle-connection-pooling.md)。  
-  
-> [!NOTE]
->  不要调用`Close`或`Dispose`上**连接**即**DataReader**，或在任何其他托管的对象`Finalize`类的方法。 在终结器中，仅释放类直接拥有的非托管资源。 如果类不拥有任何非托管资源，则不要在类定义中包含 `Finalize` 方法。 有关详细信息，请参阅[垃圾回收](../../../../docs/standard/garbage-collection/index.md)。  
+ 也可以使用适合所使用的提供程序的连接对象的 `Close` 或 `Dispose` 方法。 不是显式关闭的连接可能不会添加或返回到池中。 例如，如果连接已超出范围但没有显式关闭，则仅当达到最大池大小而该连接仍然有效时，该连接才会返回到连接池中。 有关详细信息, 请参阅[OLE DB、ODBC 和 Oracle 连接池](../../../../docs/framework/data/adonet/ole-db-odbc-and-oracle-connection-pooling.md)。  
   
 > [!NOTE]
->  从连接池中提取连接或将连接返回到连接池时，服务器上不会引发登录和注销事件，这是因为在将连接返回到连接池时实际上并没有将其关闭。 有关详细信息，请参阅 [SQL Server 连接池 (ADO.NET)](../../../../docs/framework/data/adonet/sql-server-connection-pooling.md)。  
+> 不要在类`Close`的`Dispose` 方法`Finalize`中对**连接**、 **DataReader**或任何其他托管对象调用或。 在终结器中，仅释放类直接拥有的非托管资源。 如果类不拥有任何非托管资源，则不要在类定义中包含 `Finalize` 方法。 有关详细信息, 请参阅[垃圾回收](../../../standard/garbage-collection/index.md)。  
+  
+> [!NOTE]
+> 从连接池中提取连接或将连接返回到连接池时，服务器上不会引发登录和注销事件，这是因为在将连接返回到连接池时实际上并没有将其关闭。 有关详细信息，请参阅 [SQL Server 连接池 (ADO.NET)](../../../../docs/framework/data/adonet/sql-server-connection-pooling.md)。  
   
 ## <a name="connecting-to-sql-server"></a>连接到 SQL Server  
  SQL Server .NET Framework 数据提供程序支持类似于 OLE DB (ADO) 连接字符串格式的连接字符串格式。 有关有效的字符串格式名称和值，请参见 <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> 对象的 <xref:System.Data.SqlClient.SqlConnection> 属性。 您也可以使用 <xref:System.Data.SqlClient.SqlConnectionStringBuilder> 类在运行时创建具有有效语法的连接字符串。 有关详细信息，请参阅[连接字符串生成器](../../../../docs/framework/data/adonet/connection-string-builders.md)。  
@@ -51,21 +51,21 @@ using (SqlConnection connection = new SqlConnection(connectionString))
 ### <a name="integrated-security-and-aspnet"></a>集成安全性和 ASP.NET  
  SQL Server 集成安全性（也称为受信任连接）有助于在连接到 SQL Server 时提供保护，因为它不会在连接字符串中公开用户 ID 和密码，是对连接进行身份验证的建议方法。 集成安全性使用正在执行的进程的当前安全标识或标记。 对于桌面应用程序，安全标识或标记通常是当前登录的用户的标识。  
   
- ASP.NET 应用程序的安全标识可设置为几个不同的选项之一。 若要更好地了解 ASP.NET 应用程序连接到 SQL Server 时使用的安全标识，请参阅[ASP.NET 模拟](https://docs.microsoft.com/previous-versions/aspnet/xh507fc5(v=vs.100))， [ASP.NET 身份验证](https://docs.microsoft.com/previous-versions/aspnet/eeyk640h(v=vs.100))，和[如何：访问 SQL 服务器使用 Windows 集成安全性](https://docs.microsoft.com/previous-versions/aspnet/bsz5788z(v=vs.100))。  
+ ASP.NET 应用程序的安全标识可设置为几个不同的选项之一。 为了更好地了解 ASP.NET 应用程序在连接到 SQL Server 时使用的安全标识, 请参阅[ASP.NET 模拟](https://docs.microsoft.com/previous-versions/aspnet/xh507fc5(v=vs.100))、 [ASP.NET 身份验证](https://docs.microsoft.com/previous-versions/aspnet/eeyk640h(v=vs.100))和[如何:使用 Windows 集成安全性](https://docs.microsoft.com/previous-versions/aspnet/bsz5788z(v=vs.100))访问 SQL Server。  
   
 ## <a name="connecting-to-an-ole-db-data-source"></a>连接到 OLE DB 数据源  
- 用于 OLE DB.NET Framework 数据提供程序提供连接到数据源使用 OLE DB 公开 （通过 SQLOLEDB，OLE DB Provider for SQL Server)，使用**OleDbConnection**对象。  
+ 用于 OLE DB 的 .NET Framework 数据提供程序提供了与使用 OLE DB (通过 SQLOLEDB 实现 SQL Server 的 OLE DB 提供程序) 公开的数据源的连接, 并使用**OleDbConnection**对象。  
   
  对于 OLE DB .NET Framework 数据提供程序，连接字符串格式与 ADO 中使用的连接字符串格式基本相同，但存在以下例外：  
   
-- **提供程序**关键字是必需的。  
+- **Provider**关键字是必需的。  
   
-- **URL**，**远程提供程序**，并**远程服务器**关键字不受支持。  
+- 不支持**URL**、**远程提供程序**和**远程服务器**关键字。  
   
  有关 OLE DB 连接字符串的更多信息，请参见 <xref:System.Data.OleDb.OleDbConnection.ConnectionString%2A> 主题。 您也可以使用 <xref:System.Data.OleDb.OleDbConnectionStringBuilder> 在运行时创建连接字符串。  
   
 > [!NOTE]
->  **OleDbConnection**对象不支持设置或检索特定于 OLE DB 访问接口的动态属性。 只支持可在 OLE DB 提供程序连接字符串中传递的属性。  
+> **OleDbConnection**对象不支持设置或检索特定于 OLE DB 提供程序的动态属性。 只支持可在 OLE DB 提供程序连接字符串中传递的属性。  
   
  以下代码示例演示如何创建和打开与 OLE DB 数据源的连接。  
   
@@ -88,12 +88,12 @@ using (OleDbConnection connection =
 ```  
   
 ## <a name="do-not-use-universal-data-link-files"></a>不要使用通用数据链接文件  
- 它是可以提供连接信息**OleDbConnection**在通用数据链接 (UDL) 文件中; 但是您应避免这样做。 UDL 文件未加密，会以明文形式公开连接字符串信息。 因为 UDL 文件对您的应用程序来说是一个基于文件的外部资源，所以无法使用 .NET Framework 保护该文件。  
+ 可以在通用数据链接 (UDL) 文件中提供**OleDbConnection**的连接信息;但是, 应避免这样做。 UDL 文件未加密，会以明文形式公开连接字符串信息。 因为 UDL 文件对您的应用程序来说是一个基于文件的外部资源，所以无法使用 .NET Framework 保护该文件。  
   
 ## <a name="connecting-to-an-odbc-data-source"></a>连接到 ODBC 数据源  
- 用于 ODBC 的.NET Framework 数据提供程序提供使用 ODBC 使用公开的数据源的连接**OdbcConnection**对象。  
+ 适用于 ODBC 的 .NET Framework 数据提供程序提供了使用**OdbcConnection**对象与使用 ODBC 公开的数据源的连接。  
   
- 对于 ODBC .NET Framework 数据提供程序，连接字符串的格式设计为尽可能与 ODBC 连接字符串的格式相匹配。 您还可以提供一个 ODBC 数据源名称 (DSN)。 有关详细信息**OdbcConnection** ，请参阅<xref:System.Data.Odbc.OdbcConnection>。  
+ 对于 ODBC .NET Framework 数据提供程序，连接字符串的格式设计为尽可能与 ODBC 连接字符串的格式相匹配。 您还可以提供一个 ODBC 数据源名称 (DSN)。 有关**OdbcConnection**的更多详细信息, 请<xref:System.Data.Odbc.OdbcConnection>参阅。  
   
  以下代码示例演示如何创建和打开与 ODBC 数据源的连接。  
   
@@ -116,9 +116,9 @@ using (OdbcConnection connection =
 ```  
   
 ## <a name="connecting-to-an-oracle-data-source"></a>连接到 Oracle 数据源  
- 适用于 Oracle 的.NET Framework 数据提供程序提供对使用 Oracle 数据源的连接**OracleConnection**对象。  
+ 用于 Oracle 的 .NET Framework 数据提供程序使用**OracleConnection**对象提供与 oracle 数据源的连接。  
   
- 对于 Oracle .NET Framework 数据提供程序，连接字符串的格式设计为尽可能与用于 Oracle 的 OLE DB 提供程序 (MSDAORA) 连接字符串格式相匹配。 有关详细信息**OracleConnection**，请参阅<xref:System.Data.OracleClient.OracleConnection>。  
+ 对于 Oracle .NET Framework 数据提供程序，连接字符串的格式设计为尽可能与用于 Oracle 的 OLE DB 提供程序 (MSDAORA) 连接字符串格式相匹配。 有关**OracleConnection**的更多详细信息, 请<xref:System.Data.OracleClient.OracleConnection>参阅。  
   
  以下代码示例演示如何创建和打开与 Oracle 数据源的连接。  
   

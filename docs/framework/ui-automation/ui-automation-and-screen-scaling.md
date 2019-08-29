@@ -10,16 +10,16 @@ helpviewer_keywords:
 - UI (user interface), automation
 - UI Automation
 ms.assetid: 4380cad7-e509-448f-b9a5-6de042605fd4
-ms.openlocfilehash: a59223bfbe9506aa0028933d55b74e24d5595c32
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 35b46d2030ee887eb98618fbed127097cec1f0c5
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629547"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044195"
 ---
 # <a name="ui-automation-and-screen-scaling"></a>UI 自动化和屏幕缩放
 > [!NOTE]
->  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关的最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], 请[参阅 Windows 自动化 API:UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
+> 本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关的最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], 请[参阅 Windows 自动化 API:UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)]使用户能够更改每英寸点数 (dpi) 设置, 以便屏幕上[!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)]的大多数元素显示得更大。 虽然 [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)]中之前就已提供了此项功能，但在早期版本中，必须由应用程序实现缩放。 在 [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)]中，桌面窗口管理器为所有不会处理其自身缩放的应用程序执行默认缩放。 UI 自动化客户端应用程序必须考虑到此功能。  
   
@@ -32,7 +32,7 @@ ms.locfileid: "68629547"
  实际上, 当用户将缩放比例设置为 120 dpi 时, 屏幕上的垂直或水平英寸将增大 25%。 所有尺寸会相应缩放。 应用程序窗口距屏幕顶端和左边缘的偏移量将增大 25%。 如果启用了应用程序缩放, 且应用程序不能识别 dpi, 则窗口的大小将以相同的比例增加, 以及其包含的所有[!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]元素的偏移量和大小。  
   
 > [!NOTE]
->  默认情况下, 当用户将 dpi 设置为120时, DWM 不会对非 dpi 感知的应用程序执行缩放, 但当 dpi 设置为自定义值144或更高时, 将执行此功能。 但是，用户可以重写默认行为。  
+> 默认情况下, 当用户将 dpi 设置为120时, DWM 不会对非 dpi 感知的应用程序执行缩放, 但当 dpi 设置为自定义值144或更高时, 将执行此功能。 但是，用户可以重写默认行为。  
   
  屏幕缩放为以任何方式与屏幕坐标有关的应用程序带来了新的挑战。 屏幕现在包含两个坐标系：物理和逻辑。 点的物理坐标是距原点左上部的实际偏移量（以像素为单位）。 如果像素本身进行了缩放，则逻辑坐标为缩放后的偏移量。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "68629547"
      [!code-vb[UIAClient_snip#185](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#185)]  
   
 > [!CAUTION]
->  请勿使用 <xref:System.Windows.Forms.Cursor.Position%2A?displayProperty=nameWithType>。 未定义此属性在扩展环境下客户端窗口以外的行为。  
+> 请勿使用 <xref:System.Windows.Forms.Cursor.Position%2A?displayProperty=nameWithType>。 未定义此属性在扩展环境下客户端窗口以外的行为。  
   
  如果你的应用程序使用非 dpi 感知的应用程序执行直接的跨进程通信, 则可以使用[!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]函数`PhysicalToLogicalPoint`和`LogicalToPhysicalPoint`在逻辑和物理坐标之间转换。  
   

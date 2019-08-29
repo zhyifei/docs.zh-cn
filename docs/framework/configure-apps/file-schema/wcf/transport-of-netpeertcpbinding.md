@@ -2,20 +2,20 @@
 title: <transport> 的 <netPeerTcpBinding>
 ms.date: 03/30/2017
 ms.assetid: c44d86d2-1160-44d7-9c7a-297b12eccc7f
-ms.openlocfilehash: 157637615abafbd5913e4d90b702bb0224d5f121
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 837d01540fa63579877ab4085bd8034c78f2fbe0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788318"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69915565"
 ---
-# <a name="transport-of-netpeertcpbinding"></a>\<transport> of \<netPeerTcpBinding>
-使用时指定的传输级安全设置[ \<netPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md)。  
+# <a name="transport-of-netpeertcpbinding"></a>\<netPeerTcpBinding > 的\<传输 >
+指定使用[ \<netPeerTcpBinding >](netpeertcpbinding.md)时的传输级安全性设置。  
   
  \<system.ServiceModel>  
 \<bindings>  
 \<netPeerTcpBinding>  
-\<binding>  
+\<绑定 >  
 \<安全 >  
 \<transport>  
   
@@ -42,19 +42,19 @@ ms.locfileid: "61788318"
   
 ## <a name="credentialtype-attribute"></a>credentialType 属性  
   
-|“值”|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |证书|对等通道传输的身份验证需要 X509 证书。|  
 |Password|对等通道传输的身份验证需要正确的密码。|  
   
 ### <a name="child-elements"></a>子元素  
- None  
+ 无  
   
 ### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netpeerbinding.md)|定义的安全设置[ \<netPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md)。|  
+|[\<security>](security-of-netpeerbinding.md)|定义[ \<netPeerTcpBinding >](netpeertcpbinding.md)的安全设置。|  
   
 ## <a name="see-also"></a>请参阅
 
@@ -62,8 +62,8 @@ ms.locfileid: "61788318"
 - <xref:System.ServiceModel.PeerSecuritySettings.Transport%2A>
 - <xref:System.ServiceModel.Configuration.PeerSecurityElement.Transport%2A>
 - <xref:System.ServiceModel.PeerTransportSecuritySettings>
-- [保护服务和客户端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [绑定](../../../../../docs/framework/wcf/bindings.md)
-- [配置系统提供的绑定](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [使用绑定配置服务和客户端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../../../docs/framework/misc/binding.md)
+- [保护服务和客户端的安全](../../../wcf/feature-details/securing-services-and-clients.md)
+- [绑定](../../../wcf/bindings.md)
+- [配置系统提供的绑定](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [使用绑定配置服务和客户端](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../misc/binding.md)

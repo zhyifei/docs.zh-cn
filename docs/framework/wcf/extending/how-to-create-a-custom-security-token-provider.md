@@ -7,22 +7,22 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], providing credentials
 ms.assetid: db8cb478-aa43-478b-bf97-c6489ad7c7fd
-ms.openlocfilehash: 1677d44faf6901eb1eda93a9374636b7caa558a0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8daf025212e34c5d37d09ae5108d186d13b99eca
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61767190"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69951825"
 ---
 # <a name="how-to-create-a-custom-security-token-provider"></a>如何：创建自定义安全令牌提供程序
 本主题介绍如何使用自定义安全令牌提供程序来创建新令牌类型，以及如何将该提供程序与自定义安全令牌管理器集成。  
   
 > [!NOTE]
->  如果在 <xref:System.IdentityModel.Tokens> 命名空间中找到的系统提供的令牌不符合要求，请创建一个自定义令牌提供程序。  
+> 如果在 <xref:System.IdentityModel.Tokens> 命名空间中找到的系统提供的令牌不符合要求，请创建一个自定义令牌提供程序。  
   
- 安全令牌提供程序会基于客户端或服务凭据中的信息创建一个安全令牌表示形式。 若要在 Windows Communication Foundation (WCF) 安全中使用自定义安全令牌提供程序，必须创建自定义凭据和安全令牌管理器实现。  
+ 安全令牌提供程序会基于客户端或服务凭据中的信息创建一个安全令牌表示形式。 若要在 Windows Communication Foundation (WCF) 安全中使用自定义安全令牌提供程序, 您必须创建自定义凭据和安全令牌管理器实现。  
   
- 有关自定义凭据和安全令牌管理器的详细信息请参阅[演练：创建自定义客户端和服务凭据](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)。  
+ 有关自定义凭据和安全令牌管理器的详细信息[, 请参阅演练:创建自定义客户端和](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)服务凭据。  
   
 ### <a name="to-create-a-custom-security-token-provider"></a>创建自定义安全令牌提供程序  
   
@@ -39,7 +39,7 @@ ms.locfileid: "61767190"
   
 2. 重写 <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%28System.IdentityModel.Selectors.SecurityTokenRequirement%29> 方法（如果尚未重写它）。  
   
-     <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%28System.IdentityModel.Selectors.SecurityTokenRequirement%29>方法负责返回的实例<xref:System.IdentityModel.Selectors.SecurityTokenProvider>类适用于<xref:System.IdentityModel.Selectors.SecurityTokenRequirement>由 WCF 安全框架传递给该方法的参数。 修改此方法，以便在用相应的安全令牌参数调用它时，可以返回所实现的自定义安全令牌提供程序（在上一个过程中创建的）。 有关安全令牌管理器的详细信息，请参阅[演练：创建自定义客户端和服务凭据](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)。  
+     方法负责返回<xref:System.IdentityModel.Selectors.SecurityTokenProvider>类的实例, 该实例适用于<xref:System.IdentityModel.Selectors.SecurityTokenRequirement> WCF 安全框架传递给方法的参数。 <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%28System.IdentityModel.Selectors.SecurityTokenRequirement%29> 修改此方法，以便在用相应的安全令牌参数调用它时，可以返回所实现的自定义安全令牌提供程序（在上一个过程中创建的）。 有关安全令牌管理器的详细信息, 请参阅[演练:创建自定义客户端和](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)服务凭据。  
   
 3. 向该方法中添加自定义逻辑，使其可以基于 <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> 参数返回自定义安全令牌提供程序。 下面的示例在满足令牌需求时返回自定义安全令牌提供程序。 这些要求包括一个 X.509 安全令牌以及消息方向（使用令牌进行消息输出）。 对于其他所有情况，该代码通过调用基类，针对其他安全令牌要求来维护系统提供的行为。  
   

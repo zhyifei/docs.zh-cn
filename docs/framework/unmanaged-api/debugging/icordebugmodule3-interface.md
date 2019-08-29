@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 37041764ad37221ea80cefa12adfb214287d8248
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e51ff64115ce3417087eee6845aa802ad64f2a72
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764000"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69960994"
 ---
 # <a name="icordebugmodule3-interface"></a>ICorDebugModule3 接口
 为动态模块创建符号读取器。  
@@ -43,22 +43,22 @@ interface ICorDebugModule3 : IUnknown
   
 |方法|描述|  
 |------------|-----------------|  
-|[ICorDebugModule3::CreateReaderForInMemorySymbols 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule3-createreaderforinmemorysymbols-method.md)|创建符号读取器 (通常[ISymUnmanagedReader 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)) 的动态模块。|  
+|[ICorDebugModule3::CreateReaderForInMemorySymbols 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule3-createreaderforinmemorysymbols-method.md)|为动态模块创建符号读取器 (通常为[ISymUnmanagedReader 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md))。|  
   
 ## <a name="remarks"></a>备注  
- 此接口进行逻辑扩展的"icor 调试模块"和"ICorDebugModule2"接口。  
+ 此接口以逻辑方式扩展了 "ICorDebugModule" 和 "ICorDebugModule2" 接口。  
   
 > [!NOTE]
->  此接口不支持跨计算机或跨进程远程调用。  
+> 此接口不支持跨计算机或跨进程远程调用。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头：** Cordebug.idl, Cordebug.idl  
   
- **库：** CorGuids.lib  
+ **类库**CorGuids.lib  
   
- **.NET framework 版本：** 4.5，4，3.5 SP1
+ **.NET Framework 版本:** 4.5, 4, 3.5 SP1
   
 ## <a name="see-also"></a>请参阅
 

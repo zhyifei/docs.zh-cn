@@ -2,15 +2,15 @@
 title: 模型声明函数
 ms.date: 03/30/2017
 ms.assetid: aba87f13-5685-4f6b-ad14-918e8a7d5c2a
-ms.openlocfilehash: a0bea36693122c77d9c1abdf4484ee8e68627a0c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 73e716f1c42dfbbb91dc6456212de2a331d7c4ef
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645876"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69943912"
 ---
 # <a name="model-declared-function"></a>模型声明函数
-一个*模型声明函数*是在概念模型中，声明但未在该概念模型中定义的函数。 该函数可能是在承载或存储环境中定义的。 例如，模型声明函数可能映射至在数据库中定义的函数，从而在概念模型中提供服务器端的功能。  
+*模型声明函数*是在概念模型中声明的、但未在该概念模型中定义的函数。 该函数可能是在承载或存储环境中定义的。 例如，模型声明函数可能映射至在数据库中定义的函数，从而在概念模型中提供服务器端的功能。  
   
  模型声明函数的声明包含以下信息：  
   
@@ -19,12 +19,12 @@ ms.locfileid: "64645876"
 - 返回值的类型。 （可选）  
   
     > [!NOTE]
-    >  如果未指定返回值，则返回类型为 void。  
+    > 如果未指定返回值，则返回类型为 void。  
   
 - 参数信息，包括参数名和类型。 （可选）  
   
 ## <a name="example"></a>示例  
- [ADO.NET 实体框架](./ef/index.md)使用称为概念性架构定义语言的特定于域的语言 (DSL) ([CSDL](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec)) 来定义概念模型。 在 CSDL 中，模型声明函数的一种实现是函数导入 (使用[FunctionImport 元素](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#functionimport-element-csdl))。 下面的 CSDL 定义了一个实体容器，其中包含一个函数导入定义。 请注意，由于未指定返回类型，因而该函数的返回类型为 void。  
+ [ADO.NET 实体框架](./ef/index.md)使用一种称为概念架构定义语言 ([CSDL](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec)) 的域特定语言 (DSL) 来定义概念模型。 在 CSDL 中, 模型声明函数的一个实现是函数导入 (使用[FunctionImport 元素](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#functionimport-element-csdl))。 下面的 CSDL 定义了一个实体容器，其中包含一个函数导入定义。 请注意，由于未指定返回类型，因而该函数的返回类型为 void。  
   
  [!code-xml[EDM_Example_Model#FunctionImport](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books4.edmx#functionimport)]  
   

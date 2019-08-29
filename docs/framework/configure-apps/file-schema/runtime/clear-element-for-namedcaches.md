@@ -5,15 +5,15 @@ helpviewer_keywords:
 - <clear> element for <namedCaches>
 - clear element for <namedCaches>
 ms.assetid: ea01a858-65da-4348-800f-5e3df59d4d79
-ms.openlocfilehash: e563f8f27538e70ba90465fc28d300754509f7a4
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: a90970e468359714bbbb858f3f300c26b5757a4d
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67423310"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69658861"
 ---
-# <a name="clear-element-for-namedcaches"></a>\<清除 > 元素\<namedCaches >
-清除所有`namedCache`中的条目`namedCaches`内存缓存的集合。  
+# <a name="clear-element-for-namedcaches"></a>\<清除 namedCaches 的\<> 元素 >
+清除内存`namedCache`缓存的`namedCaches`集合中的所有项。  
   
  \<system.runtime.caching>  
 \<memoryCache>  
@@ -45,11 +45,11 @@ ms.locfileid: "67423310"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<namedCaches>](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)|包含的配置设置的命名集合<xref:System.Runtime.Caching.MemoryCache>实例。|  
+|[\<namedCaches>](namedcaches-element-cache-settings.md)|包含命名<xref:System.Runtime.Caching.MemoryCache>实例的配置设置的集合。|  
   
 ## <a name="remarks"></a>备注  
- `clear`元素中清除所有`namedCache`内存缓存的命名的缓存集合中的条目。 可以使用`clear`元素在使用之前`add`要添加新命名的缓存条目，以确保没有其他元素名为集合中的缓存。  
+ 元素清除内存缓存`namedCache`的命名缓存集合中的所有项。 `clear` `clear` 在`add`使用元素添加新的命名缓存条目之前, 可以使用元素, 以便确定集合中没有其他命名缓存。  
   
 ## <a name="see-also"></a>请参阅
 
-- [\<namedCaches > 元素 （缓存设置）](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)
+- [\<namedCaches > 元素 (缓存设置)](namedcaches-element-cache-settings.md)

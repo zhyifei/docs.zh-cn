@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: e25dd95f-b64c-4d8b-a3a4-379e1aa0ad55
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a75534bdfb1eef5902d3cd5071b4f5b4bfba8caa
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fb6e3677d79f3131432c3daebeee4d166b5450b2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647951"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916660"
 ---
 # <a name="compiled-xpath-expressions"></a>已编译的 XPath 表达式
 <xref:System.Xml.XPath.XPathExpression> 对象表示从 <xref:System.Xml.XPath.XPathExpression.Compile%2A> 类的静态 <xref:System.Xml.XPath.XPathExpression> 方法或 <xref:System.Xml.XPath.XPathNavigator.Compile%2A> 类的 <xref:System.Xml.XPath.XPathNavigator> 方法返回的已编译 XPath 查询。  
@@ -45,7 +45,7 @@ ms.locfileid: "64647951"
 |`String`|<xref:System.String>|UCS 字符序列。|<xref:System.Xml.XPath.XPathNavigator.Evaluate%2A>|  
   
 > [!NOTE]
->  <xref:System.Xml.XPath.XPathNavigator.Matches%2A> 方法允许将 XPath 表达式作为其参数。 <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A> 方法返回 <xref:System.Xml.XPath.XPathNavigator> 对象，而不是一种 W3C XPath 返回类型。  
+> <xref:System.Xml.XPath.XPathNavigator.Matches%2A> 方法允许将 XPath 表达式作为其参数。 <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A> 方法返回 <xref:System.Xml.XPath.XPathNavigator> 对象，而不是一种 W3C XPath 返回类型。  
   
 ### <a name="the-returntype-property"></a>ReturnType 属性  
  在 XPath 查询编译为 <xref:System.Xml.XPath.XPathExpression> 对象之后，可以使用 <xref:System.Xml.XPath.XPathExpression.ReturnType%2A> 对象的 <xref:System.Xml.XPath.XPathExpression> 属性来确定 XPath 查询返回的内容。  

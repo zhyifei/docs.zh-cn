@@ -2,14 +2,14 @@
 title: <add> 的 <backupList>
 ms.date: 03/30/2017
 ms.assetid: bc5939fc-314a-4ea4-a533-c96958da7173
-ms.openlocfilehash: 03bf1bbb8156e4722d987e171d9034747ac6bb61
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c590dbd671807b32e08ad5d871d376a0dc51e611
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701198"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69926874"
 ---
-# <a name="add-of-backuplist"></a>\<添加 > 的\<backupList >
+# <a name="add-of-backuplist"></a>\<添加 backupList > \<的 >
 表示定义备份终结点元素的配置元素。  
   
  \<system.serviceModel>  
@@ -30,9 +30,6 @@ ms.locfileid: "61701198"
 </routing>
 ```  
   
-```csharp  
-```  
-  
 ## <a name="attributes-and-elements"></a>特性和元素  
  下列各节描述了特性、子元素和父元素。  
   
@@ -40,7 +37,7 @@ ms.locfileid: "61701198"
   
 |特性|描述|  
 |---------------|-----------------|  
-|name|一个字符串，指定备份终结点的名称。|  
+|NAME|一个字符串，指定备份终结点的名称。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  
@@ -49,7 +46,7 @@ ms.locfileid: "61701198"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<routing>](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|包含你想要使用在的情况下无法访问主终结点的路由服务的终结点的列表。|  
+|[\<routing>](routing.md)|包含当无法访问主终结点时路由服务将使用的终结点的列表。|  
   
 ## <a name="see-also"></a>请参阅
 

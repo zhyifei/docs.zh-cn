@@ -7,12 +7,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], column freezing
 - data [Windows Forms], displaying
 ms.assetid: 87412dd2-478f-4751-af87-dafc591fc215
-ms.openlocfilehash: d38c8d73bc70e7e521b476ca78c8f102d003c538
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 7ebdf7a1598ac3cd61005ae607e5bfbe7cb49059
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040337"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933716"
 ---
 # <a name="how-to-freeze-columns-in-the-windows-forms-datagridview-control-using-the-designer"></a>如何：使用设计器冻结 Windows 窗体 DataGridView 控件中的列
 用户查看 Windows 窗体 <xref:System.Windows.Forms.DataGridView> 控件中显示的数据时，有时需要频繁地引用单个列或列集。 例如, 当你显示包含多个列的客户信息表时, 你可以在任何时候显示客户名称, 同时允许其他列在可见区域外滚动。
@@ -30,7 +30,7 @@ ms.locfileid: "69040337"
 3. 在 "**列属性**" 网格中, <xref:System.Windows.Forms.DataGridViewColumn.Frozen%2A>将属性`true`设置为。
 
     > [!NOTE]
-    >  您还可以通过在 "**添加列**" 对话框中选择**冻结**框来添加该列。
+    > 您还可以通过在 "**添加列**" 对话框中选择**冻结**框来添加该列。
 
 ## <a name="see-also"></a>请参阅
 

@@ -1,19 +1,19 @@
 ---
 title: 调用方信息
-description: 介绍如何使用调用方信息参数特性从一种方法获取调用方信息。
+description: 介绍如何使用调用方信息参数特性从方法获取调用方信息。
 ms.date: 04/25/2017
-ms.openlocfilehash: 13092df453b684d3ed4a93c842ea49c066157cb6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e7bbc3830a95bd25cfc2fb369b204d367b775815
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61703161"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106586"
 ---
 # <a name="caller-information"></a>调用方信息
 
 通过使用调用方信息特性，可获取有关方法的调用方的信息。 可以获取源代码的文件路径、源代码中的行号和调用方的成员名称。 此信息有助于跟踪、调试和创建诊断工具。
 
-若要获取此信息，可以使用应用于可选参数的特性，每个特性都具有默认值。 下表列出了在中定义的调用方信息特性[System.Runtime.CompilerServices](/dotnet/api/system.runtime.compilerservices)命名空间：
+若要获取此信息，可以使用应用于可选参数的特性，每个特性都具有默认值。 下表列出了在[system.runtime.compilerservices](/dotnet/api/system.runtime.compilerservices)命名空间中定义的调用方信息特性:
 
 |特性|描述|类型|
 |---------|-----------|----|
@@ -23,7 +23,7 @@ ms.locfileid: "61703161"
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何使用这些属性来跟踪调用方。
+下面的示例演示如何使用这些特性跟踪调用方。
 
 ```fsharp
 open System.Diagnostics
@@ -43,20 +43,20 @@ type Tracer() =
 
 ## <a name="remarks"></a>备注
 
-调用方信息特性只能应用于可选参数。 调用方信息特性会导致编译器编写使用调用方信息特性修饰每个可选参数的正确值。
+调用方信息属性只能应用于可选参数。 调用方信息特性导致编译器为使用调用方信息特性修饰的每个可选参数写入正确的值。
 
-在编译时，调用方信息值将作为文本传入中间语言 (IL)。 与不同的结果[StackTrace](/dotnet/api/system.diagnostics.stacktrace)模糊处理，不会影响有关例外情况，结果的属性。
+在编译时，调用方信息值将作为文本传入中间语言 (IL)。 不同于异常的[StackTrace](/dotnet/api/system.diagnostics.stacktrace)属性的结果, 结果不受模糊处理的影响。
 
 你可显式提供可选参数来控制调用方信息或隐藏调用方信息。
 
 ## <a name="member-names"></a>成员名称
 
-可以使用[ `CallerMemberName` ](/dotnet/api/system.runtime.compilerservices.callermembernameattribute)属性，若要避免指定将成员名称`String`到被调用方法的参数。 通过使用此方法，避免重命名重构不会更改的问题`String`值。 此好处对于以下任务特别有用：
+可以使用[`CallerMemberName`](/dotnet/api/system.runtime.compilerservices.callermembernameattribute)特性来避免将成员名称指定`String`为所调用的方法的参数。 通过使用此方法, 您可以避免 "重命名重构" 不更改`String`值的问题。 此好处对于以下任务特别有用：
 
-* 使用跟踪和诊断例程。
-* 实现[INotifyPropertyChanged](/dotnet/api/system.componentmodel.inotifypropertychanged)接口时将数据绑定。 此接口允许对象的属性通知绑定控件该属性已更改，以便此控件能够显示更新的信息。 无需[ `CallerMemberName` ](/dotnet/api/system.runtime.compilerservices.callermembernameattribute)属性，您必须指定属性名称的文本。
+- 使用跟踪和诊断例程。
+- 在绑定数据时实现[INotifyPropertyChanged](/dotnet/api/system.componentmodel.inotifypropertychanged)接口。 此接口允许对象的属性通知绑定控件该属性已更改，以便此控件能够显示更新的信息。 如果没有[`CallerMemberName`](/dotnet/api/system.runtime.compilerservices.callermembernameattribute)特性, 则必须将属性名称指定为文本。
 
-下图显示了成员时使用 CallerMemberName 属性返回的名称。
+下图显示了使用 CallerMemberName 特性时返回的成员名称。
 
 |调用发生中|成员名称结果|
 |-------------------|------------------|
@@ -70,6 +70,6 @@ type Tracer() =
 
 ## <a name="see-also"></a>请参阅
 
-- [属性](attributes.md)
-- [命名的参数](parameters-and-arguments.md#named-arguments)
+- [特性](attributes.md)
+- [命名参数](parameters-and-arguments.md#named-arguments)
 - [可选参数](parameters-and-arguments.md#optional-parameters)

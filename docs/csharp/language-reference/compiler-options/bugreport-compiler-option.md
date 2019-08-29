@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -bugreport compiler option [C#]
 - bugreport compiler option [C#]
 ms.assetid: f39665e3-4f6f-4357-88a2-3274c7bec0c1
-ms.openlocfilehash: f25455fac84903f9c39861e1f6863f6b2f6928f3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0989678be070910c410d71717fe66679e1b70557
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64587390"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69603082"
 ---
 # <a name="-bugreport-c-compiler-options"></a>-bugreport（C# 编译器选项）
 指定应使调试信息置于文件中供以后分析。  
@@ -29,7 +29,7 @@ ms.locfileid: "64587390"
  要包含 Bug 报告的文件的名称。  
   
 ## <a name="remarks"></a>备注  
- -bugreport 选项指定以下信息应置于 `file` 中：  
+ -bugreport 选项指定以下信息应置于 `file` 中  ：  
   
 - 编译中所有源代码文件副本。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "64587390"
   
 - 有关你认为应如何修复问题的说明（系统会提示你提供此信息）。  
   
- 如果此选项与 -errorreport: prompt 或 -errorreport:send 一起使用，文件中的信息将发送到 Microsoft Corporation。  
+ 如果此选项与 -errorreport: prompt 或 -errorreport:send 一起使用，文件中的信息将发送到 Microsoft Corporation   。  
   
  所有源代码文件的副本将放入 `file`，因此你可能希望在尽可能短小的程序中重现可疑代码缺陷。  
   
@@ -55,6 +55,6 @@ ms.locfileid: "64587390"
   
 ## <a name="see-also"></a>请参阅
 
-- [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)
-- [-errorreport（C# 编译器选项）](../../../csharp/language-reference/compiler-options/errorreport-compiler-option.md)
+- [C# 编译器选项](./index.md)
+- [-errorreport（C# 编译器选项）](./errorreport-compiler-option.md)
 - [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties)

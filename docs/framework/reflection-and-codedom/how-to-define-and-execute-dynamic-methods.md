@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 07d08a99-62c5-4254-bce2-2a75e55a18ab
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 19f1cc3708d2d552da3d94bc6b490ebaa2ece657
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: b5c6de2bde111ae459dbcfa1c0a7363d406f5f80
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586164"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69928254"
 ---
 # <a name="how-to-define-and-execute-dynamic-methods"></a>如何：定义和执行动态方法
 以下过程介绍如何定义和执行简单的动态方法和绑定到类实例的动态方法。 有关动态方法的更多信息，请参阅 <xref:System.Reflection.Emit.DynamicMethod> 类和[反射发出动态方法应用场景](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sfk2s47t(v=vs.100))。  
@@ -38,7 +38,7 @@ ms.locfileid: "65586164"
 3. 创建 <xref:System.Reflection.Emit.DynamicMethod>。 在此示例中，该方法命名为 `SquareIt`。  
   
     > [!NOTE]
-    >  不需要为动态方法命名，并且不能通过名称调用它们。 多个动态方法可以具有相同的名称。 但是，名称将在调用堆栈中显示并且可用于调试。  
+    > 不需要为动态方法命名，并且不能通过名称调用它们。 多个动态方法可以具有相同的名称。 但是，名称将在调用堆栈中显示并且可用于调试。  
   
      返回值的类型指定为 `long`。 该方法与包含 `Example` 类的模块关联，该类包含代码示例。 可以指定任何加载的模块。 动态方法的行为类似于模块级的 `static` 方法（在 Visual Basic 中为 `Shared`）。  
   
@@ -91,7 +91,7 @@ ms.locfileid: "65586164"
 5. 通过调用 <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%28System.Type%2CSystem.Object%29> 方法重载创建表示动态方法的委托（在步骤 1 中声明）的实例。 创建委托即完成该方法，任何更改方法的进一步尝试（例如，添加更多 MSIL）都将被忽略。  
   
     > [!NOTE]
-    >  可以多次调用 <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%2A> 方法，创建绑定到目标类型的其他实例的委托。  
+    > 可以多次调用 <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%2A> 方法，创建绑定到目标类型的其他实例的委托。  
   
      以下代码将该方法绑定到 `Example` 类的一个新实例，该类的专用测试字段设置为 42。 也就是说，每次调用委托时，都会将 `Example` 的实例传递给该方法的第一个参数。  
   

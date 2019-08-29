@@ -10,16 +10,16 @@ helpviewer_keywords:
 ms.assetid: 2096103c-22f7-420d-b631-f102bc33a6dd
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6d13f123953c32cae01df501c0e251ec29b0478b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 10fa77f6948a10959db5f79c37692eba67d47ecd
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367500"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666542"
 ---
 # <a name="how-to-use-foreach-to-remove-items-in-a-blockingcollection"></a>如何：使用 ForEach 移除 BlockingCollection 中的项
 
-除了使用 <xref:System.Collections.Concurrent.BlockingCollection%601.Take%2A> 和 <xref:System.Collections.Concurrent.BlockingCollection%601.TryTake%2A> 方法从 <xref:System.Collections.Concurrent.BlockingCollection%601> 中提取项之外，还可以使用 [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md)（在 Visual Basic 中为 [For Each](~/docs/visual-basic/language-reference/statements/for-each-next-statement.md)）删除项，直至添加完成并且集合为空。 由于与典型的 `foreach` (`For Each`) 循环不同，此枚举器通过删除项来修改源集合，因此将其称作*转变枚举*或*耗用枚举*。
+除了使用 <xref:System.Collections.Concurrent.BlockingCollection%601.Take%2A> 和 <xref:System.Collections.Concurrent.BlockingCollection%601.TryTake%2A> 方法从 <xref:System.Collections.Concurrent.BlockingCollection%601> 中提取项之外，还可以使用 [foreach](../../../csharp/language-reference/keywords/foreach-in.md)（在 Visual Basic 中为 [For Each](../../../visual-basic/language-reference/statements/for-each-next-statement.md)）删除项，直至添加完成并且集合为空。 由于与典型的 `foreach` (`For Each`) 循环不同，此枚举器通过删除项来修改源集合，因此将其称作*转变枚举*或*耗用枚举*。
 
 ## <a name="example"></a>示例
 

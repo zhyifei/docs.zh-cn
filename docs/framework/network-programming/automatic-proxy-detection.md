@@ -14,20 +14,20 @@ helpviewer_keywords:
 - network
 - WPAD (Web Proxy Auto-Discovery)
 ms.assetid: fcd9c3bd-93de-4c92-8ff3-837327ad18de
-ms.openlocfilehash: 656a21a7b8801a2c3b72b25531705576fcf047cd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: d7d0dae2ffbec5e334057715cd1d8d44e52cec9d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295752"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910465"
 ---
 # <a name="automatic-proxy-detection"></a>自动代理检测
 自动代理检测是一个进程，系统使用该进程来标识 Web 代理服务器，并用于代表客户端发送请求。 此功能也称为 Web 代理自动发现 (WPAD)。 启用自动代理检测后，系统会尝试查找代理配置脚本，该脚本负责返回一组可用于请求的代理。 如果找到了代理配置脚本，则会在针对使用 <xref:System.Net.WebProxy> 实例的请求获取代理信息、请求流或响应时，在本地计算机上下载、编译并运行该脚本。  
   
- 自动代理检测由 <xref:System.Net.WebProxy> 类执行，且可采用请求级设置、配置文件中的设置和通过 Internet Explorer“局域网(LAN)”对话框指定的设置。  
+ 自动代理检测由 <xref:System.Net.WebProxy> 类执行，且可采用请求级设置、配置文件中的设置和通过 Internet Explorer“局域网(LAN)”对话框指定的设置  。  
   
 > [!NOTE]
->  可通过以下方式显示 Internet Explorer 的“局域网(LAN)设置”对话框：在 Internet Explorer 主菜单中选择“工具”，然后选择“Internet 选项”。 接下来，选择“连接”选项卡，然后单击“LAN 设置”。  
+> 可通过以下方式显示 Internet Explorer 的“局域网(LAN)设置”对话框：在 Internet Explorer 主菜单中选择“工具”，然后选择“Internet 选项”    。 接下来，选择“连接”选项卡，然后单击“LAN 设置”   。  
   
  启用自动代理检测后，<xref:System.Net.WebProxy> 类会尝试按如下方式找到代理配置脚本：  
   
@@ -40,7 +40,7 @@ ms.locfileid: "59295752"
 4. 如果未标识该主机，并且代理配置脚本的位置由 Internet Explorer LAN 设置或配置文件指定，则使用此位置。  
   
 > [!NOTE]
->  作为 NT 服务或 ASP.NET 的一部分运行的应用程序使用调用用户的 Internet Explorer 代理服务器设置（如果可用）。 这些设置可能并非对所有服务应用程序都可用。  
+> 作为 NT 服务或 ASP.NET 的一部分运行的应用程序使用调用用户的 Internet Explorer 代理服务器设置（如果可用）。 这些设置可能并非对所有服务应用程序都可用。  
   
  代理基于每个 connectoid 进行配置。 connectoid 是网络连接对话框中的一项，可以是物理网络设备（调制解调器或以太网卡）或虚拟接口（例如，通过网络设备运行的 VPN 连接）。 如果 connectoid 发生更改（例如，无线连接更改了访问点，或启用了 VPN），则将再次运行代理检测算法。  
   

@@ -6,20 +6,20 @@ helpviewer_keywords:
 - Impersonating the Client Sample [Windows Communication Foundation]
 - impersonation, Windows Communication Foundation sample
 ms.assetid: 8bd974e1-90db-4152-95a3-1d4b1a7734f8
-ms.openlocfilehash: d79ce0d189fc88310594f356f1901d93b3e1e06f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 61befdcaf1381120dba6f72ba592dade09d0490a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61954968"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968340"
 ---
 # <a name="impersonating-the-client"></a>模拟客户端
 此模拟示例演示如何在服务中模拟调用方应用程序，以便服务可以代表调用方访问系统资源。  
   
- 此示例基于[自托管](../../../../docs/framework/wcf/samples/self-host.md)示例。 在服务和客户端配置文件将与的相同[自托管](../../../../docs/framework/wcf/samples/self-host.md)示例。  
+ 此示例基于[自宿主](../../../../docs/framework/wcf/samples/self-host.md)示例。 服务和客户端配置文件与[自承载](../../../../docs/framework/wcf/samples/self-host.md)示例的配置文件相同。  
   
 > [!NOTE]
->  本主题的最后介绍了此示例的设置过程和生成说明。  
+> 本主题的最后介绍了此示例的设置过程和生成说明。  
   
  对于服务代码已经进行了修改，以便服务上的 `Add` 方法使用 <xref:System.ServiceModel.OperationBehaviorAttribute> 来模拟调用方，如下面的示例代码中所示。  
   
@@ -102,18 +102,18 @@ client.ClientCredentials.Windows.AllowedImpersonationLevel = TokenImpersonationL
  运行示例时，操作请求和响应将显示在服务和客户端控制台窗口中。 在每个控制台窗口中按 Enter 可以关闭服务和客户端。  
   
 > [!NOTE]
->  服务必须在管理帐户下的运行或它运行的帐户必须授予权限以注册 `http://localhost:8000/ServiceModelSamples` HTTP 层的 URI。 可以通过设置授予此类权利[Namespace 预订](https://go.microsoft.com/fwlink/?LinkId=95012)使用[Httpcfg.exe 工具](https://go.microsoft.com/fwlink/?LinkId=95010)。  
+> 服务必须在管理帐户下的运行或它运行的帐户必须授予权限以注册 `http://localhost:8000/ServiceModelSamples` HTTP 层的 URI。 可以通过使用[httpcfg.exe 工具](https://go.microsoft.com/fwlink/?LinkId=95010)设置[命名空间保留](https://go.microsoft.com/fwlink/?LinkId=95012)来授予此类权限。  
   
 > [!NOTE]
->  在运行 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 的计算机上，只有当 Host.exe 应用程序具有“模拟”特权时，才支持进行模拟。 （默认情况下，只有管理员才具有此权限。）若要将此权限添加到服务所运行的帐户，请转到**管理工具**，打开**本地安全策略**，打开**本地策略**，单击**用户权限分配**，然后选择**身份验证后模拟客户端**，然后双击**属性**以添加用户或组。  
+> 在运行 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 的计算机上，只有当 Host.exe 应用程序具有“模拟”特权时，才支持进行模拟。 （默认情况下，只有管理员才具有此权限。）若要将此权限添加到服务正在运行的帐户, 请参阅 "**管理工具**", 打开 "**本地安全策略**", 打开 "**本地策略**", 单击 "**用户权限分配**", 然后选择 "**在此后模拟客户端""身份验证**", 然后双击 "**属性**" 以添加用户或组。  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
-1. 请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1. 确保已对[Windows Communication Foundation 示例执行了一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
 2. 若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
   
-3. 若要在单或跨计算机配置中运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
+3. 若要以单机配置或跨计算机配置来运行示例, 请按照[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的说明进行操作。  
   
 4. 若要演示服务对调用方的模拟，请在与运行服务时所用帐户不同的其他帐户下运行客户端。 为此，请在命令提示符下键入：  
   

@@ -5,20 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: aedbecc1-c33c-4fb4-8861-fdf7e1dc6b8a
-ms.openlocfilehash: d9f8d15b46f6e5575bd206bf572ffda0365e58f6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 08cc8aedac545ffa5648034119fc2267c860d499
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67743551"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963284"
 ---
 # <a name="customizing-operations-by-using-stored-procedures"></a>通过使用存储过程自定义操作
 存储过程代表用于重写默认行为的常见方法。 本主题中的示例演示了如何将生成的方法包装用于存储过程，以及如何直接调用存储过程。  
   
- 如果使用的 Visual Studio，可以使用对象关系设计器来分配存储的过程以便执行插入、 更新和删除。  
+ 如果使用的是 Visual Studio, 则可以使用对象关系设计器分配存储过程以执行插入、更新和删除操作。  
   
 > [!NOTE]
->  若要读回数据库生成的值，请在存储过程中使用输出参数。 如果无法使用输出参数，编写分部方法实现，而不是依靠重写生成的对象关系设计器。 在成功完成 `INSERT` 或 `UPDATE` 操作后，必须将映射到数据库生成的值的成员设置为适当的值。 有关详细信息，请参阅[开发人员在重写默认行为的职责](../../../../../../docs/framework/data/adonet/sql/linq/responsibilities-of-the-developer-in-overriding-default-behavior.md)。  
+> 若要读回数据库生成的值，请在存储过程中使用输出参数。 如果无法使用输出参数, 则编写分部方法实现, 而不是依赖于由对象关系设计器生成的替代。 在成功完成 `INSERT` 或 `UPDATE` 操作后，必须将映射到数据库生成的值的成员设置为适当的值。 有关详细信息, 请参阅[开发人员在重写默认行为中的责任](../../../../../../docs/framework/data/adonet/sql/linq/responsibilities-of-the-developer-in-overriding-default-behavior.md)。  
   
 ## <a name="example"></a>示例  
   

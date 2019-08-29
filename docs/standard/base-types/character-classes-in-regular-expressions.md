@@ -15,12 +15,12 @@ ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 0b70545c2252d6e8b82d6f4d57522ac4bb2481d8
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 53dcbcfdcc9a8d04840bc91a563b6514153b9577
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490873"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963435"
 ---
 # <a name="character-classes-in-regular-expressions"></a>正则表达式中的字符类
 
@@ -51,7 +51,7 @@ ms.locfileid: "66490873"
  .NET 支持字符类减法表达式，通过该表达式可以定义一组字符作为从一个字符类中排除另一字符类的结果。 有关详细信息，请参阅[字符类减法](#CharacterClassSubtraction)。  
   
 > [!NOTE]
->  按类别匹配字符的字符类（如用于匹配字词字符的 [\w](#WordCharacter)，或用于匹配 Unicode 类别的 [\p{}](#CategoryOrBlock)）依赖 <xref:System.Globalization.CharUnicodeInfo> 类提供字符类别信息。  从 .NET Framework 4.6.2 开始，字符类别基于 [Unicode 标准 8.0.0 版](https://www.unicode.org/versions/Unicode8.0.0/)。 从 .NET Framework 4 到 .NET Framework 4.6.1，字符类别基于 [Unicode 标准 6.3.0 版](https://www.unicode.org/versions/Unicode6.3.0/)。  
+> 按类别匹配字符的字符类（如用于匹配字词字符的 [\w](#WordCharacter)，或用于匹配 Unicode 类别的 [\p{}](#CategoryOrBlock)）依赖 <xref:System.Globalization.CharUnicodeInfo> 类提供字符类别信息。  从 .NET Framework 4.6.2 开始，字符类别基于 [Unicode 标准 8.0.0 版](https://www.unicode.org/versions/Unicode8.0.0/)。 从 .NET Framework 4 到 .NET Framework 4.6.1，字符类别基于 [Unicode 标准 6.3.0 版](https://www.unicode.org/versions/Unicode6.3.0/)。  
   
 <a name="PositiveGroup"></a>   
 ## <a name="positive-character-group--"></a>正字符组：[ ]  
@@ -141,7 +141,7 @@ ms.locfileid: "66490873"
  负字符组中的前导符 (`^`) 是强制的，指示字符组为负字符组，而不是正字符组。  
   
 > [!IMPORTANT]
->  较大正则表达式模式中的负字符组不是零宽度断言。 也就是说，在评估负字符组后，正则表达式引擎会在输入字符串中提升一个字符。  
+> 较大正则表达式模式中的负字符组不是零宽度断言。 也就是说，在评估负字符组后，正则表达式引擎会在输入字符串中提升一个字符。  
   
  下表列出了一些常见的包含负字符组的正则表达式模式。  
   
@@ -177,7 +177,7 @@ ms.locfileid: "66490873"
      [!code-vb[Conceptual.Regex.Language.CharacterClasses#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/any2.vb#5)]  
   
 > [!NOTE]
->  由于它匹配除 `\n` 之外的任何字符，因此 `.` 字符类也匹配 `\r`（回车符 \u000D）。  
+> 由于它匹配除 `\n` 之外的任何字符，因此 `.` 字符类也匹配 `\r`（回车符 \u000D）。  
   
 - 正字符组或负字符组中的句点字符将被视为原义句点字符，而非字符类。 有关详细信息，请参阅本主题前面部分的[正字符组](#PositiveGroup)和[负字符组](#NegativeGroup)。 下面的示例通过定义包括句点字符 (`.`) 的正则表达式作为字符类和正字符组的成员来进行这方面的演示。 正则表达式 `\b.*[.?!;:](\s|\z)` 在字边界处开始，匹配任何字符直到遇到五个标点符号标记之一（包括句点），然后匹配空白字符或字符串的末尾。  
   
@@ -185,7 +185,7 @@ ms.locfileid: "66490873"
      [!code-vb[Conceptual.RegEx.Language.CharacterClasses#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/any1.vb#4)]  
   
 > [!NOTE]
->  由于它匹配任何字符，因此当正则表达式模式尝试多次匹配任何字符时，`.` 语言元素通常会与惰性限定符一起使用。 有关更多信息，请参见 [数量词](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)。  
+> 由于它匹配任何字符，因此当正则表达式模式尝试多次匹配任何字符时，`.` 语言元素通常会与惰性限定符一起使用。 有关更多信息，请参见 [数量词](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)。  
   
 <a name="CategoryOrBlock"></a>   
 ## <a name="unicode-category-or-unicode-block-p"></a>Unicode 类别或 Unicode 块：\p{}  
@@ -251,7 +251,7 @@ ms.locfileid: "66490873"
  如果指定了符合 ECMAScript 的行为，则 `\w` 等效于 `[a-zA-Z_0-9]`。 有关 ECMAScript 正则表达式的信息，请参阅[正则表达式选项](../../../docs/standard/base-types/regular-expression-options.md)中的“ECMAScript 匹配行为”部分。  
   
 > [!NOTE]
->  由于它匹配任何单词字符，因此当正则表达式模式尝试多次匹配任何单词字符且后跟特定单词字符时，`\w` 语言元素通常会与惰性限定符一起使用。 有关更多信息，请参见 [数量词](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)。  
+> 由于它匹配任何单词字符，因此当正则表达式模式尝试多次匹配任何单词字符且后跟特定单词字符时，`\w` 语言元素通常会与惰性限定符一起使用。 有关更多信息，请参见 [数量词](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)。  
   
  下面的示例使用 `\w` 语言元素来匹配单词中的重复字符。 该示例定义可按如下方式解释的正则表达式模式 `(\w)\1`。  
   
@@ -287,7 +287,7 @@ ms.locfileid: "66490873"
  如果指定了符合 ECMAScript 的行为，则 `\W` 等效于 `[^a-zA-Z_0-9]`。 有关 ECMAScript 正则表达式的信息，请参阅[正则表达式选项](../../../docs/standard/base-types/regular-expression-options.md)中的“ECMAScript 匹配行为”部分。  
   
 > [!NOTE]
->  由于它匹配任何非单词字符，因此当正则表达式模式尝试多次匹配任何非单词字符且后跟特定非单词字符时，`\W` 语言元素通常会与惰性限定符一起使用。 有关更多信息，请参见 [数量词](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)。  
+> 由于它匹配任何非单词字符，因此当正则表达式模式尝试多次匹配任何非单词字符且后跟特定非单词字符时，`\W` 语言元素通常会与惰性限定符一起使用。 有关更多信息，请参见 [数量词](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)。  
   
  下面的示例阐释 `\W` 字符类。  它定义正则表达式模式 `\b(\w+)(\W){1,2}`，该模式匹配后跟一个或两个非单词字符（例如，空白或标点符号）的单词。 正则表达式模式可以解释为下表中所示内容。  
   
@@ -332,7 +332,7 @@ ms.locfileid: "66490873"
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/whitespace1.vb#10)]  
   
 <a name="NonWhitespaceCharacter"></a>   
-## <a name="non-whitespace-character-s"></a>非空格字符：\S  
+## <a name="non-whitespace-character-s"></a>非空格字符：\s  
  `\S` 匹配任何非空白字符。 它等效于 `[^\f\n\r\t\v\x85\p{Z}]` 正则表达式模式或与等效于 `\s` 的正则表达式模式（与空白字符匹配）相反。 有关详细信息，请参阅[空白字符：\s](#WhitespaceCharacter)。  
   
  如果指定了符合 ECMAScript 的行为，则 `\S` 等效于 `[^ \f\n\r\t\v]`。 有关 ECMAScript 正则表达式的信息，请参阅[正则表达式选项](../../../docs/standard/base-types/regular-expression-options.md)中的“ECMAScript 匹配行为”部分。  
@@ -452,7 +452,7 @@ ms.locfileid: "66490873"
 |0250 - 02AF|`IsIPAExtensions`|  
 |02B0 - 02FF|`IsSpacingModifierLetters`|  
 |0300 - 036F|`IsCombiningDiacriticalMarks`|  
-|0370 - 03FF|`IsGreek`<br /><br /> 或<br /><br /> `IsGreekandCoptic`|  
+|0370 - 03FF|`IsGreek`<br /><br /> -或-<br /><br /> `IsGreekandCoptic`|  
 |0400 - 04FF|`IsCyrillic`|  
 |0500 - 052F|`IsCyrillicSupplement`|  
 |0530 - 058F|`IsArmenian`|  
@@ -496,7 +496,7 @@ ms.locfileid: "66490873"
 |2000 - 206F|`IsGeneralPunctuation`|  
 |2070 - 209F|`IsSuperscriptsandSubscripts`|  
 |20A0 - 20CF|`IsCurrencySymbols`|  
-|20D0 - 20FF|`IsCombiningDiacriticalMarksforSymbols`<br /><br /> 或<br /><br /> `IsCombiningMarksforSymbols`|  
+|20D0 - 20FF|`IsCombiningDiacriticalMarksforSymbols`<br /><br /> -或-<br /><br /> `IsCombiningMarksforSymbols`|  
 |2100 - 214F|`IsLetterlikeSymbols`|  
 |2150 - 218F|`IsNumberForms`|  
 |2190 - 21FF|`IsArrows`|  
@@ -552,7 +552,7 @@ ms.locfileid: "66490873"
 |FFF0 - FFFF|`IsSpecials`|  
   
 <a name="CharacterClassSubtraction"></a>   
-## <a name="character-class-subtraction-basegroup---excludedgroup"></a>字符类减法：[base_group - [excluded_group]]  
+## <a name="character-class-subtraction-base_group---excluded_group"></a>字符类减法：[base_group - [excluded_group]]  
  一个字符类定义一组字符。 字符类减法将产生一组字符，该组字符是从一个字符类中排除另一个字符类中的字符的结果。  
   
  字符类减法表达式具有以下形式：  

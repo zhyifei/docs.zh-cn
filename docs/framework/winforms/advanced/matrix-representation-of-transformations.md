@@ -16,85 +16,85 @@ helpviewer_keywords:
 - transformations [Windows Forms], translation
 - affine transformations
 ms.assetid: 0659fe00-9e0c-41c4-9118-016f2404c905
-ms.openlocfilehash: ceaad7b4bb5a70a890d261e39bc608becb388c17
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: 24da407de24a924a68466e4301cc3f4a74cb2e94
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67505637"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044241"
 ---
 # <a name="matrix-representation-of-transformations"></a>转换的矩阵表示形式
 M × n 矩阵是一组按 m 行和 n 列排列的数字。 下图显示了几个矩阵。  
   
  ![Transformations](./media/aboutgdip05-art04.gif "AboutGdip05_art04")  
   
- 可以通过添加各个元素添加两个相同大小的矩阵。 下图显示矩阵添加两个的示例。  
+ 可以通过添加单个元素来添加大小相同的两个矩阵。 下图显示了矩阵添加的两个示例。  
   
  ![Transformations](./media/aboutgdip05-art05.gif "AboutGdip05_art05")  
   
- M × n 矩阵可以是 n × p 的矩阵相乘，并且结果为 m × p 矩阵。 中的第一个矩阵的列数必须与第二个矩阵中的行数相同。 例如，4 × 2 矩阵以生成的 4 × 3 矩阵 2 × 3 矩阵相乘。  
+ M × n 矩阵可以与 n × p 矩阵相乘, 结果为 m × p 矩阵。 第一个矩阵中的列数必须与第二个矩阵中的行数相同。 例如, 可以将4×2矩阵乘以2×3矩阵, 以生成4×3矩阵。  
   
- 可以将平面行和列的矩阵中的点视为向量。 例如，（2，5） 是包含两个组件，矢量和 （3，7，1） 是一个具有三个组件的向量。 定义两个向量的点积，如下所示：  
+ 可以将矩阵的平面和行和列中的点视为向量。 例如, (2, 5) 是包含两个组件的向量, (3, 7, 1) 是包含三个组件的矢量。 两个矢量的点积定义如下:  
   
- (a，b） • (c、 d) = ac + bd  
+ (a, b) • (c, d) = ac + bd  
   
- (a、 b、 c） • （d、 e、 f） = ad + 是 + cf  
+ (a, b, c) • (d, e, f) = ad + 作为 + cf  
   
- 例如的点积 （2，3） 和 （5，4） 是 (2)(5) + (3)(4) = 22。 （2，5，1） 的点积和 （4，3，1） 是 (2)(4) + (5)(3) + (1)(1) = 24。 请注意，两个向量的点积数字，而不是另一个矢量。 另请注意，仅当两个向量具有相同数目的组件，可以计算点积。  
+ 例如, (2, 3) 和 (5, 4) 的点积为 (2) (5) + (3) (4) = 22。 (2, 5, 1) 和 (4, 3, 1) 的点积为 (2) (4) + (5) (3) + (1) (1) = 24。 请注意, 两个矢量的点积是一个数字, 而不是另一个矢量。 另请注意, 仅当两个矢量具有相同数量的组件时, 才可以计算点积。  
   
- 让 A(i, j) 是第 i 个行和 jth 列中的一个矩阵中的条目。 例如 A （3，2） 是第三行和第二列中的一个矩阵中的输入。 假设 A、 B 和 C 是矩阵和 AB = c。C 的条目进行计算，如下所示：  
+ 让 A (i, j) 作为第 i 行和 jth 列的矩阵 A 中的条目。 例如, (3, 2) 是矩阵 A 中第三行第2列的条目。 假设 A、B 和 C 是矩阵, 而 AB = C。C 的项计算如下:  
   
- C （i，j） = （A 的第 i 行） • （B 的列 j）  
+ C (i, j) = (A 的第 i 行) • (B 的列 j)  
   
- 下图显示了几个示例的矩阵乘法。  
+ 下图显示了矩阵乘法的几个示例。  
   
  ![Transformations](./media/aboutgdip05-art06.gif "AboutGdip05_art06")  
   
- 如果您认为的 1 × 2 矩阵作为平面中的点，你可以通过将其乘以 2 × 2 矩阵转换该点。 下图显示了多个转换应用于点 （2，1）。  
+ 如果您将平面中的某个点视为1×2矩阵, 则可以通过将该点与2×2矩阵相乘来转换该点。 下图显示了应用于点的多个转换 (2, 1)。  
   
  ![Transformations](./media/aboutgdip05-art07.gif "AboutGdip05_art07")  
   
- 所有在上图中所示的转换都是线性转换。 某些其他转换，如转换时，不是线性的并且不能表示为 2 × 2 矩阵相乘。 假设你想开始使用点 （2，1），将其旋转 90 度，将其转换在 x 方向的 3 个单位并将其沿 y 方向的 4 个单位。 可以使用矩阵乘法和矩阵添加来完成此操作。  
+ 上图中显示的所有转换都是线性转换。 某些其他转换 (如转换) 不是线性的, 并且不能表示为2×2矩阵的乘法。 假设您要从点 (2, 1) 开始, 旋转它90度, 在 x 方向上转换为3个单位, 并在 y 方向转换为4个单位。 可以通过使用矩阵乘法后跟矩阵加法实现此目的。  
   
  ![Transformations](./media/aboutgdip05-art08.gif "AboutGdip05_art08")  
   
- 线性转换 （2 × 2 矩阵相乘） 后, 跟的翻译 （1 × 2 矩阵的加法） 称为仿射转换。 存储仿射转换矩阵 （一个用于线性部分），一个用于转换的一对中的替代方法是在 3 × 3 矩阵中存储整个转换。 若要实现此目的，平面中的点必须存储在具有虚拟的第三个坐标的 1 × 3 矩阵。 通常的方法是使所有第三个坐标等于 1。 例如，由矩阵 [2 1 1] 表示点 （2，1）。 下图显示了仿射转换 （旋转 90 度; 转换在 x 方向的 3 个单位，在 y 方向的 4 个单位） 表示为单个 3 × 3 矩阵相乘。  
+ 后跟平移 (添加1×2矩阵) 的线性转换 (乘2×2矩阵) 称为仿射转换。 将仿射转换存储在一对矩阵中的替代方法 (一个用于线性部分, 另一个用于转换) 是将整个转换存储在3×3矩阵中。 若要执行此操作, 平面中的点必须存储在具有虚第三坐标的1×3矩阵中。 常见的方法是使所有第三个坐标等于1。 例如, 点 (2, 1) 由矩阵 [2 1 1] 表示。 下图显示了一个仿射转换 (旋转90度; 在 x 方向上平移3个单位, 在 y 方向上平移4个单位) 表示为与单个3×3矩阵相乘。  
   
  ![Transformations](./media/aboutgdip05-art09.gif "AboutGdip05_art09")  
   
- 在上述示例中，（2，1） 的点到点 （2，6） 映射。 请注意，3 × 3 矩阵的第三个列包含数字 0，0，1。 此属性始终为仿射转换 3 × 3 矩阵的大小写。 重要的数字是 1 和 2 列中的六个数字。 矩阵的左上方 2 × 2 部分表示的线性转换，一部分和第三行中的前两个条目表示平移。  
+ 在前面的示例中, 点 (2, 1) 映射到点 (2, 6)。 请注意, 3 x 3 矩阵的第三列包含数字 0, 0, 1。 这对于仿射转换的 3 x 3 矩阵总是如此。 重要数字是第1列和第2列中的六个数字。 矩阵的左上2×2部分表示转换的线性部分, 第三行中的前两个条目表示平移。  
   
  ![Transformations](./media/aboutgdip05-art10.gif "AboutGdip05_art10")  
   
- 在 GDI + 中可以存储在一个仿射转换<xref:System.Drawing.Drawing2D.Matrix>对象。 因为表示仿射转换矩阵的第三个列始终为 （0，0，1） 中的前两个列中指定仅六个数字，在构造时<xref:System.Drawing.Drawing2D.Matrix>对象。 该语句`Matrix myMatrix = new Matrix(0, 1, -1, 0, 3, 4)`构造在上图中所示的矩阵。  
+ 在 gdi + 中, 可以在<xref:System.Drawing.Drawing2D.Matrix>对象中存储仿射转换。 由于表示仿射转换的矩阵的第三列总是 (0, 0, 1), 因此, 在构造<xref:System.Drawing.Drawing2D.Matrix>对象时, 只应在前两列中指定六个数字。 语句`Matrix myMatrix = new Matrix(0, 1, -1, 0, 3, 4)`构造如上图所示的矩阵。  
   
 ## <a name="composite-transformations"></a>复合转换  
- 复合转换是一系列转换后, 跟另一个。 请考虑矩阵和在下面的列表中的转换：  
+ 复合转换是一系列转换, 一个后跟另一个。 请考虑以下列表中的矩阵和转换:  
   
 |||  
 |-|-|  
-|矩阵 A|旋转 90 度|  
-|矩阵 B|通过沿 x 方向的 2 倍缩放|  
-|矩阵 C|转换在 y 方向的 3 个单位|  
+|矩阵 A|旋转90度|  
+|矩阵 B|在 x 方向上按系数2缩放|  
+|Matrix C|在 y 方向上转换3个单位|  
   
- 如果我们使用点 （2，1）-由矩阵 [2 1 1] 表示 — 乘以 A、 B、，然后 C，（2，1） 的点将进行按所列顺序的三个转换。  
+ 如果我们以矩阵 [2 1 1] 表示的点 (2, 1) 开头, 然后再乘以 A、B、C, 则点 (2, 1) 将按列出的顺序进行三次转换。  
   
  [2 1 1]ABC = [-2 5 1]  
   
- 而是不是存储在三个单独的矩阵复合转换的三个部分，您可以乘以 A、 B 和 C 一起以获取存储整个复合转换的一个 3 × 3 矩阵。 假设 ABC = d。然后，乘以 D 的点提供相同的结果为点乘以 A、 B，然后按 c。  
+ 不是将复合转换的三个部分存储在三个单独的矩阵中, 而是可以将 A、B 和 C 相乘, 以获取存储整个复合转换的单个3×3矩阵。 假设 ABC = D。然后, 将一个点乘以 D, 就会得到与点相乘的结果, 然后再乘以 B, 然后按 C。  
   
  [2 1 1]D = [-2 5 1]  
   
- 下图显示了矩阵 A、 B、 C 和 d。  
+ 下图显示了矩阵 A、B、C 和 D。  
   
  ![Transformations](./media/aboutgdip05-art12.gif "AboutGdip05_art12")  
   
- 复合转换的矩阵，可以通过将单独的变换矩阵相乘格式正确的事实意味着仿射转换任何序列可以存储在单个<xref:System.Drawing.Drawing2D.Matrix>对象。  
+ 复合转换的矩阵可以通过乘以单个变换矩阵来形成, 这意味着任何一系列仿射转换都可以存储在单个<xref:System.Drawing.Drawing2D.Matrix>对象中。  
   
 > [!CAUTION]
->  复合转换的顺序非常重要。 一般情况下，旋转，然后扩展，然后转换是不相同的小数位数为然后旋转，然后转换。 同样，矩阵乘法的顺序非常重要。 一般情况下，ABC 不与备份相同。  
+> 复合转换的顺序很重要。 通常, 旋转, 然后缩放, 然后平移与缩放、旋转和平移不同。 同样, 矩阵相乘的顺序也非常重要。 通常, ABC 不同于背景。  
   
- <xref:System.Drawing.Drawing2D.Matrix>类提供用于构建复合转换的多种方法： <xref:System.Drawing.Drawing2D.Matrix.Multiply%2A>， <xref:System.Drawing.Drawing2D.Matrix.Rotate%2A>， <xref:System.Drawing.Drawing2D.Matrix.RotateAt%2A>， <xref:System.Drawing.Drawing2D.Matrix.Scale%2A>， <xref:System.Drawing.Drawing2D.Matrix.Shear%2A>，和<xref:System.Drawing.Drawing2D.Matrix.Translate%2A>。 下面的示例创建一个复合转换，它先旋转 30 度，然后按 2 在 y 方向中的因子缩放，然后会在 x 方向的 5 个单位将转换的矩阵。  
+ <xref:System.Drawing.Drawing2D.Matrix.Scale%2A> <xref:System.Drawing.Drawing2D.Matrix.RotateAt%2A> <xref:System.Drawing.Drawing2D.Matrix.Shear%2A> <xref:System.Drawing.Drawing2D.Matrix.Rotate%2A> <xref:System.Drawing.Drawing2D.Matrix.Translate%2A>类提供若干用于生成复合转换的方法: <xref:System.Drawing.Drawing2D.Matrix.Multiply%2A>、、、、和。 <xref:System.Drawing.Drawing2D.Matrix> 下面的示例创建一个复合变换矩阵, 该矩阵首先旋转30度, 然后在 y 方向上按系数2缩放, 然后在 x 方向平移5个单位:  
   
  [!code-csharp[System.Drawing.CoordinateSystems#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/CS/Class1.cs#11)]
  [!code-vb[System.Drawing.CoordinateSystems#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/VB/Class1.vb#11)]  

@@ -2,12 +2,12 @@
 title: 将现有 .NET 应用程序直接迁移到 Azure IaaS (云基础结构就绪)
 description: 利用 Azure 云和 Windows 容器实现现有 .NET 应用程序的现代化。
 ms.date: 04/28/2018
-ms.openlocfilehash: cda316ad01a58f26661395c804547de04e20d052
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: e25ddbf9b6e62c264f3f4d4580d7df3553d262ea
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "69578390"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69660738"
 ---
 # <a name="lift-and-shift-existing-net-apps-to-azure-iaas-cloud-infrastructure-ready"></a>将现有 .NET 应用程序直接迁移到 Azure IaaS (云基础结构就绪)
 
@@ -107,4 +107,4 @@ Azure Migrate 使你确信工作负荷可以在最小程度上进行迁移, 并�
 
 >[!div class="step-by-step"]
 >[上一页](index.md)
->[下一页](migrate-your-relational-databases-to-azure.md)
+>[下一页](migrate-your-relational-databases-to-azure.md) <!-- Next Chapter -->

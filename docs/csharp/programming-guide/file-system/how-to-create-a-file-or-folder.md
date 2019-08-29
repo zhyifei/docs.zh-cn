@@ -8,12 +8,12 @@ helpviewer_keywords:
 - files [C#]
 - creating folders [C#]
 ms.assetid: 4582ee2d-d72d-4687-bcb9-08d336c62c25
-ms.openlocfilehash: 3163598de5d03bf1691379cddae031841b9865d6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c29d0638e2429119020fee5317d40a95b00e40ef
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64595644"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590100"
 ---
 # <a name="how-to-create-a-file-or-folder-c-programming-guide"></a>如何：创建文件或文件夹（C# 编程指南）
 可通过编程方式在计算机上创建文件夹、子文件夹和子文件夹中的文件，并将数据写入文件。  
@@ -71,5 +71,5 @@ ms.locfileid: "64595644"
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.IO?displayProperty=nameWithType>
-- [C# 编程指南](../../../csharp/programming-guide/index.md)
-- [文件系统和注册表（C# 编程指南）](../../../csharp/programming-guide/file-system/index.md)
+- [C# 编程指南](../index.md)
+- [文件系统和注册表（C# 编程指南）](./index.md)

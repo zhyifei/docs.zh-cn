@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: f3a93fa7-1717-467d-aaff-393e5c9828b4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b39646655c175497533aa6dc358c6966acc27344
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 626e9823bbf7d379a21ae353a9189485259f3c42
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61754527"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69948011"
 ---
 # <a name="how-to-add-trace-statements-to-application-code"></a>如何：向应用程序代码添加跟踪语句
-最常用于跟踪的方法是用于输出写入侦听器的方法：**编写**， **WriteIf**， **WriteLine**， **WriteLineIf**，**断言**，并**失败**。 这些方法可以分为两类：**编写**， **WriteLine**，和**失败**所有无条件地发出输出，而**WriteIf**， **WriteLineIf**，以及**断言**测试 Boolean 条件并写入或不写入基于条件的值。 WriteIf 和 WriteLineIf 在条件为 `true` 时发出输出，而 Assert 在条件为 `false` 时发出输出。  
+跟踪使用最常用的方法是将输出写入侦听器的方法:**Write**、 **WriteIf**、 **WriteLine**、 **WriteLineIf**、 **Assert**和**Fail**。 这些方法可以分为两个类别:以无条件的形式**写入**、 **WriteLine**和**失败**所有发出输出, 而**WriteIf**、 **WriteLineIf**和**Assert**则测试布尔条件, 并根据条件的值来写入或不写入。 WriteIf 和 WriteLineIf 在条件为 `true` 时发出输出，而 Assert 在条件为 `false` 时发出输出。  
   
  当设计跟踪和调试策略时，应考虑所需的输出形式。 填充不相关信息的多个 Write 语句将创建难以读取的日志。 另一方面，如果使用 WriteLine 将相关语句放置在单独的行上，可能会难以区分哪些信息应该在一起。 通常，当需要将来自多个源的信息组合起来创建单个信息性消息时，使用多个 Write；当需要创建单个完整消息时，则使用 WriteLine 语句。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "61754527"
     ```  
   
     > [!NOTE]
-    >  可以将 Assert 用于跟踪和调试。 此示例将调用堆栈输出到 Listeners 集合中的任意侦听器。 有关详细信息，请参阅[托管代码中的断言<xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>和 ](/visualstudio/debugger/assertions-in-managed-code)。  
+    > 可以将 Assert 用于跟踪和调试。 此示例将调用堆栈输出到 Listeners 集合中的任意侦听器。 有关详细信息，请参阅[托管代码中的断言<xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>和 ](/visualstudio/debugger/assertions-in-managed-code)。  
   
 ## <a name="see-also"></a>请参阅
 
@@ -91,6 +91,6 @@ ms.locfileid: "61754527"
 - <xref:System.Diagnostics.Trace.WriteIf%2A?displayProperty=nameWithType>
 - <xref:System.Diagnostics.Trace.WriteLineIf%2A?displayProperty=nameWithType>
 - [跟踪应用程序和在应用程序中插入检测点](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
-- [如何：创建、 初始化和配置跟踪开关](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)
+- [如何：创建、初始化和配置跟踪开关](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)
 - [跟踪开关](../../../docs/framework/debug-trace-profile/trace-switches.md)
 - [跟踪侦听器](../../../docs/framework/debug-trace-profile/trace-listeners.md)

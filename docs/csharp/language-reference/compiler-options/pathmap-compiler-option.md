@@ -7,16 +7,16 @@ helpviewer_keywords:
 - -pathmap compiler option [C#]
 - pathmap compiler option [C#]
 - /pathmap compiler option [C#]
-ms.openlocfilehash: 063cee694e8367a86fead2f1258c3cbda5ab7018
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 48e96d2ec2ccbea83d573c0eb3630b1591c407a9
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54635827"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606625"
 ---
 # <a name="-pathmap-c-compiler-options"></a>-pathmap（C# 编译器选项）
 
--pathmap 编译器选项指定如何将物理路径映射到编译器输出的源路径名称。
+ -pathmap 编译器选项指定如何将物理路径映射到编译器输出的源路径名称。
 
 ## <a name="syntax"></a>语法
 
@@ -44,7 +44,7 @@ ms.locfileid: "54635827"
 
 ## <a name="example"></a>示例
 
-在目录 C:\\work\\tests 中编译 `t.cs` 并将该目录映射到输出中的 \publish：
+在目录 C:\\work\\tests  中编译 `t.cs` 并将该目录映射到输出中的 \publish  ：
 
 ```console
 csc -pathmap:C:\work\tests=\publish t.cs
@@ -52,5 +52,5 @@ csc -pathmap:C:\work\tests=\publish t.cs
 
 ## <a name="see-also"></a>请参阅
 
-- [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)
+- [C# 编译器选项](./index.md)
 - [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties)

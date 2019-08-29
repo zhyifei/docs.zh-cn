@@ -8,15 +8,15 @@ helpviewer_keywords:
 - pdb compiler option [C#]
 - /pdb compiler option [C#]
 ms.assetid: e9d0f96a-5b75-45d6-9765-92538dd5f823
-ms.openlocfilehash: b0a566931ac76a3adb191f423a497bc446e280c8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3081f4716e8cd858d789db6050e635af941aa05c
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54575497"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69602577"
 ---
 # <a name="-pdb-c-compiler-options"></a>-pdb（C# 编译器选项）
--pdb 编译器选项指定调试符号文件的名称和位置。  
+-pdb 编译器选项指定调试符号文件的名称和位置  。  
   
 ## <a name="syntax"></a>语法  
   
@@ -29,9 +29,9 @@ ms.locfileid: "54575497"
  调试符号文件的名称和位置。  
   
 ## <a name="remarks"></a>备注  
- 指定 [-debug（C# 编译器选项）](../../../csharp/language-reference/compiler-options/debug-compiler-option.md)后，编译器将在创建输出文件（.exe 或 .dll）的目录中创建 .pdb 文件，且名称与输出文件的名称相同。  
+ 指定 [-debug（C# 编译器选项）](./debug-compiler-option.md)后，编译器将在创建输出文件（.exe 或 .dll）的目录中创建 .pdb 文件，且名称与输出文件的名称相同。  
   
- -pdb 允许为 .pdb 文件指定非默认的文件名和位置。  
+ -pdb 允许为 .pdb 文件指定非默认的文件名和位置  。  
   
  不能在 Visual Studio 开发环境中设置此编译器选项，也不能以编程方式对其进行更改。  
   
@@ -44,5 +44,5 @@ csc -debug -pdb:tt t.cs
   
 ## <a name="see-also"></a>请参阅
 
-- [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)
+- [C# 编译器选项](./index.md)
 - [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties)

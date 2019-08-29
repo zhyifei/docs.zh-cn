@@ -5,19 +5,19 @@ helpviewer_keywords:
 - ClearType [WPF], registry settings
 - typography [WPF], ClearType registry settings
 ms.assetid: 56f314bb-b30b-4f67-8492-8b8a9fa432ae
-ms.openlocfilehash: 8f1c4415a834f7eb7c3048a89ab81de6921b7bf6
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 2104cb4e853888efffe6b289ac1400530be25473
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629943"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70015599"
 ---
 # <a name="cleartype-registry-settings"></a>ClearType 注册表设置
 本主题概述了 WPF 应用程序使用的 Microsoft ClearType 注册表设置。  
 
 <a name="overview"></a>   
 ## <a name="technology-overview"></a>技术概述  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]向显示设备呈现文本的应用程序使用 ClearType 功能提供增强的阅读体验。 ClearType 是一种由[!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)]开发的软件技术, 可提高现有 lcd (液晶显示器, 如笔记本电脑屏幕、Pocket PC 屏幕和平板显示器) 上文本的可读性。 ClearType 通过访问 LCD 屏幕的每个像素中的各个垂直色带元素来工作。 有关 ClearType 的详细信息, 请参阅[Cleartype 概述](cleartype-overview.md)。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]向显示设备呈现文本的应用程序使用 ClearType 功能提供增强的阅读体验。 ClearType 是由 Microsoft 开发的一种软件技术, 可提高现有 Lcd (液晶显示器上显示的文本) 的可读性, 如笔记本电脑屏幕、Pocket PC 屏幕和平板显示器。 ClearType 通过访问 LCD 屏幕的每个像素中的各个垂直色带元素来工作。 有关 ClearType 的详细信息, 请参阅[Cleartype 概述](cleartype-overview.md)。  
   
  当在各种显示设备上查看时, 用 ClearType 呈现的文本可能出现明显不同。 例如, 少量监视器以蓝色、绿色、红色顺序而不是更常见的红色、绿色、蓝色 ( [!INCLUDE[TLA#tla_rgb](../../../../includes/tlasharptla-rgb-md.md)]) 顺序实现颜色条带元素。  
   
@@ -36,12 +36,12 @@ ms.locfileid: "68629943"
 |像素结构|描述显示设备的像素排列。|  
 |文本对比度级别|描述显示文本的对比度级别。|  
   
- 这些设置可由知道如何引用已识别[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ClearType 注册表设置的外部配置实用程序来访问。 还可以直接使用 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 注册表编辑器来访问这些值，从而创建或修改这些设置。  
+ 这些设置可由知道如何引用已识别[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ClearType 注册表设置的外部配置实用程序来访问。 还可以通过使用 Windows 注册表编辑器直接访问这些值来创建或修改这些设置。  
   
- 如果未设置[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] ClearType 注册表设置 (这是默认状态), 则应用程序将查询系统参数信息以实现字体平滑设置。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]  
+ 如果未设置[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ClearType注册表设置(这是默认状态),则应用程序将查询Windows系统参数信息以进行[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]字体平滑设置。  
   
 > [!NOTE]
->  有关枚举显示设备名称的信息, 请参阅`SystemParametersInfo` [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]函数。  
+> 有关枚举显示设备名称的信息, 请参阅`SystemParametersInfo` [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]函数。  
   
 <a name="ClearType_level"></a>   
 ## <a name="cleartype-level"></a>ClearType 级别  
@@ -59,7 +59,7 @@ ms.locfileid: "68629943"
  ![注册表编辑器中的 ClearType 设置。](./media/cleartype-registry-settings/cleartype-settings-registry-editor.png)  
   
 > [!NOTE]
->  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序以两种模式之一呈现文本, 但不带 ClearType。 如果呈现的文本没有 ClearType, 则称为灰度呈现。  
+> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序以两种模式之一呈现文本, 但不带 ClearType。 如果呈现的文本没有 ClearType, 则称为灰度呈现。  
   
 <a name="gamma_level"></a>   
 ## <a name="gamma-level"></a>伽马级别  
@@ -89,7 +89,7 @@ ms.locfileid: "68629943"
  像素结构对应于 0 到 2 之间的一个整数值。 默认级别为 0，表示平面像素结构。  
   
 > [!NOTE]
->  有关枚举显示设备名称的信息, 请参阅`EnumDisplayDevices` [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]函数。  
+> 有关枚举显示设备名称的信息, 请参阅`EnumDisplayDevices` [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]函数。  
   
 ### <a name="registry-setting"></a>注册表设置  
  像素结构的注册表设置位置是对应于特定显示设备名称的本地计算机设置：  

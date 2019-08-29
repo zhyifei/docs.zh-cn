@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -? compiler option [Visual Basic]
 - '? compiler option [Visual Basic]'
 ms.assetid: eb984aa5-ac98-4d0b-a0d2-24238d7bc8dc
-ms.openlocfilehash: adfde0bd420ccb7af4c4872affe09e5f6cf47e71
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 287a2ed3f54f85435a986d3a6ecd77f7009fb195
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051684"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69938229"
 ---
 # <a name="-help---visual-basic"></a>-help，-? (Visual Basic)
 显示编译器选项。  
@@ -28,13 +28,13 @@ ms.locfileid: "62051684"
 ```  
   
 ## <a name="remarks"></a>备注  
- 如果将此选项包含在编译时，会创建任何输出文件并不进行编译。  
+ 如果在编译中包含此选项, 则不会创建任何输出文件, 也不会进行编译。  
   
 > [!NOTE]
->  `-help`选项不适用于从 Visual Studio 开发环境中，仅当从命令行编译时便可。  
+> 此`-help`选项在 Visual Studio 开发环境中不可用; 它仅在从命令行编译时可用。  
   
 ## <a name="example"></a>示例  
- 下面的代码显示从命令行帮助。  
+ 下面的代码显示命令行中的帮助。  
   
 ```  
 vbc -help  

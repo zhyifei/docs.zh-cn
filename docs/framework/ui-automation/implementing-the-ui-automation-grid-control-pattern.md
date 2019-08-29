@@ -6,16 +6,16 @@ helpviewer_keywords:
 - grid control pattern
 - UI Automation, grid control pattern
 ms.assetid: 234d11a0-7ce7-4309-8989-2f4720e02f78
-ms.openlocfilehash: 9d38d7db33b44f22cf9e8f714581cce1d271ce96
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5eceafee4d02478c9e011a473ee1d036df91075d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622976"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69932185"
 ---
 # <a name="implementing-the-ui-automation-grid-control-pattern"></a>实现 UI 自动化 Grid 控件模式
 > [!NOTE]
->  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，请参阅[Windows 自动化 API:UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
+> 本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关的最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], 请[参阅 Windows 自动化 API:UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  本主题介绍实现 <xref:System.Windows.Automation.Provider.IGridProvider>的准则和约定，包括有关属性、方法和事件的信息。 本概述的结尾列出了指向其他参考资料的链接。  
   
@@ -29,7 +29,7 @@ ms.locfileid: "64622976"
   
 - 如果某个单元格为空，必须仍返回 UI 自动化元素以便支持该单元格的 <xref:System.Windows.Automation.Provider.IGridItemProvider.ContainingGrid%2A> 属性。 当网格中的子元素的布局类似于未对齐的数组时，这是可能的（请参阅下面的示例）。  
   
- ![Windows 资源管理器视图显示未对齐的布局。](../../../docs/framework/ui-automation/media/uia-gridpattern-ragged-array.PNG "UIA_GridPattern_Ragged_Array")  
+ ![显示不规则布局的 Windows 资源管理器视图。](../../../docs/framework/ui-automation/media/uia-gridpattern-ragged-array.PNG "UIA_GridPattern_Ragged_Array")  
 坐标为空的 Grid 控件的示例  
   
 - 只有一项的网格仍需要实现 <xref:System.Windows.Automation.Provider.IGridProvider> （如果它逻辑上被视为网格）。 网格中的子项数并不重要。  
@@ -48,9 +48,9 @@ ms.locfileid: "64622976"
   
 |必需的成员|类型|说明|  
 |----------------------|----------|-----------|  
-|<xref:System.Windows.Automation.Provider.IGridProvider.RowCount%2A>|属性|None|  
-|<xref:System.Windows.Automation.Provider.IGridProvider.ColumnCount%2A>|属性|None|  
-|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A>|方法|None|  
+|<xref:System.Windows.Automation.Provider.IGridProvider.RowCount%2A>|Property|无|  
+|<xref:System.Windows.Automation.Provider.IGridProvider.ColumnCount%2A>|Property|无|  
+|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A>|方法|无|  
   
  没有与此控件模式关联的事件。  
   
@@ -60,8 +60,8 @@ ms.locfileid: "64622976"
   
 |异常类型|条件|  
 |--------------------|---------------|  
-|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A><br /><br /> -如果请求的行坐标大于<xref:System.Windows.Automation.Provider.IGridProvider.RowCount%2A>或列坐标大于<xref:System.Windows.Automation.Provider.IGridProvider.ColumnCount%2A>。|  
-|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A><br /><br /> -如果请求的行或列坐标小于零。|  
+|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A><br /><br /> -如果请求的行坐标<xref:System.Windows.Automation.Provider.IGridProvider.RowCount%2A>大于或列坐标大于, <xref:System.Windows.Automation.Provider.IGridProvider.ColumnCount%2A>则为。|  
+|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A><br /><br /> -如果请求的行坐标或列坐标都小于零。|  
   
 ## <a name="see-also"></a>请参阅
 

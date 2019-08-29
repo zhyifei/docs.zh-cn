@@ -7,23 +7,23 @@ helpviewer_keywords:
 - user controls [Windows Forms], inheriting from
 - composite controls [Windows Forms], creating
 ms.assetid: 79c9cf05-5ab6-4a18-886d-88a64748b098
-ms.openlocfilehash: 7b0ee8efa62175e2ced2a810ca6dd76e8adc103b
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+author: gewarren
+ms.author: gewarren
+manager: jillfra
+ms.openlocfilehash: 08cb07ceebf08b3096415f9b7370e2d955152cb6
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039886"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70015926"
 ---
 # <a name="how-to-author-composite-controls"></a>如何：创作复合控件
 
 可通过多种方式使用复合控件。 可将其作为 Windows 桌面应用程序项目的一部分创作，并只在该项目的窗体上使用它们。 或者，可在 Windows 控件库项目中创作它们，将该项目编译为程序集，在其他项目中使用这些控件。 甚至可以从它们继承, 并使用可视继承快速自定义它们以用于特殊用途。
 
-> [!NOTE]
-> 如果想要编写在 Web 窗体上使用的复合控件，请参阅[开发自定义 ASP.NET 服务器控件](https://docs.microsoft.com/previous-versions/aspnet/zt27tfhy(v=vs.100))。
-
 ## <a name="to-author-a-composite-control"></a>创作复合控件
 
-1. 在 Visual Studio 中, 创建一个名`DemoControlHost`为的新**Windows 应用程序**项目。
+1. 在 Visual Studio 中, 创建一个新的**Windows 应用程序**项目, 并将其命名为**DemoControlHost**。
 
 2. 在 **“项目”** 菜单上，单击 **“添加用户控件”** 。
 
@@ -79,10 +79,8 @@ ms.locfileid: "69039886"
 
 ## <a name="see-also"></a>请参阅
 
-- [演练：使用 Visual Basic 创作复合控件](walkthrough-authoring-a-composite-control-with-visual-basic.md)
-- [演练：使用视觉对象创作复合控件C#](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
-- [演练：使用 Visual Basic 从 Windows 窗体控件继承](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)
-- [演练：使用 Visual 从 Windows 窗体控件继承C#](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
+- [演练：创作复合控件](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
+- [演练：从 Windows 窗体控件继承](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
 - [控件类型建议](control-type-recommendations.md)
 - [如何：Windows 窗体的创作控件](how-to-author-controls-for-windows-forms.md)
 - [各种自定义控件](varieties-of-custom-controls.md)

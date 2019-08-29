@@ -3,22 +3,22 @@ title: <activityScheduledQuery>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: a8bcd6d4-b389-4daf-86bf-1ade85fec114
-ms.openlocfilehash: d49c6d933a09dce5d657746358f1a5f716ab639b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dc04405204be7c5484d47b4a3767f846b11abf9f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790411"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69945506"
 ---
 # <a name="activityscheduledquery"></a>\<activityScheduledQuery>
 表示一个查询集合，这些查询用于跟踪安排给父活动来执行的活动。 跟踪参与者需要用此查询来订阅活动安排记录。  
   
- 有关跟踪配置文件查询的详细信息，请参阅[跟踪配置文件](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
+ 有关跟踪配置文件查询的详细信息, 请参阅[跟踪配置文件](../../../windows-workflow-foundation/tracking-profiles.md)  
   
 \<system.serviceModel>  
-\<tracking>  
+\<跟踪 >  
 \<trackingProfile>  
-\<workflow>  
+\<工作流 >  
 \<activityScheduledQueries>  
 \<activityScheduledQuery>  
   
@@ -54,11 +54,11 @@ ms.locfileid: "61790411"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<activityScheduledQuery>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/activityscheduledquery.md)|一个查询，用于跟踪安排给父活动来执行的活动。|  
+|[\<activityScheduledQuery>](activityscheduledquery.md)|一个查询，用于跟踪安排给父活动来执行的活动。|  
   
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.ActivityScheduledQueryElement?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.ActivityScheduledQuery?displayProperty=nameWithType>
-- [工作流跟踪](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [跟踪配置文件](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+- [工作流跟踪](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [跟踪配置文件](../../../windows-workflow-foundation/tracking-profiles.md)

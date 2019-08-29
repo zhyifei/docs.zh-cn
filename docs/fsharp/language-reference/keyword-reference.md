@@ -2,12 +2,12 @@
 title: 关键字参考
 description: 查找有关所有F#语言关键字的信息的链接。
 ms.date: 05/16/2016
-ms.openlocfilehash: 680b270a99eff7aa98652579d2fd31b4b05080ca
-ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
+ms.openlocfilehash: 8c2df9d081caae48489e3e316ca158f3b9106efb
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68733486"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70107044"
 ---
 # <a name="keyword-reference"></a>关键字参考
 
@@ -92,44 +92,44 @@ ms.locfileid: "68733486"
 
 以下令牌在中F#是保留的, 因为它们是 OCaml 语言的关键字:
 
-* `asr`
-* `land`
-* `lor`
-* `lsl`
-* `lsr`
-* `lxor`
-* `mod`
-* `sig`
+- `asr`
+- `land`
+- `lor`
+- `lsl`
+- `lsr`
+- `lxor`
+- `mod`
+- `sig`
 
 如果使用`--mlcompatibility`编译器选项, 则可以使用上述关键字作为标识符。
 
 以下令牌作为关键字保留, 以供将来扩展F#语言:
 
-* `atomic`
-* `break`
-* `checked`
-* `component`
-* `const`
-* `constraint`
-* `constructor`
-* `continue`
-* `eager`
-* `event`
-* `external`
-* `functor`
-* `include`
-* `method`
-* `mixin`
-* `object`
-* `parallel`
-* `process`
-* `protected`
-* `pure`
-* `sealed`
-* `tailcall`
-* `trait`
-* `virtual`
-* `volatile`
+- `atomic`
+- `break`
+- `checked`
+- `component`
+- `const`
+- `constraint`
+- `constructor`
+- `continue`
+- `eager`
+- `event`
+- `external`
+- `functor`
+- `include`
+- `method`
+- `mixin`
+- `object`
+- `parallel`
+- `process`
+- `protected`
+- `pure`
+- `sealed`
+- `tailcall`
+- `trait`
+- `virtual`
+- `volatile`
 
 ## <a name="see-also"></a>请参阅
 

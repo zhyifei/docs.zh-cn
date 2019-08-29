@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 1453bc0c-6e0d-4d5a-b176-22607f8a3e6c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 30df2d4a958b82a5a877b5d3efe5936f6498433b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f81c513447b7c63fb16ff20ae6f83c3e6ef359b1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67736455"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964040"
 ---
 # <a name="icordebugprocess6decodeevent-method"></a>ICorDebugProcess6::DecodeEvent 方法
 对封装于特殊构造的本机异常调试事件有效载荷中的托管调试事件进行解码。  
@@ -35,28 +35,28 @@ HRESULT DecodeEvent(
  [输入] `pRecord` 字节数组中的元素数量。  
   
  `format`  
- [in]一个[CorDebugRecordFormat](../../../../docs/framework/unmanaged-api/debugging/cordebugrecordformat-enumeration.md)枚举成员，指定的非托管的调试事件格式。  
+ 中[CorDebugRecordFormat](../../../../docs/framework/unmanaged-api/debugging/cordebugrecordformat-enumeration.md)枚举成员, 用于指定非托管调试事件的格式。  
   
  `dwFlags`  
- [输入] 位域依赖于目标体系结构并指定调试事件相关的其他信息。 对于 Windows 系统，它可以是的成员[CorDebugDecodeEventFlagsWindows](../../../../docs/framework/unmanaged-api/debugging/cordebugdecodeeventflagswindows-enumeration.md)枚举。  
+ [输入] 位域依赖于目标体系结构并指定调试事件相关的其他信息。 对于 Windows 系统, 它可以是[CorDebugDecodeEventFlagsWindows](../../../../docs/framework/unmanaged-api/debugging/cordebugdecodeeventflagswindows-enumeration.md)枚举的成员。  
   
  `dwThreadId`  
  [输入] 引发异常的线程的操作系统识别符。  
   
  `ppEvent`  
- [out]指向的地址的指针[icor 调试调试事件](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-interface.md)对象，表示已解码托管的调试事件。  
+ 弄指向表示已解码的托管调试事件的[ICorDebugDebugEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-interface.md)对象地址的指针。  
   
 ## <a name="remarks"></a>备注  
   
 > [!NOTE]
->  此方法仅适用于 .NET Native。  
+> 此方法仅适用于 .NET Native。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头：** Cordebug.idl, Cordebug.idl  
   
- **库：** CorGuids.lib  
+ **类库**CorGuids.lib  
   
  **.NET Framework 版本：** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

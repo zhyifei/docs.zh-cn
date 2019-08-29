@@ -12,18 +12,18 @@ helpviewer_keywords:
 ms.assetid: 076ee62d-a964-449e-a447-c31b33518b81
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8b07c3eb9d96bb6f675a6a2ca742cc9bdf3c3826
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: c3fa2238976df9f570fad9eb6947790565a4b0c5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364061"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69935716"
 ---
 # <a name="how-to-hook-up-a-delegate-using-reflection"></a>如何：使用反射将委托挂钩
-使用反射加载和运行程序集时，不能使用 C# `+=` 运算符或 Visual Basic [AddHandler 语句](~/docs/visual-basic/language-reference/statements/addhandler-statement.md)等语言功能将事件挂钩。 以下过程介绍如何通过反射获取所需的全部类型来将现有方法挂钩到事件，以及如何使用反射发出以创建动态方法并将其挂钩到事件。  
+使用反射加载和运行程序集时，不能使用 C# `+=` 运算符或 Visual Basic [AddHandler 语句](../../visual-basic/language-reference/statements/addhandler-statement.md)等语言功能将事件挂钩。 以下过程介绍如何通过反射获取所需的全部类型来将现有方法挂钩到事件，以及如何使用反射发出以创建动态方法并将其挂钩到事件。  
   
 > [!NOTE]
->  有关事件处理委托的其他挂钩方式，请参阅 <xref:System.Reflection.EventInfo> 类的 <xref:System.Reflection.EventInfo.AddEventHandler%2A> 方法的代码示例。  
+> 有关事件处理委托的其他挂钩方式，请参阅 <xref:System.Reflection.EventInfo> 类的 <xref:System.Reflection.EventInfo.AddEventHandler%2A> 方法的代码示例。  
   
 ### <a name="to-hook-up-a-delegate-using-reflection"></a>使用反射挂钩委托  
   
@@ -57,7 +57,7 @@ ms.locfileid: "68364061"
      [!code-csharp[HookUpDelegate#7](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#7)]
      [!code-vb[HookUpDelegate#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HookUpDelegate/vb/source.vb#7)]  
   
-6. 获取 `add` 访问器方法，并调用该方法以将事件挂钩。 所有事件都有一个 `add` 访问器和一个 `remove` 访问器，这些访问器由高级语言的语法隐藏。 例如，C# 使用 `+=` 运算符将事件挂钩，Visual Basic 则使用 [AddHandler 语句](~/docs/visual-basic/language-reference/statements/addhandler-statement.md)。 以下代码获取 <xref:System.Windows.Forms.Control.Click> 事件的 `add` 访问器，然后以后期绑定方式对其进行调用，并在委托实例中传递。 参数必须作为数组传递。  
+6. 获取 `add` 访问器方法，并调用该方法以将事件挂钩。 所有事件都有一个 `add` 访问器和一个 `remove` 访问器，这些访问器由高级语言的语法隐藏。 例如，C# 使用 `+=` 运算符将事件挂钩，Visual Basic 则使用 [AddHandler 语句](../../visual-basic/language-reference/statements/addhandler-statement.md)。 以下代码获取 <xref:System.Windows.Forms.Control.Click> 事件的 `add` 访问器，然后以后期绑定方式对其进行调用，并在委托实例中传递。 参数必须作为数组传递。  
   
      [!code-cpp[HookUpDelegate#8](../../../samples/snippets/cpp/VS_Snippets_CLR/HookUpDelegate/cpp/source.cpp#8)]
      [!code-csharp[HookUpDelegate#8](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#8)]

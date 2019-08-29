@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 93892fa4-90b3-4ec4-b147-4bec9880de2b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2bf8610a1e2ad11d12acd55c69fbb98d078f7cc9
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: a16f51408de5ed7b2a0a7d45af81113fe8c7b386
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586145"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69928297"
 ---
 # <a name="how-to-define-a-generic-method-with-reflection-emit"></a>如何：用反射发出定义泛型方法
 第一个过程演示如何使用两个类型参数创建简单的泛型方法，以及如何将类约束、接口约束和特殊约束应用于类型参数。  
@@ -26,7 +26,7 @@ ms.locfileid: "65586145"
  第三个过程演示如何调用泛型方法。  
   
 > [!IMPORTANT]
->  某方法只要属于泛型类型，且使用该类型的类型参数，就不是泛型方法。 只有当方法有属于自己的类型参数列表时才是泛型方法。 泛型方法可在非泛型类型上出现，如本示例中所示。 有关泛型类型上的非泛型方法示例，请参阅[如何：使用反射发出定义泛型类型](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)。  
+> 某方法只要属于泛型类型，且使用该类型的类型参数，就不是泛型方法。 只有当方法有属于自己的类型参数列表时才是泛型方法。 泛型方法可在非泛型类型上出现，如本示例中所示。 有关泛型类型上的非泛型方法示例，请参阅[如何：使用反射发出定义泛型类型](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)。  
   
 ### <a name="to-define-a-generic-method"></a>定义泛型方法  
   
@@ -155,7 +155,7 @@ ms.locfileid: "65586145"
  执行代码时，该动态程序集会另存为 DemoGenericMethod1.dll，使用 [Ildasm.exe（IL 反汇编程序）](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) 可以对其进行检查。  
   
 > [!NOTE]
->  一种了解如何发出代码的好方法是编写 Visual Basic、C# 或 Visual C++ 程序，执行尝试发出的任务，然后使用反汇编程序检查编译器生成的 MSIL。  
+> 一种了解如何发出代码的好方法是编写 Visual Basic、C# 或 Visual C++ 程序，执行尝试发出的任务，然后使用反汇编程序检查编译器生成的 MSIL。  
   
  该代码示例包含等效于发出的方法的源代码。 发出的方法也是通过使用代码示例中声明的泛型委托，以后期绑定的形式调用的。  
   

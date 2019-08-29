@@ -8,25 +8,25 @@ helpviewer_keywords:
 ms.assetid: de8b8759-fca7-4260-896b-5a4973157672
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 30e013d39d403bef5fe060fd1c64dc435de5be06
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: 531e8f576dcbe0fc272c61a57a689d993fb03445
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67347391"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927902"
 ---
 # <a name="shadow-copying-assemblies"></a>卷影复制程序集
 借助卷影复制，无需卸载应用程序域就可更新用于此应用程序域的程序集。 这对必须连续可用的应用程序（如 ASP.NET 网站）特别有用。  
   
 > [!IMPORTANT]
->  卷影复制在 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 应用中不受支持。  
+> 卷影复制在 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 应用中不受支持。  
   
  公共语言运行时会在加载程序集时锁定程序集文件，因此只有卸载此程序集才能更新此文件。 从应用程序域中卸载程序集的唯一方法是卸载应用程序域，因此在正常情况下，只有卸载了正在使用程序集的所有应用程序域才能在磁盘中更新此程序集。  
   
  应用程序域配置为卷影复制文件时，应用程序路径中的程序集复制到了另一个位置，并从此位置加载。 此副本处于锁定状态，但原始程序集文件已解锁并可进行更新。  
   
 > [!IMPORTANT]
->  只有存储在应用程序目录或其子目录中的程序集才可进行卷影复制，这些程序集在配置应用程序域时由 <xref:System.AppDomainSetup.ApplicationBase%2A> 和 <xref:System.AppDomainSetup.PrivateBinPath%2A> 指定。 存储在全局程序集缓存中的程序集不可进行卷影复制。  
+> 只有存储在应用程序目录或其子目录中的程序集才可进行卷影复制，这些程序集在配置应用程序域时由 <xref:System.AppDomainSetup.ApplicationBase%2A> 和 <xref:System.AppDomainSetup.PrivateBinPath%2A> 指定。 存储在全局程序集缓存中的程序集不可进行卷影复制。  
   
  本文包含以下各节：  
   
@@ -49,7 +49,7 @@ ms.locfileid: "67347391"
      可通过将 <xref:System.AppDomainSetup.ApplicationName%2A> 属性和 <xref:System.AppDomainSetup.CachePath%2A> 属性串联为子目录，形成位置的基路径。 将程序集卷影复制到此路径的子目录，而不是复制到基路径本身。  
   
     > [!NOTE]
-    >  如果未设置 <xref:System.AppDomainSetup.ApplicationName%2A> 属性，则忽略 <xref:System.AppDomainSetup.CachePath%2A> 属性并使用下载缓存。 不引发异常。  
+    > 如果未设置 <xref:System.AppDomainSetup.ApplicationName%2A> 属性，则忽略 <xref:System.AppDomainSetup.CachePath%2A> 属性并使用下载缓存。 不引发异常。  
   
      如果指定自定义位置，则应负责清理不再需要的目录和复制的文件。 它们不会自动删除。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "67347391"
      启用应用程序域的卷影复制时，默认复制应用程序路径（即 <xref:System.AppDomainSetup.ApplicationBase%2A> 属性和 <xref:System.AppDomainSetup.PrivateBinPath%2A> 属性指定的目录）中的所有程序集。 可以通过创建仅包含想要卷影复制的目录的字符串并将此字符串分配至 <xref:System.AppDomainSetup.ShadowCopyDirectories%2A> 属性来限制复制到选定目录。 目录用分号分隔。 只有选定目录中的程序集才进行卷影复制。  
   
     > [!NOTE]
-    >  如果未将字符串分配至 <xref:System.AppDomainSetup.ShadowCopyDirectories%2A> 属性或者将此属性设置为 `null`，则 <xref:System.AppDomainSetup.ApplicationBase%2A> 和 <xref:System.AppDomainSetup.PrivateBinPath%2A> 属性指定的目录中的所有程序集均进行卷影复制。  
+    > 如果未将字符串分配至 <xref:System.AppDomainSetup.ShadowCopyDirectories%2A> 属性或者将此属性设置为 `null`，则 <xref:System.AppDomainSetup.ApplicationBase%2A> 和 <xref:System.AppDomainSetup.PrivateBinPath%2A> 属性指定的目录中的所有程序集均进行卷影复制。  
   
     > [!IMPORTANT]
     >  目录路径不能包含分号，因为分号是分隔符。 分号没有转义符。  

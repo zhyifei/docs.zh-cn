@@ -8,16 +8,16 @@ helpviewer_keywords:
 - properties, UI Automation clients
 - UI Automation, client properties
 ms.assetid: 255905af-0b17-485c-93d4-8a2db2a6524b
-ms.openlocfilehash: e687533d618cef3fcc59b3ecd2b205b80b13b97d
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: 6f02a4825206da0dd4949083cc54f555a8ae40b5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796658"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69914448"
 ---
 # <a name="ui-automation-properties-for-clients"></a>客户端的 UI 自动化属性
 > [!NOTE]
->  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关的最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], 请[参阅 Windows 自动化 API:UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
+> 本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关的最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], 请[参阅 Windows 自动化 API:UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  本概述为你介绍 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性，因为会向 UI 自动化客户端应用程序公开它们。  
   
@@ -29,13 +29,11 @@ ms.locfileid: "68796658"
   
  若要提高性能，则当检索 <xref:System.Windows.Automation.AutomationElement> 对象时可以缓存控件和控件模式的属性值。 有关详细信息, 请参阅[UI 自动化客户端中的缓存](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)。  
   
-<a name="Property_IDs"></a>   
 ## <a name="property-ids"></a>属性 ID  
  属性标识符 (id) 是封装在对象中<xref:System.Windows.Automation.AutomationProperty>的唯一常量值。 UI 自动化客户端应用程序从<xref:System.Windows.Automation.AutomationElement>类或从相应的控件模式类 ( <xref:System.Windows.Automation.ScrollPattern>如) 获取这些 id。 UI 自动化提供程序从 <xref:System.Windows.Automation.AutomationElementIdentifiers> 或从其中一个控件模式标识符类（如 <xref:System.Windows.Automation.ScrollPatternIdentifiers>）获取它们。  
   
  <xref:System.Windows.Automation.AutomationIdentifier.Id%2A> 的数值 <xref:System.Windows.Automation.AutomationProperty> 被提供程序用于标识正在 <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPropertyValue%2A?displayProperty=nameWithType> 方法中进行查询的属性。 通常情况下，客户端应用程序不需要检查 <xref:System.Windows.Automation.AutomationIdentifier.Id%2A>。 <xref:System.Windows.Automation.AutomationIdentifier.ProgrammaticName%2A> 仅用于调试和诊断目的。  
   
-<a name="Property_Conditions"></a>   
 ## <a name="property-conditions"></a>属性条件  
  属性 id 用于构造<xref:System.Windows.Automation.PropertyCondition>用于查找<xref:System.Windows.Automation.AutomationElement>对象的对象。 例如，你可能希望查找具有特定名称的 <xref:System.Windows.Automation.AutomationElement> 或已启用的所有控件。 每个 <xref:System.Windows.Automation.PropertyCondition> 指定 <xref:System.Windows.Automation.AutomationProperty> 标识符和属性必须匹配的值。  
   
@@ -47,7 +45,6 @@ ms.locfileid: "68796658"
   
 - <xref:System.Windows.Automation.TreeWalker.Condition%2A>  
   
-<a name="Retrieving_Properties"></a>   
 ## <a name="retrieving-properties"></a>检索属性  
  <xref:System.Windows.Automation.AutomationElement> 的某些属性和控件模式类的所有属性都公开为 `Current` 的嵌套属性或 `Cached` 的 <xref:System.Windows.Automation.AutomationElement> 属性或控件模式对象。  
   
@@ -73,7 +70,6 @@ ms.locfileid: "68796658"
   
  `Get` 方法返回 <xref:System.Object>。 应用程序必须在使用值之前将返回的对象转换为正确的类型。  
   
-<a name="_Default_Property_Values"></a>   
 ## <a name="default-property-values"></a>默认属性值  
  如果 UI 自动化提供程序不实现属性，则 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 系统能够提供一个默认值。 例如，如果控件的提供程序不支持由 <xref:System.Windows.Automation.AutomationElement.HelpTextProperty>标识的属性，则 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 返回一个空字符串。 同样，如果提供程序不支持由 <xref:System.Windows.Automation.AutomationElement.IsDockPatternAvailableProperty>标识的属性，则 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 返回 `false`。  
   
@@ -86,13 +82,11 @@ ms.locfileid: "68796658"
   
  若要发现哪些属性受元素支持，请使用 <xref:System.Windows.Automation.AutomationElement.GetSupportedProperties%2A>。 这将返回 <xref:System.Windows.Automation.AutomationProperty> 标识符的数组。  
   
-<a name="Property_changed_Events"></a>   
 ## <a name="property-changed-events"></a>属性更改事件  
  当 <xref:System.Windows.Automation.AutomationElement> 或控件模式上的属性值更改时，会引发一个事件。 应用程序可以通过调用 <xref:System.Windows.Automation.Automation.AddAutomationPropertyChangedEventHandler%2A>订阅此类事件，提供 <xref:System.Windows.Automation.AutomationProperty> 标识符的数组作为最后的参数以便指定相关属性。  
   
  在 <xref:System.Windows.Automation.AutomationPropertyChangedEventHandler>中，你可以通过检查事件参数的 <xref:System.Windows.Automation.AutomationPropertyChangedEventArgs.Property%2A> 成员来标识已更改的属性。 这些参数还包含已更改的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性的新旧值。 这些值属于类型 <xref:System.Object> ，并且必须在使用前转换为正确的类型。  
   
-<a name="Additional_AutomationElement_Properties"></a>   
 ## <a name="additional-automationelement-properties"></a>其他 AutomationElement 属性  
  除 <xref:System.Windows.Automation.AutomationElement.Current%2A> 和 <xref:System.Windows.Automation.AutomationElement.Cached%2A> 属性结构以外， <xref:System.Windows.Automation.AutomationElement> 还具有以下属性，它们是通过简单的属性访问器检索的。  
   

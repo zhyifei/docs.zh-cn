@@ -6,12 +6,12 @@ helpviewer_keywords:
 - pattern matching
 - patterns, matching
 ms.assetid: 25e3b71d-b844-4293-9e4e-f06c5836b5cc
-ms.openlocfilehash: 29b66c52f2f9ac022784c5704c47893aed264c42
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f35222d958f8b02f83c6575d940d24e359c3ae00
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64629068"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69914721"
 ---
 # <a name="how-to-find-files-with-a-specific-pattern-in-visual-basic"></a>如何：在 Visual Basic 中查找具有特定模式的文件
 <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A> 方法返回表示文件的路径名的只读字符串集合。 可以使用 `wildCards` 参数来指定特定模式。 若要在搜索中包括子目录，请将 `searchType` 参数设置为 `SearchOption.SearchAllSubDirectories`。  
@@ -19,7 +19,7 @@ ms.locfileid: "64629068"
  如果没有找到与指定模式匹配的文件，则返回一个空集合。  
   
 > [!NOTE]
->  有关使用 `System.IO` 命名空间的 `DirectoryInfo` 类返回文件列表的信息，请参阅 <xref:System.IO.DirectoryInfo.GetFiles%2A>。  
+> 有关使用 `System.IO` 命名空间的 `DirectoryInfo` 类返回文件列表的信息，请参阅 <xref:System.IO.DirectoryInfo.GetFiles%2A>。  
   
 ### <a name="to-find-files-with-a-specified-pattern"></a>查找具有指定模式的文件  
   

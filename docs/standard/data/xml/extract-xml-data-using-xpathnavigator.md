@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 095b0987-ee4b-4595-a160-da1c956ad576
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f25fa9706d43dd69da233e474127543dfdf83fb1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f789317defe3f4b44b37e6d94d37b974d003bcae
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54595625"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966997"
 ---
 # <a name="extract-xml-data-using-xpathnavigator"></a>使用 XPathNavigator 提取 XML 数据
 可以通过多种不同的方式在 Microsoft .NET Framework 中表示 XML 文档。 包括使用 <xref:System.String>，或通过使用 <xref:System.Xml.XmlReader>、<xref:System.Xml.XmlWriter>、<xref:System.Xml.XmlDocument> 或 <xref:System.Xml.XPath.XPathDocument> 类。 为了便于在这些不同的 XML 文档表示形式之间切换，<xref:System.Xml.XPath.XPathNavigator> 类提供了许多方法和属性，用于将 XML 作为 <xref:System.String>, <xref:System.Xml.XmlReader> 对象或 <xref:System.Xml.XmlWriter> 对象提取。  
@@ -22,7 +22,7 @@ ms.locfileid: "54595625"
  <xref:System.Xml.XPath.XPathNavigator.OuterXml%2A> 类的 <xref:System.Xml.XPath.XPathNavigator> 属性用于获取整个 XML 文档的标记或只获取单个节点及其子节点的标记。  
   
 > [!NOTE]
->  <xref:System.Xml.XPath.XPathNavigator.InnerXml%2A> 属性只获取节点的子节点的标记。  
+> <xref:System.Xml.XPath.XPathNavigator.InnerXml%2A> 属性只获取节点的子节点的标记。  
   
  以下代码示例显示如何将 <xref:System.Xml.XPath.XPathNavigator> 对象中包含的整个 XML 文档以及单个节点及其子节点保存为 <xref:System.String>。  
   

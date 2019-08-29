@@ -7,16 +7,16 @@ helpviewer_keywords:
 ms.assetid: 3e3e04de-99d1-4658-b716-44cb669d9589
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 75a66ee7ca1d7c99de6e2cc9a1d502ea58dbf9f7
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: cb607af0933ea64b7d67f8ed082ffce6e7d21f51
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422816"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69913065"
 ---
 # <a name="windows-forms-add-configuration-element"></a>Windows 窗体添加配置元素
 
-`<add>`元素将添加指定 Windows 窗体应用程序是否支持添加到 Windows 窗体应用程序在.NET Framework 4.7 或更高版本的功能的预定义的键。
+`<add>`元素添加一个预定义的密钥, 该密钥指定 Windows 窗体应用是否支持添加到 .NET Framework 4.7 或更高版本中 Windows 窗体应用程序的功能。
 
 ## <a name="syntax"></a>语法
 
@@ -34,22 +34,22 @@ ms.locfileid: "67422816"
 
 | 特性 | 描述 |
 | --------- | ----------- |
-| `key`     | 必需的特性。 对应到特定的 Windows 窗体可自定义功能的预定义的名称。 |
+| `key`     | 必需的特性。 与特定 Windows 窗体自定义功能对应的预定义密钥名称。 |
 | `value`   | 必需的特性。 要赋给 `key` 的值。 |
 
-### <a name="key-attribute-names-and-associated-values"></a>`key` 属性名称和关联的值
+### <a name="key-attribute-names-and-associated-values"></a>`key`属性名称和关联值
 
-| `key` 名称 | 值 | 描述 |
+| `key`路径名 | 值 | 描述 |
 | ---------- | ------ | ----------- |
-| "AnchorLayout.DisableSinglePassControlScaling" | "true"&#124;"false" | 指示是否在单个传递中缩放锚定的控件。 "true"，以禁用单个传递缩放;否则为 false。 请参阅中的"单传递缩放"一节[备注](#remarks)有关详细信息。 |
-| "DpiAwareness" | "PerMonitorV2"&#124;"false" | 指示是否为高 dpi 应用程序。 将键设置为"PerMonitorV2"，以支持 Dpi 识别;否则，将其设置为"false"。 DPI 识别是一项选择加入的功能;若要充分利用 Windows 窗体的高 DPI 支持，应设置其值为"PerMonitorV2"。 请参阅[备注](#remarks)部分，了解详细信息。 |
-| "CheckedListBox.DisableHighDpiImprovements" | "true"&#124;"false" | 指示是否<xref:System.Windows.Forms.CheckedListBox>控件利用的缩放和布局在.NET Framework 4.7 中引入的改进。 "true"即可选择退出缩放和布局方面的改进;否则为"false"。 |
-| "DataGridView.DisableHighDpiImprovements" | "true"&#124;"false" | 指示是否<xref:System.Windows.Forms.DataGridView>控制在.NET Framework 4.7 中引入的缩放和布局改进。 "true"即可选择退出 DPI 识别;"false"否则为。 |
-| "DisableDpiChangedMessageHandling" | "true"&#124;"false" | "true"来选择不接收 DPI 缩放的更改，为与相关的消息"false"否则为。 请参阅[备注](#remarks)部分，了解详细信息。 |
-| "EnableWindowsFormsHighDpiAutoResizing" | "true"&#124;"false" | 指示是否自动调整 Windows 窗体应用程序大小由于 DPI 缩放的更改。 "true"以启用自动调整大小;否则为 false。 |
-| "Form.DisableSinglePassControlScaling" | "true"&#124;"false" | 指示是否<xref:System.Windows.Forms.Form>缩放单个传递中。 "true"，以禁用单步缩放;否则为 false。 请参阅中的"单传递缩放"一节[备注](#remarks)有关详细信息。 |
-| "MonthCalendar.DisableSinglePassControlScaling" | "true"&#124;"false" | 指示是否<xref:System.Windows.Forms.MonthCalendar>单个传递中缩放控件。 "true"，以禁用单步缩放;否则为 false。 请参阅中的"单传递缩放"一节[备注](#remarks)有关详细信息。 |
-| "Toolstrip.DisableHighDpiImprovements" | "true"&#124;"false" | 指示是否<xref:System.Windows.Forms.ToolStrip>控件利用的缩放和布局在.NET Framework 4.7 中引入的改进。 "true"即可选择退出 DPI 识别;"false"否则为。 |
+| "AnchorLayout.DisableSinglePassControlScaling" | "true&#124;" | 指示是否在单个传递中缩放定位控件。 若要禁用单一传递缩放, 则为 "true";否则为 false。 有关详细信息, 请参阅 "[备注](#remarks)" 中的 "单一传递缩放" 部分。 |
+| "DpiAwareness" | "PerMonitorV2"&#124;"false" | 指示应用程序是否可感知 DPI。 将 "密钥" 设置为 "PerMonitorV2" 以支持 Dpi 识别;否则, 请将其设置为 "false"。 DPI 感知是一项选择功能;若要利用 Windows 窗体的高 DPI 支持, 应将其值设置为 "PerMonitorV2"。 有关详细信息, 请参阅 "[备注](#remarks)" 部分。 |
+| "CheckedListBox.DisableHighDpiImprovements" | "true&#124;" | 指示<xref:System.Windows.Forms.CheckedListBox>控件是否利用 .NET Framework 4.7 中引入的缩放和布局改进功能。 如果选择不进行缩放和布局改进, 则为 "true";否则为 "false"。 |
+| "DataGridView.DisableHighDpiImprovements" | "true&#124;" | 指示是否在<xref:System.Windows.Forms.DataGridView> .NET Framework 4.7 中引入了控件缩放和布局改进。 如果选择退出 DPI 感知, 则为 "true";否则为 "false"。 |
+| "DisableDpiChangedMessageHandling" | "true&#124;" | 如果选择不接收与 DPI 缩放更改相关的消息, 则为 "true";否则为 "false"。 有关详细信息, 请参阅 "[备注](#remarks)" 部分。 |
+| "EnableWindowsFormsHighDpiAutoResizing" | "true&#124;" | 指示是否由于 DPI 缩放变化而自动调整 Windows 窗体应用程序的大小。 若要启用自动调整大小, 则为 "true";否则为 false。 |
+| "Form.DisableSinglePassControlScaling" | "true&#124;" | 指示是否<xref:System.Windows.Forms.Form>在单个传递中进行缩放。 若要禁用单步缩放, 则为 "true";否则为 false。 有关详细信息, 请参阅 "[备注](#remarks)" 中的 "单一传递缩放" 部分。 |
+| "MonthCalendar.DisableSinglePassControlScaling" | "true&#124;" | 指示是否<xref:System.Windows.Forms.MonthCalendar>在单个传递中缩放控件。 若要禁用单步缩放, 则为 "true";否则为 false。 有关详细信息, 请参阅 "[备注](#remarks)" 中的 "单一传递缩放" 部分。 |
+| "Toolstrip.DisableHighDpiImprovements" | "true&#124;" | 指示<xref:System.Windows.Forms.ToolStrip>控件是否利用 .NET Framework 4.7 中引入的缩放和布局改进功能。 如果选择退出 DPI 感知, 则为 "true";否则为 "false"。 |
 
 ### <a name="child-elements"></a>子元素
 
@@ -59,35 +59,35 @@ ms.locfileid: "67422816"
 
 | 元素 | 描述 |
 | ------- | ----------- |
-| [`<System.Windows.Forms.ApplicationConfigurationSection>`](../../../../../docs/framework/configure-apps/file-schema/winforms/index.md) | 配置对新 Windows 窗体应用程序功能的支持。 |
+| [`<System.Windows.Forms.ApplicationConfigurationSection>`](index.md) | 配置对新 Windows 窗体应用程序功能的支持。 |
 
 ## <a name="remarks"></a>备注
 
 从 .NET Framework 4.7 开始，`<System.Windows.Forms.ApplicationConfigurationSection>` 元素允许配置 Windows 窗体应用程序，以利用最新版本的 .NET Framework 中添加的功能。
 
-`<System.Windows.Forms.ApplicationConfigurationSection>`元素允许您添加一个或多个子级`<add>`元素，其中每个定义特定的配置设置。
+元素允许添加一个或多个子`<add>`元素, 其中每个元素都定义了一个特定的配置设置。 `<System.Windows.Forms.ApplicationConfigurationSection>`
 
-Windows 窗体高 DPI 支持的概述，请参阅[在 Windows 窗体中的高 DPI 支持](../../../../../docs/framework/winforms/high-dpi-support-in-windows-forms.md)。
+有关 Windows 窗体高 DPI 支持的概述, 请参阅[Windows 窗体中的高 Dpi 支持](../../../winforms/high-dpi-support-in-windows-forms.md)。
 
 ### <a name="dpiawareness"></a>DpiAwareness
 
-从.NET Framework 4.7 开始使用 Windows 10 创意者版本和.NET Framework 版本的 Windows 版本下运行的 Windows 窗体应用程序可以配置为充分利用.NET Framework 中引入的高 DPI 改进4.7。 这些问题包括：
+在 Windows 版本下运行的 Windows 窗体应用 (从 Windows 10 创意者版开始) 以及从 .NET Framework 4.7 开始的目标版本 .NET Framework 可配置为利用 .NET Framework 中引入的高 DPI 改进4.7。 这些问题包括：
 
-- 对 Windows 窗体应用程序已启动后在用户更改 DPI 或缩放系数的动态 DPI 方案的支持。
+- 支持动态 DPI 方案, 在此方案中, 用户在启动 Windows 窗体应用程序后更改了 DPI 或缩放系数。
 
-- 改进的缩放和多个 Windows 窗体的布局控件，如<xref:System.Windows.Forms.MonthCalendar>控件和<xref:System.Windows.Forms.CheckedListBox>控件。
+- 对许多 Windows 窗体控件 (如<xref:System.Windows.Forms.MonthCalendar>控件<xref:System.Windows.Forms.CheckedListBox>和控件) 的缩放和布局进行了改进。
 
-高 DPI 识别是一项选择加入的功能;默认情况下的值`DpiAwareness`是`false`。 你可以选择加入 Windows 窗体支持的 DPI 识别到此密钥的值设置`PerMonitorV2`应用程序配置文件中。 如果启用 DPI 识别，则还会启用所有单独的 DPI 功能。 这些问题包括：
+高 DPI 感知是一项选择功能;默认情况下, 的值`DpiAwareness`为`false`。 可以通过在应用程序配置文件中将此项的值设置为来`PerMonitorV2` Windows 窗体选择支持 DPI 感知。 如果启用了 DPI 感知, 还会启用所有的 DPI 功能。 这些问题包括：
 
-- DPI 更改受控制的消息`DisableDpiChangedMessageHandling`密钥。
+- DPI 更改的消息, 由`DisableDpiChangedMessageHandling`键控制。
 
-- 动态 DPI 支持，由控制`EnableWindowsFormsHighDpiAutoResizing`密钥。
+- 动态 DPI 支持, 由`EnableWindowsFormsHighDpiAutoResizing`键控制。
 
-- 单次传递控制缩放，这受`Form.DisableSinglePassControlScaling`为各个<xref:System.Windows.Forms.Form>控件，通过`AnchorLayout.DisableSinglePassControlScaling`锚定控件，并通过密钥`MonthCalendar.DisableSinglePassControlScaling`密钥对<xref:System.Windows.Forms.MonthCalendar>控件
+- 单一传递`Form.DisableSinglePassControlScaling`控制缩放, 它由单个<xref:System.Windows.Forms.Form>控件的控制、 `AnchorLayout.DisableSinglePassControlScaling`定位<xref:System.Windows.Forms.MonthCalendar>控件的`MonthCalendar.DisableSinglePassControlScaling`键和控件的键控制
 
-- 高 DPI 缩放和布局方面的改进，通过控制`CheckListBox.DisableHighDpiImprovements`密钥对<xref:System.Windows.Forms.CheckedListBox>控件，通过`DataGridView.DisableHighDpiImprovements`密钥对<xref:System.Windows.Forms.DataGridView>控件，并通过`Toolstrip.DisableHighDpiImprovements`密钥对<xref:System.Windows.Forms.ToolStrip>控件。
+- 高 DPI 缩放和布局改进`CheckListBox.DisableHighDpiImprovements` , 由<xref:System.Windows.Forms.CheckedListBox>控件的键`DataGridView.DisableHighDpiImprovements` 、 <xref:System.Windows.Forms.DataGridView>控件的`Toolstrip.DisableHighDpiImprovements`键和<xref:System.Windows.Forms.ToolStrip>控件的键进行控制。
 
-通过设置提供选择中设置一个默认`DpiAwareness`到`PerMonitorV2`通常足以满足新的 Windows 窗体应用程序。 但是，你可以然后选择退出各个高 DPI 改进通过将相应的密钥添加到应用程序配置文件。 例如，若要利用动态 DPI 支持除外的所有新 DPI 功能，要到应用程序配置文件添加以下：
+通过将设置`DpiAwareness`为`PerMonitorV2`所提供的单个默认选择选项设置通常适用于新的 Windows 窗体应用程序。 但是, 通过将相应的键添加到应用程序配置文件中, 可以选择不使用单个高 DPI 改进。 例如, 若要利用除动态 DPI 支持之外的所有新 DPI 功能, 请将以下内容添加到应用程序配置文件:
 
 ```xml
 <System.Windows.Forms.ApplicationConfigurationSection>
@@ -97,19 +97,19 @@ Windows 窗体高 DPI 支持的概述，请参阅[在 Windows 窗体中的高 DP
 </System.Windows.Forms.ApplicationConfigurationSection>
 ```
 
-通常情况下，您选择禁用特定功能因为您已选择了以编程方式对其进行处理。
+通常, 您选择不使用特定功能, 因为您已选择以编程方式对其进行处理。
 
-可利用在 Windows 窗体应用程序中的高 DPI 支持的详细信息，请参阅[在 Windows 窗体中的高 DPI 支持](../../../../../docs/framework/winforms/high-dpi-support-in-windows-forms.md)。
+若要详细了解 Windows 窗体应用程序中的高 DPI 支持, 请参阅[Windows 窗体中的高 Dpi 支持](../../../winforms/high-dpi-support-in-windows-forms.md)。
 
 ### <a name="disabledpichangedmessagehandling"></a>DisableDpiChangedMessageHandling
 
-从.NET Framework 4.7 开始，Windows 窗体控件引发 DPI 缩放的更改相关的事件的数。 其中包括<xref:System.Windows.Forms.Control.DpiChangedAfterParent>， <xref:System.Windows.Forms.Control.DpiChangedBeforeParent>，和<xref:System.Windows.Forms.Form.DpiChanged>事件。 值`DisableDpiChangedMessageHandling`密钥确定是否在 Windows 窗体应用程序中引发这些事件。
+从 .NET Framework 4.7 开始, Windows 窗体控件引发了许多与 DPI 缩放更改相关的事件。 其中包括<xref:System.Windows.Forms.Control.DpiChangedAfterParent>、 <xref:System.Windows.Forms.Control.DpiChangedBeforeParent>和<xref:System.Windows.Forms.Form.DpiChanged>事件。 `DisableDpiChangedMessageHandling`键的值确定是否在 Windows 窗体应用程序中引发这些事件。
 
-### <a name="single-pass-scaling"></a>单次传递缩放
+### <a name="single-pass-scaling"></a>单步缩放
 
-单个或多通路缩放影响感知的响应性的用户界面和用户界面元素的可视外观，因为它们缩放。 从.NET Framework 4.7 开始，使用单个传递缩放 Windows 窗体。 在以前版本的.NET Framework 中，通过多个通过，这导致一些控件，以扩展超过需要执行缩放。 如果您的应用程序依赖旧行为应仅禁用单次传递缩放。
+单个或多个传递缩放会影响用户界面的感知响应能力和用户界面元素在缩放时的视觉外观。 从 .NET Framework 4.7 开始, Windows 窗体使用单个轮缩放。 在以前版本的 .NET Framework 中, 缩放是通过多个走刀执行的, 这会导致某些控件的缩放比例超出了必需。 仅当你的应用程序依赖于旧行为时, 才应禁用单传递缩放。
 
 ## <a name="see-also"></a>请参阅
 
-- [Windows 窗体配置节](../../../../../docs/framework/configure-apps/file-schema/winforms/index.md)
-- [Windows 窗体中的高 DPI 支持](../../../../../docs/framework/winforms/high-dpi-support-in-windows-forms.md)
+- [Windows 窗体配置节](index.md)
+- [Windows 窗体中的高 DPI 支持](../../../winforms/high-dpi-support-in-windows-forms.md)

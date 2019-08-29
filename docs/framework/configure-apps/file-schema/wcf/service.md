@@ -2,12 +2,12 @@
 title: <service>
 ms.date: 03/30/2017
 ms.assetid: 13123dd6-c4a9-4a04-a984-df184b851788
-ms.openlocfilehash: 68bddc01b02d9885b3f0fc4c2cbc5c3249de03f4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 69f3c70514fc2bcab1b4ef6a45036de98d1af7b7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61670388"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69936524"
 ---
 # <a name="service"></a>\<service>
 `service` 元素包含 Windows Communication Foundation (WCF) 服务的设置。 它还包含公开此服务的终结点。  
@@ -32,20 +32,20 @@ ms.locfileid: "61670388"
 |特性|描述|  
 |---------------|-----------------|  
 |behaviorConfiguration|一个字符串，其中包含要用于实例化服务的行为的行为名。 定义服务时，该行为名必须在作用域内。 默认值为一个空字符串。|  
-|name|必需的字符串属性，此属性指定要进行实例化的服务的类型。 此设置必须等同于一个有效类型。 格式应为 `Namespace.Class.`|  
+|NAME|必需的字符串属性，此属性指定要进行实例化的服务的类型。 此设置必须等同于一个有效类型。 格式应为 `Namespace.Class.`|  
   
 ### <a name="child-elements"></a>子元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<endpoint>](../../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md)|公开此服务的 `endpoint` 元素的集合。|  
-|[\<host>](../../../../../docs/framework/configure-apps/file-schema/wcf/host.md)|指定此服务实例的主机。 此元素的类型为 <xref:System.ServiceModel.Configuration.HostElement>。|  
+|[\<endpoint>](endpoint-element.md)|公开此服务的 `endpoint` 元素的集合。|  
+|[\<host>](host.md)|指定此服务实例的主机。 此元素的类型为 <xref:System.ServiceModel.Configuration.HostElement>。|  
   
 ### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<services>](../../../../../docs/framework/configure-apps/file-schema/wcf/services.md)|所有 WCF 配置元素的根元素。|  
+|[\<services>](services.md)|所有 WCF 配置元素的根元素。|  
   
 ## <a name="remarks"></a>备注  
  服务是在配置文件的 `services` 节中定义的。 程序集可以包含任意多个服务。 每个服务都有自己的 `service` 配置节。 本节及其内容定义特定服务的服务协定、行为和终结点。  
@@ -71,4 +71,4 @@ ms.locfileid: "61670388"
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.ServiceModel.Configuration.ServiceElement>
-- [配置服务](../../../../../docs/framework/wcf/configuring-services.md)
+- [配置服务](../../../wcf/configuring-services.md)

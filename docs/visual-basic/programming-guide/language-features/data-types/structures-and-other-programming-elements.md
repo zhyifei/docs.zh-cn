@@ -8,21 +8,21 @@ helpviewer_keywords:
 - arrays [Visual Basic], structure elements
 - nested structures [Visual Basic]
 ms.assetid: 0f849313-ccd2-4c9a-acb9-69de6751c088
-ms.openlocfilehash: a943bbdec617ba6c95685df3a4fcdb36b52def22
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ec65c75fcfd907097f1cd1e0d3092a547272a782
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906446"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933249"
 ---
 # <a name="structures-and-other-programming-elements-visual-basic"></a>结构和其他编程元素 (Visual Basic)
-可以结合使用数组、 对象和过程，以及与每个其他使用结构。 交互使用相同的语法，如单独使用这些元素。  
+您可以将结构与数组、对象和过程以及彼此一起使用。 交互使用的语法与这些元素分别使用的语法相同。  
   
 > [!NOTE]
->  无法初始化任何在结构声明中的结构元素。 可以仅对元素的已声明为结构类型的变量赋值。  
+> 不能在结构声明中初始化任何结构元素。 只能为已声明为结构类型的变量的元素赋值。  
   
 ## <a name="structures-and-arrays"></a>结构和数组  
- 一种结构可以包含为一个或多个元素的数组。 下面的示例阐释了这一点。  
+ 结构可以包含数组作为其一个或多个元素。 下面的示例阐释了这一点。  
   
 ```vb  
 Public Structure systemInfo  
@@ -33,7 +33,7 @@ Public Structure systemInfo
 End Structure   
 ```  
   
- 访问对象的属性一样访问数组在结构中的值。 下面的示例阐释了这一点。  
+ 访问结构中数组的值的方式与访问对象上的属性的方式相同。 下面的示例阐释了这一点。  
   
 ```vb  
 Dim mySystem As systemInfo  
@@ -41,13 +41,13 @@ ReDim mySystem.diskDrives(3)
 mySystem.diskDrives(0) = "1.44 MB"  
 ```  
   
- 此外可以声明为结构数组。 下面的示例阐释了这一点。  
+ 还可以声明结构的数组。 下面的示例阐释了这一点。  
   
 ```vb  
 Dim allSystems(100) As systemInfo  
 ```  
   
- 按照相同的规则来访问此数据体系结构的组件。 下面的示例阐释了这一点。  
+ 遵循相同的规则来访问此数据体系结构的组件。 下面的示例阐释了这一点。  
   
 ```vb  
 ReDim allSystems(5).diskDrives(3)  
@@ -56,7 +56,7 @@ allSystems(5).diskDrives(2) = "100M SCSI"
 ```  
   
 ## <a name="structures-and-objects"></a>结构和对象  
- 结构包含一个作为一个或多个元素的对象。 下面的示例阐释了这一点。  
+ 结构可以包含对象作为其一个或多个元素。 下面的示例阐释了这一点。  
   
 ```vb  
 Protected Structure userInput  
@@ -66,7 +66,7 @@ Protected Structure userInput
 End Structure  
 ```  
   
- 应在此类声明中，使用特定的对象类而不是`Object`。  
+ 在此类声明中应使用特定对象类, 而不是`Object`。  
   
 ## <a name="structures-and-procedures"></a>结构和过程  
  可以将结构作为过程自变量传递。 下面的示例阐释了这一点。  
@@ -81,9 +81,9 @@ Public Sub fillSystem(ByRef someSystem As systemInfo)
 End Sub  
 ```  
   
- 前面的示例中将此结构传递*通过引用*，这将允许过程来修改它的元素，以便在调用代码中所做的更改生效。 如果你想要保护的结构避免这种修改，将它传递的值。  
+ 前面的示例*通过引用*传递结构, 这允许过程修改其元素, 以使所做的更改在调用代码中生效。 如果要针对此类修改保护结构, 请按值传递它。  
   
- 您还可以返回从结构`Function`过程。 下面的示例阐释了这一点。  
+ 还可以从`Function`过程返回结构。 下面的示例阐释了这一点。  
   
 ```vb  
 Dim allSystems(100) As systemInfo  
@@ -96,7 +96,7 @@ Function findByDate(ByVal searchDate As Date) As systemInfo
 End Function  
 ```  
   
-## <a name="structures-within-structures"></a>结构中的结构  
+## <a name="structures-within-structures"></a>结构内的结构  
  结构可以包含其他结构。 下面的示例阐释了这一点。  
   
 ```vb  
@@ -118,16 +118,16 @@ ReDim allSystems(1).diskDrives(3)
 allSystems(1).diskDrives(0).type = "Floppy"  
 ```  
   
- 此方法还可用于封装在模块中的另一个模块中定义的结构中定义的结构。  
+ 你还可以使用此方法将一个模块中定义的结构封装在另一个模块中定义的结构内。  
   
- 结构可以包含其他任意深度的结构。  
+ 结构可以包含任意深度的其他结构。  
   
 ## <a name="see-also"></a>请参阅
 
 - [数据类型](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [基本数据类型](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
 - [复合数据类型](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)
-- [值类型和引用类型](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
 - [结构](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [数据类型疑难解答](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
 - [如何：声明结构](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)

@@ -2,22 +2,22 @@
 title: 持久性已颁发令牌提供程序
 ms.date: 03/30/2017
 ms.assetid: 76fb27f5-8787-4b6a-bf4c-99b4be1d2e8b
-ms.openlocfilehash: bfe8f8bb8c3775760bc69031e338a156d690ab25
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: 70c7237329d1ae5f6ecde2231a66bca53e220634
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67487605"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70045010"
 ---
 # <a name="durable-issued-token-provider"></a>持久性已颁发令牌提供程序
 此示例演示如何实现一个自定义客户端已颁发令牌提供程序。  
   
 ## <a name="discussion"></a>讨论  
- Windows Communication Foundation (WCF) 中的令牌提供程序用于向安全基础结构提供凭据。 令牌提供程序一般检查目标并颁发相应的凭据，以使安全基础结构能够确保消息的安全。 WCF 配有 CardSpace 令牌提供程序。 自定义令牌提供程序在下列情况下有用：  
+ Windows Communication Foundation (WCF) 中的令牌提供程序用于向安全基础结构提供凭据。 令牌提供程序一般检查目标并颁发相应的凭据，以使安全基础结构能够确保消息的安全。 WCF 附带了一个 CardSpace 令牌提供程序。 自定义令牌提供程序在下列情况下有用：  
   
 - 存在不能由内置令牌提供程序操作的凭据存储区。  
   
-- 如果你想要提供您自己自定义机制，用于转换从点凭据时用户提供到 WCF 客户端时使用的凭据的详细信息。  
+- 如果希望提供自己的自定义机制, 以便在 WCF 客户端使用凭据时, 从用户提供详细信息时开始转换凭据。  
   
 - 要生成一个自定义令牌。  
   
@@ -27,16 +27,16 @@ ms.locfileid: "67487605"
   
 - 如何使用自定义令牌提供程序对客户端进行配置。  
   
-- 如何可以缓存已颁发的令牌，并将其提供给 WCF 客户端。  
+- 如何缓存颁发的令牌并将其提供给 WCF 客户端。  
   
 - 客户端如何使用服务器的 X.509 证书对服务器进行身份验证。  
   
  此示例由客户端控制台程序 (Client.exe)、安全令牌服务控制台程序 (Securitytokenservice.exe) 和服务控制台程序 (Service.exe) 组成。 该服务实现定义“请求-答复”通信模式的协定。 该协定由 `ICalculator` 接口定义，此接口公开数学运算（加、减、乘和除）。 客户端从安全令牌服务 (STS) 中获取安全令牌，向给定数学运算的服务发出同步请求，服务使用结果进行回复。 客户端活动显示在控制台窗口中。  
   
 > [!NOTE]
->  本主题的最后介绍了此示例的设置过程和生成说明。  
+> 本主题的最后介绍了此示例的设置过程和生成说明。  
   
- 此示例公开 ICalculator 协定使用[ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)。 下面的代码演示了此绑定在客户端上的配置。  
+ 此示例使用[ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)公开 ICalculator 协定。 下面的代码演示了此绑定在客户端上的配置。  
   
 ```xml  
 <bindings>
@@ -110,7 +110,7 @@ ms.locfileid: "67487605"
  安全令牌服务使用标准 wsHttpBinding 来公开一个终结点。 安全令牌服务响应客户端对令牌的请求，使用 Windows 帐户提供客户端身份验证，并颁发包含客户端用户名（作为已颁发令牌中的声明）的令牌。 作为创建令牌的一部分，安全令牌服务使用与 CN=STS 证书关联的私钥对令牌进行签名。 另外，它还创建对称密钥并使用与 CN=localhost 证书关联的公钥对该密钥进行加密。 在向客户端返回令牌的过程中，安全令牌服务还返回对称密钥。 客户端向计算器服务出示颁发的令牌，并通过使用该对称密钥对消息进行签名来证明客户端知道该密钥。  
   
 ## <a name="custom-client-credentials-and-token-provider"></a>自定义客户端凭据和令牌提供程序  
- 以下步骤演示如何开发用于缓存已颁发令牌的自定义令牌提供程序并将其与 WCF 集成： 安全。  
+ 以下步骤演示如何开发自定义令牌提供程序, 以便缓存已颁发的令牌并将其与 WCF: security 集成。  
   
 #### <a name="to-develop-a-custom-token-provider"></a>开发自定义安全令牌提供程序  
   
@@ -235,7 +235,7 @@ ms.locfileid: "67487605"
   
 1. 运行 Setup.cmd 文件以创建所需的证书。  
   
-2. 若要生成解决方案，请按照中的说明[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)。 确保生成解决方案中的所有项目（Shared、RSTRSTR、Service、SecurityTokenService 和 Client）。  
+2. 若要生成解决方案, 请按照[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。 确保生成解决方案中的所有项目（Shared、RSTRSTR、Service、SecurityTokenService 和 Client）。  
   
 3. 确保 Service.exe 和 SecurityTokenService.exe 都使用管理员权限运行。  
   
@@ -246,10 +246,10 @@ ms.locfileid: "67487605"
 1. 运行完示例后运行示例文件夹中的 Cleanup.cmd。  
   
 > [!IMPORTANT]
->  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
+> 您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+> 如果此目录不存在, 请参阅[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)以下载所有 Windows Communication Foundation (wcf) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Security\DurableIssuedTokenProvider`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Security\DurableIssuedTokenProvider`  

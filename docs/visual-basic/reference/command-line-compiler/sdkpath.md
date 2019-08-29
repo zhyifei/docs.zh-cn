@@ -9,15 +9,15 @@ helpviewer_keywords:
 - /sdkpath compiler option [Visual Basic]
 - sdkpath compiler option [Visual Basic]
 ms.assetid: fec8a3f1-b791-4a37-8af7-344859f8212d
-ms.openlocfilehash: 91f64756b2fbf14dc96550420cd936973e6bec87
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.openlocfilehash: 25368d23c398fb3674d5c2d75d4997f917a1c3d6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67268291"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937356"
 ---
 # <a name="-sdkpath"></a>-sdkpath
-指定 mscorlib.dll 和 Microsoft.VisualBasic.dll 的位置。  
+指定 mscorlib.dll 和 Microsoft. .dll 的位置。  
   
 ## <a name="syntax"></a>语法  
   
@@ -27,18 +27,18 @@ ms.locfileid: "67268291"
   
 ## <a name="arguments"></a>自变量  
  `path`  
- 包含 mscorlib.dll 和 Microsoft.VisualBasic.dll 用于编译的版本的目录。 它才不验证此路径。 将目录名称括在引号 ("") 如果包含空格。  
+ 包含要用于编译的 mscorlib.dll 和 Microsoft 的版本的目录。 在加载之前, 不会对其进行验证。 如果目录名称包含空格, 则将其用引号 ("") 引起来。  
   
 ## <a name="remarks"></a>备注  
- 此选项会告知 Visual Basic 编译器从非默认位置加载的 mscorlib.dll 和 Microsoft.VisualBasic.dll 文件。 `-sdkpath`选项旨在用于[-netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)。 .NET Compact Framework 使用不同版本的这些支持库，以避免使用类型和语言功能的设备上找不到。  
+ 此选项告知 Visual Basic 编译器从非默认位置加载 mscorlib.dll 和 Microsoft. .dll 文件。 选项设计为与[-netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)一起使用。 `-sdkpath` .NET Compact Framework 使用这些支持库的不同版本, 以避免使用在设备上找不到的类型和语言功能。  
   
 > [!NOTE]
->  `-sdkpath`选项不适用于从 Visual Studio 开发环境中，仅当从命令行编译时便可。 `-sdkpath`加载 Visual Basic 设备项目时，设置选项。  
+> 此`-sdkpath`选项在 Visual Studio 开发环境中不可用; 它仅在从命令行编译时可用。 加载`-sdkpath` Visual Basic 设备项目时, 设置选项。  
   
- 您可以指定通过使用编译器应编译而无需对 Visual Basic 运行时库的引用`-vbruntime`编译器选项。 有关详细信息，请参阅[-vbruntime](../../../visual-basic/reference/command-line-compiler/vbruntime.md)。  
+ 您可以通过使用`-vbruntime`编译器选项指定编译器应编译, 而无需引用 Visual Basic 运行时库。 有关详细信息, 请参阅[-vbruntime](../../../visual-basic/reference/command-line-compiler/vbruntime.md)。  
   
 ## <a name="example"></a>示例  
- 下面的代码编译`Myfile.vb`使用.NET Compact Framework 中，使用版本的 Mscorlib.dll 和 Microsoft.VisualBasic.dll 的.NET Compact Framework 的 C 驱动器上的默认安装目录中找到。 通常情况下，将使用.NET Compact Framework 的最新版本。  
+ 下面的代码使用`Myfile.vb` .NET Compact Framework 进行编译, 其中使用了 C 驱动器上 .NET Compact Framework 的默认安装目录中的 mscorlib.dll 和 Microsoft. .dll 版本。 通常, 您将使用最新版本的 .NET Compact Framework。  
   
 ```console
 vbc -netcf -sdkpath:"c:\Program Files\Microsoft Visual Studio .NET 2003\CompactFrameworkSDK\v1.0.5000\Windows CE " myfile.vb  

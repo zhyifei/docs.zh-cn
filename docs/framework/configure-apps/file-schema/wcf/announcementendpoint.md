@@ -2,15 +2,15 @@
 title: <announcementEndpoint>
 ms.date: 03/30/2017
 ms.assetid: 034b7c69-a770-4502-8cef-38007bbcd025
-ms.openlocfilehash: 4f3cf2748acc75b0ec83732664c5f97114f3663a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: aa4cd8f4d7dcfa438ede71c394f1d0b0ac6faa50
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701250"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69926553"
 ---
 # <a name="announcementendpoint"></a>\<announcementEndpoint>
-此配置元素定义具有固定公告协定的标准终结点。 当分别打开或关闭服务时，服务可以选择通过发送一条联机和脱机公告消息来公告其可用性。 Windows Communication Foundation (WCF) 服务指定公告终结点在[ \<serviceDiscovery >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md)元素，并使用 AnnouncementClient 执行公告。 客户端希望侦听来自其他服务的公告的实际充当 WCF 服务;因此，必须在该客户端配置公告终结点[\<服务 >](../../../../../docs/framework/configure-apps/file-schema/wcf/services.md)部分。  
+此配置元素定义具有固定公告协定的标准终结点。 当分别打开或关闭服务时，服务可以选择通过发送一条联机和脱机公告消息来公告其可用性。 Windows Communication Foundation (WCF) 服务指定[ \<serviceDiscovery >](servicediscovery.md)元素中的公告终结点, 并使用 AnnouncementClient 来执行公告。 希望侦听来自其他服务的公告的客户端实际充当 WCF 服务;因此, 您必须在 " [ \<服务 >](services.md) " 部分中配置该客户端的公告终结点。  
   
 \<system.ServiceModel>  
 \<standardEndpoints>  
@@ -38,7 +38,7 @@ ms.locfileid: "61701250"
 |---------------|-----------------|  
 |discoveryVersion|一个字符串，指定两个 WS-Discovery 协议版本中的其中一个版本。 有效值为 WSDiscovery11 和 WSDiscoveryApril2005。 此值的类型为 <xref:System.ServiceModel.Discovery.Configuration.AnnouncementEndpointElement.DiscoveryVersion>。|  
 |maxAnnouncementDelay|一个 Timespan 值，指定 Discovery 协议在发送 Hello 消息之前等待的最大延迟值。 消息在发送之前将等待一个随机时间值（介于 0 到此特性值之间）。 此特性用于设置随机的短时间延迟，以防止在网络出现故障后所有服务同时重新联机所造成的网络风暴。|  
-|name|一个字符串，指定标准终结点的配置的名称。 此名称在服务终结点的 `endpointConfiguration` 特性中用于将标准终结点链接到其配置。|  
+|NAME|一个字符串，指定标准终结点的配置的名称。 此名称在服务终结点的 `endpointConfiguration` 特性中用于将标准终结点链接到其配置。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  
@@ -47,7 +47,7 @@ ms.locfileid: "61701250"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<standardEndpoints>](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|具有一个或多个固定属性（地址、绑定和协定）的预定义终结点的标准终结点集合。|  
+|[\<standardEndpoints>](standardendpoints.md)|具有一个或多个固定属性（地址、绑定和协定）的预定义终结点的标准终结点集合。|  
   
 ## <a name="example"></a>示例  
  下面的示例演示通过 http 和对等网络侦听公告消息的客户端。  

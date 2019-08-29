@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 4354e5eb-dd45-469d-97fb-1c495705ee59
-ms.openlocfilehash: cc2e25183649f6a95e7862520ccc5719f201277a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6ddd6ebc6215ec17fa416fb0de8f81cf631365db
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61774642"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69936042"
 ---
 # <a name="how-to-call-custom-database-functions"></a>如何：调用自定义数据库函数
 本主题介绍如何从 LINQ to Entities 查询中调用在数据库中定义的自定义函数。  
@@ -23,23 +23,23 @@ ms.locfileid: "61774642"
   
 1. 在数据库中创建自定义函数。  
   
-     有关 SQL Server 中创建自定义函数的详细信息，请参阅[CREATE FUNCTION (Transact SQL)](https://go.microsoft.com/fwlink/?LinkID=139871)。  
+     有关在 SQL Server 中创建自定义函数的详细信息, 请参阅[CREATE FUNCTION (transact-sql)](https://go.microsoft.com/fwlink/?LinkID=139871)。  
   
 2. 在您的 .edmx 文件的存储架构定义语言 (SSDL) 中声明一个函数。 该函数的名称必须与在数据库中声明的函数的名称相同。  
   
-     有关详细信息，请参阅[函数元素 (SSDL)](/ef/ef6/modeling/designer/advanced/edmx/ssdl-spec#function-element-ssdl)。  
+     有关详细信息, 请参阅[Function 元素 (SSDL)](/ef/ef6/modeling/designer/advanced/edmx/ssdl-spec#function-element-ssdl)。  
   
 3. 将相应的方法添加到应用程序代码中的类，并将 <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute> 应用于该方法。注意，该特性的 <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.NamespaceName%2A> 和 <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.FunctionName%2A> 参数分别是概念模型的命名空间名称和概念模型中的函数名称。 LINQ 的函数名称解析区分大小写。  
   
 4. 在 LINQ to Entities 查询中调用此方法。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何从 LINQ to Entities 查询中调用自定义数据库函数。 本示例使用 School 模型。 有关 School 模型的信息，请参阅[创建 School 示例数据库](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399731(v=vs.100))并[生成 School.edmx 文件](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399739(v=vs.100))。  
+ 下面的示例演示如何从 LINQ to Entities 查询中调用自定义数据库函数。 本示例使用 School 模型。 有关 School 模型的信息, 请参阅[创建 School 示例数据库](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399731(v=vs.100))和[生成 school .edmx 文件](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399739(v=vs.100))。  
   
  下面的代码将 `AvgStudentGrade` 函数添加到 School 示例数据库。  
   
 > [!NOTE]
->  用于调用自定义数据库函数的步骤是相同的，与数据库服务器无关。 但是，下面的代码特定于在 SQL Server 数据库中创建函数。 在其他数据库服务器中创建自定义函数的代码可能有所不同。  
+> 用于调用自定义数据库函数的步骤是相同的，与数据库服务器无关。 但是，下面的代码特定于在 SQL Server 数据库中创建函数。 在其他数据库服务器中创建自定义函数的代码可能有所不同。  
   
  [!code-sql[DP L2E MapToDBFunction#1](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp l2e maptodbfunction/tsql/create_avgstudentgrade.sql#1)]  
   

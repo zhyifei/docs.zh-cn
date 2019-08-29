@@ -2,20 +2,20 @@
 title: 函数编程与命令式编程 (C#)
 ms.date: 07/20/2015
 ms.assetid: 5e35c5a0-c949-422a-873b-fca6b2254f57
-ms.openlocfilehash: 2b6a53943ea2363869530ae773c19a52b5578b56
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a163a62912ed2a44d6ea8cad5bc536f03343f15c
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64596708"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594315"
 ---
 # <a name="functional-programming-vs-imperative-programming-c"></a>函数编程与命令式编程 (C#)
 本主题对函数编程和更传统的命令性（过程性）编程进行比较。  
   
 ## <a name="functional-programming-vs-imperative-programming"></a>函数编程与命令式编程  
- 为支持使用纯函数方法解决问题，特此创建了函数编程范例。 函数编程是一种声明性编程形式。 相比之下，大多数主流语言，包括面向对象的编程 (OOP) 语言（如 C#、Visual Basic、C++ 和 Java）主要都是为支持命令性（过程性）编程而设计的。  
+ 为支持使用纯函数方法解决问题，特此创建了函数编程  范例。 函数编程是一种声明性编程  形式。 相比之下，大多数主流语言，包括面向对象的编程 (OOP) 语言（如 C#、Visual Basic、C++ 和 Java）主要都是为支持命令性  （过程性）编程而设计的。  
   
- 使用命令性方法时，开发人员编写的代码应严格细致地说明计算机为完成目标而必须执行的步骤。 这有时称为算法编程。 相比之下，函数方法涉及将问题编成一组要执行的函数。 您要仔细地定义每个函数的输入值和每个函数的返回值。 下表说明了这两种方法之间的一些总体差别。  
+ 使用命令性方法时，开发人员编写的代码应严格细致地说明计算机为完成目标而必须执行的步骤。 这有时称为算法  编程。 相比之下，函数方法涉及将问题编成一组要执行的函数。 您要仔细地定义每个函数的输入值和每个函数的返回值。 下表说明了这两种方法之间的一些总体差别。  
   
 |特征|命令性方法|函数方法|  
 |--------------------|-------------------------|-------------------------|  
@@ -52,6 +52,6 @@ ms.locfileid: "64596708"
   
 ## <a name="see-also"></a>请参阅
 
-- [纯函数转换简介 (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
+- [纯函数转换简介 (C#)](./introduction-to-pure-functional-transformations.md)
 - [XSLT 转换](../../../../standard/data/xml/xslt-transformations.md)
-- [重构为纯函数 (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+- [重构为纯函数 (C#)](./refactoring-into-pure-functions.md)

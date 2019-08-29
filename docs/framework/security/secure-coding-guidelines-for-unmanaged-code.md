@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: a8d15139-d368-4c9c-a747-ba757781117c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 59a25eb9b854f0f303d8b1d97db40406c2818df8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ec97861a9d748767199da3e1fb7f53361c3a48ee
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626280"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966125"
 ---
 # <a name="secure-coding-guidelines-for-unmanaged-code"></a>托管代码的安全编码指南
 有些库代码需要调入非托管代码（如本机代码 API（如 Win32））。 因为这意味着超出托管代码的安全外围，所以需要适当小心。 如果你的代码在安全性方面是非特定的，你的代码和调用它的任何代码都必须具有非托管代码权限（指定了<xref:System.Security.Permissions.SecurityPermission> 标志的 <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> ）。  
@@ -53,4 +53,4 @@ ms.locfileid: "64626280"
   
 ## <a name="see-also"></a>请参阅
 
-- [安全编码准则](../../../docs/standard/security/secure-coding-guidelines.md)
+- [安全编码准则](../../standard/security/secure-coding-guidelines.md)

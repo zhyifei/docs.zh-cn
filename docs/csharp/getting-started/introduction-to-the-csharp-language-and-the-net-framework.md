@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, about C# language
 - Visual C#, about
 ms.assetid: 0a2dff4e-cd84-42ff-8141-e89889b24081
-ms.openlocfilehash: 361a6669d5d638bbb39bc646607cce212bbb3bfa
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: 995362667ed0a203112744f03a036eabbcb784c8
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67504030"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69608304"
 ---
 # <a name="introduction-to-the-c-language-and-the-net-framework"></a>C# 语言和 .NET Framework 介绍
 
@@ -44,9 +44,9 @@ C# 是类型安全的面向对象的精妙语言，可帮助开发者生成在 .
   
  可参阅下面的其他 C# 资源：  
   
-- 有关语言的实用概述，请参阅 [C# 语言规范](../../csharp/language-reference/language-specification/index.md)的第 1 章。  
+- 有关语言的实用概述，请参阅 [C# 语言规范](../language-reference/language-specification/index.md)的第 1 章。  
   
-- 有关 C# 语言特定方面的详细信息，请参阅 [C# 参考](../../csharp/language-reference/index.md)。  
+- 有关 C# 语言特定方面的详细信息，请参阅 [C# 参考](../language-reference/index.md)。  
   
 - 有关 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 的详细信息，请参阅 [LINQ（语言集成查询）](../programming-guide/concepts/linq/index.md)。  
 
@@ -68,5 +68,5 @@ C# 是类型安全的面向对象的精妙语言，可帮助开发者生成在 .
   
 ## <a name="see-also"></a>请参阅
 
-- [C#](../../csharp/index.md)
+- [C#](../index.md)
 - [Visual C# 和 Visual Basic 入门](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)

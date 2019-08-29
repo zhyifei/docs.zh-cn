@@ -3,22 +3,22 @@ title: <activityScheduledQueries>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: ca6e82f1-54f2-48d6-899c-9873065b5547
-ms.openlocfilehash: 7217fb886cc96e1ad19f96e2c6542277cfc7979e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 89de9ef10449fbae78a8c5b558101a2cf6477b07
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790424"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69945524"
 ---
 # <a name="activityscheduledqueries"></a>\<activityScheduledQueries>
 表示一个查询集合，这些查询用于跟踪安排给父活动来执行的活动。 跟踪参与者需要用此查询来订阅活动安排记录。  
   
- 有关跟踪配置文件查询的详细信息，请参阅[跟踪配置文件](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
+ 有关跟踪配置文件查询的详细信息, 请参阅[跟踪配置文件](../../../windows-workflow-foundation/tracking-profiles.md)  
   
 \<system.serviceModel>  
-\<tracking>  
+\<跟踪 >  
 \<trackingProfile>  
-\<workflow>  
+\<工作流 >  
 \<activityScheduledQueries>  
   
 ## <a name="syntax"></a>语法  
@@ -46,17 +46,17 @@ ms.locfileid: "61790424"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<activityScheduledQuery>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/activityscheduledquery.md)|一个查询，用于跟踪安排给父活动来执行的活动。|  
+|[\<activityScheduledQuery>](activityscheduledquery.md)|一个查询，用于跟踪安排给父活动来执行的活动。|  
   
 ### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<workflow>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|一个配置元素，包含由标识为特定工作流的所有查询**activityDefinitionId**属性。|  
+|[\<workflow>](workflow.md)|一个配置元素, 该元素包含由**activityDefinitionId**属性标识的特定工作流的所有查询。|  
   
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.ActivityScheduledQueryElementCollection?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.ActivityScheduledQuery?displayProperty=nameWithType>
-- [工作流跟踪](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [跟踪配置文件](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+- [工作流跟踪](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [跟踪配置文件](../../../windows-workflow-foundation/tracking-profiles.md)

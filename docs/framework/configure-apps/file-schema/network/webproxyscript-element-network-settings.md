@@ -8,19 +8,19 @@ helpviewer_keywords:
 - <webProxyScript> element
 - webProxyScript element
 ms.assetid: a13c26db-6218-4af3-9696-38f24b23bfac
-ms.openlocfilehash: e73ba86cc17fa51cbf4030f2304ab9141fcc0f26
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8a77c2567401fd80e355bb7fcee17b6684653ebe
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674359"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659035"
 ---
-# <a name="webproxyscript-element-network-settings"></a>\<webProxyScript > 元素 （网络设置）
-配置用于发现 Web 代理脚本的特征。  
+# <a name="webproxyscript-element-network-settings"></a>\<w > 元素 (网络设置)
+配置用于发现 Web 代理的脚本的特征。  
   
  \<configuration>  
 \<system.net>  
-\<settings>  
+\<设置 >  
 \<webProxyScript>  
   
 ## <a name="syntax"></a>语法  
@@ -38,7 +38,7 @@ ms.locfileid: "61674359"
   
 |特性|描述|  
 |---------------|-----------------|  
-|`downloadTimeout`|指定在小时、 分钟和秒中下载的脚本的最长时间。 默认值为一分钟。|  
+|`downloadTimeout`|指定下载脚本的最长时间, 以小时、分钟和秒为单位。 默认值为一分钟。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  
@@ -47,7 +47,7 @@ ms.locfileid: "61674359"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[settings](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|配置 <xref:System.Net> 命名空间的基本网络选项。|  
+|[设置](settings-element-network-settings.md)|配置 <xref:System.Net> 命名空间的基本网络选项。|  
   
 ## <a name="remarks"></a>备注  
   
@@ -56,4 +56,4 @@ ms.locfileid: "61674359"
   
 ## <a name="see-also"></a>请参阅
 
-- [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [网络设置架构](index.md)

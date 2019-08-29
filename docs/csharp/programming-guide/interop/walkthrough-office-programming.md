@@ -9,18 +9,18 @@ helpviewer_keywords:
 - Office programming [C#]
 - Office programming [Visual Basic]
 ms.assetid: 519cff31-f80b-4f0e-a56b-26358d0f8c51
-ms.openlocfilehash: a9b7a32cc3eb9d65b7c4a8e241eedca14cbf11bb
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 8ed6e759f682f0db76938661fdcf668bec1eef1c
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398155"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69588972"
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>演练：Office 编程（C# 和 Visual Basic）
 
 Visual Studio 在 C# 和 Visual Basic 中提供了改进 Microsoft Office 编程的功能。 有用的 C# 功能包括命名参数和可选参数以及类型为 `dynamic` 的返回值。 在 COM 编程中，可以省略 `ref` 关键字并获得索引属性的访问权限。 Visual Basic 中的功能包括自动实现的属性、Lambda 表达式语句和集合初始值设定项。
 
-两种语言都支持嵌入类型信息，从而允许在不向用户的计算机部署主互操作程序集 (PIA) 的情况下部署与 COM 组件交互的程序集。 有关详细信息，请参见[演练：嵌入托管程序集中的类型](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)。
+两种语言都支持嵌入类型信息，从而允许在不向用户的计算机部署主互操作程序集 (PIA) 的情况下部署与 COM 组件交互的程序集。 有关详细信息，请参见[演练：嵌入托管程序集中的类型](../concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)。
 
 本演练演示 Office 编程上下文中的这些功能，但其中许多功能在常规编程中也极为有用。 本演练将使用 Excel 外接应用程序创建 Excel 工作簿。 然后，将创建包含工作簿链接的 Word 文档。 最后，将介绍如何启用和禁用 PIA 依赖项。
 
@@ -94,7 +94,7 @@ Visual Studio 在 C# 和 Visual Basic 中提供了改进 Microsoft Office 编程
 
     - 方法 [Add](<xref:Microsoft.Office.Interop.Excel.Workbooks.Add%2A>) 有一个*可选参数*，用于指定特定的模板。 如果希望使用形参的默认值，你可以借助可选形参（C# 4 中新增）忽略该形参的实参。 由于上一个示例中未发送任何参数，`Add` 将使用默认模板并创建新的工作簿。 C# 早期版本中的等效语句要求提供一个占位符参数：`excelApp.Workbooks.Add(Type.Missing)`。
 
-         有关详细信息，请参阅[命名参数和可选参数](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)。
+         有关详细信息，请参阅[命名参数和可选参数](../classes-and-structs/named-and-optional-arguments.md)。
 
     - [Range](<xref:Microsoft.Office.Interop.Excel.Range>) 对象的 `Range` 和 `Offset` 属性使用“索引属性”  功能。 此功能允许你通过以下典型 C# 语法从 COM 类型使用这些属性。 索引属性还允许你使用 `Value` 对象的 `Range` 属性，因此不必使用 `Value2` 属性。 `Value` 属性已编入索引，但索引是可选的。 在以下示例中，可选自变量和索引属性配合使用。
 
@@ -106,7 +106,7 @@ Visual Studio 在 C# 和 Visual Basic 中提供了改进 Microsoft Office 编程
 
          你不能创建自己的索引属性。 该功能仅支持使用现有索引属性。
 
-         有关详细信息，请参阅[如何：在 COM 互操作编程中使用已编制索引的属性](../../../csharp/programming-guide/interop/how-to-use-indexed-properties-in-com-interop-rogramming.md)。
+         有关详细信息，请参阅[如何：在 COM 互操作编程中使用已编制索引的属性](./how-to-use-indexed-properties-in-com-interop-rogramming.md)。
 
 2. 在 `DisplayInExcel` 的末尾添加以下代码以将列宽调整为适合内容。
 
@@ -114,13 +114,13 @@ Visual Studio 在 C# 和 Visual Basic 中提供了改进 Microsoft Office 编程
 
      [!code-vb[csOfficeWalkthrough#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csofficewalkthrough/vb/thisaddin.vb#7)]
 
-     这些新增内容介绍了 C# 中的另一功能：处理从 COM 主机返回的 `Object` 值（如 Office），就像它们具有 [dynamic](../../../csharp/language-reference/keywords/dynamic.md) 类型一样。 当“嵌入互操作类型”  设置为其默认值 `True` 时，或者由 [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) 编译器选项引用程序集时，自动发生这种情况。 键入 `dynamic` 允许后期绑定（Visual Basic 已提供该功能）并可避免 C# 3.0 以及早期版本的语言中要求的显式强制转换。
+     这些新增内容介绍了 C# 中的另一功能：处理从 COM 主机返回的 `Object` 值（如 Office），就像它们具有 [dynamic](../../language-reference/keywords/dynamic.md) 类型一样。 当“嵌入互操作类型”  设置为其默认值 `True` 时，或者由 [/link](../../language-reference/compiler-options/link-compiler-option.md) 编译器选项引用程序集时，自动发生这种情况。 键入 `dynamic` 允许后期绑定（Visual Basic 已提供该功能）并可避免 C# 3.0 以及早期版本的语言中要求的显式强制转换。
 
      例如，`excelApp.Columns[1]` 返回`Object`，并且 `AutoFit` 是 Excel [Range](<xref:Microsoft.Office.Interop.Excel.Range>) 方法。 如果没有 `dynamic`，你必须将 `excelApp.Columns[1]` 返回的对象强制转换为 `Range` 的实例，然后才能调用 `AutoFit` 方法。
 
      [!code-csharp[csOfficeWalkthrough#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/thisaddin.cs#8)]
 
-     有关嵌入互操作类型的详细信息，请参阅本主题后面部分的“查找 PIA 引用”和“还原 PIA 依赖项”程序。 有关 `dynamic` 的详细信息，请参阅 [dynamic](../../../csharp/language-reference/keywords/dynamic.md) 或[使用类型 dynamic](../../../csharp/programming-guide/types/using-type-dynamic.md)。
+     有关嵌入互操作类型的详细信息，请参阅本主题后面部分的“查找 PIA 引用”和“还原 PIA 依赖项”程序。 有关 `dynamic` 的详细信息，请参阅 [dynamic](../../language-reference/keywords/dynamic.md) 或[使用类型 dynamic](../types/using-type-dynamic.md)。
 
 ### <a name="to-invoke-displayinexcel"></a>调用 DisplayInExcel
 
@@ -192,20 +192,20 @@ Visual Studio 在 C# 和 Visual Basic 中提供了改进 Microsoft Office 编程
 ## <a name="see-also"></a>请参阅
 
 - [自动实现的属性 (Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)
-- [自动实现的属性 (C#)](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)
+- [自动实现的属性 (C#)](../classes-and-structs/auto-implemented-properties.md)
 - [集合初始值设定项](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)
-- [对象和集合初始值设定项](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
+- [对象和集合初始值设定项](../classes-and-structs/object-and-collection-initializers.md)
 - [可选参数](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)
 - [按位置和按名称传递自变量](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md)
-- [命名参数和可选参数](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)
+- [命名参数和可选参数](../classes-and-structs/named-and-optional-arguments.md)
 - [早期绑定和后期绑定](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)
-- [dynamic](../../../csharp/language-reference/keywords/dynamic.md)
-- [使用类型 dynamic](../../../csharp/programming-guide/types/using-type-dynamic.md)
+- [dynamic](../../language-reference/keywords/dynamic.md)
+- [使用类型 dynamic](../types/using-type-dynamic.md)
 - [Lambda 表达式 (Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
-- [Lambda 表达式 (C#)](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)
-- [如何：在 COM 互操作编程中使用已编制索引的属性](../../../csharp/programming-guide/interop/how-to-use-indexed-properties-in-com-interop-rogramming.md)
+- [Lambda 表达式 (C#)](../statements-expressions-operators/lambda-expressions.md)
+- [如何：在 COM 互操作编程中使用已编制索引的属性](./how-to-use-indexed-properties-in-com-interop-rogramming.md)
 - [演练：在 Visual Studio 中嵌入 Microsoft Office 程序集中的类型信息](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ee317478(v%3dvs.120))
-- [演练：嵌入托管程序集中的类型](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)
+- [演练：嵌入托管程序集中的类型](../concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)
 - [演练：创建你的第一个 Excel VSTO 外接程序](/visualstudio/vsto/walkthrough-creating-your-first-vsto-add-in-for-excel)
 - [COM 互操作](../../../visual-basic/programming-guide/com-interop/index.md)
-- [互操作性](../../../csharp/programming-guide/interop/index.md)
+- [互操作性](./index.md)

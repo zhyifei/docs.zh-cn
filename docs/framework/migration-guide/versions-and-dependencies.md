@@ -7,18 +7,18 @@ helpviewer_keywords:
 ms.assetid: f75a72de-e2f2-4a7a-9574-3f278684ea90
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 342c570bff89d4c03780cdc280199c722b53890a
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: c082e5dbb1f7b2bb8c5236d0c480302a6e387ebe
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67170466"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910996"
 ---
 # <a name="net-framework-versions-and-dependencies"></a>.NET Framework 版本和依赖关系
 每个版本的 .NET framework 都包含公共语言运行时 (CLR)、基类库和其他托管库。 本主题按版本介绍了 .NET Framework 的关键功能，提供了有关基础 CLR 版本和相关开发环境的信息，并标识了 Windows 操作系统所安装的版本。  
   
 > [!NOTE]
->  若要了解如何下载和安装 .NET Framework，请参阅[安装面向开发人员的 .NET Framework](../../../docs/framework/install/guide-for-developers.md)。  
+> 若要了解如何下载和安装 .NET Framework，请参阅[安装面向开发人员的 .NET Framework](../../../docs/framework/install/guide-for-developers.md)。  
   
  下表总结了 .NET Framework 版本历史，并将每个版本与 Visual Studio、Windows 和 Windows Server 相关联。 请注意，Visual Studio 提供了多目标功能，因此你将不会限于仅使用列出的 .NET Framework 版本。  
   

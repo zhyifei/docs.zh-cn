@@ -5,20 +5,20 @@ helpviewer_keywords:
 - automation tree
 - UI Automation, tree
 ms.assetid: 03b98058-bdb3-47a0-8ff7-45e6cdf67166
-ms.openlocfilehash: a88822d6aed5af04ecf7deffe6936cfc4ebe296e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7dd799b32d51c7e24e6717561aab549e7e7f1fbe
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033015"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69954012"
 ---
 # <a name="ui-automation-tree-overview"></a>UI 自动化树概述
 > [!NOTE]
->  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，请参阅[Windows 自动化 API:UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
+> 本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关的最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], 请[参阅 Windows 自动化 API:UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  辅助技术产品和测试脚本通过在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树中导航来收集有关 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 及其元素的信息。  
   
- 内[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]存在树是根元素 (<xref:System.Windows.Automation.AutomationElement.RootElement%2A>)，它表示当前桌面和元素的子元素表示应用程序窗口。 其中的每个子元素都可以包含表示 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 的各个部分（如菜单、按钮、工具栏和列表框）的元素。 这些子元素又可以包含列表项之类的元素。  
+ 在树中, 有一个表示当前桌面<xref:System.Windows.Automation.AutomationElement.RootElement%2A>的根元素 (), 其子元素表示应用程序窗口。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 其中的每个子元素都可以包含表示 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 的各个部分（如菜单、按钮、工具栏和列表框）的元素。 这些子元素又可以包含列表项之类的元素。  
   
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树的结构不固定，由于它可能包含数千个元素，因此它很少全部显示出来。 可以根据需要生成树的某些部分，添加、移动或删除元素时，树也会发生相应更改。  
   

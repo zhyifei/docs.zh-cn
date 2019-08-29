@@ -2,15 +2,15 @@
 title: 到 Windows Communication Foundation 的消息队列
 ms.date: 03/30/2017
 ms.assetid: 6d718eb0-9f61-4653-8a75-d2dac8fb3520
-ms.openlocfilehash: 2dc0bc3154e2762d3296bf79a6f7245f87aefeb7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: aa2034ceece92c0f873b5a20860df36999b114b3
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664894"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044887"
 ---
 # <a name="message-queuing-to-windows-communication-foundation"></a>到 Windows Communication Foundation 的消息队列
-此示例演示消息队列 (MSMQ) 应用程序如何可以将 MSMQ 消息发送到 Windows Communication Foundation (WCF) 服务。 此服务是自承载控制台应用程序，通过它可以观察服务接收排队消息。  
+此示例演示消息队列 (MSMQ) 应用程序如何将 MSMQ 消息发送到 Windows Communication Foundation (WCF) 服务。 此服务是自承载控制台应用程序，通过它可以观察服务接收排队消息。  
   
  服务协定是 `IOrderProcessor`，它定义了适合与队列一起使用的单向服务。 MSMQ 消息没有 Action 标头，因此无法将不同的 MSMQ 消息自动映射到操作协定。 所以只能有一个操作协定。 如果希望为服务定义多个操作协定，则应用程序必须提供有关 MSMQ 消息中的哪个标头（例如，标签或 correlationID）可用于确定要调度的操作协定的信息。
   
@@ -60,7 +60,7 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(OrderProcessorService)))
  MSMQ 队列名称在配置文件的 appSettings 节中指定，如以下示例配置所示。
 
 > [!NOTE]
->  队列名称为本地计算机使用圆点 (.)，并在其路径中使用反斜杠分隔符。 WCF 终结点地址指定 msmq.formatname 方案，并为本地计算机使用 localhost。 用于每个 MSMQ 格式名寻址指南的队列地址遵从 msmq.formatname 方案。
+> 队列名称为本地计算机使用圆点 (.)，并在其路径中使用反斜杠分隔符。 WCF 终结点地址指定 msmq.formatname 方案, 并为本地计算机使用 localhost。 用于每个 MSMQ 格式名寻址指南的队列地址遵从 msmq.formatname 方案。
 
 ```xml
 <appSettings>
@@ -114,23 +114,23 @@ Console.ReadLine();
 
 ### <a name="to-setup-build-and-run-the-sample"></a>设置、生成和运行示例
 
-1. 请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。
+1. 确保已对[Windows Communication Foundation 示例执行了一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。
 
 2. 如果先运行服务，则它将检查以确保队列存在。 如果队列不存在，则服务将创建一个队列。 可以先运行服务以创建队列或通过 MSMQ 队列管理器创建一个队列。 执行下面的步骤来在 Windows 2008 中创建队列。
 
     1. 在 Visual Studio 2012 中打开服务器管理器。
 
-    2. 展开**功能**选项卡。
+    2. 展开 "**功能**" 选项卡。
 
-    3. 右键单击**私有消息队列**，然后选择**新建**，**专用队列**。
+    3. 右键单击 "**专用消息队列**", 然后选择 "**新建** **专用队列**"。
 
-    4. 检查**事务性**框。
+    4. 选中 "**事务性**" 框。
 
     5. 输入`ServiceModelSamplesTransacted`作为新队列的名称。
 
 3. 若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。
 
-4. 若要在单计算机配置中运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。
+4. 若要在单计算机配置中运行示例, 请按照[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的说明进行操作。
 
 ### <a name="to-run-the-sample-across-computers"></a>跨计算机运行示例
 
@@ -145,16 +145,16 @@ Console.ReadLine();
 5. 在客户端计算机上，在命令提示符下启动 Client.exe。
 
 > [!IMPORTANT]
->  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
+> 您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+> 如果此目录不存在, 请参阅[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)以下载所有 Windows Communication Foundation (wcf) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\MsmqToWcf`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\MsmqToWcf`  
   
 ## <a name="see-also"></a>请参阅
 
 - [WCF 中的队列](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)
-- [如何：使用 WCF 终结点和消息队列应用程序交换消息](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)
+- [如何：与 WCF 终结点和消息队列应用程序交换消息](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)
 - [消息队列](https://go.microsoft.com/fwlink/?LinkId=94968)

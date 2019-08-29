@@ -2,21 +2,21 @@
 title: <clientCertificate> 的 <serviceCredentials>
 ms.date: 03/30/2017
 ms.assetid: 90ad03aa-2317-43dd-8a72-6d24cdcad15c
-ms.openlocfilehash: 26ebac6439a90959e3a926e6a36c9044251a4aae
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 277e5e33bcc7f9d417da7ce24caa4c6200c23e23
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673298"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919538"
 ---
-# <a name="clientcertificate-of-servicecredentials"></a>\<clientCertificate> of \<serviceCredentials>
+# <a name="clientcertificate-of-servicecredentials"></a>\<clientCertificate > \<serviceCredentials >
 定义一个用于在双工通信模式中对从服务发送到客户端的消息进行签名和加密的 X.509 证书。  
   
  \<system.ServiceModel>  
-\<behaviors>  
+\<行为 >  
 \<serviceBehaviors>  
 \<serviceBehaviors>  
-\<behavior>  
+\<行为 >  
 \<serviceCredentials>  
 \<clientCertificate>  
   
@@ -39,17 +39,17 @@ ms.locfileid: "61673298"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<authentication>](../../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md)|指定客户端证书的身份验证选项。|  
-|[\<certificate>](../../../../../docs/framework/configure-apps/file-schema/wcf/certificate-of-clientcertificate-element.md)|指定要使用的证书。|  
+|[\<authentication>](authentication-of-clientcertificate-element.md)|指定客户端证书的身份验证选项。|  
+|[\<certificate>](certificate-of-clientcertificate-element.md)|指定要使用的证书。|  
   
 ### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<serviceCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)|指定要用于对服务进行身份验证的凭据以及与客户端凭据验证相关的设置。|  
+|[\<serviceCredentials>](servicecredentials.md)|指定要用于对服务进行身份验证的凭据以及与客户端凭据验证相关的设置。|  
   
 ## <a name="remarks"></a>备注  
- 如果服务必须事先拥有客户端的证书才能与该客户端进行安全通信，则需要使用此元素。 使用双工通信模式时，会出现这种情况。 在更为典型的请求/响应模式中，客户端会将其证书包含在请求中，服务将使用该证书对发送回客户端的响应进行加密和签名。 但是，在双工通信模式中，服务没有来自客户端的请求，因此服务需要事先具有客户端的证书以确保发送到客户端的消息的安全。 因此，您必须通过带外协商来获取客户端的证书，并使用此元素指定该证书。 有关双工服务的详细信息，请参阅[如何：创建双工协定](../../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)。  
+ 如果服务必须事先拥有客户端的证书才能与该客户端进行安全通信，则需要使用此元素。 使用双工通信模式时，会出现这种情况。 在更为典型的请求/响应模式中，客户端会将其证书包含在请求中，服务将使用该证书对发送回客户端的响应进行加密和签名。 但是，在双工通信模式中，服务没有来自客户端的请求，因此服务需要事先具有客户端的证书以确保发送到客户端的消息的安全。 因此，您必须通过带外协商来获取客户端的证书，并使用此元素指定该证书。 有关双工服务的详细信息, [请参阅如何:创建双工协定](../../../wcf/feature-details/how-to-create-a-duplex-contract.md)。  
   
  在此元素中设置的证书用于仅针对配置有 `MutualCertificateDuplex` 消息安全身份验证模式的绑定加密发送到客户端的消息。  
   
@@ -60,6 +60,6 @@ ms.locfileid: "61673298"
 - <xref:System.ServiceModel.Configuration.X509InitiatorCertificateServiceElement>
 - <xref:System.ServiceModel.Description.ServiceCredentials.ClientCertificate%2A>
 - <xref:System.ServiceModel.Security.X509CertificateInitiatorServiceCredential>
-- [如何：创建双工协定](../../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
-- [安全行为](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
-- [使用证书](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [如何：创建双工协定](../../../wcf/feature-details/how-to-create-a-duplex-contract.md)
+- [安全行为](../../../wcf/feature-details/security-behaviors-in-wcf.md)
+- [使用证书](../../../wcf/feature-details/working-with-certificates.md)

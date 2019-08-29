@@ -12,12 +12,12 @@ helpviewer_keywords:
 - processes, interrupting
 - execution [Visual Basic], stopping
 ms.assetid: c9a9fde0-d649-4662-9bef-bd0146ebc2a7
-ms.openlocfilehash: 80d6734945324f3f517b256051486273f6b687ec
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a617038ec51d98c62b6cf7e3c124c8af01305bac
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783846"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69957623"
 ---
 # <a name="stop-statement-visual-basic"></a>Stop 语句 (Visual Basic)
 挂起执行。  
@@ -29,15 +29,15 @@ Stop
 ```  
   
 ## <a name="remarks"></a>备注  
- 可以将放置`Stop`语句暂停执行的过程中的任意位置。 使用`Stop`语句是类似于在代码中设置断点。  
+ 您可以在`Stop`过程中的任何位置放置语句来挂起执行。 `Stop`使用语句与在代码中设置断点类似。  
   
- `Stop`语句将暂停执行，但不同于`End`，它不会关闭任何文件或清除任何变量，除非遇到编译可执行文件 (.exe) 文件中。  
+ 语句暂停执行, 但与此`End`不同, 它不会关闭任何文件或清除任何变量, 除非在已编译的可执行 (.exe) 文件中遇到。 `Stop`  
   
 > [!NOTE]
->  如果`Stop`语句遇到在集成的开发环境 (IDE) 外部运行的代码中，将调用调试器。 这是无论代码是否已在调试版本还是发布模式下进行编译，则返回 true。  
+> 如果在集成开发环境 (IDE) 外部运行的代码中遇到语句,则将调用调试器。`Stop` 无论代码是在调试模式下编译还是在发布模式下编译, 都是如此。  
   
 ## <a name="example"></a>示例  
- 此示例使用`Stop`语句暂停执行以便每个循环访问`For...Next`循环。  
+ 此示例使用`Stop`语句`For...Next`通过循环挂起每个迭代的执行。  
   
  [!code-vb[VbVbalrStatements#56](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#56)]  
   

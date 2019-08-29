@@ -399,7 +399,7 @@ ECMAScript 和规范化正则表达式的行为在三个方面不同：字符类
 
 默认情况下，当正则表达式引擎执行不区分大小写的比较时，它使用当前区域性的大小写约定来确定等效的大写和小写字符。
 
-但是，此行为不需要某些类型的比较，尤其是在比较用户输入与系统资源名称时（如密码、文件或 URL）。 下面的示例阐释此类方案。 该代码旨在阻止对 URL 开头为 **FILE://** 的所有资源的访问。 正则表达式通过使用正则表达式 `$FILE://` 尝试与字符串的区分大小写的匹配。 但是，在当前系统区域性为 tr-TR（土耳其语-土耳其）时，“I”不是“i”的大写等效项。 因此，对 <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> 方法的调用返回 `false`，并允许访问该文件。
+但是，此行为不需要某些类型的比较，尤其是在比较用户输入与系统资源名称时（如密码、文件或 URL）。 下面的示例阐释此类方案。 该代码旨在阻止对 URL 开头为 **FILE://** 的所有资源的访问。 正则表达式通过使用正则表达式 `$FILE://` 尝试与字符串的不区分大小写的匹配。 但是，在当前系统区域性为 tr-TR（土耳其语-土耳其）时，“I”不是“i”的大写等效项。 因此，对 <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> 方法的调用返回 `false`，并允许访问该文件。
 
 [!code-csharp[Conceptual.Regex.Language.Options#14](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/culture1.cs#14)]
 [!code-vb[Conceptual.Regex.Language.Options#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/culture1.vb#14)]

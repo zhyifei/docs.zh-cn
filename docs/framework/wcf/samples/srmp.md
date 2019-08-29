@@ -2,29 +2,29 @@
 title: SRMP
 ms.date: 03/30/2017
 ms.assetid: cf37078c-dcb4-45e0-acaf-2f196521b226
-ms.openlocfilehash: 92a0bac3cf6ac6b57792419c913ec481ff0ee6c0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e3015e7185fd52a1161b91c74dee57f694fbeebd
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62007833"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044719"
 ---
 # <a name="srmp"></a>SRMP
 本示例演示如何使用 HTTP 上的消息队列 (MSMQ) 来执行事务处理排队通信。  
   
  在排队通信中，客户端使用队列与服务进行通信。 更确切地说，客户端向队列发送消息。 服务从队列接收消息。 因此不必同时运行服务和客户端便可使用队列进行通信。  
   
- MSMQ 启用 HTTP（包括启用 HTTPS）来向队列发送消息。 在此示例中，我们将演示使用 Windows Communication Foundation (WCF) 排队通信，以及如何通过 HTTP 发送消息。 MSMQ 使用一种称为 SRMP 的协议，此协议是一种用于通过 HTTP 进行通信的基于 SOAP 的协议。  
+ MSMQ 启用 HTTP（包括启用 HTTPS）来向队列发送消息。 在此示例中, 我们演示如何使用 Windows Communication Foundation (WCF) 排队通信以及如何通过 HTTP 发送消息。 MSMQ 使用一种称为 SRMP 的协议，此协议是一种用于通过 HTTP 进行通信的基于 SOAP 的协议。  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
-1. 请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1. 确保已对[Windows Communication Foundation 示例执行了一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
 2. 若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
   
-3. 若要在单或跨计算机配置中运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
+3. 若要以单机配置或跨计算机配置来运行示例, 请按照[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的说明进行操作。  
   
-4. 运行示例之前**添加/删除 Windows 组件**，确保安装了 MSMQ 和 HTTP 支持。 安装 HTTP 支持时，会自动安装 Internet 信息服务 (IIS)，并会在 IIS 中添加对 MSMQ 的协议支持。  
+4. 在 "**添加/删除 Windows 组件**" 中运行该示例之前, 请确保安装了 MSMQ 并提供 HTTP 支持。 安装 HTTP 支持时，会自动安装 Internet 信息服务 (IIS)，并会在 IIS 中添加对 MSMQ 的协议支持。  
   
 5. 如果想要确保使用 HTTP 进行通信，则可以启用 MSMQ 以便在加强模式中运行。 这可确保任何消息都不能使用任何非 HTTP 传输到达计算机上承载的任何队列。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "62007833"
  若要运行此示例，服务计算机和客户端计算机上除了 MSMQ 外，还必须安装 IIS。  
   
 ## <a name="demonstrates"></a>演示  
- 此示例演示如何将 WCF 发送排队消息通过 HTTP 使用 MSMQ。 这也称为 SRMP 消息传递。 发送排队消息时，发送方计算机上的 MSMQ 通过 TCP 或 HTTP 传输将消息传送到接收队列管理器。 通过选择 SRMP，用户可以指示选择 HTTP 作为队列传送的传输协议。 SRMP 安全启用 HTTPS。  
+ 此示例演示如何使用 MSMQ over HTTP 发送 WCF 排队消息。 这也称为 SRMP 消息传递。 发送排队消息时，发送方计算机上的 MSMQ 通过 TCP 或 HTTP 传输将消息传送到接收队列管理器。 通过选择 SRMP，用户可以指示选择 HTTP 作为队列传送的传输协议。 SRMP 安全启用 HTTPS。  
   
 ## <a name="example"></a>示例  
  示例代码基于事务处理示例。 使用 SRMP 将消息发送到队列和从队列中接收消息的方式与使用本机协议发送和接收消息的方式相同。  
@@ -88,10 +88,10 @@ OrderDetails
 ```  
   
 > [!IMPORTANT]
->  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
+> 您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+> 如果此目录不存在, 请参阅[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)以下载所有 Windows Communication Foundation (wcf) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\SRMP`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\SRMP`  

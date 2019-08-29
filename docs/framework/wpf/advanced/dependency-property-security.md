@@ -10,12 +10,12 @@ helpviewer_keywords:
 - dependency properties [WPF], access
 - security [WPF], dependency properties
 ms.assetid: d10150ec-90c5-4571-8d35-84bafa2429a4
-ms.openlocfilehash: 2f9de32eb8637e58c17aba2309eed33dcfdd42a7
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: d9dd9306980b80f7845c10e8c0ccb59f29821245
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400765"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940843"
 ---
 # <a name="dependency-property-security"></a>依赖项属性的安全性
 依赖属性通常应当被视为公共属性。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 属性系统在本质上无法对依赖属性值提供安全保证。  
@@ -29,7 +29,7 @@ ms.locfileid: "68400765"
  对于自定义依赖属性, 可以将属性注册为只读依赖属性, 这确实提供了一种有效的方法来防止不包含对该属性的<xref:System.Windows.DependencyPropertyKey>引用的任何人设置属性。 有关详细信息，请参阅[只读依赖属性](read-only-dependency-properties.md)。  
   
 > [!NOTE]
->  不禁止将标识符字段声明为私有的, 因此可以使用它来帮助减少自定义类的直接公开命名空间, 但在与公共语言相同的意义上, 此类属性不应被视为 "私有" <xref:System.Windows.DependencyProperty>运行时 (CLR) 语言定义定义该访问级别, 原因如下部分所述。  
+> 不禁止将标识符字段声明为私有的, 因此可以使用它来帮助减少自定义类的直接公开命名空间, 但在与公共语言相同的意义上, 此类属性不应被视为 "私有" <xref:System.Windows.DependencyProperty>运行时 (CLR) 语言定义定义该访问级别, 原因如下部分所述。  
   
 <a name="PropertySystemExposure"></a>   
 ## <a name="property-system-exposure-of-dependency-properties"></a>依赖属性的属性系统公开  

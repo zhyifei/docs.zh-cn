@@ -7,12 +7,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], adding columns
 - DataGridView control [Windows Forms], removing columns
 ms.assetid: 9e709f35-0a8c-4e7e-b4c4-bacb7a834077
-ms.openlocfilehash: d88d658b31c87e7ae89bfb4a11fe794bfbb0e848
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 7a3029192ab0da4a954dfd7d3d258a00b154924e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040100"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69957116"
 ---
 # <a name="how-to-add-and-remove-columns-in-the-windows-forms-datagridview-control-using-the-designer"></a>如何：使用设计器添加和移除 Windows 窗体 DataGridView 控件中的列
 为了显示<xref:System.Windows.Forms.DataGridView>数据, Windows 窗体控件必须包含列。 如果你计划手动填充控件, 则必须自行添加列。 或者, 您可以将控件绑定到数据源, 该数据源会自动生成并填充列。 如果数据源包含的列多于要显示的列数, 则可以删除不需要的列。
@@ -28,7 +28,7 @@ ms.locfileid: "69040100"
 3. 单击 "**添加**" 按钮添加列, 如果现有列尚未填充控件显示区域, 则会使其显示在设计器中。
 
     > [!NOTE]
-    >  您可以在 "**编辑列**" 对话框中修改列属性, 该对话框可从控件的智能标记访问。
+    > 您可以在 "**编辑列**" 对话框中修改列属性, 该对话框可从控件的智能标记访问。
 
 ## <a name="to-remove-a-column-using-the-designer"></a>使用设计器删除列
 

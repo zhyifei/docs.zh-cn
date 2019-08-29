@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 714e252f-c053-4bbb-b1f3-924111cd4d97
-ms.openlocfilehash: ffb24468c81cb4ec9f41645f8888c2c4ba021609
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0d757e3c37f347014eb2ef90b4e61ddd205dd012
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033574"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69938670"
 ---
 # <a name="how-to-use-scalar-valued-user-defined-functions"></a>如何：使用标量值用户定义的函数
 您可以通过使用 <xref:System.Data.Linq.Mapping.FunctionAttribute> 属性将类中定义的客户端方法映射到用户定义的函数。 请注意，方法体会构造一个捕获方法调用意向的表达式，并将该表达式传递给 <xref:System.Data.Linq.DataContext> 进行转换和执行。  
   
 > [!NOTE]
->  只有在查询外部调用此函数时，才会直接执行。 有关详细信息，请参阅[如何：内联调用用户定义的函数](../../../../../../docs/framework/data/adonet/sql/linq/how-to-call-user-defined-functions-inline.md)。  
+> 只有在查询外部调用此函数时，才会直接执行。 有关详细信息，请参阅[如何：以内联](../../../../../../docs/framework/data/adonet/sql/linq/how-to-call-user-defined-functions-inline.md)方式调用用户定义函数。  
   
 ## <a name="example"></a>示例  
  下面的 SQL 代码展示了一个用户定义的标量值函数 `ReverseCustName()`。  

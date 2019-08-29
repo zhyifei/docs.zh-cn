@@ -2,12 +2,12 @@
 title: 演练：在 Visual Studio 中嵌入托管程序集中的类型 (C#)
 ms.date: 07/20/2015
 ms.assetid: 55ed13c9-c5bb-4bc2-bcd8-0587eb568864
-ms.openlocfilehash: ca1acab5dc08bc7790d86b0dda3b9c7f58cab10c
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 5e6494f133128e3982aa07323d2c65b9fa5de47b
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57844880"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595804"
 ---
 # <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-c"></a>演练：在 Visual Studio 中嵌入托管程序集中的类型 (C#)
 
@@ -53,15 +53,15 @@ ms.locfileid: "57844880"
 
 #### <a name="to-create-the-type-equivalence-interface-project"></a>创建类型等效性接口项目
 
-1. 在 Visual Studio 中的“文件”菜单上，选择“新建”，然后单击“项目”。
+1. 在 Visual Studio 中的“文件”  菜单上，选择“新建”  ，然后单击“项目”  。
 
-2. 在“新建项目”对话框的“项目类型”窗格中，确保选中“Windows”。 在“模板”窗格中，选择“类库”。 在“名称”框中，键入 `TypeEquivalenceInterface`，然后单击“确定”。 新项目创建完成。
+2. 在“新建项目”  对话框的“项目类型”  窗格中，确保选中“Windows”  。 在“模板”  窗格中，选择“类库”  。 在“名称”  框中，键入 `TypeEquivalenceInterface`，然后单击“确定”  。 新项目创建完成。
 
-3. 在“解决方案资源管理器”中，右键单击 Class1.cs 文件，然后单击“重命名”。 将文件重命名为 `ISampleInterface.cs`，然后按 Enter。 重命名文件也会将类重命名为 `ISampleInterface`。 此类将表示类的公共接口。
+3. 在“解决方案资源管理器”  中，右键单击 Class1.cs 文件，然后单击“重命名”  。 将文件重命名为 `ISampleInterface.cs`，然后按 Enter。 重命名文件也会将类重命名为 `ISampleInterface`。 此类将表示类的公共接口。
 
-4. 右键单击 TypeEquivalenceInterface 项目，然后单击“属性”。 单击“生成”选项卡。将输出路径设置为开发计算机上的有效位置，例如 `C:\TypeEquivalenceSample`。 本演练的后续步骤中也将使用此位置。
+4. 右键单击 TypeEquivalenceInterface 项目，然后单击“属性”  。 单击“生成”  选项卡。将输出路径设置为开发计算机上的有效位置，例如 `C:\TypeEquivalenceSample`。 本演练的后续步骤中也将使用此位置。
 
-5. 在编辑项目属性期间，单击“签名”选项卡。选择“为程序集签名”选项。 在“选择强名称密钥文件”列表中，单击“\<新...>”。 在“密钥文件名”框中，键入 `key.snk`。 清除“使用密码保护密钥文件”复选框。 单击 **“确定”**。
+5. 在编辑项目属性期间，单击“签名”  选项卡。选择“为程序集签名”  选项。 在“选择强名称密钥文件”  列表中，单击“\<新...>”  。 在“密钥文件名”  框中，键入 `key.snk`。 清除“使用密码保护密钥文件”  复选框。 单击 **“确定”** 。
 
 6. 打开 ISampleInterface.cs 文件。 将以下代码添加到 ISampleInterface 类文件，以创建 ISampleInterface 接口。
 
@@ -81,11 +81,11 @@ ms.locfileid: "57844880"
     }
     ```
 
-7. 在“工具”菜单上，单击“创建 Guid”。 在“创建 GUID”对话框中，单击“注册表格式”，然后单击“复制”。 单击“退出” 。
+7. 在“工具”  菜单上，单击“创建 Guid”  。 在“创建 GUID”  对话框中，单击“注册表格式”  ，然后单击“复制”  。 单击“退出”  。
 
-8. 在 `Guid` 特性中，删除示例 GUID ，并粘贴从“创建 GUID”对话框复制的 GUID。 删除复制的 GUID 中的大括号 ({})。
+8. 在 `Guid` 特性中，删除示例 GUID ，并粘贴从“创建 GUID”  对话框复制的 GUID。 删除复制的 GUID 中的大括号 ({})。
 
-9. 在“解决方案资源管理器”中，展开“属性”文件夹。 双击 AssemblyInfo.cs 文件。 向文件中添加以下特性。
+9. 在“解决方案资源管理器”  中，展开“属性”  文件夹。 双击 AssemblyInfo.cs 文件。 向文件中添加以下特性。
 
     ```csharp
     [assembly: ImportedFromTypeLib("")]
@@ -95,25 +95,25 @@ ms.locfileid: "57844880"
 
 10. 保存项目。
 
-11. 右键单击 TypeEquivalenceInterface 项目，然后单击“生成”。 此时将编译类库 .dll 文件，并保存到指定的生成输出路径中（如 C:\TypeEquivalenceSample）。
+11. 右键单击 TypeEquivalenceInterface 项目，然后单击“生成”  。 此时将编译类库 .dll 文件，并保存到指定的生成输出路径中（如 C:\TypeEquivalenceSample）。
 
 ## <a name="creating-a-runtime-class"></a>创建运行时类
 
 #### <a name="to-create-the-type-equivalence-runtime-project"></a>创建类型等效性运行时项目
 
-1. 在 Visual Studio 中的“文件”菜单上，指向“新建”，然后单击“项目”。
+1. 在 Visual Studio 中的“文件”  菜单上，指向“新建”  ，然后单击“项目”  。
 
-2. 在“新建项目”对话框的“项目类型”窗格中，确保选中“Windows”。 在“模板”窗格中，选择“类库”。 在“名称”框中，键入 `TypeEquivalenceRuntime`，然后单击“确定”。 新项目创建完成。
+2. 在“新建项目”  对话框的“项目类型”  窗格中，确保选中“Windows”  。 在“模板”  窗格中，选择“类库”  。 在“名称”  框中，键入 `TypeEquivalenceRuntime`，然后单击“确定”  。 新项目创建完成。
 
-3. 在“解决方案资源管理器”中，右键单击 Class1.cs 文件，然后单击“重命名”。 将文件重命名为 `SampleClass.cs`，然后按 Enter。 重命名文件也会将类重命名为 `SampleClass`。 此类将实现 `ISampleInterface` 接口。
+3. 在“解决方案资源管理器”  中，右键单击 Class1.cs 文件，然后单击“重命名”  。 将文件重命名为 `SampleClass.cs`，然后按 Enter。 重命名文件也会将类重命名为 `SampleClass`。 此类将实现 `ISampleInterface` 接口。
 
-4. 右键单击 TypeEquivalenceRuntime 项目，然后单击“属性”。 单击“生成”选项卡。将输出路径设置为 TypeEquivalenceInterface 项目中所用的同一位置，例如，`C:\TypeEquivalenceSample`。
+4. 右键单击 TypeEquivalenceRuntime 项目，然后单击“属性”  。 单击“生成”  选项卡。将输出路径设置为 TypeEquivalenceInterface 项目中所用的同一位置，例如，`C:\TypeEquivalenceSample`。
 
-5. 在编辑项目属性期间，单击“签名”选项卡。选择“为程序集签名”选项。 在“选择强名称密钥文件”列表中，单击“\<新...>”。 在“密钥文件名”框中，键入 `key.snk`。 清除“使用密码保护密钥文件”复选框。 单击 **“确定”**。
+5. 在编辑项目属性期间，单击“签名”  选项卡。选择“为程序集签名”  选项。 在“选择强名称密钥文件”  列表中，单击“\<新...>”  。 在“密钥文件名”  框中，键入 `key.snk`。 清除“使用密码保护密钥文件”  复选框。 单击 **“确定”** 。
 
-6. 右键单击 TypeEquivalenceRuntime 项目，然后单击“添加引用”。 单击“浏览”选项卡，然后浏览到输出路径文件夹。 选择 TypeEquivalenceInterface.dll 文件并单击“确定”。
+6. 右键单击 TypeEquivalenceRuntime 项目，然后单击“添加引用”  。 单击“浏览”  选项卡，然后浏览到输出路径文件夹。 选择 TypeEquivalenceInterface.dll 文件并单击“确定”  。
 
-7. 在“解决方案资源管理器”中，展开“引用”文件夹。 选择 TypeEquivalenceInterface 引用。 在 TypeEquivalenceInterface 引用的“属性”窗口中，将“特定版本”属性设置为“False”。
+7. 在“解决方案资源管理器”  中，展开“引用”  文件夹。 选择 TypeEquivalenceInterface 引用。 在 TypeEquivalenceInterface 引用的“属性”窗口中，将“特定版本”  属性设置为“False”  。
 
 8. 将以下代码添加到 SampleClass 类文件，以创建 SampleClass 类。
 
@@ -142,21 +142,21 @@ ms.locfileid: "57844880"
 
 9. 保存项目。
 
-10. 右键单击 TypeEquivalenceRuntime 项目，然后单击“生成”。 此时将编译类库 .dll 文件，并保存到指定的生成输出路径中（如 C:\TypeEquivalenceSample）。
+10. 右键单击 TypeEquivalenceRuntime 项目，然后单击“生成”  。 此时将编译类库 .dll 文件，并保存到指定的生成输出路径中（如 C:\TypeEquivalenceSample）。
 
 ## <a name="creating-a-client-project"></a>创建客户端项目
 
 #### <a name="to-create-the-type-equivalence-client-project"></a>创建类型等效性客户端项目
 
-1. 在 Visual Studio 中的“文件”菜单上，指向“新建”，然后单击“项目”。
+1. 在 Visual Studio 中的“文件”  菜单上，指向“新建”  ，然后单击“项目”  。
 
-2. 在“新建项目”对话框的“项目类型”窗格中，确保选中“Windows”。 在“模板”窗格中，选择“控制台应用程序”。 在“名称”框中，键入 `TypeEquivalenceClient`，然后单击“确定”。 新项目创建完成。
+2. 在“新建项目”  对话框的“项目类型”  窗格中，确保选中“Windows”  。 在“模板”  窗格中，选择“控制台应用程序”  。 在“名称”  框中，键入 `TypeEquivalenceClient`，然后单击“确定”  。 新项目创建完成。
 
-3. 右键单击 TypeEquivalenceClient 项目，然后单击“属性”。 单击“生成”选项卡。将输出路径设置为 TypeEquivalenceInterface 项目中所用的同一位置，例如，`C:\TypeEquivalenceSample`。
+3. 右键单击 TypeEquivalenceClient 项目，然后单击“属性”  。 单击“生成”  选项卡。将输出路径设置为 TypeEquivalenceInterface 项目中所用的同一位置，例如，`C:\TypeEquivalenceSample`。
 
-4. 右键单击 TypeEquivalenceClient 项目，然后单击“添加引用”。 单击“浏览”选项卡，然后浏览到输出路径文件夹。 选择 TypeEquivalenceInterface.dll 文件（不是 TypeEquivalenceRuntime.dll）并单击“确定”。
+4. 右键单击 TypeEquivalenceClient 项目，然后单击“添加引用”  。 单击“浏览”  选项卡，然后浏览到输出路径文件夹。 选择 TypeEquivalenceInterface.dll 文件（不是 TypeEquivalenceRuntime.dll）并单击“确定”  。
 
-5. 在“解决方案资源管理器”中，展开“引用”文件夹。 选择 TypeEquivalenceInterface 引用。 在 TypeEquivalenceInterface 引用的“属性”窗口中，将“嵌入互操作类型”属性设置为“True”。
+5. 在“解决方案资源管理器”  中，展开“引用”  文件夹。 选择 TypeEquivalenceInterface 引用。 在 TypeEquivalenceInterface 引用的“属性”窗口中，将“嵌入互操作类型”  属性设置为“True”  。
 
 6. 将以下代码添加到 Program.cs 文件，以创建客户端程序。
 
@@ -192,9 +192,9 @@ ms.locfileid: "57844880"
 
 #### <a name="to-modify-the-interface"></a>修改接口
 
-1. 在 Visual Studio 中的“文件”菜单上，指向“打开”，然后单击“项目/解决方案”。
+1. 在 Visual Studio 中的“文件”  菜单上，指向“打开”  ，然后单击“项目/解决方案”  。
 
-2. 在“打开项目”对话框中，右键单击 TypeEquivalenceInterface 项目，然后单击“属性”。 单击“应用程序”  选项卡。单击“程序集信息”按钮。 将“程序集版本”和“文件版本”的值更改为 `2.0.0.0`。
+2. 在“打开项目”  对话框中，右键单击 TypeEquivalenceInterface 项目，然后单击“属性”  。 单击“应用程序”  选项卡。单击“程序集信息”  按钮。 将“程序集版本”  和“文件版本”  的值更改为 `2.0.0.0`。
 
 3. 打开 SampleInterface.cs 文件。 将以下代码行添加到 ISampleInterface 接口。
 
@@ -206,15 +206,15 @@ ms.locfileid: "57844880"
 
 4. 保存项目。
 
-5. 右键单击 TypeEquivalenceInterface 项目，然后单击“生成”。 此时将编译新版本的类库 .dll 文件，并保存到指定的生成输出路径中（如 C:\TypeEquivalenceSample）。
+5. 右键单击 TypeEquivalenceInterface 项目，然后单击“生成”  。 此时将编译新版本的类库 .dll 文件，并保存到指定的生成输出路径中（如 C:\TypeEquivalenceSample）。
 
 ## <a name="modifying-the-runtime-class"></a>修改运行时类
 
 #### <a name="to-modify-the-runtime-class"></a>修改运行时类
 
-1. 在 Visual Studio 中的“文件”菜单上，指向“打开”，然后单击“项目/解决方案”。
+1. 在 Visual Studio 中的“文件”  菜单上，指向“打开”  ，然后单击“项目/解决方案”  。
 
-2. 在“打开项目”对话框中，右键单击 TypeEquivalenceRuntime 项目，然后单击“属性”。 单击“应用程序”  选项卡。单击“程序集信息”按钮。 将“程序集版本”和“文件版本”的值更改为 `2.0.0.0`。
+2. 在“打开项目”  对话框中，右键单击 TypeEquivalenceRuntime 项目，然后单击“属性”  。 单击“应用程序”  选项卡。单击“程序集信息”  按钮。 将“程序集版本”  和“文件版本”  的值更改为 `2.0.0.0`。
 
 3. 打开 SampleClass.cs 文件。 将以下代码行添加到 SampleClass 类。
 
@@ -229,13 +229,13 @@ ms.locfileid: "57844880"
 
 4. 保存项目。
 
-5. 右键单击 TypeEquivalenceRuntime 项目，然后单击“生成”。 此时将编译更新版本的类库 .dll 文件，并保存到之前指定的生成输出路径中（如 C:\TypeEquivalenceSample）。
+5. 右键单击 TypeEquivalenceRuntime 项目，然后单击“生成”  。 此时将编译更新版本的类库 .dll 文件，并保存到之前指定的生成输出路径中（如 C:\TypeEquivalenceSample）。
 
 6. 在文件资源管理器中，打开输出路径文件夹（如 C:\TypeEquivalenceSample）。 双击 TypeEquivalenceClient.exe 运行该程序。 程序将反映 TypeEquivalenceRuntime 程序集的未经重新编译的新版本。
 
 ## <a name="see-also"></a>请参阅
 
-- [/link（C# 编译器选项）](../../../../csharp/language-reference/compiler-options/link-compiler-option.md)
-- [C# 编程指南](../../../../csharp/programming-guide/index.md)
+- [/link（C# 编译器选项）](../../../language-reference/compiler-options/link-compiler-option.md)
+- [C# 编程指南](../../index.md)
 - [使用程序集编程](../../../../framework/app-domains/programming-with-assemblies.md)
 - [.NET 中的程序集](../../../../standard/assembly/index.md)

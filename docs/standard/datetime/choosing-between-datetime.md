@@ -15,35 +15,35 @@ helpviewer_keywords:
 ms.assetid: 07f17aad-3571-4014-9ef3-b695a86f3800
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e4c86ab618f6434a6a9ce4f056eeb001cacc84bc
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 1c4eb8c174e70b6761784a5defe12dc8a8a1e42b
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68709199"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70107081"
 ---
 # <a name="choosing-between-datetime-datetimeoffset-timespan-and-timezoneinfo"></a>在 DateTime、DateTimeOffset、TimeSpan 和 TimeZoneInfo 之间进行选择
 
 使用日期和时间信息的 .NET 应用程序多种多样，并可以多种方式使用此类信息。 日期和时间信息的较常见使用方法包括以下一种或多种：
 
-* 仅反映日期，而时间信息不重要。
+- 仅反映日期，而时间信息不重要。
 
-* 仅反映时间，而日期信息不重要。
+- 仅反映时间，而日期信息不重要。
 
-* 反映未绑定到特定时间和位置的抽象的日期和时间（例如，国际上大多数连锁店在工作日上午 9:00 开张）。
+- 反映未绑定到特定时间和位置的抽象的日期和时间（例如，国际上大多数连锁店在工作日上午 9:00 开张）。
 
-* 若要从 .NET 以外的源中检索日期和时间信息, 通常是在简单的数据类型中存储日期和时间信息。
+- 若要从 .NET 以外的源中检索日期和时间信息, 通常是在简单的数据类型中存储日期和时间信息。
 
-* 唯一、明确地标识单个时间点。 某些应用程序仅要求主机系统具有明确的日期和时间；其他程序要求整个系统中均具有明确的日期和时间（即，在意义上，某个系统上序列化的日期可以在世界各地的其他系统上进行反序列化和使用）。
+- 唯一、明确地标识单个时间点。 某些应用程序仅要求主机系统具有明确的日期和时间；其他程序要求整个系统中均具有明确的日期和时间（即，在意义上，某个系统上序列化的日期可以在世界各地的其他系统上进行反序列化和使用）。
 
-* 保留多个相关时间（例如请求程序的本地时间和服务器接收 Web 请求的时间）。
+- 保留多个相关时间（例如请求程序的本地时间和服务器接收 Web 请求的时间）。
 
-* 执行日期和时间算法，可能致使唯一、明确标识单个时间点。
+- 执行日期和时间算法，可能致使唯一、明确标识单个时间点。
 
 .Net 包括<xref:System.DateTime>、 <xref:System.DateTimeOffset>、 <xref:System.TimeSpan>和类型,所有这些类型都可用于生成处理日期和时间的应用程序。<xref:System.TimeZoneInfo>
 
 > [!NOTE]
-> 本主题不讨论第四种类型（ <xref:System.TimeZone>），因为 <xref:System.TimeZoneInfo> 类中几乎包含它的全部功能。 开发人员应尽可能地使用 <xref:System.TimeZoneInfo> 类，而不是使用 <xref:System.TimeZone> 类。
+> 本主题不讨论<xref:System.TimeZone> , 因为其功能几乎完全融入<xref:System.TimeZoneInfo>在类中。 请尽可能使用<xref:System.TimeZoneInfo>类, 而不<xref:System.TimeZone>使用类。
 
 ## <a name="the-datetime-structure"></a>DateTime 结构
 
@@ -51,19 +51,19 @@ ms.locfileid: "68709199"
 
 <xref:System.DateTime> 结构适用于执行以下操作的应用程序：
 
-* 仅使用日期。
+- 仅使用日期。
 
-* 只使用时间。
+- 只使用时间。
 
-* 使用抽象的日期和时间。
+- 使用抽象的日期和时间。
 
-* 使用缺少时区信息的日期和时间。
+- 使用缺少时区信息的日期和时间。
 
-* 只使用 UTC 日期和时间。
+- 只使用 UTC 日期和时间。
 
-* 从 .NET 外部的源 (如 SQL 数据库) 中检索日期和时间信息。 通常，这些源按与 <xref:System.DateTime> 结构兼容的简单格式存储日期和时间信息。
+- 从 .NET 外部的源 (如 SQL 数据库) 中检索日期和时间信息。 通常，这些源按与 <xref:System.DateTime> 结构兼容的简单格式存储日期和时间信息。
 
-* 执行日期和时间算法，但不关注常规结果。 例如，在向特定日期和时间添加六个月的加法运算中，是否将结果调整为夏令时通常并不重要。
+- 执行日期和时间算法，但不关注常规结果。 例如，在向特定日期和时间添加六个月的加法运算中，是否将结果调整为夏令时通常并不重要。
 
 除非特定的 <xref:System.DateTime> 值表示 UTC，否则日期和时间值通常不明确的或其可移植性受限。 例如，如果 <xref:System.DateTime> 值表示本地时间，则在该本地时区内可移植（即，如果在其他系统的相同时区上反序列化此值，它仍然明确标识单个时间点）。 在本地时区之外， <xref:System.DateTime> 值可以具有多个解释。 如果值的 <xref:System.DateTime.Kind%2A> 属性是 <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>，则它的可移植性更低：此时它在相同时区内（可能甚至在首次序列化的同一系统上）是不明确的。 仅当 <xref:System.DateTime> 值表示 UTC 时，无论使用此值的系统和时区如何，它都会明确标识单个时间点。
 
@@ -76,11 +76,11 @@ ms.locfileid: "68709199"
 
 <xref:System.DateTimeOffset> 类型包括 <xref:System.DateTime> 类型的所有功能以及时区感知功能。 这使它适用于执行以下操作的应用程序:
 
-* 唯一、明确地标识单个时间点。 <xref:System.DateTimeOffset> 类型可用于明确定义“现在”的含义、记录事务时间、记录系统或应用程序事件时间以及记录创建和修改时间。
+- 唯一、明确地标识单个时间点。 <xref:System.DateTimeOffset> 类型可用于明确定义“现在”的含义、记录事务时间、记录系统或应用程序事件时间以及记录创建和修改时间。
 
-* 执行常规日期和时间算法。
+- 执行常规日期和时间算法。
 
-* 保留多个相关时间，只要这些时间存储为两个单独的值或结构中的两个成员。
+- 保留多个相关时间，只要这些时间存储为两个单独的值或结构中的两个成员。
 
 > [!NOTE]
 > <xref:System.DateTimeOffset> 值的使用频率比 <xref:System.DateTime> 值的更高。 因此，在应用程序开发中应考虑使用 <xref:System.DateTimeOffset> 作为默认日期和时间类型。
@@ -96,9 +96,9 @@ ms.locfileid: "68709199"
 
 <xref:System.TimeSpan> 结构表示时间间隔。 它的两个典型用途是：
 
-* 反映两个日期和时间值之间的时间间隔。 例如，两个 <xref:System.DateTime> 值相减将返回 <xref:System.TimeSpan> 值。
+- 反映两个日期和时间值之间的时间间隔。 例如，两个 <xref:System.DateTime> 值相减将返回 <xref:System.TimeSpan> 值。
 
-* 测量运行时间。 例如, <xref:System.Diagnostics.Stopwatch.Elapsed%2A?displayProperty=nameWithType>属性返回一个<xref:System.TimeSpan>值, 该值反映自<xref:System.Diagnostics.Stopwatch>调用开始测量运行时间的其中一个方法以来经过的时间间隔。
+- 测量运行时间。 例如, <xref:System.Diagnostics.Stopwatch.Elapsed%2A?displayProperty=nameWithType>属性返回一个<xref:System.TimeSpan>值, 该值反映自<xref:System.Diagnostics.Stopwatch>调用开始测量运行时间的其中一个方法以来经过的时间间隔。
 
 值还可用于替换<xref:System.DateTime>值 (当该值反映不引用特定日期的时间)。 <xref:System.TimeSpan> 此用法与<xref:System.DateTime.TimeOfDay%2A?displayProperty=nameWithType>和<xref:System.DateTimeOffset.TimeOfDay%2A?displayProperty=nameWithType>属性类似, 后者返回一个<xref:System.TimeSpan>值, 该值表示不引用日期的时间。 例如， <xref:System.TimeSpan> 结构可用于反映商店每天的开张或打烊时间，还可用来表示任何常规事件发生的时间。
 

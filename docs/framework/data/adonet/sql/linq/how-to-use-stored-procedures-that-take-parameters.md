@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b935fd84-cb9c-4205-8c48-658d5db2ec93
-ms.openlocfilehash: 8dd463c895efcddfe288fe1dc8571981872d9d80
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 17ae74a430df4d4a4670c2390ce7b2ee25b67c7a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033600"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69938703"
 ---
 # <a name="how-to-use-stored-procedures-that-take-parameters"></a>如何：使用采用参数的存储过程
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 将输出参数映射到引用参数，并且对于值类型，它将参数声明为可以为 null。  
   
- 有关如何使用输入的参数中返回的行集的查询的示例，请参阅[如何：返回行集](../../../../../../docs/framework/data/adonet/sql/linq/how-to-return-rowsets.md)。  
+ 有关如何在返回行集的查询中使用输入参数的示例, 请参阅[如何:返回行](../../../../../../docs/framework/data/adonet/sql/linq/how-to-return-rowsets.md)集。  
   
 ## <a name="example"></a>示例  
  下面的示例带有单个输入参数（客户 ID）并返回一个输出参数（该客户的总销售额）。  
@@ -43,5 +43,5 @@ where O.CUSTOMERID = @CustomerID AND O.ORDERID = OD.ORDERID
 
 - [存储过程](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)
 - [下载示例数据库](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
-- [使用可以为 null 的类型](~/docs/csharp/programming-guide/nullable-types/using-nullable-types.md)
-- [可以为 null 的值类型](~/docs/visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
+- [使用可以为 null 的类型](../../../../../csharp/programming-guide/nullable-types/using-nullable-types.md)
+- [可以为 null 的值类型](../../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)

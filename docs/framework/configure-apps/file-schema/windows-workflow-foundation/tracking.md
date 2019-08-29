@@ -3,20 +3,20 @@ title: <tracking>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: fd9b50ed-98a1-4518-836d-e4e02c670822
-ms.openlocfilehash: 31490c7425572909cc30fe4237af9309754b68e4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 79230c65d8eb8c15cef5dce73698448ca7b1e003
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61768844"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69947316"
 ---
-# <a name="tracking"></a>\<tracking>
+# <a name="tracking"></a>\<跟踪 >
 表示一个配置节，用于定义工作流服务的跟踪设置。  
   
- 工作流跟踪和其配置的详细信息，请参阅[工作流跟踪](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)并[工作流配置跟踪](../../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md)。  
+ 有关工作流跟踪及其配置的详细信息, 请参阅工作流[跟踪和跟踪](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)和[配置工作流跟踪](../../../windows-workflow-foundation/configuring-tracking-for-a-workflow.md)。  
   
 \<system.serviceModel>  
-\<tracking>  
+\<跟踪 >  
   
 ## <a name="syntax"></a>语法  
   
@@ -86,8 +86,8 @@ ms.locfileid: "61768844"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<participants>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/participants.md)|定义参与方的配置元素的集合的订阅跟踪记录。 跟踪参与者包含用于处理跟踪记录中负载的逻辑（例如，它们可以选择向某个文件中写入）。|  
-|[\<trackingProfile>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/trackingprofile.md)|一个跟踪配置文件，用于筛选从工作流实例发出的跟踪记录。|  
+|[\<participants>](participants.md)|定义订阅跟踪记录的参与者的配置元素的集合。 跟踪参与者包含用于处理跟踪记录中负载的逻辑（例如，它们可以选择向某个文件中写入）。|  
+|[\<trackingProfile>](trackingprofile.md)|一个跟踪配置文件，用于筛选从工作流实例发出的跟踪记录。|  
   
 ### <a name="parent-elements"></a>父元素  
   
@@ -101,4 +101,4 @@ ms.locfileid: "61768844"
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.TrackingSection?displayProperty=nameWithType>
-- [工作流跟踪](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [工作流跟踪](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)

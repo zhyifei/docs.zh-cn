@@ -2,12 +2,12 @@
 title: 静态编译的查询 (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 3f4825c7-c3b0-48da-ba4e-8e97fb2a2f34
-ms.openlocfilehash: b26e0e21ae88ae0a40de1593294c004d394e38ed
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f9e703e65b333c0fd0c2a3219d537466c686af10
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64610665"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69961900"
 ---
 # <a name="statically-compiled-queries-linq-to-xml-visual-basic"></a>静态编译的查询 (LINQ to XML) (Visual Basic)
 LINQ to XML 的一个最重要的性能优势（与 <xref:System.Xml.XmlDocument> 相比）为：LINQ to XML 中的查询是静态编译的，而 XPath 查询则必须在运行时进行解释。 此功能是 LINQ to XML 的内置功能，因此您不必执行额外的步骤即可利用此功能，但在这两项技术之间做出选择时了解它们的区别将很有帮助。 本主题解释了其中的区别。  
@@ -56,10 +56,10 @@ For Each el In list1
 Next  
 ```  
   
- 此示例将生成与前面两个示例完全相同的结果。 这一结果表明：这些查询已被有效地编译成静态链接的方法调用。 这与迭代器的延迟执行语义一起可提高性能。 有关延迟的执行语义的迭代器的详细信息，请参阅[延迟执行和迟缓计算 LINQ to XML (Visual Basic 中) 中](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)。  
+ 此示例将生成与前面两个示例完全相同的结果。 这一结果表明：这些查询已被有效地编译成静态链接的方法调用。 这与迭代器的延迟执行语义一起可提高性能。 有关迭代器的延迟执行语义的详细信息, 请参阅[LINQ to XML (Visual Basic) 中的延迟执行和迟缓计算](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)。  
   
 > [!NOTE]
->  这些示例代表了编译器可能编写的代码。 这些示例的实际实现可能会略有不同，但对于这些示例来说，执行的性能是相同或类似的。  
+> 这些示例代表了编译器可能编写的代码。 这些示例的实际实现可能会略有不同，但对于这些示例来说，执行的性能是相同或类似的。  
   
 ## <a name="executing-xpath-expressions-with-xmldocument"></a>使用 XmlDocument 执行 XPath 表达式  
  下面的示例使用 <xref:System.Xml.XmlDocument> 来完成与前面的示例相同的结果：  
@@ -79,13 +79,13 @@ reader.Close()
   
  但是，<xref:System.Xml.XmlDocument> 方法的执行性能通常不如 LINQ to XML，因为在每次调用 <xref:System.Xml.XmlNode.SelectNodes%2A> 方法时，它都必须在内部执行以下操作：  
   
-- 分析包含 XPath 表达式的字符串，并将字符串划分成多个标记。  
+-   分析包含 XPath 表达式的字符串，并将字符串划分成多个标记。  
   
-- 验证这些标记以确保 XPath 表达式有效。  
+-   验证这些标记以确保 XPath 表达式有效。  
   
-- 将表达式转换为内部表达式树。  
+-   将表达式转换为内部表达式树。  
   
-- 循环访问节点，为基于表达式计算的结果集选择适当的节点。  
+-   循环访问节点，为基于表达式计算的结果集选择适当的节点。  
   
  与相应的 LINQ to XML 查询完成的工作相比，这需要执行非常多的工作。 特定的性能差异将因不同的查询类型而异，但一般来说，与使用 <xref:System.Xml.XmlDocument> 计算 XPath 表达式相比，LINQ to XML 查询执行的工作较少，因此会获得更好的性能。  
   

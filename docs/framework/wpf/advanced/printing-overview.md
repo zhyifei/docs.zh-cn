@@ -15,12 +15,12 @@ helpviewer_keywords:
 - XPSDrv-based printers
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
-ms.openlocfilehash: be82b64581ee178b463950d4b8cdae1f98949161
-ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
+ms.openlocfilehash: bfac0248e6d9dae3ef87f43b2c713e1dc64a9464
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69545304"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70016113"
 ---
 # <a name="printing-overview"></a>打印概述
 使用 Microsoft .NET 框架, 使用 Windows Presentation Foundation (WPF) 的应用程序开发人员具有丰富的一组新的打印和打印系统管理 Api。 在 [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] 中，还为创建 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 应用程序的开发人员和使用非托管代码的开发人员提供了这些打印系统增强功能中的某些功能。 此新功能的核心是新的 [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] 文件格式和 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 打印路径。  
@@ -35,11 +35,11 @@ ms.locfileid: "69545304"
   
 <a name="XPS_print_path_intro"></a>   
 ## <a name="xps-print-path"></a>XPS 打印路径  
- XML 纸张规范 (XPS) 打印路径是一项新[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]功能, 可重新定义如何在 Windows 应用程序中处理打印。 因为[!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]可以替换文档表示语言 (如 RTF)、打印后台处理程序格式 (如 WMF) 和页面描述语言 (如 PCL 和 Postscript), 所以, 新的打印路径将从应用程序发布到打印驱动程序或设备中的最终处理。  
+ XML 纸张规范 (XPS) 打印路径是一种新的 Windows 功能, 可重新定义如何在 Windows 应用程序中处理打印。 因为[!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]可以替换文档表示语言 (如 RTF)、打印后台处理程序格式 (如 WMF) 和页面描述语言 (如 PCL 和 Postscript), 所以, 新的打印路径将从应用程序发布到打印驱动程序或设备中的最终处理。  
   
  Xps 打印路径是基于 xps 打印机驱动程序模型 (XPSDrv) 构建的, 它为开发人员提供了若干优点[!INCLUDE[TLA#tla_wys](../../../../includes/tlasharptla-wys-md.md)] , 如打印、改进了颜色支持以及大大提高了打印性能。 (有关 XPSDrv 的详细信息, 请参阅[Windows 驱动程序工具包文档](/windows-hardware/drivers/)。)  
   
- XPS 文档的打印后台处理程序的操作本质上与以前版本的 Windows 相同。 但是, 它已得到增强, 除了现有的 GDI 打印路径以外, 还支持 XPS 打印路径。 新的打印路径本机使用 XPS 假脱机文件。 虽然为的早期版本[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]编写的用户模式打印机驱动程序将继续工作, 但需要使用 xps 打印机驱动程序 (XPSDrv) 才能使用 xps 打印路径。  
+ XPS 文档的打印后台处理程序的操作本质上与以前版本的 Windows 相同。 但是, 它已得到增强, 除了现有的 GDI 打印路径以外, 还支持 XPS 打印路径。 新的打印路径本机使用 XPS 假脱机文件。 虽然为以前版本的 Windows 编写的用户模式打印机驱动程序将继续工作, 但需要使用 xps 打印机驱动程序 (XPSDrv) 才能使用 XPS 打印路径。  
   
  XPS 打印路径的优点非常重要, 包括:  
   
@@ -64,7 +64,7 @@ ms.locfileid: "69545304"
   
  若要通过[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]和 Windows 窗体应用程序启用基于 XPSDrv 的打印机, XPS 打印机驱动程序 (XPSDrv) 支持将 GDI 转换为 xps 格式。 XPSDrv 模型还提供了用于 XPS 到 GDI 格式的转换器, 以便[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]应用程序能够[!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]打印文档。 对于[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]应用程序, 每当写入操作的目标打印队列没有 XPSDrv 驱动<xref:System.Windows.Xps.XpsDocumentWriter.Write%2A>程序<xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A>时, 将<xref:System.Windows.Xps.XpsDocumentWriter>由类的和方法自动完成 XPS 到 GDI 格式的转换。 (Windows 窗体应用程序不[!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]能打印文档。)  
   
- 下图描述了打印子系统, 并定义了提供[!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)]的部分以及由软件和硬件供应商定义的部分:  
+ 下图描述了打印子系统, 并定义了 Microsoft 提供的部分以及由软件和硬件供应商定义的部分:  
   
  ![屏幕截图显示了 XPS 打印系统。](./media/printing-overview/xml-paper-specification-print-system.png)  
   

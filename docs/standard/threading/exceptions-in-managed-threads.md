@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 11294769-2e89-43cb-890e-ad4ad79cfbee
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ca7f3a8d9ee840fc8c1c8a8efdadf8da033241f1
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 689ee44980a4a41b6d46ed9b68306c1b08c49586
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66377467"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69960061"
 ---
 # <a name="exceptions-in-managed-threads"></a>托管线程中的异常
 从 .NET Framework 2.0 版开始，公共语言运行时允许线程中的多数未经处理的异常正常继续。 在多数情况下，这意味着未经处理的异常会导致应用程序终止。  
   
 > [!NOTE]
->  这是对 .NET Framework 1.0 和 1.1 版的重要更改，这两个版本对许多未经处理的异常（例如，线程池线程中未经处理的异常）提供支持。 请参阅本主题后面的[对先前版本的更改](#ChangeFromPreviousVersions)。  
+> 这是对 .NET Framework 1.0 和 1.1 版的重要更改，这两个版本对许多未经处理的异常（例如，线程池线程中未经处理的异常）提供支持。 请参阅本主题后面的[对先前版本的更改](#ChangeFromPreviousVersions)。  
   
  公共语言运行时为用于控制程序流的某些未经处理的异常提供支持：  
   
@@ -36,7 +36,7 @@ ms.locfileid: "66377467"
  如果在主线程或从非托管代码进入运行时的线程中未处理这些异常，则它们会正常继续，并导致应用程序终止。  
   
 > [!NOTE]
->  运行时有可能在任何托管代码有机会安装异常处理程序之前，引发一个未经处理的异常。 即使托管代码没有机会处理此类异常，仍允许异常正常继续。  
+> 运行时有可能在任何托管代码有机会安装异常处理程序之前，引发一个未经处理的异常。 即使托管代码没有机会处理此类异常，仍允许异常正常继续。  
   
 ## <a name="exposing-threading-problems-during-development"></a>在开发过程中暴露线程处理问题  
  如果允许线程不给出任何提示就失败（不终止应用程序），则可能无法检测出重大的编程问题。 对于长时间运行的服务和其他应用程序，此问题尤为严重。 当线程失败时，程序状态会逐渐损坏。 应用程序性能可能会降低，应用程序也可能无响应。  

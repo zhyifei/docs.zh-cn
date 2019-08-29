@@ -6,24 +6,24 @@ helpviewer_keywords:
 - methods [C#]
 - C# language, methods
 ms.assetid: cc738f07-e8cd-4683-9585-9f40c0667c37
-ms.openlocfilehash: b97ce10cfb2e35beecf2c96acbac9c4ac8462c1d
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 6e7a1dfc739278eecfa8582bb0a9f8938c561acf
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57201154"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924462"
 ---
 # <a name="methods-c-programming-guide"></a>方法（C# 编程指南）
 方法是包含一系列语句的代码块。 程序通过调用该方法并指定任何所需的方法参数使语句得以执行。 在 C# 中，每个执行的指令均在方法的上下文中执行。 Main 方法是每个 C# 应用程序的入口点，并在启动程序时由公共语言运行时 (CLR) 调用。  
   
 > [!NOTE]
->  本主题讨论命名的方法。 有关匿名函数的信息，请参阅[匿名函数](../../../csharp/programming-guide/statements-expressions-operators/anonymous-functions.md)。  
+> 本主题讨论命名的方法。 有关匿名函数的信息，请参阅[匿名函数](../statements-expressions-operators/anonymous-functions.md)。  
   
 ## <a name="method-signatures"></a>方法签名  
- 通过指定访问级别（如 `public` 或 `private` ）、可选修饰符（如 `abstract` 或 `sealed` ）、返回值、方法的名称以及任何方法参数，在[类](../../../csharp/language-reference/keywords/class.md) 或[结构](../../../csharp/language-reference/keywords/struct.md)中声明方法。 这些部件一起构成方法的签名。  
+ 通过指定访问级别（如 `public` 或 `private` ）、可选修饰符（如 `abstract` 或 `sealed` ）、返回值、方法的名称以及任何方法参数，在[类](../../language-reference/keywords/class.md) 或[结构](../../language-reference/keywords/struct.md)中声明方法。 这些部件一起构成方法的签名。  
   
 > [!NOTE]
->  出于方法重载的目的，方法的返回类型不是方法签名的一部分。 但是在确定委托和它所指向的方法之间的兼容性时，它是方法签名的一部分。  
+> 出于方法重载的目的，方法的返回类型不是方法签名的一部分。 但是在确定委托和它所指向的方法之间的兼容性时，它是方法签名的一部分。  
   
  方法参数在括号内，并且用逗号分隔。 空括号指示方法不需要任何参数。 此类包含四种方法：  
   
@@ -40,7 +40,7 @@ ms.locfileid: "57201154"
  [!code-csharp[csProgGuideObjects#74](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#74)]  
   
 ## <a name="passing-by-reference-vs-passing-by-value"></a>按引用传递与按值传递  
- 默认情况下，值类型传递给方法时，传递的是副本而不是对象本身。 因此，对参数的更改不会影响调用方法中的原始副本。 可以使用 ref 关键字按引用传递值类型。 有关详细信息，请参阅[传递值类型参数](../../../csharp/programming-guide/classes-and-structs/passing-value-type-parameters.md)。 有关内置值类型的列表，请参阅[值类型表](../../../csharp/language-reference/keywords/value-types-table.md)。  
+ 默认情况下，值类型传递给方法时，传递的是副本而不是对象本身。 因此，对参数的更改不会影响调用方法中的原始副本。 可以使用 ref 关键字按引用传递值类型。 有关详细信息，请参阅[传递值类型参数](./passing-value-type-parameters.md)。 有关内置值类型的列表，请参阅[值类型表](../../language-reference/keywords/value-types-table.md)。  
   
  引用类型的对象传递到方法中时，将传递对对象的引用。 也就是说，该方法接收的不是对象本身，而是指示该对象位置的参数。 如果通过使用此引用更改对象的成员，即使是按值传递该对象，此更改也会反映在调用方法的参数中。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "57201154"
   
  该示例执行的内容实质上与先前示例相同，均按值将参数传递到方法。 但是因为使用了引用类型，结果有所不同。 `ModifyObject` 中所做的对形参 `value` 的 `obj`字段的修改，也会更改 `value` 方法中实参 `rt`的 `TestRefType` 字段。 `TestRefType` 方法显示 33 作为输出。  
   
- 有关如何通过引用和值传递引用类型的详细信息，请参阅[传递引用类型参数](../../../csharp/programming-guide/classes-and-structs/passing-reference-type-parameters.md)和[引用类型](../../../csharp/language-reference/keywords/reference-types.md)。  
+ 有关如何通过引用和值传递引用类型的详细信息，请参阅[传递引用类型参数](./passing-reference-type-parameters.md)和[引用类型](../../language-reference/keywords/reference-types.md)。  
   
 ## <a name="return-values"></a>返回值  
 方法可以将值返回到调用方。 如果列在方法名之前的返回类型不是 `void`，则该方法可通过使用 `return` 关键字返回值。 带 `return` 关键字，后跟与返回类型匹配的值的语句将该值返回到方法调用方。 
@@ -108,15 +108,15 @@ public static void FillMatrix(int[,] matrix)
 }
 ```  
   
- 有关详细信息，请参阅 [return](../../../csharp/language-reference/keywords/return.md)。  
+ 有关详细信息，请参阅 [return](../../language-reference/keywords/return.md)。  
   
 ## <a name="async-methods"></a>异步方法  
  通过使用异步功能，你可以调用异步方法而无需使用显式回调，也不需要跨多个方法或 lambda 表达式来手动拆分代码。 
   
- 如果用 [async](../../../csharp/language-reference/keywords/async.md) 修饰符标记方法，则可以使用该方法中的 [await](../../../csharp/language-reference/keywords/await.md) 运算符。 当控件到达异步方法中的 await 表达式时，控件将返回到调用方，并在等待任务完成前，方法中进度将一直处于挂起状态。 任务完成后，可以在方法中恢复执行。  
+ 如果用 [async](../../language-reference/keywords/async.md) 修饰符标记方法，则可以使用该方法中的 [await](../../language-reference/keywords/await.md) 运算符。 当控件到达异步方法中的 await 表达式时，控件将返回到调用方，并在等待任务完成前，方法中进度将一直处于挂起状态。 任务完成后，可以在方法中恢复执行。  
   
 > [!NOTE]
->  异步方法在遇到第一个尚未完成的 awaited 对象或到达异步方法的末尾时（以先发生者为准），将返回到调用方。  
+> 异步方法在遇到第一个尚未完成的 awaited 对象或到达异步方法的末尾时（以先发生者为准），将返回到调用方。  
   
  异步方法可以具有 <xref:System.Threading.Tasks.Task%601>、 <xref:System.Threading.Tasks.Task>或 void 返回类型。 Void 返回类型主要用于定义需要 void 返回类型的事件处理程序。 无法等待返回 void 的异步方法，并且返回 void 方法的调用方无法捕获该方法引发的异常。  
   
@@ -126,9 +126,9 @@ public static void FillMatrix(int[,] matrix)
   
  [!code-csharp[csAsyncMethod#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csasyncmethod/cs/mainwindow.xaml.cs#2)]  
   
- 异步方法不能声明任何 [ref](../../../csharp/language-reference/keywords/ref.md) 或 [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md) 参数，但是可以调用具有这类参数的方法。  
+ 异步方法不能声明任何 [ref](../../language-reference/keywords/ref.md) 或 [out](../../language-reference/keywords/out-parameter-modifier.md) 参数，但是可以调用具有这类参数的方法。  
   
- 有关异步方法的详细信息，请参阅[使用 async 和 await 的异步编程](../../../csharp/programming-guide/concepts/async/index.md)、[异步程序中的控制流](../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md)和[异步返回类型](../../../csharp/programming-guide/concepts/async/async-return-types.md)。  
+ 有关异步方法的详细信息，请参阅[使用 async 和 await 的异步编程](../concepts/async/index.md)、[异步程序中的控制流](../concepts/async/control-flow-in-async-programs.md)和[异步返回类型](../concepts/async/async-return-types.md)。  
   
 ## <a name="expression-body-definitions"></a>表达式主体定义  
  具有立即仅返回表达式结果，或单个语句作为方法主题的方法定义很常见。  以下是使用 `=>`定义此类方法的语法快捷方式：  
@@ -145,27 +145,27 @@ public Customer this[long id] => store.LookupCustomer(id);
  如果该方法返回 `void` 或是异步方法，则该方法的主体必须是语句表达式（与 lambda 相同）。  对于属性和索引器，两者必须是只读的，并且不使用 `get` 访问器关键字。  
   
 ## <a name="iterators"></a>Iterators  
- 迭代器对集合执行自定义迭代，如列表或数组。 迭代器使用 [yield return](../../../csharp/language-reference/keywords/yield.md) 语句返回元素，每次返回一个。 当 [yield return](../../../csharp/language-reference/keywords/yield.md) 语句到达时，将记住当前在代码中的位置。 下次调用迭代器时，将从该位置重新开始执行。  
+ 迭代器对集合执行自定义迭代，如列表或数组。 迭代器使用 [yield return](../../language-reference/keywords/yield.md) 语句返回元素，每次返回一个。 当 [yield return](../../language-reference/keywords/yield.md) 语句到达时，将记住当前在代码中的位置。 下次调用迭代器时，将从该位置重新开始执行。  
   
- 通过使用 [foreach](../../../csharp/language-reference/keywords/foreach-in.md) 语句从客户端代码调用迭代器。  
+ 通过使用 [foreach](../../language-reference/keywords/foreach-in.md) 语句从客户端代码调用迭代器。  
   
  迭代器的返回类型可以是 <xref:System.Collections.IEnumerable>、 <xref:System.Collections.Generic.IEnumerable%601>、 <xref:System.Collections.IEnumerator>或 <xref:System.Collections.Generic.IEnumerator%601>。  
   
- 有关更多信息，请参见 [迭代器](../../../csharp/programming-guide/concepts/iterators.md)。  
+ 有关更多信息，请参见 [迭代器](../concepts/iterators.md)。  
   
 ## <a name="c-language-specification"></a>C# 语言规范  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 
-- [C# 编程指南](../../../csharp/programming-guide/index.md)
+- [C# 编程指南](../index.md)
 - [类和结构](index.md)
 - [访问修饰符](access-modifiers.md)
 - [静态类和静态类成员](static-classes-and-static-class-members.md)
 - [继承](inheritance.md)
 - [抽象类、密封类及类成员](abstract-and-sealed-classes-and-class-members.md)
-- [params](../../../csharp/language-reference/keywords/params.md)
-- [return](../../../csharp/language-reference/keywords/return.md)
-- [out](../../../csharp/language-reference/keywords/out.md)
-- [ref](../../../csharp/language-reference/keywords/ref.md)
+- [params](../../language-reference/keywords/params.md)
+- [return](../../language-reference/keywords/return.md)
+- [out](../../language-reference/keywords/out.md)
+- [ref](../../language-reference/keywords/ref.md)
 - [传递参数](passing-parameters.md)

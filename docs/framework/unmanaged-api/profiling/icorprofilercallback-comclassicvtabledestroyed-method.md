@@ -17,18 +17,18 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8043ae8a3d384ab0936ae96e39174a7afc80a636
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f74e06ea4cb4d7a8eace8c7852f487bbdcbcd875
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776208"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964626"
 ---
 # <a name="icorprofilercallbackcomclassicvtabledestroyed-method"></a>ICorProfilerCallback::COMClassicVTableDestroyed 方法
-通知探查器 COM 互操作 vtable 被销毁。  
+通知探查器正在销毁 COM 互操作 vtable。  
   
 > [!NOTE]
->  此回调是 vtable 的可能永远不会发生，因为进行销毁关闭时。  
+> 此回调很可能永远不会发生, 因为 vtables 的销毁操作非常接近关闭。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,25 +41,25 @@ HRESULT COMClassicVTableDestroyed(
   
 ## <a name="parameters"></a>参数  
  `wrappedClassId`  
- [in]为其创建此 vtable 类的 ID。  
+ 中为其创建了此 vtable 的类的 ID。  
   
  `implementedIID`  
- [in]由类实现的接口 ID。 如果接口仅供内部，此值可能为 NULL。  
+ 中类实现的接口的 ID。 如果接口仅限内部接口, 此值可能为 NULL。  
   
  `pVTable`  
- [in]指向 vtable 开头的指针。  
+ 中指向 vtable 开头的指针。  
   
 ## <a name="remarks"></a>备注  
- 探查器不应在其实现此方法阻止因为堆栈可能未处于允许垃圾回收的状态，因此不能启用抢先式垃圾回收。 如果探查器进行阻止并尝试执行垃圾回收，运行时将阻塞，直到此回调返回。  
+ 探查器不应在此方法的实现中被阻止, 因为堆栈可能不处于允许垃圾回收的状态, 因此无法启用抢先垃圾回收。 如果探查器在此处阻止并且试图进行垃圾回收, 则运行时将被阻止, 直到此回调返回。  
   
- 为托管代码或以任何方式导致托管内存分配，不应调用此方法的探查器的实现。  
+ 探查器的此方法的实现不应调入托管代码或以任何方式导致托管内存分配。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorProf.idl, CorProf.h  
+ **标头：** Corprof.idl, Corprof.idl  
   
- **库：** CorGuids.lib  
+ **类库**CorGuids.lib  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

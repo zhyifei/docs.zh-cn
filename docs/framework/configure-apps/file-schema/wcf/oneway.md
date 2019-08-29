@@ -2,12 +2,12 @@
 title: <oneWay>
 ms.date: 03/30/2017
 ms.assetid: 00e67e0e-77c0-4695-9138-c0997b0e5f3c
-ms.openlocfilehash: 2458cdd4d593637c2025047d5dd510f0f89b2a0f
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: f4a9422f4385e37a61ec85d680fcf7743a57bc0c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67423077"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69932946"
 ---
 # <a name="oneway"></a>\<oneWay>
 对自定义绑定启用数据包路由并使用单向方法。  
@@ -15,7 +15,7 @@ ms.locfileid: "67423077"
  \<system.serviceModel>  
 \<bindings>  
 \<customBinding>  
-\<binding>  
+\<绑定 >  
 \<oneWay>  
   
 ## <a name="syntax"></a>语法  
@@ -42,13 +42,13 @@ ms.locfileid: "67423077"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<channelPoolSettings>](../../../../../docs/framework/configure-apps/file-schema/wcf/channelpoolsettings.md)|一个 <xref:System.ServiceModel.Configuration.ChannelPoolSettingsElement> 对象，包含当前通道的通道池的属性。|  
+|[\<channelPoolSettings>](channelpoolsettings.md)|一个 <xref:System.ServiceModel.Configuration.ChannelPoolSettingsElement> 对象，包含当前通道的通道池的属性。|  
   
 ### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<binding>](../../../../../docs/framework/misc/binding.md)|定义自定义绑定的所有绑定功能。|  
+|[\<binding>](../../../misc/binding.md)|定义自定义绑定的所有绑定功能。|  
   
 ## <a name="remarks"></a>备注  
  若要启用数据包路由，必须使用此元素提供的单向转换层。 用户可以创建一个自定义绑定，将此绑定置于具有会话功能或请求/答复传输的上层，使之可进行数据包路由。 如果希望以更自然的方式公开单向方法，则此元素也十分有用。 在这一层上可应用更多的转换，如复合双工和可靠消息。  
@@ -58,7 +58,7 @@ ms.locfileid: "67423077"
 - <xref:System.ServiceModel.Channels.OneWayBindingElement>
 - <xref:System.ServiceModel.Configuration.OneWayElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [绑定](../../../../../docs/framework/wcf/bindings.md)
-- [扩展绑定](../../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [自定义绑定](../../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [绑定](../../../wcf/bindings.md)
+- [扩展绑定](../../../wcf/extending/extending-bindings.md)
+- [自定义绑定](../../../wcf/extending/custom-bindings.md)
+- [\<customBinding>](custombinding.md)

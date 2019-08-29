@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0c1534e5-979b-4c8a-a588-1c24301aefb3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 28e1979b6ceb1b343764900cc7d49a576a7a4030
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: e92d5564308d31609b9fb024f3d3368a19b76b1d
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630546"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106703"
 ---
 # <a name="working-with-calendars"></a>使用日历
 
@@ -30,39 +30,39 @@ ms.locfileid: "68630546"
 
 .Net 中的所有日历均派生<xref:System.Globalization.Calendar?displayProperty=nameWithType>自类, 该类提供基本日历实现。 从 <xref:System.Globalization.Calendar> 类继承的类之一是 <xref:System.Globalization.EastAsianLunisolarCalendar> 类，该类是所有阴阳历的基类。 .NET 包括以下日历实现:
 
-* <xref:System.Globalization.ChineseLunisolarCalendar>，表示中国阴阳历。
+- <xref:System.Globalization.ChineseLunisolarCalendar>，表示中国阴阳历。
 
-* <xref:System.Globalization.GregorianCalendar>，表示公历。 此日历进一步细分为 <xref:System.Globalization.GregorianCalendarTypes?displayProperty=nameWithType> 枚举定义的子类型（如阿拉伯和中东法国）。 <xref:System.Globalization.GregorianCalendar.CalendarType%2A?displayProperty=nameWithType> 属性指定公历的子类型。
+- <xref:System.Globalization.GregorianCalendar>，表示公历。 此日历进一步细分为 <xref:System.Globalization.GregorianCalendarTypes?displayProperty=nameWithType> 枚举定义的子类型（如阿拉伯和中东法国）。 <xref:System.Globalization.GregorianCalendar.CalendarType%2A?displayProperty=nameWithType> 属性指定公历的子类型。
 
-* <xref:System.Globalization.HebrewCalendar>，表示希伯来历。
+- <xref:System.Globalization.HebrewCalendar>，表示希伯来历。
 
-* <xref:System.Globalization.HijriCalendar>，表示回历。
+- <xref:System.Globalization.HijriCalendar>，表示回历。
 
-* <xref:System.Globalization.JapaneseCalendar>，表示日本历。
+- <xref:System.Globalization.JapaneseCalendar>，表示日本历。
 
-* <xref:System.Globalization.JapaneseLunisolarCalendar>，表示日本阴阳历。
+- <xref:System.Globalization.JapaneseLunisolarCalendar>，表示日本阴阳历。
 
-* <xref:System.Globalization.JulianCalendar>，表示罗马儒略历。
+- <xref:System.Globalization.JulianCalendar>，表示罗马儒略历。
 
-* <xref:System.Globalization.KoreanCalendar>，表示朝鲜历。
+- <xref:System.Globalization.KoreanCalendar>，表示朝鲜历。
 
-* <xref:System.Globalization.KoreanLunisolarCalendar>，表示朝鲜阴阳历。
+- <xref:System.Globalization.KoreanLunisolarCalendar>，表示朝鲜阴阳历。
 
-* <xref:System.Globalization.PersianCalendar>，表示波斯历。
+- <xref:System.Globalization.PersianCalendar>，表示波斯历。
 
-* <xref:System.Globalization.TaiwanCalendar>，表示台湾历。
+- <xref:System.Globalization.TaiwanCalendar>，表示台湾历。
 
-* <xref:System.Globalization.TaiwanLunisolarCalendar>，表示台湾阴阳历。
+- <xref:System.Globalization.TaiwanLunisolarCalendar>，表示台湾阴阳历。
 
-* <xref:System.Globalization.ThaiBuddhistCalendar>，表示泰国佛历。
+- <xref:System.Globalization.ThaiBuddhistCalendar>，表示泰国佛历。
 
-* <xref:System.Globalization.UmAlQuraCalendar>，表示古兰经历。
+- <xref:System.Globalization.UmAlQuraCalendar>，表示古兰经历。
 
 可通过以下两种方法之一来使用日历：
 
-* 作为特定区域性使用的日历。 每个 <xref:System.Globalization.CultureInfo> 对象都有当前日历，这是该对象当前使用的日历。 所有日期和时间值的字符串表示形式会自动反映当前的区域性及其当前日历。 通常，当前的日历是该区域性的默认日历。 <xref:System.Globalization.CultureInfo>对象还具有可选日历, 其中包含区域性可使用的其他日历。
+- 作为特定区域性使用的日历。 每个 <xref:System.Globalization.CultureInfo> 对象都有当前日历，这是该对象当前使用的日历。 所有日期和时间值的字符串表示形式会自动反映当前的区域性及其当前日历。 通常，当前的日历是该区域性的默认日历。 <xref:System.Globalization.CultureInfo>对象还具有可选日历, 其中包含区域性可使用的其他日历。
 
-* 作为与特定区域性无关的独立日历。 在这种情况下，<xref:System.Globalization.Calendar> 方法用于将日期表示为反映日历的值。
+- 作为与特定区域性无关的独立日历。 在这种情况下，<xref:System.Globalization.Calendar> 方法用于将日期表示为反映日历的值。
 
 请注意，以下六个日历类只能用作独立日历：<xref:System.Globalization.ChineseLunisolarCalendar>、<xref:System.Globalization.JapaneseLunisolarCalendar>、<xref:System.Globalization.JulianCalendar>、<xref:System.Globalization.KoreanLunisolarCalendar>、<xref:System.Globalization.PersianCalendar> 和 <xref:System.Globalization.TaiwanLunisolarCalendar>。 任何区域性都不将这些日历用作默认日历或可选日历。
 

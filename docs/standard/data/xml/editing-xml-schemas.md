@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: fa09c8e5-c2b9-49d2-bb0d-40330cd13e4d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 119c4c13c90aeca8c14d2725d927c38be32212a6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 3d0d67c82e753b044f759b4d1139c5f6b4837b31
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59308713"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69948482"
 ---
 # <a name="editing-xml-schemas"></a>编辑 XML 架构
 编辑 XML 架构是架构对象模型 (SOM) 最重要的功能之一。 SOM 的所有前架构编译属性均可以用于更改 XML 架构中的现有值。 然后，可以重新编译 XML 架构以反映更改。  
@@ -93,7 +93,7 @@ ms.locfileid: "59308713"
 8. 在前架构编译 <xref:System.Xml.Schema.XmlSchemaObject> 集合中循环访问每个 <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType>。  
   
 > [!NOTE]
->  因为 `FirstName` 元素不是架构中的全局元素，所以，不能在 <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> 或 <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> 集合中使用。 代码示例通过首先定位 `FirstName` 元素来定位 `Customer` 元素。  
+> 因为 `FirstName` 元素不是架构中的全局元素，所以，不能在 <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> 或 <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> 集合中使用。 代码示例通过首先定位 `FirstName` 元素来定位 `Customer` 元素。  
 >   
 >  第一个代码示例使用后架构编译 <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> 集合遍历了架构。 在此示例中，前架构编译 <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> 集合用于遍历架构。 尽管两个集合均提供对架构中的全局元素的访问，但是循环访问 <xref:System.Xml.Schema.XmlSchema.Items%2A> 集合使用的时间更长，因为必须循环访问架构中的所有全局元素，没有任何 PSCI 属性。 PSCI 集合（<xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType>、<xref:System.Xml.Schema.XmlSchema.Attributes%2A?displayProperty=nameWithType>、<xref:System.Xml.Schema.XmlSchema.SchemaTypes%2A?displayProperty=nameWithType> 等）提供对其全局元素、属性和类型及其 PSCI 属性的直接访问。  
   

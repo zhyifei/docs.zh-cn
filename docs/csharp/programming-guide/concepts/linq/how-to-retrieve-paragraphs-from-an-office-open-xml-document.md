@@ -2,12 +2,12 @@
 title: 如何：从 Office Open XML 文档检索段落 (C#)
 ms.date: 07/20/2015
 ms.assetid: cc2687cf-d648-451e-88ac-3847c6c967c8
-ms.openlocfilehash: 5b0919b7c5c40444587a18c0087109af8172ebb1
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 352389467bbe3c2a5e7364b081539bad8efc3f3b
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66486457"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69592618"
 ---
 # <a name="how-to-retrieve-paragraphs-from-an-office-open-xml-document-c"></a>如何：从 Office Open XML 文档检索段落 (C#)
 本主题提供一个示例，该示例打开一个 Office Open XML 文档，然后检索文档中所有段落所构成的集合。  
@@ -19,7 +19,7 @@ ms.locfileid: "66486457"
   
  此示例使用一个名为 `StringConcatenate` 的扩展方法，示例中也提供了该方法。  
   
- 有关对此示例的工作原理进行说明的详细教程，请参阅 [XML 的纯功能转换 (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)。  
+ 有关对此示例的工作原理进行说明的详细教程，请参阅 [XML 的纯功能转换 (C#)](./introduction-to-pure-functional-transformations.md)。  
   
  本示例使用 WindowsBase 程序集中的类。 它使用 <xref:System.IO.Packaging?displayProperty=nameWithType> 命名空间中的类型。  
   
@@ -163,7 +163,7 @@ class Program
 }  
 ```  
   
- 当针对[创建 Source Office Open XML 文档 (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md) 中说明的示例 Open XML 文档运行时，此示例生成以下输出：  
+ 当针对[创建 Source Office Open XML 文档 (C#)](./creating-the-source-office-open-xml-document.md) 中说明的示例 Open XML 文档运行时，此示例生成以下输出：  
   
 ```  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  

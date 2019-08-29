@@ -11,12 +11,12 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], visual inheritance
 - Windows Forms, inheritance
 ms.assetid: 01966086-3142-450e-8210-3fd4cb33f591
-ms.openlocfilehash: 6fd504269ae9afbfd02b58276582a644674e1e0f
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 32df98852b28963ffb748895156f7d9977c74b92
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040321"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70046141"
 ---
 # <a name="walkthrough-demonstrating-visual-inheritance"></a>演练：演示可视化继承
 
@@ -35,19 +35,19 @@ ms.locfileid: "69040321"
 > [!CAUTION]
 > 并非所有控件都支持从基窗体执行 Visual 继承。 以下控件不支持本演练中描述的情景：
 >
->  <xref:System.Windows.Forms.WebBrowser>
+> - <xref:System.Windows.Forms.WebBrowser>
 >
->  <xref:System.Windows.Forms.ToolStrip>
+> - <xref:System.Windows.Forms.ToolStrip>
 >
->  <xref:System.Windows.Forms.ToolStripPanel>
+> - <xref:System.Windows.Forms.ToolStripPanel>
 >
->  <xref:System.Windows.Forms.TableLayoutPanel>
+> - <xref:System.Windows.Forms.TableLayoutPanel>
 >
->  <xref:System.Windows.Forms.FlowLayoutPanel>
+> - <xref:System.Windows.Forms.FlowLayoutPanel>
 >
->  <xref:System.Windows.Forms.DataGridView>
+> - <xref:System.Windows.Forms.DataGridView>
 >
->  无论使用何种修饰符（`private``protected` 或 `public`），继承的窗体中的这些控件始终为只读。
+> 无论使用何种修饰符（`private``protected` 或 `public`），继承的窗体中的这些控件始终为只读。
 
 ## <a name="create-a-class-library-project-containing-a-base-form"></a>创建包含基窗体的类库项目
 
@@ -61,7 +61,7 @@ ms.locfileid: "69040321"
 
 5. 从 "**文件**" 菜单中, 选择 "**全部保存**" 以将项目和文件保存到默认位置。
 
- 接下来的两步是将按钮添加至基窗体。 为了演示 visual 继承，请通过设置按钮的 `Modifiers` 属性为它们指定不同的访问级别。
+接下来的两步是将按钮添加至基窗体。 为了演示 visual 继承，请通过设置按钮的 `Modifiers` 属性为它们指定不同的访问级别。
 
 ## <a name="add-a-button-that-inheritors-of-the-base-form-can-modify"></a>添加一个按钮, 使基窗体的继承者可以修改
 
@@ -135,7 +135,7 @@ ms.locfileid: "69040321"
 
 5. 如果在设计器中打开了继承窗体 (Form2), 则双击该窗体 (**Form2**) (如果尚未打开)。
 
-     在设计器中, 继承的按钮具有符号 (![Visual Basic 继承符号的屏幕截图。](./media/walkthrough-demonstrating-visual-inheritance/visual-basic-inheritance-glyph.gif)), 指示它们是继承的。
+    在设计器中, 继承的按钮具有符号 (![Visual Basic 继承符号的屏幕截图。](./media/walkthrough-demonstrating-visual-inheritance/visual-basic-inheritance-glyph.gif)), 指示它们是继承的。
 
 6. 选择 " **Hello** " 按钮, 并观察调整大小控点。 由于此按钮受保护，继承者可以对其进行移动、调整大小、更改标题和进行其他修改。
 

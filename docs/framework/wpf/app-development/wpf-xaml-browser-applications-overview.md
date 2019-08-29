@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: 8017895450c989683b7fb246c9c1fb7c23fa9e5e
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 230a25ad16c91f7812e5d92203ba204ca0abc099
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69611471"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70037749"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>WPF XAML 浏览器应用程序概述
 <a name="introduction"></a>
@@ -40,7 +40,7 @@ ms.locfileid: "69611471"
  运行 XBAP 项目时，它将在浏览器窗口而不是在单独的窗口中打开。 当你从 Visual Studio 调试 XBAP 时, 应用程序将以 Internet 区域权限运行, 因此, 如果超出这些权限, 则会引发安全异常。 有关详细信息，请参阅[安全性](../security-wpf.md)和 [WPF 部分信任安全性](../wpf-partial-trust-security.md)。  
   
 > [!NOTE]
->  如果不使用 Visual Studio 进行开发, 或想要了解有关项目文件的详细信息, 请参阅[生成 WPF 应用程序](building-a-wpf-application-wpf.md)。  
+> 如果不使用 Visual Studio 进行开发, 或想要了解有关项目文件的详细信息, 请参阅[生成 WPF 应用程序](building-a-wpf-application-wpf.md)。  
   
 <a name="deploying_a_xbap"></a>   
 ## <a name="deploying-an-xbap"></a>部署 XBAP  
@@ -123,7 +123,7 @@ ms.locfileid: "69611471"
      重启 Internet Explorer 后更改才会生效。  
   
 > [!CAUTION]
->  在 Internet Explorer 中启用活动内容可能会给计算机带来风险。 如果您不想更改您的 Internet Explorer 安全设置, 则可以从服务器启动 HTML 页面, 并将 Visual Studio 调试器附加到该进程。  
+> 在 Internet Explorer 中启用活动内容可能会给计算机带来风险。 如果您不想更改您的 Internet Explorer 安全设置, 则可以从服务器启动 HTML 页面, 并将 Visual Studio 调试器附加到该进程。  
   
 <a name="xbap_security_considerations"></a>   
 ## <a name="xbap-security-considerations"></a>XBAP 安全注意事项  
@@ -174,7 +174,7 @@ ms.locfileid: "69611471"
 |Internet|失败，并显示“未授予信任”|使用证书对 XBAP 进行签名。|  
   
 > [!NOTE]
->  上表中描述的行为针对的是不遵循 ClickOnce 受信任部署模型的完全信任的 XBAP。  
+> 上表中描述的行为针对的是不遵循 ClickOnce 受信任部署模型的完全信任的 XBAP。  
   
  建议使用 ClickOnce 受信任部署模型部署完全信任的 XBAP。 此模型允许自动向 XBAP 授予完全信任（与安全区域无关），这样用户便不会收到提示。 作为此模型的一部分，必须使用来自受信任发行者提供的证书来对应用程序进行签名。 有关详细信息，请参阅[受信任的应用程序部署概述](/visualstudio/deployment/trusted-application-deployment-overview)和 [Introduction to Code Signing](https://go.microsoft.com/fwlink/?LinkId=166327)（代码签名简介）。  
   

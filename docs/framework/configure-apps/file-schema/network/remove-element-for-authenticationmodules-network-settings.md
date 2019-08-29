@@ -10,15 +10,15 @@ helpviewer_keywords:
 - <remove> element, authenticationModules
 - authenticationModules, remove element
 ms.assetid: abf79949-b05c-465a-b51c-bbeda9a74173
-ms.openlocfilehash: 0eb3ef7db422d5cbbe70bd5633798b8d3787452d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7f923ce73760fa42a2c435d346f9d1097a5ed82f
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705033"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664042"
 ---
-# <a name="remove-element-for-authenticationmodules-network-settings"></a>\<删除 > authenticationModules （网络设置） 的
-从应用程序中删除身份验证模块。  
+# <a name="remove-element-for-authenticationmodules-network-settings"></a>\<删除 authenticationModules 的 > 元素 (网络设置)
+从应用程序中移除身份验证模块。  
   
  \<configuration>  
 \<system.net>  
@@ -49,18 +49,18 @@ ms.locfileid: "61705033"
   
 |**元素**|**说明**|  
 |-----------------|---------------------|  
-|[authenticationModules](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|指定使用网络请求进行身份验证模块。|  
+|[authenticationModules](authenticationmodules-element-network-settings.md)|指定用于对网络请求进行身份验证的模块。|  
   
 ## <a name="remarks"></a>备注  
- `remove`元素中删除配置文件中或在配置层次结构中较高级别上前面定义的身份验证模块。  
+ `remove`元素删除之前在配置文件或配置层次结构的较高级别中定义的身份验证模块。  
   
- 值为`type`属性应为有效的类名。  
+ `type`特性的值应为有效的类名。  
   
 ## <a name="configuration-files"></a>配置文件  
  此元素可在应用程序配置文件或计算机配置文件 (Machine.config) 中使用。  
   
 ## <a name="example"></a>示例  
- 以下示例删除身份验证模块。  
+ 下面的示例将删除身份验证模块。  
   
 ```xml  
 <configuration>  
@@ -76,4 +76,4 @@ ms.locfileid: "61705033"
 
 - <xref:System.Net.IAuthenticationModule>
 - <xref:System.Net.AuthenticationManager>
-- [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [网络设置架构](index.md)

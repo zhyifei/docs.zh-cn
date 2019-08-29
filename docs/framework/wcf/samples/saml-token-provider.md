@@ -2,23 +2,23 @@
 title: SAML 令牌提供程序
 ms.date: 03/30/2017
 ms.assetid: eb16e5e2-4c8d-4f61-a479-9c965fcec80c
-ms.openlocfilehash: 19781b6b162034fb45587103d2a4af6684ab0fe1
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: 4a6ee808d224696d4fc21337cc558fcc6218e71d
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67487511"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044765"
 ---
 # <a name="saml-token-provider"></a>SAML 令牌提供程序
-本示例演示如何实现一个自定义客户端 SAML 令牌提供程序。 Windows Communication Foundation (WCF) 中的令牌提供程序来提供凭据的安全基础结构。 令牌提供程序一般检查目标并颁发相应的凭据，以使安全基础结构能够确保消息的安全。 WCF 附带了默认凭据管理器令牌提供程序。 WCF 还附带 CardSpace 令牌提供程序。 自定义令牌提供程序在下列情况下有用：
+本示例演示如何实现一个自定义客户端 SAML 令牌提供程序。 Windows Communication Foundation (WCF) 中的令牌提供程序用于向安全基础结构提供凭据。 令牌提供程序一般检查目标并颁发相应的凭据，以使安全基础结构能够确保消息的安全。 WCF 附带了默认的凭据管理器令牌提供程序。 WCF 还附带了一个 CardSpace 令牌提供程序。 自定义令牌提供程序在下列情况下有用：
 
 - 存在不能由这些令牌提供程序操作的凭据存储。
 
-- 如果你想要提供您自己自定义机制，用于转换从点凭据时用户提供到 WCF 客户端框架时使用的凭据的详细信息。
+- 如果希望提供自己的自定义机制, 以便在 WCF 客户端框架使用凭据时, 从用户提供详细信息时开始转换凭据。
 
 - 要生成一个自定义令牌。
 
- 此示例演示如何生成自定义令牌提供程序允许从使用 WCF 客户端框架外部获取的 SAML 令牌。
+ 此示例演示如何生成一个自定义令牌提供程序, 该提供程序允许使用从 WCF 客户端框架之外获取的 SAML 令牌。
 
  总之，此示例将演示如下内容：
 
@@ -111,7 +111,7 @@ ms.locfileid: "67487511"
 </system.serviceModel>
 ```
 
- 以下步骤演示如何开发自定义 SAML 令牌提供程序并将其与 WCF 集成： 安全框架：
+ 以下步骤演示如何开发自定义 SAML 令牌提供程序并将其与 WCF: security framework 集成:
 
 1. 编写一个自定义 SAML 令牌提供程序。
 
@@ -353,25 +353,25 @@ ms.locfileid: "67487511"
 
 #### <a name="to-set-up-and-build-the-sample"></a>设置和生成示例
 
-1. 请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。
+1. 确保已对[Windows Communication Foundation 示例执行了一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。
 
-2. 若要生成解决方案，请按照中的说明[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)。
+2. 若要生成解决方案, 请按照[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。
 
 > [!NOTE]
->  如果使用 Svcutil.exe 为此示例重新生成配置，请确保在客户端配置中修改终结点名称以与客户端代码匹配。
+> 如果使用 Svcutil.exe 为此示例重新生成配置，请确保在客户端配置中修改终结点名称以与客户端代码匹配。
 
 #### <a name="to-run-the-sample-on-the-same-computer"></a>在同一计算机上运行示例
 
-1. 从示例安装文件夹内使用管理员特权运行 Visual Studio 2012 命令提示符中运行 Setup.bat。 这将安装运行示例所需的所有证书。
+1. 在 Visual Studio 2012 命令提示符下, 使用管理员权限运行安装程序 .bat。 这将安装运行示例所需的所有证书。
 
     > [!NOTE]
-    >  Setup.bat 批处理文件旨在为从 Visual Studio 2012 命令提示运行。 在 Visual Studio 2012 命令提示符点设置为包含 Setup.bat 脚本所需的可执行文件的目录路径环境变量。  
+    > 设置 bat 批处理文件设计为在 Visual Studio 2012 命令提示符下运行。 在 Visual Studio 2012 命令提示符中设置的 PATH 环境变量指向包含安装程序 bat 脚本所需的可执行文件的目录。  
   
 2. 启动 service\bin 中的 Service.exe。  
   
 3. 启动 \client\bin 中的 Client.exe。 客户端活动将显示在客户端控制台应用程序上。  
   
-4. 如果客户端和服务能够进行通信，请参见[WCF 示例的故障排除提示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
+4. 如果客户端和服务无法进行通信, 请参阅[WCF 示例的故障排除提示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
   
 #### <a name="to-run-the-sample-across-computers"></a>跨计算机运行示例  
   
@@ -379,7 +379,7 @@ ms.locfileid: "67487511"
   
 2. 将服务程序文件复制到服务计算机上的服务目录。 另外，将 Setup.bat 和 Cleanup.bat 文件复制到服务计算机上。  
   
-3. 必须具有一个其主题名称中包含计算机的完全限定域名的服务器证书。 必须更新 Service.exe.config 文件以反映此新证书名称。 可以通过修改 Setup.bat 批处理文件来创建服务器证书。 请注意，在开发人员命令提示符下使用管理员特权打开 Visual Studio 窗口必须在运行 setup.bat 文件。 必须将 `%SERVER_NAME%` 变量设置为用于承载服务的计算机的完全限定的主机名。  
+3. 必须具有一个其主题名称中包含计算机的完全限定域名的服务器证书。 必须更新 Service.exe.config 文件以反映此新证书名称。 可以通过修改 Setup.bat 批处理文件来创建服务器证书。 请注意, 必须在使用管理员特权打开的 Visual Studio 窗口开发人员命令提示中运行 setup.exe 文件。 必须将 `%SERVER_NAME%` 变量设置为用于承载服务的计算机的完全限定的主机名。  
   
 4. 将服务器证书复制到客户端的 CurrentUser-TrustedPeople 存储中。 如果服务器证书是由客户端受信任的颁发者颁发，则不需要执行此步骤。  
   
@@ -393,7 +393,7 @@ ms.locfileid: "67487511"
   
 9. 在客户端计算机上，从命令提示窗口中启动 `Client.exe`。  
   
-10. 如果客户端和服务能够进行通信，请参见[WCF 示例的故障排除提示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
+10. 如果客户端和服务无法进行通信, 请参阅[WCF 示例的故障排除提示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
   
 #### <a name="to-clean-up-after-the-sample"></a>运行示例后进行清理  
   

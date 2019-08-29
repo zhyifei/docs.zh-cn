@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 683a71b27d3e3dd1c0db4e49c2c188ccad0fb6d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2881ef5b4cbc5850fde64fc68640021ebf42df43
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54607116"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666467"
 ---
 # <a name="implementing-a-dispose-method"></a>实现 Dispose 方法
 
@@ -60,7 +60,7 @@ ms.locfileid: "54607116"
   
 ### <a name="the-disposeboolean-overload"></a>Dispose(Boolean) 重载
 
-在第二个重载中，disposing 参数是 <xref:System.Boolean>，用于指明方法调用是来自 <xref:System.IDisposable.Dispose%2A> 方法（值为 `true`），还是来自终结器（值为 `false`）。  
+在第二个重载中，disposing  参数是 <xref:System.Boolean>，用于指明方法调用是来自 <xref:System.IDisposable.Dispose%2A> 方法（值为 `true`），还是来自终结器（值为 `false`）。  
   
 方法的主体包含两个代码块：  
   
@@ -72,7 +72,7 @@ ms.locfileid: "54607116"
   
   **占用大量内存或使用短缺资源的托管对象。** 在 `Dispose` 方法中显式释放这些对象的速度快于垃圾回收器不确定性回收它们的速度。  
   
-如果方法调用来自终结器（即当 disposing 为 `false`），则仅执行释放非托管资源的代码。 由于未定义垃圾回收器在终止期间销毁托管对象的顺序，因此使用 `Dispose` 的值调用此 `false` 重载将阻止终结器尝试释放可能已被回收的托管资源。  
+如果方法调用来自终结器（即当 disposing  为 `false`），则仅执行释放非托管资源的代码。 由于未定义垃圾回收器在终止期间销毁托管对象的顺序，因此使用 `Dispose` 的值调用此 `false` 重载将阻止终结器尝试释放可能已被回收的托管资源。  
   
 ## <a name="implementing-the-dispose-pattern-for-a-base-class"></a>实现基类的释放模式
 
@@ -101,7 +101,7 @@ ms.locfileid: "54607116"
 [!code-vb[System.IDisposable#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.idisposable/vb/base2.vb#5)]  
   
 > [!NOTE]
-> 在 C# 中，通过定义[析构函数](~/docs/csharp/programming-guide/classes-and-structs/destructors.md)重写 <xref:System.Object.Finalize%2A?displayProperty=nameWithType>。  
+> 在 C# 中，通过定义[析构函数](../../csharp/programming-guide/classes-and-structs/destructors.md)重写 <xref:System.Object.Finalize%2A?displayProperty=nameWithType>。  
   
 ## <a name="implementing-the-dispose-pattern-for-a-derived-class"></a>实现派生类的释放模式
 
@@ -125,7 +125,7 @@ ms.locfileid: "54607116"
 [!code-vb[System.IDisposable#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.idisposable/vb/derived2.vb#6)]  
   
 > [!NOTE]
-> 在 C# 中，通过定义[析构函数](~/docs/csharp/programming-guide/classes-and-structs/destructors.md)重写 <xref:System.Object.Finalize%2A?displayProperty=nameWithType>。  
+> 在 C# 中，通过定义[析构函数](../../csharp/programming-guide/classes-and-structs/destructors.md)重写 <xref:System.Object.Finalize%2A?displayProperty=nameWithType>。  
   
 <a name="SafeHandles"></a>   
 ## <a name="using-safe-handles"></a>使用安全句柄

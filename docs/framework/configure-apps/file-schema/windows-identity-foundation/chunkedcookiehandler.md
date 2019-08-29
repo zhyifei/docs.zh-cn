@@ -3,15 +3,15 @@ title: <chunkedCookieHandler>
 ms.date: 03/30/2017
 ms.assetid: 7220de45-1d14-4aec-a29e-4a2ea8ac861f
 author: BrucePerlerMS
-ms.openlocfilehash: d9c81d5de7bea343f0d67fa00037763fbae7b8c5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b3b4cf0d7c2748079af7a94534622b1dbadd3ab5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61667335"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941893"
 ---
 # <a name="chunkedcookiehandler"></a>\<chunkedCookieHandler>
-配置<xref:System.IdentityModel.Services.ChunkedCookieHandler>。 此元素仅可能存在如果`mode`属性的`<cookieHandler>`元素是"Default"块"。  
+<xref:System.IdentityModel.Services.ChunkedCookieHandler>配置。 仅当`mode` `<cookieHandler>`元素的属性为 "默认值" 或 "分块" 时, 此元素才能存在。  
   
  \<system.identityModel.services>  
 \<federationConfiguration>  
@@ -38,24 +38,24 @@ ms.locfileid: "61667335"
   
 |特性|描述|  
 |---------------|-----------------|  
-|chunkSize|最大大小，以字符为单位的任何一个 HTTP cookie 的 HTTP cookie 数据。 您必须是块区大小调整时请小心。 Web 浏览器 cookie 和每个域允许数量的大小具有不同的限制。 例如，原始 Netscape 规范规定这些限制：将总 300 cookie，cookie 标头 （包括元数据，而不仅仅是 cookie 值），每 4096 字节数和每个域的 20 cookie。 默认值为 2000年。 必需。|  
+|chunkSize|任何一个 HTTP cookie 的 HTTP cookie 数据的最大大小 (字符数)。 调整块区大小时必须小心谨慎。 Web 浏览器对 cookie 和每个域允许的数量有不同的限制。 例如, 原 Netscape 规范规定这些限制:300 cookie 总数、每个 cookie 标头4096个字节 (包括元数据, 而不仅仅是 cookie 值) 和每个域20个 cookie。 默认值为2000。 必需。|  
   
 ### <a name="child-elements"></a>子元素  
- None  
+ 无  
   
 ### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<cookieHandler>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/cookiehandler.md)|配置<xref:System.IdentityModel.Services.CookieHandler>的<xref:System.IdentityModel.Services.SessionAuthenticationModule>(SAM) 用于读取和写入 cookie。|  
+|[\<cookieHandler>](cookiehandler.md)|<xref:System.IdentityModel.Services.CookieHandler> 配置(SAM)用于读取<xref:System.IdentityModel.Services.SessionAuthenticationModule>和写入 cookie 的。|  
   
 ## <a name="remarks"></a>备注  
- 当指定<xref:System.IdentityModel.Services.ChunkedCookieHandler>通过设置`mode`的属性`<cookieHandler>`为"Default"或"Chunked"元素，可以指定块的大小的 cookie 处理程序用来读取和写入 cookie 包括`<chunkedCookieHandler>`子元素和设置其`chunkSize`属性。 如果`<chunkedCookieHandler>`元素不存在，则使用默认区块大小的 2000 个字节。 不能为此元素时指定`mode`属性设置为"自定义"。  
+ <xref:System.IdentityModel.Services.ChunkedCookieHandler>通过`<cookieHandler>` `<chunkedCookieHandler>`将元素的属性设置为"默认值"或"分块"来指定时,可以指定cookie处理程序用于通过包括子元素来读取和写入cookie的块区大小,`mode`设置其`chunkSize`属性。 如果该`<chunkedCookieHandler>`元素不存在, 则使用默认的块区大小 (2000 字节)。 当特性设置为 "Custom" `mode`时, 不能指定此元素。  
   
- `<chunkedCookieHandler>`元素表示由<xref:System.IdentityModel.Services.ChunkedCookieHandlerElement>类。  
+ 元素由<xref:System.IdentityModel.Services.ChunkedCookieHandlerElement>类表示。 `<chunkedCookieHandler>`  
   
 ## <a name="example"></a>示例  
- 下面的示例配置中的 3000 个字节块写入 cookie chunked 的 cookie 处理程序。  
+ 下面的示例配置一个分块 cookie 处理程序, 该处理程序以3000字节的块写入 cookie。  
   
 ```xml  
 <cookieHandler mode="Chunked">  

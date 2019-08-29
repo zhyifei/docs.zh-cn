@@ -10,18 +10,18 @@ helpviewer_keywords:
 - Windows Forms, printing text
 - printing [Windows Forms], text
 ms.assetid: 362427f8-03d4-4826-b49f-60ab066ad322
-ms.openlocfilehash: 07e1bb4bcdcaa99635db293f23e5ecb689b6063e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: bd858279a4d8a3509a91bcd1c62fb1f61d6d2bb9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64621330"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69931794"
 ---
 # <a name="how-to-print-a-multi-page-text-file-in-windows-forms"></a>如何：打印 Windows 窗体中的多页文本文件
 基于 Windows 的应用程序打印文本是很常见的。 <xref:System.Drawing.Graphics> 类提供将对象（图形或文本）绘制到设备（如屏幕或打印机）的方法。  
   
 > [!NOTE]
->  <xref:System.Windows.Forms.TextRenderer> 的 <xref:System.Windows.Forms.TextRenderer.DrawText%2A> 方法不支持打印。 如以下代码示例所示，应始终使用 <xref:System.Drawing.Graphics> 的 <xref:System.Drawing.Graphics.DrawString%2A> 方法来绘制文本以供打印。  
+> <xref:System.Windows.Forms.TextRenderer> 的 <xref:System.Windows.Forms.TextRenderer.DrawText%2A> 方法不支持打印。 如以下代码示例所示，应始终使用 <xref:System.Drawing.Graphics> 的 <xref:System.Drawing.Graphics.DrawString%2A> 方法来绘制文本以供打印。  
   
 ### <a name="to-print-text"></a>打印文本  
   
@@ -58,7 +58,7 @@ ms.locfileid: "64621330"
   
 - 对 System、System.Windows.Forms 和 System.Drawing 程序集的引用。  
   
-- Visual Basic 或 Visual C# 生成命令行中的此示例的信息，请参阅[从命令行生成](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或[命令行上使用 csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 也可以通过将代码粘贴到新的项目中生成此示例在 Visual Studio 中。  
+- 有关从 Visual Basic 或视觉对象C#的命令行生成此示例的信息, 请参阅[从命令行生成](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或[通过 csc 生成命令行](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 还可以通过将代码粘贴到新项目中, 在 Visual Studio 中生成此示例。  
   
 ## <a name="see-also"></a>请参阅
 

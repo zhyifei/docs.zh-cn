@@ -6,12 +6,12 @@ helpviewer_keywords:
 - My.Application.Log object, filtering output
 - application event logs, output filtering
 ms.assetid: 2c0a457a-38a4-49e1-934d-a51320b7b4ca
-ms.openlocfilehash: 00e9eeb3227ceef54f899129847bfb74a370c51c
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: af1dc3e1ce22112d76ad566873f40c1c2ac05c9d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591285"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968685"
 ---
 # <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a>演练：筛选 My.Application.Log 输出 (Visual Basic)
 本演练演示如何更改对 `My.Application.Log` 对象的默认日志筛选，以控制哪些信息可从 `Log` 对象传递到侦听器以及哪些信息可由侦听器编写。 生成应用程序后仍可以更改日志记录行为，因为配置信息存储在应用程序的配置文件中。  
@@ -31,7 +31,7 @@ ms.locfileid: "65591285"
   
 4. 在调试器中运行该应用程序。  
   
-5. 按“Button1”。  
+5. 按“Button1”。   
   
      应用程序将向应用程序的调试输出和日志文件中写入以下信息。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "65591285"
      有关如何查看应用程序的调试输出窗口的信息，请参阅[输出窗口](/visualstudio/ide/reference/output-window)。 有关应用程序的日志文件的位置的信息，请参阅[演练：确定 My.Application.Log 在哪里写入信息](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)。  
   
     > [!NOTE]
-    >  默认情况下，应用程序关闭时将刷新日志文件输出。  
+    > 默认情况下，应用程序关闭时将刷新日志文件输出。  
   
      在上面的示例中，对 <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A> 方法的第二次调用和对 <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A> 方法的调用会产生日志输出，而对 `WriteEntry` 方法的第一次和最后一次调用则不会。 这是因为 `WriteEntry` 和 `WriteException` 的严重级别为“信息”和“错误”，而 `My.Application.Log` 对象的默认日志筛选支持这两种级别。 但是，不允许严重级别为“开始”和“停止”的事件生成日志输出。  
   
@@ -65,21 +65,21 @@ ms.locfileid: "65591285"
 |`Off`|阻止所有消息。|  
   
 > [!NOTE]
->  `WriteEntry` 和 `WriteException` 方法分别具有一个未指定严重级别的重载。 `WriteEntry` 重载的隐式严重级别是“信息”，`WriteException` 重载的隐式严重级别是“错误”。  
+> `WriteEntry` 和 `WriteException` 方法分别具有一个未指定严重级别的重载。 `WriteEntry` 重载的隐式严重级别是“信息”，`WriteException` 重载的隐式严重级别是“错误”。  
   
  此表说明上一示例中显示的日志输出：在 `DefaultSwitch` 默认设置为“信息”的情况下，只有对 `WriteEntry` 方法的第二次调用和对 `WriteException` 方法的调用能生成日志输出。  
   
 #### <a name="to-log-only-activity-tracing-events"></a>仅记录活动跟踪事件  
   
-1. 在“解决方案资源管理器”中右键单击 app.config，然后选择“打开”。  
+1. 在“解决方案资源管理器”中右键单击 app.config，然后选择“打开”。    
   
-     或  
+     -或-  
   
      如果其中没有 app.config 文件：  
   
-    1. 在 **“项目”** 菜单上选择 **“添加新项”**。  
+    1. 在 **“项目”** 菜单上选择 **“添加新项”** 。  
   
-    2. 在“添加新项”  对话框中，选择“应用程序配置文件” 。  
+    2. 在“添加新项”  对话框中，选择“应用程序配置文件”  。  
   
     3. 单击 **添加**。  
   
@@ -122,7 +122,7 @@ ms.locfileid: "65591285"
   
 6. 在调试器中运行该应用程序。  
   
-7. 按“Button1”。  
+7. 按“Button1”。   
   
      应用程序将向应用程序的调试输出和日志文件中写入以下信息：  
   
@@ -135,7 +135,7 @@ ms.locfileid: "65591285"
 9. 将 `value` 属性的值改回“信息”。  
   
     > [!NOTE]
-    >  `DefaultSwitch` 开关设置仅控制 `My.Application.Log`。 它不会更改 .NET Framework <xref:System.Diagnostics.Trace?displayProperty=nameWithType> 和 <xref:System.Diagnostics.Debug?displayProperty=nameWithType> 类的行为方式。  
+    > `DefaultSwitch` 开关设置仅控制 `My.Application.Log`。 它不会更改 .NET Framework <xref:System.Diagnostics.Trace?displayProperty=nameWithType> 和 <xref:System.Diagnostics.Debug?displayProperty=nameWithType> 类的行为方式。  
   
 ## <a name="individual-filtering-for-myapplicationlog-listeners"></a>对 My.Application.Log 侦听器的单独筛选  
  上面的示例演示如何更改对所有 `My.Application.Log` 输出的筛选。 此示例演示如何筛选单个日志侦听器。 默认情况下，应用程序有两个可写入应用程序的调试输出和日志文件的侦听器。  
@@ -146,19 +146,19 @@ ms.locfileid: "65591285"
   
 #### <a name="to-log-only-activity-tracing-events"></a>仅记录活动跟踪事件  
   
-1. 在“解决方案资源管理器”中右键单击 app.config，然后选择“打开”。  
+1. 在“解决方案资源管理器”中右键单击 app.config，然后选择“打开”。    
   
-     或  
+     -或-  
   
      如果其中没有 app.config 文件：  
   
-    1. 在 **“项目”** 菜单上选择 **“添加新项”**。  
+    1. 在 **“项目”** 菜单上选择 **“添加新项”** 。  
   
-    2. 在“添加新项”  对话框中，选择“应用程序配置文件” 。  
+    2. 在“添加新项”  对话框中，选择“应用程序配置文件”  。  
   
     3. 单击 **添加**。  
   
-2. 在“解决方案资源管理器”中右键单击 app.config。 选择“打开”。  
+2. 在“解决方案资源管理器”中右键单击 app.config。  选择“打开”。   
   
 3. 找到 `<listeners>` 部分，该部分位于 `name` 属性为“DefaultSource”的 `<source>` 部分中，后者位于 `<sources>` 部分中。 `<sources>` 部分位于 `<system.diagnostics>` 部分中，后者位于顶级 `<configuration>` 部分中。  
   
@@ -231,7 +231,7 @@ ms.locfileid: "65591285"
   
 8. 在调试器中运行该应用程序。  
   
-9. 按“Button1”。  
+9. 按“Button1”。   
   
      应用程序将以下信息写入应用程序的日志文件：  
   

@@ -16,33 +16,33 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 37f1f6055ec8fa68fe804780d2893d20c978e6bd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 277b93267f0537c8e499a8d8f3b456c4396a975c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61663736"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966341"
 ---
 # <a name="imetadataerror-interface"></a>IMetaDataError 接口
-提供回调机制，用于在元数据合并期间报告错误。  
+提供用于在元数据合并期间报告错误的回调机制。  
   
 > [!NOTE]
->  `IMetaDataError`接口必须由客户端实现。  
+> `IMetaDataError`接口必须由客户端实现。  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|[OnError 方法](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-onerror-method.md)|提供元数据合并过程中发生的错误的通知。|  
+|[OnError 方法](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-onerror-method.md)|提供在元数据合并期间发生的错误的通知。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **标头：** Cor  
   
- **库：** 用作 MsCorEE.dll 中的资源  
+ **类库**用作 Mscoree.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

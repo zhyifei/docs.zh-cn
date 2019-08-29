@@ -2,20 +2,20 @@
 title: 使用纯函数重构 (C#)
 ms.date: 07/20/2015
 ms.assetid: a3416a45-9e12-4e4a-9747-897f06eef510
-ms.openlocfilehash: 093374c848a9792d8c184ddc210bbcc8171d3374
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: d1c4b1fc59e52fbd72dec1ee0e73e7198a083868
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66483996"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69591320"
 ---
 # <a name="refactoring-using-a-pure-function-c"></a>使用纯函数重构 (C#)
-下面的示例使用一个纯函数对前面的示例[使用扩展方法重构 (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-using-an-extension-method.md) 进行重构。在本示例中，查找段落文本的代码将移至纯静态方法 `ParagraphText` 中。  
+下面的示例使用一个纯函数对前面的示例[使用扩展方法重构 (C#)](./refactoring-using-an-extension-method.md) 进行重构。在本示例中，查找段落文本的代码将移至纯静态方法 `ParagraphText` 中。  
   
 ## <a name="example"></a>示例  
  本示例处理一个 WordprocessingML 文档，它从 WordprocessingML 文档中检索段落节点。 它还标识每个段落的样式。 本示例以本教程中前面的一些示例为基础构建。 下面代码中的注释标识出了重构的代码。  
   
- 有关创建此示例的源文档的说明，请参阅[创建源 Office Open XML 文档 (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)。  
+ 有关创建此示例的源文档的说明，请参阅[创建源 Office Open XML 文档 (C#)](./creating-the-source-office-open-xml-document.md)。  
   
  本示例使用 WindowsBase 程序集中的类。 它使用 <xref:System.IO.Packaging?displayProperty=nameWithType> 命名空间中的类型。  
   
@@ -177,10 +177,10 @@ StyleName:Code >Hello World<
 ### <a name="next-steps"></a>后续步骤  
  下面的示例演示如何将 XML 投影到一个不同的形状：  
   
-- [对不同形状的 XML 进行投影 (C#)](../../../../csharp/programming-guide/concepts/linq/projecting-xml-in-a-different-shape.md)  
+- [对不同形状的 XML 进行投影 (C#)](./projecting-xml-in-a-different-shape.md)  
   
 ## <a name="see-also"></a>请参阅
 
-- [教程：操作 WordprocessingML 文档中的内容 (C#)](../../../../csharp/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md)
-- [使用扩展方法重构 (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)
-- [重构为纯函数 (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+- [教程：操作 WordprocessingML 文档中的内容 (C#)](./shape-of-wordprocessingml-documents.md)
+- [使用扩展方法重构 (C#)](./refactoring-using-an-extension-method.md)
+- [重构为纯函数 (C#)](./refactoring-into-pure-functions.md)

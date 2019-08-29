@@ -17,28 +17,28 @@ helpviewer_keywords:
 - downloading Internet resources, connections
 - ServicePointManager class, about ServicePointManager class
 ms.assetid: 9b3d3de7-189f-4f7d-81ae-9c29c441aaaa
-ms.openlocfilehash: 9c434ce0f5934509489a7deeced9e9e579d9cf7a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 2b7b54ab569a3f03363b2f30bf595c2087b9fe70
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59152901"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963956"
 ---
 # <a name="managing-connections"></a>管理连接
 使用 HTTP 连接到数据资源的应用程序可使用 .NET Framework 的 <xref:System.Net.ServicePoint> 和 <xref:System.Net.ServicePointManager> 类管理与 Internet 的连接并有助于实现最优规模和最佳性能。  
   
- ServicePoint 类给应用程序提供了终结点，应用程序连接到终结点即可访问 Internet 资源。 每个 ServicePoint 都包含信息，该信息有助于通过共享连接之间的优化信息改进性能，优化与 Internet 服务器的连接。  
+ ServicePoint  类给应用程序提供了终结点，应用程序连接到终结点即可访问 Internet 资源。 每个 ServicePoint 都包含信息，该信息有助于通过共享连接之间的优化信息改进性能，优化与 Internet 服务器的连接  。  
   
- 每个 ServicePoint 都由统一资源标识符 (URI) 标识，并根据方案标识符和 URI 的主机片段分类。 例如，将由同一 ServicePoint 实例提供对 URI `http://www.contoso.com/index.htm` 和 `http://www.contoso.com/news.htm?date=today` 的请求，因为它们具有相同的方案标识符片段 (http) 和主机片段(`www.contoso.com`)。 如果应用程序已具有与服务器 `www.contoso.com` 的持久连接，它使用该连接检索两个请求，避免创建两个连接。  
+ 每个 ServicePoint 都由统一资源标识符 (URI) 标识，并根据方案标识符和 URI 的主机片段分类  。 例如，将由同一 ServicePoint 实例提供对 URI `http://www.contoso.com/index.htm` 和 `http://www.contoso.com/news.htm?date=today` 的请求，因为它们具有相同的方案标识符片段 (http) 和主机片段(`www.contoso.com`)  。 如果应用程序已具有与服务器 `www.contoso.com` 的持久连接，它使用该连接检索两个请求，避免创建两个连接。  
   
- ServicePointManager 是管理 ServicePoint 实例的创建和析构的静态类。 如果应用程序请求一个不在现有  ServicePoint 实例集合里的 Internet 资源， ServicePointManager 将会创建 ServicePoint。 在 ServicePoint 实例超出最长空闲时间或现有数量超过应用程序的 ServicePoint 实例最大数量时，将销毁 ServicePoint 实例。 可通过设置 ServicePointManager 上的 <xref:System.Net.ServicePointManager.MaxServicePointIdleTime%2A> 和 <xref:System.Net.ServicePointManager.MaxServicePoints%2A> 属性，来控制默认空闲时间的最大值和 ServicePoint 实例的最大数量。  
+  ServicePointManager 是管理  ServicePoint 实例的创建和析构的静态类。 如果应用程序请求一个不在现有  ServicePoint 实例集合里的 Internet 资源，  ServicePointManager 将会创建  ServicePoint。 在 ServicePoint 实例超出最长空闲时间或现有数量超过应用程序的 ServicePoint 实例最大数量时，将销毁 ServicePoint 实例    。 可通过设置  ServicePointManager 上的 <xref:System.Net.ServicePointManager.MaxServicePointIdleTime%2A> 和 <xref:System.Net.ServicePointManager.MaxServicePoints%2A> 属性，来控制默认空闲时间的最大值和  ServicePoint 实例的最大数量。  
   
  客户端和服务器之间的连接数可能会对应用程序吞吐量产生重大影响。 默认情况下，使用 <xref:System.Net.HttpWebRequest> 类的应用程序最多使用与给定服务器的两个持久连接，但是，可以基于每个应用程序设置最大连接数。  
   
 > [!NOTE]
->  HTTP/1.1 规范将一个应用程序中的连接数限制为每个服务器两个连接。  
+> HTTP/1.1 规范将一个应用程序中的连接数限制为每个服务器两个连接。  
   
- 连接的最佳数目取决于应用程序运行的实际情况。 增加应用程序的可用连接数可能不影响应用程序性能。 要确定更多连接的影响，请在改变连接数时运行性能测试。 在应用程序初始化时改变 ServicePointManager 类上的静态 <xref:System.Net.ServicePointManager.DefaultConnectionLimit%2A> 属性，可以更改应用程序使用的连接数，如以下代码示例所示。  
+ 连接的最佳数目取决于应用程序运行的实际情况。 增加应用程序的可用连接数可能不影响应用程序性能。 要确定更多连接的影响，请在改变连接数时运行性能测试。 在应用程序初始化时改变 ServicePointManager  类上的静态 <xref:System.Net.ServicePointManager.DefaultConnectionLimit%2A> 属性，可以更改应用程序使用的连接数，如以下代码示例所示。  
   
 ```csharp  
 // Set the maximum number of connections per server to 4.  
@@ -50,7 +50,7 @@ ServicePointManager.DefaultConnectionLimit = 4;
 ServicePointManager.DefaultConnectionLimit = 4  
 ```  
   
- 更改  ServicePointManager.DefaultConnectionLimit 属性不会影响之前初始化的 ServicePoint 实例。 下面的代码演示如何将服务器 `http://www.contoso.com` 现有 ServicePoint 上的连接限制更改为存储在 `newLimit` 中的值。  
+ 更改  ServicePointManager.DefaultConnectionLimit 属性不会影响之前初始化的  ServicePoint 实例。 下面的代码演示如何将服务器 `http://www.contoso.com` 现有 ServicePoint 上的连接限制更改为存储在 `newLimit` 中的值  。  
   
 ```csharp  
 Uri uri = new Uri("http://www.contoso.com/");  

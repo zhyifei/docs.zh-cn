@@ -2,12 +2,12 @@
 title: 如何：从 XML 文件读取对象数据 (C#)
 ms.date: 07/20/2015
 ms.assetid: 6ad60d96-a4d9-48e6-a8b0-d7f6f803cafa
-ms.openlocfilehash: 2608c737744f5c0789c69147063f9ced0ffd6d9b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1d6ec71b9e408e1536063fc3d8f1badc0f38551e
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64595230"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590737"
 ---
 # <a name="how-to-read-object-data-from-an-xml-file-c"></a>如何：从 XML 文件读取对象数据 (C#)
 本示例使用 <xref:System.Xml.Serialization.XmlSerializer> 类读取之前写入 XML 文件的对象数据。  
@@ -43,7 +43,7 @@ public void ReadXML()
 ```  
   
 ## <a name="compiling-the-code"></a>编译代码  
- 将文件名称“c:\temp\SerializationOverview.xml”替换为包含序列化数据的文件的名称。 有关如何序列化数据的详细信息，请参阅[如何：将对象数据写入 XML 文件 (C#)](../../../../csharp/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)。  
+ 将文件名称“c:\temp\SerializationOverview.xml”替换为包含序列化数据的文件的名称。 有关如何序列化数据的详细信息，请参阅[如何：将对象数据写入 XML 文件 (C#)](./how-to-write-object-data-to-an-xml-file.md)。  
   
  类必须有一个公共的无参数构造函数。  
   
@@ -64,6 +64,6 @@ public void ReadXML()
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.IO.StreamWriter>
-- [如何：将对象数据写入 XML 文件 (C#)](../../../../csharp/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)
-- [序列化 (C#)](../../../../csharp/programming-guide/concepts/serialization/index.md)
-- [C# 编程指南](../../../../csharp/programming-guide/index.md)
+- [如何：将对象数据写入 XML 文件 (C#)](./how-to-write-object-data-to-an-xml-file.md)
+- [序列化 (C#)](./index.md)
+- [C# 编程指南](../../index.md)

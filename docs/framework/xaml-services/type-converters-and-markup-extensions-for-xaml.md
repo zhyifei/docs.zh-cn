@@ -8,12 +8,12 @@ helpviewer_keywords:
 - value converters for XAML [XAML Services]
 - XAML [XAML Services], service context
 ms.assetid: db07a952-05ce-4aa4-b6f9-aac7397d0326
-ms.openlocfilehash: d31d970e8e95726aa789f853ac12c4830498a743
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: dee5ec65993cf20cb57377694f61af092b0ccf26
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796830"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939694"
 ---
 # <a name="type-converters-and-markup-extensions-for-xaml"></a>XAML 的类型转换器和标记扩展
 类型转换器和标记扩展是 XAML 类型系统和 XAML 编写器用来生成对象图组件的两种技术。 尽管类型转换器和标记扩展共享一些特征，但它们在 XAML 节点流中以不同的方式表示。 在本文档集中，类型转换器、标记扩展和类似的构造有时统称为值转换器。  
@@ -45,7 +45,7 @@ ms.locfileid: "68796830"
  有关 XAML 的标记扩展实现模式的详细信息，请参阅 [Markup Extensions for XAML Overview](markup-extensions-for-xaml-overview.md)。  
   
 > [!NOTE]
->  <xref:System.Windows.Markup.MarkupExtension> 和 <xref:System.Windows.Markup.ValueSerializer> 类型都在 <xref:System.Windows.Markup> 命名空间内而不是在 <xref:System.Xaml> 命名空间内。 这并不意味着这些类型是特定于 WPF 或 Windows 窗体技术的, 否则会填充包含字符串`Windows`的 CLR 命名空间。 <xref:System.Windows.Markup.MarkupExtension> 和 <xref:System.Windows.Markup.ValueSerializer> 都在 System.Xaml 程序集中，并且没有特定的框架依赖关系。 这些类型存在于 .NET Framework 3.0 的 CLR 命名空间中, 并保留在 .NET Framework 4 的 CLR 命名空间中, 以避免破坏现有 WPF 项目中的引用。 有关详细信息，请参阅 [Types Migrated from WPF to System.Xaml](types-migrated-from-wpf-to-system-xaml.md)。  
+> <xref:System.Windows.Markup.MarkupExtension> 和 <xref:System.Windows.Markup.ValueSerializer> 类型都在 <xref:System.Windows.Markup> 命名空间内而不是在 <xref:System.Xaml> 命名空间内。 这并不意味着这些类型是特定于 WPF 或 Windows 窗体技术的, 否则会填充包含字符串`Windows`的 CLR 命名空间。 <xref:System.Windows.Markup.MarkupExtension> 和 <xref:System.Windows.Markup.ValueSerializer> 都在 System.Xaml 程序集中，并且没有特定的框架依赖关系。 这些类型存在于 .NET Framework 3.0 的 CLR 命名空间中, 并保留在 .NET Framework 4 的 CLR 命名空间中, 以避免破坏现有 WPF 项目中的引用。 有关详细信息，请参阅 [Types Migrated from WPF to System.Xaml](types-migrated-from-wpf-to-system-xaml.md)。  
   
 <a name="value_serializers"></a>   
 ## <a name="value-serializers"></a>值序列化程序  

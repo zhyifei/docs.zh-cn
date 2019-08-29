@@ -6,12 +6,12 @@ helpviewer_keywords:
 - SplitContainer control [Windows Forms], using the designer
 - multipane user interface
 ms.assetid: c3f9294d-a26c-4198-9242-f237f55f7573
-ms.openlocfilehash: f96124f7d97e733b1f0e2559320ce2e09ba5ff21
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 97888a77dfc731be591d5f0284e87f45ef7dc437
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039960"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69930168"
 ---
 # <a name="how-to-create-a-multipane-user-interface-with-windows-forms-using-the-designer"></a>如何：通过使用设计器使用 Windows 窗体创建多窗格用户界面
 在下面的过程中, 你将创建一个多窗格用户界面, 该用户界面类似于在 Microsoft Outlook 中使用的用户界面, 其中包含**文件夹**列表、**邮件**窗格和**预览**窗格。 这种方式是通过窗体的停靠控件主要实现的。
@@ -39,7 +39,7 @@ ms.locfileid: "69039960"
      此时, 如果按 F5 运行应用程序, 窗体将显示由三个部分组成的用户界面, 类似于 Microsoft Outlook。
 
     > [!NOTE]
-    >  当将鼠标指针放在<xref:System.Windows.Forms.SplitContainer>控件内的任一拆分器上方时, 可以调整内部尺寸的大小。
+    > 当将鼠标指针放在<xref:System.Windows.Forms.SplitContainer>控件内的任一拆分器上方时, 可以调整内部尺寸的大小。
 
 在应用程序开发中的这一点, 您已经创建了一个复杂的用户界面。 下一步是通过将<xref:System.Windows.Forms.TreeView>控件和<xref:System.Windows.Forms.ListView>控件连接到某种类型的数据源, 继续对应用程序本身进行编程。 有关将控件连接到数据的详细信息, 请参阅[数据绑定和 Windows 窗体](../data-binding-and-windows-forms.md)。
 

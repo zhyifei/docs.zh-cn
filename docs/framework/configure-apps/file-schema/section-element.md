@@ -10,24 +10,24 @@ helpviewer_keywords:
 ms.assetid: ec7d4110-2403-47ac-8218-499bfe9d5ddb
 author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: 64556054df2689ff758f52c7e98556997a3e9d3d
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 94f7709f4bd273515d9fcdd727354ec579c46207
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301175"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927232"
 ---
-# <a name="section-element"></a>\<部分 > 元素
+# <a name="section-element"></a>\<节 > 元素
 
-包含配置部分声明。
+包含配置节声明。
 
-[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[ **\<configSections>** ](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)   
+[ **\<configuration>** ](configuration-element.md)   
+&nbsp;&nbsp;[ **\<configSections>** ](configsections-element-for-configuration.md)   
 &nbsp;&nbsp;&nbsp;&nbsp; **\<section>**
 
-[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[ **\<configSections>** ](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<sectionGroup>** ](~/docs/framework/configure-apps/file-schema/sectiongroup-element-for-configsections.md)   
+[ **\<configuration>** ](configuration-element.md)   
+&nbsp;&nbsp;[ **\<configSections>** ](configsections-element-for-configuration.md)   
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<sectionGroup>** ](sectiongroup-element-for-configsections.md)   
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<section>**
 
 ## <a name="syntax"></a>语法
@@ -43,41 +43,41 @@ ms.locfileid: "66301175"
 
 |           | 描述 |
 | --------- | ----------- |
-| **name**  | 指定配置节的名称。 |
-| **type**  | 指定从配置文件中读取部分的配置节处理程序类的名称。 类型值具有语法"fully-qualified-section-handler-class-name，简单的程序集名称"。 简单的程序集名称是根文件名而不 *.dll*文件扩展名。 |
+| **名称**  | 指定配置节的名称。 |
+| **type**  | 指定从配置文件读取节的配置节处理程序类的名称。 类型值具有语法 "完全限定的节-名称、简单程序集名称"。 简单程序集名称是没有 *.dll*文件扩展名的根文件名。 |
 
 ## <a name="optional-attributes"></a>可选属性
 
-以下属性是仅适用于 ASP.NET 应用程序。 配置系统将忽略这些属性对于其他应用程序类型。
+以下属性仅适用于 ASP.NET 应用程序。 对于其他应用程序类型, 配置系统将忽略这些属性。
 
 |                     | 描述 |
 | ------------------- | ----------- |
-| **allowDefinition** | 指定部分可在哪个配置文件。 使用下列值之一：<br><br>**Everywhere**<br>允许使用任何配置文件中的部分。 这是默认设置。<br>**MachineOnly**<br>允许该节只能在计算机配置文件 (*Machine.config*)。<br>**MachineToApplication**<br>允许要在计算机配置文件或应用程序配置文件中使用的部分。 |
-| **allowLocation**   | 确定是否可以在使用部分 **\<位置 >** 元素。 使用下列值之一：<br><br>**true**<br>允许该节中使用 **\<位置 >** 元素。 这是默认设置。<br>**false**<br>不允许要在中使用的部分 **\<位置 >** 元素。 |
+| **allowDefinition** | 指定可在其中使用节的配置文件。 使用下列值之一：<br><br>**Everywhere**<br>允许在任何配置文件中使用节。 这是默认设置。<br>**MachineOnly**<br>允许部分仅在计算机配置文件 (*machine.config*) 中使用。<br>**MachineToApplication**<br>允许在计算机配置文件或应用程序配置文件中使用部分。 |
+| **allowLocation**   | 确定是否可以在 **\<位置 >** 元素内使用部分。 使用下列值之一：<br><br>**true**<br>允许在 **\<位置 >** 元素中使用部分。 这是默认设置。<br>**false**<br>不允许在 **\<位置 >** 元素中使用节。 |
 
 ## <a name="parent-elements"></a>父元素
 
 |     | 描述 |
 | --- | ----------- |
-| [ **\<configSections >** 元素](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | 包含配置节和命名空间声明。 |
-| [ **\<sectionGroup>** Element](~/docs/framework/configure-apps/file-schema/sectiongroup-element-for-configsections.md) | 定义配置节的命名空间。 |
+| [ **configSections>\<** 元素](configsections-element-for-configuration.md) | 包含配置节和命名空间声明。 |
+| [ **sectionGroup>\<** 元素](sectiongroup-element-for-configsections.md) | 定义配置节的命名空间。 |
 
 > [!NOTE]
-> 一个 **\<部分 >** 元素是子元素的 **\<configSections >** 或者 **\<sectionGroup >** 但不是两者。
+> 节 > 元素是 **\<configSections >** 或 **\<sectionGroup >** 的子元素, 但不能同时为两者。  **\<**
 
 ## <a name="child-elements"></a>子元素
 
-None
+无
 
 ## <a name="remarks"></a>备注
 
-实质上声明一个配置节定义配置文件的新元素。 新元素包含一个配置节处理程序的设置 (即，实现的类<xref:System.Configuration.IConfigurationSectionHandler>接口) 读取。 属性和子元素的定义的部分取决于用于读取您的设置的节处理程序。
+声明配置节本质上定义了配置文件的新元素。 新元素包含配置节处理程序 (即实现<xref:System.Configuration.IConfigurationSectionHandler>接口的类) 的设置。 你定义的节的特性和子元素取决于用于读取设置的部分处理程序。
 
-声明中的配置节处理程序*Machine.config*文件，您可以在该计算机上的任何应用程序配置文件中使用的配置节除非**allowDefinition**属性另行指定。
+通过在*machine.config*文件中声明配置节处理程序, 你可以使用该计算机上任何应用程序配置文件中的配置节, 除非**allowDefinition**属性指定了其他内容。
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何定义配置节和定义该部分的设置：
+下面的示例演示如何定义配置节并定义该部分的设置:
 
 ```xml
 <configuration>
@@ -94,8 +94,8 @@ None
 
 ## <a name="configuration-file"></a>配置文件
 
-在应用程序配置文件中，计算机配置文件可以使用此元素 (*Machine.config*)，并*Web.config*不在应用程序目录级别上的文件。
+此元素可用于应用程序配置文件、计算机配置文件 (*machine.config*) 和不在应用程序目录级别的 web.config 文件。
 
 ## <a name="see-also"></a>请参阅
 
-- [.NET Framework 的配置文件架构](~/docs/framework/configure-apps/file-schema/index.md)
+- [.NET Framework 的配置文件架构](index.md)

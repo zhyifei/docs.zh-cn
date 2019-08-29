@@ -5,22 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6c0b353d-79ee-4e61-b348-be49ad0e9a16
-ms.openlocfilehash: d293ccb45a3af85ca5ca23fec9e3c01a55564581
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f5a5add36d0d93785a8f63793ff4bc296ffebc8b
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62003348"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70040023"
 ---
 # <a name="custom-binding-transport-and-encoding"></a>自定义绑定传输和编码
 自定义绑定由离散绑定元素的有序列表定义。 本示例演示如何使用各种传输和消息编码元素配置自定义绑定。  
   
 > [!NOTE]
->  本主题的最后介绍了此示例的设置过程和生成说明。  
+> 本主题的最后介绍了此示例的设置过程和生成说明。  
   
- 此示例基于[自托管](../../../../docs/framework/wcf/samples/self-host.md)，并已修改为三个终结点配置为使用自定义绑定支持 HTTP、 TCP 和 NamedPipe 传输。 并对客户端配置进行了类似修改，将客户端代码更改为能与这三个终结点中的每一个进行通信。  
+ 此示例基于[自宿主](../../../../docs/framework/wcf/samples/self-host.md), 已修改为配置三个终结点, 以支持具有自定义绑定的 HTTP、TCP 和 NamedPipe 传输。 并对客户端配置进行了类似修改，将客户端代码更改为能与这三个终结点中的每一个进行通信。  
   
- 本示例演示如何配置支持特定传输和消息编码的自定义绑定。 这是通过为 `binding` 元素配置传输和消息编码而实现的。 绑定元素的顺序十分重要中定义自定义绑定，因为每个表示通道堆栈中的层 (请参阅[自定义绑定](../../../../docs/framework/wcf/extending/custom-bindings.md))。 本示例配置三个自定义绑定：使用文本编码的 HTTP 传输、使用文本编码的 TCP 传输和使用二进制编码的 NamedPipe 传输。  
+ 本示例演示如何配置支持特定传输和消息编码的自定义绑定。 这是通过为 `binding` 元素配置传输和消息编码而实现的。 在定义自定义绑定时, 绑定元素的排序非常重要, 因为每个元素都表示通道堆栈中的一个层 (请参阅[自定义绑定](../../../../docs/framework/wcf/extending/custom-bindings.md))。 本示例配置三个自定义绑定：使用文本编码的 HTTP 传输、使用文本编码的 TCP 传输和使用二进制编码的 NamedPipe 传输。  
   
  服务配置按如下所示定义自定义绑定：  
   
@@ -67,21 +67,21 @@ client.Close()
 ```  
   
 > [!NOTE]
->  如果使用 Svcutil.exe 为此示例重新生成配置，请确保在客户端配置中修改终结点名称以与客户端代码匹配。  
+> 如果使用 Svcutil.exe 为此示例重新生成配置，请确保在客户端配置中修改终结点名称以与客户端代码匹配。  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
-1. 请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1. 确保已对[Windows Communication Foundation 示例执行了一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-2. 若要生成C#， C++，或 Visual Basic.NET 版本的解决方案，请按照中的说明[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
+2. 若要生成C#、 C++或 Visual Basic 的 .net 版本的解决方案, 请按照[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
   
-3. 若要在单或跨计算机配置中运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
+3. 若要以单机配置或跨计算机配置来运行示例, 请按照[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的说明进行操作。  
   
 > [!IMPORTANT]
->  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
+> 您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+> 如果此目录不存在, 请参阅[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)以下载所有 Windows Communication Foundation (wcf) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Custom\Transport`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Custom\Transport`  

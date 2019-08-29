@@ -7,33 +7,33 @@ helpviewer_keywords:
 - toolbars [Windows Forms], about toolbars
 - ToolBar control [Windows Forms], about ToolBar controls
 ms.assetid: d426b203-0216-4dbe-b834-1641e50a9c29
-ms.openlocfilehash: 7b39c8e3dca88e968b43ba5ff14794e2e77247d1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c7c19783963bb315a0356979797c6f4d4e3b9e08
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62009535"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69929598"
 ---
 # <a name="toolbar-control-overview-windows-forms"></a>ToolBar 控件概述（Windows 窗体）
 > [!NOTE]
->  <xref:System.Windows.Forms.ToolStrip> 控件取代了 <xref:System.Windows.Forms.ToolBar> 控件并添加了功能；但是，可以选择保留 <xref:System.Windows.Forms.ToolBar> 控件以实现向后兼容并供将来使用。  
+> <xref:System.Windows.Forms.ToolStrip> 控件取代了 <xref:System.Windows.Forms.ToolBar> 控件并添加了功能；但是，可以选择保留 <xref:System.Windows.Forms.ToolBar> 控件以实现向后兼容并供将来使用。  
   
  Windows 窗体 <xref:System.Windows.Forms.ToolBar> 控件在窗体上用作可显示下拉菜单的行的控件条以及可激活命令的位图按钮。 因此，单击工具栏按钮相当于选择菜单命令。 可将按钮配置为以普通按钮、下拉菜单或分隔符等形式显示和表现。 通常，工具栏包含对应于应用程序菜单结构中的项的按钮和菜单，提供对应用程序最常用的函数和命令的快速访问。  
   
 ## <a name="working-with-the-toolbar-control"></a>使用 ToolBar 控件  
- 一个<xref:System.Windows.Forms.ToolBar>控件通常"停靠"沿其父窗口的顶部，但它还可停靠到窗口的任意一侧。 用户将鼠标指针指向工具栏按钮时，工具栏可以显示工具提示。 工具提示是一个小型弹出式窗口，用以简述按钮或菜单的用途。 若要显示工具提示，请<xref:System.Windows.Forms.ToolBar.ShowToolTips%2A>属性必须设置为`true`。  
+ <xref:System.Windows.Forms.ToolBar>控件通常沿其父窗口的顶部 "停靠", 但也可停靠到窗口的任何一侧。 用户将鼠标指针指向工具栏按钮时，工具栏可以显示工具提示。 工具提示是一个小型弹出式窗口，用以简述按钮或菜单的用途。 若要显示工具提示<xref:System.Windows.Forms.ToolBar.ShowToolTips%2A> , 属性必须设置为`true`。  
   
 > [!NOTE]
->  某些应用程序具有与工具栏非常类似的控件，这些控件可“浮动”在应用程序窗口之上并可重新定位。 Windows 窗体 ToolBar 控件不能执行这些操作。  
+> 某些应用程序具有与工具栏非常类似的控件，这些控件可“浮动”在应用程序窗口之上并可重新定位。 Windows 窗体 ToolBar 控件不能执行这些操作。  
   
- 当<xref:System.Windows.Forms.ToolBar.Appearance%2A>属性设置为<xref:System.Windows.Forms.ToolBarAppearance>，工具栏按钮显示凸起和三维。 可以设置<xref:System.Windows.Forms.ToolBar.Appearance%2A>到工具栏的属性<xref:System.Windows.Forms.ToolBarAppearance>以使工具栏及其按钮为平面外观。 鼠标指针移动到平面按钮时，该按钮的外观变为三维形状。 可使用分隔符将工具栏按钮划分成多个逻辑组。 分隔符是与一个工具栏按钮<xref:System.Windows.Forms.ToolBarButton.Style%2A>属性设置为<xref:System.Windows.Forms.ToolBarButtonStyle>。 它在工具栏上显示为空白。 工具栏以平面方式显示时，按钮分隔符在按钮之间显示为直线而不是空白。  
+ 当属性设置为时, <xref:System.Windows.Forms.ToolBarAppearance>工具栏按钮将显示为凸起和三维。 <xref:System.Windows.Forms.ToolBar.Appearance%2A> 您可以将工具栏<xref:System.Windows.Forms.ToolBar.Appearance%2A>的属性设置为<xref:System.Windows.Forms.ToolBarAppearance> , 以使工具栏及其按钮具有平面外观。 鼠标指针移动到平面按钮时，该按钮的外观变为三维形状。 可使用分隔符将工具栏按钮划分成多个逻辑组。 分隔符是属性设置为<xref:System.Windows.Forms.ToolBarButton.Style%2A> <xref:System.Windows.Forms.ToolBarButtonStyle>的工具栏按钮。 它在工具栏上显示为空白。 工具栏以平面方式显示时，按钮分隔符在按钮之间显示为直线而不是空白。  
   
- <xref:System.Windows.Forms.ToolBar>让您可以通过添加创建工具栏<xref:System.Windows.Forms.Button>对象添加到<xref:System.Windows.Forms.ToolBar.Buttons%2A>集合。 可以使用集合编辑器来将按钮添加到<xref:System.Windows.Forms.ToolBar>控件; 每个<xref:System.Windows.Forms.Button>对象应具有文本或图像分配，尽管可同时分配二者。 图像由关联的 [ImageList](imagelist-component-windows-forms.md) 组件提供。 在运行时，您可以添加或删除从按钮<xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection>使用<xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection.Add%2A>和<xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection.Remove%2A>方法。 进行编程的按钮<xref:System.Windows.Forms.ToolBar>，将代码添加到<xref:System.Windows.Forms.ToolBar.ButtonClick>的事件<xref:System.Windows.Forms.ToolBar>，并使用<xref:System.Windows.Forms.ToolBarButtonClickEventArgs.Button%2A>属性<xref:System.Windows.Forms.ToolBarButtonClickEventArgs>类来确定单击了哪个按钮。  
+ 控件允许您通过将对象添加<xref:System.Windows.Forms.Button>到<xref:System.Windows.Forms.ToolBar.Buttons%2A>集合来创建工具栏。 <xref:System.Windows.Forms.ToolBar> 您可以使用集合编辑器向<xref:System.Windows.Forms.ToolBar>控件添加按钮; 每个<xref:System.Windows.Forms.Button>对象都应分配文本或图像, 不过您可以同时分配这两个对象。 图像由关联的 [ImageList](imagelist-component-windows-forms.md) 组件提供。 在运行时, 可以<xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection> <xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection.Add%2A>使用和<xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection.Remove%2A>方法从中添加或删除按钮。 若要对的<xref:System.Windows.Forms.ToolBar>按钮进行编程, 请使用<xref:System.Windows.Forms.ToolBarButtonClickEventArgs> <xref:System.Windows.Forms.ToolBarButtonClickEventArgs.Button%2A>类<xref:System.Windows.Forms.ToolBar.ButtonClick>的属性将<xref:System.Windows.Forms.ToolBar>代码添加到的事件, 以确定单击了哪个按钮。  
   
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Windows.Forms.ToolBar>
 - [ToolBar 控件](toolbar-control-windows-forms.md)
-- [如何：向 ToolBar 控件添加按钮](how-to-add-buttons-to-a-toolbar-control.md)
-- [如何：定义的工具栏按钮的图标](how-to-define-an-icon-for-a-toolbar-button.md)
-- [如何：触发工具栏按钮的菜单事件](how-to-trigger-menu-events-for-toolbar-buttons.md)
+- [如何：向工具栏控件添加按钮](how-to-add-buttons-to-a-toolbar-control.md)
+- [如何：定义工具栏按钮的图标](how-to-define-an-icon-for-a-toolbar-button.md)
+- [如何：工具栏按钮的触发器菜单事件](how-to-trigger-menu-events-for-toolbar-buttons.md)

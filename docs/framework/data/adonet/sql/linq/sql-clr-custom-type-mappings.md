@@ -2,17 +2,17 @@
 title: SQL-CLR 自定义类型映射
 ms.date: 03/30/2017
 ms.assetid: d916c7fb-4b56-4214-acbe-5e23365047b2
-ms.openlocfilehash: bc92d54cad6a977268ef3f000c684d5f195a933d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5aff9a78349cbf9443c5b663a41d7c13a109e625
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62037045"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69945046"
 ---
 # <a name="sql-clr-custom-type-mappings"></a>SQL-CLR 自定义类型映射
 当使用 SQLMetal 命令行工具和对象关系设计器（O/R 设计器）时，将自动指定 SQL Server 与公共语言运行库 (CLR) 之间的类型映射。  
   
- 执行任何自定义的映射时，这些工具将分配默认类型映射中所述[SQL-CLR 类型映射](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)。 如果要执行不同于这些默认映射的类型映射，则需要自定义类型映射的一些设置。  
+ 如果未执行任何自定义的映射, 则这些工具将分配默认的类型映射, 如[SQL CLR 类型映射](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)中所述。 如果要执行不同于这些默认映射的类型映射，则需要自定义类型映射的一些设置。  
   
  自定义类型映射时，建议的方法是在一个中间 DBML 文件中做出更改。 然后，在使用 SQLMetal 或 O/R 设计器创建代码和映射文件时，应使用自定义的 DBML 文件。  
   
@@ -21,10 +21,10 @@ ms.locfileid: "62037045"
 ## <a name="customization-with-sqlmetal-or-or-designer"></a>使用 SQLMetal 或 O/R 设计器进行自定义  
  通过使用 SQLMetal 和 O/R 设计器，可以自动创建一个包括代码文件内部或外部的类型映射信息的对象模型。 由于这些文件可被 SQLMetal 或 O/R 设计器覆盖，因此在每次重新创建映射时，指定自定义类型映射的建议方法是自定义一个 DBML 文件。  
   
- 若要使用 SQLMetal 或 O/R 设计器自定义类型映射，请首先生成一个 DBML 文件。 然后，在生成代码文件或映射文件之前，修改该 DBML 文件以标识所需的类型映射。 使用 SQLMetal 时，您必须在 DBML 文件中手动更改 `Type` 和 `DbType` 属性才能自定义您的类型映射。 使用 O/R 设计器时，您可以在设计器中进行更改。 有关使用 O/R 设计器的详细信息，请参阅[LINQ to SQL 工具在 Visual Studio 中](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)。  
+ 若要使用 SQLMetal 或 O/R 设计器自定义类型映射，请首先生成一个 DBML 文件。 然后，在生成代码文件或映射文件之前，修改该 DBML 文件以标识所需的类型映射。 使用 SQLMetal 时，您必须在 DBML 文件中手动更改 `Type` 和 `DbType` 属性才能自定义您的类型映射。 使用 O/R 设计器时，您可以在设计器中进行更改。 有关使用 O/R 设计器的详细信息, 请参阅[Visual Studio 中的 LINQ to SQL 工具](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)。  
   
 > [!NOTE]
->  在进行数据库转换时，某些类型映射可能会导致溢出或数据丢失异常。 请仔细查看中的类型映射运行时行为矩阵[SQL-CLR 类型映射](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)进行的任何自定义之前。  
+> 在进行数据库转换时，某些类型映射可能会导致溢出或数据丢失异常。 在进行任何自定义之前, 请仔细查看[SQL-CLR 类型映射](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)中的类型映射运行时行为矩阵。  
   
  若要使 SQLMetal 或 O/R 设计器能够识别你的类型映射自定义项，需确保在生成代码文件或外部映射文件时，提供给这些工具的路径为自定义 DBML 文件的路径。 建议你始终将类型映射信息与代码文件分开并生成附加的外部类型映射文件，尽管这对于类型映射自定义不是必需的。 这样做将不需要重新编译代码文件，从而可保留一些灵活性。  
   

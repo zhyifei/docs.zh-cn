@@ -4,12 +4,12 @@ description: 了解如何与 .NET 中的本机组件交互。
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: b01ea9c17db6da32755309d9c1c2359cecaa1155
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 3ca213bc7228d2e4337607df2d47b334c5bea14f
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65062708"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106803"
 ---
 # <a name="native-interoperability"></a>本机互操作性
 
@@ -17,9 +17,9 @@ ms.locfileid: "65062708"
 
 调用本机代码的原因有以下几种：
 
-* 操作系统附带的许多 API 并不在托管类库中。 该应用场景最好的例子就是对硬件或操作系统管理功能的访问。
-* 与其他具有或可生成 C 式 ABI（本机 ABI）的组件通信，如通过 [Java 本机接口 (JNI)](https://docs.oracle.com/javase/8/docs/technotes/guides/jni/) 公开的 Java 代码或可生成本机组件的任何其他托管语言。
-* 在 Windows 上，安装的大部分软件（例如 Microsoft Office 套件）会注册 COM 组件，用于代表软件的程序，并使开发人员能够自动化或者使用它们。 在这种情况下，也需要本机互操作性。
+- 操作系统附带的许多 API 并不在托管类库中。 该应用场景最好的例子就是对硬件或操作系统管理功能的访问。
+- 与其他具有或可生成 C 式 ABI（本机 ABI）的组件通信，如通过 [Java 本机接口 (JNI)](https://docs.oracle.com/javase/8/docs/technotes/guides/jni/) 公开的 Java 代码或可生成本机组件的任何其他托管语言。
+- 在 Windows 上，安装的大部分软件（例如 Microsoft Office 套件）会注册 COM 组件，用于代表软件的程序，并使开发人员能够自动化或者使用它们。 在这种情况下，也需要本机互操作性。
 
 前述列表并未包括开发人员想要/偏向于/需要与本机组件交互的所有可能场合与情境。 例如，.NET 类库使用本机互操作性支持来实现其相当多的 API，如控制台支持和操作、文件系统访问，等等。 但务必应知道，在需要的情况下是有其他选择的。
 

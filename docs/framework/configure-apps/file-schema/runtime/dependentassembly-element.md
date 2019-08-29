@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 14e95627-dd79-4b82-ac85-e682aa3a31d8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ac83a0b27a965721dabe1bdf2e05afbdc9b9c961
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4bf1a15ff27f4390f1985a2d2730b1acfcaab2c1
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704773"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663829"
 ---
 # <a name="dependentassembly-element"></a>\<dependentAssembly > 元素
-封装每个程序集的绑定策略和程序集位置。 使用一个`dependentAssembly`每个程序集的元素。  
+封装每个程序集的绑定策略和程序集位置。 为每`dependentAssembly`个程序集使用一个元素。  
   
  \<configuration>  
 \<运行时 >  
@@ -43,10 +43,10 @@ ms.locfileid: "61704773"
   
 |元素|描述|  
 |-------------|-----------------|  
-|`assemblyIdentity`|包含有关程序集的标识信息。 此元素必须包括在每个`dependentAssembly`元素。|  
-|`codeBase`|指定了运行时可以找到共享的程序集，如果计算机上未安装。|  
+|`assemblyIdentity`|包含有关程序集的标识信息。 此元素必须包含在每个`dependentAssembly`元素中。|  
+|`codeBase`|指定运行时在计算机上未安装共享程序集的情况下可以找到该程序集的位置。|  
 |`bindingRedirect`|将一个程序集版本重定向到另一个版本。|  
-|`publisherPolicy`|指定是否在运行时应用此程序集发布者策略。|  
+|`publisherPolicy`|指定运行时是否应用此程序集的发布服务器策略。|  
   
 ### <a name="parent-elements"></a>父元素  
   
@@ -82,6 +82,6 @@ ms.locfileid: "61704773"
   
 ## <a name="see-also"></a>请参阅
 
-- [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [重定向程序集版本](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)
+- [运行时设置架构](index.md)
+- [配置文件架构](../index.md)
+- [重定向程序集版本](../../redirect-assembly-versions.md)

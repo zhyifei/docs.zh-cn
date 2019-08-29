@@ -9,23 +9,23 @@ helpviewer_keywords:
 - elements, finding for list items
 - UI Automation, finding elements for List items
 ms.assetid: c326ad2b-2144-4f64-ae4c-d850c74f95c5
-ms.openlocfilehash: 7fe1f564e8c9fb967c0b7b4e8b12712962bdedc7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ca4fdfabc4202ae9c9a36d4c511ebefc3ddd058d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61609864"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69969017"
 ---
 # <a name="find-a-ui-automation-element-for-a-list-item"></a>查找列表项的 UI 自动化元素
 > [!NOTE]
->  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，请参阅[Windows 自动化 API:UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
+> 本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关的最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], 请[参阅 Windows 自动化 API:UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
- 本主题演示如何检索<xref:System.Windows.Automation.AutomationElement>列表时已知的项的索引中的项。  
+ 本主题演示如何在已知项<xref:System.Windows.Automation.AutomationElement>的索引时检索列表中的项。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示两种方法来检索从列表中，一个使用指定的项<xref:System.Windows.Automation.TreeWalker>和其他使用<xref:System.Windows.Automation.AutomationElement.FindAll%2A>。  
+ 下面的示例演示了两种方法, 用于从列表中检索指定的项<xref:System.Windows.Automation.TreeWalker> , 一个使用, <xref:System.Windows.Automation.AutomationElement.FindAll%2A>另一个使用。  
   
- 第一种方法往往能更快地[!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)]控件，但第二个是更快地为 Windows Presentation Foundation (WPF) 控件。  
+ 第一种方法倾向于控件的[!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)]速度更快, 但第二种方法更快 Windows Presentation Foundation (WPF) 控件。  
   
  [!code-csharp[UIAClient_snip#184](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#184)]
  [!code-vb[UIAClient_snip#184](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#184)]  

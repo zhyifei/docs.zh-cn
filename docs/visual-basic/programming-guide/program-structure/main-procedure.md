@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Main method [Visual Basic]
 - main function
 ms.assetid: f0db283e-f283-4464-b521-b90858cc1b44
-ms.openlocfilehash: b6c8ec4052d834d410df7fef12e59434f5fdfb44
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 19c6fcb04a373d782db3deafc732f69bf20e7f0e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039986"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962763"
 ---
 # <a name="main-procedure-in-visual-basic"></a>Visual Basic 中的 Main 过程
 每个 Visual Basic 应用程序都必须包含`Main`一个名为的过程。 此过程可用作应用程序的起点和总体控制。 当你的应用`Main`程序已加载并准备好将控制传递给你的应用程序时, .NET Framework 将调用你的过程。 除非要创建 Windows 窗体应用程序, 否则必须为自己运行`Main`的应用程序编写过程。
@@ -33,7 +33,7 @@ ms.locfileid: "69039986"
  有四种方法可以声明`Main`过程。 它可以接受参数, 也可以返回值。
 
 > [!NOTE]
->  如果在类`Main`中声明, 则必须`Shared`使用关键字。 在模块中, `Main`无需`Shared`为。
+> 如果在类`Main`中声明, 则必须`Shared`使用关键字。 在模块中, `Main`无需`Shared`为。
 
 - 最简单的方法是声明`Sub`不采用参数或返回值的过程。
 

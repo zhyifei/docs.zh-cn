@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 911d4460-dd91-4958-85b2-2ca3299f9ec6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8e2b6ca8ef04ad6ff637a59f03f3b4cf04cb06ad
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e37a6657c9fc6315b6b77ed3cfc07d969317fc5c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615354"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966946"
 ---
 # <a name="xmlschemavalidator-push-based-validation"></a>XmlSchemaValidator 基于推送的验证
 <xref:System.Xml.Schema.XmlSchemaValidator> 类提供了一种高效、高性能的机制，通过基于推送的方式针对 XML 架构验证 XML 数据。 例如，使用 <xref:System.Xml.Schema.XmlSchemaValidator> 类可以就地验证 XML 信息集，而不必将其序列化为 XML 文档，然后使用验证 XML 读取器重新分析该文档。  
@@ -23,7 +23,7 @@ ms.locfileid: "64615354"
  以下示例使用 <xref:System.Xml.Schema.XmlSchemaValidator> 类针对 `contosoBooks.xml` 架构验证 `contosoBooks.xsd` 文件。 该示例使用 <xref:System.Xml.Serialization.XmlSerializer> 类反序列化 `contosoBooks.xml` 文件，并将节点的值传递给 <xref:System.Xml.Schema.XmlSchemaValidator> 类的方法。  
   
 > [!NOTE]
->  此示例在本主题的所有章节中使用。  
+> 此示例在本主题的所有章节中使用。  
   
  [!code-csharp[XmlSchemaValidatorExamples#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XmlSchemaValidatorExamples/CS/XmlSchemaValidatorExamples.cs#1)]
  [!code-vb[XmlSchemaValidatorExamples#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XmlSchemaValidatorExamples/VB/XmlSchemaValidatorExamples.vb#1)]  
@@ -137,7 +137,7 @@ validator.ValidateEndElement(null);
  <xref:System.Xml.Schema.XmlSchemaValidator.AddSchema%2A> 类的 <xref:System.Xml.Schema.XmlSchemaValidator> 方法用于将 XML 架构添加到验证期间使用的架构集中。 <xref:System.Xml.Schema.XmlSchemaValidator.AddSchema%2A> 方法可以用于模拟在所验证的 XML 信息集中遇到内联 XML 架构的效果。  
   
 > [!NOTE]
->  <xref:System.Xml.Schema.XmlSchema> 参数的目标命名空间无法与 <xref:System.Xml.Schema.XmlSchemaValidator> 对象已遇到的任何元素或属性的目标命名空间匹配。  
+> <xref:System.Xml.Schema.XmlSchema> 参数的目标命名空间无法与 <xref:System.Xml.Schema.XmlSchemaValidator> 对象已遇到的任何元素或属性的目标命名空间匹配。  
 >   
 >  如果 <xref:System.Xml.Schema.XmlSchemaValidationFlags.ProcessInlineSchema?displayProperty=nameWithType> 值未作为参数传递给 <xref:System.Xml.Schema.XmlSchemaValidator.%23ctor%2A> 构造函数，<xref:System.Xml.Schema.XmlSchemaValidator.AddSchema%2A> 方法不会执行任何操作。  
   
@@ -160,7 +160,7 @@ validator.ValidateEndElement(null);
 |<xref:System.Xml.Schema.XmlSchemaValidator.EndValidation%2A>|如果设置了 <xref:System.Xml.Schema.XmlSchemaValidationFlags.ProcessIdentityConstraints> 验证选项，结束验证并检查整个 XML 文档的标识约束。|  
   
 > [!NOTE]
->  <xref:System.Xml.Schema.XmlSchemaValidator> 类包含已定义的状态转换，强制按顺序执行对上表中所述的每种方法的调用。 <xref:System.Xml.Schema.XmlSchemaValidator> 类特定的状态转换在本主题的“XmlSchemaValidator 状态转换”一节中介绍。  
+> <xref:System.Xml.Schema.XmlSchemaValidator> 类包含已定义的状态转换，强制按顺序执行对上表中所述的每种方法的调用。 <xref:System.Xml.Schema.XmlSchemaValidator> 类特定的状态转换在本主题的“XmlSchemaValidator 状态转换”一节中介绍。  
   
  有关用于验证 XML 信息集中的元素、属性和内容的方法的示例，请参见上一节中的示例。 有关这些方法的更多信息，请参见 <xref:System.Xml.Schema.XmlSchemaValidator> 类参考文档。  
   
@@ -243,7 +243,7 @@ static XmlValueGetter dateTimeGetter(DateTime dateTime)
  如果内容模型的复合器是 `xs:sequence`，则只返回序列中的下一个粒子。 如果内容模型的复合器是 `xs:all` 或 `xs:choice`，则返回当前元素上下文中可能出现的所有有效粒子。  
   
 > [!NOTE]
->  如果 <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> 方法在调用 <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A> 方法之后立即调用，<xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> 方法将返回所有全局元素。  
+> 如果 <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> 方法在调用 <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A> 方法之后立即调用，<xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> 方法将返回所有全局元素。  
   
  例如，在下面的 XML 架构定义语言 (XSD) 架构和 XML 文档中，在验证 `book` 元素之后，`book` 元素是当前的元素上下文。 <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> 方法返回一个数组，包含表示 <xref:System.Xml.Schema.XmlSchemaElement> 元素的单个 `title` 对象。 如果验证上下文是 `title` 元素，<xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> 方法将返回一个空数组。 如果 <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> 方法在验证了 `title` 元素之后但是在验证 `description` 元素之前调用，将返回一个数组，包含表示 <xref:System.Xml.Schema.XmlSchemaElement> 元素的单个 `description` 对象。 如果 <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> 方法在验证了 `description` 元素之后调用，将返回一个数组，包含表示通配符的单个 <xref:System.Xml.Schema.XmlSchemaAny> 对象。  
   
@@ -370,7 +370,7 @@ validator.ValidateEndElement(null);
  `</book>`  
   
 > [!NOTE]
->  <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> 类的 <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A>、<xref:System.Xml.Schema.XmlSchemaValidator.AddSchema%2A> 和 <xref:System.Xml.Schema.XmlSchemaValidator> 方法的结果取决于正在验证的当前上下文。 有关更多信息，请参见本主题的“验证上下文”一节。  
+> <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> 类的 <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A>、<xref:System.Xml.Schema.XmlSchemaValidator.AddSchema%2A> 和 <xref:System.Xml.Schema.XmlSchemaValidator> 方法的结果取决于正在验证的当前上下文。 有关更多信息，请参见本主题的“验证上下文”一节。  
   
  有关 <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> 方法的示例，请参见简介中的示例。 有关 <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> 方法的更多信息，请参见 <xref:System.Xml.Schema.XmlSchemaValidator> 类参考文档。  
   
@@ -382,7 +382,7 @@ validator.ValidateEndElement(null);
  如果在调用 <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> 方法之后立即调用 <xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A> 方法，将返回 XML 文档中可能出现的所有属性。 但是，如果在一次或多次调用 <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> 方法之后调用 <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A> 方法，将返回当前元素尚未进行验证的属性。  
   
 > [!NOTE]
->  <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> 类的 <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A>、<xref:System.Xml.Schema.XmlSchemaValidator.AddSchema%2A> 和 <xref:System.Xml.Schema.XmlSchemaValidator> 方法的结果取决于正在验证的当前上下文。 有关更多信息，请参见本主题的“验证上下文”一节。  
+> <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> 类的 <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A>、<xref:System.Xml.Schema.XmlSchemaValidator.AddSchema%2A> 和 <xref:System.Xml.Schema.XmlSchemaValidator> 方法的结果取决于正在验证的当前上下文。 有关更多信息，请参见本主题的“验证上下文”一节。  
   
  有关 <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> 方法的示例，请参见简介中的示例。 有关 <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> 方法的更多信息，请参见 <xref:System.Xml.Schema.XmlSchemaValidator> 类参考文档。  
   
@@ -442,7 +442,7 @@ static void SchemaValidationEventHandler(object sender, ValidationEventArgs e)
 |内容|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateWhitespace%2A> &#124; <xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A> &#124; Element|  
   
 > [!NOTE]
->  如果调用方法的顺序不符合 <xref:System.InvalidOperationException> 对象的当前状态，上表中的每种方法将引发 <xref:System.Xml.Schema.XmlSchemaValidator>。  
+> 如果调用方法的顺序不符合 <xref:System.InvalidOperationException> 对象的当前状态，上表中的每种方法将引发 <xref:System.Xml.Schema.XmlSchemaValidator>。  
   
  上面的状态转换表使用标点符号描述 <xref:System.Xml.Schema.XmlSchemaValidator> 类中状态转换的每种状态可以调用的方法和其他状态。 使用的符号与文档类型定义 (DTD) 的 XML 标准引用中出现的符号相同。  
   
@@ -452,7 +452,7 @@ static void SchemaValidationEventHandler(object sender, ValidationEventArgs e)
 |------------|-----------------|  
 |&#124;|可以调用（竖线之前或竖线之后的）方法或状态。|  
 |?|问号之前的方法或状态是可选的，但是如果调用，只能调用一次。|  
-|*|* 符号之前的方法或状态是可选的，可以调用多次。|  
+|*|\* 符号之前的方法或状态是可选的，可以调用多次。|  
   
 ## <a name="validation-context"></a>验证上下文  
  <xref:System.Xml.Schema.XmlSchemaValidator> 类中用于验证 XML 信息集中的元素、属性和内容的方法会更改 <xref:System.Xml.Schema.XmlSchemaValidator> 对象的验证上下文。 例如，<xref:System.Xml.Schema.XmlSchemaValidator.SkipToEndElement%2A> 方法跳过当前元素内容的验证并准备 <xref:System.Xml.Schema.XmlSchemaValidator> 对象，以验证父元素上下文中的内容；这等效于跳过当前元素的所有子级的验证并调用 <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A> 方法。  
@@ -475,7 +475,7 @@ static void SchemaValidationEventHandler(object sender, ValidationEventArgs e)
 |<xref:System.Xml.Schema.XmlSchemaValidator.EndValidation%2A>|返回一个空数组。|返回一个空数组。|同上。|  
   
 > [!NOTE]
->  调用上表中的任何方法时不会更改 <xref:System.Xml.Schema.XmlSchemaValidator> 类的各种属性返回的值。  
+> 调用上表中的任何方法时不会更改 <xref:System.Xml.Schema.XmlSchemaValidator> 类的各种属性返回的值。  
   
 ## <a name="see-also"></a>请参阅
 

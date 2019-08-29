@@ -5,12 +5,12 @@ helpviewer_keywords:
 - custom log listeners
 - My.Application.Log object, custom log listeners
 ms.assetid: 0e019115-4b25-4820-afb1-af8c6e391698
-ms.openlocfilehash: 50eb1bc1588602bf562efc31b0f4dd01bc29cad0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 90135074a4d34ea73743faffb2531305fcb326fb
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593329"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965263"
 ---
 # <a name="walkthrough-creating-custom-log-listeners-visual-basic"></a>演练：创建自定义日志侦听器 (Visual Basic)
 本演练演示如何创建自定义日志侦听器，并将其配置为侦听 `My.Application.Log` 对象的输出。  
@@ -29,7 +29,7 @@ ms.locfileid: "64593329"
      <xref:System.Security.Permissions.HostProtectionAttribute> 特性应用于 <xref:System.Diagnostics.TraceListener.Write%2A> 和 <xref:System.Diagnostics.TraceListener.WriteLine%2A> 方法，使其特性与基类方法匹配。 <xref:System.Security.Permissions.HostProtectionAttribute> 特性使运行代码的主机能够确定代码会公开主机保护同步。  
   
     > [!NOTE]
-    >  <xref:System.Security.Permissions.HostProtectionAttribute> 特性仅在可托管公共语言运行时且实现主机保护的非托管应用程序上有效，如 SQL Server。  
+    > <xref:System.Security.Permissions.HostProtectionAttribute> 特性仅在可托管公共语言运行时且实现主机保护的非托管应用程序上有效，如 SQL Server。  
   
  若要确保 `My.Application.Log` 使用日志侦听器，应对包含日志侦听器的程序集执行强名称。  
   
@@ -37,21 +37,21 @@ ms.locfileid: "64593329"
   
 #### <a name="to-strongly-name-the-log-listener-assembly"></a>对日志侦听器程序集执行强名称  
   
-1. 在 **“解决方案资源管理器”** 中选择一个项目。 在 **“项目”** 菜单上，选择 **“属性”**。   
+1. 在 **“解决方案资源管理器”** 中选择一个项目。 在 **“项目”** 菜单上，选择 **“属性”** 。   
   
-2. 单击“签名”选项卡。  
+2. 单击“签名”选项卡。   
   
-3. 选择“为程序集签名”框。  
+3. 选择“为程序集签名”框。   
   
-4. 在“选择强名称密钥文件”下拉列表中，选择“\<新建>”。  
+4. 在“选择强名称密钥文件”下拉列表中，选择“\<新建>”。    
   
-     将打开“创建强名称密钥”对话框。  
+     将打开“创建强名称密钥”对话框。   
   
-5. 在“密钥文件名”框中提供密钥文件的名称。  
+5. 在“密钥文件名”框中提供密钥文件的名称。   
   
-6. 在“输入密码”和“确认密码”框中输入密码。  
+6. 在“输入密码”和“确认密码”框中输入密码。    
   
-7. 单击“确定”。  
+7. 单击“确定”。   
   
 8. 重新生成应用程序。  
   
@@ -74,15 +74,15 @@ ms.locfileid: "64593329"
   
 #### <a name="to-add-the-listener-to-myapplicationlog"></a>将侦听器添加到 My.Application.Log  
   
-1. 在“解决方案资源管理器”中右键单击 app.config，然后选择“打开”。  
+1. 在“解决方案资源管理器”中右键单击 app.config，然后选择“打开”。    
   
-     或  
+     -或-  
   
      如果其中有 app.config 文件：  
   
-    1. 在 **“项目”** 菜单上选择 **“添加新项”**。  
+    1. 在 **“项目”** 菜单上选择 **“添加新项”** 。  
   
-    2. 在“添加新项”  对话框中，选择“应用程序配置文件” 。  
+    2. 在“添加新项”  对话框中，选择“应用程序配置文件”  。  
   
     3. 单击 **添加**。  
   

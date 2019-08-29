@@ -7,12 +7,12 @@ helpviewer_keywords:
 - response files, specifying for compilation [C#]
 - '@ compiler option'
 ms.assetid: dda4fa9f-a02c-400f-8b6a-d58834e13d7f
-ms.openlocfilehash: 32a06c596c44cdf28e5c1bb3422b9cf8262f2c08
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1884230f1779f9d425ef6e54cda6967c8e51d985
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54738087"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69602477"
 ---
 # <a name="-c-compiler-options"></a>@（C# 编译器选项）
 通过 @ 选项，可以指定包含编译器选项和要编译的源代码文件的文件。  
@@ -38,11 +38,11 @@ ms.locfileid: "54738087"
   
  在响应文件中，多个编译器选项和源代码文件可以出现在同一行中。 单个编译器选项的指定必须出现在同一行中（不能跨行）。 响应文件的注释可以 # 符号开始。  
   
- 从响应文件内指定编译器选项就如同在命令行发出这些命令。 有关详细信息，请参阅[从命令行生成](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)。  
+ 从响应文件内指定编译器选项就如同在命令行发出这些命令。 有关详细信息，请参阅[从命令行生成](./how-to-set-environment-variables-for-the-visual-studio-command-line.md)。  
   
  编译器在遇到命令选项时会进行处理。 因此，命令行参数可以重写先前在响应文件中列出的选项。 反之，响应文件中的选项也将重写先前在命令行或其他响应文件中列出的选项。  
   
- C# 提供 csc.rsp 文件，该文件与 csc.exe 文件位于同一目录。 有关 csc.rsp 的详细信息，请参阅 [-noconfig](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md)。  
+ C# 提供 csc.rsp 文件，该文件与 csc.exe 文件位于同一目录。 有关 csc.rsp 的详细信息，请参阅 [-noconfig](./noconfig-compiler-option.md)。  
   
  不能在 Visual Studio 开发环境中设置此编译器选项，也不能以编程方式对其进行更改。  
   
@@ -56,4 +56,4 @@ ms.locfileid: "54738087"
   
 ## <a name="see-also"></a>请参阅
 
-- [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)
+- [C# 编译器选项](./index.md)

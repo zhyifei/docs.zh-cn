@@ -4,51 +4,51 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID91
 ms.assetid: 2f03e611-f0ed-465c-99a2-a816e034faa3
-ms.openlocfilehash: 766b95163f164ec76135b964115069b6855ceebf
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 07c215d373e4ac1cbadf82a48b8cb3d90efdbdb4
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64750676"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70040559"
 ---
 # <a name="object-variable-or-with-block-variable-not-set"></a>未设置对象变量或 With 块变量
 正在引用无效的对象变量。   出现此错误的原因可能有多种：
 
-- 如果不指定类型声明了变量。 如果无需指定类型声明的变量，则默认为类型`Object`。
+- 声明了变量, 但未指定类型。 如果在未指定类型的情况下声明了变量, 则默认`Object`为类型。
 
-    例如，与声明的变量`Dim x`都属于类型`Object;`与声明的变量`Dim x As String`都属于类型`String`。
+    例如, 使用`Dim x`声明的变量的`Dim x As String`类型`Object;` `String`将为类型。
 
     > [!TIP]
-    >  `Option Strict`语句不允许隐式键入会导致`Object`类型。 如果省略该类型，将发生编译时错误。 请参阅[Option Strict 语句](../../../visual-basic/language-reference/statements/option-strict-statement.md)。
+    > 语句不允许使用`Object`导致类型的隐式类型。 `Option Strict` 如果省略该类型, 则会发生编译时错误。 请参阅[Option Strict 语句](../../../visual-basic/language-reference/statements/option-strict-statement.md)。
 
-- 您尝试引用已被设置为一个对象`Nothing`。
+- 你正在尝试引用已设置为`Nothing`的对象。
 
-- 您尝试访问未正确声明数组变量中的元素。
+- 您正在尝试访问未正确声明的数组变量的元素。
 
-    例如，数组声明为`products() As String`如果您尝试引用数组的元素，则会触发错误`products(3) = "Widget"`。 数组不包含任何元素，并被视为一个对象。
+    例如, 如果您尝试引用数组`products() As String` `products(3) = "Widget"`的元素, 则声明为的数组将触发错误。 数组没有元素, 被视为对象。
 
-- 您尝试访问代码内`With...End With`阻止在初始化块之前。   一个`With...End With`块必须通过执行初始化`With`语句入口点。
+- 在初始化块之前, 您正尝试`With...End With`访问代码块中的代码。   必须通过`With`执行语句入口点初始化`With...End With`块。
 
 > [!NOTE]
-> 在早期版本的 Visual Basic 或 VBA 此错误也通过分配给一个变量的值，而无需使用触发`Set`关键字 (`x = "name"`而不是`Set x = "name"`)。 `Set`关键字不再是有效 Visual Basic.Net 中。
+> 在 Visual Basic 或 VBA 的早期版本中, 还会通过在`Set`不使用关键字的情况下为变量赋值 (`x = "name"`而不是`Set x = "name"`) 来触发此错误。 `Set`关键字在 Visual Basic .net 中不再有效。
 
 ## <a name="to-correct-this-error"></a>更正此错误
 
-1. 设置`Option Strict`到`On`通过将以下代码添加到该文件的开头：
+1. 通过`Option Strict`将`On`以下代码添加到文件的开头, 将设置为:
 
     ```vb
     Option Strict On
     ```
 
-    编译器错误时运行该项目时，将显示在**错误列表**无类型指定了任何变量。
+    运行该项目时, 将在**错误列表**中为没有类型指定的任何变量显示编译器错误。
 
-2. 如果不想要启用`Option Strict`，搜索你的代码没有类型指定了任何变量 (`Dim x`而不是`Dim x As String`) 并将预期的类型添加到声明。
+2. 如果不想启用`Option Strict`, 请在代码中搜索未指定类型 (`Dim x`而不`Dim x As String`是) 的任何变量, 并将目标类型添加到声明。
 
-3. 请确保不指已被设置为的对象变量`Nothing`。  关键字在代码中搜索`Nothing`，并修改你的代码，以便该对象未设置为`Nothing`直到您在引用它。
+3. 请确保未引用已设置为`Nothing`的对象变量。  在代码中搜索关键字`Nothing`, 然后修改代码, 使对象在引用之前不会设置为。 `Nothing`
 
-4. 请确保访问它们之前创建的任何数组变量。 首次创建数组时，既可以分配一个维度 (`Dim x(5) As String`而不是`Dim x() As String`)，或使用`ReDim`关键字可以在首次访问之前设置数组的维数。
+4. 在访问数组变量之前, 请确保对其进行标注。 您可以在首次创建数组 (`Dim x(5) As String` `Dim x() As String`而不是`ReDim` ) 时分配维度, 或者使用关键字在第一次访问数组之前设置其维度。
 
-5. 请确保你`With`块初始化通过执行`With`语句入口点。
+5. 请确保`With`通过`With`执行语句入口点初始化块。
 
 ## <a name="see-also"></a>请参阅
 

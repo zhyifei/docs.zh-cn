@@ -8,12 +8,12 @@ helpviewer_keywords:
 - keycontainer compiler option [C#]
 - -keycontainer compiler option [C#]
 ms.assetid: b3982b6d-2382-4f7e-bebd-ce98eaa30763
-ms.openlocfilehash: cf51bccc98f04c38149ec821b7064a4844d7e804
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 0d4ca602859c4f7f80a8fcdc09182c7da8a5fb31
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59302772"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69602847"
 ---
 # <a name="-keycontainer-c-compiler-options"></a>-keycontainer（C# 编译器选项）
 指定加密密钥容器的名称。  
@@ -29,13 +29,13 @@ ms.locfileid: "59302772"
  强名称密钥容器的名称。  
   
 ## <a name="remarks"></a>备注  
- 当使用“-keycontainer”选项时，编译器将创建一个可共享的组件。 编译器在程序集清单中插入指定容器的公钥，然后使用私钥对最终的程序集进行签名。 若要生成密钥文件，请在命令行键入 `sn -k file`。 `sn -i` 将密钥对安装到容器中。 编译器在 CoreCLR 上运行时，不支持此选项。 在生成 CoreCLR 时对程序集进行签名，请使用 [-keyfile](keyfile-compiler-option.md) 选项。
+ 当使用“-keycontainer”  选项时，编译器将创建一个可共享的组件。 编译器在程序集清单中插入指定容器的公钥，然后使用私钥对最终的程序集进行签名。 若要生成密钥文件，请在命令行键入 `sn -k file`。 `sn -i` 将密钥对安装到容器中。 编译器在 CoreCLR 上运行时，不支持此选项。 在生成 CoreCLR 时对程序集进行签名，请使用 [-keyfile](keyfile-compiler-option.md) 选项。
   
- 如果使用 [-target:module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md) 进行编译，当使用 [-addmodule](../../../csharp/language-reference/compiler-options/addmodule-compiler-option.md) 将此模块编译到程序集时，密钥文件的名称将保存在模块中，且会并入程序集。  
+ 如果使用 [-target:module](./target-module-compiler-option.md) 进行编译，当使用 [-addmodule](./addmodule-compiler-option.md) 将此模块编译到程序集时，密钥文件的名称将保存在模块中，且会并入程序集。  
   
  还可以将此选项指定为任何 Microsoft 中间语言 (MSIL) 模块的源代码中的自定义特性 (<xref:System.Reflection.AssemblyKeyNameAttribute?displayProperty=nameWithType>)。  
   
- 此外，可使用 [-keyfile](../../../csharp/language-reference/compiler-options/keyfile-compiler-option.md) 将加密信息传递给编译器。 如果希望将公钥添加到程序集清单，但希望测试完程序集后再对其签名，请使用 [-delaysign](../../../csharp/language-reference/compiler-options/delaysign-compiler-option.md)。  
+ 此外，可使用 [-keyfile](./keyfile-compiler-option.md) 将加密信息传递给编译器。 如果希望将公钥添加到程序集清单，但希望测试完程序集后再对其签名，请使用 [-delaysign](./delaysign-compiler-option.md)。  
   
  有关详细信息，请参阅[创建和使用具有强名称的程序集](../../../framework/app-domains/create-and-use-strong-named-assemblies.md)和[延迟为程序集签名](../../../framework/app-domains/delay-sign-assembly.md)。  
   

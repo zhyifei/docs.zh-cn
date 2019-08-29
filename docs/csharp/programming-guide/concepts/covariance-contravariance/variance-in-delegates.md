@@ -2,12 +2,12 @@
 title: 委托中的变体 (C#)
 ms.date: 07/20/2015
 ms.assetid: 19de89d2-8224-4406-8964-2965b732b890
-ms.openlocfilehash: 835b19b191bd3cb193bf4ba12d689b962c8603ec
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 213c295782c10d15f0515eeb653322eafdb390d9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64598062"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924383"
 ---
 # <a name="variance-in-delegates-c"></a>委托中的变体 (C#)
 .NET Framework 3.5 引入了变体支持，用于在 C# 中匹配所有委托的方法签名和委托类型。 这表明不仅可以将具有匹配签名的方法分配给委托，还可以将返回派生程度较大的派生类型的方法分配给委托（协变），或者如果方法所接受参数的派生类型所具有的派生程度小于委托类型指定的程度（逆变），也可将其分配给委托。 这包括泛型委托和非泛型委托。  
@@ -62,7 +62,7 @@ SampleGenericDelegate<Second, First> dGeneric = ASecondRFirst;
 SampleGenericDelegate<Second, First> dGenericConversion = AFirstRSecond;  
 ```  
   
- 有关更多示例，请参阅[在委托中使用变体 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md) 和[对 Func 和 Action 泛型委托使用变体 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)。  
+ 有关更多示例，请参阅[在委托中使用变体 (C#)](./using-variance-in-delegates.md) 和[对 Func 和 Action 泛型委托使用变体 (C#)](./using-variance-for-func-and-action-generic-delegates.md)。  
   
 ## <a name="variance-in-generic-type-parameters"></a>泛型类型参数中的变体  
  在 .NET Framework 4 或更高版本中，可以启用委托之间的隐式转换，以便在具有泛型类型参数所指定的不同类型按变体的要求继承自对方时，可以将这些类型的泛型委托分配给对方。  
@@ -122,7 +122,7 @@ public static void Test()
   
 - <xref:System.Converter%602> 委托  
   
- 有关详细信息和示例，请参阅[对 Func 和 Action 泛型委托使用变体 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)。  
+ 有关详细信息和示例，请参阅[对 Func 和 Action 泛型委托使用变体 (C#)](./using-variance-for-func-and-action-generic-delegates.md)。  
   
 ### <a name="declaring-variant-type-parameters-in-generic-delegates"></a>声明泛型委托中的变体类型参数  
  如果泛型委托具有协变或逆变泛型类型参数，则该委托可被称为“变体泛型委托”  。  
@@ -140,7 +140,7 @@ public delegate void DContravariant<in A>(A a);
 ```  
   
 > [!IMPORTANT]
->  C# 中的 `ref`、`in` 和 `out` 参数不能标记为变体。  
+> C# 中的 `ref`、`in` 和 `out` 参数不能标记为变体。  
   
  可以在同一个委托中支持变体和协变，但这只适用于不同类型的参数。 这在下面的示例中显示。  
   
@@ -198,6 +198,6 @@ public static void Test()
   
 ## <a name="see-also"></a>请参阅
 
-- [泛型](~/docs/standard/generics/index.md)
-- [对 Func 和 Action 泛型委托使用变体 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)
-- [如何：合并委托（多播委托）](../../../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)
+- [泛型](../../../../standard/generics/index.md)
+- [对 Func 和 Action 泛型委托使用变体 (C#)](./using-variance-for-func-and-action-generic-delegates.md)
+- [如何：合并委托（多播委托）](../../delegates/how-to-combine-delegates-multicast-delegates.md)

@@ -8,18 +8,18 @@ dev_langs:
 ms.assetid: ad0b5717-3d32-41ad-a4d7-072c3e492b82
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4a7e381a90d56ca220e275d9179a50502b4969ef
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0fb14f919d0737b9d9c25bcd62a3cfb7228ff432
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54626670"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916081"
 ---
 # <a name="xml-schema-xsd-validation-with-xmlschemacollection"></a>使用 XmlSchemaCollection 进行 XML 架构 (XSD) 验证
 可以使用 <xref:System.Xml.Schema.XmlSchemaCollection> 根据 XML 架构定义语言 (XSD) 架构对 XML 文档进行验证。 <xref:System.Xml.Schema.XmlSchemaCollection> 在集合中存储架构，因此每当验证发生时不必将该架构加载到内存中，从而提高了性能。 如果架构存在于架构集合中，则将使用 `schemaLocation` 属性在集合中查找该架构。  
   
 > [!IMPORTANT]
->  现在，<xref:System.Xml.Schema.XmlSchemaCollection> 类已过时，已由 <xref:System.Xml.Schema.XmlSchemaSet> 类所取代。 若要详细了解 <xref:System.Xml.Schema.XmlSchemaSet> 类，请参阅[用于编译架构的 XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)。  
+> 现在，<xref:System.Xml.Schema.XmlSchemaCollection> 类已过时，已由 <xref:System.Xml.Schema.XmlSchemaSet> 类所取代。 若要详细了解 <xref:System.Xml.Schema.XmlSchemaSet> 类，请参阅[用于编译架构的 XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)。  
   
  下面的示例显示了数据文件的根元素。  
   

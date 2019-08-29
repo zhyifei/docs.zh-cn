@@ -9,16 +9,16 @@ helpviewer_keywords:
 - properties, returned by UI Automation providers
 - UI Automation, providers returning properties
 ms.assetid: 5eba950e-b9e1-48eb-ab8e-b69db76bf589
-ms.openlocfilehash: f3d5776441f1d4848adbb0a5f9435274f118a0da
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7a637f759c952751c0472c51afa42a2c67c58624
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61982990"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69969109"
 ---
 # <a name="return-properties-from-a-ui-automation-provider"></a>从 UI 自动化提供程序返回属性
 > [!NOTE]
->  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，请参阅[Windows 自动化 API:UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
+> 本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关的最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], 请[参阅 Windows 自动化 API:UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  本主题包含显示 UI 自动化提供程序如何才能将元素的属性返回到客户端应用程序的示例代码。  
   

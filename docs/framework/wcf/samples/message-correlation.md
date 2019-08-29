@@ -2,21 +2,21 @@
 title: 消息相关性
 ms.date: 03/30/2017
 ms.assetid: 3f62babd-c991-421f-bcd8-391655c82a1f
-ms.openlocfilehash: 630afb728726fb81bbefa2f2cd34b9481b788f6f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 657f7c6e3fd544614e193d9e6843a8ed58881387
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663420"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70039414"
 ---
 # <a name="message-correlation"></a>消息相关性
-此示例演示消息队列 (MSMQ) 应用程序如何可以将 MSMQ 消息发送到 Windows Communication Foundation (WCF) 服务以及如何消息也可以在请求/响应方案中的发送方和接收方应用程序之间关联起来。 此示例使用 msmqIntegrationBinding 绑定。 这种情况下的服务是自承载控制台应用程序，通过它可以观察接收排队消息的服务。 k  
+此示例演示消息队列 (MSMQ) 应用程序如何将 MSMQ 消息发送到 Windows Communication Foundation (WCF) 服务, 以及如何在请求/响应方案中将消息与发送方和接收方应用程序相关联。 此示例使用 msmqIntegrationBinding 绑定。 这种情况下的服务是自承载控制台应用程序，通过它可以观察接收排队消息的服务。 k  
   
  该服务处理接收的来自发送方的消息，并向发送方回发一个响应消息。 发送方将它收到的响应与其最初发送的请求关联。 可以使用消息的 `MessageID` 和 `CorrelationID` 属性将请求消息与响应消息关联。  
   
  `IOrderProcessor` 服务协定定义了适合与队列一起使用的单向服务操作。 MSMQ 消息没有 Action 标头，因此无法将不同的 MSMQ 消息自动映射到操作协定。 因此，在这种情况下只有一个操作协定。 如果您希望在服务中定义更多的操作协定，则应用程序必须提供相关信息，如 MSMQ 消息中的哪个标头（例如标签或 correlationID）可用于确定要调度的操作协定。 
   
- MSMQ 消息也不包含诸如哪些标头映射到操作协定的不同参数等信息。 因此，在该操作协定中只有一个参数。 参数的类型是<xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>，其中包含基础 MSMQ 消息。 `MsmqMessage<T>` 类中的“T”类型表示序列化到 MSMQ 消息正文中的数据。 在此示例中，`PurchaseOrder` 类型序列化到 MSMQ 消息正文中。  
+ MSMQ 消息也不包含诸如哪些标头映射到操作协定的不同参数等信息。 因此，在该操作协定中只有一个参数。 参数的类型<xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>为, 包含基础 MSMQ 消息。 `MsmqMessage<T>` 类中的“T”类型表示序列化到 MSMQ 消息正文中的数据。 在此示例中，`PurchaseOrder` 类型序列化到 MSMQ 消息正文中。  
 
 ```csharp
 [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples")]
@@ -65,9 +65,9 @@ public class OrderProcessorService : IOrderProcessor
 }
 ```
 
- 服务使用自定义客户端 `OrderResponseClient` 将 MSMQ 消息发送到队列。 接收并处理该消息的应用程序是 MSMQ 应用程序并是 WCF 应用程序，因为没有任何隐式服务协定之间两个应用程序。 所以在此方案中，我们不能使用 Svcutil.exe 工具创建代理。
+ 服务使用自定义客户端 `OrderResponseClient` 将 MSMQ 消息发送到队列。 由于接收和处理消息的应用程序是 MSMQ 应用程序, 而不是 WCF 应用程序, 因此两个应用程序之间没有隐式服务协定。 所以在此方案中，我们不能使用 Svcutil.exe 工具创建代理。
 
- 自定义代理实质上是相同的使用的所有 WCF 应用程序`msmqIntegrationBinding`绑定发送消息。 与其他代理不同，它不包含一系列服务操作。 它只是一个提交消息操作。
+ 对于使用`msmqIntegrationBinding`绑定发送消息的所有 WCF 应用程序而言, 自定义代理本质上是相同的。 与其他代理不同，它不包含一系列服务操作。 它只是一个提交消息操作。
 
 ```csharp
 [System.ServiceModel.ServiceContractAttribute(Namespace = "http://Microsoft.ServiceModel.Samples")]
@@ -213,7 +213,7 @@ static void PlaceOrder()
  从中接收订单响应的 MSMQ 队列是在配置文件的 appSettings 节中定义的，如下面的示例配置所示。
 
 > [!NOTE]
->  队列名称为本地计算机使用圆点 (.)，并在其路径中使用反斜杠分隔符。 WCF 终结点地址指定 msmq.formatname 方案，并为本地计算机使用"localhost"。 根据 MSMQ 准则，格式正确的格式名称应遵循 URI 中的 msmq.formatname。
+> 队列名称为本地计算机使用圆点 (.)，并在其路径中使用反斜杠分隔符。 WCF 终结点地址指定 msmq.formatname 方案, 并为本地计算机使用 "localhost"。 根据 MSMQ 准则，格式正确的格式名称应遵循 URI 中的 msmq.formatname。
 
 ```xml
 <appSettings>
@@ -267,27 +267,27 @@ static void DisplayOrderStatus()
  运行示例时，客户端和服务活动将显示在服务和客户端控制台窗口中。 可以看到服务接收来自客户端的消息，并向客户端回发响应。 客户端会显示来自服务的响应。 在每个控制台窗口中按 Enter 可以关闭服务和客户端。
 
 > [!NOTE]
->  此示例要求安装消息队列 (MSMQ)。 请参阅“请参见”部分中的 MSMQ 安装说明。
+> 此示例要求安装消息队列 (MSMQ)。 请参阅“请参见”部分中的 MSMQ 安装说明。
 
 ### <a name="to-setup-build-and-run-the-sample"></a>设置、生成和运行示例
 
-1. 请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。
+1. 确保已对[Windows Communication Foundation 示例执行了一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。
 
 2. 如果先运行服务，则它将检查以确保队列存在。 如果队列不存在，则服务将创建一个队列。 可以先运行服务以创建队列或通过 MSMQ 队列管理器创建一个队列。 执行下面的步骤来在 Windows 2008 中创建队列。
 
     1. 在 Visual Studio 2012 中打开服务器管理器。
 
-    2. 展开**功能**选项卡。
+    2. 展开 "**功能**" 选项卡。
 
-    3. 右键单击**私有消息队列**，然后选择**新建**，**专用队列**。
+    3. 右键单击 "**专用消息队列**", 然后选择 "**新建** **专用队列**"。
 
-    4. 检查**事务性**框。
+    4. 选中 "**事务性**" 框。
 
     5. 输入`ServiceModelSamplesTransacted`作为新队列的名称。
 
 3. 若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。
 
-4. 若要在单计算机配置中运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。
+4. 若要在单计算机配置中运行示例, 请按照[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的说明进行操作。
 
 ### <a name="to-run-the-sample-across-computers"></a>跨计算机运行示例
 
@@ -304,13 +304,13 @@ static void DisplayOrderStatus()
 6. 在客户端计算机上，在命令提示符下启动 Client.exe。
 
 > [!IMPORTANT]
->  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
+> 您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+> 如果此目录不存在, 请参阅[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)以下载所有 Windows Communication Foundation (wcf) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\MessageCorrelation`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\MessageCorrelation`  
   
 ## <a name="see-also"></a>请参阅
 

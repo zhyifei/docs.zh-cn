@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 672a5ac8-8305-4d28-ba10-11089c2c0924
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8480e2d6817d0367e89542c0e6c89cd26183dd5e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8a0c34eebda789f6561195c89e2660ae77603dc0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774896"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923288"
 ---
 # <a name="xslt-compiler-xsltcexe"></a>XSLT 编译器 (xsltc.exe)
 XSLT 编译器 (xsltc.exe) 编译 XSLT 样式表并生成一个程序集。 然后可以将已编译的样式表直接传递到 <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> 方法中。 不能用 xsltc.exe 生成签名的程序集。  
@@ -47,7 +47,7 @@ xsltc [options] [/class:<name>] <sourceFile> [[/class:<name>] <sourceFile>...]
  XSLT 解决方案可由多个样式表模块组成。 xsltc.exe 工具从样式表生成程序集。 然后可以将程序集传递到 <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> 方法中。 这有助于在一些 XSLT 部署方案中降低性能成本。  
   
 > [!NOTE]
->  您还必须包括已编译的程序集作为应用程序中的引用。  
+> 您还必须包括已编译的程序集作为应用程序中的引用。  
   
  xsltc.exe 工具不验证类（`/class:` 名称）或程序集（`/out:`assemblyName）名称   。 如果名称无效，公共语言运行库将引发错误。  
   

@@ -33,7 +33,7 @@ ms.locfileid: "65589521"
 ## <a name="example"></a>示例  
  该示例定义 `IsValidEmail` 方法，如果字符串包含有效的电子邮件地址，则该方法返回 `true` ，否则返回 `false` ，但不采取其他任何操作。  
   
- 若要验证电子邮件地址是否有效，方法 `IsValidEmail` 将使用 <xref:System.Text.RegularExpressions.Regex.Replace%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.MatchEvaluator%29?displayProperty=nameWithType> 正则表达式模式调用 `(@)(.+)$` 方法将域名从电子邮件地址分离。 第三个参数是表示了处理和替换匹配文本的方法的 <xref:System.Text.RegularExpressions.MatchEvaluator> 委托。 正则表达式模式的解释如下。  
+ 若要验证电子邮件地址是否有效，方法 `IsValidEmail` 将使用 `(@)(.+)$` 正则表达式模式调用 <xref:System.Text.RegularExpressions.Regex.Replace%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.MatchEvaluator%29?displayProperty=nameWithType> 方法将域名从电子邮件地址分离。 第三个参数是表示了处理和替换匹配文本的方法的 <xref:System.Text.RegularExpressions.MatchEvaluator> 委托。 正则表达式模式的解释如下。  
   
 |模式|说明|  
 |-------------|-----------------|  
@@ -41,7 +41,7 @@ ms.locfileid: "65589521"
 |`(.+)`|匹配任意字符的一个或多个匹配项。 这是第二个捕获组。|  
 |`$`|在字符串的结尾结束匹配。|  
   
- 使用 @ 字符的域名已传递给 `DomainMapper` 方法，该方法使用 <xref:System.Globalization.IdnMapping> 类将 US-ASCII 字符范围外的 Unicode 字符转换为 Punycode。 如果 `invalid` 方法在域名中检测到任何无效字符，该方法还会将 `True` 标志设置为 <xref:System.Globalization.IdnMapping.GetAscii%2A?displayProperty=nameWithType> 。 该方法将冠以 @ 符号的 Punycode 域名返回给 `IsValidEmail` 方法。  
+ 使用 @ 字符的域名已传递给 `DomainMapper` 方法，该方法使用 <xref:System.Globalization.IdnMapping> 类将 US-ASCII 字符范围外的 Unicode 字符转换为 Punycode。 如果 <xref:System.Globalization.IdnMapping.GetAscii%2A?displayProperty=nameWithType> 方法在域名中检测到任何无效字符，该方法还会将 `invalid` 标志设置为 `True` 。 该方法将冠以 @ 符号的 Punycode 域名返回给 `IsValidEmail` 方法。  
   
  然后 `IsValidEmail` 方法调用 <xref:System.Text.RegularExpressions.Regex.IsMatch%28System.String%2CSystem.String%29?displayProperty=nameWithType> 方法验证该地址是否符合正则表达式模式。  
   
@@ -59,7 +59,8 @@ ms.locfileid: "65589521"
 |`(?("")("".+?(?<!\\)""@)`|如果第一个字符是引号，则匹配一个开始引号，后跟至少一个任意字符，再后跟一个结束引号。 不得在结束引号前面加反斜杠字符 (\\)。 `(?<!` 是零宽度负预测先行断言的开头。 字符串应以 at 符号 (@) 结束。|  
 |<code>&#124;(([0-9a-z]</code>|如果第一个字符不是引号，则匹配从 a 到 z 或 A 到 Z（比较不区分大小写）的任意字母字符或从 0 到 9 的任意数字字符。|  
 |`(\.(?!\.))`|如果下一个字符为句点，则匹配它。 如果下一个字符不为句点，则看下一个字符并继续进行匹配。 `(?!\.)` 是宽度为零的负预测先行断言，可防止两个连续句号出现在电子邮件地址的本地部分中。|  
-|<code>&#124;[-!#\$%&'\*\+/=\?\^\`{}&#124;~\w]</code>|如果下一个字符不为句点，则匹配任意单词字符或下列字符之一：-!#$%'*+=?^\`{}&#124;~。|  
+|<code>&#124;[-!#\$%&'\*\+/=\?\^\`{}&#124;~\w]</code>|如果下一个字符不为句点，则匹配任意单词字符或下列字符之一：-!#$%'*+=?
+^\`{}&#124;~。|  
 |<code>((\.(?!\.))&#124;[-!#\$%'\*\+/=\?\^\`{}&#124;~\w])*</code>|匹配替换模式（一个句点，后跟一个非句点或许多字符中的某个字符）零次或多次。|  
 |`@`|匹配 @ 字符。|  
 |`(?<=[0-9a-z])`|如果 @ 字符之前的字符为从 A 到 Z、从 a 到 z 或从 0 到 9 的字符，则继续进行匹配。 `(?<=[0-9a-z])` 构造定义零宽度正回顾断言。|  

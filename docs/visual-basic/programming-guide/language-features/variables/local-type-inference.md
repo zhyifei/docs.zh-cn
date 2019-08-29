@@ -12,64 +12,64 @@ helpviewer_keywords:
 - inference [Visual Basic]
 - type inference [Visual Basic]
 ms.assetid: b8307f18-2e56-4ab3-a45a-826873f400f6
-ms.openlocfilehash: 786466cb0b94a96e629a1f173388ed7d40be7256
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 59559f8775a5fd66a567897b009272df1727b1e8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661909"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69953327"
 ---
 # <a name="local-type-inference-visual-basic"></a>局部类型推理 (Visual Basic)
-使用 Visual Basic 编译器*类型推理*以确定未声明的局部变量的数据类型`As`子句。 编译器将推断变量的初始化表达式的类型的类型。 这使您无需显式声明一个类型，声明变量，如下面的示例中所示。 由于声明，而两者`num1`和`num2`强类型为整数。  
+Visual Basic 编译器使用*类型推理*来确定在没有`As`子句的情况下声明的局部变量的数据类型。 编译器从初始化表达式的类型推断出变量的类型。 这样, 便可以在不显式声明类型的情况下声明变量, 如下面的示例中所示。 作为声明的结果, `num1`和`num2`均强类型化为整数。  
   
  [!code-vb[VbVbalrTypeInference#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTypeInference/VB/Class1.vb#1)]  
  
 > [!NOTE]
->  如果不希望`num2`在前面的示例以类型化为`Integer`，可以通过使用声明，例如指定另一种类型`Dim num3 As Object = 3`或`Dim num4 As Double = 3`。  
+> 如果`num2`你不希望在前一示例中将类型化为`Integer`, 则可以使用或`Dim num4 As Double = 3`等`Dim num3 As Object = 3`声明指定另一种类型。  
 
 > [!NOTE]
->  类型推断可仅用于非静态局部变量;它不能用于确定类字段、 属性或函数的类型。
+> 类型推理只能用于非静态局部变量;它不能用于确定类字段、属性或函数的类型。
  
- 局部类型推理在过程级别进行应用。 它不能用于声明在模块级别 （在类、 结构、 模块或接口，但不是在过程或块） 的变量。 如果`num2`上一示例中而不是一个过程中的本地变量类的字段，声明会导致出错`Option Strict`，并将对其分类`num2`作为`Object`与`Option Strict`关闭。 同样，局部类型推理不适用于过程级变量声明为`Static`。  
+ 局部类型推理适用于过程级别。 它不能用于在模块级别 (在类、结构、模块或接口中, 而不是在过程或块中) 声明变量。 如果`num2`在前面的示例中是某个类的字段, 而不是过程中的局部变量, 则声明会导致`Option Strict`在上出现错误, `Object`并将使用`num2` off 作为进行`Option Strict`分类。 同样, 局部类型推理不适用于声明为`Static`的过程级别变量。  
   
-## <a name="type-inference-vs-late-binding"></a>类型推理与。后期绑定  
- 使用类型推理的代码类似于依赖后期绑定代码。 但是，类型推断为强类型的变量而不是将其保留为`Object`。 编译器使用变量的初始值设定项来确定在编译时生成早期绑定代码变量的类型。 在上一示例中， `num2`，例如`num1`，类型化为`Integer`。  
+## <a name="type-inference-vs-late-binding"></a>类型推理与后期绑定  
+ 使用类型推理的代码与依赖后期绑定的代码类似。 但是, 类型推理强类型变量, 而不是将其`Object`保留原样。 编译器在编译时使用变量的初始值设定项来确定变量的类型以生成早期绑定的代码。 在上一个示例`num2`中, like `num1`为, 类型为。 `Integer`  
   
- 早期绑定的变量的行为不同于后期绑定变量，并仅在运行时知道它的类型。 尽早知道类型使编译器能够识别问题，然后执行、 准确地说，分配的内存和执行其他优化。 早期绑定还使 Visual Basic 的集成的开发环境 (IDE)，IntelliSense 将帮助提供有关对象的成员。 早期绑定也是首选的性能。 这是因为后期绑定变量中存储的所有数据都必须为类型都包装`Object`，并在运行时访问该类型的成员使程序运行较慢。  
+ 早期绑定变量的行为与后期绑定变量的行为不同, 后者的类型仅在运行时已知。 事先知道类型使编译器能够在执行之前识别问题, 精确分配内存并执行其他优化。 早期绑定还允许 Visual Basic 集成开发环境 (IDE) 为对象的成员提供 IntelliSense 帮助。 早期绑定也是性能的首选。 这是因为, 后期绑定变量中存储的所有数据都必须包装为类型`Object`, 并且在运行时访问该类型的成员会使程序运行较慢。  
   
 ## <a name="examples"></a>示例  
- 未声明本地变量时，会发生类型推理`As`子句和初始化。 编译器使用已分配的初始值的类型作为变量的类型。 例如，以下代码行的每个声明类型的变量的`String`。  
+ 如果在没有`As`子句的情况下声明了局部变量并进行了初始化, 则会发生类型推理。 编译器使用所赋的初始值的类型作为变量的类型。 例如, 下面的每一行代码声明一个类型`String`为的变量。  
   
  [!code-vb[VbVbalrTypeInference#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTypeInference/VB/Class1.vb#2)]  
   
- 下面的代码演示两个等效方法来创建整数数组。  
+ 下面的代码演示了两种创建整数数组的等效方法。  
   
  [!code-vb[VbVbalrTypeInference#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTypeInference/VB/Class1.vb#3)]  
   
- 它可以方便地使用类型推理来确定循环控制变量的类型。 在下面的代码中，编译器推断`number`是`Integer`因为`someNumbers2`上一示例中是一个整数数组。  
+ 使用类型推理来确定循环控制变量的类型是一种很方便的方法。 在下面的代码中, 编译器将推断`number` , 这`Integer`是`someNumbers2`因为前面的示例是一个整数数组。  
   
  [!code-vb[VbVbalrTypeInference#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTypeInference/VB/Class1.vb#4)]  
   
- 可以在使用局部类型推理`Using`语句，以建立资源名称的类型，如以下示例所示。  
+ 可以在语句中`Using`使用局部类型推理来建立资源名称的类型, 如下例所示。  
   
  [!code-vb[VbVbalrTypeInference#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTypeInference/VB/Class1.vb#7)]  
   
- 如以下示例所示，还可以从函数的返回值推断变量类型。 这两`pList1`并`pList2`是数组的进程，因为`Process.GetProcesses`返回进程的数组。  
+ 还可以从函数的返回值推断变量的类型, 如下例所示。 和都`pList2`是进程的数组, `Process.GetProcesses`因为返回进程的数组。 `pList1`  
   
  [!code-vb[VbVbalrTypeInference#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTypeInference/VB/Class1.vb#5)]  
   
-## <a name="option-infer"></a>Option Infer  
- `Option Infer` 允许指定特定文件中是否允许在局部类型推理。 若要启用或阻止该选项，请在文件的开头键入以下语句之一。  
+## <a name="option-infer"></a>选项推断  
+ `Option Infer`使您能够指定是否允许在特定文件中进行局部类型推理。 若要启用或阻止该选项, 请在文件开头键入以下语句之一。  
   
  `Option Infer On`  
   
  `Option Infer Off`  
   
- 如果未指定的值`Option Infer`在代码中，编译器默认设置是`Option Infer On`。 
+ 如果`Option Infer`在代码中未指定的值, 则编译器默认值为`Option Infer On`。 
   
  如果为文件中 `Option Infer` 设置的值与在 IDE 中或在命令行上设置的值冲突，则文件中的值优先。  
   
- 有关详细信息，请参阅[Option Infer 语句](../../../../visual-basic/language-reference/statements/option-infer-statement.md)并[编译页，项目设计器 (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)。  
+ 有关详细信息, 请参阅[选项推断语句](../../../../visual-basic/language-reference/statements/option-infer-statement.md)和[编译页, 项目设计器 (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)。  
   
 ## <a name="see-also"></a>请参阅
 

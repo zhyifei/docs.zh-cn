@@ -2,12 +2,12 @@
 title: 链接的查询的性能 (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: b2f1d715-8946-4dc0-8d56-fb3d1bba54a6
-ms.openlocfilehash: 1ccb7dfec57a4aeea8329456084ca99f5ca3124d
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: dfd7698d0bdd24a75458a581dfd42c3d21325e6f
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66689998"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69591580"
 ---
 # <a name="performance-of-chained-queries-linq-to-xml-c"></a>链接的查询的性能 (LINQ to XML) (C#)
 
@@ -53,6 +53,6 @@ foreach (var i in query2)
 
 因此，通过 `query2` 执行的迭代与第一个查询源中的项数（即，线形时间）成正比。 相应的 Visual Basic 示例将具有相同的性能配置文件。
 
-有关迭代器的详细信息，请参阅 [yield](../../../../csharp/language-reference/keywords/yield.md)。
+有关迭代器的详细信息，请参阅 [yield](../../../language-reference/keywords/yield.md)。
 
-有关将查询链接在一起的更详细教程，请参阅[教程：将查询链接在一起](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)。
+有关将查询链接在一起的更详细教程，请参阅[教程：将查询链接在一起](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)。

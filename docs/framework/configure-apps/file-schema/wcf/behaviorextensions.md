@@ -2,12 +2,12 @@
 title: <behaviorExtensions>
 ms.date: 03/30/2017
 ms.assetid: 59f2791a-c78f-40d7-aa80-0d9cd10135d9
-ms.openlocfilehash: 81ce9bb0e55fe4570f8a21187d9df80ea22393fe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bcf1f1dcdba50c3e7fba8eb170132d0cf47c4271
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673454"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919822"
 ---
 # <a name="behaviorextensions"></a>\<behaviorExtensions>
 用户可以使用行为扩展来创建用户定义的行为元素。 这些元素可与标准的 Windows Communication Foundation (WCF) 行为元素一起使用。 `behaviorExtensions` 节定义了元素，使其可用于配置中。 下面是一个典型的行为扩展示例。  
@@ -49,9 +49,9 @@ ms.locfileid: "61673454"
   
  攻击者可以利用 CLR 搜索顺序来执行未授权的代码。 通过使用完全限定的（强）名称，可以唯一标识类型并进一步提高系统的安全性。  
   
- 有关详细信息，请参阅[运行时如何定位程序集](https://go.microsoft.com/fwlink/?LinkId=95336)和<xref:System.AppDomain.TypeResolve>。  
+ 有关详细信息, 请参阅[运行时如何定位程序集](https://go.microsoft.com/fwlink/?LinkId=95336)和<xref:System.AppDomain.TypeResolve>。  
   
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.ServiceModel.Configuration.BehaviorExtensionElement>
-- [使用行为配置和扩展运行时](../../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)
+- [使用行为配置和扩展运行时](../../../wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)

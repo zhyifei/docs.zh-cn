@@ -2,12 +2,12 @@
 title: 对不同形状的 XML 进行投影 (C#)
 ms.date: 07/20/2015
 ms.assetid: 4cb6b14a-32dc-4a2a-813e-bf9368fa8d86
-ms.openlocfilehash: 3b992b9eb56f978ce92f3b0210223da978f44e2b
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 1377df1ce7f54bc9a0f58836d7df5e5b7b54a69a
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66484044"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69591532"
 ---
 # <a name="projecting-xml-in-a-different-shape-c"></a>对不同形状的 XML 进行投影 (C#)
 本主题演示对形状不同于源 XML 的 XML 进行投影的示例。  
@@ -17,7 +17,7 @@ ms.locfileid: "66484044"
 ## <a name="example"></a>示例  
  本示例处理一个 WordprocessingML 文档，它从 WordprocessingML 文档中检索段落节点。 本示例还标识每个段落的样式和文本。 最后，本示例将以不同的形状投影 XML。 本示例以本教程中前面的一些示例为基础构建。 下面代码中的注释标识出了执行投影操作的新语句。  
   
- 有关创建此示例的源文档的说明，请参阅[创建源 Office Open XML 文档 (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)。  
+ 有关创建此示例的源文档的说明，请参阅[创建源 Office Open XML 文档 (C#)](./creating-the-source-office-open-xml-document.md)。  
   
  本示例使用 WindowsBase 程序集中的类。 它使用 <xref:System.IO.Packaging?displayProperty=nameWithType> 命名空间中的类型。  
   
@@ -233,5 +233,5 @@ class Program
 ## <a name="next-steps"></a>后续步骤  
  下面的示例通过查询查找 Word 文档中的所有文本：  
   
-- [查找 Word 文档中的文本 (C#)](../../../../csharp/programming-guide/concepts/linq/finding-text-in-word-documents.md)  
+- [查找 Word 文档中的文本 (C#)](./finding-text-in-word-documents.md)  
   

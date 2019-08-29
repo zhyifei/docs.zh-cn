@@ -9,15 +9,15 @@ helpviewer_keywords:
 - XML comment literal [Visual Basic]
 - XML literals [Visual Basic], comment
 ms.assetid: 634c1cee-5e01-48d0-88d7-2dd55e4a9e52
-ms.openlocfilehash: 7af01bda05b113be02261051421a91bdea776851
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 91369392f33f2a86a7a4cb5ffb3faa668c113348
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64644574"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965403"
 ---
 # <a name="xml-comment-literal-visual-basic"></a>XML 注释文本 (Visual Basic)
-一个文本表示<xref:System.Xml.Linq.XComment>对象。  
+表示<xref:System.Xml.Linq.XComment>对象的文本。  
   
 ## <a name="syntax"></a>语法  
   
@@ -29,29 +29,29 @@ ms.locfileid: "64644574"
   
 |术语|定义|  
 |---|---|  
-|`<!--`|必需。 表示 XML 注释的开始。|  
-|`content`|必需。 XML 注释中显示的文本。 不能包含一系列的两个连字符 （-） 或与结束标记相邻的连字符结尾。|  
+|`<!--`|必需。 表示 XML 注释的开头。|  
+|`content`|必需。 要在 XML 注释中显示的文本。 不能包含一系列两个连字符 (--), 也不能以与结束标记相邻的连字符结尾。|  
 |`-->`|必需。 表示 XML 注释的结尾。|  
   
 ## <a name="return-value"></a>返回值  
  一个 <xref:System.Xml.Linq.XComment> 对象。  
   
 ## <a name="remarks"></a>备注  
- XML 注释文本不包含文档内容;它们包含有关文档的信息。 序列"-->"结尾的 XML 注释部分。 这意味着以下几点：  
+ XML 注释文本不包含文档内容;它们包含有关文档的信息。 XML 注释部分以序列 "-->" 结尾。 这意味着:  
   
-- 因为嵌入的分隔符是有效的 XML 注释内容，不能在 XML 注释文本中使用嵌入式的表达式。  
+- 不能在 XML 注释文本中使用嵌入表达式, 因为嵌入式表达式分隔符是有效的 XML 注释内容。  
   
-- XML 注释节无法嵌套，因为`content`不能包含值"-->"。  
+- XML 注释部分不能嵌套, 因为`content`不能包含值 "-->"。  
   
- 可以将 XML 注释文本分配给一个变量，或将其包含在 XML 元素文本中。  
+ 可以将 XML 注释文本分配给一个变量, 也可以将其包含在 XML 元素文本中。  
   
 > [!NOTE]
->  XML 文本可以跨多个行，而无需使用行继续符。 此功能，可将内容从 XML 文档复制并粘贴直接到 Visual Basic 程序。  
+> XML 文本可以跨多行, 而无需使用行继续符。 此功能使你能够从 XML 文档复制内容并将其直接粘贴到 Visual Basic 程序。  
   
- Visual Basic 编译器将 XML 注释文本转换为调用<xref:System.Xml.Linq.XComment.%23ctor%2A>构造函数。  
+ Visual Basic 编译器将 XML 注释文本转换为对<xref:System.Xml.Linq.XComment.%23ctor%2A>构造函数的调用。  
   
 ## <a name="example"></a>示例  
- 以下示例创建 XML 注释包含文本"这是一条注释"。  
+ 下面的示例创建一个包含文本 "This is a comment" 的 XML 注释。  
   
  [!code-vb[VbXMLSamples#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples4.vb#9)]  
   

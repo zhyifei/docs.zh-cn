@@ -1,16 +1,16 @@
 ---
-title: 如何：并行发起多个 Web 请求，使用 Async 和 Await (Visual Basic)
+title: 如何：使用 Async 和 Await (Visual Basic) 并行发出多个 Web 请求
 ms.date: 07/20/2015
 ms.assetid: a894b99b-7cfd-4a38-adfb-20d24f986730
-ms.openlocfilehash: e306722fca4e0215cf7b67d85763858d459a171a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 70eab3fb8014e26435b73e217889ba3e6c58ca92
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64642440"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69958054"
 ---
-# <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-visual-basic"></a>如何：并行发起多个 Web 请求，使用 Async 和 Await (Visual Basic)
-在 async 方法中，任务在创建后即启动。 [Await](../../../../visual-basic/language-reference/operators/await-operator.md)运算符应用于在任务完成之前无法继续处理的方法中的点上的任务。 通常任务被创建后即等待，如下面的示例所示。  
+# <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-visual-basic"></a>如何：使用 Async 和 Await (Visual Basic) 并行发出多个 Web 请求
+在 async 方法中，任务在创建后即启动。 [Await](../../../../visual-basic/language-reference/operators/await-operator.md)运算符应用于方法中的点, 在该方法中, 处理无法继续, 直到任务完成。 通常任务被创建后即等待，如下面的示例所示。  
   
 ```vb  
 Dim result = Await someWebAccessMethodAsync(url)  
@@ -36,27 +36,27 @@ Dim result = Await myTask
  下面的程序启动三个异步 Web 下载任务，然后按照任务的调用顺序等待其完成。 请注意，运行此程序时，任务并不总是按照创建和等待它们的顺序完成。 任务在创建后开始运行，在此方法到达 await 表达式之前可能已完成一个或多个任务。  
   
 > [!NOTE]
->  若要完成此项目，计算机上必须安装有 Visual Studio 2012 或更高版本和 .NET Framework 4.5 或更高版本。  
+> 若要完成此项目，计算机上必须安装有 Visual Studio 2012 或更高版本和 .NET Framework 4.5 或更高版本。  
   
- 有关同时启动多个任务的另一个示例，请参阅[如何：使用 (Visual Basic) Task.WhenAll 扩展异步演练](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)。  
+ 有关同时启动多个任务的另一个示例，请参阅[如何：使用 System.threading.tasks.task.whenall (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)扩展 Async 演练。  
   
  可以从[开发人员代码示例](https://code.msdn.microsoft.com/Async-Make-Multiple-Web-49adb82e)下载此示例的代码。  
   
 ### <a name="to-set-up-the-project"></a>设置项目  
   
-1. 若要设置 WPF 应用程序，请完成以下步骤。 可以在[演练：访问 Web 使用 Async 和 Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)。  
+1. 若要设置 WPF 应用程序，请完成以下步骤。 可以在[演练：使用 Async 和 Await 访问 Web (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)。  
   
     - 创建包含一个文本框和一个按钮的 WPF 应用程序。 将按钮命名为 `startButton`，将文本框命名为 `resultsTextBox`。  
   
     - 对 <xref:System.Net.Http> 添加引用。  
   
-    - 在 MainWindow.xaml.vb 文件中，添加`Imports`语句`System.Net.Http`。  
+    - 在 mainwindow.xaml 文件中, 为`Imports` `System.Net.Http`添加语句。  
   
 ### <a name="to-add-the-code"></a>添加代码  
   
-1. 在设计窗口 MainWindow.xaml 中，双击按钮以创建`startButton_Click`MainWindow.xaml.vb 中的事件处理程序。  
+1. 在 "设计" 窗口中, 双击 "mainwindow.xaml" 按钮以在 mainwindow.xaml 中创建`startButton_Click`事件处理程序。  
   
-2. 复制以下代码，并将其粘贴到正文`startButton_Click`MainWindow.xaml.vb 中。  
+2. 复制以下代码, 并将其粘贴到 mainwindow.xaml `startButton_Click`中的正文中。  
   
     ```vb  
     resultsTextBox.Clear()  
@@ -72,7 +72,7 @@ Dim result = Await myTask
   
     - `DisplayResults` 显示每个 URL 的字节数组中的字节数。 当所有任务完成下载后显示。  
   
-     复制以下方法，并将它们后粘贴`startButton_Click`MainWindow.xaml.vb 中的事件处理程序。  
+     复制以下方法, 并将其粘贴到 mainwindow.xaml `startButton_Click`中的事件处理程序之后。  
   
     ```vb  
     Private Async Function ProcessURLAsync(url As String, client As HttpClient) As Task(Of Integer)  
@@ -205,6 +205,6 @@ End Class
   
 ## <a name="see-also"></a>请参阅
 
-- [演练：访问 Web 使用 Async 和 Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [演练：使用 Async 和 Await 访问 Web (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [使用 Async 和 Await 的异步编程 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
-- [如何：使用 (Visual Basic) Task.WhenAll 扩展异步演练](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
+- [如何：使用 System.threading.tasks.task.whenall (Visual Basic) 扩展 Async 演练](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)

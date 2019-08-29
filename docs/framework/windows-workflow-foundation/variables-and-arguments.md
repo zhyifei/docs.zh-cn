@@ -2,15 +2,15 @@
 title: 变量和自变量
 ms.date: 03/30/2017
 ms.assetid: d03dbe34-5b2e-4f21-8b57-693ee49611b8
-ms.openlocfilehash: 29ce5222435b68ed13cbc967e58e72a937625e8e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 251641c924bbf33c176f519f8fc4f9dec59e2eb8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61669480"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962194"
 ---
 # <a name="variables-and-arguments"></a>变量和自变量
-在 Windows Workflow Foundation (WF) 中，变量表示的数据存储区和自变量表示数据的流执行和跳出执行活动。 活动拥有一组自变量，这些自变量构成活动的签名。 此外，活动可以维护一个变量列表，在工作流设计期间，开发人员可在该列表中添加或移除变量。 使用可返回值的表达式可以绑定参数。  
+在 Windows Workflow Foundation (WF) 中, 变量表示数据的存储, 参数表示流入和流出活动的数据流。 活动拥有一组自变量，这些自变量构成活动的签名。 此外，活动可以维护一个变量列表，在工作流设计期间，开发人员可在该列表中添加或移除变量。 使用可返回值的表达式可以绑定参数。  
   
 ## <a name="variables"></a>变量  
  变量是数据的存储位置。 变量被声明为工作流定义的一部分。 变量在运行时获取值，并将这些值存储为工作流实例状态的一部分。 变量定义指定了变量的类型，如果需要，还可指定变量的名称。 以下代码演示如何声明变量，使用 <xref:System.Activities.Statements.Assign%601> 活动为变量赋值，然后使用 <xref:System.Activities.Statements.WriteLine> 活动将其值显示在控制台上。  
@@ -67,7 +67,7 @@ Variable<string> var = new Variable<string>
   
 2. 调用 <xref:System.Activities.InOutArgument%601.Set%2A> 时，运行时将立即设置值。  
   
-3. 可根据需要指定自变量的 <xref:System.Activities.Argument.EvaluationOrder%2A>。 <xref:System.Activities.Argument.EvaluationOrder%2A> 是指定自变量计算顺序的从零开始的值。 默认情况下，自变量的计算顺序未指定且等于 <xref:System.Activities.Argument.UnspecifiedEvaluationOrder> 值。 将 <xref:System.Activities.Argument.EvaluationOrder%2A> 设置为一个大于或等于零的值，以便为此自变量指定一个计算顺序。 Windows Workflow Foundation 的计算结果的参数和指定的计算顺序按升序排列。 注意：未指定计算顺序的参数将先于指定计算顺序的参数计算。  
+3. 可根据需要指定自变量的 <xref:System.Activities.Argument.EvaluationOrder%2A>。 <xref:System.Activities.Argument.EvaluationOrder%2A> 是指定自变量计算顺序的从零开始的值。 默认情况下，自变量的计算顺序未指定且等于 <xref:System.Activities.Argument.UnspecifiedEvaluationOrder> 值。 将 <xref:System.Activities.Argument.EvaluationOrder%2A> 设置为一个大于或等于零的值，以便为此自变量指定一个计算顺序。 Windows Workflow Foundation 按指定的计算顺序按升序计算参数。 注意：未指定计算顺序的参数将先于指定计算顺序的参数计算。  
   
  活动作者可使用强类型机制来公开该活动的自变量。 实现方法是声明 <xref:System.Activities.InArgument%601>、<xref:System.Activities.OutArgument%601> 和 <xref:System.Activities.InOutArgument%601> 类型的属性。 这允许活动作者建立有关流入流出活动的数据的特定协定。  
   
@@ -84,7 +84,7 @@ public class Prompt : Activity
 ```  
   
 > [!NOTE]
->  返回单个值的活动可从 <xref:System.Activities.Activity%601>、<xref:System.Activities.NativeActivity%601> 或 <xref:System.Activities.CodeActivity%601> 派生。 这些活动拥有定义完善的名为 <xref:System.Activities.OutArgument%601> 的 <xref:System.Activities.Activity%601.Result%2A>，它包含活动的返回值。  
+> 返回单个值的活动可从 <xref:System.Activities.Activity%601>、<xref:System.Activities.NativeActivity%601> 或 <xref:System.Activities.CodeActivity%601> 派生。 这些活动拥有定义完善的名为 <xref:System.Activities.OutArgument%601> 的 <xref:System.Activities.Activity%601.Result%2A>，它包含活动的返回值。  
   
 ### <a name="using-variables-and-arguments-in-workflows"></a>在工作流中使用变量和自变量  
  以下示例演示如何在工作流中使用变量和自变量。 该工作流是一个声明三个变量：`var1`、`var2` 和 `var3` 的序列。 该工作流中的第一个活动是 `Assign` 活动，它将变量 `var1` 的值赋给变量 `var2`。 接下来是 `WriteLine` 活动，该活动打印 `var2` 变量的值。 之后是另一个 `Assign` 活动，该活动将变量 `var2` 的值赋给变量 `var3`。 最后是另一个 `WriteLine` 活动，该活动打印 `var3` 变量的值。 第一个 `Assign` 活动使用 `InArgument<string>` 和 `OutArgument<string>` 对象，显式表示对活动自变量的绑定。 将 `InArgument<string>` 用于 <xref:System.Activities.Statements.Assign.Value%2A> 是因为值通过其 <xref:System.Activities.Statements.Assign%601> 自变量流入 <xref:System.Activities.Statements.Assign.Value%2A> 活动，而将 `OutArgument<string>` 用于 <xref:System.Activities.Statements.Assign.To%2A> 是因为值从 <xref:System.Activities.Statements.Assign.To%2A> 自变量流出而赋给变量。 第二个 `Assign` 活动完成相同的操作，它采用更加紧凑的语法，通过使用隐式强制转换而达到相同目的。 `WriteLine` 活动也使用紧凑语法。  
@@ -141,4 +141,4 @@ public sealed class Add : CodeActivity<int>
 }  
 ```  
   
- 有关使用参数、 变量和代码中的表达式的详细信息，请参阅[编写工作流、 活动和表达式使用命令性代码](authoring-workflows-activities-and-expressions-using-imperative-code.md)和[所需自变量和重载组](required-arguments-and-overload-groups.md).
+ 有关在代码中使用参数、变量和表达式的详细信息, 请参阅使用命令性代码和[必需的参数和重载组](required-arguments-and-overload-groups.md)[创作工作流、活动和表达式](authoring-workflows-activities-and-expressions-using-imperative-code.md)。

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C# compiler, options listed alphabetically
 - Visual C#, compiler options listed alphabetically
 ms.assetid: 43535ea0-ca47-4a15-b528-615087a86092
-ms.openlocfilehash: 1e7b19999ab8536e9a1b05c1ad5d548c8da2cbd6
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 37eedc6d41867a6d5e6a49b8df5040c657bb2689
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58037696"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69602749"
 ---
 # <a name="c-compiler-options-listed-alphabetically"></a>按字母顺序列出的 C# 编译器选项
 
@@ -77,7 +77,7 @@ ms.locfileid: "58037696"
 |-ruleset:\<file>|指定可禁用特定诊断的规则集文件。|
 |[-subsystemversion](subsystemversion-compiler-option.md)|指定可执行文件可以使用的子系统的最低版本。|
 |[-target](target-compiler-option.md)|使用下列四个选项之一指定输出文件的格式：[-target:appcontainerexe](target-appcontainerexe-compiler-option.md)、[-target:exe](target-exe-compiler-option.md)、[-target:library](target-library-compiler-option.md)、[-target:module](target-module-compiler-option.md)、[-target:winexe](target-winexe-compiler-option.md)、[-target:winmdobj](target-winmdobj-compiler-option.md)。|
-|[unsafe](unsafe-compiler-option.md)|允许[不安全](../../../csharp/language-reference/keywords/unsafe.md)代码。|
+|[unsafe](unsafe-compiler-option.md)|允许[不安全](../keywords/unsafe.md)代码。|
 |[-utf8output](utf8output-compiler-option.md)|以 UTF-8 编码格式输出编译器消息。|
 |-version|显示编译器的版本号并退出。|
 |[/warn](warn-compiler-option.md)|设置警告等级 (0-4)。|

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ServiceInstaller class, security context
 ms.assetid: 02187c7b-dbf2-45f2-96c2-e11010225a22
 author: ghogen
-ms.openlocfilehash: 633d378b2336b3ee166375a923252e0477e75127
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 88dc9c40a2b8ff0ac9bba26c991ba2a4ac2dcb43
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591658"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69952438"
 ---
 # <a name="how-to-specify-the-security-context-for-services"></a>如何：为服务指定安全上下文
 默认情况下，服务在与登录用户不同的安全性上下文中运行。 服务在名为 `LocalSystem` 的默认系统帐户的上下文中运行，这样使服务拥有与用户不同的针对系统资源的访问权限。 可以更改此行为以指定应在其下运行服务的其他用户帐户。  
@@ -40,9 +40,9 @@ ms.locfileid: "64591658"
 2. 在设计器中，访问 `ProjectInstaller` 类并单击正在使用的服务的服务进程安装程序。  
   
     > [!NOTE]
-    >  对于每个服务应用程序，在 `ProjectInstaller` 类中至少有两个安装组件 — 一个用于安装项目中所有服务的进程，另一个是应用程序包含的每个服务的安装程序。 在这种情况下，你要选择 <xref:System.ServiceProcess.ServiceProcessInstaller>。  
+    > 对于每个服务应用程序，在 `ProjectInstaller` 类中至少有两个安装组件 — 一个用于安装项目中所有服务的进程，另一个是应用程序包含的每个服务的安装程序。 在这种情况下，你要选择 <xref:System.ServiceProcess.ServiceProcessInstaller>。  
   
-3. 在“属性”窗口中，将 <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> 设置为适当的值。  
+3. 在“属性”  窗口中，将 <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> 设置为适当的值。  
   
 ## <a name="see-also"></a>请参阅
 
