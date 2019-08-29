@@ -3,12 +3,12 @@ title: .NET Core 命令行接口 (CLI) 工具
 description: 概述了 .NET Core 命令行接口 (CLI) 工具和功能。
 ms.date: 08/14/2017
 ms.custom: seodec18
-ms.openlocfilehash: ff96023dd0b161271e146f7a7e69924c9db9e769
-ms.sourcegitcommit: 4a3c95e91289d16c38979575a245a4f76b0da147
+ms.openlocfilehash: 20a083f3e7496521243bebd6585a48c8a562c548
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67569519"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105035"
 ---
 # <a name="net-core-command-line-interface-cli-tools"></a>.NET Core 命令行接口 (CLI) 工具
 
@@ -18,8 +18,8 @@ ms.locfileid: "67569519"
 
 使用本机安装程序或使用安装 shell 脚本：
 
-* 本机安装程序主要用于开发人员的计算机，并使用每个受支持的平台的本机安装机制，例如，Ubuntu 上的 DEB 程序包或 Windows 上的 MSI 捆绑包。 这些安装程序安装并配置环境，供开发人员立即使用，但是需要具有该计算机上的管理权限。 可以在 [.NET Core 安装指南](https://aka.ms/dotnetcoregs)中查看安装说明。
-* Shell 脚本主要用于设置生成服务器或希望安装工具但没有管理权限的情况。 安装脚本不会在计算机上安装先决条件，必须手动安装它。 有关详细信息，请参阅[安装脚本引用主题](dotnet-install-script.md)。 有关如何在你的持续集成 (CI) 生成服务器上设置 CLI 的信息，请参阅[在持续集成 (CI) 中使用 .NET Core SDK 和工具](using-ci-with-cli.md)。
+- 本机安装程序主要用于开发人员的计算机，并使用每个受支持的平台的本机安装机制，例如，Ubuntu 上的 DEB 程序包或 Windows 上的 MSI 捆绑包。 这些安装程序安装并配置环境，供开发人员立即使用，但是需要具有该计算机上的管理权限。 可以在 [.NET Core 安装指南](https://aka.ms/dotnetcoregs)中查看安装说明。
+- Shell 脚本主要用于设置生成服务器或希望安装工具但没有管理权限的情况。 安装脚本不会在计算机上安装先决条件，必须手动安装它。 有关详细信息，请参阅[安装脚本引用主题](dotnet-install-script.md)。 有关如何在你的持续集成 (CI) 生成服务器上设置 CLI 的信息，请参阅[在持续集成 (CI) 中使用 .NET Core SDK 和工具](using-ci-with-cli.md)。
 
 在默认情况下，SLI 以并行 (SxS) 方式安装，因此，因此，CLI 工具的多个版本可以在一个计算机上共存。 有关确定在安装了多个版本的计算机上所使用的版本的类型，在[驱动程序](#driver)部分中对此有更详尽的介绍。
 
@@ -31,67 +31,67 @@ ms.locfileid: "67569519"
 
 **基本命令**
 
-* [new](dotnet-new.md)
-* [restore](dotnet-restore.md)
-* [build](dotnet-build.md)
-* [publish](dotnet-publish.md)
-* [run](dotnet-run.md)
-* [test](dotnet-test.md)
-* [vstest](dotnet-vstest.md)
-* [pack](dotnet-pack.md)
-* [migrate](dotnet-migrate.md)
-* [clean](dotnet-clean.md)
-* [sln](dotnet-sln.md)
-* [help](dotnet-help.md)
-* [store](dotnet-store.md)
+- [new](dotnet-new.md)
+- [restore](dotnet-restore.md)
+- [build](dotnet-build.md)
+- [publish](dotnet-publish.md)
+- [run](dotnet-run.md)
+- [test](dotnet-test.md)
+- [vstest](dotnet-vstest.md)
+- [pack](dotnet-pack.md)
+- [migrate](dotnet-migrate.md)
+- [clean](dotnet-clean.md)
+- [sln](dotnet-sln.md)
+- [help](dotnet-help.md)
+- [store](dotnet-store.md)
 
 **项目修改命令**
 
-* [add package](dotnet-add-package.md)
-* [add reference](dotnet-add-reference.md)
-* [remove package](dotnet-remove-package.md)
-* [remove reference](dotnet-remove-reference.md)
-* [list reference](dotnet-list-reference.md)
+- [add package](dotnet-add-package.md)
+- [add reference](dotnet-add-reference.md)
+- [remove package](dotnet-remove-package.md)
+- [remove reference](dotnet-remove-reference.md)
+- [list reference](dotnet-list-reference.md)
 
 **高级命令**
 
-* [nuget delete](dotnet-nuget-delete.md)
-* [nuget locals](dotnet-nuget-locals.md)
-* [nuget push](dotnet-nuget-push.md)
-* [msbuild](dotnet-msbuild.md)
-* [dotnet install script](dotnet-install-script.md)
+- [nuget delete](dotnet-nuget-delete.md)
+- [nuget locals](dotnet-nuget-locals.md)
+- [nuget push](dotnet-nuget-push.md)
+- [msbuild](dotnet-msbuild.md)
+- [dotnet install script](dotnet-install-script.md)
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 **基本命令**
 
-* [new](dotnet-new.md)
-* [restore](dotnet-restore.md)
-* [build](dotnet-build.md)
-* [publish](dotnet-publish.md)
-* [run](dotnet-run.md)
-* [test](dotnet-test.md)
-* [vstest](dotnet-vstest.md)
-* [pack](dotnet-pack.md)
-* [migrate](dotnet-migrate.md)
-* [clean](dotnet-clean.md)
-* [sln](dotnet-sln.md)
+- [new](dotnet-new.md)
+- [restore](dotnet-restore.md)
+- [build](dotnet-build.md)
+- [publish](dotnet-publish.md)
+- [run](dotnet-run.md)
+- [test](dotnet-test.md)
+- [vstest](dotnet-vstest.md)
+- [pack](dotnet-pack.md)
+- [migrate](dotnet-migrate.md)
+- [clean](dotnet-clean.md)
+- [sln](dotnet-sln.md)
 
 **项目修改命令**
 
-* [add package](dotnet-add-package.md)
-* [add reference](dotnet-add-reference.md)
-* [remove package](dotnet-remove-package.md)
-* [remove reference](dotnet-remove-reference.md)
-* [list reference](dotnet-list-reference.md)
+- [add package](dotnet-add-package.md)
+- [add reference](dotnet-add-reference.md)
+- [remove package](dotnet-remove-package.md)
+- [remove reference](dotnet-remove-reference.md)
+- [list reference](dotnet-list-reference.md)
 
 **高级命令**
 
-* [nuget delete](dotnet-nuget-delete.md)
-* [nuget locals](dotnet-nuget-locals.md)
-* [nuget push](dotnet-nuget-push.md)
-* [msbuild](dotnet-msbuild.md)
-* [dotnet install script](dotnet-install-script.md)
+- [nuget delete](dotnet-nuget-delete.md)
+- [nuget locals](dotnet-nuget-locals.md)
+- [nuget push](dotnet-nuget-push.md)
+- [msbuild](dotnet-msbuild.md)
+- [dotnet install script](dotnet-install-script.md)
 
 ---
 
@@ -148,7 +148,7 @@ dotnet /build_output/my_app.dll
 
 ## <a name="migration-from-projectjson"></a>从 project.json 迁移
 
-如果使用预览版 2 工具生成基于 *project.json* 的项目，请查阅 [dotnet 迁移](dotnet-migrate.md)主题，了解将你的项目迁移到 MSBuild/*.csproj* 以使用版本工具的信息。 对于预览版 2 工具发布之前所创建的 .NET Core 项目，请按照[从 DNX 迁移到 .NET Core CLI (project.json)](../migration/from-dnx.md) 中的指南手动更新项目，然后使用 `dotnet migrate` 或直接升级项目。
+如果使用预览版 2 工具生成基于 *project.json* 的项目，请查阅 [dotnet 迁移](dotnet-migrate.md)主题，了解将你的项目迁移到 MSBuild/ *.csproj* 以使用版本工具的信息。 对于预览版 2 工具发布之前所创建的 .NET Core 项目，请按照[从 DNX 迁移到 .NET Core CLI (project.json)](../migration/from-dnx.md) 中的指南手动更新项目，然后使用 `dotnet migrate` 或直接升级项目。
 
 ## <a name="see-also"></a>请参阅
 

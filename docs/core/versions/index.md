@@ -4,12 +4,12 @@ description: 本文介绍了 .NET Core SDK 和运行时的版本控制方式（�
 author: bleroy
 ms.date: 07/26/2018
 ms.custom: seodec18
-ms.openlocfilehash: e060eac3a63ff869a2fe51fae0166b75329fcb49
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dcf74f6fa892446555541f13a33130a93787cf70
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61646860"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70104959"
 ---
 # <a name="overview-of-how-net-core-is-versioned"></a>.NET Core 的版本控制方式概述
 
@@ -36,14 +36,14 @@ SDK 版本号的第三个位置同时传达次要编号和修补程序编号。 
 
 注意：
 
-* 如果在运行时功能更新之前，SDK 有 10 个功能更新，则版本号将滚动到 1000 系列，2.2.1000 等编号为 2.2.900 之后的功能版本。 应该不会出现这种情况。
-* 不会出现为发布功能的 99 修补程序版本。 如果某版本接近此数字，则会强制发布功能。
+- 如果在运行时功能更新之前，SDK 有 10 个功能更新，则版本号将滚动到 1000 系列，2.2.1000 等编号为 2.2.900 之后的功能版本。 应该不会出现这种情况。
+- 不会出现为发布功能的 99 修补程序版本。 如果某版本接近此数字，则会强制发布功能。
 
 可在 [dotnet/设计](https://github.com/dotnet/designs/pull/29) 存储库中查看初始建议的更多详细信息。
 
 ## <a name="semantic-versioning"></a>语义化版本控制
 
-.NET Core 运行时大致遵循[语义版本控制 (SemVer)](https://semver.org/)，采用 `MAJOR.MINOR.PATCH` 版本控制，通过版本号的各部分来描述更改程度和类型。
+.NET Core 运行时大致遵循[语义版本控制 (SemVer)](https://semver.org/)，采用 `MAJOR.MINOR.PATCH` 版本控制，通过版本号的各部分来描述更改程度和类型  。
 
 ```
 MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
@@ -55,24 +55,24 @@ MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
 
 `MAJOR` 在下列情况时递增：
 
-* 产品或新产品方向发生重大更改。
-* 发生了中断性变更。 接受中断性变更存在较大障碍。
-* 旧版本不再受支持。
-* 采用了现有依赖项的较新 `MAJOR` 版本。
+- 产品或新产品方向发生重大更改。
+- 发生了中断性变更。 接受中断性变更存在较大障碍。
+- 旧版本不再受支持。
+- 采用了现有依赖项的较新 `MAJOR` 版本。
 
 `MINOR` 在下列情况时递增：
 
-* 添加了公共 API 外围应用。
-* 添加了新行为。
-* 采用了现有依赖项的较新 `MINOR` 版本。
-* 引入了新依赖项。
+- 添加了公共 API 外围应用。
+- 添加了新行为。
+- 采用了现有依赖项的较新 `MINOR` 版本。
+- 引入了新依赖项。
 
 `PATCH` 在下列情况时递增：
 
-* 进行了 Bug 修复。
-* 添加了对较新平台的支持。
-* 采用了现有依赖项的较新 `PATCH` 版本。
-* 任何其他不符合上述情况的更改。
+- 进行了 Bug 修复。
+- 添加了对较新平台的支持。
+- 采用了现有依赖项的较新 `PATCH` 版本。
+- 任何其他不符合上述情况的更改。
 
 存在多处更改时，单个更改影响的最高级别元素会递增，并将随后的元素重置为零。 例如，当 `MAJOR` 递增时，`MINOR` 和 `PATCH` 将重置为零。 当 `MINOR` 递增时，`PATCH` 将重置为零，而 `MAJOR` 保持不变。
 
