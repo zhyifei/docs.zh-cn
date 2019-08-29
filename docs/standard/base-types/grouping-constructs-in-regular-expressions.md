@@ -349,7 +349,7 @@ ms.locfileid: "69963382"
 |`\w+`|匹配一个或多个单词字符。|  
 |`\b`|在单词边界处结束匹配。|  
   
- 下面的示例定义了正则表达式匹配，其在正则表达式的末尾使用零宽度预测先行断言，以匹配未以标点字符结束的单词。  
+ 下面的示例定义了正则表达式匹配，其在正则表达式的末尾使用零宽度预测先行断言，以匹配未以标点字符结束的单词。
   
  [!code-csharp[RegularExpressions.Language.Grouping#8](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.grouping/cs/negativelookahead2.cs#8)]
  [!code-vb[RegularExpressions.Language.Grouping#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.grouping/vb/negativelookahead2.vb#8)]  
@@ -448,7 +448,7 @@ ms.locfileid: "69963382"
   
 - 集合中的第一个 <xref:System.Text.RegularExpressions.Group> 对象（位于索引零的对象）表示整个匹配。  
   
-- 下一组 <xref:System.Text.RegularExpressions.Group> 对象表示未命名（编号）的捕获组。 它们以在正则表达式中定义的顺序出现，从左至右。 这些组的索引值范围从 1 到集合中未命名捕获组的数目。 （特定组索引等效于其带编号的反向引用。 有关向后引用的更多信息，请参见 [Backreference Constructs](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md)。）  
+- 下一组 <xref:System.Text.RegularExpressions.Group> 对象表示未命名（编号）的捕获组。 它们以在正则表达式中定义的顺序出现，从左至右。 这些组的索引值范围从 1 到集合中未命名捕获组的数目。 （特定组索引等效于其带编号的反向引用。 有关向后引用的更多信息，请参见 [反向引用构造](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md)。）  
   
 - 最后的 <xref:System.Text.RegularExpressions.Group> 对象组表示命名的捕获组。 它们以在正则表达式中定义的顺序出现，从左至右。 第一个名为捕获组的索引值是一个大于最后一个未命名的捕获组的索引。 如果正则表达式中没有未命名捕获组，则第一个命名的捕获组的索引值为 1。  
   
@@ -466,7 +466,9 @@ ms.locfileid: "69963382"
 |`\b`|在单词边界处开始匹配。|  
 |`(\w+)`|匹配一个或多个单词字符。 这些字符一起构成一个单词。 这是第二个捕获组。|  
 |`\W+`|匹配一个或多个非单词字符。|  
-|`(\b(\w+)\W+)`|一次或多次匹配跟在一个或多个非单词字符后面的一个或多个单词字符的模式。 这是第一个捕获组。|  
+
+|`(\b(\w+)\W+)`|匹配一个或多个单词字符的模式，然后匹配一个或多个非单词字符一次或多次。 这是第一个捕获组。|  
+
   
  第二个捕获组匹配句子的每个单词。 第一个捕获组匹配每个单词，连同标点符号和该单词后的空白区域。 <xref:System.Text.RegularExpressions.Group> 对象的索引是 2，提供了有关由第二个捕获组匹配的文本的信息。 可从 <xref:System.Text.RegularExpressions.CaptureCollection> 对象获取捕获组捕获的整组单词，该对象由 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> 属性返回。  
   
