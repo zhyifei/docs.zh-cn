@@ -38,10 +38,10 @@ SOLID 不仅仅是关于如何设计应用程序或微服务内部层以及如�
 - **SOLID：基本 OOP 原则** \
   <https://deviq.com/solid/>
 
-- **Inversion of Control Containers and the Dependency Injection pattern** \（反向控制容器和依赖关系注入模式）
+- **反向控制容器和依赖关系注入模式** \
   <https://martinfowler.com/articles/injection.html>
 
-- **Steve Smith.New is Glue** \（新增即粘附）
+- **Steve Smith.新增即粘附** \
   <https://ardalis.com/new-is-glue>
 
 > [!div class="step-by-step"]

@@ -41,7 +41,7 @@ ms.locfileid: "69922563"
 
 ## <a name="net-core-sdk-windows-installer"></a>.NET Core SDK Windows Installer
 
-用于 Windows 的 MSI 安装程序已从 .NET Core 3.0 开始更改。 SDK 安装程序现在将对 SDK 功能区段版本进行就地升级。 功能区段在版本号的*补丁*部分中的*数百个*组中定义。 例如，**3.0._101_** 和 **3.0._201_** 是两个不同功能区段中的版本，而 **3.0._101_** 和 **3.0._199_** 则属于同一个功能区段。 并且，当安装 .NET Core SDK **3.0._101_** 时，将从计算机中删除 .NET Core SDK **3.0._100_**（如果存在）。 当 .NET Core SDK **3.0._200_** 安装在同一台计算机上时，不会删除 .NET Core SDK **3.0._101_**。
+用于 Windows 的 MSI 安装程序已从 .NET Core 3.0 开始更改。 SDK 安装程序现在将对 SDK 功能区段版本进行就地升级。 功能区段在版本号的*补丁*部分中的*数百个*组中定义。 例如，**3.0._101_** 和 **3.0._201_** 是两个不同功能区段中的版本，而 **3.0._101_** 和 **3.0._199_** 则属于同一个功能区段。 并且，当安装 .NET Core SDK **3.0._101_** 时，将从计算机中删除 .NET Core SDK **3.0._100_** （如果存在）。 当 .NET Core SDK **3.0._200_** 安装在同一台计算机上时，不会删除 .NET Core SDK **3.0._101_** 。
 
 有关版本控制的详细信息，请参阅 [.NET Core 的版本控制方式概述](../versions/index.md)。
 
@@ -63,7 +63,7 @@ ms.locfileid: "69922563"
 </Project>
 ```
 
-如果使用 Visual Studio，则需要 [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)，这是因为 Visual Studio 2017 不支持 .NET Standard 2.1 或 .NET Core 3.0。
+如果使用 Visual Studio，则需要 [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)，这是因为 Visual Studio 2017 不支持 .NET Standard 2.1 或 .NET Core 3.0   。
 
 ## <a name="improved-net-core-version-apis"></a>改进的 .NET Core 版本 API
 
@@ -94,7 +94,7 @@ System.Console.WriteLine($"RuntimeInformation.FrameworkDescription: {System.Runt
 
 ## <a name="net-platform-dependent-intrinsics"></a>依赖于 .NET 平台的内部函数
 
-已添加 API，允许访问某些性能导向的 CPU 指令，例如 SIMD 或位操作指令集。 这些指令有助于在某些情况下实现显著的性能改进，例如高效地并行处理数据。
+已添加 API，允许访问某些性能导向的 CPU 指令，例如 SIMD 或位操作指令集   。 这些指令有助于在某些情况下实现显著的性能改进，例如高效地并行处理数据。
 
 在适当的情况下，.NET 库已开始使用这些指令来改进性能。
 
@@ -111,7 +111,7 @@ System.Console.WriteLine($"RuntimeInformation.FrameworkDescription: {System.Runt
 
 ## <a name="single-file-executables"></a>单文件可执行文件
 
-`dotnet publish` 命令支持将应用打包为特定于平台的单文件可执行文件。 该可执行文件是自提取文件，包含运行应用所需的所有依赖项（包括本机依赖项）。 首次运行应用时，应用程序将根据应用名称和生成标识符提取到目录中。 再次运行应用程序时，启动速度将变快。 除非使用新版本，否则应用程序不需要第二次提取自身。
+`dotnet publish` 命令支持将应用打包为特定于平台的单文件可执行文件。 该可执行文件是自解压缩文件，包含运行应用所需的所有依赖项（包括本机依赖项）。 首次运行应用时，应用程序将根据应用名称和生成标识符自解压缩到一个目录中。 再次运行应用程序时，启动速度将变快。 除非使用了新版本，否则应用程序无需再次进行自解压缩。
 
 若要发布单文件可执行文件，请使用 `dotnet publish` 命令在项目或命令行中设置 `PublishSingleFile`：
 
@@ -134,7 +134,7 @@ dotnet publish -r win10-x64 /p:PublishSingleFile=true
 
 .NET core 3.0 SDK 随附了一种工具，可以通过分析 IL 并剪裁未使用的程序集来减小应用的大小。
 
-自包含应用包括运行代码所需的所有内容，而无需在主机计算机上安装 .NET。 但是，很多时候应用只需要框架的一小部分即可运行，而未使用的其他库可以删除。
+自包含应用包括运行代码所需的所有内容，而无需在主计算机上安装 .NET。 但是，很多时候应用只需要一小部分框架即可运行，并且可以删除其他未使用的库。
 
 .NET Core 现在包含一个设置，将使用 [IL 链接器](https://github.com/mono/linker)工具扫描应用的 IL。 此工具将检测哪些代码是必需的，然后剪裁未使用的库。 此工具可以显著减少某些应用的部署大小。
 
@@ -162,7 +162,7 @@ dotnet publish -r <rid> -c Release
 
 .NET Core 3.0 中默认启用了[分层编译](https://devblogs.microsoft.com/dotnet/tiered-compilation-preview-in-net-core-2-1/) (TC)。 此功能使运行时能够更适应地使用实时 (JIT) 编译器来获得更好的性能。
 
-TC 的主要优势是使（重新）实时编译方法能够牺牲代码质量，更快地生成层，或者以较慢的速度生成更高质量的层。 这有助于提高应用程序在从启动到稳定状态的各个执行阶段的性能。 这与非 TC 方法完全不同，其中每种方法均以单一方式进行编译（与高质量层相同），这种方法偏向于稳定状态而不是启动性能。
+TC 的主要优势是使（重新）实时编译方法能够要么牺牲代码质量以更快地生成代码，要么以较慢的速度生成更高质量的代码。 这有助于提高应用程序在从启动到稳定状态的各个执行阶段的性能。 这与非 TC 方法完全不同，其中每种方法均以单一方式进行编译（与高质量层相同），这种方法偏向于稳定状态而不是启动性能。
 
 若要启用快速 JIT（第 0 层实时编译的代码），请在项目文件中使用此设置：
 
@@ -240,7 +240,7 @@ ReadyToRun 编译器当前不支持跨目标。 必须在给定的目标上编�
 - 环境变量：`DOTNET_ROLL_FORWARD`
 - 命令行参数：`--roll-forward`
 
-必须指定以下值之一。 如果省略该设置，则默认值为“Minor”。
+必须指定以下值之一。 如果省略该设置，则默认值为“Minor”  。
 
 - **LatestPatch**\
 前滚到最高补丁版本。 这会禁用次要版本前滚。
@@ -255,7 +255,7 @@ ReadyToRun 编译器当前不支持跨目标。 必须在给定的目标上编�
 - **Disable**\
 不前滚。 仅绑定到指定的版本。 建议不要将此策略用于一般用途，因为它会禁用前滚到最新补丁的功能。 该值仅建议用于测试。
 
-除“Disable”设置外，所有设置都将使用可用的最高补丁版本。
+除“Disable”设置外，所有设置都将使用可用的最高补丁版本  。
 
 ## <a name="windows-desktop"></a>Windows 桌面
 
@@ -270,7 +270,7 @@ dotnet new wpf
 dotnet new winforms
 ```
 
-Visual Studio 2019 添加了适用于 .NET Core 3.0 Windows 窗体和 WPF 的“新建项目”模板。
+Visual Studio 2019 添加了适用于 .NET Core 3.0 Windows 窗体和 WPF 的“新建项目”  模板。
 
 有关如何移植现有 .NET Framework 应用程序的详细信息，请参阅[移植 WPF 项目](../porting/wpf.md)和[移植 Windows 窗体项目](../porting/winforms.md)。
 
@@ -310,7 +310,7 @@ Visual Studio 2019 添加了适用于 .NET Core 3.0 Windows 窗体和 WPF 的“
 
 ## <a name="ranges-and-indices"></a>范围和索引
 
-新 <xref:System.Index?displayProperty=nameWithType> 类型可用于编制索引。 可以从从开头开始计数的 `int` 中创建一个类型，也可以使用从末尾开始计数的前缀 `^` 运算符 (C#) 创建一个：
+新 <xref:System.Index?displayProperty=nameWithType> 类型可用于编制索引。 可从 `int` 创建一个从开头开始计数的索引，也可使用前缀 `^` 运算符 (C#) 创建一个从末尾开始计数的索引：
 
 ```csharp
 Index i1 = 3;  // number 3 from beginning
@@ -388,7 +388,7 @@ async IAsyncEnumerable<int> GetBigResultsAsync()
 
 ### <a name="utf8jsonreader"></a>Utf8JsonReader
 
-<xref:System.Text.Json.Utf8JsonReader?displayProperty=nameWithType> 是面向 UTF-8 编码 JSON 文本的一个高性能、低分配的只进读取器，从 `ReadOnlySpan<byte>` 读取信息。 `Utf8JsonReader` 是一种基本的低级类型，可用于生成自定义分析器和反序列化程序。 使用新的 `Utf8JsonReader` 读取 JSON 有效负载要比使用 **Json.NET** 的读取器快 2 倍。 在需要将 JSON 令牌实现为 (UTF-16) 字符串之前，它不会进行分配。
+<xref:System.Text.Json.Utf8JsonReader?displayProperty=nameWithType> 是面向 UTF-8 编码 JSON 文本的一个高性能、低分配的只进读取器，从 `ReadOnlySpan<byte>` 读取信息。 `Utf8JsonReader` 是一种基本的低级类型，可用于生成自定义分析器和反序列化程序。 使用新的 `Utf8JsonReader` 读取 JSON 有效负载要比使用 Json.NET  的读取器快 2 倍。 在需要将 JSON 令牌实现为 (UTF-16) 字符串之前，它不会进行分配。
 
 下面的示例展示了如何读取 Visual Studio Code 创建的 [**launch.json**](https://github.com/dotnet/samples/blob/master/snippets/core/whats-new/whats-new-in-30/cs/launch.json) 文件：
 
@@ -398,7 +398,7 @@ async IAsyncEnumerable<int> GetBigResultsAsync()
 
 ### <a name="utf8jsonwriter"></a>Utf8JsonWriter
 
-<xref:System.Text.Json.Utf8JsonWriter?displayProperty=nameWithType> 提供了一种高性能、非缓存的只进方式，通过常见 .NET 类型（例如，`String`、`Int32` 和 `DateTime`）编写 UTF-8 编码的 JSON 文本。 与阅读器一样，编写器是一种基本的低级类型，可用于生成自定义序列化程序。 使用新的 `Utf8JsonWriter` 编写 JSON 有效负载比通过 **Json.NET** 使用编写器快 30-80%，且无需分配。
+<xref:System.Text.Json.Utf8JsonWriter?displayProperty=nameWithType> 提供了一种高性能、非缓存的只进方式，从常见 .NET 类型（例如，`String`、`Int32` 和 `DateTime`）编写 UTF-8 编码的 JSON 文本。 与阅读器一样，编写器是一种基本的低级类型，可用于生成自定义序列化程序。 使用新的 `Utf8JsonWriter` 编写 JSON 有效负载比通过 Json.NET  使用编写器快 30-80%，且无需分配。
 
 ### <a name="jsondocument"></a>JsonDocument
 
@@ -434,7 +434,7 @@ async IAsyncEnumerable<int> GetBigResultsAsync()
 
 ### <a name="windows-native-interop"></a>Windows 本机互操作
 
-Windows 提供丰富的本机 API，包括平面 C API、COM 和 WinRT 的形式。 .NET Core 支持 **P/Invoke**，.NET Core 3.0 则增加了**共同创建 COM API** 和**激活 WinRT API** 的功能。 有关代码示例，请参阅 [Excel 演示](https://github.com/dotnet/samples/tree/master/core/extensions/ExcelDemo)。
+Windows 提供丰富的本机 API，包括平面 C API、COM 和 WinRT 的形式。 .NET Core 支持 P/Invoke  ，.NET Core 3.0 则增加了“共同创建 COM API”  和“激活 WinRT API”  的功能。 有关代码示例，请参阅 [Excel 演示](https://github.com/dotnet/samples/tree/master/core/extensions/ExcelDemo)。
 
 ## <a name="http2-support"></a>HTTP/2 支持
 
@@ -462,7 +462,7 @@ Windows 提供丰富的本机 API，包括平面 C API、COM 和 WinRT 的形式
 .NET Core 3.0 在 Linux 系统上使用 **OpenSSL 1.1.1**、**OpenSSL 1.1.0** 或 **OpenSSL 1.0.2**（如果可用）。 当 **OpenSSL 1.1.1** 可用时，<xref:System.Net.Security.SslStream?displayProperty=nameWithType> 和 <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> 类型都将使用 **TLS 1.3**（假定客户端和服务器都支持 **TLS 1.3**）。
 
 >[!IMPORTANT]
->Windows 和 macOS 尚不支持 TLS 1.3。 当支持可用时，.NET Core 3.0 将在这些操作系统上支持 TLS 1.3。
+>Windows 和 macOS 尚不支持 TLS 1.3  。 当支持可用时，.NET Core 3.0 将在这些操作系统上支持 TLS 1.3  。
 
 下面的 C# 8.0 示例演示在 Ubuntu 18.10 上 .NET Core 3.0 如何连接到 <https://www.cloudflare.com>：
 

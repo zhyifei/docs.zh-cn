@@ -171,7 +171,7 @@ Visual Basic 根据操作数的数据类型确定操作的结果数据类型。 
 ## <a name="miscellaneous-operators"></a>其他运算符  
  仅为`String`操作数的串联定义运算符。`&` Visual Basic 在操作`String`之前将每个操作数转换为必需的, 结果数据类型始终`String`为。 对于运算符, 所有`String`转换都视为扩大, 即使`Option Strict`是`On`。 `&`  
   
- `Is` 和`IsNot`运算符要求两个操作数均为引用类型。 `TypeOf`.。。`Is` expression 要求第一个操作数为引用类型, 第二个操作数为数据类型的名称。 在所有这些情况下, 结果数据类型`Boolean`为。  
+ `Is` 和`IsNot`运算符要求两个操作数均为引用类型。 `TypeOf`...`Is` expression 要求第一个操作数为引用类型, 第二个操作数为数据类型的名称。 在所有这些情况下, 结果数据类型`Boolean`为。  
   
  仅为操作数的`String`模式匹配定义运算符。`Like` Visual Basic 尝试在操作`String`之前将每个操作数转换为必需的。 结果数据类型始终`Boolean`为。  
   

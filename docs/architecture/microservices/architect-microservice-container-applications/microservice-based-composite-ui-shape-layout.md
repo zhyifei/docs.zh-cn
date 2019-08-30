@@ -42,16 +42,16 @@ ms.locfileid: "68817830"
 - **使用 ASP.NET（Particular 的 Workshop）的复合 UI** \
   <https://github.com/Particular/Workshop/tree/master/demos/asp-net-core>
 
-- **Ruben Oostinga。The Monolithic Frontend in the Microservices Architecture** \（微服务体系结构中的整体式前端）
+- **Ruben Oostinga。微服务体系结构中的整体式前端** \
   <https://xebia.com/blog/the-monolithic-frontend-in-the-microservices-architecture/>
 
-- **Mauro Servienti。The secret of better UI composition** \（优化 UI 组合的秘诀）
+- **Mauro Servienti。优化 UI 组合的秘诀** \
   <https://particular.net/blog/secret-of-better-ui-composition>
 
-- **Viktor Farcic。Including Front-End Web Components Into Microservices** \（在微服务中纳入前端 Web 组件）
+- **Viktor Farcic。在微服务中纳入前端 Web 组件** \
   <https://technologyconversations.com/2015/08/09/including-front-end-web-components-into-microservices/>
 
-- **Managing Frontend in the Microservices Architecture** \（在微服务体系结构中管理前端）
+- **在微服务体系结构中管理前端** \
   <https://allegro.tech/2016/03/Managing-Frontend-in-the-microservices-architecture.html>
 
 >[!div class="step-by-step"]
