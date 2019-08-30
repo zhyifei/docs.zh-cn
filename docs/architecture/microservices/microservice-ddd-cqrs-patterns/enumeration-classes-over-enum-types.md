@@ -82,19 +82,19 @@ public class CardType : Enumeration
 
 ## <a name="additional-resources"></a>其他资源
 
-- **Enum’s are evil—update** \（枚举有弊无利：更新）
+- **Enum’s are evil—update （枚举有弊无利：更新）**  \
   <https://www.planetgeek.ch/2009/07/01/enums-are-evil/>
 
-- **Daniel Hardman.How Enums Spread Disease — And How To Cure It** \（枚举如何扩大问题以及如何应对）
+- **Daniel Hardman.How Enums Spread Disease — And How To Cure It （枚举如何扩大问题以及如何应对）**  \
   <https://codecraft.co/2012/10/29/how-enums-spread-disease-and-how-to-cure-it/>
 
-- **Jimmy Bogard。Enumeration classes** \（枚举类）
+- **Jimmy Bogard。Enumeration classes （枚举类）**  \
   <https://lostechies.com/jimmybogard/2008/08/12/enumeration-classes/>
 
-- **Steve Smith.Enum Alternatives in C#**  \（C# 中枚举的替代方案）
+- **Steve Smith.Enum Alternatives in C# （C# 中枚举的替代方案）**  \
   <https://ardalis.com/enum-alternatives-in-c>
 
-- **Enumeration.cs.** eShopOnContainers 中的基础枚举类
+- **Enumeration.cs.** eShopOnContainers 中的基础枚举类 \
   <https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/SeedWork/Enumeration.cs>
 
 - **CardType.cs**. eShopOnContainers 中的枚举类示例。 \

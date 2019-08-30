@@ -200,10 +200,10 @@ docker-compose -f docker-compose-test.yml -f docker-compose-test.override.yml up
 
 ### <a name="additional-resources"></a>其他资源
 
-- GitHub 上的 eShopOnContainers 存储库中的“测试自述文件”\ 
+- GitHub 上的 eShopOnContainers 存储库中的“测试自述文件”  \
     <https://github.com/dotnet-architecture/eShopOnContainers/tree/dev/test>
 
-- GitHub 上的 eShopOnContainers 存储库中的“负载测试自述文件”\ 
+- GitHub 上的 eShopOnContainers 存储库中的“负载测试自述文件”  \
     <https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/test/ServicesTests/LoadTest/>
 
 > [!div class="step-by-step"]

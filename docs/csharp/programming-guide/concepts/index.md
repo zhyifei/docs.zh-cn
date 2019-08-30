@@ -2,12 +2,12 @@
 title: 编程概念 (C#)
 ms.date: 07/20/2015
 ms.assetid: 3227afd5-4794-484b-b83b-0f1f94a0476b
-ms.openlocfilehash: 7668ca6bba0b938e569886cfa9f1985eaa48c5d0
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 3fcb1ca76c49919b00b74d955b7aadaa2e882f2a
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69594994"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168347"
 ---
 # <a name="programming-concepts-c"></a>编程概念 (C#)
 此部分介绍了 C# 语言中的编程概念。  
@@ -17,7 +17,7 @@ ms.locfileid: "69594994"
 |标题|说明|  
 |-----------|-----------------|  
 |[.NET 中的程序集](../../../standard/assembly/index.md)|介绍了如何创建和使用程序集。|  
-|[使用 Async 和 Await 的异步编程 (C#)](./async/index.md)|介绍了如何在 C# 中使用 [async](../../language-reference/keywords/async.md) 和 [await](../../language-reference/keywords/await.md) 关键字编写异步解决方案。 其中包括演练。|  
+|[使用 Async 和 Await 的异步编程 (C#)](./async/index.md)|介绍了如何在 C# 中使用 [async](../../language-reference/keywords/async.md) 和 [await](../../language-reference/operators/await.md) 关键字编写异步解决方案。 其中包括演练。|  
 |[特性 (C#)](./attributes/index.md)|介绍了如何使用特性提供编程元素（如类型、字段、方法和属性）的附加信息。|  
 |[调用方信息 (C#)](./caller-information.md)|介绍了如何获取方法调用方的信息。 此类信息包括源代码的文件路径和行号，以及调用方的成员名称。|  
 |[集合 (C#)](./collections.md)|介绍了 .NET Framework 提供的一些类型集合。 展示了如何使用简单的集合和键/值对集合。|  
