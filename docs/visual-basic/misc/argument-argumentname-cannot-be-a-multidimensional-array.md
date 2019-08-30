@@ -1,5 +1,5 @@
 ---
-title: 参数 "<argumentname>" 不能是多维数组
+title: 参数 '<argumentname>' 不能是多维数组
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_RankEQOne1
@@ -11,7 +11,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 08/21/2019
 ms.locfileid: "69658823"
 ---
-# <a name="argument-argumentname-cannot-be-a-multidimensional-array"></a>参数 "\<g >" 不能是多维数组
+# <a name="argument-argumentname-cannot-be-a-multidimensional-array"></a>参数 '\<g >' 不能是多维数组
 数组参数的秩大于 1，但它只能是一维数组。  
   
 ## <a name="to-correct-this-error"></a>更正此错误  

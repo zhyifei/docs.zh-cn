@@ -182,13 +182,13 @@ API 管理系统中提供的见解有助于理解 API 的使用方式与性能�
 - **Azure API 管理** \
   <https://azure.microsoft.com/services/api-management/>
 
-- **Udi Dahan.Service Oriented Composition** \（面向服务的组合）
+- **Udi Dahan.面向服务的组合** \
   <http://udidahan.com/2014/07/30/service-oriented-composition-with-video/>
 
-- **Clemens Vasters。Messaging and Microservices at GOTO 2016 (video)**  \（2016 年 GOTO 消息传递和微服务（视频））
+- **Clemens Vasters。2016 年 GOTO 消息传递和微服务（视频）**  \
   <https://www.youtube.com/watch?v=rXi5CLjIQ9k>
 
-- **API Gateway in a Nutshell**（Nutshell 中的 API 网关）（ASP.net Core API 网关教程系列）
+- **Nutshell 中的 API 网关** (ASP.net Core API 网关教程系列) \
   <https://www.pogsdotnet.com/2018/08/api-gateway-in-nutshell.html>
 
 >[!div class="step-by-step"]
