@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - XAML [WPF], TypeConverter class
 ms.assetid: f6313e4d-e89d-497d-ac87-b43511a1ae4b
-ms.openlocfilehash: 0b64088f43b69a982fc305fc16ad10edd1faa593
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8c39fe75eea5042657cab533a0a557d966802a1b
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966062"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70169022"
 ---
 # <a name="typeconverters-and-xaml"></a>TypeConverters 和 XAML
 本主题介绍将从字符串进行的类型转换作为常规 XAML 语言功能的用途。 在 .NET Framework 中, <xref:System.ComponentModel.TypeConverter>类将特定用途作为托管自定义类的实现的一部分提供, 可用作 XAML 特性用法中的属性值。 如果你编写自定义类, 并且希望类的实例可以用作 XAML 可设置属性值, 则你可能需要将应用<xref:System.ComponentModel.TypeConverterAttribute>到你的类, 编写自定义<xref:System.ComponentModel.TypeConverter>类, 或同时使用这两者。  
@@ -103,9 +103,9 @@ ms.locfileid: "69966062"
   
 <a name="Applying_the_TypeConverterAttribute"></a>   
 ## <a name="applying-the-typeconverterattribute"></a>应用 TypeConverterAttribute  
- 为了使自定义类型转换器被 XAML 处理器用作自定义类的操作类型转换器, 必须将应用[!INCLUDE[TLA#tla_netframewkattr](../../../../includes/tlasharptla-netframewkattr-md.md)] <xref:System.ComponentModel.TypeConverterAttribute>于类定义。 通过特性指定的 <xref:System.ComponentModel.TypeConverterAttribute.ConverterTypeName%2A> 必须是自定义类型转换器的类型名。 应用此特性后，当 XAML 处理器处理属性类型使用自定义类类型的值时，它可以输入字符串并返回对象实例。  
+ 为了使自定义类型转换器被 XAML 处理器用作自定义类的操作类型转换器, 必须将应用<xref:System.ComponentModel.TypeConverterAttribute>于类定义。 通过特性指定的 <xref:System.ComponentModel.TypeConverterAttribute.ConverterTypeName%2A> 必须是自定义类型转换器的类型名。 应用此特性后，当 XAML 处理器处理属性类型使用自定义类类型的值时，它可以输入字符串并返回对象实例。  
   
- 还可以基于每个属性提供类型转换器。 应将 [!INCLUDE[TLA#tla_netframewkattr](../../../../includes/tlasharptla-netframewkattr-md.md)] <xref:System.ComponentModel.TypeConverterAttribute> 应用于属性定义（主定义，不是它包含的 `get`/`set` 的实现），而不是将它应用于类定义。 属性的类型必须与自定义类型转换器处理的类型匹配。 应用此特性后，当 XAML 处理器处理该属性的值时，它可以处理输入字符串并返回对象实例。 如果选择使用 Microsoft .NET 框架中的属性类型或不能控制类定义并且无法应用<xref:System.ComponentModel.TypeConverterAttribute>此类定义的其他库, 则每属性类型转换器方法特别有用。  
+ 还可以基于每个属性提供类型转换器。 不是将应用<xref:System.ComponentModel.TypeConverterAttribute>于类定义, 而是将其应用于属性定义 (主定义, 而`get` / `set`不是它中的实现)。 属性的类型必须与自定义类型转换器处理的类型匹配。 应用此特性时，当 XAML 处理器处理该属性的值时，它可以处理输入字符串并返回对象实例。 如果选择使用 Microsoft .NET 框架中的属性类型或不能控制类定义并且无法应用<xref:System.ComponentModel.TypeConverterAttribute>此类定义的其他库, 则每属性类型转换器方法特别有用。  
   
 ## <a name="see-also"></a>请参阅
 

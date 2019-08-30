@@ -29,12 +29,12 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: 3ac7d79660830601ca69951e56763fc923692b0e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 09f0a1b34e88be995fb9a386161a930457e4bb56
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69958791"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168991"
 ---
 # <a name="xaml-syntax-in-detail"></a>XAML 语法详述
 本主题定义用于描述 XAML 语法元素的术语。 在本文档的其余部分中经常使用这些术语, 这两个术语分别适用于 WPF 文档, 适用于使用 XAML 的其他框架或由 system.exception 级别的 XAML 语言支持启用的基本 XAML 概念。 本主题概述了在主题[XAML 概述 (WPF)](xaml-overview-wpf.md)中引入的基本术语。  
@@ -62,7 +62,7 @@ ms.locfileid: "69958791"
   
 - 开始标记必须由右尖括号 (>) 完成。 其他对象元素、属性元素或内部文本可以跟随开始标记。 此处可以确切包含的内容通常受元素的对象模型的约束。 还必须存在对象元素的等效结束标记, 并将其与其他开始和结束标记对进行适当的嵌套和平衡。  
   
- .NET 实现的 XAML 包含一组规则, 这些规则将对象元素映射到类型、属性或事件中的属性, 以及 XAML 命名空间到 CLR 命名空间和程序集。 对于 WPF 和 .NET Framework, XAML 对象元素映射到[!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)]在引用的程序集中定义的类型, 属性映射到这些类型的成员。 在 XAML 中引用 CLR 类型时, 还可以访问该类型的继承成员。  
+ .NET 实现的 XAML 包含一组规则, 这些规则将对象元素映射到类型、属性或事件中的属性, 以及 XAML 命名空间到 CLR 命名空间和程序集。 对于 WPF 和 .NET, XAML 对象元素映射到在引用的程序集中定义的 .NET 类型, 属性映射到这些类型的成员。 在 XAML 中引用 CLR 类型时, 还可以访问该类型的继承成员。  
   
  例如, 下面的示例是实例化<xref:System.Windows.Controls.Button>类的新实例的对象元素语法, 还为该属性指定了一个<xref:System.Windows.FrameworkElement.Name%2A>属性和一个值:  
   
