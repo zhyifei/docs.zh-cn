@@ -2,14 +2,14 @@
 title: C# 中的异步编程
 description: 对使用 async、await、Task 和 Task<T> 的异步编程的 C# 语言支持的概述
 ms.date: 03/18/2019
-ms.openlocfilehash: a306ff75357f9f61ec9b086485472d99de5ad083
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 4ed48a2e74dde5ae0f24ebd680ace133e05e15d4
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307124"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70167890"
 ---
-# <a name="the-task-asynchronous-programming-model-in-c"></a>C\# 中基于任务的异步编程模型
+# <a name="asynchronous-programming-with-async-and-await"></a>使用 Async 和 Await 的异步编程
 
 基于任务的异步编程模型 (TAP) 提供了异步代码的抽象化。 你只需像往常一样将代码编写为一连串语句即可。 就如每条语句在下一句开始之前完成一样，你可以流畅地阅读代码。 编译器将执行若干转换，因为其中一些语句可能会开始运行并返回表示正在运行中的 <xref:System.Threading.Tasks.Task>。
 
@@ -22,7 +22,7 @@ ms.locfileid: "67307124"
 1. 在烤面包上加黄油和果酱。
 1. 倒一杯橙汁。
 
-如果你有烹饪经验，便可通过异步方式执行这些指令  。 你会先开始加热平底锅以备煎蛋，接着再从培根着手。 你可将面包放进烤面包机，然后再煎鸡蛋。 在此过程的每一步，你都可以先开始一项任务，然后将注意力转移到准备进行的其他任务上。
+如果你有烹饪经验，便可通过异步方式执行这些指令。 你会先开始加热平底锅以备煎蛋，接着再从培根着手。 你可将面包放进烤面包机，然后再煎鸡蛋。 在此过程的每一步，你都可以先开始一项任务，然后将注意力转移到准备进行的其他任务上。
 
 做早餐是非并行异步工作的一个好示例。 单人（或单线程）即可处理所有这些任务。 继续讲解早餐的类比，一个人可以以异步方式做早餐，即在第一个任务完成之前开始进行下一个任务。 不管是否有人在看着，做早餐的过程都在进行。 在开始加热平底锅准备煎蛋的同时就可以开始煎了培根。 在开始煎培根后，你可以将面包放进烤面包机。
 

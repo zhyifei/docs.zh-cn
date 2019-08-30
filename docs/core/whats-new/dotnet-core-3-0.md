@@ -41,7 +41,7 @@ ms.locfileid: "69922563"
 
 ## <a name="net-core-sdk-windows-installer"></a>.NET Core SDK Windows Installer
 
-用于 Windows 的 MSI 安装程序已从 .NET Core 3.0 开始更改。 SDK 安装程序现在将对 SDK 功能区段版本进行就地升级。 功能区段在版本号的*补丁*部分中的*数百个*组中定义。 例如，**3.0._101_** 和 **3.0._201_** 是两个不同功能区段中的版本，而 **3.0._101_** 和 **3.0._199_** 则属于同一个功能区段。 并且，当安装 .NET Core SDK **3.0._101_** 时，将从计算机中删除 .NET Core SDK **3.0._100_** （如果存在）。 当 .NET Core SDK **3.0._200_** 安装在同一台计算机上时，不会删除 .NET Core SDK **3.0._101_** 。
+用于 Windows 的 MSI 安装程序已从 .NET Core 3.0 开始更改。 SDK 安装程序现在将对 SDK 功能区段版本进行就地升级。 功能区段在版本号的*补丁*部分中的*数百个*组中定义。 例如，**3.0._101_** 和 **3.0._201_** 是两个不同功能区段中的版本，而 **3.0._101_** 和 **3.0._199_** 则属于同一个功能区段。 并且，当安装 .NET Core SDK **3.0._101_** 时，将从计算机中删除 .NET Core SDK **3.0._100_**（如果存在）。 当 .NET Core SDK **3.0._200_** 安装在同一台计算机上时，不会删除 .NET Core SDK **3.0._101_**。
 
 有关版本控制的详细信息，请参阅 [.NET Core 的版本控制方式概述](../versions/index.md)。
 
@@ -63,7 +63,7 @@ ms.locfileid: "69922563"
 </Project>
 ```
 
-如果使用 Visual Studio，则需要 [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)，这是因为 Visual Studio 2017 不支持 .NET Standard 2.1 或 .NET Core 3.0   。
+如果使用 Visual Studio，则需要 [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)，这是因为 Visual Studio 2017 不支持 .NET Standard 2.1 或 .NET Core 3.0。
 
 ## <a name="improved-net-core-version-apis"></a>改进的 .NET Core 版本 API
 
@@ -94,11 +94,11 @@ System.Console.WriteLine($"RuntimeInformation.FrameworkDescription: {System.Runt
 
 ## <a name="net-platform-dependent-intrinsics"></a>依赖于 .NET 平台的内部函数
 
-已添加 API，允许访问某些性能导向的 CPU 指令，例如 SIMD 或位操作指令集   。 这些指令有助于在某些情况下实现显著的性能改进，例如高效地并行处理数据。
+已添加 API，允许访问某些性能导向的 CPU 指令，例如 SIMD 或位操作指令集。 这些指令有助于在某些情况下实现显著的性能改进，例如高效地并行处理数据。
 
 在适当的情况下，.NET 库已开始使用这些指令来改进性能。
 
-有关详细信息，请参阅 [.NET Platform Dependent Intrinsics](https://github.com/dotnet/designs/blob/master/accepted/platform-intrinsics.md)（依赖于 .NET 平台的内部函数）。
+有关详细信息，请参阅 [.NET Platform Dependent Intrinsics](https://github.com/dotnet/designs/blob/master/accepted/platform-intrinsics.md)（.NET 平台相关内部函数）。
 
 ## <a name="default-executables"></a>默认可执行文件
 
@@ -240,7 +240,7 @@ ReadyToRun 编译器当前不支持跨目标。 必须在给定的目标上编�
 - 环境变量：`DOTNET_ROLL_FORWARD`
 - 命令行参数：`--roll-forward`
 
-必须指定以下值之一。 如果省略该设置，则默认值为“Minor”  。
+必须指定以下值之一。 如果省略该设置，则默认值为“Minor”。
 
 - **LatestPatch**\
 前滚到最高补丁版本。 这会禁用次要版本前滚。
@@ -255,7 +255,7 @@ ReadyToRun 编译器当前不支持跨目标。 必须在给定的目标上编�
 - **Disable**\
 不前滚。 仅绑定到指定的版本。 建议不要将此策略用于一般用途，因为它会禁用前滚到最新补丁的功能。 该值仅建议用于测试。
 
-除“Disable”设置外，所有设置都将使用可用的最高补丁版本  。
+除“Disable”设置外，所有设置都将使用可用的最高补丁版本。
 
 ## <a name="windows-desktop"></a>Windows 桌面
 
@@ -270,7 +270,7 @@ dotnet new wpf
 dotnet new winforms
 ```
 
-Visual Studio 2019 添加了适用于 .NET Core 3.0 Windows 窗体和 WPF 的“新建项目”  模板。
+Visual Studio 2019 添加了适用于 .NET Core 3.0 Windows 窗体和 WPF 的“新建项目”模板。
 
 有关如何移植现有 .NET Framework 应用程序的详细信息，请参阅[移植 WPF 项目](../porting/wpf.md)和[移植 Windows 窗体项目](../porting/winforms.md)。
 
@@ -388,7 +388,7 @@ async IAsyncEnumerable<int> GetBigResultsAsync()
 
 ### <a name="utf8jsonreader"></a>Utf8JsonReader
 
-<xref:System.Text.Json.Utf8JsonReader?displayProperty=nameWithType> 是面向 UTF-8 编码 JSON 文本的一个高性能、低分配、只进读取器，从 `ReadOnlySpan<byte>` 读取信息。 `Utf8JsonReader` 是一种基本的低级类型，可用于生成自定义分析器和反序列化程序。 使用新的 `Utf8JsonReader` 读取 JSON 有效负载要比使用 **Json.NET** 的读取器快 2 倍。 在需要将 JSON 令牌实现为 (UTF-16) 字符串之前，它不会进行分配。
+<xref:System.Text.Json.Utf8JsonReader?displayProperty=nameWithType> 是面向 UTF-8 编码 JSON 文本的一个高性能、低分配的只进读取器，从 `ReadOnlySpan<byte>` 读取信息。 `Utf8JsonReader` 是一种基本的低级类型，可用于生成自定义分析器和反序列化程序。 使用新的 `Utf8JsonReader` 读取 JSON 有效负载要比使用 **Json.NET** 的读取器快 2 倍。 在需要将 JSON 令牌实现为 (UTF-16) 字符串之前，它不会进行分配。
 
 下面的示例展示了如何读取 Visual Studio Code 创建的 [**launch.json**](https://github.com/dotnet/samples/blob/master/snippets/core/whats-new/whats-new-in-30/cs/launch.json) 文件：
 
@@ -462,7 +462,7 @@ Windows 提供丰富的本机 API，包括平面 C API、COM 和 WinRT 的形式
 .NET Core 3.0 在 Linux 系统上使用 **OpenSSL 1.1.1**、**OpenSSL 1.1.0** 或 **OpenSSL 1.0.2**（如果可用）。 当 **OpenSSL 1.1.1** 可用时，<xref:System.Net.Security.SslStream?displayProperty=nameWithType> 和 <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> 类型都将使用 **TLS 1.3**（假定客户端和服务器都支持 **TLS 1.3**）。
 
 >[!IMPORTANT]
->Windows 和 macOS 尚不支持 TLS 1.3  。 当支持可用时，.NET Core 3.0 将在这些操作系统上支持 TLS 1.3  。
+>Windows 和 macOS 尚不支持 TLS 1.3。 当支持可用时，.NET Core 3.0 将在这些操作系统上支持 TLS 1.3。
 
 下面的 C# 8.0 示例演示在 Ubuntu 18.10 上 .NET Core 3.0 如何连接到 <https://www.cloudflare.com>：
 
