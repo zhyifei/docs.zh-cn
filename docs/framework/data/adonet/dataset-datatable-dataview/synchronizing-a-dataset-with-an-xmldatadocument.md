@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fbc96fa9-b5d1-4f97-b099-c89b0e14ce2c
-ms.openlocfilehash: b4682d60e213ad57308143b2c7ea06d123daf61d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f788e1732f083c01542fcdacdfc042553741350b
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607488"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204422"
 ---
 # <a name="synchronizing-a-dataset-with-an-xmldatadocument"></a>将数据集和 XmlDataDocument 同步
-本节演示订单处理过程中的一个步骤，该步骤使用与 <xref:System.Data.DataSet> 同步的强类型 <xref:System.Xml.XmlDataDocument>。 下面的示例创建**数据集**具有最小化架构相匹配仅源 XML 文档的一部分。 这些示例使用**XmlDataDocument**以保留源 XML 文档的保真度启用**数据集**要用来公开 XML 文档的一个子集。  
+本节演示订单处理过程中的一个步骤，该步骤使用与 <xref:System.Data.DataSet> 同步的强类型 <xref:System.Xml.XmlDataDocument>。 下面的示例创建一个**数据集**, 其中包含一个仅与源 XML 文档的一部分匹配的最小化架构。 这些示例使用**XmlDataDocument**来保持源 xml 文档的保真度, 使**数据集**能够用于公开 XML 文档的子集。  
   
  下面的 XML 文档包含与一份采购订单有关的所有信息：客户信息、订购的项目、运输信息等。  
   
@@ -109,9 +109,9 @@ ms.locfileid: "61607488"
 </PurchaseOrder>  
 ```  
   
- 在处理以上 XML 文档包含的订单信息时，其中一个步骤是利用公司当前的库存填写订单。 负责从公司仓库中填写订单的职员不需要查看订单的全部内容，他们只需要查看该订单的产品信息。 若要公开的产品信息将从 XML 文档，创建强类型化**数据集**，其架构作为 XML 架构定义语言 (XSD) 架构，并映射到产品及数量订购的写入。 有关详细信息强类型化**数据集**对象，请参阅[类型化数据集](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md)。  
+ 在处理以上 XML 文档包含的订单信息时，其中一个步骤是利用公司当前的库存填写订单。 负责从公司仓库中填写订单的职员不需要查看订单的全部内容，他们只需要查看该订单的产品信息。 若要仅公开 XML 文档中的产品信息, 请创建一个强类型化**数据集, 该数据集**具有一个架构, 该架构写入为 XML 架构定义语言 (XSD) 架构, 并映射到产品和排序数量。 有关强类型化**数据集**对象的详细信息, 请参阅[类型化数据集](typed-datasets.md)。  
   
- 下面的代码显示了从该架构强类型化**数据集**为该示例生成。  
+ 下面的代码演示为此示例生成强类型化**数据集**的架构。  
   
 ```xml  
 <?xml version="1.0" standalone="yes"?>  
@@ -157,11 +157,11 @@ ms.locfileid: "61607488"
 </xs:schema>  
 ```  
   
- 请注意，从该唯一信息**OrderDetails**并**产品**原始 XML 文档的元素包含的架构中**数据集**。 同步**数据集**与**XmlDataDocument**元素中不包含可确保**数据集**与 XML 文档将保持不变。  
+ 请注意, 只有来自原始 XML 文档的**OrderDetails**和**Products**元素中的信息才会包含在该**数据集**的架构中。 将**数据集**与**XmlDataDocument**同步可以确保**数据集中**未包含的元素将与 XML 文档保持不变。  
   
- 使用强类型化**数据集**生成的 XML 架构 (具有的命名空间**Northwind.FillOrder**)，可以同步公开原始 XML 文档的一部分**数据集**与**XmlDataDocument**源 XML 文档中加载。 请注意，**数据集**从生成的架构包含结构，但没有数据。 将数据加载到 XML 时填充**XmlDataDocument**。 如果你尝试加载**XmlDataDocument**的已同步**数据集**已包含数据，将引发异常。  
+ 使用从 XML 架构生成的强类型化**数据集**(命名空间为**FillOrder**) 时, 可以通过将**数据集**与加载的**XmlDataDocument**同步来公开原始 XML 文档的一部分源 XML 文档中的。 请注意, 从架构生成的**数据集**包含结构, 但不包含数据。 当你将 XML 加载到**XmlDataDocument**中时, 数据将填充。 如果尝试加载的**XmlDataDocument**已与已经包含数据的数据**集**同步, 则会引发异常。  
   
- 之后**数据集**(与**XmlDataDocument**) 已更新**XmlDataDocument**可以写出经过修改的 XML 文档被忽略的元素**数据集**仍保持不变，如下所示。 在订单方案中，当填充订单项后，经过修改的 XML 文档将传递到订单过程的下一步（可能会传递到公司货运部）。  
+ 更新**数据集**(和**XmlDataDocument**) 后, **XmlDataDocument**可以使用**数据集**忽略的元素来写出修改后的 XML 文档, 如下所示。 在订单方案中，当填充订单项后，经过修改的 XML 文档将传递到订单过程的下一步（可能会传递到公司货运部）。  
   
 ```vb  
 Imports System  
@@ -233,5 +233,5 @@ public class Sample
   
 ## <a name="see-also"></a>请参阅
 
-- [数据集和 XmlDataDocument 同步](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)
+- [数据集和 XmlDataDocument 同步](dataset-and-xmldatadocument-synchronization.md)
 - [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

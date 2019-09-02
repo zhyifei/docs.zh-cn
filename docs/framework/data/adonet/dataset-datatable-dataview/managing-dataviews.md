@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0b67fab5-1722-4d2b-bfc1-247a75f0f1ee
-ms.openlocfilehash: df03c68193a1068b4bdf0b6ed0923b3bbb8a046a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c6dcc206775866fd9136e4f6f5f038d021d11433
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61785406"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204683"
 ---
 # <a name="managing-dataviews"></a>管理 DataView
-可以使用 <xref:System.Data.DataViewManager> 来管理 <xref:System.Data.DataView> 中所有表的视图设置。 如果你想要将绑定到多个表的控件，如网格进行关系导航**DataViewManager**是理想之选。  
+可以使用 <xref:System.Data.DataViewManager> 来管理 <xref:System.Data.DataView> 中所有表的视图设置。 如果你有一个要绑定到多个表的控件, 例如导航关系的网格, **DataViewManager**是理想的选择。  
   
- **DataViewManager**包含一系列<xref:System.Data.DataViewSetting>对象，用于设置中的表的视图设置<xref:System.Data.DataSet>。 <xref:System.Data.DataViewSettingCollection>包含一个<xref:System.Data.DataViewSetting>每个表中的对象**数据集**。 您可以设置默认**ApplyDefaultSort**，**排序**， **RowFilter**，以及**RowStateFilter**的引用表的属性使用其**DataViewSetting**。 可以引用**DataViewSetting**为特定表的名称或序号引用，或通过将传递对该特定表对象的引用。 您可以访问的集合**DataViewSetting**中的对象**DataViewManager**通过**Dataviewsetting**属性。  
+ **DataViewManager**包含<xref:System.Data.DataViewSetting>对象的集合, 这些对象用于设置中<xref:System.Data.DataSet>的表的视图设置。 对于<xref:System.Data.DataViewSettingCollection> **数据集中**的每个表, 都包含一个<xref:System.Data.DataViewSetting>对象。 可以通过使用引用表的**DataViewSetting**来设置其默认的**ApplyDefaultSort**、 **Sort**、 **RowFilter**和**RowStateFilter**属性。 可以按名称或序号引用引用特定表的**DataViewSetting** , 也可以通过传递对该特定表对象的引用来引用。 可以通过使用**DataViewSettings**属性来访问**DataViewManager**中的**DataViewSetting**对象集合。  
   
- 以下代码示例填充**数据集**与 SQL Server **Northwind**数据库表**客户**，**订单**，和**订单详细信息**、 创建表之间的关系，然后使用**DataViewManager**若要设置默认**DataView**设置和绑定**DataGrid**到**DataViewManager**。 该示例设置的默认**DataView**设置中的所有表**数据集**要作为排序依据的表的主键 (**ApplyDefaultSort**  =  **，则返回 true**)，然后修改的排序顺序**客户**表要作为排序依据**CompanyName**。  
+ 下面的代码示例使用 SQL Server **Northwind**数据库表**客户**、**订单**和**订单详细信息**填充一个**数据集**, 并创建这些表之间的关系, 并使用**DataViewManager**来设置默认**DataView**设置, 并将**DataGrid**绑定到**DataViewManager**。 该示例将**数据集中**所有表的默认**DataView**设置设置为按表的主键进行排序 (**ApplyDefaultSort** = **true**), 然后将**Customers**表的排序顺序修改为按**公司名称**排序。  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection to Northwind.  
@@ -125,5 +125,5 @@ grid.SetDataBinding(viewManager, "Customers");
 - <xref:System.Data.DataViewManager>
 - <xref:System.Data.DataViewSetting>
 - <xref:System.Data.DataViewSettingCollection>
-- [数据视图](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)
+- [数据视图](dataviews.md)
 - [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

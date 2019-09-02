@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e5675663-fc91-4e0d-87a9-481b25b64c0f
-ms.openlocfilehash: 6c2e554b7e6bde3e82190f70723f272b0d39a18a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b3a1077bff9bf457b4aef0b05357d4a9260f8973
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61880030"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204826"
 ---
 # <a name="handling-dataview-events"></a>处理数据视图事件
-可以使用 <xref:System.Data.DataView.ListChanged> 的 <xref:System.Data.DataView> 事件确定某个视图是否已更新。 引发该事件的更新包括添加、删除或修改基础表中的某行；在基础表的架构中添加或删除某列；更改父或子关系。 **ListChanged**事件还将通知你如果你正在查看的行的列表发生了显著变化由于新的排序顺序或筛选器的应用程序。  
+可以使用 <xref:System.Data.DataView.ListChanged> 的 <xref:System.Data.DataView> 事件确定某个视图是否已更新。 引发该事件的更新包括添加、删除或修改基础表中的某行；在基础表的架构中添加或删除某列；更改父或子关系。 如果要查看的行的列表由于应用了新的排序顺序或筛选器而发生了重大更改, 则**ListChanged**事件也会通知您。  
   
- **ListChanged**事件实现**ListChangedEventHandler**委托<xref:System.ComponentModel>命名空间，并作为输入<xref:System.ComponentModel.ListChangedEventArgs>对象。 您可以确定已发生更改的类型使用<xref:System.ComponentModel.ListChangedType>中的枚举值**ListChangedType**的属性**ListChangedEventArgs**对象。 对于涉及添加的更改，删除或移动的行，添加或已移动行的新索引以及已删除的行的先前索引可以使用访问**NewIndex**属性的**ListChangedEventArgs**对象。 对于已移动的行，已移动的行的先前索引可以使用访问**OldIndex**的属性**ListChangedEventArgs**对象。  
+ **ListChanged**事件<xref:System.ComponentModel>实现 命名空间的ListChangedEventHandler委托,并将对象作为<xref:System.ComponentModel.ListChangedEventArgs>输入。 您可以使用<xref:System.ComponentModel.ListChangedType> **ListChangedEventArgs**对象的**system.componentmodel.listchangedtype>** 属性中的枚举值确定发生的更改类型。 对于涉及添加、删除或移动行的更改, 可以使用**ListChangedEventArgs**对象的**NewIndex**属性来访问已添加或已移动的行和已删除行的上一索引的新索引。 在移动行的情况下, 可以使用**ListChangedEventArgs**对象的**OldIndex**属性访问已移动行的上一个索引。  
   
- **DataViewManager**还公开**ListChanged**事件来通知您，如果表已添加或删除，或更改对**关系**的集合基础**数据集**。  
+ **DataViewManager**还公开了一个**ListChanged**事件, 以在表已添加或已删除或者是否对基础**数据集**的**关系**集合进行更改时通知您。  
   
  下面的代码示例演示如何添加**ListChanged**事件处理程序。  
   
@@ -55,5 +55,5 @@ protected static void OnListChanged(object sender,
 
 - <xref:System.Data.DataView>
 - <xref:System.ComponentModel.ListChangedEventHandler>
-- [数据视图](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)
+- [数据视图](dataviews.md)
 - [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

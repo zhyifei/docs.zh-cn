@@ -2,17 +2,17 @@
 title: DiffGrams
 ms.date: 03/30/2017
 ms.assetid: 037f3991-7bbc-424b-b52e-8b03585d3e34
-ms.openlocfilehash: 2bf736445a041ec678ab30474da51fddfba1773b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b9e6fb4ce1c2c7ee7d081a1cb2106d30960853c7
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69934484"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204888"
 ---
 # <a name="diffgrams"></a>DiffGrams
 DiffGram 是用于标识数据元素的当前和原始版本的 XML 格式。 <xref:System.Data.DataSet> 使用 DiffGram 格式来加载和保持其内容，并将其内容序列化，以便通过网络连接来进行传输。 当以<xref:System.Data.DataSet> DiffGram 形式编写时, 它将使用所有必要的信息来填充 diffgram, 以准确地重新创建的内容 (尽管不是的<xref:System.Data.DataSet>架构), 其中包括来自**原始**和**的列值当前**行版本、行错误消息和行顺序。  
   
- 当从 XML Web services 发送和检索 <xref:System.Data.DataSet> 时，将隐式地使用 DiffGram 格式。 此外, 当<xref:System.Data.DataSet>使用**ReadXml**方法从 xml 加载的内容时, 或使用**WriteXml**方法在 xml 中编写的<xref:System.Data.DataSet>内容时, 可以指定以 DiffGram 读取或写入内容。 有关详细信息, 请参阅[从 Xml 加载数据集](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)和[以 Xml 数据形式编写数据集内容](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md)。  
+ 当从 XML Web services 发送和检索 <xref:System.Data.DataSet> 时，将隐式地使用 DiffGram 格式。 此外, 当<xref:System.Data.DataSet>使用**ReadXml**方法从 xml 加载的内容时, 或使用**WriteXml**方法在 xml 中编写的<xref:System.Data.DataSet>内容时, 可以指定以 DiffGram 读取或写入内容。 有关详细信息, 请参阅[从 Xml 加载数据集](loading-a-dataset-from-xml.md)和[以 Xml 数据形式编写数据集内容](writing-dataset-contents-as-xml-data.md)。  
   
  虽然 DiffGram 格式主要由 .NET Framework 用作 <xref:System.Data.DataSet> 内容的序列化格式，但也可以使用 DiffGram 来修改 Microsoft SQL Server 数据库中表的数据。  
   
@@ -133,8 +133,8 @@ DiffGram 是用于标识数据元素的当前和原始版本的 XML 格式。 <x
   
 ## <a name="see-also"></a>请参阅
 
-- [在数据集中使用 XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
-- [从 XML 加载数据集](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)
-- [以 XML 数据的形式编写数据集内容](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md)
-- [数据集、数据表和数据视图](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [在数据集中使用 XML](using-xml-in-a-dataset.md)
+- [从 XML 加载数据集](loading-a-dataset-from-xml.md)
+- [以 XML 数据的形式编写数据集内容](writing-dataset-contents-as-xml-data.md)
+- [数据集、数据表和数据视图](index.md)
 - [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

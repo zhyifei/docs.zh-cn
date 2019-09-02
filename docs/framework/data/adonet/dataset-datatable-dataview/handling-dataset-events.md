@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 54edefe0-bc38-419b-b486-3d8a0c356f13
-ms.openlocfilehash: 8b93b0564bbd6d760193f11d23d97ccb2cb4c943
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 88f35d90f02b44b88f4bb7c6fac6a94a09afe81a
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69928516"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204851"
 ---
 # <a name="handling-dataset-events"></a>处理数据集事件
 <xref:System.Data.DataSet> 对象提供三个事件： <xref:System.ComponentModel.MarshalByValueComponent.Disposed>、 <xref:System.Data.DataSet.Initialized>和 <xref:System.Data.DataSet.MergeFailed>。  
@@ -53,11 +53,11 @@ private static void DataSetMergeFailed(
 > [!NOTE]
 > 和对象从<xref:System.Runtime.Serialization.ISerializable>继承并且支持用于远程处理的接口。 <xref:System.ComponentModel.MarshalByValueComponent> `DataTable` `DataSet` 这两个对象是唯一可远程处理的 ADO.NET 对象。 有关详细信息, 请参阅[.Net 远程处理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))。  
   
- 有关使用时`DataSet`的其他可用事件的信息, 请参阅[处理 DataTable 事件](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)和[处理 DataAdapter 事件](../../../../../docs/framework/data/adonet/handling-dataadapter-events.md)。  
+ 有关使用时`DataSet`的其他可用事件的信息, 请参阅[处理 DataTable 事件](handling-datatable-events.md)和[处理 DataAdapter 事件](../handling-dataadapter-events.md)。  
   
 ## <a name="see-also"></a>请参阅
 
-- [数据集、数据表和数据视图](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [数据集、数据表和数据视图](index.md)
 - [验证数据](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/t3b36awf(v=vs.120))
-- [在 ADO.NET 中检索和修改数据](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
+- [在 ADO.NET 中检索和修改数据](../retrieving-and-modifying-data.md)
 - [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

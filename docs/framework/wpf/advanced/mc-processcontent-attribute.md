@@ -5,12 +5,12 @@ helpviewer_keywords:
 - mc:ProcessContent attribute
 - XAML [WPF], mc:ProcessContent attribute
 ms.assetid: 2689b2c8-b4dc-4b71-b9bd-f95e619122d7
-ms.openlocfilehash: bc406659bec3fd8d5da87b597356a3411c7a2605
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 619c3ffbc68c8c72ea9dd6545ab8da536380483b
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69567400"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70206168"
 ---
 # <a name="mcprocesscontent-attribute"></a>mc:ProcessContent 特性
 指定哪些[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]元素仍应由相关的父元素处理内容, 即使因为指定了[mc: 可忽略属性](mc-ignorable-attribute.md), [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]处理程序可以忽略直接父元素。 特性支持用于自定义命名空间映射[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]和版本控制的标记兼容性。 `mc:ProcessContent`  
@@ -44,7 +44,7 @@ ms.locfileid: "69567400"
   
  可以使用空格分隔符在属性中指定多个前缀, 例如: `mc:ProcessContent="ignore:Element1 ignore:Element2"`。  
   
- [!INCLUDE[TLA#tla_mcxmlnsv1](../../../../includes/tlasharptla-mcxmlnsv1-md.md)]命名空间定义 SDK 的此区域中未记录的其他元素和特性。 有关详细信息, 请参阅[XML 标记兼容性规范](https://go.microsoft.com/fwlink/?LinkId=73824)。  
+ `http://schemas.openxmlformats.org/markup-compatibility/2006`命名空间定义 SDK 的此区域中未记录的其他元素和特性。 有关详细信息, 请参阅[XML 标记兼容性规范](https://go.microsoft.com/fwlink/?LinkId=73824)。  
   
 ## <a name="see-also"></a>请参阅
 
