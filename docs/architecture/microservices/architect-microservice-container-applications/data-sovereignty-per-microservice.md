@@ -56,7 +56,7 @@ DDD 通过获取分布式微服务形式的实际边界而从微服务中获益�
 - **Martin Fowler。PolyglotPersistence** \
   <https://martinfowler.com/bliki/PolyglotPersistence.html>
 
-- **Alberto Brandolini。Strategic Domain Driven Design with Context Mapping** \（含上下文映射的策略域驱动设计）
+- **Alberto Brandolini。含上下文映射的策略域驱动设计** \
   <https://www.infoq.com/articles/ddd-contextmapping>
 
 >[!div class="step-by-step"]

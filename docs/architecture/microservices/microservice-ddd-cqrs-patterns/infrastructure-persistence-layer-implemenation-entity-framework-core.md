@@ -461,7 +461,7 @@ public IEnumerable<T> List(ISpecification<T> spec)
 - **Steve Smith.Entity Framework Core 中的封装集合** \
   <https://ardalis.com/encapsulated-collections-in-entity-framework-core>
 
-- 阴影属性 \ 
+-  阴影属性 \
   [https://docs.microsoft.com/ef/core/modeling/shadow-properties](/ef/core/modeling/shadow-properties)
 
 - **规范模式** \

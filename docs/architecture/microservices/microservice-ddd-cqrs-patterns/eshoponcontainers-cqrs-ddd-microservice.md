@@ -44,10 +44,10 @@ eShopOnContainers 引用应用程序处的订单微服务设计基于 CQRS 原�
 - **Martin Fowler。CQRS** \
   <https://martinfowler.com/bliki/CQRS.html>
 
-- **Greg Young.CQRS Documents** \（CQRS 文档）
+- **Greg Young.CQRS 文档** \
   <https://cqrs.files.wordpress.com/2010/11/cqrs_documents.pdf>
 
-- **Udi Dahan.Clarified CQRS** \（明确的 CQRS）
+- **Udi Dahan.明确的 CQRS** \
   <http://udidahan.com/2009/12/09/clarified-cqrs/>
 
 >[!div class="step-by-step"]

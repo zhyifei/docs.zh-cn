@@ -322,28 +322,28 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 
 ### <a name="additional-resources"></a>其他资源
 
-- **Forked eShopOnContainers using NServiceBus (Particular Software)**  \（使用 NServiceBus 的分支 eShopOnContainers（特定软件））
+- **使用 NServiceBus 的分支 eShopOnContainers（特定软件）**  \
     <https://go.particular.net/eShopOnContainers>
 
-- **Event Driven Messaging** \（事件驱动的消息传递）
+- **事件驱动的消息传递** \
     [http://soapatterns.org/design\_patterns/event\_driven\_messaging](http://soapatterns.org/design_patterns/event_driven_messaging)
 
 - **Jimmy Bogard。重构复原能力：评估耦合度** \
     <https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/>
 
-- **Publish-Subscribe channel** \（发布-订阅通道）
+- **发布-订阅通道** \
     <https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html>
 
 - **界定上下文之间的通信** \
     <https://docs.microsoft.com/previous-versions/msp-n-p/jj591572(v=pandp.10)>
 
-- **Eventual Consistency** \（最终一致性）
+- **最终一致性** \
     [https://en.wikipedia.org/wiki/Eventual\_consistency](https://en.wikipedia.org/wiki/Eventual_consistency)
 
-- **Philip Brown。Strategies for Integrating Bounded Contexts** \（集成绑定上下文的策略）
+- **Philip Brown。集成绑定上下文的策略** \
     <https://www.culttt.com/2014/11/26/strategies-integrating-bounded-contexts/>
 
-- **Chris Richardson.Developing Transactional Microservices Using Aggregates, Event Sourcing and CQRS - Part 2** \（使用聚合、事件源和 CQRS 开发事务型微服务 - 第 2 部分）
+- **Chris Richardson.使用聚合、事件源和 CQRS 开发事务型微服务 - 第 2 部分** \
     <https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-2-richardson>
 
 - **Chris Richardson.事件溯源模式** \
@@ -355,16 +355,16 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 - **Event Store 数据库**。 官方网站。 \
     <https://geteventstore.com/>
 
-- **Patrick Nommensen。Event-Driven Data Management for Microservices** \（微服务的事件驱动数据管理）
+- **Patrick Nommensen。微服务的事件驱动数据管理** \
     <https://dzone.com/articles/event-driven-data-management-for-microservices-1>
 
 - **CAP 定理** \
     [https://en.wikipedia.org/wiki/CAP\_theorem](https://en.wikipedia.org/wiki/CAP_theorem)
 
-- **What is CAP Theorem?** （什么是 CAP 定理？） \
+- **什么是 CAP 定理？** \
     <https://www.quora.com/What-Is-CAP-Theorem-1>
 
-- **Data Consistency Primer** \（数据一致性入门指南）
+- **数据一致性入门指南** \
     <https://docs.microsoft.com/previous-versions/msp-n-p/dn589800(v=pandp.10)>
 
 - **Rick Saling。CAP 定理：为什么云和 Internet“一切都不同”**  \

@@ -83,13 +83,13 @@ ms.locfileid: "68673314"
 
 ## <a name="additional-resources"></a>其他资源
 
-- **Event Driven Messaging** \（事件驱动的消息传递）
+- **事件驱动的消息传递** \
   <http://soapatterns.org/design_patterns/event_driven_messaging>
 
-- **Publish/Subscribe Channel** \（发布/订阅通道）
+- **发布/订阅通道** \
   <https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html>
 
-- **Udi Dahan.Clarified CQRS** \（明确的 CQRS）
+- **Udi Dahan.明确的 CQRS** \
   <http://udidahan.com/2009/12/09/clarified-cqrs/>
 
 - **命令和查询责任分离 (CQRS)**  \
@@ -98,7 +98,7 @@ ms.locfileid: "68673314"
 - **界定上下文之间的通信** \
   <https://docs.microsoft.com/previous-versions/msp-n-p/jj591572(v=pandp.10)>
 
-- **Eventual Consistency** \（最终一致性）
+- **最终一致性** \
   <https://en.wikipedia.org/wiki/Eventual_consistency>
 
 - **Jimmy Bogard。重构复原能力：评估耦合度** \
