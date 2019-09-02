@@ -9,11 +9,11 @@ ms.assetid: c6d99815-e022-4d2c-9420-1d7ab5b9d504
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5ebd1de46eb2757098a369b58dd9a6c0009e5b95
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742466"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "61674880"
 ---
 # <a name="using-application-domains"></a>使用应用程序域
 应用程序域为公共语言运行时提供隔离单元。 它们在进程中创建和运行。 应用程序域通常由运行时主机创建，运行时主机是一种应用程序，负责向进程加载运行时，并在应用程序域内执行用户代码。 运行时主机创建进程和默认应用程序域，并在其中运行托管代码。 运行时主机包括 ASP.NET、Microsoft Internet Explorer 和 Windows Shell。  
@@ -36,13 +36,13 @@ ms.locfileid: "32742466"
  [如何：将程序集加载到应用程序域中](../../../docs/framework/app-domains/how-to-load-assemblies-into-an-application-domain.md)  
  说明如何将程序集加载到应用程序域中。  
   
- [如何：从程序集获取类型和成员信息](../../../docs/framework/app-domains/how-to-obtain-type-and-member-information-from-an-assembly.md)  
+ [如何：从程序集获得类型和成员信息](../../../docs/framework/app-domains/how-to-obtain-type-and-member-information-from-an-assembly.md)  
  说明如何检索关于程序集的信息。  
   
  [卷影复制程序集](../../../docs/framework/app-domains/shadow-copy-assemblies.md)  
  说明卷影复制如何允许对正在使用的程序集进行更新，以及如何配置卷影复制。  
   
- [如何：接收最可能的异常通知](../../../docs/framework/app-domains/how-to-receive-first-chance-exception-notifications.md)  
+ [如何：接收第一机会异常通知](../../../docs/framework/app-domains/how-to-receive-first-chance-exception-notifications.md)  
  说明在公共语言运行时开始搜索异常处理程序之前，可如何接收已引发异常的通知。  
   
  [解析程序集加载](../../../docs/framework/app-domains/resolve-assembly-loads.md)  

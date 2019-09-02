@@ -6,7 +6,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 07/16/2019
 ms.locfileid: "68235561"
 ---
-### <a name="wpf-grid-allocation-of-space-to-star-columns"></a>WPF 网格向 *-列分配空间
+### <a name="wpf-grid-allocation-of-space-to-star-columns"></a>WPF 网格向 -列分配空间
 
 |   |   |
 |---|---|
