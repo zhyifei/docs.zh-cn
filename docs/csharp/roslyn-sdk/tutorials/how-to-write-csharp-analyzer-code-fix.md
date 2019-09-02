@@ -3,12 +3,12 @@ title: 教程：编写第一个分析器和代码修补程序
 description: 本教程提供了有关使用 .NET 编译器 SDK (Roslyn API) 生成分析器和代码修补程序的分步说明。
 ms.date: 08/01/2018
 ms.custom: mvc
-ms.openlocfilehash: 45529a72e3c64a573bfc043fe44da29caed1a0c4
-ms.sourcegitcommit: 6472349821dbe202d01182bc2cfe9d7176eaaa6c
+ms.openlocfilehash: d6645a2a6e83f68c1959c255756393c9251dc1ba
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67870560"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105759"
 ---
 # <a name="tutorial-write-your-first-analyzer-and-code-fix"></a>教程：编写第一个分析器和代码修补程序
 
@@ -18,8 +18,8 @@ ms.locfileid: "67870560"
 
 ## <a name="prerequisites"></a>系统必备
 
-* [Visual Studio 2017](https://visualstudio.microsoft.com/vs/older-downloads/#visual-studio-2017-and-other-products)
-* [Visual Studio 2019](https://www.visualstudio.com/downloads)
+- [Visual Studio 2017](https://visualstudio.microsoft.com/vs/older-downloads/#visual-studio-2017-and-other-products)
+- [Visual Studio 2019](https://www.visualstudio.com/downloads)
 
 必须通过 Visual Studio 安装程序安装 .NET 编译器平台 SDK  ：
 
@@ -51,9 +51,9 @@ Console.WriteLine(x);
 
 涉及到确定变量是否可以保持不变的分析，需要进行句法分析、初始值设定项的常量分析和数据流分析，以确保永远不会写入该变量。 .NET Compiler Platform 提供了 API，以便更轻松地执行此分析。 第一步是创建一个新的 C#“随附代码修补程序的分析器”  项目。
 
-* 在 Visual Studio 中，选择“文件”>“新建”>“项目...”  ，显示“新建项目”对话框。
-* 在“Visual C#”>“扩展性”  下，选择“随附代码修补程序的分析器 (.NET Standard)”  。
-* 给项目“MakeConst”  命名，然后单击“确定”。
+- 在 Visual Studio 中，选择“文件”>“新建”>“项目...”  ，显示“新建项目”对话框。
+- 在“Visual C#”>“扩展性”  下，选择“随附代码修补程序的分析器 (.NET Standard)”  。
+- 给项目“MakeConst”  命名，然后单击“确定”。
 
 使用代码修复模板的分析器将创建三个项目：一个包含分析器和代码修补程序，第二个是单元测试项目，第三个是 VSIX 项目。 默认启动项目是 VSIX 项目。 按 F5  启动 VSIX 项目。 这将启动已加载新分析器的第二个 Visual Studio 实例。
 
@@ -77,8 +77,8 @@ Console.WriteLine(x);
 
 该模板将在 MakeConstAnalyzer.cs  文件中创建初始 `DiagnosticAnalyzer` 类。 此初始分析器显示每个分析器的两个重要属性。
 
-* 每个诊断分析器必须提供 `[DiagnosticAnalyzer]` 属性，用于描述其操作所用的语言。
-* 每个诊断分析器必须派生自 <xref:Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer> 类。
+- 每个诊断分析器必须提供 `[DiagnosticAnalyzer]` 属性，用于描述其操作所用的语言。
+- 每个诊断分析器必须派生自 <xref:Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer> 类。
 
 该模板还显示属于任何分析器的基本功能：
 
@@ -89,9 +89,9 @@ Console.WriteLine(x);
 
 第一步是更新注册常量和 `Initialize` 方法，以便这些常量指示“Make Const”分析器。 大多数字符串常量在字符串资源文件中定义。 应遵循此做法，以便更轻松地实现本地化。 打开“MakeConst”  分析器项目的“Resources.resx”  。 将显示资源编辑器。 更新字符串资源，如下所示：
 
-* 将 `AnalyzerTitle` 更改为“变量可以保持不变”。
-* 将 `AnalyzerMessageFormat` 更改为“可以保持不变”。
-* 将 `AnalyzerDescription` 更改为“保持不变”。
+- 将 `AnalyzerTitle` 更改为“变量可以保持不变”。
+- 将 `AnalyzerMessageFormat` 更改为“可以保持不变”。
+- 将 `AnalyzerDescription` 更改为“保持不变”。
 
 此外，将“访问修饰符”  下拉列表更改为 `public`。 这样可以更轻松地在单元测试中使用这些常量。 完成后，资源编辑器应如下图所示：
 
@@ -329,15 +329,15 @@ public void WhenTestCodeIsValidNoDiagnosticIsTriggered(string testCode)
 
 此测试也通过了。 接下来，为尚未处理的情况添加常量：
 
-* 已经是 `const` 的声明，因为它们已为 const 类型：
+- 已经是 `const` 的声明，因为它们已为 const 类型：
 
    [!code-csharp[already const declaration](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#AlreadyConst "a declaration that is already const should not raise the diagnostic")]
 
-* 没有初始值设定项的声明，因为没有要使用的值：
+- 没有初始值设定项的声明，因为没有要使用的值：
 
    [!code-csharp[declarations that have no initializer](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#NoInitializer "a declaration that has no initializer should not raise the diagnostic")]
 
-* 初始值设定项不是常量的声明，因为它们不能是编译时常量：
+- 初始值设定项不是常量的声明，因为它们不能是编译时常量：
 
    [!code-csharp[declarations where the initializer isn't const](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#InitializerNotConstant "a declaration where the initializer is not a compile-time constant should not raise the diagnostic")]
 
@@ -364,9 +364,9 @@ public void WhenTestCodeIsValidNoDiagnosticIsTriggered(string testCode)
 
 需要对分析器的 `AnalyzeNode` 方法进行一些增强，以筛选出匹配这些条件的代码。 它们是所有相关条件，因此类似的更改将解决所有这些条件。 对 `AnalyzeNode` 进行以下更改：
 
-* 语义分析检查单个变量声明。 此代码必须位于 `foreach` 循环中，以检查同一语句中声明的所有变量。
-* 每个声明变量需要有初始值设定项。
-* 每个声明的变量的初始值设定项必须是编译时常量。
+- 语义分析检查单个变量声明。 此代码必须位于 `foreach` 循环中，以检查同一语句中声明的所有变量。
+- 每个声明变量需要有初始值设定项。
+- 每个声明的变量的初始值设定项必须是编译时常量。
 
 在 `AnalyzeNode` 方法中，替换原始语义分析：
 
@@ -487,11 +487,11 @@ else if (variableType.IsReferenceType && constantValue.Value != null)
 
 必须在代码修复提供程序中编写更多代码中以将 var 关键字替换为正确类型名称。 返回到 CodeFixProvider.cs  。 要添加的代码将执行以下步骤：
 
-* 检查声明是否为 `var` 声明，如果它是：
-* 创建新类型的推断类型。
-* 确保类型声明不是别名。 如果是这样，则声明 `const var` 是合法的。
-* 确保 `var` 不是此程序中的类型名称。 （如果是这样，则 `const var` 是合法的）。
-* 简化完整类型名称
+- 检查声明是否为 `var` 声明，如果它是：
+- 创建新类型的推断类型。
+- 确保类型声明不是别名。 如果是这样，则声明 `const var` 是合法的。
+- 确保 `var` 不是此程序中的类型名称。 （如果是这样，则 `const var` 是合法的）。
+- 简化完整类型名称
 
 这听起来好像有很多代码。 其实不然。 将声明和初始化 `newLocal` 的行替换为以下代码。 在初始化 `newModifiers` 之后立即进行：
 
@@ -505,10 +505,10 @@ using Microsoft.CodeAnalysis.Simplification;
 
 运行测试，它们应全部通过。 通过运行已完成的分析器自行庆祝。 按 Ctrl+F5 在第二个 Visual Studio 实例中运行分析器项目，并加载 Roslyn 预览扩展。
 
-* 在第二个 Visual Studio 实例，创建一个新的 C# 控制台应用程序项目并将 `int x = "abc";` 添加到 Main 方法。 由于第一个 bug 已修复，应不会报告针对此局部变量声明的警告（尽管像预期那样出现了编译器错误）。
-* 接下来，将 `object s = "abc";` 添加到 Main 方法。 由于第二个 bug 已修复，应不会报告任何警告。
-* 最后，添加另一个使用 `var` 关键字的局部变量。 你将看到一个警告和显示在左下方的一个建议。
-* 将编辑器插入点移到波浪下划线，然后按 Ctrl+。 显示建议的代码修补程序。 选择代码修补程序，请注意，var 关键字现已正确处理。
+- 在第二个 Visual Studio 实例，创建一个新的 C# 控制台应用程序项目并将 `int x = "abc";` 添加到 Main 方法。 由于第一个 bug 已修复，应不会报告针对此局部变量声明的警告（尽管像预期那样出现了编译器错误）。
+- 接下来，将 `object s = "abc";` 添加到 Main 方法。 由于第二个 bug 已修复，应不会报告任何警告。
+- 最后，添加另一个使用 `var` 关键字的局部变量。 你将看到一个警告和显示在左下方的一个建议。
+- 将编辑器插入点移到波浪下划线，然后按 Ctrl+。 显示建议的代码修补程序。 选择代码修补程序，请注意，var 关键字现已正确处理。
 
 最后，添加以下代码：
 

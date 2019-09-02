@@ -24,7 +24,7 @@ ms.locfileid: "69963392"
 ## <a name="benefits-of-the-nfa-engine"></a>NFA 引擎的优势  
  DFA 引擎执行模式匹配时，其处理顺序由输入字符串驱动。 该引擎从输入字符串的开头处开始，按顺序继续进行以确定下一个字符是否与正则表达式模式匹配。 它们可以保证匹配可能最长的字符串。 因为它们绝不会对相同字符测试两次，所以 DFA 引擎不支持回溯。 但是，由于 DFA 引擎只包含有限状态，因此它无法匹配具有反向引用的模式，并且因为它不构造显式扩展，所以无法捕获子表达式。  
   
- 与 DFA 引擎不同，传统 NFA 引擎执行模式匹配时，其处理顺序由正则表达式模式驱动。 处理特定语言元素时，该引擎使用贪婪匹配；也就是说，它尽可能多地匹配输入字符串。 但是，它还会在成功匹配子表达式之后保存其状态。 如果匹配最终失败，则该引擎可以返回到已保存状态，以便可以尝试其他匹配项。 这样的过程称为“回溯” ** ，即放弃成功子表达式匹配，以便正则表达式中后面的语言元素也可以进行匹配。 NFA 引擎使用回溯按特定顺序测试正则表达式的所有可能扩展，并接受第一个匹配项。 因为传统 NFA 引擎针对成功匹配构造正则表达式的特定扩展，所以它可以捕获子表达式匹配项以及匹配反向引用。 但是，由于传统 NFA 会进行回溯，因此如果它通过不同路径到达相同状态，则可能会多次访问该状态。 因此，其运行速度在最糟糕的情况下可能会极端缓慢。 因为传统 NFA 引擎接受它找到的第一个匹配项，所以它还可能会使其他（可能更长）的匹配项保持未发现状态。  
+ 与 DFA 引擎不同，传统 NFA 引擎执行模式匹配时，其处理顺序由正则表达式模式驱动。 处理特定语言元素时，该引擎使用贪婪匹配；也就是说，它尽可能多地匹配输入字符串。 但是，它还会在成功匹配子表达式之后保存其状态。 如果匹配最终失败，则该引擎可以返回到已保存状态，以便可以尝试其他匹配项。 这样的过程称为“回溯”，即放弃成功子表达式匹配，以便正则表达式中后面的语言元素也可以进行匹配。 NFA 引擎使用回溯按特定顺序测试正则表达式的所有可能扩展，并接受第一个匹配项。 因为传统 NFA 引擎针对成功匹配构造正则表达式的特定扩展，所以它可以捕获子表达式匹配项以及匹配反向引用。 但是，由于传统 NFA 会进行回溯，因此如果它通过不同路径到达相同状态，则可能会多次访问该状态。 因此，其运行速度在最糟糕的情况下可能会极端缓慢。 因为传统 NFA 引擎接受它找到的第一个匹配项，所以它还可能会使其他（可能更长）的匹配项保持未发现状态。  
   
  POSIX NFA 引擎类似于传统 NFA 引擎，只不过它们会继续回溯，直到可以保证已找到最长的可能匹配项。 因此，POSIX NFA 引擎速度低于传统 NFA 引擎，而且使用 POSIX NFA 引擎时，无法通过更改回溯搜索的顺序，使较短匹配项优先于较长匹配项。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "69963392"
   
  .NET Framework 正则表达式引擎的其他功能包括下面这些：  
   
-- 惰性限定符：`??`、`*?`、`+?`、`{`n`,`m`}?` ** ** 。 这些构造会指示回溯引擎首先搜索最小数量的重复项。 相反，普通贪婪限定符会尝试首先匹配最大数量的重复项。 以下示例演示了两者之间的差异。 正则表达式匹配以数字结尾的句子，捕获组旨在提取该数字。 正则表达式 `.+(\d+)\.` 包含贪婪限定符 `.+`，这使正则表达式引擎仅捕获数字的最后一位数。 相反，正则表达式 `.+?(\d+)\.` 包含惰性限定符 `.+?`，这使正则表达式引擎捕获整个数字。  
+- 惰性限定符：`??`、`*?`、`+?`、`{`n`,`m`}?`。 这些构造会指示回溯引擎首先搜索最小数量的重复项。 相反，普通贪婪限定符会尝试首先匹配最大数量的重复项。 以下示例演示了两者之间的差异。 正则表达式匹配以数字结尾的句子，捕获组旨在提取该数字。 正则表达式 `.+(\d+)\.` 包含贪婪限定符 `.+`，这使正则表达式引擎仅捕获数字的最后一位数。 相反，正则表达式 `.+?(\d+)\.` 包含惰性限定符 `.+?`，这使正则表达式引擎捕获整个数字。  
   
      [!code-csharp[Conceptual.RegularExpressions.Design#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/lazy1.cs#1)]
      [!code-vb[Conceptual.RegularExpressions.Design#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/lazy1.vb#1)]  
@@ -54,7 +54,7 @@ ms.locfileid: "69963392"
   
      若要详细了解惰性量符，请参阅[量符](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)。  
   
-- 正向先行断言：`(?=`subexpression ** `)`。 此功能允许回溯引擎在匹配子表达式之后返回到文本中的相同位置。 它可用于通过验证从相同位置开始的多个模式来搜索整个文本。 它还允许引擎验证匹配项末尾是否存在某个子字符串，而无需在匹配的文本中包含该子字符串。 下面的示例使用正预测先行提取句子中后面不是标点符号的单词。  
+- 正预测先行断言：`(?=`subexpression`)`。 此功能允许回溯引擎在匹配子表达式之后返回到文本中的相同位置。 它可用于通过验证从相同位置开始的多个模式来搜索整个文本。 它还允许引擎验证匹配项末尾是否存在某个子字符串，而无需在匹配的文本中包含该子字符串。 下面的示例使用正预测先行提取句子中后面不是标点符号的单词。  
   
      [!code-csharp[Conceptual.RegularExpressions.Design#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/lookahead1.cs#2)]
      [!code-vb[Conceptual.RegularExpressions.Design#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/lookahead1.vb#2)]  
@@ -68,9 +68,9 @@ ms.locfileid: "69963392"
     |`\b`|在单词边界处结束匹配。|  
     |`(?=\P{P})`|预测先行以确定下一个字符是否为标点符号。 如果不是，则匹配成功。|  
   
-     若要详细了解正向先行断言，请参阅[分组构造](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。  
+     若要详细了解正预测先行断言，请参阅[分组构造](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。  
   
-- 负向先行断言：`(?!`subexpression ** `)`。 通过此功能可以仅当子表达式未能匹配时才匹配表达式。 这对于修剪搜索特别有用，因为针对应消除的情况提供表达式通常比针对必须包括的情况提供表达式要更简单。 例如，难以为不以“non”开头的单词编写表达式。 下面的示例使用负预测先行排除它们。  
+- 负向先行断言：`(?!`subexpression`)`。 通过此功能可以仅当子表达式未能匹配时才匹配表达式。 这对于修剪搜索特别有用，因为针对应消除的情况提供表达式通常比针对必须包括的情况提供表达式要更简单。 例如，难以为不以“non”开头的单词编写表达式。 下面的示例使用负预测先行排除它们。  
   
      [!code-csharp[Conceptual.RegularExpressions.Design#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/lookahead2.cs#3)]
      [!code-vb[Conceptual.RegularExpressions.Design#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/lookahead2.vb#3)]  
@@ -86,7 +86,7 @@ ms.locfileid: "69963392"
   
      若要详细了解负预测先行断言，请参阅[分组构造](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。  
   
-- 条件求值：`(?(`expression ** `)`yes ** `|`no ** `)` 和 `(?(`name ** `)`yes ** `|`no ** `)`，其中 expression ** 是要匹配的子表达式，name ** 是捕获组的名称，yes ** 是在 expression ** 匹配或 name ** 是有效的非空捕获组时要匹配的字符串，no ** 是在 expression ** 不匹配或 name ** 不是有效的非空捕获组时要匹配的子表达式。 此功能允许引擎使用多个备用模式进行搜索（具体取决于上一个子表达式匹配的结果或零宽度断言的结果）。 这样可实现功能更强大的反向引用形式，例如，它允许基于上一个子表达式是否匹配来匹配子表达式。 下面示例中的正则表达式匹配旨在供公共和内部使用的段落。 仅供内部使用的段落以 `<PRIVATE>` 标记开头。 正则表达式模式 `^(?<Pvt>\<PRIVATE\>\s)?(?(Pvt)((\w+\p{P}?\s)+)|((\w+\p{P}?\s)+))\r?$` 使用条件评估将旨在供公共使用和内部使用的段落内容分配给不同的捕获组。 这些段落随后可以按不同方式进行处理。  
+- 条件求值：`(?(`expression`)`yes`|`no`)` 和 `(?(`name`)`yes`|`no`)`，其中 expression 是要匹配的子表达式，name 是捕获组的名称，yes 是在 expression 匹配或 name 是有效的非空捕获组时要匹配的字符串，no 是在 expression 不匹配或 name 不是有效的非空捕获组时要匹配的子表达式。 此功能允许引擎使用多个备用模式进行搜索（具体取决于上一个子表达式匹配的结果或零宽度断言的结果）。 这样可实现功能更强大的反向引用形式，例如，它允许基于上一个子表达式是否匹配来匹配子表达式。 下面示例中的正则表达式匹配旨在供公共和内部使用的段落。 仅供内部使用的段落以 `<PRIVATE>` 标记开头。 正则表达式模式 `^(?<Pvt>\<PRIVATE\>\s)?(?(Pvt)((\w+\p{P}?\s)+)|((\w+\p{P}?\s)+))\r?$` 使用条件评估将旨在供公共使用和内部使用的段落内容分配给不同的捕获组。 这些段落随后可以按不同方式进行处理。  
   
      [!code-csharp[Conceptual.RegularExpressions.Design#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/conditional1.cs#4)]
      [!code-vb[Conceptual.RegularExpressions.Design#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/conditional1.vb#4)]  
@@ -103,9 +103,9 @@ ms.locfileid: "69963392"
   
      若要详细了解条件求值，请参阅[替换构造](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)。  
   
-- 平衡组定义：`(?<`name1 ** `-`name2 ** `>` subexpression ** `)`。 此功能允许正则表达式引擎跟踪嵌套构造（如圆括号或者左方括号和右方括号）。 有关示例，请参阅[分组构造](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。  
+- 平衡组定义：`(?<`name1`-`name2`>` subexpression`)`。 此功能允许正则表达式引擎跟踪嵌套构造（如圆括号或者左方括号和右方括号）。 有关示例，请参阅[分组构造](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。  
   
-- 非回溯子表达式（亦称为“贪婪子表达式”）：`(?>`subexpression ** `)`。 此功能允许回溯引擎保证子表达式仅匹配为该子表达式找到的第一个匹配项，就如同该表达式独立于其包含表达式运行一样。 如果不使用此构造，则来自较大表达式的回溯搜索可能会更改子表达式的行为。 例如，正则表达式 `(a+)\w` 匹配一个或多个“a”字符以及跟在“a”字符序列后面的单词字符，并将“a”字符序列分配给第一个捕获组，但是，如果输入字符串的最后一个字符也是“a”，则它按 `\w` 语言元素进行匹配，不包含在捕获组中。  
+- 非回溯子表达式（亦称为“贪婪子表达式”）：`(?>`subexpression`)`。 此功能允许回溯引擎保证子表达式仅匹配为该子表达式找到的第一个匹配项，就如同该表达式独立于其包含表达式运行一样。 如果不使用此构造，则来自较大表达式的回溯搜索可能会更改子表达式的行为。 例如，正则表达式 `(a+)\w` 匹配一个或多个“a”字符以及跟在“a”字符序列后面的单词字符，并将“a”字符序列分配给第一个捕获组，但是，如果输入字符串的最后一个字符也是“a”，则它按 `\w` 语言元素进行匹配，不包含在捕获组中。  
   
      [!code-csharp[Conceptual.RegularExpressions.Design#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/nonbacktracking2.cs#7)]
      [!code-vb[Conceptual.RegularExpressions.Design#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/nonbacktracking2.vb#7)]  
@@ -124,7 +124,7 @@ ms.locfileid: "69963392"
   
      有关从右到左匹配的更多信息，请参见[正则表达式选项](../../../docs/standard/base-types/regular-expression-options.md)。  
   
-- 正负向后行断言：`(?<=`subexpression ** `)`（对于正向后行断言）和 `(?<!`subexpression ** `)`（对于负向后行断言）。 此功能非常类似于本主题前面讨论的预测先行。 由于正则表达式引擎允许完全的从右到左匹配，因此正则表达式允许无限制回顾。 当嵌套子表达式是外部表达式的超集时，正回顾和负回顾还可以用于避免嵌套限定符。 具有此类嵌套限定符的正则表达式通常性能不佳。 例如，下面的示例验证字符串是否以字母数字字符开头和结尾，以及字符串中的任何其他字符是否为更大子集之一。 它形成用于验证电子邮件地址的正则表达式的一部分内容；有关详细信息，请参阅[如何：确认字符串是有效的电子邮件格式](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md)。  
+- 正负向后行断言：`(?<=`subexpression`)`（对于正向后行断言）和 `(?<!`subexpression`)`（对于负向后行断言）。 此功能非常类似于本主题前面讨论的预测先行。 由于正则表达式引擎允许完全的从右到左匹配，因此正则表达式允许无限制回顾。 当嵌套子表达式是外部表达式的超集时，正回顾和负回顾还可以用于避免嵌套限定符。 具有此类嵌套限定符的正则表达式通常性能不佳。 例如，下面的示例验证字符串是否以字母数字字符开头和结尾，以及字符串中的任何其他字符是否为更大子集之一。 它形成用于验证电子邮件地址的正则表达式的一部分内容；有关详细信息，请参阅[如何：确认字符串是有效的电子邮件格式](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md)。  
   
      [!code-csharp[Conceptual.RegularExpressions.Design#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/lookbehind1.cs#5)]
      [!code-vb[Conceptual.RegularExpressions.Design#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/lookbehind1.vb#5)]  

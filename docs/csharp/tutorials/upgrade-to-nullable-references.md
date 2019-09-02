@@ -3,24 +3,24 @@ title: 使用可为空引用类型进行设计
 description: 本高级教程介绍了可为空引用类型。 你将学习在引用值可能为 NULL 时表达你的设计意图，并在引用值不能为 NULL 时让编译器强制执行。
 ms.date: 02/19/2019
 ms.custom: mvc
-ms.openlocfilehash: 289b864aaa0380a31e93ef223fb5b5780e35892a
-ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
+ms.openlocfilehash: 357ebd13ca4c610f1c65009621ee628a90c70b15
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66195836"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105764"
 ---
 # <a name="tutorial-migrate-existing-code-with-nullable-reference-types"></a>教程：使用可为空引用类型迁移现有代码
 
-C# 8 引入了可为空引用类型，它们以与可为空值类型补充值类型相同的方式补充引用类型。 通过将 `?` 追加到此类型，你可以将变量声明为可为空引用类型。 例如，`string?` 表示可为空的 `string`。 可以使用这些新类型更清楚地表达你的设计意图：某些变量必须始终具有值，其他变量可以缺少值。 引用类型的任何现有变量都将被解释为不可为空引用类型。 
+C# 8 引入了  可为空引用类型，它们以与可为空值类型补充值类型相同的方式补充引用类型。 通过将 `?` 追加到此类型，你可以将变量声明为  可为空引用类型。 例如，`string?` 表示可为空的 `string`。 可以使用这些新类型更清楚地表达你的设计意图：某些变量  必须始终具有值，其他变量可以缺少值  。 引用类型的任何现有变量都将被解释为不可为空引用类型。 
 
 在本教程中，你将了解：
 
 > [!div class="checklist"]
-> * 使用代码时启用空引用检查。
-> * 诊断并更正与 Null 值相关的其他警告。
-> * 管理可为空启用上下文和可为空禁用上下文之间的接口。
-> * 控制可为空的批注上下文。
+> - 使用代码时启用空引用检查。
+> - 诊断并更正与 Null 值相关的其他警告。
+> - 管理可为空启用上下文和可为空禁用上下文之间的接口。
+> - 控制可为空的批注上下文。
 
 ## <a name="prerequisites"></a>系统必备
 
@@ -61,7 +61,7 @@ C# 8 引入了可为空引用类型，它们以与可为空值类型补充值类
 
 ## <a name="warnings-help-discover-original-design-intent"></a>警告有助于发现原始设计意图
 
-有两个类生成多个警告。 从 `NewsStoryViewModel` 类开始。 从两个 csproj 文件中删除 `Nullable` 元素，以便将警告范围限制为正在处理的代码部分。 打开 NewsStoryViewModel.cs 文件并添加下列指令，以启用 `NewsStoryViewModel` 的可为空注释上下文，并按照类定义对其进行还原：
+有两个类生成多个警告。 从 `NewsStoryViewModel` 类开始。 从两个 csproj 文件中删除 `Nullable` 元素，以便将警告范围限制为正在处理的代码部分。 打开 NewsStoryViewModel.cs  文件并添加下列指令，以启用 `NewsStoryViewModel` 的可为空注释上下文，并按照类定义对其进行还原：
 
 ```csharp
 #nullable enable
@@ -84,7 +84,7 @@ public class NewsStoryViewModel
 
 [!code-csharp[StarterCreateNewsItem](~/samples/csharp/tutorials/nullable-reference-migration/start/SimpleFeedReader/Services/NewsService.cs#CreateNewsItem)]
 
-前面的代码块中有相当多的内容。 此应用程序使用 [AutoMapper](https://automapper.org/) NuGet 包从 `ISyndicationItem` 中构造新闻项。 你会发现，在这一条语句中构造了新闻故事项，并设置了属性。 这意味着 `NewsStoryViewModel` 的设计表明这些属性绝不应该有 `null` 值。 这些属性应是不可为空引用类型。 这样可以充分表达原始设计意图。 实际上，任何 `NewsStoryViewModel` 都是用非 Null 值正确实例化的。 这使得以下初始化代码成为一个有效的修复程序：
+前面的代码块中有相当多的内容。 此应用程序使用 [AutoMapper](https://automapper.org/) NuGet 包从 `ISyndicationItem` 中构造新闻项。 你会发现，在这一条语句中构造了新闻故事项，并设置了属性。 这意味着 `NewsStoryViewModel` 的设计表明这些属性绝不应该有 `null` 值。 这些属性应是不可为空引用类型  。 这样可以充分表达原始设计意图。 实际上，任何 `NewsStoryViewModel` 都是  用非 Null 值正确实例化的。 这使得以下初始化代码成为一个有效的修复程序：
 
 ```csharp
 public class NewsStoryViewModel
@@ -95,7 +95,7 @@ public class NewsStoryViewModel
 }
 ```
 
-`Title` 和 `Uri` 赋值为 `default`（`string` 类型为 `null`）不会更改程序的运行时行为。 `NewsStoryViewModel` 仍然用 Null 值构造，但现在编译器不会报告任何警告。 Null 包容运算符，`default` 表达式后面的 `!` 字符指示编译器前面的表达式不为 Null。 当其他更改强制对代码库进行更大的更改时，该方法可能是权宜之计，但在此应用程序中，有一种相对快捷且更好的解决方案：使 `NewsStoryViewModel` 成为不可变类型，其中所有属性都在构造函数中设置。 对 `NewsStoryViewModel` 进行以下更改：
+`Title` 和 `Uri` 赋值为 `default`（`string` 类型为 `null`）不会更改程序的运行时行为。 `NewsStoryViewModel` 仍然用 Null 值构造，但现在编译器不会报告任何警告。 Null 包容运算符  ，`default` 表达式后面的 `!` 字符指示编译器前面的表达式不为 Null。 当其他更改强制对代码库进行更大的更改时，该方法可能是权宜之计，但在此应用程序中，有一种相对快捷且更好的解决方案：使 `NewsStoryViewModel` 成为不可变类型，其中所有属性都在构造函数中设置。 对 `NewsStoryViewModel` 进行以下更改：
 
 [!code-csharp[FinishedViewModel](~/samples/csharp/tutorials/nullable-reference-migration/finished/SimpleFeedReader/ViewModels/NewsStoryViewModel.cs#FinishedViewModel)]
 
@@ -109,13 +109,13 @@ public class NewsStoryViewModel
 
 注意，因为此类很小，而且你已经仔细检查过，所以应打开此类声明上面的 `#nullable enable` 指令。 对构造函数的更改可能会破坏某些内容，因此有必要在继续之前运行所有测试并测试应用程序。
 
-第一组更改展示了如何发现原始设计指示不应该将变量设置为 `null`。 该方法称为“通过构造更正”。 在构造对象时，声明该对象及其属性不能为 `null`。 编译器的流分析确保这些属性在构造之后不会被设置为 `null`。 注意，此构造函数由外部代码调用，而该代码无论是否可为空都能进行调用。 新语法不提供运行时检查。 外部代码可能会避开编译器的流分析。 
+第一组更改展示了如何发现原始设计指示不应该将变量设置为 `null`。 该方法称为“通过构造更正”  。 在构造对象时，声明该对象及其属性不能为 `null`。 编译器的流分析确保这些属性在构造之后不会被设置为 `null`。 注意，此构造函数由外部代码调用，而该代码无论是否可为空都能进行调用  。 新语法不提供运行时检查。 外部代码可能会避开编译器的流分析。 
 
-其他情况下，类的结构提供了意图的不同线索。 打开“Pages”文件夹中的“Error.cshtml.cs”文件。 `ErrorViewModel` 包含以下代码：
+其他情况下，类的结构提供了意图的不同线索。 打开“Pages”  文件夹中的“Error.cshtml.cs”  文件。 `ErrorViewModel` 包含以下代码：
 
 [!code-csharp[StarterErrorModel](~/samples/csharp/tutorials/nullable-reference-migration/start/SimpleFeedReader/Pages/Error.cshtml.cs#StartErrorModel)]
 
-在类声明之前添加 `#nullable enable` 指令，在类声明之后添加 `#nullable restore` 指令。 会出现一个警告，指示 `RequestId` 未初始化。 通过查看类，应确定在某些情况下 `RequestId` 属性应为 Null。 `ShowRequestId` 属性的存在表明可能缺失某些值。 因为 `null` 有效，所以在 `string` 类型上添加 `?` 表示 `RequestId` 属性是可为空引用类型。 最终类如下所示：
+在类声明之前添加 `#nullable enable` 指令，在类声明之后添加 `#nullable restore` 指令。 会出现一个警告，指示 `RequestId` 未初始化。 通过查看类，应确定在某些情况下 `RequestId` 属性应为 Null。 `ShowRequestId` 属性的存在表明可能缺失某些值。 因为 `null` 有效，所以在 `string` 类型上添加 `?` 表示 `RequestId` 属性是可为空引用类型  。 最终类如下所示：
 
 [!code-csharp[FinishedErrorModel](~/samples/csharp/tutorials/nullable-reference-migration/finished/SimpleFeedReader/Pages/Error.cshtml.cs#ErrorModel)]
 
@@ -135,7 +135,7 @@ public class NewsStoryViewModel
 
 [!code-csharp[InitializeNewsItems](~/samples/csharp/tutorials/nullable-reference-migration/finished/SimpleFeedReader/Pages/Index.cshtml.cs#InitializeNewsItems)]
 
-这修复了警告，但引入了错误。 `NewsItems` 列表现在是“通过构造更正，但在 `OnGet` 中设置列表的代码必须更改以匹配新的 API。 调用 `AddRange` 将新闻项添加到现有列表，而不是赋值：
+这修复了警告，但引入了错误。 `NewsItems` 列表现在是“通过构造更正  ，但在 `OnGet` 中设置列表的代码必须更改以匹配新的 API。 调用 `AddRange` 将新闻项添加到现有列表，而不是赋值：
 
 [!code-csharp[AddRange](~/samples/csharp/tutorials/nullable-reference-migration/finished/SimpleFeedReader/Pages/Index.cshtml.cs#AddRange)]
 

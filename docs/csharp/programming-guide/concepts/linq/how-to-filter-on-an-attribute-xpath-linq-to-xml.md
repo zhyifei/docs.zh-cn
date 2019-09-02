@@ -2,12 +2,12 @@
 title: 如何：根据属性进行筛选 (XPath-LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 208d6256-1bd7-4237-b2c9-909f26dfd0e2
-ms.openlocfilehash: 96c6d26c035d70fb50e0b5dc022bd28fd0242edd
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 2537fbbac4f16a56d8a7f074b5fd10a4fcd0c09c
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69593827"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205297"
 ---
 # <a name="how-to-filter-on-an-attribute-xpath-linq-to-xml-c"></a>如何：根据属性进行筛选 (XPath-LINQ to XML) (C#)
 本主题演示如何获取具有指定名称、并具有一个带指定值的属性的子代元素。  
@@ -44,7 +44,7 @@ foreach (XElement el in list1)
   
  该示例产生下面的输出：  
   
-```  
+```output  
 Results are identical  
 <Address Type="Shipping">  
   <Name>Ellen Adams</Name>  

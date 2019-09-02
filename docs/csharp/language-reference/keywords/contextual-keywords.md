@@ -5,12 +5,12 @@ ms.date: 03/07/2017
 helpviewer_keywords:
 - contextual keywords [C#]
 ms.assetid: 7c76bc29-a754-4389-b0ab-f6b441018298
-ms.openlocfilehash: 1052ab7d7c6fd948f59c5956b918fbfd01899a1a
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: d16d8fee58f4480bc83da884caf0ff15981b09af
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69608679"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168621"
 ---
 # <a name="contextual-keywords-c-reference"></a>上下文关键字（C# 参考）
 
@@ -20,7 +20,7 @@ ms.locfileid: "69608679"
 |-------------|-----------------|  
 |[add](./add.md)|定义一个自定义事件访问器，客户端代码订阅事件时会调用该访问器。|  
 |[async](./async.md)|指示修改后的方法、lambda 表达式或匿名方法是异步的。|  
-|[await](./await.md)|挂起异步方法，直到等待的任务完成。|  
+|[await](../operators/await.md)|挂起异步方法，直到等待的任务完成。|  
 |[动态](./dynamic.md)|定义一个引用类型，实现发生绕过编译时类型检查的操作。|  
 |[get](./get.md)|为属性或索引器定义访问器方法。|  
 |[global](../operators/namespace-alias-qualifier.md)|未以其他方式命名的全局命名空间的别名。|  

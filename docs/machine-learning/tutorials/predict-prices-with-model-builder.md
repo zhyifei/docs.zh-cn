@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 07/15/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 4471e4feffb23b7f256ada2116444aaa7899e209
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 1bdbe31e16408da2d7dfe17941c90a022f3d8c32
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69611455"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70107145"
 ---
 # <a name="predict-prices-using-regression-with-model-builder"></a>将回归与模型生成器配合使用以预测价格
 
@@ -21,12 +21,12 @@ ms.locfileid: "69611455"
 
 在本教程中，你将了解：
 > [!div class="checklist"]
-> * 准备和了解数据
-> * 选择方案
-> * 加载数据
-> * 定型模型
-> * 评估模型
-> * 使用预测模型
+> - 准备和了解数据
+> - 选择方案
+> - 加载数据
+> - 定型模型
+> - 评估模型
+> - 使用预测模型
 
 > [!NOTE]
 > 模型生成器当前为预览版。
@@ -59,13 +59,13 @@ ms.locfileid: "69611455"
 
     提供的数据集包含以下列：
 
-    * **vendor_id：** 出租车供应商的 ID 是一项特征。
-    * **rate_code：** 出租车行程的费率类型是一项特征。
-    * **passenger_count：** 行程中的乘客人数是一项特征。
-    * **trip_time_in_secs：** 这次行程所花的时间。
-    * **trip_distance：** 行程距离是一项特征。
-    * **payment_type：** 付款方式（现金或信用卡）是一项特征。
-    * **fare_amount：** 支付的总出租车费用是一个标签。
+    - **vendor_id：** 出租车供应商的 ID 是一项特征。
+    - **rate_code：** 出租车行程的费率类型是一项特征。
+    - **passenger_count：** 行程中的乘客人数是一项特征。
+    - **trip_time_in_secs：** 这次行程所花的时间。
+    - **trip_distance：** 行程距离是一项特征。
+    - **payment_type：** 付款方式（现金或信用卡）是一项特征。
+    - **fare_amount：** 支付的总出租车费用是一个标签。
 
 `label` 是要预测的列。 在执行回归任务时，目标是预测一个数字值。 在此价格预测方案中，要预测的是出租车的乘车费用。 所以“fare_amount”是标签  。 标识的 `features` 是为模型提供的用来预测 `label` 的输入。 在这种情况下，剩余的列都用作特征或输入来预测车费金额。
 
@@ -190,12 +190,12 @@ ms.locfileid: "69611455"
 
 在本教程中，你将了解：
 > [!div class="checklist"]
-> * 准备和了解数据
-> * 选择方案
-> * 加载数据
-> * 定型模型
-> * 评估模型
-> * 使用预测模型
+> - 准备和了解数据
+> - 选择方案
+> - 加载数据
+> - 定型模型
+> - 评估模型
+> - 使用预测模型
 
 ### <a name="additional-resources"></a>其他资源
 

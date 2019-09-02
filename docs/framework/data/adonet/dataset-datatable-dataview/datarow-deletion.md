@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c34f531d-4b9b-4071-b2d7-342c402aa586
-ms.openlocfilehash: 7c80294c4bc879e6a1df4c9d1170eef14b8b83de
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 46109ee1781b8b509df87b4203c51a55b9f596ae
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69915811"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205104"
 ---
 # <a name="datarow-deletion"></a>DataRow 删除
 可以使用两种方法<xref:System.Data.DataRow> <xref:System.Data.DataTable>从对象中删除对象: <xref:System.Data.DataRowCollection>对象的**Remove** <xref:System.Data.DataRow.Delete%2A>方法和**DataRow**对象的方法。 此方法从**DataRowCollection**中删除**DataRow** , 而方法仅<xref:System.Data.DataRow.Delete%2A>将行标记为要删除。 <xref:System.Data.DataRowCollection.Remove%2A> 当应用程序调用**AcceptChanges**方法时, 将发生实际的删除。 通过使用 <xref:System.Data.DataRow.Delete%2A>，您可以在实际删除行之前，先以编程方式来检查哪些行已标记为删除。 如果将行标记为删除，则该行的 <xref:System.Data.DataRow.RowState%2A> 属性会设置为 <xref:System.Data.DataRow.Delete%2A>。  
@@ -49,5 +49,5 @@ workRow.Delete();
 - <xref:System.Data.DataRow>
 - <xref:System.Data.DataRowCollection>
 - <xref:System.Data.DataTable>
-- [操作数据表中的数据](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
+- [操作数据表中的数据](manipulating-data-in-a-datatable.md)
 - [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

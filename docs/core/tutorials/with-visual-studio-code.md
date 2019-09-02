@@ -4,12 +4,12 @@ description: 了解如何使用 Visual Studio Code 创建和调试首个 C# .NET
 author: kendrahavens
 ms.date: 12/05/2018
 ms.custom: seodec18
-ms.openlocfilehash: 1268a943d7cbf1033531a6c51f42c6fd672eaed3
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 910545a99f9d014ae572fbe95c93cdb44a69db99
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67401840"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105108"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>C# 和 Visual Studio Code 入门
 
@@ -27,22 +27,22 @@ ms.locfileid: "67401840"
 
 1. 打开项目：
 
-    * 打开 Visual Studio Code。
-    * 依次单击左侧菜单上的“资源管理器”图标和 **“打开文件夹”** 。
-    * 从主菜单中选择“文件” > “打开文件夹”，打开要在其中放置 C# 项目的文件夹，然后单击“选择文件夹”    。 在我们的示例中，为项目创建名为“HelloWorld”的文件夹  。
+    - 打开 Visual Studio Code。
+    - 依次单击左侧菜单上的“资源管理器”图标和 **“打开文件夹”** 。
+    - 从主菜单中选择“文件” > “打开文件夹”，打开要在其中放置 C# 项目的文件夹，然后单击“选择文件夹”    。 在我们的示例中，为项目创建名为“HelloWorld”的文件夹  。
 
       ![Visual Studio Code“打开文件夹”](media/with-visual-studio-code/vs-code-open-folder.png)
 
 2. 初始化 C# 项目：
-    * 通过从主菜单中选择“视图”   > “集成终端”  ，从 Visual Studio Code 中打开集成终端。
-    * 在终端窗口中，键入“`dotnet new console`”。
-    * 此命令在已编写“Hello World”简单程序的文件夹中创建 `Program.cs` 文件，以及 `HelloWorld.csproj` C# 项目文件。
+    - 通过从主菜单中选择“视图”   > “集成终端”  ，从 Visual Studio Code 中打开集成终端。
+    - 在终端窗口中，键入“`dotnet new console`”。
+    - 此命令在已编写“Hello World”简单程序的文件夹中创建 `Program.cs` 文件，以及 `HelloWorld.csproj` C# 项目文件。
 
       ![dotnet new 命令](media/with-visual-studio-code/dotnet-new-command.png)
 
 3. 解析生成资产：
 
-    * 对于 .NET Core 1.x  ，键入 `dotnet restore`。 运行 `dotnet restore` 后，便有权访问生成项目所需的 .NET Core 包。
+    - 对于 .NET Core 1.x  ，键入 `dotnet restore`。 运行 `dotnet restore` 后，便有权访问生成项目所需的 .NET Core 包。
 
       ![dotnet restore 命令](media/with-visual-studio-code/dotnet-restore-command.png)
 
@@ -50,7 +50,7 @@ ms.locfileid: "67401840"
 
 4. 运行“Hello World”程序：
 
-    * 键入 `dotnet run`。
+    - 键入 `dotnet run`。
 
       ![dotnet run 命令](media/with-visual-studio-code/dotnet-run-command.png)
 
@@ -79,7 +79,7 @@ ms.locfileid: "67401840"
     ![设置断点](media/with-visual-studio-code/set-breakpoint-vs-code.png)
 
 6. 要开始调试，请选择 <kbd>F5</kbd> 或绿色箭头。 在到达你在上一步中设置的断点时，调试器会停止执行程序。
-    * 调试时，可以在左上角的窗格中查看局部变量，也可以使用调试控制台进行查看。
+    - 调试时，可以在左上角的窗格中查看局部变量，也可以使用调试控制台进行查看。
 
 7. 选择最上面的蓝色箭头以继续调试，或选择最上面的红色方块以停止调试。
 

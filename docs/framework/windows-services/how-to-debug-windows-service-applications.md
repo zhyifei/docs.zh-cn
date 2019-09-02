@@ -9,18 +9,18 @@ helpviewer_keywords:
 - services, debugging
 ms.assetid: 63ab0800-0f05-4f1e-88e6-94c73fd920a2
 author: ghogen
-ms.openlocfilehash: 71b2b1d32c06afca4abd89df4f6449dacb32046c
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 74f834261d464430547ba3e1113db0ea780f593e
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988525"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044445"
 ---
 # <a name="how-to-debug-windows-service-applications"></a>如何：调试 Windows 服务应用程序
 必须从服务控制管理器的上下文中而不是 Visual Studio 中运行服务。 因此，调试服务不像调试其他 Visual Studio 应用程序类型一样简单。 要调试服务，必须启动该服务，然后将调试器附加到该服务正在其中运行的进程中。 然后你可以使用所有 Visual Studio 的标准调试功能来调试你的应用程序。  
   
 > [!CAUTION]
->  除非你知道该进程是什么进程并了解进行附加和可能终止该进程的后果，否则你不应该附加到进程。 例如，如果你附加到 WinLogon 进程然后停止调试，系统将停止，因为系统没有 WinLogon 无法运行。  
+> 除非你知道该进程是什么进程并了解进行附加和可能终止该进程的后果，否则你不应该附加到进程。 例如，如果你附加到 WinLogon 进程然后停止调试，系统将停止，因为系统没有 WinLogon 无法运行。  
   
  你仅可将调试器附加到正在运行的服务。 附加过程会中断服务的当前运行；它实际不会停止或暂停服务的处理。 也就是说，如果当你开始调试时你的服务正在运行，在你调试它时它在技术上仍处于启动状态，但是它的处理已经挂起。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "69988525"
 8. 在“可用进程”  部分,为服务选择进程，然后选择“附加”  。  
   
     > [!TIP]
-    >  该进程的名称将与你的服务的可执行文件相同。  
+    > 该进程的名称将与你的服务的可执行文件相同。  
   
      出现 **“附加到进程”** 对话框。  
   

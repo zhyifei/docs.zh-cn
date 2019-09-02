@@ -110,9 +110,9 @@
             - name: 正则表达式示例
               href: regular-expression-examples.md
               items:
-                - name: '示例：扫描 HREF'
+                - name: 示例：扫描 HREF
                   href: regular-expression-example-scanning-for-hrefs.md
-                - name: '示例：更改日期格式'
+                - name: 示例：更改日期格式
                   href: regular-expression-example-changing-date-formats.md
                 - name: 如何：从 URL 中提取协议和端口号
                   href: how-to-extract-a-protocol-and-port-number-from-a-url.md

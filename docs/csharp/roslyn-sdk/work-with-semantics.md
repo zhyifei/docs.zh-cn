@@ -3,12 +3,12 @@ title: 使用 .NET Compiler Platform SDK 语义模型
 description: 此概述介绍了用于理解和操作代码的语义节点的类型。
 ms.date: 10/15/2017
 ms.custom: mvc
-ms.openlocfilehash: cf34e2ab9688325f58cb54755db4142a883fca77
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c594447bb553f488d60fe83900e2f141608b570f
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357483"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105669"
 ---
 # <a name="work-with-semantics"></a>使用语义
 
@@ -23,7 +23,7 @@ ms.locfileid: "33357483"
 
 源代码中还表示了程序元素，并且程序也可引用以前编译的库，这些库打包在程序集文件中。 尽管没有任何可用于程序集的源代码（因此没有任何可用于程序集的语法节点或语法树），程序仍可引用其中的元素。
 
-对于这些任务，需要语义模型。
+对于这些任务，需要语义模型  。
 
 除了源代码的语法模型外，语义模型还封装了语言规则，提供了一种将标识符与正在引用的正确程序元素正确匹配的简单办法。
 
@@ -51,8 +51,8 @@ ms.locfileid: "33357483"
 
 语义模型表示单个源文件的所有语义信息。 可使用语义模型发现以下内容： 
 
-* 在源中特定位置引用的符号。
-* 任何表达式的结果类型。
-* 所有诊断（错误和警告）。
-* 变量流入和流出源区域的方式。
-* 更多推理问题的答案。
+- 在源中特定位置引用的符号。
+- 任何表达式的结果类型。
+- 所有诊断（错误和警告）。
+- 变量流入和流出源区域的方式。
+- 更多推理问题的答案。

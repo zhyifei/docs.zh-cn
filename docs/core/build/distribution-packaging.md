@@ -4,19 +4,19 @@ description: 了解如何为 .NET Core 打包、命名并进行版本控制以�
 author: tmds
 ms.date: 03/02/2018
 ms.custom: seodec18
-ms.openlocfilehash: b961d84053dc41e75e002c8c12419fdef99ded4b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5d23147c8a38fbeea9e88c0a18e1f220e854fec1
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64585258"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105418"
 ---
 # <a name="net-core-distribution-packaging"></a>.NET Core 分发打包
 
 由于 .NET Core 现已可用于更多平台，因此了解如何为其打包、命名并进行版本控制将很有用。 这样，无论用户选择在哪里运行 .NET，包维护人员均可以帮助确保获得一致的体验。 本文对以下用户非常有用：
 
-* 尝试从源生成 .NET Core。
-* 想要更改 .NET Core CLI，但更改可能会影响生成的布局或包。
+- 尝试从源生成 .NET Core。
+- 想要更改 .NET Core CLI，但更改可能会影响生成的布局或包。
 
 ## <a name="disk-layout"></a>磁盘布局
 
@@ -57,7 +57,7 @@ ms.locfileid: "64585258"
 
 - (4) **sdk/NuGetFallbackFolder** 包含 SDK 在还原操作期间使用的 NuGet 包的缓存，例如在运行 `dotnet restore` 或 `dotnet build /t:Restore` 时。
 
-“共享”文件夹包含框架。 共享框架提供一组位于中心位置的库，从而让不同的应用程序使用。
+“共享”  文件夹包含框架。 共享框架提供一组位于中心位置的库，从而让不同的应用程序使用。
 
 - (5) **shared/Microsoft.NETCore.App/\<runtime version>** 此框架包含.NET Core 运行时和支持托管库。
 
@@ -119,7 +119,7 @@ SDK 版本采用相同的 `[major].[minor]`，并有一个独立的 `[patch]`，
 | dotnet-host-fxr                                | dotnet-host-fxr          | (2)              | host:\<runtime version>+                                  |
 | dotnet-host                                    | dotnet-host              | (1),(8),(9),(10) |                                                           |
 
-除了使用修补程序包，还可以使用包管理器将包固定为特定版本。 要避免影响其他应用程序/用户，例如可能会在容器中生成并部署的应用程序。
+除了使用修补程序包，还可以使用包管理器将包固定  为特定版本。 要避免影响其他应用程序/用户，例如可能会在容器中生成并部署的应用程序。
 
 ## <a name="building-packages"></a>生成包
 

@@ -4,12 +4,12 @@ description: 介绍如何创建全局工具。 全局工具是一个通过 .NET 
 author: Thraka
 ms.author: adegeo
 ms.date: 08/22/2018
-ms.openlocfilehash: 3d0a64d0473f51d73892cd40633e2982c1130469
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: f60e26d14e89b6b7c34b32bf9a114fe4ad691981
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612662"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70202765"
 ---
 # <a name="create-a-net-core-global-tool-using-the-net-core-cli"></a>使用 .NET Core CLI 创建 .NET Core 全局工具
 
@@ -174,7 +174,7 @@ dotnet tool install --global --add-source ./nupkg botsay
 
 如果安装成功，会出现一条消息，显示用于调用工具的命令以及所安装的版本，类似于以下示例：
 
-```
+```output
 You can invoke the tool using the following command: botsay
 Tool 'botsay' (version '1.0.0') was successfully installed.
 ```

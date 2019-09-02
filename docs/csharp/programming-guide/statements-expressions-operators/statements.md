@@ -6,12 +6,12 @@ helpviewer_keywords:
 - statements [C#], about statements
 - C# language, statements
 ms.assetid: 901bcde7-87de-4e15-833c-f9cfd40c8ce3
-ms.openlocfilehash: 0ec741d085ca52d52999d2e10cf5f687cc885219
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2c50d9e8db2668f2138653858e42b8ed07d3e1e9
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69921796"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168950"
 ---
 # <a name="statements-c-programming-guide"></a>语句（C# 编程指南）
 程序执行的操作采用语句表达。 常见操作包括声明变量、赋值、调用方法、循环访问集合，以及根据给定条件分支到一个或另一个代码块。 语句在程序中的执行顺序称为“控制流”或“执行流”。 根据程序对运行时所收到的输入的响应，在程序每次运行时控制流可能有所不同。  
@@ -32,7 +32,7 @@ ms.locfileid: "69921796"
 |跳转语句|跳转语句将控制转移给另一代码段。 有关详细信息，请参阅下列主题：<br /><br /> [break](../../language-reference/keywords/break.md)、[continue](../../language-reference/keywords/continue.md)、[default](../../language-reference/keywords/switch.md)、[goto](../../language-reference/keywords/goto.md)、[return](../../language-reference/keywords/return.md)、[yield](../../language-reference/keywords/yield.md)|  
 |异常处理语句|异常处理语句用于从运行时发生的异常情况正常恢复。 有关详细信息，请参阅下列主题：<br /><br /> [throw](../../language-reference/keywords/throw.md)、[try-catch](../../language-reference/keywords/try-catch.md)、[try-finally](../../language-reference/keywords/try-finally.md)、[try-catch-finally](../../language-reference/keywords/try-catch-finally.md)|  
 |[Checked 和 unchecked](../../language-reference/keywords/checked-and-unchecked.md)|Checked 和 unchecked 语句用于指定将结果存储在变量中、但该变量过小而不能容纳结果值时，是否允许数值运算导致溢出。 有关详细信息，请参阅 [checked](../../language-reference/keywords/checked.md) 和 [unchecked](../../language-reference/keywords/unchecked.md)。|  
-|`await` 语句|如果用 [async](../../language-reference/keywords/async.md) 修饰符标记方法，则可以使用该方法中的 [await](../../language-reference/keywords/await.md) 运算符。 在控制到达异步方法的 `await` 表达式时，控制将返回到调用方，该方法中的进程将挂起，直到等待的任务完成为止。 任务完成后，可以在方法中恢复执行。<br /><br /> 有关简单示例，请参阅[方法](../classes-and-structs/methods.md)的“异步方法”一节。 有关详细信息，请参阅 [async 和 await 的异步编程](../concepts/async/index.md)。|  
+|`await` 语句|如果用 [async](../../language-reference/keywords/async.md) 修饰符标记方法，则可以使用该方法中的 [await](../../language-reference/operators/await.md) 运算符。 在控制到达异步方法的 `await` 表达式时，控制将返回到调用方，该方法中的进程将挂起，直到等待的任务完成为止。 任务完成后，可以在方法中恢复执行。<br /><br /> 有关简单示例，请参阅[方法](../classes-and-structs/methods.md)的“异步方法”一节。 有关详细信息，请参阅 [async 和 await 的异步编程](../concepts/async/index.md)。|  
 |`yield return` 语句|迭代器对集合执行自定义迭代，如列表或数组。 迭代器使用 [yield return](../../language-reference/keywords/yield.md) 语句返回元素，每次返回一个。 到达 `yield return` 语句时，会记住当前在代码中的位置。 下次调用迭代器时，将从该位置重新开始执行。<br /><br /> 有关更多信息，请参见 [迭代器](../concepts/iterators.md)。|  
 |`fixed` 语句|fixed 语句禁止垃圾回收器重定位可移动的变量。 有关详细信息，请参阅 [fixed](../../language-reference/keywords/fixed-statement.md)。|  
 |`lock` 语句|lock 语句用于限制一次仅允许一个线程访问代码块。 有关详细信息，请参阅 [lock](../../language-reference/keywords/lock-statement.md)。|  

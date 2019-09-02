@@ -2,15 +2,15 @@
 title: 如何：使用 Async 和 Await 并行发出多个 Web 请求 (C#)
 ms.date: 07/20/2015
 ms.assetid: 19745899-f97a-4499-a7c7-e813d1447580
-ms.openlocfilehash: edba5ed5026c16ca1f1b09e8504ecfdf408ae5ef
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 06b70f5f3b2e1f3e7e423b16463f0b6b613f62c2
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69922007"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168383"
 ---
 # <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-c"></a>如何：使用 Async 和 Await 并行发出多个 Web 请求 (C#)
-在 async 方法中，任务在创建后即启动。 在任务完成前处理无法继续的方法中将 [await](../../../language-reference/keywords/await.md) 运算符应用于任务。 通常任务被创建后即等待，如下面的示例所示。  
+在 async 方法中，任务在创建后即启动。 在任务完成前处理无法继续的方法中将 [await](../../../language-reference/operators/await.md) 运算符应用于任务。 通常任务被创建后即等待，如下面的示例所示。  
   
 ```csharp  
 var result = await someWebAccessMethodAsync(url);  

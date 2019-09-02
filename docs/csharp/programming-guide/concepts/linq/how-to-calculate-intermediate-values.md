@@ -2,12 +2,12 @@
 title: 如何：计算中间值 (C#)
 ms.date: 07/20/2015
 ms.assetid: 7fd3001f-f8f9-4bce-879f-d4c7af8a04fe
-ms.openlocfilehash: 7b2dfc4e26fc7648cbd93b1e590079e4b105ad43
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: fe3f992e85b3fb508fced943e1428a4fb6ae2490
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69594130"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205379"
 ---
 # <a name="how-to-calculate-intermediate-values-c"></a>如何：计算中间值 (C#)
 本示例演示如何计算可用于进行排序、筛选和选择的中间值。  
@@ -31,7 +31,7 @@ foreach (decimal ex in extensions)
   
  此代码生成以下输出：  
   
-```  
+```output  
 55.92  
 73.50  
 89.99  
@@ -59,7 +59,7 @@ foreach (decimal ex in extensions)
   
  此代码生成以下输出：  
   
-```  
+```output  
 55.92  
 73.50  
 89.99  

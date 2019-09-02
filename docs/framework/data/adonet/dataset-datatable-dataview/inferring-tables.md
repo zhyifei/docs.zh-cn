@@ -2,15 +2,15 @@
 title: 推断表
 ms.date: 03/30/2017
 ms.assetid: 74a288d4-b8e9-4f1a-b2cd-10df92c1ed1f
-ms.openlocfilehash: 174d305688c7090c163df60a11e233aea24b8f79
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 84cee828f2d3c918a12e449da5b01a3d72d86333
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64587364"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203516"
 ---
 # <a name="inferring-tables"></a>推断表
-当从 XML 文档推断 <xref:System.Data.DataSet> 的架构时，ADO.NET 首先会确定哪些 XML 元素表示表。 以下 XML 结构生成的表**数据集**架构：  
+当从 XML 文档推断 <xref:System.Data.DataSet> 的架构时，ADO.NET 首先会确定哪些 XML 元素表示表。 以下 XML 结构将为**数据集**架构生成一个表:  
   
 - 具有属性的元素  
   
@@ -30,9 +30,9 @@ ms.locfileid: "64587364"
   
  推断过程将生成名为“Element1”的表。  
   
- **数据集：** DocumentElement  
+ **集会**DocumentElement  
   
- **表：** Element1  
+ **数据表**Element1  
   
 |attr1|Element1_Text|  
 |-----------|--------------------|  
@@ -52,15 +52,15 @@ ms.locfileid: "64587364"
   
  推断过程将生成名为“Element1”的表。  
   
- **数据集：** DocumentElement  
+ **集会**DocumentElement  
   
- **表：** Element1  
+ **数据表**Element1  
   
 |ChildElement1|  
 |-------------------|  
 |Text1|  
   
- 如果文档元素（即根元素）具有将被推断为列的属性或子元素，将生成推断表。 如果文档元素不具有属性和将被推断为列没有子元素，该元素被推断为**数据集**。 例如，考虑以下 XML：  
+ 如果文档元素（即根元素）具有将被推断为列的属性或子元素，将生成推断表。 如果文档元素没有属性, 并且没有任何子元素将被推断为列, 则该元素将被推断为**数据集**。 例如，考虑以下 XML：  
   
 ```xml  
 <DocumentElement>  
@@ -71,9 +71,9 @@ ms.locfileid: "64587364"
   
  推断过程将生成名为“DocumentElement”的表。  
   
- **数据集：** NewDataSet  
+ **集会**NewDataSet  
   
- **表：** DocumentElement  
+ **数据表**DocumentElement  
   
 |Element1|Element2|  
 |--------------|--------------|  
@@ -87,11 +87,11 @@ ms.locfileid: "64587364"
 </DocumentElement>  
 ```  
   
- 推断过程将生成**数据集**名为"DocumentElement"的包含一个名为"Element1"。  
+ 推理过程将生成一个名为 "DocumentElement" 的**数据集**, 其中包含一个名为 "Element1" 的表。  
   
- **数据集：** DocumentElement  
+ **集会**DocumentElement  
   
- **表：** Element1  
+ **数据表**Element1  
   
 |attr1|attr2|  
 |-----------|-----------|  
@@ -109,9 +109,9 @@ ms.locfileid: "64587364"
   
  推断过程将生成名为“Element1”的表。  
   
- **数据集：** DocumentElement  
+ **集会**DocumentElement  
   
- **表：** Element1  
+ **数据表**Element1  
   
 |Element1_Text|  
 |--------------------|  
@@ -120,9 +120,9 @@ ms.locfileid: "64587364"
   
 ## <a name="see-also"></a>请参阅
 
-- [从 XML 推断数据集关系结构](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)
-- [从 XML 加载数据集](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)
-- [从 XML 加载数据集构架信息](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)
-- [在数据集中使用 XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
-- [数据集、数据表和数据视图](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [从 XML 推断数据集关系结构](inferring-dataset-relational-structure-from-xml.md)
+- [从 XML 加载数据集](loading-a-dataset-from-xml.md)
+- [从 XML 加载数据集构架信息](loading-dataset-schema-information-from-xml.md)
+- [在数据集中使用 XML](using-xml-in-a-dataset.md)
+- [数据集、数据表和数据视图](index.md)
 - [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

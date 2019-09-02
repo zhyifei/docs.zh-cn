@@ -3,12 +3,12 @@ title: 生成和使用异步流
 description: 本高级教程演示了生成和使用异步流提供一种更自然的方式来处理可能以异步方式生成的数据序列的场景。
 ms.date: 02/10/2019
 ms.custom: mvc
-ms.openlocfilehash: 0fa7c778ca9ce0f0124fcc520dd4de65f2f92ea8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: cd1159c139f2c885eacf55b8577bea9e79bf0d7a
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59308544"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105857"
 ---
 # <a name="tutorial-generate-and-consume-async-streams-using-c-80-and-net-core-30"></a>教程：使用 C# 8.0 和 .NET Core 3.0 生成和使用异步流
 
@@ -17,9 +17,9 @@ C# 8.0 引入了**异步流**，在能够以异步方式检索或生成数据流
 在本教程中，你将了解：
 
 > [!div class="checklist"]
-> * 创建以异步方式生成数据元素序列的数据源。
-> * 以异步方式使用该数据源。
-> * 识别新接口和数据源何时优先于先前的同步数据序列。
+> - 创建以异步方式生成数据元素序列的数据源。
+> - 以异步方式使用该数据源。
+> - 识别新接口和数据源何时优先于先前的同步数据序列。
 
 ## <a name="prerequisites"></a>系统必备
 

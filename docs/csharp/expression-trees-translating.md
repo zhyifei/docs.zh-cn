@@ -3,12 +3,12 @@ title: 转换表达式树
 description: 介绍如何访问表达式树中的每个节点，同时生成该表达式树的已修改副本。
 ms.date: 06/20/2016
 ms.assetid: b453c591-acc6-4e08-8175-97e5bc65958e
-ms.openlocfilehash: 4c14837c1d92845991d8ea9990b77eb9052757d8
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: b3c575876b6d53e9db366f59ad45aac714923c45
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57490068"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70202949"
 ---
 # <a name="translating-expression-trees"></a>转换表达式树
 
@@ -124,7 +124,7 @@ private static int Aggregate(Expression exp)
 
 在同一表达式中运行该版本将生成以下输出：
 
-```
+```output
 10
 Found Addition Expression
 Computing Left node
@@ -161,7 +161,7 @@ Expression<Func<int> sum1 = () => 1 + (2 + (3 + 4));
 
 下面是通过检查此表达式得到的输出：
 
-```
+```output
 Found Addition Expression
 Computing Left node
 Found Constant: 1

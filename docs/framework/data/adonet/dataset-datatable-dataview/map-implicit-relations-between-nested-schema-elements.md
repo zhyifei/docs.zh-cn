@@ -2,27 +2,27 @@
 title: 映射嵌套架构元素之间的隐式关系
 ms.date: 03/30/2017
 ms.assetid: 6b25002a-352e-4d9b-bae3-15129458a355
-ms.openlocfilehash: 6fcb0b9bb7c947359c2334d3d116f5317f84af83
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e9ea85db98a577991e06e0239a0738a2ca5bada6
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586817"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203477"
 ---
 # <a name="map-implicit-relations-between-nested-schema-elements"></a>映射嵌套架构元素之间的隐式关系
 XML 架构定义语言 (XSD) 架构可以具有相互嵌套的复杂类型。 在这种情况下，映射过程将应用默认映射并在 <xref:System.Data.DataSet> 中创建以下内容：  
   
 - 为每个复杂类型（父和子）创建一个表。  
   
-- 一个附加主键列每个表定义的父级上不存在任何唯一约束，如果名为*TableName*id （_i) 其中*TableName*是父表的名称。  
+- 如果父代中不存在唯一约束, 则每个表定义都有一个名为*tablename*_Id 的附加主键列, 其中*TableName*是父表的名称。  
   
-- 为主键将附加列标识父表上的主键约束 (通过设置**IsPrimaryKey**属性设置为**True**)。 该约束以 Constraint\# 的形式来命名，其中 \# 为 1、2、3。 例如，第一个约束的默认名称为 Constraint1。  
+- 父表上的主键约束, 将附加列标识为主键 (通过将**IsPrimaryKey**属性设置为**True**)。 该约束以 Constraint\# 的形式来命名，其中 \# 为 1、2、3。 例如，第一个约束的默认名称为 Constraint1。  
   
-- 在子表上创建外键约束，该约束将附加列标识为引用父表主键的外键。 命名约束*ParentTable_ChildTable*其中*ParentTable*是父表的名称并*ChildTable*是子表的名称。  
+- 在子表上创建外键约束，该约束将附加列标识为引用父表主键的外键。 约束名为*ParentTable_ChildTable* , 其中*ParentTable*是父表的名称, *ChildTable*是子表的名称。  
   
 - 在父表和子表之间创建数据关系。  
   
- 下面的示例演示一个架构位置**OrderDetail**是子元素的**顺序**。  
+ 下面的示例显示一个架构, 其中**OrderDetail**是**Order**的子元素。  
   
 ```xml  
 <xs:schema id="MyDataSet" xmlns=""   
@@ -54,16 +54,16 @@ XML 架构定义语言 (XSD) 架构可以具有相互嵌套的复杂类型。 �
 </xs:schema>  
 ```  
   
- XML 架构映射过程中创建以下**数据集**:  
+ XML 架构映射过程会在**数据集中**创建以下内容:  
   
-- **顺序**和一个**OrderDetail**表。  
+- **Order**和**OrderDetail**表。  
   
     ```  
     Order(OrderNumber, EmpNumber, Order_Id)  
     OrderDetail(OrderNo, ItemNo, Order_Id)  
     ```  
   
-- Unique 约束**顺序**表。 请注意， **IsPrimaryKey**属性设置为**True**。  
+- **Order**表的唯一约束。 请注意, **IsPrimaryKey**属性设置为**True**。  
   
     ```  
     ConstraintName: Constraint1  
@@ -73,7 +73,7 @@ XML 架构定义语言 (XSD) 架构可以具有相互嵌套的复杂类型。 �
     IsPrimaryKey: True  
     ```  
   
-- 上的外键约束**OrderDetail**表。  
+- **OrderDetail**表的外键约束。  
   
     ```  
     ConstraintName: Order_OrderDetail  
@@ -84,7 +84,7 @@ XML 架构定义语言 (XSD) 架构可以具有相互嵌套的复杂类型。 �
     RelatedColumns: Order_Id   
     ```  
   
-- 之间的关系**顺序**并**OrderDetail**表。 **嵌套**为此关系的属性设置为**True**因为**顺序**并**OrderDetail**元素都嵌套在架构.  
+- **Order**表和**OrderDetail**表之间的关系。 此关系的**嵌套**属性设置为**True** , 因为**Order**和**OrderDetail**元素嵌套在架构中。  
   
     ```  
     ParentTable: Order  
@@ -99,6 +99,6 @@ XML 架构定义语言 (XSD) 架构可以具有相互嵌套的复杂类型。 �
   
 ## <a name="see-also"></a>请参阅
 
-- [从 XML 架构生成数据集关系 (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)
-- [将 XML 架构 (XSD) 约束映射到数据集约束](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
+- [从 XML 架构生成数据集关系 (XSD)](generating-dataset-relations-from-xml-schema-xsd.md)
+- [将 XML 架构 (XSD) 约束映射到数据集约束](mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
 - [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

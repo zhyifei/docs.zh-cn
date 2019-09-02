@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e2d1a6fe-31f9-4b83-9728-06c406a3394e
-ms.openlocfilehash: bbcc666b99c2bade479e5ee51750b043c820845d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a8589b157bc2579a03d856b73802abc9a4b42855
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879900"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204075"
 ---
 # <a name="acceptchanges-and-rejectchanges"></a>AcceptChange 和 RejectChange
-在验证中的数据所做的更改的准确性后<xref:System.Data.DataTable>，可以接受使用的更改<xref:System.Data.DataRow.AcceptChanges%2A>方法<xref:System.Data.DataRow>， <xref:System.Data.DataTable>，或<xref:System.Data.DataSet>，它将设置**当前**行值为**原始**值，并将设置**RowState**属性设置为**Unchanged**。 接受或拒绝更改会清除所有**RowError**信息和集**HasErrors**属性设置为**false**。 接受或拒绝更改还可以影响在数据源中更新数据。 有关详细信息，请参阅[使用 Dataadapter 更新数据源](../../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)。  
+在<xref:System.Data.DataTable>验证对中的数据所做更改的准确性之后, 您可以<xref:System.Data.DataRow> <xref:System.Data.DataRow.AcceptChanges%2A>使用、 <xref:System.Data.DataTable>或<xref:System.Data.DataSet>的方法接受更改, 这会将**当前**行值设置为**原始**值并将**RowState**属性设置为**不变**。 接受或拒绝更改将清除所有**RowError**信息, 并将**HasErrors**属性设置为**false**。 接受或拒绝更改还可以影响在数据源中更新数据。 有关详细信息, 请参阅[用 Dataadapter 更新数据源](../updating-data-sources-with-dataadapters.md)。  
   
- 如果外键约束上存在**DataTable**，接受或拒绝使用更改**AcceptChanges**并**RejectChanges**传播到子行的**DataRow**根据**就**。 有关详细信息，请参阅[数据表约束](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md)。  
+ 如果**DataTable**中存在外键约束, 则使用**AcceptChanges**和**RejectChanges**接受或拒绝的更改会根据 **ForeignKeyConstraint. AcceptRejectRule**。 有关详细信息, 请参阅[DataTable 约束](datatable-constraints.md)。  
   
- 以下示例检查有错误的行，如果可以会解决错误，拒绝无法解决错误的行。 请注意，对于已解决的错误， **RowError**值将重置为空字符串，从而导致**HasErrors**属性设置为**false**。 当已解决或拒绝，但出现错误的所有行**AcceptChanges**调用以接受所有的更改的整个**DataTable**。  
+ 以下示例检查有错误的行，如果可以会解决错误，拒绝无法解决错误的行。 请注意, 对于已解决的错误, **RowError**值会重置为空字符串, 导致**HasErrors**属性设置为**false**。 在已解决或拒绝所有包含错误的行时, 将调用**AcceptChanges**来接受对整个**DataTable**的所有更改。  
   
 ```vb  
 If workTable.HasErrors Then  
@@ -61,5 +61,5 @@ workTable.AcceptChanges();
 - <xref:System.Data.DataRow>
 - <xref:System.Data.DataSet>
 - <xref:System.Data.DataTable>
-- [操作数据表中的数据](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
+- [操作数据表中的数据](manipulating-data-in-a-datatable.md)
 - [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

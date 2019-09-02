@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2d636496599d4419518ce53c956c83f6ae175aa8
-ms.sourcegitcommit: ced0cccf15adfd492f8196cb739f01dde52c9252
+ms.openlocfilehash: 4092d8694bdb896db1332bd73afae3f62bba36cf
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67135657"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105917"
 ---
 # <a name="packaging-and-deploying-resources-in-net-apps"></a>打包和部署 .NET 应用中的资源
 
@@ -141,7 +141,7 @@ ms.locfileid: "67135657"
 .NET Core 资源回退进程包含以下步骤：
 
 1. 运行时尝试加载请求的区域性的附属程序集。
-     * 检查当前正在执行程序集的目录，查找与请求的区域性匹配的子目录。 如果找到该子目录，它将搜索该子目录以找到请求的区域性的有效附属程序集并加载该程序集。
+     - 检查当前正在执行程序集的目录，查找与请求的区域性匹配的子目录。 如果找到该子目录，它将搜索该子目录以找到请求的区域性的有效附属程序集并加载该程序集。
 
        > [!NOTE]
        > 在具有区分大小写的文件系统（即 Linux 和 macOS）的操作系统上，区域性名称子目录搜索区分大小写。 子目录名称必须与 <xref:System.Globalization.CultureInfo.Name?displayProperty=nameWithType> 的大小写完全匹配（例如，`es` 或 `es-MX`）。
@@ -149,8 +149,8 @@ ms.locfileid: "67135657"
        > [!NOTE]
        > 如果程序员从 <xref:System.Runtime.Loader.AssemblyLoadContext> 派生了自定义程序集加载上下文，则情况会很复杂。 如果将正在执行程序集加载到自定义上下文中，则运行时会将附属程序集加载到自定义上下文中。 相关详细信息超出了本文档所涉及的范围。 请参阅<xref:System.Runtime.Loader.AssemblyLoadContext>。
 
-     * 如果未找到附属程序集，<xref:System.Runtime.Loader.AssemblyLoadContext> 引发 <xref:System.Runtime.Loader.AssemblyLoadContext.Resolving?displayProperty=nameWithType> 事件以指示找不到附属程序集。 如果选择对事件进行处理，事件处理程序可以加载引用并返回对附属程序集的引用。
-     * 如果仍未找到附属程序集，则 AssemblyLoadContext 会导致 AppDomain 触发 <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> 事件以指示找不到附属程序集。 如果选择对事件进行处理，事件处理程序可以加载引用并返回对附属程序集的引用。
+     - 如果未找到附属程序集，<xref:System.Runtime.Loader.AssemblyLoadContext> 引发 <xref:System.Runtime.Loader.AssemblyLoadContext.Resolving?displayProperty=nameWithType> 事件以指示找不到附属程序集。 如果选择对事件进行处理，事件处理程序可以加载引用并返回对附属程序集的引用。
+     - 如果仍未找到附属程序集，则 AssemblyLoadContext 会导致 AppDomain 触发 <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> 事件以指示找不到附属程序集。 如果选择对事件进行处理，事件处理程序可以加载引用并返回对附属程序集的引用。
 
 2. 如果找到附属程序集，则运行时将搜索请求的资源的附属程序集。 如果在程序集中找到该资源，则使用它。 如果找不到该资源，将继续搜索。
 

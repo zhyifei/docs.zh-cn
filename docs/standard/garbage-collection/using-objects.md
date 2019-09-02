@@ -12,20 +12,20 @@ helpviewer_keywords:
 ms.assetid: 81b2cdb5-c91a-4a31-9c83-eadc52da5cf0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 074b97f29946390170abe3c40d71d2ee2cb214ce
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 9f165ab5b79abbc2b5464f40a27a580d26af163a
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666479"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106944"
 ---
 # <a name="using-objects-that-implement-idisposable"></a>使用实现 IDisposable 的对象
 
 公共语言运行时的垃圾回收器回收托管对象使用的内存，而使用非托管资源的类型则实现 <xref:System.IDisposable> 接口，以允许回收分配给这些非托管资源的内存。 在使用完实现 <xref:System.IDisposable> 的对象后，应调用该对象的 <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> 实现。 可以通过两种方法执行此操作：  
   
-* 使用 C# `using` 语句或 Visual Basic `Using` 语句。  
+- 使用 C# `using` 语句或 Visual Basic `Using` 语句。  
   
-* 实现 `try/finally` 块。  
+- 实现 `try/finally` 块。  
 
 ## <a name="the-using-statement"></a>using 语句
 
@@ -49,9 +49,9 @@ C# 中的 `using` 语句和 Visual Basic 中的 `Using` 语句可以简化创建
 
 可以选择直接实现 `try/finally` 块，而不是将 `try/finally` 块包装在 `using` 语句中。 这可以是私有编码样式，或者你可能出于下列原因之一需要这样做：  
   
-* 包含 `catch` 块可处理 `try` 块中引发的任何异常。 否则，不会处理 `using` 语句引发的任何异常，`using` 块中引发的任何异常也是如此，前提是 `try/catch` 块不存在。  
+- 包含 `catch` 块可处理 `try` 块中引发的任何异常。 否则，不会处理 `using` 语句引发的任何异常，`using` 块中引发的任何异常也是如此，前提是 `try/catch` 块不存在。  
   
-* 实例化实现 <xref:System.IDisposable>（其范围对于声明它的块是非本地的）的对象。  
+- 实例化实现 <xref:System.IDisposable>（其范围对于声明它的块是非本地的）的对象。  
   
 下面的示例与上一示例类似，不同之处在于此示例使用 `try/catch/finally` 块实例化、使用和清理 <xref:System.IO.StreamReader> 对象，同时处理 <xref:System.IO.StreamReader> 构造函数及其 <xref:System.IO.StreamReader.ReadToEnd%2A> 方法抛出的任何异常。 请注意，`finally` 块中的代码检查实现 <xref:System.IDisposable> 的对象在其调用 `null` 方法之前不为 <xref:System.IDisposable.Dispose%2A>。 此操作失败会导致运行时发生 <xref:System.NullReferenceException> 异常。  
   

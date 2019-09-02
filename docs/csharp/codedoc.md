@@ -3,12 +3,12 @@ title: 使用 XML 注释来记录代码
 description: 了解如何使用 XML 文档注释来记录代码和在编译时生成 XML 文档文件。
 ms.date: 02/14/2017
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: 17a6beabf7e8a917c461dae4d92f1cfbb0d9de71
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: b6744921f4703f53a16b6bdadcfbf375c2fb3332
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633736"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70104776"
 ---
 # <a name="documenting-your-code-with-xml-comments"></a>使用 XML 注释来记录代码
 
@@ -32,7 +32,7 @@ XML 文档注释是一种特殊注释，添加在任何用户定义的类型或�
    <DocumentationFile>bin\Debug\netcoreapp2.1\App.xml</DocumentationFile>
    ```
 
-- 如果使用 Visual Studio 开发应用程序，右键单击项目并选择“属性”。 在属性对话框中，选择“生成”选项卡，然后选中“XML 文档文件”。 还可以更改编译器写入文件的位置。
+- 如果使用 Visual Studio 开发应用程序，右键单击项目并选择“属性”  。 在属性对话框中，选择“生成”  选项卡，然后选中“XML 文档文件”  。 还可以更改编译器写入文件的位置。
 
 - 如果是从命令行编译 .NET Framework 应用程序，编译时请添加 [/doc 编译器选项](language-reference/compiler-options/doc-compiler-option.md)。  
 
@@ -136,7 +136,7 @@ XML 文档注释使用三个正斜杠 (`///`) 和 XML 格式的注释正文。 �
 
 ## <a name="param"></a>\<param>
 
-使用 `<param>` 标记来描述方法的参数。 以下是关于双 `Add` 方法的示例：标记描述的参数在所需的 `name` 属性中指定。
+使用 `<param>` 标记来描述方法的参数。 以下是关于双 `Add` 方法的示例：标记描述的参数在所需的 `name` 属性中指定  。
 
 [!code-csharp[Param Tag](../../samples/snippets/csharp/concepts/codedoc/param-tag.cs)]
 
@@ -212,12 +212,12 @@ Sandcastle 等工具支持其他标记，如 [`<event>`](https://ewsoftware.gith
 
 出于多种原因，建议编制代码文档。 接下来将介绍一些最佳做法、常规使用方案，以及在 C# 代码中使用 XML 文档标记时的需知内容。
 
-* 为保持一致性，应编制所有公共可见类型及其成员的文档。 如果必须这么做，请完整全面地完成这一操作。
-* 还可使用 XML 注释编制私有成员的文档。 但这会公开库的内部（很可能是机密的）运作情况。
-* 但至少类型及其成员应具有 `<summary>` 标记，因为其内容是 IntelliSense 所需要的。
-* 应使用句号结尾的完整句子编写文档文本。
-* 完全支持部分类，并且该类型的文档信息将串联为单个条目。
-* 编译器验证 `<exception>`、`<include>`、`<param>`、`<see>`、`<seealso>` 和 `<typeparam>` 标记的语法。
+- 为保持一致性，应编制所有公共可见类型及其成员的文档。 如果必须这么做，请完整全面地完成这一操作。
+- 还可使用 XML 注释编制私有成员的文档。 但这会公开库的内部（很可能是机密的）运作情况。
+- 但至少类型及其成员应具有 `<summary>` 标记，因为其内容是 IntelliSense 所需要的。
+- 应使用句号结尾的完整句子编写文档文本。
+- 完全支持部分类，并且该类型的文档信息将串联为单个条目。
+- 编译器验证 `<exception>`、`<include>`、`<param>`、`<see>`、`<seealso>` 和 `<typeparam>` 标记的语法。
 - 编译器验证某些参数，这些参数包含文件路径和对代码其余部分的引用。
 
 ## <a name="see-also"></a>请参阅

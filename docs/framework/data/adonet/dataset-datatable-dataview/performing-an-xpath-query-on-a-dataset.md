@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7e828566-fffe-4d38-abb2-4d68fd73f663
-ms.openlocfilehash: 29d1e5ae494b2fff4e13886159bb937041152382
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 56d1d11240934036994a14e454cf1a1d8b95226a
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607888"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204535"
 ---
 # <a name="performing-an-xpath-query-on-a-dataset"></a>对数据集执行 XPath 查询
-同步之间的关系<xref:System.Data.DataSet>和<xref:System.Xml.XmlDataDocument>让你可以使用 XML 的访问的服务，例如 XML 路径语言 (XPath) 查询**XmlDataDocument** ，并且可以执行特定功能比访问更方便地**数据集**直接。 例如，而不是使用**选择**方法<xref:System.Data.DataTable>导航到其他表中的关系**数据集**，可以执行 XPath 查询**XmlDataDocument**与同步**数据集**，以获取 XML 元素的列表中的窗体<xref:System.Xml.XmlNodeList>。 中的节点**XmlNodeList**强制转换为<xref:System.Xml.XmlElement>节点，然后传递给**GetRowFromElement**方法**XmlDataDocument**，则返回匹配<xref:System.Data.DataRow>对中同步的表的行的引用**数据集**。  
+同步<xref:System.Data.DataSet>与<xref:System.Xml.XmlDataDocument>之间的关系使你可以使用 xml 服务 (例如 xml 路径语言 (XPath) 查询) 来访问**XmlDataDocument** , 并且可以更方便地执行某些功能。直接访问**数据集**。 例如, 您可以对与**数据**集同步的**XmlDataDocument**执行 XPath 查询, 而不是使用的**Select**方法<xref:System.Data.DataTable>将关系导航到**dataset**中的其他表, 以获取格式为的 XML 元素列表<xref:System.Xml.XmlNodeList>。 然后, 将**XmlNodeList**中的节点强制<xref:System.Xml.XmlElement>转换为节点, 并将其传递给**XmlDataDocument**的**GetRowFromElement**方法, 以返回对<xref:System.Data.DataRow>同步**中的表中的行的匹配引用数据集**。  
   
- 例如，以下代码示例执行“孙级”XPath 查询。 **数据集**将填充这三个表：**客户**，**订单**，和**OrderDetails**。 在示例中，父-子关系首次创建之间**客户**并**订单**表，以及**订单**和**OrderDetails**表。 然后，执行 XPath 查询以返回**XmlNodeList**的**客户**节点，孙级**OrderDetails**节点具有**ProductID**值为 43 的节点。 从本质上讲，该示例使用 XPath 查询来确定哪些客户订购的产品**ProductID**为 43。  
+ 例如，以下代码示例执行“孙级”XPath 查询。 **数据集**填充了三个表:**Customers**、 **Orders**和**OrderDetails**。 在此示例中, 首先在**Customers**表和**orders**表之间以及**orders**表和**OrderDetails**表之间创建父子关系。 然后, 执行 XPath 查询来返回**XmlNodeList**的**客户**节点, 其中孙**OrderDetails**节点的**ProductID**节点的值为43。 实质上, 该示例使用 XPath 查询来确定哪些客户订购了**ProductID**为43的产品。  
   
 ```vb  
 ' Assumes that connection is a valid SqlConnection.  
@@ -103,5 +103,5 @@ foreach (XmlNode xmlNode in nodeList)
   
 ## <a name="see-also"></a>请参阅
 
-- [数据集和 XmlDataDocument 同步](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)
+- [数据集和 XmlDataDocument 同步](dataset-and-xmldatadocument-synchronization.md)
 - [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

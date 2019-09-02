@@ -2,12 +2,12 @@
 title: 延迟执行示例 (C#)
 ms.date: 07/20/2015
 ms.assetid: 50f4fbac-81fe-4f26-aedf-506e21419b19
-ms.openlocfilehash: a934645d0d7ad807e1524031ca3f023f7b11c5b4
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 0816594ad016f19af4c97198160b4bafb9b4b8b4
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69594554"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204132"
 ---
 # <a name="deferred-execution-example-c"></a>延迟执行示例 (C#)
 本主题演示延迟执行和迟缓计算如何影响 LINQ to XML 查询的执行。  
@@ -46,7 +46,7 @@ class Program
   
  该示例产生下面的输出：  
   
-```  
+```output  
 ToUpper: source abc  
 Main: str ABC  
 ToUpper: source def  

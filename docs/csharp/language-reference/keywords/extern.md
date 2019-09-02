@@ -9,12 +9,12 @@ helpviewer_keywords:
 - DllImport attribute
 - extern keyword [C#]
 ms.assetid: 9c3f02c4-51b8-4d80-9cb2-f2b6e1ae15c7
-ms.openlocfilehash: edc513a31d348dc685ce70aa8e63577473e47d97
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 387ef707166705c4df501bd6740d438683aa2d69
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64755898"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203013"
 ---
 # <a name="extern-c-reference"></a>extern（C# 参考）
 
@@ -52,7 +52,7 @@ extern 关键字用于 C# 中时会比用于 C++ 中时受到更多的限制。 
     }
     ```
 
-2. 从 Visual Studio 安装目录打开 Visual Studio x64（或 x32）本机工具命令提示符窗口，并通过在命令提示符处键入“cl -LD cmdll.c”来编译 `cmdll.c` 文件。
+2. 从 Visual Studio 安装目录打开 Visual Studio x64（或 x32）本机工具命令提示符窗口，并通过在命令提示符处键入“cl -LD cmdll.c”来编译 `cmdll.c` 文件  。
 
 3. 在相同的目录中，创建以下 C# 文件并将其命名为 `cm.cs`：
 
@@ -74,13 +74,13 @@ extern 关键字用于 C# 中时会比用于 C++ 中时受到更多的限制。 
 
 4. 从 Visual Studio 安装目录打开一个 Visual Studio x64（或 x32）本机工具命令提示符窗口，并通过键入以下内容来编译 `cm.cs` 文件：
 
-    > “csc cm.cs”（针对 x64 命令提示符）或“csc -platform:x86 cm.cs”（针对 x32 命令提示符）
+    > “csc cm.cs”（针对 x64 命令提示符）或“csc -platform:x86 cm.cs”（针对 x32 命令提示符）  
 
     这将创建可执行文件 `cm.exe`。
 
 5. 运行 `cm.exe`。 `SampleMethod` 方法将值 5 传递到 DLL 文件，这将返回该值与 10 相乘后的结果。  该程序生成以下输出：
 
-    ```
+    ```output
     SampleMethod() returns 50.
     ```
 

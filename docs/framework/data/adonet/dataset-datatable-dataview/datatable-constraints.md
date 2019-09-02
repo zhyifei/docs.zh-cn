@@ -5,35 +5,35 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 27c9f2fd-f64d-4b4e-bbf6-1d24f47067cb
-ms.openlocfilehash: 254f486fa19d8af30759d9a9fd6642a1a40e82a2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 68b99e834428261d59c5fb27277b24eb0f6e77e4
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034354"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205048"
 ---
 # <a name="datatable-constraints"></a>数据表约束
-为了维护数据的完整性，可以使用约束来对 <xref:System.Data.DataTable> 中的数据施加限制。 约束是应用于某列或相关各列的自动规则，它决定了某行的值以某种方式更改时的操作过程。 强制执行约束时`System.Data.DataSet.EnforceConstraints`的属性<xref:System.Data.DataSet>是**true**。 有关显示如何设置 `EnforceConstraints` 属性的代码示例，请参见 <xref:System.Data.DataSet.EnforceConstraints%2A> 参考主题。  
+为了维护数据的完整性，可以使用约束来对 <xref:System.Data.DataTable> 中的数据施加限制。 约束是应用于某列或相关各列的自动规则，它决定了某行的值以某种方式更改时的操作过程。 当的`System.Data.DataSet.EnforceConstraints` <xref:System.Data.DataSet>属性为**true**时, 将强制实施约束。 有关显示如何设置 `EnforceConstraints` 属性的代码示例，请参见 <xref:System.Data.DataSet.EnforceConstraints%2A> 参考主题。  
   
- ADO.NET 中有两种约束：<xref:System.Data.ForeignKeyConstraint> 和 <xref:System.Data.UniqueConstraint>。 默认情况下，这两种约束都会自动创建时创建通过添加两个或多个表之间的关系<xref:System.Data.DataRelation>到**数据集**。 但是，可以通过指定禁用此行为**createConstraints** = **false**创建关系时。  
+ ADO.NET 中有两种约束：<xref:System.Data.ForeignKeyConstraint> 和 <xref:System.Data.UniqueConstraint>。 默认情况下, 通过将添加<xref:System.Data.DataRelation>到**数据集**, 可以在创建两个或多个表之间创建关系时自动创建这两个约束。 不过, 您可以在创建关系时指定**createConstraints** = **false**来禁用此行为。  
   
 ## <a name="foreignkeyconstraint"></a>ForeignKeyConstraint  
- 一个**ForeignKeyConstraint**强制实施有关如何传播更新和删除对相关表的规则。 例如，如果更新或删除一个表中的行中的值和相同的值还可在一个或多个相关表， **ForeignKeyConstraint**确定相关表中会发生什么情况。  
+ **ForeignKeyConstraint**强制执行有关如何传播相关表的更新和删除的规则。 例如, 如果更新或删除了一个表的行中的值, 并且在一个或多个相关表中也使用相同的值, 则**ForeignKeyConstraint**将确定相关表中发生的情况。  
   
- <xref:System.Data.ForeignKeyConstraint.DeleteRule%2A>并<xref:System.Data.ForeignKeyConstraint.UpdateRule%2A>的属性**ForeignKeyConstraint**定义当用户尝试删除或更新相关表中的行时采取的操作。 下表描述了可用于不同的设置**DeleteRule**并**UpdateRule**的属性**ForeignKeyConstraint**。  
+ ForeignKeyConstraint 的<xref:System.Data.ForeignKeyConstraint.UpdateRule%2A>和属性定义用户尝试删除或更新相关表中的行时要执行的操作。 <xref:System.Data.ForeignKeyConstraint.DeleteRule%2A> 下表描述了可用于**ForeignKeyConstraint**的**DeleteRule**和**UpdateRule**属性的不同设置。  
   
 |规则设置|描述|  
 |------------------|-----------------|  
 |**Cascade**|删除或更新相关的行。|  
-|**SetNull**|在相关的行中设置值**DBNull**。|  
+|**SetNull**|将相关行中的值设置为**DBNull**。|  
 |**SetDefault**|将相关行中的值设置为默认值。|  
 |**无**|对相关行不执行任何操作。 这是默认设置。|  
   
- 一个**ForeignKeyConstraint**可以限制，并传播到更改相关列。 具体取决于对设置的属性**ForeignKeyConstraint**的列，如果**EnforceConstraints**属性**数据集**是**true**，执行对父行的某些操作将导致异常。 例如，如果**DeleteRule**的属性**ForeignKeyConstraint**是**None**，如果有子行不能删除父行。  
+ **ForeignKeyConstraint**可以限制并传播对相关列的更改。 根据为列的**ForeignKeyConstraint**设置的属性, 如果**DataSet**的**EnforceConstraints**属性为**true**, 则对父行执行某些操作将导致异常。 例如, 如果**ForeignKeyConstraint**的**DeleteRule**属性为**None**, 则如果父行具有任何子行, 则不能将其删除。  
   
- 可以创建一组使用的列之间或单个列之间的外键约束**ForeignKeyConstraint**构造函数。 传递得到**ForeignKeyConstraint**对象传递给**添加**表的方法**约束**属性，它是**ConstraintCollection**. 此外可以将构造函数自变量传递给的几个重载**外**方法**ConstraintCollection**创建**ForeignKeyConstraint**。  
+ 您可以使用**ForeignKeyConstraint**构造函数在单个列之间或列的数组之间创建外键约束。 将生成的**ForeignKeyConstraint**对象传递给表的**约束**属性的**Add**方法, 该属性是一个**ConstraintCollection**。 还可以将构造函数参数传递给**ConstraintCollection**的**Add**方法的几个重载, 以创建**ForeignKeyConstraint**。  
   
- 创建时**ForeignKeyConstraint**，可以将传递**DeleteRule**并**UpdateRule**值构造函数作为自变量，也可以将它们设置为作为中的属性以下示例 (其中**DeleteRule**值设置为**None**)。  
+ 当创建**ForeignKeyConstraint**时, 可以将**DeleteRule**和**UpdateRule**值作为参数传递给构造函数, 也可以将其设置为属性, 如以下示例中所示 (其中**DeleteRule**值设置为**无**)。  
   
 ```vb  
 Dim custOrderFK As ForeignKeyConstraint = New ForeignKeyConstraint("CustOrderFK", _  
@@ -54,9 +54,9 @@ custDS.Tables["OrdersTable"].Constraints.Add(custOrderFK);
 ```  
   
 ### <a name="acceptrejectrule"></a>AcceptRejectRule  
- 可以使用接受对行的更改**AcceptChanges**方法或已取消使用**RejectChanges**方法**数据集**， **DataTable**，或**DataRow**。 当**数据集**包含**ForeignKeyConstraints**，则调用**AcceptChanges**或者**RejectChanges**方法会强制**AcceptRejectRule**。 **AcceptRejectRule**的属性**ForeignKeyConstraint**确定将采取的操作在子活动时行**AcceptChanges**或**RejectChanges**对父行调用。  
+ 可以使用**AcceptChanges**方法接受对行的更改, 或使用**DataSet**、 **DataTable**或**DataRow**的**RejectChanges**方法取消对行的更改。 当**数据集**包含**ForeignKeyConstraints**时, 调用**AcceptChanges**或**RejectChanges**方法会强制执行**AcceptRejectRule**。 **ForeignKeyConstraint**的**AcceptRejectRule**属性决定了对父行调用**AcceptChanges**或**RejectChanges**时要对子行执行的操作。  
   
- 下表列出的可用设置**AcceptRejectRule**。  
+ 下表列出了**AcceptRejectRule**的可用设置。  
   
 |规则设置|描述|  
 |------------------|-----------------|  
@@ -70,11 +70,11 @@ custDS.Tables["OrdersTable"].Constraints.Add(custOrderFK);
  [!code-vb[DataWorks Data.AcceptRejectRule#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks Data.AcceptRejectRule/VB/source.vb#1)]  
   
 ## <a name="uniqueconstraint"></a>UniqueConstraint  
- **UniqueConstraint**对象，它可以分配到单个列或列中的数组**DataTable**，确保指定的列或列中的所有数据都是唯一每个行。 可以通过创建唯一约束列或一组列**UniqueConstraint**构造函数。 传递得到**UniqueConstraint**对象传递给**添加**表的方法**约束**属性，它是**ConstraintCollection**. 此外可以将构造函数自变量传递给的几个重载**外**方法**ConstraintCollection**创建**UniqueConstraint**。 创建时**UniqueConstraint**对于某一列或列，您可以选择指定的列是否为主键。  
+ **UniqueConstraint**对象 (可分配给**DataTable**中的一列或一组列) 确保指定的一列或多列中的所有数据对于每行都是唯一的。 您可以使用**UniqueConstraint**构造函数创建列或列数组的唯一约束。 将生成的**UniqueConstraint**对象传递给表的**约束**属性的**Add**方法, 该属性是一个**ConstraintCollection**。 还可以将构造函数参数传递给**ConstraintCollection**的**Add**方法的几个重载, 以创建**UniqueConstraint**。 为一列或多列创建**UniqueConstraint**时, 可以选择指定列或列是否为主键。  
   
- 此外可以通过设置创建唯一约束的列**Unique**属性的列**true**。 或者，设置**Unique**到单个列的属性**false**删除可能存在的任何唯一约束。 如果将一列或多列定义为表的主键，会自动为一个或多个指定的列创建唯一的约束。 如果您删除某列从**PrimaryKey**的属性**DataTable**，则**UniqueConstraint**中删除。  
+ 还可以通过将列的**unique**属性设置为**true**, 为列创建 unique 约束。 或者, 将单个列的**unique**属性设置为**false**将删除任何可能存在的唯一约束。 如果将一列或多列定义为表的主键，会自动为一个或多个指定的列创建唯一的约束。 如果删除**DataTable**的**PrimaryKey**属性中的列, 则会删除**UniqueConstraint** 。  
   
- 下面的示例创建**UniqueConstraint**的两列**DataTable**。  
+ 下面的示例为**DataTable**的两列创建**UniqueConstraint** 。  
   
 ```vb  
 Dim custTable As DataTable = custDS.Tables("Customers")  
@@ -98,6 +98,6 @@ custDS.Tables["Customers"].Constraints.Add(custUnique);
 - <xref:System.Data.DataTable>
 - <xref:System.Data.ForeignKeyConstraint>
 - <xref:System.Data.UniqueConstraint>
-- [数据表架构定义](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)
-- [数据集、数据表和数据视图](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [数据表架构定义](datatable-schema-definition.md)
+- [数据集、数据表和数据视图](index.md)
 - [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Azure 构建新式 Web 应用 | 在 ASP.NET
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 9f765acce89bec1fd73e9c43a6e7d75d78be785d
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: e4303a3046981756cae6951483c100b37425dc80
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68672814"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105454"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>在 ASP.NET Core 应用中使用数据
 
@@ -25,11 +25,15 @@ ms.locfileid: "68672814"
 
 若要将 EF Core 用于 SQL Server，请运行以下 dotnet CLI 命令：
 
+```console
 dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+```
 
 若要添加对 InMemory 数据源的支持用于测试，请使用：
 
+```console
 dotnet add package Microsoft.EntityFrameworkCore.InMemory
+```
 
 ### <a name="the-dbcontext"></a>DbContext
 

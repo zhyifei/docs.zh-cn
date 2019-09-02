@@ -2,12 +2,12 @@
 title: 访问资源时的安全信任级别
 ms.date: 03/30/2017
 ms.assetid: fb5be924-317d-4d69-b33a-3d18ecfb9d6e
-ms.openlocfilehash: 4cd229737d7569afe84d945dce0fbb6867f3ef76
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7070d82c430b762059153c544e26478dc2d7ae39
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69948710"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205871"
 ---
 # <a name="security-trust-levels-in-accessing-resources"></a>访问资源时的安全信任级别
 本主题讨论如何限制对 <xref:System.Transactions> 所公开的资源类型的访问。  
@@ -38,7 +38,7 @@ ms.locfileid: "69948710"
   
  若要启用恢复功能，这种应用程序应具备永久使用系统资源的能力。 这是因为可恢复的事务管理器必须记住已提交的事务，直到它可确认参与事务的所有持久资源管理器都已接收到结果。 因此，这种应用程序要求完全信任权限，因此它只有在已被授予该信任级别的情况下才能运行。  
   
- 有关持久登记和恢复的详细信息, 请参阅在[事务中将资源登记为参与者](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md)和[执行恢复](../../../../docs/framework/data/transactions/performing-recovery.md)主题。  
+ 有关持久登记和恢复的详细信息, 请参阅在[事务中将资源登记为参与者](enlisting-resources-as-participants-in-a-transaction.md)和[执行恢复](performing-recovery.md)主题。  
   
  此外，使用 COM+ 执行旧版互操作的应用程序也需要具有完全信任级别。  
   

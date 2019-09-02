@@ -5,18 +5,18 @@ author: kendrahavens
 ms.author: kehavens
 ms.date: 10/18/2017
 ms.custom: seodec18
-ms.openlocfilehash: 660b966c6d02353b855e5728094083042a561558
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 9ac03053bc762d0176e087545871ca8a145cd41e
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59126082"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168294"
 ---
 # <a name="test-published-output-with-dotnet-vstest"></a>通过 dotnet vstest 测试已发布的输出
 
 可以使用 `dotnet vstest` 命令测试已发布的输出。 这将适用于 xUnit、MSTest 和 NUnit 测试。 只需找到属于已发布输出的 DLL 文件，然后运行：
 
-```
+```console
 dotnet vstest <MyPublishedTests>.dll
 ```
 
@@ -26,7 +26,7 @@ dotnet vstest <MyPublishedTests>.dll
 
 下面的命令演示在已发布的 DLL 上运行测试。
 
-```
+```console
 dotnet new mstest -o MyProject.Tests
 cd MyProject.Tests
 dotnet publish -o out
@@ -34,10 +34,10 @@ dotnet vstest out/MyProject.Tests.dll
 ```
 
 > [!NOTE]
-> 注意:如果你的应用以 `netcoreapp` 之外的框架为目标，则仍然可以通过使用框架标志传入目标框架来运行 `dotnet vstest` 命令。 例如 `dotnet vstest <MyPublishedTests>.dll  --Framework:".NETFramework,Version=v4.6"`。 在 Visual Studio 2017 Update 5 中，自动检测所需的框架。
+> 注意：如果你的应用以 `netcoreapp` 之外的框架为目标，则仍然可以通过使用框架标志传入目标框架来运行 `dotnet vstest` 命令。 例如 `dotnet vstest <MyPublishedTests>.dll  --Framework:".NETFramework,Version=v4.6"`。 在 Visual Studio 2017 Update 5 中，自动检测所需的框架。
 
 ## <a name="see-also"></a>请参阅
 
-- [使用 dotnet test 和 xUnit 进行单元测试](unit-testing-with-dotnet-test.md)
-- [使用 dotnet test 和 NUnit 进行单元测试](unit-testing-with-nunit.md)
-- [使用 dotnet test 和 MSTest 进行单元测试](unit-testing-with-mstest.md)
+- [使用 dotnet 测试和 xUnit 进行单元测试](unit-testing-with-dotnet-test.md)
+- [使用 dotnet 测试和 NUnit 进行单元测试](unit-testing-with-nunit.md)
+- [使用 dotnet 测试和 MSTest 进行单元测试](unit-testing-with-mstest.md)

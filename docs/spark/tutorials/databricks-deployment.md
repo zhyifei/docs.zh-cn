@@ -4,12 +4,12 @@ description: 了解如何将 .NET for Apache Spark 应用程序部署到 Databri
 ms.date: 05/17/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: ca9e93a413622c84325ca9fc8bac17268b990c5a
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: 77c2d93ae324b6acbf8fc8dc25cd3e4d1a652f48
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "69576964"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70107349"
 ---
 # <a name="deploy-a-net-for-apache-spark-application-to-databricks"></a>将 .NET for Apache Spark 应用程序部署到 Databricks
 
@@ -18,17 +18,17 @@ ms.locfileid: "69576964"
 在本教程中，你将了解：
 
 > [!div class="checklist"]
-> * 准备 Microsoft.Spark.Worker
-> * 发布 Spark .NET 应用
-> * 将应用部署到 Databricks
-> * 运行你的应用
+> - 准备 Microsoft.Spark.Worker
+> - 发布 Spark .NET 应用
+> - 将应用部署到 Databricks
+> - 运行你的应用
 
 ## <a name="prerequisites"></a>系统必备
 
 开始之前，请执行以下操作：
 
-* 下载 [Databricks CLI](https://docs.databricks.com/user-guide/dev-tools/databricks-cli.html)。
-* 将 [install-worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh) 下载到本地计算机。 这是稍后用于将 .NET for Apache Spark 依赖文件复制到 Spark 群集的工作器节点的帮助程序脚本。
+- 下载 [Databricks CLI](https://docs.databricks.com/user-guide/dev-tools/databricks-cli.html)。
+- 将 [install-worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh) 下载到本地计算机。 这是稍后用于将 .NET for Apache Spark 依赖文件复制到 Spark 群集的工作器节点的帮助程序脚本。
 
 ## <a name="prepare-worker-dependencies"></a>准备辅助角色依赖项
 
@@ -62,9 +62,9 @@ Microsoft.Spark.Worker 是后端组件，位于 Spark 群集的单个工作器�
 
 4. 将以下内容上传到群集具有访问权限的分布式文件系统（如 DBFS）：
 
-   * `microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar`：此 jar 作为 [Microsoft.Spark](https://www.nuget.org/packages/Microsoft.Spark/) NuGet 包的一部分包含在内，并且并置在应用的生成输出目录中。
-   * `<your app>.zip`
-   * 要放在每个执行程序的工作目录中的文件（如每位工作人员都可以访问的依赖文件或公共数据）或程序集（如包含应用所依赖的用户定义的函数或库的 DLL）。
+   - `microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar`：此 jar 作为 [Microsoft.Spark](https://www.nuget.org/packages/Microsoft.Spark/) NuGet 包的一部分包含在内，并且并置在应用的生成输出目录中。
+   - `<your app>.zip`
+   - 要放在每个执行程序的工作目录中的文件（如每位工作人员都可以访问的依赖文件或公共数据）或程序集（如包含应用所依赖的用户定义的函数或库的 DLL）。
 
 ## <a name="deploy-to-databricks"></a>部署到 Databricks
 

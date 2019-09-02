@@ -4,12 +4,12 @@ description: 关于在 .NET 中生成服务器应用时应考虑使用哪种 .NE
 author: cartermp
 ms.author: mairaw
 ms.date: 06/19/2018
-ms.openlocfilehash: 6bdcb002c2e37f45c298259c2867a631b38152ca
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 520920566e8a55eef2d506dc4a8085f57ef1c0bb
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630861"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70107279"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>为服务器应用选择 .NET Core 或 .NET Framework
 
@@ -17,18 +17,18 @@ ms.locfileid: "68630861"
 
 在以下情况，对服务器应用程序使用 .NET Core：
 
-* 用户有跨平台需求。
-* 用户正在面向微服务。
-* 用户正在使用 Docker 容器。
-* 需要高性能和可扩展的系统。
-* 需按应用程序提供并行的 .NET 版本。
+- 用户有跨平台需求。
+- 用户正在面向微服务。
+- 用户正在使用 Docker 容器。
+- 需要高性能和可扩展的系统。
+- 需按应用程序提供并行的 .NET 版本。
 
 在以下情况，对服务器应用程序使用 .NET Framework ：
 
-* 应用当前使用 .NET Framework（建议扩展而不是迁移）。
-* 应用使用不可用于 .NET Core 的第三方 .NET 库或 NuGet 包。
-* 应用使用不可用于 .NET Core 的 .NET 技术。
-* 应用使用不支持 .NET Core 的平台。
+- 应用当前使用 .NET Framework（建议扩展而不是迁移）。
+- 应用使用不可用于 .NET Core 的第三方 .NET 库或 NuGet 包。
+- 应用使用不可用于 .NET Core 的 .NET 技术。
+- 应用使用不支持 .NET Core 的平台。
 
 ## <a name="when-to-choose-net-core"></a>选择 .NET Core 的情形
 
@@ -85,15 +85,15 @@ Docker 容器可托管在自己的 Linux 或 Windows 基础结构中，或托管
 
 某些 .NET Framework 技术在 .NET Core 中不可用。 其中一些技术可能在更高版本的 .NET Core 中可用。 但其他技术不会应用于 .NET Core 面向的新应用程序模式，因此可能永远不可用。 以下列表显示无法在 .NET Core 中找到的最常见技术：
 
-* ASP.NET Web 窗体应用程序：ASP.NET Web 窗体仅在.NET Framework 中可用。 ASP.NET Core 不能用于 ASP.NET Web 窗体。 目前没有将 ASP.NET Web 窗体引入 .NET Core 的计划。
+- ASP.NET Web 窗体应用程序：ASP.NET Web 窗体仅在.NET Framework 中可用。 ASP.NET Core 不能用于 ASP.NET Web 窗体。 目前没有将 ASP.NET Web 窗体引入 .NET Core 的计划。
 
-* ASP.NET 网页应用程序：ASP.NET 网页未包含在 ASP.NET Core 中。 
+- ASP.NET 网页应用程序：ASP.NET 网页未包含在 ASP.NET Core 中。 
 
-* WCF 服务的实现。 虽然 [WCF 客户端库](https://github.com/dotnet/wcf)可从 .NET Core 使用 WCF 服务，WCF 服务器实现目前只在 .NET Framework 上可用。 这种情况虽然不属于 .NET Core 当前计划，但将来会考虑这点。
+- WCF 服务的实现。 虽然 [WCF 客户端库](https://github.com/dotnet/wcf)可从 .NET Core 使用 WCF 服务，WCF 服务器实现目前只在 .NET Framework 上可用。 这种情况虽然不属于 .NET Core 当前计划，但将来会考虑这点。
 
-* 工作流相关的服务：Windows Workflow Foundation (WF)、工作流服务（WCF + 单个服务中的 WF）和 WCF 数据服务（以前称为“ADO.NET 数据服务”）仅在 .NET Framework 上可用。  尚未计划将 WF/WCF+WF/WCF Data Services 引入 .NET Core。
+- 工作流相关的服务：Windows Workflow Foundation (WF)、工作流服务（WCF + 单个服务中的 WF）和 WCF 数据服务（以前称为“ADO.NET 数据服务”）仅在 .NET Framework 上可用。  尚未计划将 WF/WCF+WF/WCF Data Services 引入 .NET Core。
 
-* 语言支持：.NET Core 目前支持 Visual Basic 和 F#，但不是所有项目类型都支持。 有关支持的项目模板列表，请参阅 [dotnet new 的模板选项](../core/tools/dotnet-new.md#arguments)。
+- 语言支持：.NET Core 目前支持 Visual Basic 和 F#，但不是所有项目类型都支持。 有关支持的项目模板列表，请参阅 [dotnet new 的模板选项](../core/tools/dotnet-new.md#arguments)。
 
 除了正式的路线图，还有其他框架将植入 .NET Core。 若要查看完整列表，请参阅标记为 [port-to-core](https://github.com/dotnet/corefx/issues?q=is%3Aopen+is%3Aissue+label%3Aport-to-core) 的 CoreFX 问题。 此列表并不代表 Microsoft 承诺将这些组件引入 .NET Core。 这样做只是因为他们捕获到了社区所需。 如果关注任何标记为 `port-to-core` 的组件，请在 GitHub 上参与讨论。 如果认为遗漏了某些内容，请在 [CoreFX 存储库](https://github.com/dotnet/corefx/issues/new)中提出新的问题。
 

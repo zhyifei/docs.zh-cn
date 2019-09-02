@@ -7,12 +7,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 08/21/2019
-ms.openlocfilehash: 5f9d7026b270a010d2ba5d4b1165728a100ab6ed
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f62afe79ec3ace98a3bd8997e20672bef81b89c4
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69922563"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70037838"
 ---
 # <a name="whats-new-in-net-core-30-preview-8"></a>.NET Core 3.0（预览版 8）中的新增功能
 
@@ -41,7 +41,7 @@ ms.locfileid: "69922563"
 
 ## <a name="net-core-sdk-windows-installer"></a>.NET Core SDK Windows Installer
 
-用于 Windows 的 MSI 安装程序已从 .NET Core 3.0 开始更改。 SDK 安装程序现在将对 SDK 功能区段版本进行就地升级。 功能区段在版本号的*补丁*部分中的*数百个*组中定义。 例如，**3.0._101_** 和 **3.0._201_** 是两个不同功能区段中的版本，而 **3.0._101_** 和 **3.0._199_** 则属于同一个功能区段。 并且，当安装 .NET Core SDK **3.0._101_** 时，将从计算机中删除 .NET Core SDK **3.0._100_** （如果存在）。 当 .NET Core SDK **3.0._200_** 安装在同一台计算机上时，不会删除 .NET Core SDK **3.0._101_** 。
+从 .NET Core 3.0 开始，用于 Windows 的 MSI 安装程序发生了变化。 SDK 安装程序现在将对 SDK 功能区段版本进行就地升级。 功能区段在版本号的“修补程序”  部分的“百位”  组中定义。 例如，3.0.101 **_和 3.0.201_** 是两个不同功能区段中的版本，而 3.0.101 **_和 3.0.199_** 则属于同一个功能区段。 在安装 .NET Core SDK 3.0.101 **_时，将从计算机中删除 .NET Core SDK 3.0.100_** （如果存在）。 而在将 .NET Core SDK 3.0.200 **_安装在同一台计算机上时，不会删除 .NET Core SDK 3.0.101_** 。
 
 有关版本控制的详细信息，请参阅 [.NET Core 的版本控制方式概述](../versions/index.md)。
 
@@ -90,9 +90,9 @@ System.Console.WriteLine($"RuntimeInformation.FrameworkDescription: {System.Runt
 ```
 
 > [!WARNING]
-> 重大更改。 这在技术上是一个突破性的改变，因为版本控制方案已发生变化。
+> 重大变更。 这在技术上是一个中断性变更，因为版本控制方案已发生变化。
 
-## <a name="net-platform-dependent-intrinsics"></a>依赖于 .NET 平台的内部函数
+## <a name="net-platform-dependent-intrinsics"></a>.NET 平台相关内部函数
 
 已添加 API，允许访问某些性能导向的 CPU 指令，例如 SIMD 或位操作指令集   。 这些指令有助于在某些情况下实现显著的性能改进，例如高效地并行处理数据。
 
@@ -430,11 +430,11 @@ async IAsyncEnumerable<int> GetBigResultsAsync()
 
 ### <a name="type-nativelibrary"></a>类型：NativeLibrary
 
-<xref:System.Runtime.InteropServices.NativeLibrary?displayProperty=nameWithType> 提供一个封装，用于加载本机库（使用与 .NET Core P/Invoke 相同的加载逻辑）并提供相关的帮助程序函数，例如 `getSymbol`。 有关代码示例，请参阅 [DLLMap 演示](https://github.com/dotnet/samples/tree/master/core/extensions/AppWithPlugin)。
+<xref:System.Runtime.InteropServices.NativeLibrary?displayProperty=nameWithType> 提供一个封装，用于加载本机库（使用与 .NET Core P/Invoke 相同的加载逻辑）并提供相关的帮助程序函数，例如 `getSymbol`。 有关代码示例，请参阅 [DLLMap 演示](https://github.com/dotnet/samples/tree/master/core/extensions/DllMapDemo)。
 
 ### <a name="windows-native-interop"></a>Windows 本机互操作
 
-Windows 提供丰富的本机 API，包括平面 C API、COM 和 WinRT 的形式。 .NET Core 支持 P/Invoke  ，.NET Core 3.0 则增加了“共同创建 COM API”  和“激活 WinRT API”  的功能。 有关代码示例，请参阅 [Excel 演示](https://github.com/dotnet/samples/tree/master/core/extensions/ExcelDemo)。
+Windows 提供丰富的本机 API，包括平面 C API、COM 和 WinRT 的形式。 .NET Core 支持 **P/Invoke**, .NET Core 3.0 则增加了 **CoCreate COM API** 和 **Activate WinRT API** 的功能。 有关代码示例，请参阅 [Excel 演示](https://github.com/dotnet/samples/tree/master/core/extensions/ExcelDemo)。
 
 ## <a name="http2-support"></a>HTTP/2 支持
 

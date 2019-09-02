@@ -11,17 +11,17 @@ helpviewer_keywords:
 ms.assetid: 5fd8f46d-3961-46a7-84af-2eb1f48e75cf
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4ca30448c24efc48be3d68c6b3fa03c949b72d1a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d1c108e75c0e2da3d513669f5b8b02bada43b983
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910712"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70206072"
 ---
 # <a name="security-transparent-code-level-1"></a>安全透明代码, 级别1
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
- 透明度可帮助开发人员编写更安全的 .NET Framework 库来向部分信任的代码公开功能。 .NET Framework 2.0 版中引入了 1 级透明度，此透明度主要仅供 Microsoft 内部使用。 从 .NET Framework 4 开始, 可以使用[2 级透明度](../../../docs/framework/misc/security-transparent-code-level-2.md)。 但是, 保留了1级透明度, 以便您可以识别必须用早期安全规则运行的旧代码。  
+ 透明度可帮助开发人员编写更安全的 .NET Framework 库来向部分信任的代码公开功能。 .NET Framework 2.0 版中引入了 1 级透明度，此透明度主要仅供 Microsoft 内部使用。 从 .NET Framework 4 开始, 可以使用[2 级透明度](security-transparent-code-level-2.md)。 但是, 保留了1级透明度, 以便您可以识别必须用早期安全规则运行的旧代码。  
   
 > [!IMPORTANT]
 > 应仅出于兼容性目的而指定 1 级透明度；也就是说，仅为使用 .NET Framework 3.5 或以前的版本（使用 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> 或不使用透明度模型）开发的代码指定 1 级透明度。 例如，对允许从部分信任的调用方 (APTCA) 调用的 .NET Framework 2.0 程序集使用 1 级透明度。 对于为 .NET Framework 4 开发的代码, 请始终使用2级透明度。  
@@ -132,5 +132,5 @@ public class B
   
 ## <a name="see-also"></a>请参阅
 
-- [安全透明代码, 级别2](../../../docs/framework/misc/security-transparent-code-level-2.md)
-- [安全更改](../../../docs/framework/security/security-changes.md)
+- [安全透明代码, 级别2](security-transparent-code-level-2.md)
+- [安全更改](../security/security-changes.md)

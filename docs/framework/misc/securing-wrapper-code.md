@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 1df6c516-5bba-48bd-b450-1070e04b7389
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e824fd686176d83c26ca2c042348c9423fbcc884
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ee78c1c1f92515472bb3ea3ce77405a5e3447fd9
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910742"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70206105"
 ---
 # <a name="securing-wrapper-code"></a>保护包装代码
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -47,7 +47,7 @@ ms.locfileid: "69910742"
 ## <a name="link-demands-and-wrappers"></a>链接需求和包装  
  在安全性基础结构中，已经对链接需求加强了特殊保护，但它依然是代码中潜在的漏洞源。  
   
- 如果完全受信任的代码调用由[linkdemand](../../../docs/framework/misc/link-demands.md)保护的属性、事件或方法, 则在满足调用方的**LinkDemand**权限检查时, 调用将成功。 此外, 如果完全受信任的代码公开一个类, 该类采用属性的名称并使用反射调用其**get**访问器, 则即使用户代码没有访问此属性的权限, 也会成功调用**get**访问器。 这是因为**LinkDemand**仅检查直接调用方, 这是完全受信任的代码。 从根本上而言，完全受信任的代码可代表用户代码发出特权调用，而无需确保用户代码是否有权发出该调用。  
+ 如果完全受信任的代码调用由[linkdemand](link-demands.md)保护的属性、事件或方法, 则在满足调用方的**LinkDemand**权限检查时, 调用将成功。 此外, 如果完全受信任的代码公开一个类, 该类采用属性的名称并使用反射调用其**get**访问器, 则即使用户代码没有访问此属性的权限, 也会成功调用**get**访问器。 这是因为**LinkDemand**仅检查直接调用方, 这是完全受信任的代码。 从根本上而言，完全受信任的代码可代表用户代码发出特权调用，而无需确保用户代码是否有权发出该调用。  
   
  为了帮助防止此类安全漏洞, 公共语言运行时将检查扩展到完全堆栈遍历请求中, 对对由**LinkDemand**保护的方法、构造函数、属性或事件的任何间接调用。 这种保护会带来一些性能损失，并更改安全检查语义；完整的堆栈遍历需求可能会失败，其中会通过速度更快的单一级别检查。  
   
@@ -73,10 +73,10 @@ ms.locfileid: "69910742"
   
 - <xref:System.Security.Permissions.SecurityAction.Demand> 指示代码访问安全堆栈审核。 堆栈上的所有调用方必须具有特定权限或标识才能通过。 每次调用都会发生**需求**, 因为堆栈可能包含不同的调用方。 如果重复调用一种方法，则每次都会执行安全检查。 **需求**是应对引诱攻击的良好保护;检测到未经授权的代码。  
   
-- [LinkDemand](../../../docs/framework/misc/link-demands.md)在实时 (JIT) 编译时间发生, 并仅检查直接调用方。 这种安全检查不会检查调用方的调用方。 一旦此项检查成功，无论调用方调用的次数为多少，都无需任何其他安全性开销。 但是，这种方法没有对引诱攻击提供保护。 使用**LinkDemand**, 通过允许恶意代码使用授权代码调用, 通过测试并可以引用代码的任何代码都可能会破坏安全性。 因此, 请不要使用**LinkDemand** , 除非可以彻底避免所有可能的漏洞。  
+- [LinkDemand](link-demands.md)在实时 (JIT) 编译时间发生, 并仅检查直接调用方。 这种安全检查不会检查调用方的调用方。 一旦此项检查成功，无论调用方调用的次数为多少，都无需任何其他安全性开销。 但是，这种方法没有对引诱攻击提供保护。 使用**LinkDemand**, 通过允许恶意代码使用授权代码调用, 通过测试并可以引用代码的任何代码都可能会破坏安全性。 因此, 请不要使用**LinkDemand** , 除非可以彻底避免所有可能的漏洞。  
   
     > [!NOTE]
-    > 在 .NET Framework 4 中, 已将链接要求替换为<xref:System.Security.SecurityCriticalAttribute> <xref:System.Security.SecurityRuleSet.Level2>程序集中的特性。 <xref:System.Security.SecurityCriticalAttribute>等效于完全信任的链接要求; 但是, 它也会影响继承规则。 有关此更改的详细信息, 请参阅[安全透明代码, 级别 2](../../../docs/framework/misc/security-transparent-code-level-2.md)。  
+    > 在 .NET Framework 4 中, 已将链接要求替换为<xref:System.Security.SecurityCriticalAttribute> <xref:System.Security.SecurityRuleSet.Level2>程序集中的特性。 <xref:System.Security.SecurityCriticalAttribute>等效于完全信任的链接要求; 但是, 它也会影响继承规则。 有关此更改的详细信息, 请参阅[安全透明代码, 级别 2](security-transparent-code-level-2.md)。  
   
  使用**LinkDemand**时所需的额外注意事项必须单独进行编程;安全系统可以帮助实施。 任何错误都会打开安全漏洞。 利用你的代码的所有授权代码都必须负责执行以下操作实现其他安全性：  
   

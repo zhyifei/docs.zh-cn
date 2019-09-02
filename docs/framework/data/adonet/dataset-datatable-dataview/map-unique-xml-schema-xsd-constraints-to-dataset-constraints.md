@@ -2,24 +2,24 @@
 title: 将唯一 XML 架构 (XSD) 约束映射到数据集约束
 ms.date: 03/30/2017
 ms.assetid: 56da90bf-21d3-4d1a-8bb8-de908866b78d
-ms.openlocfilehash: 650cd6b8b8149529f115f22a11d19178fbd6d302
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 231f23ccf47f60b902fdd5c66b63fe1a750445f9
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61785367"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203414"
 ---
 # <a name="map-unique-xml-schema-xsd-constraints-to-dataset-constraints"></a>将唯一 XML 架构 (XSD) 约束映射到数据集约束
-在 XML 架构定义语言 (XSD) 架构中，**唯一**元素指定的元素或属性的唯一性约束。 在将 XML 架构转换为关系架构的过程中，对 XML 架构中的元素或属性指定的唯一约束将映射到所生成的相应 <xref:System.Data.DataTable> 中的 <xref:System.Data.DataSet> 中的唯一约束。  
+在 XML 架构定义语言 (XSD) 架构中, **unique**元素指定元素或属性的唯一性约束。 在将 XML 架构转换为关系架构的过程中，对 XML 架构中的元素或属性指定的唯一约束将映射到所生成的相应 <xref:System.Data.DataTable> 中的 <xref:System.Data.DataSet> 中的唯一约束。  
   
- 下表概括**msdata**可以在指定的属性**唯一**元素。  
+ 下表概述了可在**unique**元素中指定的**msdata**属性。  
   
 |特性名|描述|  
 |--------------------|-----------------|  
-|**msdata:ConstraintName**|如果指定了该属性，它的值将用作约束名。 否则为**名称**属性提供值的约束名称。|  
-|**msdata:PrimaryKey**|如果`PrimaryKey="true"`处在**唯一**元素，与创建唯一约束**IsPrimaryKey**属性设置为**true**。|  
+|**msdata:ConstraintName**|如果指定了该属性，它的值将用作约束名。 否则, **name**属性提供约束名称的值。|  
+|**msdata:PrimaryKey**|如果`PrimaryKey="true"`在**unique**元素中存在, 则将创建一个唯一约束, 并将**IsPrimaryKey**属性设置为**true**。|  
   
- 下面的示例显示使用一个 XML 架构**唯一**元素来指定唯一性约束。  
+ 下面的示例演示一个使用**unique**元素指定唯一性约束的 XML 架构。  
   
 ```xml  
 <xs:schema id="SampleDataSet"   
@@ -48,13 +48,13 @@ ms.locfileid: "61785367"
 </xs:schema>  
 ```  
   
- **唯一**架构中的元素指定所有**客户**实例的文档中的元素的值**CustomerID**必须是唯一的子元素。 在构建**数据集**，映射过程将读取此架构并生成下表：  
+ 架构中的**unique**元素指定对于文档实例中的所有**Customers**元素, **CustomerID**子元素的值必须是唯一的。 在生成**数据集**时, 映射过程将读取此架构并生成下表:  
   
 ```  
 Customers (CustomerID, CompanyName, Phone)  
 ```  
   
- 映射过程还会创建唯一约束上**CustomerID**列，如下所示**数据集**。 （为简便起见，只显示相关属性。）  
+ 映射过程还会在**CustomerID**列上创建唯一约束, 如下面的**数据集**中所示。 （为简便起见，只显示相关属性。）  
   
 ```  
       DataSetName: MyDataSet  
@@ -68,11 +68,11 @@ TableName: Customers
       IsPrimaryKey: False  
 ```  
   
- 在中**数据集**生成， **IsPrimaryKey**属性设置为**False**的唯一约束。 **唯一**列的属性指示**CustomerID**列的值必须是唯一 (但它们可以是空引用，由指定**AllowDBNull**列的属性）。  
+ 在生成的**数据集中**, unique 约束的**IsPrimaryKey**属性设置为**False** 。 列的**unique**属性指示**CustomerID**列值必须唯一 (但可以是空引用, 如列的**AllowDBNull**属性所指定)。  
   
- 如果你修改架构并设置可选**msdata: primarykey**属性值为**True**，表上创建唯一约束。 **AllowDBNull**列属性设置为**False**，并**IsPrimaryKey**属性设置为该约束**True**，从而使**CustomerID**列主键列。  
+ 如果修改架构并将可选的**msdata: PrimaryKey**特性值设置为**True**, 则会在表中创建 unique 约束。 **AllowDBNull**列属性设置为**False**, 并且约束的**IsPrimaryKey**属性设置为**True**, 从而使**CustomerID**列成为主键列。  
   
- 您可以对 XML 架构中元素或属性的组合指定唯一约束。 下面的示例演示如何指定的组合**CustomerID**并**CompanyName**的值必须是唯一的所有**客户**在任何情况下，通过添加另一个**xs:field**架构中的元素。  
+ 您可以对 XML 架构中元素或属性的组合指定唯一约束。 下面的示例演示了如何通过在架构中添加另一个 **xs: field**元素, 为任何实例中的所有**客户**指定**CustomerID**和值的组合必须是唯一的。  
   
 ```xml  
       <xs:unique     
@@ -84,7 +84,7 @@ TableName: Customers
 </xs:unique>  
 ```  
   
- 这是创建在随后出现的限制**数据集**。  
+ 这是在生成的**数据集中**创建的约束。  
   
 ```  
 ConstraintName: SomeName  
@@ -95,6 +95,6 @@ ConstraintName: SomeName
   
 ## <a name="see-also"></a>请参阅
 
-- [将 XML 架构 (XSD) 约束映射到数据集约束](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
-- [从 XML 架构生成数据集关系 (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)
+- [将 XML 架构 (XSD) 约束映射到数据集约束](mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
+- [从 XML 架构生成数据集关系 (XSD)](generating-dataset-relations-from-xml-schema-xsd.md)
 - [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

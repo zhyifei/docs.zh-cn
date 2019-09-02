@@ -2,12 +2,12 @@
 title: 演练：使用 async 和 await 访问 Web (C#)
 ms.date: 07/20/2015
 ms.assetid: c95d8d71-5a98-4bf0-aaf4-45fed2ebbacd
-ms.openlocfilehash: 986f3985783c6ae941d437fe557998f67557f5af
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 0c80bb079e66a56d6bbc30ba43269aee7ac4ab5b
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69595510"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168360"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-c"></a>演练：使用 async 和 await 访问 Web (C#)
 
@@ -237,7 +237,7 @@ Control returned to startButton_Click.
 
 2. `GetResponseAsync` 返回 <xref:System.Threading.Tasks.Task%601>。 在这种情况下，任务返回变量  `TResult` 具有类型 <xref:System.Net.WebResponse>。 该任务是在请求的任务已下载且任务已完成运行后，生成实际 `WebResponse` 对象的承诺。
 
-     要从任务检索 `WebResponse` 值，请将 [await](../../../language-reference/keywords/await.md) 运算符应用到对 `GetResponseAsync` 的调用，如下列代码所示。
+     要从任务检索 `WebResponse` 值，请将 [await](../../../language-reference/operators/await.md) 运算符应用到对 `GetResponseAsync` 的调用，如下列代码所示。
 
     ```csharp
     using (WebResponse response = await webReq.GetResponseAsync())
@@ -692,7 +692,7 @@ namespace AsyncExampleWPF
 
 - [异步示例：访问 Web 演练（C# 和 Visual Basic）](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)
 - [async](../../../language-reference/keywords/async.md)
-- [await](../../../language-reference/keywords/await.md)
+- [await](../../../language-reference/operators/await.md)
 - [使用 Async 和 Await 的异步编程 (C#)](./index.md)
 - [异步返回类型 (C#)](./async-return-types.md)
 - [基于任务的异步编程 (TAP)](https://www.microsoft.com/download/details.aspx?id=19957)

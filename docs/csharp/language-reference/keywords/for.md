@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - for keyword [C#]
 ms.assetid: 34041a40-2c87-467a-9ffb-a0417d8f67a8
-ms.openlocfilehash: a0252493ffd251b8d760927345c71e2f5ef55aaa
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 61315a04ca8d5a619a3dcaf43b15a309919d3c42
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67401511"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70167872"
 ---
 # <a name="for-c-reference"></a>for（C# 参考）
 
@@ -53,7 +53,7 @@ for (initializer; condition; iterator)
 
   - 通过使用 [new](../operators/new-operator.md) 运算符来创建对象
 
-  - [await](await.md) 表达式
+  - [await](../operators/await.md) 表达式
 
 上例中的“初始化表达式”部分声明和初始化本地循环变量 `i`  ：
 
@@ -85,7 +85,7 @@ i < 5
 
 - 通过使用 [new](../operators/new-operator.md) 运算符来创建对象
 
-- [await](await.md) 表达式
+- [await](../operators/await.md) 表达式
 
 上例中的“迭代器”部分增加本地循环变量  ：
 

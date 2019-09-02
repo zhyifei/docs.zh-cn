@@ -2,12 +2,12 @@
 title: 在 ASP.NET 中使用 System.Transactions
 ms.date: 03/30/2017
 ms.assetid: 1982c300-7ea6-4242-95ed-dc28ccfacac9
-ms.openlocfilehash: 866d7b69fa6c18f6edfb48655b213e140a095a28
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: bfc75661ea538ac52b244e38eb10e6ae37a8fd62
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65880223"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205833"
 ---
 # <a name="using-systemtransactions-in-aspnet"></a>在 ASP.NET 中使用 System.Transactions
 本主题描述如何才能在 ASP.NET 应用程序中成功使用 <xref:System.Transactions>。  
@@ -17,9 +17,9 @@ ms.locfileid: "65880223"
   
  每当将事务管理升级为由 Microsoft 分布式事务协调器 (MSDTC) 进行管理时，都会要求<xref:System.Transactions.DistributedTransactionPermission> 。 这种方案使用的是进程范围的资源尤其是全局资源，全局资源是指 MSDTC 日志中的保留空间。 此用法的一个示例就是数据库或应用程序的 Web 前端，它使用数据库作为所提供服务的一部分。  
   
- ASP.NET 有自己的一组信任级别，并可通过策略文件将特定的权限集与这些信任级别关联。 有关详细信息，请参阅[ASP.NET Trust Levels and Policy Files](https://docs.microsoft.com/previous-versions/aspnet/wyts434y(v=vs.100))。 在最初安装 Windows SDK 时，无默认 ASP.NET 策略文件与关联<xref:System.Transactions.DistributedTransactionPermission>。 因此，当 ASP.NET 应用程序中的事务升级为由 MSDTC 管理时，升级就会失败，并引发有关要求 <xref:System.Security.SecurityException> 的 <xref:System.Transactions.DistributedTransactionPermission> 异常。 若要在 ASP.NET 部分信任环境中启用事务升级，应该用与 <xref:System.Transactions.DistributedTransactionPermission> 相同的默认信任级别授予 <xref:System.Data.SqlClient.SqlClientPermission>。 你可以配置自己的自定义信任级别和策略文件来支持这一方法，也可以修改默认策略文件（即 **Web_hightrust.config** 和 **Web_mediumtrust.config**）。  
+ ASP.NET 有自己的一组信任级别，并可通过策略文件将特定的权限集与这些信任级别关联。 有关详细信息, 请参阅[ASP.NET 信任级别和策略文件](https://docs.microsoft.com/previous-versions/aspnet/wyts434y(v=vs.100))。 最初安装 Windows SDK 时, 任何默认 ASP.NET 策略文件都不与<xref:System.Transactions.DistributedTransactionPermission>关联。 因此，当 ASP.NET 应用程序中的事务升级为由 MSDTC 管理时，升级就会失败，并引发有关要求 <xref:System.Security.SecurityException> 的 <xref:System.Transactions.DistributedTransactionPermission> 异常。 若要在 ASP.NET 部分信任环境中启用事务升级，应该用与 <xref:System.Transactions.DistributedTransactionPermission> 相同的默认信任级别授予 <xref:System.Data.SqlClient.SqlClientPermission>。 你可以配置自己的自定义信任级别和策略文件来支持这一方法，也可以修改默认策略文件（即 **Web_hightrust.config** 和 **Web_mediumtrust.config**）。  
   
- 若要修改策略文件，请添加**SecurityClass**元素**DistributedTransactionPermission**到**SecurityClasses**元素下的**PolicyLevel**元素，并添加相应**IPermission**元素下 ASP.NET **NamedPermissionSet** system.transactions。 下面的配置文件演示了这一点。  
+ 若要修改策略文件, 请将**DistributedTransactionPermission**的**SecurityClass**元素添加到**PolicyLevel**元素下的**SecurityClasses**元素, 并在ASP.NET **vstecasp** 。 下面的配置文件演示了这一点。  
   
 ```xml  
 <SecurityClasses>  
@@ -40,7 +40,7 @@ ms.locfileid: "65880223"
 </PermissionSet>  
 ```  
   
- 有关 ASP.NET 安全策略的详细信息，请参阅[securityPolicy 元素 （ASP.NET 设置架构）](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/zhs35b56(v=vs.100))。  
+ 有关 ASP.NET 安全策略的详细信息, 请参阅[Ws-securitypolicy 元素 (ASP.NET Settings Schema)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/zhs35b56(v=vs.100))。  
   
 ## <a name="dynamic-compilation"></a>动态编译  
  如果要在访问时动态编译的 ASP.NET 应用程序中导入和使用 <xref:System.Transactions>，则应将对该 <xref:System.Transactions> 程序集的引用放入配置文件中。 具体来说，应将该引用添加到默认根 **Web.config**/**compilation** / **assemblies** 节之下。 下面的示例演示这一操作。  
@@ -57,10 +57,10 @@ ms.locfileid: "65880223"
 </configuration>  
 ```  
   
- 有关详细信息，请参阅[（ASP.NET 设置架构） compilation 的 assemblies 的 add 元素](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/37e2zyhb(v=vs.100))。  
+ 有关详细信息, 请参阅为[编译程序集添加元素 (ASP.NET 设置架构)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/37e2zyhb(v=vs.100))。  
   
 ## <a name="see-also"></a>请参阅
 
 - [ASP.NET 信任级别和策略文件](https://docs.microsoft.com/previous-versions/aspnet/wyts434y(v=vs.100))
-- [securityPolicy 元素 （ASP.NET 设置架构）](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/zhs35b56(v=vs.100))
-- [事务管理升级](../../../../docs/framework/data/transactions/transaction-management-escalation.md)
+- [Ws-securitypolicy 元素 (ASP.NET 设置架构)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/zhs35b56(v=vs.100))
+- [事务管理升级](transaction-management-escalation.md)

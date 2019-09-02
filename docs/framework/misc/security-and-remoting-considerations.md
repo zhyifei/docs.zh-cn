@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: 125d2ab8-55a4-4e5f-af36-a7d401a37ab0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bb5727bab8e06decde6ccff8b84515f82c3d491a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2d4d3b009e5792685ea39a3bcc2a15e082e1b8de
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910695"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70206096"
 ---
 # <a name="security-and-remoting-considerations"></a>安全性和远程处理注意事项
 利用远程处理，你可以在应用程序域、进程或计算机之间设置透明的调用。 但是，代码访问安全堆栈审核不能跨越进程边界或计算机边界（它确实应用于同一进程的不同应用程序域之间）。  
   
  任何可远程处理的类（从 <xref:System.MarshalByRefObject> 类派生）都需要对安全负责。 要么只将代码用于封闭式安全环境中，在这种环境中可以隐式信任调用代码；要么相应地设计远程处理调用，以免这些调用会让受保护代码受到可能会被恶意使用的外部侵入的影响。  
   
- 通常, 不应公开受声明性[LinkDemand](../../../docs/framework/misc/link-demands.md)和<xref:System.Security.Permissions.SecurityAction.InheritanceDemand>安全检查保护的方法、属性或事件。 使用远程处理时，不会强制执行这些检查。 其他安全检查 (如<xref:System.Security.Permissions.SecurityAction.Demand>、[断言](../../../docs/framework/misc/using-the-assert-method.md)等) 在进程内的应用程序域之间工作, 但不能在跨进程或跨计算机方案中运行。  
+ 通常, 不应公开受声明性[LinkDemand](link-demands.md)和<xref:System.Security.Permissions.SecurityAction.InheritanceDemand>安全检查保护的方法、属性或事件。 使用远程处理时，不会强制执行这些检查。 其他安全检查 (如<xref:System.Security.Permissions.SecurityAction.Demand>、[断言](using-the-assert-method.md)等) 在进程内的应用程序域之间工作, 但不能在跨进程或跨计算机方案中运行。  
   
 ## <a name="protected-objects"></a>受保护的对象  
  某些对象自己保持安全状态。 不应将这些对象传递给不受信任的代码，否则这样的代码将会获得超越其自身权限的安全授权。  

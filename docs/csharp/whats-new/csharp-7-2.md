@@ -2,12 +2,12 @@
 title: C# 7.2 中的新增功能
 description: C# 7.2 中的新增功能概述。
 ms.date: 08/16/2017
-ms.openlocfilehash: 79402c9b569cb6848aaf240d83ba71338d525b35
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: a2010b2bda769a625deb545964a2cc127aaf2e06
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67347415"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105748"
 ---
 # <a name="whats-new-in-c-72"></a>C# 7.2 中的新增功能
 
@@ -20,15 +20,15 @@ C# 7.2 使用[语言版本选择](../language-reference/configure-language-versi
 
 此版本中新增的语言功能包括：
 
-* [编写安全高效代码的技巧](#safe-efficient-code-enhancements)
+- [编写安全高效代码的技巧](#safe-efficient-code-enhancements)
   - 结合了多项语法改进，可使用引用语义处理值类型。
-* [非尾随命名参数](#non-trailing-named-arguments)
+- [非尾随命名参数](#non-trailing-named-arguments)
   - 命名的参数可后接位置参数。
-* [数值文字中的前导下划线](#leading-underscores-in-numeric-literals)
+- [数值文字中的前导下划线](#leading-underscores-in-numeric-literals)
   - 数值文字现可在任何打印数字前放置前导下划线。
-* [`private protected` 访问修饰符](#private-protected-access-modifier)
+- [`private protected` 访问修饰符](#private-protected-access-modifier)
   - `private protected` 访问修饰符允许访问同一程序集中的派生类。
-* [条件 `ref` 表达式](#conditional-ref-expressions)
+- [条件 `ref` 表达式](#conditional-ref-expressions)
   - 现在可以引用条件表达式 (`?:`) 的结果。
 
 本文的其余部分概述了每个功能。 你将了解每项功能背后的原理。 将了解语法。 可以使用 `dotnet try` 全局工具在环境中浏览这些功能：
@@ -63,7 +63,7 @@ C# 7.0 中实现了对数字分隔符的支持，但这不允许文字值的第�
 int binaryValue = 0b_0101_0101;
 ```
 
-## <a name="private-protected-access-modifier"></a>_private protected_ 访问修饰符
+## <a name="_private-protected_-access-modifier"></a>_private protected_ 访问修饰符
 
 新的复合访问修饰符：`private protected` 指示可通过包含同一程序集中声明的类或派生类来访问成员。 虽然 `protected internal` 允许通过同一程序集中的类或派生类进行访问，但 `private protected` 限制对同一程序集中声明的派生类的访问。
 

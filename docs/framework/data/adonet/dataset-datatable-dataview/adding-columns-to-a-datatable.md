@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e85c4a0e-4f3f-458c-b58b-0ddbc06bf974
-ms.openlocfilehash: 77bf117b8835623d768f8b8b0ec3e4195174cad7
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 105537a5fccef6de7266407c78cc915f8c5d8678
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70043953"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204055"
 ---
 # <a name="adding-columns-to-a-datatable"></a>向数据表添加列
 包含由表的**Columns**属性引用的对象的<xref:System.Data.DataColumn>集合。 <xref:System.Data.DataTable> 这个列的集合与任何约束一起定义表的架构（即结构）。  
@@ -44,7 +44,7 @@ workTable.Columns.Add("CustFName", typeof(String));
 workTable.Columns.Add("Purchases", typeof(Double));  
 ```  
   
- 在此示例中, 请注意, **CustID**列的属性设置为不允许**DBNull**值并将值限制为唯一。 但是, 如果将**CustID**列定义为表的主键列, 则**AllowDBNull**属性将自动设置为**false** , 并且**Unique**属性将自动设置为**true**。 有关详细信息, 请参阅[定义主键](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/defining-primary-keys.md)。  
+ 在此示例中, 请注意, **CustID**列的属性设置为不允许**DBNull**值并将值限制为唯一。 但是, 如果将**CustID**列定义为表的主键列, 则**AllowDBNull**属性将自动设置为**false** , 并且**Unique**属性将自动设置为**true**。 有关详细信息, 请参阅[定义主键](defining-primary-keys.md)。  
   
 > [!CAUTION]
 > 如果没有为列提供列名称, 则在将列添加到**DataColumnCollection**时, 将为该列指定递增的默认名称 *(* 以 "Column1" 开头)。 建议在提供列名时避免使用 "Column*N*" 命名约定, 因为所提供的名称可能与**DataColumnCollection**中现有的默认列名冲突。 如果提供的名称已经存在，将引发异常。  
@@ -56,6 +56,6 @@ workTable.Columns.Add("Purchases", typeof(Double));
 - <xref:System.Data.DataColumn>
 - <xref:System.Data.DataColumnCollection>
 - <xref:System.Data.DataTable>
-- [数据表架构定义](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)
-- [数据表](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)
+- [数据表架构定义](datatable-schema-definition.md)
+- [数据表](datatables.md)
 - [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

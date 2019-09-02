@@ -3,12 +3,12 @@ title: 如何安装 ML.NET 命令行接口 (CLI) 工具
 description: ML.NET 命令行接口 (CLI) 工具的概述和安装。
 ms.date: 04/16/2019
 ms.custom: ''
-ms.openlocfilehash: 4888acd10570318ef53dc4b1a5a4ff5d8dc0c99b
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 8b6de466a6cf72b44a16c80fc024671bc4e975e8
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66832924"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106900"
 ---
 # <a name="how-to-install-the-mlnet-command-line-interface-cli-tool"></a>如何安装 ML.NET 命令行接口 (CLI) 工具
 
@@ -25,7 +25,7 @@ ML.NET CLI（命令行接口）是可以在任何命令提示符（Windows、Mac
 
 可以使用 Visual Studio F5 或 `dotnet run` (.NET Core CLI) 运行生成的 C# 代码项目。
 
-注意:如果在安装 [.NET Core 2.2 SDK](https://dotnet.microsoft.com/download/dotnet-core/2.2) 后，`dotnet tool` 命令不起作用，请从 Windows 注销并再次登录。
+注意：如果在安装 [.NET Core 2.2 SDK](https://dotnet.microsoft.com/download/dotnet-core/2.2) 后，`dotnet tool` 命令不起作用，请从 Windows 注销并再次登录。
 
 ## <a name="install"></a>安装
 
@@ -106,9 +106,9 @@ Tab 自动补全工作原理的示例如以下动画所示：
 
 2. 将适当的填充码脚本添加到 shell 配置文件中。 可能必须创建一个 shell 配置文件。 填充码脚本会将补全请求从 shell 转发到 `dotnet-suggest` 工具，其会委托到相应的基于 `System.CommandLine` 的应用。
 
-    * 对于 bash，将 [dotnet-suggest-shim.bash](https://github.com/dotnet/System.CommandLine/blob/master/src/System.CommandLine.Suggest/dotnet-suggest-shim.bash) 的内容添加到 `~/.bash_profile`。
+    - 对于 bash，将 [dotnet-suggest-shim.bash](https://github.com/dotnet/System.CommandLine/blob/master/src/System.CommandLine.Suggest/dotnet-suggest-shim.bash) 的内容添加到 `~/.bash_profile`。
 
-    * 对于 PowerShell，将 [dotnet-suggest-shim.ps1](https://github.com/dotnet/System.CommandLine/blob/master/src/System.CommandLine.Suggest/dotnet-suggest-shim.ps1) 的内容添加到 PowerShell 配置文件中。 可以通过在控制台中运行以下命令来查找 PowerShell 配置文件的预期路径：
+    - 对于 PowerShell，将 [dotnet-suggest-shim.ps1](https://github.com/dotnet/System.CommandLine/blob/master/src/System.CommandLine.Suggest/dotnet-suggest-shim.ps1) 的内容添加到 PowerShell 配置文件中。 可以通过在控制台中运行以下命令来查找 PowerShell 配置文件的预期路径：
 
     ```console
     echo $profile

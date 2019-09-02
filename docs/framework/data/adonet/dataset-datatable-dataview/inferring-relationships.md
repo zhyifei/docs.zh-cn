@@ -2,15 +2,15 @@
 title: 推断关系
 ms.date: 03/30/2017
 ms.assetid: 8fa86a9d-6545-4a9d-b1f5-58d9742179c7
-ms.openlocfilehash: f8a9aba493dfe82466608ea60932ddfec5ef64f1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 92a4953dc7f5119ffbf171ff2a7bf5b58e896638
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879666"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204767"
 ---
 # <a name="inferring-relationships"></a>推断关系
-如果被推断为表的元素具有一个同样被推断为表的子元素，则将在这两个表之间创建 <xref:System.Data.DataRelation>。 名称的新列**ParentTableName_Id**将添加到父元素中，创建的表和子元素创建的表。 **ColumnMapping**此标识列的属性将设置为**MappingType.Hidden**。 列将为父表中，已自动递增主关键字和将用于**DataRelation**两个表之间。 添加的标识列的数据类型将是**System.Int32**，这是与所有其他推断列的数据类型，不同**System.String**。 一个<xref:System.Data.ForeignKeyConstraint>与**DeleteRule** = **级联**还将在父和子表中使用新的列创建。  
+如果被推断为表的元素具有一个同样被推断为表的子元素，则将在这两个表之间创建 <xref:System.Data.DataRelation>。 名称为**ParentTableName_Id**的新列将添加到为父元素创建的表和为子元素创建的表中。 此标识列的**ColumnMapping**属性将设置为**mappingtype.attribute**。 列将是父表的自动递增主键, 并将用于这两个表之间的**DataRelation** 。 添加的标识列的数据类型将为 system.exception, 这与所有其他推断列的数据类型不同, 后者为**system.string**。 还<xref:System.Data.ForeignKeyConstraint>将使用父表和子表中的新列来创建具有**DeleteRule** = **级联**的。  
   
  例如，考虑以下 XML：  
   
@@ -23,58 +23,58 @@ ms.locfileid: "61879666"
 </DocumentElement>  
 ```  
   
- 推理过程将生成两个表：**Element1**并**ChildElement1**。  
+ 推理过程将生成两个表：**Element1**和**ChildElement1**。  
   
- **Element1**表具有两个列：**Element1_Id**并**ChildElement2**。 **ColumnMapping**的属性**Element1_Id**列将设置为**MappingType.Hidden**。 **ColumnMapping**的属性**ChildElement2**列将设置为**MappingType.Element**。 **Element1_Id**列将设置为的主键**Element1**表。  
+ **Element1**表包含两列:**Element1_Id**和**ChildElement2**。 **Element1_Id**列的**ColumnMapping**属性将设置为**mappingtype.attribute**。 **ChildElement2**列的**ColumnMapping**属性将设置为**mappingtype.attribute**。 **Element1_Id**列将设置为**Element1**表的主键。  
   
- **ChildElement1**表具有三个列： **attr1**， **attr2**并**Element1_Id**。 **ColumnMapping**属性**attr1**并**attr2**列将设置为**MappingType.Attribute**。 **ColumnMapping**的属性**Element1_Id**列将设置为**MappingType.Hidden**。  
+ **ChildElement1**表包含三列: **attr1**、 **attr2**和**Element1_Id**。 **Attr1**和**Attr2**列的**ColumnMapping**属性将设置为**mappingtype.attribute**。 **Element1_Id**列的**ColumnMapping**属性将设置为**mappingtype.attribute**。  
   
- 一个**DataRelation**并**ForeignKeyConstraint**将使用创建**Element1_Id**这两个表中的列。  
+ 将使用两个表中的**Element1_Id**列创建**DataRelation**和**ForeignKeyConstraint** 。  
   
- **数据集：** DocumentElement  
+ **集会**DocumentElement  
   
- **表：** Element1  
+ **数据表**Element1  
   
 |Element1_Id|ChildElement2|  
 |------------------|-------------------|  
 |0|Text2|  
   
- **表：** ChildElement1  
+ **数据表**ChildElement1  
   
 |attr1|attr2|Element1_Id|  
 |-----------|-----------|------------------|  
 |value1|value2|0|  
   
- **DataRelation:** Element1_ChildElement1  
+ **DataRelation**Element1_ChildElement1  
   
- **ParentTable:** Element1  
+ **ParentTable**Element1  
   
- **ParentColumn:** Element1_Id  
+ **ParentColumn**Element1_Id  
   
- **ChildTable:** ChildElement1  
+ **ChildTable**ChildElement1  
   
- **ChildColumn:** Element1_Id  
+ **ChildColumn**Element1_Id  
   
- **嵌套：** True  
+ **嵌**True  
   
- **ForeignKeyConstraint:** Element1_ChildElement1  
+ **ForeignKeyConstraint**Element1_ChildElement1  
   
- **列：** Element1_Id  
+ **该列**Element1_Id  
   
- **ParentTable:** Element1  
+ **ParentTable**Element1  
   
- **ChildTable:** ChildElement1  
+ **ChildTable**ChildElement1  
   
- **DeleteRule:** Cascade  
+ **DeleteRule**Cascade  
   
- **AcceptRejectRule:** None  
+ **AcceptRejectRule**无  
   
 ## <a name="see-also"></a>请参阅
 
-- [从 XML 推断数据集关系结构](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)
-- [从 XML 加载数据集](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)
-- [从 XML 加载数据集构架信息](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)
-- [嵌套 DataRelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)
-- [在数据集中使用 XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
-- [数据集、数据表和数据视图](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [从 XML 推断数据集关系结构](inferring-dataset-relational-structure-from-xml.md)
+- [从 XML 加载数据集](loading-a-dataset-from-xml.md)
+- [从 XML 加载数据集构架信息](loading-dataset-schema-information-from-xml.md)
+- [嵌套 DataRelation](nesting-datarelations.md)
+- [在数据集中使用 XML](using-xml-in-a-dataset.md)
+- [数据集、数据表和数据视图](index.md)
 - [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

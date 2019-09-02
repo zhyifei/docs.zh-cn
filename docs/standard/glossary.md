@@ -3,12 +3,12 @@ title: .NET 术语表
 description: 了解 .NET 文档中所用的选定术语的含义。
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 2d19ec0b79abdcce9797767d1280d055a9c77a87
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: caff1ee4c8e3ad133016b774fdb235bd1ef59637
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674505"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106926"
 ---
 # <a name="net-glossary"></a>.NET 术语表
 
@@ -36,11 +36,11 @@ ms.locfileid: "57674505"
 
 请参阅 [ASP.NET Core 文档](/aspnet/#pivot=core)。
 
-## <a name="assembly"></a>程序集
+## <a name="assembly"></a>程序集 (assembly)
 
-.dll/.exe 文件，其中包含一组可由应用程序或其他程序集调用的 API。
+.dll  /.exe  文件，其中包含一组可由应用程序或其他程序集调用的 API。
 
-程序集可以包括接口、类、结构、枚举和委托等类型。 有时，项目的 bin 文件夹中的程序集被称为二进制文件。 另请参阅[库](#library)。
+程序集可以包括接口、类、结构、枚举和委托等类型。 有时，项目的 bin  文件夹中的程序集被称为二进制文件  。 另请参阅[库](#library)。
 
 ## <a name="clr"></a>CLR
 
@@ -85,9 +85,9 @@ ms.locfileid: "57674505"
 一般指一个综合 API 集合，便于开发和部署基于特定技术的应用程序。 从此常规意义上来说，ASP.NET Core 和 Windows 窗体都是示例应用程序框架。 另请参阅[库](#library)。
 
 “框架”一词在以下术语中有更具体的技术含义：
-* [.NET Framework](#net-framework)
-* [目标框架](#target-framework)
-* [TFM（目标框架名字对象）](#tfm)
+- [.NET Framework](#net-framework)
+- [目标框架](#target-framework)
+- [TFM（目标框架名字对象）](#tfm)
 
 在现有的文档中，“框架”有时指 [.NET 的实现](#implementation-of-net)。 例如，某文章可能会将 .NET Core 称为框架。 我们计划从文档中去掉这种令人困惑的用法。
 
@@ -170,7 +170,7 @@ Mono 通常与实时编译器一起使用，但它也提供在 iOS 之类的平�
 
 ## <a name="net-core-sdk"></a>.NET Core SDK
 
-一组库和工具，开发人员可用其创建 .NET Core 应用程序和库。 包括用于生成应用的 [.NET Core CLI](#net-core-cli)、用于生成和运行应用的 .NET Core 库以及运行 CLI 命令和运行应用程序的 dotnet 可执行文件 (dotnet.exe)。
+一组库和工具，开发人员可用其创建 .NET Core 应用程序和库。 包括用于生成应用的 [.NET Core CLI](#net-core-cli)、用于生成和运行应用的 .NET Core 库以及运行 CLI 命令和运行应用程序的 dotnet 可执行文件 (dotnet.exe  )。
 
 请参阅 [.NET Core SDK 概述](../core/sdk.md)。
 
@@ -206,9 +206,9 @@ UWP 是 .NET Native 支持的首个应用程序框架。 现在，我们支持�
 
 ## <a name="package"></a>包
 
-NuGet 包 &mdash; 或只是一个包 &mdash; 是一个 .zip 文件，其中具有一个或多个名称相同的程序集以及作者姓名等其他元数据。
+NuGet 包 &mdash; 或只是一个包 &mdash; 是一个 .zip  文件，其中具有一个或多个名称相同的程序集以及作者姓名等其他元数据。
 
-.zip 文件的扩展名为 .nupkg，且可以包含在多个目标框架和版本中使用的资产（如 .dll 文件和 .xml 文件）。 在应用或库中安装时，会根据应用或库指定的目标框架选择相应的资产。 定义接口的资产位于 ref 文件夹，而定义实现的资产位于 lib文件夹。
+.zip  文件的扩展名为 .nupkg  ，且可以包含在多个目标框架和版本中使用的资产（如 .dll  文件和 .xml  文件）。 在应用或库中安装时，会根据应用或库指定的目标框架选择相应的资产。 定义接口的资产位于 ref  文件夹，而定义实现的资产位于 lib  文件夹。
 
 ## <a name="platform"></a>平台
 

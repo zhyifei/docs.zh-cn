@@ -2,18 +2,18 @@
 title: 异步程序中的控制流 (C#)
 ms.date: 07/20/2015
 ms.assetid: fc92b08b-fe1d-4d07-84ab-5192fafe06bb
-ms.openlocfilehash: 8adf4bcf193d9fa8d7335996539933ce71282bac
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 99f80a86f14179c5f270064a9f96e35f8611ef13
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69595848"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204443"
 ---
 # <a name="control-flow-in-async-programs-c"></a>异步程序中的控制流 (C#)
 
 可以使用 `async` 和 `await` 关键字更加轻松地编写和维护异步程序。 但是，如果不了解程序的运行方式，结果可能会让你大吃一惊。 此主题通过一个简单的异步程序跟踪控制流，以显示控制从一种方法移动到另一种方法的情况，以及每次所传输的信息。
 
-一般情况下，使用 [async (C#)](../../../language-reference/keywords/async.md) 修饰符标记包含异步代码的方法。 在使用 async 修饰符标记的方法中，可以使用 [await (C#)](../../../language-reference/keywords/await.md) 运算符来指定暂停该方法以等待调用的异步进程完成的位置。 有关详细信息，请参阅[使用 Async 和 Await 的异步编程 (C#)](./index.md)。
+一般情况下，使用 [async (C#)](../../../language-reference/keywords/async.md) 修饰符标记包含异步代码的方法。 在使用 async 修饰符标记的方法中，可以使用 [await (C#)](../../../language-reference/operators/await.md) 运算符来指定暂停该方法以等待调用的异步进程完成的位置。 有关详细信息，请参阅[使用 Async 和 Await 的异步编程 (C#)](./index.md)。
 
 下面的示例使用异步方法以字符串的形式下载指定网站的内容，并显示该字符串的长度。 此示例包含以下两种方法。
 
@@ -60,7 +60,7 @@ public partial class MainWindow : Window
 
 每个标记位置（“1”到“6”）显示有关该程序的当前状态的信息。 将生成以下输出：
 
-```text
+```output
 ONE:   Entering startButton_Click.
            Calling AccessTheWebAsync.
 
@@ -240,7 +240,7 @@ Length of the downloaded string: 33946.
 
     将显示以下输出：
 
-    ```text
+    ```output
     ONE:   Entering startButton_Click.
                Calling AccessTheWebAsync.
 
@@ -292,7 +292,7 @@ Task<string> getStringTask = client.GetStringAsync("https://msdn.microsoft.com")
 
  可以将任务视为 `client.GetStringAsync` 的一个承诺，用于最终生成实际字符串。 同时，如果 `AccessTheWebAsync` 有要执行的工作，且该工作不依赖于 `client.GetStringAsync` 中承诺的字符串，则可在 `client.GetStringAsync` 等待时继续此工作。 在示例中，以下标记为“3”的输出行表示执行独立工作的机会
 
-```
+```output
 THREE: Back in AccessTheWebAsync.
            Task getStringTask is started.
            About to await getStringTask & return a Task<int> to startButton_Click.
@@ -327,7 +327,7 @@ Task<int> getLengthTask = AccessTheWebAsync();
 
  如 `AccessTheWebAsync` 中一样，`startButton_Click` 可以继续执行不依赖于异步任务 (`getLengthTask`) 的结果的工作，直到该任务处于等待状态。 下面的输出行表示该工作。
 
-```
+```output
 FOUR:  Back in startButton_Click.
            Task getLengthTask is started.
            About to await getLengthTask -- no caller to return to.
@@ -347,7 +347,7 @@ int contentLength = await getLengthTask;
 
 当 `client.GetStringAsync` 指示它已完成时，`AccessTheWebAsync` 中的处理将从挂起状态释放，且可以继续通过 await 语句。 下面的输出行表示继续处理。
 
-```
+```output
 FIVE:  Back in AccessTheWebAsync.
            Task getStringTask is complete.
            Processing the return statement.
@@ -368,7 +368,7 @@ FIVE:  Back in AccessTheWebAsync.
 
 下面的输出行表示 `startButton_Async` 中处理的恢复：
 
-```
+```output
 SIX:   Back in startButton_Click.
            Task getLengthTask is finished.
            Result from AccessTheWebAsync is stored in contentLength.

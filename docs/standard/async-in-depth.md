@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
-ms.openlocfilehash: 6f1900eaabafe2931d88959bf79bf4ca1f5bc98b
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 91fd37ce329c03b43b5472e4579be7f5ef961738
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666585"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70169106"
 ---
 # <a name="async-in-depth"></a>深入了解异步
 
@@ -21,8 +21,8 @@ ms.locfileid: "69666585"
 
 任务是用于实现称之为[并发 Promise 模型](https://en.wikipedia.org/wiki/Futures_and_promises)的构造。  简单地说，它们“承诺”，会在稍后完成工作，让你使用干净的 API 与 promise 协作。
 
-* `Task` 表示不返回值的单个操作。
-* `Task<T>` 表示返回 `T` 类型的值的单个操作。
+- `Task` 表示不返回值的单个操作。
+- `Task<T>` 表示返回 `T` 类型的值的单个操作。
 
 请务必将任务理解为工作的异步抽象，而非  在线程之上的抽象。 默认情况下，任务在当前线程上执行，且在适当时会将工作委托给操作系统。 可选择性地通过 `Task.Run` API 显式请求任务在独立线程上运行。
 
@@ -90,9 +90,9 @@ public async Task<string> GetFirstCharactersCountAsync(string url, int count)
 
 0-1————————————————————————————————————————————————–2-3
 
-* 从点 `0` 到 `1` 所花费时间很长，直到异步方法将控制让步于其调用方才结束。
-* 从点 `1` 到点 `2` 所用时间是花费在 I/O 上的时间，且 CPU 没有耗时。
-* 最后，点 `2` 到点 `3` 所花费时间用于将控制（和可能的值）传递回异步方法，此时将再次执行。
+- 从点 `0` 到 `1` 所花费时间很长，直到异步方法将控制让步于其调用方才结束。
+- 从点 `1` 到点 `2` 所用时间是花费在 I/O 上的时间，且 CPU 没有耗时。
+- 最后，点 `2` 到点 `3` 所花费时间用于将控制（和可能的值）传递回异步方法，此时将再次执行。
 
 ### <a name="what-does-this-mean-for-a-server-scenario"></a>这对服务器方案而言意味着什么？
 

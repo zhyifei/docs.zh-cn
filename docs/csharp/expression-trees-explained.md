@@ -3,12 +3,12 @@ title: 表达式树说明
 description: 了解有关表达式树的信息，及其它们在转换外部执行的算法与在执行代码前检查代码方面的用处。
 ms.date: 06/20/2016
 ms.assetid: bbcdd339-86eb-4ae5-9911-4c214a39a92d
-ms.openlocfilehash: 3bad826bb58ff361688d3e13497343661e7edbd3
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: c5d4b2ad54fab547567d430f11a31542a11d03f3
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613416"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70104799"
 ---
 # <a name="expression-trees-explained"></a>表达式树说明
 
@@ -33,11 +33,11 @@ var sum = 1 + 2;
 直观地看，整个语句是一个树：应从根节点开始，遍历到树中的每个节点，以查看构成语句的代码：
 
 - 具有赋值 (`var sum = 1 + 2;`) 的变量声明语句
-  * 隐式变量类型声明 (`var sum`)
+  - 隐式变量类型声明 (`var sum`)
     - 隐式 var 关键字 (`var`)
     - 变量名称声明 (`sum`)
-  * 赋值运算符 (`=`)
-  * 二进制加法表达式 (`1 + 2`)
+  - 赋值运算符 (`=`)
+  - 二进制加法表达式 (`1 + 2`)
     - 左操作数 (`1`)
     - 加法运算符 (`+`)
     - 右操作数 (`2`)

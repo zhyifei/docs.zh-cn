@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 4eaa6535-d9fe-41a1-91d8-b437cfc16921
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bbf97b3bc72a12f8920e3a3cace3f7c31ed1e71a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d77683dde24eeec5de7f1e541a6cc86f3b0c6617
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910985"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205631"
 ---
 # <a name="code-access-security-basics"></a>代码访问安全性基础知识
 
@@ -32,13 +32,13 @@ ms.locfileid: "69910985"
 
 - **安全类库**:安全类库使用安全要求确保库的调用方有权访问库公开的资源。 例如，安全类库可能具有一种方法，可用于创建一种文件，这种文件要求其调用方具有创建文件的权限。 .NET Framework 由安全类库组成。 你应了解访问你的代码所使用的任何库所需的权限。 有关详细信息, 请参阅本主题后面的[使用安全类库](#secure_library)部分。
 
-- **透明代码**:除了标识特定权限以外, 从 .NET Framework 4 开始, 还必须确定你的代码是否应作为安全透明来运行。 安全透明代码不能调用标识为安全关键的类型或成员。 此规则适用于完全信任的应用程序以及部分受信任的应用程序。 有关详细信息, 请参阅[安全透明代码](../../../docs/framework/misc/security-transparent-code.md)。
+- **透明代码**:除了标识特定权限以外, 从 .NET Framework 4 开始, 还必须确定你的代码是否应作为安全透明来运行。 安全透明代码不能调用标识为安全关键的类型或成员。 此规则适用于完全信任的应用程序以及部分受信任的应用程序。 有关详细信息, 请参阅[安全透明代码](security-transparent-code.md)。
 
 <a name="typesafe_code"></a>
 
 ## <a name="writing-verifiably-type-safe-code"></a>编写可验证类型安全代码
 
-实时 (JIT) 编译会执行一个验证过程以检查代码并尝试确定代码是否为类型安全的。 在验证过程中验证为类型安全的代码称为可*验证的类型安全代码*。 代码可以是类型安全的，但由于验证过程或编译器的限制，代码可能不是可验证类型安全的。 并非所有语言都是类型安全的，而且一些语言编译器（如 Microsoft Visual c + +）无法生成可验证类型安全托管代码。 若要确定你使用的语言编译器是否生成可验证类型安全代码，请参阅编译器的文档。 如果你使用的语言编译器仅在你避免使用某些语言构造时才生成可验证的类型安全代码, 则你可能需要使用[peverify.exe 工具](../../../docs/framework/tools/peverify-exe-peverify-tool.md)来确定你的代码是否可验证类型安全。
+实时 (JIT) 编译会执行一个验证过程以检查代码并尝试确定代码是否为类型安全的。 在验证过程中验证为类型安全的代码称为可*验证的类型安全代码*。 代码可以是类型安全的，但由于验证过程或编译器的限制，代码可能不是可验证类型安全的。 并非所有语言都是类型安全的，而且一些语言编译器（如 Microsoft Visual c + +）无法生成可验证类型安全托管代码。 若要确定你使用的语言编译器是否生成可验证类型安全代码，请参阅编译器的文档。 如果你使用的语言编译器仅在你避免使用某些语言构造时才生成可验证的类型安全代码, 则你可能需要使用[peverify.exe 工具](../tools/peverify-exe-peverify-tool.md)来确定你的代码是否可验证类型安全。
 
 如果安全策略允许代码跳过验证，不是可验证类型安全的代码也可以尝试执行。 但是，由于类型安全是运行时机制隔离程序集必不可少的组成部分，如果代码违反类型安全的规则，就不能可靠地强制实施安全性。 默认情况下，仅当非类型安全的代码来自本地计算机时才允许它运行。 因此，移动代码应是类型安全的。
 
@@ -55,7 +55,7 @@ ms.locfileid: "69910985"
 声明性安全语法使用[特性](../../standard/attributes/index.md)将安全信息放置到代码的[元数据](../../standard/metadata-and-self-describing-components.md)中。 属性可以程序集、类或成员级别放置，以指示你要使用的请求、需求或重写的类型。 请求用于面向公共语言运行时的应用程序，以通知运行时安全系统有关应用程序需要或不想要的权限。 在库中使用要求和重写以帮助保护调用方的资源或重写默认安全行为。
 
 > [!NOTE]
-> 在 .NET Framework 4 中, 对 .NET Framework 安全模型和术语进行了重大更改。 有关这些更改的详细信息, 请参阅[安全更改](../../../docs/framework/security/security-changes.md)。
+> 在 .NET Framework 4 中, 对 .NET Framework 安全模型和术语进行了重大更改。 有关这些更改的详细信息, 请参阅[安全更改](../security/security-changes.md)。
 
 为了使用声明性安全调用，必须初始化权限对象的状态数据，使其表示所需权限的特定形式。 每个内置权限都具有一个属性，会向该属性传递 <xref:System.Security.Permissions.SecurityAction> 枚举来描述你要执行的安全操作的类型。 但是，权限还接受自己独占的自己的参数。
 
@@ -105,7 +105,7 @@ public class MyClass
 
 进行安全调用之前，必须初始化权限对象的状态数据，使其表示所需权限的特定形式。 例如, 在创建<xref:System.Security.Permissions.FileIOPermission>对象时, 可以使用构造函数来初始化**FileIOPermission**对象, 使其表示对所有文件的不受限制的访问权限, 或者不能访问文件。 或者, 你可以使用不同的**FileIOPermission**对象, 传递参数, 这些参数指示你希望对象表示的访问类型 (即读取、追加或写入) 以及希望对象保护的文件。
 
-除了使用命令性安全语法来调用单个安全对象，你还可以使用它来初始化权限集中的一组权限。 例如, 这种方法是在一个方法中对多个权限可靠地执行[assert](../../../docs/framework/misc/using-the-assert-method.md)调用的唯一方法。 使用 <xref:System.Security.PermissionSet> 和 <xref:System.Security.NamedPermissionSet> 类来创建一组权限，然后调用合适的方法来调用所需的安全调用。
+除了使用命令性安全语法来调用单个安全对象，你还可以使用它来初始化权限集中的一组权限。 例如, 这种方法是在一个方法中对多个权限可靠地执行[assert](using-the-assert-method.md)调用的唯一方法。 使用 <xref:System.Security.PermissionSet> 和 <xref:System.Security.NamedPermissionSet> 类来创建一组权限，然后调用合适的方法来调用所需的安全调用。
 
 强制性语法可用于执行需求和重写，但不可用于执行请求。 当初始化权限状态所需的信息仅在运行时变成已知时，你可能会为需求和重写使用命令性语法而不是声明性语法。 例如，如果想确保调用方具有读取某个文件的权限，但直到运行时都不知道该文件的名称，在这种情况下，则使用命令性需求。 当你需要在运行时确定是否存在一个条件以及根据测试结果是否发出安全要求时，也可以选择使用命令性检查而不是声明性检查。
 
@@ -164,8 +164,8 @@ public class MyClass {
 - <xref:System.Security.Permissions.FileIOPermission>
 - <xref:System.Security.NamedPermissionSet>
 - <xref:System.Security.Permissions.SecurityAction>
-- [Assert](../../../docs/framework/misc/using-the-assert-method.md)
-- [代码访问安全性](../../../docs/framework/misc/code-access-security.md)
-- [代码访问安全性基础知识](../../../docs/framework/misc/code-access-security-basics.md)
+- [Assert](using-the-assert-method.md)
+- [代码访问安全性](code-access-security.md)
+- [代码访问安全性基础知识](code-access-security-basics.md)
 - [特性](../../standard/attributes/index.md)
 - [元数据和自描述组件](../../standard/metadata-and-self-describing-components.md)

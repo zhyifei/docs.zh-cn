@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 21266130bd44d45d03f85cdeee9480b7a9944b55
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 303d6790f1e4a42b021de3a214e3e7b44e1a4320
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65876938"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70104635"
 ---
 # <a name="contributing"></a>参与
 
@@ -15,10 +15,10 @@ ms.locfileid: "65876938"
 
 本文档介绍了参与到 [.NET 文档站点](https://docs.microsoft.com/dotnet)上托管的文章和代码示例中的过程。 参与内容可简（更正拼写错误），可繁（编写新文章）。
 
-* [参与流程](#process-for-contributing)
-* [C# 交互式体验](#the-c-interactive-experience)
-* [注意事项](#dos-and-donts)
-* [参与者许可协议](#contributor-license-agreement)
+- [参与流程](#process-for-contributing)
+- [C# 交互式体验](#the-c-interactive-experience)
+- [注意事项](#dos-and-donts)
+- [参与者许可协议](#contributor-license-agreement)
 
 此存储库包含适用于 .NET 的概念文档。 .NET 文档站点建立在多个存储库的基础上，还包括下面这个：
 
@@ -33,9 +33,9 @@ ms.locfileid: "65876938"
 需要对 [Git 和 GitHub.com](https://guides.github.com/activities/hello-world/) 有基本的理解。
 
 **步骤 1：** 对于较小的更改，请跳过此步骤（例如，如果你正在更正一个拼写错误，或者立即打开一个拉取请求来处理在文档中发现的问题）。 如果有意编写新内容或彻底修改现有内容，请打开[问题](https://github.com/dotnet/docs/issues)，描述要执行的操作。
-“文档”文件夹中的内容划分为在目录 (TOC) 中反应的不同部分。 定义主题在 TOC 中的位置。 获取对建议的反馈。
+“文档”  文件夹中的内容划分为在目录 (TOC) 中反应的不同部分。 定义主题在 TOC 中的位置。 获取对建议的反馈。
 
-或
+-或-
 
 还可以从现有问题中进行选择，了解哪些是热门的社区发布内容。 [.NET 社区参与者项目](https://github.com/dotnet/docs/projects/35)列出了许多可用于社区参与者的工作项。 根据你的兴趣和承诺水平，可从以下类别的问题中作出选择：
 
@@ -49,7 +49,7 @@ ms.locfileid: "65876938"
 
 **步骤 2：** 根据需要对 `dotnet/docs`、`dotnet/samples` 或 `dotnet/dotnet-api-docs` 存储库进行分支，并为所做更改创建分支。
 
-对于较小的更改，可以使用 GitHub 的 Web 界面。 只需单击要更改的文件上的“编辑此项目分支中的文件”。 在提交所做的更改时，GitHub 会为你创建新分支。
+对于较小的更改，可以使用 GitHub 的 Web 界面。 只需单击要更改的文件上的“编辑此项目分支中的文件”  。 在提交所做的更改时，GitHub 会为你创建新分支。
 
 **步骤 3：** 对该新分支进行更改。
 
@@ -57,9 +57,9 @@ ms.locfileid: "65876938"
 
 导航到与步骤 1 中为文章确定的 TOC 位置对应的文件夹。
 该文件夹包含该部分中的所有文章的 Markdown 文件。
-如有必要，可以创建一个新文件夹来放置内容文件。 该部分的主要文章称为“index.md”。
-对于图像和其他静态资源，在包含项目的文件夹内创建名为“媒体”的子文件夹（如果尚不存在）。 在“媒体”文件夹中，使用项目名称创建一个子文件夹（索引文件除外）。
-在存储库根目录下的“示例”文件夹中包含更大示例。
+如有必要，可以创建一个新文件夹来放置内容文件。 该部分的主要文章称为“index.md”  。
+对于图像和其他静态资源，在包含项目的文件夹内创建名为“媒体”  的子文件夹（如果尚不存在）。 在“媒体”  文件夹中，使用项目名称创建一个子文件夹（索引文件除外）。
+在存储库根目录下的“示例”  文件夹中包含更大示例。
 
 请务必遵循正确的 Markdown 语法。 有关详细信息，请参阅[风格指南](./styleguide/template.md)。
 
@@ -78,7 +78,7 @@ docs
 
 **步骤 4：** 从分支中将拉取请求 (PR) 提交到 `dotnet/docs/master`。
 
-PR 应始终面向主分支。 你应从不打开面向活动分支的 PR。
+PR 应始终面向主分支  。 你应从不打开面向活动分支的 PR  。
 
 每个 PR 通常应该一次解决一个问题。 PR 可以修改一个或多个文件。 如果要处理不同文件的多个修补程序，最好是使用单独的 PR。
 
@@ -102,15 +102,15 @@ PR 应始终面向主分支。 你应从不打开面向活动分支的 PR。
 
 所有代码都位于 [dotnet/samples](https://github.com/dotnet/samples) 存储库中。 我们正在努力建立一个示例文件夹结构与文档文件夹结构匹配的模型。 我们将遵循如下标准：
 
-- 顶级“代码段”文件夹包含小型、集中式示例代码段。
-- API 参考示例已置于遵循以下模式的文件夹中：代码段/\<语言>/api/\<命名空间>/\<apiname>。
-- 其他顶级文件夹与“文档”存储库中的顶级文件夹匹配。 例如，文档存储库具有“机器学习/教程”文件夹，机器学习教程示例位于“示例/机器学习/教程”文件夹。
+- 顶级“代码段”  文件夹包含小型、集中式示例代码段。
+- API 参考示例已置于遵循以下模式的文件夹中：代码段/\<语言>/api/\<命名空间>/\<apiname>  。
+- 其他顶级文件夹与“文档”  存储库中的顶级文件夹匹配。 例如，文档存储库具有“机器学习/教程”  文件夹，机器学习教程示例位于“示例/机器学习/教程”  文件夹。
 
-此外，“核心”和“标准”文件夹下的所有示例都应在 .NET Core 支持的所有平台上构建和运行。 我们的 CI 生成系统会强制此要求。 顶级“框架”文件夹包含仅在 Windows 上生成和验证的示例。
+此外，“核心”  和“标准”  文件夹下的所有示例都应在 .NET Core 支持的所有平台上构建和运行。 我们的 CI 生成系统会强制此要求。 顶级“框架”  文件夹包含仅在 Windows 上生成和验证的示例。
 
 我们可以在文档存储库添加新内容时扩展这些目录。 例如，我们将添加 Xamarin 目录，如 `xamarin-ios` 和 `xamarin-android` 目录。
 
-创建的每个完整示例都应包含“readme.md”文件。 此文件应包含示例的简短说明（一个或两个段落）。 “readme.md”应告知读者通过研究此示例他们将了解到的内容。 “Readme.md”文件还应包含到 [.NET 文档站点](https://docs.microsoft.com/dotnet/welcome)上实时文档的链接。
+创建的每个完整示例都应包含“readme.md”  文件。 此文件应包含示例的简短说明（一个或两个段落）。 “readme.md”  应告知读者通过研究此示例他们将了解到的内容。 “Readme.md”  文件还应包含到 [.NET 文档站点](https://docs.microsoft.com/dotnet/welcome)上实时文档的链接。
 要确定存储库中给定文件映射到该站点的位置，请将存储库路径中的 `/docs` 替换为 `https://docs.microsoft.com/dotnet`。
 
 主题还将包含该示例的链接。 直接链接到 GitHub 上的示例文件夹。
@@ -139,12 +139,12 @@ C# 交互式体验改变了我们使用示例的方式。 访问者可以运行�
 
 以下列表显示了一些指导规则，当你参与 .NET 文档时应牢记其中的内容：
 
-- 请勿发出大型拉取请求。 可以提出问题并发起讨论，以便我们在你花费大量时间前确定方向。
-- 请务必阅读[风格指南](./styleguide/template.md)以及[语气和语调](./styleguide/voice-tone.md)指南。
-- 请务必使用[模板](./styleguide/template.md)文件作为工作的起点。
-- 请务必在处理文章前，在分叉上创建一个单独的分支。
-- 请务必遵循 [GitHub 流工作流](https://guides.github.com/introduction/flow/)。
-- 请务必在博客和推文（或任何社交软件上）频繁地发布你的参与内容！
+- 请勿  发出大型拉取请求。 可以提出问题并发起讨论，以便我们在你花费大量时间前确定方向。
+- 请务必阅读[风格指南](./styleguide/template.md)以及[语气和语调](./styleguide/voice-tone.md)指南  。
+- 请务必使用[模板](./styleguide/template.md)文件作为工作的起点  。
+- 请务必在处理文章前，在分叉上创建一个单独的分支  。
+- 请务必遵循 [GitHub 流工作流](https://guides.github.com/introduction/flow/)  。
+- 请务必在博客和推文（或任何社交软件上）频繁地发布你的参与内容  ！
 
 > 注意：你或许会注意到某些主题目前并没有遵循此处指定的所有准则和[风格指南](./styleguide/template.md)。 我们正努力实现整个站点的一致性。 请查看我们当前正在跟踪的有关此特定目标的[未解决问题](https://github.com/dotnet/docs/issues?q=is%3Aissue+is%3Aopen+label%3Aguidelines-adherence)列表。
 

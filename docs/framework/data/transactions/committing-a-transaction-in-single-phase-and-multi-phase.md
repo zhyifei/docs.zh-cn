@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 694ea153-e4db-41ae-96ac-9ac66dcb69a9
-ms.openlocfilehash: cbe00fb792ab5f2a7586a958ddbe5bdf004656dc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2abb9c13e9b0cb394546252e0e51e53c8ff9eefb
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61875961"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205998"
 ---
 # <a name="committing-a-transaction-in-single-phase-and-multi-phase"></a>在单阶段和多阶段中提交事务
-事务中所使用的每个资源都由资源管理器 (RM) 进行管理，而资源管理器的操作则由事务管理器 (TM) 进行协调。 [将资源登记为参与者在事务中](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md)主题将讨论如何在事务中登记一个资源 （或多个资源）。 本主题讨论如何在已登记的资源之间协调事务提交。  
+事务中所使用的每个资源都由资源管理器 (RM) 进行管理，而资源管理器的操作则由事务管理器 (TM) 进行协调。 在[事务主题中将资源登记为参与者](enlisting-resources-as-participants-in-a-transaction.md)讨论了如何在事务中登记一个资源 (或多个资源)。 本主题讨论如何在已登记的资源之间协调事务提交。  
   
  在事务结束时，应用程序会请求提交或回滚该事务。 事务管理器必须消除类似于以下的风险：有些资源管理器投票决定提交，而有些资源管理器却投票决定回滚事务。  
   
- 如果事务涉及到多个资源，则必须执行两阶段提交 (2PC)。 两阶段提交协议（准备阶段和提交阶段）可确保在事务结束时，会完全提交或完全回滚对所有资源的所有更改。 然后，会向所有参与者通知最终结果。 有关两阶段提交协议的详细讨论，请参阅此书"*事务处理：概念和技术 （数据管理系统中的 Morgan Kaufmann 系列） ISBN:1558601902*"通过 Jim Gray。  
+ 如果事务涉及到多个资源，则必须执行两阶段提交 (2PC)。 两阶段提交协议（准备阶段和提交阶段）可确保在事务结束时，会完全提交或完全回滚对所有资源的所有更改。 然后，会向所有参与者通知最终结果。 有关两阶段提交协议的详细讨论, 请参阅 "*事务处理:概念和技术 (数据管理系统中的 Morgan Kaufmann 系列) ISBN:* 1558601902 "为 Jim 灰色。  
   
- 此外，还可以通过参与单阶段提交协议来优化事务的性能。 有关详细信息，请参阅[优化使用 Single Phase Commit and Promotable Single Phase Notification](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md)。  
+ 此外，还可以通过参与单阶段提交协议来优化事务的性能。 有关详细信息, 请参阅[使用单阶段提交和可提升的单阶段通知的优化](optimization-spc-and-promotable-spn.md)。  
   
  如果只希望得到事务结果的通知，而不希望参与投票，则应注册 <xref:System.Transactions.Transaction.TransactionCompleted> 事件。  
   
@@ -107,9 +107,9 @@ public void InDoubt (Enlistment enlistment)
 ```  
   
 ## <a name="single-phase-commit-optimization"></a>单阶段提交优化  
- 单阶段提交协议在运行时更有效，因为使用它，无需进行任何显式协调就可执行所有更新。 有关此协议的详细信息，请参阅[优化使用 Single Phase Commit and Promotable Single Phase Notification](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md)。  
+ 单阶段提交协议在运行时更有效，因为使用它，无需进行任何显式协调就可执行所有更新。 有关此协议的详细信息, 请参阅[使用单阶段提交和可提升的单阶段通知进行优化](optimization-spc-and-promotable-spn.md)。  
   
 ## <a name="see-also"></a>请参阅
 
-- [使用单阶段提交和可提升的单阶段通知进行优化](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md)
-- [在事务中将资源登记为参与者](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md)
+- [使用单阶段提交和可提升的单阶段通知进行优化](optimization-spc-and-promotable-spn.md)
+- [在事务中将资源登记为参与者](enlisting-resources-as-participants-in-a-transaction.md)

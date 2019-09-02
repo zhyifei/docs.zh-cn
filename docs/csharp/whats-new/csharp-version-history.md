@@ -3,12 +3,12 @@ title: C# 发展历史 - C# 指南
 description: 这些语言在最早版本中是什么样的，它又是如何演化的？
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 8230efcbcdd67cc99f321efc6509df3665d9f2f7
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 9962dcb0192fb27ff21b24e985a6a897703720c7
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363877"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105684"
 ---
 # <a name="the-history-of-c"></a>C\# 发展历史
 
@@ -19,11 +19,11 @@ ms.locfileid: "68363877"
 
 C# 生成工具将最新的主要语言版本视为默认语言版本。 主要版本之间可能有单点修正发行版。有关详细信息，请参阅本节中的其他文章。 若要使用单点版本中的最新功能，需要[配置编译器语言版本](../language-reference/configure-language-version.md)并选择版本。 自 C# 7.0 起，已有三个单点修正发行版：
 
-* [C# 7.3](csharp-7-3.md)：
+- [C# 7.3](csharp-7-3.md)：
   - 自 [Visual Studio 2017 版本 15.7](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) 和 [.NET Core 2.1 SDK](../../core/whats-new/dotnet-core-2-1.md) 起，开始随附 C# 7.3。
-* [C# 7.2](csharp-7-2.md)：
+- [C# 7.2](csharp-7-2.md)：
   - 自 [Visual Studio 2017 版本 15.5](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) 和 [.NET Core 2.0 SDK](../../core/whats-new/dotnet-core-2-0.md) 起，开始随附 C# 7.2。
-* [C# 7.1](csharp-7-1.md)：
+- [C# 7.1](csharp-7-1.md)：
   - 自 [Visual Studio 2017 版本 15.3](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) 和 [.NET Core 2.0 SDK](../../core/whats-new/dotnet-core-2-0.md) 起，开始随附 C# 7.1。
 
 ## <a name="c-version-10"></a>C# 1.0 版
@@ -124,7 +124,7 @@ C# 5.0 版是该语言有针对性的一个版本。 对此版本中所做的几
 
 ### <a name="see-also"></a>另请参阅
 
-* [代码工程：C# 5.0 中的调用方信息属性](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp)
+- [代码工程：C# 5.0 中的调用方信息属性](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp)
 
 调用方信息特性让你可以轻松检索上下文的信息，不需要采用大量样本反射代码。 这在诊断和日志记录任务中也很有用。
 

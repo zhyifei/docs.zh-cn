@@ -4,12 +4,12 @@ description: 概述：介绍 .NET Core 全局工具及其适用的 .NET Core CLI
 author: KathleenDollard
 ms.date: 05/29/2018
 ms.custom: seodec18
-ms.openlocfilehash: 29499d28629e483d66e25b8ecdbd5817effba439
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 9ff7e33a50eb0c5fb649b44dda6d72412a134584
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65631740"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70202587"
 ---
 # <a name="net-core-global-tools-overview"></a>.NET Core 全局工具概述
 
@@ -63,7 +63,7 @@ dotnet tool install -g <package-name> --version <version-number>
 
 如果安装成功，会出现一条消息，显示用于调用工具的命令以及所安装的版本，类似于以下示例：
 
-```
+```output
 You can invoke the tool using the following command: dotnetsay
 Tool 'dotnetsay' (version '2.0.0') was successfully installed.
 ```
@@ -129,7 +129,7 @@ dotnet --list-runtimes
 .NET Core CLI 在首次使用时尝试将默认位置添加到 PATH 环境变量。 但是，在某些情况下，位置不会自动添加至 PATH，例如：
 
 * 如果已设置 `DOTNET_SKIP_FIRST_TIME_EXPERIENCE` 环境变量。
-* 如果已在 macOS 上使用 .tar.gz 文件（而不是 .pkg）安装了 .NET Core SDK。
+* 如果已在 macOS 上使用 .tar.gz 文件（而不是 .pkg）安装了 .NET Core SDK   。
 * 在 Linux 上，需要编辑 shell 环境文件来配置 PATH。
 
 ## <a name="other-cli-commands"></a>其他 CLI 命令

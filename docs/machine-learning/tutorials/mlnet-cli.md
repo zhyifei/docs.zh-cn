@@ -6,12 +6,12 @@ ms.author: cesardl
 ms.date: 04/24/2019
 ms.custom: mvc
 ms.topic: tutorial
-ms.openlocfilehash: 403b1759164d588cb5af49c6cb05e001b030235f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c0e188286821f0e3822fde4af74a1561edfbb868
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963603"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70107277"
 ---
 # <a name="auto-generate-a-binary-classifier-using-the-cli"></a>使用 CLI 自动生成二元分类器
 
@@ -19,11 +19,11 @@ ms.locfileid: "69963603"
 
 在本教程中，将执行以下步骤：
 > [!div class="checklist"]
-> * 为选定的机器学习任务准备数据
-> * 从 CLI 运行“mlnet auto-train”命令
-> * 查看质量指标结果
-> * 了解生成的 C# 代码，以在应用程序中使用模型
-> * 探索生成用于训练模型的 C# 代码
+> - 为选定的机器学习任务准备数据
+> - 从 CLI 运行“mlnet auto-train”命令
+> - 查看质量指标结果
+> - 了解生成的 C# 代码，以在应用程序中使用模型
+> - 探索生成用于训练模型的 C# 代码
 
 > [!NOTE]
 > 本主题涉及目前处于预览状态的 ML.NET CLI 工具，且材料可能会有所变化。 有关详细信息，请访问 [ML.NET 简介](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet)。
@@ -259,11 +259,11 @@ ML.NET CLI 是 ML.NET 的一部分，其主要目标是在学习 ML.NET 时为 .
 
 在本教程中，你将了解：
 > [!div class="checklist"]
-> * 为选定 ML 任务（要解决的问题）准备数据
-> * 在 CLI 工具中运行“mlnet auto-train”命令
-> * 查看质量指标结果
-> * 了解生成用于运行模型的 C# 代码（用于最终用户应用的代码）
-> * 探索生成用于训练“最佳质量”模型的 C# 代码（学习目的）
+> - 为选定 ML 任务（要解决的问题）准备数据
+> - 在 CLI 工具中运行“mlnet auto-train”命令
+> - 查看质量指标结果
+> - 了解生成用于运行模型的 C# 代码（用于最终用户应用的代码）
+> - 探索生成用于训练“最佳质量”模型的 C# 代码（学习目的）
 
 > [!div class="nextstepaction"]
 > [使用 ML.NET CLI 自动进行模型训练](../automate-training-with-cli.md)

@@ -11,24 +11,24 @@ helpviewer_keywords:
 ms.assetid: dd66cd4c-b087-415f-9c3e-94e3a1835f74
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e08cb1b3f4708b4314f0cd663f70fa10aaa1aded
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 50428e4e28df812a3a0c985d0d1876dab7b5279c
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910687"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70206027"
 ---
 # <a name="using-libraries-from-partially-trusted-code"></a>通过部分受信任的代码使用库
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
 > [!NOTE]
-> 本主题介绍强名称程序集的行为, 并且仅适用于[第1级](../../../docs/framework/misc/security-transparent-code-level-1.md)程序集。 [安全透明代码、](../../../docs/framework/misc/security-transparent-code-level-2.md) .NET Framework 4 或更高版本中的级别2程序集不受强名称的影响。 有关安全系统更改的详细信息, 请参阅[安全更改](../../../docs/framework/security/security-changes.md)。  
+> 本主题介绍强名称程序集的行为, 并且仅适用于[第1级](security-transparent-code-level-1.md)程序集。 [安全透明代码、](security-transparent-code-level-2.md) .NET Framework 4 或更高版本中的级别2程序集不受强名称的影响。 有关安全系统更改的详细信息, 请参阅[安全更改](../security/security-changes.md)。  
   
- 不允许未从其主机或沙盒获取完全信任的应用程序调用共享的托管库，除非库编写器明确允许它们使用 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> 特性。 因此，应用程序编写器必须注意某些库在部分受信任的上下文中将不可用。 默认情况下, 在部分信任[沙箱](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)中执行且不在完全信任程序集列表中的所有代码都是部分受信任的程序集。 如果不希望从部分受信任的上下文中执行或由部分受信任的代码调用自己的代码，则不必关心此部分的信息。 但是，如果所编写的代码必须与部分受信任的代码进行交互或从部分受信任的上下文环境进行操作，则应考虑以下因素：  
+ 不允许未从其主机或沙盒获取完全信任的应用程序调用共享的托管库，除非库编写器明确允许它们使用 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> 特性。 因此，应用程序编写器必须注意某些库在部分受信任的上下文中将不可用。 默认情况下, 在部分信任[沙箱](how-to-run-partially-trusted-code-in-a-sandbox.md)中执行且不在完全信任程序集列表中的所有代码都是部分受信任的程序集。 如果不希望从部分受信任的上下文中执行或由部分受信任的代码调用自己的代码，则不必关心此部分的信息。 但是，如果所编写的代码必须与部分受信任的代码进行交互或从部分受信任的上下文环境进行操作，则应考虑以下因素：  
   
 - 为了方便多个应用程序共享库，则必须使用强名称对库进行签名。 强名称允许你的代码可放入全局程序集缓存中或添加到沙盒处理 <xref:System.AppDomain> 的完全信任列表，并允许使用者验证实际来自你的移动代码的特定部分。  
   
-- 默认情况下, 强名称[级别 1](../../../docs/framework/misc/security-transparent-code-level-1.md)共享库自动执行完全信任的隐式[LinkDemand](../../../docs/framework/misc/link-demands.md) , 而库编写器不需要执行任何操作。  
+- 默认情况下, 强名称[级别 1](security-transparent-code-level-1.md)共享库自动执行完全信任的隐式[LinkDemand](link-demands.md) , 而库编写器不需要执行任何操作。  
   
 - 如果调用方不具有完全信任但仍尝试调用这样的库，则运行时会引发 <xref:System.Security.SecurityException>，且会不允许调用方链接到库。  
   
@@ -53,4 +53,4 @@ ms.locfileid: "69910687"
   
 ## <a name="see-also"></a>请参阅
 
-- [代码访问安全性](../../../docs/framework/misc/code-access-security.md)
+- [代码访问安全性](code-access-security.md)

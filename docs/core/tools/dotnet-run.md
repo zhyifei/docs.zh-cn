@@ -2,14 +2,14 @@
 title: dotnet run 命令
 description: dotnet run 命令可便于使用源代码运行应用程序。
 ms.date: 05/29/2018
-ms.openlocfilehash: 489429e2371c807e09f9fb8c2de6f96d091edc6d
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 0a6c1303bc12c256dd0a8923f9468620835ddabc
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632015"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70202804"
 ---
-# <a name="dotnet-run"></a>dotnet 运行
+# <a name="dotnet-run"></a>dotnet run
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
@@ -21,7 +21,7 @@ ms.locfileid: "65632015"
 
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
-```
+```console
 dotnet run [-c|--configuration] [-f|--framework] [--force] [--launch-profile] [--no-build] [--no-dependencies]
     [--no-launch-profile] [--no-restore] [-p|--project] [--runtime] [-v|--verbosity] [[--] [application arguments]]
 dotnet run [-h|--help]
@@ -29,7 +29,7 @@ dotnet run [-h|--help]
 
 # <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
 
-```
+```console
 dotnet run [-c|--configuration] [-f|--framework] [--force] [--launch-profile] [--no-build] [--no-dependencies]
     [--no-launch-profile] [--no-restore] [-p|--project] [--runtime] [[--] [application arguments]]
 dotnet run [-h|--help]
@@ -37,7 +37,7 @@ dotnet run [-h|--help]
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
-```
+```console
 dotnet run [-c|--configuration] [-f|--framework] [-p|--project] [[--] [application arguments]]
 dotnet run [-h|--help]
 ```
@@ -82,7 +82,7 @@ dotnet myapp.dll
 
 `--force`
 
-强制解析所有依赖项，即使上次还原已成功，也不例外。 指定此标记等同于删除 project.assets.json 文件。
+强制解析所有依赖项，即使上次还原已成功，也不例外。 指定此标记等同于删除 project.assets.json 文件  。
 
 `-h|--help`
 
@@ -90,7 +90,7 @@ dotnet myapp.dll
 
 `--launch-profile <NAME>`
 
-启动应用程序时要使用的启动配置文件（若有）的名称。 启动配置文件在 launchSettings.json 文件中进行定义，通常称为 `Development`、`Staging` 和 `Production`。 有关详细信息，请参阅[使用多个环境](/aspnet/core/fundamentals/environments)。
+启动应用程序时要使用的启动配置文件（若有）的名称。 启动配置文件在 launchSettings.json 文件中进行定义，通常称为 `Development`、`Staging` 和 `Production`  。 有关详细信息，请参阅[使用多个环境](/aspnet/core/fundamentals/environments)。
 
 `--no-build`
 
@@ -102,7 +102,7 @@ dotnet myapp.dll
 
 `--no-launch-profile`
 
-不尝试使用 launchSettings.json 配置应用程序。
+不尝试使用 launchSettings.json 配置应用程序  。
 
 `--no-restore`
 
@@ -136,7 +136,7 @@ dotnet myapp.dll
 
 `--force`
 
-强制解析所有依赖项，即使上次还原已成功，也不例外。 指定此标记等同于删除 project.assets.json 文件。
+强制解析所有依赖项，即使上次还原已成功，也不例外。 指定此标记等同于删除 project.assets.json 文件  。
 
 `-h|--help`
 
@@ -144,7 +144,7 @@ dotnet myapp.dll
 
 `--launch-profile <NAME>`
 
-启动应用程序时要使用的启动配置文件（若有）的名称。 启动配置文件在 launchSettings.json 文件中进行定义，通常称为 `Development`、`Staging` 和 `Production`。 有关详细信息，请参阅[使用多个环境](/aspnet/core/fundamentals/environments)。
+启动应用程序时要使用的启动配置文件（若有）的名称。 启动配置文件在 launchSettings.json 文件中进行定义，通常称为 `Development`、`Staging` 和 `Production`  。 有关详细信息，请参阅[使用多个环境](/aspnet/core/fundamentals/environments)。
 
 `--no-build`
 
@@ -156,7 +156,7 @@ dotnet myapp.dll
 
 `--no-launch-profile`
 
-不尝试使用 launchSettings.json 配置应用程序。
+不尝试使用 launchSettings.json 配置应用程序  。
 
 `--no-restore`
 

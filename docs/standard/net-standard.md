@@ -3,15 +3,15 @@ title: .NET Standard
 description: 了解 .NET Standard 及其版本以及支持它的 .NET 实现。
 author: mairaw
 ms.author: mairaw
-ms.date: 02/25/2019
+ms.date: 08/30/2019
 ms.technology: dotnet-standard
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: 16aa1cd43db0b10c4617b4fa92783c75a4ba5303
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f479bbec504a965fde08af6d000d4be75ca85f8d
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64755201"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205602"
 ---
 # <a name="net-standard"></a>.NET Standard
 
@@ -50,7 +50,7 @@ ms.locfileid: "64755201"
 1. 定位前一更低版本的 .NET Standard，然后生成项目。
 2. 如果成功生成项目，请重复执行第 1 步。 否则，重新定位到后一较高版本，这就是应该使用的版本。
 
-但是，定位更低版本的 .NET Standard 会引入许多支持依赖项。 如果项目定位 .NET Standard 1.x，我们建议还定位 .NET Standard 2.0。 这简化了在 .NET Standard 2.0 兼容框架上运行的库的用户的依赖项关系图，并减少了下载所需的包数。
+但是，定位更低版本的 .NET Standard 会引入许多支持依赖项。 如果项目定位 .NET Standard 1.x，我们建议  还定位 .NET Standard 2.0。 这简化了在 .NET Standard 2.0 兼容框架上运行的库的用户的依赖项关系图，并减少了下载所需的包数。
 
 ### <a name="net-standard-versioning-rules"></a>.NET Standard 版本控制规则
 

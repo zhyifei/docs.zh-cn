@@ -5,12 +5,12 @@ author: oliag
 ms.author: mairaw
 ms.date: 04/26/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 892fb5cc9fba3434b0884c88b97f784d58093303
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 2d97921a3e98d85ac1e58c7686eadef3e979211f
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063346"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70107375"
 ---
 # <a name="net-api-analyzer"></a>.NET API 分析器
 
@@ -23,7 +23,7 @@ API 分析器以 NuGet 包 [Microsoft.DotNet.Analyzers.Compatibility](https://ww
 
 ## <a name="prerequisites"></a>系统必备
 
-* Visual Studio 2017 及更高版本，或 Visual Studio for Mac（所有版本）。
+- Visual Studio 2017 及更高版本，或 Visual Studio for Mac（所有版本）。
 
 ## <a name="discovering-deprecated-apis"></a>发现弃用的 API
 
@@ -42,28 +42,28 @@ API 分析器使用 API 专用错误代码，这些代码以 DE（全称是“De
 
 ![“显示绿色波浪线且左侧有灯泡的 WebClient API 屏幕截图”](media/api-analyzer/green-squiggle.jpg)
 
-弃用的 API 每出现一次，“错误列表”窗口中都会显示具有唯一 ID 的警告，如下面的示例所示 (`DE004`)： 
+弃用的 API 每出现一次，“错误列表”  窗口中都会显示具有唯一 ID 的警告，如下面的示例所示 (`DE004`)： 
 
 ![“显示警告 ID 和说明的‘错误列表’窗口屏幕截图”](media/api-analyzer/warnings-id-and-descriptions.jpg "包含警告的“错误列表”窗口。")
 
 单击 ID 后，便会转到详细信息网页，其中说明了 API 遭弃用的原因，以及有关可用替换 API 的建议。
 
-可以禁止显示任何警告，具体方法是右键单击突出显示的成员，并选择“禁止 \<诊断 ID>”。 禁止显示警告的方法有两种： 
+可以禁止显示任何警告，具体方法是右键单击突出显示的成员，并选择“禁止 \<诊断 ID>”  。 禁止显示警告的方法有两种： 
 
-* [本地（在源中）](#suppressing-warnings-locally)
-* [全局（在禁止文件中）](#suppressing-warnings-globally)- 推荐方法
+- [本地（在源中）](#suppressing-warnings-locally)
+- [全局（在禁止文件中）](#suppressing-warnings-globally)- 推荐方法
 
 ### <a name="suppressing-warnings-locally"></a>在本地禁止显示警告
 
-若要在本地禁止显示警告，请右键单击要对其禁止显示警告的成员，再依次选择“快速操作和重构” > “禁止诊断 ID \<诊断 ID> > “在源中”。 此时，[#pragma](../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md) 警告预处理器指令会添加到定义的范围内的源代码中：![“用 #pragma 警告禁用指令框定的代码屏幕截图”](media/api-analyzer/suppress-in-source.jpg)
+若要在本地禁止显示警告，请右键单击要对其禁止显示警告的成员，再依次选择“快速操作和重构”   > “禁止诊断 ID \<诊断 ID>   > “在源中”  。 此时，[#pragma](../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md) 警告预处理器指令会添加到定义的范围内的源代码中：![“用 #pragma 警告禁用指令框定的代码屏幕截图”](media/api-analyzer/suppress-in-source.jpg)
 
 ### <a name="suppressing-warnings-globally"></a>在全局禁止显示警告
 
-若要在全局禁止显示警告，请右键单击要对其禁止显示警告的成员，再依次选择“快速操作和重构” > “禁止诊断 ID \<诊断 ID> > “在禁止文件中”。
+若要在全局禁止显示警告，请右键单击要对其禁止显示警告的成员，再依次选择“快速操作和重构”   > “禁止诊断 ID \<诊断 ID>   > “在禁止文件中”  。
 
 ![“显示绿色波浪线且左侧有灯泡的 WebClient API 屏幕截图”](media/api-analyzer/suppress-in-sup-file.jpg)
 
-首次禁止后，GlobalSuppressions.cs 文件会添加到项目中。 此时，新的全局禁止会追加到此文件中。
+首次禁止后，GlobalSuppressions.cs  文件会添加到项目中。 此时，新的全局禁止会追加到此文件中。
 
 ![“显示绿色波浪线且左侧有灯泡的 WebClient API 屏幕截图”](media/api-analyzer/suppression-file.jpg)
 
@@ -71,7 +71,7 @@ API 分析器使用 API 专用错误代码，这些代码以 DE（全称是“De
 
 ## <a name="discovering-cross-platform-issues"></a>发现跨平台问题
 
-与弃用的 API 类似，分析器可发现所有的非跨平台 API。 例如，<xref:System.Console.WindowWidth?displayProperty=nameWithType> 适用于 Windows，但不适用于 Linux 和 macOS。 诊断 ID 显示在“错误列表”窗口中。 可以禁止显示警告，具体方法是右键单击并选择“快速操作和重构”。 与禁止显示 API 弃用警告时的两种选择（要么继续使用弃用的成员并禁止显示警告，要么根本就不使用弃用的成员）不同，如果仅对特定平台开发代码，可以对不打算在其上运行代码的其他所有平台禁止显示任何警告。 为此，只需编辑项目文件，并添加列出要忽略的所有平台的 `PlatformCompatIgnore` 属性即可。 接受的值包括 `Linux`、`macOS` 和 `Windows`。
+与弃用的 API 类似，分析器可发现所有的非跨平台 API。 例如，<xref:System.Console.WindowWidth?displayProperty=nameWithType> 适用于 Windows，但不适用于 Linux 和 macOS。 诊断 ID 显示在“错误列表”  窗口中。 可以禁止显示警告，具体方法是右键单击并选择“快速操作和重构”  。 与禁止显示 API 弃用警告时的两种选择（要么继续使用弃用的成员并禁止显示警告，要么根本就不使用弃用的成员）不同，如果仅对特定平台开发代码，可以对不打算在其上运行代码的其他所有平台禁止显示任何警告。 为此，只需编辑项目文件，并添加列出要忽略的所有平台的 `PlatformCompatIgnore` 属性即可。 接受的值包括 `Linux`、`macOS` 和 `Windows`。
 
 ```xml
 <PropertyGroup>
@@ -95,19 +95,19 @@ if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
 
 目前，分析器处理以下情况：
 
-* 使用抛出 <xref:System.PlatformNotSupportedException> 的 .NET Standard API (PC001)。
-* 使用 .NET Framework 4.6.1 不支持的 .NET Standard API (PC002)。
-* 使用 UWP 中不存在的本机 API (PC003)。
-* Delegate.BeginInvoke 和 EndInvoke APIs (PC004) 的用法。
-* 使用标记为弃用的 API (DEXXXX)。
+- 使用抛出 <xref:System.PlatformNotSupportedException> 的 .NET Standard API (PC001)。
+- 使用 .NET Framework 4.6.1 不支持的 .NET Standard API (PC002)。
+- 使用 UWP 中不存在的本机 API (PC003)。
+- Delegate.BeginInvoke 和 EndInvoke APIs (PC004) 的用法。
+- 使用标记为弃用的 API (DEXXXX)。
 
 ## <a name="ci-machine"></a>CI 计算机
 
 所有这些诊断不仅可以通过 IDE 获取，还能通过命令行在生成项目期间获取（包括 CI 服务器）。
 
-## <a name="configuration"></a>Configuration
+## <a name="configuration"></a>配置
 
-由用户确定应如何处理这些诊断，是生成警告、错误、建议，还是禁用诊断。 例如，作为架构师，可以确定应将兼容性问题处理为错误，对调用某些弃用的 API 生成警告，而对其他情况仅生成建议。 可以按诊断 ID 和按项目单独对此进行配置。 为此，请在“解决方案资源管理器”中转到项目下的“依赖关系”节点。 依次展开节点“依赖关系” > “分析器” > “Microsoft.DotNet.Analyzers.Compatibility”。 右键单击诊断 ID，选择“设置规则集严重性”，并选中相应选项。
+由用户确定应如何处理这些诊断，是生成警告、错误、建议，还是禁用诊断。 例如，作为架构师，可以确定应将兼容性问题处理为错误，对调用某些弃用的 API 生成警告，而对其他情况仅生成建议。 可以按诊断 ID 和按项目单独对此进行配置。 为此，请在“解决方案资源管理器”  中转到项目下的“依赖关系”  节点。 依次展开节点“依赖关系”   > “分析器”   > “Microsoft.DotNet.Analyzers.Compatibility”  。 右键单击诊断 ID，选择“设置规则集严重性”  ，并选中相应选项。
 
 ![“显示诊断和‘设置规则集严重性’弹出对话框的解决方案资源管理器屏幕截图”](media/api-analyzer/disable-notifications.jpg)
 

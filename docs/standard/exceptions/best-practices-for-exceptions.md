@@ -9,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - exceptions, best practices
 ms.assetid: f06da765-235b-427a-bfb6-47cd219af539
-ms.openlocfilehash: d212ba9beaa0ccc229204045c5a8174381440dfc
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: e12a83d3932d11baa086310ab0be23fb431459fc
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67860149"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70107198"
 ---
 # <a name="best-practices-for-exceptions"></a>异常的最佳做法
 
@@ -82,11 +82,11 @@ ms.locfileid: "67860149"
 
 创建自己的异常类时，请至少使用三种公共构造函数：无参数构造函数、采用字符串消息的构造函数以及采用字符串消息和内部异常的构造函数。
 
-* <xref:System.Exception.%23ctor>（使用默认值）。
+- <xref:System.Exception.%23ctor>（使用默认值）。
 
-* <xref:System.Exception.%23ctor%28System.String%29>，它接受字符串消息。
+- <xref:System.Exception.%23ctor%28System.String%29>，它接受字符串消息。
 
-* <xref:System.Exception.%23ctor%28System.String%2CSystem.Exception%29>，它接受字符串消息和内部异常。
+- <xref:System.Exception.%23ctor%28System.String%2CSystem.Exception%29>，它接受字符串消息和内部异常。
 
 有关示例，请参见 [如何：创建用户定义的异常](how-to-create-user-defined-exceptions.md)。
 

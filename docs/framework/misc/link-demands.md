@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a33fd5f9-2de9-4653-a4f0-d9df25082c4d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e3bde5b18437cc9890f660f018e81582a4d708d2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f040e1e1706e1f84ced8b253ff3fb15dbcbd6e1e
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910923"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70206022"
 ---
 # <a name="link-demands"></a>链接需求
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -32,7 +32,7 @@ ms.locfileid: "69910923"
   
  <xref:System.Security.CodeAccessPermission.Assert%2A>、<xref:System.Security.CodeAccessPermission.Deny%2A> 和 <xref:System.Security.CodeAccessPermission.PermitOnly%2A> 堆栈审核修饰符不影响链接要求计算。  由于链接要求不执行堆栈审核，所以堆栈审核修饰符对链接要求并无影响。  
   
- 如果通过[反射](../../../docs/framework/reflection-and-codedom/reflection.md)访问受链接要求保护的方法, 则链接要求会检查通过反射访问的代码的直接调用方。 对于使用反射执行的方法发现和方法调用都是如此。 例如, 假设代码使用反射来返回一个<xref:System.Reflection.MethodInfo>对象, 该对象表示受链接要求保护的方法, 然后将该**MethodInfo**对象传递到其他使用该对象调用原始方法的代码。 在这种情况下, 链接请求检查发生两次: 一次针对返回**MethodInfo**对象的代码, 一次针对调用它的代码。  
+ 如果通过[反射](../reflection-and-codedom/reflection.md)访问受链接要求保护的方法, 则链接要求会检查通过反射访问的代码的直接调用方。 对于使用反射执行的方法发现和方法调用都是如此。 例如, 假设代码使用反射来返回一个<xref:System.Reflection.MethodInfo>对象, 该对象表示受链接要求保护的方法, 然后将该**MethodInfo**对象传递到其他使用该对象调用原始方法的代码。 在这种情况下, 链接请求检查发生两次: 一次针对返回**MethodInfo**对象的代码, 一次针对调用它的代码。  
   
 > [!NOTE]
 > 在静态类构造函数上执行的链接要求不保护构造函数，因为静态构造函数是在应用程序的代码执行路径外部由系统调用的。 因此，当链接要求应用于整个类时，它不能保护对静态构造函数的访问，尽管它确实保护类的其余部分。  
@@ -57,4 +57,4 @@ public static string ReadData()
 ## <a name="see-also"></a>请参阅
 
 - [特性](../../standard/attributes/index.md)
-- [代码访问安全性](../../../docs/framework/misc/code-access-security.md)
+- [代码访问安全性](code-access-security.md)

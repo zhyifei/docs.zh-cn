@@ -3,35 +3,35 @@ title: C# 7.0 中的新增功能 - C# 指南
 description: 大致了解 C# 语言的版本 7.0 中的新增功能。
 ms.date: 02/20/2019
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 58d43167341b69e7e9ac67024e9993cf51c26c0b
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: 148ecdf7a3a99ac73132593272ecff3a5bb4195e
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67347461"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105717"
 ---
 # <a name="whats-new-in-c-70"></a>C# 7.0 中的新增功能
 
 C# 7.0 向 C# 语言添加了许多新功能：
-* [`out` 变量](#out-variables)
+- [`out` 变量](#out-variables)
   - 可以将 `out` 值内联作为参数声明到使用这些参数的方法中。
-* [元组](#tuples)
+- [元组](#tuples)
   - 可以创建包含多个公共字段的轻量级未命名类型。 编译器和 IDE 工具可理解这些类型的语义。
-* [弃元](#discards)
+- [弃元](#discards)
   - 弃元是指在不关心所赋予的值时，赋值中使用的临时只写变量。 在对元组和用户定义类型进行解构，以及在使用 `out` 参数调用方法时，它们的作用最大。
-* [模式匹配](#pattern-matching)
+- [模式匹配](#pattern-matching)
   - 可以基于任意类型和这些类型的成员的值创建分支逻辑。
-* [`ref` 局部变量和返回结果](#ref-locals-and-returns)
+- [`ref` 局部变量和返回结果](#ref-locals-and-returns)
   - 方法局部参数和返回值可以是对其他存储的引用。
-* [本地函数](#local-functions)
+- [本地函数](#local-functions)
   - 可以将函数嵌套在其他函数内，以限制其范围和可见性。
-* [更多的 expression-bodied 成员](#more-expression-bodied-members)
+- [更多的 expression-bodied 成员](#more-expression-bodied-members)
   - 可使用表达式创作的成员列表有所增长。
-* [`throw` 表达式](#throw-expressions)
+- [`throw` 表达式](#throw-expressions)
   - 可以在之前因为 `throw` 是语句而不被允许的代码构造中引发异常。
-* [通用的异步返回类型](#generalized-async-return-types)
+- [通用的异步返回类型](#generalized-async-return-types)
   - 使用 `async` 修饰符声明的方法可以返回除 `Task` 和 `Task<T>` 以外的其他类型。
-* [数字文本语法改进](#numeric-literal-syntax-improvements)
+- [数字文本语法改进](#numeric-literal-syntax-improvements)
   - 新令牌可提高数值常量的可读性。
 
 本文的其余部分概述了每个功能。 你将了解每项功能背后的原理。 将了解语法。 可以使用 `dotnet try` 全局工具在环境中浏览这些功能：
@@ -51,9 +51,9 @@ C# 7.0 向 C# 语言添加了许多新功能：
 
 [!code-csharp[OutVarVariableDeclarations](~/samples/snippets/csharp/new-in-7/program.cs#OutVarVariableDeclarations "Implicitly typed Out variable")]
 
-* 代码更易于阅读。
+- 代码更易于阅读。
   - 在使用 out 变量的地方声明 out 变量，而不是在上面的另一行。
-* 无需分配初始值。
+- 无需分配初始值。
   - 通过在方法调用中使用 `out` 变量的位置声明该变量，使得在分配它之前不可能意外使用它。
 
 ## <a name="tuples"></a>元组
@@ -95,10 +95,10 @@ C# 为用于说明设计意图的类和结构提供了丰富的语法。 但是�
 
 在以下方案中支持弃元：
 
-* 在对元组或用户定义的类型进行解构时。
-* 在使用 [out](../language-reference/keywords/out-parameter-modifier.md) 参数调用方法时。
-* 在使用 [is](../language-reference/keywords/is.md) 和 [switch](../language-reference/keywords/switch.md) 语句匹配操作的模式中。
-* 在要将某赋值的值显式标识为弃元时用作独立标识符。
+- 在对元组或用户定义的类型进行解构时。
+- 在使用 [out](../language-reference/keywords/out-parameter-modifier.md) 参数调用方法时。
+- 在使用 [is](../language-reference/keywords/is.md) 和 [switch](../language-reference/keywords/switch.md) 语句匹配操作的模式中。
+- 在要将某赋值的值显式标识为弃元时用作独立标识符。
 
 以下示例定义了 `QueryCityDataForYears` 方法，它返回一个包含两个不同年份的城市数据的六元组。 本例中，方法调用仅与此方法返回的两个人口值相关，因此在进行元组解构时，将元组中的其余值视为弃元。
 
@@ -180,15 +180,15 @@ public static int SumPositiveNumbers(IEnumerable<object> sequence)
 
 C# 语言还有多个规则，可保护你免于误用 `ref` 局部变量和返回结果：
 
-* 必须将 `ref` 关键字添加到方法签名和方法中的所有 `return` 语句中。
+- 必须将 `ref` 关键字添加到方法签名和方法中的所有 `return` 语句中。
   - 这清楚地表明，该方法在整个方法中通过引用返回。
-* 可以将 `ref return` 分配给值变量或 `ref` 变量。
+- 可以将 `ref return` 分配给值变量或 `ref` 变量。
   - 调用方控制是否复制返回值。 在分配返回值时省略 `ref` 修饰符表示调用方需要该值的副本，而不是对存储的引用。
-* 不可向 `ref` 本地变量赋予标准方法返回值。
+- 不可向 `ref` 本地变量赋予标准方法返回值。
   - 因为那将禁止类似 `ref int i = sequence.Count();` 这样的语句
-* 不能将 `ref` 返回给其生存期不超出方法执行的变量。
+- 不能将 `ref` 返回给其生存期不超出方法执行的变量。
   - 这意味着不可返回对本地变量或对类似作用域变量的引用。
-* `ref` 局部变量和返回结果不可用于异步方法。
+- `ref` 局部变量和返回结果不可用于异步方法。
   - 编译器无法知道异步方法返回时，引用的变量是否已设置为其最终值。
 
 添加 ref 局部变量和 ref 返回结果可通过避免复制值或多次执行取消引用操作，允许更为高效的算法。

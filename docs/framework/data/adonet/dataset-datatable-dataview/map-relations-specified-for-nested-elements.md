@@ -2,17 +2,17 @@
 title: 映射为嵌套元素指定的关系
 ms.date: 03/30/2017
 ms.assetid: 24a2d3e5-4af7-4f9a-ab7a-fe6684c9e4fe
-ms.openlocfilehash: cd0fd66fe70be4b8dea14ac7420e95c4b8bb1158
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 510a5e676df7bac274c6086b94e9a23e7540da20
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64604016"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204632"
 ---
 # <a name="map-relations-specified-for-nested-elements"></a>映射为嵌套元素指定的关系
-架构可以包含**msdata: relationship**批注来显式指定架构中任意两个元素之间的映射。 中指定的两个元素**msdata: relationship**可以嵌套在架构中，但不是一定要。 映射进程使用**msdata: relationship**架构以生成两个列之间主键/外的键关系中。  
+架构可以包含**msdata: Relationship**批注, 以显式指定架构中任意两个元素之间的映射。 **Msdata: Relationship**中指定的两个元素可以嵌套在架构中, 但不必是。 映射过程使用架构中的**msdata: Relationship**来生成两个列之间的主键/外键关系。  
   
- 下面的示例显示在其中一个 XML 架构**OrderDetail**元素是子元素的**顺序**。 **Msdata: relationship**标识此父-子关系，并指定**OrderNumber**生成的列**顺序**与相关表**OrderNo**生成的列**OrderDetail**表。  
+ 下面的示例显示一个 XML 架构, 其中**OrderDetail**元素是**Order**的子元素。 **Msdata: Relationship**标识这种父子关系, 并指定生成的**Order**表的**OrderNumber**列与生成的**OrderDetail**表的**OrderNo**列相关。  
   
 ```xml  
 <xs:schema id="MyDataSet" xmlns=""   
@@ -54,14 +54,14 @@ ms.locfileid: "64604016"
   
  XML 架构映射过程在 <xref:System.Data.DataSet> 中创建以下内容：  
   
-- **顺序**和一个**OrderDetail**表。  
+- **Order**和**OrderDetail**表。  
   
     ```  
     Order(OrderNumber, EmpNumber)  
     OrderDetail(OrderNo, ItemNo)  
     ```  
   
-- 之间的关系**顺序**并**OrderDetail**表。 **嵌套**为此关系的属性设置为**True**因为**顺序**并**OrderDetail**元素都嵌套在架构.  
+- **Order**表和**OrderDetail**表之间的关系。 此关系的**嵌套**属性设置为**True** , 因为**Order**和**OrderDetail**元素嵌套在架构中。  
   
     ```  
     ParentTable: Order  
@@ -76,6 +76,6 @@ ms.locfileid: "64604016"
   
 ## <a name="see-also"></a>请参阅
 
-- [从 XML 架构生成数据集关系 (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)
-- [将 XML 架构 (XSD) 约束映射到数据集约束](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
+- [从 XML 架构生成数据集关系 (XSD)](generating-dataset-relations-from-xml-schema-xsd.md)
+- [将 XML 架构 (XSD) 约束映射到数据集约束](mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
 - [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

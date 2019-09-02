@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 113a8bbf-6875-4a72-a49d-ca2d92e19cc8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 571b049300a7c7de963bd762e0266f66060479fe
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c9ab95124264b2b59be77695755ab1d1f1c3b1aa
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927999"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70040738"
 ---
 # <a name="application-domains"></a>应用程序域
 
@@ -145,7 +145,7 @@ COMPLUS_LoaderOptimization = 1
  在设置为 1 时，COMPLUS_LoaderOptimization 环境标志强制运行时主机以非特定于域的方式（称为 SingleDomain）加载所有程序集。 SingleDomain 不以非特定于域的形式加载任何程序集（Mscorlib 除外，它始终以非特定于域的形式加载）。 此设置称作单域，因为它通常用在宿主只运行进程中的单个应用程序时。  
   
 > [!CAUTION]
->  COMPLUS_LoaderOptimization 环境标志旨在用于诊断和测试方案。 启用该标志会导致速度严重减慢，并会增加内存使用率。  
+> COMPLUS_LoaderOptimization 环境标志旨在用于诊断和测试方案。 启用该标志会导致速度严重减慢，并会增加内存使用率。  
   
 ### <a name="code-example"></a>代码示例
 

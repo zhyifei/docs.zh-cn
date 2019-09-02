@@ -4,12 +4,12 @@ description: 了解如何在 .NET 中通过 P/Invoke 调用本机函数。
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: c6dcfdb9543abceb688fee2d73c242f1742ab27d
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: cda738a173cbe61cf49f79ceef78c533a5a879d9
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65582549"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106790"
 ---
 # <a name="platform-invoke-pinvoke"></a>平台调用 (P/Invoke)
 
@@ -21,9 +21,9 @@ P/Invoke 是可用于从托管代码访问非托管库中的结构、回调和�
 
 上述示例非常简单，但确实演示了从托管代码调用非托管函数所需执行的操作。 让我们逐步分析该示例：
 
-* 第 1 行显示 `System.Runtime.InteropServices` 命名空间（用于保存全部所需项）的 using 语句。
-* 第 7 行引入 `DllImport` 属性。 此特性至关重要，因为它告诉运行时要加载非托管 DLL。 传入的字符串是目标函数所在的 DLL。 此外，它还指定哪些[字符集](./charset.md)用于封送字符串。 最后，它指定此函数调用 [SetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-setlasterror)，且运行时应捕获相应错误代码，以便用户能够通过 <xref:System.Runtime.InteropServices.Marshal.GetLastWin32Error?displayProperty=nameWithType> 检索它。
-* 第 8 行显示了 P/Invoke 的关键作用。 它定义了一个托管方法，该方法的签名与非托管方法**完全相同**。 可以看到，声明中包含一个新关键字 `extern`，告诉运行时这是一个外部方法。调用该方法时，运行时应在 `DllImport` 特性中指定的 DLL 内查找该方法。
+- 第 1 行显示 `System.Runtime.InteropServices` 命名空间（用于保存全部所需项）的 using 语句。
+- 第 7 行引入 `DllImport` 属性。 此特性至关重要，因为它告诉运行时要加载非托管 DLL。 传入的字符串是目标函数所在的 DLL。 此外，它还指定哪些[字符集](./charset.md)用于封送字符串。 最后，它指定此函数调用 [SetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-setlasterror)，且运行时应捕获相应错误代码，以便用户能够通过 <xref:System.Runtime.InteropServices.Marshal.GetLastWin32Error?displayProperty=nameWithType> 检索它。
+- 第 8 行显示了 P/Invoke 的关键作用。 它定义了一个托管方法，该方法的签名与非托管方法**完全相同**。 可以看到，声明中包含一个新关键字 `extern`，告诉运行时这是一个外部方法。调用该方法时，运行时应在 `DllImport` 特性中指定的 DLL 内查找该方法。
 
 该示例的剩余部分无非就是调用该方法，就像调用其他任何托管方法一样。
 
@@ -49,10 +49,10 @@ P/Invoke 是可用于从托管代码访问非托管库中的结构、回调和�
 
 现在，让我们来演练示例：
 
-* 示例中的第 9 行定义与非托管代码中回调签名匹配的委托。 请注意如何在托管代码中使用 `IntPtr` 表示 LPARAM 和 HWND 类型。
-* 第 13 和 14 行从 user32.dll 库中引入 `EnumWindows` 函数。
-* 第 17 - 20 行实现该委托。 在这个简单的示例中，我们只要将句柄输出到控制台。
-* 最后，第 24 行调用外部方法并传入委托。
+- 示例中的第 9 行定义与非托管代码中回调签名匹配的委托。 请注意如何在托管代码中使用 `IntPtr` 表示 LPARAM 和 HWND 类型。
+- 第 13 和 14 行从 user32.dll 库中引入 `EnumWindows` 函数。
+- 第 17 - 20 行实现该委托。 在这个简单的示例中，我们只要将句柄输出到控制台。
+- 最后，第 24 行调用外部方法并传入委托。
 
 下面显示了 Linux 和 macOS 示例。 在这些平台上，我们可以使用 C 库 `libc` 中的 `ftw` 函数。 此函数用于遍历目录层次结构，它使用指向某个函数的指针作为其参数之一。 该函数具有以下签名：`int (*fn) (const char *fpath, const struct stat *sb, int typeflag)`。
 

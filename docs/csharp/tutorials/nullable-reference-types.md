@@ -3,24 +3,24 @@ title: 使用可为空引用类型进行设计
 description: 本高级教程介绍了可为空引用类型。 你将学习在引用值可能为 NULL 时表达你的设计意图，并在引用值不能为 NULL 时让编译器强制执行。
 ms.date: 02/19/2019
 ms.custom: mvc
-ms.openlocfilehash: cd73a73554514c2b7c70c78ba24038ee8d543266
-ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
+ms.openlocfilehash: 570d071172c4048adfddfd55a5e38556e7fd7c69
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66195823"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105846"
 ---
 # <a name="tutorial-express-your-design-intent-more-clearly-with-nullable-and-non-nullable-reference-types"></a>教程：使用可为空和不可为空引用类型更清晰地表达设计意图
 
-C# 8 引入了可为空引用类型，它们以与可为空值类型补充值类型相同的方式补充引用类型。 通过将 `?` 追加到此类型，你可以将变量声明为可为空引用类型。 例如，`string?` 表示可为空的 `string`。 可以使用这些新类型更清楚地表达你的设计意图：某些变量必须始终具有值，其他变量可以缺少值。
+C# 8 引入了  可为空引用类型，它们以与可为空值类型补充值类型相同的方式补充引用类型。 通过将 `?` 追加到此类型，你可以将变量声明为  可为空引用类型。 例如，`string?` 表示可为空的 `string`。 可以使用这些新类型更清楚地表达你的设计意图：某些变量  必须始终具有值，其他变量可以缺少值  。
 
 在本教程中，你将了解：
 
 > [!div class="checklist"]
-> * 将可为空和不可为空引用类型合并到你的设计中
-> * 在整个代码中启用可为空引用类型检查。
-> * 编写编译器强制执行这些设计决策的代码。
-> * 在自己的设计中使用可为空引用功能
+> - 将可为空和不可为空引用类型合并到你的设计中
+> - 在整个代码中启用可为空引用类型检查。
+> - 编写编译器强制执行这些设计决策的代码。
+> - 在自己的设计中使用可为空引用功能
 
 ## <a name="prerequisites"></a>系统必备
 
@@ -36,7 +36,7 @@ C# 8 引入了可为空引用类型，它们以与可为空值类型补充值类
 
 ## <a name="create-the-application-and-enable-nullable-reference-types"></a>创建应用程序并启用可为空引用类型
 
-在 Visual Studio 中或使用 `dotnet new console` 从命令行创建新的控制台应用程序。 命名应用程序 `NullableIntroduction`。 创建应用程序后，你需要启用 C# 8 beta 功能。 打开 `csproj` 文件，并向 `PropertyGroup` 元素添加 `LangVersion` 元素。 必须选择“可为空引用类型”功能，即使在 C# 8 项目中也是如此。 这是因为，一旦启用该功能，现有的引用变量声明将成为不可为空引用类型。 虽然该决定将有助于发现现有代码可能不具有适当的 NULL 检查的问题，但它可能无法准确反映你的原始设计意图。 可以通过将 `Nullable` 元素设置为 `enable` 来启用该功能：
+在 Visual Studio 中或使用 `dotnet new console` 从命令行创建新的控制台应用程序。 命名应用程序 `NullableIntroduction`。 创建应用程序后，你需要启用 C# 8 beta 功能。 打开 `csproj` 文件，并向 `PropertyGroup` 元素添加 `LangVersion` 元素。 必须选择  “可为空引用类型”功能，即使在 C# 8 项目中也是如此。 这是因为，一旦启用该功能，现有的引用变量声明将成为不可为空引用类型  。 虽然该决定将有助于发现现有代码可能不具有适当的 NULL 检查的问题，但它可能无法准确反映你的原始设计意图。 可以通过将 `Nullable` 元素设置为 `enable` 来启用该功能：
 
 ```xml
 <LangVersion>8.0</LangVersion>
@@ -90,7 +90,7 @@ namespace NullableIntroduction
 }
 ```
 
-编译器将启用可为空的上下文中的代码的每个引用类型变量声明解释为不可为空引用类型。 你可以通过添加问题文本的属性和问题类型来查看第一个警告，如以下代码所示：
+编译器将启用可为空的上下文中的代码的每个引用类型变量声明解释为不可为空  引用类型。 你可以通过添加问题文本的属性和问题类型来查看第一个警告，如以下代码所示：
 
 ```csharp
 namespace NullableIntroduction

@@ -5,36 +5,36 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1d26e0fb-f6e0-4afa-9a9c-b8d55b8f20dc
-ms.openlocfilehash: fa8749550e10256ee0623714cc95e03a838655c8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ea92b8a5e46bdaa8e94756cd28a3fbcb2789d7b3
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607009"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204385"
 ---
 # <a name="viewing-data-in-a-datatable"></a>查看数据表中的数据
 
-可以访问的内容<xref:System.Data.DataTable>通过使用**行**并**列**集合**DataTable**。 此外可以使用<xref:System.Data.DataTable.Select%2A>方法来返回中的数据的子集**DataTable**根据包括搜索条件的条件，排序顺序和行状态。 此外，还可以使用<xref:System.Data.DataRowCollection.Find%2A>方法**DataRowCollection**搜索使用的主键值的特定行时。
+您可以使用**DataTable**的**Rows**和<xref:System.Data.DataTable> **Columns**集合来访问的内容。 你还可以使用<xref:System.Data.DataTable.Select%2A>方法, 根据包括搜索条件、排序顺序和行状态的条件, 返回**DataTable**中的数据子集。 此外, 在使用主键值<xref:System.Data.DataRowCollection.Find%2A>搜索特定行时, 可以使用**DataRowCollection**的方法。
 
-**选择**方法**DataTable**对象返回的一组<xref:System.Data.DataRow>符合指定的条件的对象。 **选择**采用的筛选表达式、 排序表达式的可选参数和**DataViewRowState**。 筛选器表达式标识要返回基于的行**DataColumn**值，例如`LastName = 'Smith'`。 排序表达式遵循用于为列排序的标准 SQL 约定，例如 `LastName ASC, FirstName ASC`。 有关编写表达式的规则，请参阅<xref:System.Data.DataColumn.Expression%2A>的属性**DataColumn**类。
+**DataTable**对象的<xref:System.Data.DataRow> **Select**方法返回一组与指定条件匹配的对象。 **Select**使用筛选表达式、排序表达式和**DataViewRowState**的可选参数。 筛选表达式基于**DataColumn**值 (如`LastName = 'Smith'`) 标识要返回的行。 排序表达式遵循用于为列排序的标准 SQL 约定，例如 `LastName ASC, FirstName ASC`。 有关编写表达式的规则, 请参阅<xref:System.Data.DataColumn.Expression%2A> **DataColumn**类的属性。
 
 > [!TIP]
-> 如果您正在执行对的调用次数**选择**方法**DataTable**，您可以提高性能，方法是首先创建<xref:System.Data.DataView>有关**DataTable**。 创建**DataView**表的行编制索引。 **选择**方法然后使用该索引，显著缩短生成查询结果的时间。 有关创建信息**DataView**有关**DataTable**，请参阅[Dataview](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)。
+> 如果要对**datatable** <xref:System.Data.DataView>的**Select**方法执行多个调用, 可以通过首先为**datatable**创建来提高性能。 创建**DataView**会索引表中的行。 然后, **Select**方法使用该索引, 大大减少了生成查询结果的时间。 有关为**DataTable**创建**DataView**的信息, 请参阅[dataview](dataviews.md)。
 
-**选择**方法确定要查看或操作的行的版本根据<xref:System.Data.DataViewRowState>。 下表描述了可能**DataViewRowState**枚举值。
+**Select**方法确定要基于<xref:System.Data.DataViewRowState>其查看或操作的行的版本。 下表描述了可能的**DataViewRowState**枚举值。
 
 |DataViewRowState 值|描述|
 |----------------------------|-----------------|
 |**CurrentRows**|当前行，包括未更改的行、已添加的行和已修改的行。|
-|**已删除**|已删除的行。|
+|**删除**|已删除的行。|
 |**ModifiedCurrent**|当前版本，它是原始数据的修改版本。 (请参阅**ModifiedOriginal**。)|
-|**ModifiedOriginal**|所有已修改行的原始版本。 当前版本是可以使用**ModifiedCurrent**。|
-|**添加**|新行。|
+|**ModifiedOriginal**|所有已修改行的原始版本。 当前版本可用于**ModifiedCurrent**。|
+|**已**|新行。|
 |**无**|无。|
 |**OriginalRows**|原始行，包括未更改的行和已删除的行。|
-|**保持不变**|未更改的行。|
+|**变化**|未更改的行。|
 
-在以下示例中，**数据集**对象进行筛选，以便仅使用行其**DataViewRowState**设置为**CurrentRows**。
+在下面的示例中, 对**DataSet**对象进行了筛选, 以便您只使用其**DataViewRowState**设置为**CurrentRows**的行。
 
 ```vb
 Dim column As DataColumn
@@ -87,7 +87,7 @@ else
 }
 ```
 
-**选择**方法可用于返回具有不同的行**RowState**值或字段值。 下面的示例返回**DataRow**引用已被删除，并返回另一个的所有行的数组**DataRow**按排序的数组，它都引用的所有行， **CustLName**，其中**CustID**列大于 5。 浪中的信息**已删除**行中，请参阅[行状态和行版本](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)。
+**Select**方法可用于返回具有不同的**RowState**值或字段值的行。 下面的示例返回引用所有已删除行的**datarow**数组, 并返回引用所有行的另一个**datarow**数组, 这些行由**custlname 排序 (** 排序, 其中**CustID**列大于5。 浪中的信息**已删除**行中，请参阅[行状态和行版本](row-states-and-row-versions.md)。
 
 ```vb
 ' Retrieve all deleted rows.
@@ -113,6 +113,6 @@ DataRow[] custRows = workTable.Select("CustID > 5", "CustLName ASC");
 - <xref:System.Data.DataSet>
 - <xref:System.Data.DataTable>
 - <xref:System.Data.DataViewRowState>
-- [操作数据表中的数据](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
-- [行状态和行版本](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)
+- [操作数据表中的数据](manipulating-data-in-a-datatable.md)
+- [行状态和行版本](row-states-and-row-versions.md)
 - [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

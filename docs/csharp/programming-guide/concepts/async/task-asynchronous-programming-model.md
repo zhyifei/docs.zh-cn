@@ -2,12 +2,12 @@
 title: 使用 Async和 Await 的任务异步编程模型 (TAP) (C#)
 ms.date: 05/22/2017
 ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
-ms.openlocfilehash: bfe32b2eaefb9ce813ca74bed450a935e33dc9d4
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: abe1ab777a17ba8cba15a27b02d389a9ede3caf0
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69595601"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70167900"
 ---
 # <a name="task-asynchronous-programming-model"></a>异步编程模型
 
@@ -38,7 +38,7 @@ ms.locfileid: "69595601"
 
 ## <a name="BKMK_HowtoWriteanAsyncMethod"></a> 异步方法更容易编写
 
-C# 中的 [Async](../../../language-reference/keywords/async.md) 和 [Await](../../../language-reference/keywords/await.md) 关键字是异步编程的核心。 通过这两个关键字，可以使用 .NET Framework、.NET Core 或 Windows 运行时中的资源，轻松创建异步方法（几乎与创建同步方法一样轻松）。 使用 `async` 关键字定义的异步方法简称为“异步方法”  。
+C# 中的 [Async](../../../language-reference/keywords/async.md) 和 [Await](../../../language-reference/operators/await.md) 关键字是异步编程的核心。 通过这两个关键字，可以使用 .NET Framework、.NET Core 或 Windows 运行时中的资源，轻松创建异步方法（几乎与创建同步方法一样轻松）。 使用 `async` 关键字定义的异步方法简称为“异步方法”  。
 
 下面的示例演示了一种异步方法。 你应对代码中的几乎所有内容都非常熟悉。
 
@@ -156,7 +156,7 @@ Windows 运行时也包含许多可以在 Windows 应用中与 `async` 和 `awai
 
 如果使用 [async](../../../language-reference/keywords/async.md) 修饰符将某种方法指定为异步方法，即启用以下两种功能。
 
-- 标记的异步方法可以使用 [await](../../../language-reference/keywords/await.md) 来指定暂停点。 `await` 运算符通知编译器异步方法：在等待的异步过程完成后才能继续通过该点。 同时，控制返回至异步方法的调用方。
+- 标记的异步方法可以使用 [await](../../../language-reference/operators/await.md) 来指定暂停点。 `await` 运算符通知编译器异步方法：在等待的异步过程完成后才能继续通过该点。 同时，控制返回至异步方法的调用方。
 
      异步方法在 `await` 表达式执行时暂停并不构成方法退出，只会导致 `finally` 代码块不运行。
 
@@ -168,7 +168,7 @@ Windows 运行时也包含许多可以在 Windows 应用中与 `async` 和 `awai
 
 - [async](../../../language-reference/keywords/async.md)
 
-- [await](../../../language-reference/keywords/await.md)
+- [await](../../../language-reference/operators/await.md)
 
 ## <a name="BKMK_ReturnTypesandParameters"></a> 返回类型和参数
 
@@ -343,6 +343,7 @@ namespace AsyncFirstExample
 ## <a name="see-also"></a>请参阅
 
 - [async](../../../language-reference/keywords/async.md)
-- [await](../../../language-reference/keywords/await.md)
+- [await](../../../language-reference/operators/await.md)
 - [异步编程](../../../async.md)
 - [异步概述](../../../../standard/async.md)
+ 

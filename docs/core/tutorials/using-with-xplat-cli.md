@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 08/07/2019
 ms.technology: dotnet-cli
 ms.custom: seodec18
-ms.openlocfilehash: 88e9501a776a026a311c5002674c15acf2324f2b
-ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
+ms.openlocfilehash: a680a4b58927d915e887eea43a72983a5b349682
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68868594"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105050"
 ---
 # <a name="get-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>通过命令行开始在 Windows/Linux/macOS 上使用 .NET Core
 
@@ -47,8 +47,8 @@ dotnet run
 
    项目文件指定还原依赖项和生成程序所需的一切。
 
-   * `OutputType` 标记指定我们要生成的可执行文件，即控制台应用程序。
-   * `TargetFramework` 标记指定要定位的 .NET 实现代码。 在高级方案中，可以指定多个目标框架，并在单个操作中生成所有目标框架。 在本教程中，我们将仅针对 .NET Core 2.1 进行生成。
+   - `OutputType` 标记指定我们要生成的可执行文件，即控制台应用程序。
+   - `TargetFramework` 标记指定要定位的 .NET 实现代码。 在高级方案中，可以指定多个目标框架，并在单个操作中生成所有目标框架。 在本教程中，我们将仅针对 .NET Core 2.1 进行生成。
 
    `Program.cs`：
 
@@ -167,7 +167,7 @@ Hello World!
 
 ## <a name="conclusion"></a>结束语
 
-这就是所有的操作！ 现在，可以开始使用此处学到的基本概念来创建自己的程序了。
+就是这么简单！ 现在，可以开始使用此处学到的基本概念来创建自己的程序了。
 
 ## <a name="see-also"></a>请参阅
 

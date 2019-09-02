@@ -5,17 +5,18 @@ helpviewer_keywords:
 - builds [C#]
 - command line [C#]
 ms.assetid: 66e70056-dd20-453c-a9b3-507e0478b015
-ms.openlocfilehash: 54306c79bc2856996925756ee4261fbe67692aea
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 9dcc1837ca9c5c1fae3cd6a2a9d03b7e80423627
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69606973"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70040379"
 ---
 # <a name="command-line-build-with-cscexe"></a>使用 csc.exe 实现命令行生成
+
 通过在命令提示符处键入 C# 编译器的可执行文件名称 (csc.exe  )，可调用该编译器。
 
-如果使用“Visual Studio 开发人员命令提示”  窗口，系统将设置所有必需的环境变量。 有关如何访问此工具的信息，请参阅 [Visual Studio 开发人员命令提示](../../../framework/tools/developer-command-prompt-for-vs.md)主题。 
+如果使用“Visual Studio 开发人员命令提示”  窗口，系统将设置所有必需的环境变量。 有关如何访问此工具的信息，请参阅 [Visual Studio 开发人员命令提示](../../../framework/tools/developer-command-prompt-for-vs.md)主题。
 
 如果使用标准命令提示符窗口，则必须调整路径，然后才能从计算机的任意子目录调用 csc.exe  。 还必须运行 vsvars32.bat  来设置适当的环境变量以支持命令行生成操作。 有关 vsvars32.bat  的详细信息，包括它的查找和运行说明，请参阅[如何：设置 Visual Studio 命令行的环境变量](./how-to-set-environment-variables-for-the-visual-studio-command-line.md)。
 
@@ -26,7 +27,7 @@ ms.locfileid: "69606973"
 csc.exe  可执行文件通常位于 Windows  目录下的 Microsoft.NET\Framework\\\<Version>  文件夹中。 根据每台计算机上的具体配置，此位置可能有所不同。 如果计算机上安装了不止一个版本的 .NET Framework，您将发现此文件的多个版本。 有关此类安装的详细信息，请参阅[如何：确定安装的 .NET Framework 版本](../../../framework/migration-guide/how-to-determine-which-versions-are-installed.md)。
 
 > [!TIP]
->  使用 Visual Studio IDE 生成项目时，可以在 **“输出”** 窗口显示 **“csc”** 命令以及与之关联的编译器选项。 若要显示此信息，请按照[如何：查看、保存和配置生成日志文件](/visualstudio/ide/how-to-view-save-and-configure-build-log-files#to-change-the-amount-of-information-included-in-the-build-log)中的说明将日志数据的详细级别更改为“常规”  或“详细”  。 重新生成项目之后，在 **“输出”** 窗口中搜索 **“csc”** 即可找到所调用的 C# 编译器。
+> 使用 Visual Studio IDE 生成项目时，可以在 **“输出”** 窗口显示 **“csc”** 命令以及与之关联的编译器选项。 若要显示此信息，请按照[如何：查看、保存和配置生成日志文件](/visualstudio/ide/how-to-view-save-and-configure-build-log-files#to-change-the-amount-of-information-included-in-the-build-log)中的说明将日志数据的详细级别更改为“常规”  或“详细”  。 重新生成项目之后，在 **“输出”** 窗口中搜索 **“csc”** 即可找到所调用的 C# 编译器。
 
  **在本主题中**
 
@@ -59,7 +60,7 @@ csc.exe  可执行文件通常位于 Windows  目录下的 Microsoft.NET\Framewo
 - 编译生成 File.exe  的 File.cs  ：
 
 ```console
-csc File.cs 
+csc File.cs
 ```
 
 - 编译生成 File.dll  的 File.cs  ：

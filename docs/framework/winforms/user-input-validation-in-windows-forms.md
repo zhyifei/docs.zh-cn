@@ -7,12 +7,12 @@ helpviewer_keywords:
 - user input [Windows Forms], validating in Windows Forms
 - validating user input [Windows Forms], Windows Forms
 ms.assetid: 4ec07681-1dee-4bf9-be5e-718f635a33a1
-ms.openlocfilehash: 0a1d6c4c18e658d71f1baf90763e121314ea35d4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7ee99d1b264f508882418c83da8e82759b0d95fa
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69916297"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70206132"
 ---
 # <a name="user-input-validation-in-windows-forms"></a>Windows 窗体中的用户输入验证
 当用户将数据输入应用程序时, 可能需要在应用程序使用数据之前验证数据是否有效。 您可能要求某些文本字段的长度不能为零, 字段的格式设置为电话号码或其他类型格式的数据, 或者不包含任何可用于破坏数据库安全性的不安全字符的字符串。 Windows 窗体提供多种方式来验证应用程序中的输入。  
@@ -85,7 +85,7 @@ ms.locfileid: "69916297"
   
 - 通过以编程<xref:System.Windows.Forms.Form.Close%2A>方式调用方法。  
   
- 但是, 在某些情况下, 您可能需要让用户关闭窗体, 无论控件中的值是否有效。 您可以通过为窗体的<xref:System.Windows.Forms.Form.Closing>事件创建处理程序来覆盖验证并关闭仍包含无效数据的窗体。 在此事件中, 将<xref:System.ComponentModel.CancelEventArgs.Cancel%2A>属性设置`false`为。 这会强制关闭窗体。 有关详细信息及示例，请参阅<xref:System.Windows.Forms.Form.Closing?displayProperty=nameWithType>。  
+ 但是, 在某些情况下, 您可能需要让用户关闭窗体, 无论控件中的值是否有效。 您可以通过为窗体的<xref:System.Windows.Forms.Form.FormClosing>事件创建处理程序来覆盖验证并关闭仍包含无效数据的窗体。 在此事件中, 将<xref:System.ComponentModel.CancelEventArgs.Cancel%2A>属性设置`false`为。 这会强制关闭窗体。 有关详细信息及示例，请参阅<xref:System.Windows.Forms.Form.FormClosing?displayProperty=nameWithType>。  
   
 > [!NOTE]
 > 如果以这种方式强制关闭窗体, 则尚未保存窗体控件中的所有数据都将丢失。 此外, 模式窗体在关闭时不会验证控件的内容。 你仍可以使用控件验证将焦点锁定到控件, 但你不必担心与关闭窗体相关联的行为。  
@@ -93,7 +93,7 @@ ms.locfileid: "69916297"
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Windows.Forms.Control.Validating?displayProperty=nameWithType>
-- <xref:System.Windows.Forms.Form.Closing?displayProperty=nameWithType>
-- <xref:System.ComponentModel.CancelEventArgs?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.Form.FormClosing?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.FormClosingEventArgs?displayProperty=nameWithType>
 - [MaskedTextBox 控件](./controls/maskedtextbox-control-windows-forms.md)
 - [正则表达式示例](../../standard/base-types/regular-expression-examples.md)

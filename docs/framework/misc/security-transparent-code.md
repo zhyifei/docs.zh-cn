@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 4f3dd841-82f7-4659-aab0-6d2db2166c65
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 44003cbd0f13d2665c5b753454689c10546325b7
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 4e4e472185b3b2ba39393c029bca3966fb5ec4b3
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66487844"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70206057"
 ---
 # <a name="security-transparent-code"></a>安全透明的代码
 
@@ -23,7 +23,7 @@ ms.locfileid: "66487844"
 安全性涉及三个交互部分：沙盒处理、权限和强制。 沙盒处理是指创建隔离域的做法，在隔离域中某些代码被视为完全信任，而其他代码则被限制为沙盒授予集中的权限。 在沙盒授予集内运行的应用程序代码被视为透明的，也就是说，它不能执行任何影响安全性的操作。 沙盒的授予集由证据（<xref:System.Security.Policy.Evidence> 类）决定。 证据标识沙盒需要哪些特定权限，以及可以创建哪种沙盒。 强制是指允许透明代码仅在其授予集内执行。
 
 > [!IMPORTANT]
-> 安全策略是旧版 .NET Framework 中的关键元素。 从.NET Framework 4 开始，安全策略已过时。 安全策略的取消独立于安全透明度。 有关此更改的影响的信息，请参阅[代码访问安全策略兼容性和迁移](../../../docs/framework/misc/code-access-security-policy-compatibility-and-migration.md)。
+> 安全策略是旧版 .NET Framework 中的关键元素。 从 .NET Framework 4 开始, 安全策略已过时。 安全策略的取消独立于安全透明度。 有关此更改的效果的信息, 请参阅[代码访问安全策略兼容性和迁移](code-access-security-policy-compatibility-and-migration.md)。
 
 本主题更详细地介绍透明度模型。 它包含下列部分：
 
@@ -59,18 +59,18 @@ ms.locfileid: "66487844"
 
 级别如下：
 
-- 级别 2 (<xref:System.Security.SecurityRuleSet.Level2>) –.NET Framework 4 透明度规则。
+- Level 2 (<xref:System.Security.SecurityRuleSet.Level2>) – .NET Framework 4 透明度规则。
 
 - 1 级 (<xref:System.Security.SecurityRuleSet.Level1>) –.NET Framework 2.0 透明度规则。
 
 这两个透明度级别之间的主要区别是 1 级不对程序集外部的调用强制实施透明度规则，并且预期仅用于实现兼容性。
 
 > [!IMPORTANT]
-> 你应仅出于兼容性目的指定 1 级透明度，也就是说，仅为使用 .NET Framework 3.5 或更早版本（这些版本使用 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> 属性或不使用透明度模型）开发的代码指定 1 级。 例如，对允许从部分信任的调用方 (APTCA) 调用的 .NET Framework 2.0 程序集使用 1 级透明度。 对于针对.NET Framework 4 开发的代码，始终使用 2 级透明度。
+> 你应仅出于兼容性目的指定 1 级透明度，也就是说，仅为使用 .NET Framework 3.5 或更早版本（这些版本使用 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> 属性或不使用透明度模型）开发的代码指定 1 级。 例如，对允许从部分信任的调用方 (APTCA) 调用的 .NET Framework 2.0 程序集使用 1 级透明度。 对于为 .NET Framework 4 开发的代码, 请始终使用2级透明度。
 
 ### <a name="level-2-transparency"></a>2 级透明度
 
-.NET Framework 4 中引入了 2 级透明度。 此模型的三条原则是透明代码、安全可靠关键代码和安全关键代码。
+.NET Framework 4 中引入了2级透明度。 此模型的三条原则是透明代码、安全可靠关键代码和安全关键代码。
 
 - 透明代码（无论授予什么样的权限）可以调用其他透明代码或安全可靠关键代码。 如果代码是部分信任的代码，那么它只能执行域权限集允许的操作。 透明代码不能：
 
@@ -114,9 +114,9 @@ ms.locfileid: "66487844"
 
 ## <a name="transparency-enforcement"></a>透明度强制
 
-在计算透明度之前，不会强制执行透明度规则。 那时，如果违反了透明度规则，则将引发 <xref:System.InvalidOperationException>。 计算透明度的时间取决于多种因素，并且无法预测。 应尽可能晚地计算。 在.NET Framework 4 程序集级别的透明度计算比.NET Framework 2.0 中更快地发生。 只能保证透明度计算将在需要的时间之前发生。 这类似于在编译某种方法且在该方法中检测到错误时实时 (JIT) 编译器将如何更改时间点。 如果你的代码没有透明度错误，则透明度计算是不可见的。
+在计算透明度之前，不会强制执行透明度规则。 那时，如果违反了透明度规则，则将引发 <xref:System.InvalidOperationException>。 计算透明度的时间取决于多种因素，并且无法预测。 应尽可能晚地计算。 在 .NET Framework 4 中, 程序集级别的透明度计算比 .NET Framework 2.0 更早。 只能保证透明度计算将在需要的时间之前发生。 这类似于在编译某种方法且在该方法中检测到错误时实时 (JIT) 编译器将如何更改时间点。 如果你的代码没有透明度错误，则透明度计算是不可见的。
 
 ## <a name="see-also"></a>请参阅
 
-- [安全透明代码，级别 1](../../../docs/framework/misc/security-transparent-code-level-1.md)
-- [安全透明代码，级别 2](../../../docs/framework/misc/security-transparent-code-level-2.md)
+- [安全透明代码, 级别1](security-transparent-code-level-1.md)
+- [安全透明代码, 级别2](security-transparent-code-level-2.md)

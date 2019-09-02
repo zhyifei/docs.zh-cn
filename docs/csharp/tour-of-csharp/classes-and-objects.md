@@ -3,12 +3,12 @@ title: C# 类和对象 - C# 语言介绍
 description: 刚开始接触 C#？ 请阅读这篇概述类、对象和继承的文章
 ms.date: 08/10/2016
 ms.assetid: 63a89bde-0f05-4bc4-b0cd-4f693854f0cd
-ms.openlocfilehash: ff83a3198c6c9fb4c4a438d2486614a211c913ec
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: be8e760b19b7ca5305918ecfdbf9ad797d7e76b2
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68971462"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105631"
 ---
 # <a name="classes-and-objects"></a>类和对象
 
@@ -32,42 +32,42 @@ ms.locfileid: "68971462"
 
 下面概述了类可以包含的成员类型。
 
-* 常量
+- 常量
   - 与类相关联的常量值
-* 字段
+- 字段
   - 类的常量
-* 方法
+- 方法
   - 类可以执行的计算和操作
-* 属性
+- 属性
   - 与读取和写入类的已命名属性相关联的操作
-* 索引器
+- 索引器
   - 与将类实例编入索引（像处理数组一样）相关联的操作
-* 事件
+- 事件
   - 类可以生成的通知
-* 运算符
+- 运算符
   - 类支持的转换和表达式运算符
-* 构造函数
+- 构造函数
   - 初始化类实例或类本身所需的操作
-* 终结器
+- 终结器
   - 永久放弃类实例前要执行的操作
-* 类型
+- 类型
   - 类声明的嵌套类型
 
 ## <a name="accessibility"></a>可访问性
 
 每个类成员都有关联的可访问性，用于控制能够访问成员的程序文本区域。 可访问性有六种可能的形式。 总结如下。
 
-* `public`
+- `public`
   - 访问不受限
-* `protected`
+- `protected`
   - 只能访问此类或派生自此类的类
-* `internal`
+- `internal`
   - 访问限于当前程序集（.exe、.dll 等）
-* `protected internal`
+- `protected internal`
   - 访问限于包含类、派生自包含类的类或同一程序集中的类
-* `private`
+- `private`
   - 只能访问此类
-* `private protected`
+- `private protected`
   - 访问限于同一程序集中的包含类或派生自包含类的类
 
 ## <a name="type-parameters"></a>类型参数

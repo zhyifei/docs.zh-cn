@@ -9,12 +9,12 @@ helpviewer_keywords:
 - mc:ProcessContent attribute
 - XAML [WPF], mc:ProcessContent attribute
 ms.assetid: acd9a6ef-b7ca-4146-abb6-60f3b366e9ec
-ms.openlocfilehash: e99ca09d51f3ba6c01b9e400bfba00749faf62b3
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: b68909d94ad8cc5bba75b2c520db82c5ccf1b922
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69567437"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70206186"
 ---
 # <a name="mcignorable-attribute"></a>mc:Ignorable 特性
 指定在[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]标记文件中遇到的哪些命名空间前缀可能会被[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]处理器忽略。 特性支持用于自定义命名空间映射[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]和版本控制的标记兼容性。 `mc:Ignorable`  
@@ -51,7 +51,7 @@ ms.locfileid: "69567437"
 |*ThisElementCanBeIgnored*|如果基础类型无法解析, 则[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]处理器实现可忽略的元素。|  
   
 ## <a name="remarks"></a>备注  
- 命名空间前缀是映射[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]兼容命名空间[!INCLUDE[TLA#tla_mcxmlnsv1](../../../../includes/tlasharptla-mcxmlnsv1-md.md)]时建议使用的前缀约定。 `mc` [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]  
+ 命名空间前缀是映射[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]兼容命名空间`http://schemas.openxmlformats.org/markup-compatibility/2006`时建议使用的前缀约定。 `mc` [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]  
   
  元素名称的前缀部分标识为`mc:Ignorable`的元素或属性将不会在[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]处理器处理时引发错误。 如果该特性未能解析为基础类型或编程构造, 则将忽略该元素。 但请注意, 如果忽略元素, 则忽略的元素可能仍会生成其他元素要求的分析错误。 例如, 特定的元素内容模型可能只需要一个子元素, 但如果指定的子元素在`mc:Ignorable`前缀中, 并且指定的子元素未能解析为类型, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]则处理器可能引发错误。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "69567437"
   
  可以使用一个或多个空白字符作为分隔符, 在属性中指定多个前缀, 例如: `mc:Ignorable="ignore1 ignore2"`。  
 
- [!INCLUDE[TLA#tla_mcxmlnsv1](../../../../includes/tlasharptla-mcxmlnsv1-md.md)]命名空间定义 SDK 的此区域中未记录的其他元素和特性。 有关详细信息, 请参阅[XML 标记兼容性规范](/office/open-xml/introduction-to-markup-compatibility#markup-compatibility-in-the-open-xml-file-formats-specification)。  
+ `http://schemas.openxmlformats.org/markup-compatibility/2006`命名空间定义 SDK 的此区域中未记录的其他元素和特性。 有关详细信息, 请参阅[XML 标记兼容性规范](/office/open-xml/introduction-to-markup-compatibility#markup-compatibility-in-the-open-xml-file-formats-specification)。  
   
 ## <a name="see-also"></a>请参阅
 

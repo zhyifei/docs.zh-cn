@@ -2,12 +2,12 @@
 title: 事务处理
 ms.date: 03/30/2017
 ms.assetid: effdc8e6-accf-41eb-98a5-431603ba218b
-ms.openlocfilehash: dc032746b265a3e781898beb823be0d1bcf1abea
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: de88247e5916ab6e080c4de361efecee0b193e18
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793661"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205917"
 ---
 # <a name="transaction-processing"></a>事务处理
 当您从网上书店购买书籍时，会用钱（以信贷方式）来交换书籍。 如果您的信用良好，则一系列相关操作可确保您和书店可以相应地获得书籍和钱。 但如果在交换期间该系列操作中的单个操作发生故障，则整个交换就会失败。 结果，您就得不到书籍，而书店也得不到钱。  
@@ -19,10 +19,10 @@ ms.locfileid: "61793661"
  本节提供有关事务处理的常见信息，以及有关如何使用 Microsoft .NET Framework 编写事务应用程序和资源管理器的特定信息。  
   
 ## <a name="in-this-section"></a>本节内容  
- [事务基础知识](../../../../docs/framework/data/transactions/transaction-fundamentals.md)  
+ [事务基础知识](transaction-fundamentals.md)  
  引入了基本的事务处理术语和概念。  
   
- [由 System.Transactions 提供的功能](../../../../docs/framework/data/transactions/features-provided-by-system-transactions.md)  
+ [由 System.Transactions 提供的功能](features-provided-by-system-transactions.md)  
  讨论如何使用 System.Transactions 中的功能编写您自己的事务应用程序。  
   
 ## <a name="reference"></a>参考  

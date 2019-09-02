@@ -2,17 +2,17 @@
 title: 从 XML 架构派生数据集关系结构 (XSD)
 ms.date: 03/30/2017
 ms.assetid: 8f6cd04d-6197-4bc4-9096-8c51c7e4acae
-ms.openlocfilehash: 98c43b6af2913b9737085d2d983b37c6da4c1724
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 29b905c42f15cad4eb8521c4d702b56093982445
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69934468"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203778"
 ---
 # <a name="deriving-dataset-relational-structure-from-xml-schema-xsd"></a>从 XML 架构派生数据集关系结构 (XSD)
 本节将概述如何从 XML 架构定义语言 (XSD) 架构文档生成 `DataSet` 的关系架构。 通常, 对于 schema 元素`complexType`的每个子元素, 将`DataSet`在中生成一个表。 表结构取决于复杂类型的定义。 对于架构中的顶级`DataSet`元素, 将在中创建表。 但是, 仅`complexType`当元素嵌套在另一个`complexType`元素中时`complexType` , 才会为顶级元素创建一个表, 在这`DataTable`种情况下`complexType` , `DataSet`嵌套元素将映射到中的。  
   
- 有关 XSD 的详细信息, 请参阅万维网联合会 (W3C) [XML 架构第0部分:入门建议](https://www.w3.org/TR/xmlschema-0/) [, XML 架构第1部分:结构建议](https://www.w3.org/TR/xmlschema-1/) [和 XML 架构第2部分:数据类型](https://www.w3.org/TR/xmlschema-2/)建议。  
+ 有关 XSD 的详细信息, 请参阅万维网联合会 (W3C) [XML 架构第0部分:入门建议](https://www.w3.org/TR/xmlschema-0/) [, XML 架构第1部分:结构建议](https://www.w3.org/TR/xmlschema-1/) [和 XML 架构第2部分:数据类型建议](https://www.w3.org/TR/xmlschema-2/)。  
   
  下面的示例演示了一个 XML 架构`customers` , 其中是`MyDataSet`元素的子元素, 它是一个**数据集**元素。  
   
@@ -83,17 +83,17 @@ OutOfStateCustomers (CustomerID , CompanyName, Phone)
 ```  
   
 ## <a name="in-this-section"></a>本节内容  
- [将 XML 架构 (XSD) 约束映射到数据集约束](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
+ [将 XML 架构 (XSD) 约束映射到数据集约束](mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
  介绍用于在中`DataSet`创建唯一约束和外键约束的 XML 架构元素。  
   
- [从 XML 架构生成数据集关系 (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
+ [从 XML 架构生成数据集关系 (XSD)](generating-dataset-relations-from-xml-schema-xsd.md)  
  介绍用于在中的`DataSet`表列之间创建关系的 XML 架构元素。  
   
- [XML 架构约束和关系](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/xml-schema-constraints-and-relationships.md)  
+ [XML 架构约束和关系](xml-schema-constraints-and-relationships.md)  
  描述在使用 XML 架构元素在中`DataSet`创建约束时如何隐式地创建关系。  
   
 ## <a name="related-sections"></a>相关章节  
- [在数据集中使用 XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
+ [在数据集中使用 XML](using-xml-in-a-dataset.md)  
  描述如何以 XML 数据的`DataSet`形式加载和保存关系结构和数据。  
   
 ## <a name="see-also"></a>请参阅

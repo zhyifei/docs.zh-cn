@@ -12,21 +12,21 @@ helpviewer_keywords:
 ms.assetid: 298275e2-da1d-4618-9f74-6a3567832350
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6d89f3f4d97fe4cbe3b660b74537f8c8368b492a
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: bed0084fd576ba9b9f9eeb51e9e2466938e43490
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052773"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106511"
 ---
 # <a name="net-framework-system-requirements"></a>.NET Framework 系统要求
 
 本主题中的表格针对 .NET Framework 以下版本列出了硬件、操作系统和软件要求：
 
-* .NET Framework 4.5 及其次要版本（4.5.1 和 4.5.2）。
-* .NET Framework 4.6 及其次要版本（4.6.1 和 4.6.2）。
-* .NET Framework 4.7 及其单点版本（4.7.1 和 4.7.2）。
-* .NET Framework 4.8
+- .NET Framework 4.5 及其次要版本（4.5.1 和 4.5.2）。
+- .NET Framework 4.6 及其次要版本（4.6.1 和 4.6.2）。
+- .NET Framework 4.7 及其单点版本（4.7.1 和 4.7.2）。
+- .NET Framework 4.8
 
 有关早于 .NET Framework 4.5 的 .NET Framework 版本，请参阅 [.NET Framework 版本和依赖项](../migration-guide/versions-and-dependencies.md)。
 

@@ -1,12 +1,12 @@
 ---
 title: 演练：使用 C# 保留对象
 ms.date: 04/26/2018
-ms.openlocfilehash: 85b58e93d667d39800538bb2c29d4ba69146e7f3
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 88fb589ca2f9a24f861b528bfd601f837e9aac5f
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975818"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105924"
 ---
 # <a name="walkthrough-persisting-an-object-using-c"></a>演练：使用 C\# 保留对象
 
@@ -22,14 +22,14 @@ ms.locfileid: "56975818"
 
 ## <a name="prerequisites"></a>系统必备
 
-* 若要生成并运行，请安装 [.NET Core SDK](https://www.microsoft.com/net/core)。
+- 若要生成并运行，请安装 [.NET Core SDK](https://www.microsoft.com/net/core)。
 
-* 安装常用的代码编辑器（如果尚未安装）。
+- 安装常用的代码编辑器（如果尚未安装）。
 
 > [!TIP]
 > 需要安装代码编辑器？ 试用 [Visual Studio](https://visualstudio.com/downloads)！
 
-* 该示例需要 C# 7.3。 请参阅[选择 C# 语言版本](../../../language-reference/configure-language-version.md) 
+- 该示例需要 C# 7.3。 请参阅[选择 C# 语言版本](../../../language-reference/configure-language-version.md) 
 
 可在 [.NET 示例 GitHub 存储库](https://github.com/dotnet/samples/tree/master/csharp/serialization)在线检查示例代码。
 

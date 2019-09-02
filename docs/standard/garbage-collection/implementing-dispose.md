@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2881ef5b4cbc5850fde64fc68640021ebf42df43
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 964c788c5fc1ac791ed3ddd20c9c5c972d07b2c1
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666467"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106880"
 ---
 # <a name="implementing-a-dispose-method"></a>实现 Dispose 方法
 
@@ -26,12 +26,12 @@ ms.locfileid: "69666467"
   
 释放模式有两种变体：  
   
-* 你包装类型在安全句柄中（即，在从 <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType> 派生的类中）使用的每个非托管资源。 在这种情况下，你可以实现 <xref:System.IDisposable> 接口和额外的 `Dispose(Boolean)` 方法。 这是建议的变体，不要求重写 <xref:System.Object.Finalize%2A?displayProperty=nameWithType> 方法。  
+- 你包装类型在安全句柄中（即，在从 <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType> 派生的类中）使用的每个非托管资源。 在这种情况下，你可以实现 <xref:System.IDisposable> 接口和额外的 `Dispose(Boolean)` 方法。 这是建议的变体，不要求重写 <xref:System.Object.Finalize%2A?displayProperty=nameWithType> 方法。  
   
   > [!NOTE]
   > <xref:Microsoft.Win32.SafeHandles?displayProperty=nameWithType> 命名空间提供了一组派生自 <xref:System.Runtime.InteropServices.SafeHandle> 的类，[使用安全句柄](#SafeHandles)部分中列出了这些类。 如果找不到适用于释放非托管资源的类，则可实现你自己的 <xref:System.Runtime.InteropServices.SafeHandle> 的子类。  
   
-* 你可以实现 <xref:System.IDisposable> 接口和额外的 `Dispose(Boolean)` 方法，还可以重写 <xref:System.Object.Finalize%2A?displayProperty=nameWithType> 方法。 如果类型的使用者未调用你的 <xref:System.Object.Finalize%2A> 实现，则必须重写 <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> 以确保释放非托管资源。 如果使用上一项目符号中讨论的推荐方法，则 <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType> 类可代表你执行此操作。  
+- 你可以实现 <xref:System.IDisposable> 接口和额外的 `Dispose(Boolean)` 方法，还可以重写 <xref:System.Object.Finalize%2A?displayProperty=nameWithType> 方法。 如果类型的使用者未调用你的 <xref:System.Object.Finalize%2A> 实现，则必须重写 <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> 以确保释放非托管资源。 如果使用上一项目符号中讨论的推荐方法，则 <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType> 类可代表你执行此操作。  
   
 若要帮助确保始终正确地清理资源，<xref:System.IDisposable.Dispose%2A> 方法应该可以多次调用而不引发异常。  
   
@@ -42,9 +42,9 @@ ms.locfileid: "69666467"
 
 <xref:System.IDisposable> 接口需要实现单个无参数的方法 <xref:System.IDisposable.Dispose%2A>。 但是，释放模式需要实现两种 `Dispose` 方法：  
   
-* 一种没有参数的公共非虚拟的（Visual Basic 中的 `NonInheritable`）<xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> 实现。  
+- 一种没有参数的公共非虚拟的（Visual Basic 中的 `NonInheritable`）<xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> 实现。  
   
-* 受保护的虚拟（Visual Basic 中的`Overridable`）`Dispose` 方法，其签名为：  
+- 受保护的虚拟（Visual Basic 中的`Overridable`）`Dispose` 方法，其签名为：  
   
   [!code-csharp[Conceptual.Disposable#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.disposable/cs/dispose1.cs#8)]
   [!code-vb[Conceptual.Disposable#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.disposable/vb/dispose1.vb#8)]  
@@ -64,9 +64,9 @@ ms.locfileid: "69666467"
   
 方法的主体包含两个代码块：  
   
-* 释放非托管资源的块。 无论 `disposing` 参数的值如何，都会执行此块。  
+- 释放非托管资源的块。 无论 `disposing` 参数的值如何，都会执行此块。  
   
-* 释放托管资源的条件块。 如果 `disposing` 的值为 `true`，则执行此块。 它释放的托管资源可包括：  
+- 释放托管资源的条件块。 如果 `disposing` 的值为 `true`，则执行此块。 它释放的托管资源可包括：  
   
   **实现 <xref:System.IDisposable> 的托管对象。** 可用于调用其 <xref:System.IDisposable.Dispose%2A> 实现的条件块。 如果你已使用安全句柄来包装非托管资源，则应在此处调用 <xref:System.Runtime.InteropServices.SafeHandle.Dispose%28System.Boolean%29?displayProperty=nameWithType> 实现。  
   
@@ -81,11 +81,11 @@ ms.locfileid: "69666467"
 > [!IMPORTANT]
 > 你应针对实现 <xref:System.IDisposable.Dispose> 并且不是 `sealed`（Visual Basic 中的 `NotInheritable`）的所有基类实现此模式。  
   
-* 调用 <xref:System.IDisposable.Dispose%2A> 方法的 `Dispose(Boolean)` 实现。  
+- 调用 <xref:System.IDisposable.Dispose%2A> 方法的 `Dispose(Boolean)` 实现。  
   
-* 执行释放资源的实际工作的 `Dispose(Boolean)` 方法。  
+- 执行释放资源的实际工作的 `Dispose(Boolean)` 方法。  
   
-* 从包装非托管资源的 <xref:System.Runtime.InteropServices.SafeHandle> 派生的类（推荐），或对 <xref:System.Object.Finalize%2A?displayProperty=nameWithType> 方法的重写。 <xref:System.Runtime.InteropServices.SafeHandle> 类提供了一个使你无需编写代码的终结器。  
+- 从包装非托管资源的 <xref:System.Runtime.InteropServices.SafeHandle> 派生的类（推荐），或对 <xref:System.Object.Finalize%2A?displayProperty=nameWithType> 方法的重写。 <xref:System.Runtime.InteropServices.SafeHandle> 类提供了一个使你无需编写代码的终结器。  
   
 以下是一个常规模式，用于实现使用安全句柄的基类的释放模式：  
   
@@ -107,9 +107,9 @@ ms.locfileid: "69666467"
 
 从实现 <xref:System.IDisposable> 接口的类派生的类不应实现 <xref:System.IDisposable>，因为 <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> 的基类实现由其派生类继承。 相反，若要实现派生类的释放模式，你可提供以下内容：  
   
-* `protected Dispose(Boolean)` 方法，用于替代基类方法并执行释放派生类的资源的实际工作。 此方法还应调用基类的 `Dispose(Boolean)` 方法并传递参数的释放状态。  
+- `protected Dispose(Boolean)` 方法，用于替代基类方法并执行释放派生类的资源的实际工作。 此方法还应调用基类的 `Dispose(Boolean)` 方法并传递参数的释放状态。  
   
-* 从包装非托管资源的 <xref:System.Runtime.InteropServices.SafeHandle> 派生的类（推荐），或对 <xref:System.Object.Finalize%2A?displayProperty=nameWithType> 方法的重写。 <xref:System.Runtime.InteropServices.SafeHandle> 类提供了一个使你无需编写代码的终结器。 如果你提供了终结器，则应调用 *disposing* 参数为 `false` 的 `Dispose(Boolean)` 重载。  
+- 从包装非托管资源的 <xref:System.Runtime.InteropServices.SafeHandle> 派生的类（推荐），或对 <xref:System.Object.Finalize%2A?displayProperty=nameWithType> 方法的重写。 <xref:System.Runtime.InteropServices.SafeHandle> 类提供了一个使你无需编写代码的终结器。 如果你提供了终结器，则应调用 *disposing* 参数为 `false` 的 `Dispose(Boolean)` 重载。  
   
 以下是一个常规模式，用于实现使用安全句柄的派生类的释放模式：  
   
@@ -134,15 +134,15 @@ ms.locfileid: "69666467"
   
 从 <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType> 类派生的类通过无中断地分配和释放句柄来简化对象生存期问题。 它们包含可以保证在卸载应用程序域时运行的重要终结器。 有关使用安全句柄的优势的更多信息，请参见<xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType>。 <xref:Microsoft.Win32.SafeHandles> 命名空间中的以下派生类提供安全句柄：  
   
-* 用于文件、内存映射文件和管道的 <xref:Microsoft.Win32.SafeHandles.SafeFileHandle>、<xref:Microsoft.Win32.SafeHandles.SafeMemoryMappedFileHandle> 和 <xref:Microsoft.Win32.SafeHandles.SafePipeHandle> 类。  
+- 用于文件、内存映射文件和管道的 <xref:Microsoft.Win32.SafeHandles.SafeFileHandle>、<xref:Microsoft.Win32.SafeHandles.SafeMemoryMappedFileHandle> 和 <xref:Microsoft.Win32.SafeHandles.SafePipeHandle> 类。  
   
-* 用于内存视图的 <xref:Microsoft.Win32.SafeHandles.SafeMemoryMappedViewHandle> 类。  
+- 用于内存视图的 <xref:Microsoft.Win32.SafeHandles.SafeMemoryMappedViewHandle> 类。  
   
-* 用于加密构造的 <xref:Microsoft.Win32.SafeHandles.SafeNCryptKeyHandle>、<xref:Microsoft.Win32.SafeHandles.SafeNCryptProviderHandle> 和 <xref:Microsoft.Win32.SafeHandles.SafeNCryptSecretHandle> 类。  
+- 用于加密构造的 <xref:Microsoft.Win32.SafeHandles.SafeNCryptKeyHandle>、<xref:Microsoft.Win32.SafeHandles.SafeNCryptProviderHandle> 和 <xref:Microsoft.Win32.SafeHandles.SafeNCryptSecretHandle> 类。  
   
-* 用于注册表项的 <xref:Microsoft.Win32.SafeHandles.SafeRegistryHandle> 类。  
+- 用于注册表项的 <xref:Microsoft.Win32.SafeHandles.SafeRegistryHandle> 类。  
   
-* 用于等待句柄的 <xref:Microsoft.Win32.SafeHandles.SafeWaitHandle> 类。  
+- 用于等待句柄的 <xref:Microsoft.Win32.SafeHandles.SafeWaitHandle> 类。  
   
 <a name="base"></a>   
 ## <a name="using-a-safe-handle-to-implement-the-dispose-pattern-for-a-base-class"></a>使用安全句柄实现基类的释放模式

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 62f404a5-13ea-4b93-a29f-55b74a16c9d3
-ms.openlocfilehash: 210d15187cd539cdae6e38fdcb708b4b9f81c073
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 146854b592dd83efe87c54e1f5f99f110b81c1a5
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988309"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203680"
 ---
 # <a name="handling-datatable-events"></a>处理数据表事件
 <xref:System.Data.DataTable> 对象提供一系列可以由应用程序处理的事件。 下表描述了 `DataTable` 事件。  
@@ -81,7 +81,7 @@ ms.locfileid: "69988309"
   
 ## <a name="see-also"></a>请参阅
 
-- [操作数据表中的数据](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
-- [处理 DataAdapter 事件](../../../../../docs/framework/data/adonet/handling-dataadapter-events.md)
-- [处理数据集事件](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-dataset-events.md)
+- [操作数据表中的数据](manipulating-data-in-a-datatable.md)
+- [处理 DataAdapter 事件](../handling-dataadapter-events.md)
+- [处理数据集事件](handling-dataset-events.md)
 - [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

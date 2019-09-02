@@ -6,19 +6,19 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 1e38e9d9-8284-46ee-a15f-199adc4f26f4
-ms.openlocfilehash: aa08389d896fa81dbed8a63bb22a97e151016392
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2f76eb7d2b769b59809bec81aefacb7cec90a450
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64628796"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106689"
 ---
 # <a name="async-overview"></a>异步概述
 
 不久前，人们通过购买更新的电脑和服务器来加快应用的速度，但是这种趋势已经停止了。 事实上，趋势逆转了。 手机配备 1ghz 单核 ARM 芯片，而服务器工作负荷转向 VM。 用户仍青睐响应式 UI，企业所有者则希望拥有能随着其业务缩放的服务器。 向手机和云的转变以及超过 30 亿使用 Internet 的人口引领着新软件模式的形成。 
 
-* 有了高应用存储率，客户端应用有望保持始终开启，始终连接的状态，并且可持续响应用户交互（例如，触摸）！
-* 用户期望服务能够通过平稳地扩展和收缩来应对流量高峰。 
+- 有了高应用存储率，客户端应用有望保持始终开启，始终连接的状态，并且可持续响应用户交互（例如，触摸）！
+- 用户期望服务能够通过平稳地扩展和收缩来应对流量高峰。 
 
 异步编程是一项关键技术，可以直接处理多个核心上的阻塞 I/O 和并发操作。 .NET 可以通过 C#、VB 和 F# 中的易用语言级异步编程模型提高应用和服务的响应速度和灵活性。
 
@@ -28,10 +28,10 @@ ms.locfileid: "64628796"
 
 异步代码具有以下特点：
 
-* 等待 I/O 请求返回的同时，可通过生成处理更多请求的线程，处理更多的服务器请求。
-* 等待 I/O 请求的同时生成 UI 交互线程，并通过将长时间运行的工作转换到其他 CPU 核心，让 UI 的响应速度更快。
-* 许多较新的 .NET APIs 都是异步的。
-* 在 .NET 中编写异步代码很简单！
+- 等待 I/O 请求返回的同时，可通过生成处理更多请求的线程，处理更多的服务器请求。
+- 等待 I/O 请求的同时生成 UI 交互线程，并通过将长时间运行的工作转换到其他 CPU 核心，让 UI 的响应速度更快。
+- 许多较新的 .NET APIs 都是异步的。
+- 在 .NET 中编写异步代码很简单！
 
 ## <a name="whats-next"></a>后续步骤
 

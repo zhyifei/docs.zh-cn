@@ -14,12 +14,12 @@ ms.prod:
 - PRODUCT VALUE
 helpviewer_keywords:
 - OFFLINE BOOK INDEX ENTRIES
-ms.openlocfilehash: 0e8548745768bc9137e8fc76f86fc9fc7982b8de
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: e6c912f5ff9590f3b8cbb0f7e3f88e08fa9dd556
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "68616347"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106913"
 ---
 # <a name="metadata-and-markdown-template"></a>元数据和 Markdown 模板
 
@@ -61,12 +61,12 @@ Markdown 使用特殊字符如 \*、\` 和 \# 进行格式化。 如果要在内
 
 文件名使用以下规则：
 
-* 只包含小写字母、数字和连字符。
-* 不包括空格或标点字符。 在文件名中使用连字符分隔单词和数字。
-* 使用具体的动作动词，例如 develop、buy、build、troubleshoot。 不使用带 -ing 的单词。
-* 不使用小单词 - 不包含 a、and、the、in、or 等。
-* 必须为 Markdown 格式，使用 .md 文件扩展名。
-* 保持文件名简短。 它们是文章 URL 的一部分。
+- 只包含小写字母、数字和连字符。
+- 不包括空格或标点字符。 在文件名中使用连字符分隔单词和数字。
+- 使用具体的动作动词，例如 develop、buy、build、troubleshoot。 不使用带 -ing 的单词。
+- 不使用小单词 - 不包含 a、and、the、in、or 等。
+- 必须为 Markdown 格式，使用 .md 文件扩展名。
+- 保持文件名简短。 它们是文章 URL 的一部分。
 
 ## <a name="headings"></a>标题
 
@@ -244,22 +244,22 @@ UID 等同于完全限定的类型和成员名称。
 [!code-<language>[<name>](<pathToFile><queryoption><queryoptionvalue>)]
 ```
 
-* `-<language>`（可选但建议这样做）  
-  * 引用的代码片段的语言。 有关支持的值列表，请参阅[支持的语言](#supported-languages)。
+- `-<language>`（可选但建议这样做）  
+  - 引用的代码片段的语言。 有关支持的值列表，请参阅[支持的语言](#supported-languages)。
 
-* `<name>`（可选） 
-  * 代码片段的名称。 它不会对输出 HTML 产生任何影响，但可以使用它来提高 Markdown 源的可读性。
+- `<name>`（可选） 
+  - 代码片段的名称。 它不会对输出 HTML 产生任何影响，但可以使用它来提高 Markdown 源的可读性。
 
-* `<pathToFile>`（强制） 
-  * 文件系统中的相对路径指示要引用的代码片段文件。
+- `<pathToFile>`（强制） 
+  - 文件系统中的相对路径指示要引用的代码片段文件。
 
-* `<queryoption>` 和 `<queryoptionvalue>`（可选） 
-  * 一起使用可以指定从文件中检索代码的方式：
-    * `#`：`#L{startlinenumber}-L{endlinenumber}`（行范围）或 `#{tagname}`（标记名称）  。
+- `<queryoption>` 和 `<queryoptionvalue>`（可选） 
+  - 一起使用可以指定从文件中检索代码的方式：
+    - `#`：`#L{startlinenumber}-L{endlinenumber}`（行范围）或 `#{tagname}`（标记名称）  。
     不建议使用行号，因为它们容易出错。 标记名称是引用代码片段的首选方法。
-    * `range`：`?range=1,3-5` 行范围。 此示例包括第 1、第 3、第 4 和第 5 行。
-    * `dedent`：`?dedent=8` 用若干空格取消缩进行 - 此事例中为第 8 行。 这可以与 `range` 和其他查询选项结合使用，这些选项用于选择文件中行的子集。
-    * `outdent`：`?outdent=8` 用若干空格减少缩进行 - 此事例中为第 8 行。 这可以与 `range` 和其他查询选项结合使用，这些选项用于选择文件中行的子集。
+    - `range`：`?range=1,3-5` 行范围。 此示例包括第 1、第 3、第 4 和第 5 行。
+    - `dedent`：`?dedent=8` 用若干空格取消缩进行 - 此事例中为第 8 行。 这可以与 `range` 和其他查询选项结合使用，这些选项用于选择文件中行的子集。
+    - `outdent`：`?outdent=8` 用若干空格减少缩进行 - 此事例中为第 8 行。 这可以与 `range` 和其他查询选项结合使用，这些选项用于选择文件中行的子集。
 
 建议尽可能使用标记名称选项。 标记名称是区域的名称或代码注释的名称，其格式为源代码中的 `Snippettagname` 格式。 下面的示例演示如何引用标记名称 `1`：
 
@@ -448,11 +448,11 @@ docs.microsoft 为 GitHub Flavored Markdown 提供了其他一些扩展。
 可以在列表中使用自定义样式。 可以呈现带有绿色复选标记的列表。
 
 > [!div class="checklist"]
-> * 如何创建 .NET Core 应用
-> * 如何向 Microsoft.XmlSerializer.Generator 包中添加引用
-> * 如何编辑 MyApp.csproj 以添加依赖项
-> * 如何添加类和 XmlSerializer
-> * 如何生成并运行应用程序
+> - 如何创建 .NET Core 应用
+> - 如何向 Microsoft.XmlSerializer.Generator 包中添加引用
+> - 如何编辑 MyApp.csproj 以添加依赖项
+> - 如何添加类和 XmlSerializer
+> - 如何生成并运行应用程序
 
 可在 [.NET Core 文档](https://docs.microsoft.com/dotnet/core/additional-tools/xml-serializer-generator)的操作中查看列表示例。
 

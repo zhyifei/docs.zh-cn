@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 09f2e4ee-1d08-4ba8-8936-83394fee319d
-ms.openlocfilehash: 56f6e13763b5230e046c0838892393b3672a54be
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8bff92fe40ec668dfa634c3b97f2f1df238f159b
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69937044"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203968"
 ---
 # <a name="applying-an-xslt-transform-to-a-dataset"></a>将 XSLT 转换应用于 DataSet
 使用<xref:System.Data.DataSet>的**WriteXml**方法, 可以将**数据集**的内容作为 XML 数据写入。 随后的一项常见任务是使用 XSL 转换 (XSLT) 将该 XML 转换为另一种格式。 但是, 通过将**数据集**与<xref:System.Xml.XmlDataDocument>同步, 可以将 XSLT 样式表应用于**数据集**的内容, 而不必首先使用**WriteXml**以 XML 数据的形式编写**数据集**的内容。  
@@ -59,7 +59,7 @@ ms.locfileid: "69937044"
  下面的代码填充**数据集**并应用 XSLT 样式表。  
   
 > [!NOTE]
-> 如果要将 XSLT 样式表应用于包含关系的**数据集**, 如果将每个嵌套关系的的<xref:System.Data.DataRelation> **嵌套**属性设置为**true** , 则会获得最佳性能。 此设置使你可以使用 XSLT 样式表，执行正常的由上而下处理以遍历层次结构和转换数据，而不是使用对性能要求较高的 XPath 定位轴（例如，样式表节点测试表达式中前面的同级和后面的同级）来遍历层次结构。 有关嵌套关系的详细信息, 请参阅[嵌套 datarelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)。  
+> 如果要将 XSLT 样式表应用于包含关系的**数据集**, 如果将每个嵌套关系的的<xref:System.Data.DataRelation> **嵌套**属性设置为**true** , 则会获得最佳性能。 此设置使你可以使用 XSLT 样式表，执行正常的由上而下处理以遍历层次结构和转换数据，而不是使用对性能要求较高的 XPath 定位轴（例如，样式表节点测试表达式中前面的同级和后面的同级）来遍历层次结构。 有关嵌套关系的详细信息, 请参阅[嵌套 datarelation](nesting-datarelations.md)。  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -125,5 +125,5 @@ writer.Close();
   
 ## <a name="see-also"></a>请参阅
 
-- [数据集和 XmlDataDocument 同步](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)
+- [数据集和 XmlDataDocument 同步](dataset-and-xmldatadocument-synchronization.md)
 - [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

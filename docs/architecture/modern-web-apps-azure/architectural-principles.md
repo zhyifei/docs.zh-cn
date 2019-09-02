@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Azure 构建新式 Web 应用程序 | 体�
 author: ardalis
 ms.author: wiwagn
 ms.date: 02/16/2019
-ms.openlocfilehash: 74ff7196ce17807b98a975687a524041f15a7f5b
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 93a0fd5c484e27853ec9a6919aa573f68471ceaa
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675574"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105477"
 ---
 # <a name="architectural-principles"></a>体系结构原则
 
@@ -101,8 +101,8 @@ ms.locfileid: "68675574"
 
 ## <a name="additional-resources"></a>其他资源
 
-* [JAVA 设计模式：原则](https://java-design-patterns.com/principles/)
-* [有界上下文](https://martinfowler.com/bliki/BoundedContext.html)
+- [JAVA 设计模式：原则](https://java-design-patterns.com/principles/)
+- [有界上下文](https://martinfowler.com/bliki/BoundedContext.html)
 
 >[!div class="step-by-step"]
 >[上一页](choose-between-traditional-web-and-single-page-apps.md)

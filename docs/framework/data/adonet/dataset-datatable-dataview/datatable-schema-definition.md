@@ -2,12 +2,12 @@
 title: 数据表架构定义
 ms.date: 03/30/2017
 ms.assetid: efbcdda4-f5a9-421d-8be2-4c194c74552f
-ms.openlocfilehash: 20fee4316ad95c0f8716a0f374410009ea129222
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0d2609801da3bc336c54d32068246027cfd6d3aa
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69952350"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204990"
 ---
 # <a name="datatable-schema-definition"></a>数据表架构定义
 表的架构（即结构）由列和约束表示。 使用 <xref:System.Data.DataTable> 对象以及 <xref:System.Data.DataColumn> 和 <xref:System.Data.ForeignKeyConstraint> 对象定义 <xref:System.Data.UniqueConstraint> 的架构。 表中的列可以映射到数据源中的列、包含从表达式计算所得的值、自动递增它们的值，或包含主键值。  
@@ -20,22 +20,22 @@ ms.locfileid: "69952350"
 > <xref:System.Data.DataTable.CaseSensitive%2A> **DataTable**的属性不影响此行为。 **CaseSensitive**属性应用于表中的数据, 并影响排序、搜索、筛选、强制约束等, 但不影响对列、关系和约束的引用。  
   
 ## <a name="in-this-section"></a>本节内容  
- [向数据表添加列](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-columns-to-a-datatable.md)  
+ [向数据表添加列](adding-columns-to-a-datatable.md)  
  介绍如何使用**DataColumn**对象定义表中的列。  
   
- [创建表达式列](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-expression-columns.md)  
+ [创建表达式列](creating-expression-columns.md)  
  介绍如何使用列的**Expression**属性根据行中的其他列中的值计算值。  
   
- [创建 AutoIncrement 列](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-autoincrement-columns.md)  
+ [创建 AutoIncrement 列](creating-autoincrement-columns.md)  
  说明如何将列设置为自动递增数值，以确保每行都有唯一的列值。  
   
- [定义主键](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/defining-primary-keys.md)  
+ [定义主键](defining-primary-keys.md)  
  描述如何从一个或多个**DataColumn**对象中指定表的主键。  
   
- [数据表约束](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md)  
+ [数据表约束](datatable-constraints.md)  
  说明如何为表中的列定义外键和唯一约束。  
   
 ## <a name="see-also"></a>请参阅
 
-- [数据表](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)
+- [数据表](datatables.md)
 - [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

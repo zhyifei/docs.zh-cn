@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - constructors [C#], about constructors
 ms.assetid: 464253b2-fd5d-469a-836d-df0fdf2a43f7
-ms.openlocfilehash: 6825fbc571d8b08808f14a3f69ffc6f8a1ef048c
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: dab8466b4d40e318bbb9915c06ce4ac836c0ead0
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69596189"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205434"
 ---
 # <a name="using-constructors-c-programming-guide"></a>使用构造函数（C# 编程指南）
 
@@ -39,14 +39,14 @@ Console.WriteLine(i);
   
  但是，下面的代码会导致编译器错误，因为它不使用 `new`，而且尝试使用尚未初始化的对象：  
   
-```  
+```csharp  
 int i;  
 Console.WriteLine(i);  
 ```  
   
  或者，可将基于 `structs` 的对象（包括所有内置数值类型）初始化或赋值后使用，如下面的示例所示：  
   
-```  
+```csharp  
 int a = 44;  // Initialize the value type...  
 int b;  
 b = 33;      // Or assign it before using it.  

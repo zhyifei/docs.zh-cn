@@ -4,12 +4,12 @@ description: 了解如何使用 .NET 可移植性分析器工具，评估代码�
 ms.date: 07/18/2019
 ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: 32b4f980061b0975c413a8cde436074f76cfabc9
-ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
+ms.openlocfilehash: fdd2e9f288649b35b778b5da505408822e0ea8fe
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68433949"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70107502"
 ---
 # <a name="the-net-portability-analyzer"></a>.NET 可移植性分析器
 
@@ -17,11 +17,11 @@ ms.locfileid: "68433949"
 
 ## <a name="common-targets"></a>常用对象
 
-* [.NET Core](../../core/index.md)：采用模块化设计，可并行工作，面向跨平台方案。 可并行工作意味着无需破坏其他应用即可采用新的 .NET Core 版本。 如果目标是将应用移植到支持跨平台的 .NET Core，则建议使用此对象。 
-* .[NET Standard](../../standard/net-standard.md)：包括所有 .NET 实现上提供的 .NET Standard API。 如果目标是使自己的库能够在所有 .NET 支持的平台上运行，则建议使用此对象。  
-* [ASP.NET Core](/aspnet/core)：在 .NET Core 基础上构建的现代 Web 框架。 如果目标是将 Web 应用移植到 .NET Core 以支持多个平台，则建议使用此对象。
-* .NET Core + [平台扩展](../../core/porting/windows-compat-pack.md)：除 Windows 兼容包之外，还包括 .NET Core API，后者提供了许多可用的 .NET Framework 技术。 这是推荐的对象，用于将 Windows 上的应用从 .NET Framework 移植到 .NET Core。
-* .NET Standard + [平台扩展](../../core/porting/windows-compat-pack.md)：除 Windows 兼容包之外，还包括 .NET Standard API，后者提供了许多可用的 .NET Framework 技术。 这是推荐的对象，用于将 Windows 上的库从 .NET Framework 移植到 .NET Core。
+- [.NET Core](../../core/index.md)：采用模块化设计，可并行工作，面向跨平台方案。 可并行工作意味着无需破坏其他应用即可采用新的 .NET Core 版本。 如果目标是将应用移植到支持跨平台的 .NET Core，则建议使用此对象。 
+- .[NET Standard](../../standard/net-standard.md)：包括所有 .NET 实现上提供的 .NET Standard API。 如果目标是使自己的库能够在所有 .NET 支持的平台上运行，则建议使用此对象。  
+- [ASP.NET Core](/aspnet/core)：在 .NET Core 基础上构建的现代 Web 框架。 如果目标是将 Web 应用移植到 .NET Core 以支持多个平台，则建议使用此对象。
+- .NET Core + [平台扩展](../../core/porting/windows-compat-pack.md)：除 Windows 兼容包之外，还包括 .NET Core API，后者提供了许多可用的 .NET Framework 技术。 这是推荐的对象，用于将 Windows 上的应用从 .NET Framework 移植到 .NET Core。
+- .NET Standard + [平台扩展](../../core/porting/windows-compat-pack.md)：除 Windows 兼容包之外，还包括 .NET Standard API，后者提供了许多可用的 .NET Framework 技术。 这是推荐的对象，用于将 Windows 上的库从 .NET Framework 移植到 .NET Core。
 
 ## <a name="how-to-use-the-net-portability-analyzer"></a>如何使用 .NET 可移植性分析器
 
@@ -38,9 +38,9 @@ ms.locfileid: "68433949"
 
 还可以使用 [ApiPort 控制台应用](https://aka.ms/apiportdownload)。 
 
-* 键入以下命令即可分析当前目录：`ApiPort.exe analyze -f .`
-* 若要分析特定的 .dll 文件列表，请键入以下命令：`ApiPort.exe analyze -f first.dll -f second.dll -f third.dll`
-* 运行 `ApiPort.exe -?` 以获取更多帮助
+- 键入以下命令即可分析当前目录：`ApiPort.exe analyze -f .`
+- 若要分析特定的 .dll 文件列表，请键入以下命令：`ApiPort.exe analyze -f first.dll -f second.dll -f third.dll`
+- 运行 `ApiPort.exe -?` 以获取更多帮助
 
 建议包含自己拥有的且要移植的所有相关 exe 和 dll 文件，并且排除应用所依赖的，但你既不拥有又无法移植的文件。 这将为你提供最相关的可移植性报表。  
 

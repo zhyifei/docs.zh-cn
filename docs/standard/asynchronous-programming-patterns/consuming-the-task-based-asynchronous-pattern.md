@@ -11,19 +11,19 @@ helpviewer_keywords:
 ms.assetid: 033cf871-ae24-433d-8939-7a3793e547bf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 723f07fb3fb4eda1c0071eec2b1d012948a10f77
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 08b5dee94a9a23fdd1c9e635aa2ef848f59e86cf
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666561"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70169135"
 ---
 # <a name="consuming-the-task-based-asynchronous-pattern"></a>使用基于任务的异步模式
 
 使用基于任务的异步模式 (TAP) 处理异步操作时，可以使用回叫实现等待，而不会阻塞。  对于任务，这可通过 <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType> 等方法实现。 通过允许在正常控制流中等待异步操纵，基于语言的异步支持可隐藏回叫，并且编译器生成的代码可提供此相同 API 级别的支持。
 
 ## <a name="suspending-execution-with-await"></a>使用 Await 挂起执行
- 自 .NET Framework 4.5 起，可以使用 C# 中的 [await](../../csharp/language-reference/keywords/await.md) 关键字和 Visual Basic 中的 [Await 运算符](../../visual-basic/language-reference/operators/await-operator.md)，异步等待 <xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601> 对象。 等待 <xref:System.Threading.Tasks.Task> 时，`await` 表达式的类型为 `void`。 等待 <xref:System.Threading.Tasks.Task%601> 时，`await` 表达式的类型为 `TResult`。 `await` 表达式必须出现在异步方法的正文内。 若要详细了解 .NET Framework 4.5 中的 C# 和 Visual Basic 语言支持，请参阅 C# 和 Visual Basic 语言规范。
+ 自 .NET Framework 4.5 起，可以使用 C# 中的 [await](../../csharp/language-reference/operators/await.md) 关键字和 Visual Basic 中的 [Await 运算符](../../visual-basic/language-reference/operators/await-operator.md)，异步等待 <xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601> 对象。 等待 <xref:System.Threading.Tasks.Task> 时，`await` 表达式的类型为 `void`。 等待 <xref:System.Threading.Tasks.Task%601> 时，`await` 表达式的类型为 `TResult`。 `await` 表达式必须出现在异步方法的正文内。 若要详细了解 .NET Framework 4.5 中的 C# 和 Visual Basic 语言支持，请参阅 C# 和 Visual Basic 语言规范。
 
  实际上，await 功能通过使用延续任务在任务上安装回叫。  此回叫在挂起点恢复异步方法。 恢复异步方法时，如果等待的操作已成功完成且为 <xref:System.Threading.Tasks.Task%601>，返回的是 `TResult`。  如果等待的 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601> 以 <xref:System.Threading.Tasks.TaskStatus.Canceled> 状态结束，就会抛出 <xref:System.OperationCanceledException> 异常。  如果等待的 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601> 以 <xref:System.Threading.Tasks.TaskStatus.Faulted> 状态结束，就会抛出导致它发生故障的异常。 一个 `Task` 可能由于多个异常而出错，但只会传播一个异常。 不过，<xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=nameWithType> 属性会返回包含所有错误的 <xref:System.AggregateException> 异常。
 

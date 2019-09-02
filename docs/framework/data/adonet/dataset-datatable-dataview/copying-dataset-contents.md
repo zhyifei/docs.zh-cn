@@ -5,23 +5,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: cb846617-2b1a-44ff-bd7f-5835f5ea37fa
-ms.openlocfilehash: 29afeb84498f2b1d000940ddc28545602a44d408
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f60ef817773b6234b19856bfc0727eedb67e113e
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626154"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205172"
 ---
 # <a name="copying-dataset-contents"></a>复制数据集内容
-可以创建一份<xref:System.Data.DataSet>，以便可以处理的数据，而不会影响原始数据，或处理中的数据的子集**数据集**。 复制时**数据集**，你可以：  
+您可以创建的副本<xref:System.Data.DataSet> , 以便在不影响原始数据的情况下处理数据, 或使用数据**集中**的数据的子集。 复制**数据集**时, 可以:  
   
-- 创建的一个精确副本**数据集**，包括架构、 数据、 行状态信息和行版本。  
+- 创建**数据集**的精确副本, 包括架构、数据、行状态信息和行版本。  
   
-- 创建**数据集**，其中包含对现有的架构**数据集**，但已被修改的行。 可以返回已修改的所有行，也可以指定特定**DataRowState**。 有关行状态的详细信息，请参阅[行状态和行版本](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)。  
+- 创建一个**数据集, 该数据集**包含现有**数据集**的架构, 而只包含已修改的行。 可以返回所有已修改的行, 也可以指定特定的**DataRowState**。 有关行状态的详细信息, 请参阅[行状态和行版本](row-states-and-row-versions.md)。  
   
-- 复制的架构，即关系结构**数据集**仅，而不复制任何行。 可以使用 <xref:System.Data.DataTable> 将行导入现有 <xref:System.Data.DataTable.ImportRow%2A>。  
+- 仅复制**数据集**的架构或关系结构, 而不复制任何行。 可以使用 <xref:System.Data.DataTable> 将行导入现有 <xref:System.Data.DataTable.ImportRow%2A>。  
   
- 若要创建的一个精确副本**数据集**其中包括架构和数据，请使用<xref:System.Data.DataSet.Copy%2A>方法**数据集**。 下面的代码示例演示如何创建完全相同的副本**数据集**。  
+ 若要创建包含架构和数据的**数据集**的完全相同的副本, 请<xref:System.Data.DataSet.Copy%2A>使用**dataset**的方法。 下面的代码示例演示如何创建**数据集**的精确副本。  
   
 ```vb  
 Dim copyDataSet As DataSet = customerDataSet.Copy()  
@@ -31,7 +31,7 @@ Dim copyDataSet As DataSet = customerDataSet.Copy()
 DataSet copyDataSet = customerDataSet.Copy();  
 ```  
   
- 若要创建一份**数据集**其中包括架构和仅数据表示**Added**， **Modified**，或**已删除**行，请使用<xref:System.Data.DataSet.GetChanges%2A>方法**数据集**。 此外可以使用**GetChanges**返回只有指定的行状态的行通过传递**DataRowState**值时调用**GetChanges**。 下面的代码示例演示如何传递**DataRowState**调用时**GetChanges**。  
+ 若要创建包含架构的数据**集**的副本, 并且仅创建表示**已添加**、**已修改**或**已删除**行的<xref:System.Data.DataSet.GetChanges%2A>数据, 请使用**数据集**的方法。 调用**GetChanges**时, 还可以使用**GetChanges**来仅返回具有指定行状态的行 。 下面的代码示例演示如何在调用**GetChanges**时传递**DataRowState** 。  
   
 ```vb  
 ' Copy all changes.  
@@ -48,9 +48,9 @@ DataSet changeDataSet = customerDataSet.GetChanges();
 DataSet addedDataSet= customerDataSet.GetChanges(DataRowState.Added);  
 ```  
   
- 若要创建一份**数据集**仅包含架构，请使用<xref:System.Data.DataSet.Clone%2A>方法**数据集**。 此外可以将现有行添加到克隆**数据集**使用**ImportRow**方法**DataTable**。 **ImportRow**将数据、 行状态和行版本信息添加到指定的表。 只有当列名称匹配且数据类型兼容时，才会添加列值。  
+ 若要创建仅包含架构的**数据集**的副本, 请使用<xref:System.Data.DataSet.Clone%2A> **dataset**的方法。 还可以使用**DataTable**的**ImportRow**方法将现有行添加到克隆的**数据集**。 **ImportRow**将数据、行状态和行版本信息添加到指定的表中。 只有当列名称匹配且数据类型兼容时，才会添加列值。  
   
- 下面的代码示例创建的克隆**数据集**然后将行添加从原始**数据集**到**客户**表中**数据集**克隆客户位置**国家 （地区)** 列具有"Germany"的值。  
+ 下面的代码示例创建一个**数据集**的克隆, 然后将原始**数据集中**的行添加到 "国家/地区"克隆的 " **Customers** " 表中, 其中 "**国家/地区**" 列的值为 "德国".  
   
 ```vb  
 Dim customerDataSet As New DataSet  
@@ -98,5 +98,5 @@ foreach (DataRow copyRow in copyRows)
 
 - <xref:System.Data.DataSet>
 - <xref:System.Data.DataTable>
-- [数据集、数据表和数据视图](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [数据集、数据表和数据视图](index.md)
 - [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

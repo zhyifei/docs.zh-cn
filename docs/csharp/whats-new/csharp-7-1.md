@@ -2,12 +2,12 @@
 title: C# 7.1 中的新增功能
 description: C# 7.1 中的新增功能概述。
 ms.date: 04/09/2019
-ms.openlocfilehash: 18306da709ea30f03f6c42b4a917e9b39695eb16
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: ee68cbf129d02fc58155a603d6a3f63cfb182cd0
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796599"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105548"
 ---
 # <a name="whats-new-in-c-71"></a>C# 7.1 中的新增功能
 
@@ -17,13 +17,13 @@ C# 7.1 增加了[语言版本选择](../language-reference/configure-language-ve
 
 此版本中新增的语言功能包括：
 
-* [`async` `Main` 方法](#async-main)
+- [`async` `Main` 方法](#async-main)
   - 应用程序的入口点可以含有 `async` 修饰符。
-* [`default` 文本表达式](#default-literal-expressions)
+- [`default` 文本表达式](#default-literal-expressions)
   - 在可以推断目标类型的情况下，可在默认值表达式中使用默认文本表达式。
-* [推断元组元素名称](#inferred-tuple-element-names)
+- [推断元组元素名称](#inferred-tuple-element-names)
   - 在许多情况下，可通过元组初始化来推断元组元素的名称。
-* [泛型类型参数的模式匹配](#pattern-matching-on-generic-type-parameters)
+- [泛型类型参数的模式匹配](#pattern-matching-on-generic-type-parameters)
   - 可以对类型为泛型类型参数的变量使用模式匹配表达式。
 
 最后，编译器有 `-refout` 和 `-refonly` 两个选项，可用于控制[引用程序集生成](#reference-assembly-generation)。

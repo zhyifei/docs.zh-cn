@@ -2,12 +2,12 @@
 title: dotnet add package 命令
 description: “dotnet add package”命令可便于添加对项目的 NuGet 包引用。
 ms.date: 06/26/2019
-ms.openlocfilehash: 50a352be66f2b4bd4498d79f61dc01f56d4b00c5
-ms.sourcegitcommit: 4a3c95e91289d16c38979575a245a4f76b0da147
+ms.openlocfilehash: 124e42b1d5897802bb1698c8e22b7e76031391a2
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67569502"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105165"
 ---
 # <a name="dotnet-add-package"></a>dotnet add package
 
@@ -54,59 +54,59 @@ info : PackageReference for package 'Newtonsoft.Json' version '12.0.1' added to 
 
 ## <a name="arguments"></a>自变量
 
-* **`PROJECT`**
+- **`PROJECT`**
 
   指定项目文件。 如果未指定，此命令会搜索当前目录来获取一个项目文件。
 
-* **`PACKAGE_NAME`**
+- **`PACKAGE_NAME`**
 
   要添加的包引用。
 
 ## <a name="options"></a>选项
 
-* **`-f|--framework <FRAMEWORK>`**
+- **`-f|--framework <FRAMEWORK>`**
 
   仅在以特定[框架](../../standard/frameworks.md)为目标时添加包引用。
 
-* **`-h|--help`**
+- **`-h|--help`**
 
   打印出有关命令的简短帮助。
 
-* **`--interactive`**
+- **`--interactive`**
 
   允许命令停止并等待用户输入或操作（例如，完成身份验证）。 从 .NET Core 2.1 SDK，版本 2.1.400 或更高版本开始可用。
 
-* **`-n|--no-restore`**
+- **`-n|--no-restore`**
 
   在不执行还原预览和兼容性检查的情况下添加包引用。
 
-* **`--package-directory <PACKAGE_DIRECTORY>`**
+- **`--package-directory <PACKAGE_DIRECTORY>`**
 
   要在其中还原包的目录。 Windows 上的默认包还原位置为 `%userprofile%\.nuget\packages`，macOS 和 Linux 上的默认包还原位置为 `~/.nuget/packages`。 有关详细信息，请参阅[在 NuGet 中管理全局包、缓存和临时文件夹](https://docs.microsoft.com/nuget/consume-packages/managing-the-global-packages-and-cache-folders)。
 
-* **`-s|--source <SOURCE>`**
+- **`-s|--source <SOURCE>`**
 
   要在还原操作期间使用的 NuGet 包源。
 
-* **`-v|--version <VERSION>`**
+- **`-v|--version <VERSION>`**
 
   包的版本。 请参阅 [NuGet 包版本控制](https://docs.microsoft.com/nuget/reference/package-versioning)。
 
 ## <a name="examples"></a>示例
 
-* 将 `Newtonsoft.Json` NuGet 包添加到项目：
+- 将 `Newtonsoft.Json` NuGet 包添加到项目：
 
   ```console
   dotnet add package Newtonsoft.Json
   ```
 
-* 向项目添加特定版本的包：
+- 向项目添加特定版本的包：
 
   ```console
   dotnet add ToDo.csproj package Microsoft.Azure.DocumentDB.Core -v 1.0.0
   ```
 
-* 使用特定的 NuGet 源添加包：
+- 使用特定的 NuGet 源添加包：
 
   ```console
   dotnet add package Microsoft.AspNetCore.StaticFiles -s https://dotnet.myget.org/F/dotnet-core/api/v3/index.json

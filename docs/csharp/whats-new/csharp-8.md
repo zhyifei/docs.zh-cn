@@ -2,12 +2,12 @@
 title: C# 8.0 中的新增功能 - C# 指南
 description: 简要介绍 C# 8.0 中提供的新功能。 本文使用最新的预览版 5。
 ms.date: 02/12/2019
-ms.openlocfilehash: bf67baba926effd012ae01d3d802ba921e41ad5a
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 14c86fe4b1ecd1c89ebbbb082c5c9956bc51e03e
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363892"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105516"
 ---
 # <a name="whats-new-in-c-80"></a>C# 8.0 中的新增功能
 
@@ -16,10 +16,10 @@ C# 语言有许多增强功能，可以进行试用。
 - [Readonly 成员](#readonly-members)
 - [默认接口成员](#default-interface-members)
 - [模式匹配增强功能](#more-patterns-in-more-places)：
-  * [Switch 表达式](#switch-expressions)
-  * [属性模式](#property-patterns)
-  * [元组模式](#tuple-patterns)
-  * [位置模式](#positional-patterns)
+  - [Switch 表达式](#switch-expressions)
+  - [属性模式](#property-patterns)
+  - [元组模式](#tuple-patterns)
+  - [位置模式](#positional-patterns)
 - [Using 声明](#using-declarations)
 - [静态本地函数](#static-local-functions)
 - [可处置的 ref 结构](#disposable-ref-structs)

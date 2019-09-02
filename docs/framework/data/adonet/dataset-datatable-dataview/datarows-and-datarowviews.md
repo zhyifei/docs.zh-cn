@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8f5eec26-b809-4aca-8778-7e202356d856
-ms.openlocfilehash: 14e210c36ee2ab8ddba7451ac7b346ad72288d94
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8a98dc44eda9ebda09235193c58bd831fc52d04d
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879822"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205089"
 ---
 # <a name="datarows-and-datarowviews"></a>DataRow 和 DataRowView
-<xref:System.Data.DataView> 公开 <xref:System.Data.DataRowView> 对象的可枚举集合。 **DataRowView**对象将值公开为对象数组按名称或序号引用的基础表中的列编制索引。 您可以访问<xref:System.Data.DataRow>由公开**DataRowView**通过<xref:System.Data.DataRowView.Row%2A>属性**DataRowView**。  
+<xref:System.Data.DataView> 公开 <xref:System.Data.DataRowView> 对象的可枚举集合。 **DataRowView**对象将值公开为按基础表中的列的名称或序号引用进行索引的对象数组。 可以使用<xref:System.Data.DataRow> **DataRowView 的** **属性访问由 DataRowView**公开的。 <xref:System.Data.DataRowView.Row%2A>  
   
- 通过查看值时**DataRowView**，则<xref:System.Data.DataView.RowStateFilter%2A>的属性**DataView**确定哪个行版本的基础**DataRow**得以实现。 有关访问使用不同的行版本信息**DataRow**，请参阅[行状态和行版本](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)。  
+ 使用**DataRowView**查看值时, <xref:System.Data.DataView.RowStateFilter%2A> **DataView**的属性将确定公开基础**DataRow**的行版本。 有关使用**DataRow**访问不同行版本的信息, 请参阅[行状态和行版本](row-states-and-row-versions.md)。  
   
  以下代码示例显示一个表中的所有当前值和原始值。  
   
@@ -65,5 +65,5 @@ public static void WriteView(DataView thisDataView)
 - <xref:System.Data.DataViewRowState>
 - <xref:System.Data.DataView>
 - <xref:System.Data.DataRowView>
-- [数据视图](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)
+- [数据视图](dataviews.md)
 - [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -3,12 +3,12 @@ title: 使用索引和范围探索数据范围
 description: 本高级教程教你使用索引和范围来探索数据，以检查顺序数据集的切片。
 ms.date: 04/19/2019
 ms.custom: mvc
-ms.openlocfilehash: 118d3c9ccad98ec02195c2b5e26a2ca203990adf
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.openlocfilehash: d53f32bcb310d4859cea67a742ac0e2c4be5d942
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557187"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105790"
 ---
 # <a name="indices-and-ranges"></a>索引和范围
 
@@ -17,9 +17,9 @@ ms.locfileid: "65557187"
 在本教程中，你将了解：
 
 > [!div class="checklist"]
-> * 对某个序列中的范围使用该语法。
-> * 了解每个序列开头和末尾的设计决策。
-> * 了解 <xref:System.Index> 和 <xref:System.Range> 类型的应用场景。
+> - 对某个序列中的范围使用该语法。
+> - 了解每个序列开头和末尾的设计决策。
+> - 了解 <xref:System.Index> 和 <xref:System.Range> 类型的应用场景。
 
 ## <a name="language-support-for-indices-and-ranges"></a>对索引和范围的语言支持
 
@@ -51,7 +51,7 @@ string[] words = new string[]
 
 [!code-csharp[LastIndex](~/samples/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_LastIndex)]
 
-范围指定范围的开始和末尾。 范围是排除的，也就是说“末尾”不包含在范围内。 范围 `[0..^0]` 表示整个范围，就像 `[0..sequence.Length]` 表示整个范围。 
+范围指定范围的开始和末尾   。 范围是排除的，也就是说“末尾”不包含在范围内  。 范围 `[0..^0]` 表示整个范围，就像 `[0..sequence.Length]` 表示整个范围。 
 
 以下代码创建了一个包含单词“quick”、“brown”和“fox”的子范围。 它包括 `words[1]` 到 `words[3]`。 元素 `words[4]` 不在该范围内。 将以下代码添加到同一方法中。 将其复制并粘贴到交互式窗口的底部。
 

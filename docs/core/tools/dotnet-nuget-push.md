@@ -3,12 +3,12 @@ title: dotnet nuget push 命令
 description: dotnet nuget push 命令可将包推送到服务器并发布。
 author: karann-msft
 ms.date: 06/26/2019
-ms.openlocfilehash: 4d5efa94c6a4494158aea447be98256d2a307cd6
-ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
+ms.openlocfilehash: 87557f606dead921961349fec4575394e6d359fd
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67539133"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70202544"
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
@@ -24,7 +24,7 @@ ms.locfileid: "67539133"
 
 ## <a name="synopsis"></a>摘要
 
-```
+```console
 dotnet nuget push [<ROOT>] [-d|--disable-buffering] [--force-english-output] [--interactive] [-k|--api-key] [-n|--no-symbols]
     [--no-service-endpoint] [-s|--source] [-sk|--symbol-api-key] [-ss|--symbol-source] [-t|--timeout]
 dotnet nuget push [-h|--help]
@@ -88,13 +88,13 @@ dotnet nuget push [-h|--help]
 
 ## <a name="examples"></a>示例
 
-* 将 foo.nupkg 推送到默认推送源（指定 API 密钥）：
+* 将 foo.nupkg 推送到默认推送源（指定 API 密钥）  ：
 
   ```console
   dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a
   ```
 
-* 将 foo.nupkg 推送到自定义推送源 `https://customsource`（指定 API 密钥）：
+* 将 foo.nupkg 推送到自定义推送源 `https://customsource`（指定 API 密钥）  ：
 
   ```console
   dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -s https://customsource/
@@ -112,7 +112,7 @@ dotnet nuget push [-h|--help]
   dotnet nuget push foo.symbols.nupkg
   ```
 
-* 将 foo.nupkg 推送到默认推送源（指定 360 秒超时时间）：
+* 将 foo.nupkg 推送到默认推送源（指定 360 秒超时时间）  ：
 
   ```console
   dotnet nuget push foo.nupkg --timeout 360

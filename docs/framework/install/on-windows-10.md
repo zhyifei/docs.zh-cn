@@ -5,12 +5,12 @@ author: rlander
 ms.author: mairaw
 ms.date: 04/18/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: 13ccdafc00f7a43d456126e3ec3afc1ae5897564
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 33805230e0aa6c75443773d60e73f9463ee1fde5
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422671"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106547"
 ---
 # <a name="install-the-net-framework-on-windows-10-and-windows-server-2016-and-later"></a>在 Windows 10 和 Windows Server 2016 及更高版本上安装 .NET Framework
 
@@ -24,7 +24,7 @@ ms.locfileid: "67422671"
 
 .NET Framework 4.8 随附：
 
-* [Windows 10 2019 年 5 月更新](https://support.microsoft.com/help/4028685/windows-10-get-the-update)
+- [Windows 10 2019 年 5 月更新](https://support.microsoft.com/help/4028685/windows-10-get-the-update)
 
 > [!div class="button"]
 > [下载 .NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48)
@@ -33,20 +33,20 @@ ms.locfileid: "67422671"
 
 [.NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48) 可安装于：
 
-* Windows 10 2018 年 10 月更新（版本 1809）
-* Windows 10 2018 年 4 月更新（版本 1803）
-* Windows 10 秋季创意者更新（版本 1709）
-* Windows 10 创意者更新（版本 1703）
-* Windows 10 周年更新（版本 1607）
-* Windows Server 2019
-* Windows Server 版本 1809
-* Windows Server 版本 1803
-* Windows 2016 Server
+- Windows 10 2018 年 10 月更新（版本 1809）
+- Windows 10 2018 年 4 月更新（版本 1803）
+- Windows 10 秋季创意者更新（版本 1709）
+- Windows 10 创意者更新（版本 1703）
+- Windows 10 周年更新（版本 1607）
+- Windows Server 2019
+- Windows Server 版本 1809
+- Windows Server 版本 1803
+- Windows 2016 Server
 
 以下系统不支持 .NET Framework 4.8：
 
-* Windows 10 1507
-* Windows 10 1511
+- Windows 10 1507
+- Windows 10 1511
 
 如果正在使用 Windows 10 1507 或 1511，且想要安装 .NET Framework 4.8，首先需要升级到较新的 Windows 10 版本。
 
