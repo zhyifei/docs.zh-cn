@@ -166,13 +166,13 @@ myOrder.AddOrderItem(productId, productName, pictureUrl, unitPrice, discount, un
 
 ### <a name="additional-resources"></a>其他资源
 
-- **Vaughn Vernon。Modeling Aggregates with DDD and Entity Framework**（使用 DDD 和 Entity Framework 对聚合建模）。 请注意，*不*是 Entity Framework Core。 \
+- **Vaughn Vernon。使用 DDD 和 Entity Framework 对聚合建模**。 请注意，*不*是 Entity Framework Core。 \
   <https://kalele.io/blog-posts/modeling-aggregates-with-ddd-and-entity-framework/>
 
 - **Julie Lerman.数据点 - 域驱动设计的编码：面向数据聚焦型开发人员的提示** \
   <https://msdn.microsoft.com/magazine/dn342868.aspx>
 
-- **Udi Dahan.How to create fully encapsulated Domain Models** \（如何创建完全封装的域模型）
+- **Udi Dahan.如何创建完全封装的域模型** \
   <http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/>
 
 > [!div class="step-by-step"]
