@@ -2,16 +2,18 @@
 title: C# 语言版本控制 - C# 指南
 description: 了解如何根据项目确定 C# 语言版本，以及可以手动调整的不同值。
 ms.date: 07/10/2019
-ms.openlocfilehash: 744cec0aac21f743648cccbdc93cf2977c32d644
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: fae36f5305e23fbfa1c55c5881e37391670f93ab
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796527"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70040354"
 ---
 # <a name="c-language-versioning"></a>C# 语言版本控制
 
-C# 编译器根据项目的一个或多个目标框架确定默认语言版本。 这是因为 C# 语言可能具有依赖于每个 .NET 实现中不提供的类型或运行时组件的功能。 这也确保了无论根据哪种目标构建项目，默认情况下你都将获得最兼容的语言版本。
+最新的 C# 编译器根据项目的一个或多个目标框架确定默认语言版本。 这是因为 C# 语言可能具有依赖于每个 .NET 实现中不提供的类型或运行时组件的功能。 这也确保了无论根据哪种目标构建项目，默认情况下你都将获得最兼容的语言版本。
+
+本文中的规则适用于随 Visual Studio 2019 或 .NET Core 3.0 SDK 一起提供的编译器。 默认情况下，Visual Studio 2017 安装或早期 .NET Core SDK 版本中包含的 C# 编译器以 C# 7.0 为目标。 
 
 ## <a name="defaults"></a>默认值
 

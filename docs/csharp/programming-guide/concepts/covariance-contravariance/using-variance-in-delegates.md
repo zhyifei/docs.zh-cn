@@ -2,12 +2,12 @@
 title: 使用委托中的变体 (C#)
 ms.date: 07/20/2015
 ms.assetid: 1638c95d-dc8b-40c1-972c-c2dcf84be55e
-ms.openlocfilehash: 00e11d4ce755c8c75b73023fec14d95ebc96b4fe
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 980caf8d5e4699115d203a89fab7994d18cc1707
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69595262"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168370"
 ---
 # <a name="using-variance-in-delegates-c"></a>使用委托中的变体 (C#)
 向委托分配方法时，协变  和逆变  为匹配委托类型和方法签名提供了灵活性。 协变允许方法具有的派生返回类型多于委托中定义的类型。 逆变允许方法具有的派生参数类型少于委托类型中的类型。  
@@ -50,8 +50,23 @@ class Program
   
 ## <a name="example-2-contravariance"></a>示例 2：逆变  
   
-### <a name="description"></a>说明  
- 本示例演示如何将委托与具有某个类型的参数的方法一起使用，这些返回类型是委托签名参数类型的基类型。 通过逆变可以使用一个事件处理程序而不是多个单独的处理程序。 例如，可以创建接受 `EventArgs` 输入参数的事件处理程序，并将其与将 `MouseEventArgs` 类型作为参数发送的 `Button.MouseClick` 事件一起使用，也可以将其与发送 `KeyEventArgs` 参数的 `TextBox.KeyDown` 事件一起使用。  
+### <a name="description"></a>说明
+
+本示例演示如何将委托与具有参数的方法一起使用，这些参数的类型是委托签名参数类型的基类型。 通过逆变可以使用一个事件处理程序而不是多个单独的处理程序。 下面的示例使用两个委托：
+
+- 定义 [Button.KeyDown](xref:System.Windows.Forms.Control.KeyDown) 事件签名的 <xref:System.Windows.Forms.KeyEventHandler> 委托。 其签名为：
+
+   ```csharp
+   public delegate void KeyEventHandler(object sender, KeyEventArgs e)
+   ```
+
+- 定义 [Button.MouseClick](xref:System.Windows.Forms.Control.MouseDown) 事件签名的 <xref:System.Windows.Forms.MouseEventHandler> 委托。 其签名为：
+
+   ```csharp
+   public delegate void MouseEventHandler(object sender, MouseEventArgs e)
+   ```
+
+该示例定义了一个具有 <xref:System.EventArgs> 参数的事件处理程序，并使用它来处理 `Button.KeyDown` 和 `Button.MouseClick` 事件。 它可以这样做是因为 <xref:System.EventArgs> 是 <xref:System.Windows.Forms.KeyEventArgs> 和 <xref:System.Windows.Forms.MouseEventArgs> 的基类型。 
   
 ### <a name="code"></a>代码  
   

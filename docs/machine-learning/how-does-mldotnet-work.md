@@ -1,17 +1,17 @@
 ---
 title: 什么是 ML.NET 以及它如何工作？
 description: ML.NET 使你能够在联机或脱机场景中将机器学习添加到 .NET 应用程序中。 借助此功能，可以使用应用程序的可用数据进行自动预测，而无需连接到网络以使用 ML.NET。 本文介绍 ML.NET 中机器学习的基础知识。
-ms.date: 07/17/2019
+ms.date: 08/26/2019
 ms.topic: overview
 ms.custom: mvc
 ms.author: nakersha
 author: natke
-ms.openlocfilehash: 23e71e86b75854042068b6a68f90cf995749ee58
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: af91819c66a2376f446d0f18537d2f6e718b446e
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331579"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70104887"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>什么是 ML.NET 以及它如何工作？
 
@@ -229,7 +229,7 @@ ML.NET 应用程序从 <xref:Microsoft.ML.MLContext> 对象开始。 此单一�
 
 ML.NET 机器学习管道的核心是 [DataView](xref:Microsoft.ML.IDataView) 对象。
 
-管道中的每个转换都有一个输入架构（转换期望在其输入中看到的数据名称、类型和大小）；以及一个输出架构（转换在转换后生成的数据名称、类型和大小）。 
+管道中的每个转换都有一个输入架构（转换期望在其输入中看到的数据名称、类型和大小）；以及一个输出架构（转换在转换后生成的数据名称、类型和大小）。 下面的文档提供 [IDataView 接口及其类型系统](https://xadupre.github.io/machinelearningext/mlnetdocs/idataviewtypesystem.html)的深度解析。
 
 如果管道中一个转换的输出架构与下一个转换的输入架构不匹配，ML.NET 将引发异常。
 

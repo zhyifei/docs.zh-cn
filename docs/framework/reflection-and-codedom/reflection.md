@@ -1,8 +1,8 @@
 ---
-title: .NET Framework 中的反射
+title: .NET 中的反射
 ms.date: 03/30/2017
 helpviewer_keywords:
-- assemblies [.NET Framework], reflection
+- assemblies [.NET], reflection
 - EventInfo class, reflection
 - common language runtime, reflection
 - FieldInfo class, reflection
@@ -23,14 +23,14 @@ helpviewer_keywords:
 ms.assetid: d1a58e7f-fb39-4d50-bf84-e3b8f9bf9775
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c8d34c5386d0ede578fec097279e9de135f4b6cc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 56c3b536954118b80db2ae7f2f0d0ffdc74bac68
+ms.sourcegitcommit: 77e33b682db39955e331b8e8eda4ef1925a24e78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69940037"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70133742"
 ---
-# <a name="reflection-in-the-net-framework"></a>.NET Framework 中的反射
+# <a name="reflection-in-net"></a>.NET 中的反射
 <xref:System.Reflection> 命名空间中的类与 <xref:System.Type?displayProperty=nameWithType> 使你能够获取有关加载的[程序集](../app-domains/assemblies-in-the-common-language-runtime.md)和其中定义的类型的信息，如[类](../../standard/base-types/common-type-system.md#classes)、[接口](../../standard/base-types/common-type-system.md#interfaces)和[值类型](../../csharp/language-reference/keywords/value-types.md)。 可以使用反射在运行时创建、调用和访问类型实例。 有关反射的特定方面的主题，请参见本概述末的[相关主题](#related_topics)。
   
  [公共语言运行时](../../standard/clr.md)加载程序管理[应用程序域](../../../docs/framework/app-domains/application-domains.md)，应用程序域构成具有相同应用程序范围的对象周围定义的边界。 此管理包括将每个程序集加载到相应的应用程序域中和控制每个程序集内的类型层次结构的内存布局。  
@@ -62,7 +62,7 @@ ms.locfileid: "69940037"
  反射还有其它用途。 JScript 等语言的编译器使用反射来构造符号表。 <xref:System.Runtime.Serialization> 命名空间中的类使用反射来访问数据并确定要保存哪些字段。 <xref:System.Runtime.Remoting> 命名空间中的类通过序列化间接使用反射。  
   
 ## <a name="runtime-types-in-reflection"></a>反射中的运行时类型  
- 反射提供类（如 <xref:System.Type> 和 <xref:System.Reflection.MethodInfo>），用于表示类型、成员、参数和其它代码实体。 但使用反射时，你并不直接使用这些类，其中大部分类均是抽象的（Visual Basic 中为`MustInherit`）。 相反，你使用由公共语言运行时 (CLR) 提供的类型。  
+ 反射提供类（如 <xref:System.Type> 和 <xref:System.Reflection.MethodInfo>），用于表示类型、成员、参数和其它代码实体。 但使用反射时，你并不直接使用这些类，其中大部分类均是抽象的（Visual Basic 中为 `MustInherit`）。 相反，你使用由公共语言运行时 (CLR) 提供的类型。  
   
  例如，使用 C# `typeof` 运算符（Visual Basic 中为 `GetType`）获取 <xref:System.Type> 对象时，该对象实际上是 `RuntimeType`。 `RuntimeType` 派生自 <xref:System.Type>，并提供所有抽象方法的实现。  
   

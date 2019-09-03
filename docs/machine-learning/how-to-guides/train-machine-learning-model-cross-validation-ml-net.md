@@ -1,16 +1,16 @@
 ---
 title: 使用交叉验证来训练机器学习模型
 description: 了解如何使用交叉验证在 ML.NET 中生成更强大的机器学习模型。 交叉验证是一种训练和模型评估技术，可将数据拆分为多个分区，并利用这些分区训练多个算法。
-ms.date: 06/25/2019
+ms.date: 08/29/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to,title-hack-0625
-ms.openlocfilehash: c68c2b61054f59f03b4743ec30a694e94086ebab
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: f29103d0cf59cdec10a641b05ce359bf95c01ccd
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67397646"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70169060"
 ---
 # <a name="train-a-machine-learning-model-using-cross-validation"></a>使用交叉验证来训练机器学习模型
 
@@ -30,7 +30,7 @@ Size (Sq. ft.), HistoricalPrice1 ($), HistoricalPrice2 ($), HistoricalPrice3 ($)
 1120.00, 47504.98, 45129.73, 43775.84, 46792.41
 ```
 
-数据可以通过 `HousingData` 等类进行建模：
+数据可以通过 `HousingData` 等类进行建模并加载到 [`IDataView`](xref:Microsoft.ML.IDataView) 中。
 
 ```csharp
 public class HousingData
@@ -47,8 +47,6 @@ public class HousingData
     public float CurrentPrice { get; set; }
 }
 ```
-
-将数据加载到 [`IDataView`](xref:Microsoft.ML.IDataView) 中。
 
 ## <a name="prepare-the-data"></a>准备数据
 

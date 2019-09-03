@@ -9,12 +9,12 @@ helpviewer_keywords:
 - async method [C#]
 - async [C#]
 ms.assetid: 16f14f09-b2ce-42c7-a875-e4eca5d50674
-ms.openlocfilehash: e0c8f52193639c067252878127ee95a0897b9582
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 71e3781b08bca3441dbd55704bcb0f7de635097e
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69922447"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168637"
 ---
 # <a name="async-c-reference"></a>async（C# 参考）
 
@@ -27,7 +27,7 @@ public async Task<int> ExampleMethodAsync()
 }  
 ```  
 
-如果不熟悉异步编程，或者不了解异步方法如何在不阻止调用方线程的情况下使用 `await` 关键字完成可能需要长时间运行的工作，请阅读[使用 async 和 await 的异步编程](../../programming-guide/concepts/async/index.md)中的介绍。 如下代码见于一种异步方法中，且调用 <xref:System.Net.Http.HttpClient.GetStringAsync%2a?displayProperty=nameWithType> 方法： 
+如果不熟悉异步编程，或者不了解异步方法如何在不阻止调用方线程的情况下使用 [`await` 运算符](../operators/await.md)完成可能需要长时间运行的工作，请阅读[使用 async 和 await 的异步编程](../../programming-guide/concepts/async/index.md)中的说明。 如下代码见于一种异步方法中，且调用 <xref:System.Net.Http.HttpClient.GetStringAsync%2a?displayProperty=nameWithType> 方法：
   
 ```csharp  
 string contents = await httpClient.GetStringAsync(requestUrl);  
@@ -87,6 +87,6 @@ string contents = await httpClient.GetStringAsync(requestUrl);
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Runtime.CompilerServices.AsyncStateMachineAttribute>
-- [await](./await.md)
+- [await](../operators/await.md)
 - [演练：使用 Async 和 Await 访问 Web](../../programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [使用 async 和 await 的异步编程](../../programming-guide/concepts/async/index.md)

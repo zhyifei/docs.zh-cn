@@ -11,18 +11,16 @@ helpviewer_keywords:
 - catch keyword [C#]
 - try-catch statement [C#]
 ms.assetid: cb5503c7-bfa1-4610-8fc2-ddcd2e84c438
-ms.openlocfilehash: 28bf939cb7da760400486c52bb07649826628c1c
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 8f901bd8ab5dcdcf4f5674e3f235267c9f535725
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66422585"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168720"
 ---
 # <a name="try-catch-c-reference"></a>try-catch（C# 参考）
 
 Try-catch 语句包含一个后接一个或多个 `catch` 子句的 `try` 块，这些子句指定不同异常的处理程序。
-
-## <a name="remarks"></a>备注
 
 引发异常时，公共语言运行时 (CLR) 查找处理此异常的 `catch` 语句。 如果当前正在执行的方法不包含此类 `catch` 块，则 CLR 查看调用了当前方法的方法，并以此类推遍历调用堆栈。 如果未找到任何 `catch` 块，则 CLR 向用户显示一条未处理的异常消息，并停止执行程序。
 
@@ -131,15 +129,16 @@ static void Main()
 有关 catch 的详细信息，请参阅 [try-catch-finally](try-catch-finally.md)。
 
 ## <a name="exceptions-in-async-methods"></a>异步方法中的异常
-异步方法由 [async](async.md) 修饰符标记，通常包含一个或多个 await 表达式或语句。 await 表达式将 [await](await.md) 运算符应用于 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601>。
+
+异步方法由 [async](async.md) 修饰符标记，通常包含一个或多个 await 表达式或语句。 await 表达式将 [await](../operators/await.md) 运算符应用于 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601>。
 
 当控件到达异步方法中的 `await` 时，将挂起方法中的进度，直到所等待的任务完成。 任务完成后，可以在方法中恢复执行。 有关详细信息，请参阅[使用 async 和 await 的异步编程](../../programming-guide/concepts/async/index.md)和[异步程序中的控制流](../../programming-guide/concepts/async/control-flow-in-async-programs.md)。
 
 应用了 `await` 的完成任务可能由于返回此任务的方法中存在未处理的异常而处于错误状态。 等待该任务引发异常。 如果取消了返回任务的异步进程，此任务最后也可能为已取消状态。 等待已取消的任务引发 `OperationCanceledException`。 有关如何取消异步进程的详细信息，请参阅[微调异步应用程序](../../programming-guide/concepts/async/fine-tuning-your-async-application.md)。
 
-若要捕获异常，请在 `try` 块中等待任务并在关联的 `catch` 块中捕获异常。 相关示例，请参见“示例”一节。
+若要捕获异常，请在 `try` 块中等待任务并在关联的 `catch` 块中捕获异常。 有关示例，请参阅[异步方法示例](#async-method-example)部分。
 
-任务可能处于错误状态，因为等待的异步方法中发生了多个异常。 例如，任务可能是对 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> 调用的结果。 当等待此类任务时，仅捕捉到其中一个异常，而且你无法预测将会捕获到哪个异常。 相关示例，请参见“示例”一节。
+任务可能处于错误状态，因为等待的异步方法中发生了多个异常。 例如，任务可能是对 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> 调用的结果。 当等待此类任务时，仅捕捉到其中一个异常，而且你无法预测将会捕获到哪个异常。 有关示例，请参阅 [Task.WhenAll 示例](#taskwhenall-example)部分。
 
 ## <a name="example"></a>示例
 
@@ -147,7 +146,7 @@ static void Main()
 
 [!code-csharp[csrefKeywordsExceptions#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsExceptions/CS/csrefKeywordsExceptions.cs#2)]
 
-## <a name="example"></a>示例
+## <a name="two-catch-blocks-example"></a>两个 catch 块示例
 
 在下面的示例中，使用了两个 catch 块，并捕获到最先出现的最具体的异常。
 
@@ -157,7 +156,7 @@ static void Main()
 
 [!code-csharp[csrefKeywordsExceptions#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsExceptions/CS/csrefKeywordsExceptions.cs#3)]
 
-## <a name="example"></a>示例
+## <a name="async-method-example"></a>异步方法示例
 
 下面的示例阐释异步方法的异常处理。 若要捕获异步任务引发的异常，将 `await` 表达式置于 `try` 块中，并在 `catch` 块中捕获该异常。
 
@@ -167,7 +166,7 @@ static void Main()
 
 [!code-csharp[csAsyncExceptions#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csasyncexceptions/cs/class1.cs#2)]  
 
-## <a name="example"></a>示例
+## <a name="taskwhenall-example"></a>Task.WhenAll 示例
 
 下面的示例阐释了在多个任务可能导致多个异常的情况中的异常处理。 `try` 块等待由 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> 的调用返回的任务。 应用了 WhenAll 的三个任务完成后，该任务完成。
 
@@ -177,7 +176,7 @@ static void Main()
 
 ## <a name="c-language-specification"></a>C# 语言规范
 
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/introduction.md)中的 [try 语句](~/_csharplang/spec/statements.md#the-try-statement)部分。
 
 ## <a name="see-also"></a>请参阅
 

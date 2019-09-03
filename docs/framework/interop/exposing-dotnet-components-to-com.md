@@ -1,5 +1,5 @@
 ---
-title: 向 COM 公开 .NET Framework 组件
+title: 向 COM 公开 .NET Core 组件
 ms.date: 03/30/2017
 helpviewer_keywords:
 - exposing .NET Framework components to COM
@@ -8,14 +8,14 @@ helpviewer_keywords:
 ms.assetid: e42a65f7-1e61-411f-b09a-aca1bbce24c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 48d550a526336cf3e9de9cb53a16ddcf86f3af5d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 981f5f23bf2aafc41426c858e150ec3664a494f9
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946518"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205814"
 ---
-# <a name="exposing-net-framework-components-to-com"></a>向 COM 公开 .NET Framework 组件
+# <a name="exposing-net-components-to-com"></a>向 COM 公开 .NET Core 组件
 
 对开发人员而言，编写 .NET 类型以及从非托管代码使用该类型是不同的活动。 本部分介绍编写与 COM 客户端互操作的托管代码的几个提示：
 

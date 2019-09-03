@@ -19,14 +19,15 @@ helpviewer_keywords:
 ms.assetid: 261c5583-8a76-412d-bda7-9b8ee3b131e5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bcc451903f7fbf7f82e2ed64834d26e605a0c069
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: a964e73cc41cebad33a3edc34b89ef240fbc62c8
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59187793"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70040858"
 ---
 # <a name="how-to-build-a-multifile-assembly"></a>如何：生成多文件程序集
+
 本文章介绍如何创建多文件程序集，并提供用于说明过程中每个步骤的代码。
 
 > [!NOTE]
@@ -50,7 +51,7 @@ ms.locfileid: "59187793"
 
     使用 **/t:** 编译器选项指定 *module* 参数，表明文件应作为模块（而不是作为程序集）编译。 编译器生成一个名为 `Stringer.netmodule` 的模块，可将其添加到程序集中。
 
-02. 编译所有其他模块，使用必要的编译器选项来表明代码中引用的其他模块。 此步骤使用 /addmodule 编译器选项。
+02. 编译所有其他模块，使用必要的编译器选项来表明代码中引用的其他模块。 此步骤使用 /addmodule  编译器选项。
 
     在下面的示例中，名为 `Client` 的代码模块具有一个入口点 `Main` 方法，此方法引用步骤 1 中创建的 `Stringer.dll` 模块中的方法。
 
@@ -64,30 +65,26 @@ ms.locfileid: "59187793"
     [!code-csharp[Conceptual.Assembly.Multifile#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.assembly.multifile/cs/client.cs#4)]
     [!code-vb[Conceptual.Assembly.Multifile#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.assembly.multifile/vb/client.vb#4)]
 
-    指定 /t:module 选项，因为此模块将在以后的步骤中添加到程序集。 指定 /addmodule 选项，因为 `Client` 中的代码引用 `Stringer.netmodule` 中的代码创建的命名空间。 编译器生成一个名为 `Client.netmodule` 的模块，其中包含对另一个模块 `Stringer.netmodule` 的引用。
+    指定 /t:module  选项，因为此模块将在以后的步骤中添加到程序集。 指定 /addmodule  选项，因为 `Client` 中的代码引用 `Stringer.netmodule` 中的代码创建的命名空间。 编译器生成一个名为 `Client.netmodule` 的模块，其中包含对另一个模块 `Stringer.netmodule` 的引用。
 
     >[!NOTE]
     >C# 和 Visual Basic 编译器支持使用以下两种不同语法直接创建多文件程序集。
     >
-    >- 两次编译创建出一个双文件程序集：
+    >- 两次编译创建出一个双文件程序集：[!code-cpp[Conceptual.Assembly.Multifile#5](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.assembly.multifile/cpp/client.cpp#5)]
+    >  [!code-csharp[Conceptual.Assembly.Multifile#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.assembly.multifile/cs/client.cs#5)]
+    >  [!code-vb[Conceptual.Assembly.Multifile#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.assembly.multifile/vb/client.vb#5)]
     >
-    >    [!code-cpp[Conceptual.Assembly.Multifile#5](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.assembly.multifile/cpp/client.cpp#5)]
-    >    [!code-csharp[Conceptual.Assembly.Multifile#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.assembly.multifile/cs/client.cs#5)]
-    >    [!code-vb[Conceptual.Assembly.Multifile#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.assembly.multifile/vb/client.vb#5)]
-    >
-    >- 一次编译创建出一个双文件程序集：
-    >
-    >    [!code-cpp[Conceptual.Assembly.Multifile#6](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.assembly.multifile/cpp/client.cpp#6)]
-    >    [!code-csharp[Conceptual.Assembly.Multifile#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.assembly.multifile/cs/client.cs#6)]
-    >    [!code-vb[Conceptual.Assembly.Multifile#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.assembly.multifile/vb/client.vb#6)]
+    >- 一次编译创建出一个双文件程序集：[!code-cpp[Conceptual.Assembly.Multifile#6](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.assembly.multifile/cpp/client.cpp#6)]
+    >  [!code-csharp[Conceptual.Assembly.Multifile#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.assembly.multifile/cs/client.cs#6)]
+    >  [!code-vb[Conceptual.Assembly.Multifile#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.assembly.multifile/vb/client.vb#6)]
 
 03. 使用[程序集链接器 (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) 来创建包含程序集清单的输出文件。 此文件包含作为程序集组成部分的所有模块或资源的参考信息。
 
     在命令提示符处，键入下列命令：
 
-    al \<module name> \<module name> … /main:\<method name> /out:\<file name> /target:\<assembly file type>
+    al  \<module name  > \<module name  > … /main:  \<method name  > /out:  \<file name  > /target:  \<assembly file type  >
 
-    在此命令中，“module name”参数指定程序集要包含的各模块的名称。 /main: 选项指定作为程序集入口点的方法名称。 /out: 选项指定输出文件的名称，它包含程序集元数据。 /target: 选项指定程序集是控制台应用程序可执行文件 (.exe)、Windows 可执行文件 (.win) 还是库文件 (.lib)。
+    在此命令中，“module name”  参数指定程序集要包含的各模块的名称。 /main:  选项指定作为程序集入口点的方法名称。 /out:  选项指定输出文件的名称，它包含程序集元数据。 /target:  选项指定程序集是控制台应用程序可执行文件 (.exe)、Windows 可执行文件 (.win) 还是库文件 (.lib)。
 
     在下面的示例中，Al.exe 创建一个程序集，该程序集是一个控制台应用程序可执行文件，名为 `myAssembly.exe`。 该应用程序由名为 `Client.netmodule` 和 `Stringer.netmodule` 的两个模块以及名为 `myAssembly.exe,`（其中只包含程序集元数据）的可执行文件组成。 程序集的入口点是位于 `Main` 中的 `MainClientApp` 类中的 `Client.dll` 方法。
 

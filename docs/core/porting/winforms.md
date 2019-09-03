@@ -5,12 +5,12 @@ author: Thraka
 ms.author: adegeo
 ms.date: 03/01/2019
 ms.custom: ''
-ms.openlocfilehash: aebfaa85338e014ca47256b85a1bd6529ad803bb
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 7ef36be47648ae338b5fe70b75431006c99be31f
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59327160"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105219"
 ---
 # <a name="how-to-port-a-windows-forms-desktop-app-to-net-core"></a>如何：将 Windows 窗体桌面应用程序移植到 .NET Core
 
@@ -38,7 +38,7 @@ ms.locfileid: "59327160"
 - 安装最新 [.NET Core 3.0](https://aka.ms/netcore3download) 预览版。
 
 >[!NOTE]
->Visual Studio 2017 不支持 .NET Core 3.0 项目。 Visual Studio 2019 支持 .NET Core 3.0 项目，但尚不支持适用于 .NET Core 3.0 Windows 窗体项目的可视化设计器。 要使用可视化设计器，解决方案中必须包含可与 .NET Core 项目共享窗体文件的 .NET Windows 窗体项目。
+> Visual Studio 2017 不支持 .NET Core 3.0 项目。 Visual Studio 2019  支持 .NET Core 3.0 项目，但尚不支持适用于 .NET Core 3.0 Windows 窗体项目的可视化设计器。 要使用可视化设计器，解决方案中必须包含可与 .NET Core 项目共享窗体文件的 .NET Windows 窗体项目。
 
 ### <a name="consider"></a>考虑
 
@@ -52,9 +52,9 @@ ms.locfileid: "59327160"
 
     发布 .NET Core 3.0 预览版 1 时，Windows 窗体在 GitHub 上公布了开放源代码。 .NET Core Windows 窗体的代码是 .NET Framework Windows 窗体基本代码的一个分支。 可能存在一些差异导致应用程序无法移植。
 
-01. 使用 [Windows 兼容包][compat-pack]可能有助于进行迁移。
+01. 使用 [Windows 兼容包][compat-pack]可有助于进行迁移。
 
-    某些 API 可在 .NET Framework 中使用，但不可用于 .NET Core 3.0。 [Windows 兼容包][compat-pack] 增加了很多这些 API，有助于使 Windows 窗体应用程序与 .NET Core 兼容。
+    某些 API 可在 .NET Framework 中使用，但不可用于 .NET Core 3.0。 [Windows 兼容包][compat-pack]增加了很多这些 API，有助于使 Windows 窗体应用与 .NET Core 兼容。
 
 01. 更新项目使用的 NuGet 包。
 
@@ -66,7 +66,7 @@ ms.locfileid: "59327160"
 
 ## <a name="create-a-new-sdk-project"></a>创建新的 SDK 项目
 
-创建的新 .NET Core 3.0 项目必须位于不同于 .NET Framework 项目的目录中。 如果它们位于同一目录中，可能会与 obj 目录中生成的文件发生冲突。 本例中，我们将在 SolutionFolder 目录中创建一个名为 MyFormsAppCore 的目录：
+创建的新 .NET Core 3.0 项目必须位于不同于 .NET Framework 项目的目录中。 如果它们位于同一目录中，可能会与 obj 目录中生成的文件发生冲突  。 本例中，我们将在 SolutionFolder 目录中创建一个名为 MyFormsAppCore 的目录   ：
 
 ```
 SolutionFolder
@@ -76,7 +76,7 @@ SolutionFolder
 └───MyFormsAppCore      <--- New folder for core project
 ```
 
-接下来，需要在 MyFormsAppCore 目录中创建 MyFormsCore.csproj 项目。 可以使用所选的文本编辑器手动创建此文件。 粘贴以下 XML：
+接下来，需要在 MyFormsAppCore 目录中创建 MyFormsCore.csproj 项目   。 可以使用所选的文本编辑器手动创建此文件。 粘贴以下 XML：
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
@@ -90,13 +90,13 @@ SolutionFolder
 </Project>
 ```
 
-如果不想手动创建项目文件，可以使用 Visual Studio 或 .NET Core SDK 生成项目。 但是，必须删除项目模板生成的所有其他文件（项目文件除外）。 若要使用 SDK，请从 SolutionFolder 目录运行以下命令：
+如果不想手动创建项目文件，可以使用 Visual Studio 或 .NET Core SDK 生成项目。 但是，必须删除项目模板生成的所有其他文件（项目文件除外）。 若要使用 SDK，请从 SolutionFolder 目录运行以下命令  ：
 
 ```cli
 dotnet new winforms -o MyFormsAppCore -n MyFormsCore
 ```
 
-创建 MyFormsCore.csproj 后，目录结构应如下所示：
+创建 MyFormsCore.csproj 后，目录结构应如下所示  ：
 
 ```
 SolutionFolder
@@ -107,7 +107,7 @@ SolutionFolder
     └───MyFormsCore.csproj
 ```
 
-需要使用 Visual Studio 或 SolutionFolder 目录中的 .NET Core CLI 将 MyFormsCore.csproj 项目添加到 MyApps.sln：
+需要使用 Visual Studio 或 SolutionFolder 目录中的 .NET Core CLI 将 MyFormsCore.csproj 项目添加到 MyApps.sln    ：
 
 ```cli
 dotnet sln add .\MyFormsAppCore\MyFormsCore.csproj
@@ -148,7 +148,7 @@ dotnet sln add .\MyFormsAppCore\MyFormsCore.csproj
 
 ## <a name="add-source-code"></a>添加源代码
 
-现在，MyFormsCore.csproj 项目不编译任何代码。 默认情况下，.NET Core 项目会自动包含当前目录和所有子目录中的所有源代码。 必须使用相对路径配置项目以包含 .NET Framework 项目中的代码。 如果 .NET Framework 项目使用了 .resx 文件作为窗体的图标和资源，则还需要包含这些文件。 
+现在，MyFormsCore.csproj 项目不编译任何代码  。 默认情况下，.NET Core 项目会自动包含当前目录和所有子目录中的所有源代码。 必须使用相对路径配置项目以包含 .NET Framework 项目中的代码。 如果 .NET Framework 项目使用了 .resx 文件作为窗体的图标和资源，则还需要包含这些文件  。 
 
 将以下 `<ItemGroup>` 节点添加到项目中。 每个语句都包含一个文件 glob 模式，其中包含子目录。
 
@@ -165,7 +165,7 @@ dotnet sln add .\MyFormsAppCore\MyFormsCore.csproj
 
 将 .NET Framework 项目引用的每个 NuGet 包添加到 .NET Core 项目。 
 
-很可能你的 .NET Framework Windows 窗体应用程序有一个 packages.config 文件，其中包含项目引用的所有 NuGet 包的列表。 可以查看此列表以确定要添加到 .NET Core 项目的 NuGet 包。 例如，如果 .NET Framework 项目引用了 `MetroFramework`、`MetroFramework.Design` 和 `MetroFramework.Fonts` NuGet 包，则使用 Visual Studio 或 SolutionFolder 目录中的 .NET Core CLI 将每个包添加到项目中：
+很可能你的 .NET Framework Windows 窗体应用程序有一个 packages.config 文件，其中包含项目引用的所有 NuGet 包的列表  。 可以查看此列表以确定要添加到 .NET Core 项目的 NuGet 包。 例如，如果 .NET Framework 项目引用了 `MetroFramework`、`MetroFramework.Design` 和 `MetroFramework.Fonts` NuGet 包，则使用 Visual Studio 或 SolutionFolder 目录中的 .NET Core CLI 将每个包添加到项目中  ：
 
 ```cli
 dotnet add .\MyFormsAppCore\MyFormsCore.csproj package MetroFramework
@@ -173,7 +173,7 @@ dotnet add .\MyFormsAppCore\MyFormsCore.csproj package MetroFramework.Design
 dotnet add .\MyFormsAppCore\MyFormsCore.csproj package MetroFramework.Fonts
 ```
 
-之前的命令会将以下 NuGet 引用添加到 MyFormsCore.csproj 项目：
+之前的命令会将以下 NuGet 引用添加到 MyFormsCore.csproj 项目  ：
 
 ```xml
   <ItemGroup>
@@ -262,13 +262,13 @@ SolutionFolder
 
 如你所见，`<OutputType>` 节点已被删除，默认使编译器生成库而不是可执行文件。 `<AssemblyName>` 和 `<RootNamespace>` 已更改。 具体来说，`<RootNamespace>` 应匹配正在移植的 Windows 窗体控件库的命名空间。 最后，`<Compile>` 和 `<EmbeddedResource>` 节点已调整为指向要移植的 Windows 窗体控件库的文件夹。
 
-接下来，在主要的 .NET Core MyFormsCore.csproj 项目中，添加对新 .NET Core Windows 窗体控件库的引用。 使用 Visual Studio 或 .NET Core CLI 从 SolutionFolder 目录添加引用：
+接下来，在主要的 .NET Core MyFormsCore.csproj 项目中，添加对新 .NET Core Windows 窗体控件库的引用  。 使用 Visual Studio 或 .NET Core CLI 从 SolutionFolder 目录添加引用  ：
 
 ```cli
 dotnet add .\MyFormsAppCore\MyFormsCore.csproj reference .\MyFormsControlsCore\MyControlsCore.csproj
 ```
 
-上一个命令将以下内容添加到 MyFormsCore.csproj 项目中：
+上一个命令将以下内容添加到 MyFormsCore.csproj 项目中  ：
 
 ```xml
   <ItemGroup>
@@ -284,7 +284,7 @@ dotnet add .\MyFormsAppCore\MyFormsCore.csproj reference .\MyFormsControlsCore\M
 dotnet add .\MyFormsAppCore\MyFormsCore.csproj package Microsoft.Windows.Compatibility
 ```
 
-上一个命令将以下内容添加到 MyFormsCore.csproj 项目中：
+上一个命令将以下内容添加到 MyFormsCore.csproj 项目中  ：
 
 ```xml
   <ItemGroup>
@@ -300,7 +300,7 @@ dotnet add .\MyFormsAppCore\MyFormsCore.csproj package Microsoft.Windows.Compati
  
 ## <a name="next-steps"></a>后续步骤
 
-* 详细了解 [Windows 兼容包][compat-pack]。
-* 观看将 .NET Framework Windows 窗体项目移植到 .NET Core 的[视频](https://www.youtube.com/watch?v=upVQEUc_KwU)。
+- 详细了解 [Windows 兼容包][compat-pack]。
+- 观看将 .NET Framework Windows 窗体项目移植到 .NET Core 的[视频](https://www.youtube.com/watch?v=upVQEUc_KwU)。
 
 [compat-pack]: windows-compat-pack.md

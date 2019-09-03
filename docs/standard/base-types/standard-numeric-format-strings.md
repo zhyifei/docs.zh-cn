@@ -18,12 +18,12 @@ helpviewer_keywords:
 - format specifiers, standard numeric format strings
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 245492a8a903593dc1532b67ed96224e171aad7e
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: 06a6403d12645f96e39407f38d944f2e7682d65d
+ms.sourcegitcommit: 77e33b682db39955e331b8e8eda4ef1925a24e78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67804724"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70133841"
 ---
 # <a name="standard-numeric-format-strings"></a>标准数字格式字符串
 
@@ -49,7 +49,7 @@ ms.locfileid: "67804724"
 - C# 和 Visual Basic 中的[内插的字符串](../../csharp/language-reference/tokens/interpolated.md)，与复合格式字符串相比，语法更简化。
 
 > [!TIP]
-> 你可以下载 [格式设置实用工具](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)，通过该应用程序，你可将格式字符串应用于数值或日期和时间值并显示结果字符串。
+> 你可以下载格式设置实用工具，它属于一种 .NET Core Windows 窗体应用程序，通过该应用程序，你可将格式字符串应用于数值或日期和时间值并显示结果字符串  。 源代码适用于 [C#](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-cs) 和 [Visual Basic](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-vb)。
 
 <a name="table"></a>下表介绍标准数字格式说明符并显示每个格式说明符产生的示例输出。 有关使用标准数字格式字符串的其他信息，请参见[注释](#NotesStandardFormatting)一节；有关使用方法的完整演示，请参见[示例](#example)一节。
 
@@ -62,7 +62,7 @@ ms.locfileid: "67804724"
 |“G”或“g”|常规|结果:更紧凑的定点表示法或科学记数法。<br /><br /> 受以下类型支持：所有数值类型。<br /><br /> 精度说明符：有效位数。<br /><br /> 默认值精度说明符：具体取决于数值类型。<br /><br /> 更多信息：[常规（“G”）格式说明符](#GFormatString)。|-123.456 ("G", en-US) -> -123.456<br /><br /> -123.456 ("G", sv-SE) -> -123,456<br /><br /> 123.4546 ("G4", en-US) -> 123.5<br /><br /> 123.4546 ("G4", sv-SE) -> 123,5<br /><br /> -1.234567890e-25 ("G", en-US) -> -1.23456789E-25<br /><br /> -1.234567890e-25 ("G", sv-SE) -> -1,23456789E-25|
 |“N”或“n”|数字|结果:整数和十进制小数、组分隔符和十进制小数分隔符，负号可选。<br /><br /> 受以下类型支持：所有数值类型。<br /><br /> 精度说明符：所需的小数位数。<br /><br /> 默认值精度说明符：由 <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType> 定义。<br /><br /> 更多信息：[数字（“N”）格式说明符](#NFormatString)。|1234.567 ("N", en-US) -> 1,234.57<br /><br /> 1234.567 ("N", ru-RU) -> 1 234,57<br /><br /> 1234 ("N1", en-US) -> 1,234.0<br /><br /> 1234 ("N1", ru-RU) -> 1 234,0<br /><br /> -1234.56 ("N3", en-US) -> -1,234.560<br /><br /> -1234.56 ("N3", ru-RU) -> -1 234,560|
 |“P”或“p”|百分比|结果:数字乘以 100 并以百分比符号显示。<br /><br /> 受以下类型支持：所有数值类型。<br /><br /> 精度说明符：所需的小数位数。<br /><br /> 默认值精度说明符：由 <xref:System.Globalization.NumberFormatInfo.PercentDecimalDigits%2A?displayProperty=nameWithType> 定义。<br /><br /> 更多信息：[百分比（“P”）格式说明符](#PFormatString)。|1 ("P", en-US) -> 100.00 %<br /><br /> 1 ("P", fr-FR) -> 100,00 %<br /><br /> -0.39678 ("P1", en-US) -> -39.7 %<br /><br /> -0.39678 ("P1", fr-FR) -> -39,7 %|
-|“R”或“r”|往返过程|结果:可以往返至相同数字的字符串。<br /><br /> 受以下类型支持：<xref:System.Single>、<xref:System.Double> 和 <xref:System.Numerics.BigInteger>。<br /><br /> 注意:建议只用于 <xref:System.Numerics.BigInteger> 类型。 对于 <xref:System.Double> 类型，请使用 "G17"；对于 <xref:System.Single> 类型，请使用 "G9"。 <br> 精度说明符：已忽略。<br /><br /> 更多信息：[往返过程（“R”）格式说明符](#RFormatString)。|123456789.12345678 ("R") -> 123456789.12345678<br /><br /> -1234567890.12345678 ("R") -> -1234567890.1234567|
+|“R”或“r”|往返过程|结果:可以往返至相同数字的字符串。<br /><br /> 受以下类型支持：<xref:System.Single>、<xref:System.Double> 和 <xref:System.Numerics.BigInteger>。<br /><br /> 注意：建议只用于 <xref:System.Numerics.BigInteger> 类型。 对于 <xref:System.Double> 类型，请使用 "G17"；对于 <xref:System.Single> 类型，请使用 "G9"。 <br> 精度说明符：已忽略。<br /><br /> 更多信息：[往返过程（“R”）格式说明符](#RFormatString)。|123456789.12345678 ("R") -> 123456789.12345678<br /><br /> -1234567890.12345678 ("R") -> -1234567890.1234567|
 |“X”或“x”|十六进制|结果:十六进制字符串。<br /><br /> 受以下类型支持：仅限整型类型。<br /><br /> 精度说明符：结果字符串中的位数。<br /><br /> 更多信息：[十六进制（“X”）格式说明符](#XFormatString)。|255 ("X") -> FF<br /><br /> -1 ("x") -> ff<br /><br /> 255 ("x4") -> 00ff<br /><br /> -1 ("X4") -> 00FF|
 |任何其他单个字符|未知说明符|结果:在运行时引发 <xref:System.FormatException>。||
 
@@ -389,5 +389,6 @@ ms.locfileid: "67804724"
 - [Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md)
 - [格式设置类型](../../../docs/standard/base-types/formatting-types.md)
 - [如何：用前导零填充数字](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)
-- [示例：.NET Framework 4 格式设置实用工具](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)
 - [复合格式设置](../../../docs/standard/base-types/composite-formatting.md)
+- [示例：.NET Core WinForms 格式设置实用工具 (C#)](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-cs)
+- [示例：.NET Core WinForms 格式设置实用工具 (Visual Basic)](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-vb)

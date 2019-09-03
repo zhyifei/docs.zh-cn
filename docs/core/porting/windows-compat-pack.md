@@ -4,30 +4,30 @@ description: 了解有关 Windows 兼容性包以及如何使用它将现有 .NE
 author: terrajobst
 ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: c4fd888e0fbce86ab317f18fd77374af5d3ca244
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 71e390881d4e9c7836622abeed49c0ea2e5f7526
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717890"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70202561"
 ---
 # <a name="use-the-windows-compatibility-pack-to-port-code-to-net-core"></a>使用 Windows 兼容性包将代码移植到 .NET Core
 
-将现有代码移植到 .NET Core 时发现的一些最常见问题依赖于仅在 .NET Framework 中找到的 API 和技术。 Windows 兼容性包提供许多这些技术，因此可以更轻松地生成 .NET Core 应用程序和 .NET Standard 库。
+将现有代码移植到 .NET Core 时发现的一些最常见问题依赖于仅在 .NET Framework 中找到的 API 和技术。 Windows 兼容性包  提供许多这些技术，因此可以更轻松地生成 .NET Core 应用程序和 .NET Standard 库。
 
 此包是 [.NET Standard 2.0 的逻辑扩展](../whats-new/dotnet-core-2-0.md#api-changes-and-library-support)，显著增加了 API 集和现有代码编译，而几乎无需进行任何修改。 但为了信守 .NET Standard 的承诺（“它是一组所有 .NET 实现都提供的 API”），这不包括无法跨所有平台工作的技术，如注册表、Windows Management Instrumentation (WMI) 或反射发出 API。
 
-Windows 兼容性包 位于 .NET Standard 顶部，提供对仅用于 Windows 的技术的访问权限。 它对于第一步想要移动到 .NET Core 但仍计划停留在 Windows 上的客户尤其有用。 在这种情况下，无法使用仅限 Windows 的技术只会造成迁移障碍，没有任何体系结构优势。
+Windows 兼容性包  位于 .NET Standard 顶部，提供对仅用于 Windows 的技术的访问权限。 它对于第一步想要移动到 .NET Core 但仍计划停留在 Windows 上的客户尤其有用。 在这种情况下，无法使用仅限 Windows 的技术只会造成迁移障碍，没有任何体系结构优势。
 
 ## <a name="package-contents"></a>包内容
 
-Windows 兼容性包通过 NuGet 包 [Microsoft.Windows.Compatibility](https://www.nuget.org/packages/Microsoft.Windows.Compatibility) 提供，可从面向 .NET Core 或 .NET Standard 的项目引用。
+Windows 兼容性包  通过 NuGet 包 [Microsoft.Windows.Compatibility](https://www.nuget.org/packages/Microsoft.Windows.Compatibility) 提供，可从面向 .NET Core 或 .NET Standard 的项目引用。
 
 它提供了约 20,000 个 API，包括仅 Windows API 以及以下技术领域中的跨平台 API：
 
 * 代码页
 * CodeDom
-* Configuration
+* 配置
 * 目录服务
 * 绘图
 * ODBC
@@ -43,7 +43,7 @@ Windows 兼容性包通过 NuGet 包 [Microsoft.Windows.Compatibility](https://w
 * Windows 运行时缓存
 * Windows 服务
 
-有关详细信息，请参阅[兼容性包规范](https://github.com/dotnet/designs/blob/master/accepted/compat-pack/compat-pack.md)。
+有关详细信息，请参阅[兼容包规范](https://github.com/dotnet/designs/blob/master/accepted/compat-pack/compat-pack.md)。
 
 ## <a name="get-started"></a>入门
 
@@ -53,7 +53,7 @@ Windows 兼容性包通过 NuGet 包 [Microsoft.Windows.Compatibility](https://w
 
 3. 如果要停留在 Windows 上，则已准备完毕。
 
-4. 如果要在 Linux 或 macOS 上运行 .NET Core 应用程序或 .NET Standard 库，请使用 [API 分析器](https://devblogs.microsoft.com/dotnet/introducing-api-analyzer/)查找不会跨平台工作的 API 的使用情况。
+4. 如果要在 Linux 或 macOS 上运行 .NET Core 应用程序或 .NET Standard 库，请使用 [API 分析器](../../standard/analyzers/api-analyzer.md)查找不会跨平台工作的 API 的使用情况。
 
 5. 删除这些 API 的使用情况、将其替换为跨平台替代项，或使用平台检查对其实施保护，例如：
 

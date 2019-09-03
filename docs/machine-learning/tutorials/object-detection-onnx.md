@@ -3,15 +3,15 @@ title: 教程：使用 ONNX 和 ML.NET 进行深度学习来检测对象
 description: 本教程演示如何在 ML.NET 中使用预训练的 ONNX 深度学习模型来检测图像中的对象。
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 08/01/2019
+ms.date: 08/27/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: e44ea5795beb90bafe3faf0bafb463d49ba1fc41
-ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
+ms.openlocfilehash: deb7258326428cca01ea8734e0dc010c29177cfa
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68868728"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106862"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>教程：在 ML.NET 中使用 ONNX 检测对象
 
@@ -21,11 +21,11 @@ ms.locfileid: "68868728"
 
 在本教程中，你将了解：
 > [!div class="checklist"]
-> * 了解问题
-> * 了解什么是 ONNX 以及它如何与 ML.NET 配合使用
-> * 了解模型
-> * 重用预训练的模型
-> * 使用已加载模型检测对象
+> - 了解问题
+> - 了解什么是 ONNX 以及它如何与 ML.NET 配合使用
+> - 了解模型
+> - 重用预训练的模型
+> - 使用已加载模型检测对象
 
 ## <a name="pre-requisites"></a>先决条件
 
@@ -117,7 +117,7 @@ YOLO 模型采用图像 `3(RGB) x 416px x 416px`。 模型接受此输入，并�
 
 打开 Program.cs 文件，并将以下附加的 `using` 语句添加到该文件顶部  ：
 
-[!code-csharp [ProgramUsings](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L1-L9)]
+[!code-csharp [ProgramUsings](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L1-L7)]
 
 接下来，定义各种资产的路径。 
 
@@ -125,7 +125,7 @@ YOLO 模型采用图像 `3(RGB) x 416px x 416px`。 模型接受此输入，并�
 
     [!code-csharp [GetAbsolutePath](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L66-L74)]
 
-1. 然后，在 `Main` 方法内，创建字段以存储资产的位置：
+1. 然后，在 `Main` 方法内，创建字段以存储资产的位置。
 
     [!code-csharp [AssetDefinition](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L17-L21)]
 
@@ -178,76 +178,6 @@ YOLO 模型采用图像 `3(RGB) x 416px x 416px`。 模型接受此输入，并�
 
 [!code-csharp [InitMLContext](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L24)]
 
-### <a name="add-helper-methods"></a>添加帮助程序方法
-
-在模型进行预测（通常称为评分）并对输出进行处理后，必须在图像上绘制边界框。 为此，请在 Program.cs 内的 `GetAbsolutePath` 方法下添加名为 `DrawBoundingBox` 的方法  。
-
-```csharp
-private static void DrawBoundingBox(string inputImageLocation, string outputImageLocation, string imageName, IList<YoloBoundingBox> filteredBoundingBoxes)
-{
-
-}
-```
-
-首先，加载图像并使用 `DrawBoundingBox` 方法获取高度和宽度尺寸。
-
-[!code-csharp [LoadImage](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L78-L81)]
-
-然后，创建 for-each 循环以遍历模型检测到的每个边界框。
-
-```csharp
-foreach (var box in filteredBoundingBoxes)
-{
-
-}
-```
-
-在 for each 循环的内部，获取边界框的维度。
-
-[!code-csharp [GetBBoxDimensions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L86-L89)]
-
-由于边界框的维度对应于 `416 x 416` 的模型输入，因此缩放边界框维度以匹配图像的实际尺寸。
-
-[!code-csharp [ScaleImage](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L92-L95)]
-
-然后，为将出现在每个边界框上方的文本定义模板。 文本将包含相应边界框内的对象类以及置信度。
-
-[!code-csharp [DefineBBoxText](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L98)]
-
-若要在图像上绘制，请将其转换为 [`Graphics`](xref:System.Drawing.Graphics) 对象。
-
-```csharp
-using (Graphics thumbnailGraphic = Graphics.FromImage(image))
-{
-    
-}
-```
-
-在 `using` 代码块内，调整图形的 [`Graphics`](xref:System.Drawing.Graphics) 对象设置。
-
-[!code-csharp [TuneGraphicSettings](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L102-L104)]
-
-在下面，设置文本和边界框的字体和颜色选项。
-
-[!code-csharp [SetColorOptions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L106-L114)]
-
-使用 [`FillRectangle`](xref:System.Drawing.Graphics.FillRectangle*) 方法创建并填充边界框上方的矩形以包含文本。 这将有助于对比文本，提高可读性。
-
-[!code-csharp [DrawTextBackground](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L117)]
-
-然后，使用 [`DrawString`](xref:System.Drawing.Graphics.DrawString*) 和 [`DrawRectangle`](xref:System.Drawing.Graphics.DrawRectangle*) 方法在图像上绘制文本和边界框。
-
-[!code-csharp [DrawClassAndBBox](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L118-L121)]
-
-在 for-each 循环之外，添加代码以保存 `outputDirectory` 中的图像。
-
-[!code-csharp [SaveImage](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L125-L130)]
-
-若要获得应用程序在运行时按预期进行预测的其他反馈，请在 Program.cs 文件中的 `DrawBoundingBox` 方法下添加一个名为 `LogDetectedObjects` 的方法，以将检测到的对象输出到控制台  。
-
-[!code-csharp [LogOuptuts](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L133-L143)]
-
-当模型生成输出并且已经处理完输出时，这两种方法都将非常有用。 首先，创建处理模型输出的功能。
 
 ## <a name="create-a-parser-to-post-process-model-outputs"></a>创建分析器来处理模型输出
 
@@ -344,7 +274,7 @@ using (Graphics thumbnailGraphic = Graphics.FromImage(image))
     - `CELL_HEIGHT` 是图像网格中一个单元格的高度。
     - `channelStride` 是网格中当前单元格的起始位置。
 
-    当模型对图像进行评分时，它会将 `416px x 416px` 输入划分为大小为 `13 x 13` 的单元格网格。 每个单元格都包含 `32px x 32px`。 在每个单元格内，有 5 个边界框，每个边框包含 5 个特征（x、y、宽度、高度、置信度）。 此外，每个边界框包含每个类的概率，在这种情况下为 20。 因此，每个单元包含 125 条信息（5 个特征 + 20 个类概率）。 
+    当模型进行预测（也称为评分）时，它会将 `416px x 416px` 输入图像划分为 `13 x 13` 大小的单元格网格。 每个单元格都包含 `32px x 32px`。 在每个单元格内，有 5 个边界框，每个边框包含 5 个特征（x、y、宽度、高度、置信度）。 此外，每个边界框包含每个类的概率，在这种情况下为 20。 因此，每个单元包含 125 条信息（5 个特征 + 20 个类概率）。 
 
 为所有 5 个边界框在 `channelStride` 下创建的定位点列表：
 
@@ -560,7 +490,7 @@ for (var j = i + 1; j < boxes.Count; j++)
 
     [!code-csharp [LoadModelLog](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/OnnxModelScorer.cs#L47-L49)]
 
-    ML.NET 管道通常希望在调用 [`Fit`](xref:Microsoft.ML.IEstimator%601.Fit*) 方法时对数据进行操作。 在这种情况下，将使用类似于训练的过程。 但是，由于没有进行实际训练，因此可以使用空的 [`IDataView`](xref:Microsoft.ML.IDataView)。 使用空列表为管道创建新的 [`IDataView`](xref:Microsoft.ML.IDataView)。
+    ML.NET 管道需要知道在调用 [`Fit`](xref:Microsoft.ML.IEstimator%601.Fit*) 方法时要操作的数据架构。 在这种情况下，将使用类似于训练的过程。 但是，由于没有进行实际训练，因此可以使用空的 [`IDataView`](xref:Microsoft.ML.IDataView)。 使用空列表为管道创建新的 [`IDataView`](xref:Microsoft.ML.IDataView)。
 
     [!code-csharp [LoadEmptyIDV](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/OnnxModelScorer.cs#L52)]    
 
@@ -608,7 +538,13 @@ private IEnumerable<float[]> PredictDataUsingModel(IDataView testData, ITransfor
 
 ## <a name="detect-objects"></a>检测对象
 
-现在所有设置都已完成，可以检测一些对象。 在 Program.cs 类的 `Main` 方法内，添加 try-catch 语句  。
+现在所有设置都已完成，可以检测一些对象。 首先在 Program.cs 类中添加对评分器和分析器的引用  。
+
+[!code-csharp [ReferenceScorerParser](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L8-L9)]
+
+### <a name="score-and-parse-model-outputs"></a>对模型输出进行评分和分析
+
+在 Program.cs 类的 `Main` 方法内，添加 try-catch 语句  。
 
 ```csharp
 try
@@ -633,7 +569,78 @@ catch (Exception ex)
 
 [!code-csharp [ParsePredictions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L39-L44)]
 
-处理完模型输出后，便可以在图像上绘制边界框。 创建 for 循环来遍历每个评分图像。
+处理完模型输出后，便可以在图像上绘制边界框。 
+
+### <a name="visualize-predictions"></a>将预测结果可视化
+
+在模型对图像进行评分并处理好输出后，必须在图像上绘制边界框。 为此，请在 Program.cs 内的 `GetAbsolutePath` 方法下添加名为 `DrawBoundingBox` 的方法  。
+
+```csharp
+private static void DrawBoundingBox(string inputImageLocation, string outputImageLocation, string imageName, IList<YoloBoundingBox> filteredBoundingBoxes)
+{
+
+}
+```
+
+首先，加载图像并使用 `DrawBoundingBox` 方法获取高度和宽度尺寸。
+
+[!code-csharp [LoadImage](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L78-L81)]
+
+然后，创建 for-each 循环以遍历模型检测到的每个边界框。
+
+```csharp
+foreach (var box in filteredBoundingBoxes)
+{
+
+}
+```
+
+在 for each 循环的内部，获取边界框的维度。
+
+[!code-csharp [GetBBoxDimensions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L86-L89)]
+
+由于边界框的维度对应于 `416 x 416` 的模型输入，因此缩放边界框维度以匹配图像的实际尺寸。
+
+[!code-csharp [ScaleImage](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L92-L95)]
+
+然后，为将出现在每个边界框上方的文本定义模板。 文本将包含相应边界框内的对象类以及置信度。
+
+[!code-csharp [DefineBBoxText](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L98)]
+
+若要在图像上绘制，请将其转换为 [`Graphics`](xref:System.Drawing.Graphics) 对象。
+
+```csharp
+using (Graphics thumbnailGraphic = Graphics.FromImage(image))
+{
+    
+}
+```
+
+在 `using` 代码块内，调整图形的 [`Graphics`](xref:System.Drawing.Graphics) 对象设置。
+
+[!code-csharp [TuneGraphicSettings](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L102-L104)]
+
+在下面，设置文本和边界框的字体和颜色选项。
+
+[!code-csharp [SetColorOptions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L106-L114)]
+
+使用 [`FillRectangle`](xref:System.Drawing.Graphics.FillRectangle*) 方法创建并填充边界框上方的矩形以包含文本。 这将有助于对比文本，提高可读性。
+
+[!code-csharp [DrawTextBackground](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L117)]
+
+然后，使用 [`DrawString`](xref:System.Drawing.Graphics.DrawString*) 和 [`DrawRectangle`](xref:System.Drawing.Graphics.DrawRectangle*) 方法在图像上绘制文本和边界框。
+
+[!code-csharp [DrawClassAndBBox](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L118-L121)]
+
+在 for-each 循环之外，添加代码以保存 `outputDirectory` 中的图像。
+
+[!code-csharp [SaveImage](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L125-L130)]
+
+要获得应用程序在运行时按预期进行预测的其他反馈，请在 Program.cs 文件中的 `DrawBoundingBox` 方法下添加名为 `LogDetectedObjects` 的方法，以将检测到的对象输出到控制台  。
+
+[!code-csharp [LogOuptuts](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L133-L143)]
+
+你已经有了帮助器方法，现在可以根据预测创建视觉反馈，并可添加 for 循环来循环访问每个已评分的图像。
 
 ```csharp
 for (var i = 0; i < images.Count(); i++)
@@ -650,7 +657,7 @@ for (var i = 0; i < images.Count(); i++)
 
 [!code-csharp [DrawBBoxes](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L52)]
 
-最后，使用 `LogDetectedObjects` 方法添加一些日志记录逻辑。
+最后，使用 `LogDetectedObjects` 方法将预测输出到控制台。
 
 [!code-csharp [LogPredictionsOutput](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L54)]
 
@@ -704,11 +711,11 @@ person and its Confidence score: 0.5551759
 
 在本教程中，你将了解：
 > [!div class="checklist"]
-> * 了解问题
-> * 了解什么是 ONNX 以及它如何与 ML.NET 配合使用
-> * 了解模型
-> * 重用预训练的模型
-> * 使用已加载模型检测对象
+> - 了解问题
+> - 了解什么是 ONNX 以及它如何与 ML.NET 配合使用
+> - 了解模型
+> - 重用预训练的模型
+> - 使用已加载模型检测对象
 
 请查看机器学习示例 GitHub 存储库，以探索扩展的对象检测示例。
 > [!div class="nextstepaction"]

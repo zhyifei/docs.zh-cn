@@ -4,12 +4,12 @@ description: 了解如何使用 .NET Core CLI 工具创建 .NET Core 库。 将�
 author: cartermp
 ms.date: 05/01/2017
 ms.custom: seodec18
-ms.openlocfilehash: 9dd1d8477f8e34e79ff521463972e26a21ad1dfd
-ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
+ms.openlocfilehash: d22f73b33c36357b7f8018d1620b240e18d91676
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57212061"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70202654"
 ---
 # <a name="developing-libraries-with-cross-platform-tools"></a>使用跨平台工具开发库
 
@@ -72,19 +72,20 @@ ms.locfileid: "57212061"
 
 如果要达到最大数量的开发人员和项目，可将 .NET Framework 4.0 用作基线目标。 若要以 .NET Framework 为目标，首先需要使用与要支持的 .NET Framework 版本相对应的正确目标框架名字对象 (TFM)。
 
-```
-.NET Framework 2.0   --> net20
-.NET Framework 3.0   --> net30
-.NET Framework 3.5   --> net35
-.NET Framework 4.0   --> net40
-.NET Framework 4.5   --> net45
-.NET Framework 4.5.1 --> net451
-.NET Framework 4.5.2 --> net452
-.NET Framework 4.6   --> net46
-.NET Framework 4.6.1 --> net461
-.NET Framework 4.6.2 --> net462
-.NET Framework 4.7   --> net47
-```
+| .NET Framework 版本 | TFM      |
+| ---------------------- | -------- |
+| .NET Framework 2.0     | `net20`  |
+| .NET Framework 3.0     | `net30`  |
+| .NET Framework 3.5     | `net35`  |
+| .NET Framework 4.0     | `net40`  |
+| .NET Framework 4.5     | `net45`  |
+| .NET Framework 4.5.1   | `net451` |
+| .NET Framework 4.5.2   | `net452` |
+| .NET Framework 4.6     | `net46`  |
+| .NET Framework 4.6.1   | `net461` |
+| .NET Framework 4.6.2   | `net462` |
+| .NET Framework 4.7     | `net47`  |
+| .NET Framework 4.8     | `net48`  |
 
 然后将此 TFM 插入项目文件的 `TargetFramework` 部分。 例如，以下是如何编写面向 .NET Framework 4.0 的库：
 
@@ -318,13 +319,13 @@ dotnet sln add AwesomeLibrary.FSharp/AwesomeLibrary.FSharp.fsproj
 
 ### <a name="project-to-project-referencing"></a>项目到项目的引用
 
-引用项目的最佳方式是使用 .NET Core CLI 添加项目引用。 在 AwesomeLibrary.CSharp 和 AwesomeLibrary.FSharp 项目目录中，可运行下列命令：
+引用项目的最佳方式是使用 .NET Core CLI 添加项目引用。 在 AwesomeLibrary.CSharp  和 AwesomeLibrary.FSharp  项目目录中，可运行下列命令：
 
 ```console
 dotnet add reference ../AwesomeLibrary.Core/AwesomeLibrary.Core.csproj
 ```
 
-AwesomeLibrary.CSharp 和 AwesomeLibrary.FSharp 的项目文件现在需要将 AwesomeLibrary.Core 作为 `ProjectReference` 目标引用。  可通过检查项目文件和查看其中的下列内容来进行验证：
+AwesomeLibrary.CSharp  和 AwesomeLibrary.FSharp  的项目文件现在需要将 AwesomeLibrary.Core  作为 `ProjectReference` 目标引用。  可通过检查项目文件和查看其中的下列内容来进行验证：
 
 ```xml
 <ItemGroup>

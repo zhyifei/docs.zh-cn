@@ -1,16 +1,16 @@
 ---
 title: 使用排列特征重要性解释模型预测
 description: 在 ML.NET 中使用排列功能的重要性来理解模型功能的重要性
-ms.date: 05/02/2019
+ms.date: 08/29/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to
-ms.openlocfilehash: 1037a1f1c21ef2c9b9a87a070a7d2003c1e76eb4
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 9617582c79b2278e3a68e7acf84568247b81eca1
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307372"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70167655"
 ---
 # <a name="explain-model-predictions-using-permutation-feature-importance"></a>使用排列特征重要性解释模型预测
 
@@ -50,7 +50,7 @@ ms.locfileid: "67307372"
 2,98,16,1,0.25,10,5,1,8,689,13,36,12
 ```
 
-此示例中的数据可以由 `HousingPriceData` 等类进行建模：
+此示例中的数据可以通过 `HousingPriceData` 等类进行建模并加载到 [`IDataView`](xref:Microsoft.ML.IDataView) 中。
 
 ```csharp
 class HousingPriceData
@@ -96,8 +96,6 @@ class HousingPriceData
     public float Price { get; set; }
 }
 ```
-
-将数据加载到 [`IDataView`](xref:Microsoft.ML.IDataView) 中。
 
 ## <a name="train-the-model"></a>定型模型
 

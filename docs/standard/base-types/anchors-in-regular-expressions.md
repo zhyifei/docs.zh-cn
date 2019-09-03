@@ -19,12 +19,12 @@ ms.assetid: 336391f6-2614-499b-8b1b-07a6837108a7
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 85e971d3464b6f2a073288e7f8b5406563598f79
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5f722977928604e5876e52a7329eef5c933bf2a7
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634759"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70046474"
 ---
 # <a name="anchors-in-regular-expressions"></a>正则表达式中的定位点
 <a name="top"></a> 定位点（原子零宽度断言）指定字符串中必须出现匹配的位置。 在搜索表达式中使用定位点时，正则表达式引擎不在字符串中前进或使用字符，它仅在指定位置查找匹配。 例如， `^` 指定必须从行或字符串的开头开始匹配。 因此，正则表达式 `^http:` 仅当 "http:" 出现在行开头时才与之匹配。 下表列出了 .NET 中正则表达式支持的定位点。  
@@ -58,7 +58,7 @@ ms.locfileid: "64634759"
 |模式|说明|  
 |-------------|-----------------|  
 |`^`|从输入字符串的开头开始匹配（如果在调用该方法时选择了 <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> 选项，则从行的开头开始匹配）。|  
-|`((\w+(\s?)){2,}`|匹配刚好两次后跟零个或一个空格的一个或多个单词字符。 这是第一个捕获组。 此表达式还定义第二个和第三个捕获组：第二个捕获组由捕获的单词组成，第三个捕获组由捕获的空格组成。|  
+|`((\w+(\s?)){2,}`|匹配至少两次后跟零个或一个空格的一个或多个单词字符。 这是第一个捕获组。 此表达式还定义第二个和第三个捕获组：第二个捕获组由捕获的单词组成，第三个捕获组由捕获的空格组成。|  
 |`,\s`|匹配后跟一个空白字符的逗号。|  
 |`(\w+\s\w+)`|匹配后跟一个空格再后跟一个或多个单词字符的一个或多个单词字符。 这是第四个捕获组。|  
 |`,`|匹配逗号。|  

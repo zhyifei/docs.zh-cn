@@ -1,16 +1,16 @@
 ---
 title: 训练和评估模型
 description: 了解如何使用 ML.NET 生成机器学习模型、收集指标以及测量性能。 机器学习模型识别训练数据内的模式以使用新数据进行预测。
-ms.date: 06/25/2019
+ms.date: 08/29/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to, title-hack-0625
-ms.openlocfilehash: 61cdaf693c417d02da95d1d79ab30eb2d30a057b
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 3fb586b218f1769949efc362cacc3957623dd43b
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67397644"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70169049"
 ---
 # <a name="train-and-evaluate-a-model"></a>训练和评估模型
 
@@ -20,7 +20,7 @@ ms.locfileid: "67397644"
 
 机器学习模型旨在识别训练数据中的模式。 这些模式用于使用新数据进行预测。
 
-给定以下数据模型：
+数据可以通过 `HousingData` 等类进行建模。
 
 ```csharp
 public class HousingData
@@ -38,7 +38,7 @@ public class HousingData
 }
 ```
 
-将数据加载到 [`IDataView`](xref:Microsoft.ML.IDataView) 中：
+提供加载到 [`IDataView`](xref:Microsoft.ML.IDataView) 中的以下数据。
 
 ```csharp
 HousingData[] housingData = new HousingData[]

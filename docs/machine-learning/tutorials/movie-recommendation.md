@@ -2,15 +2,15 @@
 title: 教程：生成影片推荐系统 - 矩阵因子分解
 description: 本教程演示如何在 .NET Core 控制台应用程序中使用 ML.NET 生成电影推荐系统。 这些步骤使用 C# 和 Visual Studio 2019。
 author: briacht
-ms.date: 07/09/2019
+ms.date: 08/26/2019
 ms.custom: mvc, title-hack-0516
 ms.topic: tutorial
-ms.openlocfilehash: 82da512d437ed2c5c28601c34687494b8be4d046
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 97bdef3daa296dcb88cbb158a14668205df6fee3
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666683"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70107259"
 ---
 # <a name="tutorial-build-a-movie-recommender-using-matrix-factorizaton-with-mlnet"></a>教程：使用矩阵因子分解和 ML.NET 生成影片推荐系统
 
@@ -160,7 +160,7 @@ ML.NET 中的数据表示为 [IDataView 类](xref:Microsoft.ML.IDataView)。 `ID
 
 [LoadFromTextFile()](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29) 用于定义数据架构并读取文件。 它使用数据路径变量并返回 `IDataView`。 在这种情况下，需提供 `Test` 和 `Train` 文件的路径，并指示文本文件头（以便正确使用列名称）和逗号字符数据分隔符（默认分隔符是制表符）。
 
-在 `Main()` 方法中添加以下两个代码行，以调用 `LoadData()` 方法并返回 `Train` 和 `Test` 数据：
+在 `Main()` 方法中添加以下代码，以调用 `LoadData()` 方法并返回 `Train` 和 `Test` 数据：
 
 [!code-csharp[LoadDataMain](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#LoadDataMain "Add LoadData method to Main")]
 
