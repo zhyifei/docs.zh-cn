@@ -131,11 +131,11 @@ ms.locfileid: "67736557"
 
 - ❌ 更改公共常量或枚举成员的值 
 
-- ❌ 更改属性、字段、参数或返回值的类型 
+- ❌ 更改属性类型、字段、参数或返回值 
 
 - ❌ 添加、删除、或更改参数的顺序 
 
-- ❌ 向参数添加或从中删除 [in](../../csharp/language-reference/keywords/in.md)、[out](../../csharp/language-reference/keywords/out.md) 或 [ref](../../csharp/language-reference/keywords/ref.md) 关键字 
+- ❌ 从参数中添加或删除 [in](../../csharp/language-reference/keywords/in.md)、[out](../../csharp/language-reference/keywords/out.md) 或 [ref](../../csharp/language-reference/keywords/ref.md) 关键字 
 
 - ❌ 重命名参数（包括更改其大小写） 
 
@@ -149,7 +149,7 @@ ms.locfileid: "67736557"
 
 - ❌️ 在虚拟方法或接口上从 `ref readonly` 更改为 `ref` 返回值 
 
-- ❌ 向成员添加或从中删除 [abstract](../../csharp/language-reference/keywords/abstract.md) 
+- ❌ 从成员添加或删除 [abstract](../../csharp/language-reference/keywords/abstract.md) 关键字 
 
 - ❌ 从成员删除 [virtual](../../csharp/language-reference/keywords/virtual.md) 关键字 
 
@@ -166,9 +166,9 @@ ms.locfileid: "67736557"
 
   [抽象成员](../../csharp/language-reference/keywords/virtual.md)提供可以由派生类重写的方法实现。  [抽象成员](../../csharp/language-reference/keywords/abstract.md)不提供任何实现，且必须重写。 
 
-- ❌ 向包含可访问的（公共或受保护的）构造函数且非 [sealed](../../csharp/language-reference/keywords/sealed.md) 类型的公共类型添加抽象成员 
+- ❌ 向包含可访问的（公共或受保护的）构造函数且非  [sealed](../../csharp/language-reference/keywords/sealed.md) 类型的公共类型添加抽象成员 
 
-- ❌ 从成员添加或删除 [static](../../csharp/language-reference/keywords/static.md)关键字 
+- ❌从成员添加或删除  [static](../../csharp/language-reference/keywords/static.md)关键字 
 
 - ❌ 添加排除现有重载并定义其他行为的重载 
 
@@ -213,15 +213,15 @@ ms.locfileid: "67736557"
 
   请注意，可以扩展可传递到方法或由成员返回的值范围，但不可扩展参数或成员类型。 例如，传递到方法的值可以从 0-124 扩展到 0-255，但参数类型不可从 <xref:System.Byte> 更改为 <xref:System.Int32>。
 
-- ❌ 在成员为 [virtual](../../csharp/language-reference/keywords/virtual.md) 成员时，扩大属性或参数的可接受值的范围 
+- ❌ 在成员为[virtual](../../csharp/language-reference/keywords/virtual.md) 成员时，扩大属性或参数的可接受值的范围 
 
    此变更将中断已重写的现有成员，面向扩展的值范围时它们将无法正常运行。
 
-- ❌ 缩小属性或参数的可接受值的范围 
+- ❌缩小属性或参数的可接受值的范围 
 
-- ❌ 扩大属性、字段、返回值或 [out](../../csharp/language-reference/keywords/out-parameter-modifier.md) 参数的返回值范围 
+- ❌ 扩大属性的返回值范围、字段、返回值或 [out](../../csharp/language-reference/keywords/out-parameter-modifier.md) 参数 
 
-- ❌ 更改属性、字段、方法返回值或 [out](../../csharp/language-reference/keywords/out-parameter-modifier.md) 参数的返回值 
+- ❌ 更改属性的返回值、字段、方法返回值或 [out](../../csharp/language-reference/keywords/out-parameter-modifier.md) 参数 
 
 - ❌ 更改属性、字段或参数的默认值 
 
