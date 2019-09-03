@@ -200,7 +200,7 @@ ms.locfileid: "69968562"
 |-------------|-----------------|  
 |`^`|从字符串开头开始匹配。|  
 |`([A-Z]\w*)+\.`|对后跟零个或多个单词字符、句点的字母字符 (A-Z) 匹配一次或多次。 因为 <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> 方法是使用 <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> 选项调用的，所以此比较不区分大小写。|  
-|`(([A-Z]\w*)+\.)*`|对前一个模式匹配一次或多次。|  
+|`(([A-Z]\w*)+\.)*`|对前一个模式匹配零次或多次。|  
 |`[A-Z]\w*`|匹配后跟零个或多个单词字符的字母字符。|  
 |`$`|在输入字符串末尾结束匹配。|  
   
@@ -223,4 +223,4 @@ ms.locfileid: "69968562"
 - [正则表达式语言 - 快速参考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
 - [数量词](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)
 - [替换构造](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)
-- [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)
+- [分组构造](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)
