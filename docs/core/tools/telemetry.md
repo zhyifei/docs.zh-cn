@@ -1,133 +1,141 @@
 ---
 title: .NET Core SDK 遥测
-description: 了解可收集使用情况信息以供分析的 .NET Core SDK 遥测功能、收集哪些数据，以及如何禁用遥测。
-author: richlander
-ms.date: 06/20/2018
+description: 了解可收集使用情况信息以供分析的 .NET Core SDK 遥测功能、收集的数据，以及如何禁用遥测。
+author: KathleenDollard
+ms.date: 08/27/2019
 ms.custom: seodec18
-ms.openlocfilehash: 40d9f3f698f513306e087753b4c33d09e8df0046
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 253f69392f034e330a75ed387d9346e8a5ae2a08
+ms.sourcegitcommit: 77e33b682db39955e331b8e8eda4ef1925a24e78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67397759"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70133700"
 ---
-# <a name="net-core-sdk-telemetry"></a><span data-ttu-id="01420-103">.NET Core SDK 遥测</span><span class="sxs-lookup"><span data-stu-id="01420-103">.NET Core SDK telemetry</span></span>
+# <a name="net-core-sdk-telemetry"></a><span data-ttu-id="f1b01-103">.NET Core SDK 遥测</span><span class="sxs-lookup"><span data-stu-id="f1b01-103">.NET Core SDK telemetry</span></span>
 
-<span data-ttu-id="01420-104">[.NET Core SDK](index.md) 包括可收集使用情况信息的[遥测功能](https://github.com/dotnet/cli/tree/master/src/dotnet/Telemetry)。</span><span class="sxs-lookup"><span data-stu-id="01420-104">The [.NET Core SDK](index.md) includes a [telemetry feature](https://github.com/dotnet/cli/tree/master/src/dotnet/Telemetry) that collects usage information.</span></span> <span data-ttu-id="01420-105">请务必让 .NET 团队了解到工具使用情况，以便我们对其做出改进。</span><span class="sxs-lookup"><span data-stu-id="01420-105">It's important that the .NET Team understands how the tools are used so they can be improved.</span></span> <span data-ttu-id="01420-106">有关详细信息，请参阅[从 .NET Core SDK 遥测中所了解到的内容](https://devblogs.microsoft.com/dotnet/what-weve-learned-from-net-core-sdk-telemetry/)。</span><span class="sxs-lookup"><span data-stu-id="01420-106">For more information, see [What we've learned from .NET Core SDK Telemetry](https://devblogs.microsoft.com/dotnet/what-weve-learned-from-net-core-sdk-telemetry/).</span></span>
+<span data-ttu-id="f1b01-104">[.NET Core SDK](index.md) 包含遥测功能，可在 .NET Core CLI 故障时收集使用情况数据和异常信息。</span><span class="sxs-lookup"><span data-stu-id="f1b01-104">The [.NET Core SDK](index.md) includes a telemetry feature that collects usage data and exception information when the .NET Core CLI crashes.</span></span> <span data-ttu-id="f1b01-105">.NET Core CLI 附带 .NET Core SDK，是一组用于生成、测试和发布 .NET Core 应用的谓词。</span><span class="sxs-lookup"><span data-stu-id="f1b01-105">The .NET Core CLI comes with the .NET Core SDK and is the set of verbs that enable you to build, test, and publish your .NET Core apps.</span></span> <span data-ttu-id="f1b01-106">请务必让 .NET 团队了解到工具使用情况，以便我们对其做出改进。</span><span class="sxs-lookup"><span data-stu-id="f1b01-106">It's important that the .NET team understands how the tools are used so they can be improved.</span></span> <span data-ttu-id="f1b01-107">有关故障的信息可帮助团队解决问题并修复 bug。</span><span class="sxs-lookup"><span data-stu-id="f1b01-107">Information on failures helps the team resolve problems and fix bugs.</span></span>
 
-<span data-ttu-id="01420-107">数据为匿名收集，并以汇总形式发布，以供 Microsoft 和社区根据 [Creative Commons Attribution 许可证](https://creativecommons.org/licenses/by/4.0/)使用。</span><span class="sxs-lookup"><span data-stu-id="01420-107">The collected data is anonymous and published in an aggregated form for use by both Microsoft and the community under the [Creative Commons Attribution License](https://creativecommons.org/licenses/by/4.0/).</span></span>
+<span data-ttu-id="f1b01-108">数据为匿名收集，并根据 [Creative Commons Attribution 许可证](https://creativecommons.org/licenses/by/4.0/)以汇总形式发布。</span><span class="sxs-lookup"><span data-stu-id="f1b01-108">The collected data is anonymous and published in aggregate under the [Creative Commons Attribution License](https://creativecommons.org/licenses/by/4.0/).</span></span> 
 
-## <a name="scope"></a><span data-ttu-id="01420-108">范围</span><span class="sxs-lookup"><span data-stu-id="01420-108">Scope</span></span>
+## <a name="scope"></a><span data-ttu-id="f1b01-109">范围</span><span class="sxs-lookup"><span data-stu-id="f1b01-109">Scope</span></span>
 
-<span data-ttu-id="01420-109">`dotnet` 命令用于启动应用程序和 .NET Core CLI。</span><span class="sxs-lookup"><span data-stu-id="01420-109">The `dotnet` command is used to launch both apps and the .NET Core CLI.</span></span> <span data-ttu-id="01420-110">`dotnet` 命令本身不收集遥测数据。</span><span class="sxs-lookup"><span data-stu-id="01420-110">The `dotnet` command itself doesn't collect telemetry.</span></span> <span data-ttu-id="01420-111">`dotnet` 命令运行的 .NET Core CLI 命令收集遥测数据。</span><span class="sxs-lookup"><span data-stu-id="01420-111">The .NET Core CLI commands run by the `dotnet` command collect the telemetry.</span></span>
+<span data-ttu-id="f1b01-110">`dotnet` 具有两个功能：运行应用程序和执行 CLI 命令。</span><span class="sxs-lookup"><span data-stu-id="f1b01-110">`dotnet` has two functions: to run apps, and to execute CLI commands.</span></span> <span data-ttu-id="f1b01-111">按以下格式使用 `dotnet` 来启动应用程序时，不会收集遥测数据  ：</span><span class="sxs-lookup"><span data-stu-id="f1b01-111">Telemetry *isn't collected* when using `dotnet` to start an application in the following format:</span></span>
 
-<span data-ttu-id="01420-112">使用 `dotnet` 命令本身且没有附加任何命令时，不会启用  遥测：</span><span class="sxs-lookup"><span data-stu-id="01420-112">Telemetry *isn't enabled* when using the `dotnet` command itself, with no command attached:</span></span>
+- `dotnet [path-to-app].dll`
 
-- `dotnet`
-- `dotnet [path-to-app]`
-
-<span data-ttu-id="01420-113">使用 [.NET Core CLI 命令](index.md)时，就会启用  遥测，如：</span><span class="sxs-lookup"><span data-stu-id="01420-113">Telemetry *is enabled* when using the [.NET Core CLI commands](index.md), such as:</span></span>
+<span data-ttu-id="f1b01-112">使用任何 [.NET Core CLI 命令](index.md)时，都会收集遥测数据，如  ：</span><span class="sxs-lookup"><span data-stu-id="f1b01-112">Telemetry *is collected* when using any of the [.NET Core CLI commands](index.md), such as:</span></span>
 
 - `dotnet build`
 - `dotnet pack`
-- `dotnet restore`
 - `dotnet run`
 
-## <a name="how-to-opt-out"></a><span data-ttu-id="01420-114">如何选择退出</span><span class="sxs-lookup"><span data-stu-id="01420-114">How to opt out</span></span>
+## <a name="how-to-opt-out"></a><span data-ttu-id="f1b01-113">如何选择退出</span><span class="sxs-lookup"><span data-stu-id="f1b01-113">How to opt out</span></span>
 
-<span data-ttu-id="01420-115">.NET Core SDK 遥测功能默认处于启用状态。</span><span class="sxs-lookup"><span data-stu-id="01420-115">The .NET Core SDK telemetry feature is enabled by default.</span></span> <span data-ttu-id="01420-116">通过将 `DOTNET_CLI_TELEMETRY_OPTOUT` 环境变量设置为 `1` 或 `true`，可以选择退出遥测功能。</span><span class="sxs-lookup"><span data-stu-id="01420-116">Opt out of the telemetry feature by setting the `DOTNET_CLI_TELEMETRY_OPTOUT` environment variable to `1` or `true`.</span></span>
+<span data-ttu-id="f1b01-114">.NET Core SDK 遥测功能默认处于启用状态。</span><span class="sxs-lookup"><span data-stu-id="f1b01-114">The .NET Core SDK telemetry feature is enabled by default.</span></span> <span data-ttu-id="f1b01-115">要选择退出遥测功能，请将 `DOTNET_CLI_TELEMETRY_OPTOUT` 环境变量设置为 `1` 或 `true`。</span><span class="sxs-lookup"><span data-stu-id="f1b01-115">To opt out of the telemetry feature, set the `DOTNET_CLI_TELEMETRY_OPTOUT` environment variable to `1` or `true`.</span></span> 
 
-## <a name="data-points"></a><span data-ttu-id="01420-117">数据点</span><span class="sxs-lookup"><span data-stu-id="01420-117">Data points</span></span>
+<span data-ttu-id="f1b01-116">如果安装成功，.NET Core SDK 安装程序也会发送一个遥测条目。</span><span class="sxs-lookup"><span data-stu-id="f1b01-116">A single telemetry entry is also sent by the .NET Core SDK installer when a successful installation happens.</span></span> <span data-ttu-id="f1b01-117">要选择退出，请在安装 .NET Core SDK 之前设置 `DOTNET_CLI_TELEMETRY_OPTOUT` 环境变量。</span><span class="sxs-lookup"><span data-stu-id="f1b01-117">To opt out, set the `DOTNET_CLI_TELEMETRY_OPTOUT` environment variable before you install the .NET Core SDK.</span></span>
 
-<span data-ttu-id="01420-118">此功能收集以下数据：</span><span class="sxs-lookup"><span data-stu-id="01420-118">The feature collects the following data:</span></span>
+## <a name="disclosure"></a><span data-ttu-id="f1b01-118">公开</span><span class="sxs-lookup"><span data-stu-id="f1b01-118">Disclosure</span></span>
 
-- <span data-ttu-id="01420-119">调用时间戳&#8224;</span><span class="sxs-lookup"><span data-stu-id="01420-119">Timestamp of invocation&#8224;</span></span>
-- <span data-ttu-id="01420-120">调用的命令（例如，“build”）&#8224;</span><span class="sxs-lookup"><span data-stu-id="01420-120">Command invoked (for example, "build")&#8224;</span></span>
-- <span data-ttu-id="01420-121">用于确定地理位置的三个八进制数 IP 地址&#8224;</span><span class="sxs-lookup"><span data-stu-id="01420-121">Three octet IP address used to determine geographical location&#8224;</span></span>
-- <span data-ttu-id="01420-122">命令的 `ExitCode`</span><span class="sxs-lookup"><span data-stu-id="01420-122">`ExitCode` of the command</span></span>
-- <span data-ttu-id="01420-123">测试运行程序（对于测试项目）</span><span class="sxs-lookup"><span data-stu-id="01420-123">Test runner (for test projects)</span></span>
-- <span data-ttu-id="01420-124">操作系统和版本&#8224;</span><span class="sxs-lookup"><span data-stu-id="01420-124">Operating system and version&#8224;</span></span>
-- <span data-ttu-id="01420-125">“运行时”节点中是否有运行时 ID</span><span class="sxs-lookup"><span data-stu-id="01420-125">Whether runtime IDs are present in the runtimes node</span></span>
-- <span data-ttu-id="01420-126">.NET Core SDK 版本&#8224;</span><span class="sxs-lookup"><span data-stu-id="01420-126">.NET Core SDK version&#8224;</span></span>
-
-<span data-ttu-id="01420-127">&#8224;此指标已发布。</span><span class="sxs-lookup"><span data-stu-id="01420-127">&#8224;This metric is published.</span></span>
-
-<span data-ttu-id="01420-128">自 .NET Core SDK 2.0 SDK 起，收集以下新数据点：</span><span class="sxs-lookup"><span data-stu-id="01420-128">Starting with .NET Core 2.0 SDK, new data points are collected:</span></span>
-
-- <span data-ttu-id="01420-129">`dotnet` 命令参数和选项：仅收集已知参数和选项（非任意字符串）。</span><span class="sxs-lookup"><span data-stu-id="01420-129">`dotnet` command arguments and options: only known arguments and options are collected (not arbitrary strings).</span></span>
-- <span data-ttu-id="01420-130">SDK 是否在容器中运行。</span><span class="sxs-lookup"><span data-stu-id="01420-130">Whether the SDK is running in a container.</span></span>
-- <span data-ttu-id="01420-131">目标框架。</span><span class="sxs-lookup"><span data-stu-id="01420-131">Target frameworks.</span></span>
-- <span data-ttu-id="01420-132">经过哈希处理的 MAC 地址：计算机的加密 (SHA256) 匿名的唯一 ID。</span><span class="sxs-lookup"><span data-stu-id="01420-132">Hashed MAC address: a cryptographically (SHA256) anonymous and unique ID for a machine.</span></span> <span data-ttu-id="01420-133">此指标未发布。</span><span class="sxs-lookup"><span data-stu-id="01420-133">This metric isn't published.</span></span>
-- <span data-ttu-id="01420-134">经过哈希处理的当前工作目录。</span><span class="sxs-lookup"><span data-stu-id="01420-134">Hashed current working directory.</span></span>
-
-<span data-ttu-id="01420-135">此功能不收集用户名或电子邮件地址等个人数据。</span><span class="sxs-lookup"><span data-stu-id="01420-135">The feature doesn't collect personal data, such as usernames or email addresses.</span></span> <span data-ttu-id="01420-136">也不会扫描代码，亦不会提取项目级敏感数据，如名称、存储库或作者。</span><span class="sxs-lookup"><span data-stu-id="01420-136">It doesn't scan your code and doesn't extract sensitive project-level data, such as name, repo, or author.</span></span> <span data-ttu-id="01420-137">数据通过 [Microsoft Azure Application Insights](https://azure.microsoft.com/services/application-insights/) 技术安全地发送到 Microsoft 服务器，提供对保留数据的受限访问权限，并在严格的安全控制下从安全 [Azure 存储](https://azure.microsoft.com/services/storage/)系统发布。</span><span class="sxs-lookup"><span data-stu-id="01420-137">The data is sent securely to Microsoft servers using [Microsoft Azure Application Insights](https://azure.microsoft.com/services/application-insights/) technology, held under restricted access, and published under strict security controls from secure [Azure Storage](https://azure.microsoft.com/services/storage/) systems.</span></span>
-
-<span data-ttu-id="01420-138">.NET 团队需要知道工具使用情况及其是否在正常运行，而不是使用这些工具生成的内容。</span><span class="sxs-lookup"><span data-stu-id="01420-138">The .NET team wants to know how the tools are used and if they're working well, not what you're building with the tools.</span></span> <span data-ttu-id="01420-139">如果怀疑遥测在收集敏感数据，或认为我们处理数据的方式不安全或不恰当，请在 [dotnet/cli](https://github.com/dotnet/cli/issues) 存储库中记录问题以供调查。</span><span class="sxs-lookup"><span data-stu-id="01420-139">If you suspect that the telemetry is collecting sensitive data or that the data is being insecurely or inappropriately handled, file an issue in the [dotnet/cli](https://github.com/dotnet/cli/issues) repository for investigation.</span></span>
-
-## <a name="published-data"></a><span data-ttu-id="01420-140">已发布的数据</span><span class="sxs-lookup"><span data-stu-id="01420-140">Published data</span></span>
-
-<span data-ttu-id="01420-141">数据每季度发布一次，并在 [.NET Core SDK 使用情况数据](https://github.com/dotnet/core/blob/master/release-notes/cli-usage-data.md)中列出。</span><span class="sxs-lookup"><span data-stu-id="01420-141">Published data is available quarterly and are listed at [.NET Core SDK Usage Data](https://github.com/dotnet/core/blob/master/release-notes/cli-usage-data.md).</span></span> <span data-ttu-id="01420-142">数据文件列如下：</span><span class="sxs-lookup"><span data-stu-id="01420-142">The columns of a data file are:</span></span>
-
-- <span data-ttu-id="01420-143">时间戳</span><span class="sxs-lookup"><span data-stu-id="01420-143">Timestamp</span></span>
-- <span data-ttu-id="01420-144">Occurrences&#8224;</span><span class="sxs-lookup"><span data-stu-id="01420-144">Occurrences&#8224;</span></span>
-- <span data-ttu-id="01420-145">命令</span><span class="sxs-lookup"><span data-stu-id="01420-145">Command</span></span>
-- <span data-ttu-id="01420-146">Geography&#8225;</span><span class="sxs-lookup"><span data-stu-id="01420-146">Geography&#8225;</span></span>
-- <span data-ttu-id="01420-147">OSFamily</span><span class="sxs-lookup"><span data-stu-id="01420-147">OSFamily</span></span>
-- <span data-ttu-id="01420-148">RuntimeID</span><span class="sxs-lookup"><span data-stu-id="01420-148">RuntimeID</span></span>
-- <span data-ttu-id="01420-149">OSVersion</span><span class="sxs-lookup"><span data-stu-id="01420-149">OSVersion</span></span>
-- <span data-ttu-id="01420-150">SDKVersion</span><span class="sxs-lookup"><span data-stu-id="01420-150">SDKVersion</span></span>
-
-<span data-ttu-id="01420-151">&#8224;Occurrences  列显示相应命令当天用于该行指标的总次数。</span><span class="sxs-lookup"><span data-stu-id="01420-151">&#8224;The *Occurrences* column displays the aggregate count of that command's use for that row's metrics that day.</span></span>
-
-<span data-ttu-id="01420-152">&#8225;通常情况下，Geography  列显示国家/地区名称。</span><span class="sxs-lookup"><span data-stu-id="01420-152">&#8225;Typically, the *Geography* column displays the name of a country/region.</span></span> <span data-ttu-id="01420-153">在某些情况下，此列中会显示南极洲，要么是因为研究人员在南极洲使用 .NET Core，要么是因为位置数据不正确。</span><span class="sxs-lookup"><span data-stu-id="01420-153">In some cases, the continent of Antarctica appears in this column, either due to researchers using .NET Core in Antarctica or incorrect location data.</span></span>
-
-### <a name="example"></a><span data-ttu-id="01420-154">示例</span><span class="sxs-lookup"><span data-stu-id="01420-154">Example</span></span>
-
-| <span data-ttu-id="01420-155">时间戳</span><span class="sxs-lookup"><span data-stu-id="01420-155">Timestamp</span></span>      | <span data-ttu-id="01420-156">Occurrences</span><span class="sxs-lookup"><span data-stu-id="01420-156">Occurrences</span></span> | <span data-ttu-id="01420-157">命令</span><span class="sxs-lookup"><span data-stu-id="01420-157">Command</span></span> | <span data-ttu-id="01420-158">Geography</span><span class="sxs-lookup"><span data-stu-id="01420-158">Geography</span></span> | <span data-ttu-id="01420-159">OSFamily</span><span class="sxs-lookup"><span data-stu-id="01420-159">OSFamily</span></span> | <span data-ttu-id="01420-160">RuntimeID</span><span class="sxs-lookup"><span data-stu-id="01420-160">RuntimeID</span></span>     | <span data-ttu-id="01420-161">OSVersion</span><span class="sxs-lookup"><span data-stu-id="01420-161">OSVersion</span></span> | <span data-ttu-id="01420-162">SDKVersion</span><span class="sxs-lookup"><span data-stu-id="01420-162">SDKVersion</span></span> |
-| -------------- | ----------- | ------- | --------- | -------- | ------------- | --------- | ---------- |
-| <span data-ttu-id="01420-163">4/16/2017 0:00</span><span class="sxs-lookup"><span data-stu-id="01420-163">4/16/2017 0:00</span></span> | <span data-ttu-id="01420-164">8</span><span class="sxs-lookup"><span data-stu-id="01420-164">8</span></span>           | <span data-ttu-id="01420-165">运行</span><span class="sxs-lookup"><span data-stu-id="01420-165">run</span></span>     | <span data-ttu-id="01420-166">Uganda</span><span class="sxs-lookup"><span data-stu-id="01420-166">Uganda</span></span>    | <span data-ttu-id="01420-167">Darwin</span><span class="sxs-lookup"><span data-stu-id="01420-167">Darwin</span></span>   | <span data-ttu-id="01420-168">osx.10.12-x64</span><span class="sxs-lookup"><span data-stu-id="01420-168">osx.10.12-x64</span></span> | <span data-ttu-id="01420-169">10.12</span><span class="sxs-lookup"><span data-stu-id="01420-169">10.12</span></span>     | <span data-ttu-id="01420-170">1.0.1</span><span class="sxs-lookup"><span data-stu-id="01420-170">1.0.1</span></span>      |
-
-### <a name="datasets"></a><span data-ttu-id="01420-171">数据集</span><span class="sxs-lookup"><span data-stu-id="01420-171">Datasets</span></span>
-
-- [<span data-ttu-id="01420-172">2016 - Q3</span><span class="sxs-lookup"><span data-stu-id="01420-172">2016 - Q3</span></span>](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2016-q3.tsv)
-- [<span data-ttu-id="01420-173">2016 - Q4</span><span class="sxs-lookup"><span data-stu-id="01420-173">2016 - Q4</span></span>](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2016-q4.tsv)
-- [<span data-ttu-id="01420-174">2017 - Q1</span><span class="sxs-lookup"><span data-stu-id="01420-174">2017 - Q1</span></span>](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2017-q1.tsv)
-- [<span data-ttu-id="01420-175">2017 - Q2</span><span class="sxs-lookup"><span data-stu-id="01420-175">2017 - Q2</span></span>](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2017-q2.tsv)
-- [<span data-ttu-id="01420-176">2017 - Q3</span><span class="sxs-lookup"><span data-stu-id="01420-176">2017 - Q3</span></span>](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2017-q3.tsv)
-- [<span data-ttu-id="01420-177">2017 - Q4</span><span class="sxs-lookup"><span data-stu-id="01420-177">2017 - Q4</span></span>](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2017-q4.tsv)
-
-<span data-ttu-id="01420-178">其他数据集使用标准的 URL 格式进行发布。</span><span class="sxs-lookup"><span data-stu-id="01420-178">Additional datasets are posted using a standard URL format.</span></span> <span data-ttu-id="01420-179">请将 `<YEAR>` 替换为相应年份，并将 `<QUARTER>` 替换为相应季度（使用 `1`、`2`、`3` 或 `4`）。</span><span class="sxs-lookup"><span data-stu-id="01420-179">Replace `<YEAR>` with the year and replace `<QUARTER>` with the quarter of the year (use `1`, `2`, `3`, or `4`).</span></span> <span data-ttu-id="01420-180">文件采用制表符分隔值 (TSV  ) 格式。</span><span class="sxs-lookup"><span data-stu-id="01420-180">The files are in tab-separated values (*TSV*) format.</span></span>
-
-`https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-<YEAR>-q<QUARTER>.tsv`
-
-## <a name="license"></a><span data-ttu-id="01420-181">许可证</span><span class="sxs-lookup"><span data-stu-id="01420-181">License</span></span>
-
-<span data-ttu-id="01420-182">.NET Core 的 Microsoft 分发由 [Microsoft 软件许可条款：Microsoft .NET 库](https://aka.ms/dotnet-core-eula)许可。</span><span class="sxs-lookup"><span data-stu-id="01420-182">The Microsoft distribution of .NET Core is licensed with the [Microsoft Software License Terms: Microsoft .NET Library](https://aka.ms/dotnet-core-eula).</span></span> <span data-ttu-id="01420-183">有关数据收集和处理的详细信息，请参阅标题为“数据”的部分。</span><span class="sxs-lookup"><span data-stu-id="01420-183">For details on data collection and processing, see the section entitled "Data."</span></span>
-
-<span data-ttu-id="01420-184">[.NET NuGet 包](https://www.nuget.org/profiles/dotnetframework)使用相同许可证，但不启用遥测（见[范围](#scope)）。</span><span class="sxs-lookup"><span data-stu-id="01420-184">[.NET NuGet packages](https://www.nuget.org/profiles/dotnetframework) use the same license but don't enable telemetry (see [Scope](#scope)).</span></span>
-
-## <a name="disclosure"></a><span data-ttu-id="01420-185">公开</span><span class="sxs-lookup"><span data-stu-id="01420-185">Disclosure</span></span>
-
-<span data-ttu-id="01420-186">首次运行其中一个 [.NET Core CLI 命令](index.md)（例如，`dotnet restore`）时，.NET Core SDK 工具显示以下文本。</span><span class="sxs-lookup"><span data-stu-id="01420-186">The .NET Core SDK displays the following text when you first run one of the [.NET Core CLI commands](index.md) (for example, `dotnet restore`).</span></span> <span data-ttu-id="01420-187">文本可能会因运行的 SDK 版本而略有不同。</span><span class="sxs-lookup"><span data-stu-id="01420-187">Text may vary slightly depending on the version of the SDK you're running.</span></span> <span data-ttu-id="01420-188">此“首次运行”体验是 Microsoft 通知用户有关数据收集信息的方式。</span><span class="sxs-lookup"><span data-stu-id="01420-188">This "first run" experience is how Microsoft notifies you about data collection.</span></span>
+<span data-ttu-id="f1b01-119">首次运行其中一个 [.NET Core CLI 命令](index.md)（例如，`dotnet build`）时，.NET Core SDK 显示以下类似文本。</span><span class="sxs-lookup"><span data-stu-id="f1b01-119">The .NET Core SDK displays text similar to the following when you first run one of the [.NET Core CLI commands](index.md) (for example, `dotnet build`).</span></span> <span data-ttu-id="f1b01-120">文本可能会因运行的 SDK 版本而略有不同。</span><span class="sxs-lookup"><span data-stu-id="f1b01-120">Text may vary slightly depending on the version of the SDK you're running.</span></span> <span data-ttu-id="f1b01-121">此“首次运行”体验是 Microsoft 通知用户有关数据收集信息的方式。</span><span class="sxs-lookup"><span data-stu-id="f1b01-121">This "first run" experience is how Microsoft notifies you about data collection.</span></span>
 
 ```console
-Welcome to .NET Core!
----------------------
-Learn more about .NET Core: https://aka.ms/dotnet-docs
-Use 'dotnet --help' to see available commands or visit: https://aka.ms/dotnet-cli-docs
-
 Telemetry
 ---------
-The .NET Core tools collect usage data in order to help us improve your experience.
-The data is anonymous and doesn't include command-line arguments.
-The data is collected by Microsoft and shared with the community.
-You can opt-out of telemetry by setting the DOTNET_CLI_TELEMETRY_OPTOUT environment variable to '1' or 'true' using your favorite shell.
+The .NET Core tools collect usage data in order to help us improve your experience. The data is anonymous. It is collected by Microsoft and shared with the community. You can opt-out of telemetry by setting the DOTNET_CLI_TELEMETRY_OPTOUT environment variable to '1' or 'true' using your favorite shell.
 
 Read more about .NET Core CLI Tools telemetry: https://aka.ms/dotnet-cli-telemetry
 ```
 
-## <a name="see-also"></a><span data-ttu-id="01420-189">请参阅</span><span class="sxs-lookup"><span data-stu-id="01420-189">See also</span></span>
+## <a name="data-points"></a><span data-ttu-id="f1b01-122">数据点</span><span class="sxs-lookup"><span data-stu-id="f1b01-122">Data points</span></span>
 
-- [<span data-ttu-id="01420-190">从 .NET Core SDK 遥测中所了解到的内容</span><span class="sxs-lookup"><span data-stu-id="01420-190">What we've learned from .NET Core SDK Telemetry</span></span>](https://devblogs.microsoft.com/dotnet/what-weve-learned-from-net-core-sdk-telemetry/)
-- [<span data-ttu-id="01420-191">遥测参考源（dotnet/cli 存储库）</span><span class="sxs-lookup"><span data-stu-id="01420-191">Telemetry reference source (dotnet/cli repo)</span></span>](https://github.com/dotnet/cli/tree/master/src/dotnet/Telemetry)
-- [<span data-ttu-id="01420-192">.NET Core SDK 使用情况数据</span><span class="sxs-lookup"><span data-stu-id="01420-192">.NET Core SDK Usage Data</span></span>](https://github.com/dotnet/core/blob/master/release-notes/cli-usage-data.md)
+<span data-ttu-id="f1b01-123">遥测功能不收集用户名或电子邮件地址等个人数据。</span><span class="sxs-lookup"><span data-stu-id="f1b01-123">The telemetry feature doesn't collect personal data, such as usernames or email addresses.</span></span> <span data-ttu-id="f1b01-124">也不会扫描代码，更不会提取项目级敏感数据，如名称、存储库或作者。</span><span class="sxs-lookup"><span data-stu-id="f1b01-124">It doesn't scan your code and doesn't extract project-level data, such as name, repository, or author.</span></span> <span data-ttu-id="f1b01-125">数据通过 [Azure Monitor](https://azure.microsoft.com/services/monitor/) 技术安全地发送到 Microsoft 服务器，提供对保留数据的受限访问权限，并在严格的安全控制下从安全的 [Azure 存储](https://azure.microsoft.com/services/storage/)系统发布。</span><span class="sxs-lookup"><span data-stu-id="f1b01-125">The data is sent securely to Microsoft servers using [Azure Monitor](https://azure.microsoft.com/services/monitor/) technology, held under restricted access, and published under strict security controls from secure [Azure Storage](https://azure.microsoft.com/services/storage/) systems.</span></span>
+
+<span data-ttu-id="f1b01-126">保护你的隐私对我们很重要。</span><span class="sxs-lookup"><span data-stu-id="f1b01-126">Protecting your privacy is important to us.</span></span> <span data-ttu-id="f1b01-127">如果怀疑遥测在收集敏感数据，或认为我们处理数据的方式不安全或不恰当，请在 [dotnet/cli](https://github.com/dotnet/cli/issues) 存储库中记录问题或发送电子邮件至 [dotnet@microsoft.com](mailto:dotnet@microsoft.com) 进行调查。</span><span class="sxs-lookup"><span data-stu-id="f1b01-127">If you suspect the telemetry is collecting sensitive data or the data is being insecurely or inappropriately handled, file an issue in the [dotnet/cli](https://github.com/dotnet/cli/issues) repository or send an email to [dotnet@microsoft.com](mailto:dotnet@microsoft.com) for investigation.</span></span>
+
+<span data-ttu-id="f1b01-128">遥测功能收集以下数据：</span><span class="sxs-lookup"><span data-stu-id="f1b01-128">The telemetry feature collects the following data:</span></span>
+
+| <span data-ttu-id="f1b01-129">SDK 版本</span><span class="sxs-lookup"><span data-stu-id="f1b01-129">SDK versions</span></span> | <span data-ttu-id="f1b01-130">数据</span><span class="sxs-lookup"><span data-stu-id="f1b01-130">Data</span></span> |
+|--------------|------|
+| <span data-ttu-id="f1b01-131">全部</span><span class="sxs-lookup"><span data-stu-id="f1b01-131">All</span></span>          | <span data-ttu-id="f1b01-132">调用时间戳。</span><span class="sxs-lookup"><span data-stu-id="f1b01-132">Timestamp of invocation.</span></span> |
+| <span data-ttu-id="f1b01-133">全部</span><span class="sxs-lookup"><span data-stu-id="f1b01-133">All</span></span>          | <span data-ttu-id="f1b01-134">调用的命令（例如，“build”），从 2.1 开始进行哈希处理。</span><span class="sxs-lookup"><span data-stu-id="f1b01-134">Command invoked (for example, "build"), hashed starting in 2.1.</span></span> |
+| <span data-ttu-id="f1b01-135">全部</span><span class="sxs-lookup"><span data-stu-id="f1b01-135">All</span></span>          | <span data-ttu-id="f1b01-136">用于确定地理位置的三个八进制数 IP 地址。</span><span class="sxs-lookup"><span data-stu-id="f1b01-136">Three octet IP address used to determine the geographical location.</span></span> |
+| <span data-ttu-id="f1b01-137">全部</span><span class="sxs-lookup"><span data-stu-id="f1b01-137">All</span></span>          | <span data-ttu-id="f1b01-138">操作系统和版本。</span><span class="sxs-lookup"><span data-stu-id="f1b01-138">Operating system and version.</span></span> |
+| <span data-ttu-id="f1b01-139">全部</span><span class="sxs-lookup"><span data-stu-id="f1b01-139">All</span></span>          | <span data-ttu-id="f1b01-140">运行 SDK 的运行时 ID (RID)。</span><span class="sxs-lookup"><span data-stu-id="f1b01-140">Runtime ID (RID) the SDK is running on.</span></span> |
+| <span data-ttu-id="f1b01-141">全部</span><span class="sxs-lookup"><span data-stu-id="f1b01-141">All</span></span>          | <span data-ttu-id="f1b01-142">.NET Core SDK 版本。</span><span class="sxs-lookup"><span data-stu-id="f1b01-142">.NET Core SDK version.</span></span> |
+| <span data-ttu-id="f1b01-143">全部</span><span class="sxs-lookup"><span data-stu-id="f1b01-143">All</span></span>          | <span data-ttu-id="f1b01-144">遥测配置文件：一个可选值，仅在用户显式选择加入时可用，并在 Microsoft 内部使用。</span><span class="sxs-lookup"><span data-stu-id="f1b01-144">Telemetry profile: an optional value only used with explicit user opt-in and used internally at Microsoft.</span></span> |
+| <span data-ttu-id="f1b01-145">>=2.0</span><span class="sxs-lookup"><span data-stu-id="f1b01-145">>=2.0</span></span>        | <span data-ttu-id="f1b01-146">命令参数和选项：收集若干参数和选项（非任意字符串）。</span><span class="sxs-lookup"><span data-stu-id="f1b01-146">Command arguments and options: several arguments and options are collected (not arbitrary strings).</span></span> <span data-ttu-id="f1b01-147">请参阅[收集的选项](#collected-options)。</span><span class="sxs-lookup"><span data-stu-id="f1b01-147">See [collected options](#collected-options).</span></span> <span data-ttu-id="f1b01-148">从 2.1.300 后进行哈希处理。</span><span class="sxs-lookup"><span data-stu-id="f1b01-148">Hashed after 2.1.300.</span></span> |
+| <span data-ttu-id="f1b01-149">>=2.0</span><span class="sxs-lookup"><span data-stu-id="f1b01-149">>=2.0</span></span>         | <span data-ttu-id="f1b01-150">SDK 是否在容器中运行。</span><span class="sxs-lookup"><span data-stu-id="f1b01-150">Whether the SDK is running in a container.</span></span> |
+| <span data-ttu-id="f1b01-151">>=2.0</span><span class="sxs-lookup"><span data-stu-id="f1b01-151">>=2.0</span></span>         | <span data-ttu-id="f1b01-152">目标框架（来自 `TargetFramework` 事件），从 2.1 开始进行哈希处理。</span><span class="sxs-lookup"><span data-stu-id="f1b01-152">Target frameworks (from the `TargetFramework` event), hashed starting in 2.1.</span></span> |
+| <span data-ttu-id="f1b01-153">>=2.0</span><span class="sxs-lookup"><span data-stu-id="f1b01-153">>=2.0</span></span>         | <span data-ttu-id="f1b01-154">经过哈希处理的媒体访问控制 (MAC) 地址：计算机的加密 (SHA256) 匿名唯一 ID。</span><span class="sxs-lookup"><span data-stu-id="f1b01-154">Hashed Media Access Control (MAC) address: a cryptographically (SHA256) anonymous and unique ID for a machine.</span></span> |
+| <span data-ttu-id="f1b01-155">>=2.0</span><span class="sxs-lookup"><span data-stu-id="f1b01-155">>=2.0</span></span>         | <span data-ttu-id="f1b01-156">经过哈希处理的当前工作目录。</span><span class="sxs-lookup"><span data-stu-id="f1b01-156">Hashed current working directory.</span></span> |
+| <span data-ttu-id="f1b01-157">>=2.0</span><span class="sxs-lookup"><span data-stu-id="f1b01-157">>=2.0</span></span>         | <span data-ttu-id="f1b01-158">安装成功报告，包含进行了哈希处理的安装程序 exe 文件名。</span><span class="sxs-lookup"><span data-stu-id="f1b01-158">Install success report, with hashed installer exe filename.</span></span> |
+| <span data-ttu-id="f1b01-159">>=2.1.300</span><span class="sxs-lookup"><span data-stu-id="f1b01-159">>=2.1.300</span></span>     | <span data-ttu-id="f1b01-160">内核版本。</span><span class="sxs-lookup"><span data-stu-id="f1b01-160">Kernel version.</span></span> |
+| <span data-ttu-id="f1b01-161">>=2.1.300</span><span class="sxs-lookup"><span data-stu-id="f1b01-161">>=2.1.300</span></span>     | <span data-ttu-id="f1b01-162">Libc 发行/版本。</span><span class="sxs-lookup"><span data-stu-id="f1b01-162">Libc release/version.</span></span> |
+| <span data-ttu-id="f1b01-163">>=3.0.100</span><span class="sxs-lookup"><span data-stu-id="f1b01-163">>=3.0.100</span></span>     | <span data-ttu-id="f1b01-164">是否已重定向输出（true 或 false）。</span><span class="sxs-lookup"><span data-stu-id="f1b01-164">Whether the output was redirected (true or false).</span></span> |
+| <span data-ttu-id="f1b01-165">>=3.0.100</span><span class="sxs-lookup"><span data-stu-id="f1b01-165">>=3.0.100</span></span>     | <span data-ttu-id="f1b01-166">CLI/SDK 故障时的异常类型及其堆栈跟踪（发送的堆栈跟踪中仅包含 CLI/SDK 代码）。</span><span class="sxs-lookup"><span data-stu-id="f1b01-166">On a CLI/SDK crash, the exception type and its stack trace (only CLI/SDK code is included in the stack trace sent).</span></span> <span data-ttu-id="f1b01-167">有关详细信息，请参阅[收集的 .NET Core CLI/SDK 故障异常遥测](#net-core-clisdk-crash-exception-telemetry-collected)。</span><span class="sxs-lookup"><span data-stu-id="f1b01-167">For more information, see [.NET Core CLI/SDK crash exception telemetry collected](#net-core-clisdk-crash-exception-telemetry-collected).</span></span> |
+
+### <a name="collected-options"></a><span data-ttu-id="f1b01-168">收集的选项</span><span class="sxs-lookup"><span data-stu-id="f1b01-168">Collected options</span></span>
+
+<span data-ttu-id="f1b01-169">某些命令发送其他数据。</span><span class="sxs-lookup"><span data-stu-id="f1b01-169">Certain commands send additional data.</span></span> <span data-ttu-id="f1b01-170">小部分命令发送第一个参数：</span><span class="sxs-lookup"><span data-stu-id="f1b01-170">A subset of commands sends the first argument:</span></span>
+
+| <span data-ttu-id="f1b01-171">命令</span><span class="sxs-lookup"><span data-stu-id="f1b01-171">Command</span></span>               | <span data-ttu-id="f1b01-172">发送的第一个参数数据</span><span class="sxs-lookup"><span data-stu-id="f1b01-172">First argument data sent</span></span>                |
+|-----------------------|-----------------------------------------|
+| `dotnet help <arg>`   | <span data-ttu-id="f1b01-173">正在查询命令帮助。</span><span class="sxs-lookup"><span data-stu-id="f1b01-173">The command help is being queried for.</span></span>  |
+| `dotnet new <arg>`    | <span data-ttu-id="f1b01-174">模板名称（进行哈希处理）。</span><span class="sxs-lookup"><span data-stu-id="f1b01-174">The template name (hashed).</span></span>             |
+| `dotnet add <arg>`    | <span data-ttu-id="f1b01-175">单词 `package` 或 `reference`。</span><span class="sxs-lookup"><span data-stu-id="f1b01-175">The word `package` or `reference`.</span></span>      |
+| `dotnet remove <arg>` | <span data-ttu-id="f1b01-176">单词 `package` 或 `reference`。</span><span class="sxs-lookup"><span data-stu-id="f1b01-176">The word `package` or `reference`.</span></span>      |
+| `dotnet list <arg>`   | <span data-ttu-id="f1b01-177">单词 `package` 或 `reference`。</span><span class="sxs-lookup"><span data-stu-id="f1b01-177">The word `package` or `reference`.</span></span>      |
+| `dotnet sln <arg>`    | <span data-ttu-id="f1b01-178">单词 `add`、`list` 或 `remove`。</span><span class="sxs-lookup"><span data-stu-id="f1b01-178">The word `add`, `list`, or `remove`.</span></span>    |
+| `dotnet nuget <arg>`  | <span data-ttu-id="f1b01-179">单词 `delete`、`locals` 或 `push`。</span><span class="sxs-lookup"><span data-stu-id="f1b01-179">The word `delete`, `locals`, or `push`.</span></span> |
+
+<span data-ttu-id="f1b01-180">一小部分命令发送所选项目（如果使用）及其值：</span><span class="sxs-lookup"><span data-stu-id="f1b01-180">A subset of commands sends selected options if they're used, along with their values:</span></span>
+
+| <span data-ttu-id="f1b01-181">选项</span><span class="sxs-lookup"><span data-stu-id="f1b01-181">Option</span></span>                  | <span data-ttu-id="f1b01-182">命令</span><span class="sxs-lookup"><span data-stu-id="f1b01-182">Commands</span></span>                                                                                       |
+|-------------------------|------------------------------------------------------------------------------------------------|
+| `--verbosity`           | <span data-ttu-id="f1b01-183">所有命令</span><span class="sxs-lookup"><span data-stu-id="f1b01-183">All commands</span></span>                                                                                   |
+| `--language`            | `dotnet new`                                                                                   |
+| `--configuration`       | <span data-ttu-id="f1b01-184">`dotnet build`, `dotnet clean`, `dotnet publish`, `dotnet run`, `dotnet test`</span><span class="sxs-lookup"><span data-stu-id="f1b01-184">`dotnet build`, `dotnet clean`, `dotnet publish`, `dotnet run`, `dotnet test`</span></span>                  |
+| `--framework`           | <span data-ttu-id="f1b01-185">`dotnet build`, `dotnet clean`, `dotnet publish`, `dotnet run`, `dotnet test`, `dotnet vstest`</span><span class="sxs-lookup"><span data-stu-id="f1b01-185">`dotnet build`, `dotnet clean`, `dotnet publish`, `dotnet run`, `dotnet test`, `dotnet vstest`</span></span> |
+| `--runtime`             | <span data-ttu-id="f1b01-186">`dotnet build`、`dotnet publish`</span><span class="sxs-lookup"><span data-stu-id="f1b01-186">`dotnet build`,  `dotnet publish`</span></span>                                                              |
+| `--platform`            | `dotnet vstest`                                                                                |
+| `--logger`              | `dotnet vstest`                                                                                |
+| `--sdk-package-version` | `dotnet migrate`                                                                               |
+
+<span data-ttu-id="f1b01-187">除 `--verbosity` 和 `--sdk-package-version` 外，从 .NET Core 2.1.100 SDK 开始，所有其他值都会进行哈希处理。</span><span class="sxs-lookup"><span data-stu-id="f1b01-187">Except for `--verbosity` and `--sdk-package-version`, all the other values are hashed starting with .NET Core 2.1.100 SDK.</span></span>
+
+## <a name="net-core-clisdk-crash-exception-telemetry-collected"></a><span data-ttu-id="f1b01-188">收集的 .NET Core CLI/SDK 故障异常遥测</span><span class="sxs-lookup"><span data-stu-id="f1b01-188">.NET Core CLI/SDK crash exception telemetry collected</span></span>
+
+<span data-ttu-id="f1b01-189">如果 .NET Core CLI/SDK 故障，则会收集 CLI/SDK 代码的异常和跟踪堆栈名称。</span><span class="sxs-lookup"><span data-stu-id="f1b01-189">If the .NET Core CLI/SDK crashes, it collects the name of the exception and stack trace of the CLI/SDK code.</span></span> <span data-ttu-id="f1b01-190">收集此信息是为了评估问题并改善 .NET Core SDK 和 CLI 的质量。</span><span class="sxs-lookup"><span data-stu-id="f1b01-190">This information is collected to assess problems and improve the quality of the .NET Core SDK and CLI.</span></span> <span data-ttu-id="f1b01-191">本文提供了所收集数据的信息。</span><span class="sxs-lookup"><span data-stu-id="f1b01-191">This article provides information about the data we collect.</span></span> <span data-ttu-id="f1b01-192">本文还提供了有关生成自己的 .NET Core SDK 版本的用户如何避免无意泄露个人或敏感信息的提示。</span><span class="sxs-lookup"><span data-stu-id="f1b01-192">It also provides tips on how users building their own version of the .NET Core SDK can avoid inadvertent disclosure of personal or sensitive information.</span></span>
+
+### <a name="types-of-collected-data"></a><span data-ttu-id="f1b01-193">收集的数据类型</span><span class="sxs-lookup"><span data-stu-id="f1b01-193">Types of collected data</span></span>
+
+<span data-ttu-id="f1b01-194">.NET Core CLI 只收集有关 CLI/SDK 异常的信息，不收集应用程序中的异常信息。</span><span class="sxs-lookup"><span data-stu-id="f1b01-194">.NET Core CLI collects information for CLI/SDK exceptions only, not exceptions in your application.</span></span> <span data-ttu-id="f1b01-195">收集的数据包含异常和堆栈跟踪的名称。</span><span class="sxs-lookup"><span data-stu-id="f1b01-195">The collected data contains the name of the exception and the stack trace.</span></span> <span data-ttu-id="f1b01-196">此堆栈跟踪为 CLI/SDK 代码。</span><span class="sxs-lookup"><span data-stu-id="f1b01-196">This stack trace is of CLI/SDK code.</span></span>
+
+<span data-ttu-id="f1b01-197">下面的示例显示所收集的数据类型：</span><span class="sxs-lookup"><span data-stu-id="f1b01-197">The following example shows the kind of data that is collected:</span></span>
+
+```
+System.IO.IOException
+at System.ConsolePal.WindowsConsoleStream.Write(Byte[] buffer, Int32 offset, Int32 count)
+at System.IO.StreamWriter.Flush(Boolean flushStream, Boolean flushEncoder)
+at System.IO.StreamWriter.Write(Char[] buffer)
+at System.IO.TextWriter.WriteLine()
+at System.IO.TextWriter.SyncTextWriter.WriteLine()
+at Microsoft.DotNet.Cli.Utils.Reporter.WriteLine()
+at Microsoft.DotNet.Tools.Run.RunCommand.EnsureProjectIsBuilt()
+at Microsoft.DotNet.Tools.Run.RunCommand.Execute()
+at Microsoft.DotNet.Tools.Run.RunCommand.Run(String[] args)
+at Microsoft.DotNet.Cli.Program.ProcessArgs(String[] args, ITelemetry telemetryClient)
+at Microsoft.DotNet.Cli.Program.Main(String[] args)
+```
+
+### <a name="avoid-inadvertent-disclosure-information"></a><span data-ttu-id="f1b01-198">避免意外泄露信息</span><span class="sxs-lookup"><span data-stu-id="f1b01-198">Avoid inadvertent disclosure information</span></span>
+
+<span data-ttu-id="f1b01-199">.NET Core 参与者以及运行自己生成的 .NET Core SDK 版本的任何其他人都应考虑其 SDK 源代码的路径。</span><span class="sxs-lookup"><span data-stu-id="f1b01-199">.NET Core contributors and anyone else running a version of the .NET Core SDK that they built themselves should consider the path to their SDK source code.</span></span> <span data-ttu-id="f1b01-200">如果在使用属于自定义调试生成或者使用自定义生成符号文件配置的 .NET Core SDK 时出现故障，则生成计算机的 SDK 源文件路径将作为堆栈跟踪的一部分收集，并且不会进行哈希处理。</span><span class="sxs-lookup"><span data-stu-id="f1b01-200">If a crash occurs while using a .NET Core SDK that is a custom debug build or configured with custom build symbol files, the SDK source file path from the build machine is collected as part of the stack trace and isn't hashed.</span></span>
+
+<span data-ttu-id="f1b01-201">因此，.NET Core SDK 的自定义生成不应位于路径名公开个人或敏感信息的目录中。</span><span class="sxs-lookup"><span data-stu-id="f1b01-201">Because of this, custom builds of the .NET Core SDK shouldn't be located in directories whose path names expose personal or sensitive information.</span></span> 
+
+## <a name="see-also"></a><span data-ttu-id="f1b01-202">请参阅</span><span class="sxs-lookup"><span data-stu-id="f1b01-202">See also</span></span>
+
+- [<span data-ttu-id="f1b01-203">.NET Core CLI 遥测 - 2019 第 2 季度数据</span><span class="sxs-lookup"><span data-stu-id="f1b01-203">.NET Core CLI Telemetry - 2019 Q2 Data</span></span>](https://dotnet.microsoft.com/platform/telemetry/dotnet-core-cli-2019q2)
+- [<span data-ttu-id="f1b01-204">遥测参考源（dotnet/cli 存储库）</span><span class="sxs-lookup"><span data-stu-id="f1b01-204">Telemetry reference source (dotnet/cli repository)</span></span>](https://github.com/dotnet/cli/tree/master/src/dotnet/Telemetry)
