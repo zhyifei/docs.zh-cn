@@ -27,20 +27,20 @@ ms.locfileid: "68674354"
 
 ### <a name="validation-in-xamarin-mobile-apps"></a>Xamarin 移动应用中进行的验证
 
-- **Validate Text Input and Show Errors**（验证文本输入并显示错误） \
+- **验证文本输入并显示错误** \
   [https://developer.xamarin.com/recipes/ios/standard\_controls/text\_field/validate\_input/](https://developer.xamarin.com/recipes/ios/standard_controls/text_field/validate_input/)
 
-- **Validation Callback** \（验证回调）
+- **验证回调** \
   <https://developer.xamarin.com/samples/xamarin-forms/XAML/ValidationCallback/>
 
 ### <a name="validation-in-aspnet-core-apps"></a>ASP.NET Core 应用中进行的验证
 
-- **Rick Anderson。Adding validation**（添加验证） \
+- **Rick Anderson。添加验证** \
   <https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation>
 
 ### <a name="validation-in-spa-web-apps-angular-2-typescript-javascript"></a>SPA Web 应用中进行的验证（Angular 2、TypeScript、JavaScript）
 
-- **Ado Kukic.Angular 2 Form Validation**（Angular 2 窗体验证） \
+- **Ado Kukic.Angular 2 窗体验证** \
   <https://scotch.io/tutorials/angular-2-form-validation>
 
 - **Form Validation** \（窗体验证）
