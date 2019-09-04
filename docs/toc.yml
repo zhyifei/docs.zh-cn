@@ -160,8 +160,6 @@
           href: core/tutorials/with-visual-studio.md
         - name: 使用 Visual Studio 2017 生成 Visual Basic .NET Core Hello World 应用
           href: core/tutorials/vb-with-visual-studio.md
-        - name: 使用插件创建 .NET Core 应用程序
-          href: core/tutorials/creating-app-with-plugin-support.md
         - name: '使用 Visual Studio 2017 调试 C# 或Visual Basic .NET Core Hello World 应用程序'
           href: core/tutorials/debugging-with-visual-studio.md
         - name: 使用 Visual Studio 2017 发布 Hello World 应用程序
@@ -219,6 +217,8 @@
           href: core/tutorials/testing-with-cli.md
         - name: 使用跨平台工具开发库
           href: core/tutorials/libraries.md
+        - name: 使用插件创建 .NET Core 应用程序
+          href: core/tutorials/creating-app-with-plugin-support.md
         - name: 开发 ASP.NET Core 应用程序
           href: core/tutorials/aspnet-core.md
         - name: 从本机代码承载 .NET Core
