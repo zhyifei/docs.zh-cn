@@ -5,91 +5,91 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d729120c-4c1b-4f34-bbe9-33694fca2dde
-ms.openlocfilehash: d9d53e91f5252a0ac44822ac6252ce02e9697d33
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5090616705c799f2905226b4892fa1fbe50bfbf3
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61615033"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70249536"
 ---
-# <a name="query-expression-syntax-examples-aggregate-operators"></a><span data-ttu-id="b6584-102">查询表达式语法示例：聚合运算符</span><span class="sxs-lookup"><span data-stu-id="b6584-102">Query Expression Syntax Examples: Aggregate Operators</span></span>
-<span data-ttu-id="b6584-103">本主题中的示例演示如何使用<xref:System.Linq.Enumerable.Average%2A>， <xref:System.Linq.Enumerable.Count%2A>， <xref:System.Linq.Enumerable.Max%2A>， <xref:System.Linq.Enumerable.Min%2A>，并<xref:System.Linq.Enumerable.Sum%2A>方法来查询[AdventureWorks 销售模型](https://archive.codeplex.com/?p=msftdbprodsamples)使用查询表达式语法。</span><span class="sxs-lookup"><span data-stu-id="b6584-103">The examples in this topic demonstrate how to use the <xref:System.Linq.Enumerable.Average%2A>, <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.Max%2A>, <xref:System.Linq.Enumerable.Min%2A>, and <xref:System.Linq.Enumerable.Sum%2A> methods to query the [AdventureWorks Sales Model](https://archive.codeplex.com/?p=msftdbprodsamples) using query expression syntax.</span></span> <span data-ttu-id="b6584-104">这些示例中使用的 AdventureWorks 销售模型从 AdventureWorks 示例数据库中的 Contact、Address、Product、SalesOrderHeader 和 SalesOrderDetail 等表生成。</span><span class="sxs-lookup"><span data-stu-id="b6584-104">The AdventureWorks Sales Model used in these examples is built from the Contact, Address, Product, SalesOrderHeader, and SalesOrderDetail tables in the AdventureWorks sample database.</span></span>  
+# <a name="query-expression-syntax-examples-aggregate-operators"></a><span data-ttu-id="8cd69-102">查询表达式语法示例：聚合运算符</span><span class="sxs-lookup"><span data-stu-id="8cd69-102">Query Expression Syntax Examples: Aggregate Operators</span></span>
+<span data-ttu-id="8cd69-103">本主题中的<xref:System.Linq.Enumerable.Average%2A>示例演示如何使用、 <xref:System.Linq.Enumerable.Max%2A> <xref:System.Linq.Enumerable.Count%2A>、、 <xref:System.Linq.Enumerable.Min%2A>和<xref:System.Linq.Enumerable.Sum%2A>方法通过使用查询表达式语法来查询[AdventureWorks 销售模型](https://archive.codeplex.com/?p=msftdbprodsamples)。</span><span class="sxs-lookup"><span data-stu-id="8cd69-103">The examples in this topic demonstrate how to use the <xref:System.Linq.Enumerable.Average%2A>, <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.Max%2A>, <xref:System.Linq.Enumerable.Min%2A>, and <xref:System.Linq.Enumerable.Sum%2A> methods to query the [AdventureWorks Sales Model](https://archive.codeplex.com/?p=msftdbprodsamples) using query expression syntax.</span></span> <span data-ttu-id="8cd69-104">这些示例中使用的 AdventureWorks 销售模型从 AdventureWorks 示例数据库中的 Contact、Address、Product、SalesOrderHeader 和 SalesOrderDetail 等表生成。</span><span class="sxs-lookup"><span data-stu-id="8cd69-104">The AdventureWorks Sales Model used in these examples is built from the Contact, Address, Product, SalesOrderHeader, and SalesOrderDetail tables in the AdventureWorks sample database.</span></span>  
   
- <span data-ttu-id="b6584-105">本主题中的示例使用以下`using` / `Imports`语句：</span><span class="sxs-lookup"><span data-stu-id="b6584-105">The examples in this topic use the following `using`/`Imports` statements:</span></span>  
+ <span data-ttu-id="8cd69-105">本主题中的示例使用以下`using` / `Imports`语句：</span><span class="sxs-lookup"><span data-stu-id="8cd69-105">The examples in this topic use the following `using`/`Imports` statements:</span></span>  
   
  [!code-csharp[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#importsusing)]
  [!code-vb[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#importsusing)]  
   
-## <a name="average"></a><span data-ttu-id="b6584-106">平均值</span><span class="sxs-lookup"><span data-stu-id="b6584-106">Average</span></span>  
+## <a name="average"></a><span data-ttu-id="8cd69-106">平均值</span><span class="sxs-lookup"><span data-stu-id="8cd69-106">Average</span></span>  
   
-### <a name="example"></a><span data-ttu-id="b6584-107">示例</span><span class="sxs-lookup"><span data-stu-id="b6584-107">Example</span></span>  
- <span data-ttu-id="b6584-108">以下示例使用 <xref:System.Linq.Enumerable.Average%2A> 方法以查找每种样式的产品的平均标价。</span><span class="sxs-lookup"><span data-stu-id="b6584-108">The following example uses the <xref:System.Linq.Enumerable.Average%2A> method to find the average list price of the products of each style.</span></span>  
+### <a name="example"></a><span data-ttu-id="8cd69-107">示例</span><span class="sxs-lookup"><span data-stu-id="8cd69-107">Example</span></span>  
+ <span data-ttu-id="8cd69-108">以下示例使用 <xref:System.Linq.Enumerable.Average%2A> 方法以查找每种样式的产品的平均标价。</span><span class="sxs-lookup"><span data-stu-id="8cd69-108">The following example uses the <xref:System.Linq.Enumerable.Average%2A> method to find the average list price of the products of each style.</span></span>  
   
  [!code-csharp[DP L2E Examples#Average2_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#average2_mq)]
  [!code-vb[DP L2E Examples#Average2_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#average2_mq)]  
   
-### <a name="example"></a><span data-ttu-id="b6584-109">示例</span><span class="sxs-lookup"><span data-stu-id="b6584-109">Example</span></span>  
- <span data-ttu-id="b6584-110">以下示例使用 <xref:System.Linq.Enumerable.Average%2A> 以获取每个联系人 ID 的平均应付款总计。</span><span class="sxs-lookup"><span data-stu-id="b6584-110">The following example uses <xref:System.Linq.Enumerable.Average%2A> to get the average total due for each contact ID.</span></span>  
+### <a name="example"></a><span data-ttu-id="8cd69-109">示例</span><span class="sxs-lookup"><span data-stu-id="8cd69-109">Example</span></span>  
+ <span data-ttu-id="8cd69-110">以下示例使用 <xref:System.Linq.Enumerable.Average%2A> 以获取每个联系人 ID 的平均应付款总计。</span><span class="sxs-lookup"><span data-stu-id="8cd69-110">The following example uses <xref:System.Linq.Enumerable.Average%2A> to get the average total due for each contact ID.</span></span>  
   
  [!code-csharp[DP L2E Examples#AverageGrouped_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#averagegrouped_mq)]
  [!code-vb[DP L2E Examples#AverageGrouped_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#averagegrouped_mq)]  
   
-### <a name="example"></a><span data-ttu-id="b6584-111">示例</span><span class="sxs-lookup"><span data-stu-id="b6584-111">Example</span></span>  
- <span data-ttu-id="b6584-112">以下示例使用 <xref:System.Linq.Enumerable.Average%2A> 以针对每个联系人获取具有平均应付款总计的订单。</span><span class="sxs-lookup"><span data-stu-id="b6584-112">The following example uses <xref:System.Linq.Enumerable.Average%2A> to get the orders with the average total due for each contact.</span></span>  
+### <a name="example"></a><span data-ttu-id="8cd69-111">示例</span><span class="sxs-lookup"><span data-stu-id="8cd69-111">Example</span></span>  
+ <span data-ttu-id="8cd69-112">以下示例使用 <xref:System.Linq.Enumerable.Average%2A> 以针对每个联系人获取具有平均应付款总计的订单。</span><span class="sxs-lookup"><span data-stu-id="8cd69-112">The following example uses <xref:System.Linq.Enumerable.Average%2A> to get the orders with the average total due for each contact.</span></span>  
   
  [!code-csharp[DP L2E Examples#AverageElements_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#averageelements_mq)]
  [!code-vb[DP L2E Examples#AverageElements_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#averageelements_mq)]  
   
-## <a name="count"></a><span data-ttu-id="b6584-113">计数</span><span class="sxs-lookup"><span data-stu-id="b6584-113">Count</span></span>  
+## <a name="count"></a><span data-ttu-id="8cd69-113">计数</span><span class="sxs-lookup"><span data-stu-id="8cd69-113">Count</span></span>  
   
-### <a name="example"></a><span data-ttu-id="b6584-114">示例</span><span class="sxs-lookup"><span data-stu-id="b6584-114">Example</span></span>  
- <span data-ttu-id="b6584-115">以下示例使用 <xref:System.Linq.Enumerable.Count%2A> 以返回联系人 ID 的列表和每个联系人 ID 所具有的订单数。</span><span class="sxs-lookup"><span data-stu-id="b6584-115">The following example uses <xref:System.Linq.Enumerable.Count%2A> to return a list of contact IDs and how many orders each has.</span></span>  
+### <a name="example"></a><span data-ttu-id="8cd69-114">示例</span><span class="sxs-lookup"><span data-stu-id="8cd69-114">Example</span></span>  
+ <span data-ttu-id="8cd69-115">以下示例使用 <xref:System.Linq.Enumerable.Count%2A> 以返回联系人 ID 的列表和每个联系人 ID 所具有的订单数。</span><span class="sxs-lookup"><span data-stu-id="8cd69-115">The following example uses <xref:System.Linq.Enumerable.Count%2A> to return a list of contact IDs and how many orders each has.</span></span>  
   
  [!code-csharp[DP L2E Examples#CountNested](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#countnested)]
  [!code-vb[DP L2E Examples#CountNested](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#countnested)]  
   
-### <a name="example"></a><span data-ttu-id="b6584-116">示例</span><span class="sxs-lookup"><span data-stu-id="b6584-116">Example</span></span>  
- <span data-ttu-id="b6584-117">以下示例按颜色对产品进行分组，并使用 <xref:System.Linq.Enumerable.Count%2A> 以返回每个颜色组中的产品数量。</span><span class="sxs-lookup"><span data-stu-id="b6584-117">The following example groups products by color and uses <xref:System.Linq.Enumerable.Count%2A> to return the number of products in each color group.</span></span>  
+### <a name="example"></a><span data-ttu-id="8cd69-116">示例</span><span class="sxs-lookup"><span data-stu-id="8cd69-116">Example</span></span>  
+ <span data-ttu-id="8cd69-117">以下示例按颜色对产品进行分组，并使用 <xref:System.Linq.Enumerable.Count%2A> 以返回每个颜色组中的产品数量。</span><span class="sxs-lookup"><span data-stu-id="8cd69-117">The following example groups products by color and uses <xref:System.Linq.Enumerable.Count%2A> to return the number of products in each color group.</span></span>  
   
  [!code-csharp[DP L2E Examples#CountGrouped](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#countgrouped)]
  [!code-vb[DP L2E Examples#CountGrouped](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#countgrouped)]  
   
-## <a name="max"></a><span data-ttu-id="b6584-118">最大值</span><span class="sxs-lookup"><span data-stu-id="b6584-118">Max</span></span>  
+## <a name="max"></a><span data-ttu-id="8cd69-118">最大值</span><span class="sxs-lookup"><span data-stu-id="8cd69-118">Max</span></span>  
   
-### <a name="example"></a><span data-ttu-id="b6584-119">示例</span><span class="sxs-lookup"><span data-stu-id="b6584-119">Example</span></span>  
- <span data-ttu-id="b6584-120">以下示例使用 <xref:System.Linq.Enumerable.Max%2A> 方法以获取每个联系人 ID 的最大应付款总计。</span><span class="sxs-lookup"><span data-stu-id="b6584-120">The following example uses the <xref:System.Linq.Enumerable.Max%2A> method to get the largest total due for each contact ID.</span></span>  
+### <a name="example"></a><span data-ttu-id="8cd69-119">示例</span><span class="sxs-lookup"><span data-stu-id="8cd69-119">Example</span></span>  
+ <span data-ttu-id="8cd69-120">以下示例使用 <xref:System.Linq.Enumerable.Max%2A> 方法以获取每个联系人 ID 的最大应付款总计。</span><span class="sxs-lookup"><span data-stu-id="8cd69-120">The following example uses the <xref:System.Linq.Enumerable.Max%2A> method to get the largest total due for each contact ID.</span></span>  
   
  [!code-csharp[DP L2E Examples#MaxGrouped_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#maxgrouped_mq)]
  [!code-vb[DP L2E Examples#MaxGrouped_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#maxgrouped_mq)]  
   
-### <a name="example"></a><span data-ttu-id="b6584-121">示例</span><span class="sxs-lookup"><span data-stu-id="b6584-121">Example</span></span>  
- <span data-ttu-id="b6584-122">以下示例使用 <xref:System.Linq.Enumerable.Max%2A> 方法以针对每个联系人 ID 获取具有最大应付款总计的订单。</span><span class="sxs-lookup"><span data-stu-id="b6584-122">The following example uses the <xref:System.Linq.Enumerable.Max%2A> method to get the orders with the largest total due for each contact ID.</span></span>  
+### <a name="example"></a><span data-ttu-id="8cd69-121">示例</span><span class="sxs-lookup"><span data-stu-id="8cd69-121">Example</span></span>  
+ <span data-ttu-id="8cd69-122">以下示例使用 <xref:System.Linq.Enumerable.Max%2A> 方法以针对每个联系人 ID 获取具有最大应付款总计的订单。</span><span class="sxs-lookup"><span data-stu-id="8cd69-122">The following example uses the <xref:System.Linq.Enumerable.Max%2A> method to get the orders with the largest total due for each contact ID.</span></span>  
   
  [!code-csharp[DP L2E Examples#MaxElements_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#maxelements_mq)]
  [!code-vb[DP L2E Examples#MaxElements_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#maxelements_mq)]  
   
-## <a name="min"></a><span data-ttu-id="b6584-123">最小值</span><span class="sxs-lookup"><span data-stu-id="b6584-123">Min</span></span>  
+## <a name="min"></a><span data-ttu-id="8cd69-123">最小值</span><span class="sxs-lookup"><span data-stu-id="8cd69-123">Min</span></span>  
   
-### <a name="example"></a><span data-ttu-id="b6584-124">示例</span><span class="sxs-lookup"><span data-stu-id="b6584-124">Example</span></span>  
- <span data-ttu-id="b6584-125">以下示例使用 <xref:System.Linq.Enumerable.Min%2A> 方法以获取每个联系人 ID 的最小应付款总计。</span><span class="sxs-lookup"><span data-stu-id="b6584-125">The following example uses the <xref:System.Linq.Enumerable.Min%2A> method to get the smallest total due for each contact ID.</span></span>  
+### <a name="example"></a><span data-ttu-id="8cd69-124">示例</span><span class="sxs-lookup"><span data-stu-id="8cd69-124">Example</span></span>  
+ <span data-ttu-id="8cd69-125">以下示例使用 <xref:System.Linq.Enumerable.Min%2A> 方法以获取每个联系人 ID 的最小应付款总计。</span><span class="sxs-lookup"><span data-stu-id="8cd69-125">The following example uses the <xref:System.Linq.Enumerable.Min%2A> method to get the smallest total due for each contact ID.</span></span>  
   
  [!code-csharp[DP L2E Examples#MinGrouped_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#mingrouped_mq)]
  [!code-vb[DP L2E Examples#MinGrouped_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#mingrouped_mq)]  
   
-### <a name="example"></a><span data-ttu-id="b6584-126">示例</span><span class="sxs-lookup"><span data-stu-id="b6584-126">Example</span></span>  
- <span data-ttu-id="b6584-127">以下示例使用 <xref:System.Linq.Enumerable.Min%2A> 方法以针对每个联系人获取具有最小应付款总计的订单。</span><span class="sxs-lookup"><span data-stu-id="b6584-127">The following example uses the <xref:System.Linq.Enumerable.Min%2A> method to get the orders with the smallest total due for each contact.</span></span>  
+### <a name="example"></a><span data-ttu-id="8cd69-126">示例</span><span class="sxs-lookup"><span data-stu-id="8cd69-126">Example</span></span>  
+ <span data-ttu-id="8cd69-127">以下示例使用 <xref:System.Linq.Enumerable.Min%2A> 方法以针对每个联系人获取具有最小应付款总计的订单。</span><span class="sxs-lookup"><span data-stu-id="8cd69-127">The following example uses the <xref:System.Linq.Enumerable.Min%2A> method to get the orders with the smallest total due for each contact.</span></span>  
   
  [!code-csharp[DP L2E Examples#MinElements_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#minelements_mq)]
  [!code-vb[DP L2E Examples#MinElements_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#minelements_mq)]  
   
-## <a name="sum"></a><span data-ttu-id="b6584-128">Sum</span><span class="sxs-lookup"><span data-stu-id="b6584-128">Sum</span></span>  
+## <a name="sum"></a><span data-ttu-id="8cd69-128">Sum</span><span class="sxs-lookup"><span data-stu-id="8cd69-128">Sum</span></span>  
   
-### <a name="example"></a><span data-ttu-id="b6584-129">示例</span><span class="sxs-lookup"><span data-stu-id="b6584-129">Example</span></span>  
- <span data-ttu-id="b6584-130">以下示例使用 <xref:System.Linq.Enumerable.Sum%2A> 方法以获取每个联系人 ID 的应付款总计。</span><span class="sxs-lookup"><span data-stu-id="b6584-130">The following example uses the <xref:System.Linq.Enumerable.Sum%2A> method to get the total due for each contact ID.</span></span>  
+### <a name="example"></a><span data-ttu-id="8cd69-129">示例</span><span class="sxs-lookup"><span data-stu-id="8cd69-129">Example</span></span>  
+ <span data-ttu-id="8cd69-130">以下示例使用 <xref:System.Linq.Enumerable.Sum%2A> 方法以获取每个联系人 ID 的应付款总计。</span><span class="sxs-lookup"><span data-stu-id="8cd69-130">The following example uses the <xref:System.Linq.Enumerable.Sum%2A> method to get the total due for each contact ID.</span></span>  
   
  [!code-csharp[DP L2E Examples#SumGrouped_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#sumgrouped_mq)]
  [!code-vb[DP L2E Examples#SumGrouped_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#sumgrouped_mq)]  
   
-## <a name="see-also"></a><span data-ttu-id="b6584-131">请参阅</span><span class="sxs-lookup"><span data-stu-id="b6584-131">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8cd69-131">请参阅</span><span class="sxs-lookup"><span data-stu-id="8cd69-131">See also</span></span>
 
-- [<span data-ttu-id="b6584-132">LINQ to Entities 中的查询</span><span class="sxs-lookup"><span data-stu-id="b6584-132">Queries in LINQ to Entities</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
+- [<span data-ttu-id="8cd69-132">LINQ to Entities 中的查询</span><span class="sxs-lookup"><span data-stu-id="8cd69-132">Queries in LINQ to Entities</span></span>](queries-in-linq-to-entities.md)
