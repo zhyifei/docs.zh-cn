@@ -2,12 +2,12 @@
 title: 数学规范函数
 ms.date: 03/30/2017
 ms.assetid: 6f6cddc6-b561-4ebe-84b6-841ef5b4113b
-ms.openlocfilehash: f575785bb198251ef50ba3563e736946253c9526
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9417ff9836912017c9d88bb24a18849aaac2836a
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61760631"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250307"
 ---
 # <a name="math-canonical-functions"></a>数学规范函数
 
@@ -19,7 +19,7 @@ ms.locfileid: "61760631"
 
 **参数**
 
-`Int16`， `Int32`， `Int64`， `Byte`， `Single`， `Double`，和`Decimal`。
+`Int16` 、`Int32` 、、`Double`、 、和`Decimal`。 `Int64` `Byte` `Single`
 
 **返回值**
 
@@ -35,7 +35,7 @@ ms.locfileid: "61760631"
 
 **参数**
 
-一个`Single`， `Double`，和`Decimal`。
+`Single` 、`Double`和。`Decimal`
 
 **返回值**
 
@@ -52,7 +52,7 @@ ms.locfileid: "61760631"
 
 **参数**
 
-一个`Single`， `Double`，和`Decimal`。
+`Single` 、`Double`和。`Decimal`
 
 **返回值**
 
@@ -71,8 +71,8 @@ ms.locfileid: "61760631"
 
 |  |  |
 |--|--|
-|`value` | `Int32, Int64, Double`，或`Decimal`。 |
-|`exponent` | `Int64`， `Double`，或`Decimal`。 |
+|`value` | `Int32, Int64, Double`、或`Decimal`。 |
+|`exponent` | `Int64` 、`Double`或。`Decimal` |
 
 **返回值**
 
@@ -88,7 +88,7 @@ ms.locfileid: "61760631"
 
 **参数**
 
-一个`Single`， `Double`，和`Decimal`。
+`Single` 、`Double`和。`Decimal`
 
 **返回值**
 
@@ -138,8 +138,8 @@ ms.locfileid: "61760631"
   
  如果提供 `null` 输入，则这些函数返回 `null`。  
   
- Microsoft SQL 客户端托管提供程序中提供了等效功能。 有关详细信息，请参阅[用于实体框架函数的 SqlClient](../../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md)。  
+ Microsoft SQL 客户端托管提供程序中提供了等效功能。 有关详细信息，请参阅[SqlClient for 实体框架函数](../sqlclient-for-ef-functions.md)。  
   
 ## <a name="see-also"></a>请参阅
 
-- [规范函数](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)
+- [规范函数](canonical-functions.md)

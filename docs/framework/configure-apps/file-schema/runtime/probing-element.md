@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: 09c80fc9-1ba5-4192-89f7-3a79b2e4b024
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2b00a5349e22feb3cce404ff504edd798ff9e304
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 05634cb319ac69bd76e16e592ba59490b30c9c9d
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663521"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252390"
 ---
 # <a name="probing-element"></a>\<探测 > 元素
 指定加载程序集时要搜索的公共语言运行时的应用程序基子目录。  
   
- \<configuration>  
-\<运行时 >  
-\<assemblyBinding>  
-\<探测 >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<运行时 >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<assemblyBinding >** ](assemblybinding-element-for-runtime.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<探测 >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,7 +42,8 @@ ms.locfileid: "69663521"
 |`privatePath`|必需的特性。<br /><br /> 指定可能包含程序集的应用程序基目录的子目录。 用分号分隔每个子目录。|  
   
 ### <a name="child-elements"></a>子元素  
- 无。  
+
+无。  
   
 ### <a name="parent-elements"></a>父元素  
   

@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e40e314c-eb30-4f44-a054-41e511e35832
-ms.openlocfilehash: 0795784f4090fca02c89cdfb396d217620b1ba68
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e0eb29b750c474c277ef54c343726b338fbf5dbe
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69948239"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250232"
 ---
 # <a name="method-based-query-syntax-examples-filtering"></a>基于方法的查询语法示例：筛选
-本主题中的示例演示如何使用`Where`和`Where…Contains`方法通过基于方法的查询语法来查询[AdventureWorks 销售模型](https://archive.codeplex.com/?p=msftdbprodsamples)。 请注意, Where 。`Contains` 不能用作[已编译查询](../../../../../../docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md)的一部分。  
+本主题中的示例演示如何使用`Where`和`Where…Contains`方法通过基于方法的查询语法来查询[AdventureWorks 销售模型](https://archive.codeplex.com/?p=msftdbprodsamples)。 请注意，Where 。`Contains` 不能用作[已编译查询](compiled-queries-linq-to-entities.md)的一部分。  
   
  这些示例中使用的 AdventureWorks 销售模型从 AdventureWorks 示例数据库中的 Contact、Address、Product、SalesOrderHeader 和 SalesOrderDetail 等表生成。  
   
- 本主题中的示例使用以下`using` / `Imports`语句:  
+ 本主题中的示例使用以下`using` / `Imports`语句：  
   
  [!code-csharp[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#importsusing)]
  [!code-vb[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#importsusing)]  
@@ -67,4 +67,4 @@ ms.locfileid: "69948239"
   
 ## <a name="see-also"></a>请参阅
 
-- [LINQ to Entities 中的查询](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
+- [LINQ to Entities 中的查询](queries-in-linq-to-entities.md)

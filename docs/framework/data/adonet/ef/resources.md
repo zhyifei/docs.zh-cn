@@ -2,12 +2,12 @@
 title: 实体框架资源
 ms.date: 03/30/2017
 ms.assetid: 0bb04c18-4a14-42a4-baa9-a63d556c9f49
-ms.openlocfilehash: c1e93896bbbaf7be68f53e4cfb45ba7465a423bd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 405f07245d41b79e014c721c49bf374441c6faad
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879328"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70248433"
 ---
 # <a name="entity-framework-resources"></a>实体框架资源
 以下外部资源提供创建实体框架应用程序所需的信息和支持。  
@@ -21,15 +21,15 @@ ms.locfileid: "61879328"
  [实体框架设计博客](https://go.microsoft.com/fwlink/?LinkId=186888)  
  针对将来版本的实体框架的设计讨论和功能预览。  
   
- [如何实现数据平台？视频：实体框架系列](https://go.microsoft.com/fwlink/?LinkId=124600)  
+ [数据平台如何实现？视频：实体框架系列](https://go.microsoft.com/fwlink/?LinkId=124600)  
  包含一组视频截屏，用于演示如何使用实体框架的各种组件生成应用程序。  
   
  [实体框架常见问题](https://social.technet.microsoft.com/wiki/contents/articles/3737.entity-framework-faq.aspx)  
- Wiki 节，其中包含有关常见问题实体框架。  
+ Wiki 部分，其中包含有关实体框架的常见问题。  
   
 ## <a name="see-also"></a>请参阅
 
-- [实体框架概述](../../../../../docs/framework/data/adonet/ef/overview.md)
-- [入门](../../../../../docs/framework/data/adonet/ef/getting-started.md)
-- [实体框架术语](../../../../../docs/framework/data/adonet/ef/terminology.md)
+- [实体框架概述](overview.md)
+- [入门](getting-started.md)
+- [实体框架术语](terminology.md)
 - [ADO.NET 实体数据模型工具](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))

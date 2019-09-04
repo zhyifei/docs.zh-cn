@@ -3,19 +3,20 @@ title: <serviceCertificate>
 ms.date: 03/30/2017
 ms.assetid: 42c7f291-2ec3-43c5-8872-35897ff3c660
 author: BrucePerlerMS
-ms.openlocfilehash: a3aba5618855f7225dc8a427516eaa72b45f6e8b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 653dd9cfadbfd33f5371b77172199b946321bc8c
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69942415"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251858"
 ---
 # <a name="servicecertificate"></a>\<serviceCertificate>
 配置用于加密和解密令牌的 x.509 证书。  
   
- \<system.identityModel.services>  
-\<federationConfiguration>  
-\<serviceCertificate>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.identitymodel >** ](system-identitymodel-services.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<federationConfiguration >** ](federationconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<serviceCertificate >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,7 +45,7 @@ ms.locfileid: "69942415"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<federationConfiguration>](federationconfiguration.md)|包含配置<xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) <xref:System.IdentityModel.Services.SessionAuthenticationModule>和 (SAM) 的设置。|  
+|[\<federationConfiguration>](federationconfiguration.md)|包含配置<xref:System.IdentityModel.Services.WSFederationAuthenticationModule> （WSFAM） <xref:System.IdentityModel.Services.SessionAuthenticationModule>和（SAM）的设置。|  
   
 ## <a name="example"></a>示例  
  下面的 XML 演示了如何使用\<serviceCertificate > 元素。 XML 是从`CustomToken`示例获取的。  

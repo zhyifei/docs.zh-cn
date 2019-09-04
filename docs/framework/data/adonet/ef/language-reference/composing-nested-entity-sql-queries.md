@@ -2,18 +2,18 @@
 title: 撰写嵌套的 Entity SQL 查询
 ms.date: 03/30/2017
 ms.assetid: 685d4cd3-2c1f-419f-bb46-c9d97a351eeb
-ms.openlocfilehash: 4d6892e96cfbc9c5ba9d389aa03588c5133c7943
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3aa2e53b584eece9cc5e2d26791c78ffe33f9e35
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61606220"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251141"
 ---
 # <a name="composing-nested-entity-sql-queries"></a>撰写嵌套的 Entity SQL 查询
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)] 是一种功能丰富的语言。 构建基块[!INCLUDE[esql](../../../../../../includes/esql-md.md)]是一个表达式。 与传统 SQL 不同[!INCLUDE[esql](../../../../../../includes/esql-md.md)]并不仅限于表格结果集：[!INCLUDE[esql](../../../../../../includes/esql-md.md)]支持编写文本、 参数或嵌套的表达式可以具有的复杂表达式。 在表达式中的值可以参数化或其他表达式构成。  
+[!INCLUDE[esql](../../../../../../includes/esql-md.md)] 是一种功能丰富的语言。 的[!INCLUDE[esql](../../../../../../includes/esql-md.md)]构建基块是一个表达式。 与传统的 SQL [!INCLUDE[esql](../../../../../../includes/esql-md.md)]不同，并不局限于表格结果集[!INCLUDE[esql](../../../../../../includes/esql-md.md)] ：支持组合可以具有文本、参数或嵌套表达式的复杂表达式。 表达式中的值可以是参数化的或由其他表达式组成。  
   
 ## <a name="nested-expressions"></a>嵌套表达式  
- 嵌套表达式可以放置在任何可接受其返回类型值的位置。 例如：  
+ 嵌套表达式可以放置在任何可接受其返回类型值的位置。 例如:  
   
 ```  
 -- Returns a hierarchical collection of three elements at top-level.   
@@ -25,7 +25,7 @@ ROW(@x, {@x}, {@x, 4, 5}, {@x, 7, 8, 9})
 {{{@x}}};  
 ```  
   
- 嵌套查询可以放在投影子句中。 例如：  
+ 嵌套查询可以放在投影子句中。 例如:  
   
 ```  
 -- Returns a collection of rows where each row contains an Address entity.  
@@ -46,7 +46,7 @@ UNION ALL
 FROM … );  
 ```  
   
- 下面的示例演示如何中正确嵌套表达式[!INCLUDE[esql](../../../../../../includes/esql-md.md)]:[如何：两个查询的联合排序](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896299(v=vs.100))。  
+ 下面的示例演示如何在中[!INCLUDE[esql](../../../../../../includes/esql-md.md)]正确嵌套表达式：[如何：排列两个查询](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896299(v=vs.100))的并集。  
   
 ## <a name="nested-queries-in-projection"></a>投影中的嵌套查询  
  投影子句中的嵌套查询可在服务器上转换为笛卡尔积查询。 在某些后端服务器（包括 SLQ Server）中，这会导致 TempDB 表变得过大，对服务器性能产生负面影响。  
@@ -77,4 +77,4 @@ SELECT C2.FirstName, C2.LastName
   
 ## <a name="see-also"></a>请参阅
 
-- [实体 SQL 概述](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+- [实体 SQL 概述](entity-sql-overview.md)

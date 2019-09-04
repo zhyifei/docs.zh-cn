@@ -2,15 +2,15 @@
 title: 编写实体框架数据提供程序
 ms.date: 03/30/2017
 ms.assetid: 092e88c4-a301-453a-b5c3-5740c6575a9f
-ms.openlocfilehash: 7841a33bf40c00ed3691a5416aae16d673bf8d1c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6c5e6e2859b48db6c982862381d223a4c9deb2c5
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586741"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70248193"
 ---
 # <a name="writing-an-entity-framework-data-provider"></a>编写实体框架数据提供程序
-本部分讨论如何编写[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]提供程序以支持 SQL Server 以外的数据源。 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]包括支持 SQL Server 的提供程序。  
+本节讨论如何编写[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]提供程序以支持除 SQL Server 之外的数据源。 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]包括支持 SQL Server 的访问接口。  
   
 ## <a name="introducing-the-entity-framework-provider-model"></a>实体框架提供程序模型简介  
  [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]是独立于数据库的，您可以使用 ADO.NET 提供程序模型编写提供程序以连接到不同的数据源集。  
@@ -29,18 +29,18 @@ ms.locfileid: "64586741"
   
 - 通过概念模型公开元数据（例如，表和视图）。  
   
- ![b42a7a5c&#45;0ac0&#45;4911&#45;86be&#45;0460a78760ba](../../../../../docs/framework/data/adonet/ef/media/b42a7a5c-0ac0-4911-86be-0460a78760ba.gif "b42a7a5c-0ac0-4911-86be-0460a78760ba")  
+ ![b42a7a5c&#45;0ac0&#45;4911&#45;86be&#45;0460a78760ba](./media/b42a7a5c-0ac0-4911-86be-0460a78760ba.gif "b42a7a5c-0ac0-4911-86be-0460a78760ba")  
   
 ## <a name="sample"></a>示例  
- 请参阅[实体框架示例提供程序](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0)有关的示例[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]支持 SQL Server 以外的数据源的提供程序。  
+ 有关支持除 SQL Server 之外的数据源的[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]提供程序的示例，请参阅[实体框架示例提供程序](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0)。  
   
 ## <a name="in-this-section"></a>本节内容  
- [SQL 生成](../../../../../docs/framework/data/adonet/ef/sql-generation.md)  
+ [SQL 生成](sql-generation.md)  
   
- [修改 SQL 生成](../../../../../docs/framework/data/adonet/ef/modification-sql-generation.md)  
+ [修改 SQL 生成](modification-sql-generation.md)  
   
- [提供程序清单规范](../../../../../docs/framework/data/adonet/ef/provider-manifest-specification.md)  
+ [提供程序清单规范](provider-manifest-specification.md)  
   
 ## <a name="see-also"></a>请参阅
 
-- [使用数据提供程序](../../../../../docs/framework/data/adonet/ef/working-with-data-providers.md)
+- [使用数据提供程序](working-with-data-providers.md)

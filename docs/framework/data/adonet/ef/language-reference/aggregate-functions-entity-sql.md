@@ -2,23 +2,23 @@
 title: 聚合函数 (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: acfd3149-f519-4c6e-8fe1-b21d243a0e58
-ms.openlocfilehash: b01c7dca675e79c61b87bcc1fb30455286db3118
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: c79071e73763b56c0dde906499f3eef1d296ce0c
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489963"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251336"
 ---
 # <a name="aggregate-functions-entity-sql"></a>聚合函数 (Entity SQL)
 聚合是一种语言构造，它将集合浓缩为标量以作为组运算的一部分。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 聚合分为两种形式：  
   
-- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 可能在表达式中任何位置使用的集合函数。 这包括在作用于集合的投影和谓词中使用聚合函数。 集合函数是在 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 中指定聚合的首选模式。  
+- [!INCLUDE[esql](../../../../../../includes/esql-md.md)]可在表达式中的任意位置使用的集合函数。 这包括在作用于集合的投影和谓词中使用聚合函数。 集合函数是在 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 中指定聚合的首选模式。  
   
-- 具有 GROUP BY 子句的表达式中的组聚合。 如下所示 TRANSACT-SQL，组聚合接受 DISTINCT 和 ALL 作为聚合输入的修饰符。  
+- 具有 GROUP BY 子句的表达式中的组聚合。 在 Transact-sql 中，组聚合接受 DISTINCT 和 ALL 作为聚合输入的修饰符。  
   
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 首先尝试将解释为集合函数的表达式，如果表达式为 SELECT 表达式的上下文中它将其解释为组聚合。  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)]首先尝试将表达式解释为集合函数，如果表达式位于 SELECT 表达式的上下文中，它会将其解释为组聚合。  
   
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 定义特殊的聚合运算符，称为[GROUPPARTITION](../../../../../../docs/framework/data/adonet/ef/language-reference/grouppartition-entity-sql.md)。 此运算符，您可以获得对分组的输入集的引用。 这样，就可以进行更高级的分组查询，其中，GROUP BY 子句的结果可以用在除组聚合或集合函数之外的位置。  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)]定义名为[GROUPPARTITION](grouppartition-entity-sql.md)的特殊聚合运算符。 此运算符使你可以获取对已分组的输入集的引用。 这样，就可以进行更高级的分组查询，其中，GROUP BY 子句的结果可以用在除组聚合或集合函数之外的位置。  
   
 ## <a name="collection-functions"></a>集合函数  
  集合函数针对集合运行并返回标量值。 例如，如果 `orders` 是所有 `orders` 的集合，则可以使用以下表达式计算最早的发货日期：  
@@ -44,4 +44,4 @@ ms.locfileid: "66489963"
   
 ## <a name="see-also"></a>请参阅
 
-- [函数](../../../../../../docs/framework/data/adonet/ef/language-reference/functions-entity-sql.md)
+- [函数](functions-entity-sql.md)

@@ -2,12 +2,12 @@
 title: 命名类型构造函数 (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 549dea04-d93d-4c87-a292-f81b1598dbfd
-ms.openlocfilehash: f95f0dcb92068675b2efff0af7e97b349976bf42
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c7027614e5667acedb02d871a09df1ac9d799405
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61760449"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250011"
 ---
 # <a name="named-type-constructor-entity-sql"></a>命名类型构造函数 (Entity SQL)
 用于创建概念模型名义类型（如实体或复杂类型）的实例。  
@@ -20,7 +20,7 @@ ms.locfileid: "61760449"
   
 ## <a name="arguments"></a>自变量  
  `identifier`  
- 作为简单标识符或带引号的标识符的值。 有关详细信息，请参阅[标识符](../../../../../../docs/framework/data/adonet/ef/language-reference/identifiers-entity-sql.md)  
+ 作为简单标识符或带引号的标识符的值。 有关详细信息，请参阅[标识符](identifiers-entity-sql.md)  
   
  `expression`  
  类型的属性，假设这些属性的顺序与它们在类型声明中的顺序相同。  
@@ -52,7 +52,7 @@ ms.locfileid: "61760449"
 ## <a name="example"></a>示例  
  下面的 Entity SQL 查询使用命名类型构造函数创建概念模型类型的实例。 此查询基于 AdventureWorks 销售模型。 若要编译并运行此查询，请执行下列步骤：  
   
-1. 按照中的过程[如何：执行返回 StructuralType 结果的查询](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)。  
+1. [按照如何：执行返回 StructuralType 结果](../how-to-execute-a-query-that-returns-structuraltype-results.md)的查询。  
   
 2. 将以下查询作为参数传递给 `ExecuteStructuralTypeQuery` 方法：  
   
@@ -60,5 +60,5 @@ ms.locfileid: "61760449"
   
 ## <a name="see-also"></a>请参阅
 
-- [构造类型](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md)
-- [实体 SQL 引用](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [构造类型](constructing-types-entity-sql.md)
+- [实体 SQL 引用](entity-sql-reference.md)
