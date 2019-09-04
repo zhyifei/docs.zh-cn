@@ -296,7 +296,7 @@ ms.locfileid: "69963382"
 |模式|说明|  
 |-------------|-----------------|  
 |`\b`|在单词边界处开始匹配。|  
-|`(?ix: d \w+)`|使用不区分大小写的匹配并忽略此模式中的白色空间，匹配后跟一个或多个单词字符的“d”。|  
+|`(?ix: d \w+)`|使用不区分大小写的匹配并忽略此模式中的空白，匹配后跟一个或多个单词字符的“d”。|  
 |`\s`|与空白字符匹配。|  
   
  [!code-csharp[Conceptual.Regex.Language.Options#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/example1.cs#8)]
@@ -448,7 +448,7 @@ ms.locfileid: "69963382"
   
 - 集合中的第一个 <xref:System.Text.RegularExpressions.Group> 对象（位于索引零的对象）表示整个匹配。  
   
-- 下一组 <xref:System.Text.RegularExpressions.Group> 对象表示未命名（编号）的捕获组。 它们以在正则表达式中定义的顺序出现，从左至右。 这些组的索引值范围从 1 到集合中未命名捕获组的数目。 （特定组索引等效于其带编号的反向引用。 有关向后引用的更多信息，请参见 [Backreference Constructs](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md)。）  
+- 下一组 <xref:System.Text.RegularExpressions.Group> 对象表示未命名（编号）的捕获组。 它们以在正则表达式中定义的顺序出现，从左至右。 这些组的索引值范围从 1 到集合中未命名捕获组的数目。 （特定组索引等效于其带编号的反向引用。 有关向后引用的更多信息，请参见 [反向引用构造](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md)。）  
   
 - 最后的 <xref:System.Text.RegularExpressions.Group> 对象组表示命名的捕获组。 它们以在正则表达式中定义的顺序出现，从左至右。 第一个名为捕获组的索引值是一个大于最后一个未命名的捕获组的索引。 如果正则表达式中没有未命名捕获组，则第一个命名的捕获组的索引值为 1。  
   

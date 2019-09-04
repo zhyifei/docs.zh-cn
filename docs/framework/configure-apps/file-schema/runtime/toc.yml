@@ -26,12 +26,14 @@
                   href: bindingredirect-element.md
                 - name: <codeBase> 元素
                   href: codebase-element.md
+                - name: <publisherPolicy> 元素
+                  href: publisherpolicy-element.md
             - name: <probing> 元素
               href: probing-element.md
-            - name: <publisherPolicy> 元素
-              href: publisherpolicy-element.md
             - name: <qualifyAssembly> 元素
               href: qualifyassembly-element.md
+            - name: <supportPortability> 元素
+              href: supportportability-element.md
         - name: <bypassTrustedAppStrongNames> 元素
           href: bypasstrustedappstrongnames-element.md
         - name: <CompatSortNLSVersion> 元素
@@ -82,23 +84,6 @@
           href: relativebindforresources-element.md
         - name: <shadowCopyVerifyByTimestamp> 元素
           href: shadowcopyverifybytimestamp-element.md
-        - name: <supportPortability> 元素
-          href: supportportability-element.md
-        - name: <system.runtime.caching> 元素（缓存设置）
-          href: system-runtime-caching-element-cache-settings.md
-          items:
-            - name: <memoryCache> 元素（缓存设置）
-              href: memorycache-element-cache-settings.md
-              items:
-                - name: <namedCaches> 元素（缓存设置）
-                  href: namedcaches-element-cache-settings.md
-                  items:
-                    - name: <namedCaches> 的 <add> 元素
-                      href: add-element-for-namedcaches.md
-                    - name: <namedCaches> 的 <clear> 元素
-                      href: clear-element-for-namedcaches.md
-                    - name: <namedCaches> 的 <remove> 元素
-                      href: remove-element-for-namedcaches.md
         - name: <Thread_UseAllCpuGroups> 元素
           href: thread-useallcpugroups-element.md
         - name: <ThrowUnobservedTaskExceptions> 元素
@@ -111,3 +96,18 @@
           href: userandomizedstringhashalgorithm-element.md
         - name: <UseSmallInternalThreadStacks> 元素
           href: usesmallinternalthreadstacks-element.md
+    - name: <system.runtime.caching> 元素（缓存设置）
+      href: system-runtime-caching-element-cache-settings.md
+      items:
+        - name: <memoryCache> 元素（缓存设置）
+          href: memorycache-element-cache-settings.md
+          items:
+            - name: <namedCaches> 元素（缓存设置）
+              href: namedcaches-element-cache-settings.md
+              items:
+                - name: <namedCaches> 的 <add> 元素
+                  href: add-element-for-namedcaches.md
+                - name: <namedCaches> 的 <clear> 元素
+                  href: clear-element-for-namedcaches.md
+                - name: <namedCaches> 的 <remove> 元素
+                  href: remove-element-for-namedcaches.md

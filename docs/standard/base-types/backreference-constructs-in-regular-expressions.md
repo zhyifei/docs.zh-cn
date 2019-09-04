@@ -109,7 +109,7 @@ ms.locfileid: "57678353"
 |模式|说明|
 |-------------|-----------------|
 |`(?<1>a)`|匹配字符“a”，并将结果分配到 `1` 捕获组。|
-|`(?<1>\1b)*`|匹配 `1` 组的 0 更大发生次数以及“b”，并将结果分配到 `1` 捕获组。|
+|`(?<1>\1b)*`|匹配零个或多个`1` 捕获组以及“b”，并将结果分配到 `1` 捕获组。|
 
 [!code-csharp[RegularExpressions.Language.Backreferences#4](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference4.cs#4)]
 [!code-vb[RegularExpressions.Language.Backreferences#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference4.vb#4)]
