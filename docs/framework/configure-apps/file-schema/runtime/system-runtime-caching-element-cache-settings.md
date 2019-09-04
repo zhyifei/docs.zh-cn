@@ -8,19 +8,19 @@ helpviewer_keywords:
 ms.assetid: 9b44daee-874a-4bd1-954e-83bf53565590
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 67ead643afd34b4c3422d85e6f7876879de477ba
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e36e2ed96a0748a69f2bd9ee32432901f0bf0898
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927243"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252293"
 ---
-# <a name="systemruntimecaching-element-cache-settings"></a>\<system.object > 元素 (缓存设置)
+# <a name="systemruntimecaching-element-cache-settings"></a>\<system.object > 元素（缓存设置）
 
 通过配置文件中的 <xref:System.Runtime.Caching.ObjectCache> 条目为默认内存中的 `memoryCache` 实现提供配置。  
   
- \<configuration>  
-\<system.runtime.caching>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp; **\<> 缓存**  
   
 ## <a name="syntax"></a>语法  
   
@@ -59,7 +59,7 @@ ms.locfileid: "69927243"
   
 ## <a name="example"></a>示例
 
-下面的示例演示如何配置基于 <xref:System.Runtime.Caching.MemoryCache> 类的缓存。 该示例演示如何为内存缓存配置 `namedCaches` 条目实例。 缓存的名称设置为默认缓存项名称, 方法是将`name`属性设置为 "default"。  
+下面的示例演示如何配置基于 <xref:System.Runtime.Caching.MemoryCache> 类的缓存。 该示例演示如何为内存缓存配置 `namedCaches` 条目实例。 缓存的名称设置为默认缓存项名称，方法是将`name`属性设置为 "default"。  
   
 将 `cacheMemoryLimitMegabytes` 属性和 `physicalMemoryPercentage` 属性设置为零。 将这些特性设置为零意味着默认情况下使用 <xref:System.Runtime.Caching.MemoryCache> 自动调整大小试探法。 每隔两分钟，缓存实现应对当前内存负载和基于百分比的绝对内存限制进行比较。  
   
@@ -80,4 +80,4 @@ ms.locfileid: "69927243"
   
 ## <a name="see-also"></a>请参阅
 
-- [\<memoryCache > 元素 (缓存设置)](memorycache-element-cache-settings.md)
+- [\<memoryCache > 元素（缓存设置）](memorycache-element-cache-settings.md)

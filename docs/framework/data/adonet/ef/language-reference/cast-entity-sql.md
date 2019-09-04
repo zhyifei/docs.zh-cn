@@ -2,12 +2,12 @@
 title: CAST (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 07b6d750-dfd4-48a9-b86c-3badcbba6f70
-ms.openlocfilehash: 253dcf092deadd1049d0556af4ea0630602110d0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 385f9a8057ea6aa3637f7fae6fec79154ac625ba
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69935817"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251237"
 ---
 # <a name="cast-entity-sql"></a>CAST (Entity SQL)
 将一种数据类型的表达式转换为另一种数据类型的表达式。  
@@ -23,7 +23,7 @@ CAST ( expression AS data_type )
  任何可转换为 `data_type`的有效表达式。  
   
  `data_type`  
- 系统提供的目标数据类型。 该类型必须为基元（标量）类型。 使用的 `data_type` 取决于查询空间。 如果使用 <xref:System.Data.EntityClient.EntityCommand>执行查询，则数据类型为概念模型中定义的类型。 有关详细信息，请参阅 [CSDL Specification](../../../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)。 如果使用 <xref:System.Data.Objects.ObjectQuery%601>执行查询，则数据类型为公共语言运行库 (CLR) 类型。  
+ 系统提供的目标数据类型。 该类型必须为基元（标量）类型。 使用的 `data_type` 取决于查询空间。 如果使用 <xref:System.Data.EntityClient.EntityCommand>执行查询，则数据类型为概念模型中定义的类型。 有关详细信息，请参阅 [CSDL Specification](csdl-specification.md)。 如果使用 <xref:System.Data.Objects.ObjectQuery%601>执行查询，则数据类型为公共语言运行库 (CLR) 类型。  
   
 ## <a name="return-value"></a>返回值  
  返回与 `data_type`相同的值。  
@@ -53,7 +53,7 @@ CAST( e as T )
 ## <a name="example"></a>示例  
  下面的 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 查询使用 CAST 运算符将一种数据类型的表达式强制转换为另一种数据类型的表达式。 此查询基于 AdventureWorks 销售模型。 若要编译并运行此查询，请执行下列步骤：  
   
-1. [按照如何:执行返回 PrimitiveType 结果](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md)的查询。  
+1. [按照如何：执行返回 PrimitiveType 结果](../how-to-execute-a-query-that-returns-primitivetype-results.md)的查询。  
   
 2. 将以下查询作为参数传递给 `ExecutePrimitiveTypeQuery` 方法：  
   
@@ -61,4 +61,4 @@ CAST( e as T )
   
 ## <a name="see-also"></a>请参阅
 
-- [实体 SQL 引用](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [实体 SQL 引用](entity-sql-reference.md)

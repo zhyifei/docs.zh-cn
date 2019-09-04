@@ -2,12 +2,12 @@
 title: 提供程序清单规范
 ms.date: 03/30/2017
 ms.assetid: bb450b47-8951-4f99-9350-26f05a4d4e46
-ms.openlocfilehash: 9ae528105119241e05be5182db418312c4120112
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 6b924f484e6635760d08d0eba9fb9436bdd8bc88
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422721"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70248592"
 ---
 # <a name="provider-manifest-specification"></a>提供程序清单规范
 本节讨论数据存储提供程序如何可以支持数据存储中的类型和功能。  
@@ -23,9 +23,9 @@ ms.locfileid: "67422721"
   
  提供程序清单必须可由工具在设计时加载，而不必打开与数据存储的连接。  
   
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]是大小写敏感的但可能不是基础数据存储区。 当在清单中定义和使用 EDM 项目（例如标识符和类型名称）时，这些项目必须使用[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]大小写区分。 如果可能区分大小写的数据存储元素出现在提供程序的清单中，则在提供程序清单中需要维持大小写区分。  
+ [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]区分大小写，但基础数据存储可能不是。 当在清单中定义和使用 EDM 项目（例如标识符和类型名称）时，这些项目必须使用[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]大小写区分。 如果可能区分大小写的数据存储元素出现在提供程序的清单中，则在提供程序清单中需要维持大小写区分。  
   
- 对于所有数据提供程序，[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]均需要一个提供程序清单。 如果你尝试使用的提供程序没有提供程序清单与[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]，会收到错误。  
+ 对于所有数据提供程序，[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]均需要一个提供程序清单。 如果尝试使用的提供程序不具有具有的[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]提供程序清单，则会出现错误。  
   
  下表描述了在提供程序交互过程中引发异常时，[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]将引发的异常的种类。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "67422721"
  提供程序应支持下面的方案：  
   
 ### <a name="writing-a-provider-with-symmetric-type-mapping"></a>使用对称类型映射编写提供程序  
- 您可以编写一个提供程序[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]其中每个存储类型映射到单个 EDM 类型，无论映射方向。 对于具有非常简单的映射（与 EDM 类型对应）的提供程序类型，您可以使用对称解决方案，因为此类型系统很简单或者匹配 EDM 类型。  
+ 您可以编写的提供程序[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] ，其中每个商店类型映射到单个 EDM 类型，而不考虑映射方向。 对于具有非常简单的映射（与 EDM 类型对应）的提供程序类型，您可以使用对称解决方案，因为此类型系统很简单或者匹配 EDM 类型。  
   
  您可以利用提供程序的域的简单性，生成一个静态声明性提供程序清单。  
   
@@ -54,21 +54,21 @@ ms.locfileid: "67422721"
   
  编写具有两部分的 XML 文件：  
   
-- 提供程序类型的列表以 EDM 表示，并定义了两个方向的映射：EDM 到提供程序和提供程序到 EDM。  
+- 以 EDM 术语表示的提供程序类型的列表，并定义两个方向的映射：EDM 到提供程序和提供程序到 EDM。  
   
 - 提供程序支持的函数列表，其中的参数和返回类型用 EDM 术语表示。  
   
 ## <a name="provider-manifest-discoverability"></a>提供程序清单的可发现性  
  清单可以由实体服务中的若干组件类型（例如“工具”或“查询”）间接地使用，但更多的是通过使用数据存储元数据加载程序由元数据直接利用。  
   
- ![dfb3d02b&#45;7a8c&#45;4d51&#45;ac5a&#45;a73d8aa145e6](../../../../../docs/framework/data/adonet/ef/media/dfb3d02b-7a8c-4d51-ac5a-a73d8aa145e6.gif "dfb3d02b-7a8c-4d51-ac5a-a73d8aa145e6")  
+ ![dfb3d02b&#45;7a8c&#45;4d51&#45;ac5a&#45;a73d8aa145e6](./media/dfb3d02b-7a8c-4d51-ac5a-a73d8aa145e6.gif "dfb3d02b-7a8c-4d51-ac5a-a73d8aa145e6")  
   
  但是，给定的提供程序可能支持不同的存储或相同存储的不同版本。 因此，对于每个支持的数据存储，提供程序必须报告不同的清单。  
   
 ### <a name="provider-manifest-token"></a>提供程序清单标记  
  当打开数据存储连接时，提供程序可以查询信息以返回正确的清单。 在无法获取连接信息的脱机方案中，或者在无法连接到存储的情况下，上述方法可能不可行。 通过使用 .ssdl 文件中的 `ProviderManifestToken` 元素的 `Schema` 特性可标识清单。 此特性没有必需的格式要求，提供程序可选择所需的最少信息来标识清单，而无需打开与存储的连接。  
   
- 例如：  
+ 例如:  
   
 ```xml  
 <Schema Namespace="Northwind" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:edm="http://schemas.microsoft.com/ado/2006/04/edm/ssdl" xmlns="http://schemas.microsoft.com/ado/2006/04/edm/ssdl">  
@@ -77,13 +77,13 @@ ms.locfileid: "67422721"
 ## <a name="provider-manifest-programming-model"></a>提供程序清单编程模型  
  提供程序派生自 <xref:System.Data.Common.DbXmlEnabledProviderManifest>，这使得它们可以通过声明方式指定其清单。 下图显示了提供程序的类层次结构：  
   
- ![None](../../../../../docs/framework/data/adonet/ef/media/d541eba3-2ee6-4cd1-88f5-89d0b2582a6c.gif "d541eba3-2ee6-4cd1-88f5-89d0b2582a6c")  
+ ![None](./media/d541eba3-2ee6-4cd1-88f5-89d0b2582a6c.gif "d541eba3-2ee6-4cd1-88f5-89d0b2582a6c")  
   
 ### <a name="discoverability-api"></a>可发现性 API  
  通过使用数据存储连接或提供程序清单标记，存储元数据加载程序 (StoreItemCollection) 可加载提供程序清单。  
   
 #### <a name="using-a-data-store-connection"></a>使用数据存储连接  
- 当数据存储连接可用时，调用<xref:System.Data.Common.DbProviderServices.GetProviderManifestToken%2A?displayProperty=nameWithType>传递给将令牌返回<xref:System.Data.Common.DbProviderServices.GetProviderManifest%2A>方法，它返回<xref:System.Data.Common.DbProviderManifest>。 此方法委托给提供程序实现`GetDbProviderManifestToken`。  
+ 如果数据存储连接可用，则调用<xref:System.Data.Common.DbProviderServices.GetProviderManifestToken%2A?displayProperty=nameWithType>以返回传递<xref:System.Data.Common.DbProviderServices.GetProviderManifest%2A>给方法的标记，该标记将返回<xref:System.Data.Common.DbProviderManifest>。 此方法委托给提供程序的实现`GetDbProviderManifestToken`。  
   
 ```csharp
 public string GetProviderManifestToken(DbConnection connection);  
@@ -91,7 +91,7 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
 ```  
   
 #### <a name="using-a-provider-manifest-token"></a>使用提供程序清单标记  
- 对于脱机方案，此标记从 SSDL 表示形式中选取。 SSDL 允许您指定 ProviderManifestToken (请参阅[架构元素 (SSDL)](/ef/ef6/modeling/designer/advanced/edmx/ssdl-spec#schema-element-ssdl)有关详细信息)。 例如，如果无法打开某个连接，则 SSDL 会具有一个提供程序清单标记，用于指定有关清单的信息。  
+ 对于脱机方案，此标记从 SSDL 表示形式中选取。 SSDL 允许您指定 ProviderManifestToken （有关详细信息，请参阅[Schema 元素（SSDL）](/ef/ef6/modeling/designer/advanced/edmx/ssdl-spec#schema-element-ssdl) ）。 例如，如果无法打开某个连接，则 SSDL 会具有一个提供程序清单标记，用于指定有关清单的信息。  
   
 ```  
 public DbProviderManifest GetProviderManifest(string manifestToken);  
@@ -248,37 +248,37 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
   
  为了在提供程序清单中表示此类型信息，每个 TypeInformation 声明必须为每个 Type 定义几个方面的说明：  
   
-|特性名|数据类型|必需|默认值|描述|  
+|特性名|数据类型|必填|Default Value|描述|  
 |--------------------|---------------|--------------|-------------------|-----------------|  
-|名称|String|是|n/a|提供程序特定的数据类型名称|  
+|name|String|是|n/a|提供程序特定的数据类型名称|  
 |PrimitiveTypeKind|PrimitiveTypeKind|是|n/a|EDM 类型名称|  
   
 ###### <a name="function-node"></a>Function 节点  
  每个 Function 定义一个可通过提供程序使用的函数。  
   
-|特性名|数据类型|必需|默认值|描述|  
+|特性名|数据类型|必填|Default Value|描述|  
 |--------------------|---------------|--------------|-------------------|-----------------|  
-|名称|String|是|n/a|函数的标识符/名称|  
-|ReturnType|String|否|Void|函数的 EDM 返回类型|  
-|聚合|Boolean|否|False|如果函数为聚合函数，则为 True。|  
-|BuiltIn|Boolean|否|True|如果函数内置于数据存储中，则返回 True|  
-|StoreFunctionName|String|否|\<名称 >|数据存储中的函数名称。  考虑了函数名称的重定向级别。|  
-|NiladicFunction|Boolean|否|False|如果函数不需要任何参数且在调用时不使用任何参数，则返回 True。|  
-|ParameterType<br /><br /> 语义|ParameterSemantics|否|AllowImplicit<br /><br /> 转换|有关查询管道应如何处理参数类型替换的选项：<br /><br /> -   ExactMatchOnly<br />-   AllowImplicitPromotion<br />-   AllowImplicitConversion|  
+|name|String|是|n/a|函数的标识符/名称|  
+|ReturnType|String|No|Void|函数的 EDM 返回类型|  
+|聚合|Boolean|No|False|如果函数为聚合函数，则为 True。|  
+|BuiltIn|Boolean|No|True|如果函数内置于数据存储中，则返回 True|  
+|StoreFunctionName|String|No|\<名称 >|数据存储中的函数名称。  考虑了函数名称的重定向级别。|  
+|NiladicFunction|Boolean|No|False|如果函数不需要任何参数且在调用时不使用任何参数，则返回 True。|  
+|ParameterType<br /><br /> 语义|ParameterSemantics|No|AllowImplicit<br /><br /> 转换|有关查询管道应如何处理参数类型替换的选项：<br /><br /> -   ExactMatchOnly<br />- AllowImplicitPromotion<br />- AllowImplicitConversion|  
   
- **参数节点**  
+ **Parameters 节点**  
   
  每个函数都具有包含一个或多个 Parameter 节点的集合。  
   
-|特性名|数据类型|必需|默认值|描述|  
+|特性名|数据类型|必需|Default Value|描述|  
 |--------------------|---------------|--------------|-------------------|-----------------|  
-|名称|String|是|n/a|参数的标识符/名称。|  
+|name|String|是|n/a|参数的标识符/名称。|  
 |类型|String|是|n/a|参数的 EDM 类型。|  
-|模式|参数<br /><br /> 方向|是|n/a|参数的方向：<br /><br /> -在<br />-out<br />-inout|  
+|模式|参数<br /><br /> 方向|是|n/a|参数的方向：<br /><br /> -在中<br />-out<br />-inout|  
   
 ##### <a name="namespace-attribute"></a>Namespace 属性  
- 每个数据存储提供程序必须为清单中定义的信息定义一个命名空间或一组命名空间。 此命名空间可在 Entity SQL 查询中用来解析函数和类型的名称。 例如：SqlServer。 此命名空间必须与规范命名空间 EDM 不同，EDM 是由实体服务为 Entity SQL 查询要支持的标准函数定义的。  
+ 每个数据存储提供程序必须为清单中定义的信息定义一个命名空间或一组命名空间。 此命名空间可在 Entity SQL 查询中用来解析函数和类型的名称。 例如：SqlServer. 此命名空间必须与规范命名空间 EDM 不同，EDM 是由实体服务为 Entity SQL 查询要支持的标准函数定义的。  
   
 ## <a name="see-also"></a>请参阅
 
-- [编写实体框架数据提供程序](../../../../../docs/framework/data/adonet/ef/writing-an-ef-data-provider.md)
+- [编写实体框架数据提供程序](writing-an-ef-data-provider.md)

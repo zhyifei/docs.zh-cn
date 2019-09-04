@@ -2,12 +2,12 @@
 title: Boolean 数据类型
 ms.date: 03/30/2017
 ms.assetid: 57f7376b-4b11-4b35-98a9-780382053ceb
-ms.openlocfilehash: f200445d2ba7846f9dc467c7f06bce4225c88865
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9fa3327315593bd54fc51f67bf9964da8d683c5d
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964086"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70248059"
 ---
 # <a name="boolean-data-types"></a>Boolean 数据类型
 布尔运算符在公共语言运行库 (CLR) 中按预期方式工作，但其短路行为不会进行转换。 例如，Visual Basic `AndAlso` 运算符在行为上类似于 `And` 运算符。 C# `&&` 运算符在行为上类似于 `&` 运算符。  
@@ -25,4 +25,4 @@ ms.locfileid: "69964086"
   
 ## <a name="see-also"></a>请参阅
 
-- [数据类型和函数](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
+- [数据类型和函数](data-types-and-functions.md)

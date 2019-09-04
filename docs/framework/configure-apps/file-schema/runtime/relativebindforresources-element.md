@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 846ffa47-7257-4ce3-8cac-7ff627e0e34f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 859e8a12421ea92aa48c54317e052683eb8e83f8
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: b1ac2900707ddb39c62b34b0ebfbc4547cdd2653
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663487"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252349"
 ---
 # <a name="relativebindforresources-element"></a>\<relativeBindForResources > 元素
 优化附属程序集的探测。  
   
- \<配置 > 元素  
-\<运行时 > 元素  
-\<relativeBindForResources > 元素  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<运行时 >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<relativeBindForResources>**  
   
 ## <a name="syntax"></a>语法  
   
@@ -55,15 +55,15 @@ ms.locfileid: "69663487"
 |`runtime`|包含有关运行时初始化选项的信息。|  
   
 ## <a name="remarks"></a>备注  
- 一般情况下, 资源管理器探测资源, 如[打包和部署资源](../../../resources/packaging-and-deploying-resources-in-desktop-apps.md)主题中所述。 这意味着, 当资源管理器探测某个资源的特定本地化版本时, 它可能会在全局程序集缓存中查找, 在应用程序的基本代码中查找特定于区域性的文件夹, 为附属程序集查询 Windows Installer, 并引发<xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>事件。 `<relativeBindForResources>`元素优化资源管理器探测附属程序集的方式。 当在以下条件下探测资源时, 它可以提高性能:  
+ 一般情况下，资源管理器探测资源，如[打包和部署资源](../../../resources/packaging-and-deploying-resources-in-desktop-apps.md)主题中所述。 这意味着，当资源管理器探测某个资源的特定本地化版本时，它可能会在全局程序集缓存中查找，在应用程序的基本代码中查找特定于区域性的文件夹，为附属程序集查询 Windows Installer，并引发<xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>事件。 `<relativeBindForResources>`元素优化资源管理器探测附属程序集的方式。 当在以下条件下探测资源时，它可以提高性能：  
   
-- 当附属程序集部署在与代码程序集相同的位置时。 换言之, 如果代码程序集安装在全局程序集缓存中, 则还必须在该程序集中安装附属程序集。 如果代码程序集安装在应用程序的代码库中, 则附属程序集还必须安装在基本代码的特定于区域性的文件夹中。  
+- 当附属程序集部署在与代码程序集相同的位置时。 换言之，如果代码程序集安装在全局程序集缓存中，则还必须在该程序集中安装附属程序集。 如果代码程序集安装在应用程序的代码库中，则附属程序集还必须安装在基本代码的特定于区域性的文件夹中。  
   
 - 如果未使用 Windows Installer 或只是很少使用附属程序集的按需安装。  
   
 - 当应用程序代码不处理<xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>事件时。  
   
- `<relativeBindForResources>` `true`设置元素的属性,以优化资源管理器的附属程序集探测`enabled` , 如下所示:  
+ `<relativeBindForResources>` `true`设置元素的属性，以优化资源管理器的附属程序集探测`enabled` ，如下所示：  
   
 - 它使用父代码程序集的位置来探测附属程序集。  
   

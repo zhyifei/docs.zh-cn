@@ -2,12 +2,12 @@
 title: TREAT (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 5b77f156-55de-4cb4-8154-87f707d4c635
-ms.openlocfilehash: 15664da02189dd618784d55c07aaf4db38a2f656
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b7393bef32b3e057eca51eb516cb72cd2de126c2
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69929291"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70248957"
 ---
 # <a name="treat-entity-sql"></a>TREAT (Entity SQL)
 将特定基类型的对象视为指定派生类型的对象。  
@@ -48,7 +48,7 @@ WHERE p IS OF (NamespaceName.Employee)
  此查询将 `Person` 实体向上转换为 `Employee` 类型。 如果 p 的值的实际类型不是 `Employee`，则表达式会生成值 `null`。  
   
 > [!NOTE]
-> 指定的表达式`Employee`必须为指定数据类型`Person`的子类型, 或者该数据类型必须为该表达式的子类型。 否则，表达式会导致编译时错误。  
+> 指定的表达式`Employee`必须为指定数据类型`Person`的子类型，或者该数据类型必须为该表达式的子类型。 否则，表达式会导致编译时错误。  
   
  下表显示了 TREAT 在某些典型模式和非常见模式下的行为。 所有异常都在调用提供程序之前从客户端引发：  
   
@@ -68,5 +68,5 @@ WHERE p IS OF (NamespaceName.Employee)
   
 ## <a name="see-also"></a>请参阅
 
-- [实体 SQL 引用](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
-- [可以为 NULL 的结构化类型](../../../../../../docs/framework/data/adonet/ef/language-reference/nullable-structured-types-entity-sql.md)
+- [实体 SQL 引用](entity-sql-reference.md)
+- [可以为 NULL 的结构化类型](nullable-structured-types-entity-sql.md)

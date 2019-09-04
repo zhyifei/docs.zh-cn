@@ -2,12 +2,12 @@
 title: ROW (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 06da96e8-55d7-486c-991a-4e514d837ff9
-ms.openlocfilehash: 676080a6cc4208ea1a4d72b85a4a55e01fafe638
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: dfd0031f49cbdf41797cecf21c149fafde4d7a8c
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64641450"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70249255"
 ---
 # <a name="row-entity-sql"></a>ROW (Entity SQL)
 从一个或多个值构造结构上类型化的匿名记录。  
@@ -35,7 +35,7 @@ ROW ( expression [ AS alias ] [,...] )
 ROW(1 AS a, "abc" AS b, a+34 AS c)  
 ```  
   
- 如果没有为行构造函数中的表达式提供别名，则实体框架会尝试生成一个别名。 有关更多信息，请参见 [标识符](../../../../../../docs/framework/data/adonet/ef/language-reference/identifiers-entity-sql.md) 主题中的“别名规则”一节。  
+ 如果没有为行构造函数中的表达式提供别名，则实体框架会尝试生成一个别名。 有关更多信息，请参见 [标识符](identifiers-entity-sql.md) 主题中的“别名规则”一节。  
   
  以下规则适用于在行构造函数中指定表达式别名：  
   
@@ -43,12 +43,12 @@ ROW(1 AS a, "abc" AS b, a+34 AS c)
   
 - 同一行构造函数中的两个表达式不能具有相同别名。  
   
- 有关查询构造函数的详细信息，请参阅[构造类型](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md)。  
+ 有关查询构造函数的详细信息，请参阅[构造类型](constructing-types-entity-sql.md)。  
   
 ## <a name="example"></a>示例  
  下面的 Entity SQL 查询使用 ROW 运算符构造结构上类型化的匿名记录。 此查询基于 AdventureWorks 销售模型。 若要编译并运行此查询，请执行下列步骤：  
   
-1. 按照中的过程[如何：执行返回 StructuralType 结果的查询](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)。  
+1. [按照如何：执行返回 StructuralType 结果](../how-to-execute-a-query-that-returns-structuraltype-results.md)的查询。  
   
 2. 将以下查询作为参数传递给 `ExecuteStructuralTypeQuery` 方法：  
   
@@ -56,6 +56,6 @@ ROW(1 AS a, "abc" AS b, a+34 AS c)
   
 ## <a name="see-also"></a>请参阅
 
-- [构造类型](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md)
-- [实体 SQL 引用](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
-- [类型定义](../../../../../../docs/framework/data/adonet/ef/language-reference/type-definitions-entity-sql.md)
+- [构造类型](constructing-types-entity-sql.md)
+- [实体 SQL 引用](entity-sql-reference.md)
+- [类型定义](type-definitions-entity-sql.md)

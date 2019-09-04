@@ -43,7 +43,7 @@ ms.locfileid: "68674354"
 - **Ado Kukic.Angular 2 窗体验证** \
   <https://scotch.io/tutorials/angular-2-form-validation>
 
-- **Form Validation** \（窗体验证）
+- **窗体验证** \
   <https://angular.io/guide/form-validation>
 
 - **验证。** Breeze 文档。 \

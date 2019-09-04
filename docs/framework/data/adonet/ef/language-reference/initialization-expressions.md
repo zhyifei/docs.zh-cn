@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 98daef1f-15d4-483e-985c-d78ea3abe8c8
-ms.openlocfilehash: 78bafcad0a0f34c74ea58f107621ad145c1b405b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 109be8ef2bf41326fcab5896ecdc359859683345
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64631531"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250675"
 ---
 # <a name="initialization-expressions"></a>初始化表达式
 初始化表达式用于初始化新的对象。 大多数初始化表达式都受到支持，其中包括大多数新的 C# 3.0 和 Visual Basic 9.0 初始化表达式。 LINQ to Entities 查询可以初始化并返回以下类型：  
@@ -48,4 +48,4 @@ ms.locfileid: "64631531"
   
 ## <a name="see-also"></a>请参阅
 
-- [LINQ to Entities 查询中的表达式](../../../../../../docs/framework/data/adonet/ef/language-reference/expressions-in-linq-to-entities-queries.md)
+- [LINQ to Entities 查询中的表达式](expressions-in-linq-to-entities-queries.md)

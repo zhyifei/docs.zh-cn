@@ -3,21 +3,22 @@ title: <audienceUris>
 ms.date: 03/30/2017
 ms.assetid: 7a3d8515-d756-4afe-a22d-07cbe2217ee3
 author: BrucePerlerMS
-ms.openlocfilehash: 003221ed4dc7f4ccf72d2e0d3a91265e13172813
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: bd04e4ebdf5c58adaeea0ff0ca5993d7d9ce38f1
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69941959"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252172"
 ---
 # <a name="audienceuris"></a>\<audienceUris>
-指定可接受的信赖方 (RP) 标识符的 Uri 集。 除非令牌的作用域是允许的受众 Uri 之一, 否则不会接受令牌。  
+指定可接受的信赖方（RP）标识符的 Uri 集。 除非令牌的作用域是允许的受众 Uri 之一，否则不会接受令牌。  
   
- \<system.identityModel>  
-\<identityConfiguration>  
-\<securityTokenHandlers>  
-\<securityTokenHandlerConfiguration>  
-\<audienceUris>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.identitymodel >** ](system-identitymodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<identityConfiguration >** ](identityconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<securityTokenHandlers >** ](securitytokenhandlers.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<securityTokenHandlerConfiguration >** ](securitytokenhandlerconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<audienceUris >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,7 +45,7 @@ ms.locfileid: "69941959"
   
 |特性|描述|  
 |---------------|-----------------|  
-|mode|一个<xref:System.IdentityModel.Selectors.AudienceUriMode>值, 该值指定是否应将受众限制应用于传入令牌。 可能的值为 "始终"、"从不" 和 "BearerKeyOnly"。 默认值为 "Always"。 可选。|  
+|mode|一个<xref:System.IdentityModel.Selectors.AudienceUriMode>值，该值指定是否应将受众限制应用于传入令牌。 可能的值为 "始终"、"从不" 和 "BearerKeyOnly"。 默认值为 "Always"。 可选。|  
   
 ### <a name="child-elements"></a>子元素  
   
@@ -61,15 +62,15 @@ ms.locfileid: "69941959"
 |[\<securityTokenHandlerConfiguration>](securitytokenhandlerconfiguration.md)|为安全标记处理程序的集合提供配置。|  
   
 ## <a name="remarks"></a>备注  
- 默认情况下, 集合为空;使用`<add>`、 `<clear>`和`<remove>`元素可修改集合。 <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler>和<xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>对象使用受众 uri 集合中的值来配置对象中允许的<xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement>受众 uri 限制。  
+ 默认情况下，集合为空;使用`<add>`、 `<clear>`和`<remove>`元素可修改集合。 <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler>和<xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>对象使用受众 uri 集合中的值来配置对象中允许的<xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement>受众 uri 限制。  
   
  元素由<xref:System.IdentityModel.Configuration.AudienceUriElementCollection>类表示。 `<audienceUris>` 添加到集合中的单个 URI 由<xref:System.IdentityModel.Configuration.AudienceUriElement>类表示。  
   
 > [!NOTE]
-> 使用`<audienceUris>`元素作为[ \<identityConfiguration >](identityconfiguration.md)元素的子元素已被弃用, 但仍支持向后兼容。 元素上的`<securityTokenHandlerConfiguration>`设置将替代`<identityConfiguration>`元素上的设置。  
+> 使用`<audienceUris>`元素作为[ \<identityConfiguration >](identityconfiguration.md)元素的子元素已被弃用，但仍支持向后兼容。 元素上的`<securityTokenHandlerConfiguration>`设置将替代`<identityConfiguration>`元素上的设置。  
   
 ## <a name="example"></a>示例  
- 下面的 XML 演示如何配置应用程序的可接受受众 Uri。 此示例配置单个 URI。 将接受范围为此 URI 的标记, 所有其他标记将被拒绝。  
+ 下面的 XML 演示如何配置应用程序的可接受受众 Uri。 此示例配置单个 URI。 将接受范围为此 URI 的标记，所有其他标记将被拒绝。  
   
 ```xml  
 <audienceUris>  

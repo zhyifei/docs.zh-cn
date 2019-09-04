@@ -2,12 +2,12 @@
 title: DEREF (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 4c78e833-b260-453d-9bf4-eb39857dd0fa
-ms.openlocfilehash: 1ba562ba6542e6ab0d62f1f8348434ae4f4c9b13
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 10c5ecb2b44c85dccd758cc1cf63a152da045cc1
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61785302"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251085"
 ---
 # <a name="deref-entity-sql"></a>DEREF (Entity SQL)
 取消引用一个引用值，并生成该取消引用的结果。  
@@ -26,12 +26,12 @@ SELECT DEREF ( o.expression ) from Table as o;
  引用的实体的值。  
   
 ## <a name="remarks"></a>备注  
- DEREF 运算符取消引用一个引用值，并生成该取消引用的结果。 例如，如果`r`为 ref 类型引用\<T >，`Deref(r)`类型的表达式`T`生成的引用的实体`r`。 如果引用值为 Null，或无关联（即，引用的目标不存在），则 DEREF 运算符的结果为 Null。  
+ DEREF 运算符取消引用一个引用值，并生成该取消引用的结果。 例如，如果`r`是`r`引用\<类型 >，则是类型`T`的表达式`Deref(r)` ，该表达式生成由引用的实体。 如果引用值为 Null，或无关联（即，引用的目标不存在），则 DEREF 运算符的结果为 Null。  
   
 ## <a name="example"></a>示例  
  下面的 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 查询使用 DEREF 运算符取消引用一个引用值，并生成该取消引用的结果。 此查询基于 AdventureWorks 销售模型。 若要编译并运行此查询，请执行下列步骤：  
   
-1. 按照中的过程[如何：执行返回 PrimitiveType 结果的查询](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md)。  
+1. [按照如何：执行返回 PrimitiveType 结果](../how-to-execute-a-query-that-returns-primitivetype-results.md)的查询。  
   
 2. 将以下查询作为参数传递给 ExecutePrimitiveTypeQuery 方法：  
   
@@ -39,8 +39,8 @@ SELECT DEREF ( o.expression ) from Table as o;
   
 ## <a name="see-also"></a>请参阅
 
-- [实体 SQL 引用](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
-- [REF](../../../../../../docs/framework/data/adonet/ef/language-reference/ref-entity-sql.md)
-- [CREATEREF](../../../../../../docs/framework/data/adonet/ef/language-reference/createref-entity-sql.md)
-- [KEY](../../../../../../docs/framework/data/adonet/ef/language-reference/key-entity-sql.md)
-- [可以为 NULL 的结构化类型](../../../../../../docs/framework/data/adonet/ef/language-reference/nullable-structured-types-entity-sql.md)
+- [实体 SQL 引用](entity-sql-reference.md)
+- [REF](ref-entity-sql.md)
+- [CREATEREF](createref-entity-sql.md)
+- [KEY](key-entity-sql.md)
+- [可以为 NULL 的结构化类型](nullable-structured-types-entity-sql.md)

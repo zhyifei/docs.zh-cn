@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: ad6442f6-1a9d-43b6-b733-04ac1b7f9b82
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4aa90a378630c9aff74923d8e8600aed15a77a5e
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 581b19cf74dcb5c2d5c4a549847629503fe0b6ff
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663505"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252369"
 ---
 # <a name="qualifyassembly-element"></a>\<B l y > 元素
 指定使用部分名称时应动态加载的程序集全名。  
   
- \<configuration>  
-\<运行时 >  
-\<assemblyBinding>  
-\<qualifyAssembly>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<运行时 >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<assemblyBinding >** ](assemblybinding-element-for-runtime.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<qualifyAssembly>**  
   
 ## <a name="syntax"></a>语法  
   
@@ -56,9 +56,9 @@ ms.locfileid: "69663505"
 |`runtime`|包含有关程序集绑定和垃圾回收的信息。|  
   
 ## <a name="remarks"></a>备注  
- 使用部分程序集名称调用方法会导致公共语言运行时仅查找应用程序基目录中的程序集。<xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 使用应用程序配置文件中的 **\<b l y >** 元素可提供完整的程序集信息 (名称、版本、公钥标记和区域性), 并导致公共语言运行时在全局程序集缓存。  
+ 使用部分程序集名称调用方法会导致公共语言运行时仅查找应用程序基目录中的程序集。<xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 使用应用程序配置文件中的 **\<b l y >** 元素可提供完整的程序集信息（名称、版本、公钥标记和区域性），并导致公共语言运行时在全局程序集缓存。  
   
- **FullName**特性必须包含程序集标识的四个字段: 名称、版本、公钥标记和区域性。 **PartialName**属性必须部分引用程序集。 必须至少指定程序集的文本名称 (最常见的情况), 但也可以包括版本、公钥标记或区域性 (或四个 (但不是全部四个) 的任意组合。 **PartialName**必须与在调用中指定的名称相匹配。 例如, 你不能在`"math"`配置文件中将指定为**partialName**属性, 然后`Assembly.Load("math, Version=3.3.3.3")`在代码中调用。  
+ **FullName**特性必须包含程序集标识的四个字段：名称、版本、公钥标记和区域性。 **PartialName**属性必须部分引用程序集。 必须至少指定程序集的文本名称（最常见的情况），但也可以包括版本、公钥标记或区域性（或四个（但不是全部四个）的任意组合。 **PartialName**必须与在调用中指定的名称相匹配。 例如，你不能在`"math"`配置文件中将指定为**partialName**属性，然后`Assembly.Load("math, Version=3.3.3.3")`在代码中调用。  
   
 ## <a name="example"></a>示例  
  下面的示例以逻辑方式将`Assembly.Load("math")`调用`Assembly.Load("math,version=1.0.0.0,publicKeyToken=a1690a5ea44bab32,culture=neutral")`转换为。  

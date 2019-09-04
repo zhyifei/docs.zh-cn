@@ -10,19 +10,19 @@ helpviewer_keywords:
 ms.assetid: c08125d6-56cc-4b23-b482-813ff85dc630
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 91983a0910b272e621783f0fdb68242ddbd20f03
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 49b53dcd4db7e0ac1e9079e763b8ed76c1088e0e
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456181"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252199"
 ---
-# <a name="userandomizedstringhashalgorithm-element"></a>\<Userandomizedstringhashalgorithm，那么 > 元素
-确定公共语言运行时是否在计算字符串的哈希代码每个应用程序域。  
+# <a name="userandomizedstringhashalgorithm-element"></a>\<UseRandomizedStringHashAlgorithm > 元素
+确定公共语言运行时是否按应用程序域计算字符串的哈希代码。  
   
- \<configuration>  
-\<运行时 >  
-\<UseRandomizedStringHashAlgorithm>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<运行时 >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<UseRandomizedStringHashAlgorithm>**  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,14 +38,14 @@ ms.locfileid: "66456181"
   
 |特性|描述|  
 |---------------|-----------------|  
-|`enabled`|必需的特性。<br /><br /> 指定字符串的哈希代码计算每个应用程序域。|  
+|`enabled`|必需的特性。<br /><br /> 指定是否基于每个应用程序域计算字符串的哈希代码。|  
   
 ## <a name="enabled-attribute"></a>enabled 特性  
   
 |值|描述|  
 |-----------|-----------------|  
-|`0`|公共语言运行时不会计算字符串的哈希代码对每个应用程序域;使用单个算法来计算字符串哈希代码。 这是默认设置。|  
-|`1`|公共语言运行时计算字符串的哈希代码对每个应用程序域。 在不同应用程序域和不同进程中的相同字符串将具有不同的哈希代码。|  
+|`0`|公共语言运行时不会为每个应用程序域计算字符串的哈希代码;单个算法用于计算字符串哈希代码。 这是默认设置。|  
+|`1`|公共语言运行时基于每个应用程序域计算字符串的哈希代码。 不同应用程序域和不同进程中的相同字符串具有不同的哈希代码。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  
@@ -58,26 +58,26 @@ ms.locfileid: "66456181"
 |`runtime`|包含有关运行时初始化选项的信息。|  
   
 ## <a name="remarks"></a>备注  
- 默认情况下<xref:System.StringComparer>类和<xref:System.String.GetHashCode%2A?displayProperty=nameWithType>方法使用跨应用程序域生成一致的哈希代码的单个哈希算法。 这相当于设置`enabled`的属性`<UseRandomizedStringHashAlgorithm>`元素`0`。 这是在.NET Framework 4 中使用的哈希算法。  
+ 默认情况下， <xref:System.StringComparer>类<xref:System.String.GetHashCode%2A?displayProperty=nameWithType>和方法使用单个哈希算法，该算法可跨应用程序域生成一致的哈希代码。 这等效于将`enabled` `<UseRandomizedStringHashAlgorithm>`元素的特性设置为`0`。 这是 .NET Framework 4 中使用的哈希算法。  
   
- <xref:System.StringComparer>类和<xref:System.String.GetHashCode%2A?displayProperty=nameWithType>方法还可以使用不同的哈希算法计算哈希代码对每个应用程序域。 因此，等效的字符串的哈希代码将不同跨应用程序域。 这是一项选择加入的功能;若要充分利用它，必须设置`enabled`的属性`<UseRandomizedStringHashAlgorithm>`元素`1`。  
+ <xref:System.StringComparer> 类<xref:System.String.GetHashCode%2A?displayProperty=nameWithType>和方法也可以使用不同的哈希算法来计算每个应用程序域的哈希代码。 因此，相同字符串的哈希代码将在应用程序域之间有所不同。 这是一项可选功能;若要利用它，必须将`enabled` `<UseRandomizedStringHashAlgorithm>`元素的属性设置为`1`。  
   
- 哈希表中的字符串查找通常是 o （1） 的操作。 但是，大量冲突发生时，查找会变为 O (n<sup>2</sup>) 操作。 可以使用`<UseRandomizedStringHashAlgorithm>`要生成随机的哈希算法，每个应用程序域，从而限制潜在冲突数量，尤其是在从其计算哈希代码的密钥根据数据输入时配置元素由用户。  
+ 哈希表中的字符串查找通常为 O （1）操作。 但是，当发生大量冲突时，查找可能会成为 O （n<sup>2</sup>）操作。 您可以使用`<UseRandomizedStringHashAlgorithm>` configuration 元素为每个应用程序域生成随机哈希算法，这反过来会限制潜在冲突的数目，特别是当从中计算哈希代码的键基于数据输入时由用户。  
   
 ## <a name="example"></a>示例  
- 下面的示例定义`DisplayString`类，其中包含私有字符串常量， `s`，其值是"这是一个字符串"。 它还包括`ShowStringHashCode`显示的字符串值和其哈希代码，以及在其中执行方法的应用程序域的名称的方法。  
+ 下面的示例定义了`DisplayString`一个类，该类包含一个私有字符串`s`常量，其值为 "This is a string"。 它还包括一个`ShowStringHashCode`方法，该方法显示字符串值及其哈希代码，以及方法在其中执行的应用程序域的名称。  
   
  [!code-csharp[System.String.GetHashCode#2](../../../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.String.GetHashCode/CS/perdomain.cs#2)]
  [!code-vb[System.String.GetHashCode#2](../../../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.String.GetHashCode/VB/perdomain.vb#2)]  
   
- 不提供配置文件的情况下运行该示例时，它会显示类似于以下的输出。 请注意，该字符串的哈希代码完全相同的两个应用程序域中。  
+ 运行该示例时，如果不提供配置文件，它将显示如下所示的输出。 请注意，这两个应用程序域中的字符串的哈希代码是相同的。  
   
 ```  
 String 'This is a string.' in domain 'PerDomain.exe': 941BCEAC  
 String 'This is a string.' in domain 'NewDomain': 941BCEAC  
 ```  
   
- 但是，如果将下面的配置文件添加到该示例的目录，然后运行该示例相同的字符串的哈希代码将通过应用程序域不同。  
+ 但是，如果将下面的配置文件添加到示例的目录中，然后运行该示例，则相同字符串的哈希代码将与应用程序域不同。  
   
 ```xml  
 <?xml version ="1.0"?>  
@@ -88,7 +88,7 @@ String 'This is a string.' in domain 'NewDomain': 941BCEAC
 </configuration>  
 ```  
   
- 当存在配置文件时，该示例将显示以下输出：  
+ 如果配置文件存在，则此示例将显示以下输出：  
   
 ```  
 String 'This is a string.' in domain 'PerDomain.exe': 5435776D  

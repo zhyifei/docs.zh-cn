@@ -2,26 +2,26 @@
 title: EDM 生成器 (EdmGen.exe)
 ms.date: 03/30/2017
 ms.assetid: fe8297a1-1fc3-48ce-8eeb-f70f63f857aa
-ms.openlocfilehash: f9c75cd7589b1c5fb28112a22390acf90f46e465
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 688989fea6037cc989267e14b103210c2a995afa
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65584588"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251632"
 ---
 # <a name="edm-generator-edmgenexe"></a>EDM 生成器 (EdmGen.exe)
 
 EdmGen.exe 是用于处理[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]模型和映射文件的命令行工具。 使用 EdmGen.exe 工具可以执行以下任务：
 
-- 使用特定于数据源的 .NET Framework 数据提供程序连接到数据源，生成[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]使用的概念模型 (.csdl)、存储模型 (.ssdl) 以及映射 (.msl) 文件。 有关详细信息，请参阅[如何：使用 EdmGen.exe 生成模型和映射文件](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)。
+- 使用特定于数据源的 .NET Framework 数据提供程序连接到数据源，生成[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]使用的概念模型 (.csdl)、存储模型 (.ssdl) 以及映射 (.msl) 文件。 有关详细信息，请参阅[如何：使用 Edmgen.exe 生成模型和映射文件](how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)。
 
-- 验证现有模型。 有关详细信息，请参阅[如何：使用 EdmGen.exe 验证模型和映射文件](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md)。
+- 验证现有模型。 有关详细信息，请参阅[如何：使用 Edmgen.exe 验证模型和映射文件](how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md)。
 
-- 生成包含从概念模型 (.csdl) 文件生成的对象类的 C# 或 Visual Basic 代码文件。 有关详细信息，请参阅[如何：使用 EdmGen.exe 生成对象层代码](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-object-layer-code.md)。
+- 生成包含从概念模型 (.csdl) 文件生成的对象类的 C# 或 Visual Basic 代码文件。 有关详细信息，请参阅[如何：使用 Edmgen.exe 生成对象层代码](how-to-use-edmgen-exe-to-generate-object-layer-code.md)。
 
-- 生成包含现有模型的预生成视图的 C# 或 Visual Basic 代码文件。 有关详细信息，[如何：预生成视图以提高查询性能](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896240(v=vs.100))。
+- 生成包含现有模型的预生成视图的 C# 或 Visual Basic 代码文件。 有关详细信息， [请执行以下操作：预生成视图以提高查询性能](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896240(v=vs.100))。
 
-EdmGen.exe 工具安装在.NET Framework 目录中。 多数情况下，它位于 C:\windows\Microsoft.NET\Framework\v4.0 中。 对于 64 位系统，它位于 C:\windows\Microsoft.NET\Framework64\v4.0 中。 此外可以访问 EdmGen.exe 工具从 Visual Studio 命令提示 (单击**启动**，依次指向**所有程序**，指向**Microsoft Visual Studio 2010**，依次指向**Visual Studio Tools**，然后单击**Visual Studio 2010 命令提示**)。
+Edmgen.exe 工具安装在 .NET Framework 目录中。 多数情况下，它位于 C:\windows\Microsoft.NET\Framework\v4.0 中。 对于 64 位系统，它位于 C:\windows\Microsoft.NET\Framework64\v4.0 中。 你还可以从 Visual Studio 命令提示符访问 Edmgen.exe 工具（单击 "**开始**"，依次指向 "**所有程序**"、 **Microsoft Visual Studio 2010**"和" **Visual Studio Tools**"，然后单击" **Visual Studio 2010 "。命令提示符**）。
 
 ## <a name="syntax"></a>语法
 
@@ -60,22 +60,22 @@ EdmGen /mode:choice [options]
 |`/language:`[VB&#124;CSharp]|指定生成的源代码文件的语言。 默认语言为 C#。|
 |`/namespace:`\<string>|指定要使用的模型命名空间。 命名空间是在运行 `/mode:FullGeneration` 或 `/mode:FromSSDLGeneration` 时在 .csdl 文件中设置的。 在运行 `/mode:EntityClassGeneration` 时不使用该命名空间。|
 |`/entitycontainer:`\<string>|指定要应用于生成的模型和映射文件中 `<EntityContainer>` 元素的名称。|
-|`/pl[uralize]`|对概念模型中 `Entity`、`EntitySet` 和 `NavigationProperty` 名称的单复数形式应用英语语言规则。 此选项将执行以下操作：<br /><br /> -使所有`EntityType`名称采用单数形式。<br />-使所有`EntitySet`名称采用复数形式。<br />-对于每个`NavigationProperty`返回一个实体最多，使名称单数形式。<br />-对于每个`NavigationProperty`返回多个实体，使名称采用复数形式。|
+|`/pl[uralize]`|对概念模型中 `Entity`、`EntitySet` 和 `NavigationProperty` 名称的单复数形式应用英语语言规则。 此选项将执行以下操作：<br /><br /> -将所有`EntityType`名称设置为单数形式。<br />-将所有`EntitySet`名称设置为复数形式。<br />-对于最`NavigationProperty`多返回一个实体的每个实体，使名称为单数形式。<br />-对于返回`NavigationProperty`多个实体的每个，将名称设置为复数形式。|
 |`/SuppressForeignKeyProperties or /nofk`|防止外键列公开为概念模型中实体类型上的标量属性。|
 |`/help` 或 `?`|显示该工具的命令语法和选项。|
 |`/nologo`|禁止显示版权信息。|
-|`/targetversion:` \<string>|将用于编译生成的代码的 .NET Framework 版本。 支持的版本是 4 和 4.5。 默认值为 4。|
+|`/targetversion:`\<字符串 >|将用于编译生成的代码的 .NET Framework 版本。 支持的版本是 4 和 4.5。 默认值为 4。|
 
 ## <a name="in-this-section"></a>本节内容
 
-[如何：使用 EdmGen.exe 生成模型和映射文件](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)
+[如何：使用 Edmgen.exe 生成模型和映射文件](how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)
 
-[如何：使用 EdmGen.exe 生成对象层代码](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-object-layer-code.md)
+[如何：使用 Edmgen.exe 生成对象层代码](how-to-use-edmgen-exe-to-generate-object-layer-code.md)
 
-[如何：使用 EdmGen.exe 验证模型和映射文件](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md)
+[如何：使用 Edmgen.exe 验证模型和映射文件](how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md)
 
 ## <a name="see-also"></a>请参阅
 
 - [ADO.NET 实体数据模型工具](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))
-- [实体数据模型](../../../../../docs/framework/data/adonet/entity-data-model.md)
-- [CSDL、SSDL 和 MSL 规范](../../../../../docs/framework/data/adonet/ef/language-reference/csdl-ssdl-and-msl-specifications.md)
+- [实体数据模型](../entity-data-model.md)
+- [CSDL、SSDL 和 MSL 规范](./language-reference/csdl-ssdl-and-msl-specifications.md)

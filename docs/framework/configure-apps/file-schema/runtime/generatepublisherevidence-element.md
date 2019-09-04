@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 7d208f50-e8d5-4a42-bc1a-1cf3590706a8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a5314fe5927abf2d3855acb45c763507ab6cb3c8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3dd3105e573d40ae234ba7e122f20566911124d4
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920752"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252541"
 ---
 # <a name="generatepublisherevidence-element"></a>\<generatePublisherEvidence > 元素
-指定运行时是否为<xref:System.Security.Policy.Publisher>代码访问安全性 (CAS) 创建证据。  
+指定运行时是否为<xref:System.Security.Policy.Publisher>代码访问安全性（CAS）创建证据。  
   
- \<configuration>  
-\<运行时 >  
-\<generatePublisherEvidence>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<运行时 >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<generatePublisherEvidence>**  
   
 ## <a name="syntax"></a>语法  
   
@@ -57,9 +57,9 @@ ms.locfileid: "69920752"
 ## <a name="remarks"></a>备注  
   
 > [!NOTE]
-> 在 .NET Framework 4 及更高版本中, 此元素对程序集加载时间没有影响。 有关详细信息, 请参阅[安全更改](../../../security/security-changes.md)中的 "安全策略简化" 部分。  
+> 在 .NET Framework 4 及更高版本中，此元素对程序集加载时间没有影响。 有关详细信息，请参阅[安全更改](../../../security/security-changes.md)中的 "安全策略简化" 部分。  
   
- 公共语言运行时 (CLR) 尝试在加载时验证 Authenticode 签名, 以创建<xref:System.Security.Policy.Publisher>程序集的证据。 但是, 默认情况下, 大多数应用程序不<xref:System.Security.Policy.Publisher>需要证据。 标准 CAS 策略不依赖<xref:System.Security.Policy.PublisherMembershipCondition>于。 除非你的应用程序在具有自定义 CAS 策略的计算机上执行, 或者要在部分信任环境中满足的<xref:System.Security.Permissions.PublisherIdentityPermission>要求, 否则, 应避免与验证发行者签名相关的不必要的启动成本。 (在完全信任的环境中, 标识权限的要求始终成功。)  
+ 公共语言运行时（CLR）尝试在加载时验证 Authenticode 签名，以创建<xref:System.Security.Policy.Publisher>程序集的证据。 但是，默认情况下，大多数应用程序不<xref:System.Security.Policy.Publisher>需要证据。 标准 CAS 策略不依赖<xref:System.Security.Policy.PublisherMembershipCondition>于。 除非你的应用程序在具有自定义 CAS 策略的计算机上执行，或者要在部分信任环境中满足的<xref:System.Security.Permissions.PublisherIdentityPermission>要求，否则，应避免与验证发行者签名相关的不必要的启动成本。 （在完全信任的环境中，标识权限的要求始终成功。）  
   
 > [!NOTE]
 > 建议服务使用`<generatePublisherEvidence>`元素以提高启动性能。  使用此元素还有助于避免可能导致超时和取消服务启动的延迟。  

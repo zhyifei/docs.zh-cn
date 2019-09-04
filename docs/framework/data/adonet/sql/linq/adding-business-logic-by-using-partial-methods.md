@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3a73991e-fd4e-4610-93fb-7ced4dc6b7f9
-ms.openlocfilehash: e3f82c260a2cab85270a9f33a87eb9a9f04b72c7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 251d7a05971ff7940f85ec9d555d26f2e57067c3
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964145"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70248125"
 ---
 # <a name="adding-business-logic-by-using-partial-methods"></a>通过使用分部方法添加业务逻辑
 您可以通过使用C# [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] *分部方法*自定义项目中的 Visual Basic 和生成的代码。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 生成的代码定义签名作为分部方法的一部分。 如果您要实现此方法，您可以添加自己的分部方法。 如果您不添加自己的实现，编译器将丢弃分部方法签名并调用 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中的默认方法。  
   
 > [!NOTE]
-> 如果使用的是 Visual Studio, 则可以使用对象关系设计器向实体类添加验证及其他自定义项。  
+> 如果使用的是 Visual Studio，则可以使用对象关系设计器向实体类添加验证及其他自定义项。  
   
  例如，Northwind 示例数据库中 `Customer` 类的默认映射包括下面的分部方法：  
   
@@ -30,7 +30,7 @@ ms.locfileid: "69964145"
   
  在 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中通常使用这种方式来重写 `Insert`、`Update`、`Delete` 的默认方法以及在对象生命周期事件过程中验证属性。  
   
- 有关详细信息, 请参阅[分部方法](../../../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md)(Visual Basic) 或[分部 (方法)C# ](../../../../../csharp/language-reference/keywords/partial-method.md) C#("")。  
+ 有关详细信息，请参阅[分部方法](../../../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md)（Visual Basic）或[分部（方法）C# ](../../../../../csharp/language-reference/keywords/partial-method.md) C#（""）。  
   
 ## <a name="example"></a>示例  
   
@@ -52,5 +52,5 @@ ms.locfileid: "69964145"
   
 ## <a name="see-also"></a>请参阅
 
-- [进行和提交数据更改](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)
-- [自定义插入、更新和删除操作](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md)
+- [进行和提交数据更改](making-and-submitting-data-changes.md)
+- [自定义插入、更新和删除操作](customizing-insert-update-and-delete-operations.md)

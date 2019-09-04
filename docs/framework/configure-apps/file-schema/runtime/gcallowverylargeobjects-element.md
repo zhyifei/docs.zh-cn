@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 5c7ea24a-39ac-4e5f-83b7-b9f9a1b556ab
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 643e28217d41e825f0b3a3f4a4f062c30835cae8
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 3f638a880aaa21bc41d2575f3609dabae158c1a0
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70040663"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252569"
 ---
 # <a name="gcallowverylargeobjects-element"></a>\<gcAllowVeryLargeObjects > 元素
 在 64 位平台上，启用总大小大于 2 千兆字节 (GB) 的数组。  
   
- \<配置 > 元素  
-\<运行时 > 元素  
-\<gcAllowVeryLargeObjects > 元素  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<运行时 >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<gcAllowVeryLargeObjects>**  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,7 +42,7 @@ ms.locfileid: "70040663"
 |值|描述|  
 |-----------|-----------------|  
 |`false`|总大小中大于 2 GB 的数组未启用。 这是默认设置。|  
-|`true`|在64位平台上, 总大小中已启用大于 2 GB 的数组。|  
+|`true`|在64位平台上，总大小中已启用大于 2 GB 的数组。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  
@@ -55,16 +55,16 @@ ms.locfileid: "70040663"
 |`runtime`|包含有关运行时初始化选项的信息。|  
   
 ## <a name="remarks"></a>备注  
- 在应用程序配置文件中使用此元素可启用大小大于 2 GB 的数组, 但不会更改对象大小或数组大小的其他限制:  
+ 在应用程序配置文件中使用此元素可启用大小大于 2 GB 的数组，但不会更改对象大小或数组大小的其他限制：  
   
 - 数组中元素的最大数目为<xref:System.UInt32.MaxValue?displayProperty=nameWithType>。  
   
-- 任何单个维度中的最大索引为 2147483591 (0x7FFFFFC7) (对于字节数组) 和单字节结构数组, 2146435071 (0X7FEFFFFF) 用于其他类型。  
+- 任何单个维度中的最大索引为2147483591（0x7FFFFFC7）（对于字节数组）和单字节结构数组，2146435071（0X7FEFFFFF）用于其他类型。  
   
 - 字符串和其他非数组对象的最大大小不变。  
   
 > [!CAUTION]
-> 在启用此功能之前, 请确保应用程序不包含不安全代码, 该代码假定所有数组大小均小于 2 GB。 例如, 使用数组作为缓冲区的不安全代码可能容易受到缓冲区溢出的攻击, 因为假设数组不会超过 2 GB。  
+> 在启用此功能之前，请确保应用程序不包含不安全代码，该代码假定所有数组大小均小于 2 GB。 例如，使用数组作为缓冲区的不安全代码可能容易受到缓冲区溢出的攻击，因为假设数组不会超过 2 GB。  
   
 ## <a name="example"></a>示例  
  下面的示例演示如何为应用程序启用此功能。  

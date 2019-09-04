@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 29dde982-6d8b-4099-8867-ad0d7733f6dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3510cbf0a63a8031669bb7a819a8b3c7321aaea4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: cb4d0ed5b33170c40aacb32bebbf1b59ca659be4
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920767"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252616"
 ---
 # <a name="etwenable-element"></a>\<etwEnable > 元素
 指定是否为公共语言运行时事件启用 Windows 事件跟踪 (ETW)。  
   
- \<配置 > 元素  
-\<运行时 > 元素  
-\<etwEnabled>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<运行时 >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<etwEnabled >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -54,7 +54,7 @@ ms.locfileid: "69920767"
 |`runtime`|包含有关程序集绑定和垃圾回收的信息。|  
   
 ## <a name="remarks"></a>备注  
- 从 Windows Vista 开始, 默认情况下启用 ETW。 使用此元素可禁用应用程序的 ETW。 在早期版本的 Windows 中, 使用此元素为应用程序启用 ETW。  
+ 从 Windows Vista 开始，默认情况下启用 ETW。 使用此元素可禁用应用程序的 ETW。 在早期版本的 Windows 中，使用此元素为应用程序启用 ETW。  
   
 > [!NOTE]
 > 可以通过使用注册表设置在服务器上全局启用或禁用 ETW。 请参阅[控制 .NET Framework 日志记录](../../../performance/controlling-logging.md)。  

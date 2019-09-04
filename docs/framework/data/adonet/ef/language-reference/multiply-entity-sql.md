@@ -1,13 +1,13 @@
 ---
-title: '* （乘）(Entity SQL)'
+title: '* 乘（实体 SQL）'
 ms.date: 03/30/2017
 ms.assetid: 508ce246-4e86-47dd-a605-4af4bebb9891
-ms.openlocfilehash: 308df758d59a7e12a8b5a19ae72fcbee2f168490
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 19fb73d327f91303de938a5f49866339413b9698
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61760462"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250049"
 ---
 # <a name="-multiply-entity-sql"></a>*（乘）(Entity SQL)
 将两个表达式相乘。  
@@ -23,12 +23,12 @@ expression * expression
  任何一种数值数据类型的任何有效表达式。  
   
 ## <a name="result-types"></a>结果类型  
- 对这两个参数进行隐式类型提升而产生的数据类型。 有关隐式类型提升的详细信息，请参阅[类型系统](../../../../../../docs/framework/data/adonet/ef/language-reference/type-system-entity-sql.md)。  
+ 对这两个参数进行隐式类型提升而产生的数据类型。 有关隐式类型升级的详细信息，请参阅[类型系统](type-system-entity-sql.md)。  
   
 ## <a name="example"></a>示例  
  以下 Entity SQL 查询使用 * 算术运算符将两个数字相乘。 此查询基于 AdventureWorks 销售模型。 若要编译并运行此查询，请执行下列步骤：  
   
-1. 按照中的过程[如何：执行返回 StructuralType 结果的查询](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)。  
+1. [按照如何：执行返回 StructuralType 结果](../how-to-execute-a-query-that-returns-structuraltype-results.md)的查询。  
   
 2. 将以下查询作为参数传递给 `ExecuteStructuralTypeQuery` 方法：  
   
@@ -36,4 +36,4 @@ expression * expression
   
 ## <a name="see-also"></a>请参阅
 
-- [实体 SQL 引用](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [实体 SQL 引用](entity-sql-reference.md)

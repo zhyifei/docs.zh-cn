@@ -9,21 +9,21 @@ helpviewer_keywords:
 - container tags, <assemblyIdentity> element
 - assemblyIdentity element
 ms.assetid: cea4d187-6398-4da4-af09-c1abc6a349c1
-ms.openlocfilehash: 815e1c26a328d986f91992a1e67e438a563ffea6
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 7cce12f6fb4b957d740cd590bd84851fa16a117d
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663890"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252797"
 ---
 # <a name="assemblyidentity-element-for-runtime"></a>\<运行时 > 的\<assemblyIdentity > 元素
 包含有关程序集的标识信息。  
   
- \<configuration>  
-\<运行时 >  
-\<assemblyBinding>  
-\<dependentAssembly>  
-\<assemblyIdentity>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<运行时 >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<assemblyBinding >** ](assemblybinding-element-for-runtime.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<dependentAssembly >** ](dependentassembly-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<assemblyIdentity>**  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,9 +42,9 @@ culture="assembly culture"/>
 |特性|描述|  
 |---------------|-----------------|  
 |`name`|必需的特性。<br /><br /> 程序集的名称|  
-|`culture`|可选特性。<br /><br /> 一个字符串, 指定程序集的语言和国家/地区。|  
-|`publicKeyToken`|可选特性。<br /><br /> 一个十六进制值, 该值指定程序集的强名称。|  
-|`processorArchitecture`|可选特性。<br /><br /> 值 "x86"、"amd64"、"msil" 或 "ia64" 之一, 为包含特定于处理器的代码的程序集指定处理器体系结构。 这些值不区分大小写。 如果为该属性分配了其他任何值, 则`<assemblyIdentity>`将忽略整个元素。 请参阅 <xref:System.Reflection.ProcessorArchitecture>。|  
+|`culture`|可选特性。<br /><br /> 一个字符串，指定程序集的语言和国家/地区。|  
+|`publicKeyToken`|可选特性。<br /><br /> 一个十六进制值，该值指定程序集的强名称。|  
+|`processorArchitecture`|可选特性。<br /><br /> 值 "x86"、"amd64"、"msil" 或 "ia64" 之一，为包含特定于处理器的代码的程序集指定处理器体系结构。 这些值不区分大小写。 如果为该属性分配了其他任何值，则`<assemblyIdentity>`将忽略整个元素。 请参阅 <xref:System.Reflection.ProcessorArchitecture>。|  
   
 ## <a name="processorarchitecture-attribute"></a>processorArchitecture 特性  
   
@@ -53,7 +53,7 @@ culture="assembly culture"/>
 |`amd64`|仅适用于 AMD x86-64 体系结构。|  
 |`ia64`|仅限 Intel Itanium 体系结构。|  
 |`msil`|不特定于处理器和每字位数。|  
-|`x86`|32位 x86 处理器, 在64位平台上的 Windows on windows (WOW) 环境中。|  
+|`x86`|32位 x86 处理器，在64位平台上的 Windows on windows （WOW）环境中。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  
@@ -70,9 +70,9 @@ culture="assembly culture"/>
 ## <a name="remarks"></a>备注  
  每个 **\<dependentAssembly >** 元素必须有一个 **\<assemblyIdentity >** 子元素。  
   
- 如果该`processorArchitecture`属性存在, 则`<assemblyIdentity>`元素仅适用于具有相应处理器体系结构的程序集。 如果该`processorArchitecture`属性不存在, 则该`<assemblyIdentity>`元素可应用于具有任何处理器体系结构的程序集。  
+ 如果该`processorArchitecture`属性存在，则`<assemblyIdentity>`元素仅适用于具有相应处理器体系结构的程序集。 如果该`processorArchitecture`属性不存在，则该`<assemblyIdentity>`元素可应用于具有任何处理器体系结构的程序集。  
   
- 下面的示例显示了两个程序集的配置文件, 这些程序集具有两个不同的两个处理器体系结构, 并且其版本尚未保持同步。当应用程序在 x86 平台上执行时, `<assemblyIdentity>`第一个元素应用, 另一个元素将被忽略。 如果应用程序在 x86 或 ia64 以外的平台上执行, 则会忽略这两者。  
+ 下面的示例显示了两个程序集的配置文件，这些程序集具有两个不同的两个处理器体系结构，并且其版本尚未保持同步。当应用程序在 x86 平台上执行时， `<assemblyIdentity>`第一个元素应用，另一个元素将被忽略。 如果应用程序在 x86 或 ia64 以外的平台上执行，则会忽略这两者。  
   
 ```xml  
 <configuration>  
@@ -99,7 +99,7 @@ culture="assembly culture"/>
 </configuration>  
 ```  
   
- 如果配置文件包含`<assemblyIdentity>`没有`processorArchitecture`属性的元素, 并且不包含与平台相匹配的元素`processorArchitecture` , 则使用没有属性的元素。  
+ 如果配置文件包含`<assemblyIdentity>`没有`processorArchitecture`属性的元素，并且不包含与平台相匹配的元素`processorArchitecture` ，则使用没有属性的元素。  
   
 ## <a name="example"></a>示例  
  下面的示例演示如何提供有关程序集的信息。  

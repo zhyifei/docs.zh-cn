@@ -2,26 +2,26 @@
 title: SqlClient 中的已知问题（实体框架）
 ms.date: 03/30/2017
 ms.assetid: 48fe4912-4d0f-46b6-be96-3a42c54780f6
-ms.openlocfilehash: 8cadb234ffc0f00049edd0c09475031eeec275df
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 5c0b7c32e00a0cc90367a559a41f5a7ab59a33a4
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67662258"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251397"
 ---
 # <a name="known-issues-in-sqlclient-for-entity-framework"></a>SqlClient 中的已知问题（实体框架）
 本节介绍与 SQL Server .NET Framework 数据提供程序 (SqlClient) 有关的已知问题。  
   
 ## <a name="trailing-spaces-in-string-functions"></a>字符串函数中的尾随空格  
- SQL Server 将忽略字符串值中的尾随空格。 因此，传递字符串中的尾随空格可能导致不可预知的结果，甚至会导致失败。  
+ SQL Server 忽略字符串值中的尾随空格。 因此，传递字符串中的尾随空格可能导致不可预知的结果，甚至会导致失败。  
   
- 如果您必须具有在字符串中的尾随空格，您应考虑追加在结束时，使用空白字符，以便 SQL Server 不会修整字符串。 如果尾随空格不是必需的，应在传递给查询管道之前进行修整。  
+ 如果字符串中必须包含尾随空格，则应考虑在末尾追加一个空格字符，以便 SQL Server 不会剪裁字符串。 如果尾随空格不是必需的，应在传递给查询管道之前进行修整。  
   
 ## <a name="right-function"></a>RIGHT 函数  
  如果将非 `null` 值和 0 分别作为第一个自变量和第二个自变量传递给 `RIGHT(nvarchar(max)`, 0`)` 或 `RIGHT(varchar(max)`, 0`)`，将返回 `NULL` 值，而不是 `empty` 字符串。  
   
 ## <a name="cross-and-outer-apply-operators"></a>CROSS 和 OUTER APPLY 运算符  
- CROSS 和 OUTER APPLY 运算符在 SQL Server 2005 中引入。 在某些情况下查询管道可能生成包含 CROSS APPLY 和/或 OUTER APPLY 运算符的 TRANSACT-SQL 语句。 因为某些后端提供程序，包括 SQL Server 2005 之前版本的 SQL Server 不支持这些运算符，则不能对这些后端提供程序执行此类查询。  
+ SQL Server 2005 中引入了交叉和外部 APPLY 运算符。 在某些情况下，查询管道可能生成包含交叉 APPLY 和/或 OUTER APPLY 运算符的 Transact-sql 语句。 因为某些后端提供程序（包括早于 SQL Server 2005 的 SQL Server 版本）不支持这些运算符，所以不能对这些后端提供程序执行此类查询。  
   
  下面是一些可能导致输出查询中出现 CROSS APPLY 和/或 OUTER APPLY 运算符的典型情况：  
   
@@ -36,19 +36,19 @@ ms.locfileid: "67662258"
 - 在 REF 构造上具有 DEREF 构造的查询。  
   
 ## <a name="skip-operator"></a>SKIP 运算符  
- 如果使用 SQL Server 2000，则对非键列使用 SKIP 和 ORDER BY 可能返回不正确的结果。 如果非键列中有重复数据，那么跳过的行数可能多于指定的行数。 这是因为如何跳过已翻译为 SQL Server 2000。 例如，在下面的查询中，如果 `E.NonKeyColumn` 有重复值，则跳过的行可能超过 5 行：  
+ 如果使用的是 SQL Server 2000，则对非键列使用带有 ORDER BY 的 SKIP 可能会返回不正确的结果。 如果非键列中有重复数据，那么跳过的行数可能多于指定的行数。 这是因为如何为 SQL Server 2000 转换 SKIP。 例如，在下面的查询中，如果 `E.NonKeyColumn` 有重复值，则跳过的行可能超过 5 行：  
   
 ```  
 SELECT [E] FROM Container.EntitySet AS [E] ORDER BY [E].[NonKeyColumn] DESC SKIP 5L  
 ```  
   
 ## <a name="targeting-the-correct-sql-server-version"></a>以正确的 SQL Server 版本为目标  
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]面向基于 SQL Server 版本中指定的 Transact SQL 查询`ProviderManifestToken`存储模型 (.ssdl) 文件中的架构元素的属性。 您实际连接到的 SQL Server 的版本可能不是这一版本。 例如，如果使用的 SQL Server 2005，但你`ProviderManifestToken`属性设置为 2008 年，在服务器上可能不执行生成的 TRANSACT-SQL 查询。 例如，在 SQL Server 的早期版本上，无法执行使用了 SQL Server 2008 所引入的新日期时间类型的查询。 如果使用 SQL Server 2005，但你`ProviderManifestToken`属性设置为 2000年、 可能不太优化生成的 TRANSACT-SQL 查询，也可能收到指出该查询不支持的异常。 有关详细信息，请参阅 CROSS 和 OUTER APPLY 运算符前面的部分，本主题。  
+ 基于存储模型（ssdl）文件中 Schema 元素的`ProviderManifestToken`特性中指定的 SQL Server 版本，针对transact-sql查询。[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 您实际连接到的 SQL Server 的版本可能不是这一版本。 例如，如果使用 SQL Server 2005，但`ProviderManifestToken`属性设置为2008，则生成的 transact-sql 查询可能不会在服务器上执行。 例如，在 SQL Server 的早期版本上，无法执行使用了 SQL Server 2008 所引入的新日期时间类型的查询。 如果你使用的是 SQL Server 2005，但`ProviderManifestToken`你的特性设置为2000，则生成的 transact-sql 查询可能比较少，或者你可能会收到一个异常，指出不支持该查询。 有关详细信息，请参阅本主题前面的 "跨和外部 APPLY 运算符" 部分。  
   
- 某些数据库行为取决于为数据库设置的兼容级别。 如果你`ProviderManifestToken`属性设置为 2005年和 SQL Server 版本为 2005，但数据库的兼容性级别设置为"80"(SQL Server 2000)，生成的 Transact SQL 将以之为目标 SQL Server 2005 中，但可能会执行预期的截止日期兼容级别设置。 例如，如果 ORDER BY 列表中的列名与选择器中的列名相同，则可能会丢失排序信息。  
+ 某些数据库行为取决于为数据库设置的兼容级别。 如果将`ProviderManifestToken`属性设置为2005，并且 SQL Server 版本为2005，但数据库的兼容级别设置为 "80" （SQL Server 2000），则生成的 transact-sql 将面向 SQL Server 2005，但可能无法按预期执行，因为兼容级别设置。 例如，如果 ORDER BY 列表中的列名与选择器中的列名相同，则可能会丢失排序信息。  
   
 ## <a name="nested-queries-in-projection"></a>投影中的嵌套查询  
- 投影子句中的嵌套查询可在服务器上转换为笛卡尔积查询。 在某些后端服务器，包括 SLQ Server，这会导致 TempDB 表变得非常庞大。 这样会降低服务器性能。  
+ 投影子句中的嵌套查询可在服务器上转换为笛卡尔积查询。 在某些后端服务器（包括 SLQ Server）上，这会导致 TempDB 表变得很大。 这样会降低服务器性能。  
   
  下面是投影子句中嵌套查询的示例：  
   
@@ -57,9 +57,9 @@ SELECT c, (SELECT c, (SELECT c FROM AdventureWorksModel.Vendor AS c  ) As Inner2
 ```  
   
 ## <a name="server-generated-guid-identity-values"></a>服务器生成的 GUID 标识值  
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]支持服务器生成的 GUID 类型标识值，但提供程序必须支持在插入行后返回服务器生成的标识值。 从 SQL Server 2005 开始，你可以通过 SQL Server 数据库中返回服务器生成的 GUID 类型[OUTPUT 子句](https://go.microsoft.com/fwlink/?LinkId=169400)。  
+ [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]支持服务器生成的 GUID 类型标识值，但提供程序必须支持在插入行后返回服务器生成的标识值。 从 SQL Server 2005 开始，可以通过[OUTPUT 子句](https://go.microsoft.com/fwlink/?LinkId=169400)返回 SQL Server 数据库中服务器生成的 GUID 类型。  
   
 ## <a name="see-also"></a>请参阅
 
-- [用于实体框架的 SqlClient](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md)
-- [LINQ to Entities 中的已知问题和注意事项](../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)
+- [用于实体框架的 SqlClient](sqlclient-for-the-entity-framework.md)
+- [LINQ to Entities 中的已知问题和注意事项](./language-reference/known-issues-and-considerations-in-linq-to-entities.md)

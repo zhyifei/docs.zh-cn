@@ -11,14 +11,14 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: d59de04e6af6cfec473899e0a3edadcb3257d385
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 45a40d49cea2dd5f881fbd47cc2fb4bd96e8f9ff
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69665685"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70243989"
 ---
-# <a name="icorprofilerinfo8getdynamicfunctioninfo-method"></a>ICorProfilerInfo8:: GetDynamicFunctionInfo 方法
+# <a name="icorprofilerinfo8getdynamicfunctioninfo-method"></a>ICorProfilerInfo8：： GetDynamicFunctionInfo 方法
 
 检索有关动态方法的信息。
 
@@ -55,23 +55,23 @@ HRESULT GetDynamicFunctionInfo( [in]  FunctionID              functionId,
 弄`wszName`数组中的字符数。
 
 `wszName` \
-弄一个数组`WCHAR` , 它是函数的名称 (如果存在)。
+弄一个数组`WCHAR` ，它是函数的名称（如果存在）。
 
 ## <a name="remarks"></a>备注
 
-某些方法 (如 IL 存根或 LCG) 没有关联的元数据, 可以使用[IMetaDataImport](../metadata/imetadataimport-interface.md)和[IMetaDataImport2](../metadata/imetadataimport2-interface.md) api 来检索这些元数据。 探查器可以通过指令指针或通过侦听[ICorProfilerCallback8::D ynamicmethodjitcompilationstarted](icorprofilercallback8-dynamicmethodjitcompilationstarted-method.md)来遇到此类方法。
+某些方法（如 IL 存根或 LCG）没有关联的元数据，可以使用[IMetaDataImport](../metadata/imetadataimport-interface.md)和[IMetaDataImport2](../metadata/imetadataimport2-interface.md) api 来检索这些元数据。 探查器可以通过指令指针或通过侦听[ICorProfilerCallback8：:D ynamicmethodjitcompilationstarted](icorprofilercallback8-dynamicmethodjitcompilationstarted-method.md)来遇到此类方法。
 
-此 API 可用于检索有关动态方法的信息, 包括友好名称 (如果可用)。
+此 API 可用于检索有关动态方法的信息，包括友好名称（如果可用）。
 
 ## <a name="requirements"></a>要求
 
 **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。
 
-**标头：** Corprof.idl, Corprof.idl
+**标头：** Corprof.idl，Corprof.idl
 
 **类库**CorGuids.lib
 
-**.NET Framework 版本:** [!包括[net_current_v472plus](../../../../includes/net-current-v472plus.md)
+**.NET Framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
 ## <a name="see-also"></a>请参阅
 

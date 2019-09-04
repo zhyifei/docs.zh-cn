@@ -3,20 +3,21 @@ title: <sessionSecurityTokenCache>
 ms.date: 03/30/2017
 ms.assetid: d43e676c-0153-485c-ab31-0257a2db7507
 author: BrucePerlerMS
-ms.openlocfilehash: 9be3bf980c3756678d26d8652271113d4daaba43
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e949b16f76f20191b84bbbbb6e8b019d913316f0
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69943714"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251835"
 ---
 # <a name="sessionsecuritytokencache"></a>\<sessionSecurityTokenCache>
 使用服务或安全标记处理程序集合为会话令牌注册缓存。  
   
- \<system.identityModel>  
-\<identityConfiguration>  
-\<缓存 >  
-\<sessionSecurityTokenCache>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.identitymodel >** ](system-identitymodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<identityConfiguration >** ](identityconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<缓存 >** ](caches.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Sessionsecuritytokencache> >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -50,7 +51,7 @@ ms.locfileid: "69943714"
 |[\<caches>](caches.md)|注册服务使用的缓存或安全标记处理程序集合。|  
   
 ## <a name="example"></a>示例  
- 下面的 XML 演示了用于保存会话安全令牌 (<xref:System.IdentityModel.Tokens.SessionSecurityToken>) 的自定义缓存配置。 此配置取自`ClaimsAwareWebFarm`示例。 有关此示例的详细信息, 请参阅[WIF 代码示例索引](../../../security/wif-code-sample-index.md)。  
+ 下面的 XML 演示了用于保存会话安全令牌（<xref:System.IdentityModel.Tokens.SessionSecurityToken>）的自定义缓存配置。 此配置取自`ClaimsAwareWebFarm`示例。 有关此示例的详细信息，请参阅[WIF 代码示例索引](../../../security/wif-code-sample-index.md)。  
   
 ```xml  
 <caches>  

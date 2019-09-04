@@ -2,15 +2,15 @@
 title: FROM (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: ff3e3048-0d5d-4502-ae5c-9187fcbd0514
-ms.openlocfilehash: 3da9c9a2864219836c8aff6e0dc9e98656ba673f
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 993e71e6fee2e18806da789bdb10a488337d030f
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70043712"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250956"
 ---
 # <a name="from-entity-sql"></a>FROM (Entity SQL)
-指定在[SELECT](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)语句中使用的集合。
+指定在[SELECT](select-entity-sql.md)语句中使用的集合。
 
 ## <a name="syntax"></a>语法
 
@@ -51,7 +51,7 @@ LOB.Customers
 
 ### <a name="join-from-clause-item"></a>JOIN FROM 子句项
 
-`JOIN FROM` 子句项表示两个 `FROM` 子句项之间的联接。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 支持交叉联接、内部联接、左右外部联接和完全外部联接。 支持所有这些联接, 这与在 Transact-sql 中受支持的方式相似。 与 transact-sql 一样, `FROM` `JOIN`中涉及的两个子句项必须是独立的。 即，它们不能相关。 `CROSS APPLY` 或 `OUTER APPLY` 可用于这些情况。
+`JOIN FROM` 子句项表示两个 `FROM` 子句项之间的联接。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 支持交叉联接、内部联接、左右外部联接和完全外部联接。 支持所有这些联接，这与在 Transact-sql 中受支持的方式相似。 与 transact-sql 一样， `FROM` `JOIN`中涉及的两个子句项必须是独立的。 即，它们不能相关。 `CROSS APPLY` 或 `OUTER APPLY` 可用于这些情况。
 
 #### <a name="cross-joins"></a>交叉联接
 
@@ -86,7 +86,7 @@ LOB.Customers
 前面的查询表达式将 `ON` 条件为 true 的每一个左侧集合元素与其右侧集合的配对元素组合起来。 如果 `ON` 条件为 false，表达式仍处理与右侧元素（值为 null）配对的一个左侧元素实例。 此外，它还处理与左侧元素（值为 null）配对的一个左侧元素实例。
 
 > [!NOTE]
-> 为了保持与 SQL-92 的兼容性, 在 Transact-sql 中, OUTER 关键字是可选的。 因此 `LEFT JOIN`、`RIGHT JOIN` 和 `FULL JOIN` 是 `LEFT OUTER JOIN`、`RIGHT OUTER JOIN` 和 `FULL OUTER JOIN` 的同义词。
+> 为了保持与 SQL-92 的兼容性，在 Transact-sql 中，OUTER 关键字是可选的。 因此 `LEFT JOIN`、`RIGHT JOIN` 和 `FULL JOIN` 是 `LEFT OUTER JOIN`、`RIGHT OUTER JOIN` 和 `FULL OUTER JOIN` 的同义词。
 
 ### <a name="apply-clause-item"></a>APPLY 子句项
 
@@ -103,10 +103,10 @@ LOB.Customers
 `SELECT c, f FROM C AS c OUTER APPLY c.Assoc AS f`
 
 > [!NOTE]
-> 与 Transact-sql 不同, 中不需要显式 unnest 步骤[!INCLUDE[esql](../../../../../../includes/esql-md.md)]。
+> 与 Transact-sql 不同，中不需要显式 unnest 步骤[!INCLUDE[esql](../../../../../../includes/esql-md.md)]。
 
 > [!NOTE]
-> `CROSS`和`OUTER APPLY`运算符是在 SQL Server 2005 中引入的。 在某些情况下，查询管道可能生成包含 `CROSS APPLY` 和/或 `OUTER APPLY` 运算符的 Transact-SQL。 因为某些后端提供程序 (包括早于 SQL Server 2005 的 SQL Server 版本) 不支持这些运算符, 所以不能对这些后端提供程序执行此类查询。
+> `CROSS`和`OUTER APPLY`运算符是在 SQL Server 2005 中引入的。 在某些情况下，查询管道可能生成包含 `CROSS APPLY` 和/或 `OUTER APPLY` 运算符的 Transact-SQL。 因为某些后端提供程序（包括早于 SQL Server 2005 的 SQL Server 版本）不支持这些运算符，所以不能对这些后端提供程序执行此类查询。
 >
 > 下面是一些可能导致输出查询中出现 `CROSS APPLY` 和/或 `OUTER APPLY`运算符的典型情况：分页相关子查询；相关子查询或导航所生成的集合上的 AnyElement；使用接受元素选择器的分组方法的 LINQ 查询；显式指定 `CROSS APPLY` 或 `OUTER APPLY` 的查询；在 `DEREF` 构造上具有 `REF` 构造的查询。
 
@@ -114,7 +114,7 @@ LOB.Customers
 
 `FROM` 子句不能包含逗号分隔的多个集合。 在这些情况下，假定集合将联接在一起。 将它们视为一个 n 向 CROSS JOIN。
 
-在下面的示例中`C` , `D`和是独立集合`C`, `c.Names`但依赖于。
+在下面的示例中`C` ， `D`和是独立集合`C`， `c.Names`但依赖于。
 
 ```sql
 FROM C AS c, D AS d, c.Names AS e
@@ -149,7 +149,7 @@ from (C as c join D as d) cross apply c.Names as e
 from (C as c join D as d) cross apply c.Names as e
 ```
 
-在[!INCLUDE[esql](../../../../../../includes/esql-md.md)] (与 transact-sql 不同) 中`FROM` , 子句仅将别名引入作用域。 任何对这些集合的列（属性）的引用都必须以别名进行限定。
+在[!INCLUDE[esql](../../../../../../includes/esql-md.md)] （与 transact-sql 不同）中`FROM` ，子句仅将别名引入作用域。 任何对这些集合的列（属性）的引用都必须以别名进行限定。
 
 ## <a name="pulling-up-keys-from-nested-queries"></a>从嵌套查询中拉取键
 
@@ -167,6 +167,6 @@ select {1} from {2, 3}
 
 ## <a name="see-also"></a>请参阅
 
-- [实体 SQL 引用](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
-- [查询表达式](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expressions-entity-sql.md)
-- [可以为 NULL 的结构化类型](../../../../../../docs/framework/data/adonet/ef/language-reference/nullable-structured-types-entity-sql.md)
+- [实体 SQL 引用](entity-sql-reference.md)
+- [查询表达式](query-expressions-entity-sql.md)
+- [可以为 NULL 的结构化类型](nullable-structured-types-entity-sql.md)

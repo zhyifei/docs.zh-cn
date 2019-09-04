@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: 503f55ba-26ed-45ac-a2ea-caf994da04cd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0e2be4d9384f1e1ef73ce6064184aa2621a517a8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2b2774c32b4ee3e67772f84d599ecc5dbeb6598b
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674098"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252582"
 ---
-# <a name="gcconcurrent-element"></a>\<gcConcurrent > 元素
+# <a name="gcconcurrent-element"></a>\<t > 元素
 
 指定公共语言运行时是否在单独线程上运行垃圾回收。
 
-\<configuration>\
-\<runtime>\
-\<gcConcurrent>
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<运行时 >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<gcConcurrent>**  
 
 ## <a name="syntax"></a>语法
 
@@ -43,11 +43,11 @@ ms.locfileid: "61674098"
 |---------------|-----------------|
 |`enabled`|必需的特性。<br /><br /> 指定运行时是否并发运行服务器垃圾回收。|
 
-## <a name="enabled-attribute"></a>已启用的属性
+## <a name="enabled-attribute"></a>enabled 属性
 
-|“值”|描述|
+|值|描述|
 |-----------|-----------------|
-|`false`|不会同时运行垃圾回收。|
+|`false`|不并发运行垃圾回收。|
 |`true`|并发运行垃圾回收。 这是默认设置。|
 
 ### <a name="child-elements"></a>子元素
@@ -63,12 +63,12 @@ ms.locfileid: "61674098"
 
 ## <a name="remarks"></a>备注
 
-在.NET Framework 4 之前，工作站垃圾回收支持并发垃圾回收，在后台对一个单独线程执行垃圾回收。 在.NET Framework 4 中，并发垃圾回收被后台 GC 取代，它还在单独的线程上在后台中执行垃圾回收。 从 .NET Framework 4.5 开始，服务器垃圾回收可提供后台垃圾回收。 `<gcConcurrent>`元素控制运行时是否执行并发还是后台垃圾回收，如果可用，或是否在前台执行垃圾回收。
+在.NET Framework 4 之前，工作站垃圾回收支持并发垃圾回收，在后台对一个单独线程执行垃圾回收。 在.NET Framework 4 中，并发垃圾回收被后台 GC 取代，它还在单独的线程上在后台中执行垃圾回收。 从 .NET Framework 4.5 开始，服务器垃圾回收可提供后台垃圾回收。 `<gcConcurrent>`元素控制运行时是执行并发还是后台垃圾回收（如果可用），或者是否执行前台垃圾回收。
 
-### <a name="to-disable-background-garbage-collection"></a>若要禁用后台垃圾回收
+### <a name="to-disable-background-garbage-collection"></a>禁用后台垃圾回收
 
 > [!WARNING]
-> 从.NET Framework 4 开始，并发垃圾回收替换为后台垃圾回收。 条款*并发*并*背景*.NET Framework 文档中互换使用。 若要禁用后台垃圾回收，请使用 `<gcConcurrent>` 元素，如本文所述。
+> 从.NET Framework 4 开始，并发垃圾回收替换为后台垃圾回收。 在 .NET Framework 文档中，术语 "*并发*" 和 "*背景*" 可互换使用。 若要禁用后台垃圾回收，请使用 `<gcConcurrent>` 元素，如本文所述。
 
 默认情况下，运行时使用并发或后台垃圾回收，回收针对延迟进行了优化。 如果应用程序涉及大量用户交互，则通过让并发垃圾回收保持启用状态，可最大限度缩短应用程序执行垃圾回收时的暂停时间。 如果将 `enabled` 元素的 `<gcConcurrent>` 特性设置为 `false`，运行时将使用针对吞吐量优化的非并发垃圾回收。 下列配置文件会禁用后台垃圾回收。
 
@@ -80,9 +80,9 @@ ms.locfileid: "61674098"
 </configuration>
 ```
 
- 如果没有`<gcConcurrentSetting>`设置计算机配置文件中，它定义所有.NET Framework 应用程序的默认值。 计算机配置文件设置将重写应用程序配置文件设置。
+ 如果计算机配置文件`<gcConcurrentSetting>`中存在一个设置，则会为所有 .NET Framework 应用程序定义默认值。 计算机配置文件设置将重写应用程序配置文件设置。
 
- 有关详细信息并发和后台垃圾回收，请参阅[并发垃圾回收](../../../../standard/garbage-collection/fundamentals.md#concurrent-garbage-collection)主题中[垃圾回收的基础](../../../../standard/garbage-collection/fundamentals.md)一文。
+ 有关并发和后台垃圾回收的详细信息，请参阅[垃圾回收基础知识](../../../../standard/garbage-collection/fundamentals.md)一文中的 "[并发垃圾](../../../../standard/garbage-collection/fundamentals.md#concurrent-garbage-collection)回收" 一节。
 
 ## <a name="example"></a>示例
 

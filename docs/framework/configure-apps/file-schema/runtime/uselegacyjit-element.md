@@ -4,20 +4,20 @@ ms.date: 04/26/2017
 ms.assetid: c2cf97f0-9262-4f1f-a754-5568b51110ad
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2d79479d1836963fcbdaaf8d40bfc3648b88c4a3
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 3b783a82b1ef964de308532ef544bbfab2397400
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663412"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252227"
 ---
 # <a name="uselegacyjit-element"></a>\<useLegacyJit> 元素
 
 确定公共语言运行时是否使用实时编译的旧版 64 位 JIT 编译器。  
   
-\<configuration>  
-\<运行时 >  
-\<useLegacyJit>
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<运行时 >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<useLegacyJit>**  
   
 ## <a name="syntax"></a>语法  
   
@@ -57,32 +57,32 @@ ms.locfileid: "69663412"
   
 ## <a name="remarks"></a>备注  
 
-从 .NET Framework 4.6 开始, 默认情况下, 公共语言运行时为实时 (JIT) 编译使用新的64位编译器。 在某些情况下, 这可能会导致应用程序代码的行为与以前版本的64位 JIT 编译器进行 JIT 编译的行为不同。 通过将`<useLegacyJit>`元素`enabled`的属性设置为`1`, 可以禁用新的64位 jit 编译器, 而使用旧的64位 jit 编译器编译应用程序。  
+从 .NET Framework 4.6 开始，默认情况下，公共语言运行时为实时（JIT）编译使用新的64位编译器。 在某些情况下，这可能会导致应用程序代码的行为与以前版本的64位 JIT 编译器进行 JIT 编译的行为不同。 通过将`<useLegacyJit>`元素`enabled`的属性设置为`1`，可以禁用新的64位 jit 编译器，而使用旧的64位 jit 编译器编译应用程序。  
   
 > [!NOTE]
 > `<useLegacyJit>`元素仅影响64位 JIT 编译。 与32位 JIT 编译器的编译不受影响。  
   
-您可以通过两种其他方法启用旧版64位 JIT 编译器, 而不是使用配置文件设置:  
+您可以通过两种其他方法启用旧版64位 JIT 编译器，而不是使用配置文件设置：  
   
 - 设置环境变量
 
-  将环境变量设置`0`为 (使用新的64位 jit 编译器) 或`1` (使用较旧的64位 jit 编译器): `COMPLUS_useLegacyJit`
+  将环境变量设置`0`为（使用新的64位 jit 编译器）或`1` （使用较旧的64位 jit 编译器）： `COMPLUS_useLegacyJit`
   
   ```  
   COMPLUS_useLegacyJit=0|1  
   ```  
   
-  环境变量具有*全局作用域*, 这意味着它会影响计算机上运行的所有应用程序。 如果已设置, 则它可以被应用程序配置文件设置重写。 环境变量名称不区分大小写。
+  环境变量具有*全局作用域*，这意味着它会影响计算机上运行的所有应用程序。 如果已设置，则它可以被应用程序配置文件设置重写。 环境变量名称不区分大小写。
   
 - 添加注册表项
 
-  可以通过将`REG_DWORD`值添加到注册表中的`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework`或`HKEY_CURRENT_USER\SOFTWARE\Microsoft\.NETFramework`键来启用旧的64位 JIT 编译器。 此值的名称`useLegacyJit`为。 如果该值为 0, 则使用新编译器。 如果值为 1, 则启用旧版64位 JIT 编译器。 注册表值名称不区分大小写。
+  可以通过将`REG_DWORD`值添加到注册表中的`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework`或`HKEY_CURRENT_USER\SOFTWARE\Microsoft\.NETFramework`键来启用旧的64位 JIT 编译器。 此值的名称`useLegacyJit`为。 如果该值为0，则使用新编译器。 如果值为1，则启用旧版64位 JIT 编译器。 注册表值名称不区分大小写。
   
-  将该值添加到`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework`密钥会影响计算机上运行的所有应用。 将该值添加到`HKEY_CURRENT_USER\SOFTWARE\Microsoft\.NETFramework`密钥会影响当前用户运行的所有应用。 如果使用多个用户帐户配置了计算机, 则只有当前用户运行的应用才会受到影响, 除非还将该值添加到其他用户的注册表项。 如果将`<useLegacyJit>`元素添加到配置文件中, 将重写注册表设置 (如果存在)。  
+  将该值添加到`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework`密钥会影响计算机上运行的所有应用。 将该值添加到`HKEY_CURRENT_USER\SOFTWARE\Microsoft\.NETFramework`密钥会影响当前用户运行的所有应用。 如果使用多个用户帐户配置了计算机，则只有当前用户运行的应用才会受到影响，除非还将该值添加到其他用户的注册表项。 如果将`<useLegacyJit>`元素添加到配置文件中，将重写注册表设置（如果存在）。  
   
 ## <a name="example"></a>示例  
 
-下面的配置文件使用新的64位 JIT 编译器禁用编译, 而改用旧的64位 JIT 编译器。  
+下面的配置文件使用新的64位 JIT 编译器禁用编译，而改用旧的64位 JIT 编译器。  
   
 ```xml  
 <?xml version ="1.0"?>  

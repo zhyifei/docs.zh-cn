@@ -9,19 +9,19 @@ helpviewer_keywords:
 - runtime element
 - container tags, <runtime> element
 ms.assetid: 1eb2fae3-de4b-45b6-852f-517c39b751bd
-ms.openlocfilehash: 3cf99a4dcf64b82846729d8663e398385b7a1086
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: e703b9739ea93d3c7bf08371bc264bbdcb05b716
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663455"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252330"
 ---
 # <a name="runtime-element"></a>\<运行时 > 元素
 
 提供公共语言运行时用来配置应用程序的信息。
 
-\<配置 > \
-\<运行时 >
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp;&nbsp; **\<运行时 >**  
 
 ## <a name="syntax"></a>语法
 
@@ -49,9 +49,9 @@ ms.locfileid: "69663455"
 |[\<appDomainResourceMonitoring>](appdomainresourcemonitoring-element.md)|指示运行时在过程的生命周期过程中收集所有应用程序域的统计数据。|
 |[\<assemblyBinding>](assemblybinding-element-for-runtime.md)|包含有关程序集版本重定向和程序集位置的信息。|
 |[\<bypassTrustedAppStrongNames>](bypasstrustedappstrongnames-element.md)|指定是否应绕过对受信任的程序集进行强名称验证。|
-|[\<CompatSortNLSVersion>](compatsortnlsversion-element.md)|指定在执行字符串比较时, 运行时应使用旧的排序行为。|
+|[\<CompatSortNLSVersion>](compatsortnlsversion-element.md)|指定在执行字符串比较时，运行时应使用旧的排序行为。|
 |[\<developmentMode>](developmentmode-element.md)|指定运行时是否搜索由 DEVPATH 环境变量指定的目录中的程序集。|
-|[\<disableCachingBindingFailures>](disablecachingbindingfailures-element.md)|指定是否禁用绑定故障的缓存, 这是 .NET Framework 版本2.0 中的默认行为。|
+|[\<disableCachingBindingFailures>](disablecachingbindingfailures-element.md)|指定是否禁用绑定故障的缓存，这是 .NET Framework 版本2.0 中的默认行为。|
 |[\<disableCommitThreadStack>](disablecommitthreadstack-element.md)|指定在线程启动时是否提交完整线程堆栈。|
 |[\<disableFusionUpdatesFromADManager>](disablefusionupdatesfromadmanager-element.md)|指定是否禁用允许运行时主机为应用程序域重写配置设置的默认行为。|
 |[\<EnableAmPmParseAdjustment>](enableampmparseadjustment-element.md)|确定日期和时间分析方法是否使用调整后的一组规则来分析仅包含天、月、小时和 AM/PM 指示符的日期字符串。|
@@ -71,7 +71,7 @@ ms.locfileid: "69663455"
 |[\<NetFx45_CultureAwareComparerGetHashCode_LongStrings>](netfx45-cultureawarecomparergethashcode-longstrings-element.md)|指定运行时是否使用固定的内存量来计算 <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> 方法的哈希代码。|
 |[\<PreferComInsteadOfRemoting>](prefercominsteadofmanagedremoting-element.md)|指定运行时将使用 COM 互操作来代替跨应用程序域边界的远程。|
 |[\<relativeBindForResources>](relativebindforresources-element.md)|优化附属程序集的探测。|
-|[\<shadowCopyVerifyByTimeStamp>](shadowcopyverifybytimestamp-element.md)|指定卷影复制是否使用 .NET Framework 4 中引入的默认启动行为, 或恢复为 .NET Framework 早期版本的启动行为。|
+|[\<shadowCopyVerifyByTimeStamp>](shadowcopyverifybytimestamp-element.md)|指定卷影复制是否使用 .NET Framework 4 中引入的默认启动行为，或恢复为 .NET Framework 早期版本的启动行为。|
 |[\<supportPortability>](supportportability-element.md)|通过禁用将程序集视为等效于应用程序可移植性用途的默认行为来指定应用程序可以在两种不同的 .NET Framework 实现中引用同一程序集。|
 |[\<system.runtime.caching>](system-runtime-caching-element-cache-settings.md)|提供默认内存中对象缓存的配置信息。|
 |[\<Thread_UseAllCpuGroups>](thread-useallcpugroups-element.md)|指定运行时是否跨所有 CPU 组分发托管的线程。|
@@ -89,9 +89,9 @@ ms.locfileid: "69663455"
 
 ## <a name="remarks"></a>备注
 
-公共语言运行时使用配置文件的[ \<运行时 >](runtime-element.md)部分中的子元素来配置应用程序的执行方式。 例如, [ \<r >](gcserver-element.md)元素确定垃圾回收器是使用工作站垃圾回收还是服务器[ \<](userandomizedstringhashalgorithm-element.md)垃圾回收, UseRandomizedStringHashAlgorithm > 元素确定公共语言运行时是否为每个应用程序或每个应用程序域计算字符串的哈希代码, 以及`AppContextSwitchOverrides`元素是否允许库用户选择或退出库提供的已更改功能。
+公共语言运行时使用配置文件的[ \<运行时 >](runtime-element.md)部分中的子元素来配置应用程序的执行方式。 例如， [ \<r >](gcserver-element.md)元素确定垃圾回收器是使用工作站垃圾回收还是服务器[ \<](userandomizedstringhashalgorithm-element.md)垃圾回收，UseRandomizedStringHashAlgorithm > 元素确定公共语言运行时是否为每个应用程序或每个应用程序域计算字符串的哈希代码，以及`AppContextSwitchOverrides`元素是否允许库用户选择或退出库提供的已更改功能。
 
-在应用程序启动时, 公共语言运行时将自动读取[ \<运行时 >](runtime-element.md)部分中的元素。 你还可以通过向<xref:System.AppDomainSetup.ConfigurationFile%2A?displayProperty=nameWithType>属性提供其名称来定义非默认应用程序域的配置文件; 在加载应用程序域时, 将自动读取其设置。 如果需要, 您很少需要直接读取应用程序的配置文件中的[ \<运行时 >](runtime-element.md)部分中的设置。
+在应用程序启动时，公共语言运行时将自动读取[ \<运行时 >](runtime-element.md)部分中的元素。 你还可以通过向<xref:System.AppDomainSetup.ConfigurationFile%2A?displayProperty=nameWithType>属性提供其名称来定义非默认应用程序域的配置文件; 在加载应用程序域时，将自动读取其设置。 如果需要，您很少需要直接读取应用程序的配置文件中的[ \<运行时 >](runtime-element.md)部分中的设置。
 
 ## <a name="see-also"></a>请参阅
 

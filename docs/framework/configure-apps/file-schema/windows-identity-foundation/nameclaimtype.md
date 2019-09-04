@@ -3,22 +3,23 @@ title: <nameClaimType>
 ms.date: 03/30/2017
 ms.assetid: 17514d95-f0f5-4789-8e28-346640dc227c
 author: BrucePerlerMS
-ms.openlocfilehash: 47366c5bb2bd9228268fce3ae6e1fb5ad457dab1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4bf8ad2f70499edfc72dd9fcd9a5d8a0aafbbc66
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69942619"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251942"
 ---
 # <a name="nameclaimtype"></a>\<nameClaimType>
-设置指定<xref:System.Security.Principal.IIdentity.Name%2A>属性的声明类型。 声明类型用于<xref:System.Security.Claims.Claim>在此标记处理程序的<xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A>方法返回的<xref:System.Security.Claims.ClaimsIdentity>对象集合中搜索。 然后, 将匹配声明的值设置为从此标记处理程序生成<xref:System.Security.Principal.IIdentity>的的名称。  
+设置指定<xref:System.Security.Principal.IIdentity.Name%2A>属性的声明类型。 声明类型用于<xref:System.Security.Claims.Claim>在此标记处理程序的<xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A>方法返回的<xref:System.Security.Claims.ClaimsIdentity>对象集合中搜索。 然后，将匹配声明的值设置为从此标记处理程序生成<xref:System.Security.Principal.IIdentity>的的名称。  
   
- \<system.identityModel>  
-\<identityConfiguration>  
-\<securityTokenHandlers>  
-\<add>  
-\<samlSecurityTokenRequirement>  
-\<nameClaimType>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.identitymodel >** ](system-identitymodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<identityConfiguration >** ](identityconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<securityTokenHandlers >** ](securitytokenhandlers.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<添加 >** ](add.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<samlSecurityTokenRequirement >** ](samlsecuritytokenrequirement.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<nameClaimType >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,7 +45,7 @@ ms.locfileid: "69942619"
   
 |特性|描述|  
 |---------------|-----------------|  
-|值|一个字符串, 指定表示要<xref:System.Security.Principal.IIdentity.Name%2A>用于属性的声明的声明类型的 URI。 必需。|  
+|值|一个字符串，指定表示要<xref:System.Security.Principal.IIdentity.Name%2A>用于属性的声明的声明类型的 URI。 必需。|  
   
 ### <a name="child-elements"></a>子元素  
  无  
@@ -56,7 +57,7 @@ ms.locfileid: "69942619"
 |[\<samlSecurityTokenRequirement>](samlsecuritytokenrequirement.md)|为<xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> 类<xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> 、类或其中任何一个类的派生类提供配置。|  
   
 ## <a name="remarks"></a>备注  
- 从`<nameClaimType>`配置中初始化<xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement.NameClaimType%2A> <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement>对象时, 元素设置属性。  
+ 从`<nameClaimType>`配置中初始化<xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement.NameClaimType%2A> <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement>对象时，元素设置属性。  
   
 ## <a name="example"></a>示例  
   

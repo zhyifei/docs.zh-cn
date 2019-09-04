@@ -12,21 +12,21 @@ helpviewer_keywords:
 ms.assetid: 4613407e-d0a8-4ef2-9f81-a6acb9fdc7d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7c8f8744d3ef1ca30eb05a4c8c3290d8a514714b
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: cc206e584440778858e61fc0bab51fc8ffa2009a
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663517"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252384"
 ---
 # <a name="publisherpolicy-element"></a>\<Publisherpolicy apply > 元素
 指定运行时是否使用发布者策略。  
   
- \<configuration>  
-\<运行时 >  
-\<assemblyBinding>  
-\<dependentAssembly>  
-\<publisherPolicy>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<运行时 >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<assemblyBinding >** ](assemblybinding-element-for-runtime.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<dependentAssembly >** ](dependentassembly-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Publisherpolicy apply >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -51,21 +51,24 @@ ms.locfileid: "69663517"
 |`no`|不应用发布者策略。|  
   
 ### <a name="child-elements"></a>子元素  
- 无。  
+
+无。  
   
 ### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
 |-------------|-----------------|  
+|`assemblyBinding`|包含有关程序集版本重定向和程序集位置的信息。|  
 |`configuration`|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
+|`dependentAssembly`|封装每个程序集的绑定策略和程序集位置。 为每`<dependentAssembly>`个程序集使用一个元素。|  
 |`runtime`|包含有关程序集绑定和垃圾回收的信息。|  
   
 ## <a name="remarks"></a>备注  
- 当组件供应商发布程序集的新版本时, 供应商可以包括发行者策略, 以便使用旧版本的应用程序现在使用新版本。 若要指定是否将发布服务器策略应用于特定程序集, 请将 **\<publisherpolicy apply >** 元素放在 **\<dependentAssembly >** 元素中。  
+ 当组件供应商发布程序集的新版本时，供应商可以包括发行者策略，以便使用旧版本的应用程序现在使用新版本。 若要指定是否将发布服务器策略应用于特定程序集，请将 **\<publisherpolicy apply >** 元素放在 **\<dependentAssembly >** 元素中。  
   
- **Apply**属性的默认设置为 **"是"** 。 如果将**apply**特性设置为 "**否**", 则将替代程序集以前的 **"是"** 设置。  
+ **Apply**属性的默认设置为 **"是"** 。 如果将**apply**特性设置为 "**否**"，则将替代程序集以前的 **"是"** 设置。  
   
- 若要让应用程序使用应用程序配置文件中的[ \<publisherpolicy apply apply = "no"/>](publisherpolicy-element.md)元素显式忽略发行者策略, 则必须具有权限。 通过在<xref:System.Security.Permissions.SecurityPermissionFlag> <xref:System.Security.Permissions.SecurityPermission>上设置标志来授予权限。 有关详细信息, 请参阅[程序集绑定重定向安全权限](../../assembly-binding-redirection-security-permission.md)。  
+ 若要让应用程序使用应用程序配置文件中的[ \<publisherpolicy apply apply = "no"/>](publisherpolicy-element.md)元素显式忽略发行者策略，则必须具有权限。 通过在<xref:System.Security.Permissions.SecurityPermissionFlag> <xref:System.Security.Permissions.SecurityPermission>上设置标志来授予权限。 有关详细信息，请参阅[程序集绑定重定向安全权限](../../assembly-binding-redirection-security-permission.md)。  
   
 ## <a name="example"></a>示例  
  下面的示例将关闭程序集`myAssembly`的发布服务器策略。  

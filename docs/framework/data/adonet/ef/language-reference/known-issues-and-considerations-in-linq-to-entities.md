@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: acd71129-5ff0-4b4e-b266-c72cc0c53601
-ms.openlocfilehash: 66af3395d7ba7271323ad6461e8e1fb8c823a1c6
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7be3491af48ad29cd7892dd31a077aa7ac44ca63
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69913898"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250489"
 ---
 # <a name="known-issues-and-considerations-in-linq-to-entities"></a>LINQ to Entities 中的已知问题和注意事项
 本部分提供有关 LINQ to Entities 查询的已知问题的信息。  
@@ -25,7 +25,7 @@ ms.locfileid: "69913898"
   
 - [不支持引用非标量变量](#RefNonScalarClosures)  
   
-- [嵌套查询可能会失败, 并 SQL Server 2000](#NestedQueriesSQL2000)  
+- [嵌套查询可能会失败，并 SQL Server 2000](#NestedQueriesSQL2000)  
   
 - [投影到匿名类型](#ProjectToAnonymousType)  
   
@@ -35,14 +35,14 @@ ms.locfileid: "69913898"
   
 <a name="OrderingInfoLost"></a>   
 ## <a name="ordering-information-lost"></a>排序信息丢失  
- 如果将列投影到匿名类型, 则会在某些查询中丢失排序信息, 这些查询将针对设置为兼容级别 "80" 的 SQL Server 2005 数据库执行。  当 order-by 列表中的列名与选择器中的列名相同时，就会发生这种情况，如下面的示例所示：  
+ 如果将列投影到匿名类型，则会在某些查询中丢失排序信息，这些查询将针对设置为兼容级别 "80" 的 SQL Server 2005 数据库执行。  当 order-by 列表中的列名与选择器中的列名相同时，就会发生这种情况，如下面的示例所示：  
   
  [!code-csharp[DP L2E Conceptual Examples#SBUDT543840](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#sbudt543840)]
  [!code-vb[DP L2E Conceptual Examples#SBUDT543840](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#sbudt543840)]  
   
 <a name="UnsignedIntsUnsupported"></a>   
 ## <a name="unsigned-integers-not-supported"></a>不支持无符号整数  
- 不支持在 LINQ to Entities 查询中指定无符号整数类型, 因为[!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]不支持无符号整数。 如果指定无符号整数, <xref:System.ArgumentException>则在查询表达式转换过程中会引发异常, 如下面的示例中所示。 此示例查询其 ID 为 48000 的订单。  
+ 不支持在 LINQ to Entities 查询中指定无符号整数类型，因为[!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]不支持无符号整数。 如果指定无符号整数， <xref:System.ArgumentException>则在查询表达式转换过程中会引发异常，如下面的示例中所示。 此示例查询其 ID 为 48000 的订单。  
   
  [!code-csharp[DP L2E Conceptual Examples#UIntAsQueryParam](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#uintasqueryparam)]
  [!code-vb[DP L2E Conceptual Examples#UIntAsQueryParam](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#uintasqueryparam)]  
@@ -81,4 +81,4 @@ ms.locfileid: "69913898"
   
 ## <a name="see-also"></a>请参阅
 
-- [LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)
+- [LINQ to Entities](linq-to-entities.md)

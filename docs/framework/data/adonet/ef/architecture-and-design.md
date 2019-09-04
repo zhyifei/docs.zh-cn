@@ -2,24 +2,24 @@
 title: 体系结构和设计
 ms.date: 03/30/2017
 ms.assetid: bd738d39-00e2-4bab-b387-90aac1a014bd
-ms.openlocfilehash: c15bbeb22918b20010fddf373d1e80b7ff27f97c
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 50fc643fecf4b188123c556d754b3cbfa529e5e9
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422789"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251719"
 ---
 # <a name="architecture-and-design"></a>体系结构和设计
 
-中的 SQL 生成模块[示例提供程序](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0)作为表示命令目录树的表达式树的访问者实现。 通过表达式树上的单个传递来执行生成。
+[示例提供程序](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0)中的 SQL 生成模块是作为表示命令目录树的表达式树的访问者实现的。 通过表达式树上的单个传递来执行生成。
 
-从下至上处理树中的节点。 首先，生成中间结构：SqlSelectStatement 或 SqlBuilder，这两个实现 ISqlFragment。 紧接着，从该结构生成字符串 SQL 语句。 生成中间结构的原因有两个：
+从下至上处理树中的节点。 首先，生成一个中间结构：SqlSelectStatement 或 SqlBuilder，两者都实现 ISqlFragment。 紧接着，从该结构生成字符串 SQL 语句。 生成中间结构的原因有两个：
 
 - 从逻辑上说，不按顺序填充 SQL SELECT 语句。 先访问参与 FROM 子句的节点，然后再访问参与 WHERE、GROUP BY 和 ORDER BY 子句的节点。
 
 - 若要重命名别名，您必须标识所有使用的别名，避免在重命名期间发生冲突。 若要延迟 SqlBuilder 中的重命名选择，请使用 Symbol 对象以表示作为重命名候选项的列。
 
-![Diagram](../../../../../docs/framework/data/adonet/ef/media/de1ca705-4f7c-4d2d-ace5-afefc6d3cefa.gif "de1ca705-4f7c-4d2d-ace5-afefc6d3cefa")
+![Diagram](./media/de1ca705-4f7c-4d2d-ace5-afefc6d3cefa.gif "de1ca705-4f7c-4d2d-ace5-afefc6d3cefa")
 
 在第一阶段，当访问表达式树时，将表达式组合为 SqlSelectStatements，对联接进行平展并对联接别名进行平展。 在此传递过程中，Symbol 对象表示可以重命名的列或输入别名。
 
@@ -27,7 +27,7 @@ ms.locfileid: "67422789"
 
 ## <a name="data-structures"></a>数据结构
 
-本部分讨论中使用的类型[示例提供程序](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0)用于生成 SQL 语句。
+本节讨论用于生成 SQL 语句的[示例提供程序](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0)中使用的类型。
 
 ### <a name="isqlfragment"></a>ISqlFragment
 
@@ -57,7 +57,7 @@ internal sealed class SqlBuilder : ISqlFragment {
 
 #### <a name="sqlselectstatement"></a>SqlSelectStatement
 
-SqlSelectStatement 表示形状"SELECT...的规范 SQL SELECT 语句 从。 WHERE... 分组依据... ORDER BY"。
+SqlSelectStatement 表示标准的 SQL SELECT 语句 "SELECT 。 从。 WHERE 。 分组依据 。 ORDER BY "。
 
 每个 SQL 子句均由一个 StringBuilder 表示。 此外，它跟踪是否已指定 Distinct 以及语句是否位于最顶层。 如果语句未位于最顶层，则除非语句也具有 TOP 子句，否则将忽略 ORDER BY 子句。
 
@@ -86,7 +86,7 @@ internal sealed class SqlSelectStatement : ISqlFragment {
 
 #### <a name="topclause"></a>TopClause
 
-TopClause 表示 SqlSelectStatement 中的 TOP 表达式。 TopCount 属性指示应选择的 TOP 行的数目。  当 WithTies 为 true 时，指示生成 DbLimitExpression。
+TopClause 表示 SqlSelectStatement 中的 TOP 表达式。 TopCount 属性指示应选择的 TOP 行的数目。  当 WithTies 为 true 时，指示是从 DbLimitExpression 生成的。
 
 ```csharp
 class TopClause : ISqlFragment {
@@ -227,15 +227,15 @@ IsParentAJoin 属性有助于确定是否可以平展给定联接。 特别是�
 
 使用符号表完成输入别名重定向。
 
-若要解释输入的别名重定向，请参阅中的第一个示例[从命令目录树的最佳实践生成 SQL](../../../../../docs/framework/data/adonet/ef/generating-sql-from-command-trees-best-practices.md)。  在投影中，需要将“a”重定向为“b”。
+若要解释输入别名重定向，请参阅[从命令目录树生成 SQL-最佳做法](generating-sql-from-command-trees-best-practices.md)中的第一个示例。  在投影中，需要将“a”重定向为“b”。
 
-在创建 SqlSelectStatement 对象时，作为节点的输入的范围将置于 SqlSelectStatement 的 From 属性中。 符号 (\<symbol_b >) 创建基于输入的绑定名称 ("b") 以表示该范围并将"AS"+ \<symbol_b > 追加到 From 子句。  另外，还将此符号添加到 FromExtents 属性。
+在创建 SqlSelectStatement 对象时，作为节点的输入的范围将置于 SqlSelectStatement 的 From 属性中。 基于输入绑定\<名称（"b"）创建符号（symbol_b >）以表示该范围，并将 "AS" + \<symbol_b > 追加到 from 子句。  另外，还将此符号添加到 FromExtents 属性。
 
-此外将符号添加到符号表以将输入的绑定名链接到它 ("b" \<symbol_b >)。
+还会将符号添加到符号表，以将输入绑定名称链接到它（"b"， \<symbol_b >）。
 
-如果后续节点重用该 SqlSelectStatement，则它将一个项添加到符号表以将其输入绑定名链接到此符号。 在本示例中，带输入的绑定名"a"的 DbProjectExpression 将重用 SqlSelectStatement 并添加 ("a"、 \< symbol_b >) 的表。
+如果后续节点重用该 SqlSelectStatement，则它将一个项添加到符号表以将其输入绑定名链接到此符号。 在本示例中，输入绑定名称为 "a" 的 DbProjectExpression 将重复使用 SqlSelectStatement 并向表中添加（"a \< "、symbol_b >）。
 
-当表达式引用正在重用 SqlSelectStatement 的节点的输入绑定名时，使用符号表将该引用解析为正确的重定向符号。 当在访问表示"a"的 DbVariableReferenceExpression 将解析为符号"a"从"a.x"被解析\<symbol_b >。
+当表达式引用正在重用 SqlSelectStatement 的节点的输入绑定名时，使用符号表将该引用解析为正确的重定向符号。 当访问表示 "a" 的 DbVariableReferenceExpression 时，解析 "a" 中的 "a" 时，它将解析为符号\<symbol_b >。
 
 ### <a name="join-alias-flattening"></a>联接别名平展
 
@@ -243,7 +243,7 @@ IsParentAJoin 属性有助于确定是否可以平展给定联接。 特别是�
 
 ### <a name="column-name-and-extent-alias-renaming"></a>列名和范围别名重命名
 
-在标题为 SQL 生成的第二个阶段的部分中所述的生成的第二个阶段中使用别名使用符号仅替换解决列名和范围别名重命名的问题：生成字符串命令。
+列名称和区别名重命名的问题是使用仅在生成的第二个阶段中使用别名替换的符号来寻址的，详见第二阶段的 SQL 生成：正在生成字符串命令。
 
 ## <a name="first-phase-of-the-sql-generation-visiting-the-expression-tree"></a>SQL 生成的第一阶段：访问表达式树
 
@@ -345,7 +345,7 @@ ORDER BY sk1, sk2, ...
 <leftSqlSelectStatement> <setOp> <rightSqlSelectStatement>
 ```
 
-其中\<leftSqlSelectStatement > 和\<rightSqlSelectStatement > 是通过访问每个输入，获得的 Sqlselectstatement 和\<setOp > 是对应的运算 (例如 UNION ALL)。
+其中\<，leftSqlSelectStatement > \<和 rightSqlSelectStatement > 通过访问每个输入获得 sqlselectstatement， \<p > 是相应的操作（例如 UNION ALL）。
 
 ### <a name="dbscanexpression"></a>DbScanExpression
 
@@ -401,7 +401,7 @@ UNION ALL SELECT <visit-result-argN> as X
 
 字典用于跟踪哪些函数需要特别处理及其相应的处理程序。
 
-用户定义的函数将转换为 Namespacename.functionname(arg1，arg2，...，argn）。
+用户定义的函数被转换为 NamespaceName. FunctionName （arg1，arg2，...，argn）。
 
 ### <a name="dbelementexpression"></a>DbElementExpression
 
@@ -418,7 +418,7 @@ All(input, x) => Not Exists(Filter(input, not(x))
 
 ### <a name="dbnotexpression"></a>DbNotExpression
 
-在某些情况下，可以使用其输入表达式折叠 DbNotExpression 的转换。 例如：
+在某些情况下，可以使用其输入表达式折叠 DbNotExpression 的转换。 例如:
 
 ```
 Not(IsNull(a)) =>  "a IS NOT NULL"
@@ -435,7 +435,7 @@ Not(All(input, x) => Not (Not Exists(Filter(input, not(x))) => Exists(Filter(inp
 IsEmpty(input) = Not Exists(input)
 ```
 
-## <a name="second-phase-of-sql-generation-generating-the-string-command"></a>SQL 生成的第二个阶段：生成字符串命令
+## <a name="second-phase-of-sql-generation-generating-the-string-command"></a>SQL 生成的第二阶段：生成字符串命令
 
 在生成字符串 SQL 命令时，SqlSelectStatement 会生成符号的实际别名，这将解决列名和范围别名的重命名问题。
 
@@ -443,8 +443,8 @@ IsEmpty(input) = Not Exists(input)
 
 在将 Symbol 对象写入字符串时会发生列重命名。 第一阶段中的 AddDefaultColumns 已确定是否必须对某个列符号进行重命名。 在第二阶段中，只有进行重命名才能确保生成的名称不会与 AllColumnNames 中使用的任何名称发生冲突。
 
-若要生成同时为范围别名和列的唯一名称，请使用\<existing_name > _n，其中 n 是尚未使用的最小别名。 所有别名的全局列表加大了对层叠重命名的需要。
+若要为范围别名和列生成唯一名称，请使用\<existing_name > _n，其中 n 是尚未使用的最小别名。 所有别名的全局列表加大了对层叠重命名的需要。
 
 ## <a name="see-also"></a>请参阅
 
-- [示例提供程序中的 SQL 生成](../../../../../docs/framework/data/adonet/ef/sql-generation-in-the-sample-provider.md)
+- [示例提供程序中的 SQL 生成](sql-generation-in-the-sample-provider.md)

@@ -2,12 +2,12 @@
 title: 命令目录树的形状
 ms.date: 03/30/2017
 ms.assetid: 2215585e-ca47-45f8-98d4-8cb982f8c1d3
-ms.openlocfilehash: 08a67c8d181188cbc14c6f60876a7e26cd6de25a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a3568f3deeaeeb31b69b41ac7c767001b792a8eb
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61763979"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70248226"
 ---
 # <a name="the-shape-of-the-command-trees"></a>命令目录树的形状
 
@@ -25,7 +25,7 @@ SQL 生成模块负责生成基于给定输入查询命令目录树表达式的�
 
 DBQueryCommandTree.Query 属性是用于描述查询逻辑的表达式树的根。 DBQueryCommandTree.Parameters 属性包含查询中使用的参数的列表。 表达式树由 DbExpression 对象组成。
 
-DbExpression 对象表示某个计算。 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]提供了用于编写查询表达式的多种表达式，包括常量、变量、函数、构造函数和标准关系运算符（例如筛选和联接）。 每个 DbExpression 对象都有一个 ResultType 属性，表示由该表达式生成的结果的类型。 此类型表示为 TypeUsage。
+DbExpression 对象表示某个计算。 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]提供了用于编写查询表达式的多种表达式，包括常量、变量、函数、构造函数和标准关系运算符（例如筛选和联接）。 每个 DbExpression 对象都有一个 ResultType 属性，该属性表示该表达式生成的结果的类型。 此类型表示为 TypeUsage。
 
 ## <a name="shapes-of-the-output-query-command-tree"></a>输出查询命令目录树的形状
 
@@ -75,9 +75,9 @@ DbExpression 对象表示某个计算。 [!INCLUDE[adonet_ef](../../../../../inc
 
 - 用户定义的函数。
 
-规范函数 (请参阅[规范函数](../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)有关详细信息) 的一部分指定[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]，和提供程序应提供的基于这些规范的规范函数的实现。 存储函数基于相应的提供程序清单中的规范。 用户定义的函数基于 SSDL 中的规范。
+规范函数（有关详细信息，请参阅[规范函数](./language-reference/canonical-functions.md)）被指定为的[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]一部分，并且提供程序应根据这些规范提供规范函数的实现。 存储函数基于相应的提供程序清单中的规范。 用户定义的函数基于 SSDL 中的规范。
 
-另外，具有 NiladicFunction 特性的函数没有任何参数，并且此类函数在转换时末尾不应有括号。  它是到 *\<functionName >* 而不是 *\<functionName > （)*。
+另外，具有 NiladicFunction 特性的函数没有任何参数，并且此类函数在转换时末尾不应有括号。  也就是说，  *\<functionName*  *>而不是functionName>（）。\<*
 
 #### <a name="dbnewinstanceexpression"></a>DbNewInstanceExpression
 
@@ -87,7 +87,7 @@ DbNewInstanceExpression 只能在以下两种情况下出现：
 
   - 结果类型必须是行类型。
 
-  - 它包含的每个参数都是一个生成带基元类型的结果的表达式。 通常，每个参数都是一个标量表达式（如 DbVariableReferenceExpression 上的 PropertyExpression）、一个函数调用或一个 DbVariableReferenceExpression 上的 DbPropertyExpression 或函数调用的算术计算。 然而，表示标量子查询的的表达式也可以在 DbNewInstanceExpression 的参数列表中出现。 一个表示标量子查询表达式是一个表示返回一个行和一个列包含 DbElementExpression 对象根的基元类型的子查询的表达式树
+  - 它包含的每个参数都是一个生成带基元类型的结果的表达式。 通常，每个参数都是一个标量表达式（如 DbVariableReferenceExpression 上的 PropertyExpression）、一个函数调用或一个 DbVariableReferenceExpression 上的 DbPropertyExpression 或函数调用的算术计算。 然而，表示标量子查询的的表达式也可以在 DbNewInstanceExpression 的参数列表中出现。 表示标量子查询的表达式是一种表达式树，它表示一个子查询，该子查询只返回一个具有 DbElementExpression 对象根的基元类型的行和一个列
 
 - 与集合返回类型一起使用，在此情况下，它定义一个作为自变量提供的表达式的新集合。
 
@@ -105,11 +105,11 @@ DbGroupByExpression 的 Aggregates 属性只能具有类型 DbFunctionAggregate 
 
 #### <a name="dbscanexpression"></a>DbScanExpression
 
-输出命令目录树中使用时，DbScanExpression 有效地对表、 视图或存储查询，由 EntitySetBase::Target 表示一次扫描。
+在输出命令目录树中使用时，DbScanExpression 会有效地表示扫描表、视图或存储查询，由 EntitySetBase：： Target 表示。
 
-如果元数据属性"Defining Query"的目标为非 null，则它表示一个查询，该元数据属性中存储架构定义中指定的提供程序的特定语言 （或方言） 提供的查询文本。
+如果目标的元数据属性 "定义查询" 为非 null，则它表示一个查询，该数据在提供程序的特定语言（或方言）中以存储架构定义中指定的形式提供。
 
-否则，目标表示一个表或视图。 其架构前缀位于"Schema"元数据属性，如果不为 null，否则实体容器名称。  表或视图名称是"Table"元数据属性，如果不为 null，否则为该实体的名称属性设置基。
+否则，目标表示一个表或视图。 它的架构前缀位于 "Schema" 元数据属性中，如果不为 null，则为实体容器名称。  表名或视图名为 "Table" metadata 属性，如果不为 null，则为实体集基的 Name 属性。
 
 所有这些属性源自存储架构定义文件 (SSDL) 中对应的 EntitySet 的定义。
 
@@ -119,4 +119,4 @@ DbGroupByExpression 的 Aggregates 属性只能具有类型 DbFunctionAggregate 
 
 ## <a name="see-also"></a>请参阅
 
-- [SQL 生成](../../../../../docs/framework/data/adonet/ef/sql-generation.md)
+- [SQL 生成](sql-generation.md)

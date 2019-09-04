@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 1e3f6ec0-1cac-4e1c-9c81-17d948ae5874
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8ee4df12a017429de333dd4e93df27973b658dad
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 515ea076c5eaead50b41e45e415725d0439914bc
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920668"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252212"
 ---
 # <a name="usesmallinternalthreadstacks-element"></a>\<UseSmallInternalThreadStacks > 元素
-请求公共语言运行时 (CLR) 在创建其内部使用的某些线程时, 通过指定显式堆栈大小来减少内存使用, 而不是使用这些线程的默认堆栈大小。  
+请求公共语言运行时（CLR）在创建其内部使用的某些线程时，通过指定显式堆栈大小来减少内存使用，而不是使用这些线程的默认堆栈大小。  
   
- \<配置 > 元素  
-\<运行时 > 元素  
-\<UseSmallInternalThreadStacks > 元素  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<运行时 >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<UseSmallInternalThreadStacks>**  
   
 ## <a name="syntax"></a>语法  
   
@@ -54,12 +54,12 @@ ms.locfileid: "69920668"
 |`runtime`|包含有关程序集绑定和垃圾回收的信息。|  
   
 ## <a name="remarks"></a>备注  
- 此配置元素用于请求进程中减少的虚拟内存使用, 因为 CLR 用于其内部线程的显式线程大小 (如果请求被接受) 小于默认大小。  
+ 此配置元素用于请求进程中减少的虚拟内存使用，因为 CLR 用于其内部线程的显式线程大小（如果请求被接受）小于默认大小。  
   
 > [!IMPORTANT]
-> 此配置元素是对 CLR 的请求, 而不是绝对要求。 在 .NET Framework 4 中, 请求仅适用于 x86 体系结构。 在未来版本的 CLR 中, 可能会完全忽略此元素, 或将其替换为所选内部线程始终使用的显式堆栈大小。  
+> 此配置元素是对 CLR 的请求，而不是绝对要求。 在 .NET Framework 4 中，请求仅适用于 x86 体系结构。 在未来版本的 CLR 中，可能会完全忽略此元素，或将其替换为所选内部线程始终使用的显式堆栈大小。  
   
- 如果 CLR 接受请求, 则指定此配置元素会在较小的虚拟内存使用情况下提高可靠性, 因为较小的堆栈大小可能会导致堆栈溢出。  
+ 如果 CLR 接受请求，则指定此配置元素会在较小的虚拟内存使用情况下提高可靠性，因为较小的堆栈大小可能会导致堆栈溢出。  
   
 ## <a name="example"></a>示例  
  下面的示例演示如何请求 CLR 对其内部使用的某些线程使用显式堆栈大小。  

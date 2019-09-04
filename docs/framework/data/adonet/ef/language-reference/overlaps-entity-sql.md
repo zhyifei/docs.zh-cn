@@ -2,12 +2,12 @@
 title: OVERLAPS (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 41743e89-79cb-4d7b-8a27-355b45024b61
-ms.openlocfilehash: 9d909fb7efbb29619351cfc866b0f84381d0b80b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fef90beebf1c2723c767eaf5155542ad40d5fcb8
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61760267"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70249724"
 ---
 # <a name="overlaps-entity-sql"></a>OVERLAPS (Entity SQL)
 确定两个集合是否具有公共元素。  
@@ -26,16 +26,16 @@ expression OVERLAPS expression
  如果两个集合具有公共元素，则为`true` ；否则为 `false`。  
   
 ## <a name="remarks"></a>备注  
- OVERLAPS 提供的功能等效于以下：  
+ 重叠提供的功能等效于以下形式：  
   
  `EXISTS ( expression INTERSECT expression )`  
   
- OVERLAPS 是 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 集运算符之一。 所有 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 集运算符都是从左到右进行求值。 有关优先级信息[!INCLUDE[esql](../../../../../../includes/esql-md.md)]集运算符，请参阅[EXCEPT](../../../../../../docs/framework/data/adonet/ef/language-reference/except-entity-sql.md)。  
+ OVERLAPS 是 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 集运算符之一。 所有 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 集运算符都是从左到右进行求值。 有关[!INCLUDE[esql](../../../../../../includes/esql-md.md)]集运算符的优先级信息，请参阅[EXCEPT](except-entity-sql.md)。  
   
 ## <a name="example"></a>示例  
  以下 Entity SQL 查询使用 OVERLAPS 运算符以确定两个集合是否具有公共值。 此查询基于 AdventureWorks 销售模型。 若要编译并运行此查询，请执行下列步骤：  
   
-1. 按照中的过程[如何：执行返回 StructuralType 结果的查询](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)。  
+1. [按照如何：执行返回 StructuralType 结果](../how-to-execute-a-query-that-returns-structuraltype-results.md)的查询。  
   
 2. 将以下查询作为参数传递给 `ExecuteStructuralTypeQuery` 方法：  
   
@@ -43,4 +43,4 @@ expression OVERLAPS expression
   
 ## <a name="see-also"></a>请参阅
 
-- [实体 SQL 引用](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [实体 SQL 引用](entity-sql-reference.md)

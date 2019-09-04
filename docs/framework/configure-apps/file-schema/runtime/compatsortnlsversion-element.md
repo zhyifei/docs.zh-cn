@@ -10,19 +10,19 @@ helpviewer_keywords:
 ms.assetid: 782cc82e-83f7-404a-80b7-6d3061a8b6e3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e3a348ac8da855e458b6208c51f9c51b48da3134
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 575d44ad9ecf445ba5d4b7fbe47032127ccb33ae
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927453"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252736"
 ---
 # <a name="compatsortnlsversion-element"></a>\<CompatSortNLSVersion > 元素
 指定在执行字符串比较时，运行时应使用旧排序顺序。  
   
- \<configuration>  
-\<运行时 >  
-\<CompatSortNLSVersion > 元素  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<运行时 >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<CompatSortNLSVersion>**  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,7 +44,7 @@ ms.locfileid: "69927453"
   
 |值|描述|  
 |-----------|-----------------|  
-|4096|表示备选排序顺序的区域设置 ID。 在这种情况下, 4096 表示 .NET Framework 3.5 及更早版本的排序顺序。|  
+|4096|表示备选排序顺序的区域设置 ID。 在这种情况下，4096表示 .NET Framework 3.5 及更早版本的排序顺序。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  
@@ -57,7 +57,7 @@ ms.locfileid: "69927453"
 |`runtime`|包含有关运行时初始化选项的信息。|  
   
 ## <a name="remarks"></a>备注  
- 由于 .NET Framework 4 中的<xref:System.Globalization.CompareInfo?displayProperty=nameWithType>类执行的字符串比较、排序和大小写操作符合 Unicode 5.1 标准, 因此<xref:System.String.Compare%28System.String%2CSystem.String%29?displayProperty=nameWithType>和<xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType>等字符串比较方法的结果可能不同于.NET Framework 的以前版本。 如果你的应用程序依赖于旧行为, 则可以通过在应用程序配置文件中包括`<CompatSortNLSVersion>`元素, 来还原 .NET Framework 3.5 及更早版本中使用的字符串比较和排序规则。  
+ 由于 .NET Framework 4 中的<xref:System.Globalization.CompareInfo?displayProperty=nameWithType>类执行的字符串比较、排序和大小写操作符合 Unicode 5.1 标准，因此<xref:System.String.Compare%28System.String%2CSystem.String%29?displayProperty=nameWithType>和<xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType>等字符串比较方法的结果可能不同于.NET Framework 的以前版本。 如果你的应用程序依赖于旧行为，则可以通过在应用程序配置文件中包括`<CompatSortNLSVersion>`元素，来还原 .NET Framework 3.5 及更早版本中使用的字符串比较和排序规则。  
   
 > [!IMPORTANT]
 > 还原旧的字符串比较和排序规则还要求 sort00001000.dll 动态链接库在本地系统上可用。  
@@ -70,7 +70,7 @@ ms.locfileid: "69927453"
  [!code-csharp[String.BreakingChanges#1](../../../../../samples/snippets/csharp/VS_Snippets_CLR/string.breakingchanges/cs/example1.cs#1)]
  [!code-vb[String.BreakingChanges#1](../../../../../samples/snippets/visualbasic/VS_Snippets_CLR/string.breakingchanges/vb/example1.vb#1)]  
   
- 在 .NET Framework 4 上运行该示例时, 它会显示以下输出。  
+ 在 .NET Framework 4 上运行该示例时，它会显示以下输出。  
   
 ```  
 sta follows a in the sort order.  
@@ -82,7 +82,7 @@ sta follows a in the sort order.
 sta equals a in the sort order.  
 ```  
   
- 但是, 如果将下面的配置文件添加到示例的目录中, 然后在 .NET Framework 4 上运行此示例, 则输出将与示例在 .NET Framework 3.5 上运行时所生成的输出相同。  
+ 但是，如果将下面的配置文件添加到示例的目录中，然后在 .NET Framework 4 上运行此示例，则输出将与示例在 .NET Framework 3.5 上运行时所生成的输出相同。  
   
 ```xml  
 <?xml version ="1.0"?>  

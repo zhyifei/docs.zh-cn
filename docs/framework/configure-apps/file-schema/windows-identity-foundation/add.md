@@ -3,20 +3,21 @@ title: <add>
 ms.date: 03/30/2017
 ms.assetid: 4712a888-f154-4395-8887-ef14a88a6497
 author: BrucePerlerMS
-ms.openlocfilehash: 9505970c1fd7fcdfe62d3c6ef58f5d653fab4106
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 932e8452542ace66824fba1262694c220ce88676
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69941996"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252190"
 ---
 # <a name="add"></a>\<add>
 将指定的安全令牌处理程序添加到令牌处理程序集合。  
   
- \<system.identityModel>  
-\<identityConfiguration>  
-\<securityTokenHandlers>  
-\<add>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.identitymodel >** ](system-identitymodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<identityConfiguration >** ](identityconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<securityTokenHandlers >** ](securitytokenhandlers.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<添加 >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,7 +41,7 @@ ms.locfileid: "69941996"
   
 |特性|描述|  
 |---------------|-----------------|  
-|type|要添加的令牌处理程序的 CLR 类型名称。 有关如何指定`type`属性的详细信息, 请参阅[自定义类型引用](https://docs.microsoft.com/previous-versions/windows-identity-foundation/gg638728(v=msdn.10)#custom-type-references)。|  
+|type|要添加的令牌处理程序的 CLR 类型名称。 有关如何指定`type`属性的详细信息，请参阅[自定义类型引用](https://docs.microsoft.com/previous-versions/windows-identity-foundation/gg638728(v=msdn.10)#custom-type-references)。|  
   
 ### <a name="child-elements"></a>子元素  
   
@@ -58,7 +59,7 @@ ms.locfileid: "69941996"
 |[\<securityTokenHandlers>](securitytokenhandlers.md)|指定注册到终结点的安全令牌处理程序的集合。|  
   
 ## <a name="remarks"></a>备注  
- `<add>`元素可以采用单个子元素, 该元素指定标记处理程序的配置。 这取决于通过`type` `<add>`元素的属性引用的处理程序类是否为此功能提供支持。 提供此功能的令牌处理程序类必须公开采用<xref:System.Xml.XmlElement>对象的构造函数。  
+ `<add>`元素可以采用单个子元素，该元素指定标记处理程序的配置。 这取决于通过`type` `<add>`元素的属性引用的处理程序类是否为此功能提供支持。 提供此功能的令牌处理程序类必须公开采用<xref:System.Xml.XmlElement>对象的构造函数。  
   
 ```  
 public class CustomTokenHandler : Microsoft.IdentityModel.Tokens.SecurityTokenHandler  
@@ -72,9 +73,9 @@ public class CustomTokenHandler : Microsoft.IdentityModel.Tokens.SecurityTokenHa
  某些内置安全令牌处理程序类提供此功能。 这些类包括<xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> 、<xref:System.IdentityModel.Tokens.X509SecurityTokenHandler>、、和<xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>。 <xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler>  
   
 > [!IMPORTANT]
-> 标记处理程序集合只能包含任何给定类型的单个处理程序。 这意味着, 例如, 如果你想要将派生自<xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>类的处理程序添加到集合, 则必须首先从集合中删除默认情况下存在的。 <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> 您可以使用[ \<remove >](remove.md)元素从[ \<](clear.md)集合中删除单个处理程序, 也可以使用 clear > 元素从集合中移除所有处理程序。  
+> 标记处理程序集合只能包含任何给定类型的单个处理程序。 这意味着，例如，如果你想要将派生自<xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>类的处理程序添加到集合，则必须首先从集合中删除默认情况下存在的。 <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> 您可以使用[ \<remove >](remove.md)元素从[ \<](clear.md)集合中删除单个处理程序，也可以使用 clear > 元素从集合中移除所有处理程序。  
   
- 处理程序中指定的设置会重写[ \<securityTokenHandlerConfiguration >](securitytokenhandlerconfiguration.md)元素下的令牌处理程序集合中指定的等效设置, 以及在[ \<identityConfiguration >](identityconfiguration.md)元素。  
+ 处理程序中指定的设置会重写[ \<securityTokenHandlerConfiguration >](securitytokenhandlerconfiguration.md)元素下的令牌处理程序集合中指定的等效设置，以及在[ \<identityConfiguration >](identityconfiguration.md)元素。  
   
 ## <a name="example"></a>示例  
  下面的 XML 演示如何使用`<add>`和`<remove>`元素将默认会话标记处理程序替换为自定义会话标记处理程序。 XML 是从`ClaimsAwareWebFarm`示例获取的。  

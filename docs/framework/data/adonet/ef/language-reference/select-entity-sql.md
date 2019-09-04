@@ -2,12 +2,12 @@
 title: SELECT (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 9a33bd0d-ded1-41e7-ba3c-305502755e3b
-ms.openlocfilehash: af704d00800a72b4ab670781c5bb3adec93683cb
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 3d3564c37d8971d3261cb47acb774bd1b9f92192
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489889"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70249204"
 ---
 # <a name="select-entity-sql"></a>SELECT (Entity SQL)
 指定查询所返回的元素。  
@@ -34,18 +34,18 @@ SELECT VALUE [ ALL | DISTINCT ] [ topSubclause ] expr FROM fromClause [ WHERE wh
  `topSubclause`  
  任何指示从查询返回的首批结果数的有效表达式（形式为 `top(expr)`）。  
   
- LIMIT 参数[ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md)运算符，您还可以选择在结果集中的前 n 个项。  
+ 使用[ORDER BY](order-by-entity-sql.md)运算符的 LIMIT 参数，还可以选择结果集中的前 n 个项。  
   
  `aliasedExpr`  
  形式如下的表达式：  
   
- `expr` 作为`identifier`&#124; `expr`  
+ `expr`为`identifier` &#124;`expr`  
   
  `expr`  
  文本或表达式。  
   
 ## <a name="remarks"></a>备注  
- SELECT 子句在计算后[FROM](../../../../../../docs/framework/data/adonet/ef/language-reference/from-entity-sql.md)， [GROUP BY](../../../../../../docs/framework/data/adonet/ef/language-reference/group-by-entity-sql.md)，并[HAVING](../../../../../../docs/framework/data/adonet/ef/language-reference/having-entity-sql.md)子句已经过评估。 SELECT 子句只能引用当前处于范围内的项（FROM 子句指定的范围或外部范围）。 如果指定了 GROUP BY 子句，则仅允许 SELECT 子句引用 GROUP BY 键的别名。 仅允许在聚合函数中引用 FROM 子句项。  
+ 在计算[from](from-entity-sql.md)、 [GROUP BY](group-by-entity-sql.md)和[HAVING](having-entity-sql.md)子句之后计算 SELECT 子句。 SELECT 子句只能引用当前处于范围内的项（FROM 子句指定的范围或外部范围）。 如果指定了 GROUP BY 子句，则仅允许 SELECT 子句引用 GROUP BY 键的别名。 仅允许在聚合函数中引用 FROM 子句项。  
   
  跟在 SELECT 关键字之后的一个或多个查询表达式的列表称为“选择列表”，更加正式的名称为“投影”。 最普通的投影形式为单个查询表达式。 如果从集合 `member1` 选择一个成员 `collection1`，则会生成 `member1` 中每个对象的所有 `collection1`值的新集合（如下面的示例所示）。  
   
@@ -85,7 +85,7 @@ SELECT VALUE ROW(1 AS a, "abc" AS b) FROM C
 SELECT * FROM T1, T2  
 ```  
   
- 前面的 TRANSACT-SQL 查询表达式所采用[!INCLUDE[esql](../../../../../../includes/esql-md.md)]如下所示。  
+ 上一 transact-sql 查询表达式的表示[!INCLUDE[esql](../../../../../../includes/esql-md.md)]方式如下所示。  
   
 ```  
 SELECT a1, a2 FROM T1 AS a1, T2 AS a2  
@@ -94,7 +94,7 @@ SELECT a1, a2 FROM T1 AS a1, T2 AS a2
 ## <a name="example"></a>示例  
  下面的 Entity SQL 查询使用 SELECT 运算符指定查询要返回的元素。 此查询基于 AdventureWorks 销售模型。 若要编译并运行此查询，请执行下列步骤：  
   
-1. 按照中的过程[如何：执行返回 StructuralType 结果的查询](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)。  
+1. [按照如何：执行返回 StructuralType 结果](../how-to-execute-a-query-that-returns-structuraltype-results.md)的查询。  
   
 2. 将以下查询作为参数传递给 `ExecuteStructuralTypeQuery` 方法：  
   
@@ -102,6 +102,6 @@ SELECT a1, a2 FROM T1 AS a1, T2 AS a2
   
 ## <a name="see-also"></a>请参阅
 
-- [查询表达式](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expressions-entity-sql.md)
-- [实体 SQL 引用](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
-- [TOP](../../../../../../docs/framework/data/adonet/ef/language-reference/top-entity-sql.md)
+- [查询表达式](query-expressions-entity-sql.md)
+- [实体 SQL 引用](entity-sql-reference.md)
+- [TOP](top-entity-sql.md)

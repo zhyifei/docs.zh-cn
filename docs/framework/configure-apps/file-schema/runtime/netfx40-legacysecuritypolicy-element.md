@@ -7,20 +7,20 @@ helpviewer_keywords:
 ms.assetid: 07132b9c-4a72-4710-99d7-e702405e02d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 881862b6b81ace1c1923b2a22d2fbe54d939d84e
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 2cd6f937811ae503dd4de7ff989510c4eb8b8933
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663562"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252446"
 ---
 # <a name="netfx40_legacysecuritypolicy-element"></a>\<Y > 元素
 
 指定运行时是否使用旧版代码访问安全性 (CAS) 策略。
 
-\<配置 > \
-\<运行时 > \
-\<NetFx40_LegacySecurityPolicy>
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<运行时 >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<Y >**  
 
 ## <a name="syntax"></a>语法
 
@@ -59,17 +59,17 @@ ms.locfileid: "69663562"
 
 ## <a name="remarks"></a>备注
 
-在 .NET Framework 版本3.5 及更低版本中, CAS 策略始终有效。 在 .NET Framework 4 中, 必须启用 CAS 策略。
+在 .NET Framework 版本3.5 及更低版本中，CAS 策略始终有效。 在 .NET Framework 4 中，必须启用 CAS 策略。
 
 CA 策略是特定于版本的。 .NET Framework 早期版本中存在的自定义 CAS 策略必须在 .NET Framework 4 中 respecified。
 
 将元素应用到 .NET Framework 4 程序集并不会影响[安全透明的代码](../../../misc/security-transparent-code.md); 透明规则仍适用。 `<NetFx40_LegacySecurityPolicy>`
 
 > [!IMPORTANT]
-> 对于未安装在[全局程序集缓存](../../../app-domains/gac.md)中的[本机映像生成器 (ngen.exe)](../../../tools/ngen-exe-native-image-generator.md)创建的本机映像程序集, 应用元素可能会导致严重的性能下降。`<NetFx40_LegacySecurityPolicy>` 性能下降是由运行时在应用属性时无法将程序集加载为本机映像而导致其作为实时程序集加载的。
+> 对于未安装在[全局程序集缓存](../../../app-domains/gac.md)中的[本机映像生成器（ngen.exe）](../../../tools/ngen-exe-native-image-generator.md)创建的本机映像程序集，应用元素可能会导致严重的性能下降。`<NetFx40_LegacySecurityPolicy>` 性能下降是由运行时在应用属性时无法将程序集加载为本机映像而导致其作为实时程序集加载的。
 
 > [!NOTE]
-> 如果指定的目标 .NET Framework 版本早于 Visual Studio 项目的项目设置中的 .NET Framework 4, 则将启用 CAS 策略, 包括你为该版本指定的任何自定义 CAS 策略。 但是, 您将不能使用新 .NET Framework 4 类型和成员。 你还可以使用[应用程序配置文件](../../index.md)中的 "启动设置" 架构中的[ \<supportedRuntime > 元素](../startup/supportedruntime-element.md)指定 .NET Framework 的早期版本。
+> 如果指定的目标 .NET Framework 版本早于 Visual Studio 项目的项目设置中的 .NET Framework 4，则将启用 CAS 策略，包括你为该版本指定的任何自定义 CAS 策略。 但是，您将不能使用新 .NET Framework 4 类型和成员。 你还可以使用[应用程序配置文件](../../index.md)中的 "启动设置" 架构中的[ \<supportedRuntime > 元素](../startup/supportedruntime-element.md)指定 .NET Framework 的早期版本。
 
 > [!NOTE]
 > 配置文件语法区分大小写。 应使用语法和示例部分中提供的语法。

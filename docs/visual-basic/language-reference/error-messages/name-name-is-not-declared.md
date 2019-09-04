@@ -7,39 +7,39 @@ f1_keywords:
 helpviewer_keywords:
 - BC30451
 ms.assetid: 765f099b-e21e-47c6-a906-a065444e56b3
-ms.openlocfilehash: 3aadc49f91021409123550ba2712f1acf5b99d83
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dfa1d1600c7943e503b4f5ec2e2b8ecd6fbb9fe0
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61651020"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70254203"
 ---
-# <a name="name-name-is-not-declared"></a>名称\<名称 > 未声明
-语句引用的编程元素，但编译器找不到具有相同名称的元素。  
+# <a name="name-name-is-not-declared"></a>未声明\<名称 "name >"
+语句引用编程元素，但编译器找不到具有该确切名称的元素。  
   
- **错误 ID:** BC30451  
+ **错误 ID：** BC30451  
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   
-1. 检查引用语句中名称的拼写。 Visual Basic 是不区分大小写，但拼写中的任何其他变体都会被视为完全不同的名称。 请注意，下划线 (`_`) 是名称的一部分，因此也是拼写的一部分。  
+1. 检查引用语句中名称的拼写。 Visual Basic 不区分大小写，但拼写中的任何其他变体被视为完全不同的名称。 请注意，下划线 (`_`) 是名称的一部分，因此也是拼写的一部分。  
   
-2. 检查你是否拥有成员访问运算符 (`.`) 对象及其成员之间。 例如，如果你拥有名为 <xref:System.Windows.Forms.TextBox> 的 `TextBox1`控件，则要键入 <xref:System.Windows.Forms.TextBoxBase.Text%2A> 才可访问其 `TextBox1.Text`。 如果你转而键入 `TextBox1Text`，则会创建不同的名称。  
+2. 检查是否在对象及其成员之间具有成员`.`访问运算符（）。 例如，如果你拥有名为 <xref:System.Windows.Forms.TextBox> 的 `TextBox1`控件，则要键入 <xref:System.Windows.Forms.TextBoxBase.Text%2A> 才可访问其 `TextBox1.Text`。 如果你转而键入 `TextBox1Text`，则会创建不同的名称。  
   
-3. 如果任何对象成员访问语法正确的拼写正确，验证已声明元素。 有关详细信息，请参阅[Declared Elements](../../programming-guide/language-features/declared-elements/index.md)。  
+3. 如果拼写正确并且任何对象成员访问的语法正确，请验证元素是否已声明。 有关详细信息，请参阅已[声明元素](../../programming-guide/language-features/declared-elements/index.md)。  
   
-4. 如果已声明的编程元素，检查它是否在作用域中。 如果引用语句位于声明编程元素的区域外，您可能需要限定元素名称。 有关详细信息，请参阅 [Scope in Visual Basic](../../programming-guide/language-features/declared-elements/scope.md)。  
+4. 如果已声明编程元素，请检查它是否在范围内。 如果引用语句位于声明编程元素的区域外，则可能需要限定元素名称。 有关详细信息，请参阅 [Scope in Visual Basic](../../programming-guide/language-features/declared-elements/scope.md)。  
 
-5. 如果不使用完全限定的类型和成员名称 (例如，你的代码是指属性作为`MethodInfo.Name`而不是`System.Reflection.MethodInfo.Name`)，添加[Imports 语句](../statements/imports-statement-net-namespace-and-type.md)。
+5. 如果未使用完全限定的类型或类型和成员名称（例如，你的代码将属性引用为`MethodInfo.Name` `System.Reflection.MethodInfo.Name`而不是），请添加[Imports 语句](../statements/imports-statement-net-namespace-and-type.md)。
 
-6. 如果您尝试编译 SDK 样式项目 (具有的项目\*.vbproj 文件以在行开头`<Project Sdk="Microsoft.NET.Sdk">`)，和错误消息引用的类型或成员中的 Microsoft.VisualBasic.dll 程序集，来配置应用程序使用 Visual Basic 运行库的引用进行编译。 默认情况下，库的一个子集嵌入在程序集 SDK 样式项目中。
+6. 如果尝试编译 SDK 样式的项目（一个项目，该项目\*的 .vbproj 文件以该行`<Project Sdk="Microsoft.NET.Sdk">`开头），并且错误消息引用了 Microsoft node.js 程序集中的某个类型或成员，则将您的应用程序配置为使用对 Visual Basic 运行时库的引用进行编译。 默认情况下，库的一个子集嵌入 SDK 样式项目中的程序集。
 
-   例如，下面的示例无法进行编译，因为<xref:Microsoft.VisualBasic.CompilerServices.Conversions.ToInteger%2A?displayProperty=fullName>找不到方法。 它不嵌入在你的应用程序中包含的 Visual Basic 运行时的子集。  
+   例如，下面的示例无法编译，因为找不<xref:Microsoft.VisualBasic.CompilerServices.Conversions.ChangeType%2A?displayProperty=fullName>到该方法。 它不会嵌入到应用程序附带的 Visual Basic 运行时的子集中。  
 
-   [!code-vb[BC30451](~/samples/snippets/visualbasic/language-reference/error-messages/bc30451/program1.vb)]
+   [!code-vb[BC30451](~/samples/snippets/visualbasic/language-reference/error-messages/bc30451/program1.vb?highlight=7)]
 
-   若要解决此错误，将添加`<VBRuntime>Default</VBRuntime>`的项目元素`<PropertyGroup>`部分中，如下面的 Visual Basic 项目文件所示。
+   若要解决此错误，请`<VBRuntime>Default</VBRuntime>`将元素添加到`<PropertyGroup>` "项目" 部分，如以下 Visual Basic 项目文件所示。
 
-   [!code-vb[BC30451](~/samples/snippets/visualbasic/language-reference/error-messages/bc30451/vbruntime.vbproj?highlight=6)]
+   [!code-xml[BC30451](~/samples/snippets/visualbasic/language-reference/error-messages/bc30451/vbruntime.vbproj?highlight=6)]
 
 ## <a name="see-also"></a>请参阅
 

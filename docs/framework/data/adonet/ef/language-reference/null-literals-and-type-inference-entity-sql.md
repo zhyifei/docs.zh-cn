@@ -2,12 +2,12 @@
 title: Null 文本和类型推理 (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: edd56afb-af1b-4e7d-b210-cb8998143426
-ms.openlocfilehash: 3fea03146549f3d42bf08bbd5e7ce355d25bd4eb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: bb2d9184e17ee2a9916a731eb20eefa105a73753
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64641815"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70249825"
 ---
 # <a name="null-literals-and-type-inference-entity-sql"></a>Null 文本和类型推理 (Entity SQL)
 Null 文本与 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 类型系统中的任何类型都兼容。 但是，为了正确进行 Null 文本类型推理，[!INCLUDE[esql](../../../../../../includes/esql-md.md)] 对何处可以使用 Null 文本实施某些约束。  
@@ -42,4 +42,4 @@ Null 文本与 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 类型系
   
 ## <a name="see-also"></a>请参阅
 
-- [实体 SQL 概述](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+- [实体 SQL 概述](entity-sql-overview.md)

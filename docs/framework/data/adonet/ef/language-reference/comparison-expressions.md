@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ec7637a9-01d5-4a95-8bb0-478311cd263b
-ms.openlocfilehash: 4b0d7e668526fd71943513db2fc3c076c8bd3bad
-ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
+ms.openlocfilehash: d0926bb1a0e35caa058f268f0a0c414e805a8674
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67539930"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251174"
 ---
 # <a name="comparison-expressions"></a>比较表达式
-比较表达式检查常量值、属性值或方法结果是否等于、不等于、大于或小于另一个值。 如果特定比较对于 LINQ to Entities 无效，将引发异常。 所有比较（无论隐式和显式）都要求所有组件在数据源中是可比较的。 比较表达式通常在 `Where` 子句中用于限制查询结果。  
+比较表达式检查常量值、属性值或方法结果是否等于、不等于、大于或小于另一个值。 如果特定比较对于 LINQ to Entities 无效，则会引发异常。 所有比较（无论隐式和显式）都要求所有组件在数据源中是可比较的。 比较表达式通常在 `Where` 子句中用于限制查询结果。  
   
  以下查询表达式语法示例演示一个查询，该查询返回销售订单编号等于“SO43663”的结果：  
   
@@ -40,7 +40,7 @@ ms.locfileid: "67539930"
  [!code-csharp[DP L2E Conceptual Examples#ConstantExpression](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#constantexpression)]
  [!code-vb[DP L2E Conceptual Examples#ConstantExpression](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#constantexpression)]  
   
- LINQ to Entities 不支持使用用户类作为常量。 但是，用户类上的属性引用被视为常量，将转换为命令目录树常量表达式并在数据源上执行。  
+ LINQ to Entities 不支持将用户类用作常量。 但是，用户类上的属性引用被视为常量，将转换为命令目录树常量表达式并在数据源上执行。  
   
  [!code-csharp[DP L2E Conceptual Examples#MyClass](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#myclass)]
  [!code-vb[DP L2E Conceptual Examples#MyClass](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#myclass)]  
@@ -55,4 +55,4 @@ ms.locfileid: "67539930"
   
 ## <a name="see-also"></a>请参阅
 
-- [LINQ to Entities 查询中的表达式](../../../../../../docs/framework/data/adonet/ef/language-reference/expressions-in-linq-to-entities-queries.md)
+- [LINQ to Entities 查询中的表达式](expressions-in-linq-to-entities-queries.md)

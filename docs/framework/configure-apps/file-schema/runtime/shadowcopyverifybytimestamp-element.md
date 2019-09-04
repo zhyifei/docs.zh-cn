@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 2f1648e5-997b-435e-a4f9-d236c574c66c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6f3ea57364832553d16c7e34fc887b1c9f821602
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 79d44ff255b1fc12efc6e8488eeab231b9276b90
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663453"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252309"
 ---
 # <a name="shadowcopyverifybytimestamp-element"></a>\<shadowCopyVerifyByTimestamp> 元素
-指定卷影复制是否使用 .NET Framework 4 中引入的默认启动行为, 或恢复为 .NET Framework 早期版本的启动行为。  
+指定卷影复制是否使用 .NET Framework 4 中引入的默认启动行为，或恢复为 .NET Framework 早期版本的启动行为。  
   
- \<配置 > 元素  
-\<运行时 > 元素  
-\<shadowCopyVerifyByTimestamp> 元素  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<运行时 >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<p >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,14 +34,14 @@ ms.locfileid: "69663453"
   
 |特性|描述|  
 |---------------|-----------------|  
-|enabled|必需的特性。<br /><br /> 指定在启动时, 使用卷影复制的应用程序域是否对程序集时间戳进行比较, 以确定在卷影复制程序集之前是否更新了程序集。|  
+|enabled|必需的特性。<br /><br /> 指定在启动时，使用卷影复制的应用程序域是否对程序集时间戳进行比较，以确定在卷影复制程序集之前是否更新了程序集。|  
   
 ## <a name="enabled-attribute"></a>enabled 特性  
   
 |值|描述|  
 |-----------|-----------------|  
-|真|在启动时, 仅复制自上次复制到卷影复制目录以来已更新的程序集。 这是 .NET Framework 4 的默认值。|  
-|假|恢复到 .NET Framework 以前版本的启动行为, 该行为是在启动时复制所有文件。|  
+|真|在启动时，仅复制自上次复制到卷影复制目录以来已更新的程序集。 这是 .NET Framework 4 的默认值。|  
+|假|恢复到 .NET Framework 以前版本的启动行为，该行为是在启动时复制所有文件。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  
@@ -54,10 +54,10 @@ ms.locfileid: "69663453"
 |`runtime`|包含有关程序集绑定和垃圾回收的信息。|  
   
 ## <a name="remarks"></a>备注  
- 从 .NET Framework 4 开始, 仅当程序集的时间戳指示它们自上次复制到卷影复制目录后发生了更改时, 才会对程序集进行卷影复制。 这会缩短使用卷影复制的许多应用程序的启动时间, 如[卷影复制程序集](../../../app-domains/shadow-copy-assemblies.md)中所述。 对于程序集更新百分比和频率都很高的应用程序，可能不会从此行为改变中获益。 在此情况下，可以使用此元素存储 .NET Framework 早先版本的行为。  
+ 从 .NET Framework 4 开始，仅当程序集的时间戳指示它们自上次复制到卷影复制目录后发生了更改时，才会对程序集进行卷影复制。 这会缩短使用卷影复制的许多应用程序的启动时间，如[卷影复制程序集](../../../app-domains/shadow-copy-assemblies.md)中所述。 对于程序集更新百分比和频率都很高的应用程序，可能不会从此行为改变中获益。 在此情况下，可以使用此元素存储 .NET Framework 早先版本的行为。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何在 .NET Framework 4 中禁用卷影复制的默认启动行为, 并还原为以前版本的 .NET Framework 的启动行为。  
+ 下面的示例演示如何在 .NET Framework 4 中禁用卷影复制的默认启动行为，并还原为以前版本的 .NET Framework 的启动行为。  
   
 ```xml  
 <configuration>  

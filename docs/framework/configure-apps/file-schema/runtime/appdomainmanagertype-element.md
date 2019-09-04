@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: ae8d5a7e-e7f7-47f7-98d9-455cc243a322
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5b535ba67ab05dabd7e0a23e79692bbf69e25b55
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 7ffb297cc38f20917e720b216607e9ccfc966866
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663913"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252831"
 ---
 # <a name="appdomainmanagertype-element"></a>\<Y p e > 元素
 指定用作默认应用程序域的应用程序域管理器的类型。  
   
- \<configuration>  
-\<运行时 >  
-\<appDomainManagerType>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<运行时 >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<appDomainManagerType>**  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,7 +35,7 @@ ms.locfileid: "69663913"
   
 |特性|描述|  
 |---------------|-----------------|  
-|`value`|必需的特性。 指定类型的名称 (包括命名空间), 该名称用作进程中默认应用程序域的应用程序域管理器。|  
+|`value`|必需的特性。 指定类型的名称（包括命名空间），该名称用作进程中默认应用程序域的应用程序域管理器。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  
@@ -48,13 +48,13 @@ ms.locfileid: "69663913"
 |`runtime`|包含有关程序集绑定和垃圾回收的信息。|  
   
 ## <a name="remarks"></a>备注  
- 若要指定应用程序域管理器的类型, 必须同时指定此元素和[ \<b l y >](appdomainmanagerassembly-element.md)元素。 如果未指定这些元素中的任何一个, 则会忽略另一个。  
+ 若要指定应用程序域管理器的类型，必须同时指定此元素和[ \<b l y >](appdomainmanagerassembly-element.md)元素。 如果未指定这些元素中的任何一个，则会忽略另一个。  
   
- 在加载默认应用程序域时, <xref:System.TypeLoadException>如果指定的类型在[ \<b l y >](appdomainmanagerassembly-element.md)元素指定的程序集中不存在, 则将引发; 并且进程无法启动。  
+ 在加载默认应用程序域时， <xref:System.TypeLoadException>如果指定的类型在[ \<b l y >](appdomainmanagerassembly-element.md)元素指定的程序集中不存在，则将引发; 并且进程无法启动。  
   
- 指定默认应用程序域的应用程序域管理器类型时, 从默认应用程序域创建的其他应用程序域将继承应用程序域管理器类型。 <xref:System.AppDomainSetup.AppDomainManagerType%2A?displayProperty=nameWithType>使用和<xref:System.AppDomainSetup.AppDomainManagerAssembly%2A?displayProperty=nameWithType>属性为新的应用程序域指定不同的应用程序域管理器类型。  
+ 指定默认应用程序域的应用程序域管理器类型时，从默认应用程序域创建的其他应用程序域将继承应用程序域管理器类型。 <xref:System.AppDomainSetup.AppDomainManagerType%2A?displayProperty=nameWithType>使用和<xref:System.AppDomainSetup.AppDomainManagerAssembly%2A?displayProperty=nameWithType>属性为新的应用程序域指定不同的应用程序域管理器类型。  
   
- 指定应用程序域管理器类型要求应用程序具有完全信任。 (例如, 在桌面上运行的应用程序具有完全信任。)如果应用程序不具有完全信任, <xref:System.TypeLoadException>则会引发。  
+ 指定应用程序域管理器类型要求应用程序具有完全信任。 （例如，在桌面上运行的应用程序具有完全信任。）如果应用程序不具有完全信任， <xref:System.TypeLoadException>则会引发。  
   
  类型和命名空间的格式与用于<xref:System.Type.FullName%2A?displayProperty=nameWithType>属性的格式相同。  
   

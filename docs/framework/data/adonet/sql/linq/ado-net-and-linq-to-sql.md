@@ -5,20 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 49ac6da0-f2e1-46fa-963e-1b6dcb63fef7
-ms.openlocfilehash: b47a46f9fd9ef3ef1935fa7a88c2e60fe80db09d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0bebc8d890325ec4ab090470952e11b90d0e37ef
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964129"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70248116"
 ---
 # <a name="adonet-and-linq-to-sql"></a>ADO.NET 和 LINQ to SQL
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]是 ADO.NET 系列技术的一部分。 它基于 ADO.NET 提供程序模型提供的服务。 因此, 可以将[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]代码与现有的 ADO.NET 应用程序混合在一起, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]并将当前 ADO.NET 解决方案迁移到。 下图高度概括了这种关系。  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]是 ADO.NET 系列技术的一部分。 它基于 ADO.NET 提供程序模型提供的服务。 因此，可以将[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]代码与现有的 ADO.NET 应用程序混合在一起， [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]并将当前 ADO.NET 解决方案迁移到。 下图高度概括了这种关系。  
   
- ![LINQ to SQL 和 ADO.NET](../../../../../../docs/framework/data/adonet/sql/linq/media/dlinq-3.png "DLinq_3")  
+ ![LINQ to SQL 和 ADO.NET](./media/dlinq-3.png "DLinq_3")  
   
 ## <a name="connections"></a>连接  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 创建<xref:System.Data.Linq.DataContext>时, 可以提供现有的 ADO.NET 连接。 对 <xref:System.Data.Linq.DataContext> 的所有操作（包括查询）都使用所提供的这个连接。 如果此连接已经打开，则在您使用完此连接时，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 会保持它的打开状态不变。  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 创建<xref:System.Data.Linq.DataContext>时，可以提供现有的 ADO.NET 连接。 对 <xref:System.Data.Linq.DataContext> 的所有操作（包括查询）都使用所提供的这个连接。 如果此连接已经打开，则在您使用完此连接时，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 会保持它的打开状态不变。  
   
  [!code-csharp[DLinqCommunicatingWithDatabase#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqCommunicatingWithDatabase/cs/Program.cs#4)]
  [!code-vb[DLinqCommunicatingWithDatabase#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqCommunicatingWithDatabase/vb/Module1.vb#4)]  
@@ -36,7 +36,7 @@ ms.locfileid: "69964129"
  [!code-csharp[DLinqAdoNet#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqAdoNet/cs/Program.cs#2)]
  [!code-vb[DLinqAdoNet#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqAdoNet/vb/Module1.vb#2)]  
   
- 不能将此方法用于所有数据库。 例如, 当 SqlClient 连接针对 SQL Server 2000 服务器进行处理时, 它无法升级系统事务。 它采取的方法是，只要它发现有使用事务范围的情况，它就会自动向完整的分布式事务登记。  
+ 不能将此方法用于所有数据库。 例如，当 SqlClient 连接针对 SQL Server 2000 服务器进行处理时，它无法升级系统事务。 它采取的方法是，只要它发现有使用事务范围的情况，它就会自动向完整的分布式事务登记。  
   
 ## <a name="direct-sql-commands"></a>直接 SQL 命令  
  有时您可能会遇到这样的情况：<xref:System.Data.Linq.DataContext> 查询或提交更改的能力不足以满足您需要执行的专门任务的需要。 在这些情况下，你可以使用 <xref:System.Data.Linq.DataContext.ExecuteQuery%2A> 方法向数据库发出 SQL 命令，将查询结果转换成对象。  
@@ -59,5 +59,5 @@ ms.locfileid: "69964129"
   
 ## <a name="see-also"></a>请参阅
 
-- [背景信息](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
-- [如何：在 ADO.NET 命令与 DataContext 之间重复使用连接](../../../../../../docs/framework/data/adonet/sql/linq/how-to-reuse-a-connection-between-an-ado-net-command-and-a-datacontext.md)
+- [背景信息](background-information.md)
+- [如何：在 ADO.NET 命令与 DataContext 之间重复使用连接](how-to-reuse-a-connection-between-an-ado-net-command-and-a-datacontext.md)

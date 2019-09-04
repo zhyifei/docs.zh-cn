@@ -2,18 +2,18 @@
 title: 修改 SQL 生成
 ms.date: 03/30/2017
 ms.assetid: 2188a39d-46ed-4a8b-906a-c9f15e6fefd1
-ms.openlocfilehash: 13ed7186981e82d47f00b6a38a4328ed75f527f4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ab0c18473e73b2d6fe9eb45c43e9b47947a55d99
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034122"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70248573"
 ---
 # <a name="modification-sql-generation"></a>修改 SQL 生成
 
 本节讨论如何开发用于（符合 SQL:1999 的数据库）提供程序的修改 SQL 生成模块。 此模块负责将修改命令目录树转换成适当的 SQL INSERT、UPDATE 或 DELETE 语句。
 
-有关 select 语句的 SQL 生成的信息，请参阅[SQL 生成](../../../../../docs/framework/data/adonet/ef/sql-generation.md)。
+有关 select 语句的 SQL 生成的信息，请参阅[Sql 生成](sql-generation.md)。
 
 ## <a name="overview-of-modification-command-trees"></a>修改命令目录树的概述
 
@@ -27,11 +27,11 @@ DbModificationCommandTree 是继承自 DbCommandTree 的修改 DML 操作（插�
 
 - DbDeleteCommandTree
 
-DbModificationCommandTree 及其实现所产生的[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]始终表示单行操作。 本节将介绍这些类型及其在 .NET Framework 版本 3.5 中的约束。
+由生成的 DbModificationCommandTree 及其实现[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]始终表示单个行操作。 本节将介绍这些类型及其在 .NET Framework 版本 3.5 中的约束。
 
-![Diagram](../../../../../docs/framework/data/adonet/ef/media/558ba7b3-dd19-48d0-b91e-30a76415bf5f.gif "558ba7b3-dd19-48d0-b91e-30a76415bf5f")
+![关系图](./media/558ba7b3-dd19-48d0-b91e-30a76415bf5f.gif "558ba7b3-dd19-48d0-b91e-30a76415bf5f")
 
-DbModificationCommandTree 具有 Target 属性，该属性表示修改操作的目标集。 Target 的 Expression 属性定义输入集，始终为 DbScanExpression。  DbScanExpression 可以表示表或视图，或一组数据使用查询定义如果元数据属性"Defining Query"其目标的非 null。
+DbModificationCommandTree 具有 Target 属性，该属性表示修改操作的目标集。 Target 的 Expression 属性定义输入集，始终为 DbScanExpression。  如果其目标的元数据属性 "定义查询" 为非 null，则 DbScanExpression 可以表示表或视图，也可以表示使用查询定义的数据集。
 
 DbScanExpression 表示一个查询，如果使用模型中的定义查询来定义集，但不提供相应的修改操作的功能，则它仅可以获取作为修改目标的提供程序。 提供程序也许不支持此类方案，例如 SqlClient 就不支持。
 
@@ -74,11 +74,11 @@ Value 指定用来更新属性的新值。 它是 DbConstantExpression 类型或
 
 Predicate 指定用于确定应更新或删除目标集合中的哪些成员的谓词。 它是由 DbExpressions 的下列子集构成的表达式树：
 
-- Equals 类型的 DbComparisonExpression，根据下面的限制均为 dbpropertyexpression 的右侧子级和左侧的子级为 DbConstantExpression。
+- 种类等于的 DbComparisonExpression，右侧子元素为 DbPropertyExpression，并在 DbConstantExpression 的左侧加上一个。
 
 - DbConstantExpression
 
-- 通过以下限制 DbPropertyExpression DbIsNullExpression
+- DbIsNullExpression 在 DbPropertyExpression 上按以下方式限制
 
 - DbPropertyExpression 在表示对相应 DbModificationCommandTree 的 Target 的引用的 DbVariableReferenceExpression 之上。
 
@@ -90,11 +90,11 @@ Predicate 指定用于确定应更新或删除目标集合中的哪些成员的�
 
 ## <a name="modification-sql-generation-in-the-sample-provider"></a>示例提供程序中的修改 SQL 生成
 
-[实体框架示例提供程序](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0)演示了 ADO.NET 数据提供程序支持的组件[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]。 该示例提供程序以 SQL Server 2005 数据库为目标，并在 System.Data.SqlClient ADO.NET 2.0 数据提供程序之上作为一个包装实现。
+[实体框架示例提供程序](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0)演示了支持的[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]ADO.NET 数据提供程序的组件。 该示例提供程序以 SQL Server 2005 数据库为目标，并在 System.Data.SqlClient ADO.NET 2.0 数据提供程序之上作为一个包装实现。
 
 该示例提供程序的修改 SQL 生成模块（位于 SQL Generation\DmlSqlGenerator.cs 文件中）采用一个输入 DbModificationCommandTree，并且生成可能带有 SELECT 语句的单个修改 SQL 语句以返回一个读取器（如果 DbModificationCommandTree 指定了读取器）。 请注意，生成的命令的形式受目标 SQL Server 数据库影响。
 
-### <a name="helper-classes-expressiontranslator"></a>帮助器类：ExpressionTranslator
+### <a name="helper-classes-expressiontranslator"></a>Helper 类：ExpressionTranslator
 
 ExpressionTranslator 用作一个适用于 DbExpression 类型的所有修改命令目录树属性的通用轻型转换器。 它支持仅转换修改命令目录树的属性所限于使用的表达式类型，而且它在构建时应用了特定约束。
 
@@ -116,7 +116,7 @@ ExpressionTranslator 用作一个适用于 DbExpression 类型的所有修改命
 
 对于示例提供程序中给定的 DbInsertCommandTree，生成的插入命令跟在下面两个插入模板中的一个后面。
 
-第一个模板包含一个命令来执行插入操作（假定值在 SetClauses 列表中）以及一个 SELECT 语句来为插入的行返回在 Returning 属性中指定的属性（如果 Returning 属性不为 null）。 谓词元素"\@ @ROWCOUNT > 0" 是如果将行插入，则返回 true。 谓词元素"keyMemberI = keyValueI &#124; scope_identity （)"使用了的形状"keyMemberI = scope_identity （）"才会是存储生成的键，因为 scope_identity （） 返回插入到标识 （最后一个标识值存储生成的） 列。
+第一个模板包含一个命令来执行插入操作（假定值在 SetClauses 列表中）以及一个 SELECT 语句来为插入的行返回在 Returning 属性中指定的属性（如果 Returning 属性不为 null）。 如果插入行，\@则谓词元素 "@ROWCOUNT > 0" 为 true。 仅当 Scope_identity 是存储生成的&#124;键时，谓词元素 "KeyMemberI = keyValueI scope_identity （）" 才采用形状 "keyMemberI = keyMemberI （）"，因为 scope_identity （）返回插入到标识中的最后一个标识值（存储区生成的）列。
 
 ```sql
 -- first insert Template
@@ -212,7 +212,7 @@ WHERE <predicate>
  WHERE @@ROWCOUNT > 0 AND keyMember0 = keyValue0 AND .. keyMemberI =  keyValueI | scope_identity()  .. AND  keyMemberN = keyValueN]
 ```
 
-Set 子句具有假 set 子句 ("@i = 0") 仅当不指定了任何组子句。 这将确保重新计算所有存储计算的列。
+仅当未指定 set 子句时，set 子句@i才具有伪 set 子句（"= 0"）。 这将确保重新计算所有存储计算的列。
 
 仅当 Returning 属性不为 null 时，才生成 SELECT 语句以返回在 Returning 属性中指定的属性。
 
@@ -302,4 +302,4 @@ where ([CategoryID] = @p0)
 
 ## <a name="see-also"></a>请参阅
 
-- [编写实体框架数据提供程序](../../../../../docs/framework/data/adonet/ef/writing-an-ef-data-provider.md)
+- [编写实体框架数据提供程序](writing-an-ef-data-provider.md)

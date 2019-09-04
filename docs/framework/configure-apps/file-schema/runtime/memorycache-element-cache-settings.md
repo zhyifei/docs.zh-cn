@@ -6,19 +6,19 @@ helpviewer_keywords:
 - caching [.NET Framework], configuration
 - memoryCache element
 ms.assetid: 182a622f-f7cf-472d-9d0b-451d2fd94525
-ms.openlocfilehash: 46f430f7cf112da40aa3b25bfb280c5014612eae
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 25467fc751ad772e74ca714e6059bc5134300ed6
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663620"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252487"
 ---
-# <a name="memorycache-element-cache-settings"></a>\<memoryCache > 元素 (缓存设置)
+# <a name="memorycache-element-cache-settings"></a>\<memoryCache > 元素（缓存设置）
 定义一个用于配置基于 <xref:System.Runtime.Caching.MemoryCache> 类的缓存的元素。 <xref:System.Runtime.Caching.Configuration.MemoryCacheElement> 类定义可以用于配置缓存的 [memoryCache](memorycache-element-cache-settings.md) 元素。 可以在单个应用程序中使用 <xref:System.Runtime.Caching.MemoryCache> 类的多个实例。 配置文件中的每个 `memoryCache` 元素可以包含一个命名 <xref:System.Runtime.Caching.MemoryCache> 实例的设置。  
   
- \<configuration>  
-\<system.runtime.caching>  
-\<memoryCache>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> 缓存**](system-runtime-caching-element-cache-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<memoryCache >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -55,6 +55,7 @@ ms.locfileid: "69663620"
   
 |元素|描述|  
 |-------------|-----------------|  
+|[\<configuration>](../configuration-element.md)|指定公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
 |[\<system.runtime.caching>](system-runtime-caching-element-cache-settings.md)|包含使你可以在 .NET Framework 中内置的应用程序中实现输出缓存的类型。|  
   
 ## <a name="remarks"></a>备注  
@@ -71,7 +72,7 @@ ms.locfileid: "69663620"
 - <xref:System.Runtime.Caching.MemoryCache.PollingInterval%2A>  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何通过<xref:System.Runtime.Caching.MemoryCache> `name`将属性设置为 "default", 将对象的名称设置为默认缓存对象名称。  
+ 下面的示例演示如何通过<xref:System.Runtime.Caching.MemoryCache> `name`将属性设置为 "default"，将对象的名称设置为默认缓存对象名称。  
   
  将 `cacheMemoryLimitMegabytes` 属性和 `physicalMemoryLimitPercentage` 属性设置为零。 将这些特性设置为零意味着默认情况下使用 <xref:System.Runtime.Caching.MemoryCache> 自动调整大小试探法。 每隔两分钟，缓存实现应对当前内存负载和基于百分比的绝对内存限制进行比较。  
   
@@ -93,5 +94,5 @@ ms.locfileid: "69663620"
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Runtime.Caching.MemoryCache>
-- [\<system.object > 元素 (缓存设置)](system-runtime-caching-element-cache-settings.md)
-- [\<namedCaches > 元素 (缓存设置)](namedcaches-element-cache-settings.md)
+- [\<system.object > 元素（缓存设置）](system-runtime-caching-element-cache-settings.md)
+- [\<namedCaches > 元素（缓存设置）](namedcaches-element-cache-settings.md)
