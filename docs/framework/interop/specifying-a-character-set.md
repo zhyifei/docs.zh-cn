@@ -45,7 +45,7 @@ ms.locfileid: "65469690"
   
      如果 <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling?displayProperty=nameWithType> 字段为 `true`（Visual Basic 中默认为此值），平台调用仅搜索指定的名称。 例如，如果指定“MessageBox”，则平台调用搜索“MessageBox”，如果无法找到精确拼写，则将失败。  
   
-     如果 `ExactSpelling` 字段为 `false`（C++ 和 C# 中默认为此值），平台调用先搜索未损坏的别名 (MessageBox)，如果找不到未损坏的别名，再搜索损坏的名称 (MessageBoxA)。 请注意，ANSI 名称匹配行为与 Unicode 名称匹配行为不同。  
+     如果 `ExactSpelling` 字段为 `false`（C++ 和 C# 中默认为此值），平台调用先搜索未修饰的别名 (MessageBox)，如果找不到未修饰的别名，再搜索修饰后的名称 (MessageBoxA)。 请注意，ANSI 名称匹配行为与 Unicode 名称匹配行为不同。  
   
  <xref:System.Runtime.InteropServices.CharSet.Unicode>  
   
