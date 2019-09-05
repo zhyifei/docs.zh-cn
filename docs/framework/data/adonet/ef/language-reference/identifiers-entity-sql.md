@@ -2,21 +2,21 @@
 title: 标识符 (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: d58a5edd-7b5c-48e1-b5d7-a326ff426aa4
-ms.openlocfilehash: e514a25dc754b788316cb18b53191e8f838587dd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4a8f98a9ea9601e1bf5f178e404f99e4a9160078
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64631585"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250720"
 ---
 # <a name="identifiers-entity-sql"></a>标识符 (Entity SQL)
-在 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 中，标识符用于表示查询表达式别名、变量引用、对象的属性、函数等等。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 提供了两种类型的标识符： 简单标识符和带引号的标识符。  
+在 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 中，标识符用于表示查询表达式别名、变量引用、对象的属性、函数等等。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]提供两种标识符：简单标识符和带引号的标识符。  
   
 ## <a name="simple-identifiers"></a>简单标识符  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 中的简单标识符是字母数字和下划线字符的序列。 标识符的第一个字符必须是字母字符（a-z 或 A-Z）。  
   
 ## <a name="quoted-identifiers"></a>带引号的标识符  
- 带引号的标识符是括在方括号 ([]) 中的任何字符序列。 使用带引号的标识符可以指定含有在标识符中无效的字符的标识符。 方括号之间的所有字符都成为标识符，包括所有空白区域的一部分。  
+ 带引号的标识符是括在方括号 ([]) 中的任何字符序列。 使用带引号的标识符可以指定含有在标识符中无效的字符的标识符。 方括号之间的所有字符都将成为标识符的一部分，包括所有空格。  
   
  带引号的标识符不能包含以下字符：  
   
@@ -48,7 +48,7 @@ ms.locfileid: "64631585"
   
  `SELECT t from ts as t WHERE t.[abc]]] == 2`  
   
- 带引号的标识符的比较语义，请参阅[输入字符集](../../../../../../docs/framework/data/adonet/ef/language-reference/input-character-set-entity-sql.md)。  
+ 对于带引号的标识符比较语义，请参阅[输入字符集](input-character-set-entity-sql.md)。  
   
 ## <a name="aliasing-rules"></a>别名规则  
  如果需要，建议在 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 查询中指定别名，包括以下 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 构造：  
@@ -101,7 +101,7 @@ SELECT 1 AS X, 2 AS X …
  参数不在一个作用域内。 由于对参数的引用包含特殊语法，参数名称不会与查询中的其他名称冲突。  
   
 ### <a name="query-expressions"></a>查询表达式  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 查询表达式引入一个新的作用域。 在 FROM 子句中定义的名称引入到范围中的出现顺序，从左到右。 在联接列表中，表达式可以引用列表前面定义的名称。 在 FROM 子句中标识的元素的公共属性（字段等）不添加到“from”作用域。 它们必须始终由别名限定名称引用。 通常，SELECT 表达式的所有部分都被视为在“from”作用域内。  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 查询表达式引入一个新的作用域。 在 FROM 子句中定义的名称按外观的顺序从左到右引入。 在联接列表中，表达式可以引用列表前面定义的名称。 在 FROM 子句中标识的元素的公共属性（字段等）不添加到“from”作用域。 它们必须始终由别名限定名称引用。 通常，SELECT 表达式的所有部分都被视为在“from”作用域内。  
   
  GROUP BY 子句也引入一个新的同级作用域。 每个组都可以有一个引用组中元素集合的组名称。 每个分组表达式也将向“group”作用域引入一个新名称。 此外，嵌套聚合（即命名组）也添加到作用域中。 分组表达式本身在“from”作用域中。 但是，当使用 GROUP BY 子句时，选择列表（投影）、HAVING 子句和 ORDER BY 子句被视为在“group”作用域中，而不是在“from”作用域中。 聚合有特殊的处理方式，如下列内容所述。  
   
@@ -122,6 +122,6 @@ SELECT 1 AS X, 2 AS X …
   
 ## <a name="see-also"></a>请参阅
 
-- [实体 SQL 引用](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
-- [实体 SQL 概述](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
-- [输入字符集](../../../../../../docs/framework/data/adonet/ef/language-reference/input-character-set-entity-sql.md)
+- [实体 SQL 引用](entity-sql-reference.md)
+- [实体 SQL 概述](entity-sql-overview.md)
+- [输入字符集](input-character-set-entity-sql.md)
