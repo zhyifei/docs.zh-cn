@@ -35,7 +35,7 @@ csc /t:library acme.cs
 
 [!code-csharp[UsingStack](../../../samples/snippets/csharp/tour/program-structure/Program.cs#L38-L52)]
 
-如果程序存储在文件 `example.cs` 中，那么在 `example.cs` 编译完后，可以使用编译器的 /r 选项引用 acme.dll 程序集：
+如果程序存储在文件 `example.cs` 中，编译 `example.cs` 时，可以使用编译器的 /r 选项引用 acme.dll 程序集：
 
 ```
 csc /r:acme.dll example.cs
