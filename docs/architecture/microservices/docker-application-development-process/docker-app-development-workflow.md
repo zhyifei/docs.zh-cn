@@ -116,16 +116,16 @@ ENTRYPOINT ["dotnet", " MySingleContainerWebApp.dll "]
 
 ### <a name="additional-resources"></a>其他资源
 
-- 为 .NET Core 应用程序生成 Docker 映像 \ 
+- 为 .NET Core 应用程序生成 Docker 映像   \
   [https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images](../../../core/docker/building-net-docker-images.md)
 
-- **生成开发人员自己的映像**。 请查看官方 Docker 文档。
+- **生成开发人员自己的映像**。 请查看官方 Docker 文档。\
   <https://docs.docker.com/engine/tutorials/dockerimages/>
 
-- 保持 .NET 容器映像的最新状态 \ 
+- 保持 .NET 容器映像的最新状态   \
   <https://devblogs.microsoft.com/dotnet/staying-up-to-date-with-net-container-images/>
 
-- 将 .NET 与 Docker 一起使用 - DockerCon 2018 更新 \ 
+- 将 .NET 与 Docker 一起使用 - DockerCon 2018 更新   \
   <https://devblogs.microsoft.com/dotnet/using-net-and-docker-together-dockercon-2018-update/>
 
 ### <a name="using-multi-arch-image-repositories"></a>使用多体系结构映像存储库
@@ -539,7 +539,7 @@ docker-compose.yml 文件不仅指定正在使用的容器，还指定如何单�
 
 ### <a name="additional-resources"></a>其他资源
 
-- 使用 Visual Studio 2017 进行 Steve Lasker .NET docker 开发 \ 
+- 使用 Visual Studio 2017 进行 Steve Lasker .NET docker 开发   \
   <https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T111>
 
 ## <a name="using-powershell-commands-in-a-dockerfile-to-set-up-windows-containers"></a>在 DockerFile 中使用 PowerShell 命令来设置 Windows 容器

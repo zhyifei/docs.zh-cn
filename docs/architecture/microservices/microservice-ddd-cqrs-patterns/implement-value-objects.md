@@ -316,7 +316,7 @@ public class Address
 - **Vaughn Vernon。实现域驱动设计。** （书；包括值对象的讨论）\
   <https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/>
 
-- 阴影属性 \ 
+- 阴影属性   \
   [https://docs.microsoft.com/ef/core/modeling/shadow-properties](/ef/core/modeling/shadow-properties)
 
 - **复杂类型和/或值对象**。 EF Core GitHub 存储库中的讨论（“问题”选项卡）\
