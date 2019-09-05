@@ -93,13 +93,13 @@ ms.locfileid: "68674344"
 
 #### <a name="additional-resources"></a>其他资源
 
-- **DevIQ.Persistence Ignorance principle** \（持久性无感知原则）
+- **DevIQ.持久性无感知原则** \
   <https://deviq.com/persistence-ignorance/>
 
-- **Oren Eini。Infrastructure Ignorance** \（基础结构无感知）
+- **Oren Eini。基础结构无感知** \
   <https://ayende.com/blog/3137/infrastructure-ignorance>
 
-- **Angel Lopez。Layered Architecture In Domain-Driven Design** \（域驱动设计中的分层体系结构）
+- **Angel Lopez。域驱动设计中的分层体系结构** \
   <https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/>
 
 >[!div class="step-by-step"]

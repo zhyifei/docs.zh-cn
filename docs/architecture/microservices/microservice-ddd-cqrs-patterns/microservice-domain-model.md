@@ -55,13 +55,13 @@ Martin Fowler 在他的博客文章 [AnemicDomainModel](https://martinfowler.com
 
 #### <a name="additional-resources"></a>其他资源
 
-- **DevIQ.Domain Entity** \（域实体）
+- **DevIQ.域实体** \
   <https://deviq.com/entity/>
 
-- **Martin Fowler。The Domain Model** \（域模型）
+- **Martin Fowler。域模型** \
   <https://martinfowler.com/eaaCatalog/domainModel.html>
 
-- **Martin Fowler。The Anemic Domain Model** \（贫乏域模型）
+- **Martin Fowler。贫乏域模型** \
   <https://martinfowler.com/bliki/AnemicDomainModel.html>
 
 ### <a name="the-value-object-pattern"></a>值对象模式
@@ -80,13 +80,13 @@ EF Core 2.0 包含[实体](https://devblogs.microsoft.com/dotnet/announcing-enti
 
 #### <a name="additional-resources"></a>其他资源
 
-- **Martin Fowler。Value Object pattern** \（值对象模式）
+- **Martin Fowler。值对象模式** \
   <https://martinfowler.com/bliki/ValueObject.html>
 
-- Value Object \  （值对象）
+- 值对象   \
   <https://deviq.com/value-object/>
 
-- Value Objects in Test-Driven Development \  （测试驱动开发中的值对象）
+- 测试驱动开发中的值对象   \
   [https://leanpub.com/tdd-ebook/read\#leanpub-auto-value-objects](https://leanpub.com/tdd-ebook/read#leanpub-auto-value-objects)
 
 - **Eric Evans。Domain-Driven Design:Tackling Complexity in the Heart of Software.** （域驱动设计：软件核心复杂性应对之道） （书；包括值对象的讨论）\
@@ -133,22 +133,22 @@ public class Order : Entity, IAggregateRoot
 
 #### <a name="additional-resources"></a>其他资源
 
-- **Vaughn Vernon。Effective Aggregate Design - Part I:Modeling a Single Aggregate**（来自 <http://dddcommunity.org/>）\（有效的聚合设计 - 第 1 部分：单个聚合建模）
+- **Vaughn Vernon。有效的聚合设计 - 第 1 部分：单个聚合建模**（来自 <http://dddcommunity.org/>） \
   <http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_1.pdf>
 
-- **Vaughn Vernon。Effective Aggregate Design - Part II:Making Aggregates Work Together**（来自 <http://dddcommunity.org/>）\（有效的聚合设计 - 第 2 部分：让聚合共同工作）
+- **Vaughn Vernon。有效的聚合设计 - 第 2 部分：让聚合共同工作**（来自 <http://dddcommunity.org/>） \
   <http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf>
 
-- **Vaughn Vernon。Effective Aggregate Design - Part III:Gaining Insight Through Discovery**（来自 <http://dddcommunity.org/>）\（有效的聚合设计 - 第 3 部分：通过发现获取见解）
+- **Vaughn Vernon。有效的聚合设计 - 第 3 部分：通过发现获取见解**（来自 <http://dddcommunity.org/>） \
   <http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_3.pdf>
 
-- **Sergey Grybniak。DDD Tactical Design Patterns** \（DDD 战术设计模式）
+- **Sergey Grybniak。DDD 战术设计模式** \
   <https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part>
 
-- **Chris Richardson.Developing Transactional Microservices Using Aggregates** \（使用聚合开发事务微服务）
+- **Chris Richardson.使用聚合开发事务微服务** \
   <https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson>
 
-- **DevIQ.The Aggregate pattern** \（聚合模式）
+- **DevIQ.聚合模式** \
   <https://deviq.com/aggregate-pattern/>
 
 >[!div class="step-by-step"]

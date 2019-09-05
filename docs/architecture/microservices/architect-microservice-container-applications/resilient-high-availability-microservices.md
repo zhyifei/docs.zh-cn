@@ -74,7 +74,7 @@ ms.locfileid: "68675054"
 - Splunk 官方网站  。 \
   <https://www.splunk.com/>
 
-- Windows 事件跟踪 (ETW) 的 EventSource 类 API \ 
+- Windows 事件跟踪 (ETW) 的 EventSource 类 API  \
   [https://docs.microsoft.com/dotnet/api/system.diagnostics.tracing.eventsource](xref:System.Diagnostics.Tracing.EventSource)
 
 >[!div class="step-by-step"]
