@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7139d585-4034-4dfa-916f-2120a8b72792
-ms.openlocfilehash: 78d6c9287c5c69c41bd2f50abd8d57dcd1cb4e06
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4805a9f959096b87e2ed3e35b02fbd8c04d45fbc
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61605792"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251485"
 ---
 # <a name="how-to-execute-a-query-that-returns-primitivetype-results"></a>如何：执行返回 PrimitiveType 结果的查询
 本主题演示如何使用 <xref:System.Data.EntityClient.EntityCommand> 针对概念模型执行命令，以及如何使用 <xref:System.Data.Metadata.Edm.PrimitiveType> 检索 <xref:System.Data.EntityClient.EntityDataReader> 结果。  
   
 ### <a name="to-run-the-code-in-this-example"></a>运行本示例中的代码  
   
-1. 添加[AdventureWorks 销售模型](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)到你的项目和配置项目以使用[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]。 有关详细信息，请参阅[如何：使用实体数据模型向导](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100))。  
+1. 将[AdventureWorks 销售模型](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)添加到项目中，并将项目配置为使用[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]。 有关详细信息，请参阅[如何：使用实体数据模型向导](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100))。  
   
 2. 在应用程序的代码页中，添加以下 `using` 语句（在 Visual Basic 中为 `Imports`）：  
   
@@ -38,5 +38,5 @@ ms.locfileid: "61605792"
   
 ## <a name="see-also"></a>请参阅
 
-- [实体 SQL 引用](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
-- [用于实体框架的 EntityClient 提供程序](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)
+- [实体 SQL 引用](./language-reference/entity-sql-reference.md)
+- [用于实体框架的 EntityClient 提供程序](entityclient-provider-for-the-entity-framework.md)

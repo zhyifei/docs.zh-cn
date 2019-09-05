@@ -2,16 +2,16 @@
 title: 演练：SQL 生成
 ms.date: 03/30/2017
 ms.assetid: 16c38aaa-9927-4f3c-ab0f-81636cce57a3
-ms.openlocfilehash: 5d8723c6a6d1ab12a2ba1f0f2f7cd5e09e82bfad
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 09b5a3c2dea5cd0483d617ee8064b41dc19c3374
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422765"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70248289"
 ---
 # <a name="walkthrough-sql-generation"></a>演练：SQL 生成
 
-本主题说明了如何中进行 SQL 生成[示例提供程序](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0)。 下面的 Entity SQL 查询使用随示例提供程序提供的模型：
+本主题说明了[示例提供程序](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0)中的 SQL 生成。 下面的 Entity SQL 查询使用随示例提供程序提供的模型：
 
 ```sql
 SELECT  j1.ProductId, j1.ProductName, j1.CategoryName, j2.ShipCountry, j2.ProductId
@@ -110,11 +110,11 @@ LEFT OUTER JOIN [dbo].[InternationalOrders] AS [Extent5] ON [Extent4].[OrderID] 
 
 下图说明访问者的初始空状态。  本主题只演示与演练说明相关的属性。
 
-![Diagram](../../../../../docs/framework/data/adonet/ef/media/430180f5-4fb9-4bc3-8589-d566512d9703.gif "430180f5-4fb9-4bc3-8589-d566512d9703")
+![Diagram](./media/430180f5-4fb9-4bc3-8589-d566512d9703.gif "430180f5-4fb9-4bc3-8589-d566512d9703")
 
 访问 Project 节点时，将通过其输入 (Join4) 调用 VisitInputExpression，这将触发通过 VisitJoinExpression 方法访问 Join4。 由于这是最顶端联接，因此 IsParentAJoin 返回 false，在 SELECT 语句堆栈上创建并推送新的 SqlSelectStatement(SelectStatement0)。 此外，在符号表中输入一个新范围 (scope0)。 在访问该联接的第一个（左侧）输入之前，将在 IsParentAJoin 堆栈上推送“true”。 下图中显示了刚好在访问作为 Join4 的左输入的 Join1 之前的那一刻访问者的状态。
 
-![Diagram](../../../../../docs/framework/data/adonet/ef/media/406d4f5f-6166-44ea-8e74-c5001d5d5d79.gif "406d4f5f-6166-44ea-8e74-c5001d5d5d79")
+![Diagram](./media/406d4f5f-6166-44ea-8e74-c5001d5d5d79.gif "406d4f5f-6166-44ea-8e74-c5001d5d5d79")
 
 通过 Join4 调用联接访问方法时，IsParentAJoin 为 true，因此它重用当前的选择语句 SelectStatement0。 输入一个新范围 (scope1)。 在访问该联接的左侧子级 Extent1 之前，将在 IsParentAJoin 堆栈上推送另一个“true”。
 
@@ -122,27 +122,27 @@ LEFT OUTER JOIN [dbo].[InternationalOrders] AS [Extent5] ON [Extent4].[OrderID] 
 
 在访问 Join1 的右侧输入之前，将“LEFT OUTER JOIN”添加到 SelectStatement0 的 From 子句。 由于右侧输入是一个 Scan 表达式，因此再一次将 true 推送到 IsParentAJoin 堆栈。 下图显示了在访问右侧输入之前的状态。
 
-![Diagram](../../../../../docs/framework/data/adonet/ef/media/ca62c31b-7ff6-4836-b209-e16166304fdc.gif "ca62c31b-7ff6-4836-b209-e16166304fdc")
+![Diagram](./media/ca62c31b-7ff6-4836-b209-e16166304fdc.gif "ca62c31b-7ff6-4836-b209-e16166304fdc")
 
 按照处理左侧输入的相同方式处理右侧输入。 下图显示了访问右侧输入之后的状态。
 
-![Diagram](../../../../../docs/framework/data/adonet/ef/media/cd2afa99-7256-4c63-aaa9-c2d13f18a3d8.gif "cd2afa99-7256-4c63-aaa9-c2d13f18a3d8")
+![Diagram](./media/cd2afa99-7256-4c63-aaa9-c2d13f18a3d8.gif "cd2afa99-7256-4c63-aaa9-c2d13f18a3d8")
 
-在 IsParentAJoin 堆栈上推送下一个“false”，并处理联接条件 Var(Extent1).CategoryID == Var(Extent2).CategoryID。 Var(Extent1) 被解析为\<symbol_Extent1 > 符号表中查找之后。 由于该实例解析为一个简单符号，Var(Extent1) 进行处理后。类别 Id、 与 SqlBuilder \<symbol1 >。"返回"类别 id。 比较的另一侧也采用类似方式处理，将访问联接条件的结果追加到 SelectStatement1 的 FROM 子句，并从 IsParentAJoin 堆栈中弹出“false”值。
+在 IsParentAJoin 堆栈上推送下一个“false”，并处理联接条件 Var(Extent1).CategoryID == Var(Extent2).CategoryID。 在符号表中查找之后， \<Var （Extent1）解析为 symbol_Extent1 >。 由于处理 Var （Extent1）的结果，实例被解析为简单的符号。类别 id，使用\<symbol1 > 的 SqlBuilder。 "类别 Id "。 比较的另一侧也采用类似方式处理，将访问联接条件的结果追加到 SelectStatement1 的 FROM 子句，并从 IsParentAJoin 堆栈中弹出“false”值。
 
 就这样完成了对 Join1 的全部处理，并从符号表中弹出一个范围。
 
-控制权将返回给正在处理的 Join4，即 Join1 的父级。 由于子级重用了 Select 语句，因此 Join1 范围由单个联接符号\<joinSymbol_Join1 >。 此外，新条目添加到符号表以将 Join1 与相关联\<joinSymbol_Join1 >。
+控制权将返回给正在处理的 Join4，即 Join1 的父级。 因为子元素重复使用 Select 语句，所以 Join1 区会替换为单个联接符号\<j o >。 此外，还会将一个新项添加到符号表中， \<以便将 Join1 与 j o > 相关联。
 
 下一个要处理的节点是 Join3，即 Join4 的第二个子级。 由于 Join3 是右侧子级，因此将“false”推送到 IsParentAJoin 堆栈。 下图中说明了访问者此时的状态。
 
-![Diagram](../../../../../docs/framework/data/adonet/ef/media/1ec61ed3-fcdd-4649-9089-24385be7e423.gif "1ec61ed3-fcdd-4649-9089-24385be7e423")
+![Diagram](./media/1ec61ed3-fcdd-4649-9089-24385be7e423.gif "1ec61ed3-fcdd-4649-9089-24385be7e423")
 
-对于 Join3，IsParentAJoin 返回 false，并需要启动一个新的 SqlSelectStatement (SelectStatement1)，将其推送到堆栈上。 按照处理前面的联接的方式继续处理，将一个新范围推送到堆栈上，并处理子级。 左侧的子级是一个 Extent (Extent3)，右侧子级是还需要启动一个新的 SqlSelectStatement 的联接 (Join2):SelectStatement2. Join2 上的子级也是 Extent，并聚合成 SelectStatement2。
+对于 Join3，IsParentAJoin 返回 false，并需要启动一个新的 SqlSelectStatement (SelectStatement1)，将其推送到堆栈上。 按照处理前面的联接的方式继续处理，将一个新范围推送到堆栈上，并处理子级。 左侧的子级是一个范围（Extent3），而右子是一个联接（Join2），该联接还需要启动新的 SqlSelectStatement：SelectStatement2. Join2 上的子级也是 Extent，并聚合成 SelectStatement2。
 
 下图显示了刚好在访问 Join2 之后但在完成其后续处理 (ProcessJoinInputResult) 之前的那一刻访问者的状态：
 
-![Diagram](../../../../../docs/framework/data/adonet/ef/media/7510346f-8b09-4c99-b411-40af239c3c4d.gif "7510346f-8b09-4c99-b411-40af239c3c4d")
+![关系图](./media/7510346f-8b09-4c99-b411-40af239c3c4d.gif "7510346f-8b09-4c99-b411-40af239c3c4d")
 
 在上图中，SelectStatement2 显示为可自由浮动，原因是它已从堆栈中弹出，但尚未由父级进行后续处理。 需要将它添加到父级的 FROM 部分，但它没有 SELECT 子句，并不是完整的 SQL 语句。 因此，此时将由 AddDefaultColumns 方法将默认列（由 SelectStatement2 输入生成的所有列）添加到选择列表中。 AddDefaultColumns 循环访问 FromExtents 中的每个符号，并为每个符号添加范围内的所有列。 对于简单符号，它将查看符号类型来检索要添加的所有符号属性。 它还使用列名称填充 AllColumnNames 字典。 将已完成的 SelectStatement2 追加到 SelectStatement1 的 FROM 子句。
 
@@ -150,13 +150,13 @@ LEFT OUTER JOIN [dbo].[InternationalOrders] AS [Extent5] ON [Extent4].[OrderID] 
 
 下图显示了刚好在处理 DbPropertyExpression "Var(Join2).Extent4.OrderID" 之前的那一刻访问者的状态。
 
-下面来看一下如何访问“Var(Join2).Extent4.OrderID”。 首先，访问实例属性“Var(Join2).Extent4”，它是另一个 DbPropertyExpression，并首先访问其实例“Var(Join2)”。 在符号表中最顶端范围，"Join2"解析为\<joinSymbol_join2 >。 在 DbPropertyExpression 的处理“Var(Join2).Extent4”的访问方法中，请注意，当需要访问实例并进行平展时返回的是一个联接符号。
+下面来看一下如何访问“Var(Join2).Extent4.OrderID”。 首先，访问实例属性“Var(Join2).Extent4”，它是另一个 DbPropertyExpression，并首先访问其实例“Var(Join2)”。 在符号表的最顶端范围中，"Join2" 解析为\<joinSymbol_join2 >。 在 DbPropertyExpression 的处理“Var(Join2).Extent4”的访问方法中，请注意，当需要访问实例并进行平展时返回的是一个联接符号。
 
-由于它是一个嵌套的联接，我们在联接符号的 NameToExtent 字典中查找"Extent4"属性，其解析为\<symbol_Extent4 >，并返回一个新的 SymbolPair (\<joinSymbol_join2 >， \<symbol_Extent4>)。 由于从处理"Var(Join2) 实例返回一个符号对。Extent4.OrderID"，"OrderID"属性是符号对的 ColumnPart 中解析 (\<symbol_Extent4 >)，它具有它表示的范围的列的列表。 因此，"Var(Join2)。Extent4.OrderID"被解析为 { \<joinSymbol_Join2 >，"。"， \<symbol_OrderID >}。
+由于它是嵌套联接，我们将在联接符号的 NameToExtent 字典中查找属性 ".extent4.orderid"，将其解析为\<symbol_Extent4 > 并返回一个新的 SymbolPair （\<joinSymbol_join2 >， \<symbol_Extent4>）。 由于符号对是从实例的 "Var" （Join2）的处理返回的.Extent4.orderid "，则从该符号对的 ColumnPart （\<symbol_Extent4 >）中解析属性" 订单 id "，它具有它所表示的范围的列列表。 那么，"Var （Join2）.Extent4.orderid "解析为 { \<joinSymbol_Join2 >，". "， \<d >}。
 
 Join4 的联接条件将采用类似方式处理。 控制权返回给处理最顶端项目的 VisitInputExpression 方法。 让我们看一下返回的 SelectStatement0 的 FromExtents：输入标识为一个联接，移除原始范围，并替换为一个仅带有联接符号的新范围。 此外，还更新符号表，然后处理 Project 的投影部分。 如前面所述，对属性进行解析并对联接范围进行平展。
 
-![Diagram](../../../../../docs/framework/data/adonet/ef/media/9456d6a9-ea2e-40ae-accc-a10e18e28b81.gif "9456d6a9-ea2e-40ae-accc-a10e18e28b81")
+![Diagram](./media/9456d6a9-ea2e-40ae-accc-a10e18e28b81.gif "9456d6a9-ea2e-40ae-accc-a10e18e28b81")
 
 最后，生成下面的 SqlSelectStatement：
 
@@ -194,14 +194,14 @@ FROM: "[dbo].[Orders]", " AS ", <symbol_Extent4>,
 " )", " AS ", <joinSymbol_Join3>, " ON ", , , <symbol_Extent1>, ".", "[ProductID]", " = ", , <joinSymbol_Join3>, ".", <symbol_ProductID>
 ```
 
-### <a name="second-phase-of-sql-generation-generating-the-string-command"></a>SQL 生成的第二个阶段：生成字符串命令
+### <a name="second-phase-of-sql-generation-generating-the-string-command"></a>SQL 生成的第二阶段：生成字符串命令
 
 第二阶段生成符号的实际名称，我们只关注表示名为“OrderID”的列的符号，因为在本例中需要解决冲突。 SqlSelectStatement 中突出显示了这些符号。 请注意，图中使用的后缀仅强调这些符号是不同的实例，而不表示任何新的名称，因为在此阶段还未指派它们的最终名称，这些最终名称很可能与原始名称不同。
 
-第一个符号找到，则需要重命名为\<symbol_OrderID >。 为它指派的新名称为“OrderID1”，标记 1 表示为“OrderID”使用的最后一个后缀，该符号标记为不需要重命名。 接下来，第一个\<symbol_OrderID_2 > 找到。 将它重命名为使用下一个可用的后缀“OrderID2”，同样将其标记为不需要重命名，以便在下一次使用它时不需要再进行重命名。 这样做是出于\<symbol_OrderID_3 > 过。
+找到的需要重命名的第一个符号是\<d >。 为它指派的新名称为“OrderID1”，标记 1 表示为“OrderID”使用的最后一个后缀，该符号标记为不需要重命名。 接下来，找到\<symbol_OrderID_2 > 的第一次使用。 将它重命名为使用下一个可用的后缀“OrderID2”，同样将其标记为不需要重命名，以便在下一次使用它时不需要再进行重命名。 这也适用于\<symbol_OrderID_3 >。
 
 在第二阶段结束时，将生成最后的 SQL 语句。
 
 ## <a name="see-also"></a>请参阅
 
-- [示例提供程序中的 SQL 生成](../../../../../docs/framework/data/adonet/ef/sql-generation-in-the-sample-provider.md)
+- [示例提供程序中的 SQL 生成](sql-generation-in-the-sample-provider.md)

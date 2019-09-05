@@ -2,12 +2,12 @@
 title: 从命令目录树生成 SQL - 最佳做法
 ms.date: 03/30/2017
 ms.assetid: 71ef6a24-4c4f-4254-af3a-ffc0d855b0a8
-ms.openlocfilehash: 6ac46b577f071bca6c79e23b8b77f9b267ac879b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 366e27f8c8a04c5d2507ab37459ad6d5abc255ae
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61606662"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251576"
 ---
 # <a name="generating-sql-from-command-trees---best-practices"></a>从命令目录树生成 SQL - 最佳做法
 
@@ -125,7 +125,7 @@ ON b.y = d.z
 
 ## <a name="join-alias-flattening"></a>联接别名平展
 
-与输出命令目录树中的任何其他关系表达式不同，DbJoinExpression 输出一个结果类型，该结果类型是一个由两列组成的行，每一列都对应一个输入。 DbPropertyExpression 生成以访问源自某个联接的标量属性，它是通过另一个 DbPropertyExpression。
+与输出命令目录树中的任何其他关系表达式不同，DbJoinExpression 输出一个结果类型，该结果类型是一个由两列组成的行，每一列都对应一个输入。 当生成 DbPropertyExpression 以访问源自某个联接的标量属性时，该属性将超过另一个 DbPropertyExpression。
 
 示例包括示例 2 中的“a.b.y”和示例 3 中的“b.c.y”。 但是，在对应的 SQL 语句中这些内容称为“b.y”。 这一重新设定别名问题称为“联接别名平展”。
 
@@ -137,7 +137,7 @@ ON b.y = d.z
 
 ## <a name="avoid-select-"></a>避免 SELECT *
 
-不要使用 `SELECT *` 从基表中进行选择。 中的存储模型[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]应用程序可能仅包括在数据库表中的列的子集。 在这种情况下，`SELECT *` 可能产生不正确的结果。 替代方法是，应通过使用参与的表达式的结果类型中的列名，指定所有参与的列。
+不要使用 `SELECT *` 从基表中进行选择。 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]应用程序中的存储模型只能包含数据库表中的列的子集。 在这种情况下，`SELECT *` 可能产生不正确的结果。 替代方法是，应通过使用参与的表达式的结果类型中的列名，指定所有参与的列。
 
 ## <a name="reuse-of-expressions"></a>重用表达式
 
@@ -145,8 +145,8 @@ ON b.y = d.z
 
 ## <a name="mapping-primitive-types"></a>映射基元类型
 
-在将概念 (EDM) 类型映射到提供程序类型时，应映射到最宽的类型 (Int32)，以便适合所有可能的值。 此外，避免映射到不能用于许多操作，如 BLOB 类型的类型 (例如， `ntext` SQL Server 中)。
+在将概念 (EDM) 类型映射到提供程序类型时，应映射到最宽的类型 (Int32)，以便适合所有可能的值。 另外，请避免映射到不能用于许多操作的类型（例如 BLOB 类型）（例如， `ntext`在 SQL Server 中）。
 
 ## <a name="see-also"></a>请参阅
 
-- [SQL 生成](../../../../../docs/framework/data/adonet/ef/sql-generation.md)
+- [SQL 生成](sql-generation.md)

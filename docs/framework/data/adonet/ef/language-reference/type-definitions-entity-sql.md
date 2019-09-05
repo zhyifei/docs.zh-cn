@@ -2,18 +2,18 @@
 title: 类型定义 (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 306b204a-ade5-47ef-95b5-c785d2da4a7e
-ms.openlocfilehash: 5a8a0cae4599057a627cce6abebf34c7f05e821f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 471964266c290d5eba95804dbe1c2bc5225e3f83
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64641400"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70248948"
 ---
 # <a name="type-definitions-entity-sql"></a>类型定义 (Entity SQL)
 类型定义用在 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 内联函数的声明语句中。  
   
 ## <a name="remarks"></a>备注  
- 内联函数的声明语句组成[函数](../../../../../../docs/framework/data/adonet/ef/language-reference/function-entity-sql.md)关键字后跟表示函数名称 (例如，"MyAvg") 后跟用括号括起来 （适用于的参数定义列表的标识符示例中，"dues Collection(Decimal)")。  
+ 内联函数的声明语句包含[function](function-entity-sql.md)关键字，后跟表示函数名称的标识符（例如，"MyAvg"），后跟括号中的参数定义列表（例如，"拥有的集合（Decimal） "）。  
   
  参数定义列表由零个或多个参数定义组成。 每个参数定义均由一个标识符（该函数的参数的名称，例如“dues”）后跟类型定义（例如，“Collection(Decimal)”）组成。  
   
@@ -23,7 +23,7 @@ ms.locfileid: "64641400"
   
 - 关键字 `COLLECTION` 后跟放在括号中的另一个类型定义（例如，“Collection(AdventureWorks.Order)”）。  
   
-- 关键字 ROW 后跟放在括号中的属性定义列表（例如，“Row(x AdventureWorks.Order)”）。 属性定义具有格式，如"`identifier type_definition`， `identifier type_definition`，..."。  
+- 关键字 ROW 后跟放在括号中的属性定义列表（例如，“Row(x AdventureWorks.Order)”）。 属性定义具有格式，如 "`identifier type_definition`， `identifier type_definition`，..."。  
   
 - 关键字 REF 后跟放在括号中的标识符类型（例如，“Ref(AdventureWorks.Order)”）。 REF 类型定义运算符要求将实体类型作为自变量。 您不能指定基元类型作为参数。  
   
@@ -31,7 +31,7 @@ ms.locfileid: "64641400"
   
  类型定义选项为：  
   
-- `IdentifierName supported_type`或  
+- `IdentifierName supported_type`，或  
   
 - `IdentifierName` COLLECTION(`type_definition`) 或  
   
@@ -88,5 +88,5 @@ select Ref(x) from AdventureWorksEntities.SalesOrderHeaders as x
   
 ## <a name="see-also"></a>请参阅
 
-- [实体 SQL 概述](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
-- [实体 SQL 引用](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [实体 SQL 概述](entity-sql-overview.md)
+- [实体 SQL 引用](entity-sql-reference.md)

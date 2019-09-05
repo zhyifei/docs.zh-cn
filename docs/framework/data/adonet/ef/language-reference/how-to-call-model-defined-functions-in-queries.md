@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6c804e4d-f348-4afd-9f63-d3f0f24bc6a9
-ms.openlocfilehash: 32cdb5b0f27817856ab586eb38f89df63c1c4d3b
-ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
+ms.openlocfilehash: 33f26896dd0d4ff08beb4a011fa6bd468cba7207
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67539863"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250758"
 ---
 # <a name="how-to-call-model-defined-functions-in-queries"></a>如何：在查询中调用模型定义的函数
-本主题介绍如何调用在概念模型中 LINQ to Entities 查询中定义的函数。  
+本主题介绍如何从 LINQ to Entities 查询中调用在概念模型中定义的函数。  
   
- 下面的过程高度概括了用于调用内的某个模型定义函数从 LINQ to Entities 查询。 后面的示例提供了有关该过程中各个步骤的更多详细信息。 这些过程假定您在概念模型中定义了一个函数。 有关详细信息，请参阅[如何：概念模型中定义自定义函数](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456812(v=vs.100))。  
+ 下面的过程提供了从 LINQ to Entities 查询中调用模型定义函数的高级大纲。 后面的示例提供了有关该过程中各个步骤的更多详细信息。 这些过程假定您在概念模型中定义了一个函数。 有关详细信息，请参阅[如何：在概念模型](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456812(v=vs.100))中定义自定义函数。  
   
 ### <a name="to-call-a-function-defined-in-the-conceptual-model"></a>调用在概念模型中定义的函数  
   
@@ -24,9 +24,9 @@ ms.locfileid: "67539863"
 2. 在 LINQ to Entities 查询中调用该函数。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何调用在概念模型从在 linq to Entities 查询中定义的函数。 本示例使用 School 模型。 有关 School 模型的信息，请参阅[创建 School 示例数据库](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399731(v=vs.100))并[生成 School.edmx 文件](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399739(v=vs.100))。  
+ 下面的示例演示如何从 LINQ to Entities 查询中调用在概念模型中定义的函数。 本示例使用 School 模型。 有关 School 模型的信息，请参阅[创建 School 示例数据库](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399731(v=vs.100))和[生成 school .edmx 文件](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399739(v=vs.100))。  
   
- 以下概念模型函数返回教师已聘用的年数。 有关向概念模型添加函数的信息，请参阅[如何：概念模型中定义自定义函数](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456812(v=vs.100))。)  
+ 以下概念模型函数返回教师已聘用的年数。 有关向概念模型添加函数的信息，请参阅[如何：在概念模型](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456812(v=vs.100))中定义自定义函数。）  
   
  [!code-xml[DP ConceptualModelFunctions#1](../../../../../../samples/snippets/xml/VS_Snippets_Data/dp conceptualmodelfunctions/xml/school.edmx#1)]
   
@@ -37,7 +37,7 @@ ms.locfileid: "67539863"
  [!code-vb[DP ConceptualModelFunctions#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp conceptualmodelfunctions/vb/module1.vb#2)]  
   
 ## <a name="example"></a>示例  
- 现在可以调用概念模型中的函数从 LINQ to Entities 查询。 下面的代码调用该方法以显示十年前雇佣的所有教师：  
+ 现在，可以从 LINQ to Entities 查询中调用概念模型函数。 下面的代码调用该方法以显示十年前雇佣的所有教师：  
   
  [!code-csharp[DP ConceptualModelFunctions#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp conceptualmodelfunctions/cs/program.cs#3)]
  [!code-vb[DP ConceptualModelFunctions#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp conceptualmodelfunctions/vb/module1.vb#3)]  
@@ -45,6 +45,6 @@ ms.locfileid: "67539863"
 ## <a name="see-also"></a>请参阅
 
 - [.edmx 文件概述](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
-- [LINQ to Entities 中的查询](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
-- [在 LINQ to Entities 查询中调用函数](../../../../../../docs/framework/data/adonet/ef/language-reference/calling-functions-in-linq-to-entities-queries.md)
-- [如何：作为对象方法调用模型定义的函数](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-model-defined-functions-as-object-methods.md)
+- [LINQ to Entities 中的查询](queries-in-linq-to-entities.md)
+- [在 LINQ to Entities 查询中调用函数](calling-functions-in-linq-to-entities-queries.md)
+- [如何：调用模型定义的函数作为对象方法](how-to-call-model-defined-functions-as-object-methods.md)

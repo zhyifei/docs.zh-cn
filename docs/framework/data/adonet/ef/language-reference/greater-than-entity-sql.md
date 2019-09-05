@@ -1,15 +1,15 @@
 ---
-title: '> （大于）(Entity SQL)'
+title: '> （大于）（实体 SQL）'
 ms.date: 03/30/2017
 ms.assetid: 4cea865c-677c-4b06-99a1-010f2ae2394a
-ms.openlocfilehash: e1d13fa863eb79982d239f4e2dc298f7fcd1346f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0b57f36681575ccbe3239220e89804c804f13f39
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879484"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250888"
 ---
-# <a name="-greater-than-entity-sql"></a>> （大于） (Entity SQL)
+# <a name="-greater-than-entity-sql"></a>> （大于）（实体 SQL）
 比较两个表达式以确定左侧表达式的值是否大于右侧表达式的值。  
   
 ## <a name="syntax"></a>语法  
@@ -28,7 +28,7 @@ expression > expression
 ## <a name="example"></a>示例  
  下面的 Entity SQL 查询使用 > 比较运算符比较两个表达式，以确定左侧表达式的值是否大于右侧表达式的值。 此查询基于 AdventureWorks 销售模型。 若要编译并运行此查询，请执行下列步骤：  
   
-1. 按照中的过程[如何：执行返回 StructuralType 结果的查询](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)。  
+1. [按照如何：执行返回 StructuralType 结果](../how-to-execute-a-query-that-returns-structuraltype-results.md)的查询。  
   
 2. 将以下查询作为参数传递给 `ExecuteStructuralTypeQuery` 方法：  
   
@@ -36,4 +36,4 @@ expression > expression
   
 ## <a name="see-also"></a>请参阅
 
-- [实体 SQL 引用](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [实体 SQL 引用](entity-sql-reference.md)

@@ -2,12 +2,12 @@
 title: LIKE (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 8300e6d2-875b-481e-9ef4-e1e7c12d46fa
-ms.openlocfilehash: 58828b812ce374a664e4d232b707f22d5ca438c1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: fbe27f6e25c9d69f092a060fa2c3fbf0abc93318
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69912287"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250504"
 ---
 # <a name="like-entity-sql"></a>LIKE (Entity SQL)
 确定特定字符 `String` 是否与指定模式相匹配。  
@@ -42,9 +42,9 @@ match [NOT] LIKE pattern [ESCAPE escape]
 |通配符|描述|示例|  
 |------------------------|-----------------|-------------|  
 |%|包含零个或零个以上字符的任何 `string`。|`title like '%computer%'`在标题中的`"computer"`任意位置查找所有标题。|  
-|_（下划线）|任意单个字符。|`firstname like '_ean'`查找以开头`"ean`的所有四个字母的名字, 如 "Dean" 或小红。|  
-|[ ]|指定范围 ([a-f]) 或集合 ([abcdef]) 中的任意单个字符。|`lastname like '[C-P]arsen'`查找以 "arsen" 结尾并以 C 和 P 之间的任何单个字符开头的姓氏 (如 Carsen 或 Larsen)。|  
-|[^]|不在指定范围 ([^a-f]) 或集合 ([^abcdef]) 中的任意单个字符。|`lastname like 'de[^l]%'`查找所有以 "de" 开头的名称, 并且不包含 "l" 作为下一字母。|  
+|_（下划线）|任意单个字符。|`firstname like '_ean'`查找以开头`"ean`的所有四个字母的名字，如 "Dean" 或小红。|  
+|[ ]|指定范围 ([a-f]) 或集合 ([abcdef]) 中的任意单个字符。|`lastname like '[C-P]arsen'`查找以 "arsen" 结尾并以 C 和 P 之间的任何单个字符开头的姓氏（如 Carsen 或 Larsen）。|  
+|[^]|不在指定范围 ([^a-f]) 或集合 ([^abcdef]) 中的任意单个字符。|`lastname like 'de[^l]%'`查找所有以 "de" 开头的名称，并且不包含 "l" 作为下一字母。|  
   
 > [!NOTE]
 > [!INCLUDE[esql](../../../../../../includes/esql-md.md)] LIKE 运算符和 ESCAPE 子句不适用于 `System.DateTime` 或 `System.Guid` 值。  
@@ -68,7 +68,7 @@ match [NOT] LIKE pattern [ESCAPE escape]
 ## <a name="example"></a>示例  
  下面两个 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 查询使用 LIKE 和 ESCAPE 运算符确定特定字符串是否与指定模式匹配。 第一个查询搜索以字符 `Name` 开头的 `Down_`。 此查询使用了 ESCAPE 选项，因为下划线 (`_`) 为通配符。 如果不指定 ESCAPE 选项，则该查询将搜索所有以单词 `Name` 开头、后跟任意单个字符（下划线字符除外）的 `Down` 值。 这些查询基于 AdventureWorks 销售模型。 若要编译并运行此查询，请执行下列步骤：  
   
-1. [按照如何:执行返回 PrimitiveType 结果](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md)的查询。  
+1. [按照如何：执行返回 PrimitiveType 结果](../how-to-execute-a-query-that-returns-primitivetype-results.md)的查询。  
   
 2. 将以下查询作为参数传递给 `ExecutePrimitiveTypeQuery` 方法：  
   
@@ -76,4 +76,4 @@ match [NOT] LIKE pattern [ESCAPE escape]
   
 ## <a name="see-also"></a>请参阅
 
-- [实体 SQL 引用](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [实体 SQL 引用](entity-sql-reference.md)

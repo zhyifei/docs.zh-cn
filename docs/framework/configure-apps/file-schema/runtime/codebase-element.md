@@ -9,18 +9,22 @@ helpviewer_keywords:
 - container tags, <codeBase> element
 - codeBase element
 ms.assetid: d48a3983-2297-43ff-a14d-1f29d3995822
-ms.openlocfilehash: a06daa0b2aa5374c9959cbbe778d62856819a40e
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: bd170b817c5ccc337711f8f79968653c29f3eda4
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663863"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252741"
 ---
 # <a name="codebase-element"></a>\<codeBase > 元素
 
 指定公共语言运行时可在何处找到程序集。
 
-\<configuration > \<运行时\<> assemblyBinding \<> dependentAssembly \<> codeBase >
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<运行时 >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<assemblyBinding >** ](assemblybinding-element-for-runtime.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<dependentAssembly >** ](dependentassembly-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<codeBase>**
 
 ## <a name="syntax"></a>语法
 
@@ -62,11 +66,11 @@ ms.locfileid: "69663863"
 
 ## <a name="remarks"></a>备注
 
-为了使运行时使用计算机配置文件或发布服务器策略文件中的 **\<codeBase >** 设置, 该文件还必须重定向程序集版本。 应用程序配置文件可以具有基本代码设置, 而不会重定向程序集版本。 确定要使用的程序集版本后, 运行时将从确定版本的文件应用基本代码设置。 如果未指定基本代码, 则运行时以常规方式探测程序集。
+为了使运行时使用计算机配置文件或发布服务器策略文件中的 **\<codeBase >** 设置，该文件还必须重定向程序集版本。 应用程序配置文件可以具有基本代码设置，而不会重定向程序集版本。 确定要使用的程序集版本后，运行时将从确定版本的文件应用基本代码设置。 如果未指定基本代码，则运行时以常规方式探测程序集。
 
-如果程序集具有强名称, 则基本代码设置可以是本地 intranet 或 Internet 上的任何位置。 如果程序集是私有程序集, 则 codebase 设置必须是相对于应用程序目录的路径。
+如果程序集具有强名称，则基本代码设置可以是本地 intranet 或 Internet 上的任何位置。 如果程序集是私有程序集，则 codebase 设置必须是相对于应用程序目录的路径。
 
-对于没有强名称的程序集, 版本会被忽略, 并且加载程序在 dependentAssembly \<> 内\<使用基本代码 > 的第一种外观。 如果应用程序配置文件中存在重定向绑定到另一个程序集的条目, 则即使程序集版本与绑定请求不匹配, 重定向也将优先。
+对于没有强名称的程序集，版本会被忽略，并且加载程序在 dependentAssembly \<> 内\<使用基本代码 > 的第一种外观。 如果应用程序配置文件中存在重定向绑定到另一个程序集的条目，则即使程序集版本与绑定请求不匹配，重定向也将优先。
 
 ## <a name="example"></a>示例
 

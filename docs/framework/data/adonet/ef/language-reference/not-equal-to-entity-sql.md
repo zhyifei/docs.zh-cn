@@ -2,12 +2,12 @@
 title: '!=（不等于）(Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: 3b4a02ad-ddfc-4c42-8dfa-676234461312
-ms.openlocfilehash: f5fdbbf2892781ce44dfe73e8cd80fbe0f74cf1c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c2ccadaa5801cac9c10241108f02ade223a8697f
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61760332"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70249841"
 ---
 # <a name="-not-equal-to-entity-sql"></a>!=（不等于）(Entity SQL)
 比较两个表达式以确定左侧表达式是否不等于右侧表达式。 !=（不等于）运算符在功能上等效于 <> 运算符。  
@@ -30,7 +30,7 @@ expression <> expression
 ## <a name="example"></a>示例  
  下面的 Entity SQL 查询使用 != 运算符比较两个表达式，以确定左侧表达式是否不等于右侧表达式。 此查询基于 AdventureWorks 销售模型。 若要编译并运行此查询，请执行下列步骤：  
   
-1. 按照中的过程[如何：执行返回 StructuralType 结果的查询](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)。  
+1. [按照如何：执行返回 StructuralType 结果](../how-to-execute-a-query-that-returns-structuraltype-results.md)的查询。  
   
 2. 将以下查询作为参数传递给 `ExecuteStructuralTypeQuery` 方法：  
   
@@ -38,4 +38,4 @@ expression <> expression
   
 ## <a name="see-also"></a>请参阅
 
-- [实体 SQL 引用](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [实体 SQL 引用](entity-sql-reference.md)

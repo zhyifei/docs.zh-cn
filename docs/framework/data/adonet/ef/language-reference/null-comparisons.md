@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ef88af8c-8dfe-4556-8b56-81df960a900b
-ms.openlocfilehash: 5862506960ae1e763baebee5d990df83f92cc784
-ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
+ms.openlocfilehash: 6aa0af812d44f5c63758dd47ea4271bb2d689837
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67539734"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70249837"
 ---
 # <a name="null-comparisons"></a>Null 比较
-数据源中的 `null` 值指示未知的值。 在 LINQ to Entities 查询中，您可以检查 null 值，以便只有具有有效的或非 null 数据的行上将某些计算或比较执行。 但是，CLR null 语义可能与数据源的 null 语义不同。 大多数数据库使用某个版本的三值逻辑处理 null 比较。 即，对 null 值的比较不会计算为 `true` 或 `false`，而是计算为 `unknown`。 通常这是 ANSI null 值的实现，但情况并非总是如此。  
+数据源中的 `null` 值指示未知的值。 在 LINQ to Entities 查询中，可以检查是否存在 null 值，以便仅对具有有效或非 null 数据的行执行某些计算或比较。 但是，CLR null 语义可能与数据源的 null 语义不同。 大多数数据库使用某个版本的三值逻辑处理 null 比较。 即，对 null 值的比较不会计算为 `true` 或 `false`，而是计算为 `unknown`。 通常这是 ANSI null 值的实现，但情况并非总是如此。  
   
- 在 SQL Server 中，null 等于 null 比较默认返回 null 值。 在下面的示例中，行其中`ShipDate`是从结果集中排除的 null 和 TRANSACT-SQL 语句将返回 0 行。  
+ 在 SQL Server 中，null 等于 null 比较默认返回 null 值。 在下面的示例中， `ShipDate`将从结果集中排除为 null 的行，并且 transact-sql 语句将返回0行。  
   
 ```  
 -- Find order details and orders with no ship date.  
@@ -33,7 +33,7 @@ WHERE h.ShipDate IS Null
  [!code-vb[DP L2E Conceptual Examples#JoinOnNull](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#joinonnull)]  
   
 ## <a name="key-selectors"></a>键选择器  
- 一个*的键选择器*是在标准查询运算符用于从元素提取键的函数。 在键选择器函数中，表达式可以与常量进行比较。 如果表达式与 null 常量进行比较或两个 null 常量进行比较，则会展现 CLR null 语义。 如果数据源中具有 null 值的两个列进行比较，则会展现存储 null 语义。 键选择器出现在许多分组和排序标准查询运算符（如 <xref:System.Linq.Queryable.GroupBy%2A>）中，用于选择对查询结果进行排序或分组所依据的键。  
+ *键选择器*是在标准查询运算符中用于从元素中提取键的函数。 在键选择器函数中，表达式可以与常量进行比较。 如果表达式与 null 常量进行比较或两个 null 常量进行比较，则会展现 CLR null 语义。 如果数据源中具有 null 值的两个列进行比较，则会展现存储 null 语义。 键选择器出现在许多分组和排序标准查询运算符（如 <xref:System.Linq.Queryable.GroupBy%2A>）中，用于选择对查询结果进行排序或分组所依据的键。  
   
 ## <a name="null-property-on-a-null-object"></a>Null 对象上的 Null 属性  
  在 [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] 中，null 对象的属性为 null。 当尝试引用 CLR 中的 null 对象的属性时，会收到 <xref:System.NullReferenceException>。 当 LINQ 查询涉及 null 对象的属性时，可能会导致不一致的行为。  
@@ -44,8 +44,8 @@ WHERE h.ShipDate IS Null
  [!code-vb[DP L2E Conceptual Examples#CastResultsIsNull](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#castresultsisnull)]  
   
 ## <a name="passing-null-collections-to-aggregate-functions"></a>将 Null 集合传递到聚合函数  
- 在 LINQ to Entities，通过支持的集合时`IQueryable`为聚合函数，在数据库上执行聚合运算。 可能是内存执行中的查询和在数据库中执行的查询的结果的差异。 使用内存中查询，如果没有匹配项，查询将返回零。 在数据库中，同一查询返回 `null`。 如果`null`值传递到 LINQ 聚合函数，将引发异常。 若要接受可能`null`值强制转换的类型和接收查询结果为 null 的类型的类型的属性。  
+ 在 LINQ to Entities 中，当您将支持`IQueryable`的集合传递到聚合函数时，将在数据库中执行聚合运算。 在内存中执行的查询结果与在数据库中执行的查询可能存在差异。 对于内存中查询，如果没有匹配项，查询将返回零。 在数据库中，同一查询返回 `null`。 如果将`null`值传递给 LINQ 聚合函数，则会引发异常。 若要接受`null`可能的值，请将接收查询结果的类型的类型和属性强制转换为可以为 null 的类型。  
   
 ## <a name="see-also"></a>请参阅
 
-- [LINQ to Entities 查询中的表达式](../../../../../../docs/framework/data/adonet/ef/language-reference/expressions-in-linq-to-entities-queries.md)
+- [LINQ to Entities 查询中的表达式](expressions-in-linq-to-entities-queries.md)

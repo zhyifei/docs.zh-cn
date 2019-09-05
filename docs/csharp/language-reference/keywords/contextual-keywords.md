@@ -30,7 +30,7 @@ ms.locfileid: "70168621"
 |[value](./value.md)|用于设置访问器和添加或删除事件处理程序。|  
 |[var](./var.md)|使编译器能够确定在方法作用域中声明的变量类型。|  
 |[when](when.md)|指定 `catch` 块的筛选条件或 `switch` 语句的 `case` 标签。|
-|[where](./where-generic-type-constraint.md)|将约束添加到泛型声明。（另请参阅 [where](./where-clause.md)）。|  
+|[where](./where-generic-type-constraint.md)|将约束添加到泛型声明。 （另请参阅 [where](./where-clause.md)）。|  
 |[yield](./yield.md)|在迭代器块中使用，用于向枚举数对象返回值或用于表示迭代结束。|  
   
  C# 3.0 中引入的所有查询关键字也都是上下文相关的。 有关详细信息，请参阅[查询关键字 (LINQ)](./query-keywords.md)。  

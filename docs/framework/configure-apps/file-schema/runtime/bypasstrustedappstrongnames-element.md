@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: 71b2ebf6-3843-41e2-ad52-ffa5cd083a40
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 92873277b4b25e4c1c5981628187078ac7cb5704
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3fb198d6a19e25df4c86186d35aab3330c53121c
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920891"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252771"
 ---
 # <a name="bypasstrustedappstrongnames-element"></a>\<bypassTrustedAppStrongNames> 元素
 指定是否在加载到完全信任<xref:System.AppDomain>的完全信任程序集上绕过强名称验证。  
   
- \<configuration>  
-\<运行时 >  
-\<bypassTrustedAppStrongNames>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<运行时 >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<bypassTrustedAppStrongNames>**  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,14 +37,14 @@ ms.locfileid: "69920891"
   
 |特性|描述|  
 |---------------|-----------------|  
-|`enabled`|必需的特性。<br /><br /> 指定是否启用回避功能, 以避免为完全信任程序集验证强名称。 当启用此功能时, 加载程序集时, 不会验证强名称是否正确。 默认值为 `true`。|  
+|`enabled`|必需的特性。<br /><br /> 指定是否启用回避功能，以避免为完全信任程序集验证强名称。 当启用此功能时，加载程序集时，不会验证强名称是否正确。 默认值为 `true`。|  
   
 ## <a name="enabled-attribute"></a>enabled 特性  
   
 |值|描述|  
 |-----------|-----------------|  
-|`true`|将程序集加载到完全信任<xref:System.AppDomain>时, 不会验证完全信任程序集上的强名称签名。 这是默认设置。|  
-|`false`|将程序集加载到完全信任<xref:System.AppDomain>时, 会验证完全信任程序集上的强名称签名。 仅对签名正确性检查强名称签名;与另一个匹配的强名称没有比较。|  
+|`true`|将程序集加载到完全信任<xref:System.AppDomain>时，不会验证完全信任程序集上的强名称签名。 这是默认设置。|  
+|`false`|将程序集加载到完全信任<xref:System.AppDomain>时，会验证完全信任程序集上的强名称签名。 仅对签名正确性检查强名称签名;与另一个匹配的强名称没有比较。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  
@@ -61,7 +61,7 @@ ms.locfileid: "69920891"
   
  跳过功能适用于使用强名称进行签名及具有以下特征的任何程序集：  
   
-- 完全受信任, <xref:System.Security.Policy.StrongName>无需证据 (如具有`MyComputer`区域证据)。  
+- 完全受信任， <xref:System.Security.Policy.StrongName>无需证据（如具有`MyComputer`区域证据）。  
   
 - 加载到完全受信任的 <xref:System.AppDomain>。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "69920891"
 - 签名没有延迟。  
   
 > [!NOTE]
-> 如果对计算机上的所有应用程序使用注册表项关闭了绕过功能, 则此配置文件设置将不起作用。 有关详细信息，请参阅[如何：禁用强名称绕过功能](../../../app-domains/how-to-disable-the-strong-name-bypass-feature.md)。  
+> 如果对计算机上的所有应用程序使用注册表项关闭了绕过功能，则此配置文件设置将不起作用。 有关详细信息，请参阅[如何：禁用强名称绕过功能](../../../app-domains/how-to-disable-the-strong-name-bypass-feature.md)。  
   
 ## <a name="example"></a>示例  
  下面的示例演示如何指定对完全信任程序集的强名称签名进行验证的行为。  
