@@ -1,0 +1,24 @@
+### YamlMime:YamlDocument
+documentType: LandingData
+title: .NET 应用程序体系结构指南
+metadata:
+  document_id: na
+  title: .NET 应用程序体系结构指南
+  meta.description: 'Learn about recommended practices for architecting, designing and building .NET software.'
+  ms.topic: landing-page
+  ms.date: 06/12/2019
+abstract:
+  description: 通过免费的应用程序体系结构指南，了解如何构建生产就绪 .NET 应用程序。
+sections:
+  - title: 可用电子书
+    items:
+      - html: <ul><li><p><a href="containerized-lifecycle/index">使用 Microsoft 平台和工具容器化 Docker 应用程序生命周期</a></p>
+      - html: <p>本指南介绍了推荐的端到端生命周期进程，用于通过 Visual Studio 和 Microsoft Azure 开发、验证和部署容器化 Docker 应用。</p></li></ul>
+      - html: <ul><li><p><a href="modernize-with-azure-containers/index">使用 Azure 云和 Windows 容器更新现有 .NET 应用程序</a></p>
+      - html: <p>本指南介绍了从现有 Web 应用迁移到 Azure 云和 Windows 容器所需的策略。 将了解代码策略、数据迁移、业务流程协调程序和 CI/CD 进程。</p></li></ul>
+      - html: <ul><li><p><a href="modern-web-apps-azure/index">使用 ASP.NET Core 和 Azure 生成新式 Web 应用的体系结构</a></p>
+      - html: <p>本指南介绍了推荐的体系结构、设计和部署进程，用于生成 ASP.NET 和 ASP.NET Core 应用，并在 Azure 中托管这些应用。</p></li></ul>
+      - html: <ul><li><p><a href="microservices/index">构建容器化微服务应用</a></p>
+      - html: <p>本指南介绍如何使用容器开发基于微服务的应用程序并对其进行管理。 本指南探讨使用 .NET Core 和 Docker 容器的体系结构设计和实现方法。</p></li></ul>
+      - html: <ul><li><p><a href="serverless/index">无服务器应用：体系结构、模式和 Azure 实现</a></p>
+      - html: <p>本指南介绍如何使用 Azure 生成无服务器应用程序，其中包含了一些示例。 其中介绍了多种体系结构和设计方法以及无服务器带来的优势和挑战，并提供有关无服务器应用的方案和用例。</p></li></ul>
