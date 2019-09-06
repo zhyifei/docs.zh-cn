@@ -2,12 +2,12 @@
 title: 将现有 .NET 应用现代化为云优化应用
 description: 使用 Azure 云和 Windows 容器更新现有 .NET 应用程序。
 ms.date: 04/28/2018
-ms.openlocfilehash: 00385ac1e2f41d2005606fa7f943618ec253ffc2
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 92dc0cde11bb35797fe3c4e8442a2a6514a27e08
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 09/05/2019
-ms.locfileid: "70294957"
+ms.locfileid: "70374064"
 ---
 # <a name="modernize-existing-net-apps-to-cloud-optimized-applications"></a>将现有 .NET 应用现代化为云优化的应用程序
 
@@ -19,7 +19,7 @@ ms.locfileid: "70294957"
 
 ![定位云优化的应用程序](./media/image1.png)
 
-> **图 4-1**。 定位云优化的应用程序
+**图 4-1**。 定位云优化的应用程序
 
 >[!div class="step-by-step"]
 >[上一页](../migrate-your-relational-databases-to-azure.md)
