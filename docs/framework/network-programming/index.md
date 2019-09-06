@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Internet, .NET Framework Internet services
 - Network Resources
 ms.assetid: 8d455610-67a0-4fa8-a62f-7747064a9256
-ms.openlocfilehash: 74084b8eef46f700733ad44e04cf8b3811456b85
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 245c843d13e70a807807f4e462dd1a5357c25665
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61642407"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398521"
 ---
 # <a name="network-programming-in-the-net-framework"></a>.NET Framework 中的网络编程
 Microsoft .NET Framework 为 Internet 服务提供了一种分层、可扩展且托管的实现，可以快速、轻松地将其集成到你的应用程序中。 你的网络应用程序可以基于可插入协议而构建，以便自动利用新的 Internet 协议，或者，它们可以使用 Windows 套接字接口的托管实现在套接字级别上使用网络。  
@@ -139,5 +139,4 @@ Microsoft .NET Framework 为 Internet 服务提供了一种分层、可扩展且
 - [.NET Framework 中的传输层安全性 (TLS) 最佳做法](../../../docs/framework/network-programming/tls.md)
 - [网络编程操作说明主题](../../../docs/framework/network-programming/network-programming-how-to-topics.md)
 - [网络编程示例](../../../docs/framework/network-programming/network-programming-samples.md)
-- [MSDN 代码库中的 .NET 联网示例](https://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)
-- [HttpClient 示例](https://go.microsoft.com/fwlink/?LinkId=242550)
+- [HttpClient 示例](https://code.msdn.microsoft.com/windowsapps/HttpClient-sample-55700664)

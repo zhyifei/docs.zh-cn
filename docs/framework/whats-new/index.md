@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c15b2c27e51557494f10c2445d75a4bd56c47f91
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: bbf7c1203a1f6089eefce3ed2876c9ade91cc697
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69987241"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374454"
 ---
 # <a name="whats-new-in-the-net-framework"></a>.NET Framework 中的新增功能
 
@@ -174,7 +174,7 @@ ms.locfileid: "69987241"
 
 **高 DPI 增强功能**
 
-在 .NET Framework 4.8 中，WPF 添加了对按监视器 V2 DPI 感知和混合模式 DPI 缩放的支持。 有关高 DPI 开发的其他信息，请参阅[在 Windows 上开发高 DPI 桌面应用程序](/desktop/hidpi/high-dpi-desktop-application-development-on-windows)。
+在 .NET Framework 4.8 中，WPF 添加了对按监视器 V2 DPI 感知和混合模式 DPI 缩放的支持。 有关高 DPI 开发的其他信息，请参阅[在 Windows 上开发高 DPI 桌面应用程序](/windows/win32/hidpi/high-dpi-desktop-application-development-on-windows)。
 
 .NET framework 4.8 改进了对支持混合模式 DPI 缩放的平台上的高 DPI WPF 应用程序中的寄宿 HWND 和 Windows 窗体互操作的支持（从 Windows 10 2018 年 4 月更新开始）。 通过调用 [SetThreadDpiHostingBehavior](/windows/desktop/api/winuser/nf-winuser-setthreaddpihostingbehavior) 和 [SetThreadDpiAwarenessContext](/windows/desktop/api/winuser/nf-winuser-setthreaddpiawarenesscontext) 将寄宿 HWND 或 Windows 窗体控件创建为混合模式 DPI 缩放窗口时，它们可以托管在按监视器 V2 WPF 应用程序中，并且相应地调整大小和缩放。 此类托管内容不以本机 DPI 呈现；相反，操作系统将托管内容缩放到合适大小。 对按监视器 v2 DPI 感知模式的支持还允许 WPF 控件托管（即，设置为父级）在高 DPI 应用程序的本机窗口中。
 
