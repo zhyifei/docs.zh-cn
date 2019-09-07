@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d00f0efa-9084-4c17-843f-54904fcb4204
-ms.openlocfilehash: 2f26f937901debd27cb936d1f642e0a5149b167a
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: c7dafae846a30424f008cce5f597efbdefa4bdf8
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250137"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70397358"
 ---
 # <a name="method-based-query-syntax-examples-join-operators"></a>基于方法的查询语法示例：联接运算符
-本主题中的示例演示如何使用<xref:System.Linq.Enumerable.Join%2A>和<xref:System.Linq.Enumerable.GroupJoin%2A>方法通过基于方法的查询语法来查询[AdventureWorks 销售模型](https://archive.codeplex.com/?p=msftdbprodsamples)。 这些示例中使用的 AdventureWorks 销售模型从 AdventureWorks 示例数据库中的 Contact、Address、Product、SalesOrderHeader 和 SalesOrderDetail 等表生成。  
+本主题中的示例演示如何使用<xref:System.Linq.Enumerable.Join%2A>和<xref:System.Linq.Enumerable.GroupJoin%2A>方法通过基于方法的查询语法来查询[AdventureWorks 销售模型](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)。 这些示例中使用的 AdventureWorks 销售模型从 AdventureWorks 示例数据库中的 Contact、Address、Product、SalesOrderHeader 和 SalesOrderDetail 等表生成。  
   
  本主题中的示例使用以下`using` / `Imports`语句：  
   

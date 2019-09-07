@@ -2,24 +2,24 @@
 title: <scopedCertificates> 元素
 ms.date: 03/30/2017
 ms.assetid: c7b6fc35-d4b2-4c18-98bd-83e09591f1d3
-ms.openlocfilehash: ed53a42575a8d57c365f7a329a1a9c1df075d6d4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3c06159709df0afe2a475de1e186b0114af32bc2
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69935220"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399959"
 ---
 # <a name="scopedcertificates-element"></a>\<scopedCertificates > 元素
 表示特定服务为身份验证提供的 X.509（作用域）证书的集合。 此集合通常用于指定联合方案中安全令牌服务的服务证书。  
   
- \<system.ServiceModel>  
-\<行为 >  
-endpointBehaviors 部分  
-\<行为 >  
-\<clientCredentials>  
-\<serviceCertificate>  
-\<scopedCertificates > 元素  
-\<添加 scopedCertificates 的\<> 元素 >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<行为 >** ](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<endpointBehaviors >** ](endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<行为 >** ](behavior-of-endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<clientCredentials >** ](clientcredentials.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<serviceCertificate >** ](servicecertificate-of-clientcredentials-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<scopedCertificates >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -56,7 +56,7 @@ endpointBehaviors 部分
   
  如果绑定需要服务的证书，但在 ScopedCertificates 中未找到服务 URL 的特定证书，则使用默认证书。  
   
- 有关详细信息, 请参阅[如何:创建联合客户端](../../../wcf/feature-details/how-to-create-a-federated-client.md)。  
+ 有关详细信息，请参阅[如何：创建联合客户端](../../../wcf/feature-details/how-to-create-a-federated-client.md)。  
   
 ## <a name="example"></a>示例  
  下面的示例指定客户端在其域名与终结点进行通信时要使用的服务证书 `http://www.contoso.com` 通过 HTTP 协议。  

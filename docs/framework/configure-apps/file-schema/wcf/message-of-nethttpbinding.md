@@ -2,22 +2,23 @@
 title: <message> 的 <netHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 9def5a35-475d-40d6-b716-ccdbd93863c7
-ms.openlocfilehash: 4a7606c0ebc9fc1bbd34aef619dcb4b8a1d63fa5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 793e0541b1714d2afaafc634a9e9435e5243fa19
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69931545"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70397842"
 ---
 # <a name="message-of-nethttpbinding"></a>\<netHttpBinding > 的\<消息 >
-定义[ \<basicHttpBinding >](basichttpbinding.md)的消息级安全性设置。  
+定义[ \<netHttpBinding >](nethttpbinding.md)的消息级安全性设置。  
   
- \<system.ServiceModel>  
-\<bindings>  
-\<netHttpBinding>  
-\<绑定 >  
-\<安全 >  
-\<message>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<绑定 >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<netHttpBinding >** ](nethttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<绑定 >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<安全 >** ](security-of-nethttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<消息 >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,8 +41,8 @@ ms.locfileid: "69931545"
   
 |值|描述|  
 |-----------|-----------------|  
-|UserName|-要求使用用户名凭据对客户端进行身份验证。 需要使用 <`clientCredentials`> 元素来指定此凭据。<br />-WCF 不支持发送密码摘要, 也不支持使用密码派生密钥并使用此类密钥来实现消息安全性。 因此, WCF 强制在使用用户名凭据时确保传输安全。 对于 `basicHttpBinding`，这要求设置一个 SSL 通道。|  
-|证书|要求使用证书向服务器对客户端进行身份验证。 在这种情况下, 需要使用 <`clientCredentials`> 和 <`clientCertificate`> 来指定客户端凭据。 此外，在使用消息安全模式时，需要向客户端提供服务证书。 在这种情况下, 需要使用<xref:System.ServiceModel.Description.ClientCredentials>类或`ClientCredentials`行为元素来指定服务凭据, 并使用 serviceCredentials 的\<serviceCertificate > 元素指定服务证书。|  
+|UserName|-要求使用用户名凭据对客户端进行身份验证。 需要使用 <`clientCredentials`> 元素来指定此凭据。<br />-WCF 不支持发送密码摘要，也不支持使用密码派生密钥并使用此类密钥来实现消息安全性。 因此，WCF 强制在使用用户名凭据时确保传输安全。 对于 `basicHttpBinding`，这要求设置一个 SSL 通道。|  
+|证书|要求使用证书向服务器对客户端进行身份验证。 在这种情况下，需要使用 <`clientCredentials`> 和 <`clientCertificate`> 来指定客户端凭据。 此外，在使用消息安全模式时，需要向客户端提供服务证书。 在这种情况下，需要使用<xref:System.ServiceModel.Description.ClientCredentials>类或`ClientCredentials`行为元素来指定服务凭据，并使用 serviceCredentials 的\<serviceCertificate > 元素指定服务证书。|  
   
 ### <a name="child-elements"></a>子元素  
  无  

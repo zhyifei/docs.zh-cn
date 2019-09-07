@@ -2,24 +2,25 @@
 title: <add>of <scopedCertificates>元素
 ms.date: 03/30/2017
 ms.assetid: e21c1ef8-d6d6-4bca-ac5a-6fbf4bd77412
-ms.openlocfilehash: 9756d37527fcf888cad930b24677ae8e6a2c8fba
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b00a342108beca69a906fbf6212915768e98778f
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920045"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398346"
 ---
 # <a name="add-of-scopedcertificates-element"></a>\<添加 scopedCertificates > \<元素的 >
 向作用域证书集合添加 X.509 证书。  
   
- \<system.ServiceModel>  
-\<行为 >  
-endpointBehaviors 部分  
-\<行为 >  
-\<clientCredentials>  
-\<serviceCertificate>  
-\<scopedCertificates>  
-\<添加 scopedCertificates 的\<> 元素 >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<行为 >** ](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<endpointBehaviors >** ](endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<行为 >** ](behavior-of-endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<clientCredentials >** ](clientcredentials.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<serviceCertificate >** ](servicecertificate-of-clientcredentials-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<scopedCertificates >** ](scopedcertificates-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<添加 >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -82,7 +83,7 @@ endpointBehaviors 部分
   
  如果绑定需要服务的证书，但在 ScopedCertificates 中未找到服务 URL 的特定证书，则使用默认证书。  
   
- 有关详细信息, 请参阅[如何:创建联合客户端](../../../wcf/feature-details/how-to-create-a-federated-client.md)。  
+ 有关详细信息，请参阅[如何：创建联合客户端](../../../wcf/feature-details/how-to-create-a-federated-client.md)。  
   
 ## <a name="example"></a>示例  
  下面的示例向集合中添加一个 X.509 证书。  

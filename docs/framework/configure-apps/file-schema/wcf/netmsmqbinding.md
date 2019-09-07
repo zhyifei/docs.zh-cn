@@ -2,19 +2,20 @@
 title: <netMsmqBinding>
 ms.date: 03/30/2017
 ms.assetid: a68b44d7-7799-43a3-9e63-f07c782810a6
-ms.openlocfilehash: 4cb8488a1c633f9b7158f9bebfa617381b407a63
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a315ec508b378d1a3ba0189b0867c7b6b61e34d2
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69933069"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398320"
 ---
 # <a name="netmsmqbinding"></a>\<netMsmqBinding>
 定义适用于跨计算机通信的排队绑定。  
   
- \<system.ServiceModel>  
-\<bindings>  
-\<netMsmqBinding>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<绑定 >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<netMsmqBinding >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -73,17 +74,17 @@ ms.locfileid: "69933069"
 |`exactlyOnce`|一个布尔值，指示是否只传递一次此绑定所处理的每个消息。 然后，将通知发送方有关传递失败的信息。 如果 `durable` 为 `false`，则将忽略此属性并且传输消息，而不会提供传递保证。 默认值为 `true`。 有关详细信息，请参阅 <xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A>。|  
 |`maxBufferPoolSize`|一个整数，指定此绑定的最大缓冲池大小。 默认值为 8。|  
 |`maxReceivedMessageSize`|一个正整数，定义此绑定所处理的最大消息大小（以字节为单位），其中包括标头。 如果消息超出此限制，则发送方将收到 SOAP 错误。 接收方将删除该消息，并在跟踪日志中创建事件项。 默认值为 65536。 对消息大小进行的此限制旨在降低遭受拒绝服务 (DoS) 攻击的可能性。|  
-|`maxRetryCycles`|一个整数，指示病毒消息检测功能所使用的重试周期数。 如果所有周期的所有传递尝试均失败，则消息将变为病毒消息。 默认值为 3。 有关详细信息，请参阅 <xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A>。|  
-|`name`|必需的特性。 一个包含绑定的配置名称的字符串。 因为此值用作绑定的标识，所以它应该是唯一的。 从 [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] 开始，不要求绑定和行为具有名称。 有关默认配置和无值绑定和行为的详细信息, 请参阅[WCF 服务的](../../../wcf/samples/simplified-configuration-for-wcf-services.md)[简化配置](../../../wcf/simplified-configuration.md)和简化配置。|  
+|`maxRetryCycles`|一个整数，指示病毒消息检测功能所使用的重试周期数。 如果所有周期的所有传递尝试均失败，则消息将变为病毒消息。 默认值为 3。 有关详细信息，请参阅 <xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A> 。|  
+|`name`|必需的特性。 一个包含绑定的配置名称的字符串。 因为此值用作绑定的标识，所以它应该是唯一的。 从 [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] 开始，不要求绑定和行为具有名称。 有关默认配置和无值绑定和行为的详细信息，请参阅[WCF 服务的](../../../wcf/samples/simplified-configuration-for-wcf-services.md)[简化配置](../../../wcf/simplified-configuration.md)和简化配置。|  
 |`openTimeout`|一个 <xref:System.TimeSpan> 值，指定为完成打开操作提供的时间间隔。 此值应大于或等于 <xref:System.TimeSpan.Zero>。 默认值为 00:01:00。|  
-|`QueueTransferProtocol`|一个有效的 <xref:System.ServiceModel.QueueTransferProtocol> 值，指定此绑定所使用的排队通信通道传输。 在使用 SOAP 可靠消息协议时，MSMQ 不支持 Active Directory 寻址。 因此, 当`Srmp` `useActiveDirectory`特性设置为`Srmps` `true`时, 不应将此特性设置为或。|  
+|`QueueTransferProtocol`|一个有效的 <xref:System.ServiceModel.QueueTransferProtocol> 值，指定此绑定所使用的排队通信通道传输。 在使用 SOAP 可靠消息协议时，MSMQ 不支持 Active Directory 寻址。 因此，当`Srmp` `useActiveDirectory`特性设置为`Srmps` `true`时，不应将此特性设置为或。|  
 |`receiveErrorHandling`|一个 <xref:System.ServiceModel.ReceiveErrorHandling> 值，指定如何处理病毒消息和不可调度的消息。|  
 |`receiveRetryCount`|一个整数，指定队列管理器在将消息传输到重试队列前可尝试发送该消息的最大次数。|  
 |`receiveTimeout`|一个 <xref:System.TimeSpan> 值，指定为完成接收操作提供的时间间隔。 此值应大于或等于 <xref:System.TimeSpan.Zero>。 默认值为 00:10:00。|  
 |`retryCycleDelay`|一个 TimeSpan 值，指定尝试传递无法立即传递的消息时，各个重试周期之间的时间延迟。 该值只定义最小等待时间，因为实际等待时间可能较长。 默认值为 00:10:00。 有关详细信息，请参阅 <xref:System.ServiceModel.MsmqBindingBase.RetryCycleDelay%2A> 。|  
 |`sendTimeout`|一个 <xref:System.TimeSpan> 值，指定为完成发送操作提供的时间间隔。 此值应大于或等于 <xref:System.TimeSpan.Zero>。 默认值为 00:01:00。|  
 |`timeToLive`|一个 TimeSpan 值，指定在消息过期并放入死信队列之前消息保持有效的持续时间。 默认值为 1.00:00:00。<br /><br /> 设置此属性可以确保具有时效性的消息不会在由接收应用程序进行处理之前过时。 如果队列中的消息在指定时间间隔内未被接收应用程序进行处理，则称该消息为过时消息。 过时消息被发送到称为“死信队列”的特殊队列中。 死信队列的位置通过 `DeadLetterQueue` 属性进行设置，或基于保证设置为适当的默认值。|  
-|`usingActiveDirectory`|一个布尔值，指定是否应该使用 Active Directory 转换队列地址。<br /><br /> MSMQ 队列地址可由路径名或直接格式名组成。 对于直接格式名，MSMQ 会使用 DNS、NetBIOS 或 IP 解析计算机名称。 对于路径名，MSMQ 会使用 Active Directory 解析计算机名称。<br /><br /> 默认情况下, Windows Communication Foundation (WCF) 排队传输会将消息队列的 URI 转换为直接格式名。 通过将 `UseActiveDirectory` 属性设置为 True，应用程序可以指定排队传输应使用 Active Directory 而不是 DNS、NetBIOS 或 IP 来解析计算机名称。|  
+|`usingActiveDirectory`|一个布尔值，指定是否应该使用 Active Directory 转换队列地址。<br /><br /> MSMQ 队列地址可由路径名或直接格式名组成。 对于直接格式名，MSMQ 会使用 DNS、NetBIOS 或 IP 解析计算机名称。 对于路径名，MSMQ 会使用 Active Directory 解析计算机名称。<br /><br /> 默认情况下，Windows Communication Foundation （WCF）排队传输会将消息队列的 URI 转换为直接格式名。 通过将 `UseActiveDirectory` 属性设置为 True，应用程序可以指定排队传输应使用 Active Directory 而不是 DNS、NetBIOS 或 IP 来解析计算机名称。|  
 |`useMsmqTracing`|一个布尔值，指定是否应跟踪由此绑定处理的消息。 默认值为 `false`。 如果启用了跟踪，则每当消息离开或到达消息队列计算机时，都会创建报告消息并将其发送到报告队列。|  
 |`useSourceJournal`|一个布尔值，指定是否应将由此绑定处理的消息的副本存储在源日志中。 默认值为 `false`。<br /><br /> 如果排队应用程序要保留已离开计算机传出队列的消息的记录，则可以将这些消息复制到日志队列。 在消息离开传出队列，并且接收到目标计算机已接收该消息的确认后，该消息的副本就会保留在发送计算机的系统日志队列中。|  
   
@@ -101,7 +102,7 @@ ms.locfileid: "69933069"
 |[\<bindings>](bindings.md)|此元素包含标准绑定和自定义绑定的集合。|  
   
 ## <a name="remarks"></a>备注  
- `netMsmqBinding` 绑定通过利用 Microsoft 消息队列 (MSMQ) 作为传输来提供队列支持，并且为松耦合应用程序、故障隔离、负载均衡和断开连接的操作提供支持。 有关这些功能的讨论, 请参阅[WCF 中的队列](../../../wcf/feature-details/queues-in-wcf.md)。  
+ `netMsmqBinding` 绑定通过利用 Microsoft 消息队列 (MSMQ) 作为传输来提供队列支持，并且为松耦合应用程序、故障隔离、负载均衡和断开连接的操作提供支持。 有关这些功能的讨论，请参阅[WCF 中的队列](../../../wcf/feature-details/queues-in-wcf.md)。  
   
 ## <a name="example"></a>示例  
   

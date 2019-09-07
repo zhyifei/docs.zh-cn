@@ -2,21 +2,22 @@
 title: <binaryMessageEncoding>
 ms.date: 03/30/2017
 ms.assetid: e4ae3cd4-6b67-4ce1-af4b-9400e0a38dba
-ms.openlocfilehash: 9b6b74200c807e6523ed3f7250945040bd12658d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: feefd7fe73363b5fe1ec5658c5dc339c3d6bac57
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69919799"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398214"
 ---
 # <a name="binarymessageencoding"></a>\<binaryMessageEncoding>
 定义一个在网络上以二进制形式对 Windows Communication Foundation (WCF) 消息进行编码的二进制消息编码器。  
   
- \<system.serviceModel>  
-\<bindings>  
-\<customBinding>  
-\<绑定 >  
-\<binaryMessageEncoding>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<绑定 >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<customBinding >** ](custombinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<绑定 >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<binaryMessageEncoding >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -52,7 +53,7 @@ ms.locfileid: "69919799"
 |[\<binding>](../../../misc/binding.md)|定义自定义绑定的所有绑定功能。|  
   
 ## <a name="remarks"></a>备注  
- 编码是将消息转换为一个字节序列的过程。 解码是反向过程。 Windows Communication Foundation (WCF) 包含三种类型的 SOAP 消息编码:文本、二进制和消息传输优化机制 (MTOM)。  
+ 编码是将消息转换为一个字节序列的过程。 解码是反向过程。 Windows Communication Foundation （WCF）包含三种类型的 SOAP 消息编码：文本、二进制和消息传输优化机制（MTOM）。  
   
  `binaryMessageEncoding` 元素为 XML 指定 .NET 二进制格式，且包含可用于指定要使用的字符编码以及 SOAP 和 WS-Addressing 版本的选项。 二进制消息编码器在网络上以二进制形式对 Windows Communication Foundation (WCF) 消息进行编码。 虽然这种编码有助于非常快速地传输消息，但是丢失了基于 WS-* 标准的互操作性。  
   

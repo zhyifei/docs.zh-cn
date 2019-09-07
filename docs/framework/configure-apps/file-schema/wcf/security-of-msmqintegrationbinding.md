@@ -2,21 +2,22 @@
 title: <security> 的 <msmqIntegrationBinding>
 ms.date: 03/30/2017
 ms.assetid: ae5c68a8-14a2-4c6e-b9e0-3e94e3e9135e
-ms.openlocfilehash: 5b74c95ef2933fcf7e8d49aed89d95acbd288b80
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e4f10ab994429c6cbb690caef38114b8340e6839
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69936699"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399869"
 ---
 # <a name="security-of-msmqintegrationbinding"></a>\<msmqIntegrationBinding 的\<安全 > >
 定义消息队列 (MSMQ) 集成通道的传输安全设置。  
   
- \<system.ServiceModel>  
-\<bindings>  
-msmqIntegrationBinding  
-\<绑定 >  
-\<安全 >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<绑定 >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<msmqIntegrationBinding >** ](msmqintegrationbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<绑定 >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<安全 >**  
   
 ## <a name="syntax"></a>语法  
   

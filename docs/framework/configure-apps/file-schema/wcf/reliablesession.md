@@ -2,21 +2,22 @@
 title: <reliableSession>
 ms.date: 03/30/2017
 ms.assetid: 129b4a59-37f0-4030-b664-03795d257d29
-ms.openlocfilehash: 548c4884ecd2f4b9a71fcc9d6647a9e258b183c1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ef9416b2031bd457322b33dfa491d3fae766bf8c
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69934251"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70400008"
 ---
 # <a name="reliablesession"></a>\<reliableSession>
 定义 WS-ReliableMessaging 的设置。 如果将该元素添加到自定义绑定，则生成的通道可支持一次性传递保证。  
   
- \<system.serviceModel>  
-\<bindings>  
-\<customBinding>  
-\<绑定 >  
-\<reliableSession>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<绑定 >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<customBinding >** ](custombinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<绑定 >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<reliableSession >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -61,7 +62,7 @@ ms.locfileid: "69934251"
   
  发送或接收消息时，每个绑定元素都表示一个处理步骤。 在运行时，绑定元素会创建必要的通道工厂和侦听器，用以生成发送和接收消息所需的传出和传入通道堆栈。 `reliableSession` 会在堆栈中提供一个可选层，该可选层可在终结点之间建立可靠会话并配置此会话的行为。  
   
- 有关详细信息, 请参阅[可靠会话](../../../wcf/feature-details/reliable-sessions.md)。  
+ 有关详细信息，请参阅[可靠会话](../../../wcf/feature-details/reliable-sessions.md)。  
   
 ## <a name="example"></a>示例  
  下面的示例演示如何用各种传输和消息编码元素配置自定义绑定，并特别启用可靠会话，这将保持客户端状态并指定按顺序传递保证。 此功能是在客户端和服务的应用程序配置文件中配置的。 此示例显示了服务配置。  

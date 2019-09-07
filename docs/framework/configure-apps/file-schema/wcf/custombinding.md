@@ -2,20 +2,21 @@
 title: <customBinding>
 ms.date: 03/30/2017
 ms.assetid: 9da4f960-f64e-4d8a-894d-2b09eba5ce4b
-ms.openlocfilehash: 0b6f26c7b9e9d02b3ff20b53f42b09d671699ea5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1fd0a12b62c416ce71946e59e7868abc7638a274
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69919387"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398125"
 ---
 # <a name="custombinding"></a>\<customBinding>
 
 提供了对用户消息堆栈的完全控制。
 
-\<system.serviceModel>\
-\<绑定 > \
-\<customBinding>
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<绑定 >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<customBinding >**  
 
 ## <a name="syntax"></a>语法
 
@@ -181,7 +182,7 @@ ms.locfileid: "69919387"
 |特性|描述|
 |---------------|-----------------|
 |closeTimeout|一个 <xref:System.TimeSpan> 值，指定为完成关闭操作提供的时间间隔。 此值应大于或等于 <xref:System.TimeSpan.Zero>。 默认值为 00:01:00。|
-|NAME|一个包含绑定的配置名称的字符串。 此值是用户定义的一个字符串，可充当自定义绑定的标识字符串。 从 [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] 开始，不要求绑定和行为具有名称。 有关默认配置和无值绑定和行为的详细信息, 请参阅[WCF 服务的](../../../wcf/samples/simplified-configuration-for-wcf-services.md)[简化配置](../../../wcf/simplified-configuration.md)和简化配置。|
+|NAME|一个包含绑定的配置名称的字符串。 此值是用户定义的一个字符串，可充当自定义绑定的标识字符串。 从 [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] 开始，不要求绑定和行为具有名称。 有关默认配置和无值绑定和行为的详细信息，请参阅[WCF 服务的](../../../wcf/samples/simplified-configuration-for-wcf-services.md)[简化配置](../../../wcf/simplified-configuration.md)和简化配置。|
 |openTimeout|一个 <xref:System.TimeSpan> 值，指定为完成打开操作提供的时间间隔。 此值应大于或等于 <xref:System.TimeSpan.Zero>。 默认值为 00:01:00。|
 |receiveTimeout|一个 <xref:System.TimeSpan> 值，指定为完成接收操作提供的时间间隔。 此值应大于或等于 <xref:System.TimeSpan.Zero>。 默认值为 00:01:00。|
 |sendTimeout|一个 <xref:System.TimeSpan> 值，指定为完成发送操作提供的时间间隔。 此值应大于或等于 <xref:System.TimeSpan.Zero>。 默认值为 00:01:00。|
@@ -230,7 +231,7 @@ ms.locfileid: "69919387"
 
 - 接下来是一个可选的 <xref:System.ServiceModel.Channels.ReliableSessionBindingElement>，它提供了 WS-ReliableMessaging 规范中定义的会话和排序机制。 此会话概念可跨 SOAP 和传输中介。
 
-- 接下来是一个可选的安全绑定元素，它提供了授权、身份验证、保护和机密性之类的安全功能。 Windows Communication Foundation (WCF) 提供以下安全绑定元素:
+- 接下来是一个可选的安全绑定元素，它提供了授权、身份验证、保护和机密性之类的安全功能。 Windows Communication Foundation （WCF）提供以下安全绑定元素：
 
   - <xref:System.ServiceModel.Channels.SecurityBindingElement>
 
@@ -260,7 +261,7 @@ ms.locfileid: "69919387"
 
   - <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>
 
-- 底层是一个必需的传输元素。 你可以使用自己的传输, 或者使用 Windows Communication Foundation (WCF) 提供的传输绑定元素之一:
+- 底层是一个必需的传输元素。 你可以使用自己的传输，或者使用 Windows Communication Foundation （WCF）提供的传输绑定元素之一：
 
   - <xref:System.ServiceModel.Channels.TcpTransportBindingElement>
 
@@ -278,7 +279,7 @@ ms.locfileid: "69919387"
 
 下表总结了每层的选项。
 
-|层|选项|必需|
+|层|选项|必填|
 |-----------|-------------|--------------|
 |事务流|<xref:System.ServiceModel.Channels.TransactionFlowBindingElement>|No|
 |可靠性|<xref:System.ServiceModel.Channels.ReliableSessionBindingElement>|No|
@@ -290,7 +291,7 @@ ms.locfileid: "69919387"
 
 此外，可以定义自己的绑定元素，并将它们插在前面定义的任何层之间。
 
-有关如何使用自定义绑定来修改系统提供的绑定的讨论, 请参阅[如何:自定义系统提供的绑定](../../../wcf/extending/how-to-customize-a-system-provided-binding.md)。
+有关如何使用自定义绑定来修改系统提供的绑定的讨论，请参阅[如何：自定义系统提供的绑定](../../../wcf/extending/how-to-customize-a-system-provided-binding.md)。
 
 ## <a name="see-also"></a>请参阅
 

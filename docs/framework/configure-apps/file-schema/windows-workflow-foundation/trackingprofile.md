@@ -3,21 +3,22 @@ title: <trackingProfile>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 154830ff-ddd3-4397-a3b5-5b334907777f
-ms.openlocfilehash: 8b8cfe95a646563642e7425fdb4b5257cafa466f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3120d6f5d1bb5a5cf452567e96766231534f3f41
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69947302"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398595"
 ---
 # <a name="trackingprofile"></a>\<trackingProfile>
 表示用于在跟踪参与者中创建工作流跟踪记录订阅的配置节。 跟踪配置文件包含跟踪查询，这些查询允许跟踪参与者订阅当工作流实例的状态在运行时发生更改时发出的工作流事件。 跟踪配置文件节中定义的查询用于定义订阅返回的事件类型。  
   
- 有关工作流跟踪及其配置的详细信息, 请参阅[工作流跟踪和跟踪](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)和[跟踪配置文件](../../../windows-workflow-foundation/tracking-profiles.md)。  
+ 有关工作流跟踪及其配置的详细信息，请参阅[工作流跟踪和跟踪](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)和[跟踪配置文件](../../../windows-workflow-foundation/tracking-profiles.md)。  
   
-\<system.serviceModel>  
-\<跟踪 >  
-\<trackingProfile>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<主板.>** ](system-servicemodel-of-workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<跟踪 >** ](tracking.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Trackingprofile&gt >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -101,9 +102,9 @@ ms.locfileid: "69947302"
 ## <a name="remarks"></a>备注  
  跟踪配置文件包含跟踪查询，这些查询允许跟踪参与者订阅当工作流实例的状态在运行时发生更改时发出的工作流事件。 根据您的监视需求，可以编写一个非常粗陋的配置文件，用来订阅对工作流进行的一小组高级状态更改。 相反，也可以创建一个非常具体的配置文件，其生成的事件足够丰富，可在以后重新构造详细的执行流。  
   
- 跟踪配置文件组织为跟踪记录的声明性订阅，利用这些订阅可以查询特定跟踪记录的工作流运行时。 有几种查询类型允许您订阅不同的<xref:System.Activities.Tracking.TrackingRecord>对象类。 有关查询的完整列表, 请参阅[ \<参与者 >](participants.md)和[跟踪配置文件](../../../windows-workflow-foundation/tracking-profiles.md)。  
+ 跟踪配置文件组织为跟踪记录的声明性订阅，利用这些订阅可以查询特定跟踪记录的工作流运行时。 有几种查询类型允许您订阅不同的<xref:System.Activities.Tracking.TrackingRecord>对象类。 有关查询的完整列表，请参阅[ \<参与者 >](participants.md)和[跟踪配置文件](../../../windows-workflow-foundation/tracking-profiles.md)。  
   
- 下面的示例演示配置文件中的跟踪配置文件, 该配置文件允许跟踪参与者订阅`Started`和`Completed`工作流事件。  
+ 下面的示例演示配置文件中的跟踪配置文件，该配置文件允许跟踪参与者订阅`Started`和`Completed`工作流事件。  
   
 ```xml  
 <system.serviceModel>  

@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d729120c-4c1b-4f34-bbe9-33694fca2dde
-ms.openlocfilehash: 5090616705c799f2905226b4892fa1fbe50bfbf3
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 54b5ab6fc5eac6ba522a58afa3aa3c0218e86bcf
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70249536"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70397187"
 ---
 # <a name="query-expression-syntax-examples-aggregate-operators"></a>查询表达式语法示例：聚合运算符
-本主题中的<xref:System.Linq.Enumerable.Average%2A>示例演示如何使用、 <xref:System.Linq.Enumerable.Max%2A> <xref:System.Linq.Enumerable.Count%2A>、、 <xref:System.Linq.Enumerable.Min%2A>和<xref:System.Linq.Enumerable.Sum%2A>方法通过使用查询表达式语法来查询[AdventureWorks 销售模型](https://archive.codeplex.com/?p=msftdbprodsamples)。 这些示例中使用的 AdventureWorks 销售模型从 AdventureWorks 示例数据库中的 Contact、Address、Product、SalesOrderHeader 和 SalesOrderDetail 等表生成。  
+本主题中的<xref:System.Linq.Enumerable.Average%2A>示例演示如何使用、 <xref:System.Linq.Enumerable.Max%2A> <xref:System.Linq.Enumerable.Count%2A>、、 <xref:System.Linq.Enumerable.Min%2A>和<xref:System.Linq.Enumerable.Sum%2A>方法通过使用查询表达式语法来查询[AdventureWorks 销售模型](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)。 这些示例中使用的 AdventureWorks 销售模型从 AdventureWorks 示例数据库中的 Contact、Address、Product、SalesOrderHeader 和 SalesOrderDetail 等表生成。  
   
  本主题中的示例使用以下`using` / `Imports`语句：  
   

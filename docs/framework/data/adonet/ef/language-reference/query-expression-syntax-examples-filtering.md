@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c27cb89c-1c1d-4988-9f38-950eda3cb275
-ms.openlocfilehash: 84de36b79ed646d73a8f2d8e00c26d8dcf6de4b7
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 4ce4e28df3a09ddf718b000725afb0c9125bdd77
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70249509"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70397103"
 ---
 # <a name="query-expression-syntax-examples-filtering"></a>查询表达式语法示例：筛选
-本主题中的示例演示如何使用`Where`和`Where…Contains`方法通过使用查询表达式语法来查询[AdventureWorks 销售模型](https://archive.codeplex.com/?p=msftdbprodsamples)。 请注意，Where 。`Contains` 不能用作[已编译查询](compiled-queries-linq-to-entities.md)的一部分。  
+本主题中的示例演示如何使用`Where`和`Where…Contains`方法通过使用查询表达式语法来查询[AdventureWorks 销售模型](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)。 请注意，Where 。`Contains` 不能用作[已编译查询](compiled-queries-linq-to-entities.md)的一部分。  
   
  这些示例中使用的 AdventureWorks 销售模型从 AdventureWorks 示例数据库中的 Contact、Address、Product、SalesOrderHeader 和 SalesOrderDetail 等表生成。  
   

@@ -3,21 +3,22 @@ title: <etwTracking>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: cb45c82e-6ea1-4c4d-924c-118a25ae1f35
-ms.openlocfilehash: 653693fef92072cb1e6e23234359b765f0f18fc9
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 094fbf95042c00287fb8dfcca28753cfe501a8d8
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69940221"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398758"
 ---
 # <a name="etwtracking"></a>\<etwTracking>
-一种服务行为, 允许服务使用<xref:System.Activities.Tracking.EtwTrackingParticipant>来利用 ETW 跟踪。  
+一种服务行为，允许服务使用<xref:System.Activities.Tracking.EtwTrackingParticipant>来利用 ETW 跟踪。  
   
-\<system.ServiceModel>  
-\<行为 >  
-\<serviceBehaviors>  
-\<行为 >  
-\<etwTracking>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<主板.>** ](system-servicemodel-of-workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<行为 >** ](behaviors-of-workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<serviceBehaviors >** ](servicebehaviors-of-workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<行为 >** ](behavior-of-servicebehaviors-of-workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<etwTracking >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -57,7 +58,7 @@ ms.locfileid: "69940221"
 ## <a name="example"></a>示例  
  下面的配置示例演示在 Web.config 文件中配置的标准 ETW 跟踪参与者。  
   
- Etw 跟踪参与者用于将跟踪记录写入 etw 的提供程序 Id 在 "  **\<诊断 >** " 部分中定义。 跟踪参与者具有一个与其关联的配置文件，用来指定跟踪参与者已订阅的跟踪记录。 这由 **profileName** 的属性 **\<添加>** 元素。 定义这些后, 跟踪参与者将添加到 **\<etwTracking >** 服务行为。 这会将所选跟踪参与者添加到工作流实例的扩展中，以便它们开始接收跟踪记录。  
+ Etw 跟踪参与者用于将跟踪记录写入 etw 的提供程序 Id 在 "  **\<诊断 >** " 部分中定义。 跟踪参与者具有一个与其关联的配置文件，用来指定跟踪参与者已订阅的跟踪记录。 这由 **profileName** 的属性 **\<添加>** 元素。 定义这些后，跟踪参与者将添加到 **\<etwTracking >** 服务行为。 这会将所选跟踪参与者添加到工作流实例的扩展中，以便它们开始接收跟踪记录。  
   
 ```xml  
 <configuration>   

@@ -2,21 +2,22 @@
 title: <privacyNoticeAt>
 ms.date: 03/30/2017
 ms.assetid: 4cc96942-4eb9-4241-b2fd-45aa239915e8
-ms.openlocfilehash: f7349bf61082c5d8e5bd4249e01b8835a1861cb9
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 624b52c0618362f48063c8f7e7c53c5a68d7de8f
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69934261"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70400030"
 ---
 # <a name="privacynoticeat"></a>\<privacyNoticeAt>
 表示一个配置元素，该元素指定 `wsFederationHttp` 绑定中使用的隐私声明。  
   
- \<system.serviceModel>  
-\<bindings>  
-\<customBinding>  
-\<绑定 >  
-\<privacyNotice>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<绑定 >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<customBinding >** ](custombinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<绑定 >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<privacyNotice >**  
   
 ## <a name="syntax"></a>语法  
   

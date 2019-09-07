@@ -3,23 +3,24 @@ title: <customTrackingQueries>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 4e9e732d-911d-45a3-a569-4b5e9cd1ffbe
-ms.openlocfilehash: 429940b2ed69d8be497626f634a21adca540b529
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 398b018ce407aee0687c95037753f3affa07aa9b
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69945843"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398785"
 ---
 # <a name="customtrackingqueries"></a>\<customTrackingQueries>
 表示一个查询集合，这些查询用于跟踪你在代码活动中定义的事件。 跟踪参与者需要用此查询来订阅自定义跟踪记录。  
   
- 有关跟踪配置文件查询的详细信息, 请参阅[跟踪配置文件](../../../windows-workflow-foundation/tracking-profiles.md)  
+ 有关跟踪配置文件查询的详细信息，请参阅[跟踪配置文件](../../../windows-workflow-foundation/tracking-profiles.md)  
   
-\<system.serviceModel>  
-\<跟踪 >  
-\<trackingProfile>  
-\<工作流 >  
-\<customTrackingQueries>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<主板.>** ](system-servicemodel-of-workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<跟踪 >** ](tracking.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Trackingprofile&gt >** ](trackingprofile.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<工作流 >** ](workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<q >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -52,7 +53,7 @@ ms.locfileid: "69945843"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<workflow>](workflow.md)|一个配置元素, 该元素包含由**activityDefinitionId**属性标识的特定工作流的所有查询。|  
+|[\<workflow>](workflow.md)|一个配置元素，该元素包含由**activityDefinitionId**属性标识的特定工作流的所有查询。|  
   
 ## <a name="see-also"></a>请参阅
 

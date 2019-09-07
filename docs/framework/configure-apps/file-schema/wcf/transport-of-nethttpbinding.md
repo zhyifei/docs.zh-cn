@@ -2,22 +2,23 @@
 title: <transport> 的 <netHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 3b180006-1661-43bf-a699-96fd3da469af
-ms.openlocfilehash: f9f784329081f6a18560991378a4527c731f4d31
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 521aaf3913a1d30d10a674b71d4d98affcabc296
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69934713"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399344"
 ---
 # <a name="transport-of-nethttpbinding"></a>\<netHttpBinding > 的\<传输 >
 为 HTTP 传输定义控制身份验证参数的属性。  
   
-\<system.serviceModel>  
-\<bindings>  
-\<netHttpBinding>  
-\<绑定 >  
-\<安全 >  
-\<transport>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<绑定 >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<netHttpBinding >** ](nethttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<绑定 >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<安全 >** ](security-of-nethttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<传输 >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -67,8 +68,8 @@ ms.locfileid: "69934713"
 |值|描述|  
 |-----------|-----------------|  
 |无|-传输过程中消息不受保护。|  
-|基本|指定由 RFC 2617 – HTTP Authentication 定义的基本身份验证:基本和摘要式身份验证。|  
-|摘要|指定由 RFC 2617 – HTTP 身份验证定义的摘要式身份验证:基本和摘要式身份验证。|  
+|基本|指定由 RFC 2617 – HTTP Authentication 定义的基本身份验证：基本和摘要式身份验证。|  
+|摘要|指定由 RFC 2617 – HTTP 身份验证定义的摘要式身份验证：基本和摘要式身份验证。|  
 |Ntlm|指定 NTLM 身份验证（如果可能且 Windows 身份验证失败）。|  
 |Windows|指定 Windows 集成身份验证。|  
 |证书|使用证书执行客户端身份验证。 此选项只在父 `Mode` 元素的 `security` 属性设置为“Transport”时才起作用，如果该属性设置为“TransportCredentialOnly”，则此选项将不起作用。|  

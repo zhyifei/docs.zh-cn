@@ -2,21 +2,22 @@
 title: <workflowRuntime>
 ms.date: 03/30/2017
 ms.assetid: 304c70fa-78d1-4d0f-b89f-0ca23d734c6f
-ms.openlocfilehash: 0cd04f66cc4b73eb5f1c43bd6c8dc9189dfceff1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d12656b77fa219080382603fd04a542d2fa9064a
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69915214"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399089"
 ---
 # <a name="workflowruntime"></a>\<workflowRuntime>
-指定用于承载基于工作流<xref:System.Workflow.Runtime.WorkflowRuntime>的 Windows Communication Foundation (WCF) 服务的实例的设置。  
+指定用于承载基于工作流<xref:System.Workflow.Runtime.WorkflowRuntime>的 Windows Communication Foundation （WCF）服务的实例的设置。  
   
- \<system.ServiceModel>  
-\<行为 >  
-\<serviceBehaviors>  
-\<行为 >  
-\<workflowRuntime>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<行为 >** ](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<serviceBehaviors >** ](servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<行为 >** ](behavior-of-servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<workflowRuntime >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -61,7 +62,7 @@ ms.locfileid: "69915214"
 |[\<behavior>](behavior-of-endpointbehaviors.md)|指定行为元素。|  
   
 ## <a name="remarks"></a>备注  
- 有关使用配置文件控制 Windows Workflow Foundation 主机应用程序的<xref:System.Workflow.Runtime.WorkflowRuntime>对象的行为的详细信息, 请参阅[工作流配置文件](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90))。  
+ 有关使用配置文件控制 Windows Workflow Foundation 主机应用程序的<xref:System.Workflow.Runtime.WorkflowRuntime>对象的行为的详细信息，请参阅[工作流配置文件](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90))。  
   
 ## <a name="example"></a>示例  
   

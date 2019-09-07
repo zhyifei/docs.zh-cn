@@ -2,22 +2,23 @@
 title: <message>的元素<netTcpBinding>
 ms.date: 03/30/2017
 ms.assetid: 1d71edd9-c085-4c2e-b6d3-980c313366f9
-ms.openlocfilehash: cbbacee00533b72d9e06ee3a79d1e9c0414b337c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0cf4f66df43070cc90443e3a640915df46a5cccd
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69931651"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70400292"
 ---
 # <a name="message-element-of-nettcpbinding"></a>\<netTcpBinding > 的\<消息 > 元素
 定义使用[ \<netTcpBinding >](nettcpbinding.md)配置的终结点的消息级安全性要求的类型。  
   
- \<system.ServiceModel>  
-\<bindings>  
-\<netTcpBinding>  
-\<绑定 >  
-\<安全 >  
-\<message>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<绑定 >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<netTcpBinding >** ](nettcpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<绑定 >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<安全 >** ](security-of-nettcpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<消息 >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -63,7 +64,7 @@ ms.locfileid: "69931651"
 |-----------|-----------------|  
 |无|允许服务与匿名客户端交互。 对于服务，这表示服务不需要任何客户端凭据。 对于客户端，这表示客户端不提供任何客户端凭据。|  
 |Windows|允许 SOAP 交换在已通过身份验证的 Windows 凭据上下文中执行。|  
-|UserName|允许服务要求使用 UserName 凭据对客户端进行身份验证。 WCF 不支持发送密码摘要, 也不支持使用密码派生密钥并使用此类密钥来实现消息安全性。 因此, 在使用用户名凭据时, WCF 会强制保护传输。 这种凭据模式将产生可互操作的交换或不可互操作的协商，具体取决于 `negotiateServiceCredential` 属性。|  
+|UserName|允许服务要求使用 UserName 凭据对客户端进行身份验证。 WCF 不支持发送密码摘要，也不支持使用密码派生密钥并使用此类密钥来实现消息安全性。 因此，在使用用户名凭据时，WCF 会强制保护传输。 这种凭据模式将产生可互操作的交换或不可互操作的协商，具体取决于 `negotiateServiceCredential` 属性。|  
 |证书|允许服务要求使用证书对客户端进行身份验证。 如果使用消息安全模式并且将 `negotiateServiceCredential` 属性设置为 `false`，则必须向客户端提供服务证书。|  
 |IssuedToken|指定自定义令牌，该令牌通常由安全令牌服务 (STS) 颁发。|  
   

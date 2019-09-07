@@ -2,21 +2,22 @@
 title: <useManagedPresentation>
 ms.date: 03/30/2017
 ms.assetid: 17a0dd77-af54-41db-a9d0-4b17ff42878f
-ms.openlocfilehash: e67cc316b8747ee785055ceb4f954988fa82a44c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c410967e84c9318d21ce0b3072d08b026a37b190
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69940615"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399211"
 ---
 # <a name="usemanagedpresentation"></a>\<useManagedPresentation>
 一个绑定元素，用于与支持 WS-Trust 的 CardSpace 配置文件的 CardSpace 安全令牌服务进行通信。 此元素没有属性并且以空开关形式存在。  
   
- \<system.serviceModel>  
-\<bindings>  
-\<customBinding>  
-\<绑定 >  
-\<useManagedPresentation>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<绑定 >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<customBinding >** ](custombinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<绑定 >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<useManagedPresentation >**  
   
 ## <a name="syntax"></a>语法  
   

@@ -2,22 +2,23 @@
 title: <secureConversationBootstrap>
 ms.date: 03/30/2017
 ms.assetid: 66b46f95-fa2d-4b5b-b6ce-0572ab0cdd50
-ms.openlocfilehash: 2ee9a715929641abc605a31ac00fb154b863cc8a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b3187cb51b6fd32797c9ad401c704d5f16c6f7e8
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69935837"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399915"
 ---
 # <a name="secureconversationbootstrap"></a>\<secureConversationBootstrap>
 指定用于启动安全对话服务的默认值。  
   
- \<system.serviceModel>  
-\<bindings>  
-\<customBinding>  
-\<绑定 >  
-\<安全 >  
-\<secureConversationBootstrap>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<绑定 >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<customBinding >** ](custombinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<绑定 >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<安全 >** ](security-of-custombinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<secureConversationBootstrap >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -52,7 +53,7 @@ ms.locfileid: "69935837"
 |`defaultAlgorithmSuite`|安全算法组定义了各种算法，如规范化、摘要式、密钥包装、签名、加密和密钥派生算法。 每个安全算法套件都定义了这些不同参数的值。 基于消息的安全性是使用这些算法实现的。<br /><br /> 此属性与选取不同于默认算法的算法集的其他平台一起使用。 在对此设置进行修改时，应该注意相关算法的优缺点。 此属性的类型为 <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>。 默认值为 `Basic256`。|  
 |`includeTimestamp`|一个布尔值，指定是否每个消息都包含时间戳。 默认值为 `true`。|  
 |`keyEntropyMode`|指定用于保护消息的密钥的计算方法。 密钥只能基于客户端密钥材料、服务密钥材料或两者的组合。 有效值包括：<br /><br /> - ClientEntropy:会话密钥基于客户端提供的密钥材料。<br />- ServerEntropy:会话密钥基于服务提供的密钥材料。<br />CombinedEntropy会话密钥基于客户端和服务提供的密钥材料。<br /><br /> 默认值为 CombinedEntropy。<br /><br /> 此属性的类型为 <xref:System.ServiceModel.Security.SecurityKeyEntropyMode>。|  
-|`messageProtectionOrder`|设置对消息应用消息级安全算法的顺序。 包括以下有效值：<br /><br /> SignBeforeEncrypt先签名, 然后加密。<br />- SignBeforeEncryptAndEncryptSignature:签名、加密和加密签名。<br />EncryptBeforeSign首先加密, 然后签名。<br /><br /> 相互证书与 WS-Security 1.1 一起使用时，默认值为 SignBeforeEncryptAndEncryptSignature。  使用 WS-Security 1.0 时，默认值为 SignBeforeEncrypt。<br /><br /> 此属性的类型为 <xref:System.ServiceModel.Security.MessageProtectionOrder>。|  
+|`messageProtectionOrder`|设置对消息应用消息级安全算法的顺序。 包括以下有效值：<br /><br /> SignBeforeEncrypt先签名，然后加密。<br />- SignBeforeEncryptAndEncryptSignature:签名、加密和加密签名。<br />EncryptBeforeSign首先加密，然后签名。<br /><br /> 相互证书与 WS-Security 1.1 一起使用时，默认值为 SignBeforeEncryptAndEncryptSignature。  使用 WS-Security 1.0 时，默认值为 SignBeforeEncrypt。<br /><br /> 此属性的类型为 <xref:System.ServiceModel.Security.MessageProtectionOrder>。|  
 |`messageSecurityVersion`|设置所使用的 WS-Security 的版本。 包括以下有效值：<br /><br /> -   WSSecurityJan2004<br />-   WSSecurityXXX2005<br /><br /> 默认值为 WSSecurityXXX2005。 此属性的类型为 <xref:System.ServiceModel.MessageSecurityVersion>。|  
 |`requireDerivedKeys`|一个布尔值，指定是否可以从原始校验密钥中派生密钥。 默认值为 `true`。|  
 |`requireSecurityContextCancellation`|一个布尔值，指定当不再需要安全上下文时是否应将其取消和终止。 默认值为 `true`。|  

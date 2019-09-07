@@ -2,21 +2,22 @@
 title: <webMessageEncoding>
 ms.date: 03/30/2017
 ms.assetid: 892ca485-e21a-4a44-8e40-633161ef6796
-ms.openlocfilehash: a1d776730053cd6af3c930a33e13582a8906c4d7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1015c8b812d54288a7b2773282e6c935d7634bae
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69940395"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399143"
 ---
 # <a name="webmessageencoding"></a>\<webMessageEncoding>
 允许在 Windows Communication Foundation (WCF) 绑定中使用纯文本 XML、JavaScript 对象表示法 (JSON) 消息编码和“原始”二进制内容时对其进行读写。  
   
- \<system.serviceModel>  
-\<bindings>  
-\<customBinding>  
-\<绑定 >  
-\<webMessageEncoding>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<绑定 >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<customBinding >** ](custombinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<绑定 >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<w >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -60,7 +61,7 @@ ms.locfileid: "69940395"
   
  属性 `maxReadPoolSize` 与 `maxWritePoolSize` 也可以分别用来设置要分配的读取器和编写器最大数目。 默认情况下，将分配 64 个读取器和 16 个编写器。  
   
- 还使用[ \<readerQuotas >](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))元素设置默认的复杂性约束, 以防范尝试使用消息复杂性来占用终结点处理资源的拒绝服务 (DOS) 攻击的类。  
+ 还使用[ \<readerQuotas >](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))元素设置默认的复杂性约束，以防范尝试使用消息复杂性来占用终结点处理资源的拒绝服务（DOS）攻击的类。  
   
 ## <a name="example"></a>示例  
   

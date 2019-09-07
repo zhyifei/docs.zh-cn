@@ -2,23 +2,24 @@
 title: <certificate> 的 <peer>
 ms.date: 03/30/2017
 ms.assetid: 48b69142-c957-4305-a042-c9d0c9a55c0e
-ms.openlocfilehash: 72128aca1321f3adc4c99ce0e3a47489b1640e31
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2044dc6fb4ae688a0a3c7e29b3b7696df0d0d218
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69919591"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398203"
 ---
 # <a name="certificate-of-peer"></a>\<对等 > \<的证书 >
 指定对等方使用的证书。  
   
- \<system.ServiceModel>  
-\<行为 >  
-\<serviceBehaviors>  
-\<行为 >  
-\<serviceCredentials>  
-\<对等 >  
-\<证书 >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<行为 >** ](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<serviceBehaviors >** ](servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<行为 >** ](behavior-of-servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<serviceCredentials >** ](servicecredentials.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<对等 >** ](peer-of-servicecredentials.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<证书 >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,8 +38,8 @@ ms.locfileid: "69919591"
 |特性|描述|  
 |---------------|-----------------|  
 |`findValue`|一个字符串，包含要在 X.509 证书存储中搜索的值。 此属性中包含的类型必须满足指定 `x509FindType` 的要求。 默认值为一个空字符串。|  
-|`storeLocation`|指定客户端可用于验证对等方的证书的 X.509 证书存储的位置。 包括以下有效值：<br /><br /> -LocalMachine: 分配给本地计算机的证书存储区。<br />-CurrentUser: 分配给当前用户的证书存储区。<br /><br /> 默认值为 LocalMachine。|  
-|`storeName`|指定要打开的 X.509 证书存储区的名称。 包括以下有效值：<br /><br /> 通讯簿其他用户的证书存储区。<br />AuthRoot第三方证书颁发机构 (Ca) 的证书存储区。<br />CertificateAuthority中间证书颁发机构 (Ca) 的证书存储区。<br />禁用吊销的证书的证书存储区。<br />记住个人证书的证书存储区。<br />Root受信任的根证书颁发机构 (Ca) 的证书存储区。<br />TrustedPeople直接受信任的人和资源的证书存储区。<br />TrustedPublisher直接受信任的发布者的证书存储区。<br /><br /> 默认值为 My。|  
+|`storeLocation`|指定客户端可用于验证对等方的证书的 X.509 证书存储的位置。 包括以下有效值：<br /><br /> -LocalMachine：分配给本地计算机的证书存储区。<br />-CurrentUser：分配给当前用户的证书存储区。<br /><br /> 默认值为 LocalMachine。|  
+|`storeName`|指定要打开的 X.509 证书存储区的名称。 包括以下有效值：<br /><br /> 通讯簿其他用户的证书存储区。<br />AuthRoot第三方证书颁发机构（Ca）的证书存储区。<br />CertificateAuthority中间证书颁发机构（Ca）的证书存储区。<br />禁用吊销的证书的证书存储区。<br />记住个人证书的证书存储区。<br />Root受信任的根证书颁发机构（Ca）的证书存储区。<br />TrustedPeople直接受信任的人和资源的证书存储区。<br />TrustedPublisher直接受信任的发布者的证书存储区。<br /><br /> 默认值为 My。|  
 |`X509FindType`|定义要执行的 X.509 搜索的类型。 包括以下有效值：<br /><br /> -FindByThumbPrint<br />-   FindBySubjectName<br />-FindBySubjectDistinguishedName<br />- FindByIssuerName<br />- FindByIssuerDistinguishedName<br />-FindBySerialNumber<br />-   FindByTimeValid<br />-   FindByTimeNotYetValid<br />- FindByTemplateName<br />-   FindByApplicationPolicy<br />-   FindByCertificatePolicy<br />- FindByExtension<br />- FindByKeyUsage<br />-   FindBySubjectKeyIdentifier<br /><br /> `findValue` 属性中包含的类型必须满足指定 `X509FindType` 的要求。<br /><br /> 默认值为 FindBySubjectDistinguishedName。|  
   
 ### <a name="child-elements"></a>子元素  
@@ -53,7 +54,7 @@ ms.locfileid: "69919591"
 ## <a name="remarks"></a>备注  
  此配置元素包含对对等网格中的邻居进行身份验证时使用的 `X509Certificate2` 实例。  
   
- 有关对等编程的详细信息, 请参阅对等[网络](../../../wcf/feature-details/peer-to-peer-networking.md)。  
+ 有关对等编程的详细信息，请参阅对等[网络](../../../wcf/feature-details/peer-to-peer-networking.md)。  
   
 ## <a name="see-also"></a>请参阅
 

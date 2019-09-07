@@ -2,17 +2,18 @@
 title: <system.runtime.serialization>
 ms.date: 03/30/2017
 ms.assetid: a8cebf4c-06d2-4667-8f5b-c3e1fc90df6f
-ms.openlocfilehash: 4ec5cd19ccdc5c21a3caf426520d51442dc5ab3f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b67f51e634d1294830690dad8c8cffb1fc9a6cd2
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938927"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399466"
 ---
 # <a name="systemruntimeserialization"></a>\<system.runtime.serialization>
 表示 <xref:System.Runtime.Serialization> 命名空间节的根元素，并包含 <xref:System.Runtime.Serialization.DataContractSerializer> 的设置选项的元素。  
-  
- system.runtime.serialization  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp; **\<system.object >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -56,3 +57,4 @@ ms.locfileid: "69938927"
 - <xref:System.Runtime.Serialization>
 - [使用数据协定](../../../wcf/feature-details/using-data-contracts.md)
 - [数据协定已知类型](../../../wcf/feature-details/data-contract-known-types.md)
+ 

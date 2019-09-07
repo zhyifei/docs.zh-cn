@@ -2,22 +2,23 @@
 title: <commonParameters>
 ms.date: 03/30/2017
 ms.assetid: ffc20832-34d6-4622-8174-81924fd53514
-ms.openlocfilehash: a92a81062e92f832be78af2bfd75270390eaac3e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6f187e9cdcabc358ee69d65e392bc59aa38e52ca
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69919492"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398170"
 ---
 # <a name="commonparameters"></a>\<commonParameters>
 表示在多个服务之间全局使用的参数的集合。 此集合通常将包括可由持久性服务共享的数据库连接字符串。  
   
- \<system.ServiceModel>  
-\<行为 >  
-\<serviceBehaviors>  
-\<行为 >  
-\<workflowRuntime>  
-\<commonParameters>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<行为 >** ](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<serviceBehaviors >** ](servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<行为 >** ](behavior-of-servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<workflowRuntime >** ](workflowruntime.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<commonParameters >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -46,7 +47,7 @@ ms.locfileid: "69919492"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<workflowRuntime>](workflowruntime.md)|指定用于承载基于工作流<xref:System.Workflow.Runtime.WorkflowRuntime>的 Windows Communication Foundation (WCF) 服务的实例的设置。|  
+|[\<workflowRuntime>](workflowruntime.md)|指定用于承载基于工作流<xref:System.Workflow.Runtime.WorkflowRuntime>的 Windows Communication Foundation （WCF）服务的实例的设置。|  
   
 ## <a name="remarks"></a>备注  
  `<commonParameters>` 元素定义在多个服务之间全局使用的任何参数，例如，使用 `ConnectionString` 时的<xref:System.Workflow.Runtime.Hosting.SharedConnectionWorkflowCommitWorkBatchService>。  
@@ -79,7 +80,7 @@ ms.locfileid: "69919492"
 </workflowRuntime>
 ```  
   
- 请注意, `EnableRetries`参数可以在全局级别设置 (如*CommonParameters*部分所示), 也可以为支持`EnableRetries`的个别服务设置 (如 "*服务*" 一节中所示)。  
+ 请注意， `EnableRetries`参数可以在全局级别设置（如*CommonParameters*部分所示），也可以为支持`EnableRetries`的个别服务设置（如 "*服务*" 一节中所示）。  
   
  下面的示例代码演示如何通过编程方式更改公共参数。  
   
@@ -91,7 +92,7 @@ commonParameters["ConnectionString"].Value="another connection string";
 config.Save();  
 ```  
   
- 有关使用配置文件控制 Windows Workflow Foundation 主机应用程序的<xref:System.Workflow.Runtime.WorkflowRuntime>对象的行为的详细信息, 请参阅[工作流配置文件](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90))。  
+ 有关使用配置文件控制 Windows Workflow Foundation 主机应用程序的<xref:System.Workflow.Runtime.WorkflowRuntime>对象的行为的详细信息，请参阅[工作流配置文件](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90))。  
   
 ## <a name="example"></a>示例  
   

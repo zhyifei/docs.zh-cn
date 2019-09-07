@@ -7,21 +7,22 @@ helpviewer_keywords:
 - DataContractSerializer
 - KnownTypes
 ms.assetid: f41fb4d5-24e7-4059-8010-286a30bfea93
-ms.openlocfilehash: 7e440810fee1dddb7025d1385b1edb4838d98a39
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e24dae47171f741af064ca2eaa822928690acf6e
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69925914"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70400453"
 ---
 # <a name="datacontractserializer"></a>\<dataContractSerializer>
 包含 <xref:System.Runtime.Serialization.DataContractSerializer> 的配置数据。 此元素出现在两个不同的层次结构中。 这两个层次结构分别在下面的“架构层次结构”一节和“备注”一节中列出。  
   
- \<system.ServiceModel>  
-\<行为 >  
-\<serviceBehaviors>  
-\<行为 >  
-\<dataContractSerializer>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<行为 >** ](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<serviceBehaviors >** ](servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<行为 >** ](behavior-of-servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<dataContractSerializer >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -51,7 +52,7 @@ ms.locfileid: "69925914"
 |[\<system.runtime.serialization>](system-runtime-serialization.md)|表示 <xref:System.Runtime.Serialization> 命名空间节的根元素，并包含 <xref:System.Runtime.Serialization.DataContractSerializer> 的设置选项的元素。|  
   
 ## <a name="remarks"></a>备注  
- 如本主题中所述, 这是\<X509Extension > 元素的第二个层次结构。  
+ 如本主题中所述，这是\<X509Extension > 元素的第二个层次结构。  
   
  [\<system.runtime.serialization>](system-runtime-serialization.md)  
   

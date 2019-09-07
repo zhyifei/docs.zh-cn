@@ -2,22 +2,23 @@
 title: <clientCertificate>of <clientCredentials>元素
 ms.date: 03/30/2017
 ms.assetid: 3b3fa000-3434-4142-a178-11903bdd2c5d
-ms.openlocfilehash: 3450df921da8c72a555c2faf424c51e0063cb235
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: fb95ef3168378227e41e55c6fd5e5b772cb7ad0f
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69926117"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70400516"
 ---
 # <a name="clientcertificate-of-clientcredentials-element"></a>\<clientCredentials > 元素\<的 clientCertificate >
 定义用于针对服务进行客户端身份验证的 X.509 证书。  
   
- \<system.ServiceModel>  
-\<行为 >  
-\<endpointBehaviors>  
-\<行为 >  
-\<clientCredentials>  
-\<clientCertificate>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<行为 >** ](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<endpointBehaviors >** ](endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<行为 >** ](behavior-of-endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<clientCredentials >** ](clientcredentials.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<clientCertificate >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,8 +37,8 @@ ms.locfileid: "69926117"
 |特性|描述|  
 |---------------|-----------------|  
 |`findValue`|一个字符串，包含要在 X.509 证书存储中搜索的值。 此属性中包含的类型必须满足 `X509FindType` 属性值的要求。 默认值为一个空字符串。|  
-|`storeLocation`|指定客户端用于向服务验证自身身份的 X.509 证书的位置。 包括以下有效值：<br /><br /> -LocalMachine: 分配给本地计算机的证书存储区。<br />-CurrentUser: 分配给当前用户的证书存储区。<br /><br /> 默认值为 LocalMachine。 此属性的类型为 <xref:System.Security.Cryptography.X509Certificates.StoreLocation>。|  
-|`storeName`|指定要搜索的 X.509 证书存储的名称。 包括以下有效值：<br /><br /> 通讯簿其他用户的证书存储区。<br />AuthRoot第三方证书颁发机构 (Ca) 的证书存储区。<br />CertificateAuthority中间证书颁发机构 (Ca) 的证书存储区。<br />禁用吊销的证书的证书存储区。<br />记住个人证书的证书存储区。<br />Root受信任的根证书颁发机构 (Ca) 的证书存储区。<br />TrustedPeople直接受信任的人和资源的证书存储区。<br />TrustedPublisher直接受信任的发布者的证书存储区。<br /><br /> 默认值为 My。 此属性的类型为 <xref:System.Security.Cryptography.X509Certificates.StoreName>。|  
+|`storeLocation`|指定客户端用于向服务验证自身身份的 X.509 证书的位置。 包括以下有效值：<br /><br /> -LocalMachine：分配给本地计算机的证书存储区。<br />-CurrentUser：分配给当前用户的证书存储区。<br /><br /> 默认值为 LocalMachine。 此属性的类型为 <xref:System.Security.Cryptography.X509Certificates.StoreLocation>。|  
+|`storeName`|指定要搜索的 X.509 证书存储的名称。 包括以下有效值：<br /><br /> 通讯簿其他用户的证书存储区。<br />AuthRoot第三方证书颁发机构（Ca）的证书存储区。<br />CertificateAuthority中间证书颁发机构（Ca）的证书存储区。<br />禁用吊销的证书的证书存储区。<br />记住个人证书的证书存储区。<br />Root受信任的根证书颁发机构（Ca）的证书存储区。<br />TrustedPeople直接受信任的人和资源的证书存储区。<br />TrustedPublisher直接受信任的发布者的证书存储区。<br /><br /> 默认值为 My。 此属性的类型为 <xref:System.Security.Cryptography.X509Certificates.StoreName>。|  
 |X509FindType|定义要执行的 X.509 搜索的类型。 `findValue` 属性中包含的类型必须满足此属性的要求。 包括以下有效值：<br /><br /> -FindByThumbPrint<br />-   FindBySubjectName<br />-FindBySubjectDistinguishedName<br />- FindByIssuerName<br />- FindByIssuerDistinguishedName<br />-FindBySerialNumber<br />-   FindByTimeValid<br />-   FindByTimeNotYetValid<br />- FindByTemplateName<br />-   FindByApplicationPolicy<br />-   FindByCertificatePolicy<br />- FindByExtension<br />- FindByKeyUsage<br />-   FindBySubjectKeyIdentifier<br /><br /> 默认值为 FindBySubjectDistinguishedName。 此属性的类型为 <xref:System.Security.Cryptography.X509Certificates.X509FindType>。|  
   
 ### <a name="child-elements"></a>子元素  

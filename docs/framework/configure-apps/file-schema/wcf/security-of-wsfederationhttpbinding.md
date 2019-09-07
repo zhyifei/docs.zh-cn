@@ -2,21 +2,22 @@
 title: <security> 的 <wsFederationHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: a8e5e854-b8dc-4921-843d-34b6a4a6a8ba
-ms.openlocfilehash: 875ce7d548d59f32465da817e9e956217f346f60
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6c07d1ca18837f66548411262b84b9a326f5ec4a
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69936536"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399734"
 ---
 # <a name="security-of-wsfederationhttpbinding"></a>\<wsFederationHttpBinding 的\<安全 > >
 定义[ \<wsFederationHttpBinding >](wsfederationhttpbinding.md)的安全设置。  
   
- \<system.ServiceModel>  
-\<bindings>  
-\<wsFederatedBinding>  
-\<绑定 >  
-\<安全 >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<绑定 >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<wsFederationHttpBinding >** ](wsfederationhttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<绑定 >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<安全 >**  
   
 ## <a name="syntax"></a>语法  
   

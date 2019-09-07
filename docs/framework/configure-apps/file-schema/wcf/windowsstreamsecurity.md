@@ -2,21 +2,22 @@
 title: <windowsStreamSecurity>
 ms.date: 03/30/2017
 ms.assetid: 926bea29-90c7-4a26-9cf0-fb4aa44f6f70
-ms.openlocfilehash: 0f1dfd523e593c82727354db7ce39ffc992bdfb4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: cddd9f0c1dda982c1795500723c21546bd58c92b
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69932807"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399099"
 ---
 # <a name="windowsstreamsecurity"></a>\<windowsStreamSecurity>
 指定自定义绑定的 Windows 流安全设置。  
   
- \<system.serviceModel>  
-\<bindings>  
-\<customBinding>  
-\<绑定 >  
-\<windowsStreamSecurity>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<绑定 >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<customBinding >** ](custombinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<绑定 >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Windowsstreamsecurity 正在 >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,7 +44,7 @@ ms.locfileid: "69932807"
 |[\<binding>](../../../misc/binding.md)|定义自定义绑定的所有绑定功能。|  
   
 ## <a name="remarks"></a>备注  
- 使用面向流协议（如 TCP 和命名管道）的传输支持基于流的传输升级。 特别是 WCF 提供了安全升级。 此传输安全的配置由此配置元素[ \<以及 custombinding> sslstreamsecurity> >](sslstreamsecurity.md)(可配置并添加到自定义绑定中) 封装  
+ 使用面向流协议（如 TCP 和命名管道）的传输支持基于流的传输升级。 特别是 WCF 提供了安全升级。 此传输安全的配置由此配置元素[ \<以及 custombinding> sslstreamsecurity> >](sslstreamsecurity.md)（可配置并添加到自定义绑定中）封装  
   
 ## <a name="see-also"></a>请参阅
 

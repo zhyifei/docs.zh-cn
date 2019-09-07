@@ -2,27 +2,29 @@
 title: <add> 的 <issuerChannelBehaviors>
 ms.date: 03/30/2017
 ms.assetid: 50710506-e28f-45dd-ab7e-bff6f44173db
-ms.openlocfilehash: 325d6b8111115384b18547bd11ccec8a4a8af711
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: cf7ac2691ad1c641352a8047373ced538b19e983
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920115"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398334"
 ---
 # <a name="add-of-issuerchannelbehaviors"></a>\<添加 issuerChannelBehaviors > \<的 >
 
 添加在与 STS 进行通信时要使用的终结点行为。
 
 > [!NOTE]
-> 如果任何终结点行为包含[ \<clientCredentials >](clientcredentials.md)元素, 则会引发异常。
+> 如果任何终结点行为包含[ \<clientCredentials >](clientcredentials.md)元素，则会引发异常。
 
-\<system.ServiceModel>\
-\<行为 > \
-endpointBehaviors 部分\<行为 > \
-\<clientCredentials > \
-\<issuedToken > \
-\<issuerChannelBehaviors > 元素 \
-\<add>
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<行为 >** ](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<endpointBehaviors >** ](endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<行为 >** ](behavior-of-endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<clientCredentials >** ](clientcredentials.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<issuedToken >** ](issuedtoken.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<issuerChannelBehaviors >** ](issuerchannelbehaviors-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<添加 >**  
 
 ## <a name="syntax"></a>语法
 
@@ -50,11 +52,11 @@ endpointBehaviors 部分\<行为 > \
 
 |元素|描述|
 |-------------|-----------------|
-|[\<issuerChannelBehaviors>](issuerchannelbehaviors-element.md)|包含与指定的服务令牌服务通信时要使用的 Windows Communication Foundation (WCF) 客户端终结点行为的集合。|
+|[\<issuerChannelBehaviors>](issuerchannelbehaviors-element.md)|包含与指定的服务令牌服务通信时要使用的 Windows Communication Foundation （WCF）客户端终结点行为的集合。|
 
 ## <a name="remarks"></a>备注
 
-`issuerAddress` 包含客户端希望与之进行通信的安全令牌服务的 URI。 `behaviorConfiguration`指向应用程序在 Windows Communication Foundation (WCF) 创建的通道中使用的终结点行为, 以从安全令牌服务获取已颁发的令牌。
+`issuerAddress` 包含客户端希望与之进行通信的安全令牌服务的 URI。 `behaviorConfiguration`指向应用程序在 Windows Communication Foundation （WCF）创建的通道中使用的终结点行为，以从安全令牌服务获取已颁发的令牌。
 
 ## <a name="see-also"></a>请参阅
 

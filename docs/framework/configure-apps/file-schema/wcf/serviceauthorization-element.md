@@ -2,21 +2,22 @@
 title: <serviceAuthorization> 元素
 ms.date: 03/30/2017
 ms.assetid: 18cddad5-ddcb-4839-a0ac-1d6f6ab783ca
-ms.openlocfilehash: b73e2049afb460bf9be8b76ee272ba0547b61453
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b636b7006900ecff1be553cf32105df7cea7e800
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69936406"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399694"
 ---
 # <a name="serviceauthorization-element"></a>\<serviceAuthorization > 元素
 指定用于授予服务操作访问权限的设置。  
   
- \<system.ServiceModel>  
-\<行为 >  
-\<serviceBehaviors>  
-\<行为 >  
-\<serviceAuthorization>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<行为 >** ](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<serviceBehaviors >** ](servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<行为 >** ](behavior-of-servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<serviceAuthorization >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,7 +40,7 @@ ms.locfileid: "69936406"
 |特性|描述|  
 |---------------|-----------------|  
 |impersonateCallerForAllOperations|一个布尔值，指定是否服务中的所有操作都模拟调用方。 默认值为 `false`。<br /><br /> 当特定服务操作模拟调用方时，线程上下文会在执行指定服务前切换为调用方上下文。|  
-|principalPermissionMode|设置用于在服务器上执行操作的主体。 包括以下值：<br /><br /> -无<br />-UseWindowsGroups<br />-   UseAspNetRoles<br />-Custom<br /><br /> 默认值为 UseWindowsGroups。 此值的类型为 <xref:System.ServiceModel.Description.PrincipalPermissionMode>。 有关使用此属性的详细信息, 请[参阅如何:使用 PrincipalPermissionAttribute 类](../../../wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)限制访问。|  
+|principalPermissionMode|设置用于在服务器上执行操作的主体。 包括以下值：<br /><br /> -无<br />-UseWindowsGroups<br />-   UseAspNetRoles<br />-Custom<br /><br /> 默认值为 UseWindowsGroups。 此值的类型为 <xref:System.ServiceModel.Description.PrincipalPermissionMode>。 有关使用此属性的详细信息，请[参阅如何：使用 PrincipalPermissionAttribute 类](../../../wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)限制访问。|  
 |roleProviderName|一个字符串，指定为 Windows Communication Foundation (WCF) 应用程序提供角色信息的角色提供程序的名称。 默认值为一个空字符串。|  
 |ServiceAuthorizationManagerType|一个包含服务授权管理器的类型的字符串。 有关详细信息，请参阅 <xref:System.ServiceModel.ServiceAuthorizationManager> 。|  
   
@@ -58,7 +59,7 @@ ms.locfileid: "69936406"
 ## <a name="remarks"></a>备注  
  本节包含一些影响授权、自定义角色提供程序和模拟的元素。  
   
- `principalPermissionMode` 属性指定在授权使用受保护方法时要使用的用户组。 默认值为 `UseWindowsGroups`，该值指定在 Windows 组（例如，“Administrators”或“Users”）中搜索试图访问某个资源的标识。 你还可以指定`UseAspNetRoles`以使用\<在 system.web > 元素下配置的自定义角色提供程序, 如下面的代码所示。  
+ `principalPermissionMode` 属性指定在授权使用受保护方法时要使用的用户组。 默认值为 `UseWindowsGroups`，该值指定在 Windows 组（例如，“Administrators”或“Users”）中搜索试图访问某个资源的标识。 你还可以指定`UseAspNetRoles`以使用\<在 system.web > 元素下配置的自定义角色提供程序，如下面的代码所示。  
   
 ```xml  
 <system.web>
@@ -93,7 +94,7 @@ ms.locfileid: "69936406"
 </behaviors>
 ```  
   
- 有关使用此配置元素的详细示例, 请参阅[授权访问服务操作](../../../wcf/samples/authorizing-access-to-service-operations.md)和[授权策略](../../../wcf/samples/authorization-policy.md)。  
+ 有关使用此配置元素的详细示例，请参阅[授权访问服务操作](../../../wcf/samples/authorizing-access-to-service-operations.md)和[授权策略](../../../wcf/samples/authorization-policy.md)。  
   
 ## <a name="see-also"></a>请参阅
 

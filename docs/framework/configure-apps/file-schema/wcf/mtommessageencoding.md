@@ -2,21 +2,22 @@
 title: <mtomMessageEncoding>
 ms.date: 03/30/2017
 ms.assetid: 7865d171-cd1e-430a-8421-39cc13541d1b
-ms.openlocfilehash: 70a124fda5bc0e52e1271716f7e2166b7717b49a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 538591c85d91960eb4d4fa04caa945954ee5a997
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69933190"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70397707"
 ---
 # <a name="mtommessageencoding"></a>\<mtomMessageEncoding>
 指定用于基于 SOAP 消息传输优化机制 (MTOM) 的消息的编码和消息版本控制。  
   
- \<system.serviceModel>  
-\<bindings>  
-\<customBinding>  
-\<绑定 >  
-\<mtomMessageEncoding>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<绑定 >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<customBinding >** ](custombinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<绑定 >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<mtomMessageEncoding >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -54,7 +55,7 @@ ms.locfileid: "69933190"
 |[\<binding>](../../../misc/binding.md)|定义自定义绑定的所有绑定功能。|  
   
 ## <a name="remarks"></a>备注  
- 编码是将消息转换为一个字节序列的过程。 解码是反向过程。 Windows Communication Foundation (WCF) 包含三种类型的 SOAP 消息编码:文本、二进制和消息传输优化机制 (MTOM)。  
+ 编码是将消息转换为一个字节序列的过程。 解码是反向过程。 Windows Communication Foundation （WCF）包含三种类型的 SOAP 消息编码：文本、二进制和消息传输优化机制（MTOM）。  
   
  `MtomMessageEncoding` 元素指定使用消息传输优化机制 (MTOM) 编码的消息所用的字符编码和消息版本管理以及其他设置。 MTOM 是一种用于在 WCF 消息中传输二进制数据的有效技术。 MTOM 编码器会尝试在效率和互操作性之间建立平衡。 MTOM 编码以文本形式传输大多数 XML，但通过按原样传输来优化大型二进制数据块的传输，无需将其转换为 base64 编码格式。  
   

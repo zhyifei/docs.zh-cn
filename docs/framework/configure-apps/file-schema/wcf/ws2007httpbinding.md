@@ -2,19 +2,20 @@
 title: <ws2007HttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 8586ecc9-bdaa-44d6-8d4d-7038e4ea1741
-ms.openlocfilehash: 2fb9f7a16a360ddd61e6f8b935f928ddfdeb6cc3
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0f0dc3ebe34ea45c1b464ff4fe437694ff4761f0
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69915258"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399061"
 ---
 # <a name="ws2007httpbinding"></a>\<ws2007HttpBinding>
 定义一个可互操作的绑定，该绑定为正确版本的 <xref:System.ServiceModel.WSHttpBinding.Security%2A>、<xref:System.ServiceModel.ReliableSession> 和 <xref:System.ServiceModel.WSHttpBindingBase.TransactionFlow%2A> 绑定元素提供支持。  
   
- \<system.serviceModel>  
-\<bindings>  
-\<ws2007HttpBinding>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<绑定 >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<ws2007HttpBinding >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -70,8 +71,8 @@ ms.locfileid: "69915258"
 |`hostNameComparisonMode`|指定用于分析统一资源标识符 (URI) 的 HTTP 主机名比较模式。 此属性的类型为 <xref:System.ServiceModel.HostNameComparisonMode>，指示在对 URI 进行匹配时，是否使用主机名来访问服务。 默认值为 <xref:System.ServiceModel.HostNameComparisonMode.StrongWildcard>，表示忽略匹配项中的主机名。|  
 |`maxBufferPoolSize`|此绑定的最大缓冲池大小。 默认值为 524,288 字节 (512 × 1,024)。 Windows Communication Foundation (WCF) 的许多部件使用缓冲区。 每次使用缓冲区时，创建和销毁它们会占用大量资源，而缓冲区的垃圾回收过程也是如此。 利用缓冲池，可以从缓冲池中获得缓冲区，使用缓冲区，然后在完成工作后将其返回到缓冲池。 这样就避免了创建和销毁缓冲区的系统开销。|  
 |`maxReceivedMessageSize`|使用此绑定配置的通道可以接收的最大消息大小（包括标头），单位为字节。 如果消息超出此限制，则发送方将收到 SOAP 错误。 接收方将删除该消息，并在跟踪日志中创建事件项。 默认值为 65536。|  
-|`messageEncoding`|定义用于对消息进行编码的编码器。 包括以下有效值：<br /><br /> -   `Text`：使用文本消息编码器。<br />-   `Mtom`：使用消息传输组织机制 1.0 (MTOM) 编码器。<br /><br /> 默认值为 `Text`。<br /><br /> 此属性的类型为 <xref:System.ServiceModel.WSMessageEncoding>。|  
-|`name`|绑定的配置名称。 因为此值用作绑定的标识，所以它应该是唯一的。 从 [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] 开始，不要求绑定和行为具有名称。 有关默认配置和无值绑定和行为的详细信息, 请参阅[WCF 服务的](../../../wcf/samples/simplified-configuration-for-wcf-services.md)[简化配置](../../../wcf/simplified-configuration.md)和简化配置。|  
+|`messageEncoding`|定义用于对消息进行编码的编码器。 包括以下有效值：<br /><br /> -   `Text`：使用文本消息编码器。<br />-   `Mtom`：使用消息传输组织机制1.0 （MTOM）编码器。<br /><br /> 默认值为 `Text`。<br /><br /> 此属性的类型为 <xref:System.ServiceModel.WSMessageEncoding>。|  
+|`name`|绑定的配置名称。 因为此值用作绑定的标识，所以它应该是唯一的。 从 [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] 开始，不要求绑定和行为具有名称。 有关默认配置和无值绑定和行为的详细信息，请参阅[WCF 服务的](../../../wcf/samples/simplified-configuration-for-wcf-services.md)[简化配置](../../../wcf/simplified-configuration.md)和简化配置。|  
 |`openTimeout`|一个 <xref:System.TimeSpan> 值，指定为完成打开操作提供的时间间隔。 此值应大于或等于 <xref:System.TimeSpan.Zero>。 默认值为 00:01:00。|  
 |`proxyAddress`|一个指定 HTTP 代理的地址的 URI。 如果 `useSystemWebProxy` 为 `true`，则此设置必须为 `null`。 默认值为 `null`。|  
 |`receiveTimeout`|一个 <xref:System.TimeSpan> 值，指定为完成接收操作提供的时间间隔。 此值应大于或等于 <xref:System.TimeSpan.Zero>。 默认值为 00:01:00。|  

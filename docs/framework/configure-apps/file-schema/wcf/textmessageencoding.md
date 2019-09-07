@@ -2,21 +2,22 @@
 title: <textMessageEncoding>
 ms.date: 03/30/2017
 ms.assetid: e6d834d0-356e-45eb-b530-bbefbb9ec3f0
-ms.openlocfilehash: e2fec2c2e5979b08ed0d832f636b3d0847b9a5dc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1494cee0e412bebc6637ad73354f7c91dc636e15
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69915657"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399432"
 ---
 # <a name="textmessageencoding"></a>\<textMessageEncoding>
 指定用于基于文本的 XML 消息的字符编码和消息版本控制。  
   
- \<system.serviceModel>  
-\<bindings>  
-\<customBinding>  
-\<绑定 >  
-\<textMessageEncoding>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<绑定 >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<customBinding >** ](custombinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<绑定 >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<textMessageEncoding >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -52,7 +53,7 @@ ms.locfileid: "69915657"
 |[\<binding>](../../../misc/binding.md)|定义自定义绑定的所有绑定功能。|  
   
 ## <a name="remarks"></a>备注  
- 编码是将消息转换为一个字节序列的过程。 解码是反向过程。 Windows Communication Foundation (WCF) 包含三种类型的 SOAP 消息编码:文本、二进制和消息传输优化机制 (MTOM)。  
+ 编码是将消息转换为一个字节序列的过程。 解码是反向过程。 Windows Communication Foundation （WCF）包含三种类型的 SOAP 消息编码：文本、二进制和消息传输优化机制（MTOM）。  
   
  由 `textMessageEncoding` 元素表示的文本编码互操作性最强，但却是效率最低的 XML 消息编码器。  文本编码器在网络上创建基于文本的消息。 此编码器产生的消息适合于基于 WS-* 的互操作性。 Web 服务或 Web 服务客户端通常可以理解文本 XML。 但是，对于 XML 消息编码来说，以文本形式传输较大的二进制数据块是最低效的方法。  
   

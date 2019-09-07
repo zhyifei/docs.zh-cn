@@ -2,18 +2,19 @@
 title: <protocolMapping>
 ms.date: 03/30/2017
 ms.assetid: 5076644b-1f33-4f26-9488-87de9fcda04c
-ms.openlocfilehash: e26044340bda84fe38b7e286edf833affa94b86c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: be4224ef1a8b17653df8123aaf89e105a496355a
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61785484"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70400023"
 ---
 # <a name="protocolmapping"></a>\<protocolMapping>
-表示用于定义一组的传输协议方案 （例如，http、 net.tcp、 net.pipe 等） 和 WCF 绑定之间的默认协议映射的配置节。 当在运行时创建默认终结点，Windows Communication Foundation (WCF) 查看已配置的映射，并决定要用于特定的绑定基于此地址。  
+表示用于定义传输协议方案（例如，http、net.tcp、net.pipe 等）和 WCF 绑定之间的一组默认协议映射的配置节。 在运行时创建默认终结点时，Windows Communication Foundation （WCF）将查看已配置的映射，并决定要将哪个绑定用于特定的地址。  
   
-[**\<system.serviceModel>**](system-servicemodel.md)  
-&nbsp;&nbsp;**\<protocolMapping>**  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<protocolMapping >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,7 +36,7 @@ ms.locfileid: "61785484"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<filters>](filters-of-routing.md)|包含传输协议方案 （例如，http、 net.tcp、 net.pipe 等） 和 WCF 绑定之间的默认协议映射。|  
+|[\<filters>](filters-of-routing.md)|包含传输协议方案（例如，http、net.tcp、net.pipe 等）与 WCF 绑定之间的默认协议映射。|  
   
 ### <a name="parent-elements"></a>父元素  
   

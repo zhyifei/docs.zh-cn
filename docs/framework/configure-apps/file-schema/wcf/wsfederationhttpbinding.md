@@ -4,20 +4,21 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - wsFederationBinding element
 ms.assetid: 9c3312b4-2137-4e71-bf3f-de1cf8e9be79
-ms.openlocfilehash: 3c4edc17fd669fbe23ec38ff26a61e867c04c561
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a605d3241ec62f5648e3439b327153f3fb4590df
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69915069"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399038"
 ---
 # <a name="wsfederationhttpbinding"></a>\<wsFederationHttpBinding>
 
 定义一个支持 WS-Federation 的绑定。
 
-\<system.ServiceModel>\
-\<绑定 > \
-wsFederationBinding 元素
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<绑定 >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<wsFederationHttpBinding >**  
 
 ## <a name="syntax"></a>语法
 
@@ -115,8 +116,8 @@ wsFederationBinding 元素
 |hostnameComparisonMode|指定用于分析 URI 的 HTTP 主机名比较模式。 此属性的类型为 <xref:System.ServiceModel.HostNameComparisonMode>，指示在对 URI 进行匹配时，是否使用主机名来访问服务。 默认值为 <xref:System.ServiceModel.HostNameComparisonMode.StrongWildcard>，表示忽略匹配项中的主机名。|
 |maxBufferPoolSize|一个整数，指定此绑定的最大缓冲池大小。 默认值为 524,288 字节 (512 * 1024)。 Windows Communication Foundation (WCF) 的许多部件使用缓冲区。 每次使用缓冲区时，创建和销毁它们都将占用大量资源，而缓冲区的垃圾回收过程也是如此。 利用缓冲池，可以从缓冲池中获得缓冲区，使用缓冲区，然后在完成工作后将其返回给缓冲池。 这样就避免了创建和销毁缓冲区的系统开销。|
 |maxReceivedMessageSize|一个正整数，指定采用此绑定配置的通道上可以接收的最大消息大小（字节），包括消息头。 如果消息超出此限制，则发送方将收到 SOAP 错误。 接收方将删除该消息，并在跟踪日志中创建事件项。 默认值为 65536。|
-|messageEncoding|定义用于对消息进行编码的编码器。 包括以下有效值：<br /><br /> 全文使用文本消息编码器。<br />Mtom使用消息传输组织机制 1.0 (MTOM) 编码器。<br /><br /> 默认值为 Text。<br /><br /> 此属性的类型为 <xref:System.ServiceModel.WSMessageEncoding>。|
-|NAME|一个包含绑定的配置名称的字符串。 因为此值用作绑定的标识，所以它应该是唯一的。 从 [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] 开始，不要求绑定和行为具有名称。 有关默认配置和无值绑定和行为的详细信息, 请参阅[WCF 服务的](../../../wcf/samples/simplified-configuration-for-wcf-services.md)[简化配置](../../../wcf/simplified-configuration.md)和简化配置。|
+|messageEncoding|定义用于对消息进行编码的编码器。 包括以下有效值：<br /><br /> 全文使用文本消息编码器。<br />Mtom使用消息传输组织机制1.0 （MTOM）编码器。<br /><br /> 默认值为 Text。<br /><br /> 此属性的类型为 <xref:System.ServiceModel.WSMessageEncoding>。|
+|NAME|一个包含绑定的配置名称的字符串。 因为此值用作绑定的标识，所以它应该是唯一的。 从 [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] 开始，不要求绑定和行为具有名称。 有关默认配置和无值绑定和行为的详细信息，请参阅[WCF 服务的](../../../wcf/samples/simplified-configuration-for-wcf-services.md)[简化配置](../../../wcf/simplified-configuration.md)和简化配置。|
 |openTimeout|一个 <xref:System.TimeSpan> 值，指定为完成打开操作提供的时间间隔。 此值应大于或等于 <xref:System.TimeSpan.Zero>。 默认值为 00:01:00。|
 |privacyNoticeAt|一个字符串，指定隐私声明位于的 URI。|
 |privacyNoticeVersion|一个整数，指定当前隐私声明的版本。|
@@ -143,7 +144,7 @@ wsFederationBinding 元素
 
 ## <a name="remarks"></a>备注
 
-联合是一种可以在多个系统通过共享标识进行身份验证和授权的功能。 这些标识可以指用户，也可以指计算机。 联合 HTTP 支持 SOAP 安全以及混合模式安全，但不支持以独占方式使用传输安全。 此绑定为 WS 联合身份验证协议提供 Windows Communication Foundation (WCF) 支持。 配置了此绑定的服务必须使用 HTTP 传输。
+联合是一种可以在多个系统通过共享标识进行身份验证和授权的功能。 这些标识可以指用户，也可以指计算机。 联合 HTTP 支持 SOAP 安全以及混合模式安全，但不支持以独占方式使用传输安全。 此绑定为 WS 联合身份验证协议提供 Windows Communication Foundation （WCF）支持。 配置了此绑定的服务必须使用 HTTP 传输。
 
 绑定由绑定元素堆栈组成。 满足下面的条件时，
 
@@ -151,15 +152,15 @@ wsFederationBinding 元素
 
 当[ \<安全 >](security-of-wsfederationhttpbinding.md)设置为的默认值<xref:System.ServiceModel.WSFederationHttpSecurityMode.Message>时。
 
-在[消息 > \<](message-element-of-wsfederationhttpbinding.md)中控制消息安全设置的详细信息。`wsFederationHttpBinding` 请注意, [ \<security >](security-of-wsfederationhttpbinding.md)元素只提供 get 访问权限, 因为在创建绑定后, 不能更改绑定使用的安全性。
+在[消息 > \<](message-element-of-wsfederationhttpbinding.md)中控制消息安全设置的详细信息。`wsFederationHttpBinding` 请注意， [ \<security >](security-of-wsfederationhttpbinding.md)元素只提供 get 访问权限，因为在创建绑定后，不能更改绑定使用的安全性。
 
-`wsFederationHttpBinding`还提供了一个 privacyNoticeAt 属性, 用于设置和检索隐私声明所在的 URI。
+`wsFederationHttpBinding`还提供了一个 privacyNoticeAt 属性，用于设置和检索隐私声明所在的 URI。
 
 保持策略安全在联合方案中特别重要。 建议使用某种形式的安全机制（如 HTTPS）以防止策略遭受恶意用户的攻击。
 
 在使用此绑定的联合方案中，服务策略可能具有重要信息，例如要用于对颁发的 (SAML) 令牌进行加密的密钥和要放置在令牌中的声明的类型等等。 如果此策略被篡改，则攻击者可能会发现已颁发令牌的密钥，从而导致策略被进一步篡改、信息泄露和其他恶意行为。 为了帮助防止此情况发生，必须从服务中安全地（例如使用 HTTPS）获取策略。
 
-有关此绑定的详细信息, 请[参阅如何:创建 WSFederationHttpBinding](../../../wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)。
+有关此绑定的详细信息，请[参阅如何：创建 WSFederationHttpBinding](../../../wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)。
 
 ## <a name="example"></a>示例
 

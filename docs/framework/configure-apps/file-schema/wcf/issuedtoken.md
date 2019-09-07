@@ -2,22 +2,23 @@
 title: <issuedToken>
 ms.date: 03/30/2017
 ms.assetid: b6eae4b7-a6cd-4e1a-b0f6-f407022550b0
-ms.openlocfilehash: 68e3a0802a10b14148188a81ee24ed901caa147f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b5ab3c3ad070499d686ea74b9fd459e89f380cfa
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69925382"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70397965"
 ---
 # <a name="issuedtoken"></a>\<issuedToken>
 指定用于向服务验证客户端身份的自定义令牌。  
   
- \<system.ServiceModel>  
-\<行为 >  
-endpointBehaviors 部分  
-\<行为 >  
-\<clientCredentials>  
-\<issuedToken>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<行为 >** ](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<endpointBehaviors >** ](endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<行为 >** ](behavior-of-endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<clientCredentials >** ](clientcredentials.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<issuedToken >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,7 +44,7 @@ endpointBehaviors 部分
 |`issuedTokenRenewalThresholdPercentage`|可选的整数属性，指定在续订令牌之前可经过的有效时间段（由令牌颁发者提供）的百分比。 值的范围是 0 到 100。 默认值为 60，指定尝试续订之前经过了 60% 的时间。|  
 |`issuerChannelBehaviors`|可选属性，指定当与颁发者进行通信时所使用的通道行为。|  
 |`localIssuerChannelBehaviors`|可选属性，指定当与本地颁发者进行通信时所使用的通道行为。|  
-|`maxIssuedTokenCachingTime`|可选的 Timespan 属性，指定当令牌颁发者 (STS) 未指定时间时，对颁发的令牌进行缓存的持续时间。 默认值为 "10675199.02:48: 05.4775807"。|  
+|`maxIssuedTokenCachingTime`|可选的 Timespan 属性，指定当令牌颁发者 (STS) 未指定时间时，对颁发的令牌进行缓存的持续时间。 默认值为 "10675199.02：48： 05.4775807"。|  
   
 ### <a name="child-elements"></a>子元素  
   
@@ -59,9 +60,9 @@ endpointBehaviors 部分
 |[\<clientCredentials>](clientcredentials.md)|指定用于向服务验证客户端身份的凭据。|  
   
 ## <a name="remarks"></a>备注  
- 例如，颁发的令牌是在使用联合方案中的安全令牌服务 (STS) 进行身份验证时所使用的自定义凭据类型。 默认情况下，该令牌为 SAML 令牌。 有关详细信息, 请参阅[联合和颁发的令牌](../../../wcf/feature-details/federation-and-issued-tokens.md)。 以及[联合和颁发的令牌](../../../wcf/feature-details/federation-and-issued-tokens.md)。  
+ 例如，颁发的令牌是在使用联合方案中的安全令牌服务 (STS) 进行身份验证时所使用的自定义凭据类型。 默认情况下，该令牌为 SAML 令牌。 有关详细信息，请参阅[联合和颁发的令牌](../../../wcf/feature-details/federation-and-issued-tokens.md)。 以及[联合和颁发的令牌](../../../wcf/feature-details/federation-and-issued-tokens.md)。  
   
- 本节包含用于配置本地令牌颁发者的元素，或者与安全令牌服务一起使用的行为。 有关将客户端配置为使用本地颁发者的说明, [请参阅如何:配置本地颁发者](../../../wcf/feature-details/how-to-configure-a-local-issuer.md)。  
+ 本节包含用于配置本地令牌颁发者的元素，或者与安全令牌服务一起使用的行为。 有关将客户端配置为使用本地颁发者的说明， [请参阅如何：配置本地颁发者](../../../wcf/feature-details/how-to-configure-a-local-issuer.md)。  
   
 ## <a name="see-also"></a>请参阅
 

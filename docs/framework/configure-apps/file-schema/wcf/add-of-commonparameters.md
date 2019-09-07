@@ -2,23 +2,24 @@
 title: <add> 的 <commonParameters>
 ms.date: 03/30/2017
 ms.assetid: 3713bf25-20c8-455f-bb85-de46b6487932
-ms.openlocfilehash: 6aaba3f82966ad4496e6edaae06b5d7a8aef3863
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d682acd7fff6bab2c66660a028f8a75b780e21d2
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673649"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70400665"
 ---
-# <a name="add-of-commonparameters"></a>\<add> of \<commonParameters>
+# <a name="add-of-commonparameters"></a>\<添加 commonParameters > \<的 >
 指定在多个服务之间全局使用的参数的名称/值对。 此参数通常包括可由持久性服务共享的数据库连接字符串。  
   
- \<system.ServiceModel>  
-\<behaviors>  
-\<serviceBehaviors>  
-\<behavior>  
-\<workflowRuntime>  
-\<commonParameters>  
-\<add>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<行为 >** ](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<serviceBehaviors >** ](servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<行为 >** ](behavior-of-servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<workflowRuntime >** ](workflowruntime.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<commonParameters >** ](commonparameters.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<添加 >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,7 +38,7 @@ ms.locfileid: "61673649"
   
 |特性|描述|  
 |---------------|-----------------|  
-|name|为服务指定的参数的名称。|  
+|NAME|为服务指定的参数的名称。|  
 |值|为服务指定的参数的值。|  
   
 ### <a name="child-elements"></a>子元素  
@@ -70,9 +71,9 @@ ms.locfileid: "61673649"
 </workflowRuntime>
 ```  
   
- 请注意，`EnableRetries`参数可设置为在全局级别 (如中所示*CommonParameters*部分) 或为个别支持的服务`EnableRetries`(如中所示*服务*部分)。  
+ 请注意， `EnableRetries`参数可以在全局级别（如*CommonParameters*部分所示）或支持`EnableRetries`的单个服务（如 "*服务*" 一节中所示）进行设置。  
   
- 有关使用配置文件来控制行为的详细信息<xref:System.Workflow.Runtime.WorkflowRuntime>对象的 Windows Workflow Foundation 主机应用程序，请参阅[工作流配置文件](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90))。  
+ 有关使用配置文件控制 Windows Workflow Foundation 主机应用程序的<xref:System.Workflow.Runtime.WorkflowRuntime>对象的行为的详细信息，请参阅[工作流配置文件](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90))。  
   
 ## <a name="example"></a>示例  
   

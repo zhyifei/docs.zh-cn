@@ -7,20 +7,21 @@ helpviewer_keywords:
 - DataContractSerializer
 - DataContractAttribute
 ms.assetid: c3d37ae4-8f1c-463f-b195-658c5a7e90a1
-ms.openlocfilehash: 1ea008dcc72d555b00e9648ace95bb9522ffc2c8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a001e8743b2c24f68b1b23cbccf3e5ac162c4e71
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920177"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70400655"
 ---
 # <a name="add-of-declaredtypes-element"></a>\<添加 declaredTypes > \<元素的 >
 添加在反序列化过程中由 <xref:System.Runtime.Serialization.DataContractSerializer> 使用的类型。 每个声明类型都包含一些将作为声明类型的字段或属性返回的已知类型。  
   
- system.runtime.serialization  
-\<dataContractSerializer>  
-\<declaredTypes>  
-\<添加 declaredTypes > \<的 >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<system.object >** ](system-runtime-serialization.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<dataContractSerializer >** ](datacontractserializer.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<declaredTypes >** ](declaredtypes.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<添加 >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -55,9 +56,9 @@ ms.locfileid: "69920177"
 |[\<declaredTypes>](declaredtypes.md)|包含在 <xref:System.Runtime.Serialization.DataContractSerializer> 进行反序列化过程中需要已知类型的类型。|  
   
 ## <a name="remarks"></a>备注  
- 有关已知类型的详细信息, 请参阅[数据协定已知类型](../../../wcf/feature-details/data-contract-known-types.md)和<xref:System.Runtime.Serialization.DataContractSerializer>。  
+ 有关已知类型的详细信息，请参阅[数据协定已知类型](../../../wcf/feature-details/data-contract-known-types.md)和<xref:System.Runtime.Serialization.DataContractSerializer>。  
   
- 有关使用此元素的示例, 请参阅[ dataContractSerializer>。\<](datacontractserializer-element.md)  
+ 有关使用此元素的示例，请参阅[ dataContractSerializer>。\<](datacontractserializer-element.md)  
   
 > [!NOTE]
 > 如果将 <xref:System.Object> 类型添加为 `<declaredType>`，则会引发 <xref:System.Configuration.ConfigurationErrorsException>。 这是因为，<xref:System.Object> 类型不能在配置中用作声明的类型。  

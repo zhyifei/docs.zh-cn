@@ -2,23 +2,24 @@
 title: <authentication>of <serviceCertificate>元素
 ms.date: 03/30/2017
 ms.assetid: 733b67b4-08a1-4d25-9741-10046f9357ef
-ms.openlocfilehash: d770ba1f9a0a18c927b3a4bf6d4141286e3a380c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 29170f032469b4d55b50f57ca06ce403a5aeaf2c
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69919986"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398231"
 ---
 # <a name="authentication-of-servicecertificate-element"></a>\<serviceCertificate > 元素\<的身份验证 >
 指定客户端代理用于对使用 SSL/TLS 协商获取的服务证书进行身份验证的设置。  
   
- \<system.ServiceModel>  
-\<行为 >  
-endpointBehaviors 部分  
-\<行为 >  
-\<clientCredentials>  
-\<serviceCertificate>  
-\<身份验证 >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<行为 >** ](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<endpointBehaviors >** ](endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<行为 >** ](behavior-of-endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<clientCredentials >** ](clientcredentials.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<serviceCertificate >** ](servicecertificate-of-clientcredentials-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<身份验证 >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -51,13 +52,13 @@ endpointBehaviors 部分
   
 |值|描述|  
 |-----------|-----------------|  
-|枚举|以下值之一：None、PeerTrust、ChainTrust、PeerOrChainTrust、Custom。<br /><br /> 有关详细信息, 请参阅使用[证书](../../../wcf/feature-details/working-with-certificates.md)。|  
+|枚举|以下值之一：None、PeerTrust、ChainTrust、PeerOrChainTrust、Custom。<br /><br /> 有关详细信息，请参阅使用[证书](../../../wcf/feature-details/working-with-certificates.md)。|  
   
 ## <a name="revocationmode-attribute"></a>revocationMode 属性  
   
 |值|描述|  
 |-----------|-----------------|  
-|枚举|以下值之一：NoCheck、联机、脱机。<br /><br /> 有关详细信息, 请参阅使用[证书](../../../wcf/feature-details/working-with-certificates.md)。|  
+|枚举|以下值之一：NoCheck、联机、脱机。<br /><br /> 有关详细信息，请参阅使用[证书](../../../wcf/feature-details/working-with-certificates.md)。|  
   
 ## <a name="trustedstorelocation-attribute"></a>trustedStoreLocation 属性  
   
@@ -77,10 +78,10 @@ endpointBehaviors 部分
 ## <a name="remarks"></a>备注  
  此配置元素的 `certificateValidationMode` 属性指定用于对证书进行身份验证的信任级别。 默认情况下，该级别设置为 `ChainTrust`，它指定每个证书都必须存在于某个证书层次结构中，而该层次结构以位于证书链顶端的受信任的证书颁发机构结束。 这是最安全的模式。 您还可以将此值设置为 `PeerOrChainTrust`，该值指定受信任的链中的证书以及自行颁发的证书（对等信任）都被接受。 因为不需要从受信任的证书颁发机构那里购买自行颁发的证书，所以可以在开发和调试客户端和服务时使用此值。 在部署客户端时，请改用 `ChainTrust` 值。 您也可以将该值设置为 `Custom` 或 `None`。 若要使用 `Custom` 值，还必须将 `customCertificateValidator` 属性设置为程序集和用于验证证书的类型。 若要创建您自己的自定义验证程序，必须从 X509CertificateValidator 抽象类进行继承。 有关详细信息，请参阅[如何：创建使用自定义证书验证](../../../wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)程序的服务。  
   
- `revocationMode` 属性指定检查证书是否已吊销的方式。 默认值为 `online`，指示将自动检查证书是否已吊销。 有关详细信息, 请参阅使用[证书](../../../wcf/feature-details/working-with-certificates.md)。  
+ `revocationMode` 属性指定检查证书是否已吊销的方式。 默认值为 `online`，指示将自动检查证书是否已吊销。 有关详细信息，请参阅使用[证书](../../../wcf/feature-details/working-with-certificates.md)。  
   
 ## <a name="example"></a>示例  
- 以下示例执行两项任务。 它首先指定一个服务证书, 以便客户端与域名位于`www.contoso.com` HTTP 协议的终结点进行通信时使用。 然后，它指定了在身份验证过程中使用的吊销模式和存储位置。  
+ 以下示例执行两项任务。 它首先指定一个服务证书，以便客户端与域名位于`www.contoso.com` HTTP 协议的终结点进行通信时使用。 然后，它指定了在身份验证过程中使用的吊销模式和存储位置。  
   
 ```xml  
 <serviceCertificate>

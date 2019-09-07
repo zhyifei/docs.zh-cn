@@ -2,22 +2,23 @@
 title: <message>的元素<ws2007FederationHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 52cd941d-e230-4c82-8b29-333a7d20eca8
-ms.openlocfilehash: 4340727026cb151f2efe813dfa005c1c5a1908be
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b1128bda6068a1fe3d8f5bb5ac29cc349f023b5b
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69931621"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70397848"
 ---
 # <a name="message-element-of-ws2007federationhttpbinding"></a>\<ws2007FederationHttpBinding > 的\<消息 > 元素
 定义[ \<ws2007FederationHttpBinding >](ws2007federationhttpbinding.md)元素的消息级安全性设置。  
   
- \<system.ServiceModel>  
-\<bindings>  
-\<ws2007FederationHttpBinding>  
-\<绑定 >  
-\<安全 >  
-\<message>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<绑定 >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<ws2007FederationHttpBinding >** ](ws2007federationhttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<绑定 >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<安全 >** ](security-element-of-ws2007federationhttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<消息 >**  
   
 ## <a name="syntax"></a>语法  
   

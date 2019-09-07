@@ -2,22 +2,23 @@
 title: <custom>
 ms.date: 03/30/2017
 ms.assetid: a6f65a00-bd1a-4d4a-955a-fe009ec02ab8
-ms.openlocfilehash: b5cc522604fa7aca8ca6eae787520265b36fef6f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 598b341e8b09acd11ba215e6add3adf9e44b2b81
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69925958"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70400468"
 ---
 # <a name="custom"></a>\<custom>
 指定自定义对等解析程序服务的设置。  
   
-\<system.serviceModel>  
-\<bindings>  
-\<netPeerBinding>  
-\<绑定 >  
-\<resolver>  
-\<custom>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<绑定 >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<netPeerTcpBinding >** ](netpeertcpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<绑定 >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<解析程序 >** ](resolver.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<自定义 >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -53,7 +54,7 @@ ms.locfileid: "69925958"
 |[\<resolver>](resolver.md)|一个对等解析程序，可用于将对等网格 ID 解析为一组对等节点地址，这些地址表示参与网格的若干节点。|  
   
 ## <a name="remarks"></a>备注  
- 此元素可定义自定义对等解析程序服务的基本设置，其中包括执行服务的对等解析程序的终结点地址和所有特定绑定设置。 有关创建自定义冲突解决程序的详细信息, 请参阅[将自定义冲突解决程序添加到 PeerChannel 应用程序](https://docs.microsoft.com/previous-versions/ms730105(v=vs.90))。  
+ 此元素可定义自定义对等解析程序服务的基本设置，其中包括执行服务的对等解析程序的终结点地址和所有特定绑定设置。 有关创建自定义冲突解决程序的详细信息，请参阅[将自定义冲突解决程序添加到 PeerChannel 应用程序](https://docs.microsoft.com/previous-versions/ms730105(v=vs.90))。  
   
 ## <a name="see-also"></a>请参阅
 

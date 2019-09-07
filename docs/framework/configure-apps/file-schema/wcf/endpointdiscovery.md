@@ -2,21 +2,22 @@
 title: <endpointDiscovery>
 ms.date: 03/30/2017
 ms.assetid: 70812717-888a-4748-9640-0df6715ff029
-ms.openlocfilehash: 5cb64c54067ba695f67d86c0026db77ebbe7d5ee
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 98b1655f42b7b43604ed4ab9d66870ec204a9590
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69919054"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398021"
 ---
 # <a name="endpointdiscovery"></a>\<endpointDiscovery>
 指定终结点的各种发现设置，例如终结点的可发现性、范围以及对终结点元数据的任何自定义扩展。  
   
-\<system.ServiceModel>  
-\<行为 >  
-\<endpointBehaviors>  
-\<行为 >  
-\<endpointDiscovery>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<行为 >** ](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<endpointBehaviors >** ](endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<行为 >** ](behavior-of-endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<endpointDiscovery >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,7 +43,7 @@ ms.locfileid: "69919054"
   
 |特性|描述|  
 |---------------|-----------------|  
-|enabled|一个布尔值, 指定是否在此终结点上启用可发现性。 默认值为 `false`。|  
+|enabled|一个布尔值，指定是否在此终结点上启用可发现性。 默认值为 `false`。|  
   
 ### <a name="child-elements"></a>子元素  
   
@@ -60,9 +61,9 @@ ms.locfileid: "69919054"
 |||  
   
 ## <a name="remarks"></a>备注  
- 如果将此配置元素添加到终结点的行为配置，并将 `enabled` 特性设置为 `true`，此配置元素将启用该终结点的可发现性。 此外, 您还可以使用[ \<范围 >](scopes.md)子元素指定可用于在查询期间筛选服务终结点的自定义范围 uri, 以及用于指定自定义的[ \<扩展 >](extensions.md)子元素应与标准可发现元数据 (EPR、ContractTypeName、BindingName、Scope 和 ListenURI) 一起发布的元数据。  
+ 如果将此配置元素添加到终结点的行为配置，并将 `enabled` 特性设置为 `true`，此配置元素将启用该终结点的可发现性。 此外，您还可以使用[ \<范围 >](scopes.md)子元素指定可用于在查询期间筛选服务终结点的自定义范围 uri，以及用于指定自定义的[ \<扩展 >](extensions.md)子元素应与标准可发现元数据（EPR、ContractTypeName、BindingName、Scope 和 ListenURI）一起发布的元数据。  
   
- 此配置元素依赖[ \<](servicediscovery.md)于提供可发现性服务级别控制的 serviceDiscovery > 元素。 这意味着, 如果[ \<](servicediscovery.md)配置中不存在 serviceDiscovery >, 将忽略此元素的设置。  
+ 此配置元素依赖[ \<](servicediscovery.md)于提供可发现性服务级别控制的 serviceDiscovery > 元素。 这意味着，如果[ \<](servicediscovery.md)配置中不存在 serviceDiscovery >，将忽略此元素的设置。  
   
 ## <a name="example"></a>示例  
  下面的配置示例指定要对终结点发布的筛选范围和扩展元数据。  

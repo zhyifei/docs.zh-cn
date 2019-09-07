@@ -2,22 +2,23 @@
 title: <security> 的 <netHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: dc41f6f7-cabc-4a64-9fa0-ceabf861b348
-ms.openlocfilehash: f2750036aa4d3fbe41062ad041e50ff3a4be32b5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 890cee3271c410a921b3a88f78d0705ba8718252
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61670555"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399847"
 ---
-# <a name="security-of-nethttpbinding"></a>\<安全 > 的\<netHttpBinding >
+# <a name="security-of-nethttpbinding"></a>\<netHttpBinding 的\<安全 > >
 
-定义的安全功能[ \<basicHttpBinding >](basichttpbinding.md)。
+定义[ \<netHttpBinding >](nethttpbinding.md)的安全功能。
 
-\<system.ServiceModel>\
-\<bindings>\
-\<netHttpBinding>\
-\<binding>\
-\<安全 >
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<绑定 >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<netHttpBinding >** ](nethttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<绑定 >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<安全 >**  
 
 ## <a name="syntax"></a>语法
 
@@ -41,15 +42,15 @@ ms.locfileid: "61670555"
 |---------------|-----------------|
 |mode|可选。 指定所使用的安全类型。 默认值为 `None`。 此属性的类型为 <xref:System.ServiceModel.BasicHttpSecurityMode>。|
 
-## <a name="mode-attribute"></a>mode 属性
+## <a name="mode-attribute"></a>mode 特性
 
-|“值”|描述|
+|值|描述|
 |-----------|-----------------|
-|None|的在传输过程中不是安全消息数。|
+|无|-传输过程中消息不受保护。|
 |传输|使用 HTTPS 传输提供安全性。 用 HTTPS 保证 SOAP 消息的安全。 使用服务的 X.509 证书向客户端对服务进行身份验证。 使用所提供的 ClientCredentialType 对客户端进行身份验证。|
 |消息|使用 SOAP 消息安全提供安全性。 默认情况下，将对正文进行加密和签名。 对于此绑定，系统要求向带外客户端提供服务器证书。 此绑定仅有的有效 `ClientCredentialType` 为 `Certificate`。|
 |TransportWithMessageCredential|完整性、保密性和服务器身份验证由传输安全来提供。 客户端身份验证采用 SOAP 消息安全方式提供。 如果要使用用户名/密码对用户进行身份验证，并且存在用于保护消息传输的现有 HTTP 部署，则适用此模式。|
-|TransportCredentialOnly|此模式并不提供消息的完整性和保密性， 而是提供基于 http 的客户端身份验证。 使用此模式时应当小心。 它应在其中通过其他方式 （如 IPSec) 提供传输安全和 WCF 基础结构提供仅客户端身份验证的环境中使用。|
+|TransportCredentialOnly|此模式并不提供消息的完整性和保密性， 而是提供基于 http 的客户端身份验证。 使用此模式时应当小心。 在通过其他方式（如 IPSec）提供传输安全，并且 WCF 基础结构仅提供客户端身份验证的环境中，应使用此方法。|
 
 ### <a name="child-elements"></a>子元素
 
@@ -62,7 +63,7 @@ ms.locfileid: "61670555"
 
 |元素|描述|
 |-------------|-----------------|
-|绑定|绑定元素[ \<basicHttpBinding >](basichttpbinding.md)。|
+|绑定|BasicHttpBinding > 的 binding 元素。 [ \<](basichttpbinding.md)|
 
 ## <a name="remarks"></a>备注
 

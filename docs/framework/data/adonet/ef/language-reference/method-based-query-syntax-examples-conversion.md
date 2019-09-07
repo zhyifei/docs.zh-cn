@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 19f66872-d5ab-49f8-969f-e53f9632a13d
-ms.openlocfilehash: 5506c37ea4f313599f666014fd305a79f5cc7ffb
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: a78588cb4bd09f8a8a8ce8ed4a60dd45fce1d386
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250237"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70397486"
 ---
 # <a name="method-based-query-syntax-examples-conversion"></a>基于方法的查询语法示例：转换
-本主题中的示例演示如何使用<xref:System.Linq.Enumerable.ToArray%2A>和<xref:System.Linq.Enumerable.ToList%2A>方法， <xref:System.Linq.Enumerable.ToDictionary%2A>通过基于方法的查询语法来查询[AdventureWorks 销售模型](https://archive.codeplex.com/?p=msftdbprodsamples)。 这些示例中使用的 AdventureWorks 销售模型从 AdventureWorks 示例数据库中的 Contact、Address、Product、SalesOrderHeader 和 SalesOrderDetail 等表生成。  
+本主题中的示例演示如何使用<xref:System.Linq.Enumerable.ToArray%2A>和<xref:System.Linq.Enumerable.ToList%2A>方法， <xref:System.Linq.Enumerable.ToDictionary%2A>通过基于方法的查询语法来查询[AdventureWorks 销售模型](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)。 这些示例中使用的 AdventureWorks 销售模型从 AdventureWorks 示例数据库中的 Contact、Address、Product、SalesOrderHeader 和 SalesOrderDetail 等表生成。  
   
  本主题中的示例使用以下`using` / `Imports`语句：  
   

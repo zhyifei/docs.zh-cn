@@ -2,23 +2,25 @@
 title: <remove>of <claimTypeRequirements>元素
 ms.date: 03/30/2017
 ms.assetid: 8ef05bc4-1950-4ee4-95c5-1c6a394eff7e
-ms.openlocfilehash: 7238c253bfbc3224c8bbd31265e197dd35e56514
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 84f4208d3f4581cf7e8c4455bf3f5d78f7e13b9f
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69934228"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399989"
 ---
 # <a name="remove-of-claimtyperequirements-element"></a>\<删除 claimTypeRequirements > \<元素的 >
 指定要从联合凭据中移除的声明的类型。  
   
- \<system.ServiceModel>  
-\<bindings>  
-\<wsFederatedBinding>  
-\<绑定 >  
-\<安全 >  
-\<message>  
-\<claimTypeRequirements>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<绑定 >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<wsFederationHttpBinding >** ](wsfederationhttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<绑定 >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<安全 >** ](security-of-wsfederationhttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<消息 >** ](message-element-of-wsfederationhttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<claimTypeRequirements >** ](claimtyperequirements-for-message.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<删除 >**  
   
 ## <a name="syntax"></a>语法  
   

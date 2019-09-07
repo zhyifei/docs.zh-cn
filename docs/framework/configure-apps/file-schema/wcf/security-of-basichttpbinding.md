@@ -2,21 +2,22 @@
 title: <security> 的 <basicHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 6432708d-5465-4bd9-bfc2-466742db99cb
-ms.openlocfilehash: f84f6c0f9988dd2d07377bf694286922db9d8364
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 00a933892376c2dc9771752beaf76d4994554968
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69936808"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399884"
 ---
 # <a name="security-of-basichttpbinding"></a>\<basicHttpBinding 的\<安全 > >
 定义[ \<basicHttpBinding >](basichttpbinding.md)的安全功能。  
   
- \<system.ServiceModel>  
-\<bindings>  
-\<basicHttpBinding>  
-\<绑定 >  
-\<安全 >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<绑定 >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<basicHttpBinding >** ](basichttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<绑定 >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<安全 >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -47,7 +48,7 @@ ms.locfileid: "69936808"
 |传输|使用 HTTPS 传输提供安全性。 用 HTTPS 保证 SOAP 消息的安全。 使用服务的 X.509 证书向客户端对服务进行身份验证。 使用所提供的 ClientCredentialType 对客户端进行身份验证。 请参阅传输 >。 [ \<](transport-of-basichttpbinding.md)|  
 |消息|使用 SOAP 消息安全提供安全性。 默认情况下，将对正文进行加密和签名。 对于此绑定，系统要求向带外客户端提供服务器证书。 此绑定仅有的有效 `ClientCredentialType` 为 `Certificate`。|  
 |TransportWithMessageCredential|完整性、保密性和服务器身份验证由传输安全来提供。 客户端身份验证采用 SOAP 消息安全方式提供。 如果要使用用户名/密码对用户进行身份验证，并且存在用于保护消息传输的现有 HTTP 部署，则适用此模式。|  
-|TransportCredentialOnly|此模式并不提供消息的完整性和保密性， 而是提供基于 http 的客户端身份验证。 使用此模式时应当小心。 在通过其他方式 (如 IPSec) 提供传输安全, 并且 WCF 基础结构仅提供客户端身份验证的环境中, 应使用此方法。|  
+|TransportCredentialOnly|此模式并不提供消息的完整性和保密性， 而是提供基于 http 的客户端身份验证。 使用此模式时应当小心。 在通过其他方式（如 IPSec）提供传输安全，并且 WCF 基础结构仅提供客户端身份验证的环境中，应使用此方法。|  
   
 ### <a name="child-elements"></a>子元素  
   

@@ -2,22 +2,23 @@
 title: <issuedTokenAuthentication> 的 <serviceCredentials>
 ms.date: 03/30/2017
 ms.assetid: 5c2e288f-f603-4d13-839a-0fd6d1981bec
-ms.openlocfilehash: 280aa49019f68a0906307e24842a585a92c6600a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6d468a27ee05fb4dd8cf087d10e5d170783d3454
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69925366"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70400362"
 ---
 # <a name="issuedtokenauthentication-of-servicecredentials"></a>\<issuedTokenAuthentication > \<serviceCredentials >
 指定作为服务凭据颁发的自定义令牌。  
   
- \<system.ServiceModel>  
-\<行为 >  
-\<serviceBehaviors>  
-\<行为 >  
-\<serviceCredentials>  
-\<issuedTokenAuthentication>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<行为 >** ](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<serviceBehaviors >** ](servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<行为 >** ](behavior-of-servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<serviceCredentials >** ](servicecredentials.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<issuedTokenAuthentication >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -70,9 +71,9 @@ ms.locfileid: "69925366"
 |[\<serviceCredentials>](servicecredentials.md)|指定要用于对服务进行身份验证的凭据以及与客户端凭据验证相关的设置。|  
   
 ## <a name="remarks"></a>备注  
- 颁发的令牌方案包含三个阶段。 在第一阶段中, 尝试访问服务的客户端被称为 "*安全令牌服务*"。 然后，安全令牌服务对该客户端进行身份验证，随后向该客户端颁发一个令牌（通常是一个安全断言标记语言 (SAML) 令牌）。 接下来，客户端携带此令牌返回服务。 服务检查该令牌，以获取使其可以对该令牌并进而对该客户端进行身份验证的数据。 若要对令牌进行身份验证，安全令牌服务所使用的证书必须为该服务所知。  
+ 颁发的令牌方案包含三个阶段。 在第一阶段中，尝试访问服务的客户端被称为 "*安全令牌服务*"。 然后，安全令牌服务对该客户端进行身份验证，随后向该客户端颁发一个令牌（通常是一个安全断言标记语言 (SAML) 令牌）。 接下来，客户端携带此令牌返回服务。 服务检查该令牌，以获取使其可以对该令牌并进而对该客户端进行身份验证的数据。 若要对令牌进行身份验证，安全令牌服务所使用的证书必须为该服务所知。  
   
- 此元素是所有此类安全令牌服务证书的储存库。 若要添加证书, 请使用[ \<knownCertificates >](knowncertificates.md)。 为每个证书插入一个[ \<"添加 >](add-of-knowncertificates.md) ", 如下面的示例中所示。  
+ 此元素是所有此类安全令牌服务证书的储存库。 若要添加证书，请使用[ \<knownCertificates >](knowncertificates.md)。 为每个证书插入一个[ \<"添加 >](add-of-knowncertificates.md) "，如下面的示例中所示。  
   
 ```xml  
 <issuedTokenAuthentication>
@@ -87,7 +88,7 @@ ms.locfileid: "69925366"
   
  默认情况下，必须从安全令牌服务那里获取证书。 这些“已知的”证书可以确保只有合法的客户端才能访问服务。  
   
- 有关使用此配置元素的详细信息, 请[参阅如何:在联合身份验证服务](../../../wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)上配置凭据。  
+ 有关使用此配置元素的详细信息，请[参阅如何：在联合身份验证服务](../../../wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)上配置凭据。  
   
 ## <a name="see-also"></a>请参阅
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - nodes [XAML Services], XAML node stream
 - XAML [XAML Services], XAML node streams
 ms.assetid: 7c11abec-1075-474c-9d9b-778e5dab21c3
-ms.openlocfilehash: c873961982cd1642d8b354e5d77b06105c0b7a1e
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: d6b2975b8e0338b121d00f5ec7f4ffb69d32ab6a
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364306"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70400736"
 ---
 # <a name="understanding-xaml-node-stream-structures-and-concepts"></a>了解 XAML 节点流结构和概念
 
@@ -85,9 +85,6 @@ while (xxr.Read()) {
 ### <a name="accessing-xaml-beyond-the-node-loop-concept"></a>访问节点循环之外的 XAML 的概念
 
 除了用作 XAML 节点循环，可能还有其他使用 XAML 表示形式的方式。 例如，可能有 XAML 读取器可以读取索引节点，或者特别是直接通过 `x:Name`、 `x:Uid`或其他标识符访问节点。 .NET framework XAML 服务不提供完整实现，而通过服务和支持类型提供一种建议模式。 有关详细信息，请参阅 <xref:System.Xaml.IXamlIndexingReader> 和 <xref:System.Xaml.XamlNodeList>。
-
-> [!TIP]
-> Microsoft 也会生成称为 Microsoft XAML 工具包的带外版本。 此带外版本仍处于预发布阶段。 但是，如果你想使用预发布组件，Microsoft XAML 工具包会提供一些有关 XAML 工具和 XAML 静态分析的有趣资源。 Microsoft XAML 工具包包括 XAML DOM API、对 FxCop 分析的支持以及 Silverlight 的 XAML 架构上下文。 有关详细信息，请参阅 [Microsoft XAML 工具包](https://code.msdn.microsoft.com/XAML)。
 
 <a name="working_with_the_current_node"></a>
 
@@ -208,21 +205,21 @@ public class GameBoard {
 
 ## <a name="xaml-and-xml-language-defined-members-in-the-xaml-node-stream"></a>XAML 节点流中 XAML 和 XML 语言定义的成员
 
-特定成员由于 XAML 读取器的解释和约定而引入到 XAML 节点流，而不是通过显式 <xref:System.Xaml.XamlMember> 查找或构造引入。 通常，这些成员均为 XAML 指令。 在某些情况下，它是读取 XAML 的操作，用于将指令引入 XAML 节点流。 换句话说, 原始输入 XAML 文本未显式指定成员指令, 但 XAML 读取器插入指令以满足结构 XAML 约定并在此信息丢失前报告 XAML 节点流中的信息。
+特定成员由于 XAML 读取器的解释和约定而引入到 XAML 节点流，而不是通过显式 <xref:System.Xaml.XamlMember> 查找或构造引入。 通常，这些成员均为 XAML 指令。 在某些情况下，它是读取 XAML 的操作，用于将指令引入 XAML 节点流。 换句话说，原始输入 XAML 文本未显式指定成员指令，但 XAML 读取器插入指令以满足结构 XAML 约定并在此信息丢失前报告 XAML 节点流中的信息。
 
 下表说明了应将 XAML 读取器引入指令 XAML 成员节点的所有情况，并介绍了在 .NET Framework XAML 服务实现中标识成员节点的方式。
 
-- **对象节点的初始化文本:** 此成员节点的名称是`_Initialization`, 它表示 xaml 指令, 并在 xaml 语言 xaml 命名空间中定义。 可从 <xref:System.Xaml.XamlLanguage.Initialization%2A>中获取它的静态实体。
+- **对象节点的初始化文本：** 此成员节点的名称是`_Initialization`，它表示 xaml 指令，并在 xaml 语言 xaml 命名空间中定义。 可从 <xref:System.Xaml.XamlLanguage.Initialization%2A>中获取它的静态实体。
 
-- **标记扩展的位置参数:** 此成员节点的名称是`_PositionalParameters`, 并且在 xaml 语言 xaml 命名空间中定义。 它始终包含对象的泛型列表，其中每个对象都是通过以输入 XAML 提供的 `,` 分隔符拆分而预先分隔的位置参数。 可从 <xref:System.Xaml.XamlLanguage.PositionalParameters%2A>中获取位置参数指令的静态实体。
+- **标记扩展的位置参数：** 此成员节点的名称是`_PositionalParameters`，并且在 xaml 语言 xaml 命名空间中定义。 它始终包含对象的泛型列表，其中每个对象都是通过以输入 XAML 提供的 `,` 分隔符拆分而预先分隔的位置参数。 可从 <xref:System.Xaml.XamlLanguage.PositionalParameters%2A>中获取位置参数指令的静态实体。
 
-- **未知内容:** 此成员节点的名称是`_UnknownContent`。 严格地说，它是 <xref:System.Xaml.XamlDirective>，并且在 XAML 语言 XAML 命名空间中定义。 在 XAML 对象元素包含源 XAML 中的内容但当前可用的 XAML 架构上下文中无法确认任何内容属性的情况下，此指令用作 sentinel。 可通过检查名为 `_UnknownContent`的成员，在 XAML 节点流中检测此类情况。 如果加载路径 XAML 节点流中未执行其他操作，在遇到任何对象的 <xref:System.Xaml.XamlObjectWriter> 成员时将在尝试的 `WriteEndObject` 上引发默认 `_UnknownContent` 。 默认 <xref:System.Xaml.XamlXmlWriter> 不会引发，并将成员视为隐式。 可以从 `_UnknownContent` 中获取 <xref:System.Xaml.XamlLanguage.UnknownContent%2A>的静态实体。
+- **未知内容：** 此成员节点的名称是`_UnknownContent`。 严格地说，它是 <xref:System.Xaml.XamlDirective>，并且在 XAML 语言 XAML 命名空间中定义。 在 XAML 对象元素包含源 XAML 中的内容但当前可用的 XAML 架构上下文中无法确认任何内容属性的情况下，此指令用作 sentinel。 可通过检查名为 `_UnknownContent`的成员，在 XAML 节点流中检测此类情况。 如果加载路径 XAML 节点流中未执行其他操作，在遇到任何对象的 <xref:System.Xaml.XamlObjectWriter> 成员时将在尝试的 `WriteEndObject` 上引发默认 `_UnknownContent` 。 默认 <xref:System.Xaml.XamlXmlWriter> 不会引发，并将成员视为隐式。 可以从 `_UnknownContent` 中获取 <xref:System.Xaml.XamlLanguage.UnknownContent%2A>的静态实体。
 
-- **集合的集合属性:** 虽然用于 XAML 的集合类的后备 CLR 类型通常具有一个专用命名属性, 该属性包含收集项, 但在实现类型解析之前, XAML 类型系统不知道该属性。 相反，XAML 节点流引入 `Items` 占位符作为集合 XAML 类型的成员。 在 .NET Framework XAML 服务实现中，节点流中此指令/成员的名称为 `_Items`。 可以从 <xref:System.Xaml.XamlLanguage.Items%2A>中获取此指令的常量。
+- **集合的集合属性：** 虽然用于 XAML 的集合类的后备 CLR 类型通常具有一个专用命名属性，该属性包含收集项，但在实现类型解析之前，XAML 类型系统不知道该属性。 相反，XAML 节点流引入 `Items` 占位符作为集合 XAML 类型的成员。 在 .NET Framework XAML 服务实现中，节点流中此指令/成员的名称为 `_Items`。 可以从 <xref:System.Xaml.XamlLanguage.Items%2A>中获取此指令的常量。
 
-    请注意, XAML 节点流可能包含 Items 属性, 其中的项不能基于支持类型解析和 XAML 架构上下文进行分析。 例如，应用于对象的
+    请注意，XAML 节点流可能包含 Items 属性，其中的项不能基于支持类型解析和 XAML 架构上下文进行分析。 例如，应用于对象的
 
-- **XML 定义的成员:** 在 .NET Framework xaml 服务`xml:base`实现`xml:lang`中`xml:space` , XML 定义的、和成员`base`被报告为`space`名为、 `lang`和的 XAML 指令。 这些成员的命名空间是指 XML 命名空间 `http://www.w3.org/XML/1998/namespace`。 其中每个成员的常量都可从 <xref:System.Xaml.XamlLanguage>获取。
+- **XML 定义的成员：** 在 .NET Framework xaml 服务`xml:base`实现`xml:lang`中`xml:space` ，XML 定义的、和成员`base`被报告为`space`名为、 `lang`和的 XAML 指令。 这些成员的命名空间是指 XML 命名空间 `http://www.w3.org/XML/1998/namespace`。 其中每个成员的常量都可从 <xref:System.Xaml.XamlLanguage>获取。
 
 ## <a name="node-order"></a>节点顺序
 
@@ -232,7 +229,7 @@ public class GameBoard {
 
 ### <a name="xamlobjectwriter-behavior-and-node-order"></a>XamlObjectWriter 行为和节点顺序
 
-`StartObject` 的 <xref:System.Xaml.XamlObjectWriter> 不一定是指示 XAML 对象编写器立即构造对象实例的信号。 XAML 包括多种语言功能, 使您可以使用附加输入初始化对象, 并且不完全依赖于调用无参数构造函数来生成初始对象, 而只是设置属性。 这些功能包括： <xref:System.Windows.Markup.XamlDeferLoadAttribute>；初始化文本； [x:TypeArguments](x-typearguments-directive.md)；标记扩展的位置参数；工厂方法和关联的 [x:arguments](x-arguments-directive.md) 节点（XAML 2009 年）。 其中每种情况都会延迟实际对象构造，并且因为对节点流重新排序，无论何时遇到不特定为此对象类型的构造指令的启动成员时，XAML 对象编写器都可依赖于实际构造实例的行为。
+`StartObject` 的 <xref:System.Xaml.XamlObjectWriter> 不一定是指示 XAML 对象编写器立即构造对象实例的信号。 XAML 包括多种语言功能，使您可以使用附加输入初始化对象，并且不完全依赖于调用无参数构造函数来生成初始对象，而只是设置属性。 这些功能包括： <xref:System.Windows.Markup.XamlDeferLoadAttribute>；初始化文本； [x:TypeArguments](x-typearguments-directive.md)；标记扩展的位置参数；工厂方法和关联的 [x:arguments](x-arguments-directive.md) 节点（XAML 2009 年）。 其中每种情况都会延迟实际对象构造，并且因为对节点流重新排序，无论何时遇到不特定为此对象类型的构造指令的启动成员时，XAML 对象编写器都可依赖于实际构造实例的行为。
 
 ### <a name="getobject"></a>GetObject
 

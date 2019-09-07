@@ -2,22 +2,23 @@
 title: <transport> 的 <netPeerTcpBinding>
 ms.date: 03/30/2017
 ms.assetid: c44d86d2-1160-44d7-9c7a-297b12eccc7f
-ms.openlocfilehash: 837d01540fa63579877ab4085bd8034c78f2fbe0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 08be5d752f8422ebe6442b295195f21b16a274c0
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69915565"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399317"
 ---
 # <a name="transport-of-netpeertcpbinding"></a>\<netPeerTcpBinding > 的\<传输 >
 指定使用[ \<netPeerTcpBinding >](netpeertcpbinding.md)时的传输级安全性设置。  
   
- \<system.ServiceModel>  
-\<bindings>  
-\<netPeerTcpBinding>  
-\<绑定 >  
-\<安全 >  
-\<transport>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<绑定 >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<netPeerTcpBinding >** ](netpeertcpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<绑定 >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<安全 >** ](security-of-netpeerbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<传输 >**  
   
 ## <a name="syntax"></a>语法  
   

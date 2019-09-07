@@ -3,23 +3,24 @@ title: <faultPropagationQueries>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 00ff90ae-ebe0-4c85-a93f-61557288d0a3
-ms.openlocfilehash: b8052138a729fcba7cb158d81a63126f59e0c4fc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: bc0cc5fd027da45994269b149b72496fa03becef
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69988734"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398733"
 ---
 # <a name="faultpropagationqueries"></a>\<faultPropagationQueries>
 表示一个查询集合，这些查询用于跟踪在某个活动中发生的错误的处理。  每次 FaultHandler 处理错误时，都会发生此事件。 应使用此类查询来跟踪对在活动中出现的错误进行的处理。 跟踪参与者需要用此查询来订阅错误传播记录。  
   
- 有关跟踪配置文件查询的详细信息, 请参阅[跟踪配置文件](../../../windows-workflow-foundation/tracking-profiles.md)。  
+ 有关跟踪配置文件查询的详细信息，请参阅[跟踪配置文件](../../../windows-workflow-foundation/tracking-profiles.md)。  
   
-\<system.serviceModel>  
-\<跟踪 >  
-\<trackingProfile>  
-\<工作流 >  
-\<faultPropagationQueries>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<主板.>** ](system-servicemodel-of-workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<跟踪 >** ](tracking.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Trackingprofile&gt >** ](trackingprofile.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<工作流 >** ](workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<faultPropagationQueries >** 
   
 ## <a name="syntax"></a>语法  
   
@@ -52,7 +53,7 @@ ms.locfileid: "69988734"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<workflow>](workflow.md)|一个配置元素, 该元素包含由**activityDefinitionId**属性标识的特定工作流的所有查询。|  
+|[\<workflow>](workflow.md)|一个配置元素，该元素包含由**activityDefinitionId**属性标识的特定工作流的所有查询。|  
   
 ## <a name="see-also"></a>请参阅
 

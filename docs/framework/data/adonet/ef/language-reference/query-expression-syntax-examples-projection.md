@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 079926c5-e6b5-4fb9-b4cf-9c63886dd626
-ms.openlocfilehash: 52681a4035ef55133c6191e7eac2cab7ed36c8fb
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: b5139cc310689eb05833ead8d35c03d02eb2fc58
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70249334"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398421"
 ---
 # <a name="query-expression-syntax-examples-projection"></a>查询表达式语法示例：投影
-本主题中的示例演示如何使用`Select`方法`From … From …`和关键字，通过使用查询表达式语法来查询[AdventureWorks 销售模型](https://archive.codeplex.com/?p=msftdbprodsamples)。 `From … From …`与 `SelectMany` 方法等效，但前者基于查询。 这些示例中使用的 AdventureWorks 销售模型从 AdventureWorks 示例数据库中的 Contact、Address、Product、SalesOrderHeader 和 SalesOrderDetail 等表生成。  
+本主题中的示例演示如何使用`Select`方法`From … From …`和关键字，通过使用查询表达式语法来查询[AdventureWorks 销售模型](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)。 `From … From …`与 `SelectMany` 方法等效，但前者基于查询。 这些示例中使用的 AdventureWorks 销售模型从 AdventureWorks 示例数据库中的 Contact、Address、Product、SalesOrderHeader 和 SalesOrderDetail 等表生成。  
   
  本主题中的示例使用以下`using` / `Imports`语句：  
   

@@ -2,21 +2,23 @@
 title: <localServiceSettings> 元素
 ms.date: 03/30/2017
 ms.assetid: 0658549c-3f65-46dd-8c5c-9895441ed734
-ms.openlocfilehash: 36fcc9454a5762a4a375cc7f6eaee1c4cf0580e2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4883fd563ecf989d67c369085df4fc43d0c5f078
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69931720"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70400302"
 ---
 # <a name="localservicesettings-element"></a>\<localServiceSettings > 元素
 指定此绑定的本地服务安全设置。  
   
- \<system.serviceModel>  
-\<bindings>  
-\<customBinding>  
-\<绑定 >  
-\<安全 >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<绑定 >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<customBinding >** ](custombinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<绑定 >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<安全 >** ](security-of-custombinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<localServiceSettings >**  
   
 ## <a name="syntax"></a>语法  
   

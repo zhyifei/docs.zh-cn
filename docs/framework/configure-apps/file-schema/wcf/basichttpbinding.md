@@ -4,19 +4,20 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - basicHttpBinding Element
 ms.assetid: 85cf1a4f-26c2-48c7-bda6-6c960d5d3fb3
-ms.openlocfilehash: 2ae8a9d2ad7bf3607394e65570b8961fd2d58606
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b9d1e231bf2274f0df784feab26bc35a34ca772b
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69919887"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398248"
 ---
 # <a name="basichttpbinding"></a>\<basicHttpBinding>
 表示 Windows Communication Foundation (WCF)服务可用来配置和公开终结点的绑定，这些终结点将能够与基于 ASMX 的 Web 服务和客户端以及其他符合 WS-I Basic Profile 1.1 的服务进行通信。  
   
- \<system.ServiceModel>  
-\<bindings>  
-\<basicHttpBinding>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<绑定 >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<basicHttpBinding >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -70,8 +71,8 @@ ms.locfileid: "69919887"
 |`maxBufferPoolSize`|一个整数值，指定为从通道接收消息的消息缓冲区管理器分配并供其使用的最大内存量。 默认值为 524288 (0x80000) 字节。<br /><br /> 通过使用缓冲池，缓冲区管理器可将使用缓冲区的开销降到最低。 当消息离开通道时，服务需要使用缓冲区来处理这些消息。 如果缓冲池中的内存不够用来处理消息负载，则缓冲区管理器必须从 CLR 堆分配更多内存，而这会增加垃圾回收的系统开销。 从 CLR 垃圾堆进行大量分配表明缓冲池太小，可以通过提高此属性指定的限制来实现更大的内存分配，从而提高性能。|  
 |`maxBufferSize`|一个整数值，指定为采用此绑定配置的终结点处理消息时存储消息的缓冲区的最大大小（字节）。 默认值为 65,536 字节。|  
 |`maxReceivedMessageSize`|一个正整数，定义在采用此绑定配置的通道上可以接收的消息的最大消息大小（字节），包括消息头。 如果消息对于接收方而言太大，则发送方将收到 SOAP 错误。 接收方将删除该消息，并在跟踪日志中创建事件项。 默认值为 65,536 字节。|  
-|`messageEncoding`|定义用于对 SOAP 消息进行编码的编码器。 包括以下有效值：<br /><br /> 全文使用文本消息编码器。<br />Mtom使用消息传输组织机制 1.0 (MTOM) 编码器。<br /><br /> 默认值为 Text。 此属性的类型为 <xref:System.ServiceModel.WSMessageEncoding>。|  
-|`name`|一个包含绑定的配置名称的字符串。 因为此值用作绑定的标识，所以它应该是唯一的。 每个绑定都具有 `name` 和 `namespace` 属性，它们共同在服务的元数据中唯一标识每个绑定。 此外，在同一类型的绑定中，此名称是唯一的。 从 [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] 开始，不要求绑定和行为具有名称。 有关默认配置和无值绑定和行为的详细信息, 请参阅[WCF 服务的](../../../wcf/samples/simplified-configuration-for-wcf-services.md)[简化配置](../../../wcf/simplified-configuration.md)和简化配置。|  
+|`messageEncoding`|定义用于对 SOAP 消息进行编码的编码器。 包括以下有效值：<br /><br /> 全文使用文本消息编码器。<br />Mtom使用消息传输组织机制1.0 （MTOM）编码器。<br /><br /> 默认值为 Text。 此属性的类型为 <xref:System.ServiceModel.WSMessageEncoding>。|  
+|`name`|一个包含绑定的配置名称的字符串。 因为此值用作绑定的标识，所以它应该是唯一的。 每个绑定都具有 `name` 和 `namespace` 属性，它们共同在服务的元数据中唯一标识每个绑定。 此外，在同一类型的绑定中，此名称是唯一的。 从 [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] 开始，不要求绑定和行为具有名称。 有关默认配置和无值绑定和行为的详细信息，请参阅[WCF 服务的](../../../wcf/samples/simplified-configuration-for-wcf-services.md)[简化配置](../../../wcf/simplified-configuration.md)和简化配置。|  
 |`namespace`|指定绑定的 XML 命名空间。 默认值为 “http://tempuri.org/Bindings” 。 每个绑定都具有 `name` 和 `namespace` 属性，它们共同在服务的元数据中唯一标识每个绑定。|  
 |`openTimeout`|一个 <xref:System.TimeSpan> 值，指定为完成打开操作提供的时间间隔。 此值应大于或等于 <xref:System.TimeSpan.Zero>。 默认值为 00:01:00。|  
 |`proxyAddress`|一个包含 HTTP 代理地址的 URI。 如果 `useSystemWebProxy` 设置为 `true`，则此设置必须为 `null`。 默认值为 `null`。|  
@@ -97,7 +98,7 @@ ms.locfileid: "69919887"
 ## <a name="remarks"></a>备注  
  BasicHttpBinding 使用 HTTP 作为传输协议来发送 SOAP 1.1 消息。 服务可以使用此绑定来公开符合 WS-I BP 1.1 标准的终结点，例如 ASMX 客户端使用的终结点。 同样，客户端可以使用 BasicHttpBinding 与公开符合 WS-I BP 1.1 标准的终结点的服务（如 ASMX Web 服务或采用 BasicHttpBinding 配置的服务）进行通信。  
   
- 默认情况下, 安全设置处于关闭状态, 但可以将[ \<security >](security-of-basichttpbinding.md)子元素的 mode 属性设置为以外`None`的值。 默认情况下，它使用“Text”消息编码和 UTF-8 文本编码。  
+ 默认情况下，安全设置处于关闭状态，但可以将[ \<security >](security-of-basichttpbinding.md)子元素的 mode 属性设置为以外`None`的值。 默认情况下，它使用“Text”消息编码和 UTF-8 文本编码。  
   
 ## <a name="example"></a>示例  
  下面的示例演示如何使用 <xref:System.ServiceModel.BasicHttpBinding> 提供 HTTP 通信以及与第一代和第二代 Web 服务的最大互操作性。 绑定是在客户端和服务的配置文件中指定的。 绑定类型是使用 `binding` 元素的 `<endpoint>` 属性指定的。 如果要配置基本绑定并更改它的某些设置，则必须定义一个绑定配置。 终结点必须使用 `bindingConfiguration` 元素的 `<endpoint>` 属性按名称引用绑定配置，如以下服务配置代码所示。  
@@ -171,7 +172,7 @@ ms.locfileid: "69919887"
 </system.serviceModel>
 ```  
   
- 有关默认配置和无值绑定和行为的详细信息, 请参阅[WCF 服务的](../../../wcf/samples/simplified-configuration-for-wcf-services.md)[简化配置](../../../wcf/simplified-configuration.md)和简化配置。  
+ 有关默认配置和无值绑定和行为的详细信息，请参阅[WCF 服务的](../../../wcf/samples/simplified-configuration-for-wcf-services.md)[简化配置](../../../wcf/simplified-configuration.md)和简化配置。  
   
 ## <a name="see-also"></a>请参阅
 

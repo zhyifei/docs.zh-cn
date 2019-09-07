@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7e41aed0-3be9-4f75-98de-860a85552a3c
-ms.openlocfilehash: 034cca65f92f1fd8bd64d540de0cf1470a16c9e9
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: b845564c02b55b8729efc893d7eecc48bd60f710
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70249356"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398551"
 ---
 # <a name="query-expression-syntax-examples-partitioning"></a>查询表达式语法示例：分区
-本主题中的示例演示如何使用<xref:System.Linq.Enumerable.Skip%2A>和<xref:System.Linq.Enumerable.Take%2A>方法通过使用查询表达式语法来查询[AdventureWorks 销售模型](https://archive.codeplex.com/?p=msftdbprodsamples)。 这些示例中使用的 AdventureWorks 销售模型从 AdventureWorks 示例数据库中的 Contact、Address、Product、SalesOrderHeader 和 SalesOrderDetail 等表生成。  
+本主题中的示例演示如何使用<xref:System.Linq.Enumerable.Skip%2A>和<xref:System.Linq.Enumerable.Take%2A>方法通过使用查询表达式语法来查询[AdventureWorks 销售模型](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)。 这些示例中使用的 AdventureWorks 销售模型从 AdventureWorks 示例数据库中的 Contact、Address、Product、SalesOrderHeader 和 SalesOrderDetail 等表生成。  
   
  本主题中的示例使用以下`using` / `Imports`语句：  
   

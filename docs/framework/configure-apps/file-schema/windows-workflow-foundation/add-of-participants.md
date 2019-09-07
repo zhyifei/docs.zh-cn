@@ -3,22 +3,23 @@ title: <add> 的 <participants>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 3c730850-6f8e-4102-acb8-8effb4e09463
-ms.openlocfilehash: a6dc07b6f419fcb98e3f182269a99cb281139ba9
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 479430abd06561cc294b3da3d0922b737364b50f
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946189"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398932"
 ---
 # <a name="add-of-participants"></a>\<添加参与者的\<> >
 配置一个跟踪参与者，它侦听直接从运行时发出的跟踪记录，并按照配置跟踪参与者的任何方式处理这些记录。 这包括写入特定输出（例如，文件、控制台、ETW）、处理/聚合记录或可能需要的任何其他组合。  
   
- 有关工作流跟踪和跟踪参与者的详细信息, 请参阅[工作流跟踪和](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)跟踪和[跟踪参与者](../../../windows-workflow-foundation/tracking-participants.md)。  
+ 有关工作流跟踪和跟踪参与者的详细信息，请参阅[工作流跟踪和](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)跟踪和[跟踪参与者](../../../windows-workflow-foundation/tracking-participants.md)。  
   
-\<system.serviceModel>  
-\<跟踪 >  
-\<participants>  
-\<add>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<主板.>** ](system-servicemodel-of-workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<跟踪 >** ](tracking.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<参与者 >** ](participants.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<添加 >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -60,7 +61,7 @@ ms.locfileid: "69946189"
 ## <a name="example"></a>示例  
  下面的配置示例演示在 Web.config 文件中配置的标准 ETW 跟踪参与者。  
   
- Etw 跟踪参与者用于将跟踪记录写入 etw 的提供程序 Id 在 "  **\<诊断 >** " 部分中定义。 跟踪参与者具有一个与其关联的配置文件，用来指定跟踪参与者已订阅的跟踪记录。 这由 **profileName** 的属性 **\<添加>** 元素。 定义这些后, 跟踪参与者将添加到 **\<etwTracking >** 服务行为。 这会将所选跟踪参与者添加到工作流实例的扩展中，以便它们开始接收跟踪记录。  
+ Etw 跟踪参与者用于将跟踪记录写入 etw 的提供程序 Id 在 "  **\<诊断 >** " 部分中定义。 跟踪参与者具有一个与其关联的配置文件，用来指定跟踪参与者已订阅的跟踪记录。 这由 **profileName** 的属性 **\<添加>** 元素。 定义这些后，跟踪参与者将添加到 **\<etwTracking >** 服务行为。 这会将所选跟踪参与者添加到工作流实例的扩展中，以便它们开始接收跟踪记录。  
   
 ```xml  
 <configuration>   

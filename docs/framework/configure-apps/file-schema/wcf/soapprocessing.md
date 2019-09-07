@@ -2,22 +2,23 @@
 title: <soapProcessing>
 ms.date: 03/30/2017
 ms.assetid: e8707027-e6b8-4539-893d-3cd7c13fbc18
-ms.openlocfilehash: 678b1f71ac15d3ad30df28cec5abbe403fb08c95
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0728e22205d4ac2c7674f7690e142aed51d42440
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69937053"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399544"
 ---
 # <a name="soapprocessing"></a>\<soapProcessing>
 
 定义用于封送不同绑定类型和消息版本之间消息的客户端终结点行为。
 
-**\<system.ServiceModel>**    
-&nbsp;&nbsp; **\<behaviors>**    
-&nbsp;&nbsp;&nbsp;&nbsp; **\<endpointBehaviors>**    
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<behavior>**    
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<soapProcessing>**
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<行为 >** ](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<endpointBehaviors >** ](endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<行为 >** ](behavior-of-endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<soapProcessing >**
   
 ## <a name="syntax"></a>语法  
   
@@ -49,8 +50,8 @@ ms.locfileid: "69937053"
 
 SOAP 处理是指在各消息版本之间转换消息的过程。
 
-Windows Communication Foundation (WCF) 路由服务可以将消息从一个协议转换为另一个协议。 如果传入消息和传出消息的版本不相同，则会创建一条具有正确版本的新消息。 通过构造新的 WCF 消息（该消息包含传入 WCF 消息的正文部分和相关标头）来完成对一个 <xref:System.ServiceModel.Channels.MessageVersion> 到另一个  的消息的处理。 在构造新的 WCF 消息的过程中，不会使用特定于寻址的标头或在路由器级别理解的标头，这是因为这些标头要么具有不同的版本（如果为寻址标头），要么已作为客户端和路由器之间的通信的一部分处理。
+Windows Communication Foundation （WCF）路由服务可以将消息从一个协议转换为另一个协议。 如果传入消息和传出消息的版本不相同，则会创建一条具有正确版本的新消息。 通过构造新的 WCF 消息（该消息包含传入 WCF 消息的正文部分和相关标头）来完成对一个 <xref:System.ServiceModel.Channels.MessageVersion> 到另一个  的消息的处理。 在构造新的 WCF 消息的过程中，不会使用特定于寻址的标头或在路由器级别理解的标头，这是因为这些标头要么具有不同的版本（如果为寻址标头），要么已作为客户端和路由器之间的通信的一部分处理。
 
 是否将一个标头置于出站消息内由此标头在通过传入通道层时是否已标记为已理解来决定。 不会移除不理解的标头（如自定义标头），并且会将此标头复制到出站消息中，以通过路由服务。 系统会将消息正文复制到出站消息中， 然后将此消息外发到出站通道，此时将创建和添加特定于该通信协议/传输的所有标头和其他信封数据。
 
-当指定了 SOAP 处理行为时，将执行此类处理步骤。 [此\<soapProcessingExtension >](soapprocessing.md)行为是在启动路由服务时应用于所有客户端 (传出) 终结点的终结点行为。 默认情况下, [ \<路由 >](routing-of-servicebehavior.md)行为将为每个客户端终结点`processMessages`创建并`true`附加一个新[ \<的 soapProcessingExtension >](soapprocessing.md)行为, 并将设置为。 如果您具有路由服务无法理解的协议，或者希望重写默认处理行为，则可以针对整个路由服务或仅针对特定终结点禁用 SOAP 处理。  若要对所有终结点上的整个路由服务禁用 SOAP 处理, `soapProcessing`请将[ \<路由 >](routing-of-servicebehavior.md)行为的特性`false`设置为。 若要针对特定终结点禁用 SOAP 处理，请使用此行为，并将其 `processMessages` 特性设置为 `false`，然后将此行为附加到不希望运行默认处理代码的终结点。  当[路由 > 行为设置路由服务时, 它将跳过重新应用终结点行为, 因为已存在一个终结点行为。 \<](routing-of-servicebehavior.md)
+当指定了 SOAP 处理行为时，将执行此类处理步骤。 [此\<soapProcessingExtension >](soapprocessing.md)行为是在启动路由服务时应用于所有客户端（传出）终结点的终结点行为。 默认情况下， [ \<路由 >](routing-of-servicebehavior.md)行为将为每个客户端终结点`processMessages`创建并`true`附加一个新[ \<的 soapProcessingExtension >](soapprocessing.md)行为，并将设置为。 如果您具有路由服务无法理解的协议，或者希望重写默认处理行为，则可以针对整个路由服务或仅针对特定终结点禁用 SOAP 处理。  若要对所有终结点上的整个路由服务禁用 SOAP 处理， `soapProcessing`请将[ \<路由 >](routing-of-servicebehavior.md)行为的特性`false`设置为。 若要针对特定终结点禁用 SOAP 处理，请使用此行为，并将其 `processMessages` 特性设置为 `false`，然后将此行为附加到不希望运行默认处理代码的终结点。  当[路由 > 行为设置路由服务时，它将跳过重新应用终结点行为，因为已存在一个终结点行为。 \<](routing-of-servicebehavior.md)

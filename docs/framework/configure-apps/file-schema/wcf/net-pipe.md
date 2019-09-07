@@ -2,18 +2,19 @@
 title: <net.pipe>
 ms.date: 03/30/2017
 ms.assetid: 6a0f0318-f8f6-466c-9fae-199d7274a82e
-ms.openlocfilehash: 7d868d84318db8c9fe188293154dc275060a3952
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: dd984b2ab89060451b1b2d02c324e803766908ce
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69933183"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70397714"
 ---
 # <a name="netpipe"></a>\<net.pipe>
 指定命名管道激活服务的配置设置，命名管道激活服务将管理命名管道连接的生存期，并处理通过命名管道到达的激活请求。  
   
- \<system.serviceModel.activation>  
-\<net.pipe>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel-activation.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<net.pipe >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -58,7 +59,7 @@ ms.locfileid: "69933183"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<allowAccounts>](allowaccounts.md)|一个配置元素的集合, 这些元素`securityIdentifier`包含一个属性, 用于为承载 WCF 服务并被授予对共享服务的连接访问权限的进程指定用户帐户。|  
+|[\<allowAccounts>](allowaccounts.md)|一个配置元素的集合，这些元素`securityIdentifier`包含一个属性，用于为承载 WCF 服务并被授予对共享服务的连接访问权限的进程指定用户帐户。|  
   
 ### <a name="parent-elements"></a>父元素  
   

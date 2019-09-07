@@ -2,17 +2,20 @@
 title: <allowAccounts>
 ms.date: 03/30/2017
 ms.assetid: 166923a9-a8ac-478f-92f9-529d9667f3a6
-ms.openlocfilehash: c62f29c53d807cab397ff09c6163d924a71ea319
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 74b9d51b7400469c96fc9c8b36e4b0fb1d46969b
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69926601"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398406"
 ---
 # <a name="allowaccounts"></a>\<allowAccounts>
-包含一个配置元素集合, 这些元素为承载 Windows Communication Foundation (WCF) 服务且被授予对共享服务的连接访问权限的进程指定用户帐户。  
+包含一个配置元素集合，这些元素为承载 Windows Communication Foundation （WCF）服务且被授予对共享服务的连接访问权限的进程指定用户帐户。  
   
- \<system.serviceModel.activation>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel-activation.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<net.pipe >** ](net-pipe.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<allowAccounts >**  
   
 ## <a name="syntax"></a>语法  
   

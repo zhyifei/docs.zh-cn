@@ -2,21 +2,22 @@
 title: <serviceThrottling>
 ms.date: 03/30/2017
 ms.assetid: a337d064-1e64-4209-b4a9-db7fdb7e3eaf
-ms.openlocfilehash: 77ed5e91f09d9e658deeb7996baaca445b4e0c90
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ad87a5876381a7224341babdb076c85edcd1dd87
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69937106"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399563"
 ---
 # <a name="servicethrottling"></a>\<serviceThrottling>
 指定 Windows Communication Foundation (WCF) 服务的限制机制。  
   
- \<system.ServiceModel>  
-\<行为 >  
-\<serviceBehaviors>  
-\<行为 >  
-\<serviceThrottling>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<行为 >** ](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<serviceBehaviors >** ](servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<行为 >** ](behavior-of-servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<serviceThrottling >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -52,7 +53,7 @@ ms.locfileid: "69937106"
  每次达到属性值时，就会记录一个跟踪。 第一个跟踪将记录为警告。  
   
 ## <a name="example"></a>示例  
- 下面的配置示例指定服务将最大并发调用数限制为 2，并将最大并发实例数限制为 10。 有关运行此示例的详细示例, 请参阅[限制](../../../wcf/samples/throttling.md)。  
+ 下面的配置示例指定服务将最大并发调用数限制为 2，并将最大并发实例数限制为 10。 有关运行此示例的详细示例，请参阅[限制](../../../wcf/samples/throttling.md)。  
   
 ```xml  
 <behaviors>

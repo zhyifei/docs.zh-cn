@@ -2,21 +2,22 @@
 title: <security> 的 <wsHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 8658b162-2ddf-4162-a869-aa517a42288a
-ms.openlocfilehash: e627a63221d0013c89495d7ff81e02047a03df89
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f7a4ef98637a7c966665fdd02ad26929bd4ba6ac
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69936512"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399717"
 ---
 # <a name="security-of-wshttpbinding"></a>\<wsHttpBinding 的\<安全 > >
 表示[ \<wsHttpBinding >](wshttpbinding.md)的安全功能。  
   
- \<system.ServiceModel>  
-\<bindings>  
-\<wsHttpBinding>  
-\<绑定 >  
-\<安全 >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<绑定 >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<wsHttpBinding >** ](wshttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<绑定 >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<安全 >**  
   
 ## <a name="syntax"></a>语法  
   

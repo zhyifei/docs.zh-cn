@@ -2,23 +2,24 @@
 title: <add> 的 <scopes>
 ms.date: 03/30/2017
 ms.assetid: 0563a7d8-fc84-4c85-9066-af32665857c2
-ms.openlocfilehash: b190cb72e21d47bdc62aab2daba0f6eea1ee04ac
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: bcde6b18c34dccf1716c809dddeb45b1b4da90f0
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69926632"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398307"
 ---
 # <a name="add-of-scopes"></a>\<添加作用域\<的 > >
 添加可用于在查询时筛选服务终结点的自定义范围 URI。  
   
-\<system.ServiceModel>  
-\<行为 >  
-\<endpointBehaviors>  
-\<行为 >  
-\<endpointDiscovery>  
-\<scopes>  
-\<add>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<行为 >** ](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<endpointBehaviors >** ](endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<行为 >** ](behavior-of-endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<endpointDiscovery >** ](endpointdiscovery.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<范围 >** ](scopes.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<添加 >**  
   
 ## <a name="syntax"></a>语法  
   

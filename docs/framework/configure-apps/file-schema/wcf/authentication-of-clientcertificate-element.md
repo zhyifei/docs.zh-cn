@@ -2,23 +2,24 @@
 title: <authentication>of <clientCertificate>元素
 ms.date: 03/30/2017
 ms.assetid: 4a55eea2-1826-4026-b911-b7cc9e9c8bfe
-ms.openlocfilehash: 4a7fee3bd8441a9612e954160397cc56aca163d1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 99084f6b7afbdd8586ee706cd6ec44b349d81ff2
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69926510"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398271"
 ---
 # <a name="authentication-of-clientcertificate-element"></a>\<clientCertificate > 元素\<的身份验证 >
 指定服务所使用的客户端证书的身份验证行为。  
   
- \<system.ServiceModel>  
-\<行为 >  
-\<serviceBehaviors>  
-\<行为 >  
-\<serviceCredentials>  
-\<clientCertificate>  
-\<身份验证 >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<行为 >** ](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<serviceBehaviors >** ](servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<行为 >** ](behavior-of-servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<serviceCredentials >** ](servicecredentials.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<clientCertificate >** ](clientcertificate-of-servicecredentials.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<身份验证 >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -55,13 +56,13 @@ ms.locfileid: "69926510"
   
 |值|描述|  
 |-----------|-----------------|  
-|枚举|以下值之一：None、PeerTrust、ChainTrust、PeerOrChainTrust、Custom。<br /><br /> 有关详细信息, 请参阅使用[证书](../../../wcf/feature-details/working-with-certificates.md)。|  
+|枚举|以下值之一：None、PeerTrust、ChainTrust、PeerOrChainTrust、Custom。<br /><br /> 有关详细信息，请参阅使用[证书](../../../wcf/feature-details/working-with-certificates.md)。|  
   
 ## <a name="revocationmode-attribute"></a>revocationMode 属性  
   
 |值|描述|  
 |-----------|-----------------|  
-|枚举|以下值之一：NoCheck、联机、脱机。 有关详细信息, 请参阅使用[证书](../../../wcf/feature-details/working-with-certificates.md)。|  
+|枚举|以下值之一：NoCheck、联机、脱机。 有关详细信息，请参阅使用[证书](../../../wcf/feature-details/working-with-certificates.md)。|  
   
 ## <a name="trustedstorelocation-attribute"></a>trustedStoreLocation 属性  
   
@@ -79,7 +80,7 @@ ms.locfileid: "69926510"
 |[\<clientCertificate>](clientcertificate-of-servicecredentials.md)|定义用于针对服务进行客户端身份验证的 X.509 证书。|  
   
 ## <a name="remarks"></a>备注  
- `<authentication>` 元素与 <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication> 类相对应。 利用它您可以自定义对客户端进行身份验证的方式。 可以将 `certificateValidationMode` 属性设置为 `None`、`ChainTrust`、`PeerOrChainTrust`、`PeerTrust` 或 `Custom`。 默认情况下, 该级别设置为`ChainTrust`, 它指定每个证书都必须位于证书层次结构中, 以在链顶部以*根证书颁发机构*结束。 这是最安全的模式。 您还可以将此值设置为 `PeerOrChainTrust`，该值指定受信任的链中的证书以及自行颁发的证书（对等信任）都被接受。 因为不需要从受信任的证书颁发机构那里购买自行颁发的证书，所以可以在开发和调试客户端和服务时使用此值。 在部署客户端时，请改用 `ChainTrust` 值。  
+ `<authentication>` 元素与 <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication> 类相对应。 利用它您可以自定义对客户端进行身份验证的方式。 可以将 `certificateValidationMode` 属性设置为 `None`、`ChainTrust`、`PeerOrChainTrust`、`PeerTrust` 或 `Custom`。 默认情况下，该级别设置为`ChainTrust`，它指定每个证书都必须位于证书层次结构中，以在链顶部以*根证书颁发机构*结束。 这是最安全的模式。 您还可以将此值设置为 `PeerOrChainTrust`，该值指定受信任的链中的证书以及自行颁发的证书（对等信任）都被接受。 因为不需要从受信任的证书颁发机构那里购买自行颁发的证书，所以可以在开发和调试客户端和服务时使用此值。 在部署客户端时，请改用 `ChainTrust` 值。  
   
  还可以将该值设置为 `Custom`。 当该值设置为 `Custom` 值时，您还必须将 `customCertificateValidatorType` 属性设置为用于验证证书的程序集和类型。 若要创建您自己的自定义验证程序，必须从 <xref:System.IdentityModel.Selectors.X509CertificateValidator> 抽象类进行继承。 有关详细信息，请参阅[如何：创建使用自定义证书验证](../../../wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)程序的服务。  
   

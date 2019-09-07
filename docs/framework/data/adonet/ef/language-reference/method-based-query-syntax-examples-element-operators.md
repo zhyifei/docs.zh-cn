@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8438b995-bd07-4223-b22d-13adadef33fb
-ms.openlocfilehash: 9a057cd80b3dc110626d1a9a850ee7c9704b33b4
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 7add62a2792a0fc82346851b7dd835aad5082742
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250257"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70397464"
 ---
 # <a name="method-based-query-syntax-examples-element-operators"></a>基于方法的查询语法示例：元素运算符
-本主题中的示例演示如何使用<xref:System.Linq.Enumerable.First%2A>方法通过使用基于方法的查询语法来查询[AdventureWorks 销售模型](https://archive.codeplex.com/?p=msftdbprodsamples)。 这些示例中使用的 AdventureWorks 销售模型从 AdventureWorks 示例数据库中的 Contact、Address、Product、SalesOrderHeader 和 SalesOrderDetail 等表生成。  
+本主题中的示例演示如何使用<xref:System.Linq.Enumerable.First%2A>方法通过使用基于方法的查询语法来查询[AdventureWorks 销售模型](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)。 这些示例中使用的 AdventureWorks 销售模型从 AdventureWorks 示例数据库中的 Contact、Address、Product、SalesOrderHeader 和 SalesOrderDetail 等表生成。  
   
  本主题中的示例使用以下`using` / `Imports`语句：  
   

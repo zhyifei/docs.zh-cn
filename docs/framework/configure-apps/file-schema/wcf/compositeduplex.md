@@ -2,21 +2,22 @@
 title: <compositeDuplex>
 ms.date: 03/30/2017
 ms.assetid: 725004d1-ce88-4405-a220-78e89844f81f
-ms.openlocfilehash: e79b3e1aeecc52bf41ae759dc15ebf1c8211beb2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a73085320eaf248887422316e1b7787b8654d71d
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69926073"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70400491"
 ---
 # <a name="compositeduplex"></a>\<compositeDuplex>
 定义绑定元素，客户端在必须公开一个终结点以使服务可以将消息发送回客户端时使用此元素。  
   
- \<system.serviceModel>  
-\<bindings>  
-\<customBinding>  
-\<绑定 >  
-\<compositeDuplex>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<绑定 >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<customBinding >** ](custombinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<绑定 >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<compositeDuplex >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -31,7 +32,7 @@ ms.locfileid: "69926073"
   
 |特性|描述|  
 |---------------|-----------------|  
-|clientBaseAddress|一个在双工模式下设置反向通道地址的 URI。 服务使用该地址与客户端进行联系和建立连接。<br /><br /> 如果未设置此属性, 则生成默认地址 "`full qualified name+default port\TemporaryIndigoAddress\guid`"。 默认值为 `null`。|  
+|clientBaseAddress|一个在双工模式下设置反向通道地址的 URI。 服务使用该地址与客户端进行联系和建立连接。<br /><br /> 如果未设置此属性，则生成默认地址 "`full qualified name+default port\TemporaryIndigoAddress\guid`"。 默认值为 `null`。|  
   
 ### <a name="child-elements"></a>子元素  
  无  
