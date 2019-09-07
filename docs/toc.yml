@@ -262,7 +262,7 @@
     - name: Docker
       items:
         - name: .NET 和 Docker 简介
-          href: core/docker/intro-net-docker.md
+          href: core/docker/introduction.md
         - name: 使 .NET Core 应用程序容器化
           href: core/docker/build-container.md
         - name: Visual Studio 中的容器工具
