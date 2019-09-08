@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: e4ab2c4c-9433-4eba-9e9a-096de406cafb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b56840ce68caa3eed50773668c64e2622a646ddf
-ms.sourcegitcommit: 46c68557bf6395f0ab9915f7558f2faae0097695
+ms.openlocfilehash: 5b0a27eae744fb22c87634aaf6a0274a9825d981
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68892077"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70776463"
 ---
 # <a name="common-data-types-unmanaged-api-reference"></a>常见数据类型（非托管 API 参考）
 本主题列出了由 C/C++ `typedef` 语句定义的 .NET Framework 的非托管 API 所使用的简单数据类型。 这些数据类型通常是 C/C++ 基元数据类型的别名。 通常，这些数据类型的值是不透明的；即它们由特定的函数或方法返回，以便可以将它们传递给其他函数或方法，而无需修改。  
@@ -31,16 +31,16 @@ ms.locfileid: "68892077"
 |FunctionID|`typedef UINT_PTR FunctionID;`|corprof.h|函数或方法的标识符。|  
 |GCHandleID|`typedef UINT_PTR GCHandleID;`|corprof.h|垃圾回收句柄。|  
 |mdMethodDef|`typedef mdToken mdMethodDef;`|cordebug.h|方法定义标记。|
-|mdToken|`typedef UINT32 mdToken;`|corprof.h|元数据标记 (元数据表中的行)。|  
+|mdToken|`typedef UINT32 mdToken;`|corprof.h|元数据标记（元数据表中的行）。|  
 |ModuleID|`typedef UINT_PTR ModuleID;`|corprof.h|程序集模块的标识符。|  
 |ObjectID|`typedef UINT_PTR ObjectID;`|corprof.h|对象的标识符。|  
 |PCCOR_SIGNATURE|`typedef SIZE_T PCCOR_SIGNATURE;`|cordebug.h|指向成员或元数据签名的指针。|
 |ProcessID|`typedef UINT_PTR ProcessID;`|corprof.h|托管进程的标识符。|  
 |ReJITID|`typedef UINT_PTR ReJITID;`|corprof.h|实时编译的函数的标识符。|  
 |SIZE_T|`typedef ULONG_PTR SIZE_T;`|corsym|指向64位的内存地址的指针。|
-|TASKID|`typedef UINT64 TASKID;`|cordebug.h、mscoree.h|[ICLRTask](../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)实例的标识符。|  
+|TASKID|`typedef UINT64 TASKID;`|cordebug.h、mscoree.h|[ICLRTask](./hosting/iclrtask-interface.md)实例的标识符。|  
 |ThreadID|`typedef UINT_PTR ThreadID;`|corprof.h|托管线程的标识符。|  
   
 ## <a name="see-also"></a>请参阅
 
-- [非托管 API 参考](../../../docs/framework/unmanaged-api/index.md)
+- [非托管 API 参考](index.md)

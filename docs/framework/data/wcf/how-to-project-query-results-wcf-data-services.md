@@ -1,5 +1,5 @@
 ---
-title: 如何：项目查询结果 (WCF 数据服务)
+title: 如何：项目查询结果（WCF 数据服务）
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,17 +10,17 @@ helpviewer_keywords:
 - query projection [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: 474ac625-8770-43ba-8320-d3315ea9530f
-ms.openlocfilehash: b53da9c1ecfcc5061fe551c4e180774319beaf5d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 758bb01764fcfe195d4f940705316e7579be95ff
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69952225"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780006"
 ---
-# <a name="how-to-project-query-results-wcf-data-services"></a>如何：项目查询结果 (WCF 数据服务)
-投影提供减少查询返回的数据量的机制，方法是指定在响应中仅返回某个实体的某些属性。 您可以通过`$select`使用查询选项或在 LINQ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]查询中使用[select](../../../csharp/language-reference/keywords/select-clause.md)子句 (在 Visual Basic 中[选择](../../../visual-basic/language-reference/queries/select-clause.md)) 对查询结果执行投影。 有关详细信息, 请参阅[查询数据服务](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)。  
+# <a name="how-to-project-query-results-wcf-data-services"></a>如何：项目查询结果（WCF 数据服务）
+投影提供减少查询返回的数据量的机制，方法是指定在响应中仅返回某个实体的某些属性。 您可以通过`$select`使用查询选项或在 LINQ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]查询中使用[select](../../../csharp/language-reference/keywords/select-clause.md)子句（在 Visual Basic 中[选择](../../../visual-basic/language-reference/queries/select-clause.md)）对查询结果执行投影。 有关详细信息，请参阅[查询数据服务](querying-the-data-service-wcf-data-services.md)。  
   
- 本主题中的示例使用罗斯文示例数据服务和自动生成的客户端数据服务类。 此服务和客户端数据类是在完成[WCF 数据服务快速入门](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)时创建的。  
+ 本主题中的示例使用罗斯文示例数据服务和自动生成的客户端数据服务类。 此服务和客户端数据类是在完成[WCF 数据服务快速入门](quickstart-wcf-data-services.md)时创建的。  
   
 ## <a name="example"></a>示例  
  下面的示例演示一个 LINQ 查询，该查询将 Customers 实体投影到新的 CustomerAddress 类型，该类型仅包含特定地址属性以及标识属性。 此 `CustomerAddress` 类是在客户端上定义的并且具有客户端库可将它识别为实体类型的特性。  

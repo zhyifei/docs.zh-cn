@@ -10,22 +10,22 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: eff4ee3cb8502645d3b6d9a8986c9c410fe73f1a
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 3660194a93a0528c4e5b466fb63801a8b1e12d2f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877591"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70779782"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>流提供程序（WCF 数据服务）
 
-数据服务可公开二进制大型对象数据。 此二进制数据可以表示视频和音频流、图像、文档文件或其他类型的二进制媒体。 当数据模型中的某个实体包括一个或多个二进制属性时，数据服务会在响应源的入口内以 base-64 编码形式返回此二进制数据。 加载和序列化大型二进制数据，以这种方式会影响性能，因为[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]定义用于检索独立于其所属的实体的二进制数据的机制。 这一点是通过将实体和二进制数据分隔到一个或多个数据流来实现的。
+数据服务可公开二进制大型对象数据。 此二进制数据可以表示视频和音频流、图像、文档文件或其他类型的二进制媒体。 当数据模型中的某个实体包括一个或多个二进制属性时，数据服务会在响应源的入口内以 base-64 编码形式返回此二进制数据。 由于以这种方式加载和序列化大型二进制数据会影响性能[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] ，因此定义了一种机制，用于独立于其所属的实体来检索二进制数据。 这一点是通过将实体和二进制数据分隔到一个或多个数据流来实现的。
 
 - 媒体资源 - 属于某个实体的二进制数据，例如视频、音频、图像或其他类型的媒体资源流。
 
 - 媒体链接入口 - 引用相关媒体资源流的实体。
 
-利用 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]，可通过实现流数据提供程序定义二进制资源流。 流提供程序实现提供数据服务使用与为特定实体关联的媒体资源流<xref:System.IO.Stream>对象。 有了此实现，数据服务能够以指定 MIME 类型的二进制数据流的形式通过 HTTP 接受和返回媒体资源。
+利用 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]，可通过实现流数据提供程序定义二进制资源流。 流提供程序实现以<xref:System.IO.Stream>对象的形式向数据服务提供与特定实体关联的媒体资源流。 有了此实现，数据服务能够以指定 MIME 类型的二进制数据流的形式通过 HTTP 接受和返回媒体资源。
 
 将数据服务配置为支持二进制数据流需要以下步骤：
 
@@ -39,7 +39,7 @@ ms.locfileid: "65877591"
 
 5. 启用对服务器上或数据源中的二进制资源的访问。
 
-本主题中的示例基于示例流照片服务，该文章中深入讨论服务[数据服务流提供程序系列：实现流提供程序 （第 1 部分）](https://go.microsoft.com/fwlink/?LinkID=198989)。 此示例服务的源代码位于[流照片数据服务示例页](https://go.microsoft.com/fwlink/?LinkID=198988)MSDN 代码库。
+本主题中的示例基于示例流照片服务，该服务在[数据服务流提供程序系列中进行了深入讨论：实现流提供程序（第1部分](https://go.microsoft.com/fwlink/?LinkID=198989)）。 MSDN 代码库上的 "[流式处理照片数据服务示例" 页](https://go.microsoft.com/fwlink/?LinkID=198988)上提供了此示例服务的源代码。
 
 ## <a name="defining-a-media-link-entry-in-the-data-model"></a>在数据模型中定义媒体链接入口
 
@@ -53,7 +53,7 @@ ms.locfileid: "65877591"
 
 还必须将命名空间 `xmlns:m=http://schemas.microsoft.com/ado/2007/08/dataservices/metadata` 添加到实体，或添加到定义数据模型的 .edmx 或 .csdl 文件的根目录中。
 
-有关使用的数据服务的示例[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]提供程序，并公开媒体资源，请参阅博文[数据服务流提供程序系列：实现流提供程序 （第 1 部分）](https://go.microsoft.com/fwlink/?LinkID=198989)。
+有关使用[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]提供程序并公开媒体资源的数据服务的示例，请参阅文章[数据服务流提供程序系列：实现流提供程序（第1部分](https://go.microsoft.com/fwlink/?LinkID=198989)）。
 
 **反射提供程序**
 
@@ -61,7 +61,7 @@ ms.locfileid: "65877591"
 
 **自定义数据服务提供程序**
 
-使用自定义服务提供程序时，可实现 <xref:System.Data.Services.Providers.IDataServiceMetadataProvider> 接口来定义数据服务的元数据。 有关详细信息，请参阅[自定义数据服务提供商](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md)。 通过将表示实体类型（媒体链接入口）的 <xref:System.Data.Services.Providers.ResourceType> 的 <xref:System.Data.Services.Providers.ResourceType.IsMediaLinkEntry%2A> 属性设置为 `true`，可以指示一个二进制资源流属于 <xref:System.Data.Services.Providers.ResourceType>。
+使用自定义服务提供程序时，可实现 <xref:System.Data.Services.Providers.IDataServiceMetadataProvider> 接口来定义数据服务的元数据。 有关详细信息，请参阅[自定义数据服务提供程序](custom-data-service-providers-wcf-data-services.md)。 通过将表示实体类型（媒体链接入口）的 <xref:System.Data.Services.Providers.ResourceType> 的 <xref:System.Data.Services.Providers.ResourceType.IsMediaLinkEntry%2A> 属性设置为 `true`，可以指示一个二进制资源流属于 <xref:System.Data.Services.Providers.ResourceType>。
 
 ## <a name="implementing-the-idataservicestreamprovider-interface"></a>实现 IDataServiceStreamProvider 接口
 
@@ -84,22 +84,22 @@ ms.locfileid: "65877591"
 [!code-csharp[Astoria Photo Streaming Service#PhotoServiceStreamingProvider](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_photo_streaming_service/cs/photodata.svc.cs#photoservicestreamingprovider)]
 [!code-vb[Astoria Photo Streaming Service#PhotoServiceStreamingProvider](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_photo_streaming_service/vb/photodata.svc.vb#photoservicestreamingprovider)]
 
-有关如何创建数据服务的常规信息，请参阅[数据服务配置](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md)。
+有关如何创建数据服务的一般信息，请参阅[配置数据服务](configuring-the-data-service-wcf-data-services.md)。
 
 ## <a name="enabling-large-binary-streams-in-the-hosting-environment"></a>在宿主环境中启用大型二进制数据流
 
-ASP.NET Web 应用程序中创建数据服务时，Windows Communication Foundation (WCF) 用于提供 HTTP 协议实现。 默认情况下，WCF 将 HTTP 消息的大小限制为仅 65K 字节。 为了使大型二进制数据能够流入或流出数据服务，还必须将 Web 应用程序配置为启用大型二进制文件并使用流进行转换。 为此，请将以下内容添加到应用程序的 Web.config 文件的 `<configuration />` 元素中：
+在 ASP.NET Web 应用程序中创建数据服务时，Windows Communication Foundation （WCF）用于提供 HTTP 协议实现。 默认情况下，WCF 将 HTTP 消息的大小限制为仅 65K 字节。 为了使大型二进制数据能够流入或流出数据服务，还必须将 Web 应用程序配置为启用大型二进制文件并使用流进行转换。 为此，请将以下内容添加到应用程序的 Web.config 文件的 `<configuration />` 元素中：
 
 > [!NOTE]
-> 必须使用<xref:System.ServiceModel.TransferMode.Streamed?displayProperty=nameWithType>传输模式，以确保请求和响应消息中的二进制数据进行流式处理且不缓冲的 WCF。
+> 必须使用<xref:System.ServiceModel.TransferMode.Streamed?displayProperty=nameWithType>传输模式来确保请求消息和响应消息中的二进制数据都经过流处理，并且不会被 WCF 缓冲。
 
-有关详细信息，请参阅[Streaming Message Transfer](../../../../docs/framework/wcf/feature-details/streaming-message-transfer.md)并[传输配额](../../../../docs/framework/wcf/feature-details/transport-quotas.md)。
+有关详细信息，请参阅[流式传输消息传输](../../wcf/feature-details/streaming-message-transfer.md)和[传输配额](../../wcf/feature-details/transport-quotas.md)。
 
-默认情况下，Internet 信息服务 (IIS) 还将请求的大小限制为 4MB。 若要启用您的数据服务接收超过 4MB 的流，IIS 上运行时，还必须设置`maxRequestLength`的属性[httpRuntime 元素 （ASP.NET 设置架构）](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e1f13641(v=vs.100))中`<system.web />`配置部分中，为以下示例中所示：
+默认情况下，Internet 信息服务 (IIS) 还将请求的大小限制为 4MB。 若要允许数据服务在 IIS 上运行时接收大于4mb 的流，还必须在`maxRequestLength` `<system.web />`配置节中设置[httpRuntime 元素（ASP.NET 设置架构）](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e1f13641(v=vs.100))的属性，如下所示实例
 
 ## <a name="using-data-streams-in-a-client-application"></a>在客户端应用程序中使用数据流
 
-通过 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 客户端库，您可以在客户端上以二进制数据流的形式检索和更新这些公开的资源。 有关详细信息，请参阅[处理二进制数据](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)。
+通过 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 客户端库，您可以在客户端上以二进制数据流的形式检索和更新这些公开的资源。 有关详细信息，请参阅使用[二进制数据](working-with-binary-data-wcf-data-services.md)。
 
 ## <a name="considerations-for-working-with-a-streaming-provider"></a>使用流提供程序时的注意事项
 
@@ -117,7 +117,7 @@ ASP.NET Web 应用程序中创建数据服务时，Windows Communication Foundat
 
   - 数据模型中不应包括作为媒体资源的二进制属性。 数据模型中公开的所有属性都会在响应源的入口中返回。
 
-  - 为了提高使用大型二进制数据流时的性能，建议您创建一个自定义流类来存储数据库中的二进制数据。 此类由 <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A> 实现返回并将二进制数据分块区发送到数据库。 对于 SQL Server 数据库，我们建议的二进制数据大于 1MB 时，到数据库中使用 FILESTREAM 以流数据。
+  - 为了提高使用大型二进制数据流时的性能，建议您创建一个自定义流类来存储数据库中的二进制数据。 此类由 <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A> 实现返回并将二进制数据分块区发送到数据库。 对于 SQL Server 数据库，当二进制数据大于1MB 时，建议使用 FILESTREAM 将数据流式传输到数据库。
 
   - 确保您的数据库设计为存储将由数据服务接收的大型二进制数据流。
 
@@ -125,7 +125,7 @@ ASP.NET Web 应用程序中创建数据服务时，Windows Communication Foundat
 
 - 当实现 <xref:System.Data.Services.Providers.IDataServiceStreamProvider.DeleteStream%2A>、<xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetReadStream%2A> 或 <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A> 方法时，您必须使用以方法参数的形式提供的 eTag 和 Content-Type 值。 不要在 <xref:System.Data.Services.Providers.IDataServiceStreamProvider> 提供程序实现中设置 eTag 或 Content-Type 标头。
 
-- 默认情况下，客户端通过使用分块的 HTTP 传输编码发送大型二进制数据流。 由于 ASP.NET Development Server 不支持此类编码，因此不能使用此 Web 服务器来承载必须接受大型二进制数据流的流数据服务。 有关 ASP.NET 开发服务器的详细信息，请参阅[对于 ASP.NET Web 项目的 Visual Studio 中的 Web 服务器](https://docs.microsoft.com/previous-versions/aspnet/58wxa9w5(v=vs.120))。
+- 默认情况下，客户端通过使用分块的 HTTP 传输编码发送大型二进制数据流。 由于 ASP.NET 开发服务器不支持这种编码，因此不能使用此 Web 服务器来承载必须接受大型二进制数据流的流数据服务。 有关 ASP.NET 开发服务器的详细信息，请参阅[Visual Studio for ASP.NET Web 项目中的 Web 服务器](https://docs.microsoft.com/previous-versions/aspnet/58wxa9w5(v=vs.120))。
 
 <a name="versioning"></a>
 
@@ -135,10 +135,10 @@ ASP.NET Web 应用程序中创建数据服务时，Windows Communication Foundat
 
 - 流提供程序要求数据服务支持 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 协议的 2.0 版本以及更高版本。
 
-有关详细信息，请参阅[数据服务版本控制](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md)。
+有关详细信息，请参阅[数据服务版本控制](data-service-versioning-wcf-data-services.md)。
 
 ## <a name="see-also"></a>请参阅
 
-- [数据服务提供程序](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)
-- [自定义数据服务提供程序](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md)
-- [处理二进制数据](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)
+- [数据服务提供程序](data-services-providers-wcf-data-services.md)
+- [自定义数据服务提供程序](custom-data-service-providers-wcf-data-services.md)
+- [处理二进制数据](working-with-binary-data-wcf-data-services.md)

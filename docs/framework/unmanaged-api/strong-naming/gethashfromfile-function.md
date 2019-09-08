@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 38c663bc2db780c89ca666702534a75525ae189b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0e79c1d89d767832022d487681e0515e5e92a7f3
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67771953"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799214"
 ---
 # <a name="gethashfromfile-function"></a>GetHashFromFile 函数
 生成指定文件内容的哈希。  
   
- 此函数已弃用。 使用[iclrstrongname:: Gethashfromfile](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfile-method.md)方法相反。  
+ 此函数已弃用。 改为使用[ICLRStrongName：： GetHashFromFile](../hosting/iclrstrongname-gethashfromfile-method.md)方法。  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,34 +42,34 @@ HRESULT GetHashFromFile (
   
 ## <a name="parameters"></a>参数  
  `szFilePath`  
- [in]哈希的文件的名称。  
+ 中要进行哈希处理的文件的名称。  
   
  `piHashAlg`  
- [in、 out]要生成哈希时使用的算法。 有效的算法是定义的 Win32 CryptoAPI。 如果`piHashAlg`设置为 0，使用 CALG_SHA 1 的默认算法。  
+ [in，out]生成哈希时要使用的算法。 有效算法是由 Win32 CryptoAPI 定义的算法。 如果`piHashAlg`设置为0，则使用默认算法 CALG_SHA-1。  
   
  `pbHash`  
- [out]包含生成的哈希的字节数组。  
+ 弄一个字节数组，其中包含生成的哈希。  
   
  `cchHash`  
- [in]缓冲区的最大大小的`pbHash`指向。  
+ 中`pbHash`指向的缓冲区的最大大小。  
   
  `pchHash`  
- [out]大小 （字节），则返回的`pbHash`。  
+ 弄返回`pbHash`的的大小（以字节为单位）。  
   
 ## <a name="remarks"></a>备注  
- 此函数等同于[GetHashFromFileW](../../../../docs/framework/unmanaged-api/strong-naming/gethashfromfilew-function.md)，只不过文件名称规范是 ANSI 而不是 Unicode。  
+ 此函数与[GetHashFromFileW](gethashfromfilew-function.md)相同，不同之处在于文件名规范为 ANSI 而不是 Unicode。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../get-started/system-requirements.md)。  
   
- **标头：** StrongName.h  
+ **标头：** Stackexchange.redis.strongname  
   
- **库：** 包含为 MsCorEE.dll 中的资源  
+ **类库**作为资源包括在 Mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 
-- [GetHashFromFile 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfile-method.md)
-- [GetHashFromFileW 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfilew-method.md)
-- [ICLRStrongName 接口](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [GetHashFromFile 方法](../hosting/iclrstrongname-gethashfromfile-method.md)
+- [GetHashFromFileW 方法](../hosting/iclrstrongname-gethashfromfilew-method.md)
+- [ICLRStrongName 接口](../hosting/iclrstrongname-interface.md)

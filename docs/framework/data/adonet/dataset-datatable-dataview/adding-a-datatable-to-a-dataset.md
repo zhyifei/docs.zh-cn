@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 556d29a3-8fc9-4e38-b3ee-c188f7e7b155
-ms.openlocfilehash: d62d55771e4fda74d336163b3f53b3f50cfb1e39
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: a1249718d1e1e1e64fd6fa6ee9ee8157545b5e0b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205289"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786628"
 ---
 # <a name="adding-a-datatable-to-a-dataset"></a>将数据表添加到数据集中
 ADO.NET 使您能够创建 <xref:System.Data.DataTable> 对象并将其添加到现有 <xref:System.Data.DataSet> 中。 可以使用 <xref:System.Data.DataTable> 和 <xref:System.Data.DataTable.PrimaryKey%2A> 属性为 <xref:System.Data.DataColumn.Unique%2A> 设置约束信息。  
@@ -22,9 +22,9 @@ ADO.NET 使您能够创建 <xref:System.Data.DataTable> 对象并将其添加到
  [!code-vb[DataWorks Data.DataTableAdd#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks Data.DataTableAdd/VB/source.vb#1)]  
   
 ## <a name="case-sensitivity"></a>区分大小写  
- <xref:System.Data.DataSet> 中可以存在两个或两个以上的同名但是大小写不同的表或关系。 在这种情况下，通过名称对表和关系的引用将区分大小写。 例如, 如果<xref:System.Data.DataSet> **数据集**包含表表 1 和表 1, 则将按 name 作为 dataset 引用**table1** 。**表 ["table1"]** ,表1作为**数据集。表 ["table1"]** 。 尝试将其中一个表作为 DataSet 引用 **。表 ["TABLE1"]** 将生成异常。  
+ <xref:System.Data.DataSet> 中可以存在两个或两个以上的同名但是大小写不同的表或关系。 在这种情况下，通过名称对表和关系的引用将区分大小写。 <xref:System.Data.DataSet>例如，如果**数据集**包含表表**1 和表**1，则将按 name 作为 dataset 引用**table1** 。**表 ["table1"]** ，表**1 作为** **数据集。表 ["table1"]** 。 尝试将其中一个表作为 DataSet 引用 **。表 ["TABLE1"]** 将生成异常。  
   
- 如果只有一个具有特定名称的表或关系，则区分大小写行为不适用。 例如, 如果<xref:System.Data.DataSet>只有**Table1**, 则可以使用 dataSet 引用它 **。表 ["Table1"]** 。  
+ 如果只有一个具有特定名称的表或关系，则区分大小写行为不适用。 例如，如果<xref:System.Data.DataSet>只有**Table1**，则可以使用 dataSet 引用它 **。表 ["Table1"]** 。  
   
 > [!NOTE]
 > <xref:System.Data.DataSet.CaseSensitive%2A> 的 <xref:System.Data.DataSet> 属性不影响此行为。 <xref:System.Data.DataSet.CaseSensitive%2A> 属性应用于 <xref:System.Data.DataSet> 中的数据，并会影响排序、搜索、筛选、执行约束，等等。  
@@ -35,4 +35,4 @@ ADO.NET 使您能够创建 <xref:System.Data.DataTable> 对象并将其添加到
 ## <a name="see-also"></a>请参阅
 
 - [数据集、数据表和数据视图](index.md)
-- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 概述](../ado-net-overview.md)

@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 75aec187452e2f9f442a5d4856fe6777c03f34c1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ea0fbceb1e778a2f26e0625a337b803f417b59eb
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741979"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777243"
 ---
 # <a name="freewin32resblob-method"></a>FreeWin32ResBlob 方法
-释放的 Win32 资源 blob 和关联的资源。  
+释放 Win32 资源 blob 和关联的资源。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,16 +36,16 @@ HRESULT FreeWin32ResBlob(
   
 ## <a name="parameters"></a>参数  
  `ppResBlob`  
- 要释放的资源 blob。 此方法将 blob 指针分配为 NULL。  
+ 要释放的资源 blob。 此方法将 blob 指针赋给 NULL。  
   
 ## <a name="return-value"></a>返回值  
- 如果该方法成功，返回，则为 S_OK。  
+ 如果该方法成功，则返回 S_OK。  
   
 ## <a name="requirements"></a>要求  
- 需要 alink.h  
+ 需要 alink  
   
 ## <a name="see-also"></a>请参阅
 
-- [IALink 接口](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2 接口](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink 接口](ialink-interface.md)
+- [IALink2 接口](ialink2-interface.md)
+- [ALink API](index.md)

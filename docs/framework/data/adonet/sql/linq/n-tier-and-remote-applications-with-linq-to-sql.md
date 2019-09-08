@@ -2,15 +2,15 @@
 title: 使用 LINQ to SQL 的 N 层和远程应用程序
 ms.date: 03/30/2017
 ms.assetid: 854a1cdd-53cb-45f5-83ca-63962a9b3598
-ms.openlocfilehash: 31f06fd5e840c51c0133d22078d79cd4f945c369
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 94ca057da10c3570e85e17b5caec2d86154d8a3f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64660924"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781404"
 ---
 # <a name="n-tier-and-remote-applications-with-linq-to-sql"></a>使用 LINQ to SQL 的 N 层和远程应用程序
-可以创建使用 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 的 n 层或多层应用程序。 通常情况下，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]数据上下文、 实体类和查询构造逻辑位于中间层上作为数据访问层 (DAL)。 业务逻辑和任何非持久性数据都可以在实体的分部类和分部方法中以及数据上下文中完整实现，也可以在单独的类中实现。
+可以创建使用 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 的 n 层或多层应用程序。 通常， [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]数据上下文、实体类和查询构造逻辑位于中间层上作为数据访问层（DAL）。 业务逻辑和任何非持久性数据都可以在实体的分部类和分部方法中以及数据上下文中完整实现，也可以在单独的类中实现。
 
  客户端或表示层调用中间层的远程接口上的方法，而该层上的 DAL 会执行映射到 <xref:System.Data.Linq.DataContext> 方法的查询或存储过程。 中间层通常以实体或代理对象的 XML 表示形式向客户端返回数据。
 
@@ -21,16 +21,16 @@ ms.locfileid: "64660924"
 ## <a name="additional-resources"></a>其他资源
  有关如何实现使用 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 的 n 层应用程序的更多信息，请参见以下主题：
 
-- [使用 ASP.NET 的 LINQ to SQL N 层](../../../../../../docs/framework/data/adonet/sql/linq/linq-to-sql-n-tier-with-aspnet.md)
+- [使用 ASP.NET 的 LINQ to SQL N 层](linq-to-sql-n-tier-with-aspnet.md)
 
-- [使用 Web 服务 的 LINQ to SQL N 层](../../../../../../docs/framework/data/adonet/sql/linq/linq-to-sql-n-tier-with-web-services.md) 
+- [使用 Web 服务 的 LINQ to SQL N 层](linq-to-sql-n-tier-with-web-services.md) 
 
-- [实现 N 层业务逻辑](../../../../../../docs/framework/data/adonet/sql/linq/implementing-business-logic-linq-to-sql.md)
+- [实现 N 层业务逻辑](implementing-business-logic-linq-to-sql.md)
 
-- [N 层应用程序中的数据检索和 CUD 操作 (LINQ to SQL)](../../../../../../docs/framework/data/adonet/sql/linq/data-retrieval-and-cud-operations-in-n-tier-applications.md)
+- [N 层应用程序中的数据检索和 CUD 操作 (LINQ to SQL)](data-retrieval-and-cud-operations-in-n-tier-applications.md)
 
- 有关使用 ADO.NET 数据集的 n 层应用程序的详细信息，请参阅[使用 n 层应用程序中的数据集](/visualstudio/data-tools/work-with-datasets-in-n-tier-applications)。
+ 有关使用 ADO.NET 数据集的 n 层应用程序的详细信息，请参阅[在 n 层应用程序中使用数据集](/visualstudio/data-tools/work-with-datasets-in-n-tier-applications)。
 
 ## <a name="see-also"></a>请参阅
 
-- [背景信息](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
+- [背景信息](background-information.md)

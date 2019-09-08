@@ -10,12 +10,12 @@ api_type:
 ms.assetid: d60f19fe-7bec-47ba-b60e-ba9ce66abf8c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eca6c5fc61d4f7e80046102a560d228fc01e5292
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 690035ffe0724d3987a198c78bf14e668527b98a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69038417"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70787020"
 ---
 # <a name="_axlrsakeyvaluetopublickeytoken-function"></a>\_AxlRSAKeyValueToPublicKeyToken 函数
 
@@ -33,10 +33,10 @@ HRESULT _AxlRSAKeyValueToPublicKeyToken (
   
 ## <a name="parameters"></a>参数  
  `pModulusBlob`  
- 中Base64 编码的模数 blob (来自\<取模 > 元素)。  请参阅[CRYPTOAPI_BLOB](/windows/win32/api/dpapi/ns-dpapi-crypt_integer_blob)结构。  
+ 中Base64 编码的模数 blob （来自\<取模 > 元素）。  请参阅[CRYPTOAPI_BLOB](/windows/win32/api/dpapi/ns-dpapi-crypt_integer_blob)结构。  
   
  `pExponentBlob`  
- 中Base64 编码的指数 blob (来自\<指数 > 元素)。 请参阅[CRYPTOAPI_BLOB](/windows/win32/api/dpapi/ns-dpapi-crypt_integer_blob)结构。  
+ 中Base64 编码的指数 blob （来自\<指数 > 元素）。 请参阅[CRYPTOAPI_BLOB](/windows/win32/api/dpapi/ns-dpapi-crypt_integer_blob)结构。  
   
  `ppwszPublicKeyToken`  
  [out] 指向 WCHAR * 的指针，用于接收十六进制编码的公钥标记。  
@@ -46,4 +46,4 @@ HRESULT _AxlRSAKeyValueToPublicKeyToken (
   
 ## <a name="see-also"></a>请参阅
 
-- [验证码](../../../../docs/framework/unmanaged-api/authenticode/index.md)
+- [验证码](index.md)

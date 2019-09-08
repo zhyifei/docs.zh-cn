@@ -5,27 +5,27 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5e7ff0be-3f23-4996-a92c-bd54d65c3836
-ms.openlocfilehash: 07c705b9daeeb043ef36f1e3272a3bf259a3c23e
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 05e3cf25352e731d320061001f08a835cd520b15
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70043884"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780928"
 ---
 # <a name="single-bulk-copy-operations"></a>单个批量复制操作
 
 执行 SQL Server 批量复制操作最简单的方法就是对数据库执行单次操作。 默认情况下，批量复制操作是作为一个独立的操作执行的：该复制操作以非事务处理方式进行，不可进行回滚。
 
 > [!NOTE]
-> 如果需要在出错时回滚批量复制的全部或部分，可以使用 <xref:System.Data.SqlClient.SqlBulkCopy> 管理的事务，或在现有事务中执行批量复制操作。 如果连接已 (隐<xref:System.Transactions>式或显式) 登记到**SqlBulkCopy**事务中, 则也可以使用。
+> 如果需要在出错时回滚批量复制的全部或部分，可以使用 <xref:System.Data.SqlClient.SqlBulkCopy> 管理的事务，或在现有事务中执行批量复制操作。 如果连接已（隐<xref:System.Transactions>式或显式）登记到 SqlBulkCopy**事务中**，则也可以使用。
 >
-> 有关详细信息, 请参阅[事务和大容量复制操作](../../../../../docs/framework/data/adonet/sql/transaction-and-bulk-copy-operations.md)。
+> 有关详细信息，请参阅[事务和大容量复制操作](transaction-and-bulk-copy-operations.md)。
 
 执行批量复制操作的一般步骤如下所示：
 
 1. 连接到源服务器上并获取要复制的数据。 如果可以从 <xref:System.Data.IDataReader> 或 <xref:System.Data.DataTable> 对象检索数据，则这些数据还可能来自其他源。
 
-2. 连接到目标服务器 (除非你希望**SqlBulkCopy**为你建立连接)。
+2. 连接到目标服务器（除非你希望**SqlBulkCopy**为你建立连接）。
 
 3. 创建一个 <xref:System.Data.SqlClient.SqlBulkCopy> 对象，设置任何必要的属性。
 
@@ -38,14 +38,14 @@ ms.locfileid: "70043884"
 7. 调用 <xref:System.Data.SqlClient.SqlBulkCopy.Close%2A>，或将批量复制操作包装在 `Using` 语句中。
 
 > [!CAUTION]
-> 我们建议源列和目标列的数据类型匹配。 如果数据类型不匹配, 则**SqlBulkCopy**会尝试使用所采用<xref:System.Data.SqlClient.SqlParameter.Value%2A>的规则将每个源值转换为目标数据类型。 转换可能会影响性能，还可能会导致意外的错误。 例如，大多数情况下，`Double` 数据类型可以转换为 `Decimal` 数据类型，但是有时就不能。
+> 我们建议源列和目标列的数据类型匹配。 如果数据类型不匹配，则**SqlBulkCopy**会尝试使用所采用<xref:System.Data.SqlClient.SqlParameter.Value%2A>的规则将每个源值转换为目标数据类型。 转换可能会影响性能，还可能会导致意外的错误。 例如，大多数情况下，`Double` 数据类型可以转换为 `Decimal` 数据类型，但是有时就不能。
 
 ## <a name="example"></a>示例
 
-以下控制台应用程序演示如何使用 <xref:System.Data.SqlClient.SqlBulkCopy> 类加载数据。 在此示例中, <xref:System.Data.SqlClient.SqlDataReader>用于将数据从 SQL Server **AdventureWorks**数据库中的**Product**表复制到同一个数据库中的类似表。
+以下控制台应用程序演示如何使用 <xref:System.Data.SqlClient.SqlBulkCopy> 类加载数据。 在此示例中， <xref:System.Data.SqlClient.SqlDataReader>用于将数据从 SQL Server **AdventureWorks**数据库中的**Product**表复制到同一个数据库中的类似表。
 
 > [!IMPORTANT]
-> 除非已按照[大容量复制示例设置](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md)中所述创建了工作表, 否则此示例将不会运行。 提供此代码是为了演示仅使用**SqlBulkCopy**的语法。 如果源表和目标表位于同一个 SQL Server 实例中，则使用 Transact-SQL `INSERT … SELECT` 语句复制数据会更加容易、更加迅速。
+> 除非已按照[大容量复制示例设置](bulk-copy-example-setup.md)中所述创建了工作表，否则此示例将不会运行。 提供此代码是为了演示仅使用**SqlBulkCopy**的语法。 如果源表和目标表位于同一个 SQL Server 实例中，则使用 Transact-SQL `INSERT … SELECT` 语句复制数据会更加容易、更加迅速。
 
 [!code-csharp[DataWorks BulkCopy.Single#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks BulkCopy.Single/CS/source.cs#1)]
 [!code-vb[DataWorks BulkCopy.Single#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks BulkCopy.Single/VB/source.vb#1)]
@@ -84,5 +84,5 @@ command.ExecuteNonQuery();
 
 ## <a name="see-also"></a>请参阅
 
-- [SQL Server 中的大容量复制操作](../../../../../docs/framework/data/adonet/sql/bulk-copy-operations-in-sql-server.md)
-- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [SQL Server 中的大容量复制操作](bulk-copy-operations-in-sql-server.md)
+- [ADO.NET 概述](../ado-net-overview.md)

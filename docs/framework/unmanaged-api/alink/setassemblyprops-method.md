@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1e9f51799ea56cb1e5819d708a0e4a8136a94f3d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 180eb1a3129cfcd96668ecfee11947c15c5e0915
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741495"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70776912"
 ---
 # <a name="setassemblyprops-method"></a>SetAssemblyProps 方法
-将分配的程序集级别的属性。  
+分配程序集级别属性。  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,7 +42,7 @@ HRESULT SetAssemblyProps(
  程序集的 ID。  
   
  `FileToken`  
- 定义属性的文件。 可以为 NULL，如果`AssemblyID`并不表示未绑定的 netmodule。  
+ 定义属性的文件。 如果不指示未`AssemblyID`绑定的 .netmodule，则可以为 NULL。  
   
  `Option`  
  指示要修改的选项。  
@@ -51,13 +51,13 @@ HRESULT SetAssemblyProps(
  选项的新值。  
   
 ## <a name="return-value"></a>返回值  
- 如果该方法成功，返回，则为 S_OK。  
+ 如果该方法成功，则返回 S_OK。  
   
 ## <a name="requirements"></a>要求  
- 需要 alink.h。  
+ 需要 alink。  
   
 ## <a name="see-also"></a>请参阅
 
-- [IALink 接口](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2 接口](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink 接口](ialink-interface.md)
+- [IALink2 接口](ialink2-interface.md)
+- [ALink API](index.md)

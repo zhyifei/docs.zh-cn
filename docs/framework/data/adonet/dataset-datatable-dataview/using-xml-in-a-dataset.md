@@ -2,12 +2,12 @@
 title: 在数据集中使用 XML
 ms.date: 03/30/2017
 ms.assetid: 35138159-e199-49ec-baf7-1ec6777e171e
-ms.openlocfilehash: ba68f0fbe84a9877596ddfefd56f71a5889cf8de
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: ca04f524685e080be6af12a4df6eda585a908683
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203137"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784252"
 ---
 # <a name="using-xml-in-a-dataset"></a>在数据集中使用 XML
 通过 ADO.NET，您可以从 XML 流或文档填充 <xref:System.Data.DataSet>。 可以使用 XML 流或文档向 <xref:System.Data.DataSet> 提供数据和/或架构信息。 从 XML 流或文档中提供的信息可以与已存在于 <xref:System.Data.DataSet> 中的现有数据或架构信息进行组合。  
@@ -49,4 +49,4 @@ ms.locfileid: "70203137"
 ## <a name="see-also"></a>请参阅
 
 - [数据集、数据表和数据视图](index.md)
-- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 概述](../ado-net-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: 如何：定义服务操作 （WCF 数据服务）
+title: 如何：定义服务操作（WCF 数据服务）
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,18 +8,18 @@ helpviewer_keywords:
 - Service Operations [WCF Data Services]
 - WCF Data Services, service operations
 ms.assetid: dfcd3cb1-2f07-4d0b-b16a-6b056c4f45fa
-ms.openlocfilehash: dbd14ba9ed24fb3f18946e817f61f8cbf2e9b1b5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3154fadeda400440f68a184b430b7ff15a02203d
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61936547"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780083"
 ---
-# <a name="how-to-define-a-service-operation-wcf-data-services"></a>如何：定义服务操作 （WCF 数据服务）
+# <a name="how-to-define-a-service-operation-wcf-data-services"></a>如何：定义服务操作（WCF 数据服务）
 
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 公开在服务器上作为服务操作定义的方法。 服务操作允许数据服务以提供通过在服务器上定义的方法的 URI 的访问权限。 若要定义服务操作，应用 [`WebGet]`或`[WebInvoke]`属性为该方法。 若要支持查询运算符，服务操作必须返回<xref:System.Linq.IQueryable%601>实例。 服务操作可以通过 <xref:System.Data.Services.DataService%601.CurrentDataSource%2A> 的 <xref:System.Data.Services.DataService%601> 属性访问基础数据源。 有关详细信息，请参阅[服务操作](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md)。
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 公开在服务器上作为服务操作定义的方法。 服务操作允许数据服务通过 URI 向服务器上定义的方法提供访问权限。 若要定义服务操作，请将 [`WebGet]`或`[WebInvoke]`特性应用于方法。 若要支持查询运算符，服务操作必须返回<xref:System.Linq.IQueryable%601>实例。 服务操作可以通过 <xref:System.Data.Services.DataService%601.CurrentDataSource%2A> 的 <xref:System.Data.Services.DataService%601> 属性访问基础数据源。 有关详细信息，请参阅[服务操作](service-operations-wcf-data-services.md)。
 
-本主题中的示例定义一个名为 `GetOrdersByCity` 的服务操作，该操作返回 <xref:System.Linq.IQueryable%601> 和相关 `Orders` 对象的经筛选后的 `Order_Details` 实例。 该示例访问作为 Northwind 示例数据服务数据源的 <xref:System.Data.Objects.ObjectContext> 实例。 此服务创建完成后[WCF Data Services 快速入门](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)。
+本主题中的示例定义一个名为 `GetOrdersByCity` 的服务操作，该操作返回 <xref:System.Linq.IQueryable%601> 和相关 `Orders` 对象的经筛选后的 `Order_Details` 实例。 该示例访问作为 Northwind 示例数据服务数据源的 <xref:System.Data.Objects.ObjectContext> 实例。 此服务是在完成[WCF 数据服务快速入门](quickstart-wcf-data-services.md)时创建的。
 
 ### <a name="to-define-a-service-operation-in-the-northwind-data-service"></a>在 Northwind 数据服务中定义服务操作
 
@@ -57,4 +57,4 @@ ms.locfileid: "61936547"
 
 ## <a name="see-also"></a>请参阅
 
-- [定义 WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
+- [定义 WCF Data Services](defining-wcf-data-services.md)

@@ -2,15 +2,15 @@
 title: SqlClient 对 LocalDB 的支持
 ms.date: 03/30/2017
 ms.assetid: cf796898-5575-46f2-ae6e-21e5aa8c4123
-ms.openlocfilehash: 23fe0d19ad31c0b09e1a12b5ea25e45a973a14f4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 200db3b1014278e711062bcbdff81be8d27c3351
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645832"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780788"
 ---
 # <a name="sqlclient-support-for-localdb"></a>SqlClient 对 LocalDB 的支持
-从 SQL Server 代号 Denali，SQL Server 的称作 LocalDB 的轻量版本将提供。 本主题讨论如何连接到 LocalDB 数据库。  
+从 SQL Server 代码名称 Denali 开始，将提供 SQL Server 的轻型版本（称为 LocalDB）。 本主题讨论如何连接到 LocalDB 数据库。  
   
 ## <a name="remarks"></a>备注  
  有关 LocalDB 的详细信息，包括如何安装 LocalDB 和配置 LocalDB 实例，请参阅 SQL Server 联机丛书。  
@@ -31,7 +31,7 @@ ms.locfileid: "64645832"
   
  连接到 LocalDB 数据库时，不允许`User Instance=True` 。  
   
- 可以从 [Microsoft SQL Server 2012 功能包](https://www.microsoft.com/download/en/details.aspx?id=29065)下载 LocalDB。 如果将使用 sqlcmd.exe 来修改 LocalDB 实例中的数据，则需要 SQL Server 2012，您还可以从 SQL Server 2012 功能包中的 sqlcmd。  
+ 可以从 [Microsoft SQL Server 2012 功能包](https://www.microsoft.com/download/en/details.aspx?id=29065)下载 LocalDB。 如果你将使用 sqlcmd 来修改 LocalDB 实例中的数据，则你将需要来自 SQL Server 2012 的 sqlcmd，也可以从 SQL Server 2012 功能包获取它。  
   
 ## <a name="programmatically-create-a-named-instance"></a>以编程方式创建命名实例  
  应用程序可以创建命名实例并指定数据库，如下所示：  
@@ -60,5 +60,5 @@ ms.locfileid: "64645832"
   
 ## <a name="see-also"></a>请参阅
 
-- [SQL Server 功能和 ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)
-- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [SQL Server 功能和 ADO.NET](sql-server-features-and-adonet.md)
+- [ADO.NET 概述](../ado-net-overview.md)

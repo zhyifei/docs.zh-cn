@@ -5,20 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 55c545e5-dcd5-4323-a5b9-3825c2157462
-ms.openlocfilehash: a12fa587d5df0ed95dd0f15ccfbe2ef886185b9e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0926e3c6513a698ae47b9983d0e6ad195394a4df
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61934116"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780610"
 ---
 # <a name="updating-data-in-a-data-source"></a>更新数据源中的数据
-修改数据的 SQL 语句（如 INSERT、UPDATE 或 DELETE）不返回行。 同样，许多存储过程执行操作但不返回行。 若要执行不返回行的命令，创建**命令**具有相应的 SQL 命令对象和一个**连接**，包括任何所需**参数**。 使用执行命令**ExecuteNonQuery**方法**命令**对象。  
+修改数据的 SQL 语句（如 INSERT、UPDATE 或 DELETE）不返回行。 同样，许多存储过程执行操作但不返回行。 若要执行不返回行的命令，请使用相应的 SQL 命令和**连接**（包括任何所需的**参数**）创建**命令**对象。 通过**命令**对象的**ExecuteNonQuery**方法执行该命令。  
   
- **ExecuteNonQuery**方法返回一个整数，表示受影响的语句或存储的过程已执行的行数。 如果执行了多个语句，则返回的值为受所有已执行语句影响的记录的总数。  
+ **ExecuteNonQuery**方法返回一个整数，该整数表示受执行的语句或存储过程影响的行数。 如果执行了多个语句，则返回的值为受所有已执行语句影响的记录的总数。  
   
 ## <a name="example"></a>示例  
- 下面的代码示例执行一个 INSERT 语句将一条记录插入数据库使用**ExecuteNonQuery**。  
+ 下面的代码示例执行 INSERT 语句，使用**ExecuteNonQuery**将记录插入到数据库中。  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -42,9 +42,9 @@ SqlCommand command = new SqlCommand(queryString, connection);
 Int32 recordsAffected = command.ExecuteNonQuery();  
 ```  
   
- 下面的代码示例执行中的示例代码创建的存储的过程[执行目录操作](../../../../docs/framework/data/adonet/performing-catalog-operations.md)。 不返回行的存储过程，因此**ExecuteNonQuery**方法，但该存储的过程会接收输入的参数并返回输出参数和返回值。  
+ 下面的代码示例执行[执行目录操作](performing-catalog-operations.md)的示例代码所创建的存储过程。 存储过程未返回任何行，因此使用**ExecuteNonQuery**方法，但该存储过程将接收输入参数并返回一个输出参数和一个返回值。  
   
- 有关<xref:System.Data.OleDb.OleDbCommand>对象， **ReturnValue**必须将参数添加到**参数**集合第一个。  
+ 对于对象，必须先将**ReturnValue**参数添加到 Parameters 集合。 <xref:System.Data.OleDb.OleDbCommand>  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -93,7 +93,7 @@ Int32 rowCount = (Int32) command.Parameters["@RowCount"].Value;
   
 ## <a name="see-also"></a>请参阅
 
-- [使用命令修改数据](../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)
-- [使用 DataAdapter 更新数据源](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)
-- [命令和参数](../../../../docs/framework/data/adonet/commands-and-parameters.md)
-- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [使用命令修改数据](using-commands-to-modify-data.md)
+- [使用 DataAdapter 更新数据源](updating-data-sources-with-dataadapters.md)
+- [命令和参数](commands-and-parameters.md)
+- [ADO.NET 概述](ado-net-overview.md)

@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5d96881ce35dca1ee7a196507ef8d81a565eed82
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: aba11ccd61b65d2a779b39db8e0e082cf4d4015b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741503"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70787213"
 ---
 # <a name="setassemblyfile2-method"></a>SetAssemblyFile2 方法
-设置的名称和新的程序集的选项。 当生成未绑定的模块时，请勿调用此方法。  
+为新的程序集设置和选项的名称。 生成未绑定的模块时，请勿调用此方法。  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,22 +42,22 @@ HRESULT SetAssemblyFile2(
  清单文件的名称。  
   
  `pEmitter`  
- [IMetaDataEmit2 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)此文件的接口。  
+ 此文件的[IMetaDataEmit2 接口](../metadata/imetadataemit2-interface.md)接口。  
   
  `afFlags`  
- 所表示的选项[AssemblyFlags 枚举](../../../../docs/framework/unmanaged-api/metadata/assemblyflags-enumeration.md)。  
+ [AssemblyFlags 枚举](../metadata/assemblyflags-enumeration.md)表示的选项。  
   
  `pAssemblyID`  
- 接收有关正在构造的程序集的唯一 ID。  
+ 接收正在构造的程序集的唯一 ID。  
   
 ## <a name="return-value"></a>返回值  
- 如果该方法成功，返回，则为 S_OK。  
+ 如果该方法成功，则返回 S_OK。  
   
 ## <a name="requirements"></a>要求  
- 需要 alink.h。  
+ 需要 alink。  
   
 ## <a name="see-also"></a>请参阅
 
-- [IALink2 接口](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [IALink 接口](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink2 接口](ialink2-interface.md)
+- [IALink 接口](ialink-interface.md)
+- [ALink API](index.md)

@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 825bb945e0d8662a4dadc9d688de6a677165df4a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b293c30060107d18c6b609efc82c4128a73cc1c7
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741481"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70787212"
 ---
 # <a name="setmanifestfile-method"></a>SetManifestFile 方法
-可以指定或重置链接器在创建程序集时使用的清单文件。  
+使您能够在创建程序集时指定或重置链接器使用的清单文件。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,20 +37,20 @@ HRESULT SetManifestFile(
 ## <a name="parameters"></a>参数  
  `pszFile`  
   
- Win32 资源的 blob 的内容放入清单文件的名称。  
+ 其内容将放入 Win32 资源 blob 中的清单文件的名称。  
   
 ## <a name="return-value"></a>返回值  
- 如果该方法成功，返回，则为 S_OK。  
+ 如果该方法成功，则返回 S_OK。  
   
 ## <a name="remarks"></a>备注  
- 询问 Win32ResBlob 前调用此操作。 值`pszFile`参数是其内容读取，并将其置于具有 ID 的 RT_MANIFEST Win32 资源的清单文件的名称。 通过使用 NULL 的参数调用时，将清除任何以前读取的清单。 这样，一个用于将链接器的状态重置为初始化时。  
+ 在请求 Win32ResBlob 之前调用此。 `pszFile`参数的值是清单文件的名称，其内容被读取并放入 Win32 资源，ID 为 RT_MANIFEST。 使用 NULL 的参数调用时，将清除任何以前的读取清单。 这样一来，就可以将链接器的状态重置为初始化时的状态。  
   
 ## <a name="requirements"></a>要求  
- 需要 aLink.h  
+ 需要 aLink  
   
 ## <a name="see-also"></a>请参阅
 
-- [IALink3 接口](../../../../docs/framework/unmanaged-api/alink/ialink3-interface.md)
-- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
-- [IALink 接口](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [Al.exe（程序集链接器）](../../../../docs/framework/tools/al-exe-assembly-linker.md)
+- [IALink3 接口](ialink3-interface.md)
+- [ALink API](index.md)
+- [IALink 接口](ialink-interface.md)
+- [Al.exe（程序集链接器）](../../tools/al-exe-assembly-linker.md)
