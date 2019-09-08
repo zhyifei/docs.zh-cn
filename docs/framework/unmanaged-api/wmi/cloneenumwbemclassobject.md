@@ -1,6 +1,6 @@
 ---
-title: CloneEnumWbemClassObject 函数 （非托管 API 参考）
-description: CloneEnumWbemClassObject 函数创建枚举器的逻辑副本。
+title: CloneEnumWbemClassObject 函数（非托管 API 参考）
+description: CloneEnumWbemClassObject 函数生成枚举器的逻辑副本。
 ms.date: 11/06/2017
 api_name:
 - CloneEnumWbemClassObject
@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ab660769a49cf12b129cb7f44b8378053a231f8c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1605314f94fd82d2a2cd7be105dde9e273f607bc
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761624"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798695"
 ---
 # <a name="cloneenumwbemclassobject-function"></a>CloneEnumWbemClassObject 函数
 制作枚举器的逻辑副本，并保留其在枚举中的当前位置。
@@ -45,51 +45,51 @@ HRESULT CloneEnumWbemClassObject (
 ## <a name="parameters"></a>参数
 
 `ppEnum`\
-[out]接收到一个新指针[IEnumWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-ienumwbemclassobject)。
+弄接收指向新[IEnumWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-ienumwbemclassobject)的指针。
 
 `authLevel`\
-[in]授权级别。
+中授权级别。
 
 `impLevel`\
-[in]模拟级别。
+中模拟级别。
 
 `pCurrentEnumWbemClassObject`\
-[out]一个指向[IEnumWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-ienumwbemclassobject)要克隆的实例。
+弄指向要克隆的[IEnumWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-ienumwbemclassobject)实例的指针。
 
 `strUser`\
-[in]用户名称。 请参阅[ConnectServerWmi](connectserverwmi.md)函数的详细信息。
+中用户名。 有关详细信息，请参阅[ConnectServerWmi](connectserverwmi.md)函数。
 
 `strPassword`\
-[in]密码。 请参阅[ConnectServerWmi](connectserverwmi.md)函数的详细信息。
+中密码。 有关详细信息，请参阅[ConnectServerWmi](connectserverwmi.md)函数。
 
-`strAuthority`\ [in] 用户的域名。 请参阅[ConnectServerWmi](connectserverwmi.md)函数的详细信息。
+`strAuthority`\ [in] 用户的域名。 有关详细信息，请参阅[ConnectServerWmi](connectserverwmi.md)函数。
 
 ## <a name="return-value"></a>返回值
 
-此函数返回以下值中定义*WbemCli.h*标头文件，也可以在定义它们为常量在代码中：
+此函数返回的以下值是在*WbemCli*头文件中定义的，也可以在代码中将它们定义为常量：
 
 |返回的常量  |值  |描述  |
 |---------|---------|---------|
-| `WBEM_E_FAILED` | 0x80041001 | 已存在时的常见错误。 |
+| `WBEM_E_FAILED` | 0x80041001 | 出现一般错误。 |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | 参数无效。 |
-| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 不足够的内存完成操作。 |
-| `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | 之间的当前进程和 WMI 的远程过程调用 (RPC) 链接已失败。 |
+| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 没有足够的可用内存来完成该操作。 |
+| `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | 当前进程与 WMI 之间的远程过程调用（RPC）链接失败。 |
 | `WBEM_S_NO_ERROR` | 0 | 函数调用成功。  |
 
 ## <a name="remarks"></a>备注
 
-此函数包装对的调用[IEnumWbemClassObject::Clone](/windows/desktop/api/wbemcli/nf-wbemcli-ienumwbemclassobject-clone)方法。
+此函数包装对[IEnumWbemClassObject：： Clone](/windows/desktop/api/wbemcli/nf-wbemcli-ienumwbemclassobject-clone)方法的调用。
 
-此方法将生成仅"最大程度"的副本。 由于许多 CIM 对象的动态特性，就可以新枚举器不会枚举与源枚举器相同的对象集。
+此方法仅进行 "最大努力" 复制。 由于很多 CIM 对象的动态性质，新枚举器可能不会枚举与源枚举器相同的一组对象。
 
-如果函数调用失败，则可以通过调用获取其他错误信息[GetErrorInfo](geterrorinfo.md)函数。
+如果函数调用失败，可以通过调用[GetErrorInfo](geterrorinfo.md)函数获取其他错误信息。
 
 ## <a name="example"></a>示例
 
-有关示例，请参阅[IEnumWbemClassObject::Clone](/windows/desktop/api/wbemcli/nf-wbemcli-ienumwbemclassobject-clone)方法。
+有关示例，请参阅[IEnumWbemClassObject：： Clone](/windows/desktop/api/wbemcli/nf-wbemcli-ienumwbemclassobject-clone)方法。
 
 ## <a name="requirements"></a>要求
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。
+ **适用**请参阅[系统需求](../../get-started/system-requirements.md)。
 
  **标头：** WMINet_Utils.idl
 
@@ -97,4 +97,4 @@ HRESULT CloneEnumWbemClassObject (
 
 ## <a name="see-also"></a>请参阅
 
-- [WMI 和性能计数器 （非托管 API 参考）](index.md)
+- [WMI 和性能计数器（非托管 API 参考）](index.md)

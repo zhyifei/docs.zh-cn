@@ -2,12 +2,12 @@
 title: SQL Server 安全性
 ms.date: 03/30/2017
 ms.assetid: 9053724d-a1fb-4f0f-b9dc-7f6dd893e8ff
-ms.openlocfilehash: 4aa4feadb6305f8a0ea6f99c2add780d6fca95cd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c5fd9cc82a3b1e4ffa217d65c542376fe067db06
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61927596"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70791632"
 ---
 # <a name="sql-server-security"></a>SQL Server 安全性
 SQL Server 具有多个支持创建安全数据库应用程序的功能。  
@@ -23,23 +23,23 @@ SQL Server 具有多个支持创建安全数据库应用程序的功能。
  本节中的主题简要说明 SQL Server 中与开发人员相关的安全功能，并提供到 SQL Server 联机丛书中相关主题和提供更详细说明的其他资源的链接。  
   
 ## <a name="in-this-section"></a>本节内容  
- [SQL Server 安全性概述](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)  
+ [SQL Server 安全性概述](overview-of-sql-server-security.md)  
  说明 SQL Server 的体系结构和安全功能。  
   
- [SQL Server 中的应用程序安全性方案](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
+ [SQL Server 中的应用程序安全性方案](application-security-scenarios-in-sql-server.md)  
  包含论述 ADO.NET 和 SQL Server 应用程序各种应用程序安全方案的主题。  
   
- [SQL Server Express 安全性](../../../../../docs/framework/data/adonet/sql/sql-server-express-security.md)  
- 介绍有关 SQL Server Express 的安全注意事项。  
+ [SQL Server Express 安全性](sql-server-express-security.md)  
+ 描述 SQL Server Express 的安全注意事项。  
   
 ## <a name="related-sections"></a>相关章节  
-[SQL Server 数据库引擎和 Azure SQL 数据库安全中心](/sql/relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database)  
-介绍 SQL Server 和 Azure SQL 数据库的安全注意事项。
+[SQL Server 数据库引擎和 Azure SQL Database 的安全中心](/sql/relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database)  
+描述 SQL Server 和 Azure SQL 数据库的安全注意事项。
 
-[有关安装 SQL Server 的安全注意事项](/sql/sql-server/install/security-considerations-for-a-sql-server-installation)  
-说明安装 SQL Server 之前需要考虑的安全问题。
+[SQL Server 安装的安全注意事项](/sql/sql-server/install/security-considerations-for-a-sql-server-installation)  
+描述在安装 SQL Server 之前要考虑的安全问题。
 
 ## <a name="see-also"></a>请参阅
 
-- [保证 ADO.NET 应用程序的安全](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [SQL Server 和 ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
+- [保证 ADO.NET 应用程序的安全](../securing-ado-net-applications.md)
+- [SQL Server 和 ADO.NET](index.md)

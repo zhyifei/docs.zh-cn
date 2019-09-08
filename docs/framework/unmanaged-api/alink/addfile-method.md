@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7ff6bde5009e834bfca156fe4d3ad16da53ded85
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b1406c68f1f6abff4d140b131f5f630d0fd767e1
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742380"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70787685"
 ---
 # <a name="addfile-method"></a>AddFile 方法
-将文件添加到该程序集。 此外可以用于创建未绑定的模块。  
+将文件添加到程序集。 还可用于创建未绑定的模块。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,28 +41,28 @@ HRESULT AddFile(
   
 ## <a name="parameters"></a>参数  
  `AssemblyID`  
- 要进行扩充的程序集的唯一 ID。  
+ 要扩充的程序集的唯一 ID。  
   
  `pszFilename`  
- 要添加的文件的完全限定的名称。  
+ 要添加的文件的完全限定名称。  
   
  `dwFlags`  
- COM + FileDef 标志，如`ffContainsNoMetaData`和`ffWriteable`。 `dwFlags` 传递给[DefineFile 方法](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md)。  
+ Com + FileDef 标志`ffContainsNoMetaData` ，例如和。 `ffWriteable` `dwFlags`传递给[DefineFile 方法](../metadata/imetadataassemblyemit-definefile-method.md)。  
   
  `pEmitter`  
- [IMetaDataEmit 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)要用来发出元数据，如有必要的接口。  
+ 要用于发出元数据的[IMetaDataEmit 接口](../metadata/imetadataemit-interface.md)接口（如有必要）。  
   
  `pFileToken`  
- 指向将存储添加的文件的唯一 ID。  
+ 一个指针，指向将存储所添加文件的唯一 ID 的位置。  
   
 ## <a name="return-value"></a>返回值  
- 如果该方法成功，返回，则为 S_OK。  
+ 如果该方法成功，则返回 S_OK。  
   
 ## <a name="requirements"></a>要求  
- 需要 alink.h。  
+ 需要 alink。  
   
 ## <a name="see-also"></a>请参阅
 
-- [IALink 接口](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2 接口](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink 接口](ialink-interface.md)
+- [IALink2 接口](ialink2-interface.md)
+- [ALink API](index.md)

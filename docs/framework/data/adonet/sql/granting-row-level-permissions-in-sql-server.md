@@ -2,12 +2,12 @@
 title: 在 SQL Server 中授予行级权限
 ms.date: 03/30/2017
 ms.assetid: a55aaa12-34ab-41cd-9dec-fd255b29258c
-ms.openlocfilehash: 891b5114551c5784b11504f2463525087125131f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: df5fcb4a6c73e12bec2ab17501fdfb02cf672324
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033899"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782362"
 ---
 # <a name="granting-row-level-permissions-in-sql-server"></a>在 SQL Server 中授予行级权限
 
@@ -64,9 +64,9 @@ ms.locfileid: "62033899"
 ## <a name="see-also"></a>请参阅
 
 - [行级别安全性](/sql/relational-databases/security/row-level-security)
-- [保证 ADO.NET 应用程序的安全](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [SQL Server 安全性概述](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
-- [SQL Server 中的应用程序安全性方案](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
-- [在 SQL Server 中使用存储过程管理权限](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)
-- [在 SQL Server 中编写安全的动态 SQL](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)
-- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [保证 ADO.NET 应用程序的安全](../securing-ado-net-applications.md)
+- [SQL Server 安全性概述](overview-of-sql-server-security.md)
+- [SQL Server 中的应用程序安全性方案](application-security-scenarios-in-sql-server.md)
+- [在 SQL Server 中使用存储过程管理权限](managing-permissions-with-stored-procedures-in-sql-server.md)
+- [在 SQL Server 中编写安全的动态 SQL](writing-secure-dynamic-sql-in-sql-server.md)
+- [ADO.NET 概述](../ado-net-overview.md)

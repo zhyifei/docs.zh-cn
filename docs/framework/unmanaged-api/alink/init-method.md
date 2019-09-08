@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 606809533010f458272cd6fbbad6234217bddea2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bf96770dd58c9b84596c082a615f626ec723cc6c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741616"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70787244"
 ---
 # <a name="init-method"></a>Init 方法
-准备实现的对象[IALink 接口](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)供使用。  
+准备实现[IALink 接口](ialink-interface.md)以便使用的对象。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,19 +37,19 @@ HRESULT Init(
   
 ## <a name="parameters"></a>参数  
  `pDispenser`  
- [IMetaDataDispenserEx 接口](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)指向元数据分配器。  
+ 指向元数据分配器的[IMetaDataDispenserEx 接口](../metadata/imetadatadispenserex-interface.md)指针。  
   
  `pErrorHandler`  
- [IMetaDataError 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-interface.md)对可选错误处理接口的指针。  
+ 指向可选错误处理接口的[IMetaDataError 接口](../metadata/imetadataerror-interface.md)指针。  
   
 ## <a name="return-value"></a>返回值  
- 如果该方法成功，返回，则为 S_OK。  
+ 如果该方法成功，则返回 S_OK。  
   
 ## <a name="requirements"></a>要求  
- 需要 alink.h  
+ 需要 alink  
   
 ## <a name="see-also"></a>请参阅
 
-- [IALink 接口](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2 接口](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink 接口](ialink-interface.md)
+- [IALink2 接口](ialink2-interface.md)
+- [ALink API](index.md)

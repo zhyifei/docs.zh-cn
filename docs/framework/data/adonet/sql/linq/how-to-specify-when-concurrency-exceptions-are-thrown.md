@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 344ae068-ff63-4a2e-8b00-af22e143675f
-ms.openlocfilehash: 0be17e7ceb6a5e5230d2619be350266d0282078c
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: c0f41d23264bbe5c9130cb5a0b03686331bc92b1
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64910808"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781616"
 ---
 # <a name="how-to-specify-when-concurrency-exceptions-are-thrown"></a>如何：指定何时引发并发异常
-在 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中，当因出现开放式并发冲突而导致对象不能更新时，会引发 <xref:System.Data.Linq.ChangeConflictException> 异常。 有关详细信息，请参阅[开放式并发：概述](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md)。  
+在 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中，当因出现开放式并发冲突而导致对象不能更新时，会引发 <xref:System.Data.Linq.ChangeConflictException> 异常。 有关详细信息，请[参阅乐观并发：概述](optimistic-concurrency-overview.md)。  
   
  在向数据库提交您所做的更改前，您可以指定应何时引发并发异常：  
   
@@ -31,5 +31,5 @@ ms.locfileid: "64910808"
   
 ## <a name="see-also"></a>请参阅
 
-- [如何：管理更改冲突](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
-- [进行和提交数据更改](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)
+- [如何：管理更改冲突](how-to-manage-change-conflicts.md)
+- [进行和提交数据更改](making-and-submitting-data-changes.md)

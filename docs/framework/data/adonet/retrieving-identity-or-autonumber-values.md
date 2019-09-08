@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d6b7f9cb-81be-44e1-bb94-56137954876d
-ms.openlocfilehash: ef4831af0b7bafed7d40bd86d2684c73d84a0f93
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 1387dad1f588770384422bf579ed547271b30c0a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634163"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794549"
 ---
 # <a name="retrieving-identity-or-autonumber-values"></a>检索标识或自动编号值
 
@@ -23,7 +23,7 @@ ms.locfileid: "65634163"
 某些数据库引擎（如 Microsoft Access Jet 数据库引擎）不支持输出参数，不能在单个批处理中处理多个语句。 当使用 Jet 数据库引擎时，可以通过在 `RowUpdated` 的 `DataAdapter` 事件的事件处理程序中执行单独的 SELECT 命令来检索为插入行生成的新 AutoNumber 值。
 
 > [!NOTE]
-> 使用自动递增值的替代方法是使用 <xref:System.Guid.NewGuid%2A> 对象的 <xref:System.Guid> 方法在客户端计算机上生成一个 GUID（即全局唯一标识符），插入每个新行时可以将此标识符复制到服务器。 `NewGuid` 方法使用算法生成一个 16 字节的二进制值，该算法不生成重复值的概率很高。 在 SQL Server 数据库中，GUID 存储在 `uniqueidentifier` 列中，SQL Server 可以使用 Transact-SQL `NEWID()` 函数自动生成此列。 将 GUID 用作主键会对性能产生负面影响。 SQL Server 提供了对支持`NEWSEQUENTIALID()`函数，这将生成一个连续 GUID，虽然不能保证为全局唯一，但可以更有效地索引。
+> 使用自动递增值的替代方法是使用 <xref:System.Guid.NewGuid%2A> 对象的 <xref:System.Guid> 方法在客户端计算机上生成一个 GUID（即全局唯一标识符），插入每个新行时可以将此标识符复制到服务器。 `NewGuid` 方法使用算法生成一个 16 字节的二进制值，该算法不生成重复值的概率很高。 在 SQL Server 数据库中，GUID 存储在 `uniqueidentifier` 列中，SQL Server 可以使用 Transact-SQL `NEWID()` 函数自动生成此列。 将 GUID 用作主键会对性能产生负面影响。 SQL Server 提供对`NEWSEQUENTIALID()`函数的支持，该函数将生成一个不保证全局唯一但可以更有效地索引的顺序 GUID。
 
 ## <a name="retrieving-sql-server-identity-column-values"></a>检索 SQL Server“标识”列的值
 
@@ -32,10 +32,10 @@ ms.locfileid: "65634163"
 |函数|描述|
 |--------------|-----------------|
 |SCOPE_IDENTITY|返回当前执行范围内的最后一个标识值。 对于多数方案，建议使用 SCOPE_IDENTITY。|
-|@@IDENTITY|包含当前会话中任何表生成的最后一个标识值。 @@IDENTITY触发器可能会影响和可能不会返回预期的标识值。|
+|@@IDENTITY|包含当前会话中任何表生成的最后一个标识值。 @@IDENTITY可能会受到触发器的影响，并且可能不会返回所需的标识值。|
 |IDENT_CURRENT|返回在任何会话中以及任何范围内为特定表生成的最后一个标识值。|
 
- 以下存储的过程演示如何插入一行**类别**表并使用输出参数返回由 TRANSACT-SQL scope_identity （） 函数生成的新标识值。
+ 以下存储过程演示了如何将行插入到 "**类别**" 表中，并使用 output 参数返回由 transact-sql SCOPE_IDENTITY （）函数生成的新标识值。
 
 ```sql
 CREATE PROCEDURE dbo.InsertCategory
@@ -46,7 +46,7 @@ INSERT INTO Categories (CategoryName) VALUES(@CategoryName)
 SET @Identity = SCOPE_IDENTITY()
 ```
 
-然后可以将此存储过程指定为 <xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A> 对象的 <xref:System.Data.SqlClient.SqlDataAdapter> 的源。 <xref:System.Data.SqlClient.SqlCommand.CommandType%2A> 的 <xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A> 属性必须设置为 <xref:System.Data.CommandType.StoredProcedure>。 可以通过创建一个 <xref:System.Data.SqlClient.SqlParameter> 为 <xref:System.Data.ParameterDirection> 的 <xref:System.Data.ParameterDirection.Output> 来检索标识输出。 时`InsertCommand`是处理，将自动递增的标识值返回，并置于**CategoryID**如果您设置的当前行的列<xref:System.Data.SqlClient.SqlCommand.UpdatedRowSource%2A>属性的插入命令`UpdateRowSource.OutputParameters`或`UpdateRowSource.Both`.
+然后可以将此存储过程指定为 <xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A> 对象的 <xref:System.Data.SqlClient.SqlDataAdapter> 的源。 <xref:System.Data.SqlClient.SqlCommand.CommandType%2A> 的 <xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A> 属性必须设置为 <xref:System.Data.CommandType.StoredProcedure>。 可以通过创建一个 <xref:System.Data.SqlClient.SqlParameter> 为 <xref:System.Data.ParameterDirection> 的 <xref:System.Data.ParameterDirection.Output> 来检索标识输出。 `UpdateRowSource.OutputParameters` `UpdateRowSource.Both` <xref:System.Data.SqlClient.SqlCommand.UpdatedRowSource%2A>处理时，如果将插入命令的属性设置为或，则将返回自动递增的标识值并将其放置在当前行的 "字段 id" 列中。 `InsertCommand`
 
 如果插入命令执行的是同时包括 INSERT 语句和可返回新标识值的 SELECT 语句的批处理，则可以通过将插入命令的 `UpdatedRowSource` 属性设置为 `UpdateRowSource.FirstReturnedRecord` 来检索这个新值。
 
@@ -55,7 +55,7 @@ SET @Identity = SCOPE_IDENTITY()
 
 ## <a name="merging-new-identity-values"></a>合并新标识值
 
-常见的方案是调用 `GetChanges` 的 `DataTable` 方法来创建仅包含已更改行的副本，并在调用 `Update` 的 `DataAdapter` 方法时使用这个新副本。 这在需要将已更改的行封送到执行更新的单独组件时十分有用。 更新后，此副本会包含随后必须合并回原始 `DataTable` 中的新标识值。 新标识值很可能会不同于 `DataTable` 中的原始值。 若要完成合并的原始值**AutoIncrement**必须保留副本中的列，以便可以定位和更新现有行中原始`DataTable`，而不是追加包含新行新的标识值。 但在默认情况下，在调用 `Update` 的 `DataAdapter` 方法后，这些原始值会丢失，这是因为会对每个已更新的 `AcceptChanges` 隐式调用 `DataRow`。
+常见的方案是调用 `GetChanges` 的 `DataTable` 方法来创建仅包含已更改行的副本，并在调用 `Update` 的 `DataAdapter` 方法时使用这个新副本。 这在需要将已更改的行封送到执行更新的单独组件时十分有用。 更新后，此副本会包含随后必须合并回原始 `DataTable` 中的新标识值。 新标识值很可能会不同于 `DataTable` 中的原始值。 若要完成合并，必须保留副本中**自动增量**列的原始值，以便能够找到并更新原始`DataTable`行中的现有行，而不是追加包含新标识值的新行. 但在默认情况下，在调用 `Update` 的 `DataAdapter` 方法后，这些原始值会丢失，这是因为会对每个已更新的 `AcceptChanges` 隐式调用 `DataRow`。
 
 在 `DataColumn` 更新期间，可以采用两种方法保留 `DataRow` 中 `DataAdapter` 的原始值：
 
@@ -99,11 +99,11 @@ WHERE ShipperID = SCOPE_IDENTITY();
 
 ## <a name="retrieving-microsoft-access-autonumber-values"></a>检索 Microsoft Access Autonumber 值
 
-本节包含一个演示如何从 Jet 4.0 数据库中检索 `Autonumber` 值的示例。 Jet 数据库引擎不支持在一个批处理中执行多个语句或使用输出参数，因此不能使用这些技术返回分配给已插入行的新 `Autonumber` 值。 但是，您可以将代码添加到`RowUpdated`事件处理程序执行一个单独的 SELECT @@IDENTITY语句以检索新`Autonumber`值。
+本节包含一个演示如何从 Jet 4.0 数据库中检索 `Autonumber` 值的示例。 Jet 数据库引擎不支持在一个批处理中执行多个语句或使用输出参数，因此不能使用这些技术返回分配给已插入行的新 `Autonumber` 值。 但是，您可以向`RowUpdated`事件处理程序添加代码，该事件处理程序执行单独的 SELECT @@IDENTITY语句`Autonumber`来检索新的值。
 
 ### <a name="example"></a>示例
 
-此示例不使用 `MissingSchemaAction.AddWithKey` 添加架构信息，而是在调用 `DataTable` 以填充 <xref:System.Data.OleDb.OleDbDataAdapter> 之前用正确的架构配置 `DataTable`。 在这种情况下， **CategoryID**列配置要递减的值分配每个插入的行从零，通过设置开始<xref:System.Data.DataColumn.AutoIncrement%2A>到`true`，<xref:System.Data.DataColumn.AutoIncrementSeed%2A>为 0，和<xref:System.Data.DataColumn.AutoIncrementStep%2A>为-1。 然后，代码添加两个新行并使用 `GetChanges` 将已更改的行添加到传递给 `DataTable` 方法的新 `Update` 中。
+此示例不使用 `MissingSchemaAction.AddWithKey` 添加架构信息，而是在调用 `DataTable` 以填充 <xref:System.Data.OleDb.OleDbDataAdapter> 之前用正确的架构配置 `DataTable`。 在这种情况下，"**类别 id** " 列配置为从零开始为每个插入的行赋值<xref:System.Data.DataColumn.AutoIncrement%2A> ， `true`将<xref:System.Data.DataColumn.AutoIncrementSeed%2A>设置为，将<xref:System.Data.DataColumn.AutoIncrementStep%2A>设置为0，并将设置为-1。 然后，代码添加两个新行并使用 `GetChanges` 将已更改的行添加到传递给 `DataTable` 方法的新 `Update` 中。
 
 [!code-csharp[DataWorks OleDb.JetAutonumberMerge#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks OleDb.JetAutonumberMerge/CS/source.cs#1)]
 [!code-vb[DataWorks OleDb.JetAutonumberMerge#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks OleDb.JetAutonumberMerge/VB/source.vb#1)]
@@ -354,7 +354,7 @@ GO
 代码列表如下：
 
 > [!TIP]
-> 代码列表是指名为 MySchool.mdb 的 Access 数据库文件。 您可以下载 MySchool.mdb （作为完整 C# 或 Visual Basic 示例项目的一部分） 从[code.msdn.microsoft.com](https://code.msdn.microsoft.com/How-to-Retrieve-the-511acece)。
+> 代码列表是指名为 MySchool.mdb 的 Access 数据库文件。 可以从C# [code.msdn.microsoft.com](https://code.msdn.microsoft.com/How-to-Retrieve-the-511acece)下载 myschool.mdb （作为完整或 Visual Basic 示例项目的一部分）。
 
 ```csharp
 using System;
@@ -538,10 +538,10 @@ class Program {
 
 ## <a name="see-also"></a>请参阅
 
-- [在 ADO.NET 中检索和修改数据](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
-- [DataAdapters 和 DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
-- [行状态和行版本](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)
-- [AcceptChanges 和 RejectChanges](../../../../docs/framework/data/adonet/dataset-datatable-dataview/acceptchanges-and-rejectchanges.md)
-- [合并数据集内容](../../../../docs/framework/data/adonet/dataset-datatable-dataview/merging-dataset-contents.md)
-- [使用 DataAdapter 更新数据源](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)
-- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [在 ADO.NET 中检索和修改数据](retrieving-and-modifying-data.md)
+- [DataAdapters 和 DataReaders](dataadapters-and-datareaders.md)
+- [行状态和行版本](./dataset-datatable-dataview/row-states-and-row-versions.md)
+- [AcceptChanges 和 RejectChanges](./dataset-datatable-dataview/acceptchanges-and-rejectchanges.md)
+- [合并数据集内容](./dataset-datatable-dataview/merging-dataset-contents.md)
+- [使用 DataAdapter 更新数据源](updating-data-sources-with-dataadapters.md)
+- [ADO.NET 概述](ado-net-overview.md)

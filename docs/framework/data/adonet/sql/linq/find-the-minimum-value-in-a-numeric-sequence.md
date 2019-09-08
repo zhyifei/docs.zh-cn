@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 78203093-f242-4572-9b31-9495b10926aa
-ms.openlocfilehash: 84002609c550cc2de76f9948bf77f9fd88261f64
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d8aee43f13ec92f649b4df20505ac56c336fe07a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62038449"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793832"
 ---
 # <a name="find-the-minimum-value-in-a-numeric-sequence"></a>查找数值序列中的最小值
 使用 <xref:System.Linq.Enumerable.Min%2A> 运算符可返回数值序列中的最小值。  
@@ -73,5 +73,5 @@ ms.locfileid: "62038449"
   
 ## <a name="see-also"></a>请参阅
 
-- [聚合查询](../../../../../../docs/framework/data/adonet/sql/linq/aggregate-queries.md)
-- [下载示例数据库](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
+- [聚合查询](aggregate-queries.md)
+- [下载示例数据库](downloading-sample-databases.md)

@@ -2,12 +2,12 @@
 title: SQL Server 功能和 ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 2839529b-a79b-4450-be5d-07a98dbc7a0f
-ms.openlocfilehash: 4f2d93ca2abc15e4c7af8489d5b875c0a46d7185
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f2f0d0327e2b66f97f9cf5ffe797ee153d4fb9ca
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62037176"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70791639"
 ---
 # <a name="sql-server-features-and-adonet"></a>SQL Server 功能和 ADO.NET
 本节中的主题讨论 SQL Server 中针对使用 ADO.NET 开发数据库应用程序的功能。  
@@ -16,40 +16,40 @@ ms.locfileid: "62037176"
   
  **SQL Server 联机丛书**  
   
-1. [开发 （数据库引擎）](https://go.microsoft.com/fwlink/?LinkId=115245)  
+1. [开发（数据库引擎）](https://go.microsoft.com/fwlink/?LinkId=115245)  
   
 ## <a name="in-this-section"></a>本节内容  
- [枚举 SQL Server 的实例 (ADO.NET)](../../../../../docs/framework/data/adonet/sql/enumerating-instances-of-sql-server.md)  
+ [枚举 SQL Server 的实例 (ADO.NET)](enumerating-instances-of-sql-server.md)  
  描述如何枚举 SQL Server 的活动实例。  
   
- [SQL Server 的提供程序统计信息](../../../../../docs/framework/data/adonet/sql/provider-statistics-for-sql-server.md)  
+ [SQL Server 的提供程序统计信息](provider-statistics-for-sql-server.md)  
  描述对获取 SQL Server 运行时统计信息的支持。  
   
- [SQL Server Express 用户实例](../../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)  
+ [SQL Server Express 用户实例](sql-server-express-user-instances.md)  
  描述对 SQL Server Express 用户实例的支持。  
   
- [SQL Server 中的数据库镜像](../../../../../docs/framework/data/adonet/sql/database-mirroring-in-sql-server.md)  
+ [SQL Server 中的数据库镜像](database-mirroring-in-sql-server.md)  
  描述数据库镜像功能。  
   
- [SQL Server 公共语言运行时集成](../../../../../docs/framework/data/adonet/sql/sql-server-common-language-runtime-integration.md)  
+ [SQL Server 公共语言运行时集成](sql-server-common-language-runtime-integration.md)  
  说明如何从 SQL Server 的公共语言运行库 (CLR) 数据库对象中访问数据。  
   
- [SQL Server 中的查询通知](../../../../../docs/framework/data/adonet/sql/query-notifications-in-sql-server.md)  
+ [SQL Server 中的查询通知](query-notifications-in-sql-server.md)  
  说明数据发生更改时，.NET Framework 应用程序如何从 SQL Server 请求通知。  
   
- [SQL Server 中的快照隔离](../../../../../docs/framework/data/adonet/sql/snapshot-isolation-in-sql-server.md)  
+ [SQL Server 中的快照隔离](snapshot-isolation-in-sql-server.md)  
  描述对快照隔离的支持，该行版本机制旨在减少事务应用程序中的阻碍。  
   
- [SqlClient 对高可用性和灾难恢复的支持](../../../../../docs/framework/data/adonet/sql/sqlclient-support-for-high-availability-disaster-recovery.md)  
+ [SqlClient 对高可用性和灾难恢复的支持](sqlclient-support-for-high-availability-disaster-recovery.md)  
  描述高可用性、灾难恢复 (AlwaysOn) 可用性组的 SqlClient 支持。  
   
- [SqlClient 对 LocalDB 的支持](../../../../../docs/framework/data/adonet/sql/sqlclient-support-for-localdb.md)  
+ [SqlClient 对 LocalDB 的支持](sqlclient-support-for-localdb.md)  
  描述 LocalDB 数据库的 SqlClient 支持。  
   
 ## <a name="see-also"></a>请参阅
 
-- [ADO.NET 中的 SQL Server 数据操作](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)
-- [在 ADO.NET 中检索和修改数据](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
-- [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)
-- [SQL Server 和 ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
-- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 中的 SQL Server 数据操作](sql-server-data-operations.md)
+- [在 ADO.NET 中检索和修改数据](../retrieving-and-modifying-data.md)
+- [LINQ to SQL](./linq/index.md)
+- [SQL Server 和 ADO.NET](index.md)
+- [ADO.NET 概述](../ado-net-overview.md)

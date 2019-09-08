@@ -2,12 +2,12 @@
 title: 了解状态更改
 ms.date: 03/30/2017
 ms.assetid: a79ed2aa-e49a-47a8-845a-c9f436ec9987
-ms.openlocfilehash: 154f49e7da059d20d0751a73c664aa2a0f89be12
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9f72d113c7160bdb6c4c5680669243323a30a4c1
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963074"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796941"
 ---
 # <a name="understanding-state-changes"></a>了解状态更改
 本节讨论的内容包括通道具有的状态和转换、用于结构通道状态的类型以及实现它们的方式。  
@@ -24,16 +24,16 @@ ms.locfileid: "69963074"
 ## <a name="icommunicationobject-communicationobject-and-states-and-state-transition"></a>ICommunicationObject、CommunicationObject 和状态及状态转换  
  <xref:System.ServiceModel.ICommunicationObject> 的初始状态是“已创建”，此时可以配置它的各种属性。 一旦处于“已打开”状态，对象就可用于发送和接收消息，但它的属性将视为不可变。 一旦处在“正在关闭”状态，对象就不能再处理新的发送或接收请求，但在到达“关闭”超时前有可能完成现有的请求。  如果发生不可恢复的错误，则对象将转换到“出错”状态，此时可以检查该对象以获取有关错误的信息，该对象最终将关闭。 处于“已关闭”状态时，该对象实质上已到达状态机的终点。 对象一旦从一个状态转换到下一个状态，它将不会返回至前一状态。  
   
- 下面的关系图演示 <xref:System.ServiceModel.ICommunicationObject> 状态和状态转换。 状态转换可能是通过调用以下三种方法之一引起的:中止、打开或关闭。 通过调用其他特定于实现的方法也会导致状态转换。 转换至“出错”状态可能是因为在打开通信对象过程中或在打开通信对象之后发生了错误。  
+ 下面的关系图演示 <xref:System.ServiceModel.ICommunicationObject> 状态和状态转换。 状态转换可能是通过调用以下三种方法之一引起的：中止、打开或关闭。 通过调用其他特定于实现的方法也会导致状态转换。 转换至“出错”状态可能是因为在打开通信对象过程中或在打开通信对象之后发生了错误。  
   
  每个 <xref:System.ServiceModel.ICommunicationObject> 的初始状态都是“已创建”。 在此状态下，应用程序可以通过设置对象的属性来配置对象。 一旦对象所处的状态不是“已创建”，它将被视为不可变。  
   
- ![通道状态转换](../../../../docs/framework/wcf/extending/media/channelstatetranitionshighleveldiagram.gif "ChannelStateTranitionsHighLevelDiagram")  
+ ![通道状态转换](./media/channelstatetranitionshighleveldiagram.gif "ChannelStateTranitionsHighLevelDiagram")  
 图1。 ICommunicationObject 状态机。  
   
- Windows Communication Foundation (WCF) 提供一个名为<xref:System.ServiceModel.Channels.CommunicationObject>的抽象基类, 该基类实现<xref:System.ServiceModel.ICommunicationObject>和通道状态机。 下图是特定于 <xref:System.ServiceModel.Channels.CommunicationObject> 的已修改状态关系图。 除了 <xref:System.ServiceModel.ICommunicationObject> 状态机，它还显示调用附加 <xref:System.ServiceModel.Channels.CommunicationObject> 方法时的计时。  
+ Windows Communication Foundation （WCF）提供一个名为<xref:System.ServiceModel.Channels.CommunicationObject>的抽象基类，该基类实现<xref:System.ServiceModel.ICommunicationObject>和通道状态机。 下图是特定于 <xref:System.ServiceModel.Channels.CommunicationObject> 的已修改状态关系图。 除了 <xref:System.ServiceModel.ICommunicationObject> 状态机，它还显示调用附加 <xref:System.ServiceModel.Channels.CommunicationObject> 方法时的计时。  
   
- ![状态更改](../../../../docs/framework/wcf/extending/media/wcfc-wcfchannelsigure5statetransitionsdetailsc.gif "wcfc_WCFChannelsigure5StateTransitionsDetailsc")  
+ ![状态更改](./media/wcfc-wcfchannelsigure5statetransitionsdetailsc.gif "wcfc_WCFChannelsigure5StateTransitionsDetailsc")  
 图 2. ICommunicationObject 状态机的 CommunicationObject 实现，包括对事件和受保护方法的调用。  
   
 ### <a name="icommunicationobject-events"></a>ICommunicationObject 事件  
@@ -64,7 +64,7 @@ ms.locfileid: "69963074"
   
  <xref:System.ServiceModel.Channels.CommunicationObject> 提供三个构造函数，它们都使对象保持“已创建”状态。 构造函数定义如下：  
   
- 第一个构造函数是委托给采用对象的构造函数重载的无参数构造函数:  
+ 第一个构造函数是委托给采用对象的构造函数重载的无参数构造函数：  
   
  `protected CommunicationObject() : this(new object()) { … }`  
   
@@ -82,7 +82,7 @@ ms.locfileid: "69963074"
   
  前置条件：状态为已创建。  
   
- 后置条件:状态为 "已打开" 或 "出错"。 可能引发异常。  
+ 后置条件：状态为 "已打开" 或 "出错"。 可能引发异常。  
   
  Open() 方法将尝试打开通信对象，并将状态设置为“已打开”。 如果遇到错误，它会将状态设置为“出错”。  
   
@@ -90,28 +90,28 @@ ms.locfileid: "69963074"
   
  然后，它将状态设置为“正在打开”并依次调用 OnOpening()（将引发 Opening 事件）、OnOpen() 和 OnOpened()。 OnOpened() 将状态设置为“已打开”并引发 Opened 事件。 如果这其中有任何一项引发异常，Open() 将调用 Fault() 并使异常向上冒泡。 下面的关系图更详细地演示了“打开”过程。  
   
- ![状态更改](../../../../docs/framework/wcf/extending/media/wcfc-wcfchannelsigurecoopenflowchartf.gif "wcfc_WCFChannelsigureCOOpenFlowChartf")  
+ ![状态更改](./media/wcfc-wcfchannelsigurecoopenflowchartf.gif "wcfc_WCFChannelsigureCOOpenFlowChartf")  
 重写 OnOpen 方法以实现自定义打开逻辑，例如，打开内部通信对象。  
   
  Close 方法  
   
  前置条件：无。  
   
- 后置条件:状态为已关闭。 可能引发异常。  
+ 后置条件：状态为已关闭。 可能引发异常。  
   
  Close() 方法可以在任何状态下调用。 它将尝试正常关闭对象。 如果遇到错误，它将终止对象。 如果当前状态为“正在关闭”或“已关闭”，则该方法将不执行任何操作。 否则，它将状态设置为“正在关闭”。 如果初始状态为“已创建”、“正在打开”或“出错”，它将调用 Abort()（请参见下面的关系图）。 如果初始状态为“已打开”，它将依次调用 OnClosing()（将引发 Closing 事件）、OnClose() 和 OnClosed()。 如果这其中有任何一项引发异常，Close() 将调用 Abort() 并使异常向上冒泡。 OnClosed() 将状态设置为“已关闭”并引发 Closed 事件。 下面的关系图更详细地演示了“关闭”过程。  
   
- ![状态更改](../../../../docs/framework/wcf/extending/media/wcfc-wcfchannelsguire7ico-closeflowchartc.gif "wcfc_WCFChannelsguire7ICO-CloseFlowChartc")  
+ ![状态更改](./media/wcfc-wcfchannelsguire7ico-closeflowchartc.gif "wcfc_WCFChannelsguire7ICO-CloseFlowChartc")  
 重写 OnClose 方法以实现自定义关闭逻辑，例如，关闭内部通信对象。 可能长时间阻塞的所有正常关闭逻辑（例如，等待他方响应）应在 OnClose() 中实现，原因有两个，一是它采用超时参数，二是它不是作为 Abort() 的一部分调用的。  
   
  中止  
   
  前置条件：无。  
-后置条件:状态为已关闭。 可能引发异常。  
+后置条件：状态为已关闭。 可能引发异常。  
   
  如果当前状态是“已关闭”或之前已终止对象（例如，可能通过在其他线程上执行 Abort()），则 Abort() 方法将不执行任何操作。 否则，它将状态设置为“正在关闭”并依次调用 OnClosing()（将引发 Closing 事件）、OnAbort() 和 OnClosed()（因为是正在终止对象而非关闭，所以不调用 OnClose）。 OnClosed() 将状态设置为“已关闭”并引发 Closed 事件。 如果这其中的任何一项引发异常，它都将被重新引发至 Abort 的调用方。 OnClosing()、OnClosed() 和 OnAbort() 的实现不应阻塞（例如，在输入/输出上）。 下面的关系图更详细地演示了“中止”过程。  
   
- ![状态更改](../../../../docs/framework/wcf/extending/media/wcfc-wcfchannelsigure8ico-abortflowchartc.gif "wcfc_WCFChannelsigure8ICO-AbortFlowChartc")  
+ ![状态更改](./media/wcfc-wcfchannelsigure8ico-abortflowchartc.gif "wcfc_WCFChannelsigure8ICO-AbortFlowChartc")  
 重写 OnAbort 方法以实现自定义终止逻辑，例如，终止内部通信对象。  
   
  Fault  
@@ -120,7 +120,7 @@ ms.locfileid: "69963074"
   
  前置条件：无。  
   
- 后置条件:状态错误。 可能引发异常。  
+ 后置条件：状态错误。 可能引发异常。  
   
  如果当前状态为“出错”或“已关闭”，则 Fault() 方法不执行任何操作。 否则，它将状态设置为“出错”并调用 OnFaulted()（将引发 Faulted 事件）。 如果 OnFaulted 引发异常，则将重新引发它。  
   

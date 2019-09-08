@@ -1,5 +1,5 @@
 ---
-title: GetMethodQualifierSet 函数 （非托管 API 参考）
+title: GetMethodQualifierSet 函数（非托管 API 参考）
 description: GetMethodQualifierSet 函数检索方法的限定符集。
 ms.date: 11/06/2017
 api_name:
@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 329dcf66c5178a16d0f278c258f6f80f5a1b3e8d
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 86a7788736c3c12cfcfd405de88dfadfb14c1eca
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636754"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798525"
 ---
 # <a name="getmethodqualifierset-function"></a>GetMethodQualifierSet 函数
 
@@ -43,43 +43,43 @@ HRESULT GetMethodQualifierSet (
 ## <a name="parameters"></a>参数
 
 `vFunc`\
-[in]此参数是未使用。
+中此参数未使用。
 
 `ptr`\
-[in]一个指向[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)实例。
+中指向[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)实例的指针。
 
 `wszMethod`\
-[in]方法名称。 `wszMethod` 必须指向有效`LPCWSTR`。
+中方法名称。 `wszMethod`必须指向有效`LPCWSTR`的。
 
 `ppQualSet`\
-[out]接收允许的方法的限定符访问的接口指针。 `ppQualSet` 不能为 `null`。 如果发生错误，未返回一个新的对象，并将指针设置为指向`null`。
+弄接收接口指针，该指针允许访问方法的限定符。 `ppQualSet` 不能为 `null`。 如果发生错误，则不会返回新的对象，并且将指针设置为指向`null`。
 
 ## <a name="return-value"></a>返回值
 
-此函数返回以下值中定义*WbemCli.h*标头文件，也可以在定义它们为常量在代码中：
+此函数返回的以下值是在*WbemCli*头文件中定义的，也可以在代码中将它们定义为常量：
 
 |返回的常量  |值  |描述  |
 |---------|---------|---------|
 |`WBEM_E_NOT_FOUND` | 0x80041002 | 指定的方法不存在。 |
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 参数是`null`。 |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 参数为`null`。 |
 |`WBEM_S_NO_ERROR` | 0 | 函数调用成功。  |
 
 ## <a name="remarks"></a>备注
 
-此函数包装对的调用[IWbemClassObject::GetMethodQualifierSet](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getmethodqualifierset)方法。
+此函数包装对[IWbemClassObject：： GetMethodQualifierSet](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getmethodqualifierset)方法的调用。
 
-当前对象是 CIM 类定义时，才支持对此函数的调用。 方法操作不适用于[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)指向 CIM 实例的指针。
+仅当当前对象为 CIM 类定义时，才支持调用此函数。 方法操作不可用于指向 CIM 实例的[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)指针。
 
-因为每个方法可能具有其自己的限定符[IWbemQualifierSet 指针](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset)允许调用方添加、 编辑或删除这些限定符。
+由于每个方法都可以有自己的限定符，因此， [IWbemQualifierSet 指针](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset)使调用方可以添加、编辑或删除这些限定符。
 
 ## <a name="requirements"></a>要求
 
-**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。
+**适用**请参阅[系统需求](../../get-started/system-requirements.md)。
 
 **标头：** WMINet_Utils.idl
 
-**.NET Framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+**.NET Framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
 ## <a name="see-also"></a>请参阅
 
-- [WMI 和性能计数器 （非托管 API 参考）](index.md)
+- [WMI 和性能计数器（非托管 API 参考）](index.md)

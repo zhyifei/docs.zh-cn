@@ -2,15 +2,15 @@
 title: facet
 ms.date: 03/30/2017
 ms.assetid: 91c4e6aa-3e54-4b6c-a38a-abf27808cc85
-ms.openlocfilehash: 2b4a8a559d7297543812f3c67e3b90d06a011b0f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1ac46c882b266fbb73d5c709c9fdf297e2b55b1b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69959105"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70783981"
 ---
 # <a name="facet"></a>facet
-*Facet*用于向基元类型属性定义添加详细信息。 [属性](../../../../docs/framework/data/adonet/property.md)定义包含有关属性类型的信息, 但通常需要更详细的信息。 例如，概念模型中的实体类型可能有一个类型为 `String` 的属性，其值不能设置为 null。 通过方面可以指定这种详细程度。  
+*Facet*用于向基元类型属性定义添加详细信息。 [属性](property.md)定义包含有关属性类型的信息，但通常需要更详细的信息。 例如，概念模型中的实体类型可能有一个类型为 `String` 的属性，其值不能设置为 null。 通过方面可以指定这种详细程度。  
   
  下表描述了 EDM 中支持的方面。  
   
@@ -30,11 +30,11 @@ ms.locfileid: "69959105"
 |`Unicode`|指示是否将属性值存储为 Unicode。|`String`|  
   
 ## <a name="example"></a>示例  
- [ADO.NET 实体框架](../../../../docs/framework/data/adonet/ef/index.md)使用一种称为概念架构定义语言 ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) 的域特定语言 (DSL) 来定义概念模型。 下面的 CSDL 定义了一个 `Book` 实体类型。 请注意，方面是作为 XML 特性实现的。 方面值表明不能将属性设置为 null，并且 `Scale` 属性的 `Precision` 和 `Revision` 都设置为 29。  
+ [ADO.NET 实体框架](./ef/index.md)使用一种称为概念架构定义语言（[CSDL](./ef/language-reference/csdl-specification.md)）的域特定语言（DSL）来定义概念模型。 下面的 CSDL 定义了一个 `Book` 实体类型。 请注意，方面是作为 XML 特性实现的。 方面值表明不能将属性设置为 null，并且 `Scale` 属性的 `Precision` 和 `Revision` 都设置为 29。  
   
  [!code-xml[EDM_Example_Model#EntityExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books.edmx#entityexample)]  
   
 ## <a name="see-also"></a>请参阅
 
-- [实体数据模型关键概念](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
-- [实体数据模型](../../../../docs/framework/data/adonet/entity-data-model.md)
+- [实体数据模型关键概念](entity-data-model-key-concepts.md)
+- [实体数据模型](entity-data-model.md)

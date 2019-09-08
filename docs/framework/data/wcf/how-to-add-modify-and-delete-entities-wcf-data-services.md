@@ -1,5 +1,5 @@
 ---
-title: 如何：添加、 修改和删除实体 (WCF Data Services)
+title: 如何：添加、修改和删除实体（WCF 数据服务）
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,17 +7,17 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, changing data
 ms.assetid: a00f8933-b232-4445-95ba-adc634f055d8
-ms.openlocfilehash: 66f115bf3bf51b4b5612240c4e34eaf9e08bec0d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 13c59bee9fc58dbe8c5b8c768fe9ff8b31d72e76
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61765552"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780257"
 ---
-# <a name="how-to-add-modify-and-delete-entities-wcf-data-services"></a>如何：添加、 修改和删除实体 (WCF Data Services)
-与[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]客户端库，您可以创建、 更新和删除实体数据的数据服务中的对象执行等效操作<xref:System.Data.Services.Client.DataServiceContext>。 有关详细信息，请参阅[更新数据服务](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md)。  
+# <a name="how-to-add-modify-and-delete-entities-wcf-data-services"></a>如何：添加、修改和删除实体（WCF 数据服务）
+使用客户端库，您可以通过对中的<xref:System.Data.Services.Client.DataServiceContext>对象执行等效操作，来创建、更新和删除数据服务中的实体数据。 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 有关详细信息，请参阅[更新数据服务](updating-the-data-service-wcf-data-services.md)。  
   
- 本主题中的示例使用罗斯文示例数据服务和自动生成的客户端数据服务类。 完成后，将创建此服务和客户端数据类[WCF Data Services 快速入门](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)。  
+ 本主题中的示例使用罗斯文示例数据服务和自动生成的客户端数据服务类。 此服务和客户端数据类是在完成[WCF 数据服务快速入门](quickstart-wcf-data-services.md)时创建的。  
   
 ## <a name="example"></a>示例  
  下面的示例创建一个新的对象实例，然后对 <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> 调用 <xref:System.Data.Services.Client.DataServiceContext> 方法以创建上下文中的项。 调用 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> 方法时，HTTP POST 消息将会发送到数据服务。  
@@ -45,7 +45,7 @@ ms.locfileid: "61765552"
   
 ## <a name="see-also"></a>请参阅
 
-- [WCF Data Services 客户端库](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
-- [如何：将现有实体附加到 DataServiceContext](../../../../docs/framework/data/wcf/attach-an-existing-entity-to-dc-wcf-data.md)
-- [如何：定义实体关系](../../../../docs/framework/data/wcf/how-to-define-entity-relationships-wcf-data-services.md)
-- [批处理操作](../../../../docs/framework/data/wcf/batching-operations-wcf-data-services.md)
+- [WCF Data Services 客户端库](wcf-data-services-client-library.md)
+- [如何：将现有实体附加到 DataServiceContext](attach-an-existing-entity-to-dc-wcf-data.md)
+- [如何：定义实体关系](how-to-define-entity-relationships-wcf-data-services.md)
+- [批处理操作](batching-operations-wcf-data-services.md)

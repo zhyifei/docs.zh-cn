@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d59b93a9-50c8-4770-a114-d902f6a0ea76
-ms.openlocfilehash: f6f112a63dd976a1d6ae91f2fafd6678a9f40846
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 21fa2f9e1dc2f255fe94f2420ba90a809ab5b05e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69945093"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70792664"
 ---
 # <a name="sort-elements-in-a-sequence"></a>在序列中对元素进行排序
 使用 <xref:System.Linq.Enumerable.OrderBy%2A> 运算符可按一个或多个键对序列进行排序。  
@@ -90,5 +90,5 @@ ms.locfileid: "69945093"
   
 ## <a name="see-also"></a>请参阅
 
-- [查询示例](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
-- [下载示例数据库](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
+- [查询示例](query-examples.md)
+- [下载示例数据库](downloading-sample-databases.md)

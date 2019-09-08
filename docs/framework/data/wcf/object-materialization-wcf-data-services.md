@@ -5,20 +5,20 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - WCF Data Services, querying
 ms.assetid: f0dbf7b0-0292-4e31-9ae4-b98288336dc1
-ms.openlocfilehash: d45d472a2996c0b501af70a0a2a6d2d669dedb4d
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 89357b1d05526438c939a73663c5b7b6273df4ac
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70043533"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70790387"
 ---
 # <a name="object-materialization-wcf-data-services"></a>对象具体化（WCF 数据服务）
 
-使用**添加服务引用**对话框[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]在基于 .NET Framework 的客户端应用程序中使用源时, 将为该源公开的数据模型中的每个实体类型生成等效的数据类。 有关详细信息, 请参阅[生成数据服务客户端库](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md)。 查询返回的实体数据将具体化为所生成的客户端数据服务类之一的实例。 有关跟踪对象的合并选项和标识解析的信息, 请参阅[管理数据服务上下文](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md)。
+使用**添加服务引用**对话框[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]在基于 .NET Framework 的客户端应用程序中使用源时，将为该源公开的数据模型中的每个实体类型生成等效的数据类。 有关详细信息，请参阅[生成数据服务客户端库](generating-the-data-service-client-library-wcf-data-services.md)。 查询返回的实体数据将具体化为所生成的客户端数据服务类之一的实例。 有关跟踪对象的合并选项和标识解析的信息，请参阅[管理数据服务上下文](managing-the-data-service-context-wcf-data-services.md)。
 
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 还允许您定义自己的客户端数据服务类，而不是使用工具生成的数据类。 这样您便可以使用自己的数据类，也称为“纯旧式 CLR 对象”(POCO) 数据类。 当使用这些类型的自定义数据类时, 应使用<xref:System.Data.Services.Common.DataServiceKeyAttribute>或<xref:System.Data.Services.Common.DataServiceEntityAttribute>为数据类提供特性, 并确保客户端上的类型名称与数据服务的数据模型中的类型名称匹配。
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 还允许您定义自己的客户端数据服务类，而不是使用工具生成的数据类。 这样您便可以使用自己的数据类，也称为“纯旧式 CLR 对象”(POCO) 数据类。 当使用这些类型的自定义数据类时，应使用<xref:System.Data.Services.Common.DataServiceKeyAttribute>或<xref:System.Data.Services.Common.DataServiceEntityAttribute>为数据类提供特性，并确保客户端上的类型名称与数据服务的数据模型中的类型名称匹配。
 
-库收到查询响应消息后, 会将[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]源中返回的数据具体化为查询类型的客户端数据服务类的实例。 以下是具体化这些对象的一般过程：
+库收到查询响应消息后，会将[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]源中返回的数据具体化为查询类型的客户端数据服务类的实例。 以下是具体化这些对象的一般过程：
 
 1. 客户端库从响应消息源中的 `entry` 元素读取序列化的类型，并尝试采用以下方法之一创建正确类型的新实例：
 
@@ -38,10 +38,10 @@ ms.locfileid: "70043533"
 
     - 将复杂属性设置为新的复杂类型实例，其中使用响应中的复杂类型的属性设置这些属性。
 
-    - 将返回相关实体集合的导航属性设置为 <xref:System.Collections.Generic.ICollection%601> 的新实例或现有实例，其中 `T` 是相关实体的类型。 除非相关对象已加载到 <xref:System.Data.Services.Client.DataServiceContext> 中，否则此集合是空的。 有关详细信息, 请参阅[加载延迟的内容](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md)。
+    - 将返回相关实体集合的导航属性设置为 <xref:System.Collections.Generic.ICollection%601> 的新实例或现有实例，其中 `T` 是相关实体的类型。 除非相关对象已加载到 <xref:System.Data.Services.Client.DataServiceContext> 中，否则此集合是空的。 有关详细信息，请参阅[加载延迟的内容](loading-deferred-content-wcf-data-services.md)。
 
       > [!NOTE]
-      > 当生成的客户端数据类支持数据绑定时，导航属性改为返回 <xref:System.Data.Services.Client.DataServiceCollection%601> 类的实例。 有关详细信息, 请参阅[将数据绑定到控件](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)。
+      > 当生成的客户端数据类支持数据绑定时，导航属性改为返回 <xref:System.Data.Services.Client.DataServiceCollection%601> 类的实例。 有关详细信息，请参阅[将数据绑定到控件](binding-data-to-controls-wcf-data-services.md)。
 
 4. 引发 <xref:System.Data.Services.Client.DataServiceContext.ReadingEntity> 事件。
 
@@ -49,5 +49,5 @@ ms.locfileid: "70043533"
 
 ## <a name="see-also"></a>请参阅
 
-- [查询数据服务](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)
-- [查询投影](../../../../docs/framework/data/wcf/query-projections-wcf-data-services.md)
+- [查询数据服务](querying-the-data-service-wcf-data-services.md)
+- [查询投影](query-projections-wcf-data-services.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 57d64096ea693be41359aef63c04674ca77769c6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 73c531378355100fdfca264ea9f96ff4d7c7ceda
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760975"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796685"
 ---
 # <a name="iassemblyenumgetnextassembly-method"></a>IAssemblyEnum::GetNextAssembly 方法
-获取一个指针指向下一步[IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)包含在此[IAssemblyEnum](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md)对象。  
+获取一个指针，该指针指向此[IAssemblyEnum](iassemblyenum-interface.md)对象中包含的下一个[IAssemblyName](iassemblyname-interface.md) 。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,22 +39,22 @@ HRESULT GetNextAssembly (
   
 ## <a name="parameters"></a>参数  
  `pvReserved`  
- [in]保留供将来的扩展。 `pvReserved` 必须是 null 引用。  
+ 中保留以供将来进行扩展。 `pvReserved`必须为空引用。  
   
  `ppName`  
- [out]返回`IAssemblyName`指针。  
+ 弄返回`IAssemblyName`的指针。  
   
  `dwFlags`  
- [in]保留供将来的扩展。 `dwFlags` 必须为 0 （零）。  
+ 中保留以供将来进行扩展。 `dwFlags`必须为0（零）。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../get-started/system-requirements.md)。  
   
- **标头：** Fusion.h  
+ **标头：** 合成。h  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 
-- [IAssemblyName 接口](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
-- [IAssemblyEnum 接口](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md)
+- [IAssemblyName 接口](iassemblyname-interface.md)
+- [IAssemblyEnum 接口](iassemblyenum-interface.md)

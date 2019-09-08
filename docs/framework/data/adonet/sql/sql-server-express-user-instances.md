@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00c12376-cb26-4317-86ad-e6e9c089be57
-ms.openlocfilehash: f76b1f0a09be2f745156437919f43ebaa8840519
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7cd02a0a315ffdb155af09ac4e4fabbea1724a4d
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938481"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780830"
 ---
 # <a name="sql-server-express-user-instances"></a>SQL Server Express 用户实例
 Microsoft SQL Server 学习版 (SQL Server Express) 支持用户实例功能，只有在使用用于 SQL Server 的 .NET Framework 数据提供程序 (`SqlClient`) 时该功能才可用。 用户实例是 SQL Server Express 数据库引擎的单独实例，该单独实例由父实例生成。 不是其本地计算机的管理员的用户可以将用户实例附加和连接到 SQL Server Express 数据库。 在每个用户一个实例的基础上，每个实例在单个用户的安全上下文中运行。  
@@ -24,7 +24,7 @@ Microsoft SQL Server 学习版 (SQL Server Express) 支持用户实例功能，�
 > 对于已经是其各自计算机的管理员的用户不需要用户实例，而且对于涉及多个数据库用户的方案也不需要用户实例。  
   
 ## <a name="enabling-user-instances"></a>启用用户实例  
- 若要生成用户实例，必须运行 SQL Server Express 的父实例。 默认情况下, 用户实例在安装 SQL Server Express 时处于启用状态, 并且可以由在父实例上执行**sp_configure**系统存储过程的系统管理员显式启用或禁用用户实例。  
+ 若要生成用户实例，必须运行 SQL Server Express 的父实例。 默认情况下，用户实例在安装 SQL Server Express 时处于启用状态，并且可以由在父实例上执行**sp_configure**系统存储过程的系统管理员显式启用或禁用用户实例。  
   
 ```  
 -- Enable user instances.  
@@ -125,7 +125,7 @@ private static void OpenSqlConnection()
 > 如果 `Min Pool Size` 用于其值大于 0 的连接字符串中，则连接池将始终保持几个打开的连接，且用户实例将不会自动关闭。  
   
 ## <a name="how-user-instances-work"></a>用户实例工作方式  
- 首次为每个用户生成用户实例时, **master**和**msdb**系统数据库将从模板数据文件夹复制到用户的本地应用程序数据存储库目录下的路径, 以供用户实例独占使用。 此路径通常为 `C:\Documents and Settings\<UserName>\Local Settings\Application Data\Microsoft\Microsoft SQL Server Data\SQLEXPRESS`。 启动用户实例时, **tempdb**、日志和跟踪文件也会写入此目录。 将为该实例生成一个名称，且保证此名称对每个用户均是唯一的。  
+ 首次为每个用户生成用户实例时， **master**和**msdb**系统数据库将从模板数据文件夹复制到用户的本地应用程序数据存储库目录下的路径，以供用户实例独占使用。 此路径通常为 `C:\Documents and Settings\<UserName>\Local Settings\Application Data\Microsoft\Microsoft SQL Server Data\SQLEXPRESS`。 启动用户实例时， **tempdb**、日志和跟踪文件也会写入此目录。 将为该实例生成一个名称，且保证此名称对每个用户均是唯一的。  
   
  默认情况下，会授予 Windows Builtin\Users 组的所有成员在本地实例上连接的权限，以及对 SQL Server 二进制文件进行读取和执行的权限。 验证持有用户实例的调用用户的凭据后，该用户就会成为该实例的 `sysadmin`。 只为用户实例启用共享内存，这意味着只能对本地计算机执行操作。  
   
@@ -146,13 +146,13 @@ private static void OpenSqlConnection()
   
 - 不需要共享数据的任何单用户应用程序。  
   
-- ClickOnce 部署。 如果 .NET Framework 2.0（或更高版本）和 SQL Server Express 已安装在目标计算机上，则可以由非管理员用户安装并使用通过 ClickOnce 操作而下载的安装程序包。 请注意，如果 SQL Server Express 为安装程序的一部分，则管理员必须安装 SQL Server Express。 有关详细信息, 请参阅[ClickOnce Deployment for Windows 窗体](../../../winforms/clickonce-deployment-for-windows-forms.md)。
+- ClickOnce 部署。 如果 .NET Framework 2.0（或更高版本）和 SQL Server Express 已安装在目标计算机上，则可以由非管理员用户安装并使用通过 ClickOnce 操作而下载的安装程序包。 请注意，如果 SQL Server Express 为安装程序的一部分，则管理员必须安装 SQL Server Express。 有关详细信息，请参阅[ClickOnce Deployment for Windows 窗体](../../../winforms/clickonce-deployment-for-windows-forms.md)。
   
 - 使用 Windows 身份验证的专用 ASP.NET 宿主。 Intranet 上可以承载单个 SQL Server Express 实例。 应用程序使用 ASPNET Windows 帐户进行连接，而不是使用模拟进行连接。 用户实例不应用于第三方或共享宿主方案中，在这样的方案中，所有应用程序将共享同一用户实例，而不再保持彼此独立。  
   
 ## <a name="see-also"></a>请参阅
 
-- [SQL Server 和 ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
-- [连接字符串](../../../../../docs/framework/data/adonet/connection-strings.md)
-- [连接到数据源](../../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
-- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [SQL Server 和 ADO.NET](index.md)
+- [连接字符串](../connection-strings.md)
+- [连接到数据源](../connecting-to-a-data-source.md)
+- [ADO.NET 概述](../ado-net-overview.md)

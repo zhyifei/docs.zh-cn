@@ -2,12 +2,12 @@
 title: 在 SQL Server 中启用跨数据库访问
 ms.date: 03/30/2017
 ms.assetid: 10663fb6-434c-4c81-8178-ec894b9cf895
-ms.openlocfilehash: 50e2a9149074d2d29ff2e17fa2a339bd7820b984
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: f69a405a562bfae3bc283f2b3166812046be868e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490079"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794185"
 ---
 # <a name="enabling-cross-database-access-in-sql-server"></a>在 SQL Server 中启用跨数据库访问
 当某个数据库中的某一过程依赖另一个数据库中的对象时，会发生跨数据库所有权链接。 跨数据库所有权链与单个数据库中的所有权链接的工作方式相同，不同之处在于完整的所有权链要求将所有对象拥有者映射为同一登录帐户。 如果同一登录帐户拥有源数据库中的源对象和目标数据库中的目标对象，则 SQL Server 不会检查对目标对象的权限。  
@@ -48,13 +48,13 @@ ALTER DATABASE Database2 SET DB_CHAINING ON;
   
 |资源|描述|  
 |--------------|-----------------|  
-|[通过使用 EXECUTE AS 扩展数据库模拟](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms188304(v=sql.105))并[Cross DB Ownership Chaining 选项](/sql/database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option)。|文章介绍如何配置跨数据库所有权链接的 SQL Server 实例。|  
+|[使用 EXECUTE AS](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms188304(v=sql.105))和[跨数据库所有权链接选项](/sql/database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option)扩展数据库模拟。|本文介绍如何为 SQL Server 实例配置跨数据库所有权链接。|  
   
 ## <a name="see-also"></a>请参阅
 
-- [保证 ADO.NET 应用程序的安全](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [SQL Server 安全性概述](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
-- [在 SQL Server 中使用存储过程管理权限](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)
-- [在 SQL Server 中编写安全的动态 SQL](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)
-- [在 SQL Server 中对存储过程签名](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)
-- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [保证 ADO.NET 应用程序的安全](../securing-ado-net-applications.md)
+- [SQL Server 安全性概述](overview-of-sql-server-security.md)
+- [在 SQL Server 中使用存储过程管理权限](managing-permissions-with-stored-procedures-in-sql-server.md)
+- [在 SQL Server 中编写安全的动态 SQL](writing-secure-dynamic-sql-in-sql-server.md)
+- [在 SQL Server 中对存储过程签名](signing-stored-procedures-in-sql-server.md)
+- [ADO.NET 概述](../ado-net-overview.md)

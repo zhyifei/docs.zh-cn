@@ -2,12 +2,12 @@
 title: 事务和并发性
 ms.date: 03/30/2017
 ms.assetid: f46570de-9e50-4fe6-8710-a8c31fa8569b
-ms.openlocfilehash: c78031150d9b1209372dece49813dfcf0a03b9d5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 837fe6c42d64f7416dbd895e56a38d1a409e567a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965217"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70791313"
 ---
 # <a name="transactions-and-concurrency"></a>事务和并发性
 事务由作为包执行的单个命令或一组命令组成。 通过事务可以将多个操合并为单个工作单元。 如果在事务中的某一点发生故障，则所有更新都可以回滚到其事务前状态。  
@@ -19,26 +19,26 @@ ms.locfileid: "69965217"
   
  如果一个事务涉及同一个数据库或服务器中的多个表，则存储过程中的显式事务通常可以更好地执行。 您可以通过使用 Transact-SQL `BEGIN TRANSACTION`、`COMMIT TRANSACTION` 和 `ROLLBACK TRANSACTION` 语句在 SQL Server 存储过程中创建事务。 有关更多信息，请参见 SQL Server 联机丛书。  
   
- 涉及不同资源管理器的事务 (例如 SQL Server 和 Oracle 之间的事务) 需要分布式事务。  
+ 涉及不同资源管理器的事务（例如 SQL Server 和 Oracle 之间的事务）需要分布式事务。  
   
 ## <a name="in-this-section"></a>本节内容  
- [本地事务](../../../../docs/framework/data/adonet/local-transactions.md)  
+ [本地事务](local-transactions.md)  
  演示如何对数据库执行事务。  
   
- [分布式事务](../../../../docs/framework/data/adonet/distributed-transactions.md)  
+ [分布式事务](distributed-transactions.md)  
  描述如何在 ADO.NET 中执行分布式事务。  
   
- [System.Transactions 与 SQL Server 的集成](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)  
+ [System.Transactions 与 SQL Server 的集成](system-transactions-integration-with-sql-server.md)  
  描述<xref:System.Transactions>与使用分布式事务的 SQL Server 的集成。  
   
- [开放式并发](../../../../docs/framework/data/adonet/optimistic-concurrency.md)  
+ [开放式并发](optimistic-concurrency.md)  
  描述开放式并发和保守式并发，以及如何测试并发冲突。  
   
 ## <a name="see-also"></a>请参阅
 
-- [事务基础知识](../../../../docs/framework/data/transactions/transaction-fundamentals.md)
-- [连接到数据源](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
-- [命令和参数](../../../../docs/framework/data/adonet/commands-and-parameters.md)
-- [DataAdapters 和 DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
-- [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)
-- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [事务基础知识](../transactions/transaction-fundamentals.md)
+- [连接到数据源](connecting-to-a-data-source.md)
+- [命令和参数](commands-and-parameters.md)
+- [DataAdapters 和 DataReaders](dataadapters-and-datareaders.md)
+- [DbProviderFactories](dbproviderfactories.md)
+- [ADO.NET 概述](ado-net-overview.md)

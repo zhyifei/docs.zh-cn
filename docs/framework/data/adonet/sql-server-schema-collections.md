@@ -2,15 +2,15 @@
 title: SQL Server 架构集合
 ms.date: 03/30/2017
 ms.assetid: c6403cc3-d78b-4f85-bab1-ada7a3446ec5
-ms.openlocfilehash: 79bf9f1253b64863d3eabddff8c33b6ffab70f41
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0f65bbf2534eb7167baacb1405a8ce6e9769c23f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61878453"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794333"
 ---
 # <a name="sql-server-schema-collections"></a>SQL Server 架构集合
-除了通用架构集合之外，适用于 SQL Server 的 Microsoft .NET Framework 数据提供程序还支持其他架构集合。 架构集合因使用的 SQL Server 的版本而稍有不同。 若要确定支持的架构集合的列表，请调用**GetSchema**不带任何参数，或使用架构集合名称"MetaDataCollections"的方法。 此时将返回 <xref:System.Data.DataTable>，包含支持的架构集合列表、每个架构集合支持的限制数以及所使用的标识符部分数。  
+除了通用架构集合之外，适用于 SQL Server 的 Microsoft .NET Framework 数据提供程序还支持其他架构集合。 架构集合因使用的 SQL Server 的版本而稍有不同。 若要确定支持的架构集合列表，请调用不带参数的**GetSchema**方法，或调用架构集合名称 "MetaDataCollections"。 此时将返回 <xref:System.Data.DataTable>，包含支持的架构集合列表、每个架构集合支持的限制数以及所使用的标识符部分数。  
   
 ## <a name="databases"></a>数据库  
   
@@ -51,7 +51,7 @@ ms.locfileid: "61878453"
   
 |列名|数据类型|描述|  
 |----------------|--------------|-----------------|  
-|type_desc|String|索引类型可以为以下值之一：<br /><br /> -   HEAP<br />群集<br />-非聚集<br />-   XML<br />-   SPATIAL|  
+|type_desc|String|索引类型可以为以下值之一：<br /><br /> -堆<br />-群集<br />-非聚集<br />-   XML<br />-空间|  
   
 ## <a name="indexcolumns"></a>IndexColumns  
   
@@ -147,9 +147,9 @@ ms.locfileid: "61878453"
   
 |列名|数据类型|描述|  
 |----------------|--------------|-----------------|  
-|IS_FILESTREAM|String|YES       FILESTREAM    <br /><br /> NO，如果列不具有 FILESTREAM 属性。|  
+|IS_FILESTREAM|String|YES       FILESTREAM<br /><br /> NO，如果列不具有 FILESTREAM 属性。|  
 |IS_SPARSE|String|YES，如果列是稀疏列。<br /><br /> NO，如果列不是稀疏列。|  
-|IS_COLUMN_SET|String|YES，如果列是一个列集列。<br /><br /> NO            |  
+|IS_COLUMN_SET|String|YES，如果列是一个列集列。<br /><br /> NO|  
   
 ### <a name="allcolumns-sql-server-2008"></a>AllColumns (SQL Server 2008)  
  从 .NET Framework 版本 3.5 SP1 和 SQL Server 2008 开始，添加了 AllColumns 架构集合以支持稀疏列。 早期版本的 .NET Framework 和 SQL Server 不支持 AllColumns。  
@@ -176,9 +176,9 @@ ms.locfileid: "61878453"
 |CHARACTER_SET_SCHEMA|String|始终返回 NULL。|  
 |CHARACTER_SET_NAME|String|如果此列为字符数据或文本数据类型，则返回字符集的唯一名称。 否则，返回 NULL。|  
 |COLLATION_CATALOG|String|如果列为字符数据或文本数据类型，则返回 master，指示定义分页的数据库。 否则，此列为 NULL.|  
-|IS_FILESTREAM|String|YES       FILESTREAM    <br /><br /> NO，如果列不具有 FILESTREAM 属性。|  
+|IS_FILESTREAM|String|YES       FILESTREAM<br /><br /> NO，如果列不具有 FILESTREAM 属性。|  
 |IS_SPARSE|String|YES，如果列是稀疏列。<br /><br /> NO，如果列不是稀疏列。|  
-|IS_COLUMN_SET|String|YES，如果列是一个列集列。<br /><br /> NO            |  
+|IS_COLUMN_SET|String|YES，如果列是一个列集列。<br /><br /> NO|  
   
 ### <a name="columnsetcolumns-sql-server-2008"></a>ColumnSetColumns (SQL Server 2008)  
  从 .NET Framework 版本 3.5 SP1 和 SQL Server 2008 开始，添加了 ColumnSetColumns 架构集合以支持稀疏列。 早期版本的 .NET Framework 和 SQL Server 不支持 ColumnSetColumns。 ColumnSetColumns 架构集合返回列集中所有列的架构。 下表介绍了这些列。  
@@ -203,9 +203,9 @@ ms.locfileid: "61878453"
 |CHARACTER_SET_SCHEMA|String|始终返回 NULL。|  
 |CHARACTER_SET_NAME|String|如果此列为字符数据或文本数据类型，则返回字符集的唯一名称。 否则，返回 NULL。|  
 |COLLATION_CATALOG|String|如果列为字符数据或文本数据类型，则返回 master，指示定义分页的数据库。 否则，此列为 NULL.|  
-|IS_FILESTREAM|String|YES       FILESTREAM    <br /><br /> NO，如果列不具有 FILESTREAM 属性。|  
+|IS_FILESTREAM|String|YES       FILESTREAM<br /><br /> NO，如果列不具有 FILESTREAM 属性。|  
 |IS_SPARSE|String|YES，如果列是稀疏列。<br /><br /> NO，如果列不是稀疏列。|  
-|IS_COLUMN_SET|String|YES，如果列是一个列集列。<br /><br /> NO            |  
+|IS_COLUMN_SET|String|YES，如果列是一个列集列。<br /><br /> NO|  
   
 ## <a name="users"></a>用户  
   
@@ -244,12 +244,12 @@ ms.locfileid: "61878453"
 |----------------|--------------|-----------------|  
 |assembly_name|String|程序集文件的名称。|  
 |udt_name|String|程序集的类名。|  
-|version_major|对象|主版本号。|  
-|version_minor|对象|次版本号。|  
-|version_build|对象|Build 号。|  
-|version_revision|对象|修订号。|  
-|culture_info|对象|与此 UDT 关联的区域性信息。|  
-|public_key|对象|此程序集使用的公钥。|  
+|version_major|Object|主版本号。|  
+|version_minor|Object|次版本号。|  
+|version_build|Object|Build 号。|  
+|version_revision|Object|修订号。|  
+|culture_info|Object|与此 UDT 关联的区域性信息。|  
+|public_key|Object|此程序集使用的公钥。|  
 |is_fixed_length|Boolean|指定类型的长度是否始终与 max_length 相同。|  
 |max_length|Int16|类型的最大长度（字节数）。|  
 |Create_Date|DateTime|创建/注册程序集的日期。|  
@@ -257,5 +257,5 @@ ms.locfileid: "61878453"
   
 ## <a name="see-also"></a>请参阅
 
-- [检索数据库架构信息](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
-- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [检索数据库架构信息](retrieving-database-schema-information.md)
+- [ADO.NET 概述](ado-net-overview.md)

@@ -5,23 +5,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c119657a-9ce6-4940-91e4-ac1d5f0d9584
-ms.openlocfilehash: 3bbb2e046054e35cf01fe223318a3bf560ef7253
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 86d5fc63168330502f81dfa464fcd2c04f014760
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607782"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785059"
 ---
 # <a name="adonet-code-examples"></a>ADO.NET 代码示例
 本主题中的代码列表演示如何使用下面的 ADO.NET 技术从数据库中检索数据：
 
 - ADO.NET 数据提供程序：
 
-  - [SqlClient](#sqlclient) (`System.Data.SqlClient`)
+  - [SqlClient](#sqlclient)(`System.Data.SqlClient`)
 
-  - [OleDb](#oledb) (`System.Data.OleDb`)
+  - [OleDb](#oledb)(`System.Data.OleDb`)
 
-  - [Odbc](#odbc) (`System.Data.Odbc`)
+  - [Odbc](#odbc)(`System.Data.Odbc`)
 
   - [OracleClient](#oracleclient) (`System.Data.OracleClient`)
 
@@ -29,17 +29,17 @@ ms.locfileid: "61607782"
 
   - [LINQ to Entities](#linq-to-entities)
 
-  - [类型化的 ObjectQuery](#typed-objectquery)
+  - [类型化 ObjectQuery](#typed-objectquery)
 
-  - [EntityClient](#entityclient) (`System.Data.EntityClient`)
+  - [EntityClient](#entityclient)(`System.Data.EntityClient`)
 
 - [LINQ to SQL](#linq-to-sql)
 
 ## <a name="adonet-data-provider-examples"></a>ADO.NET 数据提供程序示例
-以下代码列表演示如何使用 ADO.NET 数据提供程序从数据库中检索数据。 数据在一个 `DataReader` 中返回。 有关详细信息，请参阅[使用 DataReader 检索数据](../../../../docs/framework/data/adonet/retrieving-data-using-a-datareader.md)。
+以下代码列表演示如何使用 ADO.NET 数据提供程序从数据库中检索数据。 数据在一个 `DataReader` 中返回。 有关详细信息，请参阅[使用 DataReader 检索数据](retrieving-data-using-a-datareader.md)。
 
 ### <a name="sqlclient"></a>SqlClient
-此示例中的代码假定你可以连接到`Northwind`Microsoft SQL Server 上的示例数据库。 在此情形 5 中，示例代码创建一个 <xref:System.Data.SqlClient.SqlCommand> 以从 Products 表中选择行，并添加 <xref:System.Data.SqlClient.SqlParameter> 来将结果限制为其 UnitPrice 大于指定参数值的行。 <xref:System.Data.SqlClient.SqlConnection>内部打开`using`块中，这可确保关闭和释放在代码退出时会资源。 示例代码使用 <xref:System.Data.SqlClient.SqlDataReader> 执行命令，并在控制台窗口中显示结果。
+本示例中的代码假定您可以连接到 Microsoft SQL Server 上`Northwind`的示例数据库。 在此情形 5 中，示例代码创建一个 <xref:System.Data.SqlClient.SqlCommand> 以从 Products 表中选择行，并添加 <xref:System.Data.SqlClient.SqlParameter> 来将结果限制为其 UnitPrice 大于指定参数值的行。 在<xref:System.Data.SqlClient.SqlConnection> 块`using`中打开，这可确保在代码退出时关闭并释放资源。 示例代码使用 <xref:System.Data.SqlClient.SqlDataReader> 执行命令，并在控制台窗口中显示结果。
 
  [!code-csharp[DataWorks SampleApp.SqlClient#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SampleApp.SqlClient/CS/source.cs#1)]
  [!code-vb[DataWorks SampleApp.SqlClient#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SampleApp.SqlClient/VB/source.vb#1)]
@@ -51,7 +51,7 @@ ms.locfileid: "61607782"
  [!code-vb[DataWorks SampleApp.OleDb#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SampleApp.OleDb/VB/source.vb#1)]
 
 ### <a name="odbc"></a>Odbc
-此示例中的代码假定你可以连接到 Microsoft Access Northwind 示例数据库。 在此情形 5 中，示例代码创建一个 <xref:System.Data.Odbc.OdbcCommand> 以从 Products 表中选择行，并添加 <xref:System.Data.Odbc.OdbcParameter> 来将结果限制为其 UnitPrice 大于指定参数值的行。 <xref:System.Data.Odbc.OdbcConnection>内部打开`using`块中，这可确保关闭和释放在代码退出时会资源。 示例代码使用 <xref:System.Data.Odbc.OdbcDataReader> 执行命令，并在控制台窗口中显示结果。
+此示例中的代码假定你可以连接到 Microsoft Access Northwind 示例数据库。 在此情形 5 中，示例代码创建一个 <xref:System.Data.Odbc.OdbcCommand> 以从 Products 表中选择行，并添加 <xref:System.Data.Odbc.OdbcParameter> 来将结果限制为其 UnitPrice 大于指定参数值的行。 在<xref:System.Data.Odbc.OdbcConnection> 块`using`中打开，这可确保在代码退出时关闭并释放资源。 示例代码使用 <xref:System.Data.Odbc.OdbcDataReader> 执行命令，并在控制台窗口中显示结果。
 
 [!code-csharp[DataWorks SampleApp.Odbc#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SampleApp.Odbc/CS/source.cs#1)] 
 [!code-vb[DataWorks SampleApp.Odbc#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SampleApp.Odbc/VB/source.vb#1)] 
@@ -63,10 +63,10 @@ ms.locfileid: "61607782"
  [!code-vb[DataWorks SampleApp.Oracle#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SampleApp.Oracle/VB/source.vb#1)]
 
 ## <a name="entity-framework-examples"></a>实体框架示例
-以下代码列表演示如何通过查询实体数据模型 (EDM) 中的实体来从数据源检索数据。 这些示例使用基于 Northwind 示例数据库的模型。 有关实体框架的详细信息，请参阅[实体框架概述](../../../../docs/framework/data/adonet/ef/overview.md)。
+以下代码列表演示如何通过查询实体数据模型 (EDM) 中的实体来从数据源检索数据。 这些示例使用基于 Northwind 示例数据库的模型。 有关实体框架的详细信息，请参阅[实体框架概述](./ef/overview.md)。
 
 ### <a name="linq-to-entities"></a>LINQ to Entities
-此示例中的代码使用 LINQ 查询以 Categories 对象的形式返回数据，这些对象将作为仅包含 CategoryID 和 CategoryName 属性的匿名类型提取。 有关详细信息，请参阅[LINQ to Entities 概述](../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)。
+此示例中的代码使用 LINQ 查询以 Categories 对象的形式返回数据，这些对象将作为仅包含 CategoryID 和 CategoryName 属性的匿名类型提取。 有关详细信息，请参阅[LINQ to Entities 概述](./ef/language-reference/linq-to-entities.md)。
 
 ```csharp
 using System;
@@ -187,7 +187,7 @@ End Class
 ```
 
 ### <a name="entityclient"></a>EntityClient
-此示例中的代码使用 <xref:System.Data.EntityClient.EntityCommand> 来执行实体 SQL 查询。 此查询会返回表示 Categories 实体类型的实例的记录的列表。 <xref:System.Data.EntityClient.EntityDataReader> 用于访问结果集中的数据记录。 有关详细信息，请参阅[针对实体框架的 EntityClient Provider](../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)。
+此示例中的代码使用 <xref:System.Data.EntityClient.EntityCommand> 来执行实体 SQL 查询。 此查询会返回表示 Categories 实体类型的实例的记录的列表。 <xref:System.Data.EntityClient.EntityDataReader> 用于访问结果集中的数据记录。 有关详细信息，请参阅[实体框架的 EntityClient Provider](./ef/entityclient-provider-for-the-entity-framework.md)。
 
 ```csharp
 using System;
@@ -271,7 +271,7 @@ End Class
 ```
 
 ## <a name="linq-to-sql"></a>LINQ to SQL
-此示例中的代码使用 LINQ 查询以 Categories 对象的形式返回数据，这些对象将作为仅包含 CategoryID 和 CategoryName 属性的匿名类型提取。 此示例基于 Northwind 数据上下文。 有关详细信息，请参阅[入门](../../../../docs/framework/data/adonet/sql/linq/getting-started.md)。
+此示例中的代码使用 LINQ 查询以 Categories 对象的形式返回数据，这些对象将作为仅包含 CategoryID 和 CategoryName 属性的匿名类型提取。 此示例基于 Northwind 数据上下文。 有关详细信息，请参阅[入门](./sql/linq/getting-started.md)。
 
 ```csharp
 using System;
@@ -345,9 +345,8 @@ End Class
 
 ## <a name="see-also"></a>请参阅
 
-- [ADO.NET 概述](../../../../docs/framework/data/adonet/ado-net-overview.md)
-- [在 ADO.NET 中检索和修改数据](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
+- [ADO.NET 概述](ado-net-overview.md)
+- [在 ADO.NET 中检索和修改数据](retrieving-and-modifying-data.md)
 - [创建数据应用程序](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/h0y4a0f6(v=vs.120))
-- [查询实体数据模型 （实体框架任务）](https://docs.microsoft.com/previous-versions/bb738455(v=vs.90))
+- [查询实体数据模型（实体框架任务）](https://docs.microsoft.com/previous-versions/bb738455(v=vs.90))
 - [如何：执行返回匿名类型对象的查询](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738512(v=vs.100))
-- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

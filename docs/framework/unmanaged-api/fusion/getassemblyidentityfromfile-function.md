@@ -18,15 +18,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 581c675cfb69503e6366471a469ffed1a2d13b1a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2657ac619bb86bc200de9ce229bf82e4339f78d6
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745226"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796294"
 ---
 # <a name="getassemblyidentityfromfile-function"></a>GetAssemblyIdentityFromFile 函数
-获取一个指向`IUnknown`对象具有指定`IID`中程序集在指定的文件路径。  
+获取一个指针，该`IUnknown`指针指向在指定`IID`文件路径的程序集中具有指定的对象。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,22 +40,22 @@ HRESULT GetAssemblyIdentityFromFile (
   
 ## <a name="parameters"></a>参数  
  `pwzFilePath`  
- [in]为请求的程序集是有效路径。  
+ 中请求的程序集的有效路径。  
   
  `riid`  
- [in]`IID`要返回的接口。  
+ 中`IID`要返回的接口的。  
   
  `ppIdentity`  
- [out]返回的接口指针。  
+ 弄返回的接口指针。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../get-started/system-requirements.md)。  
   
- **标头：** Fusion.h  
+ **标头：** 合成。h  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 
 - [IUnknown](/cpp/atl/iunknown)
-- [合成全局静态函数](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+- [合成全局静态函数](fusion-global-static-functions.md)

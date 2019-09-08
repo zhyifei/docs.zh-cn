@@ -8,16 +8,16 @@ helpviewer_keywords:
 - claims [WCF], comparing
 - claims [WCF]
 ms.assetid: 0c4ec84d-53df-408f-8953-9bc437f56c28
-ms.openlocfilehash: e2d3d33900dd894eea77420aac444ebde0df9a43
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 29254bd661e72b926b21695ccb646480c53b5475
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68970766"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797097"
 ---
 # <a name="how-to-compare-claims"></a>如何：比较声明
 
-Windows Communication Foundation (WCF) 中的标识模型基础结构用于执行授权检查。 因此，一个常见的任务是将授权上下文中的声明与执行请求的操作或访问请求的资源所需的声明进行比较。 本主题说明如何比较声明，包括内置和自定义声明类型。 有关标识模型基础结构的详细信息, 请参阅[通过标识模型管理声明和授权](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)。
+Windows Communication Foundation （WCF）中的标识模型基础结构用于执行授权检查。 因此，一个常见的任务是将授权上下文中的声明与执行请求的操作或访问请求的资源所需的声明进行比较。 本主题说明如何比较声明，包括内置和自定义声明类型。 有关标识模型基础结构的详细信息，请参阅[通过标识模型管理声明和授权](../feature-details/managing-claims-and-authorization-with-the-identity-model.md)。
 
 声明比较包括将一个声明的三个部分（类型、权限和资源）与另一个声明中的相同部分进行比较，以确定它们是否相等。 请参见以下示例。
 
@@ -31,7 +31,7 @@ Windows Communication Foundation (WCF) 中的标识模型基础结构用于执�
 [!code-csharp[c_CustomClaimComparison#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customclaimcomparison/cs/c_customclaimcomparison.cs#4)]
 [!code-vb[c_CustomClaimComparison#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaimcomparison/vb/source.vb#4)]
 
-此<xref:System.IdentityModel.Claims.Claim.Equals%2A>方法中的比较代码返回`true`, 假设`example\someone`将同一个域用户标识为someone@example.com""。
+此<xref:System.IdentityModel.Claims.Claim.Equals%2A>方法中的比较代码返回`true`，假设`example\someone`将同一个域用户标识为someone@example.com""。
 
 还可以使用 <xref:System.IdentityModel.Claims.Claim.Equals%2A> 方法比较自定义声明类型。 但是，在声明的 <xref:System.IdentityModel.Claims.Claim.Resource%2A> 属性返回的类型不是基元类型的情况下，只有当 <xref:System.IdentityModel.Claims.Claim.Equals%2A> 属性返回的值依据 `true` 方法相等时，`Resource` 才会返回 <xref:System.IdentityModel.Claims.Claim.Equals%2A>。 当此情况不适用时，`Resource` 属性返回的自定义类型应该重写 <xref:System.IdentityModel.Claims.Claim.Equals%2A> 和 <xref:System.Object.GetHashCode%2A> 方法，以执行任何必要的自定义处理。
 
@@ -74,5 +74,5 @@ Windows Communication Foundation (WCF) 中的标识模型基础结构用于执�
 
 ## <a name="see-also"></a>请参阅
 
-- [使用标识模型管理声明和授权](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
-- [如何：创建自定义声明](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)
+- [使用标识模型管理声明和授权](../feature-details/managing-claims-and-authorization-with-the-identity-model.md)
+- [如何：创建自定义声明](how-to-create-a-custom-claim.md)

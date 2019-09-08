@@ -1,6 +1,6 @@
 ---
-title: BlessIWbemServicesObject 函数 （非托管 API 参考）
-description: BlessIWbemServicesObject 函数指示用户凭据是否允许 IWbemServices 对象的访问权限
+title: BlessIWbemServicesObject 函数（非托管 API 参考）
+description: BlessIWbemServicesObject 函数指示用户凭据是否允许访问 IWbemServices 对象
 ms.date: 11/06/2017
 api_name:
 - BlessIWbemServicesObject
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b7f24606e3b021b0df5bdbaab795e4f672f724fa
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 94c6f47e67cf22f189719a8a9f56e830ee90227c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761710"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798728"
 ---
 # <a name="blessiwbemservicesobject-function"></a>BlessIWbemServicesObject 函数
-指示用户凭据是否允许访问指定[IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices)对象。 
+指示用户凭据是否允许访问指定的[IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices)对象。 
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
 
@@ -44,38 +44,38 @@ HRESULT BlessIWbemServicesObject (
 ## <a name="parameters"></a>参数
 
 `pIWbemServices`\
-[in]指向 WMI 服务对象的指针。
+中指向 WMI 服务对象的指针。
 
 `strUser`\
-[in]用户名称。
+中用户名。
 
 `strPassword`\
-[in]与关联的密码`strUser`。
+中与`strUser`关联的密码。
 
 `strAuthority`\
-[in]用户的域名。 请参阅[ConnectServerWmi](connectserverwmi.md)函数的详细信息。
+中用户的域名。 有关详细信息，请参阅[ConnectServerWmi](connectserverwmi.md)函数。
 
 `impLevel`\
-[in]模拟级别。
+中模拟级别。
 
 `authnLevel`\
-[in]授权级别。
+中授权级别。
 
 ## <a name="return-value"></a>返回值
 
-此函数返回以下值中定义*WinError.h*标头文件，也可以在定义它们为常量在代码中：
+此函数返回的以下值是在*winerror.h*头文件中定义的，也可以在代码中将它们定义为常量：
 
 |返回的常量  |值  |描述  |
 |---------|---------|---------|
-| `E_INVALIDARG` | 0x80070057 | 一个或多个参数均无效。 |
+| `E_INVALIDARG` | 0x80070057 | 一个或多个参数无效。 |
 | `E_POINTER` | 0x80004003 | `pIWbemServices` 为 `null`。 | 
-| `E_FAIL` | 0x80000008 | 发生未知的错误。 |
-| `E_OUTOFMEMORY` | 0x80000002 | 没有足够的内存是可用于执行该操作。 | 
+| `E_FAIL` | 0x80000008 | 发生了未指定的错误。 |
+| `E_OUTOFMEMORY` | 0x80000002 | 内存不足，无法执行此操作。 | 
 | `S_OK` | 0 | 函数调用成功。 | 
 
 ## <a name="requirements"></a>要求
 
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。
+ **适用**请参阅[系统需求](../../get-started/system-requirements.md)。
 
  **标头：** WMINet_Utils.idl
 
@@ -83,4 +83,4 @@ HRESULT BlessIWbemServicesObject (
 
 ## <a name="see-also"></a>请参阅
 
-- [WMI 和性能计数器 （非托管 API 参考）](index.md)
+- [WMI 和性能计数器（非托管 API 参考）](index.md)

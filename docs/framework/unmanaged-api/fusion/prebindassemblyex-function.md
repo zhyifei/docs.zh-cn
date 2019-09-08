@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a23d3c4fd8eef2e361abf1602157cb4fbb820b48
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8aa2d174200db76f5c7a6db43e14bb6904604226
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67773859"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796338"
 ---
 # <a name="prebindassemblyex-function"></a>PreBindAssemblyEx 函数
-获取程序集的策略后的显示名称。  
+获取程序集的策略后显示名称。  
   
- 此函数支持.NET Framework 基础结构，不应在代码中直接使用。  
+ 此函数支持 .NET Framework 基础结构，不应在代码中直接使用。  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,35 +43,35 @@ HRESULT PreBindAssemblyEx (
   
 ## <a name="parameters"></a>参数  
  `pAppCtx`  
- [in]标识应用程序上下文。  
+ 中标识应用程序上下文。  
   
  `pName`  
- [in]标识程序集名称。  
+ 中标识程序集名称。  
   
  `pAsmParent`  
- [in]标识父程序集。 忽略此参数。  
+ 中标识父程序集。 忽略此参数。  
   
  `pwzRuntimeVersion`  
- [in]标识运行时版本。  
+ 中标识运行时版本。  
   
  `ppNamePostPolicy`  
- [out]包含策略后的显示名称。  
+ 弄包含策略后显示名称。  
   
  `pvReserved`  
- [in]保留供将来的扩展。 `pvReserved` 必须是 null 引用。  
+ 中保留以供将来进行扩展。 `pvReserved`必须为空引用。  
   
 ## <a name="remarks"></a>备注  
- `ppNamePostPolicy`仅当该函数将返回 HRESULT FUSION_E_REF_DEF_MISMATCH 设置输出参数。 否则，它为 null。  
+ 仅当函数返回 HRESULT FUSION_E_REF_DEF_MISMATCH 时才设置output参数。`ppNamePostPolicy` 否则为 null。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../get-started/system-requirements.md)。  
   
- **标头：** Fusion.h  
+ **标头：** 合成。h  
   
- **库：** 包含为 MsCorEE.dll 中的资源  
+ **类库**作为资源包括在 Mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 
-- [合成全局静态函数](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+- [合成全局静态函数](fusion-global-static-functions.md)

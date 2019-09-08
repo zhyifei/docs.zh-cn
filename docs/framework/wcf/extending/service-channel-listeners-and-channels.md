@@ -2,16 +2,16 @@
 title: 服务：通道侦听器和通道
 ms.date: 03/30/2017
 ms.assetid: 8ccbe0e8-7e55-441d-80de-5765f67542fa
-ms.openlocfilehash: 88bfdc879e4f3c7df6b2c4035c7ed7fdc2b4c41d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0a740f5dcf682c3c140adb9c4c7c9678c4eae132
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61771446"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797183"
 ---
 # <a name="service-channel-listeners-and-channels"></a>服务：通道侦听器和通道
 
-有三个类别的通道对象： 通道、 通道侦听器和通道工厂。 通道是应用程序和通道堆栈之间的接口。 通道侦听器负责在接收（即侦听）端创建通道，这通常是为了响应新传入的消息或连接。 通道工厂负责在发送端创建通道，以便启动与终结点的通信。
+有三种类别的通道对象：通道、通道侦听器和通道工厂。 通道是应用程序和通道堆栈之间的接口。 通道侦听器负责在接收（即侦听）端创建通道，这通常是为了响应新传入的消息或连接。 通道工厂负责在发送端创建通道，以便启动与终结点的通信。
 
 ## <a name="channel-listeners-and-channels"></a>通道侦听器和通道
 
@@ -25,21 +25,21 @@ ms.locfileid: "61771446"
 
 该过程在概念上可建模为每个通道中的一个队列，尽管在具体实现中可能并不实际使用队列。 通道侦听器负责从下面的层或者从网络接收消息，并将收到的消息放入队列。 通道负责从队列中获取消息，并在上面的层请求消息（例如通过对通道调用 `Receive`）时将收到的消息传送到该层。
 
-WCF 为此过程提供基类帮助器。 (在本文中讨论的通道帮助器类的一个关系图，请参阅[通道模型概述](channel-model-overview.md)。)
+WCF 为此过程提供基类帮助程序。 （有关本文中讨论的通道帮助器类的图，请参阅[通道模型概述](channel-model-overview.md)。）
 
-- <xref:System.ServiceModel.Channels.CommunicationObject>类实现<xref:System.ServiceModel.ICommunicationObject>并强制执行的步骤 2 中所述的状态机[开发通道](developing-channels.md)。
+- 类实现<xref:System.ServiceModel.ICommunicationObject>并强制执行[开发通道](developing-channels.md)的步骤2中所述的状态机。 <xref:System.ServiceModel.Channels.CommunicationObject>
 
 - <xref:System.ServiceModel.Channels.ChannelManagerBase> 类实现 <xref:System.ServiceModel.Channels.CommunicationObject> 并为 <xref:System.ServiceModel.Channels.ChannelFactoryBase> 和 <xref:System.ServiceModel.Channels.ChannelListenerBase> 提供统一的基类。 <xref:System.ServiceModel.Channels.ChannelManagerBase> 类与 <xref:System.ServiceModel.Channels.ChannelBase>（用来实现 <xref:System.ServiceModel.Channels.IChannel> 的基类）结合使用。
 
-- <xref:System.ServiceModel.Channels.ChannelFactoryBase>类实现<xref:System.ServiceModel.Channels.ChannelManagerBase>并<xref:System.ServiceModel.Channels.IChannelFactory>并将合并`CreateChannel`成一个重载`OnCreateChannel`抽象方法。
+- <xref:System.ServiceModel.Channels.ChannelFactoryBase>类实现<xref:System.ServiceModel.Channels.ChannelManagerBase>和`OnCreateChannel` ，并将`CreateChannel`重载合并到一个抽象方法中。 <xref:System.ServiceModel.Channels.IChannelFactory>
 
 - <xref:System.ServiceModel.Channels.ChannelListenerBase> 类实现 <xref:System.ServiceModel.Channels.IChannelListener>。 它负责执行基本状态管理。
 
-下面的讨论基于[传输：UDP](../../../../docs/framework/wcf/samples/transport-udp.md)示例。
+以下讨论基于[传输：UDP](../samples/transport-udp.md)示例。
 
 ## <a name="creating-a-channel-listener"></a>创建通道侦听器
 
-`UdpChannelListener`该示例实现派生自<xref:System.ServiceModel.Channels.ChannelListenerBase>类。 它使用单个 UDP 套接字来接收数据报。 `OnOpen` 方法使用该 UDP 套接字以异步循环形式接收数据。 收到的数据随后将借助于消息编码系统转换为消息：
+示例实现的派生<xref:System.ServiceModel.Channels.ChannelListenerBase>自类。 `UdpChannelListener` 它使用单个 UDP 套接字来接收数据报。 `OnOpen` 方法使用该 UDP 套接字以异步循环形式接收数据。 收到的数据随后将借助于消息编码系统转换为消息：
 
 ```csharp
 message = UdpConstants.MessageEncoder.ReadMessage(
@@ -48,7 +48,7 @@ message = UdpConstants.MessageEncoder.ReadMessage(
 );
 ```
 
-由于可以用同一个数据报通道来表示来自多个源的消息，因此 `UdpChannelListener` 是一个单一实例侦听器。 最多一个活动没有<xref:System.ServiceModel.Channels.IChannel>一次与此侦听器相关联。 只有当随后释放了由 <xref:System.ServiceModel.Channels.ChannelListenerBase%601.AcceptChannel%2A> 方法返回的通道时，该示例才生成另一个通道。 收到一条消息后，它是此单一实例通道中的排队。
+由于可以用同一个数据报通道来表示来自多个源的消息，因此 `UdpChannelListener` 是一个单一实例侦听器。 一次最多有一个<xref:System.ServiceModel.Channels.IChannel>与此侦听器关联的活动。 只有当随后释放了由 <xref:System.ServiceModel.Channels.ChannelListenerBase%601.AcceptChannel%2A> 方法返回的通道时，该示例才生成另一个通道。 接收到消息时，它将排队传入此单独通道。
 
 ### <a name="udpinputchannel"></a>UdpInputChannel
 

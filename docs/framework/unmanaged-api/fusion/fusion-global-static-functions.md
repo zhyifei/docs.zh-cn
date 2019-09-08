@@ -8,70 +8,70 @@ helpviewer_keywords:
 ms.assetid: 229b2188-9168-4b44-a987-e1f515494688
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 86cb59c0935c193a9865d5ace5fe11c96226d9e8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6a8f15bc862c0486311960f7567c49424859846e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697714"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795312"
 ---
 # <a name="fusion-global-static-functions"></a>合成全局静态函数
-本部分描述合成 API 使用的非托管全局静态函数。  
+本部分介绍了合成 API 使用的非托管全局静态函数。  
   
 ## <a name="in-this-section"></a>本节内容  
- [ClearDownloadCache 函数](../../../../docs/framework/unmanaged-api/fusion/cleardownloadcache-function.md)  
- 清除下载的程序集的全局程序集缓存。  
+ [ClearDownloadCache 函数](cleardownloadcache-function.md)  
+ 清除已下载程序集的全局程序集缓存。  
   
- [CompareAssemblyIdentity 函数](../../../../docs/framework/unmanaged-api/fusion/compareassemblyidentity-function.md)  
- 比较两个程序集标识，以确定它们是否等效。  
+ [CompareAssemblyIdentity 函数](compareassemblyidentity-function.md)  
+ 比较两个程序集标识以确定它们是否等效。  
   
- [CreateApplicationContext 函数](../../../../docs/framework/unmanaged-api/fusion/createapplicationcontext-function.md)  
- 仅供内部使用。 （此函数支持.NET Framework 基础结构，不应在代码中直接使用。）  
+ [CreateApplicationContext 函数](createapplicationcontext-function.md)  
+ 仅限内部。 （此函数支持 .NET Framework 基础结构，不应在代码中直接使用。）  
   
- [CreateAssemblyCache 函数](../../../../docs/framework/unmanaged-api/fusion/createassemblycache-function.md)  
- 获取一个指向到新[IAssemblyCache](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)实例，它表示全局程序集缓存。  
+ [CreateAssemblyCache 函数](createassemblycache-function.md)  
+ 获取一个指针，该指针指向表示全局程序集缓存的新[IAssemblyCache](iassemblycache-interface.md)实例。  
   
- [CreateAssemblyEnum 函数](../../../../docs/framework/unmanaged-api/fusion/createassemblyenum-function.md)  
- 获取一个指向[IAssemblyEnum](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md)实例，它表示位于指定的程序集的对象的列表。  
+ [CreateAssemblyEnum 函数](createassemblyenum-function.md)  
+ 获取一个指针，该指针指向表示存在于指定程序集中的对象的列表的[IAssemblyEnum](iassemblyenum-interface.md)实例。  
   
- [CreateAssemblyNameObject 函数](../../../../docs/framework/unmanaged-api/fusion/createassemblynameobject-function.md)  
- 获取一个指向[IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)实例，它表示具有指定名称的程序集的唯一标识。  
+ [CreateAssemblyNameObject 函数](createassemblynameobject-function.md)  
+ 获取一个指针，该指针指向表示具有指定名称的程序集的唯一标识的[IAssemblyName](iassemblyname-interface.md)实例。  
   
- [CreateHistoryReader 函数](../../../../docs/framework/unmanaged-api/fusion/createhistoryreader-function.md)  
- 创建指定的文件的历史记录读取。  
+ [CreateHistoryReader 函数](createhistoryreader-function.md)  
+ 为指定的文件创建历史记录读取器。  
   
- [CreateInstallReferenceEnum 函数](../../../../docs/framework/unmanaged-api/fusion/createinstallreferenceenum-function.md)  
- 获取一个指向[IInstallReferenceEnum](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceenum-interface.md)实例，它表示对指定的程序集的应用程序的引用的列表。  
+ [CreateInstallReferenceEnum 函数](createinstallreferenceenum-function.md)  
+ 获取一个指针，该指针指向表示应用程序对指定程序集的引用列表的[IInstallReferenceEnum](iinstallreferenceenum-interface.md)实例。  
   
- [GetAppIdAuthority 函数](../../../../docs/framework/unmanaged-api/fusion/getappidauthority-function.md)  
- 获取一个指向[IAppIdAuthority](../../../../docs/framework/unmanaged-api/fusion/iappidauthority-interface.md)管理密钥的应用程序标识和引用的实例。  
+ [GetAppIdAuthority 函数](getappidauthority-function.md)  
+ 获取一个指针，该指针指向管理应用程序标识和引用的密钥的[IAppIdAuthority](iappidauthority-interface.md)实例。  
   
- [GetAssemblyIdentityFromFile 函数](../../../../docs/framework/unmanaged-api/fusion/getassemblyidentityfromfile-function.md)  
- 获取一个指向`IUnknown`对象具有指定`IID`中程序集在指定的文件路径。  
+ [GetAssemblyIdentityFromFile 函数](getassemblyidentityfromfile-function.md)  
+ 获取一个指针，该`IUnknown`指针指向在指定`IID`文件路径的程序集中具有指定的对象。  
   
- [GetCachePath 函数](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md)  
- 获取使用指定的标志的缓存程序集的路径。  
+ [GetCachePath 函数](getcachepath-function.md)  
+ 使用指定的标志获取缓存的程序集的路径。  
   
- [GetHistoryFileDirectory 函数](../../../../docs/framework/unmanaged-api/fusion/gethistoryfiledirectory-function.md)  
+ [GetHistoryFileDirectory 函数](gethistoryfiledirectory-function.md)  
  检索应用程序历史记录目录的路径。  
   
- [GetIdentityAuthority 函数](../../../../docs/framework/unmanaged-api/fusion/getidentityauthority-function.md)  
- 获取一个指向[IIdentityAuthority](../../../../docs/framework/unmanaged-api/fusion/iidentityauthority-interface.md)管理密钥的代码对象的实例。  
+ [GetIdentityAuthority 函数](getidentityauthority-function.md)  
+ 获取一个指针，该指针指向管理代码对象的键的[IIdentityAuthority](iidentityauthority-interface.md)实例。  
   
- [IsFrameworkAssembly 函数](../../../../docs/framework/unmanaged-api/fusion/isframeworkassembly-function.md)  
- 获取一个值，该值指示指定的程序集是否已托管。  
+ [IsFrameworkAssembly 函数](isframeworkassembly-function.md)  
+ 获取一个值，该值指示是否托管指定的程序集。  
   
- [NukeDownloadedCache 函数](../../../../docs/framework/unmanaged-api/fusion/nukedownloadedcache-function.md)  
+ [NukeDownloadedCache 函数](nukedownloadedcache-function.md)  
  删除公共语言运行时下载缓存。  
   
- [PreBindAssemblyEx 函数](../../../../docs/framework/unmanaged-api/fusion/prebindassemblyex-function.md)  
- 获取程序集的策略后的显示名称。  
+ [PreBindAssemblyEx 函数](prebindassemblyex-function.md)  
+ 获取程序集的策略后显示名称。  
   
 ## <a name="related-sections"></a>相关章节  
- [合成接口](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)  
+ [合成接口](fusion-interfaces.md)  
   
- [合成枚举](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)  
+ [合成枚举](fusion-enumerations.md)  
   
- [合成结构](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)  
+ [合成结构](fusion-structures.md)  
   
- [全局程序集缓存](../../../../docs/framework/app-domains/gac.md)
+ [全局程序集缓存](../../app-domains/gac.md)

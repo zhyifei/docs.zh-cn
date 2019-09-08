@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 531f9167a931d6b972e47e120950197bed11c07e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 63c1cb3c417e8e521c6ac8417d260ccb937863f8
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778705"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796748"
 ---
 # <a name="iassemblycacheuninstallassembly-method"></a>IAssemblyCache::UninstallAssembly 方法
 从全局程序集缓存中卸载指定的程序集。  
@@ -40,36 +40,36 @@ HRESULT UninstallAssembly (
   
 ## <a name="parameters"></a>参数  
  `dwFlags`  
- [in]包括的标志。  
+ 中在合成 .idl 中定义的标志。  
   
  `pszAssemblyName`  
- [in]要卸载的程序集的名称。  
+ 中要卸载的程序集的名称。  
   
  `pRefData`  
- [in]一个[FUSION_INSTALL_REFERENCE](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md)结构，它包含程序集安装数据。  
+ 中包含程序集的安装数据的[FUSION_INSTALL_REFERENCE](fusion-install-reference-structure.md)结构。  
   
  `pulDisposition`  
- [out，optional]包括的处置值之一。 可能的值包括：  
+ [out，optional]在合成 .idl 中定义的一个处置值。 可能的值包括：  
   
-- IASSEMBLYCACHE_UNINSTALL_DISPOSITION_UNINSTALLED (1)  
+- IASSEMBLYCACHE_UNINSTALL_DISPOSITION_UNINSTALLED （1）  
   
-- IASSEMBLYCACHE_UNINSTALL_DISPOSITION_STILL_IN_USE (2)  
+- IASSEMBLYCACHE_UNINSTALL_DISPOSITION_STILL_IN_USE （2）  
   
-- IASSEMBLYCACHE_UNINSTALL_DISPOSITION_ALREADY_UNINSTALLED (3)  
+- IASSEMBLYCACHE_UNINSTALL_DISPOSITION_ALREADY_UNINSTALLED （3）  
   
-- IASSEMBLYCACHE_UNINSTALL_DISPOSITION_DELETE_PENDING (4)  
+- IASSEMBLYCACHE_UNINSTALL_DISPOSITION_DELETE_PENDING （4）  
   
-- IASSEMBLYCACHE_UNINSTALL_DISPOSITION_HAS_INSTALL_REFERENCES (5)  
+- IASSEMBLYCACHE_UNINSTALL_DISPOSITION_HAS_INSTALL_REFERENCES （5）  
   
-- IASSEMBLYCACHE_UNINSTALL_DISPOSITION_REFERENCE_NOT_FOUND (6)  
+- IASSEMBLYCACHE_UNINSTALL_DISPOSITION_REFERENCE_NOT_FOUND （6）  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../get-started/system-requirements.md)。  
   
- **标头：** Fusion.h  
+ **标头：** 合成。h  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 
-- [IAssemblyCache 接口](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
+- [IAssemblyCache 接口](iassemblycache-interface.md)

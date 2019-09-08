@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6d1f5988266fcbfc18ee937b6e7fdb1829646fa9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 380181d8e309ba4b51d49aae9159f0bbf7e0250f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778685"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796719"
 ---
 # <a name="iassemblycacheitemcommit-method"></a>IAssemblyCacheItem::Commit 方法
-提交对内存的缓存程序集引用。  
+将缓存的程序集引用提交到内存。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,18 +38,18 @@ HRESULT Commit (
   
 ## <a name="parameters"></a>参数  
  `dwFlags`  
- [in]包括的标志。  
+ 中在合成 .idl 中定义的标志。  
   
  `pulDisposition`  
- [out，optional]一个值，指示操作的结果。  
+ [out，optional]一个指示操作结果的值。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../get-started/system-requirements.md)。  
   
- **标头：** Fusion.h  
+ **标头：** 合成。h  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 
-- [IAssemblyCacheItem 接口](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)
+- [IAssemblyCacheItem 接口](iassemblycacheitem-interface.md)

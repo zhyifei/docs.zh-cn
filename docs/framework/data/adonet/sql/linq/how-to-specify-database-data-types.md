@@ -2,15 +2,15 @@
 title: 如何：指定数据库数据类型
 ms.date: 03/30/2017
 ms.assetid: 2228fdad-7e6a-4b1b-b4d1-79d0198b7c28
-ms.openlocfilehash: 67f23ff06aefbcff4ba7e2eaab63d9b8493b9717
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 09ca8dc6fa440138523bcd2905335a04517dd806
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033665"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793270"
 ---
 # <a name="how-to-specify-database-data-types"></a>如何：指定数据库数据类型
-使用[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<xref:System.Data.Linq.Mapping.ColumnAttribute.DbType%2A>属性上的<xref:System.Data.Linq.Mapping.ColumnAttribute>属性指定定义 T-SQL 表声明中的列的确切文本。  
+使用[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 特性<xref:System.Data.Linq.Mapping.ColumnAttribute>上的<xref:System.Data.Linq.Mapping.ColumnAttribute.DbType%2A>属性可以指定在 t-sql 表声明中定义列的确切文本。  
   
  仅当您打算使用 <xref:System.Data.Linq.Mapping.ColumnAttribute.DbType%2A> 来创建数据库实例时，才必须指定 <xref:System.Data.Linq.DataContext.CreateDatabase%2A> 属性。  
   
@@ -24,5 +24,5 @@ ms.locfileid: "62033665"
   
 ## <a name="see-also"></a>请参阅
 
-- [LINQ to SQL 对象模型](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)
-- [如何：通过使用代码编辑器自定义实体类](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)
+- [LINQ to SQL 对象模型](the-linq-to-sql-object-model.md)
+- [如何：使用代码编辑器自定义实体类](how-to-customize-entity-classes-by-using-the-code-editor.md)

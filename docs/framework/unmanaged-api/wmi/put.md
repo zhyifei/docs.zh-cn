@@ -1,6 +1,6 @@
 ---
-title: Put 的函数 （非托管 API 参考）
-description: Put 函数将新值分配给命名的属性。
+title: Put 函数（非托管 API 参考）
+description: Put 函数为命名属性分配一个新值。
 ms.date: 11/06/2017
 api_name:
 - Put
@@ -16,14 +16,14 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6fba929e5a1a1e4c2b69e15bf6c855211e25a67a
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 5aa629c2d07fb25db035cd80aba3c74413070e6e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636625"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798396"
 ---
-# <a name="put-function"></a>Put 的函数
+# <a name="put-function"></a>Put 函数
 
 将命名属性设置为新值。
 
@@ -45,62 +45,62 @@ HRESULT Put (
 ## <a name="parameters"></a>参数
 
 `vFunc`\
-[in]此参数是未使用。
+中此参数未使用。
 
 `ptr`\
-[in]一个指向[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)实例。
+中指向[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)实例的指针。
 
 `wszName`\
-[in]属性的名称。 此参数不能为 `null`。
+中属性的名称。 此参数不能为 `null`。
 
 `lFlags`\
-[in] 保留。 此参数必须为 0。
+[in] 保留。 此参数必须为0。
 
 `pVal`\
-[in]指向一个有效的指针`VARIANT`该按钮将变为新的属性值。 如果`pVal`是`null`或指向`VARIANT`类型的`VT_NULL`，该属性设置为`null`。
+中指向作为新属性值`VARIANT`的有效的指针。 如果`pVal`为`null`或指向`null`类型`VARIANT` 的，则将`VT_NULL`属性设置为。
 
 `vtType`\
-[in]类型`VARIANT`指向的`pVal`。 请参阅[备注](#remarks)部分，了解详细信息。
+中`VARIANT` 指向`pVal`的的类型。 有关详细信息，请参阅 "[备注](#remarks)" 部分。
 
 ## <a name="return-value"></a>返回值
 
-此函数返回以下值中定义*WbemCli.h*标头文件，也可以在定义它们为常量在代码中：
+此函数返回的以下值是在*WbemCli*头文件中定义的，也可以在代码中将它们定义为常量：
 
 |返回的常量  |值  |描述  |
 |---------|---------|---------|
-|`WBEM_E_FAILED` | 0x80041001 | 已存在时的常见错误。 |
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 一个或多个参数是无效的。 |
-|`WBEM_E_INVALID_PROPERTY_TYPE` | 0x8004102a | 未识别属性类型。 创建类实例，如果该类已存在时返回此值。 |
-|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 没有足够的内存是可用于完成该操作。 |
-| `WBEM_E_TYPE_MISMATCH` | 0x80041005 | 实例：指示`pVal`指向`VARIANT`属性类型不正确。 <br/> 查找类定义：属性已存在的父类、 中和新的 COM 类型都不同于旧的 COM 类型。 |
+|`WBEM_E_FAILED` | 0x80041001 | 出现一般错误。 |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 一个或多个参数无效。 |
+|`WBEM_E_INVALID_PROPERTY_TYPE` | 0x8004102a | 无法识别属性类型。 如果类已经存在，则会在创建类实例时返回此值。 |
+|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 没有足够的内存可用来完成此操作。 |
+| `WBEM_E_TYPE_MISMATCH` | 0x80041005 | 对于实例：指示指向属性的不正确类型的。 `VARIANT` `pVal` <br/> 对于类定义：父类中已存在该属性，而新的 COM 类型不同于旧的 COM 类型。 |
 |`WBEM_S_NO_ERROR` | 0 | 函数调用成功。 |
 
 ## <a name="remarks"></a>备注
 
-此函数包装对的调用[IWbemClassObject::Put](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-put)方法。
+此函数包装对[IWbemClassObject：:P](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-put)的工作方式方法的调用。
 
-此函数始终覆盖使用新的当前属性值。 如果[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)指向的类定义，`Put`创建或更新的属性值。 当[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)指向 CIM 的实例，`Put`更新属性值; 仅`Put`不能创建一个属性值。
+此函数始终使用新的属性值覆盖当前属性值。 如果[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)指向某个类定义， `Put`则会创建或更新该属性值。 当[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)指向 CIM 实例时， `Put`仅更新属性值;`Put`无法创建属性值。
 
-`__CLASS`系统属性才是可写类创建过程时它可能不为空。 所有其他系统属性是只读的。
+`__CLASS`系统属性只有在创建类的过程中不能为空时才可以写入。 所有其他系统属性都是只读的。
 
-用户不能具有名称的开头或结尾下划线 ("_") 创建属性。 这被保留给系统类和属性。
+用户不能创建名称以下划线开头或结尾的属性（"_"）。 此为系统类和属性保留。
 
-如果该属性设置的`Put`父类中存在的函数，除非属性类型与父类类型不匹配，将更改属性的默认值。 如果该属性不存在，它不是类型不匹配，则创建属性。
+如果父类中存在由`Put`函数设置的属性，则除非属性类型与父类类型不匹配，否则将更改属性的默认值。 如果该属性不存在并且不是类型不匹配，则会创建该属性。
 
-使用`vtType`参数仅在 CIM 类定义中创建新的属性时，`pVal`是`null`或指向`VARIANT`类型的`VT_NULL`。 在这种情况下，`vType`参数指定的属性的 CIM 类型。 在所有其他情况下，`vtType`必须为 0。 `vtType` 如果基础对象实例也必须为 0 (即使`Val`是`null`) 由于属性类型固定的不能更改。
+`VARIANT` `pVal` `null`仅当在 CIM 类定义中创建新属性并且或指向类型`VT_NULL`的时，才使用参数。`vtType` 在这种情况下`vType` ，参数指定属性的 CIM 类型。 在其他所有情况下`vtType` ，必须为0。 `vtType`如果基础对象是实例，则必须为0（即使`Val`为`null`），因为属性的类型是固定的且无法更改。
 
 ## <a name="example"></a>示例
 
-有关示例，请参阅[IWbemClassObject::Put](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-put)方法。
+有关示例，请参阅[IWbemClassObject：:P](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-put)工作不上方法。
 
 ## <a name="requirements"></a>要求
 
-**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。
+**适用**请参阅[系统需求](../../get-started/system-requirements.md)。
 
 **标头：** WMINet_Utils.idl
 
-**.NET Framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+**.NET Framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
 ## <a name="see-also"></a>请参阅
 
-- [WMI 和性能计数器 （非托管 API 参考）](index.md)
+- [WMI 和性能计数器（非托管 API 参考）](index.md)

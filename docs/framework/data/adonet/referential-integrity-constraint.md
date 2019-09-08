@@ -2,17 +2,17 @@
 title: 引用完整性约束
 ms.date: 03/30/2017
 ms.assetid: 3d3ba44b-4302-40d8-a7a9-62932e0395e5
-ms.openlocfilehash: b442e15c75554e1b06e9ff89c7224430a0605f9c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 28880c7085f8b4e3dd2e51b5633c1f0e2a984a4b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649627"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794446"
 ---
 # <a name="referential-integrity-constraint"></a>引用完整性约束
-一个*引用完整性约束*在实体数据模型 (EDM) 是关系数据库中的引用完整性约束类似。 与数据库表中某一列 （或列） 可以引用另一个表的主键相同的方式[属性](../../../../docs/framework/data/adonet/property.md)（或属性） 的[实体类型](../../../../docs/framework/data/adonet/entity-type.md)可以引用[实体键](../../../../docs/framework/data/adonet/entity-key.md)的另一个实体类型。 引用的实体类型称为*主体端*的约束。 引用主体端的实体类型称为*依赖端*的约束。  
+实体数据模型（EDM）中的*引用完整性约束*类似于关系数据库中的引用完整性约束。 与数据库表中的列（或列）可以引用另一个表的主键相同，[实体类型](entity-type.md)的一个或多个[属性](property.md)可以引用另一个实体类型的[实体键](entity-key.md)。 引用的实体类型称为约束的*主体端*。 引用主体端的实体类型称为约束的*依赖端*。  
   
- 引用完整性约束定义的一部分[关联](../../../../docs/framework/data/adonet/association-type.md)两个实体类型之间。 引用完整性约束的定义指定了以下信息：  
+ 引用完整性约束定义为两个实体类型之间的[关联](association-type.md)的一部分。 引用完整性约束的定义指定了以下信息：  
   
 - 约束的主体端。 （一个实体类型，其实体键由依赖端引用。）  
   
@@ -22,18 +22,18 @@ ms.locfileid: "64649627"
   
 - 依赖端的一个或多个引用属性。  
   
- EDM 中的引用完整性约束的用途是确保始终存在有效关联。 有关详细信息，请参阅[外键属性](../../../../docs/framework/data/adonet/foreign-key-property.md)。  
+ EDM 中的引用完整性约束的用途是确保始终存在有效关联。 有关详细信息，请参阅[外键属性](foreign-key-property.md)。  
   
 ## <a name="example"></a>示例  
  下图显示了一个具有两个关联的概念模型：`WrittenBy` 和 `PublishedBy`。 `Book` 实体类型有一个属性 `PublisherId`，当您为 `Publisher` 关联定义一个引用完整性约束时，它将引用 `PublishedBy` 实体类型的实体键。  
   
  ![RefConstraintModel](./media/referential-integrity-constraint/reference-constraint-model.gif "引用约束模型的示例")  
   
- [ADO.NET 实体框架](../../../../docs/framework/data/adonet/ef/index.md)使用称为概念性架构定义语言的特定于域的语言 (DSL) ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) 来定义概念模型。 下面的 CSDL 为上图所示的概念模型中的 `PublishedBy` 关联定义了一个引用完整性约束。  
+ [ADO.NET 实体框架](./ef/index.md)使用一种称为概念架构定义语言（[CSDL](./ef/language-reference/csdl-specification.md)）的域特定语言（DSL）来定义概念模型。 下面的 CSDL 为上图所示的概念模型中的 `PublishedBy` 关联定义了一个引用完整性约束。  
   
  [!code-xml[EDM_Example_Model#RefConstraint](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books4.edmx#refconstraint)]  
   
 ## <a name="see-also"></a>请参阅
 
-- [实体数据模型关键概念](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
-- [实体数据模型](../../../../docs/framework/data/adonet/entity-data-model.md)
+- [实体数据模型关键概念](entity-data-model-key-concepts.md)
+- [实体数据模型](entity-data-model.md)

@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ee30d4f32e05fab27ae70052b28d3d152594cf90
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2710d14d6e73879fd17a6b58659463ea205f2384
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778426"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795376"
 ---
 # <a name="createhistoryreader-function"></a>CreateHistoryReader 函数
-创建指定的文件的历史记录读取。  
+为指定的文件创建历史记录读取器。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,26 +37,26 @@ HRESULT CreateHistoryReader (
   
 ## <a name="parameters"></a>参数  
  `wzFilePath`  
- [in]文件路径中。  
+ 中文件路径。  
   
  `ppHistoryReader`  
- [out]成功完成后，将包含历史记录读取器指向的指针。  
+ 弄成功完成后，包含指向历史记录读取器的指针。  
   
 ## <a name="return-value"></a>返回值  
- 定义在 WinError.h，除了下表中描述的值之外，此方法将返回标准 COM 错误代码。  
+ 此方法返回 Winerror.h 中定义的标准 COM 错误代码，以及下表中描述的值。  
   
 |返回代码|描述|  
 |-----------------|-----------------|  
 |S_OK|指示该方法已成功完成。|  
-|E_INVALIDARG|指示`wzFilePath`或`ppHistoryReader`设置为 null 引用。|  
+|E_INVALIDARG|`wzFilePath`指示或`ppHistoryReader`设置为空引用。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../get-started/system-requirements.md)。  
   
- **库：** Fusion.dll  
+ **类库**合成 .dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 
-- [合成全局静态函数](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+- [合成全局静态函数](fusion-global-static-functions.md)

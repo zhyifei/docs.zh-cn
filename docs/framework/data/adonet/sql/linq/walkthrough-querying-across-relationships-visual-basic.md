@@ -4,22 +4,22 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: a7da43e3-769f-4e07-bcd6-552b8bde66f4
-ms.openlocfilehash: 0852622811b5efb362937b3af37f2b9d81b2d1ea
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3164656bb183e7773b098cab79d8fe5e0dc5de34
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626430"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70792144"
 ---
 # <a name="walkthrough-querying-across-relationships-visual-basic"></a>演练：跨关系查询 (Visual Basic)
-本演练演示如何使用[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]*关联*来表示数据库中的外键关系。  
+本演练演示如何使用[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] *关联*来表示数据库中的外键关系。  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
   
  本演练是使用 Visual Basic 开发设置编写的。  
   
 ## <a name="prerequisites"></a>系统必备  
- 你必须已完成[演练：简单对象模型和查询 (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-visual-basic.md)。 本演练建立在该演练基础之上，包括在 c:\linqtest 中须存在 northwnd.mdf 文件。  
+ 您必须完成[以下演练：简单对象模型和查询（Visual Basic）](walkthrough-simple-object-model-and-query-visual-basic.md)。 本演练建立在该演练基础之上，包括在 c:\linqtest 中须存在 northwnd.mdf 文件。  
   
 ## <a name="overview"></a>概述  
  本演练由三项主要任务组成：  
@@ -49,7 +49,7 @@ ms.locfileid: "64626430"
      [!code-vb[DLinqWalk2VB#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk2VB/vb/Module1.vb#2)]  
   
 ## <a name="creating-and-running-a-query-across-the-customer-order-relationship"></a>跨 Customer-Order 关系创建并运行查询  
- 现在您可以直接从 `Order` 对象访问 `Customer` 对象，或反过来进行访问。 不需要显式*联接*customers 与 orders 之间。  
+ 现在您可以直接从 `Order` 对象访问 `Customer` 对象，或反过来进行访问。 客户和订单之间不需要显式*联接*。  
   
 #### <a name="to-access-order-objects-by-using-customer-objects"></a>使用 Customer 对象访问 Order 对象  
   
@@ -86,11 +86,11 @@ ms.locfileid: "64626430"
   
 4. 在控制台窗口中按 Enter，以关闭应用程序。  
   
-5. 上**文件**菜单上，单击**全部保存**如果你想要保存此应用程序。  
+5. 如果要保存此应用程序，请在 "**文件**" 菜单上，单击 "**全部保存**"。  
   
 ## <a name="next-steps"></a>后续步骤  
- 下一个演练 ([演练：操作数据 (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-visual-basic.md)) 演示如何操作数据。 该演练不要求您保存本系列中已经完成的两个演练的结果。  
+ 下一个演练（[演练：操作数据（Visual Basic）](walkthrough-manipulating-data-visual-basic.md)）演示如何处理数据。 该演练不要求您保存本系列中已经完成的两个演练的结果。  
   
 ## <a name="see-also"></a>请参阅
 
-- [通过演练学习](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
+- [通过演练学习](learning-by-walkthroughs.md)

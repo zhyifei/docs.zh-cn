@@ -2,12 +2,12 @@
 title: 安全数据访问
 ms.date: 03/30/2017
 ms.assetid: 473ebd69-21a3-4627-b95e-4e04d035c56f
-ms.openlocfilehash: 7aa68842ab3733943f84e9d6d9157f7a3d65cac7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 122bdaf8467994f8f56ce3f6c92457be6b8b3155
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963140"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782774"
 ---
 # <a name="secure-data-access"></a>安全数据访问
 要编写安全的 ADO.NET 代码，必须了解基础数据存储（即数据库）中提供的安全机制。 您还需要考虑应用程序可能包含的其他功能或组件对安全性的影响。  
@@ -23,10 +23,10 @@ ms.locfileid: "69963140"
   
 |资源|描述|  
 |--------------|-----------------|  
-|[保护连接信息](../../../../docs/framework/data/adonet/protecting-connection-information.md)|描述用于保护连接信息的最佳安全做法和技术，例如使用受保护配置来加密连接字符串。|  
+|[保护连接信息](protecting-connection-information.md)|描述用于保护连接信息的最佳安全做法和技术，例如使用受保护配置来加密连接字符串。|  
 |[数据访问策略的建议](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))|提供用于访问数据和执行数据库操作的建议。|  
-|[连接字符串生成器](../../../../docs/framework/data/adonet/connection-string-builders.md)|描述如何在运行时根据用户输入生成连接字符串。|  
-|[SQL Server 安全性概述](../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)|描述 SQL Server 安全架构。|  
+|[连接字符串生成器](connection-string-builders.md)|描述如何在运行时根据用户输入生成连接字符串。|  
+|[SQL Server 安全性概述](./sql/overview-of-sql-server-security.md)|描述 SQL Server 安全架构。|  
   
 ## <a name="parameterized-commands-and-sql-injection"></a>参数化命令和 SQL 注入  
  使用参数化命令可帮助抵御 SQL 注入攻击，这种攻击的攻击者会将命令“注入”SQL 语句，从而危及服务器的安全。 通过确保将从外部源接收的值仅作为值（而不是作为 Transact-SQL 语句的一部分）进行传递，参数化命令可抵御 SQL 注入攻击。 这样，便不会在数据源中执行插入到值中的 Transact-SQL 命令。 相反，只会将这些命令作为参数值来计算。 除具备安全优势外，参数化命令还提供一种便捷方法，使用该方法可组织随 Transact-SQL 语句传递或传递到存储过程的值。  
@@ -35,9 +35,9 @@ ms.locfileid: "69963140"
   
 |资源|描述|  
 |--------------|-----------------|  
-|[DataAdapter 参数](../../../../docs/framework/data/adonet/dataadapter-parameters.md)|描述如何对 `DataAdapter` 使用参数。|  
-|[使用存储过程修改数据](../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)|描述如何指定参数和获取返回值。|  
-|[在 SQL Server 中使用存储过程管理权限](../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)|描述如何使用 SQL Server 存储过程包装数据访问。|  
+|[DataAdapter 参数](dataadapter-parameters.md)|描述如何对 `DataAdapter` 使用参数。|  
+|[使用存储过程修改数据](modifying-data-with-stored-procedures.md)|描述如何指定参数和获取返回值。|  
+|[在 SQL Server 中使用存储过程管理权限](./sql/managing-permissions-with-stored-procedures-in-sql-server.md)|描述如何使用 SQL Server 存储过程包装数据访问。|  
   
 ## <a name="script-exploits"></a>脚本攻击  
  脚本攻击是另一种形式的注入，它使用插入到网页中的恶意字符。 浏览器无法验证这些插入字符，并且会将它们作为页面的一部分进行处理。  
@@ -84,14 +84,14 @@ ms.locfileid: "69963140"
   
 |资源|描述|  
 |--------------|-----------------|  
-|[与非托管代码交互操作](../../../../docs/framework/interop/index.md)|包含描述如何向 .NET Framework 公开 COM 组件以及如何向 COM 公开 .NET Framework 组件的主题。|
+|[与非托管代码交互操作](../../interop/index.md)|包含描述如何向 .NET Framework 公开 COM 组件以及如何向 COM 公开 .NET Framework 组件的主题。|
 |[高级 COM 互操作性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))|包含高级主题，如主互操作程序集、线程和自定义封送处理。|
 
 ## <a name="see-also"></a>请参阅
 
-- [保证 ADO.NET 应用程序的安全](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [SQL Server 安全性](../../../../docs/framework/data/adonet/sql/sql-server-security.md)
+- [保证 ADO.NET 应用程序的安全](securing-ado-net-applications.md)
+- [SQL Server 安全性](./sql/sql-server-security.md)
 - [数据访问策略的建议](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))
-- [保护连接信息](../../../../docs/framework/data/adonet/protecting-connection-information.md)
-- [连接字符串生成器](../../../../docs/framework/data/adonet/connection-string-builders.md)
-- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [保护连接信息](protecting-connection-information.md)
+- [连接字符串生成器](connection-string-builders.md)
+- [ADO.NET 概述](ado-net-overview.md)

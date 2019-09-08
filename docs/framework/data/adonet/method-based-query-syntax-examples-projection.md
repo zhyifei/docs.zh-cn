@@ -1,21 +1,21 @@
 ---
-title: 基于方法的查询语法示例：投影 (LINQ to DataSet)
+title: 基于方法的查询语法示例：投影（LINQ to DataSet）
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 0fc2c8f0-1967-4f30-8b20-39b8dccfb82f
-ms.openlocfilehash: 3b35fcfe2a713b18b25c30690ef012848898b8e5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6617531c8a236eb034e6a063b7a1530c02d6e37b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772187"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794808"
 ---
-# <a name="method-based-query-syntax-examples-projection-linq-to-dataset"></a>基于方法的查询语法示例：投影 (LINQ to DataSet)
+# <a name="method-based-query-syntax-examples-projection-linq-to-dataset"></a>基于方法的查询语法示例：投影（LINQ to DataSet）
 本主题中的示例演示如何使用 <xref:System.Linq.Enumerable.Select%2A> 和 <xref:System.Linq.Enumerable.SelectMany%2A> 方法以便使用基于方法的查询语法来查询 <xref:System.Data.DataSet>。  
   
- `FillDataSet`中指定这些示例中使用的方法[加载数据到数据集](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)。  
+ 在`FillDataSet`这些示例中使用的方法是在将[数据加载到数据集](loading-data-into-a-dataset.md)时指定的。  
   
  本主题中的示例使用 AdventureWorks 示例数据库中的 Contact、Address、Product、SalesOrderHeader 和 SalesOrderDetail 表。  
   
@@ -24,7 +24,7 @@ ms.locfileid: "61772187"
  [!code-csharp[DP LINQ to DataSet Examples#ImportsUsing](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#importsusing)]
  [!code-vb[DP LINQ to DataSet Examples#ImportsUsing](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#importsusing)]  
   
- 有关详细信息，请参阅[如何：在 Visual Studio 中创建 LINQ to DataSet 项目](../../../../docs/framework/data/adonet/how-to-create-a-linq-to-dataset-project-in-vs.md)。  
+ 有关详细信息，请参阅[如何：在 Visual Studio](how-to-create-a-linq-to-dataset-project-in-vs.md)中创建 LINQ to DataSet 项目。  
   
 ## <a name="select"></a>选择  
   
@@ -50,7 +50,7 @@ ms.locfileid: "61772187"
   
 ## <a name="see-also"></a>请参阅
 
-- [将数据加载到数据集中](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)
-- [LINQ to DataSet 示例](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)
+- [将数据加载到数据集中](loading-data-into-a-dataset.md)
+- [LINQ to DataSet 示例](linq-to-dataset-examples.md)
 - [标准查询运算符概述 (C#)](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [标准查询运算符概述 (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)

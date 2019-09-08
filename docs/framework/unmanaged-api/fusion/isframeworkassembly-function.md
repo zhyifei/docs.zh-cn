@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 989d046bba1ba3170649e9d908a850bd1177fdd2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 269e3702c21532f377735ba6087abb1603dde4f7
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67773827"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796316"
 ---
 # <a name="isframeworkassembly-function"></a>IsFrameworkAssembly 函数
-获取一个值，该值指示指定的程序集是否已托管。  
+获取一个值，该值指示是否托管指定的程序集。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,27 +39,27 @@ HRESULT IsFrameworkAssembly (
   
 ## <a name="parameters"></a>参数  
  `pwzAssemblyReference`  
- [in]要检查的程序集的名称。  
+ 中要检查的程序集的名称。  
   
  `pbIsFrameworkAssembly`  
- [out]一个布尔值，该值指示是否为托管程序集。  
+ 弄指示程序集是否为托管程序集的布尔值。  
   
  `pwzFrameworkAssemblyIdentity`  
- [in]一个 uncanonicalized 的字符串，包含程序集的唯一标识。  
+ 中一个 uncanonicalized 字符串，其中包含程序集的唯一标识。  
   
  `pccSize`  
  [输入] `pwzFrameworkAssemblyIdentity` 的大小。  
   
 ## <a name="remarks"></a>备注  
- `pwzAssemblyReference`参数是指向包含程序集名称的字符串。  
+ `pwzAssemblyReference`参数是指向字符串的指针，该字符串包含程序集的名称。  
   
- 如果此程序集是.NET Framework 的一部分`pbIsFrameworkAssembly`参数将包含一个布尔值为`true`。  
+ 如果此程序集是 .NET Framework 的一部分，则`pbIsFrameworkAssembly`参数将包含的`true`布尔值。  
   
- 如果命名的程序集不是.NET Framework 的一部分，或如果`pwzAssemblyReference`参数没有命名程序集`pbIsFrameworkAssembly`将包含一个布尔值为`false`。  
+ 如果命名的程序集不是 .NET Framework 的一部分，或者如果`pwzAssemblyReference`参数不命名程序集， `pbIsFrameworkAssembly`则将包含的`false`布尔值。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../get-started/system-requirements.md)。  
   
 ## <a name="see-also"></a>请参阅
 
-- [合成全局静态函数](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+- [合成全局静态函数](fusion-global-static-functions.md)

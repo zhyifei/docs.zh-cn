@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 15174480c4345f2514572701a5525f0f192ad120
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 04103ad305e0ae97669f3e07e06f03c2cdb4dfbd
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742098"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70787518"
 ---
 # <a name="emitinternalexportedtypes-method"></a>EmitInternalExportedTypes 方法
-发出类型添加到程序集。 调用此方法后添加内部类型已知。  
+发出添加到程序集的类型。 添加已知的内部类型后，调用此方法。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,13 +40,13 @@ HRESULT EmitInternalExportedTypes(
  程序集的 ID。  
   
 ## <a name="return-value"></a>返回值  
- 如果该方法成功，返回，则为 S_OK。  
+ 如果该方法成功，则返回 S_OK。  
   
 ## <a name="requirements"></a>要求  
- 需要 alink.h  
+ 需要 alink  
   
 ## <a name="see-also"></a>请参阅
 
-- [IALink2 接口](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [IALink 接口](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink2 接口](ialink2-interface.md)
+- [IALink 接口](ialink-interface.md)
+- [ALink API](index.md)

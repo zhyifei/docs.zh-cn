@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2c4d08b8-fc29-4614-97fa-29c8ff7ca5b3
-ms.openlocfilehash: 40cdf3efe1ad3ec2db433f68599b87bfeb7908cf
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8e57bfe23a80bf3913cd7fb8b96527870259e77a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964725"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780872"
 ---
 # <a name="specifying-xml-values-as-parameters"></a>将 XML 值指定为参数
-如果查询需要值为 XML 字符串的参数, 则开发人员可以使用**SqlXml**数据类型的实例提供该值。 实际上没有任何技巧;SQL Server 中的 XML 列接受参数值的方式与其他数据类型完全相同。  
+如果查询需要值为 XML 字符串的参数，则开发人员可以使用**SqlXml**数据类型的实例提供该值。 实际上没有任何技巧;SQL Server 中的 XML 列接受参数值的方式与其他数据类型完全相同。  
   
 ## <a name="example"></a>示例  
  以下控制台应用程序在**AdventureWorks**数据库中创建新表。 新表包括一个名为**SalesID**的列和一个名为**SalesInfo**的 XML 列。  
   
 > [!NOTE]
-> 默认情况下, 在安装 SQL Server 时, 不会安装**AdventureWorks**示例数据库。 可以通过运行 SQL Server 安装程序来安装。  
+> 默认情况下，在安装 SQL Server 时，不会安装**AdventureWorks**示例数据库。 可以通过运行 SQL Server 安装程序来安装。  
   
  示例准备一个 <xref:System.Data.SqlClient.SqlCommand> 对象，用于在新表中插入行。 保存的文件提供了**SalesInfo**列所需的 XML 数据。  
   
@@ -162,5 +162,5 @@ class Class1
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Data.SqlTypes.SqlXml>
-- [SQL Server 中的 XML 数据](../../../../../docs/framework/data/adonet/sql/xml-data-in-sql-server.md)
-- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [SQL Server 中的 XML 数据](xml-data-in-sql-server.md)
+- [ADO.NET 概述](../ado-net-overview.md)

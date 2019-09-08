@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fd6db0b8-c29c-48ff-b768-31d28e7a148c
-ms.openlocfilehash: f6721234d2d3920343bc72889c7683fb6ee662a0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1da2abcbbb3b87d44aa99016112d9ef2674912c6
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69928756"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781714"
 ---
 # <a name="how-to-resolve-conflicts-by-overwriting-database-values"></a>如何：通过重写数据库值解决冲突
-若要先协调预期数据库值与实际数据库值之间的差异，再尝试重新提交更改，则可以使用 <xref:System.Data.Linq.RefreshMode.KeepCurrentValues> 覆盖数据库值。 有关详细信息, 请[参阅乐观并发:概述](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md)。  
+若要先协调预期数据库值与实际数据库值之间的差异，再尝试重新提交更改，则可以使用 <xref:System.Data.Linq.RefreshMode.KeepCurrentValues> 覆盖数据库值。 有关详细信息，请[参阅乐观并发：概述](optimistic-concurrency-overview.md)。  
   
 > [!NOTE]
 > 在所有情况下，都会先通过从数据库中检索更新后的数据来刷新客户端上的记录。 此操作确保了下一次更新尝试将通过相同的并发检查。  
@@ -42,4 +42,4 @@ ms.locfileid: "69928756"
   
 ## <a name="see-also"></a>请参阅
 
-- [如何：管理更改冲突](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
+- [如何：管理更改冲突](how-to-manage-change-conflicts.md)

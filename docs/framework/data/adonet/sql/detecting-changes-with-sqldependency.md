@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e6a58316-f005-4477-92e1-45cc2eb8c5b4
-ms.openlocfilehash: 839642c4fea45f4f37c5dc351d71417d46d07093
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3719188064388b00c756dd037d4a475ca6debd13
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61877664"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782419"
 ---
 # <a name="detecting-changes-with-sqldependency"></a>使用 SqlDependency 检测更改
 
@@ -18,7 +18,7 @@ ms.locfileid: "61877664"
 
 ## <a name="security-considerations"></a>安全注意事项
 
-依赖项基础结构依赖于 <xref:System.Data.SqlClient.SqlConnection>，它会在调用 <xref:System.Data.SqlClient.SqlDependency.Start%2A> 时打开，以便接收有关给定命令的基础数据已经更改的通知。 客户端启动对 `SqlDependency.Start` 的调用的能力是通过使用 <xref:System.Data.SqlClient.SqlClientPermission> 和代码访问安全性属性来控制的。 有关详细信息，请参阅[启用查询通知](../../../../../docs/framework/data/adonet/sql/enabling-query-notifications.md)并[代码访问安全性和 ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md)。
+依赖项基础结构依赖于 <xref:System.Data.SqlClient.SqlConnection>，它会在调用 <xref:System.Data.SqlClient.SqlDependency.Start%2A> 时打开，以便接收有关给定命令的基础数据已经更改的通知。 客户端启动对 `SqlDependency.Start` 的调用的能力是通过使用 <xref:System.Data.SqlClient.SqlClientPermission> 和代码访问安全性属性来控制的。 有关详细信息，请参阅[启用查询通知](enabling-query-notifications.md)和[代码访问安全和 ADO.NET](../code-access-security.md)。
 
 ### <a name="example"></a>示例
 
@@ -127,5 +127,5 @@ void Termination()
 
 ## <a name="see-also"></a>请参阅
 
-- [SQL Server 中的查询通知](../../../../../docs/framework/data/adonet/sql/query-notifications-in-sql-server.md)
-- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [SQL Server 中的查询通知](query-notifications-in-sql-server.md)
+- [ADO.NET 概述](../ado-net-overview.md)

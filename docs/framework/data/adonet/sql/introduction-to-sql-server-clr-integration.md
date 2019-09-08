@@ -2,12 +2,12 @@
 title: SQL Server CLR 集成简介
 ms.date: 03/30/2017
 ms.assetid: 551d2290-ed80-49be-b377-44b32444da1c
-ms.openlocfilehash: 380666ae9a3ebc18ef470e5ab719360f40510f41
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fb812a8e524148c507d26ea32e0b4263a4998153
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650597"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782262"
 ---
 # <a name="introduction-to-sql-server-clr-integration"></a>SQL Server CLR 集成简介
 公共语言运行库 (CLR) 是 Microsoft .NET Framework 的核心，为所有 .NET Framework 代码提供执行环境。 在 CLR 中运行的代码称为托管代码。 CLR 提供执行程序所需的各种函数和服务，包括实时 (JIT) 编译、分配和管理内存、强制类型安全性、异常处理、线程管理和安全性。  
@@ -20,7 +20,7 @@ ms.locfileid: "64650597"
   
  **SQL Server 联机丛书**  
   
-- [公共语言运行时 (CLR) 集成概述](https://go.microsoft.com/fwlink/?LinkId=115242)  
+- [公共语言运行时（CLR）集成概述](https://go.microsoft.com/fwlink/?LinkId=115242)  
   
 ## <a name="enabling-clr-integration"></a>启用 CLR 集成  
  默认情况下，Microsoft SQL Server 中禁用公共语言运行库 (CLR) 集成功能，必须启用才能使用通过 CLR 集成实现的对象。 要使用 Transact-SQL 启用 CLR 集成，请使用如下所示的 `clr enabled` 存储过程的 `sp_configure` 选项：  
@@ -67,5 +67,5 @@ GO
   
 ## <a name="see-also"></a>请参阅
 
-- [代码访问安全性和 ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md)
-- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [代码访问安全性和 ADO.NET](../code-access-security.md)
+- [ADO.NET 概述](../ado-net-overview.md)

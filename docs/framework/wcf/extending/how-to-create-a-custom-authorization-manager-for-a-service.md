@@ -8,16 +8,16 @@ helpviewer_keywords:
 - Windows Communication Foundation, extending
 - OperationRequirement class
 ms.assetid: 6214afde-44c1-4bf5-ba07-5ad6493620ea
-ms.openlocfilehash: ffdfe41db05eb5f2dd55a233f8ed646401777d0f
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 9c28cb81b78f80505cfcf5f7e4dfdba083bd0793
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70040301"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797107"
 ---
 # <a name="how-to-create-a-custom-authorization-manager-for-a-service"></a>如何：为服务创建自定义授权管理器
 
-Windows Communication Foundation (WCF) 中的标识模型基础结构支持基于声明的可扩展授权模型。 声明是从令牌中提取的，自定义授权策略将有选择地对其进行处理，然后放入 <xref:System.IdentityModel.Policy.AuthorizationContext> 中。 授权管理器检查 <xref:System.IdentityModel.Policy.AuthorizationContext> 中的声明，从而作出授权决策。
+Windows Communication Foundation （WCF）中的标识模型基础结构支持基于声明的可扩展授权模型。 声明是从令牌中提取的，自定义授权策略将有选择地对其进行处理，然后放入 <xref:System.IdentityModel.Policy.AuthorizationContext> 中。 授权管理器检查 <xref:System.IdentityModel.Policy.AuthorizationContext> 中的声明，从而作出授权决策。
 
 默认情况下，授权决策由 <xref:System.ServiceModel.ServiceAuthorizationManager> 类作出；但是，可通过创建自定义授权管理器来覆盖这些决策。 若要创建自定义授权管理器，请创建一个从 <xref:System.ServiceModel.ServiceAuthorizationManager> 派生的类，并实现 <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> 方法。 授权决策是在 <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> 方法中作出的，如果允许访问，该方法返回 `true`，如果拒绝访问，则返回 `false`。
 
@@ -58,17 +58,17 @@ Windows Communication Foundation (WCF) 中的标识模型基础结构支持基�
 
 1. 打开服务的配置文件。
 
-2. 将 serviceAuthorization > 添加到[行为>\<](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)。 [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md)
+2. 将 serviceAuthorization > 添加到[行为>\<](../../configure-apps/file-schema/wcf/behaviors.md)。 [ \<](../../configure-apps/file-schema/wcf/serviceauthorization-element.md)
 
-    `serviceAuthorizationManagerType` [对于\<serviceAuthorization >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md), 添加一个属性, 并将其值设置为表示自定义授权管理器的类型。
+    `serviceAuthorizationManagerType` [对于\<serviceAuthorization >](../../configure-apps/file-schema/wcf/serviceauthorization-element.md)，添加一个属性，并将其值设置为表示自定义授权管理器的类型。
 
 3. 添加一个保护客户端和服务之间的通信的绑定。
 
-    为此通信选择的绑定决定了添加到 <xref:System.IdentityModel.Policy.AuthorizationContext> 的声明，自定义授权管理器使用这些声明来进行授权决策。 有关系统提供的绑定的更多详细信息, 请参阅[系统提供的绑定](../../../../docs/framework/wcf/system-provided-bindings.md)。
+    为此通信选择的绑定决定了添加到 <xref:System.IdentityModel.Policy.AuthorizationContext> 的声明，自定义授权管理器使用这些声明来进行授权决策。 有关系统提供的绑定的更多详细信息，请参阅[系统提供的绑定](../system-provided-bindings.md)。
 
-4. 通过将[ \<服务 >](../../../../docs/framework/configure-apps/file-schema/wcf/service.md)元素添加到服务终结点, 并将该`behaviorConfiguration`属性的值设置为[ \<行为 >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md)元素的 name 属性的值, 将该行为关联到服务终结点。
+4. 通过将[ \<服务 >](../../configure-apps/file-schema/wcf/service.md)元素添加到服务终结点，并将该`behaviorConfiguration`属性的值设置为[ \<行为 >](../../configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md)元素的 name 属性的值，将该行为关联到服务终结点。
 
-    有关配置服务终结点的详细信息, 请[参阅如何:在配置](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)中创建服务终结点。
+    有关配置服务终结点的详细信息，请[参阅如何：在配置](../feature-details/how-to-create-a-service-endpoint-in-configuration.md)中创建服务终结点。
 
     下面的代码示例注册自定义授权管理器 `Samples.MyServiceAuthorizationManager`。
 
@@ -114,7 +114,7 @@ Windows Communication Foundation (WCF) 中的标识模型基础结构支持基�
 
 ## <a name="example"></a>示例
 
-下面的代码示例演示 <xref:System.ServiceModel.ServiceAuthorizationManager> 类的一个基本实现，包括重写 <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> 方法。 该示例代码检查某个自定义声明的 <xref:System.IdentityModel.Policy.AuthorizationContext>，如果该自定义声明的资源与 `true` 中的操作值匹配，则返回 <xref:System.ServiceModel.OperationContext>。 有关更完整的<xref:System.ServiceModel.ServiceAuthorizationManager>类实现, 请参阅[授权策略](../../../../docs/framework/wcf/samples/authorization-policy.md)。
+下面的代码示例演示 <xref:System.ServiceModel.ServiceAuthorizationManager> 类的一个基本实现，包括重写 <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> 方法。 该示例代码检查某个自定义声明的 <xref:System.IdentityModel.Policy.AuthorizationContext>，如果该自定义声明的资源与 `true` 中的操作值匹配，则返回 <xref:System.ServiceModel.OperationContext>。 有关更完整的<xref:System.ServiceModel.ServiceAuthorizationManager>类实现，请参阅[授权策略](../samples/authorization-policy.md)。
 
 [!code-csharp[c_CustomAuthMgr#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customauthmgr/cs/c_customauthmgr.cs#2)]
 [!code-vb[c_CustomAuthMgr#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customauthmgr/vb/c_customauthmgr.vb#2)]
@@ -122,4 +122,4 @@ Windows Communication Foundation (WCF) 中的标识模型基础结构支持基�
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.ServiceModel.ServiceAuthorizationManager>
-- [授权策略](../../../../docs/framework/wcf/samples/authorization-policy.md)
+- [授权策略](../samples/authorization-policy.md)

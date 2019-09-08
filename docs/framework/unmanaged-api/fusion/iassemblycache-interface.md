@@ -16,34 +16,34 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9fc5f3a3d5bc5699a596bcc648a7153190c130f0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6dab5fe941fce3c23ba718906b29c80c6d257c2f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697675"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796779"
 ---
 # <a name="iassemblycache-interface"></a>IAssemblyCache 接口
-合成技术表示全局程序集缓存中的供使用。  
+表示用于合成技术的全局程序集缓存。  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|[CreateAssemblyCacheItem 方法](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-createassemblycacheitem-method.md)|获取一个新的引用[IAssemblyCacheItem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)。|  
-|[CreateAssemblyScavenger 方法](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-createassemblyscavenger-method.md)|合成技术，保留供内部使用。|  
-|[InstallAssembly 方法](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-installassembly-method.md)|将指定的程序集安装在全局程序集缓存。|  
-|[QueryAssemblyInfo 方法](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-queryassemblyinfo-method.md)|获取有关指定的程序集的请求的数据。|  
-|[UninstallAssembly 方法](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-uninstallassembly-method.md)|从全局程序集缓存中卸载指定的程序集。|  
+|[CreateAssemblyCacheItem 方法](iassemblycache-createassemblycacheitem-method.md)|获取对新[IAssemblyCacheItem](iassemblycacheitem-interface.md)的引用。|  
+|[CreateAssemblyScavenger 方法](iassemblycache-createassemblyscavenger-method.md)|保留供合成技术内部使用。|  
+|[InstallAssembly 方法](iassemblycache-installassembly-method.md)|在全局程序集缓存中安装指定的程序集。|  
+|[QueryAssemblyInfo 方法](iassemblycache-queryassemblyinfo-method.md)|获取有关指定程序集的请求的数据。|  
+|[UninstallAssembly 方法](iassemblycache-uninstallassembly-method.md)|从全局程序集缓存中卸载指定的程序集。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../get-started/system-requirements.md)。  
   
- **标头：** Fusion.h  
+ **标头：** 合成。h  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 
-- [合成接口](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
-- [全局程序集缓存](../../../../docs/framework/app-domains/gac.md)
+- [合成接口](fusion-interfaces.md)
+- [全局程序集缓存](../../app-domains/gac.md)

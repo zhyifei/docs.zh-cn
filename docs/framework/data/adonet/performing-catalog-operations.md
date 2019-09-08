@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e60f542f-6271-495b-a9e4-48553481c2a3
-ms.openlocfilehash: beb5d2db898df1c98662d53190ac1432acc746e7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0291b6684092ec15fc672c39c909caf7781194e3
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61878214"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70783257"
 ---
 # <a name="performing-catalog-operations"></a>执行目录操作
-若要执行的命令来修改数据库或目录，如 CREATE TABLE 或 CREATE PROCEDURE 语句创建**命令**对象使用相应的 SQL 语句和一个**连接**对象。 使用执行命令**ExecuteNonQuery**方法**命令**对象。  
+若要执行命令以修改数据库或目录（如 CREATE TABLE 或 CREATE PROCEDURE 语句），请使用相应的 SQL 语句和**连接**对象创建**命令**对象。 通过**命令**对象的**ExecuteNonQuery**方法执行该命令。  
   
  以下代码示例在 Microsoft SQL Server 数据库中创建一个存储过程。  
   
@@ -47,6 +47,6 @@ command.ExecuteNonQuery();
   
 ## <a name="see-also"></a>请参阅
 
-- [使用命令修改数据](../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)
-- [命令和参数](../../../../docs/framework/data/adonet/commands-and-parameters.md)
-- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [使用命令修改数据](using-commands-to-modify-data.md)
+- [命令和参数](commands-and-parameters.md)
+- [ADO.NET 概述](ado-net-overview.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 40494916-c25a-4cb8-8f7c-fcb8d378464e
-ms.openlocfilehash: c3ed424aff3cd485a78d26a7f27bc5b1eac66448
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f749ea37e1655f006e4de26e7cb279b778fe4faf
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879406"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795106"
 ---
 # <a name="executing-a-command"></a>执行命令
 包含在 .NET Framework 中的每个 .NET Framework 数据提供程序都拥有自己的继承自 <xref:System.Data.Common.DbCommand> 的命令对象。 适用于 OLE DB 的 .NET Framework 数据提供程序包括一个 <xref:System.Data.OleDb.OleDbCommand> 对象，适用于 SQL Server 的 .NET Framework 数据提供程序包括一个 <xref:System.Data.SqlClient.SqlCommand> 对象，适用于 ODBC 的 .NET Framework 数据提供程序包括一个 <xref:System.Data.Odbc.OdbcCommand> 对象，适用于 Oracle 的 .NET Framework 数据提供程序包括一个 <xref:System.Data.OracleClient.OracleCommand> 对象。 其中每个对象都根据命令的类型和所需的返回值公开用于执行命令的方法，如下表所述。  
@@ -37,10 +37,10 @@ ms.locfileid: "61879406"
  [!code-vb[DataWorks SqlClient.StoredProcedure#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlClient.StoredProcedure/VB/source.vb#1)]  
   
 ### <a name="troubleshooting-commands"></a>命令疑难解答  
- 用于 SQL Server 的 .NET Framework 数据提供程序添加了性能计数器，使您能够检测与失败的命令执行相关的间歇性问题。 有关详细信息请参阅[性能计数器](../../../../docs/framework/data/adonet/performance-counters.md)。  
+ 用于 SQL Server 的 .NET Framework 数据提供程序添加了性能计数器，使您能够检测与失败的命令执行相关的间歇性问题。 有关详细信息，请参阅[性能计数器](performance-counters.md)。  
   
 ## <a name="see-also"></a>请参阅
 
-- [命令和参数](../../../../docs/framework/data/adonet/commands-and-parameters.md)
-- [DataAdapters 和 DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
+- [命令和参数](commands-and-parameters.md)
+- [DataAdapters 和 DataReaders](dataadapters-and-datareaders.md)
 - [ADO.NET 概述](ado-net-overview.md)

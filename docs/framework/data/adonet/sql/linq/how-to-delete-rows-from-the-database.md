@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2144c99b-8055-4080-a5c6-1ea14335e2a3
-ms.openlocfilehash: 48377aed85aebcf83cb61b4d4dcf9bb732d0cb0e
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 421735567c527ac9a70cc5eefdbd7570599faac7
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70041183"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782000"
 ---
 # <a name="how-to-delete-rows-from-the-database"></a>如何：从数据库中删除行
 
@@ -25,11 +25,11 @@ ms.locfileid: "70041183"
  否则会引发异常。 请参见本主题中后面的第二个代码示例。
 
 > [!NOTE]
-> 您可以重写 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]、`Insert` 和 `Update` 数据库操作的 `Delete` 默认方法。 有关详细信息, 请参阅[自定义插入、更新和删除操作](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md)。
+> 您可以重写 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]、`Insert` 和 `Update` 数据库操作的 `Delete` 默认方法。 有关详细信息，请参阅[自定义插入、更新和删除操作](customizing-insert-update-and-delete-operations.md)。
 >
 > 使用 Visual Studio 的开发人员可以使用对象关系设计器来开发用于实现相同目的的存储过程。
 
-以下步骤假定您已通过有效的 <xref:System.Data.Linq.DataContext> 连接到 Northwind 数据库。 有关详细信息，请参阅[如何：连接到数据库](../../../../../../docs/framework/data/adonet/sql/linq/how-to-connect-to-a-database.md)。
+以下步骤假定您已通过有效的 <xref:System.Data.Linq.DataContext> 连接到 Northwind 数据库。 有关详细信息，请参阅[如何：连接到数据库](how-to-connect-to-a-database.md)。
 
 ### <a name="to-delete-a-row-in-the-database"></a>删除数据库中的行
 
@@ -55,6 +55,6 @@ ms.locfileid: "70041183"
 
 ## <a name="see-also"></a>请参阅
 
-- [如何：管理更改冲突](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
+- [如何：管理更改冲突](how-to-manage-change-conflicts.md)
 - [如何：分配存储过程以便执行更新、插入和删除操作（O/R 设计器）](/visualstudio/data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer)
-- [进行和提交数据更改](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)
+- [进行和提交数据更改](making-and-submitting-data-changes.md)

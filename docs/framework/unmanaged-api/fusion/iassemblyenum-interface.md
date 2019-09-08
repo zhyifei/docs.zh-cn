@@ -16,32 +16,32 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4eb64fc0badf94c93182e7bd6875337c411bcdef
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0338c1e3e8890f08f87c80ec922071053d591935
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697428"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796671"
 ---
 # <a name="iassemblyenum-interface"></a>IAssemblyEnum 接口
-表示一个数组的枚举器`IAssemblyName`对象。  
+表示`IAssemblyName`对象数组的枚举器。  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|[Clone 方法](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-clone-method.md)|创建的浅表副本`IAssemblyEnum`对象。|  
-|[GetNextAssembly 方法](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-getnextassembly-method.md)|获取一个指针指向下一步`IAssemblyName`包含在此`IAssemblyEnum`对象。|  
-|[Reset 方法](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-reset-method.md)|重置此`IAssemblyEnum`其起始位置的对象。|  
+|[Clone 方法](iassemblyenum-clone-method.md)|创建此`IAssemblyEnum`对象的浅表副本。|  
+|[GetNextAssembly 方法](iassemblyenum-getnextassembly-method.md)|获取一个指针，该指针`IAssemblyName`指向此`IAssemblyEnum`对象中包含的下一个。|  
+|[Reset 方法](iassemblyenum-reset-method.md)|将此`IAssemblyEnum`对象重置为其起始位置。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../get-started/system-requirements.md)。  
   
- **标头：** Fusion.h  
+ **标头：** 合成。h  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 
-- [合成接口](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
-- [IAssemblyName 接口](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
+- [合成接口](fusion-interfaces.md)
+- [IAssemblyName 接口](iassemblyname-interface.md)

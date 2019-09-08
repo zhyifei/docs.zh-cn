@@ -8,16 +8,16 @@ helpviewer_keywords:
 - service operations [WCF Data Services]
 - WCF Data Services, service operations
 ms.assetid: 583a690a-e60f-4990-8991-d6efce069d76
-ms.openlocfilehash: 2a043e71e15de8ffbd4a0e7296545b7af35a3e3e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f905eb90b47cb5ab20fd912b1cbcc62947361992
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61916638"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70779772"
 ---
 # <a name="service-operations-wcf-data-services"></a>服务操作（WCF 数据服务）
 
-使用 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 可以在数据服务中定义服务操作，以便在服务器上公开方法。 与其他数据服务资源一样，服务操作也是通过 URI 进行寻址。 使用服务操作可以在数据服务中公开业务逻辑；例如，实现验证逻辑，应用基于角色的安全性或公开专用查询功能。 服务操作是添加到派生自 <xref:System.Data.Services.DataService%601> 的数据服务类的方法。 与所有其他数据服务资源一样，也可以向服务操作方法提供参数。 例如，下面的服务操作 URI (基于[快速入门](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)数据服务) 将值传递`London`到`city`参数：
+使用 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 可以在数据服务中定义服务操作，以便在服务器上公开方法。 与其他数据服务资源一样，服务操作也是通过 URI 进行寻址。 使用服务操作可以在数据服务中公开业务逻辑；例如，实现验证逻辑，应用基于角色的安全性或公开专用查询功能。 服务操作是添加到派生自 <xref:System.Data.Services.DataService%601> 的数据服务类的方法。 与所有其他数据服务资源一样，也可以向服务操作方法提供参数。 例如，以下服务操作 URI （基于[快速入门](quickstart-wcf-data-services.md)数据服务）将值`London`传递给`city`参数：
 
 ```
 http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'
@@ -28,9 +28,9 @@ http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'
 [!code-csharp[Astoria Northwind Service#ServiceOperationDef](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_service/cs/northwind2.svc.cs#serviceoperationdef)]
 [!code-vb[Astoria Northwind Service#ServiceOperationDef](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_service/vb/northwind2.svc.vb#serviceoperationdef)]
 
-使用 <xref:System.Data.Services.DataService%601.CurrentDataSource%2A> 的 <xref:System.Data.Services.DataService%601> 可以直接访问数据服务正在使用的数据源。 有关详细信息，请参阅[如何：定义服务操作](../../../../docs/framework/data/wcf/how-to-define-a-service-operation-wcf-data-services.md)。
+使用 <xref:System.Data.Services.DataService%601.CurrentDataSource%2A> 的 <xref:System.Data.Services.DataService%601> 可以直接访问数据服务正在使用的数据源。 有关详细信息，请参阅[如何：定义服务操作](how-to-define-a-service-operation-wcf-data-services.md)。
 
-有关如何从.NET Framework 客户端应用程序调用服务操作的信息，请参阅[调用服务操作](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md)。
+有关如何从 .NET Framework 客户端应用程序调用服务操作的信息，请参阅[调用服务操作](calling-service-operations-wcf-data-services.md)。
 
 ## <a name="service-operation-requirements"></a>服务操作要求
 
@@ -100,7 +100,7 @@ http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'&$expand=Order
 > [!NOTE]
 > 如果服务操作的返回类型已通过限制访问基础实体集的方式被隐藏，则该服务操作将不能用于客户端应用程序。
 
-有关详细信息，请参阅[如何：定义服务操作](../../../../docs/framework/data/wcf/how-to-define-a-service-operation-wcf-data-services.md)。
+有关详细信息，请参阅[如何：定义服务操作](how-to-define-a-service-operation-wcf-data-services.md)。
 
 ## <a name="raising-exceptions"></a>引发异常
 
@@ -111,4 +111,4 @@ http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'&$expand=Order
 
 ## <a name="see-also"></a>请参阅
 
-- [侦听器](../../../../docs/framework/data/wcf/interceptors-wcf-data-services.md)
+- [侦听器](interceptors-wcf-data-services.md)

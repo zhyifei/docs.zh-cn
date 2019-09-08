@@ -1,6 +1,6 @@
 ---
-title: SpawnInstance 函数 （非托管 API 参考）
-description: SpawnInstance 函数创建一个类的新实例。
+title: SpawnInstance 函数（非托管 API 参考）
+description: SpawnInstance 函数创建类的新实例。
 ms.date: 11/06/2017
 api_name:
 - SpawnInstance
@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 97a3ab62cda82526a7ad8b8e5d985d9fce7d6f07
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 529905bd9286520a8e09479bfc95ef0b614f53e9
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67783074"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798218"
 ---
 # <a name="spawninstance-function"></a>SpawnInstance 函数
 创建类的新实例。    
@@ -41,38 +41,38 @@ HRESULT SpawnInstance (
 ## <a name="parameters"></a>参数
 
 `vFunc`  
-[in]此参数是未使用。
+中此参数未使用。
 
 `ptr`  
-[in]一个指向[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)实例。
+中指向[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)实例的指针。
 
 `lFlags`  
-[in] 保留。 此参数必须为 0。
+[in] 保留。 此参数必须为0。
 
 `ppNewInstance`  
-[out]接收到的类的新实例的指针。 如果发生错误，新对象不是返回，和`ppNewInstance`左侧不被修改。
+弄接收指向类的新实例的指针。 如果发生错误，则不会返回新的对象， `ppNewInstance`也不会将其保持不变。
 
 ## <a name="return-value"></a>返回值
 
-此函数返回以下值中定义*WbemCli.h*标头文件，也可以在定义它们为常量在代码中：
+此函数返回的以下值是在*WbemCli*头文件中定义的，也可以在代码中将它们定义为常量：
 
 |返回的常量  |值  |描述  |
 |---------|---------|---------|
-| `WBEM_E_INCOMPLETE_CLASS` | 0x80041020 | `ptr` 不是有效的类定义，无法生成新的实例。 不完整，或者它尚未注册到 Windows 管理通过调用[PutClassWmi](putclasswmi.md)。 |
-| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 没有足够的内存是可用于完成该操作。 |
+| `WBEM_E_INCOMPLETE_CLASS` | 0x80041020 | `ptr`不是有效的类定义，无法生成新的实例。 此方法可能是不完整的，也可能是通过调用[PutClassWmi](putclasswmi.md)在 Windows 管理中注册的。 |
+| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 没有足够的内存可用来完成此操作。 |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `ppNewClass` 为 `null`。 |
 | `WBEM_S_NO_ERROR` | 0 | 函数调用成功。  |
   
 ## <a name="remarks"></a>备注
 
-此函数包装对的调用[IWbemClassObject::SpawnInstance](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-spawninstance)方法。
+此函数包装对[IWbemClassObject：： SpawnInstance](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-spawninstance)方法的调用。
 
-`ptr` 必须在类定义获取从 Windows 管理。 （请注意，支持生成实例中的实例，但返回的实例为空。）然后可以使用此类定义创建新实例。 调用[PutInstanceWmi](putinstancewmi.md)函数是必需的如果你想要将实例写入 Windows 管理。
+`ptr`必须是从 Windows Management 获取的类定义。 （请注意，支持从实例生成实例，但返回的实例为空。）然后，使用此类定义来创建新的实例。 如果要将实例写入 Windows 管理，则需要调用[PutInstanceWmi](putinstancewmi.md)函数。
 
-新的对象中返回`ppNewClass`自动成为当前对象的子类。 不能重写此行为。 没有其他方法可以创建子类 （的派生类）。
+返回的新对象将`ppNewClass`自动成为当前对象的子类。 不能重写此行为。 没有其他方法可用于创建子类（派生类）。
 
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../get-started/system-requirements.md)。  
   
  **标头：** WMINet_Utils.idl  
   
@@ -80,4 +80,4 @@ HRESULT SpawnInstance (
   
 ## <a name="see-also"></a>请参阅
 
-- [WMI 和性能计数器 （非托管 API 参考）](index.md)
+- [WMI 和性能计数器（非托管 API 参考）](index.md)

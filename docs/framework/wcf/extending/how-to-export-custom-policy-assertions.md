@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 99030386-43b0-4f7b-866d-17ea307f5cbd
-ms.openlocfilehash: b3d3afdd1e3fba2a77186d1cd644d723c445600c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 992133ff9922e36b00683f4f48db88e1c2b91c1d
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61767164"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795663"
 ---
 # <a name="how-to-export-custom-policy-assertions"></a>如何：导出自定义策略断言
-策略断言说明服务终结点的功能和要求。 服务应用程序可以在服务元数据中使用自定义策略断言，来将终结点、绑定或协定自定义信息传递到客户端应用程序。 Windows Communication Foundation (WCF) 可用于导出 WSDL 终结点、 操作或消息使用者，具体的功能和需求进行通信的时间取决于绑定中附加策略表达式中的断言。  
+策略断言说明服务终结点的功能和要求。 服务应用程序可以在服务元数据中使用自定义策略断言，来将终结点、绑定或协定自定义信息传递到客户端应用程序。 您可以使用 Windows Communication Foundation （WCF）在终结点、操作或消息主题的 WSDL 绑定中附加的策略表达式中导出断言，具体取决于您所通信的功能或要求。  
   
  可以通过以下方式导出自定义策略断言：在 <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> 上实现 <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType> 接口，然后或者将绑定元素直接插入到服务终结点的绑定，或者在应用程序配置文件中注册绑定元素。 策略导出实现应将自定义策略断言作为 <xref:System.Xml.XmlElement?displayProperty=nameWithType> 实例添加到传入 <xref:System.ServiceModel.Description.PolicyAssertionCollection?displayProperty=nameWithType> 方法的 <xref:System.ServiceModel.Description.PolicyConversionContext?displayProperty=nameWithType> 上的相应 <xref:System.ServiceModel.Description.IPolicyExportExtension.ExportPolicy%2A>。  
   
  另外，您需要检查 <xref:System.ServiceModel.Description.MetadataExporter.PolicyVersion%2A> 类的 <xref:System.ServiceModel.Description.WsdlExporter> 属性，并根据指定的策略版本导出正确的命名空间中的嵌套策略表达式和策略框架属性。  
   
- 若要导入自定义策略断言，请参阅<xref:System.ServiceModel.Description.IPolicyImportExtension?displayProperty=nameWithType>和[如何：导入自定义策略断言](../../../../docs/framework/wcf/extending/how-to-import-custom-policy-assertions.md)。  
+ 若要导入自定义策略<xref:System.ServiceModel.Description.IPolicyImportExtension?displayProperty=nameWithType>断言[，请参阅和如何：导入自定义](how-to-import-custom-policy-assertions.md)策略断言。  
   
 ### <a name="to-export-custom-policy-assertions"></a>导出自定义策略断言  
   
@@ -34,7 +34,7 @@ ms.locfileid: "61767164"
   
 1. 为自定义策略断言绑定元素实现 <xref:System.ServiceModel.Configuration.BindingElementExtensionElement?displayProperty=nameWithType>。  
   
-2. 将绑定元素扩展添加到配置文件使用[ \<bindingElementExtensions >](../../../../docs/framework/configure-apps/file-schema/wcf/bindingelementextensions.md)元素。  
+2. [使用\<bindingElementExtensions >](../../configure-apps/file-schema/wcf/bindingelementextensions.md)元素将绑定元素扩展添加到配置文件。  
   
 3. 使用 <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> 生成一个自定义绑定。  
   
@@ -53,4 +53,4 @@ ms.locfileid: "61767164"
 
 - <xref:System.ServiceModel.Description.IPolicyImportExtension>
 - <xref:System.ServiceModel.Description.IPolicyExportExtension>
-- [如何：导入自定义策略断言](../../../../docs/framework/wcf/extending/how-to-import-custom-policy-assertions.md)
+- [如何：导入自定义策略断言](how-to-import-custom-policy-assertions.md)

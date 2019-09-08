@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ddf1c83c-9d40-45e6-b04d-9828c6cbbfdc
-ms.openlocfilehash: 304387197c7c6ca31d76ce429cd1516be27ba7b9
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c464762e82a24aab399a23ecb26420b5dce61f55
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938177"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782385"
 ---
 # <a name="enumerating-instances-of-sql-server-adonet"></a>枚举 SQL Server 的实例 (ADO.NET)
-SQL Server 允许应用程序在当前网络中查找 SQL Server 实例。 <xref:System.Data.Sql.SqlDataSourceEnumerator> 类向应用程序开发人员公开此信息，提供包含所有可见服务器的信息的 <xref:System.Data.DataTable>。 此返回的表包含网络上可用的服务器实例的列表, 该列表与用户尝试创建新连接时提供的列表匹配, 并展开包含连接属性上所有可用服务器的下拉列表。对话框。 显示的结果并非总是完整的。  
+SQL Server 允许应用程序在当前网络中查找 SQL Server 实例。 <xref:System.Data.Sql.SqlDataSourceEnumerator> 类向应用程序开发人员公开此信息，提供包含所有可见服务器的信息的 <xref:System.Data.DataTable>。 此返回的表包含网络上可用的服务器实例的列表，该列表与用户尝试创建新连接时提供的列表匹配，并展开包含连接属性上所有可用服务器的下拉列表。对话框。 显示的结果并非总是完整的。  
   
 > [!NOTE]
 > 与大多数 Windows 服务一样，最好使用尽可能少的权限运行 SQL 浏览器服务。 有关 SQL 浏览器服务以及如何管理其行为的更多信息，请参见“SQL Server 联机图书”。  
@@ -48,7 +48,7 @@ System.Data.DataTable dataTable = instance.GetDataSources();
 |**ServerName**|服务器的名称。|  
 |**InstanceName**|服务器实例的名称。 如果服务器作为默认实例运行，则为空白。|  
 |**IsClustered**|指示服务器是否属于群集。|  
-|**Version**|服务器的版本。 例如:<br /><br /> -9.00 (SQL Server 2005)<br />-10.0. xx (SQL Server 2008)<br />-10.50 (SQL Server 2008 R2)<br />-11.0. xx (SQL Server 2012)|  
+|**Version**|服务器的版本。 例如:<br /><br /> -9.00 （SQL Server 2005）<br />-10.0. xx （SQL Server 2008）<br />-10.50 （SQL Server 2008 R2）<br />-11.0. xx （SQL Server 2012）|  
   
 ## <a name="enumeration-limitations"></a>枚举限制  
  所有可用服务器可能会列出，也可能不会列出。 根据超时和网络通信量等因素，列表可能会有所不同。 这可能会使两个连续调用生成不同的列表。 只会列出相同网络上的服务器。 广播包通常不会遍历路由器，这也就是可能会看不到某个服务器列出的原因，但是在各个调用之间是稳定的。  
@@ -126,5 +126,5 @@ class Program
   
 ## <a name="see-also"></a>请参阅
 
-- [SQL Server 和 ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
-- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [SQL Server 和 ADO.NET](index.md)
+- [ADO.NET 概述](../ado-net-overview.md)

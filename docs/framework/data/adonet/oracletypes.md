@@ -2,12 +2,12 @@
 title: OracleTypes
 ms.date: 03/30/2017
 ms.assetid: 18143304-d5c7-4c95-9995-678088d0c142
-ms.openlocfilehash: 2f3820a0a61241643894533cc431ecc88b58fcef
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9caf30111fc8f856af69571d507c243efa549343
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938893"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70783265"
 ---
 # <a name="oracletypes"></a>OracleTypes
 Oracle .NET Framework 数据提供程序包括多个可以用于使用 Oracle 数据类型的结构。 包括 <xref:System.Data.OracleClient.OracleNumber> 和 <xref:System.Data.OracleClient.OracleString>。  
@@ -52,7 +52,7 @@ public void Setup(string connectionString)
 ```  
   
 ## <a name="retrieving-data-from-the-oracle-table"></a>从 Oracle 表检索数据  
- 此示例使用**OracleDataReader**来访问数据, 并使用多个**OracleType**结构来显示数据。  
+ 此示例使用**OracleDataReader**来访问数据，并使用多个**OracleType**结构来显示数据。  
   
 ```csharp  
 public void ReadOracleTypesExample(string connectionString)  
@@ -117,5 +117,5 @@ public void ReadOracleTypesExample(string connectionString)
   
 ## <a name="see-also"></a>请参阅
 
-- [Oracle 和 ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)
-- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Oracle 和 ADO.NET](oracle-and-adonet.md)
+- [ADO.NET 概述](ado-net-overview.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 18e0b7b3547bb246588f6b255483d4c317e0df88
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b7828c86018724bb934de99cab4617f9885fdca6
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742227"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70787604"
 ---
 # <a name="closeassembly-method"></a>CloseAssembly 方法
-确定程序集操作。 在开始新的程序集或未绑定的模块之前调用此方法。  
+终结程序集操作。 在开始新的程序集或未绑定的模块之前，请调用此方法。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,13 +40,13 @@ HRESULT CloseAssembly(
  程序集的 ID。  
   
 ## <a name="return-value"></a>返回值  
- 如果该方法成功，返回，则为 S_OK。  
+ 如果该方法成功，则返回 S_OK。  
   
 ## <a name="requirements"></a>要求  
- 需要 alink.h。  
+ 需要 alink。  
   
 ## <a name="see-also"></a>请参阅
 
-- [IALink 接口](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2 接口](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink 接口](ialink-interface.md)
+- [IALink2 接口](ialink2-interface.md)
+- [ALink API](index.md)

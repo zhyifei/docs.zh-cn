@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 339ec145-826c-46d2-8cf2-3acd252cd072
-ms.openlocfilehash: c1bc8e18f2e3b0c67b98713e67fc261649a6a0e2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7de65579cb41641aded0b9a320fac59804959ff5
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61877365"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782227"
 ---
 # <a name="determine-if-any-or-all-elements-in-a-sequence-satisfy-a-condition"></a>确定序列中任何或所有元素是否满足某一条件
 如果序列中的所有元素都满足某一项条件，则 <xref:System.Linq.Enumerable.All%2A> 运算符会返回 `true`。  
@@ -18,7 +18,7 @@ ms.locfileid: "61877365"
  如果序列中的任意一个元素满足某一项条件，则 <xref:System.Linq.Queryable.Any%2A> 运算符会返回 `true`。  
   
 ## <a name="example"></a>示例  
- 下面的示例返回由至少下了一个订单的客户组成的序列。 `Where` / `where`子句的计算结果为`true`如果给定`Customer`具有任何`Order`。  
+ 下面的示例返回由至少下了一个订单的客户组成的序列。 如果`Where`给定/ `true` `where` 的具有`Order`any，则子句的计算结果为。 `Customer`  
   
  [!code-csharp[DLinqQueryExamples#37](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#37)]
  [!code-vb[DLinqQueryExamples#37](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#37)]  
@@ -35,4 +35,4 @@ ms.locfileid: "61877365"
   
 ## <a name="see-also"></a>请参阅
 
-- [查询示例](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
+- [查询示例](query-examples.md)

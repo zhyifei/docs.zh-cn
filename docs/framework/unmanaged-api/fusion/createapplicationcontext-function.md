@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9853f974230ee755a33bc46ca6ba3e086051b236
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 25364330dafdf858c4b41e9a05731c37e97fbb57
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778476"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795435"
 ---
 # <a name="createapplicationcontext-function"></a>CreateApplicationContext 函数
-此函数支持.NET Framework 基础结构，不应在代码中直接使用。  
+此函数支持 .NET Framework 基础结构，不应在代码中直接使用。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,22 +37,22 @@ HRESULT CreateApplicationContext (
   
 ## <a name="parameters"></a>参数  
  `pName`  
- [in]指向一个友好名称的指针。  
+ 中指向友好名称的指针。  
   
  `ppCtx`  
- [out]指向应用程序上下文的指针。  
+ 弄指向应用程序上下文的指针。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../get-started/system-requirements.md)。  
   
- **标头：** Fusion.h  
+ **标头：** 合成。h  
   
- **库：** 包含为 Fusion.dll 中的资源  
+ **类库**作为资源包含在合成 .dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 
-- [IAssemblyCache 接口](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
-- [合成全局静态函数](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
-- [全局程序集缓存](../../../../docs/framework/app-domains/gac.md)
+- [IAssemblyCache 接口](iassemblycache-interface.md)
+- [合成全局静态函数](fusion-global-static-functions.md)
+- [全局程序集缓存](../../app-domains/gac.md)

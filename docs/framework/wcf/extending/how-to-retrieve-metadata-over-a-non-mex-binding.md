@@ -2,19 +2,19 @@
 title: 如何：通过非 MEX 绑定检索元数据
 ms.date: 03/30/2017
 ms.assetid: 2292e124-81b2-4317-b881-ce9c1ec66ecb
-ms.openlocfilehash: 4a127e3e2283050018705c85606bd7c03c36de8b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6cd6e0ce5dc287c826179c152b989b5f7842bb6e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766774"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795584"
 ---
 # <a name="how-to-retrieve-metadata-over-a-non-mex-binding"></a>如何：通过非 MEX 绑定检索元数据
-本主题介绍如何通过非 MEX 绑定从 MEX 终结点检索元数据。 在此示例中的代码基于[自定义安全元数据终结点](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md)示例。  
+本主题介绍如何通过非 MEX 绑定从 MEX 终结点检索元数据。 此示例中的代码基于[自定义安全元数据终结点](../samples/custom-secure-metadata-endpoint.md)示例。  
   
 ### <a name="to-retrieve-metadata-over-a-non-mex-binding"></a>通过非 MEX 绑定检索元数据  
   
-1. 确定由 MEX 终结点使用的绑定。 对于 Windows Communication Foundation (WCF) 服务，可以通过访问服务的配置文件来确定 MEX 绑定。 在本例中，MEX 绑定在以下服务配置中定义。  
+1. 确定由 MEX 终结点使用的绑定。 对于 Windows Communication Foundation （WCF）服务，可以通过访问服务的配置文件来确定 MEX 绑定。 在本例中，MEX 绑定在以下服务配置中定义。  
   
     ```xml  
     <services>  
@@ -121,8 +121,8 @@ ms.locfileid: "61766774"
     ServiceEndpointCollection endpoints = importer.ImportAllEndpoints();  
     ```  
   
-5. 此时，您拥有服务终结点的集合。 有关导入元数据的详细信息，请参阅[如何：元数据导入服务终结点](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md)。  
+5. 此时，您拥有服务终结点的集合。 有关导入元数据的详细信息[，请参阅如何：将元数据导入](../feature-details/how-to-import-metadata-into-service-endpoints.md)服务终结点。  
   
 ## <a name="see-also"></a>请参阅
 
-- [元数据](../../../../docs/framework/wcf/feature-details/metadata.md)
+- [元数据](../feature-details/metadata.md)

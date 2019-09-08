@@ -2,21 +2,21 @@
 title: 从 XML 推断数据集关系结构
 ms.date: 03/30/2017
 ms.assetid: cd2f41c6-6785-420e-aa43-3ceb0bdccdce
-ms.openlocfilehash: 9b1932807058777a532457c99efc49f3ddfdf4ae
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 1c8325d7ed52fea7397a7b5aa8744bdfa90b2c6e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204803"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785316"
 ---
 # <a name="inferring-dataset-relational-structure-from-xml"></a>从 XML 推断数据集关系结构
-<xref:System.Data.DataSet> 的关系结构（即架构）由表、列、约束和关系组成。 当从 XML 中加载 <xref:System.Data.DataSet> 时，可以预定义架构，也可以从所加载的 XML 显式（或通过推断）创建架构。 有关<xref:System.Data.DataSet>从 xml 加载的架构和内容的详细信息, 请参阅从 xml[加载数据集](loading-a-dataset-from-xml.md)和[从 xml 加载数据集架构信息](loading-dataset-schema-information-from-xml.md)。  
+<xref:System.Data.DataSet> 的关系结构（即架构）由表、列、约束和关系组成。 当从 XML 中加载 <xref:System.Data.DataSet> 时，可以预定义架构，也可以从所加载的 XML 显式（或通过推断）创建架构。 有关<xref:System.Data.DataSet>从 xml 加载的架构和内容的详细信息，请参阅从 xml[加载数据集](loading-a-dataset-from-xml.md)和[从 xml 加载数据集架构信息](loading-dataset-schema-information-from-xml.md)。  
   
- 如果<xref:System.Data.DataSet>是从 xml 创建的架构, 则首选方法是使用 xml 架构定义语言 (xsd) 显式指定架构 (如[从 XML 架构 (xsd) 派生数据集关系结构](deriving-dataset-relational-structure-from-xml-schema-xsd.md)中所述) 或XML 数据缩减 (XDR)。 如果 XML 中没有可用的 XML 架构或 XDR 架构，则可以从 XML 元素和属性的结构推断 <xref:System.Data.DataSet> 的架构。  
+ 如果<xref:System.Data.DataSet>是从 xml 创建的架构，则首选方法是使用 xml 架构定义语言（xsd）显式指定架构（如[从 XML 架构（xsd）派生数据集关系结构](deriving-dataset-relational-structure-from-xml-schema-xsd.md)中所述）或XML 数据缩减（XDR）。 如果 XML 中没有可用的 XML 架构或 XDR 架构，则可以从 XML 元素和属性的结构推断 <xref:System.Data.DataSet> 的架构。  
   
  本节通过显示 XML 元素和属性及其结构以及生成的推断 <xref:System.Data.DataSet> 架构来描述推断 <xref:System.Data.DataSet> 架构的规则。  
   
- 并非所有出现在 XML 文档中的属性都应包含在推断过程中。 由命名空间限定的属性可以包含对 XML 文档重要但对 <xref:System.Data.DataSet> 架构不重要的元数据。 使用 <xref:System.Data.DataSet.InferXmlSchema%2A>，您可以指定要在推断过程中忽略的命名空间。 有关详细信息, 请参阅[从 XML 加载数据集架构信息](loading-dataset-schema-information-from-xml.md)。  
+ 并非所有出现在 XML 文档中的属性都应包含在推断过程中。 由命名空间限定的属性可以包含对 XML 文档重要但对 <xref:System.Data.DataSet> 架构不重要的元数据。 使用 <xref:System.Data.DataSet.InferXmlSchema%2A>，您可以指定要在推断过程中忽略的命名空间。 有关详细信息，请参阅[从 XML 加载数据集架构信息](loading-dataset-schema-information-from-xml.md)。  
   
 ## <a name="in-this-section"></a>本节内容  
  [数据集架构推断过程摘要](summary-of-the-dataset-schema-inference-process.md)  
@@ -49,4 +49,4 @@ ms.locfileid: "70204803"
   
 ## <a name="see-also"></a>请参阅
 
-- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 概述](../ado-net-overview.md)

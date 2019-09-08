@@ -2,12 +2,12 @@
 title: SQL Server 公共语言运行时集成
 ms.date: 03/30/2017
 ms.assetid: c7a324c4-160d-44c2-b593-641af06eca61
-ms.openlocfilehash: fd043aa6c7e5b9246a36146e000e5cba9e090d3e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 77b40c6a1576b87d9bb4a7eb4b1ee3df8828b892
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876338"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780858"
 ---
 # <a name="sql-server-common-language-runtime-integration"></a>SQL Server 公共语言运行时集成
 SQL Server 2005 引入了 Microsoft Windows 的 .NET Framework 的公共语言运行库 (CLR) 组件的集成。 这意味着您可以使用任意 .NET Framework 语言（包括 Microsoft Visual Basic .NET 和 Microsoft Visual C#）编写存储过程、触发器、用户定义类型、用户定义函数、用户定义聚合函数以及流处理表值函数。 <xref:Microsoft.SqlServer.Server> 命名空间包含一组新的应用程序编程接口 (API)，使托管代码可以与 Microsoft SQL Server 环境交互。  
@@ -18,31 +18,31 @@ SQL Server 2005 引入了 Microsoft Windows 的 .NET Framework 的公共语言�
   
  **SQL Server 联机丛书**  
   
-1. [公共语言运行时 (CLR) 集成编程概念](https://go.microsoft.com/fwlink/?LinkId=115240)  
+1. [公共语言运行时（CLR）集成编程概念](https://go.microsoft.com/fwlink/?LinkId=115240)  
   
 ## <a name="in-this-section"></a>本节内容  
- [SQL Server CLR 集成简介](../../../../../docs/framework/data/adonet/sql/introduction-to-sql-server-clr-integration.md)  
+ [SQL Server CLR 集成简介](introduction-to-sql-server-clr-integration.md)  
  简介 SQL Server CLR 集成。 提供指向其他主题的链接。  
   
- [CLR 用户定义的函数](../../../../../docs/framework/data/adonet/sql/clr-user-defined-functions.md)  
+ [CLR 用户定义的函数](clr-user-defined-functions.md)  
  描述如何实现和使用各种类型的 CLR 函数：表值函数、标量值函数以及用户定义聚合函数。  
   
- [CLR 用户定义的类型](../../../../../docs/framework/data/adonet/sql/clr-user-defined-types.md)  
+ [CLR 用户定义的类型](clr-user-defined-types.md)  
  描述如何实现和使用 CLR 用户定义类型。 提供指向其他主题的链接。  
   
- [CLR 存储过程](../../../../../docs/framework/data/adonet/sql/clr-stored-procedures.md)  
+ [CLR 存储过程](clr-stored-procedures.md)  
  描述如何实现和使用 CLR 存储过程。 提供指向其他主题的链接。  
   
- [CLR 触发器](../../../../../docs/framework/data/adonet/sql/clr-triggers.md)  
+ [CLR 触发器](clr-triggers.md)  
  描述如何实现和使用 CLR 触发器。 提供指向其他主题的链接。  
   
- [上下文连接](../../../../../docs/framework/data/adonet/sql/the-context-connection.md)  
+ [上下文连接](the-context-connection.md)  
  介绍上下文连接。  
   
- [ADO.NET 的 SQL Server 进程内特定行为](../../../../../docs/framework/data/adonet/sql/sql-server-in-process-specific-behavior-of-adonet.md)  
+ [ADO.NET 的 SQL Server 进程内特定行为](sql-server-in-process-specific-behavior-of-adonet.md)  
  介绍 SQL Server 进程中专用的 ADO.NET 扩展以及上下文连接。 提供指向其他主题的链接。  
   
 ## <a name="see-also"></a>请参阅
 
-- [SQL Server 和 ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
-- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [SQL Server 和 ADO.NET](index.md)
+- [ADO.NET 概述](../ado-net-overview.md)

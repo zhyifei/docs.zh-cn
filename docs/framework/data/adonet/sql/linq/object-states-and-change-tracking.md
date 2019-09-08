@@ -2,12 +2,12 @@
 title: 对象状态和更改跟踪
 ms.date: 03/30/2017
 ms.assetid: 7a808b00-9c3c-479a-aa94-717280fefd71
-ms.openlocfilehash: a60afab5158d0d5f66d12d6913ee890abc8ca730
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: a9df200f4d2e5f64bf5883c7bc513ba7129dcaad
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70043521"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781274"
 ---
 # <a name="object-states-and-change-tracking"></a>对象状态和更改跟踪
 
@@ -19,9 +19,9 @@ ms.locfileid: "70043521"
 
 |状态|描述|
 |-----------|-----------------|
-|`Untracked`|[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 未跟踪的对象。 示例包括：<br /><br /> -不通过当前<xref:System.Data.Linq.DataContext>查询的对象 (如新创建的对象)。<br />-通过反序列化创建的对象<br />-通过不同<xref:System.Data.Linq.DataContext>的查询的对象。|
+|`Untracked`|[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 未跟踪的对象。 示例包括：<br /><br /> -不通过当前<xref:System.Data.Linq.DataContext>查询的对象（如新创建的对象）。<br />-通过反序列化创建的对象<br />-通过不同<xref:System.Data.Linq.DataContext>的查询的对象。|
 |`Unchanged`|通过使用当前 <xref:System.Data.Linq.DataContext> 检索到的对象，并且尚未获知此对象自创建以来已被修改。|
-|`PossiblyModified`|*附加*到的<xref:System.Data.Linq.DataContext>对象。 有关详细信息, 请参阅[N 层应用程序中的数据检索和 CUD 操作 (LINQ to SQL)](../../../../../../docs/framework/data/adonet/sql/linq/data-retrieval-and-cud-operations-in-n-tier-applications.md)。|
+|`PossiblyModified`|*附加*到的<xref:System.Data.Linq.DataContext>对象。 有关详细信息，请参阅[N 层应用程序中的数据检索和 CUD 操作（LINQ to SQL）](data-retrieval-and-cud-operations-in-n-tier-applications.md)。|
 |`ToBeInserted`|使用当前 <xref:System.Data.Linq.DataContext> 未检索到的对象。 这会导致在 `INSERT` 期间执行数据库 <xref:System.Data.Linq.DataContext.SubmitChanges%2A> 操作。|
 |`ToBeUpdated`|符合如下条件的对象：已获知自检索到该对象以来它已被修改。 这会导致在 `UPDATE` 期间执行数据库 <xref:System.Data.Linq.DataContext.SubmitChanges%2A> 操作。|
 |`ToBeDeleted`|标记为删除，从而导致在 `DELETE` 期间执行数据库 <xref:System.Data.Linq.DataContext.SubmitChanges%2A> 操作的对象。|
@@ -31,7 +31,7 @@ ms.locfileid: "70043521"
 
 您可以通过使用 `Inserts` 显式请求 <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A>。 此外，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 还可以通过查找与必须更新的已知对象之一相连接的对象来推断 `Inserts`。 例如，如果将 `Untracked` 对象添加到 <xref:System.Data.Linq.EntitySet%601> 或将 <xref:System.Data.Linq.EntityRef%601> 设置为 `Untracked` 对象，则可以通过关系图中的被跟踪对象使 `Untracked` 对象可访问。 在处理 <xref:System.Data.Linq.DataContext.SubmitChanges%2A> 时，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 遍历被跟踪的对象，并查找未被跟踪的任何可访问的持久性对象。 此类对象是要插入到数据库中的候选对象。
 
-对于继承层次结构中的类<xref:System.Data.Linq.Table%601.InsertOnSubmit%2A>,`o`() 还将指定为*鉴别*器的成员的值设置为与对象`o`的类型匹配。 对于与默认鉴别器值匹配的类型，此操作会导致鉴别器值被默认值覆盖。 有关详细信息, 请参阅[继承支持](../../../../../../docs/framework/data/adonet/sql/linq/inheritance-support.md)。
+对于继承层次结构中的类<xref:System.Data.Linq.Table%601.InsertOnSubmit%2A>，`o`（）还将指定为*鉴别*器的成员的值设置为与对象`o`的类型匹配。 对于与默认鉴别器值匹配的类型，此操作会导致鉴别器值被默认值覆盖。 有关详细信息，请参阅[继承支持](inheritance-support.md)。
 
 > [!IMPORTANT]
 > 添加到 `Table` 的对象不在标识缓存中。 标识缓存仅反映从数据库中检索到的内容。 调用 <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A> 后，直到 <xref:System.Data.Linq.DataContext.SubmitChanges%2A> 成功完成，所添加的实体才会出现在对数据库的查询中。
@@ -53,7 +53,7 @@ ms.locfileid: "70043521"
 > [!NOTE]
 > 从表中移除对象使得 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 在 `DELETE` 时生成对应的 SQL <xref:System.Data.Linq.DataContext.SubmitChanges%2A> 命令。 此操作不会从缓存中移除该对象或将删除操作传播到相关对象。
 >
-> 若要回收已删除对象的 `id`，请使用新的 <xref:System.Data.Linq.DataContext> 实例。 若要清除相关对象, 可以使用数据库的*级联删除*功能, 或者手动删除相关对象。
+> 若要回收已删除对象的 `id`，请使用新的 <xref:System.Data.Linq.DataContext> 实例。 若要清除相关对象，可以使用数据库的*级联删除*功能，或者手动删除相关对象。
 >
 > 无需按任何特殊顺序删除相关对象（与在数据库中进行删除不同）。
 
@@ -69,5 +69,5 @@ ms.locfileid: "70043521"
 
 ## <a name="see-also"></a>请参阅
 
-- [背景信息](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
-- [插入、更新和删除操作](../../../../../../docs/framework/data/adonet/sql/linq/insert-update-and-delete-operations.md)
+- [背景信息](background-information.md)
+- [插入、更新和删除操作](insert-update-and-delete-operations.md)

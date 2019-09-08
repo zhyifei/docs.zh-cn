@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aa5d5ee469d41cca46ea05fa4111ce3abff808d4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3eac353252f5a97402cbd883895b3e397c39edd6
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67771901"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799183"
 ---
 # <a name="gethashfromhandle-function"></a>GetHashFromHandle 函数
 使用指定的哈希算法，生成具有指定文件句柄的文件内容的哈希。  
   
- 此函数已弃用。 使用[iclrstrongname:: Gethashfromhandle](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromhandle-method.md)方法相反。  
+ 此函数已弃用。 改为使用[ICLRStrongName：： GetHashFromHandle](../hosting/iclrstrongname-gethashfromhandle-method.md)方法。  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,30 +42,30 @@ HRESULT GetHashFromHandle (
   
 ## <a name="parameters"></a>参数  
  `hFile`  
- [in]要进行哈希处理的文件句柄。  
+ 中要进行哈希处理的文件的句柄。  
   
  `piHashAlg`  
- [in、 out]一个常量，它指定哈希算法。 使用默认的算法为零。  
+ [in，out]指定哈希算法的常量。 对于默认算法，使用零。  
   
  `pbHash`  
- [out]返回的哈希缓冲区中。  
+ 弄返回的哈希缓冲区。  
   
  `cchHash`  
- [in]请求的最大大小的`pbHash`。  
+ 中请求的最大大小`pbHash`。  
   
  `pchHash`  
- [out]大小 （字节），则返回的`pbHash`。  
+ 弄返回`pbHash`的的大小（以字节为单位）。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../get-started/system-requirements.md)。  
   
- **标头：** StrongName.h  
+ **标头：** Stackexchange.redis.strongname  
   
- **库：** 包含为 MsCorEE.dll 中的资源  
+ **类库**作为资源包括在 Mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 
-- [GetHashFromHandle 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromhandle-method.md)
-- [ICLRStrongName 接口](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [GetHashFromHandle 方法](../hosting/iclrstrongname-gethashfromhandle-method.md)
+- [ICLRStrongName 接口](../hosting/iclrstrongname-interface.md)

@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c7cba174-9d40-491d-b32c-f2d73b7e9eab
-ms.openlocfilehash: 222ce575d9e977cc8b68862385b4a1b147c6394a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c279d4ed32aed4788ee5866a24572663a1e2f580
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61902689"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793105"
 ---
 # <a name="how-to-submit-changes-to-the-database"></a>如何：将更改提交到数据库
 无论您对对象做了多少项更改，都只是在更改内存中的副本。 您并未对数据库中的实际数据做任何更改。 直到您对 <xref:System.Data.Linq.DataContext.SubmitChanges%2A> 显式调用 <xref:System.Data.Linq.DataContext>，您所做的更改才会传输到服务器。  
   
- 当您进行此调用时，<xref:System.Data.Linq.DataContext> 会设法将您所做的更改转换为等效的 SQL 命令。 可以使用你自己的自定义逻辑来重写这些操作，但由服务的协调的提交顺序<xref:System.Data.Linq.DataContext>称为*更改处理器*。 事件的顺序如下：  
+ 当您进行此调用时，<xref:System.Data.Linq.DataContext> 会设法将您所做的更改转换为等效的 SQL 命令。 你可以使用自己的自定义逻辑来重写这些操作，但提交的顺序由<xref:System.Data.Linq.DataContext>称为*更改处理器*的服务进行协调。 事件的顺序如下：  
   
 1. 当您调用 <xref:System.Data.Linq.DataContext.SubmitChanges%2A> 时，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 会检查已知对象的集合以确定新实例是否已附加到它们。 如果已附加，这些新实例将添加到被跟踪对象的集合。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "61902689"
   
 ## <a name="see-also"></a>请参阅
 
-- [如何：检测和解决冲突的提交](../../../../../../docs/framework/data/adonet/sql/linq/how-to-detect-and-resolve-conflicting-submissions.md)
-- [如何：管理更改冲突](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
-- [下载示例数据库](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
-- [进行和提交数据更改](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)
+- [如何：检测并解决冲突的提交](how-to-detect-and-resolve-conflicting-submissions.md)
+- [如何：管理更改冲突](how-to-manage-change-conflicts.md)
+- [下载示例数据库](downloading-sample-databases.md)
+- [进行和提交数据更改](making-and-submitting-data-changes.md)

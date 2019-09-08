@@ -8,32 +8,32 @@ helpviewer_keywords:
 ms.assetid: 3feb4fc5-a1e9-445d-929c-0a7490244114
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 762b23af9eb6282a26d9b0430132023c9f76d1f6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fb66e0d518abc2d337362affbd2aa951303128f3
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697727"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795287"
 ---
 # <a name="fusion-structures"></a>合成结构
-本部分描述合成 API 使用的非托管的结构。  
+本部分介绍了合成 API 使用的非托管结构。  
   
 ## <a name="in-this-section"></a>本节内容  
- [ASSEMBLY_INFO 结构](../../../../docs/framework/unmanaged-api/fusion/assembly-info-structure.md)  
- 包含有关在全局程序集缓存中注册程序集的信息。  
+ [ASSEMBLY_INFO 结构](assembly-info-structure.md)  
+ 包含有关在全局程序集缓存中注册的程序集的信息。  
   
- [FUSION_INSTALL_REFERENCE 结构](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md)  
- 表示应用程序对应用程序已安装在全局程序集缓存中的程序集的引用。  
+ [FUSION_INSTALL_REFERENCE 结构](fusion-install-reference-structure.md)  
+ 表示应用程序对应用程序已安装在全局程序集缓存中的程序集进行的引用。  
   
- [IDENTITY_ATTRIBUTE 结构](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-structure.md)  
- 包含有关属性的元数据信息[IDefinitionIdentity](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md)实例。  
+ [IDENTITY_ATTRIBUTE 结构](identity-attribute-structure.md)  
+ 包含有关[IDefinitionIdentity](idefinitionidentity-interface.md)实例的元数据属性信息。  
   
- [IDENTITY_ATTRIBUTE_BLOB 结构](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-blob-structure.md)  
- 包含关联的偏移量的信息[IDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-structure.md)结构。  
+ [IDENTITY_ATTRIBUTE_BLOB 结构](identity-attribute-blob-structure.md)  
+ 包含关联的[IDENTITY_ATTRIBUTE](identity-attribute-structure.md)结构的偏移信息。  
   
 ## <a name="related-sections"></a>相关章节  
- [合成接口](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)  
+ [合成接口](fusion-interfaces.md)  
   
- [合成全局静态函数](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)  
+ [合成全局静态函数](fusion-global-static-functions.md)  
   
- [合成枚举](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)
+ [合成枚举](fusion-enumerations.md)
