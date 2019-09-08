@@ -1,6 +1,6 @@
 ---
-title: BeginEnumeration 函数 （非托管 API 参考）
-description: BeginEnumeration 函数将一个枚举数重置为枚举的开头
+title: Endenumeration 函数（非托管 API 参考）
+description: Endenumeration 函数将枚举数重置到枚举的开头
 ms.date: 11/06/2017
 api_name:
 - BeginEnumeration
@@ -16,19 +16,19 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5ccf39c019094d896ca20534fccbbccf38ab1dd3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: de36650aa2b206b5e9734b38c6067a3a79de610c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761803"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798795"
 ---
-# <a name="beginenumeration-function"></a><span data-ttu-id="548df-103">BeginEnumeration 函数</span><span class="sxs-lookup"><span data-stu-id="548df-103">BeginEnumeration function</span></span>
-<span data-ttu-id="548df-104">将枚举数重置到枚举的起点。</span><span class="sxs-lookup"><span data-stu-id="548df-104">Resets an enumerator back to the beginning of the enumeration.</span></span>  
+# <a name="beginenumeration-function"></a><span data-ttu-id="cf576-103">BeginEnumeration 函数</span><span class="sxs-lookup"><span data-stu-id="cf576-103">BeginEnumeration function</span></span>
+<span data-ttu-id="cf576-104">将枚举数重置回枚举的开头。</span><span class="sxs-lookup"><span data-stu-id="cf576-104">Resets an enumerator back to the beginning of the enumeration.</span></span>  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
-## <a name="syntax"></a><span data-ttu-id="548df-105">语法</span><span class="sxs-lookup"><span data-stu-id="548df-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="cf576-105">语法</span><span class="sxs-lookup"><span data-stu-id="cf576-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT BeginEnumeration (
@@ -38,72 +38,72 @@ HRESULT BeginEnumeration (
 ); 
 ```  
 
-## <a name="parameters"></a><span data-ttu-id="548df-106">参数</span><span class="sxs-lookup"><span data-stu-id="548df-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="cf576-106">参数</span><span class="sxs-lookup"><span data-stu-id="cf576-106">Parameters</span></span>
 
 `vFunc`\
-<span data-ttu-id="548df-107">[in]此参数是未使用。</span><span class="sxs-lookup"><span data-stu-id="548df-107">[in] This parameter is unused.</span></span>
+<span data-ttu-id="cf576-107">中此参数未使用。</span><span class="sxs-lookup"><span data-stu-id="cf576-107">[in] This parameter is unused.</span></span>
 
 `ptr`\
-<span data-ttu-id="548df-108">[in]一个指向[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)实例。</span><span class="sxs-lookup"><span data-stu-id="548df-108">[in] A pointer to an [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance.</span></span>
+<span data-ttu-id="cf576-108">中指向[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)实例的指针。</span><span class="sxs-lookup"><span data-stu-id="cf576-108">[in] A pointer to an [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance.</span></span>
 
 `lEnumFlags`\
-<span data-ttu-id="548df-109">[in]值中所述的标志的按位组合[备注](#remarks)部分，用于控制在枚举中包含的属性。</span><span class="sxs-lookup"><span data-stu-id="548df-109">[in] A bitwise combination of the flags or values described in the [Remarks](#remarks) section that controls the properties included in the enumeration.</span></span>
+<span data-ttu-id="cf576-109">中"[备注](#remarks)" 部分中描述的标志或值的按位组合，该组合控制枚举中包含的属性。</span><span class="sxs-lookup"><span data-stu-id="cf576-109">[in] A bitwise combination of the flags or values described in the [Remarks](#remarks) section that controls the properties included in the enumeration.</span></span>
 
-## <a name="return-value"></a><span data-ttu-id="548df-110">返回值</span><span class="sxs-lookup"><span data-stu-id="548df-110">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="cf576-110">返回值</span><span class="sxs-lookup"><span data-stu-id="cf576-110">Return value</span></span>
 
-<span data-ttu-id="548df-111">此函数返回以下值中定义*WbemCli.h*标头文件，也可以在定义它们为常量在代码中：</span><span class="sxs-lookup"><span data-stu-id="548df-111">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
+<span data-ttu-id="cf576-111">此函数返回的以下值是在*WbemCli*头文件中定义的，也可以在代码中将它们定义为常量：</span><span class="sxs-lookup"><span data-stu-id="cf576-111">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
 
-|<span data-ttu-id="548df-112">返回的常量</span><span class="sxs-lookup"><span data-stu-id="548df-112">Constant</span></span>  |<span data-ttu-id="548df-113">值</span><span class="sxs-lookup"><span data-stu-id="548df-113">Value</span></span>  |<span data-ttu-id="548df-114">描述</span><span class="sxs-lookup"><span data-stu-id="548df-114">Description</span></span>  |
+|<span data-ttu-id="cf576-112">返回的常量</span><span class="sxs-lookup"><span data-stu-id="cf576-112">Constant</span></span>  |<span data-ttu-id="cf576-113">值</span><span class="sxs-lookup"><span data-stu-id="cf576-113">Value</span></span>  |<span data-ttu-id="cf576-114">描述</span><span class="sxs-lookup"><span data-stu-id="cf576-114">Description</span></span>  |
 |---------|---------|---------|
-|`WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="548df-115">0x80041008</span><span class="sxs-lookup"><span data-stu-id="548df-115">0x80041008</span></span> | <span data-ttu-id="548df-116">中的标志的组合`lEnumFlags`无效，或一个无效的指定的参数。</span><span class="sxs-lookup"><span data-stu-id="548df-116">The combination of flags in `lEnumFlags` is invalid, or an invalid argument was specified.</span></span> |
-|`WBEM_E_UNEXPECTED` | <span data-ttu-id="548df-117">0x8004101d</span><span class="sxs-lookup"><span data-stu-id="548df-117">0x8004101d</span></span> | <span data-ttu-id="548df-118">第二次调用`BeginEnumeration`而无需对的干预调用进行[ `EndEnumeration` ](endenumeration.md)。</span><span class="sxs-lookup"><span data-stu-id="548df-118">A second call to `BeginEnumeration` was made without an intervening call to [`EndEnumeration`](endenumeration.md).</span></span> |
-|`WBEM_E_OUT_OF_MEMORY` | <span data-ttu-id="548df-119">0x80041006</span><span class="sxs-lookup"><span data-stu-id="548df-119">0x80041006</span></span> | <span data-ttu-id="548df-120">没有足够的内存，可开始新的枚举。</span><span class="sxs-lookup"><span data-stu-id="548df-120">Not enough memory is available to begin a new enumeration.</span></span> |
-|`WBEM_S_NO_ERROR` | <span data-ttu-id="548df-121">0</span><span class="sxs-lookup"><span data-stu-id="548df-121">0</span></span> | <span data-ttu-id="548df-122">函数调用成功。</span><span class="sxs-lookup"><span data-stu-id="548df-122">The function call was successful.</span></span>  |
+|`WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="cf576-115">0x80041008</span><span class="sxs-lookup"><span data-stu-id="cf576-115">0x80041008</span></span> | <span data-ttu-id="cf576-116">中`lEnumFlags`的标志组合无效，或者指定的参数无效。</span><span class="sxs-lookup"><span data-stu-id="cf576-116">The combination of flags in `lEnumFlags` is invalid, or an invalid argument was specified.</span></span> |
+|`WBEM_E_UNEXPECTED` | <span data-ttu-id="cf576-117">0x8004101d</span><span class="sxs-lookup"><span data-stu-id="cf576-117">0x8004101d</span></span> | <span data-ttu-id="cf576-118">对的第二`BeginEnumeration`次调用没有干预[`EndEnumeration`](endenumeration.md)调用。</span><span class="sxs-lookup"><span data-stu-id="cf576-118">A second call to `BeginEnumeration` was made without an intervening call to [`EndEnumeration`](endenumeration.md).</span></span> |
+|`WBEM_E_OUT_OF_MEMORY` | <span data-ttu-id="cf576-119">0x80041006</span><span class="sxs-lookup"><span data-stu-id="cf576-119">0x80041006</span></span> | <span data-ttu-id="cf576-120">没有足够的内存可用于开始新的枚举。</span><span class="sxs-lookup"><span data-stu-id="cf576-120">Not enough memory is available to begin a new enumeration.</span></span> |
+|`WBEM_S_NO_ERROR` | <span data-ttu-id="cf576-121">0</span><span class="sxs-lookup"><span data-stu-id="cf576-121">0</span></span> | <span data-ttu-id="cf576-122">函数调用成功。</span><span class="sxs-lookup"><span data-stu-id="cf576-122">The function call was successful.</span></span>  |
   
-## <a name="remarks"></a><span data-ttu-id="548df-123">备注</span><span class="sxs-lookup"><span data-stu-id="548df-123">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="cf576-123">备注</span><span class="sxs-lookup"><span data-stu-id="cf576-123">Remarks</span></span>
 
-<span data-ttu-id="548df-124">此函数包装对的调用[IWbemClassObject::BeginEnumeration](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)方法。</span><span class="sxs-lookup"><span data-stu-id="548df-124">This function wraps a call to the [IWbemClassObject::BeginEnumeration](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) method.</span></span>
+<span data-ttu-id="cf576-124">此函数包装对[IWbemClassObject：： endenumeration](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)方法的调用。</span><span class="sxs-lookup"><span data-stu-id="cf576-124">This function wraps a call to the [IWbemClassObject::BeginEnumeration](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) method.</span></span>
 
-<span data-ttu-id="548df-125">可以作为传递的标志`lEnumFlags`中定义参数*WbemCli.h*标头文件，也可以在定义它们为常量在代码中。</span><span class="sxs-lookup"><span data-stu-id="548df-125">The flags that can be passed as the `lEnumFlags` argument are defined in the *WbemCli.h* header file, or you can define them as constants in your code.</span></span>  <span data-ttu-id="548df-126">可以结合任何其他组中的任何标志每个组中的一个标志。</span><span class="sxs-lookup"><span data-stu-id="548df-126">You can combine one flag from each group with any flag from any other group.</span></span> <span data-ttu-id="548df-127">但是，在同一组中的标志是互斥的。</span><span class="sxs-lookup"><span data-stu-id="548df-127">However, flags from the same group are mutually exclusive.</span></span> 
+<span data-ttu-id="cf576-125">可以作为`lEnumFlags`参数传递的标志在*WbemCli*头文件中定义，也可以在代码中将它们定义为常量。</span><span class="sxs-lookup"><span data-stu-id="cf576-125">The flags that can be passed as the `lEnumFlags` argument are defined in the *WbemCli.h* header file, or you can define them as constants in your code.</span></span>  <span data-ttu-id="cf576-126">可以将每个组中的一个标志与任何其他组中的任何标志组合在一起。</span><span class="sxs-lookup"><span data-stu-id="cf576-126">You can combine one flag from each group with any flag from any other group.</span></span> <span data-ttu-id="cf576-127">但是，同一组中的标志互相排斥。</span><span class="sxs-lookup"><span data-stu-id="cf576-127">However, flags from the same group are mutually exclusive.</span></span> 
 
-<span data-ttu-id="548df-128">**组 1**</span><span class="sxs-lookup"><span data-stu-id="548df-128">**Group 1**</span></span>
+<span data-ttu-id="cf576-128">**组1**</span><span class="sxs-lookup"><span data-stu-id="cf576-128">**Group 1**</span></span>
 
-|<span data-ttu-id="548df-129">返回的常量</span><span class="sxs-lookup"><span data-stu-id="548df-129">Constant</span></span>  |<span data-ttu-id="548df-130">值</span><span class="sxs-lookup"><span data-stu-id="548df-130">Value</span></span>  |<span data-ttu-id="548df-131">描述</span><span class="sxs-lookup"><span data-stu-id="548df-131">Description</span></span>  |
+|<span data-ttu-id="cf576-129">返回的常量</span><span class="sxs-lookup"><span data-stu-id="cf576-129">Constant</span></span>  |<span data-ttu-id="cf576-130">值</span><span class="sxs-lookup"><span data-stu-id="cf576-130">Value</span></span>  |<span data-ttu-id="cf576-131">描述</span><span class="sxs-lookup"><span data-stu-id="cf576-131">Description</span></span>  |
 |---------|---------|---------|
-|`WBEM_FLAG_KEYS_ONLY` | <span data-ttu-id="548df-132">0x4</span><span class="sxs-lookup"><span data-stu-id="548df-132">0x4</span></span> | <span data-ttu-id="548df-133">包含构成仅密钥的属性。</span><span class="sxs-lookup"><span data-stu-id="548df-133">Include properties that constitute the key only.</span></span> |
-|`WBEM_FLAG_REFS_ONLY` | <span data-ttu-id="548df-134">0x8</span><span class="sxs-lookup"><span data-stu-id="548df-134">0x8</span></span> | <span data-ttu-id="548df-135">包括仅限对象引用的属性。</span><span class="sxs-lookup"><span data-stu-id="548df-135">Include properties that are object references only.</span></span> |
+|`WBEM_FLAG_KEYS_ONLY` | <span data-ttu-id="cf576-132">0x4</span><span class="sxs-lookup"><span data-stu-id="cf576-132">0x4</span></span> | <span data-ttu-id="cf576-133">包括仅构成密钥的属性。</span><span class="sxs-lookup"><span data-stu-id="cf576-133">Include properties that constitute the key only.</span></span> |
+|`WBEM_FLAG_REFS_ONLY` | <span data-ttu-id="cf576-134">0x8</span><span class="sxs-lookup"><span data-stu-id="cf576-134">0x8</span></span> | <span data-ttu-id="cf576-135">包括仅为对象引用的属性。</span><span class="sxs-lookup"><span data-stu-id="cf576-135">Include properties that are object references only.</span></span> |
 
-<span data-ttu-id="548df-136">**组 2**</span><span class="sxs-lookup"><span data-stu-id="548df-136">**Group 2**</span></span>
+<span data-ttu-id="cf576-136">**组2**</span><span class="sxs-lookup"><span data-stu-id="cf576-136">**Group 2**</span></span>
 
-<span data-ttu-id="548df-137">返回的常量</span><span class="sxs-lookup"><span data-stu-id="548df-137">Constant</span></span>  |<span data-ttu-id="548df-138">值</span><span class="sxs-lookup"><span data-stu-id="548df-138">Value</span></span>  |<span data-ttu-id="548df-139">描述</span><span class="sxs-lookup"><span data-stu-id="548df-139">Description</span></span>  |
+<span data-ttu-id="cf576-137">返回的常量</span><span class="sxs-lookup"><span data-stu-id="cf576-137">Constant</span></span>  |<span data-ttu-id="cf576-138">值</span><span class="sxs-lookup"><span data-stu-id="cf576-138">Value</span></span>  |<span data-ttu-id="cf576-139">描述</span><span class="sxs-lookup"><span data-stu-id="cf576-139">Description</span></span>  |
 |---------|---------|---------|
-|`WBEM_FLAG_SYSTEM_ONLY` | <span data-ttu-id="548df-140">0x30</span><span class="sxs-lookup"><span data-stu-id="548df-140">0x30</span></span> | <span data-ttu-id="548df-141">限制为仅系统属性的枚举。</span><span class="sxs-lookup"><span data-stu-id="548df-141">Limit the enumeration to system properties only.</span></span> |
-|`WBEM_FLAG_NONSYSTEM_ONLY` | <span data-ttu-id="548df-142">0x40</span><span class="sxs-lookup"><span data-stu-id="548df-142">0x40</span></span> | <span data-ttu-id="548df-143">包括本地和传播属性但不枚举中的系统属性。</span><span class="sxs-lookup"><span data-stu-id="548df-143">Include local and propagated properties but exclude system properties from the enumeration.</span></span> |
+|`WBEM_FLAG_SYSTEM_ONLY` | <span data-ttu-id="cf576-140">0x30</span><span class="sxs-lookup"><span data-stu-id="cf576-140">0x30</span></span> | <span data-ttu-id="cf576-141">仅限枚举到系统属性。</span><span class="sxs-lookup"><span data-stu-id="cf576-141">Limit the enumeration to system properties only.</span></span> |
+|`WBEM_FLAG_NONSYSTEM_ONLY` | <span data-ttu-id="cf576-142">0x40</span><span class="sxs-lookup"><span data-stu-id="cf576-142">0x40</span></span> | <span data-ttu-id="cf576-143">包括本地和传播属性，但不包括枚举中的系统属性。</span><span class="sxs-lookup"><span data-stu-id="cf576-143">Include local and propagated properties but exclude system properties from the enumeration.</span></span> |
 
-<span data-ttu-id="548df-144">对于类：</span><span class="sxs-lookup"><span data-stu-id="548df-144">For classes:</span></span>
+<span data-ttu-id="cf576-144">对于类：</span><span class="sxs-lookup"><span data-stu-id="cf576-144">For classes:</span></span>
 
-<span data-ttu-id="548df-145">返回的常量</span><span class="sxs-lookup"><span data-stu-id="548df-145">Constant</span></span>  |<span data-ttu-id="548df-146">值</span><span class="sxs-lookup"><span data-stu-id="548df-146">Value</span></span>  |<span data-ttu-id="548df-147">描述</span><span class="sxs-lookup"><span data-stu-id="548df-147">Description</span></span>  |
+<span data-ttu-id="cf576-145">返回的常量</span><span class="sxs-lookup"><span data-stu-id="cf576-145">Constant</span></span>  |<span data-ttu-id="cf576-146">值</span><span class="sxs-lookup"><span data-stu-id="cf576-146">Value</span></span>  |<span data-ttu-id="cf576-147">描述</span><span class="sxs-lookup"><span data-stu-id="cf576-147">Description</span></span>  |
 |---------|---------|---------|
-|`WBEM_FLAG_CLASS_OVERRIDES_ONLY` | <span data-ttu-id="548df-148">0x100</span><span class="sxs-lookup"><span data-stu-id="548df-148">0x100</span></span> | <span data-ttu-id="548df-149">限制到类定义中被重写的属性的枚举。</span><span class="sxs-lookup"><span data-stu-id="548df-149">Limit the enumeration to properties overridden in the class definition.</span></span> |
-|`WBEM_FLAG_CLASS_LOCAL_AND_OVERRIDES` | <span data-ttu-id="548df-150">0x100</span><span class="sxs-lookup"><span data-stu-id="548df-150">0x100</span></span> | <span data-ttu-id="548df-151">限制到当前的类定义中被重写的属性和新的类中定义的属性的枚举。</span><span class="sxs-lookup"><span data-stu-id="548df-151">Limit the enumeration to properties overridden in the current class definition and to new properties defined in the class.</span></span> |
-| `WBEM_MASK_CLASS_CONDITION` | <span data-ttu-id="548df-152">0x300</span><span class="sxs-lookup"><span data-stu-id="548df-152">0x300</span></span> | <span data-ttu-id="548df-153">一个屏蔽 （而不是标记） 以应用针对`lEnumFlags`值以检查如果任一`WBEM_FLAG_CLASS_OVERRIDES_ONLY`或`WBEM_FLAG_CLASS_LOCAL_AND_OVERRIDES`设置。</span><span class="sxs-lookup"><span data-stu-id="548df-153">A mask (rather than a flag) to apply against a `lEnumFlags` value to check if either `WBEM_FLAG_CLASS_OVERRIDES_ONLY` or `WBEM_FLAG_CLASS_LOCAL_AND_OVERRIDES` is set.</span></span> |
-| `WBEM_FLAG_LOCAL_ONLY` | <span data-ttu-id="548df-154">0x10</span><span class="sxs-lookup"><span data-stu-id="548df-154">0x10</span></span> | <span data-ttu-id="548df-155">限制到定义的或在类本身中修改属性的枚举。</span><span class="sxs-lookup"><span data-stu-id="548df-155">Limit the enumeration to properties that are defined or modified in the class itself.</span></span> |
-| `WBEM_FLAG_PROPAGATED_ONLY` |  <span data-ttu-id="548df-156">0x20</span><span class="sxs-lookup"><span data-stu-id="548df-156">0x20</span></span> | <span data-ttu-id="548df-157">限制对从基类继承的属性的枚举。</span><span class="sxs-lookup"><span data-stu-id="548df-157">Limit the enumeration to properties that are inherited from base classes.</span></span> |
+|`WBEM_FLAG_CLASS_OVERRIDES_ONLY` | <span data-ttu-id="cf576-148">0x100</span><span class="sxs-lookup"><span data-stu-id="cf576-148">0x100</span></span> | <span data-ttu-id="cf576-149">将枚举限制为在类定义中重写的属性。</span><span class="sxs-lookup"><span data-stu-id="cf576-149">Limit the enumeration to properties overridden in the class definition.</span></span> |
+|`WBEM_FLAG_CLASS_LOCAL_AND_OVERRIDES` | <span data-ttu-id="cf576-150">0x100</span><span class="sxs-lookup"><span data-stu-id="cf576-150">0x100</span></span> | <span data-ttu-id="cf576-151">将枚举限制为在当前类定义中重写的属性和在类中定义的新属性。</span><span class="sxs-lookup"><span data-stu-id="cf576-151">Limit the enumeration to properties overridden in the current class definition and to new properties defined in the class.</span></span> |
+| `WBEM_MASK_CLASS_CONDITION` | <span data-ttu-id="cf576-152">0x300</span><span class="sxs-lookup"><span data-stu-id="cf576-152">0x300</span></span> | <span data-ttu-id="cf576-153">要应用于`lEnumFlags`值以检查`WBEM_FLAG_CLASS_OVERRIDES_ONLY`是否已设置或`WBEM_FLAG_CLASS_LOCAL_AND_OVERRIDES`的掩码（而不是标志）。</span><span class="sxs-lookup"><span data-stu-id="cf576-153">A mask (rather than a flag) to apply against a `lEnumFlags` value to check if either `WBEM_FLAG_CLASS_OVERRIDES_ONLY` or `WBEM_FLAG_CLASS_LOCAL_AND_OVERRIDES` is set.</span></span> |
+| `WBEM_FLAG_LOCAL_ONLY` | <span data-ttu-id="cf576-154">0x10</span><span class="sxs-lookup"><span data-stu-id="cf576-154">0x10</span></span> | <span data-ttu-id="cf576-155">将枚举限制为在类本身中定义或修改的属性。</span><span class="sxs-lookup"><span data-stu-id="cf576-155">Limit the enumeration to properties that are defined or modified in the class itself.</span></span> |
+| `WBEM_FLAG_PROPAGATED_ONLY` |  <span data-ttu-id="cf576-156">0x20</span><span class="sxs-lookup"><span data-stu-id="cf576-156">0x20</span></span> | <span data-ttu-id="cf576-157">将枚举限制为从基类继承的属性。</span><span class="sxs-lookup"><span data-stu-id="cf576-157">Limit the enumeration to properties that are inherited from base classes.</span></span> |
 
-<span data-ttu-id="548df-158">实例：</span><span class="sxs-lookup"><span data-stu-id="548df-158">For instances:</span></span>
+<span data-ttu-id="cf576-158">对于实例：</span><span class="sxs-lookup"><span data-stu-id="cf576-158">For instances:</span></span>
 
-<span data-ttu-id="548df-159">返回的常量</span><span class="sxs-lookup"><span data-stu-id="548df-159">Constant</span></span>  |<span data-ttu-id="548df-160">值</span><span class="sxs-lookup"><span data-stu-id="548df-160">Value</span></span>  |<span data-ttu-id="548df-161">描述</span><span class="sxs-lookup"><span data-stu-id="548df-161">Description</span></span>  |
+<span data-ttu-id="cf576-159">返回的常量</span><span class="sxs-lookup"><span data-stu-id="cf576-159">Constant</span></span>  |<span data-ttu-id="cf576-160">值</span><span class="sxs-lookup"><span data-stu-id="cf576-160">Value</span></span>  |<span data-ttu-id="cf576-161">描述</span><span class="sxs-lookup"><span data-stu-id="cf576-161">Description</span></span>  |
 |---------|---------|---------|
-| `WBEM_FLAG_LOCAL_ONLY` | <span data-ttu-id="548df-162">0x10</span><span class="sxs-lookup"><span data-stu-id="548df-162">0x10</span></span> | <span data-ttu-id="548df-163">限制到定义的或在类本身中修改属性的枚举。</span><span class="sxs-lookup"><span data-stu-id="548df-163">Limit the enumeration to properties that are defined or modified in the class itself.</span></span> |
-| `WBEM_FLAG_PROPAGATED_ONLY` |  <span data-ttu-id="548df-164">0x20</span><span class="sxs-lookup"><span data-stu-id="548df-164">0x20</span></span> | <span data-ttu-id="548df-165">限制对从基类继承的属性的枚举。</span><span class="sxs-lookup"><span data-stu-id="548df-165">Limit the enumeration to properties that are inherited from base classes.</span></span> |
+| `WBEM_FLAG_LOCAL_ONLY` | <span data-ttu-id="cf576-162">0x10</span><span class="sxs-lookup"><span data-stu-id="cf576-162">0x10</span></span> | <span data-ttu-id="cf576-163">将枚举限制为在类本身中定义或修改的属性。</span><span class="sxs-lookup"><span data-stu-id="cf576-163">Limit the enumeration to properties that are defined or modified in the class itself.</span></span> |
+| `WBEM_FLAG_PROPAGATED_ONLY` |  <span data-ttu-id="cf576-164">0x20</span><span class="sxs-lookup"><span data-stu-id="cf576-164">0x20</span></span> | <span data-ttu-id="cf576-165">将枚举限制为从基类继承的属性。</span><span class="sxs-lookup"><span data-stu-id="cf576-165">Limit the enumeration to properties that are inherited from base classes.</span></span> |
 
-## <a name="requirements"></a><span data-ttu-id="548df-166">要求</span><span class="sxs-lookup"><span data-stu-id="548df-166">Requirements</span></span>  
- <span data-ttu-id="548df-167">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="548df-167">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="cf576-166">要求</span><span class="sxs-lookup"><span data-stu-id="cf576-166">Requirements</span></span>  
+ <span data-ttu-id="cf576-167">**适用**请参阅[系统需求](../../get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="cf576-167">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="548df-168">**标头：** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="548df-168">**Header:** WMINet_Utils.idl</span></span>  
+ <span data-ttu-id="cf576-168">**标头：** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="cf576-168">**Header:** WMINet_Utils.idl</span></span>  
   
- <span data-ttu-id="548df-169">**.NET Framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="548df-169">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
+ <span data-ttu-id="cf576-169">**.NET Framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="cf576-169">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="548df-170">请参阅</span><span class="sxs-lookup"><span data-stu-id="548df-170">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cf576-170">请参阅</span><span class="sxs-lookup"><span data-stu-id="cf576-170">See also</span></span>
 
-- [<span data-ttu-id="548df-171">WMI 和性能计数器 （非托管 API 参考）</span><span class="sxs-lookup"><span data-stu-id="548df-171">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+- [<span data-ttu-id="cf576-171">WMI 和性能计数器（非托管 API 参考）</span><span class="sxs-lookup"><span data-stu-id="cf576-171">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)

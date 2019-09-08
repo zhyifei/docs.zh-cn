@@ -5,23 +5,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1decb05e-37ad-4ed6-ab2f-071eb4c4f628
-ms.openlocfilehash: d71eaf834ebf36d462f8581f0074b2f6a90bae17
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2f562dfd8f13c107249e697b77de7538df56fe2f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61903118"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781956"
 ---
-# <a name="how-to-display-linq-to-sql-commands"></a><span data-ttu-id="13b32-102">如何：显示 LINQ to SQL 命令</span><span class="sxs-lookup"><span data-stu-id="13b32-102">How to: Display LINQ to SQL Commands</span></span>
-<span data-ttu-id="13b32-103">使用 <xref:System.Data.Linq.DataContext.GetCommand%2A> 可显示 SQL 命令及其他信息。</span><span class="sxs-lookup"><span data-stu-id="13b32-103">Use <xref:System.Data.Linq.DataContext.GetCommand%2A> to display SQL commands and other information.</span></span>  
+# <a name="how-to-display-linq-to-sql-commands"></a><span data-ttu-id="c02c2-102">如何：显示 LINQ to SQL 命令</span><span class="sxs-lookup"><span data-stu-id="c02c2-102">How to: Display LINQ to SQL Commands</span></span>
+<span data-ttu-id="c02c2-103">使用 <xref:System.Data.Linq.DataContext.GetCommand%2A> 可显示 SQL 命令及其他信息。</span><span class="sxs-lookup"><span data-stu-id="c02c2-103">Use <xref:System.Data.Linq.DataContext.GetCommand%2A> to display SQL commands and other information.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="13b32-104">示例</span><span class="sxs-lookup"><span data-stu-id="13b32-104">Example</span></span>  
- <span data-ttu-id="13b32-105">在下面的示例中，控制台窗口会显示执行查询所产生的输出，接着显示所生成的 SQL 命令、命令的类型和连接的类型。</span><span class="sxs-lookup"><span data-stu-id="13b32-105">In the following example, the console window displays the output from the query, followed by the SQL commands that are generated, the type of commands, and the type of connection.</span></span>  
+## <a name="example"></a><span data-ttu-id="c02c2-104">示例</span><span class="sxs-lookup"><span data-stu-id="c02c2-104">Example</span></span>  
+ <span data-ttu-id="c02c2-105">在下面的示例中，控制台窗口会显示执行查询所产生的输出，接着显示所生成的 SQL 命令、命令的类型和连接的类型。</span><span class="sxs-lookup"><span data-stu-id="c02c2-105">In the following example, the console window displays the output from the query, followed by the SQL commands that are generated, the type of commands, and the type of connection.</span></span>  
   
  [!code-csharp[DLinqDebuggingSupport#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqDebuggingSupport/cs/Program.cs#3)]
  [!code-vb[DLinqDebuggingSupport#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqDebuggingSupport/vb/Module1.vb#3)]  
   
- <span data-ttu-id="13b32-106">输出形式如下：</span><span class="sxs-lookup"><span data-stu-id="13b32-106">Output appears as follows:</span></span>  
+ <span data-ttu-id="c02c2-106">输出形式如下：</span><span class="sxs-lookup"><span data-stu-id="c02c2-106">Output appears as follows:</span></span>  
   
 ```  
 Customers from London:  
@@ -48,6 +48,6 @@ Command Type: Text
 Connection: System.Data.SqlClient.SqlConnection  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="13b32-107">请参阅</span><span class="sxs-lookup"><span data-stu-id="13b32-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c02c2-107">请参阅</span><span class="sxs-lookup"><span data-stu-id="c02c2-107">See also</span></span>
 
-- [<span data-ttu-id="13b32-108">调试支持</span><span class="sxs-lookup"><span data-stu-id="13b32-108">Debugging Support</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)
+- [<span data-ttu-id="c02c2-108">调试支持</span><span class="sxs-lookup"><span data-stu-id="c02c2-108">Debugging Support</span></span>](debugging-support.md)

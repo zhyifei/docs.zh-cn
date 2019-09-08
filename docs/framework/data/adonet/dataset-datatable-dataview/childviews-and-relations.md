@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d475d356-6abb-4701-8fd1-2906fb93dfba
-ms.openlocfilehash: 2bbd0d980b65bfbc9240faa8506f2e41875ec6e6
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: d208b0796a072cda2873678ba184bc9793a1688a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205183"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786581"
 ---
-# <a name="childviews-and-relations"></a><span data-ttu-id="9b82f-102">ChildView 和关系</span><span class="sxs-lookup"><span data-stu-id="9b82f-102">ChildViews and Relations</span></span>
-<span data-ttu-id="9b82f-103">如果 <xref:System.Data.DataSet> 中的表之间存在关系，则可以使用 <xref:System.Data.DataView> 的 <xref:System.Data.DataRowView.CreateChildView%2A> 方法为父表中的行创建一个 <xref:System.Data.DataRowView>，包含相关子表中的行。</span><span class="sxs-lookup"><span data-stu-id="9b82f-103">If a relationship exists between tables in a <xref:System.Data.DataSet>, you can create a <xref:System.Data.DataView> containing rows from the related child table by using the <xref:System.Data.DataRowView.CreateChildView%2A> method of the <xref:System.Data.DataRowView> for the rows in the parent table.</span></span> <span data-ttu-id="9b82f-104">例如, 以下代码按分类**名称**和**ProductName**排序按字母顺序显示**类别**及其相关的**产品**。</span><span class="sxs-lookup"><span data-stu-id="9b82f-104">For example, the following code displays **Categories** and their related **Products** in alphabetical order sorted by **CategoryName** and **ProductName**.</span></span>  
+# <a name="childviews-and-relations"></a><span data-ttu-id="6ece7-102">ChildView 和关系</span><span class="sxs-lookup"><span data-stu-id="6ece7-102">ChildViews and Relations</span></span>
+<span data-ttu-id="6ece7-103">如果 <xref:System.Data.DataSet> 中的表之间存在关系，则可以使用 <xref:System.Data.DataView> 的 <xref:System.Data.DataRowView.CreateChildView%2A> 方法为父表中的行创建一个 <xref:System.Data.DataRowView>，包含相关子表中的行。</span><span class="sxs-lookup"><span data-stu-id="6ece7-103">If a relationship exists between tables in a <xref:System.Data.DataSet>, you can create a <xref:System.Data.DataView> containing rows from the related child table by using the <xref:System.Data.DataRowView.CreateChildView%2A> method of the <xref:System.Data.DataRowView> for the rows in the parent table.</span></span> <span data-ttu-id="6ece7-104">例如，以下代码按分类**名称**和**ProductName**排序按字母顺序显示**类别**及其相关的**产品**。</span><span class="sxs-lookup"><span data-stu-id="6ece7-104">For example, the following code displays **Categories** and their related **Products** in alphabetical order sorted by **CategoryName** and **ProductName**.</span></span>  
   
 ```vb  
 Dim catTable As DataTable = catDS.Tables("Categories")  
@@ -73,10 +73,10 @@ foreach (DataRowView catDRV in catView)
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="9b82f-105">请参阅</span><span class="sxs-lookup"><span data-stu-id="9b82f-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6ece7-105">请参阅</span><span class="sxs-lookup"><span data-stu-id="6ece7-105">See also</span></span>
 
 - <xref:System.Data.DataSet>
 - <xref:System.Data.DataView>
 - <xref:System.Data.DataRowView>
-- [<span data-ttu-id="9b82f-106">数据视图</span><span class="sxs-lookup"><span data-stu-id="9b82f-106">DataViews</span></span>](dataviews.md)
-- [<span data-ttu-id="9b82f-107">ADO.NET 托管提供程序和数据集开发人员中心</span><span class="sxs-lookup"><span data-stu-id="9b82f-107">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [<span data-ttu-id="6ece7-106">数据视图</span><span class="sxs-lookup"><span data-stu-id="6ece7-106">DataViews</span></span>](dataviews.md)
+- [<span data-ttu-id="6ece7-107">ADO.NET 概述</span><span class="sxs-lookup"><span data-stu-id="6ece7-107">ADO.NET Overview</span></span>](../ado-net-overview.md)

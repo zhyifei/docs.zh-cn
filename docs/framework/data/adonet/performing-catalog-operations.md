@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e60f542f-6271-495b-a9e4-48553481c2a3
-ms.openlocfilehash: beb5d2db898df1c98662d53190ac1432acc746e7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0291b6684092ec15fc672c39c909caf7781194e3
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61878214"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70783257"
 ---
-# <a name="performing-catalog-operations"></a><span data-ttu-id="a82c9-102">执行目录操作</span><span class="sxs-lookup"><span data-stu-id="a82c9-102">Performing Catalog Operations</span></span>
-<span data-ttu-id="a82c9-103">若要执行的命令来修改数据库或目录，如 CREATE TABLE 或 CREATE PROCEDURE 语句创建**命令**对象使用相应的 SQL 语句和一个**连接**对象。</span><span class="sxs-lookup"><span data-stu-id="a82c9-103">To execute a command to modify a database or catalog, such as the CREATE TABLE or CREATE PROCEDURE statement, create a **Command** object using the appropriate SQL statements and a **Connection** object.</span></span> <span data-ttu-id="a82c9-104">使用执行命令**ExecuteNonQuery**方法**命令**对象。</span><span class="sxs-lookup"><span data-stu-id="a82c9-104">Execute the command with the **ExecuteNonQuery** method of the **Command** object.</span></span>  
+# <a name="performing-catalog-operations"></a><span data-ttu-id="fd904-102">执行目录操作</span><span class="sxs-lookup"><span data-stu-id="fd904-102">Performing Catalog Operations</span></span>
+<span data-ttu-id="fd904-103">若要执行命令以修改数据库或目录（如 CREATE TABLE 或 CREATE PROCEDURE 语句），请使用相应的 SQL 语句和**连接**对象创建**命令**对象。</span><span class="sxs-lookup"><span data-stu-id="fd904-103">To execute a command to modify a database or catalog, such as the CREATE TABLE or CREATE PROCEDURE statement, create a **Command** object using the appropriate SQL statements and a **Connection** object.</span></span> <span data-ttu-id="fd904-104">通过**命令**对象的**ExecuteNonQuery**方法执行该命令。</span><span class="sxs-lookup"><span data-stu-id="fd904-104">Execute the command with the **ExecuteNonQuery** method of the **Command** object.</span></span>  
   
- <span data-ttu-id="a82c9-105">以下代码示例在 Microsoft SQL Server 数据库中创建一个存储过程。</span><span class="sxs-lookup"><span data-stu-id="a82c9-105">The following code example creates a stored procedure in a Microsoft SQL Server database.</span></span>  
+ <span data-ttu-id="fd904-105">以下代码示例在 Microsoft SQL Server 数据库中创建一个存储过程。</span><span class="sxs-lookup"><span data-stu-id="fd904-105">The following code example creates a stored procedure in a Microsoft SQL Server database.</span></span>  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -45,8 +45,8 @@ SqlCommand command = new SqlCommand(queryString, connection);
 command.ExecuteNonQuery();  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="a82c9-106">请参阅</span><span class="sxs-lookup"><span data-stu-id="a82c9-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="fd904-106">请参阅</span><span class="sxs-lookup"><span data-stu-id="fd904-106">See also</span></span>
 
-- [<span data-ttu-id="a82c9-107">使用命令修改数据</span><span class="sxs-lookup"><span data-stu-id="a82c9-107">Using Commands to Modify Data</span></span>](../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)
-- [<span data-ttu-id="a82c9-108">命令和参数</span><span class="sxs-lookup"><span data-stu-id="a82c9-108">Commands and Parameters</span></span>](../../../../docs/framework/data/adonet/commands-and-parameters.md)
-- [<span data-ttu-id="a82c9-109">ADO.NET 托管提供程序和数据集开发人员中心</span><span class="sxs-lookup"><span data-stu-id="a82c9-109">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [<span data-ttu-id="fd904-107">使用命令修改数据</span><span class="sxs-lookup"><span data-stu-id="fd904-107">Using Commands to Modify Data</span></span>](using-commands-to-modify-data.md)
+- [<span data-ttu-id="fd904-108">命令和参数</span><span class="sxs-lookup"><span data-stu-id="fd904-108">Commands and Parameters</span></span>](commands-and-parameters.md)
+- [<span data-ttu-id="fd904-109">ADO.NET 概述</span><span class="sxs-lookup"><span data-stu-id="fd904-109">ADO.NET Overview</span></span>](ado-net-overview.md)
