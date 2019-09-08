@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 27ad89f1910bc7bb08a23c9fdb0d50828fb8b5e6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e8a22e958740b69ba0e09bf062bf4d86075c3ff1
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741439"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777021"
 ---
-# <a name="setnonassemblyflags-method"></a><span data-ttu-id="0e4f1-102">SetNonAssemblyFlags 方法</span><span class="sxs-lookup"><span data-stu-id="0e4f1-102">SetNonAssemblyFlags Method</span></span>
-<span data-ttu-id="0e4f1-103">设置不是特定于程序集的标志。</span><span class="sxs-lookup"><span data-stu-id="0e4f1-103">Sets flags that are not assembly-specific.</span></span>  
+# <a name="setnonassemblyflags-method"></a><span data-ttu-id="b28c9-102">SetNonAssemblyFlags 方法</span><span class="sxs-lookup"><span data-stu-id="b28c9-102">SetNonAssemblyFlags Method</span></span>
+<span data-ttu-id="b28c9-103">设置不是程序集特定的标志。</span><span class="sxs-lookup"><span data-stu-id="b28c9-103">Sets flags that are not assembly-specific.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0e4f1-104">语法</span><span class="sxs-lookup"><span data-stu-id="0e4f1-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b28c9-104">语法</span><span class="sxs-lookup"><span data-stu-id="b28c9-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT SetNonAssemblyFlags(  
@@ -34,18 +34,18 @@ HRESULT SetNonAssemblyFlags(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="0e4f1-105">参数</span><span class="sxs-lookup"><span data-stu-id="0e4f1-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b28c9-105">参数</span><span class="sxs-lookup"><span data-stu-id="b28c9-105">Parameters</span></span>  
  `afFlags`  
- <span data-ttu-id="0e4f1-106">ALink 标志。</span><span class="sxs-lookup"><span data-stu-id="0e4f1-106">ALink flags.</span></span>  
+ <span data-ttu-id="b28c9-106">ALink 标志。</span><span class="sxs-lookup"><span data-stu-id="b28c9-106">ALink flags.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="0e4f1-107">返回值</span><span class="sxs-lookup"><span data-stu-id="0e4f1-107">Return Value</span></span>  
- <span data-ttu-id="0e4f1-108">如果该方法成功，返回，则为 S_OK。</span><span class="sxs-lookup"><span data-stu-id="0e4f1-108">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="b28c9-107">返回值</span><span class="sxs-lookup"><span data-stu-id="b28c9-107">Return Value</span></span>  
+ <span data-ttu-id="b28c9-108">如果该方法成功，则返回 S_OK。</span><span class="sxs-lookup"><span data-stu-id="b28c9-108">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0e4f1-109">要求</span><span class="sxs-lookup"><span data-stu-id="0e4f1-109">Requirements</span></span>  
- <span data-ttu-id="0e4f1-110">需要 alink.h</span><span class="sxs-lookup"><span data-stu-id="0e4f1-110">Requires alink.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b28c9-109">要求</span><span class="sxs-lookup"><span data-stu-id="b28c9-109">Requirements</span></span>  
+ <span data-ttu-id="b28c9-110">需要 alink</span><span class="sxs-lookup"><span data-stu-id="b28c9-110">Requires alink.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0e4f1-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="0e4f1-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b28c9-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="b28c9-111">See also</span></span>
 
-- [<span data-ttu-id="0e4f1-112">IALink 接口</span><span class="sxs-lookup"><span data-stu-id="0e4f1-112">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [<span data-ttu-id="0e4f1-113">IALink2 接口</span><span class="sxs-lookup"><span data-stu-id="0e4f1-113">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [<span data-ttu-id="0e4f1-114">ALink API</span><span class="sxs-lookup"><span data-stu-id="0e4f1-114">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [<span data-ttu-id="b28c9-112">IALink 接口</span><span class="sxs-lookup"><span data-stu-id="b28c9-112">IALink Interface</span></span>](ialink-interface.md)
+- [<span data-ttu-id="b28c9-113">IALink2 接口</span><span class="sxs-lookup"><span data-stu-id="b28c9-113">IALink2 Interface</span></span>](ialink2-interface.md)
+- [<span data-ttu-id="b28c9-114">ALink API</span><span class="sxs-lookup"><span data-stu-id="b28c9-114">ALink API</span></span>](index.md)
