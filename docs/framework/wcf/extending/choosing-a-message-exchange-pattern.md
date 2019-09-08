@@ -2,22 +2,22 @@
 title: 选择消息交换模式
 ms.date: 03/30/2017
 ms.assetid: 0f502ca1-6a8e-4607-ba15-59198c0e6146
-ms.openlocfilehash: 518a21ef34d52ef4b70871ba8bad7876374dd319
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7dcbea30b53142ed68db9ac138f8c7a665ca1729
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69951865"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797291"
 ---
 # <a name="choosing-a-message-exchange-pattern"></a>选择消息交换模式
-编写自定义传输的第一步是确定正在开发的通道所需的*消息交换模式*(或 mep)。 本主题说明可用的选项，并讨论各种不同的需求。 这是[开发渠道](../../../../docs/framework/wcf/extending/developing-channels.md)中所述的通道开发任务列表中的第一个任务。  
+编写自定义传输的第一步是确定正在开发的通道所需的*消息交换模式*（或 mep）。 本主题说明可用的选项，并讨论各种不同的需求。 这是[开发渠道](developing-channels.md)中所述的通道开发任务列表中的第一个任务。  
   
 ## <a name="six-message-exchange-patterns"></a>六种消息交换模式  
  有三种 MEP 可供选择：  
   
 - 数据报（<xref:System.ServiceModel.Channels.IInputChannel> 和 <xref:System.ServiceModel.Channels.IOutputChannel>）  
   
-     使用数据报 MEP 时, 客户端将使用火灾发送消息*并忘记*交换。 “发后不理”交换形式是一种要求带外确认成功传递的交换形式。 消息在传输过程中可能会丢失，而永远不能到达服务。 如果在客户端成功完成发送操作，这并不保证远程终结点已经收到消息。 数据报是消息传递的基本构造块，因为您可以在它上面构建自己的协议，包括可靠的协议和安全的协议。 客户端数据报通道实现 <xref:System.ServiceModel.Channels.IOutputChannel> 接口，而服务数据报通道实现 <xref:System.ServiceModel.Channels.IInputChannel> 接口。  
+     使用数据报 MEP 时，客户端将使用火灾发送消息*并忘记*交换。 “发后不理”交换形式是一种要求带外确认成功传递的交换形式。 消息在传输过程中可能会丢失，而永远不能到达服务。 如果在客户端成功完成发送操作，这并不保证远程终结点已经收到消息。 数据报是消息传递的基本构造块，因为您可以在它上面构建自己的协议，包括可靠的协议和安全的协议。 客户端数据报通道实现 <xref:System.ServiceModel.Channels.IOutputChannel> 接口，而服务数据报通道实现 <xref:System.ServiceModel.Channels.IInputChannel> 接口。  
   
 - 请求-响应（<xref:System.ServiceModel.Channels.IRequestChannel> 和 <xref:System.ServiceModel.Channels.IReplyChannel>）  
   
@@ -27,7 +27,7 @@ ms.locfileid: "69951865"
   
      通过双工 MEP，客户端可以发送任意数目的消息，并以任意顺序接收消息。 双工 MEP 就像电话通话，所说的每一个字都是一条消息。 由于在这种 MEP 中两端都可发送和接收，因此，由客户端和服务通道实现的接口为 <xref:System.ServiceModel.Channels.IDuplexChannel>。  
   
- ![选择消息交换模式](../../../../docs/framework/wcf/extending/media/wcfc-basicthreemepsc.gif "wcfc_BasicThreeMEPsc")  
+ ![选择消息交换模式](./media/wcfc-basicthreemepsc.gif "wcfc_BasicThreeMEPsc")  
 三种基本的消息交换模式。 从上到下：数据报、请求-响应和双工。  
   
  其中每个 Mep 还可以支持*会话*。 会话（和 <xref:System.ServiceModel.Channels.ISessionChannel%601?displayProperty=nameWithType><xref:System.ServiceModel.Channels.ISession?displayProperty=nameWithType>类型的 的实现）会将通道上发送和接收的所有消息关联在一起。 请求-响应模式是一种由两个消息组成的独立会话，因为请求和响应是相关的。 与此形成对照的是，支持会话的请求-响应模式意味着该通道上的所有请求-响应对都是相关的。 这使您总共有六种 MEP 可以选择：  
@@ -52,7 +52,7 @@ ms.locfileid: "69951865"
   
  在通道目标模型中，每个逻辑会话都表现为一个会话通道的实例。 因此，由客户端创建并在服务端接受的每个新会话都与每一端的一个新会话通道相对应。 下面的关系图的上部显示无会话通道的结构，下部显示会话通道的结构。  
   
- ![选择消息交换模式](../../../../docs/framework/wcf/extending/media/wcfc-sessionandsessionlesschannelsc.gif "wcfc_SessionAndSessionlessChannelsc")  
+ ![选择消息交换模式](./media/wcfc-sessionandsessionlesschannelsc.gif "wcfc_SessionAndSessionlessChannelsc")  
   
  客户端创建新的会话通道并发送消息。 在服务端，通道侦听器收到此消息并检测到它属于新会话，于是就创建新的会话通道，并将其交给应用程序（以响应在通道侦听器上调用 AcceptChannel 的应用程序）。 然后应用程序会收到此消息，以及通过同一个会话通道在同一个会话中发送的所有后续消息。  
   
@@ -94,4 +94,4 @@ ms.locfileid: "69951865"
   
 ## <a name="see-also"></a>请参阅
 
-- [通道模型概述](../../../../docs/framework/wcf/extending/channel-model-overview.md)
+- [通道模型概述](channel-model-overview.md)

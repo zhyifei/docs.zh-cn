@@ -2,15 +2,15 @@
 title: 将关键 XML 架构 (XSD) 约束映射到数据集约束
 ms.date: 03/30/2017
 ms.assetid: 22664196-f270-4ebc-a169-70e16a83dfa1
-ms.openlocfilehash: d6fcdae77c2f2ac07ea5cd16baf07cd5de36d25b
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 8543f5b34ee2a80ff0154897cf7678b244a8d357
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203465"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786101"
 ---
 # <a name="map-key-xml-schema-xsd-constraints-to-dataset-constraints"></a>将关键 XML 架构 (XSD) 约束映射到数据集约束
-在架构中, 可以使用**key**元素对元素或属性指定键约束。 对其指定键约束的元素或属性必须在任何架构实例中都具有唯一值，并且不能具有空值。  
+在架构中，可以使用**key**元素对元素或属性指定键约束。 对其指定键约束的元素或属性必须在任何架构实例中都具有唯一值，并且不能具有空值。  
   
  除了对其定义键约束的列不能具有空值之外，键约束与唯一约束类似。  
   
@@ -18,12 +18,12 @@ ms.locfileid: "70203465"
   
 |特性名|描述|  
 |--------------------|-----------------|  
-|**msdata:ConstraintName**|如果指定了该属性，它的值将用作约束名。 否则, **name**属性提供约束名称的值。|  
-|**msdata:PrimaryKey**|如果`PrimaryKey="true"`存在, 则**IsPrimaryKey**约束属性设置为**true**, 从而使其成为主键。 **AllowDBNull**列属性设置为**false**, 因为主键不能具有 null 值。|  
+|**msdata:ConstraintName**|如果指定了该属性，它的值将用作约束名。 否则， **name**属性提供约束名称的值。|  
+|**msdata:PrimaryKey**|如果`PrimaryKey="true"`存在，则**IsPrimaryKey**约束属性设置为**true**，从而使其成为主键。 **AllowDBNull**列属性设置为**false**，因为主键不能具有 null 值。|  
   
- 在转换指定了键约束的架构时, 映射过程会对约束中的每一列将**AllowDBNull** column 属性设置为**false**的表创建 unique 约束。 除非已对**key**元素指定`msdata:PrimaryKey="true"` , 否则 unique 约束的**IsPrimaryKey**属性也设置为**false** 。 它与 `PrimaryKey="true"` 的架构中的唯一约束相同。  
+ 在转换指定了键约束的架构时，映射过程会对约束中的每一列将**AllowDBNull** column 属性设置为**false**的表创建 unique 约束。 除非已对**key**元素指定`msdata:PrimaryKey="true"` ，否则 unique 约束的**IsPrimaryKey**属性也设置为**false** 。 它与 `PrimaryKey="true"` 的架构中的唯一约束相同。  
   
- 在下面的架构示例中, **key**元素指定了**CustomerID**元素的键约束。  
+ 在下面的架构示例中， **key**元素指定了**CustomerID**元素的键约束。  
   
 ```xml  
 <xs:schema id="cod"  
@@ -54,13 +54,13 @@ ms.locfileid: "70203465"
 </xs:schema>   
 ```  
   
- **Key**元素指定**Customers**元素的**CustomerID**子元素的值必须具有唯一值, 且不能具有 null 值。 在转换 XML 架构定义语言 (XSD) 架构时，映射过程将创建下表：  
+ **Key**元素指定**Customers**元素的**CustomerID**子元素的值必须具有唯一值，且不能具有 null 值。 在转换 XML 架构定义语言 (XSD) 架构时，映射过程将创建下表：  
   
 ```  
 Customers(CustomerID, CompanyName, Phone)  
 ```  
   
- XML 架构映射还会在**CustomerID**列上创建<xref:System.Data.DataSet> **UniqueConstraint** , 如下所示。 （为简便起见，只显示相关属性。）  
+ XML 架构映射还会在**CustomerID**列上创建<xref:System.Data.DataSet> **UniqueConstraint** ，如下所示。 （为简便起见，只显示相关属性。）  
   
 ```  
       DataSetName: MyDataSet  
@@ -74,12 +74,12 @@ TableName: customers
       IsPrimaryKey: True  
 ```  
   
- 在生成的**数据集中**, **UniqueConstraint**的**IsPrimaryKey**属性设置为**true** , 因为架构指定`msdata:PrimaryKey="true"`了**key**元素中的。  
+ 在生成的**数据集中**， **UniqueConstraint**的**IsPrimaryKey**属性设置为**true** ，因为架构指定`msdata:PrimaryKey="true"`了**key**元素中的。  
   
- **DataSet**中**UniqueConstraint**的**ConstraintName**属性的值是在架构的**Key**元素中指定的**msdata: ConstraintName**属性的值。  
+ **DataSet**中**UniqueConstraint**的**ConstraintName**属性的值是在架构的**Key**元素中指定的**msdata： ConstraintName**属性的值。  
   
 ## <a name="see-also"></a>请参阅
 
 - [将 XML 架构 (XSD) 约束映射到数据集约束](mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
 - [从 XML 架构生成数据集关系 (XSD)](generating-dataset-relations-from-xml-schema-xsd.md)
-- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 概述](../ado-net-overview.md)

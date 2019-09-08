@@ -2,12 +2,12 @@
 title: 保证客户端应用程序的安全
 ms.date: 03/30/2017
 ms.assetid: 6239592e-fa7d-4dea-9f00-d296d0048b01
-ms.openlocfilehash: 1312ddc079bdf8f08aebe8eb27e4bab9bf914fa8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 15d2b2199344644392be0e9a530c046a77db8523
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963159"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794388"
 ---
 # <a name="secure-client-applications"></a>保证客户端应用程序的安全
 应用程序通常由多个部件组成，所有这些部件均不能包含漏洞，否则可能导致数据丢失或以其他方式危害系统。 在攻击者可访问数据或系统资源之前将其阻止，以此可创建安全的用户界面来防止出现许多问题。  
@@ -24,7 +24,7 @@ ms.locfileid: "69963159"
  [验证 ASP.NET 网页中的用户输入](https://docs.microsoft.com/previous-versions/aspnet/7kh55542(v=vs.100))  
  概述如何使用 ASP.NET 验证控件验证用户输入。  
   
- [Windows 窗体中的用户输入](../../../../docs/framework/winforms/user-input-in-windows-forms.md)  
+ [Windows 窗体中的用户输入](../../winforms/user-input-in-windows-forms.md)  
  提供用于验证 Windows 窗体应用程序中鼠标和键盘输入的链接和信息。  
   
  [.NET Framework 正则表达式](../../../standard/base-types/regular-expressions.md)  
@@ -33,10 +33,10 @@ ms.locfileid: "69963159"
 ## <a name="windows-applications"></a>Windows 应用程序  
  过去，Windows 应用程序通常使用完全权限运行。 通过使用代码启用安全性 (CAS)，.NET Framework 可提供限制在 Windows 应用程序中执行代码的基础结构。 但是，仅使用 CAS 是不足以保护应用程序的。  
   
- [Windows 窗体安全](../../../../docs/framework/winforms/windows-forms-security.md)  
+ [Windows 窗体安全](../../winforms/windows-forms-security.md)  
  讨论如何保证 Windows 窗体应用程序的安全并提供相关主题的链接。  
   
- [Windows Forms and Unmanaged Applications](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)  
+ [Windows Forms and Unmanaged Applications](../../winforms/advanced/windows-forms-and-unmanaged-applications.md)  
  描述如何与 Windows 窗体应用程序中的非托管应用程序进行交互。  
   
  [Windows 窗体的 ClickOnce 部署](../../winforms/clickonce-deployment-for-windows-forms.md)  
@@ -63,12 +63,12 @@ ms.locfileid: "69963159"
 |--------------|-----------------|  
 |[远程应用程序的配置](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/b8tysty8(v=vs.100))|讨论如何配置远程处理应用程序以避免出现常见问题。|  
 |[远程处理中的安全性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/9hwst9th(v=vs.100))|描述身份验证和加密以及与远程处理相关的其他安全主题。|  
-|[安全和远程处理注意事项](../../../../docs/framework/misc/security-and-remoting-considerations.md)|描述与受保护对象和应用程序域交叉相关的安全问题。|  
+|[安全和远程处理注意事项](../../misc/security-and-remoting-considerations.md)|描述与受保护对象和应用程序域交叉相关的安全问题。|  
   
 ## <a name="see-also"></a>请参阅
 
-- [保证 ADO.NET 应用程序的安全](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [保证 ADO.NET 应用程序的安全](securing-ado-net-applications.md)
 - [数据访问策略的建议](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))
 - [保护应用程序](/visualstudio/ide/securing-applications)
-- [保护连接信息](../../../../docs/framework/data/adonet/protecting-connection-information.md)
-- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [保护连接信息](protecting-connection-information.md)
+- [ADO.NET 概述](ado-net-overview.md)

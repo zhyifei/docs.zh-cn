@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0c0abc63610f3f1ed6e8a556c44ee15edc1ea20b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f08c4a97b8cbc61a735bb9c1e6a31a698e7eefc1
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741842"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70787345"
 ---
 # <a name="getscope2-method"></a>GetScope2 方法
 获取导入范围。  
@@ -45,19 +45,19 @@ HRESULT GetScope2(
  要从中导入的文件的 ID。  
   
  `dwScope`  
- 要导入的从零开始范围。  
+ 要导入的从零开始的范围。  
   
  `ppImportScope`  
- 接收指向[IMetaDataImport2 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)指示的范围的接口。  
+ 接收指向指定范围的[IMetaDataImport2 接口](../metadata/imetadataimport2-interface.md)接口的指针。  
   
 ## <a name="return-value"></a>返回值  
- 如果该方法成功，返回，则为 S_OK。  
+ 如果该方法成功，则返回 S_OK。  
   
 ## <a name="requirements"></a>要求  
- 需要 alink.h。  
+ 需要 alink。  
   
 ## <a name="see-also"></a>请参阅
 
-- [IALink2 接口](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [IALink 接口](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink2 接口](ialink2-interface.md)
+- [IALink 接口](ialink-interface.md)
+- [ALink API](index.md)

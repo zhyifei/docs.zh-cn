@@ -10,17 +10,17 @@ helpviewer_keywords:
 - PrincipalPermissionMode
 - PrincipalPermissionAttribute
 ms.assetid: c4845fca-0ed9-4adf-bbdc-10812be69b61
-ms.openlocfilehash: 324537ac018086669abccc21235f9a9359b413cb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 05a90c4020f225414b21e82684e46b3c2abda010
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662847"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797068"
 ---
 # <a name="how-to-create-a-custom-principal-identity"></a>如何：创建自定义主体标识
 <xref:System.Security.Permissions.PrincipalPermissionAttribute> 是一种控制对服务方法进行访问的声明性方式。 当使用此属性时，<xref:System.ServiceModel.Description.PrincipalPermissionMode> 枚举指定执行授权检查的模式。 当此模式设置为 <xref:System.ServiceModel.Description.PrincipalPermissionMode.Custom> 时，用户可以使用它指定一个由 <xref:System.Security.Principal.IPrincipal> 属性返回的自定义 <xref:System.Threading.Thread.CurrentPrincipal%2A> 类。 本主题演示的是将 <xref:System.ServiceModel.Description.PrincipalPermissionMode.Custom> 与自定义授权策略和自定义主体结合使用的方案。  
   
- 有关使用详细信息<xref:System.Security.Permissions.PrincipalPermissionAttribute>，请参阅[如何：使用 PrincipalPermissionAttribute 类限制访问](../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)。  
+ 有关使用的<xref:System.Security.Permissions.PrincipalPermissionAttribute>详细信息，请参阅[如何：使用 PrincipalPermissionAttribute 类](../how-to-restrict-access-with-the-principalpermissionattribute-class.md)限制访问。  
   
 ## <a name="example"></a>示例  
  [!code-csharp[PrincipalPermissionMode#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/principalpermissionmode/cs/source.cs#8)]
@@ -53,5 +53,5 @@ ms.locfileid: "64662847"
 
 - <xref:System.ServiceModel.Description.PrincipalPermissionMode>
 - <xref:System.Security.Permissions.PrincipalPermissionAttribute>
-- [如何：与服务一起使用 ASP.NET 角色提供程序](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)
-- [如何：使用 PrincipalPermissionAttribute 类限制访问](../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)
+- [如何：将 ASP.NET 角色提供程序与服务一起使用](../feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)
+- [如何：使用 PrincipalPermissionAttribute 类限制访问](../how-to-restrict-access-with-the-principalpermissionattribute-class.md)

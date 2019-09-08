@@ -2,30 +2,30 @@
 title: 从 Web 浏览器访问服务（WCF 数据服务快速入门）
 ms.date: 03/30/2017
 ms.assetid: 5a6fa180-3094-4e6e-ba2b-8c80975d18d1
-ms.openlocfilehash: ebeda2805f3393b298e43aa4dcc601298ce176f6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: eb7f1c97722b45a93c310fb8bcbdb42beece2553
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793466"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780542"
 ---
 # <a name="accessing-the-service-from-a-web-browser-wcf-data-services-quickstart"></a>从 Web 浏览器访问服务（WCF 数据服务快速入门）
 
-这是 WCF 数据服务快速入门的第二个任务。 在本任务中，可以从 Visual Studio 中启动 WCF 数据服务和 （可选） 禁用 Web 浏览器中的源的阅读。 你然后检索服务定义文档，以及通过 Web 浏览器向公开的资源提交 HTTP GET 请求访问数据服务资源。
+这是 WCF 数据服务快速入门的第二个任务。 在此任务中，您将从 Visual Studio 中启动 WCF 数据服务，还可以选择在 Web 浏览器中禁用源读取。 然后，通过 Web 浏览器向公开的资源提交 HTTP GET 请求，检索服务定义文档并访问数据服务资源。
 
 > [!NOTE]
-> 默认情况下，Visual Studio 自动为计算机上的 `localhost` URI 分配一个端口号。 本任务在 URI 示例中使用端口号 `12345`。 有关如何在 Visual Studio 项目中设置特定的端口号的详细信息请参阅[创建数据服务](../../../../docs/framework/data/wcf/creating-the-data-service.md)。
+> 默认情况下，Visual Studio 自动为计算机上的 `localhost` URI 分配一个端口号。 本任务在 URI 示例中使用端口号 `12345`。 有关如何在 Visual Studio 项目中设置特定端口号的详细信息，请参阅[创建数据服务](creating-the-data-service.md)。
 
 ## <a name="to-request-the-default-service-document-by-using-internet-explorer"></a>使用 Internet Explorer 请求默认服务文档
 
-1. 在 Internet Explorer 中，从**工具**菜单中，选择**Internet 选项**，单击**内容**选项卡上，单击**设置**，并清除**打开源阅读视图**。
+1. 在 Internet Explorer 的 "**工具**" 菜单中，选择 " **Internet 选项**"，单击 "**内容**" 选项卡，单击 "**设置**"，然后清除 **"启用源查看"** 。
 
      这可确保禁用源阅读。 如果未禁用此功能，则 Web 浏览器会将返回的 AtomPub 编码文档视为 XML 源，而不是显示原始 XML 数据。
 
     > [!NOTE]
     > 当浏览器无法将该源作为原始 XML 数据显示时，你应该仍能够以页面源代码的形式查看该源。
 
-2. 在 Visual Studio 中，按**F5**键启动调试应用程序。
+2. 在 Visual Studio 中，按**F5**键开始调试应用程序。
 
 3. 在本地计算机上打开 Web 浏览器。 在地址栏中，输入以下 URI：
 
@@ -71,11 +71,11 @@ ms.locfileid: "61793466"
 
 ## <a name="next-steps"></a>后续步骤
 
-您已成功从 Web 浏览器中，浏览器发出 HTTP GET 请求到指定的资源访问 WCF 数据服务。 使用 Web 浏览器，可以轻松试验请求的寻址语法并查看结果。 不过，通常情况下并不会通过此方式访问生产数据服务。 通常，应用程序会通过应用程序代码或脚本语言与数据服务进行交互。 接下来，您将创建一个客户端应用程序，该应用程序使用客户端库访问数据服务资源，就像它们是公共语言运行时 (CLR) 对象一样：
+已成功从 Web 浏览器访问 WCF 数据服务，浏览器向指定资源发出 HTTP GET 请求。 使用 Web 浏览器，可以轻松试验请求的寻址语法并查看结果。 不过，通常情况下并不会通过此方式访问生产数据服务。 通常，应用程序会通过应用程序代码或脚本语言与数据服务进行交互。 接下来，您将创建一个客户端应用程序，该应用程序使用客户端库访问数据服务资源，就像它们是公共语言运行时 (CLR) 对象一样：
 
 > [!div class="nextstepaction"]
-> [创建 .NET Framework 客户端应用程序](../../../../docs/framework/data/wcf/creating-the-dotnet-client-application-wcf-data-services-quickstart.md)
+> [创建 .NET Framework 客户端应用程序](creating-the-dotnet-client-application-wcf-data-services-quickstart.md)
 
 ## <a name="see-also"></a>请参阅
 
-- [访问数据服务资源](../../../../docs/framework/data/wcf/accessing-data-service-resources-wcf-data-services.md)
+- [访问数据服务资源](accessing-data-service-resources-wcf-data-services.md)

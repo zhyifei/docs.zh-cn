@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9876e3ba5ea67442714c2d00b1901c25e54494f2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f19dd114925ed1fd12bcc0056411c3e3d4181215
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741634"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777094"
 ---
 # <a name="importtypes-method"></a>ImportTypes 方法
-启动导入的类型从通过导入每个作用域[ImportFile 方法](../../../../docs/framework/unmanaged-api/alink/importfile-method.md)。  
+开始从通过[ImportFile 方法](importfile-method.md)导入的每个范围导入类型。  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,28 +44,28 @@ HRESULT ImportTypes(
  要导入到的程序集的 ID。  
   
  `FileToken`  
- 若要从导入的文件的 ID。  
+ 要从中导入的文件的 ID。  
   
  `dwScope`  
- 要导入的从零开始范围。  
+ 要导入的从零开始的范围。  
   
  `phEnum`  
- 在此作用域中接收的类型的枚举器句柄。  
+ 接收此范围内的类型的枚举器句柄。  
   
  `ppImportScope`  
- 可选择性地接收[IMetaDataImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)接口。  
+ 可以选择接收[IMetaDataImport 接口](../metadata/imetadataimport-interface.md)接口。  
   
  `pdwCountOfTypes`  
- 可选择性地指示作用域中接收的类型的计数。  
+ 可以选择接收指定范围内的类型的计数。  
   
 ## <a name="return-value"></a>返回值  
- 如果该方法成功，返回，则为 S_OK。  
+ 如果该方法成功，则返回 S_OK。  
   
 ## <a name="requirements"></a>要求  
- 需要 alink.h  
+ 需要 alink  
   
 ## <a name="see-also"></a>请参阅
 
-- [IALink 接口](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2 接口](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink 接口](ialink-interface.md)
+- [IALink2 接口](ialink2-interface.md)
+- [ALink API](index.md)

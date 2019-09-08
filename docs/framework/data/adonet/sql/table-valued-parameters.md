@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 370c16d5-db7b-43e3-945b-ccaab35b739b
-ms.openlocfilehash: 59c6732dacf225097e22957ebe6536308a2798d4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 316ccb19ca9e384be97a83e992af46934702aa0c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938446"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780685"
 ---
 # <a name="table-valued-parameters"></a>表值参数
 表值参数提供一种将客户端应用程序中的多行数据封送到 SQL Server 的简单方式，不需要多次往返或特殊服务器端逻辑来处理数据。 您可以使用表值参数来包装客户端应用程序中的数据行，并使用单个参数化命令将数据发送到服务器。 传入的数据行存储在一个表变量中，然后您可以通过使用 Transact-SQL 对该表变量进行操作。  
@@ -24,11 +24,11 @@ ms.locfileid: "69938446"
   
 |资源|描述|  
 |--------------|-----------------|  
-|SQL Server 联机丛书中的[表值参数 (数据库引擎)](https://go.microsoft.com/fwlink/?LinkId=98363)|说明如何创建和使用表值参数。|  
+|SQL Server 联机丛书中的[表值参数（数据库引擎）](https://go.microsoft.com/fwlink/?LinkId=98363)|说明如何创建和使用表值参数。|  
 |SQL Server 联机丛书中的[用户定义表类型](https://go.microsoft.com/fwlink/?LinkId=98364)|说明用于声明表值参数的用户定义的表类型。|  
   
 ## <a name="passing-multiple-rows-in-previous-versions-of-sql-server"></a>在 SQL Server 的早期版本中传递多行  
- 在将表值参数引入 SQL Server 2008 之前, 将多行数据传递到存储过程或参数化 SQL 命令的选项受到限制。 开发人员可以选择使用以下选项，将多个行传递给服务器：  
+ 在将表值参数引入 SQL Server 2008 之前，将多行数据传递到存储过程或参数化 SQL 命令的选项受到限制。 开发人员可以选择使用以下选项，将多个行传递给服务器：  
   
 - 使用一系列单个参数表示多个数据列和行中的值。 使用此方法传递的数据量受所允许的参数数量的限制。 SQL Server 过程最多可以有 2100 个参数。 必须使用服务器端逻辑才能将这些单个值组合到表变量或临时表中以进行处理。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "69938446"
 - 使用 `bcp` 实用工具程序或 <xref:System.Data.SqlClient.SqlBulkCopy> 对象将很多行数据加载到表中。 尽管这项技术非常有效，但不支持服务器端处理，除非将数据加载到临时表或表变量中。  
   
 ## <a name="creating-table-valued-parameter-types"></a>创建表值参数类型  
- 表值参数以通过使用 Transact-SQL CREATE TYPE 语句定义的强类型表结构为基础。 您必须先在 SQL Server 中创建一个表类型并定义结构，才能在客户端应用程序中使用表值参数。 有关创建表类型的详细信息, 请参阅 SQL Server 联机丛书中的[用户定义表类型](https://go.microsoft.com/fwlink/?LinkID=98364)。  
+ 表值参数以通过使用 Transact-SQL CREATE TYPE 语句定义的强类型表结构为基础。 您必须先在 SQL Server 中创建一个表类型并定义结构，才能在客户端应用程序中使用表值参数。 有关创建表类型的详细信息，请参阅 SQL Server 联机丛书中的[用户定义表类型](https://go.microsoft.com/fwlink/?LinkID=98364)。  
   
  下面的语句可创建一个名为 CategoryTableType 的表类型，其中包括 CategoryID 和 CategoryName 列：  
   
@@ -88,7 +88,7 @@ INSERT INTO dbo.Categories (CategoryID, CategoryName)
 ## <a name="configuring-a-sqlparameter-example"></a>配置 SqlParameter 示例  
  <xref:System.Data.SqlClient><xref:System.Data.DataTable>支持从<xref:System.Data.Common.DbDataReader>或对象填充<xref:System.Collections.Generic.IEnumerable%601>表值参数。  \  <xref:Microsoft.SqlServer.Server.SqlDataRecord> 必须通过使用 <xref:System.Data.SqlClient.SqlParameter.TypeName%2A> 的 <xref:System.Data.SqlClient.SqlParameter> 属性指定表值参数的类型名称。 `TypeName` 必须与以前在服务器上创建的兼容类型的名称相匹配。 下面的代码段演示如何配置 <xref:System.Data.SqlClient.SqlParameter> 以插入数据。  
  
-在下面的示例中, `addedCategories`变量包含一个<xref:System.Data.DataTable>。 若要查看如何填充变量, 请参阅下一节中的示例, 将[表值参数传递给存储过程](#passing)。
+在下面的示例中， `addedCategories`变量包含一个<xref:System.Data.DataTable>。 若要查看如何填充变量，请参阅下一节中的示例，将[表值参数传递给存储过程](#passing)。
 
 ```csharp  
 // Configure the command and parameter.  
@@ -274,8 +274,8 @@ insertCommand.ExecuteNonQuery()
   
 ## <a name="see-also"></a>请参阅
 
-- [配置参数和参数数据类型](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)
-- [命令和参数](../../../../../docs/framework/data/adonet/commands-and-parameters.md)
-- [DataAdapter 参数](../../../../../docs/framework/data/adonet/dataadapter-parameters.md)
-- [ADO.NET 中的 SQL Server 数据操作](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)
-- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [配置参数和参数数据类型](../configuring-parameters-and-parameter-data-types.md)
+- [命令和参数](../commands-and-parameters.md)
+- [DataAdapter 参数](../dataadapter-parameters.md)
+- [ADO.NET 中的 SQL Server 数据操作](sql-server-data-operations.md)
+- [ADO.NET 概述](../ado-net-overview.md)

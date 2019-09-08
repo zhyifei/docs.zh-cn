@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 11515b25-ee49-4b1d-9294-a142147c1ec5
-ms.openlocfilehash: a63e65289a51a7647270a978cec11ef6bc201e45
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8438a7b54ca19625687ab96386384cf62ae62d11
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962760"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70783796"
 ---
 # <a name="handling-dataadapter-events"></a>处理 DataAdapter 事件
 ADO.NET <xref:System.Data.Common.DataAdapter> 公开三个可用于响应数据源中数据更改的事件。 下表演示了 `DataAdapter` 事件。  
@@ -39,7 +39,7 @@ ADO.NET <xref:System.Data.Common.DataAdapter> 公开三个可用于响应数据�
   
  也可以使用 `ContinueUpdateOnError` 属性为更新的行处理错误。 如果 `DataAdapter.ContinueUpdateOnError` 为 `true`，那么当行的更新导致引发异常时，该异常的文本被放入特定行的 `RowError` 信息中，并且处理将会继续而不会引发异常。 这使您能够在 `Update` 完成时对错误作出响应；与此相反的是 `RowUpdated` 事件，它使您能够在遇到错误时响应错误。  
   
- 以下代码示例显示如何添加和移除事件处理程序。 `RowUpdating` 事件处理程序编写带有时间戳的所有已删除记录的日志。 `ContinueUpdateOnError` `DataSet` `RowError` `true`  = 事件处理程序将错误信息添加到中的行的属性中, 取消隐藏异常, 并继续处理 (镜像的行为)。 `RowUpdated`  
+ 以下代码示例显示如何添加和移除事件处理程序。 `RowUpdating` 事件处理程序编写带有时间戳的所有已删除记录的日志。 `ContinueUpdateOnError` `DataSet` `RowError` `true`  = 事件处理程序将错误信息添加到中的行的属性中，取消隐藏异常，并继续处理（镜像的行为）。 `RowUpdated`  
   
 ```vb  
 ' Assumes that connection is a valid SqlConnection object.  
@@ -188,8 +188,8 @@ protected static void FillError(object sender, FillErrorEventArgs args)
   
 ## <a name="see-also"></a>请参阅
 
-- [DataAdapters 和 DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
-- [处理数据集事件](../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-dataset-events.md)
-- [处理数据表事件](../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)
+- [DataAdapters 和 DataReaders](dataadapters-and-datareaders.md)
+- [处理数据集事件](./dataset-datatable-dataview/handling-dataset-events.md)
+- [处理数据表事件](./dataset-datatable-dataview/handling-datatable-events.md)
 - [事件](../../../standard/events/index.md)
-- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 概述](ado-net-overview.md)

@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 51096a2e-8b38-4c4d-a523-799bfdb7ec69
-ms.openlocfilehash: a620b7b15bb876d255fe787dc5d48aef14fb73e7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 322325b765f62d04e5713557f2ef9c97e1746ae0
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946612"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70792056"
 ---
 # <a name="manipulating-data"></a>操作数据
-在引入多个活动结果集 (MARS) 之前，开发人员必须使用多个连接或服务器端游标来解决某些方案。 此外, 如果在事务处理情况下使用多个连接, 则需要绑定连接 (使用**sp_getbindtoken**和**sp_bindsession**)。 以下方案显示如何使用启用 MARS 的连接来取代多个连接。  
+在引入多个活动结果集 (MARS) 之前，开发人员必须使用多个连接或服务器端游标来解决某些方案。 此外，如果在事务处理情况下使用多个连接，则需要绑定连接（使用**sp_getbindtoken**和**sp_bindsession**）。 以下方案显示如何使用启用 MARS 的连接来取代多个连接。  
   
 ## <a name="using-multiple-commands-with-mars"></a>对 MARS 使用多个命令  
  以下控制台应用程序演示如何对两个 <xref:System.Data.SqlClient.SqlDataReader> 对象和单个启用了 MARS 的 <xref:System.Data.SqlClient.SqlCommand> 对象使用两个 <xref:System.Data.SqlClient.SqlConnection> 对象。  
@@ -164,10 +164,10 @@ static void Main()
 ```  
   
 ## <a name="reading-and-updating-data-with-mars"></a>使用 MARS 读取和更新数据  
- MARS 允许连接供读取操作以及数据操作语言 (DML) 操作使用，包含多个挂起操作。 通过此功能，应用程序不需要处理连接忙的错误。 此外，MARS 可以取代服务器端游标的用户，后者通常会占用更多资源。 最后, 由于多个操作可以在单个连接上运行, 因此它们可以共享同一事务上下文, 从而无需使用**sp_getbindtoken**和**sp_bindsession**系统存储过程。  
+ MARS 允许连接供读取操作以及数据操作语言 (DML) 操作使用，包含多个挂起操作。 通过此功能，应用程序不需要处理连接忙的错误。 此外，MARS 可以取代服务器端游标的用户，后者通常会占用更多资源。 最后，由于多个操作可以在单个连接上运行，因此它们可以共享同一事务上下文，从而无需使用**sp_getbindtoken**和**sp_bindsession**系统存储过程。  
   
 ### <a name="example"></a>示例  
- 以下控制台应用程序演示如何对三个 <xref:System.Data.SqlClient.SqlDataReader> 对象和单个启用了 MARS 的 <xref:System.Data.SqlClient.SqlCommand> 对象使用两个 <xref:System.Data.SqlClient.SqlConnection> 对象。 第一个命令对象检索信用评级为 5 的供应商列表。 第二个命令对象使用 <xref:System.Data.SqlClient.SqlDataReader> 提供的供应商 ID 为第二个 <xref:System.Data.SqlClient.SqlDataReader> 加载特定供应商的所有产品。 每个产品记录通过第二个 <xref:System.Data.SqlClient.SqlDataReader> 访问。 执行计算以确定新的**OnOrderQty**应该是什么。 然后, 使用第三个命令对象, 用新值更新**ProductVendor**表。 整个过程在单个事务中进行，在结束时回滚。  
+ 以下控制台应用程序演示如何对三个 <xref:System.Data.SqlClient.SqlDataReader> 对象和单个启用了 MARS 的 <xref:System.Data.SqlClient.SqlCommand> 对象使用两个 <xref:System.Data.SqlClient.SqlConnection> 对象。 第一个命令对象检索信用评级为 5 的供应商列表。 第二个命令对象使用 <xref:System.Data.SqlClient.SqlDataReader> 提供的供应商 ID 为第二个 <xref:System.Data.SqlClient.SqlDataReader> 加载特定供应商的所有产品。 每个产品记录通过第二个 <xref:System.Data.SqlClient.SqlDataReader> 访问。 执行计算以确定新的**OnOrderQty**应该是什么。 然后，使用第三个命令对象，用新值更新**ProductVendor**表。 整个过程在单个事务中进行，在结束时回滚。  
   
 > [!NOTE]
 > 下面的示例使用 SQL Server 附带的**AdventureWorks**示例数据库。 示例代码中提供的连接字符串假定数据库在本地计算机上已安装并且可用。 根据环境的需要修改连接字符串。  
@@ -404,5 +404,5 @@ private static string GetConnectionString()
   
 ## <a name="see-also"></a>请参阅
 
-- [多重活动结果集 (MARS)](../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)
-- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [多重活动结果集 (MARS)](multiple-active-result-sets-mars.md)
+- [ADO.NET 概述](../ado-net-overview.md)

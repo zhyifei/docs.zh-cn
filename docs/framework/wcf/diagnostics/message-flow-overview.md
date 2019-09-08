@@ -2,33 +2,33 @@
 title: 消息流概述
 ms.date: 03/30/2017
 ms.assetid: fb0899e1-84cc-4d90-b45b-dc5a50063943
-ms.openlocfilehash: cee579f272700ca37228bacecdf387d03637610a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0bfbd1523f1d5db4a94cf3af03a03779af14655d
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963059"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795965"
 ---
 # <a name="message-flow-overview"></a>消息流概述
 在包含相互连接的服务的分布式系统中，必须确定服务之间的因果关系。 了解作为请求流的一部分的各种组件对于支持关键方案（如运行状况监视、疑难解答和根本原因分析）非常重要。 为了在各种服务之间启用跟踪相关性，我们通过以下功能在 .NET Framework 4 中添加了相关支持：
 
-- 分析跟踪:使用 Windows 事件跟踪 (ETW) 的高性能和低详细级别跟踪功能。
+- 分析跟踪：使用 Windows 事件跟踪（ETW）的高性能和低详细级别跟踪功能。
 
-- WCF/WF 服务的端到端活动模型:此功能支持<xref:System.ServiceModel>与和<xref:System.Workflow.ComponentModel>命名空间生成的跟踪关联。
+- WCF/WF 服务的端到端活动模型：此功能支持<xref:System.ServiceModel>与和<xref:System.Workflow.ComponentModel>命名空间生成的跟踪关联。
 
-- 适用于 WF 的 ETW 跟踪:此功能使用由 WF 服务生成的跟踪记录来查看工作流的当前状态和进度。
+- 适用于 WF 的 ETW 跟踪：此功能使用由 WF 服务生成的跟踪记录来查看工作流的当前状态和进度。
 
- 可使用跟踪或跟踪记录中记录的错误来查找代码缺陷或格式不正确的消息。 可使用事件的邮件头中的“相关性”节点的 ActivityId 属性来确定出错的活动。 若要按活动 ID 启用消息流跟踪, 请参阅[配置消息流跟踪](../../../../docs/framework/wcf/diagnostics/etw/configuring-message-flow-tracing.md)。 本主题演示如何在入门教程中创建的项目中启用消息流跟踪。
+ 可使用跟踪或跟踪记录中记录的错误来查找代码缺陷或格式不正确的消息。 可使用事件的邮件头中的“相关性”节点的 ActivityId 属性来确定出错的活动。 若要按活动 ID 启用消息流跟踪，请参阅[配置消息流跟踪](./etw/configuring-message-flow-tracing.md)。 本主题演示如何在入门教程中创建的项目中启用消息流跟踪。
 
 ### <a name="to-enable-message-flow-tracing-in-the-getting-started-tutorial"></a>在入门教程中启用消息流跟踪
 
 1. 通过单击 "**开始**"、"**运行**" 和`eventvwr.exe`"输入" 打开事件查看器。
 
-2. 如果尚未启用分析跟踪, 请展开 "**应用程序和服务日志**"、" **Microsoft**"、" **Windows**"、"**应用程序服务器应用程序**"。 选择 "**查看**"、"**显示分析和调试日志**"。 右键单击 "**分析**", 然后选择 "**启用日志**"。 将事件查看器保持打开状态，以便查看跟踪。
+2. 如果尚未启用分析跟踪，请展开 "**应用程序和服务日志**"、" **Microsoft**"、" **Windows**"、"**应用程序服务器应用程序**"。 选择 "**查看**"、"**显示分析和调试日志**"。 右键单击 "**分析**"，然后选择 "**启用日志**"。 将事件查看器保持打开状态，以便查看跟踪。
 
-3. 打开在 Visual Studio 2012 的[入门教程](../../../../docs/framework/wcf/getting-started-tutorial.md)中创建的示例。 请注意, 必须以管理员身份运行 Visual Studio 2012, 才能创建该服务。 如果已安装 WCF 示例, 则可以打开 "[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)", 其中包含本教程中创建的已完成项目。
+3. 打开在 Visual Studio 2012 的[入门教程](../getting-started-tutorial.md)中创建的示例。 请注意，必须以管理员身份运行 Visual Studio 2012，才能创建该服务。 如果已安装 WCF 示例，则可以打开 "[入门](../samples/getting-started-sample.md)"，其中包含本教程中创建的已完成项目。
 
-4. 右键单击**服务**项目, 然后选择 "**添加**"、"**新建项**"。 选择 "**应用程序配置文件**", 然后单击 **"确定"** 。
+4. 右键单击**服务**项目，然后选择 "**添加**"、"**新建项**"。 选择 "**应用程序配置文件**"，然后单击 **"确定"** 。
 
 5. 将下面的代码添加到上一步中创建的 App.Config 文件。
 
@@ -40,7 +40,7 @@ ms.locfileid: "69963059"
     </system.serviceModel>
     ```
 
-6. 通过按 Ctrl+F5 来执行该服务器应用程序而不进行调试。 右键单击**客户端**项目, 然后选择 "**调试**"、"**启动新实例**", 以执行客户端项目。
+6. 通过按 Ctrl+F5 来执行该服务器应用程序而不进行调试。 右键单击**客户端**项目，然后选择 "**调试**"、"**启动新实例**"，以执行客户端项目。
 
 7. 若要跟踪从客户端到服务器的事件，请将以下内容添加到“客户端”项目中的应用程序配置文件。
 
@@ -63,7 +63,7 @@ ms.locfileid: "69963059"
     Trace.CorrelationManager.ActivityId = guid;
     ```
 
-10. 刷新并查看**分析**日志。  查找事件 ID 为 220 的事件。  选择该事件, 并单击预览窗格中的 "**详细信息**" 选项卡。 此事件将包含调用活动的相关 ID。
+10. 刷新并查看**分析**日志。  查找事件 ID 为 220 的事件。  选择该事件，并单击预览窗格中的 "**详细信息**" 选项卡。 此事件将包含调用活动的相关 ID。
 
     ```xml
     <Correlation ActivityID="{A066CCF1-8AB3-459B-B62F-F79F957A5036}" />

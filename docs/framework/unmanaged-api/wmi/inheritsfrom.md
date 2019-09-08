@@ -1,6 +1,6 @@
 ---
-title: InheritsFrom 函数 （非托管 API 参考）
-description: InheritsFrom 函数将确定从特定父类是否派生的类或实例。
+title: InheritsFrom 函数（非托管 API 参考）
+description: InheritsFrom 函数确定类或实例是否从特定的父类派生。
 ms.date: 11/06/2017
 api_name:
 - InheritsFrom
@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5c04a08c9712359453b9c5a9d136e22e1de8648a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0c32c54ec56ea0fe4f4039ca6438a91338edbadb
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746504"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798453"
 ---
 # <a name="inheritsfrom-function"></a>InheritsFrom 函数
 确定当前类或实例是否派生自指定的父类。
@@ -41,30 +41,30 @@ HRESULT InheritsFrom (
 ## <a name="parameters"></a>参数
 
 `vFunc`  
-[in]此参数是未使用。
+中此参数未使用。
 
 `ptr`  
-[in]一个指向[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)实例。
+中指向[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)实例的指针。
 
 `wszAncestor`  
-[in]类的名称。 `wszAncestor` 必须指向有效`LPCWSTR`。
+中类的名称。 `wszAncestor`必须指向有效`LPCWSTR`的。
 
 ## <a name="return-value"></a>返回值
 
-此函数返回以下值中定义*WbemCli.h*标头文件，也可以在定义它们为常量在代码中：
+此函数返回的以下值是在*WbemCli*头文件中定义的，也可以在代码中将它们定义为常量：
 
 |返回的常量  |值  |Description  |
 |---------|---------|---------|
-| `WBEM_S_NO_ERROR` | 0 | 当前对象继承`wszAncestor`。  |
-| `WBEM_S_FALSE` | 1 | 当前对象不会继承从`wszAncestor`。 |
+| `WBEM_S_NO_ERROR` | 0 | 当前对象继承自`wszAncestor`。  |
+| `WBEM_S_FALSE` | 1 | 当前的对象不是从`wszAncestor`继承的。 |
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | `wszAncestor` 为 `null`。 |
   
 ## <a name="remarks"></a>备注
 
-此函数包装对的调用[IWbemClassObject::InheritsFrom](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-inheritsfrom)方法。
+此函数包装对[IWbemClassObject：： InheritsFrom](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-inheritsfrom)方法的调用。
 
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../get-started/system-requirements.md)。  
   
  **标头：** WMINet_Utils.idl  
   
@@ -72,4 +72,4 @@ HRESULT InheritsFrom (
   
 ## <a name="see-also"></a>请参阅
 
-- [WMI 和性能计数器 （非托管 API 参考）](index.md)
+- [WMI 和性能计数器（非托管 API 参考）](index.md)

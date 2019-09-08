@@ -2,23 +2,23 @@
 title: 实体数据模型：基元数据类型
 ms.date: 03/30/2017
 ms.assetid: 7635168e-0566-4fdd-8391-7941b0d9f787
-ms.openlocfilehash: c58a3db1eb7ffdb65c7e603d9a76ac7f19f2230f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: dd688a06a47f4c44c27ddee2120b9de6980672fc
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69959287"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795160"
 ---
 # <a name="entity-data-model-primitive-data-types"></a>实体数据模型：基元数据类型
-实体数据模型 (EDM) 支持一组用于在概念模型中定义[属性](../../../../docs/framework/data/adonet/property.md)的抽象基元数据类型 (如 String、Boolean、Int32 等)。 这些基元数据类型是存储或承载环境（例如 SQL Server 数据库或公共语言运行库 (CLR)）中所支持的实际基元数据类型的代理。 EDM 没有定义基元数据类型的操作或转换语义；这些语义由存储或承载环境定义。 通常，EDM 中的基元数据类型将映射至存储或承载环境中的对应基元数据类型。 有关实体框架如何将 EDM 中的基元类型映射到 SQL Server 数据类型的信息, 请参阅[Entity sqlclient 类型的 SqlClient](../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-types.md)。  
+实体数据模型（EDM）支持一组用于在概念模型中定义[属性](property.md)的抽象基元数据类型（如 String、Boolean、Int32 等）。 这些基元数据类型是存储或承载环境（例如 SQL Server 数据库或公共语言运行库 (CLR)）中所支持的实际基元数据类型的代理。 EDM 没有定义基元数据类型的操作或转换语义；这些语义由存储或承载环境定义。 通常，EDM 中的基元数据类型将映射至存储或承载环境中的对应基元数据类型。 有关实体框架如何将 EDM 中的基元类型映射到 SQL Server 数据类型的信息，请参阅[Entity sqlclient 类型的 SqlClient](./ef/sqlclient-for-ef-types.md)。  
   
 > [!NOTE]
 > EDM 不支持基元数据类型的集合。  
   
- 有关 EDM 中的结构化数据类型的信息, 请参阅[实体类型](../../../../docs/framework/data/adonet/entity-type.md)和[复杂类型](../../../../docs/framework/data/adonet/complex-type.md)。  
+ 有关 EDM 中的结构化数据类型的信息，请参阅[实体类型](entity-type.md)和[复杂类型](complex-type.md)。  
   
 ## <a name="primitive-data-types-supported-in-the-entity-data-model"></a>实体数据模型中支持的基元数据类型  
- 下表列出了 EDM 支持的基元数据类型。 该表还列出了可应用于每个基元数据类型的[方面](../../../../docs/framework/data/adonet/facet.md)。  
+ 下表列出了 EDM 支持的基元数据类型。 该表还列出了可应用于每个基元数据类型的[方面](facet.md)。  
   
 |基元数据类型|描述|适用的方面|  
 |-------------------------|-----------------|-----------------------|  
@@ -40,5 +40,5 @@ ms.locfileid: "69959287"
   
 ## <a name="see-also"></a>请参阅
 
-- [实体数据模型关键概念](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
-- [实体数据模型](../../../../docs/framework/data/adonet/entity-data-model.md)
+- [实体数据模型关键概念](entity-data-model-key-concepts.md)
+- [实体数据模型](entity-data-model.md)

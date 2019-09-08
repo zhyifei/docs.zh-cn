@@ -1,6 +1,6 @@
 ---
-title: GetDemultiplexedStub 函数 （非托管 API 参考）
-description: GetDemultiplexedStub 函数创建对象转发器接收器以帮助客户端在从 Windows 管理接收异步调用。
+title: GetDemultiplexedStub 函数（非托管 API 参考）
+description: GetDemultiplexedStub 函数创建对象转发器接收器，以帮助客户端接收来自 Windows 管理的异步调用。
 ms.date: 11/06/2017
 api_name:
 - GetDemultiplexedStub
@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1b519ea4062682a56b5b4e277de22b14799f65d0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a2d3885a4a9e54950909053ba18de5b1891e7edf
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67783219"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798612"
 ---
 # <a name="getdemultiplexedstub-function"></a>GetDemultiplexedStub 函数
 创建对象转发器接收器，帮助客户端从 Windows Management 接收异步调用。
@@ -41,22 +41,22 @@ HRESULT GetDemultiplexedStub (
 ## <a name="parameters"></a>参数
 
 `pObject`  
-[in]客户端的过程中实现的指针[IWbemObjectSink](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectsink)。
+中一个指针，指向客户端的[IWbemObjectSink](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectsink)的进程内实现。
 
 `isLocal`  
-[in]一个标志，指示事件是否是本地 (`true`); 否则为`false`。
+中指示事件是否为本地（`true`）的标志; `false`否则为。
 
 `ppObject`  
-[out]若要帮助在异步调用从 Windows 管理的客户端对象转发器接收器。
+弄用于帮助客户端从 Windows 管理接收异步调用的对象转发器接收器。
 
 ## <a name="return-value"></a>返回值
 
-如果函数成功，返回值是`S_OK`(0)。
+如果该函数成功，则返回值为`S_OK` （0）。
 
-如果函数失败，返回值是一个非零错误代码。 若要获得扩展错误信息，请调用[GetErrorInfo](geterrorinfo.md)函数。
+如果函数失败，则返回值为非零错误代码。 若要获取扩展的错误信息，请调用[GetErrorInfo](geterrorinfo.md)函数。
     
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../get-started/system-requirements.md)。  
   
  **标头：** WMINet_Utils.idl  
   
@@ -64,4 +64,4 @@ HRESULT GetDemultiplexedStub (
   
 ## <a name="see-also"></a>请参阅
 
-- [WMI 和性能计数器 （非托管 API 参考）](index.md)
+- [WMI 和性能计数器（非托管 API 参考）](index.md)

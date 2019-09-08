@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 37df2641-661e-407a-a3fb-7bf9540f01e8
-ms.openlocfilehash: 3a1b0b947b97eac52e06626d2ed6d47bb9700147
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a98239886d6745bbb6e13e71a12764008460cdd7
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949453"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785678"
 ---
 # <a name="connection-strings-and-configuration-files"></a>连接字符串和配置文件
-在应用程序代码中嵌入连接字符串可能导致安全漏洞和维护问题。 使用 [Ildasm.exe（IL 反汇编程序）](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md)工具可以查看编译到应用程序源代码中的未加密连接字符串。 此外，如果连接字符串发生更改，则必须重新编译应用程序。 因此，我们建议您将连接字符串存储在应用程序配置文件中。  
+在应用程序代码中嵌入连接字符串可能导致安全漏洞和维护问题。 使用 [Ildasm.exe（IL 反汇编程序）](../../tools/ildasm-exe-il-disassembler.md)工具可以查看编译到应用程序源代码中的未加密连接字符串。 此外，如果连接字符串发生更改，则必须重新编译应用程序。 因此，我们建议您将连接字符串存储在应用程序配置文件中。  
   
 ## <a name="working-with-application-configuration-files"></a>使用应用程序配置文件  
  应用程序配置文件包含特定应用程序特有的设置。 例如，ASP.NET 应用程序能包含一个或多个 web.config 文件，Windows 应用程序可能包含一个可选 app.config 文件。 虽然配置文件的名称和位置会因应用程序宿主的不同而有所不同，但配置文件可以有相同的元素。  
@@ -36,7 +36,7 @@ ms.locfileid: "69949453"
 ```  
   
 > [!NOTE]
-> 您可以将连接字符串的一部分保存在配置文件中，并使用 <xref:System.Data.Common.DbConnectionStringBuilder> 类在运行时将该字符串补充完整。 如果您预先不知道连接字符串的元素，或者不希望将敏感信息保存到配置文件中，这一方法会很有用。 有关详细信息，请参阅[连接字符串生成器](../../../../docs/framework/data/adonet/connection-string-builders.md)。  
+> 您可以将连接字符串的一部分保存在配置文件中，并使用 <xref:System.Data.Common.DbConnectionStringBuilder> 类在运行时将该字符串补充完整。 如果您预先不知道连接字符串的元素，或者不希望将敏感信息保存到配置文件中，这一方法会很有用。 有关详细信息，请参阅[连接字符串生成器](connection-string-builders.md)。  
   
 ### <a name="using-external-configuration-files"></a>使用外部配置文件  
  外部配置文件是单独的文件，此类文件包含由一部分组成的配置文件的片段。 外部配置文件由主配置文件引用。 如果在部署完应用程序后连接字符串可能会被编辑，那么将 connectionStrings 节存储在物理上独立的文件中会很有用。 例如，标准 ASP.NET 行为是在修改配置文件后重新启动应用程序域，这将导致状态信息丢失。 然而，修改外部配置文件不会导致重新启动应用程序。 外部配置文件并不局限于由 ASP.NET 使用，Windows 应用程序也可以使用。 此外，文件访问安全性和权限也可以用于限制对外部配置文件的访问。 运行时使用外部配置文件是透明的，且不需要特殊编码。  
@@ -74,14 +74,14 @@ ms.locfileid: "69949453"
   
  您可以使用 <xref:System.Configuration.ConnectionStringSettingsCollection> 从应用程序配置文件中检索连接字符串。 它包含 <xref:System.Configuration.ConnectionStringSettings> 对象的集合，每个对象表示 connectionStrings 节中的一项。 它的属性 (Property) 映射为连接字符串属性 (Attribute)，从而允许您通过指定名称或提供程序名称来检索连接字符串。  
   
-|属性|描述|  
+|Property|描述|  
 |--------------|-----------------|  
 |<xref:System.Configuration.ConnectionStringSettings.Name%2A>|连接字符串的名称。 映射到 name 属性。|  
 |<xref:System.Configuration.ConnectionStringSettings.ProviderName%2A>|完全限定提供程序名。 映射到 providerName 属性。|  
 |<xref:System.Configuration.ConnectionStringSettings.ConnectionString%2A>|连接字符串。 映射到 connectionString 属性。|  
   
-### <a name="example-listing-all-connection-strings"></a>示例:列出所有连接字符串  
- 此示例将<xref:System.Configuration.ConnectionStringSettingsCollection>循环访问, 并在控制台<xref:System.Configuration.ConnectionStringSettings.ProviderName%2A?displayProperty=nameWithType>窗口中<xref:System.Configuration.ConnectionStringSettings.ConnectionString%2A?displayProperty=nameWithType> <xref:System.Configuration.ConnectionStringSettings.Name%2A?displayProperty=nameWithType>显示、和属性。  
+### <a name="example-listing-all-connection-strings"></a>示例：列出所有连接字符串  
+ 此示例将<xref:System.Configuration.ConnectionStringSettingsCollection>循环访问，并在控制台<xref:System.Configuration.ConnectionStringSettings.ProviderName%2A?displayProperty=nameWithType>窗口中<xref:System.Configuration.ConnectionStringSettings.ConnectionString%2A?displayProperty=nameWithType> <xref:System.Configuration.ConnectionStringSettings.Name%2A?displayProperty=nameWithType>显示、和属性。  
   
 > [!NOTE]
 > System.Configuration.dll 并不包含在所有项目类型中，您可能需要对其设置引用才能使用配置类。 特定应用程序配置文件的名称和位置因应用程序类型和宿主进程的不同而有所不同。  
@@ -89,13 +89,13 @@ ms.locfileid: "69949453"
  [!code-csharp[DataWorks ConnectionStringSettings.RetrieveFromConfig#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks ConnectionStringSettings.RetrieveFromConfig/CS/source.cs#1)]
  [!code-vb[DataWorks ConnectionStringSettings.RetrieveFromConfig#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks ConnectionStringSettings.RetrieveFromConfig/VB/source.vb#1)]  
   
-### <a name="example-retrieving-a-connection-string-by-name"></a>示例:按名称检索连接字符串  
+### <a name="example-retrieving-a-connection-string-by-name"></a>示例：按名称检索连接字符串  
  此示例演示如何通过指定连接字符串名称从配置文件中检索连接字符串。 此代码创建一个 <xref:System.Configuration.ConnectionStringSettings> 对象，以将提供的输入参数与 <xref:System.Configuration.ConfigurationManager.ConnectionStrings%2A> 名称相匹配。 如果未找到匹配名称，则该函数返回 `null`（在 Visual Basic 中返回 `Nothing`）。  
   
  [!code-csharp[DataWorks ConnectionStringSettings.RetrieveFromConfigByName#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks ConnectionStringSettings.RetrieveFromConfigByName/CS/source.cs#1)]
  [!code-vb[DataWorks ConnectionStringSettings.RetrieveFromConfigByName#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks ConnectionStringSettings.RetrieveFromConfigByName/VB/source.vb#1)]  
   
-### <a name="example-retrieving-a-connection-string-by-provider-name"></a>示例:按提供程序名称检索连接字符串  
+### <a name="example-retrieving-a-connection-string-by-provider-name"></a>示例：按提供程序名称检索连接字符串  
  此示例演示如何通过指定 System.Data.ProviderName 格式的提供程序固定名称来检索连接字符串。 此代码循环访问 <xref:System.Configuration.ConnectionStringSettingsCollection>，并返回找到的第一个 <xref:System.Configuration.ConnectionStringSettings.ProviderName%2A> 的连接字符串。 如果未找到提供程序名称，则该函数返回 `null`（在 Visual Basic 中返回 `Nothing`）。  
   
  [!code-csharp[DataWorks ConnectionStringSettings.RetrieveFromConfigByProvider#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks ConnectionStringSettings.RetrieveFromConfigByProvider/CS/source.cs#1)]
@@ -167,13 +167,13 @@ ms.locfileid: "69949453"
  [!code-csharp[DataWorks ConnectionStringsWeb.Encrypt#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks ConnectionStringsWeb.Encrypt/CS/source.cs#1)]
  [!code-vb[DataWorks ConnectionStringsWeb.Encrypt#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks ConnectionStringsWeb.Encrypt/VB/source.vb#1)]  
   
- 有关保护 ASP.NET 应用程序安全的详细信息, 请参阅[保护 ASP.NET 网站的安全](https://docs.microsoft.com/previous-versions/aspnet/91f66yxt(v=vs.100))。  
+ 有关保护 ASP.NET 应用程序安全的详细信息，请参阅[保护 ASP.NET 网站的安全](https://docs.microsoft.com/previous-versions/aspnet/91f66yxt(v=vs.100))。  
   
 ## <a name="see-also"></a>请参阅
 
-- [连接字符串生成器](../../../../docs/framework/data/adonet/connection-string-builders.md)
-- [保护连接信息](../../../../docs/framework/data/adonet/protecting-connection-information.md)
+- [连接字符串生成器](connection-string-builders.md)
+- [保护连接信息](protecting-connection-information.md)
 - [使用配置类](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ms228063(v=vs.90))
-- [配置应用程序](../../../../docs/framework/configure-apps/index.md)
+- [配置应用程序](../../configure-apps/index.md)
 - [ASP.NET 网站管理](https://docs.microsoft.com/previous-versions/aspnet/6hy1xzbw(v=vs.100))
-- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 概述](ado-net-overview.md)

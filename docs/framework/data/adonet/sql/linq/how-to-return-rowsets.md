@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 725718f5-da29-4841-9f53-aafef64ba977
-ms.openlocfilehash: 599ad6f722251003ab56547ce050cbd0e8da831d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5ec188e0345140297062d0a10dfbbc4a294bbb7d
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61903976"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781608"
 ---
 # <a name="how-to-return-rowsets"></a>如何：返回行集
 此示例从数据库中返回行集合，并包含用于筛选结果的输入参数。  
   
- 如果执行存储的过程返回行集，则使用*结果*存储从存储过程返回的类。 有关详细信息，请参阅[分析 LINQ to SQL 源代码](../../../../../../docs/framework/data/adonet/sql/linq/analyzing-linq-to-sql-source-code.md)。  
+ 当执行返回行集的存储过程时，请使用存储过程中存储返回的*结果*类。 有关详细信息，请参阅[分析 LINQ to SQL 源代码](analyzing-linq-to-sql-source-code.md)。  
   
 ## <a name="example"></a>示例  
  下面的示例表示一个存储过程，该存储过程返回客户行并使用输入参数来仅返回将“London”列为客户城市的那些行。 该示例假定有一个可枚举的 `CustomersByCityResult` 类。  
@@ -38,5 +38,5 @@ END
   
 ## <a name="see-also"></a>请参阅
 
-- [存储过程](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)
-- [下载示例数据库](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
+- [存储过程](stored-procedures.md)
+- [下载示例数据库](downloading-sample-databases.md)

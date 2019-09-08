@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fcf714cb0c1c1dd59ae2ec56279870c0bb3e1c4a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bd138d0418bb9667a86419d719bf0b95a4bb1b12
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741718"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777113"
 ---
 # <a name="importfileex-method"></a>ImportFileEx 方法
-导入指定的程序集或未绑定的模块。  
+导入指定的程序集或未绑定模块。  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,34 +42,34 @@ HRESULT ImportFileEx(
   
 ## <a name="parameters"></a>参数  
  `pszFilename`  
- 要从中导入的文件的完全限定的名称。  
+ 要导入的文件的完全限定名称。  
   
  `pszTargetName`  
- 可选目标文件的名称。  
+ 目标文件的可选名称。  
   
  `fSmartImport`  
- 如果为 TRUE，则使用 ImportTypes 时，必须手动执行否则导入。  
+ 如果为 TRUE，则使用 ImportTypes，否则必须手动执行导入。  
   
  `dwOpenFlags`  
- 要传递到标志[OpenScope 方法](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md)。  
+ 要传递给[OpenScope 方法](../metadata/imetadatadispenser-openscope-method.md)的标志。  
   
  `pImportToken`  
- 接收要导入的文件 ID。  
+ 接收正在导入的文件的 ID。  
   
  `ppAssemblyScope`  
- 接收程序集导入范围[IMetaDataAssemblyImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)接口。 如果文件不是程序集，则设置为 NULL。  
+ 接收程序集导入范围[IMetaDataAssemblyImport 接口](../metadata/imetadataassemblyimport-interface.md)接口。 如果文件不是程序集，则设置为 NULL。  
   
  `pdwCountOfScopes`  
- 接收数量的导入的文件和/或作用域。  
+ 接收导入文件和/或范围的计数。  
   
 ## <a name="return-value"></a>返回值  
- 如果该方法成功，返回，则为 S_OK。  
+ 如果该方法成功，则返回 S_OK。  
   
 ## <a name="requirements"></a>要求  
- 需要 alink.h。  
+ 需要 alink。  
   
 ## <a name="see-also"></a>请参阅
 
-- [IALink2 接口](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [IALink 接口](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink2 接口](ialink2-interface.md)
+- [IALink 接口](ialink-interface.md)
+- [ALink API](index.md)

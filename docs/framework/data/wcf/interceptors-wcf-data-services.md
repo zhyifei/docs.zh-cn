@@ -8,22 +8,22 @@ helpviewer_keywords:
 - WCF Data Services, customizing
 - query interceptors [WCF Data Services]
 ms.assetid: e33ae8dc-8069-41d0-99a0-75ff28db7050
-ms.openlocfilehash: 17926e144fae206d702c2bcb4f88dd2093442ed5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7decfdd738e71a01afa8cb32604953142b46e588
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876221"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70790437"
 ---
 # <a name="interceptors-wcf-data-services"></a>拦截器（WCF 数据服务）
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 使应用程序能够截获请求消息，以便可以向操作添加自定义逻辑。 可以使用此自定义逻辑来验证传入消息中的数据。 还可以使用它进一步限制查询请求的范围，以便基于每个请求插入自定义授权策略。  
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]使应用程序能够截获请求消息，以便可以向操作添加自定义逻辑。 您可以使用此自定义逻辑来验证传入消息中的数据。 还可以使用它进一步限制查询请求的范围，以便基于每个请求插入自定义授权策略。  
   
- 侦听由数据服务中具有特殊特性的方法执行。 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 在消息处理过程中的适当时刻调用这些方法。 对于每个实体集，定义侦听器，侦听器方法无法像服务操作那样接受请求中的参数。 处理 HTTP GET 请求时调用的查询侦听器方法必须返回查询结果时应返回 lambda 表达式，用于确定是否设置侦听器的实体的实例。 数据服务使用此表达式来进一步优化请求的操作。 下面是查询侦听器的定义示例。  
+ 侦听由数据服务中具有特殊特性的方法执行。 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 在消息处理过程中的适当时刻调用这些方法。 拦截程序是根据每个实体集定义的，侦听器方法不能接受来自服务操作可能这样的请求的参数。 在处理 HTTP GET 请求时调用的查询侦听器方法必须返回一个 lambda 表达式，该表达式确定是否应由查询结果返回侦听器的实体集的实例。 数据服务使用此表达式来进一步优化请求的操作。 下面是查询侦听器的定义示例。  
   
  [!code-csharp[Astoria Northwind Service#QueryInterceptorDef](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_service/cs/northwind2.svc.cs#queryinterceptordef)]
  [!code-vb[Astoria Northwind Service#QueryInterceptorDef](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_service/vb/northwind2.svc.vb#queryinterceptordef)]  
   
- 有关详细信息，请参阅[如何：截获数据服务消息](../../../../docs/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services.md)。  
+ 有关详细信息，请参阅[如何：截获数据服务消息](how-to-intercept-data-service-messages-wcf-data-services.md)。  
   
  在处理非查询操作时调用的变更侦听器必须返回 `void`（在 Visual Basic 中为 `Nothing`）。 变更侦听器方法必须接受以下两个参数：  
   
@@ -36,7 +36,7 @@ ms.locfileid: "61876221"
  [!code-csharp[Astoria Northwind Service#ChangeInterceptorDef](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_service/cs/northwind2.svc.cs#changeinterceptordef)]
  [!code-vb[Astoria Northwind Service#ChangeInterceptorDef](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_service/vb/northwind2.svc.vb#changeinterceptordef)]  
   
- 有关详细信息，请参阅[如何：截获数据服务消息](../../../../docs/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services.md)。  
+ 有关详细信息，请参阅[如何：截获数据服务消息](how-to-intercept-data-service-messages-wcf-data-services.md)。  
   
  支持使用以下特性进行侦听。  
   
@@ -46,8 +46,8 @@ ms.locfileid: "61876221"
  **[ChangeInterceptor(** *EntitySetName* **)]**  
  当收到了针对目标实体集资源的 HTTP GET 请求以外的 HTTP 请求时，将调用应用了 <xref:System.Data.Services.ChangeInterceptorAttribute> 特性的方法。 这些方法必须始终返回 `void`（在 Visual Basic 中为 `Nothing`）。  
   
- 有关详细信息，请参阅[如何：截获数据服务消息](../../../../docs/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services.md)。  
+ 有关详细信息，请参阅[如何：截获数据服务消息](how-to-intercept-data-service-messages-wcf-data-services.md)。  
   
 ## <a name="see-also"></a>请参阅
 
-- [服务操作](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md)
+- [服务操作](service-operations-wcf-data-services.md)

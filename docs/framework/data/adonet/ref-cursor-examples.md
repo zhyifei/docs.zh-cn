@@ -2,21 +2,21 @@
 title: REF CURSOR 示例
 ms.date: 03/30/2017
 ms.assetid: c257da03-c6c9-4cf8-b591-b7740a962c40
-ms.openlocfilehash: dfad86c6d5c99d7a1b99d7cfbde165d5ec39f5f0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 24830452e6d1ab11605ffa88a925fbc55c80b9bf
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61651670"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794703"
 ---
 # <a name="ref-cursor-examples"></a>REF CURSOR 示例
 REF CURSOR 示例包括下列三个 Visual Basic 示例，演示如何使用 REF CURSOR。  
   
 |示例|描述|  
 |------------|-----------------|  
-|[OracleDataReader 中的 REF CURSOR 参数](../../../../docs/framework/data/adonet/ref-cursor-parameters-in-an-oracledatareader.md)|此示例执行一个 PL/SQL 存储过程，返回 REF CURSOR 参数，并将值作为 <xref:System.Data.OracleClient.OracleDataReader> 读取。|  
-|[使用 OracleDataReader 从多个 REF CURSOR 中检索数据](../../../../docs/framework/data/adonet/retrieving-data-from-multiple-ref-cursors.md)|此示例执行一个 PL/SQL 存储过程，返回两个 REF CURSOR 参数，并读取使用的值**OracleDataReader**。|  
-|[使用一个或多个 REF CURSOR 填充数据集](../../../../docs/framework/data/adonet/filling-a-dataset-using-one-or-more-ref-cursors.md)|此示例执行一个 PL/SQL 存储过程，返回两个 REF CURSOR 参数，并使用返回的行填充 <xref:System.Data.DataSet>。|  
+|[OracleDataReader 中的 REF CURSOR 参数](ref-cursor-parameters-in-an-oracledatareader.md)|此示例执行一个 PL/SQL 存储过程，返回 REF CURSOR 参数，并将值作为 <xref:System.Data.OracleClient.OracleDataReader> 读取。|  
+|[使用 OracleDataReader 从多个 REF CURSOR 中检索数据](retrieving-data-from-multiple-ref-cursors.md)|此示例执行一个 PL/SQL 存储过程，该存储过程返回两个 REF CURSOR 参数，并使用**OracleDataReader**读取值。|  
+|[使用一个或多个 REF CURSOR 填充数据集](filling-a-dataset-using-one-or-more-ref-cursors.md)|此示例执行一个 PL/SQL 存储过程，返回两个 REF CURSOR 参数，并使用返回的行填充 <xref:System.Data.DataSet>。|  
   
  要使用这些示例，可能需要创建 Oracle 表，并且必须创建 PL/SQL 包和包正文。  
   
@@ -81,5 +81,5 @@ END CURSPKG;
   
 ## <a name="see-also"></a>请参阅
 
-- [Oracle REF CURSORs](../../../../docs/framework/data/adonet/oracle-ref-cursors.md)
-- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Oracle REF CURSORs](oracle-ref-cursors.md)
+- [ADO.NET 概述](ado-net-overview.md)

@@ -2,12 +2,12 @@
 title: System.TimeSpan 方法
 ms.date: 03/30/2017
 ms.assetid: 9333fee8-1454-4374-855b-8c14c002f48f
-ms.openlocfilehash: ec27f8f17a6709efef1a8230b521778095ae1257
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9a7eb3c979219003d497ec752b36ec54ef081b43
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69947089"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781040"
 ---
 # <a name="systemtimespan-methods"></a>System.TimeSpan 方法
 对 <xref:System.TimeSpan?displayProperty=nameWithType> 的成员支持在很大程度上取决于您正在使用的 .NET Framework 和 Microsoft SQL Server 的版本。  
@@ -34,11 +34,11 @@ ms.locfileid: "69947089"
 > 需要安装 .NET Framework 3.5 SP1 和更高版本，才能使用 LINQ to SQL 将 <xref:System.TimeSpan?displayProperty=nameWithType> 映射到 SQL `TIME` 列。 SQL `TIME` 数据类型仅在 Microsoft SQL Server 2008 和更高版本中提供。  
   
 ### <a name="addition-and-subtraction"></a>加法和减法  
- 尽管 CLR <xref:System.TimeSpan?displayProperty=nameWithType> 类型支持加减运算，但 SQL `TIME` 类型不支持。 因此，将 LINQ to SQL 查询映射到 SQL `TIME` 类型后，如果这些查询尝试执行加减运算，则将生成错误。 在[sql-CLR 类型映射](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)中, 可以找到有关使用 sql 日期和时间类型的其他注意事项。  
+ 尽管 CLR <xref:System.TimeSpan?displayProperty=nameWithType> 类型支持加减运算，但 SQL `TIME` 类型不支持。 因此，将 LINQ to SQL 查询映射到 SQL `TIME` 类型后，如果这些查询尝试执行加减运算，则将生成错误。 在[sql-CLR 类型映射](sql-clr-type-mapping.md)中，可以找到有关使用 sql 日期和时间类型的其他注意事项。  
   
 ## <a name="see-also"></a>请参阅
 
-- [查询概念](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
-- [创建对象模型](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)
-- [SQL-CLR 类型映射](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)
-- [数据类型和函数](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
+- [查询概念](query-concepts.md)
+- [创建对象模型](creating-the-object-model.md)
+- [SQL-CLR 类型映射](sql-clr-type-mapping.md)
+- [数据类型和函数](data-types-and-functions.md)

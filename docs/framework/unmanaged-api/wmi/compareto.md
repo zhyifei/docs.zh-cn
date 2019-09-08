@@ -1,6 +1,6 @@
 ---
-title: CompareTo 函数 （非托管 API 参考）
-description: CompareTo 函数将对象与其他 WMI 对象进行比较。
+title: CompareTo 函数（非托管 API 参考）
+description: CompareTo 函数将对象与另一个 WMI 对象进行比较。
 ms.date: 11/06/2017
 api_name:
 - CompareTo
@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3566b9b8a3b4183f936c82c39c38dc5daa3aeae1
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 2ec42dff333422e247a11b4a3a5b9aed9bd316fa
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636681"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798771"
 ---
 # <a name="compareto-function"></a>CompareTo 函数
 
@@ -43,59 +43,59 @@ HRESULT CompareTo (
 ## <a name="parameters"></a>参数
 
 `vFunc`\
-[in]此参数是未使用。
+中此参数未使用。
 
 `ptr`\
-[in]一个指向[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)实例。
+中指向[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)实例的指针。
 
 `flags`\
-[in]指定要考虑的比较的对象特征的标志的按位组合。 请参阅[备注](#remarks)部分，了解详细信息。
+中标志的按位组合，用于指定要考虑比较的对象特征。 有关详细信息，请参阅 "[备注](#remarks)" 部分。
 
 `pCompareTo`\
-[in]进行比较的对象。 `pCompareTo` 必须是有效[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)实例; 它不能为`null`。
+中用于比较的对象。 `pCompareTo`必须是有效的[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)实例;不能为`null`。
 
 ## <a name="return-value"></a>返回值
 
-此函数返回以下值中定义*WbemCli.h*标头文件，也可以在定义它们为常量在代码中：
+此函数返回的以下值是在*WbemCli*头文件中定义的，也可以在代码中将它们定义为常量：
 
 |返回的常量  |值  |描述  |
 |---------|---------|---------|
-| `WBEM_E_FAILED` | 0x80041001 | 发生未知的错误。 |
+| `WBEM_E_FAILED` | 0x80041001 | 发生了未指定的错误。 |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | 参数无效。 |
-| `WBEM_E_UNEXPECTED` | 0x8004101d | 第二次调用`BeginEnumeration`而无需对的干预调用进行[ `EndEnumeration` ](endenumeration.md)。 |
+| `WBEM_E_UNEXPECTED` | 0x8004101d | 对的第二`BeginEnumeration`次调用没有干预[`EndEnumeration`](endenumeration.md)调用。 |
 | `WBEM_S_NO_ERROR` | 0 | 函数调用成功。  |
 | `WBEM_S_DIFFERENT` | 0x40003 | 对象不同。 |
-| `WBEM_S_SAME` | 0 | 对象是相同的基础的比较标志。 |
+| `WBEM_S_SAME` | 0 | 根据比较标志，对象是相同的。 |
 
 ## <a name="remarks"></a>备注
 
-此函数包装对的调用[IWbemClassObject::CompareTo](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-compareto)方法。
+此函数包装对[IWbemClassObject：： CompareTo](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-compareto)方法的调用。
 
-可以作为传递的标志`lEnumFlags`中定义参数*WbemCli.h*标头文件，也可以在定义它们为常量在代码中。 通过指定以下标志的按位组合，可以指定在比较中涉及的各个特征：
+可以作为`lEnumFlags`参数传递的标志在*WbemCli*头文件中定义，也可以在代码中将它们定义为常量。 您可以通过指定下列标志的按位组合来指定比较中涉及的各个特征：
 
 |返回的常量  |值  |描述  |
 |---------|---------|---------|
-| `WBEM_FLAG_IGNORE_OBJECT_SOURCE` | 2 | 忽略源 （在服务器和它们原来的位置的命名空间）。 |
-| `WBEM_FLAG_IGNORE_QUALIFIERS` | 1 | 忽略所有限定符 (包括**键**并**动态**) |
-| `WBEM_FLAG_IGNORE_DEFAULT_VALUES` | 4 | 忽略属性的默认的值。 此标志仅适用于的类的比较。 |
-| `WBEM_FLAG_IGNORE_FLAVOR` | 0x20 | 忽略限定符特色信息。 此标志仍将限定符考虑在内，但会忽略风格差别，如传播规则和重写的限制。 |
-| `WBEM_FLAG_IGNORE_CASE` | 0x10 | 忽略大小写比较字符串值。 这同时适用于字符串和限定符值。 属性名称和限定符名称比较始终是区分大小写，而不考虑是否设置了此标志。 |
-| `WBEM_FLAG_IGNORE_CLASS` | 0x8 | 假定要比较的对象都是相同的类的实例。 因此，此标志将与实例相关信息进行比较。 使用此标志来优化性能。 如果对象不属于同一个类，则结果不确定。 |
+| `WBEM_FLAG_IGNORE_OBJECT_SOURCE` | 2 | 忽略源（服务器及其所属的命名空间）。 |
+| `WBEM_FLAG_IGNORE_QUALIFIERS` | 1 | 忽略所有限定符（包括**密钥**和**动态**） |
+| `WBEM_FLAG_IGNORE_DEFAULT_VALUES` | 4 | 忽略属性的默认值。 此标志仅适用于对类进行比较。 |
+| `WBEM_FLAG_IGNORE_FLAVOR` | 0x20 | 忽略限定符的风格。 此标志仍会考虑限定符，但会忽略风格差别，如传播规则和替代限制。 |
+| `WBEM_FLAG_IGNORE_CASE` | 0x10 | 比较字符串值时忽略大小写。 这同时适用于字符串和限定符值。 不管是否设置了此标志，属性和限定符名称的比较始终区分大小写。 |
+| `WBEM_FLAG_IGNORE_CLASS` | 0x8 | 假设要比较的对象是同一个类的实例。 因此，此标志仅比较与实例相关的信息。 使用此标志优化性能。 如果对象不属于同一类，则结果是不确定的。 |
 
-也可以指定单个复合标志，如下所示：
+也可以按如下所示指定单个复合标志：
 
 |返回的常量  |值  |Description  |
 |---------|---------|---------|
-|`WBEM_COMPARISON_INCLUDE_ALL` | 0 | 请考虑在比较中的所有功能。 |
+|`WBEM_COMPARISON_INCLUDE_ALL` | 0 | 考虑比较中的所有功能。 |
 
 ## <a name="requirements"></a>要求
 
-**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。
+**适用**请参阅[系统需求](../../get-started/system-requirements.md)。
 
 **标头：** WMINet_Utils.idl
 
-**.NET Framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+**.NET Framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
 ## <a name="see-also"></a>请参阅
 
-- [WMI 和性能计数器 （非托管 API 参考）](index.md)
+- [WMI 和性能计数器（非托管 API 参考）](index.md)
