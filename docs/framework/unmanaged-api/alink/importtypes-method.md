@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9876e3ba5ea67442714c2d00b1901c25e54494f2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f19dd114925ed1fd12bcc0056411c3e3d4181215
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741634"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777094"
 ---
-# <a name="importtypes-method"></a><span data-ttu-id="894b4-102">ImportTypes 方法</span><span class="sxs-lookup"><span data-stu-id="894b4-102">ImportTypes Method</span></span>
-<span data-ttu-id="894b4-103">启动导入的类型从通过导入每个作用域[ImportFile 方法](../../../../docs/framework/unmanaged-api/alink/importfile-method.md)。</span><span class="sxs-lookup"><span data-stu-id="894b4-103">Initiates the importing of types from each scope imported via [ImportFile Method](../../../../docs/framework/unmanaged-api/alink/importfile-method.md).</span></span>  
+# <a name="importtypes-method"></a><span data-ttu-id="b13a1-102">ImportTypes 方法</span><span class="sxs-lookup"><span data-stu-id="b13a1-102">ImportTypes Method</span></span>
+<span data-ttu-id="b13a1-103">开始从通过[ImportFile 方法](importfile-method.md)导入的每个范围导入类型。</span><span class="sxs-lookup"><span data-stu-id="b13a1-103">Initiates the importing of types from each scope imported via [ImportFile Method](importfile-method.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="894b4-104">语法</span><span class="sxs-lookup"><span data-stu-id="894b4-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b13a1-104">语法</span><span class="sxs-lookup"><span data-stu-id="b13a1-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT ImportTypes(  
@@ -39,33 +39,33 @@ HRESULT ImportTypes(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="894b4-105">参数</span><span class="sxs-lookup"><span data-stu-id="894b4-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b13a1-105">参数</span><span class="sxs-lookup"><span data-stu-id="b13a1-105">Parameters</span></span>  
  `AssemblyID`  
- <span data-ttu-id="894b4-106">要导入到的程序集的 ID。</span><span class="sxs-lookup"><span data-stu-id="894b4-106">ID of the assembly to import to.</span></span>  
+ <span data-ttu-id="b13a1-106">要导入到的程序集的 ID。</span><span class="sxs-lookup"><span data-stu-id="b13a1-106">ID of the assembly to import to.</span></span>  
   
  `FileToken`  
- <span data-ttu-id="894b4-107">若要从导入的文件的 ID。</span><span class="sxs-lookup"><span data-stu-id="894b4-107">ID of the file to import from.</span></span>  
+ <span data-ttu-id="b13a1-107">要从中导入的文件的 ID。</span><span class="sxs-lookup"><span data-stu-id="b13a1-107">ID of the file to import from.</span></span>  
   
  `dwScope`  
- <span data-ttu-id="894b4-108">要导入的从零开始范围。</span><span class="sxs-lookup"><span data-stu-id="894b4-108">Zero-based scope to import.</span></span>  
+ <span data-ttu-id="b13a1-108">要导入的从零开始的范围。</span><span class="sxs-lookup"><span data-stu-id="b13a1-108">Zero-based scope to import.</span></span>  
   
  `phEnum`  
- <span data-ttu-id="894b4-109">在此作用域中接收的类型的枚举器句柄。</span><span class="sxs-lookup"><span data-stu-id="894b4-109">Receives enumerator handle for the types in this scope.</span></span>  
+ <span data-ttu-id="b13a1-109">接收此范围内的类型的枚举器句柄。</span><span class="sxs-lookup"><span data-stu-id="b13a1-109">Receives enumerator handle for the types in this scope.</span></span>  
   
  `ppImportScope`  
- <span data-ttu-id="894b4-110">可选择性地接收[IMetaDataImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)接口。</span><span class="sxs-lookup"><span data-stu-id="894b4-110">Optionally receives [IMetaDataImport Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) interface.</span></span>  
+ <span data-ttu-id="b13a1-110">可以选择接收[IMetaDataImport 接口](../metadata/imetadataimport-interface.md)接口。</span><span class="sxs-lookup"><span data-stu-id="b13a1-110">Optionally receives [IMetaDataImport Interface](../metadata/imetadataimport-interface.md) interface.</span></span>  
   
  `pdwCountOfTypes`  
- <span data-ttu-id="894b4-111">可选择性地指示作用域中接收的类型的计数。</span><span class="sxs-lookup"><span data-stu-id="894b4-111">Optionally receives count of types in the indicated scope.</span></span>  
+ <span data-ttu-id="b13a1-111">可以选择接收指定范围内的类型的计数。</span><span class="sxs-lookup"><span data-stu-id="b13a1-111">Optionally receives count of types in the indicated scope.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="894b4-112">返回值</span><span class="sxs-lookup"><span data-stu-id="894b4-112">Return Value</span></span>  
- <span data-ttu-id="894b4-113">如果该方法成功，返回，则为 S_OK。</span><span class="sxs-lookup"><span data-stu-id="894b4-113">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="b13a1-112">返回值</span><span class="sxs-lookup"><span data-stu-id="b13a1-112">Return Value</span></span>  
+ <span data-ttu-id="b13a1-113">如果该方法成功，则返回 S_OK。</span><span class="sxs-lookup"><span data-stu-id="b13a1-113">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="894b4-114">要求</span><span class="sxs-lookup"><span data-stu-id="894b4-114">Requirements</span></span>  
- <span data-ttu-id="894b4-115">需要 alink.h</span><span class="sxs-lookup"><span data-stu-id="894b4-115">Requires alink.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b13a1-114">要求</span><span class="sxs-lookup"><span data-stu-id="b13a1-114">Requirements</span></span>  
+ <span data-ttu-id="b13a1-115">需要 alink</span><span class="sxs-lookup"><span data-stu-id="b13a1-115">Requires alink.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="894b4-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="894b4-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b13a1-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="b13a1-116">See also</span></span>
 
-- [<span data-ttu-id="894b4-117">IALink 接口</span><span class="sxs-lookup"><span data-stu-id="894b4-117">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [<span data-ttu-id="894b4-118">IALink2 接口</span><span class="sxs-lookup"><span data-stu-id="894b4-118">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [<span data-ttu-id="894b4-119">ALink API</span><span class="sxs-lookup"><span data-stu-id="894b4-119">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [<span data-ttu-id="b13a1-117">IALink 接口</span><span class="sxs-lookup"><span data-stu-id="b13a1-117">IALink Interface</span></span>](ialink-interface.md)
+- [<span data-ttu-id="b13a1-118">IALink2 接口</span><span class="sxs-lookup"><span data-stu-id="b13a1-118">IALink2 Interface</span></span>](ialink2-interface.md)
+- [<span data-ttu-id="b13a1-119">ALink API</span><span class="sxs-lookup"><span data-stu-id="b13a1-119">ALink API</span></span>](index.md)

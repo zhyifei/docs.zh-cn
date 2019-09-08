@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c5e8dd4a9dbf301b0910eda220513e9a3ffdc1cb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f29246bdb929c8eaf1ebce726164d5cd2269b9f1
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778636"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796871"
 ---
-# <a name="getidentityauthority-function"></a><span data-ttu-id="35cbc-102">GetIdentityAuthority 函数</span><span class="sxs-lookup"><span data-stu-id="35cbc-102">GetIdentityAuthority Function</span></span>
-<span data-ttu-id="35cbc-103">获取一个指向[IIdentityAuthority](../../../../docs/framework/unmanaged-api/fusion/iidentityauthority-interface.md)管理密钥的代码对象的实例。</span><span class="sxs-lookup"><span data-stu-id="35cbc-103">Gets a pointer to an [IIdentityAuthority](../../../../docs/framework/unmanaged-api/fusion/iidentityauthority-interface.md) instance that manages keys for code objects.</span></span>  
+# <a name="getidentityauthority-function"></a><span data-ttu-id="f84f8-102">GetIdentityAuthority 函数</span><span class="sxs-lookup"><span data-stu-id="f84f8-102">GetIdentityAuthority Function</span></span>
+<span data-ttu-id="f84f8-103">获取一个指针，该指针指向管理代码对象的键的[IIdentityAuthority](iidentityauthority-interface.md)实例。</span><span class="sxs-lookup"><span data-stu-id="f84f8-103">Gets a pointer to an [IIdentityAuthority](iidentityauthority-interface.md) instance that manages keys for code objects.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="35cbc-104">语法</span><span class="sxs-lookup"><span data-stu-id="35cbc-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f84f8-104">语法</span><span class="sxs-lookup"><span data-stu-id="f84f8-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetIdentityAuthority (  
@@ -35,18 +35,18 @@ HRESULT GetIdentityAuthority (
  );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="35cbc-105">参数</span><span class="sxs-lookup"><span data-stu-id="35cbc-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f84f8-105">参数</span><span class="sxs-lookup"><span data-stu-id="f84f8-105">Parameters</span></span>  
  `ppIIdentityAuthority`  
- <span data-ttu-id="35cbc-106">[out]返回`IIdentityAuthority`指针。</span><span class="sxs-lookup"><span data-stu-id="35cbc-106">[out] The returned `IIdentityAuthority` pointer.</span></span>  
+ <span data-ttu-id="f84f8-106">弄返回`IIdentityAuthority`的指针。</span><span class="sxs-lookup"><span data-stu-id="f84f8-106">[out] The returned `IIdentityAuthority` pointer.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="35cbc-107">要求</span><span class="sxs-lookup"><span data-stu-id="35cbc-107">Requirements</span></span>  
- <span data-ttu-id="35cbc-108">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="35cbc-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f84f8-107">要求</span><span class="sxs-lookup"><span data-stu-id="f84f8-107">Requirements</span></span>  
+ <span data-ttu-id="f84f8-108">**适用**请参阅[系统需求](../../get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="f84f8-108">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="35cbc-109">**标头：** Isolation.h</span><span class="sxs-lookup"><span data-stu-id="35cbc-109">**Header:** Isolation.h</span></span>  
+ <span data-ttu-id="f84f8-109">**标头：** 隔离。h</span><span class="sxs-lookup"><span data-stu-id="f84f8-109">**Header:** Isolation.h</span></span>  
   
- <span data-ttu-id="35cbc-110">**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="35cbc-110">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="f84f8-110">**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f84f8-110">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="35cbc-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="35cbc-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f84f8-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="f84f8-111">See also</span></span>
 
-- [<span data-ttu-id="35cbc-112">IIdentityAuthority 接口</span><span class="sxs-lookup"><span data-stu-id="35cbc-112">IIdentityAuthority Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iidentityauthority-interface.md)
-- [<span data-ttu-id="35cbc-113">合成全局静态函数</span><span class="sxs-lookup"><span data-stu-id="35cbc-113">Fusion Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+- [<span data-ttu-id="f84f8-112">IIdentityAuthority 接口</span><span class="sxs-lookup"><span data-stu-id="f84f8-112">IIdentityAuthority Interface</span></span>](iidentityauthority-interface.md)
+- [<span data-ttu-id="f84f8-113">合成全局静态函数</span><span class="sxs-lookup"><span data-stu-id="f84f8-113">Fusion Global Static Functions</span></span>](fusion-global-static-functions.md)

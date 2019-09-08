@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fcf714cb0c1c1dd59ae2ec56279870c0bb3e1c4a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bd138d0418bb9667a86419d719bf0b95a4bb1b12
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741718"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777113"
 ---
-# <a name="importfileex-method"></a><span data-ttu-id="0bc0a-102">ImportFileEx 方法</span><span class="sxs-lookup"><span data-stu-id="0bc0a-102">ImportFileEx Method</span></span>
-<span data-ttu-id="0bc0a-103">导入指定的程序集或未绑定的模块。</span><span class="sxs-lookup"><span data-stu-id="0bc0a-103">Imports indicated assembly or unbound module.</span></span>  
+# <a name="importfileex-method"></a><span data-ttu-id="ef16b-102">ImportFileEx 方法</span><span class="sxs-lookup"><span data-stu-id="ef16b-102">ImportFileEx Method</span></span>
+<span data-ttu-id="ef16b-103">导入指定的程序集或未绑定模块。</span><span class="sxs-lookup"><span data-stu-id="ef16b-103">Imports indicated assembly or unbound module.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0bc0a-104">语法</span><span class="sxs-lookup"><span data-stu-id="0bc0a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ef16b-104">语法</span><span class="sxs-lookup"><span data-stu-id="ef16b-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT ImportFileEx(  
@@ -40,36 +40,36 @@ HRESULT ImportFileEx(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="0bc0a-105">参数</span><span class="sxs-lookup"><span data-stu-id="0bc0a-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ef16b-105">参数</span><span class="sxs-lookup"><span data-stu-id="ef16b-105">Parameters</span></span>  
  `pszFilename`  
- <span data-ttu-id="0bc0a-106">要从中导入的文件的完全限定的名称。</span><span class="sxs-lookup"><span data-stu-id="0bc0a-106">Fully qualified name of file from which to import.</span></span>  
+ <span data-ttu-id="ef16b-106">要导入的文件的完全限定名称。</span><span class="sxs-lookup"><span data-stu-id="ef16b-106">Fully qualified name of file from which to import.</span></span>  
   
  `pszTargetName`  
- <span data-ttu-id="0bc0a-107">可选目标文件的名称。</span><span class="sxs-lookup"><span data-stu-id="0bc0a-107">Optional name of target file.</span></span>  
+ <span data-ttu-id="ef16b-107">目标文件的可选名称。</span><span class="sxs-lookup"><span data-stu-id="ef16b-107">Optional name of target file.</span></span>  
   
  `fSmartImport`  
- <span data-ttu-id="0bc0a-108">如果为 TRUE，则使用 ImportTypes 时，必须手动执行否则导入。</span><span class="sxs-lookup"><span data-stu-id="0bc0a-108">If TRUE, ImportTypes is used, otherwise importing must be performed manually.</span></span>  
+ <span data-ttu-id="ef16b-108">如果为 TRUE，则使用 ImportTypes，否则必须手动执行导入。</span><span class="sxs-lookup"><span data-stu-id="ef16b-108">If TRUE, ImportTypes is used, otherwise importing must be performed manually.</span></span>  
   
  `dwOpenFlags`  
- <span data-ttu-id="0bc0a-109">要传递到标志[OpenScope 方法](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md)。</span><span class="sxs-lookup"><span data-stu-id="0bc0a-109">Flags to be passed along to [OpenScope Method](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md).</span></span>  
+ <span data-ttu-id="ef16b-109">要传递给[OpenScope 方法](../metadata/imetadatadispenser-openscope-method.md)的标志。</span><span class="sxs-lookup"><span data-stu-id="ef16b-109">Flags to be passed along to [OpenScope Method](../metadata/imetadatadispenser-openscope-method.md).</span></span>  
   
  `pImportToken`  
- <span data-ttu-id="0bc0a-110">接收要导入的文件 ID。</span><span class="sxs-lookup"><span data-stu-id="0bc0a-110">Receives ID of the file being imported.</span></span>  
+ <span data-ttu-id="ef16b-110">接收正在导入的文件的 ID。</span><span class="sxs-lookup"><span data-stu-id="ef16b-110">Receives ID of the file being imported.</span></span>  
   
  `ppAssemblyScope`  
- <span data-ttu-id="0bc0a-111">接收程序集导入范围[IMetaDataAssemblyImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)接口。</span><span class="sxs-lookup"><span data-stu-id="0bc0a-111">Receives assembly import scope [IMetaDataAssemblyImport Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) interface.</span></span> <span data-ttu-id="0bc0a-112">如果文件不是程序集，则设置为 NULL。</span><span class="sxs-lookup"><span data-stu-id="0bc0a-112">Is set to NULL if file is not an assembly.</span></span>  
+ <span data-ttu-id="ef16b-111">接收程序集导入范围[IMetaDataAssemblyImport 接口](../metadata/imetadataassemblyimport-interface.md)接口。</span><span class="sxs-lookup"><span data-stu-id="ef16b-111">Receives assembly import scope [IMetaDataAssemblyImport Interface](../metadata/imetadataassemblyimport-interface.md) interface.</span></span> <span data-ttu-id="ef16b-112">如果文件不是程序集，则设置为 NULL。</span><span class="sxs-lookup"><span data-stu-id="ef16b-112">Is set to NULL if file is not an assembly.</span></span>  
   
  `pdwCountOfScopes`  
- <span data-ttu-id="0bc0a-113">接收数量的导入的文件和/或作用域。</span><span class="sxs-lookup"><span data-stu-id="0bc0a-113">Receives count of imported files and/or scopes.</span></span>  
+ <span data-ttu-id="ef16b-113">接收导入文件和/或范围的计数。</span><span class="sxs-lookup"><span data-stu-id="ef16b-113">Receives count of imported files and/or scopes.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="0bc0a-114">返回值</span><span class="sxs-lookup"><span data-stu-id="0bc0a-114">Return Value</span></span>  
- <span data-ttu-id="0bc0a-115">如果该方法成功，返回，则为 S_OK。</span><span class="sxs-lookup"><span data-stu-id="0bc0a-115">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="ef16b-114">返回值</span><span class="sxs-lookup"><span data-stu-id="ef16b-114">Return Value</span></span>  
+ <span data-ttu-id="ef16b-115">如果该方法成功，则返回 S_OK。</span><span class="sxs-lookup"><span data-stu-id="ef16b-115">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0bc0a-116">要求</span><span class="sxs-lookup"><span data-stu-id="0bc0a-116">Requirements</span></span>  
- <span data-ttu-id="0bc0a-117">需要 alink.h。</span><span class="sxs-lookup"><span data-stu-id="0bc0a-117">Requires alink.h.</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ef16b-116">要求</span><span class="sxs-lookup"><span data-stu-id="ef16b-116">Requirements</span></span>  
+ <span data-ttu-id="ef16b-117">需要 alink。</span><span class="sxs-lookup"><span data-stu-id="ef16b-117">Requires alink.h.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0bc0a-118">请参阅</span><span class="sxs-lookup"><span data-stu-id="0bc0a-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ef16b-118">请参阅</span><span class="sxs-lookup"><span data-stu-id="ef16b-118">See also</span></span>
 
-- [<span data-ttu-id="0bc0a-119">IALink2 接口</span><span class="sxs-lookup"><span data-stu-id="0bc0a-119">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [<span data-ttu-id="0bc0a-120">IALink 接口</span><span class="sxs-lookup"><span data-stu-id="0bc0a-120">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [<span data-ttu-id="0bc0a-121">ALink API</span><span class="sxs-lookup"><span data-stu-id="0bc0a-121">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [<span data-ttu-id="ef16b-119">IALink2 接口</span><span class="sxs-lookup"><span data-stu-id="ef16b-119">IALink2 Interface</span></span>](ialink2-interface.md)
+- [<span data-ttu-id="ef16b-120">IALink 接口</span><span class="sxs-lookup"><span data-stu-id="ef16b-120">IALink Interface</span></span>](ialink-interface.md)
+- [<span data-ttu-id="ef16b-121">ALink API</span><span class="sxs-lookup"><span data-stu-id="ef16b-121">ALink API</span></span>](index.md)
