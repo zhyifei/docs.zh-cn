@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0dd96b10b5ee2880e0f9ee18048ec8ba2ee0b5ab
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 20e2bff4257df64f761fd8fff880643d4e786748
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779057"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796454"
 ---
-# <a name="iinstallreferenceenumgetnextinstallreferenceitem-method"></a><span data-ttu-id="1eca9-102">IInstallReferenceEnum::GetNextInstallReferenceItem 方法</span><span class="sxs-lookup"><span data-stu-id="1eca9-102">IInstallReferenceEnum::GetNextInstallReferenceItem Method</span></span>
-<span data-ttu-id="1eca9-103">获取一个指针指向下一步[IInstallReferenceItem](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md)包含在此对象[IInstallReferenceEnum](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceenum-interface.md)对象。</span><span class="sxs-lookup"><span data-stu-id="1eca9-103">Gets a pointer to the next [IInstallReferenceItem](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md) object contained in this [IInstallReferenceEnum](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceenum-interface.md) object.</span></span>  
+# <a name="iinstallreferenceenumgetnextinstallreferenceitem-method"></a><span data-ttu-id="e4bd3-102">IInstallReferenceEnum::GetNextInstallReferenceItem 方法</span><span class="sxs-lookup"><span data-stu-id="e4bd3-102">IInstallReferenceEnum::GetNextInstallReferenceItem Method</span></span>
+<span data-ttu-id="e4bd3-103">获取一个指针，该指针指向此[IInstallReferenceEnum](iinstallreferenceenum-interface.md)对象中包含的下一个[IInstallReferenceItem](iinstallreferenceitem-interface.md)对象。</span><span class="sxs-lookup"><span data-stu-id="e4bd3-103">Gets a pointer to the next [IInstallReferenceItem](iinstallreferenceitem-interface.md) object contained in this [IInstallReferenceEnum](iinstallreferenceenum-interface.md) object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1eca9-104">语法</span><span class="sxs-lookup"><span data-stu-id="1eca9-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e4bd3-104">语法</span><span class="sxs-lookup"><span data-stu-id="e4bd3-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetNextInstallReferenceItem (  
@@ -37,24 +37,24 @@ HRESULT GetNextInstallReferenceItem (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="1eca9-105">参数</span><span class="sxs-lookup"><span data-stu-id="1eca9-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e4bd3-105">参数</span><span class="sxs-lookup"><span data-stu-id="e4bd3-105">Parameters</span></span>  
  `ppRefItem`  
- <span data-ttu-id="1eca9-106">[out]返回`IInstallReferenceItem`指针。</span><span class="sxs-lookup"><span data-stu-id="1eca9-106">[out] The returned `IInstallReferenceItem` pointer.</span></span>  
+ <span data-ttu-id="e4bd3-106">弄返回`IInstallReferenceItem`的指针。</span><span class="sxs-lookup"><span data-stu-id="e4bd3-106">[out] The returned `IInstallReferenceItem` pointer.</span></span>  
   
  `dwFlags`  
- <span data-ttu-id="1eca9-107">[in]保留供将来的扩展。</span><span class="sxs-lookup"><span data-stu-id="1eca9-107">[in] Reserved for future extensibility.</span></span> <span data-ttu-id="1eca9-108">`dwFlags` 必须为 0 （零）。</span><span class="sxs-lookup"><span data-stu-id="1eca9-108">`dwFlags` must be 0 (zero).</span></span>  
+ <span data-ttu-id="e4bd3-107">中保留以供将来进行扩展。</span><span class="sxs-lookup"><span data-stu-id="e4bd3-107">[in] Reserved for future extensibility.</span></span> <span data-ttu-id="e4bd3-108">`dwFlags`必须为0（零）。</span><span class="sxs-lookup"><span data-stu-id="e4bd3-108">`dwFlags` must be 0 (zero).</span></span>  
   
  `pvReserved`  
- <span data-ttu-id="1eca9-109">[in]保留供将来的扩展。</span><span class="sxs-lookup"><span data-stu-id="1eca9-109">[in] Reserved for future extensibility.</span></span> <span data-ttu-id="1eca9-110">`pvReserved` 必须是 null 引用。</span><span class="sxs-lookup"><span data-stu-id="1eca9-110">`pvReserved` must be a null reference.</span></span>  
+ <span data-ttu-id="e4bd3-109">中保留以供将来进行扩展。</span><span class="sxs-lookup"><span data-stu-id="e4bd3-109">[in] Reserved for future extensibility.</span></span> <span data-ttu-id="e4bd3-110">`pvReserved`必须为空引用。</span><span class="sxs-lookup"><span data-stu-id="e4bd3-110">`pvReserved` must be a null reference.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="1eca9-111">要求</span><span class="sxs-lookup"><span data-stu-id="1eca9-111">Requirements</span></span>  
- <span data-ttu-id="1eca9-112">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="1eca9-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e4bd3-111">要求</span><span class="sxs-lookup"><span data-stu-id="e4bd3-111">Requirements</span></span>  
+ <span data-ttu-id="e4bd3-112">**适用**请参阅[系统需求](../../get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="e4bd3-112">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="1eca9-113">**标头：** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="1eca9-113">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="e4bd3-113">**标头：** 合成。h</span><span class="sxs-lookup"><span data-stu-id="e4bd3-113">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="1eca9-114">**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1eca9-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="e4bd3-114">**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e4bd3-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1eca9-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="1eca9-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e4bd3-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="e4bd3-115">See also</span></span>
 
-- [<span data-ttu-id="1eca9-116">IInstallReferenceItem 接口</span><span class="sxs-lookup"><span data-stu-id="1eca9-116">IInstallReferenceItem Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md)
-- [<span data-ttu-id="1eca9-117">IInstallReferenceEnum 接口</span><span class="sxs-lookup"><span data-stu-id="1eca9-117">IInstallReferenceEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceenum-interface.md)
+- [<span data-ttu-id="e4bd3-116">IInstallReferenceItem 接口</span><span class="sxs-lookup"><span data-stu-id="e4bd3-116">IInstallReferenceItem Interface</span></span>](iinstallreferenceitem-interface.md)
+- [<span data-ttu-id="e4bd3-117">IInstallReferenceEnum 接口</span><span class="sxs-lookup"><span data-stu-id="e4bd3-117">IInstallReferenceEnum Interface</span></span>](iinstallreferenceenum-interface.md)

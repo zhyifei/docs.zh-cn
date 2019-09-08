@@ -2,17 +2,17 @@
 title: 指定无嵌套的元素之间的关系
 ms.date: 03/30/2017
 ms.assetid: e31325da-7691-4d33-acf4-99fccca67006
-ms.openlocfilehash: 83dce7173c016a7d7d2d626bb7a3606de29d54ae
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: d6cd6f04a9fdeafe7c419b40023af6c71d553ac7
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204468"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784279"
 ---
-# <a name="specify-relations-between-elements-with-no-nesting"></a><span data-ttu-id="049c7-102">指定无嵌套的元素之间的关系</span><span class="sxs-lookup"><span data-stu-id="049c7-102">Specify Relations Between Elements with No Nesting</span></span>
-<span data-ttu-id="049c7-103">当元素不嵌套时，将不创建任何隐式关系。</span><span class="sxs-lookup"><span data-stu-id="049c7-103">When elements are not nested, no implicit relations are created.</span></span> <span data-ttu-id="049c7-104">但是, 可以使用**msdata: Relationship**批注显式指定未嵌套的元素之间的关系。</span><span class="sxs-lookup"><span data-stu-id="049c7-104">You can, however, explicitly specify relations between elements that are not nested by using the **msdata:Relationship** annotation.</span></span>  
+# <a name="specify-relations-between-elements-with-no-nesting"></a><span data-ttu-id="e1ea6-102">指定无嵌套的元素之间的关系</span><span class="sxs-lookup"><span data-stu-id="e1ea6-102">Specify Relations Between Elements with No Nesting</span></span>
+<span data-ttu-id="e1ea6-103">当元素不嵌套时，将不创建任何隐式关系。</span><span class="sxs-lookup"><span data-stu-id="e1ea6-103">When elements are not nested, no implicit relations are created.</span></span> <span data-ttu-id="e1ea6-104">但是，可以使用**msdata： Relationship**批注显式指定未嵌套的元素之间的关系。</span><span class="sxs-lookup"><span data-stu-id="e1ea6-104">You can, however, explicitly specify relations between elements that are not nested by using the **msdata:Relationship** annotation.</span></span>  
   
- <span data-ttu-id="049c7-105">下面的示例显示一个 XML 架构, 该架构在不嵌套的**Order**和**OrderDetail**元素之间指定**msdata: Relationship**批注。</span><span class="sxs-lookup"><span data-stu-id="049c7-105">The following example shows an XML Schema in which the **msdata:Relationship** annotation is specified between the **Order** and **OrderDetail** elements, which are not nested.</span></span> <span data-ttu-id="049c7-106">**Msdata: Relationship**批注指定为**Schema**元素的子元素。</span><span class="sxs-lookup"><span data-stu-id="049c7-106">The **msdata:Relationship** annotation is specified as the child element of the **Schema** element.</span></span>  
+ <span data-ttu-id="e1ea6-105">下面的示例显示一个 XML 架构，该架构在不嵌套的**Order**和**OrderDetail**元素之间指定**msdata： Relationship**批注。</span><span class="sxs-lookup"><span data-stu-id="e1ea6-105">The following example shows an XML Schema in which the **msdata:Relationship** annotation is specified between the **Order** and **OrderDetail** elements, which are not nested.</span></span> <span data-ttu-id="e1ea6-106">**Msdata： Relationship**批注指定为**Schema**元素的子元素。</span><span class="sxs-lookup"><span data-stu-id="e1ea6-106">The **msdata:Relationship** annotation is specified as the child element of the **Schema** element.</span></span>  
   
 ```xml  
 <xs:schema id="MyDataSet" xmlns=""   
@@ -53,7 +53,7 @@ ms.locfileid: "70204468"
 </xs:schema>  
 ```  
   
- <span data-ttu-id="049c7-107">XML 架构定义语言 (XSD) 架构映射过程创建一个<xref:System.Data.DataSet> with **Order**和**OrderDetail**表以及这两个表之间指定的关系, 如下所示。</span><span class="sxs-lookup"><span data-stu-id="049c7-107">The XML Schema definition language (XSD) schema mapping process creates a <xref:System.Data.DataSet> with **Order** and **OrderDetail** tables and a relationship specified between these two tables, as shown below.</span></span>  
+ <span data-ttu-id="e1ea6-107">XML 架构定义语言（XSD）架构映射过程创建一个<xref:System.Data.DataSet> with **Order**和**OrderDetail**表以及这两个表之间指定的关系，如下所示。</span><span class="sxs-lookup"><span data-stu-id="e1ea6-107">The XML Schema definition language (XSD) schema mapping process creates a <xref:System.Data.DataSet> with **Order** and **OrderDetail** tables and a relationship specified between these two tables, as shown below.</span></span>  
   
 ```  
 RelationName: OrdOrderDetailRelation  
@@ -64,8 +64,8 @@ ChildColumns: OrderNo
 Nested: False  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="049c7-108">请参阅</span><span class="sxs-lookup"><span data-stu-id="049c7-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e1ea6-108">请参阅</span><span class="sxs-lookup"><span data-stu-id="e1ea6-108">See also</span></span>
 
-- [<span data-ttu-id="049c7-109">从 XML 架构生成数据集关系 (XSD)</span><span class="sxs-lookup"><span data-stu-id="049c7-109">Generating DataSet Relations from XML Schema (XSD)</span></span>](generating-dataset-relations-from-xml-schema-xsd.md)
-- [<span data-ttu-id="049c7-110">将 XML 架构 (XSD) 约束映射到数据集约束</span><span class="sxs-lookup"><span data-stu-id="049c7-110">Mapping XML Schema (XSD) Constraints to DataSet Constraints</span></span>](mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
-- [<span data-ttu-id="049c7-111">ADO.NET 托管提供程序和数据集开发人员中心</span><span class="sxs-lookup"><span data-stu-id="049c7-111">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [<span data-ttu-id="e1ea6-109">从 XML 架构生成数据集关系 (XSD)</span><span class="sxs-lookup"><span data-stu-id="e1ea6-109">Generating DataSet Relations from XML Schema (XSD)</span></span>](generating-dataset-relations-from-xml-schema-xsd.md)
+- [<span data-ttu-id="e1ea6-110">将 XML 架构 (XSD) 约束映射到数据集约束</span><span class="sxs-lookup"><span data-stu-id="e1ea6-110">Mapping XML Schema (XSD) Constraints to DataSet Constraints</span></span>](mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
+- [<span data-ttu-id="e1ea6-111">ADO.NET 概述</span><span class="sxs-lookup"><span data-stu-id="e1ea6-111">ADO.NET Overview</span></span>](../ado-net-overview.md)
