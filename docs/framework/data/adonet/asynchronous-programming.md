@@ -2,20 +2,20 @@
 title: 异步编程
 ms.date: 10/18/2018
 ms.assetid: 85da7447-7125-426e-aa5f-438a290d1f77
-ms.openlocfilehash: e516e356c9549921e1f3233c2ad0144fb7d517b1
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: ae6153f9613be7723d7e750ed6969ea550ad4af7
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422800"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784996"
 ---
 # <a name="asynchronous-programming"></a>异步编程
 
-本主题讨论对异步编程，.NET Framework 数据提供程序中适用于 SQL Server (SqlClient) 包括增强功能以支持在.NET Framework 4.5 中引入的异步编程功能的支持。
+本主题讨论对 SQL Server （SqlClient）的 .NET Framework 数据提供程序中的异步编程的支持，包括为支持 .NET Framework 4.5 中引入的异步编程功能所做的增强。
 
 ## <a name="legacy-asynchronous-programming"></a>旧版异步编程
 
-在.NET Framework 4.5 之前的以下方法中完成与 SqlClient 一起使用的异步编程和`Asynchronous Processing=true`连接属性：
+在 .NET Framework 4.5 之前，通过以下方法和`Asynchronous Processing=true`连接属性实现了 SqlClient 的异步编程：
 
 1. <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A?displayProperty=nameWithType>
 
@@ -23,37 +23,37 @@ ms.locfileid: "67422800"
 
 3. <xref:System.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A?displayProperty=nameWithType>
 
-此功能将保留在.NET Framework 4.5 中的 SqlClient。
+此功能保留在 .NET Framework 4.5 的 SqlClient 中。
 
 > [!TIP]
-> 从.NET Framework 4.5 开始，这些旧方法不再需要`Asynchronous Processing=true`连接字符串中。
+> 从 .NET Framework 4.5 开始，这些旧方法不再需要`Asynchronous Processing=true`在连接字符串中。
 
-## <a name="asynchronous-programming-features-added-in-net-framework-45"></a>添加.NET Framework 4.5 中的异步编程功能
+## <a name="asynchronous-programming-features-added-in-net-framework-45"></a>.NET Framework 4.5 中添加的异步编程功能
 
 该新的异步编程功能提供了一种用于使代码异步的简单技术。
 
-有关.NET Framework 4.5 中引入了异步编程功能的详细信息，请参阅：
+有关 .NET Framework 4.5 中引入的异步编程功能的详细信息，请参阅：
 
 - [C# 中的异步编程](../../../csharp/async.md)
 
 - [使用 Async 和 Await 的异步编程 (Visual Basic)](../../../visual-basic/programming-guide/concepts/async/index.md)
 
-- [使用.NET 4.5 (第 1 部分) 中 SqlDataReader 的新异步方法](https://blogs.msdn.microsoft.com/adonet/2012/04/20/using-sqldatareaders-new-async-methods-in-net-4-5/)
+- [在 .NET 4.5 中使用 SqlDataReader 的新异步方法（第1部分）](https://blogs.msdn.microsoft.com/adonet/2012/04/20/using-sqldatareaders-new-async-methods-in-net-4-5/)
 
-- [使用.NET 4.5 (第 2 部分) 中 SqlDataReader 的新异步方法](https://blogs.msdn.microsoft.com/adonet/2012/07/15/using-sqldatareaders-new-async-methods-in-net-4-5-part-2-examples/)
+- [在 .NET 4.5 中使用 SqlDataReader 的新异步方法（第2部分）](https://blogs.msdn.microsoft.com/adonet/2012/07/15/using-sqldatareaders-new-async-methods-in-net-4-5-part-2-examples/)
 
 当用户接口无响应或服务器无法扩展时，很可能需要使代码异步程度更高。 以前，编写异步代码涉及安装回调（也称为延续）来表示异步操作完成后发生的逻辑。 这将增加异步代码结构的复杂性（与同步代码相比）。
 
 现在，您可以调用异步方法而无需使用回调，也不需要跨多个方法或 lambda 表达式来拆分代码。
 
-`async` 修饰符用于指定异步方法。 调用 `async` 方法时，将返回一个任务。 当`await`运算符应用到任务时，当前方法立即退出。 在该任务完成时，执行会在同一方法中恢复。
+`async` 修饰符用于指定异步方法。 调用 `async` 方法时，将返回一个任务。 将`await`运算符应用于任务后，当前方法会立即退出。 在该任务完成时，执行会在同一方法中恢复。
 
 > [!WARNING]
 > 如果应用程序还使用 `Context Connection` 连接字符串关键字，则不支持异步调用。
 
 调用 `async` 方法不会分配任何附加线程。 结束时，它可以简单地使用现有 I/O 完成线程。
 
-若要支持异步编程的.NET Framework 4.5 中添加以下方法：
+在 .NET Framework 4.5 中添加了以下方法以支持异步编程：
 
 - <xref:System.Data.Common.DbConnection.OpenAsync%2A?displayProperty=nameWithType>
 
@@ -89,10 +89,10 @@ ms.locfileid: "67422800"
 
 - <xref:System.Data.SqlClient.SqlBulkCopy.WriteToServerAsync%2A?displayProperty=nameWithType>
 
- 添加了其他异步成员以支持[SqlClient 流支持](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md)。
+ 添加了其他异步成员以支持[SqlClient 流式处理支持](sqlclient-streaming-support.md)。
 
 > [!TIP]
-> 新的异步方法不需要`Asynchronous Processing=true`连接字符串中。
+> 新的异步方法不会`Asynchronous Processing=true`在连接字符串中需要。
 
 ### <a name="synchronous-to-asynchronous-connection-open"></a>同步到异步连接打开
 
@@ -640,10 +640,10 @@ namespace SqlBulkCopyAsyncCodeSample {
 
 ## <a name="asynchronously-using-multiple-commands-with-mars"></a>异步使用多个命令与 MARS
 
-该示例打开一个到连接**AdventureWorks**数据库。 使用 <xref:System.Data.SqlClient.SqlCommand> 对象创建一个 <xref:System.Data.SqlClient.SqlDataReader> 对象。 在使用该读取器时，打开第二个 <xref:System.Data.SqlClient.SqlDataReader>，使用来自第一个 <xref:System.Data.SqlClient.SqlDataReader> 的数据作为第二个读取器的 WHERE 子句的输入。
+该示例将打开一个到**AdventureWorks**数据库的连接。 使用 <xref:System.Data.SqlClient.SqlCommand> 对象创建一个 <xref:System.Data.SqlClient.SqlDataReader> 对象。 在使用该读取器时，打开第二个 <xref:System.Data.SqlClient.SqlDataReader>，使用来自第一个 <xref:System.Data.SqlClient.SqlDataReader> 的数据作为第二个读取器的 WHERE 子句的输入。
 
 > [!NOTE]
-> 下面的示例使用示例**AdventureWorks** SQL Server 中包含的数据库。 示例代码中提供的连接字符串假定数据库在本地计算机上已安装并且可用。 根据环境的需要修改连接字符串。
+> 下面的示例使用 SQL Server 附带的**AdventureWorks**示例数据库。 示例代码中提供的连接字符串假定数据库在本地计算机上已安装并且可用。 根据环境的需要修改连接字符串。
 
 ```csharp
 using System;
@@ -711,12 +711,12 @@ class Class1 {
 
 ## <a name="asynchronously-reading-and-updating-data-with-mars"></a>使用 MARS 异步读取和更新数据
 
-MARS 允许连接供读取操作以及数据操作语言 (DML) 操作使用，包含多个挂起操作。 通过此功能，应用程序不需要处理连接忙的错误。 此外，MARS 可以取代服务器端游标的用户，后者通常会占用更多资源。 最后，因为多个操作可以在单个连接上执行操作，它们可以共享相同的事务上下文，无需使用**sp_getbindtoken**并**sp_bindsession**系统存储过程。
+MARS 允许连接供读取操作以及数据操作语言 (DML) 操作使用，包含多个挂起操作。 通过此功能，应用程序不需要处理连接忙的错误。 此外，MARS 可以取代服务器端游标的用户，后者通常会占用更多资源。 最后，由于多个操作可以在单个连接上运行，因此它们可以共享同一事务上下文，从而无需使用**sp_getbindtoken**和**sp_bindsession**系统存储过程。
 
-以下控制台应用程序演示如何对三个 <xref:System.Data.SqlClient.SqlDataReader> 对象和单个启用了 MARS 的 <xref:System.Data.SqlClient.SqlCommand> 对象使用两个 <xref:System.Data.SqlClient.SqlConnection> 对象。 第一个命令对象检索信用评级为 5 的供应商列表。 第二个命令对象使用 <xref:System.Data.SqlClient.SqlDataReader> 提供的供应商 ID 为第二个 <xref:System.Data.SqlClient.SqlDataReader> 加载特定供应商的所有产品。 每个产品记录通过第二个 <xref:System.Data.SqlClient.SqlDataReader> 访问。 执行计算来确定新**OnOrderQty**应为。 第三个命令对象然后用于更新**ProductVendor**具有新值的表。 整个过程在单个事务中进行，在结束时回滚。
+以下控制台应用程序演示如何对三个 <xref:System.Data.SqlClient.SqlDataReader> 对象和单个启用了 MARS 的 <xref:System.Data.SqlClient.SqlCommand> 对象使用两个 <xref:System.Data.SqlClient.SqlConnection> 对象。 第一个命令对象检索信用评级为 5 的供应商列表。 第二个命令对象使用 <xref:System.Data.SqlClient.SqlDataReader> 提供的供应商 ID 为第二个 <xref:System.Data.SqlClient.SqlDataReader> 加载特定供应商的所有产品。 每个产品记录通过第二个 <xref:System.Data.SqlClient.SqlDataReader> 访问。 执行计算以确定新的**OnOrderQty**应该是什么。 然后，使用第三个命令对象，用新值更新**ProductVendor**表。 整个过程在单个事务中进行，在结束时回滚。
 
 > [!NOTE]
-> 下面的示例使用示例**AdventureWorks** SQL Server 中包含的数据库。 示例代码中提供的连接字符串假定数据库在本地计算机上已安装并且可用。 根据环境的需要修改连接字符串。
+> 下面的示例使用 SQL Server 附带的**AdventureWorks**示例数据库。 示例代码中提供的连接字符串假定数据库在本地计算机上已安装并且可用。 根据环境的需要修改连接字符串。
 
 ```csharp
 using System;
@@ -828,4 +828,4 @@ class Program {
 
 ## <a name="see-also"></a>请参阅
 
-- [在 ADO.NET 中检索和修改数据](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
+- [在 ADO.NET 中检索和修改数据](retrieving-and-modifying-data.md)

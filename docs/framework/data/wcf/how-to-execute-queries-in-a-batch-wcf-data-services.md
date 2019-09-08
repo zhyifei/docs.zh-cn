@@ -1,5 +1,5 @@
 ---
-title: 如何：在批处理 （WCF 数据服务） 中执行查询
+title: 如何：在批处理中执行查询（WCF 数据服务）
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,17 +7,17 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, batch requests
 ms.assetid: 3b4db7df-bd33-43a1-8ea4-63a18e131f97
-ms.openlocfilehash: e5cd44ee7c3b2c2744e87ebf66973b637961893c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a825fe83ff62d935740fb69871ba2d1e2120e9ec
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876260"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70790492"
 ---
-# <a name="how-to-execute-queries-in-a-batch-wcf-data-services"></a>如何：在批处理 （WCF 数据服务） 中执行查询
-通过使用[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]客户端库，可以在单个批处理中执行多个查询针对数据服务。 有关详细信息，请参阅[批处理操作](../../../../docs/framework/data/wcf/batching-operations-wcf-data-services.md)。  
+# <a name="how-to-execute-queries-in-a-batch-wcf-data-services"></a>如何：在批处理中执行查询（WCF 数据服务）
+通过使用[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]客户端库，可以对单个批处理中的数据服务执行多个查询。 有关详细信息，请参阅[批处理操作](batching-operations-wcf-data-services.md)。  
   
- 本主题中的示例使用罗斯文示例数据服务和自动生成的客户端数据服务类。 完成后，将创建此服务和客户端数据类[WCF Data Services 快速入门](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)。  
+ 本主题中的示例使用罗斯文示例数据服务和自动生成的客户端数据服务类。 此服务和客户端数据类是在完成[WCF 数据服务快速入门](quickstart-wcf-data-services.md)时创建的。  
   
 ## <a name="example"></a>示例  
  下面的示例演示如何调用 <xref:System.Data.Services.Client.DataServiceContext.ExecuteBatch%2A> 方法来执行一个 <xref:System.Data.Services.Client.DataServiceRequest%601> 对象数组，该数组包含从 Northwind 数据服务同时返回 `Customers` 和 `Products` 对象的查询。 此示例将枚举返回的 <xref:System.Data.Services.Client.QueryOperationResponse%601> 中的 <xref:System.Data.Services.Client.DataServiceResponse> 对象的集合，并且还会枚举每个 <xref:System.Data.Services.Client.QueryOperationResponse%601> 中包含的对象的集合。  
@@ -27,4 +27,4 @@ ms.locfileid: "61876260"
   
 ## <a name="see-also"></a>请参阅
 
-- [WCF Data Services 客户端库](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
+- [WCF Data Services 客户端库](wcf-data-services-client-library.md)

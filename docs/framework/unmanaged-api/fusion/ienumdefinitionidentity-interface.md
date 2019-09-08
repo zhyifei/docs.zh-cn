@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4bbd8476b7778de6d0023f3a8522a44be6626884
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 88c2513229b6a4183cadbdc78e505910e01e152c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67751530"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796469"
 ---
 # <a name="ienumdefinitionidentity-interface"></a>IEnumDefinitionIdentity 接口
-用作集合的枚举器`IDefinitionIdentity`对象。  
+用作`IDefinitionIdentity`对象集合的枚举器。  
   
 ## <a name="syntax"></a>语法  
   
@@ -55,19 +55,19 @@ IEnumDefinitionIdentity : IUnknown {
   
 |方法|描述|  
 |------------|-----------------|  
-|`IEnumDefinitionIdentity::Clone`|为新获取的接口指针`IEnumDefinitionIdentity`对象，其中包含与此相同的成员`IEnumDefinitionIdentity`。|  
-|`IEnumDefinitionIdentity::Next`|获取指定的数目的`IDefinitionIdentity`对象，从当前位置开始。|  
-|`IEnumDefinitionIdentity::Reset`|将指令指针移到开头`IEnumDefinitionIdentity`。|  
-|`IEnumDefinitionIdentity::Skip`|按指定数量的元素，从当前位置开始移动指令指针前进。|  
+|`IEnumDefinitionIdentity::Clone`|获取指向新`IEnumDefinitionIdentity`对象的接口指针，该对象包含与此`IEnumDefinitionIdentity`相同的成员。|  
+|`IEnumDefinitionIdentity::Next`|从当前位置开始，获取`IDefinitionIdentity`指定数目的对象。|  
+|`IEnumDefinitionIdentity::Reset`|将指令指针移到此`IEnumDefinitionIdentity`的开头。|  
+|`IEnumDefinitionIdentity::Skip`|从当前位置开始，将指令指针向前移动指定数量的元素。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../get-started/system-requirements.md)。  
   
- **标头：** Isolation.h  
+ **标头：** 隔离。h  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 
-- [合成接口](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
-- [IDefinitionIdentity 接口](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md)
+- [合成接口](fusion-interfaces.md)
+- [IDefinitionIdentity 接口](idefinitionidentity-interface.md)

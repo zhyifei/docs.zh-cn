@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - data contracts [WCF], surrogates
 ms.assetid: 8c31134c-46c5-4ed7-94af-bab0ac0dfce5
-ms.openlocfilehash: 7b1e8585755bbbff900bd621d8bc3a25fd23961c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: cc0772cbb35f7c149af7eac04239d7349fa79f27
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64587510"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797197"
 ---
 # <a name="data-contract-surrogates"></a>数据协定代理项
-数据协定*代理项*是基于数据协定模型的高级的功能。 在设计上，此功能用于在用户希望更改对类型进行序列化、反序列化或将其设计成元数据的方式时，进行类型自定义和替换。 在以下情况下可以使用代理项：还没有为类型指定数据协定；字段和属性 (Property) 没有用 <xref:System.Runtime.Serialization.DataMemberAttribute> 属性 (Attribute) 进行标记；用户希望动态创建架构变体。  
+数据协定*代理项*是一种基于数据协定模型构建的高级功能。 在设计上，此功能用于在用户希望更改对类型进行序列化、反序列化或将其设计成元数据的方式时，进行类型自定义和替换。 在以下情况下可以使用代理项：还没有为类型指定数据协定；字段和属性 (Property) 没有用 <xref:System.Runtime.Serialization.DataMemberAttribute> 属性 (Attribute) 进行标记；用户希望动态创建架构变体。  
   
  序列化和反序列化是在使用 <xref:System.Runtime.Serialization.DataContractSerializer> 将 .NET Framework 转换为合适的格式（如 XML）时，借助于数据协定代理项来完成的。 在生成元数据表示形式（如 XML 架构文档 (XSD)）时，也可以使用数据协定代理项来修改为类型导出的元数据。 在导入时将从元数据创建代码，在这种情况下也可以使用代理项来自定义所生成的代码。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "64587510"
 ### <a name="getdatacontracttype"></a>GetDataContractType  
  <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDataContractType%2A> 方法将一种类型映射到另一种类型。 此方法是序列化、反序列化、导入和导出所必需的。  
   
- 第一项任务是定义要将哪些类型映射到其他类型。 例如：  
+ 第一项任务是定义要将哪些类型映射到其他类型。 例如:  
   
  [!code-csharp[C_IDataContractSurrogate#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#3)]  
   
@@ -54,15 +54,15 @@ ms.locfileid: "64587510"
 ### <a name="getobjecttoserialize-method"></a>GetObjectToSerialize 方法  
  <xref:System.Runtime.Serialization.IDataContractSurrogate.GetObjectToSerialize%2A> 方法用来将原始类型的实例转换为代理项类型的实例。 此方法是序列化所必需的。  
   
- 下一步是定义如何通过实现 <xref:System.Runtime.Serialization.IDataContractSurrogate.GetObjectToSerialize%2A> 方法来将物理数据从原始实例映射到代理项。 例如：  
+ 下一步是定义如何通过实现 <xref:System.Runtime.Serialization.IDataContractSurrogate.GetObjectToSerialize%2A> 方法来将物理数据从原始实例映射到代理项。 例如:  
   
  [!code-csharp[C_IDataContractSurrogate#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#4)]  
   
  当对对象进行序列化时，会调用 <xref:System.Runtime.Serialization.IDataContractSurrogate.GetObjectToSerialize%2A> 方法。 此方法会将数据从原始类型传输到代理项类型的字段。 可以直接将字段映射到代理项字段，也可以将对原始数据的操作存储在代理项中。 下面是一些可能的用法：直接映射字段；针对存储在代理项字段中的数据执行操作；将原始类型的 XML 存储在代理项字段中。  
   
- `targetType` 参数指的是成员的声明类型。 此参数是由 <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDataContractType%2A> 方法返回的代理项类型。 序列化程序不强求使所返回的对象可对该类型赋值。 `obj`参数是该对象序列化，并且如有必要将转换为它的代理项。 如果该对象没有由代理项处理，则此方法必须返回输入对象； 否则，将返回新的代理项对象。 如果此对象为 Null，则将不调用该代理项。 可以在该方法中为不同的实例定义许多代理项映射。  
+ `targetType` 参数指的是成员的声明类型。 此参数是由 <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDataContractType%2A> 方法返回的代理项类型。 序列化程序不强求使所返回的对象可对该类型赋值。 `obj`参数是要序列化的对象，并将在必要时转换为其代理项。 如果该对象没有由代理项处理，则此方法必须返回输入对象； 否则，将返回新的代理项对象。 如果此对象为 Null，则将不调用该代理项。 可以在该方法中为不同的实例定义许多代理项映射。  
   
- 在创建 <xref:System.Runtime.Serialization.DataContractSerializer> 时，可以命令它保留对象引用。 (有关详细信息，请参阅[序列化和反序列化](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md)。)这是通过将其构造函数中的 `preserveObjectReferences` 参数设置为 `true` 来完成的。 在这种情况下，只对每个对象调用一次该代理项，因为以后所有的序列化都只是将引用写入相应的流中。 如果 `preserveObjectReferences` 设置为 `false`，那么，每遇到一个实例，都会调用该代理项。  
+ 在创建 <xref:System.Runtime.Serialization.DataContractSerializer> 时，可以命令它保留对象引用。 （有关详细信息，请参阅[序列化和反序列化](../feature-details/serialization-and-deserialization.md)。）这是通过将其构造函数中的 `preserveObjectReferences` 参数设置为 `true` 来完成的。 在这种情况下，只对每个对象调用一次该代理项，因为以后所有的序列化都只是将引用写入相应的流中。 如果 `preserveObjectReferences` 设置为 `false`，那么，每遇到一个实例，都会调用该代理项。  
   
  如果已序列化实例的类型不同于所声明的类型，则类型信息（例如，`xsi:type`）将写入相应的流中，以便允许在另一端对该实例进行反序列化。 无论该对象是否为代理项对象，都会发生此过程。  
   
@@ -71,20 +71,20 @@ ms.locfileid: "64587510"
 ### <a name="getdeserializedobject-method"></a>GetDeserializedObject 方法  
  <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDeserializedObject%2A> 方法用来将代理项类型的实例转换为原始类型的实例。 它是反序列化所必需的。  
   
- 下一项任务是定义如何将物理数据从代理项实例映射到原始实例。 例如：  
+ 下一项任务是定义如何将物理数据从代理项实例映射到原始实例。 例如:  
   
  [!code-csharp[C_IDataContractSurrogate#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#5)]  
   
  只有在对对象进行反序列化时才调用此方法。 此方法提供了用来从代理项类型反序列化到其原始类型的反向数据映射。 此方法与 `GetObjectToSerialize` 方法的可能用法相似：直接交换字段数据、针对数据执行操作以及存储 XML 数据。 在反序列化时，由于数据转换中的一些操作，您可能无法始终从原始实例获取确切的数据值。  
   
- `targetType` 参数指的是成员的声明类型。 此参数是由 `GetDataContractType` 方法返回的代理项类型。 `obj`参数引用被反序列化的对象。 如果这是代理项对象，则可以将其重新转换为其原始类型。 如果该对象没有由代理项处理，则此方法将返回输入对象； 否则，将在转换完成之后立即返回反序列化的对象。 如果存在多个代理项类型，则可以通过指示每个类型及其转换来提供从代理项到主类型的数据转换。  
+ `targetType` 参数指的是成员的声明类型。 此参数是由 `GetDataContractType` 方法返回的代理项类型。 `obj`参数引用已反序列化的对象。 如果这是代理项对象，则可以将其重新转换为其原始类型。 如果该对象没有由代理项处理，则此方法将返回输入对象； 否则，将在转换完成之后立即返回反序列化的对象。 如果存在多个代理项类型，则可以通过指示每个类型及其转换来提供从代理项到主类型的数据转换。  
   
  在返回对象时，内部对象表会用该代理项所返回的对象进行更新。 以后无论何时引用实例，都将从内部对象表中获取其代理项实例。  
   
  上面的示例将 `InventorySurrogated` 类型的对象重新转换为其初始类型 `Inventory`。 在该例中，数据直接从 `InventorySurrogated` 传输到其在 `Inventory` 中的相应字段。 由于没有对数据执行任何操作，因此每个成员字段所包含的值与序列化之前相同。  
   
 ### <a name="getcustomdatatoexport-method"></a>GetCustomDataToExport 方法  
- 在导出架构时，<xref:System.Runtime.Serialization.IDataContractSurrogate.GetCustomDataToExport%2A> 方法是可选的。 此方法用来在所导出的架构中插入其他数据或提示。 可以在成员级别或类型级别插入其他数据。 例如：  
+ 在导出架构时，<xref:System.Runtime.Serialization.IDataContractSurrogate.GetCustomDataToExport%2A> 方法是可选的。 此方法用来在所导出的架构中插入其他数据或提示。 可以在成员级别或类型级别插入其他数据。 例如:  
   
  [!code-csharp[C_IDataContractSurrogate#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#6)]  
   
@@ -116,7 +116,7 @@ ms.locfileid: "64587510"
 ### <a name="processimportedtype-method"></a>ProcessImportedType 方法  
  <xref:System.Runtime.Serialization.IDataContractSurrogate.ProcessImportedType%2A> 方法对架构导入过程中创建的任何类型进行自定义。 此方法是可选的。  
   
- 在导入架构时，此方法允许对所导入的任何类型和编译信息进行自定义。 例如：  
+ 在导入架构时，此方法允许对所导入的任何类型和编译信息进行自定义。 例如:  
   
  [!code-csharp[C_IDataContractSurrogate#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#7)]  
   
@@ -131,17 +131,17 @@ ms.locfileid: "64587510"
 ### <a name="getknowncustomdatatypes-method"></a>GetKnownCustomDataTypes 方法  
  此方法从架构中获取定义的自定义数据类型。 此方法对于架构导入是可选的。  
   
- 此方法是在开始导出和导入架构时调用的。 此方法返回用在导出/导入架构中的自定义数据类型。 系统会向此方法传递一个 <xref:System.Collections.ObjectModel.Collection%601>（`customDataTypes` 参数），该参数是一个类型集合。 此方法应当向该集合中添加其他已知类型。 已知的自定义数据类型是借助于 <xref:System.Runtime.Serialization.DataContractSerializer> 来启用对自定义数据的序列化和反序列化所必需的。 有关详细信息，请参阅[Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)。  
+ 此方法是在开始导出和导入架构时调用的。 此方法返回用在导出/导入架构中的自定义数据类型。 系统会向此方法传递一个 <xref:System.Collections.ObjectModel.Collection%601>（`customDataTypes` 参数），该参数是一个类型集合。 此方法应当向该集合中添加其他已知类型。 已知的自定义数据类型是借助于 <xref:System.Runtime.Serialization.DataContractSerializer> 来启用对自定义数据的序列化和反序列化所必需的。 有关详细信息，请参阅[数据协定已知类型](../feature-details/data-contract-known-types.md)。  
   
 ## <a name="implementing-a-surrogate"></a>实现代理项  
- 若要使用 WCF 中的数据协定代理项，必须执行几个特殊步骤。  
+ 若要在 WCF 中使用数据协定代理项，必须执行一些特殊的过程。  
   
 ### <a name="to-use-a-surrogate-for-serialization-and-deserialization"></a>使用代理项进行序列化和反序列化  
  使用 <xref:System.Runtime.Serialization.DataContractSerializer> 可以通过代理项对数据执行序列化和反序列化。 <xref:System.Runtime.Serialization.DataContractSerializer> 是由 <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> 创建的。 还必须指定代理项。  
   
 ##### <a name="to-implement-serialization-and-deserialization"></a>实现序列化和反序列化  
   
-1. 为您的服务创建一个 <xref:System.ServiceModel.ServiceHost> 实例。 有关完整说明，请参阅[基本 WCF 编程](../../../../docs/framework/wcf/basic-wcf-programming.md)。  
+1. 为您的服务创建一个 <xref:System.ServiceModel.ServiceHost> 实例。 有关完整说明，请参阅[基本 WCF 编程](../basic-wcf-programming.md)。  
   
 2. 对于指定服务主机的每个 <xref:System.ServiceModel.Description.ServiceEndpoint>，查找它的 <xref:System.ServiceModel.Description.OperationDescription>。  
   
@@ -175,7 +175,7 @@ ms.locfileid: "64587510"
      [!code-csharp[C_IDataContractSurrogate#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#9)]  
   
 ### <a name="to-use-a-surrogate-for-metadata-export"></a>使用代理项来导出元数据  
- 默认情况下，从 WCF 服务导出元数据时，需要生成 WSDL 和 XSD 架构。 该代理项需要添加到负责为数据协定类型生成 XSD 架构的组件 <xref:System.Runtime.Serialization.XsdDataContractExporter> 中。 为此，要么使用可实现 <xref:System.ServiceModel.Description.IWsdlExportExtension> 的行为来修改 <xref:System.ServiceModel.Description.WsdlExporter>，要么直接修改用来导出元数据的 <xref:System.ServiceModel.Description.WsdlExporter>。  
+ 默认情况下，当从服务的 WCF 中导出元数据时，需要生成 WSDL 和 XSD 架构。 该代理项需要添加到负责为数据协定类型生成 XSD 架构的组件 <xref:System.Runtime.Serialization.XsdDataContractExporter> 中。 为此，要么使用可实现 <xref:System.ServiceModel.Description.IWsdlExportExtension> 的行为来修改 <xref:System.ServiceModel.Description.WsdlExporter>，要么直接修改用来导出元数据的 <xref:System.ServiceModel.Description.WsdlExporter>。  
   
 ##### <a name="to-use-a-surrogate-for-metadata-export"></a>使用代理项来导出元数据  
   
@@ -198,4 +198,4 @@ ms.locfileid: "64587510"
 - <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>
 - <xref:System.Runtime.Serialization.ImportOptions>
 - <xref:System.Runtime.Serialization.ExportOptions>
-- [使用数据协定](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+- [使用数据协定](../feature-details/using-data-contracts.md)

@@ -2,19 +2,19 @@
 title: 批量复制示例设置
 ms.date: 03/30/2017
 ms.assetid: d4dde6ac-b8b6-4593-965a-635c8fb2dadb
-ms.openlocfilehash: 2a7c0ddef42ff56306a42288c6960987ce7f714a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ac09ed85315aee7c6b29952916088ebe6e301eb9
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69918092"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794416"
 ---
 # <a name="bulk-copy-example-setup"></a>批量复制示例设置
 <xref:System.Data.SqlClient.SqlBulkCopy> 类只能用于向 SQL Server 表中写入数据。 本主题中所示的代码示例使用 SQL Server 示例数据库**AdventureWorks**。 为避免改变现有表，代码示例将数据写入必须先创建的表。  
   
- **BulkCopyDemoMatchingColumns**和**BulkCopyDemoDifferentColumns**表均基于**AdventureWorks** **Products**表。 在使用这些表的代码示例中, 数据从**Products**表添加到其中一个示例表中。 当示例演示如何将列从源数据映射到目标表时, 将使用**BulkCopyDemoDifferentColumns**表;**BulkCopyDemoMatchingColumns**用于大多数其他示例。  
+ **BulkCopyDemoMatchingColumns**和**BulkCopyDemoDifferentColumns**表均基于**AdventureWorks** **Products**表。 在使用这些表的代码示例中，数据从**Products**表添加到其中一个示例表中。 当示例演示如何将列从源数据映射到目标表时，将使用**BulkCopyDemoDifferentColumns**表;**BulkCopyDemoMatchingColumns**用于大多数其他示例。  
   
- 一些代码示例演示如何使用一个 <xref:System.Data.SqlClient.SqlBulkCopy> 类写入多个表。 对于这些示例, **BulkCopyDemoOrderHeader**和**BulkCopyDemoOrderDetail**表用作目标表。 这些表基于**AdventureWorks**中的**SalesOrderHeader**和**SalesOrderDetail**表。  
+ 一些代码示例演示如何使用一个 <xref:System.Data.SqlClient.SqlBulkCopy> 类写入多个表。 对于这些示例， **BulkCopyDemoOrderHeader**和**BulkCopyDemoOrderDetail**表用作目标表。 这些表基于**AdventureWorks**中的**SalesOrderHeader**和**SalesOrderDetail**表。  
   
 > [!NOTE]
 > 提供**SqlBulkCopy**代码示例是为了演示仅使用**SqlBulkCopy**的语法。 如果源表和目标表位于同一个 SQL Server 实例中，则使用 Transact-SQL `INSERT … SELECT` 语句复制数据会更加容易、更加迅速。  
@@ -83,5 +83,5 @@ CREATE TABLE [dbo].[BulkCopyDemoOrderDetail]([SalesOrderID] [int] NOT NULL,
   
 ## <a name="see-also"></a>请参阅
 
-- [SQL Server 中的大容量复制操作](../../../../../docs/framework/data/adonet/sql/bulk-copy-operations-in-sql-server.md)
-- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [SQL Server 中的大容量复制操作](bulk-copy-operations-in-sql-server.md)
+- [ADO.NET 概述](../ado-net-overview.md)

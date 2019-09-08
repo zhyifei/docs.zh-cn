@@ -2,12 +2,12 @@
 title: OLE DB、ODBC 和 Oracle 连接池
 ms.date: 03/30/2017
 ms.assetid: 2bd83b1e-3ea9-43c4-bade-d9cdb9bbbb04
-ms.openlocfilehash: 7552f4a95af51774071f0a4017637570d648dd86
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b83b53550964b3149f3bc711eaf119e749d1834b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69929252"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794692"
 ---
 # <a name="ole-db-odbc-and-oracle-connection-pooling"></a>OLE DB、ODBC 和 Oracle 连接池
 池连接可以显著提高应用程序的性能和可缩放性。 本节介绍用于 OLE DB、ODBC 和 Oracle 的 .NET Framework 数据提供程序的连接池。  
@@ -21,12 +21,12 @@ Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=S
   
  我们建议您在使用完连接后始终将其关闭或释放，以便连接可以返回到池。 不是显式关闭的连接可能无法返回池。 例如，如果连接已超出范围但没有显式关闭，则仅当达到最大池大小而该连接仍然有效时，该连接才会返回到连接池中。  
   
- 有关 OLE DB 会话或资源池的详细信息, 以及如何通过覆盖 OLE DB 提供程序服务默认值来禁用池, 请参阅[OLE DB 程序员指南](https://go.microsoft.com/fwlink/?linkid=45232)。  
+ 有关 OLE DB 会话或资源池的详细信息，以及如何通过覆盖 OLE DB 提供程序服务默认值来禁用池，请参阅[OLE DB 程序员指南](https://go.microsoft.com/fwlink/?linkid=45232)。  
   
 ## <a name="connection-pooling-for-odbc"></a>Odbc 连接池  
  ODBC .NET Framework 数据提供程序的连接池由用于该连接的 ODBC 驱动程序管理器管理，不受 ODBC .NET Framework 数据提供程序的影响。  
   
- 若要启用或禁用连接池, 请在 "控制面板" 的 "管理工具" 文件夹中打开 " **ODBC 数据源管理器**"。 "**连接池**" 选项卡允许您为安装的每个 ODBC 驱动程序指定连接池参数。 请注意，对特定 ODBC 驱动程序所做的更改会影响所有使用该 ODBC 驱动程序的应用程序。  
+ 若要启用或禁用连接池，请在 "控制面板" 的 "管理工具" 文件夹中打开 " **ODBC 数据源管理器**"。 "**连接池**" 选项卡允许您为安装的每个 ODBC 驱动程序指定连接池参数。 请注意，对特定 ODBC 驱动程序所做的更改会影响所有使用该 ODBC 驱动程序的应用程序。  
   
 ## <a name="connection-pooling-for-oracleclient"></a>OracleClient 连接池  
  Oracle .NET Framework 数据提供程序自动为 ADO.NET 客户端应用程序提供连接池。 您也可以提供几个连接字符串修饰符，用于控制连接池的行为（请参见本主题后文的“使用连接字符串关键字控制连接池”）。  
@@ -48,10 +48,10 @@ Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=S
   
  如果存在一个与已消失的服务器的连接，如果连接池进程尚未检测到断开的连接并将连接标记为无效，可以从池中提取此连接。 当发生这种情况时，将生成异常。 但是，为了将该连接释放回池中，仍必须将其关闭。  
   
- 不要在类的 `Close` 方法中对 `Dispose`、`Connection` 或任何其他托管对象调用 `DataReader` 或 `Finalize`。 在终结器中，仅释放类直接拥有的非托管资源。 如果类不拥有任何非托管资源，则不要在类定义中包含 `Finalize` 方法。 有关详细信息, 请参阅[垃圾回收](../../../standard/garbage-collection/index.md)。  
+ 不要在类的 `Close` 方法中对 `Dispose`、`Connection` 或任何其他托管对象调用 `DataReader` 或 `Finalize`。 在终结器中，仅释放类直接拥有的非托管资源。 如果类不拥有任何非托管资源，则不要在类定义中包含 `Finalize` 方法。 有关详细信息，请参阅[垃圾回收](../../../standard/garbage-collection/index.md)。  
   
 ### <a name="transaction-support"></a>事务支持  
- 连接是根据事务上下文来从池中取出并进行分配的。 请求线程和所分配的连接的上下文必须匹配。 因此, 每个连接池实际上会细分为不具有与其关联的事务上下文的连接, 并分为*N*个细分, 每个连接池都包含与特定事务上下文的连接。  
+ 连接是根据事务上下文来从池中取出并进行分配的。 请求线程和所分配的连接的上下文必须匹配。 因此，每个连接池实际上会细分为不具有与其关联的事务上下文的连接，并分为*N*个细分，每个连接池都包含与特定事务上下文的连接。  
   
  当连接关闭时，它将被释放回池中，并根据其事务上下文放入相应的子部分。 因此，即使分布式事务仍然挂起，仍可以关闭该连接而不会生成错误。 这样，你就可以在随后提交或中止分布式事务。  
   
@@ -70,6 +70,6 @@ Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=S
   
 ## <a name="see-also"></a>请参阅
 
-- [连接池](../../../../docs/framework/data/adonet/connection-pooling.md)
-- [性能计数器](../../../../docs/framework/data/adonet/performance-counters.md)
-- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [连接池](connection-pooling.md)
+- [性能计数器](performance-counters.md)
+- [ADO.NET 概述](ado-net-overview.md)

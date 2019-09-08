@@ -1,6 +1,6 @@
 ---
-title: BeginMethodEnumeration 函数 （非托管 API 参考）
-description: BeginMethodEnumeration 函数开始枚举的对象的方法
+title: BeginMethodEnumeration 函数（非托管 API 参考）
+description: BeginMethodEnumeration 函数开始枚举对象的方法
 ms.date: 11/06/2017
 api_name:
 - BeginMethodEnumeration
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 46ef53acdfa06b0c2be9d2aa55e89ce8fa34dfb0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8a7b93bacabdfdd0551418644a7d9a4b1643c3d9
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761738"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798761"
 ---
 # <a name="beginenumeration-function"></a>BeginEnumeration 函数
-开始为对象提供的方法的枚举。  
+开始枚举可用于对象的方法。  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
@@ -41,36 +41,36 @@ HRESULT BeginMethodEnumeration (
 ## <a name="parameters"></a>参数
 
 `vFunc`  
-[in]此参数是未使用。
+中此参数未使用。
 
 `ptr`  
-[in]一个指向[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)实例。
+中指向[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)实例的指针。
 
 `lEnumFlags`  
-[in]零 (0) 的所有方法，或指定范围的枚举的标志。 在中定义的以下标志*WbemCli.h*标头文件，也可以在定义它们为常量在代码中：
+中对于所有方法为零（0）或指定枚举范围的标志。 以下标志是在*WbemCli*头文件中定义的，也可以在代码中将它们定义为常量：
 
 返回的常量  |值  |描述  |
 |---------|---------|---------|
-| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | 限制对自身的类中定义的方法的枚举。 |
-| `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | 限制对从基类继承的属性的枚举。 |
+| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | 将枚举限制为类本身中定义的方法。 |
+| `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | 将枚举限制为从基类继承的属性。 |
 
 ## <a name="return-value"></a>返回值
 
-此函数返回以下值中定义*WbemCli.h*标头文件，也可以在定义它们为常量在代码中：
+此函数返回的以下值是在*WbemCli*头文件中定义的，也可以在代码中将它们定义为常量：
 
 |返回的常量  |值  |描述  |
 |---------|---------|---------|
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | `lEnnumFlags` 为非零值并不是指定的标志之一。 |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | `lEnnumFlags`不为零，并且不是指定标志之一。 |
 |`WBEM_S_NO_ERROR` | 0 | 函数调用成功。  |
   
 ## <a name="remarks"></a>备注
 
-此函数包装对的调用[IWbemClassObject::BeginMethodEnumeration](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-beginmethodenumeration)方法。
+此函数包装对[IWbemClassObject：： BeginMethodEnumeration](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-beginmethodenumeration)方法的调用。
 
-如果当前对象是类定义，则仅支持此方法调用。 方法操作不能从[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)指向实例的指针。 保证在其中枚举了方法的顺序是固定的给定实例的[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)。
+仅当当前对象为类定义时，才支持此方法调用。 指向实例的[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)指针不提供方法操作。 对于给定的[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)实例，可保证方法的枚举顺序是固定的。
 
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../get-started/system-requirements.md)。  
   
  **标头：** WMINet_Utils.idl  
   
@@ -78,4 +78,4 @@ HRESULT BeginMethodEnumeration (
   
 ## <a name="see-also"></a>请参阅
 
-- [WMI 和性能计数器 （非托管 API 参考）](index.md)
+- [WMI 和性能计数器（非托管 API 参考）](index.md)

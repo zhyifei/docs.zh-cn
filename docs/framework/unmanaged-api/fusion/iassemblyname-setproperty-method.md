@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 40953d03904e3268770c8a1b6e212873ec66d2dd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 17e96f56c57d896397489e27bcc072d8e7df05ec
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761844"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796541"
 ---
 # <a name="iassemblynamesetproperty-method"></a>IAssemblyName::SetProperty 方法
-设置引用的指定的属性标识符的属性的值。  
+设置由指定的属性标识符引用的属性的值。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,21 +39,21 @@ HRESULT SetProperty (
   
 ## <a name="parameters"></a>参数  
  `PropertyId`  
- [in]将设置其值的属性的唯一标识符。  
+ 中将设置其值的属性的唯一标识符。  
   
  `pvProperty`  
- [in]要设置所引用的属性值`PropertyId`。  
+ 中要将引用`PropertyId`的属性设置为的值。  
   
  `cbProperty`  
- [in]大小，以字节为单位的`pvProperty`。  
+ 中的`pvProperty`大小（以字节为单位）。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../get-started/system-requirements.md)。  
   
- **标头：** Fusion.h  
+ **标头：** 合成。h  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 
-- [IAssemblyName 接口](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
+- [IAssemblyName 接口](iassemblyname-interface.md)

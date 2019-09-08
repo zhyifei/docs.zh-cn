@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 626492c0-5ee3-4675-88e8-8c40379510b6
-ms.openlocfilehash: 8a69b3ae83d7f701428b3183f2b80e0d44a06537
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f3ed431709266b636804c6c00450b26684550d8b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033769"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793756"
 ---
 # <a name="how-to-display-generated-sql"></a>如何：显示生成的 SQL
 您可以通过使用 <xref:System.Data.Linq.DataContext.Log%2A> 属性查看为查询生成的 SQL 代码和更改处理方式。 此方法对了解 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 功能和调试特定的问题可能很有用。  
@@ -18,7 +18,7 @@ ms.locfileid: "62033769"
 ## <a name="example"></a>示例  
  下面的示例使用 <xref:System.Data.Linq.DataContext.Log%2A> 属性在 SQL 代码执行前在控制台窗口中显示此代码。  您可以将此属性与查询、插入、更新和删除命令一起使用。  
   
- 在控制台窗口中显示的行是 Visual Basic 中执行时看到的内容或C#下面的代码。  
+ 控制台窗口中的行是执行下面的 Visual Basic 或C#代码时看到的内容。  
   
 ```  
 SELECT [t0].[CustomerID], [t0].[CompanyName], [t0].[ContactName], [t0].[ContactT  
@@ -44,4 +44,4 @@ SEVES
   
 ## <a name="see-also"></a>请参阅
 
-- [调试支持](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)
+- [调试支持](debugging-support.md)

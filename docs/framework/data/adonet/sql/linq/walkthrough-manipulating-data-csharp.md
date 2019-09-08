@@ -2,12 +2,12 @@
 title: 演练：操作数据 (C#)
 ms.date: 03/30/2017
 ms.assetid: 24adfbe0-0ad6-449f-997d-8808e0770d2e
-ms.openlocfilehash: 7921f0aa7582e70967f7fec633f37ef0dbc766de
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8941ac30a67406346e5448ca5af4af8512d168a8
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946976"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781000"
 ---
 # <a name="walkthrough-manipulating-data-c"></a>演练：操作数据 (C#)
 本演练提供了用于在数据库中添加、修改和删除数据的基本端对端 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 方案。 您将使用 Northwind 示例数据库的一个副本来添加一位客户，更改该客户的姓名，然后删除一个订单。  
@@ -23,7 +23,7 @@ ms.locfileid: "69946976"
   
 - Northwind 示例数据库。  
   
-     如果您的开发计算机上没有此数据库，您可以从 Microsoft 下载网站下载它。 有关说明, 请参阅[下载示例数据库](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)。 下载此数据库后，请将 northwnd.mdf 文件复制到 c:\linqtest6 文件夹。  
+     如果您的开发计算机上没有此数据库，您可以从 Microsoft 下载网站下载它。 有关说明，请参阅[下载示例数据库](downloading-sample-databases.md)。 下载此数据库后，请将 northwnd.mdf 文件复制到 c:\linqtest6 文件夹。  
   
 - 从 Northwind 数据库生成的 C# 代码文件。  
   
@@ -31,7 +31,7 @@ ms.locfileid: "69946976"
   
      **sqlmetal /code:"c:\linqtest6\northwind.cs" /language:csharp "C:\linqtest6\northwnd.mdf" /pluralize**  
   
-     有关详细信息，请参阅 [SqlMetal.exe（代码生成工具）](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)。  
+     有关详细信息，请参阅 [SqlMetal.exe（代码生成工具）](../../../../tools/sqlmetal-exe-code-generation-tool.md)。  
   
 ## <a name="overview"></a>概述  
  本演练由六项主要任务组成：  
@@ -49,19 +49,19 @@ ms.locfileid: "69946976"
 - 将这些更改提交至 Northwind 数据库。  
   
 ## <a name="creating-a-linq-to-sql-solution"></a>创建 LINQ to SQL 解决方案  
- 在第一个任务中, 您将创建一个 Visual Studio 解决方案, 其中包含生成和运行[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]项目所必需的引用。  
+ 在第一个任务中，您将创建一个 Visual Studio 解决方案，其中包含生成和运行[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]项目所必需的引用。  
   
 #### <a name="to-create-a-linq-to-sql-solution"></a>创建 LINQ to SQL 解决方案  
   
-1. 在 Visual Studio 的 "**文件**" 菜单上, 指向 "**新建**", 然后单击 "**项目**"。  
+1. 在 Visual Studio 的 "**文件**" 菜单上，指向 "**新建**"，然后单击 "**项目**"。  
   
-2. 在 "**新建项目**" 对话框的 "**项目类型**" 窗格中, 单击 "  **C#视觉对象**"。  
+2. 在 "**新建项目**" 对话框的 "**项目类型**" 窗格中，单击 "  **C#视觉对象**"。  
   
 3. 在“模板”窗格中，单击“控制台应用程序”。  
   
-4. 在 "**名称**" 框中, 键入**LinqDataManipulationApp**。  
+4. 在 "**名称**" 框中，键入**LinqDataManipulationApp**。  
   
-5. 在 "**位置**" 框中, 验证要存储项目文件的位置。  
+5. 在 "**位置**" 框中，验证要存储项目文件的位置。  
   
 6. 单击 **“确定”** 。  
   
@@ -70,9 +70,9 @@ ms.locfileid: "69946976"
   
 #### <a name="to-add-systemdatalinq"></a>添加 System.Data.Linq  
   
-1. 在**解决方案资源管理器**中, 右键单击 "**引用**", 然后单击 "**添加引用**"。  
+1. 在**解决方案资源管理器**中，右键单击 "**引用**"，然后单击 "**添加引用**"。  
   
-2. 在 "**添加引用**" 对话框中, 单击 " **.net**", 单击 "system.web" 程序集, 然后单击 **"确定"** 。  
+2. 在 "**添加引用**" 对话框中，单击 " **.net**"，单击 "system.web" 程序集，然后单击 **"确定"** 。  
   
      此程序集即被添加到项目中。  
   
@@ -85,9 +85,9 @@ ms.locfileid: "69946976"
   
 #### <a name="to-add-the-northwind-code-file-to-the-project"></a>将 northwind 代码文件添加到项目  
   
-1. 在 "**项目**" 菜单上, 单击 "**添加现有项**"。  
+1. 在 "**项目**" 菜单上，单击 "**添加现有项**"。  
   
-2. 在 "**添加现有项**" 对话框中, 导航到 "c:\linqtest6\northwind.cs", 然后单击 "**添加**"。  
+2. 在 "**添加现有项**" 对话框中，导航到 "c:\linqtest6\northwind.cs"，然后单击 "**添加**"。  
   
      northwind.cs 文件即被添加到项目中。  
   
@@ -104,7 +104,7 @@ ms.locfileid: "69946976"
   
      此时将打开一个**控制台**窗口。  
   
-     可以通过在**控制台**窗口中按 enter, 或在 Visual Studio 的 "**调试**" 菜单上单击 "**停止调试**" 来关闭应用程序。  
+     可以通过在**控制台**窗口中按 enter，或在 Visual Studio 的 "**调试**" 菜单上单击 "**停止调试**" 来关闭应用程序。  
   
 ## <a name="creating-a-new-entity"></a>创建新实体  
  创建新实体很简单。 可以使用 `Customer` 关键字创建对象（如 `new`）。  
@@ -156,11 +156,11 @@ ms.locfileid: "69946976"
   
 3. 按 F5 调试解决方案。  
   
-4. 在**控制台**窗口中按 enter, 以关闭应用程序。  
+4. 在**控制台**窗口中按 enter，以关闭应用程序。  
   
 > [!NOTE]
 > 通过提交更改添加了新的客户后，您无法再次按原样执行此解决方案。 若要再次执行此解决方案，请更改要添加的客户姓名和客户 ID。  
   
 ## <a name="see-also"></a>请参阅
 
-- [通过演练学习](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
+- [通过演练学习](learning-by-walkthroughs.md)

@@ -5,20 +5,20 @@ helpviewer_keywords:
 - WCF Data Services, quick-start example
 - WCF Data Services, Entity Data Model (EDM) service
 ms.assetid: 7b18ca1e-d4d6-4c7a-afb9-ce3cebb98a8d
-ms.openlocfilehash: 49d11556d3703331b4cdf5bf83a69f6b15bca8ed
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: df6806cd77e7ff109d79f7ba61866763de4c7fc1
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65881997"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70790360"
 ---
 # <a name="quickstart-wcf-data-services"></a>快速入门（WCF 数据服务）
 
-本快速入门可帮助您熟悉 WCF Data Services 和[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]通过一系列的支持中的主题的任务[Getting Started](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)。
+本快速入门帮助你熟悉 WCF 数据服务和[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]通过一系列支持[入门](getting-started-with-wcf-data-services.md)中主题的任务。
 
-## <a name="what-youll-learn"></a>学习内容
+## <a name="what-youll-learn"></a>你将学习的内容
 
-本快速入门教程的第一个任务演示如何创建数据服务以公开 OData 源从 Northwind 示例数据库。 将在后面的主题，访问 OData 源使用 Web 浏览器，并创建 Windows Presentation Foundation (WPF) 客户端应用程序使用 OData 源使用客户端库。
+本快速入门中的第一项任务介绍如何创建数据服务以公开 Northwind 示例数据库中的 OData 数据源。 在后面的主题中，你将使用 Web 浏览器访问 OData 源，并创建使用客户端库使用 OData 源的 Windows Presentation Foundation （WPF）客户端应用程序。
 
 ## <a name="prerequisites"></a>系统必备
 
@@ -26,23 +26,23 @@ ms.locfileid: "65881997"
 
 - Visual Studio
 
-- SQL Server 的实例。 这包括 SQL Server Express，它包括在默认安装的 Visual Studio 2015 中，或作为的一部分**数据存储和处理**Visual Studio 2017 中的工作负荷。
+- SQL Server 的实例。 这包括 SQL Server Express （Visual Studio 2015 的默认安装中提供），或者作为 Visual Studio 2017 中的**数据存储和处理**工作负荷的一部分。
 
 - Northwind 示例数据库。 若要下载此示例数据库，请访问 [SQL Server 的示例数据库](https://go.microsoft.com/fwlink/?linkid=24758)下载页。
 
 ## <a name="wcf-data-services-quickstart-tasks"></a>WCF 数据服务快速入门任务
 
- [创建数据服务](../../../../docs/framework/data/wcf/creating-the-data-service.md)
+ [创建数据服务](creating-the-data-service.md)
 
  定义 ASP.NET 应用程序，定义数据模型，创建数据服务，并启用对资源的访问。
 
- [从 Web 浏览器访问服务](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md)
+ [从 Web 浏览器访问服务](accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md)
 
  通过 Visual Studio 启动服务，并通过 Web 浏览器向公开的源提交 HTTP GET 请求以访问该服务。
 
- [创建.NET Framework 客户端应用程序](../../../../docs/framework/data/wcf/creating-the-dotnet-client-application-wcf-data-services-quickstart.md)
+ [创建 .NET Framework 客户端应用程序](creating-the-dotnet-client-application-wcf-data-services-quickstart.md)
 
- 创建 WPF 应用程序使用 OData 数据源、 数据绑定到 Windows 控件，更改在绑定控件中的数据，然后发送回数据服务所做的更改。
+ 创建一个使用 OData 源的 WPF 应用程序，将数据绑定到 Windows 控件，在绑定控件中更改数据，然后将更改发送回数据服务。
 
 > [!NOTE]
 > 已完成版本的快速入门中的项目文件可从 [WCF 数据服务文档示例](https://go.microsoft.com/fwlink/?LinkId=179994) 网页下载。
@@ -50,8 +50,8 @@ ms.locfileid: "65881997"
 ## <a name="next-steps"></a>后续步骤
 
 > [!div class="nextstepaction"]
-> [启动快速入门](../../../../docs/framework/data/wcf/creating-the-data-service.md)
+> [启动快速入门](creating-the-data-service.md)
 
 ## <a name="see-also"></a>请参阅
 
-- [ADO.NET 实体框架](../../../../docs/framework/data/adonet/ef/index.md)
+- [ADO.NET 实体框架](../adonet/ef/index.md)

@@ -2,12 +2,12 @@
 title: 终结点
 ms.date: 03/30/2017
 ms.assetid: fe63370d-81a1-40f3-97c2-59cb357c78d2
-ms.openlocfilehash: 4562481e8b0b18c0ea0d9df0af3427ffe6419821
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 03c401358839671d750985b95b1aada599931aad
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61963600"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795909"
 ---
 # <a name="endpoint"></a>终结点
 终结点  
@@ -37,7 +37,7 @@ class Endpoint
   
 |方法|描述|  
 |------------|-----------------|  
-|[GetOperationCounterInstanceName](../../../../../docs/framework/wcf/diagnostics/wmi/getoperationcounterinstancename.md)|检索操作性能计数器实例名称|  
+|[GetOperationCounterInstanceName](getoperationcounterinstancename.md)|检索操作性能计数器实例名称|  
   
 ## <a name="properties"></a>属性  
  该终结点类具有以下属性：  
@@ -105,7 +105,7 @@ class Endpoint
   
  终结点在其上侦听的 Uri。  
   
-### <a name="name"></a>名称  
+### <a name="name"></a>name  
  数据类型：String  
   
  访问类型：只读  

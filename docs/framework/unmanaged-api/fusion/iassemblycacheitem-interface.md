@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fba17a2ffad9220acdbc79726efe0d3d4184978a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 193604068e379d62107b25f2bc348cd7c8bc6e98
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697974"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796705"
 ---
 # <a name="iassemblycacheitem-interface"></a>IAssemblyCacheItem 接口
 表示全局程序集缓存中的单个程序集。  
@@ -30,19 +30,19 @@ ms.locfileid: "61697974"
   
 |方法|描述|  
 |------------|-----------------|  
-|[AbortItem 方法](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-abortitem-method.md)|允许在全局程序集缓存中的程序集以进行发布之前执行清理操作。|  
-|[Commit 方法](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-commit-method.md)|提交对内存的缓存程序集引用。|  
-|[CreateStream 方法](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-createstream-method.md)|创建具有指定的名称和格式的流。|  
+|[AbortItem 方法](iassemblycacheitem-abortitem-method.md)|允许全局程序集缓存中的程序集在发布前执行清除操作。|  
+|[Commit 方法](iassemblycacheitem-commit-method.md)|将缓存的程序集引用提交到内存。|  
+|[CreateStream 方法](iassemblycacheitem-createstream-method.md)|创建具有指定名称和格式的流。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../get-started/system-requirements.md)。  
   
- **标头：** Fusion.h  
+ **标头：** 合成。h  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 
-- [合成接口](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
-- [全局程序集缓存](../../../../docs/framework/app-domains/gac.md)
-- [IAssemblyCache 接口](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
+- [合成接口](fusion-interfaces.md)
+- [全局程序集缓存](../../app-domains/gac.md)
+- [IAssemblyCache 接口](iassemblycache-interface.md)

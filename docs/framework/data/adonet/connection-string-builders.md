@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8434b608-c4d3-43d3-8ae3-6d8c6b726759
-ms.openlocfilehash: a29efbc1b4d886afe4329df011b522e4d589e2ee
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: afafe5d1eaddaef3b9f0069908b365e40ea4ed29
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949496"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785681"
 ---
 # <a name="connection-string-builders"></a>连接字符串生成器
-在早期版本的 ADO.NET 中, 不会发生带有串联字符串值的连接字符串的编译时检查, 因此在运行时, 不正确的关键字生成<xref:System.ArgumentException>了。 每个 .NET Framework 数据访问接口支持不同的连接字符串关键字语法, 这使得在手动操作时很难构建有效的连接字符串。 为了解决此问题, ADO.NET 2.0 为每个 .NET Framework 数据提供程序引入了新的连接字符串生成器。 每个数据提供程序包括一个从 <xref:System.Data.Common.DbConnectionStringBuilder> 继承的强类型连接字符串生成器类。 下表列出了 .NET Framework 数据提供程序及其关联的连接字符串生成器类。  
+在早期版本的 ADO.NET 中，不会发生带有串联字符串值的连接字符串的编译时检查，因此在运行时，不正确的关键字生成<xref:System.ArgumentException>了。 每个 .NET Framework 数据访问接口支持不同的连接字符串关键字语法，这使得在手动操作时很难构建有效的连接字符串。 为了解决此问题，ADO.NET 2.0 为每个 .NET Framework 数据提供程序引入了新的连接字符串生成器。 每个数据提供程序包括一个从 <xref:System.Data.Common.DbConnectionStringBuilder> 继承的强类型连接字符串生成器类。 下表列出了 .NET Framework 数据提供程序及其关联的连接字符串生成器类。  
   
 |提供程序|ConnectionStringBuilder 类|  
 |--------------|-----------------------------------|  
@@ -59,7 +59,7 @@ initial catalog="AdventureWorks;NewValue=Bad"
  连接字符串生成器的一个重载构造函数将 <xref:System.String> 作为自变量，这可让你提供部分连接字符串，然后通过用户输入使这部分连接字符串成为完整字符串。 该部分连接字符串可以存储在配置文件中并在运行时进行检索。  
   
 > [!NOTE]
-> <xref:System.Configuration> 命名空间允许通过编程方式访问配置文件（对 Web 应用程序使用 <xref:System.Web.Configuration.WebConfigurationManager>，对 Windows 应用程序使用 <xref:System.Configuration.ConfigurationManager>）。 有关使用连接字符串和配置文件的详细信息, 请参阅[连接字符串和配置文件](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md)。  
+> <xref:System.Configuration> 命名空间允许通过编程方式访问配置文件（对 Web 应用程序使用 <xref:System.Web.Configuration.WebConfigurationManager>，对 Windows 应用程序使用 <xref:System.Configuration.ConfigurationManager>）。 有关使用连接字符串和配置文件的详细信息，请参阅[连接字符串和配置文件](connection-strings-and-configuration-files.md)。  
   
 ### <a name="example"></a>示例  
  此示例演示如何从配置文件中检索部分连接字符串并通过设置 <xref:System.Data.SqlClient.SqlConnectionStringBuilder.DataSource%2A> 的 <xref:System.Data.SqlClient.SqlConnectionStringBuilder.UserID%2A>、<xref:System.Data.SqlClient.SqlConnectionStringBuilder.Password%2A> 和 <xref:System.Data.SqlClient.SqlConnectionStringBuilder> 属性完成该连接字符串。 配置文件定义如下。  
@@ -81,6 +81,6 @@ initial catalog="AdventureWorks;NewValue=Bad"
   
 ## <a name="see-also"></a>请参阅
 
-- [连接字符串](../../../../docs/framework/data/adonet/connection-strings.md)
-- [隐私和数据安全性](../../../../docs/framework/data/adonet/privacy-and-data-security.md)
-- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [连接字符串](connection-strings.md)
+- [隐私和数据安全性](privacy-and-data-security.md)
+- [ADO.NET 概述](ado-net-overview.md)

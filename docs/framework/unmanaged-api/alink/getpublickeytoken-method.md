@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ec2c357cd56670f4f2deed8023bed7842a7f4ed7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 158ecc036d56e2ad9a3fa650677c04ebcbfd7696
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741884"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777228"
 ---
 # <a name="getpublickeytoken-method"></a>GetPublicKeyToken 方法
-检索给定的密钥文件或密钥容器的公钥标记。  
+检索给定 keyfile 或 key 容器的公钥标记。  
   
 ## <a name="syntax"></a>语法  
   
@@ -45,19 +45,19 @@ HRESULT GetPublicKeyToken(
  密钥容器的名称。  
   
  `pvPublicKeyToken`  
- 标记的存储位置的地址。  
+ 要存储密钥标记的地址。  
   
  `pcbPublicKeyToken`  
- 指定的大小，以字节为单位的缓冲区所指示的`pvPublicKeyToken`。 在返回时，包含实际使用的字节数。  
+ 指定指定的缓冲区`pvPublicKeyToken`的大小（以字节为单位）。 返回时，包含所使用的实际字节数。  
   
 ## <a name="return-value"></a>返回值  
- 如果该方法成功，返回，则为 S_OK。  
+ 如果该方法成功，则返回 S_OK。  
   
 ## <a name="requirements"></a>要求  
- 需要 alink.h。  
+ 需要 alink。  
   
 ## <a name="see-also"></a>请参阅
 
-- [IALink2 接口](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [IALink 接口](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink2 接口](ialink2-interface.md)
+- [IALink 接口](ialink-interface.md)
+- [ALink API](index.md)

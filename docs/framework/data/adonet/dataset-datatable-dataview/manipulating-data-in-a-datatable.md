@@ -2,15 +2,15 @@
 title: 操作数据表中的数据
 ms.date: 03/30/2017
 ms.assetid: 5cb86d48-a987-4af4-80e0-8cc2c8373d62
-ms.openlocfilehash: 83b1a4b6c0e477ac918a2bb4e454718fc58ece0b
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 421680a4f39dd68c09dfe20e62f2eec86259b9f0
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203493"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786150"
 ---
 # <a name="manipulating-data-in-a-datatable"></a>操作数据表中的数据
-在 <xref:System.Data.DataTable> 中创建 <xref:System.Data.DataSet> 之后，您执行的活动可以与使用数据库中的表时执行的活动相同。 您可以添加、查看、编辑和删除表中的数据；可以监视错误和事件；并且可以查询表中的数据。 在修改**DataTable**中的数据时, 还可以验证这些更改是否准确, 并确定是否以编程方式接受或拒绝更改。  
+在 <xref:System.Data.DataTable> 中创建 <xref:System.Data.DataSet> 之后，您执行的活动可以与使用数据库中的表时执行的活动相同。 您可以添加、查看、编辑和删除表中的数据；可以监视错误和事件；并且可以查询表中的数据。 在修改**DataTable**中的数据时，还可以验证这些更改是否准确，并确定是否以编程方式接受或拒绝更改。  
   
 ## <a name="in-this-section"></a>本节内容  
  [将数据添加到数据表中](adding-data-to-a-datatable.md)  
@@ -41,4 +41,4 @@ ms.locfileid: "70203493"
 
 - [数据表](datatables.md)
 - [处理数据表事件](handling-datatable-events.md)
-- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 概述](../ado-net-overview.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e5e9309a-3ebb-4a9c-9d78-21c4e2bafc5b
-ms.openlocfilehash: e5a8040a803fbc9b098fc1b56e0f5d837c4cdb94
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: abc9183666602a7ef369e690e3ae499f8c7b8b11
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203358"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784394"
 ---
 # <a name="merging-dataset-contents"></a>合并数据集内容
 
@@ -35,7 +35,7 @@ ms.locfileid: "70203358"
 
 ## <a name="preservechanges"></a>PreserveChanges
 
-在将 `DataSet`、`DataTable` 或 `DataRow` 数组传递给 `Merge` 方法时，可以包括可选参数用以指定是否在现有 `DataSet` 中保留更改以及如何处理在传入数据中发现的新架构元素。 在传入数据后面，这些数据的第一个参数是一个布尔型标志 <xref:System.Data.LoadOption.PreserveChanges>，它指定是否在现有 `DataSet` 中保留更改。 如果 `PreserveChanges` 标志设置为 `true`，则传入值不会覆盖现有行的 `Current` 行版本中的现有值。 如果 `PreserveChanges` 标志设置为 `false`，则传入值将覆盖现有行的 `Current` 行版本中的现有值。 如果未指定 `PreserveChanges` 标志，默认情况下它将设置为 `false`。 有关行版本的详细信息, 请参阅[行状态和行版本](row-states-and-row-versions.md)。
+在将 `DataSet`、`DataTable` 或 `DataRow` 数组传递给 `Merge` 方法时，可以包括可选参数用以指定是否在现有 `DataSet` 中保留更改以及如何处理在传入数据中发现的新架构元素。 在传入数据后面，这些数据的第一个参数是一个布尔型标志 <xref:System.Data.LoadOption.PreserveChanges>，它指定是否在现有 `DataSet` 中保留更改。 如果 `PreserveChanges` 标志设置为 `true`，则传入值不会覆盖现有行的 `Current` 行版本中的现有值。 如果 `PreserveChanges` 标志设置为 `false`，则传入值将覆盖现有行的 `Current` 行版本中的现有值。 如果未指定 `PreserveChanges` 标志，默认情况下它将设置为 `false`。 有关行版本的详细信息，请参阅[行状态和行版本](row-states-and-row-versions.md)。
 
 如果 `PreserveChanges` 为 `true`，则现有行的 <xref:System.Data.DataRowVersion.Current> 行版本中将保持现有行中的数据，而现有行的 <xref:System.Data.DataRowVersion.Original> 行版本中的数据将由传入行的 `Original` 行版本中的数据覆盖。 现有行的 <xref:System.Data.DataRow.RowState%2A> 设置为 <xref:System.Data.DataRowState.Modified>。 存在以下例外：
 
@@ -69,9 +69,9 @@ ms.locfileid: "70203358"
 设想有这样一种情况：`DataSet` 中的某一现有行是主键值为 1 的 `Unchanged`。 在与 `Modified` 主键值为 2 且 `Original` 主键值为 1 的 `Current` 传入行进行合并期间，由于 `Original` 主键值不同，现有行和传入行将被视为不匹配。 不过，完成合并和检查完约束后，将会引发一个异常，因为 `Current` 主键值违反了主键列的唯一约束。
 
 > [!NOTE]
-> 在向包含自动递增列（如标识列）的数据库表中插入行时，插入时操作返回的标识列值可能不匹配 `DataSet` 中的值，从而导致追加而不是合并返回的行。 有关详细信息, 请参阅[检索标识或自动编号值](../retrieving-identity-or-autonumber-values.md)。
+> 在向包含自动递增列（如标识列）的数据库表中插入行时，插入时操作返回的标识列值可能不匹配 `DataSet` 中的值，从而导致追加而不是合并返回的行。 有关详细信息，请参阅[检索标识或自动编号值](../retrieving-identity-or-autonumber-values.md)。
 
-下面的代码示例将具有`DataSet`不同架构的两个对象`DataSet`合并为一个, 其中包含两个`DataSet`传入对象的组合架构。
+下面的代码示例将具有`DataSet`不同架构的两个对象`DataSet`合并为一个，其中包含两个`DataSet`传入对象的组合架构。
 
 [!code-csharp[DataWorks DataSet.Merge#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DataSet.Merge/CS/source.cs#1)]
 [!code-vb[DataWorks DataSet.Merge#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DataSet.Merge/VB/source.vb#1)]
@@ -91,4 +91,4 @@ ms.locfileid: "70203358"
 - [DataAdapters 和 DataReaders](../dataadapters-and-datareaders.md)
 - [在 ADO.NET 中检索和修改数据](../retrieving-and-modifying-data.md)
 - [检索标识或自动编号值](../retrieving-identity-or-autonumber-values.md)
-- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 概述](../ado-net-overview.md)

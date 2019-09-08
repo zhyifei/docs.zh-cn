@@ -2,12 +2,12 @@
 title: 在 SQL Server 中创建应用程序角色
 ms.date: 03/30/2017
 ms.assetid: 27442435-dfb2-4062-8c59-e2960833a638
-ms.openlocfilehash: e7060e1b171ee1791b9986250fe6f2050ec77acd
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 212bda6f64829792e965dd6714428a05b30c995b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69961169"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794272"
 ---
 # <a name="creating-application-roles-in-sql-server"></a>在 SQL Server 中创建应用程序角色
 应用程序角色可提供对应用程序（而不是数据库角色或用户）分配权限的方法。 用户可以连接到数据库、激活应用程序角色以及采用授予应用程序的权限。 授予应用程序角色的权限在连接期间有效。  
@@ -47,9 +47,9 @@ ms.locfileid: "69961169"
   
  可能需要考虑以下替代方法。  
   
-- 使用通过 EXECUTE AS 语句及其 NO REVERT 和 WITH COOKIE 字句切换的上下文。 您可以在未映射为登录名的数据库中创建用户帐户。 然后，向此帐户分配权限。 对于很少登录的用户使用 EXECUTE AS 比较安全，因为它基于权限，而不基于密码。 有关详细信息, 请参阅[在 SQL Server 中通过模拟自定义权限](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)。  
+- 使用通过 EXECUTE AS 语句及其 NO REVERT 和 WITH COOKIE 字句切换的上下文。 您可以在未映射为登录名的数据库中创建用户帐户。 然后，向此帐户分配权限。 对于很少登录的用户使用 EXECUTE AS 比较安全，因为它基于权限，而不基于密码。 有关详细信息，请参阅[在 SQL Server 中通过模拟自定义权限](customizing-permissions-with-impersonation-in-sql-server.md)。  
   
-- 使用证书对存储过程进行签名，并仅授予执行这些过程的权限。 有关详细信息, 请参阅[SQL Server 中的签名存储过程](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)。  
+- 使用证书对存储过程进行签名，并仅授予执行这些过程的权限。 有关详细信息，请参阅[SQL Server 中的签名存储过程](signing-stored-procedures-in-sql-server.md)。  
   
 ## <a name="external-resources"></a>外部资源  
  有关更多信息，请参见以下资源。  
@@ -60,7 +60,7 @@ ms.locfileid: "69961169"
   
 ## <a name="see-also"></a>请参阅
 
-- [保证 ADO.NET 应用程序的安全](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [SQL Server 安全性概述](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
-- [SQL Server 中的应用程序安全性方案](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
-- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [保证 ADO.NET 应用程序的安全](../securing-ado-net-applications.md)
+- [SQL Server 安全性概述](overview-of-sql-server-security.md)
+- [SQL Server 中的应用程序安全性方案](application-security-scenarios-in-sql-server.md)
+- [ADO.NET 概述](../ado-net-overview.md)

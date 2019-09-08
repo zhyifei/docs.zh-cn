@@ -5,20 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a60c30fa-1e68-45fe-b984-f6abb9ede40e
-ms.openlocfilehash: 1bba36579fce4fe78289ccb986073280b531420a
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 4df1653b7bd6865ad9f5d7d3fb9be6815dcfe018
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661877"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781016"
 ---
 # <a name="standard-query-operator-translation"></a>标准查询运算符转换
 
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 将标准查询运算符转换为 SQL 命令。 数据库的查询处理器决定了 SQL 转换的执行语义。
 
-标准查询运算符定义针对*序列*。 序列是*排序*和依赖于序列的每个元素的引用标识。 有关详细信息，请参阅[标准查询运算符概述 (C#)](../../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)或[标准查询运算符概述 (Visual Basic)](../../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)。
+标准查询运算符是针对*序列*定义的。 序列按顺序*排序*，并依赖于序列的每个元素的引用标识。 有关详细信息，请参阅[标准查询运算符概述C#（）](../../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)或[标准查询运算符概述（Visual Basic）](../../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)。
 
-SQL 主要处理*无序值集的*。 排序通常是显式声明的后续处理操作，应用于查询的最终结果而不是中间结果。 标识由值定义。 出于此原因，SQL 查询理解为处理多重集 (*袋*) 而不是*设置*。
+SQL 主要处理*值的无序集*。 排序通常是显式声明的后续处理操作，应用于查询的最终结果而不是中间结果。 标识由值定义。 出于此原因，可以理解 SQL 查询来处理多重集（*包*），而不是*设置*。
 
 以下各段介绍了标准查询运算符与其针对用于 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 的 SQL Server 提供程序的 SQL 转换结果之间的差异。
 
@@ -38,10 +38,10 @@ SQL 主要处理*无序值集的*。 排序通常是显式声明的后续处理�
 
 ### <a name="take-skip"></a>Take、Skip
 
-<xref:System.Linq.Enumerable.Take%2A> 并<xref:System.Linq.Enumerable.Skip%2A>方法是仅针对定义完善*有序集*。 未定义针对无序集或多重集的语义。
+<xref:System.Linq.Enumerable.Take%2A>仅<xref:System.Linq.Enumerable.Skip%2A>对*有序集*定义和方法。 未定义针对无序集或多重集的语义。
 
 > [!NOTE]
-> <xref:System.Linq.Enumerable.Take%2A> 和 <xref:System.Linq.Enumerable.Skip%2A> 用在针对 SQL Server 2000 的查询中时存在一定的限制。 有关详细信息，请参阅中的"Skip 和 Take 异常在 SQL Server 2000"条目[故障排除](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)。
+> <xref:System.Linq.Enumerable.Take%2A> 和 <xref:System.Linq.Enumerable.Skip%2A> 用在针对 SQL Server 2000 的查询中时存在一定的限制。 有关详细信息，请参阅[疑难解答](troubleshooting.md)中的 "跳过并使用 SQL Server 2000" 条目。
 
 由于 SQL 中的排序存在限制，因此 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 会设法将这些方法的参数的排序操作移到相应方法的结果中进行。 例如，请考虑下面这个 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 查询：
 
@@ -86,7 +86,7 @@ ORDER BY [t0].[CustomerID]
 
 ### <a name="null-semantics"></a>Null 语义
 
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 不会将 null 比较语义施加在 SQL 上。 比较运算符在语法上被转换为其 SQL 等效项。 因此，该语义反映了由服务器或连接设置定义的 SQL 语义。 例如，两个 null 值被视为默认 SQL Server 设置下不相等，但可以更改这些设置以更改语义。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 在转换查询时不考虑服务器设置。
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 不会将 null 比较语义施加在 SQL 上。 比较运算符在语法上被转换为其 SQL 等效项。 因此，该语义反映了由服务器或连接设置定义的 SQL 语义。 例如，在默认 SQL Server 设置下，两个 null 值被视为不相等，但您可以更改这些设置以更改语义。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 在转换查询时不考虑服务器设置。
 
 对文本型 null 的比较被转换为相应的 SQL 版本（`is null` 或 `is not null`）。
 
@@ -121,7 +121,7 @@ ORDER BY [t0].[CustomerID]
 
 - <xref:System.Linq.Enumerable.Except%2A>
 
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 支持相等性和比较*平面*参数，而不是或者包含序列的自变量。 平参数是一种能映射到 SQL 行的类型。 可以静态方式确定不包含序列的一个或多个实体类型的投影被视为平参数。
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]支持*平面*参数的相等性和比较，但不支持或包含序列的参数。 平参数是一种能映射到 SQL 行的类型。 可以静态方式确定不包含序列的一个或多个实体类型的投影被视为平参数。
 
 以下是平参数的一些示例：
 
@@ -158,7 +158,7 @@ Visual Basic 编译器使用的以下 Helper 函数转换为对应的 SQL 运算
 
 ### <a name="inheritance-mapping-restrictions"></a>继承映射限制
 
-有关详细信息，请参阅[如何：映射继承层次结构](../../../../../../docs/framework/data/adonet/sql/linq/how-to-map-inheritance-hierarchies.md)。
+有关详细信息，请参阅[如何：映射继承层次](how-to-map-inheritance-hierarchies.md)结构。
 
 ### <a name="inheritance-in-queries"></a>查询中的继承
 
@@ -184,7 +184,7 @@ Visual Basic 编译器使用的以下 Helper 函数转换为对应的 SQL 运算
 
 - `Sum`
 
-有关映射到这些 SQL Server 日期和时间类型的详细信息，请参阅[SQL-CLR 类型映射](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)。
+有关映射到这些 SQL Server 日期和时间类型的详细信息，请参阅[SQL-CLR 类型映射](sql-clr-type-mapping.md)。
 
 ## <a name="sql-server-2005-support"></a>SQL Server 2005 支持
 
@@ -198,33 +198,33 @@ Visual Basic 编译器使用的以下 Helper 函数转换为对应的 SQL 运算
 
 ## <a name="sql-server-2000-support"></a>SQL Server 2000 支持
 
-以下 SQL Server 2000 限制 （与 Microsoft SQL Server 2005 相比） 会影响[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]支持。
+以下 SQL Server 2000 限制（与 Microsoft SQL Server 2005 相比）影响[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]支持。
 
 ### <a name="cross-apply-and-outer-apply-operators"></a>Cross Apply 和 Outer Apply 运算符
 
-这些运算符不可用在 SQL Server 2000。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 设法通过一系列的重写来将它们替换为适当的联接。
+这些运算符在 SQL Server 2000 中不可用。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 设法通过一系列的重写来将它们替换为适当的联接。
 
-`Cross Apply` 和 `Outer Apply` 是为关系导航生成的。 可以进行这种重写的查询集定义不完善。 出于此原因，SQL Server 2000 支持的最小查询集是不涉及关系导航组。
+`Cross Apply` 和 `Outer Apply` 是为关系导航生成的。 可以进行这种重写的查询集定义不完善。 出于此原因，SQL Server 2000 支持的最小查询集是不涉及关系导航的集。
 
 ### <a name="text--ntext"></a>text / ntext
 
-数据类型`text`  /  `ntext`不能针对某些查询操作中使用`varchar(max)`  /  `nvarchar(max)`，这受支持的 Microsoft SQL Server 2005。
+数据类型`text`  /  不能`varchar(max)`用于对的某些 / 查询操作，这些操作受 Microsoft SQL Server 2005 的支持。 `nvarchar(max)` `ntext`
 
 不存在解决此限制的方法。 具体而言，您不能对包含映射到 `Distinct()` 或 `text` 列的成员的任何结果使用 `ntext`。
 
 ### <a name="behavior-triggered-by-nested-queries"></a>由嵌套查询触发的行为
 
-SQL Server 2000 （到 SP4) 联编程序具有由嵌套查询触发的一些特性。 触发这些特性的 SQL 查询集定义不完善。 因此，您不能定义可能会引发 SQL Server 异常的 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 查询集。
+SQL Server 2000 （到 SP4）联编程序具有由嵌套查询触发的一些特性。 触发这些特性的 SQL 查询集定义不完善。 因此，您不能定义可能会引发 SQL Server 异常的 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 查询集。
 
 ### <a name="skip-and-take-operators"></a>Skip 和 Take 运算符
 
-<xref:System.Linq.Enumerable.Take%2A> 和 <xref:System.Linq.Enumerable.Skip%2A> 用在针对 SQL Server 2000 的查询中时存在一定的限制。 有关详细信息，请参阅中的"Skip 和 Take 异常在 SQL Server 2000"条目[故障排除](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)。
+<xref:System.Linq.Enumerable.Take%2A> 和 <xref:System.Linq.Enumerable.Skip%2A> 用在针对 SQL Server 2000 的查询中时存在一定的限制。 有关详细信息，请参阅[疑难解答](troubleshooting.md)中的 "跳过并使用 SQL Server 2000" 条目。
 
 ## <a name="object-materialization"></a>对象具体化
 
 具体化过程用一个或多个 SQL 查询返回的行创建 CLR 对象。
 
-- 下面的调用都*本地执行*作为具体化过程的一部分：
+- 以下调用作为具体化的一部分在*本地执行*：
 
   - 构造函数
 
@@ -232,13 +232,13 @@ SQL Server 2000 （到 SP4) 联编程序具有由嵌套查询触发的一些特�
 
   - 投影中的类型强制转换
 
-- 方法，它们遵循<xref:System.Linq.Enumerable.AsEnumerable%2A>方法都*本地执行*。 此方法不会导致直接执行。
+- 遵循<xref:System.Linq.Enumerable.AsEnumerable%2A>方法的方法在*本地执行*。 此方法不会导致直接执行。
 
 - 您可以将 `struct` 用作查询结果的返回类型或结果类型的成员。 实体需要变成类。 匿名类型具体化为类的实例，但命名结构（非实体）可在投影中使用。
 
 - 查询结果的返回类型的成员可以为 <xref:System.Linq.IQueryable%601> 类型。 它具体化为本地集合。
 
-- 以下方法会导致*直接具体化*方法应用于序列的：
+- 下面的方法导致*直接具体化*将方法应用到的序列：
 
   - <xref:System.Linq.Enumerable.ToList%2A>
 
@@ -248,9 +248,9 @@ SQL Server 2000 （到 SP4) 联编程序具有由嵌套查询触发的一些特�
 
 ## <a name="see-also"></a>请参阅
 
-- [引用](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
-- [返回或跳过序列中的元素](../../../../../../docs/framework/data/adonet/sql/linq/return-or-skip-elements-in-a-sequence.md)
-- [连接两个序列](../../../../../../docs/framework/data/adonet/sql/linq/concatenate-two-sequences.md)
-- [返回两个序列之间的差集](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-difference-between-two-sequences.md)
-- [返回两个序列的交集](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-intersection-of-two-sequences.md)
-- [返回两个序列的并集](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-union-of-two-sequences.md)
+- [引用](reference.md)
+- [返回或跳过序列中的元素](return-or-skip-elements-in-a-sequence.md)
+- [连接两个序列](concatenate-two-sequences.md)
+- [返回两个序列之间的差集](return-the-set-difference-between-two-sequences.md)
+- [返回两个序列的交集](return-the-set-intersection-of-two-sequences.md)
+- [返回两个序列的并集](return-the-set-union-of-two-sequences.md)

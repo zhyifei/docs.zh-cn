@@ -1,6 +1,6 @@
 ---
-title: QualifierSet_Get 函数 （非托管 API 参考）
-description: QualifierSet_Get 函数获取指定的限定符。
+title: QualifierSet_Get 函数（非托管 API 参考）
+description: QualifierSet_Get 函数获取命名限定符。
 ms.date: 11/06/2017
 api_name:
 - QualifierSet_Get
@@ -16,14 +16,14 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 24ab27a8724107bac96c9fae695fb791b00bfa5e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 751694985248346187eff016ef7a4a8054cb1212
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782575"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798314"
 ---
-# <a name="qualifiersetget-function"></a>QualifierSet_Get 函数
+# <a name="qualifierset_get-function"></a>QualifierSet_Get 函数
 获取指定的命名限定符。  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
@@ -44,39 +44,39 @@ HRESULT QualifierSet_Get (
 ## <a name="parameters"></a>参数
 
 `vFunc`   
-[in]此参数是未使用。
+中此参数未使用。
 
 `ptr`   
-[in]一个指向[IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset)实例。
+中指向[IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset)实例的指针。
 
 `wszName`   
-[in]请求其值的限定符的名称。
+中请求其值的限定符的名称。
 
 `lFlags`   
-[in] 保留。 此参数必须为 0。
+[in] 保留。 此参数必须为0。
 
 `pVal`   
-[out]登录成功时，正确的类型和限定符值。 如果函数失败，`VARIANT`指向的`pVal`则不会修改。 如果此参数为`null`，将忽略此参数。
+弄如果成功，则为限定符的正确类型和值。 如果函数失败， `VARIANT`则不会修改指向的。 `pVal` 如果此参数为`null`，则忽略参数。
 
 `plFlavor`   
-[out]指向接收请求的限定符的限定符风格位长时间的指针。 如果不想风格的信息，此参数可以是`null`。 
+弄一个指向 LONG 的指针，它接收所请求限定符的限定符风格位。 如果不需要口味信息，此参数可以为`null`。 
 
 ## <a name="return-value"></a>返回值
 
-此函数返回以下值中定义*WbemCli.h*标头文件，也可以在定义它们为常量在代码中：
+此函数返回的以下值是在*WbemCli*头文件中定义的，也可以在代码中将它们定义为常量：
 
 |返回的常量  |值  |描述  |
 |---------|---------|---------|
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 参数不是有效的。 |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 参数无效。 |
 |`WBEM_E_NOT_FOUND` | 0x80041002 | 指定的限定符不存在。 |
 |`WBEM_S_NO_ERROR` | 0 | 函数调用成功。  |
   
 ## <a name="remarks"></a>备注
 
-此函数包装对的调用[IWbemQualifierSet::Get](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-get)方法。
+此函数包装对[IWbemQualifierSet：： Get](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-get)方法的调用。
 
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../get-started/system-requirements.md)。  
   
  **标头：** WMINet_Utils.idl  
   
@@ -84,4 +84,4 @@ HRESULT QualifierSet_Get (
   
 ## <a name="see-also"></a>请参阅
 
-- [WMI 和性能计数器 （非托管 API 参考）](index.md)
+- [WMI 和性能计数器（非托管 API 参考）](index.md)

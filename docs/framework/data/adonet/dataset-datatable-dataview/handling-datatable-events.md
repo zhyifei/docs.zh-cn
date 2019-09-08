@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 62f404a5-13ea-4b93-a29f-55b74a16c9d3
-ms.openlocfilehash: 146854b592dd83efe87c54e1f5f99f110b81c1a5
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 3edafa6c6a1bc3da2abc0598f329caf0e2f21e8b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203680"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786263"
 ---
 # <a name="handling-datatable-events"></a>处理数据表事件
 <xref:System.Data.DataTable> 对象提供一系列可以由应用程序处理的事件。 下表描述了 `DataTable` 事件。  
@@ -84,4 +84,4 @@ ms.locfileid: "70203680"
 - [操作数据表中的数据](manipulating-data-in-a-datatable.md)
 - [处理 DataAdapter 事件](../handling-dataadapter-events.md)
 - [处理数据集事件](handling-dataset-events.md)
-- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 概述](../ado-net-overview.md)

@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c2b84dfe-7fec-489a-92de-45215cec4518
-ms.openlocfilehash: 22614be8e53d975c4efdf7004f41906c58639c61
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d32faf026789923ca4343271c9fd1b6bbdb068df
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938697"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793091"
 ---
 # <a name="how-to-use-stored-procedures-mapped-for-multiple-result-shapes"></a>如何：使用针对多个结果形状映射的存储过程
 当存储过程可以返回多个结果形状时，返回类型无法强类型化为单个投影形状。 尽管 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 可以生成所有可能的投影类型，但它无法获知将以何种顺序返回它们。  
   
- 请将这种情况与按顺序产生多个结果形状的存储过程作一个对比。 有关详细信息，请参阅[如何：使用为顺序结果形状](../../../../../../docs/framework/data/adonet/sql/linq/how-to-use-stored-procedures-mapped-for-sequential-result-shapes.md)映射的存储过程。  
+ 请将这种情况与按顺序产生多个结果形状的存储过程作一个对比。 有关详细信息，请参阅[如何：使用为顺序结果形状](how-to-use-stored-procedures-mapped-for-sequential-result-shapes.md)映射的存储过程。  
   
  <xref:System.Data.Linq.Mapping.ResultTypeAttribute> 属性适用于返回多个结果类型的存储过程，用以指定该过程可以返回的类型的集合。  
   
@@ -45,4 +45,4 @@ else if(@shape = 2)
   
 ## <a name="see-also"></a>请参阅
 
-- [存储过程](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)
+- [存储过程](stored-procedures.md)

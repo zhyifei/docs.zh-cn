@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1b97afeb-03f8-41e2-8eb3-58aff65f7d18
-ms.openlocfilehash: 88abd0e5b7f56702c7a7009842253d3ca552d01f
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: 4b95ec5a3e83fa5553a154ed64704312726153cf
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67504200"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785631"
 ---
 # <a name="creating-a-datatable-from-a-query-linq-to-dataset"></a>从查询创建数据表 (LINQ to DataSet)
 数据绑定是 <xref:System.Data.DataTable> 对象的一种常用形式。 <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> 方法接收查询结果并将数据复制到 <xref:System.Data.DataTable> 中，后者随后会使用该数据进行数据绑定。 在执行数据操作后，新的 <xref:System.Data.DataTable> 将合并回源 <xref:System.Data.DataTable>。  
   
  <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> 方法使用下面的过程来通过查询创建 <xref:System.Data.DataTable>：  
   
-1. <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> 方法克隆源表中的 <xref:System.Data.DataTable>（实现 <xref:System.Data.DataTable> 接口的 <xref:System.Linq.IQueryable%601> 对象）。 <xref:System.Collections.IEnumerable>源数据集表达式或方法查询通常来源从 LINQ。  
+1. <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> 方法克隆源表中的 <xref:System.Data.DataTable>（实现 <xref:System.Data.DataTable> 接口的 <xref:System.Linq.IQueryable%601> 对象）。 <xref:System.Collections.IEnumerable>源通常源自 LINQ to DataSet 表达式或方法查询。  
   
 2. 克隆的 <xref:System.Data.DataTable> 的架构从源表中枚举的第一个 <xref:System.Data.DataRow> 对象的列生成，克隆表的名称是源表的名称后面追加单词“query”。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "67504200"
  [!code-vb[DP LINQ to DataSet Examples#CopyToDataTable1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#copytodatatable1)]  
   
 ## <a name="creating-a-custom-copytodatatablet-method"></a>创建自定义 CopyToDataTable\<T > 方法  
- 仅在 <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> 源上（其中泛型参数 <xref:System.Collections.Generic.IEnumerable%601> 类型为 `T`）执行现有 <xref:System.Data.DataRow> 方法。 虽然这十分有用，但是它并不允许从标量类型的序列、返回匿名类型的查询或执行表联接的查询来创建表。 有关如何实现两个自定义的示例`CopyToDataTable`方法从标量或匿名类型序列加载表，请参阅[如何：实现 CopyToDataTable\<T > 的泛型类型 T 不是 DataRow](../../../../docs/framework/data/adonet/implement-copytodatatable-where-type-not-a-datarow.md)s。  
+ 仅在 <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> 源上（其中泛型参数 <xref:System.Collections.Generic.IEnumerable%601> 类型为 `T`）执行现有 <xref:System.Data.DataRow> 方法。 虽然这十分有用，但是它并不允许从标量类型的序列、返回匿名类型的查询或执行表联接的查询来创建表。 有关如何实现两个自定义`CopyToDataTable`方法（这些方法从标量或匿名类型的序列加载表）的示例，请参阅[如何：实现 CopyToDataTable\<T >，其中泛型类型 t 不是 DataRow](implement-copytodatatable-where-type-not-a-datarow.md)。  
   
  本节的示例使用以下自定义类型：  
   
@@ -76,6 +76,6 @@ ms.locfileid: "67504200"
   
 ## <a name="see-also"></a>请参阅
 
-- [编程指南](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)
-- [泛型字段和 SetField 方法](../../../../docs/framework/data/adonet/generic-field-and-setfield-methods-linq-to-dataset.md)
-- [LINQ to DataSet 示例](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)
+- [编程指南](programming-guide-linq-to-dataset.md)
+- [泛型字段和 SetField 方法](generic-field-and-setfield-methods-linq-to-dataset.md)
+- [LINQ to DataSet 示例](linq-to-dataset-examples.md)

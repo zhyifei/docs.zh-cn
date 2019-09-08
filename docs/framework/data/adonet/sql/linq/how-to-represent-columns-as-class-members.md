@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7ab28021-4d15-4d9c-bf2e-6ccc0daa7d1a
-ms.openlocfilehash: 009da2579a6fe15cea3913ae5844fc886da2586c
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: 515a8477b3a9c72934e0ad11d7b1bf599e8b16a2
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64910747"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793516"
 ---
 # <a name="how-to-represent-columns-as-class-members"></a>如何：将列表示为类成员
-使用[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<xref:System.Data.Linq.Mapping.ColumnAttribute>属性来将字段或属性与数据库列相关联。  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 使用属性可将字段或属性<xref:System.Data.Linq.Mapping.ColumnAttribute>与数据库列关联。  
   
 ### <a name="to-map-a-field-or-property-to-a-database-column"></a>将字段或属性映射到数据库列  
   
@@ -29,5 +29,5 @@ ms.locfileid: "64910747"
   
 ## <a name="see-also"></a>请参阅
 
-- [LINQ to SQL 对象模型](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)
-- [如何：通过使用代码编辑器自定义实体类](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)
+- [LINQ to SQL 对象模型](the-linq-to-sql-object-model.md)
+- [如何：使用代码编辑器自定义实体类](how-to-customize-entity-classes-by-using-the-code-editor.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 81a31acd-e0f1-4bca-9a12-fa1ad5752374
-ms.openlocfilehash: 75cb5ea166c36de5c0921fbbd830021719497cda
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a5c32afc913443787ad8371f31f1fe330b126398
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963862"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70792756"
 ---
 # <a name="return-or-skip-elements-in-a-sequence"></a>返回或跳过序列中的元素
 使用 <xref:System.Linq.Queryable.Take%2A> 运算符可返回序列中给定数目的元素，然后跳过其余元素。  
@@ -18,7 +18,7 @@ ms.locfileid: "69963862"
  使用 <xref:System.Linq.Queryable.Skip%2A> 运算符可跳过序列中给定数目的元素，然后返回其余元素。  
   
 > [!NOTE]
-> <xref:System.Linq.Enumerable.Take%2A> 和 <xref:System.Linq.Enumerable.Skip%2A> 用在针对 SQL Server 2000 的查询中时存在一定的限制。 有关详细信息, 请参阅[疑难解答](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)中的 "跳过并使用 SQL Server 2000" 条目。  
+> <xref:System.Linq.Enumerable.Take%2A> 和 <xref:System.Linq.Enumerable.Skip%2A> 用在针对 SQL Server 2000 的查询中时存在一定的限制。 有关详细信息，请参阅[疑难解答](troubleshooting.md)中的 "跳过并使用 SQL Server 2000" 条目。  
   
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 通过使用带有 SQL <xref:System.Linq.Queryable.Skip%2A> 子句的子查询来转换 `NOT EXISTS`。 这种转换存在以下局限性：  
   
@@ -49,9 +49,9 @@ ms.locfileid: "69963862"
  由于 SQL 中的排序存在限制，因此 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 会设法将 <xref:System.Linq.Queryable.Take%2A> 或 <xref:System.Linq.Queryable.Skip%2A> 运算符的参数的排序操作移到相应运算符的结果中进行。  
   
 > [!NOTE]
-> SQL Server 2000 和 SQL Server 2005 的转换不同。 如果你计划将与<xref:System.Linq.Queryable.Skip%2A>查询结合使用, 请使用 SQL Server 2005。  
+> SQL Server 2000 和 SQL Server 2005 的转换不同。 如果你计划将与<xref:System.Linq.Queryable.Skip%2A>查询结合使用，请使用 SQL Server 2005。  
   
- 对于 SQL Server 2000 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] , 请考虑以下查询:  
+ 对于 SQL Server 2000 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ，请考虑以下查询：  
   
  [!code-csharp[DLinqQueryExamples#19](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#19)]
  [!code-vb[DLinqQueryExamples#19](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#19)]  
@@ -80,5 +80,5 @@ ORDER BY [t0].[CustomerID]
   
 ## <a name="see-also"></a>请参阅
 
-- [查询示例](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
-- [标准查询运算符转换](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)
+- [查询示例](query-examples.md)
+- [标准查询运算符转换](standard-query-operator-translation.md)

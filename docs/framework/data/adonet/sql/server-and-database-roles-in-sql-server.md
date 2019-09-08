@@ -2,12 +2,12 @@
 title: SQL Server 中的服务器和数据库角色
 ms.date: 03/30/2017
 ms.assetid: 5482dfdb-e498-4614-8652-b174829eed13
-ms.openlocfilehash: 97ad04b1d081e5635104bdadb2d1a54402ffcca2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f3e31aa67bfbaa541d8d1eb5b8b61dfd28182c72
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69961112"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70791781"
 ---
 # <a name="server-and-database-roles-in-sql-server"></a>SQL Server 中的服务器和数据库角色
 所有版本的 SQL Server 均使用基于角色的安全，它允许您为角色、用户组而不是各个用户分配权限。 固定服务器和固定数据库角色具有分配给它们的一组固定的权限。  
@@ -18,7 +18,7 @@ ms.locfileid: "69961112"
 > [!IMPORTANT]
 > `sysadmin` 固定服务器角色包含所有其他角色并且具有无限范围。 请不要将这些主体添加到此角色，除非它们是高度信任的。 `sysadmin` 角色成员对所有服务器数据库和资源有不可撤消的管理特权。  
   
- 将用户添加到固定服务器角色时，请仔细选择。 例如，`bulkadmin` 角色允许用户将任意本地文件的内容插入表中，这样可能会损坏数据的完整性。 有关固定服务器角色和权限的完整列表, 请参阅 SQL Server 联机丛书。  
+ 将用户添加到固定服务器角色时，请仔细选择。 例如，`bulkadmin` 角色允许用户将任意本地文件的内容插入表中，这样可能会损坏数据的完整性。 有关固定服务器角色和权限的完整列表，请参阅 SQL Server 联机丛书。  
   
 ## <a name="fixed-database-roles"></a>固定数据库角色  
  固定数据库角色具有一组预定义的权限，这些权限旨在允许您轻松管理权限组。 `db_owner` 角色的成员可对数据库执行所有配置和维护活动。  
@@ -42,7 +42,7 @@ ms.locfileid: "69961112"
  `dbo` 或数据库所有者是具有在数据库中执行所有活动的默示权限的用户帐户。 `sysadmin` 固定服务器角色的成员会自动映射到 `dbo`。  
   
 > [!NOTE]
-> `dbo`也是架构的名称, 如[SQL Server 中的所有权和用户架构分离](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)中所述。  
+> `dbo`也是架构的名称，如[SQL Server 中的所有权和用户架构分离](ownership-and-user-schema-separation-in-sql-server.md)中所述。  
   
  `dbo` 用户帐户经常与 `db_owner` 固定数据库角色相混淆。 `db_owner` 的作用域是一个数据库；`sysadmin` 的作用域是整个服务器。 `db_owner` 角色中的成员无法授予 `dbo` 用户特权。  
   
@@ -63,9 +63,9 @@ ms.locfileid: "69961112"
   
 ## <a name="see-also"></a>请参阅
 
-- [保证 ADO.NET 应用程序的安全](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [SQL Server 中的应用程序安全性方案](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
-- [SQL Server 中的身份验证](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)
-- [SQL Server 中的所有权和用户架构分离](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)
-- [SQL Server 中的授权和权限](../../../../../docs/framework/data/adonet/sql/authorization-and-permissions-in-sql-server.md)
-- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [保证 ADO.NET 应用程序的安全](../securing-ado-net-applications.md)
+- [SQL Server 中的应用程序安全性方案](application-security-scenarios-in-sql-server.md)
+- [SQL Server 中的身份验证](authentication-in-sql-server.md)
+- [SQL Server 中的所有权和用户架构分离](ownership-and-user-schema-separation-in-sql-server.md)
+- [SQL Server 中的授权和权限](authorization-and-permissions-in-sql-server.md)
+- [ADO.NET 概述](../ado-net-overview.md)

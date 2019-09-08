@@ -16,18 +16,18 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6ba049723710b378a90d17c67735a05e8a09d05d
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 59b4df08157ce14a58393e54b671e8f41b8998ed
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636852"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799233"
 ---
 # <a name="gethashfromblob-function"></a>GetHashFromBlob 函数
 
 使用指定的哈希算法获取指定内存地址处的程序集的哈希。
 
-此函数已弃用。 使用[iclrstrongname:: Gethashfromblob](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromblob-method.md)方法相反。
+此函数已弃用。 改为使用[ICLRStrongName：： GetHashFromBlob](../hosting/iclrstrongname-gethashfromblob-method.md)方法。
 
 ## <a name="syntax"></a>语法
 
@@ -45,32 +45,32 @@ HRESULT GetHashFromBlob (
 ## <a name="parameters"></a>参数
 
 `pbBlob`\
-[in]指向要进行哈希处理的内存块的地址的指针。
+中一个指针，指向要进行哈希处理的内存块的地址。
 
 `cchBlob`\
-[in]内存块的长度，以字节为单位。
+中内存块的长度（以字节为单位）。
 
 `piHashAlg`\
-[in、 out]一个常量，它指定哈希算法。 使用默认的算法为零。
+[in，out]指定哈希算法的常量。 对于默认算法，使用零。
 
 `pbHash`\
-[out]返回的哈希缓冲区中。
+弄返回的哈希缓冲区。
 
 `cchHash`\
-[in]请求的最大大小的`pbHash`。
+中请求的最大大小`pbHash`。
 
 `pchHash`\
-[out]大小 （字节），则返回的`pbHash`。
+弄返回`pbHash`的的大小（以字节为单位）。
 
 ## <a name="requirements"></a>要求
 
-**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。
+**适用**请参阅[系统需求](../../get-started/system-requirements.md)。
 
-**标头：** StrongName.h
+**标头：** Stackexchange.redis.strongname
 
-**库：** 包含为 MsCorEE.dll 中的资源
+**类库**作为资源包括在 Mscoree.dll 中
 
-**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
 
 ## <a name="see-also"></a>请参阅
 

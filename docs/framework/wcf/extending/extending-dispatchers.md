@@ -4,29 +4,29 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - dispatcher extensions [WCF]
 ms.assetid: d0ad15ac-fa12-4f27-80e8-7ac2271e5985
-ms.openlocfilehash: 4eb96eaf409fd34e9b10a469ed31fbbe18ebac5e
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 9250ca09fb5e28655e39f8d91d991fdb3bffcdbd
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70046000"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795743"
 ---
 # <a name="extending-dispatchers"></a>扩展调度程序
 调度程序负责从基础通道提取出传入的消息，将它们翻译成应用程序代码形式的方法调用，并将结果发送回调用方。 调度程序扩展允许您修改此过程。  您可以实现消息或参数检查器，用来检查或修改消息或参数的内容。  您也可以更改将消息路由到操作的方式或提供其他功能。
 
-本主题介绍如何在 Windows Communication Foundation ( <xref:System.ServiceModel.Dispatcher.DispatchRuntime> WCF <xref:System.ServiceModel.Dispatcher.DispatchOperation> ) 服务应用程序中使用和类来修改调度程序的默认执行行为, 或截获或修改消息、参数或返回在从通道层发送或检索它们之前或之后的值。 有关等效的客户端运行时消息处理的详细信息, 请参阅[扩展客户端](../../../../docs/framework/wcf/extending/extending-clients.md)。 若要了解<xref:System.ServiceModel.IExtensibleObject%601>类型在不同运行时自定义对象之间访问共享状态时所扮演的角色, 请参阅[可扩展对象](../../../../docs/framework/wcf/extending/extensible-objects.md)。
+本主题介绍如何在 Windows Communication Foundation （ <xref:System.ServiceModel.Dispatcher.DispatchRuntime> WCF <xref:System.ServiceModel.Dispatcher.DispatchOperation> ）服务应用程序中使用和类来修改调度程序的默认执行行为，或截获或修改消息、参数或返回在从通道层发送或检索它们之前或之后的值。 有关等效的客户端运行时消息处理的详细信息，请参阅[扩展客户端](extending-clients.md)。 若要了解<xref:System.ServiceModel.IExtensibleObject%601>类型在不同运行时自定义对象之间访问共享状态时所扮演的角色，请参阅[可扩展对象](extensible-objects.md)。
 
 ## <a name="dispatchers"></a>调度程序
 
-服务模型层执行开发人员的编程模型与基础消息交换（通常称为通道层）之间的转换。 在 WCF 中, 通道和终结点<xref:System.ServiceModel.Dispatcher.ChannelDispatcher>调度<xref:System.ServiceModel.Dispatcher.EndpointDispatcher>程序 (和分别) 是负责接受新通道、接收消息、操作调度和调用以及响应处理的服务组件。 调度程序对象是接收方对象，但双工服务中的回调协定实现还公开其用于检查、修改或扩展的调度程序对象。
+服务模型层执行开发人员的编程模型与基础消息交换（通常称为通道层）之间的转换。 在 WCF 中，通道和终结点<xref:System.ServiceModel.Dispatcher.ChannelDispatcher>调度<xref:System.ServiceModel.Dispatcher.EndpointDispatcher>程序（和分别）是负责接受新通道、接收消息、操作调度和调用以及响应处理的服务组件。 调度程序对象是接收方对象，但双工服务中的回调协定实现还公开其用于检查、修改或扩展的调度程序对象。
 
 通道调度程序（和伴随 <xref:System.ServiceModel.Channels.IChannelListener>）从基础通道中提取出消息，然后将消息传递到各自的终结点调用程序。 每个终结点调度程序都有一个 <xref:System.ServiceModel.Dispatcher.DispatchRuntime>，用于将消息路由到相应的、负责调用实现操作的方法的 <xref:System.ServiceModel.Dispatcher.DispatchOperation>。 在此过程中，将会调用各种可选的和必选的扩展类。 本主题说明这些部分如何组合在一起，以及如何修改属性和插入自己的代码以扩展基本功能。
 
-通过使用服务、终结点、协定或操作行为对象插入调度程序属性和修改的自定义对象。 本主题不介绍如何使用行为。 有关用于插入调度程序修改的类型的详细信息, 请参阅[使用行为配置和扩展运行时](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)。
+通过使用服务、终结点、协定或操作行为对象插入调度程序属性和修改的自定义对象。 本主题不介绍如何使用行为。 有关用于插入调度程序修改的类型的详细信息，请参阅[使用行为配置和扩展运行时](configuring-and-extending-the-runtime-with-behaviors.md)。
 
 下图提供了服务中的体系结构项的高级别视图。
 
-![调度运行时体系结构](../../../../docs/framework/wcf/extending/media/wcfc-dispatchruntimearchc.gif "wcfc_DispatchRuntimeArchc")
+![调度运行时体系结构](./media/wcfc-dispatchruntimearchc.gif "wcfc_DispatchRuntimeArchc")
 
 ### <a name="channel-dispatchers"></a>通道调度程序
 
@@ -44,30 +44,30 @@ ms.locfileid: "70046000"
 
 可以有很多理由来扩展调度程序：
 
-- 自定义消息验证。 用户可以强制消息对某个架构有效。 这可以通过实现消息拦截器接口来完成。 有关示例, 请参阅[消息检查](../../../../docs/framework/wcf/samples/message-inspectors.md)器。
+- 自定义消息验证。 用户可以强制消息对某个架构有效。 这可以通过实现消息拦截器接口来完成。 有关示例，请参阅[消息检查](../samples/message-inspectors.md)器。
 
 - 自定义消息日志记录。 用户可以检查并记录流过某个终结点的应用程序消息集。 此操作也可以使用消息拦截器接口完成。
 
 - 自定义消息转换。 用户可以在运行时对消息应用某些转换（例如，用于版本控制）。 此操作也可以使用消息拦截器接口完成。
 
-- 自定义数据模型。 用户可以使用 WCF 中默认支持的数据序列化模型 (即<xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>、、和原始消息)。 这可以通过实现消息格式化程序接口来完成。 有关示例, 请参阅[操作格式化程序和操作选择器](../../../../docs/framework/wcf/samples/operation-formatter-and-operation-selector.md)。
+- 自定义数据模型。 用户可以使用 WCF 中默认支持的数据序列化模型（即<xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>、、和原始消息）。 这可以通过实现消息格式化程序接口来完成。 有关示例，请参阅[操作格式化程序和操作选择器](../samples/operation-formatter-and-operation-selector.md)。
 
 - 自定义参数验证。 用户可以强制类型化参数有效（与 XML 相对）。 可以使用参数检查器来完成此操作。
 
-- 自定义操作调度。 用户可以对操作之外的内容（例如，对正文元素或自定义消息属性）实现调度。 这可以使用 <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> 接口来完成。 有关示例, 请参阅[操作格式化程序和操作选择器](../../../../docs/framework/wcf/samples/operation-formatter-and-operation-selector.md)。
+- 自定义操作调度。 用户可以对操作之外的内容（例如，对正文元素或自定义消息属性）实现调度。 这可以使用 <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> 接口来完成。 有关示例，请参阅[操作格式化程序和操作选择器](../samples/operation-formatter-and-operation-selector.md)。
 
-- 对象池。 用户可以将实例放入池中，而不是为每个调用分配一个新的实例。 这可以使用实例提供程序接口来实现。 有关示例, 请参阅[Pooling](../../../../docs/framework/wcf/samples/pooling.md)。
+- 对象池。 用户可以将实例放入池中，而不是为每个调用分配一个新的实例。 这可以使用实例提供程序接口来实现。 有关示例，请参阅[Pooling](../samples/pooling.md)。
 
 - 实例租约。 用户可以实现实例生存期的租约模式，类似于 .NET Framework 远程处理的租约模式。 这可以使用实例上下文生存期接口来完成。
 
 - 自定义错误处理。 用户可以控制如何处理两个本地错误以及如何将错误发送回客户端。 这可以使用 <xref:System.ServiceModel.Dispatcher.IErrorHandler> 接口来实现。
 
-- 自定义授权行为。 通过扩展“协定”或“操作”的运行时部分并添加基于消息中呈现的标记的安全检查，用户可以实现自定义访问控制。 这可以使用消息拦截器接口或参数拦截器接口来完成。 有关示例, 请参阅[安全扩展性](../../../../docs/framework/wcf/samples/security-extensibility.md)。
+- 自定义授权行为。 通过扩展“协定”或“操作”的运行时部分并添加基于消息中呈现的标记的安全检查，用户可以实现自定义访问控制。 这可以使用消息拦截器接口或参数拦截器接口来完成。 有关示例，请参阅[安全扩展性](../samples/security-extensibility.md)。
 
   > [!CAUTION]
-  > 由于更改安全属性有可能危害 WCF 应用程序的安全性, 因此强烈建议您在部署之前, 请注意和全面测试来执行与安全相关的修改。
+  > 由于更改安全属性有可能危害 WCF 应用程序的安全性，因此强烈建议您在部署之前，请注意和全面测试来执行与安全相关的修改。
 
-- 自定义 WCF 运行时验证程序。 可以安装用于检查服务、协定和绑定的自定义验证程序, 以便对 WCF 应用程序强制实施企业级策略。 (例如, 请参阅[如何:锁定企业](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md)中的终结点。)
+- 自定义 WCF 运行时验证程序。 可以安装用于检查服务、协定和绑定的自定义验证程序，以便对 WCF 应用程序强制实施企业级策略。 （例如，请参阅[如何：锁定企业](how-to-lock-down-endpoints-in-the-enterprise.md)中的终结点。）
 
 ### <a name="using-the-dispatchruntime-class"></a>使用 DispatchRuntime 类
 
@@ -137,6 +137,6 @@ ms.locfileid: "70046000"
 
 - <xref:System.ServiceModel.Dispatcher.DispatchRuntime>
 - <xref:System.ServiceModel.Dispatcher.DispatchOperation>
-- [如何：检查和修改服务上的消息](../../../../docs/framework/wcf/extending/how-to-inspect-and-modify-messages-on-the-service.md)
-- [如何：检查或修改参数](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-parameters.md)
-- [如何：锁定企业中的终结点](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md)
+- [如何：检查和修改服务上的消息](how-to-inspect-and-modify-messages-on-the-service.md)
+- [如何：检查或修改参数](how-to-inspect-or-modify-parameters.md)
+- [如何：锁定企业中的终结点](how-to-lock-down-endpoints-in-the-enterprise.md)

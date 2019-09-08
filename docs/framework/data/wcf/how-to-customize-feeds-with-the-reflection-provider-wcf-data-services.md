@@ -1,5 +1,5 @@
 ---
-title: 如何：使用反射提供程序 （WCF 数据服务） 自定义源
+title: 如何：通过反射提供程序自定义源（WCF 数据服务）
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,17 +8,17 @@ helpviewer_keywords:
 - WCF Data Services, customizing
 - WCF Data Services, customizing feeds
 ms.assetid: 00c23dcf-9bb8-459a-a012-6c4d9bcad7e9
-ms.openlocfilehash: f09c9827498dfd6b85a8476e824d06bfb481d1f8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 43f46729ba84356bcb6507779bef9e4fd35bc315
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876546"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70790672"
 ---
-# <a name="how-to-customize-feeds-with-the-reflection-provider-wcf-data-services"></a>如何：使用反射提供程序 （WCF 数据服务） 自定义源
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 使您可以在数据服务响应中自定义 Atom 序列化，以便可以将实体属性映射到在 AtomPub 协议中定义的未使用的元素。 本主题演示如何为使用反射提供程序定义的数据模型中的实体类型定义映射特性。 有关详细信息，请参阅[馈送的自定义](../../../../docs/framework/data/wcf/feed-customization-wcf-data-services.md)。  
+# <a name="how-to-customize-feeds-with-the-reflection-provider-wcf-data-services"></a>如何：通过反射提供程序自定义源（WCF 数据服务）
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 使您可以在数据服务响应中自定义 Atom 序列化，以便可以将实体属性映射到在 AtomPub 协议中定义的未使用的元素。 本主题演示如何为使用反射提供程序定义的数据模型中的实体类型定义映射特性。 有关详细信息，请参阅[源自定义](feed-customization-wcf-data-services.md)。  
   
- 主题中定义此示例中的数据模型[如何：创建数据服务使用反射提供程序](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md)  
+ 本示例的数据模型在主题[how to：使用反射提供程序创建数据服务](create-a-data-service-using-rp-wcf-data-services.md)  
   
 ## <a name="example"></a>示例  
  在以下示例中，`Order` 类型的两个属性均映射到现有的 Atom 元素。 `Product` 类型的 `Item` 属性映射到单独的命名空间中的自定义源特性。  
@@ -33,4 +33,4 @@ ms.locfileid: "61876546"
   
 ## <a name="see-also"></a>请参阅
 
-- [反射提供程序](../../../../docs/framework/data/wcf/reflection-provider-wcf-data-services.md)
+- [反射提供程序](reflection-provider-wcf-data-services.md)

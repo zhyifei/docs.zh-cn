@@ -2,18 +2,18 @@
 title: OLE DB 架构集合
 ms.date: 03/30/2017
 ms.assetid: 6380c36b-658e-4d67-91e8-7131ef4a7c2c
-ms.openlocfilehash: 6c3441e86d4c5267418cf8002ba17d539c464d5c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2d5718c12100ebea49a6b6fab29a3790918c6ad3
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645900"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70783446"
 ---
 # <a name="ole-db-schema-collections"></a>OLE DB 架构集合
 本节讨论对适用于 Microsoft SQL Server、Oracle 和 Microsoft Jet 的 OLE DB 提供程序的架构集合支持  
   
 ## <a name="microsoft-sql-server-ole-db-provider"></a>Microsoft SQL Server OLE DB 提供程序  
- Microsoft SQL Server OLE DB 驱动程序还支持下列特定的架构集合除了通用架构集合：  
+ 除了通用架构集合之外，Microsoft SQL Server OLE DB 驱动程序还支持下列特定的架构集合：  
   
 - 表  
   
@@ -35,7 +35,7 @@ ms.locfileid: "64645900"
 |TABLE_SCHEMA|String|  
 |TABLE_NAME|String|  
 |TABLE_TYPE|String|  
-|TABLE_GUID|GUID|  
+|TABLE_GUID|Guid|  
 |描述|String|  
 |TABLE_PROPID|Int64|  
 |DATE_CREATED|DateTime|  
@@ -49,7 +49,7 @@ ms.locfileid: "64645900"
 |TABLE_SCHEMA|String|  
 |TABLE_NAME|String|  
 |COLUMN_NAME|String|  
-|COLUMN_GUID|GUID|  
+|COLUMN_GUID|Guid|  
 |COLUMN_PROPID|Int64|  
 |ORDINAL_POSITION|Int64|  
 |COLUMN_HASDEFAULT|Boolean|  
@@ -57,7 +57,7 @@ ms.locfileid: "64645900"
 |COLUMN_FLAGS|Int64|  
 |IS_NULLABLE|Boolean|  
 |DATA_TYPE|Int32|  
-|TYPE_GUID|GUID|  
+|TYPE_GUID|Guid|  
 |CHARACTER_MAXIMUM_LENGTH|Int64|  
 |CHARACTER_OCTET_LENGTH|Int64|  
 |NUMERIC_PRECISION|Int32|  
@@ -143,10 +143,10 @@ ms.locfileid: "64645900"
 |NULL_COLLATION|Int32|  
 |ORDINAL_POSITION|Int64|  
 |COLUMN_NAME|String|  
-|COLUMN_GUID|GUID|  
+|COLUMN_GUID|Guid|  
 |COLUMN_PROPID|Int64|  
 |COLLATION|Int16|  
-|CARDINALITY|十进制|  
+|CARDINALITY|Decimal|  
 |PAGES|Int32|  
 |FILTER_CONDITION|String|  
 |INTEGRATED|Boolean|  
@@ -176,7 +176,7 @@ ms.locfileid: "64645900"
 |TABLE_SCHEMA|String|  
 |TABLE_NAME|String|  
 |TABLE_TYPE|String|  
-|TABLE_GUID|GUID|  
+|TABLE_GUID|Guid|  
 |描述|String|  
 |TABLE_PROPID|Int64|  
 |DATE_CREATED|DateTime|  
@@ -190,7 +190,7 @@ ms.locfileid: "64645900"
 |TABLE_SCHEMA|String|  
 |TABLE_NAME|String|  
 |COLUMN_NAME|String|  
-|COLUMN_GUID|GUID|  
+|COLUMN_GUID|Guid|  
 |COLUMN_PROPID|Int64|  
 |ORDINAL_POSITION|Int64|  
 |COLUMN_HASDEFAULT|Boolean|  
@@ -198,7 +198,7 @@ ms.locfileid: "64645900"
 |COLUMN_FLAGS|Int64|  
 |IS_NULLABLE|Boolean|  
 |DATA_TYPE|Int32|  
-|TYPE_GUID|GUID|  
+|TYPE_GUID|Guid|  
 |CHARACTER_MAXIMUM_LENGTH|Int64|  
 |CHARACTER_OCTET_LENGTH|Int64|  
 |NUMERIC_PRECISION|Int32|  
@@ -236,13 +236,13 @@ ms.locfileid: "64645900"
 |PROCEDURE_SCHEMA|String|  
 |PROCEDURE_NAME|String|  
 |COLUMN_NAME|String|  
-|COLUMN_GUID|GUID|  
+|COLUMN_GUID|Guid|  
 |COLUMN_PROPID|Int64|  
 |ROWSET_NUMBER|Int64|  
 |ORDINAL_POSITION|Int64|  
 |IS_NULLABLE|Boolean|  
 |DATA_TYPE|Int32|  
-|TYPE_GUID|GUID|  
+|TYPE_GUID|Guid|  
 |CHARACTER_MAXIMUM_LENGTH|Int64|  
 |CHARACTER_OCTET_LENGTH|Int64|  
 |NUMERIC_PRECISION|Int32|  
@@ -286,15 +286,15 @@ ms.locfileid: "64645900"
 |NULL_COLLATION|Int32|  
 |ORDINAL_POSITION|Int64|  
 |COLUMN_NAME|String|  
-|COLUMN_GUID|GUID|  
+|COLUMN_GUID|Guid|  
 |COLUMN_PROPID|Int64|  
 |COLLATION|Int16|  
-|CARDINALITY|十进制|  
+|CARDINALITY|Decimal|  
 |PAGES|Int32|  
 |FILTER_CONDITION|String|  
 |INTEGRATED|Boolean|  
   
-## <a name="microsoft-jet-ole-db-provider"></a>Microsoft Jet OLE DB       
+## <a name="microsoft-jet-ole-db-provider"></a>Microsoft Jet OLE DB  
  除了通用架构集合之外，Microsoft Jet OLE DB 驱动程序还支持下列特定的架构集合：  
   
 - 表  
@@ -315,7 +315,7 @@ ms.locfileid: "64645900"
 |TABLE_SCHEMA|String|  
 |TABLE_NAME|String|  
 |TABLE_TYPE|String|  
-|TABLE_GUID|GUID|  
+|TABLE_GUID|Guid|  
 |描述|String|  
 |TABLE_PROPID|Int64|  
 |DATE_CREATED|DateTime|  
@@ -329,7 +329,7 @@ ms.locfileid: "64645900"
 |TABLE_SCHEMA|String|  
 |TABLE_NAME|String|  
 |COLUMN_NAME|String|  
-|COLUMN_GUID|GUID|  
+|COLUMN_GUID|Guid|  
 |COLUMN_PROPID|Int64|  
 |ORDINAL_POSITION|Int64|  
 |COLUMN_HASDEFAULT|Boolean|  
@@ -337,7 +337,7 @@ ms.locfileid: "64645900"
 |COLUMN_FLAGS|Int64|  
 |IS_NULLABLE|Boolean|  
 |DATA_TYPE|Int32|  
-|TYPE_GUID|GUID|  
+|TYPE_GUID|Guid|  
 |CHARACTER_MAXIMUM_LENGTH|Int64|  
 |CHARACTER_OCTET_LENGTH|Int64|  
 |NUMERIC_PRECISION|Int32|  
@@ -403,14 +403,14 @@ ms.locfileid: "64645900"
 |NULL_COLLATION|Int32|  
 |ORDINAL_POSITION|Int64|  
 |COLUMN_NAME|String|  
-|COLUMN_GUID|GUID|  
+|COLUMN_GUID|Guid|  
 |COLUMN_PROPID|Int64|  
 |COLLATION|Int16|  
-|CARDINALITY|十进制|  
+|CARDINALITY|Decimal|  
 |PAGES|Int32|  
 |FILTER_CONDITION|String|  
 |INTEGRATED|Boolean|  
   
 ## <a name="see-also"></a>请参阅
 
-- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 概述](ado-net-overview.md)

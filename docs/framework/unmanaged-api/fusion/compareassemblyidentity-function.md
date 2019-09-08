@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 55d4e936c8b732e4cc4a60df8c11b37c86c4a415
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b52d3af38bd09ce5864c25d27e148dbd7f4639b0
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778491"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795442"
 ---
 # <a name="compareassemblyidentity-function"></a>CompareAssemblyIdentity 函数
-比较两个程序集标识，以确定它们是否等效。  
+比较两个程序集标识以确定它们是否等效。  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,49 +42,49 @@ STDAPI CompareAssemblyIdentity (
   
 ## <a name="parameters"></a>参数  
  `pwzAssemblyIdentity1`  
- [in]文本中比较的第一个程序集标识。  
+ 中比较中第一个程序集的文本标识。  
   
  `fUnified1`  
- [in]一个布尔标志，指示用户指定的统一`pwzAssemblyIdentity1`。  
+ 中指示的用户指定的统一的`pwzAssemblyIdentity1`布尔标志。  
   
  `pwzAssemblyIdentity2`  
- [in]文本中比较的第二个程序集标识。  
+ 中比较中第二个程序集的文本标识。  
   
  `fUnified2`  
- [in]一个布尔标志，指示用户指定的统一`pwzAssemblyIdentity2`。  
+ 中指示的用户指定的统一的`pwzAssemblyIdentity2`布尔标志。  
   
  `pfEquivalent`  
- [out]一个布尔标志，指示两个程序集是否等效。  
+ 弄指示两个程序集是否等效的布尔型标志。  
   
  `pResult`  
- [out][AssemblyComparisonResult](../../../../docs/framework/unmanaged-api/fusion/assemblycomparisonresult-enumeration.md)枚举，其中包含有关比较的详细的信息。  
+ 弄[AssemblyComparisonResult](assemblycomparisonresult-enumeration.md)枚举，其中包含有关比较的详细信息。  
   
 ## <a name="return-value"></a>返回值  
- `pfEquivalent` 返回一个布尔值，该值指示两个程序集是否相等。 `pResult` 返回的一个`AssemblyComparisonResult`值，以给出的值的详细的原因`pfEquivalent`。  
+ `pfEquivalent`返回一个布尔值，该值指示两个程序集是否等效。 `pResult`返回`AssemblyComparisonResult`值之一，以便为的`pfEquivalent`值提供更详细的原因。  
   
 ## <a name="remarks"></a>备注  
- `CompareAssemblyIdentity` 检查是否`pwzAssemblyIdentity1`和`pwzAssemblyIdentity2`是等效的。 `pfEquivalent` 设置为`true`下一个或多个以下条件：  
+ `CompareAssemblyIdentity``pwzAssemblyIdentity1`检查和`pwzAssemblyIdentity2`是否等效。 `pfEquivalent`在以下一个`true`或多个条件下，设置为：  
   
-- 两个程序集标识是等效的。 对于强名称程序集，等效性要求的程序集名称、 版本、 公钥标记和区域性相同。 对于简单命名程序集，等效性要求匹配的程序集名称和区域性。  
+- 这两个程序集标识是等效的。 对于强名称程序集，等效要求程序集名称、版本、公钥标记和区域性完全相同。 对于简单命名的程序集，等效要求程序集名称和区域性匹配。  
   
-- 这两个程序集标识是指.NET Framework 运行的程序集。 这种情况返回`true`即使程序集版本编号不匹配。  
+- 这两个程序集标识都是指在 .NET Framework 上运行的程序集。 即使程序集`true`版本号不匹配，此条件也将返回。  
   
-- 两个程序集不是托管程序集，但`fUnified1`或`fUnified2`已设置为`true`。  
+- 这两个程序集不是托管程序`fUnified1`集`fUnified2` ，而是`true`设置为。  
   
- `fUnified`标志指示版本数量的强名称程序集的所有版本号被都视为等效于强名称程序集。 例如，如果的值`pwzAssemblyIndentity1`是"MyAssembly，版本 = 3.0.0.0，区域性 = 中性，publicKeyToken =..."，和的值`fUnified1`是`true`，这表示应为 MyAssembly 从 0.0.0.0 到 3.0.0.0 版本起的所有版本视为等效。 在这种情况下，如果`pwzAssemblyIndentity2`指的是相同的程序集中`pwzAssemblyIndentity1`，只不过它具有较低的版本值`pfEquivalent`设置为`true`。 如果`pwzAssemblyIdentity2`更高版本的版本号，是指`pfEquivalent`设置为`true`仅当的值`fUnified2`是`true`。  
+ 该`fUnified`标志指示在强名称程序集的版本号之前的所有版本号都被视为等效于强名称程序集。 例如，如果的值`pwzAssemblyIndentity1`为 "MyAssembly，version = 3.0.0.0，culture = 中立，publicKeyToken = ..."，并且的`fUnified1`值为，则`true`表示从版本0.0.0.0 到3.0.0.0 的 MyAssembly 的所有版本都应该为视为等效。 在这种情况下， `pwzAssemblyIndentity2`如果引用与相同的`pwzAssemblyIndentity1`程序集，则将设置为`true`，但该程序`pfEquivalent`集的版本号较低。 如果`pwzAssemblyIdentity2`引用较高的版本号，则`pfEquivalent`仅当的`true` `fUnified2`值为时`true`，才设置为。  
   
- `pResult`参数包含有关为何两个程序集被视为等效也不等效的特定信息。 有关详细信息，请参阅[AssemblyComparisonResult 枚举](../../../../docs/framework/unmanaged-api/fusion/assemblycomparisonresult-enumeration.md)。  
+ 参数`pResult`包含有关两个程序集被视为等效或不等效的原因的具体信息。 有关详细信息，请参阅[AssemblyComparisonResult 枚举](assemblycomparisonresult-enumeration.md)。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../get-started/system-requirements.md)。  
   
- **标头：** Fusion.h  
+ **标头：** 合成。h  
   
- **库：** 包含为 MsCorEE.dll 中的资源  
+ **类库**作为资源包括在 Mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 
-- [合成全局静态函数](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
-- [AssemblyComparisonResult 枚举](../../../../docs/framework/unmanaged-api/fusion/assemblycomparisonresult-enumeration.md)
+- [合成全局静态函数](fusion-global-static-functions.md)
+- [AssemblyComparisonResult 枚举](assemblycomparisonresult-enumeration.md)

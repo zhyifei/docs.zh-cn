@@ -1,6 +1,6 @@
 ---
-title: SpawnDerivedClass 函数 （非托管 API 参考）
-description: SpawnDerivedClass 函数创建新的对象从对象派生的。
+title: SpawnDerivedClass 函数（非托管 API 参考）
+description: SpawnDerivedClass 函数创建派生自对象的新对象。
 ms.date: 11/06/2017
 api_name:
 - SpawnDerivedClass
@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6f05f349699b28262c1628cadc6e9a0fb0a3459c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c213f311f1af1e56d0ce24eba3b76f33be541323
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67783106"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798230"
 ---
 # <a name="spawnderivedclass-function"></a>SpawnDerivedClass 函数
 从指定对象创建新派生的类对象。    
@@ -41,40 +41,40 @@ HRESULT SpawnDerivedClass (
 ## <a name="parameters"></a>参数
 
 `vFunc`  
-[in]此参数是未使用。
+中此参数未使用。
 
 `ptr`  
-[in]一个指向[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)实例。
+中指向[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)实例的指针。
 
 `lFlags`  
-[in] 保留。 此参数必须为 0。
+[in] 保留。 此参数必须为0。
 
 `ppNewClass`  
-[out]接收指向新的类定义对象的指针。 如果发生错误，新对象不是返回，和`ppNewClass`左侧不被修改。 其值不能为`null`。
+弄接收指向新类定义对象的指针。 如果发生错误，则不会返回新的对象， `ppNewClass`也不会将其保持不变。 它的值不`null`能为。
 
 ## <a name="return-value"></a>返回值
 
-此函数返回以下值中定义*WbemCli.h*标头文件，也可以在定义它们为常量在代码中：
+此函数返回的以下值是在*WbemCli*头文件中定义的，也可以在代码中将它们定义为常量：
 
 |返回的常量  |值  |描述  |
 |---------|---------|---------|
-| `WBEM_E_FAILED` | 0x80041001 | 已存在时的常见错误。 |
-| `WBEM_E_INVALID_OPERATION` | 0x80041016 | 请求了一个无效的操作，如生成的类的实例。 |
-| `WBEM_E_INCOMPLETE_CLASS` | 源类不是完全定义或注册到 Windows 管理，因此不允许新的派生的类。 |
-| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 没有足够的内存是可用于完成该操作。 |
+| `WBEM_E_FAILED` | 0x80041001 | 出现一般错误。 |
+| `WBEM_E_INVALID_OPERATION` | 0x80041016 | 请求了无效的操作，例如，从实例中生成类。 |
+| `WBEM_E_INCOMPLETE_CLASS` | 源类未完全定义或未在 Windows 管理中注册，因此不允许使用新的派生类。 |
+| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 没有足够的内存可用来完成此操作。 |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `ppNewClass` 为 `null`。 |
 | `WBEM_S_NO_ERROR` | 0 | 函数调用成功。  |
   
 ## <a name="remarks"></a>备注
 
-此函数包装对的调用[IWbemClassObject::SpawnDerivedClass](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-clone)方法。
+此函数包装对[IWbemClassObject：： SpawnDerivedClass](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-clone)方法的调用。
 
-`ptr` 必须将成为生成的对象的父类的类定义。 返回的对象将成为当前对象的子类。
+`ptr`必须是成为衍生对象的父类的类定义。 返回的对象将成为当前对象的子类。
 
-新的对象中返回`ppNewClass`自动成为当前对象的子类。 不能重写此行为。 没有其他方法可以创建子类 （的派生类）。
+返回的新对象将`ppNewClass`自动成为当前对象的子类。 不能重写此行为。 没有其他方法可用于创建子类（派生类）。
 
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../get-started/system-requirements.md)。  
   
  **标头：** WMINet_Utils.idl  
   
@@ -82,4 +82,4 @@ HRESULT SpawnDerivedClass (
   
 ## <a name="see-also"></a>请参阅
 
-- [WMI 和性能计数器 （非托管 API 参考）](index.md)
+- [WMI 和性能计数器（非托管 API 参考）](index.md)

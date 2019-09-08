@@ -1,6 +1,6 @@
 ---
-title: 在 Visual Studio 中创建 WPF 应用程序
-ms.date: 03/20/2019
+title: 教程：在 Visual Studio 2019 中创建第一个 WPF 应用程序-.NET Framework
+ms.date: 09/06/2019
 dev_langs:
 - csharp
 - vb
@@ -8,44 +8,41 @@ helpviewer_keywords:
 - getting started [WPF], WPF
 - WPF [WPF], getting started
 ms.assetid: b96bed40-8946-4285-8fe4-88045ab854ed
+ms.topic: tutorial
+ms.custom: vs-dotnet
 author: mairaw
 ms.author: mairaw
-ms.custom: vs-dotnet
-ms.openlocfilehash: 4919424339df1f8d2c68465bd9f9af42f344fe37
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: c8b7f6f3bdbf3adc7c355e88cfe1f569cc0cb76f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70254071"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799341"
 ---
-# <a name="walkthrough-my-first-wpf-desktop-application"></a>演练：我的第一个 WPF 桌面应用程序
+# <a name="tutorial-create-your-first-wpf-application-in-visual-studio-2019"></a>教程：在 Visual Studio 2019 中创建第一个 WPF 应用程序
 
 本文介绍如何开发 Windows Presentation Foundation （WPF）桌面应用程序，该应用程序包括大多数 WPF 应用程序所共有的元素：Extensible Application Markup Language （XAML）标记、代码隐藏、应用程序定义、控件、布局、数据绑定和样式。 若要开发应用程序，请使用 Visual Studio。 
 
-本演练包括以下步骤：
+在本教程中，你将了解：
+> [!div class="checklist"]
+> - 创建 WPF 项目。
+> - 使用 XAML 设计应用程序的用户界面（UI）的外观。
+> - 编写代码以生成应用程序的行为。
+> - 创建应用程序定义以管理应用程序。
+> - 添加控件并创建用于撰写应用程序 UI 的布局。
+> - 在应用程序的 UI 中创建样式以实现一致的外观。
+> - 将 UI 绑定到数据，从数据填充 UI，并使数据和 UI 同步。
 
-- 使用 XAML 设计应用程序的用户界面（UI）的外观。
-
-- 编写代码以生成应用程序的行为。
-
-- 创建应用程序定义以管理应用程序。
-
-- 添加控件并创建用于撰写应用程序 UI 的布局。
-
-- 在应用程序的 UI 中创建样式以实现一致的外观。
-
-- 将 UI 绑定到数据，从数据填充 UI，并使数据和 UI 同步。
-
-演练结束后，您将生成一个独立的 Windows 应用程序，该应用程序允许用户查看所选人员的费用报表。 应用程序由多个承载于浏览器样式窗口中的 WPF 页组成。
+本教程结束时，将生成一个独立的 Windows 应用程序，允许用户查看所选人员的费用报表。 应用程序由多个承载于浏览器样式窗口中的 WPF 页组成。
 
 > [!TIP]
-> 用于生成本演练的示例代码可用于 Visual Basic 和C# [演练 WPF 应用程序示例代码](https://github.com/Microsoft/WPF-Samples/tree/master/Getting%20Started/WalkthroughFirstWPFApp)。
+> 本教程中使用的示例代码可用于 Visual Basic 和C# [教程 WPF 应用程序示例代码](https://github.com/Microsoft/WPF-Samples/tree/master/Getting%20Started/WalkthroughFirstWPFApp)。
 >
-> 您可以使用C# **\< 本文右上角的下拉箭头来切换与VisualBasic的示例代码的代码/>** 语言。
+> 您可以使用此页顶部的语言选择器来C#切换与 Visual Basic 的示例代码的代码语言。
 
 ## <a name="prerequisites"></a>系统必备
 
-- Visual Studio 2017 或更高版本（本文使用 Visual Studio 2019）
+- 安装了 **.net 桌面开发**工作负载的[Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 。
 
    有关安装最新版本的 Visual Studio 的详细信息，请参阅[安装 Visual studio](/visualstudio/install/install-visual-studio)。
 
@@ -210,7 +207,7 @@ ms.locfileid: "70254071"
 
     [!code-vb[ExpenseIt#5](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ExpenseIt/VB/ExpenseIt1_A/ExpenseReportPage.xaml.vb#5)]
 
-1. 向项目中添加一个名为 "*水印*" 的图像。 你可以创建自己的映像，从示例代码复制文件，或在[此处](https://raw.githubusercontent.com/microsoft/WPF-Samples/master/Getting%20Started/WalkthroughFirstWPFApp/csharp/watermark.png)获取它。
+1. 向项目中添加一个名为 "*水印*" 的图像。 你可以创建自己的映像，从示例代码复制文件，或者从[microsoft/WPF 示例](https://raw.githubusercontent.com/microsoft/WPF-Samples/master/Getting%20Started/WalkthroughFirstWPFApp/csharp/watermark.png)GitHub 存储库获取它。
 
     1. 右键单击项目节点并选择 "**添加** > **现有项**"，或按**Shift**+**Alt**+**A**。
 
@@ -475,11 +472,8 @@ ms.locfileid: "70254071"
 > 此示例演示了 WPF 的特定功能，并且不遵循安全性、本地化和辅助功能等功能的所有最佳实践。 有关 WPF 和 .NET 应用开发最佳做法的全面介绍，请参阅以下主题：
 >
 > - [辅助功能](../../ui-automation/accessibility-best-practices.md)
->
 > - [安全性](../security-wpf.md)
->
 > - [WPF 全球化和本地化](../advanced/wpf-globalization-and-localization-overview.md)
->
 > - [WPF 性能](../advanced/optimizing-wpf-application-performance.md)
 
 ## <a name="next-steps"></a>后续步骤

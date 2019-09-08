@@ -5,25 +5,25 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f08008a9-042e-4de9-94f3-4f0e502b1eb5
-ms.openlocfilehash: a970ebda76f5bb6bdea704dabef2ee305436c613
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 689a297eb5368d35c2e7dd034426edbe665e7ed2
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205014"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785383"
 ---
 # <a name="datatable-edits"></a>数据表编辑
-当您在 <xref:System.Data.DataRow> 中更改列值时，所做更改会立即置于行的当前状态中。 然后<xref:System.Data.DataRowState> , 将设置为 "**已修改**", 并使用<xref:System.Data.DataRow.AcceptChanges%2A> **DataRow**的或<xref:System.Data.DataRow.RejectChanges%2A>方法来接受或拒绝更改。 **DataRow**还提供了三种方法, 可用于在编辑行时挂起行的状态。 这三个方法是 <xref:System.Data.DataRow.BeginEdit%2A>、<xref:System.Data.DataRow.EndEdit%2A> 和 <xref:System.Data.DataRow.CancelEdit%2A>。  
+当您在 <xref:System.Data.DataRow> 中更改列值时，所做更改会立即置于行的当前状态中。 然后<xref:System.Data.DataRowState> ，将设置为 "**已修改**"，并使用<xref:System.Data.DataRow.AcceptChanges%2A> **DataRow**的或<xref:System.Data.DataRow.RejectChanges%2A>方法来接受或拒绝更改。 **DataRow**还提供了三种方法，可用于在编辑行时挂起行的状态。 这三个方法是 <xref:System.Data.DataRow.BeginEdit%2A>、<xref:System.Data.DataRow.EndEdit%2A> 和 <xref:System.Data.DataRow.CancelEdit%2A>。  
   
- 当直接在**datarow**中修改列值时, **Datarow**会使用**Current**、 **Default**和**原始**行版本来管理列值。 除了这些行版本之外, **BeginEdit**、 **EndEdit**和**CancelEdit**方法还使用第四行版本:**建议**。 有关行版本的详细信息, 请参阅[行状态和行版本](row-states-and-row-versions.md)。  
+ 当直接在**datarow**中修改列值时， **Datarow**会使用**Current**、 **Default**和**原始**行版本来管理列值。 除了这些行版本之外， **BeginEdit**、 **EndEdit**和**CancelEdit**方法还使用第四行版本：**建议**。 有关行版本的详细信息，请参阅[行状态和行版本](row-states-and-row-versions.md)。  
   
- **建议**的行版本在编辑操作期间存在, 该操作通过调用**BeginEdit**开始, 并通过使用**EndEdit**或**CancelEdit**或通过调用**AcceptChanges**或**RejectChanges**结束。  
+ **建议**的行版本在编辑操作期间存在，该操作通过调用**BeginEdit**开始，并通过使用**EndEdit**或**CancelEdit**或通过调用**AcceptChanges**或**RejectChanges**结束。  
   
- 在编辑操作期间, 可以通过在**DataTable**的**ColumnChanged**事件中计算**ProposedValue** , 将验证逻辑应用于单个列。 **ColumnChanged**事件保存**DataColumnChangeEventArgs** , 可保持对正在更改的列和**ProposedValue**的引用。 计算了建议值后，可以对其进行修改或取消编辑。 当编辑结束时, 该行将移出**建议**状态。  
+ 在编辑操作期间，可以通过在**DataTable**的**ColumnChanged**事件中计算**ProposedValue** ，将验证逻辑应用于单个列。 **ColumnChanged**事件保存**DataColumnChangeEventArgs** ，可保持对正在更改的列和**ProposedValue**的引用。 计算了建议值后，可以对其进行修改或取消编辑。 当编辑结束时，该行将移出**建议**状态。  
   
- 可以通过调用**EndEdit**来确认编辑, 也可以通过调用**CancelEdit**来取消编辑。 请注意, 尽管**EndEdit**确认了您的编辑, 但在调用**AcceptChanges**之前,**数据集**并不会实际接受更改。 另请注意, 如果在使用**EndEdit**或**CancelEdit**结束编辑之前调用**AcceptChanges** , 编辑将结束, 同时将为**当前**行版本和**原始**行版本接受**建议**的行值。 同样, 调用**RejectChanges**会结束编辑并放弃**当前**和**建议**的行版本。 调用**AcceptChanges**或**RejectChanges**后, 调用**EndEdit**或**CancelEdit**不起作用, 因为编辑已结束。  
+ 可以通过调用**EndEdit**来确认编辑，也可以通过调用**CancelEdit**来取消编辑。 请注意，尽管**EndEdit**确认了您的编辑，但在调用**AcceptChanges**之前，**数据集**并不会实际接受更改。 另请注意，如果在使用**EndEdit**或**CancelEdit**结束编辑之前调用**AcceptChanges** ，编辑将结束，同时将为**当前**行版本和**原始**行版本接受**建议**的行值。 同样，调用**RejectChanges**会结束编辑并放弃**当前**和**建议**的行版本。 调用**AcceptChanges**或**RejectChanges**后，调用**EndEdit**或**CancelEdit**不起作用，因为编辑已结束。  
   
- 下面的示例演示如何将**BeginEdit**与**EndEdit**和**CancelEdit**一起使用。 该示例还检查**ColumnChanged**事件中的**ProposedValue** , 并决定是否取消编辑。  
+ 下面的示例演示如何将**BeginEdit**与**EndEdit**和**CancelEdit**一起使用。 该示例还检查**ColumnChanged**事件中的**ProposedValue** ，并决定是否取消编辑。  
   
 ```vb  
 Dim workTable As DataTable = New DataTable  
@@ -93,4 +93,4 @@ protected static void OnColumnChanged(
 - <xref:System.Data.DataRowVersion>
 - [操作数据表中的数据](manipulating-data-in-a-datatable.md)
 - [处理数据表事件](handling-datatable-events.md)
-- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 概述](../ado-net-overview.md)

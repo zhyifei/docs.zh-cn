@@ -2,12 +2,12 @@
 title: 在 SQL Server 中编写安全的动态 SQL
 ms.date: 03/30/2017
 ms.assetid: df5512b0-c249-40d2-82f9-f9a2ce6665bc
-ms.openlocfilehash: 9b0c903c04c82c9a0f61197642645c5ba93ba099
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c02455ba8798df1de1d52f6b4db3426d41b95daf
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645911"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70791418"
 ---
 # <a name="writing-secure-dynamic-sql-in-sql-server"></a>在 SQL Server 中编写安全的动态 SQL
 SQL 注入是恶意用户输入 Transact-SQL 语句来取代有效输入的过程。 如果输入的语句没有经过验证直接传递到服务器，并且应用程序不慎执行了注入的代码，这种攻击有可能损坏或毁坏数据。  
@@ -46,9 +46,9 @@ SQL 注入是恶意用户输入 Transact-SQL 语句来取代有效输入的过�
   
  SQL Server 提供了使用存储过程和可执行动态 SQL 的用户定义函数来授予用户对数据的访问权限的方法。  
   
-- 如[在 SQL Server 中使用模拟自定义权限](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)中所述，将模拟用于 Transact-SQL EXECUTE AS 子句。  
+- 如[在 SQL Server 中使用模拟自定义权限](customizing-permissions-with-impersonation-in-sql-server.md)中所述，将模拟用于 Transact-SQL EXECUTE AS 子句。  
   
-- 使用证书对存储过程签名，如[在 SQL Server 中对存储过程签名](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)中所述。  
+- 使用证书对存储过程签名，如[在 SQL Server 中对存储过程签名](signing-stored-procedures-in-sql-server.md)中所述。  
   
 ### <a name="execute-as"></a>EXECUTE AS  
  EXECUTE AS 子句用 EXECUTE AS 子句中指定的用户的权限替换调用方的权限。 嵌套的存储过程或触发器在代理用户的安全上下文下执行。 这可能会中断依赖于行级安全性或要求审核的应用程序。 某些可返回用户标识的函数会返回 EXECUTE AS 子句中指定的用户的标识，而不是原始调用方的标识。 只有在执行该过程或发出 REVERT 语句后，执行上下文才会恢复到原始调用方。  
@@ -68,10 +68,10 @@ SQL 注入是恶意用户输入 Transact-SQL 语句来取代有效输入的过�
   
 ## <a name="see-also"></a>请参阅
 
-- [保证 ADO.NET 应用程序的安全](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [SQL Server 安全性概述](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
-- [SQL Server 中的应用程序安全性方案](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
-- [在 SQL Server 中使用存储过程管理权限](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)
-- [在 SQL Server 中对存储过程签名](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)
-- [在 SQL Server 中使用模拟自定义权限](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)
-- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [保证 ADO.NET 应用程序的安全](../securing-ado-net-applications.md)
+- [SQL Server 安全性概述](overview-of-sql-server-security.md)
+- [SQL Server 中的应用程序安全性方案](application-security-scenarios-in-sql-server.md)
+- [在 SQL Server 中使用存储过程管理权限](managing-permissions-with-stored-procedures-in-sql-server.md)
+- [在 SQL Server 中对存储过程签名](signing-stored-procedures-in-sql-server.md)
+- [在 SQL Server 中使用模拟自定义权限](customizing-permissions-with-impersonation-in-sql-server.md)
+- [ADO.NET 概述](../ado-net-overview.md)

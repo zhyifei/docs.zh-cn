@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: efdc203e-3da9-4477-815e-54f10c3d7c6c
-ms.openlocfilehash: 342583cdbf6a1501f1bc70c6a9be5d7009c390eb
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2112600dfcef65b1c85445b03806ce8e9cab6a27
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69940252"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782064"
 ---
 # <a name="how-to-control-how-much-related-data-is-retrieved"></a>如何：控制检索的相关数据量
 使用 <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A> 方法可指定应同时检索与主目标相关的哪些数据。 例如，如果您了解将需要有关客户订单的信息，则可以使用 <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A> 来确保在检索客户信息时会检索订单信息。 这种方法的结果是只检索一次数据库即可获取这两组信息。  
@@ -26,4 +26,4 @@ ms.locfileid: "69940252"
   
 ## <a name="see-also"></a>请参阅
 
-- [查询数据库](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md)
+- [查询数据库](querying-the-database.md)

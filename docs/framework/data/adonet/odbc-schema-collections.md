@@ -2,12 +2,12 @@
 title: ODBC 架构集合
 ms.date: 03/30/2017
 ms.assetid: 1bb126a5-ceec-4649-a4bc-8aa19e801046
-ms.openlocfilehash: ffe80120ceffbe29c0a117cf1194860c5782be8c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f0240e99d2420b0956d3c144f837b39e094bb78a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772042"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794717"
 ---
 # <a name="odbc-schema-collections"></a>ODBC 架构集合
 
@@ -15,7 +15,7 @@ ms.locfileid: "61772042"
 
 ## <a name="microsoft-sql-server-odbc-driver"></a>Microsoft SQL Server ODBC 驱动程序
 
-Microsoft SQL Server ODBC 驱动程序还支持下列特定的架构集合除了通用架构集合：
+除了通用架构集合之外，Microsoft SQL Server ODBC 驱动程序还支持下列特定的架构集合：
 
 - 表
 
@@ -156,7 +156,7 @@ Microsoft SQL Server ODBC 驱动程序还支持下列特定的架构集合除了
 
 ## <a name="microsoft-oracle-odbc-driver"></a>Microsoft Oracle ODBC 驱动程序
 
-Microsoft SQL Server Oracle ODBC 驱动程序还支持下列特定的架构集合除了通用架构集合：
+除了通用架构集合之外，Microsoft SQL Server Oracle ODBC 驱动程序还支持下列特定的架构集合：
 
 - 表
 
@@ -338,4 +338,4 @@ Microsoft SQL Server Oracle ODBC 驱动程序还支持下列特定的架构集�
 
 ## <a name="see-also"></a>请参阅
 
-- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 概述](ado-net-overview.md)

@@ -1,6 +1,6 @@
 ---
-title: 删除函数 （非托管 API 参考）
-description: 删除函数从 CIM 类定义中删除指定的属性和所有其限定符。
+title: Delete 函数（非托管 API 参考）
+description: Delete 函数从 CIM 类定义中删除指定的属性及其所有限定符。
 ms.date: 11/06/2017
 api_name:
 - Delete
@@ -16,16 +16,16 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 965143eadd6e2dde498d5ee73e4f9e8bfded8a6e
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: a1bf9bd5d93d1affee649588138456269411d280
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636725"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798667"
 ---
 # <a name="delete-function"></a>Delete 函数
 
-从 CIM 类定义中删除指定的属性和所有其限定符。
+从 CIM 类定义中删除指定的属性及其所有限定符。
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
 
@@ -42,42 +42,42 @@ HRESULT Delete (
 ## <a name="parameters"></a>参数
 
 `vFunc`\
-[in]此参数是未使用。
+中此参数未使用。
 
 `ptr`\
-[in]一个指向[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)实例。
+中指向[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)实例的指针。
 
 `wszName`\
-[in]要删除的属性的名称。 `wszName` 必须为有效指针`LPCWSTR`。
+中要删除的属性的名称。 `wszName`必须是指向有效`LPCWSTR`的的指针。
 
 ## <a name="return-value"></a>返回值
 
-此函数返回以下值中定义*WbemCli.h*标头文件，也可以在定义它们为常量在代码中：
+此函数返回的以下值是在*WbemCli*头文件中定义的，也可以在代码中将它们定义为常量：
 
 |返回的常量  |值  |描述  |
 |---------|---------|---------|
-| `WBEM_E_FAILED` | 0x80041001 | 发生未知的错误。 |
+| `WBEM_E_FAILED` | 0x80041001 | 发生了未指定的错误。 |
 | `WBEM_E_INVALID_OPERATION` | 0x80041016 | 不能删除该属性。 |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `wszName` 无效。 |
 | `WBEM_E_NOT_FOUND` | 0x80041002 | 指定的属性不存在。 |
-| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 没有足够的内存来完成该操作。 |
-| `WBEM_E_PROPAGATED_PROPERTY` | 0x8004101c | 属性继承自的基类。 |
-| `WBEM_E_SYSTEM_PROPERTY` | | 该属性是系统属性。 |
+| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 没有足够的内存来完成此操作。 |
+| `WBEM_E_PROPAGATED_PROPERTY` | 0x8004101c | 属性继承自基类。 |
+| `WBEM_E_SYSTEM_PROPERTY` | | 属性为系统属性。 |
 |`WBEM_S_NO_ERROR` | 0 | 函数调用成功。  |
-| `WBEM_E_RESET_TO_DEFAULT` | 0x80041030 | 删除当前类重写默认值的函数。 已重新激活父类中此属性的默认值。 |
+| `WBEM_E_RESET_TO_DEFAULT` | 0x80041030 | 函数删除了当前类的替代默认值。 父类中此属性的默认值已重新激活。 |
 
 ## <a name="remarks"></a>备注
 
-此函数包装对的调用[IWbemClassObject::Delete](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-delete)方法。
+此函数包装对[IWbemClassObject：:D e)](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-delete)方法的调用。
 
 ## <a name="requirements"></a>要求
 
-**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。
+**适用**请参阅[系统需求](../../get-started/system-requirements.md)。
 
 **标头：** WMINet_Utils.idl
 
-**.NET Framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+**.NET Framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
 ## <a name="see-also"></a>请参阅
 
-- [WMI 和性能计数器 （非托管 API 参考）](index.md)
+- [WMI 和性能计数器（非托管 API 参考）](index.md)

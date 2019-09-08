@@ -1,6 +1,6 @@
 ---
-title: VerifyClientKey 函数 （非托管 API 参考）
-description: VerifyClientKey 函数可确保客户端密钥具有正确的安全。
+title: VerifyClientKey 函数（非托管 API 参考）
+description: VerifyClientKey 函数可确保客户端密钥具有正确的安全性。
 ms.date: 11/06/2017
 api_name:
 - VerifyClientKey
@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f4b51fe4510f4172227d9afd049eb6815790a165
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b674e959ab93cf76b84e2af41e875a50b7d115f4
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67783090"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798188"
 ---
 # <a name="verifyclientkey-function"></a>VerifyClientKey 函数
 确保客户端密钥具有正确的安全性。  
@@ -36,12 +36,12 @@ LONG VerifyClientKey();
 
 ## <a name="return-value"></a>返回值
 
-如果函数成功，返回值是`ERROR_SUCCESS`(0)。
+如果该函数成功，则返回值为`ERROR_SUCCESS` （0）。
 
-如果函数失败，返回值是在中定义了非零错误代码*WinError.h*。
+如果函数失败，则返回值为*winerror.h*中定义的非零错误代码。
 
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../get-started/system-requirements.md)。  
   
  **标头：** WMINet_Utils.def  
   
@@ -49,4 +49,4 @@ LONG VerifyClientKey();
   
 ## <a name="see-also"></a>请参阅
 
-- [WMI 和性能计数器 （非托管 API 参考）](index.md)
+- [WMI 和性能计数器（非托管 API 参考）](index.md)

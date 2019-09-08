@@ -1,5 +1,5 @@
 ---
-title: GetPropertyHandle 函数 (非托管 API 参考)
+title: GetPropertyHandle 函数（非托管 API 参考）
 description: GetPropertyHandle 函数返回标识属性的唯一句柄。
 ms.date: 11/06/2017
 api_name:
@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d6dc2792b572aae30e9989c81967b86f340d7b83
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: d72b0da43971a74a08a249b19dfc0d446eeb5e6a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69038263"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798536"
 ---
 # <a name="getpropertyhandle-function"></a>GetPropertyHandle 函数
 
@@ -50,17 +50,17 @@ HRESULT GetPropertyHandle (
 中指向[IWbemObjectAccess](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectaccess)实例的指针。
 
 `wszPropertyName`\
-中以 null 结尾的 UTF16 编码字符的字符串, 其中包含属性名称。
+中以 null 结尾的 UTF16 编码字符的字符串，其中包含属性名称。
 
 `pType`\
-弄一个指针, 指向[`CIMTYPE`](/windows/win32/api/wbemcli/ne-wbemcli-cimtype_enumeration)表示属性的 CIM 类型的枚举成员。
+弄一个指针，指向[`CIMTYPE`](/windows/win32/api/wbemcli/ne-wbemcli-cimtype_enumeration)表示属性的 CIM 类型的枚举成员。
 
 `pHandle`\
 弄指向包含属性句柄的整数的指针。
 
 ## <a name="return-value"></a>返回值
 
-此函数返回的以下值是在*WbemCli*头文件中定义的, 也可以在代码中将它们定义为常量:
+此函数返回的以下值是在*WbemCli*头文件中定义的，也可以在代码中将它们定义为常量：
 
 |返回的常量  |值  |描述  |
 |---------|---------|---------|
@@ -71,15 +71,15 @@ HRESULT GetPropertyHandle (
 
 ## <a name="remarks"></a>备注
 
-此函数包装对[IWbemClassObject:: GetPropertyHandle](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemobjectaccess-getpropertyhandle)方法的调用。
+此函数包装对[IWbemClassObject：： GetPropertyHandle](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemobjectaccess-getpropertyhandle)方法的调用。
 
-使用[IWbemObjectAccess](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectaccess)方法读取或写入属性值时, 可以使用此句柄来确定属性。
+使用[IWbemObjectAccess](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectaccess)方法读取或写入属性值时，可以使用此句柄来确定属性。
 
-对于除`CIM_OBJECT`和`CIM_ARRAY`之外的所有数据类型的属性, 可以检索句柄。 返回的句柄在类的所有实例中工作。
+对于除`CIM_OBJECT`和`CIM_ARRAY`之外的所有数据类型的属性，可以检索句柄。 返回的句柄在类的所有实例中工作。
 
 ## <a name="requirements"></a>要求
 
-**适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。
+**适用**请参阅[系统需求](../../get-started/system-requirements.md)。
 
 **标头：** WMINet_Utils.idl
 
@@ -87,4 +87,4 @@ HRESULT GetPropertyHandle (
 
 ## <a name="see-also"></a>请参阅
 
-- [WMI 和性能计数器 (非托管 API 参考)](index.md)
+- [WMI 和性能计数器（非托管 API 参考）](index.md)

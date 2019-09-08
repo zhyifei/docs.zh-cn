@@ -2,19 +2,19 @@
 title: FailedToSetupTracing
 ms.date: 03/30/2017
 ms.assetid: dd61db93-4687-4832-8dc9-99e38fa83671
-ms.openlocfilehash: 8448ba2055783d57ef1413d2dca0d84b646ba869
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 357b3d16b55f2855ca5a58945d391ee6e8d83cf7
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61942189"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797909"
 ---
 # <a name="failedtosetuptracing"></a>FailedToSetupTracing
 ID:100  
   
- 严重性：Error  
+ 对应Error  
   
- 类别：跟踪  
+ 类别跟踪  
   
 ## <a name="description"></a>描述  
  设置跟踪的尝试已失败。 跟踪功能被禁用。  
@@ -23,5 +23,5 @@ ID:100
   
 ## <a name="see-also"></a>请参阅
 
-- [事件日志记录](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
-- [事件常规参考](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+- [事件日志记录](index.md)
+- [事件常规参考](events-general-reference.md)

@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5781254b508887f2e76f6ca0eca6a2830ada172b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0d29b9e2a9b9022f682065816a62734d6c5b2d62
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774012"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796407"
 ---
 # <a name="iinstallreferenceenum-interface"></a>IInstallReferenceEnum 接口
-表示引用的程序集安装到全局程序集缓存中的枚举器。  
+表示安装在全局程序集缓存中的被引用程序集的枚举器。  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,16 +42,16 @@ interface IInstallReferenceEnum : IUnknown {
   
 |方法|描述|  
 |------------|-----------------|  
-|[GetNextInstallReferenceItem 方法](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceenum-getnextinstallreferenceitem-method.md)|获取一个指针指向下一步`IInstallReferenceItem`包含在此`IInstallReferenceEnum`。|  
+|[GetNextInstallReferenceItem 方法](iinstallreferenceenum-getnextinstallreferenceitem-method.md)|获取一个指针，该指针`IInstallReferenceItem`指向此`IInstallReferenceEnum`中包含的下一个。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../get-started/system-requirements.md)。  
   
- **标头：** Fusion.h  
+ **标头：** 合成。h  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 
-- [合成接口](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
-- [IInstallReferenceItem 接口](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md)
+- [合成接口](fusion-interfaces.md)
+- [IInstallReferenceItem 接口](iinstallreferenceitem-interface.md)

@@ -1,6 +1,6 @@
 ---
-title: 初始化函数 （非托管 API 参考）
-description: Initialize 函数执行 WMI 的初始化。
+title: Initialize 函数（非托管 API 参考）
+description: Initialize 函数执行 WMI 初始化。
 ms.date: 11/06/2017
 api_name:
 - Initialize
@@ -16,14 +16,14 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7c71b2b6d6f102d19d30d480ee9bafcac3c204be
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1bc3688b30180bdcde0a87027955a789de749f90
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62049292"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798437"
 ---
-# <a name="initialize-function"></a>初始化函数
+# <a name="initialize-function"></a>Initialize 函数
 
 执行 WMI 初始化。
 
@@ -41,20 +41,20 @@ HRESULT Initialize(
 
 `bAllowIManagementObjectQI`
 
-[in]`true`以指示允许对 WMI 对象的 QueryInterface 调用;`false`否则为。
+中`true`表示允许对 WMI 对象上的 QueryInterface 的调用;`false`否则为。
 
 ## <a name="return-value"></a>返回值
 
-该函数始终返回`S_OK`(0)。
+函数始终返回`S_OK` （0）。
 
 ## <a name="requirements"></a>要求
 
-**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。
+**适用**请参阅[系统需求](../../get-started/system-requirements.md)。
 
 **标头：** WMINet_Utils.def
 
-**.NET Framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+**.NET Framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
 ## <a name="see-also"></a>请参阅
 
-- [WMI 和性能计数器 （非托管 API 参考）](index.md)
+- [WMI 和性能计数器（非托管 API 参考）](index.md)

@@ -1,6 +1,6 @@
 ---
-title: CreateClassEnumWmi 函数 （非托管 API 参考）
-description: CreateClassEnumWmi 函数返回满足指定的条件的所有类的枚举器。
+title: CreateClassEnumWmi 函数（非托管 API 参考）
+description: CreateClassEnumWmi 函数为满足指定条件的所有类返回一个枚举器。
 ms.date: 11/06/2017
 api_name:
 - CreateClassEnumWmi
@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b3777319f818b7652157147f458b81d9935805b1
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: a696a6f02f6d3a5afbcb45e5566e4b667739e2c5
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636991"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798738"
 ---
 # <a name="createclassenumwmi-function"></a>CreateClassEnumWmi 函数
 返回满足指定选择条件的所有类的枚举器。
@@ -48,75 +48,75 @@ HRESULT CreateClassEnumWmi (
 ## <a name="parameters"></a>参数
 
 `strSuperclass`\
-[in]如果不是`null`或为空，指定名称的父类; 枚举器返回仅此类的子类。 如果它是`null`或空白和`lFlags`为 WBEM_FLAG_SHALLOW，则返回仅顶级类 （与任何父类的类）。 如果它是`null`或为空并`lFlags`是`WBEM_FLAG_DEEP`，命名空间中返回的所有类。
+中如果不`null`为或空，则指定父类的名称; 枚举器仅返回此类的子类。 如果为`null`或空白且`lFlags`为 WBEM_FLAG_SHALLOW，则仅返回顶级类（没有父类的类）。 如果为`null`或为空， `lFlags`并且`WBEM_FLAG_DEEP`为，则返回命名空间中的所有类。
 
 `lFlags`\
-[in]影响此函数的行为的标志的组合。 以下值中定义*WbemCli.h*标头文件，也可以在定义它们为常量在代码中：
+中影响此函数的行为的标志的组合。 以下值是在*WbemCli*头文件中定义的，也可以在代码中将它们定义为常量：
 
 |返回的常量  |值  |描述  |
 |---------|---------|---------|
-| `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0x20000 | 如果集，该函数检索当前连接的区域设置的本地化命名空间中存储已修正的限定符。 <br/> 如果未设置，此函数检索仅立即命名空间中存储的限定符。 |
-| `WBEM_FLAG_DEEP` | 0 | 枚举在层次结构，但不是此类中包含所有子类。 |
-| `WBEM_FLAG_SHALLOW` | 1 | 枚举包括此类的仅纯实例，但不包括的子类提供此类中找不到属性的所有实例。 |
-| `WBEM_FLAG_RETURN_IMMEDIATELY` | 0x10 | 该标志会导致半同步调用。 |
-| `WBEM_FLAG_FORWARD_ONLY` | 0x20 | 该函数返回的只进的枚举器。 通常情况下，只进的枚举器速度更快，并使用较少的内存比传统的枚举器，但它们不允许对调用[克隆](clone.md)。 |
-| `WBEM_FLAG_BIDIRECTIONAL` | 0 | WMI 将保留指向对象的枚举中的指针，直到它们被释放。 |
+| `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0x20000 | 如果设置，则函数将检索存储在当前连接的区域设置的本地化命名空间中的已修改限定符。 <br/> 如果未设置，则函数仅检索直接命名空间中存储的限定符。 |
+| `WBEM_FLAG_DEEP` | 0 | 枚举包括层次结构中的所有子类，但不包括此类。 |
+| `WBEM_FLAG_SHALLOW` | 1 | 枚举仅包括此类的纯实例，并排除提供此类中未找到的属性的所有子类的实例。 |
+| `WBEM_FLAG_RETURN_IMMEDIATELY` | 0x10 | 标志导致半同步调用。 |
+| `WBEM_FLAG_FORWARD_ONLY` | 0x20 | 函数返回一个只进枚举器。 通常，只进枚举器比传统枚举器更快，使用的内存更少，但它们不允许调用[克隆](clone.md)。 |
+| `WBEM_FLAG_BIDIRECTIONAL` | 0 | WMI 保留指向枚举中的对象的指针，直到它们被释放。 |
 
-建议的标志`WBEM_FLAG_RETURN_IMMEDIATELY`和`WBEM_FLAG_FORWARD_ONLY`为了获得最佳性能。
+建议的标志`WBEM_FLAG_RETURN_IMMEDIATELY`为， `WBEM_FLAG_FORWARD_ONLY`为获得最佳性能。
 
 `pCtx`\
-[in]通常情况下，此值是`null`。 否则，它是一个指向[IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext)可由提供程序提供请求的类的实例。
+中通常，此值为`null`。 否则，它是指向提供请求的类的提供程序可以使用的[IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext)实例的指针。
 
 `ppEnum`\
-[out]接收对枚举器的指针。
+弄接收指向枚举器的指针。
 
 `authLevel`\
-[in]授权级别。
+中授权级别。
 
 `impLevel`\
-[in]模拟级别。
+中模拟级别。
 
 `pCurrentNamespace`\
-[in]一个指向[IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices)对象，表示当前命名空间。
+中指向表示当前命名空间的[IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices)对象的指针。
 
 `strUser`\
-[in]用户名称。 请参阅[ConnectServerWmi](connectserverwmi.md)函数的详细信息。
+中用户名。 有关详细信息，请参阅[ConnectServerWmi](connectserverwmi.md)函数。
 
 `strPassword`\
-[in]密码。 请参阅[ConnectServerWmi](connectserverwmi.md)函数的详细信息。
+中密码。 有关详细信息，请参阅[ConnectServerWmi](connectserverwmi.md)函数。
 
 `strAuthority`\
-[in]用户的域名。 请参阅[ConnectServerWmi](connectserverwmi.md)函数的详细信息。
+中用户的域名。 有关详细信息，请参阅[ConnectServerWmi](connectserverwmi.md)函数。
 
 ## <a name="return-value"></a>返回值
 
-此函数返回以下值中定义*WbemCli.h*标头文件，也可以在定义它们为常量在代码中：
+此函数返回的以下值是在*WbemCli*头文件中定义的，也可以在代码中将它们定义为常量：
 
 |返回的常量  |值  |描述  |
 |---------|---------|---------|
-| `WBEM_E_ACCESS_DENIED` | 0x80041003 | 用户没有权限查看一个或多个函数可以返回的类。 |
-| `WBEM_E_FAILED` | 0x80041001 | 发生未知的错误。 |
+| `WBEM_E_ACCESS_DENIED` | 0x80041003 | 用户无权查看函数可以返回的一个或多个类。 |
+| `WBEM_E_FAILED` | 0x80041001 | 发生了未指定的错误。 |
 | `WBEM_E_INVALID_CLASS` | 0x80041010 | `strSuperClass` 不存在。 |
-| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | 参数不是有效的。 |
-| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 没有足够的内存是可用于完成该操作。 |
-| `WBEM_E_SHUTTING_DOWN` | 0x80041033 | WMI 是可能已停止并重新启动。 调用[ConnectServerWmi](connectserverwmi.md)试。 |
-| `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | 之间的当前进程和 WMI 的远程过程调用 (RPC) 链接已失败。 |
+| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | 参数无效。 |
+| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 没有足够的内存可用来完成此操作。 |
+| `WBEM_E_SHUTTING_DOWN` | 0x80041033 | WMI 可能已停止并重新启动。 再次调用[ConnectServerWmi](connectserverwmi.md) 。 |
+| `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | 当前进程与 WMI 之间的远程过程调用（RPC）链接失败。 |
 |`WBEM_S_NO_ERROR` | 0 | 函数调用成功。  |
 
 ## <a name="remarks"></a>备注
 
-此函数包装对的调用[iwbemservices:: Createclassenum](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemservices-createclassenum)方法。
+此函数包装对[IWbemServices：： CreateClassEnum](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemservices-createclassenum)方法的调用。
 
-如果函数调用失败，则可以通过调用获取其他错误信息[GetErrorInfo](geterrorinfo.md)函数。
+如果函数调用失败，可以通过调用[GetErrorInfo](geterrorinfo.md)函数获取其他错误信息。
 
 ## <a name="requirements"></a>要求
 
-**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。
+**适用**请参阅[系统需求](../../get-started/system-requirements.md)。
 
 **标头：** WMINet_Utils.idl
 
-**.NET Framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+**.NET Framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
 ## <a name="see-also"></a>请参阅
 
-- [WMI 和性能计数器 （非托管 API 参考）](index.md)
+- [WMI 和性能计数器（非托管 API 参考）](index.md)

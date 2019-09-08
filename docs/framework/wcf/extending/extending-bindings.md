@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - extending bindings [WCF]
 ms.assetid: 5e40d306-b3c1-4429-80c4-fbb1d956856c
-ms.openlocfilehash: f631c5df13c5633c22ef1d7179a0b7d135797b3c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: efaec84a6a6c6be5cca20d1e6a9c7c18a48169ed
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61967591"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795754"
 ---
 # <a name="extending-bindings"></a>扩展绑定
 绑定指定连接到终结点所需要的传输、编码和协议。 绑定扩展和自定义绑定实现支持应用程序功能所需要的自定义通信功能。  
@@ -18,13 +18,13 @@ ms.locfileid: "61967591"
   
 |主题|描述|  
 |-----------|-----------------|  
-|[绑定和绑定元素](../../../../docs/framework/wcf/extending/bindings-and-binding-elements.md)|介绍绑定、绑定元素以及它们的使用和扩展方法。|  
-|[自定义绑定](../../../../docs/framework/wcf/extending/custom-bindings.md)|介绍如何使用 <xref:System.ServiceModel.Channels.CustomBinding> 类来创建使用系统定义绑定元素和第三方绑定元素的自定义绑定。|  
-|[创建用户定义的绑定](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)|介绍如何创建可由其他绑定和绑定元素使用的绑定和绑定元素。|  
+|[绑定和绑定元素](bindings-and-binding-elements.md)|介绍绑定、绑定元素以及它们的使用和扩展方法。|  
+|[自定义绑定](custom-bindings.md)|介绍如何使用 <xref:System.ServiceModel.Channels.CustomBinding> 类来创建使用系统定义绑定元素和第三方绑定元素的自定义绑定。|  
+|[创建用户定义的绑定](creating-user-defined-bindings.md)|介绍如何创建可由其他绑定和绑定元素使用的绑定和绑定元素。|  
   
 ## <a name="reference"></a>参考  
   
 ## <a name="related-sections"></a>相关章节  
- [创建 BindingElement](../../../../docs/framework/wcf/extending/creating-a-bindingelement.md)  
+ [创建 BindingElement](creating-a-bindingelement.md)  
   
- [配置和元数据支持](../../../../docs/framework/wcf/extending/configuration-and-metadata-support.md)
+ [配置和元数据支持](configuration-and-metadata-support.md)

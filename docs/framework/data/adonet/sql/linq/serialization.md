@@ -5,36 +5,36 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a15ae411-8dc2-4ca3-84d2-01c9d5f1972a
-ms.openlocfilehash: 1ff6f8b58e01c86ae1c1e2e1533b1997ba2eb6b0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bf303f9a79fbcab85d33fcb3ebb132d1d3e2041d
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742891"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781109"
 ---
 # <a name="serialization"></a>序列化
 本主题介绍[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]序列化功能。 下面几段提供了有关在设计时如何在代码生成期间添加序列化以及 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 类的运行时序列化行为的信息。  
   
  您可以通过以下任一方法在设计时添加序列化代码：  
   
-- 在对象关系设计器更改**序列化模式**属性设置为**Unidirectional**。  
+- 在对象关系设计器中，将 "**序列化模式**" 属性更改为 "**单向**"。  
   
-- 在 SQLMetal 命令行中，添加 **/serialization**选项。 有关详细信息，请参阅 [SqlMetal.exe（代码生成工具）](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)。  
+- 在 SQLMetal 命令行中，添加 **/serialization**选项。 有关详细信息，请参阅 [SqlMetal.exe（代码生成工具）](../../../../tools/sqlmetal-exe-code-generation-tool.md)。  
   
 ## <a name="overview"></a>概述  
- 生成的代码[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]默认情况下提供延迟的加载功能。 延迟加载对在中间层以透明方式根据需要加载数据而言非常方便。 但是，它会给序列化过程带来问题，原因是不论是否需要进行延迟加载，序列化程序都会触发延迟加载。 实际上，对对象进行序列化时，会对其在所有出站延迟加载引用下的可传递闭包进行序列化。  
+ 由[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]生成的代码默认提供延迟加载功能。 延迟加载对在中间层以透明方式根据需要加载数据而言非常方便。 但是，它会给序列化过程带来问题，原因是不论是否需要进行延迟加载，序列化程序都会触发延迟加载。 实际上，对对象进行序列化时，会对其在所有出站延迟加载引用下的可传递闭包进行序列化。  
   
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 的序列化功能主要通过以下两种机制来解决此问题：  
   
-- 用于关闭延迟加载的 <xref:System.Data.Linq.DataContext> 模式 (<xref:System.Data.Linq.DataContext.ObjectTrackingEnabled%2A>)。 有关详细信息，请参阅 <xref:System.Data.Linq.DataContext>。  
+- 用于关闭延迟加载的 <xref:System.Data.Linq.DataContext> 模式 (<xref:System.Data.Linq.DataContext.ObjectTrackingEnabled%2A>)。 有关详细信息，请参阅 <xref:System.Data.Linq.DataContext> 。  
   
 - 用于在生成的实体中生成 <xref:System.Runtime.Serialization.DataContractAttribute?displayProperty=nameWithType> 和 <xref:System.Runtime.Serialization.DataMemberAttribute?displayProperty=nameWithType> 属性的代码生成开关。 这方面（包括处于序列化过程中的延迟加载类的行为）是本主题的主要介绍对象。  
   
 ### <a name="definitions"></a>定义  
   
-- *DataContract 序列化程序*:默认序列化程序使用的.NET Framework 3.0 或更高版本的 Windows Communication Framework (WCF) 组件。  
+- *DataContract 序列化程序*：.NET Framework 3.0 或更高版本的 Windows Communication Framework （WCF）组件使用的默认序列化程序。  
   
-- *单向序列化*:只包含单向关联属性 （为避免出现循环） 类的序列化的版本。 按照约定，主键-外键关系的父级端的属性标记为序列化。 双向关联中的另一端不进行序列化。  
+- *单向序列化*：仅包含单向关联属性的类的序列化版本（用于避免循环）。 按照约定，主键-外键关系的父级端的属性标记为序列化。 双向关联中的另一端不进行序列化。  
   
      单向序列化是 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 支持的唯一一种序列化。  
   
@@ -67,13 +67,13 @@ ms.locfileid: "67742891"
 ### <a name="self-recursive-relationships"></a>自递归关系  
  自递归关系遵循相同的模式。 与外键对应的关联属性 (Property) 不具有 <xref:System.Runtime.Serialization.DataMemberAttribute> 属性 (Attribute)，而父属性 (Property) 则具有。  
   
- 请考虑以下具有两个自递归关系的类：Employee.manager/reports 和 employee.mentor /。  
+ 请考虑以下具有两个自递归关系的类：Employee/报表和 Employee/Mentees。  
   
  [!code-csharp[DLinqSerialization#7](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSerialization/cs/northwind-ser.cs#7)]
  [!code-vb[DLinqSerialization#7](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSerialization/vb/northwind-ser.vb#7)]  
   
 ## <a name="see-also"></a>请参阅
 
-- [背景信息](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
-- [SqlMetal.exe（代码生成工具）](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)
-- [如何：使实体可序列化](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md)
+- [背景信息](background-information.md)
+- [SqlMetal.exe（代码生成工具）](../../../../tools/sqlmetal-exe-code-generation-tool.md)
+- [如何：使实体可序列化](how-to-make-entities-serializable.md)

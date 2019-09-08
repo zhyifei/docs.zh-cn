@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 27caa9916b5adab2b2049a8f66ac34fed40e4d7f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0e3e9da3db71d3e24b2a60ff032a631680055b88
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778572"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795285"
 ---
-# <a name="asmcacheflags-enumeration"></a>ASM_CACHE_FLAGS 枚举
-指示由表示程序集的源[IAssemblyCacheItem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)全局程序集缓存中。  
+# <a name="asm_cache_flags-enumeration"></a>ASM_CACHE_FLAGS 枚举
+指示由全局程序集缓存中的[IAssemblyCacheItem](iassemblycacheitem-interface.md)表示的程序集的源。  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,23 +42,23 @@ typedef enum {
   
 |成员|描述|  
 |------------|-----------------|  
-|`ASM_CACHE_ZAP`|枚举通过使用 Ngen.exe 预编译的程序集的缓存。|  
-|`ASM_CACHE_GAC`|枚举在全局程序集缓存。|  
-|`ASM_CACHE_DOWNLOAD`|枚举程序集已经根据需要下载或已经进行了卷影复制。|  
-|`ASM_CACHE_ROOT`|指示[GetCachePath](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md)函数应返回路径到公共语言运行时 (CLR) 2.0 版的全局程序集缓存。 仅对的调用上下文中有意义[GetCachePath](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md)。|  
-|`ASM_CACHE_ROOT_EX`|指示[GetCachePath](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md)函数应为 CLR 版本 4 到全局程序集缓存中返回的路径。 仅对的调用上下文中有意义[GetCachePath](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md)。|  
+|`ASM_CACHE_ZAP`|使用 Ngen.exe 枚举预编译程序集的缓存。|  
+|`ASM_CACHE_GAC`|枚举全局程序集缓存。|  
+|`ASM_CACHE_DOWNLOAD`|枚举已按需下载或已进行卷影复制的程序集。|  
+|`ASM_CACHE_ROOT`|指示[GetCachePath](getcachepath-function.md)函数应返回公共语言运行时（CLR）版本2.0 的全局程序集缓存的路径。 仅在对[GetCachePath](getcachepath-function.md)的调用上下文中有意义。|  
+|`ASM_CACHE_ROOT_EX`|指示[GetCachePath](getcachepath-function.md)函数应返回 CLR 版本4的全局程序集缓存的路径。 仅在对[GetCachePath](getcachepath-function.md)的调用上下文中有意义。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../get-started/system-requirements.md)。  
   
- **标头：** Fusion.h  
+ **标头：** 合成。h  
   
- **库：** 包含为 MsCorEE.dll 中的资源  
+ **类库**作为资源包括在 Mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 
-- [GetCachePath 函数](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md)
-- [IAssemblyCacheItem 接口](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)
-- [合成枚举](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)
+- [GetCachePath 函数](getcachepath-function.md)
+- [IAssemblyCacheItem 接口](iassemblycacheitem-interface.md)
+- [合成枚举](fusion-enumerations.md)

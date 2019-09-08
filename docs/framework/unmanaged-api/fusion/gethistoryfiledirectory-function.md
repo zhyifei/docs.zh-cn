@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 10eead2772a2bbd8abaf7b9c090a091687725972
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: adbbf94dc36c6d82360ed532b283cd666a1a52ed
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778651"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796848"
 ---
 # <a name="gethistoryfiledirectory-function"></a>GetHistoryFileDirectory 函数
 检索应用程序历史记录目录的路径。  
@@ -37,33 +37,33 @@ HRESULT GetHistoryFileDirectory (
   
 ## <a name="parameters"></a>参数  
  `wzDir`  
- [out]一个缓冲区来存放到应用程序历史记录目录的路径。  
+ 弄用于保存应用程序历史记录目录路径的缓冲区。  
   
  `pdwSize`  
- [in、 out]缓冲区的长度。  
+ [in，out]缓冲区的长度。  
   
 ## <a name="return-value"></a>返回值  
- 除了以下值在 WinError.h 文件中定义，此方法将返回标准 COM 错误代码。  
+ 除以下值外，此方法还返回 Winerror.h 文件中定义的标准 COM 错误代码。  
   
 |返回代码|描述|  
 |-----------------|-----------------|  
 |S_OK|该方法已成功完成。|  
-|E_INVALIDARG|`wzDir` 或`pdwSize`是 null 或版本字符串不正确。|  
+|E_INVALIDARG|`wzDir`或`pdwSize`为 null，或者版本字符串不正确。|  
   
 ## <a name="remarks"></a>备注  
- 成功完成后，`pdwSize`参数设置为路径字符串的长度。  
+ 成功完成后， `pdwSize`参数设置为路径字符串的长度。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../get-started/system-requirements.md)。  
   
- **标头：** Fusion.h  
+ **标头：** 合成。h  
   
- **库：** Fusion.dll 和 Mscorwks.dll。 使用而不是 Mscorwks.dll Fusion.dll 确保面向.NET Framework 的正确版本。  
+ **类库**合成 .dll 和 Mscorwks.dll。 使用 Mscorwks.dll 而不是来确保目标为正确的 .NET Framework 版本。  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 
-- [CreateHistoryReader 函数](../../../../docs/framework/unmanaged-api/fusion/createhistoryreader-function.md)
-- [NukeDownloadedCache 函数](../../../../docs/framework/unmanaged-api/fusion/nukedownloadedcache-function.md)
-- [合成全局静态函数](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+- [CreateHistoryReader 函数](createhistoryreader-function.md)
+- [NukeDownloadedCache 函数](nukedownloadedcache-function.md)
+- [合成全局静态函数](fusion-global-static-functions.md)

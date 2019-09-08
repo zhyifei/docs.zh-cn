@@ -2,25 +2,25 @@
 title: 乐观并发：概述
 ms.date: 03/30/2017
 ms.assetid: c2e38512-d0c8-4807-b30a-cb7e30338694
-ms.openlocfilehash: a61d4c5b35f3797539fe845045b8a959b0351350
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: fa7d423c0abc07e0d97f7d0d4d557aa11d675ee4
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938632"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70792924"
 ---
 # <a name="optimistic-concurrency-overview"></a>乐观并发：概述
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 支持开放式并发控制。 下表描述了适用于文档中[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]的开放式并发的术语:  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 支持开放式并发控制。 下表描述了适用于文档中[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]的开放式并发的术语：  
   
 |术语|描述|  
 |-----------|-----------------|  
 |并发|两个或更多用户同时尝试更新同一数据库行的情形。|  
 |并发冲突|两个或更多用户同时尝试向一行的一列或多列提交冲突值的情形。|  
 |并发控制|用于解决并发冲突的技术。|  
-|开放式并发控制|先调查其他事务是否已更改了行中的值，再允许提交更改的技术。<br /><br /> 与*悲观并发控制*相反, 它会锁定记录以避免并发冲突。<br /><br /> 所谓*乐观*控制, 因为它会将一个事务干扰另一个事务的几率视为不太可能。|  
+|开放式并发控制|先调查其他事务是否已更改了行中的值，再允许提交更改的技术。<br /><br /> 与*悲观并发控制*相反，它会锁定记录以避免并发冲突。<br /><br /> 所谓*乐观*控制，因为它会将一个事务干扰另一个事务的几率视为不太可能。|  
 |冲突解决|通过重新查询数据库刷新出现冲突的项，然后协调差异的过程。<br /><br /> 刷新对象时，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 更改跟踪器会保留以下数据：<br /><br /> -最初从数据库获取并用于更新检查的值。<br />-来自后续查询的新数据库值。<br /><br /> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 随后会确定相应对象是否发生冲突（即它的一个或多个成员值是否已发生更改）。 如果此对象发生冲突，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 下一步会确定它的哪些成员发生冲突。<br /><br /> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 发现的任何成员冲突都会添加到冲突列表中。|  
   
- 在对象模型中, 当以下两个条件均为 true 时, 将发生*开放式并发冲突:* [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]  
+ 在对象模型中，当以下两个条件均为 true 时，将发生*开放式并发冲突：* [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]  
   
 - 客户端尝试向数据库提交更改。  
   
@@ -44,26 +44,26 @@ ms.locfileid: "69938632"
 |User1|Alfred||“营销”|  
 |User2||Mary|服务|  
   
- 您可以用多种不同的方式来解决此类冲突。 有关详细信息，请参阅[如何：管理更改冲突](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)。  
+ 您可以用多种不同的方式来解决此类冲突。 有关详细信息，请参阅[如何：管理更改冲突](how-to-manage-change-conflicts.md)。  
   
 ## <a name="conflict-detection-and-resolution-checklist"></a>冲突检测和解决检查表  
  您可以检测和解决任意详细等级的冲突。 一种极端情况是，您可以用三种方式之一（请参见 <xref:System.Data.Linq.RefreshMode>）来解决所有冲突，而不再作其他方面的考虑。 另一种极端情况是，您可以为发生冲突的每个成员上的每种冲突指定特定操作。  
   
 - 在您的对象模型中指定或修改 <xref:System.Data.Linq.Mapping.UpdateCheck> 选项。  
   
-     有关详细信息，请参阅[如何：指定针对并发冲突](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-which-members-are-tested-for-concurrency-conflicts.md)对哪些成员进行测试。  
+     有关详细信息，请参阅[如何：指定针对并发冲突](how-to-specify-which-members-are-tested-for-concurrency-conflicts.md)对哪些成员进行测试。  
   
 - 在对 <xref:System.Data.Linq.DataContext.SubmitChanges%2A> 的调用的 try/catch 块中，指定您希望在哪个点引发异常。  
   
-     有关详细信息，请参阅[如何：指定何时引发](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-when-concurrency-exceptions-are-thrown.md)并发异常。  
+     有关详细信息，请参阅[如何：指定何时引发](how-to-specify-when-concurrency-exceptions-are-thrown.md)并发异常。  
   
 - 决定你希望检索的冲突详细信息量，并在 try/catch 块中包括相应的代码。  
   
-     有关详细信息，请参阅[如何：检索实体冲突信息](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-entity-conflict-information.md)和[如何:检索成员冲突信息](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-member-conflict-information.md)。  
+     有关详细信息，请参阅[如何：检索实体冲突信息](how-to-retrieve-entity-conflict-information.md)和[如何：检索成员冲突信息](how-to-retrieve-member-conflict-information.md)。  
   
 - 在`try` 代码`catch`中/包含要如何解决你发现的各种冲突。  
   
-     有关详细信息，请参阅[如何：通过保留数据库值](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-retaining-database-values.md)解决冲突, [如何:通过覆盖数据库值](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-overwriting-database-values.md)解决冲突, 以及[如何:通过与数据库值](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-merging-with-database-values.md)合并解决冲突。  
+     有关详细信息，请参阅[如何：通过保留数据库值](how-to-resolve-conflicts-by-retaining-database-values.md)解决冲突， [如何：通过覆盖数据库值](how-to-resolve-conflicts-by-overwriting-database-values.md)解决冲突，以及[如何：通过与数据库值](how-to-resolve-conflicts-by-merging-with-database-values.md)合并解决冲突。  
   
 ## <a name="linq-to-sql-types-that-support-conflict-discovery-and-resolution"></a>支持冲突发现和解决的 LINQ to SQL 类型  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中支持解决开放式并发冲突的类和功能包括：  
@@ -90,4 +90,4 @@ ms.locfileid: "69938632"
   
 ## <a name="see-also"></a>请参阅
 
-- [如何：管理更改冲突](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
+- [如何：管理更改冲突](how-to-manage-change-conflicts.md)

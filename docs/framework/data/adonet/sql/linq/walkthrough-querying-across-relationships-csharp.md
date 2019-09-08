@@ -2,12 +2,12 @@
 title: 演练：跨关系查询 (C#)
 ms.date: 03/30/2017
 ms.assetid: 552abeb1-18f2-4e93-a9c6-ef7b2db30c32
-ms.openlocfilehash: a9e0583b14c07df2b1de23ba37fa88552a4c5c7c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ebf96bc575ef68e1190c5b9be7111902c0f69fef
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946947"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780986"
 ---
 # <a name="walkthrough-querying-across-relationships-c"></a>演练：跨关系查询 (C#)
 本演练演示如何使用[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] *关联*来表示数据库中的外键关系。  
@@ -17,7 +17,7 @@ ms.locfileid: "69946947"
  本演练是使用 Visual C# 开发设置编写的。  
   
 ## <a name="prerequisites"></a>系统必备  
- 您必须完成[以下演练:简单对象模型和查询 (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-csharp.md)。 本演练建立在该演练基础之上，包括在 c:\linqtest5 中须存在 northwnd.mdf 文件。  
+ 您必须完成[以下演练：简单对象模型和查询（C#）](walkthrough-simple-object-model-and-query-csharp.md)。 本演练建立在该演练基础之上，包括在 c:\linqtest5 中须存在 northwnd.mdf 文件。  
   
 ## <a name="overview"></a>概述  
  本演练由三项主要任务组成：  
@@ -86,8 +86,8 @@ ms.locfileid: "69946947"
 4. 在控制台窗口中按 Enter，以停止调试。  
   
 ## <a name="next-steps"></a>后续步骤  
- 下一个演练 ([演练:操作 data (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)) 演示如何处理数据。 该演练不要求您保存本系列中已经完成的两个演练的结果。  
+ 下一个演练（[演练：操作 data （C#）](walkthrough-manipulating-data-csharp.md)）演示如何处理数据。 该演练不要求您保存本系列中已经完成的两个演练的结果。  
   
 ## <a name="see-also"></a>请参阅
 
-- [通过演练学习](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
+- [通过演练学习](learning-by-walkthroughs.md)

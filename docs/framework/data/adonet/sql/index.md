@@ -2,12 +2,12 @@
 title: SQL Server 和 ADO.NET
 ms.date: 03/30/2017
 ms.assetid: c18b1fb1-2af1-4de7-80a4-95e56fd976cb
-ms.openlocfilehash: c58c6da7a6028c9167c73af820e922f59b528f15
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b54725fa8dbff7db82ed197f4961e773a06895e4
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938084"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782328"
 ---
 # <a name="sql-server-and-adonet"></a>SQL Server 和 ADO.NET
 本节描述适用于 SQL Server 的 .NET Framework 数据提供程序 (<xref:System.Data.SqlClient>) 特定的功能和行为。  
@@ -18,22 +18,22 @@ ms.locfileid: "69938084"
 > 要使用 SQL Server .NET Framework 数据提供程序，应用程序必须引用 <xref:System.Data.SqlClient> 命名空间。  
   
 ## <a name="in-this-section"></a>本节内容  
- [SQL Server 安全性](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
+ [SQL Server 安全性](sql-server-security.md)  
  概述 SQL Server 安全功能以及用于创建面向 SQL Server 的安全 ADO.NET 应用程序的应用方案。  
   
- [SQL Server 数据类型和 ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)  
+ [SQL Server 数据类型和 ADO.NET](sql-server-data-types.md)  
  描述如何使用 SQL Server 数据类型以及这些数据类型如何与 .NET Framework 数据类型进行交互。  
   
- [SQL Server 二进制和大值数据](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)  
+ [SQL Server 二进制和大值数据](sql-server-binary-and-large-value-data.md)  
  描述如何在 SQL Server 中使用大值数据。  
   
- [ADO.NET 中的 SQL Server 数据操作](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)  
+ [ADO.NET 中的 SQL Server 数据操作](sql-server-data-operations.md)  
  说明如何使用 SQL Server 中的数据。 包含有关批量复制操作、MARS、异步操作和表值参数的各节。  
   
- [SQL Server 功能和 ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)  
+ [SQL Server 功能和 ADO.NET](sql-server-features-and-adonet.md)  
  描述对 ADO.NET 应用程序开发人员十分有用的 SQL Server 功能。  
   
- [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)  
+ [LINQ to SQL](./linq/index.md)  
  描述创建 LINQ to SQL 应用程序所需的基本构造块、进程和技术。  
   
  有关 SQL Server 数据库引擎的完整文档，请参见与您所使用的 SQL Server 版本对应的 SQL Server 联机丛书。  
@@ -42,8 +42,8 @@ ms.locfileid: "69938084"
   
 ## <a name="see-also"></a>请参阅
 
-- [保证 ADO.NET 应用程序的安全](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [ADO.NET 中的数据类型映射](../../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)
-- [数据集、数据表和数据视图](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
-- [在 ADO.NET 中检索和修改数据](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
-- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [保证 ADO.NET 应用程序的安全](../securing-ado-net-applications.md)
+- [ADO.NET 中的数据类型映射](../data-type-mappings-in-ado-net.md)
+- [数据集、数据表和数据视图](../dataset-datatable-dataview/index.md)
+- [在 ADO.NET 中检索和修改数据](../retrieving-and-modifying-data.md)
+- [ADO.NET 概述](../ado-net-overview.md)

@@ -8,41 +8,41 @@ helpviewer_keywords:
 ms.assetid: fba62a55-36bd-401e-bcd2-5be8e2d34891
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 487f3d7b31e0b7bd09dbaff7b823678118f68092
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a876e4db7656c7a9976aee61931af29078e410c0
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789761"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777169"
 ---
 # <a name="ialink2-interface"></a>IALink2 接口
-补充[IALink 接口](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)通过将如运行较新的元数据接口的方法声明[IMetaDataEmit2 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)。 此外，IALink2 声明通过原始 IALink 接口提供额外的使用量大的灵活性的方法。  
+通过声明在更新的元数据接口（如[IMetaDataEmit2 接口](../metadata/imetadataemit2-interface.md)）上操作的方法来补充[IALink 接口](ialink-interface.md)。 此外，IALink2 还声明了一些方法，这些方法可提供对原始 IALink 接口的额外使用灵活性。  
   
 ## <a name="in-this-section"></a>本节内容  
- [AddFile2 方法](../../../../docs/framework/unmanaged-api/alink/addfile2-method.md)  
+ [AddFile2 方法](addfile2-method.md)  
   
- [EmitAssembly 方法](../../../../docs/framework/unmanaged-api/alink/emitassembly-method.md)  
+ [EmitAssembly 方法](emitassembly-method.md)  
   
- [EmitInternalExportedTypes 方法](../../../../docs/framework/unmanaged-api/alink/emitinternalexportedtypes-method.md)  
+ [EmitInternalExportedTypes 方法](emitinternalexportedtypes-method.md)  
   
- [GetFileDef 方法](../../../../docs/framework/unmanaged-api/alink/getfiledef-method.md)  
+ [GetFileDef 方法](getfiledef-method.md)  
   
  GetPublicKeyToken 方法  
   
- [GetScope2 方法](../../../../docs/framework/unmanaged-api/alink/getscope2-method.md)  
+ [GetScope2 方法](getscope2-method.md)  
   
- [ImportFileEx 方法](../../../../docs/framework/unmanaged-api/alink/importfileex-method.md)  
+ [ImportFileEx 方法](importfileex-method.md)  
   
- [ImportFileEx2 方法](../../../../docs/framework/unmanaged-api/alink/importfileex2-method.md)  
+ [ImportFileEx2 方法](importfileex2-method.md)  
   
- [ImportTypes2 方法](../../../../docs/framework/unmanaged-api/alink/importtypes2-method.md)  
+ [ImportTypes2 方法](importtypes2-method.md)  
   
- [SetAssemblyFile2 方法](../../../../docs/framework/unmanaged-api/alink/setassemblyfile2-method.md)  
+ [SetAssemblyFile2 方法](setassemblyfile2-method.md)  
   
- [SetPEKind 方法](../../../../docs/framework/unmanaged-api/alink/setpekind-method.md)  
+ [SetPEKind 方法](setpekind-method.md)  
   
 ## <a name="see-also"></a>请参阅
 
-- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
-- [IALink 接口](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [Al.exe（程序集链接器）](../../../../docs/framework/tools/al-exe-assembly-linker.md)
+- [ALink API](index.md)
+- [IALink 接口](ialink-interface.md)
+- [Al.exe（程序集链接器）](../../tools/al-exe-assembly-linker.md)

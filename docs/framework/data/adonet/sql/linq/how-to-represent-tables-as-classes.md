@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 84dda12b-88a2-4cd2-92b3-8db87b28d14c
-ms.openlocfilehash: ff943fbc7ae137128d6c635fd2366ad14cf70d15
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1169def4e0180b1d14103d4a968ff3ed56f63d0c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64620022"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781758"
 ---
 # <a name="how-to-represent-tables-as-classes"></a>如何：将表表示为类
-使用[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<xref:System.Data.Linq.Mapping.TableAttribute>属性来将某个类指定为与数据库表关联的实体类。  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 使用属性将类指定为与数据库表<xref:System.Data.Linq.Mapping.TableAttribute>关联的实体类。  
   
 ### <a name="to-map-a-class-to-a-database-table"></a>将类映射到数据库表  
   
@@ -29,5 +29,5 @@ ms.locfileid: "64620022"
   
 ## <a name="see-also"></a>请参阅
 
-- [LINQ to SQL 对象模型](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)
-- [如何：通过使用代码编辑器自定义实体类](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)
+- [LINQ to SQL 对象模型](the-linq-to-sql-object-model.md)
+- [如何：使用代码编辑器自定义实体类](how-to-customize-entity-classes-by-using-the-code-editor.md)

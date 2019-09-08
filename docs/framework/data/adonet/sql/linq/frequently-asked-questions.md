@@ -5,24 +5,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 252ed666-0679-4eea-b71b-2f14117ef443
-ms.openlocfilehash: 714ec7bda4f6c79b789d6c3029b68a04cef1342b
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: ed9149eb5b88d648c02863e0fb0101e5503e1c73
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70041232"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782141"
 ---
 # <a name="frequently-asked-questions"></a>常见问题
 
 以下各节解答了您在实现 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 时可能遇到的一些常见问题。
 
-其他问题在[疑难解答](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)中得到了解决。
+其他问题在[疑难解答](troubleshooting.md)中得到了解决。
 
 ## <a name="cannot-connect"></a>无法连接
 
 问： 我无法连接到数据库。
 
-答： 请确保您的连接字符串正确且您的 SQL Server 实例正在运行。 另请注意，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 要求启用命名管道协议。 有关详细信息, 请参阅[通过演练学习](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)。
+答： 请确保您的连接字符串正确且您的 SQL Server 实例正在运行。 另请注意，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 要求启用命名管道协议。 有关详细信息，请参阅[通过演练学习](learning-by-walkthroughs.md)。
 
 ## <a name="changes-to-database-lost"></a>对数据库的更改丢失
 
@@ -30,7 +30,7 @@ ms.locfileid: "70041232"
 
 答： 请确保您调用了 <xref:System.Data.Linq.DataContext.SubmitChanges%2A> 来将结果保存到数据库。
 
-## <a name="database-connection-open-how-long"></a>数据库连接:打开多长时间？
+## <a name="database-connection-open-how-long"></a>数据库连接：打开多长时间？
 
 问： 我的数据库连接可以保持打开状态多长时间？
 
@@ -40,7 +40,7 @@ ms.locfileid: "70041232"
 
 - 使用连接对象构造 <xref:System.Data.Linq.DataContext> 时的连接状态。
 
-- 连接字符串设置（例如，启用多活动结果集 (MARS)）。 有关详细信息，请参阅[多个活动结果集 (MARS)](../../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)。
+- 连接字符串设置（例如，启用多活动结果集 (MARS)）。 有关详细信息，请参阅[多个活动结果集 (MARS)](../multiple-active-result-sets-mars.md)。
 
 ## <a name="updating-without-querying"></a>在不进行查询的情况下更新
 
@@ -56,11 +56,11 @@ ms.locfileid: "70041232"
 
 问： 我的查询返回了意外的结果。 如何检查所发生的情况？
 
-答： [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 提供了几种工具用于检查其生成的 SQL 代码。 其中最重要的工具就是 <xref:System.Data.Linq.DataContext.Log%2A>。 有关详细信息, 请参阅[调试支持](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)。
+答： [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 提供了几种工具用于检查其生成的 SQL 代码。 其中最重要的工具就是 <xref:System.Data.Linq.DataContext.Log%2A>。 有关详细信息，请参阅[调试支持](debugging-support.md)。
 
 ## <a name="unexpected-stored-procedure-results"></a>意外的存储过程结果
 
-问： 我有一个存储过程，其返回值由 `MAX()` 进行计算。 当我将该存储过程拖到 O/R 设计器图面时, 返回值是不正确的。
+问： 我有一个存储过程，其返回值由 `MAX()` 进行计算。 当我将该存储过程拖到 O/R 设计器图面时，返回值是不正确的。
 
 答： [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 提供了两种方法来通过存储过程返回数据库生成的值：
 
@@ -110,13 +110,13 @@ select nax(i) AS MaxResult from t where name like 'hello'
 end
 ```
 
-有关详细信息, 请参阅[使用存储过程自定义操作](../../../../../../docs/framework/data/adonet/sql/linq/customizing-operations-by-using-stored-procedures.md)。
+有关详细信息，请参阅[使用存储过程自定义操作](customizing-operations-by-using-stored-procedures.md)。
 
 ## <a name="serialization-errors"></a>序列化错误
 
-问： 当我尝试序列化时, 出现以下错误:"Type ' ChangeTracker + StandardChangeTracker ' ..."未标记为可序列化。 "
+问： 当我尝试序列化时，出现以下错误："Type ' ChangeTracker + StandardChangeTracker ' ..."未标记为可序列化。 "
 
-答： [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中的代码生成支持 <xref:System.Runtime.Serialization.DataContractSerializer> 序列化， 而不支持 <xref:System.Xml.Serialization.XmlSerializer> 或 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>。 有关详细信息，请参阅[序列化](../../../../../../docs/framework/data/adonet/sql/linq/serialization.md)。
+答： [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中的代码生成支持 <xref:System.Runtime.Serialization.DataContractSerializer> 序列化， 而不支持 <xref:System.Xml.Serialization.XmlSerializer> 或 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>。 有关详细信息，请参阅[序列化](serialization.md)。
 
 ## <a name="multiple-dbml-files"></a>多个 DBML 文件
 
@@ -128,7 +128,7 @@ end
 
 问： 我的一个数据库表具有一个默认为 SQL `DateCreated` 的 `Getdate()` 列。 在我试图使用 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 插入新记录时，该值会设置为 `NULL`。 我希望其设置为数据库默认值。
 
-答： [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 会自动为标识（自动增加）和 rowguidcol（数据库生成的 GUID）以及时间戳列处理这种情况。 在其他情况下, 应手动设置<xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A> = <xref:System.Data.Linq.Mapping.ColumnAttribute.AutoSync%2A> = `true`和<xref:System.Data.Linq.Mapping.AutoSync.Always> 属性。<xref:System.Data.Linq.Mapping.AutoSync.OnInsert> / / <xref:System.Data.Linq.Mapping.AutoSync.OnUpdate>
+答： [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 会自动为标识（自动增加）和 rowguidcol（数据库生成的 GUID）以及时间戳列处理这种情况。 在其他情况下，应手动设置<xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A> = <xref:System.Data.Linq.Mapping.ColumnAttribute.AutoSync%2A> = `true`和<xref:System.Data.Linq.Mapping.AutoSync.Always> 属性。<xref:System.Data.Linq.Mapping.AutoSync.OnInsert> / / <xref:System.Data.Linq.Mapping.AutoSync.OnUpdate>
 
 ## <a name="multiple-dataloadoptions"></a>多个 DataLoadOptions
 
@@ -152,11 +152,11 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 
 问： 将表拖出 SQL Server Compact 3.5 数据库时出错。
 
-答： 对象关系设计器不支持 SQL Server Compact 3.5, 尽管[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]运行时这样做。 在这种情况下，必须创建您自己的实体类并添加合适的属性。
+答： 对象关系设计器不支持 SQL Server Compact 3.5，尽管[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]运行时这样做。 在这种情况下，必须创建您自己的实体类并添加合适的属性。
 
 ## <a name="errors-in-inheritance-relationships"></a>继承关系中的错误
 
-问： 我使用了对象关系设计器中的工具箱继承形状连接两个实体, 但却出现错误。
+问： 我使用了对象关系设计器中的工具箱继承形状连接两个实体，但却出现错误。
 
 答： 仅创建关系是不够的。 还必须提供其他信息，例如鉴别器列、基类鉴别器值和派生类鉴别器值。
 
@@ -185,15 +185,15 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 3. 检查默认的 <xref:System.Data.Linq.Mapping.UpdateCheck> 值 (<xref:System.Data.Linq.Mapping.UpdateCheck.Never>) 以确定该值对于您的应用程序是否正确。
 
     > [!CAUTION]
-    > 如果你使用的是 Visual Studio 中的对象关系设计器, 则可能会覆盖你所做的更改。
+    > 如果你使用的是 Visual Studio 中的对象关系设计器，则可能会覆盖你所做的更改。
 
 ## <a name="aptca"></a>APTCA
 
 问： System.Data.Linq 是否标记为供部分受信任的代码使用？
 
-答： 是的, system.web 程序集位于用<xref:System.Security.AllowPartiallyTrustedCallersAttribute>特性标记的 .NET Framework 程序集中。 如果没有此标记, .NET Framework 中的程序集将仅供完全受信任的代码使用。
+答： 是的，system.web 程序集位于用<xref:System.Security.AllowPartiallyTrustedCallersAttribute>特性标记的 .NET Framework 程序集中。 如果没有此标记，.NET Framework 中的程序集将仅供完全受信任的代码使用。
 
-中[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]用于允许部分受信任的调用方的主要方案是[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]允许从 Web 应用程序 (其中的*信任*配置为 Medium) 访问程序集。
+中[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]用于允许部分受信任的调用方的主要方案是[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]允许从 Web 应用程序（其中的*信任*配置为 Medium）访问程序集。
 
 ## <a name="mapping-data-from-multiple-tables"></a>映射来自多个表的数据
 
@@ -202,7 +202,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 答： 您可以在数据库中创建一个视图并将实体映射到该视图。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 会为视图生成 SQL，与它为表生成 SQL 相同。
 
 > [!NOTE]
-> 这种情况下的视图用法有一些限制。 当基础视图支持在 <xref:System.Data.Linq.Table%601> 上执行的操作时，此方法最为安全。 只有您知道要执行的操作。 例如, 大多数应用程序都是只读的, 而另一个就前往数字`Create`仅通过对视图使用存储过程来执行/ / `Update` `Delete`操作。
+> 这种情况下的视图用法有一些限制。 当基础视图支持在 <xref:System.Data.Linq.Table%601> 上执行的操作时，此方法最为安全。 只有您知道要执行的操作。 例如，大多数应用程序都是只读的，而另一个就前往数字`Create`仅通过对视图使用存储过程来执行/ / `Update` `Delete`操作。
 
 ## <a name="connection-pooling"></a>连接池
 
@@ -210,13 +210,13 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 
 答： 请不要试图重用 <xref:System.Data.Linq.DataContext> 的实例。 每个 <xref:System.Data.Linq.DataContext> 都会保持对应一个特定编辑/查询会话的状态（包括标识缓存）。 若要获取基于数据库当前状态的新实例，请使用新的 <xref:System.Data.Linq.DataContext>。
 
-你仍可以使用基础 ADO.NET 连接池。 有关详细信息，请参阅 [SQL Server 连接池 (ADO.NET)](../../../../../../docs/framework/data/adonet/sql-server-connection-pooling.md)。
+你仍可以使用基础 ADO.NET 连接池。 有关详细信息，请参阅 [SQL Server 连接池 (ADO.NET)](../../sql-server-connection-pooling.md)。
 
 ## <a name="second-datacontext-is-not-updated"></a>第二个 DataContext 未更新
 
 问： 我使用 <xref:System.Data.Linq.DataContext> 的一个实例存储数据库中的值。 但是，相同数据库上的另一个 <xref:System.Data.Linq.DataContext> 未反映更新的值。 第二个 <xref:System.Data.Linq.DataContext> 实例似乎返回缓存的值。
 
-答： 此行为是有意安排的。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 会继续返回您在第一个实例中看到的相同实例/值。 在进行更新时使用开放式并发。 原始数据用于检查当前数据库状态，以确定该数据实际上仍未更改。 如果该数据已更改，则会发生冲突，您的应用程序必须解决该冲突。 您的应用程序可以选择将原始状态重置为当前数据库状态并尝试再次更新。 有关详细信息，请参阅[如何：管理更改冲突](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)。
+答： 此行为是有意安排的。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 会继续返回您在第一个实例中看到的相同实例/值。 在进行更新时使用开放式并发。 原始数据用于检查当前数据库状态，以确定该数据实际上仍未更改。 如果该数据已更改，则会发生冲突，您的应用程序必须解决该冲突。 您的应用程序可以选择将原始状态重置为当前数据库状态并尝试再次更新。 有关详细信息，请参阅[如何：管理更改冲突](how-to-manage-change-conflicts.md)。
 
 您也可以将 <xref:System.Data.Linq.DataContext.ObjectTrackingEnabled%2A> 设置为 false，这样可以关闭缓存和更改跟踪。 然后便可以在每次查询时检索最新值。
 
@@ -228,6 +228,6 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 
 ## <a name="see-also"></a>请参阅
 
-- [引用](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
-- [疑难解答](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)
-- [LINQ to SQL 中的安全性](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md)
+- [引用](reference.md)
+- [疑难解答](troubleshooting.md)
+- [LINQ to SQL 中的安全性](security-in-linq-to-sql.md)

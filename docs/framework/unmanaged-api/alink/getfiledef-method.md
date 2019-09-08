@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a51e8c83d0949f68a41f6a4e10396adbc4f3c9c1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5db205993bc1a0665dc0003948ce805813251f48
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741888"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70787451"
 ---
 # <a name="getfiledef-method"></a>GetFileDef 方法
-检索元数据 （而不是由 ALink 分配的令牌） 中使用的实际 FileDef 标记。  
+检索在元数据中使用的实际 FileDef 令牌（而不是由 ALink 分配的令牌）。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,19 +41,19 @@ HRESULT GetFileDef(
  程序集的 ID。  
   
  `TargetFile`  
- 添加文件的令牌从 AddFile 方法或 AddImport 方法检索。  
+ 从 AddFile 方法或 AddImport 方法检索到的已添加文件的标记。  
   
  `pScope`  
- 收到 FileDef 令牌。  
+ 接收 FileDef 标记。  
   
 ## <a name="return-value"></a>返回值  
- 如果该方法成功，返回，则为 S_OK。  
+ 如果该方法成功，则返回 S_OK。  
   
 ## <a name="requirements"></a>要求  
- 需要 alink.h  
+ 需要 alink  
   
 ## <a name="see-also"></a>请参阅
 
-- [IALink2 接口](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [IALink 接口](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink2 接口](ialink2-interface.md)
+- [IALink 接口](ialink-interface.md)
+- [ALink API](index.md)

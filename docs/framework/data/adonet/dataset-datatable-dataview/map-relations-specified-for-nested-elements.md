@@ -2,17 +2,17 @@
 title: 映射为嵌套元素指定的关系
 ms.date: 03/30/2017
 ms.assetid: 24a2d3e5-4af7-4f9a-ab7a-fe6684c9e4fe
-ms.openlocfilehash: 510a5e676df7bac274c6086b94e9a23e7540da20
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: e8cdf73b6277abdaab1256ca87e615a5e25e7336
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204632"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786082"
 ---
 # <a name="map-relations-specified-for-nested-elements"></a>映射为嵌套元素指定的关系
-架构可以包含**msdata: Relationship**批注, 以显式指定架构中任意两个元素之间的映射。 **Msdata: Relationship**中指定的两个元素可以嵌套在架构中, 但不必是。 映射过程使用架构中的**msdata: Relationship**来生成两个列之间的主键/外键关系。  
+架构可以包含**msdata： Relationship**批注，以显式指定架构中任意两个元素之间的映射。 **Msdata： Relationship**中指定的两个元素可以嵌套在架构中，但不必是。 映射过程使用架构中的**msdata： Relationship**来生成两个列之间的主键/外键关系。  
   
- 下面的示例显示一个 XML 架构, 其中**OrderDetail**元素是**Order**的子元素。 **Msdata: Relationship**标识这种父子关系, 并指定生成的**Order**表的**OrderNumber**列与生成的**OrderDetail**表的**OrderNo**列相关。  
+ 下面的示例显示一个 XML 架构，其中**OrderDetail**元素是**Order**的子元素。 **Msdata： Relationship**标识这种父子关系，并指定生成的**Order**表的**OrderNumber**列与生成的**OrderDetail**表的**OrderNo**列相关。  
   
 ```xml  
 <xs:schema id="MyDataSet" xmlns=""   
@@ -61,7 +61,7 @@ ms.locfileid: "70204632"
     OrderDetail(OrderNo, ItemNo)  
     ```  
   
-- **Order**表和**OrderDetail**表之间的关系。 此关系的**嵌套**属性设置为**True** , 因为**Order**和**OrderDetail**元素嵌套在架构中。  
+- **Order**表和**OrderDetail**表之间的关系。 此关系的**嵌套**属性设置为**True** ，因为**Order**和**OrderDetail**元素嵌套在架构中。  
   
     ```  
     ParentTable: Order  
@@ -78,4 +78,4 @@ ms.locfileid: "70204632"
 
 - [从 XML 架构生成数据集关系 (XSD)](generating-dataset-relations-from-xml-schema-xsd.md)
 - [将 XML 架构 (XSD) 约束映射到数据集约束](mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
-- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 概述](../ado-net-overview.md)

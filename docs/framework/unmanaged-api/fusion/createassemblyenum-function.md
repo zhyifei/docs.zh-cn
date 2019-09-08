@@ -18,15 +18,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c56b0168df6e4aee69b5d3e5fbbe027ca2c8974a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1db72c44b53b5abff9aee35094abc1e0e577fad4
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778441"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795385"
 ---
 # <a name="createassemblyenum-function"></a>CreateAssemblyEnum 函数
-获取一个指向[IAssemblyEnum](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md)可以枚举中具有指定的程序集的对象的实例[IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)。  
+获取一个指针，该指针指向可使用指定的[IAssemblyName](iassemblyname-interface.md)枚举程序集中的对象的[IAssemblyEnum](iassemblyenum-interface.md)实例。  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,34 +42,34 @@ HRESULT CreateAssemblyEnum (
   
 ## <a name="parameters"></a>参数  
  `pEnum`  
- [out]指向包含所请求的内存位置`IAssemblyEnum`指针。  
+ 弄指向包含所请求`IAssemblyEnum`指针的内存位置的指针。  
   
  `pUnkReserved`  
- [in]保留供将来的扩展。 `pUnkReserved` 必须是 null 引用。  
+ 中保留以供将来进行扩展。 `pUnkReserved`必须为空引用。  
   
  `pName`  
- [in]`IAssemblyName`的请求的程序集。 此名称用于筛选枚举。 它可以为 null 以枚举在全局程序集缓存中的所有程序集。  
+ 中`IAssemblyName`请求的程序集的。 此名称用于筛选枚举。 它可以为 null，以枚举全局程序集缓存中的所有程序集。  
   
  `dwFlags`  
- [in]用于修改枚举器的行为的标志。 此参数包含中的一位完全[ASM_CACHE_FLAGS](../../../../docs/framework/unmanaged-api/fusion/asm-cache-flags-enumeration.md)枚举。  
+ 中用于修改枚举器的行为的标志。 此参数正好包含[ASM_CACHE_FLAGS](asm-cache-flags-enumeration.md)枚举中的一个位。  
   
  `pvReserved`  
- [in]保留供将来的扩展。 `pvReserved` 必须是 null 引用。  
+ 中保留以供将来进行扩展。 `pvReserved`必须为空引用。  
   
 ## <a name="remarks"></a>备注  
- `dwFlags`参数包含一位完全从`ASM_CACHE_FLAGS`枚举。  
+ 参数只包含`ASM_CACHE_FLAGS`枚举中的一个位。 `dwFlags`  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../get-started/system-requirements.md)。  
   
- **标头：** Fusion.h  
+ **标头：** 合成。h  
   
- **库：** 包含为 MsCorEE.dll 中的资源  
+ **类库**作为资源包括在 Mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 
-- [IAssemblyEnum 接口](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md)
-- [IAssemblyName 接口](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
-- [合成全局静态函数](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+- [IAssemblyEnum 接口](iassemblyenum-interface.md)
+- [IAssemblyName 接口](iassemblyname-interface.md)
+- [合成全局静态函数](fusion-global-static-functions.md)

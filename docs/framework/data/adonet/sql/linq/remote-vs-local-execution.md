@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ee50e943-9349-4c84-ab1c-c35d3ada1a9c
-ms.openlocfilehash: a25186f6283f01ef56b1c684c4a43b9a60fb6d64
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a21d5bbffdb1a78d3062929a1ca384a750af59a7
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64619670"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781165"
 ---
 # <a name="remote-vs-local-execution"></a>远程查询执行与本地执行
 您可以决定以远程方式（即数据库引擎对数据库执行查询）或在本地（[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 对本地缓存执行查询）执行您的查询。  
@@ -42,11 +42,11 @@ ms.locfileid: "64619670"
  [!code-vb[DLinqQueryConcepts#8](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryConcepts/vb/Module1.vb#8)]  
   
 ## <a name="comparison"></a>比较  
- 这两项功能提供了强大的选项组合：大型集合采用以远程方式执行，小型集合或在需要完整集的情况下在本地执行。 您需要通过 <xref:System.Linq.IQueryable> 进行远程执行，对于本地执行，则需要对内存中的 <xref:System.Collections.Generic.IEnumerable%601> 集合执行。 若要强制在本地执行 (即<xref:System.Collections.Generic.IEnumerable%601>)，请参阅[将一种类型转换为泛型 IEnumerable](../../../../../../docs/framework/data/adonet/sql/linq/convert-a-type-to-a-generic-ienumerable.md)。  
+ 这两项功能提供了强大的选项组合：大型集合采用以远程方式执行，小型集合或在需要完整集的情况下在本地执行。 您需要通过 <xref:System.Linq.IQueryable> 进行远程执行，对于本地执行，则需要对内存中的 <xref:System.Collections.Generic.IEnumerable%601> 集合执行。 若要强制执行本地执行（即<xref:System.Collections.Generic.IEnumerable%601>），请参阅[将类型转换为泛型 IEnumerable](convert-a-type-to-a-generic-ienumerable.md)。  
   
 ### <a name="queries-against-unordered-sets"></a>针对无序集的查询  
- 请注意实现的本地集合之间的重要区别<xref:System.Collections.Generic.List%601>并提供了执行的远程查询的集合*无序集*关系数据库中。 <xref:System.Collections.Generic.List%601> 方法（如使用索引值的那些方法）需要列表语义，列表语义通常无法通过针对无序集的远程查询获得。 因此，此类方法隐式加载 <xref:System.Data.Linq.EntitySet%601>，以允许本地执行。  
+ 请注意实现<xref:System.Collections.Generic.List%601>的本地集合与提供对关系数据库中*无序集*执行的远程查询的集合之间的重要区别。 <xref:System.Collections.Generic.List%601> 方法（如使用索引值的那些方法）需要列表语义，列表语义通常无法通过针对无序集的远程查询获得。 因此，此类方法隐式加载 <xref:System.Data.Linq.EntitySet%601>，以允许本地执行。  
   
 ## <a name="see-also"></a>请参阅
 
-- [查询概念](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
+- [查询概念](query-concepts.md)

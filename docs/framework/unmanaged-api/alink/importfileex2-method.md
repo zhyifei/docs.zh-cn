@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e6584d31674670bcd005161a846b74df71a27a5f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a1c950e9a6e53e04cc0f2e52a140612562b32ff1
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741645"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70776980"
 ---
 # <a name="importfileex2-method"></a>ImportFileEx2 方法
-导入程序集和未绑定的模块。 此方法就像[ImportFile 方法](../../../../docs/framework/unmanaged-api/alink/importfile-method.md)，但仍可正常工作磁盘上不存在要导入的文件。  
+导入程序集和未绑定模块。 此方法类似于[ImportFile 方法](importfile-method.md)，但即使磁盘上没有要导入的文件也能正常工作。  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,37 +43,37 @@ HRESULT ImportFileEx2(
   
 ## <a name="parameters"></a>参数  
  `pszFilename`  
- 要导入文件的名称。  
+ 要导入的文件的名称。  
   
  `pszTargetName`  
- 可选目标文件的名称。  
+ 目标文件的可选名称。  
   
  `pAssemblyScopeIn`  
- 可选的导入作用域[IMetaDataAssemblyImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)接口。  
+ 可选的导入范围[IMetaDataAssemblyImport 接口](../metadata/imetadataassemblyimport-interface.md)接口。  
   
  `fSmartImport`  
- 如果为 TRUE，则使用 ImportTypes 时，必须手动执行否则导入。  
+ 如果为 TRUE，则使用 ImportTypes，否则必须手动执行导入。  
   
  `dwOpenFlags`  
- 要传递到标志[OpenScope 方法](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md)。  
+ 要传递给[OpenScope 方法](../metadata/imetadatadispenser-openscope-method.md)的标志。  
   
  `pImportToken`  
- 接收的程序集或文件的唯一 ID。  
+ 接收程序集或文件的唯一 ID。  
   
  `ppAssemblyScope`  
- 接收程序集导入范围[IMetaDataAssemblyImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)接口。 如果该文件不是程序集，可以为 NULL。  
+ 接收程序集导入范围[IMetaDataAssemblyImport 接口](../metadata/imetadataassemblyimport-interface.md)接口。 如果文件不是程序集，则可以为 NULL。  
   
  `pdwCountOfScopes`  
- 接收文件和/或导入的作用域的数。  
+ 接收导入的文件和/或范围的数量。  
   
 ## <a name="return-value"></a>返回值  
- 如果该方法成功，返回，则为 S_OK。  
+ 如果该方法成功，则返回 S_OK。  
   
 ## <a name="requirements"></a>要求  
- 需要 alink.h。  
+ 需要 alink。  
   
 ## <a name="see-also"></a>请参阅
 
-- [IALink2 接口](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [IALink 接口](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink2 接口](ialink2-interface.md)
+- [IALink 接口](ialink-interface.md)
+- [ALink API](index.md)

@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1193af7b7375dfd3367c12fdb0067c9c30c614f0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a03fc24e5ef932d13c0d195f53c703cdd3ff45ff
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741748"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70776939"
 ---
 # <a name="importfile2-method"></a>ImportFile2 方法
-导入程序集和未绑定的模块。 此方法就像[ImportFile 方法](../../../../docs/framework/unmanaged-api/alink/importfile-method.md)，但仍可正常工作磁盘上不存在要导入的文件。  
+导入程序集和未绑定模块。 此方法类似于[ImportFile 方法](importfile-method.md)，但即使磁盘上没有要导入的文件也能正常工作。  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,34 +42,34 @@ HRESULT ImportFile2(
   
 ## <a name="parameters"></a>参数  
  `pszFilename`  
- 要导入文件的名称。  
+ 要导入的文件的名称。  
   
  `pszTargetName`  
- 可用于重命名该文件并将其链接到该程序集的可选的输出文件名称。  
+ 可选输出文件名，可用于在文件链接到程序集时对其进行重命名。  
   
  `pAssemblyScopeIn`  
- 可选的作用域[IMetaDataAssemblyImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)接口。  
+ 可选范围[IMetaDataAssemblyImport 接口](../metadata/imetadataassemblyimport-interface.md)接口。  
   
  `fSmartImport`  
- 如果为 TRUE，则使用 ImportTypes 时，必须手动执行否则导入。  
+ 如果为 TRUE，则使用 ImportTypes，否则必须手动执行导入。  
   
  `pImportToken`  
  接收文件或程序集的 ID。  
   
  `ppAssemblyScope`  
- 接收[IMetaDataAssemblyImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)接口。 如果该文件不是程序集为 NULL。  
+ 接收[IMetaDataAssemblyImport 接口](../metadata/imetadataassemblyimport-interface.md)接口。 如果文件不是程序集，则为 NULL。  
   
  `pdwCountOfScopes`  
- 接收找到的文件和/或导入的作用域。  
+ 接收导入的文件和/或范围的发现。  
   
 ## <a name="return-value"></a>返回值  
- 如果该方法成功，返回，则为 S_OK。  
+ 如果该方法成功，则返回 S_OK。  
   
 ## <a name="requirements"></a>要求  
- 需要 alink.h。  
+ 需要 alink。  
   
 ## <a name="see-also"></a>请参阅
 
-- [IALink 接口](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2 接口](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink 接口](ialink-interface.md)
+- [IALink2 接口](ialink2-interface.md)
+- [ALink API](index.md)

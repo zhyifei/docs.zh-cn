@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - message logging [WCF]
 ms.assetid: 0ff4c857-8f09-4b85-9dc0-89084706e4c9
-ms.openlocfilehash: f9324370539b41d21365e0bd126c2f632ac67789
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: db538634dccf22fb954ccf0827909e5cf3563f77
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044282"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798162"
 ---
 # <a name="configuring-message-logging"></a>配置消息日志记录
 
@@ -17,7 +17,7 @@ ms.locfileid: "70044282"
 
 ## <a name="enabling-message-logging"></a>启用消息日志记录
 
-默认情况下, Windows Communication Foundation (WCF) 不记录消息。 若要激活消息日志记录，必须向 `System.ServiceModel.MessageLogging` 跟踪源添加跟踪侦听器，并在配置文件中设置 `<messagelogging>` 元素的特性。
+默认情况下，Windows Communication Foundation （WCF）不记录消息。 若要激活消息日志记录，必须向 `System.ServiceModel.MessageLogging` 跟踪源添加跟踪侦听器，并在配置文件中设置 `<messagelogging>` 元素的特性。
 
 下面的示例演示如何启用日志记录和指定其他选项。
 
@@ -47,7 +47,7 @@ ms.locfileid: "70044282"
 </system.serviceModel>
 ```
 
-有关消息日志记录设置的详细信息, 请参阅[用于跟踪和消息日志记录的推荐设置](../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md)。
+有关消息日志记录设置的详细信息，请参阅[用于跟踪和消息日志记录的推荐设置](./tracing/recommended-settings-for-tracing-and-message-logging.md)。
 
 可以使用 `add` 指定要使用的侦听器的名称和类型。 在示例配置中，侦听器命名为“messages”，并添加了标准 .NET Framework 跟踪侦听器(`System.Diagnostics.XmlWriterTraceListener`)，作为要使用的类型。 如果使用 `System.Diagnostics.XmlWriterTraceListener`，则必须在配置文件中指定输出文件的位置和名称。 这是通过将 `initializeData` 设置为该日志文件的名称来完成的。 否则，系统将引发异常。 还可以实现能向默认文件发出日志的自定义侦听器。
 
@@ -62,7 +62,7 @@ ms.locfileid: "70044282"
 <source name="System.ServiceModel.MessageLogging" switchValue="Verbose">
 ```
 
-如果希望禁用跟踪源，应该使用 `logMessagesAtServiceLevel`, `logMalformedMessages` 以及 `logMessagesAtTransportLevel` 元素的 `messageLogging` 属性。 应将所有这些属性设置为 `false`。 可以使用前面的代码示例中的配置文件、通过配置编辑器的 UI 接口或使用 WMI 来完成此操作。 有关配置编辑器工具的详细信息, 请参阅[配置编辑器工具 (svcconfigeditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)。 有关 WMI 的详细信息, 请参阅[使用 Windows Management Instrumentation 诊断](../../../../docs/framework/wcf/diagnostics/wmi/index.md)。
+如果希望禁用跟踪源，应该使用 `logMessagesAtServiceLevel`, `logMalformedMessages` 以及 `logMessagesAtTransportLevel` 元素的 `messageLogging` 属性。 应将所有这些属性设置为 `false`。 可以使用前面的代码示例中的配置文件、通过配置编辑器的 UI 接口或使用 WMI 来完成此操作。 有关配置编辑器工具的详细信息，请参阅[配置编辑器工具（svcconfigeditor.exe）](../configuration-editor-tool-svcconfigeditor-exe.md)。 有关 WMI 的详细信息，请参阅[使用 Windows Management Instrumentation 诊断](./wmi/index.md)。
 
 ## <a name="logging-levels-and-options"></a>日志记录的级别和选项
 
@@ -84,28 +84,28 @@ WCF 在两个不同的级别、服务和传输中记录消息。 也记录格式
 
 ### <a name="malformed-level"></a>“格式不正确”级别
 
-格式不正确的消息是指在任何处理阶段由 WCF 堆栈拒绝的消息。 格式错误的消息将被如实记录：已加密（如果是加密的）、带有不适当的 XML 等。 `maxSizeOfMessageToLog` 定义了记录为 CDATA 的消息大小。 默认情况下，`maxSizeOfMessageToLog` 等于 256K。 有关此属性的详细信息, 请参阅 "其他选项" 部分。
+格式不正确的消息是指在任何处理阶段由 WCF 堆栈拒绝的消息。 格式错误的消息将被如实记录：已加密（如果是加密的）、带有不适当的 XML 等。 `maxSizeOfMessageToLog` 定义了记录为 CDATA 的消息大小。 默认情况下，`maxSizeOfMessageToLog` 等于 256K。 有关此属性的详细信息，请参阅 "其他选项" 部分。
 
 ### <a name="other-options"></a>其他选项
 
 除了日志记录的级别外，用户可以指定以下选项：
 
-- 记录整个消息 (`logEntireMessage`属性):此值指定是否记录整个消息 (消息头和正文)。 默认值为 `false`，这意味着仅记录标头。 此设置会影响服务和传输消息日志记录级别。
+- 记录整个消息（`logEntireMessage`属性）：此值指定是否记录整个消息（消息头和正文）。 默认值为 `false`，这意味着仅记录标头。 此设置会影响服务和传输消息日志记录级别。
 
-- 要记录的最大`maxMessagesToLog`消息数 (属性):此值指定要记录的最大消息数。 所有的消息（服务、传输和格式不正确消息）都统计到该配额中。 达到配额上限时，会发出一个跟踪，并且不再记录更多的消息。 默认值为10000。
+- 要记录的最大`maxMessagesToLog`消息数（属性）：此值指定要记录的最大消息数。 所有的消息（服务、传输和格式不正确消息）都统计到该配额中。 达到配额上限时，会发出一个跟踪，并且不再记录更多的消息。 默认值为10000。
 
-- 要记录的消息的最大`maxSizeOfMessageToLog`大小 (attribute):此值指定要记录的最大消息大小 (以字节为单位)。 超过该大小限制的消息将不作记录，也不对该消息执行任何其他活动。 此设置会影响所有跟踪级别。 如果 ServiceModel 跟踪打开，将在第一个记录点发出警告级别的跟踪（ServiceModelSend* 或 TransportReceive）以通知用户。 服务级别和传输级别的消息的默认值为 256K，而格式不正确消息的默认值为 4K。
+- 要记录的消息的最大`maxSizeOfMessageToLog`大小（attribute）：此值指定要记录的最大消息大小（以字节为单位）。 超过该大小限制的消息将不作记录，也不对该消息执行任何其他活动。 此设置会影响所有跟踪级别。 如果 ServiceModel 跟踪打开，将在第一个记录点发出警告级别的跟踪（ServiceModelSend* 或 TransportReceive）以通知用户。 服务级别和传输级别的消息的默认值为 256K，而格式不正确消息的默认值为 4K。
 
   > [!CAUTION]
   > 计算出来与 `maxSizeOfMessageToLog` 进行比较的消息大小是序列化之前内存中的消息大小。 该大小可能与正在记录的消息字符串的实际长度不同，在很多情况下比实际大小更大。 结果可能无法记录消息。 可以通过将 `maxSizeOfMessageToLog` 属性指定为比预期的消息大小大 10% 来解决这个问题。 此外，如果记录了格式不正确的消息，消息日志所占用的实际磁盘空间可能达到 `maxSizeOfMessageToLog` 所指定的值的 5 倍。
 
 如果在配置文件中没有定义跟踪侦听器，则不论指定什么记录级别，都不会生成记录输出。
 
-对于消息日志记录选项（例如在本部分描述的属性），可以使用 Windows Management Instrumentation (WMI) 在运行时进行更改。 这可以通过访问[AppDomainInfo](../../../../docs/framework/wcf/diagnostics/wmi/appdomaininfo.md)实例来完成, 此实例将公开以下布尔属性`LogMessagesAtServiceLevel`: `LogMessagesAtTransportLevel`、和`LogMalformedMessages`。 因此，如果为消息日志记录配置了跟踪侦听器，但是在配置中将这些选项设置为 `false`，那么可以在以后运行应用程序时将它们更改为 `true`。 这会在运行时有效地启用消息日志记录。 同样，如果在配置文件中启用了消息日志记录，可以在运行时使用 WMI 将其禁用。 有关详细信息, 请参阅[使用诊断 Windows Management Instrumentation](../../../../docs/framework/wcf/diagnostics/wmi/index.md)。
+对于消息日志记录选项（例如在本部分描述的属性），可以使用 Windows Management Instrumentation (WMI) 在运行时进行更改。 这可以通过访问[AppDomainInfo](./wmi/appdomaininfo.md)实例来完成，此实例将公开以下布尔属性`LogMessagesAtServiceLevel`： `LogMessagesAtTransportLevel`、和`LogMalformedMessages`。 因此，如果为消息日志记录配置了跟踪侦听器，但是在配置中将这些选项设置为 `false`，那么可以在以后运行应用程序时将它们更改为 `true`。 这会在运行时有效地启用消息日志记录。 同样，如果在配置文件中启用了消息日志记录，可以在运行时使用 WMI 将其禁用。 有关详细信息，请参阅[使用诊断 Windows Management Instrumentation](./wmi/index.md)。
 
 消息记录中的 `source` 字段指定了在何种上下文中记录消息：在发送/接收请求消息时、在进行请求-答复或单向请求时、在服务模型或传输层上或者在发现格式不正确的消息时。
 
-对于格式不正确`source`的消息, `Malformed`等于。 否则，根据上下文，源具有以下值。
+对于格式不正确`source`的消息， `Malformed`等于。 否则，根据上下文，源具有以下值。
 
 对于请求/答复
 
@@ -174,6 +174,6 @@ WCF 在两个不同的级别、服务和传输中记录消息。 也记录格式
 
 ## <a name="see-also"></a>请参阅
 
-- [\<messageLogging>](../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)
-- [消息日志记录](../../../../docs/framework/wcf/diagnostics/message-logging.md)
-- [跟踪和消息日志记录的推荐设置](../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md)
+- [\<messageLogging>](../../configure-apps/file-schema/wcf/messagelogging.md)
+- [消息日志记录](message-logging.md)
+- [跟踪和消息日志记录的推荐设置](./tracing/recommended-settings-for-tracing-and-message-logging.md)

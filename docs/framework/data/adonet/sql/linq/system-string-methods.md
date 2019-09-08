@@ -2,12 +2,12 @@
 title: System.String 方法
 ms.date: 03/30/2017
 ms.assetid: ce307f14-87e6-4816-8694-8a4147f6b784
-ms.openlocfilehash: c988bf7f04b284b0d352cd9e495931543980fdba
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 583c0d58562c1605f24b61489d481e19248ebed4
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613745"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70792502"
 ---
 # <a name="systemstring-methods"></a>System.String 方法
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 不支持以下 <xref:System.String> 方法。  
@@ -15,7 +15,7 @@ ms.locfileid: "64613745"
 ## <a name="unsupported-systemstring-methods-in-general"></a>一般情况下不支持的 System.String 方法  
  一般情况下不支持的 <xref:System.String> 方法：  
   
-- 区分区域性的重载 (采用的方法`CultureInfo`  /  `StringComparison`  /  `IFormatProvider`)。  
+- 识别区域性的重载（ `CultureInfo`采用的 /  `StringComparison`  / 方法）`IFormatProvider`。  
   
 - 带有或生成 `char` 数组的方法。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "64613745"
   
 - 查询不考虑可能在服务器上生效的 SQL Server 排序规则，因而默认情况下将提供区分区域性和大小写的比较。 此行为不同于 .NET Framework 默认的区分大小写的语义。  
   
-- 当`LastIndexOf`返回 0，则说明的字符串是`NULL`或找到的位置为 0。  
+- 当`LastIndexOf`返回0时，字符串为`NULL`或找到的位置为0。  
   
 - 对长度固定的字符串（`CHAR`、`NCHAR`）执行串联或其他运算时，可能会返回意外结果，原因是这些类型会自动在数据库中应用空白。  
   
@@ -57,4 +57,4 @@ ms.locfileid: "64613745"
   
 ## <a name="see-also"></a>请参阅
 
-- [数据类型和函数](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
+- [数据类型和函数](data-types-and-functions.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 89befaff-bb46-4290-8382-e67cdb0e3de9
-ms.openlocfilehash: 31fb8af4653cefc8027f4061b46b9a29d8d07f8c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 81e8bd5ba9274c84ffe18f617978b61238ebeff2
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963988"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782441"
 ---
 # <a name="database-mirroring-in-sql-server"></a>SQL Server 中的数据库镜像
 通过 SQL Server 中的数据库镜像，可以在备用服务器上保留 SQL Server 数据库的副本（即镜像）。 镜像可以确保数据始终存在两个独立的副本，从而提供高可用性和完整的数据冗余。 用于 SQL Server 的 .NET 数据提供程序提供了数据库镜像的隐式支持，这样，在为 SQL Server 数据库配置了镜像之后，开发人员无需采取任何措施或编写任何代码。 此外，<xref:System.Data.SqlClient.SqlConnection> 对象支持显式连接模式，该模式允许在 <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> 中提供故障转移合作伙伴服务器的名称。  
@@ -40,7 +40,7 @@ ms.locfileid: "69963988"
 ## <a name="retrieving-the-current-server-name"></a>检索当前服务器名称  
  如果进行故障转移，可以使用 <xref:System.Data.SqlClient.SqlConnection.DataSource%2A> 对象的 <xref:System.Data.SqlClient.SqlConnection> 属性来检索当前连接实际连接到的服务器的名称。 以下代码段检索活动服务器的名称，假定连接变量引用打开的 <xref:System.Data.SqlClient.SqlConnection>。  
   
- 发生故障转移事件并将连接切换到镜像服务器时, 会更新**DataSource**属性以反映镜像名称。  
+ 发生故障转移事件并将连接切换到镜像服务器时，会更新**DataSource**属性以反映镜像名称。  
   
 ```vb  
 Dim activeServer As String = connection.DataSource  
@@ -51,13 +51,13 @@ string activeServer = connection.DataSource;
 ```  
   
 ## <a name="sqlclient-mirroring-behavior"></a>SqlClient 镜像行为  
- 客户端总是尝试连接当前的主体服务器。 如果失败，将尝试连接故障转移合作伙伴。 如果镜像数据库已切换为合作伙伴服务器上的主体角色，连接将成功，新的主体/镜像映射将发送到客户端，并在调用 <xref:System.AppDomain> 的生存期期间进行缓存。 它不存储在持久性存储区中, 并且不可用于不同**AppDomain**或进程中的后续连接。 但是, 它可用于同一**AppDomain**中的后续连接。 请注意, 在相同或不同计算机上运行的另一个**AppDomain**或进程始终具有其连接池, 并且不会重置这些连接。 在这种情况下, 如果主数据库出现故障, 每个进程或**AppDomain**一次会失败, 并自动清除池。  
+ 客户端总是尝试连接当前的主体服务器。 如果失败，将尝试连接故障转移合作伙伴。 如果镜像数据库已切换为合作伙伴服务器上的主体角色，连接将成功，新的主体/镜像映射将发送到客户端，并在调用 <xref:System.AppDomain> 的生存期期间进行缓存。 它不存储在持久性存储区中，并且不可用于不同**AppDomain**或进程中的后续连接。 但是，它可用于同一**AppDomain**中的后续连接。 请注意，在相同或不同计算机上运行的另一个**AppDomain**或进程始终具有其连接池，并且不会重置这些连接。 在这种情况下，如果主数据库出现故障，每个进程或**AppDomain**一次会失败，并自动清除池。  
   
 > [!NOTE]
 > 每个数据库都要在服务器上配置镜像支持。 如果对不在主体/镜像数据库集中的其他数据库执行数据操作，那么无论使用多部分名称还是更改当前数据库，在失败时都不会传播对这些数据库的更改。 修改未镜像的数据库中的数据时，不会生成错误。 开发人员必须评估此类操作可能产生的影响。  
   
 ## <a name="database-mirroring-resources"></a>数据库镜像资源  
- 有关配置、部署和管理镜像的概念文档和信息, 请参阅 SQL Server 文档中的以下资源。  
+ 有关配置、部署和管理镜像的概念文档和信息，请参阅 SQL Server 文档中的以下资源。  
   
 |资源|描述|  
 |--------------|-----------------|  
@@ -65,4 +65,4 @@ string activeServer = connection.DataSource;
   
 ## <a name="see-also"></a>请参阅
 
-- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 概述](../ado-net-overview.md)

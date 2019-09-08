@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c788f2f9-65cc-4455-9907-e8388a268e00
-ms.openlocfilehash: dff5642b2490cd3935dba3b3d04cd62082249c32
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 053c861bae951f044d30d048951aa072b3d85a42
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69915717"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70792940"
 ---
 # <a name="object-identity"></a>对象标识
 运行库中的对象具有唯一标识。 引用同一对象的两个变量实际上是引用此对象的同一实例。 因为这一事实，您通过一个变量做出更改后，立即就可以通过另一个变量看到这些更改。  
@@ -21,7 +21,7 @@ ms.locfileid: "69915717"
   
  对于对象，您的期望则大不一样。 您期望在您反复向 <xref:System.Data.Linq.DataContext> 索取相同的信息时，它实际上会为您提供同一对象实例。 您之所以期望这种行为，是因为对象对您的应用程序而言有着特殊的含义，您期望它们的行为像实物一样。 您将它们设计为层次结构或关系图。 您希望像检索实物一样检索它们，而不希望仅仅因为您多次索要同一内容而收到大量的复制实例。  
   
- 在 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中，<xref:System.Data.Linq.DataContext> 管理对象标识。 只要您从数据库中检索新行，该行就会由其主键记录到标识表中，并且会创建一个新的对象。 只要您检索该行，就会将原始对象实例传递回应用程序。 通过这种方式，<xref:System.Data.Linq.DataContext> 将数据库看到的标识（即主键）的概念转换成相应语言看到的标识（即实例）的概念。 应用程序只看到处于第一次检索时的状态的对象。 新数据如果不同，则会被丢弃。 有关详细信息, 请参阅[从标识缓存中检索对象](../../../../../../docs/framework/data/adonet/sql/linq/retrieving-objects-from-the-identity-cache.md)。  
+ 在 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中，<xref:System.Data.Linq.DataContext> 管理对象标识。 只要您从数据库中检索新行，该行就会由其主键记录到标识表中，并且会创建一个新的对象。 只要您检索该行，就会将原始对象实例传递回应用程序。 通过这种方式，<xref:System.Data.Linq.DataContext> 将数据库看到的标识（即主键）的概念转换成相应语言看到的标识（即实例）的概念。 应用程序只看到处于第一次检索时的状态的对象。 新数据如果不同，则会被丢弃。 有关详细信息，请参阅[从标识缓存中检索对象](retrieving-objects-from-the-identity-cache.md)。  
   
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 使用此方法来管理本地对象的完整性，以支持开放式更新。 由于在最初创建对象后唯一发生的更改是由应用程序做出的，因此应用程序的意向是很明确的。 如果在中间阶段外部某一方做了更改，则在调用 `SubmitChanges()` 时会识别出这些更改。  
   
@@ -44,4 +44,4 @@ ms.locfileid: "69915717"
   
 ## <a name="see-also"></a>请参阅
 
-- [背景信息](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
+- [背景信息](background-information.md)

@@ -2,59 +2,59 @@
 title: 如何：通过使用代码编辑器自定义实体类
 ms.date: 03/30/2017
 ms.assetid: ec28332f-9f3c-4e0a-baca-60f9141a68c0
-ms.openlocfilehash: 67a0e17b6a81d804ce101bf56d8da82fe330479c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 578e0cbd1f6990a5d41007ad31f4c1c938cd3ebe
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67743422"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793794"
 ---
 # <a name="how-to-customize-entity-classes-by-using-the-code-editor"></a>如何：通过使用代码编辑器自定义实体类
-使用 Visual Studio 的开发人员可以使用对象关系设计器创建或自定义其实体类。  
+使用 Visual Studio 的开发人员可以使用对象关系设计器来创建或自定义其实体类。  
   
- 若要编写您自己的映射代码或自定义已生成的代码，还可以使用 Visual Studio 代码编辑器。 有关详细信息，请参阅[基于属性的映射](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)。  
+ 你还可以使用 Visual Studio 代码编辑器编写你自己的映射代码或自定义已生成的代码。 有关详细信息，请参阅[基于属性的映射](attribute-based-mapping.md)。  
   
  本节中的主题说明如何自定义对象模型。  
   
- [如何：指定数据库名称](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-database-names.md)  
+ [如何：指定数据库名称](how-to-specify-database-names.md)  
  描述如何使用 <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>。  
   
- [如何：表表示为类](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-tables-as-classes.md)  
+ [如何：将表表示为类](how-to-represent-tables-as-classes.md)  
  描述如何使用 <xref:System.Data.Linq.Mapping.TableAttribute>。  
   
- [如何：列表示为类成员](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-columns-as-class-members.md)  
+ [如何：将列表示为类成员](how-to-represent-columns-as-class-members.md)  
  描述如何使用 <xref:System.Data.Linq.Mapping.ColumnAttribute>。  
   
- [如何：表示主键](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-primary-keys.md)  
+ [如何：表示主键](how-to-represent-primary-keys.md)  
  描述如何使用 <xref:System.Data.Linq.Mapping.ColumnAttribute.IsPrimaryKey%2A>。  
   
- [如何：映射数据库关系](../../../../../../docs/framework/data/adonet/sql/linq/how-to-map-database-relationships.md)  
+ [如何：映射数据库关系](how-to-map-database-relationships.md)  
  提供使用 <xref:System.Data.Linq.Mapping.AssociationAttribute> 属性的示例。  
   
- [如何：列表示为数据库生成](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-columns-as-database-generated.md)  
+ [如何：将列表示为数据库生成的](how-to-represent-columns-as-database-generated.md)  
  描述如何使用 <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A>。  
   
- [如何：表示为时间戳列或版本列](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-columns-as-timestamp-or-version-columns.md)  
+ [如何：将列表示为时间戳列或版本列](how-to-represent-columns-as-timestamp-or-version-columns.md)  
  描述如何使用 <xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A>。  
   
- [如何：指定数据库数据类型](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-database-data-types.md)  
+ [如何：指定数据库数据类型](how-to-specify-database-data-types.md)  
  描述如何使用 <xref:System.Data.Linq.Mapping.ColumnAttribute.DbType%2A>。  
   
- [如何：表示计算所得的列](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-computed-columns.md)  
+ [如何：表示计算列](how-to-represent-computed-columns.md)  
  描述如何使用 <xref:System.Data.Linq.Mapping.ColumnAttribute.Expression%2A>。  
   
- [如何：指定专用存储字段](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-private-storage-fields.md)  
+ [如何：指定专用存储字段](how-to-specify-private-storage-fields.md)  
  描述如何使用 <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A>。  
   
- [如何：列表示为允许 Null 值](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-columns-as-allowing-null-values.md)  
+ [如何：将列表示为允许 Null 值](how-to-represent-columns-as-allowing-null-values.md)  
  描述如何使用 <xref:System.Data.Linq.Mapping.ColumnAttribute.CanBeNull%2A>。  
   
- [如何：映射继承层次结构](../../../../../../docs/framework/data/adonet/sql/linq/how-to-map-inheritance-hierarchies.md)  
+ [如何：映射继承层次结构](how-to-map-inheritance-hierarchies.md)  
  说明指定继承层次结构所需的映射。  
   
- [如何：指定并发冲突检查](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-concurrency-conflict-checking.md)  
+ [如何：指定并发冲突检查](how-to-specify-concurrency-conflict-checking.md)  
  描述如何使用 <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A>。  
   
 ## <a name="see-also"></a>请参阅
 
-- [SqlMetal.exe（代码生成工具）](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)
+- [SqlMetal.exe（代码生成工具）](../../../../tools/sqlmetal-exe-code-generation-tool.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 4ff084d5-5956-4db1-8e18-c5a66b000882
-ms.openlocfilehash: 31239033c56303af33899ac88f1745e90f052377
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5b21b2bdf3447e3a61c8fff0a311b4144ecaecb2
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61645950"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70791930"
 ---
 # <a name="polling-in-console-applications"></a>在控制台应用程序中轮询
 ADO.NET 中的异步操作使您可以在一个线程上启动需要很长时间的数据库操作，同时在另一个线程上执行其他任务。 但是，在大多数方案中，最终将到达一个临界点，此时，应用程序在数据库操作完成后才应继续。 在这种情况下，可以轮询异步操作，确定操作是否已完成。  
@@ -18,7 +18,7 @@ ADO.NET 中的异步操作使您可以在一个线程上启动需要很长时间
  可以使用 <xref:System.IAsyncResult.IsCompleted%2A> 属性确定操作是否已完成。  
   
 ## <a name="example"></a>示例  
- 以下控制台应用程序更新中的数据**AdventureWorks**示例数据库，以异步方式执行其工作。 为了模拟长时间运行的进程，此示例在命令文本中插入一个 WAITFOR 语句。 通常情况下，您不会试图使命令运行速度更慢，但是在这种情况下，这样做可以更容易演示异步行为。  
+ 下面的控制台应用程序更新**AdventureWorks**示例数据库中的数据，以异步方式执行其工作。 为了模拟长时间运行的进程，此示例在命令文本中插入一个 WAITFOR 语句。 通常情况下，您不会试图使命令运行速度更慢，但是在这种情况下，这样做可以更容易演示异步行为。  
   
 ```vb  
 Imports System  
@@ -192,5 +192,5 @@ class Class1
   
 ## <a name="see-also"></a>请参阅
 
-- [异步操作](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)
-- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [异步操作](asynchronous-operations.md)
+- [ADO.NET 概述](../ado-net-overview.md)

@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a7fddfffed499537f5746998a94a3ef32d035685
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ce09eca30e1edb9e1afc02216a07955a5fed4fd2
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741600"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70787257"
 ---
 # <a name="importtypes2-method"></a>ImportTypes2 方法
-启动导入的类型。 调用此方法以开始从通过导入每个作用域导入类型[ImportFile 方法](../../../../docs/framework/unmanaged-api/alink/importfile-method.md)。  
+启动类型的导入。 调用此方法以开始从通过[ImportFile 方法](importfile-method.md)导入的每个范围导入类型。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,31 +41,31 @@ HRESULT ImportTypes2(
   
 ## <a name="parameters"></a>参数  
  `AssemblyID`  
- 要导入到其中的程序集的 ID。  
+ 要导入的程序集的 ID。  
   
  `FileToken`  
- 要从中导入到的文件的 ID。  
+ 要从其导入的文件的 ID。  
   
  `dwScope`  
- 要从中导入的从零开始范围。  
+ 要从中导入的从零开始的作用域。  
   
  `phEnum`  
- 在给定作用域中接收的类型的枚举器句柄。  
+ 接收给定范围内的类型的枚举器句柄。  
   
  `ppImportScope`  
- 可选择性地接收[IMetaDataImport2 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)接口。  
+ 可以选择接收[IMetaDataImport2 接口](../metadata/imetadataimport2-interface.md)接口。  
   
  `pdwCountOfTypes`  
- 可选择性地指定作用域内接收的类型的计数。  
+ 可以选择接收指定范围内的类型的计数。  
   
 ## <a name="return-value"></a>返回值  
- 如果该方法成功，返回，则为 S_OK。  
+ 如果该方法成功，则返回 S_OK。  
   
 ## <a name="requirements"></a>要求  
- 需要 alink.h  
+ 需要 alink  
   
 ## <a name="see-also"></a>请参阅
 
-- [IALink2 接口](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [IALink 接口](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink2 接口](ialink2-interface.md)
+- [IALink 接口](ialink-interface.md)
+- [ALink API](index.md)

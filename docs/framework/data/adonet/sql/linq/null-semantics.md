@@ -2,23 +2,23 @@
 title: Null 语义
 ms.date: 03/30/2017
 ms.assetid: a97017ae-d634-4cf3-bbaf-054a528fd683
-ms.openlocfilehash: eb1e96ba44c5d64e8366a654c2d06d89c9b46c9a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d0b18c0a699840d11f5e4add05147672f9bb69e9
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61767529"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70792979"
 ---
 # <a name="null-semantics"></a>Null 语义
-下表提供了指向各个组成部分[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]文档位置`null`(`Nothing`在 Visual Basic 中) 的问题进行讨论。  
+下表提供了一些链接，这些[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]链接指向`null`文档中讨论`Nothing` （在 Visual Basic）问题的各个部分。  
   
 |主题|描述|  
 |-----------|-----------------|  
-|[SQL-CLR 类型不匹配](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mismatches.md)|本主题的"Null 语义"部分包含的三态 SQL Boolean 与两态公共语言运行时 (CLR) 的讨论<xref:System.Boolean>，将文字`Nothing`(Visual Basic 中) 和`null`(C#)，以及其他类似问题。|  
-|[标准查询运算符转换](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)|本主题的“Null 语义”部分介绍 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]中的 null 比较语义。|  
-|[System.String 方法](../../../../../../docs/framework/data/adonet/sql/linq/system-string-methods.md)|本主题的“与 .NET 的差异”部分说明从 <xref:System.String.LastIndexOf%2A> 返回 0 为何意味着字符串为 null 或找到的位置为 0。|  
-|[计算数值序列中值的和](../../../../../../docs/framework/data/adonet/sql/linq/compute-the-sum-of-values-in-a-numeric-sequence.md)|介绍如何<xref:System.Linq.Enumerable.Sum%2A>运算符的计算结果为`null`(`Nothing`在 Visual Basic 中) 而不是 0 一个序列，其中只包含 null 或空序列。|  
+|[SQL-CLR 类型不匹配](sql-clr-type-mismatches.md)|本主题的 "Null 语义" 部分包括以下内容的讨论，这三态 SQL Boolean 与两态公共语言运行时（CLR） <xref:System.Boolean>、文本`Nothing` （Visual Basic）和`null` （C#）以及其他类似发放.|  
+|[标准查询运算符转换](standard-query-operator-translation.md)|本主题的“Null 语义”部分介绍 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]中的 null 比较语义。|  
+|[System.String 方法](system-string-methods.md)|本主题的“与 .NET 的差异”部分说明从 <xref:System.String.LastIndexOf%2A> 返回 0 为何意味着字符串为 null 或找到的位置为 0。|  
+|[计算数值序列中值的和](compute-the-sum-of-values-in-a-numeric-sequence.md)|描述<xref:System.Linq.Enumerable.Sum%2A>运算符如何计算结果为`null` （`Nothing`在 Visual Basic 中），而不是仅包含空序列或空序列的序列。|  
   
 ## <a name="see-also"></a>请参阅
 
-- [数据类型和函数](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
+- [数据类型和函数](data-types-and-functions.md)

@@ -2,20 +2,20 @@
 title: 创建 BindingElement
 ms.date: 03/30/2017
 ms.assetid: 01a35307-a41f-4ef6-a3db-322af40afc99
-ms.openlocfilehash: 0c08494315f43f35f60d70abf643f596a013c302
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4b760f9373e64e153bd5a21469eb7a503283d35c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64587348"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795825"
 ---
 # <a name="creating-a-bindingelement"></a>创建 BindingElement
-绑定和绑定元素 (扩展的对象<xref:System.ServiceModel.Channels.Binding?displayProperty=nameWithType>和<xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType>分别) 是 Windows Communication Foundation (WCF) 应用程序模型是与通道工厂和通道侦听器相关联的位置。 无绑定，使用自定义通道需要在通道级编程中所述[服务通道级编程](../../../../docs/framework/wcf/extending/service-channel-level-programming.md)并[客户端通道级编程](../../../../docs/framework/wcf/extending/client-channel-level-programming.md)。 本主题讨论的最低要求若要启用在 WCF，开发中使用您的通道<xref:System.ServiceModel.Channels.BindingElement>通道，和中的步骤 4 中所述的应用程序使用[开发通道](../../../../docs/framework/wcf/extending/developing-channels.md)。  
+绑定和绑定元素（分别扩展<xref:System.ServiceModel.Channels.Binding?displayProperty=nameWithType>和<xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType>的对象）是 Windows Communication Foundation （WCF）应用程序模型与通道工厂和通道侦听器关联的位置。 如果没有绑定，则使用自定义通道需要按[服务通道级编程](service-channel-level-programming.md)和[客户端通道级编程](client-channel-level-programming.md)中所述的通道级别进行编程。 本主题讨论在 WCF 中启用通道所需的最低要求，为通道开发<xref:System.ServiceModel.Channels.BindingElement> ，并允许从应用程序使用，如[开发通道](developing-channels.md)的步骤4中所述。  
   
 ## <a name="overview"></a>概述  
- 创建<xref:System.ServiceModel.Channels.BindingElement>为您的通道，开发人员可以在 WCF 应用程序中使用它。 <xref:System.ServiceModel.Channels.BindingElement> 可以通过使用对象<xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType>类连接到您的通道的 WCF 应用程序，而不必将您的通道的精确类型信息。  
+ <xref:System.ServiceModel.Channels.BindingElement>为通道创建，使开发人员能够在 WCF 应用程序中使用它。 <xref:System.ServiceModel.Channels.BindingElement>可以从<xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType>类中使用对象将 WCF 应用程序连接到通道，而不必使用通道的精确类型信息。  
   
- 一次<xref:System.ServiceModel.Channels.BindingElement>已被创建，可以启用更多的功能根据您的要求由以下其余通道开发步骤中所述[开发通道](../../../../docs/framework/wcf/extending/developing-channels.md)。  
+ 创建完毕后，你可以根据你的需求启用更多功能，具体取决于[开发渠道](developing-channels.md)中所述的其余通道开发步骤。 <xref:System.ServiceModel.Channels.BindingElement>  
   
 ## <a name="adding-a-binding-element"></a>添加绑定元素  
  若要实现自定义 <xref:System.ServiceModel.Channels.BindingElement>，请编写一个继承自 <xref:System.ServiceModel.Channels.BindingElement> 的类。 例如，如果您已开发了一个可以将大消息拆分为多个块并在另一端重新组合这些块的 `ChunkingChannel`，则可以在任意绑定中使用此通道，方法是实现一个 <xref:System.ServiceModel.Channels.BindingElement> 并将绑定配置为使用此元素。 本主题的其余部分以 `ChunkingChannel` 作为示例，演示实现绑定元素的需求。  
@@ -26,7 +26,7 @@ ms.locfileid: "64587348"
   
  <xref:System.ServiceModel.Channels.BindingElement.BuildChannelListener%2A> 有一个类似的实现，用于创建 `ChunkingChannelListener` 并为其传递内部通道侦听器。  
   
- 使用传输通道，另一个示例[传输：UDP](../../../../docs/framework/wcf/samples/transport-udp.md)示例提供了以下重写。  
+ 作为另一个使用传输通道的[示例，传输：UDP](../samples/transport-udp.md)示例提供以下替代。  
   
  在下面的示例中，绑定元素为 `UdpTransportBindingElement`，它派生自 <xref:System.ServiceModel.Channels.TransportBindingElement>。 它重写以下方法以生成与通道关联的工厂。  
   
@@ -45,7 +45,7 @@ public IChannelListener<TChannel> BuildChannelListener<TChannel>(BindingContext 
  它还包含用于克隆 `BindingElement` 并返回我们自己的方案 (soap.udp) 的成员。  
   
 #### <a name="protocol-binding-elements"></a>协议绑定元素  
- 新绑定元素可以替换或扩充所包括的任何绑定元素，从而添加新的传输、编码或高级协议。 若要创建新的协议绑定元素，请首先扩展 <xref:System.ServiceModel.Channels.BindingElement> 类。 至少，您必须实现<xref:System.ServiceModel.Channels.BindingElement.Clone%2A?displayProperty=nameWithType>并实现`ChannelProtectionRequirements`使用<xref:System.ServiceModel.Channels.IChannel.GetProperty%2A?displayProperty=nameWithType>。 这会返回此绑定元素的 <xref:System.ServiceModel.Security.ChannelProtectionRequirements>。  有关详细信息，请参阅 <xref:System.ServiceModel.Security.ChannelProtectionRequirements>。  
+ 新绑定元素可以替换或扩充所包括的任何绑定元素，从而添加新的传输、编码或高级协议。 若要创建新的协议绑定元素，请首先扩展 <xref:System.ServiceModel.Channels.BindingElement> 类。 然后，你必须至少实现<xref:System.ServiceModel.Channels.BindingElement.Clone%2A?displayProperty=nameWithType>并`ChannelProtectionRequirements`使用<xref:System.ServiceModel.Channels.IChannel.GetProperty%2A?displayProperty=nameWithType>来实现。 这会返回此绑定元素的 <xref:System.ServiceModel.Security.ChannelProtectionRequirements>。  有关详细信息，请参阅 <xref:System.ServiceModel.Security.ChannelProtectionRequirements> 。  
   
  <xref:System.ServiceModel.Channels.BindingElement.Clone%2A> 应返回此绑定元素的新副本。 作为一种最佳做法，我们建议绑定元素作者实现 <xref:System.ServiceModel.Channels.BindingElement.Clone%2A>，方法是使用复制构造函数首先调用基复制构造函数，然后克隆此类中的所有附加字段。  
   
@@ -54,7 +54,7 @@ public IChannelListener<TChannel> BuildChannelListener<TChannel>(BindingContext 
   
  <xref:System.ServiceModel.Channels.BindingElement.Clone%2A> – 应返回此绑定元素的新副本。  作为一种最佳做法，我们建议绑定元素作者实现 Clone，方法是使用可调用基复制构造函数的复制构造函数，然后克隆此类中的任何其他字段。  
   
- <xref:System.ServiceModel.Channels.TransportBindingElement.Scheme%2A> – <xref:System.ServiceModel.Channels.TransportBindingElement.Scheme%2A> 获取属性返回由该绑定元素表示的传输协议的 URI 方案。 例如，<xref:System.ServiceModel.Channels.HttpTransportBindingElement?displayProperty=nameWithType>并<xref:System.ServiceModel.Channels.TcpTransportBindingElement?displayProperty=nameWithType>从各自返回"http"和"net.tcp"<xref:System.ServiceModel.Channels.TransportBindingElement.Scheme%2A>属性。  
+ <xref:System.ServiceModel.Channels.TransportBindingElement.Scheme%2A> – <xref:System.ServiceModel.Channels.TransportBindingElement.Scheme%2A> 获取属性返回由该绑定元素表示的传输协议的 URI 方案。 例如， <xref:System.ServiceModel.Channels.HttpTransportBindingElement?displayProperty=nameWithType> <xref:System.ServiceModel.Channels.TcpTransportBindingElement?displayProperty=nameWithType>和返回各自<xref:System.ServiceModel.Channels.TransportBindingElement.Scheme%2A>的属性中的 "http" 和 "net.tcp"。  
   
 #### <a name="encoding-binding-elements"></a>编码绑定元素  
  若要创建新的编码绑定元素，请首先扩展 <xref:System.ServiceModel.Channels.BindingElement> 类并实现 <xref:System.ServiceModel.Channels.MessageEncodingBindingElement?displayProperty=nameWithType> 类。 之后，至少必须实现 <xref:System.ServiceModel.Channels.BindingElement.Clone%2A>、<xref:System.ServiceModel.Channels.MessageEncodingBindingElement.CreateMessageEncoderFactory%2A?displayProperty=nameWithType> 方法和 <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.MessageVersion%2A?displayProperty=nameWithType> 属性。  
@@ -67,12 +67,12 @@ public IChannelListener<TChannel> BuildChannelListener<TChannel>(BindingContext 
   
  有关用户定义的编码绑定元素的可选方法和属性的完整列表，请参见 <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>。  
   
- 创建新的绑定元素的详细信息，请参阅[创建用户定义绑定](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)。  
+ 有关创建新的绑定元素的详细信息，请参阅[创建用户定义的绑定](creating-user-defined-bindings.md)。  
   
- 为通道创建绑定元素后, 返回到[开发通道](../../../../docs/framework/wcf/extending/developing-channels.md)主题以查看是否想要将配置文件的支持添加到您的绑定元素，如果以及如何添加元数据发布支持和是否以及如何构造用户定义的绑定使用的绑定元素。  
+ 为通道创建绑定元素后，返回到 "[开发通道](developing-channels.md)" 主题，以查看是否要将配置文件支持添加到绑定元素、是否以及如何添加元数据发布支持以及和如何构造使用绑定元素的用户定义绑定。  
   
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.ServiceModel.Channels.BindingElement>
-- [开发通道](../../../../docs/framework/wcf/extending/developing-channels.md)
-- [传输：UDP](../../../../docs/framework/wcf/samples/transport-udp.md)
+- [开发通道](developing-channels.md)
+- [TransportUDP](../samples/transport-udp.md)

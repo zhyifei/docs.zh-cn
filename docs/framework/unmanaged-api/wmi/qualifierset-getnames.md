@@ -1,6 +1,6 @@
 ---
-title: QualifierSet_GetNames 函数 （非托管 API 参考）
-description: QualifierSet_GetNames 函数从某个对象或属性检索的限定符的名称。
+title: QualifierSet_GetNames 函数（非托管 API 参考）
+description: QualifierSet_GetNames 函数从对象或属性中检索限定符的名称。
 ms.date: 11/06/2017
 api_name:
 - QualifierSet_GetNames
@@ -16,16 +16,16 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 402d56b44c2b6f53f901e35c6d7b965811a40344
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 266462a5393c8e26aa2bc3f2ec8ab72d4410a431
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636591"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798291"
 ---
-# <a name="qualifiersetgetnames-function"></a>QualifierSet_GetNames 函数
+# <a name="qualifierset_getnames-function"></a>QualifierSet_GetNames 函数
 
-检索所有的限定符或某些来自当前对象或属性的限定符的名称。
+检索当前对象或属性中可用的所有限定符或特定限定符的名称。
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
 
@@ -43,49 +43,49 @@ HRESULT QualifierSet_GetNames (
 ## <a name="parameters"></a>参数
 
 `vFunc`\
-[in]此参数是未使用。
+中此参数未使用。
 
 `ptr`\
-[in]一个指向[IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset)实例。
+中指向[IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset)实例的指针。
 
 `lFlags`\
-[in]以下标志或值，该值指定要在枚举中包括哪些名称之一。
+中以下标志或值之一，指定要在枚举中包含的名称。
 
 |返回的常量  |值  |Description  |
 |---------|---------|---------|
 |  | 0 | 返回所有限定符的名称。 |
-| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | 返回限定符的名称特定于当前的属性或对象。 <br/> 属性：返回仅特定于 （包括重写） 的属性限定符，而不从类定义传播这些限定符。 <br/> 实例：返回的是仅特定于实例的限定符名称。 <br/> 类：要派生的类的特定返回仅限定符。
-|`WBEM_FLAG_PROPAGATED_ONLY` | 0x20 | 返回名称的列是限定符传播从另一个对象。 <br/> 属性：返回时仅限定符传播给此属性从类定义中，而不从该属性本身。 <br/> 实例：仅这些限定符传播从返回的类定义。 <br/> 类：返回从父类继承仅这些限定符名称。 |
+| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | 仅返回特定于当前属性或对象的限定符的名称。 <br/> 对于属性：仅返回特定于属性的限定符（包括替代），而不返回从类定义传播的限定符。 <br/> 对于实例：仅返回特定于实例的限定符名称。 <br/> 对于类：仅返回特定于派生类的限定符。
+|`WBEM_FLAG_PROPAGATED_ONLY` | 0x20 | 仅返回从另一个对象传播的限定符的名称。 <br/> 对于属性：仅返回从类定义传播到此属性的限定符，而不是从属性本身传播的限定符。 <br/> 对于实例：仅返回从类定义传播的限定符。 <br/> 对于类：仅返回从父类继承的限定符名称。 |
 
 `pstrNames`\
-[out]一个新`SAFEARRAY`，其中包含请求的名称。 该数组可以具有 0 个元素。 如果发生错误，新`SAFEARRAY`不会返回。
+弄一个新`SAFEARRAY`的，其中包含请求的名称。 数组可以有0个元素。 如果发生错误，则不会`SAFEARRAY`返回新的。
 
 ## <a name="return-value"></a>返回值
 
-此函数返回以下值中定义*WbemCli.h*标头文件，也可以在定义它们为常量在代码中：
+此函数返回的以下值是在*WbemCli*头文件中定义的，也可以在代码中将它们定义为常量：
 
 |返回的常量  |值  |描述  |
 |---------|---------|---------|
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 参数不是有效的。 |
-|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 没有足够的内存，可开始新的枚举。 |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 参数无效。 |
+|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 没有足够的内存可用于开始新的枚举。 |
 |`WBEM_S_NO_ERROR` | 0 | 函数调用成功。  |
 
 ## <a name="remarks"></a>备注
 
-此函数包装对的调用[IWbemQualifierSet::GetNames](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-getnames)方法。
+此函数包装对[IWbemQualifierSet：： GetNames](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-getnames)方法的调用。
 
-已检索到的限定符名称后, 您可以访问每个限定符的名称通过调用[QualifierSet_Get](qualifierset-get.md)函数。
+检索到限定符名称后，可以通过调用[QualifierSet_Get](qualifierset-get.md)函数按名称访问每个限定符。
 
-它不是给定的对象具有零个限定符，因此错误中的字符串数`pstrNames`返回时可为 0，即使该函数将返回`WBEM_S_NO_ERROR`。
+如果给定的对象具有零限定符，则不是错误的，因此，中`pstrNames`的字符串数可以为0，即使该函数返回`WBEM_S_NO_ERROR`也是如此。
 
 ## <a name="requirements"></a>要求
 
-**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。
+**适用**请参阅[系统需求](../../get-started/system-requirements.md)。
 
 **标头：** WMINet_Utils.idl
 
-**.NET Framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+**.NET Framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
 ## <a name="see-also"></a>请参阅
 
-- [WMI 和性能计数器 （非托管 API 参考）](index.md)
+- [WMI 和性能计数器（非托管 API 参考）](index.md)

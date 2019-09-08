@@ -2,12 +2,12 @@
 title: 在 SQL Server 中使用模拟自定义权限
 ms.date: 03/30/2017
 ms.assetid: dc733d09-1d6d-4af0-9c4b-8d24504860f1
-ms.openlocfilehash: 52e11bd983a8c9155d90659834df03dea6449a8e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b5dcef80afffa7bb3722a09020c5445dbc47f16a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69961118"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782473"
 ---
 # <a name="customizing-permissions-with-impersonation-in-sql-server"></a>在 SQL Server 中使用模拟自定义权限
 许多应用程序都使用存储过程来访问数据，依靠所属权链接来限制对基表的访问。 您可以授予针对存储过程的 EXECUTE 权限，撤消或拒绝针对基表的权限。 如果存储过程和表具有相同的所有者，则 SQL Server 不检查调用方的权限。 但是，如果对象具有不同的所有者或使用动态 SQL，则所属权链接不起作用。  
@@ -54,7 +54,7 @@ CREATE PROCEDURE [procName] WITH EXECUTE AS 'proxyUser' AS ...
 ### <a name="using-execute-as-with-revert"></a>与 REVERT 一起使用 EXECUTE AS  
  可以使用 Transact-SQL REVERT 语句来返回到原始执行上下文。  
   
- 如果变量包含正确的值, 则可选@variableName子句 WITH NO REVERT COOKIE = 允许您将执行上下文切换回调用方。 @variableName 这允许您在使用连接池的环境中将执行上下文切换回调用方。 由于的值@variableName仅对 EXECUTE AS 语句的调用方是已知的, 因此调用方可以保证调用应用程序的最终用户无法更改执行上下文。 当连接关闭时，它将返回到池中。 有关 ADO.NET 中的连接池的详细信息, 请参阅[SQL Server 连接池 (ADO.NET)](../../../../../docs/framework/data/adonet/sql-server-connection-pooling.md)。  
+ 如果变量包含正确的值，则可选@variableName子句 WITH NO REVERT COOKIE = 允许您将执行上下文切换回调用方。 @variableName 这允许您在使用连接池的环境中将执行上下文切换回调用方。 由于的值@variableName仅对 EXECUTE AS 语句的调用方是已知的，因此调用方可以保证调用应用程序的最终用户无法更改执行上下文。 当连接关闭时，它将返回到池中。 有关 ADO.NET 中的连接池的详细信息，请参阅[SQL Server 连接池（ADO.NET）](../sql-server-connection-pooling.md)。  
   
 ### <a name="specifying-the-execution-context"></a>指定执行上下文  
  除了指定用户外，还可以将 EXECUTE AS 与以下任意关键字一起使用。  
@@ -67,11 +67,11 @@ CREATE PROCEDURE [procName] WITH EXECUTE AS 'proxyUser' AS ...
   
 ## <a name="see-also"></a>请参阅
 
-- [保证 ADO.NET 应用程序的安全](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [SQL Server 安全性概述](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
-- [SQL Server 中的应用程序安全性方案](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
-- [在 SQL Server 中使用存储过程管理权限](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)
-- [在 SQL Server 中编写安全的动态 SQL](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)
-- [在 SQL Server 中对存储过程签名](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)
-- [使用存储过程修改数据](../../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)
-- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [保证 ADO.NET 应用程序的安全](../securing-ado-net-applications.md)
+- [SQL Server 安全性概述](overview-of-sql-server-security.md)
+- [SQL Server 中的应用程序安全性方案](application-security-scenarios-in-sql-server.md)
+- [在 SQL Server 中使用存储过程管理权限](managing-permissions-with-stored-procedures-in-sql-server.md)
+- [在 SQL Server 中编写安全的动态 SQL](writing-secure-dynamic-sql-in-sql-server.md)
+- [在 SQL Server 中对存储过程签名](signing-stored-procedures-in-sql-server.md)
+- [使用存储过程修改数据](../modifying-data-with-stored-procedures.md)
+- [ADO.NET 概述](../ado-net-overview.md)

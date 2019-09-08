@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3b787719-4e77-4e77-96a6-5b15a11b995a
-ms.openlocfilehash: ea56c99d7d122dd20fc217f8ecb2937bcf81bec3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4f24c558b1d5303b2417416beb14555539f498ea
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61923261"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797272"
 ---
 # <a name="client-channel-level-programming"></a>客户端通道级编程
-本主题介绍如何编写 Windows Communication Foundation (WCF) 客户端应用程序而无需使用<xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>类和其关联的对象模型。  
+本主题说明如何在不使用<xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>类及其关联的对象模型的情况下编写 Windows Communication Foundation （WCF）客户端应用程序。  
   
 ## <a name="sending-messages"></a>发送消息  
  若要准备发送消息并接收和处理回复，需要执行下列步骤：  
@@ -29,7 +29,7 @@ ms.locfileid: "61923261"
 5. 关闭所有通道对象。  
   
 #### <a name="creating-a-binding"></a>创建绑定  
- 类似于接收的情况 (请参阅[服务通道级编程](../../../../docs/framework/wcf/extending/service-channel-level-programming.md))，通过创建一个绑定发送消息开始。 本示例创建一个新的 <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> 并将一个 <xref:System.ServiceModel.Channels.HttpTransportBindingElement?displayProperty=nameWithType> 添加到其 Elements 集合中。  
+ 与接收案例类似（请参阅[服务通道级编程](service-channel-level-programming.md)），通过创建绑定开始发送消息。 本示例创建一个新的 <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> 并将一个 <xref:System.ServiceModel.Channels.HttpTransportBindingElement?displayProperty=nameWithType> 添加到其 Elements 集合中。  
   
 #### <a name="building-a-channelfactory"></a>生成 ChannelFactory  
  这次我们不创建 <xref:System.ServiceModel.Channels.IChannelListener?displayProperty=nameWithType>，而是通过调用类型参数为 <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType> 的绑定上的 <xref:System.ServiceModel.ChannelFactory.CreateFactory%2A?displayProperty=nameWithType> 来创建一个 <xref:System.ServiceModel.Channels.IRequestChannel?displayProperty=nameWithType>。 当等待传入消息的一方使用通道侦听器时，发起通信以创建通道的一方将使用通道工厂。 和通道侦听器相似，必须先打开通道工厂之后才能使用通道工厂。  
