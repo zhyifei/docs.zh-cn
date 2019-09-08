@@ -4,12 +4,12 @@ description: 本文档提供使用 Visual Studio Code 创建 .NET Core 解决方
 author: bleroy
 ms.date: 03/23/2017
 ms.custom: seodec18
-ms.openlocfilehash: e79f5dd90124d2a1902194af2edbde0f5df107c7
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: f1cb9b45c0ed1b4315361846fc065209088b57f8
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633980"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373790"
 ---
 # <a name="get-started-with-net-core-on-macos"></a>开始在 macOS 上使用 .NET Core
 
@@ -24,27 +24,27 @@ ms.locfileid: "65633980"
 
 安装 [Visual Studio Code](https://code.visualstudio.com)。 在本文中，还将安装可提升 .NET Core 开发体验的 Visual Studio Code 扩展。
 
-打开 Visual Studio Code，并按 <kbd>F1</kbd> 打开 Visual Studio Code 面板，从而安装 Visual Studio Code C# 扩展。 键入 ext install ，查看扩展列表。 选择 C# 扩展。 重启 Visual Studio Code 以激活扩展。 有关详细信息，请参阅 [Visual Basic Code C# 扩展文档](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md)。
+打开 Visual Studio Code，并按 <kbd>F1</kbd> 打开 Visual Studio Code 面板，从而安装 Visual Studio Code C# 扩展。 键入 ext install  ，查看扩展列表。 选择 C# 扩展。 重启 Visual Studio Code 以激活扩展。 有关详细信息，请参阅 [Visual Basic Code C# 扩展文档](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md)。
 
 ## <a name="get-started"></a>入门
 
 在本教程中，将创建三个项目：库项目、对该库项目的测试和使用该库的控制台应用程序。 若要[查看或下载本主题的源代码](https://github.com/dotnet/samples/tree/master/core/getting-started/golden)，请访问 GitHub 上的 dotnet/samples 存储库。 有关下载说明，请参阅[示例和教程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
 
-启动 Visual Studio Code。 按 <kbd>Ctrl</kbd>+<kbd>\`</kbd>（反引号）或在菜单中依次选择“视图”>“集成终端”，在 Visual Studio Code 中打开嵌入式终端。 若要在 Visual Studio Code 外部执行操作，仍可以使用资源管理器的“通过命令提示符打开”（在 Mac 或 Linux 上，为“在终端中打开”）命令打开外部 shell。
+启动 Visual Studio Code。 按 <kbd>Ctrl</kbd>+<kbd>\`</kbd>（反引号）或在菜单中依次选择“视图”>“集成终端”  ，在 Visual Studio Code 中打开嵌入式终端。 若要在 Visual Studio Code 外部执行操作，仍可以使用资源管理器的“通过命令提示符打开”  （在 Mac 或 Linux 上，为“在终端中打开”  ）命令打开外部 shell。
 
-首先创建一个解决方案文件，它将用作一个或多个 .NET Core 项目的容器。 在终端中，创建 golden 文件夹并将其打开。 此文件夹是解决方案的根目录。 运行 [`dotnet new`](../tools/dotnet-new.md) 命令，创建新的解决方案 golden.sln：
+首先创建一个解决方案文件，它将用作一个或多个 .NET Core 项目的容器。 在终端中，创建 golden  文件夹并将其打开。 此文件夹是解决方案的根目录。 运行 [`dotnet new`](../tools/dotnet-new.md) 命令，创建新的解决方案 golden.sln  ：
 
 ```console
 dotnet new sln
 ```
 
-在 golden 文件夹中，执行下列命令来创建库项目，它将在库文件夹中生成 library.csproj 和 Class1.cs 这两个文件：
+在 golden  文件夹中，执行下列命令来创建库项目，它将在库  文件夹中生成 library.csproj  和 Class1.cs  这两个文件：
 
 ```console
 dotnet new classlib -o library
 ```
 
-执行 [`dotnet sln`](../tools/dotnet-sln.md) 命令，将新创建的 library.csproj 添加到解决方案：
+执行 [`dotnet sln`](../tools/dotnet-sln.md) 命令，将新创建的 library.csproj  添加到解决方案：
 
 ```console
 dotnet sln add library/library.csproj
@@ -56,7 +56,7 @@ dotnet sln add library/library.csproj
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard1.4</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
 </Project>
@@ -68,21 +68,21 @@ dotnet sln add library/library.csproj
 dotnet add library package Newtonsoft.Json
 ```
 
-这会将 `Newtonsoft.Json` 及其依赖项添加到库项目。 或者，可以手动编辑 library.csproj 文件，并添加以下节点：
+这会将 `Newtonsoft.Json` 及其依赖项添加到库项目。 或者，可以手动编辑 library.csproj  文件，并添加以下节点：
 
 ```xml
 <ItemGroup>
-  <PackageReference Include="Newtonsoft.Json" Version="10.0.1" />
+  <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
 </ItemGroup>
 ```
 
-执行 [`dotnet restore`](../tools/dotnet-restore.md)（[请参阅注释](#dotnet-restore-note)），这将还原依赖项，并在库中创建 obj 文件夹，该文件夹中包含三个文件，其中一个是 project.assets.json 文件：
+执行 [`dotnet restore`](../tools/dotnet-restore.md)（[请参阅注释](#dotnet-restore-note)），这将还原依赖项，并在库  中创建 obj  文件夹，该文件夹中包含三个文件，其中一个是 project.assets.json  文件：
 
 ```console
 dotnet restore
 ```
 
-在库文件夹中，将文件 Class1.cs 重命名为 Thing.cs。 将代码替换为以下内容：
+在库  文件夹中，将文件 Class1.cs  重命名为 Thing.cs  。 将代码替换为以下内容：
 
 ```csharp
 using static Newtonsoft.Json.JsonConvert;
@@ -99,7 +99,7 @@ namespace Library
 
 `Thing` 类包含一个公共方法 `Get`，它返回两个数字的总和，实现方法是将总和转换为字符串，然后反序列化为一个整数。 这将使用大量现代 C# 功能，如[`using static` 指令](../../csharp/language-reference/keywords/using-static.md)、[expression-bodied 成员](../../csharp/whats-new/csharp-7.md#more-expression-bodied-members)和[字符串内插](../../csharp/language-reference/tokens/interpolated.md)。
 
-使用 [`dotnet build`](../tools/dotnet-build.md) 命令生成库。 这将在 golden/library/bin/Debug/netstandard1.4 下生成一个 library.dll 文件：
+使用 [`dotnet build`](../tools/dotnet-build.md) 命令生成库。 这将在 golden/library/bin/Debug/netstandard1.4  下生成一个 library.dll  文件：
 
 ```console
 dotnet build
@@ -107,7 +107,7 @@ dotnet build
 
 ## <a name="create-the-test-project"></a>创建测试项目
 
-生成针对库的测试项目。 在 golden 文件夹中，创建一个新测试项目：
+生成针对库的测试项目。 在 golden  文件夹中，创建一个新测试项目：
 
 ```console
 dotnet new xunit -o test-library
@@ -125,7 +125,7 @@ dotnet sln add test-library/test-library.csproj
 dotnet add test-library/test-library.csproj reference library/library.csproj
 ```
 
-或者，可以手动编辑 test-library.csproj 文件，并添加以下节点：
+或者，可以手动编辑 test-library.csproj  文件，并添加以下节点：
 
 ```xml
 <ItemGroup>
@@ -153,7 +153,7 @@ namespace TestApp
 
 请注意，在首次创建单元测试 (`Assert.NotEqual`) 时，已断言值 42 不等于 19+23（或 42），因此测试将失败。 生成单元测试的一个重要步骤是：使创建的测试最初失败一次，以便确认其逻辑正确无误。
 
-在 golden 文件夹中，执行下列命令：
+在 golden  文件夹中，执行下列命令：
 
 ```console
 dotnet restore 
@@ -162,7 +162,7 @@ dotnet test test-library/test-library.csproj
 
 这些命令将以递归形式查找所有项目，以还原依赖项、生成依赖性，并激活 xUnit 测试运行程序以运行测试。 该测试像预期那样失败。
 
-编辑 UnitTest1.cs 文件，将断言从 `Assert.NotEqual` 更改为 `Assert.Equal`。 在 goldden  文件夹中执行下列命令，重新运行测试，此次测试通过：
+编辑 UnitTest1.cs  文件，将断言从 `Assert.NotEqual` 更改为 `Assert.Equal`。 在 goldden  文件夹中执行下列命令，重新运行测试，此次测试通过：
 
 ```console
 dotnet test test-library/test-library.csproj
@@ -172,7 +172,7 @@ dotnet test test-library/test-library.csproj
 
 通过以下步骤创建的控制台应用依赖于之前创建的库项目，并在运行时调用其库方法。 使用此开发模式，可了解如何创建多个项目的可重用库。
 
-在 golden 文件夹中创建新的控制台应用程序：
+在 golden  文件夹中创建新的控制台应用程序：
 
 ```console
 dotnet new console -o app
@@ -190,13 +190,13 @@ dotnet sln add app/app.csproj
 dotnet add app/app.csproj reference library/library.csproj
 ```
 
-运行 `dotnet restore`（[请参阅注释](#dotnet-restore-note)），在解决方案中还原三个项目的依赖项。 打开 program.cs，并使用下列行替换 `Main` 方法中的内容：
+运行 `dotnet restore`（[请参阅注释](#dotnet-restore-note)），在解决方案中还原三个项目的依赖项。 打开 program.cs  ，并使用下列行替换 `Main` 方法中的内容：
 
 ```csharp
 WriteLine($"The answer is {new Thing().Get(19, 23)}");
 ```
 
-在 Program.cs 文件顶部添加两个 `using` 指令：
+在 Program.cs  文件顶部添加两个 `using` 指令：
 
 ```csharp
 using static System.Console;
@@ -211,9 +211,9 @@ dotnet run -p app/app.csproj
 
 ## <a name="debug-the-application"></a>调试应用程序
 
-在 `Main` 方法中的 `WriteLine` 语句处设置一个断点。 要实现此操作，可在光标位于 `WriteLine` 行之上时按 <kbd>F9</kbd> 键，也可在想要设置断点的行的左侧边缘中单击鼠标。 代码行旁边的边缘中将出现一个红色圆圈。 到达断点时，将在执行断点行前停止执行代码。
+在 `Main` 方法中的 `WriteLine` 语句处设置一个断点。 要实现此操作，可在光标位于 `WriteLine` 行之上时按 <kbd>F9</kbd> 键，也可在想要设置断点的行的左侧边缘中单击鼠标。 代码行旁边的边缘中将出现一个红色圆圈。 到达断点时，将在执行断点行前  停止执行代码。
 
-若要打开“调试器”选项卡，请在 Visual Studio Code 工具栏中选择“调试”图标，再从菜单栏中依次选择“视图”>“调试”，或使用键盘快捷方式 <kbd>CTRL</kbd>+<kbd>SHIFT</kbd>+<kbd>D</kbd>：
+若要打开“调试器”选项卡，请在 Visual Studio Code 工具栏中选择“调试”图标，再从菜单栏中依次选择“视图”>“调试”  ，或使用键盘快捷方式 <kbd>CTRL</kbd>+<kbd>SHIFT</kbd>+<kbd>D</kbd>：
 
 ![Visual Studio Code 调试程序](./media/using-on-macos/visual-studio-code-debugger.png)
 

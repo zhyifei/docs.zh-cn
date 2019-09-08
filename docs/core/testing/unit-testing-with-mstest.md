@@ -5,16 +5,18 @@ author: ncarandini
 ms.author: wiwagn
 ms.date: 09/08/2017
 ms.custom: seodec18
-ms.openlocfilehash: ae4ddd4df902cf8c3d50e50614b12af8dc0aebed
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: 1e0625adb5b96d95d8ed8ceed67c5acb134bb2e9
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168157"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373847"
 ---
 # <a name="unit-testing-c-with-mstest-and-net-core"></a>使用 MSTest 和 .NET Core 进行 C# 单元测试
 
 本教程介绍分步构建示例解决方案的交互式体验，以了解单元测试概念。 如果希望使用预构建解决方案学习本教程，请在开始前[查看或下载示例代码](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-mstest/)。 有关下载说明，请参阅[示例和教程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
+
+[!INCLUDE [testing an ASP.NET Core project from .NET Core](../../../includes/core-testing-note-aspnet.md)]
 
 ## <a name="create-the-source-project"></a>创建源项目
 

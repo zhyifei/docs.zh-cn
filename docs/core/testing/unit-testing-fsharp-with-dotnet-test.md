@@ -5,16 +5,18 @@ author: billwagner
 ms.author: wiwagn
 ms.date: 08/30/2017
 ms.custom: seodec18
-ms.openlocfilehash: 3a9744bfebd93c5004011819b8c6e739e84b97d0
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 56cf97752251d9bf49226d919508d2f972f2982a
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68626488"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373892"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-xunit"></a>使用 dotnet test 和 xUnit 在 .NET Core 中进行 F# 库单元测试
 
 本教程介绍分步构建示例解决方案的交互式体验，以了解单元测试概念。 如果希望使用预构建解决方案学习本教程，请在开始前[查看或下载示例代码](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-with-fsharp/)。 有关下载说明，请参阅[示例和教程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
+
+[!INCLUDE [testing an ASP.NET Core project from .NET Core](../../../includes/core-testing-note-aspnet.md)]
 
 ## <a name="creating-the-source-project"></a>创建源项目
 
@@ -62,7 +64,7 @@ module MyMath =
 
 测试项目需要其他包创建和运行单元测试。 `dotnet new` 在以前的步骤中已添加 xUnit 和 xUnit 运行程序。 现在，将 `MathService` 类库作为另一个依赖项添加到项目中。 使用 [`dotnet add reference`](../tools/dotnet-add-reference.md) 命令：
 
-```
+```console
 dotnet add reference ../MathService/MathService.fsproj
 ```
 

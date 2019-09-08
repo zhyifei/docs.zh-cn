@@ -4,12 +4,12 @@ description: 了解如何将 .NET for Apache Spark 应用程序部署到 Databri
 ms.date: 05/17/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 77c2d93ae324b6acbf8fc8dc25cd3e4d1a652f48
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 3c9169e2936742c82ba27327ac07f0aa1b4c645c
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70107349"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70254044"
 ---
 # <a name="deploy-a-net-for-apache-spark-application-to-databricks"></a>将 .NET for Apache Spark 应用程序部署到 Databricks
 
@@ -119,7 +119,7 @@ Microsoft.Spark.Worker 是后端组件，位于 Spark 群集的单个工作器�
 3. 正确设置参数。
 
    ```
-   Main Class: org.apache.spark.deploy.DotnetRunner
+   Main Class: org.apache.spark.deploy.dotnet.DotnetRunner
    Arguments /dbfs/apps/<your-app-name>.zip <your-app-main-class>
    ```
  
@@ -163,7 +163,7 @@ Microsoft.Spark.Worker 是后端组件，位于 Spark 群集的单个工作器�
 2. 使用以下参数配置 `spark-submit`：
 
       ```bash
-      ["--files","/dbfs/<path-to>/<app assembly/file to deploy to worker>","--class","org.apache.spark.deploy.DotnetRunner","/dbfs/<path-to>/microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar","/dbfs/<path-to>/<app name>.zip","<app bin name>","app arg1","app arg2"]
+      ["--files","/dbfs/<path-to>/<app assembly/file to deploy to worker>","--class","org.apache.spark.deploy.dotnet.DotnetRunner","/dbfs/<path-to>/microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar","/dbfs/<path-to>/<app name>.zip","<app bin name>","app arg1","app arg2"]
       ```
 
 3. 在 Databricks 工作区中转到 Databricks 群集。 在“作业”下，选择作业，然后选择“立即运行”以运行作业   。

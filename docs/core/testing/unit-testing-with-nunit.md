@@ -4,16 +4,18 @@ description: 使用 dotnet test 和 NUnit 分步构建一个示例解决方案�
 author: rprouse
 ms.date: 08/31/2018
 ms.custom: seodec18
-ms.openlocfilehash: 22475fcbd9e971f4c544c020d9198fadee4548b1
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: 19aa97687c41cf4a4aac00bf6ca83bc27504b09d
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168128"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374128"
 ---
 # <a name="unit-testing-c-with-nunit-and-net-core"></a>使用 NUnit 和 .NET Core 进行 C# 单元测试
 
 本教程介绍分步构建示例解决方案的交互式体验，以了解单元测试概念。 如果希望使用预构建解决方案学习本教程，请在开始前[查看或下载示例代码](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-nunit/)。 有关下载说明，请参阅[示例和教程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
+
+[!INCLUDE [testing an ASP.NET Core project from .NET Core](../../../includes/core-testing-note-aspnet.md)]
 
 ## <a name="prerequisites"></a>系统必备
 

@@ -4,12 +4,12 @@ description: 在本教程中，你将了解如何使用 Docker 容器化 .NET Co
 ms.date: 06/26/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 81b3ce2d6ebb73648d9026c92f490dcc723014f6
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: ec1c6eb5c1a78a631b8205da5d082e44884cde7a
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331039"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253951"
 ---
 # <a name="tutorial-containerize-a-net-core-app"></a>教程：使 .NET Core 应用程序容器化
 
@@ -60,7 +60,7 @@ dotnet new console -o app -n myapp
 
 文件夹树将如下所示：
 
-```console
+```
 docker-working
 │   global.json
 │
@@ -184,7 +184,7 @@ FROM mcr.microsoft.com/dotnet/core/runtime:2.2
 
 保存 Dockerfile 文件  。 工作文件夹的目录结果应如下所示。 为节省本文的空间，删掉了一些更深级别的文件和文件夹：
 
-```console
+```
 docker-working
 │   Dockerfile
 │   global.json
@@ -347,7 +347,7 @@ CONTAINER ID        IMAGE               COMMAND             CREATED             
 
 Docker 提供了 `docker run` 命令，用于将容器作为单一命令进行创建和运行。 使用此命令，无需依次运行 `docker create` 和 `docker start`。 另外，还可以将此命令设置为，在容器停止时自动删除容器。 例如，使用 `docker run -it --rm` 可以执行两项操作，先自动使用当前终端连接到容器，再在容器完成时删除容器：
 
-```
+```console
 > docker run -it --rm myimage
 Counter: 1
 Counter: 2
@@ -359,7 +359,7 @@ Counter: 5
 
 使用 `docker run -it`，<kbd>CTRL + C</kbd> 命令会停止在容器中运行的进程，进而停止容器。 由于提供了 `--rm` 参数，因此在进程停止时自动删除容器。 验证它是否不存在：
 
-```
+```console
 > docker ps -a
 CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS    PORTS   NAMES
 ```

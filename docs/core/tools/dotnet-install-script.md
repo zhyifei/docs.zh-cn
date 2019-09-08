@@ -2,12 +2,12 @@
 title: dotnet-install 脚本
 description: 了解用于安装 .NET Core CLI 工具和共享运行时的 dotnet-install 脚本。
 ms.date: 01/16/2019
-ms.openlocfilehash: 8eb021c25ac218f2665932c224dc05a7d295e2b7
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: ed1a3341e678b405ae4aca35e3b49ada89eb069a
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105118"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253902"
 ---
 # <a name="dotnet-install-scripts-reference"></a>dotnet-install 脚本引用
 
@@ -189,7 +189,7 @@ macOS/Linux：
   Windows：
 
   ```powershell
-  @powershell -NoProfile -ExecutionPolicy unrestricted -Command "[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; &([scriptblock]::Create((Invoke-WebRequest -useb 'https://dot.net/v1/dotnet-install.ps1'))) <additional install-script args>"
+  @powershell -NoProfile -ExecutionPolicy unrestricted -Command "[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; &([scriptblock]::Create((Invoke-WebRequest -UseBasicParsing 'https://dot.net/v1/dotnet-install.ps1'))) <additional install-script args>"
   ```
 
   macOS/Linux：
