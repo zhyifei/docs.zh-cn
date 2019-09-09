@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 48ad6e4d1d03d8362123e65f16907880b18893f9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 110d6eb0abcf4b4ce73f1ee9d27e27122f360270
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777905"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374443"
 ---
-# <a name="guidmanagedname-attribute"></a>GUID_ManagedName 特性
-定义指定的组件对象模型 (COM) 库的托管命名空间名称的自定义接口特性。  
+# <a name="guid_managedname-attribute"></a>GUID_ManagedName 特性
+定义一个自定义接口特性，该特性指定组件对象模型（COM）库的托管命名空间名称。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,10 +36,10 @@ ms.locfileid: "61777905"
   
 ## <a name="parameters"></a>参数  
  `value`  
- 库管理的命名空间名称。  
+ 库的托管命名空间名称。  
   
 ## <a name="definition"></a>定义  
- `GUID_ManagedName` 定义在 Cor.h，如下所示：  
+ `GUID_ManagedName`在 Cor 中定义，如下所示：  
   
 ```  
 // {0F21F359-AB84-41e8-9A78-36D110E6D2F9}  
@@ -47,14 +47,14 @@ EXTERN_GUID(GUID_ManagedName, 0xf21f359, 0xab84, 0x41e8, 0x9a, 0x78, 0x36, 0xd1,
 ```  
   
 ## <a name="remarks"></a>备注  
- 自定义接口特性的类型库中定义的对象的元数据。  
+ 自定义接口特性为类型库中的对象定义元数据。  
   
- 使用<xref:System.Runtime.InteropServices.ComTypes.ITypeInfo2.GetCustData%2A?displayProperty=nameWithType>或<xref:System.Runtime.InteropServices.ComTypes.ITypeLib2.GetCustData%2A?displayProperty=nameWithType>托管的名称检索该属性。  
+ 使用<xref:System.Runtime.InteropServices.ComTypes.ITypeInfo2.GetCustData%2A?displayProperty=nameWithType> 或<xref:System.Runtime.InteropServices.ComTypes.ITypeLib2.GetCustData%2A?displayProperty=nameWithType>从属性中检索托管名称。  
   
- 有关详细信息，请参阅[接口特性](/cpp/windows/interface-attributes)视觉对象中C++参考文档。  
+ 有关详细信息，请参阅可视C++参考文档中的[接口特性](/cpp/windows/attributes/interface-attributes)。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示库定义使用`GUID_ManagedName`属性。  
+ 下面的示例演示了一个使用`GUID_ManagedName`属性的库定义。  
   
 ```  
 [  
@@ -68,4 +68,4 @@ library Microsoft_VisualStudio_CommandBars
 ```  
   
 ## <a name="requirements"></a>要求  
- **标头：** Cor.h
+ **标头：** Cor

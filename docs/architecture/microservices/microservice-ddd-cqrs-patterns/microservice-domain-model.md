@@ -89,7 +89,7 @@ EF Core 2.0 包含[实体](https://devblogs.microsoft.com/dotnet/announcing-enti
 - 测试驱动开发中的值对象   \
   [https://leanpub.com/tdd-ebook/read\#leanpub-auto-value-objects](https://leanpub.com/tdd-ebook/read#leanpub-auto-value-objects)
 
-- **Eric Evans。Domain-Driven Design:Tackling Complexity in the Heart of Software.** （域驱动设计：软件核心复杂性应对之道） （书；包括值对象的讨论）\
+- **Eric Evans。域驱动设计：软件核心复杂性应对之道.** （书；包括值对象的讨论）\
   <https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/>
 
 ### <a name="the-aggregate-pattern"></a>聚合模式

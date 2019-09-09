@@ -347,10 +347,10 @@ public class ValidateOrAddBuyerAggregateWhenOrderStartedDomainEventHandler
 - **Greg Young.What is a Domain Event?** （什么是域事件？） \
   <https://cqrs.files.wordpress.com/2010/11/cqrs_documents.pdf#page=25>
 
-- **Jan Stenberg。Domain Events and Eventual Consistency** \（域事件和最终一致性）
+- **Jan Stenberg。Domain Events and Eventual Consistency** （域事件和最终一致性） \
   <https://www.infoq.com/news/2015/09/domain-events-consistency>
 
-- **Jimmy Bogard。A better domain events pattern** \（更好的域事件模式）
+- **Jimmy Bogard。A better domain events pattern** （更好的域事件模式） \
   <https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/>
 
 - **Vaughn Vernon。有效聚合设计，第 II 部分：让聚合共同工作** \
@@ -359,10 +359,10 @@ public class ValidateOrAddBuyerAggregateWhenOrderStartedDomainEventHandler
 - **Jimmy Bogard。强化域：域事件** \
   <https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/>
 
-- **Tony Truong。Domain Events Pattern Example** \（域事件模式示例）
+- **Tony Truong。Domain Events Pattern Example** （域事件模式示例） \
   <https://www.tonytruong.net/domain-events-pattern-example/>
 
-- **Udi Dahan.How to create fully encapsulated Domain Models** \（如何创建完全封装的域模型）
+- **Udi Dahan.How to create fully encapsulated Domain Models** （如何创建完全封装的域模型） \
   <http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/>
 
 - **Udi Dahan.Domain Events – Take 2** \（域事件 – 搞定两个问题）
