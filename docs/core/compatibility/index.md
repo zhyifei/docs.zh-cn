@@ -178,7 +178,7 @@ ms.locfileid: "67736557"
 
 - ❌️ 向字段添加 [readonly](../../csharp/language-reference/keywords/readonly.md) 
 
-- ❌ 缩小成员的可见性 
+- ❌ 降低成员的可见性 
 
    这包括在存在可访问的（公共或受保护的）构造函数且类型非 [sealed](../../csharp/language-reference/keywords/sealed.md) 的情况下降低 [protected](../../csharp/language-reference/keywords/protected.md) 成员的可见性。   若不属于上述情况，则允许降低受保护的成员的可见性。
 

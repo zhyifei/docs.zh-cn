@@ -2,12 +2,12 @@
 title: 如何：修改 Office Open XML 文档 (C#)
 ms.date: 07/20/2015
 ms.assetid: 467d489c-2b1b-453b-a757-8ac180e82a96
-ms.openlocfilehash: ac46dc1b0051613457b7306a9fe0e8d419afe35f
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: cb80a450de104760f64c84e11829f6609d8ee177
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69593137"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253537"
 ---
 # <a name="how-to-modify-an-office-open-xml-document-c"></a>如何：修改 Office Open XML 文档 (C#)
 本主题显演示一个打开、修改和保存 Office Open XML 文档的示例。  
@@ -143,7 +143,6 @@ class Program
   
  当针对[创建 Source Office Open XML 文档 (C#)](./creating-the-source-office-open-xml-document.md) 中说明的示例 Open XML 文档运行时，此示例生成以下输出：  
   
-```  
+```output  
 New first paragraph: >PARSING WORDPROCESSINGML WITH LINQ TO XML<  
 ```  
-  

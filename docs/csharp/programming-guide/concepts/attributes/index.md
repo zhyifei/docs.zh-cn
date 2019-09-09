@@ -1,12 +1,12 @@
 ---
 title: 特性 (C#)
 ms.date: 04/26/2018
-ms.openlocfilehash: 42a7035a9dae146ad7a303da41c83891e5e19ef8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7b78d5832c15d3d1142b80d2ccb96a72e4e20390
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61668609"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374373"
 ---
 # <a name="attributes-c"></a>特性 (C#)
 
@@ -57,7 +57,7 @@ ms.locfileid: "61668609"
 
 ### <a name="attribute-targets"></a>特性目标
 
-特性目标是指应用特性的实体。 例如，特性可应用于类、特定方法或整个程序集。 默认情况下，特性应用于它后面紧接着的元素。 不过，还可以进行显式标识。例如，可以标识为将特性应用于方法，还是应用于其参数或返回值。
+特性目标是指应用特性的实体  。 例如，特性可应用于类、特定方法或整个程序集。 默认情况下，特性应用于紧跟在它后面的元素。 不过，还可以进行显式标识。例如，可以标识为将特性应用于方法，还是应用于其参数或返回值。
 
 若要显式标识特性目标，请使用以下语法：
 
@@ -101,8 +101,8 @@ using System.Reflection;
 
 下面列出了代码中特性的一些常见用途：
 
-- 在 Web 服务中使用 `WebMethod` 特性标记方法，以指明方法应可通过 SOAP 协议进行调用。 有关更多信息，请参见<xref:System.Web.Services.WebMethodAttribute>。
-- 描述在与本机代码互操作时如何封送方法参数。 有关更多信息，请参见<xref:System.Runtime.InteropServices.MarshalAsAttribute>。
+- 在 Web 服务中使用 `WebMethod` 特性标记方法，以指明方法应可通过 SOAP 协议进行调用。 有关详细信息，请参阅 <xref:System.Web.Services.WebMethodAttribute>。
+- 描述在与本机代码互操作时如何封送方法参数。 有关详细信息，请参阅 <xref:System.Runtime.InteropServices.MarshalAsAttribute>。
 - 描述类、方法和接口的 COM 属性。
 - 使用 <xref:System.Runtime.InteropServices.DllImportAttribute> 类调用非托管代码。
 - 从标题、版本、说明或商标方面描述程序集。
