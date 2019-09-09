@@ -2,12 +2,12 @@
 title: 如何：投影对象图 (C#)
 ms.date: 07/20/2015
 ms.assetid: 293d15d5-3eaf-48de-9a02-3e13cb117b5b
-ms.openlocfilehash: dcfdd8cba95d729a1f9bda3adb4b5fd8690b724a
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: b00e350dd5bf00a5939547b3ed1651b2a6645197
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592986"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253486"
 ---
 # <a name="how-to-project-an-object-graph-c"></a>如何：投影对象图 (C#)
 本主题演示如何从 XML 投影或填充对象图。  
@@ -218,7 +218,7 @@ class Program {
   
  此示例产生以下输出：  
   
-```  
+```output  
 PurchaseOrderNumber: 99503  
 OrderDate: 10/20/1999  
   

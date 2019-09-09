@@ -2,12 +2,12 @@
 title: 如何：编写使用复杂筛选的查询 (C#)
 ms.date: 07/20/2015
 ms.assetid: 4065d901-cf89-4e47-8bf9-abb65acfb003
-ms.openlocfilehash: 3fe62b4a3c78c61de28311adf3feec1a613ff167
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 7759a02c1b9ef0ae0c1af4bfb2600543b21cdf0f
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592167"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253190"
 ---
 # <a name="how-to-write-queries-with-complex-filtering-c"></a>如何：编写使用复杂筛选的查询 (C#)
 有时，您需要编写使用复杂筛选器的 LINQ to XML 查询。 例如，您可能必须查找其子元素具有特定名称和值的所有元素。 本主题提供一个编写使用复杂筛选的查询的示例。  
@@ -37,7 +37,7 @@ foreach (XElement el in purchaseOrders)
   
  此代码生成以下输出：  
   
-```  
+```output  
 99505  
 ```  
   
@@ -65,7 +65,7 @@ foreach (XElement el in purchaseOrders)
   
  此代码生成以下输出：  
   
-```  
+```output  
 99505  
 ```  
   

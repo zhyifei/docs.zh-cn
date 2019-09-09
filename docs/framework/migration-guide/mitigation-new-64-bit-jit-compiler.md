@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 0332dabc-72c5-4bdc-8975-20d717802b17
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6df750872e90572b00cdf427461b4a9782c47d63
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 07f9ae01fae5e4badbc13670ee56a2f05e303c0c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968526"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70779352"
 ---
 # <a name="mitigation-new-64-bit-jit-compiler"></a>缓解：新的 64 位 JIT 编译器
 自 .NET Framework 4.6 起，运行时包括新版 64 位 JIT 编译器，用于执行实时编译。 此更改不会影响 32 位 JIT 编译器的编译。  
@@ -52,7 +52,7 @@ ms.locfileid: "69968526"
 ## <a name="mitigation-of-other-issues"></a>其他问题的缓解措施  
  如果遇到的是旧版和新版 64 位 JIT 编译器编译的代码的其他任何行为差异，或是使用新版 64 位 JIT 编译器编译的应用程序的调试和发布版本的其他任何行为差异，可以使用旧版 64 位 JIT 编译器编译应用程序，具体操作如下：  
   
-- 对于每个应用程序，可以将 [\<useLegacyJit>](../../../docs/framework/configure-apps/file-schema/runtime/uselegacyjit-element.md) 元素添加到应用程序的配置文件中。 下面的代码禁用新版 64 位 JIT 编译器，改用旧版 64 位 JIT 编译器进行编译。  
+- 对于每个应用程序，可以将 [\<useLegacyJit>](../configure-apps/file-schema/runtime/uselegacyjit-element.md) 元素添加到应用程序的配置文件中。 下面的代码禁用新版 64 位 JIT 编译器，改用旧版 64 位 JIT 编译器进行编译。  
   
     ```xml  
     <?xml version ="1.0"?>  
@@ -71,5 +71,5 @@ ms.locfileid: "69968526"
   
 ## <a name="see-also"></a>请参阅
 
-- [运行时更改](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)
-- [\<useLegacyJit> 元素](../../../docs/framework/configure-apps/file-schema/runtime/uselegacyjit-element.md)
+- [运行时更改](runtime-changes-in-the-net-framework-4-6.md)
+- [\<useLegacyJit> 元素](../configure-apps/file-schema/runtime/uselegacyjit-element.md)

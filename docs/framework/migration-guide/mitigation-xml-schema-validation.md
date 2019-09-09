@@ -7,12 +7,12 @@ dev_langs:
 ms.assetid: b73dd4f4-f2dc-47a2-9425-3896e92321fb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 36f9475a978ddf7253833e6c3372049d24502f95
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: d7f53a2e8684029c0d1329d29a88bd1788e62d43
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66300583"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70789678"
 ---
 # <a name="mitigation-xml-schema-validation"></a>缓解：XML 架构验证
 在 .NET Framework 4.6 中，如果使用复合键且有一个键为空，则 XSD 架构验证将检测是否违反唯一约束。  
@@ -39,4 +39,4 @@ ms.locfileid: "66300583"
   
 ## <a name="see-also"></a>请参阅
 
-- [重定目标更改](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6.md)
+- [重定目标更改](retargeting-changes-in-the-net-framework-4-6.md)

@@ -2,12 +2,12 @@
 title: 如何：基于位置查找子元素 (XPath-LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: e35bb269-ec86-4c96-8321-12491a0eb2c3
-ms.openlocfilehash: b55e2df5a97446da9d02fd3979f5d8d584228ba2
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 1adbbb6dd074ffcb39269a800024e444cf8791d1
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69593499"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253760"
 ---
 # <a name="how-to-find-child-elements-based-on-position-xpath-linq-to-xml-c"></a>如何：基于位置查找子元素 (XPath-LINQ to XML) (C#)
 有时需要根据元素的位置查找元素。 您可能想查找第二个元素，或者查找第三到第五个元素。  
@@ -56,7 +56,7 @@ foreach (XElement el in list1)
   
  该示例产生下面的输出：  
   
-```  
+```output  
 Results are identical  
 <Test TestId="0002" TestType="CMD">  
   <Name>Find succeeding characters</Name>  

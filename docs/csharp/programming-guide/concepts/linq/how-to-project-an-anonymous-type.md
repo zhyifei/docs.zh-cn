@@ -2,19 +2,19 @@
 title: 如何：投影匿名类型 (C#)
 ms.date: 07/20/2015
 ms.assetid: 5cb9be13-5ac4-4373-a034-b3520a5b2dec
-ms.openlocfilehash: cd05c0ad7ab5a683b95e110cb0b1bb75b8a1dd2a
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 3ed14ae6e7bc4b84ae9dc416b76e37443b831c73
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69593029"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253494"
 ---
 # <a name="how-to-project-an-anonymous-type-c"></a>如何：投影匿名类型 (C#)
 在某些情况下，您可能需要将查询投影到新类型，即使您知道只是短时间使用此类型。 创建仅在投影中使用的新类型需要大量额外工作。 在这种情况下，一种更有效的方法是投影到匿名类型。 匿名类型允许您定义一个类，然后在不给出类名称的情况下声明并初始化该类的对象。  
   
  匿名类型是“元组”这一数学概念的 C# 实现。  数学术语元组源自序列单元组、双元组、三元组、四元组、五元组和 n 元组。 它指有限的对象序列，每个对象具有特定的类型。 有时，它称为名称/值对的列表。 例如，[示例XML文件：典型采购订单 (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md) XML 文档中的地址内容可表示如下：  
   
-```  
+```text  
 Name: Ellen Adams  
 Street: 123 Maple Street  
 City: Mill Valley  
@@ -45,7 +45,7 @@ foreach (var cust in custList)
   
  此代码生成以下输出：  
   
-```  
+```output  
 GREAL:Great Lakes Food Market:Howard Snyder  
 HUNGC:Hungry Coyote Import Store:Yoshi Latimer  
 LAZYK:Lazy K Kountry Store:John Steel  

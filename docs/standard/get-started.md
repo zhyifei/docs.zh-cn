@@ -6,12 +6,12 @@ ms.author: mairaw
 ms.date: 05/01/2017
 ms.technology: dotnet-standard
 ms.assetid: 81c07080-acdf-4aef-a66d-0ab52fab2c04
-ms.openlocfilehash: 50667465d25dc034b7f229716cbf327fb5f54977
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 5c162258d6d365da8c6048590eb4c5eec6162973
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65644651"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799307"
 ---
 # <a name="get-started"></a>开始操作
 
@@ -33,4 +33,4 @@ ms.locfileid: "65644651"
 
 ## <a name="get-started-using-net-core-on-docker"></a>开始在 Docker 上使用 .NET Core
 
-[.NET 和 Docker 简介](../core/docker/intro-net-docker.md)展示了如何在 Windows Docker 容器上使用 .NET Core。
+[.NET 和 Docker 简介](../core/docker/introduction.md)展示了如何在 Windows Docker 容器上使用 .NET Core。

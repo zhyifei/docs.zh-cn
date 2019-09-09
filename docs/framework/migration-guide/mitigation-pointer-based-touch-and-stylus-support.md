@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: f99126b5-c396-48f9-8233-8f36b4c9e717
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9264d8eb7923663061f9bccfffe5b8f5254549f0
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 67e41450ed69d73a4b27b0aa37974ae01be69687
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66379893"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70779236"
 ---
 # <a name="mitigation-pointer-based-touch-and-stylus-support"></a>缓解：基于指针的触控和触笔支持
 
@@ -40,7 +40,7 @@ ms.locfileid: "66379893"
 
       这可能会导致应用程序无响应，直到检测到鼠标输入。 相反，开发者应通过鼠标事件启动拖放行为。
 
-## <a name="opting-in-to-wmpointer-based-touchstylus-support"></a>选择启用基于 WM_POINTER 的触控/触笔支持
+## <a name="opting-in-to-wm_pointer-based-touchstylus-support"></a>选择启用基于 WM_POINTER 的触控/触笔支持
 
 要启用此堆栈的开发者可以在应用程序的 app.config 文件中添加下面的代码：
 
@@ -56,4 +56,4 @@ ms.locfileid: "66379893"
 
 ## <a name="see-also"></a>请参阅
 
-- [.NET Framework 4.7 中的重定目标更改](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-7.md)
+- [.NET Framework 4.7 中的重定目标更改](retargeting-changes-in-the-net-framework-4-7.md)

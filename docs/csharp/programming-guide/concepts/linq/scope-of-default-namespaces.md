@@ -2,12 +2,12 @@
 title: C# 中默认命名空间的范围
 ms.date: 07/20/2015
 ms.assetid: fe826236-830f-457a-9027-7ad62c909fae
-ms.openlocfilehash: 0c5f5cccda6ba6a75a8631ed095921b90b02916b
-ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
+ms.openlocfilehash: 7615351f6e5f8b18bd6466a83d54aa65a6c99b50
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68868863"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253040"
 ---
 # <a name="scope-of-default-namespaces-in-c"></a>C\# 中默认命名空间的范围
 XML 树中表示的默认命名空间不在查询范围内。 如果您的 XML 在默认命名空间内，仍须声明一个 <xref:System.Xml.Linq.XNamespace> 变量，并将该变量与本地名称组合在一起，生成一个限定名，在查询中使用。  
@@ -45,7 +45,7 @@ Console.WriteLine("End of result set");
 ### <a name="comments"></a>注释  
  此示例产生下面的结果：  
   
-```  
+```output  
 Result set follows:  
 End of result set  
 ```  
@@ -80,7 +80,7 @@ Console.WriteLine("End of result set");
 ### <a name="comments"></a>注释  
  此示例产生下面的结果：  
   
-```  
+```output  
 Result set follows:  
 1  
 2  

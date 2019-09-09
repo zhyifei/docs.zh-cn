@@ -2,12 +2,12 @@
 title: 如何：联接不同文件的内容 (LINQ) (C#)
 ms.date: 06/27/2018
 ms.assetid: aa2d12a6-70a9-492f-a6db-b2b850d46811
-ms.openlocfilehash: 14f9c9917aedbc0beeeddae789b835613d1badc8
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: eb2e5d8e598b7b671afe9271e6e591c5ce0ada2b
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69593157"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253551"
 ---
 # <a name="how-to-join-content-from-dissimilar-files-linq-c"></a>如何：联接不同文件的内容 (LINQ) (C#)
 
@@ -17,7 +17,7 @@ ms.locfileid: "69593157"
   
 1. 将以下行复制到名为 scores.csv 的文件，并将文件保存到项目文件夹  。 此文件表示电子表格数据。 第 1 列是学生的 ID，第 2 至 5 列是测验分数。  
   
-    ```  
+    ```csv  
     111, 97, 92, 81, 60  
     112, 75, 84, 91, 39  
     113, 88, 94, 65, 91  
@@ -34,7 +34,7 @@ ms.locfileid: "69593157"
   
 2. 将以下行复制到名为 names.csv 的文件，并将文件保存到项目文件夹  。 此文件表示电子表格，其中包含学生的姓氏、名字和学生 ID。  
   
-    ```  
+    ```csv  
     Omelchenko,Svetlana,111  
     O'Donnell,Claire,112  
     Mortensen,Sven,113  

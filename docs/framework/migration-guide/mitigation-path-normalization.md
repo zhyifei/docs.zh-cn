@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 158d47b1-ba6d-4fa6-8963-a012666bdc31
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5b1c704113c8e05e493cdb3ef24f6376ab54b1cb
-ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
+ms.openlocfilehash: bc5ea69d80a225adfc2f409e8303ee1c241398db
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66251115"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70779342"
 ---
 # <a name="mitigation-path-normalization"></a>缓解：路径规范化
 自面向 .NET Framework 4.6.2 的应用起，.NET Framework 中的路径规范化已更改。  
@@ -45,7 +45,7 @@ ms.locfileid: "66251115"
 定目标到 .NET Framework 4.6.1 及更低版本、但在 .NET Framework 4.6.2 或更高版本控制下运行的应用不受此更改影响。  
   
 ## <a name="mitigation"></a>缓解  
- 对于面向 .NET Framework 4.6.2 或更高版本的应用，可通过将以下内容添加到应用程序配置文件的 [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) 部分，选择弃用此更改而使用旧版规范化：  
+ 对于面向 .NET Framework 4.6.2 或更高版本的应用，可通过将以下内容添加到应用程序配置文件的 [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) 部分，选择弃用此更改而使用旧版规范化：  
   
 ```xml  
 <runtime>  
@@ -53,7 +53,7 @@ ms.locfileid: "66251115"
 </runtime>  
 ```  
   
-对于面向 .NET Framework 4.6.1 或更低版本，但在 .NET Framework 4.6.2 或更高版本上运行的应用，可通过将以下行添加到应用程序配置文件的 [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) 部分，启用对路径规范化的更改：  
+对于面向 .NET Framework 4.6.1 或更低版本，但在 .NET Framework 4.6.2 或更高版本上运行的应用，可通过将以下行添加到应用程序配置文件的 [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) 部分，启用对路径规范化的更改：  
   
 ```xml  
 <runtime>  
@@ -63,4 +63,4 @@ ms.locfileid: "66251115"
   
 ## <a name="see-also"></a>请参阅
 
-- [重定目标更改](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6-2.md)
+- [重定目标更改](retargeting-changes-in-the-net-framework-4-6-2.md)

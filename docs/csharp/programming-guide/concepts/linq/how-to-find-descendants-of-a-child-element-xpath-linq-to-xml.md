@@ -2,12 +2,12 @@
 title: 如何：查找子元素的后代 (XPath-LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 505b7512-bb8b-4f85-abbf-491f039c961e
-ms.openlocfilehash: a049ede1d533c4afc67892b7889debbe673e51c8
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: f17d723aa03c45daa4e7e741ea6b14c637537ccf
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66485482"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253707"
 ---
 # <a name="how-to-find-descendants-of-a-child-element-xpath-linq-to-xml-c"></a>如何：查找子元素的后代 (XPath-LINQ to XML) (C#)
 本主题演示如何获取具有特定名称的子元素的后代元素。  
@@ -70,7 +70,7 @@ Console.WriteLine(str2);
   
  该示例产生下面的输出：  
   
-```  
+```output  
 Results are identical  
 This is the start of a sentence.  This is a second sentence.  
 ```  

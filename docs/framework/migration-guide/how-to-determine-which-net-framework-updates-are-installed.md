@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 53c7b5f7-d47a-402a-b194-7244a696a88b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e11b2588471e95b4e47fd0efaf41757430b9bb39
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c4c505c679c46494f7dc2534c2bbe9f50243a7dd
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54604179"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70790062"
 ---
 # <a name="how-to-determine-which-net-framework-security-updates-and-hotfixes-are-installed"></a>如何：确定安装了哪些 .NET Framework 安全更新和修补程序
 
@@ -27,9 +27,9 @@ ms.locfileid: "54604179"
 
 ## <a name="to-find-installed-updates-using-the-registry"></a>使用注册表找到已安装的更新
 
-安装在计算机上的各个版本 .NET Framework 的已安装安全更新和修补程序都列在 Windows 注册表中。 可以使用注册表编辑器 (regedit.exe) 程序查看此信息。
+安装在计算机上的各个版本 .NET Framework 的已安装安全更新和修补程序都列在 Windows 注册表中。 可以使用注册表编辑器 (regedit.exe) 程序查看此信息  。
 
-1. 打开程序 **regedit.exe**。 在 Windows 8 和更高版本中，右键单击“开始”![Windows 徽标](../get-started/media/windowskeyboardlogo.png "Windowskeyboardlogo")，然后选择“运行”。 在“打开”对话框中，输入“regedit.exe”并选择“确定”。
+1. 打开程序 **regedit.exe**。 在 Windows 8 和更高版本中，右键单击“开始”![Windows 徽标](../get-started/media/windowskeyboardlogo.png "Windowskeyboardlogo")，然后选择“运行”   。 在“打开”对话框中，输入“regedit.exe”并选择“确定”    。
 
 2. 在注册表编辑器中，打开以下子项：
 
@@ -37,7 +37,7 @@ ms.locfileid: "54604179"
 
      已安装的更新在标识适用的 .NET Framework 版本的子项下方列出。 每个更新均由知识库 (KB) 编号进行标识。
 
-在注册表编辑器中，.NET Framework 版本和每个版本已安装的更新都保存在不同的子项中。 有关检测已安装版本号的信息，请参阅[如何：确定已安装的 .NET Framework 版本](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)。
+在注册表编辑器中，.NET Framework 版本和每个版本已安装的更新都保存在不同的子项中。 有关检测已安装版本号的信息，请参阅[如何：确定已安装的 .NET Framework 版本](how-to-determine-which-versions-are-installed.md)。
 
 ## <a name="to-find-installed-updates-by-querying-the-registry-in-code"></a>通过在代码中查询注册表找到已安装的更新
 
@@ -108,6 +108,6 @@ KB2600217
 
 ## <a name="see-also"></a>请参阅
 
-- [如何：确定已安装的 .NET Framework 版本](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)
-- [安装面向开发者的 .NET Framework](../../../docs/framework/install/guide-for-developers.md)
-- [版本和依赖关系](../../../docs/framework/migration-guide/versions-and-dependencies.md)
+- [如何：确定已安装的 .NET Framework 版本](how-to-determine-which-versions-are-installed.md)
+- [安装面向开发者的 .NET Framework](../install/guide-for-developers.md)
+- [版本和依赖关系](versions-and-dependencies.md)

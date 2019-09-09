@@ -1,19 +1,19 @@
 ---
-title: 使用 ML.NET CLI 自动生成二元分类器
+title: 使用 ML.NET CLI 分析情绪
 description: 从示例数据集自动生成 ML 模型和相关 C# 代码
 author: cesardl
 ms.author: cesardl
 ms.date: 04/24/2019
 ms.custom: mvc
 ms.topic: tutorial
-ms.openlocfilehash: c0e188286821f0e3822fde4af74a1561edfbb868
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 7b740f2c93096c971da009e8abf6865ac1b8e966
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70107277"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70254157"
 ---
-# <a name="auto-generate-a-binary-classifier-using-the-cli"></a>使用 CLI 自动生成二元分类器
+# <a name="analyze-sentiment-using-the-mlnet-cli"></a>使用 ML.NET CLI 分析情绪
 
 了解如何使用 ML.NET CLI 自动生成 ML.NET 模型和基础 C# 代码。 用户提供想要实现的数据集和机器学习任务，CLI 使用 AutoML 引擎创建模型生成和部署源代码以及二元模型。
 

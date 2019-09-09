@@ -2,12 +2,12 @@
 title: 如何：使用组将一个文件拆分成多个文件 (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 8179b91c-d778-4e57-884f-77fe5a8e4e40
-ms.openlocfilehash: 171d0aababfe4ff4ba5be4c8d307c917474671fc
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 5f2ae7657162ba5a2c88e5378119eaad4cb1e288
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592382"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253281"
 ---
 # <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-c"></a>如何：使用组将一个文件拆分成多个文件 (LINQ) (C#)
 此示例演示一种进行以下操作的方法：合并两个文件的内容，然后创建一组以新方式整理数据的新文件。  
@@ -16,7 +16,7 @@ ms.locfileid: "69592382"
   
 1. 将下面的姓名复制到名为 names1.txt 的文本文件，然后将此文件保存到项目文件夹：  
   
-    ```  
+    ```text  
     Bankov, Peter  
     Holm, Michael  
     Garcia, Hugo  
@@ -31,7 +31,7 @@ ms.locfileid: "69592382"
   
 2. 将下面的姓名复制到名为 names2.txt 的文本文件，然后将此文件保存到项目文件夹：请注意，这两个文件拥有一些共同的名称。  
   
-    ```  
+    ```text  
     Liu, Jinghao  
     Bankov, Peter  
     Holm, Michael  

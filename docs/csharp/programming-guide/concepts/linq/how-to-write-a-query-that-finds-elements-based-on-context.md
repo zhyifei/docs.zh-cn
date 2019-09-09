@@ -2,12 +2,12 @@
 title: 如何：编写基于上下文查找元素的查询 (C#)
 ms.date: 07/20/2015
 ms.assetid: 3ff79ef0-fc8b-42fe-8cc0-10dc32b06b4e
-ms.openlocfilehash: f6fd0a9dc0f2579185f2f72997f1d406a885c636
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: e3ac8fc965132521b85cce6391908634cdb17127
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710029"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253207"
 ---
 # <a name="how-to-write-a-query-that-finds-elements-based-on-context-c"></a>如何：编写基于上下文查找元素的查询 (C#)
 有时，您可能必须编写基于元素上下文选择元素的查询。 您可能需要基于前面或后面的同级元素进行筛选。 您可能需要基于子元素或上级元素进行筛选。  
@@ -49,7 +49,7 @@ foreach (XElement e in items)
   
  此代码生成以下输出：  
   
-```  
+```output  
 id = 1  
 id = 3  
 id = 6  
@@ -92,7 +92,7 @@ foreach (XElement e in items)
   
  此代码生成以下输出：  
   
-```  
+```output  
 id = 1  
 id = 3  
 id = 6  

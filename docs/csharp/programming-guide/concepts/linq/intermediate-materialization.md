@@ -2,12 +2,12 @@
 title: 中间具体化 (C#)
 ms.date: 07/20/2015
 ms.assetid: 7922d38f-5044-41cf-8e17-7173d6553a5e
-ms.openlocfilehash: 273cd68b9714287f259e763c9b7c534aac1931e6
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: af1eb7df7da02d8e72fc102cda4ee5f329dc7974
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592131"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253163"
 ---
 # <a name="intermediate-materialization-c"></a>中间具体化 (C#)
 有时，稍不小心就会导致查询中的集合过早具体化，从而显著改变应用程序的内存和性能配置文件。 有些标准查询运算符会在生成单个元素之前导致其源集合具体化。 例如，<xref:System.Linq.Enumerable.OrderBy%2A?displayProperty=nameWithType> 首先循环访问其整个源集合，然后对所有项排序，最后生成第一项。 这意味着获取排序集合中的第一项需要高开销；其后的每一项不需要高开销。 这样做很有意义：该查询运算符将不可能以其他方式操作。  
@@ -66,7 +66,7 @@ class Program
   
  该示例产生下面的输出：  
   
-```  
+```output  
 ToUpper: source >abc<  
 ToUpper: source >def<  
 ToUpper: source >ghi<  

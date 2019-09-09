@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Azure 构建新式 Web 应用程序 | 新�
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: f4fe18d7361f7d67c29fb7dab53132237f709280
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: d3848f3b0cf993930bfc3801ce40c5eac30f094d
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68672904"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374092"
 ---
 # <a name="characteristics-of-modern-web-applications"></a>新式 Web 应用程序的特征
 
@@ -24,9 +24,9 @@ ASP.NET Core 针对新式 Web 应用程序和基于云的托管方案进行了�
 
 本指南包含一个参考应用程序 eShopOnWeb，该应用程序演示了一些原则和建议。  该应用程序是一个简单在线商店，支持浏览衬衫、咖啡杯和其他市场产品名录。 特意选择该简单的参考应用，方便理解。
 
-**图 2-1.** eShopOnWeb
+![eShopOnWeb](./media/image2-1.png)
 
-![](./media/image2-1.png)
+**图 2-1.** eShopOnWeb
 
 > ### <a name="reference-application"></a>参考应用程序
 >

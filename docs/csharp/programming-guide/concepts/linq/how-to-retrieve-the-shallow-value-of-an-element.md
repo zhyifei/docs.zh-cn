@@ -2,12 +2,12 @@
 title: 如何：检索元素的浅表值 (C#)
 ms.date: 07/20/2015
 ms.assetid: 924a2699-72f6-4be1-aaa6-de62f8ec73b9
-ms.openlocfilehash: 2b37cc19e2ec5149589131497b36ad381900336b
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 662c20cf2b17b9f93e00f0fd3c5cf925b5274de5
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592511"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253374"
 ---
 # <a name="how-to-retrieve-the-shallow-value-of-an-element-c"></a>如何：检索元素的浅表值 (C#)
 本主题说明如何获取元素的浅值。 浅值只是特定元素的值，与深值相反，包括串联成一个单一字符串的所有子元素的值。  
@@ -72,7 +72,7 @@ class Program
   
  该示例产生下面的输出：  
   
-```  
+```output  
 Column  Name="CustomerId"   =Customer.CustomerId.Heading  
 Column  Name="Name"         =Customer.Name.Heading  
 Column  Name="CustomerId"   =Customer.CustomerId  

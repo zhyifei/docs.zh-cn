@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#]
 ms.assetid: 0e597e0d-ea7a-41ba-a38a-0198122f3c26
-ms.openlocfilehash: 345840ad45add21c6088abd0fb45e2e591b7df21
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6f071f907fe38b226a5083699e758bc5fb8bffce
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69923889"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252997"
 ---
 # <a name="command-line-arguments-c-programming-guide"></a>命令行参数（C# 编程指南）
 可以通过以下方式之一定义方法来将自变量发送到 `Main` 方法：  
@@ -28,19 +28,19 @@ ms.locfileid: "69923889"
   
  还可以使用 <xref:System.Convert> 类或 `Parse` 方法将字符串参数转换为数字类型。 例如，以下语句使用 <xref:System.Int64.Parse%2A> 方法将 `string` 转换为 `long` 数字：  
   
-```  
+```csharp  
 long num = Int64.Parse(args[0]);  
 ```  
   
  也可以使用 C# 类型 `long`，其别名为 `Int64`：  
   
-```  
+```csharp  
 long num = long.Parse(args[0]);  
 ```  
   
  还可以使用 `Convert` 类方法 `ToInt64` 来执行同样的操作：  
   
-```  
+```csharp  
 long num = Convert.ToInt64(s);  
 ```  
   
