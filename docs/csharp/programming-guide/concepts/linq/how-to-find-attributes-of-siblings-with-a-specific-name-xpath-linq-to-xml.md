@@ -2,24 +2,24 @@
 title: 如何：查找具有特定名称的同级属性 (XPath-LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: c3133d64-523f-422d-8838-73d36b945ca0
-ms.openlocfilehash: 78795f164490dddd6bdc8dae04961c028228ab0c
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 0d7842f190f7ce7869668929b69c2336d33c6183
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69593530"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253728"
 ---
-# <a name="how-to-find-attributes-of-siblings-with-a-specific-name-xpath-linq-to-xml-c"></a><span data-ttu-id="561e8-102">如何：查找具有特定名称的同级属性 (XPath-LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="561e8-102">How to: Find Attributes of Siblings with a Specific Name (XPath-LINQ to XML) (C#)</span></span>
-<span data-ttu-id="561e8-103">本主题演示如何查找上下文节点的同级的所有属性。</span><span class="sxs-lookup"><span data-stu-id="561e8-103">This topic shows how to find all attributes of the siblings of the context node.</span></span> <span data-ttu-id="561e8-104">只返回集合中具有特定名称的属性。</span><span class="sxs-lookup"><span data-stu-id="561e8-104">Only attributes with a specific name are returned in the collection.</span></span>  
+# <a name="how-to-find-attributes-of-siblings-with-a-specific-name-xpath-linq-to-xml-c"></a><span data-ttu-id="15c91-102">如何：查找具有特定名称的同级属性 (XPath-LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="15c91-102">How to: Find Attributes of Siblings with a Specific Name (XPath-LINQ to XML) (C#)</span></span>
+<span data-ttu-id="15c91-103">本主题演示如何查找上下文节点的同级的所有属性。</span><span class="sxs-lookup"><span data-stu-id="15c91-103">This topic shows how to find all attributes of the siblings of the context node.</span></span> <span data-ttu-id="15c91-104">只返回集合中具有特定名称的属性。</span><span class="sxs-lookup"><span data-stu-id="15c91-104">Only attributes with a specific name are returned in the collection.</span></span>  
   
- <span data-ttu-id="561e8-105">XPath 表达式为：</span><span class="sxs-lookup"><span data-stu-id="561e8-105">The XPath expression is:</span></span>  
+ <span data-ttu-id="15c91-105">XPath 表达式为：</span><span class="sxs-lookup"><span data-stu-id="15c91-105">The XPath expression is:</span></span>  
   
  `../Book/@id`  
   
-## <a name="example"></a><span data-ttu-id="561e8-106">示例</span><span class="sxs-lookup"><span data-stu-id="561e8-106">Example</span></span>  
- <span data-ttu-id="561e8-107">本示例首先查找 `Book` 元素，然后查找名为 `Book` 的所有同级元素，再查找名为 `id` 的所有属性。</span><span class="sxs-lookup"><span data-stu-id="561e8-107">This example first finds a `Book` element, and then finds all sibling elements named `Book`, and then finds all attributes named `id`.</span></span> <span data-ttu-id="561e8-108">结果是一个属性集合。</span><span class="sxs-lookup"><span data-stu-id="561e8-108">The result is a collection of attributes.</span></span>  
+## <a name="example"></a><span data-ttu-id="15c91-106">示例</span><span class="sxs-lookup"><span data-stu-id="15c91-106">Example</span></span>  
+ <span data-ttu-id="15c91-107">本示例首先查找 `Book` 元素，然后查找名为 `Book` 的所有同级元素，再查找名为 `id` 的所有属性。</span><span class="sxs-lookup"><span data-stu-id="15c91-107">This example first finds a `Book` element, and then finds all sibling elements named `Book`, and then finds all attributes named `id`.</span></span> <span data-ttu-id="15c91-108">结果是一个属性集合。</span><span class="sxs-lookup"><span data-stu-id="15c91-108">The result is a collection of attributes.</span></span>  
   
- <span data-ttu-id="561e8-109">此示例使用下面的 XML 文档：[示例 XML 文件：图书 (LINQ to XML)](./sample-xml-file-books-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="561e8-109">This example uses the following XML document: [Sample XML File: Books (LINQ to XML)](./sample-xml-file-books-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="15c91-109">此示例使用下面的 XML 文档：[示例 XML 文件：图书 (LINQ to XML)](./sample-xml-file-books-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="15c91-109">This example uses the following XML document: [Sample XML File: Books (LINQ to XML)](./sample-xml-file-books-linq-to-xml.md).</span></span>  
   
 ```csharp  
 XDocument books = XDocument.Load("Books.xml");  
@@ -47,9 +47,9 @@ foreach (XAttribute el in list1)
     Console.WriteLine(el);  
 ```  
   
- <span data-ttu-id="561e8-110">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="561e8-110">This example produces the following output:</span></span>  
+ <span data-ttu-id="15c91-110">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="15c91-110">This example produces the following output:</span></span>  
   
-```  
+```output  
 Results are identical  
 id="bk101"  
 id="bk102"  

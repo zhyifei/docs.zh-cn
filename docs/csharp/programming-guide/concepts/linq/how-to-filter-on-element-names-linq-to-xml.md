@@ -2,20 +2,20 @@
 title: 如何：筛选元素名称 (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 1849fb03-f075-421f-863c-e8fb32773cdf
-ms.openlocfilehash: 9febe3b834261326bab3e82d87c476f99d4e6b1f
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 2a4eccac3bc24005af0efee0785393de00039228
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69593806"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253810"
 ---
-# <a name="how-to-filter-on-element-names-linq-to-xml-c"></a><span data-ttu-id="0feec-102">如何：筛选元素名称 (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="0feec-102">How to: Filter on Element Names (LINQ to XML) (C#)</span></span>
-<span data-ttu-id="0feec-103">当调用返回 <xref:System.Collections.Generic.IEnumerable%601> 的 <xref:System.Xml.Linq.XElement> 的方法之一时，可以根据元素名称进行筛选。</span><span class="sxs-lookup"><span data-stu-id="0feec-103">When you call one of the methods that return <xref:System.Collections.Generic.IEnumerable%601> of <xref:System.Xml.Linq.XElement>, you can filter on the element name.</span></span>  
+# <a name="how-to-filter-on-element-names-linq-to-xml-c"></a><span data-ttu-id="9ee41-102">如何：筛选元素名称 (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="9ee41-102">How to: Filter on Element Names (LINQ to XML) (C#)</span></span>
+<span data-ttu-id="9ee41-103">当调用返回 <xref:System.Collections.Generic.IEnumerable%601> 的 <xref:System.Xml.Linq.XElement> 的方法之一时，可以根据元素名称进行筛选。</span><span class="sxs-lookup"><span data-stu-id="9ee41-103">When you call one of the methods that return <xref:System.Collections.Generic.IEnumerable%601> of <xref:System.Xml.Linq.XElement>, you can filter on the element name.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="0feec-104">示例</span><span class="sxs-lookup"><span data-stu-id="0feec-104">Example</span></span>  
- <span data-ttu-id="0feec-105">本示例说明如何检索经过筛选仅包含具有指定名称的子代的集合。</span><span class="sxs-lookup"><span data-stu-id="0feec-105">This example retrieves a collection of descendants that is filtered to contain only descendants with the specified name.</span></span>  
+## <a name="example"></a><span data-ttu-id="9ee41-104">示例</span><span class="sxs-lookup"><span data-stu-id="9ee41-104">Example</span></span>  
+ <span data-ttu-id="9ee41-105">本示例说明如何检索经过筛选仅包含具有指定名称的子代的集合。</span><span class="sxs-lookup"><span data-stu-id="9ee41-105">This example retrieves a collection of descendants that is filtered to contain only descendants with the specified name.</span></span>  
   
- <span data-ttu-id="0feec-106">此示例使用下面的 XML 文档：[示例 XML 文件：典型采购订单 (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md)。</span><span class="sxs-lookup"><span data-stu-id="0feec-106">This example uses the following XML document: [Sample XML File: Typical Purchase Order (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md).</span></span>  
+ <span data-ttu-id="9ee41-106">此示例使用下面的 XML 文档：[示例 XML 文件：典型采购订单 (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md)。</span><span class="sxs-lookup"><span data-stu-id="9ee41-106">This example uses the following XML document: [Sample XML File: Typical Purchase Order (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md).</span></span>  
   
 ```csharp  
 XElement po = XElement.Load("PurchaseOrder.xml");  
@@ -26,14 +26,14 @@ foreach(XElement prdName in items)
     Console.WriteLine(prdName.Name + ":" + (string) prdName);  
 ```  
   
- <span data-ttu-id="0feec-107">此代码生成以下输出：</span><span class="sxs-lookup"><span data-stu-id="0feec-107">This code produces the following output:</span></span>  
+ <span data-ttu-id="9ee41-107">此代码生成以下输出：</span><span class="sxs-lookup"><span data-stu-id="9ee41-107">This code produces the following output:</span></span>  
   
-```  
+```output  
 ProductName:Lawnmower  
 ProductName:Baby Monitor  
 ```  
   
- <span data-ttu-id="0feec-108">其他返回 <xref:System.Collections.Generic.IEnumerable%601> 集合的 <xref:System.Xml.Linq.XElement> 的方法都遵循相同的模式。</span><span class="sxs-lookup"><span data-stu-id="0feec-108">The other methods that return <xref:System.Collections.Generic.IEnumerable%601> of <xref:System.Xml.Linq.XElement> collections follow the same pattern.</span></span> <span data-ttu-id="0feec-109">它们的签名类似于 <xref:System.Xml.Linq.XContainer.Elements%2A> 和 <xref:System.Xml.Linq.XContainer.Descendants%2A>。</span><span class="sxs-lookup"><span data-stu-id="0feec-109">Their signatures are similar to <xref:System.Xml.Linq.XContainer.Elements%2A> and <xref:System.Xml.Linq.XContainer.Descendants%2A>.</span></span> <span data-ttu-id="0feec-110">以下是具有相似方法签名的完整方法列表：</span><span class="sxs-lookup"><span data-stu-id="0feec-110">The following is the complete list of methods that have similar method signatures:</span></span>  
+ <span data-ttu-id="9ee41-108">其他返回 <xref:System.Collections.Generic.IEnumerable%601> 集合的 <xref:System.Xml.Linq.XElement> 的方法都遵循相同的模式。</span><span class="sxs-lookup"><span data-stu-id="9ee41-108">The other methods that return <xref:System.Collections.Generic.IEnumerable%601> of <xref:System.Xml.Linq.XElement> collections follow the same pattern.</span></span> <span data-ttu-id="9ee41-109">它们的签名类似于 <xref:System.Xml.Linq.XContainer.Elements%2A> 和 <xref:System.Xml.Linq.XContainer.Descendants%2A>。</span><span class="sxs-lookup"><span data-stu-id="9ee41-109">Their signatures are similar to <xref:System.Xml.Linq.XContainer.Elements%2A> and <xref:System.Xml.Linq.XContainer.Descendants%2A>.</span></span> <span data-ttu-id="9ee41-110">以下是具有相似方法签名的完整方法列表：</span><span class="sxs-lookup"><span data-stu-id="9ee41-110">The following is the complete list of methods that have similar method signatures:</span></span>  
   
 - <xref:System.Xml.Linq.XNode.Ancestors%2A>  
   
@@ -49,10 +49,10 @@ ProductName:Baby Monitor
   
 - <xref:System.Xml.Linq.XElement.DescendantsAndSelf%2A>  
   
-## <a name="example"></a><span data-ttu-id="0feec-111">示例</span><span class="sxs-lookup"><span data-stu-id="0feec-111">Example</span></span>  
- <span data-ttu-id="0feec-112">下面的示例演示如何对命名空间中的 XML 进行同样的查询。</span><span class="sxs-lookup"><span data-stu-id="0feec-112">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="0feec-113">有关详细信息，请参阅[命名空间概述(LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="0feec-113">For more information, see [Namespaces Overview (LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md).</span></span>  
+## <a name="example"></a><span data-ttu-id="9ee41-111">示例</span><span class="sxs-lookup"><span data-stu-id="9ee41-111">Example</span></span>  
+ <span data-ttu-id="9ee41-112">下面的示例演示如何对命名空间中的 XML 进行同样的查询。</span><span class="sxs-lookup"><span data-stu-id="9ee41-112">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="9ee41-113">有关详细信息，请参阅[命名空间概述(LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="9ee41-113">For more information, see [Namespaces Overview (LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md).</span></span>  
   
- <span data-ttu-id="0feec-114">此示例使用下面的 XML 文档：[示例 XML 文件：命名空间中的典型采购单](./sample-xml-file-typical-purchase-order-in-a-namespace.md)。</span><span class="sxs-lookup"><span data-stu-id="0feec-114">This example uses the following XML document: [Sample XML File: Typical Purchase Order in a Namespace](./sample-xml-file-typical-purchase-order-in-a-namespace.md).</span></span>  
+ <span data-ttu-id="9ee41-114">此示例使用下面的 XML 文档：[示例 XML 文件：命名空间中的典型采购单](./sample-xml-file-typical-purchase-order-in-a-namespace.md)。</span><span class="sxs-lookup"><span data-stu-id="9ee41-114">This example uses the following XML document: [Sample XML File: Typical Purchase Order in a Namespace](./sample-xml-file-typical-purchase-order-in-a-namespace.md).</span></span>  
   
 ```csharp  
 XNamespace aw = "http://www.adventure-works.com";  
@@ -64,13 +64,13 @@ foreach (XElement prdName in items)
     Console.WriteLine(prdName.Name + ":" + (string)prdName);  
 ```  
   
- <span data-ttu-id="0feec-115">此代码生成以下输出：</span><span class="sxs-lookup"><span data-stu-id="0feec-115">This code produces the following output:</span></span>  
+ <span data-ttu-id="9ee41-115">此代码生成以下输出：</span><span class="sxs-lookup"><span data-stu-id="9ee41-115">This code produces the following output:</span></span>  
   
-```  
+```output  
 {http://www.adventure-works.com}ProductName:Lawnmower  
 {http://www.adventure-works.com}ProductName:Baby Monitor  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="0feec-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="0feec-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9ee41-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="9ee41-116">See also</span></span>
 
-- [<span data-ttu-id="0feec-117">LINQ to XML 轴 (C#)</span><span class="sxs-lookup"><span data-stu-id="0feec-117">LINQ to XML Axes (C#)</span></span>](./linq-to-xml-axes-overview.md)
+- [<span data-ttu-id="9ee41-117">LINQ to XML 轴 (C#)</span><span class="sxs-lookup"><span data-stu-id="9ee41-117">LINQ to XML Axes (C#)</span></span>](./linq-to-xml-axes-overview.md)

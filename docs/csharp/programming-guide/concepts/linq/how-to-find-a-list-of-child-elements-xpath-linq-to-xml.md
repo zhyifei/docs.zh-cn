@@ -2,22 +2,22 @@
 title: 如何：查找子元素列表 (XPath-LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 7c589dd8-f680-4cdb-9d6a-78d57e2555e8
-ms.openlocfilehash: 8a2ddc13a0a48fbe30ce629527149bacaaab3fd1
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 63b0fec504ff8424e9e96318c46191a150b72f46
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69593673"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253840"
 ---
-# <a name="how-to-find-a-list-of-child-elements-xpath-linq-to-xml-c"></a><span data-ttu-id="2488e-102">如何：查找子元素列表 (XPath-LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="2488e-102">How to: Find a List of Child Elements (XPath-LINQ to XML) (C#)</span></span>
-<span data-ttu-id="2488e-103">本主题将 XPath 子元素轴与 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Elements%2A> 轴进行比较。</span><span class="sxs-lookup"><span data-stu-id="2488e-103">This topic compares the XPath child elements axis to the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Elements%2A> axis.</span></span>  
+# <a name="how-to-find-a-list-of-child-elements-xpath-linq-to-xml-c"></a><span data-ttu-id="3df09-102">如何：查找子元素列表 (XPath-LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="3df09-102">How to: Find a List of Child Elements (XPath-LINQ to XML) (C#)</span></span>
+<span data-ttu-id="3df09-103">本主题将 XPath 子元素轴与 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Elements%2A> 轴进行比较。</span><span class="sxs-lookup"><span data-stu-id="3df09-103">This topic compares the XPath child elements axis to the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Elements%2A> axis.</span></span>  
   
- <span data-ttu-id="2488e-104">XPath 表达式为：`./*`</span><span class="sxs-lookup"><span data-stu-id="2488e-104">The XPath expression is: `./*`</span></span>  
+ <span data-ttu-id="3df09-104">XPath 表达式为：`./*`</span><span class="sxs-lookup"><span data-stu-id="3df09-104">The XPath expression is: `./*`</span></span>  
   
-## <a name="example"></a><span data-ttu-id="2488e-105">示例</span><span class="sxs-lookup"><span data-stu-id="2488e-105">Example</span></span>  
- <span data-ttu-id="2488e-106">本示例查找 `Address` 元素的所有子元素。</span><span class="sxs-lookup"><span data-stu-id="2488e-106">This example finds all of the child elements of the `Address` element.</span></span>  
+## <a name="example"></a><span data-ttu-id="3df09-105">示例</span><span class="sxs-lookup"><span data-stu-id="3df09-105">Example</span></span>  
+ <span data-ttu-id="3df09-106">本示例查找 `Address` 元素的所有子元素。</span><span class="sxs-lookup"><span data-stu-id="3df09-106">This example finds all of the child elements of the `Address` element.</span></span>  
   
- <span data-ttu-id="2488e-107">此示例使用下面的 XML 文档：[示例 XML 文件：多个采购订单 (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="2488e-107">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="3df09-107">此示例使用下面的 XML 文档：[示例 XML 文件：多个采购订单 (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="3df09-107">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span></span>  
   
 ```csharp  
 XDocument cpo = XDocument.Load("PurchaseOrders.xml");  
@@ -38,9 +38,9 @@ foreach (XElement el in list1)
     Console.WriteLine(el);  
 ```  
   
- <span data-ttu-id="2488e-108">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="2488e-108">This example produces the following output:</span></span>  
+ <span data-ttu-id="3df09-108">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="3df09-108">This example produces the following output:</span></span>  
   
-```  
+```output  
 Results are identical  
 <Name>Ellen Adams</Name>  
 <Street>123 Maple Street</Street>  
@@ -49,4 +49,3 @@ Results are identical
 <Zip>10999</Zip>  
 <Country>USA</Country>  
 ```  
-  

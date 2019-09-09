@@ -2,24 +2,24 @@
 title: 如何：读取和写入编码的文档 (C#)
 ms.date: 07/20/2015
 ms.assetid: 84f64e71-39a6-42c6-ad68-f052bb158a03
-ms.openlocfilehash: 6340443fddbedb4e27e1d1f8ab3e7c006a039f25
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: a611fe064401c0da80d76ef8c64cd58d9b0fb5d6
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66485151"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253470"
 ---
-# <a name="how-to-read-and-write-an-encoded-document-c"></a><span data-ttu-id="0d980-102">如何：读取和写入编码的文档 (C#)</span><span class="sxs-lookup"><span data-stu-id="0d980-102">How to: Read and Write an Encoded Document (C#)</span></span>
-<span data-ttu-id="0d980-103">若要创建编码的 XML 文档，请向 XML 树中添加一个 <xref:System.Xml.Linq.XDeclaration>，将编码设置为需要的代码页名称。</span><span class="sxs-lookup"><span data-stu-id="0d980-103">To create an encoded XML document, you add an <xref:System.Xml.Linq.XDeclaration> to the XML tree, setting the encoding to the desired code page name.</span></span>  
+# <a name="how-to-read-and-write-an-encoded-document-c"></a><span data-ttu-id="f60d7-102">如何：读取和写入编码的文档 (C#)</span><span class="sxs-lookup"><span data-stu-id="f60d7-102">How to: Read and Write an Encoded Document (C#)</span></span>
+<span data-ttu-id="f60d7-103">若要创建编码的 XML 文档，请向 XML 树中添加一个 <xref:System.Xml.Linq.XDeclaration>，将编码设置为需要的代码页名称。</span><span class="sxs-lookup"><span data-stu-id="f60d7-103">To create an encoded XML document, you add an <xref:System.Xml.Linq.XDeclaration> to the XML tree, setting the encoding to the desired code page name.</span></span>  
   
- <span data-ttu-id="0d980-104">由 <xref:System.Text.Encoding.WebName%2A> 返回的任何值都是有效值。</span><span class="sxs-lookup"><span data-stu-id="0d980-104">Any value returned by <xref:System.Text.Encoding.WebName%2A> is a valid value.</span></span>  
+ <span data-ttu-id="f60d7-104">由 <xref:System.Text.Encoding.WebName%2A> 返回的任何值都是有效值。</span><span class="sxs-lookup"><span data-stu-id="f60d7-104">Any value returned by <xref:System.Text.Encoding.WebName%2A> is a valid value.</span></span>  
   
- <span data-ttu-id="0d980-105">如果您读取编码的文档，则要将 <xref:System.Xml.Linq.XDeclaration.Encoding%2A> 属性设置为该代码页名称。</span><span class="sxs-lookup"><span data-stu-id="0d980-105">If you read an encoded document, the <xref:System.Xml.Linq.XDeclaration.Encoding%2A> property will be set to the code page name.</span></span>  
+ <span data-ttu-id="f60d7-105">如果您读取编码的文档，则要将 <xref:System.Xml.Linq.XDeclaration.Encoding%2A> 属性设置为该代码页名称。</span><span class="sxs-lookup"><span data-stu-id="f60d7-105">If you read an encoded document, the <xref:System.Xml.Linq.XDeclaration.Encoding%2A> property will be set to the code page name.</span></span>  
   
- <span data-ttu-id="0d980-106">如果将 <xref:System.Xml.Linq.XDeclaration.Encoding%2A> 设置为一个有效的代码页名称，则 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 将用指定的编码进行序列化。</span><span class="sxs-lookup"><span data-stu-id="0d980-106">If you set <xref:System.Xml.Linq.XDeclaration.Encoding%2A> to a valid code page name, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] will serialize with the specified encoding.</span></span>  
+ <span data-ttu-id="f60d7-106">如果将 <xref:System.Xml.Linq.XDeclaration.Encoding%2A> 设置为一个有效的代码页名称，则 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 将用指定的编码进行序列化。</span><span class="sxs-lookup"><span data-stu-id="f60d7-106">If you set <xref:System.Xml.Linq.XDeclaration.Encoding%2A> to a valid code page name, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] will serialize with the specified encoding.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="0d980-107">示例</span><span class="sxs-lookup"><span data-stu-id="0d980-107">Example</span></span>  
- <span data-ttu-id="0d980-108">下面的示例创建两个文档，一个文档使用 utf-8 编码，另一个使用 utf-16 编码。</span><span class="sxs-lookup"><span data-stu-id="0d980-108">The following example creates two documents, one with utf-8 encoding, and one with utf-16 encoding.</span></span> <span data-ttu-id="0d980-109">然后，该示例加载这两个文档并将编码输出到控制台。</span><span class="sxs-lookup"><span data-stu-id="0d980-109">It then loads the documents and prints the encoding to the console.</span></span>  
+## <a name="example"></a><span data-ttu-id="f60d7-107">示例</span><span class="sxs-lookup"><span data-stu-id="f60d7-107">Example</span></span>  
+ <span data-ttu-id="f60d7-108">下面的示例创建两个文档，一个文档使用 utf-8 编码，另一个使用 utf-16 编码。</span><span class="sxs-lookup"><span data-stu-id="f60d7-108">The following example creates two documents, one with utf-8 encoding, and one with utf-16 encoding.</span></span> <span data-ttu-id="f60d7-109">然后，该示例加载这两个文档并将编码输出到控制台。</span><span class="sxs-lookup"><span data-stu-id="f60d7-109">It then loads the documents and prints the encoding to the console.</span></span>  
   
 ```csharp  
 Console.WriteLine("Creating a document with utf-8 encoding");  
@@ -54,9 +54,9 @@ Console.WriteLine();
 Console.WriteLine("Encoding of loaded document is:{0}", newDoc16.Declaration.Encoding);  
 ```  
   
- <span data-ttu-id="0d980-110">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="0d980-110">This example produces the following output:</span></span>  
+ <span data-ttu-id="f60d7-110">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="f60d7-110">This example produces the following output:</span></span>  
   
-```  
+```output  
 Creating a document with utf-8 encoding  
 Encoding is:utf-8  
   
@@ -76,6 +76,6 @@ Encoded document:
 Encoding of loaded document is:utf-16  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="0d980-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="0d980-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f60d7-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="f60d7-111">See also</span></span>
 
 - <xref:System.Xml.Linq.XDeclaration.Encoding%2A?displayProperty=nameWithType>

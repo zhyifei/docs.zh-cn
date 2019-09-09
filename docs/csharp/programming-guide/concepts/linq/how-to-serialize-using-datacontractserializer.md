@@ -2,18 +2,18 @@
 title: 如何：使用 DataContractSerializer 进行序列化 (C#)
 ms.date: 07/20/2015
 ms.assetid: 3320ecbf-cdbe-480e-979c-2c14bbef9988
-ms.openlocfilehash: 7175b5051d318e7f214b4c2f7d96d44acf7a0a48
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 2b4800e2c6d210d62ab3093b673898a147c1f92d
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66484921"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253341"
 ---
-# <a name="how-to-serialize-using-datacontractserializer-c"></a><span data-ttu-id="28c55-102">如何：使用 DataContractSerializer 进行序列化 (C#)</span><span class="sxs-lookup"><span data-stu-id="28c55-102">How to: Serialize Using DataContractSerializer (C#)</span></span>
-<span data-ttu-id="28c55-103">本主题显示一个使用 <xref:System.Runtime.Serialization.DataContractSerializer> 进行序列化和反序列化的示例。</span><span class="sxs-lookup"><span data-stu-id="28c55-103">This topic shows an example that serializes and deserializes using <xref:System.Runtime.Serialization.DataContractSerializer>.</span></span>  
+# <a name="how-to-serialize-using-datacontractserializer-c"></a><span data-ttu-id="ec172-102">如何：使用 DataContractSerializer 进行序列化 (C#)</span><span class="sxs-lookup"><span data-stu-id="ec172-102">How to: Serialize Using DataContractSerializer (C#)</span></span>
+<span data-ttu-id="ec172-103">本主题显示一个使用 <xref:System.Runtime.Serialization.DataContractSerializer> 进行序列化和反序列化的示例。</span><span class="sxs-lookup"><span data-stu-id="ec172-103">This topic shows an example that serializes and deserializes using <xref:System.Runtime.Serialization.DataContractSerializer>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="28c55-104">示例</span><span class="sxs-lookup"><span data-stu-id="28c55-104">Example</span></span>  
- <span data-ttu-id="28c55-105">下面的示例创建多个包含 <xref:System.Xml.Linq.XElement> 对象的对象。</span><span class="sxs-lookup"><span data-stu-id="28c55-105">The following example creates a number of objects that contain <xref:System.Xml.Linq.XElement> objects.</span></span> <span data-ttu-id="28c55-106">然后将它们序列化为文本文件，接着从文本文件对它们进行反序列化。</span><span class="sxs-lookup"><span data-stu-id="28c55-106">It then serializes them to text files, and then deserializes them from the text files.</span></span>  
+## <a name="example"></a><span data-ttu-id="ec172-104">示例</span><span class="sxs-lookup"><span data-stu-id="ec172-104">Example</span></span>  
+ <span data-ttu-id="ec172-105">下面的示例创建多个包含 <xref:System.Xml.Linq.XElement> 对象的对象。</span><span class="sxs-lookup"><span data-stu-id="ec172-105">The following example creates a number of objects that contain <xref:System.Xml.Linq.XElement> objects.</span></span> <span data-ttu-id="ec172-106">然后将它们序列化为文本文件，接着从文本文件对它们进行反序列化。</span><span class="sxs-lookup"><span data-stu-id="ec172-106">It then serializes them to text files, and then deserializes them from the text files.</span></span>  
   
 ```csharp  
 using System;  
@@ -80,9 +80,9 @@ public class XElementNullContainer
 }  
 ```  
   
- <span data-ttu-id="28c55-107">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="28c55-107">This example produces the following output:</span></span>  
+ <span data-ttu-id="ec172-107">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="ec172-107">This example produces the following output:</span></span>  
   
-```  
+```output  
 Testing for type: System.Xml.Linq.XElement  
   Deserialized type: System.Xml.Linq.XElement  
 Testing for type: XElementContainer  
@@ -90,4 +90,3 @@ Testing for type: XElementContainer
 Testing for type: XElementNullContainer  
   Deserialized type: XElementNullContainer  
 ```  
-  

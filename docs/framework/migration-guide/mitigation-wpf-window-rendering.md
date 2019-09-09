@@ -4,28 +4,28 @@ ms.date: 03/30/2017
 ms.assetid: 28ed6bf8-141b-4b73-a4e3-44a99fae5084
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ecf951ecb955a6597757387de1119267ebc58fdc
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 13091c06561da24d2fc03f810fd8b8687b21d9a4
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301448"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70789788"
 ---
-# <a name="mitigation-wpf-window-rendering"></a><span data-ttu-id="e8984-102">缓解：WPF 窗口呈现</span><span class="sxs-lookup"><span data-stu-id="e8984-102">Mitigation: WPF Window Rendering</span></span>
+# <a name="mitigation-wpf-window-rendering"></a><span data-ttu-id="23691-102">缓解：WPF 窗口呈现</span><span class="sxs-lookup"><span data-stu-id="23691-102">Mitigation: WPF Window Rendering</span></span>
 
-<span data-ttu-id="e8984-103">在 Windows 8 及更高版本上运行的 .NET Framework 4.6 中，当一个窗口超出多监视器方案中的单个显示屏时，会不经剪辑就呈现整个窗口。</span><span class="sxs-lookup"><span data-stu-id="e8984-103">In the .NET Framework 4.6 running on Windows 8 and above, the entire window is rendered without clipping when it extends outside of single display in a multi-monitor scenario.</span></span>
+<span data-ttu-id="23691-103">在 Windows 8 及更高版本上运行的 .NET Framework 4.6 中，当一个窗口超出多监视器方案中的单个显示屏时，会不经剪辑就呈现整个窗口。</span><span class="sxs-lookup"><span data-stu-id="23691-103">In the .NET Framework 4.6 running on Windows 8 and above, the entire window is rendered without clipping when it extends outside of single display in a multi-monitor scenario.</span></span>
 
-## <a name="impact"></a><span data-ttu-id="e8984-104">影响</span><span class="sxs-lookup"><span data-stu-id="e8984-104">Impact</span></span>
+## <a name="impact"></a><span data-ttu-id="23691-104">影响</span><span class="sxs-lookup"><span data-stu-id="23691-104">Impact</span></span>
 
-<span data-ttu-id="e8984-105">通常，跨多个监视器不经剪辑呈现整个窗口是预期行为。</span><span class="sxs-lookup"><span data-stu-id="e8984-105">In general, rendering an entire window across multiple monitors without clipping is the expected behavior.</span></span> <span data-ttu-id="e8984-106">但是，在 Windows 7 和更早版本上，WPF 窗口在超出单个显示屏时将被剪辑，因为在第二个监视器上呈现窗口的一部分具有显著的性能影响。</span><span class="sxs-lookup"><span data-stu-id="e8984-106">However, on Windows 7 and earlier versions, WPF windows are clipped when they extend beyond a single display because rendering a portion of the window on the second monitor has a significant performance impact.</span></span>
+<span data-ttu-id="23691-105">通常，跨多个监视器不经剪辑呈现整个窗口是预期行为。</span><span class="sxs-lookup"><span data-stu-id="23691-105">In general, rendering an entire window across multiple monitors without clipping is the expected behavior.</span></span> <span data-ttu-id="23691-106">但是，在 Windows 7 和更早版本上，WPF 窗口在超出单个显示屏时将被剪辑，因为在第二个监视器上呈现窗口的一部分具有显著的性能影响。</span><span class="sxs-lookup"><span data-stu-id="23691-106">However, on Windows 7 and earlier versions, WPF windows are clipped when they extend beyond a single display because rendering a portion of the window on the second monitor has a significant performance impact.</span></span>
 
-<span data-ttu-id="e8984-107">在 Windows 8 和更高版本上跨监视器呈现 WPF 窗口的具体影响无法精确计量，因为它取决于大量因素。</span><span class="sxs-lookup"><span data-stu-id="e8984-107">The precise impact of rendering WPF windows across monitors on Windows 8 and above is not precisely quantifiable since it depends on a large number of factors.</span></span> <span data-ttu-id="e8984-108">在某些情况下，它仍可能会对性能产生不良影响，特别是对于运行图形密集型应用程序和具有跨监视器窗口的用户。</span><span class="sxs-lookup"><span data-stu-id="e8984-108">In some cases, it may still produce an undesirable impact on performance, particularly for users who run graphics-intensive applications and have windows straddling monitors.</span></span> <span data-ttu-id="e8984-109">在其他情况下，你可能只是希望各 .NET Framework 版本有一致的行为。</span><span class="sxs-lookup"><span data-stu-id="e8984-109">In other cases, you may simply want a consistent behavior across .NET Framework versions.</span></span>
+<span data-ttu-id="23691-107">在 Windows 8 和更高版本上跨监视器呈现 WPF 窗口的具体影响无法精确计量，因为它取决于大量因素。</span><span class="sxs-lookup"><span data-stu-id="23691-107">The precise impact of rendering WPF windows across monitors on Windows 8 and above is not precisely quantifiable since it depends on a large number of factors.</span></span> <span data-ttu-id="23691-108">在某些情况下，它仍可能会对性能产生不良影响，特别是对于运行图形密集型应用程序和具有跨监视器窗口的用户。</span><span class="sxs-lookup"><span data-stu-id="23691-108">In some cases, it may still produce an undesirable impact on performance, particularly for users who run graphics-intensive applications and have windows straddling monitors.</span></span> <span data-ttu-id="23691-109">在其他情况下，你可能只是希望各 .NET Framework 版本有一致的行为。</span><span class="sxs-lookup"><span data-stu-id="23691-109">In other cases, you may simply want a consistent behavior across .NET Framework versions.</span></span>
 
-## <a name="mitigation"></a><span data-ttu-id="e8984-110">缓解</span><span class="sxs-lookup"><span data-stu-id="e8984-110">Mitigation</span></span>
+## <a name="mitigation"></a><span data-ttu-id="23691-110">缓解</span><span class="sxs-lookup"><span data-stu-id="23691-110">Mitigation</span></span>
 
-<span data-ttu-id="e8984-111">当窗口超出单个显示屏时，你可以禁用此更改并恢复到以前的剪辑 WPF 窗口的行为。</span><span class="sxs-lookup"><span data-stu-id="e8984-111">You can disable this change and revert to the previous behavior of clipping a WPF window when it extends beyond a single display.</span></span> <span data-ttu-id="e8984-112">有两种方法可以实现此目的：</span><span class="sxs-lookup"><span data-stu-id="e8984-112">There are two ways to do this:</span></span>
+<span data-ttu-id="23691-111">当窗口超出单个显示屏时，你可以禁用此更改并恢复到以前的剪辑 WPF 窗口的行为。</span><span class="sxs-lookup"><span data-stu-id="23691-111">You can disable this change and revert to the previous behavior of clipping a WPF window when it extends beyond a single display.</span></span> <span data-ttu-id="23691-112">有两种方法可以实现此目的：</span><span class="sxs-lookup"><span data-stu-id="23691-112">There are two ways to do this:</span></span>
 
-- <span data-ttu-id="e8984-113">通过将 `<EnableMultiMonitorDisplayClipping>` 元素添加到应用程序配置文件的 `<appSettings>` 部分，你可以对在 Windows 8 或更高版本上运行的应用禁用或启用此行为。</span><span class="sxs-lookup"><span data-stu-id="e8984-113">By adding the `<EnableMultiMonitorDisplayClipping>` element to the `<appSettings>` section of your application configuration file, you can disable or enable this behavior on apps running on Windows 8 or later.</span></span> <span data-ttu-id="e8984-114">例如，下面的配置部分禁用不经剪辑的呈现：</span><span class="sxs-lookup"><span data-stu-id="e8984-114">For example, the following configuration section disables rendering without clipping:</span></span>
+- <span data-ttu-id="23691-113">通过将 `<EnableMultiMonitorDisplayClipping>` 元素添加到应用程序配置文件的 `<appSettings>` 部分，你可以对在 Windows 8 或更高版本上运行的应用禁用或启用此行为。</span><span class="sxs-lookup"><span data-stu-id="23691-113">By adding the `<EnableMultiMonitorDisplayClipping>` element to the `<appSettings>` section of your application configuration file, you can disable or enable this behavior on apps running on Windows 8 or later.</span></span> <span data-ttu-id="23691-114">例如，下面的配置部分禁用不经剪辑的呈现：</span><span class="sxs-lookup"><span data-stu-id="23691-114">For example, the following configuration section disables rendering without clipping:</span></span>
 
   ```xml
   <appSettings>
@@ -33,14 +33,14 @@ ms.locfileid: "66301448"
     </appSettings>
   ```
 
-  <span data-ttu-id="e8984-115">`<EnableMultiMonitorDisplayClipping>` 配置设置可以有两个值之一：</span><span class="sxs-lookup"><span data-stu-id="e8984-115">The `<EnableMultiMonitorDisplayClipping>` configuration setting can have either of two values:</span></span>
+  <span data-ttu-id="23691-115">`<EnableMultiMonitorDisplayClipping>` 配置设置可以有两个值之一：</span><span class="sxs-lookup"><span data-stu-id="23691-115">The `<EnableMultiMonitorDisplayClipping>` configuration setting can have either of two values:</span></span>
 
-  - <span data-ttu-id="e8984-116">`true`，启用在呈现期间监视边界的窗口剪辑。</span><span class="sxs-lookup"><span data-stu-id="e8984-116">`true`, to enable clipping of windows to monitor bounds during rendering.</span></span>
+  - <span data-ttu-id="23691-116">`true`，启用在呈现期间监视边界的窗口剪辑。</span><span class="sxs-lookup"><span data-stu-id="23691-116">`true`, to enable clipping of windows to monitor bounds during rendering.</span></span>
 
-  - <span data-ttu-id="e8984-117">`false`，禁用在呈现期间监视边界的窗口剪辑。</span><span class="sxs-lookup"><span data-stu-id="e8984-117">`false`, to disable clipping of windows to monitor bounds during rendering.</span></span>
+  - <span data-ttu-id="23691-117">`false`，禁用在呈现期间监视边界的窗口剪辑。</span><span class="sxs-lookup"><span data-stu-id="23691-117">`false`, to disable clipping of windows to monitor bounds during rendering.</span></span>
 
-- <span data-ttu-id="e8984-118">通过在应用启动时将 <xref:System.Windows.CoreCompatibilityPreferences.EnableMultiMonitorDisplayClipping%2A> 属性设置为 `true`。</span><span class="sxs-lookup"><span data-stu-id="e8984-118">By setting the <xref:System.Windows.CoreCompatibilityPreferences.EnableMultiMonitorDisplayClipping%2A> property to `true` at app startup.</span></span>
+- <span data-ttu-id="23691-118">通过在应用启动时将 <xref:System.Windows.CoreCompatibilityPreferences.EnableMultiMonitorDisplayClipping%2A> 属性设置为 `true`。</span><span class="sxs-lookup"><span data-stu-id="23691-118">By setting the <xref:System.Windows.CoreCompatibilityPreferences.EnableMultiMonitorDisplayClipping%2A> property to `true` at app startup.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="e8984-119">请参阅</span><span class="sxs-lookup"><span data-stu-id="e8984-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="23691-119">请参阅</span><span class="sxs-lookup"><span data-stu-id="23691-119">See also</span></span>
 
-- [<span data-ttu-id="e8984-120">运行时更改</span><span class="sxs-lookup"><span data-stu-id="e8984-120">Runtime Changes</span></span>](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)
+- [<span data-ttu-id="23691-120">运行时更改</span><span class="sxs-lookup"><span data-stu-id="23691-120">Runtime Changes</span></span>](runtime-changes-in-the-net-framework-4-6.md)
