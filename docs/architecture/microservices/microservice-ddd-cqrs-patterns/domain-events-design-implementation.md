@@ -365,16 +365,16 @@ public class ValidateOrAddBuyerAggregateWhenOrderStartedDomainEventHandler
 - **Udi Dahan.How to create fully encapsulated Domain Models** （如何创建完全封装的域模型） \
   <http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/>
 
-- **Udi Dahan.Domain Events – Take 2** \（域事件 – 搞定两个问题）
+- **Udi Dahan.Domain Events – Take 2** （域事件 – 搞定两个问题） \
   <http://udidahan.com/2008/08/25/domain-events-take-2/>
 
-- **Udi Dahan.Domain Events – Salvation** \（域事件 – 救助）
+- **Udi Dahan.Domain Events – Salvation** （域事件 – 救助） \
   <http://udidahan.com/2009/06/14/domain-events-salvation/>
 
 - **Jan Kronquist。Don't publish Domain Events, return them!** （不要发布域事件，返回它们！） \
   <https://blog.jayway.com/2013/06/20/dont-publish-domain-events-return-them/>
 
-- **Cesar de la Torre。Domain Events vs.Integration Events in DDD and microservices architectures** \（DDD 和微服务体系结构中的域事件和集成事件）
+- **Cesar de la Torre。Domain Events vs.Integration Events in DDD and microservices architectures** （DDD 和微服务体系结构中的域事件和集成事件） \
   <https://blogs.msdn.microsoft.com/cesardelatorre/2017/02/07/domain-events-vs-integration-events-in-domain-driven-design-and-microservices-architectures/>
 
 >[!div class="step-by-step"]
