@@ -9,29 +9,29 @@ helpviewer_keywords:
 ms.assetid: 5433b1f8-b0e5-40c9-a49a-0e5bd213363d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1e1583ba8ecfa461958f96bea6cb2b9d3313349b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1b1a1607e96ad9953a409d79fd265ced994cece2
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69967288"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854130"
 ---
-# <a name="marshaling-mda"></a><span data-ttu-id="1fceb-102">封送 MDA</span><span class="sxs-lookup"><span data-stu-id="1fceb-102">marshaling MDA</span></span>
-<span data-ttu-id="1fceb-103">当 CLR 为方法参数或结构的字段设置封送处理信息时，将激活 `marshaling` 托管调试助手 (MDA)。</span><span class="sxs-lookup"><span data-stu-id="1fceb-103">The `marshaling` managed debugging assistant (MDA) is activated when the CLR sets up marshaling information for a method parameter or a field of a structure.</span></span> <span data-ttu-id="1fceb-104">此 MDA 不适合 JIT 编译的程序集。</span><span class="sxs-lookup"><span data-stu-id="1fceb-104">This MDA does not work for JIT-compiled assemblies.</span></span>  
+# <a name="marshaling-mda"></a><span data-ttu-id="abc22-102">封送 MDA</span><span class="sxs-lookup"><span data-stu-id="abc22-102">marshaling MDA</span></span>
+<span data-ttu-id="abc22-103">当 CLR 为方法参数或结构的字段设置封送处理信息时，将激活 `marshaling` 托管调试助手 (MDA)。</span><span class="sxs-lookup"><span data-stu-id="abc22-103">The `marshaling` managed debugging assistant (MDA) is activated when the CLR sets up marshaling information for a method parameter or a field of a structure.</span></span> <span data-ttu-id="abc22-104">此 MDA 不适合 JIT 编译的程序集。</span><span class="sxs-lookup"><span data-stu-id="abc22-104">This MDA does not work for JIT-compiled assemblies.</span></span>  
   
-## <a name="effect-on-the-runtime"></a><span data-ttu-id="1fceb-105">对运行时的影响</span><span class="sxs-lookup"><span data-stu-id="1fceb-105">Effect on the Runtime</span></span>  
- <span data-ttu-id="1fceb-106">此 MDA 对 CLR 无任何影响。</span><span class="sxs-lookup"><span data-stu-id="1fceb-106">This MDA has no effect on the CLR.</span></span>  
+## <a name="effect-on-the-runtime"></a><span data-ttu-id="abc22-105">对运行时的影响</span><span class="sxs-lookup"><span data-stu-id="abc22-105">Effect on the Runtime</span></span>  
+ <span data-ttu-id="abc22-106">此 MDA 对 CLR 无任何影响。</span><span class="sxs-lookup"><span data-stu-id="abc22-106">This MDA has no effect on the CLR.</span></span>  
   
-## <a name="output"></a><span data-ttu-id="1fceb-107">Output</span><span class="sxs-lookup"><span data-stu-id="1fceb-107">Output</span></span>  
- <span data-ttu-id="1fceb-108">此 MDA 显示托管和非托管上下文中参数或字段的类型，以及包含此类型的结构或方法。</span><span class="sxs-lookup"><span data-stu-id="1fceb-108">The MDA displays the type of the parameter or field in the managed and unmanaged contexts, and the structure or method containing the type.</span></span>  <span data-ttu-id="1fceb-109">以下是字段输出的示例：</span><span class="sxs-lookup"><span data-stu-id="1fceb-109">The following is an example of the output for a field:</span></span>  
+## <a name="output"></a><span data-ttu-id="abc22-107">Output</span><span class="sxs-lookup"><span data-stu-id="abc22-107">Output</span></span>  
+ <span data-ttu-id="abc22-108">此 MDA 显示托管和非托管上下文中参数或字段的类型，以及包含此类型的结构或方法。</span><span class="sxs-lookup"><span data-stu-id="abc22-108">The MDA displays the type of the parameter or field in the managed and unmanaged contexts, and the structure or method containing the type.</span></span>  <span data-ttu-id="abc22-109">以下是字段输出的示例：</span><span class="sxs-lookup"><span data-stu-id="abc22-109">The following is an example of the output for a field:</span></span>  
   
-```  
+```output
 Marshaling from 'Char' to 'ANSI char'  
 name="assembly!Namespace.Class::myChar  
 ```  
   
-## <a name="configuration"></a><span data-ttu-id="1fceb-110">配置</span><span class="sxs-lookup"><span data-stu-id="1fceb-110">Configuration</span></span>  
- <span data-ttu-id="1fceb-111">MDA 配置允许你基于所涉及的字段或方法名称，筛选报告的封送处理信息。</span><span class="sxs-lookup"><span data-stu-id="1fceb-111">The MDA configuration allows you to filter the reported marshaling information based on the involved field or method names.</span></span>  <span data-ttu-id="1fceb-112">以下示例演示如何使用 `methodFilter``fieldFilter` 和 `match` 元素指定筛选器。</span><span class="sxs-lookup"><span data-stu-id="1fceb-112">The following example shows the use of the `methodFilter`, `fieldFilter`, and `match` elements to specify filters.</span></span>  <span data-ttu-id="1fceb-113">将属性设置为星号 (\*) 可匹配所有内容。 `name`</span><span class="sxs-lookup"><span data-stu-id="1fceb-113">Setting the `name` attribute to an asterisk (\*) will match everything.</span></span>  
+## <a name="configuration"></a><span data-ttu-id="abc22-110">配置</span><span class="sxs-lookup"><span data-stu-id="abc22-110">Configuration</span></span>  
+ <span data-ttu-id="abc22-111">MDA 配置允许你基于所涉及的字段或方法名称，筛选报告的封送处理信息。</span><span class="sxs-lookup"><span data-stu-id="abc22-111">The MDA configuration allows you to filter the reported marshaling information based on the involved field or method names.</span></span>  <span data-ttu-id="abc22-112">以下示例演示如何使用 `methodFilter``fieldFilter` 和 `match` 元素指定筛选器。</span><span class="sxs-lookup"><span data-stu-id="abc22-112">The following example shows the use of the `methodFilter`, `fieldFilter`, and `match` elements to specify filters.</span></span>  <span data-ttu-id="abc22-113">将属性设置为星号（\*）可匹配所有内容。 `name`</span><span class="sxs-lookup"><span data-stu-id="abc22-113">Setting the `name` attribute to an asterisk (\*) will match everything.</span></span>  
   
 ```xml  
 <mdaConfig>  
@@ -50,8 +50,8 @@ name="assembly!Namespace.Class::myChar
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="1fceb-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="1fceb-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="abc22-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="abc22-114">See also</span></span>
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [<span data-ttu-id="1fceb-115">使用托管调试助手诊断错误</span><span class="sxs-lookup"><span data-stu-id="1fceb-115">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [<span data-ttu-id="1fceb-116">互操作封送处理</span><span class="sxs-lookup"><span data-stu-id="1fceb-116">Interop Marshaling</span></span>](../../../docs/framework/interop/interop-marshaling.md)
+- [<span data-ttu-id="abc22-115">使用托管调试助手诊断错误</span><span class="sxs-lookup"><span data-stu-id="abc22-115">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [<span data-ttu-id="abc22-116">互操作封送处理</span><span class="sxs-lookup"><span data-stu-id="abc22-116">Interop Marshaling</span></span>](../../../docs/framework/interop/interop-marshaling.md)
