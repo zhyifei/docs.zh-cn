@@ -91,19 +91,19 @@ public void SetAddress(string line1, string line2,
 - **Rick Anderson。添加验证** \
   <https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation>
 
-- **Martin Fowler。Replacing Throwing Exceptions with Notification in Validations** \（在验证中将引发异常替换为通知）
+- **Martin Fowler。Replacing Throwing Exceptions with Notification in Validations** \（在验证中将引发异常替换为通知）\
   <https://martinfowler.com/articles/replaceThrowWithNotification.html>
 
-- **Specification and Notification Patterns** \（规范和通知模式）
+- **Specification and Notification Patterns** \（规范和通知模式）\
   <https://www.codeproject.com/Tips/790758/Specification-and-Notification-Patterns>
 
-- **Lev Gorodinski.Validation in Domain-Driven Design (DDD)**  \（域驱动设计 (DDD) 中的验证）
+- **Lev Gorodinski.Validation in Domain-Driven Design (DDD)**  \（域驱动设计 (DDD) 中的验证）\
   <http://gorodinski.com/blog/2012/05/19/validation-in-domain-driven-design-ddd/>
 
-- **Colin Jack。Domain Model Validation** \（域模型验证）
+- **Colin Jack。Domain Model Validation** \（域模型验证）\
   <https://colinjack.blogspot.com/2008/03/domain-model-validation.html>
 
-- **Jimmy Bogard。Validation in a DDD world** \（DDD 中的验证）
+- **Jimmy Bogard。Validation in a DDD world** \（DDD 中的验证）\
   <https://lostechies.com/jimmybogard/2009/02/15/validation-in-a-ddd-world/>
 
 > [!div class="step-by-step"]
