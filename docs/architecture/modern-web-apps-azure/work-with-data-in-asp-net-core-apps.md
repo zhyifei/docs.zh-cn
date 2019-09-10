@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Azure 构建新式 Web 应用 | 在 ASP.NET
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: e4303a3046981756cae6951483c100b37425dc80
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 3b251003a2da998936a11acff3cc2975c4b78838
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105454"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373999"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>在 ASP.NET Core 应用中使用数据
 
@@ -76,9 +76,9 @@ services.AddDbContext<CatalogContext>(options =>
 
 可通过配置记录器并确保其级别至少设置为“信息”，查看 EF Core 要执行的查询，如图 8-1 所示。
 
-![](./media/image8-1.png)
+![将 EF Core 查询记录到控制台](./media/image8-1.png)
 
-图 8-1 将 EF Core 查询记录到控制台
+**图 8-1**。 将 EF Core 查询记录到控制台
 
 ### <a name="fetching-and-storing-data"></a>提取和存储数据
 

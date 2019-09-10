@@ -4,12 +4,12 @@ description: 关于在 .NET 中生成服务器应用时应考虑使用哪种 .NE
 author: cartermp
 ms.author: mairaw
 ms.date: 06/19/2018
-ms.openlocfilehash: 520920566e8a55eef2d506dc4a8085f57ef1c0bb
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: e5df362231b0786a58a4c3c9ae8f5a167930a12e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70107279"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799255"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>为服务器应用选择 .NET Core 或 .NET Framework
 
@@ -28,7 +28,7 @@ ms.locfileid: "70107279"
 - 应用当前使用 .NET Framework（建议扩展而不是迁移）。
 - 应用使用不可用于 .NET Core 的第三方 .NET 库或 NuGet 包。
 - 应用使用不可用于 .NET Core 的 .NET 技术。
-- 应用使用不支持 .NET Core 的平台。
+- 应用使用不支持 .NET Core 的平台。 Windows、macOS 和 Linux 支持 .NET Core。
 
 ## <a name="when-to-choose-net-core"></a>选择 .NET Core 的情形
 
@@ -108,6 +108,6 @@ Docker 容器可托管在自己的 Linux 或 Windows 基础结构中，或托管
 - [目标框架](frameworks.md)
 - [.NET Core 指南](../core/index.md)
 - [从 .NET Framework 移植到 .NET Core](../core/porting/index.md)
-- [.NET 和 Docker 简介](../core/docker/intro-net-docker.md)
+- [.NET 和 Docker 简介](../core/docker/introduction.md)
 - [.NET 组件概述](components.md)
 - [.NET 微服务 - 适用于容器化 .NET 应用程序的体系结构](../architecture/microservices/index.md)

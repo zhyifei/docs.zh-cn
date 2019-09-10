@@ -18,12 +18,12 @@ helpviewer_keywords:
 - format specifiers, standard numeric format strings
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 06a6403d12645f96e39407f38d944f2e7682d65d
-ms.sourcegitcommit: 77e33b682db39955e331b8e8eda4ef1925a24e78
+ms.openlocfilehash: c99e3bc59266846fcd5c5774b6050b4e075cbc3f
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70133841"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374499"
 ---
 # <a name="standard-numeric-format-strings"></a>标准数字格式字符串
 
@@ -55,7 +55,7 @@ ms.locfileid: "70133841"
 
 |格式说明符|name|说明|示例|
 |----------------------|----------|-----------------|--------------|
-|“C”或“c”|货币|结果:货币值。<br /><br /> 受以下类型支持：所有数值类型。<br /><br /> 精度说明符：十进制小数位数。<br /><br /> 默认值精度说明符：由 <xref:System.Globalization.NumberFormatInfo.CurrencyDecimalDigits%2A?displayProperty=nameWithType> 定义。<br /><br /> 更多信息：[货币（“C”）格式说明符](#CFormatString)。|123.456 ("C", en-US) -> `$123.46`<br /><br /> 123.456 ("C", fr-FR) -> 123,46 €<br /><br /> 123.456 ("C", ja-JP) -> ¥123<br /><br /> -123.456 ("C3", en-US) -> `($123.456)`<br /><br /> -123.456 ("C3", fr-FR) -> -123,456 €<br /><br /> -123.456 ("C3", ja-JP) -> -¥123.456|
+|“C”或“c”|货币|结果:货币值。<br /><br /> 受以下类型支持：所有数值类型。<br /><br /> 精度说明符：十进制小数位数。<br /><br /> 默认值精度说明符：由 <xref:System.Globalization.NumberFormatInfo.CurrencyDecimalDigits%2A?displayProperty=nameWithType> 定义。<br /><br /> 更多信息：[货币（“C”）格式说明符](#CFormatString)。|123.456 ("C", en-US) -> \\$123.46<br /><br /> 123.456 ("C", fr-FR) -> 123,46 €<br /><br /> 123.456 ("C", ja-JP) -> ¥123<br /><br /> -123.456 ("C3", en-US) -> (\\$123.456)<br /><br /> -123.456 ("C3", fr-FR) -> -123,456 €<br /><br /> -123.456 ("C3", ja-JP) -> -¥123.456|
 |“D”或“d”|十进制|结果:整型数字，负号可选。<br /><br /> 受以下类型支持：仅限整型类型。<br /><br /> 精度说明符：数字位数下限。<br /><br /> 默认值精度说明符：所需数字位数下限。<br /><br /> 更多信息：[十进制（“D”）格式说明符](#DFormatString)。|1234 ("D") -> 1234<br /><br /> -1234 ("D6") -> -001234|
 |“E”或“e”|指数（科学型）|结果:指数表示法。<br /><br /> 受以下类型支持：所有数值类型。<br /><br /> 精度说明符：十进制小数位数。<br /><br /> 默认值精度说明符：6.<br /><br /> 更多信息：[指数（“E”）格式说明符](#EFormatString)。|1052.0329112756 ("E", en-US) -> 1.052033E+003<br /><br /> 1052.0329112756 ("e", fr-FR) -> 1,052033e+003<br /><br /> -1052.0329112756 ("e2", en-US) -> -1.05e+003<br /><br /> -1052.0329112756 ("E2", fr-FR) -> -1,05E+003|
 |“F”或“f”|定点|结果:整数和十进制小数，负号可选。<br /><br /> 受以下类型支持：所有数值类型。<br /><br /> 精度说明符：十进制小数位数。<br /><br /> 默认值精度说明符：由 <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType> 定义。<br /><br /> 更多信息：[定点（“F”）格式说明符](#FFormatString)。|1234.567 ("F", en-US) -> 1234.57<br /><br /> 1234.567 ("F", de-DE) -> 1234,57<br /><br /> 1234 ("F1", en-US) -> 1234.0<br /><br /> 1234 ("F1", de-DE) -> 1234,0<br /><br /> -1234.56 ("F4", en-US) -> -1234.5600<br /><br /> -1234.56 ("F4", de-DE) -> -1234,5600|

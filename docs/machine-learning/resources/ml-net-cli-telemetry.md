@@ -2,14 +2,14 @@
 title: ML.NET CLI 遥测收集
 description: 了解收集使用情况信息以供分析的 ML.NET CLI 遥测功能、收集的数据，以及如何禁用遥测。 此外，还可以找到 .NET 许可协议的链接以及有关 Microsoft GDPR 合规性的信息。
 ms.topic: conceptual
-ms.date: 05/05/2019
+ms.date: 09/03/2019
 ms.custom: ''
-ms.openlocfilehash: b9f6ccf7ff76f0cf4ce806f39909b7607a20b9f6
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: e7b3b3d7789f2368ebc4448e73add817986a5906
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69567489"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253999"
 ---
 # <a name="telemetry-collection-by-the-mlnet-cli"></a>ML.NET CLI 遥测收集
 
@@ -36,7 +36,7 @@ ms.locfileid: "69567489"
 
 ML.NET CLI 遥测功能默认处于启用状态。
 
-通过将 `MLDOTNET_CLI_TELEMETRY_OPTOUT` 环境变量设置为 `1` 或 `true`，可以选择退出遥测功能。 此环境变量全局适用于 .NET CLI 工具。
+通过将 `MLDOTNET_CLI_TELEMETRY_OPTOUT` 环境变量设置为 `1` 或 `true`，可以选择退出遥测功能。 此环境变量全局适用于 ML.NET CLI 工具。
 
 ## <a name="data-points-collected"></a>收集的数据点
 

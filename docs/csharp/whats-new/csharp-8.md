@@ -1,17 +1,17 @@
 ---
 title: C# 8.0 中的新增功能 - C# 指南
 description: 简要介绍 C# 8.0 中提供的新功能。 本文使用最新的预览版 5。
-ms.date: 02/12/2019
-ms.openlocfilehash: 14c86fe4b1ecd1c89ebbbb082c5c9956bc51e03e
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.date: 09/04/2019
+ms.openlocfilehash: b281c55a5911d81503a6af80e393469be1124280
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105516"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374009"
 ---
 # <a name="whats-new-in-c-80"></a>C# 8.0 中的新增功能
 
-C# 语言有许多增强功能，可以进行试用。 
+C# 语言有许多增强功能，可以进行试用。
 
 - [Readonly 成员](#readonly-members)
 - [默认接口成员](#default-interface-members)
@@ -26,6 +26,8 @@ C# 语言有许多增强功能，可以进行试用。
 - [可为空引用类型](#nullable-reference-types)
 - [异步流](#asynchronous-streams)
 - [索引和范围](#indices-and-ranges)
+- [非托管构造类型](#unmanaged-constructed-types)
+- [内插逐字字符串的增强功能](#enhancement-of-interpolated-verbatim-strings)
 
 > [!NOTE]
 > 本文针对 C# 8.0 预览版 5 进行了最后一次更新。
@@ -376,7 +378,8 @@ await foreach (var number in GenerateSequence())
 
 范围和索引为在数组中指定子范围（<xref:System.Span%601> 或 <xref:System.ReadOnlySpan%601>）提供了简洁语法。
 
-此语言支持依赖于两个新类型和两个新运算符。
+此语言支持依赖于两个新类型和两个新运算符：
+
 - <xref:System.Index?displayProperty=nameWithType> 表示一个序列索引。
 - `^` 运算符，指定一个索引与序列末尾相关。
 - <xref:System.Range?displayProperty=nameWithType> 表示序列的子范围。
@@ -444,3 +447,34 @@ var text = words[phrase];
 ```
 
 可在有关[索引和范围](../tutorials/ranges-indexes.md)的教程中详细了解索引和范围。
+
+## <a name="unmanaged-constructed-types"></a>非托管构造类型
+
+在 C# 7.3 和更早版本中，构造类型（包含至少一个类型参数的类型）不能为[非托管类型](../language-reference/builtin-types/unmanaged-types.md)。 从 C# 8.0 开始，如果构造的值类型仅包含非托管类型的字段，则该类型不受管理。
+
+例如，假设泛型 `Coords<T>` 类型有以下定义：
+
+```csharp
+public struct Coords<T>
+{
+    public T X;
+    public T Y;
+}
+```
+
+`Coords<int>` 类型为 C# 8.0 及更高版本中的非托管类型。 与任何非托管类型一样，可以创建指向此类型的变量的指针，或针对此类型的实例[在堆栈上分配内存块](../language-reference/operators/stackalloc.md)：
+
+```csharp
+Span<Coords<int>> coordinates = stackalloc[]
+{
+    new Coords<int> { X = 0, Y = 0 },
+    new Coords<int> { X = 0, Y = 3 },
+    new Coords<int> { X = 4, Y = 0 }
+};
+```
+
+有关详细信息，请参阅[非托管类型](../language-reference/builtin-types/unmanaged-types.md)。
+
+## <a name="enhancement-of-interpolated-verbatim-strings"></a>内插逐字字符串的增强功能
+
+[内插](../language-reference/tokens/interpolated.md)逐字字符串中 `$` 和 `@` 标记的顺序可以任意安排：`$@"..."` 和 `@$"..."` 均为有效的内插逐字字符串。 在早期 C# 版本中，`$` 标记必须出现在 `@` 标记之前。

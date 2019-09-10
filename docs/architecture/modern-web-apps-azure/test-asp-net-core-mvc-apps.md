@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Azure 构建新式 Web 应用程序 | 测�
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 46c2e53540c3fd929ad2ad1c5e107b538edd5884
-ms.sourcegitcommit: d98fdb087d9c8aba7d2cb93fe4b4ee35a2308cee
+ms.openlocfilehash: 4e4ab71cc542767460e92be1510ccc5c5e0e7ce0
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69038123"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374073"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>测试 ASP.NET Core MVC 应用
 
@@ -50,9 +50,9 @@ ms.locfileid: "69038123"
 
 Martin Fowler 提出了测试金字塔概念，如图 9-1 所示。
 
-![](./media/image9-1.png)
+![测试金字塔](./media/image9-1.png)
 
-图 9-1 测试金字塔
+**图 9-1**。 测试金字塔
 
 该金字塔的不同层次及其相对大小表示不同的测试类别，以及应为应用程序编写的测试数量。 如图所示，建议以大量单元测试作为基层，中间以较小的集成测试层作为支持，顶端为更小的功能测试层。 理想情况下，每层应仅包含较低层中无法充分执行的测试。 确定特定方案所需的测试类型时，请考虑此测试金字塔。
 
@@ -66,15 +66,15 @@ Martin Fowler 提出了测试金字塔概念，如图 9-1 所示。
 
 一种常见方式是在“src”文件夹下组织应用程序项目，在平行的“tests”文件夹下组织应用程序的测试项目。 如果你认为这种组织方式有用，可以在 Visual Studio 中创建匹配的解决方案文件夹。
 
-![](./media/image9-2.png)
+![解决方案中的测试组织](./media/image9-2.png)
 
-图 9-2 解决方案中的测试组织
+**图 9-2**。 解决方案中的测试组织
 
 可使用你喜欢的任何测试框架。 xUnit 框架有效运行，编写所有 ASP.NET Core 和 EF Core 测试时皆使用此框架。 可使用图 9-3 中所示的模板或从使用 dotnet new xunit 的 CLI，在 Visual Studio 中添加 xUnit 测试项目。
 
-![](./media/image9-3.png)
+![在 Visual Studio 中添加 xUnit 测试项目](./media/image9-3.png)
 
-图 9-3 在 Visual Studio 中添加 xUnit 测试项目
+**图 9-3**。 在 Visual Studio 中添加 xUnit 测试项目
 
 ### <a name="test-naming"></a>测试命名
 
@@ -98,7 +98,7 @@ Martin Fowler 提出了测试金字塔概念，如图 9-1 所示。
 
 如果使用类似上述会产生众多小测试类的命名约定，建议使用文件夹和命名空间进一步组织测试。 图 9-4 显示了一种在数个测试项目内按照文件夹组织测试的方式。
 
-![](./media/image9-4.png)
+![基于要测试的类按照文件夹组织测试类](./media/image9-4.png)
 
 **图 9-4**。 基于要测试的类按照文件夹组织测试类。
 

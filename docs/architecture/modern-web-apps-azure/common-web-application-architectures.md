@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Azure 构建新式 Web 应用程序 | 了�
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 22cb673f09faf7b0eabcfa5b3f6700d33242d84b
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: e257410c51d70af31b565d99a8d28ef82ce681d7
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675374"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373800"
 ---
 # <a name="common-web-application-architectures"></a>常用 Web 应用程序体系结构
 
@@ -28,7 +28,7 @@ ms.locfileid: "68675374"
 
 一个新的 ASP.NET Core 项目，不管是在 Visual Studio 中还是通过命令行创建，最初都是简单的“一体式”整体应用程序。 它包含应用程序的所有行为，包括展现、业务和数据访问逻辑。 图 5-1 展示了单项目应用的文件结构。
 
-![](./media/image5-1.png)
+![单项目 ASP.NET Core 应用](./media/image5-1.png)
 
 **图 5-1**。 单项目 ASP.NET Core 应用。
 
@@ -59,7 +59,7 @@ ms.locfileid: "68675374"
 
 图 5-2 展示了应用程序逻辑分层最常用的组织结构。
 
-![](./media/image5-2.png)
+![典型的应用程序层次](./media/image5-2.png)
 
 **图 5-2**。 典型的应用程序层次。
 
@@ -69,19 +69,19 @@ ms.locfileid: "68675374"
 
 图 5-3 展示了一个示例解决方案，其中按职责（层次）将应用程序分解为三个项目。
 
-![](./media/image5-3.png)
+![具有三个项目的简单整体式应用程序](./media/image5-3.png)
 
 **图 5-3**。 具有三个项目的简单整体式应用程序。
 
 尽管出于组织架构目的，此应用程序使用多个项目，但它仍作为单一单位进行部署，且其客户端以单一 Web 应用的形式与其交互。 这使部署过程变得非常简单。 图 5-4 展示了如何使用 Azure 托管此类应用。
 
-![](./media/image5-4.png)
+![Azure Web 应用简单部署](./media/image5-4.png)
 
 **图 5-4**。 Azure Web 应用简单部署
 
 随着应用程序需求增长，可能需要更复杂、更可靠的部署解决方案。 图 5-5 展示了支持其他功能、更复杂的部署计划示例。
 
-![](./media/image5-5.png)
+![将 Web 应用部署到 Azure 应用服务](./media/image5-5.png)
 
 **图 5-5**。 将 Web 应用部署到 Azure 应用服务
 
@@ -91,7 +91,7 @@ ms.locfileid: "68675374"
 
 在 Azure 中缩放 Web 应用程序最简单的方法是在应用程序的应用服务计划中手动配置缩放。 图 5-6 展示用于配置为应用提供服务的实例数量的相应 Azure 仪表板屏幕。
 
-![](./media/image5-6.png)
+![Azure 中的应用服务计划缩放](./media/image5-6.png)
 
 **如 5-6**。 Azure 中的应用服务计划缩放。
 
@@ -104,7 +104,7 @@ ms.locfileid: "68675374"
 
 干净体系结构将业务逻辑和应用程序模型置于应用程序的中心。 而不是让业务逻辑依赖于数据访问或其他基础设施，此依赖关系被倒置：基础结构和实现细节依赖于应用程序内核。 这是通过在应用程序核心中定义抽象或接口来实现的，然后通过基础设施层中定义的类型实现。 将此体系结构可视化的常用方法是使用一系列同心圆，类似于洋葱。 图 5-7 展示这种样式的体系结构表示形式的示例。
 
-![](./media/image5-7.png)
+![干净体系结构，洋葱视图](./media/image5-7.png)
 
 **图 5-7**。 干净体系结构，洋葱视图
 
@@ -112,7 +112,7 @@ ms.locfileid: "68675374"
 
 图 5-8 展示了可更好地反映 UI 和其他层之间的依赖关系的更传统的水平层次关系图。
 
-![](./media/image5-8.png)
+![干净体系结构，水平层次视图](./media/image5-8.png)
 
 **图 5-8**。 干净体系结构，水平层次视图
 
@@ -120,7 +120,7 @@ ms.locfileid: "68675374"
 
 图 5-9 展示了遵循这些建议生成 ASP.NET Core 应用程序体系结构时的更详细的视图。
 
-![ASPNET Core 体系结构](./media/image5-9.png)
+![遵循干净体系结构的 ASP.NET Core 体系结构关系图](./media/image5-9.png)
 
 **图 5-9**。 遵循干净体系结构的 ASP.NET Core 体系结构关系图。
 
@@ -262,7 +262,7 @@ networks:
 
 `docker-compose.yml` 文件引用 `Web` 项目中的 `Dockerfile`。 `Dockerfile` 用于指定将要使用的基容器以及在该容器上配置应用程序的方式。 `Web`' `Dockerfile`：
 
-```
+```Dockerfile
 FROM mcr.microsoft.com/dotnet/core/sdk:2.2 AS build
 WORKDIR /app
 

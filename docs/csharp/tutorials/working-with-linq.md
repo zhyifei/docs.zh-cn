@@ -3,12 +3,12 @@ title: 使用 LINQ
 description: 此教程将介绍如何使用 LINQ 生成序列、编写用于 LINQ 查询的方法，以及如何区分及早计算和惰性计算。
 ms.date: 10/29/2018
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: 3cbafbb6aeed3abdd6d83ead613b29de738d5604
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: f80567510509ba0c7f205ccbd5e587f9ad31f531
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69587177"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785863"
 ---
 # <a name="working-with-linq"></a>使用 LINQ
 
@@ -30,7 +30,7 @@ ms.locfileid: "69587177"
 
 ## <a name="prerequisites"></a>系统必备
 
-必须将计算机设置为运行 .Net Core。 有关安装说明，请访问 [.NET Core](https://www.microsoft.com/net/core) 页。 可以在 Windows、Ubuntu Linux、OS X 或 Docker 容器中运行此应用程序。 必须安装常用的代码编辑器。 在以下说明中，我们使用的是开放源代码跨平台编辑器 [Visual Studio Code](https://code.visualstudio.com/)。 不过，你可以使用习惯使用的任意工具。
+必须将计算机设置为运行 .Net Core。 有关安装说明，请访问 [.NET Core 下载](https://dotnet.microsoft.com/download)页。 可以在 Windows、Ubuntu Linux、OS X 或 Docker 容器中运行此应用程序。 必须安装常用的代码编辑器。 在以下说明中，我们使用的是开放源代码跨平台编辑器 [Visual Studio Code](https://code.visualstudio.com/)。 不过，你可以使用习惯使用的任意工具。
 
 ## <a name="create-the-application"></a>创建应用程序
 

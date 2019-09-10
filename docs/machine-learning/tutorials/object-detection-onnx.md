@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 08/27/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: deb7258326428cca01ea8734e0dc010c29177cfa
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: a5a11bc49fa834ebd6945e47767deb559244b459
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106862"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374517"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>教程：在 ML.NET 中使用 ONNX 检测对象
 
@@ -57,25 +57,25 @@ ms.locfileid: "70106862"
 
 ## <a name="select-a-deep-learning-model"></a>选择深度学习模型
 
-深度学习是机器学习的一部分。 若要训练深度学习模型，则需要大量的数据。 数据中的模式用一系列层表示。 数据中的关系被编码为包含权重的层之间的连接。 权重越大，关系越强。 总的来说，这一系列的层和连接被称为人工神经网络。 网络中的层越多，它就越“深”，使其成为一个深层的神经网络。 
+深度学习是机器学习的一部分。 若要训练深度学习模型，则需要大量的数据。 数据中的模式用一系列层表示。 数据中的关系被编码为包含权重的层之间的连接。 权重越大，关系越强。 总的来说，这一系列的层和连接被称为人工神经网络。 网络中的层越多，它就越“深”，使其成为一个深层的神经网络。
 
-神经网络有多种类型，最常见的是多层感知器 (MLP)、卷积神经网络 (CNN) 和循环神经网络 (RNN)。 最基本的是 MLP，可将一组输入映射到一组输出。 如果数据没有空间或时间组件，建议使用这种神经网络。 CNN 利用卷积层来处理数据中包含的空间信息。 图像处理就是 CNN 的一个很好的用例，它检测图像区域中是否存在特征（例如，图像中心是否有鼻子？） 最后，RNN 允许将状态或内存的持久性用作输入。 RNN 用于时间序列分析，其中事件的顺序排序和上下文很重要。 
+神经网络有多种类型，最常见的是多层感知器 (MLP)、卷积神经网络 (CNN) 和循环神经网络 (RNN)。 最基本的是 MLP，可将一组输入映射到一组输出。 如果数据没有空间或时间组件，建议使用这种神经网络。 CNN 利用卷积层来处理数据中包含的空间信息。 图像处理就是 CNN 的一个很好的用例，它检测图像区域中是否存在特征（例如，图像中心是否有鼻子？） 最后，RNN 允许将状态或内存的持久性用作输入。 RNN 用于时间序列分析，其中事件的顺序排序和上下文很重要。
 
 ### <a name="understand-the-model"></a>了解模型
 
-对象检测是图像处理任务。 因此，训练解决该问题的大多数深度学习模型都是 CNN。 本教程中使用的模型是 Tiny YOLOv2 模型，这是该文件中描述的 YOLOv2 模型的一个更紧凑版本：[“YOLO9000：更好、更快、更强”，作者：Redmon 和 Fadhari](https://arxiv.org/pdf/1612.08242.pdf)。 Tiny YOLOv2 在 Pascal VOC 数据集上进行训练，共包含 15 层，可预测 20 种不同类别的对象。 由于 Tiny YOLOv2 是原始 YOLOv2 模型的精简版本，因此需要在速度和精度之间进行权衡。 构成模型的不同层可以使用 Neutron 等工具进行可视化。 检查模型将在构成神经网络的所有层之间生成连接映射，其中每个层都将包含层名称以及各自输入/输出的维度。 用于描述模型输入和输出的数据结构称为张量。 可以将张量视为以 N 维存储数据的容器。 对于 Tiny YOLOv2，输入层名称为 `image`，它需要一个维度为 `3 x 416 x 416` 的张量。 输出层名称为 `grid`，且生成维度为 `125 x 13 x 13` 的输出张量。  
+对象检测是图像处理任务。 因此，训练解决该问题的大多数深度学习模型都是 CNN。 本教程中使用的模型是 Tiny YOLOv2 模型，这是该文件中描述的 YOLOv2 模型的一个更紧凑版本：[“YOLO9000：更好、更快、更强”，作者：Redmon 和 Fadhari](https://arxiv.org/pdf/1612.08242.pdf)。 Tiny YOLOv2 在 Pascal VOC 数据集上进行训练，共包含 15 层，可预测 20 种不同类别的对象。 由于 Tiny YOLOv2 是原始 YOLOv2 模型的精简版本，因此需要在速度和精度之间进行权衡。 构成模型的不同层可以使用 Neutron 等工具进行可视化。 检查模型将在构成神经网络的所有层之间生成连接映射，其中每个层都将包含层名称以及各自输入/输出的维度。 用于描述模型输入和输出的数据结构称为张量。 可以将张量视为以 N 维存储数据的容器。 对于 Tiny YOLOv2，输入层名称为 `image`，它需要一个维度为 `3 x 416 x 416` 的张量。 输出层名称为 `grid`，且生成维度为 `125 x 13 x 13` 的输出张量。
 
 ![](./media/object-detection-onnx/netron-model-map.png)
 
-YOLO 模型采用图像 `3(RGB) x 416px x 416px`。 模型接受此输入，并将其传递到不同的层以生成输出。 输出将输入图像划分为一个 `13 x 13` 网格，网格中的每个单元格由 `125` 值组成。 
+YOLO 模型采用图像 `3(RGB) x 416px x 416px`。 模型接受此输入，并将其传递到不同的层以生成输出。 输出将输入图像划分为一个 `13 x 13` 网格，网格中的每个单元格由 `125` 值组成。
 
 ### <a name="what-is-an-onnx-model"></a>什么是 ONNX 模型？
 
-开放神经网络交换 (ONNX) 是 AI 模型的开放源代码格式。 ONNX 支持框架之间的互操作性。 这意味着，你可以在许多常见的机器学习框架（如 pytorch）中训练模型，将其转换为 ONNX 格式，并在其他框架（如 ML.NET）中使用 ONNX 模型。 有关详细信息，请参阅 [ONNX 网站](https://onnx.ai/)。 
+开放神经网络交换 (ONNX) 是 AI 模型的开放源代码格式。 ONNX 支持框架之间的互操作性。 这意味着，你可以在许多常见的机器学习框架（如 pytorch）中训练模型，将其转换为 ONNX 格式，并在其他框架（如 ML.NET）中使用 ONNX 模型。 有关详细信息，请参阅 [ONNX 网站](https://onnx.ai/)。
 
 ![](./media/object-detection-onnx/onnx-frameworks.png)
 
-预训练的 Tiny YOLOv2 模型以 ONNX 格式存储，这是层的序列化表示形式，也是这些层的已知模式。 在 ML.NET 中，使用 [`ImageAnalytics`](xref:Microsoft.ML.Transforms.Image) 和 [`OnnxTransformer`](xref:Microsoft.ML.Transforms.Onnx.OnnxTransformer) NuGet 包实现了与 ONNX 的互操作性。 [ `ImageAnalytics` ](xref:Microsoft.ML.Transforms.Image) 包包含一系列转换，这些转换采用图像并将其编码为可用作预测或训练管道输入的数值。 [`OnnxTransformer`](xref:Microsoft.ML.Transforms.Onnx.OnnxTransformer) 包利用 ONNX 运行时加载 ONNX 模型并使用它根据提供的输入进行预测。 
+预训练的 Tiny YOLOv2 模型以 ONNX 格式存储，这是层的序列化表示形式，也是这些层的已知模式。 在 ML.NET 中，使用 [`ImageAnalytics`](xref:Microsoft.ML.Transforms.Image) 和 [`OnnxTransformer`](xref:Microsoft.ML.Transforms.Onnx.OnnxTransformer) NuGet 包实现了与 ONNX 的互操作性。 [ `ImageAnalytics` ](xref:Microsoft.ML.Transforms.Image) 包包含一系列转换，这些转换采用图像并将其编码为可用作预测或训练管道输入的数值。 [`OnnxTransformer`](xref:Microsoft.ML.Transforms.Onnx.OnnxTransformer) 包利用 ONNX 运行时加载 ONNX 模型并使用它根据提供的输入进行预测。
 
 ![](./media/object-detection-onnx/onnx-ml-net-integration.png)
 
@@ -89,10 +89,10 @@ YOLO 模型采用图像 `3(RGB) x 416px x 416px`。 模型接受此输入，并�
 
 1. 安装“Microsoft.ML NuGet 包”  ：
 
-    - 在“解决方案资源管理器”中，右键单击项目，然后选择“管理 NuGet 包”  。 
-    - 选择“nuget.org”作为“包源”，选择“浏览”选项卡，再搜索“Microsoft.ML”  。 
-    - 选择“安装”按钮  。 
-    - 选择“预览更改”  对话框上的“确定”  按钮，如果你同意所列包的许可条款，则选择“接受许可”  对话框上的“我接受”  按钮。 
+    - 在“解决方案资源管理器”中，右键单击项目，然后选择“管理 NuGet 包”  。
+    - 选择“nuget.org”作为“包源”，选择“浏览”选项卡，再搜索“Microsoft.ML”  。
+    - 选择“安装”按钮  。
+    - 选择“预览更改”  对话框上的“确定”  按钮，如果你同意所列包的许可条款，则选择“接受许可”  对话框上的“我接受”  按钮。
     - 对 Microsoft.ML.ImageAnalytics 和 Microsoft.ML.OnnxTransformer 重复这些步骤   。
 
 ### <a name="prepare-your-data-and-pre-trained-model"></a>准备你的数据和预训练的模型
@@ -106,7 +106,7 @@ YOLO 模型采用图像 `3(RGB) x 416px x 416px`。 模型接受此输入，并�
     打开命令提示符并输入以下命令：
 
     ```shell
-    tar -xvzf tiny_yolov2.tar.gz 
+    tar -xvzf tiny_yolov2.tar.gz
     ```
 
 1. 将提取的 `model.onnx` 文件从刚刚解压缩的目录复制到 ObjectDetection 项目的 `assets\Model` 目录中，并将其重命名为 `TinyYolo2_model.onnx`  。 此目录包含本教程所需的模型。
@@ -119,9 +119,9 @@ YOLO 模型采用图像 `3(RGB) x 416px x 416px`。 模型接受此输入，并�
 
 [!code-csharp [ProgramUsings](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L1-L7)]
 
-接下来，定义各种资产的路径。 
+接下来，定义各种资产的路径。
 
-1. 首先，在 `Program` 类的 `Main` 方法下面添加 `GetAbsolutePath` 方法。 
+1. 首先，在 `Program` 类的 `Main` 方法下面添加 `GetAbsolutePath` 方法。
 
     [!code-csharp [GetAbsolutePath](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L66-L74)]
 
@@ -137,13 +137,13 @@ YOLO 模型采用图像 `3(RGB) x 416px x 416px`。 模型接受此输入，并�
 
 1. 在“解决方案资源管理器”中，右键单击“DataStructures”目录，然后选择“添加” > “新项”     。
 1. 在“添加新项”对话框中，选择“类”，并将“名称”字段更改为“ImageNetData.cs”     。 然后，选择“添加”  按钮。
-     
+
     此时，将在代码编辑器中打开 ImageNetData.cs 文件  。 将下面的 `using` 语句添加到 ImageNetData.cs 顶部  ：
 
     [!code-csharp [ImageNetDataUsings](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/DataStructures/ImageNetData.cs#L1-L4)]
 
     删除现有类定义，并将 `ImageNetData` 类的以下代码添加到 ImageNetData.cs 文件中  ：
-    
+
     [!code-csharp [ImageNetDataClass](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/DataStructures/ImageNetData.cs#L8-L23)]
 
     `ImageNetData` 是输入图像数据类，包含以下 <xref:System.String> 字段：
@@ -178,7 +178,6 @@ YOLO 模型采用图像 `3(RGB) x 416px x 416px`。 模型接受此输入，并�
 
 [!code-csharp [InitMLContext](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L24)]
 
-
 ## <a name="create-a-parser-to-post-process-model-outputs"></a>创建分析器来处理模型输出
 
 该模型将图像分割为 `13 x 13` 网格，其中每个网格单元格为 `32px x 32px`。 每个网格单元格包含 5 个潜在的对象边界框。 边界框有 25 个元素：
@@ -188,7 +187,7 @@ YOLO 模型采用图像 `3(RGB) x 416px x 416px`。 模型接受此输入，并�
 - `x`：边界框中心相对于与其关联的网格单元格的 x 位置。
 - `y`：边界框中心相对于与其关联的网格单元格格的 y 位置。
 - `w`：边界框的宽度。
-- `h`：边界框的高度。 
+- `h`：边界框的高度。
 - `o`：对象存在于边界框内的置信度值，也称为对象得分。
 - 模型预测的 20 个类中每个类的 `p1-p20` 类概率。
 
@@ -207,7 +206,7 @@ YOLO 模型采用图像 `3(RGB) x 416px x 416px`。 模型接受此输入，并�
 1. 在“解决方案资源管理器”中，右键单击“YoloParser”目录，然后选择“添加” > “新项”     。
 1. 在“添加新项”对话框中，选择“类”并将“名称”字段更改为“DimensionsBase.cs”     。 然后，选择“添加”  按钮。
 
-    此时，将在代码编辑器中打开 DimensionsBase.cs 文件  。 删除所有 `using` 语句和现有类定义。 
+    此时，将在代码编辑器中打开 DimensionsBase.cs 文件  。 删除所有 `using` 语句和现有类定义。
 
     将 `DimensionsBase` 类的以下代码添加到 DimensionsBase.cs 文件中  ：
 
@@ -236,7 +235,7 @@ YOLO 模型采用图像 `3(RGB) x 416px x 416px`。 模型接受此输入，并�
     删除现有 `YoloBoundingBox` 类定义，并将 `YoloBoundingBox` 类的以下代码添加到 YoloBoundingBox.cs 文件中  ：
 
     [!code-csharp [YoloBoundingBoxClass](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/YoloBoundingBox.cs#L7-L21)]
-    
+
     `YoloBoundingBox` 具有以下字段：
 
     - `Dimensions`：包含边界框的维度。
@@ -262,7 +261,7 @@ YOLO 模型采用图像 `3(RGB) x 416px x 416px`。 模型接受此输入，并�
 
 1. 在 `YoloOutputParser` 类定义中，添加以下常量和字段。
 
-    [!code-csharp [ParserVarDefinitions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/YoloOutputParser.cs#L12-L21)]    
+    [!code-csharp [ParserVarDefinitions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/YoloOutputParser.cs#L12-L21)]
 
     - `ROW_COUNT` 是分割图像的网格中的行数。
     - `COL_COUNT` 是分割图像的网格中的列数。
@@ -274,17 +273,17 @@ YOLO 模型采用图像 `3(RGB) x 416px x 416px`。 模型接受此输入，并�
     - `CELL_HEIGHT` 是图像网格中一个单元格的高度。
     - `channelStride` 是网格中当前单元格的起始位置。
 
-    当模型进行预测（也称为评分）时，它会将 `416px x 416px` 输入图像划分为 `13 x 13` 大小的单元格网格。 每个单元格都包含 `32px x 32px`。 在每个单元格内，有 5 个边界框，每个边框包含 5 个特征（x、y、宽度、高度、置信度）。 此外，每个边界框包含每个类的概率，在这种情况下为 20。 因此，每个单元包含 125 条信息（5 个特征 + 20 个类概率）。 
+    当模型进行预测（也称为评分）时，它会将 `416px x 416px` 输入图像划分为 `13 x 13` 大小的单元格网格。 每个单元格都包含 `32px x 32px`。 在每个单元格内，有 5 个边界框，每个边框包含 5 个特征（x、y、宽度、高度、置信度）。 此外，每个边界框包含每个类的概率，在这种情况下为 20。 因此，每个单元包含 125 条信息（5 个特征 + 20 个类概率）。
 
 为所有 5 个边界框在 `channelStride` 下创建的定位点列表：
 
-[!code-csharp [ParserAnchors](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/YoloOutputParser.cs#L23-L26)]   
+[!code-csharp [ParserAnchors](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/YoloOutputParser.cs#L23-L26)]
 
 定位点是边界框的预定义的高度和宽度比例。 模型检测到的大多数对象或类都具有相似的比例。 这在创建边界框时非常有用。 不是预测边界框，而是计算预定义维度的偏移量，因此减少了预测边界框所需的计算量。 通常，这些定位点比例是基于所使用的数据集计算的。 在这种情况下，由于数据集是已知的且值已预先计算，因此可以硬编码定位点。
 
 接下来，定义模型将预测的标签或类。 该模型预测了 20 个类，它们是原始 YOLOv2 模型预测的类总数的子集。
 
-在 `anchors` 下面添加标签列表。 
+在 `anchors` 下面添加标签列表。
 
 [!code-csharp [ParserLabels](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/YoloOutputParser.cs#L28-L34)]
 
@@ -294,7 +293,7 @@ YOLO 模型采用图像 `3(RGB) x 416px x 416px`。 模型接受此输入，并�
 
 ### <a name="create-helper-functions"></a>创建帮助程序函数
 
-后处理阶段涉及一系列步骤。 为此，可以使用几种帮助程序方法。 
+后处理阶段涉及一系列步骤。 为此，可以使用几种帮助程序方法。
 
 分析器使用的帮助程序方法是：
 
@@ -322,7 +321,7 @@ public IList<YoloBoundingBox> ParseOutputs(float[] yoloModelOutputs, float thres
 
 }
 ```
-    
+
 创建一个列表来存储边界框并在 `ParseOutputs` 方法中定义变量。
 
 [!code-csharp [BBoxList](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/YoloOutputParser.cs#L155)]
@@ -419,7 +418,7 @@ for (int i = 0; i < boxes.Count; i++)
 ```csharp
 if (isActiveBoxes[i])
 {
-    
+
 }
 ```
 
@@ -492,7 +491,7 @@ for (var j = i + 1; j < boxes.Count; j++)
 
     ML.NET 管道需要知道在调用 [`Fit`](xref:Microsoft.ML.IEstimator%601.Fit*) 方法时要操作的数据架构。 在这种情况下，将使用类似于训练的过程。 但是，由于没有进行实际训练，因此可以使用空的 [`IDataView`](xref:Microsoft.ML.IDataView)。 使用空列表为管道创建新的 [`IDataView`](xref:Microsoft.ML.IDataView)。
 
-    [!code-csharp [LoadEmptyIDV](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/OnnxModelScorer.cs#L52)]    
+    [!code-csharp [LoadEmptyIDV](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/OnnxModelScorer.cs#L52)]
 
     在此之后，定义管道。 管道将包含四个转换。
 
@@ -569,7 +568,7 @@ catch (Exception ex)
 
 [!code-csharp [ParsePredictions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L39-L44)]
 
-处理完模型输出后，便可以在图像上绘制边界框。 
+处理完模型输出后，便可以在图像上绘制边界框。
 
 ### <a name="visualize-predictions"></a>将预测结果可视化
 
@@ -612,7 +611,7 @@ foreach (var box in filteredBoundingBoxes)
 ```csharp
 using (Graphics thumbnailGraphic = Graphics.FromImage(image))
 {
-    
+
 }
 ```
 
@@ -638,7 +637,7 @@ using (Graphics thumbnailGraphic = Graphics.FromImage(image))
 
 要获得应用程序在运行时按预期进行预测的其他反馈，请在 Program.cs 文件中的 `DrawBoundingBox` 方法下添加名为 `LogDetectedObjects` 的方法，以将检测到的对象输出到控制台  。
 
-[!code-csharp [LogOuptuts](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L133-L143)]
+[!code-csharp [LogOutputs](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L133-L143)]
 
 你已经有了帮助器方法，现在可以根据预测创建视觉反馈，并可添加 for 循环来循环访问每个已评分的图像。
 
@@ -665,9 +664,9 @@ for (var i = 0; i < images.Count(); i++)
 
 [!code-csharp [EndProcessLog](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L62-L63)]
 
-就这么简单！ 
+就这么简单！
 
-## <a name="results"></a>结果 
+## <a name="results"></a>结果
 
 按照上述步骤操作后，运行控制台应用 (Ctrl + F5)。 结果应如以下输出所示。 你可能会看到警告或处理消息，为清楚起见，这些消息已从以下结果中删除。
 
@@ -701,7 +700,7 @@ person and its Confidence score: 0.5551759
 ========= End of Process..Hit any Key ========
 ```
 
-若要查看带有边界框的图像，请导航到 `assets/images/output/` 目录。 以下是其中一个已处理的图像示例。 
+若要查看带有边界框的图像，请导航到 `assets/images/output/` 目录。 以下是其中一个已处理的图像示例。
 
 ![](./media/object-detection-onnx/image3.jpg)
 

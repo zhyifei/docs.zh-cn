@@ -13,12 +13,12 @@ ms.assetid: 618e5afb-3a97-440d-831a-70e4c526a51c
 author: rpetrusha
 ms.author: ronpet
 ms.custom: serodec18
-ms.openlocfilehash: 8d887bb32d1bdd398353d00aba16c2cc8adfcacb
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: a945c53f3206f29cf2b07fea86ba3e8e3af11645
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988822"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70254230"
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>.NET 中的正则表达式最佳做法
 <a name="top"></a> .NET 中的正则表达式引擎是一款功能强大且完备的工具，根据模式匹配（而不是比较和匹配文本）处理文本。 在大多数情况下，它可以快速、高效地执行模式匹配。 但在某些情况下，正则表达式引擎的速度似乎很慢。 在极端情况下，它甚至看似停止响应，因为它会用若干个小时甚至若干天处理相对小的输入。  
@@ -96,7 +96,7 @@ ms.locfileid: "69988822"
 > 如果方法调用中重复使用同一正则表达式或者应用程序大量使用正则表达式对象，则方法调用的形式（静态、已解释、已编译）会影响性能。  
   
 ### <a name="static-regular-expressions"></a>静态正则表达式  
- 建议将静态正则表达式方法用作使用同一正则表达式重复实例化正则表达式对象的替代方法。 与正则表达式对象使用的正则表达式模式不同，实例方法调用所使用的模式中的操作代码或已编译的 Microsoft 中间语言 (MSIL) 由正则表达式引擎缓存在内部。  
+ 建议将静态正则表达式方法用作使用同一正则表达式重复实例化正则表达式对象的替代方法。 与正则表达式对象使用的正则表达式模式不同，静态方法调用所使用的模式中的操作代码或已编译的 Microsoft 中间语言 (MSIL) 由正则表达式引擎缓存在内部。  
   
  例如，事件处理程序会频繁调用其他方法来验证用户输入。 下面的代码中反映了这一点，其中一个 <xref:System.Windows.Forms.Button> 控件的 <xref:System.Windows.Forms.Control.Click> 事件用于调用名为 `IsValidCurrency` 的方法，该方法检查用户是否输入了后跟至少一个十进制数的货币符号。  
   

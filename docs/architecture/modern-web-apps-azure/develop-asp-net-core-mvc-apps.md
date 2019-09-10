@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Azure 构建新式 Web 应用程序 | 开�
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 9f8c9c47757379d641b821f312b89666456343d4
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 51feb770e84af170bf31a6ba363a1d9e72616284
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105466"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373775"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>开发 ASP.NET Core MVC 应用
 
@@ -176,9 +176,9 @@ ASP.NET Core UI 项目负责所有 UI 级问题，但不得包含业务逻辑或
 
 ASP.NET Core MVC 支持使用 Areas 实现此目的。 使用区域可以在每个 Area 文件夹中创建单独的 Controllers 和 Views 文件夹集（以及任何关联的模型）。 图 7-1 显示了一个使用 Areas 的示例文件夹结构。
 
-![](./media/image7-1.png)
+![示例 Area 整理](./media/image7-1.png)
 
-图 7-1 示例 Area 整理
+图 7-1  。 示例 Area 整理
 
 使用 Areas 时，必须使用属性通过控制器所属的区域名称来修饰控制器：
 
@@ -245,7 +245,7 @@ ASP.NET Core MVC 还使用约定来确定视图的位置。 可以使用自定�
 
 ![请求通过授权过滤器、资源过滤器、模型绑定、操作过滤器、操作执行和操作结果转换、异常过滤器、结果过滤器和结果执行进行处理。 返回时，请求仅由结果过滤器和资源过滤器进行处理，变成发送到客户端的响应。](./media/image7-2.png)
 
-图 7-2 请求执行通过各过滤器和请求管道。
+**图 7-2**。 请求执行通过各过滤器和请求管道。
 
 筛选器通常作为属性实现，因此可应用于控制器或操作（甚至全局）。 以这种方式添加时，在操作级别指定的过滤器会覆盖在控制器级别指定的过滤器（会覆盖全局过滤器）或在其基础之上生成。 例如，\[Route\] 属性可用来生成控制器和操作之间的路由。 同样，可以在控制器级别配置授权，然后被各操作覆盖，如下所示：
 
@@ -334,9 +334,9 @@ ASP.NET Core 标识是一个成员身份系统，可用于支持应用程序的�
 
 如果选择了“个人用户帐户”选项，ASP.NET Core 标识将包含在新的项目模板中。 此模板包括对注册、登录名、外部登录名、忘记的密码和其他功能的支持。
 
-![](./media/image7-3.png)
+![选择“个人用户帐户”以预配标识](./media/image7-3.png)
 
-图 7-3 选择“个人用户帐户”以预配标识。
+**图 7-3**。 选择“个人用户帐户”以预配标识。
 
 在 ConfigureServices 和 Configure 中，标识支持都在 Startup 中配置：
 
@@ -563,13 +563,13 @@ ASP.NET Core 应用程序是控制台应用程序，服务器启动时必须启�
 
 ![Kestrel 到 Internet](./media/image7-5.png)
 
-图 7-5 反向代理服务器背后托管在 Kestrel 中的 ASP.NET
+**图 7-5**。 反向代理服务器背后托管在 Kestrel 中的 ASP.NET
 
 反向代理发挥作用的其他情况包括使用 SSL/HTTPS 保护多个应用程序。 在这种情况下，只需要为反向代理服务器配置 SSL。 反向代理服务器和 Kestrel 之间的通信可以通过 HTTP 进行，如图 7-6 所示。
 
-![](./media/image7-6.png)
+![HTTPS 保护的反向代理服务器后托管的 ASP.NET](./media/image7-6.png)
 
-图 7-6 HTTPS 保护的反向代理服务器后托管的 ASP.NET
+**图7-6**。 HTTPS 保护的反向代理服务器后托管的 ASP.NET
 
 可以将 ASP.NET Core 应用程序托管在 Docker 容器中，然后该应用程序即可本地托管或部署到 Azure 进行基于云的托管，这种方法正日益普及。 Docker 容器可以包含应用程序代码（在 Kestrel 上运行），并部署在反向代理服务器后，如上所述。
 

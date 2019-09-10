@@ -2,13 +2,13 @@
 title: C# 中的字符串内插
 description: 了解如何在 C# 中使用字符串插值将有格式的表达式结果包括在结果字符串中。
 author: pkulikov
-ms.date: 05/09/2018
-ms.openlocfilehash: 2990298821fddc8a69430a4cf4bb5e3dd9df314d
-ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
+ms.date: 09/02/2019
+ms.openlocfilehash: d3a3a08d5911b5323aa61c571f05318d10380339
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66251027"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252930"
 ---
 # <a name="string-interpolation-in-c"></a>C\# 中的字符串内插
 
@@ -26,7 +26,7 @@ ms.locfileid: "66251027"
 
 如示例所示，通过将表达式用大括号括起来，可将表达式包含到内插字符串中：
 
-```
+```csharp
 {<interpolationExpression>}
 ```
 
@@ -36,7 +36,7 @@ ms.locfileid: "66251027"
 
 可通过在内插表达式后接冒号（“:”）和格式字符串来指定受表达式结果类型支持的格式字符串：
 
-```
+```csharp
 {<interpolationExpression>:<formatString>}
 ```
 
@@ -50,7 +50,7 @@ ms.locfileid: "66251027"
 
 通过在内插表达式后添加逗号（“,”）和常数表达式来指定设置了格式的表达式结果的最小字段宽度和对齐方式：
 
-```
+```csharp
 {<interpolationExpression>,<alignment>}
 ```
 
@@ -58,7 +58,7 @@ ms.locfileid: "66251027"
 
 如果需要同时指定对齐方式和格式字符串，则先从对齐方式组件开始：
 
-```
+```csharp
 {<interpolationExpression>,<alignment>:<formatString>}
 ```
 
@@ -74,7 +74,7 @@ ms.locfileid: "66251027"
 
 内插字符串支持所有可在普通字符串文本中使用的转义序列。 有关详细信息，请参阅[字符串转义序列](../programming-guide/strings/index.md#string-escape-sequences)。
 
-若要逐字解释转义序列，可使用[逐字](../language-reference/tokens/verbatim.md)字符串文本。 逐字内插字符串以 `$` 字符开头，后跟 `@` 字符。
+若要逐字解释转义序列，可使用[逐字](../language-reference/tokens/verbatim.md)字符串文本。 内插逐字字符串以 `$` 字符开头，后跟 `@` 字符。 从 C# 8.0 开始，可以按任意顺序使用 `$` 和 `@` 标记：`$@"..."` 和 `@$"..."` 均为有效的内插逐字字符串。
 
 若要在结果字符串中包含大括号 "{" 或 "}"，请使用两个大括号 "{{" 或 "}}"。 有关详细信息，请参阅[复合格式设置](../../standard/base-types/composite-formatting.md)主题的[转义括号](../../standard/base-types/composite-formatting.md#escaping-braces)部分。
 

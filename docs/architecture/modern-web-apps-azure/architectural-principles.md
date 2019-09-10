@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Azure 构建新式 Web 应用程序 | 体�
 author: ardalis
 ms.author: wiwagn
 ms.date: 02/16/2019
-ms.openlocfilehash: 93a0fd5c484e27853ec9a6919aa573f68471ceaa
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 91bb3be207c9919eb7eb0119e96e76aae94858be
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105477"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373755"
 ---
 # <a name="architectural-principles"></a>体系结构原则
 
@@ -36,13 +36,13 @@ ms.locfileid: "70105477"
 
 应用程序中的依赖关系方向应该是抽象的方向，而不是实现详细信息的方向。 大部分应用程序都是这样编写的，以便编译时依赖关系顺着运行时执行的方向流动。 这将产生一个直接依赖项关系图。 也就是说，如果模块 A 调用模块 B 中的函数，而模块 B 又调用模块 C 中的函数，则编译时 A 取决于 B，而 B 又取决于 C，如图 4-1 中所示。
 
-![](./media/image4-1.png)
+![直接依赖项关系图](./media/image4-1.png)
 
 **图 4-1**。 直接依赖项关系图。
 
 应用依赖关系反转原则后，A 可以调用 B 实现的抽象上的方法，让 A 可以在运行时调用 B，而 B 又在编译时依赖于 A 控制的接口（因此，典型的编译时依赖项发生反转）  。 运行时，程序执行的流程保持不变，但接口引入意味着可以轻松插入这些接口的不同实现。
 
-![](./media/image4-2.png)
+![反转依赖项关系图](./media/image4-2.png)
 
 **图 4-2**。 反转依赖项关系图。
 

@@ -7,19 +7,19 @@ author:
 ms.author:
 - MICROSOFT ALIAS OF INTERNAL OWNER
 ms.date:
-- CREATION/UPDATE DATE - mm/dd/yyyy
+- CREATION/UPDATE DATE - MM/dd/yyyy
 ms.topic:
 - TOPIC TYPE
 ms.prod:
 - PRODUCT VALUE
 helpviewer_keywords:
 - OFFLINE BOOK INDEX ENTRIES
-ms.openlocfilehash: e6c912f5ff9590f3b8cbb0f7e3f88e08fa9dd556
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: d9a377941f54dbd42ae6eaec6c21a93dd48673a1
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106913"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70254014"
 ---
 # <a name="metadata-and-markdown-template"></a>元数据和 Markdown 模板
 
@@ -41,7 +41,7 @@ ms.locfileid: "70106913"
 - “ms.devlang”定义主题显示的语言筛选器  。 可以在[支持的语言](#supported-languages)部分中查看受支持的值列表。 仅当主题涵盖了多个编程语言时才需要设置。 通常，只在内容中使用 `csharp`、`vb`、`fsharp` 和 `cpp` 作为值。
 - **ms-chap**：用于 BI 目的的产品标识。 它们通常在全局级别进行设置，因此通常不会出现在每篇文章的元数据块中。
 - **ms.technology**：其他 BI 分类。 一些受支持的值是：适用于 C# 主题的 `devlang-csharp`、适用于 F# 主题的 `devlang-fsharp` 和适用于 VB 主题的 `devlang-visual-basic`。 对于其他指南，值将有所不同，因此请让团队成员提供指导。
-- **ms.date**：采用 MM/DD/YYYY 格式的日期。 显示在“已发布”页面上，表明刚对文章进行了重大编辑或保证是“最新”的（即项目已查看并被视为最新）。
+- **ms.date**：采用 MM/dd/yyyy 格式的日期。 显示在“已发布”页面上，表明刚对文章进行了重大编辑或保证是“最新”的（即项目已查看并被视为最新）。
 - **helpviewer_keywords**：条目用于脱机图书索引（Visual Studio 中的功能）。
 - **f1_keywords**：将文章连接到 F1 键（Visual Studio 中的功能）。
 
@@ -70,10 +70,7 @@ Markdown 使用特殊字符如 \*、\` 和 \# 进行格式化。 如果要在内
 
 ## <a name="headings"></a>标题
 
-使用句式单词首字母大写。 以下单词的第一个字母始终为大写：
-
-- 标题的首个单词。
-- 标题中冒号后面的首个单词（例如，“How to: Sort an array”）。
+使用句式单词首字母大写。 始终将标题的第一个单词变成大写，但不要将标题中的冒号后面的单词大写（例如“How to: sort an array”）。
 
 标题使用 atx 样式，即在行的开头使用 1-6 个哈希字符 (#) 来表示标题，对应于 HTML 标题级别 H1 到 H6。 上面使用的是第一和第二级别标题示例。
 

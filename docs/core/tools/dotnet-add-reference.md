@@ -2,12 +2,12 @@
 title: dotnet-add reference 命令
 description: dotnet add reference 命令可便于添加项目间引用。
 ms.date: 06/26/2019
-ms.openlocfilehash: 6e0ca40e701b62dcc18147f9de83cafa6aa2f50f
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 867596058aad8f9c38918e6d6657709d0d0699b3
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422006"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784044"
 ---
 # <a name="dotnet-add-reference"></a>dotnet-add reference
 
@@ -27,7 +27,7 @@ ms.locfileid: "67422006"
 
 ## <a name="description"></a>说明
 
-使用 `dotnet add reference` 命令可方便地向项目添加项目引用。 运行该命令后，会将 [`<ProjectReference>`](/visualstudio/msbuild/common-msbuild-project-items) 元素添加到项目文件。
+使用 `dotnet add reference` 命令可方便地向项目添加项目引用。 运行该命令后，会将 `<ProjectReference>` 元素添加到项目文件。
 
 ```xml
 <ItemGroup>
