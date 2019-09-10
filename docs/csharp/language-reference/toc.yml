@@ -166,7 +166,7 @@
           href: keywords/lock-statement.md
     - name: 方法参数
       items:
-        - name: 传递参数
+        - name: 快速参考
           href: keywords/method-parameters.md
         - name: params
           href: keywords/params.md
@@ -200,7 +200,7 @@
       items:
         - name: new 约束
           href: keywords/new-constraint.md
-        - name: 其中
+        - name: where
           href: keywords/where-generic-type-constraint.md
     - name: 访问关键字
       items:
@@ -214,9 +214,9 @@
           href: keywords/null.md
         - name: 'true'
           href: keywords/true-literal.md
-        - name: 'False'
+        - name: 'false'
           href: keywords/false-literal.md
-        - name: 默认值
+        - name: default
           href: keywords/default.md
     - name: 上下文关键字
       items:
@@ -224,7 +224,7 @@
           href: keywords/contextual-keywords.md
         - name: add
           href: keywords/add.md
-        - name: 获取
+        - name: get
           href: keywords/get.md
         - name: partial（类型）
           href: keywords/partial-type.md
@@ -236,7 +236,7 @@
           href: keywords/set.md
         - name: when（筛选条件）
           href: keywords/when.md
-        - name: 值
+        - name: value
           href: keywords/value.md
         - name: yield
           href: keywords/yield.md
@@ -252,7 +252,7 @@
           href: keywords/select-clause.md
         - name: group 子句
           href: keywords/group-clause.md
-        - name: Into
+        - name: into
           href: keywords/into.md
         - name: orderby 子句
           href: keywords/orderby-clause.md
@@ -270,7 +270,7 @@
           href: keywords/equals.md
         - name: by
           href: keywords/by.md
-        - name: 中的
+        - name: in
           href: keywords/in.md
 - name: 'C# 运算符'
   items:
