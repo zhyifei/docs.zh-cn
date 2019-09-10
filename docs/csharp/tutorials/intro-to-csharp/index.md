@@ -3,12 +3,12 @@ title: C# 简介 - 交互式教程
 description: 通过浏览器了解 C#，并开始使用自己的开发环境
 ms.date: 08/22/2019
 ms.custom: mvc
-ms.openlocfilehash: 65526dcf04525f3f2afb358a5b6289ff8bba7de8
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: 1712e32175a95373ca85464bbdebed9ef99fb375
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70015010"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850767"
 ---
 # <a name="introduction-to-c"></a>C\# 简介
 
@@ -45,4 +45,4 @@ ms.locfileid: "70015010"
 只能在计算机上使用自己的本地开发环境和 .NET Core 演练最后一个教程。
 读者将生成控制台应用程序，并了解 C# 语言中面向对象的基本功能的工作原理。
 
-若要更好地学习本教程，需要已完成联机入门教程，并且已安装 [.NET Core SDK](https://www.microsoft.com/net/download) 和 [Visual Studio Code](https://code.visualstudio.com/)。
+若要更好地学习本教程，需要已完成联机入门教程，并且已安装 [.NET Core SDK](https://dotnet.microsoft.com/download) 和 [Visual Studio Code](https://code.visualstudio.com/)。

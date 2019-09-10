@@ -4,12 +4,12 @@ description: 本文介绍了 .NET Core SDK 和运行时的版本控制方式（�
 author: bleroy
 ms.date: 07/26/2018
 ms.custom: seodec18
-ms.openlocfilehash: dcf74f6fa892446555541f13a33130a93787cf70
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 4674cd8750f5a5e628945c1712ac579d88385b94
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70104959"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849286"
 ---
 # <a name="overview-of-how-net-core-is-versioned"></a>.NET Core 的版本控制方式概述
 
@@ -108,6 +108,6 @@ MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
 
 - [目标框架](../../standard/frameworks.md)
 - [.NET Core 分发打包](../build/distribution-packaging.md)
-- [.NET Core 支持生命周期简报](https://www.microsoft.com/net/core/support)
+- [.NET Core 支持生命周期简报](https://dotnet.microsoft.com/platform/support/policy)
 - [.NET Core 2 和版本绑定](https://github.com/dotnet/designs/issues/3)
 - [.NET Core 的 Docker 映像](https://hub.docker.com/_/microsoft-dotnet-core/)

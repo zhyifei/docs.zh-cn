@@ -4,12 +4,12 @@ description: .NET Core 是一种用于创建 Windows、Linux 和 Mac 应用的�
 author: richlander
 ms.date: 08/01/2018
 ms.custom: updateeachrelease
-ms.openlocfilehash: db4daa8c78a181f0599c4c75ccd31f46ee278e63
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 0007c1c6a9939c46f123535f9053ac1d4ced7266
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202835"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70848941"
 ---
 # <a name="net-core-guide"></a>.NET Core 指南
 
@@ -21,9 +21,9 @@ ms.locfileid: "70202835"
 
 ## <a name="download-net-core-22"></a>下载 .NET Core 2.2
 
-下载 [.NET Core 2.2 SDK](https://www.microsoft.com/net/download)，以尝试在 Windows、macOS 或 Linux 计算机上使用 .NET Core。 若要使用 Docker 容器，请访问 [dotnet/core](https://hub.docker.com/_/microsoft-dotnet-core/)。
+下载 [.NET Core 2.2 SDK](https://dotnet.microsoft.com/download)，以尝试在 Windows、macOS 或 Linux 计算机上使用 .NET Core。 若要使用 Docker 容器，请访问 [dotnet/core](https://hub.docker.com/_/microsoft-dotnet-core/)。
 
-若要使用其他版本 .NET Core，可以在 [.NET Core 下载内容](https://www.microsoft.com/net/download/archives)中找到所有版本 .NET Core。
+若要使用其他版本 .NET Core，可以在 [.NET Core 下载内容](https://dotnet.microsoft.com/download/dotnet-core)中找到所有版本 .NET Core。
 
 ## <a name="net-core-22"></a>.NET Core 2.2
 
@@ -46,7 +46,7 @@ Hello World!
 
 ## <a name="support"></a>支持
 
-[Microsoft 支持](https://www.microsoft.com/net/support/policy)在 Windows、macOS 和 Linux 上使用 .NET Core。 它每年会进行多次安全和质量更新（通常每月一次）。
+[Microsoft 支持](https://dotnet.microsoft.com/platform/support/policy)在 Windows、macOS 和 Linux 上使用 .NET Core。 它每年会进行多次安全和质量更新（通常每月一次）。
 
 .NET Core 二进制发行版是在 Azure 中的 Microsoft 维护服务器上进行生成和测试，并像其他任何 Microsoft 产品一样获得支持。
 
