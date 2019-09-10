@@ -3,12 +3,12 @@ title: 如何：使用 WIF 显示登录状态
 ms.date: 03/30/2017
 ms.assetid: 4d1174e4-5397-4962-9a5f-3b1ad7b3fc14
 author: BrucePerlerMS
-ms.openlocfilehash: e44dc80260e46b81ac723ada32085390a18a153a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d2500c6ded485fca76715425b9a52258e07be08d
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69945704"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851567"
 ---
 # <a name="how-to-display-signed-in-status-using-wif"></a>如何：使用 WIF 显示登录状态
 ## <a name="applies-to"></a>适用于  
@@ -99,7 +99,7 @@ ms.locfileid: "69945704"
   
 2. 在“Default.aspx”文件中，将现有标记替换为以下标记：  
   
-    ```  
+    ```aspx-csharp  
     <%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>  
   
     <!DOCTYPE html>  
@@ -153,4 +153,4 @@ ms.locfileid: "69945704"
   
 1. 在 Visual Studio 中，按“F5”开始调试应用程序。 如果未发现任何错误，将打开一个新的浏览器窗口。  
   
-2. 你可能会注意到，浏览器会以无提示方式将请求重定向到 STS，然后打开 Default.aspx 页。 如果 WIF 配置正确, 则会看到站点显示以下文本: **"您已登录"** 。
+2. 你可能会注意到，浏览器会以无提示方式将请求重定向到 STS，然后打开 Default.aspx 页。 如果 WIF 配置正确，则会看到站点显示以下文本： **"您已登录"** 。

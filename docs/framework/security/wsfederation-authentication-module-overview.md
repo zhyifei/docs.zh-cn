@@ -3,18 +3,18 @@ title: WSFederation 身份验证模块概述
 ms.date: 03/30/2017
 ms.assetid: 02c4d5e8-f0a7-49ee-9cf5-3647578510ad
 author: BrucePerlerMS
-ms.openlocfilehash: 9ade6b0d9e4aadb353ca148f868d548fbaacfbc3
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: eaf53a352238161ccec1b481649074d322954905
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69987706"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851512"
 ---
 # <a name="wsfederation-authentication-module-overview"></a>WSFederation 身份验证模块概述
 Windows Identity Foundation (WIF) 包括通过 WS-联合身份验证模块 (WS-FAM) 对 ASP.NET 应用程序中联合身份验证的支持。 本主题有助于理解联合身份验证的工作原理和使用方法。  
   
 ### <a name="overview-of-federated-authentication"></a>联合身份验证概述  
- 当两个信任域之间存在信任关系时，联合身份验证允许一个信任域中的安全令牌服务 (STS) 向另一个信任域中的 STS 提供身份验证信息。 下图显示了这种情况的示例:  
+ 当两个信任域之间存在信任关系时，联合身份验证允许一个信任域中的安全令牌服务 (STS) 向另一个信任域中的 STS 提供身份验证信息。 下图显示了这种情况的示例：  
   
  ![显示联合身份验证方案的关系图。](./media/wsfederation-authentication-module-overview/federated-authentication.gif)  
   
@@ -31,20 +31,20 @@ Windows Identity Foundation (WIF) 包括通过 WS-联合身份验证模块 (WS-F
 6. RP 从安全令牌中提取客户端声明并做出授权决策。  
   
 ### <a name="using-the-federated-authentication-module-with-aspnet"></a>将联合身份验证模块与 ASP.NET 搭配使用  
- <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>(FAM) 是一个 HTTP 模块, 可让你将联合身份验证添加到 ASP.NET 应用程序。 联合身份验证将身份验证逻辑交由 STS 处理，让你可以集中注意力编写业务逻辑。  
+ <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>（FAM）是一个 HTTP 模块，可让你将联合身份验证添加到 ASP.NET 应用程序。 联合身份验证将身份验证逻辑交由 STS 处理，让你可以集中注意力编写业务逻辑。  
   
  可以配置 WS-FAM 来指定未经身份验证的请求应重定向到的 STS。 使用 WIF，可采用两种方式对用户进行身份验证：  
   
-1. 被动重定向:如果未经身份验证的用户尝试访问受保护的资源, 而你只想将它们重定向到 STS 而不需要登录页, 则这是正确的方法。 STS 验证用户标识，并颁发包含适合该用户的声明的安全令牌。 此选项需要将 WS-FAM 添加到 HTTP 模块管道。 可以使用用于 Visual Studio 2012 的标识和访问工具修改应用程序配置文件，以便使用 WS FAM 以及与 STS 联合。 有关详细信息，请参阅[用于 Visual Studio 2012 的标识和访问工具](../../../docs/framework/security/identity-and-access-tool-for-vs.md)。  
+1. 被动重定向：如果未经身份验证的用户尝试访问受保护的资源，而你只想将它们重定向到 STS 而不需要登录页，则这是正确的方法。 STS 验证用户标识，并颁发包含适合该用户的声明的安全令牌。 此选项需要将 WS-FAM 添加到 HTTP 模块管道。 可以使用用于 Visual Studio 2012 的标识和访问工具修改应用程序配置文件，以便使用 WS FAM 以及与 STS 联合。 有关详细信息，请参阅[用于 Visual Studio 2012 的标识和访问工具](../../../docs/framework/security/identity-and-access-tool-for-vs.md)。  
   
 2. 对于信赖方应用程序中的登录页，可以从代码隐藏调用 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SignIn%2A?displayProperty=nameWithType> 方法或 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.RedirectToIdentityProvider%2A> 方法。  
   
  在被动重定向中，所有通信通过来自客户端（通常为浏览器）的响应/重定向执行。 可将 WS-FAM 添加到应用程序的 HTTP 管道，它将在管道中监视未经身份验证的用户请求并将用户重定向到指定的 STS。  
   
- FAM 还会引发若干事件, 使你可以在 ASP.NET 应用程序中自定义功能。  
+ FAM 还会引发若干事件，使你可以在 ASP.NET 应用程序中自定义功能。  
   
 ### <a name="how-the-ws-fam-works"></a>WS-FAM 的工作原理  
- WS-FAM 在 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> 类中实现。 通常, 会将 FAM 添加到 ASP.NET RP 应用程序的 HTTP 管道。 未经身份验证的用户尝试访问受保护资源时，RP 将返回 HTTP 响应“401 拒绝授权”。 WS-FAM 截获此响应，而不是让客户端接收它，然后将用户重定向到指定的 STS。 STS 颁发安全令牌，WS-FAM 再次将其截获。 FAM 使用令牌为经过身份验证的用户创建的实例<xref:System.Security.Claims.ClaimsPrincipal> , 这将启用常规 .NET Framework 授权机制才能工作。  
+ WS-FAM 在 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> 类中实现。 通常，会将 FAM 添加到 ASP.NET RP 应用程序的 HTTP 管道。 未经身份验证的用户尝试访问受保护资源时，RP 将返回 HTTP 响应“401 拒绝授权”。 WS-FAM 截获此响应，而不是让客户端接收它，然后将用户重定向到指定的 STS。 STS 颁发安全令牌，WS-FAM 再次将其截获。 FAM 使用令牌为经过身份验证的用户创建的实例<xref:System.Security.Claims.ClaimsPrincipal> ，这将启用常规 .NET Framework 授权机制才能工作。  
   
  因为 HTTP 无状态，所以需要一种方法来避免在每次用户尝试访问另一个受保护资源时重复上述过程。 这时 <xref:System.IdentityModel.Services.SessionAuthenticationModule> 便可派上用场。 当 STS 向用户颁发安全令牌时，<xref:System.IdentityModel.Services.SessionAuthenticationModule> 也会为该用户创建会话安全令牌并将其放置于 Cookie 中。 在后续请求中，<xref:System.IdentityModel.Services.SessionAuthenticationModule> 将截获此 Cookie 并使用它来重新构造用户的 <xref:System.Security.Claims.ClaimsPrincipal>。  
   
@@ -67,7 +67,7 @@ Windows Identity Foundation (WIF) 包括通过 WS-联合身份验证模块 (WS-F
   
 - ASP.NET 基础结构首次在派生于 <xref:System.IdentityModel.Services.HttpModuleBase> 的某个应用程序模块上调用 <xref:System.IdentityModel.Services.HttpModuleBase.Init%2A> 方法时将引发 <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfigurationCreated?displayProperty=nameWithType> 事件。 此方法访问静态 <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType> 属性，导致从 Web.config 文件加载配置。 仅在首次访问此属性时引发该事件。 可以通过事件处理程序中的 <xref:System.IdentityModel.Services.Configuration.FederationConfigurationCreatedEventArgs.FederationConfiguration%2A?displayProperty=nameWithType> 属性访问从配置中初始化的 <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> 对象。 可以在将配置应用到任何模块前使用此事件修改配置。 可以在 Application_Start 方法中为此事件添加处理程序：  
   
-    ```  
+    ```csharp
     void Application_Start(object sender, EventArgs e)  
     {  
         FederatedAuthentication.FederationConfigurationCreated += new EventHandler<FederationConfigurationCreatedEventArgs>(FederatedAuthentication_FederationConfigurationCreated);  

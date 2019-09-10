@@ -2,32 +2,32 @@
 title: 提供程序清单规范
 ms.date: 03/30/2017
 ms.assetid: bb450b47-8951-4f99-9350-26f05a4d4e46
-ms.openlocfilehash: 6b924f484e6635760d08d0eba9fb9436bdd8bc88
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: cc58bbc82f3930f087b5da0c64afb4f9f03e905b
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70248592"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854500"
 ---
 # <a name="provider-manifest-specification"></a>提供程序清单规范
 本节讨论数据存储提供程序如何可以支持数据存储中的类型和功能。  
   
  实体服务独立于特定的数据存储提供程序进行操作，但仍允许数据提供程序显式定义模型、映射和查询与基础数据存储进行交互的方式。 由于没有抽象层，只能在特定的数据存储或数据提供程序中以实体服务为目标。  
   
- 提供程序支持的类型由基础数据库直接或间接地提供支持。 这些类型不一定严格要求是存储类型，但提供程序使用这些类型支持[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]。 提供程序/存储类型在实体数据模型 (EDM) 条目中进行了说明。  
+ 提供程序支持的类型由基础数据库直接或间接地提供支持。 这些类型不一定是精确的存储类型，而是提供程序用于支持实体框架的类型。 提供程序/存储类型在实体数据模型 (EDM) 条目中进行了说明。  
   
  在 EDM 条目中指定了数据存储支持的函数的参数和返回类型。  
   
 ## <a name="requirements"></a>要求  
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]和数据存储需要能够在已知类型中往返传递数据，而且不丢失或截断任何数据。  
+ 实体框架和数据存储需要能够在已知类型中来回传递数据，而不会发生任何数据丢失或截断。  
   
  提供程序清单必须可由工具在设计时加载，而不必打开与数据存储的连接。  
   
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]区分大小写，但基础数据存储可能不是。 当在清单中定义和使用 EDM 项目（例如标识符和类型名称）时，这些项目必须使用[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]大小写区分。 如果可能区分大小写的数据存储元素出现在提供程序的清单中，则在提供程序清单中需要维持大小写区分。  
+ 实体框架区分大小写，但基础数据存储可能不是。 当在清单中定义和使用 EDM 项目（例如，标识符和类型名称）时，它们必须使用实体框架区分大小写。 如果可能区分大小写的数据存储元素出现在提供程序的清单中，则在提供程序清单中需要维持大小写区分。  
   
- 对于所有数据提供程序，[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]均需要一个提供程序清单。 如果尝试使用的提供程序不具有具有的[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]提供程序清单，则会出现错误。  
+ 实体框架需要所有数据提供程序的提供程序清单。 如果尝试使用的提供程序不具有具有实体框架的提供程序清单，则会出现错误。  
   
- 下表描述了在提供程序交互过程中引发异常时，[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]将引发的异常的种类。  
+ 下表描述了当通过提供程序交互引发异常时实体框架将引发的异常的种类：  
   
 |问题|例外|  
 |-----------|---------------|  
@@ -39,7 +39,7 @@ ms.locfileid: "70248592"
  提供程序应支持下面的方案：  
   
 ### <a name="writing-a-provider-with-symmetric-type-mapping"></a>使用对称类型映射编写提供程序  
- 您可以编写的提供程序[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] ，其中每个商店类型映射到单个 EDM 类型，而不考虑映射方向。 对于具有非常简单的映射（与 EDM 类型对应）的提供程序类型，您可以使用对称解决方案，因为此类型系统很简单或者匹配 EDM 类型。  
+ 您可以为实体框架编写提供程序，其中每个商店类型都映射到单个 EDM 类型，而不考虑映射方向。 对于具有非常简单的映射（与 EDM 类型对应）的提供程序类型，您可以使用对称解决方案，因为此类型系统很简单或者匹配 EDM 类型。  
   
  您可以利用提供程序的域的简单性，生成一个静态声明性提供程序清单。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "70248592"
 - 提供程序支持的函数列表，其中的参数和返回类型用 EDM 术语表示。  
   
 ### <a name="writing-a-provider-with-asymmetric-type-mapping"></a>使用非对称类型映射编写提供程序  
- 在编写[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]的数据存储提供程序时，某些类型的 EDM 到提供程序的类型映射可能与提供程序到 EDM 的类型映射不同。 例如，无限制的 EDM PrimitiveTypeKind.String 可能会映射到提供程序上的 nvarchar(4000)，而 nvarchar(4000) 将映射到 EDM PrimitiveTypeKind.String(MaxLength=4000)。  
+ 写入实体框架的数据存储提供程序时，某些类型的 EDM 到提供程序类型的映射可能不同于提供程序到 EDM 的类型映射。 例如，无限制的 EDM PrimitiveTypeKind.String 可能会映射到提供程序上的 nvarchar(4000)，而 nvarchar(4000) 将映射到 EDM PrimitiveTypeKind.String(MaxLength=4000)。  
   
  编写具有两部分的 XML 文件：  
   
@@ -256,7 +256,7 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
 ###### <a name="function-node"></a>Function 节点  
  每个 Function 定义一个可通过提供程序使用的函数。  
   
-|特性名|数据类型|必填|Default Value|描述|  
+|特性名|数据类型|必需|Default Value|描述|  
 |--------------------|---------------|--------------|-------------------|-----------------|  
 |name|String|是|n/a|函数的标识符/名称|  
 |ReturnType|String|No|Void|函数的 EDM 返回类型|  
@@ -270,7 +270,7 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
   
  每个函数都具有包含一个或多个 Parameter 节点的集合。  
   
-|特性名|数据类型|必需|Default Value|描述|  
+|特性名|数据类型|必填|Default Value|描述|  
 |--------------------|---------------|--------------|-------------------|-----------------|  
 |name|String|是|n/a|参数的标识符/名称。|  
 |类型|String|是|n/a|参数的 EDM 类型。|  

@@ -2,20 +2,21 @@
 title: <namespaceTable>
 ms.date: 03/30/2017
 ms.assetid: 64801766-01b7-4c65-9ce6-70ad5af67689
-ms.openlocfilehash: 0316e983446644671ead2f8f843dc91b493b29c9
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: aefe7beec7335d80341e670961800907c2bd0200
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69933170"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855096"
 ---
 # <a name="namespacetable"></a>\<namespaceTable>
 
 表示用于定义一组元素的配置节，这些元素包含随后可在 XPath 筛选器中用于路由的前缀映射的命名空间。
 
-**\<system.serviceModel>**    
-&nbsp;&nbsp; **\<routing>**    
-&nbsp;&nbsp;&nbsp;&nbsp; **\<namespaceTable>**
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<路由 >** ](routing.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<namespaceTable >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -48,7 +49,7 @@ ms.locfileid: "69933170"
 
 |     | 描述 |
 | --- | ----------- |
-| [ **\<routing>** ](routing.md) | 表示用于定义一组路由筛选器的配置节, 这些筛选器确定计算传入消息时要<xref:System.ServiceModel.Dispatcher.MessageFilter>使用的 Windows Communication Foundation (WCF) 的类型, 以及用于定义目标终结点的路由表。当筛选器匹配时向发送消息。 |
+| [ **\<routing>** ](routing.md) | 表示用于定义一组路由筛选器的配置节，这些筛选器确定计算传入消息时要<xref:System.ServiceModel.Dispatcher.MessageFilter>使用的 Windows Communication Foundation （WCF）的类型，以及用于定义目标终结点的路由表。当筛选器匹配时向发送消息。 |
 
 ## <a name="see-also"></a>请参阅
 

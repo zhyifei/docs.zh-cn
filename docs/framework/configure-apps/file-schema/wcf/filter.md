@@ -2,18 +2,21 @@
 title: <filter>
 ms.date: 03/30/2017
 ms.assetid: 3266700b-904b-44e4-93a7-e06a1a445100
-ms.openlocfilehash: 68de255b9f11dc4377159d1cc3efa575633db316
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6e78275aaeb202405e327302455d56fa431d7f27
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69918897"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855258"
 ---
 # <a name="filter"></a>\<filter>
 
-定义一个路由筛选器, 该筛选器确定要在评估传入<xref:System.ServiceModel.Dispatcher.MessageFilter>消息时使用的 Windows Communication Foundation (WCF) 的类型, 以及筛选器所需的任何支持数据或参数。
+定义一个路由筛选器，该筛选器确定要在评估传入<xref:System.ServiceModel.Dispatcher.MessageFilter>消息时使用的 Windows Communication Foundation （WCF）的类型，以及筛选器所需的任何支持数据或参数。
 
-\<system.serviceModel> \<routing> \<filters> \<filter>
+[ **\<system.serviceModel>** ](system-servicemodel.md)\
+&nbsp;&nbsp;[ **\<routing>** ](routing.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<筛选器 >** ](filters-of-routing.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<筛选 >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,7 +39,7 @@ ms.locfileid: "69918897"
 
 | 特性  | 描述 |
 | ---------- | ----------- |
-| customType | 一个字符串，包含要用作筛选器的自定义类型的完全限定类型名称。 如果`filterType`设置为`custom`, 则此特性包含要创建的类的完全限定类型名称。  `filterData`还可以包含在计算自定义类型筛选器的过程中要使用的值。 |
+| customType | 一个字符串，包含要用作筛选器的自定义类型的完全限定类型名称。 如果`filterType`设置为`custom`，则此特性包含要创建的类的完全限定类型名称。  `filterData`还可以包含在计算自定义类型筛选器的过程中要使用的值。 |
 | filterData | 一个包含筛选器数据的字符串。 有关如何指定此特性的更多信息，请参见 <xref:System.ServiceModel.Routing.Configuration.FilterElement.FilterData%2A>。 |
 | filterType | 一个包含筛选器类型的字符串。 此特性的类型为 <xref:System.ServiceModel.Routing.Configuration.FilterType>。  有关如何使用此 `filterData` 特性的更多信息，请参见 <xref:System.ServiceModel.Routing.Configuration.FilterElement.FilterData%2A>。 |
 | NAME       | 一个字符串，包含此筛选器元素的唯一名称。 |
@@ -49,7 +52,7 @@ ms.locfileid: "69918897"
 
 | 元素 | 描述 |
 | ------- | ----------- |
-| [\<routing>](routing.md) | 用于定义一组路由筛选器的配置节, 这些筛选器确定计算传入消息时使用<xref:System.ServiceModel.Dispatcher.MessageFilter>的 Windows Communication Foundation (WCF) 的类型。 |
+| [\<routing>](routing.md) | 用于定义一组路由筛选器的配置节，这些筛选器确定计算传入消息时使用<xref:System.ServiceModel.Dispatcher.MessageFilter>的 Windows Communication Foundation （WCF）的类型。 |
 
 ## <a name="see-also"></a>请参阅
 

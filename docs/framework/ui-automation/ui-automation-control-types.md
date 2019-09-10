@@ -7,62 +7,66 @@ helpviewer_keywords:
 - UI Automation, control types
 - control types, UI Automation
 ms.assetid: 261dcc59-3a62-4e40-91dd-63ff9d2241c0
-ms.openlocfilehash: 54a2157d469acad6d20a44afe72432138894cfe8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: b2059258445cf4dfe5ad9c2de1011e96db270e30
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59116098"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851259"
 ---
 # <a name="ui-automation-control-types"></a>UI 自动化控件类型
-**请注意**本文档适用于.NET Framework 开发人员想要使用的托管[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]中定义的类<xref:System.Windows.Automation>命名空间。 有关最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，请参阅[Windows 自动化 API:UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
-  
- 本部分包含有关对中的控件类型的支持信息[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]。  
-  
-## <a name="in-this-section"></a>本节内容  
- [UI 自动化控件类型概述](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)  
- [UI 自动化对 Button 控件类型的支持](../../../docs/framework/ui-automation/ui-automation-support-for-the-button-control-type.md)  
- [UI 自动化对 Calendar 控件类型的支持](../../../docs/framework/ui-automation/ui-automation-support-for-the-calendar-control-type.md)  
- [UI 自动化对 CheckBox 控件类型的支持](../../../docs/framework/ui-automation/ui-automation-support-for-the-checkbox-control-type.md)  
- [UI 自动化对 ComboBox 控件类型的支持](../../../docs/framework/ui-automation/ui-automation-support-for-the-combobox-control-type.md)  
- [UI 自动化对 DataGrid 控件类型的支持](../../../docs/framework/ui-automation/ui-automation-support-for-the-datagrid-control-type.md)  
- [UI 自动化对 DataItem 控件类型的支持](../../../docs/framework/ui-automation/ui-automation-support-for-the-dataitem-control-type.md)  
- [UI 自动化对 Document 控件类型的支持](../../../docs/framework/ui-automation/ui-automation-support-for-the-document-control-type.md)  
- [UI 自动化对 Edit 控件类型的支持](../../../docs/framework/ui-automation/ui-automation-support-for-the-edit-control-type.md)  
- [UI 自动化对 Group 控件类型的支持](../../../docs/framework/ui-automation/ui-automation-support-for-the-group-control-type.md)  
- [UI 自动化对 Header 控件类型的支持](../../../docs/framework/ui-automation/ui-automation-support-for-the-header-control-type.md)  
- [UI 自动化对 HeaderItem 控件类型的支持](../../../docs/framework/ui-automation/ui-automation-support-for-the-headeritem-control-type.md)  
- [UI 自动化对 Hyperlink 控件类型的支持](../../../docs/framework/ui-automation/ui-automation-support-for-the-hyperlink-control-type.md)  
- [UI 自动化对 Image 控件类型的支持](../../../docs/framework/ui-automation/ui-automation-support-for-the-image-control-type.md)  
- [UI 自动化对 List 控件类型的支持](../../../docs/framework/ui-automation/ui-automation-support-for-the-list-control-type.md)  
- [UI 自动化对 ListItem 控件类型的支持](../../../docs/framework/ui-automation/ui-automation-support-for-the-listitem-control-type.md)  
- [UI 自动化对 Menu 控件类型的支持](../../../docs/framework/ui-automation/ui-automation-support-for-the-menu-control-type.md)  
- [UI 自动化对 MenuBar 控件类型的支持](../../../docs/framework/ui-automation/ui-automation-support-for-the-menubar-control-type.md)  
- [UI 自动化对 MenuItem 控件类型的支持](../../../docs/framework/ui-automation/ui-automation-support-for-the-menuitem-control-type.md)  
- [UI 自动化对 Pane 控件类型的支持](../../../docs/framework/ui-automation/ui-automation-support-for-the-pane-control-type.md)  
- [UI 自动化对 ProgressBar 控件类型的支持](../../../docs/framework/ui-automation/ui-automation-support-for-the-progressbar-control-type.md)  
- [UI 自动化对 RadioButton 控件类型的支持](../../../docs/framework/ui-automation/ui-automation-support-for-the-radiobutton-control-type.md)  
- [UI 自动化对 ScrollBar 控件类型的支持](../../../docs/framework/ui-automation/ui-automation-support-for-the-scrollbar-control-type.md)  
- [UI 自动化对 Separator 控件类型的支持](../../../docs/framework/ui-automation/ui-automation-support-for-the-separator-control-type.md)  
- [UI 自动化对 Slider 控件类型的支持](../../../docs/framework/ui-automation/ui-automation-support-for-the-slider-control-type.md)  
- [UI 自动化对 Spinner 控件类型的支持](../../../docs/framework/ui-automation/ui-automation-support-for-the-spinner-control-type.md)  
- [UI 自动化对 SplitButton 控件类型的支持](../../../docs/framework/ui-automation/ui-automation-support-for-the-splitbutton-control-type.md)  
- [UI 自动化对 StatusBar 控件类型的支持](../../../docs/framework/ui-automation/ui-automation-support-for-the-statusbar-control-type.md)  
- [UI 自动化对 Tab 控件类型的支持](../../../docs/framework/ui-automation/ui-automation-support-for-the-tab-control-type.md)  
- [UI 自动化对 TabItem 控件类型的支持](../../../docs/framework/ui-automation/ui-automation-support-for-the-tabitem-control-type.md)  
- [UI 自动化对 Table 控件类型的支持](../../../docs/framework/ui-automation/ui-automation-support-for-the-table-control-type.md)  
- [UI 自动化对 Text 控件类型的支持](../../../docs/framework/ui-automation/ui-automation-support-for-the-text-control-type.md)  
- [UI 自动化对 Thumb 控件类型的支持](../../../docs/framework/ui-automation/ui-automation-support-for-the-thumb-control-type.md)  
- [UI 自动化对 TitleBar 控件类型的支持](../../../docs/framework/ui-automation/ui-automation-support-for-the-titlebar-control-type.md)  
- [UI 自动化对 ToolBar 控件类型的支持](../../../docs/framework/ui-automation/ui-automation-support-for-the-toolbar-control-type.md)  
- [UI 自动化对 ToolTip 控件类型的支持](../../../docs/framework/ui-automation/ui-automation-support-for-the-tooltip-control-type.md)  
- [UI 自动化对 Tree 控件类型的支持](../../../docs/framework/ui-automation/ui-automation-support-for-the-tree-control-type.md)  
- [UI 自动化对 TreeItem 控件类型的支持](../../../docs/framework/ui-automation/ui-automation-support-for-the-treeitem-control-type.md)  
- [UI 自动化对 Window 控件类型的支持](../../../docs/framework/ui-automation/ui-automation-support-for-the-window-control-type.md)  
-  
-## <a name="reference"></a>参考  
- <xref:System.Windows.Automation.ControlType>  
-  
+
+> [!NOTE]
+> 本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关的最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], 请[参阅 Windows 自动化 API:UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。
+
+本部分包含有关中[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]的控件类型支持的信息。
+
+## <a name="in-this-section"></a>本节内容
+
+- [UI 自动化控件类型概述](ui-automation-control-types-overview.md)
+- [UI 自动化对 Button 控件类型的支持](ui-automation-support-for-the-button-control-type.md)
+- [UI 自动化对 Calendar 控件类型的支持](ui-automation-support-for-the-calendar-control-type.md)
+- [UI 自动化对 CheckBox 控件类型的支持](ui-automation-support-for-the-checkbox-control-type.md)
+- [UI 自动化对 ComboBox 控件类型的支持](ui-automation-support-for-the-combobox-control-type.md)
+- [UI 自动化对 DataGrid 控件类型的支持](ui-automation-support-for-the-datagrid-control-type.md)
+- [UI 自动化对 DataItem 控件类型的支持](ui-automation-support-for-the-dataitem-control-type.md)
+- [UI 自动化对 Document 控件类型的支持](ui-automation-support-for-the-document-control-type.md)
+- [UI 自动化对 Edit 控件类型的支持](ui-automation-support-for-the-edit-control-type.md)
+- [UI 自动化对 Group 控件类型的支持](ui-automation-support-for-the-group-control-type.md)
+- [UI 自动化对 Header 控件类型的支持](ui-automation-support-for-the-header-control-type.md)
+- [UI 自动化对 HeaderItem 控件类型的支持](ui-automation-support-for-the-headeritem-control-type.md)
+- [UI 自动化对 Hyperlink 控件类型的支持](ui-automation-support-for-the-hyperlink-control-type.md)
+- [UI 自动化对 Image 控件类型的支持](ui-automation-support-for-the-image-control-type.md)
+- [UI 自动化对 List 控件类型的支持](ui-automation-support-for-the-list-control-type.md)
+- [UI 自动化对 ListItem 控件类型的支持](ui-automation-support-for-the-listitem-control-type.md)
+- [UI 自动化对 Menu 控件类型的支持](ui-automation-support-for-the-menu-control-type.md)
+- [UI 自动化对 MenuBar 控件类型的支持](ui-automation-support-for-the-menubar-control-type.md)
+- [UI 自动化对 MenuItem 控件类型的支持](ui-automation-support-for-the-menuitem-control-type.md)
+- [UI 自动化对 Pane 控件类型的支持](ui-automation-support-for-the-pane-control-type.md)
+- [UI 自动化对 ProgressBar 控件类型的支持](ui-automation-support-for-the-progressbar-control-type.md)
+- [UI 自动化对 RadioButton 控件类型的支持](ui-automation-support-for-the-radiobutton-control-type.md)
+- [UI 自动化对 ScrollBar 控件类型的支持](ui-automation-support-for-the-scrollbar-control-type.md)
+- [UI 自动化对 Separator 控件类型的支持](ui-automation-support-for-the-separator-control-type.md)
+- [UI 自动化对 Slider 控件类型的支持](ui-automation-support-for-the-slider-control-type.md)
+- [UI 自动化对 Spinner 控件类型的支持](ui-automation-support-for-the-spinner-control-type.md)
+- [UI 自动化对 SplitButton 控件类型的支持](ui-automation-support-for-the-splitbutton-control-type.md)
+- [UI 自动化对 StatusBar 控件类型的支持](ui-automation-support-for-the-statusbar-control-type.md)
+- [UI 自动化对 Tab 控件类型的支持](ui-automation-support-for-the-tab-control-type.md)
+- [UI 自动化对 TabItem 控件类型的支持](ui-automation-support-for-the-tabitem-control-type.md)
+- [UI 自动化对 Table 控件类型的支持](ui-automation-support-for-the-table-control-type.md)
+- [UI 自动化对 Text 控件类型的支持](ui-automation-support-for-the-text-control-type.md)
+- [UI 自动化对 Thumb 控件类型的支持](ui-automation-support-for-the-thumb-control-type.md)
+- [UI 自动化对 TitleBar 控件类型的支持](ui-automation-support-for-the-titlebar-control-type.md)
+- [UI 自动化对 ToolBar 控件类型的支持](ui-automation-support-for-the-toolbar-control-type.md)
+- [UI 自动化对 ToolTip 控件类型的支持](ui-automation-support-for-the-tooltip-control-type.md)
+- [UI 自动化对 Tree 控件类型的支持](ui-automation-support-for-the-tree-control-type.md)
+- [UI 自动化对 TreeItem 控件类型的支持](ui-automation-support-for-the-treeitem-control-type.md)
+- [UI 自动化对 Window 控件类型的支持](ui-automation-support-for-the-window-control-type.md)
+
+## <a name="reference"></a>参考
+
+<xref:System.Windows.Automation.ControlType>
+
 ## <a name="see-also"></a>请参阅
 
-- [UI 自动化控件模式](../../../docs/framework/ui-automation/ui-automation-control-patterns.md)
+- [UI 自动化控件模式](ui-automation-control-patterns.md)

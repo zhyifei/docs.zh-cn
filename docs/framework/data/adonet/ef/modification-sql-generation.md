@@ -2,12 +2,12 @@
 title: 修改 SQL 生成
 ms.date: 03/30/2017
 ms.assetid: 2188a39d-46ed-4a8b-906a-c9f15e6fefd1
-ms.openlocfilehash: ab0c18473e73b2d6fe9eb45c43e9b47947a55d99
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 94b6c3c97e8255db2dc4d72bae6c6c12905d9710
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70248573"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854292"
 ---
 # <a name="modification-sql-generation"></a>修改 SQL 生成
 
@@ -27,7 +27,7 @@ DbModificationCommandTree 是继承自 DbCommandTree 的修改 DML 操作（插�
 
 - DbDeleteCommandTree
 
-由生成的 DbModificationCommandTree 及其实现[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]始终表示单个行操作。 本节将介绍这些类型及其在 .NET Framework 版本 3.5 中的约束。
+实体框架生成的 DbModificationCommandTree 及其实现始终表示单个行操作。 本节将介绍这些类型及其在 .NET Framework 版本 3.5 中的约束。
 
 ![关系图](./media/558ba7b3-dd19-48d0-b91e-30a76415bf5f.gif "558ba7b3-dd19-48d0-b91e-30a76415bf5f")
 
@@ -90,7 +90,7 @@ Predicate 指定用于确定应更新或删除目标集合中的哪些成员的�
 
 ## <a name="modification-sql-generation-in-the-sample-provider"></a>示例提供程序中的修改 SQL 生成
 
-[实体框架示例提供程序](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0)演示了支持的[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]ADO.NET 数据提供程序的组件。 该示例提供程序以 SQL Server 2005 数据库为目标，并在 System.Data.SqlClient ADO.NET 2.0 数据提供程序之上作为一个包装实现。
+[实体框架示例提供程序](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0)演示支持实体框架的 ADO.NET 数据提供程序的组件。 该示例提供程序以 SQL Server 2005 数据库为目标，并在 System.Data.SqlClient ADO.NET 2.0 数据提供程序之上作为一个包装实现。
 
 该示例提供程序的修改 SQL 生成模块（位于 SQL Generation\DmlSqlGenerator.cs 文件中）采用一个输入 DbModificationCommandTree，并且生成可能带有 SELECT 语句的单个修改 SQL 语句以返回一个读取器（如果 DbModificationCommandTree 指定了读取器）。 请注意，生成的命令的形式受目标 SQL Server 数据库影响。
 

@@ -2,12 +2,12 @@
 title: 规范函数
 ms.date: 03/30/2017
 ms.assetid: bbcc9928-36ea-4dff-9e31-96549ffed958
-ms.openlocfilehash: 8949735ba4712b721460335b4579f0a268c91aea
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: f8ca9e2027e82db89e91287fda02d2014d53f325
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251278"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854512"
 ---
 # <a name="canonical-functions"></a>规范函数
 本节讨论所有数据提供程序支持的并可由所有查询技术使用的规范函数。 规范函数不能由提供程序扩展。  
@@ -18,9 +18,9 @@ ms.locfileid: "70251278"
   
  当在 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 查询中使用规范函数时，将在数据源中调用适当的函数。  
   
- 所有规范函数都同时显式指定 null 输入行为和错误条件。 存储提供程序应遵循此行为，但 [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] 不强制执行此行为。  
+ 所有规范函数都同时显式指定 null 输入行为和错误条件。 存储提供程序应符合该行为，但实体框架不强制执行此行为。  
   
- 对于 LINQ 方案，对 [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] 所执行的查询涉及将 CLR 方法映射到基础数据源中的方法。 CLR 方法映射到规范函数，这样，无论数据源如何，特定的方法集都会正确映射。  
+ 对于 LINQ 方案，针对实体框架的查询涉及将 CLR 方法映射到基础数据源中的方法。 CLR 方法映射到规范函数，这样，无论数据源如何，特定的方法集都会正确映射。  
   
 ## <a name="canonical-functions-namespace"></a>规范函数命名空间  
  规范函数的命名空间是 <xref:System.Data.Metadata.Edm>。 <xref:System.Data.Metadata.Edm> 命名空间自动包含在所有查询中。 但如果导入的另一个命名空间包含与规范函数（在 <xref:System.Data.Metadata.Edm> 命名空间中）同名的函数，则必须指定命名空间。  

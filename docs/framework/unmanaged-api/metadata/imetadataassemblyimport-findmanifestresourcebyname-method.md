@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bf61da362251577acadb83915404eba7508b3099
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: aaaae5bda88d1fbc9949a080c5765127fd112bde
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61905055"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855950"
 ---
 # <a name="imetadataassemblyimportfindmanifestresourcebyname-method"></a>IMetaDataAssemblyImport::FindManifestResourceByName 方法
-获取一个指针指向清单资源具有指定名称。  
+获取一个指针，该指针指向具有指定名称的清单资源。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp
 HRESULT FindManifestResourceByName (  
     [in]  LPCWSTR                szName,   
     [out] mdManifestResource     *ptkManifestResource  
@@ -38,22 +38,22 @@ HRESULT FindManifestResourceByName (
   
 ## <a name="parameters"></a>参数  
  `szName`  
- [in]资源的名称。  
+ 中资源的名称。  
   
  `ptkManifestResource`  
- [out]用于存储数组`mdManifestResource`元数据标记，其中每个表示清单资源。  
+ 弄用于存储`mdManifestResource`元数据标记的数组，其中每个标记表示一个清单资源。  
   
 ## <a name="remarks"></a>备注  
- `FindManifestResourceByName`方法使用由公共语言运行时解析引用的标准规则。  
+ `FindManifestResourceByName`方法使用公共语言运行时所使用的标准规则来解析引用。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **标头：** Cor  
   
- **库：** 用作 MsCorEE.dll 中的资源  
+ **类库**用作 Mscoree.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

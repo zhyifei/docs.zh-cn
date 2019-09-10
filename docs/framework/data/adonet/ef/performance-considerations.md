@@ -2,12 +2,12 @@
 title: 性能注意事项（实体框架）
 ms.date: 03/30/2017
 ms.assetid: 61913f3b-4f42-4d9b-810f-2a13c2388a4a
-ms.openlocfilehash: 99969d7991f613bd8049aac81669583372e0f2c6
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: eb46b183ec1e930dfe5c4a1eea237024033c357d
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70248518"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854602"
 ---
 # <a name="performance-considerations-entity-framework"></a>性能注意事项（实体框架）
 本主题介绍 ADO.NET 实体框架的性能特征，并提供一些注意事项帮助改善实体框架应用程序的性能。  
@@ -18,7 +18,7 @@ ms.locfileid: "70248518"
 |操作|相对成本|频率|注释|  
 |---------------|-------------------|---------------|--------------|  
 |加载元数据|中等|在每个应用程序域中一次。|实体框架使用的模型和映射元数据加载到 <xref:System.Data.Metadata.Edm.MetadataWorkspace> 中。 此元数据全局缓存，并可用于同一个应用程序域中的其他 <xref:System.Data.Objects.ObjectContext> 实例。|  
-|打开数据库连接|中等<sup>1</sup>|根据需要。|由于与数据库的开放式连接[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]会占用宝贵的资源，因此，只会根据需要打开和关闭数据库连接。 还可以显式打开连接。 有关详细信息，请参阅[管理连接和事务](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))。|  
+|打开数据库连接|中等<sup>1</sup>|根据需要。|由于与数据库的开放式连接会占用宝贵的资源，因此实体框架会根据需要打开和关闭数据库连接。 还可以显式打开连接。 有关详细信息，请参阅[管理连接和事务](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))。|  
 |生成视图|高|在每个应用程序域中一次。 （可以预生成。）|在实体框架可以针对概念模型执行查询或将更改保存到数据源之前，它必须生成一组本地查询视图才能访问数据库。 由于生成这些视图会产生很高的成本，因此，您可以在设计时预生成视图并将它们添加到项目。 有关详细信息，请参阅[如何：预生成视图以提高查询性能](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896240(v=vs.100))。|  
 |准备查询|中等<sup>2</sup>|每个唯一查询一次。|包括编写查询命令、基于模型和映射元数据生成命令树和定义所返回数据的形状的成本。 因为实体 SQL查询命令和 LINQ 查询现已缓存，所以，以后执行相同查询所需的时间较少。 您仍可以使用已编译的 LINQ 查询来降低后续执行中的这一开销，编译的查询比自动缓存的 LINQ 查询效率更高。 有关详细信息，请参阅[已编译的查询（LINQ to Entities）](./language-reference/compiled-queries-linq-to-entities.md)。 有关 LINQ 查询执行的常规信息，请参阅[LINQ to Entities](./language-reference/linq-to-entities.md)。 **注意：** 不自动缓存将 `Enumerable.Contains` 运算符应用到内存中集合的 LINQ to Entities 查询。 此外，不允许在已编译的 LINQ 查询中参数化内存中的集合。|  
 |执行查询|低<sup>2</sup>|每个查询一次。|使用 ADO.NET 数据提供程序对数据源执行命令的成本。 因为大多数数据源缓存查询计划，所以，以后执行相同查询所需的时间可能较少。|  
@@ -116,7 +116,7 @@ ms.locfileid: "70248518"
   
 - 具有对 SQL Server 2000 数据库执行的操作的显式事务，或始终将显式事务提升到 DTC 的其他数据源。  
   
-- 当连接由[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]管理时，具有对 SQL Server 2005 执行的操作的显式事务。 因为只要在单个事务中关闭并重新打开连接，SQL Server 2005 就会提升到 DTC（这是[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]的默认行为），所以会发生上述情况。 当使用 SQL Server 2008 时，不会发生这种 DTC 提升的现象。 为了避免在使用 SQL Server 2005 时出现此提升，必须在事务中显式打开和关闭连接。 有关详细信息，请参阅[管理连接和事务](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))。  
+- 当通过实体框架管理连接时，具有针对 SQL Server 2005 的操作的显式事务。 出现这种情况的原因是，每当关闭并在单个事务中重新打开连接时，SQL Server 2005 升级到 DTC，这是实体框架的默认行为。 当使用 SQL Server 2008 时，不会发生这种 DTC 提升的现象。 为了避免在使用 SQL Server 2005 时出现此提升，必须在事务中显式打开和关闭连接。 有关详细信息，请参阅[管理连接和事务](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))。  
   
  当在 <xref:System.Transactions> 事务内执行了一个或多个操作时，将使用显式事务。 有关详细信息，请参阅[管理连接和事务](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))。  
   
@@ -142,7 +142,7 @@ ms.locfileid: "70248518"
  在大多数情况下，应在 <xref:System.Data.Objects.ObjectContext> 语句（在 Visual Basic 中为 `using`）内创建一个 `Using…End Using` 实例。 这样，通过确保当代码退出语句块时自动释放与对象上下文关联的资源，可以提高性能。 但是，当控制权绑定到由对象上下文管理的对象时，只要需要绑定并手动释放它，就应维护 <xref:System.Data.Objects.ObjectContext> 实例。 有关详细信息，请参阅[管理连接和事务](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))。  
   
 #### <a name="consider-opening-the-database-connection-manually"></a>考虑手动打开数据库连接  
- 当应用程序执行一系列对象查询或频繁调用<xref:System.Data.Objects.ObjectContext.SaveChanges%2A>来持续对数据源执行创建、更新和删除操作时[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] ，必须持续打开并关闭与数据源的连接。 在这类情况下，请考虑在开始这些操作时手动打开连接，并在操作完成后关闭或释放连接。 有关详细信息，请参阅[管理连接和事务](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))。  
+ 当应用程序执行一系列对象查询或频繁调用<xref:System.Data.Objects.ObjectContext.SaveChanges%2A>来持续对数据源执行创建、更新和删除操作时，实体框架必须连续打开并关闭与数据源的连接。 在这类情况下，请考虑在开始这些操作时手动打开连接，并在操作完成后关闭或释放连接。 有关详细信息，请参阅[管理连接和事务](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))。  
   
 ## <a name="performance-data"></a>性能数据  
  [ADO.NET 团队博客](https://go.microsoft.com/fwlink/?LinkId=91905)上的以下文章中发布了实体框架的一些性能数据：  

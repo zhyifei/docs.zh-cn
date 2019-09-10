@@ -2,18 +2,18 @@
 title: 编写实体框架数据提供程序
 ms.date: 03/30/2017
 ms.assetid: 092e88c4-a301-453a-b5c3-5740c6575a9f
-ms.openlocfilehash: 6c5e6e2859b48db6c982862381d223a4c9deb2c5
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 29aa8cb1c6b31d9ada6b01860d76bcf03d37416c
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70248193"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854158"
 ---
 # <a name="writing-an-entity-framework-data-provider"></a>编写实体框架数据提供程序
-本节讨论如何编写[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]提供程序以支持除 SQL Server 之外的数据源。 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]包括支持 SQL Server 的访问接口。  
+本部分讨论如何编写实体框架提供程序以支持除 SQL Server 之外的数据源。 实体框架包含支持 SQL Server 的访问接口。  
   
 ## <a name="introducing-the-entity-framework-provider-model"></a>实体框架提供程序模型简介  
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]是独立于数据库的，您可以使用 ADO.NET 提供程序模型编写提供程序以连接到不同的数据源集。  
+ 实体框架是独立于数据库的，你可以使用 ADO.NET 提供程序模型来编写提供程序，以便连接到一组不同的数据源。  
   
  实体框架数据提供程序（通过使用 ADO.NET 数据提供程序模型构建）具有下列功能：  
   
@@ -21,9 +21,9 @@ ms.locfileid: "70248193"
   
 - 公开提供程序特定的函数。  
   
-- 为给定 DbQueryCommandTree 生成提供程序特定的命令以支持[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]查询。  
+- 为给定的 DbQueryCommandTree 生成特定于提供程序的命令，以支持实体框架查询。  
   
-- 为给定 DbModificationCommandTree 生成提供程序特定的更新命令以支持[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]中的更新。  
+- 为给定 DbModificationCommandTree 生成特定于提供程序的更新命令，以支持通过实体框架更新。  
   
 - 公开存储架构定义的映射文件以支持基于数据库的模型生成。  
   
@@ -32,7 +32,7 @@ ms.locfileid: "70248193"
  ![b42a7a5c&#45;0ac0&#45;4911&#45;86be&#45;0460a78760ba](./media/b42a7a5c-0ac0-4911-86be-0460a78760ba.gif "b42a7a5c-0ac0-4911-86be-0460a78760ba")  
   
 ## <a name="sample"></a>示例  
- 有关支持除 SQL Server 之外的数据源的[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]提供程序的示例，请参阅[实体框架示例提供程序](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0)。  
+ 有关支持除 SQL Server 之外的数据源的实体框架提供程序的示例，请参阅[实体框架示例提供程序](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0)。  
   
 ## <a name="in-this-section"></a>本节内容  
  [SQL 生成](sql-generation.md)  

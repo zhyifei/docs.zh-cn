@@ -3,12 +3,12 @@ title: 如何：为 WCF Web 服务应用程序启用 WIF
 ms.date: 03/30/2017
 ms.assetid: bfc64b3d-64e9-4093-a6a4-72e933917af7
 author: BrucePerlerMS
-ms.openlocfilehash: b9fa1f815a962adc0b3c91177021788734b92bb6
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 809009642caf743f4f067591adfa63ccb154a577
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70041446"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851531"
 ---
 # <a name="how-to-enable-wif-for-a-wcf-web-service-application"></a>如何：为 WCF Web 服务应用程序启用 WIF
 ## <a name="applies-to"></a>适用于
@@ -19,7 +19,7 @@ ms.locfileid: "70041446"
 
 ## <a name="summary"></a>总结
 
-此“如何”主题提供了详细的分步过程，用于说明如何在 WCF 服务中启用 WIF。 它还提供关于如何测试应用程序的说明，以便验证 Web 服务在应用程序运行时正确呈现声明。 此“如何”主题未详细介绍如何创建安全令牌服务 (STS)，而是使用随标识和访问工具提供的开发 STS。 开发 STS 不执行实际的身份验证操作，只是用来进行测试。 你将需要安装标识和访问工具才能完成此“如何”主题。 可从以下位置下载:[标识和访问工具](https://go.microsoft.com/fwlink/?LinkID=245849)
+此“如何”主题提供了详细的分步过程，用于说明如何在 WCF 服务中启用 WIF。 它还提供关于如何测试应用程序的说明，以便验证 Web 服务在应用程序运行时正确呈现声明。 此“如何”主题未详细介绍如何创建安全令牌服务 (STS)，而是使用随标识和访问工具提供的开发 STS。 开发 STS 不执行实际的身份验证操作，只是用来进行测试。 你将需要安装标识和访问工具才能完成此“如何”主题。 可从以下位置下载：[标识和访问工具](https://go.microsoft.com/fwlink/?LinkID=245849)
 
 ## <a name="contents"></a>内容
 
@@ -241,11 +241,11 @@ ms.locfileid: "70041446"
 
 #### <a name="to-test-your-wif-enabled-wcf-application-for-claims"></a>对已启用 WIF 的 WCF 应用程序进行声明测试
 
-1. 按 F5 生成并运行该应用程序。 应该会看到一个控制台窗口和以下文本:**按 Enter 键以调用服务, 任何其他键可退出应用程序:**
+1. 按 F5 生成并运行该应用程序。 应该会看到一个控制台窗口和以下文本：**按 Enter 键以调用服务，任何其他键可退出应用程序：**
 
 2. 按“Enter”，然后控制台应会显示以下声明信息：
 
-    ```
+    ```output
     Computed by Service1
     Input received from client: Hello World
     Client Name: Terry

@@ -2,12 +2,12 @@
 title: 如何：通过非 MEX 绑定检索元数据
 ms.date: 03/30/2017
 ms.assetid: 2292e124-81b2-4317-b881-ce9c1ec66ecb
-ms.openlocfilehash: 6cd6e0ce5dc287c826179c152b989b5f7842bb6e
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 3721657eb72663450261b4bc8627b250b1a4a14e
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795584"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70856028"
 ---
 # <a name="how-to-retrieve-metadata-over-a-non-mex-binding"></a>如何：通过非 MEX 绑定检索元数据
 本主题介绍如何通过非 MEX 绑定从 MEX 终结点检索元数据。 此示例中的代码基于[自定义安全元数据终结点](../samples/custom-secure-metadata-endpoint.md)示例。  
@@ -85,7 +85,7 @@ ms.locfileid: "70795584"
   
 3. 创建一个 `MetadataExchangeClient` 并调用 `GetMetadata`。 有两种方法可以完成此操作：在配置中指定自定义绑定，或在代码中指定自定义绑定，如下面的示例所示。  
   
-    ```  
+    ```csharp
     // The custom binding is specified in configuration.  
     EndpointAddress mexAddress = new EndpointAddress("http://localhost:8000/ServiceModelSamples/Service/mex");  
   
@@ -116,7 +116,7 @@ ms.locfileid: "70795584"
   
 4. 创建 `WsdlImporter` 并调用 `ImportAllEndpoints`，如下面的代码所示。  
   
-    ```  
+    ```csharp
     WsdlImporter importer = new WsdlImporter(mexSet);  
     ServiceEndpointCollection endpoints = importer.ImportAllEndpoints();  
     ```  

@@ -2,24 +2,27 @@
 title: <activityStateQuery>WCF 的
 ms.date: 03/30/2017
 ms.assetid: d6cdc04b-6f3a-4097-a623-ee4a1be3b5c4
-ms.openlocfilehash: ce7505896b9c5bb605bb0f67d735cb324f4fd493
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 233bd3a2fa161222977902cc1053f964e8171173
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69926899"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850482"
 ---
 # <a name="activitystatequery-of-wcf"></a>\<WCF 的 activityStateQuery >
 
-表示一个查询，该查询用于跟踪构成工作流实例的活动的生命周期更改。 例如, 你可能想要跟踪每次在工作流实例中完成 "发送电子邮件" 活动的时间。 跟踪参与者需要用此查询来订阅活动状态记录对象。 在 ActivityStates 中指定了要订阅的可用状态。  
+表示一个查询，该查询用于跟踪构成工作流实例的活动的生命周期更改。 例如，你可能想要跟踪每次在工作流实例中完成 "发送电子邮件" 活动的时间。 跟踪参与者需要用此查询来订阅活动状态记录对象。 在 ActivityStates 中指定了要订阅的可用状态。  
   
-有关跟踪配置文件查询的详细信息, 请参阅[跟踪配置文件](../../../windows-workflow-foundation/tracking-profiles.md)。
+有关跟踪配置文件查询的详细信息，请参阅[跟踪配置文件](../../../windows-workflow-foundation/tracking-profiles.md)。
 
-\<system.serviceModel> \<tracking>  
-\<profiles> \<trackingProfile>  
-\<工作流 >  
-\<activityStateQueries>  
-\<activityStateQuery>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<跟踪 >** ](tracking-of-wcf.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<配置文件 >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Trackingprofile&gt >** ](trackingprofile-of-wcf.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<工作流 >** ](workflow-of-wcf.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Activitystatequeries&gt >** ](activitystatequeries-of-wcf.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<activityStateQuery >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -73,7 +76,7 @@ ms.locfileid: "69926899"
   
 ## <a name="remarks"></a>备注
 
-ActivityStateQuery 的一项独特功能是能够在跟踪工作流的执行时提取数据。 这在访问跟踪记录后续执行时可提供其他上下文。 您可以使用[ \<参数 >](../windows-workflow-foundation/arguments.md)、 [ \<状态 >](../windows-workflow-foundation/states.md)和[ \<状态 >](../windows-workflow-foundation/states.md)元素从工作流中的任何活动提取任何变量或参数。下面的示例演示在发出活动的`Closed`跟踪记录时提取变量和参数的活动状态查询。 变量和参数只能通过 ActivityStateRecord 提取, 因此使用[ \<activityStateQuery >](../windows-workflow-foundation/activitystatequery.md)在跟踪配置文件内进行订阅。  
+ActivityStateQuery 的一项独特功能是能够在跟踪工作流的执行时提取数据。 这在访问跟踪记录后续执行时可提供其他上下文。 您可以使用[ \<参数 >](../windows-workflow-foundation/arguments.md)、 [ \<状态 >](../windows-workflow-foundation/states.md)和[ \<状态 >](../windows-workflow-foundation/states.md)元素从工作流中的任何活动提取任何变量或参数。下面的示例演示在发出活动的`Closed`跟踪记录时提取变量和参数的活动状态查询。 变量和参数只能通过 ActivityStateRecord 提取，因此使用[ \<activityStateQuery >](../windows-workflow-foundation/activitystatequery.md)在跟踪配置文件内进行订阅。  
   
 ```xml  
 <activityStateQuery activityName="SendEmailActivity">

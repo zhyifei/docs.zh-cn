@@ -2,20 +2,22 @@
 title: <exposedMethod>
 ms.date: 03/30/2017
 ms.assetid: 61c938cd-4ee9-4b06-ab28-922ef491ab11
-ms.openlocfilehash: 032139b714aa11079c7ee8610c332e404b3981ac
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 46f2872fb289c2793c356ea179deb3ce52e6d65e
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69919000"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855308"
 ---
 # <a name="exposedmethod"></a>\<exposedMethod >
 表示一个在 COM+ 组件上的接口作为 Web 服务公开时公开的 COM+ 方法。  
   
- \<system.ServiceModel>  
-\<comContracts>  
-\<comContract>  
-\<方法 >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comContracts >** ](comcontracts.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comContract >** ](comcontract.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<exposedMethods >** ](exposedmethods.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<exposedMethod >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -54,7 +56,7 @@ ms.locfileid: "69919000"
   
  `ComSvcConfig.exe /i /application:OnlineStore /contract:ItemOrders.Financial,IFinances.{TransferFunds,AddFunds,RemoveFunds} /hosting:complus`  
   
- 当你同时运行 comsvcconfig.exe 时, 它将生成以下服务协定, 其中列出了前面提到的方法作为[ \<exposedMethod >](exposedmethod.md)元素。  
+ 当你同时运行 comsvcconfig.exe 时，它将生成以下服务协定，其中列出了前面提到的方法作为[ \<exposedMethod >](exposedmethod.md)元素。  
   
 ```xml  
 <comContract contractType="{C551FBA9-E3AA-4272-8C2A-84BD8D290AC7}"
@@ -66,7 +68,7 @@ ms.locfileid: "69919000"
 </comContract>
 ```  
   
- 在服务初始化时, 运行时将尝试通过反射并仅添加[ \<exposedMethod >](exposedmethod.md)元素列表中包含的方法来生成服务协定。 对于该服务协定中未包括的每个接口方法，都会产生一个跟踪。  
+ 在服务初始化时，运行时将尝试通过反射并仅添加[ \<exposedMethod >](exposedmethod.md)元素列表中包含的方法来生成服务协定。 对于该服务协定中未包括的每个接口方法，都会产生一个跟踪。  
   
 ## <a name="see-also"></a>请参阅
 

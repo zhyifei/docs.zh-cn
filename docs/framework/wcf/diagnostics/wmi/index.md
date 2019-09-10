@@ -2,12 +2,12 @@
 title: 使用 Windows Management Instrumentation 进行诊断
 ms.date: 03/30/2017
 ms.assetid: fe48738d-e31b-454d-b5ec-24c85c6bf79a
-ms.openlocfilehash: 90aae0e22feec5d26fa7ee4c690904ed893489b4
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 0b67f06b9a99d7e9001c8415d0e94adef8436a3d
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795913"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855816"
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>使用 Windows Management Instrumentation 进行诊断
 Windows Communication Foundation （WCF）通过 WCF Windows Management Instrumentation （WMI）提供程序在运行时公开服务的检测数据。  
@@ -143,7 +143,7 @@ Windows Communication Foundation （WCF）通过 WCF Windows Management Instrume
 ### <a name="granting-access-to-arbitrary-users-or-groups"></a>向任意用户或组授予访问权  
  本节中的示例向所有本地用户授予 WMI 提供程序注册特权。 如果您希望向非内置的用户或组授予访问权，则必须获取该用户或组的安全标识符 (SID)。 获取任意用户的 SID 没有简单方法。 一个方法是以所需的用户身份登录，然后发出以下 shell 命令。  
   
-```  
+```console
 Whoami /user  
 ```  
   

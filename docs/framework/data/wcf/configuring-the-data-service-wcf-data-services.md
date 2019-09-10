@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, configuring
 ms.assetid: 59efd4c8-cc7a-4800-a0a4-d3f8abe6c55c
-ms.openlocfilehash: 38ec0986ef3e673ad2d624d33dc33d882f7e412c
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 0e5792fa4f31c4f40047016252100b1de23fd075
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780432"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854199"
 ---
 # <a name="configuring-the-data-service-wcf-data-services"></a>配置数据服务（WCF 数据服务）
-利用[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]，你可以创建公开[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]源的数据服务。 这些源中的数据可以来自各种数据源。 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]使用数据提供程序将此数据作为[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]源公开。 这些提供程序包括一个[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]提供程序、一个反射提供程序和一组自定义数据服务提供程序接口。 提供程序实现为服务定义数据模型。 有关详细信息，请参阅[数据服务提供程序](data-services-providers-wcf-data-services.md)。  
+利用[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]，你可以创建公开[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]源的数据服务。 这些源中的数据可以来自各种数据源。 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]使用数据提供程序将此数据作为[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]源公开。 这些提供程序包括实体框架提供程序、反射提供程序和一组自定义数据服务提供程序接口。 提供程序实现为服务定义数据模型。 有关详细信息，请参阅[数据服务提供程序](data-services-providers-wcf-data-services.md)。  
   
  在 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]中，数据服务是一个从 <xref:System.Data.Services.DataService%601> 类继承的类，而数据服务的类型是数据模型的实体容器。 此实体容器具有一个或多个属性，这些属性返回用于访问数据模型中的实体集的 <xref:System.Linq.IQueryable%601>。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "70780432"
 |`/Customers?$select=Orders/*&$expand=Orders`|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> －和－<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadMultiple>|不支持|不支持|`Customers`: <xref:System.Data.Services.EntitySetRights.WriteAppend>|不支持|  
 |`/Customers('ALFKI')?$select=Orders/*&$expand=Orders`|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> －和－<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadMultiple>|不支持|不支持|不支持|不支持|  
   
- <sup>1</sup>在此示例中`Address` ，表示`Customers`实体的一个具有名为`StreetAddress`的属性的复杂类型属性。 罗斯文数据服务所使用的模型不会显式定义此复杂类型。 通过使用[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]提供程序定义数据模型时，可以使用实体数据模型工具来定义这样的复杂类型。 有关详细信息，请参阅[如何：创建和修改复杂类型](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456820(v=vs.100))。  
+ <sup>1</sup>在此示例中`Address` ，表示`Customers`实体的一个具有名为`StreetAddress`的属性的复杂类型属性。 罗斯文数据服务所使用的模型不会显式定义此复杂类型。 如果数据模型是使用实体框架提供程序定义的，则可以使用实体数据模型工具来定义这样的复杂类型。 有关详细信息，请参阅[如何：创建和修改复杂类型](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456820(v=vs.100))。  
   
  <sup>2</sup>如果将返回二进制大型对象（BLOB）的属性定义为属于媒体链接入口的实体（在本例中为`Customers`），则此 URI 受支持。 有关详细信息，请参阅[流式处理提供程序](streaming-provider-wcf-data-services.md)。  
   

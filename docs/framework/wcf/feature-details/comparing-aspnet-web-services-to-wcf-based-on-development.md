@@ -2,16 +2,16 @@
 title: 从开发的角度比较 ASP.NET Web 服务与 WCF
 ms.date: 03/30/2017
 ms.assetid: f362d00e-ce82-484f-9d4f-27e579d5c320
-ms.openlocfilehash: 8b0e26f0b76ee56d06c426cd3c11b169a74b1896
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 607d0eaabde4e00c1a00b995356bb6d4e1a39234
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663373"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855756"
 ---
 # <a name="comparing-aspnet-web-services-to-wcf-based-on-development"></a>从开发的角度比较 ASP.NET Web 服务与 WCF
 
-Windows Communication Foundation (WCF) 提供用于启用 WCF 应用程序进行编程和配置类似于 ASP.NET Web 服务，并模拟其行为的 ASP.NET 兼容模式选项。 以下部分进行了比较 ASP.NET Web 服务和 WCF 基于使用这两种技术开发应用程序的要求。
+Windows Communication Foundation （WCF）具有 ASP.NET 兼容模式选项，可对 WCF 应用程序进行编程和配置（如 ASP.NET Web 服务）并模拟它们的行为。 以下各节基于使用这两种技术开发应用程序所需的内容，对 ASP.NET Web 服务和 WCF 进行比较。
 
 ## <a name="data-representation"></a>数据表示形式
 
@@ -27,9 +27,9 @@ Windows Communication Foundation (WCF) 提供用于启用 WCF 应用程序进行
 
 - <xref:System.Xml.Serialization> 命名空间中的许多属性类型均可添加到 .NET Framework 类及其成员中，用于控制类实例的 XML 表示方式。
 
-WCF 应用程序开发通常也开始的复杂类型的定义。 WCF 可为使用相同的.NET Framework 类作为 ASP.NET Web 服务。
+WCF 应用程序开发通常也以复杂类型的定义开始。 可以使用 WCF 与 ASP.NET Web 服务使用相同的 .NET Framework 类型。
 
-WCF<xref:System.Runtime.Serialization.DataContractAttribute>和<xref:System.Runtime.Serialization.DataMemberAttribute>将添加到.NET Framework 类型，以指示该类型的实例将要序列化为 XML，以及哪些特定字段或属性的类型进行序列化，如下面的示例代码中所示。
+WCF<xref:System.Runtime.Serialization.DataContractAttribute> 和<xref:System.Runtime.Serialization.DataMemberAttribute>可以添加到 .NET Framework 类型，以指示要将类型的实例序列化为 XML，并对类型的哪些特定字段或属性进行序列化，如下面的示例代码所示。
 
 ```csharp
 //Example One:
@@ -145,7 +145,7 @@ public class LineItem
 }
 ```
 
-<xref:System.Runtime.Serialization.DataContractAttribute> 表示要对零个或多个类型字段或属性进行序列化，而 <xref:System.Runtime.Serialization.DataMemberAttribute> 表示要对某个特定字段或属性进行序列化。 <xref:System.Runtime.Serialization.DataContractAttribute> 可应用于类或结构。 <xref:System.Runtime.Serialization.DataMemberAttribute> 可以应用于字段或属性 (Property)，对其应用此属性 (Attribute) 的字段和属性 (Property) 既可以是公共的也可以是私有的。 具有的类型的实例<xref:System.Runtime.Serialization.DataContractAttribute>应用于它们所提及的 WCF 中的数据协定。 它们通过 <xref:System.Runtime.Serialization.DataContractSerializer> 序列化为 XML。
+<xref:System.Runtime.Serialization.DataContractAttribute> 表示要对零个或多个类型字段或属性进行序列化，而 <xref:System.Runtime.Serialization.DataMemberAttribute> 表示要对某个特定字段或属性进行序列化。 <xref:System.Runtime.Serialization.DataContractAttribute> 可应用于类或结构。 <xref:System.Runtime.Serialization.DataMemberAttribute> 可以应用于字段或属性 (Property)，对其应用此属性 (Attribute) 的字段和属性 (Property) 既可以是公共的也可以是私有的。 <xref:System.Runtime.Serialization.DataContractAttribute>应用了的类型的实例在 WCF 中称为数据协定。 它们通过 <xref:System.Runtime.Serialization.DataContractSerializer> 序列化为 XML。
 
 下面是使用 <xref:System.Runtime.Serialization.DataContractSerializer> 和使用 <xref:System.Xml.Serialization.XmlSerializer> 以及 <xref:System.Xml.Serialization> 命名空间的各种属性之间的重大差异列表。
 
@@ -176,7 +176,7 @@ public class LineItem
 
 - 由于可将各种类型的非公共成员序列化为 XML，因此，<xref:System.Runtime.Serialization.DataContractSerializer> 对于可序列化为 XML 的 .NET 类型的多样性限制较少。 尤其是，它可以转换为 XML 类型，如实现 <xref:System.Collections.Hashtable> 接口的 <xref:System.Collections.IDictionary>。 <xref:System.Runtime.Serialization.DataContractSerializer> 更有可能会将任意预先存在的 .NET 类型序列化为 XML 而无需修改类型的定义或开发类型的包装。
 
-- 由于 <xref:System.Runtime.Serialization.DataContractSerializer> 可以访问类型的非公共成员，因此，它还要求完全信任，而 <xref:System.Xml.Serialization.XmlSerializer> 不要求。 完全信任代码访问权限，可以使用在其下执行代码的凭据访问的计算机上的所有资源完成的访问。 应谨慎使用此选项，因为完全受信任的代码访问你的计算机上的所有资源。
+- 由于 <xref:System.Runtime.Serialization.DataContractSerializer> 可以访问类型的非公共成员，因此，它还要求完全信任，而 <xref:System.Xml.Serialization.XmlSerializer> 不要求。 完全信任代码访问权限提供对计算机上的所有资源的完全访问权限，可以使用执行代码的凭据访问该计算机上的所有资源。 当完全受信任的代码访问计算机上的所有资源时，应谨慎使用此选项。
 
 - <xref:System.Runtime.Serialization.DataContractSerializer> 中集成了一些对版本管理的支持：
 
@@ -184,7 +184,7 @@ public class LineItem
 
   - 通过让某个数据协定实现 <xref:System.Runtime.Serialization.IExtensibleDataObject> 接口，使得 <xref:System.Runtime.Serialization.DataContractSerializer> 可通过包含早期版本协定的应用程序传递新版数据协定中定义的成员。
 
-不管存在何种差异，只要 XML 具有显式定义的命名空间，默认情况下，<xref:System.Xml.Serialization.XmlSerializer> 将类型序列化为的 XML 与 <xref:System.Runtime.Serialization.DataContractSerializer> 将类型序列化为的 XML 语义相同。 下面的类具有用于这两种序列化程序的属性，将转换为的语义相同的 XML<xref:System.Xml.Serialization.XmlSerializer>和<xref:System.Runtime.Serialization.DataContractAttribute>:
+不管存在何种差异，只要 XML 具有显式定义的命名空间，默认情况下，<xref:System.Xml.Serialization.XmlSerializer> 将类型序列化为的 XML 与 <xref:System.Runtime.Serialization.DataContractSerializer> 将类型序列化为的 XML 语义相同。 下面的类具有与这两个序列化程序一起使用的特性，由<xref:System.Xml.Serialization.XmlSerializer>和<xref:System.Runtime.Serialization.DataContractAttribute>转换为语义上完全相同的 XML：
 
 ```csharp
 [Serializable]
@@ -201,10 +201,10 @@ public class LineItem
 }
 ```
 
-Windows 软件开发工具包 (SDK) 包含名为的命令行工具[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)。 喜欢使用与 ASP.NET Web 服务的 xsd.exe 工具 Svcutil.exe 可以从 XML 架构生成的.NET 数据类型定义。 如果 <xref:System.Runtime.Serialization.DataContractSerializer> 可发出由 XML 架构定义的格式的 XML，类型将为数据协定；否则，它们专用于通过 <xref:System.Xml.Serialization.XmlSerializer> 进行序列化。 Svcutil.exe 还可以生成 XML 架构从数据协定使用其`dataContractOnly`切换。
+Windows 软件开发工具包（SDK）包含一个名为 "Svcutil.exe" 的[元数据实用工具（）](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)的命令行工具。 与用于 ASP.NET Web 服务的 xsd.exe 工具一样，Svcutil.exe 可以从 XML 架构生成 .NET 数据类型的定义。 如果 <xref:System.Runtime.Serialization.DataContractSerializer> 可发出由 XML 架构定义的格式的 XML，类型将为数据协定；否则，它们专用于通过 <xref:System.Xml.Serialization.XmlSerializer> 进行序列化。 Svcutil.exe 还可以通过使用`dataContractOnly`数据协定的开关从数据协定生成 XML 架构。
 
 > [!NOTE]
-> 尽管 ASP.NET Web 服务使用<xref:System.Xml.Serialization.XmlSerializer>，并且 WCF ASP.NET 兼容模式会使 WCF 服务模拟 ASP.NET Web 服务的行为，ASP.NET 兼容性选项不会限制用户使用<xref:System.Xml.Serialization.XmlSerializer>。 用户仍然可以将 <xref:System.Runtime.Serialization.DataContractSerializer> 用于以 ASP.NET 兼容模式运行的服务。
+> 尽管 ASP.NET Web 服务使用<xref:System.Xml.Serialization.XmlSerializer>，并且 wcf ASP.NET 兼容模式使 wcf 服务能够模仿 ASP.NET Web 服务的行为，但 ASP.NET 兼容性选项不会限制一个<xref:System.Xml.Serialization.XmlSerializer>使用。 用户仍然可以将 <xref:System.Runtime.Serialization.DataContractSerializer> 用于以 ASP.NET 兼容模式运行的服务。
 
 ## <a name="service-development"></a>服务开发
 
@@ -244,7 +244,7 @@ public class Service : IEcho
 
 使用此选项是首选方法，因为具有 <xref:System.Web.Services.WebService> 属性的接口包含服务所执行操作的协定，该服务可以在通过多种不同方式实现同一协定的各种类中重复使用。
 
-通过定义一个或多个 WCF 终结点提供一个 WCF 服务。 终结点由地址、绑定和服务协定定义。 地址用于定义服务的位置。 绑定用于指定与服务的通信方式。 服务协定用于定义服务可执行的操作。
+WCF 服务通过定义一个或多个 WCF 端点提供。 终结点由地址、绑定和服务协定定义。 地址用于定义服务的位置。 绑定用于指定与服务的通信方式。 服务协定用于定义服务可执行的操作。
 
 通常最先定义服务协定，通过将 <xref:System.ServiceModel.ServiceContractAttribute> 和 <xref:System.ServiceModel.OperationContractAttribute> 添加到接口中实现：
 
@@ -257,7 +257,7 @@ public interface IEcho
 }
 ```
 
-<xref:System.ServiceModel.ServiceContractAttribute>指定该接口定义 WCF 服务约定，和<xref:System.ServiceModel.OperationContractAttribute>指示，如果有，接口的方法的定义服务协定的操作。
+指定接口定义 WCF 服务协定， <xref:System.ServiceModel.OperationContractAttribute>并指示接口的哪些方法（如果有）定义服务协定的操作。 <xref:System.ServiceModel.ServiceContractAttribute>
 
 定义服务协定后，它将在类中实现，方法是使类实现服务协定定义的接口：
 
@@ -271,9 +271,9 @@ public class Service : IEcho
 }
 ```
 
-实现服务协定的类称为作为一种服务类型在 WCF 中。
+在 WCF 中，实现服务协定的类称为 "服务类型"。
 
-下一步是将地址和绑定与服务类型关联。 通常是在配置文件中，通过编辑文件直接或通过使用与 WCF 提供的配置编辑器。 下面是配置文件的示例。
+下一步是将地址和绑定与服务类型关联。 通常通过直接编辑文件或使用 WCF 提供的配置编辑器在配置文件中完成此操作。 下面是配置文件的示例。
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -299,15 +299,15 @@ public class Service : IEcho
 |WSHttpBinding|可以与通过 HTTP 支持 WS* 协议的 Web 服务和客户端相互操作。|
 |WSDualHttpBinding|双向 HTTP 通信，使用此绑定时初始消息的接收方不直接回复初始发送方，而是在一段时间内使用与 WS* 协议一致的 HTTP 传输任意数量的响应。|
 |WSFederationBinding|访问服务资源时所用的 HTTP 通信可根据由显式标识的凭据提供程序发出的凭据进行控制。|
-|NetTcpBinding|在网络上的 WCF 软件实体之间的安全、 可靠、 高性能通信。|
-|NetNamedPipeBinding|同一台计算机上的 WCF 软件实体之间的安全、 可靠、 高性能通信。|
-|NetMsmqBinding|通过使用 MSMQ 的 WCF 软件实体之间的通信。|
-|MsmqIntegrationBinding|WCF 软件实体和通过使用 MSMQ 的另一个软件实体之间的通信。|
-|NetPeerTcpBinding|通过使用 Windows 对等网络 WCF 软件实体之间的通信。|
+|NetTcpBinding|跨网络在 WCF 软件实体之间进行安全、可靠、高性能的通信。|
+|NetNamedPipeBinding|同一台计算机上 WCF 软件实体之间的安全、可靠、高性能的通信。|
+|NetMsmqBinding|使用 MSMQ 在 WCF 软件实体之间进行通信。|
+|MsmqIntegrationBinding|使用 MSMQ 在 WCF 软件实体与其他软件实体之间进行通信。|
+|NetPeerTcpBinding|使用 Windows 对等网络建立 WCF 软件实体之间的通信。|
 
 系统提供的绑定 <xref:System.ServiceModel.BasicHttpBinding> 集成了 ASP.NET Web 服务支持的协议集。
 
-自定义绑定的 WCF 应用程序轻松地定义为 WCF 使用来实现单个协议的绑定元素类的集合。 可以将新的绑定元素编写为表示其他协议。
+WCF 应用程序的自定义绑定可以轻松定义为 WCF 用于实现各个协议的绑定元素类的集合。 可以将新的绑定元素编写为表示其他协议。
 
 服务类型的内部行为可以使用一系列称为行为的类的属性对其进行调整。 其中，<xref:System.ServiceModel.ServiceBehaviorAttribute> 类用于指定服务类型为多线程。
 
@@ -324,13 +324,11 @@ public class DerivativesCalculatorServiceType: IDerivativesCalculator
 
 ASP.NET Web 服务编译为类库程序集。 将提供一个称为服务文件且扩展名为 .asmx 的文件，该文件包含一条 `@ WebService` 指令，该指令标识的类包含表示服务和服务所在程序集的代码。
 
-```
-<%@ WebService Language="C#" Class="Service,ServiceAssembly" %>
-```
+`<%@ WebService Language="C#" Class="Service,ServiceAssembly" %>`
 
 在 Internet 信息服务 (IIS) 中，服务文件将复制到 ASP.NET 应用程序根目录下，程序集则复制到此应用程序根目录的 \bin 子目录下。 然后，您可以在应用程序根目录下使用服务文件的统一资源定位符 (URL) 访问此应用程序。
 
-在 IIS 5.1 或 6.0 中，Windows 进程激活服务 (WAS) 作为 IIS 7.0 的一部分提供的和任何.NET 应用程序内，可以轻松承载 WCF 服务。 若要在 IIS 5.1 或 6.0 中承载某项服务，此服务必须使用 HTTP 作为通信传输协议。
+WCF 服务可随时在 IIS 5.1 或6.0 中托管，Windows 进程激活服务（WAS）作为 IIS 7.0 的一部分提供，并且在任何 .NET 应用程序中提供。 若要在 IIS 5.1 或 6.0 中承载某项服务，此服务必须使用 HTTP 作为通信传输协议。
 
 若要在 IIS 5.1、6.0 或 WAS 中承载某项服务，请使用下列步骤：
 
@@ -338,9 +336,7 @@ ASP.NET Web 服务编译为类库程序集。 将提供一个称为服务文件�
 
 2. 使用标识服务类型的 `@ ServiceHost` 指令创建一个扩展名为 .svc 的服务文件：
 
-    ```
-    <%@ServiceHost language="c#" Service="MyService" %>
-    ```
+    `<%@ServiceHost language="c#" Service="MyService" %>`
 
 3. 将服务文件复制到虚拟目录下，并将程序集复制到该虚拟目录的 \bin 子目录下。
 
@@ -348,7 +344,7 @@ ASP.NET Web 服务编译为类库程序集。 将提供一个称为服务文件�
 
 然后，您可以在应用程序根目录下使用服务文件的 URL 访问此应用程序
 
-若要托管.NET 应用程序中的 WCF 服务，编译类库程序集引用的应用程序，此服务类型和服务使用向主机应用程序进行编程<xref:System.ServiceModel.ServiceHost>类。 下面是所需基本编程的示例：
+若要在 .net 应用程序中托管 WCF 服务，请将服务类型编译为该应用程序引用的类库程序集，并对该应用程序进行编程以<xref:System.ServiceModel.ServiceHost>使用类承载服务。 下面是所需基本编程的示例：
 
 ```csharp
 string httpBaseAddress = "http://www.contoso.com:8000/";
@@ -373,9 +369,9 @@ typeof(Service), //"Service" is the name of the service type baseAddresses))
 
 此示例演示如何在构造 <xref:System.ServiceModel.ServiceHost> 时指定一个或多个传输协议的地址。 这些地址称为基址。
 
-提供的 WCF 服务的任何终结点的地址是主机的相对于终结点的基址的地址。 对于每个通信传输协议，宿主都可以有一个基址。 在上面的配置文件配置示例中，为终结点选定的 <xref:System.ServiceModel.BasicHttpBinding> 将 HTTP 用作传输协议，因此终结点的地址 `EchoService` 与宿主的 HTTP 基址相关。 在前面的示例中的主机，对于 HTTP 基址是`http://www.contoso.com:8000/`。 对于在 IIS 或 WAS 中承载的服务，其基址为服务的服务文件的 URL。
+为 WCF 服务的任何终结点提供的地址是相对于终结点主机的基址的地址。 对于每个通信传输协议，宿主都可以有一个基址。 在上面的配置文件配置示例中，为终结点选定的 <xref:System.ServiceModel.BasicHttpBinding> 将 HTTP 用作传输协议，因此终结点的地址 `EchoService` 与宿主的 HTTP 基址相关。 对于前面的示例中的主机，HTTP 基址为`http://www.contoso.com:8000/`。 对于在 IIS 或 WAS 中承载的服务，其基址为服务的服务文件的 URL。
 
-仅服务承载于 IIS 或 WAS，并且其配置为包含 HTTP 作为传输协议以独占方式，可使用 WCF ASP.NET 兼容模式选项。 启用此选项需要执行下列步骤。
+只能使用在 IIS 或 WAS 中承载的服务，以及仅使用 HTTP 作为传输协议进行配置的服务，才能使用 WCF ASP.NET 兼容模式选项。 启用此选项需要执行下列步骤。
 
 1. 程序员必须将 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> 属性添加到服务类型中，并指定是允许还是需要 ASP.NET 兼容模式。
 
@@ -398,7 +394,7 @@ typeof(Service), //"Service" is the name of the service type baseAddresses))
     </configuration>
     ```
 
-    WCF 应用程序还可以配置为使用.asmx 作为扩展他们的服务文件而不是.svc。
+    WCF 应用程序也可以配置为使用 .asmx 作为其服务文件（而不是 .svc）的扩展。
 
     ```xml
     <system.web>
@@ -418,15 +414,15 @@ typeof(Service), //"Service" is the name of the service type baseAddresses))
     </system.web>
     ```
 
-    该选项可以将保存您无需修改配置为使用.asmx 服务文件的 Url 时修改服务使用 WCF 客户端。
+    使用此选项，你无需修改在将服务修改为使用 WCF 时配置为使用 .asmx 服务文件的 Url 的客户端。
 
 ## <a name="client-development"></a>客户端开发
 
-ASP.NET Web 服务的客户端通过使用命令行工具 WSDL.exe 生成，该工具可将 .asmx 文件的 URL 作为输入提供。 WCF 提供的相应工具是[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)。 它将生成服务协定的定义和 WCF 客户端类的定义的代码模块。 它还使用服务的地址和绑定生成一个配置文件。
+ASP.NET Web 服务的客户端通过使用命令行工具 WSDL.exe 生成，该工具可将 .asmx 文件的 URL 作为输入提供。 WCF 提供的相应工具为 " [Svcutil.exe 元数据实用工具（）](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)"。 它使用服务协定的定义和 WCF 客户端类的定义生成代码模块。 它还使用服务的地址和绑定生成一个配置文件。
 
-通常，建议您基于异步模式对远程服务的客户端进行编程。 默认情况下，不论是同步模式还是异步模式，始终都会提供由 WSDL.exe 工具生成的代码。 生成的代码[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)可以为任意一种模式提供。 默认为对同步模式提供。 如果执行该工具时使用 `/async` 开关，则将为异步模式提供生成的代码。
+通常，建议您基于异步模式对远程服务的客户端进行编程。 默认情况下，不论是同步模式还是异步模式，始终都会提供由 WSDL.exe 工具生成的代码。 可为任一模式提供 " [svcutil.exe" 元数据实用工具（）](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)生成的代码。 默认为对同步模式提供。 如果执行该工具时使用 `/async` 开关，则将为异步模式提供生成的代码。
 
-则生成的 ASP 的 WCF 客户端类中的名称不能保证。NET 的 WSDL.exe 工具，默认情况下，匹配由 Svcutil.exe 工具生成的 WCF 客户端类中的名称。 尤其是，在默认情况下，必须使用 <xref:System.Xml.Serialization.XmlSerializer> 序列化的类的属性名将在 Svcutil.exe 工具生成的代码中获得后缀 Property，这与 WSDL.exe 工具的情况并不一样。
+不保证 ASP.NET 生成的 WCF 客户端类中的名称。默认情况下，NET 的 WSDL.EXE 工具与 Svcutil.exe 工具生成的 WCF 客户端类中的名称相匹配。 尤其是，在默认情况下，必须使用 <xref:System.Xml.Serialization.XmlSerializer> 序列化的类的属性名将在 Svcutil.exe 工具生成的代码中获得后缀 Property，这与 WSDL.exe 工具的情况并不一样。
 
 ## <a name="message-representation"></a>消息表示形式
 
@@ -477,7 +473,7 @@ public class Service: WebService, IEcho
 }
 ```
 
-WCF 提供的特性， <xref:System.ServiceModel.MessageContractAttribute>， <xref:System.ServiceModel.MessageHeaderAttribute>，和<xref:System.ServiceModel.MessageBodyMemberAttribute>描述由服务发送和接收的 SOAP 消息的结构。
+WCF 提供属性、 <xref:System.ServiceModel.MessageContractAttribute> <xref:System.ServiceModel.MessageHeaderAttribute>、和<xref:System.ServiceModel.MessageBodyMemberAttribute> ，以描述服务发送和接收的 SOAP 消息的结构。
 
 ```csharp
 [DataContract]
@@ -517,7 +513,7 @@ public interface IItemService
 }
 ```
 
-此语法将生成消息结构的显式表示形式，同时 ASP.NET Web 服务的代码也将暗示消息结构。 此外，在 ASP.NET 语法中，消息头表示为属性的服务，如`ProtocolHeader`属性在上一示例中，而在 WCF 语法，它们可以更准确地表示为消息的属性。 此外，WCF 允许将消息标头添加到终结点的配置。
+此语法将生成消息结构的显式表示形式，同时 ASP.NET Web 服务的代码也将暗示消息结构。 此外，在 ASP.NET 语法中，消息头表示为服务的属性，例如上一示例中`ProtocolHeader`的属性，而在 WCF 语法中，它们可以更准确地表示为消息的属性。 同时，WCF 还允许将消息标头添加到终结点的配置中。
 
 ```xml
 <service name="Service ">
@@ -553,11 +549,11 @@ public interface IEcho
 
 可以自定义 ASP.NET 为服务生成的 WSDL。 通过创建 <xref:System.Web.Services.Description.ServiceDescriptionFormatExtension> 的派生类以将项目添加到 WSDL 中可实现自定义。
 
-使用 HTTP 终结点承载在 IIS 51 使用查询 WSDL 的 WCF 服务的.svc 文件发出 HTTP GET 请求，6.0 或 WAS 会导致 WCF 具有描述服务的 WSDL 响应。 如果 httpGetEnabled 设置为 true，则使用查询 WSDL 对 .NET 应用程序所承载服务的 HTTP 基址发出 HTTP GET 请求具有相同的效果。
+使用在 IIS 51、6.0 或中承载的 HTTP 终结点的 WCF 服务的 .svc 文件的查询 WSDL 发出 HTTP GET 请求会导致 WCF 使用 WSDL 进行响应，以描述该服务。 如果 httpGetEnabled 设置为 true，则使用查询 WSDL 对 .NET 应用程序所承载服务的 HTTP 基址发出 HTTP GET 请求具有相同的效果。
 
-但是，WCF 还响应 Ws-metadataexchange 请求具有其生成的用于描述服务的 WSDL。 ASP.NET Web 服务没有对 WS-MetadataExchange 请求的内置支持。
+但是，WCF 还会使用其生成的用于描述服务的 WSDL 响应 Ws-metadataexchange 请求。 ASP.NET Web 服务没有对 WS-MetadataExchange 请求的内置支持。
 
-可以广泛地自定义 WCF 生成的 WSDL。 <xref:System.ServiceModel.Description.ServiceMetadataBehavior> 类提供了一些用于自定义 WSDL 的功能。 WCF 还可以配置为不生成 WSDL，但而不是在给定的 URL，使用静态 WSDL 文件。
+WCF 生成的 WSDL 可以广泛地自定义。 <xref:System.ServiceModel.Description.ServiceMetadataBehavior> 类提供了一些用于自定义 WSDL 的功能。 也可以将 WCF 配置为不生成 WSDL，而是使用给定 URL 处的静态 WSDL 文件。
 
 ```xml
 <behaviors>
@@ -576,7 +572,7 @@ public interface IEcho
 
 在 ASP.NET Web 服务中，未处理的异常将作为 SOAP 错误返回客户端。 您还可以显式抛出 <xref:System.Web.Services.Protocols.SoapException> 类的实例并对传输到客户端的 SOAP 错误内容加大控制力度。
 
-WCF 服务中未经处理的异常不会返回到客户端作为 SOAP 错误以防止敏感信息通过异常意外公开。 为了进行调试，系统将提供一个配置设置以将未处理的异常返回客户端。
+在 WCF 服务中，未处理的异常不会作为 SOAP 错误返回到客户端，以防止无意中通过异常公开敏感信息。 为了进行调试，系统将提供一个配置设置以将未处理的异常返回客户端。
 
 若要将 SOAP 错误返回客户端，您可以使用数据协定类型作为泛型类型抛出泛型类型的实例 <xref:System.ServiceModel.FaultException%601>。 您还可以将 <xref:System.ServiceModel.FaultContractAttribute> 属性添加到操作中以指定操作可能会生成的错误。
 
@@ -636,7 +632,7 @@ ASP.NET 通过使用实际存储着 <xref:System.Web.HttpContext> 的 Session �
 
 WCF 为状态管理提供可扩展对象。 可扩展对象就是实现 <xref:System.ServiceModel.IExtensibleObject%601> 的对象。 最重要的可扩展对象为 <xref:System.ServiceModel.ServiceHostBase> 和 <xref:System.ServiceModel.InstanceContext>。 `ServiceHostBase` 允许您保持同一个宿主上所有服务类型的所有实例都可访问的状态，而 `InstanceContext` 允许您保持可以被某个服务类型的同一个实例中运行的任意代码访问的状态。
 
-此处，服务类型， `TradingSystem`，具有<xref:System.ServiceModel.ServiceBehaviorAttribute>，它指定从同一个 WCF 客户端实例的所有呼叫都会都路由到同一服务类型的实例。
+在此，服务类型`TradingSystem`具有一个<xref:System.ServiceModel.ServiceBehaviorAttribute> ，它指定从同一 WCF 客户端实例进行的所有调用都路由到服务类型的同一个实例。
 
 ```csharp
 [ServiceBehavior(InstanceContextMode = InstanceContextMode.PerSession)]
@@ -675,21 +671,21 @@ void ITradingService.AddTrade(Trade trade)
 }
 ```
 
-而 ASP.NET 通过提供控件状态信息的位置中<xref:System.Web.HttpContext>实际存储类，WCF，至少在其初始版本中，提供了无法控制的可扩展对象的存储位置。 构成选择的 WCF 服务的 ASP.NET 兼容性模式的最佳原因的。 如果必须管理可配置状态，则选择 ASP.NET 兼容模式使您可以按照它们在 ASP.NET 中的使用方式使用 <xref:System.Web.HttpContext> 类的功能，而且还可以通过使用存储的 <xref:System.Web.HttpContext> 类配置状态信息的管理位置。
+尽管 ASP.NET 提供了对<xref:System.Web.HttpContext>类中状态信息的实际存储位置的控制，但 WCF 至少在其初始版本中不提供对存储可扩展对象的位置的控制。 这构成了为 WCF 服务选择 ASP.NET 兼容模式的最佳理由。 如果必须管理可配置状态，则选择 ASP.NET 兼容模式使您可以按照它们在 ASP.NET 中的使用方式使用 <xref:System.Web.HttpContext> 类的功能，而且还可以通过使用存储的 <xref:System.Web.HttpContext> 类配置状态信息的管理位置。
 
 ## <a name="security"></a>安全性
 
-用于保证 ASP.NET Web 服务安全的选项就是那些用于保证任意 IIS 应用程序安全的选项。 由于可以托管 WCF 应用程序，不仅在 IIS 中，还在任何.NET 可执行文件，因此必须进行选项用于保护 WCF 应用程序独立于 IIS 的功能。 但是，为 ASP.NET Web 服务提供的功能也已可供在 ASP.NET 兼容模式下运行的 WCF 服务。
+用于保证 ASP.NET Web 服务安全的选项就是那些用于保证任意 IIS 应用程序安全的选项。 因为 WCF 应用程序不仅可以在 IIS 中托管，也可以在任何 .NET 可执行文件中托管，所以用于保护 WCF 应用程序的选项必须与 IIS 的功能无关。 但是，为 ASP.NET Web 服务提供的功能也可用于在 ASP.NET 兼容模式下运行的 WCF 服务。
 
 ### <a name="security-authentication"></a>安全性：身份验证
 
-IIS 提供的功能来控制访问应用程序可以依据选择匿名访问或各种身份验证模式：Windows 身份验证、 摘要式身份验证、 基本身份验证和.NET Passport 身份验证。 Windows 身份验证选项可以用于控制对 ASP.NET Web 服务的访问。 但是，当在 IIS 中托管 WCF 应用程序，必须配置 IIS 以允许匿名访问应用程序，以便可以按 WCF 本身，支持 Windows 身份验证以及各种其他选项管理身份验证。 其他内置选项包括用户名令牌、X.509 证书、SAML 令牌和 CardSpace 卡，但是也可以定义自定义身份验证机制。
+IIS 提供用于控制对应用程序的访问的功能，通过这些功能可以选择匿名访问或各种身份验证模式：Windows 身份验证、摘要式身份验证、基本身份验证和 .NET Passport 身份验证。 Windows 身份验证选项可以用于控制对 ASP.NET Web 服务的访问。 但是，当 WCF 应用程序承载于 IIS 中时，必须将 IIS 配置为允许对应用程序进行匿名访问，以便 WCF 本身可以管理身份验证，这在不同的选项之间支持 Windows 身份验证。 其他内置选项包括用户名令牌、X.509 证书、SAML 令牌和 CardSpace 卡，但是也可以定义自定义身份验证机制。
 
 ### <a name="security-impersonation"></a>安全性：Impersonation
 
-ASP.NET 提供一个标识元素，ASP.NET Web 服务可通过使用该元素模拟当前请求提供了某个特定用户或任何用户的凭据。 该元素可以用于在 ASP.NET 兼容模式下运行的 WCF 应用程序中对模拟进行配置。
+ASP.NET 提供一个标识元素，ASP.NET Web 服务可通过使用该元素模拟当前请求提供了某个特定用户或任何用户的凭据。 该元素可用于在 ASP.NET 兼容模式下运行的 WCF 应用程序中配置模拟。
 
-WCF 配置系统提供用于指定要模拟特定的用户将自己标识的元素。 此外，WCF 客户端和服务可以独立配置进行模拟。 当客户端发送请求时，可将它们配置为模拟当前用户。
+WCF 配置系统提供自己的标识元素，用于指定要模拟的特定用户。 另外，WCF 客户端和服务可以单独配置为进行模拟。 当客户端发送请求时，可将它们配置为模拟当前用户。
 
 ```xml
 <behaviors>
@@ -710,7 +706,7 @@ public void Receive(Message input)
 
 ### <a name="security-authorization-using-access-control-lists"></a>安全性：使用访问控制列表进行授权
 
-访问控制列表 (ACL) 可用于限制对 .asmx 文件的访问。 但是，WCF.svc 文件的 Acl 将除忽略在 ASP.NET 兼容模式下。
+访问控制列表 (ACL) 可用于限制对 .asmx 文件的访问。 但在 ASP.NET 兼容模式下，将忽略 WCF .svc 文件上的 Acl。
 
 ### <a name="security-role-based-authorization"></a>安全性：基于角色的授权
 
@@ -718,7 +714,7 @@ IIS Windows 身份验证选项可与由 ASP.NET 配置语言提供的授权元�
 
 角色提供程序就是所有实现基本接口以查询对用户分配哪些角色的类，但每个角色提供程序都知道如何从其他来源检索此信息。 ASP.NET 2.0 提供一个可从 Microsoft SQL Server 数据库检索角色分配的角色提供程序，同时还提供另一个可从 Windows Server 2003 授权管理器检索角色分配的角色提供程序。
 
-角色提供程序机制实际上可以独立于 ASP.NET 在任何.NET 应用程序，包括 WCF 应用程序中使用。 下面的示例配置为 WCF 应用程序演示了如何使用 ASP.NET 角色提供程序是通过所选的选项<xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>。
+在任何 .NET 应用程序（包括 WCF 应用程序）中，实际上可以独立于 ASP.NET 使用角色提供程序机制。 以下 WCF 应用程序示例配置演示了如何使用 ASP.NET 角色提供程序，这是一个通过的<xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>方法选择的选项。
 
 ```xml
 <system.serviceModel>
@@ -741,9 +737,9 @@ IIS Windows 身份验证选项可与由 ASP.NET 配置语言提供的授权元�
 
 ### <a name="security-claims-based-authorization"></a>安全性：基于声明的授权
 
-WCF 的最重要的创新之一是它授予对基于声明的受保护资源的访问权限的全面支持。 声明包含类型、权限和值等，例如驾驶执照。 它提出一组有关持有人的声明，其中一个是持有人的出生日期。 此声明的类型为出生日期，而声明的值为司机的出生日期。 声明授予持有人的权限指定持有人可对声明的值执行的操作。 如果是要声明司机的出生日期，权限为拥有：司机拥有该出生日期但是不能更改它。 基于声明的授权包含基于角色的授权，因为角色也是一种声明类型。
+WCF 的最重要的一项创新是，它完全支持基于声明对受保护资源的访问权限。 声明包含类型、权限和值等，例如驾驶执照。 它提出一组有关持有人的声明，其中一个是持有人的出生日期。 此声明的类型为出生日期，而声明的值为司机的出生日期。 声明授予持有人的权限指定持有人可对声明的值执行的操作。 如果是要声明司机的出生日期，权限为拥有：司机拥有该出生日期但是不能更改它。 基于声明的授权包含基于角色的授权，因为角色也是一种声明类型。
 
-基于声明的授权可通过将一组声明与操作的访问要求进行比较实现，根据比较的结果，可获得操作的访问权或遭到拒绝。 在 WCF 中，可以指定要用于通过将分配到的值再一次运行基于声明的授权的类`ServiceAuthorizationManager`属性的<xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>。
+基于声明的授权可通过将一组声明与操作的访问要求进行比较实现，根据比较的结果，可获得操作的访问权或遭到拒绝。 在 WCF 中，可以指定一个用于运行基于声明的授权的类，也可以通过为的`ServiceAuthorizationManager` <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>属性赋值来指定一个值。
 
 ```xml
 <behaviors>
@@ -755,17 +751,17 @@ WCF 的最重要的创新之一是它授予对基于声明的受保护资源的�
 </behaviors>
 ```
 
-用于运行基于声明的授权的类必须派生自只有一种重写方法（即 <xref:System.ServiceModel.ServiceAuthorizationManager>）的 `AccessCheck()`。 WCF 将调用该方法时的服务操作调用，并提供<xref:System.ServiceModel.OperationContext>具有该用户的声明的对象中其`ServiceSecurityContext.AuthorizationContext`属性。 WCF 执行工作组装来自任何安全令牌的有关用户的声明的用户进行身份验证，这会使提供评估这些声明是否满足需要相关操作任务。
+用于运行基于声明的授权的类必须派生自只有一种重写方法（即 <xref:System.ServiceModel.ServiceAuthorizationManager>）的 `AccessCheck()`。 每当调用服务的操作并提供<xref:System.ServiceModel.OperationContext>对象时，WCF 都将调用该方法，该对象在其`ServiceSecurityContext.AuthorizationContext`属性中具有用户的声明。 WCF 从用户提供的用于身份验证的任何安全令牌收集有关用户的声明的工作，这会使评估这些声明是否足以满足相关操作的任务。
 
-WCF 自动汇集从任何类型声明标记是安全的非常重要的创新，因为它使基于声明的身份验证机制完全独立的授权代码。 与此相反，使用 ACL 或 ASP.NET 中的角色进行授权则与 Windows 身份验证息息相关。
+WCF 自动将来自任何类型的安全令牌的声明组合在一起，这是一种高度重要的创新，因为它会根据声明完全独立于身份验证机制来授权代码。 与此相反，使用 ACL 或 ASP.NET 中的角色进行授权则与 Windows 身份验证息息相关。
 
 ### <a name="security-confidentiality"></a>安全性：保密性
 
-通过将 IIS 中的应用程序配置为使用安全超文本传输协议 (HTTPS)，可以在传输级别确保与 ASP.NET Web 服务交换的消息的机密性。 对于在 IIS 内承载的 WCF 应用程序可以实现相同目的。 但是，WCF 应用程序承载于 IIS 之外，还可以配置为使用安全传输协议。 更重要的是，WCF 应用程序还可以配置为之前它们传输，使用 Ws-security 协议保护消息的安全。 如果使用 WS-Security 协议保护消息正文的安全，则消息正文到达最终目的地之前在中介中加密传输。
+通过将 IIS 中的应用程序配置为使用安全超文本传输协议 (HTTPS)，可以在传输级别确保与 ASP.NET Web 服务交换的消息的机密性。 对于在 IIS 中承载的 WCF 应用程序也是如此。 但是，托管在 IIS 之外的 WCF 应用程序也可以配置为使用安全传输协议。 更重要的是，还可以使用 WS 安全协议将 WCF 应用程序配置为在传输消息之前对其进行保护。 如果使用 WS-Security 协议保护消息正文的安全，则消息正文到达最终目的地之前在中介中加密传输。
 
 ## <a name="globalization"></a>全球化
 
-通过 ASP.NET 配置语言，您可以为这些服务单独指定区域性。 在 ASP.NET 兼容模式下，WCF 不支持除该配置设置。 若要本地化不使用 ASP.NET 兼容模式的 WCF 服务，编译为特定于区域性的程序集的服务类型和每个特定于区域性的程序集具有单独的特定于区域性的终结点。
+通过 ASP.NET 配置语言，您可以为这些服务单独指定区域性。 WCF 不支持 ASP.NET 兼容模式下的该配置设置。 若要本地化不使用 ASP.NET 兼容模式的 WCF 服务，请将服务类型编译为区域性特定的程序集，并为每个区域性特定的程序集提供单独的区域性特定的终结点。
 
 ## <a name="see-also"></a>请参阅
 

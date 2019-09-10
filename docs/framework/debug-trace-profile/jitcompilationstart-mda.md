@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 5ffd2857-d0ba-4342-9824-9ffe04ec135d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 62064286fecc4736f39ad790f0fd7f0e6d84b149
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 80473e01581a372c193c4b816a37166b73d57824
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61754266"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854148"
 ---
 # <a name="jitcompilationstart-mda"></a>jitCompilationStart MDA
 激活 `jitCompilationStart` 托管调试助手 (MDA) 以报告实时 (MDA) 编译器何时开始编译函数。  
@@ -34,12 +34,12 @@ ms.locfileid: "61754266"
 ## <a name="output"></a>Output  
  下面的代码示例显示了示例输出。 在此情况下，输出显示在程序集测试中，类“ns2.CO”上的方法“m”是 JIT 编译。  
   
-```  
+```output
 method name="Test!ns2.C0::m"  
 ```  
   
 ## <a name="configuration"></a>配置  
- 以下配置文件显示多种筛选器，可筛选出首次 JIT 编译时，报告哪些方法。 您可以指定报告所有方法通过将名称属性的值设置\*。  
+ 以下配置文件显示多种筛选器，可筛选出首次 JIT 编译时，报告哪些方法。 您可以通过将 name 特性的值设置为来\*指定报告所有方法。  
   
 ```xml  
 <mdaConfig>  

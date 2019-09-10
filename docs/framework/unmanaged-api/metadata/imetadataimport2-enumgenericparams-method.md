@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7edd2eeafcce6a22c3256d0684a9c4f961b34002
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 39e3e71185051435afcf03d51ec62742c080b02a
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62049890"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855710"
 ---
 # <a name="imetadataimport2enumgenericparams-method"></a>IMetaDataImport2::EnumGenericParams 方法
-令牌的泛型参数标记与指定的 TypeDef 或 MethodDef 相关联的数组获取的枚举器。  
+获取与指定的 TypeDef 或 MethodDef 标记相关联的泛型参数标记数组的枚举器。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp
 HRESULT EnumGenericParams (  
    [in, out] HCORENUM     *phEnum,   
    [in]  mdToken          tk,  
@@ -41,35 +41,35 @@ HRESULT EnumGenericParams (
   
 ## <a name="parameters"></a>参数  
  `phEnum`  
- [in、 out]一个指向枚举器。  
+ [in，out]指向枚举器的指针。  
   
  `tk`  
- [in]其泛型参数是要枚举 TypeDef 或 MethodDef 标记。  
+ 中要枚举其泛型参数的 TypeDef 或 MethodDef 标记。  
   
  `rGenericParams`  
- [out]若要枚举的泛型参数的数组。  
+ 弄要枚举的泛型参数的数组。  
   
  `cMax`  
- [in]要放置在中的令牌的请求最大数目`rGenericParams`。  
+ 中要放入`rGenericParams`的请求的最大数量。  
   
  `pcGenericParams`  
- [out]返回的标记数置于`rGenericParams`。  
+ 弄放入的标记数`rGenericParams`。  
   
 ## <a name="return-value"></a>返回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|`S_OK`|`EnumGenericParams` 已成功返回。|  
-|`S_FALSE`|`phEnum` 不包含任何成员元素。 在这种情况下，`pcGenericParams`设置为 0 （零）。|  
+|`S_OK`|`EnumGenericParams`已成功返回。|  
+|`S_FALSE`|`phEnum`没有成员元素。 在这种情况`pcGenericParams`下，设置为0（零）。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **标头：** Cor  
   
- **库：** 用作 MsCorEE.dll 中的资源  
+ **类库**用作 Mscoree.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

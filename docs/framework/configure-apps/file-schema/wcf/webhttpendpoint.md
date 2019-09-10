@@ -2,18 +2,20 @@
 title: <webHttpEndpoint>
 ms.date: 03/30/2017
 ms.assetid: ecaaeb6f-ebd0-411d-8b53-92477cd45347
-ms.openlocfilehash: 866be522cb1c64142227a8d6a1a8f88551ca9105
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8d4f55fd5b51ea77839b7fdbb930e937f5700417
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69940473"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854796"
 ---
 # <a name="webhttpendpoint"></a>\<webHttpEndpoint>
-此配置元素定义一个标准终结点, 该终结点具有固定[ \<的 webHttpBinding >](webhttpbinding.md)绑定[ \<](webhttp.md) , 可自动添加 wcf-webhttp > 行为。 在编写 REST 服务时，请使用此终结点。  
+此配置元素定义一个标准终结点，该终结点具有固定[ \<的 webHttpBinding >](webhttpbinding.md)绑定[ \<](webhttp.md) ，可自动添加 wcf-webhttp > 行为。 在编写 REST 服务时，请使用此终结点。  
   
-\<system.ServiceModel>  
-\<standardEndpoints>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<standardEndpoints >** ](standardendpoints.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<webHttpEndpoint >**  
   
 ## <a name="syntax"></a>语法  
   

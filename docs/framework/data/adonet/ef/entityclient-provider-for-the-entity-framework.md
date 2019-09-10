@@ -2,25 +2,25 @@
 title: 用于实体框架的 EntityClient 提供程序
 ms.date: 03/30/2017
 ms.assetid: 8c5db787-78e6-4a34-8dc1-188bca0aca5e
-ms.openlocfilehash: 70cc5a9aaa22cc563c910f9d250ad4565e34a135
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: e3a87d4a936e5bdf633e1f997f66dd98add2a9cb
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251604"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854714"
 ---
 # <a name="entityclient-provider-for-the-entity-framework"></a>用于实体框架的 EntityClient 提供程序
 EntityClient 提供程序是一种数据提供程序，实体框架应用程序使用该提供程序访问在概念模型中描述的数据。 有关概念模型的信息，请参阅[建模和映射](modeling-and-mapping.md)。 EntityClient 使用其他 .NET Framework 数据提供程序访问数据源。 例如，EntityClient 在访问 SQL Server 数据库时使用 SQL Server .NET Framework 数据提供程序 (SqlClient)。 有关 SqlClient 提供程序的信息，请参阅[SqlClient for the 实体框架](sqlclient-for-the-entity-framework.md)。 EntityClient 提供程序是在 <xref:System.Data.EntityClient> 命名空间中实现的。  
   
 ## <a name="managing-connections"></a>管理连接  
- 通过向基础数据提供程序和关系数据库[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] <xref:System.Data.EntityClient.EntityConnection>提供，在存储特定的 ADO.NET 数据提供程序的基础上生成。 若要构造<xref:System.Data.EntityClient.EntityConnection>对象，你必须引用一组包含所需模型和映射的元数据，以及特定于存储的数据提供程序名称和连接字符串。 <xref:System.Data.EntityClient.EntityConnection>准备就绪后，可以通过从概念模型生成的类访问实体。  
+ 实体框架通过<xref:System.Data.EntityClient.EntityConnection>向基础数据提供程序和关系数据库提供，在存储特定的 ADO.NET 数据提供程序的基础上建立。 若要构造<xref:System.Data.EntityClient.EntityConnection>对象，你必须引用一组包含所需模型和映射的元数据，以及特定于存储的数据提供程序名称和连接字符串。 <xref:System.Data.EntityClient.EntityConnection>准备就绪后，可以通过从概念模型生成的类访问实体。  
   
  可以在 app.config 文件中指定连接字符串。  
   
  <xref:System.Data.EntityClient> 还包含 <xref:System.Data.EntityClient.EntityConnectionStringBuilder> 类。 通过使用此类的属性和方法，开发人员可以使用此类以编程方式创建语法正确的连接字符串，并可以分析和重新生成现有的连接字符串。 有关详细信息，请参阅[如何：生成 EntityConnection 连接字符串](how-to-build-an-entityconnection-connection-string.md)。  
   
 ## <a name="creating-queries"></a>创建查询  
- [!INCLUDE[esql](../../../../../includes/esql-md.md)]语言是一种独立于存储的 SQL 方言，可直接处理概念实体架构，并支持实体数据模型的概念（例如继承和关系）。 <xref:System.Data.EntityClient.EntityCommand> 类用于对实体模型执行 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 命令。 构造 <xref:System.Data.EntityClient.EntityCommand> 对象时，可以指定一个存储过程名称或查询文本。 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 使用存储特定的数据提供程序，将一般 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 转换为存储特定的查询。 有关编写[!INCLUDE[esql](../../../../../includes/esql-md.md)]查询的详细信息，请参阅[实体 SQL 语言](./language-reference/entity-sql-language.md)。  
+ [!INCLUDE[esql](../../../../../includes/esql-md.md)]语言是一种独立于存储的 SQL 方言，可直接处理概念实体架构，并支持实体数据模型的概念（例如继承和关系）。 <xref:System.Data.EntityClient.EntityCommand> 类用于对实体模型执行 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 命令。 构造 <xref:System.Data.EntityClient.EntityCommand> 对象时，可以指定一个存储过程名称或查询文本。 实体框架与存储特定的数据提供程序一起使用，以[!INCLUDE[esql](../../../../../includes/esql-md.md)]将泛型转换为特定于存储的查询。 有关编写[!INCLUDE[esql](../../../../../includes/esql-md.md)]查询的详细信息，请参阅[实体 SQL 语言](./language-reference/entity-sql-language.md)。  
   
  下面的示例创建一个<xref:System.Data.EntityClient.EntityCommand>对象，并将[!INCLUDE[esql](../../../../../includes/esql-md.md)]查询文本分配给<xref:System.Data.EntityClient.EntityCommand.CommandText%2A?displayProperty=nameWithType>其属性。 此[!INCLUDE[esql](../../../../../includes/esql-md.md)]查询请求从概念模型中按标价排序的产品。 下面的代码完全不识别存储模型。  
   

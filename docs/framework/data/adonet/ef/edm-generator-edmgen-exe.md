@@ -2,18 +2,18 @@
 title: EDM 生成器 (EdmGen.exe)
 ms.date: 03/30/2017
 ms.assetid: fe8297a1-1fc3-48ce-8eeb-f70f63f857aa
-ms.openlocfilehash: 688989fea6037cc989267e14b103210c2a995afa
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 82166782e25cb7a7ea23fe7faf7a30cb0e68d631
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251632"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854717"
 ---
 # <a name="edm-generator-edmgenexe"></a>EDM 生成器 (EdmGen.exe)
 
-EdmGen.exe 是用于处理[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]模型和映射文件的命令行工具。 使用 EdmGen.exe 工具可以执行以下任务：
+Edmgen.exe 是一个命令行工具，用于处理实体框架模型和映射文件。 使用 EdmGen.exe 工具可以执行以下任务：
 
-- 使用特定于数据源的 .NET Framework 数据提供程序连接到数据源，生成[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]使用的概念模型 (.csdl)、存储模型 (.ssdl) 以及映射 (.msl) 文件。 有关详细信息，请参阅[如何：使用 Edmgen.exe 生成模型和映射文件](how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)。
+- 使用特定于数据源的 .NET Framework 数据提供程序连接到数据源，并生成概念模型（csdl）、存储模型（ssdl）以及由实体框架使用的映射（msl）文件。 有关详细信息，请参阅[如何：使用 Edmgen.exe 生成模型和映射文件](how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)。
 
 - 验证现有模型。 有关详细信息，请参阅[如何：使用 Edmgen.exe 验证模型和映射文件](how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md)。
 

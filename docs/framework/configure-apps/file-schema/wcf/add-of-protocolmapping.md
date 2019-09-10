@@ -2,19 +2,20 @@
 title: <add> 的 <protocolMapping>
 ms.date: 03/30/2017
 ms.assetid: 08e62249-1641-41d1-91b1-66d7b46244e4
-ms.openlocfilehash: df69b5f8a79489b722c1074f118b9c6f6e8e363d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6197d01665d49a7c97ac9e44251abf15faf80a8f
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69926672"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850376"
 ---
 # <a name="add-of-protocolmapping"></a>\<添加 protocolMapping > \<的 >
-表示传输协议方案 (例如, http、net.tcp、net.pipe 等) 与 Windows Communication Foundation (WCF) 绑定之间的默认协议映射。 在运行时创建默认终结点时, WCF 会查看已配置的映射, 并决定要将哪个绑定用于特定的地址。  
+表示传输协议方案（例如，http、net.tcp、net.pipe 等）与 Windows Communication Foundation （WCF）绑定之间的默认协议映射。 在运行时创建默认终结点时，WCF 会查看已配置的映射，并决定要将哪个绑定用于特定的地址。  
   
- \<system.serviceModel>  
-\<protocolMapping>  
-\<add>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<protocolMapping >** ](protocolmapping.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<添加 >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,7 +45,7 @@ ms.locfileid: "69926672"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<protocolMapping>](protocolmapping.md)|表示用于定义传输协议方案 (例如, http、net.tcp、net.pipe 等) 与 Windows Communication Foundation (WCF) 绑定之间的默认协议映射的配置节。|  
+|[\<protocolMapping>](protocolmapping.md)|表示用于定义传输协议方案（例如，http、net.tcp、net.pipe 等）与 Windows Communication Foundation （WCF）绑定之间的默认协议映射的配置节。|  
   
 ## <a name="example"></a>示例  
  下面的配置示例演示 machine.config 文件中的默认协议映射。 您可以通过修改 machine.config 文件在计算机级别重写此默认映射。 或者，如果您只希望在应用程序范围内重写此映射，则可以在应用程序配置文件中重写此节，并为单独的协议方案更改映射。  

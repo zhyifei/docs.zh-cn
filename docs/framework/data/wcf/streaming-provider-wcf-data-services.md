@@ -10,12 +10,12 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: 3660194a93a0528c4e5b466fb63801a8b1e12d2f
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 4d51011fddb856cf1ebd00943e9b79776d9181d0
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70779782"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854108"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>流提供程序（WCF 数据服务）
 
@@ -53,7 +53,7 @@ ms.locfileid: "70779782"
 
 还必须将命名空间 `xmlns:m=http://schemas.microsoft.com/ado/2007/08/dataservices/metadata` 添加到实体，或添加到定义数据模型的 .edmx 或 .csdl 文件的根目录中。
 
-有关使用[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]提供程序并公开媒体资源的数据服务的示例，请参阅文章[数据服务流提供程序系列：实现流提供程序（第1部分](https://go.microsoft.com/fwlink/?LinkID=198989)）。
+有关使用实体框架提供程序并公开媒体资源的数据服务的示例，请参阅文章[数据服务流提供程序系列：实现流提供程序（第1部分](https://go.microsoft.com/fwlink/?LinkID=198989)）。
 
 **反射提供程序**
 

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: bcd7b699-4e50-4523-8c33-2f54a103d94e
-ms.openlocfilehash: d43ec0cdf5b5bb03854dffc7132dddb4c9ae76fd
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 3ac80cfe06f8531dcd2343f676a6f78f8eb0e8f6
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70249268"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854299"
 ---
 # <a name="query-results"></a>查询结果
 将 LINQ to Entities 查询转换为命令目录树并执行后，查询结果通常作为以下之一返回：  
@@ -23,9 +23,9 @@ ms.locfileid: "70249268"
   
 - 匿名类型。  
   
- 对数据源执行查询时，结果将具体化为 CLR 类型并返回客户端。 所有对象具体化均由 [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] 执行。 由于无法在 [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] 与 CLR 之间进行映射而导致的任何错误都将导致在对象具体化过程中引发异常。  
+ 对数据源执行查询时，结果将具体化为 CLR 类型并返回客户端。 所有对象具体化均由实体框架执行。 由于无法在实体框架与 CLR 之间进行映射而导致的任何错误都将导致在对象具体化过程中引发异常。
   
- 如果查询执行返回基元概念模型类型，则结果由独立的且与[!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]断开连接的 CLR 类型组成。 但如果查询返回 <xref:System.Data.Objects.ObjectQuery%601> 所表示的类型化实体对象的集合，则这些类型由对象上下文进行跟踪。 所有对象行为（如子/父集合、更改跟踪、多态性等）都是在中定义的[!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]。 此功能可按照[!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]中的定义使用。 有关详细信息，请参阅使用[对象](../working-with-objects.md)。  
+ 如果查询执行返回基元概念模型类型，则结果由独立的 CLR 类型和与实体框架断开连接的 CLR 类型组成。 但如果查询返回 <xref:System.Data.Objects.ObjectQuery%601> 所表示的类型化实体对象的集合，则这些类型由对象上下文进行跟踪。 所有对象行为（如子/父集合、更改跟踪、多态性等）都是在实体框架中定义的。 此功能可用于其容量，如实体框架中所定义。 有关详细信息，请参阅使用[对象](../working-with-objects.md)。
   
  从查询返回的结构类型（如匿名类型和可以为 null 的复杂类型）可以是 `null` 值。 返回的实体的 <xref:System.Data.Objects.DataClasses.EntityCollection%601> 属性也可以是 `null` 值。 投影值为 `null` 的实体的集合属性会导致这种情况，例如，调用没有任何元素的 <xref:System.Linq.Queryable.FirstOrDefault%2A> 的 <xref:System.Data.Objects.ObjectQuery%601>。  
   

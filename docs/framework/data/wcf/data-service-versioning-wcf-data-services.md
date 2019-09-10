@@ -6,12 +6,12 @@ helpviewer_keywords:
 - versioning [WCF Data Services]
 - WCF Data Services, versioning
 ms.assetid: e3e899cc-7f25-4f67-958f-063f01f79766
-ms.openlocfilehash: 03ac1e0a5fec2d7def91466a9dc31853e2007f57
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: f2007e5c2fa638d64c5c1e0d6879e12c7bcc901d
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70791073"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854096"
 ---
 # <a name="data-service-versioning-wcf-data-services"></a>数据服务版本管理（WCF 数据服务）
 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]利用，您可以创建数据服务，以便客户端可以使用基于数据模型的 uri 作为资源访问数据。 OData 还支持服务操作的定义。 这些数据服务在初始部署之后，可能出于多种原因（例如，更改业务需求、信息技术需求，或者为了解决其他问题）而需要更改，并且在其生存期期间可能需要更改多次。 更改现有数据服务时，您必须考虑是否要定义您的数据服务的新版本以及如何将对现有客户端应用程序的影响降至最低。 本主题提供了有关何时以及如何创建一个新版本的数据服务的指导。 它还介绍了 WCF 数据服务如何处理支持不同版本 OData 协议的客户端和数据服务之间的交换。
@@ -42,7 +42,7 @@ ms.locfileid: "70791073"
  <sup>2</sup>可以将<xref:System.Data.Services.Client.DataServiceContext.IgnoreMissingProperties%2A>属性设置为`true` ，使客户端忽略数据服务发送的、未在客户端上定义的任何新属性。 但是，当插入时，客户端在 POST 请求中不包括的属性都设置为其默认值。 对于更新，对客户端未知的属性中任何现有数据可能用默认值改写。 在此情况下，应将更新作为 MERGE 要求发送，这是默认值。 有关详细信息，请参阅[管理数据服务上下文](managing-the-data-service-context-wcf-data-services.md)。
 
 ### <a name="how-to-version-a-data-service"></a>如何对数据服务进行版本管理
- 在需要时，通过创建新服务实例（使用更新的服务协定或数据模型）定义新的数据服务版本。 通过使用新的 URI 终结点（使其与以前的版本不同）公开该新服务。 例如：
+ 在需要时，通过创建新服务实例（使用更新的服务协定或数据模型）定义新的数据服务版本。 通过使用新的 URI 终结点（使其与以前的版本不同）公开该新服务。 例如:
 
 - 旧版本：`http://services.odata.org/Northwind/v1/Northwind.svc/`
 
@@ -69,7 +69,7 @@ ms.locfileid: "70791073"
 |3 版|-你可以从[Microsoft 下载中心](https://go.microsoft.com/fwlink/?LinkId=203885)下载和安装支持 OData 版本3的预发行版本。|
 
 ### <a name="metadata-versions"></a>元数据版本
- 默认情况下，WCF 数据服务使用 CSDL 版本1.1 来表示数据模型。 对于基于反射提供程序或自定义数据服务提供程序的数据模型始终如此。 但是，如果数据模型是使用[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]定义的，则返回的 CSDL 版本就是该[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]所用的版本。 CSDL 的版本由[Schema 元素（CSDL）](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#schema-element-csdl)的命名空间确定。
+ 默认情况下，WCF 数据服务使用 CSDL 版本1.1 来表示数据模型。 对于基于反射提供程序或自定义数据服务提供程序的数据模型始终如此。 但是，如果数据模型是使用实体框架定义的，则返回的 CSDL 版本就是该实体框架所用的版本。 CSDL 的版本由[Schema 元素（CSDL）](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#schema-element-csdl)的命名空间确定。
 
  返回的元数据的 `DataServices` 元素还包含一个 `DataServiceVersion` 特性，该特性的值与响应消息中 `DataServiceVersion` 标头的值相同。 客户端应用程序（如 Visual Studio 中的 "**添加服务引用**" 对话框）使用此信息来生成客户端数据服务类，这些类与承载数据服务的 WCF 数据服务的版本一起正确工作。 有关详细信息，请[参阅 OData：协议版本](https://go.microsoft.com/fwlink/?LinkId=186071)控制。
 

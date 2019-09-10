@@ -2,20 +2,24 @@
 title: <userPrincipalName>
 ms.date: 03/30/2017
 ms.assetid: 68032f69-149e-4613-bae4-18314d4fd294
-ms.openlocfilehash: 423a3249a9298675517f0cff08566c3735fa35f1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 299af8c4a013d17d7c5b7285f6fb89892c4164a8
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69940512"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854821"
 ---
 # <a name="userprincipalname"></a>\<userPrincipalName>
 指定要由客户端进行身份验证的服务的用户主体名称 (UPN)。  
   
- 有关设置 UPN 的详细信息, 请参阅[服务标识和身份验证](../../../wcf/feature-details/service-identity-and-authentication.md)。  
+有关设置 UPN 的详细信息，请参阅[服务标识和身份验证](../../../wcf/feature-details/service-identity-and-authentication.md)。  
   
-\<身份 >  
-\<userPrincipalName>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<客户端 >** ](client.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<终结点 >** ](endpoint-of-client.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<身份 >** ](identity.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<userPrincipalName >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -30,7 +34,7 @@ ms.locfileid: "69940512"
   
 |特性|描述|  
 |---------------|-----------------|  
-|值|一个用户帐户名（有时称为“用户登录名”）和一个域名（标识用户帐户所在的域）。 这是登录到 Windows 域的标准用法。 格式为: someone@example.com (用于电子邮件地址)。|  
+|value|一个用户帐户名（有时称为“用户登录名”）和一个域名（标识用户帐户所在的域）。 这是登录到 Windows 域的标准用法。 格式为： someone@example.com （用于电子邮件地址）。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  
@@ -42,7 +46,7 @@ ms.locfileid: "69940512"
 |[\<identity>](identity.md)|指定要由客户端进行身份验证的服务的标识。|  
   
 ## <a name="remarks"></a>备注  
- 使用此标识连接到终结点的安全 Windows Communication Foundation (WCF) 客户端在使用该终结点执行 SSPI 身份验证时将使用 UPN。  
+ 使用此标识连接到终结点的安全 Windows Communication Foundation （WCF）客户端在使用该终结点执行 SSPI 身份验证时将使用 UPN。  
   
 ## <a name="example"></a>示例  
  下面的配置代码指定要由客户端进行身份验证的服务的 UPN。  
