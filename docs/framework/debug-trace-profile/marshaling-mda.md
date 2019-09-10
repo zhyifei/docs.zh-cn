@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 5433b1f8-b0e5-40c9-a49a-0e5bd213363d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1e1583ba8ecfa461958f96bea6cb2b9d3313349b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1b1a1607e96ad9953a409d79fd265ced994cece2
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69967288"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854130"
 ---
 # <a name="marshaling-mda"></a>封送 MDA
 当 CLR 为方法参数或结构的字段设置封送处理信息时，将激活 `marshaling` 托管调试助手 (MDA)。 此 MDA 不适合 JIT 编译的程序集。  
@@ -25,13 +25,13 @@ ms.locfileid: "69967288"
 ## <a name="output"></a>Output  
  此 MDA 显示托管和非托管上下文中参数或字段的类型，以及包含此类型的结构或方法。  以下是字段输出的示例：  
   
-```  
+```output
 Marshaling from 'Char' to 'ANSI char'  
 name="assembly!Namespace.Class::myChar  
 ```  
   
 ## <a name="configuration"></a>配置  
- MDA 配置允许你基于所涉及的字段或方法名称，筛选报告的封送处理信息。  以下示例演示如何使用 `methodFilter``fieldFilter` 和 `match` 元素指定筛选器。  将属性设置为星号 (\*) 可匹配所有内容。 `name`  
+ MDA 配置允许你基于所涉及的字段或方法名称，筛选报告的封送处理信息。  以下示例演示如何使用 `methodFilter``fieldFilter` 和 `match` 元素指定筛选器。  将属性设置为星号（\*）可匹配所有内容。 `name`  
   
 ```xml  
 <mdaConfig>  

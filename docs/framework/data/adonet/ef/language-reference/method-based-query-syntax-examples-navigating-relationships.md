@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a0bfa4b1-99e5-4dd1-9912-4b825a9dc25c
-ms.openlocfilehash: c749a7bb1575ee52418f0953ff8216bf4221b674
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 0060f14319bb0dfbed597e59dfe44666c4cfbe84
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250151"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854446"
 ---
 # <a name="method-based-query-syntax-examples-navigating-relationships"></a>基于方法的查询语法示例：导航关系
-[!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]中的导航属性是快捷方式属性，用于定位位于关联各端的实体。 导航属性允许用户通过关联集从一个实体导航到另一个实体或从一个实体导航到多个相关的实体。 本主题提供了基于方法的查询语法示例，该语法介绍如何通过 LINQ to Entities 查询中的导航属性来导航关系。  
+实体框架中的导航属性是快捷方式属性，用于定位位于关联末尾的实体。 导航属性允许用户通过关联集从一个实体导航到另一个实体或从一个实体导航到多个相关的实体。 本主题提供了基于方法的查询语法示例，该语法介绍如何通过 LINQ to Entities 查询中的导航属性来导航关系。  
   
  这些示例中使用的 AdventureWorks 销售模型从 AdventureWorks 示例数据库中的 Contact、Address、Product、SalesOrderHeader 和 SalesOrderDetail 等表生成。  
   

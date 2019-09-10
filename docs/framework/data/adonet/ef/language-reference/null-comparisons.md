@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ef88af8c-8dfe-4556-8b56-81df960a900b
-ms.openlocfilehash: 6aa0af812d44f5c63758dd47ea4271bb2d689837
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 0996b7d864c5892e383cb98d4065e99b096206d1
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70249837"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854331"
 ---
 # <a name="null-comparisons"></a>Null 比较
 数据源中的 `null` 值指示未知的值。 在 LINQ to Entities 查询中，可以检查是否存在 null 值，以便仅对具有有效或非 null 数据的行执行某些计算或比较。 但是，CLR null 语义可能与数据源的 null 语义不同。 大多数数据库使用某个版本的三值逻辑处理 null 比较。 即，对 null 值的比较不会计算为 `true` 或 `false`，而是计算为 `unknown`。 通常这是 ANSI null 值的实现，但情况并非总是如此。  
@@ -36,7 +36,7 @@ WHERE h.ShipDate IS Null
  *键选择器*是在标准查询运算符中用于从元素中提取键的函数。 在键选择器函数中，表达式可以与常量进行比较。 如果表达式与 null 常量进行比较或两个 null 常量进行比较，则会展现 CLR null 语义。 如果数据源中具有 null 值的两个列进行比较，则会展现存储 null 语义。 键选择器出现在许多分组和排序标准查询运算符（如 <xref:System.Linq.Queryable.GroupBy%2A>）中，用于选择对查询结果进行排序或分组所依据的键。  
   
 ## <a name="null-property-on-a-null-object"></a>Null 对象上的 Null 属性  
- 在 [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] 中，null 对象的属性为 null。 当尝试引用 CLR 中的 null 对象的属性时，会收到 <xref:System.NullReferenceException>。 当 LINQ 查询涉及 null 对象的属性时，可能会导致不一致的行为。  
+ 在实体框架中，null 对象的属性为 null。 当尝试引用 CLR 中的 null 对象的属性时，会收到 <xref:System.NullReferenceException>。 当 LINQ 查询涉及 null 对象的属性时，可能会导致不一致的行为。  
   
  例如，下面的查询在命令树层中执行对 `NewProduct` 的强制转换，这可能导致 `Introduced` 属性为 null。 如果数据库将 null 比较定义为 <xref:System.DateTime> 比较计算为 true，则会包含该行。  
   

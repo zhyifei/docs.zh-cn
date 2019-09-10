@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1f4f923e868b72e9de33884e4814ebfa329a16e2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b379bb2a9512cd1bd3344ed7f5130f96c0ccfa87
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61992935"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855576"
 ---
 # <a name="ihostsecuritymanagergetsecuritycontext-method"></a>IHostSecurityManager::GetSecurityContext 方法
-获取所请求[IHostSecurityContext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-interface.md)从主机。  
+从主机获取请求的[IHostSecurityContext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-interface.md) 。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp
 HRESULT GetSecurityContext (  
     [in]  EContextType eContextType,   
     [out] IHostSecurityContext** ppSecurityContext  
@@ -38,33 +38,33 @@ HRESULT GetSecurityContext (
   
 ## <a name="parameters"></a>参数  
  `eContextType`  
- [in]之一[EContextType](../../../../docs/framework/unmanaged-api/hosting/econtexttype-enumeration.md)值，它指示哪种类型的安全上下文，以返回。  
+ 中[EContextType](../../../../docs/framework/unmanaged-api/hosting/econtexttype-enumeration.md)值之一，指示要返回的安全上下文的类型。  
   
  `ppSecurityContext`  
- [out]接口指针的地址`IHostSecurityContext`的`eContextType`。  
+ 弄`IHostSecurityContext` 的`eContextType`接口指针的地址。  
   
 ## <a name="return-value"></a>返回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|`GetSecurityContext` 已成功返回。|  
-|HOST_E_CLRNOTAVAILABLE|公共语言运行时 (CLR) 尚未加载到进程中，或处于不能运行托管的代码或已成功处理调用的状态。|  
-|HOST_E_TIMEOUT|呼叫已超时。|  
+|S_OK|`GetSecurityContext`已成功返回。|  
+|HOST_E_CLRNOTAVAILABLE|公共语言运行时（CLR）未加载到进程中，或 CLR 处于无法运行托管代码或成功处理调用的状态。|  
+|HOST_E_TIMEOUT|调用超时。|  
 |HOST_E_NOT_OWNER|调用方不拥有该锁。|  
-|HOST_E_ABANDONED|事件已取消时被阻塞的线程或纤程正在等待它。|  
-|E_FAIL|发生未知的灾难性故障。 如果某方法返回 E_FAIL，CLR 不再在进程内可用。 对托管方法的后续调用返回 HOST_E_CLRNOTAVAILABLE。|  
+|HOST_E_ABANDONED|已阻止的线程或纤程正在等待某个事件时，该事件被取消。|  
+|E_FAIL|发生未知的灾难性故障。 当方法返回 E_FAIL 时，CLR 在该进程内将不再可用。 对宿主方法的后续调用会返回 HOST_E_CLRNOTAVAILABLE。|  
   
 ## <a name="remarks"></a>备注  
- 主机可以通过 CLR 和用户代码控制对线程令牌的所有代码访问权限。 它还可确保完整的安全跨异步操作或具有受限制的代码访问权限的代码点传递上下文信息。 `IHostSecurityContext` 封装此安全上下文信息，这是不透明的 CLR。 CLR 捕获此信息并将其移动多个线程池工作项调度、 终结器执行和模块和类构造。  
+ 宿主可以通过 CLR 和用户代码控制对线程标记的所有代码访问。 它还可以确保在异步操作或代码点之间跨受限制的代码访问传递完整的安全上下文信息。 `IHostSecurityContext`封装此安全上下文信息，这对于 CLR 是不透明的。 CLR 捕获此信息，并在线程池辅助角色项调度、终结器执行以及模块和类构造之间移动。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
   
- **库：** 包含为 MSCorEE.dll 中的资源  
+ **类库**作为资源包括在 Mscoree.dll 中  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

@@ -2,12 +2,12 @@
 title: 安装 F#
 description: 了解如何基于你F#的环境安装。
 ms.date: 09/05/2019
-ms.openlocfilehash: 18b660ff640904119d63f57405752a14f7673e0c
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: dffa30eac0bdb59c85a66dca6cafd62b25daa572
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70400723"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855799"
 ---
 # <a name="install-f"></a>安装 F\#
 
@@ -39,7 +39,7 @@ ms.locfileid: "70400723"
 brew install mono
 ```
 
-同时安装[.NET Core SDK](https://www.microsoft.com/net/download)。
+同时安装[.NET Core SDK](https://dotnet.microsoft.com/download)。
 
 ### <a name="linuxtablinux"></a>[Linux](#tab/linux)
 
@@ -50,13 +50,13 @@ sudo apt-get update
 sudo apt-get install mono-complete fsharp
 ```
 
-同时安装[.NET Core SDK](https://www.microsoft.com/net/download)。
+同时安装[.NET Core SDK](https://dotnet.microsoft.com/download)。
 
 ### <a name="windowstabwindows"></a>[Windows](#tab/windows)
 
 安装[带 F# 支持的 Visual Studio](#install-f-with-visual-studio)。 这将安装编写、编译和执行 F# 代码所需的所有组件。
 
-同时安装[.NET Core SDK](https://www.microsoft.com/net/download/)。
+同时安装[.NET Core SDK](https://dotnet.microsoft.com/download)。
 
 ---
 

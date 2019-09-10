@@ -2,20 +2,24 @@
 title: <servicePrincipalName>
 ms.date: 03/30/2017
 ms.assetid: 3f3b85d3-20f2-4cd8-8a6a-ee18befbd165
-ms.openlocfilehash: 28ae27481ea9cb86c31b5be1f12b5491f8ca143e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: da865a19a91d4af6221a13b53a174637d5fb8139
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69936158"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854991"
 ---
 # <a name="serviceprincipalname"></a>\<servicePrincipalName>
 利用对应的服务主体名称 (SPN) 指定服务的标识。  
   
- 有关设置 SPN 的详细信息, 请参阅[服务标识和身份验证](../../../wcf/feature-details/service-identity-and-authentication.md)。  
+有关设置 SPN 的详细信息，请参阅[服务标识和身份验证](../../../wcf/feature-details/service-identity-and-authentication.md)。  
   
- \<身份 >  
-\<servicePrincipalName>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<客户端 >** ](client.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<终结点 >** ](endpoint-of-client.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<身份 >** ](identity.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<servicePrincipalName >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -30,7 +34,7 @@ ms.locfileid: "69936158"
   
 |特性|描述|  
 |---------------|-----------------|  
-|值|客户端用来唯一地标识服务实例的名称。 如果在计算机的整个目录林上安装多个服务实例，那么每个实例都必须有自己的 SPN。 如果客户端有多个名称可用于身份验证，则给定的服务实例可以有多个 SPN。|  
+|value|客户端用来唯一地标识服务实例的名称。 如果在计算机的整个目录林上安装多个服务实例，那么每个实例都必须有自己的 SPN。 如果客户端有多个名称可用于身份验证，则给定的服务实例可以有多个 SPN。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  
@@ -42,7 +46,7 @@ ms.locfileid: "69936158"
 |[\<identity>](identity.md)|指定要由客户端进行身份验证的服务的标识。|  
   
 ## <a name="remarks"></a>备注  
- 使用此标识连接到终结点的安全 Windows Communication Foundation (WCF) 客户端在使用终结点进行 SSPI 身份验证时使用 SPN。  
+ 使用此标识连接到终结点的安全 Windows Communication Foundation （WCF）客户端在使用终结点进行 SSPI 身份验证时使用 SPN。  
   
 ## <a name="see-also"></a>请参阅
 

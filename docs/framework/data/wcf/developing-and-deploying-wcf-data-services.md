@@ -7,12 +7,12 @@ helpviewer_keywords:
 - deploying [WCF Data Services
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
-ms.openlocfilehash: 578c480940d70fa84edf18d572992e755c8efed5
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: d7ddae58874c69468eb6ff1762db9083897b1acd
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780328"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854070"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>开发和部署 WCF 数据服务
 
@@ -121,7 +121,7 @@ WCF 数据服务在选择承载数据服务的过程方面很灵活。 可以使
 
 部署数据服务时，应注意以下事项：
 
-- 当您部署使用 [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] 提供程序访问 SQL Server 数据库的数据服务时，还可能需要通过数据服务部署传播数据结构和/或数据。 Visual Studio 可以自动创建脚本（.sql 文件）来在目标数据库中执行此操作，并且这些脚本可以包含在 ASP.NET 应用程序的 Web 部署包中。 有关详细信息，请参阅[如何：使用 Web 应用程序项目](https://docs.microsoft.com/previous-versions/dd465343(v=vs.100))部署数据库。 对于 ASP.NET 网站，可以使用 Visual Studio 中的 "**数据库发布向导**" 来执行此操作。 有关详细信息，请参阅[发布 SQL 数据库](https://docs.microsoft.com/previous-versions/aspnet/bb907585(v=vs.100))。
+- 当你部署使用实体框架提供程序访问 SQL Server 数据库的数据服务时，你可能还需要传播数据结构和/或数据。 Visual Studio 可以自动创建脚本（.sql 文件）来在目标数据库中执行此操作，并且这些脚本可以包含在 ASP.NET 应用程序的 Web 部署包中。 有关详细信息，请参阅[如何：使用 Web 应用程序项目](https://docs.microsoft.com/previous-versions/dd465343(v=vs.100))部署数据库。 对于 ASP.NET 网站，可以使用 Visual Studio 中的 "**数据库发布向导**" 来执行此操作。 有关详细信息，请参阅[发布 SQL 数据库](https://docs.microsoft.com/previous-versions/aspnet/bb907585(v=vs.100))。
 
 - 由于 WCF 数据服务包含基本 WCF 实现，因此你可以使用 Windows Server AppFabric 来监视部署到在 Windows Server 上运行的 IIS 的数据服务。 有关使用 Windows Server AppFabric 监视数据服务的详细信息，请参阅[使用 Windows Server appfabric 进行跟踪后 WCF 数据服务](https://go.microsoft.com/fwlink/?LinkID=202005)。
 

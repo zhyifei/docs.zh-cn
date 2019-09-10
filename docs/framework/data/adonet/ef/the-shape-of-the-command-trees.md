@@ -2,12 +2,12 @@
 title: 命令目录树的形状
 ms.date: 03/30/2017
 ms.assetid: 2215585e-ca47-45f8-98d4-8cb982f8c1d3
-ms.openlocfilehash: a3568f3deeaeeb31b69b41ac7c767001b792a8eb
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 8368354049a77a56a5aa54ab500619576f41b0dc
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70248226"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854262"
 ---
 # <a name="the-shape-of-the-command-trees"></a>命令目录树的形状
 
@@ -17,7 +17,7 @@ SQL 生成模块负责生成基于给定输入查询命令目录树表达式的�
 
 查询命令目录树是查询的对象模型表示形式。 查询命令目录树有两个用途：
 
-- 表示针对[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]指定的输入查询。
+- 表示针对实体框架指定的输入查询。
 
 - 表示为提供程序给定的输出查询并描述针对后端的查询。
 
@@ -25,7 +25,7 @@ SQL 生成模块负责生成基于给定输入查询命令目录树表达式的�
 
 DBQueryCommandTree.Query 属性是用于描述查询逻辑的表达式树的根。 DBQueryCommandTree.Parameters 属性包含查询中使用的参数的列表。 表达式树由 DbExpression 对象组成。
 
-DbExpression 对象表示某个计算。 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]提供了用于编写查询表达式的多种表达式，包括常量、变量、函数、构造函数和标准关系运算符（例如筛选和联接）。 每个 DbExpression 对象都有一个 ResultType 属性，该属性表示该表达式生成的结果的类型。 此类型表示为 TypeUsage。
+DbExpression 对象表示某个计算。 用于编写查询表达式的实体框架提供多种类型的表达式，这些表达式包括常量、变量、函数、构造函数和筛选器联接等标准关系运算符。 每个 DbExpression 对象都有一个 ResultType 属性，该属性表示该表达式生成的结果的类型。 此类型表示为 TypeUsage。
 
 ## <a name="shapes-of-the-output-query-command-tree"></a>输出查询命令目录树的形状
 
@@ -75,7 +75,7 @@ DbExpression 对象表示某个计算。 [!INCLUDE[adonet_ef](../../../../../inc
 
 - 用户定义的函数。
 
-规范函数（有关详细信息，请参阅[规范函数](./language-reference/canonical-functions.md)）被指定为的[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]一部分，并且提供程序应根据这些规范提供规范函数的实现。 存储函数基于相应的提供程序清单中的规范。 用户定义的函数基于 SSDL 中的规范。
+规范函数（有关详细信息，请参阅[规范函数](./language-reference/canonical-functions.md)）被指定为实体框架的一部分，并且提供程序应根据这些规范提供规范函数的实现。 存储函数基于相应的提供程序清单中的规范。 用户定义的函数基于 SSDL 中的规范。
 
 另外，具有 NiladicFunction 特性的函数没有任何参数，并且此类函数在转换时末尾不应有括号。  也就是说，  *\<functionName*  *>而不是functionName>（）。\<*
 

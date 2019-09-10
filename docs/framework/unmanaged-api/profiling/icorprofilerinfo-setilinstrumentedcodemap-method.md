@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e41df91ceb9e4b776c2aa1ce864b7e09ec485fd5
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 65eee2e834251817b461f1cd1debf212696d5a5f
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661953"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855695"
 ---
 # <a name="icorprofilerinfosetilinstrumentedcodemap-method"></a>ICorProfilerInfo::SetILInstrumentedCodeMap 方法
 
-设置指定的函数使用指定的 Microsoft 中间语言 (MSIL) 的映射条目的代码图。
+使用指定的 Microsoft 中间语言（MSIL）映射项为指定的函数设置代码图。
 
 > [!NOTE]
-> 在.NET Framework 2.0 版中，调用`SetILInstrumentedCodeMap`上`FunctionID`表示泛型函数在特定应用程序域中，将会影响应用程序域中该函数的所有实例。
+> 在 .NET Framework 版本2.0 中，对`SetILInstrumentedCodeMap`表示特定`FunctionID`应用程序域中的泛型函数的调用将影响该函数在应用程序域中的所有实例。
 
 ## <a name="syntax"></a>语法
 
@@ -44,54 +44,56 @@ HRESULT SetILInstrumentedCodeMap(
 ## <a name="parameters"></a>参数
 
 `functionId`\
-[in]若要设置代码映射的函数的 ID。
+中要为其设置代码图的函数的 ID。
 
 `fStartJit`\
-[in]一个布尔值，该值指示是否在调用`SetILInstrumentedCodeMap`方法是为特定的第一个`FunctionID`。 设置`fStartJit`到`true`在首次调用`SetILInstrumentedCodeMap`为给定`FunctionID`，并对其`false`之后。
+中一个布尔值，该值指示对`SetILInstrumentedCodeMap`方法的调用是否为特定`FunctionID`的第一个。 `SetILInstrumentedCodeMap`对于`fStartJit`给定`true` `false`的，将在第一次调用中设置为，并在之后设置为。 `FunctionID`
 
 `cILMapEntries`\
-[in]中的元素数`cILMapEntries`数组。
+中`cILMapEntries`数组中元素的数目。
 
 `rgILMapEntries`\
-[in]COR_IL_MAP 结构数组，其中每个指定的 MSIL 偏移量。
+中COR_IL_MAP 结构的数组，其中每个结构都指定 MSIL 偏移量。
 
 ## <a name="remarks"></a>备注
 
-探查器通常插入语句的源代码中的一种方法，以实现该方法 （例如，若要在达到给定的源行时通知）。 `SetILInstrumentedCodeMap` 允许探查器将原始的 MSIL 指令映射到其新位置。 可以使用探查器[icorprofilerinfo:: Getiltonativemapping](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md)方法以获取原始的 MSIL 偏移量为给定的本机偏移量。
+探查器通常在方法的源代码中插入语句，以便检测该方法（例如，当到达给定的源行时发出通知）。 `SetILInstrumentedCodeMap`使探查器能够将原始 MSIL 指令映射到新位置。 探查器可以使用[ICorProfilerInfo：： GetILToNativeMapping](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md)方法获取给定本机偏移量的原始 MSIL 偏移量。
 
-调试器将假定每个旧的偏移量指 MSIL 偏移的原始未修改 MSIL 代码中，并且，每个新的偏移量是指在新的、 已检测代码的 MSIL 偏移量。 映射应按升序排序。 单步执行才能正常工作，请遵循以下准则：
+调试器将假设每个旧偏移都是在原始的、未修改的 MSIL 代码内引用 MSIL 偏移量，并且每个新偏移指的是新的、经过检测的代码内的 MSIL 偏移量。 地图应按递增顺序排序。 若要单步执行，请遵循以下准则：
 
-- 不对重新排序已检测的 MSIL 代码。
+- 不要对已检测的 MSIL 代码重新排序。
 
-- 不要删除原始的 MSIL 代码。
+- 请勿删除原始的 MSIL 代码。
 
-- 在映射中包括的程序数据库 (PDB) 文件中的所有序列点的条目。 映射不会插入缺失的条目。 因此，如果给定以下映射：
+- 为映射中的程序数据库（PDB）文件中的所有序列点包含条目。 地图未插入缺失的条目。 因此，假设有以下映射：
 
-  (0，0 个新)
+  （0个旧，0个新的）
 
-  (5，10 个新)
+  （5个旧，10个新的）
 
-  (9 旧，20 个新)
+  （9个旧，20个新的）
 
-  - 旧的偏移量为 0、 1、 2、 3 或 4 将映射到新偏移量为 0。
+  - 早于0、1、2、3或4的偏移将映射到新的偏移量0。
 
-  - 旧的偏移量为 5、 6、 7 或 8 将映射到新偏移量为 10。
+  - 旧偏移量5、6、7或8将映射到新的偏移量10。
 
-  - 旧的偏移量为 9 或更高版本将映射到新偏移量为 20。
+  - 旧偏移量9或更高将映射到新偏移量20。
 
-  - 新的偏移量为 0、 1、 2、 3、 4、 5、 6、 7、 8 或 9 将映射到旧偏移量为 0。
+  - 新偏移量为0、1、2、3、4、5、6、7、8或9，将映射到旧偏移量0。
 
-  - 新的偏移 10、 11、 12、 13、 14、 15、 16、 17、 18 或 19 的将映射到旧偏移量为 5。
+  - 新偏移量为10、11、12、13、14、15、16、17、18或19，将映射到旧偏移量5。
 
-  - 为 20 或更高版本的新偏移量将映射到旧偏移量为 9。
+  - 20或更高的新偏移量将映射到旧偏移量9。
+
+在 .NET Framework 3.5 和以前的版本中，通过调用`rgILMapEntries` [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc)方法来分配数组。 由于运行时取得了此内存的所有权，因此探查器不应尝试释放它。
 
 ## <a name="requirements"></a>要求
 
-**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。
+**适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。
 
-**标头：** CorProf.idl, CorProf.h
+**标头：** Corprof.idl，Corprof.idl
 
-**库：** CorGuids.lib
+**类库**CorGuids.lib
 
 **.NET Framework 版本：** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]
 

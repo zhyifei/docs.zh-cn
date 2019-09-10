@@ -5,18 +5,18 @@ helpviewer_keywords:
 - WCF Data Services, providers
 - WCF Data Services, Entity Framework
 ms.assetid: 6d11fec8-0108-42f5-8719-2a7866d04428
-ms.openlocfilehash: ae4176fd986f870523e44a11eee48850e2dddd7c
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 1d3c3628a32439d4847505e234b12b084b47ba3d
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70791076"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854126"
 ---
 # <a name="how-to-create-a-data-service-using-an-adonet-entity-framework-data-source-wcf-data-services"></a>如何：使用 ADO.NET 实体框架数据源创建数据服务（WCF 数据服务）
 
-WCF 数据服务将实体数据作为数据服务公开。 当数据源为关系数据库时，[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] ADO.NET 将提供此实体数据。 本主题介绍如何在基于现有数据库[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]的 Visual Studio Web 应用程序中创建基于的数据模型，以及如何使用此数据模型创建新的数据服务。
+WCF 数据服务将实体数据作为数据服务公开。 当数据源为关系数据库时，NETEntity 框架将提供此实体数据。 本主题介绍如何在基于现有数据库的 Visual Studio Web 应用程序中创建基于实体框架的数据模型，以及如何使用此数据模型创建新的数据服务。
 
-还提供了一个命令行工具，可以在 Visual [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] Studio 项目外生成模型。 [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] 有关详细信息，请参阅[如何：使用 Edmgen.exe 生成模型和映射文件](../adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)。
+实体框架还提供可以在 Visual Studio 项目外生成实体框架模型的命令行工具。 有关详细信息，请参阅[如何：使用 Edmgen.exe 生成模型和映射文件](../adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)。
 
 ## <a name="to-add-an-entity-framework-model-that-is-based-on-an-existing-database-to-an-existing-web-application"></a>将基于现有数据库的实体框架模型添加到现有 Web 应用程序
 
@@ -45,7 +45,7 @@ WCF 数据服务将实体数据作为数据服务公开。 当数据源为关系
 
 9. 单击 "**完成**" 以完成向导。
 
-     这将基于特定数据库创建默认数据模型。 [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]允许对数据模型进行自定义。 有关详细信息，请参阅[实体数据模型工具任务](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738480(v=vs.100))。
+     这将基于特定数据库创建默认数据模型。 实体框架允许对数据模型进行自定义。 有关详细信息，请参阅[实体数据模型工具任务](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738480(v=vs.100))。
 
 ## <a name="to-create-the-data-service-by-using-the-new-data-model"></a>使用新数据模型创建数据服务
 

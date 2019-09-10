@@ -2,15 +2,16 @@
 title: 自定义令牌
 ms.date: 03/30/2017
 ms.assetid: e7fd8b38-c370-454f-ba3e-19759019f03d
-ms.openlocfilehash: 7203b55b01f51851fa94fedc4950a05343b792bd
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c3c6cfd9d1742f7e839d7b40220792ba455d7673
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69953578"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855519"
 ---
 # <a name="custom-token"></a>自定义令牌
-此示例演示如何将自定义令牌实现添加到 Windows Communication Foundation (WCF) 应用程序中。 示例使用 `CreditCardToken` 将客户端的信用卡相关信息安全地传递到服务。 令牌在 WS-Security 消息头中传递，并连同消息正文和其他消息头一起使用对称安全绑定元素进行签名和加密。 当内置令牌不足时可以进行这样的操作。 本示例演示如何向服务提供自定义安全令牌而不必使用某个内置令牌。 该服务实现定义“请求-答复”通信模式的协定。
+
+此示例演示如何将自定义令牌实现添加到 Windows Communication Foundation （WCF）应用程序中。 示例使用 `CreditCardToken` 将客户端的信用卡相关信息安全地传递到服务。 令牌在 WS-Security 消息头中传递，并连同消息正文和其他消息头一起使用对称安全绑定元素进行签名和加密。 当内置令牌不足时可以进行这样的操作。 本示例演示如何向服务提供自定义安全令牌而不必使用某个内置令牌。 该服务实现定义“请求-答复”通信模式的协定。
 
 > [!NOTE]
 > 本主题的最后介绍了此示例的设置过程和生成说明。
@@ -21,11 +22,12 @@ ms.locfileid: "69953578"
 
 - 服务如何使用和验证自定义安全令牌。
 
-- WCF 服务代码如何获取有关接收到的安全令牌 (包括自定义安全令牌) 的信息。
+- WCF 服务代码如何获取有关接收到的安全令牌（包括自定义安全令牌）的信息。
 
 - 如何使用服务器的 X.509 证书保护用于消息加密和签名的对称密钥。
 
 ## <a name="client-authentication-using-a-custom-security-token"></a>使用自定义安全令牌的客户端身份验证
+
  服务公开单个终结点，此终结点是使用 `BindingHelper` 和 `EchoServiceHost` 类以编程方式创建的。 终结点由地址、绑定和协定组成。 此绑定使用 `SymmetricSecurityBindingElement` 和 `HttpTransportBindingElement` 按照自定义绑定进行配置。 本示例将 `SymmetricSecurityBindingElement` 设置为使用服务的 X.509 证书在传输过程中保护对称密钥和在 WS-Security 消息头中传递自定义 `CreditCardToken` 作为签名和加密的安全令牌。 此行为指定用于客户端身份验证的服务凭据和有关服务 X.509 证书的信息。
 
 ```csharp
@@ -33,11 +35,11 @@ public static class BindingHelper
 {
     public static Binding CreateCreditCardBinding()
     {
-        HttpTransportBindingElement httpTransport = new HttpTransportBindingElement();
+        var httpTransport = new HttpTransportBindingElement();
 
         // The message security binding element will be configured to require a credit card.
         // The token that is encrypted with the service's certificate.
-        SymmetricSecurityBindingElement messageSecurity = new SymmetricSecurityBindingElement();
+        var messageSecurity = new SymmetricSecurityBindingElement();
         messageSecurity.EndpointSupportingTokenParameters.SignedEncrypted.Add(new CreditCardTokenParameters());
         X509SecurityTokenParameters x509ProtectionParameters = new X509SecurityTokenParameters();
         x509ProtectionParameters.InclusionMode = SecurityTokenInclusionMode.Never;
@@ -87,33 +89,34 @@ class EchoServiceHost : ServiceHost
 
 ```csharp
 Binding creditCardBinding = BindingHelper.CreateCreditCardBinding();
-EndpointAddress serviceAddress = new EndpointAddress("http://localhost/servicemodelsamples/service.svc");
+var serviceAddress = new EndpointAddress("http://localhost/servicemodelsamples/service.svc");
 
-// Create a client with given client endpoint configuration
+// Create a client with given client endpoint configuration.
 channelFactory = new ChannelFactory<IEchoService>(creditCardBinding, serviceAddress);
 
-// configure the credit card credentials on the channel factory
-CreditCardClientCredentials credentials =
+// Configure the credit card credentials on the channel factory.
+var credentials =
       new CreditCardClientCredentials(
       new CreditCardInfo(creditCardNumber, issuer, expirationTime));
-// configure the service certificate on the credentials
+// Configure the service certificate on the credentials.
 credentials.ServiceCertificate.SetDefaultCertificate(
       "CN=localhost", StoreLocation.LocalMachine, StoreName.My);
 
-// replace ClientCredentials with CreditCardClientCredentials
+// Replace ClientCredentials with CreditCardClientCredentials.
 channelFactory.Endpoint.Behaviors.Remove(typeof(ClientCredentials));
 channelFactory.Endpoint.Behaviors.Add(credentials);
 
 client = channelFactory.CreateChannel();
 
-Console.WriteLine("Echo service returned: {0}", client.Echo());
+Console.WriteLine($"Echo service returned: {client.Echo()}");
 
 ((IChannel)client).Close();
 channelFactory.Close();
 ```
 
 ## <a name="custom-security-token-implementation"></a>自定义安全令牌实现
- 若要在 WCF 中启用自定义安全令牌, 请创建自定义安全令牌的对象表示形式。 此示例的 `CreditCardToken` 类中有此表示形式。 对象表示形式负责保存所有相关的安全令牌信息并负责提供包含在安全令牌中的安全密钥列表。 在本例中，信用卡安全令牌不包含任何安全密钥。
+
+ 若要在 WCF 中启用自定义安全令牌，请创建自定义安全令牌的对象表示形式。 此示例的 `CreditCardToken` 类中有此表示形式。 对象表示形式负责保存所有相关的安全令牌信息并负责提供包含在安全令牌中的安全密钥列表。 在本例中，信用卡安全令牌不包含任何安全密钥。
 
  下一部分介绍了必须执行哪些操作才能使自定义令牌通过网络传输并由 WCF 终结点使用。
 
@@ -130,10 +133,10 @@ class CreditCardToken : SecurityToken
     public CreditCardToken(CreditCardInfo cardInfo, string id)
     {
         if (cardInfo == null)
-            throw new ArgumentNullException("cardInfo");
+            throw new ArgumentNullException(nameof(cardInfo));
 
         if (id == null)
-            throw new ArgumentNullException("id");
+            throw new ArgumentNullException(nameof(id));
 
         this.cardInfo = cardInfo;
         this.id = id;
@@ -153,7 +156,8 @@ class CreditCardToken : SecurityToken
 ```
 
 ## <a name="getting-the-custom-credit-card-token-to-and-from-the-message"></a>向消息中写入和从消息中获取自定义信用卡令牌
- WCF 中的安全令牌序列化程序负责根据消息中的 XML 创建安全令牌的对象表示形式, 并创建安全令牌的 XML 格式。 安全令牌序列化程序还负责其他功能，如读取和写入指向安全令牌的密钥标识符，但本示例只使用与安全令牌相关的功能。 要启用自定义令牌，您必须实现您自己的安全令牌序列化程序。 本示例使用 `CreditCardSecurityTokenSerializer` 类来实现此目的。
+
+ WCF 中的安全令牌序列化程序负责根据消息中的 XML 创建安全令牌的对象表示形式，并创建安全令牌的 XML 格式。 安全令牌序列化程序还负责其他功能，如读取和写入指向安全令牌的密钥标识符，但本示例只使用与安全令牌相关的功能。 要启用自定义令牌，您必须实现您自己的安全令牌序列化程序。 本示例使用 `CreditCardSecurityTokenSerializer` 类来实现此目的。
 
  在服务上，自定义序列化程序读取 XML 形式的自定义令牌并据此创建自定义令牌的对象表示形式。
 
@@ -168,7 +172,8 @@ public class CreditCardSecurityTokenSerializer : WSSecurityTokenSerializer
     {
         XmlDictionaryReader localReader = XmlDictionaryReader.CreateDictionaryReader(reader);
 
-        if (reader == null) throw new ArgumentNullException("reader");
+        if (reader == null)
+            throw new ArgumentNullException(nameof(reader));
 
         if (reader.IsStartElement(Constants.CreditCardTokenName, Constants.CreditCardTokenNamespace))
             return true;
@@ -178,7 +183,8 @@ public class CreditCardSecurityTokenSerializer : WSSecurityTokenSerializer
 
     protected override SecurityToken ReadTokenCore(XmlReader reader, SecurityTokenResolver tokenResolver)
     {
-        if (reader == null) throw new ArgumentNullException("reader");
+        if (reader == null)
+            throw new ArgumentNullException(nameof(reader));
 
         if (reader.IsStartElement(Constants.CreditCardTokenName, Constants.CreditCardTokenNamespace))
         {
@@ -197,7 +203,7 @@ public class CreditCardSecurityTokenSerializer : WSSecurityTokenSerializer
             string creditCardIssuer = reader.ReadElementString(Constants.CreditCardIssuerElementName, Constants.CreditCardTokenNamespace);
             reader.ReadEndElement();
 
-            CreditCardInfo cardInfo = new CreditCardInfo(creditCardNumber, creditCardIssuer, expirationTime);
+            var cardInfo = new CreditCardInfo(creditCardNumber, creditCardIssuer, expirationTime);
 
             return new CreditCardToken(cardInfo, id);
         }
@@ -211,15 +217,15 @@ public class CreditCardSecurityTokenSerializer : WSSecurityTokenSerializer
     {
         if (token is CreditCardToken)
             return true;
-
-        else
-            return base.CanWriteTokenCore(token);
+        return base.CanWriteTokenCore(token);
     }
 
     protected override void WriteTokenCore(XmlWriter writer, SecurityToken token)
     {
-        if (writer == null) { throw new ArgumentNullException("writer"); }
-        if (token == null) { throw new ArgumentNullException("token"); }
+        if (writer == null)
+            throw new ArgumentNullException(nameof(writer));
+        if (token == null)
+            throw new ArgumentNullException(nameof(token));
 
         CreditCardToken c = token as CreditCardToken;
         if (c != null)
@@ -241,6 +247,7 @@ public class CreditCardSecurityTokenSerializer : WSSecurityTokenSerializer
 ```
 
 ## <a name="how-token-provider-and-token-authenticator-classes-are-created"></a>如何创建令牌提供程序和令牌身份验证器类
+
  客户端和服务凭据负责提供安全令牌管理器实例。 安全令牌管理器实例用于获取令牌提供程序、令牌身份验证器和令牌序列化程序。
 
  令牌提供程序会基于包含在客户端或服务凭据中的信息创建令牌的对象表示形式。 然后使用令牌序列化程序（在上一节中讨论）将令牌对象表示形式写入消息。
@@ -264,7 +271,7 @@ public class CreditCardSecurityTokenSerializer : WSSecurityTokenSerializer
             : base()
         {
             if (creditCardInfo == null)
-                throw new ArgumentNullException("creditCardInfo");
+                throw new ArgumentNullException(nameof(creditCardInfo));
 
             this.creditCardInfo = creditCardInfo;
         }
@@ -297,10 +304,10 @@ public class CreditCardSecurityTokenSerializer : WSSecurityTokenSerializer
 
         public override SecurityTokenProvider CreateSecurityTokenProvider(SecurityTokenRequirement tokenRequirement)
         {
-            // handle this token for Custom
+            // Handle this token for Custom.
             if (tokenRequirement.TokenType == Constants.CreditCardTokenType)
                 return new CreditCardTokenProvider(this.creditCardClientCredentials.CreditCardInfo);
-            // return server cert
+            // Return server cert.
             else if (tokenRequirement is InitiatorServiceModelSecurityTokenRequirement)
             {
                 if (tokenRequirement.TokenType == SecurityTokenTypes.X509Certificate)
@@ -327,9 +334,8 @@ public class CreditCardSecurityTokenSerializer : WSSecurityTokenSerializer
         public CreditCardTokenProvider(CreditCardInfo creditCardInfo) : base()
         {
             if (creditCardInfo == null)
-            {
-                throw new ArgumentNullException("creditCardInfo");
-            }
+                throw new ArgumentNullException(nameof(creditCardInfo));
+
             this.creditCardInfo = creditCardInfo;
         }
 
@@ -348,7 +354,7 @@ public class CreditCardSecurityTokenSerializer : WSSecurityTokenSerializer
             : base()
         {
             if (creditCardFile == null)
-                throw new ArgumentNullException("creditCardFile");
+                throw new ArgumentNullException(nameof(creditCardFile));
 
             this.creditCardFile = creditCardFile;
         }
@@ -414,16 +420,16 @@ public class CreditCardSecurityTokenSerializer : WSSecurityTokenSerializer
             CreditCardToken creditCardToken = token as CreditCardToken;
 
             if (creditCardToken.CardInfo.ExpirationDate < DateTime.UtcNow)
-                throw new SecurityTokenValidationException("The credit card has expired");
+                throw new SecurityTokenValidationException("The credit card has expired.");
             if (!IsCardNumberAndExpirationValid(creditCardToken.CardInfo))
-                throw new SecurityTokenValidationException("Unknown or invalid credit card");
+                throw new SecurityTokenValidationException("Unknown or invalid credit card.");
 
             // the credit card token has only 1 claim - the card number. The issuer for the claim is the
             // credit card issuer
 
-            DefaultClaimSet cardIssuerClaimSet = new DefaultClaimSet(new Claim(ClaimTypes.Name, creditCardToken.CardInfo.CardIssuer, Rights.PossessProperty));
-            DefaultClaimSet cardClaimSet = new DefaultClaimSet(cardIssuerClaimSet, new Claim(Constants.CreditCardNumberClaim, creditCardToken.CardInfo.CardNumber, Rights.PossessProperty));
-            List<IAuthorizationPolicy> policies = new List<IAuthorizationPolicy>(1);
+            var cardIssuerClaimSet = new DefaultClaimSet(new Claim(ClaimTypes.Name, creditCardToken.CardInfo.CardIssuer, Rights.PossessProperty));
+            var cardClaimSet = new DefaultClaimSet(cardIssuerClaimSet, new Claim(Constants.CreditCardNumberClaim, creditCardToken.CardInfo.CardNumber, Rights.PossessProperty));
+            var policies = new List<IAuthorizationPolicy>(1);
             policies.Add(new CreditCardTokenAuthorizationPolicy(cardClaimSet));
             return policies.AsReadOnly();
         }
@@ -435,7 +441,7 @@ public class CreditCardSecurityTokenSerializer : WSSecurityTokenSerializer
         {
             try
             {
-                using (StreamReader myStreamReader = new StreamReader(this.creditCardsFile))
+                using (var myStreamReader = new StreamReader(this.creditCardsFile))
                 {
                     string line = "";
                     while ((line = myStreamReader.ReadLine()) != null)
@@ -475,7 +481,7 @@ public class CreditCardSecurityTokenSerializer : WSSecurityTokenSerializer
         public CreditCardTokenAuthorizationPolicy(ClaimSet issuedClaims)
         {
             if (issuedClaims == null)
-                throw new ArgumentNullException("issuedClaims");
+                throw new ArgumentNullException(nameof(issuedClaims));
             this.issuer = issuedClaims.Issuer;
             this.issuedClaimSets = new ClaimSet[] { issuedClaims };
             this.id = Guid.NewGuid().ToString();
@@ -498,6 +504,7 @@ public class CreditCardSecurityTokenSerializer : WSSecurityTokenSerializer
 ```
 
 ## <a name="displaying-the-callers-information"></a>显示调用方信息
+
  若要显示调用方信息，请使用 `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets`，如下面的示例代码所示。 `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` 包含与当前调用方关联的授权声明。 声明由 `CreditCardToken` 类在其 `AuthorizationPolicies` 集合中提供。
 
 ```csharp
@@ -539,6 +546,7 @@ string GetCallerCreditCardNumber()
  运行示例时，操作请求和响应将显示在客户端控制台窗口中。 在客户端窗口中按 Enter 可以关闭客户端。
 
 ## <a name="setup-batch-file"></a>设置批处理文件
+
  通过运行此示例随附的 Setup.bat 批处理文件，可以用相关的证书将服务器配置为运行需要基于服务器证书的安全性的 IIS 承载的应用程序。 必须修改此批处理文件，以便跨计算机或在非承载情况下工作。
 
  下面提供了批处理文件不同节的简要概述，以便可以修改批处理文件从而在相应的配置中运行。
@@ -588,20 +596,20 @@ string GetCallerCreditCardNumber()
 
 #### <a name="to-set-up-and-build-the-sample"></a>设置和生成示例
 
-1. 确保已对[Windows Communication Foundation 示例执行了一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。
+1. 确保已对[Windows Communication Foundation 示例执行了一次性安装过程](one-time-setup-procedure-for-the-wcf-samples.md)。
 
-2. 若要生成解决方案, 请按照[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。
+2. 若要生成解决方案，请按照[生成 Windows Communication Foundation 示例](building-the-samples.md)中的说明进行操作。
 
 #### <a name="to-run-the-sample-on-the-same-computer"></a>在同一计算机上运行示例
 
-1. 使用管理员权限打开 Visual Studio 2012 命令提示符窗口, 然后从示例安装文件夹中运行安装程序。 这将安装运行示例所需的所有证书。请确保路径包括 Makecert.exe 所在的文件夹。
+1. 使用管理员权限打开 Visual Studio 2012 命令提示符窗口，然后从示例安装文件夹中运行安装程序。 这将安装运行示例所需的所有证书。请确保路径包括 Makecert.exe 所在的文件夹。
 
 > [!NOTE]
 > 确保在运行完该示例后运行 Cleanup.bat 移除证书。 其他安全示例使用相同的证书。  
   
 1. 从 client\bin 目录启动 Client.exe。 客户端活动将显示在客户端控制台应用程序上。  
   
-2. 如果客户端和服务无法进行通信, 请参阅[WCF 示例的故障排除提示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
+2. 如果客户端和服务无法进行通信，请参阅[WCF 示例的故障排除提示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
   
 #### <a name="to-run-the-sample-across-computer"></a>跨计算机运行示例  
   
@@ -609,7 +617,7 @@ string GetCallerCreditCardNumber()
   
 2. 将服务程序文件复制到服务计算机上的服务目录。 不要忘记复制 CreditCardFile.txt，否则信用卡身份验证器将不能验证从客户端发送的信用卡信息。 另外，将 Setup.bat 和 Cleanup.bat 文件复制到服务计算机上。  
   
-3. 必须具有一个其主题名称中包含计算机的完全限定域名的服务器证书。 如果您将 `%SERVER_NAME%` 变量更改为承载服务的计算机的完全限定的名称，您可以使用 Setup.bat 来创建一个这样的证书。 请注意, 必须在使用管理员特权打开的 Visual Studio 开发人员命令提示中运行 Setup.exe 文件。  
+3. 必须具有一个其主题名称中包含计算机的完全限定域名的服务器证书。 如果您将 `%SERVER_NAME%` 变量更改为承载服务的计算机的完全限定的名称，您可以使用 Setup.bat 来创建一个这样的证书。 请注意，必须在使用管理员特权打开的 Visual Studio 开发人员命令提示中运行 Setup.exe 文件。  
   
 4. 将服务器证书复制到客户端上的 CurrentUser-TrustedPeople 存储区中。 只有当服务器证书不是由受信任的颁发者颁发的情况下才需要执行此操作。  
   
@@ -623,7 +631,7 @@ string GetCallerCreditCardNumber()
   
 9. 在客户端计算机上，从命令提示窗口中启动 Client.exe。  
   
-10. 如果客户端和服务无法进行通信, 请参阅[WCF 示例的故障排除提示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
+10. 如果客户端和服务无法进行通信，请参阅[WCF 示例的故障排除提示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
   
 #### <a name="to-clean-up-after-the-sample"></a>运行示例后进行清理  
   

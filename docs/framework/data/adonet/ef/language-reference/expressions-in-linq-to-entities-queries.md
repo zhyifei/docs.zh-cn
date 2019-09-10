@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d70b502f-6a15-4120-b4fe-500b173ad9cc
-ms.openlocfilehash: 5262d2bca07525aba6db5303e730c8b358641d52
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: e625ac3968542c65e737093c0ac292de4c2ffa37
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250974"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854456"
 ---
 # <a name="expressions-in-linq-to-entities-queries"></a>LINQ to Entities 查询中的表达式
 表达式是求值结果可以为单个值、对象、方法或命名空间的一段代码。 表达式可以包含文本值、方法调用、运算符及其操作数，或者简单名称。 简单名称可以是变量名、类型成员名、方法参数名、命名空间名或类型名。 表达式可以使用运算符（运算符又可使用其他表达式作为参数）或方法调用（方法调用的参数又可以是其他方法调用）。 因此，表达式可以非常简单，也可以极其复杂。  
   
- 在 LINQ to Entities 查询中，表达式可以包含<xref:System.Linq.Expressions>命名空间中的类型所允许的任何内容，包括 lambda 表达式。 可在 LINQ to Entities 查询中使用的表达式是可用于查询的[!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]表达式的超集。  对 [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] 的查询中使用的表达式仅限于 `ObjectQuery<T>` 和基础数据源所支持的运算。  
+ 在 LINQ to Entities 查询中，表达式可以包含<xref:System.Linq.Expressions>命名空间中的类型所允许的任何内容，包括 lambda 表达式。 可在 LINQ to Entities 查询中使用的表达式是可用于查询实体框架的表达式的超集。作为对实体框架的查询的一部分的表达式仅限于`ObjectQuery<T>`和支持的操作基础数据源。  
   
  在下面的示例中，`Where` 子句中的比较运算就是一个表达式：  
   

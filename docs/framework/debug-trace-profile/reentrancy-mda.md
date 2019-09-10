@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7240c3f3-7df8-4b03-bbf1-17cdce142d45
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7de0a869925816da6df8f17e14ab92964aec8d11
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3a1fb8a48cf6dbfc4edd6387fb35297c9c047270
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61874180"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854048"
 ---
 # <a name="reentrancy-mda"></a>重入 MDA
 先前未通过有序转换执行从托管代码到本机代码的转换的情况下，如果尝试执行从本机代码到托管代码的转换，会激活 `reentrancy` 托管调试助手 (MDA)。  
@@ -48,7 +48,7 @@ ms.locfileid: "61874180"
 ## <a name="output"></a>Output  
  MDA 报告正在尝试非法重入。  检查线程的堆栈以确定发生原因和如何更正此问题。 下面是示例输出。  
   
-```  
+```output
 Additional Information: Attempting to call into managed code without   
 transitioning out first.  Do not attempt to run managed code inside   
 low-level native extensibility points. Managed Debugging Assistant   

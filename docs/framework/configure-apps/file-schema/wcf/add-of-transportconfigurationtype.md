@@ -2,20 +2,21 @@
 title: <add> 的 <transportConfigurationType>
 ms.date: 03/30/2017
 ms.assetid: 03d79db9-571d-4534-acef-d05e5467b257
-ms.openlocfilehash: 483ede53df13c896b88171910031dbe9793d66dc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: adf4cd7f02db6535c5950443d09476a9a5ff63fb
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920037"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850320"
 ---
 # <a name="add-of-transportconfigurationtype"></a>\<添加 transportConfigurationType > \<的 >
 此元素是一个键/值对，可标识特定传输的类型。  
   
- \<system.ServiceModel>  
-\<ServiceHostingEnvironment>  
-\<transportConfigurationTypes>  
-\<add>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<serviceHostingEnvironment >** ](servicehostingenvironment.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<transportConfigurationTypes >** ](transportconfigurationtypes.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<添加 >**  
   
 ## <a name="syntax"></a>语法  
   

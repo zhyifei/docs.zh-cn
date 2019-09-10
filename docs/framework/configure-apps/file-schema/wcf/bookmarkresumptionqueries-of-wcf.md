@@ -2,27 +2,27 @@
 title: <bookmarkResumptionQueries>WCF 的
 ms.date: 03/30/2017
 ms.assetid: ed086712-1dc7-4932-a592-d1116a0155f3
-ms.openlocfilehash: 5ec9827e9862866096265da576c91b10573012d1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 94ff9f44f295b45c03e1bd8f52a85d6b7b0c6e3b
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69919743"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850138"
 ---
 # <a name="bookmarkresumptionqueries-of-wcf"></a>\<WCF 的 bookmarkResumptionQueries >
   
 表示一个查询集合，这些查询用于跟踪工作流实例中的书签恢复。 跟踪参与者需要用此查询来订阅书签恢复记录。  
   
-有关跟踪配置文件查询的详细信息, 请参阅[跟踪配置文件](../../../windows-workflow-foundation/tracking-profiles.md)。
+有关跟踪配置文件查询的详细信息，请参阅[跟踪配置文件](../../../windows-workflow-foundation/tracking-profiles.md)。
   
-\<system.serviceModel>  
-\<跟踪 >  
-\<配置文件 >  
-\<trackingProfile>  
-\<工作流 >  
-\<bookmarkResumptionQueries>  
-\<bookmarkResumptionQuery>  
-  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<跟踪 >** ](tracking-of-wcf.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<配置文件 >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Trackingprofile&gt >** ](trackingprofile-of-wcf.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<工作流 >** ](workflow-of-wcf.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<bookmarkResumptionQueries >**  
+
 ## <a name="syntax"></a>语法  
   
 ```xml  

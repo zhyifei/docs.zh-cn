@@ -2,12 +2,12 @@
 title: 如何：使用 EdmGen.exe 生成模型和映射文件
 ms.date: 03/30/2017
 ms.assetid: 40db462d-2fd2-4cc1-ad86-d280403e63fa
-ms.openlocfilehash: 141b19c545360f92c2689252cf9aefd1ef156cf0
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 04606e23cffd03dea956076a07bb6cf2fadb4c9c
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251419"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854571"
 ---
 # <a name="how-to-use-edmgenexe-to-generate-the-model-and-mapping-files"></a>如何：使用 EdmGen.exe 生成模型和映射文件
 本主题描述如何使用 EDM 生成器 (EdmGen.exe) 工具生成以下文件（基于 School 数据库）：  
@@ -24,7 +24,7 @@ ms.locfileid: "70251419"
   
  EdmGen.exe 工具使用 /mode:FullGeneration 生成上面列出的文件。 有关 Edmgen.exe 命令的详细信息，请参阅[EDM 生成器（edmgen.exe）](edm-generator-edmgen-exe.md)。  
   
- 如果使用 Edmgen.exe 生成模型和映射文件，则仍需将 Visual Studio 项目配置为使用[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]。 有关详细信息，请参阅[如何：手动配置实体框架项目](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))。  
+ 如果使用 Edmgen.exe 生成模型和映射文件，则仍需将 Visual Studio 项目配置为使用实体框架。 有关详细信息，请参阅[如何：手动配置实体框架项目](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))。  
   
 > [!NOTE]
 > 由 EdmGen.exe 生成的概念模型包含数据库中所有对象。 如果希望生成仅包含特定对象的概念模型，请使用实体数据模型向导。 有关详细信息，请参阅[如何：使用实体数据模型向导](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100))。  
