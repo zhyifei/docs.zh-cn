@@ -125,7 +125,7 @@ public interface IRepository<T> where T : IAggregateRoot
 - **Martin Fowler。Unit of Work pattern**（工作单元模式）。\ \
   <https://martinfowler.com/eaaCatalog/unitOfWork.html>
 
-- **Implementing the Repository and Unit of Work Patterns in an ASP.NET MVC Application** \（在 ASP.NET MVC 应用程序中实现存储库模式和工作单元模式）
+- **Implementing the Repository and Unit of Work Patterns in an ASP.NET MVC Application** \（在 ASP.NET MVC 应用程序中实现存储库模式和工作单元模式）\
   <https://docs.microsoft.com/aspnet/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application>
 
 >[!div class="step-by-step"]
