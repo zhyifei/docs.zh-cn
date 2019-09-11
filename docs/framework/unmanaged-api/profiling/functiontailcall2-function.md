@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4e10b1a77586a09f8f5f7a59e811953fbede8773
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9495624f7eca57a79518036937a5fb63d01d9c4b
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586895"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851207"
 ---
-# <a name="functiontailcall2-function"></a><span data-ttu-id="3b084-102">FunctionTailcall2 函数</span><span class="sxs-lookup"><span data-stu-id="3b084-102">FunctionTailcall2 Function</span></span>
-<span data-ttu-id="3b084-103">通知探查器当前正在执行的函数将要执行到另一个函数的结尾调用并提供有关堆栈帧的信息。</span><span class="sxs-lookup"><span data-stu-id="3b084-103">Notifies the profiler that the currently executing function is about to perform a tail call to another function and provides information about the stack frame.</span></span>  
+# <a name="functiontailcall2-function"></a><span data-ttu-id="0f007-102">FunctionTailcall2 函数</span><span class="sxs-lookup"><span data-stu-id="0f007-102">FunctionTailcall2 Function</span></span>
+<span data-ttu-id="0f007-103">通知探查器，当前正在执行的函数即将对另一个函数执行尾调用，并提供有关堆栈帧的信息。</span><span class="sxs-lookup"><span data-stu-id="0f007-103">Notifies the profiler that the currently executing function is about to perform a tail call to another function and provides information about the stack frame.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3b084-104">语法</span><span class="sxs-lookup"><span data-stu-id="3b084-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0f007-104">语法</span><span class="sxs-lookup"><span data-stu-id="0f007-104">Syntax</span></span>  
   
-```  
+```cpp
 void __stdcall FunctionTailcall2 (  
     [in] FunctionID         funcId,   
     [in] UINT_PTR           clientData,   
@@ -36,47 +36,47 @@ void __stdcall FunctionTailcall2 (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="3b084-105">参数</span><span class="sxs-lookup"><span data-stu-id="3b084-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="0f007-105">参数</span><span class="sxs-lookup"><span data-stu-id="0f007-105">Parameters</span></span>  
  `funcId`  
- <span data-ttu-id="3b084-106">[in]当前正在执行即将进行尾调用的函数的标识符。</span><span class="sxs-lookup"><span data-stu-id="3b084-106">[in] The identifier of the currently executing function that is about to make a tail call.</span></span>  
+ <span data-ttu-id="0f007-106">中要进行尾调用的当前正在执行的函数的标识符。</span><span class="sxs-lookup"><span data-stu-id="0f007-106">[in] The identifier of the currently executing function that is about to make a tail call.</span></span>  
   
  `clientData`  
- <span data-ttu-id="3b084-107">[in]通过探查器之前指定的重新映射的函数标识符[FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md)，当前正在执行即将进行尾调用的函数。</span><span class="sxs-lookup"><span data-stu-id="3b084-107">[in] The remapped function identifier, which the profiler previously specified via [FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md), of the currently executing function that is about to make a tail call.</span></span>  
+ <span data-ttu-id="0f007-107">中探查器前面通过[FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md)指定的函数标识符，当前正在执行的函数将进行尾调用。</span><span class="sxs-lookup"><span data-stu-id="0f007-107">[in] The remapped function identifier, which the profiler previously specified via [FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md), of the currently executing function that is about to make a tail call.</span></span>  
   
  `func`  
- <span data-ttu-id="3b084-108">[in]一个`COR_PRF_FRAME_INFO`值，该值指向有关堆栈帧的信息。</span><span class="sxs-lookup"><span data-stu-id="3b084-108">[in] A `COR_PRF_FRAME_INFO` value that points to information about the stack frame.</span></span>  
+ <span data-ttu-id="0f007-108">中一个`COR_PRF_FRAME_INFO`值，该值指向有关堆栈帧的信息。</span><span class="sxs-lookup"><span data-stu-id="0f007-108">[in] A `COR_PRF_FRAME_INFO` value that points to information about the stack frame.</span></span>  
   
- <span data-ttu-id="3b084-109">探查器应将此视为可以传递回执行引擎的不透明句柄[ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="3b084-109">The profiler should treat this as an opaque handle that can be passed back to the execution engine in the [ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) method.</span></span>  
+ <span data-ttu-id="0f007-109">探查器应将此视为不透明的句柄，该句柄可传递回[ICorProfilerInfo2：： GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md)方法中的执行引擎。</span><span class="sxs-lookup"><span data-stu-id="0f007-109">The profiler should treat this as an opaque handle that can be passed back to the execution engine in the [ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) method.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="3b084-110">备注</span><span class="sxs-lookup"><span data-stu-id="3b084-110">Remarks</span></span>  
- <span data-ttu-id="3b084-111">尾调用的目标函数将使用当前堆栈帧，并将返回直接向进行尾调用的函数的调用方。</span><span class="sxs-lookup"><span data-stu-id="3b084-111">The target function of the tail call will use the current stack frame, and will return directly to the caller of the function that made the tail call.</span></span> <span data-ttu-id="3b084-112">这意味着[FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)回调不会发出有关目标的尾调用的函数。</span><span class="sxs-lookup"><span data-stu-id="3b084-112">This means that a [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md) callback will not be issued for a function that is the target of a tail call.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="0f007-110">备注</span><span class="sxs-lookup"><span data-stu-id="0f007-110">Remarks</span></span>  
+ <span data-ttu-id="0f007-111">尾调用的目标函数将使用当前堆栈帧，并将直接返回到进行尾调用的函数的调用方。</span><span class="sxs-lookup"><span data-stu-id="0f007-111">The target function of the tail call will use the current stack frame, and will return directly to the caller of the function that made the tail call.</span></span> <span data-ttu-id="0f007-112">这意味着将不会为作为尾调用目标的函数发出[FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)回调。</span><span class="sxs-lookup"><span data-stu-id="0f007-112">This means that a [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md) callback will not be issued for a function that is the target of a tail call.</span></span>  
   
- <span data-ttu-id="3b084-113">值`func`参数不是有效后`FunctionTailcall2`函数返回，因为值可能会更改或已损坏。</span><span class="sxs-lookup"><span data-stu-id="3b084-113">The value of the `func` parameter is not valid after the `FunctionTailcall2` function returns because the value may change or be destroyed.</span></span>  
+ <span data-ttu-id="0f007-113">该`FunctionTailcall2`函数返回后`func` ，该参数的值无效，因为该值可能会更改或被销毁。</span><span class="sxs-lookup"><span data-stu-id="0f007-113">The value of the `func` parameter is not valid after the `FunctionTailcall2` function returns because the value may change or be destroyed.</span></span>  
   
- <span data-ttu-id="3b084-114">`FunctionTailcall2`函数是一个回调; 必须实现它。</span><span class="sxs-lookup"><span data-stu-id="3b084-114">The `FunctionTailcall2` function is a callback; you must implement it.</span></span> <span data-ttu-id="3b084-115">实现必须使用`__declspec`(`naked`) 存储类特性。</span><span class="sxs-lookup"><span data-stu-id="3b084-115">The implementation must use the `__declspec`(`naked`) storage-class attribute.</span></span>  
+ <span data-ttu-id="0f007-114">`FunctionTailcall2`函数是回调; 必须实现它。</span><span class="sxs-lookup"><span data-stu-id="0f007-114">The `FunctionTailcall2` function is a callback; you must implement it.</span></span> <span data-ttu-id="0f007-115">实现必须使用`__declspec`（`naked`）存储类特性。</span><span class="sxs-lookup"><span data-stu-id="0f007-115">The implementation must use the `__declspec`(`naked`) storage-class attribute.</span></span>  
   
- <span data-ttu-id="3b084-116">调用此函数之前，执行引擎不会保存任何寄存器。</span><span class="sxs-lookup"><span data-stu-id="3b084-116">The execution engine does not save any registers before calling this function.</span></span>  
+ <span data-ttu-id="0f007-116">在调用此函数之前，执行引擎不会保存任何注册。</span><span class="sxs-lookup"><span data-stu-id="0f007-116">The execution engine does not save any registers before calling this function.</span></span>  
   
-- <span data-ttu-id="3b084-117">在进入时，必须保存使用，包括浮点单元 (FPU) 中的所有注册。</span><span class="sxs-lookup"><span data-stu-id="3b084-117">On entry, you must save all registers that you use, including those in the floating-point unit (FPU).</span></span>  
+- <span data-ttu-id="0f007-117">进入时，必须保存使用的所有寄存器，包括浮点单元（FPU）中的所有寄存器。</span><span class="sxs-lookup"><span data-stu-id="0f007-117">On entry, you must save all registers that you use, including those in the floating-point unit (FPU).</span></span>  
   
-- <span data-ttu-id="3b084-118">退出时，必须通过弹出已推送到由其调用方的所有参数由还原堆栈。</span><span class="sxs-lookup"><span data-stu-id="3b084-118">On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.</span></span>  
+- <span data-ttu-id="0f007-118">退出时，必须通过弹出由其调用方推送的所有参数来还原堆栈。</span><span class="sxs-lookup"><span data-stu-id="0f007-118">On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.</span></span>  
   
- <span data-ttu-id="3b084-119">实现`FunctionTailcall2`不应阻止，因为它会延迟垃圾回收。</span><span class="sxs-lookup"><span data-stu-id="3b084-119">The implementation of `FunctionTailcall2` should not block because it will delay garbage collection.</span></span> <span data-ttu-id="3b084-120">实现不应尝试垃圾回收，因为堆栈可能不是在垃圾收集友好状态中。</span><span class="sxs-lookup"><span data-stu-id="3b084-120">The implementation should not attempt a garbage collection because the stack may not be in a garbage collection-friendly state.</span></span> <span data-ttu-id="3b084-121">如果尝试在垃圾回收，则运行时将阻止直到`FunctionTailcall2`返回。</span><span class="sxs-lookup"><span data-stu-id="3b084-121">If a garbage collection is attempted, the runtime will block until `FunctionTailcall2` returns.</span></span>  
+ <span data-ttu-id="0f007-119">的`FunctionTailcall2`实现不应被阻止，因为它将延迟垃圾回收。</span><span class="sxs-lookup"><span data-stu-id="0f007-119">The implementation of `FunctionTailcall2` should not block because it will delay garbage collection.</span></span> <span data-ttu-id="0f007-120">实现不应尝试垃圾回收，因为堆栈可能不处于垃圾回收友好状态。</span><span class="sxs-lookup"><span data-stu-id="0f007-120">The implementation should not attempt a garbage collection because the stack may not be in a garbage collection-friendly state.</span></span> <span data-ttu-id="0f007-121">如果尝试垃圾回收，则运行时将被阻止， `FunctionTailcall2`直到返回。</span><span class="sxs-lookup"><span data-stu-id="0f007-121">If a garbage collection is attempted, the runtime will block until `FunctionTailcall2` returns.</span></span>  
   
- <span data-ttu-id="3b084-122">此外，`FunctionTailcall2`函数不能调用到托管代码中或以任何方式导致托管的内存分配。</span><span class="sxs-lookup"><span data-stu-id="3b084-122">Also, the `FunctionTailcall2` function must not call into managed code or in any way cause a managed memory allocation.</span></span>  
+ <span data-ttu-id="0f007-122">此外，该`FunctionTailcall2`函数不得调入托管代码或以任何方式导致托管的内存分配。</span><span class="sxs-lookup"><span data-stu-id="0f007-122">Also, the `FunctionTailcall2` function must not call into managed code or in any way cause a managed memory allocation.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3b084-123">要求</span><span class="sxs-lookup"><span data-stu-id="3b084-123">Requirements</span></span>  
- <span data-ttu-id="3b084-124">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="3b084-124">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0f007-123">要求</span><span class="sxs-lookup"><span data-stu-id="0f007-123">Requirements</span></span>  
+ <span data-ttu-id="0f007-124">**适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="0f007-124">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3b084-125">**标头：** CorProf.idl</span><span class="sxs-lookup"><span data-stu-id="3b084-125">**Header:** CorProf.idl</span></span>  
+ <span data-ttu-id="0f007-125">**标头：** CorProf.idl</span><span class="sxs-lookup"><span data-stu-id="0f007-125">**Header:** CorProf.idl</span></span>  
   
- <span data-ttu-id="3b084-126">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="3b084-126">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="0f007-126">**类库**CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0f007-126">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="3b084-127">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3b084-127">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="0f007-127">**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0f007-127">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3b084-128">请参阅</span><span class="sxs-lookup"><span data-stu-id="3b084-128">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0f007-128">请参阅</span><span class="sxs-lookup"><span data-stu-id="0f007-128">See also</span></span>
 
-- [<span data-ttu-id="3b084-129">FunctionEnter2 函数</span><span class="sxs-lookup"><span data-stu-id="3b084-129">FunctionEnter2 Function</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)
-- [<span data-ttu-id="3b084-130">FunctionLeave2 函数</span><span class="sxs-lookup"><span data-stu-id="3b084-130">FunctionLeave2 Function</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)
-- [<span data-ttu-id="3b084-131">SetEnterLeaveFunctionHooks2 方法</span><span class="sxs-lookup"><span data-stu-id="3b084-131">SetEnterLeaveFunctionHooks2 Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
-- [<span data-ttu-id="3b084-132">分析全局静态函数</span><span class="sxs-lookup"><span data-stu-id="3b084-132">Profiling Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)
+- [<span data-ttu-id="0f007-129">FunctionEnter2 函数</span><span class="sxs-lookup"><span data-stu-id="0f007-129">FunctionEnter2 Function</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)
+- [<span data-ttu-id="0f007-130">FunctionLeave2 函数</span><span class="sxs-lookup"><span data-stu-id="0f007-130">FunctionLeave2 Function</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)
+- [<span data-ttu-id="0f007-131">SetEnterLeaveFunctionHooks2 方法</span><span class="sxs-lookup"><span data-stu-id="0f007-131">SetEnterLeaveFunctionHooks2 Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
+- [<span data-ttu-id="0f007-132">分析全局静态函数</span><span class="sxs-lookup"><span data-stu-id="0f007-132">Profiling Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)
