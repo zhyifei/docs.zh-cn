@@ -2,12 +2,12 @@
 title: 从命令目录树生成 SQL - 最佳做法
 ms.date: 03/30/2017
 ms.assetid: 71ef6a24-4c4f-4254-af3a-ffc0d855b0a8
-ms.openlocfilehash: 366e27f8c8a04c5d2507ab37459ad6d5abc255ae
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 9859c7df941ae6681c991001e0d1e5a50c7ffc60
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251576"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855012"
 ---
 # <a name="generating-sql-from-command-trees---best-practices"></a>从命令目录树生成 SQL - 最佳做法
 
@@ -137,11 +137,11 @@ ON b.y = d.z
 
 ## <a name="avoid-select-"></a>避免 SELECT *
 
-不要使用 `SELECT *` 从基表中进行选择。 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]应用程序中的存储模型只能包含数据库表中的列的子集。 在这种情况下，`SELECT *` 可能产生不正确的结果。 替代方法是，应通过使用参与的表达式的结果类型中的列名，指定所有参与的列。
+不要使用 `SELECT *` 从基表中进行选择。 实体框架应用程序中的存储模型只能包含数据库表中的列的子集。 在这种情况下，`SELECT *` 可能产生不正确的结果。 替代方法是，应通过使用参与的表达式的结果类型中的列名，指定所有参与的列。
 
 ## <a name="reuse-of-expressions"></a>重用表达式
 
-在由[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]传递的查询命令目录树中可以重用表达式。 不要假定每个表达式在查询命令目录树中仅出现一次。
+表达式可以在由实体框架传递的查询命令目录树中重复使用。 不要假定每个表达式在查询命令目录树中仅出现一次。
 
 ## <a name="mapping-primitive-types"></a>映射基元类型
 

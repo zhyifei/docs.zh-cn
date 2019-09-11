@@ -2,15 +2,15 @@
 title: 如何：创建模型及映射文件嵌入资源
 ms.date: 03/30/2017
 ms.assetid: 20dfae4d-e95a-4264-9540-f5ad23b462d3
-ms.openlocfilehash: c88e0c09742d76c7508d7d782eabbe46035d3501
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 371f8f0317295ee39d543b5637afb93102036b62
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251449"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854587"
 ---
 # <a name="how-to-make-model-and-mapping-files-embedded-resources"></a>如何：创建模型及映射文件嵌入资源
-[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]利用，你可以将模型和映射文件部署为应用程序的嵌入资源。 包含嵌入模型和映射文件的程序集必须加载到实体连接所在的应用程序域中。 有关详细信息，请参阅[连接字符串](connection-strings.md)。 默认情况下，实体数据模型工具嵌入模型和映射文件。 手动定义模型和映射文件时，请使用下面的过程以确保文件作为嵌入资源与[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]应用程序一起部署。  
+使用实体框架可以将模型和映射文件部署为应用程序的嵌入资源。 包含嵌入模型和映射文件的程序集必须加载到实体连接所在的应用程序域中。 有关详细信息，请参阅[连接字符串](connection-strings.md)。 默认情况下，实体数据模型工具嵌入模型和映射文件。 手动定义模型和映射文件时，请使用此过程来确保将文件与实体框架的应用程序一起部署到嵌入的资源。  
   
 > [!NOTE]
 > 若要维护嵌入资源，每次修改模型和映射文件时都必须重复此过程。  
