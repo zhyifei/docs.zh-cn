@@ -216,7 +216,7 @@ toaster2.png    appliance
 
 ### <a name="create-a-struct-for-default-parameters"></a>创建默认参数的结构
 
-需要传入 Inception 模型的多个默认参数。 紧跟在 `Main()` 方法后面，使用以下代码创建结构，以将默认参数值映射到易记名称：
+Inception 模型具有多个需要传入的默认参数。 紧跟在 `Main()` 方法后面，使用以下代码创建结构，以将默认参数值映射到易记名称：
 
 [!code-csharp[InceptionSettings](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#InceptionSettings)]
 

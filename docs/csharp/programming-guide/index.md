@@ -9,17 +9,17 @@ helpviewer_keywords:
 - Visual C#, programming concepts
 - C# language, concepts
 ms.assetid: ac0f23a2-6bf3-4077-be99-538ae5fd3bc5
-ms.openlocfilehash: f41129b33b717efad5f1b1f59e40f95169e31bf8
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: f9ac3a6c1e96a1ba4cd78be46a1fd3ad7ee5e4ed
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69589476"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850969"
 ---
 # <a name="c-programming-guide"></a>C# 编程指南
 此部分详细介绍了 C# 语言主要功能，以及通过 .NET Framework 可以在 C# 中使用的功能。  
   
- 阅读此部分的大部分内容的前提是，你已对 C# 和一般编程概念有一定的了解。 如果完全没有接触过编程或 C#，建议参阅 [C# 教程简介](../tutorials/intro-to-csharp/index.md)或 [C# 入门](https://www.microsoft.com/net/tutorials/csharp/getting-started)互动教程，此教程不需要具备任何编程知识。  
+ 阅读此部分的大部分内容的前提是，你已对 C# 和一般编程概念有一定的了解。 如果完全没有接触过编程或 C#，建议参阅 [C# 教程简介](../tutorials/intro-to-csharp/index.md)或 [.NET 浏览器内教程](https://dotnet.microsoft.com/learn/dotnet/in-browser-tutorial/1)，此教程不需要具备任何编程知识。  
   
  若要了解特定的关键字、运算符和预处理器指令，请参阅 [C# 参考](../language-reference/index.md)。 若要了解 C# 语言规范，请参阅 [C# 语言规范](../language-reference/language-specification/index.md)。  
   
