@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Azure 构建新式 Web 应用程序 | 常�
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 4dc0618eceda4df7c5aa76aee3ac649deb9f5310
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 3a44b017c6160639ed1be7374b893e103ee5f5d8
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675434"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373908"
 ---
 # <a name="common-client-side-web-technologies"></a>常用客户端 Web 技术
 
@@ -28,9 +28,9 @@ HTML（超文本标记语言）是标准标记语言，用于创建网页和 Web
 
 CSS（级联样式表）用于控制 HTML 元素的外观和布局。 CSS 样式可直接应用于 HTML 元素，单独对相同页面进行定义，或在单独文件中定义或由页面引用。 样式根据用于选择给定 HTML 元素的方式进行级联。 例如，样式可应用于整个文档，但会由应用于特定元素的样式覆盖。 同样，特定于元素的样式会由应用于 CSS 类的样式（曾应用于该元素）覆盖，后者反过来会由指向该元素的特定实例（通过其 ID）的样式覆盖。 图 6-1
 
-**图 6-1**。 按顺序排列的 CSS 特殊性规则。
+![CSS 特殊性规则](./media/image6-1.png)
 
-![](./media/image6-1.png)
+**图 6-1**。 按顺序排列的 CSS 特殊性规则。
 
 最好将样式保存在单独的样式表文件中，并使用基于选择的级联在应用程序内实现一致且可重用的样式。 应避免将样式规则置于 HTML 中，但将样式（而不是规则）应用于特定的各个元素（不是元素的整个类，也不是应用特定 CSS 类的元素）除外。
 
