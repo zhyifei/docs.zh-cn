@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c6d99815-e022-4d2c-9420-1d7ab5b9d504
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5ebd1de46eb2757098a369b58dd9a6c0009e5b95
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: ad05d005ece4a52e2df0dbb7e044522db58f1787
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2019
-ms.locfileid: "61674880"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971863"
 ---
 # <a name="using-application-domains"></a>使用应用程序域
 应用程序域为公共语言运行时提供隔离单元。 它们在进程中创建和运行。 应用程序域通常由运行时主机创建，运行时主机是一种应用程序，负责向进程加载运行时，并在应用程序域内执行用户代码。 运行时主机创建进程和默认应用程序域，并在其中运行托管代码。 运行时主机包括 ASP.NET、Microsoft Internet Explorer 和 Windows Shell。  
@@ -36,7 +36,7 @@ ms.locfileid: "61674880"
  [如何：将程序集加载到应用程序域中](../../../docs/framework/app-domains/how-to-load-assemblies-into-an-application-domain.md)  
  说明如何将程序集加载到应用程序域中。  
   
- [如何：从程序集获得类型和成员信息](../../../docs/framework/app-domains/how-to-obtain-type-and-member-information-from-an-assembly.md)  
+ [如何：从程序集获得类型和成员信息](../reflection-and-codedom/get-type-member-information.md)  
  说明如何检索关于程序集的信息。  
   
  [卷影复制程序集](../../../docs/framework/app-domains/shadow-copy-assemblies.md)  
@@ -45,7 +45,7 @@ ms.locfileid: "61674880"
  [如何：接收第一机会异常通知](../../../docs/framework/app-domains/how-to-receive-first-chance-exception-notifications.md)  
  说明在公共语言运行时开始搜索异常处理程序之前，可如何接收已引发异常的通知。  
   
- [解析程序集加载](../../../docs/framework/app-domains/resolve-assembly-loads.md)  
+ [解析程序集加载](../../standard/assembly/resolve-loads.md)  
  提供有关使用 <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> 事件处理程序集加载故障的指导。  
   
 ## <a name="reference"></a>参考  
@@ -53,10 +53,10 @@ ms.locfileid: "61674880"
  表示应用程序域。 提供用于创建和控制应用程序域的方法。  
   
 ## <a name="related-sections"></a>相关章节  
- [Assemblies in the Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)（公共语言运行时中的程序集）  
+ [.NET 中的程序集](../../standard/assembly/index.md)  
  概述程序集执行的功能。  
   
- [使用程序集编程](../../../docs/framework/app-domains/programming-with-assemblies.md)  
+ [使用程序集编程](../../standard/assembly/program.md)  
  描述如何在程序集上创建、签署和设置特性。  
   
  [发出动态方法和程序集](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)  
