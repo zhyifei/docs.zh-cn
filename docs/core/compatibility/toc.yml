@@ -1,0 +1,8 @@
+- name: 应用程序兼容性
+  items:
+    - name: 评估重大更改
+      href: index.md
+    - name: 重大更改
+      href: breaking-changes.md
+    - name: 重大更改类别
+      href: categories.md
