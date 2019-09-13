@@ -5,12 +5,12 @@ author: richlander
 ms.date: 03/16/2017
 titleSuffix: ''
 ms.custom: seodec18
-ms.openlocfilehash: 794aa91e11f8d7386d3fe98f692e245e8af95eaa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9e40de3d95738a8af394690575010339e7faad19
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61647236"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70925945"
 ---
 # <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a>通过探讨这些教程来学习 .NET Core 和 .NET Core SDK 工具
 
@@ -44,6 +44,7 @@ ms.locfileid: "61647236"
 - [F# 入门](../../fsharp/get-started/get-started-command-line.md)
 
 ## <a name="other"></a>其他
+
 - [在 .NET Core 中使用 dotnet测试的单元测试](../testing/unit-testing-with-dotnet-test.md)
 - [使用 MSTest 和 .NET Core 执行单元测试](../testing/unit-testing-with-mstest.md)
 - [使用跨平台工具开发库](libraries.md)

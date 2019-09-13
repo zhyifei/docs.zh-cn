@@ -2,12 +2,12 @@
 title: 语言集成查询 (LINQ) (C#)
 ms.date: 02/02/2017
 ms.assetid: 19dd1782-905b-4a9d-a3e9-618453037fa2
-ms.openlocfilehash: 185e2cfc84a4134eec8eea1433f0cef43845aa2a
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: b91d52912c1625c036b3e08e47fbc985b193ebc2
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592163"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926736"
 ---
 # <a name="language-integrated-query-linq"></a>语言集成查询 (LINQ)
 
@@ -46,6 +46,7 @@ ms.locfileid: "69592163"
 ## <a name="next-steps"></a>后续步骤
 
 若要详细了解 LINQ，请先自行熟悉[查询表达式基础知识](../../../linq/query-expression-basics.md)中的一些基本概念，然后再阅读感兴趣的 LINQ 技术的相关文档：   
+
 - XML 文档：[LINQ to XML](linq-to-xml.md)  
   
 - ADO.NET 实体框架：[LINQ to Entities](../../../../framework/data/adonet/ef/language-reference/linq-to-entities.md)  
@@ -59,3 +60,4 @@ ms.locfileid: "69592163"
 ## <a name="see-also"></a>请参阅
 
 - [语言集成查询 (LINQ) (C#)](./index.md)
+ 
