@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, getting started
 - WCF Data Services, accessing data
 ms.assetid: 9665ff5b-3e3a-495d-bf83-d531d5d060ed
-ms.openlocfilehash: eff8d682004bf437a9b5470a4eb91c9bd52bfad5
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 048cbb8708aa705fe6b03491ddfa9c107a21cda1
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70791331"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894346"
 ---
 # <a name="accessing-data-service-resources-wcf-data-services"></a>访问数据服务资源（WCF 数据服务）
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]支持将[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]数据作为源公开，其中的资源可通过 uri 进行寻址。 这些资源根据[实体数据模型](../adonet/entity-data-model.md)的实体关系约定来表示。 在此模型中，实体表示作为应用程序域中数据类型的数据操作单元，如客户、订单、项目和产品。 可以通过使用具象状态传输 (REST) 的语义（尤其是标准 HTTP 谓词 GET、PUT、POST 和 DELETE）访问和更改实体数据。  
@@ -21,44 +21,44 @@ ms.locfileid: "70791331"
 ## <a name="addressing-resources"></a>处理资源  
  在 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 中，您可以通过使用 URI 对数据模型公开的任何数据进行寻址。 例如，下面的 URI 返回一个作为 Customers 实体集的源，其中包含 Customer 实体类型的所有实例的条目：  
   
-```  
-http://services.odata.org/Northwind/Northwind.svc/Customers  
+```http
+https://services.odata.org/Northwind/Northwind.svc/Customers  
 ```  
   
  实体具有称为实体键的特殊属性。 实体键用于在实体集中唯一标识某个实体。 这样，您可以在实体集中对某种实体类型的特定实例进行寻址。 例如，下面的 URI 返回 Customer 实体类型的具有键值 `ALFKI` 的特定实例的项：  
   
-```  
-http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')  
+```http  
+https://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')  
 ```  
   
  也可以对实体实例的基元属性和复杂属性进行单独寻址。 例如，下面的 URI 返回一个包含特定客户的 `ContactName` 属性值的 XML 元素：  
   
-```  
-http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/ContactName  
+```http  
+https://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/ContactName  
 ```  
   
  如果在上面的 URI 中包括 `$value` 终结点，则只在响应消息中返回基元属性的值。 下面的示例只返回字符串“Maria Anders”，而不返回 XML 元素：  
   
-```  
-http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/ContactName/$value  
+```http  
+https://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/ContactName/$value  
 ```  
   
  实体之间的关系在数据模型中由关联定义。 通过这些关联，可以使用实体实例的导航属性对相关实体进行寻址。 对于多对一的关系，导航属性可返回单个相关实体；对于一对多的关系，导航属性可返回一组相关实体。 例如，下面的 URI 返回一个作为与特定客户相关的所有订单集的源：  
   
-```  
-http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders  
+```http  
+https://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders  
 ```  
   
  通常为双向的关系由一对导航属性表示。 作为对前一示例中所示的关系的反转，下面的 URI 返回对特定 Order 实体所属的 Customer 实体的引用：  
   
-```  
-http://services.odata.org/Northwind/Northwind.svc/Orders(10643)/Customer  
+```http  
+https://services.odata.org/Northwind/Northwind.svc/Orders(10643)/Customer  
 ```  
   
  [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]还使您能够基于查询表达式的结果来对资源进行寻址。 这样，便可以基于计算的表达式来筛选资源集。 例如，下面的 URI 对资源进行筛选以仅返回指定客户自 1997 年 9 月 22 日起已发货的订单：  
   
-```  
-http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders?$filter=ShippedDate gt datetime'1997-09-22T00:00:00'  
+```http  
+https://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders?$filter=ShippedDate gt datetime'1997-09-22T00:00:00'  
 ```  
   
  有关详细信息，请[参阅 OData：URI 约定](https://go.microsoft.com/fwlink/?LinkId=185564)。  
@@ -66,8 +66,8 @@ http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders?$fil
 ## <a name="system-query-options"></a>系统查询选项  
  [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]定义一组系统查询选项，这些选项可用于对资源执行传统的查询操作，如筛选、排序和分页。 例如，下面的 URI 返回所有`Order`实体的集，以及相关`Order_Detail`实体（不是以`100`结尾的邮政编码）：  
   
-```  
-http://services.odata.org/Northwind/Northwind.svc/Orders?$filter=not endswith(ShipPostalCode,'100')&$expand=Order_Details&$orderby=ShipCity  
+```http  
+https://services.odata.org/Northwind/Northwind.svc/Orders?$filter=not endswith(ShipPostalCode,'100')&$expand=Order_Details&$orderby=ShipCity  
 ```  
   
  返回源中的各项还按订单的 ShipCity 属性值进行排序。  
@@ -87,8 +87,8 @@ http://services.odata.org/Northwind/Northwind.svc/Orders?$filter=not endswith(Sh
 ## <a name="addressing-relationships"></a>对关系进行寻址  
  除了对实体集和实体实例进行寻址以外[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] ，还使您能够对表示实体之间的关系的关联进行寻址。 若要创建或更改两个实体实例（例如与 Northwind 示例数据库中指定订单相关的发货方）之间的关系，必须使用此功能。 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]`$link`支持操作员专门对实体间的关联进行寻址。 例如，在 HTTP PUT 请求消息中指定下面的 URI 可将指定订单的发货方更改为新发货方。  
   
-```  
-http://services.odata.org/Northwind/Northwind.svc/Orders(10643)/$links/Shipper  
+```http 
+https://services.odata.org/Northwind/Northwind.svc/Orders(10643)/$links/Shipper  
 ```  
   
  有关详细信息，请[参阅 OData：寻址项](https://go.microsoft.com/fwlink/?LinkId=187351)之间的链接。  

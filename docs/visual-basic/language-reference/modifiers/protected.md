@@ -10,35 +10,36 @@ helpviewer_keywords:
 - Protected access modifier
 - Protected keyword [Visual Basic]
 ms.assetid: 74ad3d56-309f-49d2-b60c-1d0157d010e8
-ms.openlocfilehash: 86758c68f0f3bfe214a695f656d3924eadd27e31
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a80e504cc8e88dfc8968f70fee2c17991b28aff5
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64642690"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929461"
 ---
 # <a name="protected-visual-basic"></a>Protected (Visual Basic)
-指定一个或多个声明编程元素的成员访问修饰符只能从来访问其自己的类中或从派生类。  
+一个成员访问修饰符，它指定一个或多个已声明的编程元素只能从自己的类或派生类中访问。  
   
 ## <a name="remarks"></a>备注  
- 有时，在类中声明的编程元素包含敏感数据或受限制的代码，并且你想要限制对元素的访问。 但是，如果类是可继承，并预计的派生类层次结构，它可能需要这些派生的类来访问数据或代码。 在这种情况下，想要从基本类和所有派生类可访问的元素。 若要限制到这种方式中的元素的访问，可将其与声明`Protected`。  
+ 有时，在类中声明的编程元素包含敏感数据或受限制的代码，并希望限制对元素的访问。 但是，如果类可继承并且你需要派生类的层次结构，则这些派生类可能需要访问数据或代码。 在这种情况下，你希望可以从基类和所有派生类中访问元素。 若要以这种方式限制对元素的访问，可使用`Protected`声明。  
 
 > [!NOTE]
-> `Protected`访问修饰符可以结合这两个其他修饰符：
-> - [Protected Friend](protected-friend.md)修饰符使类成员在该类中，从派生类中，和在其中定义类的相同程序集内访问。 
-> - [Private Protected](private-protected.md)修饰符使类成员可访问由派生类型，但只能在其包含程序集内。
+> `Protected`访问修饰符可以与其他两个修饰符结合使用：
+>
+> - [受保护的 Friend](protected-friend.md)修饰符使类成员可从该类、派生类以及在其中定义该类的同一程序集中访问。 
+> - [私有受保护](private-protected.md)的修饰符使类成员可由派生类型访问，但仅包含在其包含的程序集中。
   
 ## <a name="rules"></a>规则  
   
-- **声明上下文。** 可以使用`Protected`仅在类级别。 这意味着声明上下文`Protected`元素必须是类，且不能为源文件、 命名空间、 接口、 模块、 结构或过程。  
+- **声明上下文。** 只能在类`Protected`级别使用。 这意味着`Protected`元素的声明上下文必须是类，且不能是源文件、命名空间、接口、模块、结构或过程。  
 
 ## <a name="behavior"></a>行为  
   
-- **访问级别。** 在类中的所有代码可以都访问它的元素。 从基类派生的任何类中的代码可以访问所有`Protected`元素的基类。 这是派生的针对每一代，则返回 true。 这意味着，一个类可以访问`Protected`元素的基类的基类，依次类推。  
+- **访问级别。** 类中的所有代码都可以访问其元素。 从基类派生的任何类中的代码都可以访问基类的`Protected`所有元素。 这适用于派生的所有代。 这意味着，类可以访问`Protected`基类的基类的元素，依此类推。  
   
-     受保护的访问不是超集或友元访问权限的子集。  
+     受保护的访问不是友元访问的超集或子集。  
   
-- **访问修饰符。** 指定的访问级别的关键字称为*访问修饰符*。 访问修饰符的比较，请参阅[访问 Visual Basic 中的级别](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
+- **访问修饰符。** 指定访问级别的关键字称为*访问修饰符*。 有关访问修饰符的比较，请参阅[Visual Basic 中的访问级别](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
   
  `Protected` 修饰符可用于下面的上下文中：  
   
@@ -73,7 +74,7 @@ ms.locfileid: "64642690"
 - [Private](../../../visual-basic/language-reference/modifiers/private.md)
 - [Private Protected](private-protected.md)
 - [Protected Friend](protected-friend.md)
-- [在 Visual Basic 中的访问级别](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Visual Basic 中的访问级别](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [过程](../../../visual-basic/programming-guide/language-features/procedures/index.md)
 - [结构](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [对象和类](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

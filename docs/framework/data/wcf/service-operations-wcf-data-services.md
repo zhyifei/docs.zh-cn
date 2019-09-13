@@ -8,18 +8,18 @@ helpviewer_keywords:
 - service operations [WCF Data Services]
 - WCF Data Services, service operations
 ms.assetid: 583a690a-e60f-4990-8991-d6efce069d76
-ms.openlocfilehash: f905eb90b47cb5ab20fd912b1cbcc62947361992
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 4f36081ef1a3eec84f3cc2ced3c629109acd6a38
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70779772"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894271"
 ---
 # <a name="service-operations-wcf-data-services"></a>服务操作（WCF 数据服务）
 
 使用 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 可以在数据服务中定义服务操作，以便在服务器上公开方法。 与其他数据服务资源一样，服务操作也是通过 URI 进行寻址。 使用服务操作可以在数据服务中公开业务逻辑；例如，实现验证逻辑，应用基于角色的安全性或公开专用查询功能。 服务操作是添加到派生自 <xref:System.Data.Services.DataService%601> 的数据服务类的方法。 与所有其他数据服务资源一样，也可以向服务操作方法提供参数。 例如，以下服务操作 URI （基于[快速入门](quickstart-wcf-data-services.md)数据服务）将值`London`传递给`city`参数：
 
-```
+```http
 http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'
 ```
 
@@ -70,7 +70,7 @@ http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'
 
 通过将方法名称放在 URI 的第一个路径段中，可以对服务操作进行寻址。 例如，下面的 URI 访问一个 `GetOrdersByState` 操作，其返回 <xref:System.Linq.IQueryable%601> 对象的 `Orders` 集合。
 
-```
+```http
 http://localhost:12345/Northwind.svc/GetOrdersByState?state='CA'&includeItems=true
 ```
 
@@ -86,7 +86,7 @@ http://localhost:12345/Northwind.svc/GetOrdersByState?state='CA'&includeItems=tr
 
 可以将其他路径段或查询选项添加到该 URI，具体取决于服务操作的返回类型。 例如，以下 URI 访问 `GetOrdersByCity` 操作，该操作返回 <xref:System.Linq.IQueryable%601> 对象的 `Orders` 集合（按 `RequiredDate` 的降序顺序排序）以及相关的 `Order_Details` 对象：
 
-```
+```http
 http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'&$expand=Order_Details&$orderby=RequiredDate desc
 ```
 

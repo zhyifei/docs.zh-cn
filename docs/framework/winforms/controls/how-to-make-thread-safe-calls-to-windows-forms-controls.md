@@ -15,22 +15,22 @@ helpviewer_keywords:
 - threading [Windows Forms], cross-thread calls
 - controls [Windows Forms], multithreading
 ms.assetid: 138f38b6-1099-4fd5-910c-390b41cbad35
-ms.openlocfilehash: 3211df1f0e585780039471b80b5b913613ad9bbd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 78ad7b16d5220972a61848c0c80cd884afa842d9
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61913791"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928620"
 ---
 # <a name="how-to-make-thread-safe-calls-to-windows-forms-controls"></a>如何：对 Windows 窗体控件进行线程安全调用
 
-多线程处理可以提高性能的 Windows 窗体应用程序，但对 Windows 窗体控件的访问不是本质上是线程安全。 多线程处理可以公开你的代码非常严重且复杂的 bug。 操作控件的两个或多个线程可以迫使该控件处于不一致的状态，并会导致争用条件、 死锁，并冻结或挂起。 如果你实现多线程处理在应用中，请确保以线程安全的方式调用跨线程控件。 有关详细信息，请参阅[托管线程处理最佳做法](../../../standard/threading/managed-threading-best-practices.md)。 
+多线程处理可以提高 Windows 窗体应用的性能，但对 Windows 窗体控件的访问本质上不是线程安全的。 多线程处理可以将你的代码公开给非常严重且复杂的 bug。 处理控件的两个或多个线程可能会强制控件处于不一致状态并导致争用情况、死锁和冻结或挂起。 如果在应用程序中实现多线程处理，请确保以线程安全的方式调用跨线程控件。 有关详细信息，请参阅[托管线程处理最佳做法](../../../standard/threading/managed-threading-best-practices.md)。 
 
-有两种方法来安全地从并未创建该控件的线程调用的 Windows 窗体控件。 可以使用<xref:System.Windows.Forms.Control.Invoke%2A?displayProperty=fullName>方法来调用在主线程，这又会调用该控件中创建一个委托。 或者，可以实现<xref:System.ComponentModel.BackgroundWorker?displayProperty=nameWithType>，它使用一个事件驱动的模型将报告结果中的后台线程完成工作。 
+可以通过两种方法从未创建该控件的线程安全调用 Windows 窗体控件。 您可以使用<xref:System.Windows.Forms.Control.Invoke%2A?displayProperty=fullName>方法调用在主线程中创建的委托，该委托又调用控件。 或者，你可以实现<xref:System.ComponentModel.BackgroundWorker?displayProperty=nameWithType>，它使用事件驱动模型将后台线程中完成的工作与报表上的结果进行分隔。 
 
 ## <a name="unsafe-cross-thread-calls"></a>不安全的跨线程调用
 
-它是不安全，若要直接从没有创建它的线程调用控件。 下面的代码段说明了对的不安全调用<xref:System.Windows.Forms.TextBox?displayProperty=nameWithType>控件。 `Button1_Click`事件处理程序创建一个新`WriteTextUnsafe`线程，设置主线程的<xref:System.Windows.Forms.TextBox.Text%2A?displayProperty=nameWithType>直接属性。 
+直接从未创建控件的线程调用控件是不安全的。 下面的代码段演示了对<xref:System.Windows.Forms.TextBox?displayProperty=nameWithType>控件的不安全调用。 事件处理程序创建一个新`WriteTextUnsafe`线程，该线程直接设置主线程<xref:System.Windows.Forms.TextBox.Text%2A?displayProperty=nameWithType>的属性。 `Button1_Click` 
 
 ```csharp
 private void Button1_Click(object sender, EventArgs e)
@@ -55,36 +55,37 @@ Private Sub WriteTextUnsafe()
 End Sub
 ```
 
-Visual Studio 调试器检测到这些不安全的线程调用，通过引发<xref:System.InvalidOperationException>消息，**跨线程操作无效。控制""从其创建的线程以外的线程访问。** <xref:System.InvalidOperationException>始终不安全的跨线程调用 Visual Studio 在调试期间，发生并且可能会出现在应用运行时。 可修复此问题，但你可以通过设置禁用异常<xref:System.Windows.Forms.Control.CheckForIllegalCrossThreadCalls%2A?displayProperty=nameWithType>属性设置为`false`。
+Visual Studio 调试器通过引发<xref:System.InvalidOperationException>消息（跨线程操作无效） **来检测这些不安全的线程调用。控件 "" 从创建它的线程之外的其他线程访问。** 在 Visual Studio 调试过程中，对于不安全的跨线程调用始终出现，在应用运行时可能会发生。<xref:System.InvalidOperationException> 你应修复此问题，但你可以通过将<xref:System.Windows.Forms.Control.CheckForIllegalCrossThreadCalls%2A?displayProperty=nameWithType>属性设置为来`false`禁用异常。
 
 ## <a name="safe-cross-thread-calls"></a>安全的跨线程调用 
 
-下面的代码示例演示两种方式安全地从没有创建它的线程调用的 Windows 窗体控件： 
-1. <xref:System.Windows.Forms.Control.Invoke%2A?displayProperty=fullName>方法，从主线程调用控件调用委托。 
-2. 一个<xref:System.ComponentModel.BackgroundWorker?displayProperty=nameWithType>组件，提供了一个事件驱动模型。 
+下面的代码示例演示了两种从未创建 Windows 窗体控件的线程安全调用的方法： 
 
-在这两个示例中，后台线程处于睡眠状态一秒以模拟该线程中正在进行的工作。 
+1. <xref:System.Windows.Forms.Control.Invoke%2A?displayProperty=fullName>方法，它从主线程调用委托以调用控件。 
+2. 一个<xref:System.ComponentModel.BackgroundWorker?displayProperty=nameWithType>组件，它提供事件驱动模型。 
 
-您可以生成并运行这些示例作为从.NET Framework 应用程序C#或 Visual Basic 命令行。 有关详细信息，请参阅[命令行上使用 csc.exe 生成](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)或[中的命令行 (Visual Basic 中) 生成](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)。 
+在这两个示例中，后台线程休眠一秒钟，以模拟在该线程中完成的工作。 
+
+你可以从C#或 Visual Basic 命令行 .NET Framework 应用生成并运行这些示例。 有关详细信息，请参阅[通过 csc 生成命令行](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)或[从命令行生成（Visual Basic）](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)。 
 
 从.NET Core 3.0 开始，你还可以生成并运行示例作为 Windows.NET Core 应用程序从具有.NET Core Windows 窗体的文件夹 *\<文件夹名称>.csproj* 项目文件。 
 
-## <a name="example-use-the-invoke-method-with-a-delegate"></a>示例:使用 Invoke 方法和委托
+## <a name="example-use-the-invoke-method-with-a-delegate"></a>示例：将 Invoke 方法与委托一起使用
 
-下面的示例演示了用于确保对 Windows 窗体控件的线程安全调用的模式。 它会查询<xref:System.Windows.Forms.Control.InvokeRequired%2A?displayProperty=fullName>属性，将该控件进行比较的创建线程 ID 以调用线程 id。 如果线程 Id 是相同的则会直接调用控件。 如果线程 Id 不相同，则会调用<xref:System.Windows.Forms.Control.Invoke%2A?displayProperty=nameWithType>从主线程，这使得对控件的实际调用的委托的方法。
+下面的示例演示了一种用于确保对 Windows 窗体控件进行线程安全调用的模式。 它查询<xref:System.Windows.Forms.Control.InvokeRequired%2A?displayProperty=fullName>属性，该属性将控件的创建线程 id 与调用线程 id 进行比较。 如果线程 Id 相同，则它会直接调用控件。 如果线程 id 不同，则使用主线程中<xref:System.Windows.Forms.Control.Invoke%2A?displayProperty=nameWithType>的委托调用方法，这将对控件进行实际调用。
 
-`SafeCallDelegate`允许设定<xref:System.Windows.Forms.TextBox>控件的<xref:System.Windows.Forms.TextBox.Text%2A>属性。 `WriteTextSafe`方法查询<xref:System.Windows.Forms.Control.InvokeRequired%2A>。 如果<xref:System.Windows.Forms.Control.InvokeRequired%2A>将返回`true`，`WriteTextSafe`传递`SafeCallDelegate`到<xref:System.Windows.Forms.Control.Invoke%2A>进行实际调用控件的方法。 如果<xref:System.Windows.Forms.Control.InvokeRequired%2A>将返回`false`，`WriteTextSafe`设置<xref:System.Windows.Forms.TextBox.Text%2A?displayProperty=nameWithType>直接。 `Button1_Click`事件处理程序将创建新线程并运行`WriteTextSafe`方法。 
+允许设置控件的<xref:System.Windows.Forms.TextBox.Text%2A>属性。 <xref:System.Windows.Forms.TextBox> `SafeCallDelegate` `WriteTextSafe`方法查询<xref:System.Windows.Forms.Control.InvokeRequired%2A>。 如果<xref:System.Windows.Forms.Control.InvokeRequired%2A>返回`true` ，`WriteTextSafe`则将传递`SafeCallDelegate`给方法以对控件进行实际调用。<xref:System.Windows.Forms.Control.Invoke%2A> 如果<xref:System.Windows.Forms.Control.InvokeRequired%2A>返回`false`，则`WriteTextSafe`直接设置。 <xref:System.Windows.Forms.TextBox.Text%2A?displayProperty=nameWithType> 事件处理程序创建新线程并`WriteTextSafe`运行方法。 `Button1_Click` 
 
  [!code-csharp[ThreadSafeCalls#1](~/samples/snippets/winforms/thread-safe/example1/cs/Form1.cs)]
  [!code-vb[ThreadSafeCalls#1](~/samples/snippets/winforms/thread-safe/example1/vb/Form1.vb)]  
 
-## <a name="example-use-a-backgroundworker-event-handler"></a>示例:使用 BackgroundWorker 事件处理程序
+## <a name="example-use-a-backgroundworker-event-handler"></a>示例：使用 BackgroundWorker 事件处理程序
 
-方便地实现多线程是使用<xref:System.ComponentModel.BackgroundWorker?displayProperty=nameWithType>组件，使用事件驱动模型。 后台线程运行<xref:System.ComponentModel.BackgroundWorker.DoWork?displayProperty=nameWithType>事件，不与主线程进行交互。 主线程运行<xref:System.ComponentModel.BackgroundWorker.ProgressChanged?displayProperty=nameWithType>和<xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted?displayProperty=nameWithType>事件处理程序，可以调用主线程的控件。
+实现多线程处理的一种简单方法<xref:System.ComponentModel.BackgroundWorker?displayProperty=nameWithType>是使用组件，该组件使用事件驱动模型。 后台线程运行<xref:System.ComponentModel.BackgroundWorker.DoWork?displayProperty=nameWithType>不与主线程交互的事件。 主线程运行<xref:System.ComponentModel.BackgroundWorker.ProgressChanged?displayProperty=nameWithType>和<xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted?displayProperty=nameWithType>事件处理程序，这些处理程序可以调用主线程的控件。
 
-若要通过使用调用线程安全<xref:System.ComponentModel.BackgroundWorker>，在后台线程来执行工作，创建一种方法，并将其绑定到<xref:System.ComponentModel.BackgroundWorker.DoWork>事件。 在主线程来报告后台工作，结果中创建另一种方法并将其绑定到<xref:System.ComponentModel.BackgroundWorker.ProgressChanged>或<xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted>事件。 若要启动后台线程，请调用<xref:System.ComponentModel.BackgroundWorker.RunWorkerAsync%2A?displayProperty=nameWithType>。 
+若要通过使用<xref:System.ComponentModel.BackgroundWorker>进行线程安全调用，请在后台线程中创建方法来完成工作，并将其绑定<xref:System.ComponentModel.BackgroundWorker.DoWork>到事件。 在主线程中创建另一个方法来报告后台工作的结果，并将其绑定到<xref:System.ComponentModel.BackgroundWorker.ProgressChanged>或<xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted>事件。 若要启动后台线程，请<xref:System.ComponentModel.BackgroundWorker.RunWorkerAsync%2A?displayProperty=nameWithType>调用。 
 
-该示例使用<xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted>事件处理程序设置<xref:System.Windows.Forms.TextBox>控件的<xref:System.Windows.Forms.TextBox.Text%2A>属性。 有关使用示例<xref:System.ComponentModel.BackgroundWorker.ProgressChanged>事件，请参阅<xref:System.ComponentModel.BackgroundWorker>。 
+该示例使用<xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted>事件处理程序<xref:System.Windows.Forms.TextBox>设置控件的<xref:System.Windows.Forms.TextBox.Text%2A>属性。 有关使用<xref:System.ComponentModel.BackgroundWorker.ProgressChanged>事件的示例，请参见<xref:System.ComponentModel.BackgroundWorker>。 
 
  [!code-csharp[ThreadSafeCalls#2](~/samples/snippets/winforms/thread-safe/example2/cs/Form1.cs)]
  [!code-vb[ThreadSafeCalls#2](~/samples/snippets/winforms/thread-safe/example2/vb/Form1.vb)]  
@@ -94,4 +95,4 @@ Visual Studio 调试器检测到这些不安全的线程调用，通过引发<xr
 - <xref:System.ComponentModel.BackgroundWorker>
 - [如何：在后台运行操作](how-to-run-an-operation-in-the-background.md)
 - [如何：实现使用后台操作的窗体](how-to-implement-a-form-that-uses-a-background-operation.md)
-- [开发自定义 Windows 窗体控件与.NET Framework](developing-custom-windows-forms-controls.md)
+- [利用 .NET Framework 开发自定义 Windows 窗体控件](developing-custom-windows-forms-controls.md)

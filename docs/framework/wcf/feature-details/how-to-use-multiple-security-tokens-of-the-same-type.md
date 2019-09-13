@@ -2,15 +2,16 @@
 title: 如何：使用相同类型的多个安全令牌
 ms.date: 03/30/2017
 ms.assetid: cf179f48-4ed4-4caa-86a5-ef8eecc231cd
-ms.openlocfilehash: 1b383c6ccd96d1b3d7b091b2d7c67bb166da51df
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 84009eacca113fcd83a0e4908c7d6eb0c82db7d5
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65589419"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928763"
 ---
 # <a name="how-to-use-multiple-security-tokens-of-the-same-type"></a>如何：使用相同类型的多个安全令牌
-- 在.NET Framework 3.0 中，客户端消息仅包含一个任意给定类型的令牌。 现在，客户端消息可以包含某种类型的多个令牌。 本主题演示如何将同一类型的多个令牌包含在客户端消息中。  
+
+- 在 .NET Framework 3.0 中，客户端消息只包含任何给定类型的一个令牌。 现在，客户端消息可以包含某种类型的多个令牌。 本主题演示如何将同一类型的多个令牌包含在客户端消息中。  
   
 - 请注意，不能以这种方式配置服务：一个服务只能包含一个支持令牌。  
   

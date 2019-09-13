@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: f9532629-6594-4a41-909f-d083f30a42f3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b86775f78b02b09dd8fb7925a13625783520bce1
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: ba60b6d97d1441cefc9392067c797504f454ac59
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052672"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894514"
 ---
 # <a name="apis-that-rely-on-reflection"></a>利用反射的 API
-在某些情况下，在代码中对反射的使用并不明显，并因此.NET Native 工具链不会保留在运行时间需要的元数据。 该主题介绍了一些常见的 API 或常见编程模式，它们不被视为是反射 API 的一部分，而依赖反射成功执行。 如果在源代码中使用了它们，可以将有关它们的信息添加到运行时指令 (.rd.xml) 文件，以便对这些 API 的调用不会在运行时内引发 [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) 异常或某种其他异常。  
+在某些情况下，在代码中使用反射并不明显，因此 .NET Native 工具链不会保留运行时所需的元数据。 该主题介绍了一些常见的 API 或常见编程模式，它们不被视为是反射 API 的一部分，而依赖反射成功执行。 如果在源代码中使用了它们，可以将有关它们的信息添加到运行时指令 (.rd.xml) 文件，以便对这些 API 的调用不会在运行时内引发 [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) 异常或某种其他异常。  
   
 ## <a name="typemakegenerictype-method"></a>Type.MakeGenericType 方法  
  你可以通过使用以下所示代码调用 `AppClass<T>` 方法来动态实例化一个泛型类型 <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType>：  
@@ -29,11 +29,9 @@ ms.locfileid: "66052672"
   
  但即使当你为未实例化的泛型类型添加元数据时，调用 <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType> 方法也会引发 [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) 异常：  
   
-```  
-This operation cannot be carried out as metadata for the following type was removed for performance reasons:  
+由于性能原因，已删除以下类型的元数据，因此无法执行此操作：  
   
-App1.AppClass`1<System.Int32>.  
-```  
+`App1.AppClass`1 < System.object > "。  
   
  你可以将以下运行时指令添加到运行时指令文件，从而为 `Activate` 的位于 `AppClass<T>` 上的特定实例化添加 <xref:System.Int32?displayProperty=nameWithType> 元数据。  
   
@@ -55,9 +53,9 @@ App1.AppClass`1<System.Int32>.
   
 - 你想要调用的方法 `Browse` 元数据。  如果它是一个公共方法，为包含类型添加的公共 `Browse` 元数据也包括方法。  
   
-- 要调用，以便.NET Native 工具链未删除反射调用委托的方法的动态元数据。 如果该方法的动态元数据丢失，当 <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType> 方法得到调用时会引发以下异常：  
+- 要调用的方法的动态元数据，以便 .NET Native 工具链不会删除反射调用委托。 如果该方法的动态元数据丢失，当 <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType> 方法得到调用时会引发以下异常：  
   
-    ```  
+    ```output
     MakeGenericMethod() cannot create this generic method instantiation because the instantiation was not metadata-enabled: 'App1.Class1.GenMethod<Int32>(Int32)'.  
     ```  
   
@@ -78,7 +76,7 @@ App1.AppClass`1<System.Int32>.
   
  如果不存在数组元数据，以下错误会导致：  
   
-```  
+```output
 This operation cannot be carried out as metadata for the following type was removed for performance reasons:  
   
 App1.Class1[]  

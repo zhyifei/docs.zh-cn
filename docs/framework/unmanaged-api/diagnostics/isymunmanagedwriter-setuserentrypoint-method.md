@@ -17,32 +17,32 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d14d542a8c1d8adeaf56dc1564e8e10121cd4064
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 11dc050e2fe16a64db4ac95bb1386e2d90535e81
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61650721"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895024"
 ---
 # <a name="isymunmanagedwritersetuserentrypoint-method"></a>ISymUnmanagedWriter::SetUserEntryPoint 方法
-指定是此模块的入口点的用户定义的方法。 例如，此入口点可能是用户的主要方法，而不是之前 main 编译器生成的存根。  
+指定用户定义的方法，该方法是此模块的入口点。 例如，在 main 之前，此入口点可能是用户的 main 方法，而不是编译器生成的存根。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT SetUserEntryPoint(  
     [in] mdMethodDef entryMethod);  
 ```  
   
 ## <a name="parameters"></a>参数  
  `entryMethod`  
- [in]就是用户条目的方法的元数据标记点。  
+ 中方法的元数据标记，它是用户入口点。  
   
 ## <a name="return-value"></a>返回值  
- 如果方法成功，则为 S_OK否则为 E_FAIL 或某些其他错误代码。  
+ 如果该方法成功，则返回 S_OK;否则，E_FAIL 或其他一些错误代码。  
   
 ## <a name="requirements"></a>要求  
- **标头：** CorSym.idl CorSym.h  
+ **标头：** CorSym，CorSym  
   
 ## <a name="see-also"></a>请参阅
 

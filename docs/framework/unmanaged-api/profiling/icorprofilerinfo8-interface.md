@@ -3,16 +3,16 @@ title: ICorProfilerInfo8 接口
 ms.date: 08/06/2019
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 210029ed1b1c7d780f3895f975f7a72227bbea80
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 2baa33a7a3527392d8095b5d0ec7ad6af8a71a8e
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68973817"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928939"
 ---
 # <a name="icorprofilerinfo8-interface"></a>ICorProfilerInfo8 接口
 
-[ICorProfilerInfo7](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo7-interface.md)的子类, 提供查询有关动态方法的信息的方法。
+[ICorProfilerInfo7](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo7-interface.md)的子类，提供查询有关动态方法的信息的方法。
 
 ## <a name="methods"></a>方法  
 
@@ -24,7 +24,9 @@ ms.locfileid: "68973817"
 
 ## <a name="requirements"></a>要求  
 **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
-**标头：** Corprof.idl, Corprof.idl  
+**标头：** Corprof.idl，Corprof.idl  
 **.NET Framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+
 ## <a name="see-also"></a>请参阅
+
 - [Profiling 接口](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

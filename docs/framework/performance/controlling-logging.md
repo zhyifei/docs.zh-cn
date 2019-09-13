@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: ce13088e-3095-4f0e-9f6b-fad30bbd3d41
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 29f6f844c3cdf2d43437aed7fc19492a37f9f8fc
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 1648af8c3dc407581714e8e863fe4972d6ffadbc
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68971568"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894935"
 ---
 # <a name="controlling-net-framework-logging"></a>控制 .NET Framework 日志记录
 
@@ -23,13 +23,13 @@ ms.locfileid: "68971568"
 
 若要捕获 CLR 事件信息，必须在计算机上安装 CLR 提供程序。 若要确认该提供程序已安装，请在命令提示符处键入 `logman query providers`。 将显示提供程序的列表。 此列表应包含与 CLR 提供程序对应的项，如下所示。
 
-```
+```output
 Provider                                 GUID
 -------------------------------------------------------------------------------
 .NET Common Language Runtime    {E13C0D23-CCBC-4E12-931B-D9CC2EEE27E4}.
 ```
 
-如果未列出 CLR 提供程序，则可以通过使用 Windows [Wevtutil](/windows-server/administration/windows-commands/wevtutil) 命令行工具在 Windows Vista 和更高版本的操作系统上安装该提供程序。 以管理员身份打开命令提示符窗口。 将提示目录更改为 .NET Framework 4 文件夹 (%WINDIR%\Microsoft.NET\Framework [64] \v4.\<。NET version > \)。 此文件夹包含 CLR-ETW.man 文件。 在命令提示符处，键入以下命令来安装 CLR 提供程序：
+如果未列出 CLR 提供程序，则可以通过使用 Windows [Wevtutil](/windows-server/administration/windows-commands/wevtutil) 命令行工具在 Windows Vista 和更高版本的操作系统上安装该提供程序。 以管理员身份打开命令提示符窗口。 将提示目录更改为 .NET Framework 4 文件夹（%WINDIR%\Microsoft.NET\Framework [64] \v4.\<。NET version > \）。 此文件夹包含 CLR-ETW.man 文件。 在命令提示符处，键入以下命令来安装 CLR 提供程序：
 
 `wevtutil im CLR-ETW.man`
 

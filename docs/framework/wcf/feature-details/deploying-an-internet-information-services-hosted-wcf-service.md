@@ -2,12 +2,12 @@
 title: 部署承载于 Internet 信息服务中的 WCF 服务
 ms.date: 03/30/2017
 ms.assetid: 04ebd329-3fbd-44c3-b3ab-1de3517e27d7
-ms.openlocfilehash: b02c69e00aacafd928c59f06e0e7c050a2ca6509
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 95c56f767bbe8dce44ea742de00c65c357bd1378
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70856120"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895106"
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>部署承载于 Internet 信息服务中的 WCF 服务
 
@@ -49,9 +49,7 @@ IIS 承载的 WCF 服务必须驻留在 IIS 应用程序内。 你可以创建�
 
 IIS 中承载的 WCF 服务在 IIS 应用程序内表示为特殊内容文件（.svc 文件）。 此模型与在 IIS 应用程序内将 ASMX 页表示为 .asmx 文件的方式类似。 .Svc 文件包含特定于 wcf 的处理指令（[\@ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md)），该指令允许 WCF 宿主基础结构激活承载的服务以响应传入消息。 .svc 文件的最常见语法如以下语句所示。
 
-```svc
-<% @ServiceHost Service="MyNamespace.MyServiceImplementationTypeName" %>
-```
+`<% @ServiceHost Service="MyNamespace.MyServiceImplementationTypeName" %>`
 
 它由[ \@ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md)指令和单个属性`Service`组成。 `Service` 属性的值是服务实现的公共语言运行库 (CLR) 类型名称。 使用此指令与使用以下代码创建服务主机基本等效。
 

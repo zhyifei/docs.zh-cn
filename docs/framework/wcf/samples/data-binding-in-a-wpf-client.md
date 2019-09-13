@@ -2,22 +2,22 @@
 title: Windows Presentation Foundation 客户端中的数据绑定
 ms.date: 03/30/2017
 ms.assetid: bb8c8293-5973-4aef-9b07-afeff5d3293c
-ms.openlocfilehash: 791afee9772a6f06e57fdd09ad8a47db2bd8ca63
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: b0f1eb8ca154ab8e37a15b35097f746662511f7c
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045103"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928625"
 ---
 # <a name="data-binding-in-a-windows-presentation-foundation-client"></a>Windows Presentation Foundation 客户端中的数据绑定
-本示例演示 Windows Presentation Foundation (WPF) 客户端中数据绑定的用法。 该示例使用 Windows Communication Foundation (WCF) 服务, 该服务随机生成一组要返回给客户端的唱片集。 每个唱片集都有名称、价格和唱片集曲目列表。 唱片集曲目具有名称和持续时间。 服务返回的信息会自动绑定到 Windows Presentation Foundation (WPF) 客户端提供的用户界面 (UI)。  
+本示例演示 Windows Presentation Foundation (WPF) 客户端中数据绑定的用法。 该示例使用 Windows Communication Foundation （WCF）服务，该服务随机生成一组要返回给客户端的唱片集。 每个唱片集都有名称、价格和唱片集曲目列表。 唱片集曲目具有名称和持续时间。 服务返回的信息会自动绑定到 Windows Presentation Foundation （WPF）客户端提供的用户界面（UI）。  
   
 > [!NOTE]
 > 本主题的最后介绍了此示例的设置过程和生成说明。  
   
  使用数据绑定可以将数据源自动绑定到 UI。 这简化了编程模型，因为它不需要您以编程方式使用数据对象中的数据或数据对象数组中的数据更新每个 UI 元素。 您可以将对象绑定到单个 UI 元素或将数组绑定到采用多个输入的控件（如 `ListBox`）。 下面的代码演示如何将数据绑定到 UI 元素的 `DataContext`。  
   
-```  
+```csharp  
 // Event handler executed when call is complete  
 void client_GetAlbumListCompleted(object sender, GetAlbumListCompletedEventArgs e)  
 {  

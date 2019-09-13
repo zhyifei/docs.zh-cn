@@ -2,25 +2,25 @@
 title: 无配置的 AJAX 服务
 ms.date: 03/30/2017
 ms.assetid: e6db7acd-5679-45d4-b98a-8449c6873838
-ms.openlocfilehash: b3c12801d14c7f6850a985c521c0e3fff92ba8e4
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 06af14ad551de0e56700b044aea25b59dbf890ce
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045811"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895127"
 ---
 # <a name="ajax-service-without-configuration"></a>无配置的 AJAX 服务
 
-此示例演示如何使用 Windows Communication Foundation (WCF) 来创建基本 ASP.NET 异步 JavaScript 和 XML (AJAX) 服务 (可通过从 Web 浏览器客户端使用 JavaScript 代码访问的服务) 而无需使用任何配置设置。 该服务在 .svc 文件中使用特殊语法来自动启用 AJAX 终结点。
+此示例演示如何使用 Windows Communication Foundation （WCF）来创建基本 ASP.NET 异步 JavaScript 和 XML （AJAX）服务（可通过从 Web 浏览器客户端使用 JavaScript 代码访问的服务）而无需使用任何配置设置。 该服务在 .svc 文件中使用特殊语法来自动启用 AJAX 终结点。
 
-WCF 中的 ajax 支持经过优化, 可在`ScriptManager`控件中与 ASP.NET ajax 一起使用。 有关将 WCF 与 ASP.NET AJAX 一起使用的示例, 请参阅[Ajax 示例](ajax.md)。
+WCF 中的 ajax 支持经过优化，可在`ScriptManager`控件中与 ASP.NET ajax 一起使用。 有关将 WCF 与 ASP.NET AJAX 一起使用的示例，请参阅[Ajax 示例](ajax.md)。
 
 > [!NOTE]
 > 本主题的最后介绍了此示例的设置过程和生成说明。
 
- 此示例是基于使用 HTTP POST 的 AJAX 服务生成的。 如[基本 AJAX 服务](../../../../docs/framework/wcf/samples/basic-ajax-service.md)示例中所述, <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory>用于宿主服务。
+ 此示例是基于使用 HTTP POST 的 AJAX 服务生成的。 如[基本 AJAX 服务](../../../../docs/framework/wcf/samples/basic-ajax-service.md)示例中所述， <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory>用于宿主服务。
 
-```svc
+```text
 <%ServiceHost
     language=c#
     Debug="true"
@@ -46,7 +46,7 @@ WCF 中的 ajax 支持经过优化, 可在`ScriptManager`控件中与 ASP.NET aj
 
 2. 按照[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)中所述生成解决方案 ConfigFreeAjaxService。
 
-3. 导航到`http://localhost/ServiceModelSamples/ConfigFreeClientPage.aspx` (不要在浏览器中从项目目录中打开 configfreeclientpage.aspx)。
+3. 导航到`http://localhost/ServiceModelSamples/ConfigFreeClientPage.aspx` （不要在浏览器中从项目目录中打开 configfreeclientpage.aspx）。
 
 > [!NOTE]
 > 运行此示例时，请确保不要对 IIS 中的 ServiceModelSamples 文件夹同时启用匿名身份验证和 Windows 身份验证。 如果同时启用了这两种身份验证，请禁用 Windows 身份验证。 运行了该示例后，请启用 Windows 身份验证并运行“iisreset”。

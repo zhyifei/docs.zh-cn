@@ -2,12 +2,12 @@
 title: 死信队列
 ms.date: 03/30/2017
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
-ms.openlocfilehash: 489de5d8147edd58d90be01975ddbc9927e29902
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: c8fea29fc420ea6bb922c93ea08e0e23d5bb941d
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045628"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928668"
 ---
 # <a name="dead-letter-queues"></a>死信队列
 本示例演示如何处理传递失败的消息。 它基于[事务性 MSMQ 绑定](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)示例。 本示例使用 `netMsmqBinding` 绑定。 此服务是自承载控制台应用程序，通过它可以观察服务接收排队消息。
@@ -169,7 +169,7 @@ public void SubmitPurchaseOrder(PurchaseOrder po)
 }
 ```
 
- 死信队列中的消息是被发送到处理消息的服务的消息。 因此, 当死信消息服务从队列中读取消息时, Windows Communication Foundation (WCF) 通道层将查找终结点中不匹配项, 并且不会调度消息。 在这种情况下，会将消息发送到订单处理服务，但由死信消息服务接收。 若要接收发送到不同终结点的消息，请在 `ServiceBehavior` 中指定一个可匹配任何地址的地址筛选器。 这是成功处理从死信队列中读取的消息所必需的。
+ 死信队列中的消息是被发送到处理消息的服务的消息。 因此，当死信消息服务从队列中读取消息时，Windows Communication Foundation （WCF）通道层将查找终结点中不匹配项，并且不会调度消息。 在这种情况下，会将消息发送到订单处理服务，但由死信消息服务接收。 若要接收发送到不同终结点的消息，请在 `ServiceBehavior` 中指定一个可匹配任何地址的地址筛选器。 这是成功处理从死信队列中读取的消息所必需的。
 
  在本示例中，如果失败的原因是消息超时，则死信消息服务会重新发送该消息。对于所有其他原因，则显示传送失败，如下面的示例代码所示：
 
@@ -272,7 +272,7 @@ public class PurchaseOrderDLQService : IOrderProcessor
 
  在运行客户端时，客户端将显示消息：
 
-```
+```console
 Press <ENTER> to terminate client.
 ```
 
@@ -280,7 +280,7 @@ Press <ENTER> to terminate client.
 
  然后运行死信服务，读取消息并显示错误代码，然后将消息重新发回服务。
 
-```
+```console
 The dead letter service is ready.
 Press <ENTER> to terminate service.
 
@@ -295,7 +295,7 @@ Purchase order resent
 
  服务启动，然后读取重新发送的消息并处理该消息。
 
-```
+```console
 The service is ready.
 Press <ENTER> to terminate service.
 
@@ -318,7 +318,7 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
 
     2. 展开 "**功能**" 选项卡。
 
-    3. 右键单击 "**专用消息队列**", 然后选择 "**新建** **专用队列**"。
+    3. 右键单击 "**专用消息队列**"，然后选择 "**新建** **专用队列**"。
 
     4. 选中 "**事务性**" 框。
 
@@ -326,7 +326,7 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
 
 3. 若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。
 
-4. 若要在单一计算机配置或跨计算机配置中运行示例, 请相应地更改队列名称, 用计算机的全名替换 localhost, 并按照[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的说明进行操作。
+4. 若要在单一计算机配置或跨计算机配置中运行示例，请相应地更改队列名称，用计算机的全名替换 localhost，并按照[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的说明进行操作。
 
 ### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup"></a>在加入到工作组的计算机上运行此示例
 
@@ -350,7 +350,7 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
     > 将 `security mode` 设置为 `None` 等效于将 `MsmqAuthenticationMode`、`MsmqProtectionLevel` 和 `Message` 安全设置为 `None`。
 
 ## <a name="comments"></a>注释
- 默认情况下对 `netMsmqBinding` 绑定传输启用了安全性。 `MsmqAuthenticationMode` 和 `MsmqProtectionLevel` 这两个属性共同确定了传输安全性的类型。 默认情况下，身份验证模式设置为 `Windows`，保护级别设置为 `Sign`。 MSMQ 必须是域的成员才可以提供身份验证和签名功能。 如果在不属于域的计算机上运行此示例, 则会收到以下错误:"用户的内部消息队列证书不存在"。
+ 默认情况下对 `netMsmqBinding` 绑定传输启用了安全性。 `MsmqAuthenticationMode` 和 `MsmqProtectionLevel` 这两个属性共同确定了传输安全性的类型。 默认情况下，身份验证模式设置为 `Windows`，保护级别设置为 `Sign`。 MSMQ 必须是域的成员才可以提供身份验证和签名功能。 如果在不属于域的计算机上运行此示例，则会收到以下错误："用户的内部消息队列证书不存在"。
 
 > [!IMPORTANT]
 > 您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  

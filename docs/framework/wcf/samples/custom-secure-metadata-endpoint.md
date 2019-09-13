@@ -2,15 +2,15 @@
 title: 自定义安全元数据终结点
 ms.date: 03/30/2017
 ms.assetid: 9e369e99-ea4a-49ff-aed2-9fdf61091a48
-ms.openlocfilehash: 072d2551acaae87904bb12c5e8edafa788674322
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 32e6e0238637f9c2ef6814ace35ccb0b78110b60
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045126"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928683"
 ---
 # <a name="custom-secure-metadata-endpoint"></a>自定义安全元数据终结点
-此示例演示如何实现一个具有安全元数据终结点 (该终结点使用其中一种非元数据交换绑定) 的服务, 以及如何配置此类元数据[实用工具 (svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)或客户端, 以便从这类元数据终结点。 有两个系统提供的绑定可供公开元数据终结点：mexHttpBinding 和 mexHttpsBinding。 mexHttpBinding 用于以非安全的方式，通过 HTTP 公开元数据终结点。 mexHttpsBinding 用于以安全的方式，通过 HTTP 公开元数据终结点。 本示例演示如何使用 <xref:System.ServiceModel.WSHttpBinding> 公开安全元数据终结点。 要更改绑定的安全设置但不想使用 HTTPS 时需要这样做。 如果使用 mexHttpsBinding，则元数据终结点是安全的，但无法修改绑定设置。  
+此示例演示如何实现一个具有安全元数据终结点（该终结点使用其中一种非元数据交换绑定）的服务，以及如何配置此类元数据[实用工具（svcutil.exe）](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)或客户端，以便从这类元数据终结点。 有两个系统提供的绑定可供公开元数据终结点：mexHttpBinding 和 mexHttpsBinding。 mexHttpBinding 用于以非安全的方式，通过 HTTP 公开元数据终结点。 mexHttpsBinding 用于以安全的方式，通过 HTTP 公开元数据终结点。 本示例演示如何使用 <xref:System.ServiceModel.WSHttpBinding> 公开安全元数据终结点。 要更改绑定的安全设置但不想使用 HTTPS 时需要这样做。 如果使用 mexHttpsBinding，则元数据终结点是安全的，但无法修改绑定设置。  
   
 > [!NOTE]
 > 本主题的最后介绍了此示例的设置过程和生成说明。  
@@ -59,7 +59,7 @@ ms.locfileid: "70045126"
 ## <a name="svcutil-client"></a>Svcutil 客户端  
  当使用默认绑定承载您的 `IMetadataExchange` 终结点时，可以使用该终结点的地址运行 Svcutil.exe：  
   
-```  
+```console  
 svcutil http://localhost/servicemodelsamples/service.svc/mex  
 ```  
   
@@ -77,7 +77,7 @@ svcutil http://localhost/servicemodelsamples/service.svc/mex
   
  终结点名称必须是承载该元数据的地址的方案名称，终结点协定必须为 `IMetadataExchange`。 因此，当使用如下所示的命令行运行 Svcutil.exe 时：  
   
-```  
+```console  
 svcutil http://localhost/servicemodelsamples/service.svc/mex  
 ```  
   
@@ -85,18 +85,18 @@ svcutil http://localhost/servicemodelsamples/service.svc/mex
   
  为了使 Svcutil.exe 能够在 Svcutil.exe.config 中选取配置，Svcutil.exe 必须与该配置文件位于同一目录中。 因此，您必须将 Svcutil.exe 从其安装位置复制到包含 Svcutil.exe.config 文件的目录中。 然后，从该目录中运行以下命令：  
   
-```  
+```console  
 .\svcutil.exe http://localhost/servicemodelsamples/service.svc/mex  
 ```  
   
- 前导 "。\\"确保运行该目录中 svcutil.exe 的副本 (其中包含对应的 svcutil.exe) 的副本。  
+ 前导 "。\\"确保运行该目录中 svcutil.exe 的副本（其中包含对应的 svcutil.exe）的副本。  
   
 ## <a name="metadataresolver-client"></a>MetadataResolver 客户端  
  如果客户端在设计时知道协定和如何与元数据交谈，客户端就可以使用 `MetadataResolver` 动态找到应用程序终结点的绑定和地址。 本示例客户端对此进行了演示，显示如何通过创建和配置 `MetadataResolver` 来配置 `MetadataExchangeClient` 使用的绑定和凭据。  
   
  可以在 `MetadataExchangeClient` 上强制指定 Svcutil.exe.config 中出现的相同绑定和证书信息：  
   
-```  
+```csharp  
 // Specify the Metadata Exchange binding and its security mode  
 WSHttpBinding mexBinding = new WSHttpBinding(SecurityMode.Message);  
 mexBinding.Security.Message.ClientCredentialType = MessageCredentialType.Certificate;  
@@ -105,27 +105,27 @@ mexBinding.Security.Message.ClientCredentialType = MessageCredentialType.Certifi
 MetadataExchangeClient mexClient = new MetadataExchangeClient(mexBinding);  
 mexClient.SoapCredentials.ClientCertificate.SetCertificate(    StoreLocation.CurrentUser, StoreName.My,  
     X509FindType.FindBySubjectName, "client.com");  
-mexClient.SoapCredentials.ServiceCertificate.Authentication.    CertificateValidationMode =    X509CertificateValidationMode.PeerOrChainTrust;  
+mexClient.SoapCredentials.ServiceCertificate.Authentication.CertificateValidationMode = X509CertificateValidationMode.PeerOrChainTrust;  
 mexClient.SoapCredentials.ServiceCertificate.SetDefaultCertificate(    StoreLocation.CurrentUser, StoreName.TrustedPeople,  
     X509FindType.FindBySubjectName, "localhost");  
 ```  
   
  配置完 `mexClient`，我们可以枚举感兴趣的协定并使用 `MetadataResolver` 提取使用这些协定的终结点的列表：  
   
-```  
+```csharp  
 // The contract we want to fetch metadata for  
-Collection<ContractDescription> contracts =    new Collection<ContractDescription>();  
-ContractDescription contract =    ContractDescription.GetContract(typeof(ICalculator));  
+Collection<ContractDescription> contracts = new Collection<ContractDescription>();  
+ContractDescription contract = ContractDescription.GetContract(typeof(ICalculator));  
 contracts.Add(contract);  
 // Find endpoints for that contract  
-EndpointAddress mexAddress = new    EndpointAddress(ConfigurationManager.AppSettings["mexAddress"]);  
-ServiceEndpointCollection endpoints =    MetadataResolver.Resolve(contracts, mexAddress, mexClient);  
+EndpointAddress mexAddress = new EndpointAddress(ConfigurationManager.AppSettings["mexAddress"]);  
+ServiceEndpointCollection endpoints = MetadataResolver.Resolve(contracts, mexAddress, mexClient);  
 ```  
   
  最后，我们可以使用这些终结点中的信息初始化 `ChannelFactory`（用于创建与应用程序终结点通信的通道）的绑定和地址。  
   
-```  
-ChannelFactory<ICalculator> cf = new    ChannelFactory<ICalculator>(endpoint.Binding, endpoint.Address);  
+```csharp  
+ChannelFactory<ICalculator> cf = new ChannelFactory<ICalculator>(endpoint.Binding, endpoint.Address);  
 ```  
   
  本示例的关键之处在于演示：如果你要使用 `MetadataResolver`，则必须指定用于元数据交换通信的自定义绑定或行为，你可以使用 `MetadataExchangeClient` 指定这些自定义设置。  
@@ -134,27 +134,27 @@ ChannelFactory<ICalculator> cf = new    ChannelFactory<ICalculator>(endpoint.Bin
   
 1. 确保已对[Windows Communication Foundation 示例执行了一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-2. 若要生成解决方案, 请按照[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
+2. 若要生成解决方案，请按照[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
   
 #### <a name="to-run-the-sample-on-the-same-machine"></a>在同一计算机上运行示例  
   
-1. 运行示例安装文件夹中的 Setup.bat。 这将安装运行示例所需的所有证书。 请注意, 安装程序将使用 FindPrivateKey 工具, 该工具通过在[Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)中运行 setupCertTool 来安装。  
+1. 运行示例安装文件夹中的 Setup.bat。 这将安装运行示例所需的所有证书。 请注意，安装程序将使用 FindPrivateKey 工具，该工具通过在[Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)中运行 setupCertTool 来安装。  
   
 2. 运行 \MetadataResolverClient\bin 或 \SvcutilClient\bin 中的客户端应用程序。 客户端活动将显示在客户端控制台应用程序上。  
   
-3. 如果客户端和服务无法进行通信, 请参阅[WCF 示例的故障排除提示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
+3. 如果客户端和服务无法进行通信，请参阅[WCF 示例的故障排除提示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
   
 4. 在运行完该示例后运行 Cleanup.bat 移除证书。 其他安全示例使用相同的证书。  
   
 #### <a name="to-run-the-sample-across-machines"></a>跨计算机运行示例  
   
-1. 在服务器上运行 `setup.bat service`。 使用`setup.bat`参数运行将使用计算机的完全限定的域名创建一个服务证书, 并将服务证书导出到名为 .cer 的文件中。 `service`  
+1. 在服务器上运行 `setup.bat service`。 使用`setup.bat`参数运行将使用计算机的完全限定的域名创建一个服务证书，并将服务证书导出到名为 .cer 的文件中。 `service`  
   
-2. 在服务器上，编辑 Web.config 以反映新证书名称。 也就是说, 将`findValue` [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md)元素中的属性更改为计算机的完全限定域名。  
+2. 在服务器上，编辑 Web.config 以反映新证书名称。 也就是说，将`findValue` [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md)元素中的属性更改为计算机的完全限定域名。  
   
 3. 将服务目录中的 Service.cer 文件复制到客户端计算机上的客户端目录中。  
   
-4. 在客户端上，运行 `setup.bat client`。 使用`setup.bat`参数运行将创建一个名为 Client.com 的客户端证书, 并将客户端证书导出到名为的文件。 `client`  
+4. 在客户端上，运行 `setup.bat client`。 使用`setup.bat`参数运行将创建一个名为 Client.com 的客户端证书，并将客户端证书导出到名为的文件。 `client`  
   
 5. 在客户端计算机上的 `MetadataResolverClient` 的 App.config 文件中，更改 Mex 终结点的地址值以与服务的新地址相匹配。 通过使用服务器的完全限定域名替换 localhost 来执行此操作。 还要将 metadataResolverClient.cs 文件中出现的“localhost”更改为新的服务证书名称（服务器的完全限定域名）。 对 SvcutilClient 项目的 App.config 执行相同的操作。  
   
@@ -168,14 +168,14 @@ ChannelFactory<ICalculator> cf = new    ChannelFactory<ICalculator>(endpoint.Bin
   
 10. 在客户端计算机上，运行 VS 中的 MetadataResolverClient 或 SvcutilClient。  
   
-    1. 如果客户端和服务无法进行通信, 请参阅[WCF 示例的故障排除提示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
+    1. 如果客户端和服务无法进行通信，请参阅[WCF 示例的故障排除提示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
   
 #### <a name="to-clean-up-after-the-sample"></a>运行示例后进行清理  
   
 - 运行完示例后运行示例文件夹中的 Cleanup.bat。  
   
     > [!NOTE]
-    > 此脚本不会在跨计算机运行此示例时移除客户端上的服务证书。 如果你已运行跨计算机使用证书的 Windows Communication Foundation (WCF) 示例, 请确保清除已安装在 CurrentUser-TrustedPeople 存储中的服务证书。 为此，请使用以下命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`。 例如：`certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`。  
+    > 此脚本不会在跨计算机运行此示例时移除客户端上的服务证书。 如果你已运行跨计算机使用证书的 Windows Communication Foundation （WCF）示例，请确保清除已安装在 CurrentUser-TrustedPeople 存储中的服务证书。 为此，请使用以下命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`。 例如：`certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`。  
   
 > [!IMPORTANT]
 > 您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  

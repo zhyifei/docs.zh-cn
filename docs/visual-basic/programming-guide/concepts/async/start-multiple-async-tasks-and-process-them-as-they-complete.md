@@ -1,15 +1,15 @@
 ---
-title: 启动多个异步任务并在其完成时进行处理 (Visual Basic)
+title: 启动多个异步任务并在其完成时进行处理（Visual Basic）
 ms.date: 07/20/2015
 ms.assetid: 57ffb748-af40-4794-bedd-bdb7fea062de
-ms.openlocfilehash: 24dbf4904c4e4b479df54d1c663bb4d1256e2ede
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: b103f385c804061c4df99dc9d1fdd54c7876151a
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70046450"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928454"
 ---
-# <a name="start-multiple-async-tasks-and-process-them-as-they-complete-visual-basic"></a>启动多个异步任务并在其完成时进行处理 (Visual Basic)
+# <a name="start-multiple-async-tasks-and-process-them-as-they-complete-visual-basic"></a>启动多个异步任务并在其完成时进行处理（Visual Basic）
 通过使用 <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType>，可以同时启动多个任务，并在它们完成时逐个对它们进行处理，而不是按照它们的启动顺序进行处理。  
   
  下面的示例使用查询来创建一组任务。 每个任务都下载指定网站的内容。 在对 while 循环的每次迭代中，对 `WhenAny` 的等待调用返回任务集合中首先完成下载的任务。 此任务从集合中删除并进行处理。 循环重复进行，直到集合中不包含任何任务。  
@@ -37,7 +37,7 @@ ms.locfileid: "70046450"
  如果不想下载项目，可在本主题末尾处查看 MainWindow.xaml.vb 文件。  
   
 ## <a name="building-the-example"></a>生成示例  
- 此示例将添加到在[完成一个异步任务 (Visual Basic) 后取消剩余异步任务](../../../../visual-basic/programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md)中开发的代码, 并使用相同的 UI。  
+ 此示例将添加到在[完成一个异步任务（Visual Basic）后取消剩余异步任务](../../../../visual-basic/programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md)中开发的代码，并使用相同的 UI。  
   
  若要自行生成示例，请按“下载示例”部分的说明逐步操作，但选择“CancelAfterOneTask”作为“启动项目”。 将此主题中的更改添加到项目中的 `AccessTheWebAsync` 方法。 这些更改标有星号。  
   
@@ -48,7 +48,7 @@ Dim downloadTasksQuery As IEnumerable(Of Task(Of Integer)) =
     From url In urlList Select ProcessURLAsync(url, client, ct)  
 ```  
   
- 在项目的 mainwindow.xaml 文件中, 对`AccessTheWebAsync`方法进行以下更改。  
+ 在项目的 mainwindow.xaml 文件中，对`AccessTheWebAsync`方法进行以下更改。  
   
 - 通过应用 <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> 而非 <xref:System.Linq.Enumerable.ToArray%2A> 执行查询。  
   
@@ -80,7 +80,7 @@ Dim downloadTasksQuery As IEnumerable(Of Task(Of Integer)) =
  应多次运行此项目以验证并不总是以相同顺序显示已下载的长度。  
   
 > [!CAUTION]
-> 如示例所示，可以在循环中使用 `WhenAny` 来解决涉及少量任务的问题。 但是，如果要处理大量任务，可以采用其他更高效的方法。 有关详细信息和示例，请参阅 [Processing Tasks as they complete](https://blogs.msdn.microsoft.com/pfxteam/2012/08/02/processing-tasks-as-they-complete)（在任务完成时处理它们）。  
+> 如示例所示，可以在循环中使用 `WhenAny` 来解决涉及少量任务的问题。 但是，如果要处理大量任务，可以采用其他更高效的方法。 有关详细信息和示例，请参阅 [Processing Tasks as they complete](https://devblogs.microsoft.com/pfxteam/processing-tasks-as-they-complete/)（在任务完成时处理它们）。  
   
 ## <a name="complete-example"></a>完整的示例  
  下列代码是示例的 MainWindow.xaml.vb 文件的完整文本。 对添加到此示例的元素进行了星号标记。  

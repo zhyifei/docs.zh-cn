@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: abf48c11-1e72-431d-9562-39cf23e1a8ff
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5cdd2f5538be0e39b5dd3a378825ccf81f314c03
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ee6dafa8578c59d23908bf0e184091bb4ceaeb45
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69916284"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895284"
 ---
 # <a name="walkthrough-creating-a-cryptographic-application"></a>演练：创建加密应用程序
 本演练演示如何对内容进行加密和解密。 下面的代码示例是特为 Windows 窗体应用程序设计的。 此应用程序不演示实际方案，例如使用智能卡。 而演示加密和解密的基础知识。  
@@ -61,7 +61,7 @@ ms.locfileid: "69916284"
 |<xref:System.Windows.Forms.Button>|`buttonExportPublicKey`|导出公钥|  
 |<xref:System.Windows.Forms.Button>|`buttonImportPublicKey`|导入公钥|  
 |<xref:System.Windows.Forms.Button>|`buttonGetPrivateKey`|获取私钥|  
-|<xref:System.Windows.Forms.Label>|`label1`||  
+|<xref:System.Windows.Forms.Label>|`label1`|未设置键|  
 |<xref:System.Windows.Forms.OpenFileDialog>|`openFileDialog1`||  
 |<xref:System.Windows.Forms.OpenFileDialog>|`openFileDialog2`||  
   
@@ -82,7 +82,7 @@ ms.locfileid: "69916284"
  [!code-vb[CryptoWalkThru#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CryptoWalkThru/vb/Form1.vb#2)]  
   
 ## <a name="encrypting-a-file"></a>加密文件  
- 此任务涉及两种方法: `Encrypt File`按钮 (`buttonEncryptFile_Click`) 和`EncryptFile`方法的事件处理程序方法。 第一种方法显示一个用于选择文件的对话框，并将文件名传递给第二种方法，后者将执行加密。  
+ 此任务涉及两种方法： `Encrypt File`按钮（`buttonEncryptFile_Click`）和`EncryptFile`方法的事件处理程序方法。 第一种方法显示一个用于选择文件的对话框，并将文件名传递给第二种方法，后者将执行加密。  
   
  加密的内容、密钥和 IV 全都保存到一个 <xref:System.IO.FileStream> 中，这被称为加密包。  
   

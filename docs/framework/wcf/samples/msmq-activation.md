@@ -2,12 +2,12 @@
 title: MSMQ 激活
 ms.date: 03/30/2017
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
-ms.openlocfilehash: 169881cdc0736fcc94818f6281c35b4e54e06dfe
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 038f4d7e3d713cfe4134ea98f7858ef71f29bab4
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039300"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895254"
 ---
 # <a name="msmq-activation"></a>MSMQ 激活
 
@@ -21,11 +21,11 @@ ms.locfileid: "70039300"
 >
 > \<InstallDrive>:\WF_WCF_Samples
 >
-> 如果此目录不存在, 请参阅[.NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)以下载所有 WCF 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：
+> 如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （WCF）和 Windows Workflow Foundation （WF）示例](https://go.microsoft.com/fwlink/?LinkId=150780)以下载所有 WCF 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：
 >
 > \<InstallDrive>:\Samples\WCFWFCardSpace\WCF\Basic\Services\Hosting\WASHost\MsmqActivation.
 
-Windows 进程激活服务 (WAS) 是 [!INCLUDE[lserver](../../../../includes/lserver-md.md)] 新增的进程激活机制，它向使用非 HTTP 协议的应用程序提供了类似 IIS 的功能，这些功能以前只对基于 HTTP 的应用程序可用。 Windows Communication Foundation (WCF) 使用侦听器适配器接口传递通过 WCF 支持的非 HTTP 协议 (如 TCP、命名管道和 MSMQ) 接收的激活请求。 用于通过非 HTTP 协议接收请求的功能由 SMSvcHost.exe 中运行的托管 Windows 服务承载。
+Windows 进程激活服务 (WAS) 是 [!INCLUDE[lserver](../../../../includes/lserver-md.md)] 新增的进程激活机制，它向使用非 HTTP 协议的应用程序提供了类似 IIS 的功能，这些功能以前只对基于 HTTP 的应用程序可用。 Windows Communication Foundation （WCF）使用侦听器适配器接口传递通过 WCF 支持的非 HTTP 协议（如 TCP、命名管道和 MSMQ）接收的激活请求。 用于通过非 HTTP 协议接收请求的功能由 SMSvcHost.exe 中运行的托管 Windows 服务承载。
 
 Net.Msmq Listener Adapter 服务 (NetMsmqActivator) 根据队列中的消息激活排队的应用程序。
 
@@ -86,21 +86,17 @@ public class OrderProcessorService : IOrderProcessor
 MSMQ 队列名称是在配置文件的 appSettings 节中指定的。 服务的终结点是在配置文件的 System.serviceModel 节中定义的。
 
 > [!NOTE]
-> MSMQ 队列名称和终结点地址使用略有不同的寻址约定。 MSMQ 队列名称为本地计算机使用圆点 (.)，并在其路径中使用反斜杠分隔符。 WCF 终结点地址指定一个 net.pipe: 方案, 使用本地计算机的 "localhost", 并在其路径中使用正斜杠。 若要从在远程计算机上承载的队列读取数据，请将“.”和“localhost”替换为远程计算机名称。
+> MSMQ 队列名称和终结点地址使用略有不同的寻址约定。 MSMQ 队列名称为本地计算机使用圆点 (.)，并在其路径中使用反斜杠分隔符。 WCF 终结点地址指定一个 net.pipe：方案，使用本地计算机的 "localhost"，并在其路径中使用正斜杠。 若要从在远程计算机上承载的队列读取数据，请将“.”和“localhost”替换为远程计算机名称。
 
 使用一个以类名作为名称的 .svc 文件来承载 WAS 中的服务代码。
 
 Service.svc 文件本身包含用于创建 `OrderProcessorService` 的指令。
 
-```svc
-<%@ServiceHost language="c#" Debug="true" Service="Microsoft.ServiceModel.Samples.OrderProcessorService"%>
-```
+`<%@ServiceHost language="c#" Debug="true" Service="Microsoft.ServiceModel.Samples.OrderProcessorService"%>`
 
 Service.svc 文件还包含一个程序集指令以确保加载 System.Transactions.dll。
 
-```svc
-<%@Assembly name="System.Transactions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"%>
-```
+`<%@Assembly name="System.Transactions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"%>`
 
 客户端创建事务范围。 与服务的通信在事务范围内进行，从而可以将事务范围视为所有消息在其中成功或失败的原子单元。 通过在事务范围上调用 `Complete` 可以提交事务。
 
@@ -216,9 +212,9 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例
 
-1. 确保安装了 IIS 7.0, 因为 WAS 激活所必需的。
+1. 确保安装了 IIS 7.0，因为 WAS 激活所必需的。
 
-2. 确保已对[Windows Communication Foundation 示例执行了一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。 此外, 还必须安装 WCF 非 HTTP 激活组件:
+2. 确保已对[Windows Communication Foundation 示例执行了一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。 此外，还必须安装 WCF 非 HTTP 激活组件：
 
     1. 从“开始”菜单中，选择“控制面板”。
 
@@ -226,7 +222,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
 
     3. 单击 **"打开或关闭 Windows 功能"** 。
 
-    4. 在 "**功能摘要**" 下, 单击 "**添加功能**"。
+    4. 在 "**功能摘要**" 下，单击 "**添加功能**"。
 
     5. 展开**Microsoft .NET Framework 3.0**节点并检查**Windows Communication Foundation 非 HTTP 激活**功能。
 
@@ -236,15 +232,15 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
 
 5. 在默认情况下 MSMQ 激活服务将作为网络服务运行。 因此，用于激活应用程序的队列必须具有对网络服务的接收和查看权限。 可以通过使用消息队列 MMC 来添加这些权限：
 
-    1. 从 "**开始**" 菜单中, 单击 "运行`Compmgmt.msc` ", 然后键入并按 enter。
+    1. 从 "**开始**" 菜单中，单击 "运行`Compmgmt.msc` "，然后键入并按 enter。
 
-    2. 在 "**服务和应用程序**" 下, 展开 "**消息队列**"。
+    2. 在 "**服务和应用程序**" 下，展开 "**消息队列**"。
 
     3. 单击 "**专用队列**"。
 
-    4. 右键单击队列 (servicemodelsamples/服务), 然后选择 "**属性**"。
+    4. 右键单击队列（servicemodelsamples/服务），然后选择 "**属性**"。
 
-    5. 在 "**安全**" 选项卡上, 单击 "**添加**" 并向网络服务授予 "查看" 和 "接收" 权限。
+    5. 在 "**安全**" 选项卡上，单击 "**添加**" 并向网络服务授予 "查看" 和 "接收" 权限。
 
 6. 将 Windows 进程激活服务 (WAS) 配置为支持 MSMQ 激活。
 
@@ -273,9 +269,9 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
 
         此命令允许使用`http://localhost/servicemodelsamples`和`net.msmq://localhost/servicemodelsamples`访问/servicemodelsamples 应用程序。
 
-7. 如果您以前没有进行此操作，应确保启用 MSMQ 激活服务。 从 "**开始**" 菜单中, 单击 "运行`Services.msc`", 然后键入。 在服务列表中搜索**Net.tcp 侦听器适配器**。 右键单击并选择 "**属性**"。 将 "**启动类型**" 设置为 "**自动**", 单击 "**应用**", 然后单击 "**开始**" 按钮。 此步骤只能在第一次使用 Net.Msmq Listener Adapter 服务之前操作一次。
+7. 如果您以前没有进行此操作，应确保启用 MSMQ 激活服务。 从 "**开始**" 菜单中，单击 "运行`Services.msc`"，然后键入。 在服务列表中搜索**Net.tcp 侦听器适配器**。 右键单击并选择 "**属性**"。 将 "**启动类型**" 设置为 "**自动**"，单击 "**应用**"，然后单击 "**开始**" 按钮。 此步骤只能在第一次使用 Net.Msmq Listener Adapter 服务之前操作一次。
 
-8. 若要以单机配置或跨计算机配置来运行示例, 请按照[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的说明进行操作。 此外，在客户端上更改用于提交采购订单的代码，使其在提交采购订单时在队列的 URI 中反映计算机名。 使用以下代码：
+8. 若要以单机配置或跨计算机配置来运行示例，请按照[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的说明进行操作。 此外，在客户端上更改用于提交采购订单的代码，使其在提交采购订单时在队列的 URI 中反映计算机名。 使用以下代码：
 
     ```csharp
     client.SubmitPurchaseOrder(po, "net.msmq://localhost/private/ServiceModelSamples/OrderStatus");
@@ -306,7 +302,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
     > [!WARNING]
     > 运行该批处理文件会将 DefaultAppPool 重置为使用 .NET Framework 2.0 版运行。
 
-默认情况下对 `netMsmqBinding` 绑定传输启用了安全性。 `MsmqAuthenticationMode` 和 `MsmqProtectionLevel` 这两个属性共同确定了传输安全性的类型。 默认情况下，身份验证模式设置为 `Windows`，保护级别设置为 `Sign`。 MSMQ 必须是域的成员才可以提供身份验证和签名功能。 如果在不属于域的计算机上运行此示例, 则会收到以下错误:"用户的内部消息队列证书不存在"。
+默认情况下对 `netMsmqBinding` 绑定传输启用了安全性。 `MsmqAuthenticationMode` 和 `MsmqProtectionLevel` 这两个属性共同确定了传输安全性的类型。 默认情况下，身份验证模式设置为 `Windows`，保护级别设置为 `Sign`。 MSMQ 必须是域的成员才可以提供身份验证和签名功能。 如果在不属于域的计算机上运行此示例，则会收到以下错误："用户的内部消息队列证书不存在"。
 
 ### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup"></a>在加入到工作组的计算机上运行此示例
 
@@ -333,7 +329,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
 
     1. 运行 Inetmgr.exe。
 
-    2. 在 "**应用程序池**" 下, 右键单击**AppPool** (通常为**DefaultAppPool**), 然后选择 "**设置应用程序池默认值 ...** "。
+    2. 在 "**应用程序池**" 下，右键单击**AppPool** （通常为**DefaultAppPool**），然后选择 "**设置应用程序池默认值 ...** "。
 
     3. 更改标识属性以使用特定用户帐户。
 
@@ -341,7 +337,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
 
     1. 运行 Services.msc。
 
-    2. 右键单击**Listener 适配器**, 然后选择 "**属性**"。
+    2. 右键单击**Listener 适配器**，然后选择 "**属性**"。
 
 4. 更改 "**登录**" 选项卡中的帐户。
 

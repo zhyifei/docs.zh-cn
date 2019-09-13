@@ -2,22 +2,22 @@
 title: DataContract 代理项
 ms.date: 03/30/2017
 ms.assetid: b0188f3c-00a9-4cf0-a887-a2284c8fb014
-ms.openlocfilehash: 525ac356cd00b095e396dc80dbf663646b25b2e2
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 32ac0b82a637e2fb1a62b81555648942d31c30de
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039858"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928606"
 ---
 # <a name="datacontract-surrogate"></a>DataContract 代理项
-本示例演示如何使用数据协定代理类自定义诸如序列化、反序列化、架构导出和架构导入之类的过程。 此示例演示如何在客户端和服务器方案 (其中数据在 Windows Communication Foundation (WCF) 客户端和服务之间进行序列化和传输) 中使用代理项。  
+本示例演示如何使用数据协定代理类自定义诸如序列化、反序列化、架构导出和架构导入之类的过程。 此示例演示如何在客户端和服务器方案（其中数据在 Windows Communication Foundation （WCF）客户端和服务之间进行序列化和传输）中使用代理项。  
   
 > [!NOTE]
 > 本主题的最后介绍了此示例的设置过程和生成说明。  
   
  此示例使用下面的服务协定：  
   
-```  
+```csharp  
 [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples")]  
 [AllowNonSerializableTypes]  
 public interface IPersonnelDataService  
@@ -34,7 +34,7 @@ public interface IPersonnelDataService
   
  这些操作使用下面的数据类型：  
   
-```  
+```csharp  
 [DataContract(Namespace = "http://Microsoft.ServiceModel.Samples")]  
 class Employee  
 {  
@@ -51,7 +51,7 @@ class Employee
   
  在 `Employee` 类型中，`Person` 类（显示在下面的示例代码中）不能由 <xref:System.Runtime.Serialization.DataContractSerializer> 序列化，因为它不是有效的数据协定类。  
   
-```  
+```csharp  
 public class Person  
 {  
     public string firstName;  
@@ -70,7 +70,7 @@ public class Person
   
  本示例通过逻辑方式用名为 `Person` 的另一个类替换 `PersonSurrogated` 类。  
   
-```  
+```csharp  
 [DataContract(Name="Person", Namespace = "http://Microsoft.ServiceModel.Samples")]  
 public class PersonSurrogated  
 {  
@@ -89,7 +89,7 @@ public class PersonSurrogated
   
  在接口实现中，第一项任务是建立从 `Person` 到 `PersonSurrogated` 的类型映射。 序列化时和架构导出时都使用此映射。 此映射通过实现 <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDataContractType%28System.Type%29> 方法来实现。  
   
-```  
+```csharp  
 public Type GetDataContractType(Type type)  
 {  
     if (typeof(Person).IsAssignableFrom(type))  
@@ -102,7 +102,7 @@ public Type GetDataContractType(Type type)
   
  在序列化过程中，<xref:System.Runtime.Serialization.IDataContractSurrogate.GetObjectToSerialize%28System.Object%2CSystem.Type%29> 方法将 `Person` 实例映射到 `PersonSurrogated` 实例，如下面的示例代码所示。  
   
-```  
+```csharp  
 public object GetObjectToSerialize(object obj, Type targetType)  
 {  
     if (obj is Person)  
@@ -120,7 +120,7 @@ public object GetObjectToSerialize(object obj, Type targetType)
   
  <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDeserializedObject%28System.Object%2CSystem.Type%29> 方法为反序列化提供反向映射，如下面的示例代码所示。  
   
-```  
+```csharp  
 public object GetDeserializedObject(object obj,   
 Type targetType)  
 {  
@@ -139,7 +139,7 @@ Type targetType)
   
  为了在架构导如过程中将 `PersonSurrogated` 数据协定映射到现有 `Person` 类，本示例实现 <xref:System.Runtime.Serialization.IDataContractSurrogate.GetReferencedTypeOnImport%28System.String%2CSystem.String%2CSystem.Object%29> 方法，如下面的示例代码所示。  
   
-```  
+```csharp  
 public Type GetReferencedTypeOnImport(string typeName,   
                string typeNamespace, object customData)  
 {  
@@ -158,7 +158,7 @@ typeNamespace.Equals("http://schemas.datacontract.org/2004/07/DCSurrogateSample"
   
  下面的示例代码完成 <xref:System.Runtime.Serialization.IDataContractSurrogate> 接口的实现。  
   
-```  
+```csharp  
 public System.CodeDom.CodeTypeDeclaration ProcessImportedType(  
           System.CodeDom.CodeTypeDeclaration typeDeclaration,   
           System.CodeDom.CodeCompileUnit compileUnit)  
@@ -190,7 +190,7 @@ public void GetKnownCustomDataTypes(
   
  `IContractBehavior` 实现通过检查操作是否已注册 `DataContractSerializerOperationBehavior` 来查找使用 DataContract 的操作。 如果已注册，则对该行为设置 `DataContractSurrogate` 属性。 下面的示例代码演示如何完成以上过程。 在此操作行为上设置代理项可以为序列化和反序列化启用该代理项。  
   
-```  
+```csharp  
 public void ApplyClientBehavior(ContractDescription description, ServiceEndpoint endpoint, System.ServiceModel.Dispatcher.ClientRuntime proxy)  
 {  
     foreach (OperationDescription opDesc in description.Operations)  
@@ -220,9 +220,9 @@ private static void ApplyDataContractSurrogate(OperationDescription description)
   
  需要采取附加步骤才能插入元数据生成期间所要使用的代理项。 完成此过程的一种机制是提供本示例所演示的 `IWsdlExportExtension`。 另一种方式是直接修改 `WsdlExporter`。  
   
- 特性实现`IWsdlExportExtension` 和`IContractBehavior`。 `AllowNonSerializableTypesAttribute` 在这种情况下, `IContractBehavior`扩展`IEndpointBehavior`可以是或。 其 `IWsdlExportExtension.ExportContract` 方法实现通过将代理项添加到为 DataContract 生成架构的过程中使用的`XsdDataContractExporter` 来启用该代理项。 下面的代码段演示如何执行此操作。  
+ 特性实现`IWsdlExportExtension` 和`IContractBehavior`。 `AllowNonSerializableTypesAttribute` 在这种情况下， `IContractBehavior`扩展`IEndpointBehavior`可以是或。 其 `IWsdlExportExtension.ExportContract` 方法实现通过将代理项添加到为 DataContract 生成架构的过程中使用的`XsdDataContractExporter` 来启用该代理项。 下面的代码段演示如何执行此操作。  
   
-```  
+```csharp  
 public void ExportContract(WsdlExporter exporter, WsdlContractConversionContext context)  
 {  
     if (exporter == null)  
@@ -247,16 +247,16 @@ public void ExportContract(WsdlExporter exporter, WsdlContractConversionContext 
 }  
 ```  
   
- 运行示例时，客户端将调用 AddEmployee，然后调用 GetEmployee 以检查第一个调用是否成功。 GetEmployee 操作请求的结果显示在客户端控制台窗口中。 若要查找员工并打印 "找到", GetEmployee 操作必须成功。  
+ 运行示例时，客户端将调用 AddEmployee，然后调用 GetEmployee 以检查第一个调用是否成功。 GetEmployee 操作请求的结果显示在客户端控制台窗口中。 若要查找员工并打印 "找到"，GetEmployee 操作必须成功。  
   
 > [!NOTE]
-> 本示例演示如何插入用于序列化、反序列化和元数据生成的代理项。 示例不演示如何插入用于从元数据中生成代码的代理项。 若要查看如何使用代理项插入客户端代码生成的示例, 请参阅[自定义 WSDL 发布](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md)示例。  
+> 本示例演示如何插入用于序列化、反序列化和元数据生成的代理项。 示例不演示如何插入用于从元数据中生成代码的代理项。 若要查看如何使用代理项插入客户端代码生成的示例，请参阅[自定义 WSDL 发布](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md)示例。  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
 1. 确保已对[Windows Communication Foundation 示例执行了一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-2. 若要生成C#解决方案版本, 请按照[构建 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
+2. 若要生成C#解决方案版本，请按照[构建 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
   
 3. 若要以单机配置或跨计算机配置来运行示例, 请按照[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的说明进行操作。  
   

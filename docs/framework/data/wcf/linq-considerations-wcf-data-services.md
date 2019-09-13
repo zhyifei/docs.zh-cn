@@ -9,12 +9,12 @@ helpviewer_keywords:
 - querying the data service [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: cc4ec9e9-348f-42a6-a78e-1cd40e370656
-ms.openlocfilehash: c0d2d1dac43dd178680adbc123d5ce4f88fc0cc0
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 659e3ba02367feee4539a984b679173ee4544d17
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70779881"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894312"
 ---
 # <a name="linq-considerations-wcf-data-services"></a>LINQ 注意事项（WCF 数据服务）
 本主题提供有关使用 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 客户端时 LINQ 查询的编写和执行方式的信息以及使用 LINQ 查询实现[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 的数据服务的限制。 有关对基于的[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]数据服务编写和执行查询的详细信息，请参阅[查询数据服务](querying-the-data-service-wcf-data-services.md)。  
@@ -32,7 +32,7 @@ ms.locfileid: "70779881"
   
  此 LINQ 查询转换为对基于 Northwind 的[快速入门](quickstart-wcf-data-services.md)数据服务执行的以下查询 URI：  
   
-```  
+```http
 http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight gt 30  
 ```  
   

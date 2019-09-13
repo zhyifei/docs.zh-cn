@@ -5,16 +5,16 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 877662d3-d372-4e08-b417-51f66a0095cd
-ms.openlocfilehash: d2d05e0c3bb24c44bf78dc41074b8759270cf49b
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: e9646235f9423f2a4df9cfe09a5e83a91dcdcace
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636516"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895189"
 ---
 # <a name="how-to-create-a-basic-wcf-web-http-service"></a>如何：创建基本 WCF Web HTTP 服务
 
-Windows Communication Foundation (WCF) 可以创建公开 Web 终结点的服务。 Web 终结点通过 XML 或 JSON 发送数据，没有 SOAP 信封。 本主题演示如何公开这类终结点。
+Windows Communication Foundation （WCF）允许您创建公开 Web 终结点的服务。 Web 终结点通过 XML 或 JSON 发送数据，没有 SOAP 信封。 本主题演示如何公开这类终结点。
 
 > [!NOTE]
 > 确保 Web 终结点安全的唯一方式是使用传输安全通过 HTTPS 将其公开。 使用基于消息的安全性时，通常将安全信息放置在 SOAP 标头中，原因是发送到非 SOAP 终结点的信息不包含 SOAP 信封，没有地方放置安全信息，因而必须依赖于传输安全性。
@@ -49,13 +49,13 @@ Windows Communication Foundation (WCF) 可以创建公开 Web 终结点的服务
     > [!NOTE]
     > 如果不添加终结点，则 <xref:System.ServiceModel.Web.WebServiceHost> 自动创建默认终结点。 <xref:System.ServiceModel.Web.WebServiceHost> 还添加 <xref:System.ServiceModel.Description.WebHttpBehavior> 并禁用 HTTP 帮助页和 Web 服务描述语言 (WSDL) GET 功能，因此元数据终结点不会妨碍默认的 HTTP 终结点。
     >
-    >  当尝试调用终结点上的操作时，添加 URL 为 "" 的非 SOAP 终结点会导致意外行为。 这样做的原因是终结点的 URI 是用于帮助页面 （当浏览到 WCF 服务的基址时显示的页面） 的 URI 相同的侦听。
+    >  当尝试调用终结点上的操作时，添加 URL 为 "" 的非 SOAP 终结点会导致意外行为。 出现这种情况的原因是，终结点的侦听 URI 与帮助页的 URI 相同（浏览到 WCF 服务的基址时显示的页）。
 
      要防止此类情况发生，可以执行下列操作之一：
 
     - 总是为非 SOAP 终结点指定非空白 URI。
 
-    - 关闭帮助页。 这可以通过以下代码：
+    - 关闭帮助页。 可以通过以下代码完成此操作：
 
      [!code-csharp[htBasicService#4](~/samples/snippets/csharp/VS_Snippets_CFX/htbasicservice/cs/snippets.cs#4)]
      [!code-vb[htBasicService#4](~/samples/snippets/visualbasic/VS_Snippets_CFX/htbasicservice/vb/snippets.vb#4)]
@@ -67,7 +67,7 @@ Windows Communication Foundation (WCF) 可以创建公开 Web 终结点的服务
 
      此示例演示如何使用控制台应用程序来承载 Web 样式服务。 还可以在 IIS 内承载这类服务。 为此，在 .svc 文件中指定 <xref:System.ServiceModel.Activation.WebServiceHostFactory> 类，如以下代码所示。
 
-    ```
+    ```text
     <%ServiceHost
         language=c#
         Debug="true"
@@ -77,7 +77,7 @@ Windows Communication Foundation (WCF) 可以创建公开 Web 终结点的服务
 
 ## <a name="to-call-service-operations-mapped-to-get-in-internet-explorer"></a>在 Internet Explorer 中调用映射到 GET 的服务操作
 
-1. 打开 Internet Explorer 并键入"`http://localhost:8000/EchoWithGet?s=Hello, world!`"然后按 ENTER。 URL 包含服务的基址 (`http://localhost:8000/`)，该终结点的相对地址 ("")，服务操作调用 ("EchoWithGet") 和问号后跟一系列由与号分隔的命名参数 (&)。
+1. 打开 Internet Explorer 并键入 "`http://localhost:8000/EchoWithGet?s=Hello, world!`"，然后按 enter。 URL 包含服务的基址（`http://localhost:8000/`）、终结点的相对地址（""）、要调用的服务操作（"EchoWithGet"）和一个问号，后跟一个用 "and" 符分隔的命名参数列表（&）。
 
 ## <a name="to-call-service-operations-in-code"></a>在代码中调用服务操作
 

@@ -2,12 +2,12 @@
 title: Oracle 的 .NET Framework 数据提供程序的系统要求
 ms.date: 03/30/2017
 ms.assetid: 054f76b9-1737-43f0-8160-84a00a387217
-ms.openlocfilehash: 330bad6f58b1ba6b0d2fdb2baa86a04374946e80
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: b64a84b8d8246bae9028a6ca710f0a62cc85bf79
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780573"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894377"
 ---
 # <a name="system-requirements-for-the-net-framework-data-provider-for-oracle"></a>Oracle 的 .NET Framework 数据提供程序的系统要求
 Oracle .NET Framework 数据提供程序需要 Microsoft 数据访问组件 (MDAC) 2.6 版或更高版本。 建议使用 MDAC 2.8 SP1。  
@@ -22,9 +22,7 @@ Oracle .NET Framework 数据提供程序需要 Microsoft 数据访问组件 (MDA
 ### <a name="setting-the-unicode-value-in-a-connection-string-attribute"></a>在连接字符串属性中设置 Unicode 值  
  在使用 Oracle 时，可以使用连接字符串属性  
   
-```  
-Unicode=True   
-```  
+`Unicode=True`
   
  在 UTF-16 模式下初始化 Oracle 客户端库。 这样可以使 Oracle 客户端库接受 UTF-16（与 UCS-2 非常类似），而不是多字节字符串。 这样，Oracle 数据提供程序始终可以使用任何 Oracle 代码页，不需要进行其他转换工作。 只有使用 Oracle 9i 客户端与包含备选字符集 AL16UTF16 的 Oracle 9i 数据库进行通信时，此配置才有效。 当 Oracle 9i 客户端与 Oracle 9i 服务器通信时，需要额外的资源将 Unicode **CommandText**值转换为 Oracle9i 服务器使用的相应多字节字符集。 如果确定已通过将 `Unicode=True` 添加到连接字符串中而拥有了安全的配置，则可以避免此问题。  
   

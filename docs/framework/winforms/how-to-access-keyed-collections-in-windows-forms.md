@@ -8,15 +8,16 @@ helpviewer_keywords:
 - keyed collections [Windows Forms]
 - collections [Windows Forms], accessing with keys
 ms.assetid: b9b79b8b-d9bf-4f8c-b9d6-9578bc3219d3
-ms.openlocfilehash: 47bd0ff4eb649b4b32113a984f4aa99cd4afc0f1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a88e4766a1e774582bcd0356c9b6e77bc31f1960
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665281"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928526"
 ---
 # <a name="how-to-access-keyed-collections-in-windows-forms"></a>如何：在 Windows 窗体中访问键控集合
-- 您可以通过键访问单个集合项。 此功能已添加到 Windows 窗体应用程序通常使用的许多集合类。 以下列表显示了一些具有可访问键控的集合的集合类：  
+
+- 可以通过键访问各个集合项。 此功能已添加到 Windows 窗体应用程序通常使用的许多集合类中。 下面的列表显示了一些具有可访问键控集合的集合类：  
   
 - <xref:System.Windows.Forms.ListView.ListViewItemCollection>  
   
@@ -28,25 +29,25 @@ ms.locfileid: "64665281"
   
 - <xref:System.Windows.Forms.TreeNodeCollection>  
   
- 与集合中的项关联的键通常是项的名称。 以下过程显示如何使用集合类来执行常见任务。  
+ 与集合中的项关联的键通常是项的名称。 下面的过程演示如何使用集合类来执行常见任务。  
   
-### <a name="to-find-and-give-focus-to-a-nested-control-in-a-control-collection"></a>若要查找并将焦点放到控件集合中的嵌套控件  
+### <a name="to-find-and-give-focus-to-a-nested-control-in-a-control-collection"></a>查找焦点并将焦点放在控件集合中的嵌套控件上  
   
-- 使用<xref:System.Windows.Forms.Control.ControlCollection.Find%2A>和<xref:System.Windows.Forms.Control.Focus%2A>方法，以指定要查找和焦点转至的控件的名称。  
+- <xref:System.Windows.Forms.Control.ControlCollection.Find%2A>使用和<xref:System.Windows.Forms.Control.Focus%2A>方法来指定要查找并将焦点提供给的控件的名称。  
   
      [!code-csharp[System.Windows.Forms.KeyedCollectionsEx#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.KeyedCollectionsEx/CS/Form1.cs#1)]
      [!code-vb[System.Windows.Forms.KeyedCollectionsEx#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.KeyedCollectionsEx/VB/Form1.vb#1)]  
   
-### <a name="to-access-an-image-in-an-image-collection"></a>若要访问图像集合中的图像  
+### <a name="to-access-an-image-in-an-image-collection"></a>访问映像集合中的图像  
   
-- 使用<xref:System.Windows.Forms.ImageList.ImageCollection.Item%2A>属性来指定你想要访问的映像的名称。  
+- 使用 " <xref:System.Windows.Forms.ImageList.ImageCollection.Item%2A>属性" 指定要访问的映像的名称。  
   
      [!code-csharp[System.Windows.Forms.KeyedCollectionsEx#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.KeyedCollectionsEx/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.KeyedCollectionsEx#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.KeyedCollectionsEx/VB/Form1.vb#2)]  
   
-### <a name="to-set-a-tab-page-as-the-selected-tab"></a>若要为所选的选项卡设置选项卡页  
+### <a name="to-set-a-tab-page-as-the-selected-tab"></a>将选项卡页设置为选定的选项卡  
   
-- 使用<xref:System.Windows.Forms.TabControl.SelectedTab%2A>属性和<xref:System.Windows.Forms.TabControl.TabPageCollection.Item%2A>属性来指定要将设置为所选的选项卡上的选项卡页的名称。  
+- 结合使用<xref:System.Windows.Forms.TabControl.TabPageCollection.Item%2A>属性和属性以指定要设置为所选选项卡的选项卡页的名称。 <xref:System.Windows.Forms.TabControl.SelectedTab%2A>  
   
      [!code-csharp[System.Windows.Forms.KeyedCollectionsEx#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.KeyedCollectionsEx/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.KeyedCollectionsEx#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.KeyedCollectionsEx/VB/Form1.vb#3)]  
@@ -54,4 +55,4 @@ ms.locfileid: "64665281"
 ## <a name="see-also"></a>请参阅
 
 - [Windows 窗体入门](getting-started-with-windows-forms.md)
-- [如何：添加或删除映像使用 Windows 窗体 ImageList 组件](./controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)
+- [如何：在 Windows 窗体 ImageList 组件中添加或删除图像](./controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)

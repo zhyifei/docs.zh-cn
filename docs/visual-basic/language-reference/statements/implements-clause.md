@@ -17,28 +17,29 @@ helpviewer_keywords:
 - members [Visual Basic], Implements keyword
 - reimplementation
 ms.assetid: 5252cdf9-964d-4fc6-af0f-0449b7126b5a
-ms.openlocfilehash: 05de1d9f8966c17d84deba34f27819cce4aff3fe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dcd20f21a989c327dcfcf27d5638d500b6e4b6da
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61637753"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929314"
 ---
 # <a name="implements-clause-visual-basic"></a>Implements 子句 (Visual Basic)
-指示类或结构成员提供在接口中定义的成员的实现。  
+指示类或结构成员正在为接口中定义的成员提供实现。  
   
 ## <a name="remarks"></a>备注  
-`Implements`关键字不是与相同[Implements 语句](../../../visual-basic/language-reference/statements/implements-statement.md)。 您使用`Implements`语句指定的类或结构实现一个或多个接口，然后为每个成员使用`Implements`关键字来指定哪个接口和哪个成员实现。
+关键字与[Implements 语句不同。](../../../visual-basic/language-reference/statements/implements-statement.md) `Implements` 使用`Implements`语句可以指定类或结构实现一个或多个接口，然后，对于每个成员， `Implements`使用关键字指定它所实现的接口和成员。
 
-如果类或结构实现一个接口，它必须包括`Implements`语句之后立即[Class 语句](../../../visual-basic/language-reference/statements/class-statement.md)或[Structure 语句](../../../visual-basic/language-reference/statements/structure-statement.md)，并且它必须实现的所有成员定义由接口。
+如果类或结构实现了接口，则它必须紧跟在`Implements` [类语句](../../../visual-basic/language-reference/statements/class-statement.md)或[结构语句](../../../visual-basic/language-reference/statements/structure-statement.md)之后的语句，并且必须实现该接口定义的所有成员。
 
 ## <a name="reimplementation"></a>重新实现  
-在派生类中，可以重新实现接口成员的已实现的基类。 这是不同于重写基类成员在以下方面：
+在派生类中，您可以重新实现基类已经实现的接口成员。 这不同于在以下方面重写基类成员：
 
-- 基类成员不需要进行[Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)来重新实现。
-- 您可以重新实现具有不同名称的成员。
+- 基类成员不需要是可[重写](../../../visual-basic/language-reference/modifiers/overridable.md)的，而重新实现。
+- 您可以使用其他名称重新实现该成员。
 
-`Implements`关键字可以在以下上下文中使用：
+`Implements`关键字可用于以下上下文：
+
 - [Event 语句](../../../visual-basic/language-reference/statements/event-statement.md)
 - [Function 语句](../../../visual-basic/language-reference/statements/function-statement.md)
 - [Property 语句](../../../visual-basic/language-reference/statements/property-statement.md)

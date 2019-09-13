@@ -4,23 +4,23 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - COM+ [WCF], configuring service settings
 ms.assetid: f42a55a8-3af8-4394-9fdd-bf12a93780eb
-ms.openlocfilehash: 58845ab7b9da7377f4fdaa7da13e7c407226d63c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 31096ca510c868cf43ca6ef60126c98a8832d2c5
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69912207"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895124"
 ---
 # <a name="how-to-configure-com-service-settings"></a>如何：配置 COM+ 服务设置
-使用 COM+ 服务配置工具添加或移除应用程序接口时，应用程序配置文件中的 Web 服务配置将更新。 在 com + 托管模式下, 将应用程序 .config 文件放在应用程序根目录中 (默认情况\\下%programfiles%\complus applications\ 应用程序 {appid})。 无论在哪种 Web 宿主模式中，Web.config 文件均放置在指定的 vroot 目录中。  
+使用 COM+ 服务配置工具添加或移除应用程序接口时，应用程序配置文件中的 Web 服务配置将更新。 在 com + 托管模式下，将应用程序 .config 文件放在应用程序根目录中（默认情况\\下%programfiles%\complus applications\ 应用程序 {appid}）。 无论在哪种 Web 宿主模式中，Web.config 文件均放置在指定的 vroot 目录中。  
   
 > [!NOTE]
-> 应使用消息签名来防止客户端和服务器之间的消息被篡改。 另外，还应该使用消息或传输层加密来防止客户端和服务器之间的消息发生信息泄漏。 与 Windows Communication Foundation (WCF) 服务一样, 您应该使用限制来限制并发调用、连接、实例和挂起的操作的数量。 这有助于防止过度消耗资源。 您可以通过设置服务配置文件来指定遏制行为。  
+> 应使用消息签名来防止客户端和服务器之间的消息被篡改。 另外，还应该使用消息或传输层加密来防止客户端和服务器之间的消息发生信息泄漏。 与 Windows Communication Foundation （WCF）服务一样，您应该使用限制来限制并发调用、连接、实例和挂起的操作的数量。 这有助于防止过度消耗资源。 您可以通过设置服务配置文件来指定遏制行为。  
   
 ## <a name="example"></a>示例  
  假设有一个实现以下接口的组件：  
   
-```  
+```csharp
 [Guid("C551FBA9-E3AA-4272-8C2A-84BD8D290AC7")]  
 public interface IFinances  
 {  
@@ -31,7 +31,7 @@ public interface IFinances
   
  如果该组件作为 Web 服务公开，则公开的且客户端应遵循的相应服务协定如下：  
   
-```  
+```csharp
 [ServiceContract(Session = true,  
 Namespace = "http://tempuri.org/C551FBA9-E3AA-4272-8C2A-84BD8D290AC7",  
 Name = "IFinances")]  
@@ -49,7 +49,7 @@ public interface IFinancesContract : IDisposable
   
  使用此服务的客户端应用程序需要遵循此协定，并使用一个与应用程序配置中指定的绑定相兼容的绑定。  
   
- 下面的代码示例演示了默认的配置文件。 作为 Windows Communication Foundation (WCF) Web 服务, 这符合标准服务模型配置架构, 并可按与其他 WCF 服务配置文件相同的方式进行编辑。  
+ 下面的代码示例演示了默认的配置文件。 作为 Windows Communication Foundation （WCF） Web 服务，这符合标准服务模型配置架构，并可按与其他 WCF 服务配置文件相同的方式进行编辑。  
   
  典型的修改包括：  
   

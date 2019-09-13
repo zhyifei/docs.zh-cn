@@ -1,23 +1,23 @@
 ---
-title: 示例:动态编程疑难解答
+title: 示例：动态编程疑难解答
 ms.date: 03/30/2017
 ms.assetid: 42ed860a-a022-4682-8b7f-7c9870784671
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fef5894f7452bd32cc4e43433aa60166db241a12
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 85d64a5577acdaa15a40ae308eb728d75d6a4c69
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910606"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894500"
 ---
-# <a name="example-troubleshooting-dynamic-programming"></a>示例:动态编程疑难解答
+# <a name="example-troubleshooting-dynamic-programming"></a>示例：动态编程疑难解答
 > [!NOTE]
 > 该主题是指 .NET Native 开发者预览版这款预发布软件。 可从 [Microsoft Connect 网站](https://go.microsoft.com/fwlink/?LinkId=394611)（需要注册）下载该预览版。  
   
  并非所有使用 .NET Native 工具链开发的应用中的元数据查找失败都会导致异常。  有些可能会在一个应用中以不可预知的方式显示。  以下实例展示了由引用一个空对象造成的访问冲突：  
   
-```  
+```output
 Access violation - code c0000005 (first chance)  
 App!$3_App::Core::Util::NavigationArgs.Setup  
 App!$3_App::Core::Util::NavigationArgs..ctor  
@@ -38,9 +38,7 @@ App!$43_System::Threading::SendOrPostCallback.InvokeOpenStaticThunk
 ## <a name="what-was-the-app-doing"></a>应用过去在执行什么操作？  
  第一件要提起注意的是堆栈基部的 `async` 关键字机械设备。  要确定该设备过去正在一个 `async` 方法中实际上在执行什么操作可能会很困难，因为堆栈已经丢失了始发调用的上下文并且已经在另一个不同的线程上运行了 `async` 代码。 然而，我们可以推断出该应用正在试图加载其首页。  在 `NavigationArgs.Setup` 的实现过程中，以下代码引起了访问冲突：  
   
-```  
-AppViewModel.Current.LayoutVM.PageMap  
-```  
+`AppViewModel.Current.LayoutVM.PageMap`  
   
  在此实例中，`AppViewModel.Current` 上的 `LayoutVM` 属性是 null。  某些元数据的缺失引起微妙的行为差异并导致一个属性（而不是集）未以该应用预设的方式得到初始化。  在 `LayoutVM` 应该得到初始化的代码中设置一个断点可能会缓解这一情况。  然而，请注意 `LayoutVM` 的类型是 `App.Core.ViewModels.Layout.LayoutApplicationVM`。  目前 rd.xml 文件中存在的唯一元数据指令是：  
   
@@ -52,7 +50,7 @@ AppViewModel.Current.LayoutVM.PageMap
   
  在这种情况下，添加一个运行时指令让 `App.Core.ViewModels` 解决这一问题。 根本原因在于 API 调用了返回 null 的 <xref:System.Type.GetType%28System.String%29?displayProperty=nameWithType> 方法，且该应用默认忽略这一问题直到发生故障。  
   
- 在动态编程中, 在 .NET Native 下使用反射 api 是一种很好的<xref:System.Type.GetType%2A?displayProperty=nameWithType>做法, 就是使用在失败时引发异常的重载。  
+ 在动态编程中，在 .NET Native 下使用反射 api 是一种很好的<xref:System.Type.GetType%2A?displayProperty=nameWithType>做法，就是使用在失败时引发异常的重载。  
   
 ## <a name="is-this-an-isolated-case"></a>这是一个孤立情形吗？  
  当使用 `App.Core.ViewModels` 时，可能也会出现其他问题。  你必须决定是否值得确定并修复每个丢失的元数据异常，或节省时间并为类型的一个更大类添加指令。  此处，为 `dynamic` 添加 `App.Core.ViewModels` 元数据可能最好的方法，前提是输出的二进制代码变大不会产生问题。  
@@ -63,4 +61,4 @@ AppViewModel.Current.LayoutVM.PageMap
 ## <a name="see-also"></a>请参阅
 
 - [入门](../../../docs/framework/net-native/getting-started-with-net-native.md)
-- [示例：在绑定数据时处理异常](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)
+- 示例：[在绑定数据时处理异常](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)

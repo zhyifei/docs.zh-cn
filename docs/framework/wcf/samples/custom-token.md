@@ -2,12 +2,12 @@
 title: 自定义令牌
 ms.date: 03/30/2017
 ms.assetid: e7fd8b38-c370-454f-ba3e-19759019f03d
-ms.openlocfilehash: c3c6cfd9d1742f7e839d7b40220792ba455d7673
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: b073375325d2989a23624303f2c40b8f61a29d02
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855519"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928658"
 ---
 # <a name="custom-token"></a>自定义令牌
 
@@ -557,7 +557,7 @@ string GetCallerCreditCardNumber()
 
      证书存储在 `LocalMachine` 存储位置下的 My（个人）存储区中。 对于 IIS 承载的服务，证书存储在 LocalMachine 存储区中。 对于自承载服务，应该通过用 CurrentUser 替换字符串 LocalMachine 来修改批处理文件，以便将客户端证书存储在 CurrentUser 存储位置。
 
-    ```
+    ```bat
     echo ************
     echo Server cert setup starting
     echo %SERVER_NAME%
@@ -571,7 +571,7 @@ string GetCallerCreditCardNumber()
 
      Setup.bat 批处理文件中的以下行将服务器证书复制到客户端的受信任的人的存储区中。 因为客户端系统不隐式信任 Makecert.exe 生成的证书，所以需要执行此步骤。 如果您已经拥有一个证书，该证书来源于客户端的受信任根证书（例如由 Microsoft 颁发的证书），则不需要执行使用服务器证书填充客户端证书存储区这一步骤。
 
-    ```
+    ```bat
     echo ************
     echo copying server cert to client's TrustedPeople store
     echo ************
@@ -580,7 +580,7 @@ string GetCallerCreditCardNumber()
 
 - 若要从 IIS 承载的服务启用对证书私钥的访问，必须为 IIS 承载的进程运行时所使用的用户帐户授予对该私钥的适当权限。 这将由 Setup.bat 脚本中的最后步骤来完成。
 
-    ```
+    ```bat
     echo ************
     echo setting privileges on server certificates
     echo ************

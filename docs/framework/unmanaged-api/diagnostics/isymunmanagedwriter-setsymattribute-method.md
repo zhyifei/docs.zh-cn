@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8ffcc3a079e7e9a9d69622dc6666bb0e7641d4e3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4450c262b75a73114cb7de7de98567f053bbf564
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61650765"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894467"
 ---
 # <a name="isymunmanagedwritersetsymattribute-method"></a>ISymUnmanagedWriter::SetSymAttribute 方法
-定义根据其名称的自定义属性。 这些属性保存在符号存储区，与不同的元数据自定义属性。  
+基于名称定义自定义属性。 这些特性保存在符号存储区中，与元数据自定义特性不同。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT SetSymAttribute(  
     [in] mdToken parent,  
     [in] const WCHAR *name,  
@@ -39,22 +39,22 @@ HRESULT SetSymAttribute(
   
 ## <a name="parameters"></a>参数  
  `parent`  
- [in]为其定义的属性元数据标记。  
+ 中正在为其定义特性的元数据标记。  
   
  `name`  
- [in]一个指向`WCHAR`，其中包含属性名称。  
+ 中指向`WCHAR`包含特性名称的的指针。  
   
  `cData`  
- [in]一个`ULONG32`指示的大小`data`数组。  
+ 中`ULONG32`指示`data`数组大小的。  
   
  `data`  
- [in]属性值。  
+ 中特性值。  
   
 ## <a name="return-value"></a>返回值  
- 如果方法成功，则为 S_OK否则为 E_FAIL 或某些其他错误代码。  
+ 如果该方法成功，则返回 S_OK;否则，E_FAIL 或其他一些错误代码。  
   
 ## <a name="requirements"></a>要求  
- **标头：** CorSym.idl CorSym.h  
+ **标头：** CorSym，CorSym  
   
 ## <a name="see-also"></a>请参阅
 

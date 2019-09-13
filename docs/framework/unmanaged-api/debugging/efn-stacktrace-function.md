@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 687fdd0735e6cb0f3a727c8a2da3cf33bffb6a39
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9035d9a53c4b0c8822b79e641aef092b4a48c418
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738981"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895045"
 ---
-# <a name="efnstacktrace-function"></a>\_EFN\_StackTrace 函数
+# <a name="_efn_stacktrace-function"></a>\_EFN\_StackTrace 函数
 提供托管堆栈跟踪的文本表示形式以及 `CONTEXT` 记录的数组，其中每项对应非托管代码和托管代码之间的每个转换。  
   
 ## <a name="syntax"></a>语法  
@@ -42,60 +42,60 @@ HRESULT CALLBACK _EFN_StackTrace(
   
 ## <a name="parameters"></a>参数  
  `Client`  
- [in]正在调试客户端。  
+ 中正在调试的客户端。  
   
  `wszTextOut`  
- [out]堆栈跟踪的文本表示形式。  
+ 弄堆栈跟踪的文本表示形式。  
   
  `puiTextLength`  
- [out]指向中的字符数的`wszTextOut`。  
+ 弄一个指针，指向中`wszTextOut`的字符数。  
   
  `pTransitionContexts`  
- [out]转换上下文的数组。  
+ 弄转换上下文的数组。  
   
  `puiTransitionContextCount`  
- [out]一个指向数组中的转换上下文的数目。  
+ 弄指向数组中的转换上下文数的指针。  
   
  `uiSizeOfContext`  
- [in]上下文结构的大小。  
+ 中上下文结构的大小。  
   
  `Flags`  
- [in]设置为 0 或 SOS_STACKTRACE_SHOWADDRESSES (0x01) 以显示 EBP 寄存器和 enter 堆栈指针 (ESP) 前面每个`module!functionname`行。  
+ 中设置为0或 SOS_STACKTRACE_SHOWADDRESSES （0x01）以显示 EBP 寄存器，并在每`module!functionname`行前面设置输入堆栈指针（ESP）。  
   
 ## <a name="remarks"></a>备注  
- `_EFN_StackTrace`结构可从 WinDbg 编程接口调用。 使用参数，如下所示：  
+ 此`_EFN_StackTrace`结构可从 WinDbg 编程界面调用。 参数的使用方式如下：  
   
-- 如果`wszTextOut`为 null，`puiTextLength`是不为 null，该函数将返回的字符串长度以`puiTextLength`。  
+- 如果`wszTextOut`为 null 且`puiTextLength`不为 null，则该函数将返回中`puiTextLength`的字符串长度。  
   
-- 如果`wszTextOut`是不为 null，函数将存储中的文本`wszTextOut`最多所指示的位置`puiTextLength`。 成功返回是否有足够的空间中的缓冲区，则返回 E_OUTOFMEMORY 如果缓冲区不够长。  
+- 如果`wszTextOut`不为 null，则该函数将`wszTextOut`文本存储`puiTextLength`到指示的位置。 如果缓冲区中有足够的空间，则它将成功返回，如果缓冲区不够长，则返回 E_OUTOFMEMORY。  
   
-- 如果该函数的转换部分则将忽略`pTransitionContexts`和`puiTransitionContextCount`都为 null。 在这种情况下，该函数提供了只有函数名称的文本输出的调用方。  
+- 如果`pTransitionContexts`和都为 null， `puiTransitionContextCount`则忽略函数的转换部分。 在这种情况下，函数向调用方提供仅包含函数名称的文本输出。  
   
-- 如果`pTransitionContexts`为 null，`puiTransitionContextCount`是不为 null，则该函数将返回所需数量的上下文中的条目`puiTransitionContextCount`。  
+- 如果`pTransitionContexts`为 null 且`puiTransitionContextCount`不为 null，则该函数将在中`puiTransitionContextCount`返回所需数量的上下文项。  
   
-- 如果`pTransitionContexts`是不为 null，则该函数将它作为数组的长度结构`puiTransitionContextCount`。 通过给定结构大小`uiSizeOfContext`，并且必须是大小[SimpleContext](../../../../docs/framework/unmanaged-api/debugging/stacktrace-simplecontext-structure.md)或`CONTEXT`体系结构。  
+- 如果`pTransitionContexts`不为 null，则函数会将其视为长度`puiTransitionContextCount`的结构数组。 结构大小由`uiSizeOfContext`指定，并且必须是[SimpleContext](../../../../docs/framework/unmanaged-api/debugging/stacktrace-simplecontext-structure.md)的大小或`CONTEXT`体系结构的大小。  
   
-- `wszTextOut` 采用以下格式：  
+- `wszTextOut`采用以下格式编写：  
   
-    ```  
+    ```output  
     "<ModuleName>!<Function Name>[+<offset in hex>]  
     ...  
     (TRANSITION)  
     ..."  
     ```  
   
-- 如果以十六进制表示的偏移量为 0x0，写入没有偏移量。  
+- 如果偏移量（十六进制）为0x0，则不写入偏移量。  
   
-- 如果没有任何托管的代码的线程上当前上下文中，该函数将返回 SOS_E_NOMANAGEDCODE。  
+- 如果当前上下文中的线程上没有托管代码，则该函数将返回 SOS_E_NOMANAGEDCODE。  
   
-- `Flags`参数为 0 或 SOS_STACKTRACE_SHOWADDRESSES 若要查看每个前面的 EBP 和 ESP`module!functionname`行。 默认情况下，它为 0。  
+- 参数为0或 SOS_STACKTRACE_SHOWADDRESSES，用于在每`module!functionname`行的前面显示 EBP 和 ESP。 `Flags` 默认情况下，它是0。  
   
-    ```  
+    ```cpp  
     #define SOS_STACKTRACE_SHOWADDRESSES   0x00000001  
     ```  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** SOS_Stacktrace.h  
   

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00c12376-cb26-4317-86ad-e6e9c089be57
-ms.openlocfilehash: 7cd02a0a315ffdb155af09ac4e4fabbea1724a4d
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: fabd9b94b8c0a3f0e0db220e84d6c2eca3537c50
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780830"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894415"
 ---
 # <a name="sql-server-express-user-instances"></a>SQL Server Express 用户实例
 Microsoft SQL Server 学习版 (SQL Server Express) 支持用户实例功能，只有在使用用于 SQL Server 的 .NET Framework 数据提供程序 (`SqlClient`) 时该功能才可用。 用户实例是 SQL Server Express 数据库引擎的单独实例，该单独实例由父实例生成。 不是其本地计算机的管理员的用户可以将用户实例附加和连接到 SQL Server Express 数据库。 在每个用户一个实例的基础上，每个实例在单个用户的安全上下文中运行。  
@@ -26,9 +26,9 @@ Microsoft SQL Server 学习版 (SQL Server Express) 支持用户实例功能，�
 ## <a name="enabling-user-instances"></a>启用用户实例  
  若要生成用户实例，必须运行 SQL Server Express 的父实例。 默认情况下，用户实例在安装 SQL Server Express 时处于启用状态，并且可以由在父实例上执行**sp_configure**系统存储过程的系统管理员显式启用或禁用用户实例。  
   
-```  
+```sql  
 -- Enable user instances.  
-sp_configure 'user instances enabled','1'   
+sp_configure 'user instances enabled','1'
   
 -- Disable user instances.  
 sp_configure 'user instances enabled','0'  
@@ -51,7 +51,7 @@ sp_configure 'user instances enabled','0'
   
 - 包含在管道符号中的 `|DataDirectory|` 替代字符串是指打开连接的应用程序的数据目录，该字符串提供指示 .mdf 和 .ldf 数据库以及日志文件位置的相对路径。 如果要在其他位置查找这些文件，则必须提供这些文件的完整路径。  
   
-```  
+```text
 Data Source=.\\SQLExpress;Integrated Security=true;  
 User Instance=true;AttachDBFilename=|DataDirectory|\InstanceDB.mdf;  
 Initial Catalog=InstanceDB;  
@@ -65,7 +65,7 @@ Initial Catalog=InstanceDB;
   
  `DataDirectory` 点的物理位置取决于应用程序的类型。 在此示例中，要附加的 Northwind.mdf 文件位于应用程序的 \app_data 文件夹中。  
   
-```  
+```text
 Data Source=.\\SQLExpress;Integrated Security=true;  
 User Instance=true;  
 AttachDBFilename=|DataDirectory|\app_data\Northwind.mdf;  

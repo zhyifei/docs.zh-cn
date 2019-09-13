@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a6bc6c52374ea047d2e76d346ee8bbc3faaa7bb2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a54d3cb1bb9abf740c2c9b5a9a8312a9612ae658
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61650695"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894453"
 ---
 # <a name="isymunmanagedwriter2defineglobalvariable2-method"></a>ISymUnmanagedWriter2::DefineGlobalVariable2 方法
-定义单个全局变量。  
+定义一个全局变量。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT DefineGlobalVariable2(  
     [in] const WCHAR  *name,  
     [in] ULONG32      attributes,  
@@ -42,28 +42,28 @@ HRESULT DefineGlobalVariable2(
   
 ## <a name="parameters"></a>参数  
  `name`  
- [in]全局变量名称。  
+ 中全局变量名称。  
   
  `attributes`  
- [in]全局变量特性。  
+ 中全局变量特性。  
   
  `sigToken`  
- [in]签名的元数据标记。  
+ 中签名的元数据标记。  
   
  `addrKind`  
- [in]地址类型。  
+ 中地址类型。  
   
  `addr1`  
- [in]参数规格的第一个地址。  
+ 中参数规范的第一个地址。  
   
  `addr2`  
- [in]参数规格的第二个地址。  
+ 中参数规范的第二个地址。  
   
  `addr3`  
- [in]参数规格的第三个地址。  
+ 中参数规范的第三个地址。  
   
 ## <a name="return-value"></a>返回值  
- 如果方法成功，则为 S_OK否则为 E_FAIL 或某些其他错误代码。  
+ 如果该方法成功，则返回 S_OK;否则，E_FAIL 或其他一些错误代码。  
   
 ## <a name="requirements"></a>要求  
  **标头：** CorSym.idl  

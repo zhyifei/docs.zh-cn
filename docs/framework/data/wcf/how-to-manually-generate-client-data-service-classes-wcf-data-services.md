@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, configuring
 - WCF Data Services, client library
 ms.assetid: b98cb1d6-956a-4e50-add6-67e4f2587346
-ms.openlocfilehash: 106f1cedb33c0c1b333df0b9f2b8c2a70d458a0d
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: f8d99213a1ef98c48855ba9f561f87a800768c89
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70790422"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894297"
 ---
 # <a name="how-to-manually-generate-client-data-service-classes-wcf-data-services"></a>如何：手动生成客户端数据服务类（WCF 数据服务）
 WCF 数据服务与 Visual Studio 集成，使您能够在使用 "**添加服务引用**" 对话框在 Visual Studio 项目中添加对数据服务的引用时自动生成客户端数据服务类。 有关详细信息，请参阅[如何：添加数据服务引用](how-to-add-a-data-service-reference-wcf-data-services.md)。 此外，你也可以使用代码生成工具 `DataSvcUtil.exe` 手动生成相同的客户端数据服务类。 此工具随 WCF 数据服务提供，它将从数据服务定义生成 .NET Framework 类。 还可以使用此工具根据概念模型 (.csdl) 文件和表示 Visual Studio 项目中的实体框架模型的 .edmx 文件生成数据服务类。
@@ -43,7 +43,7 @@ WCF 数据服务与 Visual Studio 集成，使您能够在使用 "**添加服务
 
 - 在命令提示符下执行以下命令（无换行符）：
 
-    ```
+    ```console
     "%windir%\Microsoft.NET\Framework\v3.5\DataSvcUtil.exe" /language:CSharp /out:northwind.cs /uri:http://localhost:12345/Northwind.svc
     ```
 
@@ -54,7 +54,7 @@ WCF 数据服务与 Visual Studio 集成，使您能够在使用 "**添加服务
 
 - 在命令提示符下执行以下命令（无换行符）：
 
-    ```
+    ```console
     "%windir%\Microsoft.NET\Framework\v3.5\datasvcutil.exe" /language:VB /out:Northwind.vb /uri:http://localhost:12345/Northwind.svc
     ```
 
@@ -65,7 +65,7 @@ WCF 数据服务与 Visual Studio 集成，使您能够在使用 "**添加服务
 
 - 在命令提示符下执行以下命令（无换行符）：
 
-    ```
+    ```console
     "%windir%\Microsoft.NET\Framework\v3.5\datasvcutil.exe" /language:CSharp /in:Northwind.csdl /out:Northwind.cs
     ```
 
@@ -73,7 +73,7 @@ WCF 数据服务与 Visual Studio 集成，使您能够在使用 "**添加服务
 
 - 在命令提示符下执行以下命令（无换行符）：
 
-    ```
+    ```console
     "%windir%\Microsoft.NET\Framework\v3.5\datasvcutil.exe" /language:VB /in:Northwind.csdl /out:Northwind.vb
     ```
 
@@ -81,7 +81,7 @@ WCF 数据服务与 Visual Studio 集成，使您能够在使用 "**添加服务
 
 - 在命令提示符下执行以下命令（无换行符）：
 
-    ```
+    ```console
     "%windir%\Microsoft.NET\Framework\v3.5\datasvcutil.exe" /language:CSharp /in:Northwind.edmx /out:c:\northwind.cs
     ```
 
@@ -89,7 +89,7 @@ WCF 数据服务与 Visual Studio 集成，使您能够在使用 "**添加服务
 
 - 在命令提示符下执行以下命令（无换行符）：
 
-    ```
+    ```console
     "%windir%\Microsoft.NET\Framework\v3.5\datasvcutil.exe" /language:VB /in:Northwind.edmx /out:c:\northwind.vb
     ```
 

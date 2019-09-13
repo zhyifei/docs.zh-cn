@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 234c8a1f57af4030186afd48f727621713531b17
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 916523acf1d270830a2cb1fb5ae50e26d055404c
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69915542"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927019"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>编写大型的响应式 .NET Framework 应用
 本文提供用于改进大型 .NET Framework 应用或处理大量数据（如文件或数据库）的应用的性能的提示。 这些提示来自在托管代码中重写的 C# 和 Visual Basic 编译器，并且本文包括来自 C# 编译器的几个真实示例。 
@@ -23,25 +23,25 @@ ms.locfileid: "69915542"
   
  当你的最终用户与你的应用交互时，他们期望应用能够响应。 永远不应阻止键入或命令处理。 帮助应该迅速弹出，如果用户继续键入则帮助应中止。 你的应用应该避免通过使应用感觉迟钝的长计算阻止 UI 线程。 
   
- 有关 Roslyn 编译器的详细信息, 请参阅[.NET COMPILER PLATFORM SDK](../../csharp/roslyn-sdk/index.md)。
+ 有关 Roslyn 编译器的详细信息，请参阅[.NET COMPILER PLATFORM SDK](../../csharp/roslyn-sdk/index.md)。
   
 ## <a name="just-the-facts"></a>事实小结  
  在优化性能和创建响应性 .NET Framework 应用时，请考虑以下事实。 
   
-### <a name="fact-1-dont-prematurely-optimize"></a>事实 1:不要提前优化  
+### <a name="fact-1-dont-prematurely-optimize"></a>事实1：不要提前优化  
  编写比实际需要更为复杂的代码，将产生维护、调试和改进成本。 有经验的程序员对如何解决编码问题并编写出更高效的代码有一个直观的把握。 然而，有时他们过早地优化了代码。 例如，当一个简单的数组就足够的时候，他们却使用哈希表或使用可能泄漏内存的复杂缓存，而不是简单地重新计算值。 即使你是一个有经验的程序员，当你发现问题时，应该测试性能并分析你的代码。 
   
-### <a name="fact-2-if-youre-not-measuring-youre-guessing"></a>事实 2:如果你不进行度量, 则需要猜测  
+### <a name="fact-2-if-youre-not-measuring-youre-guessing"></a>事实2：如果你不进行度量，则需要猜测  
  配置文件和度量不会撒谎。 配置文件向你显示 CPU 是否已满或者你是否在磁盘 I/O 上受阻。 配置文件可告知正在分配的内存类型和大小，以及 CPU 是否在[垃圾回收](../../standard/garbage-collection/index.md) (GC) 中花费了大量的时间。 
   
  你应该为应用中的关键客户体验或方案设定性能目标，并编写测试来测量性能。 应用科学的方法调查失败的测试：使用配置文件来指导你、假设有可能是什么问题，并用利用试验或代码更改来测试你的假设。 使用定期测试建立一段时间内的基线性能测量，以便你可以隔离导致性能衰退的更改。 通过以严格的方式处理性能工作，你可以避免将时间浪费在不需要的代码更新上。 
   
-### <a name="fact-3-good-tools-make-all-the-difference"></a>事实 3:好的工具会使所有区别  
- 好的工具可以让你快速深入地了解最大的性能问题（CPU、内存或磁盘）并帮助你找到导致那些瓶颈的代码。 Microsoft 提供多种性能工具, 如[Visual Studio Profiler](/visualstudio/profiling/beginners-guide-to-performance-profiling)和[PerfView](https://www.microsoft.com/download/details.aspx?id=28567)。 
+### <a name="fact-3-good-tools-make-all-the-difference"></a>事实3：好的工具会使所有区别  
+ 好的工具可以让你快速深入地了解最大的性能问题（CPU、内存或磁盘）并帮助你找到导致那些瓶颈的代码。 Microsoft 提供多种性能工具，如[Visual Studio Profiler](/visualstudio/profiling/beginners-guide-to-performance-profiling)和[PerfView](https://www.microsoft.com/download/details.aspx?id=28567)。 
   
  PerfView 是一个免费且功能极为强大的工具，它可以帮助你专注于深层问题，如磁盘 I/O、GC 事件和内存。 可以捕获与性能相关的 [Windows 事件跟踪](../../../docs/framework/wcf/samples/etw-tracing.md) (ETW) 事件，并很轻松地查看每个应用、每个进程、每个堆栈和每个线程信息。 PerfView 向你显示应用分配了多少内存以及分配了何种内存，并显示哪些函数或调用堆栈提供了内存分配以及他们提供了多少。 有关详细信息，请参见丰富的帮助主题、演示以及工具随附的视频（如第 9 频道上的 [PerfView 教程](https://channel9.msdn.com/Series/PerfView-Tutorial)）。 
   
-### <a name="fact-4-its-all-about-allocations"></a>事实 4:这就是分配  
+### <a name="fact-4-its-all-about-allocations"></a>事实4：这就是分配  
  你可能会认为构建一个响应性 .NET Framework 应用只与算法（如使用快速排序，而不是气泡排序）相关，但事实并非如此。 构建一个响应性应用的最关键因素是分配内存，尤其是当你的应用非常大或需要处理大量数据的时候。 
   
  几乎所有使用新编译器 API 来构建响应性 IDE 体验的工作，均涉及到避免分配和管理缓存策略。 PerfView 跟踪显示新的 C# 和 Visual Basic 编译器的性能很少受 CPU 约束。 在读取数十万行或数百万行的代码、读取元数据或发出生成的代码时，编译器可能会受 I/O 约束。 所有 UI 线程延迟几乎都是由垃圾回收造成的。 .NET Framework GC 的性能经过高度优化，能够在执行应用代码的同时，并行完成其大部分工作。 但是，单个分配可能会触发昂贵的 [gen2](../../standard/garbage-collection/fundamentals.md) 回收，从而停止所有线程。 
@@ -195,9 +195,9 @@ private bool TrimmedStringStartsWith(string text, int start, string prefix) {
 // etc... 
 ```  
   
- `WriteFormattedDocComment()` 的第一个版本分配了一个数组、多个子字符串、一个修整的子字符串和一个空 `params` 数组。 它还检查 "///"。 修改后的代码仅使用索引且不执行分配。 它查找第一个非空白字符, 然后按字符检查字符, 以查看字符串是否以 "///" 开头。 新代码使用`IndexOfFirstNonWhiteSpaceChar` <xref:System.String.TrimStart%2A>而不是来返回非空白字符出现的第一个索引 (在指定的开始索引之后)。 修复并不完整，但你可以看到如何为完整解决方案应用类似的修复。 通过在整个代码中应用此方法，你可以删除 `WriteFormattedDocComment()` 中的所有分配。 
+ `WriteFormattedDocComment()` 的第一个版本分配了一个数组、多个子字符串、一个修整的子字符串和一个空 `params` 数组。 它还检查 "///"。 修改后的代码仅使用索引且不执行分配。 它查找第一个非空白字符，然后按字符检查字符，以查看字符串是否以 "///" 开头。 新代码使用`IndexOfFirstNonWhiteSpaceChar` <xref:System.String.TrimStart%2A>而不是来返回非空白字符出现的第一个索引（在指定的开始索引之后）。 修复并不完整，但你可以看到如何为完整解决方案应用类似的修复。 通过在整个代码中应用此方法，你可以删除 `WriteFormattedDocComment()` 中的所有分配。 
   
- **示例 4:StringBuilder**  
+ **示例4：StringBuilder**  
   
  此示例使用 <xref:System.Text.StringBuilder> 对象。 以下函数生成泛型类型的完整类型名称：  
   
@@ -276,11 +276,11 @@ private static string GetStringAndReleaseBuilder(StringBuilder sb)
  这个简单的缓存策略符合良好的缓存设计要求，因为它具有大小上限。 然而，现在存在比原来更多的代码，这意味着更多的维护成本。 仅当你发现了性能问题时，并且 PerfView 已显示 <xref:System.Text.StringBuilder> 分配是一个重要的参与者，才应采用该缓存策略。 
   
 ### <a name="linq-and-lambdas"></a>LINQ 和 lambda  
-结合使用语言集成查询 (LINQ) 和 lambda 表达式, 这是一个工作效率功能的示例。 但是, 它的使用可能会对性能产生很大的影响, 并且可能会发现需要重写代码。
+结合使用语言集成查询（LINQ）和 lambda 表达式，这是一个工作效率功能的示例。 但是，它的使用可能会对性能产生很大的影响，并且可能会发现需要重写代码。
   
- **示例 5:Lambda、List\<t > 和 IEnumerable\<t >**  
+ **示例5：Lambda、List\<t > 和 IEnumerable\<t >**  
   
- 此示例使用 [LINQ 和功能性代码](https://blogs.msdn.com/b/charlie/archive/2007/01/26/anders-hejlsberg-on-linq-and-functional-programming.aspx)在编译器模型中查找符号，给定的名称字符串为：  
+ 此示例使用 [LINQ 和功能性代码](https://blogs.msdn.microsoft.com/charlie/2007/01/27/anders-hejlsberg-on-linq-and-functional-programming/)在编译器模型中查找符号，给定的名称字符串为：  
   
 ```csharp  
 class Symbol {  
@@ -304,7 +304,7 @@ Func<Symbol, bool> predicate = s => s.Name == name;
      return symbols.FirstOrDefault(predicate);  
 ```  
   
- 在第一行中, [lambda 表达式](../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) `s => s.Name == name` `name`[关闭](https://blogs.msdn.com/b/ericlippert/archive/2003/09/17/53028.aspx)局部变量。 这意味着除了针对 `predicate` 所保存的 [委托](../../csharp/language-reference/keywords/delegate.md)分配对象以外，该代码分配了静态类以保存捕获 `name` 的值的环境。 编译器生成的代码如下所示：  
+ 在第一行中， [lambda 表达式](../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) `s => s.Name == name` `name`[关闭](https://blogs.msdn.microsoft.com/ericlippert/2003/09/17/what-are-closures/)局部变量。 这意味着除了针对 `predicate` 所保存的 [委托](../../csharp/language-reference/keywords/delegate.md)分配对象以外，该代码分配了静态类以保存捕获 `name` 的值的环境。 编译器生成的代码如下所示：  
   
 ```csharp  
 // Compiler-generated class to hold environment state for lambda  
@@ -412,7 +412,7 @@ class Compilation { /*...*/
   
  **示例 6 的修复**  
   
- 若要删除已<xref:System.Threading.Tasks.Task>完成的分配, 可以缓存任务对象和已完成的结果:  
+ 若要删除已<xref:System.Threading.Tasks.Task>完成的分配，可以缓存任务对象和已完成的结果：  
   
 ```csharp  
 class Compilation { /*...*/  

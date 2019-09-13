@@ -2,12 +2,12 @@
 title: SqlClient 对 LocalDB 的支持
 ms.date: 03/30/2017
 ms.assetid: cf796898-5575-46f2-ae6e-21e5aa8c4123
-ms.openlocfilehash: 200db3b1014278e711062bcbdff81be8d27c3351
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: d02524cd5901adeca7bc36d6fd13c7abdc46c69b
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780788"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894399"
 ---
 # <a name="sqlclient-support-for-localdb"></a>SqlClient 对 LocalDB 的支持
 从 SQL Server 代码名称 Denali 开始，将提供 SQL Server 的轻型版本（称为 LocalDB）。 本主题讨论如何连接到 LocalDB 数据库。  
@@ -25,9 +25,7 @@ ms.locfileid: "70780788"
   
 - 在连接字符串中指定 LocalDB 实例。 例如，如果实例名称是 `myInstance`，连接字符串将包括：  
   
-    ```  
-    server=(localdb)\\myInstance  
-    ```  
+    `server=(localdb)\\myInstance`  
   
  连接到 LocalDB 数据库时，不允许`User Instance=True` 。  
   

@@ -6,24 +6,22 @@ helpviewer_keywords:
 ms.assetid: 87a9cff5-d86f-4e44-a06e-d12764d0dce2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 611ad0a6f4ec8b8c63010938372b733a0ac66052
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 85d554337d11c3f79d8f70048246e978e185645e
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69955767"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894917"
 ---
 # <a name="etw-events-in-task-parallel-library-and-plinq"></a>任务并行库和 PLINQ 中的 ETW 事件
 
-任务并行库和 PLINQ 均可生成 Windows 事件跟踪 (ETW) 事件，通过 Windows 性能分析器等工具使用这些事件可分析并排除应用程序故障。 但在大多数情况下, 分析并行应用程序代码的最佳方式是在 Visual Studio 中使用[并发可视化工具](/visualstudio/profiling/concurrency-visualizer)。
+任务并行库和 PLINQ 均可生成 Windows 事件跟踪 (ETW) 事件，通过 Windows 性能分析器等工具使用这些事件可分析并排除应用程序故障。 但在大多数情况下，分析并行应用程序代码的最佳方式是在 Visual Studio 中使用[并发可视化工具](/visualstudio/profiling/concurrency-visualizer)。
 
 ## <a name="task-parallel-library-etw-events"></a>任务并行库 ETW 事件
 
 在 EVENT_HEADER 结构中，<xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType><xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Parallel.Invoke%2A?displayProperty=nameWithType> 生成的事件的 ProviderId GUID 为：
 
-```
-0x2e5dba47, 0xa3d2, 0x4d16, 0x8e, 0xe0, 0x66, 0x71, 0xff, 0xdc, 0xd7, 0xb5
-```
+`0x2e5dba47, 0xa3d2, 0x4d16, 0x8e, 0xe0, 0x66, 0x71, 0xff, 0xdc, 0xd7, 0xb5`
 
 ### <a name="parallel-loop-begin"></a>并行循环开始
 
@@ -88,9 +86,7 @@ EVENT_DESCRIPTOR.Id = 1
 ## <a name="plinq-etw-events"></a>PINQ ETW 事件
  PLINQ 的 EVENT_HEADER.ProviderId GUID 为：
 
-```
-0x159eeeec, 0x4a14, 0x4418, 0xa8, 0xfe, 0xfa, 0xab, 0xcd, 0x98, 0x78, 0x87
-```
+`0x159eeeec, 0x4a14, 0x4418, 0xa8, 0xfe, 0xfa, 0xab, 0xcd, 0x98, 0x78, 0x87`
 
 ### <a name="parallel-query-begin"></a>并行查询开始
  EVENT_DESCRIPTOR.Task = 1

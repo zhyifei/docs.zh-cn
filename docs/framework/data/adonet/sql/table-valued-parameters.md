@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 370c16d5-db7b-43e3-945b-ccaab35b739b
-ms.openlocfilehash: 316ccb19ca9e384be97a83e992af46934702aa0c
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6c01453556a71925c322e9f9aef8065cbddb3540
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780685"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894390"
 ---
 # <a name="table-valued-parameters"></a>表值参数
 表值参数提供一种将客户端应用程序中的多行数据封送到 SQL Server 的简单方式，不需要多次往返或特殊服务器端逻辑来处理数据。 您可以使用表值参数来包装客户端应用程序中的数据行，并使用单个参数化命令将数据发送到服务器。 传入的数据行存储在一个表变量中，然后您可以通过使用 Transact-SQL 对该表变量进行操作。  
@@ -24,11 +24,11 @@ ms.locfileid: "70780685"
   
 |资源|描述|  
 |--------------|-----------------|  
-|SQL Server 联机丛书中的[表值参数（数据库引擎）](https://go.microsoft.com/fwlink/?LinkId=98363)|说明如何创建和使用表值参数。|  
+|SQL Server 联机丛书中的[表值参数 (数据库引擎)](https://go.microsoft.com/fwlink/?LinkId=98363)|说明如何创建和使用表值参数。|  
 |SQL Server 联机丛书中的[用户定义表类型](https://go.microsoft.com/fwlink/?LinkId=98364)|说明用于声明表值参数的用户定义的表类型。|  
   
 ## <a name="passing-multiple-rows-in-previous-versions-of-sql-server"></a>在 SQL Server 的早期版本中传递多行  
- 在将表值参数引入 SQL Server 2008 之前，将多行数据传递到存储过程或参数化 SQL 命令的选项受到限制。 开发人员可以选择使用以下选项，将多个行传递给服务器：  
+ 在将表值参数引入 SQL Server 2008 之前, 将多行数据传递到存储过程或参数化 SQL 命令的选项受到限制。 开发人员可以选择使用以下选项，将多个行传递给服务器：  
   
 - 使用一系列单个参数表示多个数据列和行中的值。 使用此方法传递的数据量受所允许的参数数量的限制。 SQL Server 过程最多可以有 2100 个参数。 必须使用服务器端逻辑才能将这些单个值组合到表变量或临时表中以进行处理。  
   
@@ -39,18 +39,18 @@ ms.locfileid: "70780685"
 - 使用 `bcp` 实用工具程序或 <xref:System.Data.SqlClient.SqlBulkCopy> 对象将很多行数据加载到表中。 尽管这项技术非常有效，但不支持服务器端处理，除非将数据加载到临时表或表变量中。  
   
 ## <a name="creating-table-valued-parameter-types"></a>创建表值参数类型  
- 表值参数以通过使用 Transact-SQL CREATE TYPE 语句定义的强类型表结构为基础。 您必须先在 SQL Server 中创建一个表类型并定义结构，才能在客户端应用程序中使用表值参数。 有关创建表类型的详细信息，请参阅 SQL Server 联机丛书中的[用户定义表类型](https://go.microsoft.com/fwlink/?LinkID=98364)。  
+ 表值参数以通过使用 Transact-SQL CREATE TYPE 语句定义的强类型表结构为基础。 您必须先在 SQL Server 中创建一个表类型并定义结构，才能在客户端应用程序中使用表值参数。 有关创建表类型的详细信息, 请参阅 SQL Server 联机丛书中的[用户定义表类型](https://go.microsoft.com/fwlink/?LinkID=98364)。  
   
  下面的语句可创建一个名为 CategoryTableType 的表类型，其中包括 CategoryID 和 CategoryName 列：  
   
-```  
+```sql
 CREATE TYPE dbo.CategoryTableType AS TABLE  
     ( CategoryID int, CategoryName nvarchar(50) )  
 ```  
   
  创建一个表类型后，您可以基于该类型声明表值参数。 下面的 Transact-SQL 片段演示如何在存储过程定义中声明表值参数。 请注意，声明表值参数时需要使用 READONLY 关键字。  
   
-```  
+```sql
 CREATE PROCEDURE usp_UpdateCategories   
     (@tvpNewCategories dbo.CategoryTableType READONLY)  
 ```  
@@ -60,7 +60,7 @@ CREATE PROCEDURE usp_UpdateCategories
   
  下面的 Transact-SQL UPDATE 语句演示如何通过将表值参数联接到 Categories 表来使用它。 在 FROM 子句中将表值参数与 JOIN 一起使用时，您还必须为其提供一个别名，如此处所示，表值参数的别名为“ec”：  
   
-```  
+```sql
 UPDATE dbo.Categories  
     SET Categories.CategoryName = ec.CategoryName  
     FROM dbo.Categories INNER JOIN @tvpEditedCategories AS ec  
@@ -69,7 +69,7 @@ UPDATE dbo.Categories
   
  此 Transact-SQL 示例演示如何从表值参数中选择行以在单个基于集的操作中执行 INSERT。  
   
-```  
+```sql
 INSERT INTO dbo.Categories (CategoryID, CategoryName)  
     SELECT nc.CategoryID, nc.CategoryName FROM @tvpNewCategories AS nc;  
 ```  

@@ -2,12 +2,12 @@
 title: SQL Server 中的所有权和用户架构分离
 ms.date: 03/30/2017
 ms.assetid: 242830c1-31b5-4427-828c-cc22ff339f30
-ms.openlocfilehash: f0aa0a67bfbc64124fe2510915d0945341aeb49e
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 5ad3d927bcf3534e134db2c98b79842b0e6148f3
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70791937"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894433"
 ---
 # <a name="ownership-and-user-schema-separation-in-sql-server"></a>SQL Server 中的所有权和用户架构分离
 SQL Server 安全性的核心概念是对象的所有者具有管理这些对象的不可撤消的权限。 您不能取消对象所有者的特权，并且如果用户在数据库中拥有对象，您也不能将用户从数据库中删除。  
@@ -17,7 +17,7 @@ SQL Server 安全性的核心概念是对象的所有者具有管理这些对象
   
  用于引用对象的由四部分组成的命名语法指定架构名称。  
   
-```  
+```text
 Server.Database.DatabaseSchema.DatabaseObject  
 ```  
   

@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 396b875a-d203-4ebe-a3a1-6a330d962e95
-ms.openlocfilehash: 5fef151fe9149e2693ee217e7be642427162322d
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: f9e563cb87ee376e33442cdf718f70202d300f40
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636287"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895172"
 ---
 # <a name="duplex-services"></a>双工服务
 
 双工服务协定是一种消息交换模式，其中双方终结点都可独立向对方发送消息。 因此，双工服务可以将消息发送回客户端终结点，从而提供类似事件的行为。 当客户端连接到服务并为服务提供可用来将消息发送回客户端的通道时，就会发生双工通信。 请注意，双工服务的类似事件的行为仅在会话中起作用。
 
-若要创建双工协定，需要创建一对接口。 第一个接口是描述客户端可调用的操作的服务协定接口。 该服务协定必须指定*回调协定*中<xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A?displayProperty=nameWithType>属性。 回调协定是定义服务可在客户端终结点上调用的操作的接口。 虽然系统提供的双工绑定利用了会话，但是双工协定不需要会话。
+若要创建双工协定，需要创建一对接口。 第一个接口是描述客户端可调用的操作的服务协定接口。 该服务协定必须在<xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A?displayProperty=nameWithType>属性中指定一个*回调协定*。 回调协定是定义服务可在客户端终结点上调用的操作的接口。 虽然系统提供的双工绑定利用了会话，但是双工协定不需要会话。
 
 下面是双工协定的示例。
 
@@ -33,7 +33,7 @@ ms.locfileid: "65636287"
 [!code-csharp[c_DuplexServices#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_duplexservices/cs/client.cs#2)]
 [!code-vb[c_DuplexServices#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_duplexservices/vb/client.vb#2)]
 
-WCF 客户端生成的双工协定需要供<xref:System.ServiceModel.InstanceContext>类，以在构造时提供。 此 <xref:System.ServiceModel.InstanceContext> 类用作实现回调接口并处理从服务发送回的消息的对象所在的位置。 <xref:System.ServiceModel.InstanceContext> 类是用 `CallbackHandler` 类的实例构造的。 此对象处理通过回调接口从服务发送到客户端的消息。
+为双工协定生成的 WCF 客户端需要在构造<xref:System.ServiceModel.InstanceContext>时提供一个类。 此 <xref:System.ServiceModel.InstanceContext> 类用作实现回调接口并处理从服务发送回的消息的对象所在的位置。 <xref:System.ServiceModel.InstanceContext> 类是用 `CallbackHandler` 类的实例构造的。 此对象处理通过回调接口从服务发送到客户端的消息。
 
 [!code-csharp[c_DuplexServices#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_duplexservices/cs/client.cs#3)]
 [!code-vb[c_DuplexServices#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_duplexservices/vb/client.vb#3)]
@@ -47,12 +47,12 @@ WCF 客户端生成的双工协定需要供<xref:System.ServiceModel.InstanceCon
 
 如果使用 `WSHttpBinding` 元素创建客户端/服务，并且不包含客户端回调终结点，您将收到以下错误。
 
-```
+```console
 HTTP could not register URL
 htp://+:80/Temporary_Listen_Addresses/<guid> because TCP port 80 is being used by another application.
 ```
 
-下面的示例代码演示了如何指定客户端终结点地址以编程方式。
+下面的示例代码演示如何以编程方式指定客户端终结点地址。
 
 ```csharp
 WSDualHttpBinding binding = new WSDualHttpBinding();
@@ -87,10 +87,10 @@ binding.ClientBaseAddress = New Uri("http://localhost:8000/DuplexTestUsingCode/C
 ```
 
 > [!WARNING]
-> 服务或客户端关闭其通道时，双工模型不会自动检测。 因此如果客户端意外终止，默认情况下将不会通知服务，或如果服务意外终止，将不会通知客户端。 如果你使用已断开连接的服务<xref:System.ServiceModel.CommunicationException>引发异常。 客户端和服务可以实现自己的协议以相互通知对方（如果它们这么选择）。 错误处理的详细信息，请参阅[WCF 错误处理](../wcf-error-handling.md)
+> 当服务或客户端关闭其通道时，双工模型不会自动检测。 因此，如果客户端意外终止，则默认情况下将不会通知该服务; 或者，如果服务意外终止，则将不会通知客户端。 如果你使用断开连接的服务， <xref:System.ServiceModel.CommunicationException>则会引发异常。 客户端和服务可以实现自己的协议以相互通知对方（如果它们这么选择）。 有关错误处理的详细信息，请参阅[WCF 错误处理](../wcf-error-handling.md)
 
 ## <a name="see-also"></a>请参阅
 
 - [双工](../samples/duplex.md)
 - [指定客户端运行时行为](../specifying-client-run-time-behavior.md)
-- [如何：创建通道工厂并用它创建和管理通道](how-to-create-a-channel-factory-and-use-it-to-create-and-manage-channels.md)
+- [如何：创建通道工厂，并使用它来创建和管理通道](how-to-create-a-channel-factory-and-use-it-to-create-and-manage-channels.md)

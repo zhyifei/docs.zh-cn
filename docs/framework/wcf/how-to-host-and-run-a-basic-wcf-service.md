@@ -1,5 +1,5 @@
 ---
-title: 教程：托管并运行基本的 Windows Communication Foundation 服务
+title: 教程：托管并运行基本 Windows Communication Foundation 服务
 ms.date: 03/19/2019
 dev_langs:
 - csharp
@@ -8,75 +8,78 @@ helpviewer_keywords:
 - WCF services [WCF]
 - WCF services [WCF], running
 ms.assetid: 31774d36-923b-4e2d-812e-aa190127266f
-ms.openlocfilehash: ad9536b1f27ba3945bf76d0474de4825033a1e8b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 984c5e73a8efc4e9c2d487485267868ffa2f60f3
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61929098"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928714"
 ---
-# <a name="tutorial-host-and-run-a-basic-windows-communication-foundation-service"></a>教程：托管并运行基本的 Windows Communication Foundation 服务
+# <a name="tutorial-host-and-run-a-basic-windows-communication-foundation-service"></a>教程：托管并运行基本 Windows Communication Foundation 服务
 
-本教程介绍创建基本 Windows Communication Foundation (WCF) 应用程序所需的五个任务的第三个。 有关教程的概述，请参阅[教程：开始使用 Windows Communication Foundation 应用程序](getting-started-tutorial.md)。
+本教程介绍创建基本 Windows Communication Foundation （WCF）应用程序所需的五个任务中的第三个。 有关教程的概述，请参阅[教程：开始 Windows Communication Foundation 应用程序](getting-started-tutorial.md)。
 
-下一个任务创建的 WCF 应用程序是托管在一个控制台应用程序中的 WCF 服务。 WCF 服务公开一个或多个*终结点*，其中每个都公开一个或多个服务操作。 服务终结点指定以下信息： 
-- 在哪里可以找到该服务的地址。
-- 一个绑定，它包含描述如何在客户端必须与服务通信的信息。 
+用于创建 WCF 应用程序的下一个任务是在控制台应用程序中托管 WCF 服务。 WCF 服务公开一个或多个*终结点*，每个终结点都公开一个或多个服务操作。 服务终结点指定下列信息：
+
+- 可在其中找到服务的地址。
+- 一个包含描述客户端如何与服务进行通信的信息的绑定。 
 - 定义服务向其客户端提供的功能的协定。
 
 在本教程中，你将了解：
 > [!div class="checklist"]
-> - 创建和配置用于承载 WCF 服务的控制台应用项目。
+>
+> - 创建和配置用于承载 WCF 服务的控制台应用程序项目。
 > - 添加代码以承载 WCF 服务。
 > - 更新配置文件。
-> - 启动 WCF 服务并验证其是否正在运行。
+> - 启动 WCF 服务并验证它是否正在运行。
 
-## <a name="create-and-configure-a-console-app-project-for-hosting-the-service"></a>创建和配置托管服务的一个控制台应用程序项目
+## <a name="create-and-configure-a-console-app-project-for-hosting-the-service"></a>创建和配置用于托管服务的控制台应用程序项目
 
-1. 在 Visual Studio 中创建一个控制台应用程序项目： 
+1. 在 Visual Studio 中创建控制台应用项目： 
  
-    1. 从**文件**菜单中，选择**打开** > **项目/解决方案**并浏览到**GettingStarted**解决方案，以前创建的 (*GettingStarted.sln*)。 选择“打开” 。
+    1. 从 "**文件**" 菜单中，选择 "**打开** > **项目/解决方案**"，并浏览到前面创建的**GettingStarted**解决方案（*GettingStarted*）。 选择“打开”。
 
-    2. 从**视图**菜单中，选择**解决方案资源管理器**。
+    2. 从 "**视图**" 菜单中选择 "**解决方案资源管理器**"。
     
-    3. 在中**解决方案资源管理器**窗口中，选择**GettingStarted**解决方案 （高层节点），然后选择**添加** > **的新项目**从快捷菜单。 
+    3. 在 "**解决方案资源管理器**" 窗口中，选择 " **GettingStarted** " 解决方案（顶级节点），然后从快捷菜单中选择 "**添加** > **新项目**"。 
 
-    4. 在中**添加新项目**窗口中的，左侧和右侧，选择**Windows Desktop**类别中的下**Visual C#** 或**Visual Basic**. 
+    4. 在 "**添加新项目**" 窗口的左侧，选择 "**视觉对象C#**  " 或**Visual Basic**下的 " **Windows 桌面**" 类别。 
 
-    5. 选择**控制台应用 (.NET Framework)** 模板，并输入*GettingStartedHost*有关**名称**。 选择 **确定**。
+    5. 选择 "**控制台应用（.NET Framework）** " 模板，然后输入 " *GettingStartedHost* " 作为 "**名称**"。 选择“确定”。
 
-2. 添加引用**GettingStartedHost**投影到**GettingStartedLib**项目： 
+2. 将**GettingStartedHost**项目中的引用添加到**GettingStartedLib**项目： 
 
-    1. 在中**解决方案资源管理器**窗口中，选择**引用**下的文件夹**GettingStartedHost**项目，，然后选择**添加引用**从快捷菜单。 
+    1. 在 "**解决方案资源管理器**" 窗口中，选择 " **GettingStartedHost** " 项目下的 "**引用**" 文件夹，然后从快捷菜单中选择 "**添加引用**"。 
 
-    2. 在中**添加引用**对话框下**项目**在窗口的左侧，选择**解决方案**。 
+    2. 在 "**添加引用**" 对话框中窗口左侧的 "**项目**" 下，选择 "**解决方案**"。 
  
-    3. 选择**GettingStartedLib**中的窗口中，并选择中心部分**确定**。 
+    3. 在窗口的中间部分中选择 " **GettingStartedLib** "，然后选择 **"确定"** 。 
 
-       此操作使得中定义的类型**GettingStartedLib**项目可供**GettingStartedHost**项目。
+       此操作可使**GettingStartedLib**项目中定义的类型可用于**GettingStartedHost**项目。
 
-3. 添加引用**GettingStartedHost**投影到<xref:System.ServiceModel>程序集： 
+3. 将**GettingStartedHost**项目中的引用添加到<xref:System.ServiceModel>程序集： 
 
-    1. 在中**解决方案资源管理器**窗口中，选择**引用**下的文件夹**GettingStartedHost**项目，，然后选择**添加引用**从快捷菜单。
+    1. 在 "**解决方案资源管理器**" 窗口中，选择 " **GettingStartedHost** " 项目下的 "**引用**" 文件夹，然后从快捷菜单中选择 "**添加引用**"。
     
-    2. 在中**添加引用**窗口下**程序集**在窗口的左侧，选择**Framework**。 
+    2. 在 "**添加引用**" 窗口中窗口左侧的 "**程序集**" 下，选择 "**框架**"。 
 
-    3. 选择**System.ServiceModel**，然后选择**确定**。 
+    3. 选择 " **system.servicemodel**"，然后选择 **"确定"** 。 
     
-    4. 通过选择保存解决方案**文件** > **全部保存**。
+    4. 通过选择 "**文件** > " "**全部保存**" 保存解决方案。
 
-## <a name="add-code-to-host-the-service"></a>添加代码以承载服务
+## <a name="add-code-to-host-the-service"></a>添加用于托管服务的代码
 
-若要托管该服务，你可以添加代码以执行以下步骤： 
-   1. 创建的基址 URI。
-   2. 创建用于承载服务的类实例。
-   3. 创建服务终结点。
-   4. 启用元数据交换。
-   5. 打开服务主机以侦听传入消息。
+若要承载服务，请添加代码以执行以下步骤： 
+
+1. 创建基址的 URI。
+2. 创建用于承载服务的类实例。
+3. 创建服务终结点。
+4. 启用元数据交换。
+5. 打开服务主机以侦听传入消息。
   
-对代码进行以下更改：
+对代码进行以下更改:
 
-1. 打开**Program.cs**或**Module1.vb**文件中**GettingStartedHost**项目，其代码替换为以下代码：
+1. 在**GettingStartedHost**项目中打开**Program.cs**或**Module1**文件，并将其代码替换为以下代码：
 
     ```csharp
     using System;
@@ -173,63 +176,65 @@ ms.locfileid: "61929098"
     End Module
     ```
     
-    有关此代码的工作方式的信息，请参阅[服务托管计划步骤](#service-hosting-program-steps)。
+    有关此代码的工作原理的信息，请参阅[服务托管程序步骤](#service-hosting-program-steps)。
 
 2. 更新项目属性：
 
-   1. 在中**解决方案资源管理器**窗口中，选择**GettingStartedHost**文件夹，，然后选择**属性**从快捷菜单。
+   1. 在 "**解决方案资源管理器**" 窗口中，选择 " **GettingStartedHost** " 文件夹，然后从快捷菜单中选择 "**属性**"。
 
-   2. 上**GettingStartedHost**属性页上，选择**应用程序**选项卡：
+   2. 在**GettingStartedHost**属性页上，选择 "**应用程序**" 选项卡：
 
-      - 有关C#项目中，选择**GettingStartedHost.Program**从**启动对象**列表。
+      - 对于C# "项目"，请从 "**启动对象**" 列表中选择 " **GettingStartedHost** "。
 
-      - 对于 Visual Basic 项目中，选择**Service.Program**从**启动对象**列表。
+      - 对于 Visual Basic 项目，从 "**启动对象**" 列表中选择 "**服务**"。
 
-   3. 从**文件**菜单中，选择**全部保存**。
+   3. 从 "**文件**" 菜单中，选择 "**全部保存**"。
 
-## <a name="verify-the-service-is-working"></a>验证服务正常工作
+## <a name="verify-the-service-is-working"></a>验证服务是否正常运行
 
-1. 构建解决方案，然后运行**GettingStartedHost**控制台应用程序从 Visual Studio 内部。 
+1. 生成解决方案，然后从 Visual Studio 内部运行**GettingStartedHost**控制台应用程序。 
 
-    必须使用管理员特权运行服务。 因为在运行时使用管理员特权打开 Visual Studio **GettingStartedHost**在 Visual Studio 中，应用程序运行使用管理员的权限。 或者，可以打开新的命令提示符以管理员身份 (选择**更多** > **以管理员身份运行**从快捷菜单) 并运行**GettingStartedHost.exe**其内。
+    必须以管理员权限运行该服务。 由于你以管理员权限打开了 Visual Studio，因此，当你在 Visual Studio 中运行**GettingStartedHost**时，该应用程序也会以管理员权限运行。 作为替代方法，您可以以管理员身份打开新的命令提示符（从快捷菜单中选择 "**更多** > 以**管理员身份运行**"），并在其中运行**GettingStartedHost** 。
 
-2. 打开 web 浏览器并浏览到服务的页面在`http://localhost:8000/GettingStarted/CalculatorService`。
+2. 打开 web 浏览器并浏览到中的服务页面`http://localhost:8000/GettingStarted/CalculatorService`。
    
    > [!NOTE]
-   > 此类服务需要适当的权限来为要侦听的计算机上注册 HTTP 地址。 管理员帐户具有此权限，但对于非管理员帐户来说，必须授予对 HTTP 命名空间的权限。 有关如何配置命名空间预留的详细信息，请参阅[配置 HTTP 和 HTTPS](feature-details/configuring-http-and-https.md)。 
+   > 此类服务需要适当的权限才能在计算机上注册 HTTP 地址以进行侦听。 管理员帐户具有此权限，但对于非管理员帐户来说，必须授予对 HTTP 命名空间的权限。 有关如何配置命名空间预留的详细信息，请参阅[配置 HTTP 和 HTTPS](feature-details/configuring-http-and-https.md)。 
 
-## <a name="service-hosting-program-steps"></a>服务宿主程序步骤
+## <a name="service-hosting-program-steps"></a>服务托管计划步骤
 
-添加到主机服务进行了介绍，如下所示的代码中的步骤：
+你添加用于承载服务的代码中的步骤如下所述：
 
-- **步骤 1**:创建的实例`Uri`类来保存服务的基址。 包含一个基址的 URL 采用一个可选 URI，这标识服务。 基址的格式如下： `<transport>://<machine-name or domain><:optional port #>/<optional URI segment>`。 计算器服务的基址使用 HTTP 传输协议、 本地主机、 端口 8000 和 URI 段，GettingStarted。
+- **步骤 1**：创建`Uri`类的实例以承载服务的基址。 包含基址的 URL 具有标识服务的可选 URI。 基址的格式如下所示： `<transport>://<machine-name or domain><:optional port #>/<optional URI segment>`。 计算器服务的基址使用 HTTP 传输、localhost、端口8000和 URI 段 GettingStarted。
 
-- **步骤 2**:创建的实例<xref:System.ServiceModel.ServiceHost>类，该类用于承载服务。 构造函数采用两个参数： 实现服务协定和服务的基址的类的类型。
+- **步骤 2**：创建用于承载服务的<xref:System.ServiceModel.ServiceHost>类的实例。 构造函数采用两个参数：实现服务协定的类的类型和服务的基址。
 
-- **步骤 3**:创建一个 <xref:System.ServiceModel.Description.ServiceEndpoint> 实例。 服务终结点由地址、绑定和服务协定组成。 <xref:System.ServiceModel.Description.ServiceEndpoint>构造函数组成的服务协定接口类型、 绑定和地址。 服务协定是在服务类型中定义和实现的 `ICalculator`。 为此示例绑定是<xref:System.ServiceModel.WSHttpBinding>，这是一个内置的绑定和连接到终结点符合 WS-* 规范。 有关 WCF 绑定的详细信息，请参阅[WCF 绑定概述](bindings-overview.md)。 将追加到基址以标识终结点的地址。 该代码指定的地址作为 CalculatorService 和作为终结点的完全限定的地址`http://localhost:8000/GettingStarted/CalculatorService`。
+- **步骤 3**：创建一个 <xref:System.ServiceModel.Description.ServiceEndpoint> 实例。 服务终结点由地址、绑定和服务协定组成。 <xref:System.ServiceModel.Description.ServiceEndpoint>构造函数由服务协定接口类型、绑定和地址组成。 服务协定是在服务类型中定义和实现的 `ICalculator`。 此示例的绑定为<xref:System.ServiceModel.WSHttpBinding>，它是内置绑定并连接到符合 WS-* 规范的终结点。 有关 WCF 绑定的详细信息，请参阅[wcf 绑定概述](bindings-overview.md)。 将地址追加到基址以标识终结点。 该代码将地址指定为 CalculatorService，将终结点的完全限定地址指定`http://localhost:8000/GettingStarted/CalculatorService`为。
 
     > [!IMPORTANT]
-    > 针对.NET Framework 版本 4 及更高版本，添加服务终结点是可选的。 对于这些版本，如果您没有添加您的代码或配置中，WCF 将添加一个默认终结点的基址和协定，该服务实现的每个组合。 有关默认终结点的详细信息，请参阅[指定的终结点地址](specifying-an-endpoint-address.md)。 有关默认终结点、 绑定和行为的详细信息，请参阅[简化后的配置](simplified-configuration.md)并[WCF 服务的简化配置](samples/simplified-configuration-for-wcf-services.md)。
+    > 对于 .NET Framework 版本4及更高版本，添加服务终结点是可选的。 对于这些版本，如果不添加代码或配置，WCF 将为服务实现的每个基址和协定组合添加一个默认终结点。 有关默认终结点的详细信息，请参阅[指定终结点地址](specifying-an-endpoint-address.md)。 有关默认终结点、绑定和行为的详细信息，请参阅[WCF 服务的](samples/simplified-configuration-for-wcf-services.md)[简化配置](simplified-configuration.md)和简化配置。
 
-- **步骤 4**:启用元数据交换。 客户端使用元数据交换来调用服务操作的生成代理。 若要启用元数据交换，创建<xref:System.ServiceModel.Description.ServiceMetadataBehavior>实例，设置其<xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled>属性设置为`true`，并添加`ServiceMetadataBehavior`对象传递给<xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A>系列<xref:System.ServiceModel.ServiceHost>实例。
+- **步骤 4**：启用元数据交换。 客户端使用元数据交换生成代理来调用服务操作。 若要启用元数据交换， <xref:System.ServiceModel.Description.ServiceMetadataBehavior>请创建一个实例<xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled> ，将`true`其属性设置为`ServiceMetadataBehavior` ，然后<xref:System.ServiceModel.ServiceHost>将<xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A>该对象添加到实例的集合中。
 
-- **步骤 5**:打开<xref:System.ServiceModel.ServiceHost>侦听传入消息。 应用程序等待用户按**Enter**。 应用程序实例化后<xref:System.ServiceModel.ServiceHost>，它将执行 try/catch 块。 有关安全捕获引发的异常详细信息<xref:System.ServiceModel.ServiceHost>，请参阅[使用关闭和中止发布 WCF 客户端资源](samples/use-close-abort-release-wcf-client-resources.md)。
+- **步骤 5**：打开<xref:System.ServiceModel.ServiceHost>以侦听传入的消息。 应用程序等待你按**enter**。 在应用程序实例<xref:System.ServiceModel.ServiceHost>化后，它将执行 try/catch 块。 有关安全捕获引发的<xref:System.ServiceModel.ServiceHost>异常的详细信息，请参阅[使用 Close 和 Abort 释放 WCF 客户端资源](samples/use-close-abort-release-wcf-client-resources.md)。
 
 > [!IMPORTANT]
-> 当添加 WCF 服务库时，Visual Studio 承载它为您如果调试通过启动服务主机。 若要避免冲突，您可防止 Visual Studio 承载 WCF 服务库。 
-> 1. 选择**GettingStartedLib**项目中**解决方案资源管理器**，然后选择**属性**从快捷菜单。
-> 2. 选择**WCF 选项**并取消选中**启动 WCF 服务主机在调试同一解决方案中的另一个项目时**。
+> 添加 WCF 服务库时，如果你通过启动服务主机进行调试，则 Visual Studio 会为你托管它。 若要避免冲突，可以阻止 Visual Studio 承载 WCF 服务库。 
+>
+> 1. 在**解决方案资源管理器**中选择 " **GettingStartedLib** " 项目，然后从快捷菜单中选择 "**属性**"。
+> 2. 选择 " **Wcf 选项**" 并取消选中 **"在调试同一解决方案中的另一个项目时启动 WCF 服务主机"** 。
 
 ## <a name="next-steps"></a>后续步骤
 
 在本教程中，你将了解：
 > [!div class="checklist"]
-> - 创建和配置用于承载 WCF 服务的控制台应用项目。
+>
+> - 创建和配置用于承载 WCF 服务的控制台应用程序项目。
 > - 添加代码以承载 WCF 服务。
 > - 更新配置文件。
-> - 启动 WCF 服务并验证其是否正在运行。
+> - 启动 WCF 服务并验证它是否正在运行。
 
-转到下一步的教程，了解如何创建 WCF 客户端。
+转到下一教程，了解如何创建 WCF 客户端。
 
 > [!div class="nextstepaction"]
 > [教程：创建 WCF 客户端](how-to-create-a-wcf-client.md)

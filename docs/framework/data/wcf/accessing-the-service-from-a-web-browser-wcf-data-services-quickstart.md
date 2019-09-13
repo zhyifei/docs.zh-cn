@@ -2,12 +2,12 @@
 title: 从 Web 浏览器访问服务（WCF 数据服务快速入门）
 ms.date: 03/30/2017
 ms.assetid: 5a6fa180-3094-4e6e-ba2b-8c80975d18d1
-ms.openlocfilehash: eb7f1c97722b45a93c310fb8bcbdb42beece2553
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: d89f84cd3ea4f56bbae34cbefe0c3891df96fa8b
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780542"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894333"
 ---
 # <a name="accessing-the-service-from-a-web-browser-wcf-data-services-quickstart"></a>从 Web 浏览器访问服务（WCF 数据服务快速入门）
 
@@ -29,7 +29,7 @@ ms.locfileid: "70780542"
 
 3. 在本地计算机上打开 Web 浏览器。 在地址栏中，输入以下 URI：
 
-    ```
+    ```http
     http://localhost:12345/northwind.svc
     ```
 
@@ -39,7 +39,7 @@ ms.locfileid: "70780542"
 
 1. 在 Web 浏览器的地址栏中，输入以下 URI：
 
-    ```
+    ```http
     http://localhost:12345/northwind.svc/Customers
     ```
 
@@ -47,7 +47,7 @@ ms.locfileid: "70780542"
 
 2. 在 Web 浏览器的地址栏中，输入以下 URI：
 
-    ```
+    ```http
     http://localhost:12345/northwind.svc/Customers('ALFKI')
     ```
 
@@ -55,7 +55,7 @@ ms.locfileid: "70780542"
 
 3. 在 Web 浏览器的地址栏中，输入以下 URI：
 
-    ```
+    ```http
     http://localhost:12345/northwind.svc/Customers('ALFKI')/Orders
     ```
 
@@ -63,7 +63,7 @@ ms.locfileid: "70780542"
 
 4. 在 Web 浏览器的地址栏中，输入以下 URI：
 
-    ```
+    ```http
     http://localhost:12345/northwind.svc/Customers('ALFKI')/Orders?$filter=OrderID eq 10643
     ```
 

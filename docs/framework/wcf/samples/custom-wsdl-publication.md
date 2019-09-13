@@ -2,12 +2,12 @@
 title: 自定义 WSDL 发布
 ms.date: 03/30/2017
 ms.assetid: 3b3e8103-2c95-4db3-a05b-46aa8e9d4d29
-ms.openlocfilehash: 0d5ceecebc5f45d62bac7fd0aaa0f8515a469515
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 8674d852be45119b247ec10bbc639922850d5a90
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045116"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928851"
 ---
 # <a name="custom-wsdl-publication"></a>自定义 WSDL 发布
 此示例演示如何：  
@@ -18,7 +18,7 @@ ms.locfileid: "70045116"
   
 - 分别在自定义协定行为和自定义操作行为上实现 <xref:System.ServiceModel.Description.IServiceContractGenerationExtension?displayProperty=nameWithType> 和 <xref:System.ServiceModel.Description.IOperationContractGenerationExtension?displayProperty=nameWithType>，以便在 CodeDom 中将导入的批注作为导入的协定和操作的注释写入。  
   
-- 使用下载 wsdl <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> , 使用自定义<xref:System.ServiceModel.Description.ServiceContractGenerator?displayProperty=nameWithType> wsdl 导入程序导入 wsdl, 并使用生成 Windows Communication Foundation (WCF) 客户端代码, 并将 wsdl 批注作为///和 "'" 注释和C# <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType>Visual Basic。  
+- 使用下载 wsdl <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> ，使用自定义<xref:System.ServiceModel.Description.ServiceContractGenerator?displayProperty=nameWithType> wsdl 导入程序导入 wsdl，并使用生成 Windows Communication Foundation （WCF）客户端代码，并将 wsdl 批注作为///和 "'" 注释和C# <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType>Visual Basic。  
   
 > [!NOTE]
 > 本主题的最后介绍了此示例的设置过程和生成说明。  
@@ -26,7 +26,7 @@ ms.locfileid: "70045116"
 ## <a name="service"></a>服务  
  此示例中的服务使用两个自定义属性进行标记。 第一个是 `WsdlDocumentationAttribute`，它在构造函数中接受字符串，可用来通过描述用法的字符串提供协定接口或操作。 第二个是 `WsdlParamOrReturnDocumentationAttribute`，可用来返回值或参数，以说明操作中的那些值。 下面的示例演示使用这些属性描述的服务协定 `ICalculator`。  
   
-```  
+```csharp  
 // Define a service contract.      
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 // Document it.  
@@ -71,7 +71,7 @@ public interface ICalculator
   
  在此示例中，根据导出上下文对象具有的是 <xref:System.ServiceModel.Description.ContractDescription> 还是 <xref:System.ServiceModel.Description.OperationDescription>，将使用文本属性 (Property) 从该属性 (Attribute) 中提取注释，并将注释添加到 WSDL 批注元素中，如下面的代码所示。  
   
-```  
+```csharp  
 public void ExportContract(WsdlExporter exporter, WsdlContractConversionContext context)  
 {  
     if (contractDescription != null)  
@@ -107,7 +107,7 @@ public void ExportContract(WsdlExporter exporter, WsdlContractConversionContext 
   
  如果导出的是操作，该示例则使用反射来获取参数的任何 `WsdlParamOrReturnDocumentationAttribute` 值和返回值，并将它们添加到该操作的 WSDL 批注元素中，如下所示。  
   
-```  
+```csharp  
 // Get returns information  
 ParameterInfo returnValue = operationDescription.SyncMethod.ReturnParameter;  
 object[] returnAttrs = returnValue.GetCustomAttributes(typeof(WsdlParamOrReturnDocumentationAttribute), false);  
@@ -174,7 +174,7 @@ for (int i = 0; i < args.Length; i++)
   
  首先，在 <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportContract%28System.ServiceModel.Description.WsdlImporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29> 方法中，该示例确定 WSDL 批注是在协定级别还是操作级别，并在相应的范围将其自身添加为一个行为，从而将导入的批注文本传递给其构造函数。  
   
-```  
+```csharp  
 public void ImportContract(WsdlImporter importer, WsdlContractConversionContext context)  
 {  
     // Contract Documentation  
@@ -201,7 +201,7 @@ public void ImportContract(WsdlImporter importer, WsdlContractConversionContext 
   
  然后在生成代码时，系统调用 <xref:System.ServiceModel.Description.IServiceContractGenerationExtension.GenerateContract%28System.ServiceModel.Description.ServiceContractGenerationContext%29> 和 <xref:System.ServiceModel.Description.IOperationContractGenerationExtension.GenerateOperation%28System.ServiceModel.Description.OperationContractGenerationContext%29> 方法，以传递相应的上下文信息。 该示例对自定义 WSDL 批注进行格式化，并将它们作为注释插入到 CodeDom 中。  
   
-```  
+```csharp  
 public void GenerateContract(ServiceContractGenerationContext context)  
 {  
     Debug.WriteLine("In generate contract.");  
@@ -231,9 +231,9 @@ public void GenerateOperation(OperationContractGenerationContext context)
 </client>  
 ```  
   
- 指定自定义导入程序后, WCF 元数据系统会将自定义导入<xref:System.ServiceModel.Description.WsdlImporter>程序加载到为该目的创建的任何。 此示例使用 <xref:System.ServiceModel.Description.MetadataExchangeClient> 下载元数据，使用经过正确配置的 <xref:System.ServiceModel.Description.WsdlImporter> 通过此示例创建的自定义导入程序导入元数据，并使用 <xref:System.ServiceModel.Description.ServiceContractGenerator> 将修改后的协定信息编译成 Visual Basic 和 C# 客户端代码（可在 Visual Studio 中使用以支持 Intellisense），或者编译成 XML 文档。  
+ 指定自定义导入程序后，WCF 元数据系统会将自定义导入<xref:System.ServiceModel.Description.WsdlImporter>程序加载到为该目的创建的任何。 此示例使用 <xref:System.ServiceModel.Description.MetadataExchangeClient> 下载元数据，使用经过正确配置的 <xref:System.ServiceModel.Description.WsdlImporter> 通过此示例创建的自定义导入程序导入元数据，并使用 <xref:System.ServiceModel.Description.ServiceContractGenerator> 将修改后的协定信息编译成 Visual Basic 和 C# 客户端代码（可在 Visual Studio 中使用以支持 Intellisense），或者编译成 XML 文档。  
   
-```  
+```csharp  
 /// From WSDL Documentation:  
 ///   
 /// <summary>The ICalculator contract performs basic calculation   

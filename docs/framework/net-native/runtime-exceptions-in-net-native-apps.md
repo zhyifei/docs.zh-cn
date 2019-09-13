@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 ms.assetid: 5f050181-8fdd-4a4e-9d16-f84c22a88a97
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6472f02cf2633d936252bfd2a8daa3ff711a4db8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 68fe50d24ce547e1cad092e3d871c2d0990fd5af
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69967876"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894981"
 ---
 # <a name="runtime-exceptions-in-net-native-apps"></a>.NET 本机应用中的运行时异常
 请务必在通用 Windows 平台应用程序的目标平台上测试它们的发布版本，因为调试和发布配置完全不同。 默认情况下，调试配置使用 .NET Core 运行时来编译应用程序，但发布配置使用 .NET 本机将应用程序编译为本机代码。  
   
 > [!IMPORTANT]
-> 有关处理在测试应用的发布版本时可能遇到的[MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)、 [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)和[MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md)异常的信息, 请参阅 "步骤 4:手动解决缺少的元数据: 在[入门](../../../docs/framework/net-native/getting-started-with-net-native.md)主题以及[反射和 .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)以及[运行时指令 (oobe.xml) 配置文件引用](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)中。  
+> 有关处理在测试应用的发布版本时可能遇到的[MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)、 [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)和[MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md)异常的信息，请参阅 "步骤4：手动解决缺少的元数据：在[入门](../../../docs/framework/net-native/getting-started-with-net-native.md)主题以及[反射和 .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)以及[运行时指令（oobe.xml）配置文件引用](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)中。  
   
 ## <a name="debug-and-release-builds"></a>调试和发布版本  
  当调试版本针对 .NET Core 运行时执行时，它未编译为本机代码。 这使得你的应用可使用通常由运行时提供的所有服务。  
@@ -37,7 +37,7 @@ ms.locfileid: "69967876"
 ## <a name="runtime-exception-messages"></a>Runtime exception messages  
  为尽量减少应用程序可执行文件的大小，.NET 本机不包含异常消息的完整文本。 因此，在发布版本中引发的运行时异常可能不显示异常消息的完整文本。 相反，该文本可能由一个子字符串和一个链接构成，跟随该链接可获取详细信息。 例如，异常信息可能显示为：  
   
-```  
+```output
 Exception thrown: '$16_System.AggregateException' in Unknown Module.  
   
 Additional information: AggregateException_ctor_DefaultMessage  
@@ -47,7 +47,7 @@ If there is a handler for this exception, the program may be safely continued.
   
  如果需要完整的异常消息，请改为运行调试版本。 例如，发布版本中的上一个异常信息在调试版本中可能显示如下：  
   
-```  
+```output
 Exception thrown: 'System.AggregateException' in NativeApp.exe.  
   
 Additional information: Value does not fall within the expected range.  

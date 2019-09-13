@@ -9,17 +9,18 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], properties
 - properties [WPF]
 ms.assetid: d6e0197f-f2c4-48ed-b45b-b9cdb64aab1c
-ms.openlocfilehash: c685a5227f4339a094ae74af4e1314d4c47f7585
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: d3d11950f919c13590a0212b8d03d394d59d3550
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400865"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928439"
 ---
 # <a name="properties-wpf"></a>属性 (WPF)
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]提供一组服务, 这些服务可用于扩展公共语言运行时 (CLR) 属性的功能。 这些服务通常统称为 WPF 属性系统。 由 [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] 属性系统支持的属性称为依赖属性。  
   
 ## <a name="in-this-section"></a>本节内容  
+
 - [依赖项属性概述](dependency-properties-overview.md)
 - [附加属性概述](attached-properties-overview.md)
 - [自定义依赖属性](custom-dependency-properties.md)

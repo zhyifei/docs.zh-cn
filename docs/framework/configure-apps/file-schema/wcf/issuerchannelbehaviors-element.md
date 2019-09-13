@@ -2,25 +2,34 @@
 title: <issuerChannelBehaviors> 元素
 ms.date: 03/30/2017
 ms.assetid: f7378673-8e9b-45b2-98d1-cf5dccdd8c40
-ms.openlocfilehash: 2c0e0d8d041565edd25c4b2c2802bfd2a589b4f7
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+no-loc:
+- <system.serviceModel>
+- <behaviors>
+- <endpointBehaviors>
+- <behavior>
+- <clientCredentials>
+- <issuedToken>
+- <issuerChannelBehaviors>
+- <dataContractSerializer>
+ms.openlocfilehash: cbbfb9d3b5af47a360aa82cf837cd6749f61b641
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70397905"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70893156"
 ---
 # <a name="issuerchannelbehaviors-element"></a>\<issuerChannelBehaviors > 元素
 
 包含与指定的服务令牌服务通信时要使用的 Windows Communication Foundation （WCF）客户端终结点行为（在配置中定义）的集合。 定义的行为不能包含任何[ \<clientCredentials >](clientcredentials.md)元素。
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<行为 >** ](behaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<endpointBehaviors >** ](endpointbehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<行为 >** ](behavior-of-endpointbehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<clientCredentials >** ](clientcredentials.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<issuedToken >** ](issuedtoken.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<issuerChannelBehaviors >**  
+[\<configuration>](../configuration-element.md)\
+&nbsp;&nbsp;[\<System.servicemodel >](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<行为 >](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<endpointBehaviors >](endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<行为 >](behavior-of-endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<clientCredentials >](clientcredentials.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<issuedToken >](issuedtoken.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<issuerChannelBehaviors >
 
 ## <a name="syntax"></a>语法
 

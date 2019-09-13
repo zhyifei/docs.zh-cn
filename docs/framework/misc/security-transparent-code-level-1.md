@@ -1,5 +1,5 @@
 ---
-title: 安全透明代码, 级别1
+title: 安全透明代码，级别1
 ms.date: 03/30/2017
 helpviewer_keywords:
 - transparent
@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: 5fd8f46d-3961-46a7-84af-2eb1f48e75cf
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d1c108e75c0e2da3d513669f5b8b02bada43b983
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: efd3954b63a6683e04bd9143ca3523cdbace506d
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70206072"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894535"
 ---
-# <a name="security-transparent-code-level-1"></a>安全透明代码, 级别1
+# <a name="security-transparent-code-level-1"></a>安全透明代码，级别1
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
- 透明度可帮助开发人员编写更安全的 .NET Framework 库来向部分信任的代码公开功能。 .NET Framework 2.0 版中引入了 1 级透明度，此透明度主要仅供 Microsoft 内部使用。 从 .NET Framework 4 开始, 可以使用[2 级透明度](security-transparent-code-level-2.md)。 但是, 保留了1级透明度, 以便您可以识别必须用早期安全规则运行的旧代码。  
+ 透明度可帮助开发人员编写更安全的 .NET Framework 库来向部分信任的代码公开功能。 .NET Framework 2.0 版中引入了 1 级透明度，此透明度主要仅供 Microsoft 内部使用。 从 .NET Framework 4 开始，可以使用[2 级透明度](security-transparent-code-level-2.md)。 但是，保留了1级透明度，以便您可以识别必须用早期安全规则运行的旧代码。  
   
 > [!IMPORTANT]
-> 应仅出于兼容性目的而指定 1 级透明度；也就是说，仅为使用 .NET Framework 3.5 或以前的版本（使用 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> 或不使用透明度模型）开发的代码指定 1 级透明度。 例如，对允许从部分信任的调用方 (APTCA) 调用的 .NET Framework 2.0 程序集使用 1 级透明度。 对于为 .NET Framework 4 开发的代码, 请始终使用2级透明度。  
+> 应仅出于兼容性目的而指定 1 级透明度；也就是说，仅为使用 .NET Framework 3.5 或以前的版本（使用 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> 或不使用透明度模型）开发的代码指定 1 级透明度。 例如，对允许从部分信任的调用方 (APTCA) 调用的 .NET Framework 2.0 程序集使用 1 级透明度。 对于为 .NET Framework 4 开发的代码，请始终使用2级透明度。  
   
  本主题包含以下各节：  
   
@@ -84,27 +84,27 @@ ms.locfileid: "70206072"
 ## <a name="security-transparency-examples"></a>安全透明度示例  
  若要使用 .NET Framework 2.0 透明度规则（1 级透明度），请使用下面的程序集批注：  
   
-```  
+```csharp
 [assembly: SecurityRules(SecurityRuleSet.Level1)]  
 ```  
   
  如果要使整个程序集透明以指示该程序集不包含任何关键代码并且不以任何方式提升特权，则可通过以下特性显式增加程序集的透明度：  
   
-```  
+```csharp  
 [assembly: SecurityTransparent]  
 ```  
   
  如果要在同一程序集中混合关键代码和透明代码，则可首先用 <xref:System.Security.SecurityCriticalAttribute> 特性标记该程序集，以指示该程序集可以包含关键代码，如下所示：  
   
-```  
+```csharp  
 [assembly: SecurityCritical]  
 ```  
   
  如果要执行安全关键操作，则必须用另一个 <xref:System.Security.SecurityCriticalAttribute> 特性显式标记将执行关键操作的代码，如下面的代码示例中所示：  
   
-```  
+```csharp  
 [assembly: SecurityCritical]  
-Public class A  
+public class A  
 {  
     [SecurityCritical]  
     private void Critical()  
@@ -119,7 +119,7 @@ Public class A
     }  
 }  
 public class B  
-{      
+{
     internal string SomeOtherProperty  
     {  
         get { /* transparent */ }  
@@ -132,5 +132,5 @@ public class B
   
 ## <a name="see-also"></a>请参阅
 
-- [安全透明代码, 级别2](security-transparent-code-level-2.md)
+- [安全透明代码，级别2](security-transparent-code-level-2.md)
 - [安全更改](../security/security-changes.md)

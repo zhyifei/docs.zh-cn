@@ -12,12 +12,12 @@ helpviewer_keywords:
 - arithmetic operators [Visual Basic], Mod
 - math operators [Visual Basic]
 ms.assetid: 6ff7e40e-cec8-4c77-bff6-8ddd2791c25b
-ms.openlocfilehash: dc1e866836bb7420ffe17210b5be7a5e1d4048d0
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 08e3eec08ba099e6f5c7796a459c55de09afa917
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374491"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929336"
 ---
 # <a name="mod-operator-visual-basic"></a>Mod 运算符（Visual Basic）
 
@@ -51,7 +51,7 @@ result = number1 Mod number2
 > [!NOTE]
 > 在数学中，*余数*和*模数*之间存在差异，但负数的结果不同。 Visual Basic `Mod` 、.NET Framework `op_Modulus`运算符和基础[rem](<xref:System.Reflection.Emit.OpCodes.Rem>) IL 指令中的运算符都执行了余数运算。
 
-`Mod`操作的结果保留被`number1`除数的符号，因此它可以是正数也可以是负数。 结果始终处于范围内（-`number2`， `number2`），而不是排他。 例如:
+`Mod`操作的结果保留被`number1`除数的符号，因此它可以是正数也可以是负数。 结果始终处于范围内（-`number2`， `number2`），而不是排他。 例如：
 
 ```vb
 Public Module Example
@@ -84,6 +84,7 @@ End Module
 ## <a name="attempted-division-by-zero"></a>尝试被零除
 
 如果`number2`计算结果为零，则`Mod`运算符的行为取决于操作数的数据类型：
+
 - <xref:System.DivideByZeroException>如果在编译时`number2`无法确定，则整数除法会引发异常，并在编译时计算结果为零`number2`时生成编译时错误`BC30542 Division by zero occurred while evaluating this expression` 。
 - 浮点除法返回<xref:System.Double.NaN?displayProperty=nameWithType>。
 

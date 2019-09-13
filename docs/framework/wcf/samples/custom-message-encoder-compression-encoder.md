@@ -2,16 +2,16 @@
 title: 自定义消息编码器：压缩编码器
 ms.date: 03/30/2017
 ms.assetid: 57450b6c-89fe-4b8a-8376-3d794857bfd7
-ms.openlocfilehash: 84afb060e98a5936b24c5446ff543fd627864102
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 4fc6cd4b28d35971e5e2da2559d258055adf9252
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68971988"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928752"
 ---
 # <a name="custom-message-encoder-compression-encoder"></a>自定义消息编码器：压缩编码器
 
-此示例演示如何使用 Windows Communication Foundation (WCF) 平台实现自定义编码器。
+此示例演示如何使用 Windows Communication Foundation （WCF）平台实现自定义编码器。
 
 > [!IMPORTANT]
 > 您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：
@@ -27,7 +27,7 @@ ms.locfileid: "68971988"
 该示例由一个客户端控制台程序 (.exe)、一个自承载的服务控制台程序 (.exe) 和一个压缩消息编码器库 (.dll) 组成。 该服务实现定义“请求-答复”通信模式的协定。 该协定由 `ISampleServer` 接口定义，而该接口将公开基本字符串回显操作（`Echo` 和 `BigEcho`）。 客户端向给定的操作发出同步请求，服务通过将该消息回送到客户端来进行回复。 客户端和服务活动显示在控制台窗口中。 提供该示例的目的在于演示如何编写自定义编码器并演示压缩消息对网络的影响。 可以为压缩消息编码器添加计算消息大小和/或处理时间的方法。
 
 > [!NOTE]
-> 在 .NET Framework 4 中, 如果服务器正在发送压缩响应 (使用 GZip 或 Deflate 等算法创建), 则会在 WCF 客户端上启用自动解压缩。 如果服务是 Internet 信息服务 (IIS) 中的 Web 承载服务，则可以为该服务配置 IIS 以发送压缩响应。 如果客户端和服务上都需要执行压缩和解压缩，或者如果该服务是自承载服务，则可以使用此示例。
+> 在 .NET Framework 4 中，如果服务器正在发送压缩响应（使用 GZip 或 Deflate 等算法创建），则会在 WCF 客户端上启用自动解压缩。 如果服务是 Internet 信息服务 (IIS) 中的 Web 承载服务，则可以为该服务配置 IIS 以发送压缩响应。 如果客户端和服务上都需要执行压缩和解压缩，或者如果该服务是自承载服务，则可以使用此示例。
 
 此示例演示如何生成自定义消息编码器并将其集成到 WCF 应用程序中。 库 GZipEncoder.dll 是同时用客户端和服务部署的。 该示例还演示对消息进行压缩所带来的影响。 GZipEncoder.dll 中的代码演示以下操作：
 
@@ -59,13 +59,13 @@ ms.locfileid: "68971988"
 
 5. 编码器层是作为类工厂实现的。 对于自定义编码器，只有编码器类工厂才是必须公开的。 在创建 <xref:System.ServiceModel.ServiceHost> 或 <xref:System.ServiceModel.ChannelFactory%601> 对象时，绑定元素会返回工厂对象。 消息编码器可以在缓冲模式或流模式下运行。 此示例对缓冲模式和流模式均进行了演示。
 
-在每个模式下，`ReadMessage` 抽象类都随附了 `WriteMessage` 和 `MessageEncoder` 方法。 大部分编码工作都在这些方法中进行。 此示例包装现有的文本和二进制消息编码器。 这允许该示例将对消息网络表示形式的读写操作委托给内部编码器，并允许压缩编码器对结果进行压缩或解压缩。 由于没有用于消息编码的管道, 这是在 WCF 中使用多个编码器的唯一模型。 在对消息进行解压缩之后，所得到的消息将立即向上传递到堆栈，供通道堆栈进行处理。 在压缩过程中，所得到的压缩消息都直接写入所提供的流中。
+在每个模式下，`ReadMessage` 抽象类都随附了 `WriteMessage` 和 `MessageEncoder` 方法。 大部分编码工作都在这些方法中进行。 此示例包装现有的文本和二进制消息编码器。 这允许该示例将对消息网络表示形式的读写操作委托给内部编码器，并允许压缩编码器对结果进行压缩或解压缩。 由于没有用于消息编码的管道，这是在 WCF 中使用多个编码器的唯一模型。 在对消息进行解压缩之后，所得到的消息将立即向上传递到堆栈，供通道堆栈进行处理。 在压缩过程中，所得到的压缩消息都直接写入所提供的流中。
 
 此示例使用帮助器方法（`CompressBuffer` 和 `DecompressBuffer`）执行从缓冲区到流的转换，以便使用 `GZipStream` 类。
 
 经过缓冲处理的 `ReadMessage` 和 `WriteMessage` 类使用 `BufferManager` 类。 编码器只能通过编码器工厂来访问。 `MessageEncoderFactory` 抽象类提供了一个名为 `Encoder` 的属性和一个名为 `CreateSessionEncoder` 的方法，前者用来访问当前的编码器，后者用来创建支持会话的编码器。 类似的编码器有序而可靠，可以用在通道支持会话的方案中。 对于写入网络中的数据，此方案允许在每个会话中进行优化。 如果这不是所需的，则基方法不应当重载。 `Encoder` 属性提供了一种访问无会话编码器的机制，该属性的值由 `CreateSessionEncoder` 方法的默认实现返回。 由于此示例通过包装现有的编码器来提供压缩，因此 `MessageEncoderFactory` 实现接受一个表示内部编码器工厂的 `MessageEncoderFactory`。
 
-定义编码器和编码器工厂后, 可以将其与 WCF 客户端和服务一起使用。 但是，必须将这些编码器添加到通道堆栈中。 您可以从 <xref:System.ServiceModel.ServiceHost> 和 <xref:System.ServiceModel.ChannelFactory%601> 类派生类，并重写 `OnInitialize` 方法以手动添加该编码器工厂。 还可以通过自定义绑定元素来公开编码器工厂。
+定义编码器和编码器工厂后，可以将其与 WCF 客户端和服务一起使用。 但是，必须将这些编码器添加到通道堆栈中。 您可以从 <xref:System.ServiceModel.ServiceHost> 和 <xref:System.ServiceModel.ChannelFactory%601> 类派生类，并重写 `OnInitialize` 方法以手动添加该编码器工厂。 还可以通过自定义绑定元素来公开编码器工厂。
 
 若要创建新的自定义绑定元素，请从 <xref:System.ServiceModel.Channels.BindingElement> 类派生一个类。 但是，存在多种类型的绑定元素。 为了确保自定义绑定元素被识别为消息编码绑定元素，还必须实现 <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>。 <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> 公开了一种用来新建消息编码器工厂的方法 (`CreateMessageEncoderFactory`)，实现该方法的目的在于返回匹配的消息编码器工厂的实例。 另外，<xref:System.ServiceModel.Channels.MessageEncodingBindingElement> 还有一个指示寻址版本的属性。 由于此示例包装现有的编码器，因此示例实现还会包装现有的编码器绑定元素、将内部编码器绑定元素作为构造函数的参数并通过一个属性来公开它。 下面的示例代码演示 `GZipMessageEncodingBindingElement` 类的实现。
 
@@ -224,7 +224,7 @@ binding.Namespace = "http://tempuri.org/bindings";
 
 尽管对于大多数用户方案该操作已足够，但是，如果某个服务是由 Web 承载的，则支持文件配置是至关重要的。 若要支持由 Web 承载的方案，必须开发一个自定义配置处理程序，以便允许在文件中配置自定义绑定元素。
 
-您可以在配置系统的顶部为绑定元素生成一个配置处理程序。 绑定元素的配置处理程序必须从 <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> 类派生。 <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.BindingElementType?displayProperty=nameWithType>通知配置系统要为此节创建的绑定元素的类型。 `BindingElement` 的所有可设置方面应当作为属性在 <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> 派生类中公开。 如果<xref:System.Configuration.ConfigurationPropertyAttribute>缺少属性, 则有助于将配置元素特性映射到属性和设置默认值。 在配置中的值加载并应用到属性之后，将调用 <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.CreateBindingElement%2A?displayProperty=nameWithType> 方法，该方法将属性转换成绑定元素的具体实例。 方法用于将<xref:System.ServiceModel.Configuration.BindingElementExtensionElement>派生类的属性转换为要在新创建的绑定元素上设置的值。 <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.ApplyConfiguration%2A?displayProperty=nameWithType>
+您可以在配置系统的顶部为绑定元素生成一个配置处理程序。 绑定元素的配置处理程序必须从 <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> 类派生。 <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.BindingElementType?displayProperty=nameWithType>通知配置系统要为此节创建的绑定元素的类型。 `BindingElement` 的所有可设置方面应当作为属性在 <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> 派生类中公开。 如果<xref:System.Configuration.ConfigurationPropertyAttribute>缺少属性，则有助于将配置元素特性映射到属性和设置默认值。 在配置中的值加载并应用到属性之后，将调用 <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.CreateBindingElement%2A?displayProperty=nameWithType> 方法，该方法将属性转换成绑定元素的具体实例。 方法用于将<xref:System.ServiceModel.Configuration.BindingElementExtensionElement>派生类的属性转换为要在新创建的绑定元素上设置的值。 <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.ApplyConfiguration%2A?displayProperty=nameWithType>
 
 下面的示例代码演示 `GZipMessageEncodingElement` 的实现。
 
@@ -295,7 +295,7 @@ public class GZipMessageEncodingElement : BindingElementExtensionElement
 <gzipMessageEncoding innerMessageEncoding="textMessageEncoding" />
 ```
 
-若要使用此配置处理程序, 必须在[ \<system.servicemodel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)元素中注册该处理程序, 如下面的示例配置中所示。
+若要使用此配置处理程序，必须在[ \<system.servicemodel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)元素中注册该处理程序，如下面的示例配置中所示。
 
 ```xml
 <extensions>
@@ -312,7 +312,7 @@ public class GZipMessageEncodingElement : BindingElementExtensionElement
 
 在运行服务器时，操作请求和响应将显示在控制台窗口中。 在该窗口中按 Enter 可以关闭服务器。
 
-```
+```console
 Press Enter key to Exit.
 
         Server Echo(string input) called:
@@ -324,7 +324,7 @@ Press Enter key to Exit.
 
 在运行客户端时，操作请求和响应将显示在控制台窗口中。 在客户端窗口中按 Enter 可以关闭客户端。
 
-```
+```console
 Calling Echo(string):
 Server responds: Simple hello Simple hello
 
@@ -336,15 +336,15 @@ Press <ENTER> to terminate client.
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例
 
-1. 使用以下命令安装 ASP.NET 4.0:
+1. 使用以下命令安装 ASP.NET 4.0：
 
-    ```
+    ```console
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable
     ```
 
 2. 确保已对[Windows Communication Foundation 示例执行了一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。
 
-3. 若要生成解决方案, 请按照[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。
+3. 若要生成解决方案，请按照[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。
 
 4. 若要以单机配置或跨计算机配置来运行示例, 请按照[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的说明进行操作。
 

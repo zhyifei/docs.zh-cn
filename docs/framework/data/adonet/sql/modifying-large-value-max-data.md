@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8aca5f00-d80e-4320-81b3-016d0466f7ee
-ms.openlocfilehash: 34f0a61329667a42aa42693e93169a5b6fb0aa5e
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 0f029c81dd6ba5cd5202e6e59f33edd7cf8c0b90
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70792036"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894444"
 ---
 # <a name="modifying-large-value-max-data-in-adonet"></a>在 ADO.NET 中修改大值 (max) 数据
 大型对象 (LOB) 数据类型是那些超过 8 千字节 (KB) 最大行大小的数据类型。 SQL Server 为 `max`、`varchar` 和 `nvarchar` 数据类型提供了 `varbinary` 说明符以允许存储最大为 2^32 字节的值。 表列和 Transact-SQL 变量可以指定 `varchar(max)`、`nvarchar(max)` 或 `varbinary(max)` 数据类型。 在 ADO.NET 中，`max` 数据类型可通过 `DataReader` 来提取，并可指定为输入和输出参数值而无需任何特殊处理。 对于大型 `varchar` 数据类型，可以增量检索和更新数据。  
@@ -41,7 +41,7 @@ ms.locfileid: "70792036"
   
  下面的示例将一幅照片插入 AdventureWorks 示例数据库的 ProductPhoto 表中。 使用`BULK OPENROWSET`提供程序时，即使不将值插入每个列中，也必须提供列的命名列表。 在本例中，主键定义为标识列，并可从列的列表中省略。 请注意，您还必须在 `OPENROWSET` 语句的末尾提供一个相关名称，在本例中该名称是 ThumbnailPhoto。 该名称与文件要加载到的 `ProductPhoto` 表中的列关联。  
   
-```  
+```sql  
 INSERT Production.ProductPhoto (  
     ThumbnailPhoto,   
     ThumbnailPhotoFilePath,   
@@ -78,7 +78,7 @@ FROM OPENROWSET
 ## <a name="example"></a>示例  
  此 Transact-SQL 示例更新 DocumentSummary（AdventureWorks 数据库的 Document 表中的 `nvarchar(max)` 列）中的部分值。 通过指定替换单词、现有数据中要替换的单词的开始位置（偏移量）以及要替换的字符数（长度），单词“components”将被替换为“features”。 该示例在 UPDATE 语句之前和之后都包含 SELECT 语句以便比较结果。  
   
-```  
+```sql
 USE AdventureWorks;  
 GO  
 --View the existing value.  
@@ -230,7 +230,7 @@ while (reader.Read())
 ## <a name="using-large-value-type-parameters"></a>使用大值类型参数  
  在 <xref:System.Data.SqlClient.SqlParameter> 对象中使用大型值类型的方法与在 <xref:System.Data.SqlClient.SqlParameter> 对象中使用较小值类型的方法相同。 可以将大值类型作为<xref:System.Data.SqlClient.SqlParameter>值进行检索，如下面的示例中所示。 代码假定在 AdventureWorks 示例数据库中存在以下 GetDocumentSummary 存储过程。 该存储过程采用一个名为@DocumentID的输入参数，并返回@DocumentSummary output 参数中 DocumentSummary 列的内容。  
   
-```  
+```sql
 CREATE PROCEDURE GetDocumentSummary   
 (  
     @DocumentID int,  

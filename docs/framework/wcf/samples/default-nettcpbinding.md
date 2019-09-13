@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Net profile TCP
 ms.assetid: e8475fe6-0ecd-407a-8e7e-45860561bb74
-ms.openlocfilehash: e45899ddbb4c244e43d3b097cc046acf34fd433e
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: f2dee85f3d84d840b33d81277419ab22e88e8556
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045582"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928595"
 ---
 # <a name="default-nettcpbinding"></a>默认 NetTcpBinding
 本示例演示 <xref:System.ServiceModel.NetTcpBinding> 绑定的用法。 此示例基于实现计算器服务的[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)。 在本示例中，服务是自承载服务。 客户端和服务都是控制台应用程序。  
@@ -26,7 +26,7 @@ ms.locfileid: "70045582"
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\TCP\Default`  
   
- 绑定是在客户端和服务的配置文件中指定的。 绑定类型在[ \<终结点 >](../../configure-apps/file-schema/wcf/endpoint-element.md)元素`binding`的属性中指定, 如下面的示例配置中所示。  
+ 绑定是在客户端和服务的配置文件中指定的。 绑定类型在[ \<终结点 >](../../configure-apps/file-schema/wcf/endpoint-element.md)元素`binding`的属性中指定，如下面的示例配置中所示。  
   
 ```xml  
 <endpoint address=""  
@@ -83,7 +83,7 @@ ms.locfileid: "70045582"
   
  运行示例时，操作请求和响应将显示在客户端控制台窗口中。 在客户端窗口中按 Enter 可以关闭客户端。  
   
-```  
+```console  
 Add(100,15.99) = 115.99  
 Subtract(145,76.54) = 68.46  
 Multiply(9,81.25) = 731.25  
@@ -96,7 +96,7 @@ Press ENTER to terminate client.
   
 1. 使用以下命令安装 ASP.NET 4.0。  
   
-    ```  
+    ```console  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   

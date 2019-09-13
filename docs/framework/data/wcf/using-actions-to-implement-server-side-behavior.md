@@ -2,12 +2,12 @@
 title: 使用操作来实现服务器端行为
 ms.date: 03/30/2017
 ms.assetid: 11a372db-7168-498b-80d2-9419ff557ba5
-ms.openlocfilehash: bdfa8e37904395b402874b743ca4069cae75c504
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 5c71cfe8965cf8edbe07ff7ae4c6be95b437bf80
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70779690"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894265"
 ---
 # <a name="using-actions-to-implement-server-side-behavior"></a>使用操作来实现服务器端行为
 
@@ -57,7 +57,7 @@ OData 操作提供了用于实现这样一种行为方法，即该行为将作�
   
  Movies(1) 指定您要评级的电影，而 Rate 指定 Rate（评级）动作。 评级的实际值将位于 HTTP 请求的正文中，如以下示例所示：  
   
-```  
+```http
 POST http://MovieServer/MoviesService.svc/Movies(1)/Rate HTTP/1.1   
 Content-Type: application/json   
 Content-Length: 20   

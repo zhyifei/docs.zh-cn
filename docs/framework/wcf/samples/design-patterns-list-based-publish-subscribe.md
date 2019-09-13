@@ -2,15 +2,15 @@
 title: 设计模式：基于列表的发布-订阅
 ms.date: 03/30/2017
 ms.assetid: f4257abc-12df-4736-a03b-0731becf0fd4
-ms.openlocfilehash: 3dbdab152e05487f9dcc9fa00ed0c653d68ab65e
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 3c05e66affad8e517b0b1b5001f726abeae7b100
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045577"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928842"
 ---
 # <a name="design-patterns-list-based-publish-subscribe"></a>设计模式：基于列表的发布-订阅
-此示例演示了作为 Windows Communication Foundation (WCF) 程序实现的基于列表的发布-订阅模式。  
+此示例演示了作为 Windows Communication Foundation （WCF）程序实现的基于列表的发布-订阅模式。  
   
 > [!NOTE]
 > 本主题的最后介绍了此示例的设置过程和生成说明。  
@@ -23,7 +23,7 @@ ms.locfileid: "70045577"
   
  服务使用双工通信。 `ISampleContract` 服务协定与 `ISampleClientCallback` 回调协定成对出现。 服务实现 Subscribe 和 Unsubscribe 服务操作，客户端使用这些操作加入或离开订户列表。 服务还实现 `PublishPriceChange` 服务操作，数据源程序调用该操作来向服务提供新信息。 客户端程序实现 `PriceChange` 服务操作，服务调用该操作向所有订户通知价格更改。  
   
-```  
+```csharp  
 // Create a service contract and define the service operations.  
 // NOTE: The service operations must be declared explicitly.  
 [ServiceContract(SessionMode=SessionMode.Required,  
@@ -48,7 +48,7 @@ public interface ISampleClientContract
   
  服务使用 .NET Framework 事件作为向所有订户通知新信息的机制。 如果客户端通过调用 Subscribe 加入服务，服务将提供一个事件处理程序。 如果客户端离开，服务将取消其事件处理程序对事件的订阅。 当数据源调用服务以报告价格变化时，服务将引发事件。 这将调用服务的每个实例（订阅服务的每个客户端一个实例），并导致其事件处理程序执行。 每个事件处理程序都通过其回调函数向其客户端传递信息。  
   
-```  
+```csharp  
 public class PriceChangeEventArgs : EventArgs  
     {  
         public string Item;  
@@ -118,13 +118,13 @@ public class PriceChangeEventArgs : EventArgs
   
 ### <a name="to-run-the-sample-on-the-same-machine"></a>在同一计算机上运行示例  
   
-1. 通过输入以下地址来测试是否可以使用浏览器访问服务: `http://localhost/servicemodelsamples/service.svc`。 在响应中应显示确认页。  
+1. 通过输入以下地址来测试是否可以使用浏览器访问服务： `http://localhost/servicemodelsamples/service.svc`。 在响应中应显示确认页。  
   
 2. 从 \client\bin\\的特定于语言的文件夹中运行客户端。 客户端活动将显示在客户端控制台窗口上。 启动多个客户端。  
   
 3. 从 \datasource\bin\\的特定于语言的文件夹中运行 Datasource。 数据源活动将显示在控制台窗口中。 数据源向服务发送信息后，信息应传递到每个客户端。  
   
-4. 如果客户端、数据源和服务程序无法通信, 请参阅[WCF 示例的故障排除提示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
+4. 如果客户端、数据源和服务程序无法通信，请参阅[WCF 示例的故障排除提示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
   
 ### <a name="to-run-the-sample-across-machines"></a>跨计算机运行示例  
   

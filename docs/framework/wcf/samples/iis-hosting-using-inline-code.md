@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Web hosted service
 - IIS Hosting Using Inline Code Sample [Windows Communication Foundation]
 ms.assetid: 56fe3687-a34b-4661-8e30-b33770f413fa
-ms.openlocfilehash: a96e00adbe12365220a58d93edf9dc965825d07e
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: 7713c8ca690570ee80721329a7857e6111c93e2f
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67487586"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70893211"
 ---
 # <a name="iis-hosting-using-inline-code"></a>使用内联代码的 IIS 承载
 
@@ -24,7 +24,7 @@ ms.locfileid: "67487586"
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> 如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：
+> 如果此目录不存在, 请参阅[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)以下载所有 Windows Communication Foundation (wcf) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\WebHost\InlineCode`
 
@@ -48,9 +48,7 @@ ms.locfileid: "67487586"
 
 服务实现计算并返回相应的结果。
 
-```svc
-<%@ServiceHost language=c# Debug="true" Service="Microsoft.ServiceModel.Samples.CalculatorService" %>
-```
+`<%@ServiceHost language=c# Debug="true" Service="Microsoft.ServiceModel.Samples.CalculatorService" %>`
 
 ```csharp
 // Service class that implements the service contract.
@@ -88,14 +86,14 @@ Press <ENTER> to terminate client.
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例
 
-1. 请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。
+1. 确保已对[Windows Communication Foundation 示例执行了一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。
 
 2. 若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。
 
-3. 解决方案生成后，运行 setup.bat 以设置 ServiceModelSamples 应用程序在 IIS 7.0 中。 现在，ServiceModelSamples 目录应显示为 IIS 7.0 应用程序。
+3. 构建解决方案后，请运行 ServiceModelSamples 以在 IIS 7.0 中设置该应用程序。 现在，ServiceModelSamples 目录应显示为 IIS 7.0 应用程序。
 
-4. 若要在单或跨计算机配置中运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。 有关如何创建可调用此服务的客户端应用程序的示例，请参阅[如何：创建客户端](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md)。
+4. 若要以单机配置或跨计算机配置来运行示例，请按照[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的说明进行操作。 有关如何创建可调用此服务的客户端应用程序的示例，请参阅[如何：创建客户端](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md)。
 
 ## <a name="see-also"></a>请参阅
 
-- [AppFabric 承载和持久性示例](https://go.microsoft.com/fwlink/?LinkId=193961)
+- [AppFabric 宿主和持久性示例](https://go.microsoft.com/fwlink/?LinkId=193961)
