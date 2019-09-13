@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a6bc6c52374ea047d2e76d346ee8bbc3faaa7bb2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a54d3cb1bb9abf740c2c9b5a9a8312a9612ae658
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61650695"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894453"
 ---
-# <a name="isymunmanagedwriter2defineglobalvariable2-method"></a><span data-ttu-id="beb65-102">ISymUnmanagedWriter2::DefineGlobalVariable2 方法</span><span class="sxs-lookup"><span data-stu-id="beb65-102">ISymUnmanagedWriter2::DefineGlobalVariable2 Method</span></span>
-<span data-ttu-id="beb65-103">定义单个全局变量。</span><span class="sxs-lookup"><span data-stu-id="beb65-103">Defines a single global variable.</span></span>  
+# <a name="isymunmanagedwriter2defineglobalvariable2-method"></a><span data-ttu-id="d63d0-102">ISymUnmanagedWriter2::DefineGlobalVariable2 方法</span><span class="sxs-lookup"><span data-stu-id="d63d0-102">ISymUnmanagedWriter2::DefineGlobalVariable2 Method</span></span>
+<span data-ttu-id="d63d0-103">定义一个全局变量。</span><span class="sxs-lookup"><span data-stu-id="d63d0-103">Defines a single global variable.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="beb65-104">语法</span><span class="sxs-lookup"><span data-stu-id="beb65-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d63d0-104">语法</span><span class="sxs-lookup"><span data-stu-id="d63d0-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT DefineGlobalVariable2(  
     [in] const WCHAR  *name,  
     [in] ULONG32      attributes,  
@@ -40,35 +40,35 @@ HRESULT DefineGlobalVariable2(
     [in] ULONG32      addr3);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="beb65-105">参数</span><span class="sxs-lookup"><span data-stu-id="beb65-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d63d0-105">参数</span><span class="sxs-lookup"><span data-stu-id="d63d0-105">Parameters</span></span>  
  `name`  
- <span data-ttu-id="beb65-106">[in]全局变量名称。</span><span class="sxs-lookup"><span data-stu-id="beb65-106">[in] The global variable name.</span></span>  
+ <span data-ttu-id="d63d0-106">中全局变量名称。</span><span class="sxs-lookup"><span data-stu-id="d63d0-106">[in] The global variable name.</span></span>  
   
  `attributes`  
- <span data-ttu-id="beb65-107">[in]全局变量特性。</span><span class="sxs-lookup"><span data-stu-id="beb65-107">[in] The global variable attributes.</span></span>  
+ <span data-ttu-id="d63d0-107">中全局变量特性。</span><span class="sxs-lookup"><span data-stu-id="d63d0-107">[in] The global variable attributes.</span></span>  
   
  `sigToken`  
- <span data-ttu-id="beb65-108">[in]签名的元数据标记。</span><span class="sxs-lookup"><span data-stu-id="beb65-108">[in] The metadata token of the signature.</span></span>  
+ <span data-ttu-id="d63d0-108">中签名的元数据标记。</span><span class="sxs-lookup"><span data-stu-id="d63d0-108">[in] The metadata token of the signature.</span></span>  
   
  `addrKind`  
- <span data-ttu-id="beb65-109">[in]地址类型。</span><span class="sxs-lookup"><span data-stu-id="beb65-109">[in] The address type.</span></span>  
+ <span data-ttu-id="d63d0-109">中地址类型。</span><span class="sxs-lookup"><span data-stu-id="d63d0-109">[in] The address type.</span></span>  
   
  `addr1`  
- <span data-ttu-id="beb65-110">[in]参数规格的第一个地址。</span><span class="sxs-lookup"><span data-stu-id="beb65-110">[in] The first address for the parameter specification.</span></span>  
+ <span data-ttu-id="d63d0-110">中参数规范的第一个地址。</span><span class="sxs-lookup"><span data-stu-id="d63d0-110">[in] The first address for the parameter specification.</span></span>  
   
  `addr2`  
- <span data-ttu-id="beb65-111">[in]参数规格的第二个地址。</span><span class="sxs-lookup"><span data-stu-id="beb65-111">[in] The second address for the parameter specification.</span></span>  
+ <span data-ttu-id="d63d0-111">中参数规范的第二个地址。</span><span class="sxs-lookup"><span data-stu-id="d63d0-111">[in] The second address for the parameter specification.</span></span>  
   
  `addr3`  
- <span data-ttu-id="beb65-112">[in]参数规格的第三个地址。</span><span class="sxs-lookup"><span data-stu-id="beb65-112">[in] The third address for the parameter specification.</span></span>  
+ <span data-ttu-id="d63d0-112">中参数规范的第三个地址。</span><span class="sxs-lookup"><span data-stu-id="d63d0-112">[in] The third address for the parameter specification.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="beb65-113">返回值</span><span class="sxs-lookup"><span data-stu-id="beb65-113">Return Value</span></span>  
- <span data-ttu-id="beb65-114">如果方法成功，则为 S_OK否则为 E_FAIL 或某些其他错误代码。</span><span class="sxs-lookup"><span data-stu-id="beb65-114">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="d63d0-113">返回值</span><span class="sxs-lookup"><span data-stu-id="d63d0-113">Return Value</span></span>  
+ <span data-ttu-id="d63d0-114">如果该方法成功，则返回 S_OK;否则，E_FAIL 或其他一些错误代码。</span><span class="sxs-lookup"><span data-stu-id="d63d0-114">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="beb65-115">要求</span><span class="sxs-lookup"><span data-stu-id="beb65-115">Requirements</span></span>  
- <span data-ttu-id="beb65-116">**标头：** CorSym.idl</span><span class="sxs-lookup"><span data-stu-id="beb65-116">**Header:** CorSym.idl</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d63d0-115">要求</span><span class="sxs-lookup"><span data-stu-id="d63d0-115">Requirements</span></span>  
+ <span data-ttu-id="d63d0-116">**标头：** CorSym.idl</span><span class="sxs-lookup"><span data-stu-id="d63d0-116">**Header:** CorSym.idl</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="beb65-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="beb65-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d63d0-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="d63d0-117">See also</span></span>
 
-- [<span data-ttu-id="beb65-118">ISymUnmanagedWriter2 接口</span><span class="sxs-lookup"><span data-stu-id="beb65-118">ISymUnmanagedWriter2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-interface.md)
-- [<span data-ttu-id="beb65-119">DefineGlobalVariable 方法</span><span class="sxs-lookup"><span data-stu-id="beb65-119">DefineGlobalVariable Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-defineglobalvariable-method.md)
+- [<span data-ttu-id="d63d0-118">ISymUnmanagedWriter2 接口</span><span class="sxs-lookup"><span data-stu-id="d63d0-118">ISymUnmanagedWriter2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-interface.md)
+- [<span data-ttu-id="d63d0-119">DefineGlobalVariable 方法</span><span class="sxs-lookup"><span data-stu-id="d63d0-119">DefineGlobalVariable Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-defineglobalvariable-method.md)
