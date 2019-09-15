@@ -5,31 +5,31 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b044b1c9-c1e5-4c9f-84d8-0f02f4537f8b
-ms.openlocfilehash: e9ff82d58f08d8c040984b37422a7048b9d4361d
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: ad1fb7d289dea3396b4edb4d3b3e9fb7fb1891e3
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878637"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972422"
 ---
 # <a name="how-to-host-a-wcf-service-in-iis"></a>如何：在 IIS 中承载 WCF 服务
-本主题概述了创建 Internet 信息服务 (IIS) 中的托管的 Windows Communication Foundation (WCF) 服务所需的基本步骤。 本主题假设您熟悉 IIS 且了解如何使用 IIS 管理工具创建和管理 IIS 应用程序。 有关 IIS 的详细信息请参阅[Internet Information Services](https://go.microsoft.com/fwlink/?LinkId=132449)。 WCF 服务，运行在 IIS 环境中的充分利用 IIS 功能，如进程回收、 空闲关闭、 进程运行状况监视和基于消息的激活。 此宿主选项要求正确配置 IIS，但不需要编写任何承载代码作为应用程序的一部分。 只可以将 IIS 宿主与 HTTP 传输协议一起使用。  
+本主题概述了创建在 Internet Information Services （IIS）中承载的 Windows Communication Foundation （WCF）服务所需的基本步骤。 本主题假设您熟悉 IIS 且了解如何使用 IIS 管理工具创建和管理 IIS 应用程序。 有关 IIS 的详细信息，请参阅[Internet Information Services](https://go.microsoft.com/fwlink/?LinkId=132449)。 在 IIS 环境中运行的 WCF 服务充分利用 IIS 功能，如进程回收、空闲关闭、进程运行状况监视和基于消息的激活。 此宿主选项要求正确配置 IIS，但不需要编写任何承载代码作为应用程序的一部分。 只可以将 IIS 宿主与 HTTP 传输协议一起使用。  
   
- 有关 WCF 和 ASP.NET 的交互方式的详细信息，请参阅[WCF 服务和 ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)。 有关配置安全性的详细信息，请参阅[安全](../../../../docs/framework/wcf/feature-details/security.md)。  
+ 有关 WCF 和 ASP.NET 如何交互的详细信息，请参阅[Wcf 服务和 ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)。 有关配置安全的详细信息，请参阅[安全性](../../../../docs/framework/wcf/feature-details/security.md)。  
   
- 此示例中的源副本，请参阅[IIS 承载使用内联代码](../../../../docs/framework/wcf/samples/iis-hosting-using-inline-code.md)。  
+ 有关此示例的源副本，请参阅[使用内联代码的 IIS 承载](../../../../docs/framework/wcf/samples/iis-hosting-using-inline-code.md)。  
   
 ### <a name="to-create-a-service-hosted-by-iis"></a>创建由 IIS 承载的服务  
   
-1. 确认 IIS 已经安装并在计算机上运行。 有关安装和配置 IIS 的详细信息请参阅[安装和配置 IIS 7.0](https://go.microsoft.com/fwlink/?LinkID=132128)  
+1. 确认 IIS 已经安装并在计算机上运行。 有关安装和配置 IIS 的详细信息，请参阅[安装和配置 iis 7.0](https://go.microsoft.com/fwlink/?LinkID=132128)  
   
-2. 创建称为"IISHostedCalcService"应用程序文件的新文件夹、 确保 ASP.NET 有权访问的文件夹的内容和使用 IIS 管理工具来创建新的 IIS 应用程序以物理方式位于此应用程序目录中。 当为应用程序目录创建别名时，请使用“IISHostedCalc”。  
+2. 为应用程序文件创建一个名为 "IISHostedCalcService" 的新文件夹，确保 ASP.NET 有权访问该文件夹的内容，并使用 IIS 管理工具创建一个物理上位于此应用程序目录中的新 IIS 应用程序。 当为应用程序目录创建别名时，请使用“IISHostedCalc”。  
   
-3. 在应用程序目录中创建一个名为“service.svc”的新文件。 编辑此文件添加以下@ServiceHost元素。  
+3. 在应用程序目录中创建一个名为“service.svc”的新文件。 通过添加以下@ServiceHost元素编辑此文件。  
   
-    ```  
-    <%@ServiceHost language=c# Debug="true" Service="Microsoft.ServiceModel.Samples.CalculatorService"%>  
-    ```  
+   ```
+   <%@ServiceHost language=c# Debug="true" Service="Microsoft.ServiceModel.Samples.CalculatorService"%>
+   ```  
   
 4. 在应用程序目录中创建 App_Code 子目录。  
   
@@ -60,11 +60,11 @@ ms.locfileid: "65878637"
      [!code-csharp[c_HowTo_HostInIIS#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostiniis/cs/source.cs#12)]
      [!code-vb[c_HowTo_HostInIIS#12](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_hostiniis/vb/source.vb#12)]  
   
-10. 在应用程序目录中创建一个名为“Web.config”的文件，并将下面的配置代码添加到该文件中。 在运行时，WCF 基础结构使用的信息来构造客户端应用程序可以与进行通信的终结点。  
+10. 在应用程序目录中创建一个名为“Web.config”的文件，并将下面的配置代码添加到该文件中。 在运行时，WCF 基础结构使用这些信息来构造客户端应用程序可与其通信的终结点。  
   
      [!code-xml[c_HowTo_HostInIIS#100](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostiniis/common/web.config#100)]      
   
-     此示例显式指定配置文件中的终结点。 如果您不希望向服务添加任何终结点，则运行时为您添加默认终结点。 有关默认终结点、 绑定和行为，请参阅详细信息[Simplified Configuration](../../../../docs/framework/wcf/simplified-configuration.md)并[WCF 服务的简化配置](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)。  
+     此示例显式指定配置文件中的终结点。 如果您不希望向服务添加任何终结点，则运行时为您添加默认终结点。 有关默认终结点、绑定和行为的详细信息，请参阅适用[于 WCF 服务的](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)[简化配置](../../../../docs/framework/wcf/simplified-configuration.md)和简化配置。  
   
 11. 为了确保正确承载该服务，请打开 Internet Explorer 的实例，导航到该服务的 URL：`http://localhost/IISHostedCalc/Service.svc`  
   

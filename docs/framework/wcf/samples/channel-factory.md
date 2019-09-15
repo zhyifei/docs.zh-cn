@@ -2,12 +2,12 @@
 title: 通道工厂
 ms.date: 03/30/2017
 ms.assetid: 09b53aa1-b13c-476c-a461-e82fcacd2a8b
-ms.openlocfilehash: cd56c47223f0c98e48bd92376c9bbe9db6d2202e
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 9b754531059e367a8102a96cfb50b6147da84978
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045731"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70990096"
 ---
 # <a name="channel-factory"></a>通道工厂
 
@@ -16,7 +16,7 @@ ms.locfileid: "70045731"
 > [!NOTE]
 > 本主题的最后介绍了此示例的设置过程和生成说明。
 
-此示例使用 <xref:System.ServiceModel.ChannelFactory%601> 类来创建到服务终结点的通道。 通常, 若要创建到服务终结点的通道, 可以使用 "Svcutil.exe"[元数据实用工具 ()](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)生成客户端类型, 并创建生成的类型的实例。 还可以通过使用 <xref:System.ServiceModel.ChannelFactory%601> 类创建通道，如该示例所示。 下面的示例代码创建的服务与[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)中的服务相同。
+此示例使用 <xref:System.ServiceModel.ChannelFactory%601> 类来创建到服务终结点的通道。 通常，若要创建到服务终结点的通道，可以使用 "Svcutil.exe"[元数据实用工具（）](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)生成客户端类型，并创建生成的类型的实例。 还可以通过使用 <xref:System.ServiceModel.ChannelFactory%601> 类创建通道，如该示例所示。 下面的示例代码创建的服务与[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)中的服务相同。
 
 ```csharp
 EndpointAddress address = new EndpointAddress("http://localhost/servicemodelsamples/service.svc");
@@ -48,7 +48,7 @@ Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result);
 
 运行示例时，操作请求和响应将显示在客户端控制台窗口中。 在客户端窗口中按 Enter 可以关闭客户端应用程序。
 
-```
+```console
 Add(100,15.99) = 115.99
 Subtract(145,76.54) = 68.46
 Multiply(9,81.25) = 731.25

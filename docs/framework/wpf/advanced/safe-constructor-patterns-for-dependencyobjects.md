@@ -6,12 +6,12 @@ helpviewer_keywords:
 - dependency objects [WPF], constructor patterns
 - FXCop tool [WPF]
 ms.assetid: f704b81c-449a-47a4-ace1-9332e3cc6d60
-ms.openlocfilehash: 9dffe06d340c7256ba8af687e30d90d51746ebe1
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: fce17979fbd43df0496f972cac525fd79dcbfe32
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364245"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991823"
 ---
 # <a name="safe-constructor-patterns-for-dependencyobjects"></a>DependencyObject 的安全构造函数模式
 通常，类构造函数不应调用诸如虚拟方法或委托等回叫，其原因是构造函数可作为派生类的构造函数的基本初始化进行调用。 输入该虚拟的操作可能会在任何给定对象的不完全初始化状态下进行。 但是，属性系统本身在内部调用并公开回叫，作为依赖属性系统的一部分。 简单的操作是使用 call 设置依赖属性值, <xref:System.Windows.DependencyObject.SetValue%2A>这可能会在确定的某个位置包含回调。 因此，在构造函数体内设置依赖属性值时应保持谨慎（将类型用作基类可能会导致问题）。 有一种用于实现<xref:System.Windows.DependencyObject>构造函数的特定模式, 该模式可避免依赖属性状态和内在回调的特定问题, 此处对此进行了介绍。  
@@ -35,7 +35,7 @@ ms.locfileid: "68364245"
   
  以下代码示例（和后面的示例）是一个与此规则冲突的伪 C# 示例，其中对问题进行了说明：  
   
-```  
+```csharp  
 public class MyClass : DependencyObject  
 {  
     public MyClass() {}  
@@ -71,7 +71,7 @@ public class MyClass : DependencyObject
 #### <a name="parameterless-constructors-calling-base-initialization"></a>调用基初始化的无参数构造函数  
  实现以下用于调用基本默认值的构造函数：  
   
-```  
+```csharp  
 public MyClass : SomeBaseClass {  
     public MyClass() : base() {  
         // ALL class initialization, including initial defaults for   
@@ -83,7 +83,7 @@ public MyClass : SomeBaseClass {
 #### <a name="non-default-convenience-constructors-not-matching-any-base-signatures"></a>非默认（方便）构造函数，不与任何基本签名匹配  
  如果这些构造函数使用参数设置初始化中的依赖项属性, 请首先调用自己的类参数构造函数进行初始化, 然后使用参数设置依赖属性。 这些可能是类所定义的依赖属性，也可能是从基类继承的依赖属性，但在这两种情况下都使用以下模式：  
   
-```  
+```csharp  
 public MyClass : SomeBaseClass {  
     public MyClass(object toSetProperty1) : this() {  
         // Class initialization NOT done by default.  

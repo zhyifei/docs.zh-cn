@@ -7,19 +7,19 @@ helpviewer_keywords:
 - WCF [WCF], request-reply services
 - request-reply contracts [WCF]
 ms.assetid: 2fa710f1-47f4-4598-b063-3ab3bd22ebba
-ms.openlocfilehash: 1ff11b1cae4ec8f6fe886a55cb0add27831048d0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f58da6f1cdaad1b976659ee2e9febe12cc07726f
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61991115"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991141"
 ---
 # <a name="request-reply-services"></a>请求-答复服务
-请求-答复服务是 Windows Communication Foundation (WCF) 中的操作协定的默认类型。 客户端调用服务操作并等待服务的响应。 你可以同步执行对服务操作的调用（客户端接收到服务的响应或调用超时前客户端将保持阻止状态），也可以异步执行对服务操作的调用（客户端调用服务操作，继续工作，并在其他线程上接收服务的响应）。  
+请求-答复服务是 Windows Communication Foundation （WCF）中的默认操作协定类型。 客户端调用服务操作并等待服务的响应。 你可以同步执行对服务操作的调用（客户端接收到服务的响应或调用超时前客户端将保持阻止状态），也可以异步执行对服务操作的调用（客户端调用服务操作，继续工作，并在其他线程上接收服务的响应）。  
   
  若要创建请求-答复服务协定，请定义服务协定，然后对每个操作应用 <xref:System.ServiceModel.OperationContractAttribute> 类，如下面的示例代码所示。  
   
-```  
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface IRequestReplyCalculator  
 {  

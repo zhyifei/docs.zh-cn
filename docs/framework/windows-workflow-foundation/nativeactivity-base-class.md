@@ -2,12 +2,12 @@
 title: NativeActivity 基类
 ms.date: 03/30/2017
 ms.assetid: 254a4c50-425b-426d-a32f-0f7234925bac
-ms.openlocfilehash: d746bb92dab79e7e68075ad003c420e7e37ed683
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 604535e39937a75c6d268cf1abbc90dbcd506a16
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65637472"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989554"
 ---
 # <a name="nativeactivity-base-class"></a>NativeActivity 基类
 
@@ -34,13 +34,13 @@ ms.locfileid: "65637472"
 
 ### <a name="to-create-a-custom-activity-that-inherits-from-nativeactivity"></a>创建从 NativeActivity 继承的自定义活动
 
-1. OpenVisual Studio 2010.
+1. OpenVisual Studio 2010。
 
-2. 选择**文件**，**新**，然后**项目**。 选择**Workflow 4.0**下**Visual C#** 中**项目类型**窗口中，然后选择**v2010**节点。 选择**活动库**中**模板**窗口。 将新项目命名为 HelloActivity。
+2. 依次选择 "**文件**"、"**新建**" 和 "**项目**"。 选择 "**项目类型**" 窗口中 "**视觉对象C#**  " 下的 "**工作流 4.0** "，然后选择 " **v2010** " 节点。 在 "**模板**" 窗口中选择 "**活动库**"。 将新项目命名为 HelloActivity。
 
-3. 右击 HelloActivity 项目中的 Activity1.xaml，然后选择**删除**。
+3. 右键单击击 helloactivity 项目中的 Activity1，然后选择 "**删除**"。
 
-4. 右击 HelloActivity 项目并选择**外**，然后**类**。 将新类命名为 HelloActivity.cs。
+4. 右键单击 "击 helloactivity" 项目，然后依次选择 "**添加**"、"**类**"。 将新类命名为 HelloActivity.cs。
 
 5. 在 HelloActivity.cs 文件中，添加以下 `using` 指令。
 
@@ -68,7 +68,7 @@ ms.locfileid: "65637472"
 
 9. 使用 <xref:System.Activities.NativeActivityContext> 对象来计划书签。 有关如何创建、计划和恢复书签的详细信息，请参见 <xref:System.Activities.WorkflowApplicationIdleEventArgs.Bookmarks%2A>。
 
-    ```
+    ```csharp
     protected override void Execute(NativeActivityContext context)
         {
             // Create a Bookmark and wait for it to be resumed.

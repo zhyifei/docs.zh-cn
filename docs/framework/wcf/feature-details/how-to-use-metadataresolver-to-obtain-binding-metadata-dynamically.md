@@ -2,12 +2,12 @@
 title: 如何：使用 MetadataResolver 动态获取绑定元数据
 ms.date: 03/30/2017
 ms.assetid: 56ffcb99-fff0-4479-aca0-e3909009f605
-ms.openlocfilehash: 3fe09699304de42ed00312f50f3b9e0edb20615d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dfa36c81bbeb70c1dd981ff91b4efb6d7c423a5c
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62047550"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991624"
 ---
 # <a name="how-to-use-metadataresolver-to-obtain-binding-metadata-dynamically"></a>如何：使用 MetadataResolver 动态获取绑定元数据
 本主题演示如何使用 <xref:System.ServiceModel.Description.MetadataResolver> 类来动态获取绑定元数据。  
@@ -16,20 +16,20 @@ ms.locfileid: "62047550"
   
 1. 使用元数据终结点的地址创建一个 <xref:System.ServiceModel.EndpointAddress> 对象。  
   
-    ```  
+    ```csharp
     EndpointAddress metaAddress  
-      = new EndpointAddress(new   Uri("http://localhost:8080/SampleService/mex"));  
+      = new EndpointAddress(new Uri("http://localhost:8080/SampleService/mex"));  
     ```  
   
 2. 调用 <xref:System.ServiceModel.Description.MetadataResolver.Resolve%28System.Type%2CSystem.ServiceModel.EndpointAddress%29>，它传入服务类型和元数据终结点地址。 这将返回实现了指定协定的终结点的集合。 仅从元数据导入绑定信息；不导入协定信息。 改用所提供的协定。  
   
-    ```  
+    ```csharp  
     ServiceEndpointCollection endpoints = MetadataResolver.Resolve(typeof(SampleServiceClient),metaAddress);  
     ```  
   
 3. 然后，可以遍历该服务终结点集合，以提取所需的绑定信息。 下面的代码遍历终结点，创建一个服务客户端对象（该对象传入与当前终结点关联的绑定和地址），然后调用该服务上的一个方法。  
   
-    ```  
+    ```csharp  
     foreach (ServiceEndpoint point in endpoints)  
     {  
        if (point != null)  

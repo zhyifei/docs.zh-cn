@@ -2,12 +2,12 @@
 title: 松散类型化扩展示例
 ms.date: 03/30/2017
 ms.assetid: 56ce265b-8163-4b85-98e7-7692a12c4357
-ms.openlocfilehash: 21690aebca250880a8eb51aee0821220a00bc0c0
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 6cfdef1d083a25999f62c23667c9c6ea00326dca
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039470"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989790"
 ---
 # <a name="loosely-typed-extensions-sample"></a>松散类型化扩展示例
 联合对象模型为处理扩展数据（在联合源的 XML 表示形式中存在，但是未由 <xref:System.ServiceModel.Syndication.SyndicationFeed> 和 <xref:System.ServiceModel.Syndication.SyndicationItem> 等类显式公开的信息）提供了丰富的支持。 此示例阐释用来处理扩展数据的基本技术。  
@@ -67,7 +67,7 @@ w.w3.org/2001/XMLSchema" xmlns="">
 ## <a name="writing-extension-data"></a>编写扩展数据  
  属性扩展是通过向 <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> 集合添加条目来创建的，如下面的示例代码所示。  
   
-```  
+```csharp  
 //Attribute extensions are stored in a dictionary indexed by   
 // XmlQualifiedName  
 feed.AttributeExtensions.Add(new XmlQualifiedName("myAttribute", ""), "someValue");  
@@ -77,15 +77,15 @@ feed.AttributeExtensions.Add(new XmlQualifiedName("myAttribute", ""), "someValue
   
  下面的示例代码创建一个名为 `simpleString` 的扩展元素。  
   
-```  
+```csharp  
 feed.ElementExtensions.Add("simpleString", "", "hello, world!");  
 ```  
   
- 此元素的 XML 命名空间为空命名空间 (""), 其值为包含字符串 "hello, world!" 的文本节点。  
+ 此元素的 XML 命名空间为空命名空间（""），其值为包含字符串 "hello，world！" 的文本节点。  
   
  如果要创建包含许多嵌套元素的复杂元素扩展，一种方法是使用 .NET Framework API 进行序列化（均支持 <xref:System.Runtime.Serialization.DataContractSerializer> 和 <xref:System.Xml.Serialization.XmlSerializer>），如下面的示例所示。  
   
-```  
+```csharp  
 feed.ElementExtensions.Add( new DataContractExtension() { Key = "X", Value = 4 } );  
 feed.ElementExtensions.Add( new XmlSerializerExtension { Key = "Y", Value = 8 }, new XmlSerializer( typeof( XmlSerializerExtension ) ) );  
 ```  
@@ -94,7 +94,7 @@ feed.ElementExtensions.Add( new XmlSerializerExtension { Key = "Y", Value = 8 },
   
  <xref:System.ServiceModel.Syndication.SyndicationElementExtensionCollection> 类还可以用来从 <xref:System.Xml.XmlReader> 实例创建元素扩展。 这允许与 XML 处理 API（如 <xref:System.Xml.Linq.XElement>）进行简单集成，如下面的示例代码所示。  
   
-```  
+```csharp  
 feed.ElementExtensions.Add(new XElement("xElementExtension",  
         new XElement("Key", new XAttribute("attr1", "someValue"), "Z"),  
         new XElement("Value", new XAttribute("attr1", "someValue"),   
@@ -104,13 +104,13 @@ feed.ElementExtensions.Add(new XElement("xElementExtension",
 ## <a name="reading-extension-data"></a>读取扩展数据  
  属性扩展的值可以通过在 <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> 集合中按 <xref:System.Xml.XmlQualifiedName> 查找属性来获取，如下面的示例代码所示。  
   
-```  
+```csharp  
 Console.WriteLine( feed.AttributeExtensions[ new XmlQualifiedName( "myAttribute", "" )]);  
 ```  
   
  元素扩展是借助于 `ReadElementExtensions<T>` 方法来访问的。  
   
-```  
+```csharp  
 foreach( string s in feed2.ElementExtensions.ReadElementExtensions<string>("simpleString", ""))  
 {  
     Console.WriteLine(s);  
@@ -130,7 +130,7 @@ foreach (XmlSerializerExtension xse in feed2.ElementExtensions.ReadElementExtens
   
  还可以通过使用 `XmlReader` 方法来在个别元素扩展上获取 <xref:System.ServiceModel.Syndication.SyndicationElementExtension.GetReader>。  
   
-```  
+```csharp  
 foreach (SyndicationElementExtension extension in feed2.ElementExtensions.Where<SyndicationElementExtension>(x => x.OuterName == "xElementExtension"))  
 {  
     XNode xelement = XElement.ReadFrom(extension.GetReader());  

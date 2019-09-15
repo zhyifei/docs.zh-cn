@@ -2,12 +2,12 @@
 title: 如何：动态更新
 ms.date: 03/30/2017
 ms.assetid: 9b8f6e0d-edab-4a7e-86e3-8c66bebc64bb
-ms.openlocfilehash: 3c651bc4ff23b2534e81f190fc8b63771c7587d6
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0a103e980d0d1be08f3ae6850c6af64405582c7b
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69911152"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972081"
 ---
 # <a name="how-to-dynamic-update"></a>如何：动态更新
 本主题概述了创建和动态更新路由配置所需的基本步骤。 在本示例中，从配置文件中获取初始路由配置，并将所有消息路由至 regularCalc 计算器服务；不过，本示例随后以编程方式更新该路由配置，以便更改 roundingCalc 服务的目标终结点。  
@@ -165,7 +165,7 @@ ms.locfileid: "69911152"
 ## <a name="example"></a>示例  
  下面列出了本示例中使用的控制台应用程序的完整代码清单。  
   
-```  
+```csharp
 //-----------------------------------------------------------------  
 //  Copyright (c) Microsoft Corporation.  All Rights Reserved.  
 //-----------------------------------------------------------------  

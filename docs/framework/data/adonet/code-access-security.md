@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
-ms.openlocfilehash: 080432670c68623433a6b4e61adba77cf6fa5ec7
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6340bc3fb2291601ba2a9812e0a438839f0718bc
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70786868"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971823"
 ---
 # <a name="code-access-security-and-adonet"></a>代码访问安全性和 ADO.NET
 .NET Framework 提供基于角色的安全性和代码访问安全性 (CAS)，这两种安全性都可以通过公共语言运行库 (CLR) 提供的公共基础结构实现。 对于非托管代码，大多数应用程序都可以使用用户或主体权限执行。 因此，当拥有提升权限的用户运行恶意软件或包含错误的软件时，计算机系统可能会受到损坏并危及私有数据。  
@@ -50,12 +50,12 @@ ms.locfileid: "70786868"
  根据要生成的应用程序类型，还应考虑在数据库中实现基于角色的权限。 有关 SQL Server 中基于角色的安全性的详细信息，请参阅[SQL Server 安全性](./sql/sql-server-security.md)。  
   
 ## <a name="assemblies"></a>程序集  
- 程序集构成 .NET Framework 应用程序部署、版本控制、重复使用、激活范围和安全权限的基本单元。 程序集提供类型和资源的集合，二者结合在一起构成功能的逻辑单元。 对于 CLR，类型不存在于程序集的上下文之外。 有关创建和部署程序集的详细信息，请参阅[用程序集编程](../../app-domains/programming-with-assemblies.md)。  
+ 程序集构成 .NET Framework 应用程序部署、版本控制、重复使用、激活范围和安全权限的基本单元。 程序集提供类型和资源的集合，二者结合在一起构成功能的逻辑单元。 对于 CLR，类型不存在于程序集的上下文之外。 有关创建和部署程序集的详细信息，请参阅[用程序集编程](../../../standard/assembly/program.md)。  
   
 ### <a name="strong-naming-assemblies"></a>强命名程序集  
  强名称（或数字签名）由程序集的标识组成，该标识包括程序集的简单文本名称、版本号和区域性信息（如果提供）、公钥和数字签名。 数字签名使用相应私钥从程序集文件生成。 程序集文件包含程序集清单，该清单包含组成程序集的所有文件的名称和哈希。  
   
- 强命名程序集可为应用程序或组件提供唯一的标识，其他软件可以使用该标识显式引用应用程序或组件。 强命名可以保护程序集，防止包含恶意代码的程序集冒充。 强命名还可以保证组件的不同版本之间的版本一致性。 对于将要部署到全局程序集缓存 (GAC) 的程序集，必须进行强命名。 有关详细信息，请参阅[创建和使用具有强名称的程序集](../../app-domains/create-and-use-strong-named-assemblies.md)。  
+ 强命名程序集可为应用程序或组件提供唯一的标识，其他软件可以使用该标识显式引用应用程序或组件。 强命名可以保护程序集，防止包含恶意代码的程序集冒充。 强命名还可以保证组件的不同版本之间的版本一致性。 对于将要部署到全局程序集缓存 (GAC) 的程序集，必须进行强命名。 有关详细信息，请参阅[创建和使用具有强名称的程序集](../../../standard/assembly/create-use-strong-named.md)。  
   
 ## <a name="partial-trust-in-adonet-20"></a>ADO.NET 2.0 中的部分信任  
  在 ADO.NET 2.0 中，适用于 SQL Server 的 .NET Framework 数据提供程序、适用于 OLE DB 的 .NET Framework 数据提供程序、适用于 ODBC 的 .NET Framework 数据提供程序和适用于 Oracle 的 .NET Framework 数据提供程序现在全部可以在部分信任的环境中运行。 在以前版本的 .NET Framework 中，非完全信任的应用程序仅支持 <xref:System.Data.SqlClient>。  

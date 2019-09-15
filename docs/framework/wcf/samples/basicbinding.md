@@ -2,12 +2,12 @@
 title: BasicBinding
 ms.date: 03/30/2017
 ms.assetid: 86fbeb87-4d89-4b61-9577-867e0ac12945
-ms.openlocfilehash: 0bd692ce0527b498b7514a57442817b86f6c2208
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: e98b1254710ebac2305fd7dd5d39a146d749ff44
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045744"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70990137"
 ---
 # <a name="basicbinding"></a>BasicBinding
 
@@ -29,7 +29,7 @@ ms.locfileid: "70045744"
 
 此示例基于实现计算器服务的[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)。
 
-若要将基本绑定与默认行为一起使用，只需要使用绑定节的名称。 如果要配置基本绑定并更改它的某些设置，则必须定义一个绑定配置。 终结点必须通过使用`bindingConfiguration` <`endpoint`> 元素的属性按名称引用绑定配置, 如下面的示例代码所示。
+若要将基本绑定与默认行为一起使用，只需要使用绑定节的名称。 如果要配置基本绑定并更改它的某些设置，则必须定义一个绑定配置。 终结点必须通过使用`bindingConfiguration` <`endpoint`> 元素的属性按名称引用绑定配置，如下面的示例代码所示。
 
 ```xml
 <services>
@@ -73,7 +73,7 @@ ms.locfileid: "70045744"
 
 运行示例时，操作请求和响应将显示在客户端控制台窗口中。 在客户端窗口中按 Enter 可以关闭客户端。
 
-```
+```console
 Add(100,15.99) = 115.99
 Subtract(145,76.54) = 68.46
 Multiply(9,81.25) = 731.25
@@ -86,7 +86,7 @@ Press <ENTER> to terminate client.
 
 1. 使用以下命令安装 ASP.NET 4.0。
 
-    ```
+    ```console
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable
     ```
 

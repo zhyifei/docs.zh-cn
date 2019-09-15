@@ -2,12 +2,12 @@
 title: 使用活动委托
 ms.date: 03/30/2017
 ms.assetid: e33cf876-8979-440b-9b23-4a12d1139960
-ms.openlocfilehash: 8c9d82f47f709a89455f41691526b6ac9718a01f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 63f550549456404b237067c98afdb18a8758dd7a
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62004609"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989081"
 ---
 # <a name="using-activity-delegates"></a>使用活动委托
 通过活动委托，活动作者可以公开具有特定签名的回调，活动的用户可为其提供基于活动的处理程序。 可以使用两种类型的活动委托：<xref:System.Activities.ActivityAction%601> 用于定义没有返回值的活动委托，<xref:System.Activities.ActivityFunc%601> 用于定义有返回值的活动委托。
@@ -22,7 +22,7 @@ ms.locfileid: "62004609"
 
 actionArgument 用于将集合中的各个项流到 WriteLine。 在调用工作流时，将下面的输出显示到控制台。
 
-```
+```console
 HelloWorld.
 ```
 
@@ -30,9 +30,9 @@ HelloWorld.
 
 [!code-csharp[CFX_ActivityExample#7](~/samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#7)]
 
-有关对象初始值设定项的详细信息，请参阅[如何：而不会调用构造函数初始化对象 (C#编程指南)](https://go.microsoft.com/fwlink/?LinkId=161015)并[如何：使用对象初始值设定项声明对象](https://go.microsoft.com/fwlink/?LinkId=161016)。
+有关对象初始值设定项的详细信息[，请参阅如何：在不调用构造函数的情况C#下初始化对象](https://go.microsoft.com/fwlink/?LinkId=161015) （ [编程指南）和如何：使用对象初始值设定项](https://go.microsoft.com/fwlink/?LinkId=161016)声明对象。
 
-在下面的示例中，在工作流中使用一个 <xref:System.Activities.Statements.TryCatch> 活动。 该工作流引发一个 <xref:System.ApplicationException>，并由 <xref:System.Activities.Statements.Catch%601> 活动对其进行处理。 处理程序<xref:System.Activities.Statements.Catch%601>活动的活动执行任何操作<xref:System.Activities.Statements.WriteLine>活动和异常详细信息流动到使用其`ex` <xref:System.Activities.DelegateInArgument%601>。
+在下面的示例中，在工作流中使用一个 <xref:System.Activities.Statements.TryCatch> 活动。 该工作流引发一个 <xref:System.ApplicationException>，并由 <xref:System.Activities.Statements.Catch%601> 活动对其进行处理。 <xref:System.Activities.Statements.Catch%601>活动活动操作的处理程序是一<xref:System.Activities.Statements.WriteLine>种活动，异常详细信息`ex` <xref:System.Activities.DelegateInArgument%601>通过使用传递给它。
 
 [!code-csharp[CFX_WorkflowApplicationExample#33](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#33)]
 

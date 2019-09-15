@@ -2,21 +2,21 @@
 title: 持久性实例上下文
 ms.date: 03/30/2017
 ms.assetid: 97bc2994-5a2c-47c7-927a-c4cd273153df
-ms.openlocfilehash: 40af70c69438fc5eaa688963db6710fa6fde0a42
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 85a00c6d100001fad429f1e58d716f0d7bedcceb
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67425558"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989983"
 ---
 # <a name="durable-instance-context"></a>持久性实例上下文
 
-此示例演示如何自定义 Windows Communication Foundation (WCF) 运行时以启用持久性实例上下文。 它使用 SQL Server 2005 作为其后备存储（在本例中为 SQL Server 2005 Express）。 但是，它还提供了一种访问自定义存储机制的方法。
+此示例演示如何自定义 Windows Communication Foundation （WCF）运行时以启用持久实例上下文。 它使用 SQL Server 2005 作为其后备存储（在本例中为 SQL Server 2005 Express）。 但是，它还提供了一种访问自定义存储机制的方法。
 
 > [!NOTE]
 > 本主题的最后介绍了此示例的设置过程和生成说明。
 
-此示例涉及扩展通道层和 WCF 服务模型层。 因此，有必要先了解基础概念再阅读实现细节。
+此示例涉及同时扩展 WCF 的通道层和服务模型层。 因此，有必要先了解基础概念再阅读实现细节。
 
 持久性实例上下文在实际方案中相当常见。 例如，购物车应用程序能够在中途暂停购物并在改天继续。 因此，当我们改天访问购物车应用程序时，我们的原始上下文将得以还原。 一定要注意的是，当我们断开连接时，购物车应用程序（在服务器上）不保持购物车实例， 而是将其状态保持在持久性存储介质中，并使用它为还原后的上下文构造新实例。 因此，可为同一个上下文服务的服务实例与上一个实例不同（即，这两个实例的内存地址不同）。
 
@@ -122,7 +122,7 @@ if (isFirstMessage)
 }
 ```
 
-这些通道实现随后将添加到 WCF 通道运行时由`DurableInstanceContextBindingElement`类和`DurableInstanceContextBindingElementSection`类相应地。 请参阅[HttpCookieSession](../../../../docs/framework/wcf/samples/httpcookiesession.md)通道示例文档有关绑定元素和绑定元素节的更多详细信息。
+然后， `DurableInstanceContextBindingElement`类和`DurableInstanceContextBindingElementSection`类会相应地将这些通道实现添加到 WCF 信道运行时。 有关绑定元素和绑定元素部分的详细信息，请参阅[HttpCookieSession](../../../../docs/framework/wcf/samples/httpcookiesession.md)信道示例文档。
 
 ## <a name="service-model-layer-extensions"></a>服务模型层扩展
 
@@ -232,15 +232,15 @@ else
 
 我们已经实现了要在持久性存储中读写实例的必要基础结构， 现在必须采取必要的步骤来更改服务行为。
 
-作为此过程的第一步，我们必须保存已通过通道层到达当前 InstanceContext 的上下文 ID。 InstanceContext 是充当 WCF 调度程序和服务实例之间的链接的运行时组件。 可用来向服务实例提供其他状态和行为。 这是必不可少的，因为在会话通信中，上下文 ID 仅随第一条消息发送。
+作为此过程的第一步，我们必须保存已通过通道层到达当前 InstanceContext 的上下文 ID。 InstanceContext 是一个运行时组件，它充当 WCF 调度程序和服务实例之间的链接。 可用来向服务实例提供其他状态和行为。 这是必不可少的，因为在会话通信中，上下文 ID 仅随第一条消息发送。
 
-WCF 允许通过添加新的状态和使用其可扩展对象模式的行为来扩展它的 InstanceContext 的运行时组件。 若要使用新功能扩展现有的运行时类，或者，或将新的状态功能添加到一个对象，WCF 中使用的可扩展对象模式。 有三个接口中的可扩展对象模式-IExtensibleObject\<T >，IExtension\<T >，和 IExtensionCollection\<T >:
+WCF 允许通过使用其可扩展对象模式添加新的状态和行为来扩展其 InstanceContext 运行时组件。 在 WCF 中使用可扩展对象模式，以使用新功能扩展现有的运行时类，或者向对象中添加新的状态功能。 可扩展对象模式中有三个接口-IExtensibleObject\<t >、IExtension\<t > 和 IExtensionCollection\<t >：
 
-- IExtensibleObject\<T > 接口由允许自定义其功能的扩展对象实现。
+- IExtensibleObject\<T > 接口由允许自定义其功能的扩展的对象实现。
 
-- IExtension\<T > 接口实现的 T 类型的类扩展的对象
+- IExtension\<t > 接口由属于类型为 T 的类的扩展的对象实现。
 
-- IExtensionCollection\<T > 接口是 Iextension，来检索 Iextension 按其类型的集合。
+- IExtensionCollection\<T > 接口是 iextension 的集合，允许按类型检索 iextension。
 
 因此，应当创建一个 InstanceContextExtension 类，该类实现 IExtension 接口并定义保存上下文 ID 所必需的状态。 此类还提供用来存放正使用的存储管理器的状态。 在保存了新状态之后，就无法对其进行修改。 因此，状态是在构造实例时提供并保存到实例中的，之后，只能使用只读属性来进行访问。
 
@@ -282,7 +282,7 @@ public void Initialize(InstanceContext instanceContext, Message message)
 
 如上所述，上下文 ID 读取自 `Properties` 类的 `Message` 集合并传递到扩展类的构造函数。 这演示了如何以一致的方式在层之间交换信息。
 
-下一个重要步骤是重写服务实例的创建过程。 WCF 允许实现自定义实例化行为并将它们挂钩到运行时使用 IInstanceProvider 接口。 这可以通过实现新的 `InstanceProvider` 类来完成。 在构造函数中，可以接受来自实例提供程序的服务类型。 以后，可以使用此服务类型来创建新实例。 在 `GetInstance` 实现中，创建了一个存储管理器实例并查找持久性实例。 如果返回的是 `null`，则会实例化此服务类型的新实例并将其返回到调用方。
+下一个重要步骤是重写服务实例的创建过程。 WCF 允许实现自定义实例化行为，并使用 IInstanceProvider 接口将它们挂钩到运行时。 这可以通过实现新的 `InstanceProvider` 类来完成。 在构造函数中，可以接受来自实例提供程序的服务类型。 以后，可以使用此服务类型来创建新实例。 在 `GetInstance` 实现中，创建了一个存储管理器实例并查找持久性实例。 如果返回的是 `null`，则会实例化此服务类型的新实例并将其返回到调用方。
 
 ```csharp
 public object GetInstance(InstanceContext instanceContext, Message message)
@@ -353,9 +353,9 @@ foreach (ChannelDispatcherBase cdb in serviceHostBase.ChannelDispatchers)
 
 总之，到目前为止，此示例已经生成了一个针对自定义上下文 ID 交换启用了自定义网络协议的通道，而且还覆盖了默认实例化行为，以便从持久性存储中加载实例。
 
-剩下的就是通过某种方法来将服务实例保存到持久性存储中。 如上所述，已经有一个必需的功能来将状态保存在 `IStorageManager` 实现中。 我们现在必须将其与 WCF 运行时。 需要另一个适用于服务实现类中的方法的属性。 此属性假设应用于对服务实例的状态进行更改的方法。
+剩下的就是通过某种方法来将服务实例保存到持久性存储中。 如上所述，已经有一个必需的功能来将状态保存在 `IStorageManager` 实现中。 现在，我们必须将此集成到 WCF 运行时。 需要另一个适用于服务实现类中的方法的属性。 此属性假设应用于对服务实例的状态进行更改的方法。
 
-`SaveStateAttribute` 类实现了此功能。 它还实现`IOperationBehavior`类来修改 WCF 运行时为每个操作。 当使用此特性标记一个方法时，WCF 运行时将调用`ApplyBehavior`方法，同时相应`DispatchOperation`正在构造。 在该方法实现中，有下面的一行代码：
+`SaveStateAttribute` 类实现了此功能。 它还实现`IOperationBehavior`类以修改每个操作的 WCF 运行时。 使用此特性标记方法时，WCF 运行时将调用`ApplyBehavior`方法，同时构造适当`DispatchOperation`的。 在该方法实现中，有下面的一行代码：
 
 ```csharp
 dispatch.Invoker = new OperationInvoker(dispatch.Invoker);
@@ -378,7 +378,7 @@ return result;
 
 ## <a name="using-the-extension"></a>使用扩展
 
-同时按通道层和服务模型层扩展，现在可以在 WCF 应用程序中使用它们。 服务必须使用自定义绑定将通道添加到通道堆栈中，然后使用相应的属性来标记服务实现类。
+通道层和服务模型层扩展都已完成，它们现在可以在 WCF 应用程序中使用。 服务必须使用自定义绑定将通道添加到通道堆栈中，然后使用相应的属性来标记服务实现类。
 
 ```csharp
 [DurableInstanceContext]
@@ -432,7 +432,7 @@ type="Microsoft.ServiceModel.Samples.DurableInstanceContextBindingElementSection
 
 运行示例时，会显示下面的输出。 客户端会向其购物车中添加两项，之后将从服务中获取其购物车中各项的列表。 在每个控制台窗口中按 Enter 可以关闭服务和客户端。
 
-```
+```console
 Enter the name of the product: apples
 Enter the name of the product: bananas
 
@@ -447,11 +447,11 @@ Press ENTER to shut down client
 
 #### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例
 
-1. 请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。
+1. 确保已对[Windows Communication Foundation 示例执行了一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。
 
-2. 若要生成解决方案，请按照中的说明[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)。
+2. 若要生成解决方案，请按照[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。
 
-3. 若要在单或跨计算机配置中运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。
+3. 若要以单机配置或跨计算机配置来运行示例, 请按照[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的说明进行操作。
 
 > [!NOTE]
 > 必须运行 SQL Server 2005 或 SQL Express 2005 才能运行此示例。 如果您运行的是 SQL Server 2005，则必须修改服务连接字符串的配置。 在跨计算机运行时，只需要在服务器计算机上安装 SQL Server。
@@ -461,6 +461,6 @@ Press ENTER to shut down client
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> 如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：
+> 如果此目录不存在, 请参阅[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)以下载所有 Windows Communication Foundation (wcf) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Instancing\Durable`

@@ -2,15 +2,15 @@
 title: 自定义绑定命令
 ms.date: 03/30/2017
 ms.assetid: 6e13bf96-5de0-4476-b646-5f150774418d
-ms.openlocfilehash: c0f72c8216492b48de8c863dc35880d3c0034ef2
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: b5f6587567eaf7f719028a7d92f3db8f8259b6e1
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045668"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70990041"
 ---
 # <a name="custom-binding-imperative"></a>自定义绑定命令
-此示例演示如何在不使用配置文件或 Windows Communication Foundation (WCF) 生成的客户端的情况下, 编写命令性代码来定义和使用自定义绑定。 本示例将 HTTP 传输提供的功能与可靠会话通道结合在一起，用于创建基于 HTTP 的可靠绑定。 此示例基于实现计算器服务的[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)。  
+此示例演示如何在不使用配置文件或 Windows Communication Foundation （WCF）生成的客户端的情况下，编写命令性代码来定义和使用自定义绑定。 本示例将 HTTP 传输提供的功能与可靠会话通道结合在一起，用于创建基于 HTTP 的可靠绑定。 此示例基于实现计算器服务的[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)。  
   
 > [!NOTE]
 > 本主题的最后介绍了此示例的设置过程和生成说明。  
@@ -54,7 +54,7 @@ Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result);
 
  运行示例时，操作请求和响应将显示在客户端控制台窗口中。 在客户端窗口中按 Enter 可以关闭客户端。  
   
-```  
+```console  
 Add(100,15.99) = 115.99  
 Subtract(145,76.54) = 68.46  
 Multiply(9,81.25) = 731.25  

@@ -2,16 +2,16 @@
 title: 通道分块
 ms.date: 03/30/2017
 ms.assetid: e4d53379-b37c-4b19-8726-9cc914d5d39f
-ms.openlocfilehash: b59f5c42f5a0f81f666bc5d22924f14c678a60e1
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 6bd7f1f31426c2d355b42f04ad770aac60183838
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045704"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70990118"
 ---
 # <a name="chunking-channel"></a>通道分块
 
-使用 Windows Communication Foundation (WCF) 发送大消息时, 通常需要限制用于缓冲这些消息的内存量。 一种可能的解决方案是流处理消息正文（假定数据主要集中在正文中）。 不过，有些协议要求对整个消息进行缓冲。 可靠消息和消息安全就是两个这样的示例。 另一个可能的解决方案是将大消息分割成称为消息块的小消息，一次发送一个消息块，并在接收端重建大消息。 应用程序本身就能实现这种分块和取消分块，或者使用自定义通道来实现。 块区通道示例演示如何使用自定义协议或分层通道为任意大的消息进行分块和取消分块。
+使用 Windows Communication Foundation （WCF）发送大消息时，通常需要限制用于缓冲这些消息的内存量。 一种可能的解决方案是流处理消息正文（假定数据主要集中在正文中）。 不过，有些协议要求对整个消息进行缓冲。 可靠消息和消息安全就是两个这样的示例。 另一个可能的解决方案是将大消息分割成称为消息块的小消息，一次发送一个消息块，并在接收端重建大消息。 应用程序本身就能实现这种分块和取消分块，或者使用自定义通道来实现。 块区通道示例演示如何使用自定义协议或分层通道为任意大的消息进行分块和取消分块。
 
 应始终在构造了要发送的整个消息后才使用块区。 块区通道应始终在安全通道和可靠会话通道之下分层。
 
@@ -256,7 +256,7 @@ interface ITestService
 
 - 传递给 Send 的超时值用作整个发送操作（包括发送所有消息块）的超时值。
 
-- 为避免对整个原始消息正文进行缓存，选择了自定义 <xref:System.Xml.XmlDictionaryWriter> 设计。 如果要使用 <xref:System.Xml.XmlDictionaryReader> 对正文获取 `message.GetReaderAtBodyContents`，则将缓冲整个正文。 相反, 我们有一个传递<xref:System.Xml.XmlDictionaryWriter>给`message.WriteBodyContents`的自定义。 由于消息会在该编写器上调用 WriteBase64，因此编写器会将消息块包装成消息并使用内部通道发送消息。 在发送信息块之前，WriteBase64 处于阻止状态。
+- 为避免对整个原始消息正文进行缓存，选择了自定义 <xref:System.Xml.XmlDictionaryWriter> 设计。 如果要使用 <xref:System.Xml.XmlDictionaryReader> 对正文获取 `message.GetReaderAtBodyContents`，则将缓冲整个正文。 相反，我们有一个传递<xref:System.Xml.XmlDictionaryWriter>给`message.WriteBodyContents`的自定义。 由于消息会在该编写器上调用 WriteBase64，因此编写器会将消息块包装成消息并使用内部通道发送消息。 在发送信息块之前，WriteBase64 处于阻止状态。
 
 ## <a name="implementing-the-receive-operation"></a>实现 Receive 操作
 
@@ -282,7 +282,7 @@ interface ITestService
 
 ### <a name="onclose"></a>OnClose
 
-`OnClose` 首先将 `stopReceive` 设置为 `true` 以通知挂起的 `ReceiveChunkLoop` 停止。 然后<xref:System.Threading.ManualResetEvent>, 它会等待`receiveStopped` , 后者在停止时`ReceiveChunkLoop`设置。 如果 `ReceiveChunkLoop` 在指定的超时之内停止，则 `OnClose` 将使用剩余超时调用 `innerChannel.Close`。
+`OnClose` 首先将 `stopReceive` 设置为 `true` 以通知挂起的 `ReceiveChunkLoop` 停止。 然后<xref:System.Threading.ManualResetEvent>，它会等待`receiveStopped` ，后者在停止时`ReceiveChunkLoop`设置。 如果 `ReceiveChunkLoop` 在指定的超时之内停止，则 `OnClose` 将使用剩余超时调用 `innerChannel.Close`。
 
 ### <a name="onabort"></a>OnAbort
 
@@ -306,9 +306,9 @@ interface ITestService
 
 ## <a name="implementing-binding-element-and-binding"></a>实现绑定元素和绑定
 
-`ChunkingBindingElement` 负责创建 `ChunkingChannelFactory` 和 `ChunkingChannelListener`。 `CanBuildChannelFactory` `CanBuildChannelListener`检查 t 中的\<t > 和`IDuplexSessionChannel` t > 是否为类型 (块区通道支持的唯一通道) 以及绑定中的其他绑定元素是否支持此\< `ChunkingBindingElement`通道类型。
+`ChunkingBindingElement` 负责创建 `ChunkingChannelFactory` 和 `ChunkingChannelListener`。 `CanBuildChannelFactory` `CanBuildChannelListener`检查 t 中的\<t > 和`IDuplexSessionChannel` t > 是否为类型（块区通道支持的唯一通道）以及绑定中的其他绑定元素是否支持此\< `ChunkingBindingElement`通道类型。
 
-`BuildChannelFactory`\<T > 首先检查是否可以生成请求的通道类型, 然后获取要分块的消息操作的列表。 有关更多信息，请参见下一节。 然后它创建一个新的 `ChunkingChannelFactory`，同时为其传递内部通道工厂（从 `context.BuildInnerChannelFactory<IDuplexSessionChannel>` 返回）、消息操作列表和要缓冲的消息块的最大数量。 消息块的最大数量来自一个名为 `MaxBufferedChunks` 的属性，此属性由 `ChunkingBindingElement` 公开。
+`BuildChannelFactory`\<T > 首先检查是否可以生成请求的通道类型，然后获取要分块的消息操作的列表。 有关更多信息，请参见下一节。 然后它创建一个新的 `ChunkingChannelFactory`，同时为其传递内部通道工厂（从 `context.BuildInnerChannelFactory<IDuplexSessionChannel>` 返回）、消息操作列表和要缓冲的消息块的最大数量。 消息块的最大数量来自一个名为 `MaxBufferedChunks` 的属性，此属性由 `ChunkingBindingElement` 公开。
 
 `BuildChannelListener<T>` 有一个类似的实现，用于创建 `ChunkingChannelListener` 并为其传递内部通道侦听器。
 
@@ -320,7 +320,7 @@ interface ITestService
 
 块区通道只对通过 `ChunkingBehavior` 属性标识的消息进行分块。 `ChunkingBehavior` 类实现 `IOperationBehavior` 并通过调用 `AddBindingParameter` 方法来实现。 在此方法中，`ChunkingBehavior` 将检查其 `AppliesTo` 属性（`InMessage` 和/或 `OutMessage`）的值以确定应该对哪些消息进行分块。 然后获取这些消息中每个消息的操作（从 `OperationDescription` 上的消息集合中获取），并将其添加到包含在 `ChunkingBindingParameter` 的实例内的字符串集合中。 然后将此 `ChunkingBindingParameter` 添加到所提供的 `BindingParameterCollection` 中。
 
-当绑定元素生成通道工厂或通道侦听器时，会在 `BindingParameterCollection` 内将此 `BindingContext` 传递给绑定中的每个绑定元素。 `ChunkingBindingElement`的`ChunkingBindingParameter`实现, 并将其`BindingContext’`从`BindingParameterCollection`中提取出来。 `BuildChannelFactory<T>` `BuildChannelListener<T>` 然后将包含在 `ChunkingBindingParameter` 内的操作集合传递给 `ChunkingChannelFactory` 或 `ChunkingChannelListener`，后者又将它传递给 `ChunkingDuplexSessionChannel`。
+当绑定元素生成通道工厂或通道侦听器时，会在 `BindingParameterCollection` 内将此 `BindingContext` 传递给绑定中的每个绑定元素。 `ChunkingBindingElement`的`ChunkingBindingParameter`实现，并将其`BindingContext’`从`BindingParameterCollection`中提取出来。 `BuildChannelFactory<T>` `BuildChannelListener<T>` 然后将包含在 `ChunkingBindingParameter` 内的操作集合传递给 `ChunkingChannelFactory` 或 `ChunkingChannelListener`，后者又将它传递给 `ChunkingDuplexSessionChannel`。
 
 ## <a name="running-the-sample"></a>运行示例
 
@@ -328,13 +328,13 @@ interface ITestService
 
 1. 使用以下命令安装 ASP.NET 4.0。
 
-    ```
+    ```console
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable
     ```
 
 2. 确保已对[Windows Communication Foundation 示例执行了一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。
 
-3. 若要生成解决方案, 请按照[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。
+3. 若要生成解决方案，请按照[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。
 
 4. 若要以单机配置或跨计算机配置来运行示例, 请按照[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的说明进行操作。
 
@@ -344,7 +344,7 @@ interface ITestService
 
 客户端：
 
-```
+```console
 Press enter when service is available
 
  > Sent chunk 1 of message 867c1fd1-d39e-4be1-bc7b-32066d7ced10
@@ -371,7 +371,7 @@ Press enter when service is available
 
 服务器：
 
-```
+```console
 Service started, press enter to exit
  < Received chunk 1 of message 867c1fd1-d39e-4be1-bc7b-32066d7ced10
  < Received chunk 2 of message 867c1fd1-d39e-4be1-bc7b-32066d7ced10

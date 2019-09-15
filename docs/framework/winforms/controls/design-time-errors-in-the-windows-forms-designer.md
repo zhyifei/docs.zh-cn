@@ -11,12 +11,12 @@ ms.assetid: ad408380-825a-46d8-9a4a-531b130b88ce
 author: gewarren
 ms.author: gewarren
 manager: jillfra
-ms.openlocfilehash: 96ec50e5d3aca2aa24d68d565a35ec7687df2a2e
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 3e2366513183337c3c5dd05ff45f8a6f724deaae
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70893251"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70988431"
 ---
 # <a name="windows-forms-designer-error-page"></a>Windows 窗体设计器错误页
 
@@ -33,6 +33,7 @@ ms.locfileid: "70893251"
 ![Windows 窗体设计器扩展错误](media/windows-forms-designer-error-page-expanded.png)
 
 > [!NOTE]
+>
 > - 对于 Visual Basic 应用，设计时错误页不会显示多个错误，但它可能会显示同一错误的多个实例。
 > - 对于C++应用程序，错误没有代码位置链接。
 

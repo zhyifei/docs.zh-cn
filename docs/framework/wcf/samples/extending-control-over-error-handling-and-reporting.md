@@ -2,15 +2,15 @@
 title: 扩展对错误处理和错误报告的控制
 ms.date: 03/30/2017
 ms.assetid: 45f996a7-fa00-45cb-9d6f-b368f5778aaa
-ms.openlocfilehash: 09216d8b0ff58ac90a0fd6183f43fd2ccf82ad52
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: d7efc87d7d8a913642c4ac0e3d6d19cd0a9259c5
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039681"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989936"
 ---
 # <a name="extending-control-over-error-handling-and-reporting"></a>扩展对错误处理和错误报告的控制
-此示例演示如何使用<xref:System.ServiceModel.Dispatcher.IErrorHandler>接口在 Windows Communication Foundation (WCF) 服务中扩展对错误处理和错误报告的控制。 该示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md), 并向服务添加了一些附加代码来处理错误。 客户端强制实施若干个错误条件。 服务将截获这些错误并将其记录到某个文件中。  
+此示例演示如何使用<xref:System.ServiceModel.Dispatcher.IErrorHandler>接口在 Windows Communication Foundation （WCF）服务中扩展对错误处理和错误报告的控制。 该示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)，并向服务添加了一些附加代码来处理错误。 客户端强制实施若干个错误条件。 服务将截获这些错误并将其记录到某个文件中。  
   
 > [!NOTE]
 > 本主题的最后介绍了此示例的设置过程和生成说明。  
@@ -21,7 +21,7 @@ ms.locfileid: "70039681"
   
  <xref:System.ServiceModel.Dispatcher.IErrorHandler.HandleError%2A> 方法中，`CalculatorErrorHandler` 将错误日志写入 c:\logs 中的 Error.txt 文本文件中。 请注意，该示例记录错误而不会取消错误，并允许错误报告回客户端。  
   
-```  
+```csharp  
 public class CalculatorErrorHandler : IErrorHandler  
 {  
         // Provide a fault. The Message fault parameter can be replaced, or set to  
@@ -51,7 +51,7 @@ public class CalculatorErrorHandler : IErrorHandler
   
  `ErrorBehaviorAttribute` 作为一种向服务注册错误处理程序的机制存在。 此属性采取单一类型的参数。 该类型应实现 <xref:System.ServiceModel.Dispatcher.IErrorHandler> 接口，还应具有一个公用的空构造函数。 该属性随后实例化该错误处理程序类型的实例，并将其安装到该服务中。 实现此操作的方法是，实现 <xref:System.ServiceModel.Description.IServiceBehavior> 接口，然后使用 <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A> 方法将错误处理程序的实例添加到该服务。  
   
-```  
+```csharp  
 // This attribute can be used to install a custom error handler for a service.  
 public class ErrorBehaviorAttribute : Attribute, IServiceBehavior  
 {  
@@ -98,7 +98,7 @@ public class ErrorBehaviorAttribute : Attribute, IServiceBehavior
   
  该示例实现计算器服务。 客户端通过提供具有非法值的参数，使该服务故意出现两个错误。 `CalculatorErrorHandler` 使用 <xref:System.ServiceModel.Dispatcher.IErrorHandler> 接口将这些错误记录到某个本地文件，然后允许将这些错误报告回客户端。 客户端强制执行除以零的除法运算和自变量超出范围的情况。  
   
-```  
+```csharp  
 try  
 {  
     Console.WriteLine("Forcing an error in Divide");  
@@ -132,9 +132,9 @@ FaultException: FaultException - Invalid Argument: The argument must be greater 
 Press <ENTER> to terminate client.  
 ```  
   
- 文件 c:\logs\errors.txt 包含服务记录的有关错误的信息。 请注意，为了使服务写入该目录，必须确保服务正在其下运行的进程（通常为 ASP.NET 或网络服务）具有写入目录的权限。  
+ 文件 c:\logs\errors.txt 包含服务记录的有关错误的信息。 请注意，为了使服务能够写入目录，必须确保运行服务的进程（通常为 ASP.NET 或网络服务）具有写入目录的权限。  
   
-```  
+```txt
 Fault: Reason = Invalid Argument: The second argument must not be zero.  
 Fault: Reason = Invalid Argument: The argument must be greater than zero.  
 ```  
@@ -143,7 +143,7 @@ Fault: Reason = Invalid Argument: The argument must be greater than zero.
   
 1. 确保已对[Windows Communication Foundation 示例执行了一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-2. 若要生成解决方案, 请按照[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
+2. 若要生成解决方案，请按照[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
   
 3. 确保您已经为 error.txt 文件创建了 c:\logs 目录， 或者修改 `CalculatorErrorHandler.HandleError` 中使用的文件名。  
   

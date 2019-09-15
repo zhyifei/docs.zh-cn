@@ -7,12 +7,12 @@ helpviewer_keywords:
 - international user interface [WPF], XAML
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-ms.openlocfilehash: 2f651b68d845e062ad950bb626e30c755d6d9df6
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: f1147bf090af23c2f27bac14ab895657ccee60e3
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70169163"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991563"
 ---
 # <a name="globalization-for-wpf"></a>WPF 的全球化
 本主题介绍编写[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]全球市场应用程序时应注意的问题。 全球化编程元素是在<xref:System.Globalization>命名空间中的 .net 中定义的。
@@ -39,7 +39,7 @@ ms.locfileid: "70169163"
 ### <a name="encoding"></a>编码
  支持[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]的编码为 ASCII、 [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)] utf-16 和 utf-8。 编码语句位于[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]文档的开头。 如果不存在编码特性，并且没有任何字节顺序，则分析器默认为 UTF-8。 UTF-8 和 UTF-16 都是首选编码。 不支持 UTF-7。 下面的示例演示如何在[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]文件中指定 utf-8 编码。
 
-```
+```xaml
 ?xml encoding="UTF-8"?
 ```
 
@@ -51,7 +51,7 @@ ms.locfileid: "70169163"
 
  下面[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]的示例`fr-CA`使用 language 特性指定加拿大法语。
 
-```xml
+```xaml
 <TextBlock xml:lang="fr-CA">Découvrir la France</TextBlock>
 ```
 
@@ -123,7 +123,7 @@ ms.locfileid: "70169163"
 
 - 僧伽罗语
 
- 所有书写系统引擎都支持 OpenType 字体。 OpenType 字体可以包含 OpenType 布局表, 它们使字体创建者能够设计更好的国际化和高端版式字体。 OpenType 字体布局表包含有关符号替换、标志符号定位、对齐和基线定位的信息, 使文本处理应用程序能够改进文本布局。
+ 所有书写系统引擎都支持 OpenType 字体。 OpenType 字体可以包含 OpenType 布局表，它们使字体创建者能够设计更好的国际化和高端版式字体。 OpenType 字体布局表包含有关符号替换、标志符号定位、对齐和基线定位的信息，使文本处理应用程序能够改进文本布局。
 
  OpenType 字体允许使用[!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)]编码处理大字形集。 这种编码享有广泛的国际支持，并支持版式字形变体。
 
@@ -143,7 +143,7 @@ ms.locfileid: "70169163"
 
 <a name="mui"></a>
 ### <a name="multilingual-user-interface"></a>多语言用户界面
- 多语言用户界面 (MUI) 是 Microsoft 支持从一[!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]种语言切换到另一种语言。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序使用程序集模型来支持 MUI。 一个应用程序包含非特定语言程序集和与语言相关的附属资源程序集。 入口点是主程序集中的托管 .EXE。  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]资源加载器利用[!INCLUDE[TLA2#tla_netframewk](../../../../includes/tla2sharptla-netframewk-md.md)]的资源管理器来支持资源查找和回退。 多个语言附属程序集使用同一个主程序集。 加载的资源程序集取决于<xref:System.Globalization.CultureInfo.CurrentUICulture%2A>当前线程的。
+ 多语言用户界面（MUI）是 Microsoft 支持从一[!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]种语言切换到另一种语言。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序使用程序集模型来支持 MUI。 一个应用程序包含非特定语言程序集和与语言相关的附属资源程序集。 入口点是主程序集中的托管 .EXE。  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]资源加载器利用[!INCLUDE[TLA2#tla_netframewk](../../../../includes/tla2sharptla-netframewk-md.md)]的资源管理器来支持资源查找和回退。 多个语言附属程序集使用同一个主程序集。 加载的资源程序集取决于<xref:System.Globalization.CultureInfo.CurrentUICulture%2A>当前线程的。
 
 <a name="localizable_ui"></a>
 ### <a name="localizable-user-interface"></a>可本地化的用户界面
@@ -173,7 +173,7 @@ ms.locfileid: "70169163"
 
  此问题的解决方案是设置非特定语言回退特性。 应用程序开发人员可选择从主程序集中删除资源，并指定可在特定区域性对应的附属程序集中找到该资源。 若要控制此过程, <xref:System.Resources.NeutralResourcesLanguageAttribute>请使用。 <xref:System.Resources.NeutralResourcesLanguageAttribute>类的构造函数具有两个签名, 一个签名<xref:System.Resources.UltimateResourceFallbackLocation>使用参数来<xref:System.Resources.ResourceManager>指定应提取回退资源的位置: 主程序集或附属程序集。 下面的示例演示如何使用此特性。 对于最终回退位置, 代码会导致在<xref:System.Resources.ResourceManager>当前正在执行的程序集的目录的 "正在执行" 子目录中查找资源。
 
-```
+```csharp
 [assembly: NeutralResourcesLanguageAttribute(
     "de" , UltimateResourceFallbackLocation.Satellite)]
 ```

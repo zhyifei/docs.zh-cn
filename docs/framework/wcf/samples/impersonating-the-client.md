@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Impersonating the Client Sample [Windows Communication Foundation]
 - impersonation, Windows Communication Foundation sample
 ms.assetid: 8bd974e1-90db-4152-95a3-1d4b1a7734f8
-ms.openlocfilehash: 61befdcaf1381120dba6f72ba592dade09d0490a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 40bde7d9bd2735dfd6f1a18f9359533db0e11724
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968340"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989827"
 ---
 # <a name="impersonating-the-client"></a>模拟客户端
 此模拟示例演示如何在服务中模拟调用方应用程序，以便服务可以代表调用方访问系统资源。  
@@ -105,7 +105,7 @@ client.ClientCredentials.Windows.AllowedImpersonationLevel = TokenImpersonationL
 > 服务必须在管理帐户下的运行或它运行的帐户必须授予权限以注册 `http://localhost:8000/ServiceModelSamples` HTTP 层的 URI。 可以通过使用[httpcfg.exe 工具](https://go.microsoft.com/fwlink/?LinkId=95010)设置[命名空间保留](https://go.microsoft.com/fwlink/?LinkId=95012)来授予此类权限。  
   
 > [!NOTE]
-> 在运行 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 的计算机上，只有当 Host.exe 应用程序具有“模拟”特权时，才支持进行模拟。 （默认情况下，只有管理员才具有此权限。）若要将此权限添加到服务正在运行的帐户, 请参阅 "**管理工具**", 打开 "**本地安全策略**", 打开 "**本地策略**", 单击 "**用户权限分配**", 然后选择 "**在此后模拟客户端""身份验证**", 然后双击 "**属性**" 以添加用户或组。  
+> 在运行 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 的计算机上，只有当 Host.exe 应用程序具有“模拟”特权时，才支持进行模拟。 （默认情况下，只有管理员才具有此权限。）若要将此权限添加到服务正在运行的帐户，请参阅 "**管理工具**"，打开 "**本地安全策略**"，打开 "**本地策略**"，单击 "**用户权限分配**"，然后选择 "**在此后模拟客户端""身份验证**"，然后双击 "**属性**" 以添加用户或组。  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
@@ -117,7 +117,7 @@ client.ClientCredentials.Windows.AllowedImpersonationLevel = TokenImpersonationL
   
 4. 若要演示服务对调用方的模拟，请在与运行服务时所用帐户不同的其他帐户下运行客户端。 为此，请在命令提示符下键入：  
   
-    ```  
+    ```console  
     runas /user:<machine-name>\<user-name> client.exe  
     ```  
   

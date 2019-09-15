@@ -2,12 +2,12 @@
 title: 预期异常
 ms.date: 03/30/2017
 ms.assetid: 299a6987-ae6b-43c6-987f-12b034b583ae
-ms.openlocfilehash: 963606f4cfd34acb1c4400324cdbb318e3186103
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: a874b291202cb8c3c8752c13b357679c7fd5a556
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039699"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989966"
 ---
 # <a name="expected-exceptions"></a>预期异常
 此示例演示如何在使用类型化客户端时捕获预期异常。 此示例基于实现计算器服务的[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)。 在此示例中，客户端是一个控制台应用程序 (.exe)，服务是由 Internet 信息服务 (IIS) 承载的。  
@@ -17,9 +17,9 @@ ms.locfileid: "70039699"
   
  此示例演示如何捕获和处理正确的程序所必须处理的两个预期异常类型：`TimeoutException` 和 `CommunicationException`。  
   
- Windows Communication Foundation (WCF) 客户端上的通信方法引发的异常可能是预期的, 也可能是意外的。 意外异常包括灾难性故障（如 `OutOfMemoryException`）和编程错误（如 `ArgumentNullException` 或 `InvalidOperationException`）。 通常不会有任何有用的方法来处理意外错误, 因此, 通常不应在调用 WCF 客户端通信方法时捕获它们。  
+ Windows Communication Foundation （WCF）客户端上的通信方法引发的异常可能是预期的，也可能是意外的。 意外异常包括灾难性故障（如 `OutOfMemoryException`）和编程错误（如 `ArgumentNullException` 或 `InvalidOperationException`）。 通常不会有任何有用的方法来处理意外错误，因此，通常不应在调用 WCF 客户端通信方法时捕获它们。  
   
- WCF 客户端上通信方法的预期异常包括`TimeoutException`、 `CommunicationException`和的`CommunicationException`任何派生类。 这表示在通信过程中出现的问题, 可通过中止 WCF 客户端并报告通信故障来安全地处理这些问题。 因为外部因素可能导致任何应用程序中出现这些错误，所以正确的应用程序必须捕获这些异常并在发生异常时进行恢复。  
+ WCF 客户端上通信方法的预期异常包括`TimeoutException`、 `CommunicationException`和的`CommunicationException`任何派生类。 这表示在通信过程中出现的问题，可通过中止 WCF 客户端并报告通信故障来安全地处理这些问题。 因为外部因素可能导致任何应用程序中出现这些错误，所以正确的应用程序必须捕获这些异常并在发生异常时进行恢复。  
   
  客户端可以引发 `CommunicationException` 的几个派生类。 在某些情况下，应用程序也会捕获其中的某些类以执行特殊的处理，而让其他类作为 `CommunicationException` 进行处理。 这可以通过先捕获比较具体的异常类型，然后在稍后的 catch 子句中捕获 `CommunicationException` 来完成。  
   
@@ -54,7 +54,7 @@ catch (CommunicationException exception)
   
  客户端进程运行两个方案，每个方案都尝试先调用 `Add`，再调用 `Divide`。 第一个方案通过在调用 `Divide` 之前中止客户端来模拟网络问题。 第二个方案通过将超时设置为太短的时间而使方法无法完成，从而导致超时情况的发生。 客户端进程的预期输出为：  
   
-```  
+```output
 Add(100,15.99) = 115.99  
 Simulated network problem occurs...  
 Got System.ServiceModel.CommunicationObjectAbortedException  

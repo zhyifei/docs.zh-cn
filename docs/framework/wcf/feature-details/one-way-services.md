@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF [WCF], one-way service contracts
 - service contracts [WCF], defining one-way
 ms.assetid: 19053a36-4492-45a3-bfe6-0365ee0205a3
-ms.openlocfilehash: b29585eabcc2549876f4b50e6b6e55a7f8ef2eee
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d567674baa92ad096b10a1199fa3f04f05939df5
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64621346"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991163"
 ---
 # <a name="one-way-services"></a>单向服务
 服务操作的默认行为是请求-答复模式。 在请求-答复模式中，即使服务操作以代码形式表示为 `void` 方法，客户端也会等待答复消息。 使用单向操作时，只能传输一个消息。 接收方不发送答复消息，发送方也不需要获得答复消息。  
@@ -20,13 +20,13 @@ ms.locfileid: "64621346"
   
 - 客户端必须调用操作且在操作级别不受操作结果的影响。  
   
-- 使用 <xref:System.ServiceModel.NetMsmqBinding> 或 <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> 类。 (有关此方案的详细信息，请参阅[WCF 中的队列](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)。)  
+- 使用 <xref:System.ServiceModel.NetMsmqBinding> 或 <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> 类。 （有关此方案的详细信息，请参阅[WCF 中的队列](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)。）  
   
  如果是单向操作，则不会向客户端返回承载错误信息的响应消息。 可以通过使用基础绑定的功能（如可靠会话）或通过设计一个可使用两个单向操作的双工服务协定（一个单向协定从客户端到服务，用于调用服务操作；另一个单向协定在服务和客户端之间，以使服务可以使用客户端实现的回调将错误发回到客户端）来检测错误条件。  
   
  若要创建单向服务协定，请定义服务协定，将 <xref:System.ServiceModel.OperationContractAttribute> 类应用到每个操作，并将 <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> 属性设置为 `true`，如下面的代码示例所示。  
   
-```  
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface IOneWayCalculator  
 {  
@@ -44,7 +44,7 @@ public interface IOneWayCalculator
  有关完整示例，请参阅[单向](../../../../docs/framework/wcf/samples/one-way.md)示例。  
   
 ## <a name="clients-blocking-with-one-way-operations"></a>单向操作的客户端阻止  
- 请务必认识到，虽然一些单向应用程序后立即返回出站数据写入到的网络连接，在多种方案中实现的绑定或服务可能会导致 WCF 客户端以阻止使用单向操作。 在 WCF 客户端应用程序，WCF 客户端对象不返回直到出站数据写入网络连接。 所有消息交换模式都是如此，包括单向操作；这意味着在将数据写入传输时发生的任何问题都会阻止客户端返回。 结果可能是在将消息发送到服务的过程中出现异常或延迟，具体取决于所发生的问题。  
+ 必须认识到，尽管在将出站数据写入到网络连接后，某些单向应用程序会立即返回，但在某些情况下，绑定或服务的实现可能会导致 WCF 客户端使用单向操作阻止。 在 WCF 客户端应用程序中，在将出站数据写入到网络连接之前，WCF 客户端对象不会返回。 所有消息交换模式都是如此，包括单向操作；这意味着在将数据写入传输时发生的任何问题都会阻止客户端返回。 结果可能是在将消息发送到服务的过程中出现异常或延迟，具体取决于所发生的问题。  
   
  例如，如果传输找不到终结点，则会在短时间内引发 <xref:System.ServiceModel.EndpointNotFoundException?displayProperty=nameWithType> 异常。 但是，由于某种原因，服务也可能无法读取网络上的数据，这将阻止客户端传输发送操作返回。 在这些情况下，如果超出了客户端传输绑定上的 <xref:System.ServiceModel.Channels.Binding.SendTimeout%2A?displayProperty=nameWithType> 期限，则会引发 <xref:System.TimeoutException?displayProperty=nameWithType>，但会在超出超时期限后引发。 也有可能向某一服务发送了过多的消息，而当超过某一特定点后，该服务无法处理这些消息。 在这种情况下，单向客户端也会发生阻止，直到服务可以处理这些消息或直到引发异常。  
   

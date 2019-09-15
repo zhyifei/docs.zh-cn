@@ -2,15 +2,15 @@
 title: JSONP
 ms.date: 03/30/2017
 ms.assetid: c13b4d7b-dac7-4ffd-9f84-765c903511e1
-ms.openlocfilehash: 9f24ccb5ba14e0b43f0e3f911a1672db5821d228
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 1fc85838d7491f94b8da1e0ab458d6d021cd2b32
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039560"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989782"
 ---
 # <a name="jsonp"></a>JSONP
-本示例演示在 WCF REST 服务中如何支持 JSON with Padding (JSONP)。 JSONP 是通过在当前文档中生成脚本标记来调用跨域脚本时使用的约定。 结果在指定的回调函数中返回。 JSONP 基于这一构想, `<script src="http://..." >`如可以从任何域评估脚本, 而这些标记检索的脚本在可能已经定义了其他函数的范围内进行评估。
+本示例演示在 WCF REST 服务中如何支持 JSON with Padding (JSONP)。 JSONP 是通过在当前文档中生成脚本标记来调用跨域脚本时使用的约定。 结果在指定的回调函数中返回。 JSONP 基于这一构想， `<script src="http://..." >`如可以从任何域评估脚本，而这些标记检索的脚本在可能已经定义了其他函数的范围内进行评估。
 
 ## <a name="demonstrates"></a>演示
  使用 JSONP 进行跨域脚本编写。
@@ -37,21 +37,21 @@ proxy.GetCustomer(onSuccess, onFail, null);
 </system.serviceModel>
 ```
 
- ScriptManager 管理与服务的交互并隐藏手动实现 JSONP 访问的复杂性。 当`crossDomainScriptAccessEnabled`设置为`true`并且操作的响应格式为 JSON 时, WCF 基础结构将检查回调查询字符串参数的 URI, 并使用回调查询字符串的值包装 JSON 响应参数. 在本示例中，网页使用以下 URI 调用 WCF REST 服务。
+ ScriptManager 管理与服务的交互并隐藏手动实现 JSONP 访问的复杂性。 当`crossDomainScriptAccessEnabled`设置为`true`并且操作的响应格式为 JSON 时，WCF 基础结构将检查回调查询字符串参数的 URI，并使用回调查询字符串的值包装 JSON 响应参数. 在本示例中，网页使用以下 URI 调用 WCF REST 服务。
 
-```
+```http
 http://localhost:33695/CustomerService/GetCustomer?callback=Sys._json0
 ```
 
  因为回调查询字符串参数的值为 `JsonPCallback`，所以 WCF 服务返回如下面的示例所示的 JSONP 响应。
 
-```
+```json
 Sys._json0({"__type":"Customer:#Microsoft.Samples.Jsonp","Address":"1 Example Way","Name":"Bob"});
 ```
 
  此 JSONP 响应包含 JSON 格式的客户数据（使用网页请求的回调函数名进行包装）。 ScriptManager 将使用脚本标记执行此回调以完成跨域请求，然后将结果传递给 onSuccess 处理程序，该处理程序会传递给 ASP.NET AJAX 代理的 GetCustomer 操作。
 
- 此示例由两个 ASP.NET web 应用程序组成: 一个只包含一个 WCF 服务, 另一个包含调用该服务的 .aspx 网页。 运行解决方案时, Visual Studio 2012 将在不同的端口上托管两个网站, 这将创建一个环境, 其中的服务和客户端位于不同的域。
+ 此示例由两个 ASP.NET web 应用程序组成：一个只包含一个 WCF 服务，另一个包含调用该服务的 .aspx 网页。 运行解决方案时，Visual Studio 2012 将在不同的端口上托管两个网站，这将创建一个环境，其中的服务和客户端位于不同的域。
 
 > [!IMPORTANT]
 > 您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
@@ -68,4 +68,4 @@ Sys._json0({"__type":"Customer:#Microsoft.Samples.Jsonp","Address":"1 Example Wa
   
 2. 按 F5 在浏览`http://localhost:26648/JSONPClientPage.aspx`器中启动。  
   
-3. 请注意, 加载页面后, "Name" 和 "Address" 的文本输入由值填充。  在浏览器完成页面的呈现后, 从对 WCF 服务的调用中提供这些值。
+3. 请注意，加载页面后，"Name" 和 "Address" 的文本输入由值填充。  在浏览器完成页面的呈现后，从对 WCF 服务的调用中提供这些值。

@@ -9,29 +9,29 @@ helpviewer_keywords:
 - certificates [WCF], making X.509 certificates accessible to WCF
 - X.509 certificates [WCF], making accessible to WCF
 ms.assetid: a54e407c-c2b5-4319-a648-60e43413664b
-ms.openlocfilehash: 3972b1c68fa4012de01d4b675523814911f6bae8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 401371bf01a62a20f2834cb76df19d9ddaacf83d
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64635001"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972358"
 ---
 # <a name="how-to-make-x509-certificates-accessible-to-wcf"></a>如何：使 X.509 证书可由 WCF 访问
-若要使 X.509 证书对 Windows Communication Foundation (WCF) 访问，应用程序代码必须指定证书存储区名称和位置。 在某些情况下，进程标识必须具有对包含私钥的文件的访问权限，此私钥与 X.509 证书相关联。 若要获取与证书存储区中的 X.509 证书关联的私钥，WCF 必须有权执行此操作。 默认情况下，只有所有者和“系统”帐户才可以访问证书的私钥。  
+为了使 x.509 证书可 Windows Communication Foundation （WCF）可访问，应用程序代码必须指定证书存储名称和位置。 在某些情况下，进程标识必须具有对包含私钥的文件的访问权限，此私钥与 X.509 证书相关联。 若要获取与证书存储区中的 x.509 证书关联的私钥，WCF 必须有权执行此操作。 默认情况下，只有所有者和“系统”帐户才可以访问证书的私钥。  
   
 ### <a name="to-make-x509-certificates-accessible-to-wcf"></a>使 X.509 证书可由 WCF 访问  
   
-1. 为提供的 WCF 的运行的帐户读取访问权限到包含与 X.509 证书关联的私钥的文件。  
+1. 向运行 WCF 的帐户提供对包含与 x.509 证书关联的私钥的文件的读取访问权限。  
   
-    1. 确定是否 WCF 需要读取访问权限的私钥的 X.509 证书。  
+    1. 确定 WCF 是否需要对 x.509 证书私钥的读取访问权限。  
   
          下表详细描述在使用某个 X.509 证书时是否必须提供私钥。  
   
         |X.509 证书用途|私钥|  
         |---------------------------|-----------------|  
         |对出站 SOAP 消息进行数字签名。|是|  
-        |验证入站 SOAP 消息的签名。|否|  
-        |对出站 SOAP 消息进行加密。|否|  
+        |验证入站 SOAP 消息的签名。|No|  
+        |对出站 SOAP 消息进行加密。|No|  
         |对入站 SOAP 消息进行解密。|是|  
   
     2. 确定在其中存储证书的存储区的位置和名称。  
@@ -41,32 +41,32 @@ ms.locfileid: "64635001"
          [!code-csharp[x509Accessible#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/x509accessible/cs/source.cs#1)]
          [!code-vb[x509Accessible#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/x509accessible/vb/source.vb#1)]  
   
-    3. 确定证书的私钥在计算机上位于通过[FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md)工具。  
+    3. 使用[FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md)工具确定证书的私钥在计算机上的位置。  
   
-         [FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md)工具需要证书存储区名称、 证书存储区位置和内容可唯一标识的证书。 此工具接受将证书的主题名称或其指纹作为唯一标识符。 有关如何确定证书的指纹的详细信息，请参阅[如何：检索证书的指纹](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)。  
+         [FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md)工具需要证书存储名称、证书存储位置和唯一标识证书的内容。 此工具接受将证书的主题名称或其指纹作为唯一标识符。 有关如何确定证书指纹的详细信息，请参阅[如何：检索证书](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)的指纹。  
   
-         下面的代码示例使用[FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md)工具来确定的位置中的证书的私钥`My`将存储在`CurrentUser`指纹为`46 dd 0e 7a ed 0b 7a 31 9b 02 a3 a0 43 7a d8 3f 60 40 92 9d`。  
+         下面的代码示例使用[FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md)工具确定`My`存储区中`CurrentUser`的证书的私钥位置，其指纹`46 dd 0e 7a ed 0b 7a 31 9b 02 a3 a0 43 7a d8 3f 60 40 92 9d`为。  
   
-        ```  
+        ```console
         findprivatekey.exe My CurrentUser -t "46 dd 0e 7a ed 0b 7a 31 9b 02 a3 a0 43 7a d8 3f 60 40 92 9d" -a  
         ```  
   
-    4. 确定 WCF 下运行的帐户。  
+    4. 确定 WCF 在其下运行的帐户。  
   
-         下表详细说明 WCF 运行在给定方案的帐户。  
+         下表详细说明了在给定方案下运行 WCF 时所依据的帐户。  
   
-        |方案|进程标识|  
+        |应用场景|进程标识|  
         |--------------|----------------------|  
         |客户端（控制台或 WinForms 应用程序）。|当前登录的用户。|  
         |自承载服务。|当前登录的用户。|  
         |在 IIS 6.0 ([!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]) 或 IIS 7.0 ([!INCLUDE[wv](../../../../includes/wv-md.md)]) 中承载的服务。|NETWORK SERVICE|  
         |在 IIS 5.X ([!INCLUDE[wxp](../../../../includes/wxp-md.md)]) 中承载的服务。|由 Machine.config 文件中的 `<processModel>` 元素控制。 默认帐户为 ASPNET。|  
   
-    5. 授予对包含到 WCF 运行时所使用 icacls.exe 之类的工具的帐户的私钥的文件的读取访问权限。  
+    5. 使用 icacls 之类的工具，向运行 WCF 的帐户授予对包含私钥的文件的读取访问权限。  
   
-         下面的代码示例编辑的自由访问控制列表 (DACL) 授予 NETWORK SERVICE 帐户读取指定的文件 (: R) 对文件的访问。  
+         下面的代码示例将编辑指定文件的自由访问控制列表（DACL），以向网络服务帐户授予对该文件的读取（： R）权限。  
   
-        ```  
+        ```console 
         icacls.exe "C:\Documents and Settings\All Users\Application Data\Microsoft\Crypto\RSA\MachineKeys\8aeda5eb81555f14f8f9960745b5a40d_38f7de48-5ee9-452d-8a5a-92789d7110b1" /grant "NETWORK SERVICE":R  
         ```  
   

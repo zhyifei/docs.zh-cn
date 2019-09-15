@@ -5,13 +5,17 @@ helpviewer_keywords:
 - Windows Forms controls, accessibility
 - controls [Windows Forms], accessibility
 - accessibility [Windows Forms], Windows Forms controls
+dev_langs:
+- csharp
+- vb
+- cpp
 ms.assetid: 887dee6f-5059-4d57-957d-7c6fcd4acb10
-ms.openlocfilehash: 3067c90978e6ebd680d10c1c4f9db131f19c9e44
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 791944bd9e8f5520a571e6fb415d69022aa0bead
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614748"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991717"
 ---
 # <a name="providing-accessibility-information-for-controls-on-a-windows-form"></a>为 Windows 窗体上的控件提供辅助功能信息
 辅助工具是专用的程序和设备，用于帮助残障人士更加有效地使用计算机。 示例包括适用于盲人的屏幕阅读器，还有声音输入实用功能，方便人们发出声音命令，而不使用鼠标或键盘。 这些辅助工具与由 Windows 窗体控件公开的辅助功能属性相交互。 这些属性为：  
@@ -32,16 +36,17 @@ ms.locfileid: "64614748"
 ## <a name="accessibledefaultactiondescription-property"></a>AccessibleDefaultActionDescription 属性  
  该字符串描述控件的操作。 它不显示在“属性”窗口中，可能只在代码中被设置。 下面的示例为按钮控件设置此属性：  
   
-```  
-' Visual Basic  
+```vb  
 Button1.AccessibleDefaultActionDescription = _  
    "Closes the application."  
-  
-// C#  
+``` 
+
+```csharp  
 Button1.AccessibleDefaultActionDescription =   
    "Closes the application.";  
-  
-// C++  
+```
+
+```cpp  
 button1->AccessibleDefaultActionDescription =  
    "Closes the application.";  
 ```  
@@ -49,42 +54,45 @@ button1->AccessibleDefaultActionDescription =
 ## <a name="accessibledescription-property"></a>AccessibleDescription 属性  
  该字符串描述控件。 它可能在“属性”窗口或代码中被设置，如下所示：  
   
-```  
-' Visual Basic  
+```vb  
 Button1.AccessibleDescription = "A button with text 'Exit'."  
-  
-// C#  
+```
+
+```csharp  
 Button1.AccessibleDescription = "A button with text 'Exit'";  
-  
-// C++  
+```
+
+```cpp  
 button1->AccessibleDescription = "A button with text 'Exit'";  
 ```  
   
 ## <a name="accessiblename-property"></a>AccessibleName 属性  
  这是报告给辅助工具的控件名称。 它可能在“属性”窗口或代码中被设置，如下所示：  
   
-```  
-' Visual Basic  
+```vb  
 Button1.AccessibleName = "Order"  
-  
-// C#  
+```
+
+```csharp  
 Button1.AccessibleName = "Order";  
-  
-// C++  
+```
+
+```cpp  
 button1->AccessibleName = "Order";  
 ```  
   
 ## <a name="accessiblerole-property"></a>AccessibleRole 属性  
- 此属性描述控件的用户接口角色，其中包含 <xref:System.Windows.Forms.AccessibleRole> 枚举。 新的控件的值设置为 `Default`。 这就意味着默认情况下， **Button** 控件充当 **按钮**。 如果控件具有另一个角色，你可能希望重置此属性。 例如，你可能正将 **PictureBox** 控件用作“图表” ，并且可能希望辅助工具将角色报告为“图表” ，而非 **PictureBox**。 你可能还希望为已开发的自定义控件指定此属性。 此属性可能在“属性”窗口或代码中被设置，如下所示：  
+ 此属性描述控件的用户接口角色，其中包含 <xref:System.Windows.Forms.AccessibleRole> 枚举。 新的控件的值设置为 `Default`。 这就意味着默认情况下， **Button** 控件充当 **按钮**。 如果控件具有另一个角色，你可能希望重置此属性。 例如，你可能正将 **PictureBox** 控件用作“图表”，并且可能希望辅助工具将角色报告为“图表”，而非 **PictureBox**。 你可能还希望为已开发的自定义控件指定此属性。 此属性可能在“属性”窗口或代码中被设置，如下所示：  
   
-```  
-' Visual Basic  
+```vb 
 PictureBox1.AccessibleRole = AccessibleRole.Chart  
-  
-// C#  
+```
+
+```csharp  
 PictureBox1.AccessibleRole = AccessibleRole.Chart;  
-  
-// C++  
+```
+
+```cpp  
 pictureBox1->AccessibleRole = AccessibleRole::Chart;  
 ```  
   

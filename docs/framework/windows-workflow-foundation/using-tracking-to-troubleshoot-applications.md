@@ -2,18 +2,18 @@
 title: 使用跟踪对应用程序进行故障排除
 ms.date: 03/30/2017
 ms.assetid: 8851adde-c3c2-4391-9523-d8eb831490af
-ms.openlocfilehash: 62c46ca36c89c023bfc775eb76ba454c9a4162c0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b64b92de9cb36807a2bf1eb7ff57f9f6e1a07156
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62004583"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70988936"
 ---
 # <a name="using-tracking-to-troubleshoot-applications"></a>使用跟踪对应用程序进行故障排除
-Windows Workflow Foundation (WF) 可以跟踪工作流相关信息以提供有关 Windows Workflow Foundation 应用程序或服务的执行详细信息。 Windows Workflow Foundation 主机将能够在执行工作流实例期间捕获工作流事件。 如果您的工作流产生错误或异常，可以使用 Windows Workflow Foundation 跟踪详细信息以诊断其处理故障。  
+Windows Workflow Foundation （WF）可以跟踪与工作流相关的信息，以提供有关执行 Windows Workflow Foundation 应用程序或服务的详细信息。 Windows Workflow Foundation 主机能够在工作流实例执行期间捕获工作流事件。 如果工作流生成错误或异常，则可以使用 Windows Workflow Foundation 跟踪详细信息对其处理进行故障排除。  
   
 ## <a name="troubleshooting-a-wf-using-wf-tracking"></a>使用 WF 跟踪对 WF 进行故障诊断  
- 若要检测的 Windows Workflow Foundation 活动处理中发生错误，可以启用查询的跟踪配置文件的跟踪<xref:System.Activities.Tracking.ActivityStateRecord>与出错的状态。 在以下代码中指定了相应的查询。  
+ 若要检测 Windows Workflow Foundation 活动的处理中的故障，可以使用跟踪配置文件来启用跟踪，该跟踪配置<xref:System.Activities.Tracking.ActivityStateRecord>文件查询状态为 "出错"。 在以下代码中指定了相应的查询。  
   
 ```xml  
 <activityStateQueries>  
@@ -25,7 +25,7 @@ Windows Workflow Foundation (WF) 可以跟踪工作流相关信息以提供有�
  </activityStateQueries>  
 ```  
   
- 如果某个错误发生传播并且在错误处理程序（如 <xref:System.Activities.Statements.TryCatch> 活动）中得到了处理，则可以使用 <xref:System.Activities.Tracking.FaultPropagationRecord> 检测到此错误。 <xref:System.Activities.Tracking.FaultPropagationRecord> 可指示错误的源活动以及错误处理程序的名称。 <xref:System.Activities.Tracking.FaultPropagationRecord> 包含错误的异常堆栈形式的错误详细信息。用于订阅 <xref:System.Activities.Tracking.FaultPropagationRecord> 的查询如以下示例中所示。  
+ 如果某个错误发生传播并且在错误处理程序（如 <xref:System.Activities.Statements.TryCatch> 活动）中得到了处理，则可以使用 <xref:System.Activities.Tracking.FaultPropagationRecord> 检测到此错误。 <xref:System.Activities.Tracking.FaultPropagationRecord> 可指示错误的源活动以及错误处理程序的名称。 <xref:System.Activities.Tracking.FaultPropagationRecord>包含错误的异常堆栈形式的错误详细信息。 下面的示例演示了用于<xref:System.Activities.Tracking.FaultPropagationRecord>订阅的查询。  
   
 ```xml  
 <faultPropagationQueries>  
@@ -45,13 +45,13 @@ Windows Workflow Foundation (WF) 可以跟踪工作流相关信息以提供有�
 </workflowInstanceQueries>  
 ```  
   
- 当工作流实例遇到未经处理的异常，<xref:System.Activities.Tracking.WorkflowInstanceUnhandledExceptionRecord>对象，如果启用了 Windows Workflow Foundation 跟踪发出。  
+ 当工作流实例遇到未经处理的异常时<xref:System.Activities.Tracking.WorkflowInstanceUnhandledExceptionRecord> ，如果已启用 Windows Workflow Foundation 跟踪，则会发出对象。  
   
- 此跟踪记录包含异常堆栈形式的错误详细信息。 它具有错误 （例如，活动） 的错误并且导致未经处理的异常的源的详细信息。若要从 Windows Workflow Foundation 订阅错误事件，请通过添加跟踪参与者启用跟踪。 通过查询 `ActivityStateQuery (state="Faulted")`、<xref:System.Activities.Tracking.FaultPropagationRecord> 和 `WorkflowInstanceQuery (state="UnhandledException")` 的跟踪配置文件配置此参与者。  
+ 此跟踪记录包含异常堆栈形式的错误详细信息。 它包含出错并导致未经处理的异常的错误（例如活动）源的详细信息。若要从 Windows Workflow Foundation 订阅错误事件，请通过添加跟踪参与者来启用跟踪。 通过查询 `ActivityStateQuery (state="Faulted")`、<xref:System.Activities.Tracking.FaultPropagationRecord> 和 `WorkflowInstanceQuery (state="UnhandledException")` 的跟踪配置文件配置此参与者。  
   
- 如果使用 ETW 跟踪参与者启用跟踪，则会向 ETW 会话发出错误事件。 可以使用事件查看器查看这些事件。 这可以在节点下找到**事件查看器-> 应用程序和服务日志-> Microsoft-> Windows-> 应用程序服务器-应用程序**分析通道中。  
+ 如果使用 ETW 跟踪参与者启用跟踪，则会向 ETW 会话发出错误事件。 可以使用事件查看器查看这些事件。 这可以在分析通道中的节点**事件查看器 > 应用程序和服务日志-> Microsoft > Windows > 应用程序服务器-应用程序**"下找到。  
   
 ## <a name="see-also"></a>请参阅
 
 - [Windows Server App Fabric 监视](https://go.microsoft.com/fwlink/?LinkId=201273)
-- [使用 App Fabric 监视应用程序](https://go.microsoft.com/fwlink/?LinkId=201275)
+- [用 App Fabric 监视应用程序](https://go.microsoft.com/fwlink/?LinkId=201275)

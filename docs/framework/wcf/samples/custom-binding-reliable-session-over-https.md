@@ -2,12 +2,12 @@
 title: 基于 HTTPS 的自定义绑定可靠会话
 ms.date: 03/30/2017
 ms.assetid: 16aaa80d-3ffe-47c4-8b16-ec65c4d25f8d
-ms.openlocfilehash: 54e6f33801788c6c992ca3cefee1390e28291a44
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: d4845a1058f42dab35919eb7bb83b16b45e42ff3
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045632"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70990019"
 ---
 # <a name="custom-binding-reliable-session-over-https"></a>基于 HTTPS 的自定义绑定可靠会话
 此示例演示对可靠会话使用 SSL 传输安全。 可靠会话实现 WS-Reliable Messaging 协议。 您可以通过在可靠会话上组合 WS-Security 来获得安全的可靠会话。 但是有时候，您可以选择对 SSL 改用 HTTP 传输安全。  
@@ -102,7 +102,7 @@ ms.locfileid: "70045632"
   
  指定的地址使用 https:// 方案。  
   
- 因为此示例中使用的证书是用 Makecert.exe 创建的测试证书，当你尝试访问 https 时显示安全警报： 地址，如 https://localhost/servicemodelsamples/service.svc ，从你的浏览器。 为了允许 Windows Communication Foundation (WCF) 客户端使用测试证书, 已向客户端添加了一些附加代码以禁止显示安全警报。 使用生产证书时，不需要此代码和随附的类。  
+ 因为此示例中使用的证书是用 Makecert.exe 创建的测试证书，当你尝试访问 https 时显示安全警报： 地址，如 https://localhost/servicemodelsamples/service.svc ，从你的浏览器。 为了允许 Windows Communication Foundation （WCF）客户端使用测试证书，已向客户端添加了一些附加代码以禁止显示安全警报。 使用生产证书时，不需要此代码和随附的类。  
 
 ```csharp
 // This code is required only for test certificates like those created by Makecert.exe.  
@@ -111,7 +111,7 @@ PermissiveCertificatePolicy.Enact("CN=ServiceModelSamples-HTTPS-Server");
 
  运行示例时，操作请求和响应将显示在客户端控制台窗口中。 在客户端窗口中按 Enter 可以关闭客户端。  
   
-```  
+```console  
 Add(100,15.99) = 115.99  
 Subtract(145,76.54) = 68.46  
 Multiply(9,81.25) = 731.25  
@@ -124,13 +124,13 @@ Press <ENTER> to terminate client.
   
 1. 使用以下命令安装 ASP.NET 4.0。  
   
-    ```  
+    ```console  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
 2. 确保已对[Windows Communication Foundation 示例执行了一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-3. 确保已执行[Internet Information Services (IIS) 服务器证书安装说明](../../../../docs/framework/wcf/samples/iis-server-certificate-installation-instructions.md)。  
+3. 确保已执行[Internet Information Services （IIS）服务器证书安装说明](../../../../docs/framework/wcf/samples/iis-server-certificate-installation-instructions.md)。  
   
 4. 若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
   

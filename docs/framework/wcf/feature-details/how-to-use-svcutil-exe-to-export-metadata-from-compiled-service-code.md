@@ -2,12 +2,12 @@
 title: 如何：使用 Svcutil.exe 将元数据从已编译的服务代码中导出
 ms.date: 03/30/2017
 ms.assetid: 95d0aed3-16a2-4398-89bb-39418eeb7355
-ms.openlocfilehash: b8ddbaf896ee4c6ea8b6f8e8ce7d0ecef28140ea
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2d1b70931fe70dfd605e182d4b23a151bc8130a3
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69932569"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991182"
 ---
 # <a name="how-to-use-svcutilexe-to-export-metadata-from-compiled-service-code"></a>如何：使用 Svcutil.exe 将元数据从已编译的服务代码中导出
 Svcutil.exe 可以导出已编译程序集中的服务、协定和数据类型的元数据，如下所示：  
@@ -30,7 +30,7 @@ Svcutil.exe 可以导出已编译程序集中的服务、协定和数据类型�
     > [!NOTE]
     > 您可能需要使用 `/reference` 开关指定任意相关程序集的文件路径。  
   
-    ```  
+    ```console
     svcutil.exe Contracts.dll  
     ```  
   
@@ -58,7 +58,7 @@ Svcutil.exe 可以导出已编译程序集中的服务、协定和数据类型�
     > [!NOTE]
     > 您可能需要使用 `/reference` 开关指定任意相关程序集的文件路径。  
   
-    ```  
+    ```console  
     svcutil.exe /serviceName:MyService Service.exe /reference:path/Contracts.dll  
     ```  
   
@@ -71,7 +71,7 @@ Svcutil.exe 可以导出已编译程序集中的服务、协定和数据类型�
     > [!NOTE]
     > 您可能需要使用 `/reference` 开关指定任意相关程序集的文件路径。  
   
-    ```  
+    ```console  
     svcutil.exe /dataContractOnly Contracts.dll  
     ```  
   
@@ -80,26 +80,26 @@ Svcutil.exe 可以导出已编译程序集中的服务、协定和数据类型�
   
  导出服务协定的元数据。  
   
-```  
+```console  
 svcutil.exe Contracts.dll  
 ```  
   
  导出数据协定的元数据。  
   
-```  
+```console  
 svcutil.exe /dataContractOnly Contracts.dll  
 ```  
   
  导出服务实现的元数据。  
   
-```  
+```console  
 svcutil.exe /serviceName:MyService Service.exe /reference:<path>/Contracts.dll  
 ```  
   
  `<path>` 是 Contracts.dll 的路径。  
   
-```  
-// The following service contract and data contracts are compiled into   
+```csharp
+// The following service contract and data contracts are compiled into
 // Contracts.dll.  
 [ServiceContract(ConfigurationName="IPeopleFinder")]  
 public interface IPersonFinder  
@@ -133,8 +133,10 @@ public class Address
     [DataMember]  
     public Person person;  
 }  
-  
-// The following service implementation is compiled into Service.exe.     
+```
+
+```csharp
+// The following service implementation is compiled into Service.exe.
 // This service uses the contracts specified in Contracts.dll.  
 [ServiceBehavior(ConfigurationName = "MyService")]  
 public class MyService : IPersonFinder  
@@ -146,7 +148,9 @@ public class MyService : IPersonFinder
         return address;  
     }  
 }  
-  
+```
+
+```xml  
 <!-- The following is the configuration file for Service.exe. -->  
 <?xml version="1.0" encoding="utf-8" ?>  
 <configuration>  

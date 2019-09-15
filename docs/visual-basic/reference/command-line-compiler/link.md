@@ -1,5 +1,5 @@
 ---
-title: -link (Visual Basic)
+title: -link （Visual Basic）
 ms.date: 03/10/2018
 helpviewer_keywords:
 - l compiler option [Visual Basic]
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - -l compiler option [Visual Basic]
 - /l compiler option [Visual Basic]
 ms.assetid: 1885f24a-86f5-486c-a064-9fb7e455ccec
-ms.openlocfilehash: fbce22755b3732896a226c00bbf8e068dc1f098e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7d68e55972336e304286e967d445f3589219b9a2
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69929399"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972308"
 ---
-# <a name="-link-visual-basic"></a>-link (Visual Basic)
+# <a name="-link-visual-basic"></a>-link （Visual Basic）
 使编译器让指定程序集中的 COM 类型信息可供当前正在编译的项目使用。  
   
 ## <a name="syntax"></a>语法  
@@ -36,7 +36,7 @@ ms.locfileid: "69929399"
 |`fileList`|必需。 程序集文件名的逗号分隔列表。 如果文件名包含空格，则将名称括在引号内。|  
   
 ## <a name="remarks"></a>备注  
- `-link` 选项使你可以部署具有嵌入类型信息的应用程序。 应用程序随后可以使用运行时程序集中实现嵌入类型信息的类型，而无需引用运行时程序集。 如果发布了各种版本的运行时程序集，则包含嵌入类型信息的应用程序可以使用各种版本，而无需重新编译。 有关示例，请参阅[演练：嵌入托管程序集中的类型](../../../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md)。  
+ `-link` 选项使你可以部署具有嵌入类型信息的应用程序。 应用程序随后可以使用运行时程序集中实现嵌入类型信息的类型，而无需引用运行时程序集。 如果发布了各种版本的运行时程序集，则包含嵌入类型信息的应用程序可以使用各种版本，而无需重新编译。 有关示例，请参阅[演练：嵌入托管程序集中的类型](../../../standard/assembly/embed-types-visual-studio.md)。  
   
  在使用 COM 互操作时，使用 `-link` 选项会尤其有用。 可以嵌入 COM 类型，以便应用程序在目标计算机上不再需要主互操作程序集 (PIA)。 `-link` 选项指示编译器将引用的互操作程序集中的 COM 类型信息嵌入到生成的已编译代码中。 COM 类型由 CLSID (GUID) 值进行标识。 因此，应用程序可以在安装了具有相同 CLSID 值的相同 COM 类型的目标计算机上运行。 自动执行 Microsoft Office 的应用程序是一个很好的示例。 由于 Office 等应用程序通常在不同版本间保持相同的 CLSID 值，因此只要在目标计算机上安装了 .NET Framework 4 或更高版本，并且应用程序使用引用的 COM 类型中包含的方法、属性或事件，应用程序便可以使用引用的 COM 类型。  
   
@@ -53,9 +53,9 @@ ms.locfileid: "69929399"
   
 - 调用具有程序集 B 中的返回类型或参数类型的字段、属性、事件或方法。  
   
- 使用[-libpath](../../../visual-basic/reference/command-line-compiler/libpath.md)可指定一个或多个程序集引用所在的目录。  
+ 使用[-libpath](libpath.md)可指定一个或多个程序集引用所在的目录。  
   
- 与[/reference](../../../visual-basic/reference/command-line-compiler/reference.md)编译器选项一样, `-link`编译器选项使用 Vbc 响应文件, 该文件引用频繁使用的 .NET Framework 程序集。 如果你不希望编译器使用 Vbc 文件, 请使用[-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)编译器选项。  
+ 与[/reference](reference.md)编译器选项一样， `-link`编译器选项使用 Vbc 响应文件，该文件引用频繁使用的 .NET Framework 程序集。 如果你不希望编译器使用 Vbc 文件，请使用[-noconfig](noconfig.md)编译器选项。  
   
  `-link` 的缩写形式是 `-l`。  
   
@@ -87,10 +87,10 @@ vbc -link:COMData1.dll,COMData2.dll /out:OfficeApp.exe OfficeApp.vb
   
 ## <a name="see-also"></a>请参阅
 
-- [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)
-- [演练：嵌入托管程序集中的类型](../../../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md)
-- [-reference (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)
-- [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)
-- [-libpath](../../../visual-basic/reference/command-line-compiler/libpath.md)
-- [示例编译命令行](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Visual Basic 命令行编译器](index.md)
+- [演练：嵌入托管程序集中的类型](../../../standard/assembly/embed-types-visual-studio.md)
+- [-reference （Visual Basic）](reference.md)
+- [-noconfig](noconfig.md)
+- [-libpath](libpath.md)
+- [示例编译命令行](sample-compilation-command-lines.md)
 - [COM 互操作介绍](../../../visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)

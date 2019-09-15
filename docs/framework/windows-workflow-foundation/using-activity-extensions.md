@@ -2,29 +2,29 @@
 title: 使用活动扩展
 ms.date: 03/30/2017
 ms.assetid: 500eb96a-c009-4247-b6b5-b36faffdf715
-ms.openlocfilehash: e524f7e7127eb215be85b0c317474eee70830c2b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 551ce24db8c0adc8225ac94a1d05f998a26873a9
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61669506"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70988638"
 ---
 # <a name="using-activity-extensions"></a>使用活动扩展
 活动可与工作流应用程序扩展进行交互，这些扩展允许主机提供未在工作流中显式建模的其他功能。  本主题描述如何创建和使用扩展以计算活动的执行次数。
 
 ### <a name="to-use-an-activity-extension-to-count-executions"></a>使用活动扩展来计算执行次数
 
-1. 打开 Visual Studio 2010。 选择**新**，**项目**。 下**Visual C#** 节点中，选择**工作流**。  选择**工作流控制台应用程序**从模板列表。 将项目命名为 `Extensions`。 单击“确定”，创建项目。
+1. 打开 Visual Studio 2010。 选择 "**新建**"、"**项目**"。 在 **C#可视化**节点下，选择 "**工作流**"。  从模板列表中选择 "**工作流控制台应用程序**"。 将项目命名为 `Extensions`。 单击**确定**以创建项目。
 
-2. 添加`using`的 Program.cs 文件中的语句**System.Collections.Generic**命名空间。
+2. 在 Program.cs 文件中为**system.object**命名空间添加语句。`using`
 
-    ```
+    ```csharp
     using System.Collections.Generic;
     ```
 
-3. 在 Program.cs 文件中，创建一个名为的新类**ExecutionCountExtension**。 下面的代码创建跟踪实例 Id 的工作流扩展时其**注册**调用方法。
+3. 在 Program.cs 文件中，创建一个名为**ExecutionCountExtension**的新类。 下面的代码创建一个在调用其**Register**方法时跟踪实例 id 的工作流扩展。
 
-    ```
+    ```csharp
     // This extension collects a list of workflow Ids
     public class ExecutionCountExtension
     {
@@ -56,9 +56,9 @@ ms.locfileid: "61669506"
     }
     ```
 
-4. 创建使用的活动**ExecutionCountExtension**。 下面的代码定义一个活动，检索**ExecutionCountExtension**对象的运行时和调用其**注册**方法执行活动时。
+4. 创建使用**ExecutionCountExtension**的活动。 下面的代码定义一个活动，该活动从运行时检索**ExecutionCountExtension**对象，并在执行活动时调用其**Register**方法。
 
-    ```
+    ```csharp
     // Activity that consumes an extension provided by the host. If the extension is available
     // in the context, it will invoke (in this case, registers the Id of the executing workflow)
     public class MyActivity: CodeActivity
@@ -75,9 +75,9 @@ ms.locfileid: "61669506"
     }
     ```
 
-5. 实现中的活动**Main** program.cs 文件的方法。 以下代码包含用于生成两个不同的工作流、将每个工作流执行多次以及显示扩展中包含的结果数据的方法。
+5. 在 program.cs 文件的**Main**方法中实现活动。 以下代码包含用于生成两个不同的工作流、将每个工作流执行多次以及显示扩展中包含的结果数据的方法。
 
-    ```
+    ```csharp
     class Program
     {
         // Creates a workflow that uses the activity that consumes the extension

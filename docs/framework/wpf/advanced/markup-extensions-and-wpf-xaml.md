@@ -15,12 +15,12 @@ helpviewer_keywords:
 - characters [WPF], curly brace
 - DynamicResource markup extensions [WPF]
 ms.assetid: 618dc745-8b14-4886-833f-486d2254bb78
-ms.openlocfilehash: f0eb4a90b09f49ced45fa8453356e1d6fb3b4af1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 562eea34af44a8fb24199e81477a4cb2ddb1046c
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965278"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991836"
 ---
 # <a name="markup-extensions-and-wpf-xaml"></a>标记扩展和 WPF XAML
 本主题介绍 XAML 的标记扩展概念，包括其语法规则、用途以及作为其基础的类对象模型。 标记扩展是 XAML 语言以及 XAML 服务的 .NET 实现的常规功能。 本主题专门详细讨论用于 WPF XAML 的标记扩展。  
@@ -104,7 +104,7 @@ ms.locfileid: "69965278"
 ## <a name="nesting-markup-extensions-in-xaml-usage"></a>XAML 中的嵌套标记扩展用法  
  支持多个标记扩展的嵌套，并且将首先计算每个标记扩展的最里层。 例如，考虑下面的用法：  
   
-```  
+```xaml  
 <Setter Property="Background"  
   Value="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" />  
 ```  

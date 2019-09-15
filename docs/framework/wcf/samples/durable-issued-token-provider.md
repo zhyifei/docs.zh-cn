@@ -2,12 +2,12 @@
 title: 持久性已颁发令牌提供程序
 ms.date: 03/30/2017
 ms.assetid: 76fb27f5-8787-4b6a-bf4c-99b4be1d2e8b
-ms.openlocfilehash: aa1180458b118132a632ea5d798db81283fffdab
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: f1bb95ba676b47d29d5b527b5b93eddcf48f4bde
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928825"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989945"
 ---
 # <a name="durable-issued-token-provider"></a>持久性已颁发令牌提供程序
 此示例演示如何实现一个自定义客户端已颁发令牌提供程序。  
@@ -120,7 +120,7 @@ ms.locfileid: "70928825"
   
      为了执行此任务，自定义令牌提供程序派生了 <xref:System.IdentityModel.Selectors.SecurityTokenProvider> 类，并重写了 <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%2A> 方法。 此方法尝试从缓存中获取令牌，如果在缓存中找不到令牌，则从基础提供程序中检索令牌并缓存该令牌。 在这两种情况下，该方法都返回 `SecurityToken`。  
   
-    ```csharp
+    ```csharp  
     protected override SecurityToken GetTokenCore(TimeSpan timeout)  
     {  
       GenericXmlSecurityToken token;  
@@ -137,7 +137,7 @@ ms.locfileid: "70928825"
   
      <xref:System.IdentityModel.Selectors.SecurityTokenManager> 用于为在 <xref:System.IdentityModel.Selectors.SecurityTokenProvider> 方法中传递给它的特定 <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> 创建 `CreateSecurityTokenProvider`。 安全令牌管理器还用于创建令牌身份验证器和令牌序列化程序，但本示例不涉及这些内容。 在此示例中，自定义安全令牌管理器从 <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> 类集成，并重写 `CreateSecurityTokenProvider` 方法，以便在所传递的令牌需求指示需要一个已颁发的令牌时返回自定义令牌提供程序。  
   
-    ```csharp
+    ```csharp  
     class DurableIssuedTokenClientCredentialsTokenManager :  
      ClientCredentialsSecurityTokenManager  
     {  
@@ -166,7 +166,7 @@ ms.locfileid: "70928825"
   
      客户端凭据类用于表示为客户端代理配置的凭据并创建一个安全令牌管理器，该管理器用于获取令牌身份验证器、令牌提供程序和令牌序列化程序。  
   
-    ```csharp
+    ```csharp  
     public class DurableIssuedTokenClientCredentials : ClientCredentials  
     {  
       IssuedTokenCache cache;  
@@ -206,7 +206,7 @@ ms.locfileid: "70928825"
   
 4. 实现令牌缓存。 该示例实现使用一个抽象基类，给定令牌缓存的使用方通过该基类与缓存进行交互。  
   
-    ```csharp
+    ```csharp  
     public abstract class IssuedTokenCache  
     {  
       public abstract void AddToken ( GenericXmlSecurityToken token, EndpointAddress target, EndpointAddress issuer);  
@@ -217,7 +217,7 @@ ms.locfileid: "70928825"
   
      为了使客户端使用自定义客户端凭据，该示例删除了默认的客户端凭据类，并提供了新的客户端凭据类。  
   
-    ```csharp
+    ```csharp  
     clientFactory.Endpoint.Behaviors.Remove<ClientCredentials>();  
     DurableIssuedTokenClientCredentials durableCreds = new DurableIssuedTokenClientCredentials();  
     durableCreds.IssuedTokenCache = cache;  

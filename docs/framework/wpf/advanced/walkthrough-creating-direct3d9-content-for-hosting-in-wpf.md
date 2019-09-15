@@ -7,118 +7,118 @@ helpviewer_keywords:
 - WPF [WPF], creating Direct3D9 content
 - Direct3D9 [WPF interoperability], creating Direct3D9 content
 ms.assetid: 286e98bc-1eaa-4b5e-923d-3490a9cca5fc
-ms.openlocfilehash: e1cb5832ec6e383d1ee183b6bc9a86745ecc207c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 462220b526db90d3acfa90a28f9bfd56dbe813e2
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64605843"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991400"
 ---
 # <a name="walkthrough-creating-direct3d9-content-for-hosting-in-wpf"></a>演练：创建在 WPF 中承载的 Direct3D9 内容
-本演练演示如何创建适用于 Windows Presentation Foundation (WPF) 应用程序中承载的 Direct3D9 内容。 承载 WPF 应用程序中的 Direct3D9 内容的详细信息，请参阅[WPF 和 Direct3D9 互操作](wpf-and-direct3d9-interoperation.md)。
+本演练演示如何创建适用于在 Windows Presentation Foundation （WPF）应用程序中承载的 Direct3D9 内容。 有关在 WPF 应用程序中承载 Direct3D9 内容的详细信息，请参阅[wpf 和 Direct3D9 互操作](wpf-and-direct3d9-interoperation.md)。
 
  在本演练中，你将要执行以下任务：
 
 - 创建 Direct3D9 项目。
 
-- 配置用于 WPF 应用程序中承载的 Direct3D9 项目。
+- 配置 Direct3D9 项目以在 WPF 应用程序中承载。
 
- 完成，你将拥有一个 DLL，它包含在 WPF 应用程序中使用的 Direct3D9 内容。
+ 完成后，将拥有一个包含 Direct3D9 内容的 DLL，以便在 WPF 应用程序中使用。
 
 ## <a name="prerequisites"></a>系统必备
  你需要以下组件来完成本演练：
 
 - Visual Studio 2010。
 
-- DirectX 9 或更高版本的 SDK。
+- DirectX SDK 9 或更高版本。
 
 ## <a name="creating-the-direct3d9-project"></a>创建 Direct3D9 项目
  第一步是创建和配置 Direct3D9 项目。
 
-#### <a name="to-create-the-direct3d9-project"></a>若要创建 Direct3D9 项目
+#### <a name="to-create-the-direct3d9-project"></a>创建 Direct3D9 项目
 
-1. 创建新的 Win32 项目中C++名为`D3DContent`。
+1. 创建一个C++名为`D3DContent`的新 Win32 项目。
 
      Win32 应用程序向导将打开并显示欢迎屏幕。
 
-2. 单击 **“下一步”**。
+2. 单击 **“下一步”** 。
 
-     应用程序设置屏幕会显示。
+     此时将显示 "应用程序设置" 屏幕。
 
-3. 在中**应用程序类型：** 部分中，选择**DLL**选项。
+3. 在 "**应用程序类型：** " 部分中，选择 " **DLL** " 选项。
 
-4. 单击 **“完成”**。
+4. 单击 **“完成”** 。
 
-     将生成 D3DContent 项目。
+     生成 D3DContent 项目。
 
-5. 在解决方案资源管理器，右键单击 D3DContent 项目并选择**属性**。
+5. 在解决方案资源管理器中，右键单击 D3DContent 项目，然后选择 "**属性**"。
 
-     **D3DContent 属性页**对话框随即打开。
+     此时将打开 " **D3DContent 属性页**" 对话框。
 
-6. 选择**C /C++** 节点。
+6. 选择**C/C++** 节点。
 
-7. 在中**附加包含目录**字段中，指定的 DirectX 的位置包括文件夹。 此文件夹的默认位置为 %ProgramFiles%\Microsoft DirectX SDK (*版本*) \Include。
+7. 在 "**附加包含目录**" 字段中，指定 DirectX 包含文件夹的位置。 此文件夹的默认位置为%ProgramFiles%\Microsoft DirectX SDK （*版本*） \Include。
 
-8. 双击**链接器**节点以将其展开。
+8. 双击 "**链接器**" 节点将其展开。
 
-9. 在中**附加库目录**字段中，指定 DirectX 库文件夹的位置。 此文件夹的默认位置为 %ProgramFiles%\Microsoft DirectX SDK (*版本*) \Lib\x86。
+9. 在 "**其他库目录**" 字段中，指定 DirectX Library 文件夹的位置。 此文件夹的默认位置为%ProgramFiles%\Microsoft DirectX SDK （*版本*） \Lib\x86。
 
-10. 选择**输入**节点。
+10. 选择 "**输入**" 节点。
 
-11. 在中**附加依赖项**字段中，添加`d3d9.lib`和`d3dx9.lib`文件。
+11. 在 "**其他依赖项**" 字段中`d3d9.lib` ， `d3dx9.lib`添加和文件。
 
-12. 在解决方案资源管理器，添加新模块定义文件 (.def) 名为`D3DContent.def`到项目。
+12. 在解决方案资源管理器中，将名`D3DContent.def`为的新模块定义文件（.def）添加到项目。
 
 ## <a name="creating-the-direct3d9-content"></a>创建 Direct3D9 内容
- 若要获得最佳性能，Direct3D9 内容必须使用特定的设置。 下面的代码演示如何创建具有最佳的性能特征的 Direct3D9 曲面。 有关详细信息，请参阅[Direct3D9 和 WPF 互操作性的性能注意事项](performance-considerations-for-direct3d9-and-wpf-interoperability.md)。
+ 若要获得最佳性能，你的 Direct3D9 内容必须使用特定设置。 下面的代码演示如何创建具有最佳性能特征的 Direct3D9 图面。 有关详细信息，请参阅[Direct3D9 和 WPF 互操作性的性能注意事项](performance-considerations-for-direct3d9-and-wpf-interoperability.md)。
 
-#### <a name="to-create-the-direct3d9-content"></a>若要创建 Direct3D9 内容
+#### <a name="to-create-the-direct3d9-content"></a>创建 Direct3D9 内容
 
-1. 使用解决方案资源管理器，添加三个C++项目的类名为以下。
+1. 使用解决方案资源管理器将三个C++类添加到名为的项目，如下所示。
 
-     `CRenderer` （具有虚拟析构函数）
+     `CRenderer`（包含虚拟析构函数）
 
      `CRendererManager`
 
      `CTriangleRenderer`
 
-2. 在代码编辑器中打开 Renderer.h 并自动生成的代码替换为以下代码。
+2. 在代码编辑器中打开呈现器 .h，并将自动生成的代码替换为以下代码。
 
      [!code-cpp[System.Windows.Interop.D3DImage#RendererH](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderer.h#rendererh)]
 
-3. 在代码编辑器中打开 Renderer.cpp 并自动生成的代码替换为以下代码。
+3. 在代码编辑器中打开呈现器 .cpp，并将自动生成的代码替换为以下代码。
 
      [!code-cpp[System.Windows.Interop.D3DImage#RendererCPP](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderer.cpp#renderercpp)]
 
-4. 在代码编辑器中打开 RendererManager.h 并自动生成的代码替换为以下代码。
+4. 在代码编辑器中打开 RendererManager，并将自动生成的代码替换为以下代码。
 
      [!code-cpp[System.Windows.Interop.D3DImage#RendererManagerH](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderermanager.h#renderermanagerh)]
 
-5. 在代码编辑器中打开 RendererManager.cpp 并自动生成的代码替换为以下代码。
+5. 在代码编辑器中打开 RendererManager，并将自动生成的代码替换为以下代码。
 
      [!code-cpp[System.Windows.Interop.D3DImage#RendererManagerCPP](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderermanager.cpp#renderermanagercpp)]
 
-6. 在代码编辑器中打开 TriangleRenderer.h 并自动生成的代码替换为以下代码。
+6. 在代码编辑器中打开 TriangleRenderer，并将自动生成的代码替换为以下代码。
 
      [!code-cpp[System.Windows.Interop.D3DImage#TriangleRendererH](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/trianglerenderer.h#trianglerendererh)]
 
-7. 在代码编辑器中打开 TriangleRenderer.cpp 并自动生成的代码替换为以下代码。
+7. 在代码编辑器中打开 TriangleRenderer，并将自动生成的代码替换为以下代码。
 
      [!code-cpp[System.Windows.Interop.D3DImage#TriangleRendererCPP](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/trianglerenderer.cpp#trianglerenderercpp)]
 
-8. 在代码编辑器中打开 stdafx.h 和自动生成的代码替换为以下代码。
+8. 在代码编辑器中打开 stdafx.h，并将自动生成的代码替换为以下代码。
 
      [!code-cpp[System.Windows.Interop.D3DImage#StdafxH](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/stdafx.h#stdafxh)]
 
-9. 在代码编辑器中打开 dllmain.cpp 并自动生成的代码替换为以下代码。
+9. 在代码编辑器中打开 dllmain，并将自动生成的代码替换为以下代码。
 
      [!code-cpp[System.Windows.Interop.D3DImage#DllMain](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/dllmain.cpp#dllmain)]
 
-10. 在代码编辑器中打开 D3DContent.def。
+10. 在代码编辑器中打开 D3DContent。
 
-11. 自动生成的代码替换为以下代码。
+11. 将自动生成的代码替换为以下代码。
 
-    ```
+    ```cpp
     LIBRARY "D3DContent"
 
     EXPORTS
@@ -137,7 +137,7 @@ ms.locfileid: "64605843"
 
 ## <a name="next-steps"></a>后续步骤
 
-- 承载 Direct3D9 内容在 WPF 应用程序。 有关详细信息，请参见[演练：承载 Direct3D9 内容在 WPF 中的](walkthrough-hosting-direct3d9-content-in-wpf.md)。
+- 在 WPF 应用程序中托管 Direct3D9 内容。 有关详细信息，请参见[演练：在 WPF](walkthrough-hosting-direct3d9-content-in-wpf.md)中承载 Direct3D9 内容。
 
 ## <a name="see-also"></a>请参阅
 

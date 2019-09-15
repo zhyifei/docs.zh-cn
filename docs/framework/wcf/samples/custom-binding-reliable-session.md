@@ -2,12 +2,12 @@
 title: 自定义绑定可靠会话
 ms.date: 03/30/2017
 ms.assetid: c5fcd409-246f-4f3e-b3f1-629506ca4c04
-ms.openlocfilehash: a68acc29629a47c2c4a3263f04ec4f6e32a7173c
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: b2679ad4c6e8595a7b6d6bc9818880da56781e38
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70040066"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989998"
 ---
 # <a name="custom-binding-reliable-session"></a>自定义绑定可靠会话
 
@@ -29,7 +29,7 @@ ms.locfileid: "70040066"
 > [!NOTE]
 > 本主题的最后介绍了此示例的设置过程和生成说明。
 
-在定义自定义绑定时, 绑定元素的排序非常重要, 因为每个元素都表示通道堆栈中的一个层 (请参阅[自定义绑定](../../../../docs/framework/wcf/extending/custom-bindings.md))。
+在定义自定义绑定时，绑定元素的排序非常重要，因为每个元素都表示通道堆栈中的一个层（请参阅[自定义绑定](../../../../docs/framework/wcf/extending/custom-bindings.md)）。
 
 示例的服务配置定义如下面的代码示例所示。
 
@@ -92,7 +92,7 @@ ms.locfileid: "70040066"
 
 运行示例时，操作请求和响应将显示在客户端控制台窗口中。 在客户端窗口中按 Enter 可以关闭客户端。
 
-```
+```console
 Add(100,15.99) = 115.99
 Subtract(145,76.54) = 68.46
 Multiply(9,81.25) = 731.25
@@ -103,9 +103,9 @@ Press <ENTER> to terminate client.
 
 #### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例
 
-1. 使用以下命令安装 ASP.NET 4.0:
+1. 使用以下命令安装 ASP.NET 4.0：
 
-    ```
+    ```console
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable
     ```
 
@@ -116,7 +116,7 @@ Press <ENTER> to terminate client.
 4. 若要以单机配置或跨计算机配置来运行示例, 请按照[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的说明进行操作。
 
     > [!IMPORTANT]
-    > 在跨计算机配置中运行客户端时, 请确保`address`在[ \<终结点](../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md)的属性 > 元素和`clientBaseAddress`属性[ \<compositeDuplex>](../../../../docs/framework/configure-apps/file-schema/wcf/compositeduplex.md)替换为适当计算机的名称, 如以下示例中所示。
+    > 在跨计算机配置中运行客户端时，请确保`address`在[ \<终结点](../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md)的属性 > 元素和`clientBaseAddress`属性[ \<compositeDuplex>](../../../../docs/framework/configure-apps/file-schema/wcf/compositeduplex.md)替换为适当计算机的名称，如以下示例中所示。
 
     ```xml
     <endpoint name = ""

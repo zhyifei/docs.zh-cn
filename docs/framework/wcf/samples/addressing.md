@@ -2,12 +2,12 @@
 title: 寻址
 ms.date: 03/30/2017
 ms.assetid: d438e6f2-d0f3-43aa-b259-b51b5bda2e64
-ms.openlocfilehash: 249060896b97de1694dec121cb25219baccdd88b
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: a94e6dd50fb4a7326666c7843e20964b35f957c6
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045832"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70990211"
 ---
 # <a name="addressing"></a>寻址
 “寻址”示例演示终结点地址的各个方面和功能。 该示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)。 在本示例中，服务是自承载的。 服务和客户端都是控制台应用程序。 服务使用相对和绝对终结点地址的组合来定义多个终结点。  
@@ -83,7 +83,7 @@ ms.locfileid: "70045832"
   
  运行示例时，服务会枚举其每个终结点的地址、绑定名称和协定名称。 从 ServiceHost 的角度来看，元数据交换 (MEX) 终结点只是另一个终结点，因此在列表中出现。  
   
-```  
+```console  
 Service endpoints:  
 Endpoint - address:  http://localhost:8000/ServiceModelSamples/service  
            binding:  WSHttpBinding  
@@ -107,7 +107,7 @@ Press <ENTER> to terminate service.
   
  运行客户端时，操作请求和响应将显示在服务和客户端控制台窗口中。 在每个控制台窗口中按 Enter 可以关闭服务和客户端。  
   
-```  
+```console  
 Add(100,15.99) = 115.99  
 Subtract(145,76.54) = 68.46  
 Multiply(9,81.25) = 731.25  

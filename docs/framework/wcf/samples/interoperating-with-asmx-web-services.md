@@ -2,15 +2,15 @@
 title: 与 ASMX Web 服务互操作
 ms.date: 03/30/2017
 ms.assetid: a7c11f0a-9e68-4f03-a6b1-39cf478d1a89
-ms.openlocfilehash: d4b59347a7ae8561637be436fa0c56096ecac3f0
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 2ef4e34de76c046ba21dd7a3c50ea6ba782d459e
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039567"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989802"
 ---
 # <a name="interoperating-with-asmx-web-services"></a>与 ASMX Web 服务互操作
-此示例演示如何将 Windows Communication Foundation (WCF) 客户端应用程序与现有的 .ASMX Web 服务集成。  
+此示例演示如何将 Windows Communication Foundation （WCF）客户端应用程序与现有的 .ASMX Web 服务集成。  
   
 > [!NOTE]
 > 本主题的最后介绍了此示例的设置过程和生成说明。  
@@ -46,11 +46,11 @@ public class CalculatorService : System.Web.Services.WebService
     }  
 ```  
   
- 在配置后, 同一台计算机上的`http://localhost/servicemodelsamples/service.asmx`客户端可以访问该服务。 若要使远程计算机上的客户端能够访问该服务，必须指定限定域名，而不是本地主机。  
+ 在配置后，同一台计算机上的`http://localhost/servicemodelsamples/service.asmx`客户端可以访问该服务。 若要使远程计算机上的客户端能够访问该服务，必须指定限定域名，而不是本地主机。  
   
- 通信是通过标准[元数据实用工具 (svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)生成的客户端来完成的。 该客户端包含在 generatedClient.cs 文件中。 若要生成代理代码，ASMX 服务必须可用，因为需要使用该服务来检索更新的元数据。 在客户端目录中通过命令提示符运行以下命令可以生成该类型化代理。  
+ 通信是通过标准[元数据实用工具（svcutil.exe）](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)生成的客户端来完成的。 该客户端包含在 generatedClient.cs 文件中。 若要生成代理代码，ASMX 服务必须可用，因为需要使用该服务来检索更新的元数据。 在客户端目录中通过命令提示符运行以下命令可以生成该类型化代理。  
   
-```  
+```console  
 svcutil.exe /n:http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples http://localhost/servicemodelsamples/service.svc?wsdl /out:generatedClient.cs  
 ```  
   
@@ -105,7 +105,7 @@ Console.ReadLine();
   
  运行示例时，操作请求和响应将显示在客户端控制台窗口中。 在客户端窗口中按 Enter 可以关闭客户端。  
   
-```  
+```console
 Add(100,15.99) = 115.99  
 Subtract(145,76.54) = 68.46  
 Multiply(9,81.25) = 731.25  

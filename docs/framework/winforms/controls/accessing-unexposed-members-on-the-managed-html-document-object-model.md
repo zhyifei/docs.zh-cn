@@ -8,30 +8,30 @@ helpviewer_keywords:
 - unexposed members
 - managed HTML DOM [Windows Forms], accessing unexposed members
 ms.assetid: 762295bd-2355-4aa7-b43c-5bff997a33e6
-ms.openlocfilehash: 539ac998a557615c097c33cdd4207e99f396e81d
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: 525ef52ecbbc61fba787fa8286c56c638d837faf
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65959626"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70988403"
 ---
 # <a name="accessing-unexposed-members-on-the-managed-html-document-object-model"></a>在托管 HTML 文档对象模型中访问未公开成员
-托管 HTML 文档对象模型 (DOM) 包含一个名为类<xref:System.Windows.Forms.HtmlElement>公开属性、 方法和事件的所有 HTML 元素都有共同点。 有时，但是，你将需要访问托管的接口不会直接公开的成员。 本主题将分析用于访问未公开的成员，包括在 Web 页内定义的 JScript 和 VBScript 函数的两种方法。  
+托管 HTML 文档对象模型（DOM）包含一个名<xref:System.Windows.Forms.HtmlElement>为的类，该类公开所有 HTML 元素共有的属性、方法和事件。 但是，有时需要访问托管接口不直接公开的成员。 本主题将介绍两种访问未公开成员的方式，包括在网页内部定义的 JScript 和 VBScript 函数。  
   
-## <a name="accessing-unexposed-members-through-managed-interfaces"></a>通过托管接口访问未公开的成员  
- <xref:System.Windows.Forms.HtmlDocument> 和<xref:System.Windows.Forms.HtmlElement>提供四种方法来访问未公开成员。 下表显示类型和其相应的方法。  
+## <a name="accessing-unexposed-members-through-managed-interfaces"></a>通过托管接口访问未公开成员  
+ <xref:System.Windows.Forms.HtmlDocument>和<xref:System.Windows.Forms.HtmlElement>提供了允许访问未公开成员的四种方法。 下表显示了类型及其对应的方法。  
   
 |成员类型|方法|  
 |-----------------|-----------------|  
-|属性 (<xref:System.Windows.Forms.HtmlElement>)|<xref:System.Windows.Forms.HtmlElement.GetAttribute%2A><br /><br /> <xref:System.Windows.Forms.HtmlElement.SetAttribute%2A>|  
+|Properties （<xref:System.Windows.Forms.HtmlElement>）|<xref:System.Windows.Forms.HtmlElement.GetAttribute%2A><br /><br /> <xref:System.Windows.Forms.HtmlElement.SetAttribute%2A>|  
 |方法|<xref:System.Windows.Forms.HtmlElement.InvokeMember%2A>|  
-|事件 (<xref:System.Windows.Forms.HtmlDocument>)|<xref:System.Windows.Forms.HtmlDocument.AttachEventHandler%2A><br /><br /> <xref:System.Windows.Forms.HtmlDocument.DetachEventHandler%2A>|  
-|事件 (<xref:System.Windows.Forms.HtmlElement>)|<xref:System.Windows.Forms.HtmlElement.AttachEventHandler%2A><br /><br /> <xref:System.Windows.Forms.HtmlElement.DetachEventHandler%2A>|  
-|事件 (<xref:System.Windows.Forms.HtmlWindow>)|<xref:System.Windows.Forms.HtmlWindow.AttachEventHandler%2A><br /><br /> <xref:System.Windows.Forms.HtmlWindow.DetachEventHandler%2A>|  
+|Events （<xref:System.Windows.Forms.HtmlDocument>）|<xref:System.Windows.Forms.HtmlDocument.AttachEventHandler%2A><br /><br /> <xref:System.Windows.Forms.HtmlDocument.DetachEventHandler%2A>|  
+|Events （<xref:System.Windows.Forms.HtmlElement>）|<xref:System.Windows.Forms.HtmlElement.AttachEventHandler%2A><br /><br /> <xref:System.Windows.Forms.HtmlElement.DetachEventHandler%2A>|  
+|Events （<xref:System.Windows.Forms.HtmlWindow>）|<xref:System.Windows.Forms.HtmlWindow.AttachEventHandler%2A><br /><br /> <xref:System.Windows.Forms.HtmlWindow.DetachEventHandler%2A>|  
   
- 当使用这些方法时，假定您具有正确的基础类型的元素。 假设你想要收听`Submit`的事件`FORM`上对应的 HTML 元素页上，因此，你可以在执行一些预处理`FORM`的值之前用户将其提交到服务器。 理想情况下，如果你可以控制 HTML，您需要定义`FORM`具有一个唯一`ID`属性。  
+ 当你使用这些方法时，假设你有一个正确的基础类型的元素。 假设你想要侦听`Submit` HTML 页面上某个`FORM`元素的事件，以便可以在`FORM`用户将其提交到服务器之前对其值执行一些预处理操作。 理想情况下，如果您可以控制 HTML，则可以将定义`FORM`为具有唯一`ID`属性。  
   
-```  
+```html  
 <HTML>  
   
     <HEAD>  
@@ -47,29 +47,29 @@ ms.locfileid: "65959626"
 </HTML>  
 ```  
   
- 加载到此页后<xref:System.Windows.Forms.WebBrowser>控件，可以使用<xref:System.Windows.Forms.HtmlDocument.GetElementById%2A>方法来检索`FORM`在运行的时使用`form1`作为自变量。  
+ 将此<xref:System.Windows.Forms.WebBrowser>页加载到控件中后，可以<xref:System.Windows.Forms.HtmlDocument.GetElementById%2A>使用方法`FORM`在运行时`form1`使用作为参数来检索。  
   
  [!code-csharp[System.Windows.Forms.HtmlElement#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.HtmlElement/CS/Form1.cs#10)]
  [!code-vb[System.Windows.Forms.HtmlElement#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.HtmlElement/VB/Form1.vb#10)]  
   
-## <a name="accessing-unmanaged-interfaces"></a>访问非托管的接口  
- 此外可以通过使用由每个 DOM 类公开的非托管的组件对象模型 (COM) 接口访问托管 HTML DOM 上的未公开的成员。 如果需要进行多次调用未公开成员，或未公开的成员返回不使用托管 HTML DOM 的包装其他非托管的接口是建议这样做  
+## <a name="accessing-unmanaged-interfaces"></a>访问非托管接口  
+ 你还可以通过使用每个 DOM 类公开的非托管组件对象模型（COM）接口，访问托管 HTML DOM 上的未公开成员。 如果你必须对未公开的成员进行多次调用，或者未公开成员返回托管的 HTML DOM 未包装的其他非托管接口，则建议使用此方法。  
   
- 下表显示了所有托管 HTML dom。 通过公开的非托管接口 单击每个链接的说明其用途和有关示例代码。  
+ 下表显示了通过托管 HTML DOM 公开的所有非托管接口。 单击每个链接以了解其用法说明和示例代码。  
   
-|类型|非托管的接口|  
+|类型|非托管接口|  
 |----------|-------------------------|  
 |<xref:System.Windows.Forms.HtmlDocument>|<xref:System.Windows.Forms.HtmlDocument.DomDocument%2A>|  
 |<xref:System.Windows.Forms.HtmlElement>|<xref:System.Windows.Forms.HtmlElement.DomElement%2A>|  
 |<xref:System.Windows.Forms.HtmlWindow>|<xref:System.Windows.Forms.HtmlWindow.DomWindow%2A>|  
 |<xref:System.Windows.Forms.HtmlHistory>|<xref:System.Windows.Forms.HtmlHistory.DomHistory%2A>|  
   
- 使用 COM 接口的最简单方法是添加到非托管 HTML DOM 库 (MSHTML.dll) 的引用从应用程序，虽然这是不受支持。 有关详细信息，请参阅[知识库文章 934368](https://support.microsoft.com/kb/934368)。  
+ 要使用 COM 接口，最简单的方法是从应用程序添加对非托管 HTML DOM 库（MSHTML）的引用，尽管这是不受支持的。 有关详细信息，请参阅[知识库文章 934368](https://support.microsoft.com/kb/934368)。  
   
 ## <a name="accessing-script-functions"></a>访问脚本函数  
- HTML 页可以定义一个或多个函数，通过使用 JScript 或 VBScript 等脚本语言。 这些函数的内部放置`SCRIPT`页在页中，并可对 DOM 按需或响应的事件中运行  
+ HTML 页可以使用脚本语言（如 JScript 或 VBScript）定义一个或多个函数。 这些函数位于页面的`SCRIPT`页面内，可以按需运行，也可以作为对 DOM 上某个事件的响应。  
   
- 可以调用任何脚本函数定义在 HTML 页使用<xref:System.Windows.Forms.HtmlDocument.InvokeScript%2A>方法。 如果脚本方法返回一个 HTML 元素，您可以使用强制转换将转换到此返回结果<xref:System.Windows.Forms.HtmlElement>。 有关详细信息和代码示例，请参阅<xref:System.Windows.Forms.HtmlDocument.InvokeScript%2A>。  
+ 您可以使用<xref:System.Windows.Forms.HtmlDocument.InvokeScript%2A>方法调用在 HTML 页中定义的任何脚本函数。 如果脚本方法返回一个 HTML 元素，则可以使用强制转换将此返回结果转换为<xref:System.Windows.Forms.HtmlElement>。 有关详细信息和示例代码， <xref:System.Windows.Forms.HtmlDocument.InvokeScript%2A>请参阅。  
   
 ## <a name="see-also"></a>请参阅
 

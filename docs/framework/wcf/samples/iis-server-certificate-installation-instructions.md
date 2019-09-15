@@ -2,20 +2,20 @@
 title: Internet Information Services (IIS) 服务器证书安装说明
 ms.date: 03/30/2017
 ms.assetid: 11281490-d2ac-4324-8f33-e7714611a34b
-ms.openlocfilehash: 1bb9c8bb2fedc846f46f665fbfd00178e5c72975
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 300d689925d60998ef475ad63f3878bf6d066850
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044912"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989855"
 ---
 # <a name="internet-information-services-iis-server-certificate-installation-instructions"></a>Internet Information Services (IIS) 服务器证书安装说明
 若要运行可与 Internet 信息服务 (IIS) 安全通信的示例，您必须创建和安装服务器证书。  
   
 ## <a name="step-1-creating-certificates"></a>步骤 1。 创建证书  
- 若要为你的计算机创建证书, 请使用管理员权限打开 Visual Studio 开发人员命令提示, 并运行每个使用安全与 IIS 的通信的示例中包含的安装程序。 在运行此批处理文件之前，确保路径包括其中包含 Makecert.exe 的文件夹。 以下命令用于在 Setup.bat 中创建证书。  
+ 若要为你的计算机创建证书，请使用管理员权限打开 Visual Studio 开发人员命令提示，并运行每个使用安全与 IIS 的通信的示例中包含的安装程序。 在运行此批处理文件之前，确保路径包括其中包含 Makecert.exe 的文件夹。 以下命令用于在 Setup.bat 中创建证书。  
   
-```  
+```console  
 makecert -sr LocalMachine -ss My -n CN=ServiceModelSamples-HTTPS-Server -sky exchange -sk ServiceModelSamples-HTTPS-Key  
 ```  
   
@@ -26,7 +26,7 @@ makecert -sr LocalMachine -ss My -n CN=ServiceModelSamples-HTTPS-Server -sky exc
   
 1. 打开 Internet 信息服务管理器 MMC 管理单元。  
   
-2. 右键单击 "默认网站", 然后选择 "**属性**"。  
+2. 右键单击 "默认网站"，然后选择 "**属性**"。  
   
 3. 选择 "**目录安全**" 选项卡。  
   
@@ -49,21 +49,21 @@ makecert -sr LocalMachine -ss My -n CN=ServiceModelSamples-HTTPS-Server -sky exc
 > [!IMPORTANT]
 > 只有测试证书（比如通过 Makecert.exe 创建的那些证书）才需要此代码。 建议不要为成品代码执行此操作。  
   
-```  
+```csharp  
 PermissiveCertificatePolicy.Enact("CN=ServiceModelSamples-HTTPS-Server");  
 ```  
   
 #### <a name="to-install-iis-on-iis-70-windows-vista-and-windows-server-2008"></a>在 IIS 7.0（Windows Vista 和 Windows Server 2008）上安装 IIS  
   
-1. 从 "**开始**" 菜单中, 单击 "**运行**", 然后键入**INETMGR**以打开 Internet Information Services (IIS) mmc 管理单元。  
+1. 从 "**开始**" 菜单中，单击 "**运行**"，然后键入**INETMGR**以打开 Internet Information Services （IIS） mmc 管理单元。  
   
-2. 右键单击 "**默认**网站", 然后选择 "**编辑绑定 ...** "  
+2. 右键单击 "**默认**网站"，然后选择 "**编辑绑定 ...** "  
   
 3. 单击 "**网站绑定**" 对话框的 "**添加**" 按钮。  
   
 4. 从 "**类型**" 下拉列表中选择 " **HTTPS** "。  
   
-5. 从 " **SSL 证书**" 下拉列表中选择 " **ServiceModelSamples-HTTPS-服务器**", 然后单击 **"确定"** 。  
+5. 从 " **SSL 证书**" 下拉列表中选择 " **ServiceModelSamples-HTTPS-服务器**"，然后单击 **"确定"** 。  
   
 6. 使用 HTTPS 地址`https://localhost/servicemodelsamples/service.svc`在浏览器中测试对服务的访问。  
   
@@ -76,6 +76,6 @@ PermissiveCertificatePolicy.Enact("CN=ServiceModelSamples-HTTPS-Server");
   
 - 使用以下命令移除计算机证书。  
   
-    ```  
+    ```console  
     httpcfg delete ssl -i 0.0.0.0:443  
     ```

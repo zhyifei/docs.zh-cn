@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services
 - WCF Data Services, about
 ms.assetid: 7924cf94-c9a6-4015-afc9-f5d22b1743bb
-ms.openlocfilehash: 66dd61210e36210f5444eb05355612eeb75c155a
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: bca07bf776f20443c4ccd2af69fc8c0b4eec5a88
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70790235"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991101"
 ---
 # <a name="wcf-data-services-overview"></a>WCF 数据服务概述
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]使用可以为 Web 或 intranet 创建和使用[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]数据服务。 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]使你能够将数据公开为可通过 Uri 进行寻址的资源。 这样，您就可以通过使用具象状态传输 (REST) 的语义（尤其是标准 HTTP 谓词 GET、PUT、POST 和 DELETE）来访问和更改数据。 本主题概述了 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 定义的模式和做法，另外还介绍 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]提供的帮助在基于 .NET Framework 的应用程序中使用 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 的工具。  
@@ -18,9 +18,9 @@ ms.locfileid: "70790235"
 ## <a name="address-data-as-resources"></a>以资源形式对数据进行寻址  
  [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 将数据公开为可通过 URI 进行寻址的资源。 基于实体数据模型的实体关系约定构造资源路径。 在此模型中，实体表示应用程序域中数据的操作单元，如客户、订单、商品和产品。 有关详细信息，请参阅[实体数据模型](../adonet/entity-data-model.md)。  
   
- 在 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 中，实体资源地址的形式为包含实体类型实例的实体集。 例如，URI `http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders`返回`Northwind`数据服务中与`CustomerID`值为的客户相关的所有订单`ALFKI.`  
+ 在 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 中，实体资源地址的形式为包含实体类型实例的实体集。 例如，URI <https://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders>返回`Northwind`数据服务中与`CustomerID`值为的客户相关的所有订单`ALFKI.`  
   
- 利用查询表达式，可以对资源执行传统的查询操作，如筛选、排序和分页。 例如，URI `http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders?$filter=Freight gt 50` 对资源进行筛选，以仅返回运费高于 50 美元的订单。 有关详细信息，请参阅[访问数据服务资源](accessing-data-service-resources-wcf-data-services.md)。  
+ 利用查询表达式，可以对资源执行传统的查询操作，如筛选、排序和分页。 例如，URI <https://services.odata.org/Northwind/Northwind.svc/Customers("ALFKI"）/Orders？ $filter = 运费 gt 50 > 筛选资源，以仅返回运费成本超过 $50 的订单。 有关详细信息，请参阅[访问数据服务资源](accessing-data-service-resources-wcf-data-services.md)。  
   
 ## <a name="interoperable-data-access"></a>可互操作的数据访问  
  [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]构建标准 Internet 协议，使数据服务与不使用 .NET Framework 的应用程序互操作。 由于可以使用标准 Uri 来处理数据，因此应用程序可以使用具象状态传输（REST）的语义来访问和更改数据，特别是 GET、PUT、POST 和 DELETE 的标准 HTTP 谓词。 这样您就可以从任何可分析和访问通过标准 HTTP 协议传输的数据的客户端访问这些服务。  

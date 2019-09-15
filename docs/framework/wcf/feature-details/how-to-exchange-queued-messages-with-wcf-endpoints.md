@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 938e7825-f63a-4c3d-b603-63772fabfdb3
-ms.openlocfilehash: dd59e7689fbca68d3e7b0b0008973e471d092fe0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 09b21c9483b4f2716409b560dbbb478fe5a6badd
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61778334"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972227"
 ---
 # <a name="how-to-exchange-queued-messages-with-wcf-endpoints"></a>如何：使用 WCF 终结点交换排队消息
-队列确保，可靠消息传递之间可能会出现在客户端和 Windows Communication Foundation (WCF) 服务，即使在通信时服务不可用。 以下过程介绍如何确保实现 WCF 服务时，客户端和服务通过使用标准之间的持久性通信排队绑定。  
+队列确保客户端和 Windows Communication Foundation （WCF）服务之间可以发生可靠消息传送，即使该服务在通信时不可用。 下面的过程演示如何通过在实现 WCF 服务时使用标准排队绑定来确保客户端和服务之间的持久通信。  
   
- 本部分介绍如何使用<xref:System.ServiceModel.NetMsmqBinding>的 WCF 客户端和 WCF 服务之间的排队通信。  
+ 本部分介绍如何将<xref:System.ServiceModel.NetMsmqBinding>用于 wcf 客户端和 wcf 服务之间的排队通信。  
   
 ### <a name="to-use-queuing-in-a-wcf-service"></a>在 WCF 服务中使用队列  
   
@@ -41,7 +41,7 @@ ms.locfileid: "61778334"
      [!code-csharp[S_Msmq_Transacted#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_transacted/cs/hostapp.cs#4)]
      [!code-vb[S_Msmq_Transacted#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_transacted/vb/hostapp.vb#4)]  
   
-5. 在指定服务地址并使用标准 <xref:System.ServiceModel.Description.ServiceEndpoint> 绑定的配置中定义 <xref:System.ServiceModel.NetMsmqBinding>。 有关使用 WCF 配置的详细信息，请参阅[配置 WCF 服务](../configuring-services.md)。  
+5. 在指定服务地址并使用标准 <xref:System.ServiceModel.Description.ServiceEndpoint> 绑定的配置中定义 <xref:System.ServiceModel.NetMsmqBinding>。 有关使用 WCF 配置的详细信息，请参阅[配置 wcf 服务](../configuring-services.md)。  
 
 6. 使用 `OrderProcessing` 为 <xref:System.ServiceModel.ServiceHost> 服务创建一个主机，该主机从队列读取消息并处理这些消息。 打开服务主机使服务处于可用状态。 显示一条消息，告知用户按任何键以终止服务。 调用 `ReadLine` 等待按键，然后关闭服务。  
   
@@ -50,15 +50,15 @@ ms.locfileid: "61778334"
   
 ### <a name="to-create-a-client-for-the-queued-service"></a>为排队服务创建客户端  
   
-1. 下面的示例演示如何运行托管应用程序并使用 Svcutil.exe 工具创建 WCF 客户端。  
+1. 下面的示例演示如何运行宿主应用程序并使用 Svcutil.exe 工具创建 WCF 客户端。  
   
-    ```  
+    ```console
     svcutil http://localhost:8000/ServiceModelSamples/service  
     ```  
   
 2. 在配置中定义 <xref:System.ServiceModel.Description.ServiceEndpoint>，指定地址并使用标准 <xref:System.ServiceModel.NetMsmqBinding> 绑定，如下面的示例所示。  
 
-3. 创建要写入事务性队列，调用的事务作用域`SubmitPurchaseOrder`操作并关闭 WCF 客户端，如下面的示例中所示。  
+3. 创建事务范围以写入到事务性队列，调用`SubmitPurchaseOrder`操作并关闭 WCF 客户端，如下面的示例中所示。  
   
      [!code-csharp[S_Msmq_Transacted#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_transacted/cs/client.cs#8)]
      [!code-vb[S_Msmq_Transacted#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_transacted/vb/client.vb#8)]  
@@ -80,7 +80,7 @@ ms.locfileid: "61778334"
 - <xref:System.ServiceModel.NetMsmqBinding>
 - [已进行事务处理的 MSMQ 绑定](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)
 - [在 WCF 中排队](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
-- [如何：使用 WCF 终结点和消息队列应用程序交换消息](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)
+- [如何：与 WCF 终结点和消息队列应用程序交换消息](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)
 - [Windows Communication Foundation 到消息队列](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)
 - [安装消息队列 (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)
 - [到 Windows Communication Foundation 的消息队列](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)

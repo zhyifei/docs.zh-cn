@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 ms.assetid: 0ac41286-4c1b-4b17-9196-d985cb844ce1
-ms.openlocfilehash: bff89f1d81b16c8c66d73901ef951626f6d2cb9e
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: a062095885e6c1fc8816a78847968b1c250eabf8
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400622"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991450"
 ---
 # <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a>演练：在 Windows 窗体中承载 WPF 复合控件
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供了用于创建应用程序的丰富环境。 但是, 当你对[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]代码有大量投资时, 可以更有效地使用[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]扩展现有[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]应用程序, 而不是从头开始重新编写。 常见的一种情况是, 当你想要在 Windows 窗体应用程序[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]中嵌入一个或多个实现的控件。 有关自定义 WPF 控件的详细信息, 请参阅[控件自定义](../controls/control-customization.md)。  
@@ -58,7 +58,7 @@ ms.locfileid: "68400622"
   
 - PresentationFramework  
   
-- 系统  
+- System  
   
 - WindowsBase  
   
@@ -116,7 +116,7 @@ ms.locfileid: "68400622"
 #### <a name="the-basic-structure-of-the-code-behind-file"></a>代码隐藏文件的基本结构  
  代码隐藏文件包含一个命名空间, `MyControls`该命名空间将包含两个`MyControl1`类和`MyControlEventArgs`。  
   
-```  
+```csharp  
 namespace MyControls  
 {  
   public partial class MyControl1 : Grid  
@@ -230,7 +230,7 @@ namespace MyControls
   
 4. 将以下<xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType>控件添加到窗体。  
   
-    |名称|Text|  
+    |name|文本|  
     |----------|----------|  
     |groupBox1|背景色|  
     |groupBox2|前景色|  
@@ -242,7 +242,7 @@ namespace MyControls
   
 5. 将以下<xref:System.Windows.Forms.RadioButton?displayProperty=nameWithType>控件添加<xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType>到控件。  
   
-    |GroupBox|name|Text|  
+    |GroupBox|name|文本|  
     |--------------|----------|----------|  
     |groupBox1|radioBackgroundOriginal|原始|  
     |groupBox1|radioBackgroundLightGreen|LightGreen|  
@@ -305,7 +305,7 @@ namespace MyControls
 ### <a name="handling-onbuttonclick"></a>处理 OnButtonClick  
  当`OnButtonClick`用户单击 **"确定" 或 "** **取消**" 按钮时发生此事件。  
   
- 事件处理程序检查事件参数的`IsOK`字段以确定单击了哪个按钮。 数据变量对应于前面讨论<xref:System.Windows.Forms.Label>过的控件。  `lbl` 如果用户单击 **"确定"** 按钮, 则控件<xref:System.Windows.Controls.TextBox>的控件中的数据将被分配给相应<xref:System.Windows.Forms.Label>的控件。 如果用户单击 "**取消**", <xref:System.Windows.Forms.Label.Text%2A>则这些值将设置为默认字符串。  
+ 事件处理程序检查事件参数的`IsOK`字段以确定单击了哪个按钮。 数据变量对应于前面讨论<xref:System.Windows.Forms.Label>过的控件。 `lbl` 如果用户单击 **"确定"** 按钮, 则控件<xref:System.Windows.Controls.TextBox>的控件中的数据将被分配给相应<xref:System.Windows.Forms.Label>的控件。 如果用户单击 "**取消**", <xref:System.Windows.Forms.Label.Text%2A>则这些值将设置为默认字符串。  
   
  将以下按钮单击事件处理程序代码添加到`Form1`类。  
   

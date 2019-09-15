@@ -2,20 +2,20 @@
 title: 单并发模式中的有序消息处理
 ms.date: 03/30/2017
 ms.assetid: a90f5662-a796-46cd-ae33-30a4072838af
-ms.openlocfilehash: 785c2953e57eaf967209b0d9e52ab85a3a99c450
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ecabb9a6e838b0137c538d76c554646356ea87f5
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769442"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991506"
 ---
 # <a name="ordered-processing-of-messages-in-single-concurrency-mode"></a>单并发模式中的有序消息处理
-WCF 使消息被处理的顺序提供任何保证，除非基础通道是会话。  例如，使用 MsmqInputChannel 不是会话通道的 WCF 服务将无法按顺序处理消息。 有某些情况下，其中一名开发人员可能希望在订单处理行为，但不是希望使用会话。 本主题介绍在单一并发模式中运行服务时，如何配置这种行为。  
+WCF 不会保证消息的处理顺序，除非基础通道是会话的。  例如，使用 MsmqInputChannel 的 WCF 服务（不是会话通道）将无法按顺序处理消息。 在某些情况下，开发人员可能希望按顺序处理行为，但不希望使用会话。 本主题介绍在单一并发模式中运行服务时，如何配置这种行为。  
   
 ## <a name="in-order-message-processing"></a>有序消息处理  
  名为 <xref:System.ServiceModel.ServiceBehaviorAttribute.EnsureOrderedDispatch%2A> 的新特性已添加到 <xref:System.ServiceModel.ServiceBehaviorAttribute>。 当 <xref:System.ServiceModel.ServiceBehaviorAttribute.EnsureOrderedDispatch%2A> 设置为 true 并且<xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A> 设置为 <xref:System.ServiceModel.ConcurrencyMode.Single> 时，将按顺序处理发送到服务的消息。 下面的代码段演示如何设置这些特性。  
   
-```  
+```csharp
 [ServiceBehavior(ConcurrencyMode = ConcurrencyMode.Single, EnsureOrderedDispatch = true )]  
     class Service : IService  
     {  

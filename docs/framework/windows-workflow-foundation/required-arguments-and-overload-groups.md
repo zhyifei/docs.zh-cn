@@ -2,12 +2,12 @@
 title: 必需自变量和重载组
 ms.date: 03/30/2017
 ms.assetid: 4ca3ed06-b9af-4b85-8b70-88c2186aefa3
-ms.openlocfilehash: 5249cbb127064ffa5023074481a47decad279128
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 84384e90be0036036477d9b4249832f544e17d08
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964919"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989313"
 ---
 # <a name="required-arguments-and-overload-groups"></a>必需自变量和重载组
 可以对活动进行配置，以便必须绑定某些参数才能有效执行该活动。 `RequiredArgument` 特性用于指示活动中的某些自变量是必需自变量，`OverloadGroup` 特性用于将必需自变量的多个类别组合在一起。 使用这些特性，活动作者可以提供简单或复杂的活动验证配置。  
@@ -63,11 +63,11 @@ public sealed class Add : CodeActivity<int>
   
  **未提供必需活动参数 "Operand1" 的值。**  
 > [!NOTE]
-> 有关检查和处理验证错误和警告的详细信息, 请参阅[调用活动验证](invoking-activity-validation.md)。  
+> 有关检查和处理验证错误和警告的详细信息，请参阅[调用活动验证](invoking-activity-validation.md)。  
   
 ## <a name="using-overload-groups"></a>使用重载组
 
-重载组提供了一种方法，指示哪些自变量组合在活动中有效。 使用 <xref:System.Activities.OverloadGroupAttribute> 将参数组合在一起。 为每个组指定一个名称, 该名称由<xref:System.Activities.OverloadGroupAttribute>指定。 仅当绑定重载组中的一组参数时, 该活动才有效。 下面的示例定义了一个 `CreateLocation` 类。  
+重载组提供了一种方法，指示哪些自变量组合在活动中有效。 使用 <xref:System.Activities.OverloadGroupAttribute> 将参数组合在一起。 为每个组指定一个名称，该名称由<xref:System.Activities.OverloadGroupAttribute>指定。 仅当绑定重载组中的一组参数时，该活动才有效。 下面的示例定义了一个 `CreateLocation` 类。  
   
 ```csharp  
 class CreateLocation: Activity  
@@ -106,10 +106,10 @@ class CreateLocation: Activity
   
  该活动的目的是指定美国的某个位置。 为此，活动用户可以使用三组参数中的一组来指定该位置。 若要指定自变量的有效组合，请定义三个重载组。 `G1` 包含 `Latitude` 和 `Longitude` 自变量。 `G2` 包含 `Street`、`City` 和 `State`。 `G3` 包含 `Street` 和 `Zip`。 `Name` 也是一个必需的自变量，但它不是重载组的一部分。 为使该活动有效，必须一起绑定 `Name` 和一个（且只有一个）重载组中的所有参数。  
   
- 在下面的示例中, 从 "[数据库访问" 活动](./samples/database-access-activities.md)示例中, 有两个重载`ConnectionString`组`ConfigFileSectionName`: 和。 为使此活动有效，必须绑定 `ProviderName` 和 `ConnectionString` 自变量，或者绑定 `ConfigName` 自变量，但不能这些自变量一起绑定。  
+ 在下面的示例中，从 "[数据库访问" 活动](./samples/database-access-activities.md)示例中，有两个重载`ConnectionString`组`ConfigFileSectionName`：和。 为使此活动有效，必须绑定 `ProviderName` 和 `ConnectionString` 自变量，或者绑定 `ConfigName` 自变量，但不能这些自变量一起绑定。  
   
-```  
-Public class DbUpdate: AsyncCodeActivity  
+```csharp  
+public class DbUpdate: AsyncCodeActivity  
 {  
     [RequiredArgument]  
     [OverloadGroup("ConnectionString")]  

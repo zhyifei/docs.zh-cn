@@ -2,12 +2,12 @@
 title: LINQ 消息查询相关性
 ms.date: 03/30/2017
 ms.assetid: b746872e-57b1-4514-b337-53398a0e0deb
-ms.openlocfilehash: b758296970340890403557770f91237c953f5d91
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 202d65914d32245952f308d3115ec93231f95f15
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70038133"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989330"
 ---
 # <a name="linq-message-query-correlation"></a>LINQ 消息查询相关性
 此示例演示如何使用一个与系统提供的 <xref:System.ServiceModel.Dispatcher.MessageQuery> 相对的自定义 <xref:System.ServiceModel.XPathMessageQuery> 实现，执行基于内容的相关性。  
@@ -20,9 +20,9 @@ ms.locfileid: "70038133"
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
-1. 此示例使用 HTTP 终结点公开一个工作流服务。 若要运行此示例, 必须添加正确的 URL Acl (有关详细信息, 请参阅[配置 HTTP 和 HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353) ), 方法是以管理员身份运行 Visual Studio, 或在提升的提示符下执行以下命令来添加相应的 acl。 确保替换了域和用户名。  
+1. 此示例使用 HTTP 终结点公开一个工作流服务。 若要运行此示例，必须添加正确的 URL Acl （有关详细信息，请参阅[配置 HTTP 和 HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353) ），方法是以管理员身份运行 Visual Studio，或在提升的提示符下执行以下命令来添加相应的 acl。 确保替换了域和用户名。  
   
-    ```  
+    ```console  
     netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%  
     ```  
   
@@ -30,7 +30,7 @@ ms.locfileid: "70038133"
   
     1. 生成解决方案。  
   
-    2. 通过右键单击解决方案并选择 "**设置启动项目**" 来设置多个启动项目。 将**服务**和**客户端**(按此顺序) 添加为多个启动项目。  
+    2. 通过右键单击解决方案并选择 "**设置启动项目**" 来设置多个启动项目。 将**服务**和**客户端**（按此顺序）添加为多个启动项目。  
   
     3. 运行该应用程序。 客户端控制台演示工作流如何发送订单、接收订购单 ID 以及随后确认订单。 服务窗口将显示正在处理的请求。  
   

@@ -2,17 +2,17 @@
 title: HttpCookieSession
 ms.date: 03/30/2017
 ms.assetid: 101cb624-8303-448a-a3af-933247c1e109
-ms.openlocfilehash: f0c6cee2eb7ed9552452f95b71db7e942e84bcb0
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 71147d98ada3d9814cdbcc8d3e7e85cad4dee0f2
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044929"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989868"
 ---
 # <a name="httpcookiesession"></a>HttpCookieSession
-此示例演示如何生成自定义协议通道，以便使用 HTTP Cookie 进行会话管理。 此通道启用 Windows Communication Foundation (WCF) 服务和客户端之间或 WCF 客户端与 .ASMX 服务之间的通信。  
+此示例演示如何生成自定义协议通道，以便使用 HTTP Cookie 进行会话管理。 此通道启用 Windows Communication Foundation （WCF）服务和客户端之间或 WCF 客户端与 .ASMX 服务之间的通信。  
   
- 当客户端在基于会话的 .ASMX Web 服务中调用 Web 方法时, ASP.NET 引擎将执行以下操作:  
+ 当客户端在基于会话的 .ASMX Web 服务中调用 Web 方法时，ASP.NET 引擎将执行以下操作：  
   
 - 生成一个唯一的 ID（会话 ID）。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "70044929"
   
 - 当通道侦听器打开时，它接受来自其内部侦听器的内部通道。 因为内部侦听器是一个数据报侦听器，而被接受的通道的生存期与该侦听器的生存期相分离，所以我们可以关闭内部侦听器，只保留内部通道。  
   
-    ```  
+    ```csharp  
                 this.innerChannelListener.Open(timeoutHelper.RemainingTime());  
     this.innerChannel = this.innerChannelListener.AcceptChannel(timeoutHelper.RemainingTime());  
     this.innerChannel.Open(timeoutHelper.RemainingTime());  
@@ -50,7 +50,7 @@ ms.locfileid: "70044929"
   
 - 当打开进程完成后，我们设置一个消息循环，以接收来自内部通道的消息。  
   
-    ```  
+    ```csharp  
     IAsyncResult result = BeginInnerReceiveRequest();  
     if (result != null && result.CompletedSynchronously)  
     {  
@@ -65,13 +65,13 @@ ms.locfileid: "70044929"
   
 - 当消息到达后，服务通道检查会话标识符并多路分解到相应的会话通道。 通道侦听器维护一个字典，该字典将会话标识符映射到会话通道实例。  
   
-    ```  
+    ```csharp  
     Dictionary<string, IReplySessionChannel> channelMapping;  
     ```  
   
  `HttpCookieReplySessionChannel` 类实现 <xref:System.ServiceModel.Channels.IReplySessionChannel>。 通道堆栈的较高层调用 <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A> 方法来读取此会话的请求。 每个会话通道具有一个专用的消息队列，该消息队列由服务通道进行填充。  
   
-```  
+```csharp  
 InputQueue<RequestContext> requestQueue;  
 ```  
   
@@ -83,7 +83,7 @@ InputQueue<RequestContext> requestQueue;
  对应的客户端通道位于 `HttpCookieSessionChannelFactory` 类中。 在创建通道的过程中，通道工厂使用 `HttpCookieRequestSessionChannel` 包装内部请求通道。 `HttpCookieRequestSessionChannel` 类将调用转发给基础请求通道。 当客户端关闭代理时，`HttpCookieRequestSessionChannel` 向服务发送一条指明该通道正在关闭的消息。 因此，服务通道堆栈可以正常关闭正在使用的会话通道。  
   
 ## <a name="binding-and-binding-element"></a>绑定和绑定元素  
- 创建服务和客户端通道后, 下一步是将它们集成到 WCF 运行时中。 通道通过绑定和绑定元素向 WCF 公开。 绑定由一个或多个绑定元素组成。 WCF 提供了多个系统定义的绑定;例如, BasicHttpBinding 或 WSHttpBinding。 `HttpCookieSessionBindingElement` 类包含绑定元素的实现。 它重写通道侦听器和通道工厂创建方法，以进行必要的通道侦听器或通道工厂实例化。  
+ 创建服务和客户端通道后，下一步是将它们集成到 WCF 运行时中。 通道通过绑定和绑定元素向 WCF 公开。 绑定由一个或多个绑定元素组成。 WCF 提供了多个系统定义的绑定;例如，BasicHttpBinding 或 WSHttpBinding。 `HttpCookieSessionBindingElement` 类包含绑定元素的实现。 它重写通道侦听器和通道工厂创建方法，以进行必要的通道侦听器或通道工厂实例化。  
   
  此示例使用策略断言作为服务说明。 这使得此示例能够将其通道要求发布给其他可以使用服务的客户端。 例如，此绑定元素发布策略断言，以使潜在的客户端知道它支持会话。 因为此示例在绑定元素配置中启用了 `ExchangeTerminateMessage` 属性，它增加了必要断言，以表明服务支持通过额外的消息交换操作终止会话对话。 客户端然后可以使用此操作。 下面的 WSDL 代码演示了从 `HttpCookieSessionBindingElement` 中创建的策略断言。  
   
@@ -137,7 +137,7 @@ InputQueue<RequestContext> requestQueue;
   
  运行示例时，您会看到以下输出：  
   
-```  
+```console  
 Simple binding:  
 AddItem(10000,2): ItemCount=2  
 AddItem(10550,5): ItemCount=7  
@@ -160,12 +160,12 @@ Press <ENTER> to terminate client.
   
 1. 使用以下命令安装 ASP.NET 4.0。  
   
-    ```  
+    ```console  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
 2. 确保已对[Windows Communication Foundation 示例执行了一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-3. 若要生成解决方案, 请按照[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
+3. 若要生成解决方案，请按照[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
   
 4. 若要以单机配置或跨计算机配置来运行示例, 请按照[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的说明进行操作。  

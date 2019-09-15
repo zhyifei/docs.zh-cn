@@ -2,12 +2,12 @@
 title: 工作流执行属性
 ms.date: 03/30/2017
 ms.assetid: a50e088e-3a45-4267-bd51-1a3e6c2d246d
-ms.openlocfilehash: 61bf53d9cab3ddefae3709958bd1e445fb4e69dd
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 87775ba6efb9ec26ed2445e1f9d0944c379ba04f
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69913614"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70988589"
 ---
 # <a name="workflow-execution-properties"></a>工作流执行属性
 通过线程本地存储区 (TLS)，CLR 可为每个线程维护一个执行上下文。 此执行上下文管理已知的线程属性，例如，线程标识、环境事务、当前权限集以及用户定义的线程属性（如已命名的槽）。  
@@ -147,7 +147,7 @@ WorkflowInvoker.Invoke(wf);
   
  调用该工作流时，会将以下输出写入控制台窗口。  
   
-```  
+```console  
 Start blue text.  
 Start red text.  
 Start default text.  

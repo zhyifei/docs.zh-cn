@@ -2,25 +2,25 @@
 title: 任务 3：创建工具箱窗格和属性网格窗格
 ms.date: 03/30/2017
 ms.assetid: 72c1546a-eed5-4f0f-a616-719a163414f4
-ms.openlocfilehash: 15e5b4ea08b6bc243484b6963c1c06f448bb985b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6339969c52a5c4eedfb0e89eebdc982ca3fe6686
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61641525"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70988716"
 ---
 # <a name="task-3-create-the-toolbox-and-propertygrid-panes"></a>任务 3：创建工具箱窗格和属性网格窗格
-在本任务中，您将创建**工具箱**并**PropertyGrid**窗格并将其添加到重新承载[!INCLUDE[wfd1](../../../includes/wfd1-md.md)]。  
+在此任务中，您将创建 "**工具箱**" 和 " **PropertyGrid** " 窗格，并[!INCLUDE[wfd1](../../../includes/wfd1-md.md)]将其添加到重新承载中。  
   
- 有关参考中的任务应在完成这三个后 MainWindow.xaml.cs 文件中的代码[重新承载工作流设计器](rehosting-the-workflow-designer.md)系列主题提供本主题末尾处。  
+ 若要参考，MainWindow.xaml.cs 文件中的三个任务完成后，应在重新承载文件中的代码在本主题末尾提供了[工作流设计器](rehosting-the-workflow-designer.md)系列主题。  
   
 ### <a name="to-create-the-toolbox-and-add-it-to-the-grid"></a>创建工具箱并将其添加到网格中  
   
-1. 打开按照中所述的过程获得的 HostingApplication 项目[任务 2:承载工作流设计器](task-2-host-the-workflow-designer.md)。  
+1. 按照任务2中[所述的过程打开所获得的 HostingApplication 项目：承载工作流设计器](task-2-host-the-workflow-designer.md)。  
   
-2. 在中**解决方案资源管理器**窗格中，右击 MainWindow.xaml 文件，并选择**查看代码**。  
+2. 在**解决方案资源管理器**窗格中，右键单击 mainwindow.xaml 文件，然后选择 "**查看代码**"。  
   
-3. 添加`GetToolboxControl`方法`MainWindow`类，该类创建<xref:System.Activities.Presentation.Toolbox.ToolboxControl>，添加一个新**工具箱**类别与**工具箱**，并将分配<xref:System.Activities.Statements.Assign>和<xref:System.Activities.Statements.Sequence>向该类别的活动类型。  
+3. `MainWindow` <xref:System.Activities.Statements.Sequence> <xref:System.Activities.Statements.Assign>向创建的`GetToolboxControl` 类添加方法，将新的"工具箱"类别添加到"工具箱"，并将和活动类型分配<xref:System.Activities.Presentation.Toolbox.ToolboxControl>给该类别。  
   
     ```csharp  
     private ToolboxControl GetToolboxControl()  
@@ -49,7 +49,7 @@ ms.locfileid: "61641525"
     }  
     ```  
   
-4. 添加一个私有`AddToolbox`方法`MainWindow`类将放置**工具箱**网格上的左侧列中。  
+4. 向`MainWindow`类添加`AddToolbox`一个私有方法，该方法将 "**工具箱**" 放置在网格上的左列中。  
   
     ```csharp  
     private void AddToolBox()  
@@ -73,13 +73,13 @@ ms.locfileid: "61641525"
     }  
     ```  
   
-6. 按“F5”生成并运行解决方案。 **工具箱**包含<xref:System.Activities.Statements.Assign>和<xref:System.Activities.Statements.Sequence>应显示的活动。  
+6. 按“F5”生成并运行解决方案。 应显示包含<xref:System.Activities.Statements.Assign>和<xref:System.Activities.Statements.Sequence>活动的 "工具箱"。  
   
 ### <a name="to-create-the-propertygrid"></a>创建属性网格  
   
-1. 在中**解决方案资源管理器**窗格中，右击 MainWindow.xaml 文件，并选择**查看代码**。  
+1. 在**解决方案资源管理器**窗格中，右键单击 mainwindow.xaml 文件，然后选择 "**查看代码**"。  
   
-2. 添加`AddPropertyInspector`方法`MainWindow`类，以放置**PropertyGrid**网格上的最右侧列中的窗格。  
+2. 将方法添加到类，以便将 "PropertyGrid" 窗格放置在网格上的最右侧列中。 `MainWindow` `AddPropertyInspector`  
   
     ```csharp  
     private void AddPropertyInspector()  
@@ -103,12 +103,12 @@ ms.locfileid: "61641525"
     }  
     ```  
   
-4. 按 F5 生成并运行解决方案。 **工具箱**，工作流设计画布和**PropertyGrid**窗格应显示，并拖动时<xref:System.Activities.Statements.Assign>活动或<xref:System.Activities.Statements.Sequence>到设计画布上的活动属性网格应根据突出显示的活动更新。  
+4. 按 F5 生成并运行解决方案。 "**工具箱**"、"工作流设计画布" 和 " **PropertyGrid** " 窗格应全部显示，将<xref:System.Activities.Statements.Assign>活动或<xref:System.Activities.Statements.Sequence>活动拖到设计画布上时，属性网格应根据突出显示的活动。  
   
 ## <a name="example"></a>示例  
  现在，MainWindow.xaml.cs 文件应包含以下代码。  
   
-```  
+```csharp  
 using System;  
 using System.Collections.Generic;  
 using System.Linq;  
@@ -215,5 +215,5 @@ namespace HostingApplication
 ## <a name="see-also"></a>请参阅
 
 - [重新托管工作流设计器](rehosting-the-workflow-designer.md)
-- [任务 1:创建新的 Windows Presentation Foundation 应用程序](task-1-create-a-new-wpf-app.md)
-- [任务 2:承载工作流设计器](task-2-host-the-workflow-designer.md)
+- [任务1：创建新的 Windows Presentation Foundation 应用程序](task-1-create-a-new-wpf-app.md)
+- [任务2：承载工作流设计器](task-2-host-the-workflow-designer.md)

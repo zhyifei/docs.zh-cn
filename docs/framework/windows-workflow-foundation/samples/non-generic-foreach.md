@@ -2,12 +2,12 @@
 title: 非泛型 ForEach
 ms.date: 03/30/2017
 ms.assetid: 576cd07a-d58d-4536-b514-77bad60bff38
-ms.openlocfilehash: e467534ba2b233f1f3c279e89badf12846c6b7f7
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: cb040d8bd5fbb34cc00b246f2e51789866fd8e78
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70038076"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989038"
 ---
 # <a name="non-generic-foreach"></a>非泛型 ForEach
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 的工具箱中附带了一组控制流活动，其中包括可用来循环访问 <xref:System.Activities.Statements.ForEach%601> 集合的 <xref:System.Collections.Generic.IEnumerable%601>。  
@@ -24,7 +24,7 @@ ms.locfileid: "70038076"
 ## <a name="class-definition"></a>类定义  
  下面的代码示例显示非泛型 `ForEach` 活动的定义。  
   
-```  
+```csharp  
 [ContentProperty("Body")]  
 public class ForEach : NativeActivity  
 {  
@@ -47,7 +47,7 @@ public class ForEach : NativeActivity
 ## <a name="example-of-using-foreach"></a>使用 ForEach 的示例  
  下面的代码演示如何在应用程序中使用 ForEach 活动。  
   
-```  
+```csharp  
 string[] names = { "bill", "steve", "ray" };  
   
 DelegateInArgument<object> iterationVariable = new DelegateInArgument<object>() { Name = "iterationVariable" };  
@@ -72,9 +72,9 @@ Activity sampleUsage =
 |Values 为 `null`|未提供必需活动自变量“Values”的值。|Error|<xref:System.InvalidOperationException>|  
   
 ## <a name="foreach-designer"></a>ForEachT 设计器  
- 此示例的活动设计器的外观与为内置 <xref:System.Activities.Statements.ForEach%601> 活动提供的设计器的外观相似。 设计器将显示在工具箱中的 "**示例**"、"**非泛型" 活动**类别。 设计器在 "工具箱" 中名为 " **ForEachWithBodyFactory** ", 因为<xref:System.Activities.Presentation.IActivityTemplateFactory>活动在工具箱中公开, 这将使用正确配置<xref:System.Activities.ActivityAction>的来创建活动。  
+ 此示例的活动设计器的外观与为内置 <xref:System.Activities.Statements.ForEach%601> 活动提供的设计器的外观相似。 设计器将显示在工具箱中的 "**示例**"、"**非泛型" 活动**类别。 设计器在 "工具箱" 中名为 " **ForEachWithBodyFactory** "，因为<xref:System.Activities.Presentation.IActivityTemplateFactory>活动在工具箱中公开，这将使用正确配置<xref:System.Activities.ActivityAction>的来创建活动。  
   
-```  
+```csharp  
 public sealed class ForEachWithBodyFactory : IActivityTemplateFactory  
 {  
     public Activity Create(DependencyObject target)  

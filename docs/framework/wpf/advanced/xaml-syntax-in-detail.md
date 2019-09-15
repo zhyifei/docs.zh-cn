@@ -29,12 +29,12 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: 09f0a1b34e88be995fb9a386161a930457e4bb56
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: d48398f31c1452821292a6feb2867dbd2971e739
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168991"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991419"
 ---
 # <a name="xaml-syntax-in-detail"></a>XAML 语法详述
 本主题定义用于描述 XAML 语法元素的术语。 在本文档的其余部分中经常使用这些术语, 这两个术语分别适用于 WPF 文档, 适用于使用 XAML 的其他框架或由 system.exception 级别的 XAML 语言支持启用的基本 XAML 概念。 本主题概述了在主题[XAML 概述 (WPF)](xaml-overview-wpf.md)中引入的基本术语。  
@@ -62,7 +62,7 @@ ms.locfileid: "70168991"
   
 - 开始标记必须由右尖括号 (>) 完成。 其他对象元素、属性元素或内部文本可以跟随开始标记。 此处可以确切包含的内容通常受元素的对象模型的约束。 还必须存在对象元素的等效结束标记, 并将其与其他开始和结束标记对进行适当的嵌套和平衡。  
   
- .NET 实现的 XAML 包含一组规则, 这些规则将对象元素映射到类型、属性或事件中的属性, 以及 XAML 命名空间到 CLR 命名空间和程序集。 对于 WPF 和 .NET, XAML 对象元素映射到在引用的程序集中定义的 .NET 类型, 属性映射到这些类型的成员。 在 XAML 中引用 CLR 类型时, 还可以访问该类型的继承成员。  
+ .NET 实现的 XAML 包含一组规则, 这些规则将对象元素映射到类型、属性或事件中的属性, 以及 XAML 命名空间到 CLR 命名空间和程序集。 对于 WPF 和 .NET，XAML 对象元素映射到在引用的程序集中定义的 .NET 类型，属性映射到这些类型的成员。 在 XAML 中引用 CLR 类型时, 还可以访问该类型的继承成员。  
   
  例如, 下面的示例是实例化<xref:System.Windows.Controls.Button>类的新实例的对象元素语法, 还为该属性指定了一个<xref:System.Windows.FrameworkElement.Name%2A>属性和一个值:  
   
@@ -112,7 +112,7 @@ ms.locfileid: "70168991"
   
  对于 flagwise 枚举, 行为基于<xref:System.Enum.Parse%2A?displayProperty=nameWithType>方法。 可以通过用逗号分隔每个值来指定 flagwise 枚举的多个值。 但是, 不能合并不 flagwise 的枚举值。 例如, 你不能使用逗号语法来尝试创建一个<xref:System.Windows.Trigger> , 它对 nonflag 枚举的多个条件执行操作:  
   
-```  
+```xaml  
 <!--This will not compile, because Visibility is not a flagwise enumeration.-->  
 ...  
 <Trigger Property="Visibility" Value="Collapsed,Hidden">  
@@ -197,7 +197,7 @@ ms.locfileid: "70168991"
 ### <a name="xaml-content-property-values-must-be-contiguous"></a>XAML 内容属性值必须是连续的  
  XAML 内容属性的值必须完全在该对象元素上的任何其他属性元素之前或之后指定。 无论 XAML 内容属性的值是指定为字符串, 还是指定为一个或多个对象, 都是如此。 例如, 以下标记不会进行分析:  
   
-```  
+```xaml  
 <Button>I am a   
   <Button.Background>Blue</Button.Background>  
   blue button</Button>  
@@ -205,7 +205,7 @@ ms.locfileid: "70168991"
   
  这对于本质而言是非法的, 因为如果通过使用 content 属性的属性元素语法使此语法变为显式, 则内容属性将设置两次:  
   
-```xml  
+```xaml  
 <Button>  
   <Button.Content>I am a </Button.Content>  
   <Button.Background>Blue</Button.Background>  
@@ -215,7 +215,7 @@ ms.locfileid: "70168991"
   
  例如, 如果 content 属性是一个集合, 并且子元素与属性元素交错在一起, 则这是一个类似的非法示例:  
   
-```xml  
+```xaml  
 <StackPanel>  
   <Button>This example</Button>  
   <StackPanel.Resources>  
@@ -270,7 +270,7 @@ ms.locfileid: "70168991"
   
 <a name="attached_events"></a>   
 ## <a name="attached-events"></a>附加事件  
- 附加事件是 XAML 中引入的另一种编程概念, 其中事件可以由特定类型定义, 但处理程序可以附加到任何对象元素上。 在 WOF 实现中, 定义附加事件的类型通常为定义服务的静态类型, 有时这些附加事件由公开服务的类型中的路由事件别名公开。 附加事件的处理程序通过特性语法指定。 与附加事件一样, 为附加事件扩展特性语法以允许*typeName*。事件名称用法, 其中*typeName*是为附加事件`Add`基础`Remove`结构提供和事件处理程序访问器的类 , 而事件名称是事件名称。  
+ 附加事件是 XAML 中引入的另一种编程概念, 其中事件可以由特定类型定义, 但处理程序可以附加到任何对象元素上。 在 WOF 实现中, 定义附加事件的类型通常为定义服务的静态类型, 有时这些附加事件由公开服务的类型中的路由事件别名公开。 附加事件的处理程序通过特性语法指定。 与附加事件一样, 为附加事件扩展特性语法以允许*typeName*。*事件名称用法,* 其中*typeName*是为附加事件`Add`基础`Remove`结构提供和事件处理程序访问器的类 *, 而事件*名称是事件名称。  
   
 <a name="anatomy_of_a_xaml_page_root_element"></a>   
 ## <a name="anatomy-of-a-xaml-root-element"></a>XAML 根元素的解析  

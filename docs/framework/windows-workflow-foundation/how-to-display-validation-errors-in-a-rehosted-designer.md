@@ -2,12 +2,12 @@
 title: 如何：在重新承载的设计器中显示验证错误
 ms.date: 03/30/2017
 ms.assetid: 5aa8fb53-8f75-433b-bc06-7c7d33583d5d
-ms.openlocfilehash: a3d993f55bf130039905f1a6512a7ae104512432
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 608868882f4bec23c03f0ec78f65673e76056030
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61761465"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989655"
 ---
 # <a name="how-to-display-validation-errors-in-a-rehosted-designer"></a>如何：在重新承载的设计器中显示验证错误
 本主题说明如何在重新承载的 [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] 中检索和发布验证错误。 这为我们提供了一个用于确认重新承载的设计器中的工作流是否有效的过程。  
@@ -18,7 +18,7 @@ ms.locfileid: "61761465"
   
 1. 下面是一个将验证错误写入调试日志的简单实现的代码示例。  
   
-    ```  
+    ```csharp  
     using System.Activities.Presentation.Validation;  
     using System.Collections.Generic;  
     using System.Diagnostics;  
@@ -40,6 +40,6 @@ ms.locfileid: "61761465"
   
 1. 下面是将此内容发布到编辑上下文的代码。  
   
-    ```  
+    ```csharp  
     wd.Context.Services.Publish<IValidationErrorService>(new DebugValidationErrorService());  
     ```

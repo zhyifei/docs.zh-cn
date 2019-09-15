@@ -2,12 +2,12 @@
 title: 服务框架元数据
 ms.date: 03/30/2017
 ms.assetid: 76afc73a-0770-4084-93f3-6701a757911e
-ms.openlocfilehash: f65f53ff99202275876fb6e3c431bc49ae2bd38b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f3e73df54b3389b2c9f27001953be147b27eb6f8
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780791"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991204"
 ---
 # <a name="service-framework-metadata"></a>服务框架元数据
 本主题列出由服务框架元数据生成的所有异常。  
@@ -18,7 +18,7 @@ ms.locfileid: "61780791"
 |-------------------|---------------------|  
 |AsyncEndCalledOnWrongChannel|在错误的通道上调用异步 End。|  
 |AsyncEndCalledWithAnIAsyncResult|使用其他 Begin 方法的 IAsyncResult 调用异步 End。|  
-|AttemptedToGetContractTypeForButThatTypeIs1|试图获取指定类型的协定类型，但该类型不是 ServiceContract，并且未继承 ServiceContract。|  
+|AttemptedToGetContractTypeForButThatTypeIs1|尝试获取指定的协定类型。 该类型不是 ServiceContract，并且不继承 ServiceContract。|  
 |CannotHaveTwoOperationsWithTheSameName3|同一个协定中不能存在两个名称相同的操作， 指定类型的指定方法违反了此规则。 可以通过更改方法名称或使用 OperationContractAttribute 的 Name 属性更改其中一个操作的名称。|  
 |CannotInheritTwoOperationsWithTheSameName3|无法继承名称相同的两个不同操作， 指定约定中的指定操作违反了此规则。 可以通过更改方法名称或使用 OperationContractAttribute 的 Name 属性更改其中一个操作的名称。|  
 |CantCreateChannelWithManualAddressing|无法为需要请求/答复的协定和需要手动寻址但只支持双工通信的绑定创建通道。|  

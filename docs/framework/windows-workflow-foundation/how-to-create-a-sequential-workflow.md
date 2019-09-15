@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5280e816-ae17-48c4-8de0-a1e6895dd8f0
-ms.openlocfilehash: d94843e696848010791b1e22d06e4852d35bc68e
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 61e3f01b1259536ff15d71526e91aef42069722e
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044412"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989692"
 ---
 # <a name="how-to-create-a-sequential-workflow"></a>如何：创建顺序工作流
 
@@ -130,7 +130,7 @@ ms.locfileid: "70044412"
 
 11. 在新添加的**If**活动的**Condition**属性值框中键入以下表达式。
 
-    ```
+    ```text
     Guess < Target
     ```
 

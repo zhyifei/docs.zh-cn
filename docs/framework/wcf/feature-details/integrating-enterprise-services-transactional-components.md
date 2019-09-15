@@ -2,15 +2,15 @@
 title: 集成企业服务事务性组件
 ms.date: 03/30/2017
 ms.assetid: 05dab277-b8b2-48cf-b40c-826be128b175
-ms.openlocfilehash: 682bf5b92a5e01391766d614e955954019a4ce8d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c73be31bef67f1de818f7b04181a3540bbd7caa8
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64638671"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991540"
 ---
 # <a name="integrating-enterprise-services-transactional-components"></a>集成企业服务事务性组件
-Windows Communication Foundation (WCF) 提供了一种自动机制与企业服务集成 (请参阅[与 COM + 应用程序集成](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md))。 但是，你可能希望灵活地开发可在内部使用承载于企业服务中的事务性组件的服务。 因为 WCF 事务功能基于<xref:System.Transactions>基础结构，将企业服务与 WCF 集成的过程是相同的指定之间互操作性<xref:System.Transactions>和企业服务，如中所述[与企业服务和 COM + 事务的互操作性](https://go.microsoft.com/fwlink/?LinkId=94949)。  
+Windows Communication Foundation （WCF）提供了用于与企业服务集成的自动机制（请参阅[与 COM + 应用程序集成](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)）。 但是，你可能希望灵活地开发可在内部使用承载于企业服务中的事务性组件的服务。 因为 WCF 事务功能是在<xref:System.Transactions>基础结构上构建的，所以将企业服务与 WCF 集成的过程与指定与企业服务之间<xref:System.Transactions>的互操作性的过程相同，如中所述。[与企业服务和 COM + 事务的互操作性](https://go.microsoft.com/fwlink/?LinkId=94949)。  
   
  若要在传入的流式事务和 COM+ 上下文事务之间提供所需级别的互操作性，服务实现必须创建一个 <xref:System.Transactions.TransactionScope> 实例并使用 <xref:System.Transactions.EnterpriseServicesInteropOption> 枚举中的适当值。  
   
@@ -23,7 +23,7 @@ Windows Communication Foundation (WCF) 提供了一种自动机制与企业服�
   
  任何其他方法调用也发生在同一个操作的事务范围内。  
   
-```  
+```csharp
 [ServiceContract()]  
 public interface ICustomerServiceContract  
 {  
@@ -64,7 +64,7 @@ public class CustomerService : ICustomerServiceContract
 ## <a name="integrating-enterprise-services-with-a-client"></a>使企业服务与客户端相集成  
  下面的代码演示使用 <xref:System.Transactions.TransactionScope> 实例的客户端代码，该实例具有 <xref:System.Transactions.EnterpriseServicesInteropOption.Full> 设置。 在这种情况下，对支持事务流的服务操作的调用与对企业服务组件的调用发生在同一个事务范围内。  
   
-```  
+```csharp
 static void Main()  
 {  
     // Create a client  

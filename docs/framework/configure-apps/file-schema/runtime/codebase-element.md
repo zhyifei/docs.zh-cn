@@ -9,12 +9,12 @@ helpviewer_keywords:
 - container tags, <codeBase> element
 - codeBase element
 ms.assetid: d48a3983-2297-43ff-a14d-1f29d3995822
-ms.openlocfilehash: bd170b817c5ccc337711f8f79968653c29f3eda4
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 475b7df55ed509157c1da0aeb8f979de238c72b5
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252741"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971887"
 ---
 # <a name="codebase-element"></a>\<codeBase > 元素
 
@@ -96,5 +96,5 @@ ms.locfileid: "70252741"
 
 - [运行时设置架构](index.md)
 - [配置文件架构](../index.md)
-- [指定程序集的位置](../../specify-assembly-location.md)
+- [指定程序集的位置](../../../../standard/assembly/location.md)
 - [运行时如何定位程序集](../../../deployment/how-the-runtime-locates-assemblies.md)

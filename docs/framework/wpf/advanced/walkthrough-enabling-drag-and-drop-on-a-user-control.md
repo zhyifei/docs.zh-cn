@@ -8,12 +8,12 @@ helpviewer_keywords:
 - walkthrough [WPF], drag-and-drop
 - drag-and-drop [WPF], walkthrough
 ms.assetid: cc844419-1a77-4906-95d9-060d79107fc7
-ms.openlocfilehash: 80fd55be9230729cb8336be91c1d8fb4f7f3f080
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 172e49c2c255db4d24d2180f919b1305326b5e82
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364262"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991800"
 ---
 # <a name="walkthrough-enabling-drag-and-drop-on-a-user-control"></a>演练：在用户控件上启用拖放功能
 
@@ -51,7 +51,7 @@ ms.locfileid: "68364262"
 ## <a name="add-a-new-user-control-to-the-project"></a>向项目添加新的用户控件
  本节将介绍如何向项目添加新的用户控件。
 
-1. 在“项目”菜单中，选择“添加用户控件”  。
+1. 在“项目”菜单中，选择“添加用户控件”。
 
 2. 在 "**添加新项**" 对话框中, 将 "名称`Circle.xaml`" 更改为, 然后单击 "**添加**"。
 
@@ -80,7 +80,7 @@ ms.locfileid: "68364262"
 
 2. 将以下 XAML 添加到开始<xref:System.Windows.Window>标记, 以创建对当前应用程序的 XML 命名空间引用。
 
-    ```
+    ```xaml
     xmlns:local="clr-namespace:DragDropExample"
     ```
 
@@ -120,7 +120,7 @@ ms.locfileid: "68364262"
 
         - `allowedEffects`–允许的拖放操作, 即<xref:System.Windows.DragDropEffects.Copy>或。 <xref:System.Windows.DragDropEffects.Move>
 
-3. 按 F5 生成并运行该应用程序  。
+3. 按 F5 生成并运行该应用程序。
 
 4. 单击其中一个圆圈控件, 并将其拖动到面板、另一个圆圈和<xref:System.Windows.Controls.TextBox>上。 在拖动<xref:System.Windows.Controls.TextBox>时, 光标会更改以指示移动。
 
@@ -147,7 +147,7 @@ ms.locfileid: "68364262"
 
     - 基于<xref:System.Windows.GiveFeedbackEventArgs.Effects%2A>值设置自定义光标。 该光标旨在向用户提供关于放置数据所产生的效果的可视反馈。
 
-3. 按 F5 生成并运行该应用程序  。
+3. 按 F5 生成并运行该应用程序。
 
 4. 将一个圆形控件拖动到面板、另一个圆形和<xref:System.Windows.Controls.TextBox>上。 请注意, 这些游标现在是在<xref:System.Windows.UIElement.OnGiveFeedback%2A>重写中指定的自定义游标。
 
@@ -191,7 +191,7 @@ ms.locfileid: "68364262"
 
     - 将<xref:System.Windows.UIElement.Drop>事件标记为已处理。 应将放置事件标记为已处理，这样接收此事件的其他元素才会知道圆形用户控件已处理了该事件。
 
-3. 按 F5 生成并运行该应用程序  。
+3. 按 F5 生成并运行该应用程序。
 
 4. `green` 选择<xref:System.Windows.Controls.TextBox>中的文本。
 
@@ -228,7 +228,7 @@ ms.locfileid: "68364262"
 
     - 如果用户控件可以处理数据, 则将<xref:System.Windows.DragEventArgs.Effects%2A>属性设置为<xref:System.Windows.DragDropEffects.Copy>或<xref:System.Windows.DragDropEffects.Move>。
 
-3. 按 F5 生成并运行该应用程序  。
+3. 按 F5 生成并运行该应用程序。
 
 4. `gre` 选择<xref:System.Windows.Controls.TextBox>中的文本。
 
@@ -267,7 +267,7 @@ ms.locfileid: "68364262"
 
     - <xref:System.Windows.Media.Brush>将`_previousFill` 变量中<xref:System.Windows.Shapes.Shape.Fill%2A>保存的保存到提供 Circle 用户控件的 UI 的的。 <xref:System.Windows.Shapes.Ellipse>
 
-5. 按 F5 生成并运行该应用程序  。
+5. 按 F5 生成并运行该应用程序。
 
 6. `green` 选择<xref:System.Windows.Controls.TextBox>中的文本。
 
@@ -313,13 +313,13 @@ ms.locfileid: "68364262"
 
     - 如果未<xref:System.Windows.UIElement.Drop>处理该事件, 将检查是否按下了**Ctrl**键。
 
-    - 如果在  发生此<xref:System.Windows.UIElement.Drop>情况时按下 Ctrl 键, 则将生成圆圈控件的副本, 并<xref:System.Windows.Controls.Panel.Children%2A>将其添加到的<xref:System.Windows.Controls.StackPanel>集合中。
+    - 如果在发生此<xref:System.Windows.UIElement.Drop>情况时按下 Ctrl 键, 则将生成圆圈控件的副本, 并<xref:System.Windows.Controls.Panel.Children%2A>将其添加到的<xref:System.Windows.Controls.StackPanel>集合中。
 
     - 如果未按下**Ctrl**键, 则将圆圈从其<xref:System.Windows.Controls.Panel.Children%2A> <xref:System.Windows.Controls.Panel.Children%2A>父面板的集合移动到拖放到的面板的集合中。
 
     - 设置属性以<xref:System.Windows.DragDrop.DoDragDrop%2A>通知方法是否执行了移动或复制操作。 <xref:System.Windows.DragEventArgs.Effects%2A>
 
-6. 按 F5 生成并运行该应用程序  。
+6. 按 F5 生成并运行该应用程序。
 
 7. 从中选择`green`文本。 <xref:System.Windows.Controls.TextBox>
 

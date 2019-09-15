@@ -24,12 +24,12 @@ helpviewer_keywords:
 - configuration files [.NET Framework], machine
 - configuration files [.NET Framework], format
 ms.assetid: 86bd26d3-737e-4484-9782-19b17f34cd1f
-ms.openlocfilehash: 28a06139275f63571d9528d075946d97a19c9f3c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b2da9600e6947a1efcb13fc8b1127665cea63071
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69912882"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972193"
 ---
 # <a name="configuring-apps-by-using-configuration-files"></a>使用配置文件配置应用
 .NET Framework 通过配置文件为开发人员和管理员提供了对应用程序运行方式的控制权和灵活性。 配置文件是可以按需要更改的 XML 文件。 管理员能够控制应用程序可以访问哪些受保护的资源，应用程序将使用哪些版本的程序集，以及远程应用程序和对象位于何处。 开发人员可以将设置置于配置文件中，从而没有必要在每次设置更改时重新编译应用程序。 本节说明可以对什么进行配置以及为什么对应用程序进行配置会有用。  
@@ -76,7 +76,7 @@ ms.locfileid: "69912882"
   
 - ASP.NET 承载的应用。  
   
-     有关 ASP.NET 配置文件的详细信息, 请参阅[ASP.NET 配置设置](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/b5ysx397(v=vs.100))。
+     有关 ASP.NET 配置文件的详细信息，请参阅[ASP.NET 配置设置](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/b5ysx397(v=vs.100))。
   
 - Internet Explorer 承载的应用。  
   
@@ -90,7 +90,7 @@ ms.locfileid: "69912882"
  安全配置文件包含有关与策略级别关联的代码组层次结构和权限集的信息。 强烈建议使用[代码访问安全性策略工具 (Caspol.exe)](../tools/caspol-exe-code-access-security-policy-tool.md) 修改安全策略，确保策略更改不会损坏安全配置文件。  
   
 > [!NOTE]
-> 从 .NET Framework 4 开始, 安全配置文件仅在安全策略已更改时存在。  
+> 从 .NET Framework 4 开始，安全配置文件仅在安全策略已更改时存在。  
   
  安全配置文件位于以下位置：  
   
@@ -127,4 +127,4 @@ ms.locfileid: "69912882"
 - [ASP.NET 网站管理](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/6hy1xzbw(v=vs.90))
 - [安全策略管理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100))
 - [Caspol.exe（代码访问安全策略工具）](../tools/caspol-exe-code-access-security-policy-tool.md)
-- [Assemblies in the Common Language Runtime](../app-domains/assemblies-in-the-common-language-runtime.md)（公共语言运行时中的程序集）
+- [.NET 中的程序集](../../standard/assembly/index.md)
