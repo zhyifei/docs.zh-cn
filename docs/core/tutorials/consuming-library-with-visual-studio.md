@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 7a7ab9e8f148eaab8250a7cb10c7d38d2f70e4cd
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 31a9183f541afa5365862b1e89704354cf7bd527
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69660569"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969299"
 ---
 # <a name="consume-a-net-standard-library-in-visual-studio-2017"></a>在 Visual Studio 2017 中使用 .NET Standard 库
 
@@ -27,7 +27,10 @@ ms.locfileid: "69660569"
 
 就像将单元测试和类库添加到同一解决方案中一样，可以将应用程序添加到同一解决方案中。 例如，可在控制台应用程序中使用类库，此应用程序将提示用户输入字符串，并报告第一个字符是否为大写：
 
+<!-- markdownlint-disable MD025 -->
+
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
+
 1. 打开在[使用 Visual Studio 2017 生成 C# .NET Core 类库](./library-with-visual-studio.md)主题中创建的 `ClassLibraryProjects` 解决方案。 在“解决方案资源管理器”  中，右键单击“ClassLibraryProjects”  解决方案，然后从上下文菜单依次选择“添加”   > “新项目”  。
 
 1. 在“添加新项目”  对话框中，展开“Visual C#”  节点，再依次选择“.NET Core”  节点和“控制台应用程序(.NET Core)”  项目模板。 在“名称”  文本框中，键入“ShowCase”，然后选择“确定”  按钮。
@@ -57,7 +60,9 @@ ms.locfileid: "69660569"
 1. 必要时，将工具栏更改为编译 `ShowCase` 项目的“调试”  版本。 选择“ShowCase”  按钮上的绿色箭头，编译并运行程序。
 
    ![Visual Studio 中显示“调试”按钮的项目工具栏 - C#](./media/consuming-library-with-visual-studio/visual-studio-project-toolbar.png)
+
 # <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+
 1. 打开在[使用 Visual Studio 2017 生成 Visual Basic .NET Core 类库](vb-library-with-visual-studio.md)主题中创建的 `ClassLibraryProjects` 解决方案。 在“解决方案资源管理器”  中，右键单击“ClassLibraryProjects”  解决方案，然后从上下文菜单依次选择“添加”   > “新项目”  。
 
 1. 在“添加新项目”  对话框中，展开“Visual Basic”  节点，再依次选择“.NET Core”  节点和“控制台应用程序(.NET Core)”  项目模板。 在“名称”  文本框中，键入“ShowCase”，然后选择“确定”  按钮。
@@ -87,6 +92,7 @@ ms.locfileid: "69660569"
 1. 必要时，将工具栏更改为编译 `ShowCase` 项目的“调试”  版本。 选择“ShowCase”  按钮上的绿色箭头，编译并运行程序。
 
    ![在工具栏上调试 - Visual Basic](./media/consuming-library-with-visual-studio/visual-studio-project-toolbar.png)
+
 ---
 
 可以按照[使用 Visual Studio 2017 调试 Hello World 应用程序](debugging-with-visual-studio.md)和[使用 Visual Studio 2017 发布 Hello World 应用程序](publishing-with-visual-studio.md)中的步骤操作，调试并发布使用此库的应用程序。

@@ -1,13 +1,13 @@
 ---
 title: dotnet build 命令
 description: dotnet build 命令可生成项目及其所有依赖项。
-ms.date: 04/24/2019
-ms.openlocfilehash: 6e577defb9f5c7795ee40efa18da30daee1b52c0
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.date: 08/08/2019
+ms.openlocfilehash: e92555dad2bc76d8c72eca9a30be1d3a8b5924f7
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168076"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70988525"
 ---
 # <a name="dotnet-build"></a>dotnet 生成
 
@@ -25,7 +25,7 @@ ms.locfileid: "70168076"
 
 ```console
 dotnet build [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--force] [--interactive] [--no-dependencies]
-    [--no-incremental] [--nologo] [--no-restore] [-o|--output] [-r|--runtime] [-v|--verbosity] [--version-suffix]
+    [--no-incremental] [--no-restore] [--nologo] [-o|--output] [-r|--runtime] [-v|--verbosity] [--version-suffix]
 
 dotnet build [-h|--help]
 ```
@@ -94,13 +94,13 @@ dotnet build [-h|--help]
 
   将生成标记为对增量生成不安全。 此标记关闭增量编译，并强制完全重新生成项目依赖项关系图。
 
-* **`--no-logo`**
-
-  不显示启动版权标志或版权消息。 自 .NET Core 3.0 SDK 起可用。
-
 * **`--no-restore`**
 
   在生成期间不执行隐式还原。 自 .NET Core 2.0 SDK 起可用。
+
+* **`--nologo`**
+
+  不显示启动版权标志或版权消息。 自 .NET Core 3.0 SDK 起可用。
 
 * **`-o|--output <OUTPUT_DIRECTORY>`**
 

@@ -4,12 +4,12 @@ description: 了解从本机代码托管 .NET Core 运行时，以支持需要�
 author: mjrousos
 ms.date: 12/21/2018
 ms.custom: seodec18
-ms.openlocfilehash: 8eebc04390514bca288b67952ec7748366a45d6e
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: ec63e1b87c4161dcd0dd3ab37aadbef53d4b3219
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69660527"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70970855"
 ---
 # <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>编写自定义 .NET Core 主机以从本机代码控制 .NET 运行时
 
@@ -23,7 +23,7 @@ ms.locfileid: "69660527"
 
 由于主机是本机应用程序，所以本教程将介绍如何构造 C++ 应用程序以托管 .NET Core。 将需要一个 C++ 开发环境（例如，[Visual Studio](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) 提供的环境）。
 
-还将需要一个简单的 .NET Core 应用程序来测试主机，因此应安装 [.NET Core SDK](https://www.microsoft.com/net/core) 并[构建一个小型的 .NET Core 测试应用](with-visual-studio.md)（例如，“Hello World”应用）。 使用通过新 .NET Core 控制台项目模板创建的“Hello World”应用就足够了。
+还将需要一个简单的 .NET Core 应用程序来测试主机，因此应安装 [.NET Core SDK](https://dotnet.microsoft.com/download) 并[构建一个小型的 .NET Core 测试应用](with-visual-studio.md)（例如，“Hello World”应用）。 使用通过新 .NET Core 控制台项目模板创建的“Hello World”应用就足够了。
 
 ## <a name="hosting-apis"></a>承载 API
 可以使用三种不同的 API 来托管 .NET Core。 本文档（及其相关的[示例](https://github.com/dotnet/samples/tree/master/core/hosting)）涵盖所有选项。
@@ -44,6 +44,7 @@ ms.locfileid: "69660527"
 ### <a name="step-1---load-hostfxr-and-get-exported-hosting-functions"></a>步骤 1 - 加载 HostFxr 并获取导出的托管函数
 
 `nethost` 库提供用于查找 `hostfxr` 库的 `get_hostfxr_path` 函数。 `hostfxr` 库公开用于托管 .NET Core 运行时的函数。 函数的完整列表可在 [`hostfxr.h`](https://github.com/dotnet/core-setup/blob/master/src/corehost/cli/hostfxr.h) 和[本机托管设计文档](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/native-hosting.md)中找到。 示例和本教程使用以下函数：
+
 * `hostfxr_initialize_for_runtime_config`：初始化主机上下文，并使用指定的运行时配置准备初始化 .NET Core 运行时。
 * `hostfxr_get_runtime_delegate`：获取对运行时功能的委托。
 * `hostfxr_close`：关闭主机上下文。
@@ -134,7 +135,7 @@ CoreClrHost 有几个可用于承载 .NET Core 的重要方法：
 
 ### <a name="step-5---run-managed-code"></a>步骤 5 - 运行托管代码！
 
-启动运行时之后，主机可以调用托管代码。 这可以通过两种不同的方法实现。 与本教程相关的示例代码使用 `coreclr_create_delegate` 函数创建静态托管方法的委托。 此 API 采用[程序集名称](../../framework/app-domains/assembly-names.md)、符合命名空间条件的类型名称和方法名称作为输入，并返回可用于调用该方法的委托。
+启动运行时之后，主机可以调用托管代码。 这可以通过两种不同的方法实现。 与本教程相关的示例代码使用 `coreclr_create_delegate` 函数创建静态托管方法的委托。 此 API 采用[程序集名称](../../standard/assembly/names.md)、符合命名空间条件的类型名称和方法名称作为输入，并返回可用于调用该方法的委托。
 
 [!code-cpp[CoreClrHost#5](~/samples/core/hosting/HostWithCoreClrHost/src/SampleHost.cpp#5)]
 
@@ -230,7 +231,7 @@ AppDomain 标志指定与安全性和互操作性相关的 AppDomain 行为。 �
 
 [!code-cpp[NetCoreHost#8](~/samples/core/hosting/HostWithMscoree/host.cpp#8)]
 
-如果 `ExecuteAssembly` 不满足主机的需要，那么另一种方法是使用 `CreateDelegate` 创建指向静态托管方法的函数指针。 这要求主机知道要调用的方法的签名（以创建函数指针类型），但允许主机调用代码而不是程序集的入口点。 第二个参数中提供的程序集名称是要加载的库的[完全托管程序集名称](../../framework/app-domains/assembly-names.md)。
+如果 `ExecuteAssembly` 不满足主机的需要，那么另一种方法是使用 `CreateDelegate` 创建指向静态托管方法的函数指针。 这要求主机知道要调用的方法的签名（以创建函数指针类型），但允许主机调用代码而不是程序集的入口点。 第二个参数中提供的程序集名称是要加载的库的[完全托管程序集名称](../../standard/assembly/names.md)。
 
 ```C++
 void *pfnDelegate = NULL;

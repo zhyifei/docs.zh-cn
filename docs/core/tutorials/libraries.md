@@ -4,12 +4,12 @@ description: 了解如何使用 .NET Core CLI 工具创建 .NET Core 库。 将�
 author: cartermp
 ms.date: 05/01/2017
 ms.custom: seodec18
-ms.openlocfilehash: d22f73b33c36357b7f8018d1620b240e18d91676
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 90d960c996acd5a34ffb2215344e123dabad1014
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202654"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849480"
 ---
 # <a name="developing-libraries-with-cross-platform-tools"></a>使用跨平台工具开发库
 
@@ -17,7 +17,7 @@ ms.locfileid: "70202654"
 
 ## <a name="prerequisites"></a>系统必备
 
-需要在计算机上安装 [.NET Core SDK 和 CLI](https://www.microsoft.com/net/core) 。
+需要在计算机上安装 [.NET Core SDK 和 CLI](https://dotnet.microsoft.com/download) 。
 
 对于本文档中处理 .NET Framework 版本的部分，需要在 Windows 计算机上安装 [.NET Framework](https://dotnet.microsoft.com)。
 

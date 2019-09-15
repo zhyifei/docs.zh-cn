@@ -2,12 +2,12 @@
 title: dotnet test 命令
 description: dotnet test 命令可用于在给定项目中执行单元测试。
 ms.date: 05/29/2018
-ms.openlocfilehash: 6b67273f549edd7712237756a5aba13d5cb59a61
-ms.sourcegitcommit: 52e588dc2ee74d484cd07ac60076be25cbf777ab
+ms.openlocfilehash: 49926b35b418e93237a159758903c535ec6c4006
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67410357"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70988555"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -18,6 +18,8 @@ ms.locfileid: "67410357"
 `dotnet test` - 用于执行单元测试的 .NET 测试驱动程序。
 
 ## <a name="synopsis"></a>摘要
+
+<!-- markdownlint-disable MD025 -->
 
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
@@ -264,7 +266,7 @@ dotnet test [-h|--help]
 
 在当前目录运行项目中的测试，并以 trx 格式生成测试结果文件：
 
-`dotnet test --logger:trx`
+`dotnet test --logger trx`
 
 ## <a name="filter-option-details"></a>筛选选项详细信息
 

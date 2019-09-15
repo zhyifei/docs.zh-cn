@@ -5,12 +5,12 @@ author: jpreese
 ms.author: wiwagn
 ms.date: 07/28/2018
 ms.custom: seodec18
-ms.openlocfilehash: 2787f43645250dbaf7a67aa7b7158372cf624be5
-ms.sourcegitcommit: 52e588dc2ee74d484cd07ac60076be25cbf777ab
+ms.openlocfilehash: afd6e7e25573cbb571b225c263b9bcfccfca5647
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67410377"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926390"
 ---
 # <a name="unit-testing-best-practices-with-net-core-and-net-standard"></a>.NET Core 和 .NET Standard 单元测试最佳做法
 
@@ -43,6 +43,7 @@ ms.locfileid: "67410377"
 为代码编写测试会自然地解耦代码，因为采用其他方法测试会更困难。
 
 ## <a name="characteristics-of-a-good-unit-test"></a>优质单元测试的特征
+
 - 快速  。 对成熟项目进行数千次单元测试，这很常见。 应花非常少的时间来运行单元测试。 几毫秒。
 - 独立  。 单元测试是独立的，可以单独运行，并且不依赖文件系统或数据库等任何外部因素。
 - 可重复  。 运行单元测试的结果应该保持一致，也就是说，如果在运行期间不更改任何内容，总是返回相同的结果。
@@ -106,11 +107,13 @@ Assert.True(mockOrder.Validated);
 
 ### <a name="naming-your-tests"></a>为测试命名
 测试的名称应包括三个部分：
+
 - 要测试的方法的名称。
 - 测试的方案。
 - 调用方案时的预期行为。
 
 #### <a name="why"></a>为什么？
+
 - 命名标准非常重要，因为它们明确地表达了测试的意图。
 
 测试不仅能确保代码有效，还能提供文档。 只需查看单元测试套件，就可以在不查看代码本身的情况下推断代码的行为。 此外，测试失败时，可以确切地看到哪些方案不符合预期。
@@ -123,11 +126,13 @@ Assert.True(mockOrder.Validated);
 
 ### <a name="arranging-your-tests"></a>安排测试
 “Arrange、Act、Assert”是单元测试时的常见模式  。 顾名思义，它包含三个主要操作：
+
 - 安排对象，根据需要对其进行创建和设置  。
 - 作用于对象  。
 - 断言某些项按预期进行  。
 
 #### <a name="why"></a>为什么？
+
 - 明确地将要测试的内容从“arrange”和“assert”步骤分开   。
 - 降低将断言与“Act”代码混杂的可能性。
 
@@ -143,6 +148,7 @@ Assert.True(mockOrder.Validated);
 单元测试中使用的输入应为最简单的输入，以便验证当前正在测试的行为。
 
 #### <a name="why"></a>为什么？
+
 - 测试对代码库的未来更改更具弹性。
 - 更接近于测试行为而非实现。
 
@@ -158,6 +164,7 @@ Assert.True(mockOrder.Validated);
 单元测试中的命名变量和生产代码中的命名变量同样重要。 单元测试不应包含魔幻字符串。
 
 #### <a name="why"></a>为什么？
+
 - 测试读者无需检查生产代码即可了解值的特殊之处。
 - 明确地显示所要证明的内容，而不是显示要完成的内容   。
 
@@ -176,6 +183,7 @@ Assert.True(mockOrder.Validated);
 编写单元测试时，请避免手动字符串串联和逻辑条件，例如 `if`、`while`、`for` 和 `switch` 等等。
 
 #### <a name="why"></a>为什么？
+
 - 降低在测试中引入 bug 的可能性。
 - 专注于最终结果，而不是实现细节。
 
@@ -194,6 +202,7 @@ Assert.True(mockOrder.Validated);
 如果测试需要类似的对象或状态，那么比起使用 Setup 和 Teardown 属性（如果存在），更偏好使用 helper 方法。
 
 #### <a name="why"></a>为什么？
+
 - 读者阅读测试时产生的困惑减少，因为每个测试中都可以看到所有代码。
 - 给定测试的设置过多或过少的可能性降低。
 - 在测试之间共享状态（这会在测试之间创建不需要的依赖项）的可能性降低。
@@ -223,10 +232,12 @@ Assert.True(mockOrder.Validated);
 
 ### <a name="avoid-multiple-asserts"></a>避免多个断言
 在编写测试时，请尝试每次测试只包含一个 Assert。 仅使用一个 assert 的常用方法包括：
+
 - 为每个 assert 创建单独的测试。
 - 使用参数化测试。
 
 #### <a name="why"></a>为什么？
+
 - 如果一个 Assert 失败，将不计算后续 Assert。
 - 确保在测试中没有断言多个事例。
 - 让你从整体上了解测试失败原因。 

@@ -3,12 +3,12 @@ title: Windows 上 .NET Core 的先决条件
 description: 了解在 Windows 计算机上开发和运行 .NET Core 应用程序所需的依赖项。
 ms.custom: updateeachvsrelease
 ms.date: 04/08/2019
-ms.openlocfilehash: 1921ef565c2d04624009f7684e439ddba1cdf57e
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 7b2bf2b8353c4f02fa11e9e7531e0d936007be0b
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331071"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70970289"
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Windows 上 .NET Core 的先决条件
 
@@ -61,6 +61,8 @@ ms.locfileid: "68331071"
 
 在[发行说明](/visualstudio/releasenotes/vs2017-relnotes)中可以详细了解 Visual Studio 2017 中的更改。
 
+<!-- markdownlint-disable MD025 -->
+
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
 若要使用 .NET Core 2.2 SDK 在 Visual Studio 2017 中开发 .NET Core 应用：
@@ -97,8 +99,9 @@ ms.locfileid: "68331071"
 
 > [!IMPORTANT]
 > 可以使用 Visual Studio 2015 进行 .NET Core 1.x 开发，但不建议这么做，原因如下：
-  > * .NET Core 工具是预览版，并不受支持。
-  > * 项目依据的 project.json 已遭弃用。
+>
+> * .NET Core 工具是预览版，并不受支持。
+> * 项目依据的 project.json 已遭弃用。
 >
 > 若要详细了解项目格式更改，请参阅[变更的简要概览](./tools/cli-msbuild-architecture.md)。
 

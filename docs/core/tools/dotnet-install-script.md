@@ -2,12 +2,12 @@
 title: dotnet-install 脚本
 description: 了解用于安装 .NET Core CLI 工具和共享运行时的 dotnet-install 脚本。
 ms.date: 01/16/2019
-ms.openlocfilehash: ed1a3341e678b405ae4aca35e3b49ada89eb069a
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 867be93b5a4c66258df438ce718dabbd4ef2891c
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253902"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849575"
 ---
 # <a name="dotnet-install-scripts-reference"></a>dotnet-install 脚本引用
 
@@ -55,7 +55,7 @@ macOS/Linux：
   - 表示特定版本的由两部分构成的 X.Y 格式的版本（例如 `2.0` 或 `1.0`）。
   - 分支名称。 例如，`release/2.0.0`、`release/2.0.0-preview2` 或 `master`（适用于每日测试版本）。
 
-  默认值为 `LTS`。 有关 .NET 支持频道的详细信息，请参阅 [.NET 支持策略](https://www.microsoft.com/net/platform/support-policy#dotnet-core)页。
+  默认值为 `LTS`。 有关 .NET 支持频道的详细信息，请参阅 [.NET 支持策略](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)页。
 
 - **`-Version <VERSION>`**
 

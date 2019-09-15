@@ -5,18 +5,19 @@ author: mlacouture
 ms.date: 01/19/2017
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 74d10b0fb27a4acf477fc66451a5cf6fc1f4317c
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: e10f09d3f7146817770e74aa173f742322aafafc
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65631695"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926603"
 ---
 # <a name="using-microsoft-xml-serializer-generator-on-net-core"></a>在 .NET Core 上使用 Microsoft XML 序列化程序生成器
 
 本教程介绍如何在 C# .NET Core 应用程序中使用 Microsoft XML 序列化程序生成器。 在本教程中可学习：
 
 > [!div class="checklist"]
+>
 > * 如何创建 .NET Core 应用
 > * 如何向 Microsoft.XmlSerializer.Generator 包中添加引用
 > * 如何编辑 MyApp.csproj 以添加依赖项
@@ -29,7 +30,7 @@ ms.locfileid: "65631695"
 
 完成本教程：
 
-* [.NET Core 2.1 SDK](https://www.microsoft.com/net/download) 或更高版本
+* [.NET Core 2.1 SDK](https://dotnet.microsoft.com/download) 或更高版本
 * 最喜爱的代码编辑器。
 
 > [!TIP]
@@ -41,7 +42,7 @@ ms.locfileid: "65631695"
 
 ### <a name="create-a-net-core-console-application"></a>创建 .NET Core 控制台应用程序
 
-打开命令提示符，创建一个名为“MyApp”的文件夹。 导航到创建的文件夹，并键入以下命令：
+打开命令提示符，创建一个名为“MyApp”的文件夹  。 导航到创建的文件夹，并键入以下命令：
 
 ```console
 dotnet new console
@@ -59,11 +60,11 @@ dotnet add package Microsoft.XmlSerializer.Generator -v 1.0.0
 
 ### <a name="verify-changes-to-myappcsproj-after-adding-the-package"></a>添加包后，验证对 MyApp.csproj 的更改
 
-打开代码编辑器并开始操作！ 仍从生成了应用的 MyApp 目录中进行操作。
+打开代码编辑器并开始操作！ 仍从生成了应用的 MyApp 目录中进行操作  。
 
-在文本编辑器中打开 MyApp.csproj。
+在文本编辑器中打开 MyApp.csproj  。
 
-运行 [`dotnet add package`](../tools//dotnet-add-package.md) 命令后，会将以下行添加到 MyApp.csproj 项目文件中：
+运行 [`dotnet add package`](../tools//dotnet-add-package.md) 命令后，会将以下行添加到 MyApp.csproj 项目文件中  ：
 
  ```xml
  <ItemGroup>
@@ -83,7 +84,7 @@ dotnet add package Microsoft.XmlSerializer.Generator -v 1.0.0
 
 ### <a name="add-a-class-in-the-application"></a>在应用程序中添加类
 
-在文本编辑器中打开 Program.cs。 在 Program.cs 中添加名为“MyClass”的类。
+在文本编辑器中打开 Program.cs  。 在 Program.cs 中添加名为“MyClass”的类   。
 
 ```csharp
 public class MyClass
@@ -94,7 +95,7 @@ public class MyClass
 
 ### <a name="create-an-xmlserializer-for-myclass"></a>为 MyClass 创建 `XmlSerializer`
 
-在 Main 中添加以下行，为 MyClass 创建 `XmlSerializer`：
+在 Main 中添加以下行，为 MyClass 创建 `XmlSerializer`  ：
 
 ```csharp
 var serializer = new System.Xml.Serialization.XmlSerializer(typeof(MyClass));
@@ -102,7 +103,7 @@ var serializer = new System.Xml.Serialization.XmlSerializer(typeof(MyClass));
 
 ### <a name="build-and-run-the-application"></a>编译和运行应用程序
 
-继续在 MyApp 文件夹中，通过 [`dotnet run`](../tools/dotnet-run.md) 运行应用程序，并在运行时自动加载和使用预生成的序列化程序。
+继续在 MyApp 文件夹中，通过 [`dotnet run`](../tools/dotnet-run.md) 运行应用程序，并在运行时自动加载和使用预生成的序列化程序  。
 
 在控制台窗口中键入以下命令：
 
@@ -116,10 +117,11 @@ dotnet run
 > [!IMPORTANT]
 > 本教程中用来运行应用程序的命令和步骤仅用于开发过程。 准备好部署应用后，查看适用于 .NET Core 应用的不同[部署策略](../deploying/index.md)和 [`dotnet publish`](../tools/dotnet-publish.md) 命令。
 
-如果一切顺利，则会在输出文件夹中生成名为“MyApp.XmlSerializers.dll”的程序集。
+如果一切顺利，则会在输出文件夹中生成名为“MyApp.XmlSerializers.dll”的程序集  。
 
 祝贺你！ 你刚才已完成：
 > [!div class="checklist"]
+>
 > * 创建 .NET Core 应用。
 > * 向 Microsoft.XmlSerializer.Generator 包中添加引用。
 > * 编辑 MyApp.csproj 以添加依赖项。

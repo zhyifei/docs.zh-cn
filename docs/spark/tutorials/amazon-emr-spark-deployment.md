@@ -4,12 +4,12 @@ description: 了解如何将 .NET for Apache Spark 应用程序部署到 Amazon 
 ms.date: 05/17/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: bf52a53e8f282f55a0071deb266dabb798fa3348
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 8cde4f173fb1de5ebf271f4f080d21d587d3229e
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70254051"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928542"
 ---
 # <a name="deploy-a-net-for-apache-spark-application-to-amazon-emr-spark"></a>将 .NET for Apache Spark 应用程序部署到 Amazon EMR Spark
 
@@ -18,6 +18,7 @@ ms.locfileid: "70254051"
 在本教程中，你将了解：
 
 > [!div class="checklist"]
+>
 > * 准备 Microsoft.Spark.Worker
 > * 发布 Spark .NET 应用
 > * 将应用部署到 Amazon EMR Spark

@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet, seodoc18
-ms.openlocfilehash: 32593465c1a161aa1293b7b233539fa930c7e1d8
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: d983ee09704ff69fdedfa95a31942161162f73eb
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67402212"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70970656"
 ---
 # <a name="test-a-net-standard-library-with-net-core-in-visual-studio-2017"></a>在 Visual Studio 2017 中使用 .NET Core 测试 .NET Standard 库
 
@@ -23,7 +23,10 @@ ms.locfileid: "67402212"
 
 若要创建单元测试项目，请执行以下操作：
 
+<!-- markdownlint-disable MD025 -->
+
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
+
 1. 在“解决方案资源管理器”  中，打开“ClassLibraryProjects”  解决方案节点的上下文菜单，再依次选择“添加”   > “新项目”  。
 
 1. 在“添加新项目”  对话框中，选择“Visual C#”  节点。 然后，依次选择“.NET Core”  节点和“MSTest 测试项目(.NET Core)”  项目模板。 在“名称”  文本框中，输入项目名称“StringLibraryTest”。 选择“确定”  ，创建单元测试项目。
@@ -52,7 +55,9 @@ ms.locfileid: "67402212"
 1. 在“引用管理器”  对话框中，展开“项目”  节点，并选中“StringLibrary”  旁边的框。 添加对 `StringLibrary` 程序集的引用后，编译器可以查找 StringLibrary  方法。 选择“确定”  按钮。 这会添加对类库项目 `StringLibrary` 的引用。
 
    ![Visual Studio“添加项目引用”对话框](./media/testing-library-with-visual-studio/project-reference-manager.png)
-# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb) 
+
+# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+
 1. 在“解决方案资源管理器”  中，打开“ClassLibraryProjects”  解决方案节点的上下文菜单，再依次选择“添加”   > “新项目”  。
 
 1. 在“添加新项目”  对话框中，选择“Visual Basic”  节点。 然后，依次选择“.NET Core”  节点和“MSTest 测试项目(.NET Core)”  项目模板。 在“名称”  文本框中，输入项目名称“StringLibraryTest”。 选择“确定”  ，创建单元测试项目。
@@ -81,6 +86,7 @@ ms.locfileid: "67402212"
 1. 在“引用管理器”  对话框中，展开“项目”  节点，并选中“StringLibrary”  旁边的框。 添加对 `StringLibrary` 程序集的引用后，编译器可以查找 StringLibrary  方法。 选择“确定”  按钮。 这会添加对类库项目 `StringLibrary` 的引用。
 
    ![Visual Studio“添加项目引用”对话框 - Visual Basic](./media/testing-library-with-visual-studio/project-reference-manager.png)
+
 ---
 
 ## <a name="adding-and-running-unit-test-methods"></a>添加并运行单元测试方法
@@ -106,7 +112,8 @@ ms.locfileid: "67402212"
 
 创建测试方法：
 
-# <a name="ctabcsharp"></a>[C#](#tab/csharp) 
+# <a name="ctabcsharp"></a>[C#](#tab/csharp)
+
 1. 将 UnitTest1.cs  代码窗口中的代码替换为以下代码：
 
    [!CODE-csharp[Test#1](../../../samples/snippets/csharp/getting_started/with_visual_studio_2017/testlib1.cs)]
@@ -116,7 +123,9 @@ ms.locfileid: "67402212"
 1. 在菜单栏上，选择“文件”   > “将 UnitTest1.cs 另存为”  。 在“文件另存为”  对话框中，选择“保存”  按钮旁边的箭头，然后选择“保存时使用编码”  。
 
    ![Visual Studio“文件另存为”对话框 - C#](./media/testing-library-with-visual-studio/save-file-as-dialog.png)
-# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb) 
+
+# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+
 1. 将 UnitTest1.vb  代码窗口中的代码替换为以下代码：
 
     [!CODE-vb[Test#1](../../../samples/snippets/core/tutorials/vb-library-with-visual-studio/testlib.vb)]
@@ -126,6 +135,7 @@ ms.locfileid: "67402212"
 1. 在菜单栏上，依次选择“文件”   > “将 UnitTest1.vb 另存为”  。 在“文件另存为”  对话框中，选择“保存”  按钮旁边的箭头，然后选择“保存时使用编码”  。
 
    ![Visual Studio“文件另存为”对话框 - Visual Basic](./media/testing-library-with-visual-studio/save-file-as-dialog.png)
+
 ---
 
 1. 在“确认另存为”  对话框中，选择“是”  按钮，保存文件。

@@ -2,12 +2,12 @@
 title: dotnet 命令
 description: 了解 dotnet 命令（.NET Core CLI 工具的通用驱动程序）及其用法。
 ms.date: 06/04/2018
-ms.openlocfilehash: 328fd24cd72110bd235c177398f6f147fbb9d144
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 801320bf7f3527ac70f1d5b9fe3d0ce537e50e93
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373753"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969778"
 ---
 # <a name="dotnet-command"></a>dotnet 命令
 
@@ -18,6 +18,8 @@ ms.locfileid: "70373753"
 `dotnet` - 一款管理 .NET 源代码和二进制文件的工具。
 
 ## <a name="synopsis"></a>摘要
+
+<!-- markdownlint-disable MD025 -->
 
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
@@ -94,6 +96,7 @@ deps.json 文件包含依赖项、编译依赖项和用于解决程序集冲突�
 `--roll-forward-on-no-candidate-fx <N>`
 
 所需的共享框架不可用时，请定义行为。 `N` 可以是：
+
 - `0` - 禁用次要版本前滚。
 - `1` - 前滚次要版本，但不前滚主版本。 这是默认行为。
 - `2` - 前滚次要和主版本。

@@ -4,12 +4,12 @@ description: 了解如何将 .NET for Apache Spark 应用程序部署到 Databri
 ms.date: 05/17/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 3c9169e2936742c82ba27327ac07f0aa1b4c645c
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: db374a47140392577872f6635eb7275682a7a547
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70254044"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928554"
 ---
 # <a name="deploy-a-net-for-apache-spark-application-to-databricks"></a>将 .NET for Apache Spark 应用程序部署到 Databricks
 
@@ -18,6 +18,7 @@ ms.locfileid: "70254044"
 在本教程中，你将了解：
 
 > [!div class="checklist"]
+>
 > - 准备 Microsoft.Spark.Worker
 > - 发布 Spark .NET 应用
 > - 将应用部署到 Databricks

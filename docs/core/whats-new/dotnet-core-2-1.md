@@ -7,12 +7,12 @@ dev_langs:
 author: rpetrusha
 ms.author: ronpet
 ms.date: 10/10/2018
-ms.openlocfilehash: 00edb1c8704aab19d7ff44fe26c514b5ccea64b6
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: d0f4e2997e6e847cfd3c41ddb13096379d75343e
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331082"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70925719"
 ---
 # <a name="whats-new-in-net-core-21"></a>.NET Core 2.1 的新增功能
 
@@ -99,6 +99,7 @@ dotnet tool install -g dotnetsay
 > 此前滚行为不适用于预览版本。 默认情况下，它也不适用于主要版本，但可以通过以下设置进行更改。
 
 可以通过在没有候选共享框架的情况下更改前滚设置来修改此行为。 可用设置如下：
+
 - `0` - 禁用次要版本前滚行为。 使用此设置，为 .NET Core 2.0.0 构建的应用程序将前滚到 .NET Core 2.0.1，但不会前滚到 .NET Core 2.2.0 或 .NET Core 3.0.0。
 - `1` - 启用次要版本前滚行为。 这是设置的默认值。 使用此设置，为 .NET Core 2.0.0 构建的应用程序将前滚到 .NET Core 2.0.1 或 .NET Core 2.2.0，具体取决于安装的版本，但它不会前滚到 .NET Core3.0.0。
 - `2` - 启用次要和主要版本前滚行为。 即使考虑不同的主要版本，如果这样设置，为 .NET Core 2.0.0 构建的应用程序将前滚到 .NET Core 3.0.0。
@@ -178,15 +179,17 @@ dotnet tool install -g dotnetsay
 
 下面的示例使用 <xref:System.Span%601> 和 <xref:System.Memory%601> 实例来提供一个数组 10 个元素的虚拟视图。
 
-[!CODE-csharp[Span\<T>](~/samples/core/whats-new/whats-new-in-21/cs/program.cs)]
+[!code-csharp[Span\<T>](~/samples/core/whats-new/whats-new-in-21/cs/program.cs)]
 
-[!CODE-vb[Memory\<T>](~/samples/core/whats-new/whats-new-in-21/vb/program.vb)]
+[!code-vb[Memory\<T>](~/samples/core/whats-new/whats-new-in-21/vb/program.vb)]
 
 ### <a name="brotli-compression"></a>Brotli 压缩
 
 .NET Core 2.1 添加了对 Brotli 压缩和解压缩的支持。 Brotli 是在 [RFC 7932](https://www.ietf.org/rfc/rfc7932.txt) 中定义的通用无损压缩算法，并且大多数 Web 浏览器和主 Web 服务器都提供支持。 可以使用基于流的 <xref:System.IO.Compression.BrotliStream?displayProperty=nameWithType> 类或基于范围的高性能 <xref:System.IO.Compression.BrotliEncoder?displayProperty=nameWithType> 和 <xref:System.IO.Compression.BrotliDecoder?displayProperty=nameWithType> 类。 下面的示例用 <xref:System.IO.Compression.BrotliStream> 类演示压缩：
 
-[!CODE-csharp[Brotli compression](~/samples/core/whats-new/whats-new-in-21/cs/brotli.cs#1)]
+[!code-csharp[Brotli compression](~/samples/core/whats-new/whats-new-in-21/cs/brotli.cs#1)]
+
+[!code-vb[Brotli compression](~/samples/core/whats-new/whats-new-in-21/vb/brotli.vb#1)]
 
 <xref:System.IO.Compression.BrotliStream> 行为等同于 <xref:System.IO.Compression.DeflateStream> 和 <xref:System.IO.Compression.GZipStream>，这样就可以轻松地将调用这些 API 的代码转换为 <xref:System.IO.Compression.BrotliStream>。
 

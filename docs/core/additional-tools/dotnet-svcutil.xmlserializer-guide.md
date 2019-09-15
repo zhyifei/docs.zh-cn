@@ -3,12 +3,12 @@ title: 在 .NET Core 上使用 dotnet-svcutil.xmlserializer
 description: 了解如何使用 `dotnet-svcutil.xmlserializer` NuGet 包为 .NET Core 项目预生成序列化程序集。
 author: huanwu
 ms.date: 11/27/2018
-ms.openlocfilehash: 375a5ad5660658431c0d327e55513024823a6eee
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: a98f8d30f2e37b722a3bf1f93be8fe9df540a468
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632201"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70848963"
 ---
 # <a name="using-dotnet-svcutilxmlserializer-on-net-core"></a>在 .NET Core 上使用 dotnet-svcutil.xmlserializer
 
@@ -16,7 +16,7 @@ ms.locfileid: "65632201"
 
 ## <a name="prerequisites"></a>系统必备
 
-* [.NET Core 2.1 SDK](https://www.microsoft.com/net/download) 或更高版本
+* [.NET Core 2.1 SDK](https://dotnet.microsoft.com/download) 或更高版本
 * 你最喜欢的代码编辑器
 
 可以使用命令 `dotnet --info` 检查已安装哪些版本的 .NET Core SDK 和运行时。
@@ -96,6 +96,6 @@ ms.locfileid: "65632201"
     </ItemGroup>
     ```
 
-6. 通过运行 `dotnet build` 生成应用程序。 如果一切顺利，则会在输出文件夹中生成名为“MyWCFClient.XmlSerializers.dll”的程序集。 如果该工具无法生成程序集，将在生成输出中看到警告。
+6. 通过运行 `dotnet build` 生成应用程序。 如果一切顺利，则会在输出文件夹中生成名为“MyWCFClient.XmlSerializers.dll”的程序集  。 如果该工具无法生成程序集，将在生成输出中看到警告。
 
 7. 例如，通过在浏览器中运行 `http://localhost:2561/Service1.svc` 来启动 WCF 服务。 然后启动客户端应用程序，它将在运行时自动加载和使用预生成的序列化程序。

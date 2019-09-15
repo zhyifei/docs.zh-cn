@@ -2,12 +2,12 @@
 title: dotnet publish 命令
 description: dotnet publish 命令可将 .NET Core 项目发布到目录。
 ms.date: 05/29/2018
-ms.openlocfilehash: 188a136c3e024f71f9b3e89d8e797fa3053f7e4c
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: f9fea1a30e349ef949078e881756e2520d79ccbf
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202597"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969831"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -18,6 +18,8 @@ ms.locfileid: "70202597"
 `dotnet publish` - 将应用程序及其依赖项打包到文件夹以部署到托管系统。
 
 ## <a name="synopsis"></a>摘要
+
+<!-- markdownlint-disable MD025 -->
 
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 

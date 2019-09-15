@@ -1,15 +1,16 @@
 ---
-ms.openlocfilehash: cb8cc6574caad6da25b3fced70c58175a33ec896
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0bad5c7944a06527cd71606c686762656f33c925
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68616327"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929178"
 ---
 # <a name="voice-and-tone-guidelines"></a>语音和语调准则
 
 各种用户（包括 IT 专业人员和开发人员）都会阅读你的文档，以了解 .NET 并将其应用于他们的日常生活中。
 你的目标是创建优质文档，帮助读者进行学习。 我们的准则帮助你实现目标。 风格指南包含以下建议：
+
 - [使用对话式语气](#use-a-conversational-tone)
 - [以第二人称编写](#write-in-2nd-person)
 - [使用主动语态](#use-active-voice)

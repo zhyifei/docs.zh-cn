@@ -5,12 +5,12 @@ author: thraka
 ms.date: 06/25/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: c50aaf413f08c2e4cbe3f8ce8c057e5841067c92
-ms.sourcegitcommit: 6472349821dbe202d01182bc2cfe9d7176eaaa6c
+ms.openlocfilehash: 5183781d6a131aa395cf7c1fd8a09e05ed0bd71d
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67870606"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926153"
 ---
 # <a name="tutorial-create-an-item-template"></a>教程：创建项模板
 
@@ -19,6 +19,7 @@ ms.locfileid: "67870606"
 在本系列的这一部分中，你将了解如何：
 
 > [!div class="checklist"]
+>
 > * 为项模板创建类
 > * 创建模板配置文件夹和文件
 > * 从文件路径安装模板
@@ -27,7 +28,7 @@ ms.locfileid: "67870606"
 
 ## <a name="prerequisites"></a>系统必备
 
-* [.NET Core 2.2 SDK](https://www.microsoft.com/net/core) 或更高版本。
+* [.NET Core 2.2 SDK](https://dotnet.microsoft.com/download) 或更高版本。
 * 阅读参考文章[为 dotnet new 自定义模板](../tools/custom-templates.md)。
 
   参考文章介绍了有关模板的基础知识，以及如何将它们组合在一起。 其中一些信息将在本文中重复出现。

@@ -4,12 +4,12 @@ description: 了解如何创建支持插件的 .NET Core 应用程序。
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/28/2019
-ms.openlocfilehash: 308fd2f853261e87da71892c42e17e36984d1978
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 54a4459619ee69fc74a14da7ff7fe10a472a4433
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68330975"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849442"
 ---
 # <a name="create-a-net-core-application-with-plugins"></a>使用插件创建 .NET Core 应用程序
 
@@ -22,7 +22,7 @@ ms.locfileid: "68330975"
 
 ## <a name="prerequisites"></a>系统必备
 
-- 安装 [.NET Core 3.0 预览版 2 SDK](https://www.microsoft.com/net/core) 或更新版本。
+- 安装 [.NET Core 3.0 预览版 2 SDK](https://dotnet.microsoft.com/download) 或更新版本。
 
 ## <a name="create-the-application"></a>创建应用程序
 

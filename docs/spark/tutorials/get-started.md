@@ -4,12 +4,12 @@ description: 了解如何在 Windows 上使用 .NET Core 运行 .NET for Apache 
 ms.date: 06/27/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 7ce7d7aec6c15385d3d797d5a548519eea33b764
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 004256a2fe369b026b15151dfc72ae379da0be8e
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "69577004"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928486"
 ---
 # <a name="tutorial-get-started-with-net-for-apache-spark"></a>教程：.NET for Apache Spark 入门
 
@@ -18,6 +18,7 @@ ms.locfileid: "69577004"
 在本教程中，你将了解：
 
 > [!div class="checklist"]
+>
 > * 为 .NET for Apache Spark 准备 Windows 环境
 > * 下载 Microsoft.Spark.Worker 
 > * 生成和运行简单的 .NET for Apache Spark 应用程序
@@ -124,6 +125,7 @@ git clone https://github.com/dotnet/spark.git c:\github\dotnet-spark
 
 在本教程中，你将了解：
 > [!div class="checklist"]
+>
 > * 为 .NET for Apache Spark 准备 Windows 环境
 > * 下载 Microsoft.Spark.Worker 
 > * 生成和运行简单的 .NET for Apache Spark 应用程序

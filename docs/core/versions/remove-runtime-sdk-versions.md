@@ -5,12 +5,12 @@ ms.date: 07/28/2018
 author: billwagner
 ms.author: wiwagn
 ms.custom: seodec18
-ms.openlocfilehash: 4e336abf62299e0dee2e4757bb83f967ed4aed59
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 6d1012b8ddc5fd4a5ee8227902886727dbb10739
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966016"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70970298"
 ---
 # <a name="how-to-remove-the-net-core-runtime-and-sdk"></a>如何删除 .NET Core 运行时和 SDK
 
@@ -20,11 +20,13 @@ ms.locfileid: "56966016"
 
 借助 [.NET Core 版本选择](selection.md)行为和 .NET Core 各个更新之间的运行时兼容性，可安全地删除以前的版本。 .NET Core 运行时更新在主版本“区段”（如 1.x 和 2.x）中兼容。 此外，较新版本的 .NET Core SDK 通常能够以兼容的方式生成以运行时的早期版本为目标的应用程序。
 
-通常，只需要应用程序所需的最新 SDK 和运行时的最新补丁版本。 保留旧版 SDK 或运行时版本的实例包括维护基于 project.json 的应用程序。 除非应用程序有需保留早期 SDK 或运行时的特定原因，否则可以安全地删除旧版本。
+通常，只需要应用程序所需的最新 SDK 和运行时的最新补丁版本。 保留旧版 SDK 或运行时版本的实例包括维护基于 project.json  的应用程序。 除非应用程序有需保留早期 SDK 或运行时的特定原因，否则可以安全地删除旧版本。
 
 ## <a name="determine-what-is-installed"></a>确定安装内容
 
 从 .NET Core 2.1 开始，.NET CLI 提供一些可用于列出计算机上安装的 SDK 和运行时版本的选项。  使用 [`dotnet --list-sdks`](../tools/dotnet.md#options) 查看计算机上安装的 SDK 列表。 使用 [`dotnet --list-runtimes`](../tools/dotnet.md#options) 查看计算机上安装的运行时列表。 下文显示了 Windows、macOS 或 Linux 的典型输出：
+
+<!-- markdownlint-disable MD025 -->
 
 # <a name="windowstabwindows"></a>[Windows](#tab/windows)
 
@@ -138,11 +140,11 @@ Microsoft.NETCore.App 2.1.1 [/usr/local/share/dotnet/shared/Microsoft.NETCore.Ap
 
 # <a name="windowstabwindows"></a>[Windows](#tab/windows)
 
-.NET Core 使用 Windows“添加/删除程序”对话框来删除 .NET Core 运行时和 SDK 的版本。 下图显示了“添加/删除程序”对话框，其中包含已安装的多个版本的 .NET 运行时和 SDK。
+.NET Core 使用 Windows“添加/删除程序”  对话框来删除 .NET Core 运行时和 SDK 的版本。 下图显示了“添加/删除程序”  对话框，其中包含已安装的多个版本的 .NET 运行时和 SDK。
 
 ![用来删除 .NET Core 的“添加/删除程序”](./media/remove-runtime-sdk-versions/programs-and-features.png)
 
-选择要从计算机中删除的任何版本，然后单击“卸载”。
+选择要从计算机中删除的任何版本，然后单击“卸载”  。
 
 # <a name="linuxtablinux"></a>[Linux](#tab/linux)
 

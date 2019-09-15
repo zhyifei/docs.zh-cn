@@ -4,12 +4,12 @@ description: 了解如何使用 Visual Studio Code 创建和调试首个 C# .NET
 author: kendrahavens
 ms.date: 12/05/2018
 ms.custom: seodec18
-ms.openlocfilehash: 910545a99f9d014ae572fbe95c93cdb44a69db99
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 03a2edcbb3414cfd63006603424a3ca1eade528f
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105108"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849452"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>C# 和 Visual Studio Code 入门
 
@@ -18,7 +18,7 @@ ms.locfileid: "70105108"
 ## <a name="prerequisites"></a>系统必备
 
 1. 安装 [Visual Studio Code](https://code.visualstudio.com/)。
-2. 获取 [.NET Core SDK](https://www.microsoft.com/net/download/core)。
+2. 获取 [.NET Core SDK](https://dotnet.microsoft.com/download)。
 3. 安装 Visual Studio Code 的 [C# 扩展](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)。 若要详细了解如何在 Visual Studio Code 上安装扩展，请访问 [VS Code 扩展市场](https://code.visualstudio.com/docs/editor/extension-gallery)。
 
 ## <a name="hello-world"></a>Hello World

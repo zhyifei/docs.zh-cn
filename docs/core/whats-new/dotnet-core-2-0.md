@@ -4,12 +4,12 @@ description: 了解 .NET Core 的新增功能。
 author: rpetrusha
 ms.author: ronpet
 ms.date: 08/13/2017
-ms.openlocfilehash: f48b8e88a716df0f07a5626bdc8f66000cfaeed8
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: c208f565bebedc06e244de1f6554129f21c77b8c
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68626360"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849931"
 ---
 # <a name="whats-new-in-net-core-20"></a>.NET Core 2.0 的新增功能
 
@@ -154,7 +154,7 @@ Visual Studio 2017 版本 15.3 和（在某些情况下）Visual Studio for Mac 
 
 ### <a name="net-application-architecture"></a>.NET 应用程序体系结构
 
-通过 [.NET 应用程序体系结构](https://www.microsoft.com/net/learn/architecture)，可以查看一系列电子图书，其中提供了有关如何使用 .NET 生成内容的指导、最佳做法和示例应用程序：
+通过 [.NET 应用程序体系结构](https://dotnet.microsoft.com/learn/dotnet/architecture-guides)，可以查看一系列电子图书，其中提供了有关如何使用 .NET 生成内容的指导、最佳做法和示例应用程序：
 
 - [微服务和 Docker 容器](../../architecture/microservices/index.md)
 - [使用 ASP.NET 的 Web 应用程序](../../architecture/modern-web-apps-azure/index.md)

@@ -6,12 +6,12 @@ ms.date: 10/04/2018
 dev_langs:
 - fsharp
 ms.custom: seodec18
-ms.openlocfilehash: d654f77eb71b050b636476d67c62da3ea764edf7
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: cf313f8197280bdbb943c12ef0c7a29284ec01a5
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374186"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849772"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-nunit"></a>使用 dotnet test 和 NUnit 在 .NET Core 中进行 F# 库的单元测试
 
@@ -21,7 +21,7 @@ ms.locfileid: "70374186"
 
 ## <a name="prerequisites"></a>系统必备
 
-- [.NET Core 2.1 SDK](https://www.microsoft.com/net/download) 或更高版本。
+- [.NET Core 2.1 SDK](https://dotnet.microsoft.com/download) 或更高版本。
 - 按需选择的文本编辑器或代码编辑器。
 
 ## <a name="creating-the-source-project"></a>创建源项目

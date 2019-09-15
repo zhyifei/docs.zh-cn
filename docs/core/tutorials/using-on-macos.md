@@ -4,12 +4,12 @@ description: 本文档提供使用 Visual Studio Code 创建 .NET Core 解决方
 author: bleroy
 ms.date: 03/23/2017
 ms.custom: seodec18
-ms.openlocfilehash: f1cb9b45c0ed1b4315361846fc065209088b57f8
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 572174cb09dbde03095fa9444989356038bab9b7
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373790"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849357"
 ---
 # <a name="get-started-with-net-core-on-macos"></a>开始在 macOS 上使用 .NET Core
 
@@ -20,7 +20,7 @@ ms.locfileid: "70373790"
 
 ## <a name="prerequisites"></a>系统必备
 
-获取 [.NET Core SDK](https://www.microsoft.com/net/core)。 .NET Core SDK 包括最新版本的 .NET Core 框架和运行时。
+获取 [.NET Core SDK](https://dotnet.microsoft.com/download)。 .NET Core SDK 包括最新版本的 .NET Core 框架和运行时。
 
 安装 [Visual Studio Code](https://code.visualstudio.com)。 在本文中，还将安装可提升 .NET Core 开发体验的 Visual Studio Code 扩展。
 

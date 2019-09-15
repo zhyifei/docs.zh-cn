@@ -4,22 +4,22 @@ description: 查找相关资源，了解如何在 Windows、Linux 和 macOS 上�
 author: thraka
 ms.author: adegeo
 ms.date: 06/27/2018
-ms.openlocfilehash: b111d464b83f3bc6a4a0da86678c5364bf4a9537
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: 3c530c71d1cfa9d0c4cf09f38519970f6ef8da51
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67802296"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969901"
 ---
 # <a name="get-started-with-net-core"></a>.NET Core 入门
 
 本文提供 .NET Core 入门的相关信息。 可在 Windows、Linux 和 macOS 上安装 .NET Core。 你可在最喜欢的文本编辑器中编写代码并生成跨平台的库和应用程序。 
 
-如果不确定 .NET Core 是什么或其与其他 .NET 技术的关系，请首先参阅 [What is .NET](https://www.microsoft.com/net/learn/dotnet/what-is-dotnet)（.NET 是什么）概述。 简单地说，.NET Core 是一个跨平台的开放源代码 .NET 实现。
+如果不确定 .NET Core 是什么或其与其他 .NET 技术的关系，请首先参阅 [What is .NET](https://dotnet.microsoft.com/learn/dotnet/what-is-dotnet)（.NET 是什么）概述。 简单地说，.NET Core 是一个跨平台的开放源代码 .NET 实现。
 
 ## <a name="create-an-application"></a>创建应用程序
 
-首先，在计算机上下载并安装 [.NET Core SDK](https://www.microsoft.com/net/download/)。
+首先，在计算机上下载并安装 [.NET Core SDK](https://dotnet.microsoft.com/download)。
 
 然后，打开某一终端，如 PowerShell、命令提示符或 Bash    。 键入以下 `dotnet` 命令以创建并运行 C# 应用程序。
 
@@ -39,6 +39,8 @@ Hello World!
 ## <a name="tutorials"></a>教程
 
 可以通过以下分步教程着手开发 .NET Core 应用程序。
+
+<!-- markdownlint-disable MD025 -->
 
 # <a name="windowstabwindows"></a>[Windows](#tab/windows)
 

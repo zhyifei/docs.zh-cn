@@ -4,31 +4,35 @@ description: Microsoft WCF dotnet-svcutil 工具概述，该工具添加了 .NET
 author: mlacouture
 ms.date: 02/22/2019
 ms.custom: seodec18
-ms.openlocfilehash: 5e361ce85bec696fe5d76c4f43a444c543a9012d
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 7c3e2f7bcfb337a09a9cc13068c22d496762a90f
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063295"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969941"
 ---
 # <a name="wcf-dotnet-svcutil-tool-for-net-core"></a>.NET Core 的 WCF dotnet-svcutil 工具
 
-Windows Communication Foundation (WCF) dotnet-svcutil 工具是一种 .NET Core CLI 工具，此工具从网络位置上的 Web 服务中或从 WSDL 文件中检索元数据，并生成包含访问 Web 服务操作的客户端代理方法的 WCF 类。
+Windows Communication Foundation (WCF) dotnet-svcutil  工具是一种 .NET Core CLI 工具，此工具从网络位置上的 Web 服务中或从 WSDL 文件中检索元数据，并生成包含访问 Web 服务操作的客户端代理方法的 WCF 类。
 
-类似于 .NET Framework 项目的[服务模型元数据 - svcutil](../../framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 工具，dotnet svcutil 是用于生成 Web 服务引用的命令行工具，与 .NET Core 和 .NET Standard 项目兼容。
+类似于 .NET Framework 项目的[服务模型元数据 - svcutil  ](../../framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 工具，dotnet svcutil  是用于生成 Web 服务引用的命令行工具，与 .NET Core 和 .NET Standard 项目兼容。
 
-dotnet-svcutil 工具是 [WCF Web 服务引用](wcf-web-service-reference-guide.md) Visual Studio 连接服务提供程序（随 Visual Studio 2017 v15.5 首次推出）的替代选项。 dotnet-svcutil 工具作为一种 .NET Core CLI 工具，可跨平台地用于 Linux、macOS 和 Windows。
+dotnet-svcutil  工具是 [WCF Web 服务引用](wcf-web-service-reference-guide.md)  Visual Studio 连接服务提供程序（随 Visual Studio 2017 v15.5 首次推出）的替代选项。 dotnet-svcutil  工具作为一种 .NET Core CLI 工具，可跨平台地用于 Linux、macOS 和 Windows。
 
 > [!IMPORTANT]
 > 应仅从受信任源引用服务。 从不受信任的源添加引用可能会危及安全性。
 
 ## <a name="prerequisites"></a>系统必备
 
+<!-- markdownlint-disable MD025 -->
+
 # <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
+
 * [.NET Core 2.1 SDK](https://dotnet.microsoft.com/download) 或更高版本
 * 你最喜欢的代码编辑器
 
 # <a name="dotnet-svcutil-1xtabdotnetsvcutil1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
+
 * [.NET Core 1.0.4 SDK](https://dotnet.microsoft.com/download) 或更高版本
 * 你最喜欢的代码编辑器
 
@@ -36,7 +40,7 @@ dotnet-svcutil 工具是 [WCF Web 服务引用](wcf-web-service-reference-guide.
 
 ## <a name="getting-started"></a>入门
 
-下面的示例将指导你完成将 Web 服务引用添加到 .NET Core Web 项目并调用该服务所需的步骤。 将创建名为“HelloSvcutil”的 .NET Core Web 应用程序，并将引用添加到实现以下协定的 Web 服务：
+下面的示例将指导你完成将 Web 服务引用添加到 .NET Core Web 项目并调用该服务所需的步骤。 将创建名为“HelloSvcutil”  的 .NET Core Web 应用程序，并将引用添加到实现以下协定的 Web 服务：
 
 ```csharp
 [ServiceContract]
@@ -51,7 +55,7 @@ public interface ISayHello
 
 从 Windows、macOS 或 Linux 命令窗口执行以下步骤：
 
-1. 为项目创建一个名为“HelloSvcutil”的目录，并将其设置为当前目录，如以下示例所示：
+1. 为项目创建一个名为“HelloSvcutil”  的目录，并将其设置为当前目录，如以下示例所示：
 
     ```console
     mkdir HelloSvcutil
@@ -80,7 +84,7 @@ public interface ISayHello
     </ItemGroup>
     ```
 
-    然后使用 [`dotnet restore`](../tools/dotnet-restore.md) 命令还原 dotnet-svcutil 包，如下所示：
+    然后使用 [`dotnet restore`](../tools/dotnet-restore.md) 命令还原 dotnet-svcutil  包，如下所示：
 
     ```console
     dotnet restore
@@ -88,7 +92,7 @@ public interface ISayHello
 
     ---
 
-4. 运行 dotnet-svcutil 命令生成 Web 服务引用文件，如下所示：
+4. 运行 dotnet-svcutil  命令生成 Web 服务引用文件，如下所示：
 
     # <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
 
@@ -104,7 +108,7 @@ public interface ISayHello
 
     ---
 
-生成的文件保存为 _HelloSvcutil/ServiceReference/Reference.cs_。 dotnet-svcutil 工具还向项目添加代理代码所需的适当 WCF 包作为包引用。
+生成的文件保存为 _HelloSvcutil/ServiceReference/Reference.cs_。 dotnet-svcutil  工具还向项目添加代理代码所需的适当 WCF 包作为包引用。
 
 ## <a name="using-the-service-reference"></a>使用服务引用
 
@@ -114,7 +118,7 @@ public interface ISayHello
     dotnet restore
     ```
 
-2. 找到要使用的客户端类和操作的名称。 `Reference.cs` 将包含一个继承自 `System.ServiceModel.ClientBase` 的类，其方法可用于调用服务上的操作。 在本例中，想要调用 SayHello 服务的 Hello 操作。 `ServiceReference.SayHelloClient` 是客户端类的名称，它有一个名为 `HelloAsync` 的方法，可用于调用该操作。
+2. 找到要使用的客户端类和操作的名称。 `Reference.cs` 将包含一个继承自 `System.ServiceModel.ClientBase` 的类，其方法可用于调用服务上的操作。 在本例中，想要调用 SayHello  服务的 Hello  操作。 `ServiceReference.SayHelloClient` 是客户端类的名称，它有一个名为 `HelloAsync` 的方法，可用于调用该操作。
 
 3. 在编辑器中打开 `Startup.cs` 文件，并在顶部为服务引用命名空间添加一个 using 语句：
 

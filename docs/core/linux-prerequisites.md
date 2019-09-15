@@ -4,12 +4,12 @@ description: 支持的 Linux 版本和 .NET Core 依赖项，用于在 Linux 计
 author: thraka
 ms.author: adegeo
 ms.date: 12/14/2018
-ms.openlocfilehash: 0bd3287535ba2c398f6577890d1d39f42a806364
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 5fcf931572f3c7e9b9857d2e91e9d620c7aad0bd
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612220"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969870"
 ---
 # <a name="prerequisites-for-net-core-on-linux"></a>Linux 上 .NET Core 的先决条件
 
@@ -23,11 +23,13 @@ ms.locfileid: "59612220"
 
 ## <a name="supported-linux-versions"></a>支持的 Linux 版本
 
+<!-- markdownlint-disable MD025 -->
+
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
 .NET Core 2.x 将 Linux 视为一个操作系统。 支持的 Linux 分发都对应有一个 Linux 内部版本（根据芯片体系结构）。 
 
-有关下载链接和详细信息，请参阅 [.NET Core 2.2 下载](https://www.microsoft.com/net/download/dotnet-core/2.2)或 [.NET Core 2.1 下载](https://www.microsoft.com/net/download/dotnet-core/2.1)。
+有关下载链接和详细信息，请参阅 [.NET Core 2.2 下载](https://dotnet.microsoft.com/download/dotnet-core/2.2)或 [.NET Core 2.1 下载](https://dotnet.microsoft.com/download/dotnet-core/2.1)。
 
 以下 Linux 发行版本/版本支持 .NET Core 2.x：
 
@@ -46,7 +48,7 @@ ms.locfileid: "59612220"
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
-有关下载链接和详细信息，请参阅 [.NET Core 1.1 下载](https://www.microsoft.com/net/download/dotnet-core/1.1)或 [.NET Core 1.0 下载](https://www.microsoft.com/net/download/dotnet-core/1.0)。
+有关下载链接和详细信息，请参阅 [.NET Core 1.1 下载](https://dotnet.microsoft.com/download/dotnet-core/1.1)或 [.NET Core 1.0 下载](https://dotnet.microsoft.com/download/dotnet-core/1.0)。
 
 以下 Linux 64 位（`x86_64` 或 `amd64`）发行版本/版本支持 .NET Core 1.x：
 
