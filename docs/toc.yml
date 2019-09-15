@@ -1070,24 +1070,6 @@
     - name: 编程概念
       href: visual-basic/programming-guide/concepts/index.md
       items:
-        - name: 程序集
-          items:
-            - name: 友元程序集
-              items:
-                - name: 如何：创建未签名的友元程序集
-                  href: visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md
-                - name: 如何：创建已签名的友元程序集
-                  href: visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md
-            - name: 如何：使用命令行创建和使用程序集
-              href: visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md
-            - name: 如何：确定文件是否为程序集
-              href: visual-basic/programming-guide/concepts/assemblies-gac/how-to-determine-if-a-file-is-an-assembly.md
-            - name: 如何：加载和卸载程序集
-              href: visual-basic/programming-guide/concepts/assemblies-gac/how-to-load-and-unload-assemblies.md
-            - name: 如何：与其他应用程序共享程序集
-              href: visual-basic/programming-guide/concepts/assemblies-gac/how-to-share-an-assembly-with-other-applications.md
-            - name: 演练：嵌入托管程序集中的类型
-              href: visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md
         - name: 使用 Async 和 Await 的异步编程
           href: visual-basic/programming-guide/concepts/async/index.md
         - name: 特性

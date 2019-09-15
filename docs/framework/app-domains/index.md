@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 96d3b8e3-bef8-4da0-9a81-9841e23a94e9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7124b6b234601e3afc27109ac318f47e3fe40c35
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b4f0c2ad1290a7f9cf8d0c43c504a3e0a9628b86
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61675346"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971926"
 ---
 # <a name="programming-with-application-domains-and-assemblies"></a>使用应用程序域和程序集编程
 Microsoft Internet Explorer、ASP.NET 和 Windows Shell 等主机将公共语言运行时加载到进程中，在相应进程中创建[应用程序域](../../../docs/framework/app-domains/application-domains.md)，然后在 .NET Framework 应用程序运行时加载并执行相应应用程序域中的用户代码。 在大多数情况下，不必担心创建应用程序域和将程序集加载到这些域中，因为运行时主机会执行这些任务。  
@@ -28,14 +28,14 @@ Microsoft Internet Explorer、ASP.NET 和 Windows Shell 等主机将公共语言
  [使用应用程序域](../../../docs/framework/app-domains/use.md)  
  举例说明了如何创建、配置和使用应用程序域。  
   
- [使用程序集编程](../../../docs/framework/app-domains/programming-with-assemblies.md)  
+ [使用程序集编程](../../standard/assembly/program.md)  
  描述如何在程序集上创建、签署和设置特性。  
   
 ## <a name="related-sections"></a>相关章节  
  [发出动态方法和程序集](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)  
  描述如何创建动态程序集。  
   
- [Assemblies in the Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)（公共语言运行时中的程序集）  
+ [.NET 中的程序集](../../standard/assembly/index.md)  
  提供程序集的概念性概述。  
   
  [应用程序域](../../../docs/framework/app-domains/application-domains.md)  

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 238d8284-6042-4a38-a7f6-1ee8efd719da
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e7da023c5ab9247cde0ccd1126d4d639c6f355e7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8d9448edab101ef11447b54e12c53abcb578646a
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910974"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971600"
 ---
 # <a name="deploying-the-net-framework-and-applications"></a>部署 .NET Framework 和应用程序
 
@@ -118,7 +118,7 @@ ms.locfileid: "69910974"
 
 ## <a name="packaging-and-distributing-net-framework-applications"></a>打包和分发 .NET Framework 应用程序
 
-文档中的其他章节介绍了打包和部署 .NET Framework 的部分信息。 这些章节介绍了以下关于自描述单元的信息：[程序集](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)（不需要注册表项）、[强名称程序集](../../../docs/framework/app-domains/strong-named-assemblies.md)（确保名称的唯一性和避免名称欺骗）和[程序集版本控制](../../../docs/framework/app-domains/assembly-versioning.md)（可解决很多与 DLL 冲突相关的问题）。 以下各节提供有关打包和分发.NET Framework 应用程序的信息。
+文档中的其他章节介绍了打包和部署 .NET Framework 的部分信息。 这些章节介绍了以下关于自描述单元的信息：[程序集](../../standard/assembly/index.md)（不需要注册表项）、[强名称程序集](../../standard/assembly/strong-named.md)（确保名称的唯一性和避免名称欺骗）和[程序集版本控制](../../standard/assembly/versioning.md)（可解决很多与 DLL 冲突相关的问题）。 以下各节提供有关打包和分发.NET Framework 应用程序的信息。
 
 ### <a name="packaging"></a>打包
 
