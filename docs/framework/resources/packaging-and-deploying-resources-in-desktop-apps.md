@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4092d8694bdb896db1332bd73afae3f62bba36cf
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 808f0f8ac6caf15be0bf1ba8735521871c9b94d7
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105917"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851599"
 ---
 # <a name="packaging-and-deploying-resources-in-net-apps"></a>打包和部署 .NET 应用中的资源
 
@@ -176,13 +176,13 @@ ms.locfileid: "70105917"
 
 下面的 .NET Framework 示例使用 <xref:System.Resources.NeutralResourcesLanguageAttribute> 属性将应用程序回退资源存储在法语 (`fr`) 语言的附属程序集中。 本示例介绍了两个基于文本的资源文件，这两个文件用于定义名为 `Greeting` 的单个字符串资源。 第一个文件 resources.fr.txt 包含法语资源。
 
-```
+```text
 Greeting=Bon jour!
 ```
 
 第二个文件 resources.ru.txt 包含俄语资源。
 
-```
+```text
 Greeting=Добрый день
 ```
 
@@ -223,7 +223,7 @@ vbc Example1.vb
 
 当从不是俄语的任何系统运行示例时，它将显示以下输出：
 
-```
+```output
 Bon jour!
 ```
 

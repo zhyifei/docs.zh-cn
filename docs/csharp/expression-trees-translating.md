@@ -3,12 +3,12 @@ title: 转换表达式树
 description: 介绍如何访问表达式树中的每个节点，同时生成该表达式树的已修改副本。
 ms.date: 06/20/2016
 ms.assetid: b453c591-acc6-4e08-8175-97e5bc65958e
-ms.openlocfilehash: b3c575876b6d53e9db366f59ad45aac714923c45
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: a12c4d7fe9f65d6e9598259de1504b6f9987f38e
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202949"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70925843"
 ---
 # <a name="translating-expression-trees"></a>转换表达式树
 
@@ -191,7 +191,7 @@ Computed sum: 10
 
 ## <a name="learning-more"></a>了解更多信息
 
-此示例演示了要生成的用于遍历和解释表达式树表示的算法的代码的一小部分。 有关生成将表达式树转换为其他语言的通用库所需的所有工作的完整讨论，请阅读 Matt Warren 的[这一系列](https://blogs.msdn.com/b/mattwar/archive/2008/11/18/linq-links.aspx)。 它详细介绍了如何转换可能在表达式树中找到的任意代码。
+此示例演示了要生成的用于遍历和解释表达式树表示的算法的代码的一小部分。 有关生成将表达式树转换为其他语言的通用库所需的所有工作的完整讨论，请阅读 Matt Warren 的[这一系列](https://blogs.msdn.microsoft.com/mattwar/2008/11/18/linq-building-an-iqueryable-provider-series/)。 它详细介绍了如何转换可能在表达式树中找到的任意代码。
 
 希望你现在已经见识到了表达式树的真正强大功能。
 你可以检查一组代码、对该代码进行任意更改，并执行更改后的版本。 由于表达式树是不可变的，你可以通过使用现有树的组件创建新树。 这样可使创建修改的表达式树所需的内存量最小。

@@ -4,12 +4,12 @@ description: 了解如何使用迁移学习和 ML.NET 重新定型图像分类�
 ms.date: 07/09/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: 65f94fa5e725703d79d0dddae761cbfbc3f89e0e
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: eb6e3d3f3a33aa7360802ce1bc6c16532539c828
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67804759"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929243"
 ---
 # <a name="tutorial-retrain-a-tensorflow-image-classifier-with-transfer-learning-and-mlnet"></a>教程：使用迁移学习和 ML.NET 重新定型 TensorFlow 图像分类器
 
@@ -19,6 +19,7 @@ ms.locfileid: "67804759"
 
 在本教程中，你将了解：
 > [!div class="checklist"]
+>
 > * 了解问题
 > * 重用和优化预定型模型
 > * 分类图像
@@ -216,7 +217,7 @@ toaster2.png    appliance
 
 ### <a name="create-a-struct-for-default-parameters"></a>创建默认参数的结构
 
-Inception 模型具有多个需要传入的默认参数。 紧跟在 `Main()` 方法后面，使用以下代码创建结构，以将默认参数值映射到易记名称：
+需要传入 Inception 模型的多个默认参数。 紧跟在 `Main()` 方法后面，使用以下代码创建结构，以将默认参数值映射到易记名称：
 
 [!code-csharp[InceptionSettings](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#InceptionSettings)]
 
@@ -480,6 +481,7 @@ Press any key to close this window . . .
 
 在本教程中，你将了解：
 > [!div class="checklist"]
+>
 > * 了解问题
 > * 重用和优化预定型模型
 > * 使用已加载的模型来分类图像

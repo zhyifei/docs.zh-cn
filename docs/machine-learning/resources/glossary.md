@@ -4,12 +4,12 @@ description: 一个重要的机器学习术语表，可在 ML.NET 中生成自�
 ms.custom: seodec18
 ms.topic: reference
 ms.date: 07/31/2019
-ms.openlocfilehash: 1c979d2c4567285146ab87f359116efb506815a1
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 4d4bb80c6582facbcb11664309fde230bcfa4e7b
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710543"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929269"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>机器学习重要术语词汇表
 
@@ -48,6 +48,7 @@ ms.locfileid: "68710543"
 ## <a name="data"></a>数据
 
 数据是所有机器学习应用程序的核心。 在 ML.NET 中，数据由 <xref:Microsoft.ML.IDataView> 对象表示。 数据视图对象：
+
 - 由列和行组成
 - 延迟计算，即它们仅在操作调用数据时加载数据
 - 包含定义了每个列的类型、格式和长度的架构

@@ -4,12 +4,12 @@ description: 了解如何在多类分类方案中使用 ML.NET 对 GitHub 问题
 ms.date: 07/31/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0516
-ms.openlocfilehash: 3bb556cc591ee35fc14c548e7f53bad58a786e99
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 1eb56465bb56906df25c3a094126f2496bef684e
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710307"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929223"
 ---
 # <a name="tutorial-categorize-support-issues-using-multiclass-classification-with-ml-net"></a>教程：将多类分类与 ML .NET 配合使用，对支持问题分类
 
@@ -17,6 +17,7 @@ ms.locfileid: "68710307"
 
 在本教程中，你将了解：
 > [!div class="checklist"]
+>
 > * 准备数据
 > * 转换数据
 > * 定型模型
@@ -372,6 +373,7 @@ private static void PredictIssue()
 
 在本教程中，你将了解：
 > [!div class="checklist"]
+>
 > * 准备数据
 > * 转换数据
 > * 定型模型

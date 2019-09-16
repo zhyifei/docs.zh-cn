@@ -3,12 +3,12 @@ title: 解释表达式
 description: 了解如何编写代码来检查表达式树的结构。
 ms.date: 06/20/2016
 ms.assetid: adf73dde-1e52-4df3-9929-2e0670e28e16
-ms.openlocfilehash: fcc16e7a0cef7b3ac24d99ccbddd93bed100a5bb
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: c9d80ca234e298df2f2e7ce48fbf92cb817fc8a7
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202971"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70925676"
 ---
 # <a name="interpreting-expressions"></a>解释表达式
 
@@ -357,6 +357,7 @@ Expression<Func<int, int>> factorial = (n) =>
 如果该表达式已是一个委托，则可以通过递归方式进行调用，但不能在其表达式树的形式中调用它。 在有关[生成表达式树](expression-trees-building.md)的部分中将介绍克服这些限制的技巧。
 
 在此表达式中，将遇到所有这些类型的节点：
+
 1. Equal（二进制表达式）
 2. Multiply（二进制表达式）
 3. Conditional（? : 表达式）

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 30c2d66c-04a8-41a5-ad31-646b937f61b5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d172503cee4e3880f493c68d5789e17c64a82a12
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: de2456a1365a1fb48b3e9f126e090b8da77728cc
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70789998"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894114"
 ---
 # <a name="mitigation-deserialization-of-objects-across-app-domains"></a>缓解：跨应用程序域的对象反序列化
 有时，当一个应用程序使用具有不同应用程序基的两个或多个应用程序域时，如果尝试跨应用程序域在逻辑调用上下文中反序列化对象，则会引发异常。  
@@ -44,9 +44,9 @@ ms.locfileid: "70789998"
   
 2. 识别应用程序中没有向逻辑调用上下文添加应用程序的位置，然后添加以下代码：  
   
-    ```  
+    ```csharp
     System.Configuration.ConfigurationManager.GetSection("system.xml/xmlReader");  
-    ```  
+    ```
   
 ## <a name="see-also"></a>请参阅
 

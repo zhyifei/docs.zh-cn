@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Internet, security
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
-ms.openlocfilehash: f3b0fe20ae9f6eb50f26d044f18e02214ce97757
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: ad15c0d4bd69417fffd8bcad0805a3b78321e05b
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69038463"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894955"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>.NET Framework 中的传输层安全性 (TLS) 最佳做法
 
@@ -66,7 +66,9 @@ WCF 支持 TLS1.0、1.1 和 1.2 作为 .NET Framework 4.7 中的默认设置。 
 
 ### <a name="for-http-networking"></a>对于 HTTP 网络
 
-<xref:System.Net.ServicePointManager>，使用 .NET Framework 4.7 和更高版本，默认为由操作系统选择最佳安全协议和版本。 若要获取默认操作系统最佳选择，如有可能，请不要设置 <xref:System.Net.ServicePointManager.SecurityProtocol> 属性的值。 否则，将其设置为 <xref:System.Net.SecurityProtocolType.SystemDefault>。
+使用 .NET Framework 4.7 及更高版本的 <xref:System.Net.ServicePointManager> 将使用操作系统中配置的默认安全协议。 若要获取默认操作系统选择，如有可能，请不要设置 <xref:System.Net.ServicePointManager.SecurityProtocol?displayProperty=nameWithType> 属性的值，该值默认为 <xref:System.Net.SecurityProtocolType.SystemDefault?displayProperty=nameWithType>。
+
+由于 <xref:System.Net.SecurityProtocolType.SystemDefault?displayProperty=nameWithType> 设置会导致 <xref:System.Net.ServicePointManager> 使用由操作系统配置的默认安全协议，因此应用程序可能会根据运行的操作系统以不同的方式运行。 例如，Windows 7 SP1 使用 TLS 1.0，而 Windows 8 和 Windows 10 使用 TLS 1.2。
 
 针对 HTTP 网络的面向 .NET Framework 4.7 或更高版本的情况，本文剩余部分与此不相关。
 
@@ -211,7 +213,7 @@ WCF 框架的这些版本被硬编码为使用值 SSL 3.0 和 TLS 1.0。 这些�
 
 以下 .REG  文件将注册表项及其变量设置为其最安全的值：
 
-```
+```text
 Windows Registry Editor Version 5.00
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\.NETFramework\v2.0.50727]

@@ -5,12 +5,12 @@ author: oliag
 ms.author: mairaw
 ms.date: 04/26/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 2d97921a3e98d85ac1e58c7686eadef3e979211f
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 584f9f952148ebf72c5d5aaed64a2a078be00ce5
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70107375"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929354"
 ---
 # <a name="net-api-analyzer"></a>.NET API 分析器
 
@@ -30,6 +30,7 @@ API 分析器以 NuGet 包 [Microsoft.DotNet.Analyzers.Compatibility](https://ww
 ### <a name="what-are-deprecated-apis"></a>什么是弃用的 API？
 
 .NET 系列是一组不断升级的大型产品，力求更好地满足客户需求。 弃用并将一些 API 替换为新 API 是很自然的。 若有更好的替换 API，API 便会被视为弃用。 指明 API 已遭弃用且不得使用的一种方法是，用 <xref:System.ObsoleteAttribute> 属性标记它。 这种方法的缺点是，所有已过时 API 都只有一个诊断 ID（对于 C#，ID 为 [CS0612](../../csharp/misc/cs0612.md)）。 这表示：
+
 - 无法为每个事例设置专用文档。
 - 无法禁止显示特定类别的警告。 要么禁止显示所有警告，要么允许显示所有警告。
 - 为了通知用户有新弃用，必须更新引用的程序集或目标包。

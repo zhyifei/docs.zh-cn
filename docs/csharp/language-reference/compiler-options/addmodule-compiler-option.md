@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -addmodule compiler option [C#]
 - addmodule compiler option [C#]
 ms.assetid: ed604546-0dc2-4bd4-9a3e-610a8d973e58
-ms.openlocfilehash: f2fae0be3ba958dc9776ed253c178933e4f76024
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 148a63c37cfbc4c60448adccde10947e91e22bb9
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69607044"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70970178"
 ---
 # <a name="-addmodule-c-compiler-options"></a>-addmodule（C# 编译器选项）
 此选项将添加一个模块，该模块通过将 target: module 切换到当前编译进行创建。  
@@ -49,4 +49,4 @@ csc -addmodule:metad1.netmodule;metad2.netmodule -out:out.exe input.cs
 - [C# 编译器选项](./index.md)
 - [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties)
 - [多文件程序集](../../../framework/app-domains/multifile-assemblies.md)
-- [如何：生成多文件程序集](../../../framework/app-domains/how-to-build-a-multifile-assembly.md)
+- [如何：生成多文件程序集](../../../framework/app-domains/build-multifile-assembly.md)

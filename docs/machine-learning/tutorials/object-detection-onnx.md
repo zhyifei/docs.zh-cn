@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 08/27/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: a5a11bc49fa834ebd6945e47767deb559244b459
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 956cbedd7e354b36c447bdc06ea996948c745264
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374517"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929093"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>教程：在 ML.NET 中使用 ONNX 检测对象
 
@@ -21,6 +21,7 @@ ms.locfileid: "70374517"
 
 在本教程中，你将了解：
 > [!div class="checklist"]
+>
 > - 了解问题
 > - 了解什么是 ONNX 以及它如何与 ML.NET 配合使用
 > - 了解模型
@@ -710,6 +711,7 @@ person and its Confidence score: 0.5551759
 
 在本教程中，你将了解：
 > [!div class="checklist"]
+>
 > - 了解问题
 > - 了解什么是 ONNX 以及它如何与 ML.NET 配合使用
 > - 了解模型

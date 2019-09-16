@@ -2,12 +2,12 @@
 title: 设计面向微服务的应用程序
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 了解面向微服务的应用程序的优点和缺点，以便可以采取明智的决策。
 ms.date: 10/02/2018
-ms.openlocfilehash: dfb1619bab68814bd14224e5b50a75d99525a802
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: ddca4ecf0b0ed1103e4da75ecc759546d6e53800
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675964"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926543"
 ---
 # <a name="designing-a-microservice-oriented-application"></a>设计面向微服务的应用程序
 
@@ -96,7 +96,7 @@ ms.locfileid: "68675964"
 
 这样的基于微服务的解决方案有许多优点：
 
-**每个微服务相对较小，易于管理和发展**。 具体而言：
+**每个微服务相对较小，易于管理和发展**。 尤其是在下列情况下：
 
 - 易于开发者理解和快速提高工作效率。
 
@@ -158,7 +158,7 @@ ms.locfileid: "68675964"
 
 - [传统 N 分层](https://docs.microsoft.com/previous-versions/msp-n-p/ee658109(v=pandp.10))。
 
-- [域驱动设计 N 分层](https://blogs.msdn.microsoft.com/cesardelatorre/2011/07/03/published-first-alpha-version-of-domain-oriented-n-layered-architecture-v2-0/)。
+- [域驱动设计 N 分层](https://devblogs.microsoft.com/cesardelatorre/published-first-alpha-version-of-domain-oriented-n-layered-architecture-v2-0/)。
 
 - [清洁体系结构](https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html)（用于 [eShopOnWeb](https://aka.ms/WebAppArchitecture)）
 

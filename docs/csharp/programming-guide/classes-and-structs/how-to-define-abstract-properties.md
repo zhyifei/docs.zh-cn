@@ -6,12 +6,12 @@ helpviewer_keywords:
 - properties [C#], abstract
 - abstract properties [C#]
 ms.assetid: 672a90eb-47b9-4ae0-9914-af53852fddcb
-ms.openlocfilehash: fae526f5dcd452fbc381ee86c892b72e61956f0b
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 57fd2ed3a26bf5986f9c8a1a6cae6b041811e84c
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69596864"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70970903"
 ---
 # <a name="how-to-define-abstract-properties-c-programming-guide"></a>如何：定义抽象属性（C# 编程指南）
 以下示例演示如何定义[抽象](../../language-reference/keywords/abstract.md)属性。 抽象属性声明不提供属性访问器的实现，它声明该类支持属性，而将访问器实现留给派生类。 以下示例演示如何实现从基类继承抽象属性。  
@@ -59,4 +59,3 @@ ms.locfileid: "69596864"
 - [类和结构](./index.md)
 - [抽象类、密封类及类成员](./abstract-and-sealed-classes-and-class-members.md)
 - [属性](./properties.md)
-- [如何：使用命令行创建和使用程序集](../concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md)

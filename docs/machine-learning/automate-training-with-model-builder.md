@@ -4,12 +4,12 @@ description: 如何使用 ML.NET 模型生成器自动训练机器学习模型
 author: natke
 ms.date: 08/07/2019
 ms.custom: overview
-ms.openlocfilehash: 715c9f5854d9691fd9fc2cd771d38456405836ec
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 77b5e75fede1a4aa93eadcf7e21591d82f565cab
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70104831"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929470"
 ---
 # <a name="what-is-model-builder-and-how-does-it-work"></a>什么是模型生成器，它的工作原理是怎样的？
 
@@ -29,6 +29,7 @@ ML.NET 模型生成器是一个直观的图形化 Visual Studio 扩展，用于�
 可以为模型生成器提供许多不同的方案，从而为应用程序生成一个机器学习模型。
 
 方案就是要使用数据进行预测类型的描述。 例如:
+
 - 根据历史销售数据预测未来的产品销量
 - 根据客户评价将情绪分类为正面或负面
 - 检测某项银行交易是否存在欺诈性
@@ -41,6 +42,7 @@ ML.NET 模型生成器是一个直观的图形化 Visual Studio 扩展，用于�
 对于预测数字的方案，机器学习模型称为 `regression`。
 
 对于预测类别的方案，模型类型为 `classification`。 有两种类型的分类：
+
 - 其中只有两个类别：`binary classification`。
 - 其中有三个或更多个类别：`multiclass classification`。
 
@@ -89,10 +91,12 @@ ML.NET 模型生成器是一个直观的图形化 Visual Studio 扩展，用于�
 ### <a name="choose-the-output-to-predict-label"></a>选择要预测的输出（标签）
 
 数据集是一个表格，其中，行中含训练示例，列中含特性。 每一行都具有：
+
 - 一个标签，即要预测的特性 
 - 特征（为预测标签而用作输入的特性）  。
 
 在房价预测方案中，特性可能是：
+
 - 房屋的面积
 - 卧室和卫生间的数量
 - 邮政编码

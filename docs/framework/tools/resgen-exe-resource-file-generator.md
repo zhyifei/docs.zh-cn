@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8ef159de-b660-4bec-9213-c3fbc4d1c6f4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b018672fbc9e669f6010871a150dd9b060babd88
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 34cb8b0cebc64bf7244c522066700c94d33986a9
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69957996"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894808"
 ---
 # <a name="resgenexe-resource-file-generator"></a>Resgen.exe（资源文件生成器）
 资源文件生成器 (Resgen.exe) 将文本（.txt 或 .restext）文件和基于 XML 的资源格式 (.resx) 文件转换为公共语言运行时二进制 (.resources) 文件，后者可嵌入到运行时二进制可执行文件或附属程序集中。 （请参阅[创建资源文件](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)。）  
@@ -43,13 +43,13 @@ ms.locfileid: "69957996"
   
  若要获取有关 Resgen.exe 的帮助，可以在不指定选项的情况下使用以下命令显示 Resgen.exe 的命令语法和选项：  
   
-```  
+```console  
 resgen  
 ```  
   
  也可以使用 `/?` 开关：  
   
-```  
+```console  
 resgen /?  
 ```  
   
@@ -61,11 +61,11 @@ resgen /?
   
 ## <a name="syntax"></a>语法  
   
-```  
+```console  
 resgen  [/define:symbol1[,symbol2,...]] [/useSourcePath] filename.extension  | /compile filename.extension... [outputFilename.extension] [/r:assembly] [/str:lang[,namespace[,class[,file]]] [/publicclass]]   
 ```  
   
-```  
+```console  
 resgen filename.extension [outputDirectory]  
 ```  
   
@@ -134,7 +134,7 @@ resgen filename.extension [outputDirectory]
   
  用于编译资源文件的语法是：  
   
-```  
+```console  
 resgen inputFilename [outputFilename]   
 ```  
   
@@ -150,19 +150,19 @@ resgen inputFilename [outputFilename]
   
  下面的命令读取 Resources.txt 中的名称/值对，并编写一个名为 Resources.resources 的二进制 .resources 文件。 由于未显式指定输出文件名，因此默认情况下它将接收与输入文件相同的文件名。  
   
-```  
+```console  
 resgen Resources.txt   
 ```  
   
  下面的命令读取 Resources.restext 中的名称/值对，并编写一个名为 StringResources.resources 的二进制资源文件。  
   
-```  
+```console  
 resgen Resources.restext StringResources.resources  
 ```  
   
  下面的命令读取名为 Resources.resx 的基于 XML 的输入文件，并编写一个名为 Resources.resources 的二进制 .resources 文件。  
   
-```  
+```console  
 resgen Resources.resx Resources.resources  
 ```  
   
@@ -184,19 +184,19 @@ resgen Resources.resx Resources.resources
   
  下面的命令读取二进制资源文件 Resources.resources，并编写一个名为 Resources.resx 的基于 XML 的输出文件。  
   
-```  
+```console  
 resgen Resources.resources Resources.resx  
 ```  
   
  以下命令读取名为 StringResources.txt 的基于文本的资源文件，并编写一个名为 LibraryResources.resx 的基于 XML 的资源文件。 除了包含字符串资源外，.resx 文件还可用于存储非字符串资源。  
   
-```  
+```console  
 resgen StringResources.txt LibraryResources.resx  
 ```  
   
  以下两个命令读取名为 Resources.resx 的基于 XML 的资源文件，并编写名为 Resources.txt 和 Resources.restext 的文本文件。 请注意，如果 .resx 文件包含任何嵌入的对象，则这些嵌入的对象不会准确地转换为文本文件。  
   
-```  
+```console  
 resgen Resources.resx Resources.txt  
 resgen Resources.resx Resources.restext  
 ```  
@@ -205,13 +205,13 @@ resgen Resources.resx Resources.restext
 ### <a name="compiling-or-converting-multiple-files"></a>编译或转换多个文件  
  可以使用 `/compile` 开关通过单次操作将资源文件列表从一种格式转换为另一格式。 语法为：  
   
-```  
+```console  
 resgen /compile filename.extension [filename.extension...]  
 ```  
   
  以下命令可将三种文件（StringResources.txt、TableResources.resw 和 ImageResources.resw）编译为名为 StringResources.resources、TableResources.resources 和 ImageResources.resources 的单独的 .resources 文件。  
   
-```  
+```console  
 resgen /compile StringResources.txt TableResources.resx ImageResources.resx  
 ```  
   
@@ -224,7 +224,7 @@ resgen /compile StringResources.txt TableResources.resx ImageResources.resx
   
  用于从程序集生成 .resw 文件的语法是：  
   
-```  
+```console  
 resgen filename.extension  [outputDirectory]  
 ```  
   
@@ -238,7 +238,7 @@ resgen filename.extension  [outputDirectory]
   
  以下命令在 Win8Resources 目录中为嵌入 MyApp.exe 中的每个 .resources 文件创建一个 .resw 文件：  
   
-```  
+```console  
 resgen MyApp.exe Win8Resources  
 ```  
   
@@ -250,7 +250,7 @@ resgen MyApp.exe Win8Resources
   
  例如，以下名为 UIResources.rext 的文件包含可采用三个值之一的名为 `AppTitle` 的字符串资源，具体取决于是否定义了名为 `PRODUCTION`、`CONSULT` 或 `RETAIL` 的符号。  
   
-```  
+```text
 #ifdef PRODUCTION  
 AppTitle=My Software Company Project Manager   
 #endif  
@@ -265,7 +265,7 @@ FileMenuName=File
   
  然后，可使用以下命令将该文件编译为二进制 .resources 文件：  
   
-```  
+```console  
 resgen /define:CONSULT UIResources.restext  
 ```  
   
@@ -277,7 +277,7 @@ resgen /define:CONSULT UIResources.restext
   
  用于创建强类型资源的语法是：  
   
-```  
+```console  
 resgen inputFilename [outputFilename] /str:language[,namespace,[classname[,filename]]] [/publicClass]  
 ```  
   
@@ -325,7 +325,7 @@ resgen inputFilename [outputFilename] /str:language[,namespace,[classname[,filen
   
  例如，下面的命令将名为 StringResources.txt 的资源文件编译为名为 StringResources.resources 的文件，并在可用于访问资源管理器的名为 StringResources.vb 的 Visual Basic 源代码文件中生成名为 `StringResources` 的类。  
   
-```  
+```console  
 resgen StringResources.txt /str:vb,,StringResources   
 ```  
   

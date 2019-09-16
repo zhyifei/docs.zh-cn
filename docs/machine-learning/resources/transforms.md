@@ -4,16 +4,17 @@ description: 了解在 ML.NET 中受支持的特征工程组件。
 author: natke
 ms.author: nakersha
 ms.date: 04/02/2019
-ms.openlocfilehash: cbcdef5b8f5f6334d5545f100976347ade9ee6fd
-ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
+ms.openlocfilehash: 25da3cceb3c9090661b34254ed240207aaf3b9d7
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68671876"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929256"
 ---
 # <a name="data-transformations"></a>数据转换
 
 数据转换用于：
+
 - 准备用于模型训练的数据
 - 采用 TensorFlow 或 ONNX 格式应用导入的模型
 - 通过模型传递数据后对其进行后处理

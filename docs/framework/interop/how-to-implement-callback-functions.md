@@ -10,31 +10,31 @@ helpviewer_keywords:
 ms.assetid: e55b3712-b9ea-4453-bd9a-ad5cfa2f6bfa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b0a033e6881f9c0c8741fda26211b0f565762de4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 42daa241d0ebbfeb184b57e682fbb50bdaeead65
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331320"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894196"
 ---
 # <a name="how-to-implement-callback-functions"></a>如何：实现回调函数
-下面的过程和示例演示使用平台调用的托管应用程序如何在本地计算机上打印每个窗口的句柄值。 具体而言，过程和示例使用“EnumWindows” 函数来逐句通过窗口列表，使用托管回调函数（名为 CallBack）来打印窗口句柄的值。  
+下面的过程和示例演示使用平台调用的托管应用程序如何在本地计算机上打印每个窗口的句柄值。 具体而言，过程和示例使用“EnumWindows”  函数来逐句通过窗口列表，使用托管回调函数（名为 CallBack）来打印窗口句柄的值。  
   
 ### <a name="to-implement-a-callback-function"></a>实现回调函数的步骤  
   
-1. 在进一步执行实现前，请查看“EnumWindows”函数的签名。 “EnumWindows”具有以下签名：  
+1. 在进一步执行实现前，请查看“EnumWindows”  函数的签名。 “EnumWindows”  具有以下签名：  
   
-    ```  
-    BOOL EnumWindows(WNDENUMPROC lpEnumFunc, LPARAM lParam)  
-    ```  
+    ```cpp
+    BOOL EnumWindows(WNDENUMPROC lpEnumFunc, LPARAM lParam)
+    ```
   
-     此函数需要回调的线索之一是存在“lpEnumFunc”自变量。 经常可以看到在采用指向回调函数的指针的参数名称中“lp”（长指针）前缀与“Func”后缀结合在一起。 有关 Win32 函数的文档，请参阅 Microsoft Platform SDK。  
+     此函数需要回调的线索之一是存在“lpEnumFunc”  自变量。 经常可以看到在采用指向回调函数的指针的参数名称中“lp”  （长指针）前缀与“Func”  后缀结合在一起。 有关 Win32 函数的文档，请参阅 Microsoft Platform SDK。  
   
-2. 创建托管回调函数。 此示例声明一个名为 `CallBack` 的委托类型，该类型采用两个自变量（“hwnd”和“lparam”）。 第一个参数是窗口的句柄；第二个参数是应用程序定义的。 在此版本中，这两个自变量都必须是整数。  
+2. 创建托管回调函数。 此示例声明一个名为 `CallBack` 的委托类型，该类型采用两个自变量（“hwnd”  和“lparam”  ）。 第一个参数是窗口的句柄；第二个参数是应用程序定义的。 在此版本中，这两个自变量都必须是整数。  
   
-     回调函数通常返回非零值来指示成功，返回零值来指示失败。 此示例将返回值显式设置为“true”以继续进行枚举。  
+     回调函数通常返回非零值来指示成功，返回零值来指示失败。 此示例将返回值显式设置为“true”  以继续进行枚举。  
   
-3. 创建一个委托，并将其作为自变量传递到“EnumWindows”函数。 平台调用自动将该委托转换为常见的回调格式。  
+3. 创建一个委托，并将其作为自变量传递到“EnumWindows”  函数。 平台调用自动将该委托转换为常见的回调格式。  
   
 4. 确保在回调函数完成其工作之前，垃圾回收器不会回收委托。 当将委托作为参数传递，或传递作为字段包括到结构中的委托时，在调用期间不会对其进行回收。 因此，正如下面的枚举示例一样，调用返回并不再需要托管调用方执行任何其他操作之前，回调函数完成其工作。  
   

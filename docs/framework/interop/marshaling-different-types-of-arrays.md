@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c5ac9920-5b6e-4dc9-bf2d-1f6f8ad3b0bf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fadccdf35429babce6e101d336c9ea1de150b276
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 358c7f1a339fd473271574a4e97e201f5c15f871
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648598"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894165"
 ---
 # <a name="marshaling-different-types-of-arrays"></a>封送处理不同类型的数组
 数组是包含有一个或多个相同类型的元素的托管代码中的引用类型。 尽管数组是引用类型，但它们却作为 In 参数传递到非托管函数。 此行为与托管数组传递到托管对象的方式不一致，数组作为 In/Out 参数进行传递。 有关其他详细信息，请参阅 [复制和锁定](copying-and-pinning.md)。  
@@ -52,43 +52,43 @@ ms.locfileid: "64648598"
   
 - 从 PinvokeLib.dll 导出的**TestArrayOfInts** 。  
   
-    ```  
+    ```cpp
     int TestArrayOfInts(int* pArray, int pSize);  
     ```  
   
 - 从 PinvokeLib.dll 导出的**TestRefArrayOfInts** 。  
   
-    ```  
+    ```cpp
     int TestRefArrayOfInts(int** ppArray, int* pSize);  
     ```  
   
 - 从 PinvokeLib.dll 导出的**TestMatrixOfInts** 。  
   
-    ```  
+    ```cpp
     int TestMatrixOfInts(int pMatrix[][COL_DIM], int row);  
     ```  
   
 - 从 PinvokeLib.dll 导出的**TestArrayOfStrings** 。  
   
-    ```  
+    ```cpp
     int TestArrayOfStrings(char** ppStrArray, int size);  
     ```  
   
 - 从 PinvokeLib.dll 导出的**TestArrayOfStructs** 。  
   
-    ```  
+    ```cpp
     int TestArrayOfStructs(MYPOINT* pPointArray, int size);  
     ```  
   
 - 从 PinvokeLib.dll 导出的**TestArrayOfStructs2** 。  
   
-    ```  
+    ```cpp
     int TestArrayOfStructs2 (MYPERSON* pPersonArray, int size);  
     ```  
   
  [PinvokeLib.dll](marshaling-data-with-platform-invoke.md#pinvokelibdll) 是一个自定义的非托管库，它包含之前列出的函数、两个结构变量（ **MYPOINT** 和 **MYPERSON**）的实现。 此结构包含以下元素：  
   
-```  
+```cpp
 typedef struct _MYPOINT  
 {  
    int x;   

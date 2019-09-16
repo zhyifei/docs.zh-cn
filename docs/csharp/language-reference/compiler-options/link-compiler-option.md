@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -link compiler option [C#]
 - link compiler option [C#]
 ms.assetid: 00da70c6-9ea1-43c2-86f2-aa7f26c03475
-ms.openlocfilehash: 724a848d4c31b2c4f6fc3427d70fc84f4fd944c6
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4c96f7be5ac500886ea036c93b4651fa814ee58a
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924764"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70970106"
 ---
 # <a name="-link-c-compiler-options"></a>-link（C# 编译器选项）
 使编译器让指定程序集中的 COM 类型信息可供当前正在编译的项目使用。  
@@ -34,7 +34,7 @@ ms.locfileid: "69924764"
  必需。 程序集文件名的逗号分隔列表。 如果文件名包含空格，则将名称括在引号内。  
   
 ## <a name="remarks"></a>备注  
- `-link` 选项使你可以部署具有嵌入类型信息的应用程序。 应用程序随后可以使用运行时程序集中实现嵌入类型信息的类型，而无需引用运行时程序集。 如果发布了各种版本的运行时程序集，则包含嵌入类型信息的应用程序可以使用各种版本，而无需重新编译。 有关示例，请参阅[演练：嵌入托管程序集中的类型](../../programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)。  
+ `-link` 选项使你可以部署具有嵌入类型信息的应用程序。 应用程序随后可以使用运行时程序集中实现嵌入类型信息的类型，而无需引用运行时程序集。 如果发布了各种版本的运行时程序集，则包含嵌入类型信息的应用程序可以使用各种版本，而无需重新编译。 有关示例，请参阅[演练：嵌入托管程序集中的类型](../../../standard/assembly/embed-types-visual-studio.md)。  
   
  在使用 COM 互操作时，使用 `-link` 选项会尤其有用。 可以嵌入 COM 类型，以便应用程序在目标计算机上不再需要主互操作程序集 (PIA)。 `-link` 选项指示编译器将引用的互操作程序集中的 COM 类型信息嵌入到生成的已编译代码中。 COM 类型由 CLSID (GUID) 值进行标识。 因此，应用程序可以在安装了具有相同 CLSID 值的相同 COM 类型的目标计算机上运行。 自动执行 Microsoft Office 的应用程序是一个很好的示例。 由于 Office 等应用程序通常在不同版本间保持相同的 CLSID 值，因此只要在目标计算机上安装了 .NET Framework 4 或更高版本，并且应用程序使用引用的 COM 类型中包含的方法、属性或事件，应用程序便可以使用引用的 COM 类型。  
   
@@ -84,7 +84,7 @@ csc -link:COMData1.dll,COMData2.dll -out:OfficeApp.exe OfficeApp.cs
 ## <a name="see-also"></a>请参阅
 
 - [C# 编译器选项](./index.md)
-- [演练：嵌入托管程序集中的类型](../../programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)
+- [演练：嵌入托管程序集中的类型](../../../standard/assembly/embed-types-visual-studio.md)
 - [-reference（C# 编译器选项）](./reference-compiler-option.md)
 - [-noconfig（C# 编译器选项）](./noconfig-compiler-option.md)
 - [在命令行上使用 csc.exe 生成](./command-line-building-with-csc-exe.md)

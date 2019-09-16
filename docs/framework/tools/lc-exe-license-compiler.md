@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Windows Forms, control licenses
 - licensed controls [Windows Forms]
 ms.assetid: 2de803b8-495e-4982-b209-19a72aba0460
-ms.openlocfilehash: 6c4432d94372ce10ee9ecdf6e441eda3318a20d7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 753312005cd60b5be6bf5504fa9b7f14bd6367fe
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298963"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894676"
 ---
 # <a name="lcexe-license-compiler"></a>Lc.exe（许可证编译器）
 许可证编译器读取包含授权信息的文本文件，并产生一个可作为资源嵌入到公共语言运行时可执行文件中的二进制文件。  
@@ -32,9 +32,9 @@ ms.locfileid: "59298963"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```console
       lc /target:  
-      targetPE /complist:filename [/outdir:path]  
+targetPE /complist:filename [/outdir:path]  
 /i:modules [/nologo] [/v]  
 ```  
   
@@ -54,32 +54,32 @@ ms.locfileid: "59298963"
   
 1. 如果使用的是包含在名为 `HostApp.exe` *的应用程序中的 `Samples.DLL` 中的授权控件 `MyCompany.Samples.LicControl1`，* 则可创建包含以下内容的 `HostAppLic.txt`。  
   
-    ```  
+    ```text
     MyCompany.Samples.LicControl1, Samples.DLL  
     ```  
   
 2. 使用以下命令创建名为 `HostApp.exe.licenses` 的 .licenses 文件。  
   
-    ```  
+    ```console  
     lc /target:HostApp.exe /complist:hostapplic.txt /i:Samples.DLL /outdir:c:\bindir  
     ```  
   
 3. 生成将 .licenses 文件作为资源包含在内的 `HostApp.exe`。 如果生成的是 C# 应用程序，则应使用以下命令生成应用程序。  
   
-    ```  
+    ```console
     csc /res:HostApp.exe.licenses /out:HostApp.exe *.cs  
     ```  
   
  以下命令从由 `myApp.licenses`、`hostapplic.txt` 和 `hostapplic2.txt` 指定的授权组件列表来编译 `hostapplic3.txt`。 `modulesList` 参数指定包含授权组件的模块。  
   
-```  
+```console  
 lc /target:myApp /complist:hostapplic.txt /complist:hostapplic2.txt /complist: hostapplic3.txt /i:modulesList  
 ```  
   
 ## <a name="response-file-example"></a>响应文件示例  
  下面的列表显示响应文件 `response.rsp` 的示例。 有关响应文件的详细信息，请参阅[响应文件](/visualstudio/msbuild/msbuild-response-files)。  
   
-```  
+```text  
 /target:hostapp.exe  
 /complist:hostapplic.txt   
 /i:WFCPrj.dll   
@@ -88,7 +88,7 @@ lc /target:myApp /complist:hostapplic.txt /complist:hostapplic2.txt /complist: h
   
  下面的命令行使用 `response.rsp` 文件。  
   
-```  
+```console  
 lc @response.rsp  
 ```  
   

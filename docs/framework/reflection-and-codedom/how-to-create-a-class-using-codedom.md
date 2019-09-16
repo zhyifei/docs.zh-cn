@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0ceb70fe-36e1-49bb-922b-e9f615c20a14
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 906007902c6b66d88da0d3145625e56f2a7e2b55
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6b3f7363ec5f8c954dd55a9500dcf8f2e302424f
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592523"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894899"
 ---
 # <a name="how-to-create-a-class-using-codedom"></a>如何：使用 CodeDOM 创建类
 以下过程说明如何创建和编译 CodeDOM 图，此图会生成包含以下各项的类：两个字段、三个属性、一个方法、一个构造函数和一个入口点。  
@@ -107,7 +107,7 @@ ms.locfileid: "64592523"
   
  生成的源代码经过编译和执行后会产生以下输出。  
   
-```  
+```output
 The object:  
  width = 5.3,  
  height = 6.9,  

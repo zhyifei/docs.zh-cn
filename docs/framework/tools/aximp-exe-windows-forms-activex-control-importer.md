@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 482c0d83-7144-4497-b626-87d2351b78d0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cd3d7ea4d9639c5c68ecf977b4e95e816d99a4f6
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a5f76f60c8474b1503dc4cebeeafe241cd40be96
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69915422"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70970594"
 ---
 # <a name="aximpexe-windows-forms-activex-control-importer"></a>Aximp.exe（Windows 窗体 ActiveX 控件导入程序）
 ActiveX 控件导入程序将 ActiveX 控件的 COM 类型库中的类型定义转换为 Windows 窗体控件。  
@@ -30,7 +30,7 @@ ActiveX 控件导入程序将 ActiveX 控件的 COM 类型库中的类型定义�
   
 ## <a name="syntax"></a>语法  
   
-```  
+```console  
 aximp [options]{file.dll | file.ocx}  
 ```  
   
@@ -42,7 +42,7 @@ aximp [options]{file.dll | file.ocx}
   
 |选项|说明|  
 |------------|-----------------|  
-|`/delaysign`|指定 Aximp.exe 使用延迟的签名对生成的控件进行签名。 必须使用 `/keycontainer:`、`/keyfile:` 或 `/publickey:` 选项指定此选项。 有关延迟签名过程的更多信息，请参见[延迟为程序集签名](../../../docs/framework/app-domains/delay-sign-assembly.md)。|  
+|`/delaysign`|指定 Aximp.exe 使用延迟的签名对生成的控件进行签名。 必须使用 `/keycontainer:`、`/keyfile:` 或 `/publickey:` 选项指定此选项。 有关延迟签名过程的更多信息，请参见[延迟为程序集签名](../../standard/assembly/delay-sign.md)。|  
 |`/help`|显示该工具的命令语法和选项。|  
 |`/keycontainer:` containerName |使用在 containerName 指定的密钥容器中找到的公钥/私钥对，对生成的控件进行强名称签名  。|  
 |`/keyfile:` filename |使用在 filename 中找到的发行者的正式公钥/私钥对，对生成的控件进行强名称签名  。|  
@@ -75,7 +75,7 @@ aximp [options]{file.dll | file.ocx}
 ## <a name="example"></a>示例  
  下面的命令为媒体播放器控件 `msdxm.ocx` 生成 MediaPlayer.dll 和 AxMediaPlayer.dll。  
   
-```  
+```console 
 aximp c:\systemroot\system32\msdxm.ocx  
 ```  
   

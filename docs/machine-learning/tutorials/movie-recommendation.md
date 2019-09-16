@@ -5,12 +5,12 @@ author: briacht
 ms.date: 08/26/2019
 ms.custom: mvc, title-hack-0516
 ms.topic: tutorial
-ms.openlocfilehash: 97bdef3daa296dcb88cbb158a14668205df6fee3
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 4f80ebad0a280040e9f3329dc7b647bd53a48fa0
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70107259"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929487"
 ---
 # <a name="tutorial-build-a-movie-recommender-using-matrix-factorizaton-with-mlnet"></a>教程：使用矩阵因子分解和 ML.NET 生成影片推荐系统
 
@@ -18,6 +18,7 @@ ms.locfileid: "70107259"
 
 在本教程中，你将了解：
 > [!div class="checklist"]
+>
 > * 选择机器学习算法
 > * 准备并加载数据
 > * 生成并训练模型
@@ -467,6 +468,7 @@ var options = new MatrixFactorizationTrainer.Options
 在本教程中，你将了解：
 
 > [!div class="checklist"]
+>
 > * 选择机器学习算法
 > * 准备并加载数据
 > * 生成并训练模型

@@ -4,12 +4,12 @@ description: 了解 .NET 如何将类型封送到本机表示形式。
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: 2cb8898b52b4b4afba1184a886e16c9f7f68f03a
-ms.sourcegitcommit: c4dfe37032c64a1fba2cc3d5947550d79f95e3b5
+ms.openlocfilehash: bc44a2c63dfa3fde3e3c4197e5d1fe79857ea717
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67041784"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929069"
 ---
 # <a name="type-marshaling"></a>类型封送
 
@@ -133,7 +133,7 @@ typedef struct _SYSTEMTIME {
   WORD wMinute;
   WORD wSecond;
   WORD wMilliseconds;
-} SYSTEMTIME, *PSYSTEMTIME*;
+} SYSTEMTIME, *PSYSTEMTIME;
 ```
 
 有时，默认结构封送不执行所需的操作。 [自定义结构封送](./customize-struct-marshaling.md)一文介绍如何自定义结构的封送方式。

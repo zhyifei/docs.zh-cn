@@ -9,18 +9,18 @@ helpviewer_keywords:
 - Office programming [C#]
 - Office programming [Visual Basic]
 ms.assetid: 519cff31-f80b-4f0e-a56b-26358d0f8c51
-ms.openlocfilehash: 8ed6e759f682f0db76938661fdcf668bec1eef1c
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 0f14cc6486e53cad8c3cbadc404d22d7e5458e84
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69588972"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991268"
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>演练：Office 编程（C# 和 Visual Basic）
 
 Visual Studio 在 C# 和 Visual Basic 中提供了改进 Microsoft Office 编程的功能。 有用的 C# 功能包括命名参数和可选参数以及类型为 `dynamic` 的返回值。 在 COM 编程中，可以省略 `ref` 关键字并获得索引属性的访问权限。 Visual Basic 中的功能包括自动实现的属性、Lambda 表达式语句和集合初始值设定项。
 
-两种语言都支持嵌入类型信息，从而允许在不向用户的计算机部署主互操作程序集 (PIA) 的情况下部署与 COM 组件交互的程序集。 有关详细信息，请参见[演练：嵌入托管程序集中的类型](../concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)。
+两种语言都支持嵌入类型信息，从而允许在不向用户的计算机部署主互操作程序集 (PIA) 的情况下部署与 COM 组件交互的程序集。 有关详细信息，请参见[演练：嵌入托管程序集中的类型](../../../standard/assembly/embed-types-visual-studio.md)。
 
 本演练演示 Office 编程上下文中的这些功能，但其中许多功能在常规编程中也极为有用。 本演练将使用 Excel 外接应用程序创建 Excel 工作簿。 然后，将创建包含工作簿链接的 Word 文档。 最后，将介绍如何启用和禁用 PIA 依赖项。
 
@@ -160,7 +160,7 @@ Visual Studio 在 C# 和 Visual Basic 中提供了改进 Microsoft Office 编程
 
 4. 在 IL DASM 窗口的“文件”  菜单上，选择“文件”   > “打开”  。 双击“Visual Studio \<版本>”  ，然后双击“项目”  。 打开项目的文件夹，在 bin/Debug 文件夹中查找*项目名称*.dll。 双击 *项目名称*.dll。 新窗口将显示项目的属性以及对其他模块和程序集的引用。 注意，命名空间 `Microsoft.Office.Interop.Excel` 和 `Microsoft.Office.Interop.Word` 包含在程序集中。 在 Visual Studio 中，编译器默认将所需的类型从引用的 PIA 导入程序集。
 
-     有关详细信息，请参阅[如何：查看程序集内容](../../../framework/app-domains/how-to-view-assembly-contents.md)。
+     有关详细信息，请参阅[如何：查看程序集内容](../../../standard/assembly/view-contents.md)。
 
 5. 双击“清单”  图标。 此时将出现包含程序集列表的窗口，这些程序集包含项目所引用的项。 `Microsoft.Office.Interop.Excel` 和 `Microsoft.Office.Interop.Word` 未包含在列表中。 由于项目需要的类型已导入程序集中，因此不需要引用 PIA。 这使得部署变得更加容易。 用户的计算机上不必存在 PIA，因为应用程序不需要部署特定版本的 PIA，应用程序可设计为与多个版本的 Office 配合使用，前提是所有版本中都存在必要的 API。
 
@@ -205,7 +205,7 @@ Visual Studio 在 C# 和 Visual Basic 中提供了改进 Microsoft Office 编程
 - [Lambda 表达式 (C#)](../statements-expressions-operators/lambda-expressions.md)
 - [如何：在 COM 互操作编程中使用已编制索引的属性](./how-to-use-indexed-properties-in-com-interop-rogramming.md)
 - [演练：在 Visual Studio 中嵌入 Microsoft Office 程序集中的类型信息](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ee317478(v%3dvs.120))
-- [演练：嵌入托管程序集中的类型](../concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)
+- [演练：嵌入托管程序集中的类型](../../../standard/assembly/embed-types-visual-studio.md)
 - [演练：创建你的第一个 Excel VSTO 外接程序](/visualstudio/vsto/walkthrough-creating-your-first-vsto-add-in-for-excel)
 - [COM 互操作](../../../visual-basic/programming-guide/com-interop/index.md)
 - [互操作性](./index.md)

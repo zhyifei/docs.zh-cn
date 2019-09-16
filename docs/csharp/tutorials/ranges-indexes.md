@@ -3,12 +3,12 @@ title: 使用索引和范围探索数据范围
 description: 本高级教程教你使用索引和范围来探索数据，以检查顺序数据集的切片。
 ms.date: 04/19/2019
 ms.custom: mvc
-ms.openlocfilehash: d53f32bcb310d4859cea67a742ac0e2c4be5d942
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 27f4b90f130345dd10517a5de78c759066afdf07
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105790"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926641"
 ---
 # <a name="indices-and-ranges"></a>索引和范围
 
@@ -17,6 +17,7 @@ ms.locfileid: "70105790"
 在本教程中，你将了解：
 
 > [!div class="checklist"]
+>
 > - 对某个序列中的范围使用该语法。
 > - 了解每个序列开头和末尾的设计决策。
 > - 了解 <xref:System.Index> 和 <xref:System.Range> 类型的应用场景。
@@ -24,6 +25,7 @@ ms.locfileid: "70105790"
 ## <a name="language-support-for-indices-and-ranges"></a>对索引和范围的语言支持
 
 此语言支持依赖于两个新类型和两个新运算符。
+
 - <xref:System.Index?displayProperty=nameWithType> 表示一个序列索引。
 - `^` 运算符，指定一个索引与序列末尾相关。
 - <xref:System.Range?displayProperty=nameWithType> 表示序列的子范围。

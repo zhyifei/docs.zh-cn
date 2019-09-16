@@ -5,12 +5,12 @@ ms.date: 08/29/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to, title-hack-0625
-ms.openlocfilehash: 3fb586b218f1769949efc362cacc3957623dd43b
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: fc735f28bad91b9714d7e6bf2a9c7c620acacc4d
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70169049"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929344"
 ---
 # <a name="train-and-evaluate-a-model"></a>训练和评估模型
 
@@ -175,6 +175,7 @@ double rSquared = trainedModelMetrics.RSquared;
 ```
 
 在上一代码示例中：  
+
 1. 测试数据集使用之前定义的数据准备转换进行预处理。 
 2. 经过训练的机器学习模型用于对测试数据进行预测。
 3. 在 `Evaluate` 方法中，将测试数据集 `CurrentPrice` 列中的值与新输出预测的 `Score` 列进行比较，以计算回归模型的指标，其中之一是 R 平方，它存储在 `rSquared` 变量中。

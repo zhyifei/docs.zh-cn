@@ -23,19 +23,19 @@ helpviewer_keywords:
 ms.assetid: d1a58e7f-fb39-4d50-bf84-e3b8f9bf9775
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 56c3b536954118b80db2ae7f2f0d0ffdc74bac68
-ms.sourcegitcommit: 77e33b682db39955e331b8e8eda4ef1925a24e78
+ms.openlocfilehash: 374a97eea7f6432833ebbcf40736ea6c7a6d4039
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70133742"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70970952"
 ---
 # <a name="reflection-in-net"></a>.NET 中的反射
-<xref:System.Reflection> 命名空间中的类与 <xref:System.Type?displayProperty=nameWithType> 使你能够获取有关加载的[程序集](../app-domains/assemblies-in-the-common-language-runtime.md)和其中定义的类型的信息，如[类](../../standard/base-types/common-type-system.md#classes)、[接口](../../standard/base-types/common-type-system.md#interfaces)和[值类型](../../csharp/language-reference/keywords/value-types.md)。 可以使用反射在运行时创建、调用和访问类型实例。 有关反射的特定方面的主题，请参见本概述末的[相关主题](#related_topics)。
+<xref:System.Reflection> 命名空间中的类与 <xref:System.Type?displayProperty=nameWithType> 使你能够获取有关加载的[程序集](../../standard/assembly/index.md)和其中定义的类型的信息，如[类](../../standard/base-types/common-type-system.md#classes)、[接口](../../standard/base-types/common-type-system.md#interfaces)和[值类型](../../csharp/language-reference/keywords/value-types.md)。 可以使用反射在运行时创建、调用和访问类型实例。 有关反射的特定方面的主题，请参见本概述末的[相关主题](#related_topics)。
   
  [公共语言运行时](../../standard/clr.md)加载程序管理[应用程序域](../../../docs/framework/app-domains/application-domains.md)，应用程序域构成具有相同应用程序范围的对象周围定义的边界。 此管理包括将每个程序集加载到相应的应用程序域中和控制每个程序集内的类型层次结构的内存布局。  
   
- [程序集](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)包含模块、模块包含类型，而类型包含成员。 反射提供封装程序集、模块和类型的对象。 可以使用反射动态地创建类型的实例，将类型绑定到现有对象，或从现有对象中获取类型。 然后，可以调用类型的方法或访问其字段和属性。 反射的典型用法如下所示：  
+ [程序集](../../../docs/framework/app-domains/index.md)包含模块、模块包含类型，而类型包含成员。 反射提供封装程序集、模块和类型的对象。 可以使用反射动态地创建类型的实例，将类型绑定到现有对象，或从现有对象中获取类型。 然后，可以调用类型的方法或访问其字段和属性。 反射的典型用法如下所示：  
   
 - 使用 <xref:System.Reflection.Assembly> 来定义和加载程序集，加载程序集清单中列出的模块，以及在此程序集中定位一个类型并创建一个它的实例。  
   

@@ -6,18 +6,19 @@ helpviewer_keywords:
 - auto-implemented properties [C#]
 - properties [C#], auto-implemented
 ms.assetid: 1dc5a8ad-a4f7-4f32-8506-3fc6d8c8bfed
-ms.openlocfilehash: 4cbed8145487325d8b06882bbab843321a49d0d3
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 626a44fbaa65f48e0d9fe66d83c44abb07eba379
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69596901"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926759"
 ---
 # <a name="how-to-implement-a-lightweight-class-with-auto-implemented-properties-c-programming-guide"></a>如何：使用自动实现的属性实现轻量类（C# 编程指南）
 
 本示例演示如何创建一个仅用于封装一组自动实现的属性的不可变轻型类。 当你必须使用引用类型语义时，请使用此种构造而不是结构。
 
 可通过两种方法来实现不可变的属性：
+
 - 可以将 [set](../../language-reference/keywords/set.md) 访问器声明为[专用](../../language-reference/keywords/private.md)。  属性只能在该类型中设置，但它对于使用者是不可变的。
 
   当你声明一个 private `set` 取值函数时，你无法使用对象初始值设定项来初始化属性。 你必须使用构造函数或工厂方法。

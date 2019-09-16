@@ -5,12 +5,12 @@ author: billwagner
 ms.author: wiwagn
 ms.date: 01/25/2018
 ms.technology: dotnet-standard
-ms.openlocfilehash: cbd9bcdb12a423f54aa4ff82d88f07c20023c48f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: da5e72b96fec35404e7e9ae7930f3430143487d2
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59769458"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929298"
 ---
 # <a name="the-net-framework-analyzer"></a>.NET Framework 分析器
 
@@ -23,6 +23,7 @@ ms.locfileid: "59769458"
 .NET Framework 分析器必须以 NuGet 包的形式安装在每个需要它项目上。 只有一个开发人员需要将它们添加到项目。 分析器包是项目依赖项，并且一旦具有更新的解决方案就会在每个开发人员的计算机上运行。
 
 [Microsoft.NetFramework.Analyzers](https://www.nuget.org/packages/Microsoft.NetFramework.Analyzers/) NuGet 包中提供了 .NET Framework 分析器。 此包只提供特定于 .NET Framework 的分析器，其中包括安全分析器。 大多数情况下，你将需要 [Microsoft.CodeAnalysis.FxCopAnalyzers](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers) NuGet 包。 FxCopAnalyzers 聚合包中包含了 Framework.Analyzers 包中的所有框架分析器以及下列分析器：
+
 - [Microsoft.CodeQuality.Analyzers](https://www.nuget.org/packages/Microsoft.CodeQuality.Analyzers)：提供通用指南和.NET Standard API 指南
 - [Microsoft.NetCore.Analyzers](https://www.nuget.org/packages/Microsoft.NetCore.Analyzers)：提供特定于 .NET Core API 的分析器。
 - [Text.Analyzers](https://www.nuget.org/packages/Text.Analyzers)：提供作为代码包含的文本指南（包括注释）。

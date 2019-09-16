@@ -2,12 +2,12 @@
 title: 在异步任务完成时对其进行处理
 ms.date: 09/12/2018
 ms.assetid: 25331850-35a7-43b3-ab76-3908e4346b9d
-ms.openlocfilehash: 35b4e42d7da5b8bc9069083ffc47d990bcb637a8
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 464e6be108eef86a023a0bad225d2ad12bfb2c3e
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69595597"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926743"
 ---
 # <a name="start-multiple-async-tasks-and-process-them-as-they-complete-c"></a>启动多个异步任务并在其完成时进行处理 (C#)
 
@@ -81,7 +81,7 @@ IEnumerable<Task<int>> downloadTasksQuery = from url in urlList select ProcessUR
 多次运行此程序以验证并不总是以相同顺序显示已下载的长度。
 
 > [!CAUTION]
-> 如示例所示，可以在循环中使用 `WhenAny` 来解决涉及少量任务的问题。 但是，如果要处理大量任务，可以采用其他更高效的方法。 有关详细信息和示例，请参阅 [Processing tasks as they complete](https://blogs.msdn.microsoft.com/pfxteam/2012/08/02/processing-tasks-as-they-complete/)（在任务完成时处理它们）。
+> 如示例所示，可以在循环中使用 `WhenAny` 来解决涉及少量任务的问题。 但是，如果要处理大量任务，可以采用其他更高效的方法。 有关详细信息和示例，请参阅 [Processing tasks as they complete](https://devblogs.microsoft.com/pfxteam/processing-tasks-as-they-complete/)（在任务完成时处理它们）。
 
 ## <a name="complete-example"></a>完整示例
 

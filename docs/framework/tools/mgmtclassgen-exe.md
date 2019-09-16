@@ -13,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: 02ce6699-49b5-4a0b-b0d5-1003c491232e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 60f48422d23fc5db743eeb05e3eddeb732bff102
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: ce281398fe7ea3a280355a7b79cc7144aba256be
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364017"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894645"
 ---
 # <a name="mgmtclassgenexe-management-strongly-typed-class-generator"></a>Mgmtclassgen.exe（管理强类型类生成器）
 利用管理强类型类生成器工具，你可以为指定的 Windows Management Instrumentation (WMI) 类快速生成早期绑定的托管类。 生成的类简化了访问 WMI 类的实例所必须编写的代码。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```console  
 mgmtclassgen   
 WMIClass [options]   
 ```  
@@ -96,7 +96,7 @@ WMIClass [options]
 ## <a name="examples"></a>示例  
  以下命令在 C# 代码中为 Root\cimv2 命名空间中的 Win32_LogicalDisk WMI 类生成托管类。   该工具将 ROOT.CIMV2.Win32 命名空间中的托管类写入位于 c:\disk.cs 的源文件中。   
   
-```  
+```console  
 mgmtclassgen Win32_LogicalDisk /n root\cimv2 /l CS /p c:\disk.cs  
 ```  
   

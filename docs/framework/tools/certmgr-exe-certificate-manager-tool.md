@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7e953b43-1374-4bbc-814f-53ca1b6b52bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7ad7ce5dd3739b1edcf8a8a03a2f57376ceba138
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d13c2d2cc391e61c8ed764c26e5e5b5e7ea2a3bb
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69948584"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851382"
 ---
 # <a name="certmgrexe-certificate-manager-tool"></a>Certmgr.exe（证书管理器工具）
 证书管理器工具 (Certmgr.exe) 管理证书、证书信任列表 (CTL) 和证书吊销列表 (CRL)。  
@@ -38,7 +38,7 @@ ms.locfileid: "69948584"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```console  
       certmgr [/add | /del | /put] [options]  
 [/s[/r registryLocation]] [sourceStorename]  
 [/s[/r registryLocation]] [destinationStorename]  
@@ -97,43 +97,43 @@ ms.locfileid: "69948584"
 ## <a name="examples"></a>示例  
  下面的命令显示一个名为 `my` 且包含详细输出的默认系统存储。  
   
-```  
+```console  
 certmgr /v /s my  
 ```  
   
  下面的命令将名为 `myFile.ext` 的文件中的所有证书添加到一个名为 `newFile.ext` 的新文件中。  
   
-```  
+```console  
 certmgr /add /all /c myFile.ext newFile.ext  
 ```  
   
  下面的命令将名为 `testcert.cer` 的文件中的证书添加到 `my` 系统存储中。  
   
-```  
+```console  
 certmgr /add /c testcert.cer /s my  
 ```  
   
  下面的命令将名为 `TrustedCert.cer` 的文件中的证书添加到根证书存储区内。  
   
-```  
+```console  
 certmgr /c /add TrustedCert.cer /s root  
 ```  
   
  下面的命令将 `myCert` 系统存储中具有公用名 `my` 的证书保存到一个名为 `newCert.cer` 的文件中。  
   
-```  
+```console  
 certmgr /add /c /n myCert /s my newCert.cer  
 ```  
   
  下面的命令删除 `my` 系统存储中的所有 CTL，并将生成的存储保存到一个名为 `newStore.str` 的文件中。  
   
-```  
+```console  
 certmgr /del /all /ctl /s my newStore.str  
 ```  
   
  下面的命令将 `my` 系统存储中的一个证书保存到 `newFile` 文件中。 系统将提示你输入 `my` 中的要用于放置 `newFile` 的证书编号。  
   
-```  
+```console  
 certmgr /put /c /s my newFile  
 ```  
   

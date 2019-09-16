@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c48a7f93-83bb-4a06-aea0-d8e7bd1502ad
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6b47abc2adb7b515e4d1d76da58c150703a8693d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f3777627caec7fc0d383804f71d9b7d3f09756fd
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69957440"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894129"
 ---
 # <a name="composition-analysis-tool-mefx"></a>结构分析工具 (Mefx)
 组合分析工具 (Mefx) 是一款命令行应用程序，用于分析包含 Managed Extensibility Framework (MEF) 部件的库 (.dll) 和应用程序 (.exe) 文件。 Mefx 的主要用途是为开发人员提供一种无需向应用程序本身添加繁琐的跟踪代码即可诊断其 MEF 应用程序中组合失败情况的方法。 它还可用于帮助你了解第三方所提供库中的部件。 本主题介绍如何使用 Mefx，并提供其语法参考。  
@@ -26,13 +26,13 @@ ms.locfileid: "69957440"
 ## <a name="basic-syntax"></a>基本语法  
  采用以下格式从命令行调用 Mefx：  
   
-```  
+```console
 mefx [files and directories] [action] [options]  
 ```  
   
  第一组参数指定要从其加载部件进行分析的文件和目录。 使用 `/file:` 开关指定文件，使用 `/directory:` 开关指定目录。 你可以指定多个文件或目录，如下面的示例所示：  
   
-```  
+```console  
 mefx /file:MyAddIn.dll /directory:Program\AddIns [action...]  
 ```  
   
@@ -45,7 +45,7 @@ mefx /file:MyAddIn.dll /directory:Program\AddIns [action...]
 ## <a name="listing-available-parts"></a>列出可用部件  
  使用 `/parts` 操作列出所加载文件中声明的所有部件。 此时将显示一个简单的部件名称列表。  
   
-```  
+```console
 mefx /file:MyAddIn.dll /parts  
 MyAddIn.AddIn  
 MyAddIn.MemberPart  
@@ -53,7 +53,7 @@ MyAddIn.MemberPart
   
  有关部件的详细信息，请使用 `/verbose` 选项。 这将输出所有可用部件的详细信息。 若要获取有关单个部件的详细信息，请使用 `/type` 操作，而不是 `/parts`。  
   
-```  
+```console  
 mefx /file:MyAddIn.dll /type:MyAddIn.AddIn /verbose  
 [Part] MyAddIn.MemberPart from: AssemblyCatalog (Assembly=" MyAddIn, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null")  
   [Export] MyAddIn.MemberPart (ContractName=" MyAddIn.MemberPart")  
@@ -63,7 +63,7 @@ mefx /file:MyAddIn.dll /type:MyAddIn.AddIn /verbose
 ## <a name="listing-imports-and-exports"></a>列出导入和导出的部件  
  `/imports` 和 `/exports` 操作分别将列出所有导入的部件和所有导出的部件。 你还可以通过使用 `/importers` 或 `/exporters` 操作列出导入或导出特殊类型的部件。  
   
-```  
+```console  
 mefx /file:MyAddIn.dll /importers:MyAddin.MemberPart  
 MyAddin.AddIn  
 ```  
@@ -76,13 +76,13 @@ MyAddin.AddIn
   
  你可以结合使用 `/verbose` 选项和 `/rejected` 选项打印关于拒绝的部件的详细信息。 在下面的示例中， `ClassLibrary1` DLL 包含 `AddIn` 部件，该部件导入 `MemberPart` 和 `ChainOne` 部件。 `ChainOne` 导入 `ChainTwo`，但 `ChainTwo` 不存在。 这意味着， `ChainOne` 被拒绝，这将导致 `AddIn` 被拒绝。  
   
-```  
+```console  
 mefx /file:ClassLibrary1.dll /rejected /verbose  
 ```  
   
  下面的示例显示上一条命令的完整输出：  
   
-```  
+```output
 [Part] ClassLibrary1.AddIn from: AssemblyCatalog (Assembly="ClassLibrary1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null")  
   [Export] ClassLibrary1.AddIn (ContractName="ClassLibrary1.AddIn")  
   [Import] ClassLibrary1.AddIn.memberPart (ContractName="ClassLibrary1.MemberPart")  
@@ -122,7 +122,7 @@ from: ClassLibrary1.ChainOne from: AssemblyCatalog (Assembly="ClassLibrary1, Ver
   
  请考虑名为 test.txt 且包含文本“ClassLibrary1.ChainOne”的文件。 如果在前面的示例中将 `/rejected` 操作用于 `/whitelist` 选项，它将生成以下输出：  
   
-```  
+```console
 mefx /file:ClassLibrary1.dll /rejected /whitelist:test.txt  
 [Unexpected] ClassLibrary1.AddIn  
 ClassLibrary1.ChainOne  

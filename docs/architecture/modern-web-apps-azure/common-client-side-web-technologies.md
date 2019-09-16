@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Azure 构建新式 Web 应用程序 | 常�
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 3a44b017c6160639ed1be7374b893e103ee5f5d8
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 4dd747293fba4c18c2d10738d36f4d98cfd3f5b9
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373908"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926497"
 ---
 # <a name="common-client-side-web-technologies"></a>常用客户端 Web 技术
 
@@ -141,6 +141,7 @@ React 很少使用与 HTML 配合的方式。 React 直接在其 JavaScript 代�
 JavaScript 框架仍以极快的速度发展。 使用上面列出的注意事项，可帮助减轻选择之后会后悔依赖的框架的风险。 如果你特别不愿意承担风险，请考虑提供商业支持和/或大型企业开发的框架。
 
 > ### <a name="references--client-web-technologies"></a>参考 - 客户端 Web 技术
+>
 > - **HTML 和 CSS**  
 > <https://www.w3.org/standards/webdesign/htmlcss>
 > - **Sass 与 LESS**  

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 0c25ff6c-bff3-422e-b017-146a3ee86cb9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e210f14c74efe214be06a1cb901a144dd92af5e0
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: 46475cbc8517fc73d8b7fd868c7632e5c85a7726
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168882"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894789"
 ---
 # <a name="signtoolexe-sign-tool"></a>SignTool.exe（签名工具）
 签名工具是一个命令行工具，用于对文件进行数字签名，以及验证文件和时间戳文件中的签名。  
@@ -23,7 +23,7 @@ ms.locfileid: "70168882"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```console  
 signtool [command] [options] [file_name | ...]  
 ```  
   
@@ -151,61 +151,61 @@ signtool [command] [options] [file_name | ...]
 ## <a name="examples"></a>示例  
  以下命令将目录文件 MyCatalogFileName.cat 添加到系统组件和驱动程序数据库中。 如有必要阻止替换名为 `/u` 的现有目录文件，`MyCatalogFileName.cat` 选项会生成唯一名称。  
   
-```  
+```console  
 signtool catdb /v /u MyCatalogFileName.cat  
 ```  
   
  以下命令通过使用最佳证书对文件进行自动签名。  
   
-```  
+```console  
 signtool sign /a MyFile.exe  
 ```  
   
  以下命令使用存储在受密码保护的 PFX 文件中的证书对文件进行数字签名。  
   
-```  
+```console  
 signtool sign /f MyCert.pfx /p MyPassword MyFile.exe  
 ```  
   
  以下命令对文件进行数字签名并加盖时间戳。 用于对文件进行签名的证书存储在 PFX 文件中。  
   
-```  
+```console  
 signtool sign /f MyCert.pfx /t http://timestamp.digicert.com MyFile.exe  
 ```  
   
  以下命令通过使用位于 `My` 存储中的证书对文件进行签名，该证书的主题名为 `My Company Certificate`。  
   
-```  
+```console  
 signtool sign /n "My Company Certificate" MyFile.exe  
 ```  
   
  以下命令对 ActiveX 控件进行签名，并提供在系统提示用户安装此控件时由 Internet Explorer 显示的信息。  
   
-```  
+```console  
 Signtool sign /f MyCert.pfx /d: "MyControl" /du http://www.example.com/MyControl/info.html MyControl.exe  
 ```  
   
  以下命令对已进行数字签名的文件加盖时间戳。  
   
-```  
+```console  
 signtool timestamp /t http://timestamp.digicert.com MyFile.exe  
 ```  
   
  以下命令确认文件已签名。  
   
-```  
+```console  
 signtool verify MyFile.exe  
 ```  
   
  以下命令验证可能已在目录中签名的系统文件。  
   
-```  
+```console  
 signtool verify /a SystemFile.dll  
 ```  
   
  以下命令验证已在名为 `MyCatalog.cat` 目录中签名的系统文件。  
   
-```  
+```console  
 signtool verify /c MyCatalog.cat SystemFile.dll  
 ```  
   

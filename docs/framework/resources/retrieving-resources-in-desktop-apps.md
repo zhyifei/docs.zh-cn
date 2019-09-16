@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: eca16922-1c46-4f68-aefe-e7a12283641f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 33bc0ecb4b7d20f0df96486c046e06fc4cf0e7ed
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e3b396210cf77cacf3d03439af24de40d2dadeee
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69941456"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971174"
 ---
 # <a name="retrieving-resources-in-desktop-apps"></a>检索桌面应用程序中的资源
 使用 .NET Framework 桌面应用中的本地化资源时，最好用主程序集打包默认或非特定区域性的资源，并为应用支持的每种语言或区域性单独创建附属程序集。 可以使用下一节中介绍的 <xref:System.Resources.ResourceManager> 类访问已命名的资源。 如果选择不在主程序集和附属程序集中嵌入资源，也可以按本文后面的 [从 .resources 文件中检索资源](#from_file) 一节中所述直接访问二进制 .resources 文件。  若要检索 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 应用中的资源，请参阅 Windows 开发人员中心中的 [在 Windows 应用商店应用中创建和检索资源](https://go.microsoft.com/fwlink/p/?LinkID=241674) 一文。  
@@ -43,19 +43,19 @@ ms.locfileid: "69941456"
 ### <a name="retrieving-string-data-an-example"></a>检索字符串数据：示例  
  下面的示例调用 <xref:System.Resources.ResourceManager.GetString%28System.String%29> 方法检索当前 UI 区域性的字符串资源。 它包括英语（美国）区域性的非特定字符串资源和法语（法国）和俄语（俄罗斯）区域性的本地化资源。 下面的英语（美国）资源位于名为 Strings.txt 的文件中：  
   
-```  
+```text
 TimeHeader=The current time is  
 ```  
   
  法语（法国）资源位于名为 Strings.fr-FR.txt 的文件中：  
   
-```  
+```text
 TimeHeader=L'heure actuelle est  
 ```  
   
  俄语（俄罗斯）资源位于名为 Strings.ru-RU.txt 的文件中：  
   
-```  
+```text
 TimeHeader=Текущее время —  
 ```  
   
@@ -66,7 +66,7 @@ TimeHeader=Текущее время —
   
  以下批处理 (.bat) 文件编译该示例，并在相应的目录中生成附属程序集。 为 C# 语言和编译器提供了命令。 对于 Visual Basic ，将 `csc` 更改为 `vbc`，并将 `GetString.cs` 更改为 `GetString.vb`。  
   
-```  
+```console
 resgen strings.txt  
 csc GetString.cs -resource:strings.resources  
   
@@ -96,7 +96,7 @@ al -embed:strings.ru-RU.resources -culture:ru-RU -out:ru-RU\GetString.resources.
   
  可以使用以下批处理文件生成 C# 示例。 对于 Visual Basic，将 `csc` 更改为 `vbc`，并将源代码文件的扩展名由 `.cs` 更改为 `.vb`。  
   
-```  
+```console
 csc CreateResources.cs  
 CreateResources  
   
@@ -122,7 +122,7 @@ csc GetStream.cs -resource:AppResources.resources
   
  可以生成必要的资源文件和程序集，并通过执行以下批处理文件运行该应用。 必须使用 `/r` 选项提供具有对 UIElements.dll 的引用的 Resgen.exe，以便其能够访问有关 `PersonTable` 结构的信息。 如果使用 C#，请将 `vbc` 编译器名称替换为 `csc`，并将 `.vb` 扩展名替换为 `.cs`。  
   
-```  
+```console
 vbc -t:library UIElements.vb  
 vbc CreateResources.vb -r:UIElements.dll  
 CreateResources  
@@ -142,7 +142,7 @@ GetObject.exe
   
  若要启用完全的程序集版本控制支持，建议你在 [全局程序集缓存](../../../docs/framework/app-domains/gac.md) 中部署具有强名称的程序集，并将不具有强名称的程序集部署在应用程序目录中。 若在应用程序目录中部署具有强名称的程序集，则无法在更新程序集时递增附属程序集的版本号。 相反，必须在使用更新的代码替换现有代码处执行就地更新，并保持相同的版本号。 例如，若要使用完全指定的程序集名称 "myApp.resources, Version=1.0.0.0, Culture=de, PublicKeyToken=b03f5f11d50a3a" 更新版本 1.0.0.0 的附属程序集，请使用已编译同一个完全指定的程序集名称 "myApp.resources, Version=1.0.0.0, Culture=de, PublicKeyToken=b03f5f11d50a3a" 的更新的 myApp.resources.dll 来覆盖它。 请注意，在附属程序集文件上使用就地更新会使应用难以准确确定附属程序集的版本。  
   
- 有关程序集版本控制的详细信息，请参阅 [程序集版本控制](../../../docs/framework/app-domains/assembly-versioning.md) 和 [运行时如何定位程序集](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)。  
+ 有关程序集版本控制的详细信息，请参阅 [程序集版本控制](../../standard/assembly/versioning.md) 和 [运行时如何定位程序集](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)。  
   
 <a name="from_file"></a>   
 ## <a name="retrieving-resources-from-resources-files"></a>从 .resources 文件中检索资源  
@@ -166,21 +166,21 @@ GetObject.exe
 ### <a name="an-example"></a>示例  
  下面的示例说明资源管理器如何直接从 .resources 文件中检索资源。 此示例由三个基于文本的资源文件组成，区域性分别为英语（美国）、法语（法国）和俄语（俄罗斯）。 英语（美国）为示例的默认区域性。 其资源存储在以下名为 Strings.txt 的文件中：  
   
-```  
+```text
 Greeting=Hello  
 Prompt=What is your name?  
 ```  
   
  法语(法国) 区域性的资源存储在以下名为 Strings.fr-FR.txt 的文件中：  
   
-```  
+```text 
 Greeting=Bon jour  
 Prompt=Comment vous appelez-vous?  
 ```  
   
  俄语(俄罗斯) 区域性的资源存储在以下名为 Strings.ru-RU.txt 的文件中：  
   
-```  
+```text
 Greeting=Здравствуйте  
 Prompt=Как вас зовут?  
 ```  
@@ -192,7 +192,7 @@ Prompt=Как вас зовут?
   
  可以通过运行以下批处理文件编译该示例的 C# 版本。 如果使用 Visual Basic，请将 `csc` 替换为 `vbc`，并将 `.cs` 扩展名替换为 `.vb`。  
   
-```  
+```console
 Md Resources  
 Resgen Strings.txt Resources\Strings.resources  
 Resgen Strings.fr-FR.txt Resources\Strings.fr-FR.resources  

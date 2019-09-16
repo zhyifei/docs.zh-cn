@@ -6,12 +6,12 @@ ms.date: 04/12/2018
 ms.technology: dotnet-standard
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 45e67fe1436863da4050342bb224d67894111cc4
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 5be4bccf77d39a0b2c336d98a0e1e4d5250bec91
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712482"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972408"
 ---
 # <a name="whats-new-in-the-net-standard"></a>.NET Standard 中的新增功能
 
@@ -67,7 +67,9 @@ ms.locfileid: "57712482"
 
 随着 .NET Core 2.0 和 .NET Standard 2.0 发布，Visual Studio 2017 和 [.NET Core 命令行接口 (CLI)](../../core/tools/index.md) 均包含创建 .NET Standard 库所需的工具支持。
 
-如果安装含 .NET Core 跨平台开发工作负荷的 Visual Studio，可以使用项目模板创建 .NET Standard 2.0 库项目，如下图所示：
+如果安装含 .NET Core 跨平台开发工作负荷  的 Visual Studio，可以使用项目模板创建 .NET Standard 2.0 库项目，如下图所示：
+
+<!-- markdownlint-disable MD025 -->
 
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
 

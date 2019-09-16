@@ -4,12 +4,12 @@ description: 本教程演示如何使用 ML.NET 生成回归模型来预测价�
 ms.date: 05/09/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18, title-hack-0516
-ms.openlocfilehash: fe3afab4cbd3f77ed4498cc5081180910d7d0b9e
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: c9bf91ce5188a512524337f981366040ec09f6f6
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666615"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929451"
 ---
 # <a name="tutorial-predict-prices-using-regression-with-mlnet"></a>教程：将回归与 ML.NET 配合使用以预测价格
 
@@ -17,6 +17,7 @@ ms.locfileid: "69666615"
 
 在本教程中，你将了解：
 > [!div class="checklist"]
+>
 > * 准备和了解数据
 > * 加载和转换数据
 > * 选择学习算法
@@ -269,6 +270,7 @@ private static void TestSinglePrediction(MLContext mlContext, ITransformer model
 在本教程中，你将了解：
 
 > [!div class="checklist"]
+>
 > * 准备和了解数据
 > * 创建学习管道
 > * 加载和转换数据

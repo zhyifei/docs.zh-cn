@@ -8,12 +8,12 @@ helpviewer_keywords:
 - GC [.NET ], large object heap
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ebe856b3ed904b13201c6d59752a8a00f4060d5d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 70ea0110f22e741908ad857fa501553d93c4b98d
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64753951"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929143"
 ---
 # <a name="the-large-object-heap-on-windows-systems"></a>Windows 系统上的大型对象堆
 
@@ -32,16 +32,16 @@ ms.locfileid: "64753951"
 
 小型对象始终在第 0 代中进行分配，或者根据它们的生存期，可能会提升为第 1 代或第 2 代。 大型对象始终在第 2 代中进行分配。
 
-大型对象属于第 2 代，因为只有在第 2 代回收期间才能回收它们。 回收一代时，同时也会回收它前面的所有代。 例如，执行第 1 代 GC 时，将同时回收第 1 代和第 0 代。 执行第 2 代 GC 时，将回收整个堆。 因此，第 2 代 GC 还可称为“完整 GC”。 本文引用第 2 代 GC 而不是完整 GC，但这两个术语是可以互换的。
+大型对象属于第 2 代，因为只有在第 2 代回收期间才能回收它们。 回收一代时，同时也会回收它前面的所有代。 例如，执行第 1 代 GC 时，将同时回收第 1 代和第 0 代。 执行第 2 代 GC 时，将回收整个堆。 因此，第 2 代 GC 还可称为“完整 GC”  。 本文引用第 2 代 GC 而不是完整 GC，但这两个术语是可以互换的。
 
-代可提供 GC 堆的逻辑视图。 实际上，对象存在于托管堆段中。 托管堆段是 GC 通过调用 [VirtualAlloc 功能](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc)代表托管代码在操作系统上保留的内存块。 加载 CLR 时，GC 分配两个初始堆段：一个用于小型对象（小型对象堆或 SOH），一个用于大型对象（大型对象堆）。
+代可提供 GC 堆的逻辑视图。 实际上，对象存在于托管堆段中。 托管堆段是 GC 通过调用 [VirtualAlloc 功能](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc)代表托管代码在操作系统上保留的内存块  。 加载 CLR 时，GC 分配两个初始堆段：一个用于小型对象（小型对象堆或 SOH），一个用于大型对象（大型对象堆）。
 
 然后，通过将托管对象置于这些托管堆段上来满足分配请求。 如果该对象小于 85,000 字节，则将它置于 SOH 的段上，否则，将它置于 LOH 段。 随着分配到各段上的对象越来越多，会以较小块的形式提交这些段。
 对于 SOH，GC 未处理的对象将提升为下一代。 第 0 代回收未处理的对象现在视为第 1 代对象，以此类推。 但是，最后一代回收未处理的对象仍会被视为最后一代中的对象。 也就是说，第 2 代垃圾回收未处理的对象仍是第 2 代对象；LOH 未处理的对象仍是 LOH 对象（由第 2 代回收）。
 
 用户代码只能在第 0 代（小型对象）或 LOH（大型对象）中分配。 只有 GC 可以在第 1 代（通过提升第 0 代回收未处理的对象）和第 2 代（通过提升第 1 代和第 2 代回收未处理的对象）中“分配”对象。
 
-触发垃圾回收后，GC 将寻找存在的对象并将它们压缩。 但是由于压缩费用很高，GC 会扫过 LOH，列出没有被清除的对象列表以供以后重新使用，从而满足大型对象的分配请求。 相邻的被清除对象将组成一个自由对象。
+触发垃圾回收后，GC 将寻找存在的对象并将它们压缩。 但是由于压缩费用很高，GC 会扫过 LOH，列出没有被清除的对象列表以供以后重新使用，从而满足大型对象的分配请求  。 相邻的被清除对象将组成一个自由对象。
 
 .NET Core 和 .NET Framework（从 .NET Framework 4.5.1 开始）包括 <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode?displayProperty=nameWithType> 属性，该属性可让用户指定在下一完整阻止 GC 期间压缩 LOH。 并且在以后，.NET 可能会自动决定压缩 LOH。 这就意味着，如果分配了大型对象并希望确保它们不被移动，则应将其固定起来。
 
@@ -132,7 +132,7 @@ ms.locfileid: "64753951"
 
 2. 排查你知道的其他区域，确保未发现可解释上述性能问题的内容。
 
-参阅博客[尝试找出解决方案之前先了解问题](https://blogs.msdn.microsoft.com/maoni/2006/09/01/understand-the-problem-before-you-try-to-find-a-solution/)获取内存和 CPU 的基础知识的详细信息。
+参阅博客[尝试找出解决方案之前先了解问题](https://devblogs.microsoft.com/dotnet/understand-the-problem-before-you-try-to-find-a-solution/)获取内存和 CPU 的基础知识的详细信息。
 
 可使用以下工具来收集 LOH 性能数据：
 
@@ -146,7 +146,7 @@ ms.locfileid: "64753951"
 
 这些性能计数器通常是调查性能问题的第一步（但是推荐使用 [ETW 事件](#etw-events)）。 通过添加所需计数器配置性能监视器，如图 4 所示。 与 LOH 相关的是：
 
-- 第 2 代回收次数
+- 第 2 代回收次数 
 
    显示自进程开始起第 2 代 GC 发生的次数。 此计数器在第 2 代回收结束时递增（也称为完整垃圾回收）。 此计数器显示上次观测的值。
 
@@ -168,13 +168,13 @@ ms.locfileid: "64753951"
 
 垃圾回收器提供丰富的 ETW 事件集，帮助了解堆的工作内容和工作原理。 以下博客文章演示了如何使用 ETW 收集和了解 GC 事件：
 
-- [GC ETW 事件 - 1](https://blogs.msdn.microsoft.com/maoni/2014/12/22/gc-etw-events-1/)
+- [GC ETW 事件 - 1](https://devblogs.microsoft.com/dotnet/gc-etw-events-1/)
 
-- [GC ETW 事件 - 2](https://blogs.msdn.microsoft.com/maoni/2014/12/25/gc-etw-events-2/)
+- [GC ETW 事件 - 2](https://devblogs.microsoft.com/dotnet/gc-etw-events-2/)
 
-- [GC ETW 事件 - 3](https://blogs.msdn.microsoft.com/maoni/2014/12/25/gc-etw-events-3/)
+- [GC ETW 事件 - 3](https://devblogs.microsoft.com/dotnet/gc-etw-events-3/)
 
-- [GC ETW 事件 - 4](https://blogs.msdn.microsoft.com/maoni/2014/12/30/gc-etw-events-4/)
+- [GC ETW 事件 - 4](https://devblogs.microsoft.com/dotnet/gc-etw-events-4/)
 
 若要标识由临时 LOH 分配造成的过多第 2 代 GC 次数，请查看 GC 的“触发原因”列。 有关仅分配临时大型对象的简单测试，可使用以下 [PerfView](https://www.microsoft.com/download/details.aspx?id=28567) 命令行收集 ETW 事件的信息：
 
@@ -187,7 +187,7 @@ perfview /GCCollectOnly /AcceptEULA /nogui collect
 ![屏幕截图显示了 PerfView 中的 ETW 事件。](media/large-object-heap/event-tracing-windows-perfview.png)
 图 5：使用 PerfView 显示的 ETW 事件
 
-如下所示，所有 GC 都是第 2 代 GC，并且都由 AllocLarge 触发，这表示分配大型对象会触发此 GC。 我们知道这些分配是临时的，因为“LOH 未清理率 %”列显示为 1%。
+如下所示，所有 GC 都是第 2 代 GC，并且都由 AllocLarge 触发，这表示分配大型对象会触发此 GC。 我们知道这些分配是临时的，因为“LOH 未清理率 %”列显示为 1%  。
 
 可以收集显示分配这些大写对象的人员的其他 ETW 事件。 以下命令行：
 
@@ -310,7 +310,7 @@ bp kernel32!virtualalloc "j (dwo(@esp+8)>800000) 'kb';'g'"
 
 只有在分配大小大于 8MB (0x800000) 的情况下调用 [VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc) 时，此命令才会进入调试器并显示调用堆栈。
 
-CLR 2.0 增加了称为“VM 囤积”的功能，用于频繁获取和释放段（包括在大型和小型对象堆上）的情况。 若要指定 VM 囤积，可通过托管 API 指定称为 `STARTUP_HOARD_GC_VM` 的启动标记。 CLR 退回这些段上的内存并将其添加到备用列表中，而不会将该空段释放回操作系统。 （请注意 CLR 不会针对太大型的段执行此操作。）CLR 稍后将使用这些段来满足新段请求。 下一次应用需要新段时，CLR 将使用此备用列表中的某个足够大的段。
+CLR 2.0 增加了称为“VM 囤积”的功能，用于频繁获取和释放段（包括在大型和小型对象堆上）的情况  。 若要指定 VM 囤积，可通过托管 API 指定称为 `STARTUP_HOARD_GC_VM` 的启动标记。 CLR 退回这些段上的内存并将其添加到备用列表中，而不会将该空段释放回操作系统。 （请注意 CLR 不会针对太大型的段执行此操作。）CLR 稍后将使用这些段来满足新段请求。 下一次应用需要新段时，CLR 将使用此备用列表中的某个足够大的段。
 
 VM 囤积还可用于想要保存已获取的段的应用程序（例如属于系统上运行的主要应用的部分服务器应用），以避免内存不足的异常。
 

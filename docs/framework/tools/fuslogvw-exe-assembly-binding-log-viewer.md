@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e32fa443-0778-4cc3-bf36-5c8ea297d296
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 320d059e82bfb58e827432fe5f4ec3eb3857510e
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: dd27bebdc71c70226a61ad8d912135e0e1671dd8
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70041412"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851255"
 ---
 # <a name="fuslogvwexe-assembly-binding-log-viewer"></a>Fuslogvw.exe（程序集绑定日志查看器）
 
@@ -29,7 +29,7 @@ ms.locfileid: "70041412"
 
 在命令提示符处，键入以下内容：
 
-```
+```console
 fuslogvw
 ```
 
@@ -66,7 +66,7 @@ fuslogvw
 
 以下示例日志条目显示了与失败的程序集绑定有关的详细信息。
 
-```
+```output
 *** Assembly Binder Log Entry  (3/5/2007 @ 12:54:20 PM) ***
 
 The operation failed.
@@ -130,7 +130,7 @@ LOG: All probing URLs attempted and failed.
 
 下面的日志显示了一个由于在为应用程序创建本机映像时不存在的依赖项引起的失败。 如果运行时的依赖项不同于运行 Ngen.exe 时的依赖项，则不允许绑定至本机映像。
 
-```
+```output
 *** Assembly Binder Log Entry  (12/8/2006 @ 5:22:07 PM) ***
 
 The operation failed.
@@ -154,7 +154,7 @@ LOG: Bind to native image assembly did not succeed. Use IL image.
 
 下面的日志显示了一个本机映像绑定失败，发生此失败的原因是，应用程序运行时的计算机上的安全设置不同于创建本机映像时的安全设置。
 
-```
+```output
 *** Assembly Binder Log Entry  (12/8/2006 @ 5:29:09 PM) ***
 
 The operation failed.

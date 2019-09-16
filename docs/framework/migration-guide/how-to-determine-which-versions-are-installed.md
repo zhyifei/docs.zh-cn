@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5ead6db2c3df3662c4d689bd6ac2466c99b02a15
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8d719debd39309415f996d655c68abd8c80ec5e3
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968264"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928419"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>如何：确定已安装的 .NET Framework 版本
 
@@ -32,6 +32,7 @@ ms.locfileid: "69968264"
 > 每个新版本的 .NET Framework 都会保留早期版本中的功能并会添加新功能。 可在同一台计算机上同时加载多个版本的 .NET Framework，这意味着可安装 .NET Framework 而无需卸载以前的版本。 通常，你不应卸载以前版本的 .NET Framework，因为你使用的应用程序可能依赖于特定版本，如果删除该版本，可能会中断。
 >
 > .NET Framework 版本和 CLR 版本之间存在差异：
+>
 > - .NET Framework 版本基于构成 .Net Framework 类库的一组程序集。 例如，.NET Framework 版本包括 4.5、4.6.1 和 4.7.2。
 >- CLR 版本基于 .NET Framework 应用程序执行的运行时。 单个 CLR 版本通常可支持多个 .NET Framework 版本。 例如，CLR 版本 4.0.30319.*xxxxx* 支持 .NET Framework 版本 4 到 4.5.2（其中 *xxxxx* 小于 42000），而 CLR 版本 4.0.30319.42000 支持从 .NET Framework 4.6 开始的 .NET Framework 版本。
 >

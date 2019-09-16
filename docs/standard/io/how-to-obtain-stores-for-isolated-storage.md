@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fcb6b178-d526-47c4-b029-e946f880f9db
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7ef65356d84016462941850ef9b9d6210debc62c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d6fbc78c379951e05869a433875d057c49d44594
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622695"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969262"
 ---
 # <a name="how-to-obtain-stores-for-isolated-storage"></a>如何：获取独立存储的存储区
 独立存储区公开数据隔离舱中的虚拟文件系统。 <xref:System.IO.IsolatedStorage.IsolatedStorageFile> 类提供许多与独立存储区交互的方法。 为了创建和检索存储区，<xref:System.IO.IsolatedStorage.IsolatedStorageFile> 提供了三种静态方法：  
@@ -50,7 +50,7 @@ ms.locfileid: "64622695"
 ## <a name="example"></a>示例  
  下面的代码提供了一个简单的类示例，它包含按用户和程序集隔离的存储区。 通过向 <xref:System.IO.IsolatedStorage.IsolatedStorageScope.Domain?displayProperty=nameWithType> 方法传递的自变量添加 <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A>，此代码可更改为检索按用户、域和程序集隔离的存储区。  
   
- 运行代码后，可以在命令行处键入“ StoreAdm /LIST”，以确认存储是否已创建。 这会运行[独立存储工具 (Storeadm.exe)](../../../docs/framework/tools/storeadm-exe-isolated-storage-tool.md)，并列出用户当前的所有独立存储。  
+ 运行代码后，可以在命令行处键入“ StoreAdm /LIST”  ，以确认存储是否已创建。 这会运行[独立存储工具 (Storeadm.exe)](../../../docs/framework/tools/storeadm-exe-isolated-storage-tool.md)，并列出用户当前的所有独立存储。  
   
  [!code-cpp[Conceptual.IsolatedStorage#7](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.isolatedstorage/cpp/source6.cpp#7)]
  [!code-csharp[Conceptual.IsolatedStorage#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source6.cs#7)]
@@ -62,4 +62,4 @@ ms.locfileid: "64622695"
 - <xref:System.IO.IsolatedStorage.IsolatedStorageScope>
 - [独立存储](../../../docs/standard/io/isolated-storage.md)
 - [隔离的类型](../../../docs/standard/io/types-of-isolation.md)
-- [Assemblies in the Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)（公共语言运行时中的程序集）
+- [.NET 中的程序集](../assembly/index.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 476b03dc-2b12-49a7-b067-41caeaa2f533
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6007bc6085366e46e60696e412507026726f098a
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: d11567b3a5abca6e81ff0358295aa8516ef6443f
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65593448"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969019"
 ---
 # <a name="managed-execution-process"></a>托管执行过程
 <a name="introduction"></a> 托管的执行过程包括以下步骤，在本主题后面将对此进行详细讨论：  
@@ -116,5 +116,5 @@ ms.locfileid: "65593448"
 - [安全性](../../docs/standard/security/index.md)
 - [与非托管代码交互操作](../../docs/framework/interop/index.md)
 - [部署](../../docs/framework/deployment/net-framework-applications.md)
-- [Assemblies in the Common Language Runtime](../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)（公共语言运行时中的程序集）
+- [.NET 中的程序集](assembly/index.md)
 - [应用程序域](../../docs/framework/app-domains/application-domains.md)

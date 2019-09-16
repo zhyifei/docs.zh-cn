@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: cb8bc835-9221-4888-af53-1a4f5fad6c48
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 775a8b63a0ba7cd021c9e5072ef98c20f6ab2e81
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0683499241f594b8b37b7dd69b91ed5929670024
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69937921"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894573"
 ---
 # <a name="winresexe-windows-resource-localization-editor"></a>Winres.exe（Windows 资源本地化编辑器）
 
@@ -28,7 +28,7 @@ Winres.exe 随 Visual Studio 一起安装。 要运行该工具，请使用 Visu
 
 ## <a name="syntax"></a>语法
 
-```
+```console
 winres resourceFile
 winres /?
 ```
@@ -116,13 +116,13 @@ Winres.exe 具有下列特性和功能：
 
      下面的命令启动 Winres.exe 并在窗体设计器中加载与 `TestApp.resx` 关联的窗体。
 
-    ```
+    ```console
     winres TestApp.resx
     ```
 
      下面的命令启动 Winres.exe 并在窗体设计器中加载与 `TestApp.resources` 关联的窗体。
 
-    ```
+    ```console
     winres TestApp.resources
     ```
 

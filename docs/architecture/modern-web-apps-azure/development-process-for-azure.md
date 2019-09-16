@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Azure 构建新式 Web 应用程序 | Azure
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 286ffdb73425794e5979cde902e21ebd90a26969
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 830271d76e5a87ed782d81fa9491328c580f0f87
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675144"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849587"
 ---
 # <a name="development-process-for-azure"></a>Azure 的开发过程
 
@@ -28,7 +28,7 @@ ms.locfileid: "68675144"
 
 **Visual Studio 2017。** 如果使用 Visual Studio 2017  ，安装 .NET Core 跨平台开发工作负荷后，即可构建 ASP.NET Core 应用程序。  图 10-1 显示了 Visual Studio 2017 安装对话框中的必需工作负荷。
 
-![](./media/image10-1.png)
+![在 Visual Studio 2017 中安装 .NET Core 工作负载](./media/image10-1.png)
 
 **图 10-1.** 在 Visual Studio 2017 中安装 .NET Core 工作负荷。
 
@@ -36,7 +36,7 @@ ms.locfileid: "68675144"
 
 **Visual Studio Code 和 dotnet CLI**（适用于 Mac、Linux 和 Windows 的跨平台工具）。 如果更青睐支持任何开发语言的轻量级跨平台编辑器，可以使用 Microsoft Visual Studio Code 和 the dotnet CLI。 这些产品提供简单但可靠的体验，可以简化开发人员工作流。 此外，Visual Studio Code 支持适用于 C\# 和 Web 开发的扩展，在该编辑器内提供智能感知和快捷任务。
 
-[下载 .NET Core SDK](https://www.microsoft.com/net/download/core)
+[下载 .NET Core SDK](https://dotnet.microsoft.com/download)
 
 [下载 Visual Studio Code](https://code.visualstudio.com/download)
 
@@ -88,11 +88,11 @@ ms.locfileid: "68675144"
 
 无论何时准备与团队共享代码，均应将更改从本地源存储库中推送到团队共享源存储库。 如果一直在自定义分支中工作，此步骤通常涉及将代码合并到共享分支中（或许通过[拉取请求](https://docs.microsoft.com/azure/devops/git/pull-requests)方式）。
 
-#### <a name="step-3-build-server-continuous-integration-build-test-package"></a>步骤 3. 生成服务器：持续集成。 生成、测试、打包
+#### <a name="step-3-build-server-continuous-integration-build-test-package"></a>步骤 3。 生成服务器：持续集成。 生成、测试、打包
 
 向共享应用程序代码存储库进行新的提交时，生成服务器上会触发新的生成。 作为 CI 过程的一部分，该生成应充分编译应用程序，并运行自动测试以确定一切正常。 CI 过程的最终结果应是已可部署的打包版 Web 应用。
 
-#### <a name="step-4-build-server-continuous-delivery"></a>步骤 4. 生成服务器：持续交付
+#### <a name="step-4-build-server-continuous-delivery"></a>步骤 4。 生成服务器：持续交付
 
 生成成功后，CD 过程将选取产生的生成项目。 其中包括一个 Web 部署包。 生成服务器将此包部署到 Azure 应用服务，使用新创建的服务替换任何现有服务。 通常该步骤面向过渡环境，但是部分应用程序通过 CD 过程直接部署到生产。
 

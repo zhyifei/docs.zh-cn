@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#]
 ms.assetid: 0e597e0d-ea7a-41ba-a38a-0198122f3c26
-ms.openlocfilehash: 6f071f907fe38b226a5083699e758bc5fb8bffce
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 6e6fc815ee8c2d174db12f95eed8dc72a6ef5a62
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252997"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971968"
 ---
 # <a name="command-line-arguments-c-programming-guide"></a>命令行参数（C# 编程指南）
 可以通过以下方式之一定义方法来将自变量发送到 `Main` 方法：  
@@ -71,8 +71,6 @@ long num = Convert.ToInt64(s);
   
 > [!NOTE]
 > 在 Visual Studio 中运行应用程序时，可在[“项目设计器”->“调试”页](/visualstudio/ide/reference/debug-page-project-designer)中指定命令行参数。  
-  
- 有关如何使用命令行参数的更多示例，请参阅[操作说明：使用命令行创建和使用程序集](../concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md)。  
   
 ## <a name="see-also"></a>请参阅
 

@@ -9,24 +9,24 @@ helpviewer_keywords:
 - text, network tracing output
 - includehex
 ms.assetid: ad22b4b8-00af-4778-9cca-cb609ce1f8ff
-ms.openlocfilehash: 00df193671255e7b40f5c4b86ee952a3e20e3a40
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 09f77a60255accc3e4b1c4fa5ea3d7526444e4cb
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59177562"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894717"
 ---
 # <a name="interpreting-network-tracing"></a>解释网络跟踪
 启用网络跟踪之后，可以通过跟踪捕获应用程序对各种 <xref:System.Net> 类成员的调用。 这些调用的输出可能类似于以下示例。  
   
-```  
+```output
 [588]   (4357)   Entering Socket#33574638::Send()  
-[588]   (4387)   Exiting Socket#33574638::Send()-> 61#61  
+[588]   (4387)   Exiting Socket#33574638::Send()-> 61#61
 ```  
   
- 在上一示例中，[588] 是当前线程的唯一标识符。 (4357) 和 (4387) 是一种时间戳，它表示应用程序启动以来已经经过的毫秒数。 时间戳之后的数据显示了进入和退出“Socket.Send”方法的应用程序。 执行“Send”方法的对象使用 33574638 作为其唯一标识符。 退出跟踪方法包括返回值（上一示例中为 61）。  
+ 在上一示例中，[588] 是当前线程的唯一标识符。 (4357) 和 (4387) 是一种时间戳，它表示应用程序启动以来已经经过的毫秒数。 时间戳之后的数据显示了进入和退出“Socket.Send”方法的应用程序  。 执行“Send”方法的对象使用 33574638 作为其唯一标识符  。 退出跟踪方法包括返回值（上一示例中为 61）。  
   
- 网络跟踪可以使用诸如 Hypertext Transfer Protocol (HTTP) 应用程序级协议捕获由应用程序发送或接收的网络流量。 此数据可捕获为文本或十六进制数据。 如果将“includehex”指定为“tracemode”属性的值，可使用十六进制数据。 （有关此属性的详细信息，请参阅[如何：配置网络跟踪](../../../docs/framework/network-programming/how-to-configure-network-tracing.md)。）下例通过“includehex”生成跟踪。  
+ 网络跟踪可以使用诸如 Hypertext Transfer Protocol (HTTP) 应用程序级协议捕获由应用程序发送或接收的网络流量。 此数据可捕获为文本或十六进制数据。 如果将“includehex”指定为“tracemode”属性的值，可使用十六进制数据   。 （有关此属性的详细信息，请参阅[如何：配置网络跟踪](../../../docs/framework/network-programming/how-to-configure-network-tracing.md)。）下例通过“includehex”生成跟踪  。  
   
  `[1692]   (1142)   00000000 : 47 45 54 20 2F 77 70 61-64 2E 64 61 74 20 48 54 : GET /wpad.dat HT`  
   
@@ -36,7 +36,7 @@ ms.locfileid: "59177562"
   
  `[1692]   (1142)   00000030 : 6F 6E 3A 20 43 6C 6F 73-65 0D 0A 0D 0A     : on: Close....`  
   
- 若要省略十六进制数据，请将“protocolonly”指定为“tracemode”属性的值。 下例演示了指定“protocolonly”时的跟踪。  
+ 若要省略十六进制数据，请将“protocolonly”指定为“tracemode”属性的值   。 下例演示了指定“protocolonly”时的跟踪  。  
   
  `[2444]   (594)   Data from ConnectStream#33574638::WriteHeaders<<GET /wpad.dat HTTP/1.1`  
   

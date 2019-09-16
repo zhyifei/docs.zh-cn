@@ -3,12 +3,12 @@ title: 使用 LINQ
 description: 此教程将介绍如何使用 LINQ 生成序列、编写用于 LINQ 查询的方法，以及如何区分及早计算和惰性计算。
 ms.date: 10/29/2018
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: f80567510509ba0c7f205ccbd5e587f9ad31f531
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 72bb7475fc6b18650e0870bf99c4b8ddbac3ec9f
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70785863"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926621"
 ---
 # <a name="working-with-linq"></a>使用 LINQ
 
@@ -339,6 +339,7 @@ public static void Main(string[] args)
 ## <a name="conclusion"></a>结束语
 
 在此项目中介绍了下列内容：
+
 - 使用 LINQ 查询，来将数据聚合到有意义的序列中
 - 编写扩展方法，来将自己的自定义功能添加到 LINQ 查询
 - 查找 LINQ 查询可能会在其中遇到性能问题（如速度下降）的代码区域
@@ -347,6 +348,7 @@ public static void Main(string[] args)
 除 LINQ 外，还简单介绍了魔术师用于扑克牌魔术的一个技术。 魔术师之所以采用完美洗牌是因为，可以控制每张纸牌在一副纸牌中的移动。 现在你了解了，也不要告诉其他人以免破坏他们的兴致！
 
 有关 LINQ 的更多信息，请访问：
+
 - [语言集成查询 (LINQ)](../programming-guide/concepts/linq/index.md)
   - [LINQ 简介](../programming-guide/concepts/linq/index.md)
   - [基本 LINQ 查询操作 (C#)](../programming-guide/concepts/linq/basic-linq-query-operations.md)

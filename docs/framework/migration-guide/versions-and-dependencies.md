@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: f75a72de-e2f2-4a7a-9574-3f278684ea90
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2e4e3b1768086a1c57979a4c74643036294299a3
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: c9f7a0bc3a7a41a77db3c90c2f88fb5ddfd7bfa0
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70787751"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971079"
 ---
 # <a name="net-framework-versions-and-dependencies"></a>.NET Framework 版本和依赖关系
 每个版本的 .NET framework 都包含公共语言运行时 (CLR)、基类库和其他托管库。 本主题按版本介绍了 .NET Framework 的关键功能，提供了有关基础 CLR 版本和相关开发环境的信息，并标识了 Windows 操作系统所安装的版本。  
@@ -68,7 +68,7 @@ ms.locfileid: "70787751"
   
 ## <a name="targeting-and-running-apps-for-older-versions"></a>以针对早期版本的应用程序为目标并运行这些应用程序  
 
-.NET Framework 版本 2.0、3.0 和 3.5 使用同一 CLR 版本 (CLR 2.0) 生成。 这些版本表示单个安装的连续层。 每个版本将基于早期版本以增量方式生成。 无法在计算机上并行运行版本 2.0、3.0 和 3.5。 在安装 3.5 版时，你将自动获得 2.0 和 3.0 层，并且为版本 2.0、3.0 和 3.5 生成的应用程序均可在 3.5 版上运行。 但是，.NET Framework 4 结束了此分层方法，且 .NET Framework 4 及更高版本（.NET Framework 4.5、4.5.1、4.5.2、4.6、4.6.1、4.6.2、4.7、4.7.1、4.7.2 和 4.8）也表示单个安装的连续层。  从 .NET Framework 4 开始，可使用进程内并行托管在单个进程中运行 CLR 的多个版本。 有关详细信息，请参阅[程序集和并行执行](../app-domains/assemblies-and-side-by-side-execution.md)。  
+.NET Framework 版本 2.0、3.0 和 3.5 使用同一 CLR 版本 (CLR 2.0) 生成。 这些版本表示单个安装的连续层。 每个版本将基于早期版本以增量方式生成。 无法在计算机上并行运行版本 2.0、3.0 和 3.5。 在安装 3.5 版时，你将自动获得 2.0 和 3.0 层，并且为版本 2.0、3.0 和 3.5 生成的应用程序均可在 3.5 版上运行。 但是，.NET Framework 4 结束了此分层方法，且 .NET Framework 4 及更高版本（.NET Framework 4.5、4.5.1、4.5.2、4.6、4.6.1、4.6.2、4.7、4.7.1、4.7.2 和 4.8）也表示单个安装的连续层。  从 .NET Framework 4 开始，可使用进程内并行托管在单个进程中运行 CLR 的多个版本。 有关详细信息，请参阅[程序集和并行执行](../../standard/assembly/side-by-side-execution.md)。  
   
  此外，如果应用面向 2.0、3.0 或 3.5 版，你的用户可能需要先在 Windows 8、Windows 8.1 或 Windows 10 计算机上启用 .NET Framework 3.5，然后才能运行应用。 有关详细信息，请参阅[在 Windows 10、Windows 8.1 和 Windows 8 上安装 .NET Framework 3.5](../install/dotnet-35-windows-10.md)。  
   

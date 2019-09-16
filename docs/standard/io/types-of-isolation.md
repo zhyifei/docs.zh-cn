@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 14812988-473f-44ae-b75f-fd5c2f21fb7b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8875ed10c4cb144995b602287f904d3c98dcdb39
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c6c5337fedd13cb18b8e5eeadec48a2e4695a543
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69948767"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969351"
 ---
 # <a name="types-of-isolation"></a>隔离的类型
 独立存储始终仅限创建它的用户访问。 为了实现这种隔离，公共语言运行时使用操作系统识别的相同用户标识，即与存储打开时的代码运行进程相关联的标识。 虽然此标识是已验证用户标识，但模拟可能会导致当前用户的标识发生动态变化。  
@@ -34,7 +34,7 @@ ms.locfileid: "69948767"
   
 - 域标识表示证明应用的证据，对于 Web 应用，这可能就是完整 URL。 对于 shell 托管代码，域标识可能基于应用目录路径。 例如，如果通过路径 C:\Office\MyApp.exe 运行可执行文件，域标识为 C:\Office\MyApp.exe。  
   
-- 程序集标识是证明程序集的证据。 这可能来自加密数字签名，可以是程序集的[强名称](../../../docs/framework/app-domains/strong-named-assemblies.md)、程序集的软件发行者或程序集的 URL 标识。 如果程序集同时包含强名称和软件发行者标识，使用的是软件发行者标识。 如果程序集来自 Internet 且未签名，使用的是 URL 标识。 若要详细了解程序集和强名称，请参阅[使用程序集编程](../../../docs/framework/app-domains/programming-with-assemblies.md)。  
+- 程序集标识是证明程序集的证据。 这可能来自加密数字签名，可以是程序集的[强名称](../assembly/strong-named.md)、程序集的软件发行者或程序集的 URL 标识。 如果程序集同时包含强名称和软件发行者标识，使用的是软件发行者标识。 如果程序集来自 Internet 且未签名，使用的是 URL 标识。 若要详细了解程序集和强名称，请参阅[使用程序集编程](../assembly/program.md)。  
   
 - 漫游存储与有漫游用户策略文件的用户一起移动。 文件被写入网络目录，并下载到用户登录的所有计算机中。 若要详细了解漫游用户策略文件，请参阅 <xref:System.IO.IsolatedStorage.IsolatedStorageScope.Roaming?displayProperty=nameWithType>。  
   

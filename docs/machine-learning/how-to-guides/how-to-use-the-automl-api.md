@@ -3,12 +3,12 @@ title: 如何使用 ML.NET 自动化 ML API
 description: ML.NET 自动化 ML API 可自动化模型生成过程并生成可供部署的模型。 了解可用于配置自动化机器学习任务的选项。
 ms.date: 04/24/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: d624b999384dd92d41033e385d01fe556e10a065
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: 02e4203b0d9f388c7bd7133f3cd4e97cc60cff14
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65960410"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929395"
 ---
 # <a name="how-to-use-the-mlnet-automated-machine-learning-api"></a>如何使用 ML.NET 自动化机器学习 API
 
@@ -21,18 +21,19 @@ ms.locfileid: "65960410"
 
 自动化机器学习支持将数据集加载到 [IDataView](xref:Microsoft.ML.IDataView) 中。 数据可以采用制表符分隔值 (TSV) 文件和逗号分隔值 (CSV) 文件的形式。
 
-示例:
+示例：
 
 ```csharp
 using Microsoft.ML;
 using Microsoft.ML.AutoML;
-    ...
+    // ...
     MLContext mlContext = new MLContext();
     IDataView trainDataView = mlContext.Data.LoadFromTextFile<SentimentIssue>("my-data-file.csv", hasHeader: true);
 ```
 
 ## <a name="select-the-machine-learning-task-type"></a>选择机器学习任务类型
 在创建试验之前，请确定想要解决的机器学习问题的类型。 自动化机器学习支持以下 ML 任务：
+
 * 二元分类
 * 多类分类
 * 回归测试
@@ -104,6 +105,7 @@ using Microsoft.ML.AutoML;
     ```
 
 每个 ML 任务支持的训练程序的列表可在以下相应链接中找到：
+
 * [支持的二元分类算法](xref:Microsoft.ML.AutoML.BinaryClassificationTrainer)
 * [支持的多类分类算法](xref:Microsoft.ML.AutoML.MulticlassClassificationTrainer)
 * [支持的回归算法](xref:Microsoft.ML.AutoML.RegressionTrainer)
@@ -210,6 +212,7 @@ Console.WriteLine($"Root Mean Squared Error: {metrics.RootMeanSquaredError:0.##}
 ```
 
 以下是每个 ML 任务的所有可用指标：
+
 * [二元分类指标](xref:Microsoft.ML.AutoML.BinaryClassificationMetric)
 * [多类分类指标](xref:Microsoft.ML.AutoML.MulticlassClassificationMetric)
 * [回归指标](xref:Microsoft.ML.AutoML.RegressionMetric)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5d22b4292483a94153864cad3439933837aed3b2
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 7f8046852f847cd5493a2ed17b491a39e494ce2b
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70043408"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969110"
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>运行时如何定位程序集
 
@@ -25,7 +25,7 @@ ms.locfileid: "70043408"
 在尝试查找程序集和解析程序集引用时，公共语言运行时会执行多个步骤。 以下各节将分别阐述每个步骤。 描述运行时如何查找程序集时，通常使用术语“探测”；它指一套用于根据名称和区域性查找程序集的试探法。
 
 > [!NOTE]
-> 可使用 Windows SDK 中附带的[程序集绑定日志查看器 (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) 查看日志文件中的绑定信息。
+> 可使用 Windows SDK 中附带的[程序集绑定日志查看器 (Fuslogvw.exe)](../tools/fuslogvw-exe-assembly-binding-log-viewer.md) 查看日志文件中的绑定信息。
 
 ## <a name="initiating-the-bind"></a>启动绑定
 
@@ -35,7 +35,7 @@ ms.locfileid: "70043408"
 
 还可通过仅向调用方法提供程序集的部分信息（例如，仅指定程序集名称）动态引用程序集。 在这种情况下，仅搜索程序集的应用程序目录，不进行其他检查。 通过使用任一方式加载程序集（ <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 或 <xref:System.AppDomain.Load%2A?displayProperty=nameWithType>），可执行部分引用。
 
-最后，可使用 <xref:System.Reflection.Assembly.Load*?displayProperty=nameWithType> 等方法执行动态引用并仅提供部分信息；然后在应用程序配置文件中用 [\<qualifyAssembly>](../../../docs/framework/configure-apps/file-schema/runtime/qualifyassembly-element.md) 元素限定该引用。 借助此元素，你可以提供应用程序配置文件（而不是代码）中的完全引用信息（名称、版本、区域性和公钥标记（若适用））。 如果想要完全限定应用程序目录之外的程序集引用，或者如果想要引用全局程序集缓存中的程序集且轻松指定配置文件（而不是代码）中的完全引用，可使用此技术。
+最后，可使用 <xref:System.Reflection.Assembly.Load*?displayProperty=nameWithType> 等方法执行动态引用并仅提供部分信息；然后在应用程序配置文件中用 [\<qualifyAssembly>](../configure-apps/file-schema/runtime/qualifyassembly-element.md) 元素限定该引用。 借助此元素，你可以提供应用程序配置文件（而不是代码）中的完全引用信息（名称、版本、区域性和公钥标记（若适用））。 如果想要完全限定应用程序目录之外的程序集引用，或者如果想要引用全局程序集缓存中的程序集且轻松指定配置文件（而不是代码）中的完全引用，可使用此技术。
 
 > [!NOTE]
 > 多个应用程序间共享的程序集不应使用此类型的部分引用。 因为配置设置是基于每个应用程序（而非每个程序集）应用的，所以使用此类部分引用的共享程序集需要使用共享程序集的每个应用程序的配置文件中都具有限定信息。
@@ -74,10 +74,10 @@ ms.locfileid: "70043408"
 
 - 计算机配置文件。
 
-这些文件遵循相同的语法，并提供绑定重定向、代码位置和特定程序集的绑定模式等信息。 每个配置文件均可包含用于重定向绑定过程的 [\<assemblyBinding> 元素](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md)。 [\<assemblyBinding> 元素](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md)的子元素包括 [\<dependentAssembly> 元素](../../../docs/framework/configure-apps/file-schema/runtime/dependentassembly-element.md)。 [\<dependentAssembly> 元素](../../../docs/framework/configure-apps/file-schema/runtime/dependentassembly-element.md)的子元素包括 [\<assemblyIdentity> 元素](/visualstudio/deployment/assemblyidentity-element-clickonce-deployment)、[\<bindingRedirect> 元素](../../../docs/framework/configure-apps/file-schema/runtime/bindingredirect-element.md)和 [\<codeBase> 元素](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md)。
+这些文件遵循相同的语法，并提供绑定重定向、代码位置和特定程序集的绑定模式等信息。 每个配置文件均可包含用于重定向绑定过程的 [\<assemblyBinding> 元素](../configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md)。 [\<assemblyBinding> 元素](../configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md)的子元素包括 [\<dependentAssembly> 元素](../configure-apps/file-schema/runtime/dependentassembly-element.md)。 [\<dependentAssembly> 元素](../configure-apps/file-schema/runtime/dependentassembly-element.md)的子元素包括 [\<assemblyIdentity> 元素](/visualstudio/deployment/assemblyidentity-element-clickonce-deployment)、[\<bindingRedirect> 元素](../configure-apps/file-schema/runtime/bindingredirect-element.md)和 [\<codeBase> 元素](../configure-apps/file-schema/runtime/codebase-element.md)。
 
 > [!NOTE]
-> 这 3 个配置文件中均存在配置信息；并非所有配置文件中的所有元素都有效。 例如，绑定模式和专用路径信息仅存在于应用程序配置文件。 有关包含在每个文件内的完整信息列表，请参阅 [使用配置文件配置应用](../../../docs/framework/configure-apps/index.md)。
+> 这 3 个配置文件中均存在配置信息；并非所有配置文件中的所有元素都有效。 例如，绑定模式和专用路径信息仅存在于应用程序配置文件。 有关包含在每个文件内的完整信息列表，请参阅 [使用配置文件配置应用](../configure-apps/index.md)。
 
 ### <a name="application-configuration-file"></a>应用程序配置文件
 
@@ -120,9 +120,9 @@ ms.locfileid: "70043408"
 </configuration>
 ```
 
-若要创建程序集，可使用具有如下命令的 [Al.exe（程序集链接器）](../../../docs/framework/tools/al-exe-assembly-linker.md)工具：
+若要创建程序集，可使用具有如下命令的 [Al.exe（程序集链接器）](../tools/al-exe-assembly-linker.md)工具：
 
-```
+```console
 Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v:3.0.0.0
 ```
 
@@ -136,25 +136,21 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 共享组件已更新且使用此组件的所有应用程序都应选取共享组件的新版本时，使用发行者策略文件。 发布服务器策略文件中的设置会重写应用程序配置文件中的设置，除非应用程序配置文件强制实施了安全模式。
 
 #### <a name="safe-mode"></a>安全模式
-
 发布服务器策略文件通常作为服务包或程序更新的一部分显式安装。 如果升级后的共享组件有任何问题，可使用安全模式忽略发布服务器策略文件中的重写。 安全模式由仅位于应用程序配置文件中的 \<publisherPolicy apply="yes|no"/> 元素确定   。 它指定是否应从绑定进程删除发布服务器策略配置信息。
 
-可针对整个应用程序或所选程序集设置安全模式。 即，可关闭构成应用程序的所有程序集的策略，也可仅打开部分程序集的策略。 若要将发布服务器策略有选择地应用于构成应用程序的程序集，请设置 \<publisherPolicy apply\=no/> 并使用 \<dependentAssembly> 元素指定要影响的程序集   。 若要将发布服务器策略应用于构成应用程序的所有程序集，请设置 \<publisherPolicy apply\=no/>，且不包含从属程序集元素  。 有关配置的详细信息，请参阅 [使用配置文件配置应用](../../../docs/framework/configure-apps/index.md)。
+可针对整个应用程序或所选程序集设置安全模式。 即，可关闭构成应用程序的所有程序集的策略，也可仅打开部分程序集的策略。 若要将发布服务器策略有选择地应用于构成应用程序的程序集，请设置 \<publisherPolicy apply\=no/> 并使用 \<dependentAssembly> 元素指定要影响的程序集   。 若要将发布服务器策略应用于构成应用程序的所有程序集，请设置 \<publisherPolicy apply\=no/>，且不包含从属程序集元素  。 有关配置的详细信息，请参阅 [使用配置文件配置应用](../configure-apps/index.md)。
 
 ### <a name="machine-configuration-file"></a>计算机配置文件
+最后，运行时检查计算机配置文件。 此文件名为 Machine.config，驻留在本地计算机上安装有运行时的根目录的配置子目录中。 管理员可使用此文件来指定此计算机本地的程序集绑定限制。 计算机配置文件中的设置优先于所有其他配置设置 ；但是，这并不意味着所有配置设置都应置于此文件中。 管理员策略文件确定的版本为最终版本，且不能重写。 Machine.config 文件中指定的重写可影响所有应用程序。 有关配置文件的详细信息，请参阅 [使用配置文件配置应用](../configure-apps/index.md)。
 
-最后，运行时检查计算机配置文件。 此文件名为 Machine.config，驻留在本地计算机上安装有运行时的根目录的配置子目录中。 管理员可使用此文件来指定此计算机本地的程序集绑定限制。 计算机配置文件中的设置优先于所有其他配置设置 ；但是，这并不意味着所有配置设置都应置于此文件中。 管理员策略文件确定的版本为最终版本，且不能重写。 Machine.config 文件中指定的重写可影响所有应用程序。 有关配置文件的详细信息，请参阅 [使用配置文件配置应用](../../../docs/framework/configure-apps/index.md)。
-
-<a name="step2"></a>
-
+<a name="step2"></a> 
 ## <a name="step-2-checking-for-previously-referenced-assemblies"></a>步骤 2：检查以前引用的程序集
-
-如果请求的程序集已先前调用中请求过，则公共语言运行时将使用已加载的程序集。 命名构成应用程序的程序集时，这可能会造成影响。 有关命名程序集的详细信息，请参阅 [程序集名称](../../../docs/framework/app-domains/assembly-names.md)。
+如果请求的程序集已先前调用中请求过，则公共语言运行时将使用已加载的程序集。 命名构成应用程序的程序集时，这可能会造成影响。 有关命名程序集的详细信息，请参阅 [程序集名称](../../standard/assembly/names.md)。
 
 如果先前的程序集请求失败，此程序集的后续请求立即失败且不会尝试加载程序集。 从 .NET Framework 2.0 版开始，将缓存程序集绑定故障，且缓存的信息用于确定是否尝试加载此程序集。
 
 > [!NOTE]
-> 若要还原到 .NET framework 1.0 和 1.1 版的行为（即，不缓存绑定故障），请将 [\<disableCachingBindingFailures> 元素](../../../docs/framework/configure-apps/file-schema/runtime/disablecachingbindingfailures-element.md)包括到配置文件中。
+> 若要还原到 .NET framework 1.0 和 1.1 版的行为（即，不缓存绑定故障），请将 [\<disableCachingBindingFailures> 元素](../configure-apps/file-schema/runtime/disablecachingbindingfailures-element.md)包括到配置文件中。
 
 <a name="step3"></a>
 
@@ -168,25 +164,25 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 
 在通过使用调用程序集引用和配置文件中的信息确定正确的程序集版本，且已在全局程序集缓存中检查此版本（仅针对强名称程序集）之后，公共语言运行时将尝试查找此程序集。 查找程序集的过程涉及以下步骤：
 
-1. 如果在应用程序配置文件中找到 [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) 元素，则运行时会检查指定的位置。 如果找到匹配项，则使用此程序集且不执行探测。 如果此处不存在程序集，则绑定请求失败。
+1. 如果在应用程序配置文件中找到 [\<codeBase>](../configure-apps/file-schema/runtime/codebase-element.md) 元素，则运行时会检查指定的位置。 如果找到匹配项，则使用此程序集且不执行探测。 如果此处不存在程序集，则绑定请求失败。
 
 2. 然后，运行时使用本节稍后指定的规则探测引用的程序集。
 
 > [!NOTE]
-> 如果目录中有多个版本的程序集，并且要引用该程序集的某个特定版本，则必须使用 [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) 元素而不是 [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) 元素的 `privatePath` 特性。 如果使用 [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) 元素，则运行时首次找到与引用的简单程序集名称匹配的程序集时，无论此匹配项是否正确，运行时都会停止探测。 如果此匹配项正确，则使用此程序集。 如果此匹配项不正确，则停止探测且绑定失败。
+> 如果目录中有多个版本的程序集，并且要引用该程序集的某个特定版本，则必须使用 [\<codeBase>](../configure-apps/file-schema/runtime/codebase-element.md) 元素而不是 [\<probing>](../configure-apps/file-schema/runtime/probing-element.md) 元素的 `privatePath` 特性。 如果使用 [\<probing>](../configure-apps/file-schema/runtime/probing-element.md) 元素，则运行时首次找到与引用的简单程序集名称匹配的程序集时，无论此匹配项是否正确，运行时都会停止探测。 如果此匹配项正确，则使用此程序集。 如果此匹配项不正确，则停止探测且绑定失败。
 
 ### <a name="locating-the-assembly-through-codebases"></a>通过基本代码查找程序集
 
-通过使用配置文件中的 [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) 元素，可提供基本代码信息。 在运行时尝试探测引用的程序集之前，始终检查此基本代码。 如果包含最终版本重定向的发布服务器策略文件也包含 [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) 元素，则使用该 [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) 元素。 例如，如果应用程序配置文件指定一个 [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) 元素，而重写应用程序信息的发布服务器策略文件也指定一个 [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) 元素，则使用发布服务器策略文件中的 [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) 元素。
+通过使用配置文件中的 [\<codeBase>](../configure-apps/file-schema/runtime/codebase-element.md) 元素，可提供基本代码信息。 在运行时尝试探测引用的程序集之前，始终检查此基本代码。 如果包含最终版本重定向的发布服务器策略文件也包含 [\<codeBase>](../configure-apps/file-schema/runtime/codebase-element.md) 元素，则使用该 [\<codeBase>](../configure-apps/file-schema/runtime/codebase-element.md) 元素。 例如，如果应用程序配置文件指定一个 [\<codeBase>](../configure-apps/file-schema/runtime/codebase-element.md) 元素，而重写应用程序信息的发布服务器策略文件也指定一个 [\<codeBase>](../configure-apps/file-schema/runtime/codebase-element.md) 元素，则使用发布服务器策略文件中的 [\<codeBase>](../configure-apps/file-schema/runtime/codebase-element.md) 元素。
 
-如果在 [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) 元素指定的位置找不到匹配项，则绑定请求失败，且不再执行任何步骤。 如果运行时确定程序集与调用程序集的条件相匹配，则使用此程序集。 加载由给定 [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) 元素指定的文件时，运行时执行检查，确保名称、版本、区域性和公钥与调用程序集的引用相匹配。
+如果在 [\<codeBase>](../configure-apps/file-schema/runtime/codebase-element.md) 元素指定的位置找不到匹配项，则绑定请求失败，且不再执行任何步骤。 如果运行时确定程序集与调用程序集的条件相匹配，则使用此程序集。 加载由给定 [\<codeBase>](../configure-apps/file-schema/runtime/codebase-element.md) 元素指定的文件时，运行时执行检查，确保名称、版本、区域性和公钥与调用程序集的引用相匹配。
 
 > [!NOTE]
-> 应用程序根目录外的被引用程序集必须具有强名称，并且必须安装在全局程序集缓存中，或者使用 [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) 元素指定。
+> 应用程序根目录外的被引用程序集必须具有强名称，并且必须安装在全局程序集缓存中，或者使用 [\<codeBase>](../configure-apps/file-schema/runtime/codebase-element.md) 元素指定。
 
 ### <a name="locating-the-assembly-through-probing"></a>通过探测查找程序集
 
-如果应用程序配置文件中没有 [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) 元素，则运行时使用以下 4 个条件来探测程序集：
+如果应用程序配置文件中没有 [\<codeBase>](../configure-apps/file-schema/runtime/codebase-element.md) 元素，则运行时使用以下 4 个条件来探测程序集：
 
 - 应用程序基，即正在执行应用程序的根位置。
 
@@ -194,7 +190,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 
 - 名称，即被引用的程序集的名称。
 
-- [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) 元素的 `privatePath` 特性，这是根位置下用户定义的子目录列表。 可使用应用程序域的 <xref:System.AppDomainSetup.PrivateBinPath?displayProperty=nameWithType> 属性在应用程序配置文件和托管代码中指定此位置。 在托管代码中指定时，先探测托管代码 `privatePath` ，然后探测应用程序配置文件中指定的路径。
+- [\<probing>](../configure-apps/file-schema/runtime/probing-element.md) 元素的 `privatePath` 特性，这是根位置下用户定义的子目录列表。 可使用应用程序域的 <xref:System.AppDomainSetup.PrivateBinPath?displayProperty=nameWithType> 属性在应用程序配置文件和托管代码中指定此位置。 在托管代码中指定时，先探测托管代码 `privatePath` ，然后探测应用程序配置文件中指定的路径。
 
 #### <a name="probing-the-application-base-and-culture-directories"></a>探测应用程序基和区域性目录
 
@@ -212,7 +208,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 
 #### <a name="probing-with-the-privatepath-attribute"></a>用 privatePath 属性进行探测
 
-除区域性子目录和为被引用程序集指定的子目录外，运行时还探测使用 [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) 元素的 `privatePath` 特性指定的目录。 使用 `privatePath` 属性指定的目录必须是应用程序根目录的子目录。 根据引用的程序集请求中是否包含区域性信息，探测的目录会所有不同。
+除区域性子目录和为被引用程序集指定的子目录外，运行时还探测使用 [\<probing>](../configure-apps/file-schema/runtime/probing-element.md) 元素的 `privatePath` 特性指定的目录。 使用 `privatePath` 属性指定的目录必须是应用程序根目录的子目录。 根据引用的程序集请求中是否包含区域性信息，探测的目录会所有不同。
 
 在运行时首次找到与引用的简单程序集名称相匹配的程序集时，无论此匹配项是否正确，运行时都将停止探测。 如果此匹配项正确，则使用此程序集。 如果此匹配项不正确，则停止探测且绑定失败。
 
@@ -236,7 +232,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 
 - 应用程序根目录：`http://www.code.microsoft.com`
 
-- 配置文件中的 [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) 元素指定：bin
+- 配置文件中的 [\<probing>](../configure-apps/file-schema/runtime/probing-element.md) 元素指定：bin
 
 - 区域性：de
 
@@ -270,5 +266,5 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 
 ## <a name="see-also"></a>请参阅
 
-- [适用于程序集加载的最佳做法](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)
-- [部署](../../../docs/framework/deployment/index.md)
+- [适用于程序集加载的最佳做法](best-practices-for-assembly-loading.md)
+- [部署](index.md)

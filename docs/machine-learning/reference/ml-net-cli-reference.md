@@ -3,12 +3,12 @@ title: ML.NET CLI 工具中的 auto-train 命令
 description: ML.NET CLI 工具中 auto-train 命令的概述、示例和参考。
 ms.date: 04/16/2019
 ms.custom: ''
-ms.openlocfilehash: 73bae0165af76226152de322d2951086646a1a1d
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 8363a16ab5e793e715131ac37283106517850439
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67397660"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929200"
 ---
 # <a name="the-auto-train-command-in-mlnet-cli"></a>ML.NET CLI 中的“auto-train”命令
 
@@ -207,7 +207,7 @@ CLI 使用 ML.NET AutoML 引擎（NuGet 包）智能搜索最佳质量模型，�
 
 指定想要忽略的列名。 使用“, ”（逗号加空格）或“ ”（空格）分隔多个列名。 可以对包含空格的列名使用引号（例如，“logged in”）。
 
-示例:
+示例：
 
 `--ignore-columns email, address, id, logged_in`
 
@@ -217,6 +217,7 @@ CLI 使用 ML.NET AutoML 引擎（NuGet 包）智能搜索最佳质量模型，�
 
 指定数据集文件是否拥有标头行。
 可能的值有：
+
 - `true`
 - `false`
 

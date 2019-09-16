@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bdf89bea-1623-45ee-a57b-cf7c90395efa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7a6af73a5251cdc52589967178218f8675cac869
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e1c4423c20a9a485f3c40877ccd489c749dc0e2c
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946464"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971838"
 ---
 # <a name="how-to-create-com-wrappers"></a>如何：创建 COM 包装
 
@@ -55,7 +55,7 @@ ms.locfileid: "69946464"
   
 1. 为要在本机代码中运行的托管类创建类库项目。 类必须具有一个无参数的构造函数。  
   
-     在 AssemblyInfo 文件中验证程序集是否具有由四部分构成的完整版本号。 在 Windows 注册表中维护版本控制需要此版本号。 有关版本号的详细信息，请参阅[程序集版本控制](../../../docs/framework/app-domains/assembly-versioning.md)。  
+     在 AssemblyInfo 文件中验证程序集是否具有由四部分构成的完整版本号。 在 Windows 注册表中维护版本控制需要此版本号。 有关版本号的详细信息，请参阅[程序集版本控制](../../standard/assembly/versioning.md)。  
   
 2. 在“项目”菜单上，单击“属性”   。  
   

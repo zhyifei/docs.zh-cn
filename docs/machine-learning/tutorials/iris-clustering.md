@@ -5,12 +5,12 @@ author: pkulikov
 ms.date: 05/16/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18, title-hack-0516
-ms.openlocfilehash: 772558be14d207475d20083f5a6b729f03766471
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: e2aaeb8abc6981b420329f194aa7b82c90cae00a
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666649"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929103"
 ---
 # <a name="tutorial-categorize-iris-flowers-using-k-means-clustering-with-mlnet"></a>教程：配合使用 K 平均值聚类分析和 ML.NET 来对鸢尾花分类
 
@@ -18,6 +18,7 @@ ms.locfileid: "69666649"
 
 在本教程中，你将了解：
 > [!div class="checklist"]
+>
 > - 了解问题
 > - 选择适当的机器学习任务
 > - 准备数据
@@ -185,6 +186,7 @@ Distances: 11.69127 0.02159119 25.59896
 
 在本教程中，你将了解：
 > [!div class="checklist"]
+>
 > - 了解问题
 > - 选择适当的机器学习任务
 > - 准备数据

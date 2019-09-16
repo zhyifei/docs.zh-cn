@@ -3,12 +3,12 @@ title: .NET 术语表
 description: 了解 .NET 文档中所用的选定术语的含义。
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: caff1ee4c8e3ad133016b774fdb235bd1ef59637
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: e1894d57a613531fecba6786529a735431d01423
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106926"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929081"
 ---
 # <a name="net-glossary"></a>.NET 术语表
 
@@ -85,6 +85,7 @@ ms.locfileid: "70106926"
 一般指一个综合 API 集合，便于开发和部署基于特定技术的应用程序。 从此常规意义上来说，ASP.NET Core 和 Windows 窗体都是示例应用程序框架。 另请参阅[库](#library)。
 
 “框架”一词在以下术语中有更具体的技术含义：
+
 - [.NET Framework](#net-framework)
 - [目标框架](#target-framework)
 - [TFM（目标框架名字对象）](#tfm)

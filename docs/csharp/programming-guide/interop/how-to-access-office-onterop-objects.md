@@ -10,12 +10,12 @@ helpviewer_keywords:
 - named arguments [C#], Office programming
 - Office programming [C#]
 ms.assetid: 041b25c2-3512-4e0f-a4ea-ceb2999e4d5e
-ms.openlocfilehash: 19fff39969933baa2510458400cabf9646e0c48d
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 8e99402752b3fafb486735d56d66737f03ceec30
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69589135"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972092"
 ---
 # <a name="how-to-access-office-interop-objects-by-using-visual-c-features-c-programming-guide"></a>如何：使用 Visual C# 功能访问 Office 互操作对象（C# 编程指南）
 
@@ -137,7 +137,7 @@ Visual C# 具有一些功能，可简化对 Office API 对象的访问。 这些
 
 ## <a name="to-set-the-embed-interop-types-property"></a>设置嵌入互操作类型属性
 
-1. 当调用运行时不需要主互操作程序集 (PIA) 的 COM 类型时，可能实现其他增强。 删除 PIA 的依赖项可实现版本独立性并且更易于部署。 若要详细了解不使用 PIA 编程的优势，请参阅[演练：嵌入托管程序集中的类型](../concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)。
+1. 当调用运行时不需要主互操作程序集 (PIA) 的 COM 类型时，可能实现其他增强。 删除 PIA 的依赖项可实现版本独立性并且更易于部署。 若要详细了解不使用 PIA 编程的优势，请参阅[演练：嵌入托管程序集中的类型](../../../standard/assembly/embed-types-visual-studio.md)。
 
      此外，由于可以通过使用类型 `dynamic`（而非 `Object`）表示 COM 方法必需并返回的类型，因此更易于编程。 具有类型 `dynamic` 的变量在运行时以前均不会计算，从而消除了显式强制转换的需要。 有关更多信息，请参见[使用类型 dynamic](../types/using-type-dynamic.md)。
 

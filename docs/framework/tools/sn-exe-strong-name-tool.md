@@ -12,20 +12,20 @@ helpviewer_keywords:
 ms.assetid: c1d2b532-1b8e-4c7a-8ac5-53b801135ec6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 35e89584f3916d748809960d33a31eb4e8fb9c6a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ef977206bf0d5b818cfd9779f063fbc2bd50632e
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938019"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971847"
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe（强名称工具）
-强名称工具 (Sn.exe) 有助于使用[强名称](../../../docs/framework/app-domains/strong-named-assemblies.md)对程序集进行签名。 Sn.exe 提供了用于密钥管理、签名生成和签名验证的选项。  
+强名称工具 (Sn.exe) 有助于使用[强名称](../../standard/assembly/strong-named.md)对程序集进行签名。 Sn.exe 提供了用于密钥管理、签名生成和签名验证的选项。  
   
 > [!WARNING]
 > 不要依赖于通过强名称实现安全性。 它们仅提供唯一的标识。
 
- 有关强命名和强命名的程序集的详细信息，请参阅[具有强命名的程序集](../../../docs/framework/app-domains/strong-named-assemblies.md)和[如何：使用强名称为程序集签名](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)。  
+ 有关强命名和强命名的程序集的详细信息，请参阅[具有强命名的程序集](../../standard/assembly/strong-named.md)和[如何：使用强名称为程序集签名](../../standard/assembly/sign-strong-name.md)。  
   
  强名称工具自动随 Visual Studio 一起安装。 若要启动此工具，请使用“开发人员命令提示”（或 Windows 7 中的 Visual Studio 命令提示）。 有关详细信息，请参阅[命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。  
 
@@ -36,7 +36,7 @@ ms.locfileid: "69938019"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```console  
 sn [-quiet][option [parameter(s)]]  
 ```  
   
@@ -90,37 +90,37 @@ sn [-quiet][option [parameter(s)]]
 ## <a name="examples"></a>示例  
  下面的命令创建一个新的随机密钥对，并将其存储在 `keyPair.snk` 中。  
   
-```  
+```console  
 sn -k keyPair.snk  
 ```  
   
  下面的命令将 `keyPair.snk` 中的密钥存储在强名称 CSP 中的容器 `MyContainer` 中。  
   
-```  
+```console  
 sn -i keyPair.snk MyContainer  
 ```  
   
  下面的命令从 `keyPair.snk` 中提取公钥并将其存储在 `publicKey.snk` 中。  
   
-```  
+```console  
 sn -p keyPair.snk publicKey.snk  
 ```  
   
  下面的命令显示公钥和 `publicKey.snk` 中包含的公钥的标记。  
   
-```  
+```console  
 sn -tp publicKey.snk  
 ```  
   
  下面的命令验证程序集 `MyAsm.dll`。  
   
-```  
+```console  
 sn -v MyAsm.dll  
 ```  
   
  下面的命令从默认 CSP 中删除 `MyContainer`。  
   
-```  
+```console  
 sn -d MyContainer  
 ```  
   
@@ -128,5 +128,5 @@ sn -d MyContainer
 
 - [工具](../../../docs/framework/tools/index.md)
 - [Al.exe（程序集链接器）](../../../docs/framework/tools/al-exe-assembly-linker.md)
-- [具有强名称的程序集](../../../docs/framework/app-domains/strong-named-assemblies.md)
+- [具有强名称的程序集](../../standard/assembly/strong-named.md)
 - [命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

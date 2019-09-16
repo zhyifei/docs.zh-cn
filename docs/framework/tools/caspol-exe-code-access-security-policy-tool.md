@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d2bf6123-7b0c-4e60-87ad-a39a1c3eb2e0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f70682150905c411be5618ab368a87e71d0e8e13
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1c3fab258b23999cabce474afe728d1c50e1043f
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69959057"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971237"
 ---
 # <a name="caspolexe-code-access-security-policy-tool"></a>Caspol.exe（代码访问安全策略工具）
 代码访问安全性 (CAS) 策略工具 (Caspol.exe) 使用户和管理员可修改计算机策略级别、用户策略级别和企业策略级别的安全策略。  
@@ -39,7 +39,7 @@ ms.locfileid: "69959057"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```console
 caspol [options]  
 ```  
   
@@ -47,7 +47,7 @@ caspol [options]
   
 |选项|说明|  
 |------------|-----------------|  
-|**-addfulltrust** *assembly_file*<br /><br /> or<br /><br /> **-af** *assembly_file*|将实现自定义安全对象（如自定义权限或自定义成员资格条件）的程序集添加到特定策略级别的完全信任程序集列表中。 *assembly_file* 参数指定要添加的程序集。 此文件必须用[强名称](../../../docs/framework/app-domains/strong-named-assemblies.md)签名。 可以通过[强名称工具 (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) 使用强名称对程序集进行签名。<br /><br /> 每当将包含自定义权限的权限集添加到策略时，必须将实现该自定义权限的程序集添加到该策略级别的完全信任列表中。 对于实现用于安全策略（如计算机策略）的自定义安全对象（如自定义代码组或成员资格条件）的程序集，应该总是将其添加到完全信任程序集列表中。 注意：  如果实现自定义安全对象的程序集引用了其他程序集，则必须首先将被引用的程序集添加到完全信任程序集列表中。 使用 Visual Basic、C++ 和 JScript 创建的自定义安全对象分别引用 Microsoft.VisualBasic.dll、Microsoft.VisualC.dll 和 Microsoft.JScript.dll。 默认情况下，完全信任程序集列表中不包含这些程序集。 在添加自定义安全对象之前，必须将相应的程序集添加到完全信任列表中。 如果不这样做，将会破坏安全系统，导致所有程序集都无法加载。 在这种情况中，Caspol.exe **-all -reset** 选项不会修复安全系统。 若要修复安全系统，必须手动编辑安全文件，移除自定义安全对象。|  
+|**-addfulltrust** *assembly_file*<br /><br /> or<br /><br /> **-af** *assembly_file*|将实现自定义安全对象（如自定义权限或自定义成员资格条件）的程序集添加到特定策略级别的完全信任程序集列表中。 *assembly_file* 参数指定要添加的程序集。 此文件必须用[强名称](../../standard/assembly/strong-named.md)签名。 可以通过[强名称工具 (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) 使用强名称对程序集进行签名。<br /><br /> 每当将包含自定义权限的权限集添加到策略时，必须将实现该自定义权限的程序集添加到该策略级别的完全信任列表中。 对于实现用于安全策略（如计算机策略）的自定义安全对象（如自定义代码组或成员资格条件）的程序集，应该总是将其添加到完全信任程序集列表中。 注意：  如果实现自定义安全对象的程序集引用了其他程序集，则必须首先将被引用的程序集添加到完全信任程序集列表中。 使用 Visual Basic、C++ 和 JScript 创建的自定义安全对象分别引用 Microsoft.VisualBasic.dll、Microsoft.VisualC.dll 和 Microsoft.JScript.dll。 默认情况下，完全信任程序集列表中不包含这些程序集。 在添加自定义安全对象之前，必须将相应的程序集添加到完全信任列表中。 如果不这样做，将会破坏安全系统，导致所有程序集都无法加载。 在这种情况中，Caspol.exe **-all -reset** 选项不会修复安全系统。 若要修复安全系统，必须手动编辑安全文件，移除自定义安全对象。|  
 |**-addgroup** {*parent_label &#124; parent_name*} *mship pset_name* [*flags*]<br /><br /> or<br /><br /> **-ag** {*parent_label &#124; parent_name*} *mship pset_name* [*flags*]|将新的代码组添加到代码组层次结构中。 可以指定 *parent_label* 或 *parent_name*。 *parent_label* 参数指定代码组的标签（如 1. 或 1.1.），该代码组是要添加的代码组的父级。 *parent_name* 参数指定代码组的名称，该代码组是要添加的代码组的父级。 因为 *parent_label* 和 *parent_name* 可互换使用，所以 Caspol.exe 必须能够区分它们。 因此，*parent_name* 不能以数字开头。 此外，*parent_name* 只能包含 A-Z、0-9 和下划线字符。<br /><br /> *mship* 参数指定新代码组的成员资格条件。 有关详细信息，请参见参阅本节后面的 *mship* 参数表。<br /><br /> *pset_name* 参数是将与新代码组关联的权限集的名称。 还可以为新代码组设置一个或多个 *flags*。 有关详细信息，请参阅本节后面的 *flags* 参数表。|  
 |**-addpset** {*psfile* &#124; *psfile* p*set_name*}<br /><br /> or<br /><br /> **-ap** {*named*_*psfile* &#124; *psfile* *pset_name*}|将新的命名权限集添加到策略。 权限集必须用 XML 编写并存储在 .xml 文件中。 如果 XML 文件包含权限集的名称，则只指定该文件 (*psfile*)。 如果 XML 文件不包含权限集名称，则必须同时指定 XML 文件名 (*psfile*) 和权限集名称 (*pset_name*)。<br /><br /> 请注意，权限集中使用的所有权限都必须在全局程序集缓存中包含的程序集中进行定义。|  
 |**-a**[**ll**]|指示此选项后面的所有选项都应用于计算机策略、用户策略和企业策略。 **-all** 选项始终引用当前登录的用户的策略。 查看 **-customall** 选项，引用当前用户以外的用户的用户策略。|  

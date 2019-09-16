@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 39dc55aa-f2a1-4093-87bb-f1c0edb6e761
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: df8f82605118f1af0f085aef6e76c1e4bedb2904
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 09c54e58ef25afa28d2681719284c358d90bddc2
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69988166"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969065"
 ---
 # <a name="packaging-a-net-framework-assembly-for-com"></a>打包用于 COM 的 .NET Framework 程序集
 
@@ -45,7 +45,7 @@ COM 开发人员可从其计划纳入应用程序的托管类型相关信息中�
 
   发布者签名的具有强名称的程序集可安装到全局程序集缓存。 未签名程序集必须作为专用程序集安装在用户计算机上。
 
-  有关其他信息，请参阅[程序集安全注意事项](../app-domains/assembly-security-considerations.md)。
+  有关其他信息，请参阅[程序集安全注意事项](../../standard/assembly/security-considerations.md)。
 
 - 类型库所含内容
 
@@ -96,7 +96,7 @@ TypeLibConverter 类  实现 <xref:System.Runtime.InteropServices.ITypeLibConver
 - [向 COM 公开 .NET Framework 组件](exposing-dotnet-components-to-com.md)
 - [为互操作限定 .NET 类型](../../standard/native-interop/qualify-net-types-for-interoperation.md)
 - [类接口简介](../../standard/native-interop/com-callable-wrapper.md#introducing-the-class-interface)
-- [程序集安全注意事项](../app-domains/assembly-security-considerations.md)
+- [程序集安全注意事项](../../standard/assembly/security-considerations.md)
 - [Tlbexp.exe（类型库导出程序）](../tools/tlbexp-exe-type-library-exporter.md)
 - [向 COM 注册程序集](registering-assemblies-with-com.md)
 - [如何：将类型库作为 Win32 资源嵌入应用程序](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ww9a897z(v=vs.100))

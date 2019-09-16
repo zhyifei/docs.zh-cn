@@ -3,12 +3,12 @@ title: 在 C# 中使用默认接口成员安全地更新接口
 description: 本高级教程探讨了如何安全地向现有接口定义添加新功能，而不破坏实现该接口的所有类和结构。
 ms.date: 05/06/2019
 ms.custom: mvc
-ms.openlocfilehash: 9e0e4324b2474292064a760db9727d7dec6561d4
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 6a723a116d420dd43d2adeef98b824445dd4f0d7
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252907"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926704"
 ---
 # <a name="tutorial-update-interfaces-with-default-interface-members-in-c-80"></a>教程：在 C# 8.0 中使用默认接口成员更新接口
 
@@ -17,6 +17,7 @@ ms.locfileid: "70252907"
 在本教程中，你将了解：
 
 > [!div class="checklist"]
+>
 > * 通过使用实现添加方法，安全地扩展接口。
 > * 创建参数化实现以提供更大的灵活性。
 > * 使实现器能够以替代的形式提供更具体的实现。

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 027832a2-9b43-4fd9-9b45-7f4196261a4e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2411b69dac6ef8945336a4c4e014cbf6687f702a
-ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.openlocfilehash: 09179ebe123f1287c8b057783bb421153f5e1183
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65469731"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894177"
 ---
 # <a name="marshaling-classes-structures-and-unions"></a>封送类、结构和联合
 .NET Framework 中类和结构非常相似。 它们都可以具有字段、属性和事件。 并且都可以具有静态和非静态方法。 一个显著区别是结构是值类型，而类是引用类型。  
@@ -52,25 +52,25 @@ ms.locfileid: "65469731"
   
 - 从 PinvokeLib.dll 导出的 TestStructInStruct  。  
   
-    ```  
+    ```cpp  
     int TestStructInStruct(MYPERSON2* pPerson2);  
     ```  
   
 - 从 PinvokeLib.dll 导出的 TestStructInStruct3  。  
   
-    ```  
+    ```cpp  
     void TestStructInStruct3(MYPERSON3 person3);  
     ```  
   
 - 从 PinvokeLib.dll 导出的 TestArrayInStruct  。  
   
-    ```  
+    ```cpp  
     void TestArrayInStruct( MYARRAYSTRUCT* pStruct );  
     ```  
   
  [PinvokeLib.dll](marshaling-data-with-platform-invoke.md#pinvokelibdll) 是一种自定义的非托管库，包含上述函数和 4 种结构（MYPERSON、MYPERSON2、MYPERSON3 和 MYARRAYSTRUCT     ）的实现。 这些结构包含以下元素：  
   
-```  
+```cpp  
 typedef struct _MYPERSON  
 {  
    char* first;   
@@ -135,13 +135,13 @@ typedef struct _MYARRAYSTRUCT
   
 - 从 Kernel32.dll 导出的 FindFirstFile  。  
   
-    ```  
+    ```cpp
     HANDLE FindFirstFile(LPCTSTR lpFileName, LPWIN32_FIND_DATA lpFindFileData);  
     ```  
   
  传递至函数的原始结构包含以下元素：  
   
-```  
+```cpp
 typedef struct _WIN32_FIND_DATA   
 {  
   DWORD    dwFileAttributes;   
@@ -178,13 +178,13 @@ typedef struct _WIN32_FIND_DATA
   
 - 从 PinvokeLib.dll 导出的 TestUnion  。  
   
-    ```  
+    ```cpp
     void TestUnion(MYUNION u, int type);  
     ```  
   
  [PinvokeLib.dll](marshaling-data-with-platform-invoke.md#pinvokelibdll) 是一种自定义的非托管库，包含上述函数和两个联合（MYUNION  和  MYUNION2）的实现。 联合包含以下元素：  
   
-```  
+```cpp
 union MYUNION  
 {  
     int number;  
@@ -221,13 +221,13 @@ union MYUNION2
   
 - 从 Kernel32.dll 导出的 GetSystemTime  。  
   
-    ```  
+    ```cpp
     VOID GetSystemTime(LPSYSTEMTIME lpSystemTime);  
     ```  
   
  传递至函数的原始结构包含以下元素：  
   
-```  
+```cpp
 typedef struct _SYSTEMTIME {   
     WORD wYear;   
     WORD wMonth;   
@@ -256,7 +256,7 @@ typedef struct _SYSTEMTIME {
   
  此示例使用 [PinvokeLib.dll](marshaling-data-with-platform-invoke.md#pinvokelibdll) 中定义（且位于源文件）的包装器函数和平台调用。 它使用 `TestOutArrayOfStructs` 函数和 `MYSTRSTRUCT2` 结构。 结构包含以下元素：  
   
-```  
+```cpp
 typedef struct _MYSTRSTRUCT2  
 {  
    char* buffer;  

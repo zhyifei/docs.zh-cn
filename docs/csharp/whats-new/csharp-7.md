@@ -3,16 +3,17 @@ title: C# 7.0 中的新增功能 - C# 指南
 description: 大致了解 C# 语言的版本 7.0 中的新增功能。
 ms.date: 02/20/2019
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 148ecdf7a3a99ac73132593272ecff3a5bb4195e
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 0f26a9647503ebb667d961fefaa05a25a71ec6f5
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105717"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926575"
 ---
 # <a name="whats-new-in-c-70"></a>C# 7.0 中的新增功能
 
 C# 7.0 向 C# 语言添加了许多新功能：
+
 - [`out` 变量](#out-variables)
   - 可以将 `out` 值内联作为参数声明到使用这些参数的方法中。
 - [元组](#tuples)

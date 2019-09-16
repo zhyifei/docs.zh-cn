@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: 649f1342-766b-49e6-a90d-5b019a751e11
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 47f211256b4820e3fb25339de2fe4db962171056
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 01fa0cf9811e72333b091858e2f78a80dda1d9ef
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69911011"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969107"
 ---
 # <a name="side-by-side-execution-in-the-net-framework"></a>在 .NET Framework 中并行执行
 并行执行是在同一台计算机上运行应用程序或组件的多个版本的能力。 在同一台计算机上，可以同时安装公共语言运行时的多个版本，还可以同时安装使用运行时的某个版本的应用程序和组件的多个版本。  
@@ -35,7 +35,7 @@ ms.locfileid: "69911011"
   
 - 具有强名称的程序集。  
   
-     并行执行利用具有强名称的程序集将类型信息绑定到程序集的特定版本。 这可防止应用程序或组件绑定到程序集的无效版本。 具有强名称的程序集还允许同一计算机上存在一个文件的多个版本，并且还允许应用程序使用一个文件的多个版本。 有关详细信息，请参阅[具有强名称的程序集](../../../docs/framework/app-domains/strong-named-assemblies.md)。  
+     并行执行利用具有强名称的程序集将类型信息绑定到程序集的特定版本。 这可防止应用程序或组件绑定到程序集的无效版本。 具有强名称的程序集还允许同一计算机上存在一个文件的多个版本，并且还允许应用程序使用一个文件的多个版本。 有关详细信息，请参阅[具有强名称的程序集](../../standard/assembly/strong-named.md)。  
   
 - 版本识别代码存储。  
   
@@ -116,7 +116,7 @@ publicKeyToken=...,
 |[如何：启用和禁用自动绑定重定向](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)|描述如何将应用程序绑定到程序集的特定版本。|  
 |[配置程序集绑定重定向](../../../docs/framework/deployment/configuring-assembly-binding-redirection.md)|说明如何将程序集绑定引用重定向到 .NET Framework 程序集的特定版本。|  
 |[进程内并行执行](../../../docs/framework/deployment/in-process-side-by-side-execution.md)|讨论如何可以使用进程内并行运行时主机激活在单个进程中运行多个 CLR 版本。|  
-|[Assemblies in the Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)（公共语言运行时中的程序集）|提供程序集的概念性概述。|  
+|[.NET 中的程序集](../../standard/assembly/index.md)|提供程序集的概念性概述。|  
 |[应用程序域](../../../docs/framework/app-domains/application-domains.md)|提供应用程序域的概念性概述。|  
   
 ## <a name="reference"></a>参考  

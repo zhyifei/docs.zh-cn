@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: a487d61b-d166-467b-a7ca-d8b52fbff42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 23bb88127875e0e608c8e8de54ba669f84aa1da5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f990c5194c2e5dc1422aab96c7608c019ae9855b
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69937991"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894753"
 ---
 # <a name="tlbexpexe-type-library-exporter"></a>Tlbexp.exe（类型库导出程序）
 类型库导出程序生成一个类型库，该类型库描述公共语言运行时程序集中定义的类型。  
@@ -26,7 +26,7 @@ ms.locfileid: "69937991"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```console  
 tlbexp assemblyName [options]  
 ```  
   
@@ -74,14 +74,14 @@ tlbexp assemblyName [options]
   
  如果使用 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 特性指定 <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArraySubType> 或 `VT_UNKOWN` 的 `VT_DISPATCH` 值，则 Tlbexp.exe 将忽略随后使用的任何 <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArrayUserDefinedSubType> 字段。 例如，对于以下签名：  
   
-```  
+```csharp
 [return:MarshalAs(UnmanagedType.SafeArray, SafeArraySubType=VarEnum.VT_UNKNOWN, SafeArrayUserDefinedSubType=typeof(ConsoleKeyInfo))] public Array StructUnkSafe(){return null;}  
 [return:MarshalAs(UnmanagedType.SafeArray, SafeArraySubType=VarEnum.VT_DISPATCH, SafeArrayUserDefinedSubType=typeof(ConsoleKeyInfo))] public Array StructDispSafe(){return null;}  
 ```  
   
  生成以下类型库：  
   
-```  
+```cpp 
 [id(0x60020004)]  
 HRESULT StructUnkSafe([out, retval] SAFEARRAY(IUnknown*)* pRetVal);  
 [id(0x60020005)]  
@@ -99,13 +99,13 @@ HRESULT StructDispSafe([out, retval] SAFEARRAY(IDispatch*)* pRetVal);
 ## <a name="examples"></a>示例  
  下面的命令生成一个与 `myTest.dll` 中找到的程序集同名的类型库。  
   
-```  
+```console  
 tlbexp myTest.dll  
 ```  
   
  下面的命令生成一个名为 `clipper.tlb` 的类型库。  
   
-```  
+```console  
 tlbexp myTest.dll /out:clipper.tlb  
 ```  
   
@@ -113,19 +113,19 @@ tlbexp myTest.dll /out:clipper.tlb
   
  首先使用 Tlbimp.exe 导入类型库 `myLib.tlb`，然后将其另存为 `myLib.dll`。  
   
-```  
+```console  
 tlbimp myLib.tlb /out:myLib.dll  
 ```  
   
  下面的命令使用 C# 编译器编译 `Sample.dll,`，后者引用前面的示例中创建的 `myLib.dll`。  
   
-```  
+```console  
 CSC Sample.cs /reference:myLib.dll /out:Sample.dll  
 ```  
   
  下面的命令为引用 `Sample.dll` 的 `myLib.dll` 生成类型库。  
   
-```  
+```console  
 tlbexp Sample.dll  
 ```  
   

@@ -4,12 +4,12 @@ description: 了解如何构建针对产品销售数据的异常检测应用程�
 ms.date: 07/17/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: 4228a68ad43416c6e32684441593d92dfdbfd808
-ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
+ms.openlocfilehash: ed75f1ba0b102ba73eb5671667b5731519c12eb0
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68733285"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929046"
 ---
 # <a name="tutorial-detect-anomalies-in-product-sales-with-mlnet"></a>教程：使用 ML.NET 检测产品销售中的异常
 
@@ -17,6 +17,7 @@ ms.locfileid: "68733285"
 
 在本教程中，你将了解：
 > [!div class="checklist"]
+>
 > * 加载数据
 > * 针对峰值异常情况检测创建转换
 > * 使用转换检测峰值异常
@@ -372,6 +373,7 @@ Alert   Score   P-Value Martingale value
 
 在本教程中，你将了解：
 > [!div class="checklist"]
+>
 > * 加载数据
 > * 训练模型用于峰值异常情况检测
 > * 使用经过训练的模型检测峰值异常情况

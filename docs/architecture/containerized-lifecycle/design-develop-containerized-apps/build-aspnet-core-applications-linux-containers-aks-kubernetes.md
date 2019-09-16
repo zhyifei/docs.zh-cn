@@ -2,12 +2,12 @@
 title: 构建作为 Linux 容器部署到 AKS/Kubernetes 群集中的 ASP.NET Core 2.2 应用程序
 description: 使用 Microsoft 平台和工具的容器化 Docker 应用程序的生命周期
 ms.date: 02/25/2019
-ms.openlocfilehash: 89843e0041c12f001f974360da2e5903499155d1
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: ab64a0423ceceb8285c159af276d6d97e12379d8
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68672574"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70848752"
 ---
 # <a name="build-aspnet-core-22-applications-deployed-as-linux-containers-into-an-akskubernetes-orchestrator"></a>构建作为 Linux 容器部署到 AKS/Kubernetes 业务流程协调程序中的 ASP.NET Core 2.2 应用程序
 
@@ -43,7 +43,7 @@ Visual Studio 列出了 Web 项目的模板。 对于本示例，请选择“API
 
 图 4-37  . 选择 ASP.NET Core 2.2 和 Web API 项目类型
 
-如果有任何以前版本的 .NET Core，则可以从 <https://www.microsoft.com/net/download/core#/sdk> 下载并安装 2.2 版本。
+如果有任何以前版本的 .NET Core，则可以从 <https://dotnet.microsoft.com/download> 下载并安装 2.2 版本。
 
 可以在创建项目时或之后添加 Docker 支持，以便能够随时“Docker 化”项目。 若要在创建项目后添加 Docker 支持，请在解决方案资源管理器中右键单击项目节点，然后在上下文菜单中选择“添加” > “Docker 支持”   。
 

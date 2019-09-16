@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Azure 构建新式 Web 应用程序 | 了�
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: e257410c51d70af31b565d99a8d28ef82ce681d7
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: a521be147c462146775caa81b6a31fb37b4103af
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373800"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926685"
 ---
 # <a name="common-web-application-architectures"></a>常用 Web 应用程序体系结构
 
@@ -292,16 +292,17 @@ ENTRYPOINT ["dotnet", "Web.dll"]
 如果要使用 Visual Studio 向应用程序添加 Docker 支持，请确保执行此操作时 Docker Desktop 处于运行状态。 如果启动向导时 Docker Desktop 未处于运行状态，则向导无法正常运行。 此外，向导会检查当前的容器选择，添加正确的 Docker 支持。 若要为 Windows 容器添加支持，需在配置了 Windows 容器的 Docker Desktop 运行时运行向导。 若要为 Linux 容器添加支持，则运行向导，同时运行配置有 Linux 容器的 Docker。
 
 ### <a name="references--common-web-architectures"></a>参考 - 常见 Web 体系结构
-> - **干净体系结构**  
->   <https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html>
-> - **洋葱体系结构**  
->   <https://jeffreypalermo.com/blog/the-onion-architecture-part-1/>
-> - **存储库模式**  
->   <https://deviq.com/repository-pattern/>
-> - **干净体系结构解决方案示例**  
->   <https://github.com/ardalis/cleanarchitecture>
-> - **构建微服务电子书**  
->   <https://aka.ms/MicroservicesEbook>
+
+- **干净体系结构**  
+  <https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html>
+- **洋葱体系结构**  
+  <https://jeffreypalermo.com/blog/the-onion-architecture-part-1/>
+- **存储库模式**  
+  <https://deviq.com/repository-pattern/>
+- **干净体系结构解决方案示例**  
+  <https://github.com/ardalis/cleanarchitecture>
+- **构建微服务电子书**  
+  <https://aka.ms/MicroservicesEbook>
 
 >[!div class="step-by-step"]
 >[上一页](architectural-principles.md)

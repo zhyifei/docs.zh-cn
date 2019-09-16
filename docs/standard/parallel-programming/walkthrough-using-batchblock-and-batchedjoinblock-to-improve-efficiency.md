@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5beb4983-80c2-4f60-8c51-a07f9fd94cb3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d704702e74b5f7d4a315bd14a467296245f90257
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 32255c988397853c4b38e4ab723c7261a8999899
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70046491"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929218"
 ---
 # <a name="walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency"></a>演练：使用 BatchBlock 和 BatchedJoinBlock 提高效率
 
@@ -53,7 +53,6 @@ TPL 数据流库提供 <xref:System.Threading.Tasks.Dataflow.BatchBlock%601?disp
 
 ## <a name="creating-the-console-application"></a>创建控制台应用
 
-<a name="consoleApp"></a>
 1. 在 Visual Studio 中，创建 Visual C# 或 Visual Basic“控制台应用程序”  项目。 在本文档中，该项目名为 `DataflowBatchDatabase`。
 
 2. 在项目中，添加对 System.Data.SqlServerCe.dll 和 System.Threading.Tasks.Dataflow.dll 的引用。

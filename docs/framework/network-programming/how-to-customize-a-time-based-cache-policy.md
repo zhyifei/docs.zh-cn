@@ -9,12 +9,12 @@ helpviewer_keywords:
 - customizing time-based cache policies
 - cache [.NET Framework], time-based policies
 ms.assetid: 8d84f936-2376-4356-9264-03162e0f9279
-ms.openlocfilehash: 457de16337fd2a37dad9042c770680ba5ad27a0d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5df070bb2cfef42d60247cad39f2a2f76963bae8
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624607"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894745"
 ---
 # <a name="how-to-customize-a-time-based-cache-policy"></a>如何：自定义基于时间的缓存策略
 创建基于时间的缓存策略时，可以通过为最长使用时间、最低新鲜度、最长过期时间或缓存同步日期指定值，以自定义缓存行为。 <xref:System.Net.Cache.HttpRequestCachePolicy> 对象提供几个构造函数，可用于指定这些值的有效组合。  
@@ -45,7 +45,7 @@ ms.locfileid: "64624607"
   
  此输出类似于以下内容：  
   
-```  
+```output
 When: 1/14/2004 8:07:30 AM  
 Level:Default CacheSyncDate:1/14/2004 8:07:30 AM  
 ```  
@@ -74,11 +74,13 @@ Level:Default CacheSyncDate:1/14/2004 8:07:30 AM
   
  对于以下调用：  
   
-```  
+```csharp
 CreateMinFreshPolicy(new TimeSpan(1,0,0));  
 ```  
+
+ 输出为：
   
-```  
+```output
 Level:Default MinFresh:3600  
 ```  
   
@@ -106,11 +108,13 @@ Level:Default MinFresh:3600
   
  对于以下调用：  
   
-```  
+```csharp
 CreateFreshAndAgePolicy(new TimeSpan(5,0,0), new TimeSpan(10,0,0));  
 ```  
+
+输出为：
   
-```  
+```output
 Level:Default MaxAge:36000 MinFresh:18000  
 ```  
   

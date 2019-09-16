@@ -5,12 +5,12 @@ helpviewer_keywords:
 - custom log listeners
 - My.Application.Log object, custom log listeners
 ms.assetid: 0e019115-4b25-4820-afb1-af8c6e391698
-ms.openlocfilehash: 90135074a4d34ea73743faffb2531305fcb326fb
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a4bd64d4c8232f9b6448baf98ee73ee497ccd5ca
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965263"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972109"
 ---
 # <a name="walkthrough-creating-custom-log-listeners-visual-basic"></a>演练：创建自定义日志侦听器 (Visual Basic)
 本演练演示如何创建自定义日志侦听器，并将其配置为侦听 `My.Application.Log` 对象的输出。  
@@ -33,7 +33,7 @@ ms.locfileid: "69965263"
   
  若要确保 `My.Application.Log` 使用日志侦听器，应对包含日志侦听器的程序集执行强名称。  
   
- 接下来的过程提供一些用于创建强名称日志侦听器程序集的简单步骤。 有关详细信息，请参阅[创建和使用具有强名称的程序集](../../../../framework/app-domains/create-and-use-strong-named-assemblies.md)。  
+ 接下来的过程提供一些用于创建强名称日志侦听器程序集的简单步骤。 有关详细信息，请参阅[创建和使用具有强名称的程序集](../../../../standard/assembly/create-use-strong-named.md)。  
   
 #### <a name="to-strongly-name-the-log-listener-assembly"></a>对日志侦听器程序集执行强名称  
   

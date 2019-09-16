@@ -3,12 +3,12 @@ title: 使用可为空引用类型进行设计
 description: 本高级教程介绍了可为空引用类型。 你将学习在引用值可能为 NULL 时表达你的设计意图，并在引用值不能为 NULL 时让编译器强制执行。
 ms.date: 02/19/2019
 ms.custom: mvc
-ms.openlocfilehash: 570d071172c4048adfddfd55a5e38556e7fd7c69
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: e046ca88eecfe97cfc8553a2c661be930cc73465
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105846"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926673"
 ---
 # <a name="tutorial-express-your-design-intent-more-clearly-with-nullable-and-non-nullable-reference-types"></a>教程：使用可为空和不可为空引用类型更清晰地表达设计意图
 
@@ -17,6 +17,7 @@ C# 8 引入了  可为空引用类型，它们以与可为空值类型补充值�
 在本教程中，你将了解：
 
 > [!div class="checklist"]
+>
 > - 将可为空和不可为空引用类型合并到你的设计中
 > - 在整个代码中启用可为空引用类型检查。
 > - 编写编译器强制执行这些设计决策的代码。

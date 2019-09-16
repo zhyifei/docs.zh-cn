@@ -6,12 +6,12 @@ ms.topic: overview
 ms.custom: mvc
 ms.author: nakersha
 author: natke
-ms.openlocfilehash: af91819c66a2376f446d0f18537d2f6e718b446e
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: d49a4bdfec133fe805bc9d534e04edf2f9ca5726
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70104887"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929403"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>什么是 ML.NET 以及它如何工作？
 
@@ -82,6 +82,7 @@ ML.NET 使你能够在联机或脱机场景中将机器学习添加到 .NET 应�
 ## <a name="code-workflow"></a>代码工作流
 
 以下关系图表示应用程序代码结构，以及模型开发的迭代过程：
+
 - 将训练数据收集并加载到 **IDataView** 对象中
 - 指定操作的管道，以提取特征并应用机器学习算法
 - 通过在管道上调用 **Fit()** 来训练模型

@@ -5,12 +5,12 @@ description: 了解如何在 Windows 7 SP1 上安装 .NET Framework。
 author: rlander
 ms.author: mairaw
 ms.date: 04/18/2019
-ms.openlocfilehash: 1e046641e5d09b13c41e1c5c4e07ed2531dfe058
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.openlocfilehash: 4d1ae7401b1184829b8836055797281251164237
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67267939"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70853909"
 ---
 # <a name="install-the-net-framework-on-windows-7-sp1-and-windows-server-2008-r2"></a>在 Windows 7 SP1 和 Windows Server 2008 R2 上安装 .NET Framework
 
@@ -39,6 +39,6 @@ ms.locfileid: "67267939"
 
 ## <a name="see-also"></a>请参阅
 
-- [下载 .NET Framework](https://www.microsoft.com/net/download/framework?utm_source=ms-docs&utm_medium=referral)
+- [下载 .NET Framework](https://dotnet.microsoft.com/download)
 - [安装和卸载 .NET Framework 受阻疑难解答](troubleshoot-blocked-installations-and-uninstallations.md)
 - [安装面向开发者的 .NET Framework](guide-for-developers.md)

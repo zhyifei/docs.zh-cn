@@ -2,12 +2,12 @@
 title: 反射 (C#)
 ms.date: 07/20/2015
 ms.assetid: f80a2362-953b-4e8e-9759-cd5f334190d4
-ms.openlocfilehash: 9b4322d83ad43cd3e49647df49c15bb5c917e1be
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7906ca6f02a369e6f4d51f11f96616b6a89f48c5
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924093"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971665"
 ---
 # <a name="reflection-c"></a>反射 (C#)
 反射提供描述程序集、模块和类型的对象（<xref:System.Type> 类型）。 可以使用反射动态地创建类型的实例，将类型绑定到现有对象，或从现有对象中获取类型，然后调用其方法或访问其字段和属性。 如果代码中使用了特性，可以利用反射来访问它们。 有关更多信息，请参阅[特性](../../../standard/attributes/index.md)。  
@@ -67,4 +67,4 @@ System.Console.WriteLine(info);
 ## <a name="see-also"></a>请参阅
 
 - [C# 编程指南](../index.md)
-- [Assemblies in the Common Language Runtime](../../../framework/app-domains/assemblies-in-the-common-language-runtime.md)（公共语言运行时中的程序集）
+- [.NET 中的程序集](../../../standard/assembly/index.md)

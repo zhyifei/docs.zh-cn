@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 5419011c-6e57-40f6-8c65-386db8f7a651
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 67b9b48587802b43e90a7f35ab8cbb3b2ee025b0
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 4fff2d3309e5f8872a9333bf3d2f86e52bd67ea5
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69567260"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971780"
 ---
 # <a name="how-to-generate-primary-interop-assemblies-using-tlbimpexe"></a>如何：使用 Tlbimp.exe 生成主互操作程序集
 
@@ -33,7 +33,7 @@ ms.locfileid: "69567260"
 
 - 在源代码中使用符合公共语言规范 (CLS)（如 C#）的语言手动创建主互操作程序集。 当类型库不可用时，此方法非常有用。
 
-要使用强名称为程序集签名，必须具有加密密钥对。 有关详细信息，请参阅 [Creating A Key Pair](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)（创建密钥对）。
+要使用强名称为程序集签名，必须具有加密密钥对。 有关详细信息，请参阅 [Creating A Key Pair](../../standard/assembly/create-public-private-key-pair.md)（创建密钥对）。
 
 ### <a name="to-generate-a-primary-interop-assembly-using-tlbimpexe"></a>若要使用 Tlbimp.exe 生成主互操作程序集
 
@@ -53,19 +53,19 @@ ms.locfileid: "69567260"
 
 以下示例导入 COM 类型库 `LibUtil.tlb` 并借助密钥文件 `CompanyA.snk` 为程序集 `LibUtil.dll` 签署强名称。 通过省略特定的命名空间名称，此示例将生成默认的命名空间，`LibUtil`。
 
-```
+```console
 tlbimp LibUtil.tlb /primary /keyfile:CompanyA.snk /out:LibUtil.dll
 ```
 
 对于更具描述性的名称（使用 VendorName.LibraryName 命名规则），以下示例将重写默认程序集的文件名和命名空间名称   。
 
-```
+```console
 tlbimp LibUtil.tlb /primary /keyfile:CompanyA.snk /namespace:CompanyA.LibUtil /out:CompanyA.LibUtil.dll
 ```
 
 以下示例导入引用 `CompanyA.LibUtil.dll` 的 `MyLib.tlb`，并借助密钥文件 `CompanyB.snk` 为程序集 `CompanyB.MyLib.dll` 签署强名称。 命名空间 `CompanyB.MyLib` 将重写默认的命名空间名称。
 
-```
+```console
 tlbimp MyLib.tlb /primary /keyfile:CompanyB.snk /namespace:CompanyB.MyLib /reference:CompanyA.LibUtil.dll /out:CompanyB.MyLib.dll
 ```
 

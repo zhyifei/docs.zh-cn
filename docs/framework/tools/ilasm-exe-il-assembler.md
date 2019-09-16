@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4ca3a4f0-4400-47ce-8936-8e219961c76f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 13b0ab04eba75a322d584bcc20cc6e90a54fb6fc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: fcc9ba5e379897247f50175603b1002d5688d215
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69933656"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894686"
 ---
 # <a name="ilasmexe-il-assembler"></a>Ilasm.exe（IL 汇编程序）
 
@@ -110,7 +110,7 @@ IL 汇编程序可以展现以运行时为目标的编程语言的所有现有�
 
 从 .NET Framework 4.5 开始，可以使用类似于下面的代码将自定义特性附加到接口实现：
 
-```
+```il
 .class interface public abstract auto ansi IMyInterface
 {
   .method public hidebysig newslot abstract virtual
@@ -130,7 +130,7 @@ IL 汇编程序可以展现以运行时为目标的编程语言的所有现有�
 
 从 .NET Framework 4.5 开始，可以指定任意封送 BLOB（二进制大型对象），方法是使用其原始二进制表示形式，如以下代码所示：
 
-```
+```il
 .method public hidebysig abstract virtual
         instance void
         marshal({ 38 01 02 FF })
@@ -175,7 +175,7 @@ public class Hello
 
 下面的 IL 代码示例对应于前面的 C# 代码示例。 可使用 IL Assembler 工具将此代码编译为程序集。 IL 和 C# 代码示例都向控制台显示 “Hello World!”。
 
-```
+```il
 // Metadata version: v2.0.50215
 .assembly extern mscorlib
 {

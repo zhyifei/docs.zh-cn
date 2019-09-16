@@ -3,12 +3,12 @@ title: 使用模式匹配功能来扩展数据类型
 description: 本高级教程展示了如何使用模式匹配技术，通过单独创建的数据和算法来创建功能。
 ms.date: 03/13/2019
 ms.custom: mvc
-ms.openlocfilehash: b142bad9a4058a884d9e511424bc50856152b67e
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 366791b113d3b1f9ccef303553a3656f7e803a32
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105558"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926654"
 ---
 # <a name="tutorial-using-pattern-matching-features-to-extend-data-types"></a>教程：使用模式匹配功能来扩展数据类型
 
@@ -17,6 +17,7 @@ C# 7 引入了基本模式匹配功能。 C# 8 通过新增表达式和模式，
 在本教程中，你将了解：
 
 > [!div class="checklist"]
+>
 > - 识别应使用模式匹配的情况。
 > - 使用模式匹配表达式来实现基于类型和属性值的行为。
 > - 结合使用模式匹配和其他方法来创建完整算法。
