@@ -5,20 +5,21 @@ helpviewer_keywords:
 - add element for <namedCaches>
 - <add> element for <namedCaches>
 ms.assetid: ce2a63a8-c829-4742-a6ea-72ee5d89f169
-ms.openlocfilehash: b0487ba5025557f07d9991f911cd71a677a04e2c
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 076d940e0c15cf48013480fef68b8fac42cf76e9
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67423376"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252893"
 ---
-# <a name="add-element-for-namedcaches"></a>\<添加 > 元素\<namedCaches >
-将添加`namedCache`进入`namedCaches`内存缓存的集合。  
+# <a name="add-element-for-namedcaches"></a>\<添加 namedCaches 的\<> 元素 >
+向内存缓存的`namedCaches`集合中添加项。`namedCache`  
   
- \<system.runtime.caching>  
-\<memoryCache>  
-\<namedCaches>  
-\<add>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> 缓存**](system-runtime-caching-element-cache-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<memoryCache >** ](memorycache-element-cache-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<namedCaches >** ](namedcaches-element-cache-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<添加 >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,10 +40,10 @@ ms.locfileid: "67423376"
   
 |特性|描述|  
 |-|-|  
-|`CacheMemoryLimitMegabytes`|一个整数值，指定的最大允许大小 （以兆字节为单位） 的实例<xref:System.Runtime.Caching.MemoryCache>可以增长到。 默认值为 0，这意味着<xref:System.Runtime.Caching.MemoryCache>默认情况下使用类的自动调整大小试探法。|  
+|`CacheMemoryLimitMegabytes`|一个整数值，指定的<xref:System.Runtime.Caching.MemoryCache>实例可以增长到的最大允许大小（以 mb 为单位）。 默认值为0，这意味着<xref:System.Runtime.Caching.MemoryCache>默认情况下使用类的自动调整试探法。|  
 |`Name`|缓存的名称。|  
-|`PhysicalMemoryLimitPercentage`|一个整数值介于 0 和 100 之间，指定可以使用由缓存以物理方式安装的计算机内存的最大百分比。 默认值为 0，这意味着<xref:System.Runtime.Caching.MemoryCache>默认情况下使用类的自动调整大小试探法。|  
-|`PollingInterval`|一个时间间隔的值，在该时间间隔之后，缓存实现会将当前内存负载与为缓存实例设置的基于绝对值和百分比的内存限制进行比较。 "Hh: mm:"格式输入此值。|  
+|`PhysicalMemoryLimitPercentage`|一个介于0到100之间的整数值，用于指定缓存可使用的实际安装计算机内存的最大百分比。 默认值为0，这意味着<xref:System.Runtime.Caching.MemoryCache>默认情况下使用类的自动调整试探法。|  
+|`PollingInterval`|一个时间间隔的值，在该时间间隔之后，缓存实现会将当前内存负载与为缓存实例设置的基于绝对值和百分比的内存限制进行比较。 此值以 "HH： MM： SS" 格式输入。|  
   
 ### <a name="child-elements"></a>子元素  
  `None`  
@@ -51,13 +52,13 @@ ms.locfileid: "67423376"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<namedCaches>](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)|包含的配置设置的命名集合<xref:System.Runtime.Caching.MemoryCache>实例。|  
+|[\<namedCaches>](namedcaches-element-cache-settings.md)|包含命名<xref:System.Runtime.Caching.MemoryCache>实例的配置设置的集合。|  
   
 ## <a name="remarks"></a>备注  
- `add`元素添加一个条目`namedCaches`内存缓存的集合。 可以使用[清除](../../../../../docs/framework/configure-apps/file-schema/runtime/clear-element-for-namedcaches.md)元素在使用之前`add`元素以确认是否不存在任何其他命名缓存在集合中的。 在 machine.config 文件中并在 Web.config 文件中，可以使用此元素。  
+ 元素向内存缓存的`namedCaches`集合中添加项。 `add` 您可以在使用 `add` 元素之前使用 [clear](clear-element-for-namedcaches.md) 元素，以确保集合中没有其他命名缓存。 此元素可在 machine.config 文件和 web.config 文件中使用。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何定义的默认设置`namedCache`进入`namedCaches`内存缓存的集合。  
+ 下面的示例演示如何为内存缓存的`namedCache` `namedCaches`集合定义默认项的设置。  
   
 ```xml  
 <configuration>  
@@ -78,4 +79,4 @@ ms.locfileid: "67423376"
   
 ## <a name="see-also"></a>请参阅
 
-- [\<namedCaches > 元素 （缓存设置）](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)
+- [\<namedCaches > 元素（缓存设置）](namedcaches-element-cache-settings.md)

@@ -1,5 +1,5 @@
 ---
-title: GetMethod 函数 （非托管 API 参考）
+title: GetMethod 函数（非托管 API 参考）
 description: GetMethod 函数检索有关方法的信息。
 ms.date: 11/06/2017
 api_name:
@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 419fb33155cfa91199e52110da29efd44d606f4b
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: b9cc185bf8cccb8ed3c24e28954afd86464602d7
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636613"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798562"
 ---
 # <a name="getmethod-function"></a>GetMethod 函数
 
@@ -45,49 +45,49 @@ HRESULT GetMethod (
 ## <a name="parameters"></a>参数
 
 `vFunc`\
-[in]此参数是未使用。
+中此参数未使用。
 
 `ptr`\
-[in]一个指向[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)实例。
+中指向[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)实例的指针。
 
 `wszName`\
-[in]方法名称。 此参数不能`null`必须指向有效和`LPCWSTR`。
+中方法名称。 此参数不能`null`为，且必须指向有效`LPCWSTR`的。
 
 `lFlags`\
-[in] 保留。 此参数必须为 0。
+[in] 保留。 此参数必须为0。
 
 `ppInSignature`\
-[out]指向的地址的指针[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)实例，它描述方法的参数。 如果设置为，则忽略此参数`null`。
+弄一个指针，指向用于描述方法的 in 参数的[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)实例的地址。 如果将此参数设置为`null`，则忽略此参数。
 
 `ppOutSignature`\
-[out]指向的地址的指针[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)实例，它描述的方法的 out 参数。 如果设置为，则忽略此参数`null`。
+弄一个指针，指向用于描述方法的 out 参数的[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)实例的地址。 如果将此参数设置为`null`，则忽略此参数。
 
 ## <a name="return-value"></a>返回值
 
-此函数返回以下值中定义*WbemCli.h*标头文件，也可以在定义它们为常量在代码中：
+此函数返回的以下值是在*WbemCli*头文件中定义的，也可以在代码中将它们定义为常量：
 
 |返回的常量  |值  |描述  |
 |---------|---------|---------|
 |`WBEM_E_NOT_FOUND` | 0x80041002 | 找不到指定的属性。 |
-|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 没有足够的内存是可用于完成该操作。 |
+|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 没有足够的内存可用来完成此操作。 |
 |`WBEM_S_NO_ERROR` | 0 | 函数调用成功。  |
 
 ## <a name="remarks"></a>备注
 
-此函数包装对的调用[IWbemClassObject::GetMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getmethod)方法。
+此函数包装对[IWbemClassObject：： GetMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getmethod)方法的调用。
 
-Windows 管理可以设置[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)指向`null`如果方法没有在参数。
+如果该方法在参数中没有，  Windows Management 可以将 [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) 指针设置为`null`。
 
-在中`ppInSignature`并`ppOutSignature`描述 in 和 out 参数，分别为中的属性`IWbemClassObject`系统类的实例[_Parameters](/windows/desktop/WmiSdk/--parameters)。 中的属性`ppInSignature`名为`Param` *n*，其中*n*是方法签名中参数的位置 (如`Param1`， `Param2`，等等。)。 中的属性`ppOutSignature`也称为`Param` *n*，并返回值名为`ReturnValue`。 有关详细信息和示例，请参阅[IWbemClassObject::GetMethod 方法](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getmethod)。
+在`ppInSignature` `IWbemClassObject`和`ppOutSignature`中，分别介绍了 in 和 out 参数，作为 system 类[_Parameters](/windows/desktop/WmiSdk/--parameters)的实例中的属性。 中`ppInSignature`的属性名为`Param` *n*，其中*n*是参数在方法签名中的位置（例如`Param1`、 `Param2`等）。 中`ppOutSignature`的属性也命名为`Param` *n* `ReturnValue`，返回值为。 有关详细信息和示例，请参阅[IWbemClassObject：： GetMethod 方法](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getmethod)。
 
 ## <a name="requirements"></a>要求
 
-**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。
+**适用**请参阅[系统需求](../../get-started/system-requirements.md)。
 
 **标头：** WMINet_Utils.idl
 
-**.NET Framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+**.NET Framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
 ## <a name="see-also"></a>请参阅
 
-- [WMI 和性能计数器 （非托管 API 参考）](index.md)
+- [WMI 和性能计数器（非托管 API 参考）](index.md)

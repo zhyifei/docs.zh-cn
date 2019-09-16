@@ -10,48 +10,48 @@ helpviewer_keywords:
 - validation of PrintTickets [WPF]
 - PrintTicket [WPF], validation
 ms.assetid: 4fe2d501-d0b0-4fef-86af-6ffe6c162532
-ms.openlocfilehash: be8b299c99515394bc676cfd7a715cb82ac4d58c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9e5242c07179501e6b39840a36f8dd6364d65b84
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051096"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69918351"
 ---
 # <a name="how-to-validate-and-merge-printtickets"></a>如何：验证和合并 PrintTicket
-[!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] [打印架构](https://go.microsoft.com/fwlink/?LinkId=186397)包括灵活且可扩展<xref:System.Printing.PrintCapabilities>和<xref:System.Printing.PrintTicket>元素。 前者详细列举的打印设备的功能，后者用于指定设备应如何使用这些功能来处理特定文档、 单个文档或单页的序列。  
+[!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] [打印架构](https://go.microsoft.com/fwlink/?LinkId=186397)包括灵活且可扩展的 <xref:System.Printing.PrintCapabilities> 和 <xref:System.Printing.PrintTicket> 元素。 前者列举打印设备的功能，后者指定设备应该如何根据特定的文档序列、单个文档或单个页面使用这些功能。  
   
- 典型的应用程序支持打印的任务序列将如下所示。  
+ 支持打印的应用程序的典型任务序列如下所示。  
   
 1. 确定打印机的功能。  
   
-2. 配置<xref:System.Printing.PrintTicket>以使用这些功能。  
+2. <xref:System.Printing.PrintTicket>配置以使用这些功能。  
   
-3. 验证<xref:System.Printing.PrintTicket>。  
+3. <xref:System.Printing.PrintTicket>验证。  
   
- 本文介绍如何执行此操作。  
+ 本文说明如何执行此操作。  
   
 ## <a name="example"></a>示例  
- 在下面的简单示例中，我们都只希望打印机是否支持双工 — 双面打印。 主要步骤如下所示。  
+ 在下面的简单示例中，仅对打印机是否可以支持双面打印感兴趣。 主要步骤如下所示。  
   
-1. 获取<xref:System.Printing.PrintCapabilities>对象与<xref:System.Printing.PrintQueue.GetPrintCapabilities%2A>方法。  
+1. 使用方法获取一个<xref:System.Printing.PrintCapabilities>对象。 <xref:System.Printing.PrintQueue.GetPrintCapabilities%2A>  
   
-2. 测试存在所需的功能。 在以下示例中，我们测试<xref:System.Printing.PrintCapabilities.DuplexingCapability%2A>属性的<xref:System.Printing.PrintCapabilities>沿长边工作表的对象的一张纸的纸张的"翻页"的两面上的打印功能是否存在。 由于<xref:System.Printing.PrintCapabilities.DuplexingCapability%2A>是一个集合，我们将使用`Contains`方法的<xref:System.Collections.ObjectModel.ReadOnlyCollection%601>。  
+2. 测试所需功能是否存在。 在下面的示例中，我们将<xref:System.Printing.PrintCapabilities.DuplexingCapability%2A>对<xref:System.Printing.PrintCapabilities>对象的属性进行测试，以了解在纸张的两面上是否存在打印的功能以及纸张的长边。 由于<xref:System.Printing.PrintCapabilities.DuplexingCapability%2A>是集合，因此`Contains`使用的方法<xref:System.Collections.ObjectModel.ReadOnlyCollection%601>。  
   
     > [!NOTE]
-    >  此步骤不是绝对必需的。 <xref:System.Printing.PrintQueue.MergeAndValidatePrintTicket%2A>使用以下方法将检查每个请求<xref:System.Printing.PrintTicket>针对打印机的功能。 如果打印机不支持请求的功能，打印机驱动程序将替换中的另一个请求<xref:System.Printing.PrintTicket>方法返回。  
+    > 此步骤并不是必需的。 下面<xref:System.Printing.PrintQueue.MergeAndValidatePrintTicket%2A>使用的方法将针对打印机的功能检查<xref:System.Printing.PrintTicket>中的每个请求。 如果打印机不支持所请求的功能，打印机驱动程序将用方法返回的中的<xref:System.Printing.PrintTicket>替代请求。  
   
-3. 如果打印机支持双面打印，示例代码会创建<xref:System.Printing.PrintTicket>的要求进行双面打印。 但应用程序未指定每个可能的打印机设置中提供<xref:System.Printing.PrintTicket>元素。 这将浪费的程序员和计划时间。 相反，该代码设置仅进行双面打印请求，然后将合并这<xref:System.Printing.PrintTicket>与某个现有，完全配置且经过验证， <xref:System.Printing.PrintTicket>，在这种情况下，用户的默认<xref:System.Printing.PrintTicket>。  
+3. 如果打印机支持双工，则示例代码会创建<xref:System.Printing.PrintTicket>一个请求双面打印的。 但应用程序不会指定元素中提供的每个可能<xref:System.Printing.PrintTicket>的打印机设置。 这会浪费程序员和计划时间。 相反，代码仅设置双工请求，然后将<xref:System.Printing.PrintTicket>其与现有的、完全配置和验证的（ <xref:System.Printing.PrintTicket>在本例中为用户的默认值<xref:System.Printing.PrintTicket>）合并。  
   
-4. 相应地，示例代码会调用<xref:System.Printing.PrintQueue.MergeAndValidatePrintTicket%2A>方法来合并将新的、 最小，<xref:System.Printing.PrintTicket>用户的默认值<xref:System.Printing.PrintTicket>。 这将返回<xref:System.Printing.ValidationResult>，包含新的<xref:System.Printing.PrintTicket>作为其属性之一。  
+4. 相应地，该示例调用<xref:System.Printing.PrintQueue.MergeAndValidatePrintTicket%2A>方法，以将新的<xref:System.Printing.PrintTicket>最小值与用户的默认<xref:System.Printing.PrintTicket>值合并。 这<xref:System.Printing.ValidationResult>会返回，其中包含新<xref:System.Printing.PrintTicket>的作为其属性之一。  
   
-5. 此示例然后测试新<xref:System.Printing.PrintTicket>请求双面打印。 如果是这样，则代码会将其用户的新的默认打印票证。 如果没有执行上述步骤 2，并且打印机不支持双工沿长边，则测试将会造成`false`。 （请参阅上面的说明。）  
+5. 然后，该示例测试新<xref:System.Printing.PrintTicket>请求是否为双工。 如果是这样，则示例将使其成为用户的新默认打印票证。 如果上面的步骤2已省略，并且打印机不支持沿长边进行双面打印，则测试将导致`false`。 （请参阅上面的说明。）  
   
-6. 最后一个重要步骤是将提交到更改<xref:System.Printing.PrintQueue.UserPrintTicket%2A>的属性<xref:System.Printing.PrintQueue>与<xref:System.Printing.PrintQueue.Commit%2A>方法。  
+6. 最后一个重要步骤是将对的<xref:System.Printing.PrintQueue.UserPrintTicket%2A> <xref:System.Printing.PrintQueue> <xref:System.Printing.PrintQueue.Commit%2A>属性的更改提交到方法。  
   
  [!code-csharp[PrintTicketManagment#UsingMergeAndValidate](~/samples/snippets/csharp/VS_Snippets_Wpf/PrintTicketManagment/CSharp/printticket.cs#usingmergeandvalidate)]
  [!code-vb[PrintTicketManagment#UsingMergeAndValidate](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrintTicketManagment/visualbasic/printticket.vb#usingmergeandvalidate)]  
   
- 以便可以快速测试此示例中，如下所示的其余部分。 创建项目和命名空间，然后将在本文中的两个代码片段粘贴到命名空间块。  
+ 因此，你可以快速测试此示例，下面提供了它的其余部分。 创建项目和命名空间，然后将本文中的代码片段粘贴到命名空间块。  
   
  [!code-csharp[PrintTicketManagment#UIForMergeAndValidatePTUtility](~/samples/snippets/csharp/VS_Snippets_Wpf/PrintTicketManagment/CSharp/printticket.cs#uiformergeandvalidateptutility)]
  [!code-vb[PrintTicketManagment#UIForMergeAndValidatePTUtility](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrintTicketManagment/visualbasic/printticket.vb#uiformergeandvalidateptutility)]  

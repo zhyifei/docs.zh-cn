@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d3693a42db8e32a4bb7a399f8c930da011130893
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b0c2e8e46c7bb3a5e693c9ea16e6c5a0722b1898
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778738"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799149"
 ---
 # <a name="strongnamecompareassemblies-function"></a>StrongNameCompareAssemblies 函数
 确定两个程序集是否仅是强名称签名不同。  
   
- 此函数已弃用。 使用[iclrstrongname:: Strongnamecompareassemblies](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamecompareassemblies-method.md)方法相反。  
+ 此函数已弃用。 改为使用[ICLRStrongName：： StrongNameCompareAssemblies](../hosting/iclrstrongname-strongnamecompareassemblies-method.md)方法。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,38 +40,38 @@ BOOLEAN StrongNameCompareAssemblies (
   
 ## <a name="parameters"></a>参数  
  `wszAssembly1`  
- [in]第一个程序集的路径。  
+ 中第一个程序集的路径。  
   
  `wszAssembly2`  
- [in]第二个程序集的路径。  
+ 中第二个程序集的路径。  
   
  `pdwResult`  
- [out]以下值之一：  
+ 弄以下值之一：  
   
-- `SN_CMP_DIFFERENT` (0)-指定程序集包含不同的数据。  
+- `SN_CMP_DIFFERENT`（0）-指定程序集包含不同的数据。  
   
-- `SN_CMP_IDENTICAL` (1)-指定程序的程序集完全相同，包括其签名和校验和。  
+- `SN_CMP_IDENTICAL`（1）-指定程序集完全相同，包括它们的签名和校验和。  
   
-- `SN_CMP_SIGONLY` (2)-指定程序集仅签名和校验和不同。  
+- `SN_CMP_SIGONLY`（2）-指定程序集不同于签名和校验和。  
   
 ## <a name="return-value"></a>返回值  
- `true` 在成功完成;否则为`false`。  
+ `true`成功完成时;否则为`false`。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../get-started/system-requirements.md)。  
   
- **标头：** StrongName.h  
+ **标头：** Stackexchange.redis.strongname  
   
- **库：** 包含为 MsCorEE.dll 中的资源  
+ **类库**作为资源包括在 Mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="remarks"></a>备注  
- 程序集的强名称签名包含程序集的文本名称、 版本、 区域性和公钥标记。  
+ 程序集的强名称签名由程序集的文本名称、版本、区域性和公钥标记组成。  
   
- 如果`StrongNameCompareAssemblies`函数不成功完成，则调用[StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md)函数检索最后一个生成的错误。  
+ 如果 `StrongNameCompareAssemblies` 函数未成功完成，请调用 [StrongNameErrorInfo](strongnameerrorinfo-function.md) 函数来检索上次生成的错误。  
   
 ## <a name="see-also"></a>请参阅
 
-- [StrongNameCompareAssemblies 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamecompareassemblies-method.md)
-- [ICLRStrongName 接口](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [StrongNameCompareAssemblies 方法](../hosting/iclrstrongname-strongnamecompareassemblies-method.md)
+- [ICLRStrongName 接口](../hosting/iclrstrongname-interface.md)

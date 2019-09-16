@@ -10,15 +10,15 @@ helpviewer_keywords:
 - ', '
 - ', '
 ms.assetid: 791bb2f0-4e5c-4569-ac3c-211996808d44
-ms.openlocfilehash: 76976f1599ecbbaf7405d7941f66aa2c5f955565
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2547c0aa2f3a14080868c2760fa8999eb99d3d16
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64598957"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70046333"
 ---
 # <a name="intercepting-input-from-the-stylus"></a>截获触笔输入
-<xref:System.Windows.Input.StylusPlugIns>体系结构提供了用于通过实现低级别控制的机制<xref:System.Windows.Input.Stylus>输入和数字墨迹创建<xref:System.Windows.Ink.Stroke>对象。 <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>类提供了一种机制，以实现自定义行为，并将其应用到从触笔设备以获得最佳性能的数据的流。  
+该<xref:System.Windows.Input.StylusPlugIns>体系结构提供了一种机制，用于实现对<xref:System.Windows.Input.Stylus>输入和数字墨迹<xref:System.Windows.Ink.Stroke>对象创建的低级别控制。 <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>类提供一种机制，用于实现自定义行为，并将其应用于来自触笔设备的数据流，以获得最佳性能。  
   
  本主题包含以下小节：  
   
@@ -32,20 +32,20 @@ ms.locfileid: "64598957"
   
 <a name="Architecture"></a>   
 ## <a name="architecture"></a>体系结构  
- <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>的演进[StylusInput](https://go.microsoft.com/fwlink/?LinkId=50753&clcid=0x409)中所述的 Api[访问和操作笔输入](https://go.microsoft.com/fwlink/?LinkId=50752&clcid=0x409)中[Microsoft Windows XP Tablet PC Edition 软件Kit 1.7](https://go.microsoft.com/fwlink/?linkid=11782&clcid=0x409)。  
+ 在 Microsoft [Windows XP Tablet PC Edition 软件开发工具包 1.7](https://go.microsoft.com/fwlink/?linkid=11782&clcid=0x409)中，在[访问和操作笔输入](https://go.microsoft.com/fwlink/?LinkId=50752&clcid=0x409)中介绍了 [StylusInput api](https://go.microsoft.com/fwlink/?LinkId=50753&clcid=0x409) 的发展 <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>。  
   
- 每个<xref:System.Windows.UIElement>已<xref:System.Windows.UIElement.StylusPlugIns%2A>是属性<xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>。 您可以添加<xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>的元素<xref:System.Windows.UIElement.StylusPlugIns%2A>属性来操作<xref:System.Windows.Input.StylusPoint>生成作为它的数据。 <xref:System.Windows.Input.StylusPoint> 数据包含的所有系统数字化器，包括支持的属性<xref:System.Windows.Input.StylusPoint.X%2A>并<xref:System.Windows.Input.StylusPoint.Y%2A>点数据，以及<xref:System.Windows.Input.StylusPoint.PressureFactor%2A>数据。  
+ 每<xref:System.Windows.UIElement>个都有<xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>一个的属性。<xref:System.Windows.UIElement.StylusPlugIns%2A> 可以向元素的<xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> <xref:System.Windows.UIElement.StylusPlugIns%2A>属性添加，以便在生成数据<xref:System.Windows.Input.StylusPoint>时对数据进行操作。 <xref:System.Windows.Input.StylusPoint>数据包含系统数字化器支持的所有属性，包括<xref:System.Windows.Input.StylusPoint.X%2A>和<xref:System.Windows.Input.StylusPoint.Y%2A>点<xref:System.Windows.Input.StylusPoint.PressureFactor%2A>数据以及数据。  
   
- 你<xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>对象插入到流中的数据来自直接<xref:System.Windows.Input.Stylus>设备添加时<xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>到<xref:System.Windows.UIElement.StylusPlugIns%2A>属性。 管理单元添加到中的顺序<xref:System.Windows.UIElement.StylusPlugIns%2A>集合的顺序指定将收到<xref:System.Windows.Input.StylusPoint>数据。 例如，如果您添加筛选器插件，将输入限制为特定的区域，以及如何将写入时识别的笔势的插件，识别的笔势插件将接收已筛选<xref:System.Windows.Input.StylusPoint>数据。  
+ 当<xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> <xref:System.Windows.Input.Stylus> 你将<xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>添加到属性中时，你的对象将直接插入来自设备的数据流。<xref:System.Windows.UIElement.StylusPlugIns%2A> 插件添加到<xref:System.Windows.UIElement.StylusPlugIns%2A>集合中的顺序指示它们将接收<xref:System.Windows.Input.StylusPoint>数据的顺序。 例如，如果添加一个筛选器插件，该插件将输入限制为特定区域，然后添加一个可在写入时识别手势的插件，则识别手势的插件将接收筛选<xref:System.Windows.Input.StylusPoint>的数据。  
   
 <a name="ImplementingStylusPlugins"></a>   
 ## <a name="implementing-stylus-plug-ins"></a>实现触笔插件  
- 若要将插件实现，派生的类从<xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>。 此类是应用的 o 数据的流，因为它来自<xref:System.Windows.Input.Stylus>。 在此类可以通过修改的值<xref:System.Windows.Input.StylusPoint>数据。  
+ 若要实现某个插件，请从<xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>派生一个类。 此类应用于从<xref:System.Windows.Input.Stylus>传入的数据流的输出。 在此类中，您可以修改<xref:System.Windows.Input.StylusPoint>数据的值。  
   
 > [!CAUTION]
->  如果<xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>引发或导致异常，应用程序将关闭。 您应该全面测试使用的控件<xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>并且只使用一个控件，如果您确信<xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>不会引发异常。  
+> <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>如果引发或导致异常，应用程序将关闭。 你应全面测试使用的<xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>控件，并且仅当你<xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>确定不会引发异常时，才使用控件。  
   
- 下面的示例演示一个插件，通过修改限制触笔输入<xref:System.Windows.Input.StylusPoint.X%2A>并<xref:System.Windows.Input.StylusPoint.Y%2A>中的值<xref:System.Windows.Input.StylusPoint>作为它的数据来自<xref:System.Windows.Input.Stylus>设备。  
+ 下面的示例演示一个插件，该插件<xref:System.Windows.Input.StylusPoint.X%2A>通过修改<xref:System.Windows.Input.StylusPoint>数据<xref:System.Windows.Input.Stylus>中来自设备的和<xref:System.Windows.Input.StylusPoint.Y%2A>值来限制触笔输入。  
   
  [!code-csharp[AdvancedInkTopicsSamples#19](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/DynamicRenderer.cs#19)]
  [!code-vb[AdvancedInkTopicsSamples#19](~/samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#19)]  
@@ -54,21 +54,21 @@ ms.locfileid: "64598957"
   
 <a name="AddingYourPluginToAnInkCanvas"></a>   
 ## <a name="adding-your-plug-in-to-an-inkcanvas"></a>将插件添加到 InkCanvas  
- 若要使用自定义插件的最简单方法是实现从 InkCanvas 派生而来的类并将其添加到<xref:System.Windows.UIElement.StylusPlugIns%2A>属性。  
+ 使用自定义插件的最简单方法是实现从 InkCanvas 派生的类并将其添加到<xref:System.Windows.UIElement.StylusPlugIns%2A>属性。  
   
- 下面的示例演示自定义<xref:System.Windows.Controls.InkCanvas>对墨迹进行筛选。  
+ 下面的示例演示用于筛选<xref:System.Windows.Controls.InkCanvas>墨迹的自定义。  
   
  [!code-csharp[AdvancedInkTopicsSamples#4](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/Window1.xaml.cs#4)]  
   
- 如果添加`FilterInkCanvas`到应用程序并运行它，你会注意到在用户完成一个笔画后手写内容并不局限于之前的区域。 这是因为<xref:System.Windows.Controls.InkCanvas>已<xref:System.Windows.Controls.InkCanvas.DynamicRenderer%2A>属性，即<xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>已经是成员的和<xref:System.Windows.UIElement.StylusPlugIns%2A>集合。 自定义<xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>你添加到<xref:System.Windows.UIElement.StylusPlugIns%2A>集合接收<xref:System.Windows.Input.StylusPoint>之后，数据<xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>接收数据。 因此，<xref:System.Windows.Input.StylusPoint>数据在用户抬起笔结束笔画后不会直到筛选。 若要筛选用户将其绘制手写内容，必须插入`FilterPlugin`之前<xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>。  
+ 如果你将添加`FilterInkCanvas`到应用程序并运行它，你会注意到，在用户完成笔划之前，不会将墨迹限制在某个区域。 这<xref:System.Windows.Controls.InkCanvas>是因为<xref:System.Windows.Controls.InkCanvas.DynamicRenderer%2A>具有一个<xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>属性，该属性是，并且已经是<xref:System.Windows.UIElement.StylusPlugIns%2A>集合的成员。 添加<xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> <xref:System.Windows.Input.StylusPoint>到集合中的自定义接收数据后<xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>接收数据。 <xref:System.Windows.UIElement.StylusPlugIns%2A> 因此，在用户将<xref:System.Windows.Input.StylusPoint>笔提起到结束笔划之前，将不会对数据进行筛选。 若要在用户绘制墨迹时筛选墨迹，必须在`FilterPlugin` <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>之前插入。  
   
- 下面的 C# 代码演示一个自定义<xref:System.Windows.Controls.InkCanvas>是绘制筛选手写内容。  
+ 下面C#的代码演示了一个<xref:System.Windows.Controls.InkCanvas>自定义，它在绘制时对墨迹进行筛选。  
   
  [!code-csharp[AdvancedInkTopicsSamples#5](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/Window1.xaml.cs#5)]  
   
 <a name="Conclusion"></a>   
 ## <a name="conclusion"></a>结束语  
- 通过派生您自己<xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>类并将它们到插入<xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>集合，可以极大地提高你数字墨迹的行为。 你有权<xref:System.Windows.Input.StylusPoint>生成数据时，您可以自定义<xref:System.Windows.Input.Stylus>输入。 因为此类低级别访问<xref:System.Windows.Input.StylusPoint>数据，可以为你的应用程序实现墨迹收集和呈现具有优化性能。  
+ 通过派生你自己<xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>的类并将它们<xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>插入到集合中，你可以极大地增强数字墨迹的行为。 您可以在生成<xref:System.Windows.Input.StylusPoint>数据时对其进行访问，从而为您提供<xref:System.Windows.Input.Stylus>自定义输入的机会。 由于你对<xref:System.Windows.Input.StylusPoint>数据具有这样的低级别访问权限，因此你可以实现墨迹收集并使用应用程序的最佳性能进行呈现。  
   
 ## <a name="see-also"></a>请参阅
 

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 745917af176de47999737c87833c23df9c75ea7b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cfd29067f819ba69305f7ae8620729cd443915a0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61995951"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69931949"
 ---
 # <a name="icordebugeval-interface"></a>ICorDebugEval 接口
 
@@ -31,37 +31,37 @@ ms.locfileid: "61995951"
   
 |方法|描述|  
 |------------|-----------------|  
-|[Abort 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-abort-method.md)|这将中止计算`ICorDebugEval`当前正在执行对象。|  
-|[CallFunction 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-callfunction-method.md)|设置了对指定函数的调用。 (在.NET Framework 2.0 版中已过时; 请使用[ICorDebugEval2::CallParameterizedFunction](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-callparameterizedfunction-method.md)相反。)|  
-|[CreateValue 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-createvalue-method.md)|获取"ICorDebugValue"对象的指定类型，其初始值为零或 null 的接口指针。 (在.NET Framework 2.0 中已过时; 请使用[ICorDebugEval2::CreateValueForType](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-createvaluefortype-method.md)相反。)|  
-|[GetResult 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-getresult-method.md)|获取到的接口指针`ICorDebugValue`包含计算的结果。|  
-|[GetThread 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-getthread-method.md)|获取"ICorDebugThread"此评估版执行或将要执行的其中一个接口指针。|  
-|[IsActive 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-isactive-method.md)|获取一个值，该值指示是否此`ICorDebugEval`对象当前正在执行。|  
-|[NewArray 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-newarray-method.md)|分配的指定的元素类型和维度的一个新数组。 (在.NET Framework 2.0 中已过时; 请使用[ICorDebugEval2::NewParameterizedArray](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedarray-method.md)相反。)|  
-|[NewObject 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-newobject-method.md)|分配新的对象实例并调用指定的构造函数方法。 (在.NET Framework 2.0 中已过时; 请使用[ICorDebugEval2::NewParameterizedObject](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobject-method.md)相反。)|  
-|[NewObjectNoConstructor 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-newobjectnoconstructor-method.md)|分配新的对象实例的指定类型，而不尝试调用构造函数方法。 (在.NET Framework 2.0 中已过时; 请使用[ICorDebugEval2::NewParameterizedObjectNoConstructor](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobjectnoconstructor-method.md)相反。)|  
-|[NewString 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-newstring-method.md)|分配新的字符串对象使用指定的内容。|  
+|[Abort 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-abort-method.md)|中止此`ICorDebugEval`对象当前正在执行的计算。|  
+|[CallFunction 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-callfunction-method.md)|设置对指定函数的调用。 （在 .NET Framework 版本2.0 中已过时; 请改用[ICorDebugEval2：： CallParameterizedFunction](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-callparameterizedfunction-method.md) 。）|  
+|[CreateValue 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-createvalue-method.md)|获取一个接口指针，该指针指向指定类型的 "ICorDebugValue" 对象，其初始值为零或 null。 （在 .NET Framework 2.0 中已过时; 请改用[ICorDebugEval2：： CreateValueForType](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-createvaluefortype-method.md) 。）|  
+|[GetResult 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-getresult-method.md)|获取一个`ICorDebugValue`接口指针，该指针指向包含计算结果的。|  
+|[GetThread 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-getthread-method.md)|获取一个接口指针，该指针指向正在执行或将执行此计算的 "ICorDebugThread"。|  
+|[IsActive 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-isactive-method.md)|获取一个值，该值指示此`ICorDebugEval`对象当前是否正在执行。|  
+|[NewArray 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-newarray-method.md)|分配指定元素类型和维度的新数组。 （在 .NET Framework 2.0 中已过时; 请改用[ICorDebugEval2：： NewParameterizedArray](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedarray-method.md) 。）|  
+|[NewObject 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-newobject-method.md)|分配一个新的对象实例，并调用指定的构造函数方法。 （在 .NET Framework 2.0 中已过时; 请改用[ICorDebugEval2：： NewParameterizedObject](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobject-method.md) 。）|  
+|[NewObjectNoConstructor 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-newobjectnoconstructor-method.md)|分配指定类型的新对象实例，而不尝试调用构造函数方法。 （在 .NET Framework 2.0 中已过时; 请改用[ICorDebugEval2：： NewParameterizedObjectNoConstructor](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobjectnoconstructor-method.md) 。）|  
+|[NewString 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-newstring-method.md)|使用指定的内容分配新的字符串对象。|  
   
 ## <a name="remarks"></a>备注  
- `ICorDebugEval`用于执行计算的特定线程的上下文中创建对象。 所有对象和在给定的计算中使用的类型必须都位于相同的应用程序域中。 该应用程序域不需要在线程的当前应用程序域相同。 计算可以嵌套。  
+ 在用于执行计算的特定线程的上下文中创建对象。`ICorDebugEval` 给定计算中使用的所有对象和类型必须位于同一个应用程序域中。 该应用程序域不需要与该线程的当前应用程序域相同。 评估可以嵌套。  
   
- 求值运算无法完成该调试器将调用直到[icordebugcontroller:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md)，然后接收[icordebugmanagedcallback:: Evalcomplete](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-evalcomplete-method.md)回调。 如果您需要使用评估功能不允许其他线程运行的情况下，通过使用挂起的线程[icordebugcontroller:: Setallthreadsdebugstate](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-setallthreadsdebugstate-method.md)或[icordebugcontroller:: Stop](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-stop-method.md)之前调用[icordebugcontroller:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md)。  
+ 直到调试程序调用[ICorDebugController：： Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md)并收到[ICorDebugManagedCallback：： EvalComplete](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-evalcomplete-method.md)回调后，计算的操作才会完成。 如果需要在不允许其他线程运行的情况下使用评估功能，请在调用 [ICorDebugController::Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) 之前使用 [ICorDebugController::SetAllThreadsDebugState](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-setallthreadsdebugstate-method.md) 或 [ICorDebugController::Stop](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-stop-method.md) 挂起线程。  
   
- 由于用户代码运行计算时，会发生任何调试事件，包括类加载和断点。 调试器将接收回调，正常工作，这些事件。 评估的状态将被视为正常程序状态的检查的一部分。 堆栈链会被`CHAIN_FUNC_EVAL`链 (请参阅"CorDebugStepReason"枚举并[icordebugchain:: Getreason](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getreason-method.md)方法)。 完整的调试器 API 将继续正常运行。  
+ 由于正在进行计算时用户代码正在运行，因此可能会发生任何调试事件，包括类加载和断点。 对于这些事件，调试器将接收回拨。 评估的状态将被视为正常程序状态的一部分。 堆栈链将是一个`CHAIN_FUNC_EVAL`链（请参阅 "CorDebugStepReason" 枚举和[ICorDebugChain：： GetReason](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getreason-method.md)方法）。 完整的调试器 API 将继续正常运行。  
   
- 如果出现死锁或无限循环的情况，用户代码可能永远无法完成。 在这种情况下，您必须调用[icordebugeval:: Abort](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-abort-method.md)然后才能继续程序。  
+ 如果发生死锁或无限循环，用户代码可能永远无法完成。 在这种情况下，必须在恢复程序之前调用[ICorDebugEval：： Abort](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-abort-method.md) 。  
   
 > [!NOTE]
->  此接口不支持跨计算机或跨进程远程调用。  
+> 此接口不支持跨计算机或跨进程远程调用。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头：** Cordebug.idl，Cordebug.idl  
   
- **库：** CorGuids.lib  
+ **类库**CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 74445b03e78ff68426f60c3e306d9151d0ba288a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f062f47790136e8cd39c6751b7c75eef660c2b9a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780998"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799135"
 ---
 # <a name="strongnamekeygen-function"></a>StrongNameKeyGen 函数
 创建新的公钥/私钥对，以便强名称使用。  
   
- 此函数已弃用。 使用[iclrstrongname:: Strongnamekeygen](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygen-method.md)方法相反。  
+ 此函数已弃用。 改为使用[ICLRStrongName：： StrongNameKeyGen](../hosting/iclrstrongname-strongnamekeygen-method.md)方法。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,40 +41,40 @@ BOOLEAN StrongNameKeyGen (
   
 ## <a name="parameters"></a>参数  
  `wszKeyContainer`  
- [in]请求的密钥容器名称。 `wszKeyContainer` 必须为非空字符串，或空值，以生成一个临时名称。  
+ 中请求的密钥容器名称。 `wszKeyContainer`必须为非空字符串，或者为 null 以生成临时名称。  
   
  `dwFlags`  
- [in]指定是否保留注册密钥。 支持以下值：  
+ 中指定是否保留注册的密钥。 支持以下值：  
   
-- 0x00000000-时使用`wszKeyContainer`为 null 以生成一个临时密钥容器名称。  
+- 0x00000000-在为`wszKeyContainer` null 时用于生成临时密钥容器名称。  
   
-- 0x00000001 (`SN_LEAVE_KEY`)-指定应保持注册密钥。  
+- 0x00000001 （`SN_LEAVE_KEY`）-指定密钥应为 "已注册"。  
   
  `ppbKeyBlob`  
- [out]返回的公共/专用密钥对。  
+ 弄返回的公钥/私钥对。  
   
  `pcbKeyBlob`  
- [out]大小，以字节为单位的`ppbKeyBlob`。  
+ 弄的`ppbKeyBlob`大小（以字节为单位）。  
   
 ## <a name="return-value"></a>返回值  
- `true` 在成功完成;否则为`false`。  
+ `true`成功完成时;否则为`false`。  
   
 ## <a name="remarks"></a>备注  
- `StrongNameKeyGen`函数创建的 1024年位密钥。 正在检索密钥后，应调用[StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/strong-naming/strongnamefreebuffer-function.md)函数，以释放已分配的内存。  
+ `StrongNameKeyGen`函数创建1024位键。 检索到密钥后，应调用[StrongNameFreeBuffer](strongnamefreebuffer-function.md)函数以释放已分配的内存。  
   
- 如果`StrongNameKeyGen`函数不成功完成，则调用[StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md)函数检索最后一个生成的错误。  
+ 如果 `StrongNameKeyGen` 函数未成功完成，请调用 [StrongNameErrorInfo](strongnameerrorinfo-function.md) 函数来检索上次生成的错误。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../get-started/system-requirements.md)。  
   
- **标头：** StrongName.h  
+ **标头：** Stackexchange.redis.strongname  
   
- **库：** 包含为 MsCorEE.dll 中的资源  
+ **类库**作为资源包括在 Mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 
-- [StrongNameKeyGen 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygen-method.md)
-- [StrongNameKeyGenEx 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygenex-method.md)
-- [ICLRStrongName 接口](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [StrongNameKeyGen 方法](../hosting/iclrstrongname-strongnamekeygen-method.md)
+- [StrongNameKeyGenEx 方法](../hosting/iclrstrongname-strongnamekeygenex-method.md)
+- [ICLRStrongName 接口](../hosting/iclrstrongname-interface.md)

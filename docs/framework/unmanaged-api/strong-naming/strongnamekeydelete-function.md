@@ -16,18 +16,18 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 717d2104db8addf40e5187cee4cc8c46e5dc355e
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 17d35193f69966e02ac5e483924fcb3ee2e06758
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636741"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799017"
 ---
 # <a name="strongnamekeydelete-function"></a>StrongNameKeyDelete 函数
 
 删除指定的密钥容器。
 
-此函数已弃用。 使用[iclrstrongname:: Strongnamekeydelete](../hosting/iclrstrongname-strongnamekeydelete-method.md)方法相反。
+此函数已弃用。 改为使用[ICLRStrongName：： StrongNameKeyDelete](../hosting/iclrstrongname-strongnamekeydelete-method.md)方法。
 
 ## <a name="syntax"></a>语法
 
@@ -40,27 +40,27 @@ BOOLEAN StrongNameKeyDelete (
 ## <a name="parameters"></a>参数
 
 `wszKeyContainer`\
-[in]若要删除的密钥容器的名称。
+中要删除的密钥容器的名称。
 
 ## <a name="return-value"></a>返回值
 
-`true` 在成功完成;否则为`false`。
+`true`成功完成时;否则为`false`。
 
 ## <a name="remarks"></a>备注
 
-使用[StrongNameKeyInstall](strongnamekeyinstall-function.md)函数导入容器的公钥/私钥对。
+使用[StrongNameKeyInstall](strongnamekeyinstall-function.md)函数将公钥/私钥对导入到容器中。
 
-如果`StrongNameKeyDelete`函数不成功完成，则调用[StrongNameErrorInfo](strongnameerrorinfo-function.md)函数检索最后一个生成的错误。
+如果 `StrongNameKeyDelete` 函数未成功完成，请调用 [StrongNameErrorInfo](strongnameerrorinfo-function.md) 函数来检索上次生成的错误。
 
 ## <a name="requirements"></a>要求
 
-**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。
+**适用**请参阅[系统需求](../../get-started/system-requirements.md)。
 
-**标头：** StrongName.h
+**标头：** Stackexchange.redis.strongname
 
-**库：** 包含为 MsCorEE.dll 中的资源
+**类库**作为资源包括在 Mscoree.dll 中
 
-**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
 
 ## <a name="see-also"></a>请参阅
 

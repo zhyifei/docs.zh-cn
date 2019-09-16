@@ -16,18 +16,18 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7121ace6777e7cf947fcc6ff30b1ea314851feff
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 353898b72f41acd0c49a43ff05e54f61b99444c4
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636705"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798995"
 ---
 # <a name="strongnamekeyinstall-function"></a>StrongNameKeyInstall 函数
 
 将公钥/私钥对导入容器。
 
-此函数已弃用。 使用[iclrstrongname:: Strongnamekeyinstall](../hosting/iclrstrongname-strongnamekeyinstall-method.md)方法相反。
+此函数已弃用。 改为使用[ICLRStrongName：： StrongNameKeyInstall](../hosting/iclrstrongname-strongnamekeyinstall-method.md)方法。
 
 ## <a name="syntax"></a>语法
 
@@ -42,33 +42,33 @@ BOOLEAN StrongNameKeyInstall (
 ## <a name="parameters"></a>参数
 
 `wszKeyContainer`\
-[in]密钥容器的名称。 `wszKeyContainer` 必须为非空字符串。
+中密钥容器的名称。 `wszKeyContainer`必须为非空字符串。
 
 `pbKeyBlob`\
-[in]二进制密钥对。
+中二进制密钥对。
 
 `cbKeyBlob`\
-[in]大小，以字节为单位的`pbKeyBlob`。
+中的`pbKeyBlob`大小（以字节为单位）。
 
 ## <a name="return-value"></a>返回值
 
-`true` 在成功完成;否则为`false`。
+`true`成功完成时;否则为`false`。
 
 ## <a name="remarks"></a>备注
 
-使用[StrongNameKeyDelete](strongnamekeydelete-function.md)函数来删除密钥容器。
+使用[StrongNameKeyDelete](strongnamekeydelete-function.md)函数可删除密钥容器。
 
-如果`StrongNameKeyInstall`函数不成功完成，则调用[StrongNameErrorInfo](strongnameerrorinfo-function.md)函数检索最后一个生成的错误。
+如果`StrongNameKeyInstall`函数未成功完成，请调用 [StrongNameErrorInfo](strongnameerrorinfo-function.md) 函数来检索上次生成的错误。
 
 ## <a name="requirements"></a>要求
 
-**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。
+**适用**请参阅[系统需求](../../get-started/system-requirements.md)。
 
-**标头：** StrongName.h
+**标头：** Stackexchange.redis.strongname
 
-**库：** 包含为 MsCorEE.dll 中的资源
+**类库**作为资源包括在 Mscoree.dll 中
 
-**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
 
 ## <a name="see-also"></a>请参阅
 

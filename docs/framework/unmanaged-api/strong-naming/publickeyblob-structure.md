@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 75ba3fd634b108c996e848f48000ffcd0600b00c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e66196e2bd2cb326ca3f5badc67bcf8d81e5fc3c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774581"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799172"
 ---
 # <a name="publickeyblob-structure"></a>PublicKeyBlob 结构
-以二进制格式表示的公钥/私钥对的公钥。  
+表示公钥/私钥对的公钥，采用二进制格式。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,24 +41,24 @@ typedef struct {
   
 |成员|描述|  
 |------------|-----------------|  
-|`SigAlgId`|签名算法的标识符 (类型的`ALG_ID`WinCrypt.h 中定义) 的公钥。|  
-|`HashAlgId`|哈希算法的标识符 (类型的`ALG_ID`WinCrypt.h 中定义) 的公钥。|  
-|`cbPublicKey`|以字节为单位的密钥的长度。|  
-|`PublicKey`|包含返回 CryptoAPI 的格式中的密钥值的长度可变的字节数组。|  
+|`SigAlgId`|公钥的签名算法的标识符（类型`ALG_ID`为，如 wincrypt.h 中所定义）。|  
+|`HashAlgId`|公钥的哈希算法的标识符（类型`ALG_ID`为，在 wincrypt.h 中定义）。|  
+|`cbPublicKey`|密钥的长度（以字节为单位）。|  
+|`PublicKey`|可变长度的字节数组，其中包含由 CryptoAPI 返回的格式的键值。|  
   
 ## <a name="remarks"></a>备注  
- `PublicKeyBlob`结构可供[StrongNameGetPublicKey](../../../../docs/framework/unmanaged-api/strong-naming/strongnamegetpublickey-function.md)， [StrongNameSignatureGeneration](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignaturegeneration-function.md)，和其他强名称的函数来表示公钥/私钥对的公钥。  
+ `PublicKeyBlob`结构由 [StrongNameGetPublicKey](strongnamegetpublickey-function.md)、 [StrongNameSignatureGeneration](strongnamesignaturegeneration-function.md)和其他强名称函数用来表示公钥/私钥对的公钥。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../get-started/system-requirements.md)。  
   
- **标头：** StrongName.h  
+ **标头：** Stackexchange.redis.strongname  
   
- **库：** 包含为 MsCorEE.dll 中的资源  
+ **类库**作为资源包括在 Mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 
-- [StrongNameGetPublicKey 函数](../../../../docs/framework/unmanaged-api/strong-naming/strongnamegetpublickey-function.md)
-- [StrongNameSignatureGeneration 函数](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignaturegeneration-function.md)
+- [StrongNameGetPublicKey 函数](strongnamegetpublickey-function.md)
+- [StrongNameSignatureGeneration 函数](strongnamesignaturegeneration-function.md)

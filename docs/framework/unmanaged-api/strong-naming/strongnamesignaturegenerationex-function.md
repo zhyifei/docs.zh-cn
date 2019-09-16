@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e9d2d5786ee7db334b8b9b0817c2319a6257dc9e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 89398c221dcf9d6f89027f15da4062bc7ed67e3f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67751744"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798981"
 ---
 # <a name="strongnamesignaturegenerationex-function"></a>StrongNameSignatureGenerationEx 函数
-为指定的程序集，根据指定的标志生成的强名称签名。  
+根据指定的标志，为指定的程序集生成强名称签名。  
   
- 此函数已弃用。 使用[iclrstrongname:: Strongnamesignaturegenerationex](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegenerationex-method.md)方法相反。  
+ 此函数已弃用。 改为使用[ICLRStrongName：： StrongNameSignatureGenerationEx](../hosting/iclrstrongname-strongnamesignaturegenerationex-method.md)方法。  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,61 +44,61 @@ BOOLEAN StrongNameSignatureGenerationEx (
   
 ## <a name="parameters"></a>参数  
  `wszFilePath`  
- [in]包含为其生成强名称签名的程序集的清单文件的路径。  
+ 中包含要为其生成强名称签名的程序集清单的文件的路径。  
   
  `wszKeyContainer`  
- [in]包含公钥/私钥对的密钥容器的名称。  
+ 中包含公钥/私钥对的密钥容器的名称。  
   
- 如果`pbKeyBlob`为 null，`wszKeyContainer`必须指定加密服务提供商 (CSP) 内有效的容器。 在这种情况下，使用容器中存储的密钥对文件进行签名。  
+ 如果`pbKeyBlob`为 null， `wszKeyContainer`则必须在加密服务提供程序（CSP）中指定有效的容器。 在这种情况下，存储在容器中的密钥对用于对文件进行签名。  
   
- 如果`pbKeyBlob`不为 null，则假定为密钥对要包含在密钥二进制大型对象 (BLOB) 中。  
+ 如果`pbKeyBlob`不为 null，则假定密钥对包含在关键的二进制大型对象（BLOB）中。  
   
  `pbKeyBlob`  
- [in]一个指向公钥/私钥对。 此对的格式创建的 Win32`CryptExportKey`函数。 如果`pbKeyBlob`是 null，指定的密钥容器`wszKeyContainer`假定包含密钥对。  
+ 中指向公钥/私钥对的指针。 此对采用 Win32 `CryptExportKey`函数创建的格式。 如果`pbKeyBlob`为 null， `wszKeyContainer`则假定指定的密钥容器包含密钥对。  
   
  `cbKeyBlob`  
- [in]大小，以字节为单位的`pbKeyBlob`。  
+ 中的`pbKeyBlob`大小（以字节为单位）。  
   
  `ppbSignatureBlob`  
- [out]指向该签名返回到公共语言运行时的位置的指针。 如果`ppbSignatureBlob`是 null，则运行时存储签名中指定的文件`wszFilePath`。  
+ 弄指向公共语言运行时返回签名的位置的指针。 如果`ppbSignatureBlob`为 null，则运行时将签名存储在`wszFilePath`指定的文件中。  
   
- 如果`ppbSignatureBlob`是不为 null，公共语言运行时分配用于返回签名的空间。 调用方必须释放此空间使用[StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/strong-naming/strongnamefreebuffer-function.md)函数。  
+ 如果`ppbSignatureBlob`不为 null，则公共语言运行时将分配要在其中返回签名的空间。 调用方必须使用[StrongNameFreeBuffer](strongnamefreebuffer-function.md)函数释放此空间。  
   
  `pcbSignatureBlob`  
- [out]以字节为单位，返回的签名的大小。  
+ 弄返回签名的大小（以字节为单位）。  
   
  `dwFlags`  
- [in]一个或多个以下值：  
+ 中以下一个或多个值：  
   
-- `SN_SIGN_ALL_FILES` (0x00000001) 的重新计算链接的模块的所有哈希值。  
+- `SN_SIGN_ALL_FILES`（0x00000001）-重新计算链接模块的所有哈希。  
   
-- `SN_TEST_SIGN` (0x00000002) — 测试签名程序集。  
+- `SN_TEST_SIGN`（0x00000002）-对程序集进行测试签名。  
   
 ## <a name="return-value"></a>返回值  
- `true` 在成功完成;否则为`false`。  
+ `true`成功完成时;否则为`false`。  
   
 ## <a name="remarks"></a>备注  
- 指定为 null`wszFilePath`来计算而无需创建签名的签名的大小。  
+ 指定 null `wszFilePath`以计算签名大小，而不创建签名。  
   
- 可直接在文件中，存储或返回给调用方签名。  
+ 签名可以直接存储在文件中，也可以返回给调用方。  
   
- 如果`SN_SIGN_ALL_FILES`指定但尚未包含的公共密钥 (同时`pbKeyBlob`和`wszFilePath`均为 null)，重新计算链接的模块的哈希值，但不重新签名程序集。  
+ 如果`SN_SIGN_ALL_FILES`已指定，但不包括公钥`pbKeyBlob` （和`wszFilePath`均为 null），则会重新计算链接模块的哈希值，但不会对程序集进行重新签名。  
   
- 如果`SN_TEST_SIGN`指定，则公共语言运行时标头尚未修改以指示该程序集具有强名称签名。  
+ 如果`SN_TEST_SIGN`指定了，则不会修改公共语言运行时标头以指示程序集使用强名称进行签名。  
   
- 如果`StrongNameSignatureGenerationEx`函数不成功完成，则调用[StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md)函数检索最后一个生成的错误。  
+ 如果 `StrongNameSignatureGenerationEx` 函数未成功完成，请调用 [StrongNameErrorInfo](strongnameerrorinfo-function.md) 函数来检索上次生成的错误。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../get-started/system-requirements.md)。  
   
- **标头：** StrongName.h  
+ **标头：** Stackexchange.redis.strongname  
   
- **库：** 包含为 MsCorEE.dll 中的资源  
+ **类库**作为资源包括在 Mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 
-- [StrongNameSignatureGenerationEx 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegenerationex-method.md)
-- [StrongNameSignatureGeneration 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegeneration-method.md)
-- [ICLRStrongName 接口](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [StrongNameSignatureGenerationEx 方法](../hosting/iclrstrongname-strongnamesignaturegenerationex-method.md)
+- [StrongNameSignatureGeneration 方法](../hosting/iclrstrongname-strongnamesignaturegeneration-method.md)
+- [ICLRStrongName 接口](../hosting/iclrstrongname-interface.md)

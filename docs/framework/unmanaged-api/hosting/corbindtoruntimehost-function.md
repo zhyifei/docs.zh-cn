@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 630e0c20309b6e791991b64ef8d423ff927b70fb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7e1965917e8a1c5ae07cf119df3664b969a979be
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767897"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69969254"
 ---
 # <a name="corbindtoruntimehost-function"></a>CorBindToRuntimeHost 函数
-使主机能够加载到进程的指定公共语言运行时 (CLR) 版本。  
+使宿主可以将指定版本的公共语言运行时（CLR）加载到进程中。  
   
- .NET Framework 4 中已弃用此函数。  
+ 此函数已在 .NET Framework 4 中弃用。  
   
 ## <a name="syntax"></a>语法  
   
@@ -45,46 +45,46 @@ HRESULT CorBindToRuntimeHost (
   
 ## <a name="parameters"></a>参数  
  `pwszVersion`  
- [in]一个字符串，描述要加载的 clr 版本。  
+ 中一个字符串，描述要加载的 CLR 的版本。  
   
- .NET Framework 中的版本号用句点分隔的四个部分组成： *major.minor.build.revision*。 将字符串作为传递`pwszVersion`必须以字符"v"跟版本号 (例如，"v1.0.1529") 的前三个部分开头。  
+ .NET Framework 中的版本号由以句点分隔的四个部分组成：*主*版本. 次要版本. 内部版本号. 修订号。 传递的字符串`pwszVersion`必须以字符 "v" 开头，后跟版本号的前三个部分（例如，"v 1.0.1529"）。  
   
- 某些版本的 CLR 随指定与以前版本的 CLR 的兼容性的策略语句。 默认情况下，启动填充程序的计算结果`pwszVersion`针对策略语句和加载运行时的最新版本的是与所请求的版本兼容。 主机可以强制填充程序跳过策略评估和负载中指定的确切版本`pwszVersion`通过传递的值为 STARTUP_LOADER_SAFEMODE`startupFlags`参数。  
+ 某些版本的 CLR 随策略声明一起安装，后者指定与以前版本的 CLR 的兼容性。 默认情况下，启动填充程序`pwszVersion`将根据策略语句进行评估，并加载与请求的版本兼容的运行时的最新版本。 主机可以通过`startupFlags`为参数传递值 STARTUP_LOADER_SAFEMODE 来强制填充程序跳过策略评估并`pwszVersion`加载中指定的确切版本。  
   
- 如果`pwszVersion`是`null,`方法不会加载任何版本的 CLR。 相反，它将返回 CLR_E_SHIM_RUNTIMELOAD，指示它未能加载运行时。  
+ 如果`pwszVersion`为`null,` ，则此方法不加载任何版本的 CLR。 相反，它会返回 CLR_E_SHIM_RUNTIMELOAD，这表示它未能加载运行时。  
   
  `pwszBuildFlavor`  
- [in]一个字符串，指定是否加载在服务器或工作站的 clr 版本。 有效值为 `svr` 和 `wks`。 服务器生成经过优化，可充分利用多个处理器，用于垃圾回收和工作站生成优化的单处理器计算机上运行的客户端应用程序。  
+ 中一个字符串，指定是加载 CLR 的服务器还是工作站版本。 有效值为 `svr` 和 `wks`。 服务器版本经过优化，可利用多个处理器进行垃圾回收，工作站构建针对单处理器计算机上运行的客户端应用程序进行了优化。  
   
- 如果`pwszBuildFlavor`设置为 null，则将加载工作站版本。 在单处理器计算机上运行时，工作站生成始终处于加载状态，即使`pwszBuildFlavor`设置为`svr`。 但是，如果`pwszBuildFlavor`设置为`svr`，并且指定并发垃圾回收 (请参阅的说明`startupFlags`参数)，将加载服务器版本。  
+ 如果`pwszBuildFlavor`设置为 null，则加载工作站生成。 在单处理器计算机上运行时，始终会加载工作站构建，即使`pwszBuildFlavor`将设置为。 `svr` 但是，如果`pwszBuildFlavor`将设置为`svr` ，并且指定了并发垃圾回收（ `startupFlags`请参阅参数的说明），则将加载服务器生成。  
   
 > [!NOTE]
->  在应用程序运行在 WOW64 中不支持并发垃圾回收 x86 仿真程序上实现 Intel Itanium 体系结构 （以前称为 IA-64） 的 64 位系统。 有关在 64 位 Windows 系统上使用 WOW64 的详细信息，请参阅[运行 32 位应用程序](/windows/desktop/WinProg64/running-32-bit-applications)。  
+> 在实现 Intel Itanium 体系结构（以前称为 IA-64）的64位系统上运行 WOW64 x86 模拟器的应用程序中不支持并发垃圾回收。 有关在64位 Windows 系统上使用 WOW64 的详细信息，请参阅[运行32位应用程序](/windows/desktop/WinProg64/running-32-bit-applications)。  
   
  `pwszHostConfigFile`  
- [in]指定要加载的 CLR 版本的主机配置文件的名称。 如果文件名称不包括完全限定的路径，则假定文件中进行调用的可执行文件所在的目录。  
+ 中主机配置文件的名称，该名称指定要加载的 CLR 的版本。 如果文件名不包含完全限定的路径，则假定该文件与进行调用的可执行文件位于同一目录中。  
   
  `pReserved`  
- [in]保留供将来的扩展。  
+ 中保留以供将来进行扩展。  
   
  `startupFlags`  
- [in]一组标志，用于控制并发垃圾回收、 非特定于域的代码和行为的`pwszVersion`参数。 如果未设置标志，则默认值为单一域。 有关支持的值的列表，请参阅[STARTUP_FLAGS 枚举](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md)。  
+ 中一组标志，这些标志控制并发垃圾回收、非特定于域的代码和`pwszVersion`参数的行为。 如果未设置任何标志，则默认值为单一域。 有关支持的值的列表，请参阅[STARTUP_FLAGS 枚举](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md)。  
   
  `rclsid`  
- [in]`CLSID`的实现的组件类[ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)或[ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)接口。 支持的值为 CLSID_CorRuntimeHost 或 CLSID_CLRRuntimeHost。  
+ 中用于实现 [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) 或 [ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md) 接口的 coclass 的 `CLSID`。 支持的值为 CLSID_CorRuntimeHost 或 CLSID_CLRRuntimeHost。  
   
  `riid`  
- [in]`IID`您请求的接口。 支持的值为 IID_ICorRuntimeHost 或 IID_ICLRRuntimeHost。  
+ 中`IID`你请求的接口的。 支持的值为 IID_ICorRuntimeHost 或 IID_ICLRRuntimeHost。  
   
  `ppv`  
- [out]指向已加载的运行时版本的接口指针。  
+ 弄指向已加载的运行时版本的接口指针。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.idl  
   
- **库：** MSCorEE.dll  
+ **类库**MSCorEE.dll  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
