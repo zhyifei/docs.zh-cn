@@ -5,13 +5,13 @@ hide_bc: true
 title: .NET 文档
 description: 了解如何通过 C#、Visual Basic 和 F# 在任意平台上使用 .NET 创建各种应用程序。 浏览 API 引用、代码示例、教程以及其他内容。
 ms.custom: updateeachrelease
-ms.date: 12/04/2018
-ms.openlocfilehash: c2a70c2d297b1ec2ef797e9d6084339f32c59c48
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.date: 09/04/2019
+ms.openlocfilehash: ec8b780100a41109f31084de0f37bec8c0fc680c
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70799299"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928947"
 ---
 <!-- markdownlint-disable MD033 -->
 <div id="main" class="v2">
@@ -80,8 +80,8 @@ ms.locfileid: "70799299"
                 <a data-default="true" href="#docs">Docs</a>
                 <ul id="docs">
                     <li>
-                        <a href="#getstarted">入门</a>
-                        <ul id="getstarted" class="cardsF">
+                        <a href="#dotnetguides">.NET 指南</a>
+                        <ul id="dotnetguides" class="cardsF">
                             <li>
                                 <div class="cardSize">
                                     <div class="cardPadding">
@@ -94,6 +94,7 @@ ms.locfileid: "70799299"
                                             <div class="cardText">
                                                 <h3><a href="/dotnet/standard/">.NET 指南</a></h3>
                                                 <p><a href="/dotnet/standard/get-started">入门</a></p>
+                                                <p><a href="https://docs.microsoft.com/learn/browse/?roles=developer&products=dotnet">动手学习模块</a></p>
                                                 <p><a href="/dotnet/standard/tour">.NET 教程</a></p>
                                                 <p><a href="/dotnet/standard/components">.NET 体系结构概念</a></p>
                                             </div>
@@ -267,6 +268,68 @@ ms.locfileid: "70799299"
                         </ul>
                     </li>
                     <li>
+                        <a href="#getstarted">入门</a>
+                        <ul id="getstarted" class="cardsC">
+                            <li>
+                                <a href="/dotnet/csharp/tutorials/intro-to-csharp/hello-world">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage bgdAccent1">
+                                                        <img src="/dotnet/images/hub/net-docs-csharp.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>C# 简介</h3>
+                                                    <p>交互式快速入门。</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/dotnet/core/get-started">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage bgdAccent1">
+                                                        <img src="/dotnet/images/hub/net-docs-dotnet-core.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>生成第一个 .NET Core 应用</h3>
+                                                    <p>了解如何生成第一个 .NET Core 控制台应用。</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://dotnet.microsoft.com/learn/aspnet/hello-world-tutorial/intro">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage bgdAccent1">
+                                                        <img src="/dotnet/images/hub/net-docs-web-1.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>生成第一个 Web 应用</h3>
+                                                    <p>了解如何构建首个 ASP.NET Core Web 应用。</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
                         <a href="#web">Web</a>
                         <ul id="web" class="cardsC">
                             <li>
@@ -280,7 +343,7 @@ ms.locfileid: "70799299"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>生成首个 Web 应用</h3>
+                                                    <h3>生成第一个 Web 应用</h3>
                                                     <p>了解如何构建首个 ASP.NET Core Web 应用。</p>
                                                 </div>
                                             </div>
