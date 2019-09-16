@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0ee1a6b8-caac-41d2-917f-d35570021b10
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7ceee0c228000982be83c79fed2f7af43712b3ae
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f4d7cbd00dbf94900185643490b952ced7887965
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963392"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895221"
 ---
 # <a name="details-of-regular-expression-behavior"></a>正则表达式行为的详细信息
 .NET Framework 正则表达式引擎是回溯正则表达式匹配程序，其中包含传统的非确定性有限自动机 (NFA) 引擎（如 Perl、Python、Emacs 和 Tcl 所使用的引擎）。 这使它有别于速度更快、但是限制更多的纯正则表达式确定性有限自动机 (DFA) 引擎（如 awk、egrep 或 lex 中的引擎）。 这也使它有别于标准化、但速度较慢的 POSIX NFA。 下面的部分介绍了正则表达式引擎的三种类型，并解释了为何要在 .NET Framework 中使用传统 NFA 引擎实现正则表达式。  
@@ -98,7 +98,7 @@ ms.locfileid: "69963392"
     |`^`|从行的开头开始匹配。|  
     |`(?<Pvt>\<PRIVATE\>\s)?`|匹配后跟一个空白字符的字符串 `<PRIVATE>` 的零个或一个匹配项。 将匹配项分配给 `Pvt` 捕获组。|  
     |`(?(Pvt)((\w+\p{P}?\s)+)`|如果 `Pvt` 捕获组存在，则匹配后跟零个或一个标点分隔符、再后跟一个空白字符的一个或多个单词字符的一个或多个匹配项。 将子字符串分配给第一个捕获组。|  
-    |<code>&#124;((\w+\p{P}?\s)+))<code>|如果 `Pvt` 捕获组不存在，则匹配后跟零个或一个标点分隔符、再后跟一个空白字符的一个或多个单词字符的一个或多个匹配项。 将子字符串分配给第三个捕获组。|  
+    |<code>&#124;((\w+\p{P}?\s)+))</code>|如果 `Pvt` 捕获组不存在，则匹配后跟零个或一个标点分隔符、再后跟一个空白字符的一个或多个单词字符的一个或多个匹配项。 将子字符串分配给第三个捕获组。|  
     |`\r?$`|匹配行尾或字符串末尾。|  
   
      若要详细了解条件求值，请参阅[替换构造](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)。  
