@@ -1,5 +1,5 @@
 ---
-title: Get 函数 （非托管 API 参考）
+title: Get 函数（非托管 API 参考）
 description: Get 函数检索指定的属性值。
 ms.date: 11/06/2017
 api_name:
@@ -16,16 +16,16 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c1f838c26d45c0f3cfbd50ac0ce02d234b82ddae
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 17304dc8330e4f8571f25b8544f1049dff229f2b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746656"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798589"
 ---
 # <a name="get-function"></a>Get 函数
 
-检索指定的属性值，如果它存在。
+检索指定的属性值（如果存在）。
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
 
@@ -46,55 +46,55 @@ HRESULT Get (
 ## <a name="parameters"></a>参数
 
 `vFunc`\
-[in]此参数是未使用。
+中此参数未使用。
 
 `ptr`\
-[in]一个指向[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)实例。
+中指向[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)实例的指针。
 
 `wszName`\
-[in]属性的名称。
+中属性的名称。
 
 `lFlags`\
-[in] 保留。 此参数必须为 0。
+[in] 保留。 此参数必须为0。
 
 `pVal`\
-[out]如果该函数将返回成功，包含值的`wszName`属性。 `pval`参数分配正确的类型和限定符值。
+弄如果函数成功返回，则包含`wszName`属性的值。 为`pval`该参数分配了正确的限定符类型和值。
 
 `pvtType`\
-[out]如果该函数将返回成功，包含[CIM 类型的常量](/windows/desktop/api/wbemcli/ne-wbemcli-tag_cimtype_enumeration)，该值指示属性类型。 其值也可以是`null`。 
+弄如果该函数成功返回，则包含一个指示该属性类型的[CIM 类型常量](/windows/win32/api/wbemcli/ne-wbemcli-cimtype_enumeration)。 它的值还可以`null`为。 
 
 `plFlavor`\
-[out]如果该函数将返回成功，接收有关源的属性的信息。 其值可以是`null`，或定义中的以下 WBEM_FLAVOR_TYPE 常量之一*WbemCli.h*标头文件： 
+弄如果函数成功返回，则接收有关属性的源的信息。 其值可以是`null`，也可以是在*WbemCli*头文件中定义的以下 WBEM_FLAVOR_TYPE 常数之一： 
 
 |返回的常量  |值  |描述  |
 |---------|---------|---------|
-| `WBEM_FLAVOR_ORIGIN_SYSTEM` | 0x40 | 该属性是标准系统属性。 |
-| `WBEM_FLAVOR_ORIGIN_PROPAGATED` | 0x20 | 类：属性继承自的父类。 <br> 实例：属性，继承自的父类，而未已修改的实例。  |
-| `WBEM_FLAVOR_ORIGIN_LOCAL` | 0 | 类：属性属于派生类。 <br> 实例：实例; 修改属性也就是说，却提供了值，或限定符已添加或修改。 |
+| `WBEM_FLAVOR_ORIGIN_SYSTEM` | 0x40 | 属性为标准系统属性。 |
+| `WBEM_FLAVOR_ORIGIN_PROPAGATED` | 0x20 | 对于类：该属性是从父类继承的。 <br> 对于实例：从父类继承的属性未被实例修改。  |
+| `WBEM_FLAVOR_ORIGIN_LOCAL` | 0 | 对于类：属性属于派生类。 <br> 对于实例：属性由实例进行修改;也就是说，提供了一个值，或者添加或修改了限定符。 |
 
 ## <a name="return-value"></a>返回值
 
-此函数返回以下值中定义*WbemCli.h*标头文件，也可以在定义它们为常量在代码中：
+此函数返回的以下值是在*WbemCli*头文件中定义的，也可以在代码中将它们定义为常量：
 
 |返回的常量  |值  |描述  |
 |---------|---------|---------|
-|`WBEM_E_FAILED` | 0x80041001 | 已存在时的常见错误。 |
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 一个或多个参数是无效的。 |
+|`WBEM_E_FAILED` | 0x80041001 | 出现一般错误。 |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 一个或多个参数无效。 |
 |`WBEM_E_NOT_FOUND` | 0x80041002 | 找不到指定的属性。 |
-|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 没有足够的内存是可用于完成该操作。 |
+|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 没有足够的内存可用来完成此操作。 |
 |`WBEM_S_NO_ERROR` | 0 | 函数调用成功。  |
 
 ## <a name="remarks"></a>备注
 
-此函数包装对的调用[IWbemClassObject::Get](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-get)方法。
+此函数包装对[IWbemClassObject：： Get](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-get)方法的调用。
 
 `Get`函数还可以返回系统属性。
 
-`pVal`自变量分配正确的类型和值限定符和 COM [VariantInit](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-variantinit)函数
+为 `pVal` 参数分配了正确的限定符类型和值以及 COM [VariantInit](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-variantinit) 函数
 
 ## <a name="requirements"></a>要求
 
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。
+ **适用**请参阅[系统需求](../../get-started/system-requirements.md)。
 
  **标头：** WMINet_Utils.idl
 
@@ -102,4 +102,4 @@ HRESULT Get (
 
 ## <a name="see-also"></a>请参阅
 
-- [WMI 和性能计数器 （非托管 API 参考）](index.md)
+- [WMI 和性能计数器（非托管 API 参考）](index.md)

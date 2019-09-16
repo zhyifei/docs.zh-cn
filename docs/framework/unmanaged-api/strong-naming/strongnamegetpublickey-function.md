@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f6e9e5c199ad437290d7bf19d65b5f29a0abed5e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ae87ebd0b8225f14ca029fac80528d47f5a866cf
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780112"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799057"
 ---
 # <a name="strongnamegetpublickey-function"></a>StrongNameGetPublicKey 函数
-从私钥/公钥对中获取公钥。 加密服务提供商 (CSP) 中的密钥容器名称或作为原始字节的集合，可提供的密钥对。  
+从私钥/公钥对中获取公钥。 密钥对可以作为加密服务提供程序（CSP）中的密钥容器名称提供，也可以作为字节的原始集合提供。  
   
- 此函数已弃用。 使用[iclrstrongname:: Strongnamegetpublickey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetpublickey-method.md)方法相反。  
+ 此函数已弃用。 改为使用[ICLRStrongName：： StrongNameGetPublicKey](../hosting/iclrstrongname-strongnamegetpublickey-method.md)方法。  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,44 +43,44 @@ BOOLEAN StrongNameGetPublicKey (
   
 ## <a name="parameters"></a>参数  
  `szKeyContainer`  
- [in]包含公钥/私钥对的密钥容器的名称。 如果`pbKeyBlob`为 null，`szKeyContainer`必须指定有效的 CSP 中的容器。 在这种情况下，`StrongNameGetPublicKey`从容器中存储的密钥对中提取的公钥。  
+ 中包含公钥/私钥对的密钥容器的名称。 如果`pbKeyBlob`为 null， `szKeyContainer`则必须在 CSP 内指定有效容器。 在这种情况`StrongNameGetPublicKey`下，从存储在容器中的密钥对中提取公钥。  
   
- 如果`pbKeyBlob`不为 null，则假定为密钥对要包含在密钥二进制大型对象 (BLOB) 中。  
+ 如果`pbKeyBlob`不为 null，则假定密钥对包含在关键的二进制大型对象（BLOB）中。  
   
- 键必须是 1024年位 Rivest 仅使用 Adleman (RSA) 签名密钥。 目前不支持任何其他类型的密钥。  
+ 密钥必须是1024位 Rivest-Rivest-shamir-adleman-Rivest-shamir-adleman （RSA）签名密钥。 此时不支持其他类型的密钥。  
   
  `pbKeyBlob`  
- [in]一个指向公钥/私钥对。 此对的格式创建的 Win32`CryptExportKey`函数。 如果`pbKeyBlob`是 null，指定的密钥容器`szKeyContainer`假定包含密钥对。  
+ 中指向公钥/私钥对的指针。 此对采用 Win32 `CryptExportKey`函数创建的格式。 如果`pbKeyBlob`为 null， `szKeyContainer`则假定指定的密钥容器包含密钥对。  
   
  `cbKeyBlob`  
- [in]大小，以字节为单位的`pbKeyBlob`。  
+ 中的`pbKeyBlob`大小（以字节为单位）。  
   
  `ppbPublicKeyBlob`  
- [out]返回的公钥 BLOB。 `ppbPublicKeyBlob`参数是分配的公共语言运行时，返回到调用方。 调用方必须使用释放内存[StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/strong-naming/strongnamefreebuffer-function.md)函数。  
+ 弄返回的公钥 BLOB。 `ppbPublicKeyBlob`参数由公共语言运行时分配并返回给调用方。 调用方必须使用[StrongNameFreeBuffer](strongnamefreebuffer-function.md)函数释放内存。  
   
  `pcbPublicKeyBlob`  
- [out]返回公钥 BLOB 的大小。  
+ 弄返回的公钥 BLOB 的大小。  
   
 ## <a name="return-value"></a>返回值  
- `true` 在成功完成;否则为`false`。  
+ `true`成功完成时;否则为`false`。  
   
 ## <a name="remarks"></a>备注  
- 中包含的公钥[PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md)结构。  
+ 公钥包含在[PublicKeyBlob](publickeyblob-structure.md)结构中。  
   
- 如果`StrongNameGetPublicKey`函数不成功完成，则调用[StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md)函数检索最后一个生成的错误。  
+ 如果`StrongNameGetPublicKey`函数未成功完成，请调用 [StrongNameErrorInfo](strongnameerrorinfo-function.md) 函数来检索上次生成的错误。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../get-started/system-requirements.md)。  
   
- **标头：** StrongName.h  
+ **标头：** Stackexchange.redis.strongname  
   
- **库：** 包含为 MsCorEE.dll 中的资源  
+ **类库**作为资源包括在 Mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 
-- [StrongNameGetPublicKey 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetpublickey-method.md)
-- [StrongNameTokenFromPublicKey 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfrompublickey-method.md)
-- [ICLRStrongName 接口](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
-- [PublicKeyBlob Strong Naming](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md)
+- [StrongNameGetPublicKey 方法](../hosting/iclrstrongname-strongnamegetpublickey-method.md)
+- [StrongNameTokenFromPublicKey 方法](../hosting/iclrstrongname-strongnametokenfrompublickey-method.md)
+- [ICLRStrongName 接口](../hosting/iclrstrongname-interface.md)
+- [PublicKeyBlob Strong Naming](publickeyblob-structure.md)

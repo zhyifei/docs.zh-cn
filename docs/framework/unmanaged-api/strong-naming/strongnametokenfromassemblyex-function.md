@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 14af44901e7c65933800e41328e95602ce715282
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c000aad12000a9c76fb6dd805a9b002c021be6ef
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67783178"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798839"
 ---
 # <a name="strongnametokenfromassemblyex-function"></a>StrongNameTokenFromAssemblyEx 函数
-从指定的程序集文件中，创建一个强名称标记并返回该标记代表的公钥。  
+从指定的程序集文件创建强名称令牌，并返回该令牌表示的公钥。  
   
- 此函数已弃用。 使用[iclrstrongname:: Strongnametokenfromassemblyex](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfromassemblyex-method.md)方法相反。  
+ 此函数已弃用。 改为使用[ICLRStrongName：： StrongNameTokenFromAssemblyEx](../hosting/iclrstrongname-strongnametokenfromassemblyex-method.md)方法。  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,41 +42,41 @@ BOOLEAN StrongNameTokenFromAssemblyEx (
   
 ## <a name="parameters"></a>参数  
  `wszFilePath`  
- [in]程序集可移植可执行 (PE) 文件的路径。  
+ 中程序集的可移植可执行（PE）文件的路径。  
   
  `ppbStrongNameToken`  
- [out]返回的强名称标记中。  
+ 弄返回的强名称标记。  
   
  `pcbStrongNameToken`  
- [out]以字节为单位的强名称标记的大小。  
+ 弄强名称令牌的大小（以字节为单位）。  
   
  `ppbPublicKeyBlob`  
- [out]返回的公共密钥。  
+ 弄返回的公钥。  
   
  `pcbPublicKeyBlob`  
- [out]以字节为单位的公钥大小。  
+ 弄公钥的大小（以字节为单位）。  
   
 ## <a name="return-value"></a>返回值  
- `true` 在成功完成;否则为`false`。  
+ `true`成功完成时;否则为`false`。  
   
 ## <a name="remarks"></a>备注  
- 强名称标记是简写形式的公共密钥。 令牌是通过使用程序集进行签名的公钥创建一个 64 位哈希。 该令牌是程序集的强名称的一部分，且可以从程序集元数据读取。  
+ 强名称标记是公钥的缩写形式。 标记是从用于对程序集进行签名的公钥创建的64位哈希。 该令牌是程序集的强名称的一部分，并且可以从程序集元数据中读取。  
   
- 正在检索密钥并创建令牌后，应调用[StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/strong-naming/strongnamefreebuffer-function.md)函数，以释放已分配的内存。  
+ 检索到密钥并创建令牌后，应调用[StrongNameFreeBuffer](strongnamefreebuffer-function.md)函数以释放已分配的内存。  
   
- 如果`StrongNameTokenFromAssemblyEx`函数不成功完成，则调用[StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md)函数检索最后一个生成的错误。  
+ 如果`StrongNameTokenFromAssemblyEx`函数未成功完成，请调用 [StrongNameErrorInfo](strongnameerrorinfo-function.md) 函数来检索上次生成的错误。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../get-started/system-requirements.md)。  
   
- **标头：** StrongName.h  
+ **标头：** Stackexchange.redis.strongname  
   
- **库：** 包含为 mscoree.dll 中的资源  
+ **类库**作为资源包括在 mscoree.dll 中  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 
-- [StrongNameTokenFromAssemblyEx 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfromassemblyex-method.md)
-- [StrongNameTokenFromAssembly 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfromassembly-method.md)
-- [ICLRStrongName 接口](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [StrongNameTokenFromAssemblyEx 方法](../hosting/iclrstrongname-strongnametokenfromassemblyex-method.md)
+- [StrongNameTokenFromAssembly 方法](../hosting/iclrstrongname-strongnametokenfromassembly-method.md)
+- [ICLRStrongName 接口](../hosting/iclrstrongname-interface.md)

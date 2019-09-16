@@ -15,15 +15,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0b6db8925fb966f4a8b2a213b0d6e340d0edf107
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ce0f11547d4b16516b7c78d1b1947f5c4bc831a3
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67756427"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798796"
 ---
 # <a name="resolvetypelib-method"></a>ResolveTypeLib 方法
-通过返回其完全限定的路径来解析类型库的简单名称。  
+通过返回类型库的完全限定路径来解析该类型库的简单名称。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,41 +40,41 @@ HRESULT ResolveTypeLib(
   
 ## <a name="parameters"></a>参数  
  `bstrSimpleName`  
- [in]一个[BSTR](https://docs.microsoft.com/previous-versions/windows/desktop/automat/bstr) ，其中包含类型库的简单名称。  
+ 中一个[BSTR](https://docs.microsoft.com/previous-versions/windows/desktop/automat/bstr) ，其中包含类型库的简单名称。  
   
  `tlbid`  
- [in]分配给在注册表中的类型库的 GUID。  
+ 中分配给注册表中的类型库的 GUID。  
   
  `lcid`  
- [in]类型库的本地化 ID。  
+ 中类型库的本地化 ID。  
   
  `wMajorVersion`  
- [in]类型库的主版本号。 例如，对于版本*x.y*，主版本号是*x*。  
+ 中类型库的主版本号。 例如，对于版本*x. y*，主版本号是*x*。  
   
  `wMinorVersion`  
- [in]类型库的次版本号。 例如，对于版本*x.y*的次版本号是*y*。  
+ 中类型库的次版本号。 例如，对于版本*x. y*，次版本号为*y*。  
   
  `syskind`  
- [in]一个[SYSKIND](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/ne-oaidl-tagsyskind)标志，用于标识操作的环境。 常见的值为 SYS_WIN32 和 SYS_WIN64。  
+ 中标识操作环境的[SYSKIND](https://docs.microsoft.com/windows/win32/api/oaidl/ne-oaidl-syskind)标志。 常见值为 SYS_WIN32 和 SYS_WIN64。  
   
  `pbstrResolvedTlbName`  
- [out]一个指向[BSTR](https://docs.microsoft.com/previous-versions/windows/desktop/automat/bstr) ，其中包含在名为的类型库的完整路径`bstrSimpleName`参数。  
+ 弄指向包含在`bstrSimpleName`参数中命名的类型库的完整路径的[BSTR](https://docs.microsoft.com/previous-versions/windows/desktop/automat/bstr)的指针。  
   
 ## <a name="remarks"></a>备注  
- `ResolveTypeLib`调用方法[LoadTypeLibWithResolver 函数](../../../../docs/framework/unmanaged-api/tlbexp/loadtypelibwithresolver-function.md)期间[Tlbexp.exe （类型库导出程序）](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md)处理。  
+ 方法由[LoadTypeLibWithResolver 函数](loadtypelibwithresolver-function.md)在[tlbexp.exe （类型库导出程序）](../../tools/tlbexp-exe-type-library-exporter.md)处理期间调用。 `ResolveTypeLib`  
   
- 自定义此接口的实现必须返回[BSTR](https://docs.microsoft.com/previous-versions/windows/desktop/automat/bstr) ，其中包含在名为的类型库的完整路径`bstrSimpleName`参数。  
+ 此接口的自定义实现必须返回包含 `bstrSimpleName` 参数中名为的类型库的完整路径的 [BSTR](https://docs.microsoft.com/previous-versions/windows/desktop/automat/bstr)。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../get-started/system-requirements.md)。  
   
- **标头：** TlbRef.idl TlbRef.h  
+ **标头：** TlbRef，TlbRef  
   
- **库：** TlbRef.lib  
+ **类库**TlbRef.lib  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 
-- [Tlbexp Helper 函数](../../../../docs/framework/unmanaged-api/tlbexp/index.md)
+- [Tlbexp Helper 函数](index.md)
 - [LoadTypeLibEx](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)
