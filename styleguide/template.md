@@ -14,12 +14,12 @@ ms.prod:
 - PRODUCT VALUE
 helpviewer_keywords:
 - OFFLINE BOOK INDEX ENTRIES
-ms.openlocfilehash: d9a377941f54dbd42ae6eaec6c21a93dd48673a1
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 37133a90ae5bfa18ae17c279caff40d0d30ea25c
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70254014"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928927"
 ---
 # <a name="metadata-and-markdown-template"></a>元数据和 Markdown 模板
 
@@ -445,6 +445,7 @@ docs.microsoft 为 GitHub Flavored Markdown 提供了其他一些扩展。
 可以在列表中使用自定义样式。 可以呈现带有绿色复选标记的列表。
 
 > [!div class="checklist"]
+>
 > - 如何创建 .NET Core 应用
 > - 如何向 Microsoft.XmlSerializer.Generator 包中添加引用
 > - 如何编辑 MyApp.csproj 以添加依赖项
@@ -463,8 +464,9 @@ docs.microsoft 为 GitHub Flavored Markdown 提供了其他一些扩展。
 ### <a name="selectors"></a>选择器
 
 > [!div class="op_single_selector"]
-- [macOS](../docs/core/tutorials/using-on-macos.md)
-- [Windows](../docs/core/tutorials/with-visual-studio.md)
+>
+> - [macOS](../docs/core/tutorials/using-on-macos.md)
+> - [Windows](../docs/core/tutorials/with-visual-studio.md)
 
 可在 [Azure 文档](https://docs.microsoft.com/azure/expressroute/expressroute-howto-circuit-classic)中查看有效的选择器示例。
 
