@@ -10,12 +10,12 @@ helpviewer_keywords:
 - reserved words, Visual Basic keywords
 - Visual Basic, keywords
 ms.assetid: b5a65ef0-c408-4836-afb6-e6828c0771ca
-ms.openlocfilehash: e00cb8579ba2692acdfbf3fd349e08bb8647e2d0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 61dc57b2e44e7b98fbce85e81491c76736c7ad78
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61801552"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69959956"
 ---
 # <a name="keywords-visual-basic"></a>关键字 (Visual Basic)
 下表列出了所有 Visual Basic 语言关键字。  
@@ -24,12 +24,12 @@ ms.locfileid: "61801552"
  已保留下面的关键字。也就是说，无法将这些关键字用作编程元素（如变量或过程）的名称。 可以用括号 (`[]`) 括住名称，从而忽略此限制。 有关详细信息，请参阅[已声明的元素名称](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)中的“转义后名称”。  
   
 > [!NOTE]
->  不建议使用转义后名称，因为这可能会导致代码难以读取，并且出现难以发现的细微错误。  
+> 不建议使用转义后名称，因为这可能会导致代码难以读取，并且出现难以发现的细微错误。  
   
 |||||  
 |---|---|---|---|  
 |[AddHandler](../../../visual-basic/language-reference/statements/addhandler-statement.md)|[AddressOf](../../../visual-basic/language-reference/operators/addressof-operator.md)|[Alias](../../../visual-basic/language-reference/statements/alias-clause.md)|[And](../../../visual-basic/language-reference/operators/and-operator.md)|  
-|[AndAlso](../../../visual-basic/language-reference/operators/andalso-operator.md)|[As](../../../visual-basic/language-reference/statements/as-clause.md)|[Boolean](../../../visual-basic/language-reference/data-types/boolean-data-type.md)|[ByRef](../../../visual-basic/language-reference/modifiers/byref.md)|  
+|[AndAlso](../../../visual-basic/language-reference/operators/andalso-operator.md)|[As](../../../visual-basic/language-reference/statements/as-clause.md)|[布尔值](../../../visual-basic/language-reference/data-types/boolean-data-type.md)|[ByRef](../../../visual-basic/language-reference/modifiers/byref.md)|  
 |[Byte](../../../visual-basic/language-reference/data-types/byte-data-type.md)|[ByVal](../../../visual-basic/language-reference/modifiers/byval.md)|[Call](../../../visual-basic/language-reference/statements/call-statement.md)|[Case](../../../visual-basic/language-reference/statements/select-case-statement.md)|  
 |[Catch](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)|[CBool](../../../visual-basic/language-reference/functions/type-conversion-functions.md)|[CByte](../../../visual-basic/language-reference/functions/type-conversion-functions.md)|[CChar](../../../visual-basic/language-reference/functions/type-conversion-functions.md)|  
 |[CDate](../../../visual-basic/language-reference/functions/type-conversion-functions.md)|[CDbl](../../../visual-basic/language-reference/functions/type-conversion-functions.md)|[CDec](../../../visual-basic/language-reference/functions/type-conversion-functions.md)|[Char](../../../visual-basic/language-reference/data-types/char-data-type.md)|  
@@ -38,10 +38,10 @@ ms.locfileid: "61801552"
 |[CShort](../../../visual-basic/language-reference/functions/type-conversion-functions.md)|[CSng](../../../visual-basic/language-reference/functions/type-conversion-functions.md)|[CStr](../../../visual-basic/language-reference/functions/type-conversion-functions.md)|[CType](../../../visual-basic/language-reference/functions/type-conversion-functions.md)|  
 |[CUInt](../../../visual-basic/language-reference/functions/type-conversion-functions.md)|[CULng](../../../visual-basic/language-reference/functions/type-conversion-functions.md)|[CUShort](../../../visual-basic/language-reference/functions/type-conversion-functions.md)|[Date](../../../visual-basic/language-reference/data-types/date-data-type.md)|  
 |[小数](../../../visual-basic/language-reference/data-types/decimal-data-type.md)|[Declare](../../../visual-basic/language-reference/statements/declare-statement.md)|[默认](../../../visual-basic/language-reference/modifiers/default.md)|[Delegate](../../../visual-basic/language-reference/statements/delegate-statement.md)|  
-|[Dim](../../../visual-basic/language-reference/statements/dim-statement.md)|[DirectCast](../../../visual-basic/language-reference/operators/directcast-operator.md)|[Do](../../../visual-basic/language-reference/statements/do-loop-statement.md)|[Double](../../../visual-basic/language-reference/data-types/double-data-type.md)|  
+|[Dim](../../../visual-basic/language-reference/statements/dim-statement.md)|[DirectCast](../../../visual-basic/language-reference/operators/directcast-operator.md)|[Do](../../../visual-basic/language-reference/statements/do-loop-statement.md)|[双精度](../../../visual-basic/language-reference/data-types/double-data-type.md)|  
 |[Each](../../../visual-basic/language-reference/statements/for-each-next-statement.md)|[Else](../../../visual-basic/language-reference/statements/else-statement.md)|[ElseIf](../../../visual-basic/language-reference/statements/if-then-else-statement.md)|[End 语句](../../../visual-basic/language-reference/statements/end-statement.md)|  
 |[End \<keyword>](../../../visual-basic/language-reference/statements/end-keyword-statement.md)|`EndIf`|[Enum](../../../visual-basic/language-reference/statements/enum-statement.md)|[Erase](../../../visual-basic/language-reference/statements/erase-statement.md)|  
-|[错误](../../../visual-basic/language-reference/statements/on-error-statement.md)|[Event](../../../visual-basic/language-reference/statements/event-statement.md)|[Exit](../../../visual-basic/language-reference/statements/exit-statement.md)|[False](../../../visual-basic/language-reference/data-types/boolean-data-type.md)|  
+|[错误](../../../visual-basic/language-reference/statements/on-error-statement.md)|[Event](../../../visual-basic/language-reference/statements/event-statement.md)|[退出](../../../visual-basic/language-reference/statements/exit-statement.md)|[False](../../../visual-basic/language-reference/data-types/boolean-data-type.md)|  
 |[Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)|[For (in For…Next)](../../../visual-basic/language-reference/statements/for-next-statement.md)|[For Each…Next](../../../visual-basic/language-reference/statements/for-each-next-statement.md)|[Friend](../../../visual-basic/language-reference/modifiers/friend.md)|  
 |[Function](../../../visual-basic/language-reference/statements/function-statement.md)|[Get](../../../visual-basic/language-reference/statements/get-statement.md)|[GetType](../../../visual-basic/language-reference/operators/gettype-operator.md)|[GetXMLNamespace](../../../visual-basic/language-reference/operators/getxmlnamespace-operator.md)|  
 |[Global](../../../visual-basic/programming-guide/program-structure/namespaces.md)|`GoSub`|[GoTo](../../../visual-basic/language-reference/statements/goto-statement.md)|[Handles](../../../visual-basic/language-reference/statements/handles-clause.md)|  
@@ -54,7 +54,7 @@ ms.locfileid: "61801552"
 |[MyBase](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)|[MyClass](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)|[命名空间](../../../visual-basic/language-reference/statements/namespace-statement.md)|[Narrowing](../../../visual-basic/language-reference/modifiers/narrowing.md)|  
 |[New Constraint](../../../visual-basic/language-reference/statements/type-list.md)|[New 运算符](../../../visual-basic/language-reference/operators/new-operator.md)|[下一页](../../../visual-basic/language-reference/statements/for-next-statement.md)|[Next (in Resume)](../../../visual-basic/language-reference/statements/resume-statement.md)|  
 |[Not](../../../visual-basic/language-reference/operators/not-operator.md)|[Nothing](../../../visual-basic/language-reference/nothing.md)|[NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md)|[NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)|  
-|[对象](../../../visual-basic/language-reference/data-types/object-data-type.md)|[Of](../../../visual-basic/language-reference/statements/of-clause.md)|[On](../../../visual-basic/misc/on.md)|[Operator](../../../visual-basic/language-reference/statements/operator-statement.md)|  
+|[对象](../../../visual-basic/language-reference/data-types/object-data-type.md)|[Of](../../../visual-basic/language-reference/statements/of-clause.md)|[On](../../../visual-basic/misc/on.md)|[“运算符”](../../../visual-basic/language-reference/statements/operator-statement.md)|  
 |[选项](../../../visual-basic/language-reference/statements/option-keyword-statement.md)|[Optional](../../../visual-basic/language-reference/modifiers/optional.md)|[Or](../../../visual-basic/language-reference/operators/or-operator.md)|[OrElse](../../../visual-basic/language-reference/operators/orelse-operator.md)|  
 |[Out（泛型修饰符）](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)|[重载](../../../visual-basic/language-reference/modifiers/overloads.md)|[Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)|[Overrides](../../../visual-basic/language-reference/modifiers/overrides.md)|  
 |[ParamArray](../../../visual-basic/language-reference/modifiers/paramarray.md)|[Partial](../../../visual-basic/language-reference/modifiers/partial.md)|[Private](../../../visual-basic/language-reference/modifiers/private.md)|[Property](../../../visual-basic/language-reference/statements/property-statement.md)|  
@@ -62,7 +62,7 @@ ms.locfileid: "61801552"
 |[ReDim](../../../visual-basic/language-reference/statements/redim-statement.md)|[REM](../../../visual-basic/language-reference/statements/rem-statement.md)|[RemoveHandler](../../../visual-basic/language-reference/statements/removehandler-statement.md)|[Resume](../../../visual-basic/language-reference/statements/resume-statement.md)|  
 |[Return](../../../visual-basic/language-reference/statements/return-statement.md)|[SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|[选择](../../../visual-basic/language-reference/statements/select-case-statement.md)|[Set](../../../visual-basic/language-reference/statements/set-statement.md)|  
 |[Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)|[Shared](../../../visual-basic/language-reference/modifiers/shared.md)|[Short](../../../visual-basic/language-reference/data-types/short-data-type.md)|[单精度](../../../visual-basic/language-reference/data-types/single-data-type.md)|  
-|[Static](../../../visual-basic/language-reference/modifiers/static.md)|[Step](../../../visual-basic/language-reference/statements/for-next-statement.md)|[Stop](../../../visual-basic/language-reference/statements/stop-statement.md)|[String](../../../visual-basic/language-reference/data-types/string-data-type.md)|  
+|[Static](../../../visual-basic/language-reference/modifiers/static.md)|[Step](../../../visual-basic/language-reference/statements/for-next-statement.md)|[Stop](../../../visual-basic/language-reference/statements/stop-statement.md)|[字符串](../../../visual-basic/language-reference/data-types/string-data-type.md)|  
 |[Structure Constraint](../../../visual-basic/language-reference/statements/type-list.md)|[Structure 语句](../../../visual-basic/language-reference/statements/structure-statement.md)|[Sub](../../../visual-basic/language-reference/statements/sub-statement.md)|[SyncLock](../../../visual-basic/language-reference/statements/synclock-statement.md)|  
 |[Then](../../../visual-basic/language-reference/statements/then-statement.md)|[Throw](../../../visual-basic/language-reference/statements/throw-statement.md)|[若要](../../../visual-basic/language-reference/statements/for-next-statement.md)|[True](../../../visual-basic/language-reference/data-types/boolean-data-type.md)|  
 |[Try](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)|[TryCast](../../../visual-basic/language-reference/operators/trycast-operator.md)|[TypeOf…Is](../../../visual-basic/language-reference/operators/typeof-operator.md)|[UInteger](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)|  
@@ -77,7 +77,7 @@ ms.locfileid: "61801552"
 |[>> 运算符](../../../visual-basic/language-reference/operators/right-shift-operator.md)|[>>= 运算符](../../../visual-basic/language-reference/operators/right-shift-assignment-operator.md)|[<<](../../../visual-basic/language-reference/operators/left-shift-operator.md)|[<\<=](../../../visual-basic/language-reference/operators/left-shift-assignment-operator.md)|  
   
 > [!NOTE]
->  `EndIf``GoSub`， `Variant`，和`Wend`尽管 Visual Basic 中不再使用的保留关键字作为保留。 `Let` 关键字的含义已更改。 `Let` 现用于 LINQ 查询。 有关详细信息，请参阅 [Let 子句](../../../visual-basic/language-reference/queries/let-clause.md)。  
+> `EndIf`、 `GoSub`、和`Wend`保留为保留关键字，不过它们不再用于 Visual Basic。 `Variant` `Let` 关键字的含义已更改。 `Let` 现用于 LINQ 查询。 有关详细信息，请参阅 [Let 子句](../../../visual-basic/language-reference/queries/let-clause.md)。  
   
 ## <a name="unreserved-keywords"></a>未保留的关键字  
  未保留下面的关键字。也就是说，可以将这些关键字用作编程元素的名称。 不过，不建议使用这样做，因为这可能会导致代码难以读取，并且出现难以发现的细微错误。  
