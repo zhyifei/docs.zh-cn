@@ -7,28 +7,28 @@ helpviewer_keywords:
 ms.assetid: f78ec137-df0e-48c9-a7a0-5f6a1055f011
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a190e238992313e498e28217587029041f386040
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d34c52294ab662f757de9efb52ba18cc96423af6
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793102"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045971"
 ---
-# <a name="dynamic-programming-in-the-net-framework"></a><span data-ttu-id="46590-102">.NET Framework 中的动态编程</span><span class="sxs-lookup"><span data-stu-id="46590-102">Dynamic Programming in the .NET Framework</span></span>
-<span data-ttu-id="46590-103">本节文档提供有关在 .NET Framework 中动态编程的信息。</span><span class="sxs-lookup"><span data-stu-id="46590-103">This section of the documentation provides information about dynamic programming in the .NET Framework.</span></span>  
+# <a name="dynamic-programming-in-the-net-framework"></a><span data-ttu-id="93a0c-102">.NET Framework 中的动态编程</span><span class="sxs-lookup"><span data-stu-id="93a0c-102">Dynamic Programming in the .NET Framework</span></span>
+<span data-ttu-id="93a0c-103">本节文档提供有关在 .NET Framework 中动态编程的信息。</span><span class="sxs-lookup"><span data-stu-id="93a0c-103">This section of the documentation provides information about dynamic programming in the .NET Framework.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="46590-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="46590-104">In This Section</span></span>  
- [<span data-ttu-id="46590-105">反射</span><span class="sxs-lookup"><span data-stu-id="46590-105">Reflection</span></span>](../../../docs/framework/reflection-and-codedom/reflection.md)  
- <span data-ttu-id="46590-106">介绍如何使用反射在运行时处理对象。</span><span class="sxs-lookup"><span data-stu-id="46590-106">Describes how to use reflection to work with objects at run time.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="93a0c-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="93a0c-104">In This Section</span></span>  
+ [<span data-ttu-id="93a0c-105">反射</span><span class="sxs-lookup"><span data-stu-id="93a0c-105">Reflection</span></span>](reflection.md)  
+ <span data-ttu-id="93a0c-106">介绍如何使用反射在运行时处理对象。</span><span class="sxs-lookup"><span data-stu-id="93a0c-106">Describes how to use reflection to work with objects at run time.</span></span>  
   
- [<span data-ttu-id="46590-107">发出动态方法和程序集</span><span class="sxs-lookup"><span data-stu-id="46590-107">Emitting Dynamic Methods and Assemblies</span></span>](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)  
- <span data-ttu-id="46590-108">介绍如何通过使用 Reflection.Emit 在运行时创建方法和程序集。</span><span class="sxs-lookup"><span data-stu-id="46590-108">Describes how to create methods and assemblies at run time by using Reflection.Emit.</span></span>  
+ [<span data-ttu-id="93a0c-107">发出动态方法和程序集</span><span class="sxs-lookup"><span data-stu-id="93a0c-107">Emitting Dynamic Methods and Assemblies</span></span>](emitting-dynamic-methods-and-assemblies.md)  
+ <span data-ttu-id="93a0c-108">介绍如何通过使用 Reflection.Emit 在运行时创建方法和程序集。</span><span class="sxs-lookup"><span data-stu-id="93a0c-108">Describes how to create methods and assemblies at run time by using Reflection.Emit.</span></span>  
   
- [<span data-ttu-id="46590-109">动态语言运行时概述</span><span class="sxs-lookup"><span data-stu-id="46590-109">Dynamic Language Runtime Overview</span></span>](../../../docs/framework/reflection-and-codedom/dynamic-language-runtime-overview.md)  
- <span data-ttu-id="46590-110">介绍动态语言运行时的功能。</span><span class="sxs-lookup"><span data-stu-id="46590-110">Describes the features of the dynamic language runtime.</span></span>  
+ [<span data-ttu-id="93a0c-109">动态语言运行时概述</span><span class="sxs-lookup"><span data-stu-id="93a0c-109">Dynamic Language Runtime Overview</span></span>](dynamic-language-runtime-overview.md)  
+ <span data-ttu-id="93a0c-110">介绍动态语言运行时的功能。</span><span class="sxs-lookup"><span data-stu-id="93a0c-110">Describes the features of the dynamic language runtime.</span></span>  
   
- [<span data-ttu-id="46590-111">动态源代码生成和编译</span><span class="sxs-lookup"><span data-stu-id="46590-111">Dynamic Source Code Generation and Compilation</span></span>](../../../docs/framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation.md)  
- <span data-ttu-id="46590-112">介绍如何生成和编译动态源代码。</span><span class="sxs-lookup"><span data-stu-id="46590-112">Describes how to generate and compile dynamic source code.</span></span>  
+ [<span data-ttu-id="93a0c-111">动态源代码生成和编译</span><span class="sxs-lookup"><span data-stu-id="93a0c-111">Dynamic Source Code Generation and Compilation</span></span>](dynamic-source-code-generation-and-compilation.md)  
+ <span data-ttu-id="93a0c-112">介绍如何生成和编译动态源代码。</span><span class="sxs-lookup"><span data-stu-id="93a0c-112">Describes how to generate and compile dynamic source code.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="46590-113">相关章节</span><span class="sxs-lookup"><span data-stu-id="46590-113">Related Sections</span></span>  
- [<span data-ttu-id="46590-114">开发指南</span><span class="sxs-lookup"><span data-stu-id="46590-114">Development Guide</span></span>](../../../docs/framework/development-guide.md)  
+## <a name="related-sections"></a><span data-ttu-id="93a0c-113">相关章节</span><span class="sxs-lookup"><span data-stu-id="93a0c-113">Related Sections</span></span>  
+ [<span data-ttu-id="93a0c-114">开发指南</span><span class="sxs-lookup"><span data-stu-id="93a0c-114">Development Guide</span></span>](../development-guide.md)  
