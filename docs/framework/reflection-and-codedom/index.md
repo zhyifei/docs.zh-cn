@@ -7,28 +7,28 @@ helpviewer_keywords:
 ms.assetid: f78ec137-df0e-48c9-a7a0-5f6a1055f011
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a190e238992313e498e28217587029041f386040
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d34c52294ab662f757de9efb52ba18cc96423af6
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793102"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045971"
 ---
 # <a name="dynamic-programming-in-the-net-framework"></a>.NET Framework 中的动态编程
 本节文档提供有关在 .NET Framework 中动态编程的信息。  
   
 ## <a name="in-this-section"></a>本节内容  
- [反射](../../../docs/framework/reflection-and-codedom/reflection.md)  
+ [反射](reflection.md)  
  介绍如何使用反射在运行时处理对象。  
   
- [发出动态方法和程序集](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)  
+ [发出动态方法和程序集](emitting-dynamic-methods-and-assemblies.md)  
  介绍如何通过使用 Reflection.Emit 在运行时创建方法和程序集。  
   
- [动态语言运行时概述](../../../docs/framework/reflection-and-codedom/dynamic-language-runtime-overview.md)  
+ [动态语言运行时概述](dynamic-language-runtime-overview.md)  
  介绍动态语言运行时的功能。  
   
- [动态源代码生成和编译](../../../docs/framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation.md)  
+ [动态源代码生成和编译](dynamic-source-code-generation-and-compilation.md)  
  介绍如何生成和编译动态源代码。  
   
 ## <a name="related-sections"></a>相关章节  
- [开发指南](../../../docs/framework/development-guide.md)  
+ [开发指南](../development-guide.md)  

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - .NET applications, Windows applications
 ms.assetid: ba72d648-9553-4849-b829-069ad5ea014b
 author: ghogen
-ms.openlocfilehash: 32aa2c1c4cd31e4591c9fa30c05ebe61058f94c5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 61f969c22ac06bd6ed20ccfa9124db3bb35d0692
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62008702"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053544"
 ---
 # <a name="develop-windows-service-apps"></a>开发 Windows 服务应用
 
@@ -27,19 +27,19 @@ ms.locfileid: "62008702"
 
 ## <a name="in-this-section"></a>本节内容
 
-[Windows 服务应用程序介绍](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
+[Windows 服务应用程序介绍](introduction-to-windows-service-applications.md)
 
 提供 Windows 服务应用程序、服务生存期以及服务应用程序与其他常见项目类型的区别的概述。
 
-[演练：在组件设计器中创建 Windows 服务应用程序](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)
+[演练：在组件设计器中创建 Windows 服务应用程序](walkthrough-creating-a-windows-service-application-in-the-component-designer.md)
 
 提供在 Visual Basic 和 Visual C# 中创建服务的示例。
 
-[服务应用程序编程体系结构](../../../docs/framework/windows-services/service-application-programming-architecture.md)
+[服务应用程序编程体系结构](service-application-programming-architecture.md)
 
 介绍服务编程中使用的语言元素。
 
-[如何：创建 Windows 服务](../../../docs/framework/windows-services/how-to-create-windows-services.md)
+[如何：创建 Windows 服务](how-to-create-windows-services.md)
 
 介绍使用 Windows 服务项目模板创建和配置 Windows 服务的过程。
 

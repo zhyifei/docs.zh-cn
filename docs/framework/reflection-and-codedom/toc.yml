@@ -16,6 +16,8 @@
           href: dynamically-loading-and-using-types.md
         - name: 如何：将程序集加载到仅反射上下文中
           href: how-to-load-assemblies-into-the-reflection-only-context.md
+        - name: 如何：使用反映获取类型和成员信息
+          href: get-type-member-information.md
         - name: 访问自定义特性
           href: accessing-custom-attributes.md
         - name: 指定完全限定的类型名称

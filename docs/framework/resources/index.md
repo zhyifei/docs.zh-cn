@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8ad495d4-2941-40cf-bf64-e82e85825890
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5f003795bf2b8987786043a62d48b2623eb64015
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 64f3f2bb54bd454ef037da2f7e10dd9067bf2217
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949368"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045603"
 ---
 # <a name="resources-in-net-apps"></a>.NET 应用中的资源
 几乎每一个生产性应用都需要使用资源。 资源是在逻辑上随应用部署的任何不可执行的数据。 资源可以在应用中作为错误消息显示，或者作为用户界面的一部分显示。 资源可以包含多种形式的数据，包括字符串、图像和持久的对象。 （若要将持久对象写入资源文件，这些对象必须是可序列化的。）通过在资源文件中存储数据，无需重新编译整个应用即可更改这些数据。 还可以将数据存储在一个位置，而无需依赖存储在多个位置的硬编码数据。  
@@ -29,16 +29,16 @@ ms.locfileid: "69949368"
   
 ## <a name="creating-and-localizing-resources"></a>创建和本地化资源  
 
-在非本地化的应用中，可以使用资源文件作为应用数据的存储库，特别用于存储本来可能在源代码中的多个位置为硬编码的字符串。 通常以文本 (.txt) 或 XML (.resx) 文件形式创建资源，并使用 [Resgen.exe（资源文件生成器）](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)将其编译为二进制 .resources 文件。 随后，这些文件可由语言编译器嵌入到应用的可执行文件中。 有关创建资源的详细信息，请参阅[创建资源文件](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)。  
+在非本地化的应用中，可以使用资源文件作为应用数据的存储库，特别用于存储本来可能在源代码中的多个位置为硬编码的字符串。 通常以文本 (.txt) 或 XML (.resx) 文件形式创建资源，并使用 [Resgen.exe（资源文件生成器）](../tools/resgen-exe-resource-file-generator.md)将其编译为二进制 .resources 文件。 随后，这些文件可由语言编译器嵌入到应用的可执行文件中。 有关创建资源的详细信息，请参阅[创建资源文件](creating-resource-files-for-desktop-apps.md)。  
 
-您还可以按特定的区域性对应用的资源进行本地化。 这样可以生成应用的本地化（翻译）版本。 在开发使用本地化资源的应用时，可以指定一个区域性作为非特定或回退区域性，以在没有合适的资源可用时使用该区域性的资源。 通常，非特定区域性的资源存储在应用的可执行文件中。 其余各本地化区域性的资源存储在单独的附属程序集中。 有关详细信息，请参阅[创建附属程序集](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)。  
+您还可以按特定的区域性对应用的资源进行本地化。 这样可以生成应用的本地化（翻译）版本。 在开发使用本地化资源的应用时，可以指定一个区域性作为非特定或回退区域性，以在没有合适的资源可用时使用该区域性的资源。 通常，非特定区域性的资源存储在应用的可执行文件中。 其余各本地化区域性的资源存储在单独的附属程序集中。 有关详细信息，请参阅[创建附属程序集](creating-satellite-assemblies-for-desktop-apps.md)。  
   
 ## <a name="packaging-and-deploying-resources"></a>打包和部署资源  
- 本地化的应用资源部署在[附属程序集](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)中。 附属程序集包含单个区域性的资源；它不包含任何应用代码。 在附属程序集部署模型中，所创建的应用包含一个默认程序集（通常是主程序集），对于该应用支持的每种区域性，还包含一个附属程序集。 因为附属程序集不是主程序集的一部分，所以您不必替换该应用的主程序集，即可很容易地替换或更新与特定区域性相对应的资源。  
+ 本地化的应用资源部署在[附属程序集](packaging-and-deploying-resources-in-desktop-apps.md)中。 附属程序集包含单个区域性的资源；它不包含任何应用代码。 在附属程序集部署模型中，所创建的应用包含一个默认程序集（通常是主程序集），对于该应用支持的每种区域性，还包含一个附属程序集。 因为附属程序集不是主程序集的一部分，所以您不必替换该应用的主程序集，即可很容易地替换或更新与特定区域性相对应的资源。  
   
- 在确定哪些资源将构成应用的默认资源程序集时要谨慎。 因为默认资源程序集是主程序集的一部分，所以对它做任何更改都会要求你替换主程序集。 如果没有提供默认资源，则在[资源回退进程](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)尝试查找默认资源时会引发异常。 在设计良好的应用中，使用资源应永远不会引发异常。  
+ 在确定哪些资源将构成应用的默认资源程序集时要谨慎。 因为默认资源程序集是主程序集的一部分，所以对它做任何更改都会要求你替换主程序集。 如果没有提供默认资源，则在[资源回退进程](packaging-and-deploying-resources-in-desktop-apps.md)尝试查找默认资源时会引发异常。 在设计良好的应用中，使用资源应永远不会引发异常。  
   
- 有关详细信息，请参阅[打包和部署资源](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)一文。  
+ 有关详细信息，请参阅[打包和部署资源](packaging-and-deploying-resources-in-desktop-apps.md)一文。  
   
 ## <a name="retrieving-resources"></a>检索资源  
  在运行时，应用会基于 <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType> 属性指定的区域性为每个线程加载相应的本地化资源。 此属性的值按如下方式派生：  
@@ -66,7 +66,7 @@ ms.locfileid: "69949368"
 - <xref:System.Globalization.CultureInfo>
 - <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType>
 - [应用程序要点](../../standard/application-essentials.md)
-- [创建资源文件](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)
-- [打包和部署资源](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)
-- [创建附属程序集](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)
-- [检索资源](../../../docs/framework/resources/retrieving-resources-in-desktop-apps.md)
+- [创建资源文件](creating-resource-files-for-desktop-apps.md)
+- [打包和部署资源](packaging-and-deploying-resources-in-desktop-apps.md)
+- [创建附属程序集](creating-satellite-assemblies-for-desktop-apps.md)
+- [检索资源](retrieving-resources-in-desktop-apps.md)

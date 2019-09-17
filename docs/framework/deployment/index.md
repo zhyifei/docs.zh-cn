@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 238d8284-6042-4a38-a7f6-1ee8efd719da
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8d9448edab101ef11447b54e12c53abcb578646a
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: f1d13c4c3e27b5af5b3c3e84995cae3df94a307d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971600"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052081"
 ---
 # <a name="deploying-the-net-framework-and-applications"></a>部署 .NET Framework 和应用程序
 
@@ -38,39 +38,39 @@ ms.locfileid: "70971600"
 
   - 安装模式：
 
-    - [无提示安装](../../../docs/framework/deployment/deployment-guide-for-developers.md#chaining_custom)
+    - [无提示安装](deployment-guide-for-developers.md#chaining_custom)
 
-    - [显示 UI](../../../docs/framework/deployment/deployment-guide-for-developers.md#chaining_default)
+    - [显示 UI](deployment-guide-for-developers.md#chaining_default)
 
-  - [在 .NET Framework 4.5 安装期间减少系统重新启动次数](../../../docs/framework/deployment/reducing-system-restarts.md)
+  - [在 .NET Framework 4.5 安装期间减少系统重新启动次数](reducing-system-restarts.md)
 
   - [安装和卸载 .NET Framework 受阻疑难解答](../install/troubleshoot-blocked-installations-and-uninstallations.md)
 
 - 部署客户端应用程序中的 .NET Framework（适用于开发人员）：
 
-  - 在安装和部署项目中[使用 InstallShield](../../../docs/framework/deployment/deployment-guide-for-developers.md#installshield-deployment)
+  - 在安装和部署项目中[使用 InstallShield](deployment-guide-for-developers.md#installshield-deployment)
 
-  - [使用 Visual Studio ClickOnce 应用程序](../../../docs/framework/deployment/deployment-guide-for-developers.md#clickonce-deployment)
+  - [使用 Visual Studio ClickOnce 应用程序](deployment-guide-for-developers.md#clickonce-deployment)
 
-  - [创建 WiX 安装包](../../../docs/framework/deployment/deployment-guide-for-developers.md#wix)
+  - [创建 WiX 安装包](deployment-guide-for-developers.md#wix)
 
-  - [使用自定义安装程序](../../../docs/framework/deployment/deployment-guide-for-developers.md#chaining)
+  - [使用自定义安装程序](deployment-guide-for-developers.md#chaining)
 
-  - 适用于开发人员的[其他信息](../../../docs/framework/deployment/deployment-guide-for-developers.md)
+  - 适用于开发人员的[其他信息](deployment-guide-for-developers.md)
 
 - 部署.NET Framework（适用于 OEM 和管理人员）：
 
   - [Windows 评估和部署工具包 (ADK)](https://go.microsoft.com/fwlink/p/?LinkId=254976)
 
-  - [管理员指南](../../../docs/framework/deployment/guide-for-administrators.md)
+  - [管理员指南](guide-for-administrators.md)
 
 **服务**
 
 - 有关一般信息，请参阅 [.NET Framework 博客](https://go.microsoft.com/fwlink/p/?LinkId=254977)
 
-- [检测版本](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)
+- [检测版本](../migration-guide/how-to-determine-which-versions-are-installed.md)
 
-- [检测服务包和更新](../../../docs/framework/migration-guide/how-to-determine-which-net-framework-updates-are-installed.md)
+- [检测服务包和更新](../migration-guide/how-to-determine-which-net-framework-updates-are-installed.md)
 
 ## <a name="features-that-simplify-deployment"></a>简化部署的功能
 
@@ -154,25 +154,25 @@ ms.locfileid: "70971600"
 
 ### <a name="installation-location"></a>安装位置
 
-要确定部署应用程序的程序集的位置，以便通过运行时找到它们，请参阅[运行时如何定位程序集](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)。
+要确定部署应用程序的程序集的位置，以便通过运行时找到它们，请参阅[运行时如何定位程序集](how-the-runtime-locates-assemblies.md)。
 
-安全注意事项也可能会影响你部署应用程序的方式。 根据代码所在的位置授予托管代码安全权限。 将应用程序或组件部署到得不到信任的位置（例如 Internet），可限制应用程序或组件可以执行的操作。 有关部署和安全注意事项的详细信息，请参阅[代码访问安全性基础知识](../../../docs/framework/misc/code-access-security-basics.md)。
+安全注意事项也可能会影响你部署应用程序的方式。 根据代码所在的位置授予托管代码安全权限。 将应用程序或组件部署到得不到信任的位置（例如 Internet），可限制应用程序或组件可以执行的操作。 有关部署和安全注意事项的详细信息，请参阅[代码访问安全性基础知识](../misc/code-access-security-basics.md)。
 
 ## <a name="related-topics"></a>相关主题
 
 |Title|说明|
 |-----------|-----------------|
-|[运行时如何定位程序集](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)|描述公共语言运行时如何确定将用于满足绑定请求的程序集类型。|
-|[适用于程序集加载的最佳做法](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)|讨论避免类型标识问题的方法，从而避免发生 <xref:System.InvalidCastException><xref:System.MissingMethodException> 和其他错误。|
-|[在 .NET Framework 4.5 安装期间减少系统重新启动次数](../../../docs/framework/deployment/reducing-system-restarts.md)|描述在任何可能的情况下可以阻止重启的 Restart Manager，并说明安装 .NET Framework 的应用程序如何利用它。|
-|[面向管理员的部署指南](../../../docs/framework/deployment/guide-for-administrators.md)|说明系统管理员如何通过系统中心配置管理器 (SCCM) 跨网络部署 .NET Framework 及其系统依赖项。|
-|[面向开发人员的部署指南](../../../docs/framework/deployment/deployment-guide-for-developers.md)|说明开发人员如何在其计算机的应用程序中安装 .NET Framework。|
+|[运行时如何定位程序集](how-the-runtime-locates-assemblies.md)|描述公共语言运行时如何确定将用于满足绑定请求的程序集类型。|
+|[适用于程序集加载的最佳做法](best-practices-for-assembly-loading.md)|讨论避免类型标识问题的方法，从而避免发生 <xref:System.InvalidCastException><xref:System.MissingMethodException> 和其他错误。|
+|[在 .NET Framework 4.5 安装期间减少系统重新启动次数](reducing-system-restarts.md)|描述在任何可能的情况下可以阻止重启的 Restart Manager，并说明安装 .NET Framework 的应用程序如何利用它。|
+|[面向管理员的部署指南](guide-for-administrators.md)|说明系统管理员如何通过系统中心配置管理器 (SCCM) 跨网络部署 .NET Framework 及其系统依赖项。|
+|[面向开发人员的部署指南](deployment-guide-for-developers.md)|说明开发人员如何在其计算机的应用程序中安装 .NET Framework。|
 |[部署应用程序、服务和组件](/visualstudio/deployment/deploying-applications-services-and-components)|讨论 Visual Studio 中的部署选项，包括使用 ClickOnce 和 Windows Installer 技术发布应用程序的说明。|
 |[发布 ClickOnce 应用程序](/visualstudio/deployment/publishing-clickonce-applications)|描述打包 Windows 窗体应用程序以及使用 ClickOnce 将其部署到连网的客户端计算机上的方法。|
-|[打包和部署资源](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)|描述 .NET Framework 用于打包和部署资源的中心辐射模型，包括资源命名约定、后备进程和打包替代项。|
-|[部署互操作应用程序](../../../docs/framework/interop/deploying-an-interop-application.md)|说明如何传送和安装互操作应用程序，通常包括 .NET Framework 客户端程序集、表示区分 COM 类型库的一个或多个互操作程序集以及一个或多个已注册的 COM 组件。|
-|[如何：获取 .NET Framework 4.5 安装程序的进度](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)|描述如何在没有提示的情况下启动和跟踪 .NET Framework 安装进度，同时显示你自己的安装进度视图。|
+|[打包和部署资源](../resources/packaging-and-deploying-resources-in-desktop-apps.md)|描述 .NET Framework 用于打包和部署资源的中心辐射模型，包括资源命名约定、后备进程和打包替代项。|
+|[部署互操作应用程序](../interop/deploying-an-interop-application.md)|说明如何传送和安装互操作应用程序，通常包括 .NET Framework 客户端程序集、表示区分 COM 类型库的一个或多个互操作程序集以及一个或多个已注册的 COM 组件。|
+|[如何：获取 .NET Framework 4.5 安装程序的进度](how-to-get-progress-from-the-dotnet-installer.md)|描述如何在没有提示的情况下启动和跟踪 .NET Framework 安装进度，同时显示你自己的安装进度视图。|
 
 ## <a name="see-also"></a>请参阅
 
-- [开发指南](../../../docs/framework/development-guide.md)
+- [开发指南](../development-guide.md)
