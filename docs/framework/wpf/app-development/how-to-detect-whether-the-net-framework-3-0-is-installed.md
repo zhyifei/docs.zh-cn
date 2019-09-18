@@ -6,24 +6,24 @@ helpviewer_keywords:
 - presence of WPT [WPF], detecting
 - detecting WPF presence [WPF]
 ms.assetid: 7f71d652-1749-4379-945a-aa2e3994cb43
-ms.openlocfilehash: e307125a2a8de3edc4df2fc1022c6e3de1904879
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c68daf2cb5687497e66ad3022ce42352a17ae0f7
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69960246"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053436"
 ---
-# <a name="how-to-detect-whether-the-net-framework-30-is-installed"></a><span data-ttu-id="eaa04-102">如何：检测是否安装了 .NET Framework 3.0</span><span class="sxs-lookup"><span data-stu-id="eaa04-102">How to: Detect Whether the .NET Framework 3.0 Is Installed</span></span>
-<span data-ttu-id="eaa04-103">在管理员可以在系统上部署 Microsoft .NET Framework 应用程序之前, 必须先确认 .NET Framework 运行时存在。</span><span class="sxs-lookup"><span data-stu-id="eaa04-103">Before administrators can deploy Microsoft .NET Framework applications on a system, they must first confirm that the .NET Framework runtime is present.</span></span> <span data-ttu-id="eaa04-104">本主题提供以 HTML/JavaScript 编写的脚本, 管理员可以使用该脚本来确定系统中是否存在 .NET Framework。</span><span class="sxs-lookup"><span data-stu-id="eaa04-104">This topic provides a script written in HTML/JavaScript that administrators can use to determine whether the .NET Framework is present on a system.</span></span>  
+# <a name="how-to-detect-whether-the-net-framework-30-is-installed"></a><span data-ttu-id="764f7-102">如何：检测是否安装了 .NET Framework 3.0</span><span class="sxs-lookup"><span data-stu-id="764f7-102">How to: Detect Whether the .NET Framework 3.0 Is Installed</span></span>
+<span data-ttu-id="764f7-103">在管理员可以在系统上部署 Microsoft .NET Framework 应用程序之前，必须先确认 .NET Framework 运行时存在。</span><span class="sxs-lookup"><span data-stu-id="764f7-103">Before administrators can deploy Microsoft .NET Framework applications on a system, they must first confirm that the .NET Framework runtime is present.</span></span> <span data-ttu-id="764f7-104">本主题提供以 HTML/JavaScript 编写的脚本，管理员可以使用该脚本来确定系统中是否存在 .NET Framework。</span><span class="sxs-lookup"><span data-stu-id="764f7-104">This topic provides a script written in HTML/JavaScript that administrators can use to determine whether the .NET Framework is present on a system.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="eaa04-105">有关安装、部署和检测 Microsoft .NET 框架的详细信息, 请参阅[部署 Microsoft .NET Framework 版本 3.0](https://go.microsoft.com/fwlink/?LinkId=96739)中的讨论。</span><span class="sxs-lookup"><span data-stu-id="eaa04-105">For more detailed information on installing, deploying, and detecting the Microsoft .NET Framework, see the discussion in [Deploying Microsoft .NET Framework Version 3.0](https://go.microsoft.com/fwlink/?LinkId=96739).</span></span>  
+> <span data-ttu-id="764f7-105">有关安装、部署和检测 Microsoft .NET 框架的详细信息，请参阅[部署 Microsoft .NET Framework 版本 3.0](https://go.microsoft.com/fwlink/?LinkId=96739)中的讨论。</span><span class="sxs-lookup"><span data-stu-id="764f7-105">For more detailed information on installing, deploying, and detecting the Microsoft .NET Framework, see the discussion in [Deploying Microsoft .NET Framework Version 3.0](https://go.microsoft.com/fwlink/?LinkId=96739).</span></span>  
   
 <a name="content_expiration"></a>   
-## <a name="detect-the-net-clr-user-agent-string"></a><span data-ttu-id="eaa04-106">检测 ".NET CLR" 用户代理字符串</span><span class="sxs-lookup"><span data-stu-id="eaa04-106">Detect the ".NET CLR" User-Agent String</span></span>  
- <span data-ttu-id="eaa04-107">安装 .NET Framework 后, MSI 会将 ".NET CLR" 和版本号添加到 UserAgent 字符串。</span><span class="sxs-lookup"><span data-stu-id="eaa04-107">When .NET Framework is installed, the MSI adds ".NET CLR" and the version number to the UserAgent string.</span></span> <span data-ttu-id="eaa04-108">下面的示例演示了一个嵌入到简单 HTML 页面中的脚本。</span><span class="sxs-lookup"><span data-stu-id="eaa04-108">The following example shows a script embedded in a simple HTML page.</span></span> <span data-ttu-id="eaa04-109">此脚本搜索 UserAgent 字符串, 以确定是否安装了 .NET Framework, 并在搜索结果中显示状态消息。</span><span class="sxs-lookup"><span data-stu-id="eaa04-109">The script searches the UserAgent string to determine whether .NET Framework is installed, and displays a status message on the results of the search.</span></span>  
+## <a name="detect-the-net-clr-user-agent-string"></a><span data-ttu-id="764f7-106">检测 ".NET CLR" 用户代理字符串</span><span class="sxs-lookup"><span data-stu-id="764f7-106">Detect the ".NET CLR" User-Agent String</span></span>  
+ <span data-ttu-id="764f7-107">安装 .NET Framework 后，MSI 会将 ".NET CLR" 和版本号添加到 UserAgent 字符串。</span><span class="sxs-lookup"><span data-stu-id="764f7-107">When .NET Framework is installed, the MSI adds ".NET CLR" and the version number to the UserAgent string.</span></span> <span data-ttu-id="764f7-108">下面的示例演示了一个嵌入到简单 HTML 页面中的脚本。</span><span class="sxs-lookup"><span data-stu-id="764f7-108">The following example shows a script embedded in a simple HTML page.</span></span> <span data-ttu-id="764f7-109">此脚本搜索 UserAgent 字符串，以确定是否安装了 .NET Framework，并在搜索结果中显示状态消息。</span><span class="sxs-lookup"><span data-stu-id="764f7-109">The script searches the UserAgent string to determine whether .NET Framework is installed, and displays a status message on the results of the search.</span></span>  
   
-```  
+```html  
 <HTML>  
   <HEAD>  
     <TITLE>Test for the .NET Framework 3.0</TITLE>  
@@ -113,13 +113,13 @@ ms.locfileid: "69960246"
 </HTML>  
 ```  
   
- <span data-ttu-id="eaa04-110">如果搜索 ".NET CLR" 版本成功, 将显示以下类型的状态消息:</span><span class="sxs-lookup"><span data-stu-id="eaa04-110">If the search for the ".NET CLR " version is successful, the following type of status message appears:</span></span>  
+ <span data-ttu-id="764f7-110">如果搜索 ".NET CLR" 版本成功，将显示以下类型的状态消息：</span><span class="sxs-lookup"><span data-stu-id="764f7-110">If the search for the ".NET CLR " version is successful, the following type of status message appears:</span></span>  
   
  `This machine has the correct version of the .NET Framework 3.0: 3.0.04425.00`  
   
  `This machine's userAgent string is: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; .NET CLR 1.1.4322; InfoPath.1; .NET CLR 2.0.50727; .NET CLR 3.0.04425.00).`  
   
- <span data-ttu-id="eaa04-111">否则, 会显示以下类型的状态消息:</span><span class="sxs-lookup"><span data-stu-id="eaa04-111">Otherwise, the following type of status message appears:</span></span>  
+ <span data-ttu-id="764f7-111">否则，会显示以下类型的状态消息：</span><span class="sxs-lookup"><span data-stu-id="764f7-111">Otherwise, the following type of status message appears:</span></span>  
   
  `This machine does not have correct version of the .NET Framework 3.0.`  
   

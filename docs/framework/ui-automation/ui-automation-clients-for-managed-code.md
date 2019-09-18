@@ -7,30 +7,30 @@ helpviewer_keywords:
 - UI Automation, clients for managed code
 - managed code, UI Automation clients
 ms.assetid: e1ed1197-3e9e-4e78-8845-92e82787faed
-ms.openlocfilehash: b8df3d07a18efcfbb6c30b46668ab8fec8736af5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 578a6da0f1545012d5a77edc3db04d52f56180bc
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69953194"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042514"
 ---
-# <a name="ui-automation-clients-for-managed-code"></a><span data-ttu-id="3a8d6-102">托管代码的 UI 自动化客户端</span><span class="sxs-lookup"><span data-stu-id="3a8d6-102">UI Automation Clients for Managed Code</span></span>
+# <a name="ui-automation-clients-for-managed-code"></a><span data-ttu-id="c1400-102">托管代码的 UI 自动化客户端</span><span class="sxs-lookup"><span data-stu-id="c1400-102">UI Automation Clients for Managed Code</span></span>
 > [!NOTE]
-> <span data-ttu-id="3a8d6-103">本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。</span><span class="sxs-lookup"><span data-stu-id="3a8d6-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="3a8d6-104">有关的最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], 请[参阅 Windows 自动化 API:UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。</span><span class="sxs-lookup"><span data-stu-id="3a8d6-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
+> <span data-ttu-id="c1400-103">本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。</span><span class="sxs-lookup"><span data-stu-id="c1400-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="c1400-104">有关的最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], 请[参阅 Windows 自动化 API:UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。</span><span class="sxs-lookup"><span data-stu-id="c1400-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
   
- <span data-ttu-id="3a8d6-105">本部分包含概述和帮助主题以帮助你开发 UI 自动化客户端。</span><span class="sxs-lookup"><span data-stu-id="3a8d6-105">This section contains overviews and how-to topics to help you develop UI Automation clients.</span></span>  
+ <span data-ttu-id="c1400-105">本部分包含概述和帮助主题以帮助你开发 UI 自动化客户端。</span><span class="sxs-lookup"><span data-stu-id="c1400-105">This section contains overviews and how-to topics to help you develop UI Automation clients.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="3a8d6-106">本节内容</span><span class="sxs-lookup"><span data-stu-id="3a8d6-106">In This Section</span></span>  
- [<span data-ttu-id="3a8d6-107">UI 自动化和屏幕缩放</span><span class="sxs-lookup"><span data-stu-id="3a8d6-107">UI Automation and Screen Scaling</span></span>](../../../docs/framework/ui-automation/ui-automation-and-screen-scaling.md)  
- [<span data-ttu-id="3a8d6-108">UI 自动化对标准控件的支持</span><span class="sxs-lookup"><span data-stu-id="3a8d6-108">UI Automation Support for Standard Controls</span></span>](../../../docs/framework/ui-automation/ui-automation-support-for-standard-controls.md)  
- [<span data-ttu-id="3a8d6-109">客户端的 UI 自动化事件</span><span class="sxs-lookup"><span data-stu-id="3a8d6-109">UI Automation Events for Clients</span></span>](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md)  
- [<span data-ttu-id="3a8d6-110">在 UI 自动化客户端中缓存</span><span class="sxs-lookup"><span data-stu-id="3a8d6-110">Caching in UI Automation Clients</span></span>](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)  
- [<span data-ttu-id="3a8d6-111">客户端的 UI 自动化属性</span><span class="sxs-lookup"><span data-stu-id="3a8d6-111">UI Automation Properties for Clients</span></span>](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)  
- [<span data-ttu-id="3a8d6-112">UI 自动化客户端的控件模式映射</span><span class="sxs-lookup"><span data-stu-id="3a8d6-112">Control Pattern Mapping for UI Automation Clients</span></span>](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)  
- [<span data-ttu-id="3a8d6-113">客户端的 UI 自动化控件模式</span><span class="sxs-lookup"><span data-stu-id="3a8d6-113">UI Automation Control Patterns for Clients</span></span>](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)  
- [<span data-ttu-id="3a8d6-114">获取 UI 自动化元素</span><span class="sxs-lookup"><span data-stu-id="3a8d6-114">Obtaining UI Automation Elements</span></span>](../../../docs/framework/ui-automation/obtaining-ui-automation-elements.md)  
- [<span data-ttu-id="3a8d6-115">UI 自动化线程处理问题</span><span class="sxs-lookup"><span data-stu-id="3a8d6-115">UI Automation Threading Issues</span></span>](../../../docs/framework/ui-automation/ui-automation-threading-issues.md)  
- [<span data-ttu-id="3a8d6-116">帮助主题</span><span class="sxs-lookup"><span data-stu-id="3a8d6-116">How-to Topics</span></span>](../../../docs/framework/ui-automation/ui-automation-clients-for-managed-code-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="c1400-106">本节内容</span><span class="sxs-lookup"><span data-stu-id="c1400-106">In This Section</span></span>  
+ [<span data-ttu-id="c1400-107">UI 自动化和屏幕缩放</span><span class="sxs-lookup"><span data-stu-id="c1400-107">UI Automation and Screen Scaling</span></span>](ui-automation-and-screen-scaling.md)  
+ [<span data-ttu-id="c1400-108">UI 自动化对标准控件的支持</span><span class="sxs-lookup"><span data-stu-id="c1400-108">UI Automation Support for Standard Controls</span></span>](ui-automation-support-for-standard-controls.md)  
+ [<span data-ttu-id="c1400-109">客户端的 UI 自动化事件</span><span class="sxs-lookup"><span data-stu-id="c1400-109">UI Automation Events for Clients</span></span>](ui-automation-events-for-clients.md)  
+ [<span data-ttu-id="c1400-110">在 UI 自动化客户端中缓存</span><span class="sxs-lookup"><span data-stu-id="c1400-110">Caching in UI Automation Clients</span></span>](caching-in-ui-automation-clients.md)  
+ [<span data-ttu-id="c1400-111">客户端的 UI 自动化属性</span><span class="sxs-lookup"><span data-stu-id="c1400-111">UI Automation Properties for Clients</span></span>](ui-automation-properties-for-clients.md)  
+ [<span data-ttu-id="c1400-112">UI 自动化客户端的控件模式映射</span><span class="sxs-lookup"><span data-stu-id="c1400-112">Control Pattern Mapping for UI Automation Clients</span></span>](control-pattern-mapping-for-ui-automation-clients.md)  
+ [<span data-ttu-id="c1400-113">客户端的 UI 自动化控件模式</span><span class="sxs-lookup"><span data-stu-id="c1400-113">UI Automation Control Patterns for Clients</span></span>](ui-automation-control-patterns-for-clients.md)  
+ [<span data-ttu-id="c1400-114">获取 UI 自动化元素</span><span class="sxs-lookup"><span data-stu-id="c1400-114">Obtaining UI Automation Elements</span></span>](obtaining-ui-automation-elements.md)  
+ [<span data-ttu-id="c1400-115">UI 自动化线程处理问题</span><span class="sxs-lookup"><span data-stu-id="c1400-115">UI Automation Threading Issues</span></span>](ui-automation-threading-issues.md)  
+ [<span data-ttu-id="c1400-116">帮助主题</span><span class="sxs-lookup"><span data-stu-id="c1400-116">How-to Topics</span></span>](ui-automation-clients-for-managed-code-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="3a8d6-117">参考</span><span class="sxs-lookup"><span data-stu-id="3a8d6-117">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="c1400-117">参考</span><span class="sxs-lookup"><span data-stu-id="c1400-117">Reference</span></span>  
  <xref:System.Windows.Automation>

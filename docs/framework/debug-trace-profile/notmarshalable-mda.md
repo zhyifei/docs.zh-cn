@@ -13,32 +13,32 @@ helpviewer_keywords:
 ms.assetid: 96e7b2c1-843f-4d64-b519-740c3a18b50a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 30db07ddf935b5ce13b1fe4212f7f6a40270ae93
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ddb6b0b5c2248d215245e0f881c8e7c91b13e480
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61753694"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052430"
 ---
-# <a name="notmarshalable-mda"></a><span data-ttu-id="0b0fa-102">notMarshalable MDA</span><span class="sxs-lookup"><span data-stu-id="0b0fa-102">notMarshalable MDA</span></span>
-<span data-ttu-id="0b0fa-103">当公共语言运行时 (CLR) 尝试跨上下文封送接口时，如果遇到 COM 接口指针且没有有效的注册代理/存根或 `IMarshal` 接口实现不正确，将激活 `notMarshalable` 托管调试助手 (MDA)。</span><span class="sxs-lookup"><span data-stu-id="0b0fa-103">The `notMarshalable` managed debugging assistant (MDA) is activated when the common language runtime (CLR) encounters a COM interface pointer without a valid registered proxy/stub or an incorrect `IMarshal` interface implementation while attempting to marshal the interface across contexts.</span></span>  
+# <a name="notmarshalable-mda"></a><span data-ttu-id="9d411-102">notMarshalable MDA</span><span class="sxs-lookup"><span data-stu-id="9d411-102">notMarshalable MDA</span></span>
+<span data-ttu-id="9d411-103">当公共语言运行时 (CLR) 尝试跨上下文封送接口时，如果遇到 COM 接口指针且没有有效的注册代理/存根或 `IMarshal` 接口实现不正确，将激活 `notMarshalable` 托管调试助手 (MDA)。</span><span class="sxs-lookup"><span data-stu-id="9d411-103">The `notMarshalable` managed debugging assistant (MDA) is activated when the common language runtime (CLR) encounters a COM interface pointer without a valid registered proxy/stub or an incorrect `IMarshal` interface implementation while attempting to marshal the interface across contexts.</span></span>  
   
-## <a name="symptoms"></a><span data-ttu-id="0b0fa-104">症状</span><span class="sxs-lookup"><span data-stu-id="0b0fa-104">Symptoms</span></span>  
- <span data-ttu-id="0b0fa-105">调用得不到响应，或在 COM 接口指针的错误上下文中进行调用。</span><span class="sxs-lookup"><span data-stu-id="0b0fa-105">Calls are not serviced, or calls occur in the wrong context for COM interface pointers.</span></span>  
+## <a name="symptoms"></a><span data-ttu-id="9d411-104">症状</span><span class="sxs-lookup"><span data-stu-id="9d411-104">Symptoms</span></span>  
+ <span data-ttu-id="9d411-105">调用得不到响应，或在 COM 接口指针的错误上下文中进行调用。</span><span class="sxs-lookup"><span data-stu-id="9d411-105">Calls are not serviced, or calls occur in the wrong context for COM interface pointers.</span></span>  
   
-## <a name="cause"></a><span data-ttu-id="0b0fa-106">原因</span><span class="sxs-lookup"><span data-stu-id="0b0fa-106">Cause</span></span>  
- <span data-ttu-id="0b0fa-107">尝试跨上下文封送接口时，没有有效的注册代理/存根或 `IMarshal` 不正确。</span><span class="sxs-lookup"><span data-stu-id="0b0fa-107">No valid registered proxy/stub or an incorrect `IMarshal` while attempting to marshal the interface across contexts.</span></span>  
+## <a name="cause"></a><span data-ttu-id="9d411-106">原因</span><span class="sxs-lookup"><span data-stu-id="9d411-106">Cause</span></span>  
+ <span data-ttu-id="9d411-107">尝试跨上下文封送接口时，没有有效的注册代理/存根或 `IMarshal` 不正确。</span><span class="sxs-lookup"><span data-stu-id="9d411-107">No valid registered proxy/stub or an incorrect `IMarshal` while attempting to marshal the interface across contexts.</span></span>  
   
-## <a name="resolution"></a><span data-ttu-id="0b0fa-108">解决方法</span><span class="sxs-lookup"><span data-stu-id="0b0fa-108">Resolution</span></span>  
- <span data-ttu-id="0b0fa-109">请确保注册了代理存根，且 `IMarshal` 实现有效。</span><span class="sxs-lookup"><span data-stu-id="0b0fa-109">Make sure you have a proxy stub registered and that the `IMarshal` implementation is valid.</span></span>  
+## <a name="resolution"></a><span data-ttu-id="9d411-108">解决方法</span><span class="sxs-lookup"><span data-stu-id="9d411-108">Resolution</span></span>  
+ <span data-ttu-id="9d411-109">请确保注册了代理存根，且 `IMarshal` 实现有效。</span><span class="sxs-lookup"><span data-stu-id="9d411-109">Make sure you have a proxy stub registered and that the `IMarshal` implementation is valid.</span></span>  
   
-## <a name="effect-on-the-runtime"></a><span data-ttu-id="0b0fa-110">对运行时的影响</span><span class="sxs-lookup"><span data-stu-id="0b0fa-110">Effect on the Runtime</span></span>  
- <span data-ttu-id="0b0fa-111">此 MDA 对运行时无任何影响。</span><span class="sxs-lookup"><span data-stu-id="0b0fa-111">This MDA has no effect on the runtime.</span></span>  
+## <a name="effect-on-the-runtime"></a><span data-ttu-id="9d411-110">对运行时的影响</span><span class="sxs-lookup"><span data-stu-id="9d411-110">Effect on the Runtime</span></span>  
+ <span data-ttu-id="9d411-111">此 MDA 对运行时无任何影响。</span><span class="sxs-lookup"><span data-stu-id="9d411-111">This MDA has no effect on the runtime.</span></span>  
   
-## <a name="output"></a><span data-ttu-id="0b0fa-112">Output</span><span class="sxs-lookup"><span data-stu-id="0b0fa-112">Output</span></span>  
- <span data-ttu-id="0b0fa-113">描述问题的消息。</span><span class="sxs-lookup"><span data-stu-id="0b0fa-113">A message describing the problem.</span></span>  
+## <a name="output"></a><span data-ttu-id="9d411-112">Output</span><span class="sxs-lookup"><span data-stu-id="9d411-112">Output</span></span>  
+ <span data-ttu-id="9d411-113">描述问题的消息。</span><span class="sxs-lookup"><span data-stu-id="9d411-113">A message describing the problem.</span></span>  
   
-## <a name="configuration"></a><span data-ttu-id="0b0fa-114">配置</span><span class="sxs-lookup"><span data-stu-id="0b0fa-114">Configuration</span></span>  
+## <a name="configuration"></a><span data-ttu-id="9d411-114">配置</span><span class="sxs-lookup"><span data-stu-id="9d411-114">Configuration</span></span>  
   
 ```xml  
 <mdaConfig>  
@@ -48,8 +48,8 @@ ms.locfileid: "61753694"
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="0b0fa-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="0b0fa-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9d411-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="9d411-115">See also</span></span>
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [<span data-ttu-id="0b0fa-116">使用托管调试助手诊断错误</span><span class="sxs-lookup"><span data-stu-id="0b0fa-116">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [<span data-ttu-id="0b0fa-117">互操作封送处理</span><span class="sxs-lookup"><span data-stu-id="0b0fa-117">Interop Marshaling</span></span>](../../../docs/framework/interop/interop-marshaling.md)
+- [<span data-ttu-id="9d411-116">使用托管调试助手诊断错误</span><span class="sxs-lookup"><span data-stu-id="9d411-116">Diagnosing Errors with Managed Debugging Assistants</span></span>](diagnosing-errors-with-managed-debugging-assistants.md)
+- [<span data-ttu-id="9d411-117">互操作封送处理</span><span class="sxs-lookup"><span data-stu-id="9d411-117">Interop Marshaling</span></span>](../interop/interop-marshaling.md)
