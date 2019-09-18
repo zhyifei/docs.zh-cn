@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 32f8b7c6-3f73-455d-8e13-9846895bd43b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c8f78e926835e86fdc20da5e4e1bc66c4b6ab1a2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: baabff187fb8a22aea37c4fb4c1dc11a680d3bb8
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625449"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70853850"
 ---
 # <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>如何：配置基于 .NET Framework 的 COM 组件以进行免注册激活
 基于 .NET Framework 的组件的免注册激活略复杂于 COM 组件的免注册激活。 安装需要两个清单：  
@@ -166,9 +166,7 @@ ms.locfileid: "64625449"
   
 3. 再次编译该程序集的源文件，并使用 /win32res 选项指定资源文件：  
   
-    ```  
-    /win32res:myresource.res  
-    ```  
+    `/win32res:myresource.res`  
   
      同样，`myresource.res` 是包含嵌入资源的资源文件的名称。  
   

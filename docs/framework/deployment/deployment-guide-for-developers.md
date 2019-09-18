@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 179170c0cafc67027012d2306281eb2cd1d967a4
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: 8dd7bac8c0cb14421016efad60a7ec0d672e5622
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67170659"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854020"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>.NET Framework 部署指南（针对开发人员）
 本主题为想要随自己的应用一起安装任何 .NET Framework 版本（从 .NET Framework 4.5 到 [!INCLUDE[net_current](../../../includes/net-current-version.md)]）的开发人员提供了相关信息。
@@ -126,7 +126,7 @@ ClickOnce 部署适用于使用 Visual Basic 和 Visual C# 创建的项目，但
 
 1. 打开要发布的应用项目。
 
-2. 在“解决方案资源管理器”中，打开项目的快捷菜单，然后选择 **“属性”** 。
+2. 在“解决方案资源管理器”中，打开项目的快捷菜单，然后选择 **“属性”**。
 
 3. 选择 **“发布”** 窗格。
 
@@ -136,11 +136,11 @@ ClickOnce 部署适用于使用 Visual Basic 和 Visual C# 创建的项目，但
 
 6. 在必备组件列表中，找到并选择已用于生成项目的.NET Framework 版本。
 
-7. 选择一个选项以指定必备组件的源位置，然后选择 **“确定”** 。
+7. 选择一个选项以指定必备组件的源位置，然后选择 **“确定”**。
 
      如果你提供 .NET Framework 下载位置的 URL，则可以指定 Microsoft 下载中心网站或你自己的网站。 如果要将可再发行组件包放置在自己的服务器上，则它必须为脱机安装程序，而不是 Web 安装程序。 你只能链接到 Microsoft 下载中心上的 Web 安装程序。 该 URL 还可以指定一个用于分发你的应用的磁盘。
 
-8. 在 **“属性页”** 对话框中，选择 **“确定”** 。
+8. 在 **“属性页”** 对话框中，选择 **“确定”**。
 
 <a name="installaware"></a>
 
@@ -152,19 +152,19 @@ InstallAware 从单个源生成 Windows 应用 (APPX)、Windows Installer (MSI)�
 
 在 Visual Studio 中，若要选择 InstallShield 部署并添加对 .NET Framework 的依赖项：
 
-1. 在 Visual Studio 菜单栏上，依次选择 **“文件”** 、 **“新建”** 和 **“项目”** 。
+1. 在 Visual Studio 菜单栏上，依次选择 **“文件”**、 **“新建”** 和 **“项目”**。
 
-2. 在 **“新建项目”** 对话框的左窗格中，依次选择 **“其他项目类型”** 、 **“安装和部署”** 、 **“InstallShield LE”** 。
+2. 在 **“新建项目”** 对话框的左窗格中，依次选择 **“其他项目类型”**、 **“安装和部署”**、 **“InstallShield LE”**。
 
-3. 在 **“名称”** 框中，键入你的项目名称，然后选择 **“确定”** 。
+3. 在 **“名称”** 框中，键入你的项目名称，然后选择 **“确定”**。
 
-4. 如果你是首次创建安装和部署项目，请选择“转到 InstallShield”  或“启用 InstallShield Limited Edition”  ，以下载你的 Microsoft Visual Studio 版本对应的 InstallShield Limited Edition。 重新启动 Visual Studio。
+4. 如果你是首次创建安装和部署项目，请选择“转到 InstallShield”或“启用 InstallShield Limited Edition”，以下载你的 Microsoft Visual Studio 版本对应的 InstallShield Limited Edition。 重新启动 Visual Studio。
 
 5. 转到 **“项目助手”** 向导，选择 **“应用程序文件”** 以添加项目输出。 你可以使用此向导配置其他项目特性。
 
 6. 转到 **“安装要求”** ，选择要安装的操作系统和 .NET Framework 的版本。
 
-7. 打开安装项目的快捷菜单，然后选择 **“生成”** 。
+7. 打开安装项目的快捷菜单，然后选择 **“生成”**。
 
 <a name="wix"></a>
 
@@ -200,31 +200,23 @@ Windows Installer XML (WiX) 工具集通过 XML 源代码生成 Windows 安装�
 
 若要静默链接 .NET Framework 安装过程并由 .NET Framework 安装程序来提供 UI，请将下列命令添加到你的安装程序：
 
-```
-<.NET Framework redistributable> /q /norestart /ChainingPackage <PackageName>
-```
+`<.NET Framework redistributable> /q /norestart /ChainingPackage <PackageName>`
 
 例如，如果你的可执行程序是 Contoso.exe 并且希望静默安装 .NET Framework 4.5 脱机可再发行组件包，请使用以下命令：
 
-```
-dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage Contoso
-```
+`dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage Contoso`
 
 你可以使用其他命令行选项来自定义安装。 例如:
 
 - 若要为用户提供一种方法来关闭运行中的 .NET Framework 应用，从而最大程度减少系统重新启动，请按照如下方式设置被动模式并使用 `/showrmui` 选项：
 
-    ```
-    dotNetFx45_Full_x86_x64.exe /norestart /passive /showrmui /ChainingPackage Contoso
-    ```
+    `dotNetFx45_Full_x86_x64.exe /norestart /passive /showrmui /ChainingPackage Contoso`
 
      此命令允许重新启动管理器显示一个消息框，用户可以在安装 .NET Framework 之前关闭 .NET Framework 应用。
 
 - 如果使用 Web 安装程序，则可以使用 `/LCID` 选项来指定语言包。 例如，若要将 .NET Framework 4.5 Web 安装程序链接到 Contoso 安装程序并安装日语语言包，请将下列命令添加到应用的安装过程：
 
-    ```
-    dotNetFx45_Full_setup.exe /q /norestart /ChainingPackage Contoso /LCID 1041
-    ```
+    `dotNetFx45_Full_setup.exe /q /norestart /ChainingPackage Contoso /LCID 1041`
 
      如果省略 `/LCID` 选项，则安装程序将安装与用户的 MUI 设置匹配的语言包。
 
@@ -292,15 +284,15 @@ dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage Contoso
 
 ### <a name="detecting-the-language-packs"></a>检测语言包
 
-可以测试是否已安装特定语言包，方法是在注册表的 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\\LCID 文件夹内查找名为 `Release` 的 DWORD 值  。 （请注意，“NET Framework Setup”不以句点开头。）LCID 指定一个区域设置标识符；有关这些标识符的列表，请参阅[支持的语言](#supported-languages)  。
+可以测试是否已安装特定语言包，方法是在注册表的 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\\LCID 文件夹内查找名为 `Release` 的 DWORD 值。 （请注意，“NET Framework Setup”不以句点开头。）LCID 指定一个区域设置标识符；有关这些标识符的列表，请参阅[支持的语言](#supported-languages)。
 
-例如，若要检测是否安装了完整的日语语言包 (LCID=1041)，请在注册表中查找下列值：
+例如，若要检测是否安装了完整的日语语言包 (LCID=1041)，请在注册表中检索以下命名值：
 
-```
-Key: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\1041
-Name: Release
-Type: DWORD
-```
+| | |
+|-|-|
+| 键 | HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\1041 |
+| name | Release |
+| 类型 | DWORD |
 
 若要确定是否已安装 .NET Framework 4.5 到 4.7.2 之间的某个特定版本的最终版本语言包，请按照前一部分[检测 .NET Framework](#detect_net) 中所述检查 RELEASE 项 DWORD 值的值。
 
@@ -337,9 +329,7 @@ Type: DWORD
 
 若要随 .NET framework 脱机安装程序一起安装语言包，你必须将其链接到应用的安装程序。 例如，若要部署带有日语语言包的.NET Framework 4.5.1 脱机安装程序，请使用下列命令：
 
-```
-NDP451-KB2858728-x86-x64-AllOS-JPN.exe /q /norestart /ChainingPackage <ProductName>
-```
+`NDP451-KB2858728-x86-x64-AllOS-JPN.exe /q /norestart /ChainingPackage <ProductName>`
 
 如果使用 Web 安装程序，则不必链接语言包；安装程序将安装与用户的 MUI 设置匹配的语言包。 如果要安装其他语言，则可以使用 `/LCID` 选项指定语言包。
 
@@ -380,7 +370,7 @@ NDP451-KB2858728-x86-x64-AllOS-JPN.exe /q /norestart /ChainingPackage <ProductNa
 
 ## <a name="uninstalling-the-net-framework"></a>卸载 .NET Framework
 
-从 [!INCLUDE[win8](../../../includes/win8-md.md)] 开始，你可以使用“控制面板”中的“打开或关闭 Windows 功能”  来卸载 .NET Framework 4.5 或其中一个单点版本。 在旧版本 Windows 中，你可以使用“控制面板”中的“添加或删除程序”  来卸载 .NET Framework 4.5 或其中一个单点版本。
+从 [!INCLUDE[win8](../../../includes/win8-md.md)] 开始，你可以使用“控制面板”中的“打开或关闭 Windows 功能”来卸载 .NET Framework 4.5 或其中一个单点版本。 在旧版本 Windows 中，你可以使用“控制面板”中的“添加或删除程序”来卸载 .NET Framework 4.5 或其中一个单点版本。
 
 > [!IMPORTANT]
 > 对于 Windows 7 和更低版本的操作系统，卸载 .NET Framework 4.5.1、4.5.2、4.6、4.6.1、4.6.2、4.7、4.7.1、4.7.2 或 4.8 不会还原 .NET Framework 4.5 文件，卸载 .NET Framework 4.5 不会还原 .NET Framework 4 文件。 如果要回到旧版本，你必须重新安装此版本及其任何更新。
@@ -394,7 +384,7 @@ NDP451-KB2858728-x86-x64-AllOS-JPN.exe /q /norestart /ChainingPackage <ProductNa
 |选项|说明|
 |------------|-----------------|
 |**/CEIPConsent**|覆盖默认行为并向 Microsoft 发送匿名反馈以改善将来的部署体验。 仅当安装程序询问你是否同意安装并且用户授权向 Microsoft 发送匿名反馈时，才可以使用此选项。|
-|**/chainingpackage** `packageName`|指定执行链接的可执行文件的名称。 向 Microsoft 发送此信息作为匿名反馈以帮助改进将来的部署体验。<br /><br /> 如果包名称包含空格，则可以用双引号作为分隔符；例如： **/chainingpackage "Lucerne Publishing"** 。 有关链接包的示例，请参阅 MSDN 库中的 [从安装包获取进度信息](https://go.microsoft.com/fwlink/?LinkId=181926) 。|
+|**/chainingpackage** `packageName`|指定执行链接的可执行文件的名称。 向 Microsoft 发送此信息作为匿名反馈以帮助改进将来的部署体验。<br /><br /> 如果包名称包含空格，则可以用双引号作为分隔符；例如： **/chainingpackage "Lucerne Publishing"**。 有关链接包的示例，请参阅 MSDN 库中的 [从安装包获取进度信息](https://go.microsoft.com/fwlink/?LinkId=181926) 。|
 |**/LCID**  `LCID`<br /><br /> 其中 `LCID` 指定一个区域设置标识符（请参见 [支持的语言](#supported-languages)）|安装由 `LCID` 指定的语言包，并强制使用此语言显示 UI（除非设置为安静模式）。<br /><br /> 对于 Web 安装程序，此选项将从 Web 链接并安装语言包。 **注意：** 只能随 Web 安装程序一起使用此选项。|
 |**/log** `file` &#124; `folder`|指定日志文件的位置。 默认为过程的临时文件夹，默认文件名基于安装包。 如果文件扩展名为 .txt，则生成文本日志。 如果指定其他扩展名或不指定扩展名，则创建 HTML 日志。|
 |**/msioptions**|指定要为 .msi 和 .msp 项传递的选项；例如： `/msioptions "PROPERTY1='Value'"`。|

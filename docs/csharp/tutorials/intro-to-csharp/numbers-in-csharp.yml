@@ -11,12 +11,12 @@ metadata:
   nextTutorialTitle: C# 中的分支和循环
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: 7122bda62465482340ebdd2b1dc37577de9a0e69
-  ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+  ms.openlocfilehash: af06d938f86841620784909b16e72d000452fc2a
+  ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
   ms.translationtype: HT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 07/09/2019
-  ms.locfileid: "67661021"
+  ms.lasthandoff: 09/10/2019
+  ms.locfileid: "70850684"
 items:
 - durationInMinutes: 1
   content: >
@@ -412,7 +412,7 @@ items:
 
     > 此联机编码体验处于预览模式。 如果遇到问题，请[在 dotnet/try 存储库上](https://github.com/dotnet/try/issues)进行报告。
 - content: >-
-    你已完成“C# 中的数字”交互式教程。 可单击下方的“分支和循环”链接开始下一个交互式教程，或者可访问 [.NET 站点](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial)下载 .NET Core SDK，在计算机上创建项目，并继续编码。 “继续学习”步骤将带你回到教程中。
+    你已完成“C# 中的数字”交互式教程。 可单击下方的“分支和循环”链接开始下一个交互式教程，或者可访问 [.NET 站点](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)下载 .NET Core SDK，在计算机上创建项目，并继续编码。 请通过“后续步骤”部分返回到这些教程。
 
 
     可以参阅下面的主题，详细了解 C# 中的数字：

@@ -5,18 +5,20 @@ author: mairaw
 ms.author: adegeo
 ms.custom: updateeachvsrelease
 ms.date: 07/13/2019
-ms.openlocfilehash: 5086b185ee2d49c7b569ed0cb62b4c8995f9982c
-ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
+ms.openlocfilehash: d391c18a371d721419c298f2987894f16ecbd169
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68433915"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969928"
 ---
 # <a name="prerequisites-for-net-core-on-macos"></a>macOS 上 .NET Core 的先决条件
 
 本文介绍了在 macOS 计算机上开发、部署和运行 .NET Core 应用程序所需的受支持的 macOS 版本和 .NET Core 依赖项。 支持的操作系统版本和随附的依赖项适用于在 Mac 上开发 .NET Core 应用的三种方法：[结合使用常用编辑器和命令行](tutorials/using-with-xplat-cli.md)、[Visual Studio Code](https://code.visualstudio.com/) 和 [Visual Studio for Mac](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)。
 
 ## <a name="supported-macos-versions"></a>支持的 macOS 版本
+
+<!-- markdownlint-disable MD025 -->
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
@@ -26,7 +28,7 @@ ms.locfileid: "68433915"
 
 有关 .NET Core 2.1 和 .NET Core 2.2 支持的操作系统、发行版本和版本、不支持的 OS 版本和生命周期策略链接的完整列表，请参阅 [.NET Core 2.1 支持的 OS 版本](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md)和 [.NET Core 2.2 支持的 OS 版本](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md)。
 
-有关下载链接和详细信息，请参阅 [.NET Core 2.2 下载](https://www.microsoft.com/net/download/dotnet-core/2.2)或 [.NET Core 2.1 下载](https://www.microsoft.com/net/download/dotnet-core/2.1)。
+有关下载链接和详细信息，请参阅 [.NET Core 2.2 下载](https://dotnet.microsoft.com/download/dotnet-core/2.2)或 [.NET Core 2.1 下载](https://dotnet.microsoft.com/download/dotnet-core/2.1)。
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
@@ -37,7 +39,7 @@ ms.locfileid: "68433915"
 
 有关 .NET Core 1.1 和 .NET Core 1.0 支持的操作系统、发行版本和版本、不支持的 OS 版本和生命周期策略链接的完整列表，请参阅 [.NET Core 1.1 支持的 OS 版本](https://github.com/dotnet/core/blob/master/release-notes/1.1/1.1.md)和 [.NET Core 1.0 支持的 OS 版本](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0-supported-os.md)。
 
-有关下载链接和详细信息，请参阅 [.NET Core 1.1 下载](https://www.microsoft.com/net/download/dotnet-core/1.1)或 [.NET Core 1.0 下载](https://www.microsoft.com/net/download/dotnet-core/1.0)。
+有关下载链接和详细信息，请参阅 [.NET Core 1.1 下载](https://dotnet.microsoft.com/download/dotnet-core/1.1)或 [.NET Core 1.0 下载](https://dotnet.microsoft.com/download/dotnet-core/1.0)。
 
 # <a name="net-core-30tabnetcore30"></a>[.NET Core 3.0](#tab/netcore30)
 
@@ -47,7 +49,7 @@ ms.locfileid: "68433915"
 
 有关 .NET Core 3.0 支持的操作系统、发行版本和版本、不支持的 OS 版本和生命周期策略链接的完整列表，请参阅 [.NET Core 3.0 支持的 OS 版本](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md)。
 
-有关下载链接和详细信息，请参阅 [.NET Core 3.0 下载](https://www.microsoft.com/net/download/dotnet-core/3.0)。
+有关下载链接和详细信息，请参阅 [.NET Core 3.0 下载](https://dotnet.microsoft.com/download/dotnet-core/3.0)。
 
 ---
 
@@ -55,7 +57,7 @@ ms.locfileid: "68433915"
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
-从 [.NET 下载](https://www.microsoft.com/net/download/core)下载并安装 .NET Core SDK。 如果在 macOS 上安装时遇到问题，请查阅适用于已安装的版本的[已知问题](https://github.com/dotnet/core/tree/master/release-notes/2.1)主题。
+从 [.NET 下载](https://dotnet.microsoft.com/download)页面下载并安装 .NET Core SDK。 如果在 macOS 上安装时遇到问题，请查阅适用于已安装的版本的[已知问题](https://github.com/dotnet/core/tree/master/release-notes/2.1)主题。
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
@@ -69,11 +71,11 @@ ln -s /usr/local/opt/openssl/lib/libcrypto.1.0.0.dylib /usr/local/lib/
 ln -s /usr/local/opt/openssl/lib/libssl.1.0.0.dylib /usr/local/lib/
 ```
 
-从 [.NET 下载](https://www.microsoft.com/net/download/core)下载并安装 .NET Core SDK。 如果在 macOS 上安装时遇到问题，请查阅 [1.0.0 已知问题](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0.0-known-issues.md)和 [1.0.1 已知问题](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0.1-known-issues.md)主题。
+从 [.NET 下载](https://dotnet.microsoft.com/download)页面下载并安装 .NET Core SDK。 如果在 macOS 上安装时遇到问题，请查阅 [1.0.0 已知问题](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0.0-known-issues.md)和 [1.0.1 已知问题](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0.1-known-issues.md)主题。
 
 # <a name="net-core-30tabnetcore30"></a>[.NET Core 3.0](#tab/netcore30)
 
-从 [.NET 下载](https://www.microsoft.com/net/download/core)下载并安装 .NET Core SDK。 如果在 macOS 上进行安装时遇到问题，请查阅[发行说明](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md)主题以了解所安装的版本。
+从 [.NET 下载](https://dotnet.microsoft.com/download)页面下载并安装 .NET Core SDK。 如果在 macOS 上进行安装时遇到问题，请查阅[发行说明](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md)主题以了解所安装的版本。
 
 ---
 

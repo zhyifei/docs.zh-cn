@@ -3,17 +3,17 @@ title: 使用广义加性模型和形状函数来解释模型
 description: 在 ML.NET 中使用广义加性模型和形状函数来解释模型
 ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: ef56f737a2ad0cba616e32229ac3a395146fb6d2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c58cf823007196c35da093fab7423c1e40ba1158
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662134"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855605"
 ---
 # <a name="use-generalized-additive-models-and-shape-functions-for-model-explainability-in-mlnet"></a>在 ML.NET 中使用广义加性模型和形状函数来解释模型
 
 > [!NOTE]
-> 本主题引用 ML.NET（目前处于预览状态），且材料可能会更改。 有关详细信息，请访问 [ML.NET 简介](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet)。
+> 本主题引用 ML.NET（目前处于预览状态），且材料可能会更改。 有关详细信息，请访问 [ML.NET](https://dotnet.microsoft.com/apps/machinelearning-ai/ml-dotnet) 页。
 
 此操作说明和相关示例目前使用的是 ML.NET 版本 0.10。 有关详细信息，请参阅 [dotnet/machinelearning GitHub 存储库](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes)上的发行说明。
 

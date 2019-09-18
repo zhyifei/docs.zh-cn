@@ -9,12 +9,12 @@ metadata:
   level: Beginner
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: 8ee13ec60f0504982c33ecc61940b731d320d2de
-  ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+  ms.openlocfilehash: 6dfbbbb6ef64b3dbb83d15ba66860acb7c5b3585
+  ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
   ms.translationtype: HT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 05/19/2019
-  ms.locfileid: "65880563"
+  ms.lasthandoff: 09/10/2019
+  ms.locfileid: "70850740"
 items:
 - durationInMinutes: 1
   content: >
@@ -227,7 +227,7 @@ items:
 
     > 此联机编码体验处于预览模式。 如果遇到问题，请[在 dotnet/try 存储库上](https://github.com/dotnet/try/issues)进行报告。
 - content: >-
-    你已完成列表交互式教程。 这是 C# 交互式教程的最终简介。 可以访问 [.NET 站点](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial)下载 .NET Core SDK，在计算机上创建项目，并继续编码。 “继续学习”步骤将带你返回到这些教程以在计算机上生成项目。
+    你已完成列表交互式教程。 这是 C# 交互式教程的最终简介。 可以访问 [.NET 站点](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)下载 .NET Core SDK，在计算机上创建项目，并继续编码。 请通过“后续步骤”部分返回到这些教程。
 
 
     可以在以下文章中了解有关 [.NET 集合](../../../standard/collections/index.md)的详细信息：

@@ -11,12 +11,12 @@ metadata:
   displayType: two-column
   interactive: csharp
   ms.custom: mvc
-  ms.openlocfilehash: ef52031f75bd2004bcb5927524a9c82ac8fbf36f
-  ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+  ms.openlocfilehash: 36254062835b9ab70ba470f6286b7515003dec11
+  ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
   ms.translationtype: HT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 03/05/2019
-  ms.locfileid: "57370314"
+  ms.lasthandoff: 09/10/2019
+  ms.locfileid: "70850796"
 items:
 - durationInMinutes: 1
   content: >
@@ -296,7 +296,7 @@ items:
 
     > 此联机编码体验处于预览模式。 如果遇到问题，请[在 dotnet/try 存储库上](https://github.com/dotnet/try/issues)进行报告。
 - content: >-
-    你已完成“C# 初探”C# 教程简介。 可单击下方的“C# 中的数字”链接开始下一个交互式教程，或者可访问 [.NET 站点](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial)下载 .NET Core SDK，在计算机上创建项目，并继续编码。 “继续学习”步骤将带你回到教程中。
+    你已完成“C# 初探”C# 教程简介。 可单击下方的“C# 中的数字”链接开始下一个交互式教程，或者可访问 [.NET 站点](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)下载 .NET Core SDK，在计算机上创建项目，并继续编码。 请通过“后续步骤”部分返回到这些教程。
 
 
     有关 `string` 类型的其他阅读材料：

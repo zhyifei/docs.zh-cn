@@ -1,18 +1,18 @@
 ---
 title: = 运算符 - C# 参考
 ms.custom: seodec18
-ms.date: 06/21/2019
+ms.date: 09/10/2019
 f1_keywords:
 - =_CSharpKeyword
 helpviewer_keywords:
 - = operator [C#]
 ms.assetid: d802a6d5-32f0-42b8-b180-12f5a081bfc1
-ms.openlocfilehash: f30b48fc6bd1e896658a7234a58409ea9a0f5e6f
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: a450a55524f33f4f06ed077aba864e8f641a458d
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69601954"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70924658"
 ---
 # <a name="-operator-c-reference"></a>= 运算符（C# 参考）
 
@@ -61,6 +61,10 @@ x = x op y
 不同的是 `x` 只计算一次。
 
 [算术](arithmetic-operators.md#compound-assignment)、[布尔逻辑](boolean-logical-operators.md#compound-assignment)以及[逻辑位和移位](bitwise-and-shift-operators.md#compound-assignment)运算符支持复合赋值。
+
+## <a name="null-coalescing-assignment"></a>Null 合并赋值
+
+从 C# 8.0 开始，只有在左操作数计算为 `null` 时，才能使用 null 合并赋值运算符 `??=` 将其右操作数的值分配给左操作数。 有关详细信息，请参阅 [?? 和 ??= 运算符](null-coalescing-operator.md)一文。
 
 ## <a name="operator-overloadability"></a>运算符可重载性
 

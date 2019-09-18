@@ -2,12 +2,12 @@
 title: 协调安排微服务和多容器应用程序，实现高可伸缩性和高可用性
 description: 发现用于安排微服务和多容器应用程序以便实现高可伸缩性和可用性的选项，以及 Azure Dev Spaces 在开发 Kubernetes 应用程序生命周期时的可能性。
 ms.date: 09/20/2018
-ms.openlocfilehash: 76fa68cee41f8d1f34ec399c346f457efae57151
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 9540ea3941e90b0f9ebfb79dff6f84bb368d0fb0
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675024"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991148"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>协调安排微服务和多容器应用程序，实现高可伸缩性和高可用性
 
@@ -15,7 +15,7 @@ ms.locfileid: "68675024"
 
 图 4-23 介绍如何部署到由多个微服务（容器）组成的应用程序群集。
 
-![群集中的组合 Docker 应用程序：为每个服务实例使用一个容器。 Docker 容器是“部署单元”，一个容器是 Docker 的一个实例。一个主机会处理许多容器](./media/image23.png)
+![群集中的组合 Docker 应用程序：为每个服务实例使用一个容器。 Docker 容器是“部署单元”，一个容器代表 Docker 的一个实例。 一个主机可以处理多个容器](./media/image23.png)
 
 图 4-23  。 容器群集
 
@@ -111,7 +111,7 @@ Azure Dev Spaces 可帮助开发团队在 Kubernetes 上提高工作效率，因
 
 **图 4-26**。 在 Azure Dev Spaces 中使用多个空间
 
-基本上可以在 Azure 中设置共享开发空间。 每位开发者都可以专注于自己负责的应用程序部分，并可以在已包含其方案所依赖的所有其他服务和云资源的开发空间中迭代开发预提交代码。 依赖项始终保持最新，开发人员就像是在生产环境中工作一样。
+基本上可以在 Azure 中设置共享开发空间。 每位开发者都可以专注于自己负责的应用程序部分，并可以在已包含其方案所依赖的所有其他服务和云资源的开发空间中迭代开发预提交代码。 依赖项始终保持最新，开发者能够以真实反映生产的方式进行工作。
 
 Azure Dev Spaces 提供了空间这一概念，允许你在相对隔离的环境中工作，而无需担心干扰你的团队工作。 每个开发空间都是层次结构的一部分，允许你使用你自己进行中的微服务从“顶部”主开发空间替代一个（或多个）微服务。
 

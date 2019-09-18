@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 64ffd57d8c0bce1d9f409adebd169b4fd3e17e06
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: 9ba6c46116d809e2881eee37b080e1952e2eb6a0
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796859"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895273"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>垃圾回收的基本知识
 
@@ -176,7 +176,7 @@ ms.locfileid: "68796859"
 
 下图演示了触发垃圾回收并导致其他线程挂起的线程。
 
-![线程触发垃圾回收时](../../../docs/standard/garbage-collection/media/gc-triggered.png "GC_Triggered") 触发垃圾回收的线程
+![线程触发垃圾回收时] (../../../docs/standard/garbage-collection/media/gc-triggered.png "GC_Triggered") 触发垃圾回收的线程
 
 [返回页首](#top)
 
@@ -208,7 +208,7 @@ ms.locfileid: "68796859"
 
 下图演示了服务器上执行垃圾回收的专用线程。
 
-![服务器垃圾回收线程](../../../docs/standard/garbage-collection/media/gc-server.png "GC_Server") 服务器垃圾回收
+![服务器垃圾回收线程] (../../../docs/standard/garbage-collection/media/gc-server.png "GC_Server") 服务器垃圾回收
 
 ### <a name="configuring-garbage-collection"></a>配置垃圾回收
 
@@ -262,7 +262,7 @@ ms.locfileid: "68796859"
 
 下图演示了在单独的专用线程上执行的并发垃圾回收。
 
-![并发垃圾回收线程](../../../docs/standard/garbage-collection/media/gc-concurrent.png "GC_Concurrent") 并发垃圾回收
+![并发垃圾回收线程] (../../../docs/standard/garbage-collection/media/gc-concurrent.png "GC_Concurrent") 并发垃圾回收
 
 [返回页首](#top)
 
@@ -270,7 +270,7 @@ ms.locfileid: "68796859"
 
 ## <a name="background-workstation-garbage-collection"></a>后台工作站垃圾回收
 
-在后台垃圾回收中，在进行第 2 代回收的过程中，将会根据需要收集暂时代（第 0 代和第 1 代）。 后台垃圾回收无法设置；它会自动运行并启用并发垃圾回收。 后台垃圾回收是对并发垃圾回收的替代。 与并发垃圾回收一样，后台垃圾回收是在一个专用线程上执行的并且只适用于第 2 代回收。
+后台垃圾回收会取代从 .NET Framework 4 开始的并发工作站垃圾回收，并从 .NET Framework 4.5 开始替换并发服务器垃圾回收。  在后台垃圾回收中，在进行第 2 代回收的过程中，将会根据需要收集暂时代（第 0 代和第 1 代）。 该操作在专用线程上执行，并且仅适用于第 2 代回收。 默认自动启用后台垃圾回收，并且可以在 .NET Framework 应用程序中使用 [\<gcConcurrent>](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) 配置设置来启用或禁用后台垃圾回收。 
 
 > [!NOTE]
 > 后台垃圾回收只在 .NET Framework 4 及更高版本中可用。 在 .NET Framework 4 中，仅支持工作站垃圾回收。 从 .NET Framework 4.5 开始，后台垃圾回收可用于工作站和服务器垃圾回收。

@@ -3,20 +3,20 @@ title: 准备建模的数据
 description: 了解如何在 ML.NET 中使用转换来操作和准备数据用于进行其他处理或建模。
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 06/25/2019
+ms.date: 09/11/2019
 ms.custom: mvc, how-to, title-hack-0625
-ms.openlocfilehash: 4b7d5a09044e49f1b57b8276b893e0fc962a3be2
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 4452aef351f33df532f3c673307dedbbf71631b8
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67397722"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929371"
 ---
 # <a name="prepare-data-for-building-a-model"></a>准备建模的数据
 
 了解如何使用 ML.NET 来准备数据用于进行其他处理或生成模型。
 
-数据通常是不干净的和稀疏的。 此外，ML.NET 机器学习算法期望输入或特征位于单个数字向量中。 因此，数据准备的目标之一是将数据转换为 ML.NET 算法所期望的格式。 
+数据通常是不干净的和稀疏的。 ML.NET 机器学习算法期望输入或特征位于单个数字向量中。 同样，必须对要预测的值（标签）进行编码，尤其当该值是分类数据时。 因此，数据准备的目标之一是将数据转换为 ML.NET 算法所期望的格式。 
 
 ## <a name="filter-data"></a>筛选数据
 

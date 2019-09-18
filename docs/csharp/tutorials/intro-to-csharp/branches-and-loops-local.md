@@ -3,18 +3,18 @@ title: 分支和循环 - C# 教程简介
 description: 在本教程的“分支和循环”中，将编写 C# 代码以研究支持条件分支和循环重复执行语句的语言语法。
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: 0da446a71f5d7a7183a8323c470087c8726bc02f
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: d329a871265ae42918fbf81c42be6667710e4c75
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69587225"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850808"
 ---
 # <a name="learn-conditional-logic-with-branch-and-loop-statements"></a>通过分支和循环语句了解条件逻辑
 
 本教程介绍了如何编写代码，从而检查变量，并根据这些变量更改执行路径。 读者可以编写 C# 代码并查看代码编译和运行结果。 本教程包含一系列课程，介绍了 C# 中的分支和循环构造。 这些课程介绍了 C# 语言的基础知识。
 
-本教程要求你有一台可用于开发的计算机。 .NET 主题 [10 分钟入门](https://www.microsoft.com/net/core)介绍了如何在 Mac、PC 或 Linux 上设置本地开发环境。 [熟悉开发工具](local-environment.md)不仅简要概述了将用到的命令，还收录了详细信息链接。
+本教程要求你有一台可用于开发的计算机。 .NET 教程 [Hello World 10 分钟入门](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)介绍了如何在 Mac、PC 或 Linux 上设置本地开发环境。 [熟悉开发工具](local-environment.md)不仅简要概述了将用到的命令，还收录了详细信息链接。
 
 ## <a name="make-decisions-using-the-if-statement"></a>使用 `if` 语句做出决定
 

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: e6bd4655-ce37-4003-8462-468a6fe2c40f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2c2eecdee3448b59422a8c6c73fc85745b41c52b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2ad74a70fff9916dc66bb4d2eacbdaf40cb241c3
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626112"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70853960"
 ---
 # <a name="net-core-and-open-source"></a>.NET Core 和开放源代码
 本主题提供有关 .NET Core 概念的简要概述并展示如何查找更多信息。 若要查找有关 .NET Core 的完整主题列表，请访问 [.NET Core 指南](../../core/index.md)。
@@ -18,7 +18,7 @@ ms.locfileid: "64626112"
 ## <a name="what-is-net-core"></a>.NET Core 是什么？   
  .NET Core 是 .NET Standard 的常规用途、模块化、跨平台和开放源代码实现。 它包含 .NET Framework 这样的许多相同 API（但 .NET Core 是较小的集）并包括支持不同操作系统和芯片目标的运行时、框架、编译器和工具组件。 .NET Core 实现主要由 ASP.NET Core 工作负载驱动，但同时也由拥有一个更现代的实现这一需求和愿望驱动。 它可以用于设备、云和嵌入式/IoT 方案。  
   
- 若要开始使用 .NET Core，请访问 [.NET Core 主页](https://www.microsoft.com/net/core)。  
+ 若要开始使用 .NET Core，请访问 .NET 教程 [Hello World 10 分钟入门](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)。  
   
  下面列出了 .NET Core 的主要特征：  
   
@@ -47,6 +47,6 @@ ms.locfileid: "64626112"
   
 ## <a name="see-also"></a>请参阅
 
-- [.NET Core主页](https://www.microsoft.com/net/core)
+- [.NET 教程 - Hello World 10 分钟入门](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)
 - [.NET Core 指南](../../core/index.md)
 - [ASP.NET Core 文档](/aspnet/core/)

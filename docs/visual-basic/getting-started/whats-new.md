@@ -8,12 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: 20d403e4a6410257068cc3414fcb8dc1e45709e9
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 3638deeafc052a2da3b438de2c504a9955a15ad3
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666868"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895255"
 ---
 # <a name="whats-new-for-visual-basic"></a>Visual Basic 的新增功能
 
@@ -21,9 +21,12 @@ ms.locfileid: "69666868"
 
 ## <a name="current-version"></a>当前版本
 
-Visual Basic 15.8 / Visual Studio 2017 版本 15.8 有关新功能，请参阅 [Visual Basic 15.8](#visual-basic-158)
+Visual Basic 16.0/Visual Studio 2019 版本 16.0  
+有关新功能，请参阅 [Visual Basic 16.0](#visual-basic-160)
 
 ## <a name="previous-versions"></a>早期版本
+
+Visual Basic 15.8 / Visual Studio 2017 版本 15.8 有关新功能，请参阅 [Visual Basic 15.8](#visual-basic-158)
 
 Visual Basic 15.5 / Visual Studio 2017 版本 15.5 有关新功能，请参阅 [Visual Basic 15.5](#visual-basic-155)
 
@@ -46,6 +49,21 @@ Visual Basic / Visual Studio 2005 `My` 类型和帮助程序类型（对应用�
 Visual Basic / Visual Studio .NET 2003 移位运算符、循环变量声明
 
 Visual Basic / Visual Studio .NET 2002 初版 Visual Basic .NET
+
+## <a name="visual-basic-160"></a>Visual Basic 16.0
+Visual Basic 16.0 侧重于向 .NET Core 提供 Visual Basic 运行时 (microsoft.visualbasic.dll) 的更多功能，这是 Visual Basic 侧重于 .NET Core 的第一个版本。 Visual Basic 运行时的许多部分都依赖于 WinForms，它们将添加到 Visual Basic 的更高版本中。 
+
+**允许在语句中的更多位置进行注释** 在 Visual Basic 15.8 及更早版本中，只允许在空行上、语句末尾或在语句中允许使用隐式行继续符的特定位置进行注释。 从 Visual Basic 16.0 开始，还允许在显式行继续符之后以及以空格开头后跟下划线的行上的语句中进行注释。
+
+```vb
+Public Sub Main()
+    cmd.CommandText = ' Comment is allowed here without _
+        "SELECT * FROM Titles JOIN Publishers " _ ' This is a comment
+        & "ON Publishers.PubId = Titles.PubID " _
+ _ ' This is a comment on a line without code
+        & "WHERE Publishers.State = 'CA'"
+End Sub
+```
 
 ## <a name="visual-basic-158"></a>Visual Basic 15.8
 
@@ -122,7 +140,7 @@ Dim number As Integer = &H_C305_F860
 
 **其他编译器开关**
 
-Visual Basic 命令行编译器现在支持 [-refout](../reference/command-line-compiler/refout-compiler-option.md) 和 [-refonly](../reference/command-line-compiler/refonly-compiler-option.md) 编译器选项，可控制引用程序集的输出   。 -refout 定义引用程序集的输出目录，-refonly 指定只通过编译输出一个引用程序集   。
+Visual Basic 命令行编译器现在支持 [-refout](../reference/command-line-compiler/refout-compiler-option.md) 和 [-refonly](../reference/command-line-compiler/refonly-compiler-option.md) 编译器选项，可控制引用程序集的输出。 -refout 定义引用程序集的输出目录，-refonly 指定只通过编译输出一个引用程序集。
 
 ## <a name="visual-basic-2017"></a>Visual Basic 2017
 
@@ -150,7 +168,7 @@ Visual Basic 命令行编译器现在支持 [-refout](../reference/command-line-
 
 有关详细信息，请参阅 [Byte](../language-reference/data-types/byte-data-type.md#literal-assignments)、[Integer](../language-reference/data-types/integer-data-type.md#literal-assignments)、[Long](../language-reference/data-types/long-data-type.md#literal-assignments)、[Short](../language-reference/data-types/short-data-type.md#literal-assignments)、[SByte](../language-reference/data-types/sbyte-data-type.md#literal-assignments)、[UInteger](../language-reference/data-types/uinteger-data-type.md#literal-assignments)、[ULong](../language-reference/data-types/ulong-data-type.md#literal-assignments) 和 [UShort](../language-reference/data-types/ushort-data-type.md#literal-assignments) 数据类型的“文本分配”部分。
 
-[支持 C# 引用返回值](../programming-guide/language-features/procedures/ref-return-values.md) 
+[支持 C# 引用返回值](../programming-guide/language-features/procedures/ref-return-values.md)
 
 从 C# 7.0 开始，C# 支持引用返回值。 也就是说，当调用方法收到引用返回的值时，可以更改引用的值。 Visual Basic 不允许使用引用返回值创建方法，但允许使用和修改引用返回值。
 

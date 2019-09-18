@@ -6,12 +6,12 @@ helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: 30c44b9f98bcc61d54b8103b6b40d14fd35715f4
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: a2cc7cb1b6da860a2c27bc8d2fe74e0ffde5f5e1
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69589181"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053267"
 ---
 # <a name="interfaces-c-programming-guide"></a>接口（C# 编程指南）
 
@@ -27,7 +27,7 @@ ms.locfileid: "69589181"
 
 实现 <xref:System.IEquatable%601> 接口的任何类或结构都必须包含与该接口指定的签名匹配的 <xref:System.IEquatable%601.Equals%2A> 方法的定义。 因此，可以依靠实现 `IEquatable<T>` 的类来包含 `Equals` 方法，类的实例可以通过该方法确定它是否等于相同类的另一个实例。  
   
-`IEquatable<T>` 的定义不为 `Equals` 提供实现。 该接口仅定义签名。 这样，C# 中的接口便类似于其中所有方法都是抽象方法的抽象类。 但是，类或结构可以实现多个接口，但是类只能继承单个类（抽象或不抽象）。
+`IEquatable<T>` 的定义不为 `Equals` 提供实现。 类或结构可以实现多个接口，但是类只能从单个类继承。
   
 有关抽象类的详细信息，请参阅[抽象类、密封类及类成员](../classes-and-structs/abstract-and-sealed-classes-and-class-members.md)。  
   

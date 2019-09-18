@@ -1,14 +1,16 @@
 ---
 title: 从文件和其他源加载数据
 description: 本操作说明演示如何将数据加载到 ML.NET 中进行处理和训练。 最初存储在文件或其他数据源（例如数据库、JSON、XML 或内存中集合）中的数据。
-ms.date: 08/01/2019
+ms.date: 09/11/2019
+author: luisquintanilla
+ms.author: luquinta
 ms.custom: mvc,how-to, title-hack-0625
-ms.openlocfilehash: d5f3aab14a60a8c9860dc67f1cc98f3b1b3188ed
-ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
+ms.openlocfilehash: 4008f38bf4a20113a3f5c865e38222e5b82f2acc
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68733377"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991365"
 ---
 # <a name="load-data-from-files-and-other-sources"></a>从文件和其他源加载数据
 
@@ -31,7 +33,7 @@ public class HousingData
 {
     [LoadColumn(0)]
     public float Size { get; set; }
- 
+
     [LoadColumn(1, 3)]
     [VectorType(3)]
     public float[] HistoricalPrices { get; set; }
@@ -51,7 +53,8 @@ public class HousingData
 > [!IMPORTANT]
 > 只有从文件加载数据时才需要 [`LoadColumn`](xref:Microsoft.ML.Data.LoadColumnAttribute)。
 
-将列加载为： 
+将列加载为：
+
 - 单个列，例如 `HousingData` 类中的 `Size` 和 `CurrentPrices`。
 - 以向量的形式一次加载多个列，例如 `HousingData` 类中的 `HistoricalPrices`。
 
@@ -102,13 +105,65 @@ TextLoader textLoader = mlContext.Data.CreateTextLoader<HousingData>(separatorCh
 IDataView data = textLoader.Load("DataFolder/SubFolder1/1.txt", "DataFolder/SubFolder2/1.txt");
 ```
 
+## <a name="load-data-from-a-relational-database"></a>从关系数据库加载数据
+
+> [!NOTE]
+> DatabaseLoader 当前为预览版。 引用 [Microsoft.ML.Experimental](https://www.nuget.org/packages/Microsoft.ML.Experimental/0.16.0-preview) 和 [System.Data.SqlClient](https://www.nuget.org/packages/System.Data.SqlClient/4.6.1) NuGet 包，即可使用该预览版。
+
+ML.NET 支持从各种关系数据库中加载数据（包括 SQL Server、Azure SQL 数据库、Oracle、SQLite、PostgreSQL、Progress、IBM DB2 等），这些关系数据库由 [`System.Data`](xref:System.Data) 提供支持。
+
+指定具有名为 `House` 的表和以下架构的数据库：
+
+```SQL
+CREATE TABLE [House] (
+    [HouseId] int NOT NULL IDENTITY,
+    [Size] real NOT NULL,
+    [Price] real NOT NULL
+    CONSTRAINT [PK_House] PRIMARY KEY ([HouseId])
+);
+```
+
+数据可以通过 `HouseData` 等类进行建模。
+
+```csharp
+public class HouseData
+{
+    public float Size { get; set; }
+
+    public float Price { get; set; }
+}
+```
+
+然后，在应用程序中创建 `DatabaseLoader`。
+
+```csharp
+MLContext mlContext = new MLContext();
+
+DatabaseLoader loader = mlContext.Data.CreateDatabaseLoader<HouseData>();
+```
+
+定义连接字符串以及要在数据库上执行的 SQL 命令，并创建 `DatabaseSource` 实例。 此示例使用具有文件路径的 LocalDB SQL Server 数据库。 但是，DatabaseLoader 支持本地和云中数据库的任何其他有效连接字符串。
+
+```csharp
+string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=<YOUR-DB-FILEPATH>;Database=<YOUR-DB-NAME>;Integrated Security=True;Connect Timeout=30";
+
+string sqlCommand = "SELECT Size,Price FROM House";
+
+DatabaseSource dbSource = new DatabaseSource(SqlClientFactory.Instance,connectionString,sqlCommand);
+```
+
+最后，使用 `Load` 方法将数据加载到 [`IDataView`](xref:Microsoft.ML.IDataView)。
+
+```csharp
+IDataView data = loader.Load(dbSource);
+```
+
 ## <a name="load-data-from-other-sources"></a>从其他源加载数据
 
 除了加载存储在文件中的数据外，ML.NET 还支持从各种源加载数据，这些源包括但不限于：
 
 - 内存中集合
 - JSON/XML
-- 数据库
 
 请注意，在使用流式处理源时，ML.NET 预计输入采用内存中集合的形式。 因此，在使用 JSON/XML 等源时，请确保将数据格式化为内存中集合。
 
@@ -141,7 +196,7 @@ HousingData[] inMemoryCollection = new HousingData[]
 使用 [`LoadFromEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.LoadFromEnumerable*) 方法将内存中集合加载到 [`IDataView`](xref:Microsoft.ML.IDataView) 中：
 
 > [!IMPORTANT]
-> [`LoadFromEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.LoadFromEnumerable*) 假定其所加载的 [`IEnumerable`](xref:System.Collections.IEnumerable) 是线程安全的。 
+> [`LoadFromEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.LoadFromEnumerable*) 假定其所加载的 [`IEnumerable`](xref:System.Collections.IEnumerable) 是线程安全的。
 
 ```csharp
 // Create MLContext

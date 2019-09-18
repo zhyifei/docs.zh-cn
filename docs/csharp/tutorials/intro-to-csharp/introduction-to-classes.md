@@ -3,16 +3,16 @@ title: 类和对象 - C# 简介教程
 description: 创建首个 C# 程序，并探索面向对象的概念
 ms.date: 10/11/2017
 ms.custom: mvc
-ms.openlocfilehash: 0932ae8a9d3facd4b2a8469664922f163fe4c679
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 092639e86b3e8e683a7d5f6ecf5b732991581b71
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67397831"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850732"
 ---
 # <a name="explore-object-oriented-programming-with-classes-and-objects"></a>使用类和对象探索面向对象的编程
 
-本教程要求你有一台可用于开发的计算机。 .NET 主题 [10 分钟入门](https://www.microsoft.com/net/core)介绍了如何在 Mac、PC 或 Linux 上设置本地开发环境。 [熟悉开发工具](local-environment.md)不仅简要概述了将用到的命令，还收录了详细信息链接。
+本教程要求你有一台可用于开发的计算机。 .NET 教程 [Hello World 10 分钟入门](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)介绍了如何在 Mac、PC 或 Linux 上设置本地开发环境。 [熟悉开发工具](local-environment.md)不仅简要概述了将用到的命令，还收录了详细信息链接。
 
 ## <a name="create-your-application"></a>创建应用程序
 

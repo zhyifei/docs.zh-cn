@@ -3,18 +3,18 @@ title: C# 中的数字 - C# 教程简介
 description: 通过浏览数字类型、其属性和方法了解 C#。
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: d95d5ce16abadf441158b7f8af93acc73b154e99
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 436e8db10f973b468458987150e1312a16103b91
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661053"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850690"
 ---
 # <a name="manipulate-integral-and-floating-point-numbers-in-c"></a>处理 C\# 中的整数和浮点数
 
 本教程以交互方式介绍了 C# 中的数字类型。 你将编写少量的代码，然后编译并运行这些代码。 本教程包含一系列课程，介绍了 C# 中的数字和数学运算。 这些课程介绍了 C# 语言的基础知识。
 
-本教程要求你有一台可用于开发的计算机。 .NET 主题 [10 分钟入门](https://www.microsoft.com/net/core)介绍了如何在 Mac、PC 或 Linux 上设置本地开发环境。 [熟悉开发工具](local-environment.md)不仅简要概述了将用到的命令，还收录了详细信息链接。
+本教程要求你有一台可用于开发的计算机。 .NET 教程 [Hello World 10 分钟入门](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)介绍了如何在 Mac、PC 或 Linux 上设置本地开发环境。 [熟悉开发工具](local-environment.md)不仅简要概述了将用到的命令，还收录了详细信息链接。
 
 ## <a name="explore-integer-math"></a>探索整数数学运算
 

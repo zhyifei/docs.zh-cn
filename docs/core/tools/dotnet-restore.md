@@ -2,12 +2,12 @@
 title: dotnet restore 命令
 description: 了解如何使用 dotnet-restore 命令还原依赖项和特定于项目的工具。
 ms.date: 05/29/2018
-ms.openlocfilehash: 56d99a4edd69246632560065c415a3f41ac3e1b5
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 1e0e1fbf6ab5f595773a072242440e30865fed16
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202822"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969770"
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
@@ -18,6 +18,8 @@ ms.locfileid: "70202822"
 `dotnet restore` - 恢复项目的依赖项和工具。
 
 ## <a name="synopsis"></a>摘要
+
+<!-- markdownlint-disable MD025 -->
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
@@ -177,7 +179,7 @@ dotnet restore [-h|--help]
 
 `-s|--source <SOURCE>`
 
-指定要在还原操作期间使用的 NuGet 包源。 这会替代 nuget.config 文件中指定的所有源  。 多次指定此选项可以提供多个源。
+指定要在还原操作期间使用的 NuGet 包源。 这会替代 nuget.config 文件中指定的所有源并有效读取 nuget.config 文件，就好像 `<packageSource>` 元素不在此处一样   。 多次指定此选项可以提供多个源。
 
 `--verbosity <LEVEL>`
 

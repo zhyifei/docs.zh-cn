@@ -3,12 +3,12 @@ title: C# 发展历史 - C# 指南
 description: 这些语言在最早版本中是什么样的，它又是如何演化的？
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 9962dcb0192fb27ff21b24e985a6a897703720c7
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 304c433e7f15301b77e8b2440e27795dcdea345c
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105684"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70893165"
 ---
 # <a name="the-history-of-c"></a>C\# 发展历史
 
@@ -28,7 +28,7 @@ C# 生成工具将最新的主要语言版本视为默认语言版本。 主要�
 
 ## <a name="c-version-10"></a>C# 1.0 版
 
-回想起来，C# 1.0 版非常像 Java。 在 [ECMA 制定的设计目标](https://feeldotneteasy.blogspot.com/2011/01/c-design-goals.html)中，它旨在成为一种“简单、现代、面向对象的常规用途语言”。  当时，它和 Java 类似，说明已经实现了上述早期设计目标。
+回想起来，和 Visual Studio.net 2002 一起发布的 C# 版本 1.0 非常像 Java。 在 [ECMA 制定的设计目标](https://feeldotneteasy.blogspot.com/2011/01/c-design-goals.html)中，它旨在成为一种“简单、现代、面向对象的常规用途语言”。  当时，它和 Java 类似，说明已经实现了上述早期设计目标。
 
 不过如果现在回顾 C# 1.0，你会觉得有点晕。 它没有习以为常的内置异步功能和以泛型为中心的巧妙功能。 其实它完全不具备泛型。  那 [LINQ](../linq/index.md) 呢？ 尚不可用。 这些新增内容需要几年才能推出。
 
@@ -100,7 +100,7 @@ LINQ 的构造可以建立在更细微的视图检查表达式树、Lambda 表�
 
 ## <a name="c-version-40"></a>C# 4.0 版
 
-C# 4.0 版很难达到 3.0 版的创新水平。 在 3.0 版中，C# 已经完全从 Java 的阴影中脱颖而出，崭露头角。 很快成为一种简洁精炼的语言。
+C# 版本 4.0 随 Visual Studio 2010 一起发布，很难达到版本 3.0 的创新水平。 在 3.0 版中，C# 已经完全从 Java 的阴影中脱颖而出，崭露头角。 很快成为一种简洁精炼的语言。
 
 下一版本引入了一些有趣的新功能：
 
@@ -117,7 +117,7 @@ C# 4.0 版很难达到 3.0 版的创新水平。 在 3.0 版中，C# 已经完�
 
 ## <a name="c-version-50"></a>C# 5.0 版
 
-C# 5.0 版是该语言有针对性的一个版本。 对此版本中所做的几乎所有工作都归入另一个突破性语言概念：适用于异步编程的 `async` 和 `await` 模型。  下面是主要功能列表：
+C# 版本 5.0 随 Visual Studio 2012 一起发布，是该语言有针对性的一个版本。 对此版本中所做的几乎所有工作都归入另一个突破性语言概念：适用于异步编程的 `async` 和 `await` 模型。  下面是主要功能列表：
 
 - [异步成员](../async.md)
 - [调用方信息特性](../programming-guide/concepts/caller-information.md)
@@ -132,7 +132,7 @@ C# 5.0 版是该语言有针对性的一个版本。 对此版本中所做的几
 
 ## <a name="c-version-60"></a>C# 6.0 版
 
-C# 在 3.0 版和 5.0 版对面向对象的语言添加了主要的新功能。 在 6.0 版中，它不再推出主导性的杀手锏，而是发布了很多使得 C# 编程更有效率的小功能。 以下介绍了部分功能：
+C# 在 3.0 版和 5.0 版对面向对象的语言添加了主要的新功能。 版本 6.0 随 Visual Studio 2013 一起发布，通过该版本，它不再推出主导性的杀手锏，而是发布了很多使得 C# 编程更有效率的小功能。 以下介绍了部分功能：
 
 - [静态导入](./csharp-6.md#using-static)
 - [异常筛选器](./csharp-6.md#exception-filters)
@@ -154,7 +154,7 @@ C# 在 3.0 版和 5.0 版对面向对象的语言添加了主要的新功能。 
 
 ## <a name="c-version-70"></a>C# 7.0 版
 
-C# 7.0 版是最新的主版本。 虽然该版本继承和发展了 C# 6.0，但不包含编译器即服务。 以下介绍了部分新增功能：
+随 Visual Studio 2017 一起发布的 C# 版本 7.0 是最新的主版本。 虽然该版本继承和发展了 C# 6.0，但不包含编译器即服务。 以下介绍了部分新增功能：
 
 - [Out 变量](./csharp-7.md#out-variables)
 - [元组和析构函数](./csharp-7.md#tuples)

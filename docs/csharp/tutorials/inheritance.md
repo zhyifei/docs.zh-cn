@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 07/05/2018
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-ms.openlocfilehash: 644e0bb281525fad12e263b31263bb9caba149f0
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 41377cb47836624160a5b402e0a85270b68eba4f
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463808"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850985"
 ---
 # <a name="inheritance-in-c-and-net"></a>C# 和 .NET 中的继承
 
@@ -18,7 +18,7 @@ ms.locfileid: "58463808"
 
 ## <a name="prerequisites"></a>系统必备
 
-阅读此教程的前提是，你已安装 .NET Core。 有关安装说明，请参阅 [.NET Core 安装指南](https://www.microsoft.com/net/core)。 还需要安装代码编辑器。 此教程使用 [Visual Studio Code](https://code.visualstudio.com)，但你可以选择使用任何代码编辑器。
+本教程假定你已安装 .NET Core SDK。 请访问 [.NET Core 下载](https://dotnet.microsoft.com/download)页进行下载。 还需要安装代码编辑器。 此教程使用 [Visual Studio Code](https://code.visualstudio.com)，但你可以选择使用任何代码编辑器。
 
 ## <a name="running-the-examples"></a>运行示例
 
@@ -249,7 +249,7 @@ public struct ValueStructure : ValueType // Generates CS0527.
 
 - 两个构造函数
 
-  两个 `Book` 构造函数共用三个常见参数。 其中两个参数（*title* 和 *publisher*）对应于 `Publication` 构造函数的相应参数。 第三个参数是 *author*，存储在不可变的 `Author` 属性中。 其中一个构造函数包含存储在 `ISBN` 自动属性中的 isbn 参数。
+  两个 `Book` 构造函数共用三个常见参数。 其中两个参数（*title* 和 *publisher*）对应于 `Publication` 构造函数的相应参数。 第三个参数是 *author*，存储在不可变的 `Author` 属性中。 其中一个构造函数包含存储在 `ISBN` 自动属性中的 isbn  参数。
 
   第一个构造函数使用 [this](../language-reference/keywords/this.md) 关键字来调用另一个构造函数。 构造函数链是常见的构造函数定义模式。 调用参数最多的构造函数时，由参数较少的构造函数提供默认值。
 
@@ -280,7 +280,7 @@ public struct ValueStructure : ValueType // Generates CS0527.
 ## <a name="designing-abstract-base-classes-and-their-derived-classes"></a>设计抽象基类及其派生类
 <a name="abstract"></a>
 
-在上面的示例中定义了一个基类，它提供了许多方法的实现代码，以便派生类可以共用代码。 然而，在许多情况下，我们并不希望基类提供实现代码。 相反，基类是声明抽象方法的抽象类，用作定义每个派生类必须实现的成员的模板。 通常情况下，在抽象基类中，每个派生类型的实现代码都是相应类型的专属代码。 尽管该类提供了出版物通用的功能的实现代码，但由于实例化 `Publication` 对象毫无意义，因此，使用 abstract 关键字来标记该类。
+在上面的示例中定义了一个基类，它提供了许多方法的实现代码，以便派生类可以共用代码。 然而，在许多情况下，我们并不希望基类提供实现代码。 相反，基类是声明抽象方法的抽象类，用作定义每个派生类必须实现的成员的模板   。 通常情况下，在抽象基类中，每个派生类型的实现代码都是相应类型的专属代码。 尽管该类提供了出版物通用的功能的实现代码，但由于实例化 `Publication` 对象毫无意义，因此，使用 abstract 关键字来标记该类。
 
 例如，每个封闭的二维几何形状都包含两个属性：面积（即形状的内部空间）和周长（或沿形状一周的长度）。 然而，这两个属性的计算方式完全取决于具体的形状。 例如，圆和三角形的周长计算公式就有所不同。 `Shape` 类是一个包含 `abstract` 方法的 `abstract` 类。 这表示派生类共享相同的功能，但这些派生类以不同的方式实现该功能。
 

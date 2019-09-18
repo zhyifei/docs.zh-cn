@@ -15,12 +15,12 @@ ms.assetid: 567a4b8d-0e79-49dc-8df9-f4b1aa376a2a
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: d478ae9e1db86718236da73917d772820707ea03
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 11df25617a618cdc835ca6555c671a187ce09f8d
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57678353"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991649"
 ---
 # <a name="backreference-constructs-in-regular-expressions"></a>正则表达式中的反向引用构造
 
@@ -35,7 +35,7 @@ ms.locfileid: "57678353"
 
 带编号的反向引用使用以下语法：
 
-`\` *数值*
+`\`*number*
 
 其中 *number* 是正则表达式中捕获组的序号位置。 例如，`\4` 匹配第四个捕获组的内容。 如果正则表达式模式中未定义 number  ，将会发生分析错误，并且正则表达式引擎会抛出 <xref:System.ArgumentException>。 例如，正则表达式 `\b(\w+)\s\1` 有效，因为 `(\w+)` 是表达式中的第一个也是唯一一个捕获组。 `\b(\w+)\s\2` 无效，该表达式会因为没有捕获组编号 `\2` 而引发自变量异常。 此外，如果 number 标识特定序号位置中的捕获组，但该捕获组已被分配了一个不同于其序号位置的数字名称，则正则表达式分析器还会引发 <xref:System.ArgumentException>  。
 
@@ -95,7 +95,7 @@ ms.locfileid: "57678353"
 [!code-csharp[Ordinal.Backreference](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference6.cs)]
 [!code-vb[Ordinal.BackReference](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference6.vb)]
 
-但是，如果 name 是 number 的字符串表示形式，并且已向该位置中的捕获组明确分配了数字名称，正则表达式分析器无法通过其序号位置识别捕获组  。 相反，它会引发 <xref:System.ArgumentException>。以下示例中的唯一捕获组名为“2”。 由于 `\k` 结构用于定义名为“1”的反向引用，因此正则表达式分析器无法识别第一个捕获组并引发异常。
+但是，如果 name 是 number 的字符串表示形式，并且已向该位置中的捕获组明确分配了数字名称，正则表达式分析器无法通过其序号位置识别捕获组  。 相反，它会引发 <xref:System.ArgumentException>。 以下示例中的唯一捕获组名为“2”。 由于 `\k` 结构用于定义名为“1”的反向引用，因此正则表达式分析器无法识别第一个捕获组并引发异常。
 
 [!code-csharp[Ordinal.Backreference](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference7.cs)]
 [!code-vb[Ordinal.BackReference](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference7.vb)]

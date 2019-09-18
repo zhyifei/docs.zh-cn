@@ -3,12 +3,12 @@ title: 使用 Infer.NET 和概率性编程创建游戏匹配列表
 description: 了解如何使用概率性编程和 Infer.NET 创建基于简化版 TrueSkill 的游戏匹配列表应用。
 ms.date: 05/06/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 85cb3753ae19e7ca64002eb7c26b44b6f7d41e4f
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: aa3ad9528238e4f5a5eb187af71f2d2da1ea9cba
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211426"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855782"
 ---
 # <a name="create-a-game-match-up-list-app-with-infernet-and-probabilistic-programming"></a>使用 Infer.NET 和概率性编程创建游戏匹配列表
 
@@ -22,7 +22,7 @@ ms.locfileid: "65211426"
 
 - 本地开发环境设置
 
-  此操作指南要求有一台可用于进行开发的计算机。 .NET [10 分钟入门](https://www.microsoft.com/net/core)教程介绍了如何在 Mac、PC 或 Linux 上设置本地开发环境。
+  此操作指南要求有一台可用于进行开发的计算机。 .NET 教程 [Hello World 10 分钟入门](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)介绍了如何在 macOS、Windows 或 Linux 上设置本地开发环境。
 
 ## <a name="create-your-app"></a>创建应用程序
 

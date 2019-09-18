@@ -4,12 +4,12 @@ description: 了解特性在 C# 中的工作方式。
 author: mgroves
 ms.date: 03/06/2017
 ms.assetid: b152cf36-76e4-43a5-b805-1a1952e53b79
-ms.openlocfilehash: 3141c1bf7ddcf3fd3426290428f9eeeb54b3c872
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 0037e8b2c5f50d1b8d0a950743f6eeb9145df414
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59481226"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850998"
 ---
 # <a name="using-attributes-in-c"></a>在 C\# 中使用属性
 
@@ -20,7 +20,7 @@ ms.locfileid: "59481226"
 此教程将介绍如何将特性添加到代码中、如何创建和使用你自己的特性，以及如何使用一些内置到 .NET Core 中的特性。
 
 ## <a name="prerequisites"></a>系统必备
-必须将计算机设置为运行 .Net Core。 有关安装说明，请访问 [.NET Core](https://www.microsoft.com/net/core) 页。
+必须将计算机设置为运行 .Net Core。 有关安装说明，请访问 [.NET Core 下载](https://dotnet.microsoft.com/download)页。
 可以在 Windows、Ubuntu Linux、macOS 或 Docker 容器中运行此应用程序。 必须安装常用的代码编辑器。 在以下说明中，我们使用的是开放源代码跨平台编辑器 [Visual Studio Code](https://code.visualstudio.com/)。 不过，你可以使用习惯使用的任意工具。
 
 ## <a name="create-the-application"></a>创建应用程序

@@ -3,12 +3,12 @@ title: 使用 .NET Core 创建 REST 客户端
 description: 此教程将介绍 .NET Core 和 C# 语言的许多功能。
 ms.date: 03/06/2017
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: f6e3371a72810b30f804169be4025360aa10c477
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 001a9cbaae1cdb57b6451bc42ce326864f8dcf7b
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063882"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850974"
 ---
 # <a name="rest-client"></a>REST 客户端
 
@@ -31,7 +31,7 @@ ms.locfileid: "65063882"
 
 ## <a name="prerequisites"></a>系统必备
 
-必须将计算机设置为运行 .Net Core。 有关安装说明，请访问 [.NET Core](https://www.microsoft.com/net/core) 页。 可以在 Windows、Linux、macOS 或 Docker 容器中运行此应用程序。
+必须将计算机设置为运行 .Net Core。 有关安装说明，请访问 [.NET Core 下载](https://dotnet.microsoft.com/download)页。 可以在 Windows、Linux、macOS 或 Docker 容器中运行此应用程序。
 必须安装常用的代码编辑器。 在以下说明中，我们使用的是开放源代码跨平台编辑器 [Visual Studio Code](https://code.visualstudio.com/)。 不过，你可以使用习惯使用的任意工具。
 
 ## <a name="create-the-application"></a>创建应用程序

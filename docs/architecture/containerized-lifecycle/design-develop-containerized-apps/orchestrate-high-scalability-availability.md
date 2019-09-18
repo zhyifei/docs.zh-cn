@@ -2,12 +2,12 @@
 title: 协调安排微服务和多容器应用程序，实现高可伸缩性和高可用性
 description: 必须使用处理所有容器的运行状况、工作负载和生命周期的业务流程协调程序来部署和管理实际的生产应用程序。
 ms.date: 02/15/2019
-ms.openlocfilehash: 8c1161127eb6b239384444c369de7f11abd3d424
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 8f2cef774acde47e9a1bb4680342b5e2c66ac154
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373693"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70990486"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>协调安排微服务和多容器应用程序，实现高可伸缩性和高可用性
 
@@ -15,7 +15,7 @@ ms.locfileid: "70373693"
 
 图 4-6 介绍如何部署到由多个微服务（容器）组成的应用程序群集。
 
-![群集中的组合 Docker 应用程序：为每个服务实例使用一个容器。 Docker 容器是“部署单元”，一个容器是 Docker 的一个实例。一个主机会处理许多容器](./media/image6.png)
+![群集中的组合 Docker 应用程序：为每个服务实例使用一个容器。 Docker 容器是“部署单元”，一个容器代表 Docker 的一个实例。 一个主机可以处理多个容器](./media/image6.png)
 
 **图 4-6**。 容器群集
 
@@ -37,10 +37,10 @@ Docker 命令行接口 (CLI) 满足在一台主机上管理一个容器的需求
 
 | Platform | 注释 |
 |:---:|:---|
-| **Kubernetes** <br/> ![Kubernetes 徽标](./media/kubernetes-logo.png) | [*Kubernetes*](https://kubernetes.io/) 是一款开源产品，提供各种功能，从群集基础结构和容器计划到安排功能均涵盖在内。 它能实现跨主机群集自动部署、缩放以及执行各种应用程序容器操作。 <br/> <br/> Kubernetes  提供以容器为中心的基础结构，将应用程序容器分组为逻辑单元，以便管理和发现。 <br/> <br/> Kubernetes  在 Linux 中的运用已发展成熟，但在 Windows 中相对较弱。 |
+| **Kubernetes** <br/> ![Kubernetes 徽标](./media/kubernetes-logo.png) | [*Kubernetes*](https://kubernetes.io/) 是一款开源产品，提供各种功能，从群集基础结构和容器计划到安排功能均涵盖在内。 它能实现跨主机群集自动部署、缩放以及执行各种应用程序容器操作。 <br/> <br/> Kubernetes 提供以容器为中心的基础结构，将应用程序容器分组为逻辑单元，以便管理和发现。 <br/> <br/> Kubernetes 在 Linux 中的运用已发展成熟，但在 Windows 中相对较弱。 |
 | **Azure Kubernetes 服务 (AKS)** <br/> ![Azure Kubernetes 服务徽标](./media/aks-logo.png) | [Azure Kubernetes 服务 (AKS)](https://azure.microsoft.com/services/kubernetes-service/) 是 Azure 中的托管 Kubernetes 容器业务流程服务，简化了 Kubernetes 群集的管理、部署和操作。 |
-| **Azure Service Fabric** <br/> ![Azure Service Fabric 徽标](./media/service-fabric-logo.png) | [Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview) 是用于生成应用程序的 Microsoft 微服务平台。 它是服务的[业务流程协调程序](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-resource-manager-introduction)，可创建计算机群集。 Service Fabric 可将服务作为容器或纯进程进行部署。 它甚至可以在同一应用程序和群集中将进程中的服务与容器中的服务进行组合。 <br/> <br/> Service Fabric  群集可以在 Azure 中、本地或任意云中部署。 但是，Azure 中的部署使用托管方法进行了简化。 <br/> <br/> Service Fabric  提供其他可选的规定 [Service Fabric 编程模型](https://azure.microsoft.com/documentation/articles/service-fabric-choose-framework/)（如[有状态服务](https://azure.microsoft.com/documentation/articles/service-fabric-reliable-services-introduction/)和 [Reliable Actors](https://azure.microsoft.com/documentation/articles/service-fabric-reliable-actors-introduction/)）。 <br/> <br/> Service Fabric  在 Windows 中的运用已经成熟（已在 Windows 中发展多年），但在 Linux 中相对较弱。 <br/> <br/> 自 2017 年以来，Service Fabric 同时支持 Linux 和 Windows 容器。 |
-| **Azure Service Fabric 网格** <br/> ![Azure Service Fabric 网格徽标](./media/azure-service-fabric-mesh-logo.png) | [Azure Service Fabric 网格](https://docs.microsoft.com/azure/service-fabric-mesh/service-fabric-mesh-overview)提供与 Service Fabric 相同的可靠性、任务关键性能和规模，但也提供完全托管的无服务器平台  。 无需管理群集、虚拟机、存储或网络配置。 只需专注于应用程序的开发。 <br/> <br/> Service Fabric 网格  支持 Windows 和 Linux 容器，从而允许使用所选择的任何编程语言和框架进行开发。
+| **Azure Service Fabric** <br/> ![Azure Service Fabric 徽标](./media/service-fabric-logo.png) | [Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview) 是用于生成应用程序的 Microsoft 微服务平台。 它是服务的[业务流程协调程序](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-resource-manager-introduction)，可创建计算机群集。 Service Fabric 可将服务作为容器或纯进程进行部署。 它甚至可以在同一应用程序和群集中将进程中的服务与容器中的服务进行组合。 <br/> <br/> Service Fabric 群集可以在 Azure 中、本地或任意云中部署。 但是，Azure 中的部署使用托管方法进行了简化。 <br/> <br/> Service Fabric 提供其他可选的规定 [Service Fabric 编程模型](https://azure.microsoft.com/documentation/articles/service-fabric-choose-framework/)（如[有状态服务](https://azure.microsoft.com/documentation/articles/service-fabric-reliable-services-introduction/)和 [Reliable Actors](https://azure.microsoft.com/documentation/articles/service-fabric-reliable-actors-introduction/)）。 <br/> <br/> Service Fabric 在 Windows 中的运用已经成熟（已在 Windows 中发展多年），但在 Linux 中相对较弱。 <br/> <br/> 自 2017 年以来，Service Fabric 同时支持 Linux 和 Windows 容器。 |
+| **Azure Service Fabric 网格** <br/> ![Azure Service Fabric 网格徽标](./media/azure-service-fabric-mesh-logo.png) | [Azure Service Fabric 网格](https://docs.microsoft.com/azure/service-fabric-mesh/service-fabric-mesh-overview)提供与 Service Fabric 相同的可靠性、任务关键性能和规模，但也提供完全托管的无服务器平台。 无需管理群集、虚拟机、存储或网络配置。 只需专注于应用程序的开发。 <br/> <br/> Service Fabric 网格支持 Windows 和 Linux 容器，从而允许使用所选择的任何编程语言和框架进行开发。
 
 ## <a name="using-container-based-orchestrators-in-azure"></a>在 Azure 中使用基于容器的业务流程协调程序
 
@@ -56,7 +56,7 @@ Azure Kubernetes 服务优化了专门针对 Azure 的常用 Docker 群集开源
 
 ![Kubernetes 群集结构：有一个处理 DNS、计划程序、代理等的主节点，以及多个托管容器的工作节点。](media/image36.png)
 
-图 4-7  。 Kubernetes 群集的简化结构和拓扑
+图 4-7。 Kubernetes 群集的简化结构和拓扑
 
 图 4-7 显示 Kubernetes 群集的结构，其中主节点 (VM) 控制群集的大部分协调，可以将容器部署到从应用程序角度来看是作为单个池托管的其余节点。 这样，可以扩展到数千或甚至数万个容器。
 
@@ -163,7 +163,7 @@ Service Fabric 充分展示了什么是一个好的平台，开发人员可在�
 
 ![Service Fabric 应用程序可以运行访问外部数据库的多个容器，并且整个集将作为业务微服务的逻辑边界](./media/azure-service-fabric-business-microservice.png)
 
-图 4-12  。 Service Fabric 中具有多个服务（容器）的业务微服务
+图 4-12。 Service Fabric 中具有多个服务（容器）的业务微服务
 
 但是，Service Fabric 中也可能有所谓的“sidecar”容器（两个容器必须一同部署为逻辑服务）。 重要的是，业务微服务是多个内聚元素的逻辑边界。 在许多情况下，它可能是具有单个数据模型的单个服务，但在其他一些情况下，也可能具有多个物理服务。
 
@@ -171,7 +171,7 @@ Service Fabric 充分展示了什么是一个好的平台，开发人员可在�
 
 ![在同一个节点中运行服务和容器的 Service Fabric 应用程序。](./media/business-microservice-mapped-to-service-fabric-application.png)
 
-图 4-13  。 映射到含容器和有状态服务的 Service Fabric 应用程序的业务微服务
+图 4-13。 映射到含容器和有状态服务的 Service Fabric 应用程序的业务微服务
 
 有关 Azure Service Fabric 中容器支持的详细信息，请参阅 [Service Fabric 和容器](https://docs.microsoft.com/azure/service-fabric/service-fabric-containers-overview)。
 
@@ -183,7 +183,7 @@ Service Fabric 充分展示了什么是一个好的平台，开发人员可在�
 
 ![在无状态服务中，状态（持久性、数据库）保留在微服务外部。 在有状态服务中，状态保留在微服务内部。](./media/stateless-vs-stateful-microservices.png)
 
-图 4-14  。 无状态微服务与有状态微服务
+图 4-14。 无状态微服务与有状态微服务
 
 无状态方法是完全有效的，相比有状态微服务，它更易实现，因为这种方法类似于用户熟悉的传统模式。 但无状态微服务会在进程和数据源之间产生延迟。 若要试图增加缓存和队列来提高性能，该方法会涉及更多要移动的内容。 结果就是，最终会得到具有许多层级的复杂体系结构。
 

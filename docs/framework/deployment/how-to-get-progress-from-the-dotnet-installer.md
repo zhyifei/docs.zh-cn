@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 0a1a3ba3-7e46-4df2-afd3-f3a8237e1c4f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 991053a2728ec7b8c5d9157dbf6307e0974479c6
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 5c71816b1bd2e9c95e8c7efb44e3e689dce4ab93
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66379932"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70853972"
 ---
 # <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>如何：获取 .NET Framework 4.5 安装程序的进度
 
@@ -24,13 +24,11 @@ ms.locfileid: "66379932"
 
     1. 调用 .NET Framework 4.5 可再发行程序：
 
-        ```
-        dotNetFx45_Full_x86_x64.exe /q /norestart /pipe section-name
-        ```
+        `dotNetFx45_Full_x86_x64.exe /q /norestart /pipe section-name`
 
-        其中“section name”  是要用来标识应用的任意名称。 .NET Framework 安装程序以异步方式在 MMIO 节进行读写，因此可能会发现在此期间使用事件和消息很方便。 在示例中，.NET Framework 安装进程由分配 MMIO 节 (`TheSectionName`) 和定义事件 (`TheEventName`) 的构造函数创建：
+        其中“section name”是要用来标识应用的任意名称。 .NET Framework 安装程序以异步方式在 MMIO 节进行读写，因此可能会发现在此期间使用事件和消息很方便。 在示例中，.NET Framework 安装进程由分配 MMIO 节 (`TheSectionName`) 和定义事件 (`TheEventName`) 的构造函数创建：
 
-        ```
+        ```cpp
         Server():ChainerSample::MmioChainer(L"TheSectionName", L"TheEventName")
         ```
 
@@ -38,7 +36,7 @@ ms.locfileid: "66379932"
 
     2. 从 MMIO 节读取。 在 .NET Framework 4.5 中，下载和安装操作是同时进行的：下载 .NET Framework 一部分的同时，可能正在安装另一部分。 因此，进度会以从 0 到 255 递增的两个数字（`m_downloadSoFar` 和 `m_installSoFar`）形式发送回（即写入）MMIO 节。 如果写入 255 且 .NET Framework 存在，则表示安装完成。
 
-- 退出代码  。 以下命令中的退出代码用于调用 .NET Framework 4.5 可再发行程序，指示安装是成功还是失败：
+- 退出代码。 以下命令中的退出代码用于调用 .NET Framework 4.5 可再发行程序，指示安装是成功还是失败：
 
   - 0 - 安装已成功完成。
 
@@ -48,7 +46,7 @@ ms.locfileid: "66379932"
 
   - 所有其他代码 - 安装过程中出现错误；请检查 %temp% 中创建的日志文件，了解详细信息。
 
-- 取消安装  。 可随时通过使用 `Abort` 方法在 MMIO 节中设置 `m_downloadAbort` 和 `m_ installAbort` 标志来取消安装。
+- 取消安装。 可随时通过使用 `Abort` 方法在 MMIO 节中设置 `m_downloadAbort` 和 `m_ installAbort` 标志来取消安装。
 
 ## <a name="chainer-sample"></a>链接器示例
 

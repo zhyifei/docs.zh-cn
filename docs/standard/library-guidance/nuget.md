@@ -4,12 +4,12 @@ description: 使用 .NET 库的 NuGet 打包的最佳实践建议。
 author: jamesnk
 ms.author: mairaw
 ms.date: 01/15/2019
-ms.openlocfilehash: e08629adb8074fdfb73865d2dc156cbf6e46ab9c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 9cf30fa41af2d31e416bae1d75d8880ece7dde3e
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59198174"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895209"
 ---
 # <a name="nuget"></a>NuGet
 
@@ -61,7 +61,7 @@ NuGet 包支持多个[元数据属性](/nuget/reference/nuspec)。 下表包含 
 > [!IMPORTANT]
 > 无许可证的项目默认为 [exclusive copyright](https://choosealicense.com/no-permission/)（独占版权所有），从而无法供其他人使用。
 
-✔️请考虑选择带有满足 NuGet 前缀保留[条件](/nuget/reference/id-prefix-reservation)的前缀的 NuGet 包名称。
+✔️请考虑选择带有满足 NuGet 前缀预留[条件](/nuget/reference/id-prefix-reservation)的前缀的 NuGet 包名称。
 
 ✔️ 请使用指向包图标的 HTTPS href。
 
@@ -118,7 +118,7 @@ NuGet.org 托管了自己的[符号服务器存储库](/nuget/create-packages/sy
 
 > 符号包 (`*.snupkg`) 为开发人员提供了良好的按需调试体验，而不会使主程序包大小膨胀，也不会影响那些不打算调试 NuGet 包的用户的还原性能。
 >
-> 需要注意的是，他们需要在其 IDE 中查找和配置 NuGet 符号服务器（作为一次性设置）来获取符号文件。 Visual Studio 2019 计划将 NuGet.org 符号服务器作为现成选项之一提供。 
+> 需要注意的是，用户可能需要在其 IDE 中查找和配置 NuGet 符号服务器（作为一次性设置）来获取符号文件。 Visual Studio 2019 版本 16.1 将 NuGet.org 的符号服务器添加到了默认符号服务器列表中。
 
 >[!div class="step-by-step"]
 >[上一页](strong-naming.md)

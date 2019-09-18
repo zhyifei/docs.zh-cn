@@ -1,13 +1,13 @@
 ---
 title: C# 8.0 中的新增功能 - C# 指南
 description: 简要介绍 C# 8.0 中提供的新功能。 本文使用最新的预览版 5。
-ms.date: 09/04/2019
-ms.openlocfilehash: b281c55a5911d81503a6af80e393469be1124280
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.date: 09/10/2019
+ms.openlocfilehash: 141f7a2fa0bc5f6a2a253e196a218938dd4c170e
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374009"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926530"
 ---
 # <a name="whats-new-in-c-80"></a>C# 8.0 中的新增功能
 
@@ -26,6 +26,7 @@ C# 语言有许多增强功能，可以进行试用。
 - [可为空引用类型](#nullable-reference-types)
 - [异步流](#asynchronous-streams)
 - [索引和范围](#indices-and-ranges)
+- [Null 合并赋值](#null-coalescing-assignment)
 - [非托管构造类型](#unmanaged-constructed-types)
 - [内插逐字字符串的增强功能](#enhancement-of-interpolated-verbatim-strings)
 
@@ -447,6 +448,24 @@ var text = words[phrase];
 ```
 
 可在有关[索引和范围](../tutorials/ranges-indexes.md)的教程中详细了解索引和范围。
+
+## <a name="null-coalescing-assignment"></a>Null 合并赋值
+
+C# 8.0 引入了 null 合并赋值运算符 `??=`。 仅当左操作数计算为 `null` 时，才能使用运算符 `??=` 将其右操作数的值分配给左操作数。
+
+```csharp
+List<int> numbers = null;
+int? i = null;
+
+numbers ??= new List<int>();
+numbers.Add(i ??= 17);
+numbers.Add(i ??= 20);
+
+Console.WriteLine(string.Join(' ', numbers));  // output: 17 17
+Console.WriteLine(i);  // output: 17
+```
+
+有关详细信息，请参阅 [?? 和 ??= 运算符](../language-reference/operators/null-coalescing-operator.md)一文。
 
 ## <a name="unmanaged-constructed-types"></a>非托管构造类型
 

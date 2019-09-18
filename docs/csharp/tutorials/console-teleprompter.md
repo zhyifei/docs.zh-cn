@@ -3,12 +3,12 @@ title: 控制台应用程序
 description: 此教程将介绍 .NET Core 和 C# 语言的许多功能。
 ms.date: 03/06/2017
 ms.assetid: 883cd93d-50ce-4144-b7c9-2df28d9c11a0
-ms.openlocfilehash: 3ac4312ba5d6088826fdf151609f6693a265e5a3
-ms.sourcegitcommit: 344d82456f27d09a210671214a14cfd7daf1f97c
+ms.openlocfilehash: 4324b25daa253b3d2446955ad9ca57c2f0294f0c
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58348825"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851021"
 ---
 # <a name="console-application"></a>控制台应用程序
 
@@ -26,7 +26,7 @@ ms.locfileid: "58348825"
 
 ## <a name="prerequisites"></a>系统必备
 
-必须将计算机设置为运行 .NET Core。 有关安装说明，请访问 [.NET Core](https://www.microsoft.com/net/core) 页。 可以在 Windows、Linux、macOS 或 Docker 容器中运行此应用程序。
+必须将计算机设置为运行 .NET Core。 有关安装说明，请访问 [.NET Core 下载](https://dotnet.microsoft.com/download)页。 可以在 Windows、Linux、macOS 或 Docker 容器中运行此应用程序。
 必须安装常用的代码编辑器。
 
 ## <a name="create-the-application"></a>创建应用程序
@@ -81,11 +81,11 @@ using System.IO;
 
 <xref:System.Collections.Generic.IEnumerable%601> 接口是在 <xref:System.Collections.Generic> 命名空间中进行定义。 <xref:System.IO.File> 类是在 <xref:System.IO> 命名空间中进行定义。
 
-这是一种称为“Iterator 方法”的特殊类型 C# 方法。 枚举器方法返回延迟计算的序列。 也就是说，序列中的每一项是在使用序列的代码提出请求时生成。 Enumerator 方法包含一个或多个 [`yield return`](../language-reference/keywords/yield.md) 语句。 `ReadFrom` 方法返回的对象包含用于生成序列中所有项的代码。 在此示例中，这涉及读取源文件中的下一行文本，然后返回相应的字符串。 每当调用代码请求生成序列中的下一项时，代码就会读取并返回文件中的下一行文本。 读取完整个文件时，序列会指示没有其他项。
+这是一种称为“Iterator 方法”的特殊类型 C# 方法  。 枚举器方法返回延迟计算的序列。 也就是说，序列中的每一项是在使用序列的代码提出请求时生成。 Enumerator 方法包含一个或多个 [`yield return`](../language-reference/keywords/yield.md) 语句。 `ReadFrom` 方法返回的对象包含用于生成序列中所有项的代码。 在此示例中，这涉及读取源文件中的下一行文本，然后返回相应的字符串。 每当调用代码请求生成序列中的下一项时，代码就会读取并返回文件中的下一行文本。 读取完整个文件时，序列会指示没有其他项。
 
 还有两个 C# 语法元素你可能是刚开始接触。 此方法中的 [`using`](../language-reference/keywords/using-statement.md) 语句用于管理资源清理。 `using` 语句中初始化的变量（在此示例中，为 `reader`）必须实现 <xref:System.IDisposable> 接口。 该接口定义一个方法（`Dispose`），应在释放资源时调用此方法。 当快执行到 `using` 语句的右大括号时，编译器会生成此调用。 编译器生成的代码可确保资源得到释放，即使代码块中用 using 语句定义的代码抛出异常，也不例外。
 
-`reader` 变量是使用 `var` 关键字进行定义。 [`var`](../language-reference/keywords/var.md) 定义的是隐式类型本地变量。 也就是说，变量的类型是由分配给变量的对象的编译时类型决定的。 此处，它为 <xref:System.IO.File.OpenText(System.String)> 方法的返回值，即 <xref:System.IO.StreamReader> 对象。
+`reader` 变量是使用 `var` 关键字进行定义。 [`var`](../language-reference/keywords/var.md) 定义的是隐式类型本地变量  。 也就是说，变量的类型是由分配给变量的对象的编译时类型决定的。 此处，它为 <xref:System.IO.File.OpenText(System.String)> 方法的返回值，即 <xref:System.IO.StreamReader> 对象。
 
 现在，让我们在 `Main` 方法中填充用于读取文件的代码：
 
