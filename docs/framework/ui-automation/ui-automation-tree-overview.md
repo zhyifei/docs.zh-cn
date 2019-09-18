@@ -5,12 +5,12 @@ helpviewer_keywords:
 - automation tree
 - UI Automation, tree
 ms.assetid: 03b98058-bdb3-47a0-8ff7-45e6cdf67166
-ms.openlocfilehash: 7dd799b32d51c7e24e6717561aab549e7e7f1fbe
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: adb1d10e659254b5fa326e7c598107d768aa2685
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69954012"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71040410"
 ---
 # <a name="ui-automation-tree-overview"></a>UI 自动化树概述
 > [!NOTE]
@@ -18,7 +18,7 @@ ms.locfileid: "69954012"
   
  辅助技术产品和测试脚本通过在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树中导航来收集有关 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 及其元素的信息。  
   
- 在树中, 有一个表示当前桌面<xref:System.Windows.Automation.AutomationElement.RootElement%2A>的根元素 (), 其子元素表示应用程序窗口。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 其中的每个子元素都可以包含表示 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 的各个部分（如菜单、按钮、工具栏和列表框）的元素。 这些子元素又可以包含列表项之类的元素。  
+ 在树中，有一个表示当前桌面<xref:System.Windows.Automation.AutomationElement.RootElement%2A>的根元素（），其子元素表示应用程序窗口。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 其中的每个子元素都可以包含表示 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 的各个部分（如菜单、按钮、工具栏和列表框）的元素。 这些子元素又可以包含列表项之类的元素。  
   
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树的结构不固定，由于它可能包含数千个元素，因此它很少全部显示出来。 可以根据需要生成树的某些部分，添加、移动或删除元素时，树也会发生相应更改。  
   
@@ -57,4 +57,4 @@ ms.locfileid: "69954012"
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Windows.Automation.AutomationElement>
-- [UI 自动化概述](../../../docs/framework/ui-automation/ui-automation-overview.md)
+- [UI 自动化概述](ui-automation-overview.md)

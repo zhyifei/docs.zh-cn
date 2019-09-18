@@ -3,12 +3,12 @@ title: 使用 WIF 3.5 至 WIF 4.5 构建的应用程序迁移指南
 ms.date: 03/30/2017
 ms.assetid: 7a32fe6e-5f68-4693-9371-19411fa8063c
 author: BrucePerlerMS
-ms.openlocfilehash: ad8ff2b6daaaf48975b86c637435b31fa1869e1d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3ba99a061d060ebe7740fe61846c3684b5c3085d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61940564"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045487"
 ---
 # <a name="guidelines-for-migrating-an-application-built-using-wif-35-to-wif-45"></a>使用 WIF 3.5 至 WIF 4.5 构建的应用程序迁移指南
 
@@ -32,7 +32,7 @@ WIF 到 .NET 的集成需要对 WIF API 图面做出一些更改。 WIF 4.5 包�
 
 WIF 3.5 类都包含在其中一个 `Microsoft.IdentityModel` 命名空间中；例如，`Microsoft.IdentityModel`、`Microsoft.IdentityModel.Tokens` 和 `Microsoft.IdentityModel.Web` 等。 在 WIF 4.5 中，WIF 类现已分布在 [System.IdentityModel](https://go.microsoft.com/fwlink/?LinkId=272004) 命名空间、<xref:System.Security.Claims?displayProperty=nameWithType> 命名空间和 <xref:System.ServiceModel.Security?displayProperty=nameWithType> 命名空间中。 除此重组外，一些 WIF 3.5 类已被放置在 WIF 4.5 中。
 
-下表显示了一些更重要的 WIF 4.5 命名空间以及它们所包含的类的类型。 有关命名空间在 WIF 3.5 和 WIF 4.5 之间的映射关系以及有关已被放置在 WIF 4.5 中的命名空间和类的详细信息，请参阅 [WIF 3.5 和 WIF 4.5 之间的命名空间映射](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)。
+下表显示了一些更重要的 WIF 4.5 命名空间以及它们所包含的类的类型。 有关命名空间在 WIF 3.5 和 WIF 4.5 之间的映射关系以及有关已被放置在 WIF 4.5 中的命名空间和类的详细信息，请参阅 [WIF 3.5 和 WIF 4.5 之间的命名空间映射](namespace-mapping-between-wif-3-5-and-wif-4-5.md)。
 
 |WIF 4.5 命名空间|描述|
 |-----------------------|-----------------|
@@ -86,23 +86,23 @@ WIF 4.5 中更新了此条目来包括新的命名空间和程序集版本：
 
 以下列表枚举了针对 WIF 4.5 的配置文件进行的主要更改。
 
-- `<microsoft.identityModel>` 部分现在为 [\<system.identityModel>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md) 部分。
+- `<microsoft.identityModel>` 部分现在为 [\<system.identityModel>](../configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md) 部分。
 
-- `<service>` 元素现在为 [\<identityConfiguration>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) 元素。
+- `<service>` 元素现在为 [\<identityConfiguration>](../configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) 元素。
 
-- 已将新的部分 [\<system.identityModel.services>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md) 添加到在被动（WS 联合身份验证）方案中控制行为的特定设置。
+- 已将新的部分 [\<system.identityModel.services>](../configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md) 添加到在被动（WS 联合身份验证）方案中控制行为的特定设置。
 
-- 已将 [\<federationConfiguration>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md) 元素及其子元素从 WIF 3.5 中的 `<service>` 元素移动到新的 `<system.identityModel.services>` 元素。
+- 已将 [\<federationConfiguration>](../configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md) 元素及其子元素从 WIF 3.5 中的 `<service>` 元素移动到新的 `<system.identityModel.services>` 元素。
 
-- 可以直接在 WIF 3.5 中的 `<service>` 元素下在服务级别处指定的多个元素已被限制为在 [\<securityTokenHandlerConfiguration>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md) 元素下指定。 （出于后向兼容性目的，仍可以在 WIF 4.5 中的 [\<identityConfiguration>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) 元素下指定它们。）
+- 可以直接在 WIF 3.5 中的 `<service>` 元素下在服务级别处指定的多个元素已被限制为在 [\<securityTokenHandlerConfiguration>](../configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md) 元素下指定。 （出于后向兼容性目的，仍可以在 WIF 4.5 中的 [\<identityConfiguration>](../configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) 元素下指定它们。）
 
-有关 WIF 4.5 配置元素的完整列表，请参阅 [WIF 配置架构](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/index.md)。
+有关 WIF 4.5 配置元素的完整列表，请参阅 [WIF 配置架构](../configure-apps/file-schema/windows-identity-foundation/index.md)。
 
 ### <a name="visual-studio-tooling-changes"></a>Visual Studio 工具更改
 
 WIF 3.5 SDK 提供独立的 Federation Utility (FedUtil.exe (FedUtil))，用于将启用 WIF 的应用程序中的标识管理外包给安全令牌服务 (STS)。 此工具将 WIF 设置添加到应用程序配置文件，使应用程序能够从一个或多个 STS 获取安全令牌，并通过“添加 STS 服务引用”按钮出现在 Visual Studio 中。 FedUtil 不随附 WIF 4.5。 相反，WIF 4.5 支持名为用于 Visual Studio 2012 的标识和访问工具的新 Visual Studio 扩展，可用于通过将标识管理外包给 STS 所需的 WIF 设置修改应用程序的配置文件。 标识和访问工具也实现了名为本地 STS 的 STS，可用于测试启用 WIF 的应用程序。 在许多情况下，使用此功能便无需生成自定义 STS，通常需要在 WIF 3.5 中生成此 STS 以测试正在开发的解决方案。 因此，Visual Studio 2012 中不再支持此类 STS 模板；然而，支持 STS 开发的类仍然在 WIF 4.5 中可用。
 
-您可以从扩展和更新管理器在 Visual Studio 中安装标识和访问工具也可以从代码库上的以下页面下载：[标识和访问工具的代码库上的 Visual Studio 2012](https://go.microsoft.com/fwlink/?LinkID=245849)。 下表中汇总了 Visual Studio 工具更改：
+可以通过 Visual Studio 中的扩展和更新管理器安装标识和访问工具，也可以从代码库中的以下页面下载：[代码库上 Visual Studio 2012 的标识和访问工具](https://go.microsoft.com/fwlink/?LinkID=245849)。 下表中汇总了 Visual Studio 工具更改：
 
 - 删除了“添加 STS 服务引用”功能。 替换为了标识和访问工具。
 
@@ -110,7 +110,7 @@ WIF 3.5 SDK 提供独立的 Federation Utility (FedUtil.exe (FedUtil))，用于�
 
 - WIF 4.5 中不提供独立的 Federation Utility (FedUtil)。 可以使用标识和访问工具修改配置文件，以将标识管理外包给 STS。
 
-有关标识和访问工具的详细信息，请参阅[用于 Visual Studio 2012 的标识和访问工具](../../../docs/framework/security/identity-and-access-tool-for-vs.md)
+有关标识和访问工具的详细信息，请参阅[用于 Visual Studio 2012 的标识和访问工具](identity-and-access-tool-for-vs.md)
 
 <a name="BKMK_ToolingChanges"></a>
 
@@ -182,7 +182,7 @@ Add-WindowsFeature windows-identity-foundation
 
 ## <a name="see-also"></a>请参阅
 
-- [WIF 配置架构](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/index.md)
-- [WIF 3.5 和 WIF 4.5 之间的命名空间映射](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)
-- [Windows Identity Foundation 4.5 中的新增功能](../../../docs/framework/security/whats-new-in-wif.md)
-- [Identity and Access Tool for Visual Studio 2012](../../../docs/framework/security/identity-and-access-tool-for-vs.md)
+- [WIF 配置架构](../configure-apps/file-schema/windows-identity-foundation/index.md)
+- [WIF 3.5 和 WIF 4.5 之间的命名空间映射](namespace-mapping-between-wif-3-5-and-wif-4-5.md)
+- [Windows Identity Foundation 4.5 中的新增功能](whats-new-in-wif.md)
+- [Identity and Access Tool for Visual Studio 2012](identity-and-access-tool-for-vs.md)

@@ -3,15 +3,15 @@ title: 基于声明的标识模型
 ms.date: 03/30/2017
 ms.assetid: 4a96a9af-d980-43be-bf91-341a23401431
 author: BrucePerlerMS
-ms.openlocfilehash: b7cafa727251c28b79615a37adce4effe6885392
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: c09d3e177d8b0638f0260b76c163bf668235db29
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422409"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045527"
 ---
 # <a name="claims-based-identity-model"></a>基于声明的标识模型
-在生成声明感知应用程序时，用户标识在应用程序中表示为一组声明。 一个声明可能是用户的名称，另一个可能是电子邮件地址。 其理念是，配置外部标识系统以便为您的应用程序提供所需的一切，是其了解用户及用户发出的每个请求和加密，从而确保您收到的标识数据来自受信任的源。  
+在生成声明感知应用程序时，用户标识在应用程序中表示为一组声明。 一个声明可以是用户的名称，另一个声明可能是电子邮件地址。 其理念是，配置外部标识系统以便为您的应用程序提供所需的一切，是其了解用户及用户发出的每个请求和加密，从而确保您收到的标识数据来自受信任的源。  
   
  在此模型下，可以更轻松地实现单一登录，并且应用程序不再负责执行以下操作：  
   
@@ -27,9 +27,9 @@ ms.locfileid: "67422409"
   
  本主题提供以下信息：  
   
-- [基于声明的标识简介](../../../docs/framework/security/claims-based-identity-model.md#BKMK_1)  
+- [基于声明的标识简介](claims-based-identity-model.md#BKMK_1)  
   
-- [基于声明的标识模型的基本方案](../../../docs/framework/security/claims-based-identity-model.md#BKMK_2)  
+- [基于声明的标识模型的基本方案](claims-based-identity-model.md#BKMK_2)  
   
 <a name="BKMK_1"></a>   
 ## <a name="introduction-to-claims-based-identity"></a>基于声明的标识简介  
@@ -39,7 +39,7 @@ ms.locfileid: "67422409"
  为描述 Windows Identity Foundation (WIF) 中的编程模型，将使用术语“标识”来表示一组特性，这些特性描述了系统中要保护的用户或其他实体。  
   
 ### <a name="claim"></a>声明  
- 将声明视为一条标识信息，例如名称、 电子邮件地址、 年龄、 Sales 角色的成员身份。 应用程序收到的声明越多，您对用户的了解就越深。 可能会想为何将它们称为“声明”，而不是像描述企业目一样称之为“特性”。 原因与传递方法相关。 在此模型中，应用程序不会查找目录中的用户特性。 相反，用户会将声明提供给您的应用程序，然后您的应用程序会对其进行检查。 每个声明均由颁发者做出，您可以像信任颁发者一样信任此声明。 例如，您对由您公司的域控制器做出的声明的信任程度比对用户自身做出的声明的信任程度更高。 WIF 表示具有 <xref:System.Security.Claims.Claim> 类型的声明，此类型拥有一个允许您查明此声明的颁发者的 <xref:System.Security.Claims.Claim.Issuer%2A> 属性。  
+ 将声明视为一段标识信息，如名称、电子邮件地址、年龄、销售角色的成员身份。 应用程序收到的声明越多，您对用户的了解就越深。 可能会想为何将它们称为“声明”，而不是像描述企业目一样称之为“特性”。 原因与传递方法相关。 在此模型中，应用程序不会查找目录中的用户特性。 相反，用户会将声明提供给您的应用程序，然后您的应用程序会对其进行检查。 每个声明均由颁发者做出，您可以像信任颁发者一样信任此声明。 例如，您对由您公司的域控制器做出的声明的信任程度比对用户自身做出的声明的信任程度更高。 WIF 表示具有 <xref:System.Security.Claims.Claim> 类型的声明，此类型拥有一个允许您查明此声明的颁发者的 <xref:System.Security.Claims.Claim.Issuer%2A> 属性。  
   
 ### <a name="security-token"></a>安全令牌  
  用户会将一组声明随请求一起提供给您的应用程序。 在 Web 服务中，SOAP 信封的安全标头中携带了这些声明。 在基于浏览器的 Web 应用程序中，这些声明会通过来自用户浏览器的 HTTP POST 到达，且稍后可能缓存在 Cookie 中（如果需要会话）。 不管这些声明是如何到达的，都必须对其进行序列化，从而产生安全令牌。 安全令牌是由颁发机构进行数字签名的一组序列化的声明。 签名很重要：它可以为您确保用户不只是构建一组声明并将其发送给您。 在不需要加密的安全性较低的情况下，您可以使用未签名的标记，但本主题中不描述此情况。  
@@ -58,7 +58,7 @@ ms.locfileid: "67422409"
  在生成依赖声明的应用程序时，您将生成依赖方 (RP) 应用程序。 RP 的同义词包括“声明感知应用程序”和“基于声明的应用程序”。 Web 应用程序和 Web 服务都可以成为 RP。 RP 应用程序使用 STS 颁发的令牌，并从令牌中提取声明以将其用于与标识相关的任务。 WIF 提供可帮助您生成 RP 应用程序的功能。  
   
 ### <a name="standards"></a>标准  
- 为了使所有这些功能能够进行互操作，上一个方案中使用了多个 WS-* 标准。 使用 WS-MetadataExchange 检索策略，并根据 WS-Policy 规范构造策略本身。 STS 公开了实现 WS-Trust 规范的终结点，此规范描述了如何请求和接收安全令牌。 大多数 Sts 目前颁发格式使用安全断言标记语言 (SAML) 令牌。 SAML 是行业认可的 XML 词汇表，可用于以可互操作的方式表示声明。 或者，在多平台情况下，这将允许您在完全不同的平台上与 STS 进行通信并跨所有应用程序实现单一登录，不论平台如何。  
+ 为了使所有这些功能能够进行互操作，上一个方案中使用了多个 WS-* 标准。 使用 WS-MetadataExchange 检索策略，并根据 WS-Policy 规范构造策略本身。 STS 公开了实现 WS-Trust 规范的终结点，此规范描述了如何请求和接收安全令牌。 如今，大多数 Sts 都颁发了用安全断言标记语言（SAML）格式化的令牌。 SAML 是行业认可的 XML 词汇表，可用于以可互操作的方式表示声明。 或者，在多平台情况下，这将允许您在完全不同的平台上与 STS 进行通信并跨所有应用程序实现单一登录，不论平台如何。  
   
 ### <a name="browser-based-applications"></a>基于浏览器的应用程序  
  智能客户端不是可使用基于声明的标识模型的唯一对象。 基于浏览器的应用程序（也称为被动客户端）也可使用该模型。 以下方案描述了其工作原理。  
@@ -69,14 +69,14 @@ ms.locfileid: "67422409"
 ## <a name="basic-scenario-for-a-claims-based-identity-model"></a>基于声明的标识模型的基本方案  
  以下是基于声明的系统的示例。  
   
- ![信赖方身份验证流](../../../docs/framework/security/media/conc-relying-partner-processc.png "conc_relying_partner_processc")  
+ ![信赖方身份验证流](./media/conc-relying-partner-processc.png "conc_relying_partner_processc")  
   
  此关系图显示一个已配置为使用 WIF 进行身份验证的网站（依赖方应用程序，RP）、一个客户端和一个要使用该网站的 Web 浏览器。  
   
-1. 在未经身份验证的用户请求页面时，其浏览器重定向到标识提供者 (IdP) 页。  
+1. 当未经身份验证的用户请求某个页面时，其浏览器将重定向到标识提供者（IdP）页面。  
   
-2. IdP 要求用户提供其凭据，例如用户名/密码或 Kerberos 身份验证。  
+2. IdP 要求用户提供其凭据，如用户名/密码或 Kerberos 身份验证。  
   
-3. 返回到的令牌返回到浏览器 IdP 问题。  
+3. IdP 向浏览器发送返回到的令牌。  
   
 4. 浏览器现在将重定向回最初请求的页，其中 WIF 将确定此令牌是否满足访问该页的要求。 如果是这样，则会发出一个 cookie 以建立会话，以便只需进行一次身份验证并将控制传递给应用程序。

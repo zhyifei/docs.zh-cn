@@ -4,14 +4,14 @@ ms.date: 03/30/2017
 ms.assetid: 6a14125f-1a8d-41a1-8a32-659ca0ad12de
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c58be27334bcb862367464475a4eade5e01bdbb2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6dfb6a07f9733ab1a01a1ce9917c6a4bb4ce793b
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868521"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049781"
 ---
-# <a name="field-element-net-native"></a>\<字段 > 元素 (.NET Native)
+# <a name="field-element-net-native"></a>\<Field > 元素（.NET Native）
 将运行时反射策略应用到一个字段。  
   
 ## <a name="syntax"></a>语法  
@@ -37,15 +37,15 @@ ms.locfileid: "61868521"
   
 ## <a name="name-attribute"></a>Name 特性  
   
-|“值”|描述|  
+|值|描述|  
 |-----------|-----------------|  
-|method_name|字段名。 该字段的类型是由 [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) 或 [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) 父元素定义的。|  
+|method_name|字段名。 该字段的类型是由 [\<Type>](type-element-net-native.md) 或 [\<TypeInstantiation>](typeinstantiation-element-net-native.md) 父元素定义的。|  
   
 ## <a name="all-other-attributes"></a>所有其他特性  
   
-|“值”|描述|  
+|值|描述|  
 |-----------|-----------------|  
-|policy_setting|该设置将应用到这个字段的策略类型。 可能值为 `Auto`、`Excluded`、`Included` 和 `Required`。 有关详细信息，请参阅[运行时指令策略设置](../../../docs/framework/net-native/runtime-directive-policy-settings.md)。|  
+|policy_setting|该设置将应用到这个字段的策略类型。 可能值为 `Auto`、`Excluded`、`Included` 和 `Required`。 有关详细信息，请参阅[运行时指令策略设置](runtime-directive-policy-settings.md)。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  
@@ -54,14 +54,14 @@ ms.locfileid: "61868521"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|将反射策略应用到一种类型及其所有成员。|  
-|[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|将反射策略应用到一种构造泛型类型及其所有成员。|  
+|[\<Type>](type-element-net-native.md)|将反射策略应用到一种类型及其所有成员。|  
+|[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|将反射策略应用到一种构造泛型类型及其所有成员。|  
   
 ## <a name="remarks"></a>备注  
  如果一个字段的策略没有得到显式定义，它将继承其父元素的运行时策略。  
   
 ## <a name="see-also"></a>请参阅
 
-- [运行时指令元素](../../../docs/framework/net-native/runtime-directive-elements.md)
-- [运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [运行时指令策略设置](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+- [运行时指令元素](runtime-directive-elements.md)
+- [运行时指令 (rd.xml) 配置文件参考](runtime-directives-rd-xml-configuration-file-reference.md)
+- [运行时指令策略设置](runtime-directive-policy-settings.md)

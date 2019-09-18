@@ -1,5 +1,5 @@
 ---
-title: '{} 转义序列-标记扩展'
+title: '{}转义序列-标记扩展'
 ms.date: 03/30/2017
 f1_keywords:
 - '{}'
@@ -11,25 +11,25 @@ helpviewer_keywords:
 - quotation mark (") [XAML Services]
 - escape sequence [XAML Services]
 ms.assetid: 3ce3e2ad-a868-43f9-9c98-b29561cb146e
-ms.openlocfilehash: 9f6743dd8a82891ac2233978550e5679130de0be
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b0646c62a1342eb160d1967e86ac286429013f3c
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855600"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053864"
 ---
 # <a name="-escape-sequence--markup-extension"></a>{} 转义序列/标记扩展
-为属性值提供 XAML 转义序列。 转义序列允许后续值中的属性将被解释为文本。  
+提供特性值的 XAML 转义序列。 转义序列允许将属性中的后续值解释为文本。  
   
 ## <a name="xaml-attribute-usage"></a>XAML 属性用法  
   
-```xml  
+```xaml  
 <object property="{} literalValue" .../>  
 ```  
   
 ## <a name="xaml-property-element-usage"></a>XAML 属性元素用法  
   
-```  
+```xaml  
 <object>  
   <object.property>  
     {} literalValue  
@@ -41,20 +41,20 @@ ms.locfileid: "61855600"
   
 |||  
 |-|-|  
-|*literalValue*|后面的转义序列的文本字符串。 此字符串通常包含一个打开或关闭的大括号 （{或}）。|  
+|*literalValue*|位于转义序列后面的文本字符串。 通常，此字符串包含一个左大括号或右大括号（{或}）。|  
   
 ## <a name="remarks"></a>备注  
- 转义序列 ({}) 使用，以便可以作为 XAML 中的文字字符使用左大括号 （{}）。  
+ 使用转义序列（{}），以便在 XAML 中将左大括号（{）用作文字字符。  
   
- XAML 读取器通常使用左大括号 （{}） 来表示标记扩展的入口点; 但是，它们首先检查以确定它是否是右大括号 （}） 的下一个字符。 仅当两个大括号 ({}) 相邻情况是它们被视为一个转义序列。  
+ XAML 读取器通常使用左大括号（{）表示标记扩展的入口点; 但是，它们首先会检查下一个字符，以确定它是否为右大括号（}）。 只有当两个大括号{}（）相邻时，它们才被视为转义序列。  
   
- 如果遇到转义序列时，XAML 读取器应作为字符串处理字符串的其余部分。 但是，如果转义序列应用于成员具有的类型转换器，该字符串会被类型转换时解释由 XAML 编写器。  
+ 如果遇到转义序列，XAML 读取器应以字符串的形式处理字符串的其余部分。 但是，如果将转义序列应用于具有类型转换器的成员，则在 XAML 编写器解释该字符串时，可能会经历类型转换。  
   
- 转义序列不是标记扩展，且不支持由类。 但是，它是 XAML 读取器 （包括自定义 XAML 读取器） 应遵循的约定。  
+ 转义序列不是标记扩展，并且不受类支持。 但是，XAML 读取器（包括自定义 XAML 读取器）应遵循这种约定。  
   
- 引号 （"） 不能用作转义序列以这种方式。 如果您需要将英文引号连用设置为非内容属性的属性值，使用属性元素语法和属性元素内的字符串将引号或使用 XML 字符实体。 内容属性，英文引号连用可以是整个内容。  
+ 引号（"）不能以这种方式用作转义序列。 如果需要将引号设置为 noncontent 属性的属性值，请使用属性元素语法，并将引号放置为属性元素内的字符串，或使用 XML 字符实体。 对于内容属性，引号可以是整个内容。  
   
- 转义序列 ({}) 时，经常需要指定在 XAML 标记扩展可能出现的位置中必须包含命名空间限定符的 XML 类型。 这包括开始的 XAML 属性值和在标记扩展中，紧等号 （=）。 下面的示例显示了 XAML 特性值的开头处显示的 XML 命名空间的转义序列。  
+ 当指定的 XML{}类型必须在 XAML 标记扩展可能出现的位置中包含命名空间限定符时，通常需要使用转义序列（）。 这包括 XAML 特性值的开头，并且在标记扩展中紧跟在等号（=）之后。 下面的示例演示在 XAML 特性值开始时显示的 XML 命名空间的转义序列。  
   
  [!code-xaml[XLINQExample#StackPanelResources](~/samples/snippets/csharp/VS_Snippets_Wpf/XLinqExample/CSharp/Window1.xaml#stackpanelresources)]  
   

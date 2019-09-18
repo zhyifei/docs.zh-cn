@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: f9532629-6594-4a41-909f-d083f30a42f3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ba60b6d97d1441cefc9392067c797504f454ac59
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 9d120dcf49f1c9097eee04434062a0363a7e144a
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894514"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049964"
 ---
 # <a name="apis-that-rely-on-reflection"></a>利用反射的 API
-在某些情况下，在代码中使用反射并不明显，因此 .NET Native 工具链不会保留运行时所需的元数据。 该主题介绍了一些常见的 API 或常见编程模式，它们不被视为是反射 API 的一部分，而依赖反射成功执行。 如果在源代码中使用了它们，可以将有关它们的信息添加到运行时指令 (.rd.xml) 文件，以便对这些 API 的调用不会在运行时内引发 [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) 异常或某种其他异常。  
+在某些情况下，在代码中使用反射并不明显，因此 .NET Native 工具链不会保留运行时所需的元数据。 该主题介绍了一些常见的 API 或常见编程模式，它们不被视为是反射 API 的一部分，而依赖反射成功执行。 如果在源代码中使用了它们，可以将有关它们的信息添加到运行时指令 (.rd.xml) 文件，以便对这些 API 的调用不会在运行时内引发 [MissingMetadataException](missingmetadataexception-class-net-native.md) 异常或某种其他异常。  
   
 ## <a name="typemakegenerictype-method"></a>Type.MakeGenericType 方法  
  你可以通过使用以下所示代码调用 `AppClass<T>` 方法来动态实例化一个泛型类型 <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType>：  
@@ -27,7 +27,7 @@ ms.locfileid: "70894514"
   
  这允许 <xref:System.Type.GetType%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> 方法调用成功并返回一个有效的 <xref:System.Type> 对象。  
   
- 但即使当你为未实例化的泛型类型添加元数据时，调用 <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType> 方法也会引发 [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) 异常：  
+ 但即使当你为未实例化的泛型类型添加元数据时，调用 <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType> 方法也会引发 [MissingMetadataException](missingmetadataexception-class-net-native.md) 异常：  
   
 由于性能原因，已删除以下类型的元数据，因此无法执行此操作：  
   
@@ -92,5 +92,5 @@ Unfortunately, no further information is available.
   
 ## <a name="see-also"></a>请参阅
 
-- [入门](../../../docs/framework/net-native/getting-started-with-net-native.md)
-- [运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [入门](getting-started-with-net-native.md)
+- [运行时指令 (rd.xml) 配置文件参考](runtime-directives-rd-xml-configuration-file-reference.md)

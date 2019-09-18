@@ -3,12 +3,12 @@ title: WSTrustChannelFactory 和 WSTrustChannel
 ms.date: 03/30/2017
 ms.assetid: 96cec467-e963-4132-b18b-7d0b3a2e979f
 author: BrucePerlerMS
-ms.openlocfilehash: d129775137759cf7f006ce6501279978f4ab2595
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: e00f3ae25a50c2fb3f34f4c04d02cde574b3da17
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633172"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044913"
 ---
 # <a name="wstrustchannelfactory-and-wstrustchannel"></a>WSTrustChannelFactory 和 WSTrustChannel
 如果已熟悉 Windows Communication Foundation (WCF)，便知道 WCF 客户端已可感知联合。 通过使用 <xref:System.ServiceModel.WSFederationHttpBinding> 或相似的自定义绑定配置 WCF 客户端，便可对服务启用联合身份验证。
@@ -25,7 +25,7 @@ ms.locfileid: "65633172"
 
 - 仅使用 WIF 从 STS 获取令牌，然后启用 WCF 客户端，以便使用此令牌进行身份验证。 有关详细信息，请参阅 [ClaimsAwareWebService](https://go.microsoft.com/fwlink/?LinkID=248406) 示例。
 
- 第一个方案很容易理解：现有的 WCF 客户端将继续适用于 WIF 信赖方和 Sts。 本主题讨论剩余的两个方案。
+ 第一种方案一目了然：现有 WCF 客户端将继续与 WIF 信赖方和 Sts 一起使用。 本主题讨论剩余的两个方案。
 
 ## <a name="enhancing-an-existing-wcf-client-with-actas--onbehalfof"></a>通过 ActAs/OnBehalfOf 增强现有的 WCF 客户端
 在典型的标识委派方案中，客户端调用中间层服务，该服务随后调用后端服务。 中间层服务充当客户端或代表客户端执行操作。
@@ -33,7 +33,7 @@ ms.locfileid: "65633172"
 > [!TIP]
 > ActAs 和 OnBehalfOf 有何区别？
 >
-> 从 Ws-trust 协议的角度来看：
+> 从 WS 信任协议角度来看：
 >
 > 1. ActAs RST 元素指示请求者想要的令牌包含有关两个不同实体的声明，这两个实体分别是请求者和由 ActAs 元素中的令牌表示的外部实体。
 > 2. OnBehalfOf RST 元素指示请求者想要的令牌包含仅与一个实体有关的声明，这个实体是由 OnBehalfOf 元素中的令牌表示的外部实体。
@@ -81,7 +81,7 @@ SecurityToken token = channel.Issue(rst, out rstr);
 
 请注意，<xref:System.ServiceModel.Security.WSTrustChannel.Issue%2A> 方法上的 `out` 参数允许访问 RSTR 进行客户端检查。
 
-到目前为止，仅已了解如何获取的令牌。 从 <xref:System.ServiceModel.Security.WSTrustChannel> 对象返回的令牌是 `GenericXmlSecurityToken`，其中包含对信赖方进行身份验证所需的所有信息。 下方的代码示例演示如何使用此令牌。
+到目前为止，你已了解如何获取令牌。 从 <xref:System.ServiceModel.Security.WSTrustChannel> 对象返回的令牌是 `GenericXmlSecurityToken`，其中包含对信赖方进行身份验证所需的所有信息。 下方的代码示例演示如何使用此令牌。
 
 ```csharp
 IHelloService serviceChannel = channelFactory.CreateChannelWithIssuedToken<IHelloService>( token );
@@ -102,4 +102,4 @@ serviceChannel.Hello("Hi!");
 
 ## <a name="see-also"></a>请参阅
 
-- [WIF 功能](../../../docs/framework/security/wif-features.md)
+- [WIF 功能](wif-features.md)

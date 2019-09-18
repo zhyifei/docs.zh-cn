@@ -1,5 +1,5 @@
 ---
-title: 如何：在一个变量 (Visual Basic 中) 中保存多个值
+title: 如何：在一个变量中保存多个值（Visual Basic）
 ms.date: 07/20/2015
 helpviewer_keywords:
 - classes [Visual Basic], composite data types
@@ -11,36 +11,37 @@ helpviewer_keywords:
 - arrays [Visual Basic], compilation errors
 - types [Visual Basic], composite
 ms.assetid: 5fe0e558-aac2-4a40-b7f2-7cfea7336917
-ms.openlocfilehash: 2c3df9873d184ead2de3f82b89a081955ade93b3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8d07a34a98303f9d220dba0a3c955120b421340e
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64601124"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71054198"
 ---
-# <a name="how-to-hold-more-than-one-value-in-a-variable-visual-basic"></a>如何：在一个变量 (Visual Basic 中) 中保存多个值
-声明的变量存储多个值*复合数据类型*。  
-  
- [复合数据类型](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)包括结构、 数组和类。 复合数据类型的变量可以包含基本数据类型和其他复合类型的组合。 结构和类可以包含代码，以及数据。  
-  
-### <a name="to-hold-more-than-one-value-in-a-variable"></a>若要在变量中保存多个值  
-  
-1. 确定想要使用变量的复合数据类型。  
-  
-2. 如果尚未定义的复合数据类型，定义它，以便你的变量可以使用它。  
-  
-    - 定义与结构[Structure 语句](../../../../visual-basic/language-reference/statements/structure-statement.md)。  
-  
-    - 定义一个包含的数组[Dim 语句](../../../../visual-basic/language-reference/statements/dim-statement.md)。  
-  
-    - 使用定义类[Class 语句](../../../../visual-basic/language-reference/statements/class-statement.md)。  
-  
-3. 与将变量声明`Dim`语句。  
-  
-4. 变量名后面加`As`子句。  
-  
-5. 请按照`As`关键字适当的复合数据类型的名称。  
-  
+# <a name="how-to-hold-more-than-one-value-in-a-variable-visual-basic"></a>如何：在一个变量中保存多个值（Visual Basic）
+
+如果将变量声明为*复合数据类型*，则该变量包含多个值。
+
+[复合数据类型](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)包括结构、数组和类。 复合数据类型的变量可以包含基本数据类型和其他复合类型的组合。 结构和类可以保存代码以及数据。
+
+## <a name="to-hold-more-than-one-value-in-a-variable"></a>在一个变量中保存多个值
+
+1. 确定要为变量使用哪种复合数据类型。
+
+2. 如果尚未定义复合数据类型，请对其进行定义，使变量可以使用它。
+
+    - 使用[结构语句](../../../../visual-basic/language-reference/statements/structure-statement.md)定义结构。
+
+    - 定义带有[Dim 语句](../../../../visual-basic/language-reference/statements/dim-statement.md)的数组。
+
+    - 使用[类语句](../../../../visual-basic/language-reference/statements/class-statement.md)定义类。
+
+3. 使用`Dim`语句声明变量。
+
+4. 使用`As`子句的变量名称。
+
+5. 在`As`关键字后跟适当的复合数据类型的名称。
+
 ## <a name="see-also"></a>请参阅
 
 - [数据类型](../../../../visual-basic/language-reference/data-types/index.md)
@@ -49,4 +50,4 @@ ms.locfileid: "64601124"
 - [结构](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [数组](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
 - [对象和类](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
-- [值类型和引用类型](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)

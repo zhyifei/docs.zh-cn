@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: 06a4ae8c-eeb2-4d5a-817e-b1b95c0653e1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: af558e6712d58e208bf05cdb7a0f847ec4517f0f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: eafbd5b1dfa8eeee386cdcf49652aeeee9d635a8
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614309"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052383"
 ---
 # <a name="performance-counters-in-the-net-framework"></a>.NET Framework 中的性能计数器
-本主题提供了一系列性能计数器可以中找到[Windows 性能监视器](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc749249%28v=ws.11%29)。  
+本主题提供了可在[Windows 性能监视器](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc749249%28v=ws.11%29)中查找的性能计数器的列表。  
   
 - [异常性能计数器](#exception)  
   
@@ -41,7 +41,7 @@ ms.locfileid: "64614309"
 |性能计数器|描述|  
 |-------------------------|-----------------|  
 |**引发的异常数**|显示从应用程序启动以来引发的异常总数。 此数值包括 .NET 异常和转换为 .NET 异常的非托管异常。 例如，从非托管代码返回的 HRESULT 在托管代码中会被转换为异常。<br /><br /> 此计数器包括已处理和未经处理的异常。 将再次计算重新引发的异常。|  
-|**引发的异常数/秒**|显示每秒引发的异常数。 此数值包括 .NET 异常和转换为 .NET 异常的非托管异常。 例如，从非托管代码返回的 HRESULT 在托管代码中会被转换为异常。<br /><br /> 此计数器包括已处理和未经处理的异常。 此数值不是一段时间内的平均值；它显示最后两个示例中观测值的差除以示例间隔所得的结果。 此计数器是潜在的性能问题的指示器，如果一个较大 (> 100 为单位) 引发的异常数。|  
+|**引发的异常数/秒**|显示每秒引发的异常数。 此数值包括 .NET 异常和转换为 .NET 异常的非托管异常。 例如，从非托管代码返回的 HRESULT 在托管代码中会被转换为异常。<br /><br /> 此计数器包括已处理和未经处理的异常。 此数值不是一段时间内的平均值；它显示最后两个示例中观测值的差除以示例间隔所得的结果。 如果引发了较大（> 数百）个异常，则此计数器将指示潜在的性能问题。|  
 |**筛选次数/秒**|显示每秒执行的 .NET 异常筛选次数。 无论异常是否已处理，都会计算异常筛选。<br /><br /> 此计数器不是一段时间内的平均值；它显示最近两个样本观测值的差除以取样间隔所得的结果。|  
 |**Finally 数量/秒**|显示每秒执行的 finally 块的数量。 无论以何种方式退出 try 块，均会执行 finally 块。  此计数器只计算到为异常执行的 finally 块，不计算正常代码路径上的 finally 块。<br /><br /> 此计数器不是一段时间内的平均值；它显示最近两个样本观测值的差除以取样间隔所得的结果。|  
 |**引发到捕获的深度/秒**|显示从引发异常的帧到处理该异常的帧每秒遍历的堆栈帧数。 此计数器在输入异常处理程序后重置为零，因此嵌入的异常显示处理程序到处理程序的堆栈深度。<br /><br /> 此计数器不是一段时间内的平均值；它显示最近两个样本观测值的差除以取样间隔所得的结果。|  
@@ -217,7 +217,7 @@ ms.locfileid: "64614309"
   
  网络性能计数器可以通过使用 <xref:System.Diagnostics> 命名空间中的 <xref:System.Diagnostics.PerformanceCounter> 和相关类进行访问和管理。 它还可以通过使用 Windows 性能监视器控制台进行查看。  
   
- 需要在要使用的配置文件中启用网络性能计数器。 通过配置文件中的单个设置即可启用或禁用所有网络性能计数器。 不能启用或禁用单个网络性能计数器。 有关详细信息，请参阅 [\<performanceCounter> 元素（网络设置）](../../../docs/framework/configure-apps/file-schema/network/performancecounter-element-network-settings.md)。  
+ 需要在要使用的配置文件中启用网络性能计数器。 通过配置文件中的单个设置即可启用或禁用所有网络性能计数器。 不能启用或禁用单个网络性能计数器。 有关详细信息，请参阅 [\<performanceCounter> 元素（网络设置）](../configure-apps/file-schema/network/performancecounter-element-network-settings.md)。  
   
  如果启用了网络计数器，此操作将创建并更新每个 AppDomain 和全局性能计数器。 如果禁用，则应用程序将不提供任何网络性能计数器数据。  
   
@@ -237,7 +237,7 @@ for (int i = 0; i < Array.Length; i++)
   
 - “.NET CLR 网络 4.0.0.0”- 所有上述套接计数器和 .NET Framework 版本 4 及更高版本上受支持的新的性能计数器。 这些新的计数器提供有关 <xref:System.Net.HttpWebRequest> 对象的性能信息。  
   
- 有关访问和管理应用程序中性能计数器的详细信息，请参阅[性能计数器](../../../docs/framework/debug-trace-profile/performance-counters.md)。  
+ 有关访问和管理应用程序中性能计数器的详细信息，请参阅[性能计数器](performance-counters.md)。  
   
 <a name="security"></a>   
 ## <a name="security-performance-counters"></a>安全性能计数器  
@@ -253,5 +253,5 @@ for (int i = 0; i < Array.Length; i++)
   
 ## <a name="see-also"></a>请参阅
 
-- [性能计数器](../../../docs/framework/debug-trace-profile/performance-counters.md)
-- [运行时分析](../../../docs/framework/debug-trace-profile/runtime-profiling.md)
+- [性能计数器](performance-counters.md)
+- [运行时分析](runtime-profiling.md)

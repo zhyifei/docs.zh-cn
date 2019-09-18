@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 167a4459-bb6e-476c-9046-7920880f2bb5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c7969c0a3f5f828f1a1c0d4f33b82881130c6e15
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 58249a0e080e045223bdaf170f2eaedb67fc0dea
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61949248"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046376"
 ---
 # <a name="method-etw-events"></a>方法 ETW 事件
 
@@ -36,9 +36,9 @@ CLR 方法事件进一步细分为以下几类：
 
 ## <a name="clr-method-events"></a>CLR 方法事件
 
-下表显示了关键字和级别。 （有关详细信息，请参阅 [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md)。）
+下表显示了关键字和级别。 （有关详细信息，请参阅 [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md)。）
 
-|引发事件的关键字|级别|
+|引发事件的关键字|Level|
 |-----------------------------------|-----------|
 |`JITKeyword` (0x10) 运行时提供程序|信息性 (4)|
 |`NGenKeyword` (0x20) 运行时提供程序|信息性 (4)|
@@ -63,7 +63,7 @@ CLR 方法事件进一步细分为以下几类：
 |MethodStartAddress|win:UInt64|方法的起始地址。|
 |MethodSize|win:UInt32|方法的大小。|
 |MethodToken|win:UInt32|0 代表动态方法和 JIT 帮助器。|
-|MethodFlags|win:UInt32|0x1:动态方法。<br /><br /> 0x2:泛型方法。<br /><br /> 0x4:JIT 编译的代码方法 （否则为 NGEN 本机映像代码）。<br /><br /> 0x8:帮助器方法。|
+|MethodFlags|win:UInt32|0x1动态方法。<br /><br /> 0x2泛型方法。<br /><br /> 0x4JIT 编译的代码方法（否则为 NGEN 本机映像代码）。<br /><br /> 0x8Helper 方法。|
 |ClrInstanceID|win:UInt16|CLR 或 CoreCLR 的实例的唯一 ID。|
 
 [返回页首](#top)
@@ -76,7 +76,7 @@ CLR 方法事件进一步细分为以下几类：
 
 下表显示了关键字和级别。
 
-|引发事件的关键字|级别|
+|引发事件的关键字|Level|
 |-----------------------------------|-----------|
 |`AppDomainResourceManagementRundownKeyword` (0x800) 断开提供程序|信息性 (4)|
 |`JitRundownKeyword` (0x10) 断开提供程序|信息性 (4)|
@@ -105,7 +105,7 @@ CLR 方法事件进一步细分为以下几类：
 
 下表显示了关键字和级别。
 
-|引发事件的关键字|级别|
+|引发事件的关键字|Level|
 |-----------------------------------|-----------|
 |`JITKeyword` (0x10) 运行时提供程序|详细级别 (5)|
 |`NGenKeyword` (0x20) 运行时提供程序|详细级别 (5)|
@@ -130,7 +130,7 @@ CLR 方法事件进一步细分为以下几类：
 |MethodStartAddress|win:UInt64|起始地址。|
 |MethodSize|win:UInt32|方法长度。|
 |MethodToken|win:UInt32|0 代表动态方法和 JIT 帮助器。|
-|MethodFlags|win:UInt32|0x1:动态方法。<br /><br /> 0x2:泛型方法。<br /><br /> 0x4:JIT 编译的方法 （否则为由 NGen.exe 生成)<br /><br /> 0x8:帮助器方法。|
+|MethodFlags|win:UInt32|0x1动态方法。<br /><br /> 0x2泛型方法。<br /><br /> 0x4JIT 编译的方法（否则由 Ngen.exe 生成）<br /><br /> 0x8Helper 方法。|
 |MethodNameSpace|win:UnicodeString|与该方法关联的完整命名空间名称。|
 |MethodName|win:UnicodeString|与该方法关联的完整类名称。|
 |MethodSignature|win:UnicodeString|方法的签名（以逗号分隔的类型名称列表）。|
@@ -144,7 +144,7 @@ CLR 方法事件进一步细分为以下几类：
 
 下表显示了关键字和级别。
 
-|引发事件的关键字|级别|
+|引发事件的关键字|Level|
 |-----------------------------------|-----------|
 |`JITKeyword` (0x10) 运行时提供程序|详细级别 (5)|
 |`NGenKeyword` (0x20) 运行时提供程序|详细级别 (5)|
@@ -172,4 +172,4 @@ CLR 方法事件进一步细分为以下几类：
 
 ## <a name="see-also"></a>请参阅
 
-- [CLR ETW 事件](../../../docs/framework/performance/clr-etw-events.md)
+- [CLR ETW 事件](clr-etw-events.md)

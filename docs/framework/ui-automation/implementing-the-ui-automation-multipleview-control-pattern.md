@@ -6,12 +6,12 @@ helpviewer_keywords:
 - MultipleView control pattern
 - control patterns, MultipleView
 ms.assetid: 5bf1b248-ffee-48c8-9613-0b134bbe9f6a
-ms.openlocfilehash: 6a77b81cab34b1824b23b1e3e050ecf034ab7700
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 699644b98fbf818c71553775f4dff8dfb0726977
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69932162"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71043428"
 ---
 # <a name="implementing-the-ui-automation-multipleview-control-pattern"></a>实现 UI 自动化 MultipleView 控件模式
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "69932162"
   
  <xref:System.Windows.Automation.MultipleViewPattern> 控件模式用于支持那些提供并能够在同组信息或子控件的多个表示形式间进行切换的控件。  
   
- 可显示多个视图的控件示例包括列表视图 (可将其内容显示为缩略图、磁贴、图标或详细信息) [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] 、图表 (饼图、折线图、条形图、带有公式的单元值[!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] )、文档 (常规、Web 版式、打印布局、阅读版式、大纲)、Microsoft Outlook 日历 (年、月、周、天) 和[!INCLUDE[TLA#tla_wmp](../../../includes/tlasharptla-wmp-md.md)]外观。 支持的视图由控件开发人员确定，并特定于每个控件。  
+ 可显示多个视图的控件示例包括列表视图（可将其内容显示为缩略图、磁贴、图标或详细信息） [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] 、图表（饼图、折线图、条形图、带有公式的单元值[!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] ）、文档（常规、Web 版式、打印布局、阅读版式、大纲）、Microsoft Outlook 日历（年、月、周、天）和[!INCLUDE[TLA#tla_wmp](../../../includes/tlasharptla-wmp-md.md)]外观。 支持的视图由控件开发人员确定，并特定于每个控件。  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
 ## <a name="implementation-guidelines-and-conventions"></a>实现准则和约定  
@@ -44,7 +44,7 @@ ms.locfileid: "69932162"
 |<xref:System.Windows.Automation.Provider.IMultipleViewProvider.CurrentView%2A>|Property|无|  
 |<xref:System.Windows.Automation.Provider.IMultipleViewProvider.GetSupportedViews%2A>|方法|无|  
 |<xref:System.Windows.Automation.Provider.IMultipleViewProvider.GetViewName%2A>|方法|无|  
-|<xref:System.Windows.Automation.Provider.IMultipleViewProvider.SetCurrentView%2A>|方法|无|  
+|<xref:System.Windows.Automation.Provider.IMultipleViewProvider.SetCurrentView%2A>|方法|None|  
   
  没有与此控件模式相关联的事件。  
   
@@ -58,8 +58,8 @@ ms.locfileid: "69932162"
   
 ## <a name="see-also"></a>请参阅
 
-- [UI 自动化控件模式概述](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
-- [在 UI 自动化提供程序中支持控件模式](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
-- [客户端的 UI 自动化控件模式](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
-- [UI 自动化树概述](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
-- [在 UI 自动化中使用缓存](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+- [UI 自动化控件模式概述](ui-automation-control-patterns-overview.md)
+- [在 UI 自动化提供程序中支持控件模式](support-control-patterns-in-a-ui-automation-provider.md)
+- [客户端的 UI 自动化控件模式](ui-automation-control-patterns-for-clients.md)
+- [UI 自动化树概述](ui-automation-tree-overview.md)
+- [在 UI 自动化中使用缓存](use-caching-in-ui-automation.md)

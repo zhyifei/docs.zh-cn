@@ -10,19 +10,19 @@ helpviewer_keywords:
 - XData in XAML [XAML Services]
 - x:XData XAML directive element [XAML Services]
 ms.assetid: 7ce209c2-621b-4977-b643-565f7e663534
-ms.openlocfilehash: c8044bc341ded6ef7b03bbdf701e724654460d54
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c5f729837b9bb52ca7d232ca66b58e283a2bcefc
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61938822"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053700"
 ---
 # <a name="xxdata-intrinsic-xaml-type"></a>x:XData 内部 XAML 类型
-启用 XAML 生产中的 XML 数据岛的布局。 中的 XML 元素`x:XData`如同它们是使其执行操作默认 XAML 命名空间的一部分或任何其他 XAML 命名空间不应由 XAML 处理器处理。 `x:XData` 可以包含任意格式正确的 XML。  
+启用 XML 数据岛在 XAML 生产中的放置。 XAML 处理器不`x:XData`应处理中的 XML 元素，就好像它们是正在操作的默认 xaml 命名空间或任何其他 XAML 命名空间的一部分。 `x:XData`可以包含任意格式正确的 XML。  
   
 ## <a name="xaml-object-element-usage"></a>XAML 对象元素用法  
   
-```  
+```xaml  
 <x:XData>  
   <elementDataRoot>  
     [elementData]  
@@ -34,20 +34,20 @@ ms.locfileid: "61938822"
   
 |||  
 |-|-|  
-|`elementDataRoot`|包含的数据岛的单个根元素。 对于大多数最终用户来说，不具有单个根的 XML 被视为无效。 具体而言，单个根是必需的如果`x:XData`用作 XML 数据源适用于 WPF 或 XML 源用于数据绑定的许多其他技术。|  
-|`[elementData]`|可选。 表示 XML 数据的 XML。 可以包含任意数量的元素作为元素数据和其他元素，则中可包含嵌套的元素但是，XML 的常规规则适用。|  
+|`elementDataRoot`|括起来的数据岛的单个根元素。 对于最终使用者而言，没有单个根的 XML 被视为无效。 特别是，如果`x:XData`要用作 WPF 的 xml 数据源，或使用 xml 源进行数据绑定的许多其他技术，则需要单个根。|  
+|`[elementData]`|可选。 表示 XML 数据的 XML。 可以将任意数量的元素包含为元素数据，嵌套元素可以包含在其他元素中;但是，XML 的一般规则是适用的。|  
   
 ## <a name="remarks"></a>备注  
- 中的 XML 元素`x:XData`所有可能的命名空间和前缀的数据中包含的 XMLDOM 对象可以重新声明。  
+ `x:XData`对象中的 XML 元素可以在数据中重新声明包含 XMLDOM 的所有可能的命名空间和前缀。  
   
- 以编程方式访问 XML 数据并`x:XData`是通过.NET Framework XAML 服务中可能存在内部 XAML 类型<xref:System.Windows.Markup.XData>类。  
+ 以编程方式访问 XML 数据和`x:XData`内部 xaml 类型可<xref:System.Windows.Markup.XData>通过类 .NET Framework XAML 服务。  
   
-## <a name="wpf-usage-notes"></a>WPF 用法说明  
- `x:XData`主要的子对象的形式使用对象<xref:System.Windows.Data.XmlDataProvider>，或子对象的形式或者<xref:System.Windows.Data.XmlDataProvider.XmlSerializer%2A?displayProperty=nameWithType>属性 （在 XAML，这通常都表示在属性元素语法中）。  
+## <a name="wpf-usage-notes"></a>WPF 使用说明  
+ 对象主要用作的子对象<xref:System.Windows.Data.XmlDataProvider>，或者作为<xref:System.Windows.Data.XmlDataProvider.XmlSerializer%2A?displayProperty=nameWithType>属性的子对象（在 XAML 中，这通常用属性元素语法表示）。 `x:XData`  
   
- 数据通常应重定义为新的默认 XML 命名空间 （设置为空字符串） 的数据岛中的基本 XML 命名空间。 这是最简单的简单数据岛因为<xref:System.Windows.Data.Binding.XPath%2A>用于引用和绑定到数据的表达式可以避免包含前缀。 更复杂的数据岛可能会使用特定前缀的根处的 XML 命名空间和定义的数据的多个前缀。 在这种情况下，所有<xref:System.Windows.Data.Binding.XPath%2A>表达式引用应包括相应的命名空间映射前缀。 有关详细信息，请参阅[数据绑定概述](../wpf/data/data-binding-overview.md)。  
+ 数据通常应将数据岛内的基本 XML 命名空间重新定义为新的默认 XML 命名空间（设置为空字符串）。 对于简单的数据岛，这是最<xref:System.Windows.Data.Binding.XPath%2A>简单的，因为用于引用和绑定到数据的表达式可避免包含前缀。 更复杂的数据岛可能会为数据定义多个前缀，并在根处为 XML 命名空间使用特定的前缀。 在这种情况下<xref:System.Windows.Data.Binding.XPath%2A> ，所有表达式引用应包括相应的命名空间映射前缀。 有关详细信息，请参阅[数据绑定概述](../wpf/data/data-binding-overview.md)。  
   
- 从技术上讲，`x:XData`可以用作类型的任何属性的内容<xref:System.Xml.Serialization.IXmlSerializable>。 但是，<xref:System.Windows.Data.XmlDataProvider.XmlSerializer%2A?displayProperty=nameWithType>是唯一突出的实现。  
+ 从技术`x:XData`上讲，可以用作类型<xref:System.Xml.Serialization.IXmlSerializable>的任何属性的内容。 不过， <xref:System.Windows.Data.XmlDataProvider.XmlSerializer%2A?displayProperty=nameWithType>是唯一的主要实现。  
   
 ## <a name="see-also"></a>请参阅
 

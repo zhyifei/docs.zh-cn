@@ -15,12 +15,12 @@ helpviewer_keywords:
 - x:Single [XAML Services]
 - x:Int32 [XAML Services]
 ms.assetid: 11de2f08-5b95-4989-b5ec-5178eb968184
-ms.openlocfilehash: feda058a9672a3150f7beb5c1bc124eee1eae9eb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 85fd0c04a40b9de64979e4da1459dbf8953a93bf
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61689705"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053884"
 ---
 # <a name="built-in-types-for-common-xaml-language-primitives"></a>常见 XAML 语言基元的内置类型
 XAML 2009 引入了对多种数据类型的 XAML 语言级支持（这些数据类型是公共语言运行时 (CLR) 和其他编程语言中的常用基元）。 XAML 2009 增加了对以下基元的支持： `x:Object`、 `x:Boolean`、 `x:Char`、 `x:String`、 `x:Decimal`、 `x:Single`、 `x:Double`、 `x:Int16`、 `x:Int32`、 `x:Int64`、 `x:TimeSpan`、 `x:Uri`、 `x:Byte`和 `x:Array`  
@@ -29,7 +29,7 @@ XAML 2009 引入了对多种数据类型的 XAML 语言级支持（这些数据�
 ## <a name="previous-techniques-for-language-primitives-in-xaml-markup"></a>用于 XAML 标记中语言基元的早期方法  
  在早期 WPF 版本的 XAML 中，可以通过映射程序集以及包含 .NET Framework 的 CLR 基元定义类的命名空间来引用 CLR 语言基元。 它们中的大部分都位于 mscorlib 程序集和 <xref:System> 命名空间中。 例如，要使用 <xref:System.Int32>，可以声明以下映射（用法示例如后面所示）：  
   
-```  
+```xaml  
 <Application xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"  
 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"   
 xmlns:sys="clr-namespace:System;assembly=mscorlib">  
@@ -51,24 +51,24 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
 ### <a name="xboolean"></a>x:Boolean  
  对于 CLR 支持， `x:Boolean` 基元对应于 <xref:System.Boolean>。  
   
- XAML 分析 `x:Boolean` 的值时不区分大小写。 请注意， `x:Bool` 不是可接受的备选基元。 有关 XAML 语言规范定义的请参阅[ \[MS XAML\]第 5.2.17 节和第 5.4.11 节](https://go.microsoft.com/fwlink/?LinkId=114525)。  
+ XAML 分析 `x:Boolean` 的值时不区分大小写。 请注意， `x:Bool` 不是可接受的备选基元。 有关 XAML 语言规范的定义，请参阅[ \[5.2.17 和\]第5.4.11 节的 MS xaml 部分](https://go.microsoft.com/fwlink/?LinkId=114525)。  
   
 ### <a name="xchar"></a>x:Char  
  对于 CLR 支持， `x:Char` 基元对应于 <xref:System.Char>。  
   
- String 和 char 类型在 XML 级别与文件的整个编码进行交互。 有关 XAML 语言规范定义的请参阅[ \[MS XAML\]第 5.2.7 节和第 5.4.1 节](https://go.microsoft.com/fwlink/?LinkId=114525)。  
+ String 和 char 类型在 XML 级别与文件的整个编码进行交互。 有关 XAML 语言规范的定义，请参阅[ \[5.2.7 和\] 5.4.1 的 MS xaml 部分](https://go.microsoft.com/fwlink/?LinkId=114525)。  
   
 ### <a name="xstring"></a>x:String  
  对于 CLR 支持， `x:String` 基元对应于 <xref:System.String>。  
   
- String 和 char 类型在 XML 级别与文件的整个编码进行交互。 有关 XAML 语言规范定义的请参阅[ \[MS XAML\] 5.2.6](https://go.microsoft.com/fwlink/?LinkId=114525)。  
+ String 和 char 类型在 XML 级别与文件的整个编码进行交互。 有关 XAML 语言规范的定义，请参阅[ \[\] 5.2.6 部分](https://go.microsoft.com/fwlink/?LinkId=114525)。  
   
 ### <a name="xdecimal"></a>x:Decimal  
  对于 CLR 支持， `x:Decimal` 基元对应于 <xref:System.Decimal>。  
   
  请注意，XAML 分析本质上在 `en-US` 区域性设置下进行。 在 `en-US` 区域性设置下，小数部分的正确分隔符始终为句点 (`.`)，而与开发环境的区域性设置或在运行时加载 XAML 的最终客户端目标的区域性设置无关。  
   
- 有关 XAML 语言规范定义的请参阅[ \[MS XAML\]第 5.2.14 节和第 5.4.8 节](https://go.microsoft.com/fwlink/?LinkId=114525)。  
+ 有关 XAML 语言规范的定义，请参阅[ \[5.2.14 和\]第5.4.8 节的 MS xaml 部分](https://go.microsoft.com/fwlink/?LinkId=114525)。  
   
 ### <a name="xsingle"></a>x:Single  
  对于 CLR 支持， `x:Single` 基元对应于 <xref:System.Single>。  
@@ -77,7 +77,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
   
  `x:Single` 支持采用科学记数法格式的值，条件是文本语法中的第一个字符为 `e` 或 `E`。  
   
- 有关 XAML 语言规范定义的请参阅[ \[MS XAML\]第 5.2.8 节和第 5.4.2 节](https://go.microsoft.com/fwlink/?LinkId=114525)。  
+ 有关 XAML 语言规范的定义，请参阅[ \[5.2.8 和\] 5.4.2 的 MS xaml 部分](https://go.microsoft.com/fwlink/?LinkId=114525)。  
   
 ### <a name="xdouble"></a>x:Double  
  对于 CLR 支持， `x:Double` 基元对应于 <xref:System.Double>。  
@@ -86,48 +86,48 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
   
  `x:Double` 支持采用科学记数法格式的值。 使用字符 `e` 或 `E` 可引入指数部分。  
   
- 有关 XAML 语言规范定义的请参阅[ \[MS XAML\]第 5.2.9 节和第 5.4.3 节](https://go.microsoft.com/fwlink/?LinkId=114525)。  
+ 有关 XAML 语言规范的定义，请参阅[ \[5.2.9 和\] 5.4.3 的 MS xaml 部分](https://go.microsoft.com/fwlink/?LinkId=114525)。  
   
 ### <a name="xint16"></a>x:Int16  
  对于 CLR 支持， `x:Int16` 基元对应于 <xref:System.Int16> ，并且 `x:Int16` 被视为带符号。 在 XAML 中，文本语法中没有加号 (`+`) 表示是一个带符号的正值。  
   
- 有关 XAML 语言规范定义的请参阅[ \[MS XAML\]第 5.2.11 节和第 5.4.5 节](https://go.microsoft.com/fwlink/?LinkId=114525)。  
+ 有关 XAML 语言规范的定义，请参阅[ \[5.2.11 和\]第5.4.5 节的 MS xaml 部分](https://go.microsoft.com/fwlink/?LinkId=114525)。  
   
 ### <a name="xint32"></a>x:Int32  
  对于 CLR 支持， `x:Int32` 基元对应于 <xref:System.Int32>。 `x:Int32` 被视为带符号。 在 XAML 中，文本语法中没有加号 (`+`) 表示是一个带符号的正值。  
   
- 有关 XAML 语言规范定义的请参阅[ \[MS XAML\]第 5.2.12 节和第 5.4.6 节](https://go.microsoft.com/fwlink/?LinkId=114525)。  
+ 有关 XAML 语言规范的定义，请参阅[ \[5.2.12 和\]第5.4.6 节的 MS xaml 部分](https://go.microsoft.com/fwlink/?LinkId=114525)。  
   
 ### <a name="xint64"></a>x:Int64  
  对于 CLR 支持， `x:Int64` 基元对应于 <xref:System.Int64>。 `x:Int64` 被视为带符号。 在 XAML 中，文本语法中没有加号 (`+`) 表示是一个带符号的正值。  
   
- 有关 XAML 语言规范定义的请参阅[ \[MS XAML\]第 5.2.13 节和第 5.4.7 节](https://go.microsoft.com/fwlink/?LinkId=114525)。  
+ 有关 XAML 语言规范的定义，请参阅[ \[5.2.13 和\]第5.4.7 节的 MS xaml 部分](https://go.microsoft.com/fwlink/?LinkId=114525)。  
   
 ### <a name="xtimespan"></a>x:TimeSpan  
  对于 CLR 支持， `x:TimeSpan` 基元对应于 <xref:System.TimeSpan>。  
   
  请注意，时间日期格式的 XAML 分析本质上在 `en-US` 区域性设置下进行。  
   
- 有关 XAML 语言规范定义的请参阅[ \[MS XAML\]第 5.2.16 节和第 5.4.10 节](https://go.microsoft.com/fwlink/?LinkId=114525)。  
+ 有关 XAML 语言规范的定义，请参阅[ \[5.2.16 和\]第5.4.10 节的 MS xaml 部分](https://go.microsoft.com/fwlink/?LinkId=114525)。  
   
 ### <a name="xuri"></a>x:Uri  
  对于 CLR 支持， `x:Uri` 基元对应于 <xref:System.Uri>。  
   
  检查协议不是 `x:Uri`的 XAML 定义的一部分。  
   
- 有关 XAML 语言规范定义的请参阅[ \[MS XAML\]第 5.2.15 节和第 5.4.9 节](https://go.microsoft.com/fwlink/?LinkId=114525)。  
+ 有关 XAML 语言规范的定义，请参阅[ \[5.2.15 和\]第5.4.9 节的 MS xaml 部分](https://go.microsoft.com/fwlink/?LinkId=114525)。  
   
 ### <a name="xbyte"></a>x:Byte  
- 对于 CLR 支持， `x:Byte` 基元对应于 <xref:System.Byte>。 一个<xref:System.Byte>  /  `x:Byte`被视为无符号。  
+ 对于 CLR 支持， `x:Byte` 基元对应于 <xref:System.Byte>。 被视为无符号<xref:System.Byte>。  /  `x:Byte`  
   
- 有关 XAML 语言规范定义的请参阅[ \[MS XAML\]第 5.2.10 节和第 5.4.4 节](https://go.microsoft.com/fwlink/?LinkId=114525)。  
+ 有关 XAML 语言规范的定义，请参阅[ \[5.2.10 和\] 5.4.4 的 MS xaml 部分](https://go.microsoft.com/fwlink/?LinkId=114525)。  
   
 ### <a name="xarray"></a>x:Array  
  对于 CLR 支持， `x:Array` 基元对应于 <xref:System.Array>。  
   
  可以在 XAML 2006 中使用标记扩展语法定义一个数组；而 XAML 2009 语法是语言定义的基元，不需要访问标记扩展。 有关 XAML 2006 支持的更多信息，请参阅 [x:Array Markup Extension](x-array-markup-extension.md)。  
   
- 有关 XAML 语言规范定义的请参阅[ \[MS XAML\] 5.2.18](https://go.microsoft.com/fwlink/?LinkId=114525)。  
+ 有关 XAML 语言规范的定义，请参阅[ \[\] 5.2.18 部分](https://go.microsoft.com/fwlink/?LinkId=114525)。  
   
 <a name="wpf_support"></a>   
 ## <a name="wpf-support"></a>WPF 支持  

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, providers
 - WCF Data Services, Entity Framework
 ms.assetid: 6d11fec8-0108-42f5-8719-2a7866d04428
-ms.openlocfilehash: 1d3c3628a32439d4847505e234b12b084b47ba3d
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 8c597738d656b32e7b4c75246027b726f425c6ef
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854126"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053009"
 ---
 # <a name="how-to-create-a-data-service-using-an-adonet-entity-framework-data-source-wcf-data-services"></a>如何：使用 ADO.NET 实体框架数据源创建数据服务（WCF 数据服务）
 
@@ -57,7 +57,7 @@ WCF 数据服务将实体数据作为数据服务公开。 当数据源为关系
 
 4. 在 "**添加新项**" 对话框中，选择 " **Web** " 类别中的 " **WCF 数据服务**" 模板。
 
-   ![Visual Studio 2015 中的 WCF 数据服务项模板](media/wcf-data-service-item-template.png)
+   ![Visual Studio 2015 中的 WCF 数据服务项模板](./media/wcf-data-service-item-template.png)
 
    > [!NOTE]
    > **WCF 数据服务**模板在 visual studio 2015 中提供，但在 visual studio 2017 中不可用。

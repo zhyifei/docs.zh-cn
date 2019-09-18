@@ -12,21 +12,21 @@ helpviewer_keywords:
 ms.assetid: 34ddc6bd-1675-4f35-86aa-de1645d5c631
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9ecdfd708217f260b0c02383159fab88948029c6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dc4a48c79fc39b12f8231bd913b4ca8970c0f46f
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61874206"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052358"
 ---
 # <a name="pinvokestackimbalance-mda"></a>PInvokeStackImbalance MDA
 
-`PInvokeStackImbalance`托管调试助手 (MDA) 当 CLR 检测到平台 invoke 调用之后的堆栈深度与预期的堆栈深度，给定中指定的调用约定不匹配时激活<xref:System.Runtime.InteropServices.DllImportAttribute>属性和托管签名中的参数声明。
+当 CLR 检测到平台调用之后的堆栈深度与预期的堆栈深度不匹配时，将激活<xref:System.Runtime.InteropServices.DllImportAttribute> 托管调试助手（MDA），前提是在特性和`PInvokeStackImbalance`托管签名中的参数声明。
 
 仅为 32 位 x86 平台实现 `PInvokeStackImbalance` MDA。
 
 > [!NOTE]
-> `PInvokeStackImbalance`默认情况下禁用 MDA。 在 Visual Studio 2017 中， `PInvokeStackImbalance` MDA 将出现在**托管调试助手**列表中**异常设置**对话框中 (其中显示当你选择**调试** >  **Windows** > **异常设置**)。 但是，选中或清除**中断时引发**复选框不会启用或禁用 MDA; 它仅控制在 MDA 处于激活状态时，Visual Studio 是否引发异常。
+> 默认`PInvokeStackImbalance`情况下，禁用 MDA。 在 Visual Studio 2017 中， `PInvokeStackImbalance` MDA 出现在 "**异常设置**" 对话框中的 "**托管调试助手**" 列表中（当您选择 "**调试** > **窗口** >   **" 时显示该对话框）异常设置**）。 但是，如果选中或清除 "**引发时中断**" 复选框，则不会启用或禁用 MDA;它仅控制在激活 MDA 时 Visual Studio 是否引发异常。
 
 ## <a name="symptoms"></a>症状
 
@@ -48,7 +48,7 @@ ms.locfileid: "61874206"
 
 MDA 消息会提供正导致堆栈不平衡的平台 invoke 方法调用的名称。 方法 `SampleMethod` 上的平台 invoke 调用的示例消息为：
 
-**PInvoke 函数 SampleMethod 的调用具有使堆栈不平衡。这可能是因为托管的 PInvoke 签名与非托管的目标签名不匹配。检查的调用约定和 PInvoke 签名的参数匹配的目标的非托管的签名。**
+**对 PInvoke 函数 "SampleMethod" 的调用与堆栈不平衡。这很可能是因为托管 PInvoke 签名与非托管目标签名不匹配。检查 PInvoke 签名的调用约定和参数是否与目标非托管签名匹配。**
 
 ## <a name="configuration"></a>配置
 
@@ -63,5 +63,5 @@ MDA 消息会提供正导致堆栈不平衡的平台 invoke 方法调用的名�
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [使用托管调试助手诊断错误](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [互操作封送处理](../../../docs/framework/interop/interop-marshaling.md)
+- [使用托管调试助手诊断错误](diagnosing-errors-with-managed-debugging-assistants.md)
+- [互操作封送处理](../interop/interop-marshaling.md)

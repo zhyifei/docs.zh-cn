@@ -9,17 +9,17 @@ helpviewer_keywords:
 ms.assetid: a8d15139-d368-4c9c-a747-ba757781117c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ec97861a9d748767199da3e1fb7f53361c3a48ee
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 867157b329218b79c8cc1255b2158bbe83666531
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966125"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045364"
 ---
 # <a name="secure-coding-guidelines-for-unmanaged-code"></a>托管代码的安全编码指南
 有些库代码需要调入非托管代码（如本机代码 API（如 Win32））。 因为这意味着超出托管代码的安全外围，所以需要适当小心。 如果你的代码在安全性方面是非特定的，你的代码和调用它的任何代码都必须具有非托管代码权限（指定了<xref:System.Security.Permissions.SecurityPermission> 标志的 <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> ）。  
   
- 但是，调用方具有如此强大的权限通常是不合理的。 在这种情况下，受信任的代码可充当中介，类似于 [保护包装代码](../../../docs/framework/misc/securing-wrapper-code.md)中所述的托管包装或库代码。 如果基础的非托管代码的功能是完全安全的，则可直接将其公开；否则，首先需要进行合适权限的检查（要求）。  
+ 但是，调用方具有如此强大的权限通常是不合理的。 在这种情况下，受信任的代码可充当中介，类似于 [保护包装代码](../misc/securing-wrapper-code.md)中所述的托管包装或库代码。 如果基础的非托管代码的功能是完全安全的，则可直接将其公开；否则，首先需要进行合适权限的检查（要求）。  
   
  当代码调入非托管代码，而你不希望要求调用方拥有可访问非托管代码的权限时，则必须声明该权利。 声明会阻止在帧处实施的堆栈审核。 必须非常小心，切勿在这一过程中制造安全漏洞。 通常情况下，这意味着必须要求调用方具有合适权限，然后使用非托管代码仅执行该权限所允许的操作，不能执行其他操作。 在某些情况下（例如，获取一天时间的函数），可将非托管代码直接公开给调用方，无需进行任何安全检查。 在任何情况下，任何断言的代码必须对安全负责。  
   

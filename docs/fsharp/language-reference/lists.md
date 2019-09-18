@@ -1,20 +1,20 @@
 ---
 title: 列表
-description: 了解F#列表, 一系列相同类型的有序、不可变的元素。
+description: 了解F#列表，一系列相同类型的有序、不可变的元素。
 ms.date: 05/16/2016
-ms.openlocfilehash: e8c4a464306cfedfd36a4685507684d3a1a97a2e
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 72f1779d7d077da0f1f4804df93fa4ac11f9b2e3
+ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630726"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71082915"
 ---
 # <a name="lists"></a>列表
 
 > [!NOTE]
 > 本文中的 API 参考链接将转至 MSDN。  Docs.microsoft.com API 参考尚未完成。
 
-F# 中的列表是一个有序的、不可变的同类型元素系列。 若要对列表执行基本操作, 请使用[列表模块](https://msdn.microsoft.com/library/a2264ba3-2d45-40dd-9040-4f7aa2ad9788)中的函数。
+F# 中的列表是一个有序的、不可变的同类型元素系列。 若要对列表执行基本操作，请使用[列表模块](https://msdn.microsoft.com/library/a2264ba3-2d45-40dd-9040-4f7aa2ad9788)中的函数。
 
 ## <a name="creating-and-initializing-lists"></a>创建和初始化列表
 
@@ -38,7 +38,7 @@ F# 中的列表是一个有序的、不可变的同类型元素系列。 若要�
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1304.fs)]
 
-也可以使用序列表达式来创建列表。 有关详细信息, 请参阅[序列表达式](sequences.md#sequence-expressions)。 例如，以下代码创建一个从 1 到 10 的整数的平方值的列表。
+也可以使用序列表达式来创建列表。 有关详细信息，请参阅[序列表达式](sequences.md#sequence-expressions)。 例如，以下代码创建一个从 1 到 10 的整数的平方值的列表。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1303.fs)]
 
@@ -56,7 +56,7 @@ F# 中的列表是一个有序的、不可变的同类型元素系列。 若要�
 
 由于 F# 中的列表是不可变的，因此任何修改操作都会生成新列表，而不是修改现有列表。
 
-中F#的列表实现为单独链接列表, 这意味着仅访问列表头的操作为 o (1), 而元素访问是 o (*n*)。
+中F#的列表实现为单独链接列表，这意味着仅访问列表头的操作为 o （1），而元素访问是 o （*n*）。
 
 ## <a name="properties"></a>属性
 
@@ -99,20 +99,20 @@ F# 中的列表是一个有序的、不可变的同类型元素系列。 若要�
 
 输出如下所示：
 
-```
+```console
 Primes Up To 100:
 [2; 3; 5; 7; 11; 13; 17; 19; 23; 29; 31; 37; 41; 43; 47; 53; 59; 61; 67; 71; 73; 79; 83; 89; 97]
 ```
 
 ## <a name="module-functions"></a>模块函数
 
-[List 模块](https://msdn.microsoft.com/library/a2264ba3-2d45-40dd-9040-4f7aa2ad9788)提供了用于访问列表元素的函数。 访问头元素的速度最快且最为容易。 使用属性[head](https://msdn.microsoft.com/library/5f9414fd-6bdb-470a-8b72-40016db30740)或模块函数[列表 head](https://msdn.microsoft.com/library/22514cc5-0511-498b-a2cc-837b688a6da2)。 您可以使用[tail](https://msdn.microsoft.com/library/2a6f8eb9-dc32-41aa-8b62-2baffaface91)属性或[list tail](https://msdn.microsoft.com/library/da0a0638-4420-4571-84b6-d09ae601f601)函数访问列表的尾部。 若要按索引查找元素, 请使用[List n](https://msdn.microsoft.com/library/1f717d57-89be-4007-a971-9cf5a28d83b1)函数。 `List.nth` 将遍历列表。 因此, 它是 O (*n*)。 如果你的代码经常使用 `List.nth`，那么可能需要考虑使用数组而不是列表。 数组中的元素访问的运算复杂度为 O(1)。
+[List 模块](https://msdn.microsoft.com/library/a2264ba3-2d45-40dd-9040-4f7aa2ad9788)提供了用于访问列表元素的函数。 访问头元素的速度最快且最为容易。 使用属性[head](https://msdn.microsoft.com/library/5f9414fd-6bdb-470a-8b72-40016db30740)或模块函数[列表 head](https://msdn.microsoft.com/library/22514cc5-0511-498b-a2cc-837b688a6da2)。 您可以使用[tail](https://msdn.microsoft.com/library/2a6f8eb9-dc32-41aa-8b62-2baffaface91)属性或[list tail](https://msdn.microsoft.com/library/da0a0638-4420-4571-84b6-d09ae601f601)函数访问列表的尾部。 若要按索引查找元素，请使用[List n](https://msdn.microsoft.com/library/1f717d57-89be-4007-a971-9cf5a28d83b1)函数。 `List.nth` 将遍历列表。 因此，它是 O （*n*）。 如果你的代码经常使用 `List.nth`，那么可能需要考虑使用数组而不是列表。 数组中的元素访问的运算复杂度为 O(1)。
 
 ### <a name="boolean-operations-on-lists"></a>针对列表的布尔操作
 
 [IsEmpty](https://msdn.microsoft.com/library/a7941d44-9e92-427c-b806-c378f4558107)函数确定列表是否包含任何元素。
 
-[List exists](https://msdn.microsoft.com/library/15a3ebd5-98f0-44c0-8220-7dedec3e68a8)函数向列表的元素应用布尔测试, 并在有任何元素`true`满足测试时返回。 [Array.exists2](https://msdn.microsoft.com/library/7532b39e-3f4f-4534-a60b-d7721dc6fa7e)类似于, 但操作在两个列表中连续的元素对。
+[List exists](https://msdn.microsoft.com/library/15a3ebd5-98f0-44c0-8220-7dedec3e68a8)函数向列表的元素应用布尔测试，并在有任何元素`true`满足测试时返回。 [Array.exists2](https://msdn.microsoft.com/library/7532b39e-3f4f-4534-a60b-d7721dc6fa7e)类似于，但操作在两个列表中连续的元素对。
 
 以下代码演示了 `List.exists` 的用法。
 
@@ -120,7 +120,7 @@ Primes Up To 100:
 
 输出如下所示：
 
-```
+```console
 For list [0; 1; 2; 3], contains zero is true
 ```
 
@@ -130,28 +130,28 @@ For list [0; 1; 2; 3], contains zero is true
 
 输出如下所示：
 
-```
+```console
 Lists [1; 2; 3; 4; 5] and [5; 4; 3; 2; 1] have at least one equal element at the same position.
 ```
 
-如果要测试列表中的所有元素是否都满足条件, 可以使用[forall](https://msdn.microsoft.com/library/e11a5233-d612-40ac-833b-d5cf496900b7) 。
+如果要测试列表中的所有元素是否都满足条件，可以使用[forall](https://msdn.microsoft.com/library/e11a5233-d612-40ac-833b-d5cf496900b7) 。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet3.fs)]
 
 输出如下所示：
 
-```
+```console
 true
 false
 ```
 
-同样, [array.forall2](https://msdn.microsoft.com/library/bb611f02-8277-48f5-9af3-6194ae27d07e)确定两个列表中相应位置的所有元素是否都满足涉及每对元素的布尔表达式。
+同样， [array.forall2](https://msdn.microsoft.com/library/bb611f02-8277-48f5-9af3-6194ae27d07e)确定两个列表中相应位置的所有元素是否都满足涉及每对元素的布尔表达式。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet4.fs)]
 
 输出如下所示：
 
-```
+```console
 true
 false
 ```
@@ -168,7 +168,7 @@ false
 
 输出如下所示：
 
-```
+```console
 [-2; 1; 4; 5; 8]
 ```
 
@@ -178,7 +178,7 @@ false
 
 输出如下所示：
 
-```
+```console
 [1; -2; 4; 5; 8]
 ```
 
@@ -188,7 +188,7 @@ false
 
 输出如下所示：
 
-```
+```console
 [{ID = 92;
 Rev = 1;}; {ID = 92;
 Rev = 1;}; {ID = 100;
@@ -207,30 +207,30 @@ Rev = 1;}]
 
 结果为 5。
 
-如果必须首先转换元素, 请调用[List. pick](https://msdn.microsoft.com/library/0430b515-7fe4-49a1-a616-d2286d8b08b2), 它采用一个返回选项的函数, 并查找的第一个选项值`Some(x)`为。 `List.pick` 返回结果 `x`，而不是返回元素。 如果未找到匹配的元素，则 `List.pick` 将引发 `System.Collections.Generic.KeyNotFoundException`。 以下代码显示了 `List.pick` 的用法。
+如果必须首先转换元素，请调用[List. pick](https://msdn.microsoft.com/library/0430b515-7fe4-49a1-a616-d2286d8b08b2)，它采用一个返回选项的函数，并查找的第一个选项值`Some(x)`为。 `List.pick` 返回结果 `x`，而不是返回元素。 如果未找到匹配的元素，则 `List.pick` 将引发 `System.Collections.Generic.KeyNotFoundException`。 以下代码显示了 `List.pick` 的用法。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet9.fs)]
 
 输出如下所示：
 
-```
+```console
 "b"
 ```
 
-另一组搜索操作、 [tryFind](https://msdn.microsoft.com/library/37f4532e-9fd0-4802-8bbd-e1aa2380287d)和相关函数返回一个选项值。 `List.tryFind` 函数返回列表中满足条件的第一个元素（如果该元素存在）；如果该元素不存在，则返回选项值 `None`。 变体[列表。](https://msdn.microsoft.com/library/5e31968c-c3d3-43d2-859a-0526825895ec)如果找到元素, 则为 array.tryfindindex 返回元素的索引, 而不是元素本身。 下面的代码中阐释了这些函数。
+另一组搜索操作、 [tryFind](https://msdn.microsoft.com/library/37f4532e-9fd0-4802-8bbd-e1aa2380287d)和相关函数返回一个选项值。 `List.tryFind` 函数返回列表中满足条件的第一个元素（如果该元素存在）；如果该元素不存在，则返回选项值 `None`。 变体[列表。](https://msdn.microsoft.com/library/5e31968c-c3d3-43d2-859a-0526825895ec)如果找到元素，则为 array.tryfindindex 返回元素的索引，而不是元素本身。 下面的代码中阐释了这些函数。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet10.fs)]
 
 输出如下所示：
 
-```
+```console
 The first even value is 22.
 The first even value is at position 8.
 ```
 
 ### <a name="arithmetic-operations-on-lists"></a>针对列表的算术运算
 
-常见算术运算 (如 sum 和 average) 内置于[列表模块](https://msdn.microsoft.com/library/a2264ba3-2d45-40dd-9040-4f7aa2ad9788)中。 若要使用[list. sum](https://msdn.microsoft.com/library/54d47fe3-5ecf-4883-beb5-e915342a17f9), List 元素类型必须支持`+`运算符并且值为零。 所有内置算术类型都满足这些条件。 若要使用[List](https://msdn.microsoft.com/library/2b9a627b-106d-4548-8c4c-ab5058b8f8e1), 元素类型必须支持不含余数的除法, 这会排除整数类型但允许浮点类型。 [SumBy](https://msdn.microsoft.com/library/b7623389-0fe1-4762-9c67-51079903ab7d)和[averageBy](https://msdn.microsoft.com/library/936cc9ec-62af-464d-8726-7999c2f48403)函数将函数作为参数使用, 此函数的结果用于计算 sum 或 average 的值。
+常见算术运算（如 sum 和 average）内置于[列表模块](https://msdn.microsoft.com/library/a2264ba3-2d45-40dd-9040-4f7aa2ad9788)中。 若要使用[list. sum](https://msdn.microsoft.com/library/54d47fe3-5ecf-4883-beb5-e915342a17f9)，List 元素类型必须支持`+`运算符并且值为零。 所有内置算术类型都满足这些条件。 若要使用[List](https://msdn.microsoft.com/library/2b9a627b-106d-4548-8c4c-ab5058b8f8e1)，元素类型必须支持不含余数的除法，这会排除整数类型但允许浮点类型。 [SumBy](https://msdn.microsoft.com/library/b7623389-0fe1-4762-9c67-51079903ab7d)和[averageBy](https://msdn.microsoft.com/library/936cc9ec-62af-464d-8726-7999c2f48403)函数将函数作为参数使用，此函数的结果用于计算 sum 或 average 的值。
 
 以下代码演示了 `List.sum`、`List.sumBy` 和 `List.average` 的用法。
 
@@ -246,13 +246,13 @@ The first even value is at position 8.
 
 ### <a name="lists-and-tuples"></a>列表和元组
 
-包含元组的列表可由压缩和解压缩函数操作。 这些函数将两个包含单值的列表合并为一个元组列表，或将一个元组列表分成两个包含单值的列表。 最简单的[列表 .zip](https://msdn.microsoft.com/library/3028d790-8f48-4c94-bf08-b058bec3689c)函数使用单个元素的两个列表, 并生成一个元组对列表。 另一个版本[list.zip3](https://msdn.microsoft.com/library/003cc28e-0de3-4d99-89ed-cb19028e3c5b), 采用单个元素的三个列表, 并生成包含三个元素的元组的单个列表。 以下代码示例演示了 `List.zip` 的用法。
+包含元组的列表可由压缩和解压缩函数操作。 这些函数将两个包含单值的列表合并为一个元组列表，或将一个元组列表分成两个包含单值的列表。 最简单的[列表 .zip](https://msdn.microsoft.com/library/3028d790-8f48-4c94-bf08-b058bec3689c)函数使用单个元素的两个列表，并生成一个元组对列表。 另一个版本[list.zip3](https://msdn.microsoft.com/library/003cc28e-0de3-4d99-89ed-cb19028e3c5b)，采用单个元素的三个列表，并生成包含三个元素的元组的单个列表。 以下代码示例演示了 `List.zip` 的用法。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet13.fs)]
 
 输出如下所示：
 
-```
+```console
 [(1, -1); (2, -2); (3; -3)]
 ```
 
@@ -262,11 +262,11 @@ The first even value is at position 8.
 
 输出如下所示：
 
-```
+```console
 [(1, -1, 0); (2, -2, 0); (3, -3, 0)]
 ```
 
-对应的解压缩[版本 (](https://msdn.microsoft.com/library/639db80c-41b5-45bb-a6b4-1eaa04d61d21) [list.unzip3](https://msdn.microsoft.com/library/43078c77-32ec-4342-85b3-c31ccf984db4)) 使用元组和返回元组的列表, 其中第一个列表包含每个元组中的第一个元素, 第二个列表包含每个元组的第二个元素。元组等。
+对应的解压缩版本（ [list.unzip3](https://msdn.microsoft.com/library/43078c77-32ec-4342-85b3-c31ccf984db4) [）使用](https://msdn.microsoft.com/library/639db80c-41b5-45bb-a6b4-1eaa04d61d21)元组和返回元组的列表，其中第一个列表包含每个元组中的第一个元素，第二个列表包含每个元组的第二个元素。元组等。
 
 下面的代码示例演示如何使用[列表。](https://msdn.microsoft.com/library/639db80c-41b5-45bb-a6b4-1eaa04d61d21)
 
@@ -274,7 +274,7 @@ The first even value is at position 8.
 
 输出如下所示：
 
-```
+```console
 ([1; 3], [2; 4])
 [1; 3] [2; 4]
 ```
@@ -285,19 +285,19 @@ The first even value is at position 8.
 
 输出如下所示：
 
-```
+```console
 ([1; 4], [2; 5], [3; 6])
 ```
 
 ### <a name="operating-on-list-elements"></a>针对列表元素的操作
 
-F# 支持针对列表元素执行各种操作。 最简单的是[iter](https://msdn.microsoft.com/library/f778d075-81a9-4994-af60-cddcc53a201f), 它使你可以对列表的每个元素调用函数。 变体包括[array.iter2](https://msdn.microsoft.com/library/ea3b7761-916c-4016-9bd8-651124c98b40), 这使你可以对两个列表的元素执行操作, [array.iteri](https://msdn.microsoft.com/library/6dd21ae6-5c00-41cd-8306-821e513d8f60)类似`List.iter` , 只不过每个元素的索引将作为参数传递给为每个元素调用的函数元素和[list.iteri2](https://msdn.microsoft.com/library/9658d740-9be5-4bf7-b663-c8ab2b3e196c), 它是`List.iter2`和`List.iteri`的功能的组合。 以下代码示例阐释了这些函数。
+F# 支持针对列表元素执行各种操作。 最简单的是[iter](https://msdn.microsoft.com/library/f778d075-81a9-4994-af60-cddcc53a201f)，它使你可以对列表的每个元素调用函数。 变体包括[array.iter2](https://msdn.microsoft.com/library/ea3b7761-916c-4016-9bd8-651124c98b40)，这使你可以对两个列表的元素执行操作， [array.iteri](https://msdn.microsoft.com/library/6dd21ae6-5c00-41cd-8306-821e513d8f60)类似`List.iter` ，只不过每个元素的索引将作为参数传递给为每个元素调用的函数元素和[list.iteri2](https://msdn.microsoft.com/library/9658d740-9be5-4bf7-b663-c8ab2b3e196c)，它是`List.iter2`和`List.iteri`的功能的组合。 以下代码示例阐释了这些函数。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet17.fs)]
 
 输出如下所示：
 
-```
+```console
 List.iter: element is 1
 List.iter: element is 2
 List.iter: element is 3
@@ -312,13 +312,13 @@ List.iteri2: element 1 of list1 is 2; element 1 of list2 is 5
 List.iteri2: element 2 of list1 is 3; element 2 of list2 is 6
 ```
 
-转换列表元素的另一个常用函数是[list](https://msdn.microsoft.com/library/c6b49c99-d4f3-4ba3-b1d0-85a312683dc6), 这使你可以将函数应用于列表的每个元素, 并将所有结果放入新列表中。 [Array.map2](https://msdn.microsoft.com/library/5f48cce7-6eaf-4e54-8996-2b04d3c31e57)和[list.map3](https://msdn.microsoft.com/library/dd9fb190-6980-4537-be96-5645a64908f8)是采用多个列表的变体。 还[可以使用](https://msdn.microsoft.com/library/284b9234-3d26-409b-b328-ac79638d9e14) [list.mapi2](https://msdn.microsoft.com/library/680643af-233c-40a3-82f2-43d5af27ec49), 如果除了元素外, 还需要将每个元素的索引传递给函数。 `List.mapi2` 和 `List.mapi` 之间的唯一区别在于 `List.mapi2` 使用了两个列表。 下面的示例阐释了[List。](https://msdn.microsoft.com/library/c6b49c99-d4f3-4ba3-b1d0-85a312683dc6)
+转换列表元素的另一个常用函数是[list](https://msdn.microsoft.com/library/c6b49c99-d4f3-4ba3-b1d0-85a312683dc6)，这使你可以将函数应用于列表的每个元素，并将所有结果放入新列表中。 [Array.map2](https://msdn.microsoft.com/library/5f48cce7-6eaf-4e54-8996-2b04d3c31e57)和[list.map3](https://msdn.microsoft.com/library/dd9fb190-6980-4537-be96-5645a64908f8)是采用多个列表的变体。 还可以使用[list.mapi2](https://msdn.microsoft.com/library/680643af-233c-40a3-82f2-43d5af27ec49)，如果除了元素外，还需要将每个元素的索引传递给[函数。](https://msdn.microsoft.com/library/284b9234-3d26-409b-b328-ac79638d9e14) `List.mapi2` 和 `List.mapi` 之间的唯一区别在于 `List.mapi2` 使用了两个列表。 下面的示例阐释了[List。](https://msdn.microsoft.com/library/c6b49c99-d4f3-4ba3-b1d0-85a312683dc6)
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet18.fs)]
 
 输出如下所示：
 
-```
+```console
 [2; 3; 4]
 ```
 
@@ -328,7 +328,7 @@ List.iteri2: element 2 of list1 is 3; element 2 of list2 is 6
 
 输出如下所示：
 
-```
+```console
 [5; 7; 9]
 ```
 
@@ -338,7 +338,7 @@ List.iteri2: element 2 of list1 is 3; element 2 of list2 is 6
 
 输出如下所示：
 
-```
+```console
 [7; 10; 13]
 ```
 
@@ -348,7 +348,7 @@ List.iteri2: element 2 of list1 is 3; element 2 of list2 is 6
 
 输出如下所示：
 
-```
+```console
 [1; 3; 5]
 ```
 
@@ -358,27 +358,27 @@ List.iteri2: element 2 of list1 is 3; element 2 of list2 is 6
 
 输出如下所示：
 
-```
+```console
 [0; 7; 18]
 ```
 
-[List. collect](https://msdn.microsoft.com/library/cd08bbc7-a3b9-40ab-8c20-4e85ec84664f)类似于`List.map`, 只不过每个元素都生成一个列表, 并将所有这些列表连接到一个最终列表。 在以下代码中，列表的每个元素均生成三个数字。 所有这些数字将收集到一个列表中。
+[List. collect](https://msdn.microsoft.com/library/cd08bbc7-a3b9-40ab-8c20-4e85ec84664f)类似于`List.map`，只不过每个元素都生成一个列表，并将所有这些列表连接到一个最终列表。 在以下代码中，列表的每个元素均生成三个数字。 所有这些数字将收集到一个列表中。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet23.fs)]
 
 输出如下所示：
 
-```
+```console
 [1; 2; 3; 2; 4; 6; 3; 6; 9]
 ```
 
-你还可以使用[List. filter](https://msdn.microsoft.com/library/11a8c926-547b-44dd-bbae-98d44f3dd248), 它采用布尔条件, 并生成仅包含满足给定条件的元素的新列表。
+你还可以使用[List. filter](https://msdn.microsoft.com/library/11a8c926-547b-44dd-bbae-98d44f3dd248)，它采用布尔条件，并生成仅包含满足给定条件的元素的新列表。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet24.fs)]
 
 生成的列表为 `[2; 4; 6]`。
 
-Map 和 filter, List 的组合[。选择](https://msdn.microsoft.com/library/2e21d3fb-ce35-4824-8a57-c4404616093d)使您能够同时转换和选择元素。 `List.choose` 对列表的每个元素应用一个返回选项的函数，并在该函数返回选项值 `Some` 时为元素返回新的结果列表。
+Map 和 filter，List 的组合[。选择](https://msdn.microsoft.com/library/2e21d3fb-ce35-4824-8a57-c4404616093d)使您能够同时转换和选择元素。 `List.choose` 对列表的每个元素应用一个返回选项的函数，并在该函数返回选项值 `Some` 时为元素返回新的结果列表。
 
 以下代码演示了如何使用 `List.choose` 从单词列表中选择大写单词。
 
@@ -386,19 +386,19 @@ Map 和 filter, List 的组合[。选择](https://msdn.microsoft.com/library/2e2
 
 输出如下所示：
 
-```
+```console
 ["Rome's"; "Bob's"]
 ```
 
 ### <a name="operating-on-multiple-lists"></a>针对多个列表的操作
 
-可以将多个列表联接在一起。 若要将两个列表联接为一个列表, 请使用[List。](https://msdn.microsoft.com/library/2954da80-3f4a-4a4b-9371-794645c03426) 若要加入两个以上的列表, 请使用[列表。](https://msdn.microsoft.com/library/c5afd433-8764-4ea8-a6a8-937fb4d77c4c)
+可以将多个列表联接在一起。 若要将两个列表联接为一个列表，请使用[List。](https://msdn.microsoft.com/library/2954da80-3f4a-4a4b-9371-794645c03426) 若要加入两个以上的列表，请使用[列表。](https://msdn.microsoft.com/library/c5afd433-8764-4ea8-a6a8-937fb4d77c4c)
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet26.fs)]
 
 ### <a name="fold-and-scan-operations"></a>Fold 和 Scan 操作
 
-一些列表操作涉及所有列表元素之间的相互依赖关系。 折叠和扫描操作类似于`List.iter` `List.map` , 在中, 您对每个元素调用一个函数, 但这些操作提供了一个名为*累加器*的附加参数, 该参数通过计算传递信息。
+一些列表操作涉及所有列表元素之间的相互依赖关系。 折叠和扫描操作类似于`List.iter` `List.map` ，在中，您对每个元素调用一个函数，但这些操作提供了一个名为*累加器*的附加参数，该参数通过计算传递信息。
 
 使用 `List.fold` 可对列表执行计算。
 
@@ -408,15 +408,15 @@ Map 和 filter, List 的组合[。选择](https://msdn.microsoft.com/library/2e2
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet27.fs)]
 
-这些函数的各个版本（函数名中有一个数字）对多个列表执行操作。 例如, [list.fold2](https://msdn.microsoft.com/library/6cfcd043-a65d-4423-805a-2ab234cb5343)对两个列表执行计算。
+这些函数的各个版本（函数名中有一个数字）对多个列表执行操作。 例如， [list.fold2](https://msdn.microsoft.com/library/6cfcd043-a65d-4423-805a-2ab234cb5343)对两个列表执行计算。
 
 以下示例演示了 `List.fold2` 的用法。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet28.fs)]
 
-`List.fold`和[列表。](https://msdn.microsoft.com/library/21f636db-885c-4a72-970e-e3841f33a1b8)中的扫描不同`List.fold`于返回额外参数的最终值, 而`List.scan`是返回额外参数的中间值 (连同最终值) 的列表。
+`List.fold`和[列表。](https://msdn.microsoft.com/library/21f636db-885c-4a72-970e-e3841f33a1b8)中的扫描不同`List.fold`于返回额外参数的最终值，而`List.scan`是返回额外参数的中间值（连同最终值）的列表。
 
-其中每个函数都包含反向变体 (例如[list.foldback](https://msdn.microsoft.com/library/b9a58e66-efe1-445f-a90c-ac9ffb9d40c7)), 这不同于列表的遍历顺序和参数的顺序。 另外, `List.fold`和`List.foldBack`具有变体、 [list.fold2](https://msdn.microsoft.com/library/6cfcd043-a65d-4423-805a-2ab234cb5343)和[array.foldback2](https://msdn.microsoft.com/library/56371d3e-5271-4183-9e8c-15a02eda9aa2), 这两个列表的长度相等。 对每个元素执行的函数可以使用两个列表的对应元素来执行一些操作。 两个列表的元素类型可以不同（如以下示例所示），其中一个列表包含银行帐户的交易金额，而另一个列表包含交易的类型：存款或取款。
+其中每个函数都包含反向变体（例如[list.foldback](https://msdn.microsoft.com/library/b9a58e66-efe1-445f-a90c-ac9ffb9d40c7)），这不同于列表的遍历顺序和参数的顺序。 另外， `List.fold`和`List.foldBack`具有变体、 [list.fold2](https://msdn.microsoft.com/library/6cfcd043-a65d-4423-805a-2ab234cb5343)和[array.foldback2](https://msdn.microsoft.com/library/56371d3e-5271-4183-9e8c-15a02eda9aa2)，这两个列表的长度相等。 对每个元素执行的函数可以使用两个列表的对应元素来执行一些操作。 两个列表的元素类型可以不同（如以下示例所示），其中一个列表包含银行帐户的交易金额，而另一个列表包含交易的类型：存款或取款。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet29.fs)]
 
@@ -428,7 +428,7 @@ Map 和 filter, List 的组合[。选择](https://msdn.microsoft.com/library/2e2
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet34.fs)]
 
-函数[列表](https://msdn.microsoft.com/library/048e1f95-691b-49cb-bb99-fb85f68f3d8b)类似于`List.fold`和`List.scan`, 只不过`List.reduce`只使用一个函数, 该函数采用元素类型的两个参数, 而不是只使用一个参数, 而自变量作为累加器, 这意味着它将存储计算的中间结果。 `List.reduce` 首先对前两个列表元素执行操作，然后将操作的结果和下一个元素一起使用。 由于不存在具有自己的类型的单独累加器，因此只可以在累加器和元素类型的类型相同时，使用 `List.reduce` 代替 `List.fold`。 以下代码演示了 `List.reduce` 的用法。 如果提供的列表中不包含任何元素，则 `List.reduce` 将引发异常。
+函数[列表](https://msdn.microsoft.com/library/048e1f95-691b-49cb-bb99-fb85f68f3d8b)类似于`List.fold`和`List.scan`，只不过`List.reduce`只使用一个函数，该函数采用元素类型的两个参数，而不是只使用一个参数，而自变量作为累加器，这意味着它将存储计算的中间结果。 `List.reduce` 首先对前两个列表元素执行操作，然后将操作的结果和下一个元素一起使用。 由于不存在具有自己的类型的单独累加器，因此只可以在累加器和元素类型的类型相同时，使用 `List.reduce` 代替 `List.fold`。 以下代码演示了 `List.reduce` 的用法。 如果提供的列表中不包含任何元素，则 `List.reduce` 将引发异常。
 
 在以下代码中，对 lambda 表达式的第一个调用提供了自变量 2 和 4，并返回 6；下一个调用提供了自变量 6 和 10，因此结果为 16。
 
@@ -436,11 +436,11 @@ Map 和 filter, List 的组合[。选择](https://msdn.microsoft.com/library/2e2
 
 ### <a name="converting-between-lists-and-other-collection-types"></a>在列表和其他集合类型之间进行转换
 
-`List` 模块提供了用于来回转换序列和数组的函数。 若要转换为序列, 请使用[list.toseq](https://msdn.microsoft.com/library/7024be4b-ee70-43cc-8d0a-e6564a4ff7c0)或[list.ofseq](https://msdn.microsoft.com/library/74ab9289-4a59-4433-92eb-3f662d7f7db0)。 若要转换为数组, 请使用[toArray](https://msdn.microsoft.com/library/ac87dd82-a0cd-40b3-b1fa-dd3168134547)或[list.ofarray](https://msdn.microsoft.com/library/f4bddc26-8c8f-4307-a6d7-a49dceb97032)。
+`List` 模块提供了用于来回转换序列和数组的函数。 若要转换为序列，请使用[list.toseq](https://msdn.microsoft.com/library/7024be4b-ee70-43cc-8d0a-e6564a4ff7c0)或[list.ofseq](https://msdn.microsoft.com/library/74ab9289-4a59-4433-92eb-3f662d7f7db0)。 若要转换为数组，请使用[toArray](https://msdn.microsoft.com/library/ac87dd82-a0cd-40b3-b1fa-dd3168134547)或[list.ofarray](https://msdn.microsoft.com/library/f4bddc26-8c8f-4307-a6d7-a49dceb97032)。
 
 ### <a name="additional-operations"></a>其他操作
 
-有关列表中其他操作的信息, 请参阅库参考主题[集合。列表模块](https://msdn.microsoft.com/visualfsharpdocs/conceptual/collections.list-module-%5bfsharp%5d)。
+有关列表中其他操作的信息，请参阅库参考主题[集合。列表模块](https://msdn.microsoft.com/visualfsharpdocs/conceptual/collections.list-module-%5bfsharp%5d)。
 
 ## <a name="see-also"></a>请参阅
 

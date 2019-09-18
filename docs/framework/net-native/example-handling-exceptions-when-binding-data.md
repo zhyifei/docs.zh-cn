@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 ms.assetid: bd63ed96-9853-46dc-ade5-7bd1b0f39110
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0a54945ece2cbb06df5f778aba242f05d9b80373
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 8f7c40d1a179c29c3b92ca37848db6d1383e5d2d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894504"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049894"
 ---
 # <a name="example-handling-exceptions-when-binding-data"></a>示例：处理绑定数据时出现的异常
 > [!NOTE]
 > 该主题是指 .NET Native 开发者预览版这款预发布软件。 可从 [Microsoft Connect 网站](https://go.microsoft.com/fwlink/?LinkId=394611)（需要注册）下载该预览版。  
   
- 下面的示例演示如何解决在使用 .NET Native 工具链编译的应用尝试绑定数据时引发的[MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)异常。 以下是有关异常的信息：  
+ 下面的示例演示如何解决在使用 .NET Native 工具链编译的应用尝试绑定数据时引发的[MissingMetadataException](missingmetadataexception-class-net-native.md)异常。 以下是有关异常的信息：  
   
 ```output
 This operation cannot be carried out as metadata for the following type was removed for performance reasons:   
@@ -61,5 +61,5 @@ Windows_UI_Xaml!DirectUI::PropertyPathListener::ConnectPathStep+0x113
   
 ## <a name="see-also"></a>请参阅
 
-- [入门](../../../docs/framework/net-native/getting-started-with-net-native.md)
-- 示例：[动态编程疑难解答](../../../docs/framework/net-native/example-troubleshooting-dynamic-programming.md)
+- [入门](getting-started-with-net-native.md)
+- 示例：[动态编程疑难解答](example-troubleshooting-dynamic-programming.md)

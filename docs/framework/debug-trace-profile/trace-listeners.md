@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 444b0d33-67ea-4c36-9e94-79c50f839025
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5657e55856845404c5f8f063bd69d51614a234c9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 752a6a5f9608aa260f192ee3e9e0709b7a10e27e
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614286"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052288"
 ---
 # <a name="trace-listeners"></a>跟踪侦听器
 使用 Trace、Debug 和 <xref:System.Diagnostics.TraceSource> 时，必须具有用于收集和记录发送的消息的机制。 跟踪消息可由侦听器接收。 侦听器的用途是收集、存储和路由跟踪消息。 侦听器会将跟踪输出定向到适当的目标，如日志、窗口或文本文件。  
@@ -40,7 +40,7 @@ ms.locfileid: "64614286"
   
 - <xref:System.Diagnostics.XmlWriterTraceListener> 将跟踪或调试输出以 XML 编码数据的形式定向到 <xref:System.IO.TextWriter> 或 <xref:System.IO.Stream>，例如 <xref:System.IO.FileStream>。  
   
- 如果你希望 <xref:System.Diagnostics.DefaultTraceListener> 以外的任何侦听器接收 Debug、Trace 和 <xref:System.Diagnostics.TraceSource> 输出，则必须将其添加到 `Listeners` 集合。 有关详细信息，请参阅[如何：创建和初始化跟踪侦听器](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-listeners.md)和[如何：使用 TraceSource 和筛选器与跟踪侦听器](../../../docs/framework/debug-trace-profile/how-to-use-tracesource-and-filters-with-trace-listeners.md)。 侦听器集合中的任何侦听器均从跟踪输出方法获取相同消息。 例如，假设你设置了两个侦听器：TextWriterTraceListener 和 EventLogTraceListener。 每个侦听器接收相同消息。 TextWriterTraceListener 将输出定向到流，而 EventLogTraceListener 将输出定向到事件日志。  
+ 如果你希望 <xref:System.Diagnostics.DefaultTraceListener> 以外的任何侦听器接收 Debug、Trace 和 <xref:System.Diagnostics.TraceSource> 输出，则必须将其添加到 `Listeners` 集合。 有关详细信息，请参阅[如何：创建和初始化跟踪侦听器](how-to-create-and-initialize-trace-listeners.md)以及[如何：将 TraceSource 和筛选器与跟踪](how-to-use-tracesource-and-filters-with-trace-listeners.md)侦听器一起使用。 侦听器集合中的任何侦听器均从跟踪输出方法获取相同消息。 例如，假设你设置了两个侦听器：TextWriterTraceListener 和 EventLogTraceListener。 每个侦听器接收相同消息。 TextWriterTraceListener 将输出定向到流，而 EventLogTraceListener 将输出定向到事件日志。  
   
  以下示例演示如何将输出发送到 Listeners 集合。  
   
@@ -82,5 +82,5 @@ System.Diagnostics.Trace.Listeners.Add(
 - <xref:System.Diagnostics.EventLogTraceListener>
 - <xref:System.Diagnostics.DefaultTraceListener>
 - <xref:System.Diagnostics.TraceListener>
-- [跟踪应用程序和在应用程序中插入检测点](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
-- [跟踪开关](../../../docs/framework/debug-trace-profile/trace-switches.md)
+- [跟踪应用程序和在应用程序中插入检测点](tracing-and-instrumenting-applications.md)
+- [跟踪开关](trace-switches.md)

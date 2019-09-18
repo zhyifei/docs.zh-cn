@@ -7,12 +7,12 @@ helpviewer_keywords:
 - UI Automation, clients for managed code
 - managed code, UI Automation clients
 ms.assetid: e1ed1197-3e9e-4e78-8845-92e82787faed
-ms.openlocfilehash: b8df3d07a18efcfbb6c30b46668ab8fec8736af5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 578a6da0f1545012d5a77edc3db04d52f56180bc
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69953194"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042514"
 ---
 # <a name="ui-automation-clients-for-managed-code"></a>托管代码的 UI 自动化客户端
 > [!NOTE]
@@ -21,16 +21,16 @@ ms.locfileid: "69953194"
  本部分包含概述和帮助主题以帮助你开发 UI 自动化客户端。  
   
 ## <a name="in-this-section"></a>本节内容  
- [UI 自动化和屏幕缩放](../../../docs/framework/ui-automation/ui-automation-and-screen-scaling.md)  
- [UI 自动化对标准控件的支持](../../../docs/framework/ui-automation/ui-automation-support-for-standard-controls.md)  
- [客户端的 UI 自动化事件](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md)  
- [在 UI 自动化客户端中缓存](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)  
- [客户端的 UI 自动化属性](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)  
- [UI 自动化客户端的控件模式映射](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)  
- [客户端的 UI 自动化控件模式](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)  
- [获取 UI 自动化元素](../../../docs/framework/ui-automation/obtaining-ui-automation-elements.md)  
- [UI 自动化线程处理问题](../../../docs/framework/ui-automation/ui-automation-threading-issues.md)  
- [帮助主题](../../../docs/framework/ui-automation/ui-automation-clients-for-managed-code-how-to-topics.md)  
+ [UI 自动化和屏幕缩放](ui-automation-and-screen-scaling.md)  
+ [UI 自动化对标准控件的支持](ui-automation-support-for-standard-controls.md)  
+ [客户端的 UI 自动化事件](ui-automation-events-for-clients.md)  
+ [在 UI 自动化客户端中缓存](caching-in-ui-automation-clients.md)  
+ [客户端的 UI 自动化属性](ui-automation-properties-for-clients.md)  
+ [UI 自动化客户端的控件模式映射](control-pattern-mapping-for-ui-automation-clients.md)  
+ [客户端的 UI 自动化控件模式](ui-automation-control-patterns-for-clients.md)  
+ [获取 UI 自动化元素](obtaining-ui-automation-elements.md)  
+ [UI 自动化线程处理问题](ui-automation-threading-issues.md)  
+ [帮助主题](ui-automation-clients-for-managed-code-how-to-topics.md)  
   
 ## <a name="reference"></a>参考  
  <xref:System.Windows.Automation>

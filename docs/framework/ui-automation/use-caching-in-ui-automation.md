@@ -8,12 +8,12 @@ helpviewer_keywords:
 - caching, UI Automation
 - UI Automation, caching
 ms.assetid: ec722dff-6009-4279-b86a-e18d3fa94ebf
-ms.openlocfilehash: 38c7742f3e4691f29490e73b05616754415eac58
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: dd7506d388ba215f671ee3c7c4bae09baf4cc2b3
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69953903"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71040310"
 ---
 # <a name="use-caching-in-ui-automation"></a>在 UI 自动化中使用缓存
 > [!NOTE]
@@ -33,9 +33,9 @@ ms.locfileid: "69953903"
   
 5. 如果想通过不检索对对象的完全引用来提高效率，请将 <xref:System.Windows.Automation.CacheRequest.AutomationElementMode%2A> 属性设置为 <xref:System.Windows.Automation.AutomationElementMode.None> 。 （这将导致无法从那些对象中检索当前值。）  
   
-6. 使用<xref:System.Windows.Automation.CacheRequest.Activate%2A> 块`using`中的 (`Using`在 Microsoft Visual Basic .net 中) 激活请求。  
+6. 使用<xref:System.Windows.Automation.CacheRequest.Activate%2A> 块`using`中的（`Using`在 Microsoft Visual Basic .net 中）激活请求。  
   
- 在获得 <xref:System.Windows.Automation.AutomationElement> 对象或订阅事件后，通过使用 <xref:System.Windows.Automation.CacheRequest.Pop%2A> （如果使用了 <xref:System.Windows.Automation.CacheRequest.Push%2A> ）或处理 <xref:System.Windows.Automation.CacheRequest.Activate%2A>创建的对象来禁用请求。 (在<xref:System.Windows.Automation.CacheRequest.Activate%2A> Microsoft Visual Basic `using` .net`Using`中的块中使用。  
+ 在获得 <xref:System.Windows.Automation.AutomationElement> 对象或订阅事件后，通过使用 <xref:System.Windows.Automation.CacheRequest.Pop%2A> （如果使用了 <xref:System.Windows.Automation.CacheRequest.Push%2A> ）或处理 <xref:System.Windows.Automation.CacheRequest.Activate%2A>创建的对象来禁用请求。 （在<xref:System.Windows.Automation.CacheRequest.Activate%2A> Microsoft Visual Basic `using` .net`Using`中的块中使用。  
   
 ### <a name="cache-automationelement-properties"></a>缓存 AutomationElement 属性  
   
@@ -65,4 +65,4 @@ ms.locfileid: "69953903"
   
 ## <a name="see-also"></a>请参阅
 
-- [在 UI 自动化客户端中缓存](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)
+- [在 UI 自动化客户端中缓存](caching-in-ui-automation-clients.md)

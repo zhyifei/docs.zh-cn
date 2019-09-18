@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ccd68284-f3a8-47b8-bc3f-92e5fe3a1640
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2486316cf582da09eaa8998d06efb8a4e4ea3a88
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 163022256dfbeb303a500d9c1d574054c5b550d7
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69967214"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052302"
 ---
 # <a name="runtime-profiling"></a>运行时分析
 分析是用于在任何开发或部署方案中收集性能数据的方法。 本节面向想要收集有关应用程序性能的信息的开发人员和系统管理员。  
@@ -34,7 +34,7 @@ ms.locfileid: "69967214"
   
 3. 在“性能监视器”工具栏上，如果有“添加” 图标（加号），请单击该图标。 如果没有，请在监视器窗口中单击右键，然后选择“添加计数器” 选项。  
   
-     这将打开“添加计数器” 对话框。 “可用计数器” 列表框中显示可用的性能对象。 .NET Framework 应用程序有许多预定义的对象，包括用于内存管理、互操作性、异常处理以及多线程处理的计数器，它们分别是“.NET CLR Memory” **.** 、“.NET CLR Interop”、“.NET CLR Exceptions”和“.NET CLR LocksAndThreads”。 每个性能对象均包含多个单一性能计数器。 在性能监视器中的可用性能计数器列表，请参阅 [Performance Counters](../../../docs/framework/debug-trace-profile/performance-counters.md)一起安装的.NET Framework 性能计数器中的数据。  
+     这将打开“添加计数器” 对话框。 “可用计数器” 列表框中显示可用的性能对象。 .NET Framework 应用程序有许多预定义的对象，包括用于内存管理、互操作性、异常处理以及多线程处理的计数器，它们分别是“.NET CLR Memory” **.** 、“.NET CLR Interop”、“.NET CLR Exceptions”和“.NET CLR LocksAndThreads”。 每个性能对象均包含多个单一性能计数器。 在性能监视器中的可用性能计数器列表，请参阅 [Performance Counters](performance-counters.md)一起安装的.NET Framework 性能计数器中的数据。  
   
 4. 选择性能对象的名称旁边的复选框，以查看它所支持的各个性能计数器的列表。  
   
@@ -46,18 +46,18 @@ ms.locfileid: "69967214"
   
      在“选定对象的实例” 列表框中，单击要监视该应用程序的性能计数器的应用程序的名称。  
   
-     若要区分运行时的多个版本，或消除具有相同名称的多个应用程序的歧义，还必须修改注册表项。 有关详细信息，请参阅 [性能计数器和进程内并行应用程序](../../../docs/framework/debug-trace-profile/performance-counters-and-in-process-side-by-side-applications.md)。  
+     若要区分运行时的多个版本，或消除具有相同名称的多个应用程序的歧义，还必须修改注册表项。 有关详细信息，请参阅 [性能计数器和进程内并行应用程序](performance-counters-and-in-process-side-by-side-applications.md)。  
   
 > [!NOTE]
 > 如果在性能控制台正在运行时安装新的性能计数器，请在停止后再重启性能控制台，以便显示新的计数器。  
   
- 要分析位于某一区域或远程共享中的程序集，请确保该远程程序集在运行性能计数器的计算机上完全受信任。 如果该程序集不具有足够的信任，则性能计数器将不工作。 有关向不同区域授予信任的信息，请参阅 [Caspol.exe（代码访问安全策略工具）](../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)。  
+ 要分析位于某一区域或远程共享中的程序集，请确保该远程程序集在运行性能计数器的计算机上完全受信任。 如果该程序集不具有足够的信任，则性能计数器将不工作。 有关向不同区域授予信任的信息，请参阅 [Caspol.exe（代码访问安全策略工具）](../tools/caspol-exe-code-access-security-policy-tool.md)。  
   
 > [!NOTE]
-> 在安装了 .NET Framework 4 的系统上, 对于使用 .NET 开发的应用程序, 性能监视器可能不会显示某些类别 (如 **.NET Clr 数据**和 **.net clr 网络**) 中性能计数器的数据Framework 1.1。 如果属于这种情况，可以配置性能监视器以显示此数据，方法是将 [\<forcePerformanceCounterUniqueSharedMemoryReads>](../../../docs/framework/configure-apps/file-schema/runtime/forceperformancecounteruniquesharedmemoryreads-element.md) 元素添加到应用程序的配置文件。  
+> 在安装了 .NET Framework 4 的系统上，对于使用 .NET 开发的应用程序，性能监视器可能不会显示某些类别（如 **.NET Clr 数据**和 **.net clr 网络**）中性能计数器的数据Framework 1.1。 如果属于这种情况，可以配置性能监视器以显示此数据，方法是将 [\<forcePerformanceCounterUniqueSharedMemoryReads>](../configure-apps/file-schema/runtime/forceperformancecounteruniquesharedmemoryreads-element.md) 元素添加到应用程序的配置文件。  
   
 ## <a name="reading-and-creating-performance-counters-programmatically"></a>以编程方式读取和创建性能计数器  
- .NET Framework 提供了一些类, 可用于以编程方式访问性能控制台中提供的相同性能信息。 另外，还可以使用这些类创建自定义性能计数器。 下表描述了 .NET Framework 中提供的某些性能监视类。  
+ .NET Framework 提供了一些类，可用于以编程方式访问性能控制台中提供的相同性能信息。 另外，还可以使用这些类创建自定义性能计数器。 下表描述了 .NET Framework 中提供的某些性能监视类。  
   
 |类|描述|  
 |-----------|-----------------|  
@@ -68,4 +68,4 @@ ms.locfileid: "69967214"
   
 ## <a name="see-also"></a>请参阅
 
-- [性能计数器](../../../docs/framework/debug-trace-profile/performance-counters.md)
+- [性能计数器](performance-counters.md)

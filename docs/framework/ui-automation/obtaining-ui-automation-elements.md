@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation, obtaining elements
 - elements, UI Automation, obtaining
 ms.assetid: c2caaf45-e59c-42a1-bc9b-77a6de520171
-ms.openlocfilehash: 9adf8078f52653940fe9ba5caa4a256a08cc489c
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 46de1b5de8ef7585919d331e6bf4b1537739ae1d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044147"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042887"
 ---
 # <a name="obtaining-ui-automation-elements"></a>获取 UI 自动化元素
 > [!NOTE]
@@ -19,7 +19,7 @@ ms.locfileid: "70044147"
  本主题描述获取 <xref:System.Windows.Automation.AutomationElement> 元素的 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 对象的各种方法。  
   
 > [!CAUTION]
-> 如果客户端应用程序可以尝试在其自己的用户界面中查找元素，则必须在一个单独的线程上进行所有 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 调用。 有关更多信息，请参见 [UI Automation Threading Issues](../../../docs/framework/ui-automation/ui-automation-threading-issues.md)。  
+> 如果客户端应用程序可以尝试在其自己的用户界面中查找元素，则必须在一个单独的线程上进行所有 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 调用。 有关更多信息，请参见 [UI Automation Threading Issues](ui-automation-threading-issues.md)。  
   
 <a name="The_Root_Element"></a>   
 ## <a name="root-element"></a>根元素  
@@ -85,7 +85,7 @@ ms.locfileid: "70044147"
 ### <a name="from-an-event"></a>从事件中  
  当你的应用程序接收 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件时，传递到事件处理程序的源对象是 <xref:System.Windows.Automation.AutomationElement>。 例如，如果你订阅焦点更改事件，则传递到 <xref:System.Windows.Automation.AutomationFocusChangedEventHandler> 的源是收到焦点的元素。  
   
- 有关详细信息，请参阅 [Subscribe to UI Automation Events](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)。  
+ 有关详细信息，请参阅 [Subscribe to UI Automation Events](subscribe-to-ui-automation-events.md)。  
   
 ### <a name="from-a-point"></a>从某个点中  
  如果你具有屏幕坐标（例如，光标位置），则可以使用静态 <xref:System.Windows.Automation.AutomationElement> 方法来检索 <xref:System.Windows.Automation.AutomationElement.FromPoint%2A> 。  
@@ -98,6 +98,6 @@ ms.locfileid: "70044147"
   
 ## <a name="see-also"></a>请参阅
 
-- [基于属性条件查找 UI 自动化元素](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)
-- [使用 TreeWalker 在 UI 自动化元素之间导航](../../../docs/framework/ui-automation/navigate-among-ui-automation-elements-with-treewalker.md)
-- [UI 自动化树概述](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
+- [基于属性条件查找 UI 自动化元素](find-a-ui-automation-element-based-on-a-property-condition.md)
+- [使用 TreeWalker 在 UI 自动化元素之间导航](navigate-among-ui-automation-elements-with-treewalker.md)
+- [UI 自动化树概述](ui-automation-tree-overview.md)

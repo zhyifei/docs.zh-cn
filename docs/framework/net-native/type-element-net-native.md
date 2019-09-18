@@ -4,14 +4,14 @@ ms.date: 03/30/2017
 ms.assetid: 1e88d368-a886-4f1e-8eb6-6127979a9fce
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fc93d1af65a34381005c3f3987dd18a8e7bba8d9
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 7ffe37540fe089bfd1e0eca1958498e725eb9b5b
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66689279"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049152"
 ---
-# <a name="type-element-net-native"></a>\<类型 > 元素 (.NET Native)
+# <a name="type-element-net-native"></a>\<类型 > 元素（.NET Native）
 
 将运行时策略应用到一个特定类型，例如一个类或结构。
 
@@ -55,58 +55,58 @@ ms.locfileid: "66689279"
 
 |值|描述|
 |-----------|-----------------|
-|type_name |类型名称。 如果此 `<Type>` 元素是 [\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md) 元素或另一个 `<Type>` 元素的子元素，type_name  可能包括类型名称而不包括其命名空间。 否则，type_name  必须包含完全限定的类型名称。|
+|type_name|类型名称。 如果此 `<Type>` 元素是 [\<Namespace>](namespace-element-net-native.md) 元素或另一个 `<Type>` 元素的子元素，type_name 可能包括类型名称而不包括其命名空间。 否则，type_name 必须包含完全限定的类型名称。|
 
 ## <a name="all-other-attributes"></a>所有其他特性
 
 |值|描述|
 |-----------|-----------------|
-|policy_setting |该设置将应用到这种策略类型。 可能值为 `All`、`Auto`、`Excluded`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal` 以及 `Required All`。 有关详细信息，请参阅[运行时指令策略设置](../../../docs/framework/net-native/runtime-directive-policy-settings.md)。|
+|policy_setting|该设置将应用到这种策略类型。 可能值为 `All`、`Auto`、`Excluded`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal` 以及 `Required All`。 有关详细信息，请参阅[运行时指令策略设置](runtime-directive-policy-settings.md)。|
 
 ### <a name="child-elements"></a>子元素
 
 |元素|描述|
 |-------------|-----------------|
-|[\<AttributeImplies>](../../../docs/framework/net-native/attributeimplies-element-net-native.md)|如果包含类型是一个特性，为该特性所应用到的代码元素定义一个运行时策略。|
-|[\<Event>](../../../docs/framework/net-native/event-element-net-native.md)|将反射策略应用到属于这种类型的一个事件。|
-|[\<Field>](../../../docs/framework/net-native/field-element-net-native.md)|将反射策略应用到属于这种类型的一个字段。|
-|[\<GenericParameter>](../../../docs/framework/net-native/genericparameter-element-net-native.md)|将策略应用到一个泛型类型的参数类型。|
-|[\<ImpliesType>](../../../docs/framework/net-native/impliestype-element-net-native.md)|如果该策略已应用到以包含 `<Type>` 元素为代表的类型，将该策略应用到一个类型。|
-|[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|将反射策略应用到属于这种类型的一个方法。|
-|[\<MethodInstantiation>](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)|将反射策略应用到属于这种类型的一个构造泛型方法。|
-|[\<Property>](../../../docs/framework/net-native/property-element-net-native.md)|将反射策略应用到属于这种类型的一个属性。|
-|[\<Subtypes>](../../../docs/framework/net-native/subtypes-element-net-native.md)|将运行时策略应用到从包含类型继承的所有类。|
+|[\<AttributeImplies>](attributeimplies-element-net-native.md)|如果包含类型是一个特性，为该特性所应用到的代码元素定义一个运行时策略。|
+|[\<Event>](event-element-net-native.md)|将反射策略应用到属于这种类型的一个事件。|
+|[\<Field>](field-element-net-native.md)|将反射策略应用到属于这种类型的一个字段。|
+|[\<GenericParameter>](genericparameter-element-net-native.md)|将策略应用到一个泛型类型的参数类型。|
+|[\<ImpliesType>](impliestype-element-net-native.md)|如果该策略已应用到以包含 `<Type>` 元素为代表的类型，将该策略应用到一个类型。|
+|[\<Method>](method-element-net-native.md)|将反射策略应用到属于这种类型的一个方法。|
+|[\<MethodInstantiation>](methodinstantiation-element-net-native.md)|将反射策略应用到属于这种类型的一个构造泛型方法。|
+|[\<Property>](property-element-net-native.md)|将反射策略应用到属于这种类型的一个属性。|
+|[\<Subtypes>](subtypes-element-net-native.md)|将运行时策略应用到从包含类型继承的所有类。|
 |`<Type>`|将反射策略应用到一个嵌套类型。|
-|[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|将反射策略应用到一个构造泛型类型。|
+|[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|将反射策略应用到一个构造泛型类型。|
 
 ### <a name="parent-elements"></a>父元素
 
 |元素|描述|
 |-------------|-----------------|
-|[\<Application>](../../../docs/framework/net-native/application-element-net-native.md)|作为应用程序范围内的类型和元数据可以反应在运行时间的类型成员的容器而服务。|
-|[\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)|将反射策略应用到指定程序集中的所有类型。|
-|[\<Library>](../../../docs/framework/net-native/library-element-net-native.md)|定义包含元数据在运行时间可以用于反射的类型和类型成员的程序集。|
-|[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)|将反射策略应用到命名空间中的所有类型。|
+|[\<Application>](application-element-net-native.md)|作为应用程序范围内的类型和元数据可以反应在运行时间的类型成员的容器而服务。|
+|[\<Assembly>](assembly-element-net-native.md)|将反射策略应用到指定程序集中的所有类型。|
+|[\<Library>](library-element-net-native.md)|定义包含元数据在运行时间可以用于反射的类型和类型成员的程序集。|
+|[\<Namespace>](namespace-element-net-native.md)|将反射策略应用到命名空间中的所有类型。|
 |`<Type>`|将反射策略应用到一种类型及其所有成员。|
-|[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|将反射策略应用到一种构造泛型类型及其所有成员。|
+|[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|将反射策略应用到一种构造泛型类型及其所有成员。|
 
 ## <a name="remarks"></a>备注
 
 反射、序列化和互操作特性都是可选项。 如果这些都不存在，`<Type>` 元素会充当容器，其子类型为独立成员定义策略。
 
-如果一个 `<Type>` 元素是 [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)、[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)、`<Type>` 或 [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) 元素的子元素，它会替代由父元素定义的策略设置。
+如果一个 `<Type>` 元素是 [\<Assembly>](assembly-element-net-native.md)、[\<Namespace>](namespace-element-net-native.md)、`<Type>` 或 [\<TypeInstantiation>](typeinstantiation-element-net-native.md) 元素的子元素，它会替代由父元素定义的策略设置。
 
-一个泛型类型的 `<Type>` 元素会将其策略应用到所有不具有自身策略的实例化。 构造泛型类型的策略是由 [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) 元素定义的。
+一个泛型类型的 `<Type>` 元素会将其策略应用到所有不具有自身策略的实例化。 构造泛型类型的策略是由 [\<TypeInstantiation>](typeinstantiation-element-net-native.md) 元素定义的。
 
 如果该类型是一个泛型类型，其名称包含一个重读音符 (\`)，后面还跟着其泛型参数的编号。 例如，`Name` 的 `<Type>` 元素 <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> 特性为 ``Name="System.Collections.Generic.List`1"``。
 
 ## <a name="example"></a>示例
 
-以下实例使用反射来展示 <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> 类的字段、属性和方法。 在变量`b`在示例中是<xref:Windows.UI.Xaml.Controls.TextBlock>控件。 因为实例仅仅检索了类型信息，元数据的可用性是由 `Browse` 策略设置控制的。
+以下实例使用反射来展示 <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> 类的字段、属性和方法。 示例中`b`的变量是一个<xref:Windows.UI.Xaml.Controls.TextBlock>控件。 因为实例仅仅检索了类型信息，元数据的可用性是由 `Browse` 策略设置控制的。
 
  [!code-csharp[ProjectN_Reflection#3](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/browsegenerictype1.cs#3)]
 
- 因为元数据<xref:System.Collections.Generic.List%601>类不会自动包括.NET Native 工具链，该示例将失败，若要在运行时显示的请求的成员信息。 为提供所需的元数据，将以下 `<Type>` 元素添加到运行时指令文件。 注意，因为我们已经提供了父 [<Namespace\>](../../../docs/framework/net-native/namespace-element-net-native.md) 元素，因此不必在 `<Type>` 元素中提供完全限定的类型名称。
+ 由于<xref:System.Collections.Generic.List%601>类的元数据不会由 .NET Native 工具链自动包含，因此该示例在运行时无法显示请求的成员信息。 为提供所需的元数据，将以下 `<Type>` 元素添加到运行时指令文件。 注意，因为我们已经提供了父 [<Namespace\>](namespace-element-net-native.md) 元素，因此不必在 `<Type>` 元素中提供完全限定的类型名称。
 
 ```xml
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">
@@ -120,11 +120,11 @@ ms.locfileid: "66689279"
 ```
 
 ## <a name="example"></a>示例
- 以下实例使用了反射来检索一个代表 <xref:System.Reflection.PropertyInfo> 属性的 <xref:System.String.Chars%2A?displayProperty=nameWithType> 对象。 它使用 <xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> 方法来检索一个字符串中的七个字符的值，并在该字符串中显示所有字符。 在变量`b`在示例中是<xref:Windows.UI.Xaml.Controls.TextBlock>控件。
+ 以下实例使用了反射来检索一个代表 <xref:System.Reflection.PropertyInfo> 属性的 <xref:System.String.Chars%2A?displayProperty=nameWithType> 对象。 它使用 <xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> 方法来检索一个字符串中的七个字符的值，并在该字符串中显示所有字符。 示例中`b`的变量是一个<xref:Windows.UI.Xaml.Controls.TextBlock>控件。
 
  [!code-csharp[ProjectN_Reflection#1](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/propertyinfo1.cs#1)]
 
- 因为元数据<xref:System.String>对象不可用，调用<xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>方法会抛出<xref:System.NullReferenceException>异常在运行时使用.NET Native 工具链编译时间。 要消除异常并提供必需的元数据，请将以下 `<Type>` 元素添加到运行时指令文件：
+ 由于<xref:System.String>对象的元数据不可用，因此在使用 .NET Native <xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>工具链编译<xref:System.NullReferenceException>时，对方法的调用会在运行时引发异常。 要消除异常并提供必需的元数据，请将以下 `<Type>` 元素添加到运行时指令文件：
 
 ```xml
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">
@@ -137,6 +137,6 @@ ms.locfileid: "66689279"
 
 ## <a name="see-also"></a>请参阅
 
-- [运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [运行时指令元素](../../../docs/framework/net-native/runtime-directive-elements.md)
-- [运行时指令策略设置](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+- [运行时指令 (rd.xml) 配置文件参考](runtime-directives-rd-xml-configuration-file-reference.md)
+- [运行时指令元素](runtime-directive-elements.md)
+- [运行时指令策略设置](runtime-directive-policy-settings.md)

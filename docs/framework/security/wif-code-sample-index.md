@@ -3,12 +3,12 @@ title: WIF 代码示例索引
 ms.date: 03/30/2017
 ms.assetid: 6711f01a-4743-43ce-95ab-5e2302a363ea
 author: BrucePerlerMS
-ms.openlocfilehash: b1c875f6c49a3097a75f88b1c25555fd7e891b1f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1e90c5f8681706aa0d52c74e6caff08edbf283da
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61909397"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045163"
 ---
 # <a name="wif-code-sample-index"></a>WIF 代码示例索引
 
@@ -24,7 +24,7 @@ ms.locfileid: "61909397"
 
 - [ClaimsAwareFormsAuthentication](https://go.microsoft.com/fwlink/?LinkID=248409) - 这是一个非常简单的示例，演示 .NET 4.5 中，不管如何验证用户身份都在主体中获取声明。
 
-- [ClaimsBasedAuthorization](https://go.microsoft.com/fwlink/?LinkID=248410)-此示例演示如何使用 ClaimsAuthorizationManager 类和 ClaimsAuthorizationModule 来应用授权策略。
+- [ClaimsBasedAuthorization](https://go.microsoft.com/fwlink/?LinkID=248410)-此示例演示如何使用 ClaimsAuthorizationManager 类和 ClaimsAuthorizationModule 来应用自己的授权策略。
 
 - [FederationMetadata](https://go.microsoft.com/fwlink/?LinkID=248411) - 此示例演示元数据文档的动态生成（自定义 STS 上）和动态消耗（依赖方应用上）。
 
@@ -32,4 +32,4 @@ ms.locfileid: "61909397"
 
 ## <a name="see-also"></a>请参阅
 
-- [Windows Identity Foundation](../../../docs/framework/security/index.md)
+- [Windows Identity Foundation](index.md)

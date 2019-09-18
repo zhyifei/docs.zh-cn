@@ -4,14 +4,14 @@ ms.date: 03/30/2017
 ms.assetid: ad4ba56d-3bcb-4c10-ba90-1cc66e2175a1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 374ace4ec5e25731e4a7e958be145a660ff2ef7f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 54daf15c593327bf3255f40f6eb6931ffc8bd3c6
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614872"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049302"
 ---
-# <a name="property-element-net-native"></a>\<属性 > 元素 (.NET Native)
+# <a name="property-element-net-native"></a>\<Property > 元素（.NET Native）
 将运行时反射策略应用到一个属性。  
   
 ## <a name="syntax"></a>语法  
@@ -39,13 +39,13 @@ ms.locfileid: "64614872"
   
 |值|描述|  
 |-----------|-----------------|  
-|method_name|属性名称。 该属性的类型由 [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) 或 [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) 父元素定义。|  
+|method_name|属性名称。 该属性的类型由 [\<Type>](type-element-net-native.md) 或 [\<TypeInstantiation>](typeinstantiation-element-net-native.md) 父元素定义。|  
   
 ## <a name="all-other-attributes"></a>所有其他特性  
   
 |值|描述|  
 |-----------|-----------------|  
-|policy_setting|该设置将应用到这个属性的策略类型。 可能值为 `Auto`、`Excluded`、`Included` 和 `Required`。 有关详细信息，请参阅[运行时指令策略设置](../../../docs/framework/net-native/runtime-directive-policy-settings.md)。|  
+|policy_setting|该设置将应用到这个属性的策略类型。 可能值为 `Auto`、`Excluded`、`Included` 和 `Required`。 有关详细信息，请参阅[运行时指令策略设置](runtime-directive-policy-settings.md)。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  
@@ -54,8 +54,8 @@ ms.locfileid: "64614872"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|将反射策略应用到一种类型及其所有成员。|  
-|[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|将反射策略应用到一种构造泛型类型及其所有成员。|  
+|[\<Type>](type-element-net-native.md)|将反射策略应用到一种类型及其所有成员。|  
+|[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|将反射策略应用到一种构造泛型类型及其所有成员。|  
   
 ## <a name="remarks"></a>备注  
  如果一个属性的策略没有得到显式定义，它将继承其父元素的运行时间策略。  
@@ -75,15 +75,15 @@ ms.locfileid: "64614872"
   
  该文件将 `All` 值应用到允许通过反射访问类构造函数的 `Activate` 的类的 `Book` 策略。 `Browse` 类的 `Book` 策略是从其父命名空间继承的。 这已设置为 `Required Public`，这使得元数据在运行时可用。  
   
- 以下是该实例的源代码。 `outputBlock`变量表示<xref:Windows.UI.Xaml.Controls.TextBlock>控件。  
+ 以下是该实例的源代码。 变量表示一个<xref:Windows.UI.Xaml.Controls.TextBlock>控件。 `outputBlock`  
   
  [!code-csharp[ProjectN_Reflection#6](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/property1.cs#6)]  
   
- 然而，编译和执行此示例将引发 [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) 异常。 尽管我们已经使 `Book` 类型的元数据变得可用，我们却未使属性获取者的实施变得动态可用。 我们可通过以下方法之一纠正这个错误：  
+ 然而，编译和执行此示例将引发 [MissingRuntimeArtifactException](missingruntimeartifactexception-class-net-native.md) 异常。 尽管我们已经使 `Book` 类型的元数据变得可用，我们却未使属性获取者的实施变得动态可用。 我们可通过以下方法之一纠正这个错误：  
   
-- 通过在其 [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) 元素中为 `Book` 类型定义 `Dynamic` 策略。  
+- 通过在其 [\<Type>](type-element-net-native.md) 元素中为 `Book` 类型定义 `Dynamic` 策略。  
   
-- 通过为我们想要调用其 getter 的每个属性添加一个嵌套 [\<Property>](../../../docs/framework/net-native/property-element-net-native.md) 元素，如以下 default.rd.xml 文件所示。  
+- 通过为我们想要调用其 getter 的每个属性添加一个嵌套 [\<Property>](property-element-net-native.md) 元素，如以下 default.rd.xml 文件所示。  
   
     ```xml  
     <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
@@ -101,6 +101,6 @@ ms.locfileid: "64614872"
   
 ## <a name="see-also"></a>请参阅
 
-- [运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [运行时指令元素](../../../docs/framework/net-native/runtime-directive-elements.md)
-- [运行时指令策略设置](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+- [运行时指令 (rd.xml) 配置文件参考](runtime-directives-rd-xml-configuration-file-reference.md)
+- [运行时指令元素](runtime-directive-elements.md)
+- [运行时指令策略设置](runtime-directive-policy-settings.md)

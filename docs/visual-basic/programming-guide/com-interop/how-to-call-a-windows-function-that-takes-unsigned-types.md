@@ -1,5 +1,5 @@
 ---
-title: 如何：调用采用无符号的类型 (Visual Basic 中) 的 Windows 函数
+title: 如何：调用采用无符号类型的 Windows 函数（Visual Basic）
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Windows functions [Visual Basic], calling
@@ -14,28 +14,28 @@ helpviewer_keywords:
 - data types [Visual Basic], numeric
 - unsigned types [Visual Basic], using
 ms.assetid: c2c0e712-8dc2-43b9-b4c6-345fbb02e7ce
-ms.openlocfilehash: d1a679242f89c17e58a837ac2d356e1594972fb3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 97075fb6149ed8c0ce06318d0e5bb6f01b841f30
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62022358"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053327"
 ---
-# <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a>如何：调用采用无符号的类型 (Visual Basic 中) 的 Windows 函数
+# <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a>如何：调用采用无符号类型的 Windows 函数（Visual Basic）
 
-如果您正在使用类、 模块或结构，它具有无符号的整数类型的成员，可以访问这些成员与 Visual Basic。
+如果你使用的类、模块或结构具有无符号整数类型的成员，则可以使用 Visual Basic 访问这些成员。
 
-### <a name="to-call-a-windows-function-that-takes-an-unsigned-type"></a>若要调用采用无符号的类型的 Windows 函数
+## <a name="to-call-a-windows-function-that-takes-an-unsigned-type"></a>调用采用无符号类型的 Windows 函数
 
-1. 使用[Declare 语句](../../../visual-basic/language-reference/statements/declare-statement.md)来判断 Visual Basic 的库包含该函数的什么其名称是在该库中，其调用的序列是什么，以及如何将字符串转换调用它时。
+1. 使用[Declare 语句](../../../visual-basic/language-reference/statements/declare-statement.md)来告知 Visual Basic 哪个库包含函数、其在库中的名称、调用顺序，以及如何在调用字符串时转换字符串。
 
-2. 在中`Declare`语句，使用`UInteger`， `ULong`， `UShort`，或`Byte`根据需要为每个参数使用一个无符号类型。
+2. `UInteger` `ULong`在语句中，将、`UShort`、或`Byte`适当地用于具有无符号类型的每个参数。 `Declare`
 
-3. 要调用若要查找的名称和值的常量，它使用的 Windows 函数，请参阅文档。 其中许多 WinUser.h 文件中定义。
+3. 请参阅你要调用的 Windows 函数的文档，以查找它所使用的常量的名称和值。 其中许多是在 Winuser.h 文件中定义的。
 
-4. 声明在代码中的必要常量。 许多 Windows 常量是 32 位无符号的值，并应声明这些`As UInteger`。
+4. 在代码中声明必要的常量。 许多 Windows 常量为32位无符号值，你应将其`As UInteger`声明为。
 
-5. 以正常方式调用函数。 下面的示例调用 Windows 函数`MessageBox`，其将无符号的整数自变量。
+5. 以正常方式调用函数。 下面的示例调用 Windows 函数， `MessageBox`该函数采用无符号整数参数。
 
     ```vb
     Public Class windowsMessage
@@ -60,7 +60,7 @@ ms.locfileid: "62022358"
     End Class
     ```
 
-     你可以测试该函数`messageThroughWindows`用下面的代码。
+     可以通过以下代码测试`messageThroughWindows`该函数。
 
     ```vb
     Public Sub consumeWindowsMessage()
@@ -70,13 +70,13 @@ ms.locfileid: "62022358"
     ```
 
     > [!CAUTION]
-    > `UInteger`， `ULong`， `UShort`，和`SByte`数据类型不属于[语言独立性和与语言无关的组件](../../../standard/language-independence-and-language-independent-components.md)(CLS)，因此符合 cls 的代码不能使用的组件，使用它们。
+    > `UInteger`、 、和`UShort`数据类型不是[语言独立性和与语言无关的组件](../../../standard/language-independence-and-language-independent-components.md)（cls）的一部分，因此符合 CLS 的代码无法使用使用它们的组件。 `SByte` `ULong`
 
     > [!IMPORTANT]
-    > Windows 应用程序编程接口 (API)，如在非托管代码调用公开您的代码与潜在的安全风险。
+    > 调用非托管代码（如 Windows 应用程序编程接口（API））会向你的代码带来潜在的安全风险。
 
     > [!IMPORTANT]
-    > 调用 Windows API 要求非托管的代码的权限，这可能会影响在部分信任情况下执行。 有关详细信息，请参阅<xref:System.Security.Permissions.SecurityPermission>并[代码访问权限](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/h846e9b3(v=vs.100))。
+    > 调用 Windows API 需要非托管代码权限，这可能会影响在部分信任情况下的执行。 有关详细信息，请<xref:System.Security.Permissions.SecurityPermission>参阅和[代码访问权限](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/h846e9b3(v=vs.100))。
 
 ## <a name="see-also"></a>请参阅
 

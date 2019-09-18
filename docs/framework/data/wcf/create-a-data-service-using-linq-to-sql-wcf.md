@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, LINQ to SQL
 - WCF Data Services, providers
 ms.assetid: 3b01c2fd-8c6e-4bf5-b38f-9e61bdc3c328
-ms.openlocfilehash: 7a1075b680ec3310e1bd8d712579872333c6ebed
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6489e451f3790e38ea821104fd2aca5a8c091ba6
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70791053"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053003"
 ---
 # <a name="how-to-create-a-data-service-using-a-linq-to-sql-data-source-wcf-data-services"></a>如何：使用 LINQ to SQL 数据源创建数据服务（WCF 数据服务）
 
@@ -52,7 +52,7 @@ WCF 数据服务将实体数据作为数据服务公开。 反射提供程序允
 
 2. 在 "**添加新项**" 对话框中，从 " **Web** " 类别中选择 " **WCF 数据服务**" 模板。
 
-   ![Visual Studio 2015 中的 WCF 数据服务项模板](media/wcf-data-service-item-template.png)
+   ![Visual Studio 2015 中的 WCF 数据服务项模板](./media/wcf-data-service-item-template.png)
 
    > [!NOTE]
    > **WCF 数据服务**模板在 visual studio 2015 中提供，但在 visual studio 2017 中不可用。

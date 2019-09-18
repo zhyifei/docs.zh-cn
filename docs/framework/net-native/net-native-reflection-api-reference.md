@@ -4,21 +4,21 @@ ms.date: 03/30/2017
 ms.assetid: 0429c049-22a3-4ba1-9cc8-f6ee91e31d9c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 69a4addbd00c119af4336faae2cd0f8fc31f8852
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9c1fbef46231fed3af0d335e9396b301fe503254
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69941620"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049379"
 ---
 # <a name="net-native-reflection-api-reference"></a>.NET Native 本机反射 API 参考
-.NET Native 包括三个新的异常类型：[System.Runtime.CompilerServices.MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)[System.Reflection.MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) 和 [System.Reflection.MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) 请注意有关所有三种异常类型的以下内容：  
+.NET Native 包括三个新的异常类型：[System.Runtime.CompilerServices.MissingInteropDataException](missinginteropdataexception-class-net-native.md)[System.Reflection.MissingMetadataException](missingmetadataexception-class-net-native.md) 和 [System.Reflection.MissingRuntimeArtifactException](missingruntimeartifactexception-class-net-native.md) 请注意有关所有三种异常类型的以下内容：  
   
  这些类型仅供内部使用。  
  这三种异常类型仅用于 .NET Native 工具链。 当 .NET Native 工具链检测到不允许程序继续执行的缺失数据时，将引发异常。  
   
  不在代码中处理这些异常。  
- 这些异常指示缺少应用程序所需的元数据（ [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md) 和 [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) 异常）或缺少应用程序所需的实现代码（ [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) 异常）。 可以通过修改运行时指令 (.rd.xml) 文件，使所需的元数据或实现代码在运行时可用，从而更正这些异常条件。 有关更多信息，请参见 [Runtime Directives (rd.xml) Configuration File Reference](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)。 有两个故障排除程序可用于为运行时指令文件提供合适的条目，指令文件将消除 [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) 和 [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) 异常：  
+ 这些异常指示缺少应用程序所需的元数据（ [MissingInteropDataException](missinginteropdataexception-class-net-native.md) 和 [MissingMetadataException](missingmetadataexception-class-net-native.md) 异常）或缺少应用程序所需的实现代码（ [MissingRuntimeArtifactException](missingruntimeartifactexception-class-net-native.md) 异常）。 可以通过修改运行时指令 (.rd.xml) 文件，使所需的元数据或实现代码在运行时可用，从而更正这些异常条件。 有关更多信息，请参见 [Runtime Directives (rd.xml) Configuration File Reference](runtime-directives-rd-xml-configuration-file-reference.md)。 有两个故障排除程序可用于为运行时指令文件提供合适的条目，指令文件将消除 [MissingMetadataException](missingmetadataexception-class-net-native.md) 和 [MissingRuntimeArtifactException](missingruntimeartifactexception-class-net-native.md) 异常：  
   
 - 类型的 [MissingMetadataException 故障排除程序](https://dotnet.github.io/native/troubleshooter/type.html) 。  
   
@@ -32,8 +32,8 @@ ms.locfileid: "69941620"
   
 |类|描述|  
 |-----------|-----------------|  
-|[MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)|当反射用于检索不存在的元数据时会引起此异常。|  
-|[MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md)|当一个类型或类型成员的元数据可用但其实现已遭到删除时会引发此异常。|  
+|[MissingMetadataException](missingmetadataexception-class-net-native.md)|当反射用于检索不存在的元数据时会引起此异常。|  
+|[MissingRuntimeArtifactException](missingruntimeartifactexception-class-net-native.md)|当一个类型或类型成员的元数据可用但其实现已遭到删除时会引发此异常。|  
   
  要查看有关此命名空间中其他类型的文档，请参阅 .NET Framework 文档集中的 <xref:System.Reflection> 引用页面。  
   
@@ -42,13 +42,13 @@ ms.locfileid: "69941620"
   
 |类|描述|  
 |-----------|-----------------|  
-|[MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)|当手动封送方法被调用但一个类型的元数据无法通过动态分析找到或无法在运行时指令文件中找到时，会引发该异常。|  
+|[MissingInteropDataException](missinginteropdataexception-class-net-native.md)|当手动封送方法被调用但一个类型的元数据无法通过动态分析找到或无法在运行时指令文件中找到时，会引发该异常。|  
   
  要查看有关此命名空间中其他类型的文档，请参阅 .NET Framework 文档集中的 <xref:System.Runtime.CompilerServices> 引用页面。  
   
 ## <a name="see-also"></a>请参阅
 
-- [MissingInteropDataException 类](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)
-- [MissingMetadataException 类](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)
-- [MissingRuntimeArtifactException 类](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md)
-- [入门](../../../docs/framework/net-native/getting-started-with-net-native.md)
+- [MissingInteropDataException 类](missinginteropdataexception-class-net-native.md)
+- [MissingMetadataException 类](missingmetadataexception-class-net-native.md)
+- [MissingRuntimeArtifactException 类](missingruntimeartifactexception-class-net-native.md)
+- [入门](getting-started-with-net-native.md)

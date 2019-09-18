@@ -2,12 +2,12 @@
 title: SQL-CLR 类型映射
 ms.date: 07/23/2018
 ms.assetid: 4ed76327-54a7-414b-82a9-7579bfcec04b
-ms.openlocfilehash: b209283f5d4e87d1faab06184bda3f79bf1adaed
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6710c58a430c35dae41a1a381335019fd3e75192
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70792520"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053044"
 ---
 # <a name="sql-clr-type-mapping"></a>SQL-CLR 类型映射
 在 LINQ to SQL 中，关系数据库的数据模型映射到用您所选择的编程语言表示的对象模型。 当应用程序运行时，LINQ to SQL 会将对象模型中的语言集成查询转换为 SQL，然后将它们发送到数据库进行执行。 当数据库返回结果时，LINQ to SQL 会将它们转换回您可以用您自己的编程语言处理的对象。  
@@ -44,7 +44,7 @@ ms.locfileid: "70792520"
 ## <a name="type-mapping-run-time-behavior-matrix"></a>类型映射运行时行为矩阵  
  下图显示了数据从数据库检索或保存到数据库时特定类型映射的预期运行时行为。 除序列化之外，LINQ to SQL 不支持任何该矩阵中未指定的 CLR 或 SQL Server 数据类型之间的映射。 有关序列化支持的详细信息，请参阅[二进制序列化](#BinarySerialization)。  
  
-![SQL Server SQL CLR 数据类型映射表](media/sql-clr-type-mapping.png)
+![SQL Server SQL CLR 数据类型映射表](./media/sql-clr-type-mapping.png)
 
 > [!NOTE]
 > 在进行数据库转换时，某些类型映射可能会导致溢出或数据丢失异常。  

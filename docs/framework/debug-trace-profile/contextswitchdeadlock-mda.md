@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 26dfaa15-9ddb-4b0a-b6da-999bba664fa6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c1a0e2a6c7851b261baa3e02f6431e7a4ff697e4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7bcdb235ff2a73514c5bb3ad7abc3f4c3fc8e441
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64660328"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052916"
 ---
 # <a name="contextswitchdeadlock-mda"></a>contextSwitchDeadlock MDA
 
@@ -48,7 +48,7 @@ ms.locfileid: "64660328"
 若要确定是否错误地激活了 MDA，请禁用所有断点，重新启动应用程序，然后让它可以不间断地运行。 如果没有激活 MDA，则最初的激活很可能是错误的。 在此情况下，请禁用 MDA，以避免干扰调试会话。
 
 > [!NOTE]
-> 此 MDA 是默认值为 Visual Studio 设置中。 有关如何禁用 Mda 的信息，请参阅[使用托管调试助手诊断错误](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md#enable-and-disable-mdas)。
+> 此 MDA 位于 Visual Studio 的默认设置中。 有关如何禁用 Mda 的信息，请参阅[诊断托管调试助手的错误](diagnosing-errors-with-managed-debugging-assistants.md#enable-and-disable-mdas)。
 
 ## <a name="resolution"></a>解决方法
 
@@ -75,5 +75,5 @@ ms.locfileid: "64660328"
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [使用托管调试助手诊断错误](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [互操作封送处理](../../../docs/framework/interop/interop-marshaling.md)
+- [使用托管调试助手诊断错误](diagnosing-errors-with-managed-debugging-assistants.md)
+- [互操作封送处理](../interop/interop-marshaling.md)

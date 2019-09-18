@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 926adde2-c123-452e-bf4f-4b977bf06ffb
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 07d84506a7c07bde09b3b46ea608b1874842c3ac
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 145a53363c9d7aca622ee0b1ccb2700e5984397d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616386"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046418"
 ---
 # <a name="jit-tracing-etw-events"></a>JIT 跟踪 ETW 事件
 <a name="top"></a> 这些事件可收集有关实时 (JIT) 内联和 JIT 尾调用成功或失败的信息。  
@@ -27,9 +27,9 @@ ms.locfileid: "64616386"
 ## <a name="jit-inlining-events"></a>JIT 内联事件  
   
 ### <a name="methodjitinliningfailed-event"></a>MethodJitInliningFailed 事件  
- 下表显示了关键字和级别。 （有关详细信息，请参阅 [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md)。）  
+ 下表显示了关键字和级别。 （有关详细信息，请参阅 [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md)。）  
   
-|引发事件的关键字|级别|  
+|引发事件的关键字|Level|  
 |-----------------------------------|-----------|  
 |`JITTracingKeyword` (0x10)|详细级别 (5)|  
   
@@ -59,7 +59,7 @@ ms.locfileid: "64616386"
 ### <a name="methodjitinliningsucceeded-event"></a>MethodJitInliningSucceeded 事件  
  下表显示了关键字和级别。  
   
-|引发事件的关键字|级别|  
+|引发事件的关键字|Level|  
 |-----------------------------------|-----------|  
 |`JITTracingKeyword` (0x10)|详细级别 (5)|  
   
@@ -92,7 +92,7 @@ ms.locfileid: "64616386"
 ### <a name="methodjittailcallfailed-event"></a>MethodJITTailCallFailed 事件  
  下表显示了关键字和级别。  
   
-|引发事件的关键字|级别|  
+|引发事件的关键字|Level|  
 |-----------------------------------|-----------|  
 |`JITTracingKeyword` (0x10)|详细级别 (5)|  
   
@@ -122,7 +122,7 @@ ms.locfileid: "64616386"
 ### <a name="methodjittailcallsucceeded-event"></a>MethodJITTailCallSucceeded 事件  
  下表显示了关键字和级别。  
   
-|引发事件的关键字|级别|  
+|引发事件的关键字|Level|  
 |-----------------------------------|-----------|  
 |`JITTracingKeyword` (0x10)|详细级别 (5)|  
   
@@ -151,4 +151,4 @@ ms.locfileid: "64616386"
   
 ## <a name="see-also"></a>请参阅
 
-- [CLR ETW 事件](../../../docs/framework/performance/clr-etw-events.md)
+- [CLR ETW 事件](clr-etw-events.md)

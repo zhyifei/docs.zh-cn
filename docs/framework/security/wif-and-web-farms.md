@@ -3,17 +3,17 @@ title: WIF 和 Web 场
 ms.date: 03/30/2017
 ms.assetid: fc3cd7fa-2b45-4614-a44f-8fa9b9d15284
 author: BrucePerlerMS
-ms.openlocfilehash: 09d5f3f745f170439a7fbf160b78439c103623b9
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 32d2875ebe0a46b9f9b1856ed70a30114793e492
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70851518"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045256"
 ---
 # <a name="wif-and-web-farms"></a>WIF 和 Web 场
 使用 Windows Identity Foundation (WIF) 保护 Web 场中部署的信赖方 (RP) 应用程序的资源时，必须采取特定的步骤确保 WIF 能处理场中不同计算机上运行的信赖方应用程序实例的令牌。 处理过程包括验证会话令牌签名、加密和解密会话令牌、缓存会话令牌以及检测重播的安全令牌。  
   
- 通常情况下，使用 WIF 保护信赖方应用程序的资源时 – 无论 RP 是在单一计算机上运行还是在 Web 场中运行 – 都会基于从安全令牌服务 (STS) 获取的安全令牌与客户端创建一个会话。 这是为了避免强制客户端在 STS 对每个使用 WIF 保护的应用程序资源进行身份验证。 有关 WIF 如何处理会话的详细信息，请参阅 [WIF 会话管理](../../../docs/framework/security/wif-session-management.md)。  
+ 通常情况下，使用 WIF 保护信赖方应用程序的资源时 – 无论 RP 是在单一计算机上运行还是在 Web 场中运行 – 都会基于从安全令牌服务 (STS) 获取的安全令牌与客户端创建一个会话。 这是为了避免强制客户端在 STS 对每个使用 WIF 保护的应用程序资源进行身份验证。 有关 WIF 如何处理会话的详细信息，请参阅 [WIF 会话管理](wif-session-management.md)。  
   
  使用默认设置时，WIF 会执行以下操作：  
   
@@ -40,7 +40,7 @@ ms.locfileid: "70851518"
     </securityTokenHandlers>  
     ```  
   
-- 派生自 <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> 并实现分布式缓存，即可从运行 RP 的场中所有计算机访问的缓存。 通过指定配置文件中的 [\<sessionSecurityTokenCache>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/sessionsecuritytokencache.md) 元素配置 RP 使用分布式缓存。 可以替代派生类中的 <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache.LoadCustomConfiguration%2A?displayProperty=nameWithType> 方法以按需实现 `<sessionSecurityTokenCache>` 元素的子元素。  
+- 派生自 <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> 并实现分布式缓存，即可从运行 RP 的场中所有计算机访问的缓存。 通过指定配置文件中的 [\<sessionSecurityTokenCache>](../configure-apps/file-schema/windows-identity-foundation/sessionsecuritytokencache.md) 元素配置 RP 使用分布式缓存。 可以替代派生类中的 <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache.LoadCustomConfiguration%2A?displayProperty=nameWithType> 方法以按需实现 `<sessionSecurityTokenCache>` 元素的子元素。  
   
     ```xml  
     <caches>  
@@ -52,7 +52,7 @@ ms.locfileid: "70851518"
   
      实现分布式缓存的方法之一是为自定义缓存提供 WCF 前端。 有关实现 WCF 缓存服务的详细信息，请参阅 [WCF 缓存服务](#BKMK_TheWCFCachingService)。 有关实现信赖方应用程序可用于调用缓存服务的 WCF 客户端的详细信息，请参阅 [WCF 缓存客户端](#BKMK_TheWCFClient)。  
   
-- 如果应用程序检测到重播令牌，则必须为令牌重播缓存采用相似的分布式缓存策略，方法是从 <xref:System.IdentityModel.Tokens.TokenReplayCache> 派生并在 [\<tokenReplayCache>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaycache.md) 配置元素中指向令牌重播缓存服务。  
+- 如果应用程序检测到重播令牌，则必须为令牌重播缓存采用相似的分布式缓存策略，方法是从 <xref:System.IdentityModel.Tokens.TokenReplayCache> 派生并在 [\<tokenReplayCache>](../configure-apps/file-schema/windows-identity-foundation/tokenreplaycache.md) 配置元素中指向令牌重播缓存服务。  
   
 > [!IMPORTANT]
 > 本主题中的所有示例 XML 和代码都是从[ClaimsAwareWebFarm](https://go.microsoft.com/fwlink/?LinkID=248408)示例获取的。  
@@ -137,7 +137,7 @@ namespace WcfSessionSecurityTokenCacheService
   
 <a name="BKMK_TheWCFClient"></a>   
 ## <a name="the-wcf-caching-client"></a>WCF 缓存客户端  
- 此部分演示派生自 <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> 并委托调用缓存服务的类的实现。 通过 [\<sessionSecurityTokenCache>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/sessionsecuritytokencache.md) 元素配置信赖方应用程序以使用此类，如下 XML 所示  
+ 此部分演示派生自 <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> 并委托调用缓存服务的类的实现。 通过 [\<sessionSecurityTokenCache>](../configure-apps/file-schema/windows-identity-foundation/sessionsecuritytokencache.md) 元素配置信赖方应用程序以使用此类，如下 XML 所示  
   
 ```xml  
 <caches>  
@@ -255,4 +255,4 @@ namespace CacheLibrary
 - <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache>
 - <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>
 - <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler>
-- [WIF 会话管理](../../../docs/framework/security/wif-session-management.md)
+- [WIF 会话管理](wif-session-management.md)

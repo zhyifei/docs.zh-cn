@@ -9,12 +9,12 @@ helpviewer_keywords:
 - providers, UI Automation
 - UI Automation, clients
 ms.assetid: 69eebd8b-39ed-40e7-93cc-4457c4caf746
-ms.openlocfilehash: 3f373c3947b45443ca4031ecdc3d5e40608ec84c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d342e4382cfe227e477ab87c2ca428834010768e
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69911556"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042163"
 ---
 # <a name="ui-automation-events-overview"></a>UI 自动化事件概述
 > [!NOTE]
@@ -79,10 +79,10 @@ ms.locfileid: "69911556"
   
  提供程序可从 <xref:System.Windows.Automation.AutomationEvent> 中的字段和控件模式标识符类（如 <xref:System.Windows.Automation.AutomationElementIdentifiers> ）获得用于标识事件的 <xref:System.Windows.Automation.DockPatternIdentifiers>对象。 应用程序客户端可从 <xref:System.Windows.Automation.AutomationElement> 中的字段和控件模式类（如 <xref:System.Windows.Automation.DockPattern>）获得等效的字段。  
   
- 有关事件标识符的列表，请参阅 [UI Automation Events for Clients](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md)。  
+ 有关事件标识符的列表，请参阅 [UI Automation Events for Clients](ui-automation-events-for-clients.md)。  
   
 ## <a name="see-also"></a>请参阅
 
-- [客户端的 UI 自动化事件](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md)
-- [服务器端 UI 自动化提供程序实现](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)
-- [订阅 UI 自动化事件](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)
+- [客户端的 UI 自动化事件](ui-automation-events-for-clients.md)
+- [服务器端 UI 自动化提供程序实现](server-side-ui-automation-provider-implementation.md)
+- [订阅 UI 自动化事件](subscribe-to-ui-automation-events.md)

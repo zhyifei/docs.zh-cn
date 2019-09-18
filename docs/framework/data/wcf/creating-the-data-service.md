@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 34d1d971-5e18-4c22-9bf6-d3612e27ea59
-ms.openlocfilehash: c3c80fb48635199f45acb1e72bf756bbc65d2e14
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 582f5f2d6d82613736ed795eebe5129284cdac6e
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780411"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052986"
 ---
 # <a name="create-the-data-service"></a>创建数据服务
 
@@ -68,7 +68,7 @@ ms.locfileid: "70780411"
 
 2. 在 "**添加新项**" 对话框中，从 " **Web** " 类别中选择 " **WCF 数据服务**" 项模板。
 
-   ![Visual Studio 2015 中的 WCF 数据服务项模板](media/wcf-data-service-item-template.png)
+   ![Visual Studio 2015 中的 WCF 数据服务项模板](./media/wcf-data-service-item-template.png)
 
    > [!NOTE]
    > **WCF 数据服务**模板在 visual studio 2015 中提供，但在 visual studio 2017 中不可用。

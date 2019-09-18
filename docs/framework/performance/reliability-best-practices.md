@@ -40,12 +40,12 @@ helpviewer_keywords:
 ms.assetid: cf624c1f-c160-46a1-bb2b-213587688da7
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2e24cd05bb1c1ed9425c9be8bc02cb92dc488005
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c8c47091d943aa0d710cec1af83e039bca9ee2d2
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69935730"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046247"
 ---
 # <a name="reliability-best-practices"></a>可靠性最佳做法
 
@@ -91,7 +91,7 @@ ms.locfileid: "69935730"
 
 请注意，<xref:System.Runtime.InteropServices.SafeHandle> 不能取代 <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>。  显示释放操作系统资源仍然有潜在的资源争用和性能优势。  但要知道显示释放资源的 `finally` 块可能不会执行到完成。
 
-<xref:System.Runtime.InteropServices.SafeHandle> 使你能够实现自己的 <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> 方法，此方法可执行工作以释放句柄，例如将状态传递到操作系统句柄释放例程或释放循环中的句柄集。  CLR 会保证此方法的运行。  在任何情况下，实现 <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> 以确保句柄被释放是创建者的责任。 如果不能做到这点将导致句柄泄露，这通常会导致与句柄相关的本机资源泄露。 因此，构建 <xref:System.Runtime.InteropServices.SafeHandle> 派生类是至关重要的，如此一来，<xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> 实现便不需要任何在调用时可能不可用的资源分配。 请注意，调用在实现 <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> 中可能失败的方法是允许的，只要你的代码可以处理此类失败并且完成协议以释放本机句柄即可。 出于调试目的，<xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> 具有一个 <xref:System.Boolean> 返回值，如果遇到阻止资源释放的灾难性错误，此值可能会被设置为 `false`。 这样做将激活 [releaseHandleFailed](../../../docs/framework/debug-trace-profile/releasehandlefailed-mda.md) MDA（如果已启用）以辅助确定问题。 它不会以其他任何方式影响运行时；<xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> 将不会为同一资源再次被调用，并且因此将导致句柄泄露。
+<xref:System.Runtime.InteropServices.SafeHandle> 使你能够实现自己的 <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> 方法，此方法可执行工作以释放句柄，例如将状态传递到操作系统句柄释放例程或释放循环中的句柄集。  CLR 会保证此方法的运行。  在任何情况下，实现 <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> 以确保句柄被释放是创建者的责任。 如果不能做到这点将导致句柄泄露，这通常会导致与句柄相关的本机资源泄露。 因此，构建 <xref:System.Runtime.InteropServices.SafeHandle> 派生类是至关重要的，如此一来，<xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> 实现便不需要任何在调用时可能不可用的资源分配。 请注意，调用在实现 <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> 中可能失败的方法是允许的，只要你的代码可以处理此类失败并且完成协议以释放本机句柄即可。 出于调试目的，<xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> 具有一个 <xref:System.Boolean> 返回值，如果遇到阻止资源释放的灾难性错误，此值可能会被设置为 `false`。 这样做将激活 [releaseHandleFailed](../debug-trace-profile/releasehandlefailed-mda.md) MDA（如果已启用）以辅助确定问题。 它不会以其他任何方式影响运行时；<xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> 将不会为同一资源再次被调用，并且因此将导致句柄泄露。
 
 <xref:System.Runtime.InteropServices.SafeHandle> 在某些上下文中是不合适的。  由于可以在 <xref:System.GC> 终结器线程上运行 <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> 方法，因此，不应将任何需要在特定线程上释放的句柄包装在 <xref:System.Runtime.InteropServices.SafeHandle> 中。
 
@@ -241,7 +241,7 @@ HPA 仅影响可托管公共语言运行时且实现主机保护的非托管应�
 
 ### <a name="do-not-block-indefinitely-in-unmanaged-code"></a>不要在非托管代码中无限期阻塞
 
-在非托管代码中而不是在托管代码中阻塞可能导致拒绝服务攻击，因为 CLR 无法中止线程。  已阻塞的线程会阻止 CLR 卸载 <xref:System.AppDomain>，至少是在没有执行某些极端不安全操作的情况下。  使用 Windows 同步基元进行阻止是我们无法允许的一个清晰的示例。  如果可能, 应尽可能`ReadFile`避免在对套接字的调用中进行阻止, 理想情况下, Windows API 应为此类操作提供一种机制来超时。
+在非托管代码中而不是在托管代码中阻塞可能导致拒绝服务攻击，因为 CLR 无法中止线程。  已阻塞的线程会阻止 CLR 卸载 <xref:System.AppDomain>，至少是在没有执行某些极端不安全操作的情况下。  使用 Windows 同步基元进行阻止是我们无法允许的一个清晰的示例。  如果可能，应尽可能`ReadFile`避免在对套接字的调用中进行阻止，理想情况下，Windows API 应为此类操作提供一种机制来超时。
 
 理想情况下，任何调入本机的方法应使用具有合理、有限的超时的 Win32 调用。  如果允许用户指定超时，则在没有某些特定安全权限的情况下，不应该允许用户指定无限期的超时。  按照一般准则，如果方法将阻塞超过 10 秒，你则需要使用支持超时的版本，或需要其他的 CLR 支持。
 
@@ -277,7 +277,7 @@ HPA 仅影响可托管公共语言运行时且实现主机保护的非托管应�
 
 #### <a name="code-analysis-rule"></a>代码分析规则
 
-查看托管代码中捕获所有对象或捕获所有异常的所有 catch 块。  在C#中, 这意味着标记`catch` {}和`catch(Exception)` {}。  请考虑将异常类型描述得非常具体，或者查看代码以确保在它捕获到意外异常类型时不会以错误的方式执行。
+查看托管代码中捕获所有对象或捕获所有异常的所有 catch 块。  在C#中，这意味着标记`catch` {}和`catch(Exception)` {}。  请考虑将异常类型描述得非常具体，或者查看代码以确保在它捕获到意外异常类型时不会以错误的方式执行。
 
 ### <a name="do-not-assume-a-managed-thread-is-a-win32-thread--it-is-a-fiber"></a>不要假设托管线程是 Win32 线程 – 它是纤程
 
@@ -316,4 +316,4 @@ SQL Server 在纤程模式中运行；不要使用线程本地存储。 请避�
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Runtime.ConstrainedExecution>
-- [SQL Server 编程和主机保护特性](../../../docs/framework/performance/sql-server-programming-and-host-protection-attributes.md)
+- [SQL Server 编程和主机保护特性](sql-server-programming-and-host-protection-attributes.md)

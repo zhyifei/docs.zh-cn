@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 26ada5af-175c-4576-931a-9f07fa1723e9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1e904d452b9f4a1b172d35984b752c0d97228338
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 93c426cce792c8f30a3551e2d4626736dd67278f
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61875077"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052941"
 ---
 # <a name="bindingfailure-mda"></a>bindingFailure MDA
 
@@ -46,13 +46,13 @@ ms.locfileid: "61875077"
 
 - 使用 `bindingFailure` MDA 提供的数据来确定原因：
 
-  - 运行 [Fuslogvw.exe（程序集绑定日志查看器）](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md)以读取程序集绑定器生成的错误日志。
+  - 运行 [Fuslogvw.exe（程序集绑定日志查看器）](../tools/fuslogvw-exe-assembly-binding-log-viewer.md)以读取程序集绑定器生成的错误日志。
 
   - 确定程序集是否位于请求的位置。 在使用 <xref:System.Reflection.Assembly.LoadFrom%2A> 和 <xref:System.Reflection.Assembly.LoadFile%2A> 方法的情况下，可轻松确定请求的位置。 如果使用 <xref:System.Reflection.Assembly.Load%2A> 方法（利用程序集标识绑定），必须在应用程序域的 <xref:System.AppDomain.BaseDirectory%2A> 属性探测路径和全局程序集缓存中，查找与该标识匹配的程序集。
 
 - 根据上述所确定事项解决失败原因。 可能的解决方案选项如下：
 
-  - 在全局程序集缓存中安装请求的程序集，并调用  <xref:System.Reflection.Assembly.Load%2A> 方法以按标识加载程序集。
+  - 在全局程序集缓存中安装请求的程序集，并调用 <xref:System.Reflection.Assembly.Load%2A> 方法以按标识加载程序集。
 
   - 将请求的程序集复制到应用程序目录中，并调用 <xref:System.Reflection.Assembly.Load%2A> 方法以按标识加载程序集。
 
@@ -107,4 +107,4 @@ namespace ConsoleApplication1
 
 ## <a name="see-also"></a>请参阅
 
-- [使用托管调试助手诊断错误](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [使用托管调试助手诊断错误](diagnosing-errors-with-managed-debugging-assistants.md)

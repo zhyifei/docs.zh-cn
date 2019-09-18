@@ -8,12 +8,12 @@ helpviewer_keywords:
 - TextPattern class
 - classes, TextPattern
 ms.assetid: ca6ac045-7b21-4487-9379-59aa20909670
-ms.openlocfilehash: ca46eb01ee8a18e83cecbc26b2e9bf82778c210b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 450a3f3a4969287181aa031ab581b85447bfde56
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69954088"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71040427"
 ---
 # <a name="ui-automation-text-pattern-how-to-topics"></a>UI 自动化文本模式帮助主题
 > [!NOTE]
@@ -22,9 +22,9 @@ ms.locfileid: "69954088"
  本部分包含的主题介绍如何使用 UI 自动化文本模式。  
   
 ## <a name="in-this-section"></a>本节内容  
- [使用 UI 自动化向文本框添加内容](../../../docs/framework/ui-automation/add-content-to-a-text-box-using-ui-automation.md)  
- [使用 UI 自动化查找和突出显示文本](../../../docs/framework/ui-automation/find-and-highlight-text-using-ui-automation.md)  
- [使用 UI 自动化获取文本特性](../../../docs/framework/ui-automation/obtain-text-attributes-using-ui-automation.md)  
- [使用 UI 自动化获取混合文本特性的详细信息](../../../docs/framework/ui-automation/obtain-mixed-text-attribute-details-using-ui-automation.md)  
- [使用 UI 自动化遍历文本](../../../docs/framework/ui-automation/traverse-text-using-ui-automation.md)  
- [使用 UI 自动化访问嵌入式对象](../../../docs/framework/ui-automation/access-embedded-objects-using-ui-automation.md)
+ [使用 UI 自动化向文本框添加内容](add-content-to-a-text-box-using-ui-automation.md)  
+ [使用 UI 自动化查找和突出显示文本](find-and-highlight-text-using-ui-automation.md)  
+ [使用 UI 自动化获取文本特性](obtain-text-attributes-using-ui-automation.md)  
+ [使用 UI 自动化获取混合文本特性的详细信息](obtain-mixed-text-attribute-details-using-ui-automation.md)  
+ [使用 UI 自动化遍历文本](traverse-text-using-ui-automation.md)  
+ [使用 UI 自动化访问嵌入式对象](access-embedded-objects-using-ui-automation.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation, events for clients
 - events, UI Automation clients
 ms.assetid: b909e388-3f24-4997-b6d4-bd9c35c2dc27
-ms.openlocfilehash: b56fc09b33a846fe94a52e19dc4b9c806d79c121
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: f4ce2d996d5a1a6ecd149118b7499650882a732f
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044107"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042284"
 ---
 # <a name="ui-automation-events-for-clients"></a>客户端的 UI 自动化事件
 > [!NOTE]
@@ -25,7 +25,7 @@ ms.locfileid: "70044107"
 > [!NOTE]
 > 不要假定所有可能的事件都是由 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 提供程序引发的。 例如，并非所有属性更改都会导致 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] 和 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 控件的标准代理提供程序引发事件。  
   
- 有关更广泛的[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]事件视图, 请参阅[UI 自动化事件概述](../../../docs/framework/ui-automation/ui-automation-events-overview.md)。  
+ 有关更广泛的[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]事件视图，请参阅[UI 自动化事件概述](ui-automation-events-overview.md)。  
   
 <a name="Subscribing_to_Events"></a>   
 ## <a name="subscribing-to-events"></a>订阅事件  
@@ -44,7 +44,7 @@ ms.locfileid: "70044107"
 > 若要处理窗口关闭事件，请将传递到事件处理程序的参数类型转换为 <xref:System.Windows.Automation.WindowClosedEventArgs>。 由于窗口的 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 元素不再有效，因此无法使用 `sender` 参数来检索信息；请改用 <xref:System.Windows.Automation.WindowClosedEventArgs.GetRuntimeId%2A>。  
   
 > [!CAUTION]
-> 如果应用程序可能从自己的 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 中接收事件，请不要使用应用程序的 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 线程来订阅或取消订阅事件。 这样做可能会导致不可预知的行为。 有关更多信息，请参见 [UI Automation Threading Issues](../../../docs/framework/ui-automation/ui-automation-threading-issues.md)。  
+> 如果应用程序可能从自己的 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 中接收事件，请不要使用应用程序的 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 线程来订阅或取消订阅事件。 这样做可能会导致不可预知的行为。 有关更多信息，请参见 [UI Automation Threading Issues](ui-automation-threading-issues.md)。  
   
  关闭时，或者当应用程序不再对 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件时，UI 自动化客户端应调用以下方法之一。  
   
@@ -55,11 +55,11 @@ ms.locfileid: "70044107"
 |<xref:System.Windows.Automation.Automation.RemoveAutomationPropertyChangedEventHandler%2A>|通过使用 <xref:System.Windows.Automation.Automation.AddAutomationPropertyChangedEventHandler%2A> 取消注册已注册的事件处理程序。|  
 |<xref:System.Windows.Automation.Automation.RemoveAllEventHandlers%2A>|取消注册所有已注册的事件处理程序。|  
   
- 有关代码示例, 请参阅[订阅 UI 自动化事件](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)。  
+ 有关代码示例，请参阅[订阅 UI 自动化事件](subscribe-to-ui-automation-events.md)。  
   
 ## <a name="see-also"></a>请参阅
 
-- [订阅 UI 自动化事件](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)
-- [UI 自动化事件概述](../../../docs/framework/ui-automation/ui-automation-events-overview.md)
-- [UI 自动化属性概述](../../../docs/framework/ui-automation/ui-automation-properties-overview.md)
+- [订阅 UI 自动化事件](subscribe-to-ui-automation-events.md)
+- [UI 自动化事件概述](ui-automation-events-overview.md)
+- [UI 自动化属性概述](ui-automation-properties-overview.md)
 - [TrackFocus 示例](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/FocusTracker)

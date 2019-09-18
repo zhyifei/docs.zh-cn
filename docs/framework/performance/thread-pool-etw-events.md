@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: f2a21e3a-3b6c-4433-97f3-47ff16855ecc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 50ecb2aad84bd5b6c32f655b1dbbd34cf03a5b29
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9a96fd4c45113afd2ab918b714bd6e12a429917c
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624295"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046191"
 ---
 # <a name="thread-pool-etw-events"></a>线程池 ETW 事件
 <a name="top"></a> 这些事件收集有关工作线程和 I/O 线程的信息。  
@@ -28,9 +28,9 @@ ms.locfileid: "64624295"
  这些事件与运行时工作线程池相关，并提供有关线程事件的通知（例如，创建或停止线程时）。 工作线程池使用自适应算法进行并发控制，其中的线程数基于测得的吞吐量来计算。 工作线程池事件可用于了解应用程序如何使用线程池，以及某些工作负荷可能会对并发控制怎样的影响。  
   
 ### <a name="threadpoolworkerthreadstart-and-threadpoolworkerthreadstop"></a>ThreadPoolWorkerThreadStart 和 ThreadPoolWorkerThreadStop  
- 下表显示这些事件的关键字和级别。 （有关详细信息，请参阅 [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md)。）  
+ 下表显示这些事件的关键字和级别。 （有关详细信息，请参阅 [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md)。）  
   
-|引发事件的关键字|级别|  
+|引发事件的关键字|Level|  
 |-----------------------------------|-----------|  
 |`ThreadingKeyword` (0x10000)|信息性 (4)|  
   
@@ -57,7 +57,7 @@ ms.locfileid: "64624295"
 #### <a name="threadpoolworkerthreadadjustmentsample"></a>ThreadPoolWorkerThreadAdjustmentSample  
  下表显示了关键字和级别。  
   
-|引发事件的关键字|级别|  
+|引发事件的关键字|Level|  
 |-----------------------------------|-----------|  
 |`ThreadingKeyword` (0x10000)|信息性 (4)|  
   
@@ -77,7 +77,7 @@ ms.locfileid: "64624295"
 #### <a name="threadpoolworkerthreadadjustmentadjustment"></a>ThreadPoolWorkerThreadAdjustmentAdjustment  
  下表显示了关键字和级别。  
   
-|引发事件的关键字|级别|  
+|引发事件的关键字|Level|  
 |-----------------------------------|-----------|  
 |`ThreadingKeyword` (0x10000)|信息性 (4)|  
   
@@ -99,7 +99,7 @@ ms.locfileid: "64624295"
 #### <a name="threadpoolworkerthreadadjustmentstats"></a>ThreadPoolWorkerThreadAdjustmentStats  
  下表显示了关键字和级别。  
   
-|引发事件的关键字|级别|  
+|引发事件的关键字|Level|  
 |-----------------------------------|-----------|  
 |`ThreadingKeyword` (0x10000)|信息性 (4)|  
   
@@ -131,10 +131,10 @@ ms.locfileid: "64624295"
 ## <a name="io-thread-events"></a>I/O 线程事件  
  这些线程池事件针对 I/O 线程池（完成端口）中的线程发生，该过程是异步的。  
   
-### <a name="iothreadcreatev1"></a>IOThreadCreate_V1  
+### <a name="iothreadcreate_v1"></a>IOThreadCreate_V1  
  下表显示了关键字和级别。  
   
-|引发事件的关键字|级别|  
+|引发事件的关键字|Level|  
 |-----------------------------------|-----------|  
 |`ThreadingKeyword` (0x10000)|信息性 (4)|  
   
@@ -152,10 +152,10 @@ ms.locfileid: "64624295"
 |NumRetired|win:UInt64|已停用的工作线程数。|  
 |ClrInstanceID|Win:UInt16|CLR 或 CoreCLR 的实例的唯一 ID。|  
   
-### <a name="iothreadretirev1"></a>IOThreadRetire_V1  
+### <a name="iothreadretire_v1"></a>IOThreadRetire_V1  
  下表显示了关键字和级别。  
   
-|引发事件的关键字|级别|  
+|引发事件的关键字|Level|  
 |-----------------------------------|-----------|  
 |`ThreadingKeyword` (0x10000)|信息性 (4)|  
   
@@ -173,10 +173,10 @@ ms.locfileid: "64624295"
 |NumRetired|win:UInt64|已停用的 I/O 线程数。|  
 |ClrInstanceID|Win:UInt16|CLR 或 CoreCLR 的实例的唯一 ID。|  
   
-### <a name="iothreadunretirev1"></a>IOThreadUnretire_V1  
+### <a name="iothreadunretire_v1"></a>IOThreadUnretire_V1  
  下表显示了关键字和级别。  
   
-|引发事件的关键字|级别|  
+|引发事件的关键字|Level|  
 |-----------------------------------|-----------|  
 |`ThreadingKeyword` (0x10000)|信息性 (4)|  
   
@@ -197,7 +197,7 @@ ms.locfileid: "64624295"
 ### <a name="iothreadterminate"></a>IOThreadTerminate  
  下表显示了关键字和级别。  
   
-|引发事件的关键字|级别|  
+|引发事件的关键字|Level|  
 |-----------------------------------|-----------|  
 |`ThreadingKeyword` (0x10000)|信息性 (4)|  
   
@@ -217,4 +217,4 @@ ms.locfileid: "64624295"
   
 ## <a name="see-also"></a>请参阅
 
-- [CLR ETW 事件](../../../docs/framework/performance/clr-etw-events.md)
+- [CLR ETW 事件](clr-etw-events.md)

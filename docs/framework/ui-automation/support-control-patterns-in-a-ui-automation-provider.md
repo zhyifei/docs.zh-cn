@@ -8,12 +8,12 @@ helpviewer_keywords:
 - control patterns, supporting in UI Automation provider
 - UI Automation, supporting control patterns in provider
 ms.assetid: 0d635c35-ffa8-4dc8-bbc9-12fcd5445776
-ms.openlocfilehash: da423af259ac3ef88d5b52d576d3ab5ebb4f916e
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 67f37dfe1fe63f2130646cb227fec855ccc7bf75
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68971804"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042593"
 ---
 # <a name="support-control-patterns-in-a-ui-automation-provider"></a>在 UI 自动化提供程序中支持控件模式
 
@@ -37,12 +37,12 @@ ms.locfileid: "68971804"
 
 ## <a name="example"></a>示例
 
-下面的示例演示了返回实现 <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPatternProvider%2A> 的类的 <xref:System.Windows.Automation.Provider.ISelectionProvider>的实现。 大多数列表框控件还支持其他模式, 但在此示例中, 为所有其他模式`Nothing`标识符返回了 null 引用 (在 Microsoft Visual Basic .net 中)。
+下面的示例演示了返回实现 <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPatternProvider%2A> 的类的 <xref:System.Windows.Automation.Provider.ISelectionProvider>的实现。 大多数列表框控件还支持其他模式，但在此示例中，为所有其他模式`Nothing`标识符返回了 null 引用（在 Microsoft Visual Basic .net 中）。
 
 [!code-csharp[UIAFragmentProvider_snip#120](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAFragmentProvider_snip/CSharp/ListFragment.cs#120)]
 [!code-vb[UIAFragmentProvider_snip#120](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAFragmentProvider_snip/VisualBasic/ListFragment.vb#120)]
 
 ## <a name="see-also"></a>请参阅
 
-- [UI 自动化提供程序概述](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)
-- [服务器端 UI 自动化提供程序实现](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)
+- [UI 自动化提供程序概述](ui-automation-providers-overview.md)
+- [服务器端 UI 自动化提供程序实现](server-side-ui-automation-provider-implementation.md)

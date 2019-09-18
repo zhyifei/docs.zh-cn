@@ -10,12 +10,12 @@ helpviewer_keywords:
 - UI Automation, registering provider assemblies
 - provider assemblies, registering
 ms.assetid: a03af4d9-2771-43cc-b07b-d468dca23190
-ms.openlocfilehash: ed45b7e5d60e42f03bce8b9dc4abbf8226916304
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 18a63a955fdf782670bb60dfc6845261990cdcd1
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966360"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042782"
 ---
 # <a name="register-a-client-side-provider-assembly"></a>注册客户端提供程序程序集
 > [!NOTE]
@@ -31,4 +31,4 @@ ms.locfileid: "69966360"
   
 ## <a name="see-also"></a>请参阅
 
-- [创建客户端 UI 自动化提供程序](../../../docs/framework/ui-automation/create-a-client-side-ui-automation-provider.md)
+- [创建客户端 UI 自动化提供程序](create-a-client-side-ui-automation-provider.md)

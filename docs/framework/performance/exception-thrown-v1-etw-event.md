@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 0d3da389-6b7b-40f6-a877-fac546d6019c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dd322d25d91bb277a4c817594c968c28a6d61d68
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 91abd9e6f31380b7e8cd3df1a14aa5c5722901ba
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61723012"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046514"
 ---
-# <a name="exception-thrownv1-etw-event"></a>异常 Thrown_V1 ETW 事件
+# <a name="exception-thrown_v1-etw-event"></a>异常 Thrown_V1 ETW 事件
 该事件捕获有关引发的异常的信息。  
   
- 下表显示了引发事件的关键字以及事件的级别。 （有关详细信息，请参阅 [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md)。）  
+ 下表显示了引发事件的关键字以及事件的级别。 （有关详细信息，请参阅 [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md)。）  
   
-|引发事件的关键字|级别|  
+|引发事件的关键字|Level|  
 |-----------------------------------|-----------|  
 |`ExceptionKeyword` (0x8000)|警告 (2)|  
   
@@ -37,9 +37,9 @@ ms.locfileid: "61723012"
 |异常消息|win:UnicodeString|实际的异常消息。|  
 |EIPCodeThrow|win:Pointer|指向异常发生位置的指令指针。|  
 |ExceptionHR|win:UInt32|异常 [HRESULT](https://go.microsoft.com/fwlink/?LinkId=179679)。|  
-|ExceptionFlags|win:UInt16|0x01:HasInnerException (请参阅[CLR ETW 事件](../../../docs/framework/performance/clr-etw-events.md)Visual Basic 文档中)。<br /><br /> 0x02:IsNestedException.<br /><br /> 0x04:IsRethrownException。<br /><br /> 0x08:IsCorruptedStateException (表示进程状态已损坏; 请参阅[处理损坏状态异常](https://go.microsoft.com/fwlink/?LinkId=179681)MSDN 上)。<br /><br /> 0x10:IsCLSCompliant (从派生的异常<xref:System.Exception>符合 CLS 規格; 否则为不符合 CLS 規格)。|  
+|ExceptionFlags|win:UInt16|0x01HasInnerException （请参阅 Visual Basic 文档中的[CLR ETW 事件](clr-etw-events.md)）。<br /><br /> 0x02IsNestedException.<br /><br /> 0x04IsRethrownException.<br /><br /> 0x08IsCorruptedStateException （表示进程状态已损坏; 请参阅 MSDN 上的[处理损坏状态异常](https://go.microsoft.com/fwlink/?LinkId=179681)）。<br /><br /> 0x10IsCLSCompliant （派生自<xref:System.Exception>的异常符合 cls; 否则，它不符合 cls）。|  
 |ClrInstanceID|win:UInt16|CLR 或 CoreCLR 的实例的唯一 ID。|  
   
 ## <a name="see-also"></a>请参阅
 
-- [CLR ETW 事件](../../../docs/framework/performance/clr-etw-events.md)
+- [CLR ETW 事件](clr-etw-events.md)

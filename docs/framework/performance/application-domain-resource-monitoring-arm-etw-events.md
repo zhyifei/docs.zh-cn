@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d38ff268-a2ee-434e-b504-d570880e0289
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ac396e1a5b83f33068266553024c37ef436c150d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f0e4002ae248022a9e4380c79174109494b5e4ca
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616638"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046772"
 ---
 # <a name="application-domain-resource-monitoring-arm-etw-events"></a>应用程序域资源监视 (ARM) ETW 事件
 <a name="top"></a> 这些事件提供有关应用程序域的状态的详细诊断信息。 你可以使用这些事件，或使用应用程序域资源监视 (ARM) 功能来获取相同的信息。  
@@ -33,9 +33,9 @@ ms.locfileid: "64616638"
 ## <a name="threadcreated-event"></a>ThreadCreated 事件  
  在断开的提供程序下此事件也会作为 `ThreadDC` 引发（在 `AppDomainResourceManagementRundownKeyword` 关键字下）。 这是此类别的断开提供程序下引发的唯一事件。  
   
- 下表显示了关键字和级别。 （有关详细信息，请参阅 [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md)。）  
+ 下表显示了关键字和级别。 （有关详细信息，请参阅 [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md)。）  
   
-|引发事件的关键字|级别|  
+|引发事件的关键字|Level|  
 |-----------------------------------|-----------|  
 |`AppDomainResourceManagementKeyword` (0x800)|信息性 (4)|  
 |`ThreadingKeyword` (0x10000)|信息性 (4)|  
@@ -63,7 +63,7 @@ ms.locfileid: "64616638"
 ## <a name="appdomainmemallocated-event"></a>AppDomainMemAllocated 事件  
  下表显示了关键字和级别。  
   
-|引发事件的关键字|级别|  
+|引发事件的关键字|Level|  
 |-----------------------------------|-----------|  
 |`AppDomainResourceManagementKeyword` (0x800)|信息性 (4)|  
   
@@ -87,7 +87,7 @@ ms.locfileid: "64616638"
 ## <a name="appdomainmemsurvived-event"></a>AppDomainMemSurvived 事件  
  下表显示了关键字和级别。  
   
-|引发事件的关键字|级别|  
+|引发事件的关键字|Level|  
 |-----------------------------------|-----------|  
 |`AppDomainResourceManagementKeyword` (0x800)|信息性 (4)|  
   
@@ -112,7 +112,7 @@ ms.locfileid: "64616638"
 ## <a name="threadappdomainenter-event"></a>ThreadAppDomainEnter 事件  
  下表显示了关键字和级别。  
   
-|引发事件的关键字|级别|  
+|引发事件的关键字|Level|  
 |-----------------------------------|-----------|  
 |`AppDomainResourceManagementKeyword` (0x800)|信息性 (4)|  
 |`ThreadingKeyword` (0x10000)|信息性 (4)|  
@@ -137,7 +137,7 @@ ms.locfileid: "64616638"
 ## <a name="threadterminated-event"></a>ThreadTerminated 事件  
  下表显示了关键字和级别。  
   
-|引发事件的关键字|级别|  
+|引发事件的关键字|Level|  
 |-----------------------------------|-----------|  
 |`AppDomainResourceManagementKeyword` (0x800)|信息性 (4)|  
 |`ThreadingKeyword` (0x10000)|信息性 (4)|  
@@ -158,4 +158,4 @@ ms.locfileid: "64616638"
   
 ## <a name="see-also"></a>请参阅
 
-- [CLR ETW 事件](../../../docs/framework/performance/clr-etw-events.md)
+- [CLR ETW 事件](clr-etw-events.md)

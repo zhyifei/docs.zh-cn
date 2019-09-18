@@ -3,12 +3,12 @@ title: WIF API 参考
 ms.date: 03/30/2017
 ms.assetid: a027d902-9314-4bfd-b172-4e81847b1d68
 author: BrucePerlerMS
-ms.openlocfilehash: 17a1da0a3b0ea6567fd805e7273f793ace35ae69
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: fd7f34e619626ddca63074a89ec7253fd818ab55
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69958347"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045149"
 ---
 # <a name="wif-api-reference"></a>WIF API 参考
 Windows Identity Foundation (WIF) 类可分为以下程序集：`mscorlib` (mscorlib.dll)、`System.IdentityModel` (System.IdentityModel.dll)、`System.IdentityModel.Services` (System.IdentityModel.Services.dll) 和 `System.ServiceModel` (System.ServiceModel.dll)。 本主题提供指向 WIF 命名空间的链接和每个命名空间包含的类的简短说明。  
@@ -20,7 +20,7 @@ Windows Identity Foundation (WIF) 类可分为以下程序集：`mscorlib` (msco
  包含表示 cookie 转换、安全令牌服务和专业 XML 字典读取器的类。  
   
  <xref:System.IdentityModel.Configuration?displayProperty=nameWithType>  
- 包含为使用 Windows Identity Foundation (WIF) 生成的应用程序和服务提供配置的类。 此命名空间中的类表示 [\<identityConfiguration>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) 元素下的设置。  
+ 包含为使用 Windows Identity Foundation (WIF) 生成的应用程序和服务提供配置的类。 此命名空间中的类表示 [\<identityConfiguration>](../configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) 元素下的设置。  
   
  <xref:System.IdentityModel.Metadata?displayProperty=nameWithType>  
  包含表示联合元数据文档中的元素。  
@@ -29,10 +29,10 @@ Windows Identity Foundation (WIF) 类可分为以下程序集：`mscorlib` (msco
  包含表示 WS-Trust 项目的类。  
   
  <xref:System.IdentityModel.Services?displayProperty=nameWithType>  
- 包含被动（WS 联合身份验证）方案中使用的类。 还包含表示 [\<system.identityModel.services>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md) 元素下的设置的某些类。 此元素下的设置为应用程序配置 WS 联合身份验证。 `System.IdentityModel.Services.Configuration` 命名空间包含用于配置 WS 联合身份验证的大多数类。  
+ 包含被动（WS 联合身份验证）方案中使用的类。 还包含表示 [\<system.identityModel.services>](../configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md) 元素下的设置的某些类。 此元素下的设置为应用程序配置 WS 联合身份验证。 `System.IdentityModel.Services.Configuration` 命名空间包含用于配置 WS 联合身份验证的大多数类。  
   
  <xref:System.IdentityModel.Services.Configuration?displayProperty=nameWithType>  
- 包含为使用 WS 联合身份验证协议的 WIF 应用程序提供配置的类。 此命名空间中的类表示 [\<system.identityModel.services>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md) 元素下的设置。 `System.IdentityModel.Services` 命名空间还包含用于配置 WS 联合身份验证的某些类。  
+ 包含为使用 WS 联合身份验证协议的 WIF 应用程序提供配置的类。 此命名空间中的类表示 [\<system.identityModel.services>](../configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md) 元素下的设置。 `System.IdentityModel.Services` 命名空间还包含用于配置 WS 联合身份验证的某些类。  
   
  <xref:System.IdentityModel.Services.Tokens?displayProperty=nameWithType>  
  包含 Web 场方案专用的安全令牌处理程序。  
@@ -48,5 +48,5 @@ Windows Identity Foundation (WIF) 类可分为以下程序集：`mscorlib` (msco
   
 ## <a name="see-also"></a>请参阅
 
-- [WIF 配置参考](../../../docs/framework/security/wif-configuration-reference.md)
-- [WIF 3.5 和 WIF 4.5 之间的命名空间映射](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)
+- [WIF 配置参考](wif-configuration-reference.md)
+- [WIF 3.5 和 WIF 4.5 之间的命名空间映射](namespace-mapping-between-wif-3-5-and-wif-4-5.md)

@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 ms.assetid: e38ae4f3-3e3d-42c3-a4b8-db1aa9d84f85
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ce93ea321c0441208e223efc22cf1f50e98b827c
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 1a15d30ea4d6e0f4456460248e96428419117d85
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044130"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049440"
 ---
 # <a name="net-native-and-compilation"></a>.NET Native 和编译
 
 面向 .Net Framework 的 Windows 8.1 应用程序和 Windows 桌面应用程序由特定的编程语言进行编写并编译为中间语言 (IL)。 在运行时，实时 (JIT) 编译器负责恰好在首次执行方法前为本地计算机将 IL 编译到本机代码中。 与此相反，.NET 本机工具链在编译时将源代码转换为本机代码。 本主题将 .NET 本机与其他可用于 .NET Framework 应用程序的编译技术进行比较，还提供了 .NET 本机如何生成本机代码的实用概述，可帮助用户了解使用 .NET 本机编译的代码中发生的异常为什么不会出现在 JIT 编译的代码中。
 
-## <a name="net-native-generating-native-binaries"></a>.NET Native:正在生成本机二进制文件
+## <a name="net-native-generating-native-binaries"></a>.NET Native：正在生成本机二进制文件
 
 面向 .NET Framework 且未使用 .NET 本机工具链编译的应用程序包含应用程序的程序集，其中包括以下内容：
 
@@ -82,7 +82,7 @@ ms.locfileid: "70044130"
 
 - COM 互操作。
 
-如果在运行时缺少必需的元数据或实现代码，.NET Native 运行时将引发异常。 可通过使用[运行时指令文件](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)（即，可指定其元数据或实现代码必须在运行时可用的程序元素并向其分配运行时策略的 XML 文件），防止这些异常并确保 .NET Native 工具链包含所需的元数据和实现代码。 下面是添加到 .NET 本机工具链编译的 Windows 应用商店项目中的默认运行时指令文件：
+如果在运行时缺少必需的元数据或实现代码，.NET Native 运行时将引发异常。 可通过使用[运行时指令文件](runtime-directives-rd-xml-configuration-file-reference.md)（即，可指定其元数据或实现代码必须在运行时可用的程序元素并向其分配运行时策略的 XML 文件），防止这些异常并确保 .NET Native 工具链包含所需的元数据和实现代码。 下面是添加到 .NET 本机工具链编译的 Windows 应用商店项目中的默认运行时指令文件：
 
 ```xml
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">
@@ -96,7 +96,7 @@ ms.locfileid: "70044130"
 
 ## <a name="net-native-and-ngen"></a>.NET 本机和 NGEN
 
-[本机映像生成器](../../../docs/framework/tools/ngen-exe-native-image-generator.md) (NGEN) 将程序集编译为本机代码，并将其安装在本地计算机的本机映像缓存中。 然而，尽管 NGEN 与 .NET Native 一样都生成本机代码，但在一些重要方面它又与 .NET 本机不同：
+[本机映像生成器](../tools/ngen-exe-native-image-generator.md) (NGEN) 将程序集编译为本机代码，并将其安装在本地计算机的本机映像缓存中。 然而，尽管 NGEN 与 .NET Native 一样都生成本机代码，但在一些重要方面它又与 .NET 本机不同：
 
 - 如果特定方法中没有可用的本机映像，NGEN 将转而使用 JITing 代码。 这意味着本机映像必须继续在 NGEN 需要回退到 JIT 编译的事件中包括元数据和 IL。 与此相反，.NET 本机仅生成本机映像并且不会回退到 JIT 编译。 因此，仅必须保留某些反射、序列化和互操作方案所需的元数据。
 
@@ -107,6 +107,6 @@ ms.locfileid: "70044130"
 ## <a name="see-also"></a>请参阅
 
 - [元数据和自描述组件](../../standard/metadata-and-self-describing-components.md)
-- [内部 .NET Native (第9频道视频)](https://channel9.msdn.com/Shows/Going+Deep/Inside-NET-Native)
-- [反射和 .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)
-- [.NET Native 一般疑难解答](../../../docs/framework/net-native/net-native-general-troubleshooting.md)
+- [内部 .NET Native （第9频道视频）](https://channel9.msdn.com/Shows/Going+Deep/Inside-NET-Native)
+- [反射和 .NET Native](reflection-and-net-native.md)
+- [.NET Native 一般疑难解答](net-native-general-troubleshooting.md)

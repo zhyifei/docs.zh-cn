@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 619ecf1c-1ca5-4d66-8934-62fe7aad78c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 937577f86ec854f5a458fe6067836a85a540695a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ec8180da9637ec2b2c4e1b432773b4f9f1ac908b
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69913805"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049176"
 ---
 # <a name="serialization-and-metadata"></a>序列化和元数据
 
@@ -22,7 +22,7 @@ ms.locfileid: "69913805"
 <a name="ThirdParty"></a>
 ## <a name="third-party-serializers"></a>第三方序列化程序
 
- Newtonsoft.JSON 等第三方序列化程序通常是基于反射的。 考虑到一个序列化数据的二进制大型对象 (BLOB)，该数据中的字段通过按名称查找目标类型的字段被分配到了一个具体类型。 在最低限度下，使用这些库时，在 `List<Type>` 集合中尝试序列化或反序列化的每个 <xref:System.Type> 对象都会出现 [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) 异常。  
+ Newtonsoft.JSON 等第三方序列化程序通常是基于反射的。 考虑到一个序列化数据的二进制大型对象 (BLOB)，该数据中的字段通过按名称查找目标类型的字段被分配到了一个具体类型。 在最低限度下，使用这些库时，在 `List<Type>` 集合中尝试序列化或反序列化的每个 <xref:System.Type> 对象都会出现 [MissingMetadataException](missingmetadataexception-class-net-native.md) 异常。  
   
  处理由这些序列化程序的丢失元数据引起的最简单的方法是，收集将被用在单独命名空间（比如 `App.Models`）下序列化中的类型，并向其直接应用一个 `Serialize` 元数据指令：  
   
@@ -30,7 +30,7 @@ ms.locfileid: "69913805"
 <Namespace Name="App.Models" Serialize="Required PublicAndInternal" />  
 ```  
   
- 有关示例中所使用语法的信息，请参阅 [\<Namespace> 元素](../../../docs/framework/net-native/namespace-element-net-native.md)。  
+ 有关示例中所使用语法的信息，请参阅 [\<Namespace> 元素](namespace-element-net-native.md)。  
   
 <a name="Microsoft"></a>
 ## <a name="microsoft-serializers"></a>Microsoft 序列化程序
@@ -39,7 +39,7 @@ ms.locfileid: "69913805"
   
 ### <a name="typeof-used-in-the-constructor"></a>构造函数中使用的 TypeOf
 
- 如果调用这些序列化类的构造函数并在方法C#调用中包含[typeof](../../csharp/language-reference/operators/type-testing-and-cast.md#typeof-operator)运算符,**则无需执行任何其他操作**。 例如，在以下对序列化类构造函数的每个调用中，`typeof` 关键字被用作了传递给构造函数的表达式的一部分。  
+ 如果调用这些序列化类的构造函数并在方法C#调用中包含[typeof](../../csharp/language-reference/operators/type-testing-and-cast.md#typeof-operator)运算符，**则无需执行任何其他操作**。 例如，在以下对序列化类构造函数的每个调用中，`typeof` 关键字被用作了传递给构造函数的表达式的一部分。  
   
  [!code-csharp[ProjectN#5](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#5)]  
   
@@ -47,7 +47,7 @@ ms.locfileid: "69913805"
   
 ### <a name="typeof-used-outside-the-constructor"></a>构造函数外部使用的 TypeOf
 
- 如果调用了这些序列化类的构造函数并在C#提供给构造函数的<xref:System.Type>参数的表达式之外使用[typeof](../../csharp/language-reference/operators/type-testing-and-cast.md#typeof-operator)运算符 (如以下代码所示), 则 .NET Native 编译器无法解析该类型:  
+ 如果调用了这些序列化类的构造函数并在C#提供给构造函数的<xref:System.Type>参数的表达式之外使用[typeof](../../csharp/language-reference/operators/type-testing-and-cast.md#typeof-operator)运算符（如以下代码所示），则 .NET Native 编译器无法解析该类型：  
   
  [!code-csharp[ProjectN#6](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#6)]  
   
@@ -57,7 +57,7 @@ ms.locfileid: "69913805"
 <Type Name="DataSet" Browse="Required Public" />  
 ```  
   
- 同样, 如果调用的构造函数 (如<xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Type%5B%5D%29?displayProperty=nameWithType>和) 提供一个要序列<xref:System.Type>化的附加对象数组, 如下面的代码所示, .NET Native 编译器无法解析这些类型。  
+ 同样，如果调用的构造函数（如<xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Type%5B%5D%29?displayProperty=nameWithType>和）提供一个要序列<xref:System.Type>化的附加对象数组，如下面的代码所示，.NET Native 编译器无法解析这些类型。  
   
  [!code-csharp[ProjectN#7](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#7)]  
   
@@ -67,11 +67,11 @@ ms.locfileid: "69913805"
 <Type Name="t" Browse="Required Public" />  
 ```  
   
- 有关示例中所使用语法的信息，请参阅 [\<Type> 元素](../../../docs/framework/net-native/type-element-net-native.md)。  
+ 有关示例中所使用语法的信息，请参阅 [\<Type> 元素](type-element-net-native.md)。  
   
 ## <a name="see-also"></a>请参阅
 
-- [运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [运行时指令元素](../../../docs/framework/net-native/runtime-directive-elements.md)
-- [\<类型 > 元素](../../../docs/framework/net-native/type-element-net-native.md)
-- [\<Namespace > 元素](../../../docs/framework/net-native/namespace-element-net-native.md)
+- [运行时指令 (rd.xml) 配置文件参考](runtime-directives-rd-xml-configuration-file-reference.md)
+- [运行时指令元素](runtime-directive-elements.md)
+- [\<类型 > 元素](type-element-net-native.md)
+- [\<Namespace > 元素](namespace-element-net-native.md)

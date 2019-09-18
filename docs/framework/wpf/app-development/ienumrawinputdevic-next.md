@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Next method [WPF]
 ms.assetid: 3698b44d-510e-4d18-b32b-85f17188ee26
-ms.openlocfilehash: 05867af48b64cd1898b13fa055859c8cc0367c8c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c7450a9ababa9cf3cb02d572f5ed84f0791d74e4
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61949573"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053403"
 ---
 # <a name="ienumrawinputdevicnext"></a>IEnumRAWINPUTDEVIC:Next
-枚举下一个`celt` [RAWINPUTDEVICE](/windows/desktop/api/winuser/ns-winuser-rawinputdevice)在枚举器的列表中，将它们中返回的结构`rgelt`以及中枚举元素的实际数目`pceltFetched`。  
+枚举枚举器`celt`列表中的下一个[RAWINPUTDEVICE](/windows/desktop/api/winuser/ns-winuser-rawinputdevice)结构`rgelt` ，将它们与中`pceltFetched`的枚举元素的实际数目一起返回。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT Next(  
       [in] ULONG celt,  
       [out, size_is(celt), length_is(*pceltFetched)] RAWINPUTDEVICE *rgelt,  
@@ -26,7 +26,7 @@ HRESULT Next(
 ## <a name="parameters"></a>参数  
  `celt`  
   
- [in]数[RAWINPUTDEVICE](/windows/desktop/api/winuser/ns-winuser-rawinputdevice)结构中返回`rgelt`。  
+ 中返回`rgelt`的[RAWINPUTDEVICE](/windows/desktop/api/winuser/ns-winuser-rawinputdevice)结构的数目。  
   
  `rgelt`  
   
@@ -37,4 +37,4 @@ HRESULT Next(
  [out] 指向 `rgelt` 中实际提供的元素数量的指针。 如果 `NULL` 为一，则调用方可传入 `rgelt`。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
- HRESULT：如果提供的元素数，则为 S_OK `celt`;否则为 S_FALSE。
+ HRESULT：如果提供的元素数为`celt`，则为 S_OK;否则为 S_FALSE。

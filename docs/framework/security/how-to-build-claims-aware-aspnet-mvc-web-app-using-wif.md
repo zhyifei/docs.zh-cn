@@ -3,12 +3,12 @@ title: 如何：使用 WIF 生成声明感知 ASP.NET MVC Web 应用程序
 ms.date: 03/30/2017
 ms.assetid: 0efb76bc-9f7b-4afe-be1c-2a57c917010b
 author: BrucePerlerMS
-ms.openlocfilehash: f2ac263d8869c770594283923a45c7c53c9df4cb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4d245288b04d8ed3d997bc5572b40c7f8a9334e5
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626119"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045451"
 ---
 # <a name="how-to-build-claims-aware-aspnet-mvc-web-application-using-wif"></a>如何：使用 WIF 生成声明感知 ASP.NET MVC Web 应用程序
 ## <a name="applies-to"></a>适用于  
@@ -218,4 +218,4 @@ ms.locfileid: "64626119"
   
 ## <a name="related-items"></a>相关项  
   
-- [如何：生成声明感知 ASP.NET Web 窗体应用程序使用 WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)
+- [如何：使用 WIF 生成声明感知 ASP.NET Web 窗体应用程序](how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)

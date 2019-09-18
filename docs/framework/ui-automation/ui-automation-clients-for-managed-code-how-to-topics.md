@@ -7,12 +7,12 @@ helpviewer_keywords:
 - UI Automation, clients for managed code
 - managed code, UI Automation clients
 ms.assetid: 665b01b5-25f5-47a1-ab11-cffe8ebbf2a7
-ms.openlocfilehash: 8c3107ce2ee20b3369a2ba462775ec7c8a1d3f6c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9a419f8ac8b94d4f33c7e771c68f230c80a24cbf
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69935117"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042536"
 ---
 # <a name="ui-automation-clients-for-managed-code-how-to-topics"></a>托管代码的 UI 自动化客户端帮助主题
 > [!NOTE]
@@ -21,11 +21,11 @@ ms.locfileid: "69935117"
  本部分提供有关在客户端应用程序[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]中实现的功能的详细信息。  
   
 ## <a name="in-this-section"></a>本节内容  
- [基于属性条件查找 UI 自动化元素](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)  
- [使用 TreeWalker 在 UI 自动化元素之间导航](../../../docs/framework/ui-automation/navigate-among-ui-automation-elements-with-treewalker.md)  
- [查找列表项的 UI 自动化元素](../../../docs/framework/ui-automation/find-a-ui-automation-element-for-a-list-item.md)  
- [获取 UI 自动化元素的属性](../../../docs/framework/ui-automation/get-ui-automation-element-properties.md)  
- [在 UI 自动化中使用缓存](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)  
- [订阅 UI 自动化事件](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)  
- [注册客户端提供程序程序集](../../../docs/framework/ui-automation/register-a-client-side-provider-assembly.md)  
- [使用 AutomationID 属性](../../../docs/framework/ui-automation/use-the-automationid-property.md)
+ [基于属性条件查找 UI 自动化元素](find-a-ui-automation-element-based-on-a-property-condition.md)  
+ [使用 TreeWalker 在 UI 自动化元素之间导航](navigate-among-ui-automation-elements-with-treewalker.md)  
+ [查找列表项的 UI 自动化元素](find-a-ui-automation-element-for-a-list-item.md)  
+ [获取 UI 自动化元素的属性](get-ui-automation-element-properties.md)  
+ [在 UI 自动化中使用缓存](use-caching-in-ui-automation.md)  
+ [订阅 UI 自动化事件](subscribe-to-ui-automation-events.md)  
+ [注册客户端提供程序程序集](register-a-client-side-provider-assembly.md)  
+ [使用 AutomationID 属性](use-the-automationid-property.md)

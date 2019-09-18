@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 42ed860a-a022-4682-8b7f-7c9870784671
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 85d64a5577acdaa15a40ae308eb728d75d6a4c69
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 866ec425fd66ee8b3b62263180ac7e6d776108f0
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894500"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049807"
 ---
 # <a name="example-troubleshooting-dynamic-programming"></a>示例：动态编程疑难解答
 > [!NOTE]
@@ -33,7 +33,7 @@ App!$43_System::Threading::SendOrPostCallback.InvokeOpenStaticThunk
 [snip]  
 ```  
   
- 我们可尝试通过使用[入门](../../../docs/framework/net-native/getting-started-with-net-native.md)的“手动解析丢失的元数据”一节中列出的三步方法来解决这个异常。  
+ 我们可尝试通过使用[入门](getting-started-with-net-native.md)的“手动解析丢失的元数据”一节中列出的三步方法来解决这个异常。  
   
 ## <a name="what-was-the-app-doing"></a>应用过去在执行什么操作？  
  第一件要提起注意的是堆栈基部的 `async` 关键字机械设备。  要确定该设备过去正在一个 `async` 方法中实际上在执行什么操作可能会很困难，因为堆栈已经丢失了始发调用的上下文并且已经在另一个不同的线程上运行了 `async` 代码。 然而，我们可以推断出该应用正在试图加载其首页。  在 `NavigationArgs.Setup` 的实现过程中，以下代码引起了访问冲突：  
@@ -56,9 +56,9 @@ App!$43_System::Threading::SendOrPostCallback.InvokeOpenStaticThunk
  当使用 `App.Core.ViewModels` 时，可能也会出现其他问题。  你必须决定是否值得确定并修复每个丢失的元数据异常，或节省时间并为类型的一个更大类添加指令。  此处，为 `dynamic` 添加 `App.Core.ViewModels` 元数据可能最好的方法，前提是输出的二进制代码变大不会产生问题。  
   
 ## <a name="could-the-code-be-rewritten"></a>代码能够重写吗？  
- 如果该应用过去使用的是 `typeof(LayoutApplicationVM)` 而不是 `Type.GetType("LayoutApplicationVM")`，工具链可能已经保存了 `browse` 元数据。  然而，它也可能没有创建 `invoke` 元数据，这在实例化该类型时可能会导致 [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) 异常。 要阻止这一异常，你仍然必须为命名空间添加一个运行时指令或指定 `dynamic` 策略的类型。 有关运行时指令的信息，请参阅 [运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)。  
+ 如果该应用过去使用的是 `typeof(LayoutApplicationVM)` 而不是 `Type.GetType("LayoutApplicationVM")`，工具链可能已经保存了 `browse` 元数据。  然而，它也可能没有创建 `invoke` 元数据，这在实例化该类型时可能会导致 [MissingMetadataException](missingmetadataexception-class-net-native.md) 异常。 要阻止这一异常，你仍然必须为命名空间添加一个运行时指令或指定 `dynamic` 策略的类型。 有关运行时指令的信息，请参阅 [运行时指令 (rd.xml) 配置文件参考](runtime-directives-rd-xml-configuration-file-reference.md)。  
   
 ## <a name="see-also"></a>请参阅
 
-- [入门](../../../docs/framework/net-native/getting-started-with-net-native.md)
-- 示例：[在绑定数据时处理异常](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)
+- [入门](getting-started-with-net-native.md)
+- 示例：[在绑定数据时处理异常](example-handling-exceptions-when-binding-data.md)

@@ -1,17 +1,17 @@
 ---
 title: 记录
-description: 了解记录F#如何表示命名值的简单聚合, 还可以选择包含成员。
+description: 了解记录F#如何表示命名值的简单聚合，还可以选择包含成员。
 ms.date: 06/09/2019
-ms.openlocfilehash: d92a1a7517e5b05ee687926df29f33fab123b4dd
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 1ba002407b1ccbcbceed32df8636fb860e89e3b6
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627280"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053929"
 ---
 # <a name="records"></a>记录
 
-记录表示已命名值的简单聚合，可选择包含成员。 它们可以是结构或引用类型。  默认情况下, 它们是引用类型。
+记录表示已命名值的简单聚合，可选择包含成员。 它们可以是结构或引用类型。  默认情况下，它们是引用类型。
 
 ## <a name="syntax"></a>语法
 
@@ -26,55 +26,55 @@ type [accessibility-modifier] typename =
 
 ## <a name="remarks"></a>备注
 
-在前面的语法中, *typename*是记录类型的名称, *label1*和*label2*是值的名称 (称为*标签*), *type1*和*type2*是这些值的类型。 *成员列表*是此类型的成员的可选列表。  您可以使用`[<Struct>]`属性来创建结构记录, 而不是引用类型的记录。
+在前面的语法中， *typename*是记录类型的名称， *label1*和*label2*是值的名称（称为*标签*）， *type1*和*type2*是这些值的类型。 *成员列表*是此类型的成员的可选列表。  您可以使用`[<Struct>]`属性来创建结构记录，而不是引用类型的记录。
 
 下面是一些示例。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1901.fs)]
 
-每个标签都在单独的行上时, 分号是可选的。
+每个标签都在单独的行上时，分号是可选的。
 
-您可以在称为*记录表达式*的表达式中设置值。 编译器从使用的标签推断类型 (如果标签与其他记录类型的标签完全不同)。 大括号 ({}) 将记录表达式括起来。 下面的代码演示了一个记录表达式, 该表达式使用带有标签`x`、 `y`和`z`的三个 float 元素初始化记录。
+您可以在称为*记录表达式*的表达式中设置值。 编译器从使用的标签推断类型（如果标签与其他记录类型的标签完全不同）。 大括号（{}）将记录表达式括起来。 下面的代码演示了一个记录表达式，该表达式使用带有标签`x`、 `y`和`z`的三个 float 元素初始化记录。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1907.fs)]
 
-如果有另一种类型也具有相同标签, 请不要使用缩写形式。
+如果有另一种类型也具有相同标签，请不要使用缩写形式。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1903.fs)]
 
-最近声明的类型的标签优先于以前声明的类型的标签, 因此在前面的示例中, `mypoint3D`将推断`Point3D`为。 可以显式指定记录类型, 如下面的代码所示。
+最近声明的类型的标签优先于以前声明的类型的标签，因此在前面的示例中， `mypoint3D`将推断`Point3D`为。 可以显式指定记录类型，如下面的代码所示。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1908.fs)]
 
-与类类型一样, 可以为记录类型定义方法。
+与类类型一样，可以为记录类型定义方法。
 
 ## <a name="creating-records-by-using-record-expressions"></a>使用记录表达式创建记录
 
-您可以通过使用记录中定义的标签来初始化记录。 这样做的表达式称为 "*记录表达式*"。 使用大括号将记录表达式括起来, 并使用分号作为分隔符。
+您可以通过使用记录中定义的标签来初始化记录。 这样做的表达式称为 "*记录表达式*"。 使用大括号将记录表达式括起来，并使用分号作为分隔符。
 
 下面的示例演示如何创建记录。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1904.fs)]
 
-记录表达式和类型定义中最后一个字段后面的分号是可选的, 不管这些字段是否都在同一行中。
+记录表达式和类型定义中最后一个字段后面的分号是可选的，不管这些字段是否都在同一行中。
 
-创建记录时, 必须为每个字段提供值。 不能引用任何字段的初始化表达式中其他字段的值。
+创建记录时，必须为每个字段提供值。 不能引用任何字段的初始化表达式中其他字段的值。
 
-在下面的代码中, 的类型`myRecord2`是从字段的名称推断出来的。 还可以选择显式指定类型名称。
+在下面的代码中，的类型`myRecord2`是从字段的名称推断出来的。 还可以选择显式指定类型名称。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1905.fs)]
 
-当必须复制现有记录, 并且可能更改某些字段值时, 另一种形式的记录构造会很有用。 下面的代码行阐释了这一点。
+当必须复制现有记录，并且可能更改某些字段值时，另一种形式的记录构造会很有用。 下面的代码行阐释了这一点。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1906.fs)]
 
 这种形式的记录表达式称为 "*复制和更新记录表达式*"。
 
-记录在默认情况下是不可变的;不过, 您可以使用复制和更新表达式轻松创建修改后的记录。 还可以显式指定可变字段。
+记录在默认情况下是不可变的;不过，您可以使用复制和更新表达式轻松创建修改后的记录。 还可以显式指定可变字段。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1909.fs)]
 
-不要将 DefaultValue 属性用于记录字段。 更好的方法是使用初始化为默认值的字段定义记录的默认实例, 然后使用复制和更新记录表达式来设置不同于默认值的任何字段。
+不要将 DefaultValue 属性用于记录字段。 更好的方法是使用初始化为默认值的字段定义记录的默认实例，然后使用复制和更新记录表达式来设置不同于默认值的任何字段。
 
 ```fsharp
 // Rather than use [<DefaultValue>], define a default record.
@@ -92,11 +92,11 @@ let rr3 = { defaultRecord1 with Field2 = 42 }
 
 ## <a name="creating-mutually-recursive-records"></a>创建相互递归记录
 
-在创建记录时, 可能需要让它依赖于以后要定义的另一种类型。 这是一种编译错误, 除非你将记录类型定义为 "互相递归"。
+在创建记录时，可能需要让它依赖于以后要定义的另一种类型。 这是一种编译错误，除非你将记录类型定义为 "互相递归"。
 
 定义相互递归的记录是通过`and`关键字来完成的。 这使你可以将两个或更多个记录类型链接在一起。
 
-例如, 下面的代码将`Person`和`Address`类型定义为互相递归:
+例如，下面的代码将`Person`和`Address`类型定义为互相递归：
 
 ```fsharp
 // Create a Person type and use the Address type that is not defined
@@ -108,14 +108,15 @@ type Person =
 and Address =
   { Line1: string
     Line2: string
-    PostCode: string }
+    PostCode: string
+    Occupant: Person }
 ```
 
-如果要定义前面的示例而不包含`and`关键字, 则不会进行编译。 对于`and`相互递归定义, 关键字是必需的。
+如果要定义前面的示例而不包含`and`关键字，则不会进行编译。 对于`and`相互递归定义，关键字是必需的。
 
 ## <a name="pattern-matching-with-records"></a>与记录匹配的模式
 
-记录可以与模式匹配一起使用。 可以显式指定某些字段, 并为其他字段提供在发生匹配时将分配的变量。 下面的代码示例阐释了这一点。
+记录可以与模式匹配一起使用。 可以显式指定某些字段，并为其他字段提供在发生匹配时将分配的变量。 下面的代码示例阐释了这一点。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1910.fs)]
 
@@ -129,21 +130,21 @@ Point is at (10.000000, 0.000000, -1.000000).
 
 ## <a name="differences-between-records-and-classes"></a>记录和类之间的差异
 
-记录字段与类的不同之处在于, 它们会自动作为属性公开, 并在创建和复制记录时使用。 记录构造也不同于类构造。 在记录类型中, 不能定义构造函数。 相反, 本主题中介绍的构造语法适用。 类在构造函数参数、字段和属性之间没有直接关系。
+记录字段与类的不同之处在于，它们会自动作为属性公开，并在创建和复制记录时使用。 记录构造也不同于类构造。 在记录类型中，不能定义构造函数。 相反，本主题中介绍的构造语法适用。 类在构造函数参数、字段和属性之间没有直接关系。
 
-与联合和结构类型一样, 记录具有结构相等性语义。 类具有引用相等性语义。 下面的代码示例展示了此操作。
+与联合和结构类型一样，记录具有结构相等性语义。 类具有引用相等性语义。 下面的代码示例展示了此操作。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1911.fs)]
 
-此代码的输出如下所示:
+此代码的输出如下所示：
 
 ```
 The records are equal.
 ```
 
-如果你用类编写相同的代码, 则两个类对象将不相等, 因为这两个值将表示堆上的两个对象, 并且仅比较地址 (除非类类型重`System.Object.Equals`写方法)。
+如果你用类编写相同的代码，则两个类对象将不相等，因为这两个值将表示堆上的两个对象，并且仅比较地址（除非类类型重`System.Object.Equals`写方法）。
 
-如果需要记录的引用相等性, 请在记录`[<ReferenceEquality>]`上方添加属性。
+如果需要记录的引用相等性，请在记录`[<ReferenceEquality>]`上方添加属性。
 
 ## <a name="see-also"></a>请参阅
 

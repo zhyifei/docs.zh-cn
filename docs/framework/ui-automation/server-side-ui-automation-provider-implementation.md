@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, server-side provider implementation
 - provider implementation, UI Automation
 ms.assetid: 6acc6d08-bd67-4e2e-915c-9c1d34eb86fe
-ms.openlocfilehash: 5fd17f9ca9d83ab3b226ce9fc0a4aebca4f9352a
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: eb7156e0e2794fb7cb18e7bfce0e8488d0b145c3
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044156"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042769"
 ---
 # <a name="server-side-ui-automation-provider-implementation"></a>服务器端 UI 自动化提供程序的实现
 
@@ -20,7 +20,7 @@ ms.locfileid: "70044156"
 
 本部分将介绍如何实现自定义控件的服务器端 UI 自动化提供程序。
 
-Windows Presentation Foundation (WPF) 元素和非[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]元素 (如为设计的[!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]) 的实现在本质上是不同的。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 元素通过从 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 派生的类提供对 <xref:System.Windows.Automation.Peers.AutomationPeer>的支持。 非[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 元素通过提供程序接口的实现提供支持。
+Windows Presentation Foundation （WPF）元素和非[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]元素（如为设计的[!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]）的实现在本质上是不同的。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 元素通过从 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 派生的类提供对 <xref:System.Windows.Automation.Peers.AutomationPeer>的支持。 非[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 元素通过提供程序接口的实现提供支持。
 
 <a name="Security_Considerations"></a>
 
@@ -34,7 +34,7 @@ Windows Presentation Foundation (WPF) 元素和非[!INCLUDE[TLA2#tla_wpf](../../
 
 ## <a name="provider-implementation-by-windows-presentation-foundation-elements"></a>通过 Windows Presentation Foundation 元素实现的提供程序实现
 
-有关本主题的详细信息，请参阅 [WPF 自定义控件的 UI 自动化](../../../docs/framework/wpf/controls/ui-automation-of-a-wpf-custom-control.md)。
+有关本主题的详细信息，请参阅 [WPF 自定义控件的 UI 自动化](../wpf/controls/ui-automation-of-a-wpf-custom-control.md)。
 
 <a name="Provider_Implementation_by_non_WPF_Elements"></a>
 
@@ -121,7 +121,7 @@ Windows Presentation Foundation (WPF) 元素和非[!INCLUDE[TLA2#tla_wpf](../../
 >
 > <xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty> 通常由宿主提供程序提供。 例如，如果自定义控件从 <xref:System.Windows.Forms.Control>派生，则名称从控件的 `Text` 属性派生。
 
-有关示例代码，请参阅 [Return Properties from a UI Automation Provider](../../../docs/framework/ui-automation/return-properties-from-a-ui-automation-provider.md)。
+有关示例代码，请参阅 [Return Properties from a UI Automation Provider](return-properties-from-a-ui-automation-provider.md)。
 
 <a name="Events_in_Non_WPF_Providers"></a>
 
@@ -191,9 +191,9 @@ Windows Presentation Foundation (WPF) 元素和非[!INCLUDE[TLA2#tla_wpf](../../
 
 ## <a name="see-also"></a>请参阅
 
-- [UI 自动化提供程序概述](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)
-- [公开服务器端 UI 自动化提供程序](../../../docs/framework/ui-automation/expose-a-server-side-ui-automation-provider.md)
-- [从 UI 自动化提供程序返回属性](../../../docs/framework/ui-automation/return-properties-from-a-ui-automation-provider.md)
-- [从 UI 自动化提供程序引发事件](../../../docs/framework/ui-automation/raise-events-from-a-ui-automation-provider.md)
-- [在 UI 自动化片段提供程序中启用导航](../../../docs/framework/ui-automation/enable-navigation-in-a-ui-automation-fragment-provider.md)
-- [在 UI 自动化提供程序中支持控件模式](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
+- [UI 自动化提供程序概述](ui-automation-providers-overview.md)
+- [公开服务器端 UI 自动化提供程序](expose-a-server-side-ui-automation-provider.md)
+- [从 UI 自动化提供程序返回属性](return-properties-from-a-ui-automation-provider.md)
+- [从 UI 自动化提供程序引发事件](raise-events-from-a-ui-automation-provider.md)
+- [在 UI 自动化片段提供程序中启用导航](enable-navigation-in-a-ui-automation-fragment-provider.md)
+- [在 UI 自动化提供程序中支持控件模式](support-control-patterns-in-a-ui-automation-provider.md)

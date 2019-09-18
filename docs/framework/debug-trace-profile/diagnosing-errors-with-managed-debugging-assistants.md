@@ -31,59 +31,59 @@ helpviewer_keywords:
 ms.assetid: 76994ee6-9fa9-4059-b813-26578d24427c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b745fa6a78ab2a7ab0b3a94c9921883d3c56c1b7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6cb2a240a2e7e82b7015eb7a6d99c2117fa63045
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61874611"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052890"
 ---
-# <a name="diagnose-errors-with-managed-debugging-assistants"></a>诊断错误使用托管调试助手
+# <a name="diagnose-errors-with-managed-debugging-assistants"></a>用托管调试助手诊断错误
 
 托管调试助手 (MDA) 是调试辅助程序，它与公共语言运行时 (CLR) 一起工作以提供关于运行时状态的信息。 这些助手可生成关于你无法通过其他方式捕获的运行时事件的信息性消息。 可以使用 MDA 隔离在托管代码和非托管代码之间转换时发生的、难以发现的应用程序 Bug。
 
-你可以[启用或禁用](#enable-and-disable-mdas)通过添加到 Windows 注册表项或通过设置环境变量的所有 Mda。 可使用应用程序配置设置来启用特定的 MDA。 可以在应用程序的配置文件中为某些单独的 MDA 设置其他配置设置。 由于将在加载运行时后分析这些配置文件，因此必须在托管应用程序启动之前启用 MDA。 不能为已经启动的应用程序启用 MDA。
+您可以通过向 Windows 注册表添加项或通过设置环境变量来[启用或禁用](#enable-and-disable-mdas)所有 mda。 可使用应用程序配置设置来启用特定的 MDA。 可以在应用程序的配置文件中为某些单独的 MDA 设置其他配置设置。 由于将在加载运行时后分析这些配置文件，因此必须在托管应用程序启动之前启用 MDA。 不能为已经启动的应用程序启用 MDA。
 
-下表列出了使用.NET Framework 附带的 Mda:
+下表列出了 .NET Framework 附带的 Mda：
 
 |||
 |-|-|
-|[asynchronousThreadAbort](../../../docs/framework/debug-trace-profile/asynchronousthreadabort-mda.md)|[bindingFailure](../../../docs/framework/debug-trace-profile/bindingfailure-mda.md)|
-|[callbackOnCollectedDelegate](../../../docs/framework/debug-trace-profile/callbackoncollecteddelegate-mda.md)|[contextSwitchDeadlock](../../../docs/framework/debug-trace-profile/contextswitchdeadlock-mda.md)|
-|[dangerousThreadingAPI](../../../docs/framework/debug-trace-profile/dangerousthreadingapi-mda.md)|[dateTimeInvalidLocalFormat](../../../docs/framework/debug-trace-profile/datetimeinvalidlocalformat-mda.md)|
-|[dirtyCastAndCallOnInterface](../../../docs/framework/debug-trace-profile/dirtycastandcalloninterface-mda.md)|[disconnectedContext](../../../docs/framework/debug-trace-profile/disconnectedcontext-mda.md)|
-|[dllMainReturnsFalse](../../../docs/framework/debug-trace-profile/dllmainreturnsfalse-mda.md)|[exceptionSwallowedOnCallFromCom](../../../docs/framework/debug-trace-profile/exceptionswallowedoncallfromcom-mda.md)|
-|[failedQI](../../../docs/framework/debug-trace-profile/failedqi-mda.md)|[fatalExecutionEngineError](../../../docs/framework/debug-trace-profile/fatalexecutionengineerror-mda.md)|
-|[gcManagedToUnmanaged](../../../docs/framework/debug-trace-profile/gcmanagedtounmanaged-mda.md)|[gcUnmanagedToManaged](../../../docs/framework/debug-trace-profile/gcunmanagedtomanaged-mda.md)|
-|[illegalPrepareConstrainedRegion](../../../docs/framework/debug-trace-profile/illegalprepareconstrainedregion-mda.md)|[invalidApartmentStateChange](../../../docs/framework/debug-trace-profile/invalidapartmentstatechange-mda.md)|
-|[invalidCERCall](../../../docs/framework/debug-trace-profile/invalidcercall-mda.md)|[invalidFunctionPointerInDelegate](../../../docs/framework/debug-trace-profile/invalidfunctionpointerindelegate-mda.md)|
-|[invalidGCHandleCookie](../../../docs/framework/debug-trace-profile/invalidgchandlecookie-mda.md)|[invalidIUnknown](../../../docs/framework/debug-trace-profile/invalidiunknown-mda.md)|
-|[invalidMemberDeclaration](../../../docs/framework/debug-trace-profile/invalidmemberdeclaration-mda.md)|[invalidOverlappedToPinvoke](../../../docs/framework/debug-trace-profile/invalidoverlappedtopinvoke-mda.md)|
-|[invalidVariant](../../../docs/framework/debug-trace-profile/invalidvariant-mda.md)|[jitCompilationStart](../../../docs/framework/debug-trace-profile/jitcompilationstart-mda.md)|
-|[loaderLock](../../../docs/framework/debug-trace-profile/loaderlock-mda.md)|[loadFromContext](../../../docs/framework/debug-trace-profile/loadfromcontext-mda.md)|
-|[marshalCleanupError](../../../docs/framework/debug-trace-profile/marshalcleanuperror-mda.md)|[marshaling](../../../docs/framework/debug-trace-profile/marshaling-mda.md)|
-|[memberInfoCacheCreation](../../../docs/framework/debug-trace-profile/memberinfocachecreation-mda.md)|[moduloObjectHashcode](../../../docs/framework/debug-trace-profile/moduloobjecthashcode-mda.md)|
-|[nonComVisibleBaseClass](../../../docs/framework/debug-trace-profile/noncomvisiblebaseclass-mda.md)|[notMarshalable](../../../docs/framework/debug-trace-profile/notmarshalable-mda.md)|
-|[openGenericCERCall](../../../docs/framework/debug-trace-profile/opengenericcercall-mda.md)|[overlappedFreeError](../../../docs/framework/debug-trace-profile/overlappedfreeerror-mda.md)|
-|[pInvokeLog](../../../docs/framework/debug-trace-profile/pinvokelog-mda.md)|[pInvokeStackImbalance](../../../docs/framework/debug-trace-profile/pinvokestackimbalance-mda.md)|
-|[raceOnRCWCleanup](../../../docs/framework/debug-trace-profile/raceonrcwcleanup-mda.md)|[reentrancy](../../../docs/framework/debug-trace-profile/reentrancy-mda.md)|
-|[releaseHandleFailed](../../../docs/framework/debug-trace-profile/releasehandlefailed-mda.md)|[reportAvOnComRelease](../../../docs/framework/debug-trace-profile/reportavoncomrelease-mda.md)|
-|[streamWriterBufferedDataLost](../../../docs/framework/debug-trace-profile/streamwriterbuffereddatalost-mda.md)|[virtualCERCall](../../../docs/framework/debug-trace-profile/virtualcercall-mda.md)|
+|[asynchronousThreadAbort](asynchronousthreadabort-mda.md)|[bindingFailure](bindingfailure-mda.md)|
+|[callbackOnCollectedDelegate](callbackoncollecteddelegate-mda.md)|[contextSwitchDeadlock](contextswitchdeadlock-mda.md)|
+|[dangerousThreadingAPI](dangerousthreadingapi-mda.md)|[dateTimeInvalidLocalFormat](datetimeinvalidlocalformat-mda.md)|
+|[dirtyCastAndCallOnInterface](dirtycastandcalloninterface-mda.md)|[disconnectedContext](disconnectedcontext-mda.md)|
+|[dllMainReturnsFalse](dllmainreturnsfalse-mda.md)|[exceptionSwallowedOnCallFromCom](exceptionswallowedoncallfromcom-mda.md)|
+|[failedQI](failedqi-mda.md)|[fatalExecutionEngineError](fatalexecutionengineerror-mda.md)|
+|[gcManagedToUnmanaged](gcmanagedtounmanaged-mda.md)|[gcUnmanagedToManaged](gcunmanagedtomanaged-mda.md)|
+|[illegalPrepareConstrainedRegion](illegalprepareconstrainedregion-mda.md)|[invalidApartmentStateChange](invalidapartmentstatechange-mda.md)|
+|[invalidCERCall](invalidcercall-mda.md)|[invalidFunctionPointerInDelegate](invalidfunctionpointerindelegate-mda.md)|
+|[invalidGCHandleCookie](invalidgchandlecookie-mda.md)|[invalidIUnknown](invalidiunknown-mda.md)|
+|[invalidMemberDeclaration](invalidmemberdeclaration-mda.md)|[invalidOverlappedToPinvoke](invalidoverlappedtopinvoke-mda.md)|
+|[invalidVariant](invalidvariant-mda.md)|[jitCompilationStart](jitcompilationstart-mda.md)|
+|[loaderLock](loaderlock-mda.md)|[loadFromContext](loadfromcontext-mda.md)|
+|[marshalCleanupError](marshalcleanuperror-mda.md)|[marshaling](marshaling-mda.md)|
+|[memberInfoCacheCreation](memberinfocachecreation-mda.md)|[moduloObjectHashcode](moduloobjecthashcode-mda.md)|
+|[nonComVisibleBaseClass](noncomvisiblebaseclass-mda.md)|[notMarshalable](notmarshalable-mda.md)|
+|[openGenericCERCall](opengenericcercall-mda.md)|[overlappedFreeError](overlappedfreeerror-mda.md)|
+|[pInvokeLog](pinvokelog-mda.md)|[pInvokeStackImbalance](pinvokestackimbalance-mda.md)|
+|[raceOnRCWCleanup](raceonrcwcleanup-mda.md)|[reentrancy](reentrancy-mda.md)|
+|[releaseHandleFailed](releasehandlefailed-mda.md)|[reportAvOnComRelease](reportavoncomrelease-mda.md)|
+|[streamWriterBufferedDataLost](streamwriterbuffereddatalost-mda.md)|[virtualCERCall](virtualcercall-mda.md)|
 
-默认情况下，.NET Framework 会为所有托管调试器激活 MDA 的子集。 可以查看通过选择 Visual Studio 中设置的默认**Windows** > **异常设置**上**调试**菜单，然后展开**托管调试助手**列表。
+默认情况下，.NET Framework 会为所有托管调试器激活 MDA 的子集。 可以通过选择 "**调试**" 菜单上的 " **Windows** > **异常设置**"，然后展开 "**托管调试助手**" 列表，在 Visual Studio 中查看默认设置。
 
-![在 Visual Studio 中的异常设置窗口](media/diagnosing-errors-with-managed-debugging-assistants/exception-settings-mdas.png)
+![Visual Studio 中的 "异常设置" 窗口](./media/diagnosing-errors-with-managed-debugging-assistants/exception-settings-mdas.png)
 
 ## <a name="enable-and-disable-mdas"></a>启用和禁用 Mda
 
 可使用注册表项、环境变量和应用程序配置设置，启用和禁用 MDA。 若要使用应用程序配置设置，必须启用注册表项或环境变量。
 
 > [!TIP]
-> 而不是禁用 Mda，可防止 Visual Studio 时收到 MDA 通知时显示 MDA 对话框。 为此，请选择**Windows** > **异常设置**上**调试**菜单中，展开**托管调试助手**列表，然后选择或清除**中断时引发**为单个 MDA 的复选框。
+> 无论何时收到 MDA 通知，都可以阻止 Visual Studio 显示 MDA 对话框，而不是禁用 Mda。 为此，请在 "**调试**" 菜单上选择 " **Windows** > **异常设置**"，展开 "**托管调试助手**" 列表，然后选中或清除单个 MDA 的 "**引发时中断**" 复选框。
 
 ### <a name="registry-key"></a>注册表项
 
-若要启用 Mda，请添加**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\。NETFramework\MDA** Windows 注册表中的子项 （类型为 REG_SZ，值为 1）。 将下面的示例复制到一个名为文本文件*MDAEnable.reg*。打开 Windows 注册表编辑器 (RegEdit.exe)，并从**文件**菜单中，选择**导入**。 选择*MDAEnable.reg*文件以在该计算机上启用 Mda。 将子项设置为字符串值**1** (不是 DWORD 值的**1**) 使读取 MDA 设置从*ApplicationName.suffix*。 文件。 例如，Notepad 的 MDA 配置文件将被命名为 notepad.exe.mda.config。
+若要启用 Mda，请**添加\\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft。** Windows 注册表中的 NETFramework\MDA 子项（类型 REG_SZ，值1）。 将以下示例复制到一个名为*mdaenable.reg*的文本文件中。打开 Windows 注册表编辑器（Regedit.exe），然后从 "**文件**" 菜单中选择 "**导入**"。 选择*mdaenable.reg*文件以在该计算机上启用 mda。 如果将子项设置为字符串值**1** （不是 DWORD 值**1**），则将启用从*ApplicationName*文件中读取 mda 设置。 例如，记事本的 MDA 配置文件将命名为 "notepad.exe"。
 
 ```text
 Windows Registry Editor Version 5.00
@@ -101,11 +101,11 @@ Windows Registry Editor Version 5.00
 "MDA"="1"
 ```
 
-请参阅[特定于应用程序的配置设置](#application-specific-configuration-settings)有关详细信息。 可以使用 COMPLUS_MDA 环境变量重写注册表设置。 请参阅[环境变量](#environment-variable)有关详细信息。
+有关详细信息，请参阅[特定于应用程序的配置设置](#application-specific-configuration-settings)。 可以使用 COMPLUS_MDA 环境变量重写注册表设置。 有关详细信息，请参阅[环境变量](#environment-variable)。
 
-若要禁用 Mda，请将 MDA 子项设置为**0** （零） 使用 Windows 注册表编辑器。
+若要禁用 Mda，请使用 Windows 注册表编辑器将 MDA 子项设置为**0** （零）。
 
-默认情况下，即使未添加该注册表项，有些 MDA 也会在运行附加到调试器的应用程序时启用。 您可以通过运行禁用这些助手*MDADisable.reg*文件中，如在本部分中前面所述。
+默认情况下，即使未添加该注册表项，有些 MDA 也会在运行附加到调试器的应用程序时启用。 如本部分前面所述，可以通过运行*mdadisable.reg*文件来禁用这些助手。
 
 ### <a name="environment-variable"></a>环境变量
 
@@ -131,7 +131,7 @@ Windows Registry Editor Version 5.00
 
 可以在应用程序的 MDA 配置文件中单独地启用、禁用和配置某些助手。 若要使用用于配置 MDA 的应用程序配置文件，必须设置 MDA 注册表项或 COMPLUS_MDA 环境变量。 应用程序配置文件通常与应用程序的可执行文件 (.exe) 位于同一目录中。 文件名采用“ApplicationName.mda.config”形式；例如，notepad.exe.mda.config。在应用程序配置文件中启用的助手可能包含专门设计用于控制该助手的行为的特性或元素。
 
-下面的示例演示如何启用和配置[封送处理](../../../docs/framework/debug-trace-profile/marshaling-mda.md):
+下面的示例演示如何启用和配置[封送处理](marshaling-mda.md)：
 
 ```xml
 <mdaConfig>
@@ -148,9 +148,9 @@ Windows Registry Editor Version 5.00
 </mdaConfig>
 ```
 
-对于应用程序中每个托管到非托管的转换，`Marshaling` MDA 会发出有关正封送到非托管类型的托管类型信息。 `Marshaling` MDA 还可以筛选的方法的名称，并按提供的结构字段**methodFilter**并**fieldFilter**子元素分别。
+对于应用程序中每个托管到非托管的转换，`Marshaling` MDA 会发出有关正封送到非托管类型的托管类型信息。 MDA 还可以分别筛选 methodFilter 和**fieldFilter**子元素中提供的方法和结构字段的名称。 `Marshaling`
 
-下面的示例演示如何使用其默认设置启用多个 Mda:
+下面的示例演示如何使用默认设置启用多个 Mda：
 
 ```xml
 <mdaConfig>
@@ -168,16 +168,16 @@ Windows Registry Editor Version 5.00
 
 ## <a name="mda-exceptions"></a>MDA 异常
 
-启用 MDA 后，它处于活动状态甚至当你的代码是不在调试器下执行。 如果在调试器不存在时引发 MDA 事件，尽管这不是未经处理的异常，事件消息也会出现在未经处理的异常对话框中。 若要避免出现该对话框，请在代码未在调试环境中执行时，移除 MDA 启用设置。
+启用 MDA 后，即使代码未在调试器下执行，它也会处于活动状态。 如果在调试器不存在时引发 MDA 事件，尽管这不是未经处理的异常，事件消息也会出现在未经处理的异常对话框中。 若要避免出现该对话框，请在代码未在调试环境中执行时，移除 MDA 启用设置。
 
-当你的代码执行在 Visual Studio 集成的开发环境 (IDE) 中时，可以避免针对特定 MDA 事件出现的异常对话框。 为此，请在**调试**菜单中，选择**Windows** > **异常设置**。 在中**异常设置**窗口中，展开**托管调试助手**列表中，，然后清除**中断时引发**为单个 MDA 的复选框。 此外可以使用此对话框*启用*MDA 异常对话框的显示。
+当你的代码在 Visual Studio 集成开发环境（IDE）中执行时，你可以避免针对特定 MDA 事件显示的异常对话框。 为此，请在 "**调试**" 菜单上选择 " **Windows** > **异常设置**"。 在 "**异常设置**" 窗口中，展开 "**托管调试助手**" 列表，然后清除单个 MDA 的 "**引发时中断**" 复选框。 你还可以使用此对话框来*启用*MDA 异常对话框的显示。
 
 ## <a name="mda-output"></a>MDA 输出
 
-MDA 输出结果类似于下面的示例，其中显示了从输出`PInvokeStackImbalance`MDA:
+Mda 输出类似于下面的示例，该示例显示来自`PInvokeStackImbalance` MDA 的输出：
 
-**PInvoke 函数的调用 MDATest ！MDATest.Program::StdCall 具有使堆栈不平衡。这可能是因为托管的 PInvoke 签名与非托管的目标签名不匹配。检查的调用约定和 PInvoke 签名的参数匹配的目标的非托管的签名。**
+**调用 PInvoke 函数 "MDATest！MDATest：： StdCall ' 的堆栈不平衡。这很可能是因为托管 PInvoke 签名与非托管目标签名不匹配。检查 PInvoke 签名的调用约定和参数是否与目标非托管签名匹配。**
 
 ## <a name="see-also"></a>请参阅
 
-- [调试、跟踪和分析](../../../docs/framework/debug-trace-profile/index.md)
+- [调试、跟踪和分析](index.md)

@@ -3,12 +3,12 @@ title: WSFederation 身份验证模块概述
 ms.date: 03/30/2017
 ms.assetid: 02c4d5e8-f0a7-49ee-9cf5-3647578510ad
 author: BrucePerlerMS
-ms.openlocfilehash: eaf53a352238161ccec1b481649074d322954905
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 26cd022ded8dddcfcf695c89b3cf4b90d3ceb2ef
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70851512"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044940"
 ---
 # <a name="wsfederation-authentication-module-overview"></a>WSFederation 身份验证模块概述
 Windows Identity Foundation (WIF) 包括通过 WS-联合身份验证模块 (WS-FAM) 对 ASP.NET 应用程序中联合身份验证的支持。 本主题有助于理解联合身份验证的工作原理和使用方法。  
@@ -35,7 +35,7 @@ Windows Identity Foundation (WIF) 包括通过 WS-联合身份验证模块 (WS-F
   
  可以配置 WS-FAM 来指定未经身份验证的请求应重定向到的 STS。 使用 WIF，可采用两种方式对用户进行身份验证：  
   
-1. 被动重定向：如果未经身份验证的用户尝试访问受保护的资源，而你只想将它们重定向到 STS 而不需要登录页，则这是正确的方法。 STS 验证用户标识，并颁发包含适合该用户的声明的安全令牌。 此选项需要将 WS-FAM 添加到 HTTP 模块管道。 可以使用用于 Visual Studio 2012 的标识和访问工具修改应用程序配置文件，以便使用 WS FAM 以及与 STS 联合。 有关详细信息，请参阅[用于 Visual Studio 2012 的标识和访问工具](../../../docs/framework/security/identity-and-access-tool-for-vs.md)。  
+1. 被动重定向：如果未经身份验证的用户尝试访问受保护的资源，而你只想将它们重定向到 STS 而不需要登录页，则这是正确的方法。 STS 验证用户标识，并颁发包含适合该用户的声明的安全令牌。 此选项需要将 WS-FAM 添加到 HTTP 模块管道。 可以使用用于 Visual Studio 2012 的标识和访问工具修改应用程序配置文件，以便使用 WS FAM 以及与 STS 联合。 有关详细信息，请参阅[用于 Visual Studio 2012 的标识和访问工具](identity-and-access-tool-for-vs.md)。  
   
 2. 对于信赖方应用程序中的登录页，可以从代码隐藏调用 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SignIn%2A?displayProperty=nameWithType> 方法或 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.RedirectToIdentityProvider%2A> 方法。  
   
@@ -54,11 +54,11 @@ Windows Identity Foundation (WIF) 包括通过 WS-联合身份验证模块 (WS-F
   
  下方的关系图展示了用户经过身份验证访问 STS 且由 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> 处理其安全令牌后的更多详细信息：  
   
- ![使用被动重定向处理令牌的时序](../../../docs/framework/security/media/signinusingpassiveredirect-tokenprocessing.gif "SignInUsingPassiveRedirect_TokenProcessing")  
+ ![使用被动重定向处理令牌的时序](./media/signinusingpassiveredirect-tokenprocessing.gif "SignInUsingPassiveRedirect_TokenProcessing")  
   
  下方的关系图展示了将用户的安全令牌串行化成 Cookie 并由 <xref:System.IdentityModel.Services.SessionAuthenticationModule> 截获后的更多详细信息：  
   
- ![显示使用控件登录的 SAM 时序图](../../../docs/framework/security/media/signinusingconrols-sam.gif "SignInUsingConrols_SAM")  
+ ![显示使用控件登录的 SAM 时序图](./media/signinusingconrols-sam.gif "SignInUsingConrols_SAM")  
   
 ### <a name="events"></a>事件  
  <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>、<xref:System.IdentityModel.Services.SessionAuthenticationModule> 和它们的父类 <xref:System.IdentityModel.Services.HttpModuleBase> 在处理 HTTP 请求的各个阶段引发事件。 可以在 ASP.NET 应用程序的`global.asax`文件中处理这些事件。  
@@ -94,7 +94,7 @@ Windows Identity Foundation (WIF) 包括通过 WS-联合身份验证模块 (WS-F
 > 不应在由 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> 或 <xref:System.IdentityModel.Services.SessionAuthenticationModule> 引发的任何事件期间使用 <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> 属性。 这是因为 <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> 是在身份验证进程后设置的，而事件是在身份验证进程中引发的。  
   
 ### <a name="configuration-of-federated-authentication"></a>联合身份验证的配置  
- WS-FAM 和 SAM 通过 [\<federationConfiguration>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md) 元素进行配置。 [\<wsFederation>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/wsfederation.md) 子元素配置 WS-FAM 属性的默认值；例如 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.Issuer%2A> 属性和 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.Realm%2A> 属性。 （可以通过为一些 WS-FAM 事件提供处理程序来按请求更改这些值；例如 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.RedirectingToIdentityProvider>。）由 SAM 使用的 Cookie 处理程序通过 [\<cookieHandler>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/cookiehandler.md) 子元素进行配置。 WIF 提供在 <xref:System.IdentityModel.Services.ChunkedCookieHandler> 类中实现的默认 Cookie 处理程序，可以通过 [\<chunkedCookieHandler>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/chunkedcookiehandler.md) 元素设置该处理程序的区块大小。 `<federationConfiguration>` 元素引用 <xref:System.IdentityModel.Configuration.IdentityConfiguration>，为在应用程序中使用的其他 WIF 组件提供配置，如 <xref:System.Security.Claims.ClaimsAuthenticationManager> 和 <xref:System.Security.Claims.ClaimsAuthorizationManager>。 可以通过指定 `<federationConfiguration>` 元素的 `identityConfigurationName` 属性中名为 [\<identityConfiguration>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) 的元素显式引用标识配置。 如果未显式引用标识配置，则将使用默认标识配置。  
+ WS-FAM 和 SAM 通过 [\<federationConfiguration>](../configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md) 元素进行配置。 [\<wsFederation>](../configure-apps/file-schema/windows-identity-foundation/wsfederation.md) 子元素配置 WS-FAM 属性的默认值；例如 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.Issuer%2A> 属性和 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.Realm%2A> 属性。 （可以通过为一些 WS-FAM 事件提供处理程序来按请求更改这些值；例如 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.RedirectingToIdentityProvider>。）由 SAM 使用的 Cookie 处理程序通过 [\<cookieHandler>](../configure-apps/file-schema/windows-identity-foundation/cookiehandler.md) 子元素进行配置。 WIF 提供在 <xref:System.IdentityModel.Services.ChunkedCookieHandler> 类中实现的默认 Cookie 处理程序，可以通过 [\<chunkedCookieHandler>](../configure-apps/file-schema/windows-identity-foundation/chunkedcookiehandler.md) 元素设置该处理程序的区块大小。 `<federationConfiguration>` 元素引用 <xref:System.IdentityModel.Configuration.IdentityConfiguration>，为在应用程序中使用的其他 WIF 组件提供配置，如 <xref:System.Security.Claims.ClaimsAuthenticationManager> 和 <xref:System.Security.Claims.ClaimsAuthorizationManager>。 可以通过指定 `<federationConfiguration>` 元素的 `identityConfigurationName` 属性中名为 [\<identityConfiguration>](../configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) 的元素显式引用标识配置。 如果未显式引用标识配置，则将使用默认标识配置。  
   
  以下 XML 演示 ASP.NET 信赖方 (RP) 应用的配置。 <xref:System.IdentityModel.Configuration.SystemIdentityModelSection> 和 <xref:System.IdentityModel.Services.Configuration.SystemIdentityModelServicesSection> 配置部分添加在 `<configSections>` 元素之下。 SAM 和 WS-FAM 添加到 `<system.webServer>`/`<modules>` 元素下的 HTTP 模块。 最后，WIF 组件在 `<system.identityModel>`/`<identityConfiguration>` 和 `<system.identityModel.services>`/`<federationConfiguration>` 元素下进行配置。 此配置指定分块 Cookie 处理程序（因为它是默认 Cookie 处理程序），且 `<cookieHandler>` 元素中没有指定的 Cookie 处理程序类型。  
   
@@ -143,4 +143,4 @@ Windows Identity Foundation (WIF) 包括通过 WS-联合身份验证模块 (WS-F
 
 - <xref:System.IdentityModel.Services.SessionAuthenticationModule>
 - <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>
-- [\<federationConfiguration>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md)
+- [\<federationConfiguration>](../configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md)

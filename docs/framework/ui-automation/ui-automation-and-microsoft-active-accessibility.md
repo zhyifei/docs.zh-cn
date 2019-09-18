@@ -7,12 +7,12 @@ helpviewer_keywords:
 - UI Automation, Microsoft Active Accessibility
 - Active Accessibility, UI Automation compared to
 ms.assetid: 87bee662-0a3e-4232-a421-20e7a5968321
-ms.openlocfilehash: 8aadcc213e92fd53490f639f37dc8d8f62762c2c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 63b00f8eb35fa58ea0257d5e996fc2c51a248040
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946484"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042586"
 ---
 # <a name="ui-automation-and-microsoft-active-accessibility"></a>UI 自动化和 Microsoft Active Accessibility
 > [!NOTE]
@@ -20,23 +20,23 @@ ms.locfileid: "69946484"
   
  Microsoft Active Accessibility 是使应用程序可访问的早期解决方案。 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 是 [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)] 的新辅助功能模型，旨在满足对辅助技术产品和自动测试工具的需求。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]通过 Active Accessibility 提供了许多改进。  
   
- 本主题包括的[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]主要功能, 并解释了这些功能与 Active Accessibility 的不同之处。  
+ 本主题包括的[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]主要功能，并解释了这些功能与 Active Accessibility 的不同之处。  
   
 <a name="Programming_Languages_compare"></a>   
 ## <a name="programming-languages"></a>编程语言  
-< Active Accessibility 基于组件对象模型 (COM), 支持双重接口, 因此可在 C/C++、 [!INCLUDE[TLA#tla_vb6](../../../includes/tlasharptla-vb6-md.md)]和脚本语言中进行编程。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)](包括用于标准控件的客户端提供程序库) 用托管代码编写, 并且 UI 自动化客户端应用程序可以使用C#或 Visual Basic .net 进行编程。 作为接口实现的 UI 自动化提供程序可以用托管代码或 C/C++ 编写。  
+< Active Accessibility 基于组件对象模型（COM），支持双重接口，因此可在 C/C++、 [!INCLUDE[TLA#tla_vb6](../../../includes/tlasharptla-vb6-md.md)]和脚本语言中进行编程。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]（包括用于标准控件的客户端提供程序库）用托管代码编写，并且 UI 自动化客户端应用程序可以使用C#或 Visual Basic .net 进行编程。 作为接口实现的 UI 自动化提供程序可以用托管代码或 C/C++ 编写。  
   
 <a name="Support_in_Windows_Presentation_Foundation_"></a>   
 ## <a name="support-in-windows-presentation-foundation"></a>Windows Presentation Foundation 中的支持  
- Windows Presentation Foundation (WPF) 是用于创建用户界面的新模型。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]元素不包含对 Active Accessibility 的本机支持;但是, 它们支持[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], 其中包括对 Active Accessibility 客户端的桥接支持。 只有专门为 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 编写的客户端才可以充分利用 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]的辅助功能，例如对文本的丰富支持。  
+ Windows Presentation Foundation （WPF）是用于创建用户界面的新模型。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]元素不包含对 Active Accessibility 的本机支持;但是，它们支持[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，其中包括对 Active Accessibility 客户端的桥接支持。 只有专门为 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 编写的客户端才可以充分利用 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]的辅助功能，例如对文本的丰富支持。  
   
 <a name="Servers_and_Clients_compare"></a>   
 ## <a name="servers-and-clients"></a>服务器和客户端  
- 在 Active Accessibility 中, 服务器和客户端通过服务器的实现`IAccessible`直接进行通信。  
+ 在 Active Accessibility 中，服务器和客户端通过服务器的实现`IAccessible`直接进行通信。  
   
  在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]中，核心服务位于服务器（称为提供程序）和客户端之间。 核心服务对由提供程序实现的接口进行调用并提供其他服务，例如，为元素生成唯一的运行时标识符。 客户端应用程序使用库函数来调用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 服务。  
   
- UI 自动化提供程序可以向 Active Accessibility 客户端提供信息, Active Accessibility 服务器可以向 UI 自动化客户端应用程序提供信息。 但是, 因为 Active Accessibility 不会公开尽可能多的信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], 所以这两个模型并不完全兼容。  
+ UI 自动化提供程序可以向 Active Accessibility 客户端提供信息，Active Accessibility 服务器可以向 UI 自动化客户端应用程序提供信息。 但是，因为 Active Accessibility 不会公开尽可能多的信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，所以这两个模型并不完全兼容。  
   
 <a name="UI_Elements_compare"></a>   
 ## <a name="ui-elements"></a>UI 元素  
@@ -48,19 +48,19 @@ ms.locfileid: "69946484"
 ## <a name="tree-views-and-navigation"></a>树视图和导航  
  屏幕上的 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 元素可以被视为树状结构，桌面作为根、应用程序窗口作为直接子项，而应用程序中的元素作为继承子项。  
   
- 在 Active Accessibility 中, 在树中公开了许多与最终用户不相关的自动化元素。 客户端应用程序需要查看所有元素以确定哪些元素是有意义的。  
+ 在 Active Accessibility 中，在树中公开了许多与最终用户不相关的自动化元素。 客户端应用程序需要查看所有元素以确定哪些元素是有意义的。  
   
  UI 自动化客户端应用程序通过筛选视图查看 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 。 该视图仅包含相关元素：向用户提供信息或实现交互的元素。 还提供了只包含控件元素和只包含内容元素的预定义视图；除此之外，应用程序还可以定义自定义视图。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 简化了向用户描述 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 和帮助用户与应用程序进行交互的任务。  
   
- 在 Active Accessibility 中, 在元素之间导航可以是空间空间 (例如, 移动到位于屏幕左侧的元素)、逻辑 (例如, 移动到下一菜单项或对话框中 tab 键顺序中的下一项) 或分层 (例如, 将容器中的第一个子级或从子级移动到其父级)。 分层导航非常复杂，因为子元素并不总是实现 `IAccessible`的对象。  
+ 在 Active Accessibility 中，在元素之间导航可以是空间空间（例如，移动到位于屏幕左侧的元素）、逻辑（例如，移动到下一菜单项或对话框中 tab 键顺序中的下一项）或分层（例如，将容器中的第一个子级或从子级移动到其父级）。 分层导航非常复杂，因为子元素并不总是实现 `IAccessible`的对象。  
   
  在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]中，所有 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 元素都是支持相同基本功能的 <xref:System.Windows.Automation.AutomationElement> 对象。 （从提供程序的角度来看，它们是实现继承自 <xref:System.Windows.Automation.Provider.IRawElementProviderSimple>的接口的对象。）导航主要是分层导航：从父级到子级，以及从同级到下一个同级。 （同级之间的导航具有一个逻辑元素，因为它可能遵照的是 Tab 键顺序。）通过使用 <xref:System.Windows.Automation.TreeWalker>类，你可以使用树的任何筛选视图从任何起点进行导航。 你还可以通过使用 <xref:System.Windows.Automation.AutomationElement.FindFirst%2A>和 <xref:System.Windows.Automation.AutomationElement.FindAll%2A> 导航到特定的子级或继承项；例如，很容易检索对话框中支持指定控件模式的所有元素。  
   
- 中的[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]导航比在 Active Accessibility 中的导航更加一致。 某些元素 (例如下拉列表和弹出窗口) 在 Active Accessibility 树中出现两次, 从它们导航可能会产生意外的结果。 实际上不可能为 rebar 控件正确实现 Active Accessibility。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 能够重排根目录并进行重新布置，因此可以在树的任何位置放置元素，不必考虑窗口所有者构建的层次结构。  
+ 中的[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]导航比在 Active Accessibility 中的导航更加一致。 某些元素（例如下拉列表和弹出窗口）在 Active Accessibility 树中出现两次，从它们导航可能会产生意外的结果。 实际上不可能为 rebar 控件正确实现 Active Accessibility。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 能够重排根目录并进行重新布置，因此可以在树的任何位置放置元素，不必考虑窗口所有者构建的层次结构。  
   
 <a name="Roles_and_Control_Types"></a>   
 ## <a name="roles-and-control-types"></a>角色和控件类型  
- Active Accessibility 使用`accRole`属性 (`IAccessible::get_actRole`) 来检索中[!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]元素的角色说明, 如 ROLE_SYSTEM_SLIDER 或 ROLE_SYSTEM_MENUITEM。 元素的角色是确定其可用功能的主要线索。 通过使用固定的方法（如 `IAccessible::accSelect` 和 `IAccessible::accDoDefaultAction`）可实现与控件的交互。 客户端应用程序和 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]之间的交互仅限于可通过 `IAccessible` 完成的交互。  
+ Active Accessibility 使用`accRole`属性（`IAccessible::get_actRole`）来检索中[!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]元素的角色说明，如 ROLE_SYSTEM_SLIDER 或 ROLE_SYSTEM_MENUITEM。 元素的角色是确定其可用功能的主要线索。 通过使用固定的方法（如 `IAccessible::accSelect` 和 `IAccessible::accDoDefaultAction`）可实现与控件的交互。 客户端应用程序和 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]之间的交互仅限于可通过 `IAccessible` 完成的交互。  
   
  与此相反， [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 很大程度上会将该元素的控件类型（由 <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.ControlType%2A> 属性描述）从其预期的功能分离。 功能由通过实现其特殊化接口的提供程序支持的控件模式来确定。 可以结合控件模式来描述特定 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 元素支持的完整功能集。 某些提供程序需要支持特定的控件模式；例如，复选框的提供程序必须支持 Toggle 控件模式。 其他提供程序需要支持一个或多个控件模式集；例如，一个按钮必须支持 Toggle 或 Invoke。 还有一些提供程序完全不支持任何控件模式；例如，不能移动、调整大小或停靠的窗格没有任何控件模式。  
   
@@ -110,13 +110,13 @@ ms.locfileid: "69946484"
 |ROLE_SYSTEM_OUTLINEITEM|树项|  
 |ROLE_SYSTEM_WINDOW|窗口|  
   
- 有关不同控件类型的更多信息，请参阅 [UI Automation Control Types](../../../docs/framework/ui-automation/ui-automation-control-types.md)。  
+ 有关不同控件类型的更多信息，请参阅 [UI Automation Control Types](ui-automation-control-types.md)。  
   
 <a name="States_and_Properties"></a>   
 ## <a name="states-and-properties"></a>状态和属性  
- 在 Active Accessibility 中, 元素支持一组通用的属性, 某些属性 (如`accState`) 必须描述不同的内容, 具体取决于元素的角色。 服务器必须实现可返回属性的 `IAccessible` 的所有方法，返回的属性甚至与该元素不相关。  
+ 在 Active Accessibility 中，元素支持一组通用的属性，某些属性（如`accState`）必须描述不同的内容，具体取决于元素的角色。 服务器必须实现可返回属性的 `IAccessible` 的所有方法，返回的属性甚至与该元素不相关。  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]定义更多的属性, 其中一些属性与 Active Accessibility 中的状态相对应。 某些属性是所有元素共有的，但其他属性特定于控件类型和控件模式。 属性由唯一标识符进行区分，并且大多数属性都可通过使用单个方法 <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A> 或 <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>进行检索。 许多属性还可以轻松从 <xref:System.Windows.Automation.AutomationElement.Current%2A> 和 <xref:System.Windows.Automation.AutomationElement.Cached%2A> 属性访问器进行检索。  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]定义更多的属性，其中一些属性与 Active Accessibility 中的状态相对应。 某些属性是所有元素共有的，但其他属性特定于控件类型和控件模式。 属性由唯一标识符进行区分，并且大多数属性都可通过使用单个方法 <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A> 或 <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>进行检索。 许多属性还可以轻松从 <xref:System.Windows.Automation.AutomationElement.Current%2A> 和 <xref:System.Windows.Automation.AutomationElement.Cached%2A> 属性访问器进行检索。  
   
  UI 自动化提供程序不需要实现不相关的属性，而可以只返回任何其不支持的属性的 `null`值。 此外， [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 核心服务可以从默认窗口提供程序获取一些属性，并且这些属性与提供程序显式实现的属性相合并。  
   
@@ -158,7 +158,7 @@ ms.locfileid: "69946484"
 |STATE_SYSTEM_SIZEABLE|<xref:System.Windows.Automation.TransformPattern.TransformPatternInformation.CanResize%2A>|N|  
 |STATE_SYSTEM_UNAVAILABLE|<xref:System.Windows.Automation.AutomationElement.IsEnabledProperty>|Y|  
   
- 以下状态未由大多数 Active Accessibility 控制服务器实现, 或者在中[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]没有等效项。  
+ 以下状态未由大多数 Active Accessibility 控制服务器实现，或者在中[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]没有等效项。  
   
 |Active Accessibility 状态|备注|  
 |-----------------------------------------------------------------------|-------------|  
@@ -176,11 +176,11 @@ ms.locfileid: "69946484"
 |STATE_SYSTEM_HOTTRACKED|在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]中不可用|  
 |STATE_SYSTEM_PRESSED|在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]中不可用|  
   
- 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性标识符的完整列表，请参阅 [UI Automation Properties Overview](../../../docs/framework/ui-automation/ui-automation-properties-overview.md)。  
+ 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性标识符的完整列表，请参阅 [UI Automation Properties Overview](ui-automation-properties-overview.md)。  
   
 <a name="uiautomation_events_compare"></a>   
 ## <a name="events"></a>事件  
- 与 Active Accessibility 中的[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]事件机制不同, 中的事件机制不依赖于 Windows 事件路由 (与窗口句柄紧密关联), 并且不需要客户端应用程序设置挂钩。 可以对事件订阅进行微调，不仅能订阅特定事件，甚至还能订阅树的特定部分。 通过跟踪所侦听的事件，提供程序也可微调其事件的引发。  
+ 与 Active Accessibility 中的[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]事件机制不同，中的事件机制不依赖于 Windows 事件路由（与窗口句柄紧密关联），并且不需要客户端应用程序设置挂钩。 可以对事件订阅进行微调，不仅能订阅特定事件，甚至还能订阅树的特定部分。 通过跟踪所侦听的事件，提供程序也可微调其事件的引发。  
   
  对于客户端来说检索引发事件的元素也很简单，因为这些事件会被直接传递到事件回调。 如果在客户端订阅该事件时，缓存请求处于活动状态，则会自动预提取元素的属性。  
   
@@ -251,4 +251,4 @@ ms.locfileid: "69946484"
   
 ## <a name="see-also"></a>请参阅
 
-- [UI 自动化基础知识](../../../docs/framework/ui-automation/index.md)
+- [UI 自动化基础知识](index.md)

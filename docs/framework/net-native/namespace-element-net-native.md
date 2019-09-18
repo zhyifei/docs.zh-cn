@@ -4,14 +4,14 @@ ms.date: 03/30/2017
 ms.assetid: 57c614e5-18a9-4e87-bfd5-d0fe3396a192
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c304606a27552e604bf40953f49a30a794026281
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7be004776d2a2fd3b4c41fb21b3ac244946f2166
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61866907"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049418"
 ---
-# <a name="namespace-element-net-native"></a>\<Namespace > 元素 (.NET Native)
+# <a name="namespace-element-net-native"></a>\<命名空间 > 元素（.NET Native）
 将运行时反射策略应用到一个指定的命名空间中的所有类型。  
   
 ## <a name="syntax"></a>语法  
@@ -51,40 +51,40 @@ ms.locfileid: "61866907"
   
 ## <a name="name-attribute"></a>Name 特性  
   
-|“值”|描述|  
+|值|描述|  
 |-----------|-----------------|  
-|namespace_name|命名空间名称。 如果 \<Namespace> 元素是 [\<Application>](../../../docs/framework/net-native/application-element-net-native.md)、[\<Library>](../../../docs/framework/net-native/library-element-net-native.md) 或 [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md) 元素的子元素，namespace_name 必须是一个完全限定的命名空间名称。 如果 \<Namespace> 元素是另一个 \<Namespace> 元素的子元素，则 namespace_name 必须是一个相对的命名空间名称。|  
+|namespace_name|命名空间名称。 如果 \<Namespace> 元素是 [\<Application>](application-element-net-native.md)、[\<Library>](library-element-net-native.md) 或 [\<Assembly>](assembly-element-net-native.md) 元素的子元素，namespace_name 必须是一个完全限定的命名空间名称。 如果 \<Namespace> 元素是另一个 \<Namespace> 元素的子元素，则 namespace_name 必须是一个相对的命名空间名称。|  
   
 ## <a name="all-other-attributes"></a>所有其他特性  
   
-|“值”|描述|  
+|值|描述|  
 |-----------|-----------------|  
-|policy_setting|该设置将应用这个策略类型到该命名空间的所有类型。 可能值为 `All`、`Auto`、`Excluded`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal` 以及 `Required All`。 有关详细信息，请参阅[运行时指令策略设置](../../../docs/framework/net-native/runtime-directive-policy-settings.md)。|  
+|policy_setting|该设置将应用这个策略类型到该命名空间的所有类型。 可能值为 `All`、`Auto`、`Excluded`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal` 以及 `Required All`。 有关详细信息，请参阅[运行时指令策略设置](runtime-directive-policy-settings.md)。|  
   
 ### <a name="child-elements"></a>子元素  
   
 |元素|描述|  
 |-------------|-----------------|  
 |`<Namespace>`|将运行时反射策略应用到一个父命名空间中的所有类型。|  
-|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|将反射策略应用到一个类型。|  
-|[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|将反射策略应用到一个构造泛型类型。|  
+|[\<Type>](type-element-net-native.md)|将反射策略应用到一个类型。|  
+|[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|将反射策略应用到一个构造泛型类型。|  
   
 ### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<Application>](../../../docs/framework/net-native/application-element-net-native.md)|作为应用程序范围内的类型和元数据可以反应在运行时间的类型成员的容器而服务。 [\<Application>](../../../docs/framework/net-native/application-element-net-native.md) 元素可包含零个、一个或多个 [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md) 元素。|  
-|[\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)|将运行时反射策略应用到指定程序集中的所有类型。|  
-|[\<Library>](../../../docs/framework/net-native/library-element-net-native.md)|定义包含元数据在运行时间可以用于反射的类型和类型成员的程序集。 [\<Library>](../../../docs/framework/net-native/library-element-net-native.md) 元素可包含零个或一个 [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md) 元素。|  
+|[\<Application>](application-element-net-native.md)|作为应用程序范围内的类型和元数据可以反应在运行时间的类型成员的容器而服务。 [\<Application>](application-element-net-native.md) 元素可包含零个、一个或多个 [\<Assembly>](assembly-element-net-native.md) 元素。|  
+|[\<Assembly>](assembly-element-net-native.md)|将运行时反射策略应用到指定程序集中的所有类型。|  
+|[\<Library>](library-element-net-native.md)|定义包含元数据在运行时间可以用于反射的类型和类型成员的程序集。 [\<Library>](library-element-net-native.md) 元素可包含零个或一个 [\<Assembly>](assembly-element-net-native.md) 元素。|  
 |`<Namespace>`|将反射策略应用到一个父命名空间中的所有类型。|  
   
 ## <a name="remarks"></a>备注  
  `Activate`、`Browse`、`Dynamic` 和 `Serialize` 特性都是可选项。 如果这些都不存在，`<Namespace>` 元素仅会充当子元素的容器。 如果它们存在，`<Namespace>` 元素会将运行时反射策略应用到一个指定的命名空间中的所有类型。  
   
- 当它是 [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md) 元素的子元素时，`<Namespace>` 元素会替代 [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md) 元素定义的运行时反射策略。  
+ 当它是 [\<Assembly>](assembly-element-net-native.md) 元素的子元素时，`<Namespace>` 元素会替代 [\<Assembly>](assembly-element-net-native.md) 元素定义的运行时反射策略。  
   
 ## <a name="see-also"></a>请参阅
 
-- [运行时指令策略设置](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
-- [运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [运行时指令元素](../../../docs/framework/net-native/runtime-directive-elements.md)
+- [运行时指令策略设置](runtime-directive-policy-settings.md)
+- [运行时指令 (rd.xml) 配置文件参考](runtime-directives-rd-xml-configuration-file-reference.md)
+- [运行时指令元素](runtime-directive-elements.md)
