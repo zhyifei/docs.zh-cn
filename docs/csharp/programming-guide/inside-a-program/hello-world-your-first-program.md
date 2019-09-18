@@ -1,7 +1,7 @@
 ---
-title: Hello World -- 首个程序 - C# 编程指南
+title: Hello World - 你在 Windows 或 Mac 上使用 Visual Studio 的第一个程序 - C# 编程指南
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 09/12/2019
 f1_keywords:
 - cs.program
 - vs.csharp.startpage.firstapplication
@@ -9,135 +9,123 @@ helpviewer_keywords:
 - examples [C#], Hello World
 - Hello World example [C#]
 ms.assetid: 6493182a-b0b6-4539-a719-518a168cb730
-ms.openlocfilehash: 9a50de0bb583a1dfccfa609be1cca732868505ba
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 0807e46d36a4cf031bc44ae0dc4efab79dd51d03
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69589373"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991331"
 ---
-# <a name="hello-world----your-first-program-c-programming-guide"></a><span data-ttu-id="6c1a4-102">Hello World -- 首个程序（C# 编程指南）</span><span class="sxs-lookup"><span data-stu-id="6c1a4-102">Hello World -- Your first program (C# Programming Guide)</span></span>
+# <a name="hello-world----your-first-program"></a><span data-ttu-id="fb5d3-102">Hello World -- 你的第一个程序</span><span class="sxs-lookup"><span data-stu-id="fb5d3-102">Hello World -- Your first program</span></span>
 
-<span data-ttu-id="6c1a4-103">以下过程创建传统“Hello World!”程序的 C#</span><span class="sxs-lookup"><span data-stu-id="6c1a4-103">The following procedure creates a C# version of the traditional "Hello World!"</span></span> <span data-ttu-id="6c1a4-104">版本。</span><span class="sxs-lookup"><span data-stu-id="6c1a4-104">program.</span></span> <span data-ttu-id="6c1a4-105">该程序显示字符串 `Hello World!`</span><span class="sxs-lookup"><span data-stu-id="6c1a4-105">The program displays the string `Hello World!`</span></span>
-
-<span data-ttu-id="6c1a4-106">有关介绍性概念的更多示例，请参阅 [Visual C# 和 Visual Basic 入门](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)。</span><span class="sxs-lookup"><span data-stu-id="6c1a4-106">For more examples of introductory concepts, see [Getting Started with Visual C# and Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic).</span></span>
+<span data-ttu-id="fb5d3-103">在本文中，你将使用 Visual Studio 创建传统的“Hello World!”</span><span class="sxs-lookup"><span data-stu-id="fb5d3-103">In this article, you'll use Visual Studio to create the traditional "Hello World!"</span></span> <span data-ttu-id="fb5d3-104">版本。</span><span class="sxs-lookup"><span data-stu-id="fb5d3-104">program.</span></span> <span data-ttu-id="fb5d3-105">Visual Studio 是一个专业的集成开发环境 (IDE)，具有适用于 .NET 开发的许多功能。</span><span class="sxs-lookup"><span data-stu-id="fb5d3-105">Visual Studio is a professional Integrated Development Environment (IDE) with many features designed for .NET development.</span></span> <span data-ttu-id="fb5d3-106">只需使用 Visual Studio 中的几个功能即可创建此程序。</span><span class="sxs-lookup"><span data-stu-id="fb5d3-106">You'll use only a few of the features in Visual Studio to create this program.</span></span> <span data-ttu-id="fb5d3-107">如需了解有关 Visual Studio 的信息，请参阅 [Visual C# 和 Visual Basic 入门](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)。</span><span class="sxs-lookup"><span data-stu-id="fb5d3-107">To learn more about Visual Studio, see [Getting Started with Visual C# and Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic).</span></span>
 
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]
 
-## <a name="to-create-and-run-a-console-application"></a><span data-ttu-id="6c1a4-107">创建并运行控制台应用程序</span><span class="sxs-lookup"><span data-stu-id="6c1a4-107">To create and run a console application</span></span>
+## <a name="create-a-new-application"></a><span data-ttu-id="fb5d3-108">创建新应用程序</span><span class="sxs-lookup"><span data-stu-id="fb5d3-108">Create a new application</span></span>
 
-1. <span data-ttu-id="6c1a4-108">启动 Visual Studio。</span><span class="sxs-lookup"><span data-stu-id="6c1a4-108">Start Visual Studio.</span></span>
+<!-- markdownlint-disable MD025 -->
 
-2. <span data-ttu-id="6c1a4-109">在菜单栏上，依次选择“文件”  、“新建”  、“项目”  。</span><span class="sxs-lookup"><span data-stu-id="6c1a4-109">On the menu bar, choose **File**, **New**, **Project**.</span></span>
+# <a name="windowstabwindows"></a>[<span data-ttu-id="fb5d3-109">Windows</span><span class="sxs-lookup"><span data-stu-id="fb5d3-109">Windows</span></span>](#tab/windows)
 
-     <span data-ttu-id="6c1a4-110">**“新建项目”** 对话框随即打开。</span><span class="sxs-lookup"><span data-stu-id="6c1a4-110">The **New Project** dialog box opens.</span></span>
+<span data-ttu-id="fb5d3-110">启动 Visual Studio。</span><span class="sxs-lookup"><span data-stu-id="fb5d3-110">Start Visual Studio.</span></span> <span data-ttu-id="fb5d3-111">你将在 Windows 上看到以下图像：</span><span class="sxs-lookup"><span data-stu-id="fb5d3-111">You'll see the following image on Windows:</span></span>
 
-3. <span data-ttu-id="6c1a4-111">依次展开“已安装”  、“模板”  、“Visual C#”  ，然后选择“控制台应用程序”  。</span><span class="sxs-lookup"><span data-stu-id="6c1a4-111">Expand **Installed**, expand **Templates**, expand **Visual C#**, and then choose **Console Application**.</span></span>
+![Windows 上的 Visual Studio 欢迎屏幕](./media/hello-world-your-first-program/visual-studio-windows-start-screen.png)
 
-4. <span data-ttu-id="6c1a4-112">在“名称”  框中，指定项目名称，然后选择“确定”  按钮。</span><span class="sxs-lookup"><span data-stu-id="6c1a4-112">In the **Name** box, specify a name for your project, and then choose the **OK** button.</span></span>
+<span data-ttu-id="fb5d3-113">在图像右下角选择“创建新项目”  。</span><span class="sxs-lookup"><span data-stu-id="fb5d3-113">Select **Create a new project** in the lower right corner of the image.</span></span> <span data-ttu-id="fb5d3-114">Visual Studio 会显示“新建项目”对话框  ：</span><span class="sxs-lookup"><span data-stu-id="fb5d3-114">Visual Studio displays the **New Project** dialog:</span></span>
 
-     <span data-ttu-id="6c1a4-113">新项目将出现在“解决方案资源管理器”  中。</span><span class="sxs-lookup"><span data-stu-id="6c1a4-113">The new project appears in **Solution Explorer**.</span></span>
+![Windows 上的 Visual Studio 新建项目屏幕](./media/hello-world-your-first-program/visual-studio-windows-new-project.png)
 
-5. <span data-ttu-id="6c1a4-114">如果 Program.cs 未在“代码编辑器”  中打开，则在“解决方案资源管理器”  中打开“Program.cs”  的快捷菜单，然后选择“查看代码”  。</span><span class="sxs-lookup"><span data-stu-id="6c1a4-114">If Program.cs isn't open in the **Code Editor**, open the shortcut menu for **Program.cs** in **Solution Explorer**, and then choose **View Code**.</span></span>
+> [!NOTE]
+> <span data-ttu-id="fb5d3-116">如果这是首次启动 Visual Studio，则“最近使用的项目模板”列表为空  。</span><span class="sxs-lookup"><span data-stu-id="fb5d3-116">If this is the first time you've started Visual Studio, the **Recent project templates** list is empty.</span></span>
 
-6. <span data-ttu-id="6c1a4-115">将 Program.cs 的内容替换为以下代码。</span><span class="sxs-lookup"><span data-stu-id="6c1a4-115">Replace the contents of Program.cs with the following code.</span></span>
+<span data-ttu-id="fb5d3-117">在“新建项目”对话框中，选择“控制台应用(.NET Core)”，然后按“下一步”  。</span><span class="sxs-lookup"><span data-stu-id="fb5d3-117">On the new project dialog, choose "Console App (.NET Core)" and then press **Next**.</span></span> <span data-ttu-id="fb5d3-118">请为项目命名（例如“HelloWorld”），然后按“创建”  。</span><span class="sxs-lookup"><span data-stu-id="fb5d3-118">Give your project a name, such as "HelloWorld", then press **Create**.</span></span>
 
-     [!code-csharp[csProgGuide#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#21)]
+<span data-ttu-id="fb5d3-119">Visual Studio 将打开你的项目。</span><span class="sxs-lookup"><span data-stu-id="fb5d3-119">Visual Studio opens your project.</span></span> <span data-ttu-id="fb5d3-120">一个基本的“Hello World!”已初见雏形</span><span class="sxs-lookup"><span data-stu-id="fb5d3-120">It's already a basic "Hello World!"</span></span> <span data-ttu-id="fb5d3-121">示例。</span><span class="sxs-lookup"><span data-stu-id="fb5d3-121">example.</span></span> <span data-ttu-id="fb5d3-122">按 `Ctrl` + `F5` 运行项目。</span><span class="sxs-lookup"><span data-stu-id="fb5d3-122">Press `Ctrl` + `F5` to run your project.</span></span> <span data-ttu-id="fb5d3-123">Visual Studio 生成项目，将源代码转换为可执行文件。</span><span class="sxs-lookup"><span data-stu-id="fb5d3-123">Visual Studio builds your project, converting the source code into an executable.</span></span> <span data-ttu-id="fb5d3-124">然后，它会启动一个运行新应用程序的命令窗口。</span><span class="sxs-lookup"><span data-stu-id="fb5d3-124">Then, it launches a command window that runs your new application.</span></span> <span data-ttu-id="fb5d3-125">你应在窗口中看到以下文本：</span><span class="sxs-lookup"><span data-stu-id="fb5d3-125">You should see the following text in the window:</span></span>
 
-7. <span data-ttu-id="6c1a4-116">选择 F5 键运行该项目。</span><span class="sxs-lookup"><span data-stu-id="6c1a4-116">Choose the F5 key to run the project.</span></span> <span data-ttu-id="6c1a4-117">将显示包含行 `Hello World!` 的命令提示符窗口</span><span class="sxs-lookup"><span data-stu-id="6c1a4-117">A Command Prompt window appears that contains the line `Hello World!`</span></span>
+```console
+Hello World!
 
-<span data-ttu-id="6c1a4-118">接下来，将检查此程序的重要部分。</span><span class="sxs-lookup"><span data-stu-id="6c1a4-118">Next, the important parts of this program are examined.</span></span>
+C:\Program Files\dotnet\dotnet.exe (process 11964) exited with code 0.
+Press any key to close this window . . .
+```
 
-## <a name="comments"></a><span data-ttu-id="6c1a4-119">注释</span><span class="sxs-lookup"><span data-stu-id="6c1a4-119">Comments</span></span>
+<span data-ttu-id="fb5d3-126">按相关键关闭窗口。</span><span class="sxs-lookup"><span data-stu-id="fb5d3-126">Press a key to close the window.</span></span>
 
-<span data-ttu-id="6c1a4-120">第一行包含一条注释。</span><span class="sxs-lookup"><span data-stu-id="6c1a4-120">The first line contains a comment.</span></span> <span data-ttu-id="6c1a4-121">字符 `//` 将该行的其余内容转换为一条注释。</span><span class="sxs-lookup"><span data-stu-id="6c1a4-121">The characters `//` convert the rest of the line to a comment.</span></span>
+# <a name="macostabmacos"></a>[<span data-ttu-id="fb5d3-127">macOS</span><span class="sxs-lookup"><span data-stu-id="fb5d3-127">macOS</span></span>](#tab/macos)
 
- [!code-csharp[csProgGuide#32](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#32)]
+<span data-ttu-id="fb5d3-128">启动 Visual Studio for Mac。</span><span class="sxs-lookup"><span data-stu-id="fb5d3-128">Start Visual Studio for Mac.</span></span> <span data-ttu-id="fb5d3-129">你将在 Mac 上看到以下图像：</span><span class="sxs-lookup"><span data-stu-id="fb5d3-129">You'll see the following image on Mac:</span></span>
 
-<span data-ttu-id="6c1a4-122">还可以通过将文本块置于 `/*` 和 `*/` 字符之间，禁止对其的注释。</span><span class="sxs-lookup"><span data-stu-id="6c1a4-122">You can also comment out a block of text by enclosing it between the `/*` and `*/` characters.</span></span> <span data-ttu-id="6c1a4-123">这在下面的示例中显示。</span><span class="sxs-lookup"><span data-stu-id="6c1a4-123">This is shown in the following example.</span></span>
+![Mac 上的 Visual Studio 欢迎屏幕](./media/hello-world-your-first-program/visual-studio-mac-start-screen.png)
 
- [!code-csharp[csProgGuide#33](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#33)]
+> [!NOTE]
+> <span data-ttu-id="fb5d3-131">如果这是首次启动 Visual Studio for Mac，则“最近使用的项目模板”列表为空  。</span><span class="sxs-lookup"><span data-stu-id="fb5d3-131">If this is the first time you've started Visual Studio for Mac, the **Recent projects** list is empty.</span></span>
 
-## <a name="main-method"></a><span data-ttu-id="6c1a4-124">Main 方法</span><span class="sxs-lookup"><span data-stu-id="6c1a4-124">Main method</span></span>
+<span data-ttu-id="fb5d3-132">在图像右上角选择“新建”  。</span><span class="sxs-lookup"><span data-stu-id="fb5d3-132">Select **New** in the upper right corner of the image.</span></span> <span data-ttu-id="fb5d3-133">Visual Studio for Mac 会显示“新建项目”对话框  ：</span><span class="sxs-lookup"><span data-stu-id="fb5d3-133">Visual Studio for Mac displays the **New Project** dialog:</span></span>
 
-<span data-ttu-id="6c1a4-125">C# 控制台应用程序必须包含 `Main` 方法，控件在其中开始和结束。</span><span class="sxs-lookup"><span data-stu-id="6c1a4-125">A C# console application must contain a `Main` method, in which control starts and ends.</span></span> <span data-ttu-id="6c1a4-126">在 `Main` 方法中，可以创建对象并执行其他方法。</span><span class="sxs-lookup"><span data-stu-id="6c1a4-126">The `Main` method is where you create objects and execute other methods.</span></span>
+![Mac 上的 Visual Studio 新建项目屏幕](./media/hello-world-your-first-program/visual-studio-mac-new-project.png)
 
-<span data-ttu-id="6c1a4-127">`Main` 方法是驻留在类或结构中的[静态](../../language-reference/keywords/static.md)方法。</span><span class="sxs-lookup"><span data-stu-id="6c1a4-127">The `Main` method is a [static](../../language-reference/keywords/static.md) method that resides inside a class or a struct.</span></span> <span data-ttu-id="6c1a4-128">在上一个“Hello World!”</span><span class="sxs-lookup"><span data-stu-id="6c1a4-128">In the previous "Hello World!"</span></span> <span data-ttu-id="6c1a4-129">示例中，该方法驻留在名为 `Hello` 的类中。</span><span class="sxs-lookup"><span data-stu-id="6c1a4-129">example, it resides in a class named `Hello`.</span></span> <span data-ttu-id="6c1a4-130">可以通过以下方式之一来声明 `Main` 方法：</span><span class="sxs-lookup"><span data-stu-id="6c1a4-130">You can declare the `Main` method in one of the following ways:</span></span>
+<span data-ttu-id="fb5d3-135">在“新建项目”对话框中，选择“.NET Core”和“控制台应用”，然后按“下一步”  。</span><span class="sxs-lookup"><span data-stu-id="fb5d3-135">On the new project dialog, choose ".NET Core", and "Console App" and then press **Next**.</span></span> <span data-ttu-id="fb5d3-136">需要选择目标框架。</span><span class="sxs-lookup"><span data-stu-id="fb5d3-136">You'll need to select the target framework.</span></span> <span data-ttu-id="fb5d3-137">默认情况下，请按“下一步”。</span><span class="sxs-lookup"><span data-stu-id="fb5d3-137">The default is fine, so press next.</span></span> <span data-ttu-id="fb5d3-138">请为项目命名（例如“HelloWorld”），然后按“创建”  。</span><span class="sxs-lookup"><span data-stu-id="fb5d3-138">Give your project a name, such as "HelloWorld", then press **Create**.</span></span> <span data-ttu-id="fb5d3-139">可以使用默认的项目位置。</span><span class="sxs-lookup"><span data-stu-id="fb5d3-139">You can use the default project location.</span></span> <span data-ttu-id="fb5d3-140">请勿将项目添加到源控件。</span><span class="sxs-lookup"><span data-stu-id="fb5d3-140">Don't add this project to source control.</span></span>
 
-- <span data-ttu-id="6c1a4-131">它可返回 `void`。</span><span class="sxs-lookup"><span data-stu-id="6c1a4-131">It can return `void`.</span></span>
+<span data-ttu-id="fb5d3-141">Visual Studio for Mac 打开你的项目。</span><span class="sxs-lookup"><span data-stu-id="fb5d3-141">Visual Studio for Mac opens your project.</span></span> <span data-ttu-id="fb5d3-142">一个基本的“Hello World!”已初见雏形</span><span class="sxs-lookup"><span data-stu-id="fb5d3-142">It's already a basic "Hello World!"</span></span> <span data-ttu-id="fb5d3-143">示例。</span><span class="sxs-lookup"><span data-stu-id="fb5d3-143">example.</span></span> <span data-ttu-id="fb5d3-144">按 `Ctrl` + `Fn` + `F5` 运行项目。</span><span class="sxs-lookup"><span data-stu-id="fb5d3-144">Press `Ctrl` + `Fn` + `F5` to run your project.</span></span> <span data-ttu-id="fb5d3-145">Visual Studio for Mac 生成项目，将源代码转换为可执行文件。</span><span class="sxs-lookup"><span data-stu-id="fb5d3-145">Visual Studio for Mac builds your project, converting the source code into an executable.</span></span> <span data-ttu-id="fb5d3-146">然后，它会启动一个运行新应用程序的命令窗口。</span><span class="sxs-lookup"><span data-stu-id="fb5d3-146">Then, it launches a command window that runs your new application.</span></span> <span data-ttu-id="fb5d3-147">你应在窗口中看到以下文本：</span><span class="sxs-lookup"><span data-stu-id="fb5d3-147">You should see the following text in the window:</span></span>
 
-     [!code-csharp[csProgGuideMain#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#12)]
+```console
+Hello World!
 
-- <span data-ttu-id="6c1a4-132">还可以返回一个整数。</span><span class="sxs-lookup"><span data-stu-id="6c1a4-132">It can also return an integer.</span></span>
+Press any key to close this window . . .
+```
 
-     [!code-csharp[csProgGuideMain#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#13)]
+<span data-ttu-id="fb5d3-148">按任意键结束会话。</span><span class="sxs-lookup"><span data-stu-id="fb5d3-148">Press a key to end the session.</span></span>
 
-- <span data-ttu-id="6c1a4-133">无论使用哪种返回类型，它都可以带有参数。</span><span class="sxs-lookup"><span data-stu-id="6c1a4-133">With either of the return types, it can take arguments.</span></span>
+---
 
-     [!code-csharp[csProgGuideMain#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#19)]
+## <a name="elements-of-a-c-program"></a><span data-ttu-id="fb5d3-149">C# 程序的元素</span><span class="sxs-lookup"><span data-stu-id="fb5d3-149">Elements of a C# program</span></span>
 
-     <span data-ttu-id="6c1a4-134">-或-</span><span class="sxs-lookup"><span data-stu-id="6c1a4-134">-or-</span></span>
+<span data-ttu-id="fb5d3-150">我们来检查一下此程序的重要部分。</span><span class="sxs-lookup"><span data-stu-id="fb5d3-150">Let's examine the important parts of this program.</span></span> <span data-ttu-id="fb5d3-151">第一行包含一条注释。</span><span class="sxs-lookup"><span data-stu-id="fb5d3-151">The first line contains a comment.</span></span> <span data-ttu-id="fb5d3-152">字符 `//` 将该行的其余内容转换为一条注释。</span><span class="sxs-lookup"><span data-stu-id="fb5d3-152">The characters `//` convert the rest of the line to a comment.</span></span>
 
-     [!code-csharp[csProgGuideMain#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#18)]
+[!code-csharp[csProgGuide#32](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#32)]
 
-<span data-ttu-id="6c1a4-135">`Main` 方法中定义的参数 `args` 是一个 `string` 类型的数组，该数组包含用于调用该程序的命令行自变量。</span><span class="sxs-lookup"><span data-stu-id="6c1a4-135">The parameter of the `Main` method, `args`, is a `string` array that contains the command-line arguments used to invoke the program.</span></span> <span data-ttu-id="6c1a4-136">与 C++ 不同的是该数组不包括可执行 (exe) 文件的名称。</span><span class="sxs-lookup"><span data-stu-id="6c1a4-136">Unlike in C++, the array does not include the name of the executable (exe) file.</span></span>
+<span data-ttu-id="fb5d3-153">还可以通过将文本块置于 `/*` 和 `*/` 字符之间，禁止对其的注释。</span><span class="sxs-lookup"><span data-stu-id="fb5d3-153">You can also comment out a block of text by enclosing it between the `/*` and `*/` characters.</span></span> <span data-ttu-id="fb5d3-154">这在下面的示例中显示。</span><span class="sxs-lookup"><span data-stu-id="fb5d3-154">This is shown in the following example.</span></span>
 
-<span data-ttu-id="6c1a4-137">若要详细了解如何使用命令行参数，请参阅 [Main() 和命令行参数](../main-and-command-args/index.md)和[操作说明：使用命令行创建和使用程序集](../concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md)中的示例。</span><span class="sxs-lookup"><span data-stu-id="6c1a4-137">For more information about how to use command-line arguments, see the examples in [Main() and Command-Line Arguments](../main-and-command-args/index.md) and [How to: Create and Use Assemblies Using the Command Line](../concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md).</span></span>
+[!code-csharp[csProgGuide#33](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#33)]
 
-<span data-ttu-id="6c1a4-138">在调试模式下运行程序时，对 `Main` 方法末尾处 <xref:System.Console.ReadKey%2A> 的调用可以防止在有可能读取输出内容之前控制台窗口关闭，具体方法是按 F5 键。</span><span class="sxs-lookup"><span data-stu-id="6c1a4-138">The call to <xref:System.Console.ReadKey%2A> at the end of the `Main` method prevents the console window from closing before you have a chance to read the output when you run your program in debug mode, by pressing F5.</span></span>
+<span data-ttu-id="fb5d3-155">C# 控制台应用程序必须包含 `Main` 方法，控件在其中开始和结束。</span><span class="sxs-lookup"><span data-stu-id="fb5d3-155">A C# console application must contain a `Main` method, in which control starts and ends.</span></span> <span data-ttu-id="fb5d3-156">在 `Main` 方法中，可以创建对象并执行其他方法。</span><span class="sxs-lookup"><span data-stu-id="fb5d3-156">The `Main` method is where you create objects and execute other methods.</span></span>
 
-## <a name="input-and-output"></a><span data-ttu-id="6c1a4-139">输入和输出</span><span class="sxs-lookup"><span data-stu-id="6c1a4-139">Input and output</span></span>
+<span data-ttu-id="fb5d3-157">`Main` 方法是驻留在类或结构中的[静态](../../language-reference/keywords/static.md)方法。</span><span class="sxs-lookup"><span data-stu-id="fb5d3-157">The `Main` method is a [static](../../language-reference/keywords/static.md) method that resides inside a class or a struct.</span></span> <span data-ttu-id="fb5d3-158">在上一个“Hello World!”</span><span class="sxs-lookup"><span data-stu-id="fb5d3-158">In the previous "Hello World!"</span></span> <span data-ttu-id="fb5d3-159">示例中，该方法驻留在名为 `Hello` 的类中。</span><span class="sxs-lookup"><span data-stu-id="fb5d3-159">example, it resides in a class named `Hello`.</span></span> <span data-ttu-id="fb5d3-160">可以通过以下方式之一来声明 `Main` 方法：</span><span class="sxs-lookup"><span data-stu-id="fb5d3-160">You can declare the `Main` method in one of the following ways:</span></span>
 
-<span data-ttu-id="6c1a4-140">C# 程序通常使用由 .NET Framework 的运行时库提供的输入/输出服务。</span><span class="sxs-lookup"><span data-stu-id="6c1a4-140">C# programs generally use the input/output services provided by the run-time library of the .NET Framework.</span></span> <span data-ttu-id="6c1a4-141">语句 `System.Console.WriteLine("Hello World!");` 使用 <xref:System.Console.WriteLine%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="6c1a4-141">The statement `System.Console.WriteLine("Hello World!");` uses the <xref:System.Console.WriteLine%2A> method.</span></span> <span data-ttu-id="6c1a4-142">这是运行时库中 <xref:System.Console> 类的输出方法之一。</span><span class="sxs-lookup"><span data-stu-id="6c1a4-142">This is one of the output methods of the <xref:System.Console> class in the run-time library.</span></span> <span data-ttu-id="6c1a4-143">该方法将在标准输出流中显示其字符串参数，后接新行。</span><span class="sxs-lookup"><span data-stu-id="6c1a4-143">It displays its string parameter on the standard output stream followed by a new line.</span></span> <span data-ttu-id="6c1a4-144">其他 <xref:System.Console> 方法可用于不同的输入和输出操作。</span><span class="sxs-lookup"><span data-stu-id="6c1a4-144">Other <xref:System.Console> methods are available for different input and output operations.</span></span> <span data-ttu-id="6c1a4-145">如果程序开头包含 `using System;` 指令，则可以直接使用 <xref:System> 类和方法，而不必进行完全限定。</span><span class="sxs-lookup"><span data-stu-id="6c1a4-145">If you include the `using System;` directive at the beginning of the program, you can directly use the <xref:System> classes and methods without fully qualifying them.</span></span> <span data-ttu-id="6c1a4-146">例如，可以调用 `Console.WriteLine`，而非 `System.Console.WriteLine`：</span><span class="sxs-lookup"><span data-stu-id="6c1a4-146">For example, you can call `Console.WriteLine` instead of `System.Console.WriteLine`:</span></span>
+- <span data-ttu-id="fb5d3-161">它可返回 `void`。</span><span class="sxs-lookup"><span data-stu-id="fb5d3-161">It can return `void`.</span></span> <span data-ttu-id="fb5d3-162">这表示程序不会返回值。</span><span class="sxs-lookup"><span data-stu-id="fb5d3-162">That means your program doesn't return a value.</span></span>
 
- [!code-csharp[csProgGuide#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/using.cs#1)]
+[!code-csharp[csProgGuideMain#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#12)]
 
- [!code-csharp[csProgGuide#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#23)]
+- <span data-ttu-id="fb5d3-163">还可以返回一个整数。</span><span class="sxs-lookup"><span data-stu-id="fb5d3-163">It can also return an integer.</span></span> <span data-ttu-id="fb5d3-164">整数是应用程序的“退出代码”  。</span><span class="sxs-lookup"><span data-stu-id="fb5d3-164">The integer is the **exit code** for your application.</span></span>
 
-<span data-ttu-id="6c1a4-147">有关输入/输出方法的详细信息，请参阅 <xref:System.IO>。</span><span class="sxs-lookup"><span data-stu-id="6c1a4-147">For more information about input/output methods, see <xref:System.IO>.</span></span>
+[!code-csharp[csProgGuideMain#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#13)]
 
-## <a name="command-line-compilation-and-execution"></a><span data-ttu-id="6c1a4-148">命令行编译和执行</span><span class="sxs-lookup"><span data-stu-id="6c1a4-148">Command-line compilation and execution</span></span>
+- <span data-ttu-id="fb5d3-165">无论使用哪种返回类型，它都可以带有参数。</span><span class="sxs-lookup"><span data-stu-id="fb5d3-165">With either of the return types, it can take arguments.</span></span>
 
-<span data-ttu-id="6c1a4-149">通过使用命令行</span><span class="sxs-lookup"><span data-stu-id="6c1a4-149">You can compile the "Hello World!"</span></span> <span data-ttu-id="6c1a4-150">而非 Visual Studio 集成开发环境 (IDE)，可以编译“Hello World!”程序。</span><span class="sxs-lookup"><span data-stu-id="6c1a4-150">program by using the command line instead of the Visual Studio Integrated Development Environment (IDE).</span></span>
+[!code-csharp[csProgGuideMain#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#19)]
 
-### <a name="to-compile-and-run-from-a-command-prompt"></a><span data-ttu-id="6c1a4-151">从命令提示符中编译并运行</span><span class="sxs-lookup"><span data-stu-id="6c1a4-151">To compile and run from a command prompt</span></span>
+<span data-ttu-id="fb5d3-166">-或-</span><span class="sxs-lookup"><span data-stu-id="fb5d3-166">-or-</span></span>
 
-1. <span data-ttu-id="6c1a4-152">将上一过程的代码粘贴到任何文本编辑器中，然后将该文件保存为文本文件。</span><span class="sxs-lookup"><span data-stu-id="6c1a4-152">Paste the code from the preceding procedure into any text editor, and then save the file as a text file.</span></span> <span data-ttu-id="6c1a4-153">为 `Hello.cs` 文件命名。</span><span class="sxs-lookup"><span data-stu-id="6c1a4-153">Name the file `Hello.cs`.</span></span> <span data-ttu-id="6c1a4-154">C# 源代码文件使用 `.cs` 扩展。</span><span class="sxs-lookup"><span data-stu-id="6c1a4-154">C# source code files use the extension `.cs`.</span></span>
+[!code-csharp[csProgGuideMain#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#18)]
 
-2. <span data-ttu-id="6c1a4-155">执行以下任一步骤以打开命令提示符窗口：</span><span class="sxs-lookup"><span data-stu-id="6c1a4-155">Perform one of the following steps to open a command-prompt window:</span></span>
+<span data-ttu-id="fb5d3-167">`Main` 方法中定义的参数 `args` 是一个 `string` 类型的数组，该数组包含用于调用该程序的命令行自变量。</span><span class="sxs-lookup"><span data-stu-id="fb5d3-167">The parameter of the `Main` method, `args`, is a `string` array that contains the command-line arguments used to invoke the program.</span></span>
 
-    - <span data-ttu-id="6c1a4-156">在 Windows 10 的“开始”菜单上，搜索 `Developer Command Prompt`，然后点击或选择“VS 2017 开发人员命令提示”   。</span><span class="sxs-lookup"><span data-stu-id="6c1a4-156">In Windows 10, on the **Start** menu, search for `Developer Command Prompt`, and then tap or choose **Developer Command Prompt for VS 2017**.</span></span>
+<span data-ttu-id="fb5d3-168">若要了解更多有关如何使用命令行参数的信息，请参阅 [Main() 和命令行参数](../main-and-command-args/index.md)中的示例。</span><span class="sxs-lookup"><span data-stu-id="fb5d3-168">For more information about how to use command-line arguments, see the examples in [Main() and Command-Line Arguments](../main-and-command-args/index.md).</span></span>
 
-         <span data-ttu-id="6c1a4-157">将出现“开发人员命令提示”窗口。</span><span class="sxs-lookup"><span data-stu-id="6c1a4-157">A Developer Command Prompt window appears.</span></span>
+## <a name="input-and-output"></a><span data-ttu-id="fb5d3-169">输入和输出</span><span class="sxs-lookup"><span data-stu-id="fb5d3-169">Input and output</span></span>
 
-    - <span data-ttu-id="6c1a4-158">在 Windows 7 中，打开“启动”菜单，展开当前版本的 Visual Studio 的文件夹，打开“Visual Studio Tools”快捷菜单，然后选择“VS 2017 开发人员命令提示”    。</span><span class="sxs-lookup"><span data-stu-id="6c1a4-158">In Windows 7, open the **Start** menu, expand the folder for the current version of Visual Studio, open the shortcut menu for **Visual Studio Tools**, and then choose **Developer Command Prompt for VS 2017**.</span></span>
+<span data-ttu-id="fb5d3-170">C# 程序通常使用由 .NET Framework 的运行时库提供的输入/输出服务。</span><span class="sxs-lookup"><span data-stu-id="fb5d3-170">C# programs generally use the input/output services provided by the run-time library of the .NET Framework.</span></span> <span data-ttu-id="fb5d3-171">语句 `System.Console.WriteLine("Hello World!");` 使用 <xref:System.Console.WriteLine%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="fb5d3-171">The statement `System.Console.WriteLine("Hello World!");` uses the <xref:System.Console.WriteLine%2A> method.</span></span> <span data-ttu-id="fb5d3-172">这是运行时库中 <xref:System.Console> 类的输出方法之一。</span><span class="sxs-lookup"><span data-stu-id="fb5d3-172">This is one of the output methods of the <xref:System.Console> class in the run-time library.</span></span> <span data-ttu-id="fb5d3-173">该方法将在标准输出流中显示其字符串参数，后接新行。</span><span class="sxs-lookup"><span data-stu-id="fb5d3-173">It displays its string parameter on the standard output stream followed by a new line.</span></span> <span data-ttu-id="fb5d3-174">其他 <xref:System.Console> 方法可用于不同的输入和输出操作。</span><span class="sxs-lookup"><span data-stu-id="fb5d3-174">Other <xref:System.Console> methods are available for different input and output operations.</span></span> <span data-ttu-id="fb5d3-175">如果程序开头包含 `using System;` 指令，则可以直接使用 <xref:System> 类和方法，而不必进行完全限定。</span><span class="sxs-lookup"><span data-stu-id="fb5d3-175">If you include the `using System;` directive at the beginning of the program, you can directly use the <xref:System> classes and methods without fully qualifying them.</span></span> <span data-ttu-id="fb5d3-176">例如，可以调用 `Console.WriteLine`，而非 `System.Console.WriteLine`：</span><span class="sxs-lookup"><span data-stu-id="fb5d3-176">For example, you can call `Console.WriteLine` instead of `System.Console.WriteLine`:</span></span>
 
-         <span data-ttu-id="6c1a4-159">将出现“开发人员命令提示”窗口。</span><span class="sxs-lookup"><span data-stu-id="6c1a4-159">A Developer Command Prompt window appears.</span></span>
+[!code-csharp[csProgGuide#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/using.cs#1)]
 
-    - <span data-ttu-id="6c1a4-160">从标准命令提示符窗口启用命令行生成。</span><span class="sxs-lookup"><span data-stu-id="6c1a4-160">Enable command-line builds from a standard Command Prompt window.</span></span>
+[!code-csharp[csProgGuide#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#23)]
 
-         <span data-ttu-id="6c1a4-161">请参阅[操作说明：设置 Visual Studio 命令行的环境变量](../../language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)。</span><span class="sxs-lookup"><span data-stu-id="6c1a4-161">See [How to: Set Environment Variables for the Visual Studio Command Line](../../language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md).</span></span>
+<span data-ttu-id="fb5d3-177">有关输入/输出方法的详细信息，请参阅 <xref:System.IO>。</span><span class="sxs-lookup"><span data-stu-id="fb5d3-177">For more information about input/output methods, see <xref:System.IO>.</span></span>
 
-3. <span data-ttu-id="6c1a4-162">在命令提示窗口中，导航到包含 `Hello.cs` 文件的文件夹。</span><span class="sxs-lookup"><span data-stu-id="6c1a4-162">In the command-prompt window, navigate to the folder that contains your `Hello.cs` file.</span></span>
+## <a name="see-also"></a><span data-ttu-id="fb5d3-178">请参阅</span><span class="sxs-lookup"><span data-stu-id="fb5d3-178">See also</span></span>
 
-4. <span data-ttu-id="6c1a4-163">输入以下命令以编译 `Hello.cs`。</span><span class="sxs-lookup"><span data-stu-id="6c1a4-163">Enter the following command to compile `Hello.cs`.</span></span>
-
-     `csc Hello.cs`
-
-     <span data-ttu-id="6c1a4-164">如果程序不存在编译错误，系统将创建名为 `Hello.exe` 的可执行文件。</span><span class="sxs-lookup"><span data-stu-id="6c1a4-164">If your program has no compilation errors, an executable file that is named `Hello.exe` is created.</span></span>
-
-5. <span data-ttu-id="6c1a4-165">在命令提示窗口中，输入以下命令以运行该程序：</span><span class="sxs-lookup"><span data-stu-id="6c1a4-165">In the command-prompt window, enter the following command to run the program:</span></span>
-
-     `Hello`
-
- <span data-ttu-id="6c1a4-166">有关 C# 编译器及其选项的详细信息，请参阅 [C# 编译器选项](../../language-reference/compiler-options/index.md)。</span><span class="sxs-lookup"><span data-stu-id="6c1a4-166">For more information about the C# compiler and its options, see [C# Compiler Options](../../language-reference/compiler-options/index.md).</span></span>
-
-## <a name="see-also"></a><span data-ttu-id="6c1a4-167">请参阅</span><span class="sxs-lookup"><span data-stu-id="6c1a4-167">See also</span></span>
-
-- [<span data-ttu-id="6c1a4-168">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="6c1a4-168">C# Programming Guide</span></span>](../index.md)
-- [<span data-ttu-id="6c1a4-169">在 C# 程序内部</span><span class="sxs-lookup"><span data-stu-id="6c1a4-169">Inside a C# Program</span></span>](./index.md)
-- [<span data-ttu-id="6c1a4-170">字符串</span><span class="sxs-lookup"><span data-stu-id="6c1a4-170">Strings</span></span>](../strings/index.md)
-- [<span data-ttu-id="6c1a4-171">示例和教程</span><span class="sxs-lookup"><span data-stu-id="6c1a4-171">Samples and tutorials</span></span>](../../../samples-and-tutorials/index.md)
-- [<span data-ttu-id="6c1a4-172">C# 参考</span><span class="sxs-lookup"><span data-stu-id="6c1a4-172">C# Reference</span></span>](../../language-reference/index.md)
-- [<span data-ttu-id="6c1a4-173">Main() 和命令行参数</span><span class="sxs-lookup"><span data-stu-id="6c1a4-173">Main() and Command-Line Arguments</span></span>](../main-and-command-args/index.md)
-- [<span data-ttu-id="6c1a4-174">Visual C# 和 Visual Basic 入门</span><span class="sxs-lookup"><span data-stu-id="6c1a4-174">Getting Started with Visual C# and Visual Basic</span></span>](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
+- [<span data-ttu-id="fb5d3-179">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="fb5d3-179">C# Programming Guide</span></span>](../index.md)
+- [<span data-ttu-id="fb5d3-180">示例和教程</span><span class="sxs-lookup"><span data-stu-id="fb5d3-180">Samples and tutorials</span></span>](../../../samples-and-tutorials/index.md)
+- [<span data-ttu-id="fb5d3-181">Main() 和命令行参数</span><span class="sxs-lookup"><span data-stu-id="fb5d3-181">Main() and Command-Line Arguments</span></span>](../main-and-command-args/index.md)
+- [<span data-ttu-id="fb5d3-182">Visual C# 和 Visual Basic 入门</span><span class="sxs-lookup"><span data-stu-id="fb5d3-182">Getting Started with Visual C# and Visual Basic</span></span>](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)

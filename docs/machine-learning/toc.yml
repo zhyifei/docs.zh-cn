@@ -35,12 +35,16 @@
           href: tutorials/sales-anomaly-detection.md
         - name: 检测图像中的对象 (对象检测)
           href: tutorials/object-detection-onnx.md
+        - name: 使用 TensorFlow 对情绪分类（文本分类）
+          href: tutorials/text-classification-tf.md
     - name: 工具
       items:
         - name: 使用模型生成器预测价格
           href: tutorials/predict-prices-with-model-builder.md
         - name: 使用 ML.NET CLI 分析情绪
           href: tutorials/mlnet-cli.md
+        - name: 使用模型生成器和 Razor Pages 分析情绪
+          href: tutorials/sentiment-analysis-model-builder.md
 - name: 概念
   items:
     - name: ML.NET 任务（模型类型）
