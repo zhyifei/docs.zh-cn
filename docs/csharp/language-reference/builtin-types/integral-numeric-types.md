@@ -49,7 +49,7 @@ C# 支持以下预定义整型类型：
 
 |C# 类型/关键字|范围|大小|.NET 类型|
 |----------|-----------|----------|-------------|
-|`sbyte`|-128 到 127|8 位带符号整数|<xref:System.SByte?displayProperty=nameWithType>|
+|`sbyte`|-128 到 127|有符号的 8 位整数|<xref:System.SByte?displayProperty=nameWithType>|
 |`byte`|0 到 255|无符号的 8 位整数|<xref:System.Byte?displayProperty=nameWithType>|
 |`short`|-32,768 到 32,767|有符号 16 位整数|<xref:System.Int16?displayProperty=nameWithType>|
 |`ushort`|0 到 65,535|无符号 16 位整数|<xref:System.UInt16?displayProperty=nameWithType>|

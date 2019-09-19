@@ -6,7 +6,7 @@ ms.author: jekoritz
 ms.date: 01/18/2019
 ms.openlocfilehash: 0405fd5aef9d89fc1f47123ed358e6358656d95b
 ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 09/12/2019
 ms.locfileid: "70923772"
@@ -34,7 +34,7 @@ ms.locfileid: "70923772"
 | <xref:System.Runtime.InteropServices.DllImportAttribute.PreserveSig>   | `true` |  保留默认设置  | 将其显式设置为 False 时，失败的 HRESULT 返回值将变为异常（因此，定义中的返回值将变为 Null）。|
 | <xref:System.Runtime.InteropServices.DllImportAttribute.SetLastError> | `false`  | 取决于 API  | 如果 API 使用 GetLastError，并使用 Marshal.GetLastWin32Error 获取值，则将其设置为 True。 如果 API 设置一个表示其有错误的条件，则在进行其他调用之前获取错误以避免无意覆盖该错误。|
 | <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> | `CharSet.None`，这会退回到 `CharSet.Ansi` 行为  | 定义中存在字符串或字符时显式使用 `CharSet.Unicode` 或 `CharSet.Ansi` | 这将指定字符串的封送行为以及为 `false` 时 `ExactSpelling` 的操作。 请注意，`CharSet.Ansi` 在 Unix 上实际为 UTF8。  大部分时间，Windows 使用 Unicode，而 Unix 使用 UTF8。 有关更多信息，请查看[有关字符集的文档](./charset.md)。 |
-| <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling> | `false` | `true`             | 将其设置为 True 并在运行时获得些许性能优势不会查找后缀为“A”或“W”的备用函数名称，具体取决于 `CharSet` 设置的值（“A”用于 `CharSet.Ansi`，“W”用于 `CharSet.Unicode`）。 |
+| <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling> | `false` | `true`             | 将其设置为 True 并获得些许性能优势，因为运行时不会查找后缀为“A”或“W”的备用函数名称，具体取决于 `CharSet` 设置的值（“A”用于 `CharSet.Ansi`，“W”用于 `CharSet.Unicode`）。 |
 
 ## <a name="string-parameters"></a>字符串参数
 
@@ -55,7 +55,7 @@ ms.locfileid: "70923772"
 
 这是 {4}  分配，可从本机代码中获取字符串。 可用来限制此操作的最佳方法是在其他调用中重用 `StringBuilder`，但这仍只能保存 1  个分配。 最好从 `ArrayPool` 使用并缓存字符缓冲区 - 然后可以在后续调用中直接获得 `ToString()` 的分配。
 
-`StringBuilder` 的另一个问题是它始终会将返回缓冲区备份复制到第一个 Null。 如果传递的返回字符串未终止或为双 Null 终止字符串，则 P/Invoke 很可能不正确。
+`StringBuilder` 的另一个问题是它始终会将返回缓冲区备份复制到第一个 Null。 如果传回的字符串未终止或为双 Null 终止字符串，则 P/Invoke 很可能不正确。
 
 如果  使用 `StringBuilder`，则最后一个问题是容量确实不会  包括隐藏的 Null，该值始终计入互操作。 人们常常会犯这个错误，因为大多数 API 希望缓冲区的大小包括  Null。 这可能会导致产生浪费/不必要的分配。 此外，此问题会阻止运行时通过优化 `StringBuilder` 封送来最大限度地减少副本。
 
@@ -90,11 +90,11 @@ GUID 可在签名中直接使用。 许多 Windows API 使用 `GUID&` 类型别�
 
 Blittable 类型是托管代码和本机代码中具有相同位级别表示形式的类型。 因此，无需将这些类型转换为其他格式即可往返本机代码进行封送，而且由于这样可以提高性能，应首选这些类型。
 
-**：**
+**Blittable 类型：**
 
-- `byte`, `sbyte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `single`, `double`
+- `byte`、`sbyte`、`short`、`ushort`、`int`、`uint`、`long`、`ulong`、`single`、`double`
 - Blittable 类型的非嵌套一维数组（例如，`int[]`）
-- 具有实例字段只有 blittable 值类型的固定布局的结构和类
+- 采用仅包含 Blittable 值类型（例如字段）的固定布局的结构和类
   - 固定的布局需要 `[StructLayout(LayoutKind.Sequential)]` 或 `[StructLayout(LayoutKind.Explicit)]`
   - 默认情况下结构为 `LayoutKind.Sequential`，类为 `LayoutKind.Auto`
 
@@ -104,7 +104,7 @@ Blittable 类型是托管代码和本机代码中具有相同位级别表示形�
 
 **有时为 blittable：**
 
-- `char`， `string`
+- `char`、`string`
 
 通过引用传递 blittable 类型时，这些类型只会被封送处理程序固定，而不会复制到中间缓冲区。 （类在本质上通过引用传递，结构在与 `ref` 或 `out` 结合使用时会通过引用传递。）
 
@@ -126,7 +126,7 @@ public struct UnicodeCharStruct
 
 有关详细信息，请参见:
 
-- [可直接复制到本机结构中的类型和非直接复制到本机结构中的类型](../../framework/interop/blittable-and-non-blittable-types.md)  
+- [Blittable 类型和非 Blittable 类型](../../framework/interop/blittable-and-non-blittable-types.md)  
 - [类型封送](type-marshaling.md)
 
 ## <a name="keeping-managed-objects-alive"></a>使托管对象保持活动状态

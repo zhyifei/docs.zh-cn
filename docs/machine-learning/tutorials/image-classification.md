@@ -299,7 +299,7 @@ ML.NET 中的数据表示为 [IDataView 类](xref:Microsoft.ML.IDataView)。 `ID
 
 [!code-csharp[LoadData](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#LoadData "Load the data")]
 
-### <a name="extract-features-and-transform-the-data"></a>提取功能和转换数据
+### <a name="extract-features-and-transform-the-data"></a>提取特征和转换数据
 
 预处理和清除数据任务至关重要，需要首先执行才能将数据集有效地用于机器学习。  在没有这些建模任务的情况下使用数据会产生误导性结果。
 

@@ -47,7 +47,7 @@ ms.locfileid: "69608371"
 
 一元增量运算符 `++` 按 1 递增其操作数。 操作数必须是变量、[属性](../../programming-guide/classes-and-structs/properties.md)访问或[索引器](../../programming-guide/indexers/index.md)访问。
 
-增量运算符以两种形式进行支持：后缀增量运算符 `x++` 和前缀增量运算符 `++x`。
+支持两种形式的增量运算符：后缀增量运算符 `x++` 和前缀增量运算符 `++x`。
 
 ### <a name="postfix-increment-operator"></a>后缀递增运算符
 
@@ -65,7 +65,7 @@ ms.locfileid: "69608371"
 
 一元减量运算符 `--` 按 1 递减其操作数。 操作数必须是变量、[属性](../../programming-guide/classes-and-structs/properties.md)访问或[索引器](../../programming-guide/indexers/index.md)访问。
 
-减量运算符以两种形式进行支持：后缀减量运算符`x--` 和前缀减量运算符 `--x`。
+支持两种形式的减量运算符：后缀减量运算符`x--` 和前缀减量运算符 `--x`。
 
 ### <a name="postfix-decrement-operator"></a>后缀递减运算符
 
@@ -191,7 +191,7 @@ x = x op y
 
 ## <a name="operator-precedence-and-associativity"></a>运算符优先级和关联性
 
-以下列表对优先级由高到低的顺序对算术运算符进行排序：
+以下列表按优先级由高到低的顺序对算术运算符进行排序：
 
 - 后缀增量 `x++` 和减量 `x--` 运算符
 - 前缀增量 `++x` 和减量 `--x` 以及一元 `+` 和 `-` 运算符

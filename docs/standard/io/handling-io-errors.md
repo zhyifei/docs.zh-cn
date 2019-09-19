@@ -39,7 +39,7 @@ ms.locfileid: "53126870"
 
 由于文件系统为操作系统资源，.NET Core 和 .NET Framework 中的 I/O 方法将包装对基础操作系统的调用。 当由操作系统执行的代码出现 I/O 错误时，操作系统将对 .NET I/O 方法返回错误信息。 然后，该方法会将错误信息（通常采用错误代码形式）转换为 .NET 异常类型。 大多数情况下，可以通过直接将错误代码转换为其相应异常类型来完成此操作；它不基于方法调用的上下文执行任何特殊的错误映射。
 
-例如，在 Windows 操作系统，返回 `ERROR_FILE_NOT_FOUND`（或 0x02）错误代码的方法调用会映射到 <xref:System.IO.FileNotFoundException>，`ERROR_PATH_NOT_FOUND` 错误代码（或 0x03）则映射到 <xref:System.IO.DirectoryNotFoundException>。
+例如，在 Windows 操作系统，返回错误代码 `ERROR_FILE_NOT_FOUND`（或 0x02）的方法调用会映射到 <xref:System.IO.FileNotFoundException>，错误代码 `ERROR_PATH_NOT_FOUND`（或 0x03）则映射到 <xref:System.IO.DirectoryNotFoundException>。
 
 但是，操作系统返回特定错误代码的精确条件通常未记录或记录不当。 因此，会出现意外异常。 例如，因为使用的是目录而不是文件，可以预料到向 <xref:System.IO.DirectoryInfo.%23ctor%2A?displayProperty=nameWithType> 构造函数提供无效目录路径将引发 <xref:System.IO.DirectoryNotFoundException>。 但是，它也可能引发 <xref:System.IO.FileNotFoundException>。
 
@@ -73,7 +73,7 @@ ms.locfileid: "53126870"
 
 在 <xref:System.IO.IOException> 情况下，可以从 [IOException.HResult](xref:System.Exception.HResult) 属性获取更多错误信息。 若要将 HResult 值转换为 Win32 错误代码，可以删除 32 位值的前 16 位。 下表列出了可能包装在 <xref:System.IO.IOException> 中的错误代码。
 
-| HResult | 返回的常量 | 说明 |
+| HResult | 常量 | 说明 |
 | --- | --- | --- |
 | ERROR_SHARING_VIOLATION | 32 | 缺少文件名称，或文件或目录正在使用中。 |
 | ERROR_FILE_EXISTS | 80 | 该文件已存在。 |
