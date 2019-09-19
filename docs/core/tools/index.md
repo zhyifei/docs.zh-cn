@@ -3,12 +3,12 @@ title: .NET Core 命令行接口 (CLI) 工具
 description: 概述了 .NET Core 命令行接口 (CLI) 工具和功能。
 ms.date: 08/14/2017
 ms.custom: seodec18
-ms.openlocfilehash: 50d1bbdd87ecd275b97603a1b47c6f13f879365a
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 4ff5cfd6c5a70c92387911ab87ddea5cee80275e
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70969883"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117386"
 ---
 # <a name="net-core-command-line-interface-cli-tools"></a>.NET Core 命令行接口 (CLI) 工具
 
@@ -105,7 +105,7 @@ CLI 命令结构包含[驱动程序（“dotnet”）](#driver)和[命令](#comm
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
-```console
+```dotnetcli
 dotnet new console
 dotnet build --output /build_output
 dotnet /build_output/my_app.dll
@@ -113,7 +113,7 @@ dotnet /build_output/my_app.dll
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
-```console
+```dotnetcli
 dotnet new console
 dotnet restore
 dotnet build --output /build_output
@@ -130,8 +130,8 @@ dotnet /build_output/my_app.dll
 
 为驱动程序提供命令时，`dotnet.exe` 启动 CLI 命令执行过程。 例如:
 
-```bash
-> dotnet build
+```dotnetcli
+dotnet build
 ```
 
 首先，驱动程序确定要使用的 SDK 版本。 如果没有任何[“global.json”](global-json.md)，则使用可用的最新版本 SDK。 这有可能是预览版或稳定版，具体取决于计算机上的最新版本。  确定 SDK 版本后，它便会执行命令。
