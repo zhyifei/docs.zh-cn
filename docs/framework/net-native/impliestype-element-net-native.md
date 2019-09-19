@@ -4,14 +4,14 @@ ms.date: 03/30/2017
 ms.assetid: 3abd2071-0f28-40ba-b9a0-d52bd94cd2f6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c1cd2177707edfd29dc393e2bcfd6bbacb749b30
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 10fa3a0ac04038bb686311a4d86c99442c0fcf26
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616689"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049667"
 ---
-# <a name="impliestype-element-net-native"></a>\<暗示类型 > 元素 (.NET Native)
+# <a name="impliestype-element-net-native"></a>\<暗示类型 > 元素（.NET Native）
 如果该策略已应用到该包含类型或方法，将该策略应用到一个类型。  
   
 ## <a name="syntax"></a>语法  
@@ -59,7 +59,7 @@ ms.locfileid: "64616689"
   
 |值|描述|  
 |-----------|-----------------|  
-|policy_setting|该设置将应用到这种策略类型。 可能值为 `All`、`Auto`、`Excluded`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal` 以及 `Required All`。 有关详细信息，请参阅[运行时指令策略设置](../../../docs/framework/net-native/runtime-directive-policy-settings.md)。|  
+|policy_setting|该设置将应用到这种策略类型。 可能值为 `All`、`Auto`、`Excluded`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal` 以及 `Required All`。 有关详细信息，请参阅[运行时指令策略设置](runtime-directive-policy-settings.md)。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  
@@ -68,9 +68,9 @@ ms.locfileid: "64616689"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|将反射策略应用到一种类型及其所有成员。|  
-|[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|将反射策略应用到一种构造泛型类型及其所有成员。|  
-|[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|将反射策略应用到一个方法。|  
+|[\<Type>](type-element-net-native.md)|将反射策略应用到一种类型及其所有成员。|  
+|[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|将反射策略应用到一种构造泛型类型及其所有成员。|  
+|[\<Method>](method-element-net-native.md)|将反射策略应用到一个方法。|  
   
 ## <a name="remarks"></a>备注  
  该 `<ImpliesType>` 元素主要是供库使用的。 它讨论的是以下情景：  
@@ -99,7 +99,7 @@ ms.locfileid: "64616689"
 </Type>  
 ```  
   
- `<ImpliesType>` 元素也可能出现在 `<Method>` 元素内部，因为在某些情况下泛型方法暗示着反射到了一个类型实例化上。 例如，假设一个泛型方法`IEnumerable<T> MakeEnumerable<T>(string spelling, T defaultValue)`的给定的库可以动态访问以及相关<xref:System.Collections.Generic.List%601>和<xref:System.Array>类型。 这可以表示为：  
+ `<ImpliesType>` 元素也可能出现在 `<Method>` 元素内部，因为在某些情况下泛型方法暗示着反射到了一个类型实例化上。 例如，假设某个给定库将`IEnumerable<T> MakeEnumerable<T>(string spelling, T defaultValue)`与关联<xref:System.Collections.Generic.List%601>的和<xref:System.Array>类型一起动态访问的泛型方法。 这可以表示为：  
   
 ```xml  
 <Type Name="MyType">  
@@ -112,6 +112,6 @@ ms.locfileid: "64616689"
   
 ## <a name="see-also"></a>请参阅
 
-- [运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [运行时指令元素](../../../docs/framework/net-native/runtime-directive-elements.md)
-- [运行时指令策略设置](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+- [运行时指令 (rd.xml) 配置文件参考](runtime-directives-rd-xml-configuration-file-reference.md)
+- [运行时指令元素](runtime-directive-elements.md)
+- [运行时指令策略设置](runtime-directive-policy-settings.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5abdad23-1335-4744-8acb-934002c0b6fe
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 90f59f4d593a8aa077a6710cc0f5c1747ac1a3ad
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d3b65ecc226c1caf7b53d746f0583e1f57c7d8c1
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61753994"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052470"
 ---
 # <a name="memberinfocachecreation-mda"></a>memberInfoCacheCreation MDA
 创建 <xref:System.Reflection.MemberInfo> 缓存时，将激活 `memberInfoCacheCreation` 托管调试助手 (MDA)。 这一点强烈表明程序正在使用资源昂贵的反射功能。  
@@ -67,4 +67,4 @@ public class Exe
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Reflection.MemberInfo>
-- [使用托管调试助手诊断错误](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [使用托管调试助手诊断错误](diagnosing-errors-with-managed-debugging-assistants.md)

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: f3a93fa7-1717-467d-aaff-393e5c9828b4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 626e9823bbf7d379a21ae353a9189485259f3c42
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4517da87603dcdd398d536cd9bf9e441430be375
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69948011"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052742"
 ---
 # <a name="how-to-add-trace-statements-to-application-code"></a>如何：向应用程序代码添加跟踪语句
-跟踪使用最常用的方法是将输出写入侦听器的方法:**Write**、 **WriteIf**、 **WriteLine**、 **WriteLineIf**、 **Assert**和**Fail**。 这些方法可以分为两个类别:以无条件的形式**写入**、 **WriteLine**和**失败**所有发出输出, 而**WriteIf**、 **WriteLineIf**和**Assert**则测试布尔条件, 并根据条件的值来写入或不写入。 WriteIf 和 WriteLineIf 在条件为 `true` 时发出输出，而 Assert 在条件为 `false` 时发出输出。  
+跟踪使用最常用的方法是将输出写入侦听器的方法：**Write**、 **WriteIf**、 **WriteLine**、 **WriteLineIf**、 **Assert**和**Fail**。 这些方法可以分为两个类别：以无条件的形式**写入**、 **WriteLine**和**失败**所有发出输出，而**WriteIf**、 **WriteLineIf**和**Assert**则测试布尔条件，并根据条件的值来写入或不写入。 WriteIf 和 WriteLineIf 在条件为 `true` 时发出输出，而 Assert 在条件为 `false` 时发出输出。  
   
  当设计跟踪和调试策略时，应考虑所需的输出形式。 填充不相关信息的多个 Write 语句将创建难以读取的日志。 另一方面，如果使用 WriteLine 将相关语句放置在单独的行上，可能会难以区分哪些信息应该在一起。 通常，当需要将来自多个源的信息组合起来创建单个信息性消息时，使用多个 Write；当需要创建单个完整消息时，则使用 WriteLine 语句。  
   
@@ -90,7 +90,7 @@ ms.locfileid: "69948011"
 - <xref:System.Diagnostics.Debug.WriteLineIf%2A?displayProperty=nameWithType>
 - <xref:System.Diagnostics.Trace.WriteIf%2A?displayProperty=nameWithType>
 - <xref:System.Diagnostics.Trace.WriteLineIf%2A?displayProperty=nameWithType>
-- [跟踪应用程序和在应用程序中插入检测点](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
-- [如何：创建、初始化和配置跟踪开关](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)
-- [跟踪开关](../../../docs/framework/debug-trace-profile/trace-switches.md)
-- [跟踪侦听器](../../../docs/framework/debug-trace-profile/trace-listeners.md)
+- [跟踪应用程序和在应用程序中插入检测点](tracing-and-instrumenting-applications.md)
+- [如何：创建、初始化和配置跟踪开关](how-to-create-initialize-and-configure-trace-switches.md)
+- [跟踪开关](trace-switches.md)
+- [跟踪侦听器](trace-listeners.md)

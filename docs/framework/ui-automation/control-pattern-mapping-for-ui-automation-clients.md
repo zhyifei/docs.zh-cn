@@ -5,12 +5,12 @@ helpviewer_keywords:
 - control patterns, for UI Automation clients
 - UI Automation, clients, control patterns for
 ms.assetid: 8b81645b-8be3-4e26-9c98-4fb0fceca06b
-ms.openlocfilehash: 64c3dccac61ceb2934904c5d03fc96d961976d6b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: cfd8e5dbe34df7b947646c714a360cf56b0435a4
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69932617"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71043861"
 ---
 # <a name="control-pattern-mapping-for-ui-automation-clients"></a>UI 自动化客户端的控件模式映射
 > [!NOTE]
@@ -34,42 +34,42 @@ ms.locfileid: "69932617"
   
 |控件类型|支持|有条件支持|不支持|  
 |------------------|---------------|-------------------------|-------------------|  
-|Button|无|调用、切换、展开折叠|无|  
+|Button|None|调用、切换、展开折叠|None|  
 |Calendar|网格、表|选择、滚动|值|  
-|复选框|切换|无|无|  
+|复选框|切换|None|无|  
 |组合框|展开/折叠|选择、值|Scroll|  
-|数据网格|Grid|滚动、选择、表|无|  
+|数据网格|Grid|滚动、选择、表|None|  
 |数据项|选择项|展开折叠、网格项、滚动项、表、切换、值|无|  
 |Document|文本|滚动、值|无|  
-|Edit|无|文本、范围值、值|无|  
-|Group|无|展开/折叠|无|  
+|Edit|None|文本、范围值、值|无|  
+|Group|无|展开/折叠|None|  
 |Header|无|Transform|无|  
 |标头项|无|转换、调用|无|  
-|超链接|调用|值|无|  
+|超链接|调用|值|None|  
 |图像|无|网格项、表项|调用、选择项|  
 |列表|无|网格、多个视图、滚动、选择|表|  
-|列表项|选择项|展开折叠、网格项、调用、滚动项、切换、值|无|  
-|菜单|无|无|无|  
+|列表项|选择项|展开折叠、网格项、调用、滚动项、切换、值|None|  
+|菜单|无|无|None|  
 |菜单栏|无|展开折叠、停靠、转换|无|  
-|菜单项|无|展开折叠、调用、选择项、切换|无|  
-|Pane|无|停靠。 滚动、转换|窗口|  
-|进度栏|无|范围值、值|无|  
-|单选按钮|选择项|无|切换|  
-|滚动条|无|范围值|Scroll|  
+|菜单项|None|展开折叠、调用、选择项、切换|None|  
+|Pane|None|停靠。 滚动、转换|窗口|  
+|进度栏|None|范围值、值|无|  
+|单选按钮|选择项|None|切换|  
+|滚动条|None|范围值|Scroll|  
 |Separator|无|无|无|  
 |Slider|无|范围值、选择、值|无|  
-|Spinner|无|范围值、选择、值|无|  
-|拆分按钮|调用、展开折叠|无|无|  
-|状态栏|无|Grid|无|  
-|Tab|选择|Scroll|无|  
-|选项卡项|选择项|无|调用|  
+|Spinner|无|范围值、选择、值|None|  
+|拆分按钮|调用、展开折叠|None|无|  
+|状态栏|None|Grid|无|  
+|Tab|选择|Scroll|None|  
+|选项卡项|选择项|None|调用|  
 |表|网格、网格项、表、表项|无|无|  
 |文本|无|网格项、表项、文本|值|  
 |Thumb|Transform|无|无|  
-|标题栏|无|无|无|  
-|工具栏|无|停靠、展开折叠、转换|无|  
-|工具提示|无|文本、窗口|无|  
-|树|无|滚动、选择|无|  
+|标题栏|None|无|无|  
+|工具栏|无|停靠、展开折叠、转换|None|  
+|工具提示|None|文本、窗口|无|  
+|树|None|滚动、选择|None|  
 |树项|展开/折叠|调用，滚动项、选择项、切换|无|  
 |窗口|转换、窗口|停靠|无|  
   
@@ -78,4 +78,4 @@ ms.locfileid: "69932617"
   
 ## <a name="see-also"></a>请参阅
 
-- [UI 自动化概述](../../../docs/framework/ui-automation/ui-automation-overview.md)
+- [UI 自动化概述](ui-automation-overview.md)

@@ -10,19 +10,19 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Class attribute
 - x:Class attribute [XAML Services]
 ms.assetid: bc4a3d8e-76e2-423e-a5d1-159a023e82ec
-ms.openlocfilehash: 563802be655e0cb66c9a2735a64da9d7723c2a43
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 6e04085db0fa5a4c4170846dc4ac10d0131032a7
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401525"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053800"
 ---
 # <a name="xclass-directive"></a>x:Class 指令
 将 XAML 标记编译配置为在标记和代码隐藏之间加入分部类。 代码分部类在单独的代码文件中以公共语言规范 (CLS) 语言定义, 而标记分部类通常在 XAML 编译过程中由代码生成创建。  
   
 ## <a name="xaml-attribute-usage"></a>XAML 属性用法  
   
-```  
+```xaml  
 <object x:Class="namespace.classname"...>  
   ...  
 </object>  

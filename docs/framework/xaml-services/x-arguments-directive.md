@@ -6,19 +6,19 @@ helpviewer_keywords:
 - Arguments directive in XAML [XAML Services]
 - XAML [XAML Services], x:Arguments directive
 ms.assetid: 87cc10b0-b610-4025-b6b0-ab27ca27c92e
-ms.openlocfilehash: 5bcd629e306169c1f7a61a316d76203827a2d0fe
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: a18de9a07839f5b01620311832b85667680c12ad
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364266"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053837"
 ---
 # <a name="xarguments-directive"></a>x:Arguments 指令
 为 XAML 中的非参数构造函数对象元素声明或工厂方法对象声明包构造参数。  
   
 ## <a name="xaml-element-usage-nonparameterless-constructor"></a>XAML 元素使用情况 (Nonparameterless 构造函数)  
   
-```  
+```xaml  
 <object ...>  
   <x:Arguments>  
     oneOrMoreObjectElements  
@@ -28,7 +28,7 @@ ms.locfileid: "68364266"
   
 ## <a name="xaml-element-usage-factory-method"></a>XAML 元素使用情况 (工厂方法)  
   
-```  
+```xaml  
 <object x:FactoryMethod="methodName"...>  
   <x:Arguments>  
     oneOrMoreObjectElements  

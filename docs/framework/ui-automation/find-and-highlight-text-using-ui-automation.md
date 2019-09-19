@@ -12,12 +12,12 @@ helpviewer_keywords:
 - UI automation, finding text
 - highlighting text
 ms.assetid: b77693f5-87bb-4b29-a297-05ff882e2044
-ms.openlocfilehash: 1e8b69167f470afd5e3049a717978a41078db575
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 084a9cdeaf17d7456116c56e9a12115b478f7384
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69969007"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71043640"
 ---
 # <a name="find-and-highlight-text-using-ui-automation"></a>使用 UI 自动化查找和突出显示文本
 > [!NOTE]
@@ -26,7 +26,7 @@ ms.locfileid: "69969007"
  本主题演示如何使用[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]在文本控件的内容中按顺序搜索和突出显示字符串的每个匹配项。  
   
 ## <a name="example"></a>示例  
- 下面的示例从文本<xref:System.Windows.Automation.TextPattern>控件获取对象。 然后<xref:System.Windows.Automation.Text.TextPatternRange> ,使用此<xref:System.Windows.Automation.TextPattern>的属性创建一个对象, 该对象表示整个文档的文本内容。 <xref:System.Windows.Automation.TextPattern.DocumentRange%2A> 然后, <xref:System.Windows.Automation.Text.TextPatternRange>将为顺序搜索和突出显示功能创建其他两个对象。  
+ 下面的示例从文本<xref:System.Windows.Automation.TextPattern>控件获取对象。 然后<xref:System.Windows.Automation.Text.TextPatternRange> ，使用此<xref:System.Windows.Automation.TextPattern>的属性创建一个对象，该对象表示整个文档的文本内容。 <xref:System.Windows.Automation.TextPattern.DocumentRange%2A> 然后， <xref:System.Windows.Automation.Text.TextPatternRange>将为顺序搜索和突出显示功能创建其他两个对象。  
   
 [!code-csharp[FindText#StartApp](../../../samples/snippets/csharp/VS_Snippets_Wpf/FindText/CSharp/SearchWindow.cs#startapp)]
 [!code-vb[FindText#StartApp](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FindText/VisualBasic/SearchWindow.vb#startapp)]  
@@ -37,4 +37,4 @@ ms.locfileid: "69969007"
   
 ## <a name="see-also"></a>请参阅
 
-- [使用 UI 自动化查找和突出显示文本](../../../docs/framework/ui-automation/find-and-highlight-text-using-ui-automation.md)
+- [使用 UI 自动化查找和突出显示文本](find-and-highlight-text-using-ui-automation.md)

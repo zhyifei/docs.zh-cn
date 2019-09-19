@@ -1,6 +1,6 @@
 ---
 title: IMetaDataTables::GetColumn 方法
-ms.date: 03/30/2017
+ms.date: 02/25/2019
 api_name:
 - IMetaDataTables.GetColumn
 api_location:
@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 22f9ceab2f01ac12762710f313c56f3f0ee4e6be
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 853f137d91e1b3eb4f3f65a06522618f8441dcb3
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781536"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053677"
 ---
 # <a name="imetadatatablesgetcolumn-method"></a>IMetaDataTables::GetColumn 方法
-获取一个指针指向包含指定的列和给定表中的行的单元格中的值。  
+获取一个指针，该指针指向给定表中指定列和行的单元中包含的值。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,27 +38,49 @@ HRESULT GetColumn (
 );  
 ```  
   
-## <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数
+
  `ixTbl`  
- [in]表的索引。  
+ 中表的索引。  
   
  `ixCol`  
- [in]表中的列的索引。  
+ 中表中的列的索引。  
   
  `rid`  
- [in]表中的行的索引。  
+ 中表中的行的索引。  
   
  `pVal`  
- [out]指向单元格中的值的指针。  
+ 弄指向单元格中的值的指针。  
+ 
+## <a name="remarks"></a>备注
+
+返回的值的 interpretion `pVal`取决于列的类型。 列类型可通过调用[IMetaDataTables](imetadatatables-getcolumninfo-method.md)来确定。
+
+- **GetColumn**方法自动将**Rid**或**CodedToken**类型的列转换为完整的32位`mdToken`值。
+- 它还会自动将8位或16位值转换为完整的32位值。 
+- 对于*堆*类型列，返回的*pVal*将是对应堆中的索引。
+
+| 列类型              | pVal 包含 | 注释                          |
+|--------------------------|---------------|-----------------------------------|
+| `0`..`iRidMax`<br>（0-63）  | mdToken     | *pVal*将包含一个完整的令牌。 函数自动将 Rid 转换为完整的标记。 |
+| `iCodedToken`..`iCodedTokenMax`<br>（64.. 95） | mdToken | 返回后， *pVal*将包含一个完整的令牌。 函数自动将 CodedToken 解压缩到完整的令牌中。 |
+| `iSHORT`（96）            | Int16         | 自动将符号扩展为32位。  |
+| `iUSHORT`（97）           | UInt16        | 自动将符号扩展为32位。  |
+| `iLONG`（98）             | Int32         |                                        | 
+| `iULONG`（99）            | UInt32        |                                        |
+| `iBYTE`（100）            | Byte          | 自动将符号扩展为32位。  |
+| `iSTRING`（101）          | 字符串堆索引 | *pVal*是字符串堆中的索引。 使用[IMetadataTables：： GetString](imetadatatables-getstring-method.md)获取实际的列字符串值。 |
+| `iGUID`（102）            | Guid 堆索引 | *pVal*是 Guid 堆中的索引。 使用[IMetadataTables：： GetGuid](imetadatatables-getguid-method.md)获取实际的列 Guid 值。 |
+| `iBLOB`（103）            | Blob 堆索引 | *pVal*是 Blob 堆中的索引。 使用[IMetadataTables：： GetBlob](imetadatatables-getblob-method.md)获取实际的列 Blob 值。 |
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Cor.h  
+ **标头：** Cor  
   
- **库：** 用作 MsCorEE.dll 中的资源  
+ **类库**用作 Mscoree.dll 中的资源  
   
- **.NET framework 版本** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

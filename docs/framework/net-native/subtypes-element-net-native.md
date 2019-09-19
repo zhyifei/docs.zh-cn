@@ -4,14 +4,14 @@ ms.date: 03/30/2017
 ms.assetid: fb854070-248b-46cf-9dab-c322e2b4d624
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9e0ec1ed73148b319217a70cc3be99b486be2f8e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2af1acc02b18c5b97ef66ccae9b70c1f5327bff4
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61866844"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049128"
 ---
-# <a name="subtypes-element-net-native"></a>\<子类型 > 元素 (.NET Native)
+# <a name="subtypes-element-net-native"></a>\<子类型 > 元素（.NET Native）
 将运行时策略应用到从包含类型继承的所有类。  
   
 ## <a name="syntax"></a>语法  
@@ -49,9 +49,9 @@ ms.locfileid: "61866844"
   
 ## <a name="all-attributes"></a>所有特性  
   
-|“值”|描述|  
+|值|描述|  
 |-----------|-----------------|  
-|policy_setting|该设置将应用到这种策略类型。 可能值为 `All`、`Auto`、`Excluded`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal` 以及 `Required All`。 有关详细信息，请参阅[运行时指令策略设置](../../../docs/framework/net-native/runtime-directive-policy-settings.md)。|  
+|policy_setting|该设置将应用到这种策略类型。 可能值为 `All`、`Auto`、`Excluded`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal` 以及 `Required All`。 有关详细信息，请参阅[运行时指令策略设置](runtime-directive-policy-settings.md)。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  
@@ -60,7 +60,7 @@ ms.locfileid: "61866844"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|将反射策略应用到一种类型及其所有成员。|  
+|[\<Type>](type-element-net-native.md)|将反射策略应用到一种类型及其所有成员。|  
   
 ## <a name="remarks"></a>备注  
  `<Subtypes>` 元素将策略应用到其包含类型的所有子类型。 当你想将不同的策略应用到派生类型及其基类时可使用它。  
@@ -91,7 +91,7 @@ ms.locfileid: "61866844"
   
 ## <a name="see-also"></a>请参阅
 
-- [\<类型 > 元素](../../../docs/framework/net-native/type-element-net-native.md)
-- [运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [运行时指令元素](../../../docs/framework/net-native/runtime-directive-elements.md)
-- [运行时指令策略设置](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+- [\<类型 > 元素](type-element-net-native.md)
+- [运行时指令 (rd.xml) 配置文件参考](runtime-directives-rd-xml-configuration-file-reference.md)
+- [运行时指令元素](runtime-directive-elements.md)
+- [运行时指令策略设置](runtime-directive-policy-settings.md)

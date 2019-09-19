@@ -5,12 +5,12 @@ helpviewer_keywords:
 - control patterns
 - UI Automation, control patterns
 ms.assetid: cc229b33-234b-469b-ad60-f0254f32d45d
-ms.openlocfilehash: 30e8619e70da46cb510fbe28ab2e8bcf27621e19
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c5dce6895ed9962cf20808417c50569db48de6d9
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963302"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042348"
 ---
 # <a name="ui-automation-control-patterns-overview"></a>UI 自动化控件模式概述
 > [!NOTE]
@@ -33,7 +33,7 @@ ms.locfileid: "69963302"
   
 - 属性和事件提供有关控件模式的功能的信息以及有关控件状态的信息。  
   
- 与组件对象模型[!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] (COM) 对象相关的控件模式与关联。 在 COM 中, 你可以查询一个对象以询问该对象所支持的接口, 然后使用这些接口来访问功能。 在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]中，UI 自动化客户端可以询问一个控件其所支持的控件模式，然后通过由支持的控件模式公开的属性、方法、事件和结构来与该控件进行交互。 例如，对于多行编辑框，UI 自动化提供程序实现 <xref:System.Windows.Automation.Provider.IScrollProvider>。 当客户端知道 <xref:System.Windows.Automation.AutomationElement> 支持 <xref:System.Windows.Automation.ScrollPattern> 控件模式时，它可以使用由该控件模式公开的属性、方法和事件来操作该控件或访问有关该控件的信息。  
+ 与组件对象模型[!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] （COM）对象相关的控件模式与关联。 在 COM 中，你可以查询一个对象以询问该对象所支持的接口，然后使用这些接口来访问功能。 在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]中，UI 自动化客户端可以询问一个控件其所支持的控件模式，然后通过由支持的控件模式公开的属性、方法、事件和结构来与该控件进行交互。 例如，对于多行编辑框，UI 自动化提供程序实现 <xref:System.Windows.Automation.Provider.IScrollProvider>。 当客户端知道 <xref:System.Windows.Automation.AutomationElement> 支持 <xref:System.Windows.Automation.ScrollPattern> 控件模式时，它可以使用由该控件模式公开的属性、方法和事件来操作该控件或访问有关该控件的信息。  
   
 <a name="uiautomation_control_pattern_client_provider"></a>   
 ## <a name="ui-automation-providers-and-clients"></a>UI 自动化提供程序和客户端  
@@ -70,12 +70,12 @@ ms.locfileid: "69963302"
 |<xref:System.Windows.Automation.TogglePattern>|<xref:System.Windows.Automation.Provider.IToggleProvider>|用于在其中可切换状态的控件。 例如，复选框和可选中的菜单项。|  
 |<xref:System.Windows.Automation.TransformPattern>|<xref:System.Windows.Automation.Provider.ITransformProvider>|用于可调整大小、移动和旋转的控件。 Transform 控件模式通常用于设计器、窗体、图形编辑器和绘图应用程序。|  
 |<xref:System.Windows.Automation.ValuePattern>|<xref:System.Windows.Automation.Provider.IValueProvider>|允许客户端在不支持某个值范围的控件上获取或设置值。 例如，日期时间选择器。|  
-|<xref:System.Windows.Automation.WindowPattern>|<xref:System.Windows.Automation.Provider.IWindowProvider>|公开特定于窗口的信息，窗口对于 [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)] 操作系统而言是一个基本概念。 Windows 控件的示例包括顶级应用程序窗口 ([!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)]、 [!INCLUDE[TLA#tla_winexpl](../../../includes/tlasharptla-winexpl-md.md)]等)、多文档界面 (MDI) 子窗口和对话框。|  
+|<xref:System.Windows.Automation.WindowPattern>|<xref:System.Windows.Automation.Provider.IWindowProvider>|公开特定于窗口的信息，窗口对于 [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)] 操作系统而言是一个基本概念。 Windows 控件的示例包括顶级应用程序窗口（[!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)]、 [!INCLUDE[TLA#tla_winexpl](../../../includes/tlasharptla-winexpl-md.md)]等）、多文档界面（MDI）子窗口和对话框。|  
   
 ## <a name="see-also"></a>请参阅
 
-- [客户端的 UI 自动化控件模式](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
-- [UI 自动化客户端的控件模式映射](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)
-- [UI 自动化概述](../../../docs/framework/ui-automation/ui-automation-overview.md)
-- [客户端的 UI 自动化属性](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)
-- [客户端的 UI 自动化事件](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md)
+- [客户端的 UI 自动化控件模式](ui-automation-control-patterns-for-clients.md)
+- [UI 自动化客户端的控件模式映射](control-pattern-mapping-for-ui-automation-clients.md)
+- [UI 自动化概述](ui-automation-overview.md)
+- [客户端的 UI 自动化属性](ui-automation-properties-for-clients.md)
+- [客户端的 UI 自动化事件](ui-automation-events-for-clients.md)

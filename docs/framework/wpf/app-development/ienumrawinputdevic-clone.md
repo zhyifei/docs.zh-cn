@@ -4,29 +4,29 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Clone method [WPF]
 ms.assetid: 2a6a1900-aa55-45fa-9382-241d569a2dc4
-ms.openlocfilehash: abc8a6e4780c8fe50afcf1b04f7e14aeb6452704
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cd634b4d4a88d83d425b787ed8493f9aa2504988
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61949586"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053411"
 ---
 # <a name="ienumrawinputdevicclone"></a>IEnumRAWINPUTDEVIC:Clone
 创建一个与当权枚举器相同状态的原始输入设备枚举器，以循环访问相同的列表。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 HRESULT Clone( [out] IEnumRAWINPUTDEVICE **ppenum);  
 ```  
   
 ## <a name="parameters"></a>参数  
  `ppenum`  
   
- [out]接收的输出变量的地址[IEnumRAWINPUTDEVICE](ienumrawinputdevice.md)接口指针。 如果该方法不成功，此输出变量的值未定义。  
+ 弄接收[IEnumRAWINPUTDEVICE](ienumrawinputdevice.md)接口指针的输出变量的地址。 如果该方法不成功，则不定义此输出变量的值。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
- HRESULT：此方法支持 E_INVALIDARG 和 e_outofmemory 等 E_UNEXPECTED 标准的返回值。  
+ HRESULT：此方法支持标准返回值 E_INVALIDARG、E_OUTOFMEMORY 和 E_UNEXPECTED。  
   
 ## <a name="remarks"></a>备注  
- 此方法可枚举序列中记录一个点，以便在以后返回到该点。 调用方必须释放此独立于第一个枚举器的新枚举器。
+ 此方法可以记录枚举序列中的某个点，以便以后返回到该点。 调用方必须独立于第一个枚举器发布此新枚举器。

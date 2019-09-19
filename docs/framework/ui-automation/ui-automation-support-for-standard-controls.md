@@ -5,12 +5,12 @@ helpviewer_keywords:
 - controls, UI Automation support for
 - UI Automation, support for standard controls
 ms.assetid: 3770ea8a-2655-4add-9c59-fe0610ad5084
-ms.openlocfilehash: d83713a81e7675a68482890c2401f1a0a6803abc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6cbf31c8a1cdf6e853e56445d22f4a7513bd1859
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69914232"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042000"
 ---
 # <a name="ui-automation-support-for-standard-controls"></a>UI 自动化对标准控件的支持
 > [!NOTE]
@@ -96,7 +96,7 @@ ms.locfileid: "69914232"
 ## <a name="windows-forms-controls"></a>Windows 窗体控件  
  通过 uiautomationclientsideproviders.dll 中的客户[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]端提供程序向 Windows 窗体控件公开。 此程序集将自动注册，以用于 UI 自动化客户端应用程序。  
   
- 通常, [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]支持作为公共控件的托管包装器 Windows 窗体控件。 支持以下控件。  
+ 通常， [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]支持作为公共控件的托管包装器 Windows 窗体控件。 支持以下控件。  
   
 |类名|  
 |----------------|  
@@ -169,4 +169,4 @@ ms.locfileid: "69914232"
   
 ## <a name="see-also"></a>请参阅
 
-- [UI 自动化控件类型](../../../docs/framework/ui-automation/ui-automation-control-types.md)
+- [UI 自动化控件类型](ui-automation-control-types.md)

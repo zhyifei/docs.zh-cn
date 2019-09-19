@@ -13,20 +13,20 @@ helpviewer_keywords:
 ms.assetid: 21726de1-61ee-4fdc-9dd0-3be49324d066
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ea5db2ba1060479f55bbd7f67266d36085a2535f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a67bd2c0daa8acc81113a1e38ea463753ae34077
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61754370"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052728"
 ---
 # <a name="how-to-create-and-initialize-trace-listeners"></a>如何：创建和初始化跟踪侦听器
 
 <xref:System.Diagnostics.Debug?displayProperty=nameWithType> 和 <xref:System.Diagnostics.Trace?displayProperty=nameWithType> 类向接收和处理消息的对象（成为侦听器）中发送消息。 在启用跟踪或调试后将自动创建并初始化一个如上所述的侦听器 <xref:System.Diagnostics.DefaultTraceListener?displayProperty=nameWithType>。 如果要将 <xref:System.Diagnostics.Trace> 或 <xref:System.Diagnostics.Debug> 输出定向到任何其他源，则必须创建并初始化其他跟踪侦听器。
 
-所创建的侦听器应反映应用程序的需要。 例如，如果想要获取所有跟踪输出的文本记录，则创建 <xref:System.Diagnostics.TextWriterTraceListener> 侦听器；启用后，它会将所有输出都写入新的文本文件中。 另一方面，如果想要仅在应用程序执行过程中查看输出，则创建 <xref:System.Diagnostics.ConsoleTraceListener> 侦听器，以便将所有输出定向到控制台窗口。 <xref:System.Diagnostics.EventLogTraceListener> 可以将跟踪输出定向到事件日志。 有关详细信息，请参阅[跟踪侦听器](../../../docs/framework/debug-trace-profile/trace-listeners.md)。
+所创建的侦听器应反映应用程序的需要。 例如，如果想要获取所有跟踪输出的文本记录，则创建 <xref:System.Diagnostics.TextWriterTraceListener> 侦听器；启用后，它会将所有输出都写入新的文本文件中。 另一方面，如果想要仅在应用程序执行过程中查看输出，则创建 <xref:System.Diagnostics.ConsoleTraceListener> 侦听器，以便将所有输出定向到控制台窗口。 <xref:System.Diagnostics.EventLogTraceListener> 可以将跟踪输出定向到事件日志。 有关详细信息，请参阅[跟踪侦听器](trace-listeners.md)。
 
-可以在[应用程序配置文件](../../../docs/framework/configure-apps/index.md)或代码中创建跟踪侦听器。 我们建议使用应用程序配置文件，因为它们可在不更改代码的情况下添加、修改或删除跟踪侦听器。
+可以在[应用程序配置文件](../configure-apps/index.md)或代码中创建跟踪侦听器。 我们建议使用应用程序配置文件，因为它们可在不更改代码的情况下添加、修改或删除跟踪侦听器。
 
 ### <a name="to-create-and-use-a-trace-listener-by-using-a-configuration-file"></a>若要使用配置文件创建和初始化跟踪侦听器
 
@@ -97,7 +97,7 @@ ms.locfileid: "61754370"
 
 ## <a name="see-also"></a>请参阅
 
-- [跟踪侦听器](../../../docs/framework/debug-trace-profile/trace-listeners.md)
-- [跟踪开关](../../../docs/framework/debug-trace-profile/trace-switches.md)
-- [如何：将跟踪语句添加到应用程序代码](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
-- [跟踪应用程序和在应用程序中插入检测点](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
+- [跟踪侦听器](trace-listeners.md)
+- [跟踪开关](trace-switches.md)
+- [如何：向应用程序代码添加跟踪语句](how-to-add-trace-statements-to-application-code.md)
+- [跟踪应用程序和在应用程序中插入检测点](tracing-and-instrumenting-applications.md)

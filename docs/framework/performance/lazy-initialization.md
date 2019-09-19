@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 56b4ae5c-4745-44ff-ad78-ffe4fcde6b9b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1c13445b8b7c72d1c66efe5a9db3aaa027001ecf
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 549030b7e5f7544f593e5aa481a6dc85d5a85329
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69943810"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046414"
 ---
 # <a name="lazy-initialization"></a>迟缓初始化
 对象的迟缓初始化意味着推迟创建该对象，直到它被首次使用。 （在本主题中，术语迟缓初始化和迟缓实例化是同义词。）迟缓初始化主要用于提升性能、避免计算浪费和降低程序内存需求。 以下是常见方案：  
@@ -62,7 +62,7 @@ ms.locfileid: "69943810"
  默认情况下，<xref:System.Lazy%601> 对象是线程安全的。 也就是说，如果构造函数没有指定线程安全性的类型，该函数创建的 <xref:System.Lazy%601> 对象是线程安全的。 在多线程方案中，访问线程安全 <xref:System.Lazy%601> 对象的 <xref:System.Lazy%601.Value%2A> 属性的第一个线程会为所有线程上的所有后续访问对其初始化，且所有线程共享相同的数据。 因此，哪个线程初始化对象并不重要，争用条件是良性的。  
   
 > [!NOTE]
-> 可以通过使用异常缓存将此一致性扩展到错误条件。 有关详细信息，请参阅下一部分[迟缓对象的异常](../../../docs/framework/performance/lazy-initialization.md#ExceptionsInLazyObjects)。  
+> 可以通过使用异常缓存将此一致性扩展到错误条件。 有关详细信息，请参阅下一部分[迟缓对象的异常](lazy-initialization.md#ExceptionsInLazyObjects)。  
   
  以下示例演示了相同的 `Lazy<int>` 实例对于三个单独的线程具有相同的值。  
   
@@ -157,4 +157,4 @@ ms.locfileid: "69943810"
 - [托管线程处理基本知识](../../standard/threading/managed-threading-basics.md)
 - [线程与线程处理](../../standard/threading/threads-and-threading.md)
 - [任务并行库 (TPL)](../../standard/parallel-programming/task-parallel-library-tpl.md)
-- [如何：执行对象的迟缓初始化](../../../docs/framework/performance/how-to-perform-lazy-initialization-of-objects.md)
+- [如何：执行对象的迟缓初始化](how-to-perform-lazy-initialization-of-objects.md)

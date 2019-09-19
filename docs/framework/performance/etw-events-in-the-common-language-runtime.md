@@ -8,33 +8,33 @@ helpviewer_keywords:
 ms.assetid: 5bb9b6a2-7b57-4aea-8809-32b28bc73e88
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 441cae712e7338b36e8983f41341b1721770a0bb
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 46ad58813da5b71b884ad55f796db3522b2f1920
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489708"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046617"
 ---
 # <a name="etw-events-in-the-common-language-runtime"></a>公共语言运行时中的 ETW 事件
 公共语言运行时 (CLR) 通过大量的调试和分析事件，提供有用的 Windows 事件跟踪 (ETW) 诊断信息。 CLR ETW 事件利用 Windows ETW 跟踪系统来扩充公共语言运行时所提供的现有分析和调试支持。  
   
  有关 ETW 的详细信息，请参阅 MSDN 上的[使用 ETW 改善调试和性能优化](https://go.microsoft.com/fwlink/?LinkID=161142)一文。 有关 Xperf 的详细信息，请参阅 NTDebugging 博客中的 [Windows Performance Toolkit - Xperf](https://go.microsoft.com/fwlink/?LinkID=161144)（Windows 性能工具包 - Xperf）。  
   
- .NET Framework 4 或更高版本是必需的事件主题中所述的所有事件。 Windows Vista 操作系统是支持的最低客户端，而 Windows Server 2008 是支持的最低服务器。  
+ 事件主题中所述的所有事件都需要 .NET Framework 4 或更高版本。 Windows Vista 操作系统是支持的最低客户端，而 Windows Server 2008 是支持的最低服务器。  
   
 ## <a name="in-this-section"></a>本节内容  
- [控制 .NET Framework 日志记录](../../../docs/framework/performance/controlling-logging.md)  
+ [控制 .NET Framework 日志记录](controlling-logging.md)  
  介绍用于捕获和查看 ETW 事件的工具和命令。  
   
- [CLR ETW 提供程序](../../../docs/framework/performance/clr-etw-providers.md)  
+ [CLR ETW 提供程序](clr-etw-providers.md)  
  提供有关运行时和断开提供程序，以及如何使用它们收集 ETW 数据的信息。  
   
- [CLR ETW 关键字和级别](../../../docs/framework/performance/clr-etw-keywords-and-levels.md)  
+ [CLR ETW 关键字和级别](clr-etw-keywords-and-levels.md)  
  介绍运行时和断开提供程序的关键字，可通过这些关键字按类别筛选事件。  
   
- [CLR ETW 事件](../../../docs/framework/performance/clr-etw-events.md)  
+ [CLR ETW 事件](clr-etw-events.md)  
  提供有关 CLR ETW 事件及其关键字、级别和事件数据的详细信息。  
   
 ## <a name="see-also"></a>请参阅
 
-- [.NET Framework 中的 ETW 事件](../../../docs/framework/performance/etw-events.md)
+- [.NET Framework 中的 ETW 事件](etw-events.md)

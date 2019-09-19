@@ -7,17 +7,17 @@ helpviewer_keywords:
 ms.assetid: cb403cc6-56f8-4609-b467-cdfa09f07909
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bf874f9422db0038a421d5f61ce18d8af8ec401e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6177bdff873feb75eb15dba53bcdb5197260fa9d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616314"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046395"
 ---
 # <a name="loader-etw-events"></a>加载程序 ETW 事件
 <a name="top"></a> 这些事件将收集与加载和卸载应用程序域、程序集和模块相关的信息。  
   
- 所有加载程序事件均在 `LoaderKeyword` (0x8) 关键字下引发。 `DCStart` 和 `DCEnd` 事件在 `LoaderRundownKeyword` (0x8) 下引发（启用了 `StartRundown`/`EndRundown`）。 （有关详细信息，请参阅 [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md)。）  
+ 所有加载程序事件均在 `LoaderKeyword` (0x8) 关键字下引发。 `DCStart` 和 `DCEnd` 事件在 `LoaderRundownKeyword` (0x8) 下引发（启用了 `StartRundown`/`EndRundown`）。 （有关详细信息，请参阅 [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md)。）  
   
  加载程序事件可细分为以下几类：  
   
@@ -35,7 +35,7 @@ ms.locfileid: "64616314"
 ## <a name="application-domain-events"></a>应用程序域事件  
  下表显示了关键字和级别。  
   
-|引发事件的关键字|Event|级别|  
+|引发事件的关键字|Event|Level|  
 |-----------------------------------|-----------|-----------|  
 |`LoaderKeyword` (0x8)|`AppDomainLoad_V1` 和 `AppDomainUnLoad_V1`|信息性 (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`AppDomainDCStart_V1`|信息性 (4)|  
@@ -55,7 +55,7 @@ ms.locfileid: "64616314"
 |字段名|数据类型|描述|  
 |----------------|---------------|-----------------|  
 |AppDomainID|win:UInt64|应用程序域的唯一标识符。|  
-|AppDomainFlags|win:UInt32|0x1:默认域。<br /><br /> 0x2:可执行文件。<br /><br /> 0x4:应用程序域，位 28-31:共享此域的策略。<br /><br /> 0:共享的域。|  
+|AppDomainFlags|win:UInt32|0x1默认域。<br /><br /> 0x2可执行文件.<br /><br /> 0x4应用程序域，位28-31：共享此域的策略。<br /><br /> 0共享域。|  
 |AppDomainName|win:UnicodeString|友好的应用程序域名。 可能会在进程生存期内更改。|  
 |AppDomainIndex|win:UInt32|此应用程序域的索引。|  
 |ClrInstanceID|win:UInt16|CLR 或 CoreCLR 的实例的唯一 ID。|  
@@ -66,7 +66,7 @@ ms.locfileid: "64616314"
 ## <a name="clr-loader-assembly-events"></a>CLR 加载程序程序集事件  
  下表显示了关键字和级别。  
   
-|引发事件的关键字|Event|级别|  
+|引发事件的关键字|Event|Level|  
 |-----------------------------------|-----------|-----------|  
 |`LoaderKeyword` (0x8)|`AssemblyLoad` 和 `AssemblyUnload`|信息性 (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`AssemblyDCStart`|信息性 (4)|  
@@ -88,7 +88,7 @@ ms.locfileid: "64616314"
 |AssemblyID|win:UInt64|程序集的唯一 ID。|  
 |AppDomainID|win:UInt64|此程序集的域的 ID。|  
 |BindingID|win:UInt64|唯一地标识程序集绑定的 ID。|  
-|AssemblyFlags|win:UInt32|0x1:域非特定程序集。<br /><br /> 0x2:动态程序集。<br /><br /> 0x4:程序集具有本机映像。<br /><br /> 0x8:可回收程序集。|  
+|AssemblyFlags|win:UInt32|0x1域非特定程序集。<br /><br /> 0x2动态程序集。<br /><br /> 0x4程序集具有本机映像。<br /><br /> 0x8可回收的程序集。|  
 |AssemblyName|win:UnicodeString|完全限定程序集名称。|  
 |ClrInstanceID|win:UInt16|CLR 或 CoreCLR 的实例的唯一 ID。|  
   
@@ -98,7 +98,7 @@ ms.locfileid: "64616314"
 ## <a name="module-events"></a>模块事件  
  下表显示了关键字和级别。  
   
-|引发事件的关键字|Event|级别|  
+|引发事件的关键字|Event|Level|  
 |-----------------------------------|-----------|-----------|  
 |`LoaderKeyword` (0x8)|`ModuleLoad_V2` 和 `ModuleUnload_V2`|信息性 (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`ModuleDCStart_V2`|信息性 (4)|  
@@ -120,7 +120,7 @@ ms.locfileid: "64616314"
 |----------------|---------------|-----------------|  
 |ModuleID|win:UInt64|模块的唯一 ID。|  
 |AssemblyID|win:UInt64|此模块所驻留的程序集的 ID。|  
-|ModuleFlags|win:UInt32|0x1:非特定域的模块。<br /><br /> 0x2:模块具有本机映像。<br /><br /> 0x4:动态模块。<br /><br /> 0x8:清单模块。|  
+|ModuleFlags|win:UInt32|0x1非特定于域的模块。<br /><br /> 0x2模块具有本机映像。<br /><br /> 0x4动态模块。<br /><br /> 0x8清单模块。|  
 |Reserved1|win:UInt32|保留的字段。|  
 |ModuleILPath|win:UnicodeString|模块的 Microsoft 中间语言 (MSIL) 映像的路径；如果是动态程序集（以 null 结尾），则为动态模块名。|  
 |ModuleNativePath|win:UnicodeString|如果存在（以 null 结尾），则为模块本机映像的路径。|  
@@ -146,7 +146,7 @@ ms.locfileid: "64616314"
 ## <a name="clr-domain-module-events"></a>CLR 域模块事件  
  下表显示了关键字和级别。  
   
-|引发事件的关键字|Event|级别|  
+|引发事件的关键字|Event|Level|  
 |-----------------------------------|-----------|-----------|  
 |`LoaderKeyword` (0x8)|`DomainModuleLoad_V1`|信息性 (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`DomainModuleDCStart_V1`|信息性 (4)|  
@@ -167,7 +167,7 @@ ms.locfileid: "64616314"
 |ModuleID|win:UInt64|标识此模块所属的程序集。|  
 |AssemblyID|win:UInt64|此模块所驻留的程序集的 ID。|  
 |AppDomainID|win:UInt64|其中使用此模块的应用程序域的 ID。|  
-|ModuleFlags|win:UInt32|0x1:非特定域的模块。<br /><br /> 0x2:模块具有本机映像。<br /><br /> 0x4:动态模块。<br /><br /> 0x8:清单模块。|  
+|ModuleFlags|win:UInt32|0x1非特定于域的模块。<br /><br /> 0x2模块具有本机映像。<br /><br /> 0x4动态模块。<br /><br /> 0x8清单模块。|  
 |Reserved1|win:UInt32|保留的字段。|  
 |ModuleILPath|win:UnicodeString|模块的 MSIL 映像的路径；如果是动态程序集（以 null 结尾），则为动态模块名。|  
 |ModuleNativePath|win:UnicodeString|如果存在（以 null 结尾），则为模块本机映像的路径。|  
@@ -214,4 +214,4 @@ ms.locfileid: "64616314"
   
 ## <a name="see-also"></a>请参阅
 
-- [CLR ETW 事件](../../../docs/framework/performance/clr-etw-events.md)
+- [CLR ETW 事件](clr-etw-events.md)
