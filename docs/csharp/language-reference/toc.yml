@@ -226,7 +226,7 @@
           href: keywords/add.md
         - name: get
           href: keywords/get.md
-        - name: partial（类型）
+        - name: 分部（类型）
           href: keywords/partial-type.md
         - name: partial（方法）
           href: keywords/partial-method.md
@@ -293,7 +293,7 @@
       displayName: '>, <, >=, <=, greater, less'
     - name: 成员访问运算符
       href: operators/member-access-operators.md
-      displayName: '., [], ?., ?[], (), indexer, null-conditional, Elvis, invocation'
+      displayName: '., [], ?., ?[], (), indexer, null-conditional, Elvis, invocation, ^, index from end, hat, .., range'
     - name: 类型测试和强制转换运算符
       href: operators/type-testing-and-cast.md
       displayName: 'is operator, is keyword, as operator, as keyword, typeof, (), conversion'
