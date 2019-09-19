@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 808f0f8ac6caf15be0bf1ba8735521871c9b94d7
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
-ms.translationtype: HT
+ms.openlocfilehash: 417550397582641c5a8fa97c061377beadfb0e6f
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70851599"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045578"
 ---
 # <a name="packaging-and-deploying-resources-in-net-apps"></a>打包和部署 .NET 应用中的资源
 
@@ -55,10 +55,10 @@ ms.locfileid: "70851599"
 
 ## <a name="resource-naming-conventions"></a>资源命名约定
 
-在打包应用程序的资源时，必须使用公共语言运行时所要求的资源命名约定对其进行命名。 运行时可按其区域性名称标识资源。 每个区域性均被赋予唯一名称，通常是与语言相关的两个小写字母的区域性名称和必要情况下，与国家或地区相关的两个大写子母的区域性名称的组合。 子区域性名称跟在区域性名称后，以短划线 (-) 隔开。 例如：ja-JP 表示日本日语，en-US 表示美国英语，de-DE 表示德国德语，de-AT 表示奥地利德语。 请参阅 [Windows 支持的语言/区域名称列表](https://docs.microsoft.com/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c)中的“语言标记”  列。 列名遵循 [BCP 47](https://tools.ietf.org/html/bcp47) 定义的标准。
+在打包应用程序的资源时，必须使用公共语言运行时所要求的资源命名约定对其进行命名。 运行时可按其区域性名称标识资源。 每个区域性均被赋予唯一名称，通常是与语言相关的两个小写字母的区域性名称和必要情况下，与国家或地区相关的两个大写子母的区域性名称的组合。 子区域性名称跟在区域性名称后，以短划线 (-) 隔开。 例如：ja-JP 表示日本日语，en-US 表示美国英语，de-DE 表示德国德语，de-AT 表示奥地利德语。 请参阅 [Windows 支持的语言/区域名称列表](https://docs.microsoft.com/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c)中的“语言标记”列。 列名遵循 [BCP 47](https://tools.ietf.org/html/bcp47) 定义的标准。
 
 > [!NOTE]
-> 有关创建资源文件的信息，请参阅[创建资源文件](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)和[创建附属程序集](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)。
+> 有关创建资源文件的信息，请参阅[创建资源文件](creating-resource-files-for-desktop-apps.md)和[创建附属程序集](creating-satellite-assemblies-for-desktop-apps.md)。
 
 <a name="cpconpackagingdeployingresourcesanchor1"></a>
 
@@ -73,9 +73,9 @@ ms.locfileid: "70851599"
 .NET Framework 资源回退进程包含以下步骤：
 
 > [!TIP]
-> 还可以使用 [ \<relativeBindForResources >](../../../docs/framework/configure-apps/file-schema/runtime/relativebindforresources-element.md) 配置元素来优化资源回退过程和运行时针对资源程序集探测所依据的。 有关详细信息，请参阅 [优化资源回退进程](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md#Optimizing)一节。
+> 还可以使用 [ \<relativeBindForResources >](../configure-apps/file-schema/runtime/relativebindforresources-element.md) 配置元素来优化资源回退过程和运行时针对资源程序集探测所依据的。 有关详细信息，请参阅 [优化资源回退进程](packaging-and-deploying-resources-in-desktop-apps.md#Optimizing)一节。
 
-1. 运行时首先检查[全局程序集缓存](../../../docs/framework/app-domains/gac.md)，找到与为应用程序请求的区域性匹配的程序集。
+1. 运行时首先检查[全局程序集缓存](../app-domains/gac.md)，找到与为应用程序请求的区域性匹配的程序集。
 
      全局程序集缓存可存储由许多应用程序共享的资源程序集。 这使你无需在创建的每个应用程序的目录结构中包括特定的资源集。 如果运行时找到了对程序集的引用，它将搜索程序集，查找请求的资源。 如果在程序集中找到了该项，则使用请求的资源。 如果找不到该项，将继续搜索。
 
@@ -112,13 +112,13 @@ ms.locfileid: "70851599"
 
 在下列情况下，可以按运行时搜索附属程序集中的资源所依据的内容优化进程
 
-- 附属程序集部署在与代码程序集相同的位置。 如果代码程序集安装在[全局程序集缓存](../../../docs/framework/app-domains/gac.md)中，则附属程序集也会安装到全局程序集缓存中。 如果代码程序集安装在一个目录中，则附属程序集安装在该目录的特定于区域性的文件夹中。
+- 附属程序集部署在与代码程序集相同的位置。 如果代码程序集安装在[全局程序集缓存](../app-domains/gac.md)中，则附属程序集也会安装到全局程序集缓存中。 如果代码程序集安装在一个目录中，则附属程序集安装在该目录的特定于区域性的文件夹中。
 
 - 附属程序集不会按需进行安装。
 
 - 应用程序代码不会处理 <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> 事件。
 
-可通过在应用程序配置文件中包含 [\<relativeBindForResources>](../../../docs/framework/configure-apps/file-schema/runtime/relativebindforresources-element.md) 元素并将其 `enabled` 属性设为 `true`，优化附属程序集探测，如下例所示。
+可通过在应用程序配置文件中包含 [\<relativeBindForResources>](../configure-apps/file-schema/runtime/relativebindforresources-element.md) 元素并将其 `enabled` 属性设为 `true`，优化附属程序集探测，如下例所示。
 
 ```xml
 <configuration>
@@ -128,7 +128,7 @@ ms.locfileid: "70851599"
 </configuration>
 ```
 
-优化的附属程序集探测是选择加入功能。 也就是说，运行时遵循[资源回退进程](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md#cpconpackagingdeployingresourcesanchor1)中记录的步骤，除非 [\<relativeBindForResources>](../../../docs/framework/configure-apps/file-schema/runtime/relativebindforresources-element.md) 元素位于应用程序的配置文件中，并且其 `enabled` 属性已设为 `true`。 如果出现这种情况，附属程序集探测过程将进行如下修改：
+优化的附属程序集探测是选择加入功能。 也就是说，运行时遵循[资源回退进程](packaging-and-deploying-resources-in-desktop-apps.md#cpconpackagingdeployingresourcesanchor1)中记录的步骤，除非 [\<relativeBindForResources>](../configure-apps/file-schema/runtime/relativebindforresources-element.md) 元素位于应用程序的配置文件中，并且其 `enabled` 属性已设为 `true`。 如果出现这种情况，附属程序集探测过程将进行如下修改：
 
 - 运行时使用父代码程序集位置来探测附属程序集。 如果父程序集安装在全局程序集缓存中，则运行时在缓存，而不是在应用程序的目录中探测。 如果父程序集安装在应用程序目录中，则运行时在应用程序目录，而不是在全局程序集缓存中探测。
 
@@ -186,21 +186,21 @@ Greeting=Bon jour!
 Greeting=Добрый день
 ```
 
-从命令行运行[资源文件生成器 (Resgen.exe)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) 可将这两个文件编译为 .resources 文件。 对于法语资源，命令为：
+从命令行运行[资源文件生成器 (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) 可将这两个文件编译为 .resources 文件。 对于法语资源，命令为：
 
-resgen.exe resources.fr.txt 
+resgen.exe resources.fr.txt
 
 对于俄语资源，命令为：
 
-resgen.exe resources.ru.txt 
+resgen.exe resources.ru.txt
 
-对于法语资源，从命令行运行[程序集连接器 (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md)，将 .resources 文件嵌入动态链接库，如下所示：
+对于法语资源，从命令行运行[程序集连接器 (Al.exe)](../tools/al-exe-assembly-linker.md)，将 .resources 文件嵌入动态链接库，如下所示：
 
-al /t:lib /embed:resources.fr.resources /culture:fr /out:fr\Example1.resources.dll 
+al /t:lib /embed:resources.fr.resources /culture:fr /out:fr\Example1.resources.dll
 
 而对于俄语资源，则为如下所示：
 
-al /t:lib /embed:resources.ru.resources /culture:ru /out:ru\Example1.resources.dll 
+al /t:lib /embed:resources.ru.resources /culture:ru /out:ru\Example1.resources.dll
 
 应用程序源代码位于名为 Example1.cs 或 Example1.vb 的文件中。 它包括 <xref:System.Resources.NeutralResourcesLanguageAttribute> 属性，以指示默认应用程序资源位于 fr 子目录中。 它可实例化 Resource Manager，检索 `Greeting` 资源的值，并将其显示到控制台。
 
@@ -233,7 +233,7 @@ Bon jour!
 
 ## <a name="see-also"></a>请参阅
 
-- [桌面应用中的资源](../../../docs/framework/resources/index.md)
-- [全局程序集缓存](../../../docs/framework/app-domains/gac.md)
-- [创建资源文件](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)
-- [创建附属程序集](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)
+- [桌面应用中的资源](index.md)
+- [全局程序集缓存](../app-domains/gac.md)
+- [创建资源文件](creating-resource-files-for-desktop-apps.md)
+- [创建附属程序集](creating-satellite-assemblies-for-desktop-apps.md)

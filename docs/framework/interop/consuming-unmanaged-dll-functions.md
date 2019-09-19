@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: eca7606e-ebfb-4f47-b8d9-289903fdc045
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9e9308d6bf0eefaa60af17a721cd1c26827469eb
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 9ef6a31ba9589ded9527d15e90724d0d04749579
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946849"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051848"
 ---
 # <a name="consuming-unmanaged-dll-functions"></a>使用非托管 DLL 函数
 平台调用是一项服务，使托管代码能够调用动态链接库 (DLL) 中实现的非托管函数，例如 Windows API 中的非托管函数。 此服务定位并调用导出的函数，并根据需要跨交互操作边界封送其自变量（整数、字符串、数组、结构等）。  
@@ -29,27 +29,27 @@ ms.locfileid: "69946849"
   
 #### <a name="to-consume-exported-dll-functions"></a>若要使用导出的 DLL 函数  
   
-1. [标识 DLL 中的函数](../../../docs/framework/interop/identifying-functions-in-dlls.md)。  
+1. [标识 DLL 中的函数](identifying-functions-in-dlls.md)。  
   
      至少必须指定函数名称及其内含的 DLL 的名称。  
   
-2. [创建用于容纳 DLL 函数的类](../../../docs/framework/interop/creating-a-class-to-hold-dll-functions.md)。  
+2. [创建用于容纳 DLL 函数的类](creating-a-class-to-hold-dll-functions.md)。  
   
      可使用现有的类为每个非托管函数创建单独的类，或创建包含一组相关的非托管函数的类。  
   
-3. [在托管代码中创建原型](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)。  
+3. [在托管代码中创建原型](creating-prototypes-in-managed-code.md)。  
   
-     [Visual Basic] 使用 Declare 语句以及 Function 和 Lib 关键字    。 在极少数情况下，可以使用 DllImportAttribute 和 Shared Function 关键字   。 本节稍后会对这些情况进行说明。  
+     [Visual Basic] 使用 Declare 语句以及 Function 和 Lib 关键字。 在极少数情况下，可以使用 DllImportAttribute 和 Shared Function 关键字。 本节稍后会对这些情况进行说明。  
   
-     [C#] 使用 DllImportAttribute 标识 DLL 和函数  。 为此方法标记 static 和 extern 修饰符   。  
+     [C#] 使用 DllImportAttribute 标识 DLL 和函数。 为此方法标记 static 和 extern 修饰符。  
   
-     [C++] 使用 DllImportAttribute 标识 DLL 和函数  。 用 extern "C" 标记此包装方法或函数  。  
+     [C++] 使用 DllImportAttribute 标识 DLL 和函数。 用 extern "C" 标记此包装方法或函数。  
   
-4. [调用 DLL 函数](../../../docs/framework/interop/calling-a-dll-function.md)。  
+4. [调用 DLL 函数](calling-a-dll-function.md)。  
   
-     与调用任何其他托管方法一样，在托管类上调用方法。 [传递结构](../../../docs/framework/interop/passing-structures.md)和[实现回调函数](../../../docs/framework/interop/callback-functions.md)属于特殊情况。  
+     与调用任何其他托管方法一样，在托管类上调用方法。 [传递结构](passing-structures.md)和[实现回调函数](callback-functions.md)属于特殊情况。  
   
- 有关演示如何构造要用于平台调用、基于 .NET 的声明的示例，请参阅[用平台调用封送数据](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)。  
+ 有关演示如何构造要用于平台调用、基于 .NET 的声明的示例，请参阅[用平台调用封送数据](marshaling-data-with-platform-invoke.md)。  
   
 ## <a name="a-closer-look-at-platform-invoke"></a>平台调用详解  
  平台调用依赖元数据定位导出的函数并在运行时封送处理它的自变量。 下图显示了此过程。  
@@ -73,6 +73,6 @@ ms.locfileid: "69946849"
 
 ## <a name="see-also"></a>请参阅
 
-- [与非托管代码交互操作](../../../docs/framework/interop/index.md)
-- [平台调用示例](../../../docs/framework/interop/platform-invoke-examples.md)
-- [互操作封送处理](../../../docs/framework/interop/interop-marshaling.md)
+- [与非托管代码交互操作](index.md)
+- [平台调用示例](platform-invoke-examples.md)
+- [互操作封送处理](interop-marshaling.md)

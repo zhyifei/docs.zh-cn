@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: ba1fa43e-49f5-47d9-bd7f-3024af16f4ba
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ff85f5737babb73d87f4918ca0f4981263f7dadc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 7f42f85adf3e9b0874df6c0360bea25b07facc0d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59166746"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053150"
 ---
 # <a name="how-to-create-an-application-domain"></a>如何：创建应用程序域
 需要应用程序域时，公共语言运行时主机会自动创建它们。 但是，可以创建自己的应用程序域并将其加载到需要亲自管理的程序集中。 也可以创建从中执行代码的应用程序域。  
@@ -32,4 +32,4 @@ ms.locfileid: "59166746"
 ## <a name="see-also"></a>请参阅
 
 - [对应用程序域进行编程](application-domains.md#programming-with-application-domains)
-- [使用应用程序域](../../../docs/framework/app-domains/use.md)
+- [使用应用程序域](use.md)

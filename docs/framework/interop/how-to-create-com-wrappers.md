@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bdf89bea-1623-45ee-a57b-cf7c90395efa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e1c4423c20a9a485f3c40877ccd489c749dc0e2c
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
-ms.translationtype: HT
+ms.openlocfilehash: 56a88a5719fc5630baf2f31ee62fd463980661c2
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971838"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051803"
 ---
 # <a name="how-to-create-com-wrappers"></a>如何：创建 COM 包装
 
@@ -30,22 +30,22 @@ ms.locfileid: "70971838"
 
 1. 打开托管应用程序的项目。
 
-2. 在“项目”菜单上，单击“显示所有文件”   。
+2. 在“项目”菜单上，单击“显示所有文件”。
 
-3. 在“项目”菜单上，单击“添加引用”   。
+3. 在“项目”菜单上，单击“添加引用”。
 
-4. 在“添加引用”对话框中，单击“COM”选项卡，选择要使用的组件，然后单击“确定”   。
+4. 在“添加引用”对话框中，单击“COM”选项卡，选择要使用的组件，然后单击“确定”。
 
-     在“解决方案资源管理器”中检查 COM 组件是否已添加到项目的“引用”文件夹中  。
+     在“解决方案资源管理器”中检查 COM 组件是否已添加到项目的“引用”文件夹中。
 
 现在可以编写代码以访问 COM 对象。 可以从通过声明对象开始，例如使用适用于 Visual Basic 的 `Imports` 语句或适用于 C# 的 `Using` 语句。
 
 > [!NOTE]
-> 如果要编写 Microsoft Office 组件的程序，请首先从 Microsoft 下载中心安装 [Microsoft Office 主互操作程序集](https://go.microsoft.com/fwlink/?LinkId=50479) (PIA)。 在步骤 4 中，为所需的 Office 产品选择可用的最新版本的对象库，如 Microsoft Word 11.0 对象库  。  
+> 如果要编写 Microsoft Office 组件的程序，请首先从 Microsoft 下载中心安装 [Microsoft Office 主互操作程序集](https://go.microsoft.com/fwlink/?LinkId=50479) (PIA)。 在步骤 4 中，为所需的 Office 产品选择可用的最新版本的对象库，如 Microsoft Word 11.0 对象库。  
   
 ### <a name="to-create-a-runtime-callable-wrapper-using-net-framework-tools"></a>使用 .NET Framework 工具创建运行时可调用包装器  
   
-- 运行 [Tlbimp.exe（类型库导入程序）](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)工具。  
+- 运行 [Tlbimp.exe（类型库导入程序）](../tools/tlbimp-exe-type-library-importer.md)工具。  
   
  此工具为在原始类型库中定义的类型创建包含运行时元数据的程序集。  
   
@@ -57,21 +57,21 @@ ms.locfileid: "70971838"
   
      在 AssemblyInfo 文件中验证程序集是否具有由四部分构成的完整版本号。 在 Windows 注册表中维护版本控制需要此版本号。 有关版本号的详细信息，请参阅[程序集版本控制](../../standard/assembly/versioning.md)。  
   
-2. 在“项目”菜单上，单击“属性”   。  
+2. 在“项目”菜单上，单击“属性”。  
   
-3. 单击“编译”  选项卡。  
+3. 单击“编译”选项卡。  
   
-4. 选择“为 COM 互操作注册”复选框  。  
+4. 选择“为 COM 互操作注册”复选框。  
   
- 生成项目时，将自动为 COM 互操作注册程序集。 如果要在 Visual Studio 2005 中生成本机应用程序，可以通过单击“项目”菜单上的“添加引用”来使用此程序集   。  
+ 生成项目时，将自动为 COM 互操作注册程序集。 如果要在 Visual Studio 2005 中生成本机应用程序，可以通过单击“项目”菜单上的“添加引用”来使用此程序集。  
   
 ### <a name="to-create-a-com-callable-wrapper-using-net-framework-tools"></a>使用 .NET Framework 工具创建 COM 可调用包装器  
   
-运行 [Regasm.exe（程序集注册工具）](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md)工具。  
+运行 [Regasm.exe（程序集注册工具）](../tools/regasm-exe-assembly-registration-tool.md)工具。  
   
 此工具读取程序集元数据，并向注册表添加所需的项。 这样，使 COM 客户端可以透明方式创建 .NET Framework 类。 可以像使用本机 COM 类一样可以使用此程序集。  
   
-可以在任何目录中的程序集上运行 Regasm.exe，然后运行 [Gacutil.exe（全局程序集缓存工具）](../../../docs/framework/tools/gacutil-exe-gac-tool.md)以将其移动到全局程序集缓存中。 移动此程序集不会使位置注册表项失效，因为如果未在其他位置找到此程序集，则会始终对全局程序集缓存进行检查。  
+可以在任何目录中的程序集上运行 Regasm.exe，然后运行 [Gacutil.exe（全局程序集缓存工具）](../tools/gacutil-exe-gac-tool.md)以将其移动到全局程序集缓存中。 移动此程序集不会使位置注册表项失效，因为如果未在其他位置找到此程序集，则会始终对全局程序集缓存进行检查。  
   
 ## <a name="see-also"></a>请参阅
 

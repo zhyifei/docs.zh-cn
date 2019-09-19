@@ -8,20 +8,20 @@ helpviewer_keywords:
 ms.assetid: 5419011c-6e57-40f6-8c65-386db8f7a651
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4fff2d3309e5f8872a9333bf3d2f86e52bd67ea5
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
-ms.translationtype: HT
+ms.openlocfilehash: ac60fa96b7c9ce6991f89e8c6a37ff5da4a34a50
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971780"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051782"
 ---
 # <a name="how-to-generate-primary-interop-assemblies-using-tlbimpexe"></a>如何：使用 Tlbimp.exe 生成主互操作程序集
 
 有两种生成主互操作程序集的方法：
 
-- 使用由 Windows SDK 提供的[类型库导入程序 (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)。
+- 使用由 Windows SDK 提供的[类型库导入程序 (Tlbimp.exe)](../tools/tlbimp-exe-type-library-importer.md)。
 
-  生成主互操作程序集最简单的方法是使用 [Tlbimp.exe（类型库导入程序）](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)。 Tlbimp.exe 提供了以下安全措施：
+  生成主互操作程序集最简单的方法是使用 [Tlbimp.exe（类型库导入程序）](../tools/tlbimp-exe-type-library-importer.md)。 Tlbimp.exe 提供了以下安全措施：
 
   - 在为任何嵌套的类型库引用创建新的互操作程序集之前，检查其他已注册的主互操作程序集。
 
@@ -39,13 +39,13 @@ ms.locfileid: "70971780"
 
 1. 在命令提示符处，键入：
 
-    tlbimp tlbfile /primary /keyfile:filename /out:assemblyname      
+    tlbimp tlbfile /primary /keyfile:filename /out:assemblyname
 
-    在此命令中，tlbfile 是要包含 COM 类型库的文件，filename 是包含密钥对的容器或文件的名称，assemblyname 是要使用强名称签名的程序集的名称    。
+    在此命令中，tlbfile 是要包含 COM 类型库的文件，filename 是包含密钥对的容器或文件的名称，assemblyname 是要使用强名称签名的程序集的名称。
 
 主互操作程序集仅可引用其他主互操作程序集。 如果你的程序集从第三方 COM 类型库引用类型，则必须在生成主互操作程序集之前，先从发布服务器上获取主互操作程序集。 如果你是发布者，则必须在生成引用的主互操作程序集之前，生成依赖类型库的主互操作程序集。
 
-当具有不同于原始类型库的版本号的依赖主互操作程序集安装在当前目录时，此程序集是不可发现的。 必须在 Windows 注册表中注册此依赖主互操作程序集，或者使用 /reference 选项确保 Tlbimp.exe 可以找到依赖 DLL  。
+当具有不同于原始类型库的版本号的依赖主互操作程序集安装在当前目录时，此程序集是不可发现的。 必须在 Windows 注册表中注册此依赖主互操作程序集，或者使用 /reference 选项确保 Tlbimp.exe 可以找到依赖 DLL。
 
 还可以包装类型库的多个版本。 有关说明，请参阅[如何：包装类型库的多个版本](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/1565h6hc(v=vs.100))。
 
@@ -57,7 +57,7 @@ ms.locfileid: "70971780"
 tlbimp LibUtil.tlb /primary /keyfile:CompanyA.snk /out:LibUtil.dll
 ```
 
-对于更具描述性的名称（使用 VendorName.LibraryName 命名规则），以下示例将重写默认程序集的文件名和命名空间名称   。
+对于更具描述性的名称（使用 VendorName.LibraryName 命名规则），以下示例将重写默认程序集的文件名和命名空间名称。
 
 ```console
 tlbimp LibUtil.tlb /primary /keyfile:CompanyA.snk /namespace:CompanyA.LibUtil /out:CompanyA.LibUtil.dll
@@ -71,4 +71,4 @@ tlbimp MyLib.tlb /primary /keyfile:CompanyB.snk /namespace:CompanyB.MyLib /refer
 
 ## <a name="see-also"></a>请参阅
 
-- [如何：注册主互操作程序集](../../../docs/framework/interop/how-to-register-primary-interop-assemblies.md)
+- [如何：注册主互操作程序集](how-to-register-primary-interop-assemblies.md)

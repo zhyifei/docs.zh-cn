@@ -7,25 +7,25 @@ helpviewer_keywords:
 ms.assetid: 2264054e-712e-47e4-8657-1aa1cfec3e3d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e8104d7cd6aa5a26fa69df7be838ea9b7cb2cc44
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
-ms.translationtype: HT
+ms.openlocfilehash: b5d7f97a4ec67e4932aaee922897a16362f6a78c
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971768"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053227"
 ---
 # <a name="application-domains-and-assemblies-how-to-topics"></a>应用程序域和程序集帮助主题
 以下各节包含使用应用程序域和程序集进行编程的相关概念性文档中的所有操作说明主题链接。  
   
  **应用程序域**  
   
-- [如何：创建应用程序域](../../../docs/framework/app-domains/how-to-create-an-application-domain.md)  
+- [如何：创建应用程序域](how-to-create-an-application-domain.md)  
   
-- [如何：卸载应用程序域](../../../docs/framework/app-domains/how-to-unload-an-application-domain.md)  
+- [如何：卸载应用程序域](how-to-unload-an-application-domain.md)  
   
-- [如何：配置应用程序域](../../../docs/framework/app-domains/how-to-configure-an-application-domain.md)  
+- [如何：配置应用程序域](how-to-configure-an-application-domain.md)  
   
-- [如何：将程序集加载到应用程序域中](../../../docs/framework/app-domains/how-to-load-assemblies-into-an-application-domain.md)  
+- [如何：将程序集加载到应用程序域中](how-to-load-assemblies-into-an-application-domain.md)  
   
 - [如何：从程序集获得类型和成员信息](../reflection-and-codedom/get-type-member-information.md)  
   
@@ -47,12 +47,12 @@ ms.locfileid: "70971768"
   
 - [如何：将程序集安装到全局程序集缓存](install-assembly-into-gac.md)  
   
-- [如何：查看全局程序集缓存的内容](../../../docs/framework/app-domains/how-to-view-the-contents-of-the-gac.md)  
+- [如何：查看全局程序集缓存的内容](how-to-view-the-contents-of-the-gac.md)  
   
-- [如何：从全局程序集缓存中删除程序集](../../../docs/framework/app-domains/how-to-remove-an-assembly-from-the-gac.md)  
+- [如何：从全局程序集缓存中删除程序集](how-to-remove-an-assembly-from-the-gac.md)  
   
 - [如何：查看程序集内容](../../standard/assembly/view-contents.md)  
   
 ## <a name="see-also"></a>请参阅
 
-- [应用程序域和程序集](../../../docs/framework/app-domains/index.md)
+- [应用程序域和程序集](index.md)

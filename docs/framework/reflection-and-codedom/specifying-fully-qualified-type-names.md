@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d90b1e39-9115-4f2a-81c0-05e7e74e5580
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dc8395492992c22da3c635f0de010516127f9be4
-ms.sourcegitcommit: 46c68557bf6395f0ab9915f7558f2faae0097695
-ms.translationtype: HT
+ms.openlocfilehash: 656b82daffc62824ed663ea7080bd6d20cd0dadc
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "61792998"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045818"
 ---
 # <a name="specifying-fully-qualified-type-names"></a>指定完全限定的类型名称
 
@@ -143,15 +143,15 @@ AssemblyProperty
 
 程序集名称规范中至少需要具有程序集的文本名称 (IDENTIFIER)。 可以在 IDENTIFIER 后添加下表所述的以逗号分隔的属性/值对列表。 IDENTIFIER 命名应遵循文件命名的规则。 IDENTIFIER 不区分大小写。
 
-|属性名称|说明|允许的值|
+|属性名称|描述|允许的值|
 |-------------------|-----------------|----------------------|
-|**Version**|程序集版本号|Major.Minor.Build.Revision，其中 Major、Minor、Build 和 Revision 是 0 和 65535 之间（含 0 和 65535）的整数      。|
-|PublicKey |完整公钥|完整公钥十六进制格式的字符串值。 指定 null 引用（在 Visual Basic 中为 Nothing）以显式指示私有程序集  。|
-|**PublicKeyToken**|公钥标记（完整公钥的 8 字节哈希）|公钥标记十六进制格式的字符串值。 指定 null 引用（在 Visual Basic 中为 Nothing）以显式指示私有程序集  。|
+|**Version**|程序集版本号|Major.Minor.Build.Revision，其中 Major、Minor、Build 和 Revision 是 0 和 65535 之间（含 0 和 65535）的整数。|
+|PublicKey|完整公钥|完整公钥十六进制格式的字符串值。 指定 null 引用（在 Visual Basic 中为 Nothing）以显式指示私有程序集。|
+|**PublicKeyToken**|公钥标记（完整公钥的 8 字节哈希）|公钥标记十六进制格式的字符串值。 指定 null 引用（在 Visual Basic 中为 Nothing）以显式指示私有程序集。|
 |**区域性**|程序集区域性|RFC-1766 格式的程序集区域性，对于独立于语言（非附属）的程序集则为“非特定”。|
-|**自定义**|自定义二进制大对象 (BLOB)。 它当前仅用于由[本机图像生成器 (Ngen)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) 生成的程序集。|本机图像生成器工具用以向程序集缓存通知所安装程序集为本机图像的自定义字符串，因此该自定义字符串安装在本机图像缓存中。 也称作 zap 字符串。|
+|**自定义**|自定义二进制大对象 (BLOB)。 它当前仅用于由[本机图像生成器 (Ngen)](../tools/ngen-exe-native-image-generator.md) 生成的程序集。|本机图像生成器工具用以向程序集缓存通知所安装程序集为本机图像的自定义字符串，因此该自定义字符串安装在本机图像缓存中。 也称作 zap 字符串。|
 
-下面的示例演示具有默认区域性的简单命名程序集的 AssemblyName  。
+下面的示例演示具有默认区域性的简单命名程序集的 AssemblyName。
 
 ```csharp
 com.microsoft.crypto, Culture=""
@@ -164,7 +164,7 @@ com.microsoft.crypto, Culture=en, PublicKeyToken=a5d015c7d5a0b012,
     Version=1.0.0.0
 ```
 
-下面的示例演示部分指定的 AssemblyName，它可以由具有强名称或简单名称的程序集来满足  。
+下面的示例演示部分指定的 AssemblyName，它可以由具有强名称或简单名称的程序集来满足。
 
 ```csharp
 com.microsoft.crypto
@@ -172,14 +172,14 @@ com.microsoft.crypto, Culture=""
 com.microsoft.crypto, Culture=en
 ```
 
-下面的示例分别演示一个部分指定的 AssemblyName，它必须由具有简单名称的程序集来满足  。
+下面的示例分别演示一个部分指定的 AssemblyName，它必须由具有简单名称的程序集来满足。
 
 ```csharp
 com.microsoft.crypto, Culture="", PublicKeyToken=null
 com.microsoft.crypto, Culture=en, PublicKeyToken=null
 ```
 
-下面的示例分别演示一个部分指定的 AssemblyName，它必须由具有强名称的程序集来满足  。
+下面的示例分别演示一个部分指定的 AssemblyName，它必须由具有强名称的程序集来满足。
 
 ```csharp
 com.microsoft.crypto, Culture="", PublicKeyToken=a5d015c7d5a0b012
@@ -189,7 +189,7 @@ com.microsoft.crypto, Culture=en, PublicKeyToken=a5d015c7d5a0b012,
 
 ## <a name="specifying-generic-types"></a>指定泛型类型
 
-SimpleTypeSpec\`NUMBER 表示具有从 1 到 n  泛型类型参数的开放式泛型类型。 例如，若要获取对开放式泛型类型 List\<T> 或封闭式泛型类型 List\<String> 的引用，请使用 ``Type.GetType("System.Collections.Generic.List`1")`` 若要获取对泛型类型 Dictionary\<TKey,TValue> 的引用，请使用 ``Type.GetType("System.Collections.Generic.Dictionary`2")``。
+SimpleTypeSpec\`NUMBER 表示具有从 1 到 n 泛型类型参数的开放式泛型类型。 例如，若要获取对开放式泛型类型 List\<T> 或封闭式泛型类型 List\<String> 的引用，请使用 ``Type.GetType("System.Collections.Generic.List`1")`` 若要获取对泛型类型 Dictionary\<TKey,TValue> 的引用，请使用 ``Type.GetType("System.Collections.Generic.Dictionary`2")``。
 
 ## <a name="specifying-pointers"></a>指定指针
 
@@ -212,9 +212,9 @@ SimpleTypeSpec & 表示托管指针或引用。 例如，要获取对 MyType 类
 
 - `Type.GetType("MyArray[*,*]")` 和 `Type.GetType("MyArray[,]")` 获取下限未知的矩形二维数组。
 
-请注意，从运行时的角度来看，`MyArray[] != MyArray[*]`，但对于多维数组，这两种表示是等效的。 也就是说，`Type.GetType("MyArray [,]") == Type.GetType("MyArray[*,*]")` 的计算结果为 true  。
+请注意，从运行时的角度来看，`MyArray[] != MyArray[*]`，但对于多维数组，这两种表示是等效的。 也就是说，`Type.GetType("MyArray [,]") == Type.GetType("MyArray[*,*]")` 的计算结果为 true。
 
-对于 ModuleBuilder.GetType，`MyArray[0..5]` 指示大小为 6、下限为 0 的单维数组  。 `MyArray[4…]` 指示大小未知、下限为 4 的单维数组。
+对于 ModuleBuilder.GetType，`MyArray[0..5]` 指示大小为 6、下限为 0 的单维数组。 `MyArray[4…]` 指示大小未知、下限为 4 的单维数组。
 
 ## <a name="see-also"></a>请参阅
 
@@ -224,4 +224,4 @@ SimpleTypeSpec & 表示托管指针或引用。 例如，要获取对 MyType 类
 - <xref:System.Type.FullName%2A?displayProperty=nameWithType>
 - <xref:System.Type.GetType%2A?displayProperty=nameWithType>
 - <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType>
-- [查看类型信息](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)
+- [查看类型信息](viewing-type-information.md)

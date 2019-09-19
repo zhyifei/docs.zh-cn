@@ -11,19 +11,19 @@ helpviewer_keywords:
 ms.assetid: 1432aa2d-bd83-4346-bf3b-a1b7920e2aa9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f21126361ce69ab14d18e12d2787b2c264116b02
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 86b66d0a88864188d67aab19de67aaa857a06eaa
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69921528"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053171"
 ---
 # <a name="how-to-load-assemblies-into-an-application-domain"></a>如何：将程序集加载到应用程序域中
 可通过多种方法将程序集加载到应用程序域中。 推荐方法是使用 <xref:System.Reflection.Assembly?displayProperty=nameWithType> 类的 `static`（在 Visual Basic 中为 `Shared`）<xref:System.Reflection.Assembly.Load%2A> 方法。 加载程序集的其他方法包括：  
   
 - <xref:System.Reflection.Assembly> 类的 <xref:System.Reflection.Assembly.LoadFrom%2A> 方法加载已给定其文件位置的程序集。 通过此方法加载程序集将使用不同的加载上下文。  
   
-- <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> 和 <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A> 方法将程序集加载到仅反射上下文中。 可检查但不可执行加载到该上下文中的程序集，允许检查以其他平台为目标的程序集。 请参阅[如何：将程序集加载到仅反射上下文中](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)。  
+- <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> 和 <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A> 方法将程序集加载到仅反射上下文中。 可检查但不可执行加载到该上下文中的程序集，允许检查以其他平台为目标的程序集。 请参阅[如何：将程序集加载到仅反射上下文中](../reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)。  
   
 > [!NOTE]
 > 仅反射上下文是 .NET Framework 2.0 版中的新增功能。  
@@ -40,7 +40,7 @@ ms.locfileid: "69921528"
  可指定在应用程序域间共享已加载程序集的实时 (JIT) 编译代码的方式。 有关详细信息，请参阅[应用程序域和程序集](application-domains.md#application-domains-and-assemblies)。  
   
 ## <a name="example"></a>示例  
- 以下代码将名为“example.exe”或“example.dll”的程序集加载到当前应用程序域中，从该程序集获取名为 `Example` 的类型，为该类型获取名为 `MethodA` 的参数方法，然后执行该方法。 有关从已加载程序集中获取信息的完整讨论，请参阅[动态加载和使用类型](../../../docs/framework/reflection-and-codedom/dynamically-loading-and-using-types.md)。  
+ 以下代码将名为“example.exe”或“example.dll”的程序集加载到当前应用程序域中，从该程序集获取名为 `Example` 的类型，为该类型获取名为 `MethodA` 的参数方法，然后执行该方法。 有关从已加载程序集中获取信息的完整讨论，请参阅[动态加载和使用类型](../reflection-and-codedom/dynamically-loading-and-using-types.md)。  
   
  [!code-cpp[System.AppDomain.Load#2](../../../samples/snippets/cpp/VS_Snippets_CLR_System/system.appdomain.load/cpp/source2.cpp#2)]
  [!code-csharp[System.AppDomain.Load#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.load/cs/source2.cs#2)]
@@ -50,7 +50,7 @@ ms.locfileid: "69921528"
 
 - <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A>
 - [对应用程序域进行编程](application-domains.md#programming-with-application-domains)
-- [反射](../../../docs/framework/reflection-and-codedom/reflection.md)
-- [使用应用程序域](../../../docs/framework/app-domains/use.md)
-- [如何：将程序集加载到仅反射上下文中](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)
+- [反射](../reflection-and-codedom/reflection.md)
+- [使用应用程序域](use.md)
+- [如何：将程序集加载到仅反射上下文中](../reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)
 - [应用程序域和程序集](application-domains.md#application-domains-and-assemblies)

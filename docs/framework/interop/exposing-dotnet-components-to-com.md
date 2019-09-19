@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e42a65f7-1e61-411f-b09a-aca1bbce24c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 981f5f23bf2aafc41426c858e150ec3664a494f9
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
-ms.translationtype: HT
+ms.openlocfilehash: db4380e97cf4d556248f42981b350160710f1dd8
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205814"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051819"
 ---
 # <a name="exposing-net-components-to-com"></a>向 COM 公开 .NET Core 组件
 
@@ -27,7 +27,7 @@ ms.locfileid: "70205814"
 
      托管代码中的自定义属性可增强组件的互操作性。
 
-- [将 COM 的程序集打包](../../../docs/framework/interop/packaging-an-assembly-for-com.md)。
+- [将 COM 的程序集打包](packaging-an-assembly-for-com.md)。
 
      COM 开发人员可能会要求用户总结引用和部署程序集所涉及的步骤。
 
@@ -35,17 +35,17 @@ ms.locfileid: "70205814"
 
 ## <a name="to-consume-a-managed-type-from-com"></a>从 COM 使用托管类型
 
-1. [向 COM 注册程序集](../../../docs/framework/interop/registering-assemblies-with-com.md)。
+1. [向 COM 注册程序集](registering-assemblies-with-com.md)。
 
      必须在设计时注册程序集（和类型库）中的类型。 如果安装程序未注册程序集，请指示 COM 开发人员使用 Regasm.exe。
 
-2. [从 COM 引用 .NET 类型](../../../docs/framework/interop/how-to-reference-net-types-from-com.md)。
+2. [从 COM 引用 .NET 类型](how-to-reference-net-types-from-com.md)。
 
      COM 开发人员可使用当前使用的相同工具和技术引用程序集中的类型。
 
 3. [调用 .NET 对象](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8hw8h46b(v=vs.100))。
 
-     COM 开发人员可采用在任何非托管类型上调用方法的方式在 .NET 对象上调用方法。 例如，COM CoCreateInstance API 激活 .NET 对象  。
+     COM 开发人员可采用在任何非托管类型上调用方法的方式在 .NET 对象上调用方法。 例如，COM CoCreateInstance API 激活 .NET 对象。
 
 4. [为 COM 访问部署应用程序](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c2850st8(v=vs.100))。
 
@@ -53,5 +53,5 @@ ms.locfileid: "70205814"
 
 ## <a name="see-also"></a>请参阅
 
-- [与非托管代码交互操作](../../../docs/framework/interop/index.md)
-- [COM 互操作示例：COM 客户端和 .NET 服务器](../../../docs/framework/interop/com-interop-sample-com-client-and-net-server.md)
+- [与非托管代码交互操作](index.md)
+- [COM 互操作示例：COM 客户端和 .NET 服务器](com-interop-sample-com-client-and-net-server.md)

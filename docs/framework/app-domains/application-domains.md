@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 113a8bbf-6875-4a72-a49d-ca2d92e19cc8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c9ab95124264b2b59be77695755ab1d1f1c3b1aa
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
-ms.translationtype: HT
+ms.openlocfilehash: 4a0a6a00fc76a646b4295db726bd8ae67733e321
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70040738"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053219"
 ---
 # <a name="application-domains"></a>应用程序域
 
@@ -48,7 +48,7 @@ ms.locfileid: "70040738"
     > [!NOTE]
     > 不能卸载单个程序集或类型。 只能卸载整个域。  
   
-- 在一个应用程序中运行的代码不能直接访问其他应用程序中的代码或资源。 为了强制实施此隔离，公共语言运行时禁止在不同应用程序域中的对象之间进行直接调用。 要在各域之间传递对象，可以复制这些对象，或通过代理访问这些对象。 如果复制对象，那么对该对象的调用为本地调用。 也就是说，调用方和被引用的对象位于同一应用程序域中。 如果通过代理访问对象，那么对该对象的调用为远程调用。 在此情况下，调用方和被引用的对象位于不同的应用程序域中。 域间调用所采用的远程调用基础结构与两个进程间的调用或两台计算机间的调用的基础结构相同。 因此，被引用的对象的元数据必须对于两个应用程序域均可用，以便用 JIT 正确编译该方法调用。 如果调用域对被调用对象的元数据没有访问权，则编译可能失败，并引发类型为 <xref:System.IO.FileNotFoundException> 的异常。 有关详细信息，请参阅 [Remote Objects](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))。 确定如何跨域访问对象的机制是由该对象决定的。 有关详细信息，请参阅 <xref:System.MarshalByRefObject?displayProperty=nameWithType>。  
+- 在一个应用程序中运行的代码不能直接访问其他应用程序中的代码或资源。 为了强制实施此隔离，公共语言运行时禁止在不同应用程序域中的对象之间进行直接调用。 要在各域之间传递对象，可以复制这些对象，或通过代理访问这些对象。 如果复制对象，那么对该对象的调用为本地调用。 也就是说，调用方和被引用的对象位于同一应用程序域中。 如果通过代理访问对象，那么对该对象的调用为远程调用。 在此情况下，调用方和被引用的对象位于不同的应用程序域中。 域间调用所采用的远程调用基础结构与两个进程间的调用或两台计算机间的调用的基础结构相同。 因此，被引用的对象的元数据必须对于两个应用程序域均可用，以便用 JIT 正确编译该方法调用。 如果调用域对被调用对象的元数据没有访问权，则编译可能失败，并引发类型为 <xref:System.IO.FileNotFoundException> 的异常。 有关详细信息，请参阅 [Remote Objects](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))。 确定如何跨域访问对象的机制是由该对象决定的。 有关详细信息，请参阅 <xref:System.MarshalByRefObject?displayProperty=nameWithType> 。  
   
 - 代码行为的作用范围由它运行所在的应用程序决定。 换言之，应用程序域将提供应用程序版本策略等配置设置、它所访问的任意远程程序集的位置，以及加载到该域中的程序集的位置信息。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "70040738"
   
 - 如果程序集不是以非特定于域的形式进行加载，则它必须在加载的每个应用程序域中都是 JIT 编译的。 但是，通过卸载程序集加载的所有应用程序域，可以从进程中卸载程序集。  
   
- 运行时宿主决定在将运行时加载到进程中时是否以非特定于域的形式加载程序集。 对于托管应用程序，将 <xref:System.LoaderOptimizationAttribute> 特性应用于进程的入口点方法，并从关联的 <xref:System.LoaderOptimization> 枚举指定一个值。 对于托管公共语言运行时的非托管应用程序，在调用 [CorBindToRuntimeEx 函数](../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)方法时，指定适当的标志。  
+ 运行时宿主决定在将运行时加载到进程中时是否以非特定于域的形式加载程序集。 对于托管应用程序，将 <xref:System.LoaderOptimizationAttribute> 特性应用于进程的入口点方法，并从关联的 <xref:System.LoaderOptimization> 枚举指定一个值。 对于托管公共语言运行时的非托管应用程序，在调用 [CorBindToRuntimeEx 函数](../unmanaged-api/hosting/corbindtoruntimeex-function.md)方法时，指定适当的标志。  
   
  有三个选项用于加载非特定于域的程序集：  
   
@@ -76,7 +76,7 @@ ms.locfileid: "70040738"
   
  以下程序集不能共享 JIT 编译代码：使用 <xref:System.Reflection.Assembly.LoadFrom%2A> 类的 <xref:System.Reflection.Assembly> 方法加载到“加载源”上下文中的程序集，或者使用 <xref:System.Reflection.Assembly.Load%2A> 方法的重载（指定字节数组）从图像加载的程序集。  
   
- 使用 [Ngen.exe（本机映像生成器）](../../../docs/framework/tools/ngen-exe-native-image-generator.md)编译为本机代码的程序集如果在第一次加载到进程中时是以非特定于域的形式加载的，则可以在不同应用程序域之间共享这些程序集。  
+ 使用 [Ngen.exe（本机映像生成器）](../tools/ngen-exe-native-image-generator.md)编译为本机代码的程序集如果在第一次加载到进程中时是以非特定于域的形式加载的，则可以在不同应用程序域之间共享这些程序集。  
   
  包含应用程序入口点的程序集的 JIT 编译代码只有在其所有依赖项都可以被共享的情况下，才可以被共享。  
   
@@ -110,7 +110,7 @@ ms.locfileid: "70040738"
   
  <xref:System.AppDomain> 是应用程序域的程序设计界面。 此类包括各种方法，这些方法可以创建和卸载域、创建域中各类型的实例以及注册各种通知（如应用程序域卸载）。 下表列出了常用的 <xref:System.AppDomain> 方法。  
   
-|AppDomain 方法|说明|  
+|AppDomain 方法|描述|  
 |----------------------|-----------------|  
 |<xref:System.AppDomain.CreateDomain%2A>|创建新的应用程序域。 建议使用此方法指定 <xref:System.AppDomainSetup> 对象的重载形式。 这是设置新域的各个属性的首选方式，这些属性包括应用程序基（即该应用程序的根目录）、域的配置文件的位置、以及公共语言运行时用于将程序集加载到域中的搜索路径等。|  
 |<xref:System.AppDomain.ExecuteAssembly%2A> 和 <xref:System.AppDomain.ExecuteAssemblyByName%2A>|执行应用程序域中的程序集。 这是一个实例方法，因此它可用来执行另一个应用程序域（你拥有对该域的引用）中的代码。|  

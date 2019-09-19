@@ -10,22 +10,23 @@ helpviewer_keywords:
 ms.assetid: 8a18e5c2-d41d-49ef-abcb-7c27e2469433
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9f45f40cd66c63e660b9091c726533dcfe8db086
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
-ms.translationtype: HT
+ms.openlocfilehash: 0331e0ad30743d5f0bba125e8e61e636e1c2a5be
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971586"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053027"
 ---
 # <a name="working-with-assemblies-and-the-global-assembly-cache"></a>使用程序集和全局程序集缓存
+
 如果需要在几个应用程序间共享程序集，可将其安装到全局程序集缓存中。 安装了公共语言运行时的每台计算机均具有此计算机范围的代码缓存。 全局程序集缓存中存储专门指定给由计算机中若干应用程序共享的程序集。 程序集必须具有强名称才可安装到全局程序集缓存中。  
   
 > [!NOTE]
 > 全局程序集缓存中放置的程序集必须具有相同的程序集名称和文件名（不包括文件扩展名）。 例如，程序集名称为 myAssembly 的程序集必须具有名为 myAssembly.exe 或 myAssembly.dll 的文件。  
   
- 只能在需要时才通过将程序集安装到全局程序集缓存中来共享程序集。 一般原则是：程序集依赖项保持专用，并在应用程序目录中定位程序集，除非明确要求共享程序集。 另外，无需为了使程序集可以访问 COM 互操作或非托管代码而将程序集安装到全局程序集缓存。  
+只能在需要时才通过将程序集安装到全局程序集缓存中来共享程序集。 一般原则是：程序集依赖项保持专用，并在应用程序目录中定位程序集，除非明确要求共享程序集。 另外，无需为了使程序集可以访问 COM 互操作或非托管代码而将程序集安装到全局程序集缓存。  
   
- 建议将程序集安装到全局程序集缓存中的原因有以下几点：  
+建议将程序集安装到全局程序集缓存中的原因有以下几点：  
   
 - 共享位置。  
   
@@ -46,30 +47,31 @@ ms.locfileid: "70971586"
  请注意，在有些情况下，很明显不需要将程序集安装到全局程序集缓存中。 如果将组成应用程序的某个程序集置于全局程序集缓存中，就无法再通过使用 XCOPY 复制应用程序目录来复制或安装应用程序。 在这种情况下，还必须将程序集移到全局程序集缓存中。  
   
 ## <a name="in-this-section"></a>本节内容  
- [如何：将程序集安装到全局程序集缓存](install-assembly-into-gac.md)  
- 描述将程序集安装到全局程序集缓存的方法。  
+[如何：将程序集安装到全局程序集缓存](install-assembly-into-gac.md)  
+描述将程序集安装到全局程序集缓存的方法。  
   
- [如何：查看全局程序集缓存的内容](../../../docs/framework/app-domains/how-to-view-the-contents-of-the-gac.md)  
- 说明如何使用 [Gacutil.exe（全局程序集缓存工具）](../../../docs/framework/tools/gacutil-exe-gac-tool.md)来查看全局程序集缓存的内容。  
+[如何：查看全局程序集缓存的内容](how-to-view-the-contents-of-the-gac.md)  
+说明如何使用 [Gacutil.exe（全局程序集缓存工具）](../tools/gacutil-exe-gac-tool.md)来查看全局程序集缓存的内容。  
   
- [如何：从全局程序集缓存中删除程序集](../../../docs/framework/app-domains/how-to-remove-an-assembly-from-the-gac.md)  
- 说明如何使用 [Gacutil.exe（全局程序集缓存工具）](../../../docs/framework/tools/gacutil-exe-gac-tool.md)从全局程序集缓存中删除程序集。  
+[如何：从全局程序集缓存中删除程序集](how-to-remove-an-assembly-from-the-gac.md)  
+说明如何使用 [Gacutil.exe（全局程序集缓存工具）](../tools/gacutil-exe-gac-tool.md)从全局程序集缓存中删除程序集。  
   
- [将服务组件和全局程序集缓存结合使用](../../../docs/framework/app-domains/use-serviced-components-with-the-gac.md)  
- 说明服务组件（托管 COM+ 组件）应置于全局程序集缓存中的原因。  
+[将服务组件和全局程序集缓存结合使用](use-serviced-components-with-the-gac.md)  
+说明服务组件（托管 COM+ 组件）应置于全局程序集缓存中的原因。  
   
 ## <a name="related-sections"></a>相关章节  
- [创建程序集](../../standard/assembly/create.md)  
- 概述创建程序集。  
+
+[创建程序集](../../standard/assembly/create.md)  
+概述创建程序集。  
   
- [全局程序集缓存](../../../docs/framework/app-domains/gac.md)  
- 描述全局程序集缓存。  
+[全局程序集缓存](gac.md)  
+描述全局程序集缓存。  
   
- [如何：查看程序集内容](../../standard/assembly/view-contents.md)  
- 说明如何使用 [Ildasm.exe（IL 反汇编程序）](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)来查看程序集中的 Microsoft 中间语言 (MSIL) 信息。  
+[如何：查看程序集内容](../../standard/assembly/view-contents.md)  
+说明如何使用 [Ildasm.exe（IL 反汇编程序）](../tools/ildasm-exe-il-disassembler.md)来查看程序集中的 Microsoft 中间语言 (MSIL) 信息。  
   
- [运行时如何定位程序集](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- 描述公共语言运行时如何查找并加载构成应用程序的程序集。  
+[运行时如何定位程序集](../deployment/how-the-runtime-locates-assemblies.md)  
+描述公共语言运行时如何查找并加载构成应用程序的程序集。  
   
- [使用程序集编程](../../standard/assembly/program.md)  
- 描述托管应用程序的构造块 - 程序集。
+[使用程序集编程](../../standard/assembly/program.md)  
+描述托管应用程序的构造块 - 程序集。

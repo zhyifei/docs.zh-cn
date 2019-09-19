@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 93892fa4-90b3-4ec4-b147-4bec9880de2b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1a224093b47241d951b463a7f3e0be389bba2806
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
-ms.translationtype: HT
+ms.openlocfilehash: 857bad224d1a88c7011a42d0595b17b1810381aa
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70043728"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046058"
 ---
 # <a name="how-to-define-a-generic-method-with-reflection-emit"></a>如何：用反射发出定义泛型方法
 
@@ -27,7 +27,7 @@ ms.locfileid: "70043728"
 第三个过程演示如何调用泛型方法。
 
 > [!IMPORTANT]
-> 某方法只要属于泛型类型，且使用该类型的类型参数，就不是泛型方法。 只有当方法有属于自己的类型参数列表时才是泛型方法。 泛型方法可在非泛型类型上出现，如本示例中所示。 有关泛型类型上的非泛型方法示例，请参阅[如何：使用反射发出定义泛型类型](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)。
+> 某方法只要属于泛型类型，且使用该类型的类型参数，就不是泛型方法。 只有当方法有属于自己的类型参数列表时才是泛型方法。 泛型方法可在非泛型类型上出现，如本示例中所示。 有关泛型类型上的非泛型方法示例，请参阅[如何：使用反射发出定义泛型类型](how-to-define-a-generic-type-with-reflection-emit.md)。
 
 ### <a name="to-define-a-generic-method"></a>定义泛型方法
 
@@ -36,7 +36,7 @@ ms.locfileid: "70043728"
     [!code-csharp[GenericMethodHowTo#20](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#20)]
     [!code-vb[GenericMethodHowTo#20](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#20)]
 
-2. 定义动态程序集和动态模块，以包含泛型方法所属类型。 在这种情况下，程序集仅有一个模块 `DemoMethodBuilder1`，模块名称为该程序集名称加上扩展名。 在此示例中，因为要将程序集保存在磁盘并执行，所以指定了 <xref:System.Reflection.Emit.AssemblyBuilderAccess.RunAndSave?displayProperty=nameWithType>。 可以使用 [Ildasm.exe（IL 反汇编程序）](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)检查 DemoMethodBuilder1.dll，并将其与步骤 1 中所示方法的 Microsoft 中间语言 (MSIL) 比较。
+2. 定义动态程序集和动态模块，以包含泛型方法所属类型。 在这种情况下，程序集仅有一个模块 `DemoMethodBuilder1`，模块名称为该程序集名称加上扩展名。 在此示例中，因为要将程序集保存在磁盘并执行，所以指定了 <xref:System.Reflection.Emit.AssemblyBuilderAccess.RunAndSave?displayProperty=nameWithType>。 可以使用 [Ildasm.exe（IL 反汇编程序）](../tools/ildasm-exe-il-disassembler.md)检查 DemoMethodBuilder1.dll，并将其与步骤 1 中所示方法的 Microsoft 中间语言 (MSIL) 比较。
 
     [!code-csharp[GenericMethodHowTo#2](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#2)]
     [!code-vb[GenericMethodHowTo#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#2)]
@@ -156,7 +156,7 @@ ms.locfileid: "70043728"
 
 该方法具有一个形参，它是 `TInput` 的数组。 该方法返回 `TOutput` 的实例，该实例包含输入数组的所有元素。 `TOutput` 可以是实现 <xref:System.Collections.Generic.ICollection%601> 泛型接口的任意泛型集合类型。
 
-执行代码时，该动态程序集会另存为 DemoGenericMethod1.dll，使用 [Ildasm.exe（IL 反汇编程序）](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) 可以对其进行检查。
+执行代码时，该动态程序集会另存为 DemoGenericMethod1.dll，使用 [Ildasm.exe（IL 反汇编程序）](../tools/ildasm-exe-il-disassembler.md) 可以对其进行检查。
 
 > [!NOTE]
 > 一种了解如何发出代码的好方法是编写 Visual Basic、C# 或 Visual C++ 程序，执行尝试发出的任务，然后使用反汇编程序检查编译器生成的 MSIL。
@@ -169,4 +169,4 @@ ms.locfileid: "70043728"
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Reflection.Emit.MethodBuilder>
-- [如何：使用反射发出定义泛型类型](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)
+- [如何：使用反射发出定义泛型类型](how-to-define-a-generic-type-with-reflection-emit.md)

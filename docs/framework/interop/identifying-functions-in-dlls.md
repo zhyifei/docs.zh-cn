@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3e3f6780-6d90-4413-bad7-ba641220364d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c4c56712460d772426a2d8d6d328cba9bb03373d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: deae99f5bdc7c187997d4bad4957b2fcdccdc166
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648665"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051730"
 ---
 # <a name="identifying-functions-in-dlls"></a>标识 DLL 中的函数
 DLL 函数的标识由以下元素组成：  
@@ -31,7 +31,7 @@ DLL 函数的标识由以下元素组成：
   
  MessageBoxA 是 MessageBox 函数的 ANSI 入口点；MessageBoxW 是 Unicode 版本。 可以通过运行多种命令行工具列出特定 DLL（如 user32.dll）的函数名称。 例如，可以使用 `dumpbin /exports user32.dll` 或 `link /dump /exports user32.dll` 来获取函数名称。  
   
- 可以将非托管函数重命名为代码内的任意名称，只要将新名称映射到 DLL 中的原始入口点。 有关重命名托管源代码中的非托管 DLL 函数的说明，请参见[指定入口点](../../../docs/framework/interop/specifying-an-entry-point.md)。  
+ 可以将非托管函数重命名为代码内的任意名称，只要将新名称映射到 DLL 中的原始入口点。 有关重命名托管源代码中的非托管 DLL 函数的说明，请参见[指定入口点](specifying-an-entry-point.md)。  
   
  借助平台调用，可以通过调用 Windows API 和其他 DLL 中的函数来控制操作系统的重要部分。 除了 Windows API，还可通过平台调用获取许多其他 API 和 DLL。  
   
@@ -43,12 +43,12 @@ DLL 函数的标识由以下元素组成：
 |Kernel32.dll|低级别的操作系统函数，用于内存管理和资源处理。|  
 |User32.dll|Windows 管理函数，用于消息处理、计时器、菜单和通信。|  
   
- 有关 Windows API 的完整文档，请参阅平台 SDK。 有关演示如何构造要用于平台调用、基于 .NET 的声明的示例，请参阅[用平台调用封送数据](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)。  
+ 有关 Windows API 的完整文档，请参阅平台 SDK。 有关演示如何构造要用于平台调用、基于 .NET 的声明的示例，请参阅[用平台调用封送数据](marshaling-data-with-platform-invoke.md)。  
   
 ## <a name="see-also"></a>请参阅
 
-- [使用非托管 DLL 函数](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)
-- [指定入口点](../../../docs/framework/interop/specifying-an-entry-point.md)
-- [创建用于容纳 DLL 函数的类](../../../docs/framework/interop/creating-a-class-to-hold-dll-functions.md)
-- [在托管代码中创建原型](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)
-- [调用 DLL 函数](../../../docs/framework/interop/calling-a-dll-function.md)
+- [使用非托管 DLL 函数](consuming-unmanaged-dll-functions.md)
+- [指定入口点](specifying-an-entry-point.md)
+- [创建用于容纳 DLL 函数的类](creating-a-class-to-hold-dll-functions.md)
+- [在托管代码中创建原型](creating-prototypes-in-managed-code.md)
+- [调用 DLL 函数](calling-a-dll-function.md)

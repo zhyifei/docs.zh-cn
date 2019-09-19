@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 168f941a-2b84-43f8-933f-cf4a8548d824
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 18a8748c3175ec7e251116f478069d313ab28d7c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 7e5a57664c5d86ebf394ce026608be9a55872eb8
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59299236"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045537"
 ---
 # <a name="working-with-resx-files-programmatically"></a>以编程方式使用 .resx 文件
 由于 XML 资源 (.resx) 文件必须由定义完善的 XML 组成，这些 XML 的标头必须遵循特定架构（后跟名称/值对的数据），因此你会发现手动创建这些文件很容易出错。 作为一种替代方法，可以使用 .NET 类库中的类型和成员以编程方式创建 .resx 文件。 还可以使用 .NET 类库来检索存储在 .resx 文件中的资源。 本主题说明如何使用 <xref:System.Resources> 命名空间的类型和成员来操作 .resx 文件。
@@ -46,9 +46,9 @@ ms.locfileid: "59299236"
 [!code-vb[Conceptual.Resources.ResX#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.resx/vb/create1.vb#1)]
 
 > [!TIP]
-> 还可以使用 [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) 创建 .resx 文件。 在编译时，Visual Studio 使用 [资源文件生成器 (Resgen.exe)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) 将 .resx 文件转换为二进制资源 (.resources) 文件，然后还将其嵌入应用程序集或附属程序集。
+> 还可以使用 [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) 创建 .resx 文件。 在编译时，Visual Studio 使用 [资源文件生成器 (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) 将 .resx 文件转换为二进制资源 (.resources) 文件，然后还将其嵌入应用程序集或附属程序集。
 
-你无法将 .resx 文件嵌入运行时可执行文件中或将其编译到附属程序集。 必须使用 [资源文件生成器 (Resgen.exe)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)将 .resx 文件转换为二进制资源 (.resources) 文件 。 然后可以将生成的 .resources 文件嵌入应用程序集或附属程序集。 有关详细信息，请参阅 [Creating Resource Files](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)。
+你无法将 .resx 文件嵌入运行时可执行文件中或将其编译到附属程序集。 必须使用 [资源文件生成器 (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md)将 .resx 文件转换为二进制资源 (.resources) 文件 。 然后可以将生成的 .resources 文件嵌入应用程序集或附属程序集。 有关详细信息，请参阅 [Creating Resource Files](creating-resource-files-for-desktop-apps.md)。
 
 ## <a name="enumerate-resources"></a>枚举资源
  在某些情况下，你可能想要从 .resx 文件中检索所有资源，而不是某个特定资源。 若要执行此操作，可以使用 <xref:System.Resources.ResXResourceReader?displayProperty=nameWithType> 类，该类为 .resx 文件中的所有资源提供枚举器。 <xref:System.Resources.ResXResourceReader?displayProperty=nameWithType> 类将实现 <xref:System.Collections.IDictionaryEnumerator>，并返回 <xref:System.Collections.DictionaryEntry> 对象，该对象代表用于循环的每个迭代的特定资源。 此对象的 <xref:System.Collections.DictionaryEntry.Key%2A?displayProperty=nameWithType> 属性返回资源的键， <xref:System.Collections.DictionaryEntry.Value%2A?displayProperty=nameWithType> 属性返回资源的值。
@@ -69,7 +69,7 @@ ms.locfileid: "59299236"
 ## <a name="convert-resx-files-to-binary-resources-files"></a>将 .resx 文件转换为二进制 .resources 文件
  将 .resx 文件转换为嵌入式二进制资源 (.resources) 文件可以带来明显的好处。 虽然 .resx 文件容易阅读，并且在应用程序开发期间易于维护，但是完成的应用程序很少包含这些文件。 如果这些文件随应用程序分发，那么它们将作为单独文件存在，与应用程序可执行文件和随附的库分开存放。 与此相反，.resources 文件则嵌入应用程序可执行文件或其随附的程序集中。 另外，对于在运行时依赖 .resx 文件的本地化应用程序，开发人员负责处理资源回退。 与此相反，如果创建了一组包含嵌入式 .resources 文件的附属程序集，则公共语言运行时将处理资源回退进程。
 
- 要将 .resx 文件转换为 .resources 文件，请使用 [资源文件生成器 (Resgen.exe)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)，它具有以下基本语法：
+ 要将 .resx 文件转换为 .resources 文件，请使用 [资源文件生成器 (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md)，它具有以下基本语法：
 
  **Resgen.exe** *.resxFilename*
 
@@ -81,12 +81,12 @@ ms.locfileid: "59299236"
 
  csc filename .cs -resource: .resourcesFilename
 
- 还可以使用 [程序集链接器 (AL.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md)在附属程序集中嵌入 .resources 文件，基本语法如下：
+ 还可以使用 [程序集链接器 (AL.exe)](../tools/al-exe-assembly-linker.md)在附属程序集中嵌入 .resources 文件，基本语法如下：
 
  al resourcesFilename -out: assemblyFilename
 
 ## <a name="see-also"></a>请参阅
 
-- [创建资源文件](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)
-- [Resgen.exe（资源文件生成器）](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)
-- [Al.exe（程序集链接器）](../../../docs/framework/tools/al-exe-assembly-linker.md)
+- [创建资源文件](creating-resource-files-for-desktop-apps.md)
+- [Resgen.exe（资源文件生成器）](../tools/resgen-exe-resource-file-generator.md)
+- [Al.exe（程序集链接器）](../tools/al-exe-assembly-linker.md)

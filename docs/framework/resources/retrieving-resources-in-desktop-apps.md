@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: eca16922-1c46-4f68-aefe-e7a12283641f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e3b396210cf77cacf3d03439af24de40d2dadeee
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
-ms.translationtype: HT
+ms.openlocfilehash: f4c44bdb4be4c90c20cd6bdb56db6cd3380535c7
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971174"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045618"
 ---
 # <a name="retrieving-resources-in-desktop-apps"></a>检索桌面应用程序中的资源
 使用 .NET Framework 桌面应用中的本地化资源时，最好用主程序集打包默认或非特定区域性的资源，并为应用支持的每种语言或区域性单独创建附属程序集。 可以使用下一节中介绍的 <xref:System.Resources.ResourceManager> 类访问已命名的资源。 如果选择不在主程序集和附属程序集中嵌入资源，也可以按本文后面的 [从 .resources 文件中检索资源](#from_file) 一节中所述直接访问二进制 .resources 文件。  若要检索 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 应用中的资源，请参阅 Windows 开发人员中心中的 [在 Windows 应用商店应用中创建和检索资源](https://go.microsoft.com/fwlink/p/?LinkID=241674) 一文。  
@@ -38,7 +38,7 @@ ms.locfileid: "70971174"
   
 - 具有两个参数的重载：一个字符串包含资源名称，一个 <xref:System.Globalization.CultureInfo> 对象表示要对其检索资源的区域性。 如果找不到该区域性的资源集，资源管理器将使用回退规则检索相应的资源。 有关详细信息，请参阅 <xref:System.Resources.ResourceManager.GetString%28System.String%2CSystem.Globalization.CultureInfo%29>、 <xref:System.Resources.ResourceManager.GetObject%28System.String%2CSystem.Globalization.CultureInfo%29>和 <xref:System.Resources.ResourceManager.GetStream%28System.String%2CSystem.Globalization.CultureInfo%29> 方法。  
   
- 资源管理器使用资源回退进程控制应用检索区域性特定资源的方式。 有关详细信息，请参阅 [Packaging and Deploying Resources](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)中的“资源回退进程”一节。 有关实例化 <xref:System.Resources.ResourceManager> 对象的详细信息，请参阅 <xref:System.Resources.ResourceManager> 类主题中的“实例化 ResourceManager 对象”一节。  
+ 资源管理器使用资源回退进程控制应用检索区域性特定资源的方式。 有关详细信息，请参阅 [Packaging and Deploying Resources](packaging-and-deploying-resources-in-desktop-apps.md)中的“资源回退进程”一节。 有关实例化 <xref:System.Resources.ResourceManager> 对象的详细信息，请参阅 <xref:System.Resources.ResourceManager> 类主题中的“实例化 ResourceManager 对象”一节。  
   
 ### <a name="retrieving-string-data-an-example"></a>检索字符串数据：示例  
  下面的示例调用 <xref:System.Resources.ResourceManager.GetString%28System.String%29> 方法检索当前 UI 区域性的字符串资源。 它包括英语（美国）区域性的非特定字符串资源和法语（法国）和俄语（俄罗斯）区域性的本地化资源。 下面的英语（美国）资源位于名为 Strings.txt 的文件中：  
@@ -138,11 +138,11 @@ GetObject.exe
   
  <xref:System.Resources.SatelliteContractVersionAttribute> 属性提供对主程序集的版本控制支持。 在应用的主程序集上指定此属性，无需更新主程序集的附属程序集即可更新和重新部署主程序集。 更新主程序集后，递增主程序集的版本号，但附属协定版本号保持不变。 资源管理器检索请求的资源时，会加载此属性指定的附属程序集版本。  
   
- 发行者策略程序集提供对附属程序集的版本控制支持。 你可以更新并重新部署附属程序集，而不用更新主程序集。 更新附属程序集后，递增其版本号，并将其附带到发行者策略程序集中。 在发行者策略程序集中，指定新附属程序集为后向兼容其之前版本。 资源管理器会使用 <xref:System.Resources.SatelliteContractVersionAttribute> 属性确定附属程序集的版本，但程序集加载程序将绑定到发行者策略所指定的附属程序集版本。 有关发行者策略程序集的详细信息，请参阅 [创建发行者策略文件](../../../docs/framework/configure-apps/how-to-create-a-publisher-policy.md)。  
+ 发行者策略程序集提供对附属程序集的版本控制支持。 你可以更新并重新部署附属程序集，而不用更新主程序集。 更新附属程序集后，递增其版本号，并将其附带到发行者策略程序集中。 在发行者策略程序集中，指定新附属程序集为后向兼容其之前版本。 资源管理器会使用 <xref:System.Resources.SatelliteContractVersionAttribute> 属性确定附属程序集的版本，但程序集加载程序将绑定到发行者策略所指定的附属程序集版本。 有关发行者策略程序集的详细信息，请参阅 [创建发行者策略文件](../configure-apps/how-to-create-a-publisher-policy.md)。  
   
- 若要启用完全的程序集版本控制支持，建议你在 [全局程序集缓存](../../../docs/framework/app-domains/gac.md) 中部署具有强名称的程序集，并将不具有强名称的程序集部署在应用程序目录中。 若在应用程序目录中部署具有强名称的程序集，则无法在更新程序集时递增附属程序集的版本号。 相反，必须在使用更新的代码替换现有代码处执行就地更新，并保持相同的版本号。 例如，若要使用完全指定的程序集名称 "myApp.resources, Version=1.0.0.0, Culture=de, PublicKeyToken=b03f5f11d50a3a" 更新版本 1.0.0.0 的附属程序集，请使用已编译同一个完全指定的程序集名称 "myApp.resources, Version=1.0.0.0, Culture=de, PublicKeyToken=b03f5f11d50a3a" 的更新的 myApp.resources.dll 来覆盖它。 请注意，在附属程序集文件上使用就地更新会使应用难以准确确定附属程序集的版本。  
+ 若要启用完全的程序集版本控制支持，建议你在 [全局程序集缓存](../app-domains/gac.md) 中部署具有强名称的程序集，并将不具有强名称的程序集部署在应用程序目录中。 若在应用程序目录中部署具有强名称的程序集，则无法在更新程序集时递增附属程序集的版本号。 相反，必须在使用更新的代码替换现有代码处执行就地更新，并保持相同的版本号。 例如，若要使用完全指定的程序集名称 "myApp.resources, Version=1.0.0.0, Culture=de, PublicKeyToken=b03f5f11d50a3a" 更新版本 1.0.0.0 的附属程序集，请使用已编译同一个完全指定的程序集名称 "myApp.resources, Version=1.0.0.0, Culture=de, PublicKeyToken=b03f5f11d50a3a" 的更新的 myApp.resources.dll 来覆盖它。 请注意，在附属程序集文件上使用就地更新会使应用难以准确确定附属程序集的版本。  
   
- 有关程序集版本控制的详细信息，请参阅 [程序集版本控制](../../standard/assembly/versioning.md) 和 [运行时如何定位程序集](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)。  
+ 有关程序集版本控制的详细信息，请参阅 [程序集版本控制](../../standard/assembly/versioning.md) 和 [运行时如何定位程序集](../deployment/how-the-runtime-locates-assemblies.md)。  
   
 <a name="from_file"></a>   
 ## <a name="retrieving-resources-from-resources-files"></a>从 .resources 文件中检索资源  
@@ -204,7 +204,7 @@ csc Example.cs
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Resources.ResourceManager>
-- [桌面应用中的资源](../../../docs/framework/resources/index.md)
-- [打包和部署资源](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)
-- [运行时如何定位程序集](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [桌面应用中的资源](index.md)
+- [打包和部署资源](packaging-and-deploying-resources-in-desktop-apps.md)
+- [运行时如何定位程序集](../deployment/how-the-runtime-locates-assemblies.md)
 - [在 Windows 应用商店应用中创建和检索资源](https://go.microsoft.com/fwlink/p/?LinkID=241674)

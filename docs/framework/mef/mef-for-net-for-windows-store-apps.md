@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 7667770e-d163-4ad6-a303-085cf73db2f2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b2b62e6fea6da46e6307b35dd1c3372420dced80
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 255892e4dd3938028f488f80d8fba367590976f7
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648513"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051621"
 ---
 # <a name="mef-for-net-for-windows-store-apps"></a>适用于 Windows 应用商店应用的 .NET 的 MEF
 <xref:System.Composition?displayProperty=nameWithType> 及其子命名空间包含用于使用 Managed Extensibility Framework (MEF) 开发可扩展的 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 应用的类型。 这些名称空间是 [!INCLUDE[win8](../../../includes/win8-md.md)] 操作系统的 [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] 子集的一部分。  
@@ -30,4 +30,4 @@ ms.locfileid: "64648513"
 
 - [适用于 Microsoft Store 应用的 .NET 概述](https://go.microsoft.com/fwlink/p/?LinkID=238312)
 - [适用于 Windows 应用商店应用的 .NET - 支持的 API](https://go.microsoft.com/fwlink/p/?LinkID=247912)
-- [Managed Extensibility Framework (MEF)](../../../docs/framework/mef/index.md)
+- [Managed Extensibility Framework (MEF)](index.md)

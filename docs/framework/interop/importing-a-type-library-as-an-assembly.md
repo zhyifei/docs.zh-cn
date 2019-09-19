@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d1898229-cd40-426e-a275-f3eb65fbc79f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f8826b73c02c4d4c54458f08581c0c35238201f6
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
-ms.translationtype: HT
+ms.openlocfilehash: db9571a2d07bcdf9830ef93cd07a5dae912f4677
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67662389"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051710"
 ---
 # <a name="importing-a-type-library-as-an-assembly"></a>将类型库当作程序集导入
 
@@ -36,7 +36,7 @@ COM 类型定义通常位于类型库中。 而符合 CLS 的编译器则在程�
 
 使用仅设计时互操作程序集时，可以嵌入 COM 组件创建者发布的主互操作程序集中的类型信息。 但是，无需将主互操作程序集与应用程序一起部署。
 
-使用仅设计时互操作程序集可以缩减应用程序的大小，因为大部分应用程序不会用到 COM 组件的所有功能。 编译器在嵌入类型信息时效率非常高，如果应用程序只使用 COM 接口上的部分方法，则编译器不嵌入未使用的方法。 具有嵌入的类型信息的应用程序与另一个此类应用程序交互时，或者与一个使用主互操作程序集的应用程序交互时，公共语言运行时使用类型等效规则来确定同名的两个类型是否表示相同的 COM 类型。 使用 COM 对象不需要知道这些规则。 但是，若对这些规则感兴趣，请参阅[类型等效性和嵌入的互操作类型](../../../docs/framework/interop/type-equivalence-and-embedded-interop-types.md)。
+使用仅设计时互操作程序集可以缩减应用程序的大小，因为大部分应用程序不会用到 COM 组件的所有功能。 编译器在嵌入类型信息时效率非常高，如果应用程序只使用 COM 接口上的部分方法，则编译器不嵌入未使用的方法。 具有嵌入的类型信息的应用程序与另一个此类应用程序交互时，或者与一个使用主互操作程序集的应用程序交互时，公共语言运行时使用类型等效规则来确定同名的两个类型是否表示相同的 COM 类型。 使用 COM 对象不需要知道这些规则。 但是，若对这些规则感兴趣，请参阅[类型等效性和嵌入的互操作类型](type-equivalence-and-embedded-interop-types.md)。
 
 ## <a name="generating-metadata"></a>生成元数据
 
@@ -46,11 +46,11 @@ COM 类型库可以是扩展名名 .tlb 的独立文件，例如 Loanlib.tlb。 
 
 - Visual Studio
 
-  Visual Studio 将类型库中的 COM 类型自动转换为程序集中的元数据。 有关说明，请参阅[如何：添加对类型库的引用](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md)中所述。
+  Visual Studio 将类型库中的 COM 类型自动转换为程序集中的元数据。 有关说明，请参阅[如何：添加对类型库的引用](how-to-add-references-to-type-libraries.md)中所述。
 
-- [类型库导入程序 (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)
+- [类型库导入程序 (Tlbimp.exe)](../tools/tlbimp-exe-type-library-importer.md)
 
-  类型库导入程序提供命令行选项，用于调整生成的互操作文件中的元数据、从现有类型库导入类型以及生成互操作程序和命名空间。 有关说明，请参阅[如何：从类型库生成互操作程序集](../../../docs/framework/interop/how-to-generate-interop-assemblies-from-type-libraries.md)。
+  类型库导入程序提供命令行选项，用于调整生成的互操作文件中的元数据、从现有类型库导入类型以及生成互操作程序和命名空间。 有关说明，请参阅[如何：从类型库生成互操作程序集](how-to-generate-interop-assemblies-from-type-libraries.md)。
 
 - <xref:System.Runtime.InteropServices.TypeLibConverter?displayProperty=nameWithType> 类
 
@@ -75,12 +75,12 @@ COM 类型库可以是扩展名名 .tlb 的独立文件，例如 Loanlib.tlb。 
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Runtime.InteropServices.TypeLibConverter>
-- [向 .NET Framework 公开 COM 组件](../../../docs/framework/interop/exposing-com-components.md)
+- [向 .NET Framework 公开 COM 组件](exposing-com-components.md)
 - [有关从类型库转换到程序集的摘要](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))
-- [Tlbimp.exe（类型库导入程序）](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)
+- [Tlbimp.exe（类型库导入程序）](../tools/tlbimp-exe-type-library-importer.md)
 - [自定义标准包装器](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/h7hx9abd(v=vs.100))
 - [在托管代码中使用 COM 类型](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100))
-- [编译互操作项目](../../../docs/framework/interop/compiling-an-interop-project.md)
-- [部署互操作应用程序](../../../docs/framework/interop/deploying-an-interop-application.md)
-- [如何：添加对类型库的引用](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md)
-- [如何：从类型库生成互操作程序集](../../../docs/framework/interop/how-to-generate-interop-assemblies-from-type-libraries.md)
+- [编译互操作项目](compiling-an-interop-project.md)
+- [部署互操作应用程序](deploying-an-interop-application.md)
+- [如何：添加对类型库的引用](how-to-add-references-to-type-libraries.md)
+- [如何：从类型库生成互操作程序集](how-to-generate-interop-assemblies-from-type-libraries.md)

@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 0444ddf3-c3f6-44ed-a999-f710d9c3e0cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 336a0fb5bc0fca5dd6ef917a2eeaf0908680d12b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 56b0b76e8dc137cbb9346f97604c2d53435c1fe6
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591491"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045746"
 ---
 # <a name="using-the-codedom"></a>使用 CodeDom
 CodeDOM 提供表示多种常见源代码元素的类型。 可以设计一个程序，它使用 CodeDOM 元素生成源代码模型来组合对象图。 对于支持的编程语言，可使用 CodeDOM 代码生成器将此对象图呈现为源代码。 还可使用 CodeDOM 将源代码编译为二进制程序集。  
@@ -120,7 +120,7 @@ CodeDOM 提供表示多种常见源代码元素的类型。 可以设计一个�
  [!code-csharp[CodeDomExample#19](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomExample/CS/source2.cs#19)]
  [!code-vb[CodeDomExample#19](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomExample/VB/source2.vb#19)]  
   
- 现在，名为 `compileUnit` 的 <xref:System.CodeDom.CodeCompileUnit> 包含用于简单 Hello World 程序的 CodeDOM 图。 有关从 CodeDOM 图生成和编译代码的信息，请参阅[从 CodeDOM 图生成源代码并编译程序](../../../docs/framework/reflection-and-codedom/generating-and-compiling-source-code-from-a-codedom-graph.md)。  
+ 现在，名为 `compileUnit` 的 <xref:System.CodeDom.CodeCompileUnit> 包含用于简单 Hello World 程序的 CodeDOM 图。 有关从 CodeDOM 图生成和编译代码的信息，请参阅[从 CodeDOM 图生成源代码并编译程序](generating-and-compiling-source-code-from-a-codedom-graph.md)。  
   
 ### <a name="more-information-on-building-a-codedom-graph"></a>有关生成 CodeDOM 图的详细信息  
  CodeDOM 支持多种常见的代码元素，可用于支持公共语言运行时的编程语言。 CodeDOM 不是为了提供可表示所有可能的编程语言功能的元素。 可在 <xref:System.CodeDom.CodeSnippetExpression>、<xref:System.CodeDom.CodeSnippetStatement>、<xref:System.CodeDom.CodeSnippetTypeMember> 或 <xref:System.CodeDom.CodeSnippetCompileUnit> 中封装无法通过 CodeDOM 元素轻易表示的代码。 但是，CodeDOM 无法自动将代码片段转换为其他语言。  

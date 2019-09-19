@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c45be261-2a9d-4c4e-9bd6-27f0931b7d25
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1bf244271010a7eb47a6c7b283a84c405108d803
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
-ms.translationtype: HT
+ms.openlocfilehash: 002434cf51b221a456c8752b5b1388912f875a28
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70041465"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045758"
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>演练：在部分信任应用场景中发出代码
 
@@ -35,13 +35,13 @@ ms.locfileid: "70041465"
 - [为测试部分受信任的代码设置简单沙盒](#Setting_up)。
 
   > [!IMPORTANT]
-  > 这是一种以部门信任形式试验代码的简单方法。 要运行实际来自不可信位置的代码，请参阅[如何：运行沙盒中部分受信任的代码](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)。
+  > 这是一种以部门信任形式试验代码的简单方法。 要运行实际来自不可信位置的代码，请参阅[如何：运行沙盒中部分受信任的代码](../misc/how-to-run-partially-trusted-code-in-a-sandbox.md)。
 
 - [在部分受信任的应用程序域中运行代码](#Running_code)。
 
 - [使用匿名托管动态方法以部分信任形式发出和执行代码](#Using_methods)。
 
-有关在部分信任方案中发出代码的详细信息，请参阅[反射发出中的安全问题](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)。
+有关在部分信任方案中发出代码的详细信息，请参阅[反射发出中的安全问题](security-issues-in-reflection-emit.md)。
 
 有关这些过程中所显示代码的完整列表，请参阅本演练末的[示例部分](#Example)。
 
@@ -71,7 +71,7 @@ ms.locfileid: "70041465"
 2. 创建一个 <xref:System.AppDomainSetup> 对象，使用应用程序路径初始化应用程序域。
 
     > [!IMPORTANT]
-    > 为简单起见，此代码示例使用当前文件夹。 要运行实际来自 Internet 的代码，请为不受信任的代码使用单独的文件夹，如[如何：运行沙盒中部分受信任的代码](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)中所述。
+    > 为简单起见，此代码示例使用当前文件夹。 要运行实际来自 Internet 的代码，请为不受信任的代码使用单独的文件夹，如[如何：运行沙盒中部分受信任的代码](../misc/how-to-run-partially-trusted-code-in-a-sandbox.md)中所述。
 
     [!code-csharp[HowToEmitCodeInPartialTrust#3](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#3)]
     [!code-vb[HowToEmitCodeInPartialTrust#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#3)]
@@ -194,7 +194,7 @@ ms.locfileid: "70041465"
 
 ## <a name="example"></a>示例
 
-### <a name="description"></a>说明
+### <a name="description"></a>描述
 
 下列代码示例演示如何使用 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess> 标记允许匿名托管动态方法跳过 JIT 可见性检查，但仅当目标成员与发出代码的程序集具有相同或较低信任级别时才适用。
 
@@ -225,5 +225,5 @@ ms.locfileid: "70041465"
 
 ## <a name="see-also"></a>请参阅
 
-- [反射发出中的安全问题](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)
-- [如何：运行沙盒中部分受信任的代码](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)
+- [反射发出中的安全问题](security-issues-in-reflection-emit.md)
+- [如何：运行沙盒中部分受信任的代码](../misc/how-to-run-partially-trusted-code-in-a-sandbox.md)

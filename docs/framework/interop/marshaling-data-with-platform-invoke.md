@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: dc5c76cf-7b12-406f-b79c-d1a023ec245d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3cb310dc6d786c3c7711f4c194c6623324c777dd
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
-ms.translationtype: HT
+ms.openlocfilehash: d3167abd0c263a0a27573778d6f243bc824306a9
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58412391"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051690"
 ---
 # <a name="marshaling-data-with-platform-invoke"></a>用平台调用封送数据
 
@@ -25,7 +25,7 @@ ms.locfileid: "58412391"
 
 - 用托管数据类型替换非托管数据类型。
 
-通过应用具有可选字段的特性以及用托管数据类型替换非托管数据类型，可用附有非托管函数的文档来构造等效的托管原型。 有关如何应用 <xref:System.Runtime.InteropServices.DllImportAttribute> 的说明，请参阅[使用非托管 DLL 函数](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)。
+通过应用具有可选字段的特性以及用托管数据类型替换非托管数据类型，可用附有非托管函数的文档来构造等效的托管原型。 有关如何应用 <xref:System.Runtime.InteropServices.DllImportAttribute> 的说明，请参阅[使用非托管 DLL 函数](consuming-unmanaged-dll-functions.md)。
 
 本节提供一些示例，演示如何创建托管函数原型，以便将参数传递到由非托管库导出的函数或接收来自这些函数的返回值。 该示例还演示了何时使用 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 特性和 <xref:System.Runtime.InteropServices.Marshal> 类来显式封送数据。
 
@@ -33,7 +33,7 @@ ms.locfileid: "58412391"
 
 下表列出了 Windows API 和 C 样式函数中使用的数据类型。 许多非托管库包含将这些数据类型作为参数和返回值传递的函数。 第三列列出了相应的 .NET Framework 内置值类型或可在托管代码中使用的类。 在某些情况下，你用相同大小的类型替代表中列出的类型。
 
-|Windows API 中的非托管类型|非托管 C 语言类型|托管类型|说明|
+|Windows API 中的非托管类型|非托管 C 语言类型|托管类型|描述|
 |--------------------------------|-------------------------------|------------------------|-----------------|
 |`VOID`|`void`|<xref:System.Void?displayProperty=nameWithType>|应用于不返回值的函数。|
 |`HANDLE`|`void *`|<xref:System.IntPtr?displayProperty=nameWithType> 或 <xref:System.UIntPtr?displayProperty=nameWithType>|在 32 位 Windows 操作系统上为 32 位、在 64 位 Windows 操作系统上为 64 位。|

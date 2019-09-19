@@ -9,16 +9,16 @@ helpviewer_keywords:
 ms.assetid: f769a271-8aff-4bea-bfab-6160217ce23d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b550f504ecbc05e6790652ee1432da3a26ceacb6
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: e6b6de8f0a178914c46ba5a65dfb56795cf23c71
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69915577"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046127"
 ---
 # <a name="dynamic-language-runtime-overview"></a>动态语言运行时概述
 
-动态语言运行时 (DLR) 是一种运行时环境，可以将一组动态语言服务添加到公共语言运行时 (CLR)  。 使用 DLR 可以轻松开发在 .NET Framework 上运行的动态语言，并为静态类型语言添加动态特征。
+动态语言运行时 (DLR) 是一种运行时环境，可以将一组动态语言服务添加到公共语言运行时 (CLR)。 使用 DLR 可以轻松开发在 .NET Framework 上运行的动态语言，并为静态类型语言添加动态特征。
 
 动态语言可以在运行时标识对象的类型，而在 C# 和 Visual Basic（使用 `Option Explicit On` 时）等静态类型的语言中，则必须在设计时指定对象类型。 动态语言包括 Lisp、Smalltalk、JavaScript、PHP、Ruby、Python、ColdFusion、Lua、Cobra 和 Groovy 等。
 
@@ -59,7 +59,7 @@ DLR 与 CLR一样，也属于 .NET Framework，并随 .NET Framework 和 Visual 
  DLR 具有以下优点。
 
 ### <a name="simplifies-porting-dynamic-languages-to-the-net-framework"></a>简化了将动态语言移植到 .NET Framework 的操作
- DLR 让语言实现者无需创建词法分析器、解析器、语义分析器、代码生成器等过去需要自己创建的工具。 若要使用 DLR，语言需要生成以树形结构表示语言级代码的表达式树、运行时帮助程序例程以及用于实现 <xref:System.Dynamic.IDynamicMetaObjectProvider> 接口的可选动态对象  。 DLR 和 .NET Framework 自动执行大量代码分析和代码生成任务。 这样语言实现者可以集中处理独特的语言功能。
+ DLR 让语言实现者无需创建词法分析器、解析器、语义分析器、代码生成器等过去需要自己创建的工具。 若要使用 DLR，语言需要生成以树形结构表示语言级代码的表达式树、运行时帮助程序例程以及用于实现 <xref:System.Dynamic.IDynamicMetaObjectProvider> 接口的可选动态对象。 DLR 和 .NET Framework 自动执行大量代码分析和代码生成任务。 这样语言实现者可以集中处理独特的语言功能。
 
 ### <a name="enables-dynamic-features-in-statically-typed-languages"></a>在静态类型语言中实现动态功能
  现有的 .NET Framework 语言（如 C# 和 Visual Basic）可以创建动态对象，并将动态对象与静态类型对象结合使用。 例如，C# 和 Visual Basic 可将动态对象用于 HTML、文档对象模型 (DOM) 和 .NET 反射。
@@ -76,13 +76,13 @@ DLR 与 CLR一样，也属于 .NET Framework，并随 .NET Framework 和 Visual 
 ## <a name="dlr-architecture"></a>DLR 体系结构
  下图显示了动态语言运行时的体系结构。
 
- ![动态语言运行时体系结构概述](../../../docs/framework/reflection-and-codedom/media/dlr-archoverview.png "DLR_ArchOverview") DLR 体系结构
+ ![动态语言运行时体系结构概述](./media/dlr-archoverview.png "DLR_ArchOverview") DLR 体系结构
 
  DLR 向 CLR 添加了一组服务，以便更好地支持动态语言。 这些服务包括：
 
 - 表达式树。 DLR 使用表达式树来表示语言语义。 为此，DLR 扩展了 LINQ 表达式树，使其包含控制流、分配和其他语言建模节点。 有关详细信息，请参阅[表达式树 (C#)](../../csharp/programming-guide/concepts/expression-trees/index.md) 或[表达式树 (Visual Basic)](../../visual-basic/programming-guide/concepts/expression-trees/index.md)。
 
-- 调用站点缓存。 动态调用站点是代码中对动态对象执行 `a + b` 或 `a.b()` 等操作的位置  。 DLR 会缓存 `a` 和 `b`（通常为这些对象的类型）的特征，以及有关操作的信息。 如果之前已经执行过此类操作，则 DLR 会从缓存中检索所有的必要信息，以实现快速调度。
+- 调用站点缓存。 动态调用站点是代码中对动态对象执行 `a + b` 或 `a.b()` 等操作的位置。 DLR 会缓存 `a` 和 `b`（通常为这些对象的类型）的特征，以及有关操作的信息。 如果之前已经执行过此类操作，则 DLR 会从缓存中检索所有的必要信息，以实现快速调度。
 
 - 动态对象互操作性。 DLR 提供一组表示动态对象和操作的类和接口，供语言实现者和动态库的作者使用。 这些类和接口包括<xref:System.Dynamic.IDynamicMetaObjectProvider>、<xref:System.Dynamic.DynamicMetaObject>、<xref:System.Dynamic.DynamicObject> 和 <xref:System.Dynamic.ExpandoObject>。
 

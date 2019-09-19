@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Windows Service applications, troubleshooting
 ms.assetid: 45c48e2e-b97d-44bc-8896-14f328e0ce33
 author: ghogen
-ms.openlocfilehash: d04a0ddcef9ff7c31abd422f7f9fba34e804d2b1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: c45ab03ec4577d88953b0e43531082a46c29e8fd
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69935416"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053538"
 ---
 # <a name="troubleshooting-service-application-wont-install"></a>疑难解答：服务应用程序无法安装
 如果服务应用程序无法正确安装，请检查以确保服务类的 <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> 属性设置为与该服务安装程序中显示的值相同的值。 两个实例中的值必须相同才能正确安装服务。  
@@ -27,4 +27,4 @@ ms.locfileid: "69935416"
   
 ## <a name="see-also"></a>请参阅
 
-- [Windows 服务应用程序介绍](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
+- [Windows 服务应用程序介绍](introduction-to-windows-service-applications.md)

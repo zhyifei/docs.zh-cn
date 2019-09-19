@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 4b2fcf8a-429d-43ce-8334-e026040be8bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e61ae55673cbf745ea4c637c5206efe41d8ab276
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: e0eeaee969eda5e4d0ea1a119991456668c7d44f
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946678"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051742"
 ---
 # <a name="how-to-register-primary-interop-assemblies"></a>如何：注册主互操作程序集
 
@@ -24,7 +24,7 @@ ms.locfileid: "69946678"
 
  即使你不打算公开第三方 COM 类型，使用主互操作程序集也可以使与 COM 组件进行互操作的任务变得更简单。 但是，此策略不会提供对供应商可能对主互操作程序集中定义的类型所进行的更改的隔离。 当你的应用程序需要此类隔离时，请生成自己的互操作程序集，而不是使用主互操作程序集。
 
- 必须在开发计算机上注册所有需要的主互操作程序集，然后才能通过 Visual Studio 引用它们。 Visual Studio 在你第一次从 COM 类型库引用类型时会查找并使用主互操作程序集。 如果 Visual Studio 找不到与该类型库关联的主互操作程序集，它会提示你获取它，或提出创建一个互操作程序集。 同样，[类型库导入程序 (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) 也使用注册表来定位主互操作程序集。
+ 必须在开发计算机上注册所有需要的主互操作程序集，然后才能通过 Visual Studio 引用它们。 Visual Studio 在你第一次从 COM 类型库引用类型时会查找并使用主互操作程序集。 如果 Visual Studio 找不到与该类型库关联的主互操作程序集，它会提示你获取它，或提出创建一个互操作程序集。 同样，[类型库导入程序 (Tlbimp.exe)](../tools/tlbimp-exe-type-library-importer.md) 也使用注册表来定位主互操作程序集。
 
  尽管没有必要注册主互操作程序集（除非你打算使用 Visual Studio），但注册可提供两大好处：
 
@@ -32,15 +32,15 @@ ms.locfileid: "69946678"
 
 - 如果在将来某个时间你使用 Visual Studio 引用具有未注册的主互操作程序集的类型，可以避免意外地生成和使用新的互操作程序集。
 
-使用[程序集注册工具 (Regasm.exe)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md) 注册主互操作程序集。
+使用[程序集注册工具 (Regasm.exe)](../tools/regasm-exe-assembly-registration-tool.md) 注册主互操作程序集。
 
 ## <a name="to-register-a-primary-interop-assembly"></a>注册主互操作程序集
 
 1. 在命令提示符处，键入：
 
-     regasm  assemblyname 
+     regasm assemblyname
 
-     在此命令中，assemblyname  是已注册的程序集的文件名。 Regasm.exe 会在与原始类型库相同的注册表项下为主互操作程序集添加一个条目。
+     在此命令中，assemblyname 是已注册的程序集的文件名。 Regasm.exe 会在与原始类型库相同的注册表项下为主互操作程序集添加一个条目。
 
 ## <a name="example"></a>示例
  下列示例注册 `CompanyA.UtilLib.dll` 主互操作程序集。

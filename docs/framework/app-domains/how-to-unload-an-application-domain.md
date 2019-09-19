@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f356116d-e415-4f7c-a332-6e6a60227192
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f3011bd0327440cd04d5eccf5f88c036ddd76267
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: f7419725f3822622a8e4210d4f3f5d8e9e59dbdd
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59212175"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053133"
 ---
 # <a name="how-to-unload-an-application-domain"></a>如何：卸载应用程序域
 完成使用应用程序域时，可使用 <xref:System.AppDomain.Unload%2A?displayProperty=nameWithType> 方法将其卸载。 **Unload** 方法会正常关闭指定的应用程序域。 卸载过程中，任何新线程都无法访问该应用程序域，并且会释放所有特性于应用程序域的数据结构。  
@@ -34,5 +34,5 @@ ms.locfileid: "59212175"
 ## <a name="see-also"></a>请参阅
 
 - [对应用程序域进行编程](application-domains.md#programming-with-application-domains)
-- [如何：创建应用程序域](../../../docs/framework/app-domains/how-to-create-an-application-domain.md)
-- [使用应用程序域](../../../docs/framework/app-domains/use.md)
+- [如何：创建应用程序域](how-to-create-an-application-domain.md)
+- [使用应用程序域](use.md)

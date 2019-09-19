@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0ceb70fe-36e1-49bb-922b-e9f615c20a14
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6b3f7363ec5f8c954dd55a9500dcf8f2e302424f
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
-ms.translationtype: HT
+ms.openlocfilehash: c932587c13532e14c956f3ebd058ae41d30519dc
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894899"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046043"
 ---
 # <a name="how-to-create-a-class-using-codedom"></a>如何：使用 CodeDOM 创建类
 以下过程说明如何创建和编译 CodeDOM 图，此图会生成包含以下各项的类：两个字段、三个属性、一个方法、一个构造函数和一个入口点。  
@@ -120,5 +120,5 @@ The object:
   
 ## <a name="see-also"></a>请参阅
 
-- [使用 CodeDOM](../../../docs/framework/reflection-and-codedom/using-the-codedom.md)
-- [从 CodeDOM 图生成和编译源代码](../../../docs/framework/reflection-and-codedom/generating-and-compiling-source-code-from-a-codedom-graph.md)
+- [使用 CodeDOM](using-the-codedom.md)
+- [从 CodeDOM 图生成和编译源代码](generating-and-compiling-source-code-from-a-codedom-graph.md)

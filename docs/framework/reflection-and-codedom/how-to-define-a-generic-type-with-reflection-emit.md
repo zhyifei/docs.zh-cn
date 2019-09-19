@@ -12,18 +12,18 @@ helpviewer_keywords:
 ms.assetid: 07d5f01a-7b5b-40ea-9b15-f21561098fe4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 544d04236a8f1b824a15c6ee7912020346841076
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: b9781e7ef8edde182a13779a01e042cb44c92881
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69912532"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045988"
 ---
 # <a name="how-to-define-a-generic-type-with-reflection-emit"></a>如何：使用反射发出定义泛型类型
 此主题说明如何创建具有两个参数的简单泛型类型、如何对类型参数应用类约束、接口约束和特殊约束，以及如何创建使用类的类型参数作为参数类型和返回类型的成员。  
   
 > [!IMPORTANT]
-> 某方法只要属于泛型类型，且使用该类型的类型参数，就不是泛型方法。 只有当方法有属于自己的类型参数列表时才是泛型方法。 多数泛型类型上的方法都不是泛型方法，如本示例所示。 有关发出泛型方法的示例，请参阅[如何：使用反射发出定义泛型方法](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-method-with-reflection-emit.md)。  
+> 某方法只要属于泛型类型，且使用该类型的类型参数，就不是泛型方法。 只有当方法有属于自己的类型参数列表时才是泛型方法。 多数泛型类型上的方法都不是泛型方法，如本示例所示。 有关发出泛型方法的示例，请参阅[如何：使用反射发出定义泛型方法](how-to-define-a-generic-method-with-reflection-emit.md)。  
   
 ### <a name="to-define-a-generic-type"></a>定义泛型类型  
   
@@ -121,7 +121,7 @@ ms.locfileid: "69912532"
   
  该程序中包括一个可列出泛型类型信息的方法，和一个可列出类型参数上的特殊约束的方法。 这些方法用于显示有关已完成的 `Sample` 类的信息。  
   
- 程序将完成的模块以 `GenericEmitExample1.dll` 的形式保存到磁盘中，所以可以使用 [Ildasm.exe（IL 反汇编程序）](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)将其打开，并检查 `Sample` 类的 MSIL。  
+ 程序将完成的模块以 `GenericEmitExample1.dll` 的形式保存到磁盘中，所以可以使用 [Ildasm.exe（IL 反汇编程序）](../tools/ildasm-exe-il-disassembler.md)将其打开，并检查 `Sample` 类的 MSIL。  
   
  [!code-cpp[EmitGenericType#1](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#1)]
  [!code-csharp[EmitGenericType#1](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#1)]

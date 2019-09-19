@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: de8b8759-fca7-4260-896b-5a4973157672
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 45e38f70ded85e8db36068c19fdd1708511817db
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
-ms.translationtype: HT
+ms.openlocfilehash: df1c86f2d75b0046af851585e943e13d668d8c55
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70040719"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053076"
 ---
 # <a name="shadow-copying-assemblies"></a>卷影复制程序集
 
@@ -76,7 +76,7 @@ ms.locfileid: "70040719"
 
 自 .NET Framework 4 以来，默认启动行为就是直接将应用程序目录中每个程序集的文件日期和时间与影子副本目录中副本的文件日期和时间进行比较。 如果程序集已更新，则使用 .NET Framework 早期版本中的相同过程进行复制；否则，将加载卷影复制目录中的副本。
 
-对于其中程序集未频繁更改且通常程序集的较小子集发生更改的应用程序，产生的性能提升最大。 如果应用程序中的大部分程序集频繁发生更改，则新的默认行为可能导致性能退化。 可以通过向配置文件添加 [\<shadowCopyVerifyByTimestamp> 元素](../../../docs/framework/configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md)来还原早期版本的 .NET Framework 的启动行为，其中 `enabled="false"`。
+对于其中程序集未频繁更改且通常程序集的较小子集发生更改的应用程序，产生的性能提升最大。 如果应用程序中的大部分程序集频繁发生更改，则新的默认行为可能导致性能退化。 可以通过向配置文件添加 [\<shadowCopyVerifyByTimestamp> 元素](../configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md)来还原早期版本的 .NET Framework 的启动行为，其中 `enabled="false"`。
 
 <a name="ObsoleteMethods"></a>
 
@@ -90,4 +90,4 @@ ms.locfileid: "70040719"
 - <xref:System.AppDomainSetup.CachePath%2A?displayProperty=nameWithType>
 - <xref:System.AppDomainSetup.ApplicationName%2A?displayProperty=nameWithType>
 - <xref:System.AppDomainSetup.ShadowCopyDirectories%2A?displayProperty=nameWithType>
-- [\<shadowCopyVerifyByTimestamp> 元素](../../../docs/framework/configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md)
+- [\<shadowCopyVerifyByTimestamp> 元素](../configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md)

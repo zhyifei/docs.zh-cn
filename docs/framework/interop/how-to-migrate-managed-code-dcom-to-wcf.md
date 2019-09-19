@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 52961ffc-d1c7-4f83-832c-786444b951ba
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fad8a73c41379cac7523db6266951b8abab26e27
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: e2e37de4d3032db6d9578eae7ba0be5c1e39f39d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626296"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051751"
 ---
 # <a name="how-to-migrate-managed-code-dcom-to-wcf"></a>如何：将托管代码 DCOM 迁移到 WCF
 Windows Communication Foundation (WCF) 是针对分布式组件对象模型 (DCOM) 建议的安全选择，可用于处理分布式环境中服务器和客户端间的托管代码调用。 本文介绍在以下情景中，如何将代码从 DCOM 迁移到 WCF。  
@@ -20,9 +20,9 @@ Windows Communication Foundation (WCF) 是针对分布式组件对象模型 (DCO
   
 - 远程服务将对象按引用返回到客户端  
   
- 出于安全原因，WCF 中不允许将对象按引用从客户端发送到服务。 在 WCF 中使用双工服务可实现需要在客户端和服务器间来回会话的方案。  有关双工服务的详细信息，请参阅[双工服务](../../../docs/framework/wcf/feature-details/duplex-services.md)  
+ 出于安全原因，WCF 中不允许将对象按引用从客户端发送到服务。 在 WCF 中使用双工服务可实现需要在客户端和服务器间来回会话的方案。  有关双工服务的详细信息，请参阅[双工服务](../wcf/feature-details/duplex-services.md)  
   
- 有关创建 WCF 服务和这些服务的客户端的详细信息，请参阅[基本 WCF 编程](../../../docs/framework/wcf/basic-wcf-programming.md)、[设计和实现服务](../../../docs/framework/wcf/designing-and-implementing-services.md)以及[生成客户端](../../../docs/framework/wcf/building-clients.md)。  
+ 有关创建 WCF 服务和这些服务的客户端的详细信息，请参阅[基本 WCF 编程](../wcf/basic-wcf-programming.md)、[设计和实现服务](../wcf/designing-and-implementing-services.md)以及[生成客户端](../wcf/building-clients.md)。  
   
 ## <a name="dcom-example-code"></a>DCOM 代码示例  
  对于这些方案，使用 WCF 所示的 DCOM 接口具有以下结构：  
@@ -82,7 +82,7 @@ public interface ICustomerManager
 ### <a name="step-2-define-the-data-contract"></a>步骤 2：定义数据协定  
  下一步，你应该创建服务的数据协定，此协定将描述服务及其客户端间将如何交换数据。  应为数据协定中描述的类标记 [<xref:System.Runtime.Serialization.DataContractAttribute>] 属性。 希望对客户端和服务器可见的单独属性或字段标记为 [<xref:System.Runtime.Serialization.DataMemberAttribute>] 属性。 要允许从数据协定的类派生的类型，必须使用 [<xref:System.Runtime.Serialization.KnownTypeAttribute>] 属性标识它们。 WCF 将仅序列化或反序列化服务接口中的类型和标识为已知类型的类型。 如果尝试使用不是已知类型的类型，则将发生异常。  
   
- 有关数据协定的详细信息，请参阅[数据协定](../../../docs/framework/wcf/samples/data-contracts.md)  
+ 有关数据协定的详细信息，请参阅[数据协定](../wcf/samples/data-contracts.md)  
   
 ```csharp  
 [DataContract]  
@@ -170,7 +170,7 @@ public class CustomerService: ICustomerManager
 ```  
   
 ### <a name="step-5-run-the-service"></a>步骤 5：运行服务  
- 最后，通过向服务应用程序添加以下行并启动此应用程序，你可以在控制台应用程序中自承载服务。 有关托管 WCF 服务应用程序的其他方式的详细信息，请参阅[托管服务](../../../docs/framework/wcf/hosting-services.md)。  
+ 最后，通过向服务应用程序添加以下行并启动此应用程序，你可以在控制台应用程序中自承载服务。 有关托管 WCF 服务应用程序的其他方式的详细信息，请参阅[托管服务](../wcf/hosting-services.md)。  
   
 ```csharp  
 ServiceHost customerServiceHost = new ServiceHost(typeof(CustomerService));  
@@ -423,7 +423,7 @@ if (sessionBoundObject.GetCurrentValue() == "Hello")
   
 ## <a name="see-also"></a>请参阅
 
-- [基本 WCF 编程](../../../docs/framework/wcf/basic-wcf-programming.md)
-- [设计和实现服务](../../../docs/framework/wcf/designing-and-implementing-services.md)
-- [生成客户端](../../../docs/framework/wcf/building-clients.md)
-- [双工服务](../../../docs/framework/wcf/feature-details/duplex-services.md)
+- [基本 WCF 编程](../wcf/basic-wcf-programming.md)
+- [设计和实现服务](../wcf/designing-and-implementing-services.md)
+- [生成客户端](../wcf/building-clients.md)
+- [双工服务](../wcf/feature-details/duplex-services.md)

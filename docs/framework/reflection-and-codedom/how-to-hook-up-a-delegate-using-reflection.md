@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 076ee62d-a964-449e-a447-c31b33518b81
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c3fa2238976df9f570fad9eb6947790565a4b0c5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 937dca59be8b83526ebf6cd4c369532b1a8b9afe
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69935716"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045981"
 ---
 # <a name="how-to-hook-up-a-delegate-using-reflection"></a>如何：使用反射将委托挂钩
 使用反射加载和运行程序集时，不能使用 C# `+=` 运算符或 Visual Basic [AddHandler 语句](../../visual-basic/language-reference/statements/addhandler-statement.md)等语言功能将事件挂钩。 以下过程介绍如何通过反射获取所需的全部类型来将现有方法挂钩到事件，以及如何使用反射发出以创建动态方法并将其挂钩到事件。  
@@ -80,7 +80,7 @@ ms.locfileid: "69935716"
      [!code-csharp[HookUpDelegate#9](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#9)]
      [!code-vb[HookUpDelegate#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HookUpDelegate/vb/source.vb#9)]  
   
-2. 生成方法体。 此方法加载字符串、调用带有字符串的 <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> 方法重载、从堆栈弹出返回值（因为处理程序没有返回类型）并返回这些值。 若要详细了解如何发出动态方法，请参阅[如何：定义和执行动态方法](../../../docs/framework/reflection-and-codedom/how-to-define-and-execute-dynamic-methods.md)。  
+2. 生成方法体。 此方法加载字符串、调用带有字符串的 <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> 方法重载、从堆栈弹出返回值（因为处理程序没有返回类型）并返回这些值。 若要详细了解如何发出动态方法，请参阅[如何：定义和执行动态方法](how-to-define-and-execute-dynamic-methods.md)。  
   
      [!code-cpp[HookUpDelegate#10](../../../samples/snippets/cpp/VS_Snippets_CLR/HookUpDelegate/cpp/source.cpp#10)]
      [!code-csharp[HookUpDelegate#10](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#10)]
@@ -111,5 +111,5 @@ ms.locfileid: "69935716"
 - <xref:System.Reflection.Emit.DynamicMethod>
 - <xref:System.Activator.CreateInstance%2A>
 - <xref:System.Delegate.CreateDelegate%2A>
-- [如何：定义和执行动态方法](../../../docs/framework/reflection-and-codedom/how-to-define-and-execute-dynamic-methods.md)
-- [反射](../../../docs/framework/reflection-and-codedom/reflection.md)
+- [如何：定义和执行动态方法](how-to-define-and-execute-dynamic-methods.md)
+- [反射](reflection.md)

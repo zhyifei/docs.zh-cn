@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 8d5c6044-2919-41d2-8321-274706b295ac
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 29739625d29db6dc7c3876007f1e733b15f5c026
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
-ms.translationtype: HT
+ms.openlocfilehash: 17465b07172788f18a432784653afadda18467fe
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70970994"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045687"
 ---
 # <a name="creating-satellite-assemblies-for-desktop-apps"></a>创建桌面应用程序的附属程序集
 
@@ -54,7 +54,7 @@ ms.locfileid: "70970994"
 
 - 附属程序集的区域性的相关信息必须包括在程序集的元数据中。 若要将区域性名称存储在附属程序集的元数据中，则在使用[程序集链接器](../tools/al-exe-assembly-linker.md)将资源嵌入附属程序集时指定 `/culture` 选项。
 
-下图显示未安装在[全局程序集缓存](../../framework/app-domains/gac.md)中的应用程序的示例目录结构和位置要求。 具有 .txt 和 .resources 扩展名的项不会随附在最终应用程序中。 这些是用于创建最终附属资源程序集的中间资源文件。 在此示例中，可以将 .txt 文件替换为 .resx 文件。 有关详细信息，请参阅[打包和部署资源](packaging-and-deploying-resources-in-desktop-apps.md)。
+下图显示未安装在[全局程序集缓存](../app-domains/gac.md)中的应用程序的示例目录结构和位置要求。 具有 .txt 和 .resources 扩展名的项不会随附在最终应用程序中。 这些是用于创建最终附属资源程序集的中间资源文件。 在此示例中，可以将 .txt 文件替换为 .resx 文件。 有关详细信息，请参阅[打包和部署资源](packaging-and-deploying-resources-in-desktop-apps.md)。
 
 下图展示了附属程序集目录：
 
@@ -70,7 +70,7 @@ ms.locfileid: "70970994"
 al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dll
 ```
 
-下面的 Al.exe 命令也从文件 strings.de.resources 为 `Example` 应用程序创建了一个附属程序集。 /Template 选项会导致附属程序集从父程序集 (Example.dll) 继承除区域性信息之外的所有程序集元数据  。
+下面的 Al.exe 命令也从文件 strings.de.resources 为 `Example` 应用程序创建了一个附属程序集。 /Template 选项会导致附属程序集从父程序集 (Example.dll) 继承除区域性信息之外的所有程序集元数据。
 
 ```console
 al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dll -template:Example.dll
@@ -78,13 +78,13 @@ al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dl
   
  下表详细展示了这些命令中使用的 Al.exe 选项。
   
-|选项|说明|
+|选项|描述|
 |------------|-----------------|
-|-target:lib |指定将附属程序集编译成库 (.dll) 文件。 因为附属程序集不包含可执行代码，并且不是应用程序的主程序集，所以必须将附属程序集另存为 DLL。|
-|-embed:strings.de.resources |指定在 Al.exe 编译程序集时要嵌入的资源文件名。 可在附属程序集中嵌入多个 .resources 文件，但如果依循中心辐射模型，则必须为每个区域性编译一个附属程序集。 但是，可以为字符串和对象创建单独的 .resources 文件。|
-|-culture:de |指定要编译的资源的区域性。 公共语言运行时搜索特定区域性的资源时会使用此信息。 如果省略此选项，Al.ex e 仍然会编译资源，但当用户请求资源时，运行时将无法找到该资源。|
-|-out:Example.resources.dll |指定输出文件的名称。 名称必须遵循命名标准 baseName.resources.extension，其中 baseName 是主程序集的名称，extension 是有效的文件扩展名（例如 .dll）     。 请注意，运行时无法根据输出文件名确定附属程序集的区域性，必须使用 /culture 选项指定  。|
-|-template:Example.dll |指定程序集，附属程序集将从该程序集继承除区域性字段之外的所有程序集元数据。 仅当指定了具有[强名称](../../standard/assembly/strong-named.md)的程序集时，此选项才会影响附属程序集。|
+|-target:lib|指定将附属程序集编译成库 (.dll) 文件。 因为附属程序集不包含可执行代码，并且不是应用程序的主程序集，所以必须将附属程序集另存为 DLL。|
+|-embed:strings.de.resources|指定在 Al.exe 编译程序集时要嵌入的资源文件名。 可在附属程序集中嵌入多个 .resources 文件，但如果依循中心辐射模型，则必须为每个区域性编译一个附属程序集。 但是，可以为字符串和对象创建单独的 .resources 文件。|
+|-culture:de|指定要编译的资源的区域性。 公共语言运行时搜索特定区域性的资源时会使用此信息。 如果省略此选项，Al.ex e 仍然会编译资源，但当用户请求资源时，运行时将无法找到该资源。|
+|-out:Example.resources.dll|指定输出文件的名称。 名称必须遵循命名标准 baseName.resources.extension，其中 baseName 是主程序集的名称，extension 是有效的文件扩展名（例如 .dll）。 请注意，运行时无法根据输出文件名确定附属程序集的区域性，必须使用 /culture 选项指定。|
+|-template:Example.dll|指定程序集，附属程序集将从该程序集继承除区域性字段之外的所有程序集元数据。 仅当指定了具有[强名称](../../standard/assembly/strong-named.md)的程序集时，此选项才会影响附属程序集。|
   
  有关 Al.exe 可用选项的完整列表，请参阅[程序集链接器 (Al.exe)](../tools/al-exe-assembly-linker.md)。
   
@@ -95,8 +95,8 @@ al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dl
   
 2. 为指示英语 (en) 是该应用程序的默认区域性，请将以下 <xref:System.Resources.NeutralResourcesLanguageAttribute?displayProperty=nameWithType> 属性添加到应用程序的 AssemblyInfo 文件或主源代码文件中，该文件之后会编译到应用程序的主程序集中。
   
-     [!code-csharp[Conceptual.Resources.Locating#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.locating/cs/assemblyinfo.cs#2)]
-     [!code-vb[Conceptual.Resources.Locating#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.locating/vb/assemblyinfo.vb#2)]  
+    [!code-csharp[Conceptual.Resources.Locating#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.locating/cs/assemblyinfo.cs#2)]
+    [!code-vb[Conceptual.Resources.Locating#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.locating/vb/assemblyinfo.vb#2)]  
   
 3. 向应用程序添加对其他区域性的支持（en-US、fr-FR 和 ru-RU），如下所示：  
   
@@ -145,22 +145,24 @@ al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dl
     al -target:lib -embed:Greeting.culture.resources -culture:culture -out:culture\Example.resources.dll
     ```  
   
-     其中 culture 是由附属程序集包含了资源的区域性的名称  。 Visual Studio 会自动处理这一过程。
+     其中 culture 是由附属程序集包含了资源的区域性的名称。 Visual Studio 会自动处理这一过程。
   
  然后便可运行该示例。 它会随机将某种支持的区域性设为当前区域性，并显示本地化的问候语。
   
 <a name="SN"></a>   
+
 ## <a name="installing-satellite-assemblies-in-the-global-assembly-cache"></a>在全局程序集缓存中安装附属程序集  
- 可以在全局程序集缓存（而不是本地应用程序子目录）中安装程序集。 当具有供多个应用程序使用的类库和类库资源程序集时，这种方式非常有用。
+可以在全局程序集缓存（而不是本地应用程序子目录）中安装程序集。 当具有供多个应用程序使用的类库和类库资源程序集时，这种方式非常有用。
   
- 在全局程序集缓存中安装程序集要求程序集具有强名称。 具有强名称的程序集使用有效公钥/私钥对进行签名。 它们包含版本信息，运行时会使用这些版本信息来确定使用哪个程序集来满足绑定要求。 有关强名称和版本控制的详细信息，请参阅[程序集版本控制](../../standard/assembly/versioning.md)。 有关强名称的详细信息，请参阅[具有强名称的程序集](../../standard/assembly/strong-named.md)。
+在全局程序集缓存中安装程序集要求程序集具有强名称。 具有强名称的程序集使用有效公钥/私钥对进行签名。 它们包含版本信息，运行时会使用这些版本信息来确定使用哪个程序集来满足绑定要求。 有关强名称和版本控制的详细信息，请参阅[程序集版本控制](../../standard/assembly/versioning.md)。 有关强名称的详细信息，请参阅[具有强名称的程序集](../../standard/assembly/strong-named.md)。
   
- 开发应用程序时，不可能具有对最终公钥/私钥对的访问权限。 为在全局程序集缓存中安装附属程序集，并确保附属程序集工作正常，可使用延迟签名技术。 延迟为程序集签名时，生成时可在文件中保留用于强名称签名的空间。 实际签名将延迟到以后的某个时间进行，即当最后的公钥/私钥对可用时。 有关延迟签名的详细信息，请参阅[延迟为程序集签名](../../standard/assembly/delay-sign.md)。
+开发应用程序时，不可能具有对最终公钥/私钥对的访问权限。 为在全局程序集缓存中安装附属程序集，并确保附属程序集工作正常，可使用延迟签名技术。 延迟为程序集签名时，生成时可在文件中保留用于强名称签名的空间。 实际签名将延迟到以后的某个时间进行，即当最后的公钥/私钥对可用时。 有关延迟签名的详细信息，请参阅[延迟为程序集签名](../../standard/assembly/delay-sign.md)。
   
 ### <a name="obtaining-the-public-key"></a>获取公钥  
- 若要延迟程序集签名，必须具有公钥访问权限。 可以从公司中将进行最终签名的组织处获取真正的公钥，也可以使用[强名称工具 (Sn.exe)](../tools/sn-exe-strong-name-tool.md) 创建一个公钥。
+
+若要延迟程序集签名，必须具有公钥访问权限。 可以从公司中将进行最终签名的组织处获取真正的公钥，也可以使用[强名称工具 (Sn.exe)](../tools/sn-exe-strong-name-tool.md) 创建一个公钥。
   
- 下面的 Sn.exe 命令创建一个测试公钥/私钥对。 –k 选项指定 Sn.exe 应新建一个密钥对，并将其保存在 TestKeyPair.snk 文件中  。
+下面的 Sn.exe 命令创建一个测试公钥/私钥对。 –k 选项指定 Sn.exe 应新建一个密钥对，并将其保存在 TestKeyPair.snk 文件中。
   
 ```console
 sn –k TestKeyPair.snk
@@ -182,13 +184,13 @@ sn –p TestKeyPair.snk PublicKey.snk
 al -target:lib -embed:strings.ja.resources -culture:ja -out:StringLibrary.resources.dll -delay+ -keyfile:PublicKey.snk
 ```
 
--delay+ 选项指定程序集链接器应延迟对程序集签名  。 -keyfile 选项指定密钥文件的名称，该文件包含用以延迟程序集签名的公钥  。
+-delay+ 选项指定程序集链接器应延迟对程序集签名。 -keyfile 选项指定密钥文件的名称，该文件包含用以延迟程序集签名的公钥。
 
 ### <a name="re-signing-an-assembly"></a>对程序集重新签名
 
 部署应用程序之前，必须使用真正的密钥对对延迟签名的附属程序集重新签名。 可以使用 Sn.exe 执行此操作。
 
-下面的 Sn.exe 命令使用 RealKeyPair.snk 文件中存储的密钥对对 StringLibrary.resources.dll 进行签名。 – R 选项指定对之前已签名或延迟签名的程序集进行重新签名  。
+下面的 Sn.exe 命令使用 RealKeyPair.snk 文件中存储的密钥对对 StringLibrary.resources.dll 进行签名。 – R 选项指定对之前已签名或延迟签名的程序集进行重新签名。
 
 ```console
 sn –R StringLibrary.resources.dll RealKeyPair.snk
@@ -196,7 +198,7 @@ sn –R StringLibrary.resources.dll RealKeyPair.snk
 
 ### <a name="installing-a-satellite-assembly-in-the-global-assembly-cache"></a>在全局程序集缓存中安装附属程序集
 
-运行时在资源回退进程中搜索资源时，首先会在[全局程序集缓存](../../framework/app-domains/gac.md)中查找。 （有关详细信息，请参阅[打包和部署资源](packaging-and-deploying-resources-in-desktop-apps.md)主题中的“资源回退进程”部分。）只要使用强名称对附属程序集签名，就可以使用[全局程序集缓存工具 (Gacutil.exe)](../tools/gacutil-exe-gac-tool.md) 在全局程序集缓存中安装该程序集。
+运行时在资源回退进程中搜索资源时，首先会在[全局程序集缓存](../app-domains/gac.md)中查找。 （有关详细信息，请参阅[打包和部署资源](packaging-and-deploying-resources-in-desktop-apps.md)主题中的“资源回退进程”部分。）只要使用强名称对附属程序集签名，就可以使用[全局程序集缓存工具 (Gacutil.exe)](../tools/gacutil-exe-gac-tool.md) 在全局程序集缓存中安装该程序集。
 
 下面的 Gacutil.exe 命令在全局程序集缓存中安装了 StringLibrary.resources.dll：
 
@@ -204,7 +206,7 @@ sn –R StringLibrary.resources.dll RealKeyPair.snk
 gacutil -i:StringLibrary.resources.dll
 ```
 
-/I 选项指定 Gacutil.exe 应将指定的程序集安装到全局程序集缓存中  。 在缓存中安装了附属程序集之后，要使用附属程序集的应用程序便能够使用该附属程序集所包含的资源。
+/I 选项指定 Gacutil.exe 应将指定的程序集安装到全局程序集缓存中。 在缓存中安装了附属程序集之后，要使用附属程序集的应用程序便能够使用该附属程序集所包含的资源。
 
 ### <a name="resources-in-the-global-assembly-cache-an-example"></a>全局程序集缓存中的资源：示例
 
@@ -216,7 +218,7 @@ gacutil -i:StringLibrary.resources.dll
     sn –k ResKey.snk
     ```
 
-    如果使用的是 Visual Studio，则使用项目“属性”对话框中的“签名”选项卡生成密钥文件   。
+    如果使用的是 Visual Studio，则使用项目“属性”对话框中的“签名”选项卡生成密钥文件。
 
 2. 使用以下[强名称工具 (Sn.exe)](../tools/sn-exe-strong-name-tool.md) 命令创建名为 PublicKey.snk 的公钥文件：
 
@@ -245,7 +247,7 @@ gacutil -i:StringLibrary.resources.dll
     resgen filename
     ```
 
-    其中 filename 是 .resx 或文本文件的可选路径、文件名和扩展名  。
+    其中 filename 是 .resx 或文本文件的可选路径、文件名和扩展名。
 
 7. 将以下 StringLibrary.vb 或 StringLibrary.cs 的源代码连同默认区域性的资源编译到名为 StringLibrary.dll 的延迟签名库程序集中：
 
@@ -275,7 +277,7 @@ gacutil -i:StringLibrary.resources.dll
     al -target:lib -embed:Strings.culture.resources -culture:culture -out:culture\StringLibrary.resources.dll -delay+ -keyfile:publickey.snk
     ```
 
-    其中 culture 是区域性的名称  。 在此示例中，区域性名称是 en-US、fr-FR 和 ru-RU。
+    其中 culture 是区域性的名称。 在此示例中，区域性名称是 en-US、fr-FR 和 ru-RU。
 
 10. 使用[强名称工具 (Sn.exe)](../tools/sn-exe-strong-name-tool.md) 对 StringLibrary.dll 重新签名，如下所示：
 
@@ -295,9 +297,9 @@ gacutil -i:StringLibrary.resources.dll
     gacutil -i filename
     ```
 
-    其中 filename 是要注册的文件的名称  。
+    其中 filename 是要注册的文件的名称。
 
-13. 如果使用的是 Visual Studio，则新建一个名为 `Example` 的控制台应用程序项目，向其添加对 StringLibrary.dll 的引用和以下源代码，然后进行编译  。
+13. 如果使用的是 Visual Studio，则新建一个名为 `Example` 的控制台应用程序项目，向其添加对 StringLibrary.dll 的引用和以下源代码，然后进行编译。
 
     [!code-csharp[Conceptual.Resources.Satellites#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.satellites/cs/example.cs#3)]
     [!code-vb[Conceptual.Resources.Satellites#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.satellites/vb/example.vb#3)]

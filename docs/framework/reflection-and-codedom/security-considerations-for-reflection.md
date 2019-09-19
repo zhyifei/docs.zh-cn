@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 42d9dc2a-8fcc-4ff3-b002-4ff260ef3dc5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 791c6c8b0396ec958ff0c8378038051b23d486d1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 852490c57a2954e9d56799ef8deebbef31d5f665
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69956707"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045890"
 ---
 # <a name="security-considerations-for-reflection"></a>反射的安全注意事项
 
@@ -61,7 +61,7 @@ ms.locfileid: "69956707"
 
 从命令行运行的应用程序代码将以“完全信任”运行。 只要不被标记为透明，它就可以使用反射来访问安全关键成员。 当同一代码以部分信任运行时（例如，在沙箱应用程序域中），程序集的信任级别将决定其是否能够访问安全关键代码：如果程序集有强名称并安装在全局程序集缓存中，则是受信任的程序集，可以调用安全关键成员。 如果不是受信任的，即使未标记为透明，它也将变为透明，并且它不能访问安全关键成员。
 
-有关 .NET Framework 4 中安全模型的详细信息，请参阅[安全更改](../../../docs/framework/security/security-changes.md)。
+有关 .NET Framework 4 中安全模型的详细信息，请参阅[安全更改](../security/security-changes.md)。
 
 ## <a name="reflection-and-transparency"></a>反射和透明度
 
@@ -117,9 +117,9 @@ ms.locfileid: "69956707"
 - <xref:System.Security.Permissions.ReflectionPermissionFlag>
 - <xref:System.Security.Permissions.ReflectionPermission>
 - <xref:System.Security.Permissions.SecurityPermission>
-- [安全更改](../../../docs/framework/security/security-changes.md)
-- [代码访问安全性](../../../docs/framework/misc/code-access-security.md)
-- [反射发出中的安全问题](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)
-- [查看类型信息](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)
+- [安全更改](../security/security-changes.md)
+- [代码访问安全性](../misc/code-access-security.md)
+- [反射发出中的安全问题](security-issues-in-reflection-emit.md)
+- [查看类型信息](viewing-type-information.md)
 - [应用特性](../../standard/attributes/applying-attributes.md)
-- [访问自定义属性](../../../docs/framework/reflection-and-codedom/accessing-custom-attributes.md)
+- [访问自定义属性](accessing-custom-attributes.md)
