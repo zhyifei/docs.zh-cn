@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation, providers
 - providers, UI Automation
 ms.assetid: 859557b8-51e1-4d15-92e8-318d2dcdb2f7
-ms.openlocfilehash: 45e1cd9bdfcbcf592ce6708496282e2e66a4a2e3
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c8db2e6cbd1f0c0dd61ecb8e147133b8c608ea8f
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69914381"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042046"
 ---
 # <a name="ui-automation-providers-overview"></a>UI 自动化提供程序概述
 > [!NOTE]
@@ -27,9 +27,9 @@ ms.locfileid: "69914381"
  UI 自动化提供程序分为两类：客户端提供程序和服务器端提供程序。  
   
 ### <a name="client-side-providers"></a>客户端提供程序  
- 客户端提供程序由 UI 自动化客户端实现，以便与不支持（或不完全支持） [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的应用程序进行通信。 通常, 客户端提供程序通过发送和接收 Windows 消息来跨进程边界与服务器通信。  
+ 客户端提供程序由 UI 自动化客户端实现，以便与不支持（或不完全支持） [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的应用程序进行通信。 通常，客户端提供程序通过发送和接收 Windows 消息来跨进程边界与服务器通信。  
   
- 由于、Windows 窗体或[!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]应用程序中控件的 UI 自动化提供程序是作为操作系统的一部分提供的, 因此客户端应用程序很少需要实现自己的提供程序, 并且此概述不涵盖它们下来.  
+ 由于、Windows 窗体或[!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]应用程序中控件的 UI 自动化提供程序是作为操作系统的一部分提供的，因此客户端应用程序很少需要实现自己的提供程序，并且此概述不涵盖它们下来.  
   
 ### <a name="server-side-providers"></a>服务器端提供程序  
  服务器端提供程序由自定义控件或基于除[!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)]、Windows 窗体或[!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]的 UI 框架的应用程序实现。  
@@ -46,7 +46,7 @@ ms.locfileid: "69914381"
 ### <a name="navigation"></a>导航  
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 元素作为 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树公开给客户端。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 通过从在元素之间进行导航来构造该树。 提供程序为每个元素启用导航，每个导航可能指向一个父级、同级和子级元素。  
   
- 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树客户端视图的详细信息，请参阅 [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)。  
+ 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树客户端视图的详细信息，请参阅 [UI Automation Tree Overview](ui-automation-tree-overview.md)。  
   
 ### <a name="views"></a>Views  
  客户端在三个主要视图中显示 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树，如下表所示。  
@@ -57,7 +57,7 @@ ms.locfileid: "69914381"
 |控件视图|包含控件元素。|  
 |内容视图|包含具有内容的元素。|  
   
- 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树客户端视图的详细信息，请参阅 [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)。  
+ 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树客户端视图的详细信息，请参阅 [UI Automation Tree Overview](ui-automation-tree-overview.md)。  
   
  提供程序实现负责将元素为定义为内容元素或控件元素。 控件元素可以是也可以不是内容元素，但所有内容元素都是控件元素。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "69914381"
   
  [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 容器控件（例如列表框和树视图）均视为框架，因为它们包含用于呈现子项和对其执行命中测试的代码。 与此相反， [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 列表框不是一个框架，因为包含 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 窗口处理呈现和命中测试。  
   
- 应用程序中的 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 可由不同框架构成。 例如, HWND 应用程序窗口可能包含动态 HTML (DHTML), 后者又包含 HWND 中的组合框等组件。  
+ 应用程序中的 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 可由不同框架构成。 例如，HWND 应用程序窗口可能包含动态 HTML （DHTML），后者又包含 HWND 中的组合框等组件。  
   
 ### <a name="fragments"></a>片段  
  片段是特定框架中元素的完整子树。 子树根节点处的元素称为片段根。 片段根不具有父级，而是承载在其他框架，通常是 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 窗口 (HWND) 中。  
@@ -78,4 +78,4 @@ ms.locfileid: "69914381"
   
 ## <a name="see-also"></a>请参阅
 
-- [服务器端 UI 自动化提供程序实现](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)
+- [服务器端 UI 自动化提供程序实现](server-side-ui-automation-provider-implementation.md)

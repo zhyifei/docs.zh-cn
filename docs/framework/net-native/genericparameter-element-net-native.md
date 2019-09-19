@@ -4,14 +4,14 @@ ms.date: 03/30/2017
 ms.assetid: cbd49732-3615-49a5-a900-f96947cdc3e6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 40fef845a55412e5731ec08bd1e038d6b311694c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2898d804f7a351045b2fbce42042f9fd322ebb0a
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868596"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049745"
 ---
-# <a name="genericparameter-element-net-native"></a>\<泛型参数 > 元素 (.NET Native)
+# <a name="genericparameter-element-net-native"></a>\<泛型参数 > 元素（.NET Native）
 将策略应用到一个泛型类型或方法的参数类型。  
   
 ## <a name="syntax"></a>语法  
@@ -51,15 +51,15 @@ ms.locfileid: "61868596"
   
 ## <a name="name-attribute"></a>Name 特性  
   
-|“值”|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |generic_parameter_name|必需的特性。 泛型类型参数的名称。 例如，对于泛型委托 <xref:System.Func%603>，“TResult”的一个 generic_parameter_name 值将运行时策略应用到该委托的返回值。|  
   
 ## <a name="all-other-attributes"></a>所有其他特性  
   
-|“值”|描述|  
+|值|描述|  
 |-----------|-----------------|  
-|policy_setting|该设置将应用到这种策略类型。 可能值为 `All`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal` 以及 `Required All`。 有关详细信息，请参阅[运行时指令策略设置](../../../docs/framework/net-native/runtime-directive-policy-settings.md)。|  
+|policy_setting|该设置将应用到这种策略类型。 可能值为 `All`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal` 以及 `Required All`。 有关详细信息，请参阅[运行时指令策略设置](runtime-directive-policy-settings.md)。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  
@@ -68,11 +68,11 @@ ms.locfileid: "61868596"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|将运行时反射策略应用到一个构造函数或方法。|  
-|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|将运行时反射策略应用到一个特定类型，例如一个类或结构。|  
+|[\<Method>](method-element-net-native.md)|将运行时反射策略应用到一个构造函数或方法。|  
+|[\<Type>](type-element-net-native.md)|将运行时反射策略应用到一个特定类型，例如一个类或结构。|  
   
 ## <a name="remarks"></a>备注  
- `<GenericParameter>` 元素是 [\<Method>](../../../docs/framework/net-native/method-element-net-native.md) 或 [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) 元素的子元素，用于将策略应用到一个特定的泛型类型参数，该参数由其在泛型类型或方法签名中的名称指定。  
+ `<GenericParameter>` 元素是 [\<Method>](method-element-net-native.md) 或 [\<Type>](type-element-net-native.md) 元素的子元素，用于将策略应用到一个特定的泛型类型参数，该参数由其在泛型类型或方法签名中的名称指定。  
   
  `<GenericParameter>` 元素在同序列化程序一起使用时非常有用。 以下示例使用 `<GenericParameter>` 元素在对 NewtonSoft JSON 序列化程序的 [JsonConvert.DeserializeObject\<T>(String)](https://www.newtonsoft.com/json/help/html/M_Newtonsoft_Json_JsonConvert_DeserializeObject__1.htm) 方法重载的调用中，将策略应用到类型 `T`。  
   
@@ -88,8 +88,8 @@ ms.locfileid: "61868596"
   
 ## <a name="see-also"></a>请参阅
 
-- [\<Method> 元素](../../../docs/framework/net-native/method-element-net-native.md)
-- [\<类型 > 元素](../../../docs/framework/net-native/type-element-net-native.md)
-- [运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [运行时指令策略设置](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
-- [运行时指令元素](../../../docs/framework/net-native/runtime-directive-elements.md)
+- [\<Method> 元素](method-element-net-native.md)
+- [\<类型 > 元素](type-element-net-native.md)
+- [运行时指令 (rd.xml) 配置文件参考](runtime-directives-rd-xml-configuration-file-reference.md)
+- [运行时指令策略设置](runtime-directive-policy-settings.md)
+- [运行时指令元素](runtime-directive-elements.md)
