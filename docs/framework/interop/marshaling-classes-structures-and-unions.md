@@ -20,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: 027832a2-9b43-4fd9-9b45-7f4196261a4e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 09179ebe123f1287c8b057783bb421153f5e1183
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
-ms.translationtype: HT
+ms.openlocfilehash: a53c8b7b88bd25a6611c33218c7a386de55889e9
+ms.sourcegitcommit: 3ac05b2c386c8cc5e73f4c7665f6c0a7ed3da1bd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894177"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71151761"
 ---
 # <a name="marshaling-classes-structures-and-unions"></a>封送类、结构和联合
 .NET Framework 中类和结构非常相似。 它们都可以具有字段、属性和事件。 并且都可以具有静态和非静态方法。 一个显著区别是结构是值类型，而类是引用类型。  
   
  下表列出了类、结构和联合的封送处理选项；描述了它们的用法；并提供了到相应平台调用示例的链接。  
   
-|类型|说明|示例|  
+|类型|描述|示例|  
 |----------|-----------------|------------|  
 |按值传递类。|将具有整数成员的类传递为 In/Out 参数，与托管的情形相似。|SysTime 示例|  
 |按值传递结构。|将结构作为 In 参数传递。|结构示例|  
@@ -43,32 +43,32 @@ ms.locfileid: "70894177"
 |按引用传递具有整数和字符串的结构数组。|将包含整数和字符串的结构数组作为 Out 参数传递。 被调用的函数为数组分配内存。|OutArrayOfStructs 示例|  
 |具有值类型的联合。|传递具有值类型（整数和双精度）的联合。|“联合”示例|  
 |具有混合类型的联合。|传递具有混合类型（整数和字符串）的联合。|“联合”示例|  
-|结构中的 null 值。|传递空引用（Visual Basic 中为 Nothing  ），而不传递对值类型的引用。|HandleRef 示例|  
+|结构中的 null 值。|传递空引用（Visual Basic 中为 Nothing），而不传递对值类型的引用。|HandleRef 示例|  
   
 ## <a name="structures-sample"></a>结构示例  
  此示例演示了如何传递指向第二结构的结构、具有嵌入结构的结构和具有嵌入数组的结构。  
   
  “结构”示例使用以下非托管函数（与原始函数声明一同显示）：  
   
-- 从 PinvokeLib.dll 导出的 TestStructInStruct  。  
+- 从 PinvokeLib.dll 导出的 TestStructInStruct。  
   
     ```cpp  
     int TestStructInStruct(MYPERSON2* pPerson2);  
     ```  
   
-- 从 PinvokeLib.dll 导出的 TestStructInStruct3  。  
+- 从 PinvokeLib.dll 导出的 TestStructInStruct3。  
   
     ```cpp  
     void TestStructInStruct3(MYPERSON3 person3);  
     ```  
   
-- 从 PinvokeLib.dll 导出的 TestArrayInStruct  。  
+- 从 PinvokeLib.dll 导出的 TestArrayInStruct。  
   
     ```cpp  
     void TestArrayInStruct( MYARRAYSTRUCT* pStruct );  
     ```  
   
- [PinvokeLib.dll](marshaling-data-with-platform-invoke.md#pinvokelibdll) 是一种自定义的非托管库，包含上述函数和 4 种结构（MYPERSON、MYPERSON2、MYPERSON3 和 MYARRAYSTRUCT     ）的实现。 这些结构包含以下元素：  
+ [PinvokeLib.dll](marshaling-data-with-platform-invoke.md#pinvokelibdll) 是一种自定义的非托管库，包含上述函数和 4 种结构（MYPERSON、MYPERSON2、MYPERSON3 和 MYARRAYSTRUCT）的实现。 这些结构包含以下元素：  
   
 ```cpp  
 typedef struct _MYPERSON  
@@ -100,15 +100,15 @@ typedef struct _MYARRAYSTRUCT
   
 - `MyPerson` 仅包含字符串成员。 [CharSet](specifying-a-character-set.md) 字段在传递到非托管函数时将字符串设置为 ANSI 格式。  
   
-- `MyPerson2` 将 IntPtr  包含到 `MyPerson` 结构中。 IntPtr 类型替换指向非托管结构的原始指针，因为 .NET Framework 应用程序不使用指针，除非代码被标记为“不安全”   。  
+- `MyPerson2` 将 IntPtr包含到 `MyPerson` 结构中。 IntPtr 类型替换指向非托管结构的原始指针，因为 .NET Framework 应用程序不使用指针，除非代码被标记为“不安全”。  
   
 - `MyPerson3` 将 `MyPerson` 作为嵌入结构包含在内。 嵌入其他结构的结构可通过将嵌入结构的元素直接放入主结构中来进行平展，还可以保留为嵌入结构，如本示例中操作所示。  
   
-- `MyArrayStruct` 包含整数数组。 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 属性将 <xref:System.Runtime.InteropServices.UnmanagedType> 枚举值设置为 ByValArray  ，此值用于指示数组中的元素数。  
+- `MyArrayStruct` 包含整数数组。 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 属性将 <xref:System.Runtime.InteropServices.UnmanagedType> 枚举值设置为 ByValArray，此值用于指示数组中的元素数。  
   
  对于此示例中的所有结构，应用 <xref:System.Runtime.InteropServices.StructLayoutAttribute> 属性以确保成员在内存中按出现的顺序进行排列。  
   
- `LibWrap` 类包含 `App` 类所调用的 `TestStructInStruct`、`TestStructInStruct3` 和 `TestArrayInStruct` 方法的托管原型。 每个原型均声明一个参数，如下所示：  
+ `NativeMethods` 类包含 `App` 类所调用的 `TestStructInStruct`、`TestStructInStruct3` 和 `TestArrayInStruct` 方法的托管原型。 每个原型均声明一个参数，如下所示：  
   
 - `TestStructInStruct` 将对 `MyPerson2` 类型的引用声明为其参数。  
   
@@ -116,7 +116,7 @@ typedef struct _MYARRAYSTRUCT
   
 - `TestArrayInStruct` 将对 `MyArrayStruct` 类型的引用声明为其参数。  
   
- 作为方法自变量的结构按值传递，除非此参数包含 ref（Visual Basic 中为 ByRef）关键字   。 例如，`TestStructInStruct` 方法将对 `MyPerson2` 类型对象的引用（地址的值）传递到非托管代码。 为了处理 `MyPerson2` 指向的结构，此示例创建了具有指定大小的缓冲区，并同时使用 <xref:System.Runtime.InteropServices.Marshal.AllocCoTaskMem%2A?displayProperty=nameWithType> 和 <xref:System.Runtime.InteropServices.Marshal.SizeOf%2A?displayProperty=nameWithType> 方法返回其地址。 然后，此示例将该托管结构的内容复制到非托管的缓冲区。 最后，此示例使用 <xref:System.Runtime.InteropServices.Marshal.PtrToStructure%2A?displayProperty=nameWithType> 方法将非托管缓冲区的数据封送到托管对象，并使用 <xref:System.Runtime.InteropServices.Marshal.FreeCoTaskMem%2A?displayProperty=nameWithType> 方法释放非托管的内存块。  
+ 作为方法自变量的结构按值传递，除非此参数包含 ref（Visual Basic 中为 ByRef）关键字。 例如，`TestStructInStruct` 方法将对 `MyPerson2` 类型对象的引用（地址的值）传递到非托管代码。 为了处理 `MyPerson2` 指向的结构，此示例创建了具有指定大小的缓冲区，并同时使用 <xref:System.Runtime.InteropServices.Marshal.AllocCoTaskMem%2A?displayProperty=nameWithType> 和 <xref:System.Runtime.InteropServices.Marshal.SizeOf%2A?displayProperty=nameWithType> 方法返回其地址。 然后，此示例将该托管结构的内容复制到非托管的缓冲区。 最后，此示例使用 <xref:System.Runtime.InteropServices.Marshal.PtrToStructure%2A?displayProperty=nameWithType> 方法将非托管缓冲区的数据封送到托管对象，并使用 <xref:System.Runtime.InteropServices.Marshal.FreeCoTaskMem%2A?displayProperty=nameWithType> 方法释放非托管的内存块。  
   
 ### <a name="declaring-prototypes"></a>声明原型  
  [!code-cpp[Conceptual.Interop.Marshaling#23](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.interop.marshaling/cpp/structures.cpp#23)]
@@ -133,7 +133,7 @@ typedef struct _MYARRAYSTRUCT
   
  FindFile 示例使用以下的非托管函数（与其原始函数声明一同显示）：  
   
-- 从 Kernel32.dll 导出的 FindFirstFile  。  
+- 从 Kernel32.dll 导出的 FindFirstFile。  
   
     ```cpp
     HANDLE FindFirstFile(LPCTSTR lpFileName, LPWIN32_FIND_DATA lpFindFileData);  
@@ -157,9 +157,9 @@ typedef struct _WIN32_FIND_DATA
 } WIN32_FIND_DATA, *PWIN32_FIND_DATA;  
 ```  
   
- 在此示例中，`FindData` 类包含原始结构和嵌入结构中每个元素的对应数据成员。 如果存在 2 个原始字符缓冲区，类将替换字符串。 MarshalAsAttribute 将 <xref:System.Runtime.InteropServices.UnmanagedType> 枚举设置为 ByValTStr，它用于标识非托管结构中出现的定长内联字符数组   。  
+ 在此示例中，`FindData` 类包含原始结构和嵌入结构中每个元素的对应数据成员。 如果存在 2 个原始字符缓冲区，类将替换字符串。 MarshalAsAttribute 将 <xref:System.Runtime.InteropServices.UnmanagedType> 枚举设置为 ByValTStr，它用于标识非托管结构中出现的定长内联字符数组。  
   
- `LibWrap` 类包含 `FindFirstFile` 方法的托管原型，此方法将 `FindData` 类作为参数传递。 此参数必须使用 <xref:System.Runtime.InteropServices.InAttribute> 和 <xref:System.Runtime.InteropServices.OutAttribute> 属性进行声明，因为作为引用类型的类默认传递为 In 参数。  
+ `NativeMethods` 类包含 `FindFirstFile` 方法的托管原型，此方法将 `FindData` 类作为参数传递。 此参数必须使用 <xref:System.Runtime.InteropServices.InAttribute> 和 <xref:System.Runtime.InteropServices.OutAttribute> 属性进行声明，因为作为引用类型的类默认传递为 In 参数。  
   
 ### <a name="declaring-prototypes"></a>声明原型  
  [!code-cpp[Conceptual.Interop.Marshaling#17](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.interop.marshaling/cpp/findfile.cpp#17)]
@@ -176,13 +176,13 @@ typedef struct _WIN32_FIND_DATA
   
  “联合”示例使用以下非托管函数（与其原始函数声明一同显示）：  
   
-- 从 PinvokeLib.dll 导出的 TestUnion  。  
+- 从 PinvokeLib.dll 导出的 TestUnion。  
   
     ```cpp
     void TestUnion(MYUNION u, int type);  
     ```  
   
- [PinvokeLib.dll](marshaling-data-with-platform-invoke.md#pinvokelibdll) 是一种自定义的非托管库，包含上述函数和两个联合（MYUNION  和  MYUNION2）的实现。 联合包含以下元素：  
+ [PinvokeLib.dll](marshaling-data-with-platform-invoke.md#pinvokelibdll) 是一种自定义的非托管库，包含上述函数和两个联合（MYUNION 和 MYUNION2）的实现。 联合包含以下元素：  
   
 ```cpp
 union MYUNION  
@@ -200,9 +200,9 @@ union MYUNION2
   
  在托管代码中，将联合定义为结构。 `MyUnion` 结构包含两个值类型（整数和双精度值），将其作为成员。 <xref:System.Runtime.InteropServices.StructLayoutAttribute> 属性设置为控制每个数据成员的精确位置。 <xref:System.Runtime.InteropServices.FieldOffsetAttribute> 属性提供联合的非托管表示形式中字段的物理位置。 请注意，这两个成员具有相同的偏移值，因此成员可以定义相同的内存块数。  
   
- `MyUnion2_1` 和 `MyUnion2_2` 分别包含值类型（整数）和字符串。 在托管代码中，值类型和引用类型不允许重叠。 此示例使用方法重载以使调用方在调用同一个非托管函数时能够使用这两种类型。 `MyUnion2_1` 的布局是显式的且具有准确的偏移值。 与此相反，`MyUnion2_2` 的布局是按顺序的，因为不允许引用类型使用显式布局。 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 属性将 <xref:System.Runtime.InteropServices.UnmanagedType> 枚举设置为 ByValTStr  ，它用于标识在联合的非托管表示形式中出现的定长内联字符数组。  
+ `MyUnion2_1` 和 `MyUnion2_2` 分别包含值类型（整数）和字符串。 在托管代码中，值类型和引用类型不允许重叠。 此示例使用方法重载以使调用方在调用同一个非托管函数时能够使用这两种类型。 `MyUnion2_1` 的布局是显式的且具有准确的偏移值。 与此相反，`MyUnion2_2` 的布局是按顺序的，因为不允许引用类型使用显式布局。 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 属性将 <xref:System.Runtime.InteropServices.UnmanagedType> 枚举设置为 ByValTStr，它用于标识在联合的非托管表示形式中出现的定长内联字符数组。  
   
- `LibWrap` 类包含 `TestUnion` 和 `TestUnion2` 方法的原型。 已重载 `TestUnion2` 以将 `MyUnion2_1` 或 `MyUnion2_2` 声明为参数。  
+ `NativeMethods` 类包含 `TestUnion` 和 `TestUnion2` 方法的原型。 已重载 `TestUnion2` 以将 `MyUnion2_1` 或 `MyUnion2_2` 声明为参数。  
   
 ### <a name="declaring-prototypes"></a>声明原型  
  [!code-cpp[Conceptual.Interop.Marshaling#28](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.interop.marshaling/cpp/unions.cpp#28)]
@@ -219,7 +219,7 @@ union MYUNION2
   
  SysTime 示例使用以下非托管函数（与其其原始函数声明一同显示）：  
   
-- 从 Kernel32.dll 导出的 GetSystemTime  。  
+- 从 Kernel32.dll 导出的 GetSystemTime。  
   
     ```cpp
     VOID GetSystemTime(LPSYSTEMTIME lpSystemTime);  
@@ -242,7 +242,7 @@ typedef struct _SYSTEMTIME {
   
  在此示例中，`SystemTime` 类包含原始结构中表示为类成员的元素。 设置 <xref:System.Runtime.InteropServices.StructLayoutAttribute> 特性，以确保成员在内存中按照它们出现的顺序进行排列。  
   
- `LibWrap` 类包含 `GetSystemTime` 方法的托管原型，此方法在默认情况下将 `SystemTime` 类作为 In/Out 参数传递。 此参数必须使用 <xref:System.Runtime.InteropServices.InAttribute> 和 <xref:System.Runtime.InteropServices.OutAttribute> 属性进行声明，因为作为引用类型的类默认传递为 In 参数。 为使调用方接收结果，这些[方向特性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))必须显式应用。 `App` 类创建 `SystemTime` 类的新实例，并访问它的数据字段。  
+ `NativeMethods` 类包含 `GetSystemTime` 方法的托管原型，此方法在默认情况下将 `SystemTime` 类作为 In/Out 参数传递。 此参数必须使用 <xref:System.Runtime.InteropServices.InAttribute> 和 <xref:System.Runtime.InteropServices.OutAttribute> 属性进行声明，因为作为引用类型的类默认传递为 In 参数。 为使调用方接收结果，这些[方向特性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))必须显式应用。 `App` 类创建 `SystemTime` 类的新实例，并访问它的数据字段。  
   
 ### <a name="code-samples"></a>代码示例  
  [!code-cpp[Conceptual.Interop.Marshaling#25](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.interop.marshaling/cpp/systime.cpp#25)]
@@ -266,7 +266,7 @@ typedef struct _MYSTRSTRUCT2
   
  `MyStruct` 类包含 ANSI 字符的字符串对象。 <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> 字段指定 ANSI 格式。 `MyUnsafeStruct` 是一种包含 <xref:System.IntPtr> 类型（而非字符串）的结构。  
   
- `LibWrap` 类包含已重载 `TestOutArrayOfStructs` 原型方法。 如果方法将指针声明为参数，则应使用 `unsafe` 关键字标记类。 因为 Visual Basic 无法使用不安全的代码，所以重载的方法、不安全的修饰符和 `MyUnsafeStruct` 结构不是必需的。  
+ `NativeMethods` 类包含已重载 `TestOutArrayOfStructs` 原型方法。 如果方法将指针声明为参数，则应使用 `unsafe` 关键字标记类。 因为 Visual Basic 无法使用不安全的代码，所以重载的方法、不安全的修饰符和 `MyUnsafeStruct` 结构不是必需的。  
   
  `App` 类实现 `UsingMarshaling` 方法，此方法执行传递数组所需的全部任务。 使用 `out`（Visual Basic 中的 `ByRef`）关键字标记数组，以指示数据从被调用方传递至调用方。 实现使用以下 <xref:System.Runtime.InteropServices.Marshal> 类方法：  
   

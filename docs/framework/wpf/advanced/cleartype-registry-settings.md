@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ClearType [WPF], registry settings
 - typography [WPF], ClearType registry settings
 ms.assetid: 56f314bb-b30b-4f67-8492-8b8a9fa432ae
-ms.openlocfilehash: 5113de6d8d333983e6e26579ff9803a9f5a62816
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: ab6ff2ba6e0f3f1ea9e34de80b67276a990bc83b
+ms.sourcegitcommit: 3ac05b2c386c8cc5e73f4c7665f6c0a7ed3da1bd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70254177"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71151846"
 ---
 # <a name="cleartype-registry-settings"></a>ClearType 注册表设置
 本主题概述了 WPF 应用程序使用的 Microsoft ClearType 注册表设置。  
@@ -63,7 +63,7 @@ ms.locfileid: "70254177"
   
 <a name="gamma_level"></a>   
 ## <a name="gamma-level"></a>伽马级别  
- 伽玛级别指的是像素值和亮度之间的非线性关系。 伽玛级别设置应对应于显示设备的物理特性；否则呈现的输出中可能会出现失真。 例如，测试可能显得太宽或太窄，或者字形的垂直主体的边缘上可能会出现彩色条纹。  
+ 伽玛级别指的是像素值和亮度之间的非线性关系。 伽玛级别设置应对应于显示设备的物理特性；否则呈现的输出中可能会出现失真。 例如，文本显示的宽度可能太大或太窄，或者标志符号的垂直词干边缘上可能出现颜色条纹。  
   
  伽马级别是一个介于 1000 到 2200 之间的整数值。 默认级别为 1900。  
   

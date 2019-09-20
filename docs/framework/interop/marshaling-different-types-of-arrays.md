@@ -10,19 +10,19 @@ helpviewer_keywords:
 ms.assetid: c5ac9920-5b6e-4dc9-bf2d-1f6f8ad3b0bf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 358c7f1a339fd473271574a4e97e201f5c15f871
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
-ms.translationtype: HT
+ms.openlocfilehash: 8cbc904b56237d3c875566ee1276c121dae70c4c
+ms.sourcegitcommit: 3ac05b2c386c8cc5e73f4c7665f6c0a7ed3da1bd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894165"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71151748"
 ---
 # <a name="marshaling-different-types-of-arrays"></a>封送处理不同类型的数组
 数组是包含有一个或多个相同类型的元素的托管代码中的引用类型。 尽管数组是引用类型，但它们却作为 In 参数传递到非托管函数。 此行为与托管数组传递到托管对象的方式不一致，数组作为 In/Out 参数进行传递。 有关其他详细信息，请参阅 [复制和锁定](copying-and-pinning.md)。  
   
  下表列出了数组的封送处理选项，并描述了它们的用法。  
   
-|数组|说明|  
+|数组|描述|  
 |-----------|-----------------|  
 |通过值传递的整数。|将整数的数组作为 In 参数进行传递。|  
 |通过引用传递的整数。|将整数的数组作为 In/Out 参数进行传递。|  
@@ -104,7 +104,7 @@ typedef struct _MYPERSON
   
  在此示例中， `MyPoint` 和 `MyPerson` 结构包含嵌入类型。 设置 <xref:System.Runtime.InteropServices.StructLayoutAttribute> 特性，以确保成员在内存中按照它们出现的顺序进行排列。  
   
- `LibWrap` 类包含一组 `App` 类调用的方法。 有关传递数组的特定详细信息，请参阅以下示例中的注释。 默认情况下，一个引用类型的数组将作为 In 参数进行传递。 为使调用方接收结果， **InAttribute** 和 **OutAttribute** 必须显式应用于包含该数组的参数。  
+ `NativeMethods` 类包含一组 `App` 类调用的方法。 有关传递数组的特定详细信息，请参阅以下示例中的注释。 默认情况下，一个引用类型的数组将作为 In 参数进行传递。 为使调用方接收结果， **InAttribute** 和 **OutAttribute** 必须显式应用于包含该数组的参数。  
   
 ### <a name="declaring-prototypes"></a>声明原型  
  [!code-csharp[Conceptual.Interop.Marshaling#31](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.interop.marshaling/cs/arrays.cs#31)]
