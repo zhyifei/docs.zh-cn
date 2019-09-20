@@ -10,12 +10,12 @@ helpviewer_keywords:
 - pausing Windows Service applications
 ms.assetid: e5d13760-4c83-4b0d-abef-39852677cd7a
 author: ghogen
-ms.openlocfilehash: c9a783c0e7df39381ad1d9a8fedd7419605fd241
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: a10e05b0460608a9e67ee4527adf80be3d47438e
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69935545"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053639"
 ---
 # <a name="how-to-continue-a-windows-service-visual-basic"></a>如何：继续 Windows 服务 (Visual Basic)
 本示例使用 <xref:System.ServiceProcess.ServiceController> 组件继续在本地计算机上执行 IIS 管理服务。  
@@ -24,7 +24,7 @@ ms.locfileid: "69935545"
  [!code-vb[VbRadconService#11](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#11)]  
 [!code-vb[VbRadconService#13](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#13)]  
   
- 此代码示例也可作为 IntelliSense 代码片段。 在代码片段选取器中，它位于“Windows 操作系统 > Windows 服务”  中。 有关详细信息，请参阅[代码片段](/visualstudio/ide/code-snippets)。  
+ 此代码示例也可作为 IntelliSense 代码片段。 在代码片段选取器中，它位于“Windows 操作系统 > Windows 服务”中。 有关详细信息，请参阅[代码片段](/visualstudio/ide/code-snippets)。  
   
 ## <a name="compiling-the-code"></a>编译代码  
  此示例需要：  
@@ -53,4 +53,4 @@ ms.locfileid: "69935545"
 
 - <xref:System.ServiceProcess.ServiceController>
 - <xref:System.ServiceProcess.ServiceControllerStatus>
-- [如何：暂停 Windows 服务 (Visual Basic)](../../../docs/framework/windows-services/how-to-pause-a-windows-service-visual-basic.md)
+- [如何：暂停 Windows 服务 (Visual Basic)](how-to-pause-a-windows-service-visual-basic.md)
