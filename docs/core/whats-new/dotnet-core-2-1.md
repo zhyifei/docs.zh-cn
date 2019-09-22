@@ -7,12 +7,12 @@ dev_langs:
 author: rpetrusha
 ms.author: ronpet
 ms.date: 10/10/2018
-ms.openlocfilehash: d0f4e2997e6e847cfd3c41ddb13096379d75343e
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 519c55dbe8b55191b682067da558167f86199b7e
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70925719"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71116228"
 ---
 # <a name="whats-new-in-net-core-21"></a>.NET Core 2.1 的新增功能
 
@@ -39,7 +39,7 @@ ms.locfileid: "70925719"
 
 - 使用长时间运行的 SDK 生成服务器，这些是跨各个 `dotnet build` 调用的过程。 每次 `dotnet build` 运行时不再需要 JIT 编译大量代码块。 生成服务器进程可以使用以下命令自动终止：
 
-   ```console
+   ```dotnetcli
    dotnet buildserver shutdown
    ```
 
@@ -49,7 +49,7 @@ ms.locfileid: "70925719"
 
 - `dotnet watch` 提供文件系统观察程序，该程序在执行指定的命令集之前会首先等待文件更改。 例如，下面的命令将自动重新生成当前项目，并在其中的文件发生更改时生成详细输出：
 
-   ```console
+   ```dotnetcli
    dotnet watch -- --verbose build
    ```
 
@@ -71,7 +71,7 @@ ms.locfileid: "70925719"
 
 若要安装全局工具，请使用 [dotnet tool install](../tools/dotnet-tool-install.md) 命令。 例如:
 
-```console
+```dotnetcli
 dotnet tool install -g dotnetsay
 ```
 
@@ -116,7 +116,7 @@ dotnet tool install -g dotnetsay
 
 - 使用 [.NET Core CLI 工具](../tools/index.md)时，请使用所需的值将下列选项添加到 .NET Core 命令，例如 `run`：
 
-   ```console
+   ```dotnetcli
    dotnet run --rollForwardOnNoCandidateFx=0
    ```
 

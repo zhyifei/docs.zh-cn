@@ -4,12 +4,12 @@ description: 支持的 Linux 版本和 .NET Core 依赖项，用于在 Linux 计
 author: thraka
 ms.author: adegeo
 ms.date: 12/14/2018
-ms.openlocfilehash: 5fcf931572f3c7e9b9857d2e91e9d620c7aad0bd
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 31c53b2cc0fe576e56685f4a5561258136fd2541
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70969870"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71116587"
 ---
 # <a name="prerequisites-for-net-core-on-linux"></a>Linux 上 .NET Core 的先决条件
 
@@ -150,7 +150,7 @@ Fedora 用户：如果 openssl 的版本为 1.1 及以上版本，则需要安�
 
 此脚本会默认安装最新的“LTS”版本，当前为 .NET Core 1.1。 要安装 .NET Core 2.1，请使用以下开关运行脚本：
 
-```console
+```bash
 ./dotnet-install.sh -c Current
 ```
 

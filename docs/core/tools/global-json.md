@@ -3,12 +3,12 @@ title: global.json 概述
 description: 了解如何在运行 .NET Core CLI 命令时使用 global.json 文件设置 .NET Core SDK 版本。
 ms.date: 12/03/2018
 ms.custom: updateeachrelease, seodec18
-ms.openlocfilehash: 3c3793011560cd7428e47bd3340d0a935247760f
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 2c1fec102993b61e1eb699e8d3508b773302f569
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849595"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117427"
 ---
 # <a name="globaljson-overview"></a>global.json 概述
 
@@ -53,7 +53,7 @@ ms.locfileid: "70849595"
 
 最好能知道哪些版本可用，以便在 global.json 文件中设置相应版本  。 可在 [.NET Core 下载](https://dotnet.microsoft.com/download/dotnet-core)页面中找到支持的可用 SDK 的完整列表。 从 .NET Core 2.1 SDK 开始，可运行以下命令来验证计算机上已安装的 SDK 版本：
 
-```console
+```dotnetcli
 dotnet --list-sdks
 ```
 
@@ -61,7 +61,7 @@ dotnet --list-sdks
 
 可执行 [dotnet new](dotnet-new.md) 命令在当前目录中创建一个新的 global.json 文件，类似于以下示例  ：
 
-```console
+```dotnetcli
 dotnet new globaljson --sdk-version 2.2.100
 ```
 

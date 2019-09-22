@@ -2,12 +2,12 @@
 title: dotnet msbuild 命令
 description: dotnet msbuild 命令可提供对 MSBuild 命令行的访问权限。
 ms.date: 12/03/2018
-ms.openlocfilehash: 983fae6f4ecf875da0b155a668009984b5df50de
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: b83f1272cdd4c5fcdb6b1e34aef7692e9acc01cd
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632032"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117701"
 ---
 # <a name="dotnet-msbuild"></a>dotnet msbuild
 
@@ -33,24 +33,24 @@ ms.locfileid: "65632032"
 
 * 生成项目及其依赖项：
 
-  ```console
+  ```dotnetcli
   dotnet msbuild
   ```
 
 * 使用“发布”配置生成项目及其依赖项：
 
-  ```console
+  ```dotnetcli
   dotnet msbuild -p:Configuration=Release
   ```
 
 * 运行发布目标并发布 `osx.10.11-x64` RID：
 
-  ```console
+  ```dotnetcli
   dotnet msbuild -t:Publish -p:RuntimeIdentifiers=osx.10.11-x64
   ```
 
 * 请参阅包含 SDK 添加的所有目标的整个项目：
 
-  ```console
+  ```dotnetcli
   dotnet msbuild -pp
   ```

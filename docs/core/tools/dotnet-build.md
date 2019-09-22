@@ -2,12 +2,12 @@
 title: dotnet build 命令
 description: dotnet build 命令可生成项目及其所有依赖项。
 ms.date: 08/08/2019
-ms.openlocfilehash: e92555dad2bc76d8c72eca9a30be1d3a8b5924f7
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 0b353d60691fb4bb85536c68dc4ab248f45c3a76
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70988525"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117757"
 ---
 # <a name="dotnet-build"></a>dotnet 生成
 
@@ -23,7 +23,7 @@ ms.locfileid: "70988525"
 
 ## <a name="synopsis"></a>摘要
 
-```console
+```dotnetcli
 dotnet build [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--force] [--interactive] [--no-dependencies]
     [--no-incremental] [--no-restore] [--nologo] [-o|--output] [-r|--runtime] [-v|--verbosity] [--version-suffix]
 
@@ -122,30 +122,30 @@ dotnet build [-h|--help]
 
 * 生成项目及其依赖项：
 
-  ```console
+  ```dotnetcli
   dotnet build
   ```
 
 * 使用“发布”配置生成项目及其依赖项：
 
-  ```console
+  ```dotnetcli
   dotnet build --configuration Release
   ```
 
 * 针对特定运行时（本例中为 Ubuntu 18.04）生成项目及其依赖项：
 
-  ```console
+  ```dotnetcli
   dotnet build --runtime ubuntu.18.04-x64
   ```
 
 * 生成项目，并在还原操作过程中使用指定的 NuGet 包源（.NET Core 2.0 SDK 及更高版本）：
 
-  ```console
+  ```dotnetcli
   dotnet build --source c:\packages\mypackages
   ```
 
 * 生成项目并设置版本 1.2.3.4 作为使用 `-p` [MSBuild 选项](#msbuild)的生成参数：
 
-  ```console
+  ```dotnetcli
   dotnet build -p:Version=1.2.3.4
   ```

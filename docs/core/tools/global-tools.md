@@ -4,12 +4,12 @@ description: 概述：介绍 .NET Core 全局工具及其适用的 .NET Core CLI
 author: KathleenDollard
 ms.date: 05/29/2018
 ms.custom: seodec18
-ms.openlocfilehash: 9ff7e33a50eb0c5fb649b44dda6d72412a134584
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 01c1463ceddcd64e5bab05b95a5ae4a91b6da838
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202587"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117454"
 ---
 # <a name="net-core-global-tools-overview"></a>.NET Core 全局工具概述
 
@@ -49,7 +49,7 @@ ms.locfileid: "70202587"
 
 若要安装全局工具，请使用 [dotnet tool install](dotnet-tool-install.md) .NET Core CLI 命令。 下面的示例演示如何在默认位置安装全局工具：
 
-```console
+```dotnetcli
 dotnet tool install -g dotnetsay
 ```
 
@@ -57,7 +57,7 @@ dotnet tool install -g dotnetsay
 
 如果想安装工具的预发布版本或特定版本，可以采用以下格式指定版本号：
 
-```console
+```dotnetcli
 dotnet tool install -g <package-name> --version <version-number>
 ```
 
@@ -94,7 +94,7 @@ dotnetsay
 
 如果工具作者希望工具出现在 `dotnet` 提示符的上下文中，他们可能采用称为 `dotnet <command>` 的方式进行编写，例如：
 
-```console
+```dotnetcli
 dotnet doc
 ```
 
@@ -120,7 +120,7 @@ dotnet <command> --help
 
 另一个可能出现的问题是，在较早预览版中创建的全局工具不能在当前安装的 .NET Core 运行时中运行。 若要查看计算机上安装了哪些运行时，可以使用以下命令：
 
-```console
+```dotnetcli
 dotnet --list-runtimes
 ```
 
@@ -141,24 +141,24 @@ dotnet --list-runtimes
 
 若要了解哪些命令可用于全局工具：
 
-```console
+```dotnetcli
 dotnet tool --help
 ```
 
 更新全局工具涉及卸载该工具并重新安装它的最新稳定版。 若要更新全局工具，请使用 [dotnet tool update](dotnet-tool-update.md) 命令：
 
-```console
+```dotnetcli
 dotnet tool update -g <packagename>
 ```
 
 使用 [dotnet tool uninstall](dotnet-tool-uninstall.md) 命令删除全局工具：
 
-```console
+```dotnetcli
 dotnet tool uninstall -g <packagename>
 ```
 
 若要显示计算机上目前安装的所有全局工具及其版本和命令，请使用 [dotnet tool list](dotnet-tool-list.md) 命令：
 
-```console
+```dotnetcli
 dotnet tool list -g
 ```

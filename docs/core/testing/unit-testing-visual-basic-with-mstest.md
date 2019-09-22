@@ -5,12 +5,12 @@ author: billwagner
 ms.author: wiwagn
 ms.date: 09/01/2017
 ms.custom: seodec18
-ms.openlocfilehash: 0ddeebbf1fce1a4899fb6c0fe5685a55f234b4ef
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 0b9dee45c980ae9288637967af20caf375f03fd1
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373840"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117035"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-mstest"></a>使用 dotnet test 和 MSTest 进行 Visual Basic .NET Core 库单元测试
 
@@ -71,7 +71,7 @@ End Namespace
 
 测试项目需要其他包创建和运行单元测试。 `dotnet new` 在前面的步骤中已添加 MSTest 和 MSTest 运行程序。 现在，将 `PrimeService` 类库作为另一个依赖项添加到项目中。 使用 [`dotnet add reference`](../tools/dotnet-add-reference.md) 命令：
 
-```console
+```dotnetcli
 dotnet add reference ../PrimeService/PrimeService.vbproj
 ```
 

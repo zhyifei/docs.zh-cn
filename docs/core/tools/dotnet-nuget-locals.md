@@ -3,12 +3,12 @@ title: dotnet nuget locals 命令
 description: dotnet nuget locals 命令可清除或列出本地 NuGet 资源，如 http 请求缓存、临时缓存或整个计算机范围内的全局包文件夹。
 author: karann-msft
 ms.date: 06/26/2019
-ms.openlocfilehash: 0cf025f91a7582fafc401799cd1d8b933b087535
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 482e841d3b402084eb8c7f2456779f1600a5dd19
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202464"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117628"
 ---
 # <a name="dotnet-nuget-locals"></a>dotnet nuget locals
 
@@ -24,7 +24,7 @@ ms.locfileid: "70202464"
 
 ## <a name="synopsis"></a>摘要
 
-```console
+```dotnetcli
 dotnet nuget locals <CACHE_LOCATION> [(-c|--clear)|(-l|--list)] [--force-english-output]
 dotnet nuget locals [-h|--help]
 ```
@@ -66,31 +66,31 @@ dotnet nuget locals [-h|--help]
 
 * 显示所有本地缓存目录的路径（http 缓存目录、全局包缓存目录和临时缓存目录）：
 
-  ```console
+  ```dotnetcli
   dotnet nuget locals –l all
   ```
 
 * 显示本地 http 缓存录的路径：
 
-  ```console
+  ```dotnetcli
   dotnet nuget locals --list http-cache
   ```
 
 * 清除所有本地缓存目录的文件（http 缓存目录、全局包缓存目录和临时缓存目录）：
 
-  ```console
+  ```dotnetcli
   dotnet nuget locals --clear all
   ```
 
 * 清除本地全局包缓存目录中的所有文件：
 
-  ```console
+  ```dotnetcli
   dotnet nuget locals -c global-packages
   ```
 
 * 清除本地临时缓存目录中的所有文件：
 
-  ```console
+  ```dotnetcli
   dotnet nuget locals -c temp
   ```
 

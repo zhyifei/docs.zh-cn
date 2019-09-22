@@ -2,12 +2,12 @@
 title: dotnet list package 命令
 description: 使用“dotnet list package”命令，可以方便地列出项目或解决方案的包引用。
 ms.date: 06/26/2019
-ms.openlocfilehash: 48eef0ccc6acf2bbd6c1acf748870882d2480ce5
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: fe95f3898c5bd85956f4312eb4d20259227e9ff0
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168022"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117728"
 ---
 # <a name="dotnet-list-package"></a>dotnet list package
 
@@ -19,7 +19,7 @@ ms.locfileid: "70168022"
 
 ## <a name="synopsis"></a>摘要
 
-```console
+```dotnetcli
 dotnet list [<PROJECT>|<SOLUTION>] package [--config] [--framework] [--highest-minor] [--highest-patch] 
    [--include-prerelease] [--include-transitive] [--interactive] [--outdated] [--source]
 dotnet list package [-h|--help]
@@ -121,18 +121,18 @@ Project 'HelloPlugin' has the following package references
 
 * 列出特定项目的包引用：
 
-  ```console
+  ```dotnetcli
   dotnet list SentimentAnalysis.csproj package
   ```
 
 * 列出有更高版本（包括预发行版本）的包引用：
 
-  ```console
+  ```dotnetcli
   dotnet list package --outdated --include-prerelease
   ```
 
 * 列出特定目标框架的包引用：
 
-  ```console
+  ```dotnetcli
   dotnet list package --framework netcoreapp3.0
   ```

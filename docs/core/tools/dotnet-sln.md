@@ -2,12 +2,12 @@
 title: dotnet sln 命令
 description: 使用 dotnet-sln 命令，可以便捷地在解决方案文件中添加、删除和列出项目。
 ms.date: 06/13/2018
-ms.openlocfilehash: 3f18d6a2851d955d07cecc0cbc4c161cf0ec3e08
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 84508aaefff61b31e2965576ebc2daaae7331951
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202787"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117587"
 ---
 # <a name="dotnet-sln"></a>dotnet sln
 
@@ -19,7 +19,7 @@ ms.locfileid: "70202787"
 
 ## <a name="synopsis"></a>摘要
 
-```console
+```dotnetcli
 dotnet sln [<SOLUTION_NAME>] add <PROJECT> <PROJECT> ...
 dotnet sln [<SOLUTION_NAME>] add <GLOBBING_PATTERN>
 dotnet sln [<SOLUTION_NAME>] remove <PROJECT> <PROJECT> ...
@@ -34,7 +34,7 @@ dotnet sln [-h|--help]
 
 若要使用 `dotnet sln` 命令，必须存在解决方案文件。 如果需要创建一个解决方案文件，请使用 [dotnet new](dotnet-new.md) 命令，如下例所示：
 
-```console
+```dotnetcli
 dotnet new sln
 ```
 

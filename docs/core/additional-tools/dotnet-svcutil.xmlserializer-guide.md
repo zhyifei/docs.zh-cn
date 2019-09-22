@@ -3,12 +3,12 @@ title: 在 .NET Core 上使用 dotnet-svcutil.xmlserializer
 description: 了解如何使用 `dotnet-svcutil.xmlserializer` NuGet 包为 .NET Core 项目预生成序列化程序集。
 author: huanwu
 ms.date: 11/27/2018
-ms.openlocfilehash: a98f8d30f2e37b722a3bf1f93be8fe9df540a468
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: f1eebeb70206ce883a8e4e4bbd5216ae0ba5507c
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70848963"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117278"
 ---
 # <a name="using-dotnet-svcutilxmlserializer-on-net-core"></a>在 .NET Core 上使用 dotnet-svcutil.xmlserializer
 
@@ -39,7 +39,7 @@ ms.locfileid: "70848963"
 
 2. 创建 .NET Core 控制台应用程序作为面向 .NET Core 2.1 或更高版本的 WCF 客户端应用程序。 例如，使用以下命令创建名为“MyWCFClient”的应用：
 
-    ```console
+    ```dotnetcli
     dotnet new console --name MyWCFClient
     ```
 
@@ -51,7 +51,7 @@ ms.locfileid: "70848963"
 
 3. 通过运行以下命令将包引用添加到 `System.ServiceModel.Http`：
 
-    ```console
+    ```dotnetcli
     dotnet add package System.ServiceModel.Http
     ```
 
@@ -84,7 +84,7 @@ ms.locfileid: "70848963"
 
 5. 通过运行以下命令将引用添加到 `dotnet-svcutil.xmlserializer` 包：
   
-    ```console
+    ```dotnetcli
     dotnet add package dotnet-svcutil.xmlserializer
     ```
 

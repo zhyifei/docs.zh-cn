@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 08/07/2019
 ms.technology: dotnet-cli
 ms.custom: seodec18
-ms.openlocfilehash: c42a34bc13ff9fb5d8eb5a85b461360915e2c68f
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: b5ef70967c8404dc5ce5b816bb9a1c3b1d7e4230
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849336"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117352"
 ---
 # <a name="get-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>通过命令行开始在 Windows/Linux/macOS 上使用 .NET Core
 
@@ -30,7 +30,7 @@ ms.locfileid: "70849336"
 
 打开命令提示符，创建一个名为“Hello”  的文件夹。 导航到创建的文件夹，键入下列内容：
 
-```console
+```dotnetcli
 dotnet new console
 dotnet run
 ```
@@ -154,7 +154,7 @@ dotnet run
    377
    ```
 
-## <a name="publish-your-app"></a>发布应用
+## <a name="publish-your-app"></a>发布你的应用
 
 准备好分发应用后，使用 [`dotnet publish`](../tools/dotnet-publish.md) 命令在 bin\\debug\\netcoreapp2.1\\publish\\  （非 Windows 系统使用 `/`）处生成 publish  文件夹。 可以将 publish  文件夹的内容分发到其他平台，只要这些平台安装了 dotnet 运行时即可。
 
