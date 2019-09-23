@@ -2,12 +2,12 @@
 title: IPv6 路由
 ms.date: 03/30/2017
 ms.assetid: c98731b4-b542-46a2-9947-1cea63c186b2
-ms.openlocfilehash: caa1f33f46d13440eab18ba321ebcd8fa4eef129
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 93300107710164d755d578633b7fa6651f984987
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647280"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047791"
 ---
 # <a name="ipv6-routing"></a>IPv6 路由
 灵活的路由机制是 IPv6 的优势之一。 由于 IPv4 网络 ID 以前和现在的分配方式，需要由 Internet 主干网上的路由器来维护大型路由表。 这些路由器必须了解所有路由，才能转发可能定向到 Internet 任何节点的数据包。 借助聚合地址的功能，IPv6 可以灵活寻址，并且大大减小路由表的大小。 在这种新型寻址体系结构中，中间路由器必须仅跟踪网络中的本地部分，才能恰当地转发消息。  
@@ -35,5 +35,5 @@ ms.locfileid: "64647280"
   
 ## <a name="see-also"></a>请参阅
 
-- [Internet 协议版本 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)
-- [套接字](../../../docs/framework/network-programming/sockets.md)
+- [Internet 协议版本 6](internet-protocol-version-6.md)
+- [套接字](sockets.md)

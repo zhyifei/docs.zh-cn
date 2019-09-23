@@ -6,20 +6,20 @@ helpviewer_keywords:
 ms.assetid: 4fe17546-d56e-4344-a930-6d8e4a545914
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7ab80cfbd0ae2130f465216ca77812bda0002c24
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 2bed01a74c5b3338df958a3e178c06602bd69866
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854005"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052121"
 ---
 # <a name="how-to-debug-clr-activation-issues"></a>如何调试 CLR 激活问题
 
-如果在使用正确版本的公共语言运行时 (CLR) 运行应用程序时遇到问题，可以查看和调试 CLR 激活日志。 如果应用程序加载不同于预期的 CLR 版本或者根本未加载 CLR，这些日志对于确定激活问题的根本原因非常有用。 [.NET Framework 初始化错误：管理用户体验](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md)中探讨了未能找到应用程序 CLR 的体验。
+如果在使用正确版本的公共语言运行时 (CLR) 运行应用程序时遇到问题，可以查看和调试 CLR 激活日志。 如果应用程序加载不同于预期的 CLR 版本或者根本未加载 CLR，这些日志对于确定激活问题的根本原因非常有用。 [.NET Framework 初始化错误：管理用户体验](initialization-errors-managing-the-user-experience.md)中探讨了未能找到应用程序 CLR 的体验。
 
 可以通过使用 HKEY_LOCAL_MACHINE 注册表项或系统环境变量在系统范围内启用 CLR 激活日志记录。 在删除注册表项或环境变量前，将持续生成日志。 或者，可以使用用户或进程局部环境变量来启用具有不同范围和持续时间的日志记录。
 
-CLR 激活日志不应与[程序集绑定日志](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md)混淆，两者完全不同。
+CLR 激活日志不应与[程序集绑定日志](../tools/fuslogvw-exe-assembly-binding-log-viewer.md)混淆，两者完全不同。
 
 ## <a name="to-enable-clr-activation-logging"></a>启用 CLR 激活日志记录
 
@@ -106,13 +106,13 @@ CLR 激活日志提供大量关于 CLR 激活和 CLR 宿主 API 的用法的数�
     532,205950.382,Installed Runtime: v4.0.30319. VERSION_ARCHITECTURE: 0
     ```
 
-- 生成所用版本  是在生成向 [ICLRMetaHostPolicy::GetRequestedRuntime](../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md).等方法提供的二进制文件时所用的 CLR 版本。
+- 生成所用版本  是在生成向 [ICLRMetaHostPolicy::GetRequestedRuntime](../unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md).等方法提供的二进制文件时所用的 CLR 版本。
 
     ```output
     532,205950.382,C:\Tests\myapp.exe was built with version: v2.0.50727
     ```
 
-- 功能按需安装  是指在 Windows 8 上启用 .NET Framework 3.5。 请参阅 [.NET Framework 初始化错误：管理用户体验](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md)，获取有关此方案的详细信息。
+- 功能按需安装  是指在 Windows 8 上启用 .NET Framework 3.5。 请参阅 [.NET Framework 初始化错误：管理用户体验](initialization-errors-managing-the-user-experience.md)，获取有关此方案的详细信息。
 
     ```output
     532,205950.398,Launching feature-on-demand installation. CmdLine: C:\Windows\system32\fondue.exe /enable-feature:NetFx3
@@ -120,5 +120,5 @@ CLR 激活日志提供大量关于 CLR 激活和 CLR 宿主 API 的用法的数�
 
 ## <a name="see-also"></a>请参阅
 
-- [部署](../../../docs/framework/deployment/index.md)
-- [如何：将应用配置为支持 .NET Framework 4 或更高版本](../../../docs/framework/migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
+- [部署](index.md)
+- [如何：将应用配置为支持 .NET Framework 4 或更高版本](../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)

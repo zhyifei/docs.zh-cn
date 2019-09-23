@@ -8,12 +8,12 @@ helpviewer_keywords:
 - network resources, connections
 - connection pooling
 ms.assetid: 2ec502e8-4ba0-4c22-9410-f28eaf4eee63
-ms.openlocfilehash: 00ccc11919f0ccd4f9361bfd8f265dea1ad2390d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 007366764a7b8e1208e22ef5895e6a9093b090e4
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59184557"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048645"
 ---
 # <a name="connection-grouping"></a>连接分组
 连接分组将单个应用程序内的特定请求与已定义连接池相联系。 代表用户连接到后端服务器并使用支持委托的身份验证协议（如 Kerberos）的中间层应用程序，或提供其自身凭据的中间层应用程序可要求连接分组，如以下示例所示。 例如，假设用户 Joe 访问显示其工资信息的内部网站。 对 Joe 进行身份验证之后，中间层应用程序服务器使用 Joe 的凭据连接到后端服务器来检索他的工资信息。 接下来 Susan 访问该站点，并请求她的工资信息。 因为中间层应用程序已使用 Joe 的凭据完成了连接，所以后端服务器会使用 Joe 的信息进行响应。 但是，如果应用程序将发送到后端服务器的每个请求分配给由用户名形成的连接组，那么每个用户将属于单独的连接池，并且不会意外地与其他用户分享身份验证信息。  
@@ -22,5 +22,5 @@ ms.locfileid: "59184557"
   
 ## <a name="see-also"></a>请参阅
 
-- [管理连接](../../../docs/framework/network-programming/managing-connections.md)
-- [如何：将用户信息分配给组连接](../../../docs/framework/network-programming/how-to-assign-user-information-to-group-connections.md)
+- [管理连接](managing-connections.md)
+- [如何：将用户信息分配给组连接](how-to-assign-user-information-to-group-connections.md)

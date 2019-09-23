@@ -11,15 +11,15 @@ helpviewer_keywords:
 - request cache policies
 - cache [.NET Framework], location-based policies
 ms.assetid: 683bb88e-3411-4f46-9686-3411b6ba511c
-ms.openlocfilehash: 5b4936a54627e6016cabc41954d1a18ae82cdf90
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 150198c2bda220e4b37981e461e19b8e4e30e483
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422473"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048123"
 ---
 # <a name="how-to-set-a-location-based-cache-policy-for-an-application"></a>如何：为应用程序设置基于位置的缓存策略
-基于位置的缓存策略允许应用程序基于所请求资源的位置显式定义缓存行为。 本主题演示如何以编程方式设置缓存策略。 有关使用配置文件为应用程序设置策略的信息，请参阅 [ \<requestCaching > 元素（网络设置）](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)。  
+基于位置的缓存策略允许应用程序基于所请求资源的位置显式定义缓存行为。 本主题演示如何以编程方式设置缓存策略。 有关使用配置文件为应用程序设置策略的信息，请参阅 [ \<requestCaching > 元素（网络设置）](../configure-apps/file-schema/network/requestcaching-element-network-settings.md)。  
   
 ### <a name="to-set-a-location-based-cache-policy-for-an-application"></a>为应用程序设置基于位置的缓存策略  
   
@@ -155,8 +155,8 @@ ms.locfileid: "67422473"
   
 ## <a name="see-also"></a>请参阅
 
-- [网络应用程序的缓存管理](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
-- [缓存策略](../../../docs/framework/network-programming/cache-policy.md)
-- [基于位置的缓存策略](../../../docs/framework/network-programming/location-based-cache-policies.md)
-- [基于时间的缓存策略](../../../docs/framework/network-programming/time-based-cache-policies.md)
-- [\<requestCaching> 元素（网络设置）](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+- [网络应用程序的缓存管理](cache-management-for-network-applications.md)
+- [缓存策略](cache-policy.md)
+- [基于位置的缓存策略](location-based-cache-policies.md)
+- [基于时间的缓存策略](time-based-cache-policies.md)
+- [\<requestCaching> 元素（网络设置）](../configure-apps/file-schema/network/requestcaching-element-network-settings.md)

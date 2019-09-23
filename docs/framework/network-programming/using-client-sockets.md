@@ -16,19 +16,19 @@ helpviewer_keywords:
 - sockets, client sockets
 - client sockets
 ms.assetid: 81de9f59-8177-4d98-b25d-43fc32a98383
-ms.openlocfilehash: b99720b9653b8454419acd35085bfe9a7ac4b5af
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: fe2ad55c3f60347369c0e92bc834d81d98f3870e
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59171387"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046954"
 ---
 # <a name="using-client-sockets"></a>使用客户端套接字
 在通过 <xref:System.Net.Sockets.Socket> 发起对话之前，必须在应用程序和远程设备之间创建数据管道。 尽管存在其他网络地址系列和协议，但本示例说明如何创建与远程服务的 TCP/IP 连接。  
   
- TCP/IP 使用一个网络地址和一个服务端口号来对唯一标识设备。 网络地址标识网络上的特定设备；端口号标识该设备要连接到的特定服务。 网络地址和服务端口的组合称为终结点，它在 .NET Framework 中由 <xref:System.Net.EndPoint> 类表示。 会为每个受支持的地址系列定义 EndPoint 的后代；对于 IP 地址系列，类为 <xref:System.Net.IPEndPoint>。  
+ TCP/IP 使用一个网络地址和一个服务端口号来对唯一标识设备。 网络地址标识网络上的特定设备；端口号标识该设备要连接到的特定服务。 网络地址和服务端口的组合称为终结点，它在 .NET Framework 中由 <xref:System.Net.EndPoint> 类表示。 会为每个受支持的地址系列定义 EndPoint 的后代；对于 IP 地址系列，类为 <xref:System.Net.IPEndPoint>。   
   
- <xref:System.Net.Dns> 类向使用 TCP/IP Internet 服务的应用程序提供域名服务。 <xref:System.Net.Dns.Resolve%2A> 方法查询 DNS 服务器以将用户友好的域名（如“host.contoso.com”）映射到数字形式的 Internet 地址（如 192.168.1.1）。 Resolve 返回一个 <xref:System.Net.IPHostEntry>，其包含所请求名称的地址和别名的列表。 在大多数情况下，可以使用 <xref:System.Net.IPHostEntry.AddressList%2A> 数组中返回的第一个地址。 下面的代码获取一个包含服务器 host.contoso.com 的 IP 地址的 <xref:System.Net.IPAddress>。  
+ <xref:System.Net.Dns> 类向使用 TCP/IP Internet 服务的应用程序提供域名服务。 <xref:System.Net.Dns.Resolve%2A> 方法查询 DNS 服务器以将用户友好的域名（如“host.contoso.com”）映射到数字形式的 Internet 地址（如 192.168.1.1）。 Resolve 返回一个 <xref:System.Net.IPHostEntry>，其包含所请求名称的地址和别名的列表。  在大多数情况下，可以使用 <xref:System.Net.IPHostEntry.AddressList%2A> 数组中返回的第一个地址。 下面的代码获取一个包含服务器 host.contoso.com 的 IP 地址的 <xref:System.Net.IPAddress>。  
   
 ```vb  
 Dim ipHostInfo As IPHostEntry = Dns.Resolve("host.contoso.com")  
@@ -50,7 +50,7 @@ Dim ipe As New IPEndPoint(ipAddress, 11000)
 IPEndPoint ipe = new IPEndPoint(ipAddress,11000);  
 ```  
   
- 确定远程设备的地址并选择要用于连接的端口后，应用程序便可以尝试建立与远程设备的连接。 下面的示例使用现有的 IPEndPoint 连接到远程设备，并捕获引发的任何异常。  
+ 确定远程设备的地址并选择要用于连接的端口后，应用程序便可以尝试建立与远程设备的连接。 下面的示例使用现有的 IPEndPoint 连接到远程设备，并捕获引发的任何异常。   
   
 ```vb  
 Try  
@@ -79,7 +79,7 @@ try {
   
 ## <a name="see-also"></a>请参阅
 
-- [使用同步客户端套接字](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)
-- [使用异步客户端套接字](../../../docs/framework/network-programming/using-an-asynchronous-client-socket.md)
-- [如何：创建套接字](../../../docs/framework/network-programming/how-to-create-a-socket.md)
-- [套接字](../../../docs/framework/network-programming/sockets.md)
+- [使用同步客户端套接字](using-a-synchronous-client-socket.md)
+- [使用异步客户端套接字](using-an-asynchronous-client-socket.md)
+- [如何：创建套接字](how-to-create-a-socket.md)
+- [套接字](sockets.md)

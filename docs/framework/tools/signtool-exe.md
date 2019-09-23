@@ -7,17 +7,17 @@ helpviewer_keywords:
 ms.assetid: 0c25ff6c-bff3-422e-b017-146a3ee86cb9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 46475cbc8517fc73d8b7fd868c7632e5c85a7726
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: f99b2fd4716b069d4ec7a21e369c5178990ce16d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894789"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044196"
 ---
 # <a name="signtoolexe-sign-tool"></a>SignTool.exe（签名工具）
 签名工具是一个命令行工具，用于对文件进行数字签名，以及验证文件和时间戳文件中的签名。  
   
- 此工具会自动随 Visual Studio 一起安装。 若要运行此工具，请使用 Visual Studio 开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示）。 有关详细信息，请参阅[命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。  
+ 此工具会自动随 Visual Studio 一起安装。 若要运行此工具，请使用 Visual Studio 开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示）。 有关详细信息，请参阅[命令提示](developer-command-prompt-for-vs.md)。  
   
  在命令提示符处，键入以下内容：  
   
@@ -39,10 +39,10 @@ signtool [command] [options] [file_name | ...]
   
 |命令|说明|  
 |-------------|-----------------|  
-|`catdb`|在目录数据库中添加或移除目录文件。 目录数据库用于自动查找目录文件，并由 GUID 标识。 有关 `catdb` 命令支持的选项列表，请参阅 [catdb 命令选项](../../../docs/framework/tools/signtool-exe.md#catdb)。|  
-|`sign`|对文件进行数字签名。 数字签名可以阻止文件被篡改，并且使用户能够基于签名证书验证签名者。 有关 `sign` 命令支持的选项列表，请参阅 [sign 命令选项](../../../docs/framework/tools/signtool-exe.md#sign)。|  
-|`Timestamp`|为文件添加时间戳。 有关 `TimeStamp` 命令支持的选项列表，请参阅 [TimeStamp 命令选项](../../../docs/framework/tools/signtool-exe.md#TimeStamp)。|  
-|`Verify`|通过确定签名证书是否由受信任的颁发机构颁发、是否已撤消签名证书，以及签名证书对于特定策略是否有效（可选）来验证文件的数字签名。 有关 `Verify` 命令支持的选项列表，请参阅 [Verify 命令选项](../../../docs/framework/tools/signtool-exe.md#Verify)。|  
+|`catdb`|在目录数据库中添加或移除目录文件。 目录数据库用于自动查找目录文件，并由 GUID 标识。 有关 `catdb` 命令支持的选项列表，请参阅 [catdb 命令选项](signtool-exe.md#catdb)。|  
+|`sign`|对文件进行数字签名。 数字签名可以阻止文件被篡改，并且使用户能够基于签名证书验证签名者。 有关 `sign` 命令支持的选项列表，请参阅 [sign 命令选项](signtool-exe.md#sign)。|  
+|`Timestamp`|为文件添加时间戳。 有关 `TimeStamp` 命令支持的选项列表，请参阅 [TimeStamp 命令选项](signtool-exe.md#TimeStamp)。|  
+|`Verify`|通过确定签名证书是否由受信任的颁发机构颁发、是否已撤消签名证书，以及签名证书对于特定策略是否有效（可选）来验证文件的数字签名。 有关 `Verify` 命令支持的选项列表，请参阅 [Verify 命令选项](signtool-exe.md#Verify)。|  
   
  下列选项适用于所有签名工具命令。  
   
@@ -211,5 +211,5 @@ signtool verify /c MyCatalog.cat SystemFile.dll
   
 ## <a name="see-also"></a>请参阅
 
-- [工具](../../../docs/framework/tools/index.md)
-- [命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [工具](index.md)
+- [命令提示](developer-command-prompt-for-vs.md)

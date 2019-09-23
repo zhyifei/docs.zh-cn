@@ -13,32 +13,32 @@ helpviewer_keywords:
 - Visual C#, creating applications
 - client/server applications, Windows applications
 ms.assetid: 2dfb50b7-5af2-4e12-9bbb-c5ade0e39a68
-ms.openlocfilehash: b8c63aa074f699fa77c25441995a2ae74b78caf8
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: b9d9efb62e0c6bc0925662bc9424065922a1534c
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106496"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051985"
 ---
 # <a name="developing-client-applications-with-the-net-framework"></a>使用 .NET Framework 开发客户端应用程序
 
 可通过多种方法使用 .NET Framework 开发基于 Windows 的应用程序。 可使用以下任意工具和框架： 
 
 - [通用 Windows 平台 (UWP)](https://developer.microsoft.com/windows/apps)
-- [Windows Presentation Foundation (WPF)](../../docs/framework/wpf/index.md)
-- [Windows 窗体](../../docs/framework/winforms/index.md)
+- [Windows Presentation Foundation (WPF)](./wpf/index.md)
+- [Windows 窗体](./winforms/index.md)
 
 本节包含的主题说明了如何使用 Windows Presentation Foundation 或 Windows 窗体创建基于 Windows 的应用程序。 但是，还可利用 .NET Framework 创建 Web 应用程序，以及创建可通过 Microsoft Store 发布的面向计算机或设备的客户端应用程序。
  
 ## <a name="in-this-section"></a>本节内容
 
-[Windows Presentation Foundation](../../docs/framework/wpf/index.md)  
+[Windows Presentation Foundation](./wpf/index.md)  
 提供有关使用 WPF 开发和部署应用程序的信息。
 
-[Windows 窗体](../../docs/framework/winforms/index.md)  
+[Windows 窗体](./winforms/index.md)  
 提供有关使用 Windows 窗体开发和部署应用程序的信息。
 
-[常用的客户端技术](../../docs/framework/common-client-technologies/index.md)  
+[常用的客户端技术](./common-client-technologies/index.md)  
 提供有关在开发客户端应用程序时可使用的其他技术的信息。
 
 ## <a name="related-sections"></a>相关章节
@@ -52,7 +52,7 @@ ms.locfileid: "70106496"
 [适用于 Windows Phone Silverlight 的 .NET API](https://docs.microsoft.com/previous-versions/windows/apps/jj207211\(v=vs.105\))  
 列出使用 Windows Phone Silverlight 构建应用时可使用的 .NET Framework API。
   
-[开发多平台应用程序](../../docs/standard/cross-platform/index.md)  
+[开发多平台应用程序](../standard/cross-platform/index.md)  
 介绍可以针对多个客户端应用类型使用 .NET Framework 的不同方法。
 
 [ASP.NET 网站入门](https://www.asp.net/get-started/websites)  
@@ -60,7 +60,7 @@ ms.locfileid: "70106496"
 
 ## <a name="see-also"></a>请参阅
 
-- [.NET Standard](../../docs/standard/net-standard.md)
-- [概述](../../docs/framework/get-started/overview.md)
-- [开发指南](../../docs/framework/development-guide.md)
-- [Windows 服务应用程序](../../docs/framework/windows-services/index.md)
+- [.NET Standard](../standard/net-standard.md)
+- [概述](./get-started/overview.md)
+- [开发指南](./development-guide.md)
+- [Windows 服务应用程序](./windows-services/index.md)

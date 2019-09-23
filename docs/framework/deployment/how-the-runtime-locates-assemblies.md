@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7f8046852f847cd5493a2ed17b491a39e494ce2b
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 01cef9646ca9c4f49ab8376364648f66b9651e4a
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70969110"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052132"
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>运行时如何定位程序集
 
@@ -144,7 +144,9 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 最后，运行时检查计算机配置文件。 此文件名为 Machine.config，驻留在本地计算机上安装有运行时的根目录的配置子目录中。 管理员可使用此文件来指定此计算机本地的程序集绑定限制。 计算机配置文件中的设置优先于所有其他配置设置 ；但是，这并不意味着所有配置设置都应置于此文件中。 管理员策略文件确定的版本为最终版本，且不能重写。 Machine.config 文件中指定的重写可影响所有应用程序。 有关配置文件的详细信息，请参阅 [使用配置文件配置应用](../configure-apps/index.md)。
 
 <a name="step2"></a> 
+
 ## <a name="step-2-checking-for-previously-referenced-assemblies"></a>步骤 2：检查以前引用的程序集
+
 如果请求的程序集已先前调用中请求过，则公共语言运行时将使用已加载的程序集。 命名构成应用程序的程序集时，这可能会造成影响。 有关命名程序集的详细信息，请参阅 [程序集名称](../../standard/assembly/names.md)。
 
 如果先前的程序集请求失败，此程序集的后续请求立即失败且不会尝试加载程序集。 从 .NET Framework 2.0 版开始，将缓存程序集绑定故障，且缓存的信息用于确定是否尝试加载此程序集。

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d32b7f35-29d8-4fb7-ad71-d219edc5e359
-ms.openlocfilehash: 74cb739d381c0b1422d9277be8c3c338a46f8fba
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b3d24a958ec93084d03d2ad2e0eb6d9d2507e155
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647423"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048180"
 ---
 # <a name="how-to-request-a-web-page-and-retrieve-the-results-as-a-stream"></a>如何：请求网页并以数据流的形式检索结果
 此示例演示如何请求 Web 页并在流中检索结果。  
@@ -38,4 +38,4 @@ response.Close()
   
 ## <a name="see-also"></a>请参阅
 
-- [请求数据](../../../docs/framework/network-programming/requesting-data.md)
+- [请求数据](requesting-data.md)

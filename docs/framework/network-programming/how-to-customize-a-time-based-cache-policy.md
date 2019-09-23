@@ -9,12 +9,12 @@ helpviewer_keywords:
 - customizing time-based cache policies
 - cache [.NET Framework], time-based policies
 ms.assetid: 8d84f936-2376-4356-9264-03162e0f9279
-ms.openlocfilehash: 5df070bb2cfef42d60247cad39f2a2f76963bae8
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: c28c6daf9b873a19291b1636112eae6546412be2
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894745"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048319"
 ---
 # <a name="how-to-customize-a-time-based-cache-policy"></a>如何：自定义基于时间的缓存策略
 创建基于时间的缓存策略时，可以通过为最长使用时间、最低新鲜度、最长过期时间或缓存同步日期指定值，以自定义缓存行为。 <xref:System.Net.Cache.HttpRequestCachePolicy> 对象提供几个构造函数，可用于指定这些值的有效组合。  
@@ -120,8 +120,8 @@ Level:Default MaxAge:36000 MinFresh:18000
   
 ## <a name="see-also"></a>请参阅
 
-- [网络应用程序的缓存管理](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
-- [缓存策略](../../../docs/framework/network-programming/cache-policy.md)
-- [基于位置的缓存策略](../../../docs/framework/network-programming/location-based-cache-policies.md)
-- [基于时间的缓存策略](../../../docs/framework/network-programming/time-based-cache-policies.md)
-- [\<requestCaching> 元素（网络设置）](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+- [网络应用程序的缓存管理](cache-management-for-network-applications.md)
+- [缓存策略](cache-policy.md)
+- [基于位置的缓存策略](location-based-cache-policies.md)
+- [基于时间的缓存策略](time-based-cache-policies.md)
+- [\<requestCaching> 元素（网络设置）](../configure-apps/file-schema/network/requestcaching-element-network-settings.md)

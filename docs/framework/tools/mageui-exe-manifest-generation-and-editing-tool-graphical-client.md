@@ -5,23 +5,23 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - MageUI.exe
 ms.assetid: f9e130a6-8117-49c4-839c-c988f641dc14
-ms.openlocfilehash: 3f303583b1cff785ab0020e616fee58ef02a1c58
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: 2502d542513ace1173b6c33a2399ce010620b888
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67487046"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044454"
 ---
 # <a name="mageuiexe-manifest-generation-and-editing-tool-graphical-client"></a>MageUI.exe（图形化客户端中的清单生成和编辑工具）
 
-除了使用基于 Windows 的用户界面 (UI) 之外，MageUI.exe 与命令行工具 Mage.exe 支持的功能完全相同。 使用此工具，你可以对部署清单和应用程序清单执行创建、编辑和签名操作。 用 MageUI.exe 创建的新清单以 [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] 为目标。 早期版本的 MageUI.exe 应用于以 .NET Framework 的早期版本为目标。 在清单中添加或删除程序集时或重新对现有清单签名时，MageUI.exe 不会将清单更新为以 [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] 为目标。 有关详细信息，请参阅 [Mage.exe（清单生成和编辑工具）](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)。
+除了使用基于 Windows 的用户界面 (UI) 之外，MageUI.exe 与命令行工具 Mage.exe 支持的功能完全相同。 使用此工具，你可以对部署清单和应用程序清单执行创建、编辑和签名操作。 用 MageUI.exe 创建的新清单以 [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] 为目标。 早期版本的 MageUI.exe 应用于以 .NET Framework 的早期版本为目标。 在清单中添加或删除程序集时或重新对现有清单签名时，MageUI.exe 不会将清单更新为以 [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] 为目标。 有关详细信息，请参阅 [Mage.exe（清单生成和编辑工具）](mage-exe-manifest-generation-and-editing-tool.md)。
 
- 此工具会自动随 Visual Studio 一起安装。 若要运行此工具，请使用 Visual Studio 开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示）。 有关详细信息，请参阅[命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。
+ 此工具会自动随 Visual Studio 一起安装。 若要运行此工具，请使用 Visual Studio 开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示）。 有关详细信息，请参阅[命令提示](developer-command-prompt-for-vs.md)。
 
  Mage.exe 和 MageUI.exe 的两个版本作为组件包含在 Visual Studio 中。 若要查看版本信息，请运行 MageUI.exe，选择 **“帮助”** 并选择 **“关于”** 。 本文档描述 Mage.exe 和 MageUI.exe 的 4.0.x.x 版本。
 
 > [!NOTE]
-> 使用 MageUI.exe 保存已用证书签名的应用程序清单时，MageUI.exe 不支持 [compatibleFrameworks](/visualstudio/deployment/compatibleframeworks-element-clickonce-deployment) 元素。 这种情况下必须使用 [Mage.exe](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)。  
+> 使用 MageUI.exe 保存已用证书签名的应用程序清单时，MageUI.exe 不支持 [compatibleFrameworks](/visualstudio/deployment/compatibleframeworks-element-clickonce-deployment) 元素。 这种情况下必须使用 [Mage.exe](mage-exe-manifest-generation-and-editing-tool.md)。  
   
 ## <a name="uielement-list"></a>UIElement 列表  
  下表列出了可用的菜单项和工具栏项。  
@@ -79,7 +79,7 @@ ms.locfileid: "67487046"
   
 |UI 元素|说明|  
 |----------------|-----------------|  
-|**名称**|指定有关此部署的识别信息。|  
+|**Name**|指定有关此部署的识别信息。|  
 |**说明**|指定发布者、产品和支持信息。|  
 |**应用程序选项**|指定它是否为浏览器应用程序，以及此清单是否为信任信息的源。|  
 |**文件**|指定构成此部署的所有文件。|  
@@ -90,9 +90,9 @@ ms.locfileid: "67487046"
   
 |UI 元素|说明|  
 |----------------|-----------------|  
-|**名称**|必需。 应用程序清单的名称。 通常与文件名相同。|  
+|**Name**|必需。 应用程序清单的名称。 通常与文件名相同。|  
 |**Version**|必需。 部署的版本号，格式为 *N.N.N.N*。 只有第一个主要内部版本号是必需的。 例如，对于应用程序的 1.0 版，有效值包括 `1`、`1.0`、`1.0.0` 和 `1.0.0.0`。|  
-|**处理器**|可选。 此部署可在其上运行的计算机体系结构。 默认值为 `msil`，即 Microsoft 中间语言，它是所有托管程序集的默认格式。 如果在应用程序中对程序集进行了预编译（以使其适用于特定的体系结构），则请更改此字段。 有关预编译的详细信息，请参阅 [Ngen.exe（本机映像生成器）](../../../docs/framework/tools/ngen-exe-native-image-generator.md)。|  
+|**处理器**|可选。 此部署可在其上运行的计算机体系结构。 默认值为 `msil`，即 Microsoft 中间语言，它是所有托管程序集的默认格式。 如果在应用程序中对程序集进行了预编译（以使其适用于特定的体系结构），则请更改此字段。 有关预编译的详细信息，请参阅 [Ngen.exe（本机映像生成器）](ngen-exe-native-image-generator.md)。|  
 |**区域性**|可选。 应用程序在其中运行的两部分 ISO 国家和地区代码。 默认值为 `neutral`。|  
 |**公钥标记**|可选。 已用于对此应用程序清单进行签名的公钥。 如果这是新清单或未签名的清单，则此字段显示为 `Unsigned`。|  
   
@@ -136,7 +136,7 @@ ms.locfileid: "67487046"
   
 |UI 元素|说明|  
 |----------------|-----------------|  
-|**名称**|指定有关此部署的识别信息。|  
+|**Name**|指定有关此部署的识别信息。|  
 |**说明**|指定发布者、产品和支持信息。|  
 |**部署选项**|指定有关部署的其他信息，如应用程序类型和开始位置。|  
 |**更新选项**|指定 ClickOnce 应多久检查一次应用程序更新。|  
@@ -147,7 +147,7 @@ ms.locfileid: "67487046"
   
 |UI 元素|说明|  
 |----------------|-----------------|  
-|**名称**|必需。 部署清单的名称。 通常与文件名相同。|  
+|**Name**|必需。 部署清单的名称。 通常与文件名相同。|  
 |**Version**|必需。 部署的版本号，格式为 *N.N.N.N*。 只有第一个主要内部版本号是必需的。 例如，对于应用程序的 1.0 版，有效值包括 `1`、`1.0`、`1.0.0` 和 `1.0.0.0`。|  
 |**处理器**|可选。 此部署可在其上运行的计算机体系结构。 默认值为 `msil`，即 Microsoft 中间语言，它是所有托管程序集的默认格式。 如果在应用程序中对程序集进行了编译（以使其适用于特定的体系结构），则请更改此字段。|  
 |**区域性**|可选。 应用程序在其中运行的两部分 ISO 国家/地区代码。 默认值为 `neutral`。|  
@@ -194,4 +194,4 @@ ms.locfileid: "67487046"
 
 - [ClickOnce 安全和部署](/visualstudio/deployment/clickonce-security-and-deployment)
 - [演练：手动部署 ClickOnce 应用程序](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)
-- [Mage.exe（清单生成和编辑工具）](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)
+- [Mage.exe（清单生成和编辑工具）](mage-exe-manifest-generation-and-editing-tool.md)

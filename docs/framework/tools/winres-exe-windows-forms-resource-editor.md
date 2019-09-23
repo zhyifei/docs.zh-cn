@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: cb8bc835-9221-4888-af53-1a4f5fad6c48
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0683499241f594b8b37b7dd69b91ed5929670024
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: df7ce0795daabdf34f46e20460bef23e7c486467
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894573"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71043893"
 ---
 # <a name="winresexe-windows-resource-localization-editor"></a>Winres.exe（Windows 资源本地化编辑器）
 
-Windows 资源本地化编辑器 Winres.exe 是一种可视布局工具，可以帮助本地化专家对窗体使用的 Windows 窗体用户界面 (UI) 资源进行本地化。 利用可视设计环境（如 Microsoft Visual Studio），可以创建用作 Winres.exe 的输入的 .resx 或 .resources 文件。 有关在 .NET Framework 应用程序中部署资源的信息，请参阅[桌面应用中的资源](../../../docs/framework/resources/index.md)。
+Windows 资源本地化编辑器 Winres.exe 是一种可视布局工具，可以帮助本地化专家对窗体使用的 Windows 窗体用户界面 (UI) 资源进行本地化。 利用可视设计环境（如 Microsoft Visual Studio），可以创建用作 Winres.exe 的输入的 .resx 或 .resources 文件。 有关在 .NET Framework 应用程序中部署资源的信息，请参阅[桌面应用中的资源](../resources/index.md)。
 
-Winres.exe 随 Visual Studio 一起安装。 要运行该工具，请使用 Visual Studio 开发人员命令提示。 有关详细信息，请参阅[命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。
+Winres.exe 随 Visual Studio 一起安装。 要运行该工具，请使用 Visual Studio 开发人员命令提示。 有关详细信息，请参阅[命令提示](developer-command-prompt-for-vs.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -55,7 +55,7 @@ winres /?
 
 另请参阅[用于本地化的资源的分层组织](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/756hydy4(v=vs.110))或[用于本地化的资源的分层组织](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/756hydy4(v=vs.120))。
 
-Winres.exe 不能将 .resx 文件转换成相应的 .resources 文件；请改用 Resgen.exe 工具。 有关 Resgen.exe 的详细信息，请参阅 [Resgen.exe（资源文件生成器）](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)。
+Winres.exe 不能将 .resx 文件转换成相应的 .resources 文件；请改用 Resgen.exe 工具。 有关 Resgen.exe 的详细信息，请参阅 [Resgen.exe（资源文件生成器）](resgen-exe-resource-file-generator.md)。
 
 Winres.exe 是一种图形应用程序，它只需使用资源文件即可重新创建 Windows 窗体的设计时版本，而不必访问源代码。 Winres.exe 可托管 Visual Studio 的“Windows 窗体设计器”和“属性”窗口   。 使用这些功能，可以对包含 Windows 窗体的 .resources 或 .resx 文件进行可视编辑。 通常，本地化人员使用 Winres.exe 编辑控件标签并调整控件的位置和大小，以适应目标区域性的标签。
 
@@ -76,7 +76,7 @@ Visual Studio 的优点在于，它既可以用来开发应用程序，也可以
 > [!NOTE]
 > Winres.exe 不能用于编辑默认的资源文件。 Winres.exe 将所有更改后的属性都阐释为本地化属性，并将其保存到目标区域性资源文件中。
 
-最后，可以使用这些区域性资源文件的最终版本创建应用程序的本地化版本。 有关详细信息，请参阅[桌面应用中的资源](../../../docs/framework/resources/index.md)。
+最后，可以使用这些区域性资源文件的最终版本创建应用程序的本地化版本。 有关详细信息，请参阅[桌面应用中的资源](../resources/index.md)。
 
 Winres.exe 具有下列特性和功能：
 
@@ -127,7 +127,7 @@ Winres.exe 具有下列特性和功能：
     ```
 
     > [!NOTE]
-    > 如果正在对其资源进行编辑的窗体是一个被继承的窗体，则包含被继承的窗体的程序集和包含继承（派生的）窗体的程序集都必须在全局程序集缓存 (GAC) 中进行注册，或者必须与 WinRes.exe 位于同一个目录中。 有关将 .NET Framework 组件安装到 GAC 中的详细信息，请参阅[全局程序集缓存](../../../docs/framework/app-domains/gac.md)。
+    > 如果正在对其资源进行编辑的窗体是一个被继承的窗体，则包含被继承的窗体的程序集和包含继承（派生的）窗体的程序集都必须在全局程序集缓存 (GAC) 中进行注册，或者必须与 WinRes.exe 位于同一个目录中。 有关将 .NET Framework 组件安装到 GAC 中的详细信息，请参阅[全局程序集缓存](../app-domains/gac.md)。
 
 3. 选择窗体中的控件，然后更改其 <xref:System.Windows.Forms.Control.Text%2A> 和其他属性，以便反映本地化的区域性及其语言。 根据需要移动控件或调整其大小，以适应本地化后的文本。
 
@@ -135,7 +135,7 @@ Winres.exe 具有下列特性和功能：
 
 5. 选择相应的区域性和文件模式，然后单击“确定”  。
 
-   该工具会使用运行时希望用于本地化资源文件的命名约定来保存文件。 例如，如果将 `TestApp.resources` 本地化为德语（德国），则该工具将该文件保存为 `TestApp.de-DE.resources`。 如果将 `TestApp.resx` 本地化为德语（德国），则该工具将该文件保存为 `TestApp.de-DE.resx`。 有关资源命名约定的详细信息，请参阅[打包和部署资源](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)。 有关运行时使用的预定义区域性名称的列表，请参阅 <xref:System.Globalization.CultureInfo> 类。
+   该工具会使用运行时希望用于本地化资源文件的命名约定来保存文件。 例如，如果将 `TestApp.resources` 本地化为德语（德国），则该工具将该文件保存为 `TestApp.de-DE.resources`。 如果将 `TestApp.resx` 本地化为德语（德国），则该工具将该文件保存为 `TestApp.de-DE.resx`。 有关资源命名约定的详细信息，请参阅[打包和部署资源](../resources/packaging-and-deploying-resources-in-desktop-apps.md)。 有关运行时使用的预定义区域性名称的列表，请参阅 <xref:System.Globalization.CultureInfo> 类。
 
 ## <a name="see-also"></a>请参阅
 
@@ -144,6 +144,6 @@ Winres.exe 具有下列特性和功能：
 - <xref:System.Resources.ResourceManager>
 - <xref:System.Resources.ResourceReader>
 - <xref:System.Resources.ResourceWriter>
-- [工具](../../../docs/framework/tools/index.md)
-- [桌面应用中的资源](../../../docs/framework/resources/index.md)
+- [工具](index.md)
+- [桌面应用中的资源](../resources/index.md)
 - [全球化和本地化](../../standard/globalization-localization/index.md)

@@ -3,12 +3,12 @@ title: 使用 Infer.NET 和概率性编程创建游戏匹配列表
 description: 了解如何使用概率性编程和 Infer.NET 创建基于简化版 TrueSkill 的游戏匹配列表应用。
 ms.date: 05/06/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: aa3ad9528238e4f5a5eb187af71f2d2da1ea9cba
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: edb747355f2d41d0400c6a989eea37423bbda2b4
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855782"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117985"
 ---
 # <a name="create-a-game-match-up-list-app-with-infernet-and-probabilistic-programming"></a>使用 Infer.NET 和概率性编程创建游戏匹配列表
 
@@ -28,7 +28,7 @@ ms.locfileid: "70855782"
 
 1. 打开一个新的命令提示符，并运行下面的命令：
 
-```console
+```dotnetcli
 dotnet new console -o myApp
 cd myApp
 ```
@@ -39,7 +39,7 @@ cd myApp
 
 需安装 `Microsoft.ML.Probabilistic.Compiler` 包才能使用 Infer.NET。 在命令提示符中运行下面的命令：
 
-```console
+```dotnetcli
 dotnet add package Microsoft.ML.Probabilistic.Compiler
 ```
 
@@ -130,7 +130,7 @@ namespace myApp
 
 在命令提示符中运行下面的命令：
 
-```console
+```dotnetcli
 dotnet run
 ```
 

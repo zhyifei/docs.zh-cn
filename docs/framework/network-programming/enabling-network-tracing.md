@@ -11,27 +11,27 @@ helpviewer_keywords:
 - logs, trace
 - destination for tracing output
 ms.assetid: 5fff458c-51a6-4134-ba47-8a6137ddc41e
-ms.openlocfilehash: 5145b013db1a86ef1b3128ab1c4495dddaaaf987
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 62a24e45339b93af2c62db440f0611f16705116d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624642"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048524"
 ---
 # <a name="enabling-network-tracing"></a>启用网络跟踪
 网络跟踪允许访问有关方法调用的信息，以及有关托管应用程序所生成的网络流量的信息。 必须完成以下任务才能在应用程序中启用网络跟踪：  
   
-- 在启用跟踪的情况下编译代码。 请参阅[如何：使用跟踪和调试进行条件编译](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)，了解有关启用跟踪所需编译器开关的详细信息。  
+- 在启用跟踪的情况下编译代码。 请参阅[如何：使用跟踪和调试进行条件编译](../debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)，了解有关启用跟踪所需编译器开关的详细信息。  
   
 - 为跟踪输出指定目标。  
   
-- 配置网络跟踪的行为。 请参阅[如何：配置网络跟踪](../../../docs/framework/network-programming/how-to-configure-network-tracing.md)，了解详细信息。  
+- 配置网络跟踪的行为。 请参阅[如何：配置网络跟踪](how-to-configure-network-tracing.md)，了解详细信息。  
   
  最常见的跟踪目标（也称为跟踪侦听器）是默认侦听器和日志文件。  
   
- 如果不指定跟踪侦听器，则跟踪使用默认侦听器。 可通过在启用托管代码的调试器中执行代码，查看发送到默认侦听器的消息，例如 .NET Framework SDK 附带的 CLR 调试器 或 Windows SDK 附带的 DBwin32.exe。 使用 CLR 调试器时，跟踪消息将出现在“输出”窗口中。  
+ 如果不指定跟踪侦听器，则跟踪使用默认侦听器。 可通过在启用托管代码的调试器中执行代码，查看发送到默认侦听器的消息，例如 .NET Framework SDK 附带的 CLR 调试器 或 Windows SDK 附带的 DBwin32.exe。 使用 CLR 调试器时，跟踪消息将出现在“输出”窗口中  。  
   
- 如果希望使用文件接收跟踪，则可使用配置设置指定日志文件，如以下示例所示。 （有关配置文件的一般讨论，请参阅[配置文件](../../../docs/framework/configure-apps/index.md)。）  
+ 如果希望使用文件接收跟踪，则可使用配置设置指定日志文件，如以下示例所示。 （有关配置文件的一般讨论，请参阅[配置文件](../configure-apps/index.md)。）  
   
  若要将跟踪发送到日志文件，请将以下节点添加到相应配置文件（应用程序或计算机）的 `<system.diagnostics>` 节点。 可按需更改文件的名称 (trace.log)。  
   
@@ -47,6 +47,6 @@ ms.locfileid: "64624642"
   
 ## <a name="see-also"></a>请参阅
 
-- [解释网络跟踪](../../../docs/framework/network-programming/interpreting-network-tracing.md)
-- [.NET Framework 中的网络跟踪](../../../docs/framework/network-programming/network-tracing.md)
-- [跟踪应用程序和在应用程序中插入检测点](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
+- [解释网络跟踪](interpreting-network-tracing.md)
+- [.NET Framework 中的网络跟踪](network-tracing.md)
+- [跟踪应用程序和在应用程序中插入检测点](../debug-trace-profile/tracing-and-instrumenting-applications.md)

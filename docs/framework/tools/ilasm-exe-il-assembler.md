@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 4ca3a4f0-4400-47ce-8936-8e219961c76f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fcc9ba5e379897247f50175603b1002d5688d215
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: b8d1ad081c8d783cd18054078a6eeb82428faa4d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894686"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044637"
 ---
 # <a name="ilasmexe-il-assembler"></a>Ilasm.exe（IL 汇编程序）
 
 IL 汇编程序可利用中间语言 (IL) 生成可移植可执行 (PE) 文件。 （有关 IL 的详细信息，请参阅[托管执行过程](../../standard/managed-execution-process.md)。）可以运行生成的可执行文件（包含 IL 和所需的元数据）以确定 IL 是否按预期执行。
 
-此工具会自动随 Visual Studio 一起安装。 若要运行此工具，请使用 Visual Studio 开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示）。 有关详细信息，请参阅[命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。
+此工具会自动随 Visual Studio 一起安装。 若要运行此工具，请使用 Visual Studio 开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示）。 有关详细信息，请参阅[命令提示](developer-command-prompt-for-vs.md)。
 
 在命令提示符处，键入以下内容：
 
@@ -92,7 +92,7 @@ IL 汇编程序可以展现以运行时为目标的编程语言的所有现有�
 > [!NOTE]
 > 如果 .il 源文件中的最后一行代码不具有尾随空格或行尾字符，则编译可能会失败。
 
-可以将 Ilasm.exe 与它的配套工具 [Ildasm.exe](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)一起使用   。 Ildasm.exe 利用包含 IL 代码的 PE 文件，创建适合输入到 Ilasm.exe 的文本文件   。 这很有用，例如在编译用并非支持所有运行时元数据特性的编程语言编写的代码时。 通过 Ildasm.exe 编译该代码并运行输出后，可以手动编辑生成的 IL 文本文件以添加缺少的属性  。 然后可通过 Ilasm.exe 运行此文本文件，生成最终的可执行文件  。
+可以将 Ilasm.exe 与它的配套工具 [Ildasm.exe](ildasm-exe-il-disassembler.md)一起使用   。 Ildasm.exe 利用包含 IL 代码的 PE 文件，创建适合输入到 Ilasm.exe 的文本文件   。 这很有用，例如在编译用并非支持所有运行时元数据特性的编程语言编写的代码时。 通过 Ildasm.exe 编译该代码并运行输出后，可以手动编辑生成的 IL 文本文件以添加缺少的属性  。 然后可通过 Ilasm.exe 运行此文本文件，生成最终的可执行文件  。
 
 也可以使用此方法从最初由不同的编译器生成的数个 PE 文件生成一个 PE 文件。
 
@@ -159,7 +159,7 @@ ilasm myTestFile /dll
 ilasm myTestFile /dll /output:myNewTestFile.dll
 ```
 
-下面的代码示例演示了一个向控制台显示“Hello World!”的极其简单的 “Hello World!”。 可编译此代码，然后使用 [Ildasm.exe](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) 工具生成 IL 文件  。
+下面的代码示例演示了一个向控制台显示“Hello World!”的极其简单的 “Hello World!”。 可编译此代码，然后使用 [Ildasm.exe](ildasm-exe-il-disassembler.md) 工具生成 IL 文件  。
 
 ```csharp
 using System;
@@ -229,7 +229,7 @@ public class Hello
 
 ## <a name="see-also"></a>请参阅
 
-- [工具](../../../docs/framework/tools/index.md)
-- [Ildasm.exe（IL 反汇编程序）](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) 
+- [工具](index.md)
+- [Ildasm.exe（IL 反汇编程序）](ildasm-exe-il-disassembler.md) 
 - [托管执行过程](../../standard/managed-execution-process.md)
-- [命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [命令提示](developer-command-prompt-for-vs.md)
