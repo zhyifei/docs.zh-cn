@@ -4,12 +4,12 @@ description: 本教程介绍了如何使用 C# 字符串内插功能将格式化
 author: rpetrusha
 ms.author: ronpet
 ms.date: 10/23/2018
-ms.openlocfilehash: 3e4e886d898854f5c1d966529e94f49c752220d8
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: b2bbab5705d78525ccae6a90b4f4f2a91064a06b
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70850928"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117846"
 ---
 # <a name="use-string-interpolation-to-construct-formatted-strings"></a>使用字符串内插构造格式化字符串
 
@@ -19,28 +19,28 @@ ms.locfileid: "70850928"
 
 ## <a name="create-an-interpolated-string"></a>创建内插字符串
 
-创建名为 interpolated 的目录。 将其设置为当前目录并从控制台窗口运行以下命令：
+创建名为 interpolated 的目录  。 将其设置为当前目录并从控制台窗口运行以下命令：
 
-```console
+```dotnetcli
 dotnet new console
 ```
 
 此命令会在当前目录中创建一个新的 .NET Core 控制台应用程序。
 
-在常用编辑器中，打开 Program.cs，将行 `Console.WriteLine("Hello World!");` 替换为以下代码，并将 `<name>` 替换为你的姓名 ：
+在常用编辑器中，打开 Program.cs，将行 `Console.WriteLine("Hello World!");` 替换为以下代码，并将 `<name>` 替换为你的姓名  ：
 
 ```csharp
 var name = "<name>";
 Console.WriteLine($"Hello, {name}. It's a pleasure to meet you!");
 ```
 
-通过在控制台窗口键入 `dotnet run` 试运行此代码。 当运行该程序时，它会在问候语中显示一个包含你的姓名的字符串。 <xref:System.Console.WriteLine%2A> 方法调用中包含的字符串是一个内插字符串表达式。 这是一种模板，可让你用包含嵌入代码的字符串构造单个字符串（称为结果字符串）。 内插字符串特别适用于将值插入字符串或连接字符串（将字符串联在一起）。
+通过在控制台窗口键入 `dotnet run` 试运行此代码。 当运行该程序时，它会在问候语中显示一个包含你的姓名的字符串。 <xref:System.Console.WriteLine%2A> 方法调用中包含的字符串是一个内插字符串表达式  。 这是一种模板，可让你用包含嵌入代码的字符串构造单个字符串（称为结果字符串  ）。 内插字符串特别适用于将值插入字符串或连接字符串（将字符串联在一起）。
 
 该简单示例包含了每个内插字符串必须具有的两个元素：
 
 - 字符串文本以 `$` 字符开头，后接左双引号字符。 `$` 符号和引号字符之间不能有空格。 （如果希望看到包含空格会发生什么情况，请在 `$` 字符后面插入一个空格并保存该文件，然后在控制台窗口中键入 `dotnet run` 再次运行该程序。 C# 编译器显示错误消息“错误 CS1056:意外的字符 '$'”。）
 
-- 一个或多个内插表达式。 左大括号和右大括号（`{` 和 `}`）指示内插表达式。 可将任何返回值的 C# 表达式置于大括号内（包括 `null`）。
+- 一个或多个内插表达式  。 左大括号和右大括号（`{` 和 `}`）指示内插表达式。 可将任何返回值的 C# 表达式置于大括号内（包括 `null`）。
 
 下面再尝试一些其他数据类型的字符串内插示例。
 
@@ -99,7 +99,7 @@ public class Program
 
 ## <a name="control-the-formatting-of-interpolation-expressions"></a>控制内插表达式的格式
 
-上一节将两个格式不正确的字符串插入到了结果字符串中。 一个是日期和时间值，只有日期是合适的。 第二个是没有标明货币单位的价格。 这两个问题都很容易解决。 通过字符串内插，可以指定用于控制特定类型格式的格式字符串。 将前面示例中的调用修改为 `Console.WriteLine`，从而包含日期和价格表达式的格式字符串，如以下行所示：
+上一节将两个格式不正确的字符串插入到了结果字符串中。 一个是日期和时间值，只有日期是合适的。 第二个是没有标明货币单位的价格。 这两个问题都很容易解决。 通过字符串内插，可以指定用于控制特定类型格式的格式字符串  。 将前面示例中的调用修改为 `Console.WriteLine`，从而包含日期和价格表达式的格式字符串，如以下行所示：
 
 ```csharp
 Console.WriteLine($"On {date:d}, the price of {item} was {price:C2} per {unit}.");
@@ -141,7 +141,7 @@ public class Example
 }
 ```
 
-创建者姓名采用左对齐方式，其所写标题采用右对齐方式。 通过在内插表达式后面添加一个逗号（“,”）并指定“最小”字段宽度来指定对齐方式。 如果指定的值是正数，则该字段为右对齐。 如果它为负数，则该字段为左对齐。
+创建者姓名采用左对齐方式，其所写标题采用右对齐方式。 通过在内插表达式后面添加一个逗号（“,”）并指定“最小”  字段宽度来指定对齐方式。 如果指定的值是正数，则该字段为右对齐。 如果它为负数，则该字段为左对齐。
 
 尝试删除 `{"Author",-25}` 和 `{title.Key,-25}` 代码中的负号，然后再次运行该示例，如以下代码所示：
 
