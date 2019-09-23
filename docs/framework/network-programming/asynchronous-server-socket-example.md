@@ -9,15 +9,15 @@ helpviewer_keywords:
 - sockets, code examples
 - asynchronous server sockets
 ms.assetid: 13624cd3-f5c5-4950-8cda-31273b1fa6d1
-ms.openlocfilehash: f52dfce66b6d62a8eb7bf75b626feacfb9172c29
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 555b0661bf68a7461f87bf2895e47284a03c41a6
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59191856"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048954"
 ---
-# <a name="asynchronous-server-socket-example"></a><span data-ttu-id="da6b8-102">异步服务器套接字示例</span><span class="sxs-lookup"><span data-stu-id="da6b8-102">Asynchronous Server Socket Example</span></span>
-<span data-ttu-id="da6b8-103">以下示例程序创建从客户端接收连接请求的服务器。</span><span class="sxs-lookup"><span data-stu-id="da6b8-103">The following example program creates a server that receives connection requests from clients.</span></span> <span data-ttu-id="da6b8-104">该服务器是使用异步套接字构建的，因此在等待客户端的连接时，不会挂起服务器应用程序的执行。</span><span class="sxs-lookup"><span data-stu-id="da6b8-104">The server is built with an asynchronous socket, so execution of the server application is not suspended while it waits for a connection from a client.</span></span> <span data-ttu-id="da6b8-105">应用程序从客户端接收字符串，在控制台上显示此字符串，然后将此字符串回显给客户端。</span><span class="sxs-lookup"><span data-stu-id="da6b8-105">The application receives a string from the client, displays the string on the console, and then echoes the string back to the client.</span></span> <span data-ttu-id="da6b8-106">来自客户端的字符串必须包含字符串“\<EOF>”以在消息结束时发出信号。</span><span class="sxs-lookup"><span data-stu-id="da6b8-106">The string from the client must contain the string "\<EOF>" to signal the end of the message.</span></span>  
+# <a name="asynchronous-server-socket-example"></a><span data-ttu-id="9ee28-102">异步服务器套接字示例</span><span class="sxs-lookup"><span data-stu-id="9ee28-102">Asynchronous Server Socket Example</span></span>
+<span data-ttu-id="9ee28-103">以下示例程序创建从客户端接收连接请求的服务器。</span><span class="sxs-lookup"><span data-stu-id="9ee28-103">The following example program creates a server that receives connection requests from clients.</span></span> <span data-ttu-id="9ee28-104">该服务器是使用异步套接字构建的，因此在等待客户端的连接时，不会挂起服务器应用程序的执行。</span><span class="sxs-lookup"><span data-stu-id="9ee28-104">The server is built with an asynchronous socket, so execution of the server application is not suspended while it waits for a connection from a client.</span></span> <span data-ttu-id="9ee28-105">应用程序从客户端接收字符串，在控制台上显示此字符串，然后将此字符串回显给客户端。</span><span class="sxs-lookup"><span data-stu-id="9ee28-105">The application receives a string from the client, displays the string on the console, and then echoes the string back to the client.</span></span> <span data-ttu-id="9ee28-106">来自客户端的字符串必须包含字符串“\<EOF>”以在消息结束时发出信号。</span><span class="sxs-lookup"><span data-stu-id="9ee28-106">The string from the client must contain the string "\<EOF>" to signal the end of the message.</span></span>  
   
 ```vb  
 Imports System  
@@ -289,8 +289,8 @@ public class AsynchronousSocketListener {
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="da6b8-107">请参阅</span><span class="sxs-lookup"><span data-stu-id="da6b8-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9ee28-107">请参阅</span><span class="sxs-lookup"><span data-stu-id="9ee28-107">See also</span></span>
 
-- [<span data-ttu-id="da6b8-108">异步客户端套接字示例</span><span class="sxs-lookup"><span data-stu-id="da6b8-108">Asynchronous Client Socket Example</span></span>](../../../docs/framework/network-programming/asynchronous-client-socket-example.md)
-- [<span data-ttu-id="da6b8-109">使用异步服务器套接字</span><span class="sxs-lookup"><span data-stu-id="da6b8-109">Using an Asynchronous Server Socket</span></span>](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)
-- [<span data-ttu-id="da6b8-110">Socket 代码示例</span><span class="sxs-lookup"><span data-stu-id="da6b8-110">Socket Code Examples</span></span>](../../../docs/framework/network-programming/socket-code-examples.md)
+- [<span data-ttu-id="9ee28-108">异步客户端套接字示例</span><span class="sxs-lookup"><span data-stu-id="9ee28-108">Asynchronous Client Socket Example</span></span>](asynchronous-client-socket-example.md)
+- [<span data-ttu-id="9ee28-109">使用异步服务器套接字</span><span class="sxs-lookup"><span data-stu-id="9ee28-109">Using an Asynchronous Server Socket</span></span>](using-an-asynchronous-server-socket.md)
+- [<span data-ttu-id="9ee28-110">Socket 代码示例</span><span class="sxs-lookup"><span data-stu-id="9ee28-110">Socket Code Examples</span></span>](socket-code-examples.md)

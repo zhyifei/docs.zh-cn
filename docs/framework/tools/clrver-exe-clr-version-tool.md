@@ -7,56 +7,56 @@ helpviewer_keywords:
 ms.assetid: cbc2ee86-bdc8-4a65-a8f1-ba23bce3a699
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2f4fc74a270cc171efa166bf54ac52a1b7acfdc5
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 5a94965c106b6ec231e3f80802f82c76dfd5eac6
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70851301"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044761"
 ---
-# <a name="clrverexe-clr-version-tool"></a><span data-ttu-id="bf4c9-102">Clrver.exe（CLR 版本工具）</span><span class="sxs-lookup"><span data-stu-id="bf4c9-102">Clrver.exe (CLR Version Tool)</span></span>
-<span data-ttu-id="bf4c9-103">CLR 版本工具 (Clrver.exe) 报告计算机上的公共语言运行时 (CLR) 的所有已安装版本。</span><span class="sxs-lookup"><span data-stu-id="bf4c9-103">The CLR Version tool (Clrver.exe) reports all the installed versions of the common language runtime (CLR) on the computer.</span></span>  
+# <a name="clrverexe-clr-version-tool"></a><span data-ttu-id="720c8-102">Clrver.exe（CLR 版本工具）</span><span class="sxs-lookup"><span data-stu-id="720c8-102">Clrver.exe (CLR Version Tool)</span></span>
+<span data-ttu-id="720c8-103">CLR 版本工具 (Clrver.exe) 报告计算机上的公共语言运行时 (CLR) 的所有已安装版本。</span><span class="sxs-lookup"><span data-stu-id="720c8-103">The CLR Version tool (Clrver.exe) reports all the installed versions of the common language runtime (CLR) on the computer.</span></span>  
   
- <span data-ttu-id="bf4c9-104">此工具会自动随 Visual Studio 一起安装。</span><span class="sxs-lookup"><span data-stu-id="bf4c9-104">This tool is automatically installed with Visual Studio.</span></span> <span data-ttu-id="bf4c9-105">若要运行此工具，请使用 Visual Studio 开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示）。</span><span class="sxs-lookup"><span data-stu-id="bf4c9-105">To run the tool, use the Developer Command Prompt for Visual Studio (or the Visual Studio Command Prompt in Windows 7).</span></span> <span data-ttu-id="bf4c9-106">有关详细信息，请参阅[命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。</span><span class="sxs-lookup"><span data-stu-id="bf4c9-106">For more information, see [Command Prompts](../../../docs/framework/tools/developer-command-prompt-for-vs.md).</span></span>  
+ <span data-ttu-id="720c8-104">此工具会自动随 Visual Studio 一起安装。</span><span class="sxs-lookup"><span data-stu-id="720c8-104">This tool is automatically installed with Visual Studio.</span></span> <span data-ttu-id="720c8-105">若要运行此工具，请使用 Visual Studio 开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示）。</span><span class="sxs-lookup"><span data-stu-id="720c8-105">To run the tool, use the Developer Command Prompt for Visual Studio (or the Visual Studio Command Prompt in Windows 7).</span></span> <span data-ttu-id="720c8-106">有关详细信息，请参阅[命令提示](developer-command-prompt-for-vs.md)。</span><span class="sxs-lookup"><span data-stu-id="720c8-106">For more information, see [Command Prompts](developer-command-prompt-for-vs.md).</span></span>  
   
- <span data-ttu-id="bf4c9-107">在命令提示符处，键入以下内容：</span><span class="sxs-lookup"><span data-stu-id="bf4c9-107">At the command prompt, type the following:</span></span>  
+ <span data-ttu-id="720c8-107">在命令提示符处，键入以下内容：</span><span class="sxs-lookup"><span data-stu-id="720c8-107">At the command prompt, type the following:</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="bf4c9-108">语法</span><span class="sxs-lookup"><span data-stu-id="bf4c9-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="720c8-108">语法</span><span class="sxs-lookup"><span data-stu-id="720c8-108">Syntax</span></span>  
   
 ```console  
 clrver [option]  
 ```  
   
-## <a name="options"></a><span data-ttu-id="bf4c9-109">选项</span><span class="sxs-lookup"><span data-stu-id="bf4c9-109">Options</span></span>  
+## <a name="options"></a><span data-ttu-id="720c8-109">选项</span><span class="sxs-lookup"><span data-stu-id="720c8-109">Options</span></span>  
   
-|<span data-ttu-id="bf4c9-110">选项</span><span class="sxs-lookup"><span data-stu-id="bf4c9-110">Option</span></span>|<span data-ttu-id="bf4c9-111">说明</span><span class="sxs-lookup"><span data-stu-id="bf4c9-111">Description</span></span>|  
+|<span data-ttu-id="720c8-110">选项</span><span class="sxs-lookup"><span data-stu-id="720c8-110">Option</span></span>|<span data-ttu-id="720c8-111">说明</span><span class="sxs-lookup"><span data-stu-id="720c8-111">Description</span></span>|  
 |------------|-----------------|  
-|`-all`|<span data-ttu-id="bf4c9-112">显示正在使用的 CLR 的计算机上的所有进程。</span><span class="sxs-lookup"><span data-stu-id="bf4c9-112">Displays all processes on the computer that are using the CLR.</span></span>|  
-|<span data-ttu-id="bf4c9-113">pid </span><span class="sxs-lookup"><span data-stu-id="bf4c9-113">*pid*</span></span>|<span data-ttu-id="bf4c9-114">显示具有指定的进程 ID (PID) 的进程所使用的 CLR 版本。</span><span class="sxs-lookup"><span data-stu-id="bf4c9-114">Displays the version(s) of the CLR used by the process that has the specified process ID (PID).</span></span>|  
-|`-?`|<span data-ttu-id="bf4c9-115">显示该工具的命令语法和选项。</span><span class="sxs-lookup"><span data-stu-id="bf4c9-115">Displays command syntax and options for the tool.</span></span>|  
+|`-all`|<span data-ttu-id="720c8-112">显示正在使用的 CLR 的计算机上的所有进程。</span><span class="sxs-lookup"><span data-stu-id="720c8-112">Displays all processes on the computer that are using the CLR.</span></span>|  
+|<span data-ttu-id="720c8-113">pid </span><span class="sxs-lookup"><span data-stu-id="720c8-113">*pid*</span></span>|<span data-ttu-id="720c8-114">显示具有指定的进程 ID (PID) 的进程所使用的 CLR 版本。</span><span class="sxs-lookup"><span data-stu-id="720c8-114">Displays the version(s) of the CLR used by the process that has the specified process ID (PID).</span></span>|  
+|`-?`|<span data-ttu-id="720c8-115">显示该工具的命令语法和选项。</span><span class="sxs-lookup"><span data-stu-id="720c8-115">Displays command syntax and options for the tool.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="bf4c9-116">备注</span><span class="sxs-lookup"><span data-stu-id="bf4c9-116">Remarks</span></span>  
- <span data-ttu-id="bf4c9-117">如果你未使用任何选项调用 Clrver.exe，则它将显示所有已安装的 CLR 版本。</span><span class="sxs-lookup"><span data-stu-id="bf4c9-117">If you call Clrver.exe with no options, it displays all installed CLR versions.</span></span> <span data-ttu-id="bf4c9-118">如果你指定了另一个用户的 PID，则你必须具有管理权限才能获取版本信息。</span><span class="sxs-lookup"><span data-stu-id="bf4c9-118">If you specify a PID for another user, you must have administrative permissions to obtain the version information.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="720c8-116">备注</span><span class="sxs-lookup"><span data-stu-id="720c8-116">Remarks</span></span>  
+ <span data-ttu-id="720c8-117">如果你未使用任何选项调用 Clrver.exe，则它将显示所有已安装的 CLR 版本。</span><span class="sxs-lookup"><span data-stu-id="720c8-117">If you call Clrver.exe with no options, it displays all installed CLR versions.</span></span> <span data-ttu-id="720c8-118">如果你指定了另一个用户的 PID，则你必须具有管理权限才能获取版本信息。</span><span class="sxs-lookup"><span data-stu-id="720c8-118">If you specify a PID for another user, you must have administrative permissions to obtain the version information.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="bf4c9-119">在 Windows Vista 或更高版本中，用户帐户控制 (UAC) 决定用户的特权。</span><span class="sxs-lookup"><span data-stu-id="bf4c9-119">In Windows Vista and later, User Account Control (UAC) determines the privileges of a user.</span></span> <span data-ttu-id="bf4c9-120">如果您是内置的 Administrators 组的成员，将为您分配两个运行时访问令牌：一个标准用户访问令牌和一个管理员访问令牌。</span><span class="sxs-lookup"><span data-stu-id="bf4c9-120">If you are a member of the Built-in Administrators group, you are assigned two run-time access tokens: a standard user access token and an administrator access token.</span></span> <span data-ttu-id="bf4c9-121">默认情况下，您拥有标准用户角色。</span><span class="sxs-lookup"><span data-stu-id="bf4c9-121">By default, you are in the standard user role.</span></span> <span data-ttu-id="bf4c9-122">要执行需要管理权限的代码，首先必须将你的特权从标准用户提升至管理员。</span><span class="sxs-lookup"><span data-stu-id="bf4c9-122">To execute code that requires administrative permission, you must first elevate your privileges from standard user to administrator.</span></span> <span data-ttu-id="bf4c9-123">你可以通过以下方式执行此操作：在启动命令提示符时，右键单击命令提示符图标并指示你希望以管理员身份运行。</span><span class="sxs-lookup"><span data-stu-id="bf4c9-123">You can do this when you start the command prompt by right-clicking the command prompt icon and indicating that you want to run as an administrator.</span></span>  
+> <span data-ttu-id="720c8-119">在 Windows Vista 或更高版本中，用户帐户控制 (UAC) 决定用户的特权。</span><span class="sxs-lookup"><span data-stu-id="720c8-119">In Windows Vista and later, User Account Control (UAC) determines the privileges of a user.</span></span> <span data-ttu-id="720c8-120">如果您是内置的 Administrators 组的成员，将为您分配两个运行时访问令牌：一个标准用户访问令牌和一个管理员访问令牌。</span><span class="sxs-lookup"><span data-stu-id="720c8-120">If you are a member of the Built-in Administrators group, you are assigned two run-time access tokens: a standard user access token and an administrator access token.</span></span> <span data-ttu-id="720c8-121">默认情况下，您拥有标准用户角色。</span><span class="sxs-lookup"><span data-stu-id="720c8-121">By default, you are in the standard user role.</span></span> <span data-ttu-id="720c8-122">要执行需要管理权限的代码，首先必须将你的特权从标准用户提升至管理员。</span><span class="sxs-lookup"><span data-stu-id="720c8-122">To execute code that requires administrative permission, you must first elevate your privileges from standard user to administrator.</span></span> <span data-ttu-id="720c8-123">你可以通过以下方式执行此操作：在启动命令提示符时，右键单击命令提示符图标并指示你希望以管理员身份运行。</span><span class="sxs-lookup"><span data-stu-id="720c8-123">You can do this when you start the command prompt by right-clicking the command prompt icon and indicating that you want to run as an administrator.</span></span>  
   
- <span data-ttu-id="bf4c9-124">尝试确定 SYSTEM、LOCAL SERVICE 和 NETWORK SERVICE 过程的 CLR 版本会导致出现一条消息，指示该 PID 不存在。</span><span class="sxs-lookup"><span data-stu-id="bf4c9-124">Attempting to determine the CLR version for SYSTEM, LOCAL SERVICE, and NETWORK SERVICE processes results in a message indicating that the PID doesn't exist.</span></span>  
+ <span data-ttu-id="720c8-124">尝试确定 SYSTEM、LOCAL SERVICE 和 NETWORK SERVICE 过程的 CLR 版本会导致出现一条消息，指示该 PID 不存在。</span><span class="sxs-lookup"><span data-stu-id="720c8-124">Attempting to determine the CLR version for SYSTEM, LOCAL SERVICE, and NETWORK SERVICE processes results in a message indicating that the PID doesn't exist.</span></span>  
   
-## <a name="examples"></a><span data-ttu-id="bf4c9-125">示例</span><span class="sxs-lookup"><span data-stu-id="bf4c9-125">Examples</span></span>  
- <span data-ttu-id="bf4c9-126">以下命令显示在计算机上安装的 CLR 的所有版本。</span><span class="sxs-lookup"><span data-stu-id="bf4c9-126">The following command displays all the versions of the CLR installed on the computer.</span></span>  
+## <a name="examples"></a><span data-ttu-id="720c8-125">示例</span><span class="sxs-lookup"><span data-stu-id="720c8-125">Examples</span></span>  
+ <span data-ttu-id="720c8-126">以下命令显示在计算机上安装的 CLR 的所有版本。</span><span class="sxs-lookup"><span data-stu-id="720c8-126">The following command displays all the versions of the CLR installed on the computer.</span></span>  
   
  `clrver`  
   
- <span data-ttu-id="bf4c9-127">以下命令显示进程 128 所用的 CLR 版本。</span><span class="sxs-lookup"><span data-stu-id="bf4c9-127">The following command displays the version of the CLR used by process 128.</span></span>  
+ <span data-ttu-id="720c8-127">以下命令显示进程 128 所用的 CLR 版本。</span><span class="sxs-lookup"><span data-stu-id="720c8-127">The following command displays the version of the CLR used by process 128.</span></span>  
   
  `clrver 128`  
   
- <span data-ttu-id="bf4c9-128">以下命令显示所有托管进程及其使用的 CLR 版本。</span><span class="sxs-lookup"><span data-stu-id="bf4c9-128">The following command displays all the managed processes and the version of the CLR they are using.</span></span>  
+ <span data-ttu-id="720c8-128">以下命令显示所有托管进程及其使用的 CLR 版本。</span><span class="sxs-lookup"><span data-stu-id="720c8-128">The following command displays all the managed processes and the version of the CLR they are using.</span></span>  
   
  `Clrver -all`  
   
-## <a name="see-also"></a><span data-ttu-id="bf4c9-129">请参阅</span><span class="sxs-lookup"><span data-stu-id="bf4c9-129">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="720c8-129">请参阅</span><span class="sxs-lookup"><span data-stu-id="720c8-129">See also</span></span>
 
-- [<span data-ttu-id="bf4c9-130">工具</span><span class="sxs-lookup"><span data-stu-id="bf4c9-130">Tools</span></span>](../../../docs/framework/tools/index.md)
-- [<span data-ttu-id="bf4c9-131">命令提示</span><span class="sxs-lookup"><span data-stu-id="bf4c9-131">Command Prompts</span></span>](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [<span data-ttu-id="720c8-130">工具</span><span class="sxs-lookup"><span data-stu-id="720c8-130">Tools</span></span>](index.md)
+- [<span data-ttu-id="720c8-131">命令提示</span><span class="sxs-lookup"><span data-stu-id="720c8-131">Command Prompts</span></span>](developer-command-prompt-for-vs.md)
