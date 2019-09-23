@@ -5,12 +5,12 @@ ms.date: 08/20/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to
-ms.openlocfilehash: e1dcc719738a2beb3e63463245d4721c5298cf85
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 8d21ae5ae3aa4701ddd7d042d5069351c22864bb
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666665"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182548"
 ---
 # <a name="deploy-a-model-in-an-aspnet-core-web-api"></a>在 ASP.NET Core Web API 中部署模型
 
@@ -105,7 +105,7 @@ ms.locfileid: "69666665"
 
 若要进行单个预测，请使用 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)。 若要在应用程序中使用 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)，则必须在需要时创建它。 在这种情况下，可考虑的最佳做法是依赖项注入。
 
-如果想要了解 [ASP.NET Core 中的依赖项注入](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-2.1)，以下链接提供详细信息。
+如果想要了解 [ASP.NET Core 中的依赖项注入](/aspnet/core/fundamentals/dependency-injection)，以下链接提供详细信息。
 
 1. 打开 Startup.cs  类，并将以下 using 语句添加到文件顶部：
 
@@ -202,4 +202,4 @@ ms.locfileid: "69666665"
 
 ## <a name="next-steps"></a>后续步骤
 
-- [部署到 Azure](/aspnet/core/tutorials/publish-to-azure-webapp-using-vs?view=aspnetcore-2.1#deploy-the-app-to-azure)
+- [部署到 Azure](/aspnet/core/tutorials/publish-to-azure-webapp-using-vs#deploy-the-app-to-azure)

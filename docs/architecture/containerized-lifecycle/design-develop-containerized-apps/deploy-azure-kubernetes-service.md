@@ -2,12 +2,12 @@
 title: 协调安排微服务和多容器应用程序，实现高可伸缩性和高可用性
 description: 了解如何使用 Azure Kubernetes 服务部署应用。
 ms.date: 02/15/2019
-ms.openlocfilehash: 88e76b4b0a3686f4227a6aee1b7fbd2bfe55fdcc
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 0aa2f83fbf8f9a8815d65730002943cca748643d
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68672624"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182375"
 ---
 # <a name="deploy-to-azure-kubernetes-service-aks"></a>部署到 Azure Kubernetes 服务 (AKS)
 
@@ -19,12 +19,12 @@ ms.locfileid: "68672624"
 - Windows 开发计算机
   - 在 Windows 上启用“开发人员模式”
   - 适用于 Linux 的 Windows 子系统
-- 在 [Windows、Mac 或 Linux](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest) 上安装 Azure CLI
+- 在 [Windows、Mac 或 Linux](https://docs.microsoft.com/cli/azure/install-azure-cli) 上安装 Azure CLI
 
 > [!NOTE]
 > 查找有关以下内容的完整信息：
 >
-> Azure-CLI：<https://docs.microsoft.com/cli/azure/index?view=azure-cli-latest>
+> Azure-CLI：<https://docs.microsoft.com/cli/azure/index>
 >
 > 适用于 Linux 的 Windows 子系统：<https://docs.microsoft.com/windows/wsl/about>
 

@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Azure 构建新式 Web 应用程序 | 开�
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 51feb770e84af170bf31a6ba363a1d9e72616284
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 19d1d5f81b5be9b843698b6e61d8571d4edfa66f
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373775"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71181950"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>开发 ASP.NET Core MVC 应用
 
@@ -109,7 +109,7 @@ Web API 项目应考虑使用 `[ApiController]` 属性，该属性可应用于�
 > - **筛选器**
  > <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
 > - **ApiController 属性**
- > <https://docs.microsoft.com/aspnet/core/web-api/?view=aspnetcore-2.2>
+ > <https://docs.microsoft.com/aspnet/core/web-api/>
 
 ## <a name="working-with-dependencies"></a>处理依赖关系
 

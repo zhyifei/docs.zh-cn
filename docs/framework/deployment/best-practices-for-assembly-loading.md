@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 68d1c539-6a47-4614-ab59-4b071c9d4b4c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 727d1b4ecb17eafb448205aa0c7eea36c5545b98
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: a95679f659f13956fd230f07e9401af9097a043c
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052225"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182477"
 ---
 # <a name="best-practices-for-assembly-loading"></a>适用于程序集加载的最佳做法
 本文讨论避免类型标识问题的方法，从而避免发生 <xref:System.InvalidCastException>、<xref:System.MissingMethodException> 以及其他错误。 本文讨论以下建议：  
@@ -154,7 +154,7 @@ ms.locfileid: "71052225"
  如果无法将所有程序集放入探测路径中，请考虑替代方式，例如使用 .NET Framework 外接程序模型，将程序集放置到全局程序集缓存中或创建应用程序域。  
   
 ### <a name="consider-using-the-net-framework-add-in-model"></a>考虑使用 .NET Framework 外接程序模型  
- 如果使用加载位置上下文来实现外接程序（它们通常未安装在应用程序基中），请使用 .NET Framework 外接程序模型。 此模型提供应用程序域或进程级别的隔离，无需自行管理应用程序域。 有关外接程序模型的信息，请参阅[外接程序和扩展性](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))。  
+ 如果使用加载位置上下文来实现外接程序（它们通常未安装在应用程序基中），请使用 .NET Framework 外接程序模型。 此模型提供应用程序域或进程级别的隔离，无需自行管理应用程序域。 有关外接程序模型的信息，请参阅[外接程序和扩展性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))。  
   
 ### <a name="consider-using-the-global-assembly-cache"></a>考虑使用全局程序集缓存  
  将程序集置于全局程序集缓存中，不但可以获得位于应用程序基外部的共享程序集路径的好处，而且不会丧失默认加载上下文的优点，也不会承袭其他上下文的缺点。  

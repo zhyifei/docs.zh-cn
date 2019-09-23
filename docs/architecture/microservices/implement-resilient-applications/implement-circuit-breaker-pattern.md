@@ -2,12 +2,12 @@
 title: 实现断路器模式
 description: 了解如何实现断路器模式作为 Http 重试的互补系统。
 ms.date: 10/16/2018
-ms.openlocfilehash: f40a8eec50a4293e4dfb4df647ce3f69f6dc361b
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: eec14273cb9480df51d6e5865106ccfc045845c4
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68674634"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71181925"
 ---
 # <a name="implement-the-circuit-breaker-pattern"></a>实现断路器模式
 
@@ -15,7 +15,7 @@ ms.locfileid: "68674634"
 
 在分布式环境中，对远程资源和服务的调用可能由于暂时性故障而失败，例如网络连接速度较慢和超时或资源响应缓慢或暂时不可用。 这些故障通常在一段时间之后会自动消失，应配备可靠强大的云应用程序，使用“重试模式”等策略来解决这些故障。 
 
-但也可能存在这种情况，由于意外事件引发故障，需要更长的时间来解决故障。 这些故障按严重程度从部分连接丢失到服务彻底故障都有可能。 在这些情况下，应用程序持续重试一个操作可能毫无意义，因为操作不可能成功。 
+但也可能存在这种情况，由于意外事件引发故障，需要更长的时间来解决故障。 这些故障轻则导致部分连接中断，重则导致服务完全瘫痪。 在这些情况下，应用程序持续重试一个操作可能毫无意义，因为操作不可能成功。 
 
 相反，应对应用程序进行编码，使其接受已失败的操作，并相应解决故障。
 
@@ -55,7 +55,7 @@ static IAsyncPolicy<HttpResponseMessage> GetCircuitBreakerPolicy()
 }
 ```
 
-上述代码示例配置了断路器策略，因此，如果在重试 Http 请求时出现五个连续故障，则会中断或断开线路。 此时，电路将断开 30 秒：在此期间，断路器会立即中止呼叫，而不是拨打电话。  该策略自动将[相关异常和 HTTP 状态代码](/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1#handle-transient-faults)解释为故障。  
+上述代码示例配置了断路器策略，因此，如果在重试 Http 请求时出现五个连续故障，则会中断或断开线路。 此时，电路将断开 30 秒：在此期间，断路器会立即中止呼叫，而不是拨打电话。  该策略自动将[相关异常和 HTTP 状态代码](/aspnet/core/fundamentals/http-requests#handle-transient-faults)解释为故障。  
 
 如果一个特定资源出现问题，且该资源部署在不同于执行 HTTP 调用的客户端应用程序或服务的环境中，则还应使用断路器将请求重定向到回退基础结构。 这样一来，如果数据中心发生故障，但该故障只影响后端微服务，而不影响客户端应用程序，则客户端应用程序可以重定向到回退服务。 Polly 正在规划新策略，用于自动实现此[故障转移策略](https://github.com/App-vNext/Polly/wiki/Polly-Roadmap#failover-policy)方案。 
 
