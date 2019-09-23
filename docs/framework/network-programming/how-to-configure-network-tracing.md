@@ -11,15 +11,15 @@ helpviewer_keywords:
 - application configuration files, network tracing
 - sockets, trace output
 ms.assetid: 5ef9fe4b-8d3d-490e-9259-1d014b2181af
-ms.openlocfilehash: 2c2c2718d79ce9aa4fed343cf368bbf541e493d0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: dc9b6b5399063026c0bbe5735964ed42a21168fa
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613715"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048367"
 ---
 # <a name="how-to-configure-network-tracing"></a>如何：配置网络跟踪
-应用程序或计算机配置文件可保存用于确定网络跟踪的格式和内容的设置。 在执行此过程之前，请确保启用跟踪。 有关如何启用跟踪的信息，请参阅[启用网络跟踪](../../../docs/framework/network-programming/enabling-network-tracing.md)。  
+应用程序或计算机配置文件可保存用于确定网络跟踪的格式和内容的设置。 在执行此过程之前，请确保启用跟踪。 有关如何启用跟踪的信息，请参阅[启用网络跟踪](enabling-network-tracing.md)。  
   
  计算机配置文件 machine.config 存储在 Windows 安装目录的 %Windir%\Microsoft.NET\Framework 文件夹中。 安装在计算机上的每个 .NET Framework 版本，在 %Windir%\Microsoft.NET\Framework 下的文件夹中分别有一个单独的 machine.config 文件（例如，C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\machine.config 或 C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Config\machine.config）。  
   
@@ -99,7 +99,7 @@ ms.locfileid: "64613715"
   
 ## <a name="see-also"></a>请参阅
 
-- [解释网络跟踪](../../../docs/framework/network-programming/interpreting-network-tracing.md)
-- [.NET Framework 中的网络跟踪](../../../docs/framework/network-programming/network-tracing.md)
-- [启用网络跟踪](../../../docs/framework/network-programming/enabling-network-tracing.md)
-- [跟踪应用程序和在应用程序中插入检测点](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
+- [解释网络跟踪](interpreting-network-tracing.md)
+- [.NET Framework 中的网络跟踪](network-tracing.md)
+- [启用网络跟踪](enabling-network-tracing.md)
+- [跟踪应用程序和在应用程序中插入检测点](../debug-trace-profile/tracing-and-instrumenting-applications.md)

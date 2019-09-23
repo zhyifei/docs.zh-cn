@@ -9,12 +9,12 @@ helpviewer_keywords:
 - text, network tracing output
 - includehex
 ms.assetid: ad22b4b8-00af-4778-9cca-cb609ce1f8ff
-ms.openlocfilehash: 09f77a60255accc3e4b1c4fa5ea3d7526444e4cb
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: fd617e152b1e86cc71dd8e3cc8a01f1d2f52c30a
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894717"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047892"
 ---
 # <a name="interpreting-network-tracing"></a>解释网络跟踪
 启用网络跟踪之后，可以通过跟踪捕获应用程序对各种 <xref:System.Net> 类成员的调用。 这些调用的输出可能类似于以下示例。  
@@ -26,7 +26,7 @@ ms.locfileid: "70894717"
   
  在上一示例中，[588] 是当前线程的唯一标识符。 (4357) 和 (4387) 是一种时间戳，它表示应用程序启动以来已经经过的毫秒数。 时间戳之后的数据显示了进入和退出“Socket.Send”方法的应用程序  。 执行“Send”方法的对象使用 33574638 作为其唯一标识符  。 退出跟踪方法包括返回值（上一示例中为 61）。  
   
- 网络跟踪可以使用诸如 Hypertext Transfer Protocol (HTTP) 应用程序级协议捕获由应用程序发送或接收的网络流量。 此数据可捕获为文本或十六进制数据。 如果将“includehex”指定为“tracemode”属性的值，可使用十六进制数据   。 （有关此属性的详细信息，请参阅[如何：配置网络跟踪](../../../docs/framework/network-programming/how-to-configure-network-tracing.md)。）下例通过“includehex”生成跟踪  。  
+ 网络跟踪可以使用诸如 Hypertext Transfer Protocol (HTTP) 应用程序级协议捕获由应用程序发送或接收的网络流量。 此数据可捕获为文本或十六进制数据。 如果将“includehex”指定为“tracemode”属性的值，可使用十六进制数据   。 （有关此属性的详细信息，请参阅[如何：配置网络跟踪](how-to-configure-network-tracing.md)。）下例通过“includehex”生成跟踪  。  
   
  `[1692]   (1142)   00000000 : 47 45 54 20 2F 77 70 61-64 2E 64 61 74 20 48 54 : GET /wpad.dat HT`  
   
@@ -46,6 +46,6 @@ ms.locfileid: "70894717"
   
 ## <a name="see-also"></a>请参阅
 
-- [启用网络跟踪](../../../docs/framework/network-programming/enabling-network-tracing.md)
-- [如何：配置网络跟踪](../../../docs/framework/network-programming/how-to-configure-network-tracing.md)
-- [.NET Framework 中的网络跟踪](../../../docs/framework/network-programming/network-tracing.md)
+- [启用网络跟踪](enabling-network-tracing.md)
+- [如何：配置网络跟踪](how-to-configure-network-tracing.md)
+- [.NET Framework 中的网络跟踪](network-tracing.md)

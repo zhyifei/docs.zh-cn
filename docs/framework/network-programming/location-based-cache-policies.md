@@ -15,15 +15,15 @@ helpviewer_keywords:
 - Cache Or Next Cache Only policy
 - Refresh policy
 ms.assetid: e41d7f1a-0a6a-4dee-97d1-c6a8b6a07fc2
-ms.openlocfilehash: 04efb24dd9e48d7e33fa3ea3c41a51c2dc96ac77
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: e6896452fce89f69b40f1d03332355df72d93211
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59129891"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047668"
 ---
 # <a name="location-based-cache-policies"></a>基于位置的缓存策略
-基于位置的缓存策略根据可从中获取所请求资源的位置来定义有效缓存条目的新鲜度。 如果使用它不违反服务器指定的重新验证要求，则缓存资源为有效。 基于位置的缓存策略通过使用 <xref:System.Net.Cache.RequestCachePolicy> 或 <xref:System.Net.Cache.HttpRequestCachePolicy> 类构造函数以编程方式创建。 使用 <xref:System.Net.Cache.RequestCacheLevel> 或 <xref:System.Net.Cache.HttpRequestCacheLevel> 枚举值将基于位置的策略的类型传递给构造函数。 有关创建基于位置的缓存策略的代码示例，请参阅[如何：为应用程序设置基于位置的缓存策略](../../../docs/framework/network-programming/how-to-set-a-location-based-cache-policy-for-an-application.md)。 以下部分介绍超文本传输协议（http 和 https）资源每种基于位置的缓存策略。  
+基于位置的缓存策略根据可从中获取所请求资源的位置来定义有效缓存条目的新鲜度。 如果使用它不违反服务器指定的重新验证要求，则缓存资源为有效。 基于位置的缓存策略通过使用 <xref:System.Net.Cache.RequestCachePolicy> 或 <xref:System.Net.Cache.HttpRequestCachePolicy> 类构造函数以编程方式创建。 使用 <xref:System.Net.Cache.RequestCacheLevel> 或 <xref:System.Net.Cache.HttpRequestCacheLevel> 枚举值将基于位置的策略的类型传递给构造函数。 有关创建基于位置的缓存策略的代码示例，请参阅[如何：为应用程序设置基于位置的缓存策略](how-to-set-a-location-based-cache-policy-for-an-application.md)。 以下部分介绍超文本传输协议（http 和 https）资源每种基于位置的缓存策略。  
   
 ## <a name="cache-if-available-policy"></a>“如果可用则缓存”策略  
  如果本地缓存中存在有效的请求资源，则使用缓存资源；否则，将资源请求发送到服务器。 如果客户端和服务器之间的任何缓存中存在请求资源，则可由中间缓存满足该请求。  
@@ -48,8 +48,8 @@ ms.locfileid: "59129891"
   
 ## <a name="see-also"></a>请参阅
 
-- [网络应用程序的缓存管理](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
-- [缓存策略](../../../docs/framework/network-programming/cache-policy.md)
-- [基于时间的缓存策略](../../../docs/framework/network-programming/time-based-cache-policies.md)
-- [在网络应用程序中配置缓存](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)
-- [\<requestCaching> 元素（网络设置）](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+- [网络应用程序的缓存管理](cache-management-for-network-applications.md)
+- [缓存策略](cache-policy.md)
+- [基于时间的缓存策略](time-based-cache-policies.md)
+- [在网络应用程序中配置缓存](configuring-caching-in-network-applications.md)
+- [\<requestCaching> 元素（网络设置）](../configure-apps/file-schema/network/requestcaching-element-network-settings.md)

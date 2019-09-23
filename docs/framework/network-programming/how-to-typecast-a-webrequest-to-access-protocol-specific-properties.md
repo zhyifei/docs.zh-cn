@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d9a8eae2-7454-46f9-b43b-c98477c5bcde
-ms.openlocfilehash: a9488e484aad7ba3df23c33b2cb5b79f234b758e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: a224d9dbab0157d77c05a5937fe35c027296a674
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59088361"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048025"
 ---
 # <a name="how-to-typecast-a-webrequest-to-access-protocol-specific-properties"></a>如何：转换 WebRequest 以访问协议特定属性
 此示例演示如何类型转换 WebRequest 以访问特定于协议的属性。  
@@ -29,4 +29,4 @@ Dim httpreq As HttpWebRequest = _
   
 ## <a name="see-also"></a>请参阅
 
-- [对可插入协议进行编程](../../../docs/framework/network-programming/programming-pluggable-protocols.md)
+- [对可插入协议进行编程](programming-pluggable-protocols.md)

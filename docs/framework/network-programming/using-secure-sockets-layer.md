@@ -15,12 +15,12 @@ helpviewer_keywords:
 - receiving data, Secure Sockets Layer
 - Internet, Secure Sockets Layer
 ms.assetid: 6e4289e6-d1b7-4e82-ab0d-e83e3b6063ed
-ms.openlocfilehash: 9cfa8d6a71898a1d1ea91825ffc9a37f4654ebd5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ef2abc7574aea1b4f77ff93545ad84678c66ce48
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64583522"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046908"
 ---
 # <a name="using-secure-sockets-layer"></a>使用安全套接字层
 <xref:System.Net> 类使用安全套接字层 (SSL) 为若干网络协议加密连接。  
@@ -60,10 +60,10 @@ FtpWebResponse response = (FtpWebResponse)request.GetResponse();
 ## <a name="compiling-the-code"></a>编译代码  
  此示例需要：  
   
-- 引用 System.Net 命名空间。  
+- 引用 System.Net 命名空间  。  
   
 ## <a name="see-also"></a>请参阅
 
-- [网络编程中的安全性](../../../docs/framework/network-programming/security-in-network-programming.md)
-- [.NET Framework 中的网络编程](../../../docs/framework/network-programming/index.md)
-- [证书选择和验证](../../../docs/framework/network-programming/certificate-selection-and-validation.md)
+- [网络编程中的安全性](security-in-network-programming.md)
+- [.NET Framework 中的网络编程](index.md)
+- [证书选择和验证](certificate-selection-and-validation.md)

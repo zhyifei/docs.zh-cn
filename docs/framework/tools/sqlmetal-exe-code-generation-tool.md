@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LINQ to SQL, DBML files
 - LINQ to SQL, SQLMetal
 ms.assetid: 819e5a96-7646-4fdb-b14b-fe31221b0614
-ms.openlocfilehash: 0d12196acab5a50f7dd6fc78e6dccc098cf3e2de
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: d5b4c2b59b585b3d3a3584ef9055e70c9d998e85
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894609"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044082"
 ---
 # <a name="sqlmetalexe-code-generation-tool"></a>SqlMetal.exe（代码生成工具）
 SqlMetal 命令行工具可为 [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)] 的 .NET Framework 组件生成代码和映射。 通过应用本主题后面出现的选项，可以指示 SqlMetal 执行若干种不同的操作，其中包括：  
@@ -30,7 +30,7 @@ SqlMetal 命令行工具可为 [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlin
 > [!NOTE]
 > 使用 Visual Studio 的开发人员还可以使用对象关系设计器生成实体类。 对于大型数据库，这种命令行方法具有很好的扩展性。 由于 SqlMetal 是一个命令行工具，因此可以在生成过程中使用它。  
   
- 若要运行此工具，请使用 Visual Studio 开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示）。 有关详细信息，请参阅[命令提示符](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。在命令提示符处，键入以下内容：  
+ 若要运行此工具，请使用 Visual Studio 开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示）。 有关详细信息，请参阅[命令提示符](developer-command-prompt-for-vs.md)。在命令提示符处，键入以下内容：  
   
 ## <a name="syntax"></a>语法  
   
@@ -77,7 +77,7 @@ sqlmetal [options] [<input file>]
 |/context: \<type>  |指定数据上下文类的名称。 默认值：从数据库名称派生。|  
 |/entitybase: \<type>  |指定生成的代码中的实体类的基类。 默认值：实体没有基类。|  
 |**/pluralize**|自动为类和成员名称应用复数或单数形式。<br /><br /> 此选项仅在美国可用。英文版。|  
-|/serialization: \<option>  |生成可序列化类。<br /><br /> 有效\<选项>：  无，单向。 默认值：无。<br /><br /> 有关详细信息，请参阅[序列化](../../../docs/framework/data/adonet/sql/linq/serialization.md)。|  
+|/serialization: \<option>  |生成可序列化类。<br /><br /> 有效\<选项>：  无，单向。 默认值：无。<br /><br /> 有关详细信息，请参阅[序列化](../data/adonet/sql/linq/serialization.md)。|  
   
  **输入文件**  
   
@@ -134,6 +134,6 @@ sqlmetal [options] [<input file>]
   
 ## <a name="see-also"></a>请参阅
 
-- [如何：在 Visual Basic 或 C# 中生成对象模型](../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)
-- [LINQ to SQL 中的代码生成](../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)
-- [外部映射](../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
+- [如何：在 Visual Basic 或 C# 中生成对象模型](../data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)
+- [LINQ to SQL 中的代码生成](../data/adonet/sql/linq/code-generation-in-linq-to-sql.md)
+- [外部映射](../data/adonet/sql/linq/external-mapping.md)

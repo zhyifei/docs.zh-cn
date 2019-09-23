@@ -7,35 +7,35 @@ helpviewer_keywords:
 ms.assetid: 19df26c5-4008-461d-a7d7-18f4506312d2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 096c818c1103835110478953d0a0d9082b33569e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 6906ccf5b639d6b90b921b5d471aa723aeb4da78
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59180656"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052169"
 ---
 # <a name="deploying-the-net-framework"></a>部署 .NET Framework
 本部分 .NET Framework 文档所提供的信息适用于安装应用程序的同时想一并安装 .NET Framework 的开发人员，以及想在网络中部署 .NET Framework 的管理员。 本文还讨论与部署相关的激活和重启问题，并介绍如何监视 .NET Framework 安装的进度。  
   
 ## <a name="in-this-section"></a>本节内容  
- [面向开发人员的部署指南](../../../docs/framework/deployment/deployment-guide-for-developers.md)  
+ [面向开发人员的部署指南](deployment-guide-for-developers.md)  
  说明开发人员如何在其计算机的应用程序中安装 .NET Framework。  
   
- [面向管理员的部署指南](../../../docs/framework/deployment/guide-for-administrators.md)  
+ [面向管理员的部署指南](guide-for-administrators.md)  
  说明系统管理员如何通过系统中心配置管理器 (SCCM) 跨网络部署 .NET Framework 及其系统依赖项。  
   
- [在 .NET Framework 4.5 安装期间减少系统重新启动次数](../../../docs/framework/deployment/reducing-system-restarts.md)  
+ [在 .NET Framework 4.5 安装期间减少系统重新启动次数](reducing-system-restarts.md)  
  描述在任何可能的情况下可以阻止重启的 Restart Manager，并说明安装 .NET Framework 的应用程序如何利用它。  
   
- [如何：获取 .NET Framework 4.5 安装程序的进度](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)  
+ [如何：获取 .NET Framework 4.5 安装程序的进度](how-to-get-progress-from-the-dotnet-installer.md)  
  描述如何在没有提示的情况下启动和跟踪 .NET Framework 安装进度，同时显示你自己的安装进度视图。  
   
- [.NET Framework 初始化错误：管理用户体验](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md)  
+ [.NET Framework 初始化错误：管理用户体验](initialization-errors-managing-the-user-experience.md)  
  介绍当 .NET Framework 应用程序所需的 CLR 版本无效或用户电脑上未安装该版本时会发生什么情况，如何解决这些错误以及如何控制向用户显示的错误消息。  
   
- [如何：调试 CLR 激活问题](../../../docs/framework/deployment/how-to-debug-clr-activation-issues.md)  
+ [如何：调试 CLR 激活问题](how-to-debug-clr-activation-issues.md)  
  介绍如何查看和调试 CLR 激活日志，解决使用正确版本的 CLR 运行应用程序时可能遇到的问题。  
   
 ## <a name="see-also"></a>请参阅
 
-- [开发指南](../../../docs/framework/development-guide.md)
+- [开发指南](../development-guide.md)

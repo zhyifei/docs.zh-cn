@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5220fe58-5aaf-4e8e-8bc3-b78c63025804
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dccf1b841d048ae460b89fd97da833aadb988422
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 032f43aa16dbca0f4ab0477d586e7568230b7381
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971804"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044267"
 ---
 # <a name="regsvcsexe-net-services-installation-tool"></a>Regsvcs.exe（.NET 服务安装工具）
 .NET 服务安装工具执行下列操作：  
@@ -27,7 +27,7 @@ ms.locfileid: "70971804"
   
 - 配置以编程方式添加到类的服务。  
   
- 若要运行此工具，请使用 Visual Studio 开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示）。 有关详细信息，请参阅[命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。  
+ 若要运行此工具，请使用 Visual Studio 开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示）。 有关详细信息，请参阅[命令提示](developer-command-prompt-for-vs.md)。  
   
  在命令提示符处，键入以下内容：  
   
@@ -67,7 +67,7 @@ ms.locfileid: "70971804"
 ## <a name="remarks"></a>备注  
  Regsvcs.exe 需要由 assemblyFile.dll 指定的源程序集文件  。 此程序集必须用强名称进行签名。 有关强名称签名的更多信息，请参阅[使用强名称为程序集签名](../../standard/assembly/sign-strong-name.md)。 目标应用程序的名称和类型库文件的名称都是可选的。 如果 applicationName 参数尚不存在，则该参数可从源程序集文件生成并且将由 Regsvcs.exe 创建  。 typelibraryfile 参数可以指定类型库名称  。 如果未指定类型库名称，默认情况下，Regsvcs.exe 将使用程序集名称。  
   
- 当 Regsvcs.exe 注册组件的方法时，它需要遵从那些方法的[要求](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/9kc0c6st(v=vs.100))和[链接要求](../../../docs/framework/misc/link-demands.md)。 因为该工具在完全受信任的环境中执行，所以大多数权限要求都会成功。 但是，如果组件中的方法受 <xref:System.Security.Permissions.StrongNameIdentityPermission> 或 <xref:System.Security.Permissions.PublisherIdentityPermission> 的要求或链接要求保护，则 Regsvcs.exe 无法注册这些组件。  
+ 当 Regsvcs.exe 注册组件的方法时，它需要遵从那些方法的[要求](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/9kc0c6st(v=vs.100))和[链接要求](../misc/link-demands.md)。 因为该工具在完全受信任的环境中执行，所以大多数权限要求都会成功。 但是，如果组件中的方法受 <xref:System.Security.Permissions.StrongNameIdentityPermission> 或 <xref:System.Security.Permissions.PublisherIdentityPermission> 的要求或链接要求保护，则 Regsvcs.exe 无法注册这些组件。  
   
  你必须在本地计算机上具有管理特权才能使用 Regsvcs.exe。  
   
@@ -88,6 +88,6 @@ regsvcs /appname:myTargetApp /tlb:newTest.tlb myTest.dll
   
 ## <a name="see-also"></a>请参阅
 
-- [工具](../../../docs/framework/tools/index.md)
+- [工具](index.md)
 - [如何：使用强名称为程序集签名](../../standard/assembly/sign-strong-name.md)
-- [命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [命令提示](developer-command-prompt-for-vs.md)

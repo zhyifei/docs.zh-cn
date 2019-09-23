@@ -2,12 +2,12 @@
 title: 何时为 Docker 容器选择 .NET Framework
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 何时为 Docker 容器选择 .NET Framework
 ms.date: 01/07/2019
-ms.openlocfilehash: 0b948017c3bbbcc8c43d5d2d9698d9a1a6f9deed
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 575af1bc1966a25a01acdcfe106870ad1b7c477d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784082"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71039644"
 ---
 # <a name="when-to-choose-net-framework-for-docker-containers"></a>何时为 Docker 容器选择 .NET Framework
 
@@ -45,22 +45,22 @@ ms.locfileid: "70784082"
 
 ## <a name="using-a-platform-or-api-that-does-not-support-net-core"></a>使用不支持 .NET Core 的平台或 API
 
-某些 Microsoft 或第三方平台不支持 .NET Core。 例如，某些 Azure 服务提供尚不可用于 .NET Core 的 SDK。 这只是暂时的，因为所有 Azure 服务最终都会使用 .NET Core。 例如，[Azure DocumentDB SDK for .NET Core](https://www.nuget.org/packages/Microsoft.Azure.DocumentDB.Core/1.2.1) 是在 2016 年 11 月 16 日发布的预览版，但现在已发布正式版 (GA) 作为稳定版本。
+某些 Microsoft 或第三方平台不支持 .NET Core。 例如，某些 Azure 服务提供尚不可用于 .NET Core 的 SDK。 这只是暂时的，因为所有 Azure 服务最终都会使用 .NET Core。 例如，[Azure DocumentDB SDK for .NET Core](https://www.nuget.org/packages/Microsoft.Azure.DocumentDB.Core) 是在 2016 年 11 月 16 日发布的预览版，但现在已发布正式版 (GA) 作为稳定版本。
 
 在此期间，如果 Azure 中的任何平台或服务仍然不支持 .NET Core 及其客户端 API，则可以使用 Azure 服务中的等效 REST API 或 .NET Framework 上的客户端 SDK。
 
 ### <a name="additional-resources"></a>其他资源
 
 - **.NET Core 指南**  
-    [https://docs.microsoft.com/dotnet/core/index](../../../core/index.md)
+  [https://docs.microsoft.com/dotnet/core/index](../../../core/index.md)
 
 - **从 .NET Framework 移植到 .NET Core**  
-    [https://docs.microsoft.com/dotnet/core/porting/index](../../../core/porting/index.md)
+  [https://docs.microsoft.com/dotnet/core/porting/index](../../../core/porting/index.md)
 
 - **Docker 上的 .NET Core 指南** [https://docs.microsoft.com/dotnet/core/docker/introduction](../../../core/docker/introduction.md)
 
 - **.NET 组件概述**  
-    [https://docs.microsoft.com/dotnet/standard/components](../../../standard/components.md)
+  [https://docs.microsoft.com/dotnet/standard/components](../../../standard/components.md)
 
 >[!div class="step-by-step"]
 >[上一页](net-core-container-scenarios.md)

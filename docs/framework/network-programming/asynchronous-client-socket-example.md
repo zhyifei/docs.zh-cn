@@ -9,12 +9,12 @@ helpviewer_keywords:
 - sockets, code examples
 - sockets, asynchronous client sockets
 ms.assetid: d4ac53a0-b50b-4232-9726-d47d25fcc38a
-ms.openlocfilehash: 736deb1a0c360163521b866a788f1ac077f74508
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: b284698904b3795c2369a5bca47742175e012553
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59172089"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048978"
 ---
 # <a name="asynchronous-client-socket-example"></a>异步客户端套接字示例
 以下示例程序创建连接到服务器的客户端。 该客户端是使用异步套接字构建的，因此当服务器返回响应时，不会挂起客户端应用程序的执行。 应用程序向服务器发送一个字符串，然后控制台上显示服务器返回的字符串。  
@@ -323,6 +323,6 @@ public class AsynchronousClient {
   
 ## <a name="see-also"></a>请参阅
 
-- [异步服务器套接字示例](../../../docs/framework/network-programming/asynchronous-server-socket-example.md)
-- [使用同步服务器套接字](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)
-- [Socket 代码示例](../../../docs/framework/network-programming/socket-code-examples.md)
+- [异步服务器套接字示例](asynchronous-server-socket-example.md)
+- [使用同步服务器套接字](using-a-synchronous-server-socket.md)
+- [Socket 代码示例](socket-code-examples.md)

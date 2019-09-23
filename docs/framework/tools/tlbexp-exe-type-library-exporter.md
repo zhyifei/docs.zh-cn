@@ -10,17 +10,17 @@ helpviewer_keywords:
 ms.assetid: a487d61b-d166-467b-a7ca-d8b52fbff42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f990c5194c2e5dc1422aab96c7608c019ae9855b
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 84ae47b984d6a1a207e6678e30991073ba02a438
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894753"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71043999"
 ---
 # <a name="tlbexpexe-type-library-exporter"></a>Tlbexp.exe（类型库导出程序）
 类型库导出程序生成一个类型库，该类型库描述公共语言运行时程序集中定义的类型。  
   
- 此工具会自动随 Visual Studio 一起安装。 若要运行此工具，请使用 Visual Studio 开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示）。 有关详细信息，请参阅[命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。  
+ 此工具会自动随 Visual Studio 一起安装。 若要运行此工具，请使用 Visual Studio 开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示）。 有关详细信息，请参阅[命令提示](developer-command-prompt-for-vs.md)。  
   
  在命令提示符处，键入以下内容：  
   
@@ -64,11 +64,11 @@ tlbexp assemblyName [options]
   
  立即转换整个程序集。 不能使用 Tlbexp.exe 生成程序集中定义的类型子集的类型信息。  
   
- 不能使用 Tlbexp.exe 从使用[类型库导入程序 (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) 导入的程序集生成类型库。 相反，应参考用 Tlbimp.exe 导入的原始类型库。 你可以从引用程序集（使用 Tlbimp.exe 导入）的程序集导出类型库。 请参见下面的示例部分。  
+ 不能使用 Tlbexp.exe 从使用[类型库导入程序 (Tlbimp.exe)](tlbimp-exe-type-library-importer.md) 导入的程序集生成类型库。 相反，应参考用 Tlbimp.exe 导入的原始类型库。 你可以从引用程序集（使用 Tlbimp.exe 导入）的程序集导出类型库。 请参见下面的示例部分。  
   
  Tlbexp.exe 将生成的类型库置于当前工作目录中或为输出文件指定的目录中。 一个程序集可能会导致生成多个类型库。  
   
- Tlbexp.exe 生成类型库，但不注册它。 这与[程序集注册工具 (Regasm.exe)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md) 不同，后者生成并注册类型库。 若要使用 COM 生成和注册类型库，请使用 Regasm.exe。  
+ Tlbexp.exe 生成类型库，但不注册它。 这与[程序集注册工具 (Regasm.exe)](regasm-exe-assembly-registration-tool.md) 不同，后者生成并注册类型库。 若要使用 COM 生成和注册类型库，请使用 Regasm.exe。  
   
  如果未指定 `/win32` 或 `/win64` 选项，则 Tlbexp.exe 将生成一个 32 位或 64 位类型库，该类型库与执行编译所用的计算机的类型（32 位或 64 位计算机）相对应。 为了交叉编译，可以在 32 位计算机上使用 `/win64` 选项来生成 64 位类型库，也可以在 64 位计算机上使用 `/win32` 选项来生成 32 位类型库。 在 32 位类型库中，将 <xref:System.Runtime.InteropServices.ComTypes.SYSKIND> 值设置为 <xref:System.Runtime.InteropServices.ComTypes.SYSKIND.SYS_WIN32>。 在 64 位类型库中，将 <xref:System.Runtime.InteropServices.ComTypes.SYSKIND> 值设置为 <xref:System.Runtime.InteropServices.ComTypes.SYSKIND.SYS_WIN64>。 相应地转换所有数据类型转换（例如，指针大小的数据类型，如 `IntPtr` 和 `UIntPtr`）。  
   
@@ -132,8 +132,8 @@ tlbexp Sample.dll
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Runtime.InteropServices.TypeLibExporterFlags>
-- [工具](../../../docs/framework/tools/index.md)
-- [Regasm.exe（程序集注册工具）](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md)
+- [工具](index.md)
+- [Regasm.exe（程序集注册工具）](regasm-exe-assembly-registration-tool.md)
 - [有关从程序集转换到类型库的摘要](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/xk1120c3(v=vs.100))
-- [Tlbimp.exe（类型库导入程序）](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)
-- [命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Tlbimp.exe（类型库导入程序）](tlbimp-exe-type-library-importer.md)
+- [命令提示](developer-command-prompt-for-vs.md)

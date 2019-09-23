@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 29848c96-fc36-462d-8072-ba223a40b697
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 46dd9c0c1f9f5759bc9160aadeb0538b5403fb52
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c7a3548cb0d7e841f32824eda52565e64279536e
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69917973"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051999"
 ---
 # <a name="overview-of-the-net-framework"></a>.NET Framework 概述
 
@@ -33,7 +33,7 @@ ms.locfileid: "69917973"
 - 按照工业标准生成所有通信，确保基于 .NET Framework 的代码可与任何其他代码集成。
 
 > [!NOTE]
-> 有关适用于用户和开发人员的 .NET Framework 的常规说明，请参阅[入门](../../../docs/framework/get-started/index.md)。
+> 有关适用于用户和开发人员的 .NET Framework 的常规说明，请参阅[入门](index.md)。
 
 .NET Framework 包括公共语言运行时 (CLR) 和 .NET Framework 类库。 公共语言运行时是 .NET Framework 的基础。 可将运行时看作一个在执行时管理代码的代理，它提供内存管理、线程管理和远程处理等核心服务，并且还强制实施严格的类型安全以及可提高安全性和可靠性的其他形式的代码准确性。 事实上，代码管理的概念是运行时的基本原则。 以运行时为目标的代码称为托管代码，而不以运行时为目标的代码称为非托管代码。 类库是一个综合性的面向对象的可重用类型集合，可使用它来开发多种应用，这些应用程序包括传统的命令行或图形用户界面 (GUI) 应用，还包括基于 ASP.NET 提供的最新创新的应用（如 Web 窗体和 XML Web Services）。
 
@@ -77,15 +77,15 @@ Internet Explorer 是承载运行时（以 MIME 类型扩展的形式）的非�
 
 - Console 应用。 请参阅[生成控制台应用程序](../../standard/building-console-apps.md)。
 
-- Windows GUI 应用（Windows 窗体）。 请参阅 [Windows 窗体](../../../docs/framework/winforms/index.md)。
+- Windows GUI 应用（Windows 窗体）。 请参阅 [Windows 窗体](../winforms/index.md)。
 
-- Windows Presentation Foundation (WPF) 应用。 请参阅 [Windows Presentation Foundation](../../../docs/framework/wpf/index.md)。
+- Windows Presentation Foundation (WPF) 应用。 请参阅 [Windows Presentation Foundation](../wpf/index.md)。
 
-- ASP.NET 应用。 请参阅[使用 ASP.NET 的 Web 应用程序](../../../docs/framework/develop-web-apps-with-aspnet.md)。
+- ASP.NET 应用。 请参阅[使用 ASP.NET 的 Web 应用程序](../develop-web-apps-with-aspnet.md)。
 
-- Windows 服务。 请参阅 [Windows 服务应用程序简介](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)。
+- Windows 服务。 请参阅 [Windows 服务应用程序简介](../windows-services/introduction-to-windows-service-applications.md)。
 
-- 使用 Windows Communication Foundation (WCF) 的面向服务的应用。 请参阅[使用 WCF 的面向服务的应用程序](../../../docs/framework/wcf/index.md)。
+- 使用 Windows Communication Foundation (WCF) 的面向服务的应用。 请参阅[使用 WCF 的面向服务的应用程序](../wcf/index.md)。
 
 - 使用 Windows Workflow Foundation (WF) 的启用工作流程的应用。 请参阅[Windows Workflow Foundation](../windows-workflow-foundation/index.md)。
 
@@ -93,9 +93,9 @@ Windows 窗体类是一组综合性的可重用的类型，它们大大简化了
 
 ## <a name="see-also"></a>请参阅
 
-- [系统要求](../../../docs/framework/get-started/system-requirements.md)
-- [安装指南](../../../docs/framework/install/index.md)
-- [开发指南](../../../docs/framework/development-guide.md)
-- [工具](../../../docs/framework/tools/index.md)
+- [系统要求](system-requirements.md)
+- [安装指南](../install/index.md)
+- [开发指南](../development-guide.md)
+- [工具](../tools/index.md)
 - [.NET 示例和教程](../../samples-and-tutorials/index.md)
 - [.NET Framework 类库](https://go.microsoft.com/fwlink/?LinkID=227195)

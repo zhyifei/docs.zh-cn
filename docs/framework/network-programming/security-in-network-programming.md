@@ -12,12 +12,12 @@ helpviewer_keywords:
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
 ms.assetid: afb07899-2707-49ab-a57f-e0caf20d0171
-ms.openlocfilehash: b57465d4cf89bb38dd5cda70f090f444e52ea819
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: ae8451089dc645c925848489a61c5fb55c468032
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195848"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047310"
 ---
 # <a name="security-in-network-programming"></a>网络编程中的安全性
 
@@ -28,16 +28,16 @@ ms.locfileid: "50195848"
 [.NET Framework 中的传输层安全性 (TLS) 最佳做法](tls.md)  
 介绍 .NET Framework 的 TLS 最佳做法。
  
-[使用安全套接字层](../../../docs/framework/network-programming/using-secure-sockets-layer.md)  
+[使用安全套接字层](using-secure-sockets-layer.md)  
 介绍如何使用安全套接字层 (SSL) 连接。  
   
-[Internet 身份验证](../../../docs/framework/network-programming/internet-authentication.md)  
+[Internet 身份验证](internet-authentication.md)  
 介绍如何使用 HTTP 身份验证方法来与 HTTP 服务器建立经过身份验证的连接。  
   
-[Web 和套接字权限](../../../docs/framework/network-programming/web-and-socket-permissions.md)  
+[Web 和套接字权限](web-and-socket-permissions.md)  
 介绍如何为使用 Internet 连接的应用程序设置代码访问安全性。  
   
 ## <a name="related-sections"></a>相关章节
 
-[.NET Framework 中的网络编程](../../../docs/framework/network-programming/index.md)  
+[.NET Framework 中的网络编程](index.md)  
 在 <xref:System.Net> 和 <xref:System.Net.Sockets> 命名空间中引入类。

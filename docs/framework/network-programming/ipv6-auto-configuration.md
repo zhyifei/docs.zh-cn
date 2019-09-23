@@ -2,12 +2,12 @@
 title: IPv6 自动配置
 ms.date: 03/30/2017
 ms.assetid: 581c1d21-1013-43a3-bf3e-2d9ead62b79c
-ms.openlocfilehash: 2c7f77bbdebe093b5e3bc706653ed203082d9c3f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 95d9dce36c70b8f6c6b9f963c0842305a111d436
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647327"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047807"
 ---
 # <a name="ipv6-auto-configuration"></a>IPv6 自动配置
 IPv6 的一个重要目标是支持节点即插即用。 也就是说，可以将节点插入 IPv6 网络，让其自动进行配置，无需任何人为干预。  
@@ -15,9 +15,9 @@ IPv6 的一个重要目标是支持节点即插即用。 也就是说，可以�
 ## <a name="type-of-auto-configuration"></a>自动配置类型  
  IPv6 支持以下自动配置类型：  
   
-- 有状态自动配置。 这种类型的配置需要一定程度的人为干预，因其需要 IPv6 动态主机配置协议 (DHCPv6) 服务器来安装和管理节点。 DHCPv6 服务器保存向其提供配置信息的节点列表。 它还维护状态信息，这样服务器知道每个地址的使用时间，以及何时可用于重新分配。  
+- 有状态自动配置。  这种类型的配置需要一定程度的人为干预，因其需要 IPv6 动态主机配置协议 (DHCPv6) 服务器来安装和管理节点。 DHCPv6 服务器保存向其提供配置信息的节点列表。 它还维护状态信息，这样服务器知道每个地址的使用时间，以及何时可用于重新分配。  
   
-- 无状态自动配置。 这种配置类型适用于小型组织和个人。 这种情况下，每个主机通过接收的路由器播发的内容确定其地址。 使用 IEEE EUI-64 标准来定义地址的网络 ID 部分，可以合理地假定链接上主机地址的唯一性。  
+-  无状态自动配置。 这种配置类型适用于小型组织和个人。 这种情况下，每个主机通过接收的路由器播发的内容确定其地址。 使用 IEEE EUI-64 标准来定义地址的网络 ID 部分，可以合理地假定链接上主机地址的唯一性。  
   
  无论如何确定地址，节点必须验证可能的地址对于本地链接是否唯一。 通过向可能的地址发送邻居请求消息可完成此操作。 如果节点收到任何响应，就知道该地址已在使用，并且必须确定其他地址。  
   
@@ -26,5 +26,5 @@ IPv6 的一个重要目标是支持节点即插即用。 也就是说，可以�
   
 ## <a name="see-also"></a>请参阅
 
-- [Internet 协议版本 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)
-- [套接字](../../../docs/framework/network-programming/sockets.md)
+- [Internet 协议版本 6](internet-protocol-version-6.md)
+- [套接字](sockets.md)

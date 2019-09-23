@@ -9,12 +9,12 @@ helpviewer_keywords:
 - sockets, code examples
 - asynchronous server sockets
 ms.assetid: 13624cd3-f5c5-4950-8cda-31273b1fa6d1
-ms.openlocfilehash: f52dfce66b6d62a8eb7bf75b626feacfb9172c29
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 555b0661bf68a7461f87bf2895e47284a03c41a6
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59191856"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048954"
 ---
 # <a name="asynchronous-server-socket-example"></a>异步服务器套接字示例
 以下示例程序创建从客户端接收连接请求的服务器。 该服务器是使用异步套接字构建的，因此在等待客户端的连接时，不会挂起服务器应用程序的执行。 应用程序从客户端接收字符串，在控制台上显示此字符串，然后将此字符串回显给客户端。 来自客户端的字符串必须包含字符串“\<EOF>”以在消息结束时发出信号。  
@@ -291,6 +291,6 @@ public class AsynchronousSocketListener {
   
 ## <a name="see-also"></a>请参阅
 
-- [异步客户端套接字示例](../../../docs/framework/network-programming/asynchronous-client-socket-example.md)
-- [使用异步服务器套接字](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)
-- [Socket 代码示例](../../../docs/framework/network-programming/socket-code-examples.md)
+- [异步客户端套接字示例](asynchronous-client-socket-example.md)
+- [使用异步服务器套接字](using-an-asynchronous-server-socket.md)
+- [Socket 代码示例](socket-code-examples.md)

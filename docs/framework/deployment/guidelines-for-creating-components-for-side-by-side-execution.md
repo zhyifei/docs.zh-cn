@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 5c540161-6e40-42e9-be92-6175aee2c46a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8924ed14c597a691698180c7c362b80c41532c2c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7d0cbe66870fc75da02ad56da73de86d4837c0c8
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614095"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052142"
 ---
 # <a name="guidelines-for-creating-components-for-side-by-side-execution"></a>并行执行的组件的创建指南
 创建适用于并行执行的托管应用程序或组件时，请遵循下列一般性准则：  
@@ -49,7 +49,7 @@ ms.locfileid: "64614095"
   
 - 请不要注销在 .NET Framework 的其他版本下运行的其他应用程序可能需要的 COM 组件。  
   
-- 对于已注册的 COM 服务器，请不要更改 InprocServer32 或其他注册表项。  
+- 对于已注册的 COM 服务器，请不要更改 InprocServer32  或其他注册表项。  
   
 - 请不要删除在 .NET Framework 的其他版本下运行的其他应用程序可能需要的用户帐户或组。  
   
@@ -60,9 +60,9 @@ ms.locfileid: "64614095"
   
  运行时使用程序集版本进行程序集绑定。 若两个相同的程序集版本号不同，则运行时将它们视为两个不同的程序集。  
   
- 仅当文件版本号更新时，[全局程序集缓存工具 (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) 才允许用户替换程序集。 安装程序在安装时通常不会覆盖程序集，除非该程序集版本号较大。  
+ 仅当文件版本号更新时，[全局程序集缓存工具 (Gacutil.exe)](../tools/gacutil-exe-gac-tool.md) 才允许用户替换程序集。 安装程序在安装时通常不会覆盖程序集，除非该程序集版本号较大。  
   
 ## <a name="see-also"></a>请参阅
 
-- [并行执行](../../../docs/framework/deployment/side-by-side-execution.md)
-- [如何：启用和禁用自动绑定重定向](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)
+- [并行执行](side-by-side-execution.md)
+- [如何：启用和禁用自动绑定重定向](../configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)

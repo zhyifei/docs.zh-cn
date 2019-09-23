@@ -7,16 +7,16 @@ helpviewer_keywords:
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 793012b21ae6a3a597efaea23a6d3b6d1db58562
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 91099b9b4d230839bc14c5fe4d5eafd05ac95541
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66379963"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052156"
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>.NET Framework 部署指南（针对管理员）
 
-本文分步说明系统管理员可以如何使用 Microsoft System Center Configuration Manager 在网络中部署 .NET Framework 4.5 及其系统依赖项。 本文假定所有目标客户端计算机都满足 .NET Framework 的最低要求。 有关安装 .NET Framework 4.5 的软件和硬件要求列表，请参阅[系统需求](../../../docs/framework/get-started/system-requirements.md)。
+本文分步说明系统管理员可以如何使用 Microsoft System Center Configuration Manager 在网络中部署 .NET Framework 4.5 及其系统依赖项。 本文假定所有目标客户端计算机都满足 .NET Framework 的最低要求。 有关安装 .NET Framework 4.5 的软件和硬件要求列表，请参阅[系统需求](../get-started/system-requirements.md)。
 
 > [!NOTE]
 > 本文档中提到的软件（包括但不限于 .NET Framework 4.5、System Center Configuration Manager 和 Active Directory）均受许可条款和条件的约束。 下列说明假定，软件的适当被许可方已查看并接受此类许可条款和条件。 这些说明不免除此类许可协议中的任何条款和条件。
@@ -280,5 +280,5 @@ System Center 2012 Configuration Manager（既充当管理点又充当分发点�
 
 ## <a name="see-also"></a>请参阅
 
-- [面向开发人员的部署指南](../../../docs/framework/deployment/deployment-guide-for-developers.md)
-- [系统要求](../../../docs/framework/get-started/system-requirements.md)
+- [面向开发人员的部署指南](deployment-guide-for-developers.md)
+- [系统要求](../get-started/system-requirements.md)

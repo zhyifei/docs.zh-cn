@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 68d1c539-6a47-4614-ab59-4b071c9d4b4c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 53ad8f6187b4e9b1754094dae0ebfe6e05a1b78b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 727d1b4ecb17eafb448205aa0c7eea36c5545b98
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614141"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052225"
 ---
 # <a name="best-practices-for-assembly-loading"></a>适用于程序集加载的最佳做法
 本文讨论避免类型标识问题的方法，从而避免发生 <xref:System.InvalidCastException>、<xref:System.MissingMethodException> 以及其他错误。 本文讨论以下建议：  
@@ -44,7 +44,7 @@ ms.locfileid: "64614141"
   
 - 加载位置上下文包含从加载程序未搜索的位置加载的程序集。 例如，外接程序可能安装在一个不在应用程序路径下的目录中。 <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>、<xref:System.AppDomain.CreateInstanceFrom%2A?displayProperty=nameWithType> 和 <xref:System.AppDomain.ExecuteAssembly%2A?displayProperty=nameWithType> 都是通过路径加载的方法的示例。  
   
-- 仅反射上下文包含使用 <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> 和 <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A> 方法加载的程序集。 由于无法执行此上下文中的代码，因此在这里不对其进行讨论。 有关详细信息，请参阅[如何：将程序集加载到仅反射上下文中](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)。  
+- 仅反射上下文包含使用 <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> 和 <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A> 方法加载的程序集。 由于无法执行此上下文中的代码，因此在这里不对其进行讨论。 有关详细信息，请参阅[如何：将程序集加载到仅反射上下文中](../reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)。  
   
 - 如果使用反射发出生成了一个瞬态动态程序集，则该程序集不在任何上下文中。 此外，使用 <xref:System.Reflection.Assembly.LoadFile%2A> 方法加载的大多数程序集都是在没有上下文的情况下加载的，并且从字节数组加载的程序集也是在没有上下文的情况下加载的，除非这些程序集的标识（在应用策略后）证实它们位于全局程序集缓存中。  
   

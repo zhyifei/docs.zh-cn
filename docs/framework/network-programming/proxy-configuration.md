@@ -11,12 +11,12 @@ helpviewer_keywords:
 - network, proxy configuration
 - proxies, configuring
 ms.assetid: 353c0a8b-4cee-44f6-8e65-60e286743df9
-ms.openlocfilehash: 328f67c5afe22f336aa6337903b6569fb6ecc359
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1fbfe25b90e810ff96924a2341582ff3f5ee5e5d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623056"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047357"
 ---
 # <a name="proxy-configuration"></a>代理配置
 代理服务器处理客户端对资源的请求。 代理可以从其缓存中返回已请求的资源，或将请求转发到资源驻留的服务器。 代理可以通过减少发送到远程服务器的请求数量来提高网络性能。 代理还可以用于限制对资源的访问。  
@@ -24,7 +24,7 @@ ms.locfileid: "64623056"
 ## <a name="adaptive-proxies"></a>自适应代理  
  在 .NET Framework 中，有两种代理：自适应和静态。 自适应代理会在网络配置更改时调整它们的设置。 例如，如果便携式计算机用户启动拨号网络连接,自适应代理会识别此更改,发现并运行其新配置脚本，然后相应调整其设置。  
   
- 自适应代理是通过配置脚本配置的（请参阅[自动代理检测](../../../docs/framework/network-programming/automatic-proxy-detection.md)）。 脚本针对每个协议生成一组应用程序协议和一个代理。  
+ 自适应代理是通过配置脚本配置的（请参阅[自动代理检测](automatic-proxy-detection.md)）。 脚本针对每个协议生成一组应用程序协议和一个代理。  
   
  网络环境的变化可能要求系统使用一组新代理。 如果网络连接不可用或新的网络连接已初始化，系统必须在新环境中发现相应的配置脚本源并运行新脚本。  
   
@@ -79,4 +79,4 @@ ms.locfileid: "64623056"
 
 - <xref:System.Net.WebProxy>
 - <xref:System.Net.GlobalProxySelection>
-- [自动代理检测](../../../docs/framework/network-programming/automatic-proxy-detection.md)
+- [自动代理检测](automatic-proxy-detection.md)

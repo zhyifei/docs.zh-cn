@@ -12,17 +12,17 @@ helpviewer_keywords:
 ms.assetid: f4f46f9e-8d08-4e66-a94b-0c69c9b0bbfa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ac0b45db0e9aebae830155cbe2469514c392921d
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 4f0828409a8c57baecf7c81fd7a4df6e7844c7ce
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894829"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044323"
 ---
 # <a name="peverifyexe-peverify-tool"></a>Peverify.exe（PEVerify 工具）
 PEVerify 工具有助于生成 Microsoft 中间语言 (MSIL) 的开发人员（如编译器编写者、脚本引擎开发人员等）确定其 MSIL 代码及关联的元数据是否满足类型安全要求。 某些编译器仅当你避免使用某些语言构造时才生成可验证的类型安全代码。 如果你作为开发人员正在使用此类编译器，则可能需要确认你未危害代码的类型安全性。 在这种情况下，你可以对文件运行 PEVerify 工具来检查 MSIL 和元数据。  
   
- 此工具会自动随 Visual Studio 一起安装。 若要运行此工具，请使用 Visual Studio 开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示）。 有关详细信息，请参阅[命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。  
+ 此工具会自动随 Visual Studio 一起安装。 若要运行此工具，请使用 Visual Studio 开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示）。 有关详细信息，请参阅[命令提示](developer-command-prompt-for-vs.md)。  
   
  在命令提示符处，键入以下内容：  
   
@@ -122,7 +122,7 @@ peverify myAssembly.exe /break=100 /ignore@ignoreErrors.rsp
   
 ## <a name="see-also"></a>请参阅
 
-- [工具](../../../docs/framework/tools/index.md)
-- [编写可验证类型安全代码](../../../docs/framework/misc/code-access-security-basics.md#typesafe_code)
+- [工具](index.md)
+- [编写可验证类型安全代码](../misc/code-access-security-basics.md#typesafe_code)
 - [类型安全和安全性](../../standard/security/key-security-concepts.md#type-safety-and-security)
-- [命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [命令提示](developer-command-prompt-for-vs.md)

@@ -19,18 +19,18 @@ helpviewer_keywords:
 ms.assetid: 4c7be9c8-72ae-481f-a01c-1a4716806e99
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 99ffbccca8cd8a719e5571638308e28d494d687a
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 437d2d1bb026795dfa01a4c01ca12acf2b8f5792
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926878"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044665"
 ---
 # <a name="gacutilexe-global-assembly-cache-tool"></a>Gacutil.exe（全局程序集缓存工具）
 
 全局程序集缓存工具使你可以查看和操作全局程序集缓存和下载缓存的内容。
 
-此工具会自动随 Visual Studio 一起安装。 若要运行此工具，请使用 Visual Studio 开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示）。 有关详细信息，请参阅[命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。
+此工具会自动随 Visual Studio 一起安装。 若要运行此工具，请使用 Visual Studio 开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示）。 有关详细信息，请参阅[命令提示](developer-command-prompt-for-vs.md)。
 
 在命令提示符处，键入以下内容：
 
@@ -66,7 +66,7 @@ gacutil [options] [assemblyName | assemblyPath | assemblyListFile]
 |/u assemblyName  |将某个程序集从全局程序集缓存卸载。|
 |/uf assemblyName  |通过移除对程序集的所有引用来强制卸载指定的程序集。<br /><br /> 指定此选项相当于同时指定 /u 和 /f 选项   。 **注意：** 不能使用此选项移除使用 Microsoft Windows Installer 安装的程序集。 如果尝试此操作，则全局程序集缓存工具会显示错误消息。|
 |/ul assemblyListFile  |从全局程序集缓存中卸载 assemblyListFile 中指定的一个或多个程序集  。|
-|/u[ngen] assemblyName   |从全局程序集缓存中卸载指定的程序集。 如果指定的程序集具有现有引用计数，则全局程序集缓存工具会显示引用计数，而且不会从全局程序集缓存中移除该程序集。 **注意：** 在 .NET Framework 2.0 版中，不支持 `/ungen`。 请改为使用 [Ngen.exe（本机映像生成器）](../../../docs/framework/tools/ngen-exe-native-image-generator.md)的 `uninstall` 命令。 <br /><br /> 在 .NET Framework 1.0 和 1.1 版中，指定 /ungen 会导致 Gacutil.exe 从本机映像缓存中移除该程序集  。 此缓存存储了使用 [Ngen.exe（本机映像生成器）](../../../docs/framework/tools/ngen-exe-native-image-generator.md) 创建的程序集的本机印象。|
+|/u[ngen] assemblyName   |从全局程序集缓存中卸载指定的程序集。 如果指定的程序集具有现有引用计数，则全局程序集缓存工具会显示引用计数，而且不会从全局程序集缓存中移除该程序集。 **注意：** 在 .NET Framework 2.0 版中，不支持 `/ungen`。 请改为使用 [Ngen.exe（本机映像生成器）](ngen-exe-native-image-generator.md)的 `uninstall` 命令。 <br /><br /> 在 .NET Framework 1.0 和 1.1 版中，指定 /ungen 会导致 Gacutil.exe 从本机映像缓存中移除该程序集  。 此缓存存储了使用 [Ngen.exe（本机映像生成器）](ngen-exe-native-image-generator.md) 创建的程序集的本机印象。|
 |/ur assemblyName  <br /><br /> scheme <br /><br /> *id*<br /><br /> description |从全局程序集缓存中卸载对指定程序集的引用。 若要移除对程序集的引用，指定的 scheme、id 和 description 参数必须与安装程序集时使用 /i 和 /r（或者 /ir）选项指定的参数相同       。 有关可为这些参数指定的有效值的说明，请从参阅 /r 选项  。<br /><br /> 指定此选项相当于同时指定 /u 和 /r 选项   。|
 |**/?**|显示该工具的命令语法和选项。|
 
@@ -180,7 +180,7 @@ gacutil /l
 
 ## <a name="see-also"></a>请参阅
 
-- [工具](../../../docs/framework/tools/index.md)
-- [全局程序集缓存](../../../docs/framework/app-domains/gac.md)
-- [Regasm.exe（程序集注册工具）](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md)
-- [命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [工具](index.md)
+- [全局程序集缓存](../app-domains/gac.md)
+- [Regasm.exe（程序集注册工具）](regasm-exe-assembly-registration-tool.md)
+- [命令提示](developer-command-prompt-for-vs.md)

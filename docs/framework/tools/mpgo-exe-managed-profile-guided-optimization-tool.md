@@ -10,22 +10,22 @@ helpviewer_keywords:
 ms.assetid: f6976502-a000-4fbe-aaf5-a7aab9ce4ec2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1aa3bbfafb760a3002a218ef52d87957af47c4de
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: e8c9093faa80249a2c5898c1f250e97208764be6
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894839"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044412"
 ---
 # <a name="mpgoexe-managed-profile-guided-optimization-tool"></a>Mpgo.exe（按托管配置文件优化工具）
 
-托管配置文件引导式优化工具 (Mpgo.exe) 是一种命令行工具，使用常见的最终用户方案优化由[本机映像生成器 (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) 创建的本机映像程序集。 利用此工具，你可运行生成配置文件数据的培训方案。 [本机映像生成器 (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) 使用此数据优化其生成的本机映像应用程序程序集。 培训方案是应用程序预期用法的一种试运行。 Mpgo.exe 适用于 Visual Studio Ultimate 2012 及更高版本。 从 Visual Studio 2013 开始，还可以使用 Mpgo.exe 优化 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 应用。  
+托管配置文件引导式优化工具 (Mpgo.exe) 是一种命令行工具，使用常见的最终用户方案优化由[本机映像生成器 (Ngen.exe)](ngen-exe-native-image-generator.md) 创建的本机映像程序集。 利用此工具，你可运行生成配置文件数据的培训方案。 [本机映像生成器 (Ngen.exe)](ngen-exe-native-image-generator.md) 使用此数据优化其生成的本机映像应用程序程序集。 培训方案是应用程序预期用法的一种试运行。 Mpgo.exe 适用于 Visual Studio Ultimate 2012 及更高版本。 从 Visual Studio 2013 开始，还可以使用 Mpgo.exe 优化 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 应用。  
   
 通过收集培训方案的数据并使用它来优化本机映像布局，按配置优化改进了应用程序启动时间、内存利用率（工作集大小）和吞吐量。  
   
 当你遇到与中间语言 (IL) 程序集的启动时间和工作集大小相关的性能问题时，建议你先使用 Ngen.exe 消除实时 (JIT) 编译成本和推动代码共享。 如果你需要更多改进，则可使用 Mpgo.exe 进一步优化应用程序。 你可以使用未优化的本机映像程序集的性能数据作为计算性能提升的基准。 使用 Mpgo.exe 可以获得更短的冷启动时间和更小的工作集大小。 Mpgo.exe 将信息到添加 Ngen.exe 用于创建优化的本机映像程序集的 IL 程序集中。 有关详细信息，请参阅 .NET 博客中的 [Improving Launch Performance for your Desktop Applications](https://go.microsoft.com/fwlink/p/?LinkId=248943)（提高桌面应用程序的启动性能）。  
   
-此工具会自动随 Visual Studio 一起安装。 若要运行此工具，请通过管理员凭据使用 Visual Studio 开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示），并在命令提示符处键入以下命令。 有关详细信息，请参阅[命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。  
+此工具会自动随 Visual Studio 一起安装。 若要运行此工具，请通过管理员凭据使用 Visual Studio 开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示），并在命令提示符处键入以下命令。 有关详细信息，请参阅[命令提示](developer-command-prompt-for-vs.md)。  
   
 对于桌面应用程序：  
   
@@ -128,7 +128,7 @@ mpgo.exe -import "C:\Optimized" -assemblylist "C:\MyApp\MyTax.dll" "C:\MyApp\MyT
   
 ## <a name="see-also"></a>请参阅
 
-- [Ngen.exe（本机映像生成器）](../../../docs/framework/tools/ngen-exe-native-image-generator.md)
-- [命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Ngen.exe（本机映像生成器）](ngen-exe-native-image-generator.md)
+- [命令提示](developer-command-prompt-for-vs.md)
 - [Improving Launch Performance for your Desktop Applications](https://go.microsoft.com/fwlink/p/?LinkId=248943)（提高桌面应用程序的启动性能）
 - [.NET 4.5 中的性能改进概述](https://go.microsoft.com/fwlink/p/?LinkId=249131)

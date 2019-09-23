@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 0a1a3ba3-7e46-4df2-afd3-f3a8237e1c4f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5c71816b1bd2e9c95e8c7efb44e3e689dce4ab93
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: bdd2832f112706cef6050774ce3f6db5a940424a
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70853972"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052085"
 ---
 # <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>如何：获取 .NET Framework 4.5 安装程序的进度
 
@@ -26,7 +26,7 @@ ms.locfileid: "70853972"
 
         `dotNetFx45_Full_x86_x64.exe /q /norestart /pipe section-name`
 
-        其中“section name”是要用来标识应用的任意名称。 .NET Framework 安装程序以异步方式在 MMIO 节进行读写，因此可能会发现在此期间使用事件和消息很方便。 在示例中，.NET Framework 安装进程由分配 MMIO 节 (`TheSectionName`) 和定义事件 (`TheEventName`) 的构造函数创建：
+        其中“section name”  是要用来标识应用的任意名称。 .NET Framework 安装程序以异步方式在 MMIO 节进行读写，因此可能会发现在此期间使用事件和消息很方便。 在示例中，.NET Framework 安装进程由分配 MMIO 节 (`TheSectionName`) 和定义事件 (`TheEventName`) 的构造函数创建：
 
         ```cpp
         Server():ChainerSample::MmioChainer(L"TheSectionName", L"TheEventName")
@@ -36,7 +36,7 @@ ms.locfileid: "70853972"
 
     2. 从 MMIO 节读取。 在 .NET Framework 4.5 中，下载和安装操作是同时进行的：下载 .NET Framework 一部分的同时，可能正在安装另一部分。 因此，进度会以从 0 到 255 递增的两个数字（`m_downloadSoFar` 和 `m_installSoFar`）形式发送回（即写入）MMIO 节。 如果写入 255 且 .NET Framework 存在，则表示安装完成。
 
-- 退出代码。 以下命令中的退出代码用于调用 .NET Framework 4.5 可再发行程序，指示安装是成功还是失败：
+- 退出代码  。 以下命令中的退出代码用于调用 .NET Framework 4.5 可再发行程序，指示安装是成功还是失败：
 
   - 0 - 安装已成功完成。
 
@@ -46,11 +46,11 @@ ms.locfileid: "70853972"
 
   - 所有其他代码 - 安装过程中出现错误；请检查 %temp% 中创建的日志文件，了解详细信息。
 
-- 取消安装。 可随时通过使用 `Abort` 方法在 MMIO 节中设置 `m_downloadAbort` 和 `m_ installAbort` 标志来取消安装。
+- 取消安装  。 可随时通过使用 `Abort` 方法在 MMIO 节中设置 `m_downloadAbort` 和 `m_ installAbort` 标志来取消安装。
 
 ## <a name="chainer-sample"></a>链接器示例
 
-链接器示例以无提示方式启动并跟踪 .NET Framework 4.5 安装程序，同时显示进度。 此示例类似于为 .NET Framework 4 提供的链接器示例。 但是，它还可以通过处理用于关闭 .NET framework 4 应用的消息框来避免系统重启。 有关此消息框的信息，请参阅[在 .NET Framework 4.5 安装期间减少系统重启](../../../docs/framework/deployment/reducing-system-restarts.md)。 可以将此示例与 .NET Framework 4 安装程序结合使用；在这种情况下，不会发送消息。
+链接器示例以无提示方式启动并跟踪 .NET Framework 4.5 安装程序，同时显示进度。 此示例类似于为 .NET Framework 4 提供的链接器示例。 但是，它还可以通过处理用于关闭 .NET framework 4 应用的消息框来避免系统重启。 有关此消息框的信息，请参阅[在 .NET Framework 4.5 安装期间减少系统重启](reducing-system-restarts.md)。 可以将此示例与 .NET Framework 4 安装程序结合使用；在这种情况下，不会发送消息。
 
 > [!WARNING]
 > 必须以管理员身份运行此示例。
@@ -311,5 +311,5 @@ ms.locfileid: "70853972"
 
 ## <a name="see-also"></a>请参阅
 
-- [面向开发人员的部署指南](../../../docs/framework/deployment/deployment-guide-for-developers.md)
-- [部署](../../../docs/framework/deployment/index.md)
+- [面向开发人员的部署指南](deployment-guide-for-developers.md)
+- [部署](index.md)

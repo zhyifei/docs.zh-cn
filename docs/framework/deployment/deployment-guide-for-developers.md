@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8dd7bac8c0cb14421016efad60a7ec0d672e5622
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 2229dca07a3a723babe5bf202ce5ddc0c77a7374
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854020"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052194"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>.NET Framework 部署指南（针对开发人员）
 本主题为想要随自己的应用一起安装任何 .NET Framework 版本（从 .NET Framework 4.5 到 [!INCLUDE[net_current](../../../includes/net-current-version.md)]）的开发人员提供了相关信息。
@@ -53,15 +53,15 @@ ms.locfileid: "70854020"
 
 - 你必须拥有管理员特权才能安装 .NET Framework 4.5 及其单点版本。
 
-- [!INCLUDE[win8](../../../includes/win8-md.md)] 和 [!INCLUDE[winserver8](../../../includes/winserver8-md.md)] 中已经包括 .NET Framework 4.5，因此你不必在这些操作系统上随你的应用一起部署此组件。 同样，[!INCLUDE[win81](../../../includes/win81-md.md)] 和 Windows Server 2012 R2 中也已包括 .NET Framework 4.5.1。 .NET Framework 4.5.2 不包含在任何操作系统中。 .NET Framework 4.6 包括在 Windows 10 中，.NET Framework 4.6.1 包括在 Windows 10 11 月更新中，而 .NET Framework 4.6.2 包括在 Windows 10 周年更新中。  .NET Framework 4.7 包含在 Windows 10 创意者更新中，.NET Framework 4.7.1 包含在 Windows 10 Fall Creators Update 中，.NET Framework 4.7.2 包含在 Windows 10 2018 年 10 月更新和 Windows 10 2018 年 4 月更新中。 .NET Framework 4.8 包含在 Windows 10 2019 年 5 月更新中。 有关硬件和软件要求的完整列表，请参阅[系统要求](../../../docs/framework/get-started/system-requirements.md)。
+- [!INCLUDE[win8](../../../includes/win8-md.md)] 和 [!INCLUDE[winserver8](../../../includes/winserver8-md.md)] 中已经包括 .NET Framework 4.5，因此你不必在这些操作系统上随你的应用一起部署此组件。 同样，[!INCLUDE[win81](../../../includes/win81-md.md)] 和 Windows Server 2012 R2 中也已包括 .NET Framework 4.5.1。 .NET Framework 4.5.2 不包含在任何操作系统中。 .NET Framework 4.6 包括在 Windows 10 中，.NET Framework 4.6.1 包括在 Windows 10 11 月更新中，而 .NET Framework 4.6.2 包括在 Windows 10 周年更新中。  .NET Framework 4.7 包含在 Windows 10 创意者更新中，.NET Framework 4.7.1 包含在 Windows 10 Fall Creators Update 中，.NET Framework 4.7.2 包含在 Windows 10 2018 年 10 月更新和 Windows 10 2018 年 4 月更新中。 .NET Framework 4.8 包含在 Windows 10 2019 年 5 月更新中。 有关硬件和软件要求的完整列表，请参阅[系统要求](../get-started/system-requirements.md)。
 
-- 从 .NET Framework 4.5 开始，你的用户可以在安装过程中查看运行中 .NET Framework 应用的列表并轻松关闭这些应用。 这可能有助于避免系统因安装 .NET Framework 而重新启动。 参见 [减少系统重新启动](../../../docs/framework/deployment/reducing-system-restarts.md)。
+- 从 .NET Framework 4.5 开始，你的用户可以在安装过程中查看运行中 .NET Framework 应用的列表并轻松关闭这些应用。 这可能有助于避免系统因安装 .NET Framework 而重新启动。 参见 [减少系统重新启动](reducing-system-restarts.md)。
 
 - 卸载 .NET Framework 4.5 或其单点版本之一也会删除预先存在的 .NET Framework 4 文件。 若要返回到 .NET Framework 4，你必须重新安装它以及它的任何更新。 （请参阅 [安装 .NET Framework 4](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5a4x27ek(v=vs.100))。）
 
 - .NET Framework 4.5 可再发行组件于 2012 年 10 月 9 日进行了更新，纠正了一个与数字证书中的错误时间戳相关的问题，此问题会导致 Microsoft 生成并签名的文件中的数字签名提前过期。 如果之前安装了日期为 2012 年 8 月 16 日的 .NET framework 4.5 可再发行组件包，则建议使用 [Microsoft 下载中心](https://go.microsoft.com/fwlink/p/?LinkId=245484)中的最新的可再发行组件来更新副本。 有关此问题的更多信息，请参阅 [Microsoft 安全公告 2749655](https://docs.microsoft.com/security-updates/SecurityAdvisories/2012/2749655)。
 
-有关系统管理员可如何在网络中部署 .NET Framework 及其系统依赖项的信息，请参见阅[适用于管理员的部署指南](../../../docs/framework/deployment/guide-for-administrators.md)。
+有关系统管理员可如何在网络中部署 .NET Framework 及其系统依赖项的信息，请参见阅[适用于管理员的部署指南](guide-for-administrators.md)。
 
 ## <a name="deployment-options-for-your-app"></a>应用的部署选项
 
@@ -126,7 +126,7 @@ ClickOnce 部署适用于使用 Visual Basic 和 Visual C# 创建的项目，但
 
 1. 打开要发布的应用项目。
 
-2. 在“解决方案资源管理器”中，打开项目的快捷菜单，然后选择 **“属性”**。
+2. 在“解决方案资源管理器”中，打开项目的快捷菜单，然后选择 **“属性”** 。
 
 3. 选择 **“发布”** 窗格。
 
@@ -136,11 +136,11 @@ ClickOnce 部署适用于使用 Visual Basic 和 Visual C# 创建的项目，但
 
 6. 在必备组件列表中，找到并选择已用于生成项目的.NET Framework 版本。
 
-7. 选择一个选项以指定必备组件的源位置，然后选择 **“确定”**。
+7. 选择一个选项以指定必备组件的源位置，然后选择 **“确定”** 。
 
      如果你提供 .NET Framework 下载位置的 URL，则可以指定 Microsoft 下载中心网站或你自己的网站。 如果要将可再发行组件包放置在自己的服务器上，则它必须为脱机安装程序，而不是 Web 安装程序。 你只能链接到 Microsoft 下载中心上的 Web 安装程序。 该 URL 还可以指定一个用于分发你的应用的磁盘。
 
-8. 在 **“属性页”** 对话框中，选择 **“确定”**。
+8. 在 **“属性页”** 对话框中，选择 **“确定”** 。
 
 <a name="installaware"></a>
 
@@ -152,19 +152,19 @@ InstallAware 从单个源生成 Windows 应用 (APPX)、Windows Installer (MSI)�
 
 在 Visual Studio 中，若要选择 InstallShield 部署并添加对 .NET Framework 的依赖项：
 
-1. 在 Visual Studio 菜单栏上，依次选择 **“文件”**、 **“新建”** 和 **“项目”**。
+1. 在 Visual Studio 菜单栏上，依次选择 **“文件”** 、 **“新建”** 和 **“项目”** 。
 
-2. 在 **“新建项目”** 对话框的左窗格中，依次选择 **“其他项目类型”**、 **“安装和部署”**、 **“InstallShield LE”**。
+2. 在 **“新建项目”** 对话框的左窗格中，依次选择 **“其他项目类型”** 、 **“安装和部署”** 、 **“InstallShield LE”** 。
 
-3. 在 **“名称”** 框中，键入你的项目名称，然后选择 **“确定”**。
+3. 在 **“名称”** 框中，键入你的项目名称，然后选择 **“确定”** 。
 
-4. 如果你是首次创建安装和部署项目，请选择“转到 InstallShield”或“启用 InstallShield Limited Edition”，以下载你的 Microsoft Visual Studio 版本对应的 InstallShield Limited Edition。 重新启动 Visual Studio。
+4. 如果你是首次创建安装和部署项目，请选择“转到 InstallShield”  或“启用 InstallShield Limited Edition”  ，以下载你的 Microsoft Visual Studio 版本对应的 InstallShield Limited Edition。 重新启动 Visual Studio。
 
 5. 转到 **“项目助手”** 向导，选择 **“应用程序文件”** 以添加项目输出。 你可以使用此向导配置其他项目特性。
 
 6. 转到 **“安装要求”** ，选择要安装的操作系统和 .NET Framework 的版本。
 
-7. 打开安装项目的快捷菜单，然后选择 **“生成”**。
+7. 打开安装项目的快捷菜单，然后选择 **“生成”** 。
 
 <a name="wix"></a>
 
@@ -233,7 +233,7 @@ Windows Installer XML (WiX) 工具集通过 XML 源代码生成 Windows 安装�
 
 如果具有自定义安装包，你可能希望静默启动和跟踪 .NET Framework 安装过程，同时显示自己的安装进度视图。 这种情况下，请确保你的代码涵盖以下操作：
 
-- 检查 [.NET Framework 硬件和软件要求](../../../docs/framework/get-started/system-requirements.md)。
+- 检查 [.NET Framework 硬件和软件要求](../get-started/system-requirements.md)。
 
 - [检测](#detect_net) 用户计算机中是否已安装 .NET Framework 的正确版本。
 
@@ -242,7 +242,7 @@ Windows Installer XML (WiX) 工具集通过 XML 源代码生成 Windows 安装�
 
 - [检测](#detecting-the-language-packs) 用户计算机中是否已安装语言包。
 
-- 如果要控制部署，则静默启动并跟踪 .NET Framework 安装过程（请参阅[如何：获取 .NET Framework 4.5 安装程序的进度](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)。
+- 如果要控制部署，则静默启动并跟踪 .NET Framework 安装过程（请参阅[如何：获取 .NET Framework 4.5 安装程序的进度](how-to-get-progress-from-the-dotnet-installer.md)。
 
 - 如果要部署脱机安装程序，则 [单独链接语言包](#chain_langpack)。
 
@@ -284,7 +284,7 @@ Windows Installer XML (WiX) 工具集通过 XML 源代码生成 Windows 安装�
 
 ### <a name="detecting-the-language-packs"></a>检测语言包
 
-可以测试是否已安装特定语言包，方法是在注册表的 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\\LCID 文件夹内查找名为 `Release` 的 DWORD 值。 （请注意，“NET Framework Setup”不以句点开头。）LCID 指定一个区域设置标识符；有关这些标识符的列表，请参阅[支持的语言](#supported-languages)。
+可以测试是否已安装特定语言包，方法是在注册表的 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\\LCID 文件夹内查找名为 `Release` 的 DWORD 值  。 （请注意，“NET Framework Setup”不以句点开头。）LCID 指定一个区域设置标识符；有关这些标识符的列表，请参阅[支持的语言](#supported-languages)  。
 
 例如，若要检测是否安装了完整的日语语言包 (LCID=1041)，请在注册表中检索以下命名值：
 
@@ -370,7 +370,7 @@ Windows Installer XML (WiX) 工具集通过 XML 源代码生成 Windows 安装�
 
 ## <a name="uninstalling-the-net-framework"></a>卸载 .NET Framework
 
-从 [!INCLUDE[win8](../../../includes/win8-md.md)] 开始，你可以使用“控制面板”中的“打开或关闭 Windows 功能”来卸载 .NET Framework 4.5 或其中一个单点版本。 在旧版本 Windows 中，你可以使用“控制面板”中的“添加或删除程序”来卸载 .NET Framework 4.5 或其中一个单点版本。
+从 [!INCLUDE[win8](../../../includes/win8-md.md)] 开始，你可以使用“控制面板”中的“打开或关闭 Windows 功能”  来卸载 .NET Framework 4.5 或其中一个单点版本。 在旧版本 Windows 中，你可以使用“控制面板”中的“添加或删除程序”  来卸载 .NET Framework 4.5 或其中一个单点版本。
 
 > [!IMPORTANT]
 > 对于 Windows 7 和更低版本的操作系统，卸载 .NET Framework 4.5.1、4.5.2、4.6、4.6.1、4.6.2、4.7、4.7.1、4.7.2 或 4.8 不会还原 .NET Framework 4.5 文件，卸载 .NET Framework 4.5 不会还原 .NET Framework 4 文件。 如果要回到旧版本，你必须重新安装此版本及其任何更新。
@@ -384,7 +384,7 @@ Windows Installer XML (WiX) 工具集通过 XML 源代码生成 Windows 安装�
 |选项|说明|
 |------------|-----------------|
 |**/CEIPConsent**|覆盖默认行为并向 Microsoft 发送匿名反馈以改善将来的部署体验。 仅当安装程序询问你是否同意安装并且用户授权向 Microsoft 发送匿名反馈时，才可以使用此选项。|
-|**/chainingpackage** `packageName`|指定执行链接的可执行文件的名称。 向 Microsoft 发送此信息作为匿名反馈以帮助改进将来的部署体验。<br /><br /> 如果包名称包含空格，则可以用双引号作为分隔符；例如： **/chainingpackage "Lucerne Publishing"**。 有关链接包的示例，请参阅 MSDN 库中的 [从安装包获取进度信息](https://go.microsoft.com/fwlink/?LinkId=181926) 。|
+|**/chainingpackage** `packageName`|指定执行链接的可执行文件的名称。 向 Microsoft 发送此信息作为匿名反馈以帮助改进将来的部署体验。<br /><br /> 如果包名称包含空格，则可以用双引号作为分隔符；例如： **/chainingpackage "Lucerne Publishing"** 。 有关链接包的示例，请参阅 MSDN 库中的 [从安装包获取进度信息](https://go.microsoft.com/fwlink/?LinkId=181926) 。|
 |**/LCID**  `LCID`<br /><br /> 其中 `LCID` 指定一个区域设置标识符（请参见 [支持的语言](#supported-languages)）|安装由 `LCID` 指定的语言包，并强制使用此语言显示 UI（除非设置为安静模式）。<br /><br /> 对于 Web 安装程序，此选项将从 Web 链接并安装语言包。 **注意：** 只能随 Web 安装程序一起使用此选项。|
 |**/log** `file` &#124; `folder`|指定日志文件的位置。 默认为过程的临时文件夹，默认文件名基于安装包。 如果文件扩展名为 .txt，则生成文本日志。 如果指定其他扩展名或不指定扩展名，则创建 HTML 日志。|
 |**/msioptions**|指定要为 .msi 和 .msp 项传递的选项；例如： `/msioptions "PROPERTY1='Value'"`。|
@@ -431,9 +431,9 @@ Windows Installer XML (WiX) 工具集通过 XML 源代码生成 Windows 安装�
 
 ## <a name="see-also"></a>请参阅
 
-- [面向管理员的部署指南](../../../docs/framework/deployment/guide-for-administrators.md)
-- [系统要求](../../../docs/framework/get-started/system-requirements.md)
-- [安装面向开发者的 .NET Framework](../../../docs/framework/install/guide-for-developers.md)
-- [安装和卸载 .NET Framework 受阻疑难解答](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)
-- [在 .NET Framework 4.5 安装期间减少系统重新启动次数](../../../docs/framework/deployment/reducing-system-restarts.md)
-- [如何：获取 .NET Framework 4.5 安装程序的进度](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)
+- [面向管理员的部署指南](guide-for-administrators.md)
+- [系统要求](../get-started/system-requirements.md)
+- [安装面向开发者的 .NET Framework](../install/guide-for-developers.md)
+- [安装和卸载 .NET Framework 受阻疑难解答](../install/troubleshoot-blocked-installations-and-uninstallations.md)
+- [在 .NET Framework 4.5 安装期间减少系统重新启动次数](reducing-system-restarts.md)
+- [如何：获取 .NET Framework 4.5 安装程序的进度](how-to-get-progress-from-the-dotnet-installer.md)

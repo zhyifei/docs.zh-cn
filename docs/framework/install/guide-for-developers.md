@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: de7df6ae2d6463d05d1680c288dd202edc639b09
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8902f9a6f37ab45929e147af5f899ef49c4a42b0
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949123"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051947"
 ---
 # <a name="install-the-net-framework-for-developers"></a>安装面向开发人员的 .NET Framework
 
@@ -28,7 +28,7 @@ ms.locfileid: "69949123"
 
 [!INCLUDE[net-framework-4-versions](../../../includes/net-framework-4x-versions.md)]
 
-有关 .NET Framework 版本及如何确定计算机上安装版本的详细信息，请参阅[版本和依赖项](../migration-guide/versions-and-dependencies.md)和[如何：确定已安装的 .NET Framework 版本](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)。
+有关 .NET Framework 版本及如何确定计算机上安装版本的详细信息，请参阅[版本和依赖项](../migration-guide/versions-and-dependencies.md)和[如何：确定已安装的 .NET Framework 版本](../migration-guide/how-to-determine-which-versions-are-installed.md)。
 
 > [!NOTE]
 > 有关 .NET Framework 3.5 的信息，请参阅[在 Windows 10、Windows 8.1 和 Windows 8 上安装 .NET Framework 3.5](dotnet-35-windows-10.md)。
@@ -227,7 +227,7 @@ Web 和脱机安装程序均针对基于 x86 和 x64 的计算机而设计（请
 
 - 如果不熟悉 .NET Framework，请参阅[概述](../get-started/overview.md)以大致了解关键概念和组件。
 
-- 有关 .NET Framework 4.5 及所有更高版本中的新功能和改进，请参阅[新增功能](../../../docs/framework/whats-new/index.md)。
+- 有关 .NET Framework 4.5 及所有更高版本中的新功能和改进，请参阅[新增功能](../whats-new/index.md)。
 
 - 有关使用应用部署 .NET Framework 的详细信息，请参阅[面向开发人员的部署指南](../deployment/deployment-guide-for-developers.md)。
 

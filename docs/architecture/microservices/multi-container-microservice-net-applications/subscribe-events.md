@@ -2,12 +2,12 @@
 title: 订阅事件
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 了解发布和订阅集成事件的详细信息。
 ms.date: 10/02/2018
-ms.openlocfilehash: c0eaacce51b186191431bf827bb84d3a2d2b7b1f
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: ac9715c7c282be845e1e47516d06945c31f70209
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675864"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71039781"
 ---
 # <a name="subscribing-to-events"></a>订阅事件
 
@@ -301,8 +301,8 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 
 ### <a name="additional-resources"></a>其他资源
 
-- **遵循消息幂等性** <br/>
-    <https://docs.microsoft.com/previous-versions/msp-n-p/jj591565(v=pandp.10)#honoring-message-idempotency>
+- **遵循消息幂等性**  
+  <https://docs.microsoft.com/previous-versions/msp-n-p/jj591565(v=pandp.10)#honoring-message-idempotency>
 
 ## <a name="deduplicating-integration-event-messages"></a>删除重复的集成事件消息
 

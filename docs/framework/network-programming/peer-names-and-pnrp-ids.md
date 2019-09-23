@@ -2,12 +2,12 @@
 title: 对等名称和 PNRP ID
 ms.date: 03/30/2017
 ms.assetid: afa538e8-948f-4a98-aa9f-305134004115
-ms.openlocfilehash: 8cdd5151d029436d11c78806cf7673861cc0d8a4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 15b74317507f69d2339a2e5e49b54ae72cda1a7b
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623121"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047505"
 ---
 # <a name="peer-names-and-pnrp-ids"></a>对等名称和 PNRP ID
 对等名称代表通信的终结点，可以是计算机、用户、组、服务或者任何与对等有关的、可以解析为 IPv6 地址的事物。 对等名称解析协议 (PNRP) 将统计学上唯一的对等名称用于创建标识云成员的 PNRP ID。  
@@ -20,11 +20,11 @@ ms.locfileid: "64623121"
  安全对等名称仅由其所有者注册，并使用公钥加密进行保护。 安全对等名称被视为属于拥有相应私钥的对等实体。 可以通过使用私钥签名的认证对等地址 (CPA) 验证所有权。 恶意用户没有相应的私钥，无法伪造对等名称的所有权。  
   
 ## <a name="pnrp-ids"></a>PNRP ID  
- ![PNRP ID](../../../docs/framework/network-programming/media/fdc9e8a0-4a1c-488d-a019-bc3a1973220c.gif "fdc9e8a0-4a1c-488d-a019-bc3a1973220c")  
+ ![PNRP ID](./media/fdc9e8a0-4a1c-488d-a019-bc3a1973220c.gif "fdc9e8a0-4a1c-488d-a019-bc3a1973220c")  
   
  PNRP ID 由以下内容组成：  
   
-- 高序位 128 位，也就是对等 (P2P) ID，是分配至终结点的对等名称的哈希代码。 对等名称采用以下格式：*Authority.Classifier*。 对于安全名称，Authority 是对等名称公钥的安全哈希算法 1 (SHA1) 的哈希代码，是十六进制字符。 对于不安全名称，Authority 为单字符“0”。  是标识应用程序的字符串。 对等名称 Classifier 最多长 149 个字符，包括 `null` 终止符在内。  
+- 高序位 128 位，也就是对等 (P2P) ID，是分配至终结点的对等名称的哈希代码。 对等名称采用以下格式：*Authority.Classifier*。 对于安全名称，  Authority 是对等名称公钥的安全哈希算法 1 (SHA1) 的哈希代码，是十六进制字符。 对于不安全名称，Authority 为单字符“0”。   是标识应用程序的字符串。 对等名称 Classifier 最多长 149 个字符，包括 `null` 终止符在内。  
   
 - 低序位 128 位用于服务定位，它是标识同一云中同一 P2P ID 的不同实例的生成数字。  
   

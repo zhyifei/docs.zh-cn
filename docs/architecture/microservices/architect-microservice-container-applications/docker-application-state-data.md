@@ -2,12 +2,12 @@
 title: Docker 应用程序中的状态和数据
 description: Docker 应用程序中的状态和数据管理。 微服务实例是可消耗的，但数据不是，本文介绍如何使用微服务处理这一问题。
 ms.date: 09/20/2018
-ms.openlocfilehash: 9d7b0ff0e73267c6b80be2f1c956c3b4eae140e2
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: bd0ac007479dcd51f2c639881273b81d1fd8b6d7
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68673124"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71039584"
 ---
 # <a name="state-and-data-in-docker-applications"></a>Docker 应用程序中的状态和数据
 
@@ -47,7 +47,7 @@ ms.locfileid: "68673124"
 
 如图 4-5 所示，常规 Docker 卷可以存储在容器本身之外，但是在主机服务器或 VM 的物理边界内。 但是，Docker 容器无法从一个主机服务器或 VM 访问另一个主机服务器或 VM 的卷。 换而言之，如果使用这些卷，那么不能管理在不同 Docker 主机上运行的容器之间共享的数据，尽管可通过支持远程主机的卷驱动程序来实现这一功能。
 
-![卷可在容器之间共享，但仅限于同一台主机，除非使用支持远程主机的远程驱动程序。 ](./media/image5.png)
+![卷可在容器之间共享，但仅限于同一台主机，除非使用支持远程主机的远程驱动程序。](./media/image5.png)
 
 **图 4-5**。 基于容器的应用程序的卷和外部数据源
 

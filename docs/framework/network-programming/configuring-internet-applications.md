@@ -21,17 +21,17 @@ helpviewer_keywords:
 - network resources, configuring Internet applications
 - Internet, default proxy
 ms.assetid: bb707c72-eed2-4a82-8800-c9e68df2fd4f
-ms.openlocfilehash: ddc4717c873e65311a8502e66f3edaf39dd89ff9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: ee4dc87383153ae4e8df0a3bed7cce5220e65405
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59133797"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048635"
 ---
 # <a name="configuring-internet-applications"></a>配置 Internet 应用程序
-[\<System.Net > 元素（网络设置）](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)配置元素包含应用程序的网络配置信息。 使用 [\<system.Net> 元素（网络设置）](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)元素，可以设置代理服务器，设置连接管理参数，包括自定义应用程序内的身份验证和请求模块。  
+[\<System.Net > 元素（网络设置）](../configure-apps/file-schema/network/system-net-element-network-settings.md)配置元素包含应用程序的网络配置信息。 使用 [\<system.Net> 元素（网络设置）](../configure-apps/file-schema/network/system-net-element-network-settings.md)元素，可以设置代理服务器，设置连接管理参数，包括自定义应用程序内的身份验证和请求模块。  
   
- [\<defaultProxy>元素（网络设置）](../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)元素定义 `GlobalProxySelection` 类返回的代理服务器。 任何没有自身 <xref:System.Net.HttpWebRequest.Proxy%2A> 属性的 <xref:System.Net.HttpWebRequest> 都设置为使用默认代理的特定值。 除了设置代理地址外，还可以创建不使用代理的服务器地址列表，并指示不应将代理用于本地地址。  
+ [\<defaultProxy>元素（网络设置）](../configure-apps/file-schema/network/defaultproxy-element-network-settings.md)元素定义 `GlobalProxySelection` 类返回的代理服务器。 任何没有自身 <xref:System.Net.HttpWebRequest.Proxy%2A> 属性的 <xref:System.Net.HttpWebRequest> 都设置为使用默认代理的特定值。 除了设置代理地址外，还可以创建不使用代理的服务器地址列表，并指示不应将代理用于本地地址。  
   
  请注意，Microsoft Internet Explorer 设置与配置设置相结合，并且后者具有优先级。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "59133797"
 </configuration>  
 ```  
   
- 使用 [\<connectionManagement>元素（网络设置）](../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md)元素来配置可与特定服务器或其他所有服务器进行的持久连接数。 下面的示例将应用程序配置为使用 2 个与服务器 `www.contoso.com` 的持久连接，4 个与 IP 地址为 192.168.1.2 的服务器的持久连接，以及 1 个与其他所有服务器的持久连接。  
+ 使用 [\<connectionManagement>元素（网络设置）](../configure-apps/file-schema/network/connectionmanagement-element-network-settings.md)元素来配置可与特定服务器或其他所有服务器进行的持久连接数。 下面的示例将应用程序配置为使用 2 个与服务器 `www.contoso.com` 的持久连接，4 个与 IP 地址为 192.168.1.2 的服务器的持久连接，以及 1 个与其他所有服务器的持久连接。  
   
 ```xml  
 <configuration>  
@@ -68,7 +68,7 @@ ms.locfileid: "59133797"
 </configuration>  
 ```  
   
- 自定义身份验证模块已配置 [\<authenticationModules>元素（网络设置）](../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)元素。 自定义身份验证模块应实现 <xref:System.Net.IAuthenticationModule> 接口。  
+ 自定义身份验证模块已配置 [\<authenticationModules>元素（网络设置）](../configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)元素。 自定义身份验证模块应实现 <xref:System.Net.IAuthenticationModule> 接口。  
   
  下面的示例配置自定义身份验证模块。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "59133797"
 </configuration>  
 ```  
   
- 可以使用 [\<webRequestModules> 元素（网络设置）](../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)元素将应用程序配置为使用自定义协议特定的模块，以请求 Internet 资源中的信息。 指定的模块应实现 <xref:System.Net.IWebRequestCreate> 接口。 可在配置文件中指定自定义模块来替代默认 HTTP、HTTPS 和文件请求模块，如下例所示。  
+ 可以使用 [\<webRequestModules> 元素（网络设置）](../configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)元素将应用程序配置为使用自定义协议特定的模块，以请求 Internet 资源中的信息。 指定的模块应实现 <xref:System.Net.IWebRequestCreate> 接口。 可在配置文件中指定自定义模块来替代默认 HTTP、HTTPS 和文件请求模块，如下例所示。  
   
 ```xml  
 <configuration>  
@@ -99,6 +99,6 @@ ms.locfileid: "59133797"
   
 ## <a name="see-also"></a>请参阅
 
-- [.NET Framework 中的网络编程](../../../docs/framework/network-programming/index.md)
-- [网络设置架构](../../../docs/framework/configure-apps/file-schema/network/index.md)
-- [\<system.Net> 元素（网络设置）](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)
+- [.NET Framework 中的网络编程](index.md)
+- [网络设置架构](../configure-apps/file-schema/network/index.md)
+- [\<system.Net> 元素（网络设置）](../configure-apps/file-schema/network/system-net-element-network-settings.md)

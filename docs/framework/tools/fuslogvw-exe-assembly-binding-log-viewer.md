@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e32fa443-0778-4cc3-bf36-5c8ea297d296
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dd27bebdc71c70226a61ad8d912135e0e1671dd8
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 6077acab533ecb755ae42b7c4359a6c77ff33449
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70851255"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044682"
 ---
 # <a name="fuslogvwexe-assembly-binding-log-viewer"></a>Fuslogvw.exe（程序集绑定日志查看器）
 
@@ -25,7 +25,7 @@ ms.locfileid: "70851255"
 > [!IMPORTANT]
 > 你必须使用管理员特权运行 fuslogvw.exe。
 
-此工具会自动随 Visual Studio 一起安装。 若要运行此工具，请通过管理员凭据使用 Visual Studio 开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示）。 有关详细信息，请参阅[命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。
+此工具会自动随 Visual Studio 一起安装。 若要运行此工具，请通过管理员凭据使用 Visual Studio 开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示）。 有关详细信息，请参阅[命令提示](developer-command-prompt-for-vs.md)。
 
 在命令提示符处，键入以下内容：
 
@@ -60,7 +60,7 @@ fuslogvw
 
     - 已经应用的任何应用程序、发行者或管理员版本策略的说明。
 
-    - 是否已在[全局程序集缓存](../../../docs/framework/app-domains/gac.md)中找到了该程序集。
+    - 是否已在[全局程序集缓存](../app-domains/gac.md)中找到了该程序集。
 
     - 所有探测 URL 的列表。
 
@@ -122,7 +122,7 @@ LOG: All probing URLs attempted and failed.
 
 ## <a name="binding-logs-for-native-images"></a>本机映像的绑定日志
 
-默认情况下，Fuslogvw.exe 将记录普通的程序集绑定请求。 此外，还可以记录使用 [Ngen.exe（本机映像生成器）](../../../docs/framework/tools/ngen-exe-native-image-generator.md)创建的本机映像的程序集绑定。
+默认情况下，Fuslogvw.exe 将记录普通的程序集绑定请求。 此外，还可以记录使用 [Ngen.exe（本机映像生成器）](ngen-exe-native-image-generator.md)创建的本机映像的程序集绑定。
 
 #### <a name="to-log-assembly-binds-for-native-images"></a>记录本机映像的程序集绑定
 
@@ -218,7 +218,7 @@ Discarding native image.
 2. 在“自定义日志路径”文本框中输入路径  。
 
 > [!NOTE]
-> [程序集绑定日志查看器 (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) 使用 Internet Explorer (IE) 缓存来存储其绑定日志。 由于 IE 缓存中偶尔会出现损坏，因此[程序集绑定日志查看器 (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) 有时会停止在查看窗口中显示新的绑定日志。 受此损坏的影响，.NET 绑定基础结构（合成）将无法写入或读取绑定日志。 （如果使用自定义日志路径，则不会遇到此问题。）若要修复损坏并允许合成再次显示绑定日志，请通过在 IE 的“Internet 选项”对话框中删除临时的 Internet 文件来清除 IE 缓存。
+> [程序集绑定日志查看器 (Fuslogvw.exe)](fuslogvw-exe-assembly-binding-log-viewer.md) 使用 Internet Explorer (IE) 缓存来存储其绑定日志。 由于 IE 缓存中偶尔会出现损坏，因此[程序集绑定日志查看器 (Fuslogvw.exe)](fuslogvw-exe-assembly-binding-log-viewer.md) 有时会停止在查看窗口中显示新的绑定日志。 受此损坏的影响，.NET 绑定基础结构（合成）将无法写入或读取绑定日志。 （如果使用自定义日志路径，则不会遇到此问题。）若要修复损坏并允许合成再次显示绑定日志，请通过在 IE 的“Internet 选项”对话框中删除临时的 Internet 文件来清除 IE 缓存。
 >
 > 如果非托管应用程序通过实现 `IHostAssemblyManager` 和 `IHostAssemblyStore` 接口承载公共语言运行时，则不能将日志条目存储在 wininet 缓存中。  若要查看实现这些接口的自定义宿主的日志条目，你必须指定替代日志路径。
 
@@ -234,7 +234,7 @@ Discarding native image.
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.TypeLoadException>
-- [工具](../../../docs/framework/tools/index.md)
-- [全局程序集缓存](../../../docs/framework/app-domains/gac.md)
-- [运行时如何定位程序集](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
-- [命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [工具](index.md)
+- [全局程序集缓存](../app-domains/gac.md)
+- [运行时如何定位程序集](../deployment/how-the-runtime-locates-assemblies.md)
+- [命令提示](developer-command-prompt-for-vs.md)

@@ -15,24 +15,24 @@ helpviewer_keywords:
 ms.assetid: 7e953b43-1374-4bbc-814f-53ca1b6b52bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d13c2d2cc391e61c8ed764c26e5e5b5e7ea2a3bb
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 716513bdcf3ac1b8a2b2b29b23a8dc25a86a0d1c
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70851382"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044812"
 ---
 # <a name="certmgrexe-certificate-manager-tool"></a>Certmgr.exe（证书管理器工具）
 证书管理器工具 (Certmgr.exe) 管理证书、证书信任列表 (CTL) 和证书吊销列表 (CRL)。  
   
- 安装 Visual Studio 时，将会自动安装证书管理器。 若要启动该工具，请使用[命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。  
+ 安装 Visual Studio 时，将会自动安装证书管理器。 若要启动该工具，请使用[命令提示](developer-command-prompt-for-vs.md)。  
   
 > [!NOTE]
 > 证书管理器工具 (Certmgr.exe) 是命令行实用程序，而“证书”(Certmgr.msc) 则是 Microsoft 管理控制台 (MMC) 管理单元。 由于 Certmgr.msc 通常位于 Windows 系统目录中，因此在命令行上输入 `certmgr` 可加载“证书”MMC 管理单元（即使已打开 Visual Studio 开发人员命令提示）。 出现这种情况的原因是，在 PATH 环境变量中，“证书”管理单元的路径出现在证书管理器工具的路径之前。 如果你遇到此问题，则可以通过指定可执行文件的路径来执行 Certmgr.exe 命令。  
   
- 此工具会自动随 Visual Studio 一起安装。 若要运行此工具，请使用 Visual Studio 开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示）。 有关详细信息，请参阅[命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。  
+ 此工具会自动随 Visual Studio 一起安装。 若要运行此工具，请使用 Visual Studio 开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示）。 有关详细信息，请参阅[命令提示](developer-command-prompt-for-vs.md)。  
   
- 有关 X.509 证书的概述，请参阅[使用证书](../../../docs/framework/wcf/feature-details/working-with-certificates.md)。  
+ 有关 X.509 证书的概述，请参阅[使用证书](../wcf/feature-details/working-with-certificates.md)。  
   
  在命令提示符处，键入以下内容：  
   
@@ -92,7 +92,7 @@ ms.locfileid: "70851382"
  [!code-csharp[Tools.CertMgr#1](../../../samples/snippets/csharp/VS_Snippets_CLR/tools.certmgr/cs/storenames1.cs#1)]
  [!code-vb[Tools.CertMgr#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/tools.certmgr/vb/storenames1.vb#1)]  
   
- 有关证书的详细信息，请参阅[使用证书](../../../docs/framework/wcf/feature-details/working-with-certificates.md)。  
+ 有关证书的详细信息，请参阅[使用证书](../wcf/feature-details/working-with-certificates.md)。  
   
 ## <a name="examples"></a>示例  
  下面的命令显示一个名为 `my` 且包含详细输出的默认系统存储。  
@@ -139,6 +139,6 @@ certmgr /put /c /s my newFile
   
 ## <a name="see-also"></a>请参阅
 
-- [工具](../../../docs/framework/tools/index.md)
+- [工具](index.md)
 - [Makecert.exe（证书创建工具）](/windows/desktop/SecCrypto/makecert)
-- [命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [命令提示](developer-command-prompt-for-vs.md)

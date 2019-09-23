@@ -17,12 +17,12 @@ helpviewer_keywords:
 - protocols, sockets
 - Internet, sockets
 ms.assetid: 813489a9-3efd-41b6-a33f-371d55397676
-ms.openlocfilehash: 58c9e0846e09774d8c97089016086ecddd2d17ee
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 11ed53a4e51ba6993fd4e240116b0e1de910a01e
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938402"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047048"
 ---
 # <a name="using-an-asynchronous-server-socket"></a>使用异步服务器套接字
 异步服务器套接字使用 .NET Framework 异步编程模型处理网络服务请求。 <xref:System.Net.Sockets.Socket> 类遵循标准 .NET Framework 异步命名模式；例如，同步 <xref:System.Net.Sockets.Socket.Accept%2A> 方法对应于异步 <xref:System.Net.Sockets.Socket.BeginAccept%2A> 和 <xref:System.Net.Sockets.Socket.EndAccept%2A> 方法。  
@@ -270,7 +270,7 @@ public static void ReadCallback(IAsyncResult ar)
   
 ## <a name="see-also"></a>请参阅
 
-- [使用同步服务器套接字](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)
-- [异步服务器套接字示例](../../../docs/framework/network-programming/asynchronous-server-socket-example.md)
+- [使用同步服务器套接字](using-a-synchronous-server-socket.md)
+- [异步服务器套接字示例](asynchronous-server-socket-example.md)
 - [线程处理](../../standard/threading/index.md)
-- [使用套接字侦听](../../../docs/framework/network-programming/listening-with-sockets.md)
+- [使用套接字侦听](listening-with-sockets.md)

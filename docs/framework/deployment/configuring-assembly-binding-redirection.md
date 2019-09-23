@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: d266cbd8-bf91-41d1-baf0-afbc481a741f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d3424e7a412a79266d3bd9f20061ff4a0cd89115
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7e2add2756106234227c7b2dd62ae107adc58854
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965760"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052184"
 ---
 # <a name="configuring-assembly-binding-redirection"></a>配置程序集绑定重定向
-默认情况下，应用程序使用一组 .NET Framework 程序集，该程序集随用于编译该应用程序的运行时版本一起提供。 可以使用应用程序配置文件中 [\<assemblyBinding>](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) 元素上的 appliesTo 特性，将程序集绑定引用重定向到 .NET Framework 程序集的特定版本  。 此可选特性用 .NET Framework 版本号来指示它应用于哪个版本。 如果没有指定 appliesTo 特性，\<assemblyBinding> 元素将适用于 .NET Framework 的所有版本   。  
+默认情况下，应用程序使用一组 .NET Framework 程序集，该程序集随用于编译该应用程序的运行时版本一起提供。 可以使用应用程序配置文件中 [\<assemblyBinding>](../configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) 元素上的 appliesTo 特性，将程序集绑定引用重定向到 .NET Framework 程序集的特定版本  。 此可选特性用 .NET Framework 版本号来指示它应用于哪个版本。 如果没有指定 appliesTo 特性，\<assemblyBinding> 元素将适用于 .NET Framework 的所有版本   。  
   
  在 .NET Framework 1.1 版中引入了 appliesTo 特性，而在 .NET Framework 1.0 版中则忽略了此特性  。 这意味着，即使指定了 appliesTo 特性，在使用 .NET Framework 1.0 版时所有的 \<assemblyBinding> 元素也都适用   。  
   
@@ -55,8 +55,8 @@ ms.locfileid: "69965760"
 ## <a name="debugging-configuration-file-errors"></a>调试配置文件错误  
  一旦创建了应用程序域，运行时就会分析配置文件并将代码加载到该应用程序域中。 公共语言运行时通过忽略条目来处理配置文件中的错误。 如果配置文件含有格式不正确的 XML，则运行时将忽略整个配置文件。 对于无效的 XML，仅忽略无效的部分。  
   
- 可以通过确定是否正在发生程序集绑定重定向来确定是否正在使用某个配置文件。 使用[程序集绑定日志查看器 (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) 查看正在加载哪些程序集。 若要查看所有的程序集绑定，必须在注册表中设置 ForceLog 的条目  。  
+ 可以通过确定是否正在发生程序集绑定重定向来确定是否正在使用某个配置文件。 使用[程序集绑定日志查看器 (Fuslogvw.exe)](../tools/fuslogvw-exe-assembly-binding-log-viewer.md) 查看正在加载哪些程序集。 若要查看所有的程序集绑定，必须在注册表中设置 ForceLog 的条目  。  
   
 ## <a name="see-also"></a>请参阅
 
-- [如何：启用和禁用自动绑定重定向](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)
+- [如何：启用和禁用自动绑定重定向](../configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)

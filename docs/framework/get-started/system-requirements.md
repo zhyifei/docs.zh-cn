@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 298275e2-da1d-4618-9f74-6a3567832350
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bed0084fd576ba9b9f9eeb51e9e2466938e43490
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 6f867b53f168a394515a1b1eaa6575a72dfb8d91
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106511"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052016"
 ---
 # <a name="net-framework-system-requirements"></a>.NET Framework 系统要求
 
@@ -34,7 +34,7 @@ ms.locfileid: "70106511"
 
 [!INCLUDE[net-framework-4-versions](../../../includes/net-framework-4x-versions.md)]
 
-有关下载信息和链接，请参阅[安装面向开发者的 .NET Framework](../../../docs/framework/install/guide-for-developers.md)。
+有关下载信息和链接，请参阅[安装面向开发者的 .NET Framework](../install/guide-for-developers.md)。
 
 有关 .NET Framework 版本的支持生命周期的信息，请参阅 [Microsoft 支持生命周期](https://support.microsoft.com/lifecycle/search?sort=PN&alpha=Microsoft%20.NET%20Framework&Filter=FilterNO)。
 
@@ -112,6 +112,6 @@ ms.locfileid: "70106511"
 
 ## <a name="see-also"></a>请参阅
 
-- [安装指南](../../../docs/framework/install/index.md)
-- [入门](../../../docs/framework/get-started/index.md)
-- [安装和卸载 .NET Framework 受阻疑难解答](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)
+- [安装指南](../install/index.md)
+- [入门](index.md)
+- [安装和卸载 .NET Framework 受阻疑难解答](../install/troubleshoot-blocked-installations-and-uninstallations.md)

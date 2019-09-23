@@ -2,12 +2,12 @@
 title: 使用 .NET 容器时定位的操作系统
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 使用 .NET 容器时定位的操作系统
 ms.date: 01/07/2019
-ms.openlocfilehash: 6f160aeba5257722490788271e6f89359342cc0d
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 7380889374e69ca4d3c981a401af703c19263de5
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675754"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71039690"
 ---
 # <a name="what-os-to-target-with-net-containers"></a>使用 .NET 容器时定位的操作系统
 
@@ -27,33 +27,12 @@ ms.locfileid: "68675754"
 
 将映像名称添加到 Dockerfile 文件后，可根据所使用的标记选择操作系统和版本，如下例所示：
 
-<table>
-<thead>
-<tr class="header">
-<th>图像</th>
-<th>注释</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>mcr.microsoft.com/dotnet/core/runtime:2.2</td>
-<td>.NET Core 2.2 多体系结构：支持 Linux 和 Windows Nano Server，具体取决于 Docker 主机。</td>
-</tr>
-<tr class="odd">
-<td>mcr.microsoft.com/dotnet/core/aspnet:2.2</td>
-<td><p>ASP.NET Core 2.2 多体系结构：支持 Linux 和 Windows Nano Server，具体取决于 Docker 主机。</p>
-<p>ASP.NET Core 的 aspnetcore 映像具有多个优化。</p></td>
-</tr>
-<tr class="even">
-<td>mcr.microsoft.com/dotnet/core/aspnet:2.2-alpine</td>
-<td>Linux Alpine 发行版上的 .NET Core 2.2 仅运行时</td>
-</tr>
-<tr class="odd">
-<td>mcr.microsoft.com/dotnet/core/aspnet:2.2-nanoserver-1803</td>
-<td>Windows Nano Server（Windows Server 版本 1803）上的 .NET Core 2.2 仅运行时</td>
-</tr>
-</tbody>
-</table>
+| 图像 | 注释 |
+|-------|----------|
+| mcr.microsoft.com/dotnet/core/runtime:2.2 | .NET Core 2.2 多体系结构：支持 Linux 和 Windows Nano Server，具体取决于 Docker 主机。 |
+| mcr.microsoft.com/dotnet/core/aspnet:2.2 | ASP.NET Core 2.2 多体系结构：支持 Linux 和 Windows Nano Server，具体取决于 Docker 主机。 <br/> ASP.NET Core 的 aspnetcore 映像具有多个优化。 |
+| mcr.microsoft.com/dotnet/core/aspnet:2.2-alpine | Linux Alpine 发行版上的 .NET Core 2.2 仅运行时 |
+| mcr.microsoft.com/dotnet/core/aspnet:2.2-nanoserver-1803 | Windows Nano Server（Windows Server 版本 1803）上的 .NET Core 2.2 仅运行时 |
 
 > [!div class="step-by-step"]
 > [上一页](container-framework-choice-factors.md)

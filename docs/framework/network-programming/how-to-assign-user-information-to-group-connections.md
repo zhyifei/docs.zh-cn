@@ -5,16 +5,16 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7ce550d6-8f7c-4ea7-add8-5bc27a7b51be
-ms.openlocfilehash: 2fa84052bcf9ca97b903111fc02e319b25deb384
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 8e104de891d72e709ae20055737540516109da68
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296961"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048430"
 ---
 # <a name="how-to-assign-user-information-to-group-connections"></a>如何：将用户信息分配给组连接
 
- 以下示例演示如何将用户信息分配给组连接，其假定应用程序在调用此部分的代码之前设置了变量“UserName”、“SecurelyStoredPassword”和“域”，且“UserName”唯一。  
+ 以下示例演示如何将用户信息分配给组连接，其假定应用程序在调用此部分的代码之前设置了变量“UserName”、“SecurelyStoredPassword”和“域”，且“UserName”唯一     。  
   
 ### <a name="to-assign-user-information-to-a-group-connection"></a>将用户信息分配给组连接  
   
@@ -42,7 +42,7 @@ ms.locfileid: "59296961"
     Dim myWebRequest As WebRequest = WebRequest.Create("http://www.contoso.com")  
     ```  
   
-3. 为 Web 请求设置凭据和连接组名称，并调用 GetResponse 以检索 WebResponse 对象。  
+3. 为 Web 请求设置凭据和连接组名称，并调用 GetResponse 以检索 WebResponse 对象   。  
   
     ```csharp  
     myWebRequest.Credentials = new NetworkCredential(UserName, SecurelyStoredPassword, Domain);   
@@ -109,5 +109,5 @@ MyWebResponse.Close()
   
 ## <a name="see-also"></a>请参阅
 
-- [管理连接](../../../docs/framework/network-programming/managing-connections.md)
-- [连接分组](../../../docs/framework/network-programming/connection-grouping.md)
+- [管理连接](managing-connections.md)
+- [连接分组](connection-grouping.md)

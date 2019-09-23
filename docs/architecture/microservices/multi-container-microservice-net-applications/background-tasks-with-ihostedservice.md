@@ -2,12 +2,12 @@
 title: 使用 IHostedService 和 BackgroundService 类在微服务中实现后台任务
 description: 用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 了解使用 IHostedService 和 BackgroundService 在微服务 .NET Core 中实现后台任务的新选项。
 ms.date: 01/07/2019
-ms.openlocfilehash: b3dca8db6568e6e8429645d6b433886d1d289b95
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: ff263212536233bef85e9517442b4d7ed9eff115
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69038128"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71039883"
 ---
 # <a name="implement-background-tasks-in-microservices-with-ihostedservice-and-the-backgroundservice-class"></a>使用 IHostedService 和 BackgroundService 类在微服务中实现后台任务
 
@@ -236,16 +236,16 @@ WebHost.CreateDefaultBuilder(args)
 
 `IHostedService` 接口为在 ASP.NET Core Web 应用程序（在 .NET Core 2.0 中）或任何进程/主机（从使用 `IHost` 的 .NET Core 2.1 开始）中启动后台任务提供了一种便捷方式。 其主要优势在于，当主机本身将要关闭时，可以有机会进行正常取消以清理后台任务的代码。
 
-#### <a name="additional-resources"></a>其他资源
+## <a name="additional-resources"></a>其他资源
 
-- **Building a scheduled task in ASP.NET Core/Standard 2.0**（在 ASP.NET Core/Standard 2.0 中构建计划任务） <br/>
-    <https://blog.maartenballiauw.be/post/2017/08/01/building-a-scheduled-cache-updater-in-aspnet-core-2.html>
+- **Building a scheduled task in ASP.NET Core/Standard 2.0**（在 ASP.NET Core/Standard 2.0 中构建计划任务）  
+  <https://blog.maartenballiauw.be/post/2017/08/01/building-a-scheduled-cache-updater-in-aspnet-core-2.html>
 
-- **Implementing IHostedService in ASP.NET Core 2.0**（在 ASP.NET Core 2.0 中实现 IHostedService） <br/>
-    <https://www.stevejgordon.co.uk/asp-net-core-2-ihostedservice>
+- **Implementing IHostedService in ASP.NET Core 2.0**（在 ASP.NET Core 2.0 中实现 IHostedService）  
+  <https://www.stevejgordon.co.uk/asp-net-core-2-ihostedservice>
 
-- **使用 ASP.NET Core 2.1 的 GenericHost 示例** <br/>
-    <https://github.com/aspnet/Hosting/tree/release/2.1/samples/GenericHostSample>
+- **使用 ASP.NET Core 2.1 的 GenericHost 示例**  
+  <https://github.com/aspnet/Hosting/tree/release/2.1/samples/GenericHostSample>
 
 >[!div class="step-by-step"]
 >[上一页](test-aspnet-core-services-web-apps.md)

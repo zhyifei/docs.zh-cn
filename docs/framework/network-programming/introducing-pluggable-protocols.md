@@ -22,12 +22,12 @@ helpviewer_keywords:
 - server identifiers
 - scheme identifiers
 ms.assetid: 4b48e22d-e4e5-48f0-be80-d549bda97415
-ms.openlocfilehash: 41a55df53f8b0dfd4eefc9bc4ecf6b2eef122c8d
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 72b47b8159f9f6f0dc3a19c5cbf94335507d9e7d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70394278"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047863"
 ---
 # <a name="introducing-pluggable-protocols"></a>可插入协议简介
 Microsoft .NET Framework 为 Internet 服务提供了一种分层、可扩展且托管的实现，可以快速、轻松地将其集成到应用程序中。 <xref:System.Net> 和 <xref:System.Net.Sockets> 命名空间的 Internet 访问类可用于实现基于 Web 和基于 Internet 的应用程序。  
@@ -68,6 +68,6 @@ Microsoft .NET Framework 为 Internet 服务提供了一种分层、可扩展且
   
 ## <a name="see-also"></a>请参阅
 
-- [对可插入协议进行编程](../../../docs/framework/network-programming/programming-pluggable-protocols.md)
-- [.NET Framework 中的网络编程](../../../docs/framework/network-programming/index.md)
-- [网络编程示例](../../../docs/framework/network-programming/network-programming-samples.md)
+- [对可插入协议进行编程](programming-pluggable-protocols.md)
+- [.NET Framework 中的网络编程](index.md)
+- [网络编程示例](network-programming-samples.md)

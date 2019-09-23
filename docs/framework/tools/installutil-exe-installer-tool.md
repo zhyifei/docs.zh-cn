@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 3f9d0533-f895-4897-b4ea-528284e0241d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 04074c8120ad2bc4e279ca0c60624bde9d5e42d9
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 5ad0497bd5303dc4113dbb7b8078c70cb044cc95
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57496675"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044537"
 ---
 # <a name="installutilexe-installer-tool"></a>Installutil.exe（安装程序工具）
 
 安装程序工具是一个命令行实用工具，你可以通过此工具执行指定程序集中的安装程序组件，从而安装和卸载服务器资源。 此工具与 <xref:System.Configuration.Install> 命名空间中的类配合使用。
 
-此工具会自动随 Visual Studio 一起安装。 若要运行此工具，请使用 Visual Studio 开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示）。 有关详细信息，请参阅[命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。
+此工具会自动随 Visual Studio 一起安装。 若要运行此工具，请使用 Visual Studio 开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示）。 有关详细信息，请参阅[命令提示](developer-command-prompt-for-vs.md)。
 
 在命令提示符处，键入以下内容：
 
@@ -48,8 +48,8 @@ installutil [/u[ninstall]] [options] assembly [[options] assembly] ...
 
 |选项|说明|
 |------------|-----------------|
-|`/h[elp]`<br /><br /> 或<br /><br /> `/?`|显示该工具的命令语法和选项。|
-|`/help` *assembly*<br /><br /> 或<br /><br /> `/?` *assembly*|显示由指定的程序集中的个别安装程序识别的其他选项，以及 InstallUtil.exe 的命令语法和选项。 此选项将各安装程序组件的 <xref:System.Configuration.Install.Installer.HelpText%2A?displayProperty=nameWithType> 属性返回的文本添加到 InstallUtil.exe 的帮助文本。|
+|`/h[elp]`<br /><br /> -或-<br /><br /> `/?`|显示该工具的命令语法和选项。|
+|`/help` *assembly*<br /><br /> -或-<br /><br /> `/?` *assembly*|显示由指定的程序集中的个别安装程序识别的其他选项，以及 InstallUtil.exe 的命令语法和选项。 此选项将各安装程序组件的 <xref:System.Configuration.Install.Installer.HelpText%2A?displayProperty=nameWithType> 属性返回的文本添加到 InstallUtil.exe 的帮助文本。|
 |`/AssemblyName` "*assemblyName*<br /><br /> ,Version=*major.minor.build.revision*<br /><br /> ,Culture=*locale*<br /><br /> ,PublicKeyToken=*publicKeyToken*"|指定必须在全局程序集缓存中注册的程序集的强名称。 必须使用程序集的版本、区域性和公钥标记完全限定程序集名称。 完全限定名必须用引号括起。<br /><br /> 例如，“myAssembly, Culture=neutral, PublicKeyToken=0038abc9deabfle5, Version=4.0.0.0”是完全限定的程序集名称。|
 |`/InstallStateDir=[` *directoryName* `]`|指定 .InstallState 文件的目录，其中包含用来卸载程序集的数据。 默认为包含程序集的目录。|
 |`/LogFile=`[*filename*]|指定在其中记录安装进度的日志文件的名称。 默认情况下，如果省略 `/LogFile` 选项，则会创建名为 *assemblyname*.InstallLog 的日志文件。 如果省略 *filename*，则不生成任何日志文件。|
@@ -170,5 +170,5 @@ installutil /LogFile=myLog.InstallLog myAssembly.exe /LogFile=myTestLog.InstallL
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Configuration.Install>
-- [工具](../../../docs/framework/tools/index.md)
-- [命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [工具](index.md)
+- [命令提示](developer-command-prompt-for-vs.md)

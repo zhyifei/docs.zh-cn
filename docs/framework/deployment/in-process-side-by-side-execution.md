@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5d9d77ef20090e007e22a0d2f90b29f32ff94b46
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2a33d3c4216ed8c5d79aef4017c6b9256fc1ad7c
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69911117"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052105"
 ---
 # <a name="in-process-side-by-side-execution"></a>进程内并行执行
 从 .NET Framework 4 开始，可使用进程内并行承载在单个进程中运行多个公共语言运行时 (CLR) 版本。 默认情况下，托管 COM 组件使用其生成所用的 .NET Framework 版本运行，而不考虑为进程加载的 .NET Framework 版本。  
@@ -60,7 +60,7 @@ ms.locfileid: "69911117"
   
      已安装的 .NET Framework 版本：早期版本的 .NET Framework 和 .NET Framework 4。  
   
-     要执行的操作：在应用程序目录的[应用程序配置文件](../../../docs/framework/configure-apps/index.md)中，使用 [\<startup> 元素](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)和 [\<supportedRuntime> 元素](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)进行如下设置：  
+     要执行的操作：在应用程序目录的[应用程序配置文件](../configure-apps/index.md)中，使用 [\<startup> 元素](../configure-apps/file-schema/startup/startup-element.md)和 [\<supportedRuntime> 元素](../configure-apps/file-schema/startup/supportedruntime-element.md)进行如下设置：  
   
     ```xml  
     <configuration>  
@@ -175,5 +175,5 @@ int _tmain(int argc, _TCHAR* argv[])
   
 ## <a name="see-also"></a>请参阅
 
-- [\<startup> 元素](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)
-- [\<supportedRuntime> 元素](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)
+- [\<startup> 元素](../configure-apps/file-schema/startup/startup-element.md)
+- [\<supportedRuntime> 元素](../configure-apps/file-schema/startup/supportedruntime-element.md)

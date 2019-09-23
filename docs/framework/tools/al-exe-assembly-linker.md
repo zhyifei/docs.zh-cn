@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: b5382965-0053-47cf-b92f-862860275a01
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7f83c67354e96e1da3a30ab2e30fffe026c4646b
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 7fdb364769be6d8c7c53ca05a7d7cb967678123a
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971351"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044902"
 ---
 # <a name="alexe-assembly-linker"></a>Al.exe（程序集链接器）
 
@@ -23,7 +23,7 @@ ms.locfileid: "70971351"
 > [!NOTE]
 > 从 Visual Studio 2008 开始，C# 和 Visual Basic 编译器都自动将 Win32 清单嵌入到程序集中。 有关详细信息，请参阅 [/win32manifest（C# 编译器选项）](../../csharp/language-reference/compiler-options/win32manifest-compiler-option.md)。
 
-此工具会自动随 Visual Studio 一起安装。 若要运行此工具，请使用 Visual Studio 开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示）。 有关详细信息，请参阅[命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。
+此工具会自动随 Visual Studio 一起安装。 若要运行此工具，请使用 Visual Studio 开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示）。 有关详细信息，请参阅[命令提示](developer-command-prompt-for-vs.md)。
 
 在命令提示符处，键入以下内容：
 
@@ -40,7 +40,7 @@ al sources options
 | 源 | 说明 |
 | ------ | ----------- |
 |`file`[,`target`]|将 `file`（模块）的内容复制到 `target` 指定的文件名。 复制后，Al.exe 将 `target` 编译为程序集  。|
-|**/embed[resource]:** `file`[,`name`[,`private`]]|将 `file` 指定的资源嵌入到包含程序集清单的映像中；Al.exe 将 `file` 的内容复制到可移植的可执行 (PE) 映像中  。<br /><br /> `name` 参数是资源的内部标识符。 默认情况下，资源在程序集中是公共的（对于其他程序集可见）。 指定 `private` 会使该资源对于其他程序集不可见。<br /><br /> 例如，如果 `file` 是由[资源文件生成器 (Resgen.exe)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) 创建的或在开发环境中创建的 .NET Framework 资源文件，则可使用 <xref:System.Resources> 中的成员来访问它  。 有关详细信息，请参阅 <xref:System.Resources.ResourceManager>。 对于所有其他资源，请使用 `GetManifestResource` 中的 <xref:System.Reflection.Assembly>* 方法在运行时访问此资源。<br /><br /> 如果只将资源文件传递给 Al.exe，则输出文件为附属资源程序集  。|
+|**/embed[resource]:** `file`[,`name`[,`private`]]|将 `file` 指定的资源嵌入到包含程序集清单的映像中；Al.exe 将 `file` 的内容复制到可移植的可执行 (PE) 映像中  。<br /><br /> `name` 参数是资源的内部标识符。 默认情况下，资源在程序集中是公共的（对于其他程序集可见）。 指定 `private` 会使该资源对于其他程序集不可见。<br /><br /> 例如，如果 `file` 是由[资源文件生成器 (Resgen.exe)](resgen-exe-resource-file-generator.md) 创建的或在开发环境中创建的 .NET Framework 资源文件，则可使用 <xref:System.Resources> 中的成员来访问它  。 有关详细信息，请参阅 <xref:System.Resources.ResourceManager>。 对于所有其他资源，请使用 `GetManifestResource` 中的 <xref:System.Reflection.Assembly>* 方法在运行时访问此资源。<br /><br /> 如果只将资源文件传递给 Al.exe，则输出文件为附属资源程序集  。|
 |**/link[resource]:** `file`[,`name`[,`target`[,`private`]]]|将资源文件链接到程序集。 `file` 指定的资源成为程序集的组成部分；不复制该文件。 `file` 参数可以是任何文件格式。 例如，可以指定本机 DLL 作为 `file` 参数。 这将使本机 DLL 成为此程序集的组成部分，从而可将它安装到全局程序集缓存中，并且可从该程序集中的托管代码访问它。 也可以通过使用 **/linkresource** 编译器选项实现该目的。 有关详细信息，请参阅 [/linkresource (C# 编译器选项)](../../csharp/language-reference/compiler-options/linkresource-compiler-option.md)。<br /><br /> `name` 参数是资源的内部标识符。 `target` 参数指定 Al.exe 将 `file` 复制到其中的路径和文件名。   复制后，Al.exe 将 `target` 编译为程序集  。 默认情况下，资源在程序集中是公共的（对于其他程序集可见）。 指定 `private` 会使该资源对于其他程序集不可见。<br /><br /> 例如，如果 `file` 是由资源文件生成器 (Resgen.exe) 创建的或在开发环境中创建的 .NET Framework 资源文件，则可使用 <xref:System.Resources> 命名空间中的成员来访问它  。 有关详细信息，请参阅 <xref:System.Resources.ResourceManager>。 对于所有其他资源，请使用 `GetManifestResource` 类中的 <xref:System.Reflection.Assembly>* 方法在运行时访问资源。<br /><br /> 如果只将资源文件传递给 Al.exe，则输出文件为附属资源程序集  。|
 
 可以指定以下 `options`；必须指定 **/out**。
@@ -54,14 +54,14 @@ al sources options
 |**/config[uration]:** `text`|为程序集中的“配置”字段指定字符串。 如果 `text` 包含空格，则将字符串放置在双引号 (" ") 中。 此字符串是程序集上的自定义特性，可以使用反射进行查看。<br /><br /> 如果文本是空字符串，则 Win32“配置”资源将显示为一个空格。<br /><br /> 还可以将此选项指定为任何 MSIL 模块的源代码中的自定义特性 (<xref:System.Reflection.AssemblyConfigurationAttribute>)。|
 |**/copy[right]:** `text`|为程序集中的“版权”字段指定字符串。 如果 `text` 包含空格，则将字符串放置在双引号 (" ") 中。 此字符串是程序集上的自定义特性，可以使用反射进行查看。<br /><br /> 如果不指定 **/win32res**，则 **/copyright** 在文件资源管理器中将显示为 Win32“版权”资源。<br /><br /> 如果文本是空字符串，则 Win32 Copyright 资源将显示为一个空格。<br /><br /> 如果指定 **/win32res**，则 **/copyright** 将不会影响 Win32 资源信息。<br /><br /> 还可以将此选项指定为任何 MSIL 模块的源代码中的自定义特性 (<xref:System.Reflection.AssemblyCopyrightAttribute>)。|
 |**/c[ulture]:** `text`|指定要与程序集关联的区域性字符串。 区域性的有效值是名为“Tags for the Identification of Languages”的 Internet Requests for Comments (RFC) 文档 1766 定义的那些值。<br /><br /> 如果 `text` 包含空格，则将字符串放置在双引号 (" ") 中。 没有默认的区域性字符串。 使用反射可以查看此字符串。<br /><br /> 有关有效的 `text` 字符串的信息，请参见 <xref:System.Globalization.CultureInfo>。<br /><br /> 还可以将此选项指定为任何 MSIL 模块的源代码中的自定义特性 (<xref:System.Reflection.AssemblyCultureAttribute>)。|
-|**/delay[sign][+&#124;-]**|指定程序集是完全签名的还是部分签名的。 如果需要完全签名的程序集，请使用 **/delaysign-** 。 如果仅需要将公钥包含在程序集中，则使用 **/delaysign+** 。<br /><br /> 请求完全签名的程序集时，Al.exe 会对包含清单（程序集元数据）的文件进行哈希处理，并使用私钥对哈希进行签名  。 产生的数字签名存储在包含清单的文件中。 在对程序集延迟签名时，Al.exe 不会计算和存储签名，而只是在文件中保留空间以便稍后可添加该签名  。<br /><br /> 默认值为 **/delaysign-** 。<br /><br /> 除非与 **/keyfile** 或 **/keyname** 一同使用，否则 **/delaysign** 选项将不起作用。<br /><br /> 例如，使用 **/delaysign+** 可允许测试人员将程序集放入全局缓存中。 测试完成后，可以通过将私钥包含在程序集中来对程序集进行完全签名。<br /><br /> 注意：使用 [Gacutil.exe（全局程序集缓存工具）](../../../docs/framework/tools/gacutil-exe-gac-tool.md)将延迟签名的程序集放入全局缓存之前，请使用 [Sn.exe（强名称工具）](../../../docs/framework/tools/sn-exe-strong-name-tool.md)来注册该程序集以跳过验证   。 例如 `Sn.exe –Vr delaySignedAssembly`。 仅将它用于开发。<br /><br /> 还可以将此选项指定为任何 MSIL 模块的源代码中的自定义特性 (<xref:System.Reflection.AssemblyDelaySignAttribute>)。|
+|**/delay[sign][+&#124;-]**|指定程序集是完全签名的还是部分签名的。 如果需要完全签名的程序集，请使用 **/delaysign-** 。 如果仅需要将公钥包含在程序集中，则使用 **/delaysign+** 。<br /><br /> 请求完全签名的程序集时，Al.exe 会对包含清单（程序集元数据）的文件进行哈希处理，并使用私钥对哈希进行签名  。 产生的数字签名存储在包含清单的文件中。 在对程序集延迟签名时，Al.exe 不会计算和存储签名，而只是在文件中保留空间以便稍后可添加该签名  。<br /><br /> 默认值为 **/delaysign-** 。<br /><br /> 除非与 **/keyfile** 或 **/keyname** 一同使用，否则 **/delaysign** 选项将不起作用。<br /><br /> 例如，使用 **/delaysign+** 可允许测试人员将程序集放入全局缓存中。 测试完成后，可以通过将私钥包含在程序集中来对程序集进行完全签名。<br /><br /> 注意：使用 [Gacutil.exe（全局程序集缓存工具）](gacutil-exe-gac-tool.md)将延迟签名的程序集放入全局缓存之前，请使用 [Sn.exe（强名称工具）](sn-exe-strong-name-tool.md)来注册该程序集以跳过验证   。 例如 `Sn.exe –Vr delaySignedAssembly`。 仅将它用于开发。<br /><br /> 还可以将此选项指定为任何 MSIL 模块的源代码中的自定义特性 (<xref:System.Reflection.AssemblyDelaySignAttribute>)。|
 |**/descr[iption]:** `text`|为程序集中的 <xref:System.Reflection.AssemblyDescriptionAttribute.Description%2A> 字段指定字符串。 如果 `text` 包含空格，则将字符串放置在双引号 (" ") 中。 此字符串是程序集上的自定义特性，可以使用反射进行查看。<br /><br /> 如果不指定 **/win32res**，则 **/description** 在文件资源管理器中将显示为 Win32“注释”  资源。<br /><br /> 如果文本是空字符串，则 Win32“注释”  资源将显示为一个空格。<br /><br /> 如果指定 **/win32res**，则 **/description** 将不会影响 Win32 资源信息。<br /><br /> 还可以将此选项指定为任何 MSIL 模块的源代码中的自定义特性 (<xref:System.Reflection.AssemblyDescriptionAttribute.Description%2A>)。|
 |**/e[vidence]:** `file`|使用 Security.Evidence 的资源名将 `file` 嵌入程序集中。<br /><br /> 不能对常规资源使用 Security.Evidence。|
 |**/fileversion:** `version`|为程序集中的“文件版本”  字段指定字符串。 此字符串是程序集上的自定义特性，可以使用反射进行查看。<br /><br /> 如果不指定 **/win32res**，则 **/fileversion** 将用作 Win32“文件版本”  资源。 如果不指定 **/fileversion**，则 Win32“文件版本”  资源将由 Win32“程序集版本”  资源填充。<br /><br /> 如果指定 **/win32res**，则 **/fileversion** 不会影响 Win32 资源。<br /><br /> 还可以将此选项指定为任何 MSIL 模块的源代码中的自定义特性 (AssemblyFileVersionAttribute)。|
 |**/flags:** `flags`|为程序集中的 `Flags` 字段指定一个值。 `flags` 的可能的值有：<br /><br /> 0x0000<br /> 程序集是相邻兼容的。<br /><br /> 0x0010<br /> 程序集无法与其他版本在同一应用程序域中一起执行。<br /><br /> 0x0020<br /> 程序集无法与其他版本在同一进程中一起执行。<br /><br /> 0x0030<br /> 程序集无法与其他版本在同一计算机上一起执行。<br /><br /> 还可以将此选项指定为任何 MSIL 模块的源代码中的自定义特性 (<xref:System.Reflection.AssemblyFlagsAttribute>)。|
 |**/fullpaths**|使 Al.exe 对错误消息中报告的任何文件使用绝对路径  。|
 |**/help**|显示该工具的命令语法和选项。|
-|**/keyf[ile]:** `filename`|指定一个文件 (`filename`)，该文件包含密钥对或只包含用于对程序集进行签名的公钥。 编译器在程序集清单中插入公钥，然后使用私钥对最终的程序集进行签名。 有关生成密钥文件并将密钥对安装到密钥容器中的信息，请参见[强名称工具 (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)  。<br /><br /> 如果使用延迟签名，此文件通常会具有公钥而不是私钥。<br /><br /> （密钥对的）公钥信息显示在程序集的 .publickey 字段中。<br /><br /> 还可以将此选项指定为任何 MSIL 模块的源代码中的自定义特性 (<xref:System.Reflection.AssemblyKeyFileAttribute>)。<br /><br /> 如果在同一编译中同时指定 /keyfile 和 /keyname（通过命令行选项或通过自定义属性），则 Al.exe 将首先尝试用 /keyname 指定的容器     。 如果成功，则使用密钥容器中的信息对程序集签名。 如果 Al.exe 没有找到密钥容器，它将尝试用 /keyfile 指定的文件   。 如果成功，则使用密钥文件中的信息对程序集签名，并且将密钥信息安装到密钥容器中（类似于 [Sn.exe](../../../docs/framework/tools/sn-exe-strong-name-tool.md) 中的 -i 选项），以便在下一次编译中，/keyname 选项将生效   。|
+|**/keyf[ile]:** `filename`|指定一个文件 (`filename`)，该文件包含密钥对或只包含用于对程序集进行签名的公钥。 编译器在程序集清单中插入公钥，然后使用私钥对最终的程序集进行签名。 有关生成密钥文件并将密钥对安装到密钥容器中的信息，请参见[强名称工具 (Sn.exe)](sn-exe-strong-name-tool.md)  。<br /><br /> 如果使用延迟签名，此文件通常会具有公钥而不是私钥。<br /><br /> （密钥对的）公钥信息显示在程序集的 .publickey 字段中。<br /><br /> 还可以将此选项指定为任何 MSIL 模块的源代码中的自定义特性 (<xref:System.Reflection.AssemblyKeyFileAttribute>)。<br /><br /> 如果在同一编译中同时指定 /keyfile 和 /keyname（通过命令行选项或通过自定义属性），则 Al.exe 将首先尝试用 /keyname 指定的容器     。 如果成功，则使用密钥容器中的信息对程序集签名。 如果 Al.exe 没有找到密钥容器，它将尝试用 /keyfile 指定的文件   。 如果成功，则使用密钥文件中的信息对程序集签名，并且将密钥信息安装到密钥容器中（类似于 [Sn.exe](sn-exe-strong-name-tool.md) 中的 -i 选项），以便在下一次编译中，/keyname 选项将生效   。|
 |**/keyn[ame]:** `text`|指定保存密钥对的容器。 这样将会通过将公钥插入程序集清单来对程序集签名（为它指定一个强名称）。 然后，Al.exe 使用私钥对最终程序集进行签名  。<br /><br /> 使用 Sn.exe 生成密钥对  。<br /><br /> 密钥信息显示在程序集的 .publickey 字段中。<br /><br /> 如果有嵌入的空格，请用双引号 (" ") 将 `text` 引起来。<br /><br /> 还可以将此选项指定为任何 MSIL 模块的源代码中的自定义特性 (<xref:System.Reflection.AssemblyKeyNameAttribute>)。|
 |**/main:** `method`|指定方法的完全限定名称 (`class`.`method`)，以用作将模块转换为可执行文件时的入口点。|
 |**/nologo**|调用 Al.exe 时，在命令行取消显示横幅或徽标  。|
@@ -83,7 +83,7 @@ al sources options
 
 所有 Visual Studio 编译器都产生程序集。 但是，如果有一个或多个模块（没有清单的元数据），则可使用 Al.exe 在单独的文件中创建带清单的程序集  。
 
-若要在缓存中安装程序集，从缓存中删除程序集或列出缓存内容，请使用[全局程序集缓存工具 (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)  。
+若要在缓存中安装程序集，从缓存中删除程序集或列出缓存内容，请使用[全局程序集缓存工具 (Gacutil.exe)](gacutil-exe-gac-tool.md)  。
 
 ## <a name="errors-and-warnings"></a>错误和警告
 
@@ -116,8 +116,8 @@ al sources options
 |al1023|嵌入资源“file”时出错 — 原因<br /><br /> 由于特定原因，操作系统无法在程序集中嵌入资源文件。|
 |al1025|ComType 记录“record”指向无效的文件记录“record”<br /><br /> 输入模块中的元数据无效。 必须修复生成该模块的工具。|
 |al1026|指定的版本“version”无效<br /><br /> 查看有关有效格式的 **/version** 选项的信息。|
-|al1028|密钥文件“file”缺少签名所需的私钥<br /><br /> 已将仅包含公钥的密钥文件传递到 **/keyfile** 选项。 如以下命令所示，使用[强名称工具 (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) 以生成同时具有公钥和私钥的文件  。<br /><br /> `sn -k keypair.snk.`|
-|al1029|密钥容器名称“container”不存在<br /><br /> 传递到 **/keyname** 选项的值不是有效的容器。 使用[强名称工具 (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) 创建容器  。|
+|al1028|密钥文件“file”缺少签名所需的私钥<br /><br /> 已将仅包含公钥的密钥文件传递到 **/keyfile** 选项。 如以下命令所示，使用[强名称工具 (Sn.exe)](sn-exe-strong-name-tool.md) 以生成同时具有公钥和私钥的文件  。<br /><br /> `sn -k keypair.snk.`|
+|al1029|密钥容器名称“container”不存在<br /><br /> 传递到 **/keyname** 选项的值不是有效的容器。 使用[强名称工具 (Sn.exe)](sn-exe-strong-name-tool.md) 创建容器  。|
 |al1030|未正确安装加密服务或其不具有合适的密钥提供程序<br /><br /> 可能需要重新安装操作系统，或者安装一些用于创建该密钥的加密实用工具。|
 |al1031|读取图标“file”时出错 — 原因<br /><br /> 由于特定原因，Al.exe 无法读取传递到 /win32icon 选项的文件  |
 |al1032|为“file”生成资源时出错 — 原因<br /><br /> 由于没有足够的磁盘空间或某些其他错误，Al.exe 无法创建文件  。 当指定 **/win32icon** 选项（生成 .ico 文件）或不指定 **/win32res** 选项（生成具有资源信息的文件）时，将发生此错误。<br /><br /> 如果无法解决文件生成问题，则使用 **/win32res**，可指定可以包含版本或位图（图标）信息的文件。|
@@ -127,7 +127,7 @@ al sources options
 |al1036|可执行应用程序所需的入口点<br /><br /> 当使用 **/target:exe** 或 **/target:win** 选项时，还必须指定 **/main** 选项。|
 |al1037|无法找到入口点方法“main”<br /><br /> Al.exe 在 /main 选项指定的位置找不到 `Main` 方法   。|
 |al1039|全局程序集缓存管理器的初始化失败 — 原因<br /><br /> 重新安装 Visual Studio 或 Windows SDK。|
-|al1040|未能将程序集安装到缓存 — 原因<br /><br /> 仅签名的程序集可安装到缓存中。 有关详细信息，请参阅[全局程序集缓存](../../../docs/framework/app-domains/gac.md)。|
+|al1040|未能将程序集安装到缓存 — 原因<br /><br /> 仅签名的程序集可安装到缓存中。 有关详细信息，请参阅[全局程序集缓存](../app-domains/gac.md)。|
 |al1041|“method”: 不能为入口点，因为签名或可见性不正确，或者它是泛型<br /><br /> 使用 **/main** 选项指定了一种方法，但该方法不是静态的，不会返回 `int` 或 `void`，该方法是泛型类型，或者具有无效自变量。|
 |al1042|“exe”：不能向 EXE 添加模块<br /><br /> 已将不具有程序集的 .exe 文件指定为 Al.exe 的输入文件   。 Al.exe 只能接受不具有程序集的 .dll 文件作为输入文件   。|
 |al1043|清单文件名“name”不能和任何模块相同<br /><br /> 使用 /out 选项指定的名称不能与任何一个指定为 Al.exe 的输入文件的名称相同   。|
@@ -142,7 +142,7 @@ al sources options
 |al1052|文件“filename”不是程序集<br /><br /> 使用 **/template** 指定的文件必须包含程序集元数据。 此错误指示 **/template** 指定的文件未包含程序集。|
 |al1053|为“option”指定的版本“version”不是常规的“major.minor.build.revision”格式<br /><br /> Al.exe 检测到使用 /fileversion 或 /productversion 选项指定的格式不正确的版本信息    。|
 |al1054|为“option”指定的版本“version”不是常规的“major.minor.build.revision”格式<br /><br /> Al.exe 检测到使用 <xref:System.Resources.SatelliteContractVersionAttribute> 指定的格式不正确的版本信息  。|
-|al1055|引用的程序集“filename”没有强名称<br /><br /> 当构建具有强名称的程序集，并且引用不具有强名称的程序集时，会发出此错误。 若要解决此问题，必须再生成具有强名称的程序集，或通过使用 sn.exe 将强名称附加到程序集（请参阅 [sn.exe](../../../docs/framework/tools/sn-exe-strong-name-tool.md) 的文档）   。<br /><br /> 此错误通常发生在通过包装程序集使用 COM 对象时，如通过 Visual Studio IDE 将对 COM 模块的引用添加到 C# 项目时。 若要避免此错误，可以在项目属性“包装程序集密钥文件/名称”中指定 COM 包装程序集的强名称密钥文件<br /><br /> 如果要通过 tlbimp 创建包装程序集，请参阅 [tlbimp](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) 文档了解有关如何向包装程序集分配强名称的信息。<br /><br /> 如果程序集具有强名称，则它可以安装在全局程序集缓存中。 由此，引用的程序集也将进入全局程序集缓存。 只有具有强名称的程序集才可进入全局程序集缓存。|
+|al1055|引用的程序集“filename”没有强名称<br /><br /> 当构建具有强名称的程序集，并且引用不具有强名称的程序集时，会发出此错误。 若要解决此问题，必须再生成具有强名称的程序集，或通过使用 sn.exe 将强名称附加到程序集（请参阅 [sn.exe](sn-exe-strong-name-tool.md) 的文档）   。<br /><br /> 此错误通常发生在通过包装程序集使用 COM 对象时，如通过 Visual Studio IDE 将对 COM 模块的引用添加到 C# 项目时。 若要避免此错误，可以在项目属性“包装程序集密钥文件/名称”中指定 COM 包装程序集的强名称密钥文件<br /><br /> 如果要通过 tlbimp 创建包装程序集，请参阅 [tlbimp](tlbimp-exe-type-library-importer.md) 文档了解有关如何向包装程序集分配强名称的信息。<br /><br /> 如果程序集具有强名称，则它可以安装在全局程序集缓存中。 由此，引用的程序集也将进入全局程序集缓存。 只有具有强名称的程序集才可进入全局程序集缓存。|
 |al1056|引用的程序集“filename”是已本地化的附属程序集<br /><br /> 在创建当前程序集时引用了通过使用 <xref:System.Reflection.AssemblyCultureAttribute> 特性创建的程序集。 <xref:System.Reflection.AssemblyCultureAttribute> 特性指示该文件是已本地化的附属程序集，并且不合适引用附属程序集。 应改为引用主要父程序集。|
 |al1057|可执行文件不能进行本地化；区域性应始终为空<br /><br /> 正在使用 **/target:exe** 创建程序集，但指定了 **/culture**。 .exe 中的程序集不能具有区域性字段中的信息  。|
 |al1058|“file”是一个程序集，不能作为模块添加<br /><br /> 在 C++ 编译中，向 **/assemblymodule**（链接器选项）传递了包含程序集的文件。|
@@ -175,8 +175,8 @@ al t2.netmodule /target:exe /out:t2a.exe /main:MyClass.Main
 
 ## <a name="see-also"></a>请参阅
 
-- [工具](../../../docs/framework/tools/index.md)
-- [Sn.exe（强名称工具）](../../../docs/framework/tools/sn-exe-strong-name-tool.md) 
-- [Gacutil.exe（全局程序集缓存工具）](../../../docs/framework/tools/gacutil-exe-gac-tool.md) 
+- [工具](index.md)
+- [Sn.exe（强名称工具）](sn-exe-strong-name-tool.md) 
+- [Gacutil.exe（全局程序集缓存工具）](gacutil-exe-gac-tool.md) 
 - [使用程序集编程](../../standard/assembly/program.md)
-- [命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [命令提示](developer-command-prompt-for-vs.md)

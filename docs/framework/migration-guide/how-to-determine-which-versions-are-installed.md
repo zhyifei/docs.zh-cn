@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8d719debd39309415f996d655c68abd8c80ec5e3
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 0df5a5be2997958faa43ee67ae64fc37e1998414
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928419"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051596"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>如何：确定已安装的 .NET Framework 版本
 
@@ -72,7 +72,7 @@ ms.locfileid: "70928419"
 
 3. 请检查名为“Release”的 DWORD 条目  。 如果存在，则安装 .NET Framework 4.5 或更高版本。 其值是对应于特定版本的 .NET Framework 的版本密钥。 以下图为例，“Release”条目的值为 378389，这是 .NET Framework 4.5 的版本密钥   。
 
-     ![.NET Framework 4.5 的注册表项](media/clr-installdir.png "Registry entry for the .NET Framework 4.5")
+     ![.NET Framework 4.5 的注册表项](./media/clr-installdir.png "Registry entry for the .NET Framework 4.5")
 
 下表列出了 .NET Framework 4.5 及更高版本的独立操作系统的  Release DWORD 的值。
 
@@ -163,7 +163,7 @@ ms.locfileid: "70928419"
 
     下图显示了 .NET Framework 3.5 的子项及其“Version”条目  。
 
-    ![.NET Framework 3.5 的注册表项。](media/net-4-and-earlier.png ".NET Framework 3.5 及更早版本")
+    ![.NET Framework 3.5 的注册表项。](./media/net-4-and-earlier.png ".NET Framework 3.5 及更早版本")
 
 <a name="net_c"></a>
 

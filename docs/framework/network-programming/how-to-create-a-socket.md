@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Internet, sockets
 - sockets, creating
 ms.assetid: c64a049c-5981-43bc-a2dc-1851473589c7
-ms.openlocfilehash: 0bbdab11201171bf8d730276c7f94cbc5317acdd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 54706293784d77e535cac582c99b1dd21a12e380
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59101115"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048387"
 ---
 # <a name="how-to-create-a-socket"></a>如何：创建套接字
 必须先使用协议和网络地址信息初始化套接字，然后才能使用套接字与远程设备进行通信。 <xref:System.Net.Sockets.Socket> 类的构造函数包含的参数可以指定地址系列、套接字类型，以及套接字用于建立连接的协议类型。  
@@ -52,15 +52,15 @@ Dim s as New Socket(AddressFamily.InterNetwork, _
    SocketType.Dgram, ProtocolType.Udp)  
 ```  
   
- <xref:System.Net.Sockets.AddressFamily> 枚举指定 Socket 类用其解析网络地址的标准地址系列（例如，AddressFamily.InterNetwork 成员指定 IP 版本 4 地址系列）。  
+ <xref:System.Net.Sockets.AddressFamily> 枚举指定 Socket 类用其解析网络地址的标准地址系列（例如，AddressFamily.InterNetwork 成员指定 IP 版本 4 地址系列）   。  
   
- <xref:System.Net.Sockets.SocketType> 枚举指定套接字的类型（例如，SocketType.Stream 成员指定用流控制来发送和接收数据的标准套接字）。  
+ <xref:System.Net.Sockets.SocketType> 枚举指定套接字的类型（例如，SocketType.Stream 成员指定用流控制来发送和接收数据的标准套接字）  。  
   
- <xref:System.Net.Sockets.ProtocolType> 枚举指定通信时套接字使用的网络协议（例如：ProtocolType.Tcp 表示套接字使用 TCP；ProtocolType.Udp 表示套接字使用 UDP）。  
+ <xref:System.Net.Sockets.ProtocolType> 枚举指定通信时套接字使用的网络协议（例如：ProtocolType.Tcp 表示套接字使用 TCP；ProtocolType.Udp 表示套接字使用 UDP）    。  
   
- 套接字创建完成后，可启动与远程终结点的连接或接收来自远程设备的连接。  
+ 套接字创建完成后，可启动与远程终结点的连接或接收来自远程设备的连接  。  
   
 ## <a name="see-also"></a>请参阅
 
-- [使用客户端套接字](../../../docs/framework/network-programming/using-client-sockets.md)
-- [使用套接字侦听](../../../docs/framework/network-programming/listening-with-sockets.md)
+- [使用客户端套接字](using-client-sockets.md)
+- [使用套接字侦听](listening-with-sockets.md)

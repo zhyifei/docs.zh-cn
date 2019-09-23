@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: d2ce0683-343d-403e-bb8d-209186f7a19d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0664a68d258380fd9e4824b80f0d7a244cb61e85
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 0b3cf60d670e7fdfa624599bc0eeddc99219c202
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894774"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044020"
 ---
 # <a name="winmdexpexe-windows-runtime-metadata-export-tool"></a>Winmdexp.exe（Windows 运行时元数据导出工具）
 Windows 运行时元数据导出工具 (Winmdexp.exe) 可将 .NET Framework 模块转换为包含 Windows 运行时元数据的文件。 尽管 .NET Framework 程序集和 Windows 运行时元数据文件使用相同的物理格式，但元数据表的内容有差别，这意味着 .NET Framework 程序集不可自动用作 Windows 运行时组件。 将 .NET Framework 模块转换为 Windows 运行时组件的过程称为“导出”  。 在 .NET Framework 4.5 和 .NET Framework 4.5.1 中，生成的 Windows 元数据 (.winmd) 文件同时包含元数据和实现。  
   
  使用 Windows 运行时组件  模板（在 C# 中，位于“Microsoft Store”  下；在 Visual Basic 中，位于 Visual Studio 2013 或 Visual Studio 2012 中）时，编译器目标是 .winmdobj 文件，后续生成步骤将调用 Winmdexp.exe 以将 .winmdobj 文件导出到 .winmd 文件。 这是生成 Windows 运行时组件的推荐方法。 当你对生成过程需要的控制超过 Visual Studio 所能提供的控制时，请直接使用 Winmdexp.exe。  
   
- 此工具会自动随 Visual Studio 一起安装。 若要运行此工具，请使用 Visual Studio 开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示）。 有关详细信息，请参阅[命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。  
+ 此工具会自动随 Visual Studio 一起安装。 若要运行此工具，请使用 Visual Studio 开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示）。 有关详细信息，请参阅[命令提示](developer-command-prompt-for-vs.md)。  
   
  在命令提示符处，键入以下内容：  
   
@@ -54,5 +54,5 @@ winmdexp [options] winmdmodule
 
 - [.NET Framework 对 Windows 应用商店应用和 Windows 运行时的支持情况](../../standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)
 - [用 C# 和 Visual Basic 创建 Windows 运行时组件](https://go.microsoft.com/fwlink/p/?LinkID=238313)
-- [Winmdexp.exe 错误消息](../../../docs/framework/tools/winmdexp-exe-error-messages.md)
+- [Winmdexp.exe 错误消息](winmdexp-exe-error-messages.md)
 - [生成、部署和配置工具 (.NET Framework)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd233108(v=vs.100))

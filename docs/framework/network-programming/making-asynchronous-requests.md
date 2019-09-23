@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Network Resources
 - WebRequest class, asynchronous access
 ms.assetid: 735d3fce-f80c-437f-b02c-5c47f5739674
-ms.openlocfilehash: 2bfb33944007f84992d95ebc35c04ab9b97b3a7d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3668975c31e9086ee15250dae939b75587f5c0c6
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963971"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047651"
 ---
 # <a name="making-asynchronous-requests"></a>发出异步请求
 <xref:System.Net> 类为异步访问 Internet 资源使用 .NET Framework 的标准异步编程模型。 <xref:System.Net.WebRequest> 类的 <xref:System.Net.WebRequest.BeginGetResponse%2A> 和 <xref:System.Net.WebRequest.EndGetResponse%2A> 方法启动和完成 Internet 资源的异步请求。  
@@ -336,4 +336,4 @@ End Class
   
 ## <a name="see-also"></a>请参阅
 
-- [请求数据](../../../docs/framework/network-programming/requesting-data.md)
+- [请求数据](requesting-data.md)

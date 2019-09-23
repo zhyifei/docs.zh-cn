@@ -31,12 +31,12 @@ helpviewer_keywords:
 - ConnectionClosed enumeration member
 - SecureChannelFailure enumeration member
 ms.assetid: 657141cd-5cf5-4fdb-a4b2-4c040eba84b5
-ms.openlocfilehash: 255a4ab3d6d6e3fc133e809ce360b25d6f82c8d7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: bb478f0742e85cadd9509de823abb0d486170d37
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69940064"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048500"
 ---
 # <a name="handling-errors"></a>处理错误
 <xref:System.Net.WebRequest> 和 <xref:System.Net.WebResponse> 类都会引发系统异常（如 <xref:System.ArgumentException>）和特定于 Web 的异常（为 <xref:System.Net.WebRequest.GetResponse%2A> 方法所引发的 <xref:System.Net.WebException>）。  
@@ -170,4 +170,4 @@ End Try
 ## <a name="see-also"></a>请参阅
 
 - [异常处理基础知识](../../standard/exceptions/exception-handling-fundamentals.md)
-- [请求数据](../../../docs/framework/network-programming/requesting-data.md)
+- [请求数据](requesting-data.md)

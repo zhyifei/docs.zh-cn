@@ -2,12 +2,12 @@
 title: 网络编程示例
 ms.date: 03/30/2017
 ms.assetid: 8efacc29-7367-47c2-8638-a4f66385ad91
-ms.openlocfilehash: 6d66a5ce0835a52dd1b8c331d94bc58ce17622c1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 1c3dc630f8675084d434431fbe227cf373c54b62
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59204544"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047608"
 ---
 # <a name="network-programming-samples"></a>网络编程示例
 本节包含可下载的网络编程示例的说明和链接，这些示例使用 <xref:System.Net>、<xref:System.Net.Cache>、<xref:System.Net.Configuration>、<xref:System.Net.Mail>、<xref:System.Net.Mime>、<xref:System.Net.NetworkInformation>、<xref:System.Net.Security>、<xref:System.Net.Sockets> 和相关命名空间中的类。 
@@ -59,5 +59,5 @@ ms.locfileid: "59204544"
   
 ## <a name="see-also"></a>请参阅
 
-- [.NET Framework 中的网络编程](../../../docs/framework/network-programming/index.md)
-- [网络编程操作说明主题](../../../docs/framework/network-programming/network-programming-how-to-topics.md)
+- [.NET Framework 中的网络编程](index.md)
+- [网络编程操作说明主题](network-programming-how-to-topics.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - My.Computer.EventLog element
 - event logs, writing to
 ms.assetid: cadbc8c1-87af-4746-934e-55b79a4f6e2b
-ms.openlocfilehash: c3c7d350132ee6c891633141fc5c4b280989e77f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 385a85d956a0de727e3c061ec447a3d53ad6c159
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366499"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71054145"
 ---
 # <a name="how-to-write-to-an-application-event-log-visual-basic"></a>如何：写入应用程序事件日志 (Visual Basic)
 
@@ -20,21 +20,21 @@ ms.locfileid: "57366499"
 
 不能将信息写入安全日志。 只有 LocalSystem 或 Administrator 帐户的成员可以将信息写入系统日志。
 
-若要查看事件日志，可以使用“服务器资源管理器”  或“Windows 事件查看器” 。 有关详细信息，请参阅 [ETW Events in the .NET Framework](../../../../framework/performance/etw-events.md)。
+若要查看事件日志，可以使用“服务器资源管理器”  或“Windows 事件查看器”  。 有关详细信息，请参阅 [ETW Events in the .NET Framework](../../../../framework/performance/etw-events.md)。
 
-### <a name="to-add-and-configure-the-event-log-listener"></a>添加和配置事件日志侦听器
+## <a name="to-add-and-configure-the-event-log-listener"></a>添加和配置事件日志侦听器
 
-1. 在“解决方案资源管理器” 中右键单击 app.config，然后选择“打开”。
+1. 在“解决方案资源管理器” 中右键单击 app.config，然后选择“打开”。  
 
     \- 或 -
 
     如果其中没有 app.config 文件，
 
-    1. 在 **“项目”** 菜单上选择 **“添加新项”**。
+    1. 在 **“项目”** 菜单上选择 **“添加新项”** 。
 
-    2. 在“添加新项”  对话框中，选择“应用程序配置文件” 。
+    2. 在“添加新项”  对话框中，选择“应用程序配置文件”  。
 
-    3. 单击 **“添加”**。
+    3. 单击 **“添加”** 。
 
 2. 在应用程序配置文件中找到 `<listeners>` 部分。
 
@@ -61,11 +61,11 @@ ms.locfileid: "57366499"
     > [!NOTE]
     > 通常情况下，应用程序只将错误信息写入事件日志。 有关筛选日志输出的信息，请参阅[演练：筛选 My.Application.Log 输出](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md)。
 
-### <a name="to-write-event-information-to-the-event-log"></a>将事件信息写入事件日志
+## <a name="to-write-event-information-to-the-event-log"></a>将事件信息写入事件日志
 
-- 使用 `My.Application.Log.WriteEntry` 或 `My.Application.Log.WriteException` 方法可以将信息写入事件日志。 有关详细信息，请参阅[如何：编写日志消息](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)和[如何：记录异常](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)。
+使用 `My.Application.Log.WriteEntry` 或 `My.Application.Log.WriteException` 方法可以将信息写入事件日志。 有关详细信息，请参阅[如何：编写日志消息](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)和[如何：记录异常](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)。
 
-    为程序集配置事件日志侦听器后，它将接收该程序集写入 `My.Application.Log` 的所有消息。
+为程序集配置事件日志侦听器后，它将接收该程序集写入 `My.Application.Log` 的所有消息。
 
 ## <a name="see-also"></a>请参阅
 

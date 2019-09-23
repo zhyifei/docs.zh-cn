@@ -16,26 +16,28 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: 8f27afafde0b83dfe886d218f3148d8ff07b30cb
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 40ed31bb2231775bb2b6eb24586e07c8b07a85bb
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972521"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053949"
 ---
 # <a name="how-to-view-assembly-contents"></a>如何：查看程序集内容
+
 可使用 [Ildasm.exe（IL 反汇编程序）](../../framework/tools/ildasm-exe-il-disassembler.md)查看文件中的 Microsoft 中间语言 (MSIL) 信息。 如果要检查的文件是程序集，此信息可包括程序集的属性以及对其他模块和程序集的引用。 此信息有助于确定文件是程序集还是程序集的一部分，以及文件是否具有对其他模块或程序集的引用。  
   
-若要使用 Ildasm.exe 来显示程序集的内容，请在命令提示符下键入 ildasm \< 程序集名称>。 例如，以下命令反汇编 Hello.exe 程序集。  
+若要使用 Ildasm.exe 来显示程序集的内容，请在命令提示符下键入 ildasm \< 程序集名称>    。 例如，以下命令反汇编 Hello.exe 程序集  。  
 
 ```cmd
 ildasm Hello.exe  
 ```  
 
-若要查看程序集清单信息，请在“MSIL 反汇编程序”窗口中双击“清单”图标。  
+若要查看程序集清单信息，请在“MSIL 反汇编程序”窗口中双击“清单”图标  。  
   
 ## <a name="example"></a>示例  
-下例以基本的“Hello World”程序开始。 编译该程序后，使用 Ildasm.exe 反汇编 Hello.exe 程序集，并查看程序集清单。  
+
+下例以基本的“Hello World”程序开始。 编译该程序后，使用 Ildasm.exe 反汇编 Hello.exe 程序集，并查看程序集清单   。  
 
 ```cpp
 using namespace System;
@@ -77,7 +79,7 @@ Class MainApp
 End Class
 ```
 
-在 Hello.exe 程序集上运行 ildasm.exe 命令，然后在“MSIL 反汇编程序”窗口中双击“清单”图标生成以下输出：  
+在 Hello.exe 程序集上运行 ildasm.exe 命令，然后在“MSIL 反汇编程序”窗口中双击“清单”图标生成以下输出    ：  
 
 ```output
 // Metadata version: v4.0.30319  
@@ -104,19 +106,19 @@ End Class
 // Image base: 0x00600000  
 ```  
   
- 下表描述了本例所使用 Hello.exe 程序集的程序集清单中的各项指令。  
+ 下表描述了本例所使用 Hello.exe 程序集的程序集清单中的各项指令  。  
   
 |指令|说明|  
 |---------------|-----------------|  
-|.assembly extern \< assembly name >|指定包含当前模块所引用项目的另一程序集（在此示例中为 `mscorlib`）。|  
-|.publickeytoken \< token >|指定引用程序集的实际密钥的标记。|  
-|.ver \< version number >|指定引用程序集的版本号。|  
-|.assembly \< assembly name >|指定程序集名称。|  
-|.hash algorithm \< int32 value >|指定使用的哈希算法。|  
-|.ver \< version number >|指定程序集的版本号。|  
-|.module \< file name >|指定组成程序集的模块名称。 在此示例中，程序集只包含一个文件。|  
-|.subsystem \< value >|指定程序要求的应用程序环境。 在此示例中，值 3 表示该可执行文件从控制台运行。|  
-|.corflags|当前是元数据中的一个保留字段。|  
+|.assembly extern \< assembly name >   |指定包含当前模块所引用项目的另一程序集（在此示例中为 `mscorlib`）。|  
+|.publickeytoken \< token >   |指定引用程序集的实际密钥的标记。|  
+|.ver \< version number >   |指定引用程序集的版本号。|  
+|.assembly \< assembly name >   |指定程序集名称。|  
+|.hash algorithm \< int32 value >   |指定使用的哈希算法。|  
+|.ver \< version number >   |指定程序集的版本号。|  
+|.module \< file name >   |指定组成程序集的模块名称。 在此示例中，程序集只包含一个文件。|  
+|.subsystem \< value >   |指定程序要求的应用程序环境。 在此示例中，值 3 表示该可执行文件从控制台运行。|  
+|.corflags |当前是元数据中的一个保留字段。|  
   
  根据程序集的内容，程序集清单可包含许多不同的指令。 有关程序集清单中指令的详尽列表，请参阅 ECMA 文档，特别是“Partition II:Metadata Definition and Semantics”（第 2 部分：元数据定义和语义）和“Partition III:CIL Instruction Set”（第 3 部分：CIL 指令集）。 可以获得联机文档。 请参阅 MSDN 上的 [ECMA C# 和公共语言基础结构标准](https://go.microsoft.com/fwlink/?LinkID=99212) 和 ECMA 上的[标准 ECMA-335 - 公共语言基础结构 (CLI)](https://go.microsoft.com/fwlink/?LinkID=65552)。  
   

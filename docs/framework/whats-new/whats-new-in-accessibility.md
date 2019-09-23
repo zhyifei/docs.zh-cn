@@ -9,12 +9,12 @@ helpviewer_keywords:
 - what's new [.NET Framework]
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 410f95b373e079fe959068a6540642a6ad043e95
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 22e1ae495276b0c474ad47f695d8410288289f83
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69952822"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053728"
 ---
 # <a name="whats-new-in-accessibility-in-the-net-framework"></a>.NET Framework 中辅助功能的新增功能
 
@@ -169,7 +169,7 @@ if (raiseMethod != null) {
 
 下图显示用户使用键盘选中按钮时的工具提示。
 
-![用户使用键盘导航到按钮时的工具提示](media/tooltip.png)
+![用户使用键盘导航到按钮时的工具提示](./media/tooltip.png)
 
 <a name="wpf48" />
 
@@ -189,7 +189,7 @@ if (raiseMethod != null) {
 
 要使用此属性，只需将其添加到 XAML 代码，并使用适当的画笔或绑定。 生成的文本选择如下所示：
 
-![用户使用键盘导航到按钮时的工具提示](media/selectiontextbrush-property.png)
+![用户使用键盘导航到按钮时的工具提示](./media/selectiontextbrush-property.png)
 
 可以结合使用 `SelectionBrush` 和 `SelectionTextBrush` 属性来生成你认为合适的任何背景色和前景色组合。
 
@@ -482,11 +482,11 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
   在此之前: 
 
-  ![辅助功能改进前具有焦点的 Expander 控件](media/expander-before.png)
+  ![辅助功能改进前具有焦点的 Expander 控件](./media/expander-before.png)
 
   之后： 
 
-  ![辅助功能改进后具有焦点的 Expander 控件](media/expander-after.png)
+  ![辅助功能改进后具有焦点的 Expander 控件](./media/expander-after.png)
 
 - <xref:System.Windows.Controls.CheckBox> 和 <xref:System.Windows.Controls.RadioButton> 控件
 
@@ -494,11 +494,11 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
   在此之前: 
 
-  ![辅助功能改进前具有焦点的高对比度单选按钮](media/radio-button-before.png)
+  ![辅助功能改进前具有焦点的高对比度单选按钮](./media/radio-button-before.png)
 
   之后： 
 
-  ![辅助功能改进后具有焦点的高对比度单选按钮](media/radio-button-after.png)
+  ![辅助功能改进后具有焦点的高对比度单选按钮](./media/radio-button-after.png)
 
 - <xref:System.Windows.Controls.ComboBox> 控件
 
@@ -506,31 +506,31 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
   在此之前: 
 
-  ![辅助功能改进前禁用的 ComboBox 边框和文本](media/combo-disabled-before.png)
+  ![辅助功能改进前禁用的 ComboBox 边框和文本](./media/combo-disabled-before.png)
 
   之后：   
 
-  ![辅助功能改进后禁用的 ComboBox 边框和文本](media/combo-disabled-after.png)
+  ![辅助功能改进后禁用的 ComboBox 边框和文本](./media/combo-disabled-after.png)
 
   此外，已禁用的按钮和具有焦点的按钮使用正确的主题颜色。
 
   在此之前:
 
-  ![辅助功能改进前的按钮主题颜色](media/button-themes-before.png) 
+  ![辅助功能改进前的按钮主题颜色](./media/button-themes-before.png) 
 
   之后： 
 
-  ![辅助功能改进后的按钮主题颜色](media/button-themes-after.png) 
+  ![辅助功能改进后的按钮主题颜色](./media/button-themes-after.png) 
 
   最后，在 .NET Framework 4.7 及更低版本中，将 <xref:System.Windows.Controls.ComboBox> 控件的样式设置为 `Toolbar.ComboBoxStyleKey` 会导致下拉箭头不可见。 此问题已在 .NET Framework 4.7.1 及更高版本中解决。 例如:
 
   在此之前: 
 
-  ![辅助功能改进前的 Toolbar.ComboBoxStyleKey](media/comboboxstylekey-before.png) 
+  ![辅助功能改进前的 Toolbar.ComboBoxStyleKey](./media/comboboxstylekey-before.png) 
 
   之后： 
 
-  ![辅助功能改进后的 Toolbar.ComboBoxStyleKey](media/comboboxstylekey-after.png) 
+  ![辅助功能改进后的 Toolbar.ComboBoxStyleKey](./media/comboboxstylekey-after.png) 
 
 - <xref:System.Windows.Controls.DataGrid> 控件
 
@@ -538,21 +538,21 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
   在此之前: 
 
-  ![辅助功能改进前的排序指示符箭头](media/sort-indicator-before.png) 
+  ![辅助功能改进前的排序指示符箭头](./media/sort-indicator-before.png) 
 
   之后：   
 
-  ![辅助功能改进后的排序指示符箭头](media/sort-indicator-after.png) 
+  ![辅助功能改进后的排序指示符箭头](./media/sort-indicator-after.png) 
 
   此外，在 .NET Framework 4.7 及更低版本中，在高对比度模式下，默认链接样式在鼠标悬停在其上时更改为不正确的颜色。 此问题已在 .NET Framework 4.7.1 及更高版本中解决。 同样，从 .NET Framework 4.7.1 开始，<xref:System.Windows.Controls.DataGrid> 复选框列对键盘焦点反馈使用预期的颜色。
 
   在此之前: 
 
-  ![辅助功能改进前的 DataGrid 默认链接样式](media/default-link-style-before.png) 
+  ![辅助功能改进前的 DataGrid 默认链接样式](./media/default-link-style-before.png) 
 
   之后：    
 
-  ![辅助功能改进后的 DataGrid 默认链接样式](media/default-link-style-after.png) 
+  ![辅助功能改进后的 DataGrid 默认链接样式](./media/default-link-style-after.png) 
 
 有关 .NET Framework 4.7.1 中 WPF 辅助功能改进的详细信息，请参阅 [WPF 辅助功能改进](../migration-guide/retargeting/4.7-4.7.1.md#accessibility-improvements-in-wpf)。
 
@@ -583,11 +583,11 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
   在此之前:
 
-  ![辅助功能改进前禁用的文本](media/wf-disabled-before.png) 
+  ![辅助功能改进前禁用的文本](./media/wf-disabled-before.png) 
 
   之后：
 
-  ![辅助功能改进后禁用的文本](media/wf-disabled-after.png) 
+  ![辅助功能改进后禁用的文本](./media/wf-disabled-after.png) 
 
 - “线程异常”对话框中的高对比度改进。
 

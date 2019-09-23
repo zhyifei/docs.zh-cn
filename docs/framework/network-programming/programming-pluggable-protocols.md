@@ -15,12 +15,12 @@ helpviewer_keywords:
 - receiving data, pluggable protocols
 - protocols, pluggable
 ms.assetid: 66ef8456-7576-4e97-8956-959b216373db
-ms.openlocfilehash: d14eb426c8e142f56d9f024dcbf37a1d2d78664d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 94dfedd317782b9e518df02c84d9af55b1ef2b69
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59072336"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047391"
 ---
 # <a name="programming-pluggable-protocols"></a>对可插入协议进行编程
 <xref:System.Net.WebRequest> 和 <xref:System.Net.WebResponse> 抽象类为可插入协议提供了基础。 通过从 <xref:System.Net.WebRequest> 和 <xref:System.Net.WebResponse> 派生协议特定的类，应用程序可以请求 Internet 资源中的数据并读取响应而无需指定所使用的协议。  
@@ -33,7 +33,7 @@ ms.locfileid: "59072336"
   
 ## <a name="see-also"></a>请参阅
 
-- [从 WebRequest 派生](../../../docs/framework/network-programming/deriving-from-webrequest.md)
-- [从 WebResponse 派生](../../../docs/framework/network-programming/deriving-from-webresponse.md)
-- [.NET Framework 中的网络编程](../../../docs/framework/network-programming/index.md)
-- [如何：转换 WebRequest 以访问协议特定属性](../../../docs/framework/network-programming/how-to-typecast-a-webrequest-to-access-protocol-specific-properties.md)
+- [从 WebRequest 派生](deriving-from-webrequest.md)
+- [从 WebResponse 派生](deriving-from-webresponse.md)
+- [.NET Framework 中的网络编程](index.md)
+- [如何：转换 WebRequest 以访问协议特定属性](how-to-typecast-a-webrequest-to-access-protocol-specific-properties.md)

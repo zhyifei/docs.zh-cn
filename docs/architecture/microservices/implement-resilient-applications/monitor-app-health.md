@@ -2,12 +2,12 @@
 title: 运行状况监视
 description: 了解实现运行状况监视的一种方法。
 ms.date: 01/07/2019
-ms.openlocfilehash: b03506972166eec1864de840c1abda05bc3e5277
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 3b81537ca8e0c5cc7ce15ab64ab3235b699dc7a9
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68674494"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71040060"
 ---
 # <a name="health-monitoring"></a>运行状况监视
 
@@ -199,7 +199,7 @@ app.UseHealthChecks("/hc", new HealthCheckOptions()
 
 ## <a name="use-watchdogs"></a>使用监视程序
 
-监视程序是一项单独服务，可以监视多个服务的运行和负载状况，并借助前面介绍的 `HealthChecks` 库进行查询，从而报告微服务的运行状况。 这有助于防止出现基于单个服务的视图所检测不到的错误。 此外，监视器也是一个不错的代码托管位置，它可以针对已知状态执行补救措施，而无需用户交互。
+监视程序是一项单独服务，可以监视多个服务的运行和负载状况，并借助前面介绍的 `HealthChecks` 库进行查询，从而报告微服务的运行状况。 这有助于防止某些根据单个服务视图检测不到的错误。 监视程序也是托管代码的好选择，可以在没有用户交互的情况下根据已知情况执行修正操作。
 
 eShopOnContainers 示例包含一个网页，该网页显示了示例运行状况检查报告，如图 8-9 所示。 这是最简单的监视程序，因为它只显示 eShopOnContainers 中的微服务和 Web 应用程序的状态。 通常，监视程序在检测到不正常运行状态时还会执行相应操作。
 
@@ -265,7 +265,7 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env)
 
 ## <a name="advanced-monitoring-visualization-analysis-and-alerts"></a>高级监视：可视化、分析和警报
 
-监视的最后一部分是对事件流进行可视化、报告服务性能、以及在检测到问题时发出警报。 可以使用不同的解决方案实现监视的这个层面。
+监视的最后一部分是对事件流进行可视化、报告服务性能、以及在检测到问题时发出警报。 可以使用不同的解决方案来进行这方面的监视。
 
 可以使用显示服务状态的简单自定义应用程序，例如介绍 [AspNetCore.Diagnostics.HealthChecks](https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks) 时显示的自定义页。 或者，可以使用更高级的工具（如 [Azure Monitor](https://azure.microsoft.com/services/monitor/)）基于事件流发出警报。
 
@@ -279,7 +279,7 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env)
 - **Service Fabric 运行状况监视简介** \
   [https://docs.microsoft.com/azure/service-fabric/service-fabric-health-introduction](/azure/service-fabric/service-fabric-health-introduction)
 
-- **Azure Monitor**
+- **Azure Monitor**  
   <https://azure.microsoft.com/services/monitor/>
 
 >[!div class="step-by-step"]

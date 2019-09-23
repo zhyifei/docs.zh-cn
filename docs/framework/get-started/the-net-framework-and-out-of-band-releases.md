@@ -4,12 +4,12 @@ ms.date: 10/10/2018
 ms.assetid: 721f10fa-3189-4124-a00d-56ddabd889b3
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3aaf64c2f0738d2db607a2476890b033ff9d06a2
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: c1df04df8aa08fa66c91d03d4b67318b434a93d8
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063042"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051954"
 ---
 # <a name="the-net-framework-and-out-of-band-releases"></a>.NET Framework 和带外版本
 
@@ -21,13 +21,13 @@ ms.locfileid: "65063042"
  如果你在应用程序中使用了 OOB 功能，你的用户不必安装最新版 .NET Framework 即可运行你的应用程序，因为 OOB 程序集是与你的应用程序包一起部署的。
 
 ## <a name="how-oob-packages-are-distributed"></a>OOB 包是如何存储的
-核心公共语言运行时 (CLR) 组件的 OOB 版本通过 [NuGet ](https://www.nuget.org/)（.NET 的包管理器）提供。 NuGet 让你可以轻松地通过 Visual Studio 中的解决方案资源管理器浏览并将库添加至你的 .NET Framework 项目。 从 Visual Studio 2012 开始，NuGet 随附于 Visual Studio 的所有版本。 若要确定 NuGet 是否已安装，请在 Visual Studio“工具”菜单上查找“NuGet 包管理器”。 如果尚未安装：
+核心公共语言运行时 (CLR) 组件的 OOB 版本通过 [NuGet ](https://www.nuget.org/)（.NET 的包管理器）提供。 NuGet 让你可以轻松地通过 Visual Studio 中的解决方案资源管理器浏览并将库添加至你的 .NET Framework 项目。 从 Visual Studio 2012 开始，NuGet 随附于 Visual Studio 的所有版本。 若要确定 NuGet 是否已安装，请在 Visual Studio“工具”  菜单上查找“NuGet 包管理器”  。 如果尚未安装：
 
-1. 在 Visual Studio 菜单栏中，依次选择“工具”和“扩展和更新”（在 Visual Studio 2010 中，选择“扩展管理器”）。
+1. 在 Visual Studio 菜单栏中，依次选择“工具”  和“扩展和更新”  （在 Visual Studio 2010 中，选择“扩展管理器”  ）。
 
-     此时，“扩展和更新”对话框打开。
+     此时，“扩展和更新”  对话框打开。
 
-2. 依次选择“联机”、“NuGet 包管理器”和“下载”。
+2. 依次选择“联机”  、“NuGet 包管理器”  和“下载”  。
 
 3. 在下载完毕后，重新启动 Visual Studio。
 
@@ -36,13 +36,13 @@ ms.locfileid: "65063042"
 ## <a name="using-a-nuget-oob-package"></a>使用 NuGet OOB 程序包
  在安装 NuGet 后，可以使用 Visual Studio 中的解决方案资源管理器浏览并添加引用到 NuGet 程序包：
 
-1. 在 Visual Studio 中打开项目的快捷菜单，然后选择“管理 NuGet 包”。 （也可以在“项目”菜单中选择此选项。）
+1. 在 Visual Studio 中打开项目的快捷菜单，然后选择“管理 NuGet 包”  。 （也可以在“项目”  菜单中选择此选项。）
 
-2. 在左侧窗格中，选择“联机”。
+2. 在左侧窗格中，选择“联机”  。
 
-3. 如果要使用预发行包，请选择中间窗格内下拉列表框中的“包括预发行版”（而不选择“仅限稳定版”）。
+3. 如果要使用预发行包，请选择中间窗格内下拉列表框中的“包括预发行版”  （而不选择“仅限稳定版”  ）。
 
-4. 在右侧窗格中，使用“搜索”框来查找要使用的包。 某些 Microsoft 程序包通过 Microsoft .NET Framework 徽标进行识别，发布者均为 Microsoft。
+4. 在右侧窗格中，使用“搜索”  框来查找要使用的包。 某些 Microsoft 程序包通过 Microsoft .NET Framework 徽标进行识别，发布者均为 Microsoft。
 
  ![显示 NuGet 包管理器的屏幕截图。](./media/the-net-framework-and-out-of-band-releases/nuget-package-manager-dialog.png)
 
@@ -51,8 +51,8 @@ ms.locfileid: "65063042"
 ## <a name="types-of-oob-releases"></a>OOB 版本的类型
  通常情况下，OOB 程序包具有一个或多个预发行版本和一个稳定的版本。 预发行附带的许可证通常不允许再发行，但可让你试用程序包并提供反馈。 任何对包的更新中都包含反馈。 最终发布版本作为稳定的包随 NuGet 分发并包含允许随应用程序重新分发 NuGet 程序包的许可证。 稳定程序包受 Microsoft 支持。 Microsoft 还提供 IntelliSense 支持以及其他文档类型（如所有程序包的博客文章和论坛答案）。 此外，只有一些程序包可使用源代码，并非所有程序包都可使用。 有关新增和更新后的包的公告，可订阅 [.NET Framework 博客](https://devblogs.microsoft.com/dotnet/)。
 
- 若要查找预发行版包和稳定版包，请在 NuGet 包管理器中选择“包括预发行版”。
+ 若要查找预发行版包和稳定版包，请在 NuGet 包管理器中选择“包括预发行版”  。
 
 ## <a name="see-also"></a>请参阅
 
-- [入门](../../../docs/framework/get-started/index.md)
+- [入门](index.md)

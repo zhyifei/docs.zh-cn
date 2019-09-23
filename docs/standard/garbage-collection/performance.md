@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e96160b0751e0377b429e63c1be6c6761c406096
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 6409bbecdef2da03a18ed246cb90478b2a1fd7f6
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67664037"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71054070"
 ---
 # <a name="garbage-collection-and-performance"></a>垃圾回收和性能
 
@@ -249,7 +249,7 @@ ETW 事件日志有效，且不会掩盖与垃圾回收相关的任何性能问�
 
 <a name="GenBreak"></a>
 
-##### <a name="to-set-a-breakpoint-at-the-end-of-garbage-collection"></a>若要在垃圾回收结束时设置一个断点
+#### <a name="to-set-a-breakpoint-at-the-end-of-garbage-collection"></a>若要在垃圾回收结束时设置一个断点
 
 - 在加载了 SOS 调试器扩展的 WinDbg 中，键入以下命令：
 
@@ -301,7 +301,7 @@ ETW 事件日志有效，且不会掩盖与垃圾回收相关的任何性能问�
 
 <a name="IsGC"></a>
 
-##### <a name="to-determine-whether-the-problem-is-caused-by-garbage-collection"></a>若要确定问题是否是垃圾回收引起
+### <a name="to-determine-whether-the-problem-is-caused-by-garbage-collection"></a>若要确定问题是否是垃圾回收引起
 
 - 请检查以下两个内存性能计数器：
 
@@ -313,7 +313,7 @@ ETW 事件日志有效，且不会掩盖与垃圾回收相关的任何性能问�
 
 <a name="OOMIsManaged"></a>
 
-##### <a name="to-determine-whether-the-out-of-memory-exception-is-managed"></a>若要确定是否已托管内存不足异常
+### <a name="to-determine-whether-the-out-of-memory-exception-is-managed"></a>若要确定是否已托管内存不足异常
 
 1. 在加载了 SOS 调试器扩展的 WinDbg 或 Visual Studio 调试器中，键入打印异常 (**pe**) 命令：
 
@@ -347,7 +347,7 @@ ETW 事件日志有效，且不会掩盖与垃圾回收相关的任何性能问�
 
 <a name="GetVM"></a>
 
-##### <a name="to-determine-how-much-virtual-memory-can-be-reserved"></a>若要确定可保留的虚拟内存量
+### <a name="to-determine-how-much-virtual-memory-can-be-reserved"></a>若要确定可保留的虚拟内存量
 
 - 在加载了 SOS 调试器扩展的 WinDbg 中键入以下命令，以获取最大的可用区域：
 
@@ -381,7 +381,7 @@ ETW 事件日志有效，且不会掩盖与垃圾回收相关的任何性能问�
 
 <a name="Physical"></a>
 
-##### <a name="to-determine-whether-there-is-enough-physical-memory"></a>若要确定是否有足够的物理内存
+### <a name="to-determine-whether-there-is-enough-physical-memory"></a>若要确定是否有足够的物理内存
 
 1. 则启动 Windows 任务管理器。
 
@@ -391,7 +391,7 @@ ETW 事件日志有效，且不会掩盖与垃圾回收相关的任何性能问�
 
 <a name="ManagedHeapCommit"></a>
 
-##### <a name="to-determine-how-much-memory-the-managed-heap-is-committing"></a>若要确定托管堆的内存提交量
+### <a name="to-determine-how-much-memory-the-managed-heap-is-committing"></a>若要确定托管堆的内存提交量
 
 - 使用 `# Total committed bytes` 内存性能计数器获取托管堆提交的字节数。 垃圾回收器根据需要在某个段上提交区块，但不会全部在同一时间进行。
 
@@ -400,7 +400,7 @@ ETW 事件日志有效，且不会掩盖与垃圾回收相关的任何性能问�
 
 <a name="ManagedHeapReserve"></a>
 
-##### <a name="to-determine-how-much-memory-the-managed-heap-reserves"></a>若要确定托管堆的内存保留量
+### <a name="to-determine-how-much-memory-the-managed-heap-reserves"></a>若要确定托管堆的内存保留量
 
 - 使用 `# Total reserved bytes`内存性能计数器。
 
@@ -449,7 +449,7 @@ ETW 事件日志有效，且不会掩盖与垃圾回收相关的任何性能问�
 
 <a name="ExamineGen2"></a>
 
-##### <a name="to-determine-large-objects-in-generation-2"></a>若要确定第 2 代中的大型对象
+### <a name="to-determine-large-objects-in-generation-2"></a>若要确定第 2 代中的大型对象
 
 - 在加载了 SOS 调试器扩展的 WinDbg 或 Visual Studio 调试器中，键入以下命令：
 
@@ -489,7 +489,7 @@ ETW 事件日志有效，且不会掩盖与垃圾回收相关的任何性能问�
 
 <a name="ObjRef"></a>
 
-##### <a name="to-determine-references-to-objects"></a>若要确定对对象的引用
+### <a name="to-determine-references-to-objects"></a>若要确定对对象的引用
 
 - 在加载了 SOS 调试器扩展的 WinDbg 中，键入以下命令，以列出对对象的引用：
 
@@ -523,7 +523,7 @@ ETW 事件日志有效，且不会掩盖与垃圾回收相关的任何性能问�
 
 <a name="Induce"></a>
 
-##### <a name="to-determine-whether-a-finalizer-has-been-run"></a>若要确定是否已运行终结器
+### <a name="to-determine-whether-a-finalizer-has-been-run"></a>若要确定是否已运行终结器
 
 - 则运行包含以下代码的测试程序：
 
@@ -537,7 +537,7 @@ ETW 事件日志有效，且不会掩盖与垃圾回收相关的任何性能问�
 
 <a name="Finalize"></a>
 
-##### <a name="to-determine-whether-there-are-objects-waiting-to-be-finalized"></a>若要确定是否存在等待被终结的对象
+### <a name="to-determine-whether-there-are-objects-waiting-to-be-finalized"></a>若要确定是否存在等待被终结的对象
 
 1. 在加载了 SOS 调试器扩展的 WinDbg 或 Visual Studio 调试器中，键入以下命令：
 
@@ -562,7 +562,7 @@ ETW 事件日志有效，且不会掩盖与垃圾回收相关的任何性能问�
 
 <a name="Fragmented"></a>
 
-##### <a name="to-determine-the-amount-of-free-space-in-the-managed-heap"></a>若要确定托管堆中的可用空间量
+### <a name="to-determine-the-amount-of-free-space-in-the-managed-heap"></a>若要确定托管堆中的可用空间量
 
 - 在加载了 SOS 调试器扩展的 WinDbg 或 Visual Studio 调试器中，键入以下命令：
 
@@ -639,7 +639,7 @@ ETW 事件日志有效，且不会掩盖与垃圾回收相关的任何性能问�
 
 <a name="Pinned"></a>
 
-##### <a name="to-determine-the-number-of-pinned-objects"></a>若要确定固定对象的数目
+### <a name="to-determine-the-number-of-pinned-objects"></a>若要确定固定对象的数目
 
 - 在加载了 SOS 调试器扩展的 WinDbg 或 Visual Studio 调试器中，键入以下命令：
 
@@ -655,7 +655,7 @@ ETW 事件日志有效，且不会掩盖与垃圾回收相关的任何性能问�
 
 <a name="TimeInGC"></a>
 
-##### <a name="to-determine-the-length-of-time-in-a-garbage-collection"></a>若要确定垃圾回收中的时间
+### <a name="to-determine-the-length-of-time-in-a-garbage-collection"></a>若要确定垃圾回收中的时间
 
 - 检查 `% Time in GC` 内存性能计数器。
 
@@ -743,7 +743,7 @@ ETW 事件日志有效，且不会掩盖与垃圾回收相关的任何性能问�
 
 <a name="Triggered"></a>
 
-##### <a name="to-determine-what-triggered-a-garbage-collection"></a>若要确定触发垃圾回收的原因
+### <a name="to-determine-what-triggered-a-garbage-collection"></a>若要确定触发垃圾回收的原因
 
 - 在加载了 SOS 调试器扩展的 WinDbg 或 Visual Studio 调试器中，键入以下命令，以显示所有带调用堆栈的线程：
 
@@ -822,7 +822,7 @@ ETW 事件日志有效，且不会掩盖与垃圾回收相关的任何性能问�
 
 <a name="HighCPU"></a>
 
-##### <a name="to-determine-whether-high-cpu-usage-is-caused-by-garbage-collection"></a>若要确定 CPU 的使用率高是否是垃圾回收引起的
+### <a name="to-determine-whether-high-cpu-usage-is-caused-by-garbage-collection"></a>若要确定 CPU 的使用率高是否是垃圾回收引起的
 
 - 将 `% Time in GC` 内存性能计数器的值与处理时间相关联。
 

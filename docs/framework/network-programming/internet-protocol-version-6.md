@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Internet Protocol version 6, improvements
 - Internet Protocol version 6
 ms.assetid: e6fa8ebd-010a-4c48-a5ec-a5102c53c06f
-ms.openlocfilehash: 0851ad42cd5ce2dd6b49ad7656479d5237fd5874
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 367db4fa4e585d6066009dbd1afacb154829319a
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647347"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047882"
 ---
 # <a name="internet-protocol-version-6"></a>Internet 协议版本 6
 Internet 协议版本 6 (IPv6) 是 Internet 的网络层的标准协议新套件。 IPv6 旨在解决当前版本的 Internet 协议套件（称作 IPv4）存在的许多问题，包括地址消耗、安全性、自动配置和扩展性等问题。 IPv6 扩展了 Internet 的功能以启用新型应用程序，包括对等和移动应用程序。 以下是当前 IPv4 协议的主要问题：  
@@ -42,9 +42,9 @@ Internet 协议版本 6 (IPv6) 是 Internet 的网络层的标准协议新套件
   
 - 内置身份验证和保密性。  
   
- 有关详细信息，请参阅 [IPv6 寻址](../../../docs/framework/network-programming/ipv6-addressing.md)、[IPv6 路由](../../../docs/framework/network-programming/ipv6-routing.md)、[IPv6 自动配置](../../../docs/framework/network-programming/ipv6-auto-configuration.md)、[启用和禁用 IPv6](../../../docs/framework/network-programming/enabling-and-disabling-ipv6.md) 以及[如何：修改计算机配置文件以启用 IPv6 支持](../../../docs/framework/network-programming/how-to-modify-the-computer-configuration-file-to-enable-ipv6-support.md)。  
+ 有关详细信息，请参阅 [IPv6 寻址](ipv6-addressing.md)、[IPv6 路由](ipv6-routing.md)、[IPv6 自动配置](ipv6-auto-configuration.md)、[启用和禁用 IPv6](enabling-and-disabling-ipv6.md) 以及[如何：修改计算机配置文件以启用 IPv6 支持](how-to-modify-the-computer-configuration-file-to-enable-ipv6-support.md)。  
   
-## <a name="references"></a>参考资料  
+## <a name="references"></a>reference  
  以下是可以在 [Internet 工程任务组 (IETF)](https://www.ietf.org/) 找到的精选 RFC 文档：  
   
 - RFC 1287，面向未来的 Internet 体系结构。  
@@ -60,5 +60,5 @@ Internet 协议版本 6 (IPv6) 是 Internet 的网络层的标准协议新套件
 ## <a name="see-also"></a>请参阅
 
 - [IPv6 套接字示例](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/ms180981%28v=vs.85%29)
-- [网络编程示例](../../../docs/framework/network-programming/network-programming-samples.md)
-- [套接字](../../../docs/framework/network-programming/sockets.md)
+- [网络编程示例](network-programming-samples.md)
+- [套接字](sockets.md)

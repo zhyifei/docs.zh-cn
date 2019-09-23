@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 9ac1b522-77ab-4cdc-852a-20fcdc9ae498
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c5033b32c1623885b5408f428ce4bc4202d50ce1
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 9a8d41228c46de0f18b5a92def0591d6373d3d69
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894630"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044097"
 ---
 # <a name="sosdll-sos-debugging-extension"></a>SOS.dll（SOS 调试扩展）
 
@@ -74,7 +74,7 @@ SOS 调试扩展 (SOS.dll) 通过提供有关内部公共语言运行时 (CLR) �
 |**IP2MD** \<*Code address*>|显示已 JIT 编译的代码中指定地址处的 `MethodDesc` 结构。|
 |`ListNearObj` (`lno`) *\<obj_address>*|显示指定地址之前和之后的对象。 该命令在垃圾回收堆和自变量地址之后的对象中寻找地址，而该垃圾回收堆看上去像托管对象（基于有效的方法表）的有效开头。|
 |**MinidumpMode** [**0**] [**1**]|防止在使用小型转储时运行不安全的命令。<br /><br /> 传递 **0** 禁用此功能，或传递 **1** 启用此功能。 默认情况下，**MinidumpMode** 值设置为 **0**。<br /><br /> 使用 **.dump /m** 命令或 **.dump** 命令创建的小型转储具有有限的 CLR 特定数据，允许只正确地运行一小部分 SOS 命令。 有些命令可能会因错误而失败，因为所需的内存区域未被映射或仅被部分映射。 此选项可防止你对小型转储运行不安全的命令。|
-|**Name2EE** \<*module name*> \<*type or method name*><br /><br /> -或-<br /><br /> **Name2EE** \<*module name*> **!** \<*type or method name*>|显示指定模块中的指定类型或方法的 `MethodTable` 结构和 `EEClass` 结构。<br /><br /> 在进程中必须加载指定的模块。<br /><br /> 若要获取正确的类型名称，请通过使用 [Ildasm.exe（IL 反汇编程序）](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)浏览模块。 也可以将 `*` 作为模块名参数传递以搜索所有已加载的托管模块。 *module name* 参数也可以是模块的调试器名称，如 `mscorlib` 或 `image00400000`。<br /><br /> 此命令支持 <`module`>`!`<`type`> 的 Windows 调试器语法。 类型必须是完全限定的。|
+|**Name2EE** \<*module name*> \<*type or method name*><br /><br /> -或-<br /><br /> **Name2EE** \<*module name*> **!** \<*type or method name*>|显示指定模块中的指定类型或方法的 `MethodTable` 结构和 `EEClass` 结构。<br /><br /> 在进程中必须加载指定的模块。<br /><br /> 若要获取正确的类型名称，请通过使用 [Ildasm.exe（IL 反汇编程序）](ildasm-exe-il-disassembler.md)浏览模块。 也可以将 `*` 作为模块名参数传递以搜索所有已加载的托管模块。 *module name* 参数也可以是模块的调试器名称，如 `mscorlib` 或 `image00400000`。<br /><br /> 此命令支持 <`module`>`!`<`type`> 的 Windows 调试器语法。 类型必须是完全限定的。|
 |**ObjSize** [\<*Object address*>] &#124; [ **-aggregate**] [ **-stat**]|显示指定对象的大小。 如果未指定任何参数，则 **ObjSize** 命令将显示在托管线程上找到的所有对象的大小，显示进程中的所有垃圾回收器句柄，并对这些句柄指向的任何对象的大小进行合计。 除父对象之外，**ObjSize** 命令还包括所有子对象的大小。<br /><br /> **-aggregate** 选项能够与 **-stat** 参数一起使用，以获得仍为根类型的类型的详细视图。 通过使用 **!dumpheap -stat** 和 **!objsize -aggregate -stat**，可以确定不再为根的对象并诊断各种内存问题。|
 |**PrintException** [ **-nested**] [ **-lines**] [\<*Exception object address*>]<br /><br /> -或-<br /><br /> **PE** [ **-nested**] [\<*Exception object address*>]|显示从指定地址处的 <xref:System.Exception> 类派生的任何对象的字段并设置这些字段的格式。 如果不指定地址，**PrintException** 命令将显示在当前线程上引发的最后一个异常。<br /><br /> **-nested** 选项显示有关嵌套异常对象的详细信息。<br /><br /> **-lines** 选项显示源信息（如果可用）。<br /><br /> 可以使用此命令设置 `_stackTrace` 字段的格式并查看该字段（它是一个二进制数组）。|
 |**ProcInfo** [ **-env**] [ **-time**] [ **-mem**]|显示进程的环境变量、内核 CPU 时间和内存使用统计信息。|
@@ -206,5 +206,5 @@ WinDbg.exe 和 Visual Studio 使用与当前使用的 Mscorwks.dll 版本对应�
 
 ## <a name="see-also"></a>请参阅
 
-- [工具](../../../docs/framework/tools/index.md)
-- [命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [工具](index.md)
+- [命令提示](developer-command-prompt-for-vs.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - HTTP
 ms.assetid: 5b89d3fb-3c9a-49e2-af1f-c34c020c68ac
-ms.openlocfilehash: d3fecb9fe78ca54f68d3c5a97dae5d5dd9fbb28d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: d5b07617617ac28e4f7f72bc23a96b45a85dff75
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59075413"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047981"
 ---
 # <a name="httplistener"></a>HttpListener
 <xref:System.Net.HttpListener> 类提供一个可通过编程方式控制的 HTTP 协议侦听器。 侦听器在 <xref:System.Net.HttpListener> 对象的生存期内处于活动状态，在你的应用程序中运行。  
@@ -26,4 +26,4 @@ ms.locfileid: "59075413"
 - [Internet 信息中的安全性增强功能](https://go.microsoft.com/fwlink/?LinkID=178286)
 - [HttpListener ASPX 主机应用程序示例](https://go.microsoft.com/fwlink/?LinkID=179560)
 - [HttpListener 技术示例](https://go.microsoft.com/fwlink/?LinkID=179558)
-- [网络编程示例](../../../docs/framework/network-programming/network-programming-samples.md)
+- [网络编程示例](network-programming-samples.md)

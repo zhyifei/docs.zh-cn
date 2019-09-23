@@ -5,20 +5,20 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - Mage.exe
 ms.assetid: 77dfe576-2962-407e-af13-82255df725a1
-ms.openlocfilehash: 549eca835b2161429668a2ee340a71dfae658524
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 13a22cd15da3d4cf7eb26359c692389d27d377c0
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422360"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044512"
 ---
 # <a name="mageexe-manifest-generation-and-editing-tool"></a>Mage.exe（清单生成和编辑工具）
 
 清单生成和编辑工具 (Mage.exe) 是一种命令行工具，可以支持创建和编辑应用程序和部署清单  。 可以从批脚本和其他基于 Windows 的应用程序（包括 ASP.NET 应用程序）运行命令行工具 Mage.exe  。
 
-也可以使用一种图形应用程序 MageUI.exe 来代替 Mage.exe   。 有关详细信息，请参阅 [MageUI.exe (Manifest Generation and Editing Tool, Graphical Client)](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)。
+也可以使用一种图形应用程序 MageUI.exe 来代替 Mage.exe   。 有关详细信息，请参阅 [MageUI.exe (Manifest Generation and Editing Tool, Graphical Client)](mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)。
 
-此工具会自动随 Visual Studio 一起安装。 要运行该工具，请使用 Visual Studio 开发人员命令提示。 有关详细信息，请参阅[命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。
+此工具会自动随 Visual Studio 一起安装。 要运行该工具，请使用 Visual Studio 开发人员命令提示。 有关详细信息，请参阅[命令提示](developer-command-prompt-for-vs.md)。
 
 Mage.exe 和 MageUI.exe 的两个版本包含在 Visual Studio 中   。 若要查看版本信息，请运行 MageUI.exe，依次选择“帮助”和“关于”    。 本文档介绍 Mage.exe 和 MageUI.exe 的 4.0.x.x 版本   。
 
@@ -107,7 +107,7 @@ mage -Update c:\HelloWorldDeployment\HelloWorld.deploy -CertFile cert.pfx
 
  应用程序清单的 **-TrustLevel** 选项描述了应用程序在客户端计算机上运行时所需的权限集。 默认情况下，将根据应用程序的 URL 所在的 *区域* 指派应用程序的信任级别。 通过公司网络部署的应用程序一般放置在 Intranet 区域中，而那些通过 Internet 部署的应用程序放置在 Internet 区域中。 这两个安全区域都会限制应用程序对本地资源的访问，Intranet 区域比 Internet 区域的权限稍大。 FullTrust 区域授予应用程序对计算机本地资源的完全访问权限。 如果使用 **-TrustLevel** 选项将某个应用程序放置在此区域中，CLR 的信任关系管理器组件将会提示用户确定是否授予这种更高的信任级别。 如果通过公司网络部署应用程序，则可以使用“受信任的应用程序部署”提升该应用程序的信任级别，而无需对用户做出提示。
 
- 应用程序清单还支持自定义信任部分。 这有助于应用程序遵守请求最低权限的安全原则，这是因为你可以对清单进行配置，使其只需要应用程序运行所需的那些特定权限。 Mage.exe 不直接支持添加自定义信任部分  。 可以使用文本编辑器、XML 分析器或图形工具 MageUI.exe 添加自定义信任部分  。 有关如何使用 MageUI.exe 添加自定义信任部分的详细信息，请参阅 [MageUI.exe（图形化客户端中的清单生成和编辑工具）](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)  。
+ 应用程序清单还支持自定义信任部分。 这有助于应用程序遵守请求最低权限的安全原则，这是因为你可以对清单进行配置，使其只需要应用程序运行所需的那些特定权限。 Mage.exe 不直接支持添加自定义信任部分  。 可以使用文本编辑器、XML 分析器或图形工具 MageUI.exe 添加自定义信任部分  。 有关如何使用 MageUI.exe 添加自定义信任部分的详细信息，请参阅 [MageUI.exe（图形化客户端中的清单生成和编辑工具）](mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)  。
 
 Visual Studio 2017 包括 4.6.1 版 Mage.exe  。 使用此版本的 Mage.exe  创建的清单适用于 .NET Framework 4。 若要以早期版本的 .NET Framework 为目标，请使用 Mage.exe 的早期版本  。
 
@@ -222,5 +222,5 @@ mage -Sign deploy.application -CertFile cert.pfx -KeyContainer keyfile.snk -Cryp
 - [ClickOnce 安全和部署](/visualstudio/deployment/clickonce-security-and-deployment)
 - [演练：手动部署 ClickOnce 应用程序](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)
 - [受信任的应用程序部署概述](/visualstudio/deployment/trusted-application-deployment-overview)
-- [MageUI.exe（图形化客户端中的清单生成和编辑工具）](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)
-- [命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [MageUI.exe（图形化客户端中的清单生成和编辑工具）](mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)
+- [命令提示](developer-command-prompt-for-vs.md)

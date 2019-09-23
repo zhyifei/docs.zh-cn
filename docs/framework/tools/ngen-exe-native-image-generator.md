@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 20e5f166aad8bc2504ed27b93ec6730bcd26387d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5079f0243faefaab6ada23cc98f5214a616c1d22
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69911589"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044368"
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe（本机映像生成器）
 
@@ -59,7 +59,7 @@ ms.locfileid: "69911589"
 > [!NOTE]
 > 在[本机映像生成器 (Ngen.exe) 旧式语法](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms165073(v=vs.100))中可以找到 .NET Framework 1.0 和 1.1 版的 Ngen.exe 语法。
 
-此工具会自动随 Visual Studio 一起安装。 若要运行此工具，请使用 Visual Studio 开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示）。 有关详细信息，请参阅[命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。
+此工具会自动随 Visual Studio 一起安装。 若要运行此工具，请使用 Visual Studio 开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示）。 有关详细信息，请参阅[命令提示](developer-command-prompt-for-vs.md)。
 
 在命令提示符处，键入以下内容：
 
@@ -392,7 +392,7 @@ Ngen.exe 在生成本机映像时记录这些信息。 当你执行程序集时�
 
      更改计算机安全策略以限制先前授予某个程序集的权限，这样会导致该程序集的先前编译的本机映像失效。
 
-     有关公共语言运行时如何管理代码访问安全性以及如何使用权限的详细信息，请参阅[代码访问安全](../../../docs/framework/misc/code-access-security.md)。
+     有关公共语言运行时如何管理代码访问安全性以及如何使用权限的详细信息，请参阅[代码访问安全](../misc/code-access-security.md)。
 
 <a name="Troubleshooting"></a>
 
@@ -404,13 +404,13 @@ Ngen.exe 在生成本机映像时记录这些信息。 当你执行程序集时�
 
 ### <a name="assembly-binding-log-viewer"></a>程序集绑定日志查看器
 
-若要确认应用程序正在使用本机映像，可使用 [Fuslogvw.exe（程序集绑定日志查看器）](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md)。 在绑定日志查看器窗口上，选择“日志类别”  框中的“本机映像”  。 Fuslogvw.exe 提供了有关本机映像被拒绝的原因的信息。
+若要确认应用程序正在使用本机映像，可使用 [Fuslogvw.exe（程序集绑定日志查看器）](fuslogvw-exe-assembly-binding-log-viewer.md)。 在绑定日志查看器窗口上，选择“日志类别”  框中的“本机映像”  。 Fuslogvw.exe 提供了有关本机映像被拒绝的原因的信息。
 
 <a name="MDA"></a>
 
 ### <a name="the-jitcompilationstart-managed-debugging-assistant"></a>JITCompilationStart 托管调试助手
 
-可使用 [jitCompilationStart](../../../docs/framework/debug-trace-profile/jitcompilationstart-mda.md) 托管调试助手 (MDA) 来确定 JIT 编译器何时开始编译函数。
+可使用 [jitCompilationStart](../debug-trace-profile/jitcompilationstart-mda.md) 托管调试助手 (MDA) 来确定 JIT 编译器何时开始编译函数。
 
 <a name="OptOut"></a>
 
@@ -562,7 +562,7 @@ ngen uninstall "ClientApp, Version=1.0.0.0, Culture=neutral,
 
 ## <a name="native-image-task"></a>本机映像任务
 
-本机映像任务是生成和维护本机映像的 Windows 任务。 本机映像任务为支持方案自动生成并回收本机映像。 它还使安装程序能使用 [Ngen.exe（本机映像生成器）](../../../docs/framework/tools/ngen-exe-native-image-generator.md)来创建和更新在延迟时间的本机映像。
+本机映像任务是生成和维护本机映像的 Windows 任务。 本机映像任务为支持方案自动生成并回收本机映像。 它还使安装程序能使用 [Ngen.exe（本机映像生成器）](ngen-exe-native-image-generator.md)来创建和更新在延迟时间的本机映像。
 
 本机映像任务对计算机上受支持的每个 CPU 体系结构进行注册后，允许对以每个体系结构为目标的应用程序进行编译：
 
@@ -639,7 +639,7 @@ ngen executeQueuedItems
 
 ## <a name="see-also"></a>请参阅
 
-- [工具](../../../docs/framework/tools/index.md)
+- [工具](index.md)
 - [托管执行过程](../../standard/managed-execution-process.md)
-- [运行时如何定位程序集](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
-- [命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [运行时如何定位程序集](../deployment/how-the-runtime-locates-assemblies.md)
+- [命令提示](developer-command-prompt-for-vs.md)

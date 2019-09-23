@@ -9,12 +9,12 @@ helpviewer_keywords:
 - staleness of cached resources
 - age of cached resources
 ms.assetid: 7f775925-89a1-4956-ba90-c869c1749a94
-ms.openlocfilehash: 3819882fe4a93016b25c10daa198a24fe7b0e951
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e21cfc28407ba67afdce8d72e5e52c12ab359059
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624686"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048845"
 ---
 # <a name="cache-policy-interactionmaximum-age-and-maximum-staleness"></a>缓存策略交互 — 最长使用期限和最长过期时间
 为了帮助确保将最新鲜的内容返回给客户端应用程序，客户端缓存策略和服务器重新验证要求的交互始终会造成最保守的缓存策略。 本主题中的所有示例阐明针对在 1 月 1 日缓存、1 月 4 日过期的资源的缓存策略。  
@@ -37,9 +37,9 @@ ms.locfileid: "64624686"
   
 ## <a name="see-also"></a>请参阅
 
-- [网络应用程序的缓存管理](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
-- [缓存策略](../../../docs/framework/network-programming/cache-policy.md)
-- [基于位置的缓存策略](../../../docs/framework/network-programming/location-based-cache-policies.md)
-- [基于时间的缓存策略](../../../docs/framework/network-programming/time-based-cache-policies.md)
-- [在网络应用程序中配置缓存](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)
-- [缓存策略交互 — 最长使用时间和最低新鲜度](../../../docs/framework/network-programming/cache-policy-interaction-maximum-age-and-minimum-freshness.md)
+- [网络应用程序的缓存管理](cache-management-for-network-applications.md)
+- [缓存策略](cache-policy.md)
+- [基于位置的缓存策略](location-based-cache-policies.md)
+- [基于时间的缓存策略](time-based-cache-policies.md)
+- [在网络应用程序中配置缓存](configuring-caching-in-network-applications.md)
+- [缓存策略交互 — 最长使用时间和最低新鲜度](cache-policy-interaction-maximum-age-and-minimum-freshness.md)

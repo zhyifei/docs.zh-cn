@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 94fcf524-9045-4993-bfb2-e2d8bad44219
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 79cfc607e20d921c7ae942cb9755eee4264336eb
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 59af252967a18eca858035fb0a3465d909734ddf
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877042"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044727"
 ---
 # <a name="developer-command-prompt-for-visual-studio"></a>Visual Studio 开发人员命令提示
 
@@ -34,63 +34,63 @@ Visual Studio 的开发人员命令提示符使你可以更轻松地使用 .NET 
 
 1. 在任务栏的搜索框中，开始键入工具的名称，例如 `dev` 或 `developer command prompt`。 然后显示一个列表，其中包含与搜索模式匹配的已安装应用。 如果要查找不同的命令提示，请尝试输入不同的搜索词，例如 `prompt`。
 
-2. 选择“Visual Studio 开发人员命令提示”（或者你想使用的命令提示）。
+2. 选择“Visual Studio 开发人员命令提示”（或者你想使用的命令提示）  。
 
 ### <a name="in-windows-81"></a>在 Windows 8.1 中
 
-1. 按 Windows 徽标键![键盘上的 Windows 徽标键](./media/developer-command-prompt-for-vs/windows-logo-key-graphic.png)，转到“开始”屏幕。 例如，在键盘上。
+1. 按 Windows 徽标键![键盘上的 Windows 徽标键](./media/developer-command-prompt-for-vs/windows-logo-key-graphic.png)，转到“开始”屏幕  。 例如，在键盘上。
 
-2. 在“开始”屏幕上，按 Ctrl+Tab 打开“应用程序”列表，然后输入 `V`。 然后显示一个列表，其中包含所有已安装的 Visual Studio 命令提示。
+2. 在“开始”  屏幕上，按  Ctrl+Tab  打开“应用程序”  列表，然后输入 `V`。 然后显示一个列表，其中包含所有已安装的 Visual Studio 命令提示。
 
-3. 选择“开发人员命令提示”（或者你想使用的命令提示）。
+3. 选择“开发人员命令提示”  （或者你想使用的命令提示）。
 
 ### <a name="in-windows-8"></a>在 Windows 8 中
 
-1. 按 Windows 徽标键![键盘上的 Windows 徽标键](./media/developer-command-prompt-for-vs/windows-logo-key-graphic.png)，转到“开始”屏幕。 例如，在键盘上。
+1. 按 Windows 徽标键![键盘上的 Windows 徽标键](./media/developer-command-prompt-for-vs/windows-logo-key-graphic.png)，转到“开始”屏幕  。 例如，在键盘上。
 
-2. 在“开始”屏幕上，按 Windows 徽标键![键盘上的 Windows 徽标键](./media/developer-command-prompt-for-vs/windows-logo-key-graphic.png)。 `+ Z`。
+2. 在“开始”屏幕上，按 Windows 徽标键![键盘上的 Windows 徽标键](./media/developer-command-prompt-for-vs/windows-logo-key-graphic.png)  。 `+ Z`。
 
-3. 选择屏幕底部的“应用视图”图标，然后输入 `V`。 然后显示一个列表，其中包含所有已安装的 Visual Studio 命令提示。
+3. 选择屏幕底部的“应用视图”  图标，然后输入 `V`。 然后显示一个列表，其中包含所有已安装的 Visual Studio 命令提示。
 
-4. 选择“开发人员命令提示”（或者你想使用的命令提示）。
+4. 选择“开发人员命令提示”  （或者你想使用的命令提示）。
 
 ### <a name="in-windows-7"></a>在 Windows 7 中
 
-1. 选择“开始”，展开“所有程序”，然后展开“Microsoft Visual Studio”。
+1. 选择“开始”  ，展开“所有程序”  ，然后展开“Microsoft Visual Studio”  。
 
-2. 根据已安装的 Visual Studio 版本，选择“Visual Studio Tools”、“Visual Studio 命令提示”或你想使用的命令提示。
+2. 根据已安装的 Visual Studio 版本，选择“Visual Studio Tools”、“Visual Studio 命令提示”或你想使用的命令提示   。
 
 如果安装了其他 SDK，例如 [Windows 10 SDK](https://developer.microsoft.com/windows/downloads/windows-10-sdk) 或[之前的版本](https://developer.microsoft.com/windows/downloads/sdk-archive)，则可能看到有关 ARM、x86 或 x64 体系结构的其他命令提示符。 查看单个工具的文档，以确定应使用哪个版本的命令提示。
 
 ## <a name="manually-locate-the-files-on-your-machine"></a>在计算机中手动查找文件
 
-已安装的命令提示的快捷方式通常放在 Visual Studio 的“开始菜单”文件夹中，例如 C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Visual Studio 2017\Visual Studio Tools。 但是如果出于某种原因，搜索命令提示未产生预期的效果，你可以尝试在计算机中手动查找快捷方式。 请尝试搜索命令提示文件的名称，例如 VsDevCmd.bat，或者转到“工具”文件夹，例如 C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\Tools（该路径根据你的 Visual Studio 版本和安装位置而变化）。
+已安装的命令提示的快捷方式通常放在 Visual Studio 的“开始菜单”文件夹中，例如 C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Visual Studio 2017\Visual Studio Tools  。 但是如果出于某种原因，搜索命令提示未产生预期的效果，你可以尝试在计算机中手动查找快捷方式。 请尝试搜索命令提示文件的名称，例如 VsDevCmd.bat，或者转到“工具”文件夹，例如 C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\Tools（该路径根据你的 Visual Studio 版本和安装位置而变化）  。
 
 ## <a name="run-the-command-prompt-from-inside-visual-studio"></a>从 Visual Studio 内部运行命令提示符
 
-为便于访问，你可以将 Visual Studio 开发人员命令提示或其他任何命令提示符添加到 Visual Studio 中的“工具”菜单中。 要使该工具可用，请将其添加到外部工具列表中。 步骤如下：
+为便于访问，你可以将 Visual Studio 开发人员命令提示或其他任何命令提示符添加到 Visual Studio 中的“工具”菜单中  。 要使该工具可用，请将其添加到外部工具列表中。 步骤如下：
 
 1. 打开 Visual Studio。
 
-2. 选择“工具”菜单，然后选择“外部工具”。
+2. 选择“工具”菜单，然后选择“外部工具”   。
 
-3. 在“外部工具”对话框中，选择“添加”按钮。 随即出现一个新项。
+3. 在“外部工具”  对话框中，选择“添加”  按钮。 随即出现一个新项。
 
-4. 为新菜单项输入“标题”，例如 `Command Prompt`。
+4. 为新菜单项输入“标题”  ，例如 `Command Prompt`。
 
-5. 在“命令”字段中，指定要启动的文件，例如 `%comspec%` 或 `C:\Windows\System32\cmd.exe`。
+5. 在“命令”字段中，指定要启动的文件，例如 `%comspec%` 或 `C:\Windows\System32\cmd.exe`  。
 
-6. 在“参数”字段中，指定可在其中找到要使用的特定命令提示的位置，例如 `/k "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\Tools\VsDevCmd.bat"`（此命令启动随 Visual Studio 2017 Enterprise 一起安装的开发人员命令提示）。 根据 Visual Studio 版本和安装位置更改此值。
+6. 在“参数”字段中，指定可在其中找到要使用的特定命令提示的位置，例如 `/k "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\Tools\VsDevCmd.bat"`（此命令启动随 Visual Studio 2017 Enterprise 一起安装的开发人员命令提示）  。 根据 Visual Studio 版本和安装位置更改此值。
 
-7. 为“初始目录”字段选择一个值，例如“项目目录”。
+7. 为“初始目录”字段选择一个值，例如“项目目录”   。
 
 8. 选择“确定”  按钮。
 
-   系统添加了新菜单项，并且你可以从“工具”菜单访问命令提示符。
+   系统添加了新菜单项，并且你可以从“工具”菜单访问命令提示符  。
 
-   ![Visual Studio 中的命令提示符菜单项](media/command-prompt-vs-menu.png)
+   ![Visual Studio 中的命令提示符菜单项](./media/command-prompt-vs-menu.png)
 
 ## <a name="see-also"></a>请参阅
 
-- [工具](../../../docs/framework/tools/index.md)
+- [工具](index.md)
 - [管理外部工具](/visualstudio/ide/managing-external-tools)

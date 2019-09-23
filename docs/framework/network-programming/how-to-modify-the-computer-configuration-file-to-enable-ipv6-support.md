@@ -2,12 +2,12 @@
 title: 如何：修改计算机配置文件以启用 IPv6 支持
 ms.date: 03/30/2017
 ms.assetid: 5611b677-b9cc-43b8-a434-60e18d89aada
-ms.openlocfilehash: af6eb8a334108c988967a555024b524e27d40f58
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 362e7af36d214df9f0454479e25a80af9d440b2b
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69959082"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048279"
 ---
 # <a name="how-to-modify-the-computer-configuration-file-to-enable-ipv6-support"></a>如何：修改计算机配置文件以启用 IPv6 支持
 下面的代码示例演示如何修改计算机配置文件 machine.config，以启用 IPv6 支持  。 machine.config 文件存储在 Windows 安装目录的 %Windir%\Microsoft.NET\Framework 文件夹中   。 安装在计算机上的每个 .NET Framework 版本，在 %Windir%\Microsoft.NET\Framework 下的文件夹中分别有一个单独的 machine.config 文件（例如，C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\machine.config）    。  
@@ -37,6 +37,6 @@ ms.locfileid: "69959082"
   
 ## <a name="see-also"></a>请参阅
 
-- [IPv6 寻址](../../../docs/framework/network-programming/ipv6-addressing.md)
-- [网络设置架构](../../../docs/framework/configure-apps/file-schema/network/index.md)
-- [\<ipv6> 元素（网络设置）](../../../docs/framework/configure-apps/file-schema/network/ipv6-element-network-settings.md)
+- [IPv6 寻址](ipv6-addressing.md)
+- [网络设置架构](../configure-apps/file-schema/network/index.md)
+- [\<ipv6> 元素（网络设置）](../configure-apps/file-schema/network/ipv6-element-network-settings.md)

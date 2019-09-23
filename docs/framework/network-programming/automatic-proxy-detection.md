@@ -14,12 +14,12 @@ helpviewer_keywords:
 - network
 - WPAD (Web Proxy Auto-Discovery)
 ms.assetid: fcd9c3bd-93de-4c92-8ff3-837327ad18de
-ms.openlocfilehash: d7d0dae2ffbec5e334057715cd1d8d44e52cec9d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6a52a38473e339b892673e7c1a2f9e1f58dad359
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910465"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048945"
 ---
 # <a name="automatic-proxy-detection"></a>自动代理检测
 自动代理检测是一个进程，系统使用该进程来标识 Web 代理服务器，并用于代表客户端发送请求。 此功能也称为 Web 代理自动发现 (WPAD)。 启用自动代理检测后，系统会尝试查找代理配置脚本，该脚本负责返回一组可用于请求的代理。 如果找到了代理配置脚本，则会在针对使用 <xref:System.Net.WebProxy> 实例的请求获取代理信息、请求流或响应时，在本地计算机上下载、编译并运行该脚本。  
@@ -44,7 +44,7 @@ ms.locfileid: "69910465"
   
  代理基于每个 connectoid 进行配置。 connectoid 是网络连接对话框中的一项，可以是物理网络设备（调制解调器或以太网卡）或虚拟接口（例如，通过网络设备运行的 VPN 连接）。 如果 connectoid 发生更改（例如，无线连接更改了访问点，或启用了 VPN），则将再次运行代理检测算法。  
   
- 默认情况下，Internet Explorer 代理设置用于检测此代理。 如果应用程序基于非交互式帐户运行（没有用于配置 IE 代理设置的简便方法），或要使用不同于 IE 设置的代理设置，则可以通过创建定义了 [\<defaultProxy> 元素（网络设置）](../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)和 [\<proxy> 元素（网络设置）](../../../docs/framework/configure-apps/file-schema/network/proxy-element-network-settings.md)元素的配置文件，对代理进行配置。  
+ 默认情况下，Internet Explorer 代理设置用于检测此代理。 如果应用程序基于非交互式帐户运行（没有用于配置 IE 代理设置的简便方法），或要使用不同于 IE 设置的代理设置，则可以通过创建定义了 [\<defaultProxy> 元素（网络设置）](../configure-apps/file-schema/network/defaultproxy-element-network-settings.md)和 [\<proxy> 元素（网络设置）](../configure-apps/file-schema/network/proxy-element-network-settings.md)元素的配置文件，对代理进行配置。  
   
  对于所创建的请求，可通过将空 <xref:System.Net.WebRequest.Proxy%2A> 用于该请求，禁用请求级别的自动代理检测，如下面的代码示例所示。  
   
@@ -71,4 +71,4 @@ Public Shared Sub DisableForMyRequest(ByVal resource As Uri)
 
 - <xref:System.Net.WebProxy>
 - <xref:System.Net.WebRequest>
-- [\<system.Net> 元素（网络设置）](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)
+- [\<system.Net> 元素（网络设置）](../configure-apps/file-schema/network/system-net-element-network-settings.md)
