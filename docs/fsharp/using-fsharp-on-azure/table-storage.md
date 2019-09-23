@@ -3,12 +3,12 @@ title: 通过 F# 实现 Azure 表格存储入门
 description: 使用 Azure 表存储或 Azure Cosmos DB 在云中存储结构化数据。
 author: sylvanc
 ms.date: 03/26/2018
-ms.openlocfilehash: f5fe2fe667b6d529bba4d29729a975c7890b5aba
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 509435d47231040362586fa263fbecb1125f862b
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928994"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182598"
 ---
 # <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>开始使用 Azure 表存储和 Azure Cosmos DB 表 API 使用 F\#
 
@@ -192,7 +192,7 @@ Azure Cosmos DB 提供了为 Azure 表存储编写的应用程序的表 API，�
 现在，你已了解有关表存储的基础知识，请单击下面的链接了解更复杂的存储任务和 Azure Cosmos DB 表 API。
 
 - [Azure Cosmos DB 简介表 API](https://docs.microsoft.com/azure/cosmos-db/table-introduction)
-- [适用于 .NET 的存储客户端库参考](https://docs.microsoft.com/dotnet/api/overview/azure/storage?view=azure-dotnet)
+- [适用于 .NET 的存储客户端库参考](https://docs.microsoft.com/dotnet/api/overview/azure/storage)
 - [Azure 存储类型提供程序](https://fsprojects.github.io/AzureStorageTypeProvider/)
 - [Azure 存储团队博客](https://blogs.msdn.microsoft.com/windowsazurestorage/)
 - [配置连接字符串](https://docs.microsoft.com/azure/storage/common/storage-configure-connection-string)

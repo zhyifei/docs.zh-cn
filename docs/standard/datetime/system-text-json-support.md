@@ -13,17 +13,17 @@ helpviewer_keywords:
 - JSON Serializer, JSON Reader, JSON Writer
 - Converter, JSON Converter, DateTime Converter
 - ISO, ISO 8601, ISO 8601-1:2019
-ms.openlocfilehash: 83b1b3a7db63154dccc07325b1a1948a2db3953a
-ms.sourcegitcommit: 3ac05b2c386c8cc5e73f4c7665f6c0a7ed3da1bd
+ms.openlocfilehash: 000a6b6dc892e65b50ae413ab3cb95d2a73ef0ef
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71151824"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182571"
 ---
 # <a name="datetime-and-datetimeoffset-support-in-systemtextjson"></a>System.Text.Json 中的 DateTime 和 DateTimeOffset 支持
 
 根据 ISO 8601:-2019 扩展配置文件，system.web 库分析<xref:System.DateTime>并<xref:System.DateTimeOffset>写入和值。
-[转换器](https://docs.microsoft.com/dotnet/api/system.text.json.serialization.jsonconverter-1?view=netcore-3.0)为序列化和反序列<xref:System.Text.Json.JsonSerializer>化提供自定义支持。
+[转换器](xref:System.Text.Json.Serialization.JsonConverter%601)为序列化和反序列<xref:System.Text.Json.JsonSerializer>化提供自定义支持。
 当使用<xref:System.Text.Json.Utf8JsonReader>和时， <xref:System.Text.Json.Utf8JsonWriter>还可以实现自定义支持。
 
 ## <a name="support-for-the-iso-8601-12019-format"></a>支持 ISO 8601-1:2019 格式
@@ -67,7 +67,7 @@ ms.locfileid: "71151824"
 
 ### <a name="when-using-xrefsystemtextjsonjsonserializer"></a>当使用<xref:System.Text.Json.JsonSerializer>
 
-如果希望序列化程序执行自定义分析或格式设置，可以实现[自定义转换器](https://docs.microsoft.com/dotnet/api/system.text.json.serialization.jsonconverter-1?view=netcore-3.0)。
+如果希望序列化程序执行自定义分析或格式设置，可以实现[自定义转换器](xref:System.Text.Json.Serialization.JsonConverter%601)。
 下面是几个示例：
 
 #### <a name="using-datetimeoffsetparse-and-datetimeoffsettostring"></a>使用`DateTime(Offset).Parse`和`DateTime(Offset).ToString`

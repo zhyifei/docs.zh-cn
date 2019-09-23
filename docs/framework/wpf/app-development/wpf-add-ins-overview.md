@@ -12,12 +12,12 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-ms.openlocfilehash: 4fd8fe00fe6974bdcbf7b4af4da25150996de8c3
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: a146f15a1c2755f254e198d471a42ca9ec29b072
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401706"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182543"
 ---
 # <a name="wpf-add-ins-overview"></a>WPF 外接程序概述
 
@@ -27,7 +27,7 @@ ms.locfileid: "68401706"
 
 ## <a name="prerequisites"></a>系统必备
 
-熟悉 .NET Framework 外接程序模型是必需的。 有关详细信息，请参阅[外接程序和扩展性](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))。
+熟悉 .NET Framework 外接程序模型是必需的。 有关详细信息，请参阅[外接程序和扩展性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))。
 
 <a name="AddInsOverview"></a>
 
@@ -61,12 +61,12 @@ ms.locfileid: "68401706"
 
 - **生存期管理**:以干净、可预测的方式加载和卸载应用程序域和进程 (请参阅[应用程序域](../../app-domains/application-domains.md))。
 
-- **版本控制**:确保在创建新版本的时, 主机应用程序和外接程序仍可进行通信。
+- **版本控制**：确保在创建新版本的时, 主机应用程序和外接程序仍可进行通信。
 
 总之，开发一个可靠的外接程序模型不是一项简单的任务。 出于此原因, .NET Framework 提供了一个用于生成外接程序模型的基础结构。
 
 > [!NOTE]
-> 有关外接程序的更多详细信息，请参阅[外接程序和扩展性](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))。
+> 有关外接程序的更多详细信息，请参阅[外接程序和扩展性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))。
 
 <a name="NETFrameworkAddInModelOverview"></a>
 
@@ -127,7 +127,7 @@ WPF UI 类型不能远程处理。 为了解决此问题, WPF 扩展了 .NET Fra
 
 若要使外接程序向宿主应用程序返回 UI, 需要满足以下要求:
 
-1. 必须创建宿主应用程序、外接程序和管道, 如 .NET Framework[外接程序和扩展性](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))文档中所述。
+1. 必须创建宿主应用程序、外接程序和管道, 如 .NET Framework[外接程序和扩展性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))文档中所述。
 
 2. 协定必须实现<xref:System.AddIn.Contract.IContract>并返回 UI, 协定必须使用类型<xref:System.AddIn.Contract.INativeHandleContract>为的返回值声明方法。
 
@@ -147,7 +147,7 @@ WPF UI 类型不能远程处理。 为了解决此问题, WPF 扩展了 .NET Fra
 
 当外接程序为 UI 时, 需要以下各项:
 
-1. 必须创建宿主应用程序、外接程序和管道, 如 .NET Framework[外接程序和扩展性](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))文档中所述。
+1. 必须创建宿主应用程序、外接程序和管道, 如 .NET Framework[外接程序和扩展性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))文档中所述。
 
 2. 外接程序的协定接口必须实现<xref:System.AddIn.Contract.INativeHandleContract>。
 
@@ -282,9 +282,9 @@ WPF UI 类型不能远程处理。 为了解决此问题, WPF 扩展了 .NET Fra
 
 - 外接程序 UI 不能旋转、缩放、倾斜或以其他方式受转换的影响 (请参阅[转换概述](../graphics-multimedia/transforms-overview.md))。
 
-- 由<xref:System.Drawing>命名空间的绘图操作呈现的外接程序用户界面内的内容可以包含 alpha 混合。 但是, 加载项 UI 和包含它的主机应用程序 UI 必须是 100% 不透明;换言之, 两者上的`Opacity`属性必须设置为1。
+- 由<xref:System.Drawing>命名空间的绘图操作呈现的外接程序用户界面内的内容可以包含 alpha 混合。 但是，加载项 UI 和包含它的主机应用程序 UI 必须是 100% 不透明;换言之，两者上的`Opacity`属性必须设置为1。
 
-- 如果宿主<xref:System.Windows.Window.AllowsTransparency%2A>应用程序中包含外接程序 UI 的窗口的属性设置为`true`, 则外接程序将不可见。 即使外接程序 UI 为 100% 不透明 (也就是说, `Opacity`属性的值为 1), 也是如此。
+- 如果宿主<xref:System.Windows.Window.AllowsTransparency%2A>应用程序中包含外接程序 UI 的窗口的属性设置为`true`, 则外接程序将不可见。 即使外接程序 UI 为 100% 不透明（也就是说， `Opacity`属性的值为1），也是如此。
 
 - 外接程序 UI 必须出现在同一顶级窗口中的其他 WPF 元素之上。
 
@@ -311,7 +311,7 @@ WPF UI 类型不能远程处理。 为了解决此问题, WPF 扩展了 .NET Fra
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.LoaderOptimizationAttribute>
-- [外接程序和扩展性](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
+- [外接程序和扩展性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
 - [应用程序域](../../app-domains/application-domains.md)
 - [.NET Framework 远程处理概述](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kwdt6w2k(v=vs.100))
 - [使对象可远程处理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/wcf3swha(v=vs.100))

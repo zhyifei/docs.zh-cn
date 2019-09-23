@@ -4,19 +4,19 @@ ms.date: 04/12/2018
 helpviewer_keywords:
 - Visual Basic compiler, options
 ms.assetid: e67febba-bacf-4e1f-a143-c141e063f90e
-ms.openlocfilehash: 3fd07c9f2cdea3987602502cf242893b44aaddba
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 09c2879c0a46efe6258685d8201959a626735a85
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331572"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182659"
 ---
 # <a name="visual-basic-compiler-options-listed-alphabetically"></a>按字母顺序列出的 Visual Basic 编译器选项
 作为从 Visual Studio 集成开发环境 (IDE) 中编译程序的替代方法, 可以使用 Visual Basic 命令行编译器。 下面是按字母顺序排序 Visual Basic 命令行编译器选项的列表。  
 
 [!INCLUDE[compiler-options](~/includes/compiler-options.md)]
   
-|选项|用途|  
+|选项|目标|  
 |------------|-------------|  
 |[@（指定响应文件）](../../../visual-basic/reference/command-line-compiler/specify-response-file.md)|指定响应文件。|  
 |[-?](../../../visual-basic/reference/command-line-compiler/help.md)|显示编译器选项。 此命令等同于指定 `-help` 选项。 未进行编译。|  
@@ -83,4 +83,4 @@ ms.locfileid: "68331572"
 ## <a name="see-also"></a>请参阅
 
 - [按类别列出的 Visual Basic 编译器选项](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-by-category.md)
-- [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties?view=vs-2017)
+- [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties)

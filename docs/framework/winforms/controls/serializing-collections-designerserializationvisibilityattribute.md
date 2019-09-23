@@ -14,18 +14,18 @@ ms.assetid: 020c9df4-fdc5-4dae-815a-963ecae5668c
 author: gewarren
 ms.author: gewarren
 manager: jillfra
-ms.openlocfilehash: 4fd1f1dc0c2c0ad9ae2009ed592e48b8eeaa2783
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: f051d7a51a5f4ff8debf40fafbb8acfd8f7098f5
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373687"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182624"
 ---
 # <a name="walkthrough-serialize-collections-of-standard-types"></a>演练：序列化标准类型的集合
 
 自定义控件有时会将集合公开为属性。 本演练演示如何使用<xref:System.ComponentModel.DesignerSerializationVisibilityAttribute>类来控制在设计时如何序列化集合。 <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content>将值应用于集合属性可确保对属性进行序列化。
 
-要将本主题中的代码作为单个列表进行复制，请参阅[如何：用 DesignerSerializationVisibilityAttribute](/previous-versions/visualstudio/visual-studio-2013/ms171833(v=vs.120))序列化标准类型的集合。
+要将本主题中的代码作为单个列表进行复制，请参阅[如何：用 DesignerSerializationVisibilityAttribute](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171833(v=vs.120))序列化标准类型的集合。
 
 ## <a name="prerequisites"></a>系统必备
 
@@ -129,11 +129,11 @@ ms.locfileid: "70373687"
 
 一旦知道如何序列化标准类型的集合，请考虑将自定义控件更深入地集成到设计时环境中。 以下主题介绍如何增强自定义控件的设计时集成：
 
-- [设计时体系结构](/previous-versions/visualstudio/visual-studio-2013/c5z9s1h4(v=vs.120))
+- [设计时体系结构](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/c5z9s1h4(v=vs.120))
 
 - [Windows 窗体控件中的特性](attributes-in-windows-forms-controls.md)
 
-- [设计器序列化概述](/previous-versions/visualstudio/visual-studio-2013/ms171834(v=vs.120))
+- [设计器序列化概述](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171834(v=vs.120))
 
 - [演练：创建利用 Visual Studio 设计时功能的 Windows 窗体控件](creating-a-wf-control-design-time-features.md)
 

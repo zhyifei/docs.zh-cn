@@ -4,12 +4,12 @@ ms.date: 04/12/2018
 helpviewer_keywords:
 - Visual Basic compiler, options
 ms.assetid: fbe36f7a-7cfa-4f77-a8d4-2be5958568e3
-ms.openlocfilehash: d8a1e36c0932de9bf50c109ea979a1e358795388
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 8f09566585c06531a346b0143a6002c2854a0b01
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331542"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182566"
 ---
 # <a name="visual-basic-compiler-options-listed-by-category"></a>按类别列出的 Visual Basic 编译器选项
 作为从 Visual Studio 集成开发环境 (IDE) 中编译程序的替代方法, 可以使用 Visual Basic 命令行编译器。 下面是按功能类别排序 Visual Basic 命令行编译器选项的列表。  
@@ -18,7 +18,7 @@ ms.locfileid: "68331542"
   
 ## <a name="compiler-output"></a>编译器输出  
   
-|选项|用途|  
+|选项|目标|  
 |---|---|  
 |[-nologo](../../../visual-basic/reference/command-line-compiler/nologo.md)|禁止显示编译器横幅信息。|  
 |[-utf8output](../../../visual-basic/reference/command-line-compiler/utf8output.md)|显示使用 UTF-8 编码的编译器输出。|  
@@ -28,14 +28,14 @@ ms.locfileid: "68331542"
   
 ## <a name="optimization"></a>优化  
   
-|选项|用途|  
+|选项|目标|  
 |---|---|  
 |[-filealign](../../../visual-basic/reference/command-line-compiler/filealign.md)|指定输出文件各节的对齐位置。|  
 |[-optimize](../../../visual-basic/reference/command-line-compiler/optimize.md)|启用/禁用优化。|  
   
 ## <a name="output-files"></a>输出文件  
   
-|选项|用途|  
+|选项|目标|  
 |---|---|  
 |[-doc](../../../visual-basic/reference/command-line-compiler/doc.md)|处理 XML 文件的文档注释。|  
 |[-deterministic](../../../visual-basic/reference/command-line-compiler/deterministic.md)|如果输入相同，则会导致编译器输出的程序集其二进制内容在整个编译中相同。|
@@ -47,7 +47,7 @@ ms.locfileid: "68331542"
   
 ## <a name="net-assemblies"></a>.NET 程序集  
   
-|选项|用途|  
+|选项|目标|  
 |---|---|  
 |[-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)|使编译器让指定文件中的所有类型信息可供当前正在编译的项目使用。|  
 |[-delaysign](../../../visual-basic/reference/command-line-compiler/delaysign.md)|指定程序集是完全签名的还是部分签名的。|  
@@ -62,7 +62,7 @@ ms.locfileid: "68331542"
   
 ## <a name="debuggingerror-checking"></a>调试/错误检查  
   
-|选项|用途|  
+|选项|目标|  
 |---|---|  
 |[-bugreport](../../../visual-basic/reference/command-line-compiler/bugreport.md)|创建一个文件，其中包含可以轻松报告 bug 的信息。|  
 |[-debug](../../../visual-basic/reference/command-line-compiler/debug.md)|生成调试信息。|  
@@ -72,16 +72,16 @@ ms.locfileid: "68331542"
 |[-warnaserror](../../../visual-basic/reference/command-line-compiler/warnaserror.md)|将警告提升为错误。|  
 |`-ruleset:<file>`|指定可禁用特定诊断的规则集文件。|  
   
-## <a name="help"></a>Help  
+## <a name="help"></a>帮助  
   
-|选项|用途|  
+|选项|目标|  
 |---|---|  
 |[-?](../../../visual-basic/reference/command-line-compiler/help.md)|显示编译器选项。 此命令等同于指定 `-help` 选项。 未进行编译。|  
 |[-help](../../../visual-basic/reference/command-line-compiler/help.md)|显示编译器选项。 此命令等同于指定 `-?` 选项。 未进行编译。|  
   
 ## <a name="language"></a>语言  
   
-|选项|用途|  
+|选项|目标|  
 |---|---|  
 |[-langversion](../../../visual-basic/reference/command-line-compiler/langversion.md)|指定语言版本：9&#124;9.0&#124;10&#124;10.0&#124;11&#124;11.0.|  
 |[-optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)|强制执行显式声明变量。|  
@@ -91,13 +91,13 @@ ms.locfileid: "68331542"
   
 ## <a name="preprocessor"></a>预处理器  
   
-|选项|用途|  
+|选项|目标|  
 |---|---|  
 |[-define](../../../visual-basic/reference/command-line-compiler/define.md)|定义条件编译的符号。|  
   
 ## <a name="resources"></a>资源  
   
-|选项|用途|  
+|选项|目标|  
 |---|---|  
 |[-linkresource](../../../visual-basic/reference/command-line-compiler/linkresource.md)|创建指向托管资源的链接。|  
 |[-resource](../../../visual-basic/reference/command-line-compiler/resource.md)|将托管资源嵌入程序集。|  
@@ -106,7 +106,7 @@ ms.locfileid: "68331542"
   
 ## <a name="miscellaneous"></a>杂项  
   
-|选项|用途|  
+|选项|目标|  
 |---|---|  
 |[@（指定响应文件）](../../../visual-basic/reference/command-line-compiler/specify-response-file.md)|指定响应文件。|  
 |[-baseaddress](../../../visual-basic/reference/command-line-compiler/baseaddress.md)|指定的 DLL 的基址。|  
@@ -129,4 +129,4 @@ ms.locfileid: "68331542"
 ## <a name="see-also"></a>请参阅
 
 - [按字母顺序列出的 Visual Basic 编译器选项](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-alphabetically.md)
-- [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties?view=vs-2017)
+- [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties)
