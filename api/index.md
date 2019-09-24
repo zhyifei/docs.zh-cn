@@ -2,19 +2,19 @@
 layout: ApiBrowserPage
 hide_bc: true
 title: .NET API 浏览器
-quickFilterColumn1: netframework-4.8,netcore-2.2,netstandard-2.0
+quickFilterColumn1: netframework-4.8,netcore-3.0,netstandard-2.1
 quickFilterColumn2: xamarinios-10.8,xamarinandroid-7.1,xamarinmac-3.0
 quickFilterColumn3: azure-dotnet,aspnetcore-2.2,ml-dotnet
 ms.topic: landing-page
 ms.custom: updateeachrelease
-ms.date: 04/02/2019
-ms.openlocfilehash: 92288ebb5a299b3091bff447f7f435ebc55fbc6a
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.date: 09/23/2019
+ms.openlocfilehash: 90b79840fc206f538721e27b2051a1ded2693696
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632332"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71214049"
 ---
-# <a name="net-api-browser"></a><span data-ttu-id="b13e5-102">.NET API 浏览器</span><span class="sxs-lookup"><span data-stu-id="b13e5-102">.NET API Browser</span></span>
+# <a name="net-api-browser"></a><span data-ttu-id="b702f-102">.NET API 浏览器</span><span class="sxs-lookup"><span data-stu-id="b702f-102">.NET API Browser</span></span>
 
-<span data-ttu-id="b13e5-103">欢迎使用 .NET API 浏览器，这是 Microsoft 提供的所有 .NET API 的一站式商店。</span><span class="sxs-lookup"><span data-stu-id="b13e5-103">Welcome to the .NET API Browser – your one-stop shop for all .NET-based APIs from Microsoft.</span></span> <span data-ttu-id="b13e5-104">在下面的框中键入字词，开始搜索任意托管 API 吧。</span><span class="sxs-lookup"><span data-stu-id="b13e5-104">Start searching for any managed APIs by typing in the box below.</span></span> <span data-ttu-id="b13e5-105">可以通过[我们的博文](https://aka.ms/apibrowser)详细了解 API 浏览器。</span><span class="sxs-lookup"><span data-stu-id="b13e5-105">You can learn more about the API Browser [in our blog post](https://aka.ms/apibrowser).</span></span> <span data-ttu-id="b13e5-106">如有任何反馈意见，请在 [MicrosoftDocs/feedback repo on GitHub](https://github.com/MicrosoftDocs/feedback/issues)（GitHub 上的 MicrosoftDocs/feedback 存储库）中创建新的问题。</span><span class="sxs-lookup"><span data-stu-id="b13e5-106">If you have any feedback, create a new issue in the [MicrosoftDocs/feedback repo on GitHub](https://github.com/MicrosoftDocs/feedback/issues).</span></span>
+<span data-ttu-id="b702f-103">欢迎使用 .NET API 浏览器，这是 Microsoft 提供的所有 .NET API 的一站式商店。</span><span class="sxs-lookup"><span data-stu-id="b702f-103">Welcome to the .NET API Browser – your one-stop shop for all .NET-based APIs from Microsoft.</span></span> <span data-ttu-id="b702f-104">在下面的框中键入字词，开始搜索任意托管 API 吧。</span><span class="sxs-lookup"><span data-stu-id="b702f-104">Start searching for any managed APIs by typing in the box below.</span></span> <span data-ttu-id="b702f-105">可以通过[我们的博文](https://aka.ms/apibrowser)详细了解 API 浏览器。</span><span class="sxs-lookup"><span data-stu-id="b702f-105">You can learn more about the API Browser [in our blog post](https://aka.ms/apibrowser).</span></span> <span data-ttu-id="b702f-106">如有任何反馈意见，请在 [MicrosoftDocs/feedback repo on GitHub](https://github.com/MicrosoftDocs/feedback/issues)（GitHub 上的 MicrosoftDocs/feedback 存储库）中创建新的问题。</span><span class="sxs-lookup"><span data-stu-id="b702f-106">If you have any feedback, create a new issue in the [MicrosoftDocs/feedback repo on GitHub](https://github.com/MicrosoftDocs/feedback/issues).</span></span>

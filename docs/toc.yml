@@ -144,7 +144,7 @@
       href: standard/security/
     - name: 序列化
       href: standard/serialization/
-    - name: 开发多平台应用程序
+    - name: 针对多个平台开发
       href: standard/cross-platform/
 - name: .NET Core 指南
   href: core/index.md
@@ -599,7 +599,7 @@
       href: csharp/tour-of-csharp/
     - name: 'C# 中的新增功能'
       items:
-        - name: 'C# 8.0 - 预览版 5'
+        - name: 'C# 8.0'
           href: csharp/whats-new/csharp-8.md
         - name: 'C# 7.3'
           href: csharp/whats-new/csharp-7-3.md
@@ -769,7 +769,7 @@
               href: fsharp/tutorials/type-providers/type-provider-security.md
             - name: 类型提供程序疑难解答
               href: fsharp/tutorials/type-providers/troubleshooting-type-providers.md
-        - name: 'F# 交互窗口'
+        - name: 'F# Interactive'
           href: fsharp/tutorials/fsharp-interactive/index.md
     - name: 'F# 语言参考'
       href: fsharp/language-reference/index.md
@@ -1202,7 +1202,7 @@
           href: visual-basic/programming-guide/language-features/declared-elements/index.md
         - name: 委托
           href: visual-basic/programming-guide/language-features/delegates/index.md
-        - name: 早期绑定和晚期绑定
+        - name: 早期绑定和后期绑定
           href: visual-basic/programming-guide/language-features/early-late-binding/index.md
         - name: 错误类型
           href: visual-basic/programming-guide/language-features/error-types.md
