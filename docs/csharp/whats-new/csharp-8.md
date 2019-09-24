@@ -2,12 +2,12 @@
 title: C# 8.0 中的新增功能 - C# 指南
 description: 简要介绍 C# 8.0 中提供的新功能。 本文使用最新的预览版 5。
 ms.date: 09/10/2019
-ms.openlocfilehash: 141f7a2fa0bc5f6a2a253e196a218938dd4c170e
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 1d6d52692a9a3f8b6fa4e333f086a880c54106b4
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926530"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117817"
 ---
 # <a name="whats-new-in-c-80"></a>C# 8.0 中的新增功能
 
@@ -37,7 +37,7 @@ C# 语言有许多增强功能，可以进行试用。
 
 1. 安装 [dotnet-try](https://github.com/dotnet/try/blob/master/README.md#setup) 全局工具。
 1. 克隆 [dotnet/try-samples](https://github.com/dotnet/try-samples) 存储库。
-1. 将当前目录设置为 try-samples 存储库的 csharp8 子目录   。
+1. 将当前目录设置为 try-samples 存储库的 csharp8 子目录。
 1. 运行 `dotnet try`。
 
 ## <a name="readonly-members"></a>Readonly 成员
@@ -89,21 +89,21 @@ public readonly void Translate(int xOffset, int yOffset)
 
 ## <a name="default-interface-members"></a>默认接口成员
 
-现在可以将成员添加到接口，并为这些成员提供实现。 借助此语言功能，API 作者可以将方法添加到以后版本的接口中，而不会破坏与该接口当前实现的源或二进制文件兼容性。 现有的实现继承默认实现  。 此功能使 C# 与面向 Android 或 Swift 的 API 进行互操作，此类 API 支持类似功能。 默认接口成员还支持类似于“特征”语言功能的方案。
+现在可以将成员添加到接口，并为这些成员提供实现。 借助此语言功能，API 作者可以将方法添加到以后版本的接口中，而不会破坏与该接口当前实现的源或二进制文件兼容性。 现有的实现继承默认实现。 此功能使 C# 与面向 Android 或 Swift 的 API 进行互操作，此类 API 支持类似功能。 默认接口成员还支持类似于“特征”语言功能的方案。
 
 默认接口成员会影响很多方案和语言元素。 我们的第一个教程介绍如何[使用默认实现更新接口](../tutorials/default-interface-members-versions.md)。 其他教程和参考更新将适时公开发布。
 
 ## <a name="more-patterns-in-more-places"></a>在更多位置中使用更多模式
 
-模式匹配  提供了在相关但不同类型的数据中提供形状相关功能的工具。 C# 7.0 通过使用 [`is`](../language-reference/keywords/is.md) 表达式和 [`switch`](../language-reference/keywords/switch.md) 语句引入了类型模式和常量模式的语法。 这些功能代表了支持数据和功能分离的编程范例的初步尝试。 随着行业转向更多微服务和其他基于云的体系结构，还需要其他语言工具。
+模式匹配提供了在相关但不同类型的数据中提供形状相关功能的工具。 C# 7.0 通过使用 [`is`](../language-reference/keywords/is.md) 表达式和 [`switch`](../language-reference/keywords/switch.md) 语句引入了类型模式和常量模式的语法。 这些功能代表了支持数据和功能分离的编程范例的初步尝试。 随着行业转向更多微服务和其他基于云的体系结构，还需要其他语言工具。
 
 C# 8.0 扩展了此词汇表，这样就可以在代码中的更多位置使用更多模式表达式。 当数据和功能分离时，请考虑使用这些功能。 当算法依赖于对象运行时类型以外的事实时，请考虑使用模式匹配。 这些技术提供了另一种表达设计的方式。
 
-除了可以在新位置使用新模式之外，C# 8.0 还添加了“递归模式”  。 任何模式表达式的结果都是一个表达式。 递归模式只是应用于另一个模式表达式输出的模式表达式。
+除了可以在新位置使用新模式之外，C# 8.0 还添加了“递归模式”。 任何模式表达式的结果都是一个表达式。 递归模式只是应用于另一个模式表达式输出的模式表达式。
 
 ### <a name="switch-expressions"></a>Switch 表达式
 
-通常情况下，[`switch`](../language-reference/keywords/switch.md) 语句在其每个 `case` 块中生成一个值。 借助 Switch 表达式  ，可以使用更简洁的表达式语法。 只有些许重复的 `case` 和 `break` 关键字和大括号。  以下面列出彩虹颜色的枚举为例：
+通常情况下，[`switch`](../language-reference/keywords/switch.md) 语句在其每个 `case` 块中生成一个值。 借助 Switch 表达式，可以使用更简洁的表达式语法。 只有些许重复的 `case` 和 `break` 关键字和大括号。  以下面列出彩虹颜色的枚举为例：
 
 ```csharp
 public enum Rainbow
@@ -171,7 +171,7 @@ public static RGBColor FromRainbowClassic(Rainbow colorBand)
 
 ### <a name="property-patterns"></a>属性模式
 
-借助属性模式  ，可以匹配所检查的对象的属性。 请看一个电子商务网站的示例，该网站必须根据买家地址计算销售税。 这种计算不是 `Address` 类的核心职责。 它会随时间变化，可能比地址格式的更改更频繁。 销售税的金额取决于地址的 `State` 属性。 下面的方法使用属性模式从地址和价格计算销售税：
+借助属性模式，可以匹配所检查的对象的属性。 请看一个电子商务网站的示例，该网站必须根据买家地址计算销售税。 这种计算不是 `Address` 类的核心职责。 它会随时间变化，可能比地址格式的更改更频繁。 销售税的金额取决于地址的 `State` 属性。 下面的方法使用属性模式从地址和价格计算销售税：
 
 ```csharp
 public static decimal ComputeSalesTax(Address location, decimal salePrice) =>
@@ -189,7 +189,7 @@ public static decimal ComputeSalesTax(Address location, decimal salePrice) =>
 
 ### <a name="tuple-patterns"></a>元组模式
 
-一些算法依赖于多个输入。 使用元组模式，可根据表示为[元组](../tuples.md)的多个值进行切换  。  以下代码显示了游戏“rock, paper, scissors（石头剪刀布）”的切换表达式：  ：
+一些算法依赖于多个输入。 使用元组模式，可根据表示为[元组](../tuples.md)的多个值进行切换。  以下代码显示了游戏“rock, paper, scissors（石头剪刀布）”的切换表达式：：
 
 ```csharp
 public static string RockPaperScissors(string first, string second)
@@ -209,7 +209,7 @@ public static string RockPaperScissors(string first, string second)
 
 ### <a name="positional-patterns"></a>位置模式
 
-某些类型包含 `Deconstruct` 方法，该方法将其属性解构为离散变量。 如果可以访问 `Deconstruct` 方法，就可以使用位置模式  检查对象的属性并将这些属性用于模式。  考虑以下 `Point` 类，其中包含用于为 `X` 和 `Y` 创建离散变量的 `Deconstruct` 方法：
+某些类型包含 `Deconstruct` 方法，该方法将其属性解构为离散变量。 如果可以访问 `Deconstruct` 方法，就可以使用位置模式检查对象的属性并将这些属性用于模式。  考虑以下 `Point` 类，其中包含用于为 `X` 和 `Y` 创建离散变量的 `Deconstruct` 方法：
 
 ```csharp
 public class Point
@@ -239,7 +239,7 @@ public enum Quadrant
 }
 ```
 
-下面的方法使用位置模式  来提取 `x` 和 `y` 的值。 然后，它使用 `when` 子句来确定该点的 `Quadrant`：
+下面的方法使用位置模式来提取 `x` 和 `y` 的值。 然后，它使用 `when` 子句来确定该点的 `Quadrant`：
 
 ```csharp
 static Quadrant GetQuadrant(Point point) => point switch
@@ -260,7 +260,7 @@ static Quadrant GetQuadrant(Point point) => point switch
 
 ## <a name="using-declarations"></a>using 声明
 
-using 声明  是前面带 `using` 关键字的变量声明。 它指示编译器声明的变量应在封闭范围的末尾进行处理。 以下面编写文本文件的代码为例：
+using 声明是前面带 `using` 关键字的变量声明。 它指示编译器声明的变量应在封闭范围的末尾进行处理。 以下面编写文本文件的代码为例：
 
 ```csharp
 static void WriteLinesToFile(IEnumerable<string> lines)
@@ -335,7 +335,7 @@ int M()
 
 ## <a name="nullable-reference-types"></a>可为空引用类型
 
-在可为空注释上下文中，引用类型的任何变量都被视为不可为空引用类型  。 若要指示一个变量可能为 null，必须在类型名称后面附加 `?`，以将该变量声明为可为空引用类型  。
+在可为空注释上下文中，引用类型的任何变量都被视为不可为空引用类型。 若要指示一个变量可能为 null，必须在类型名称后面附加 `?`，以将该变量声明为可为空引用类型。
 
 对于不可为空引用类型，编译器使用流分析来确保在声明时将本地变量初始化为非 Null 值。 字段必须在构造过程中初始化。 如果没有通过调用任何可用的构造函数或通过初始化表达式来设置变量，编译器将生成警告。 此外，不能向不可为空引用类型分配一个可以为 Null 的值。
 
@@ -377,7 +377,7 @@ await foreach (var number in GenerateSequence())
 
 ## <a name="indices-and-ranges"></a>索引和范围
 
-范围和索引为在数组中指定子范围（<xref:System.Span%601> 或 <xref:System.ReadOnlySpan%601>）提供了简洁语法。
+范围和索引为在数组、[字符串](../language-reference/builtin-types/reference-types.md#the-string-type)<xref:System.Span%601>或 <xref:System.ReadOnlySpan%601> 中指定子范围提供了简洁语法。
 
 此语言支持依赖于两个新类型和两个新运算符：
 
@@ -388,7 +388,7 @@ await foreach (var number in GenerateSequence())
 
 让我们从索引规则开始。 请考虑数组 `sequence`。 `0` 索引与 `sequence[0]` 相同。 `^0` 索引与 `sequence[sequence.Length]` 相同。 请注意，`sequence[^0]` 不会引发异常，就像 `sequence[sequence.Length]` 一样。 对于任何数字 `n`，索引 `^n` 与 `sequence.Length - n` 相同。
 
-范围指定范围的开始和末尾   。 包括此范围的开始，但不包括此范围的末尾，这表示此范围包含开始但不包含末尾。   范围 `[0..^0]` 表示整个范围，就像 `[0..sequence.Length]` 表示整个范围。 
+范围指定范围的开始和末尾。 包括此范围的开始，但不包括此范围的末尾，这表示此范围包含开始但不包含末尾。 范围 `[0..^0]` 表示整个范围，就像 `[0..sequence.Length]` 表示整个范围。 
 
 请看以下几个示例。 请考虑以下数组，用其顺数索引和倒数索引进行注释：
 

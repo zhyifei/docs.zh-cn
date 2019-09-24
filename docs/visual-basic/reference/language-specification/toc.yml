@@ -25,6 +25,8 @@
       href: ../../../../_vblang/spec/expressions.md
     - name: 文档注释
       href: ../../../../_vblang/spec/documentation-comments.md
+    - name: 重载决策
+      href: ../../../../_vblang/spec/overload-resolution.md
     - name: 语法
       items:
         - name: vb.html
