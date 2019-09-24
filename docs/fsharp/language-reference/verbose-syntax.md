@@ -1,31 +1,31 @@
 ---
 title: 详细语法
-description: 了解中的详细和轻量语法之间的区别F#编程语言。
+description: 了解F#编程语言中的详细和轻型语法之间的差异。
 ms.date: 05/16/2016
-ms.openlocfilehash: c95965d7d9d18a0fca11663a474dbbc9375a9494
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: d2459da60bba5d88bd23615c8bf09ba64f7c22c4
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641667"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71214035"
 ---
-# <a name="verbose-syntax"></a><span data-ttu-id="36f2b-103">详细语法</span><span class="sxs-lookup"><span data-stu-id="36f2b-103">Verbose Syntax</span></span>
+# <a name="verbose-syntax"></a><span data-ttu-id="6e01c-103">详细语法</span><span class="sxs-lookup"><span data-stu-id="6e01c-103">Verbose Syntax</span></span>
 
-<span data-ttu-id="36f2b-104">有两种形式的语法可用于在许多构造F#语言：*详细语法*并*轻量语法*。</span><span class="sxs-lookup"><span data-stu-id="36f2b-104">There are two forms of syntax available for many constructs in the F# language: *verbose syntax* and *lightweight syntax*.</span></span> <span data-ttu-id="36f2b-105">详细语法不常使用，但具有的优势在于到缩进的敏感程度较低。</span><span class="sxs-lookup"><span data-stu-id="36f2b-105">The verbose syntax is not as commonly used, but has the advantage of being less sensitive to indentation.</span></span> <span data-ttu-id="36f2b-106">轻量语法为较短，并使用缩进发出信号的开头和结尾的构造，而不是其他关键字，例如`begin`， `end`， `in`，依次类推。</span><span class="sxs-lookup"><span data-stu-id="36f2b-106">The lightweight syntax is shorter and uses indentation to signal the beginning and end of constructs, rather than additional keywords like `begin`, `end`, `in`, and so on.</span></span> <span data-ttu-id="36f2b-107">默认语法为轻量语法。</span><span class="sxs-lookup"><span data-stu-id="36f2b-107">The default syntax is the lightweight syntax.</span></span> <span data-ttu-id="36f2b-108">本主题介绍的语法F#构造时未启用轻量语法。</span><span class="sxs-lookup"><span data-stu-id="36f2b-108">This topic describes the syntax for F# constructs when lightweight syntax is not enabled.</span></span> <span data-ttu-id="36f2b-109">详细语法始终处于启用状态，因此即使您启用轻量语法，仍然可以为某些构造使用详细语法。</span><span class="sxs-lookup"><span data-stu-id="36f2b-109">Verbose syntax is always enabled, so even if you enable lightweight syntax, you can still use verbose syntax for some constructs.</span></span> <span data-ttu-id="36f2b-110">可以使用禁用轻量语法`#light "off"`指令。</span><span class="sxs-lookup"><span data-stu-id="36f2b-110">You can disable lightweight syntax by using the `#light "off"` directive.</span></span>
+<span data-ttu-id="6e01c-104">以下语言提供了两种形式的语法： " F# *详细语法*" 和 "*轻量语法*"。</span><span class="sxs-lookup"><span data-stu-id="6e01c-104">There are two forms of syntax available for many constructs in the F# language: *verbose syntax* and *lightweight syntax*.</span></span> <span data-ttu-id="6e01c-105">详细语法并不常用，但优点在于缩进不太敏感。</span><span class="sxs-lookup"><span data-stu-id="6e01c-105">The verbose syntax is not as commonly used, but has the advantage of being less sensitive to indentation.</span></span> <span data-ttu-id="6e01c-106">轻型语法较短，并使用缩进来表示构造的开始和结束，而不是使用`begin` `in`、 `end`、等其他关键字。</span><span class="sxs-lookup"><span data-stu-id="6e01c-106">The lightweight syntax is shorter and uses indentation to signal the beginning and end of constructs, rather than additional keywords like `begin`, `end`, `in`, and so on.</span></span> <span data-ttu-id="6e01c-107">默认语法为轻型语法。</span><span class="sxs-lookup"><span data-stu-id="6e01c-107">The default syntax is the lightweight syntax.</span></span> <span data-ttu-id="6e01c-108">本主题介绍未启用轻型F#语法时构造的语法。</span><span class="sxs-lookup"><span data-stu-id="6e01c-108">This topic describes the syntax for F# constructs when lightweight syntax is not enabled.</span></span> <span data-ttu-id="6e01c-109">详细语法始终处于启用状态，因此即使启用了轻型语法，仍可对某些构造使用详细语法。</span><span class="sxs-lookup"><span data-stu-id="6e01c-109">Verbose syntax is always enabled, so even if you enable lightweight syntax, you can still use verbose syntax for some constructs.</span></span> <span data-ttu-id="6e01c-110">您可以使用`#light "off"`指令禁用轻型语法。</span><span class="sxs-lookup"><span data-stu-id="6e01c-110">You can disable lightweight syntax by using the `#light "off"` directive.</span></span>
 
-## <a name="table-of-constructs"></a><span data-ttu-id="36f2b-111">构造表</span><span class="sxs-lookup"><span data-stu-id="36f2b-111">Table of Constructs</span></span>
+## <a name="table-of-constructs"></a><span data-ttu-id="6e01c-111">构造表</span><span class="sxs-lookup"><span data-stu-id="6e01c-111">Table of Constructs</span></span>
 
-<span data-ttu-id="36f2b-112">下表显示了的轻量和详细语法F#语言构造大大降低在上下文中存在两种形式之间的差异的。</span><span class="sxs-lookup"><span data-stu-id="36f2b-112">The following table shows the lightweight and verbose syntax for F# language constructs in contexts where there is a difference between the two forms.</span></span> <span data-ttu-id="36f2b-113">在此表中，角度方括号 (&lt;&gt;) 括起来的用户提供的语法元素。</span><span class="sxs-lookup"><span data-stu-id="36f2b-113">In this table, angle brackets (&lt;&gt;) enclose user-supplied syntax elements.</span></span> <span data-ttu-id="36f2b-114">请参阅有关使用这些构造中的语法的更多详细信息每种语言构造的文档。</span><span class="sxs-lookup"><span data-stu-id="36f2b-114">Refer to the documentation for each language construct for more detailed information about the syntax used within these constructs.</span></span>
+<span data-ttu-id="6e01c-112">下表显示了在这两种形式之间F#存在差异的上下文中语言构造的轻型和详细语法。</span><span class="sxs-lookup"><span data-stu-id="6e01c-112">The following table shows the lightweight and verbose syntax for F# language constructs in contexts where there is a difference between the two forms.</span></span> <span data-ttu-id="6e01c-113">在此表中，尖括号（&lt;&gt;）将用户提供的语法元素括起来。</span><span class="sxs-lookup"><span data-stu-id="6e01c-113">In this table, angle brackets (&lt;&gt;) enclose user-supplied syntax elements.</span></span> <span data-ttu-id="6e01c-114">有关这些构造中使用的语法的更多详细信息，请参阅每个语言构造的文档。</span><span class="sxs-lookup"><span data-stu-id="6e01c-114">Refer to the documentation for each language construct for more detailed information about the syntax used within these constructs.</span></span>
 
 <table>
 <tr>
-<th><span data-ttu-id="36f2b-115">语言构造</span><span class="sxs-lookup"><span data-stu-id="36f2b-115">Language construct</span></span></th>
-<th><span data-ttu-id="36f2b-116">轻量语法</span><span class="sxs-lookup"><span data-stu-id="36f2b-116">Lightweight syntax</span></span></th>
-<th><span data-ttu-id="36f2b-117">详细语法</span><span class="sxs-lookup"><span data-stu-id="36f2b-117">Verbose syntax</span></span></th>
+<th><span data-ttu-id="6e01c-115">语言构造</span><span class="sxs-lookup"><span data-stu-id="6e01c-115">Language construct</span></span></th>
+<th><span data-ttu-id="6e01c-116">轻型语法</span><span class="sxs-lookup"><span data-stu-id="6e01c-116">Lightweight syntax</span></span></th>
+<th><span data-ttu-id="6e01c-117">详细语法</span><span class="sxs-lookup"><span data-stu-id="6e01c-117">Verbose syntax</span></span></th>
 </tr>
 <tr>
 <td>
-<span data-ttu-id="36f2b-118">复合表达式</span><span class="sxs-lookup"><span data-stu-id="36f2b-118">compound expressions</span></span>
+<span data-ttu-id="6e01c-118">复合表达式</span><span class="sxs-lookup"><span data-stu-id="6e01c-118">compound expressions</span></span>
 </td>
 <td>
 
@@ -44,7 +44,7 @@ ms.locfileid: "65641667"
 </tr>
 <tr><td>
 
-<span data-ttu-id="36f2b-119">嵌套`let`绑定</span><span class="sxs-lookup"><span data-stu-id="36f2b-119">nested `let` bindings</span></span>
+<span data-ttu-id="6e01c-119">嵌套`let`绑定</span><span class="sxs-lookup"><span data-stu-id="6e01c-119">nested `let` bindings</span></span>
 
 </td><td>
 
@@ -67,7 +67,7 @@ let f x =
 </td>
 </tr>
 <tr><td>
-<span data-ttu-id="36f2b-120">代码块</span><span class="sxs-lookup"><span data-stu-id="36f2b-120">code block</span></span>
+<span data-ttu-id="6e01c-120">代码块</span><span class="sxs-lookup"><span data-stu-id="6e01c-120">code block</span></span>
 </td><td>
 
 ```fsharp
@@ -99,7 +99,7 @@ for counter = start to finish do
 
 </td><td>
 
-```
+```fsharp
 for counter = start to finish do
     ...
 done
@@ -164,7 +164,7 @@ in
 
 </td>
 </tr>
-<tr><td><span data-ttu-id="36f2b-121">记录</span><span class="sxs-lookup"><span data-stu-id="36f2b-121">record</span></span>
+<tr><td><span data-ttu-id="6e01c-121">记录</span><span class="sxs-lookup"><span data-stu-id="6e01c-121">record</span></span>
 </td><td>
 
 ```fsharp
@@ -189,7 +189,7 @@ type <record-name> =
 
 </td>
 </tr>
-<tr><td><span data-ttu-id="36f2b-122">class</span><span class="sxs-lookup"><span data-stu-id="36f2b-122">class</span></span>
+<tr><td><span data-ttu-id="6e01c-122">class</span><span class="sxs-lookup"><span data-stu-id="6e01c-122">class</span></span>
 </td><td>
 
 ```fsharp
@@ -208,7 +208,7 @@ type <class-name>(<params>) =
 
 </td>
 </tr>
-<tr><td><span data-ttu-id="36f2b-123">结构</span><span class="sxs-lookup"><span data-stu-id="36f2b-123">structure</span></span></td><td>
+<tr><td><span data-ttu-id="6e01c-123">结构</span><span class="sxs-lookup"><span data-stu-id="6e01c-123">structure</span></span></td><td>
 
 ```fsharp
 [<StructAttribute>]
@@ -227,7 +227,7 @@ type <structure-name> =
 
 </td>
 </tr>
-<tr><td><span data-ttu-id="36f2b-124">可区分的联合</span><span class="sxs-lookup"><span data-stu-id="36f2b-124">discriminated union</span></span></td><td>
+<tr><td><span data-ttu-id="6e01c-124">可区分联合</span><span class="sxs-lookup"><span data-stu-id="6e01c-124">discriminated union</span></span></td><td>
 
 ```fsharp
 type <union-name> =
@@ -251,7 +251,7 @@ type <union-name> =
 
 </td>
 </tr>
-<tr><td><span data-ttu-id="36f2b-125">interface</span><span class="sxs-lookup"><span data-stu-id="36f2b-125">interface</span></span></td><td>
+<tr><td><span data-ttu-id="6e01c-125">interface</span><span class="sxs-lookup"><span data-stu-id="6e01c-125">interface</span></span></td><td>
 
 ```fsharp
 type <interface-name> =
@@ -269,7 +269,7 @@ type <interface-name> =
 
 </td>
 </tr>
-<tr><td><span data-ttu-id="36f2b-126">对象表达式</span><span class="sxs-lookup"><span data-stu-id="36f2b-126">object expression</span></span></td><td>
+<tr><td><span data-ttu-id="6e01c-126">对象表达式</span><span class="sxs-lookup"><span data-stu-id="6e01c-126">object expression</span></span></td><td>
 
 ```fsharp
 { new <type-name>
@@ -292,7 +292,7 @@ type <interface-name> =
 
 </td>
 </tr>
-<tr><td><span data-ttu-id="36f2b-127">接口实现</span><span class="sxs-lookup"><span data-stu-id="36f2b-127">interface implementation</span></span></td><td>
+<tr><td><span data-ttu-id="6e01c-127">接口实现</span><span class="sxs-lookup"><span data-stu-id="6e01c-127">interface implementation</span></span></td><td>
 
 ```fsharp
 interface <interface-name>
@@ -311,7 +311,7 @@ interface <interface-name>
 
 </td>
 </tr>
-<tr><td><span data-ttu-id="36f2b-128">类型扩展</span><span class="sxs-lookup"><span data-stu-id="36f2b-128">type extension</span></span></td><td>
+<tr><td><span data-ttu-id="6e01c-128">类型扩展</span><span class="sxs-lookup"><span data-stu-id="6e01c-128">type extension</span></span></td><td>
 
 ```fsharp
 type <type-name>
@@ -330,7 +330,7 @@ type <type-name>
 
 </td>
 </tr>
-<tr><td><span data-ttu-id="36f2b-129">name</span><span class="sxs-lookup"><span data-stu-id="36f2b-129">module</span></span></td><td>
+<tr><td><span data-ttu-id="6e01c-129">name</span><span class="sxs-lookup"><span data-stu-id="6e01c-129">module</span></span></td><td>
 
 ```fsharp
 module <module-name> =
@@ -350,8 +350,8 @@ module <module-name> =
 </tr>
 </table>
 
-## <a name="see-also"></a><span data-ttu-id="36f2b-130">请参阅</span><span class="sxs-lookup"><span data-stu-id="36f2b-130">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6e01c-130">请参阅</span><span class="sxs-lookup"><span data-stu-id="6e01c-130">See also</span></span>
 
-- [<span data-ttu-id="36f2b-131">F# 语言参考</span><span class="sxs-lookup"><span data-stu-id="36f2b-131">F# Language Reference</span></span>](index.md)
-- [<span data-ttu-id="36f2b-132">编译器指令</span><span class="sxs-lookup"><span data-stu-id="36f2b-132">Compiler Directives</span></span>](compiler-directives.md)
-- [<span data-ttu-id="36f2b-133">代码格式设置准则</span><span class="sxs-lookup"><span data-stu-id="36f2b-133">Code Formatting Guidelines</span></span>](code-formatting-guidelines.md)
+- [<span data-ttu-id="6e01c-131">F# 语言参考</span><span class="sxs-lookup"><span data-stu-id="6e01c-131">F# Language Reference</span></span>](index.md)
+- [<span data-ttu-id="6e01c-132">编译器指令</span><span class="sxs-lookup"><span data-stu-id="6e01c-132">Compiler Directives</span></span>](compiler-directives.md)
+- [<span data-ttu-id="6e01c-133">代码格式设置准则</span><span class="sxs-lookup"><span data-stu-id="6e01c-133">Code Formatting Guidelines</span></span>](code-formatting-guidelines.md)
