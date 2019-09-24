@@ -2,18 +2,18 @@
 title: 教程：创建类型提供程序
 description: 了解如何在3.0 中F# F#创建自己的类型提供程序，具体方法是检查几个简单的类型提供程序来说明基本概念。
 ms.date: 02/02/2019
-ms.openlocfilehash: 800b5a670b7f25f462e1ce23c3d40fd2eab3b102
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 8d1a1fedf03437ccbacd40616cc7dc3e1da435b2
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991870"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71214272"
 ---
 # <a name="tutorial-create-a-type-provider"></a>教程：创建类型提供程序
 
 中F#的类型提供程序机制是其对信息丰富编程的支持的重要组成部分。 本教程介绍了如何创建自己的类型提供程序，逐步讲解如何开发几个简单的类型提供程序来说明基本概念。 有关中F#的类型提供程序机制的详细信息，请参阅[类型提供程序](index.md)。
 
-F#生态系统包含一系列常用的 Internet 和企业数据服务的类型提供程序。 例如：
+F#生态系统包含一系列常用的 Internet 和企业数据服务的类型提供程序。 例如:
 
 - [Fsharp.core](https://fsharp.github.io/FSharp.Data/)包含 JSON、XML、CSV 和 HTML 文档格式的类型提供程序。
 
@@ -152,13 +152,13 @@ let data1 = Samples.HelloWorldTypeProvider.Type1.NestedType.StaticProperty35
 
 若要使用 print 语句调试此访问接口，请生成一个脚本，用于公开提供程序的问题，然后使用以下代码：
 
-```
+```console
 fsc.exe -r:bin\Debug\HelloWorldTypeProvider.dll script.fsx
 ```
 
 若要使用 Visual Studio 调试此提供程序，请使用管理凭据打开适用于 Visual Studio 的开发人员命令提示，并运行以下命令：
 
-```
+```console
 devenv.exe /debugexe fsc.exe -r:bin\Debug\HelloWorldTypeProvider.dll script.fsx
 ```
 
@@ -899,7 +899,7 @@ let function1 () =
 
 下面是通过使用 ildasm 生成的代码反编译的图像：
 
-```
+```il
 .class public abstract auto ansi sealed Module1
 extends [mscorlib]System.Object
 {
@@ -933,13 +933,11 @@ IL_0017:  ret
 
 **连接协议的提供程序**通常，数据和服务连接协议的大多数提供程序 dll 的名称（如 OData 或 SQL 连接）应以`TypeProvider`或`TypeProviders`结尾。 例如，使用类似于以下字符串的 DLL 名称：
 
-```
-  Fabrikam.Management.BasicTypeProviders.dll
-```
+`Fabrikam.Management.BasicTypeProviders.dll`
 
 确保你提供的类型为相应命名空间的成员，并指示你实现的连接协议：
 
-```
+```fsharp
   Fabrikam.Management.BasicTypeProviders.WmiConnection<…>
   Fabrikam.Management.BasicTypeProviders.DataProtocolConnection<…>
 ```
@@ -1098,7 +1096,7 @@ F# 3.0 版本中的 ProvidedTypes-0.2 helper 代码仅限于提供生成的类�
 
 应可从非嵌套类型访问所有提供的类型。 非嵌套类型是在对`TypeProviderForNamespaces`构造函数的调用或对`AddNamespace`的调用中提供的。 例如，如果提供程序提供类型`StaticClass.P : T`，则必须确保 T 为非嵌套类型或嵌套在一个类型下。
 
-例如，某些提供程序有一个包含这些`DataTypes` `T1, T2, T3, ...`类型的静态类，例如。 否则，此错误表明找到了对程序集 A 中的类型 T 的引用，但无法在该程序集中找到该类型。 如果出现此错误，请验证是否可以从提供程序类型中访问所有子类型。 注意:这些`T1, T2, T3...`类型称为 "*动态*类型"。 请记住将其放在可访问的命名空间或父类型中。
+例如，某些提供程序有一个包含这些`DataTypes` `T1, T2, T3, ...`类型的静态类，例如。 否则，此错误表明找到了对程序集 A 中的类型 T 的引用，但无法在该程序集中找到该类型。 如果出现此错误，请验证是否可以从提供程序类型中访问所有子类型。 注意：这些`T1, T2, T3...`类型称为 "*动态*类型"。 请记住将其放在可访问的命名空间或父类型中。
 
 ### <a name="limitations-of-the-type-provider-mechanism"></a>类型提供程序机制的限制
 
@@ -1128,8 +1126,8 @@ F# 3.0 版本中的 ProvidedTypes-0.2 helper 代码仅限于提供生成的类�
 
 通常可以使用 fsc.exe 在测试脚本文件（例如 .fsx）上最轻松地调试类型提供程序。 你可以从命令提示符处启动调试器。
 
-```
-  devenv /debugexe fsc.exe script.fsx
+```console
+devenv /debugexe fsc.exe script.fsx
 ```
 
   您可以使用打印到 stdout 的日志记录。

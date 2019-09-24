@@ -1,20 +1,20 @@
 ---
 title: 查询表达式
-description: 了解有关进行中的 LINQ 查询表达式支持F#编程语言。
+description: 了解F#编程语言中 LINQ 的查询表达式支持。
 ms.date: 05/16/2016
-ms.openlocfilehash: fc077bfbe25f88104e89508ef6283a5bc42eddbd
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 6eaac16336cca752eaac355276300c6809c570a8
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645348"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216819"
 ---
 # <a name="query-expressions"></a>查询表达式
 
 > [!NOTE]
 > 本文中的 API 参考链接将转至 MSDN。  Docs.microsoft.com API 参考尚未完成。
 
-查询表达式可以查询数据源并将数据放入所需的形式。 查询表达式提供对中的 LINQ 支持F#。
+利用查询表达式，您可以查询数据源并将数据置于所需的窗体中。 查询表达式为 LINQ in F#提供支持。
 
 ## <a name="syntax"></a>语法
 
@@ -24,7 +24,7 @@ query { expression }
 
 ## <a name="remarks"></a>备注
 
-查询表达式是一种类似于序列表达式的计算表达式。 就像通过提供在序列表达式中的代码指定一个序列，将通过提供查询表达式中的代码中指定一的组数据。 在序列表达式中，`yield`关键字标识为生成序列的一部分返回的数据。 在查询表达式中`select`关键字执行相同的功能。 除了`select`关键字，F#还支持许多非常类似的组成部分的 SQL SELECT 语句的查询运算符。 下面是一个简单查询表达式，以及连接到 Northwind OData 源的代码示例。
+查询表达式是一种类似于序列表达式的计算表达式。 就像通过在序列表达式中提供代码来指定序列一样，通过在查询表达式中提供代码来指定一组数据。 在序列表达式中， `yield`关键字标识作为结果序列的一部分返回的数据。 在查询表达式中， `select`关键字执行相同的功能。 除了`select`关键字外， F#还支持多个查询运算符，这与 SQL SELECT 语句的各个部分非常类似。 下面是一个简单查询表达式的示例，以及连接到 Northwind OData 源的代码。
 
 ```fsharp
 // Use the OData type provider to create types that can be used to access the Northwind database.
@@ -46,23 +46,23 @@ query1
 |> Seq.iter (fun customer -> printfn "Company: %s Contact: %s" customer.CompanyName customer.ContactName)
 ```
 
-在上一代码示例中，查询表达式是在大括号中。 在表达式中代码的含义是，返回查询结果中的数据库中的 Customers 表中的每个客户。 查询表达式返回的类型实现<xref:System.Linq.IQueryable%601>并<xref:System.Collections.Generic.IEnumerable%601>，，因此它们可以循环访问使用[Seq 模块](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684)如示例所示。
+在上面的代码示例中，查询表达式位于大括号中。 表达式中的代码含义为，返回查询结果中数据库的 Customers 表中的每个客户。 查询表达式返回实现<xref:System.Linq.IQueryable%601>和<xref:System.Collections.Generic.IEnumerable%601>的类型，因此可以使用[Seq 模块](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684)（如示例所示）来循环访问。
 
-从生成器类生成每个计算表达式类型。 Query 计算表达式的生成器类是`QueryBuilder`。 有关详细信息，请参阅[计算表达式](computation-expressions.md)并[Linq.QueryBuilder 类](https://msdn.microsoft.com/visualfsharpdocs/conceptual/linq.querybuilder-class-%5bfsharp%5d)。
+每个计算表达式类型都是从生成器类生成的。 查询计算表达式的生成器类为`QueryBuilder`。 有关详细信息，请参阅[计算表达式](computation-expressions.md)和[QueryBuilder 类](https://msdn.microsoft.com/visualfsharpdocs/conceptual/linq.querybuilder-class-%5bfsharp%5d)。
 
 ## <a name="query-operators"></a>查询运算符
 
-查询运算符，可以指定查询的详细信息如将条件放在要返回的记录，或指定结果的排序顺序。 查询源必须支持查询运算符。 如果你尝试使用不受支持的查询运算符，`System.NotSupportedException`将引发。
+利用查询运算符，您可以指定查询的详细信息，例如对要返回的记录添加条件或指定结果的排序顺序。 查询源必须支持查询运算符。 如果尝试使用不受支持的查询运算符， `System.NotSupportedException`将引发。
 
-在查询表达式中允许仅可以转换为 SQL 的表达式。 例如，不允许使用函数调用的表达式中使用时`where`查询运算符。
+查询表达式中只允许使用可以转换为 SQL 的表达式。 例如，使用`where`查询运算符时，表达式中不允许使用函数调用。
 
-表 1 显示了可用的查询运算符。 此外，请参阅 Table2，比较 SQL 查询和等效的F#查询在本主题后面的表达式。 一些查询运算符不支持某些类型提供程序。 具体而言，它支持由于限制在 OData 中的查询运算符有限制 OData 类型提供程序。 有关详细信息，请参阅[ODataService 类型提供程序 (F#)](https://msdn.microsoft.com/library/bac609dd-9d12-4bf9-a662-24bdf4faa43e)。
+表1显示了可用的查询运算符。 此外，请参阅本主题后面的 Table2，它比较 SQL F#查询和等效的查询表达式。 某些类型提供程序不支持某些查询运算符。 特别是，由于 OData 的限制，OData 类型提供程序在支持的查询运算符中受到限制。 有关详细信息，请参阅[ODataService 类型提供F#程序（）](https://msdn.microsoft.com/library/bac609dd-9d12-4bf9-a662-24bdf4faa43e)。
 
-此表假定以下窗体中的数据库：
+此表假定数据库采用以下格式：
 
-![图，显示一个示例数据库。](./media/query-expressions/student-course-database.png)
+![显示示例数据库的关系图。](./media/query-expressions/student-course-database.png)
 
-下面的表中的代码还假定以下数据库连接代码。 项目应添加对 System.Data、 System.Data.Linq 和 FSharp.Data.TypeProviders 程序集的引用。 本主题末尾包含创建此数据库的代码。
+接下来的表中的代码还采用以下数据库连接代码。 项目应添加对 System.web、Fsharp.core 和 Fsharp.data.typeproviders 程序集的引用。 本主题末尾包含了用于创建此数据库的代码。
 
 ```fsharp
 open System
@@ -88,7 +88,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
   </tr>
   <tr>
   <td><code>contains</code></td>
-<td>确定所选的元素是否包含指定的元素。<br/><br/>
+<td>确定所选元素是否包含指定的元素。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -101,7 +101,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </tr>
 
 <tr>
-  <td><code>count</code></td><td>返回所选元素的数目。<br/><br/>
+  <td><code>count</code></td><td>返回选定元素的数目。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -112,7 +112,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 
 </td></tr>
 <tr>
-<td><code>last</code></td><td>选择为止所选的最后一个元素。<br/><br/>
+<td><code>last</code></td><td>选择迄今为止选定的最后一个元素。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for number in data do
@@ -122,7 +122,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 
 </td></tr>
 <tr>
-<td><code>lastOrDefault</code></td><td>如果未找到元素，选择为止，所选或默认值的最后一个元素。<br/><br/>
+<td><code>lastOrDefault</code></td><td>选择迄今为止选定的最后一个元素，如果未找到元素，则选择默认值。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for number in data do
@@ -132,7 +132,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>exactlyOne</code></td><td>选择到目前为止选择单个、 指定元素。 如果存在多个元素时，将引发异常。<br/><br/>
+<td><code>exactlyOne</code></td><td>选择到目前为止选择的单个特定元素。 如果存在多个元素，则会引发异常。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -143,7 +143,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>exactlyOneOrDefault</code></td><td>如果找不到该元素，请选择所选择到目前为止，或默认值的单个特定元素。<br/><br/>
+<td><code>exactlyOneOrDefault</code></td><td>选择迄今为止选定的单个特定元素，如果未找到该元素，则选择默认值。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -154,7 +154,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>headOrDefault</code></td><td>如果序列不包含任何元素，请选择所选择到目前为止，或默认值的第一个元素。<br/><br/>
+<td><code>headOrDefault</code></td><td>选择迄今为止选定的第一个元素，如果序列不包含任何元素，则为默认值。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -164,7 +164,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>select</code></td><td>到目前为止所选的元素的每个项目。<br/><br/>
+<td><code>select</code></td><td>投影到目前为止选择的每个元素。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -173,7 +173,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>where</code></td><td>选择基于指定的谓词的元素。<br/><br/>
+<td><code>where</code></td><td>根据指定的谓词选择元素。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -183,7 +183,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>minBy</code></td><td>选择到目前为止选择每个元素的值并返回最小结果值。<br/><br/>
+<td><code>minBy</code></td><td>为迄今为止选择的每个元素选择一个值，并返回最小结果值。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -192,7 +192,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>maxBy</code></td><td>选择到目前为止选择每个元素的值并返回最大结果值。<br/><br/>
+<td><code>maxBy</code></td><td>为迄今为止选择的每个元素选择一个值，并返回最大结果值。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -201,7 +201,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>groupBy</code></td><td>根据指定的键选择器为止所选的元素进行分组。<br/><br/>
+<td><code>groupBy</code></td><td>根据指定的键选择器对迄今为止选定的元素进行分组。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -211,7 +211,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>sortBy</code></td><td>按升序排序到目前为止选择的给定排序键的元素进行排序。<br/><br/>
+<td><code>sortBy</code></td><td>按给定的排序键按升序对所选元素进行排序。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -221,7 +221,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>sortByDescending</code></td><td>按降序到目前为止选择的给定排序键的元素进行排序。<br/><br/>
+<td><code>sortByDescending</code></td><td>按给定的排序键按降序对所选元素进行排序。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -231,7 +231,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>thenBy</code></td><td>执行后续排序升序排序到目前为止选择的给定排序键的元素。 此运算符只能用于后<code>sortBy</code>， <code>sortByDescending</code>， <code>thenBy</code>，或<code>thenByDescending</code>。<br/><br/>
+<td><code>thenBy</code></td><td>按给定的排序键对迄今为止选定的元素执行后续排序。 此运算符仅<code>sortBy</code>可在<code>thenBy</code>、 <code>sortByDescending</code>、或<code>thenByDescending</code>之后使用。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -243,7 +243,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>thenByDescending</code></td><td>执行后续排序降序排序到目前为止选择的给定排序键的元素。 此运算符只能用于后<code>sortBy</code>， <code>sortByDescending</code>， <code>thenBy</code>，或<code>thenByDescending</code>。<br/><br/>
+<td><code>thenByDescending</code></td><td>按给定的排序键对迄今为止选定的元素执行后续排序。 此运算符仅<code>sortBy</code>可在<code>thenBy</code>、 <code>sortByDescending</code>、或<code>thenByDescending</code>之后使用。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -255,7 +255,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>groupValBy</code></td><td>选择到目前为止选择每个元素的值，并由给定键的元素进行分组。<br/><br/>
+<td><code>groupValBy</code></td><td>为迄今为止选择的每个元素选择一个值，并按给定键对元素进行分组。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -265,7 +265,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>join</code></td><td>基于匹配键对所选值的两个组关联起来。 请注意，登录联接表达式围绕 = 键的顺序非常重要。 在所有联接，如果在行拆分后<code>-&gt;</code>符号，缩进至少必须为缩进而言关键字<code>for</code>。<br/><br/>
+<td><code>join</code></td><td>基于匹配键将两组选定值关联起来。 请注意，联接表达式中 = sign 的键顺序很重要。 在所有联接中，如果行在<code>-&gt;</code>符号后面拆分，则缩进的缩进量必须至少为关键字。 <code>for</code><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -276,7 +276,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>groupJoin</code></td><td>基于匹配键对所选值的两个组关联起来，并对结果进行分组。 请注意，登录联接表达式围绕 = 键的顺序非常重要。<br/><br/>
+<td><code>groupJoin</code></td><td>基于匹配键关联两组选定值并对结果进行分组。 请注意，联接表达式中 = sign 的键顺序很重要。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -290,7 +290,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>leftOuterJoin</code></td><td>基于匹配键对所选值的两个组关联起来，并对结果进行分组。 如果任何组为空，改为使用具有一个默认值的组。 请注意，登录联接表达式围绕 = 键的顺序非常重要。<br/><br/>
+<td><code>leftOuterJoin</code></td><td>基于匹配键关联两组选定值并对结果进行分组。 如果任何组为空，则改用具有单个默认值的组。 请注意，联接表达式中 = sign 的键顺序很重要。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -302,7 +302,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>sumByNullable</code></td><td>选择到目前为止选择每个元素可以为 null 值并返回这些值的总和。 如果任何可以为 null 不具有一个值，则忽略它。<br/><br/>
+<td><code>sumByNullable</code></td><td>为迄今为止选择的每个元素选择一个可以为 null 的值，并返回这些值的总和。 如果有可以为 null 的值，则它将被忽略。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -311,7 +311,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>minByNullable</code></td><td>选择到目前为止选择每个元素可以为 null 值并返回最小值。 如果任何可以为 null 不具有一个值，则忽略它。<br/><br/>
+<td><code>minByNullable</code></td><td>为迄今为止选择的每个元素选择一个可以为 null 的值，并返回这些值的最小值。 如果有可以为 null 的值，则它将被忽略。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -320,7 +320,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>maxByNullable</code></td><td>选择到目前为止选择每个元素可以为 null 值并返回最大值。 如果任何可以为 null 不具有一个值，则忽略它。<br/><br/>
+<td><code>maxByNullable</code></td><td>为迄今为止选择的每个元素选择一个可以为 null 的值，并返回这些值的最大值。 如果有可以为 null 的值，则它将被忽略。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -329,7 +329,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>averageByNullable</code></td><td>选择到目前为止选择每个元素可以为 null 值并返回这些值的平均值。 如果任何可以为 null 不具有一个值，则忽略它。<br/><br/>
+<td><code>averageByNullable</code></td><td>为迄今为止选择的每个元素选择一个可以为 null 的值，并返回这些值的平均值。 如果有可以为 null 的值，则它将被忽略。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -338,7 +338,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>averageBy</code></td><td>选择到目前为止选择每个元素的值并返回这些值的平均值。<br/><br/>
+<td><code>averageBy</code></td><td>为到目前为止选择的每个元素选择一个值，并返回这些值的平均值。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -347,7 +347,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>distinct</code></td><td>到目前为止所选的元素从选择的非重复元素。<br/><br/>
+<td><code>distinct</code></td><td>选择到目前为止选择的元素中的非重复元素。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -358,7 +358,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>exists</code></td><td>确定到目前为止选择任何元素是否满足条件。<br/><br/>
+<td><code>exists</code></td><td>确定目前选择的任何元素是否都满足条件。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -371,7 +371,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>find</code></td><td>选择到目前为止选择满足指定的条件的第一个元素。<br/><br/>
+<td><code>find</code></td><td>选择迄今为止满足指定条件的第一个元素。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -380,7 +380,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>all</code></td><td>确定是否为止的所有元素都满足条件。<br/><br/>
+<td><code>all</code></td><td>确定目前选定的所有元素是否都满足条件。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -389,7 +389,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>head</code></td><td>从所选择到目前为止选择第一个元素。<br/><br/>
+<td><code>head</code></td><td>选择迄今为止选定的第一个元素。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -398,7 +398,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>nth</code></td><td>到目前为止选择这些所选的指定索引处的元素。<br/><br/>
+<td><code>nth</code></td><td>选择指定索引处的元素，该元素位于目前为止所选的位置。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for numbers in data do
@@ -407,7 +407,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>skip</code></td><td>跳过指定的数量的到目前为止所选的元素，然后选择剩余的元素。<br/><br/>
+<td><code>skip</code></td><td>在迄今为止，跳过指定数目的元素，然后选择剩余的元素。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -416,7 +416,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>skipWhile</code></td><td>只要指定的条件为 true，然后选择剩余的元素，则跳过序列中的元素。<br/><br/>
+<td><code>skipWhile</code></td><td>只要指定的条件为 true，就跳过序列中的元素，然后选择剩余的元素。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for number in data do
@@ -426,7 +426,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>sumBy</code></td><td>选择到目前为止选择每个元素的值并返回这些值的总和。<br/><br/>
+<td><code>sumBy</code></td><td>为到目前为止选择的每个元素选择一个值，并返回这些值的总和。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -435,7 +435,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>take</code></td><td>到目前为止选择从这些所选的指定的数量的连续元素。<br/><br/>
+<td><code>take</code></td><td>从所选的到目前为止选择指定数量的连续元素。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -445,7 +445,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>takeWhile</code></td><td>只要指定的条件为 true，且然后将跳过剩余的元素序列中选择元素。<br/><br/>
+<td><code>takeWhile</code></td><td>只要指定的条件为 true，则从序列中选择元素，然后跳过剩余的元素。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for number in data do
@@ -454,7 +454,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>sortByNullable</code></td><td>按升序排序到目前为止选择可以为 null 的给定排序键的元素进行排序。<br/><br/>
+<td><code>sortByNullable</code></td><td>按给定的可以为 null 的排序键按升序对所选元素进行排序。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -464,7 +464,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>sortByNullableDescending</code></td><td>按降序到目前为止选择可以为 null 的给定排序键的元素进行排序。<br/><br/>
+<td><code>sortByNullableDescending</code></td><td>按给定的可以为 null 的排序键对迄今为止选定的元素进行排序。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -474,7 +474,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>thenByNullable</code></td><td>执行后续排序升序排序到目前为止选择可以为 null 的给定排序键的元素。 此运算符只能用于紧跟<code>sortBy</code>， <code>sortByDescending</code>， <code>thenBy</code>，或<code>thenByDescending</code>，或其可以为 null 的变体。<br/><br/>
+<td><code>thenByNullable</code></td><td>按照给定的可以为 null 的排序键，对迄今为止选定的元素执行后续排序。 此运算符仅<code>sortBy</code>可在<code>thenBy</code>、 <code>sortByDescending</code>、、或<code>thenByDescending</code>后立即使用。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -485,7 +485,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>thenByNullableDescending</code></td><td>执行后续排序降序排序到目前为止选择可以为 null 的给定排序键的元素。 此运算符只能用于紧跟<code>sortBy</code>， <code>sortByDescending</code>， <code>thenBy</code>，或<code>thenByDescending</code>，或其可以为 null 的变体。<br/><br/>
+<td><code>thenByNullableDescending</code></td><td>按给定的可以为 null 的排序键对迄今为止选定的元素执行后续排序。 此运算符仅<code>sortBy</code>可在<code>thenBy</code>、 <code>sortByDescending</code>、、或<code>thenByDescending</code>后立即使用。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -499,14 +499,14 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </table>
 
 ## <a name="comparison-of-transact-sql-and-f-query-expressions"></a>Transact-SQL 和 F# 查询表达式的比较
-下表显示了一些常见的 Transact SQL 查询和中的等效项F#。 此表中的代码还假定所在的数据库上的表和相同的初始代码设置类型提供程序。
+下表列出了一些常见的 Transact-sql 查询及其在中的等效F#项。 此表中的代码还假定与上表相同的数据库和用于设置类型提供程序的相同初始代码。
 
-### <a name="table-2-transact-sql-and-f-query-expressions"></a>表 2。 Transact-SQL 和 F# 查询表达式
+### <a name="table-2-transact-sql-and-f-query-expressions"></a>表2： Transact-SQL 和 F# 查询表达式
 
 <table style="width:100%">
   <tr>
-    <th>Transact-SQL （不区分大小写）</th>
-    <th>F#查询表达式 （区分大小写）</th>
+    <th>Transact-sql （不区分大小写）</th>
+    <th>F#查询表达式（区分大小写）</th>
   </tr>
 <tr><td>
 从表中选择所有字段。<br>
@@ -524,7 +524,7 @@ query {
 
 </td></tr>
 <tr><td>
-在表中的记录进行计数。<br/>
+计算表中的记录数。<br/>
 
 <pre><code class="lang-sql">SELECT COUNT( * ) FROM Student
 </code></pre>
@@ -585,7 +585,7 @@ query {
 }
 </code></pre>
 </td></tr><tr><td>
-使用条件分组。<br/>
+具有条件的分组。<br/>
 
 <pre><code class="lang-sql">SELECT Student.Age, COUNT( * )
 FROM Student
@@ -605,7 +605,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-使用次数条件分组。<br/>
+包含计数条件的分组。<br/>
 
 <pre><code class="lang-sql">SELECT Student.Age, COUNT( * )
 FROM Student
@@ -626,7 +626,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-分组、 计数和求和。<br/>
+分组、计数和求和。<br/>
 
 <pre><code class="lang-sql">SELECT Student.Age, COUNT( * ), SUM(Student.Age) as total
 FROM Student
@@ -649,7 +649,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-组合、 计数，并按计数排序。<br/>
+按计数进行分组、计数和排序。<br/>
 
 <pre><code class="lang-sql">SELECT Student.Age, COUNT( * ) as myCount
 FROM Student
@@ -673,7 +673,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-<code>IN</code> 一组指定的值<br/>
+<code>IN</code>一组指定值<br/>
 
 <pre><code class="lang-sql">SELECT *
 FROM Student
@@ -714,7 +714,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-<code>LIKE</code> 模式匹配项集。<br/>
+<code>LIKE</code>具有模式匹配集。<br/>
 
 <pre><code class="lang-sql">-- '[abc]%' matches strings where the first character is
 -- 'a', 'b', 'c', 'A', 'B', or 'C'
@@ -731,7 +731,7 @@ WHERE Student.Name LIKE '[abc]%'
 </code></pre>
 
 </td></tr><tr><td>
-<code>LIKE</code> 使用组排除模式。<br/>
+<code>LIKE</code>带有 set 排除模式的。<br/>
 
 <pre><code class="lang-sql">-- '[^abc]%' matches strings where the first character is
 -- not 'a', 'b', 'c', 'A', 'B', or 'C'
@@ -750,7 +750,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-<code>LIKE</code> 上一个字段，但选择不同的字段。<br/>
+<code>LIKE</code>，但要选择不同的字段。<br/>
 
 <pre><code class="lang-sql">SELECT StudentID AS ID FROM Student
 WHERE Student.Name LIKE '[^abc]%'
@@ -765,7 +765,7 @@ WHERE Student.Name LIKE '[^abc]%'
 }
 </code></pre>
 
-</td></tr><tr><td><code>LIKE</code>使用子字符串搜索。<br/>
+</td></tr><tr><td><code>LIKE</code>，其中包含子字符串搜索。<br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 WHERE Student.Name like '%A%'
@@ -782,7 +782,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-简单<code>JOIN</code>这两个表。<br/>
+具有<code>JOIN</code>两个表的简单。<br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 JOIN CourseSelection
@@ -800,7 +800,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><code>LEFT JOIN</code> 具有两个表。<br/>
+</td></tr><tr><td><code>LEFT JOIN</code>具有两个表。<br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 LEFT JOIN CourseSelection
@@ -819,7 +819,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><code>JOIN</code> 使用 <code>COUNT</code><br/>
+</td></tr><tr><td><code>JOIN</code>利用<code>COUNT</code><br/>
 
 <pre><code class="lang-sql">SELECT COUNT( * ) FROM Student
 JOIN CourseSelection
@@ -902,7 +902,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><code>OR</code> 与排序<br/>
+</td></tr><tr><td><code>OR</code>排序<br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 WHERE Student.Age = 12 OR Student.Age = 13
@@ -920,7 +920,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><code>TOP</code><code>OR</code>，和排序。<br/>
+</td></tr><tr><td><code>TOP</code>、 <code>OR</code>和排序。<br/>
 
 <pre><code class="lang-sql">SELECT TOP 2 student.Name FROM Student
 WHERE Student.Age = 11 OR Student.Age = 12
@@ -942,7 +942,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><code>UNION</code> 两个查询。<br/>
+</td></tr><tr><td><code>UNION</code>的两个查询。<br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 UNION
@@ -991,7 +991,7 @@ let query2 =
 query1.Intersect(query2)
 </code></pre>
 
-</td></tr><tr><td><code>CASE</code> 条件。<br/>
+</td></tr><tr><td><code>CASE</code>状态.<br/>
 
 <pre><code class="lang-sql">SELECT student.StudentID,
 CASE Student.Age
@@ -1013,7 +1013,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td>多个用例。<br/>
+</td></tr><tr><td>多种情况。<br/>
 
 <pre><code class="lang-sql">SELECT Student.StudentID,
 CASE Student.Age
@@ -1104,7 +1104,7 @@ query {
 
 </td></tr></table>
 
-下面的代码可以用于创建这些示例的示例数据库。
+下面的代码可用于为这些示例创建示例数据库。
 
 <pre><code class="lang-sql">SET ANSI_NULLS ON
 GO
@@ -1226,7 +1226,7 @@ INSERT INTO CourseSelection (ID, StudentID, CourseID)
 VALUES(15, 7, 3);
 </code></pre>
 
-下面的代码包含在本主题的示例代码。
+下面的代码包含本主题中显示的示例代码。
 
 ```fsharp
 #if INTERACTIVE
@@ -1860,9 +1860,9 @@ query {
 |> Seq.iter (fun (studentName, courseName) -> printfn "%s %s" studentName courseName)
 ```
 
-下面是完整输出，该代码中运行时和F#交互。
+下面是以F#交互的运行此代码时的完整输出。
 
-```
+```console
 --> Referenced 'C:\Program Files (x86)\Reference Assemblies\Microsoft\FSharp\3.0\Runtime\v4.0\Type Providers\FSharp.Data.TypeProviders.dll'
 
 --> Referenced 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Data.dll'
@@ -2424,5 +2424,5 @@ end
 ## <a name="see-also"></a>请参阅
 
 - [F# 语言参考](index.md)
-- [Linq.QueryBuilder 类](https://msdn.microsoft.com/visualfsharpdocs/conceptual/linq.querybuilder-class-%5bfsharp%5d)
+- [QueryBuilder 类](https://msdn.microsoft.com/visualfsharpdocs/conceptual/linq.querybuilder-class-%5bfsharp%5d)
 - [计算表达式](Computation-Expressions.md)

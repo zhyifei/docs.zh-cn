@@ -1,17 +1,17 @@
 ---
 title: 源代码行标识符、文件标识符和路径标识符
-description: 了解如何使用内置的F#标识符值, 通过这些值可以访问代码中的源行号、目录和文件名。
+description: 了解如何使用内置的F#标识符值，通过这些值可以访问代码中的源行号、目录和文件名。
 ms.date: 05/16/2016
-ms.openlocfilehash: 5ff36210edc75370f8baf9ee7be057f3ac0c3979
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: f22c3dfb3cb106fbe45883ffd7de01feac30db00
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627115"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216749"
 ---
 # <a name="source-line-file-and-path-identifiers"></a>源代码行标识符、文件标识符和路径标识符
 
-标识符`__LINE__`, `__SOURCE_DIRECTORY__`和是内置值,使用这些值可以访问代码中的源行号、目录和文件名。`__SOURCE_FILE__`
+标识符`__LINE__`， `__SOURCE_DIRECTORY__`和是内置值，使用这些值可以访问代码中的源行号、目录和文件名。`__SOURCE_FILE__`
 
 ## <a name="syntax"></a>语法
 
@@ -29,11 +29,11 @@ __SOURCE_FILE__
 
 |预定义标识符|描述|
 |---------------------|-----------|
-|`__LINE__`|计算结果为当前行号, 考虑`#line`指令。|
-|`__SOURCE_DIRECTORY__`|计算结果为源目录的当前完整路径, 考虑`#line`指令。|
-|`__SOURCE_FILE__`|计算结果为当前源文件名, 而不包含其路径, `#line`考虑指令。|
+|`__LINE__`|计算结果为当前行号，考虑`#line`指令。|
+|`__SOURCE_DIRECTORY__`|计算结果为源目录的当前完整路径，考虑`#line`指令。|
+|`__SOURCE_FILE__`|计算结果为当前源文件名，而不包含其路径， `#line`考虑指令。|
 
-有关`#line`指令的详细信息, 请参阅[编译器指令](compiler-directives.md)。
+有关`#line`指令的详细信息，请参阅[编译器指令](compiler-directives.md)。
 
 ## <a name="example"></a>示例
 
@@ -43,7 +43,7 @@ __SOURCE_FILE__
 
 输出：
 
-```
+```console
 Line: 4
 Source Directory: C:\Users\username\Documents\Visual Studio 2017\Projects\SourceInfo\SourceInfo
 Source File: Program.fs

@@ -1,26 +1,26 @@
 ---
 title: 详细语法
-description: 了解中的详细和轻量语法之间的区别F#编程语言。
+description: 了解F#编程语言中的详细和轻型语法之间的差异。
 ms.date: 05/16/2016
-ms.openlocfilehash: c95965d7d9d18a0fca11663a474dbbc9375a9494
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: d2459da60bba5d88bd23615c8bf09ba64f7c22c4
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641667"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71214035"
 ---
 # <a name="verbose-syntax"></a>详细语法
 
-有两种形式的语法可用于在许多构造F#语言：*详细语法*并*轻量语法*。 详细语法不常使用，但具有的优势在于到缩进的敏感程度较低。 轻量语法为较短，并使用缩进发出信号的开头和结尾的构造，而不是其他关键字，例如`begin`， `end`， `in`，依次类推。 默认语法为轻量语法。 本主题介绍的语法F#构造时未启用轻量语法。 详细语法始终处于启用状态，因此即使您启用轻量语法，仍然可以为某些构造使用详细语法。 可以使用禁用轻量语法`#light "off"`指令。
+以下语言提供了两种形式的语法： " F# *详细语法*" 和 "*轻量语法*"。 详细语法并不常用，但优点在于缩进不太敏感。 轻型语法较短，并使用缩进来表示构造的开始和结束，而不是使用`begin` `in`、 `end`、等其他关键字。 默认语法为轻型语法。 本主题介绍未启用轻型F#语法时构造的语法。 详细语法始终处于启用状态，因此即使启用了轻型语法，仍可对某些构造使用详细语法。 您可以使用`#light "off"`指令禁用轻型语法。
 
 ## <a name="table-of-constructs"></a>构造表
 
-下表显示了的轻量和详细语法F#语言构造大大降低在上下文中存在两种形式之间的差异的。 在此表中，角度方括号 (&lt;&gt;) 括起来的用户提供的语法元素。 请参阅有关使用这些构造中的语法的更多详细信息每种语言构造的文档。
+下表显示了在这两种形式之间F#存在差异的上下文中语言构造的轻型和详细语法。 在此表中，尖括号（&lt;&gt;）将用户提供的语法元素括起来。 有关这些构造中使用的语法的更多详细信息，请参阅每个语言构造的文档。
 
 <table>
 <tr>
 <th>语言构造</th>
-<th>轻量语法</th>
+<th>轻型语法</th>
 <th>详细语法</th>
 </tr>
 <tr>
@@ -99,7 +99,7 @@ for counter = start to finish do
 
 </td><td>
 
-```
+```fsharp
 for counter = start to finish do
     ...
 done
@@ -227,7 +227,7 @@ type <structure-name> =
 
 </td>
 </tr>
-<tr><td>可区分的联合</td><td>
+<tr><td>可区分联合</td><td>
 
 ```fsharp
 type <union-name> =
