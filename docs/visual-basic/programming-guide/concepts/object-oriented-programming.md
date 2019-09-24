@@ -50,7 +50,7 @@ Class SampleClass
 End Class
 ```
 
-Visual Basic 还提供了名为的类的轻量版本*结构*时您需要创建大量对象并执行一些有用不想要为此，占用过多内存。
+Visual Basic 还提供了名为 structure 的类的轻量级版本，当您需要创建大量对象并且不想为此消耗太多内存时，这些类非常有用。
 
 定义结构：
 
