@@ -2,14 +2,14 @@
 title: .NET Core 指南
 description: .NET Core 是一种用于创建 Windows、Linux 和 Mac 应用的模块式高性能的 .NET 实现。 了解 .NET Core 以开始使用。
 author: richlander
-ms.date: 08/01/2018
+ms.date: 09/23/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: a6112851a3d9b46f02c26313e6537170786df10b
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 95f18ca09852ce139a4b99ed7aef4802d4883e13
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117080"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216215"
 ---
 # <a name="net-core-guide"></a>.NET Core 指南
 
@@ -19,19 +19,19 @@ ms.locfileid: "71117080"
 
 请学习 [.NET Core 教程](tutorials/index.md)，了解如何创建简单的 .NET Core 应用程序。 只需几分钟即可生成并运行第一个应用。 若要尝试在浏览器中使用 .NET Core，请参阅 [C# 中的数字](../csharp/tutorials/intro-to-csharp/numbers-in-csharp.yml)在线教程。
 
-## <a name="download-net-core-22"></a>下载 .NET Core 2.2
+## <a name="download-net-core"></a>下载 .NET Core
 
-下载 [.NET Core 2.2 SDK](https://dotnet.microsoft.com/download)，以尝试在 Windows、macOS 或 Linux 计算机上使用 .NET Core。 若要使用 Docker 容器，请访问 [dotnet/core](https://hub.docker.com/_/microsoft-dotnet-core/)。
+下载 [.NET Core SDK](https://www.microsoft.com/net/download)，以尝试在 Windows、macOS 或 Linux 计算机上使用 .NET Core。 如果首选使用 Docker 容器，请访问 [.NET Core Docker Hub](https://hub.docker.com/_/microsoft-dotnet-core/)。
 
 若要使用其他版本 .NET Core，可以在 [.NET Core 下载内容](https://dotnet.microsoft.com/download/dotnet-core)中找到所有版本 .NET Core。
 
-## <a name="net-core-22"></a>.NET Core 2.2
+## <a name="net-core-30"></a>.NET Core 3.0
 
-最新版是 [.NET Core 2.2](whats-new/dotnet-core-2-2.md)。 新功能包括：框架依赖部署、启动挂钩、使用 Azure SQL 进行 AAD 身份验证以及对 Windows ARM32 的支持。
+最新版是 .NET Core 3.0。 新功能包括通过 Windows Presentation Foundation (WPF) 和 Windows 窗体提供的 Windows 桌面支持、使用 Blazor 进行完整堆栈 C# Web 开发、SignalR 和 Azure SignalR 服务的新增强功能、C# 8 的新增 C# 语言功能等等。 有关 .NET Core 3.0 新增功能的完整列表，请参阅 [.NET Core 3.0 的新增功能](./whats-new/dotnet-core-3-0.md)。
 
 ## <a name="create-your-first-application"></a>创建首个应用程序
 
-安装 .NET Core SDK 后，打开命令提示符。 键入以下 `dotnet` 命令以创建并运行 C# 应用程序。
+安装 .NET Core SDK 后，打开命令提示符。 键入以下 `dotnet` 命令以创建并运行 C# 应用程序：
 
 ```dotnetcli
 dotnet new console

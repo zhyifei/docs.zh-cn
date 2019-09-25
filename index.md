@@ -5,13 +5,13 @@ hide_bc: true
 title: .NET 文档
 description: 了解如何通过 C#、Visual Basic 和 F# 在任意平台上使用 .NET 创建各种应用程序。 浏览 API 引用、代码示例、教程以及其他内容。
 ms.custom: updateeachrelease
-ms.date: 09/04/2019
-ms.openlocfilehash: ec8b780100a41109f31084de0f37bec8c0fc680c
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.date: 09/23/2019
+ms.openlocfilehash: cb567ea473e99c3bbd3d63a2328d45e94ca742ff
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928947"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216696"
 ---
 <!-- markdownlint-disable MD033 -->
 <div id="main" class="v2">
@@ -36,7 +36,7 @@ ms.locfileid: "70928947"
                 </a>
             </li>
             <li>
-                <a href="/dotnet/api/?view=netcore-2.2">
+                <a href="/dotnet/api/?view=netcore-3.0">
                     <div class="cardSize">
                         <div class="cardPadding">
                             <div class="card">
@@ -77,7 +77,7 @@ ms.locfileid: "70928947"
         <h1>.NET 文档</h1>
         <ul class="pivots">
             <li>
-                <a data-default="true" href="#docs">Docs</a>
+                <a data-default="true" href="#docs">文档</a>
                 <ul id="docs">
                     <li>
                         <a href="#dotnetguides">.NET 指南</a>
@@ -496,7 +496,7 @@ ms.locfileid: "70928947"
                         </ul>
                     </li>
                     <li>
-                        <a href="#mobile">移动型</a>
+                        <a href="#mobile">移动</a>
                         <ul id="mobile" class="cardsC">
                             <li>
                                 <a href="/xamarin/ios/">
