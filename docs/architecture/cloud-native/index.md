@@ -3,12 +3,12 @@ title: 为 Azure 构建云本机 .NET 应用程序
 description: 构建利用 Azure 的容器、微服务和无服务器功能的云本机应用程序的指南。
 author: ardalis
 ms.date: 03/07/2019
-ms.openlocfilehash: ce9898366d0327dd619b36cdf1487229d9cda7f5
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 67e235b051702308d2455b2501bfb59a4317635b
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71182711"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71214162"
 ---
 # <a name="architecting-cloud-native-net-applications-for-azure"></a>为 Azure 构建云本机 .NET 应用程序
 
@@ -40,7 +40,7 @@ Docker 的鲸鱼徽标是 Docker Inc. 的注册商标经许可方可使用。
 
 所有其他标记和徽标均为其各自所有者的财产。
 
-作者:
+作者：
 
 > **Steve "ardalis" Smith** - 软件设计师及培训师 - [Ardalis.com](https://ardalis.com)
 >
