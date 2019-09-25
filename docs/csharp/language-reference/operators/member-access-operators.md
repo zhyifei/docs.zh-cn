@@ -1,12 +1,14 @@
 ---
 title: 成员访问运算符 - C# 参考
 description: 了解可用于访问类型成员的 C# 运算符。
-ms.date: 05/09/2019
+ms.date: 09/18/2019
 author: pkulikov
 f1_keywords:
 - ._CSharpKeyword
 - '[]_CSharpKeyword'
 - ()_CSharpKeyword
+- ^_CSharpKeyword
+- .._CSharpKeyword
 helpviewer_keywords:
 - member access operators [C#]
 - member access operator [C#]
@@ -25,105 +27,112 @@ helpviewer_keywords:
 - method invocation [C#]
 - delegate invocation [C#]
 - () operator [C#]
-ms.openlocfilehash: 5ff5e68fbce320076e6d18e9e139b418a15bba77
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+- ^ operator [C#]
+- index from end operator [C#]
+- hat operator [C#]
+- .. operator [C#]
+- range operator [C#]
+ms.openlocfilehash: 45af31d10d77f4c63b27b34595b97fdd11ef95a1
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924644"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71116135"
 ---
-# <a name="member-access-operators-c-reference"></a><span data-ttu-id="5f96c-103">成员访问运算符（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="5f96c-103">Member access operators (C# reference)</span></span>
+# <a name="member-access-operators-c-reference"></a><span data-ttu-id="443b6-103">成员访问运算符（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="443b6-103">Member access operators (C# reference)</span></span>
 
-<span data-ttu-id="5f96c-104">访问类型成员时，可能会使用以下运算符：</span><span class="sxs-lookup"><span data-stu-id="5f96c-104">You might use the following operators when you access a type member:</span></span>
+<span data-ttu-id="443b6-104">访问类型成员时，可能会使用以下运算符：</span><span class="sxs-lookup"><span data-stu-id="443b6-104">You might use the following operators when you access a type member:</span></span>
 
-- <span data-ttu-id="5f96c-105">[`.`（成员访问）](#member-access-operator-)：用于访问命名空间或类型的成员</span><span class="sxs-lookup"><span data-stu-id="5f96c-105">[`.` (member access)](#member-access-operator-): to access a member of a namespace or a type</span></span>
-- <span data-ttu-id="5f96c-106">[`[]`（数组元素或索引器访问）](#indexer-operator-)：用于访问数组元素或类型索引器</span><span class="sxs-lookup"><span data-stu-id="5f96c-106">[`[]` (array element or indexer access)](#indexer-operator-): to access an array element or a type indexer</span></span>
-- <span data-ttu-id="5f96c-107">[`?.` 和 `?[]`（null 条件运算符）](#null-conditional-operators--and-)：仅当操作数为非 null 时才用于执行成员或元素访问运算</span><span class="sxs-lookup"><span data-stu-id="5f96c-107">[`?.` and `?[]` (null-conditional operators)](#null-conditional-operators--and-): to perform a member or element access operation only if an operand is non-null</span></span>
-- <span data-ttu-id="5f96c-108">[`()`（调用）](#invocation-operator-)：用于调用被访问的方法或调用委托</span><span class="sxs-lookup"><span data-stu-id="5f96c-108">[`()` (invocation)](#invocation-operator-): to call an accessed method or invoke a delegate</span></span>
+- <span data-ttu-id="443b6-105">[`.`（成员访问）](#member-access-operator-)：用于访问命名空间或类型的成员</span><span class="sxs-lookup"><span data-stu-id="443b6-105">[`.` (member access)](#member-access-operator-): to access a member of a namespace or a type</span></span>
+- <span data-ttu-id="443b6-106">[`[]`（数组元素或索引器访问）](#indexer-operator-)：用于访问数组元素或类型索引器</span><span class="sxs-lookup"><span data-stu-id="443b6-106">[`[]` (array element or indexer access)](#indexer-operator-): to access an array element or a type indexer</span></span>
+- <span data-ttu-id="443b6-107">[`?.` 和 `?[]`（null 条件运算符）](#null-conditional-operators--and-)：仅当操作数为非 null 时才用于执行成员或元素访问运算</span><span class="sxs-lookup"><span data-stu-id="443b6-107">[`?.` and `?[]` (null-conditional operators)](#null-conditional-operators--and-): to perform a member or element access operation only if an operand is non-null</span></span>
+- <span data-ttu-id="443b6-108">[`()`（调用）](#invocation-operator-)：用于调用被访问的方法或调用委托</span><span class="sxs-lookup"><span data-stu-id="443b6-108">[`()` (invocation)](#invocation-operator-): to call an accessed method or invoke a delegate</span></span>
+- <span data-ttu-id="443b6-109">[`^`（从末尾开始索引）](#index-from-end-operator-)：指示元素位置来自序列的末尾</span><span class="sxs-lookup"><span data-stu-id="443b6-109">[`^` (index from end)](#index-from-end-operator-): to indicate that the element position is from the end of a sequence</span></span>
+- <span data-ttu-id="443b6-110">[`..`（范围）](#range-operator-)：指定可用于获取一系列序列元素的索引范围</span><span class="sxs-lookup"><span data-stu-id="443b6-110">[`..` (range)](#range-operator-): to specify a range of indices that you can use to obtain a range of sequence elements</span></span>
 
-## <a name="member-access-operator-"></a><span data-ttu-id="5f96c-109">成员访问运算符 .</span><span class="sxs-lookup"><span data-stu-id="5f96c-109">Member access operator .</span></span>
+## <a name="member-access-operator-"></a><span data-ttu-id="443b6-111">成员访问运算符 .</span><span class="sxs-lookup"><span data-stu-id="443b6-111">Member access operator .</span></span>
 
-<span data-ttu-id="5f96c-110">可以使用 `.` 标记来访问命名空间或类型的成员，如以下示例所示：</span><span class="sxs-lookup"><span data-stu-id="5f96c-110">You use the `.` token to access a member of a namespace or a type, as the following examples demonstrate:</span></span>
+<span data-ttu-id="443b6-112">可以使用 `.` 标记来访问命名空间或类型的成员，如以下示例所示：</span><span class="sxs-lookup"><span data-stu-id="443b6-112">You use the `.` token to access a member of a namespace or a type, as the following examples demonstrate:</span></span>
 
-- <span data-ttu-id="5f96c-111">使用 `.` 访问命名空间内的嵌套命名空间，如以下 [`using` directive](../keywords/using-directive.md) 的示例所示：</span><span class="sxs-lookup"><span data-stu-id="5f96c-111">Use `.` to access a nested namespace within a namespace, as the following example of a [`using` directive](../keywords/using-directive.md) shows:</span></span>
+- <span data-ttu-id="443b6-113">使用 `.` 访问命名空间内的嵌套命名空间，如以下 [`using` directive](../keywords/using-directive.md) 的示例所示：</span><span class="sxs-lookup"><span data-stu-id="443b6-113">Use `.` to access a nested namespace within a namespace, as the following example of a [`using` directive](../keywords/using-directive.md) shows:</span></span>
 
   [!code-csharp[nested namespaces](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#NestedNamespace)]
 
-- <span data-ttu-id="5f96c-112">使用 `.` 构成限定名称  以访问命名空间中的类型，如下面的代码所示：</span><span class="sxs-lookup"><span data-stu-id="5f96c-112">Use `.` to form a *qualified name* to access a type within a namespace, as the following code shows:</span></span>
+- <span data-ttu-id="443b6-114">使用 `.` 构成限定名称  以访问命名空间中的类型，如下面的代码所示：</span><span class="sxs-lookup"><span data-stu-id="443b6-114">Use `.` to form a *qualified name* to access a type within a namespace, as the following code shows:</span></span>
 
   [!code-csharp[qualified name](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#QualifiedName)]
 
-  <span data-ttu-id="5f96c-113">使用 [`using` 指令](../keywords/using-directive.md)来使用可选的限定名称。</span><span class="sxs-lookup"><span data-stu-id="5f96c-113">Use a [`using` directive](../keywords/using-directive.md) to make the use of qualified names optional.</span></span>
+  <span data-ttu-id="443b6-115">使用 [`using` 指令](../keywords/using-directive.md)来使用可选的限定名称。</span><span class="sxs-lookup"><span data-stu-id="443b6-115">Use a [`using` directive](../keywords/using-directive.md) to make the use of qualified names optional.</span></span>
 
-- <span data-ttu-id="5f96c-114">使用 `.` 访问[类型成员](../../programming-guide/classes-and-structs/index.md#members)（静态和非静态），如下面的代码所示：</span><span class="sxs-lookup"><span data-stu-id="5f96c-114">Use `.` to access [type members](../../programming-guide/classes-and-structs/index.md#members), static and non-static, as the following code shows:</span></span>
+- <span data-ttu-id="443b6-116">使用 `.` 访问[类型成员](../../programming-guide/classes-and-structs/index.md#members)（静态和非静态），如下面的代码所示：</span><span class="sxs-lookup"><span data-stu-id="443b6-116">Use `.` to access [type members](../../programming-guide/classes-and-structs/index.md#members), static and non-static, as the following code shows:</span></span>
 
   [!code-csharp-interactive[type members](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#TypeMemberAccess)]
 
-<span data-ttu-id="5f96c-115">还可以使用 `.` 访问[扩展方法](../../programming-guide/classes-and-structs/extension-methods.md)。</span><span class="sxs-lookup"><span data-stu-id="5f96c-115">You can also use `.` to access an [extension method](../../programming-guide/classes-and-structs/extension-methods.md).</span></span>
+<span data-ttu-id="443b6-117">还可以使用 `.` 访问[扩展方法](../../programming-guide/classes-and-structs/extension-methods.md)。</span><span class="sxs-lookup"><span data-stu-id="443b6-117">You can also use `.` to access an [extension method](../../programming-guide/classes-and-structs/extension-methods.md).</span></span>
 
-## <a name="indexer-operator-"></a><span data-ttu-id="5f96c-116">索引器运算符 []</span><span class="sxs-lookup"><span data-stu-id="5f96c-116">Indexer operator []</span></span>
+## <a name="indexer-operator-"></a><span data-ttu-id="443b6-118">索引器运算符 []</span><span class="sxs-lookup"><span data-stu-id="443b6-118">Indexer operator []</span></span>
 
-<span data-ttu-id="5f96c-117">方括号 `[]` 通常用于数组、索引器或指针元素访问。</span><span class="sxs-lookup"><span data-stu-id="5f96c-117">Square brackets, `[]`, are typically used for array, indexer, or pointer element access.</span></span>
+<span data-ttu-id="443b6-119">方括号 `[]` 通常用于数组、索引器或指针元素访问。</span><span class="sxs-lookup"><span data-stu-id="443b6-119">Square brackets, `[]`, are typically used for array, indexer, or pointer element access.</span></span>
 
-### <a name="array-access"></a><span data-ttu-id="5f96c-118">数组访问</span><span class="sxs-lookup"><span data-stu-id="5f96c-118">Array access</span></span>
+### <a name="array-access"></a><span data-ttu-id="443b6-120">数组访问</span><span class="sxs-lookup"><span data-stu-id="443b6-120">Array access</span></span>
 
-<span data-ttu-id="5f96c-119">下面的示例演示如何访问数组元素：</span><span class="sxs-lookup"><span data-stu-id="5f96c-119">The following example demonstrates how to access array elements:</span></span>
+<span data-ttu-id="443b6-121">下面的示例演示如何访问数组元素：</span><span class="sxs-lookup"><span data-stu-id="443b6-121">The following example demonstrates how to access array elements:</span></span>
 
 [!code-csharp-interactive[array access](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#Arrays)]
 
-<span data-ttu-id="5f96c-120">如果数组索引超出数组相应维度的边界，将引发 <xref:System.IndexOutOfRangeException>。</span><span class="sxs-lookup"><span data-stu-id="5f96c-120">If an array index is outside the bounds of the corresponding dimension of an array, an <xref:System.IndexOutOfRangeException> is thrown.</span></span>
+<span data-ttu-id="443b6-122">如果数组索引超出数组相应维度的边界，将引发 <xref:System.IndexOutOfRangeException>。</span><span class="sxs-lookup"><span data-stu-id="443b6-122">If an array index is outside the bounds of the corresponding dimension of an array, an <xref:System.IndexOutOfRangeException> is thrown.</span></span>
 
-<span data-ttu-id="5f96c-121">如上述示例所示，在声明数组类型或实例化数组实例时，还会使用方括号。</span><span class="sxs-lookup"><span data-stu-id="5f96c-121">As the preceding example shows, you also use square brackets when you declare an array type or instantiate an array instance.</span></span>
+<span data-ttu-id="443b6-123">如上述示例所示，在声明数组类型或实例化数组实例时，还会使用方括号。</span><span class="sxs-lookup"><span data-stu-id="443b6-123">As the preceding example shows, you also use square brackets when you declare an array type or instantiate an array instance.</span></span>
 
-<span data-ttu-id="5f96c-122">有关数组的详细信息，请参阅[数组](../../programming-guide/arrays/index.md)。</span><span class="sxs-lookup"><span data-stu-id="5f96c-122">For more information about arrays, see [Arrays](../../programming-guide/arrays/index.md).</span></span>
+<span data-ttu-id="443b6-124">有关数组的详细信息，请参阅[数组](../../programming-guide/arrays/index.md)。</span><span class="sxs-lookup"><span data-stu-id="443b6-124">For more information about arrays, see [Arrays](../../programming-guide/arrays/index.md).</span></span>
 
-### <a name="indexer-access"></a><span data-ttu-id="5f96c-123">索引器访问</span><span class="sxs-lookup"><span data-stu-id="5f96c-123">Indexer access</span></span>
+### <a name="indexer-access"></a><span data-ttu-id="443b6-125">索引器访问</span><span class="sxs-lookup"><span data-stu-id="443b6-125">Indexer access</span></span>
 
-<span data-ttu-id="5f96c-124">下面的示例使用 .NET <xref:System.Collections.Generic.Dictionary%602>类型来演示索引器访问：</span><span class="sxs-lookup"><span data-stu-id="5f96c-124">The following example uses .NET <xref:System.Collections.Generic.Dictionary%602> type to demonstrate indexer access:</span></span>
+<span data-ttu-id="443b6-126">下面的示例使用 .NET <xref:System.Collections.Generic.Dictionary%602>类型来演示索引器访问：</span><span class="sxs-lookup"><span data-stu-id="443b6-126">The following example uses .NET <xref:System.Collections.Generic.Dictionary%602> type to demonstrate indexer access:</span></span>
 
 [!code-csharp-interactive[indexer access](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#Indexers)]
 
-<span data-ttu-id="5f96c-125">使用索引器，可通过类似于编制数组索引的方式对用户定义类型的实例编制索引。</span><span class="sxs-lookup"><span data-stu-id="5f96c-125">Indexers allow you to index instances of a user-defined type in the similar way as array indexing.</span></span> <span data-ttu-id="5f96c-126">与必须是整数的数组索引不同，可以将索引器参数声明为任何类型。</span><span class="sxs-lookup"><span data-stu-id="5f96c-126">Unlike array indices, which must be integer, the indexer arguments can be declared to be of any type.</span></span>
+<span data-ttu-id="443b6-127">使用索引器，可通过类似于编制数组索引的方式对用户定义类型的实例编制索引。</span><span class="sxs-lookup"><span data-stu-id="443b6-127">Indexers allow you to index instances of a user-defined type in the similar way as array indexing.</span></span> <span data-ttu-id="443b6-128">与必须是整数的数组索引不同，可以将索引器参数声明为任何类型。</span><span class="sxs-lookup"><span data-stu-id="443b6-128">Unlike array indices, which must be integer, the indexer arguments can be declared to be of any type.</span></span>
 
-<span data-ttu-id="5f96c-127">有关索引器的详细信息，请参阅[索引器](../../programming-guide/indexers/index.md)。</span><span class="sxs-lookup"><span data-stu-id="5f96c-127">For more information about indexers, see [Indexers](../../programming-guide/indexers/index.md).</span></span>
+<span data-ttu-id="443b6-129">有关索引器的详细信息，请参阅[索引器](../../programming-guide/indexers/index.md)。</span><span class="sxs-lookup"><span data-stu-id="443b6-129">For more information about indexers, see [Indexers](../../programming-guide/indexers/index.md).</span></span>
 
-### <a name="other-usages-of-"></a><span data-ttu-id="5f96c-128">[] 的其他用法</span><span class="sxs-lookup"><span data-stu-id="5f96c-128">Other usages of []</span></span>
+### <a name="other-usages-of-"></a><span data-ttu-id="443b6-130">[] 的其他用法</span><span class="sxs-lookup"><span data-stu-id="443b6-130">Other usages of []</span></span>
 
-<span data-ttu-id="5f96c-129">要了解指针元素访问，请参阅[与指针相关的运算符](pointer-related-operators.md)一文的[指针元素访问运算符 []](pointer-related-operators.md#pointer-element-access-operator-) 部分。</span><span class="sxs-lookup"><span data-stu-id="5f96c-129">For information about pointer element access, see the [Pointer element access operator []](pointer-related-operators.md#pointer-element-access-operator-) section of the [Pointer related operators](pointer-related-operators.md) article.</span></span>
+<span data-ttu-id="443b6-131">要了解指针元素访问，请参阅[与指针相关的运算符](pointer-related-operators.md)一文的[指针元素访问运算符 []](pointer-related-operators.md#pointer-element-access-operator-) 部分。</span><span class="sxs-lookup"><span data-stu-id="443b6-131">For information about pointer element access, see the [Pointer element access operator []](pointer-related-operators.md#pointer-element-access-operator-) section of the [Pointer related operators](pointer-related-operators.md) article.</span></span>
 
-<span data-ttu-id="5f96c-130">方括号还用于指定[属性](../../programming-guide/concepts/attributes/index.md)：</span><span class="sxs-lookup"><span data-stu-id="5f96c-130">You also use square brackets to specify [attributes](../../programming-guide/concepts/attributes/index.md):</span></span>
+<span data-ttu-id="443b6-132">方括号还用于指定[属性](../../programming-guide/concepts/attributes/index.md)：</span><span class="sxs-lookup"><span data-stu-id="443b6-132">You also use square brackets to specify [attributes](../../programming-guide/concepts/attributes/index.md):</span></span>
 
 ```csharp
 [System.Diagnostics.Conditional("DEBUG")]
 void TraceMethod() {}
 ```
 
-## <a name="null-conditional-operators--and-"></a><span data-ttu-id="5f96c-131">Null 条件运算符 ?.</span><span class="sxs-lookup"><span data-stu-id="5f96c-131">Null-conditional operators ?.</span></span> <span data-ttu-id="5f96c-132">和 ?[]</span><span class="sxs-lookup"><span data-stu-id="5f96c-132">and ?[]</span></span>
+## <a name="null-conditional-operators--and-"></a><span data-ttu-id="443b6-133">Null 条件运算符 ?.</span><span class="sxs-lookup"><span data-stu-id="443b6-133">Null-conditional operators ?.</span></span> <span data-ttu-id="443b6-134">和 ?[]</span><span class="sxs-lookup"><span data-stu-id="443b6-134">and ?[]</span></span>
 
-<span data-ttu-id="5f96c-133">Null 条件运算符在 C# 6 及更高版本中可用，仅当操作数的计算结果为非 null 时，null 条件运算符才会将成员访问 `?.` 或元素访问 `?[]` 运算应用于其操作数。</span><span class="sxs-lookup"><span data-stu-id="5f96c-133">Available in C# 6 and later, a null-conditional operator applies a member access, `?.`, or element access, `?[]`, operation to its operand only if that operand evaluates to non-null.</span></span> <span data-ttu-id="5f96c-134">如果操作数的计算结果为 `null`，则应用运算符的结果为 `null`。</span><span class="sxs-lookup"><span data-stu-id="5f96c-134">If the operand evaluates to `null`, the result of applying the operator is `null`.</span></span> <span data-ttu-id="5f96c-135">Null 条件成员访问运算符 `?.` 也称为 Elvis 运算符。</span><span class="sxs-lookup"><span data-stu-id="5f96c-135">The null-conditional member access operator `?.` is also known as the Elvis operator.</span></span>
+<span data-ttu-id="443b6-135">Null 条件运算符在 C# 6 及更高版本中可用，仅当操作数的计算结果为非 null 时，null 条件运算符才会将成员访问 `?.` 或元素访问 `?[]` 运算应用于其操作数。</span><span class="sxs-lookup"><span data-stu-id="443b6-135">Available in C# 6 and later, a null-conditional operator applies a member access, `?.`, or element access, `?[]`, operation to its operand only if that operand evaluates to non-null.</span></span> <span data-ttu-id="443b6-136">如果操作数的计算结果为 `null`，则应用运算符的结果为 `null`。</span><span class="sxs-lookup"><span data-stu-id="443b6-136">If the operand evaluates to `null`, the result of applying the operator is `null`.</span></span> <span data-ttu-id="443b6-137">Null 条件成员访问运算符 `?.` 也称为 Elvis 运算符。</span><span class="sxs-lookup"><span data-stu-id="443b6-137">The null-conditional member access operator `?.` is also known as the Elvis operator.</span></span>
 
-<span data-ttu-id="5f96c-136">NULL 条件运算符采用最小化求值策略。</span><span class="sxs-lookup"><span data-stu-id="5f96c-136">The null-conditional operators are short-circuiting.</span></span> <span data-ttu-id="5f96c-137">也就是说，如果条件成员或元素访问运算链中的一个运算返回 `null`，则链的其余部分不会执行。</span><span class="sxs-lookup"><span data-stu-id="5f96c-137">That is, if one operation in a chain of conditional member or element access operations returns `null`, the rest of the chain doesn't execute.</span></span> <span data-ttu-id="5f96c-138">在以下示例中，如果 `A` 的计算结果为 `null`，则不会计算 `B`；如果 `A` 或 `B` 的计算结果为 `null`，则不会计算 `C`：</span><span class="sxs-lookup"><span data-stu-id="5f96c-138">In the following example, `B` is not evaluated if `A` evaluates to `null` and `C` is not evaluated if `A` or `B` evaluates to `null`:</span></span>
+<span data-ttu-id="443b6-138">NULL 条件运算符采用最小化求值策略。</span><span class="sxs-lookup"><span data-stu-id="443b6-138">The null-conditional operators are short-circuiting.</span></span> <span data-ttu-id="443b6-139">也就是说，如果条件成员或元素访问运算链中的一个运算返回 `null`，则链的其余部分不会执行。</span><span class="sxs-lookup"><span data-stu-id="443b6-139">That is, if one operation in a chain of conditional member or element access operations returns `null`, the rest of the chain doesn't execute.</span></span> <span data-ttu-id="443b6-140">在以下示例中，如果 `A` 的计算结果为 `null`，则不会计算 `B`；如果 `A` 或 `B` 的计算结果为 `null`，则不会计算 `C`：</span><span class="sxs-lookup"><span data-stu-id="443b6-140">In the following example, `B` is not evaluated if `A` evaluates to `null` and `C` is not evaluated if `A` or `B` evaluates to `null`:</span></span>
 
 ```csharp
 A?.B?.Do(C);
 A?.B?[C];
 ```
 
-<span data-ttu-id="5f96c-139">以下示例演示了 `?.` 和 `?[]` 运算符的用法：</span><span class="sxs-lookup"><span data-stu-id="5f96c-139">The following example demonstrates the usage of the `?.` and `?[]` operators:</span></span>
+<span data-ttu-id="443b6-141">以下示例演示了 `?.` 和 `?[]` 运算符的用法：</span><span class="sxs-lookup"><span data-stu-id="443b6-141">The following example demonstrates the usage of the `?.` and `?[]` operators:</span></span>
 
 [!code-csharp-interactive[null-conditional operators](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#NullConditional)]
 
-<span data-ttu-id="5f96c-140">上述示例还展示了 [null 合并运算符](null-coalescing-operator.md)的用法。</span><span class="sxs-lookup"><span data-stu-id="5f96c-140">The preceding example also shows the usage of the [null-coalescing operator](null-coalescing-operator.md).</span></span> <span data-ttu-id="5f96c-141">可能会使用 null 合并运算符来提供替代表达式，以便在 null 条件运算的结果为 `null` 时用于计算。</span><span class="sxs-lookup"><span data-stu-id="5f96c-141">You might use the null-coalescing operator to provide an alternative expression to evaluate in case the result of the null-conditional operation is `null`.</span></span>
+<span data-ttu-id="443b6-142">上述示例还展示了 [null 合并运算符](null-coalescing-operator.md)的用法。</span><span class="sxs-lookup"><span data-stu-id="443b6-142">The preceding example also shows the usage of the [null-coalescing operator](null-coalescing-operator.md).</span></span> <span data-ttu-id="443b6-143">可能会使用 null 合并运算符来提供替代表达式，以便在 null 条件运算的结果为 `null` 时用于计算。</span><span class="sxs-lookup"><span data-stu-id="443b6-143">You might use the null-coalescing operator to provide an alternative expression to evaluate in case the result of the null-conditional operation is `null`.</span></span>
 
-### <a name="thread-safe-delegate-invocation"></a><span data-ttu-id="5f96c-142">线程安全的委托调用</span><span class="sxs-lookup"><span data-stu-id="5f96c-142">Thread-safe delegate invocation</span></span>
+### <a name="thread-safe-delegate-invocation"></a><span data-ttu-id="443b6-144">线程安全的委托调用</span><span class="sxs-lookup"><span data-stu-id="443b6-144">Thread-safe delegate invocation</span></span>
 
-<span data-ttu-id="5f96c-143">使用 `?.` 运算符来检查委托是否非 null 并以线程安全的方式调用它（例如，[引发事件](../../../standard/events/how-to-raise-and-consume-events.md)时），如下面的代码所示：</span><span class="sxs-lookup"><span data-stu-id="5f96c-143">Use the `?.` operator to check if a delegate is non-null and invoke it in a thread-safe way (for example, when you [raise an event](../../../standard/events/how-to-raise-and-consume-events.md)), as the following code shows:</span></span>
+<span data-ttu-id="443b6-145">使用 `?.` 运算符来检查委托是否非 null 并以线程安全的方式调用它（例如，[引发事件](../../../standard/events/how-to-raise-and-consume-events.md)时），如下面的代码所示：</span><span class="sxs-lookup"><span data-stu-id="443b6-145">Use the `?.` operator to check if a delegate is non-null and invoke it in a thread-safe way (for example, when you [raise an event](../../../standard/events/how-to-raise-and-consume-events.md)), as the following code shows:</span></span>
 
 ```csharp
 PropertyChanged?.Invoke(…)
 ```
 
-<span data-ttu-id="5f96c-144">该代码等同于将在 C# 5 或更低版本中使用的以下代码：</span><span class="sxs-lookup"><span data-stu-id="5f96c-144">That code is equivalent to the following code that you would use in C# 5 or earlier:</span></span>
+<span data-ttu-id="443b6-146">该代码等同于将在 C# 5 或更低版本中使用的以下代码：</span><span class="sxs-lookup"><span data-stu-id="443b6-146">That code is equivalent to the following code that you would use in C# 5 or earlier:</span></span>
 
 ```csharp
 var handler = this.PropertyChanged;
@@ -133,38 +142,66 @@ if (handler != null)
 }
 ```
 
-## <a name="invocation-operator-"></a><span data-ttu-id="5f96c-145">调用运算符 ()</span><span class="sxs-lookup"><span data-stu-id="5f96c-145">Invocation operator ()</span></span>
+## <a name="invocation-operator-"></a><span data-ttu-id="443b6-147">调用运算符 ()</span><span class="sxs-lookup"><span data-stu-id="443b6-147">Invocation operator ()</span></span>
 
-<span data-ttu-id="5f96c-146">使用括号 `()` 调用[方法](../../programming-guide/classes-and-structs/methods.md)或调用[委托](../../programming-guide/delegates/index.md)。</span><span class="sxs-lookup"><span data-stu-id="5f96c-146">Use parentheses, `()`, to call a [method](../../programming-guide/classes-and-structs/methods.md) or invoke a [delegate](../../programming-guide/delegates/index.md).</span></span>
+<span data-ttu-id="443b6-148">使用括号 `()` 调用[方法](../../programming-guide/classes-and-structs/methods.md)或调用[委托](../../programming-guide/delegates/index.md)。</span><span class="sxs-lookup"><span data-stu-id="443b6-148">Use parentheses, `()`, to call a [method](../../programming-guide/classes-and-structs/methods.md) or invoke a [delegate](../../programming-guide/delegates/index.md).</span></span>
 
-<span data-ttu-id="5f96c-147">以下示例演示如何在使用或不使用参数的情况下调用方法，以及调用委托：</span><span class="sxs-lookup"><span data-stu-id="5f96c-147">The following example demonstrates how to call a method, with or without arguments, and invoke a delegate:</span></span>
+<span data-ttu-id="443b6-149">以下示例演示如何在使用或不使用参数的情况下调用方法，以及调用委托：</span><span class="sxs-lookup"><span data-stu-id="443b6-149">The following example demonstrates how to call a method, with or without arguments, and invoke a delegate:</span></span>
 
 [!code-csharp-interactive[invocation with ()](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#Invocation)]
 
-<span data-ttu-id="5f96c-148">在调用带 [`new`](new-operator.md) 运算符的[构造函数](../../programming-guide/classes-and-structs/constructors.md)时，还可以使用括号。</span><span class="sxs-lookup"><span data-stu-id="5f96c-148">You also use parentheses when you invoke a [constructor](../../programming-guide/classes-and-structs/constructors.md) with the [`new`](new-operator.md) operator.</span></span>
+<span data-ttu-id="443b6-150">在调用带 [`new`](new-operator.md) 运算符的[构造函数](../../programming-guide/classes-and-structs/constructors.md)时，还可以使用括号。</span><span class="sxs-lookup"><span data-stu-id="443b6-150">You also use parentheses when you invoke a [constructor](../../programming-guide/classes-and-structs/constructors.md) with the [`new`](new-operator.md) operator.</span></span>
 
-### <a name="other-usages-of-"></a><span data-ttu-id="5f96c-149">() 的其他用法</span><span class="sxs-lookup"><span data-stu-id="5f96c-149">Other usages of ()</span></span>
+### <a name="other-usages-of-"></a><span data-ttu-id="443b6-151">() 的其他用法</span><span class="sxs-lookup"><span data-stu-id="443b6-151">Other usages of ()</span></span>
 
-<span data-ttu-id="5f96c-150">此外可以使用括号来调整表达式中计算操作的顺序。</span><span class="sxs-lookup"><span data-stu-id="5f96c-150">You also use parentheses to adjust the order in which to evaluate operations in an expression.</span></span> <span data-ttu-id="5f96c-151">有关详细信息，请参阅 [C# 运算符](index.md)。</span><span class="sxs-lookup"><span data-stu-id="5f96c-151">For more information, see [C# operators](index.md).</span></span>
+<span data-ttu-id="443b6-152">此外可以使用括号来调整表达式中计算操作的顺序。</span><span class="sxs-lookup"><span data-stu-id="443b6-152">You also use parentheses to adjust the order in which to evaluate operations in an expression.</span></span> <span data-ttu-id="443b6-153">有关详细信息，请参阅 [C# 运算符](index.md)。</span><span class="sxs-lookup"><span data-stu-id="443b6-153">For more information, see [C# operators](index.md).</span></span>
 
-<span data-ttu-id="5f96c-152">[强制转换表达式](type-testing-and-cast.md#cast-operator-)，其执行显式类型转换，也可以使用括号。</span><span class="sxs-lookup"><span data-stu-id="5f96c-152">[Cast expressions](type-testing-and-cast.md#cast-operator-), which perform explicit type conversions, also use parentheses.</span></span>
+<span data-ttu-id="443b6-154">[强制转换表达式](type-testing-and-cast.md#cast-operator-)，其执行显式类型转换，也可以使用括号。</span><span class="sxs-lookup"><span data-stu-id="443b6-154">[Cast expressions](type-testing-and-cast.md#cast-operator-), which perform explicit type conversions, also use parentheses.</span></span>
 
-## <a name="operator-overloadability"></a><span data-ttu-id="5f96c-153">运算符可重载性</span><span class="sxs-lookup"><span data-stu-id="5f96c-153">Operator overloadability</span></span>
+## <a name="index-from-end-operator-"></a><span data-ttu-id="443b6-155">从末尾运算符 ^ 开始索引</span><span class="sxs-lookup"><span data-stu-id="443b6-155">Index from end operator ^</span></span>
 
-<span data-ttu-id="5f96c-154">`.` 和 `()` 运算符不能重载。</span><span class="sxs-lookup"><span data-stu-id="5f96c-154">The `.` and `()` operators cannot be overloaded.</span></span> <span data-ttu-id="5f96c-155">`[]` 运算符也被视为非可重载运算符。</span><span class="sxs-lookup"><span data-stu-id="5f96c-155">The `[]` operator is also considered a non-overloadable operator.</span></span> <span data-ttu-id="5f96c-156">使用[索引器](../../programming-guide/indexers/index.md)以支持对用户定义的类型编制索引。</span><span class="sxs-lookup"><span data-stu-id="5f96c-156">Use [indexers](../../programming-guide/indexers/index.md) to support indexing with user-defined types.</span></span>
+<span data-ttu-id="443b6-156">`^` 运算符在 C# 8.0 和更高版本中提供，指示序列末尾的元素位置。</span><span class="sxs-lookup"><span data-stu-id="443b6-156">Available in C# 8.0 and later, the `^` operator indicates the element position from the end of a sequence.</span></span> <span data-ttu-id="443b6-157">对于长度为 `length` 的序列，`^n` 指向与序列开头偏移 `length - n` 的元素。</span><span class="sxs-lookup"><span data-stu-id="443b6-157">For a sequence of length `length`, `^n` points to the element with offset `length - n` from the start of a sequence.</span></span> <span data-ttu-id="443b6-158">例如，`^1` 指向序列的最后一个元素，`^length` 指向序列的第一个元素。</span><span class="sxs-lookup"><span data-stu-id="443b6-158">For example, `^1` points to the last element of a sequence and `^length` points to the first element of a sequence.</span></span>
 
-## <a name="c-language-specification"></a><span data-ttu-id="5f96c-157">C# 语言规范</span><span class="sxs-lookup"><span data-stu-id="5f96c-157">C# language specification</span></span>
+[!code-csharp[index from end](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#IndexFromEnd)]
 
-<span data-ttu-id="5f96c-158">有关更多信息，请参阅 [C# 语言规范](~/_csharplang/spec/introduction.md)的以下部分：</span><span class="sxs-lookup"><span data-stu-id="5f96c-158">For more information, see the following sections of the [C# language specification](~/_csharplang/spec/introduction.md):</span></span>
+<span data-ttu-id="443b6-159">如前面的示例所示，表达式 `^e` 属于 <xref:System.Index?displayProperty=nameWithType> 类型。</span><span class="sxs-lookup"><span data-stu-id="443b6-159">As the preceding example shows, expression `^e` is of the <xref:System.Index?displayProperty=nameWithType> type.</span></span> <span data-ttu-id="443b6-160">在表达式 `^e` 中，`e` 的结果必须隐式转换为 `int`。</span><span class="sxs-lookup"><span data-stu-id="443b6-160">In expression `^e`, the result of `e` must be implicitly convertible to `int`.</span></span>
 
-- [<span data-ttu-id="5f96c-159">成员访问</span><span class="sxs-lookup"><span data-stu-id="5f96c-159">Member access</span></span>](~/_csharplang/spec/expressions.md#member-access)
-- [<span data-ttu-id="5f96c-160">元素访问</span><span class="sxs-lookup"><span data-stu-id="5f96c-160">Element access</span></span>](~/_csharplang/spec/expressions.md#element-access)
-- [<span data-ttu-id="5f96c-161">Null 条件运算符</span><span class="sxs-lookup"><span data-stu-id="5f96c-161">Null-conditional operator</span></span>](~/_csharplang/spec/expressions.md#null-conditional-operator)
-- [<span data-ttu-id="5f96c-162">调用表达式</span><span class="sxs-lookup"><span data-stu-id="5f96c-162">Invocation expressions</span></span>](~/_csharplang/spec/expressions.md#invocation-expressions)
+<span data-ttu-id="443b6-161">还可以将 `^` 运算符与[范围运算符](#range-operator-)一起使用以创建一个索引范围。</span><span class="sxs-lookup"><span data-stu-id="443b6-161">You also can use the `^` operator with the [range operator](#range-operator-) to create a range of indices.</span></span> <span data-ttu-id="443b6-162">有关详细信息，请参阅[索引和范围](../../tutorials/ranges-indexes.md)。</span><span class="sxs-lookup"><span data-stu-id="443b6-162">For more information, see [Indices and ranges](../../tutorials/ranges-indexes.md).</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="5f96c-163">请参阅</span><span class="sxs-lookup"><span data-stu-id="5f96c-163">See also</span></span>
+## <a name="range-operator-"></a><span data-ttu-id="443b6-163">范围运算符 ..</span><span class="sxs-lookup"><span data-stu-id="443b6-163">Range operator ..</span></span>
 
-- [<span data-ttu-id="5f96c-164">C# 参考</span><span class="sxs-lookup"><span data-stu-id="5f96c-164">C# reference</span></span>](../index.md)
-- [<span data-ttu-id="5f96c-165">C# 运算符</span><span class="sxs-lookup"><span data-stu-id="5f96c-165">C# operators</span></span>](index.md)
-- [<span data-ttu-id="5f96c-166">??（空合运算符）</span><span class="sxs-lookup"><span data-stu-id="5f96c-166">?? (null-coalescing operator)</span></span>](null-coalescing-operator.md)
-- [<span data-ttu-id="5f96c-167">:: 运算符</span><span class="sxs-lookup"><span data-stu-id="5f96c-167">:: operator</span></span>](namespace-alias-qualifier.md)
+<span data-ttu-id="443b6-164">`..` 运算符在 C# 8.0 和更高版本中提供，指定索引范围的开头和末尾作为其操作数。</span><span class="sxs-lookup"><span data-stu-id="443b6-164">Available in C# 8.0 and later, the `..` operator specifies the start and end of a range of indices as its operands.</span></span> <span data-ttu-id="443b6-165">左侧操作数是范围的包含性  开头。</span><span class="sxs-lookup"><span data-stu-id="443b6-165">The left-hand operand is an *inclusive* start of a range.</span></span> <span data-ttu-id="443b6-166">右侧操作数是范围的包含性  末尾。</span><span class="sxs-lookup"><span data-stu-id="443b6-166">The right-hand operand is an *exclusive* end of a range.</span></span> <span data-ttu-id="443b6-167">任一操作数都可以是序列开头或末尾的索引，如以下示例所示：</span><span class="sxs-lookup"><span data-stu-id="443b6-167">Either of operands can be an index from the start or from the end of a sequence, as the following example shows:</span></span>
+
+[!code-csharp[range examples](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#Ranges)]
+
+<span data-ttu-id="443b6-168">如前面的示例所示，表达式 `a..b` 属于 <xref:System.Range?displayProperty=nameWithType> 类型。</span><span class="sxs-lookup"><span data-stu-id="443b6-168">As the preceding example shows, expression `a..b` is of the <xref:System.Range?displayProperty=nameWithType> type.</span></span> <span data-ttu-id="443b6-169">在表达式 `a..b` 中，`a` 和 `b` 的结果必须隐式转换为 `int` 或 <xref:System.Index>。</span><span class="sxs-lookup"><span data-stu-id="443b6-169">In expression `a..b`, the results of `a` and `b` must be implicitly convertible to `int` or <xref:System.Index>.</span></span>
+
+<span data-ttu-id="443b6-170">可以省略 `..` 运算符的任何操作数来获取无限制范围：</span><span class="sxs-lookup"><span data-stu-id="443b6-170">You can omit any of the operands of the `..` operator to obtain an open-ended range:</span></span>
+
+- <span data-ttu-id="443b6-171">`a..` 等效于 `a..^0`</span><span class="sxs-lookup"><span data-stu-id="443b6-171">`a..` is equivalent to `a..^0`</span></span>
+- <span data-ttu-id="443b6-172">`..b` 等效于 `0..b`</span><span class="sxs-lookup"><span data-stu-id="443b6-172">`..b` is equivalent to `0..b`</span></span>
+- <span data-ttu-id="443b6-173">`..` 等效于 `0..^0`</span><span class="sxs-lookup"><span data-stu-id="443b6-173">`..` is equivalent to `0..^0`</span></span>
+
+[!code-csharp[ranges with omitted operands](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#RangesOptional)]
+
+<span data-ttu-id="443b6-174">有关详细信息，请参阅[索引和范围](../../tutorials/ranges-indexes.md)。</span><span class="sxs-lookup"><span data-stu-id="443b6-174">For more information, see [Indices and ranges](../../tutorials/ranges-indexes.md).</span></span>
+
+## <a name="operator-overloadability"></a><span data-ttu-id="443b6-175">运算符可重载性</span><span class="sxs-lookup"><span data-stu-id="443b6-175">Operator overloadability</span></span>
+
+<span data-ttu-id="443b6-176">`.`、`()`、`^` 和 `..` 运算符无法进行重载。</span><span class="sxs-lookup"><span data-stu-id="443b6-176">The `.`, `()`, `^`, and `..` operators cannot be overloaded.</span></span> <span data-ttu-id="443b6-177">`[]` 运算符也被视为非可重载运算符。</span><span class="sxs-lookup"><span data-stu-id="443b6-177">The `[]` operator is also considered a non-overloadable operator.</span></span> <span data-ttu-id="443b6-178">使用[索引器](../../programming-guide/indexers/index.md)以支持对用户定义的类型编制索引。</span><span class="sxs-lookup"><span data-stu-id="443b6-178">Use [indexers](../../programming-guide/indexers/index.md) to support indexing with user-defined types.</span></span>
+
+## <a name="c-language-specification"></a><span data-ttu-id="443b6-179">C# 语言规范</span><span class="sxs-lookup"><span data-stu-id="443b6-179">C# language specification</span></span>
+
+<span data-ttu-id="443b6-180">有关更多信息，请参阅 [C# 语言规范](~/_csharplang/spec/introduction.md)的以下部分：</span><span class="sxs-lookup"><span data-stu-id="443b6-180">For more information, see the following sections of the [C# language specification](~/_csharplang/spec/introduction.md):</span></span>
+
+- [<span data-ttu-id="443b6-181">成员访问</span><span class="sxs-lookup"><span data-stu-id="443b6-181">Member access</span></span>](~/_csharplang/spec/expressions.md#member-access)
+- [<span data-ttu-id="443b6-182">元素访问</span><span class="sxs-lookup"><span data-stu-id="443b6-182">Element access</span></span>](~/_csharplang/spec/expressions.md#element-access)
+- [<span data-ttu-id="443b6-183">Null 条件运算符</span><span class="sxs-lookup"><span data-stu-id="443b6-183">Null-conditional operator</span></span>](~/_csharplang/spec/expressions.md#null-conditional-operator)
+- [<span data-ttu-id="443b6-184">调用表达式</span><span class="sxs-lookup"><span data-stu-id="443b6-184">Invocation expressions</span></span>](~/_csharplang/spec/expressions.md#invocation-expressions)
+
+## <a name="see-also"></a><span data-ttu-id="443b6-185">请参阅</span><span class="sxs-lookup"><span data-stu-id="443b6-185">See also</span></span>
+
+- [<span data-ttu-id="443b6-186">C# 参考</span><span class="sxs-lookup"><span data-stu-id="443b6-186">C# reference</span></span>](../index.md)
+- [<span data-ttu-id="443b6-187">C# 运算符</span><span class="sxs-lookup"><span data-stu-id="443b6-187">C# operators</span></span>](index.md)
+- [<span data-ttu-id="443b6-188">??（空合运算符）</span><span class="sxs-lookup"><span data-stu-id="443b6-188">?? (null-coalescing operator)</span></span>](null-coalescing-operator.md)
+- [<span data-ttu-id="443b6-189">:: 运算符</span><span class="sxs-lookup"><span data-stu-id="443b6-189">:: operator</span></span>](namespace-alias-qualifier.md)
