@@ -6,24 +6,25 @@ dev_langs:
 - vb
 author: thraka
 ms.author: adegeo
-ms.date: 09/05/2019
-ms.openlocfilehash: 2d18e7750e0c2e2a44028d1e906a8536e47d979d
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.date: 09/17/2019
+ms.openlocfilehash: 08ad77fbad7ad468e45fe629041ded82544792f2
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70394286"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71116121"
 ---
-# <a name="whats-new-in-net-core-30-preview-9"></a>.NET Core 3.0（预览版 9）中的新增功能
+# <a name="whats-new-in-net-core-30-release-candidate-1"></a>.NET Core 3.0（候选发布 1）的新增功能
 
-本文介绍 .NET Core 3.0（预览版 9）的新增功能。 最大的增强功能之一是对 Windows 桌面应用程序的支持（仅限 Windows）。 通过使用 .NET Core 3.0 SDK Windows 桌面组件，可移植 Windows 窗体和 Windows Presentation Foundation (WPF) 应用程序。 明确地说，只有在 Windows 上才支持和包含 Windows 桌面组件。 有关详细信息，请参阅本文后面的 [Windows 桌面](#windows-desktop)部分。
+本文介绍 .NET Core 3.0 候选发布 1 (RC1) 的新增功能。 最大的增强功能之一是对 Windows 桌面应用程序的支持（仅限 Windows）。 通过使用 .NET Core 3.0 SDK Windows 桌面组件，可移植 Windows 窗体和 Windows Presentation Foundation (WPF) 应用程序。 明确地说，只有在 Windows 上才支持和包含 Windows 桌面组件。 有关详细信息，请参阅本文后面的 [Windows 桌面](#windows-desktop)部分。
 
-.NET Core 3.0 添加了对 C#8.0 的支持。 强烈建议使用 [Visual Studio 2019 16.3 Preview 3](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+preview)[Visual Studio for Mac 8.3](https://docs.microsoft.com/visualstudio/mac/install-preview?view=vsmac-2019) 或 [Visual Studio Code](https://code.visualstudio.com/) 处理 **C# 扩展**。
+.NET Core 3.0 添加了对 C#8.0 的支持。 强烈建议使用 [Visual Studio 2019 16.3 Preview 4](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+preview)、[Visual Studio for Mac 8.3](https://docs.microsoft.com/visualstudio/mac/install-preview?view=vsmac-2019) 或 [Visual Studio Code](https://code.visualstudio.com/) 处理 C# 扩展  。
 
-立即在 Windows、macOS 或 Linux 上[下载并开始使用 .NET Core 3.0 预览版 9](https://aka.ms/netcore3download)。
+立即在 Windows、macOS 或 Linux 上[下载并开始使用 .NET Core 3.0 RC1](https://aka.ms/netcore3download)。
 
 有关每个预览版本的详细信息，请参阅以下公告：
 
+- [.NET Core 3.0 RC1 公告](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-release-candidate-1/)
 - [.NET Core 3.0 预览版 9 公告](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-9/)
 - [.NET Core 3.0 预览版 8 公告](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-8/)
 - [.NET Core 3.0 预览版 7 公告](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-7/)
@@ -36,9 +37,9 @@ ms.locfileid: "70394286"
 
 ## <a name="production-supported-preview"></a>生产支持（预览版）
 
-.NET Core 预览版 9 已由 Microsoft 准备就绪，可用于生产环境并且完全受支持。 从预览版 7 开始，版本将侧重于改进 .NET Core 3.0，而不是添加新功能。 有关预览版 9 的改进内容的详细信息，请参阅[预览版 9 公告](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-9/)。
+.NET Core RC1 已由 Microsoft 准备就绪，可用于生产环境并且完全受支持。 从预览版 7 开始，版本将侧重于改进 .NET Core 3.0，而不是添加新功能。 有关 RC1 的改进内容的详细信息，请参阅 [RC1 公告](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-release-candidate-1/)。
 
-如果使用的是之前的预览版本，则必须转换为预览版 9 才能继续获得“上线”支持。
+如果使用的是之前的预览版本，则必须转换为 RC1 才能继续获得“上线”支持。
 
 ## <a name="net-core-sdk-windows-installer"></a>.NET Core SDK Windows Installer
 
@@ -125,7 +126,7 @@ System.Console.WriteLine($"RuntimeInformation.FrameworkDescription: {System.Runt
 
 -或-
 
-```console
+```dotnetcli
 dotnet publish -r win10-x64 /p:PublishSingleFile=true
 ```
 
@@ -147,7 +148,7 @@ dotnet publish -r win10-x64 /p:PublishSingleFile=true
 </PropertyGroup>
 ```
 
-```console
+```dotnetcli
 dotnet publish -r <rid> -c Release
 ```
 
@@ -197,7 +198,7 @@ R2R 二进制文件通过减少应用程序加载时实时 (JIT) 编译器需要
 
 01. 发布自包含应用。 例如，此命令将创建适用于 Windows 64 位版本的自包含应用：
 
-    ```console
+    ```dotnetcli
     dotnet publish -c Release -r win-x64 --self-contained true
     ```
 
@@ -266,7 +267,7 @@ Windows 桌面部件是 Windows .NET Core 3.0 SDK 的一部分。
 
 可以使用以下 `dotnet` 命令创建新的 WPF 或 Windows 窗体应用：
 
-```console
+```dotnetcli
 dotnet new wpf
 dotnet new winforms
 ```

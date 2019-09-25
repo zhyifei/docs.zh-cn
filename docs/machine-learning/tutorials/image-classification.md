@@ -4,12 +4,12 @@ description: 了解如何使用迁移学习和 ML.NET 重新定型图像分类�
 ms.date: 07/09/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: eb6e3d3f3a33aa7360802ce1bc6c16532539c828
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: e069abe44b77b1dc31b78ecec1971ccc73f2e012
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929243"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71054080"
 ---
 # <a name="tutorial-retrain-a-tensorflow-image-classifier-with-transfer-learning-and-mlnet"></a>教程：使用迁移学习和 ML.NET 重新定型 TensorFlow 图像分类器
 
@@ -299,7 +299,7 @@ ML.NET 中的数据表示为 [IDataView 类](xref:Microsoft.ML.IDataView)。 `ID
 
 [!code-csharp[LoadData](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#LoadData "Load the data")]
 
-### <a name="extract-features-and-transform-the-data"></a>提取特征和转换数据
+### <a name="extract-features-and-transform-the-data"></a>提取功能和转换数据
 
 预处理和清除数据任务至关重要，需要首先执行才能将数据集有效地用于机器学习。  在没有这些建模任务的情况下使用数据会产生误导性结果。
 
@@ -355,7 +355,7 @@ ML.NET 中的数据表示为 [IDataView 类](xref:Microsoft.ML.IDataView)。 `ID
 
 [!code-csharp[EnumerateDataViews](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#EnumerateDataViews)]
 
-作为 `ReuseAndTuneInceptionModel()` 方法的下一行，调用 `DisplayResults()` 方法来显示数据和预测结果：
+添加以下代码作为 `ReuseAndTuneInceptionModel()` 方法的下几行来显示数据和预测结果：
 
 [!code-csharp[CallDisplayResults1](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#CallDisplayResults1)]
 

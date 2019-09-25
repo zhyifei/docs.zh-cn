@@ -8,12 +8,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 04/05/2019
 ms.custom: seoapril2019
-ms.openlocfilehash: ba68425fe37c5b939da22edad38bb03afd2b9068
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: b921db9abb65a1d470ada86784ecba1b649c9f09
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117324"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182433"
 ---
 # <a name="get-started-with-c"></a>C\# 入门
 
@@ -27,7 +27,7 @@ ms.locfileid: "71117324"
 
 - [使用 Visual Studio 2017 生成 C# .NET Core Hello World 应用程序](../../core/tutorials/with-visual-studio.md)
 
-   Visual Studio 2019 使你能够在适用于 Windows 或 Mac 的集成开发环境中执行应用程序的代码编写、编译、运行、调试、分析和发布。
+   Visual Studio 使你能够在适用于 Windows 或 Mac 的集成开发环境中执行应用程序的代码编写、编译、运行、调试、分析和发布。
 
    此主题介绍了如何创建并运行简单的 Hello World 应用程序，然后将其修改为更具交互性的 Hello World 应用程序。 完成应用程序生成和运行后，还可以了解如何[调试](../../core/tutorials/debugging-with-visual-studio.md)和[发布](../../core/tutorials/publishing-with-visual-studio.md)应用程序，使其能够在 .NET Code 支持的任意平台上运行。
 

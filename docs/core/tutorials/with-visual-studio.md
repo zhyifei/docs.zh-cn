@@ -5,12 +5,12 @@ author: BillWagner
 ms.author: wiwagn
 ms.date: 09/13/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: b85f878d8a391581fcc7419b3ca4d656eb5595af
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: b42a71993cb120c88b90e867b7af23873b99d280
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69660449"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71039600"
 ---
 # <a name="build-a-c-hello-world-application-with-the-net-core-sdk-in-visual-studio-2017"></a>在 Visual Studio 2017 中使用 .NET Core SDK 生成 C# Hello World 应用程序
 
@@ -18,7 +18,7 @@ ms.locfileid: "69660449"
 
 ## <a name="prerequisites"></a>系统必备
 
-安装了“.NET Core 跨平台开发”工作负载的 [Visual Studio 2017](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)。 可以使用 .NET Core 1.1 或 .NET Core 2.0 开发应用程序。
+安装了“.NET Core 跨平台开发”工作负载的 [Visual Studio 2017](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)。 可以使用 .NET Core 2.1 或更高版本开发应用程序。
 
 有关详细信息，请参阅 [Windows 上 .NET Core 的先决条件](../windows-prerequisites.md)主题。
 

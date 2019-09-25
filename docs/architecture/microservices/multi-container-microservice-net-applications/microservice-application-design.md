@@ -2,12 +2,12 @@
 title: 设计面向微服务的应用程序
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 了解面向微服务的应用程序的优点和缺点，以便可以采取明智的决策。
 ms.date: 10/02/2018
-ms.openlocfilehash: ddca4ecf0b0ed1103e4da75ecc759546d6e53800
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: dc3c8ccd95505cb828383f499b9bf950e7c12a30
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926543"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71039816"
 ---
 # <a name="designing-a-microservice-oriented-application"></a>设计面向微服务的应用程序
 
@@ -89,8 +89,8 @@ ms.locfileid: "70926543"
 
 ### <a name="additional-resources"></a>其他资源
 
-- **eShopOnContainers GitHub 存储库。参考应用程序的源代码**\
-    <https://aka.ms/eShopOnContainers/>
+- **eShopOnContainers GitHub 存储库。参考应用程序的源代码** \
+  <https://aka.ms/eShopOnContainers/>
 
 ## <a name="benefits-of-a-microservice-based-solution"></a>基于微服务的解决方案的优点
 

@@ -1,17 +1,17 @@
 ---
 title: stackalloc 运算符 - C# 参考
 ms.custom: seodec18
-ms.date: 06/10/2019
+ms.date: 09/20/2019
 f1_keywords:
 - stackalloc_CSharpKeyword
 helpviewer_keywords:
 - stackalloc operator [C#]
-ms.openlocfilehash: f211acaa8c47ab42a1f7f06cff6c35570cd22b75
-ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
+ms.openlocfilehash: 9ef5f98f2b4973c5873417ecc9a71c187e7299b9
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68433828"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182416"
 ---
 # <a name="stackalloc-operator-c-reference"></a>stackalloc 运算符（C# 参考）
 
@@ -31,6 +31,10 @@ ms.locfileid: "68433828"
 
   [!code-csharp[stackalloc expression](~/samples/csharp/language-reference/operators/StackallocOperator.cs#AsExpression)]
 
+  从 C#8.0 开始，只要允许使用 <xref:System.Span%601> 或 <xref:System.ReadOnlySpan%601> 变量，就可以在其他表达式中使用 `stackalloc` 表达式，如以下示例所示：
+
+  [!code-csharp[stackalloc in nested expressions](~/samples/csharp/language-reference/operators/StackallocOperator.cs#Nested)]
+
   > [!NOTE]
   > 建议尽可能使用 <xref:System.Span%601> 或 <xref:System.ReadOnlySpan%601> 类型来处理堆栈中分配的内存。
 
@@ -39,6 +43,8 @@ ms.locfileid: "68433828"
   [!code-csharp[stackalloc pointer](~/samples/csharp/language-reference/operators/StackallocOperator.cs#AssignToPointer)]
 
   如前面的示例所示，在使用指针类型时必须使用 `unsafe` 上下文。
+
+  对于指针类型，只能在局部变量声明中使用 `stackalloc` 表达式来初始化变量。
 
 新分配的内存的内容未定义。 从 C# 7.3 开始，可以使用数组初始值设定项语法来定义新分配的内存的内容。 下面的示例演示执行此操作的各种方法：
 

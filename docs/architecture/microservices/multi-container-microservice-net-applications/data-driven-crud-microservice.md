@@ -2,12 +2,12 @@
 title: 创建简单的数据驱动 CRUD 微服务
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 了解如何在微服务应用程序的上下文中创建简单的 CRUD（数据驱动）微服务。
 ms.date: 01/07/2019
-ms.openlocfilehash: 53aba727c8dae35df8b34bc1558c0cc390fe2014
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 74d9022ffa70ade6ae6e7d405403524dfbc2145a
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68676224"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71039918"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>创建简单的数据驱动 CRUD 微服务
 
@@ -41,7 +41,7 @@ ms.locfileid: "68676224"
 
 图 6-6  。 在 Visual Studio 中创建 ASP.NET Core Web API 项目
 
-创建该项目之后，便可使用 Entity Framework API 或其他 API 实现 MVC 控制器，与任何其他 Web API 项目中的操作一样。 在新的 Web API 项目中，可以看到该微服务中的唯一依赖关系在 ASP.NET Core 本身上。 在内部，Microsoft.AspNetCore.All 依赖项内引用的是实体框架和许多其他 .NET Core Nuget 包，如图 6-7 所示  。
+创建该项目之后，便可使用 Entity Framework API 或其他 API 实现 MVC 控制器，与任何其他 Web API 项目中的操作一样。 在新的 Web API 项目中，可以看到该微服务中的唯一依赖关系在 ASP.NET Core 本身上。 在内部，Microsoft.AspNetCore.All 依赖项内引用的是实体框架和许多其他 .NET Core NuGet 包，如图 6-7 所示  。
 
 ![API 项目包括对 Microsoft.AspNetCore.App NuGet 包的引用，其中包括对所有基本包的引用。 它也可能包含其他一些包。](./media/image8.png)
 
@@ -87,14 +87,12 @@ public class CatalogItem
 public class CatalogContext : DbContext
 {
     public CatalogContext(DbContextOptions<CatalogContext> options) : base(options)
-    {
-    }
+    { }
     public DbSet<CatalogItem> CatalogItems { get; set; }
     public DbSet<CatalogBrand> CatalogBrands { get; set; }
     public DbSet<CatalogType> CatalogTypes { get; set; }
 
     // Additional code ...
-
 }
 ```
 
@@ -114,15 +112,17 @@ public class CatalogController : ControllerBase
     private readonly CatalogSettings _settings;
     private readonly ICatalogIntegrationEventService _catalogIntegrationEventService;
 
-    public CatalogController(CatalogContext context,
-                             IOptionsSnapshot<CatalogSettings> settings,
-                             ICatalogIntegrationEventService catalogIntegrationEventService)
+    public CatalogController(
+        CatalogContext context,
+        IOptionsSnapshot<CatalogSettings> settings,
+        ICatalogIntegrationEventService catalogIntegrationEventService)
     {
         _catalogContext = context ?? throw new ArgumentNullException(nameof(context));
-        _catalogIntegrationEventService = catalogIntegrationEventService ?? throw new ArgumentNullException(nameof(catalogIntegrationEventService));
+        _catalogIntegrationEventService = catalogIntegrationEventService 
+            ?? throw new ArgumentNullException(nameof(catalogIntegrationEventService));
 
         _settings = settings.Value;
-        ((DbContext)context).ChangeTracker.QueryTrackingBehavior = QueryTrackingBehavior.NoTracking;
+        context.ChangeTracker.QueryTrackingBehavior = QueryTrackingBehavior.NoTracking;
     }
 
     // GET api/v1/[controller]/items[?pageSize=3&pageIndex=10]
@@ -182,12 +182,8 @@ public void ConfigureServices(IServiceCollection services)
         options.UseSqlServer(Configuration["ConnectionString"],
         sqlServerOptionsAction: sqlOptions =>
         {
-           sqlOptions.
-               MigrationsAssembly(
-                   typeof(Startup).
-                    GetTypeInfo().
-                     Assembly.
-                      GetName().Name);
+            sqlOptions.MigrationsAssembly(
+                typeof(Startup).GetTypeInfo().Assembly.GetName().Name);
 
            //Configuring Connection Resiliency:
            sqlOptions.
@@ -204,7 +200,6 @@ public void ConfigureServices(IServiceCollection services)
    });
 
   //...
-
 }
 ```
 

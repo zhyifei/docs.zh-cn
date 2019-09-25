@@ -1,12 +1,14 @@
 ---
 title: 成员访问运算符 - C# 参考
 description: 了解可用于访问类型成员的 C# 运算符。
-ms.date: 05/09/2019
+ms.date: 09/18/2019
 author: pkulikov
 f1_keywords:
 - ._CSharpKeyword
 - '[]_CSharpKeyword'
 - ()_CSharpKeyword
+- ^_CSharpKeyword
+- .._CSharpKeyword
 helpviewer_keywords:
 - member access operators [C#]
 - member access operator [C#]
@@ -25,12 +27,17 @@ helpviewer_keywords:
 - method invocation [C#]
 - delegate invocation [C#]
 - () operator [C#]
-ms.openlocfilehash: 5ff5e68fbce320076e6d18e9e139b418a15bba77
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+- ^ operator [C#]
+- index from end operator [C#]
+- hat operator [C#]
+- .. operator [C#]
+- range operator [C#]
+ms.openlocfilehash: 45af31d10d77f4c63b27b34595b97fdd11ef95a1
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924644"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71116135"
 ---
 # <a name="member-access-operators-c-reference"></a>成员访问运算符（C# 参考）
 
@@ -40,6 +47,8 @@ ms.locfileid: "69924644"
 - [`[]`（数组元素或索引器访问）](#indexer-operator-)：用于访问数组元素或类型索引器
 - [`?.` 和 `?[]`（null 条件运算符）](#null-conditional-operators--and-)：仅当操作数为非 null 时才用于执行成员或元素访问运算
 - [`()`（调用）](#invocation-operator-)：用于调用被访问的方法或调用委托
+- [`^`（从末尾开始索引）](#index-from-end-operator-)：指示元素位置来自序列的末尾
+- [`..`（范围）](#range-operator-)：指定可用于获取一系列序列元素的索引范围
 
 ## <a name="member-access-operator-"></a>成员访问运算符 .
 
@@ -149,9 +158,37 @@ if (handler != null)
 
 [强制转换表达式](type-testing-and-cast.md#cast-operator-)，其执行显式类型转换，也可以使用括号。
 
+## <a name="index-from-end-operator-"></a>从末尾运算符 ^ 开始索引
+
+`^` 运算符在 C# 8.0 和更高版本中提供，指示序列末尾的元素位置。 对于长度为 `length` 的序列，`^n` 指向与序列开头偏移 `length - n` 的元素。 例如，`^1` 指向序列的最后一个元素，`^length` 指向序列的第一个元素。
+
+[!code-csharp[index from end](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#IndexFromEnd)]
+
+如前面的示例所示，表达式 `^e` 属于 <xref:System.Index?displayProperty=nameWithType> 类型。 在表达式 `^e` 中，`e` 的结果必须隐式转换为 `int`。
+
+还可以将 `^` 运算符与[范围运算符](#range-operator-)一起使用以创建一个索引范围。 有关详细信息，请参阅[索引和范围](../../tutorials/ranges-indexes.md)。
+
+## <a name="range-operator-"></a>范围运算符 ..
+
+`..` 运算符在 C# 8.0 和更高版本中提供，指定索引范围的开头和末尾作为其操作数。 左侧操作数是范围的包含性  开头。 右侧操作数是范围的包含性  末尾。 任一操作数都可以是序列开头或末尾的索引，如以下示例所示：
+
+[!code-csharp[range examples](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#Ranges)]
+
+如前面的示例所示，表达式 `a..b` 属于 <xref:System.Range?displayProperty=nameWithType> 类型。 在表达式 `a..b` 中，`a` 和 `b` 的结果必须隐式转换为 `int` 或 <xref:System.Index>。
+
+可以省略 `..` 运算符的任何操作数来获取无限制范围：
+
+- `a..` 等效于 `a..^0`
+- `..b` 等效于 `0..b`
+- `..` 等效于 `0..^0`
+
+[!code-csharp[ranges with omitted operands](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#RangesOptional)]
+
+有关详细信息，请参阅[索引和范围](../../tutorials/ranges-indexes.md)。
+
 ## <a name="operator-overloadability"></a>运算符可重载性
 
-`.` 和 `()` 运算符不能重载。 `[]` 运算符也被视为非可重载运算符。 使用[索引器](../../programming-guide/indexers/index.md)以支持对用户定义的类型编制索引。
+`.`、`()`、`^` 和 `..` 运算符无法进行重载。 `[]` 运算符也被视为非可重载运算符。 使用[索引器](../../programming-guide/indexers/index.md)以支持对用户定义的类型编制索引。
 
 ## <a name="c-language-specification"></a>C# 语言规范
 

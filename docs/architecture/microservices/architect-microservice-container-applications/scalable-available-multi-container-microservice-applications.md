@@ -2,12 +2,12 @@
 title: 协调安排微服务和多容器应用程序，实现高可伸缩性和高可用性
 description: 发现用于安排微服务和多容器应用程序以便实现高可伸缩性和可用性的选项，以及 Azure Dev Spaces 在开发 Kubernetes 应用程序生命周期时的可能性。
 ms.date: 09/20/2018
-ms.openlocfilehash: 9540ea3941e90b0f9ebfb79dff6f84bb368d0fb0
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: aef9dc2206c24d685610616a2a4d7850837b832d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991148"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71040107"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>协调安排微服务和多容器应用程序，实现高可伸缩性和高可用性
 
@@ -35,21 +35,10 @@ ms.locfileid: "70991148"
 
 ## <a name="software-platforms-for-container-clustering-orchestration-and-scheduling"></a>适用于容器群集、业务流程和计划的软件平台
 
-### <a name="kubernetes"></a>Kubernetes
-
-![Kubernetes 徽标](./media/image24.png)
-
-> [*Kubernetes*](https://kubernetes.io/) 是一款开源产品，提供各种功能，从群集基础结构和容器计划到安排功能均涵盖在内。 它能实现跨主机群集自动部署、缩放以及执行各种应用程序容器操作。
->
-> Kubernetes  提供以容器为中心的基础结构，将应用程序容器分组为逻辑单元，以便管理和发现。
->
-> Kubernetes  在 Linux 中的运用已发展成熟，但在 Windows 中相对较弱。
-
-### <a name="azure-kubernetes-service-aks"></a>Azure Kubernetes 服务 (AKS)
-
-![Azure Kubernetes 服务徽标](./media/image41.png)
-
-> [Azure Kubernetes 服务 (AKS)](https://azure.microsoft.com/services/kubernetes-service/) 是 Azure 中的托管 Kubernetes 容器业务流程服务，简化了 Kubernetes 群集的管理、部署和操作。
+|     |   |
+|-----|---|
+| **Kubernetes** <br> ![Kubernetes 徽标](./media/image24.png) | [*Kubernetes*](https://kubernetes.io/) 是一款开源产品，提供各种功能，从群集基础结构和容器计划到安排功能均涵盖在内。 它能实现跨主机群集自动部署、缩放以及执行各种应用程序容器操作。 <br><br> Kubernetes  提供以容器为中心的基础结构，将应用程序容器分组为逻辑单元，以便管理和发现。 <br><br> Kubernetes  在 Linux 中的运用已发展成熟，但在 Windows 中相对较弱。 |
+| **Azure Kubernetes 服务 (AKS)** <br> ![Azure Kubernetes 服务徽标](./media/image41.png) | [AKS](https://azure.microsoft.com/services/kubernetes-service/) 是 Azure 中的托管 Kubernetes 容器业务流程服务，简化了 Kubernetes 群集的管理、部署和操作。 |
 
 ## <a name="using-container-based-orchestrators-in-microsoft-azure"></a>在 Microsoft Azure 中使用基于容器的业务流程协调程序
 

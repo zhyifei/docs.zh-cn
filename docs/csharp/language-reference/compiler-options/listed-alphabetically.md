@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C# compiler, options listed alphabetically
 - Visual C#, compiler options listed alphabetically
 ms.assetid: 43535ea0-ca47-4a15-b528-615087a86092
-ms.openlocfilehash: 37eedc6d41867a6d5e6a49b8df5040c657bb2689
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 450463100782f98b6ded0781b1d3c19b0db97534
+ms.sourcegitcommit: 3ac05b2c386c8cc5e73f4c7665f6c0a7ed3da1bd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69602749"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71151777"
 ---
 # <a name="c-compiler-options-listed-alphabetically"></a>按字母顺序列出的 C# 编译器选项
 
@@ -29,7 +29,7 @@ ms.locfileid: "69602749"
 |[-baseaddress](baseaddress-compiler-option.md)|指定要生成的库的基址。|
 |[-bugreport](bugreport-compiler-option.md)|创建“Bug 报告”文件。 如果与 -errorreport:prompt 或 -errorreport:send 一起使用，则发送任何崩溃信息时都将随附此文件。|
 |[/checked](checked-compiler-option.md)|使编译器生成溢出检查。|
-|-checksumalgorithm:\<alg>|指定用于计算 PDB 中存储的源文件校验和的算法。  受支持的值为:SHA1（默认值）或 SHA256。<br>由于与 SHA1 冲突，Microsoft 建议使用 SHA256。 |
+|-checksumalgorithm:\<alg>|指定用于计算 PDB 中存储的源文件校验和的算法。  受支持的值为:SHA256（默认值）或 SHA1。<br>由于与 SHA1 冲突，Microsoft 建议使用 SHA256。 |
 |[-codepage](codepage-compiler-option.md)|指定在打开源文件时使用的代码页。|
 |[-debug](debug-compiler-option.md)|发出调试信息。|
 |[-define](define-compiler-option.md)|定义条件编译符号。|

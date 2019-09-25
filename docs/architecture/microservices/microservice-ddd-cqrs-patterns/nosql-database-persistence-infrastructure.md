@@ -2,12 +2,12 @@
 title: 将 NoSQL 数据库用作持久性基础结构
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 大致了解 NoSQL 数据库（特别是 Azure Cosmos DB）作为持久性实现选项的使用情况。
 ms.date: 10/08/2018
-ms.openlocfilehash: 7a8573f8f668a5b75f50acde57a2f4c42ce4d189
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: d96d72fe675dfa830029e4311f2cf165a305c328
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374030"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71039942"
 ---
 # <a name="use-nosql-databases-as-a-persistence-infrastructure"></a>将 NoSQL 数据库用作持久性基础结构
 
@@ -280,7 +280,7 @@ services:
 
 ```
 
-`ConnectionString` 环境变量通过以下方式解析：如果使用 Azure Cosmos DB 连接字符串在 `.env` 文件中定义该 `ESHOP_AZURE_COSMOSDB` 全局变量，则将使用它访问云中的 Azure Cosmos DB 数据库。 如果未定义，它将采用 mongodb://nosql.data 值并使用 mongodb 开发容器。
+`ConnectionString` 环境变量通过以下方式解析：如果使用 Azure Cosmos DB 连接字符串在 `.env` 文件中定义该 `ESHOP_AZURE_COSMOSDB` 全局变量，则将使用它访问云中的 Azure Cosmos DB 数据库。 如果未定义，它将采用 `mongodb://nosql.data` 值并使用 mongodb 开发容器。
 
 以下代码演示带有 Azure Cosmos DB 连接字符串全局环境变量的 `.env` 文件，如在 eShopOnContainers 中实现一样：
 
@@ -324,7 +324,7 @@ services:
   <https://docs.microsoft.com/azure/cosmos-db/mongodb-introduction>
 
 - **Azure Cosmos DB：Build a MongoDB API web app with .NET and the Azure portal**  \（使用 .NET 和 Azure 门户生成 MongoDB API Web 应用）
-  [https://docs.microsoft.com/azure/cosmos-db/create-mongodb-dotnet](https://docs.microsoft.com/azure/cosmos-db/create-mongodb-dotnet )
+  <https://docs.microsoft.com/azure/cosmos-db/create-mongodb-dotnet>
 
 - **Use the Azure Cosmos DB Emulator for local development and testing**  \（将 Azure Cosmos DB 仿真器用于本地开发和测试）
   <https://docs.microsoft.com/azure/cosmos-db/local-emulator>

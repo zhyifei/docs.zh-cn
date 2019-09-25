@@ -3,16 +3,16 @@ title: 使用索引和范围探索数据范围
 description: 本高级教程教你使用索引和范围来探索数据，以检查顺序数据集的切片。
 ms.date: 04/19/2019
 ms.custom: mvc
-ms.openlocfilehash: 27f4b90f130345dd10517a5de78c759066afdf07
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: d0eeadfff9732ced22e045536a88ed49cd98bbaa
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926641"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117834"
 ---
 # <a name="indices-and-ranges"></a>索引和范围
 
-范围和索引为访问 <xref:System.Array>、<xref:System.Span%601> 或 <xref:System.ReadOnlySpan%601> 中的单个元素或范围提供了简洁的语法。 这些功能启用更简洁清晰的语法来访问某个序列中的单个元素或元素范围。
+范围和索引为访问 <xref:System.Array>、<xref:System.String>、<xref:System.Span%601> 或 <xref:System.ReadOnlySpan%601> 中的单个元素或范围提供了简洁的语法。 这些功能启用更简洁清晰的语法来访问某个序列中的单个元素或元素范围。
 
 在本教程中，你将了解：
 
@@ -24,12 +24,12 @@ ms.locfileid: "70926641"
 
 ## <a name="language-support-for-indices-and-ranges"></a>对索引和范围的语言支持
 
-此语言支持依赖于两个新类型和两个新运算符。
+此语言支持依赖于两个新类型和两个新运算符：
 
 - <xref:System.Index?displayProperty=nameWithType> 表示一个序列索引。
-- `^` 运算符，指定一个索引与序列末尾相关。
+- 来自末尾运算符 `^` 的索引，指定一个索引与序列末尾相关。
 - <xref:System.Range?displayProperty=nameWithType> 表示序列的子范围。
-- 范围运算符 (`..`)，用于指定范围的开始和末尾，就像操作数一样。
+- 范围运算符 `..`，用于指定范围的开始和末尾，就像操作数一样。
 
 让我们从索引规则开始。 请考虑数组 `sequence`。 `0` 索引与 `sequence[0]` 相同。 `^0` 索引与 `sequence[sequence.Length]` 相同。 请注意，`sequence[^0]` 不会引发异常，就像 `sequence[sequence.Length]` 一样。 对于任何数字 `n`，索引 `^n` 与 `sequence[sequence.Length - n]` 相同。
 

@@ -14,12 +14,12 @@ ms.prod:
 - PRODUCT VALUE
 helpviewer_keywords:
 - OFFLINE BOOK INDEX ENTRIES
-ms.openlocfilehash: 37133a90ae5bfa18ae17c279caff40d0d30ea25c
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 3cd1096a07b1de39d1961fdc8c5add56604804ea
+ms.sourcegitcommit: 3ac05b2c386c8cc5e73f4c7665f6c0a7ed3da1bd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928927"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71151837"
 ---
 # <a name="metadata-and-markdown-template"></a>元数据和 Markdown 模板
 
@@ -276,26 +276,45 @@ UID 等同于完全限定的类型和成员名称。
 
 |name|Markdown 标签|
 |-----|-------|
-|ASP.NET 和 C#|aspx-csharp|
-|ASP.NET 和 VB|aspx-vb|
+|.NET 控制台|dotnetcli|
+|ASP.NET (C#)|aspx-csharp|
+|ASP.NET (VB)|aspx-vb|
 |Azure CLI|azurecli|
 |AzCopy|azcopy|
+|Azure PowerShell|azurepowershell|
+|Bash|bash|
 |C++|cpp|
+|C++/CX|cppcx|
+|C++/WinRT|cppwinrt|
 |C#|csharp|
 |浏览器中的 C#|csharp-interactive|
 |控制台|控制台|
+|CSHTML|cshtml|
+|DAX|dax|
+|Dockerfile|dockerfile|
 |F#|fsharp|
+|Go|go|
+|HTML|html|
+|HTTP|http|
 |Java|java|
 |JavaScript|javascript|
 |JSON|json|
+|Kusto 查询语言|kusto|
+|Markdown|md|
 |NodeJS|nodejs|
 |Objective-C|objc|
+|OData|odata|
 |PHP|php|
+|PowerApps（小数点分隔符）|powerapps-dot|
+|PowerApps（逗号分隔符）|powerapps-comma|
 |PowerShell|powershell|
 |Python|Python|
+|Q#|qsharp|
+|R|r|
 |Ruby|ruby|
 |SQL|sql|
 |Swift|swift|
+|TypeScript|typescript|
 |VB|vb|
 |XAML|xaml|
 |XML|xml|

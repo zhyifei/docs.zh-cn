@@ -1,19 +1,21 @@
 ---
 title: .NET 可移植性分析器 - .NET
 description: 了解如何使用 .NET 可移植性分析器工具，评估代码在各种 .NET 实现（包括 .NET Core、.NET Standard、UWP 和 Xamarin）间的可移植性。
-ms.date: 07/18/2019
+ms.date: 09/13/2019
 ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: fdd2e9f288649b35b778b5da505408822e0ea8fe
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 246c1d25a99e61d7e2f69f1b65ae3534d22571ba
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70107502"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71054005"
 ---
 # <a name="the-net-portability-analyzer"></a>.NET 可移植性分析器
 
-想让库支持多平台吗？ 想要了解让应用与其他 .NET 实现和配置文件（包括 .NET Core、.NET Standard、UWP 以及适用于 iOS、Android 和 Mac 的 Xamarin）兼容所需的工作量？ [.NET 可移植性分析器](https://github.com/microsoft/dotnet-apiport)工具可通过分析程序集，详细报告程序在各种 .NET 实现上的灵活性。 可移植性分析器作为 [Visual Studio Extension](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer) 提供，用于分析每个项目的程序集；也可以作为 [ApiPort 控制台应用](https://aka.ms/apiportdownload)提供，用于按指定文件或目录分析程序集。
+想让库支持多平台吗？ 想要了解使 .NET Framework 应用程序在 .NET Core 上运行需要花费多大的精力？  [.NET 可移植性分析器](https://github.com/microsoft/dotnet-apiport)是一种工具，可通过分析程序集，为应用程序或库提供有关缺少的 .NET API 的详细报告，以便在指定的目标 .NET 平台上实现可移植性。 可移植性分析器作为 [Visual Studio Extension](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer) 提供，用于分析每个项目的程序集；也可以作为 [ApiPort 控制台应用](https://aka.ms/apiportdownload)提供，用于按指定文件或目录分析程序集。
+
+将项目转换为面向目标平台（如 .NET Core）后，可以使用基于 Roslyn 的 [API 分析器工具]([https://docs.microsoft.com/en-us/dotnet/standard/analyzers/api-analyzer ](api-analyzer.md)) 来标识引发 PlatformNotSupportedException 以及其他一些兼容性问题的 API。
 
 ## <a name="common-targets"></a>常用对象
 
@@ -58,7 +60,7 @@ ms.locfileid: "70107502"
 
 ![可移植性详细信息](./media/portability-analyzer/portabilitydetails.png)
 
-报表的“详细信息”部分列出了其中某个目标平台缺少的 API。 
+报表的“详细信息”  部分列出了任意选定目标平台缺少的 API  。 
 
 - 目标类型：该类型具有目标平台缺少的 API 
 - 目标成员：目标平台缺少的方法 

@@ -1,17 +1,16 @@
 ---
-title: 开始在 macOS 上使用 .NET Core
+title: 教程：使用 Visual Studio Code 在 macOS 中创建 .NET Core 解决方案
 description: 本文档提供使用 Visual Studio Code 创建 .NET Core 解决方案的步骤和工作流概述。
-author: bleroy
 ms.date: 03/23/2017
 ms.custom: seodec18
-ms.openlocfilehash: 572174cb09dbde03095fa9444989356038bab9b7
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 5df43ae235b9fd901a65f7f8898bec67e24de682
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849357"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117367"
 ---
-# <a name="get-started-with-net-core-on-macos"></a>开始在 macOS 上使用 .NET Core
+# <a name="tutorial-create-a-net-core-solution-in-macos-using-visual-studio-code"></a>教程：使用 Visual Studio Code 在 macOS 中创建 .NET Core 解决方案
 
 本文档提供为 macOS 创建 .NET Core 解决方案的步骤和工作流概述。 了解到如何通过 [NuGet](https://www.nuget.org/) 创建项目、单元测试、使用调试工具和合并第三方库。
 
@@ -32,21 +31,21 @@ ms.locfileid: "70849357"
 
 启动 Visual Studio Code。 按 <kbd>Ctrl</kbd>+<kbd>\`</kbd>（反引号）或在菜单中依次选择“视图”>“集成终端”  ，在 Visual Studio Code 中打开嵌入式终端。 若要在 Visual Studio Code 外部执行操作，仍可以使用资源管理器的“通过命令提示符打开”  （在 Mac 或 Linux 上，为“在终端中打开”  ）命令打开外部 shell。
 
-首先创建一个解决方案文件，它将用作一个或多个 .NET Core 项目的容器。 在终端中，创建 golden  文件夹并将其打开。 此文件夹是解决方案的根目录。 运行 [`dotnet new`](../tools/dotnet-new.md) 命令，创建新的解决方案 golden.sln  ：
+首先创建一个解决方案文件，它将用作一个或多个 .NET Core 项目的容器。 在终端中，运行 [`dotnet new`](../tools/dotnet-new.md) 命令以在名为 golden  的新文件夹中创建新的解决方案 golden.sln  ：
 
-```console
-dotnet new sln
+```dotnetcli
+dotnet new sln -o golden
 ```
 
-在 golden  文件夹中，执行下列命令来创建库项目，它将在库  文件夹中生成 library.csproj  和 Class1.cs  这两个文件：
+导航到新的 golden  文件夹，执行下列命令来创建库项目，它将在库  文件夹中生成 library.csproj  和 Class1.cs  这两个文件：
 
-```console
+```dotnetcli
 dotnet new classlib -o library
 ```
 
 执行 [`dotnet sln`](../tools/dotnet-sln.md) 命令，将新创建的 library.csproj  添加到解决方案：
 
-```console
+```dotnetcli
 dotnet sln add library/library.csproj
 ```
 
@@ -64,7 +63,7 @@ dotnet sln add library/library.csproj
 
 库方法以 JSON 格式串行化和反序列化对象。 若要支持 JSON 序列化和反序列化，请添加对 `Newtonsoft.Json` NuGet 包的引用。 `dotnet add` 命令向项目添加新项。 若要添加对 NuGet 包的引用，请使用 [`dotnet add package`](../tools/dotnet-add-package.md) 命令并指定包的名称：
 
-```console
+```dotnetcli
 dotnet add library package Newtonsoft.Json
 ```
 
@@ -78,7 +77,7 @@ dotnet add library package Newtonsoft.Json
 
 执行 [`dotnet restore`](../tools/dotnet-restore.md)（[请参阅注释](#dotnet-restore-note)），这将还原依赖项，并在库  中创建 obj  文件夹，该文件夹中包含三个文件，其中一个是 project.assets.json  文件：
 
-```console
+```dotnetcli
 dotnet restore
 ```
 
@@ -101,7 +100,7 @@ namespace Library
 
 使用 [`dotnet build`](../tools/dotnet-build.md) 命令生成库。 这将在 golden/library/bin/Debug/netstandard1.4  下生成一个 library.dll  文件：
 
-```console
+```dotnetcli
 dotnet build
 ```
 
@@ -109,19 +108,19 @@ dotnet build
 
 生成针对库的测试项目。 在 golden  文件夹中，创建一个新测试项目：
 
-```console
+```dotnetcli
 dotnet new xunit -o test-library
 ```
 
 向解决方案添加测试项目：
 
-```console
+```dotnetcli
 dotnet sln add test-library/test-library.csproj
 ```
 
 在上一节创建的库中添加项目引用，这样编译器就可以查找并使用该库项目。 使用 [`dotnet add reference`](../tools/dotnet-add-reference.md) 命令：
 
-```console
+```dotnetcli
 dotnet add test-library/test-library.csproj reference library/library.csproj
 ```
 
@@ -155,7 +154,7 @@ namespace TestApp
 
 在 golden  文件夹中，执行下列命令：
 
-```console
+```dotnetcli
 dotnet restore 
 dotnet test test-library/test-library.csproj
 ```
@@ -164,7 +163,7 @@ dotnet test test-library/test-library.csproj
 
 编辑 UnitTest1.cs  文件，将断言从 `Assert.NotEqual` 更改为 `Assert.Equal`。 在 goldden  文件夹中执行下列命令，重新运行测试，此次测试通过：
 
-```console
+```dotnetcli
 dotnet test test-library/test-library.csproj
 ```
 
@@ -174,19 +173,19 @@ dotnet test test-library/test-library.csproj
 
 在 golden  文件夹中创建新的控制台应用程序：
 
-```console
+```dotnetcli
 dotnet new console -o app
 ```
 
 向解决方案添加控制台应用项目：
 
-```console
+```dotnetcli
 dotnet sln add app/app.csproj
 ```
 
 运行 `dotnet add reference` 命令，创建库的依赖项：
 
-```console
+```dotnetcli
 dotnet add app/app.csproj reference library/library.csproj
 ```
 
@@ -205,7 +204,7 @@ using Library;
 
 执行下列 `dotnet run` 命令，运行可执行文件，其中，`dotnet run` 后的 `-p` 选项用于指定主应用程序的项目。 应用会生成字符串“The answer is 42”。
 
-```console
+```dotnetcli
 dotnet run -p app/app.csproj
 ```
 

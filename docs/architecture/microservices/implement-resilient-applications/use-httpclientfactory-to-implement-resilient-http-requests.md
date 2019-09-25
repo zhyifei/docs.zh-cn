@@ -1,13 +1,13 @@
 ---
 title: 使用 HttpClientFactory 实现复原 HTTP 请求
 description: 了解如何使用自 .NET Core 2.1 起可用的 HttpClientFactory 来创建 `HttpClient` 实例，使其更轻松地在应用程序中使用。
-ms.date: 01/07/2019
-ms.openlocfilehash: 68c841a6ba69a94eff420233124cf00fec506502
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.date: 08/08/2019
+ms.openlocfilehash: 6c862171ee6b5eda6f95694878bfa43518a9bdfa
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68674474"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71039977"
 ---
 # <a name="use-httpclientfactory-to-implement-resilient-http-requests"></a>使用 HttpClientFactory 实现复原 HTTP 请求
 
@@ -15,24 +15,26 @@ ms.locfileid: "68674474"
 
 ## <a name="issues-with-the-original-httpclient-class-available-in-net-core"></a>.NET Core 中提供的原始 HttpClient 类的相关问题
 
-常见的原始 [HttpClient](/dotnet/api/system.net.http.httpclient?view=netstandard-2.0) 类非常易于使用，但在某些情况下，许多开发人员却并未正确使用该类。 
+常见的原始 <xref:System.Net.Http.HttpClient> 类非常易于使用，但在某些情况下，许多开发人员却并未正确使用该类。
 
 第一个问题，当此类可释放时，将其用于 `using` 语句并不是最佳选择，因为即使释放 `HttpClient` 对象，基础套接字也不会立即释放，并可能导致严重问题：“套接字耗尽”。 有关此问题的详细信息，请参阅[你正在以错误方式使用 HttpClient，这将导致软件受损](https://aspnetmonsters.com/2016/08/2016-08-27-httpclientwrong/)博客文章。
 
-因此，`HttpClient` 应进行一次实例化并在应用程序的生命周期中重复使用。 在负载较重的情况下，实例化每个请求的 `HttpClient` 类将耗尽可用的套接字数。 该问题会导致 `SocketException` 错误。 要解决此问题，可能的方法是将 `HttpClient` 对象创建为单一对象或静态对象，请参阅[关于 HttpClient 用法的 Microsoft 文章](/dotnet/csharp/tutorials/console-webapiclient)中的说明。 
+因此，`HttpClient` 应进行一次实例化并在应用程序的生命周期中重复使用。 在负载较重的情况下，实例化每个请求的 `HttpClient` 类将耗尽可用的套接字数。 该问题会导致 `SocketException` 错误。 要解决此问题，可能的方法是将 `HttpClient` 对象创建为单一对象或静态对象，请参阅[关于 HttpClient 用法的 Microsoft 文章](../../../csharp/tutorials/console-webapiclient.md)中的说明。
 
-但将 `HttpClient` 对象用作单一对象或静态对象时还有一个问题。 在这种情况下，单一或静态 `HttpClient` 不考虑 DNS 更改，请参阅 [.NET Core GitHub 存储库的问题](https://github.com/dotnet/corefx/issues/11224)一文的说明。 
+但将 `HttpClient` 对象用作单一对象或静态对象时还有一个问题。 在这种情况下，单一实例或静态 `HttpClient` 不考虑 DNS 更改，请参阅 dotnet/corefx GitHub 存储库中的此[问题](https://github.com/dotnet/corefx/issues/11224)中的说明。 
 
-为解决上述问题并使 `HttpClient` 实例管理更轻松，.NET Core 2.1 引入了新的 `HttpClientFactory`，后者可与 Polly 集成来实现弹性 HTTP 调用。   
+为解决上述问题并使 `HttpClient` 实例管理更轻松，.NET Core 2.1 引入了新的 `HttpClientFactory`，后者可与 Polly 集成来实现弹性 HTTP 调用。
+
+[Polly](http://www.thepollyproject.org/) 是瞬态故障处理库，它可以通过流畅且线程安全的方式使用一些预定义的策略，帮助开发人员为其应用程序增加弹性。
 
 ## <a name="what-is-httpclientfactory"></a>什么是 HttpClientFactory
 
 `HttpClientFactory` 用于：
 
-- 提供一个中心位置，用于命名和配置逻辑 HttpClient。 例如，可以配置预配置的客户端（服务代理）以访问特定微服务。
+- 提供一个中心位置，用于命名和配置逻辑 `HttpClient` 对象。 例如，可以配置预配置的客户端（服务代理）以访问特定微服务。
 - 通过后列方式整理出站中间件的概念：在 `HttpClient` 中委托处理程序并实现基于 Polly 的中间件以利用 Polly 的复原策略。
-- `HttpClient` 已经具有委托处理程序的概念，这些委托处理程序可以链接在一起，处理出站 HTTP 请求。 将 http 客户端注册到工厂后，可使用一个允许将 Polly 策略用于重试、断路器等的 Polly 处理程序。
-- 管理 HttpClientMessageHandlers 的生存期，以避免在自己管理 `HttpClient` 生存期时出现上述问题。 
+- `HttpClient` 已经具有委托处理程序的概念，这些委托处理程序可以链接在一起，处理出站 HTTP 请求。 将 HTTP 客户端注册到工厂后，可使用一个 Polly 处理程序将 Polly 策略用于重试、断路器等。
+- 管理 `HttpClientMessageHandlers` 的生存期，避免在自行管理 `HttpClient` 生存期时出现上述问题。
 
 ## <a name="multiple-ways-to-use-httpclientfactory"></a>HttpClientFactory 的多种用法
 
@@ -43,7 +45,7 @@ ms.locfileid: "68674474"
 - 使用类型化客户端
 - 使用生成的客户端
 
-为简便起见，本指南介绍最具条理和组织性的 `HttpClientFactory` 用法，此方法就是使用类型化客户端（服务代理模式），但此[关于 HttpClientFactory 用法的文章](/aspnet/core/fundamentals/http-requests?#consumption-patterns)中当前记录并列出了全部可用的方法。  
+为简洁起见，本指南介绍了使用 `HttpClientFactory` 的最结构化的方法，即使用类型化客户端（服务代理模式）。 不过，所有选项均已记录，并且当前在此[涵盖 HttpClientFactory 用法的文章](/aspnet/core/fundamentals/http-requests#consumption-patterns)中列出。
 
 ## <a name="how-to-use-typed-clients-with-httpclientfactory"></a>如何结合使用类型化客户端和 HttpClientFactory
 
@@ -55,7 +57,7 @@ ms.locfileid: "68674474"
 
 **图 8-4**。 将 HttpClientFactory 与类型化客户端类结合使用。
 
-首先，在应用程序中设置 `HttpClientFactory`，添加对包含 `IServiceCollection` 的 `AddHttpClient()` 扩展方法的 `Microsoft.Extensions.Http` 包的引用。 此扩展方法用于注册 `DefaultHttpClientFactory`，后者用作接口 `IHttpClientFactory` 的单一实例。 它定义 `HttpMessageHandlerBuilder` 的临时配置。 此消息处理程序（`HttpMessageHandler` 对象）获取自池，可供从工厂返回的 `HttpClient` 使用。
+首先，通过安装包含 `IServiceCollection` 的 `AddHttpClient()` 扩展方法的 `Microsoft.Extensions.Http` NuGet 包，在应用程序中设置 `HttpClientFactory`。 此扩展方法用于注册 `DefaultHttpClientFactory`，后者用作接口 `IHttpClientFactory` 的单一实例。 它定义 `HttpMessageHandlerBuilder` 的临时配置。 此消息处理程序（`HttpMessageHandler` 对象）获取自池，可供从工厂返回的 `HttpClient` 使用。
 
 在下一个代码中，可以看到如何使用 `AddHttpClient()` 注册需要使用 `HttpClient` 的类型化客户端（服务代理）。
 
@@ -67,9 +69,32 @@ services.AddHttpClient<IBasketService, BasketService>();
 services.AddHttpClient<IOrderingService, OrderingService>();
 ```
 
-正如前面代码所示，注册客户端服务将使 `DefaultClientFactory` 创建专门为每个服务配置的 `HttpClient`，我们将在下一段中对此进行解释。
+按先前代码中所示注册客户端服务，使 `DefaultClientFactory` 为每个服务创建一个标准 `HttpClient`。
 
-只需向 `AddHttpClient()` 注册客户端服务类，注入到类中的 `HttpClient` 对象将使用注册时提供的配置和策略。 后续部分将介绍 Polly 重试或断路器等策略。
+还可以在注册中添加特定于实例的配置（例如，配置基址），并添加一些弹性策略，如以下代码所示：
+
+```csharp
+services.AddHttpClient<ICatalogService, CatalogService>(client =>
+{
+    client.BaseAddress = new Uri(Configuration["BaseUrl"])
+})
+    .AddPolicyHandler(GetRetryPolicy())
+    .AddPolicyHandler(GetCircuitBreakerPolicy());
+```
+
+就本示例而言，可以在下一个代码中看到以上策略之一：
+
+```csharp
+static IAsyncPolicy<HttpResponseMessage> GetRetryPolicy()
+{
+    return HttpPolicyExtensions
+        .HandleTransientHttpError()
+        .OrResult(msg => msg.StatusCode == System.Net.HttpStatusCode.NotFound)
+        .WaitAndRetryAsync(6, retryAttempt => TimeSpan.FromSeconds(Math.Pow(2, retryAttempt)));
+}
+```
+
+可以在[下一篇文章](implement-http-call-retries-exponential-backoff-polly.md)中找到有关使用 Polly 的更多详细信息。
 
 ### <a name="httpclient-lifetimes"></a>HttpClient 生存期
 
@@ -82,7 +107,7 @@ services.AddHttpClient<IOrderingService, OrderingService>();
 ```csharp
 //Set 5 min as the lifetime for the HttpMessageHandler objects in the pool used for the Catalog Typed Client 
 services.AddHttpClient<ICatalogService, CatalogService>()
-                 .SetHandlerLifetime(TimeSpan.FromMinutes(5));  
+    .SetHandlerLifetime(TimeSpan.FromMinutes(5));
 ```
 
 每个类型化客户端都可自行配置处理程序生存期值。 将生存期设置为 `InfiniteTimeSpan` 可禁用处理程序到期。
@@ -122,7 +147,7 @@ public class CatalogService : ICatalogService
 
 ### <a name="use-your-typed-client-classes"></a>使用类型化客户端类
 
-最后，实现类型类并向 AddHttpClient() 注册这些类后，便可在允许使用 DI 注入的服务的任何位置使用，例如在任何 Razor 页面代码或 MVC Web 应用的任何控制器中，如 eShopOnContainers 中的以下代码所示。
+最后，一旦实现了键入的类并在 `AddHttpClient()` 中注册了它们，就可以在每次可通过 DI 注入服务时使用它们。 例如，在 Razor 页面代码或 MVC Web 应用的控制器中，如 eShopOnContainers 的以下代码中：
 
 ```csharp
 namespace Microsoft.eShopOnContainers.WebMVC.Controllers
@@ -131,18 +156,18 @@ namespace Microsoft.eShopOnContainers.WebMVC.Controllers
     {
         private ICatalogService _catalogSvc;
 
-        public CatalogController(ICatalogService catalogSvc) => 
+        public CatalogController(ICatalogService catalogSvc) =>
                                                            _catalogSvc = catalogSvc;
 
-        public async Task<IActionResult> Index(int? BrandFilterApplied, 
-                                               int? TypesFilterApplied, 
-                                               int? page, 
+        public async Task<IActionResult> Index(int? BrandFilterApplied,
+                                               int? TypesFilterApplied,
+                                               int? page,
                                                [FromQuery]string errorMsg)
         {
             var itemsPage = 10;
-            var catalog = await _catalogSvc.GetCatalogItems(page ?? 0, 
-                                                            itemsPage, 
-                                                            BrandFilterApplied, 
+            var catalog = await _catalogSvc.GetCatalogItems(page ?? 0,
+                                                            itemsPage,
+                                                            BrandFilterApplied,
                                                             TypesFilterApplied);
             //… Additional code
         }
@@ -151,15 +176,18 @@ namespace Microsoft.eShopOnContainers.WebMVC.Controllers
 }
 ```
 
-此时，所示代码仅执行常规 Http 请求，但后续部分将展示真正的“神奇”之处 - 只需向已注册的类型化客户端添加策略和委派处理程序，将由 `HttpClient` 完成的所有 HTTP 请求在执行时都将考虑帐户复原策略，例如使用指数退避算法实现的重试、断路器或用于实现额外安全功能（如使用身份验证令牌或任何其他自定义功能）的任何其他自定义委托处理程序。 
+此时，所示代码仅执行常规 Http 请求，但后续部分将展示真正的“神奇”之处 - 只需向已注册的类型化客户端添加策略和委派处理程序，将由 `HttpClient` 完成的所有 HTTP 请求在执行时都将考虑帐户复原策略，例如使用指数退避算法实现的重试、断路器或用于实现额外安全功能（如使用身份验证令牌或任何其他自定义功能）的任何其他自定义委托处理程序。
 
 ## <a name="additional-resources"></a>其他资源
 
-- **在 .NET Core 中使用 HttpClientFactory**\
-  [https://docs.microsoft.com/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1](/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1)
+- **在 .NET Core 中使用 HttpClientFactory** \
+  [https://docs.microsoft.com/aspnet/core/fundamentals/http-requests](/aspnet/core/fundamentals/http-requests)
 
-- **HttpClientFactory GitHub 存储库**\
+- **HttpClientFactory GitHub 存储库** \
   <https://github.com/aspnet/Extensions/tree/master/src/HttpClientFactory>
+
+- **Polly（.NET 复原能力和暂时性故障处理库）**  \
+  <http://www.thepollyproject.org/>
 
 >[!div class="step-by-step"]
 >[上一页](explore-custom-http-call-retries-exponential-backoff.md)

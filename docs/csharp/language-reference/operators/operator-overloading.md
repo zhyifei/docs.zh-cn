@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - operator keyword [C#]
 - operator overloading [C#]
-ms.openlocfilehash: 06d62c215055d66cd3a89b794d2cd5ee8cba9eb7
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 130eb4be66d13b43e5605ef98a647fa9f4223014
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70924702"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71116091"
 ---
 # <a name="operator-overloading-c-reference"></a>运算符重载（C# 引用）
 
@@ -43,7 +43,7 @@ ms.locfileid: "70924702"
 |[a&#91;i&#93;](member-access-operators.md#indexer-operator-)|元素访问不被视为可重载运算符，但你可定义[索引器](../../programming-guide/indexers/index.md)。|
 |[(T)x](type-testing-and-cast.md#cast-operator-)|强制转换运算符不能重载，但可以定义新的转换运算符。 有关详细信息，请参阅[用户定义转换运算符](user-defined-conversion-operators.md)。|
 |[+=](arithmetic-operators.md#compound-assignment), [-=](arithmetic-operators.md#compound-assignment), [\*=](arithmetic-operators.md#compound-assignment), [/=](arithmetic-operators.md#compound-assignment), [%=](arithmetic-operators.md#compound-assignment), [&=](boolean-logical-operators.md#compound-assignment), [&#124;=](boolean-logical-operators.md#compound-assignment), [^=](boolean-logical-operators.md#compound-assignment), [\<\<=](bitwise-and-shift-operators.md#compound-assignment), [>>=](bitwise-and-shift-operators.md#compound-assignment)|复合赋值运算符不能显式重载。 但在重载二元运算符时，也会隐式重载相应的复合赋值运算符（若有）。 例如，使用 `+`（可以进行重载）计算 `+=`。|
-|[x = y](assignment-operator.md)、[x.y](member-access-operators.md#member-access-operator-)、[c ? t : f](conditional-operator.md)、[x ?? y](null-coalescing-operator.md)、[x ??= y](null-coalescing-operator.md)、[x->y](pointer-related-operators.md#pointer-member-access-operator--)、[=>](lambda-operator.md)、[f(x)](member-access-operators.md#invocation-operator-)、[as](type-testing-and-cast.md#as-operator)、[await](await.md)、[checked](../keywords/checked.md)、[unchecked](../keywords/unchecked.md)、[default](default.md)、[delegate](delegate-operator.md)、[is](type-testing-and-cast.md#is-operator)、[nameof](nameof.md)、[new](new-operator.md)、[sizeof](sizeof.md)、[stackalloc](stackalloc.md)、[typeof](type-testing-and-cast.md#typeof-operator)|这些运算符无法进行重载。|
+|[^x](member-access-operators.md#index-from-end-operator-)、[x = y](assignment-operator.md)、[x.y](member-access-operators.md#member-access-operator-)、[c ? t : f](conditional-operator.md)、[x ?? y](null-coalescing-operator.md)、[x ??= y](null-coalescing-operator.md)、[x..y](member-access-operators.md#range-operator-)、[x->y](pointer-related-operators.md#pointer-member-access-operator--)、[=>](lambda-operator.md)、[f(x)](member-access-operators.md#invocation-operator-)、[as](type-testing-and-cast.md#as-operator)、[await](await.md)、[checked](../keywords/checked.md)、[unchecked](../keywords/unchecked.md)、[default](default.md)、[delegate](delegate-operator.md)、[is](type-testing-and-cast.md#is-operator)、[nameof](nameof.md)、[new](new-operator.md)、[sizeof](sizeof.md)、[stackalloc](stackalloc.md)、[typeof](type-testing-and-cast.md#typeof-operator)|这些运算符无法进行重载。|
 
 > [!NOTE]
 > 比较运算符必须成对重载。 也就是说，如果重载一对运算符中的任一一个，则另一个运算符也必须重载。 此类配对如下所示：

@@ -1,16 +1,16 @@
 ---
 title: 使用经过训练的模型进行预测
 description: 了解如何使用经过训练的模型进行预测
-ms.date: 06/20/2019
+ms.date: 09/18/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
-ms.openlocfilehash: ef2b22ff220d1fce1ec43f26c7d51f7e551e038d
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 33e0cb74342ca3e82ff5f108453d63e022d63d20
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307402"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71118019"
 ---
 # <a name="make-predictions-with-a-trained-model"></a>使用经过训练的模型进行预测
 
@@ -43,14 +43,12 @@ public class HousingData
 由于此示例中使用的算法是线性回归算法，输出列的默认名称为 `Score`，它由 `PredictedPrice` 属性上的 [`ColumnName`](xref:Microsoft.ML.Data.ColumnNameAttribute) 特性定义。
 
 ```csharp
-class HousingPrediction : HousingData
+class HousingPrediction
 {
     [ColumnName("Score")]
     public float PredictedPrice { get; set; }
 }
 ```
-
-`HousingPrediction` 数据模型继承自 `HousingData`，这让它可以轻松地将原始输入数据与模型生成的输出一起可视化。  
 
 ## <a name="set-up-a-prediction-pipeline"></a>设置预测管道
 
@@ -90,7 +88,7 @@ HousingPrediction prediction = predictionEngine.Predict(inputData);
 
 如果访问 `prediction` 对象的 `Score` 属性，则应获得类似于 `150079` 的值。
 
-## <a name="batch-prediction"></a>批量预测
+## <a name="multiple-predictions"></a>多个预测
 
 给定以下数据，将其加载到 [`IDataView`](xref:Microsoft.ML.IDataView) 中。 在这种情况下，[`IDataView`](xref:Microsoft.ML.IDataView) 的名称可能是 `inputData`。 因为 `CurrentPrice` 是尝试使用新数据进行预测的目标或标签，所以假设此时没有用于它的值。
 

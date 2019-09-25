@@ -2,18 +2,18 @@
 title: 官方 .NET Docker 映像
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 官方 .NET Docker 映像
 ms.date: 01/07/2019
-ms.openlocfilehash: b184e8f3606da8448a06a1cad90688958ecbce3a
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 749485bfe07e0245493da67af915805f644a1897
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675704"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71039637"
 ---
 # <a name="official-net-docker-images"></a>官方 .NET Docker 映像
 
 官方 .NET Docker 映像是由 Microsoft 创建和优化的 Docker 映像。 这些映像在 [Docker 中心](https://hub.docker.com/u/microsoft/)的 Microsoft 存储库中公开提供。 每个存储库可以包含多个映像，具体取决于 .NET 版本以及操作系统和版本（Linux Debian、Linux Alpine、Windows Nano Server、Windows Server Core 等）。
 
-自 .NET Core 2.1 起，包括 ASP.NET Core 在内的所有 .NET Core 映像都在 .NET Core 映像存储库的 Docker 中心 (https://hub.docker.com/_/microsoft-dotnet-core/ ) 提供。
+自 .NET Core 2.1 起，包括 ASP.NET Core 在内的所有 .NET Core 映像都在 .NET Core 映像存储库的 Docker Hub (<https://hub.docker.com/\_/microsoft-dotnet-core/>) 提供。
 
 大多数映像存储库提供广泛的标记，以帮助选择特定的框架版本以及 OS（Linux 发行版或 Windows 版本）。
 
@@ -43,10 +43,10 @@ ms.locfileid: "68675704"
 
 在 Docker 中心浏览 .NET 映像存储库时，会发现已使用标记将多个映像版本进行分类或标记。 这些标记有助于决定使用哪一个，具体取决于需要的版本，如下表所示：
 
-| 映像                                       | 注释                                                                                          |
-| ------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| 图像 | 注释 |
+|-------|----------|
 | mcr.microsoft.com/dotnet/core/aspnet:2.2  | ASP.NET Core，包含仅运行时和 ASP.NET Core 优化，适用于 Linux 和 Windows（多体系结构） |
-| mcr.microsoft.com/dotnet/core/sdk:2.2     | .NET Core，包含 SDK，适用于 Linux 和 Windows（多体系结构）                                  |
+| mcr.microsoft.com/dotnet/core/sdk:2.2  | .NET Core，包含 SDK，适用于 Linux 和 Windows（多体系结构） |
 
 > [!div class="step-by-step"]
 > [上一页](net-container-os-targets.md)
