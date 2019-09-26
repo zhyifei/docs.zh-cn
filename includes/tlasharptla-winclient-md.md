@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: e56362f735ffd7dc0c827e7184c008c18205e437
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "65670990"
 ---
-<span data-ttu-id="62836-101">Windows Presentation Foundation (WPF)</span><span class="sxs-lookup"><span data-stu-id="62836-101">Windows Presentation Foundation (WPF)</span></span>
+<span data-ttu-id="10b20-101">Windows Presentation Foundation (WPF)</span><span class="sxs-lookup"><span data-stu-id="10b20-101">Windows Presentation Foundation (WPF)</span></span>
