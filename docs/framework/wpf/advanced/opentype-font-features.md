@@ -10,10 +10,10 @@ helpviewer_keywords:
 - OpenType font technology [WPF]
 ms.assetid: 4061a9d1-fe8b-4921-9e17-18ec7d2e3ea2
 ms.openlocfilehash: 3f1f0698afce6e64711e37ac60d0662d65bbee6b
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "70016144"
 ---
 # <a name="opentype-font-features"></a>OpenType 字体功能
@@ -22,9 +22,9 @@ ms.locfileid: "70016144"
   
 <a name="overview"></a>   
 ## <a name="opentype-font-format"></a>OpenType 字体格式  
- OpenType 字体格式是[!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)]字体格式的扩展, 添加了对 PostScript 字体数据的支持。 OpenType 字体格式由 Microsoft 和 Adobe Corporation 共同开发。 Opentype 字体和支持 opentype 字体的操作系统服务为用户提供了一种简单的方法来安装和使用字体, 无论字体是否[!INCLUDE[TLA2#tla_truetype](../../../../includes/tla2sharptla-truetype-md.md)]包含轮廓或 CFF (PostScript) 轮廓。  
+ OpenType 字体格式是[!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)]字体格式的扩展，添加了对 PostScript 字体数据的支持。 OpenType 字体格式由 Microsoft 和 Adobe Corporation 共同开发。 Opentype 字体和支持 opentype 字体的操作系统服务为用户提供了一种简单的方法来安装和使用字体，无论字体是否[!INCLUDE[TLA2#tla_truetype](../../../../includes/tla2sharptla-truetype-md.md)]包含轮廓或 CFF （PostScript）轮廓。  
   
- OpenType 字体格式解决了以下开发人员难题:  
+ OpenType 字体格式解决了以下开发人员难题：  
   
 - 更广泛的多平台支持。  
   
@@ -39,10 +39,10 @@ ms.locfileid: "70016144"
 > [!NOTE]
 > Windows SDK 包含一组可用于[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]应用程序的示例 OpenType 字体。 这些字体提供本主题余下部分所述的大多数功能。 有关详细信息，请参阅[示例 OpenType 字体包](sample-opentype-font-pack.md)。  
   
- 有关 OpenType 字体格式的详细信息, 请参阅[Opentype 规范](https://go.microsoft.com/fwlink/?LinkId=96731)。  
+ 有关 OpenType 字体格式的详细信息，请参阅[Opentype 规范](https://go.microsoft.com/fwlink/?LinkId=96731)。  
   
 ### <a name="advanced-typographic-extensions"></a>高级版式扩展  
- 高级版式表格 (OpenType 布局表格) 通过[!INCLUDE[TLA2#tla_truetype](../../../../includes/tla2sharptla-truetype-md.md)]或 CFF 轮廓扩展字体的功能。 OpenType 布局字体包含扩展字体功能的其他信息, 以支持高质量的国际版式。 大多数 OpenType 字体只公开了可用的全部 OpenType 功能的子集。 OpenType 字体提供以下功能。  
+ 高级版式表格（OpenType 布局表格）通过[!INCLUDE[TLA2#tla_truetype](../../../../includes/tla2sharptla-truetype-md.md)]或 CFF 轮廓扩展字体的功能。 OpenType 布局字体包含扩展字体功能的其他信息，以支持高质量的国际版式。 大多数 OpenType 字体只公开了可用的全部 OpenType 功能的子集。 OpenType 字体提供以下功能。  
   
 - 字符与字形之间的丰富映射，可支持连字、定位格式、备用项以及其他字体替换功能。  
   
@@ -88,7 +88,7 @@ ms.locfileid: "70016144"
   
 <a name="capitals"></a>   
 ## <a name="capitals"></a>大写字母  
- 大写字母是一组以大写样式字形呈现文本的版式形式。 通常情况下，当以全大写呈现文本时，字母之间的间距可能看起来很小，字母的权重和比例看起来会很大。 对于大写字母, OpenType 支持多种样式格式, 其中包括小型大写字母、小号大写字母、标题和大写字母间距。 通过这些样式格式可控制大写字母的外观。  
+ 大写字母是一组以大写样式字形呈现文本的版式形式。 通常情况下，当以全大写呈现文本时，字母之间的间距可能看起来很小，字母的权重和比例看起来会很大。 对于大写字母，OpenType 支持多种样式格式，其中包括小型大写字母、小号大写字母、标题和大写字母间距。 通过这些样式格式可控制大写字母的外观。  
   
  以下文本显示 Pescadero 字体的标准大写字母，其后接样式为“SmallCaps”和“AllSmallCaps”的字母。 本例中，对所有三个单词均使用相同的字体大小。  
   
@@ -118,7 +118,7 @@ ms.locfileid: "70016144"
   
 <a name="ligatures"></a>   
 ## <a name="ligatures"></a>连字  
- 连子是为使文本更具可读性或更加美观而由两个或更多字形形成的一个单一字形。 OpenType 字体支持四种类型的连字:  
+ 连子是为使文本更具可读性或更加美观而由两个或更多字形形成的一个单一字形。 OpenType 字体支持四种类型的连字：  
   
 - **标准连字**。 旨在增强可读性。 标准连字包括“fi”、“fl”和“ff”。  
   
@@ -144,7 +144,7 @@ ms.locfileid: "70016144"
   
  [!code-xaml[OpenTypeFontSamples#5](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#5)]  
   
- 默认情况下, OpenType 字体[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]会启用标准连字。 例如，如果使用 Palatino Linotype 字体，则标准连字“fi”、“ff”和“fl”显示为组合字符字形。 请注意，每个标准连字的字符对之间彼此相连。  
+ 默认情况下，OpenType 字体[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]会启用标准连字。 例如，如果使用 Palatino Linotype 字体，则标准连字“fi”、“ff”和“fl”显示为组合字符字形。 请注意，每个标准连字的字符对之间彼此相连。  
   
  ![使用 OpenType 标准连字与 Palatino Linotype 的文本](./media/opentype-font-features/opentype-standard-ligatures-palatino.gif "使用 OpenType 标准连字与 Palatino Linotype 的文本")    
    
@@ -181,11 +181,11 @@ ms.locfileid: "70016144"
   
 <a name="alternates"></a>   
 ## <a name="alternates"></a>备用项  
- 备用项是可替代标准字形的字形。 OpenType 字体 (如以下示例中使用的 Pericles 字体) 可以包含可用于创建不同文本外观的备用标志符号。 以下文本显示 Pericles 字体的标准字形。  
+ 备用项是可替代标准字形的字形。 OpenType 字体（如以下示例中使用的 Pericles 字体）可以包含可用于创建不同文本外观的备用标志符号。 以下文本显示 Pericles 字体的标准字形。  
   
  ![使用 OpenType 标准字形的文本](./media/opentype-font-features/opentype-standard-glyphs.gif "使用 OpenType 标准字形的文本")  
 
- Pericles OpenType 字体包含其他一些标志符号, 它们提供标准字形集的样式备用项。 以下文本显示样式备用字形。  
+ Pericles OpenType 字体包含其他一些标志符号，它们提供标准字形集的样式备用项。 以下文本显示样式备用字形。  
   
  ![使用 OpenType 样式备用字形的文本](./media/opentype-font-features/opentype-stylistic-alternate-glyphs.gif "使用 OpenType 样式备用字形的文本")  
   
@@ -224,7 +224,7 @@ ms.locfileid: "70016144"
  OpenType 字体支持多种可用于文本中数值的功能。  
   
 ### <a name="fractions"></a>分数  
- OpenType 字体支持分数样式, 包括斜杠和堆积样式。  
+ OpenType 字体支持分数样式，包括斜杠和堆积样式。  
   
  以下文本显示 Palatino Linotype 字体的分数样式。  
   
@@ -248,7 +248,7 @@ ms.locfileid: "70016144"
  [!code-xaml[OpenTypeFontSamples#11](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#11)]  
   
 ### <a name="proportional-and-tabular-figures"></a>比例数字和表格式数字  
- OpenType 字体支持比例和表格格式的功能, 可在使用数字时控制宽度的对齐方式。 比例数字将每个数字视为具有不同的宽度—“1”窄于“5”。 表格式数字被视为宽度相等的数字，因此它们可垂直对齐，从而增强财务类型信息的可读性。  
+ OpenType 字体支持比例和表格格式的功能，可在使用数字时控制宽度的对齐方式。 比例数字将每个数字视为具有不同的宽度—“1”窄于“5”。 表格式数字被视为宽度相等的数字，因此它们可垂直对齐，从而增强财务类型信息的可读性。  
   
  以下文本使用 Miramonte 字体显示第一列中的两个表格式数字。 请注意数字“5”和“1”之间的宽度差异。 第二列显示相同的两个数值，并通过使用表格式数字功能调整其宽度。  
   
@@ -259,7 +259,7 @@ ms.locfileid: "70016144"
  [!code-xaml[OpenTypeFontSamples#OpenTypeFontSnippet19](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/Window1.xaml#opentypefontsnippet19)]  
   
 ### <a name="slashed-zero"></a>斜线零  
- OpenType 字体支持斜杠零数字格式, 以强调字母 "O" 和数字 "0" 之间的差异。 斜线零数字通常用于财务和商务信息中的标识符。  
+ OpenType 字体支持斜杠零数字格式，以强调字母 "O" 和数字 "0" 之间的差异。 斜线零数字通常用于财务和商务信息中的标识符。  
   
  以下文本显示使用 Miramonte 字体的订单标识符。 第一行使用标准数字。 第二行使用斜线零数字，以便更易于与大写字母“O”进行区分。  
   
@@ -271,7 +271,7 @@ ms.locfileid: "70016144"
   
 <a name="typography_class"></a>   
 ## <a name="typography-class"></a>版式类  
- <xref:System.Windows.Documents.Typography>对象公开 OpenType 字体支持的一组功能。 通过在标记中设置<xref:System.Windows.Documents.Typography>的属性, 可轻松创作利用 OpenType 功能的文档。  
+ <xref:System.Windows.Documents.Typography>对象公开 OpenType 字体支持的一组功能。 通过在标记中设置<xref:System.Windows.Documents.Typography>的属性，可轻松创作利用 OpenType 功能的文档。  
   
  以下文本显示 Pescadero 字体的标准大写字母，其后接样式为“SmallCaps”和“AllSmallCaps”的字母。 本例中，对所有三个单词均使用相同的字体大小。  
   
@@ -289,7 +289,7 @@ ms.locfileid: "70016144"
 ### <a name="typography-class-properties"></a>版式类属性  
  下表列出了<xref:System.Windows.Documents.Typography>对象的属性、值和默认设置。  
   
-|属性|值|Default Value|  
+|Property|值|默认值|  
 |--------------|----------------|-------------------|  
 |<xref:System.Windows.Documents.Typography.AnnotationAlternates%2A>|数值 - 字节|0|  
 |<xref:System.Windows.Documents.Typography.Capitals%2A>|<xref:System.Windows.FontCapitals.AllPetiteCaps> &#124; <xref:System.Windows.FontCapitals.AllSmallCaps> &#124; <xref:System.Windows.FontCapitals.Normal> &#124; <xref:System.Windows.FontCapitals.PetiteCaps> &#124; <xref:System.Windows.FontCapitals.SmallCaps> &#124; <xref:System.Windows.FontCapitals.Titling> &#124; <xref:System.Windows.FontCapitals.Unicase>|<xref:System.Windows.FontCapitals.Normal?displayProperty=nameWithType>|  

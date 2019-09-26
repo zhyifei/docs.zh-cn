@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 412e2bb7da7b5b3396342df169d56d2724ddb466
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: eab5fc13b74d8af4f0baaa3953c5c73ea255bfe6
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740553"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274025"
 ---
-# <a name="corpubenumprocess-enumeration"></a>COR_PUB_ENUMPROCESS 枚举
+# <a name="cor_pub_enumprocess-enumeration"></a>COR_PUB_ENUMPROCESS 枚举
 标识要枚举的进程的类型。  
   
 ## <a name="syntax"></a>语法  
@@ -38,20 +38,20 @@ typedef enum {
   
 |成员名称|描述|  
 |-----------------|-----------------|  
-|`COR_PUB_MANAGEDONLY`|托管的进程。|  
+|`COR_PUB_MANAGEDONLY`|托管进程。|  
   
 ## <a name="remarks"></a>备注  
  非托管调试 API 的当前版本仅枚举托管进程。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../get-started/system-requirements.md)。  
   
- **标头：** CorPub.idl CorPub.h  
+ **标头：** CorPub，CorPub  
   
- **库：** CorGuids.lib  
+ **类库**CorGuids.lib  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 
-- [调试枚举](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [调试枚举](debugging-enumerations.md)

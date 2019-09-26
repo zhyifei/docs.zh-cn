@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 426420175a7d05f39859b9e217a888a8c01b6d63
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5d76fa4b2352da18b5ef0e547ebc4e2e99d980b8
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740495"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274000"
 ---
-# <a name="cortypeid-structure"></a>COR_TYPEID 结构
+# <a name="cor_typeid-structure"></a>COR_TYPEID 结构
 包含类型标识符。  
   
 ## <a name="syntax"></a>语法  
@@ -43,20 +43,20 @@ typedef struct COR_TYPEID{
 |`token2`|第二个标记。|  
   
 ## <a name="remarks"></a>备注  
- `COR_TYPEID`结构返回的大量调试方法，提供要进行垃圾回收的对象有关的信息。 它可以然后作为参数传递到其他调试方法，提供与项相关的其他信息。 例如，通过枚举[ICorDebugHeapEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-interface.md)对象，您可以检索各个[COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md)表示托管堆上的单个对象的对象。 然后，可以传递`COR_TYPEID`值从`COR_HEAPOBJECT.type`字段[ICorDebugProcess5::GetTypeForTypeID](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-gettypefortypeid-method.md)方法来检索一个 ICorDebugType 对象，提供有关对象的类型信息。  
+ `COR_TYPEID`结构由若干调试方法返回，这些方法提供有关要进行垃圾回收的对象的信息。 然后，可以将其作为参数传递给其他调试方法，这些方法提供了有关该项的附加信息。 例如，通过枚举[ICorDebugHeapEnum](icordebugheapenum-interface.md)对象，您可以检索单个[COR_HEAPOBJECT](cor-heapobject-structure.md)对象，这些对象表示托管堆上的单个对象。 然后，可以将该`COR_TYPEID` `COR_HEAPOBJECT.type`字段中的值传递给[ICorDebugProcess5：： GetTypeForTypeID](icordebugprocess5-gettypefortypeid-method.md)方法，以检索一个 ICorDebugType 对象，该对象提供有关对象的类型信息。  
   
- 一个`COR_TYPEID`旨在不透明对象。 其各个字段不应访问或操作。 其唯一用途是作为提供的标识符作为`out`中参数的方法调用和可，反过来，传递给其他方法，以提供其他信息。  
+ 对象`COR_TYPEID`应是不透明的。 不应访问或操作其各个字段。 其唯一用途是作为方法调用中的`out`参数提供的标识符，而后者又可传递给其他方法以提供其他信息。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头：** Cordebug.idl，Cordebug.idl  
   
- **库：** CorGuids.lib  
+ **类库**CorGuids.lib  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 
-- [调试结构](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [调试](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [调试结构](debugging-structures.md)
+- [调试](index.md)

@@ -8,29 +8,29 @@ helpviewer_keywords:
 - TreeView control [Windows Forms], adding nodes
 ms.assetid: 35bf1750-045e-4ec5-97cb-b47b0dbdaa2c
 ms.openlocfilehash: ef3a963b5621f0b972b02a007681f600fbdb1050
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69040079"
 ---
 # <a name="how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control-using-the-designer"></a>如何：通过使用设计器添加和删除 Windows 窗体 TreeView 控件中的节点
 
-由于 Windows 窗体<xref:System.Windows.Forms.TreeView>控件以分层方式显示节点, 因此在添加节点时, 必须注意其父节点。
+由于 Windows 窗体<xref:System.Windows.Forms.TreeView>控件以分层方式显示节点，因此在添加节点时，必须注意其父节点。
 
-下面的过程需要一个**Windows 应用程序**项目, 该项目具有<xref:System.Windows.Forms.TreeView>包含控件的窗体。 有关设置此类项目的信息, 请参阅[如何:创建 Windows 窗体应用程序项目](/visualstudio/ide/step-1-create-a-windows-forms-application-project)以及[如何:将控件添加到](how-to-add-controls-to-windows-forms.md)Windows 窗体。
+下面的过程需要一个**Windows 应用程序**项目，该项目具有<xref:System.Windows.Forms.TreeView>包含控件的窗体。 有关设置此类项目的信息，请参阅[如何：创建 Windows 窗体应用程序项目](/visualstudio/ide/step-1-create-a-windows-forms-application-project)以及[如何：将控件添加到](how-to-add-controls-to-windows-forms.md)Windows 窗体。
 
 ### <a name="to-add-or-remove-nodes-in-the-designer"></a>在设计器中添加或删除节点
 
 1. 选择 <xref:System.Windows.Forms.TreeView> 控件。
 
-2. 在 "**属性**" 窗口中<xref:System.Windows.Forms.TreeView.Nodes%2A> , 单击属性![旁边的**省略号**("Visual Studio](./media/visual-studio-ellipsis-button.png)" 的属性窗口中的省略号按钮 (...)。
+2. 在 "**属性**" 窗口中<xref:System.Windows.Forms.TreeView.Nodes%2A> ，单击属性![旁边的**省略号**（"Visual Studio](./media/visual-studio-ellipsis-button.png)" 的属性窗口中的省略号按钮（...）。
 
      此时将显示 " **TreeNode 节点编辑器**"。
 
-3. 若要添加节点, 根节点必须存在;如果不存在, 则必须先通过单击 "**添加根**" 按钮添加一个根。 然后, 可以通过选择根节点或任何其他节点, 然后单击 "**添加子级**" 按钮来添加子节点。
+3. 若要添加节点，根节点必须存在;如果不存在，则必须先通过单击 "**添加根**" 按钮添加一个根。 然后，可以通过选择根节点或任何其他节点，然后单击 "**添加子级**" 按钮来添加子节点。
 
-4. 若要删除节点, 请选择要删除的节点, 然后单击 "**删除**" 按钮。
+4. 若要删除节点，请选择要删除的节点，然后单击 "**删除**" 按钮。
 
 ## <a name="see-also"></a>请参阅
 
@@ -39,4 +39,4 @@ ms.locfileid: "69040079"
 - [如何：设置 Windows 窗体 TreeView 控件的图标](how-to-set-icons-for-the-windows-forms-treeview-control.md)
 - [如何：遍历 Windows 窗体 TreeView 控件的所有节点](how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control.md)
 - [如何：确定单击的 TreeView 节点](how-to-determine-which-treeview-node-was-clicked-windows-forms.md)
-- [如何：向 TreeView 或 ListView 控件添加自定义信息 (Windows 窗体)](add-custom-information-to-a-treeview-or-listview-control-wf.md)
+- [如何：向 TreeView 或 ListView 控件添加自定义信息（Windows 窗体）](add-custom-information-to-a-treeview-or-listview-control-wf.md)

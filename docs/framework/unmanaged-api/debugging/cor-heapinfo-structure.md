@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3dd233643bd18b60b7d6176c34ee57e4061daf7c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f7b340a73aa9eaebca9c0d78563ae298557039b8
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740652"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274193"
 ---
-# <a name="corheapinfo-structure"></a>COR_HEAPINFO 结构
+# <a name="cor_heapinfo-structure"></a>COR_HEAPINFO 结构
 提供有关垃圾回收堆的常规信息，包括它是否是可枚举的。  
   
 ## <a name="syntax"></a>语法  
@@ -42,27 +42,27 @@ typedef struct _COR_HEAPINFO {
   
 |成员|描述|  
 |------------|-----------------|  
-|`areGCStructuresValid`|`true` 如果垃圾回收结构都有效，并且可以枚举堆;，否则为`false`。|  
-|`pointerSize`|以字节为单位的目标体系结构的指针的大小。|  
-|`numHeaps`|逻辑垃圾回收堆的进程数。|  
-|`concurrent`|`TRUE` 如果并发 （后台） 垃圾回收已启用;否则为`FALSE`。|  
-|`gcType`|成员[CorDebugGCType](../../../../docs/framework/unmanaged-api/debugging/cordebuggctype-enumeration.md)枚举，指示是否在工作站或服务器上运行垃圾回收器。|  
+|`areGCStructuresValid`|`true`如果垃圾回收结构有效并且可以枚举堆，则为;否则为`false`。|  
+|`pointerSize`|目标体系结构上指针的大小（以字节为单位）。|  
+|`numHeaps`|进程中逻辑垃圾回收堆的数目。|  
+|`concurrent`|`TRUE`如果启用并发（后台）垃圾回收，则为;否则为`FALSE`。|  
+|`gcType`|[CorDebugGCType](cordebuggctype-enumeration.md)枚举的成员，它指示垃圾回收器是在工作站上运行还是在服务器上运行。|  
   
 ## <a name="remarks"></a>备注  
- 实例`COR_HEAPINFO`结构返回通过调用[ICorDebugProcess5::GetGCHeapInformation](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getgcheapinformation-method.md)方法。  
+ 使用`COR_HEAPINFO` [ICorDebugProcess5：： GetGCHeapInformation](icordebugprocess5-getgcheapinformation-method.md)方法返回结构的实例。  
   
- 枚举在垃圾回收堆上的对象之前, 您必须始终检查`areGCStructuresValid`字段以确保在堆中的可枚举的状态。 有关详细信息，请参阅[ICorDebugProcess5::GetGCHeapInformation](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getgcheapinformation-method.md)方法。  
+ 枚举垃圾回收堆上的对象之前，必须始终检查`areGCStructuresValid`字段以确保堆处于可枚举状态。 有关详细信息，请参阅[ICorDebugProcess5：： GetGCHeapInformation](icordebugprocess5-getgcheapinformation-method.md)方法。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头：** Cordebug.idl，Cordebug.idl  
   
- **库：** CorGuids.lib  
+ **类库**CorGuids.lib  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 
-- [调试结构](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [调试](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [调试结构](debugging-structures.md)
+- [调试](index.md)

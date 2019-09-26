@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: d26cf45a0243d61757af5d9d0c00cf135ae15bdf
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7ace405e2624f15b1cdb6d383222ae87c93289bb
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740865"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274099"
 ---
 # <a name="clrdatasourcetype-enumeration"></a>CLRDataSourceType 枚举
 
-提供使用 CLRDATA_IL_ADDRESS_MAP 结构的值。
+提供 CLRDATA_IL_ADDRESS_MAP 结构使用的值。
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -41,20 +41,20 @@ typedef enum
 
 | 成员                        | 描述                           |
 | ----------------------------- | ------------------------------------- |
-| `CLRDATA_SOURCE_TYPE_INVALID` | 若要将指明没有其他应用 |
+| `CLRDATA_SOURCE_TYPE_INVALID` | 指示无其他应用 |
 
 ## <a name="remarks"></a>备注
 
-此枚举存在于运行时内，不通过任何标头或库文件公开。 若要使用它，定义枚举，如上面代码中定义。 这也是对使用别名`CLRDATA_ENUM`中所述[常见数据类型](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md)。
+此枚举位于运行时中，并且不会通过任何标头或库文件公开。 若要使用它，请在代码中定义上面定义的枚举。 这也会化名为`CLRDATA_ENUM` ，如[常用数据类型](../common-data-types-unmanaged-api-reference.md)中所述。
 
 ## <a name="requirements"></a>要求
 
-**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
-**标头：** 无  
-**库：** None  
+**适用**请参阅[系统需求](../../get-started/system-requirements.md)。  
+**标头：** None  
+**类库**None  
 **.NET Framework 版本：** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>请参阅
 
-- [调试](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [调试枚举](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [调试](index.md)
+- [调试枚举](debugging-enumerations.md)

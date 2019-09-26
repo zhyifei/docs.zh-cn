@@ -18,15 +18,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a9eb9bb1e4abeb98d8d0ba2b052612d918c45f22
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3a05a779d4a56eb8f881da1824d5ffaa363b5a01
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741081"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274282"
 ---
 # <a name="closeclrenumeration-function"></a>CloseCLREnumeration 函数
-关闭任何有效公共语言运行时 (CLR) 继续启动事件返回的句柄数组中位于[EnumerateCLRs 函数](../../../../docs/framework/unmanaged-api/debugging/enumerateclrs-function.md)，并释放句柄和字符串路径数组的内存。  
+关闭位于[EnumerateCLRs 函数](enumerateclrs-function.md)所返回的句柄数组中的所有有效的公共语言运行时（CLR）继续启动事件，并释放该句柄和字符串路径数组的内存。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,17 +40,17 @@ HRESULT CloseCLREnumeration (
   
 ## <a name="parameters"></a>参数  
  `pHandleArray`  
- [in]从返回的事件句柄数组指针[EnumerateCLRs 函数](../../../../docs/framework/unmanaged-api/debugging/enumerateclrs-function.md)。  
+ 中指向从[EnumerateCLRs 函数](enumerateclrs-function.md)返回的事件句柄的数组的指针。  
   
  `pStringArray`  
- [in]从返回的 CLR 字符串路径数组的指针[EnumerateCLRs 函数](../../../../docs/framework/unmanaged-api/debugging/enumerateclrs-function.md)。  
+ 中一个指针，指向从[EnumerateCLRs 函数](enumerateclrs-function.md)返回的 CLR 字符串路径的数组。  
   
  `dwArrayLength`  
  [in] 包含 `pHandleArray` 或 `pStringArray`大小（长度）（它们是相同）的 DWORD。  
   
 ## <a name="return-value"></a>返回值  
  S_OK  
- 通过打开句柄[EnumerateCLRs 函数](../../../../docs/framework/unmanaged-api/debugging/enumerateclrs-function.md)都将关闭，并释放句柄和字符串数组分配内存。  
+ [EnumerateCLRs 函数](enumerateclrs-function.md)打开的句柄将关闭，并且将释放分配给句柄和字符串数组的内存。  
   
  E_INVALIDARG  
  `pHandleArray` 的长度与传入 `dwArrayLength` 的长度不匹配。  
@@ -59,10 +59,10 @@ HRESULT CloseCLREnumeration (
  此函数无法释放 `pHandleArray` 和 `pStringArray` 的内存。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../get-started/system-requirements.md)。  
   
- **标头：** dbgshim.h  
+ **标头：** dbgshim.dll  
   
  **库：** dbgshim.dll  
   
- **.NET framework 版本：** 3.5 SP1
+ **.NET Framework 版本：** 3.5 SP1

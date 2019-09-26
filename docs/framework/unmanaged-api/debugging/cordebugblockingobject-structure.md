@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 83dac3b9b2ac396cdef19695fcce0f7e20485a50
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 57de11c1c40c05befcf3c99c31c2e07e1ecaec5a
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740392"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71273972"
 ---
 # <a name="cordebugblockingobject-structure"></a>CorDebugBlockingObject 结构
-定义一个阻塞线程的线程被阻塞的具体原因的对象。  
+定义一个对象，该对象阻止线程，并且该线程被阻止的特定原因。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,22 +41,22 @@ CorDebugBlockingReason blockingReason;
   
 |成员|描述|  
 |------------|-----------------|  
-|`pBlockingObject`|在其阻止线程对象。 此对象的有效期仅为当前同步状态的持续时间。 如果两个线程要阻止在相同的同步状态中对同一个对象，会按预期[icordebugvalue:: Getaddress](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-getaddress-method.md)方法以返回相同的值。 但是，接口可能也可能不是等效的指针。|  
-|`dwTimeout`|阻止操作之前的毫秒数将超时时间，或者值为无穷大，这表示它将不会超时。超时值指定时间阻止操作，而不是仍剩余的时间的总长度。|  
-|`blockingReason`|线程此对象上阻塞的原因。|  
+|`pBlockingObject`|线程要阻止的对象。 此对象仅在当前已同步状态的持续时间内有效。 如果两个线程在同一对象处于相同的同步状态，则可能需要[ICorDebugValue：： GetAddress](icordebugvalue-getaddress-method.md)方法返回相同的值。 但是，接口可能与指针等效。|  
+|`dwTimeout`|阻止操作超时前等待的毫秒数，或值无限，这表示不会超时。超时值指定阻止操作的总时间长度，而不是剩余时间。|  
+|`blockingReason`|此对象上阻塞线程的原因。|  
   
 ## <a name="remarks"></a>备注  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl  
   
- **库：** CorGuids.lib  
+ **类库**CorGuids.lib  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 
-- [调试结构](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [调试](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [调试结构](debugging-structures.md)
+- [调试](index.md)

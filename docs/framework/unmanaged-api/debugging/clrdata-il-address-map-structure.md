@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 2f34ae3e6687027aeb75e7ea169487fc8cbda466
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3f6928832d822422177ebd7def142422953468a0
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741029"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274296"
 ---
-# <a name="clrdatailaddressmap-structure"></a>CLRDATA_IL_ADDRESS_MAP 结构
+# <a name="clrdata_il_address_map-structure"></a>CLRDATA_IL_ADDRESS_MAP 结构
 
-定义从 IL 到地址映射。
+定义用于寻址映射的 IL。
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -44,24 +44,24 @@ typedef struct
 
 | 成员         | 描述                                            |
 | -------------- | ------------------------------------------------------ |
-| `ilOffset`     | 包含的地址范围的的 IL 偏移量              |
+| `ilOffset`     | 所包含的地址范围的 IL 偏移量              |
 | `startAddress` | 范围的起始地址。                        |
 | `endAddress`   | 范围的结束地址。                          |
 | `type`         | 数据的类型。 当前未使用此值 |
 
 ## <a name="remarks"></a>备注
 
-此结构存在于运行时内，不通过任何标头或库文件公开。 若要使用它，将结构定义为指定更高版本，其中`CLRDATA_ADDRESS`是 64 位无符号的整数。
+此结构存在于运行时中，并且不会通过任何标头或库文件公开。 若要使用它，请定义上面指定的结构， `CLRDATA_ADDRESS`其中是一个64位无符号整数。
 
 ## <a name="requirements"></a>要求
 
-**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
-**标头：** 无  
-**库：** 无   
+**适用**请参阅[系统需求](../../get-started/system-requirements.md)。  
+**标头：** None  
+**类库**None   
 **.NET Framework 版本：** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>请参阅
 
-- [CLRDataSourceType 枚举](../../../../docs/framework/unmanaged-api/debugging/clrdatasourcetype-enumeration.md)
-- [调试](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [调试结构](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [CLRDataSourceType 枚举](clrdatasourcetype-enumeration.md)
+- [调试](index.md)
+- [调试结构](debugging-structures.md)

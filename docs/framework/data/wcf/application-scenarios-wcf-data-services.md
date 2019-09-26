@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, learn more
 - WCF Data Services, scenarios
 ms.assetid: 7c82658f-e7c0-46b6-834d-6592f67ab5ea
-ms.openlocfilehash: eaf92bea30b80a47d0f623e38eed7768bccdbb6a
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 9e70e2fff0bee22bcb7d7668f33302f7e7013117
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928493"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71273139"
 ---
 # <a name="application-scenarios-wcf-data-services"></a>应用程序方案（WCF 数据服务）
 
@@ -18,7 +18,7 @@ ms.locfileid: "70928493"
 
 将数据库中的关系数据作为[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]源公开。
 
-- [快速入门](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)
+- [快速入门](quickstart-wcf-data-services.md)
 
 - [将数据公开为服务](exposing-your-data-as-a-service-wcf-data-services.md)
 
@@ -26,7 +26,7 @@ ms.locfileid: "70928493"
 
 将任意 CLR 数据类作为 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 源公开。
 
-- [将数据公开为服务](../../../../docs/framework/data/wcf/exposing-your-data-as-a-service-wcf-data-services.md)
+- [将数据公开为服务](exposing-your-data-as-a-service-wcf-data-services.md)
 
 - [如何：使用反射提供程序创建数据服务](create-a-data-service-using-rp-wcf-data-services.md)
 
@@ -34,7 +34,7 @@ ms.locfileid: "70928493"
 
 在基于 .NET Framework 的客户端应用程序中使用 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 源。
 
-- [快速入门](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)
+- [快速入门](quickstart-wcf-data-services.md)
 
 - [在客户端应用程序中使用数据服务](using-a-data-service-in-a-client-application-wcf-data-services.md)
 
@@ -50,7 +50,7 @@ ms.locfileid: "70928493"
 
 在基于 AJAX 的客户端应用程序中使用 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 源。
 
-- [在客户端应用程序中使用数据服务](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md)
+- [在客户端应用程序中使用数据服务](using-a-data-service-in-a-client-application-wcf-data-services.md)
 
 - [ODataURI 约定](https://go.microsoft.com/fwlink/?LinkId=185564)
 
@@ -58,7 +58,7 @@ ms.locfileid: "70928493"
 
 创建用于在客户端和服务器之间传输数据的[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]端到端数据解决方案。
 
-- [快速入门](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)
+- [快速入门](quickstart-wcf-data-services.md)
 
 - [在客户端应用程序中使用数据服务](using-a-data-service-in-a-client-application-wcf-data-services.md)
 
@@ -66,7 +66,7 @@ ms.locfileid: "70928493"
 
 创建一个基于 .NET Framework 的客户端应用程序，它以异步方式使用 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 源以避免客户端上的延迟问题。
 
-- [如何：执行异步数据服务查询](../../../../docs/framework/data/wcf/how-to-execute-asynchronous-data-service-queries-wcf-data-services.md)
+- [如何：执行异步数据服务查询](how-to-execute-asynchronous-data-service-queries-wcf-data-services.md)
 
 - [异步操作](asynchronous-operations-wcf-data-services.md)
 
@@ -74,13 +74,13 @@ ms.locfileid: "70928493"
 
 公开和使用[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]以流形式访问和更改的二进制大型对象的源。
 
-- [流提供程序](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md)
+- [流提供程序](streaming-provider-wcf-data-services.md)
 
 - [处理二进制数据](working-with-binary-data-wcf-data-services.md)
 
 将[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]源绑定到 Windows Presentation Framework （WPF）应用程序中的控件。
 
-- [将数据绑定到控件](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)
+- [将数据绑定到控件](binding-data-to-controls-wcf-data-services.md)
 
 - [如何：将数据绑定到 Windows Presentation Foundation 元素](bind-data-to-wpf-elements-wcf-data-services.md)
 
@@ -88,13 +88,13 @@ ms.locfileid: "70928493"
 
 截获到数据服务的传入消息以执行数据验证和查询的基于角色的筛选。
 
-- [如何：截获数据服务消息](../../../../docs/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services.md)
+- [如何：截获数据服务消息](how-to-intercept-data-service-messages-wcf-data-services.md)
 
 - [侦听器](interceptors-wcf-data-services.md)
 
 创建数据服务上的终结点以启用自定义服务行为。
 
-- [如何：定义服务操作](../../../../docs/framework/data/wcf/how-to-define-a-service-operation-wcf-data-services.md)
+- [如何：定义服务操作](how-to-define-a-service-operation-wcf-data-services.md)
 
 - [服务操作](service-operations-wcf-data-services.md)
 

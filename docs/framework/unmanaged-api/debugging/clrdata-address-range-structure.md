@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: afcb4e642c9b54107423f7474771fdc28cde709e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8eb841b4c4f06a3932805ae6222bdd693def5ea0
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741025"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274301"
 ---
-# <a name="clrdataaddressrange-structure"></a>CLRDATA_ADDRESS_RANGE 结构
+# <a name="clrdata_address_range-structure"></a>CLRDATA_ADDRESS_RANGE 结构
 
-定义一个地址范围。
+定义地址范围。
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -47,16 +47,16 @@ typedef struct
 
 ## <a name="remarks"></a>备注
 
-此结构存在于运行时内，不通过任何标头或库文件公开。 若要使用它，将结构定义为指定更高版本，其中`CLRDATA_ADDRESS`是 64 位无符号的整数。
+此结构存在于运行时中，并且不会通过任何标头或库文件公开。 若要使用它，请定义上面指定的结构， `CLRDATA_ADDRESS`其中是一个64位无符号整数。
 
 ## <a name="requirements"></a>要求
 
-**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
-**标头：** 无  
-**库：** None  
+**适用**请参阅[系统需求](../../get-started/system-requirements.md)。  
+**标头：** None  
+**类库**None  
 **.NET Framework 版本：** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>请参阅
 
-- [调试](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [调试结构](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [调试](index.md)
+- [调试结构](debugging-structures.md)

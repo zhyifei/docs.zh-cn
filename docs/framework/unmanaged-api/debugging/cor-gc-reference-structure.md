@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 61a9cad9d0ce807d62c811e77402b8cc6d8c6905
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cc0b67621f77c0741e0b63b84ab1794530d6280b
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740692"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274229"
 ---
-# <a name="corgcreference-structure"></a>COR_GC_REFERENCE 结构
+# <a name="cor_gc_reference-structure"></a>COR_GC_REFERENCE 结构
 包含有关要进行垃圾回收的对象的信息。  
   
 ## <a name="syntax"></a>语法  
@@ -41,38 +41,38 @@ typedef struct _COR_GC_REFERENCE {
   
 |成员|描述|  
 |------------|-----------------|  
-|`domain`|指向句柄或对象所属的应用程序域的指针。 其值可能为`null`。|  
-|`location`|ICorDebugValue 或 ICorDebugReferenceValue 接口对应于要进行垃圾回收的对象。|  
-|`type`|一个[CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md)枚举值，该值指示根原来所在的位置。 有关详细信息，请参阅“备注”部分。|  
-|`extraData`|要进行垃圾回收的对象有关的其他数据。 此信息取决于源的对象，由`type`字段。 有关详细信息，请参阅“备注”部分。|  
+|`domain`|指向句柄或对象所属的应用程序域的指针。 其值可以是`null`。|  
+|`location`|与要进行垃圾回收的对象相对应的 ICorDebugValue 或 ICorDebugReferenceValue 接口。|  
+|`type`|一个[CorGCReferenceType](corgcreferencetype-enumeration.md)枚举值，该值指示根的来源。 有关详细信息，请参阅“备注”部分。|  
+|`extraData`|有关要进行垃圾回收的对象的其他数据。 此信息取决于对象的源，如`type`字段所示。 有关详细信息，请参阅“备注”部分。|  
   
 ## <a name="remarks"></a>备注  
- `type`字段是[CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md)枚举值，该值指示引用原来所在的位置。 特定`COR_GC_REFERENCE`值可以反映任何以下类型的托管对象：  
+ 该`type`字段是一个[CorGCReferenceType](corgcreferencetype-enumeration.md)枚举值，该值指示引用来自何处。 特定`COR_GC_REFERENCE`值可以反映以下任意一种类型的托管对象：  
   
-- 从所有托管堆栈的对象 (`CorGCReferenceType.CorReferenceStack`)。 这包括实时引用在托管的代码中，由公共语言运行时创建的对象。  
+- 所有托管堆栈（`CorGCReferenceType.CorReferenceStack`）中的对象。 这包括托管代码中的实时引用以及由公共语言运行时创建的对象。  
   
-- 句柄表中的对象 (`CorGCReferenceType.CorHandle*`)。 这包括强引用 (`HNDTYPE_STRONG`和`HNDTYPE_REFCOUNT`) 和模块中的静态变量。  
+- 来自句柄表（`CorGCReferenceType.CorHandle*`）的对象。 这包括模块中的`HNDTYPE_STRONG`强`HNDTYPE_REFCOUNT`引用（和）和静态变量。  
   
-- 终结器队列中的对象 (`CorGCReferenceType.CorReferenceFinalizer`)。 终结器队列根对象，直到运行终结器。  
+- 终结器队列（`CorGCReferenceType.CorReferenceFinalizer`）中的对象。 终结器队列根对象，直到终结器运行。  
   
- `extraData`字段包含额外数据，具体取决于所引用的源 （或类型）。 可能的值有：  
+ `extraData`字段包含额外的数据，具体取决于引用的源（或类型）。 可能的值有：  
   
-- `DependentSource`。 如果`type`是`CorGCREferenceType.CorHandleStrongDependent`，此字段是对象保持活动状态，如果根对对象进行垃圾回收在`COR_GC_REFERENCE.Location`。  
+- `DependentSource`。 `type`如果为`CorGCREferenceType.CorHandleStrongDependent`，则此字段为对象，如果为，则此字段为要在其上`COR_GC_REFERENCE.Location`进行垃圾回收的对象的根。  
   
-- `RefCount`。 如果`type`是`CorGCREferenceType.CorHandleStrongRefCount`，此字段是句柄的引用计数。  
+- `RefCount`。 `type`如果为`CorGCREferenceType.CorHandleStrongRefCount`，则此字段是句柄的引用计数。  
   
-- `Size`。 如果`type`是`CorGCREferenceType.CorHandleStrongSizedByref`，此字段是垃圾回收器为其计算对象根的对象树的最后大小。 请注意，此计算不一定是最新。  
+- `Size`。 `type`如果为`CorGCREferenceType.CorHandleStrongSizedByref`，则此字段是垃圾回收器为其计算对象根的对象树的最后一个大小。 请注意，此计算不一定是最新的。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头：** Cordebug.idl，Cordebug.idl  
   
- **库：** CorGuids.lib  
+ **类库**CorGuids.lib  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 
-- [调试结构](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [调试](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [调试结构](debugging-structures.md)
+- [调试](index.md)

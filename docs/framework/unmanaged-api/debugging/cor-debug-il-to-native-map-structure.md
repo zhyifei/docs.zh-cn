@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 238e59978bd084379fe6c0576107d674812bce8d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: babb1ace1385c241b782691f22bfb4fbb689e310
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740782"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274075"
 ---
-# <a name="cordebugiltonativemap-structure"></a>COR_DEBUG_IL_TO_NATIVE_MAP 结构
+# <a name="cor_debug_il_to_native_map-structure"></a>COR_DEBUG_IL_TO_NATIVE_MAP 结构
 包含用于将 Microsoft 中间语言 (MSIL) 代码映射到本机代码的偏移量。  
   
 ## <a name="syntax"></a>语法  
@@ -41,21 +41,21 @@ typedef struct COR_DEBUG_IL_TO_NATIVE_MAP {
 |成员|描述|  
 |------------|-----------------|  
 |`ilOffset`|MSIL 代码的偏移量。|  
-|`nativeStartOffset`|本机代码开头的偏移量。|  
-|`nativeEndOffset`|本机代码的结束偏移量。|  
+|`nativeStartOffset`|本机代码起始位置的偏移量。|  
+|`nativeEndOffset`|本机代码末尾的偏移量。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../get-started/system-requirements.md)。  
   
- **标头：** CorProf.idl CorDebug.idl  
+ **标头：** Corprof.idl、Cordebug.idl  
   
- **库：** CorGuids.lib  
+ **类库**CorGuids.lib  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 
-- [GetILToNativeMapping 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md)
-- [GetILToNativeMapping 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getiltonativemapping-method.md)
-- [调试结构](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [调试](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [GetILToNativeMapping 方法](../profiling/icorprofilerinfo-getiltonativemapping-method.md)
+- [GetILToNativeMapping 方法](icordebugcode-getiltonativemapping-method.md)
+- [调试结构](debugging-structures.md)
+- [调试](index.md)

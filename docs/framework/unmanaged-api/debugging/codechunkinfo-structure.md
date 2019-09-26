@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2baefa45deb8c13e8c1e627724fbe271b210a9ce
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 36afee8af3de046683c55215a677a529b0837c77
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740882"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274258"
 ---
 # <a name="codechunkinfo-structure"></a>CodeChunkInfo 结构
 
@@ -40,23 +40,23 @@ typedef struct _CodeChunkInfo {
   
 |成员|描述|  
 |------------|-----------------|  
-|`startAddr`|一个`CORDB_ADDRESS`值，该值指定块的起始地址。|  
-|`length`|以字节为单位的块区的大小。|  
+|`startAddr`|一个`CORDB_ADDRESS`值，该值指定块区的起始地址。|  
+|`length`|块区的大小（以字节为单位）。|  
   
 ## <a name="remarks"></a>备注  
- 单一代码块是本机代码的代码对象，例如函数的一部分的区域。  
+ 单个代码块是本机代码区域，它是代码对象（例如函数）的一部分。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl  
   
- **库：** CorGuids.lib  
+ **类库**CorGuids.lib  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 
-- [GetCodeChunks 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md)
-- [调试结构](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [调试](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [GetCodeChunks 方法](icordebugcode2-getcodechunks-method.md)
+- [调试结构](debugging-structures.md)
+- [调试](index.md)

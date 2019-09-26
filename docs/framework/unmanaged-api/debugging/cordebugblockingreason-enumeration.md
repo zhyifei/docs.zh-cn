@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3ea71439c9a6c494c218a7cfc18508f4f8173b03
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 99fcf160b3e3b2b238520e3db5ba2e74b270380a
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740383"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274131"
 ---
 # <a name="cordebugblockingreason-enumeration"></a>CorDebugBlockingReason 枚举
 指定线程可能在给定对象上受到阻塞的原因。  
@@ -42,22 +42,22 @@ Typedef enum CorDebugBlockingReason
 |成员|描述|  
 |------------|-----------------|  
 |`BLOCKING_NONE`|仅限内部使用。|  
-|`BLOCKING_MONITOR_CRITICAL_SECTION`|一个线程尝试获取对某个对象的监视器锁与相关联的关键部分。 通常情况下，发生这种情况时调用的一个<xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType>或<xref:System.Threading.Monitor.TryEnter%2A?displayProperty=nameWithType>方法。|  
-|`BLOCKING_MONITOR_EVENT`|线程正在等待的对象的监视器锁与相关联的事件。 通常情况下，发生这种情况时调用的一个<xref:System.Threading.Monitor?displayProperty=nameWithType>`Wait`方法。|  
+|`BLOCKING_MONITOR_CRITICAL_SECTION`|线程尝试获取与对象上的监视器锁关联的临界区。 通常，在调用<xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType>或<xref:System.Threading.Monitor.TryEnter%2A?displayProperty=nameWithType>方法之一时，会发生这种情况。|  
+|`BLOCKING_MONITOR_EVENT`|线程正在等待与对象的监视器锁关联的事件。 通常情况下，当调用其中一个<xref:System.Threading.Monitor?displayProperty=nameWithType> `Wait`方法时，会发生这种情况。|  
   
 ## <a name="remarks"></a>备注  
- 当`BLOCKING_MONITOR_CRITICAL_SECTION`或`BLOCKING_MONITOR_EVENT`中使用成员[CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md)结构，`pBlockingObject`结构指向一个表示要输入的对象的"ICorDebugValue"接口的成员. 它还保证以实现[ICorDebugHeapValue3](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue3-interface.md)接口。  
+ 当在[CorDebugBlockingObject](cordebugblockingobject-structure.md)结构中使用`pBlockingObject` `BLOCKING_MONITOR_EVENT`或成员时，结构的成员指向一个 "ICorDebugValue" 接口，该接口表示正在输入的对象。 `BLOCKING_MONITOR_CRITICAL_SECTION` 还保证实现[ICorDebugHeapValue3](icordebugheapvalue3-interface.md)接口。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头：** Cordebug.idl，Cordebug.idl  
   
- **库：** CorGuids.lib  
+ **类库**CorGuids.lib  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 
-- [调试枚举](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
-- [调试](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [调试枚举](debugging-enumerations.md)
+- [调试](index.md)

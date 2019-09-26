@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e71a1538e42061c6cb949b22bb63fe6b17a0dfc9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4528ccd77fed2ea2a9b2d08243ffa1535bfad1ae
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741110"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274090"
 ---
-# <a name="clrdebuggingversion-structure"></a>CLR_DEBUGGING_VERSION 结构
+# <a name="clr_debugging_version-structure"></a>CLR_DEBUGGING_VERSION 结构
 出于调试目的，定义公共语言运行时 (CLR) 的产品版本。  
   
 ## <a name="syntax"></a>语法  
@@ -43,25 +43,25 @@ typedef struct _CLR_DEBUGGING_VERSION
   
 |成员|描述|  
 |------------|-----------------|  
-|`wStructVersion`|结构版本数|  
+|`wStructVersion`|结构版本号|  
 |`wMajor`|主版本号。|  
 |`wMinor`|次版本号。|  
 |`wBuild`|内部版本号。|  
 |`wRevision`|修订号。|  
   
 ## <a name="remarks"></a>备注  
- `CLR_DEBUGGING_VERSION`结构但是是 COR_VERSION 结构相同，则`CLR_DEBUGGING_VERSION`结构提供了其他结构版本字段 (`wStructVersion`)。 目前，此字段必须设置为零。  
+ 结构与 COR_VERSION 结构相同，但`CLR_DEBUGGING_VERSION`结构提供了附加的结构版本字段（`wStructVersion`）。 `CLR_DEBUGGING_VERSION` 此字段当前必须设置为零。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl  
   
- **库：** CorGuids.lib  
+ **类库**CorGuids.lib  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 
-- [调试结构](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [调试](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [调试结构](debugging-structures.md)
+- [调试](index.md)

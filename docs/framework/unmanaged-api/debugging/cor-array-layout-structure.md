@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2cccb862a0dfd16eb0bbfe557e3c35373cd7e7b8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ec9c4f3afb8f3b7e75e22874996d57d29ce8cf16
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740807"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274220"
 ---
-# <a name="corarraylayout-structure"></a>COR_ARRAY_LAYOUT 结构
+# <a name="cor_array_layout-structure"></a>COR_ARRAY_LAYOUT 结构
 提供有关内存中数组对象的布局的信息。  
   
 ## <a name="syntax"></a>语法  
@@ -45,30 +45,30 @@ typedef struct COR_ARRAY_LAYOUT {
   
 |成员|描述|  
 |------------|-----------------|  
-|`componentID`|该数组包含的对象的类型的标识符。|  
-|`componentType`|CorElementType 枚举值，该值指示组件是否是垃圾回收引用、 值类或基元。|  
-|`firstElementOffset`|到数组中的第一个元素的偏移量。|  
+|`componentID`|数组包含的对象类型的标识符。|  
+|`componentType`|一个 CorElementType 枚举值，该值指示组件是垃圾回收引用、值类还是基元。|  
+|`firstElementOffset`|数组中第一个元素的偏移量。|  
 |`elementSize`|每个元素的大小。|  
-|`countOffset`|到数组中的元素数的偏移量。|  
-|`rankSize`|秩，以字节为单位的大小。|  
-|`numRanks`|数组中的排名数。|  
-|`rankOffset`|排名开始的偏移量。|  
+|`countOffset`|数组中元素数的偏移量。|  
+|`rankSize`|排名的大小（以字节为单位）。|  
+|`numRanks`|数组中的通道数。|  
+|`rankOffset`|排名开始处的偏移量。|  
   
 ## <a name="remarks"></a>备注  
- `rankSize`字段多维数组中指定级别的大小。 它是一维数组也为准确的。  
+ `rankSize`字段指定多维数组中排名的大小。 它对于一维数组也是准确的。  
   
- 值`numRanks`为 1 的一维数组并`N`多维数组的`N`维度。  
+ 对于一维`numRanks`数组和`N`维度的多维数组， `N`值为1。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头：** Cordebug.idl，Cordebug.idl  
   
- **库：** CorGuids.lib  
+ **类库**CorGuids.lib  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 
-- [调试结构](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [调试](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [调试结构](debugging-structures.md)
+- [调试](index.md)
