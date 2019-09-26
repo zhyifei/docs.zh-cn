@@ -5,13 +5,16 @@ helpviewer_keywords:
 - accessibility [Windows Forms], Windows applications
 - Windows applications [Windows Forms], accessibility
 - applications [Windows Forms], accessibility
+dev_langs:
+- csharp
+- vb
 ms.assetid: 654c7f2f-1586-480b-9f12-9d9b8f5cc32b
-ms.openlocfilehash: 5768177401504f4776a34e499d07b7600597175a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: de25c3dcf33471a1aadb4445a83affab9c40914b
+ms.sourcegitcommit: 1e72e2990220b3635cebc39586828af9deb72d8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69957192"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71306339"
 ---
 # <a name="walkthrough-creating-an-accessible-windows-based-application"></a>演练：创建基于 Windows 的可访问应用程序
 
@@ -68,7 +71,7 @@ ms.locfileid: "69957192"
 
 - 将控件添加到窗体并如下所述设置属性。 有关如何在窗体上排列控件的模型，请查看表结尾处的图片。
 
-   |Object|属性|值|
+   |Object|属性|ReplTest1|
    |------------|--------------|-----------|
    |Form1|AccessibleDescription|订购窗体|
    ||AccessibleName|订购窗体|
@@ -140,9 +143,9 @@ ms.locfileid: "69957192"
    |MenuItem|name|exitApp|
    ||文本|退出(&X)|
 
-   您的窗体将如下图所示:
+   您的窗体将如下图所示：
 
-   !["比萨饼订单" 窗体具有 "名称" 文本框, "大小" 和 "浇头" 选项。](./media/walkthrough-creating-an-accessible-windows-based-application/visual-basic-pizza-order-form.gif)
+   !["比萨饼订单" 窗体具有 "名称" 文本框，"大小" 和 "浇头" 选项。](./media/walkthrough-creating-an-accessible-windows-based-application/visual-basic-pizza-order-form.gif)
 
 ## <a name="supporting-high-contrast-mode"></a>支持高对比度模式
 
@@ -165,96 +168,88 @@ ms.locfileid: "69957192"
 1. 创建一种方法将标签颜色设置为系统颜色。
 
     ```vb
-    ' Visual Basic
     Private Sub SetColorScheme()
-       If SystemInformation.HighContrast Then
-          companyLabel.BackColor = SystemColors.Window
-          companyLabel.ForeColor = SystemColors.WindowText
-       Else
-          companyLabel.BackColor = Color.Blue
-          companyLabel.ForeColor = Color.Yellow
-       End If
+        If SystemInformation.HighContrast Then
+            companyLabel.BackColor = SystemColors.Window
+            companyLabel.ForeColor = SystemColors.WindowText
+        Else
+            companyLabel.BackColor = Color.Blue
+            companyLabel.ForeColor = Color.Yellow
+        End If
     End Sub
     ```
 
     ```csharp
-    // C#
     private void SetColorScheme()
     {
-       if (SystemInformation.HighContrast)
-       {
-          companyLabel.BackColor = SystemColors.Window;
-          companyLabel.ForeColor = SystemColors.WindowText;
-       }
-       else
-       {
-          companyLabel.BackColor = Color.Blue;
-          companyLabel.ForeColor = Color.Yellow;
-       }
+        if (SystemInformation.HighContrast)
+        {
+            companyLabel.BackColor = SystemColors.Window;
+            companyLabel.ForeColor = SystemColors.WindowText;
+        }
+        else
+        {
+            companyLabel.BackColor = Color.Blue;
+            companyLabel.ForeColor = Color.Yellow;
+        }
     }
     ```
 
-2. 在窗体构造函数（Visual Basic 中为 `Public Sub New()`，Visual C# 中为 `public class Form1`）调用 `SetColorScheme` 过程。 若要访问 Visual Basic 中的构造函数，需要展开标记了“Windows 窗体设计器生成的代码”的区域。
+2. 在窗体构造函数（Visual Basic 中为 `Public Sub New()`，Visual C# 中为 `public Form1()`）调用 `SetColorScheme` 过程。 若要访问 Visual Basic 中的构造函数，需要展开标记了“Windows 窗体设计器生成的代码”的区域。
 
     ```vb
-    ' Visual Basic
     Public Sub New()
-       MyBase.New()
-       InitializeComponent()
-       SetColorScheme()
+        MyBase.New()
+        InitializeComponent()
+        SetColorScheme()
     End Sub
     ```
 
     ```csharp
-    // C#
     public Form1()
     {
-       InitializeComponent();
-       SetColorScheme();
+        InitializeComponent();
+        SetColorScheme();
     }
     ```
 
 3. 使用适当签名创建事件过程，以响应 <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> 事件。
 
     ```vb
-    ' Visual Basic
-    Protected Sub UserPreferenceChanged(ByVal sender As Object, _
-    ByVal e As Microsoft.Win32.UserPreferenceChangedEventArgs)
-       SetColorScheme()
+    Protected Sub UserPreferenceChanged(sender As Object, _
+    e As Microsoft.Win32.UserPreferenceChangedEventArgs)
+        SetColorScheme()
     End Sub
     ```
 
     ```csharp
-    // C#
     public void UserPreferenceChanged(object sender,
     Microsoft.Win32.UserPreferenceChangedEventArgs e)
     {
-       SetColorScheme();
+        SetColorScheme();
     }
     ```
 
 4. 在调用 `InitializeComponents` 后将代码添加到窗体构造函数，以便将事件过程挂钩到系统事件。 此方法调用 `SetColorScheme` 过程。
 
     ```vb
-    ' Visual Basic
     Public Sub New()
-       MyBase.New()
-       InitializeComponent()
-       SetColorScheme()
-       AddHandler Microsoft.Win32.SystemEvents.UserPreferenceChanged, _
-          AddressOf Me.UserPreferenceChanged
+        MyBase.New()
+        InitializeComponent()
+        SetColorScheme()
+        AddHandler Microsoft.Win32.SystemEvents.UserPreferenceChanged, _
+           AddressOf Me.UserPreferenceChanged
     End Sub
     ```
 
     ```csharp
-    // C#
     public Form1()
     {
-       InitializeComponent();
-       SetColorScheme();
-       Microsoft.Win32.SystemEvents.UserPreferenceChanged
-          += new Microsoft.Win32.UserPreferenceChangedEventHandler(
-          this.UserPreferenceChanged);
+        InitializeComponent();
+        SetColorScheme();
+        Microsoft.Win32.SystemEvents.UserPreferenceChanged
+           += new Microsoft.Win32.UserPreferenceChangedEventHandler(
+           this.UserPreferenceChanged);
     }
     ```
 
@@ -264,34 +259,27 @@ ms.locfileid: "69957192"
     > 系统事件代码运行独立于主应用程序的线程。 如果不释放事件，挂钩到事件的代码在程序关闭后仍将运行。
 
     ```vb
-    ' Visual Basic
     Protected Overloads Overrides Sub Dispose(ByVal disposing As Boolean)
-       If disposing Then
-          If Not (components Is Nothing) Then
-             components.Dispose()
-          End If
-       End If
-       RemoveHandler Microsoft.Win32.SystemEvents.UserPreferenceChanged, _
-          AddressOf Me.UserPreferenceChanged
-       MyBase.Dispose(disposing)
+        If disposing AndAlso components IsNot Nothing Then
+            components.Dispose()
+        End If
+        RemoveHandler Microsoft.Win32.SystemEvents.UserPreferenceChanged, _
+           AddressOf Me.UserPreferenceChanged
+        MyBase.Dispose(disposing)
     End Sub
     ```
 
     ```csharp
-    // C#
-    protected override void Dispose( bool disposing )
+    protected override void Dispose(bool disposing)
     {
-       if( disposing )
-       {
-          if (components != null)
-          {
-             components.Dispose();
-          }
-       }
-       Microsoft.Win32.SystemEvents.UserPreferenceChanged
-          -= new Microsoft.Win32.UserPreferenceChangedEventHandler(
-          this.UserPreferenceChanged);
-       base.Dispose( disposing );
+        if(disposing && components != null)
+        {
+            components.Dispose();
+        }
+        Microsoft.Win32.SystemEvents.UserPreferenceChanged
+           -= new Microsoft.Win32.UserPreferenceChangedEventHandler(
+           this.UserPreferenceChanged);
+        base.Dispose( disposing );
     }
     ```
 
@@ -303,7 +291,7 @@ ms.locfileid: "69957192"
 
 #### <a name="to-supply-information-by-some-other-means-than-sound"></a>以声音以外的其他方式提供信息
 
-1. 使用 Windows API 函数 FlashWindow 使标题栏闪烁。 有关如何调用 Windows API 函数的示例, 请参阅[演练:调用 Windows Api](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)。
+1. 使用 Windows API 函数 FlashWindow 使标题栏闪烁。 有关如何调用 Windows API 函数的示例，请参阅[演练：调用 Windows Api](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)。
 
     > [!NOTE]
     > 用户可能已启用 Windows SoundSentry 服务，它也会在系统声音通过计算机内置扬声器播放时使窗口闪烁。
