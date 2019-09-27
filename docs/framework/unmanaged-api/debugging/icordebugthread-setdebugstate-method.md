@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 66f60b2342b6ff64f1329cbe57032291d5139384
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 15e18888e307a14c4396966afc0a623e1acba104
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67770598"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332814"
 ---
 # <a name="icordebugthreadsetdebugstate-method"></a>ICorDebugThread::SetDebugState 方法
 设置描述此 ICorDebugThread 的调试状态的标志。  
@@ -35,18 +35,18 @@ HRESULT SetDebugState (
 );  
 ```  
   
-## <a name="parameters"></a>参数  
+## <a name="parameters"></a>Parameters  
  `state`  
- [in]CorDebugThreadState 枚举值，用于指定此线程调试状态的按位组合。  
+ 中CorDebugThreadState 枚举值的按位组合，用于指定此线程的调试状态。  
   
 ## <a name="remarks"></a>备注  
- `SetDebugState` 设置线程的当前调试状态。 （"当前的调试状态"表示的调试状态进程是否要继续，不实际的当前状态。）为此标准的值是 THREAD_RUNNING。 仅在调试器可能会影响线程的调试状态。 调试状态执行上一次之间仍然存在，因此如果你想要保留多个通过 thread_suspend 继续一个线程，你可以设置一次和此后不需要担心。 挂起线程和继续执行该过程可能会导致死锁，但通常不大可能。 这是一种内部函数的质量的线程和进程，按设计。 调试程序可以以异步方式中断和恢复来打断死锁的线程。 如果线程的用户状态包括 USER_UNSAFE_POINT，线程可能会阻止垃圾回收 (GC)。 这意味着暂停的线程具有较高可能导致死锁。 这可能会影响的调试事件已排入队列。 因此，调试程序应漏整个事件队列 (通过调用[icordebugcontroller:: Hasqueuedcallbacks](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-hasqueuedcallbacks-method.md)) 挂起或恢复线程之前。 否则它可能会认为它已经具有挂起的线程上收到事件。  
+ @no__t 设置线程的当前调试状态。 （如果进程继续，则为 "当前调试状态"，而不是实际的当前状态。）此值的正常值为 THREAD_RUN。 只有调试器才能影响线程的调试状态。 调试状态完成最后一步，因此，如果想要使线程 THREAD_SUSPENDed 在多个继续，则可以将其设置一次，此后不必担心。 挂起线程并恢复进程可能会导致死锁，但通常不太可能。 这是线程和进程的内部质量，并按设计进行。 调试器可以异步中断和恢复线程以中断死锁。 如果线程的用户状态包括 USER_UNSAFE_POINT，则线程可能会阻止垃圾回收（GC）。 这意味着暂停的线程可能会导致死锁。 这不会影响已排队的调试事件。 因此，在挂起或恢复线程之前，调试程序应释放整个事件队列（通过调用[ICorDebugController：： HasQueuedCallbacks](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-hasqueuedcallbacks-method.md)）。 否则，它可能会在其认为已挂起的线程上获取事件。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头：** Cordebug.idl，Cordebug.idl  
   
- **库：** CorGuids.lib  
+ **类库**CorGuids.lib  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

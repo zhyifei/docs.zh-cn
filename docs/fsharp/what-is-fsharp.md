@@ -2,12 +2,12 @@
 title: F# 是什么
 description: 了解F#编程语言和F#编程的作用。 了解丰富的数据类型、函数以及它们如何组合在一起。
 ms.date: 08/03/2018
-ms.openlocfilehash: 0c576fe49fadebd68e4fc9d2b20ea8f0cb991af5
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 3cba509f59a8e81e1a0264de7451e9d80304d768
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630457"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332735"
 ---
 # <a name="what-is-f"></a>F\# 是什么
 
@@ -45,11 +45,11 @@ F# 具有许多特性，包括：
 * 模式匹配
 * 异步编程
 
-          [F# 语言参考](./language-reference/index.md)中介绍了完整的特性。
+[F# 语言参考](./language-reference/index.md)中介绍了完整的特性。
 
 ## <a name="rich-data-types"></a>丰富的数据类型
 
-          [记录](./language-reference/records.md)和[可区分联合](./language-reference/discriminated-unions.md)等数据类型可以表示复杂的数据和域。
+[记录](./language-reference/records.md)和[可区分联合](./language-reference/discriminated-unions.md)等数据类型可以表示复杂的数据和域。
 
 ```fsharp
 // Group data with Records
@@ -100,7 +100,7 @@ F# 函数也是头等函数，也就是说，它们可以作为参数传递，�
 F# 提供对对象（在需要揉合数据和功能时非常有用的数据类型）的完整支持。 F# 函数用于操作对象。
 
 ```fsharp
-type Set<[<EqualityConditionOn>] 'T when 'T: comparison>(elements: seq<'T>) =
+type Set<'T when 'T: comparison>(elements: seq<'T>) =
     member s.IsEmpty = // Implementation elided
     member s.Contains (value) =// Implementation elided
     member s.Add (value) = // Implementation elided
@@ -110,7 +110,6 @@ type Set<[<EqualityConditionOn>] 'T when 'T: comparison>(elements: seq<'T>) =
     interface IEnumerable<‘T>
     interface IReadOnlyCollection<‘T>
 
-[<RequireQualifiedAccess>]
 module Set =
     let isEmpty (set: Set<'T>) = set.IsEmpty
 
