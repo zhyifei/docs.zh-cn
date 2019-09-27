@@ -50,7 +50,7 @@ End Select
 |`expressionlist`|在语句中`Case`是必需的。 表示的匹配值`testexpression`的表达式子句的列表。 多个表达式子句之间用逗号分隔。 每个子句可以采用以下形式之一：<br /><br /> -   *expression1* `To` *expression2*<br />-   [ `Is` ] *comparisonoperator* *expression*<br />-   *表达式*<br /><br /> 使用关键字可以指定的匹配`testexpression`值范围的边界。 `To` 的`expression1`值必须小于或等于的`expression2`值。<br /><br /> `<` `<>` `<=`使用关键字和`>=`比较`=`运算符（、、 `testexpression`、 、或）来指定对的匹配值的限制。`>` `Is` 如果未提供关键字，则自动将其插入.comparisonoperator`Is`之前。<br /><br /> 仅`expression`指定的窗体被视为`Is`窗体的一种特殊情况，其中 *.comparisonoperator*是等号`=`（）。 此形式的计算结果`testexpression`为 =  `expression`。<br /><br /> 中`expressionlist`的表达式可以是任何数据类型，前提是它们可隐式转换为的`testexpression`类型，并且相应`comparisonoperator`的对于与之一起使用的两种类型都有效。|  
 |`statements`|可选。 如果与中`Case` `testexpression` 的任何`expressionlist`子句匹配，则为运行的一个或多个语句。|  
 |`elsestatements`|可选。 如果`Case Else` 不`testexpression` 与任何`Case`语句的中的任何子句匹配，则为`expressionlist`运行的一个或多个语句。|  
-|`End Select`|终止的定义`Select`.。。`Case`构造。|  
+|`End Select`|终止的定义`Select`...`Case`构造。|  
   
 ## <a name="remarks"></a>备注  
  如果`testexpression`与 any `Case` `End Select` `Case` `Case Else`子句匹配，则该`Case`语句后面的语句将运行到下一个、或语句。 `expressionlist` 然后，控制将传递到后面`End Select`的语句。 如果`testexpression`在多`expressionlist`个`Case`子句中匹配某个子句，则只运行第一个匹配后的语句。  
