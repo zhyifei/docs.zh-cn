@@ -23,7 +23,7 @@ ms.locfileid: "70039965"
  调度程序首先打开通道侦听器，然后接受单一答复通道。 通过该通道，调度程序开始在一个无限循环中发送消息（请求）。 对于每个请求，它都会创建一条答复消息，并将其发送回客户端。  
   
 ## <a name="creating-a-response-message"></a>创建响应消息  
- 消息处理是在 `MyServiceManager` 类型中实现的。 在 `HandleRequest` 方法中，将首先检查消息的 `Action` 标头以查看是否支持该请求。 定义了预定义的 http://tempuri.org/HelloWorld/Hello SOAP 操作 "" 以提供消息筛选。 这类似于的 WCF 实现<xref:System.ServiceModel.ServiceHost>中的服务协定概念。  
+ 消息处理是在 `MyServiceManager` 类型中实现的。 在 `HandleRequest` 方法中，将首先检查消息的 `Action` 标头以查看是否支持该请求。 定义了预定义的"http://tempuri.org/HelloWorld/Hello"SOAP 操作 "" 以提供消息筛选。 这类似于的 WCF 实现<xref:System.ServiceModel.ServiceHost>中的服务协定概念。  
   
  对于正确的 SOAP 操作情况，此示例将检索请求的消息数据，并生成一个与该请求对应的响应，类似于在 <xref:System.ServiceModel.ServiceHost> 示例中所看到的内容。  
   
