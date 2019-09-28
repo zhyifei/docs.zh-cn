@@ -387,7 +387,7 @@ await foreach (var number in GenerateSequence())
 - <xref:System.Range?displayProperty=nameWithType> 表示序列的子范围。
 - 范围运算符 (`..`)，用于指定范围的开始和末尾，就像操作数一样。
 
-让我们从索引规则开始。 请考虑数组 `sequence`。 `0` 索引与 `sequence[0]` 相同。 `^0` 索引与 `sequence[sequence.Length]` 相同。 请注意，`sequence[^0]` 不会引发异常，就像 `sequence[sequence.Length]` 一样。 对于任何数字 `n`，索引 `^n` 与 `sequence.Length - n` 相同。
+让我们从索引规则开始。 请考虑数组 `sequence`。 `0` 索引与 `sequence[0]` 相同。 `^0` 索引与 `sequence[sequence.Length]` 相同。 请注意，`sequence[^0]` 会引发异常，就像 `sequence[sequence.Length]` 一样。 对于任何数字 `n`，索引 `^n` 与 `sequence.Length - n` 相同。
 
 范围指定范围的开始和末尾   。 包括此范围的开始，但不包括此范围的末尾，这表示此范围包含开始但不包含末尾。   范围 `[0..^0]` 表示整个范围，就像 `[0..sequence.Length]` 表示整个范围。 
 
