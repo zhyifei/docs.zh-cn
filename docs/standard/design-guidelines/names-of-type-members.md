@@ -13,12 +13,12 @@ helpviewer_keywords:
 - members [.NET Framework], type
 ms.assetid: af5a0903-36af-4c2a-b848-cf959affeaa5
 author: KrzysztofCwalina
-ms.openlocfilehash: 7cf98b8ed1957352f357c7a9d580b4fd567a1634
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b4da14575d29582814d32a3050087b7acc0da802
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61757490"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353696"
 ---
 # <a name="names-of-type-members"></a>类型成员的名称
 类型的成员包括：方法、属性、事件、构造函数和字段。 以下各部分介绍各类型成员的命名准则。  
@@ -28,7 +28,7 @@ ms.locfileid: "61757490"
   
  **✓ 务必**使用谓词或谓词短语作为方法名称。  
   
-```  
+```csharp  
 public class String {  
     public int CompareTo(...);  
     public string[] Split(...);  
@@ -48,15 +48,15 @@ public class String {
   
  此模式通常表明该属性实际上应是一种方法。  
   
- **✓ 务必**使用用于描述集合中项目的复数形式短语来命名集合属性，而不是使用后跟 "List" 或 "Collection" 的单数形式短语来命名。   
+ **✓ 务必**使用用于描述集合中项目的复数形式短语来命名集合属性，而不是使用后跟 "List" 或 "Collection" 的单数形式短语来命名。  
   
- **✓ 务必**使用肯定语气的短语（`CanSeek` 而不是 `CantSeek`）来命名布尔型属性。 或者，还可以为布尔型属性使用前缀 "Is"、"Can" 或 "Has"，但仅在适用时使用。   
+ **✓ 务必**使用肯定语气的短语（`CanSeek` 而不是 `CantSeek`）来命名布尔型属性。 或者，还可以为布尔型属性使用前缀 "Is"、"Can" 或 "Has"，但仅在适用时使用。  
   
  **✓ 考虑**使用属性的类型的名称为属性命名。  
   
  例如，以下属性正确获取并设置了名为 `Color` 的枚举值，因此该属性名为 `Color`：  
   
-```  
+```csharp  
 public enum Color {...}  
 public class Control {  
     public Color Color { get {...} set {...} }  
@@ -64,7 +64,7 @@ public class Control {
 ```  
   
 ## <a name="names-of-events"></a>事件的名称  
- 事件始终是指某个操作，这个操作可能正在发生，也可能已经发生。 因此与方法一样，事件用谓词命名，谓词时态用于指示事件引发的时间。   
+ 事件始终是指某个操作，这个操作可能正在发生，也可能已经发生。 因此与方法一样，事件用谓词命名，谓词时态用于指示事件引发的时间。  
   
  **✓ 务必**使用谓词或谓词短语来命名事件。  
   
@@ -82,18 +82,18 @@ public class Control {
   
  **✓ 务必**在事件处理程序中使用两个名为 `sender` 和 `e` 的参数。  
   
- sender 参数表示引发事件的对象。 sender 参数的类型通常是 `object`，且可能会使用更具体的类型。   
+ sender 参数表示引发事件的对象。 sender 参数的类型通常是 `object`，且可能会使用更具体的类型。  
   
- **✓ 务必**使用“EventArgs”后缀来命名事件参数类。   
+ **✓ 务必**使用“EventArgs”后缀来命名事件参数类。  
   
 ## <a name="names-of-fields"></a>字段的名称  
  字段命名准则适用于静态公共字段和受保护字段。 准则不适用于内部字段和专用字段，[成员设计准则](../../../docs/standard/design-guidelines/member.md)不允许使用公共或受保护的实例字段。  
   
-  ✓ 请在字段名称中使用 PascalCasing。    
+ ✓ 请在字段名称中使用 PascalCasing。  
   
-  ✓ 请使用名词、名词短语或形容词来命名字段。    
+ ✓ 请使用名词、名词短语或形容词来命名字段。  
   
-  X 请勿在字段名称中使用前缀。    
+ X 请勿在字段名称中使用前缀。  
   
  例如，不要使用 "g_" 或 "s_" 来指示静态字段。  
   

@@ -9,19 +9,19 @@ helpviewer_keywords:
 - ^= operator [Visual Basic]
 - compound assignment statements [Visual Basic]
 ms.assetid: 397da132-2d96-4a85-a7bc-f7c730a608c9
-ms.openlocfilehash: fe5d7b3dcb55192167512e0934e09cff7dfddb6d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 382e0b27c2dbf27e5acccf29f1b8d2b002cb6664
+ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61778516"
+ms.lasthandoff: 09/28/2019
+ms.locfileid: "71592224"
 ---
 # <a name="-operator-visual-basic"></a>^= 运算符 (Visual Basic)
-引发的变量或表达式的属性的值，并将结果赋回给变量或属性。  
+将变量或属性的值提升为表达式的幂，并将结果赋回给变量或属性。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```vb  
 variableorproperty ^= expression  
 ```  
   
@@ -33,19 +33,19 @@ variableorproperty ^= expression
  必需。 任何数值表达式。  
   
 ## <a name="remarks"></a>备注  
- 在左侧和右侧的元素`^=`运算符可以是简单的标量变量、 属性或数组的元素。 变量或属性不能[ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)。  
+ @No__t-0 运算符左侧的元素可以是简单的标量变量、属性或数组元素。 变量或属性不能是[只读](../../../visual-basic/language-reference/modifiers/readonly.md)的。  
   
- `^=`运算符首先引发变量或属性 （在运算符的左侧） 的值 （在运算符的右侧） 的表达式的值的幂。 然后，该运算符将该操作的结果赋回给变量或属性。  
+ @No__t-0 运算符首先引发变量或属性（位于运算符左侧）的值，以使表达式的值（在运算符的右侧）的值的幂。 然后，运算符将该操作的结果赋给变量或属性。  
   
- Visual Basic 始终执行中的求幂[双精度数据类型](../../../visual-basic/language-reference/data-types/double-data-type.md)。 任何其他类型的操作数将转换为`Double`，结果始终为`Double`。  
+ Visual Basic 总是对[Double 数据类型](../../../visual-basic/language-reference/data-types/double-data-type.md)执行幂运算。 任何不同类型的操作数都将转换为 `Double`，并且结果始终 @no__t 为-1。  
   
- 值`expression`可以是小数，负号，或两者。  
+ @No__t-0 的值可以是小数、负数或同时为两者。  
   
 ## <a name="overloading"></a>重载  
- [^ 运算符](../../../visual-basic/language-reference/operators/exponentiation-operator.md)可以是*重载*，这意味着，某个类或结构可以重新定义其行为时，操作数的类或结构的类型。 重载`^`运算符会影响的行为`^=`运算符。 如果你的代码使用`^=`上类或结构的重载`^`，确保了解其重新定义的行为。 有关详细信息，请参阅 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
+ [^ 运算符](../../../visual-basic/language-reference/operators/exponentiation-operator.md)可*重载*，这意味着当操作数具有该类或结构的类型时，该类或结构可以重新定义其行为。 重载 `^` 运算符会影响 @no__t 1 运算符的行为。 如果你的代码在重载 @no__t 的类或结构上使用 `^=`，请确保了解其重新定义的行为。 有关详细信息，请参阅 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
   
 ## <a name="example"></a>示例  
- 下面的示例使用`^=`运算符的一个值进行`Integer`变量的第二个变量中，并将结果赋给第一个变量。  
+ 下面的示例使用 `^=` 运算符将一个 @no__t 变量的值提升为第二个变量的幂，并将结果赋给第一个变量。  
   
  [!code-vb[VbVbalrOperators#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#21)]  
   

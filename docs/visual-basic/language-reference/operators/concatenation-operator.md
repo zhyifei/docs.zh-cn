@@ -10,19 +10,19 @@ helpviewer_keywords:
 - concatenation operators [Visual Basic], syntax
 - strings [Visual Basic], concatenating
 ms.assetid: fefc3d00-cbf1-475c-8c5e-6fb213b3f85a
-ms.openlocfilehash: d387b2dfdbb3fefe357364f7b2a3dde155cbd489
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: aaa7c1b9ab7f6c920180d97b55c3bdeb23f00e02
+ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968354"
+ms.lasthandoff: 09/28/2019
+ms.locfileid: "71592248"
 ---
 # <a name="amp-operator-visual-basic"></a>&amp;运算符（Visual Basic）
 生成两个表达式的字符串串联。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```vb  
 result = expression1 & expression2  
 ```  
   
@@ -42,7 +42,7 @@ result = expression1 & expression2
  的`result`数据类型为`String`。 如果一个或两个表达式的计算结果都不为 [Nothing](../../../visual-basic/language-reference/nothing.md)，或者其值为，则将它们视为值为 "<xref:System.DBNull.Value?displayProperty=nameWithType>" 的字符串。  
   
 > [!NOTE]
-> 运算符可以重载，这意味着当操作数具有该类或结构的类型时，该类或结构可以重新定义其行为。 `&` 如果你的代码在该类或结构上使用此运算符，请确保了解其重新定义的行为。 有关详细信息，请参阅 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
+> @No__t-0 运算符可*重载*，这意味着当操作数具有该类或结构的类型时，该类或结构可以重新定义其行为。 如果你的代码在该类或结构上使用此运算符，请确保了解其重新定义的行为。 有关详细信息，请参阅 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
   
 > [!NOTE]
 > 与号（&）字符也可用于将变量标识为类型`Long`。 有关详细信息，请参阅[类型字符](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)。  

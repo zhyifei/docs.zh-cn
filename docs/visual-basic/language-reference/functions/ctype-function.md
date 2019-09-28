@@ -9,60 +9,60 @@ helpviewer_keywords:
 - CType function
 - conversions [Visual Basic], expression
 ms.assetid: dd4b29e7-6fa1-428c-877e-69955420bb72
-ms.openlocfilehash: dbf01263723a9e2890dab57d5ffc3d467ed250fc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4a0391b0a5d76f36803b433369d4832c02b05e09
+ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61801674"
+ms.lasthandoff: 09/28/2019
+ms.locfileid: "71592100"
 ---
 # <a name="ctype-function-visual-basic"></a>CType 函数 (Visual Basic)
 
-返回表达式显式转换为指定的数据类型、 对象、 结构、 类或接口的结果。
+返回将表达式显式转换为指定的数据类型、对象、结构、类或接口的结果。
 
 ## <a name="syntax"></a>语法
 
-```
+```vb
 CType(expression, typename)
 ```
 
 ## <a name="parts"></a>部件
 
-`expression` 任何有效表达式。 如果的值`expression`超出了允许的范围`typename`，Visual Basic 将引发异常。
+@no__t 任意有效的表达式。 如果 `expression` 的值超出 `typename` 允许的范围，Visual Basic 将引发异常。
 
-`typename` 任何表达式内合法`As`子句中的`Dim`语句中，任何数据类型、 对象、 结构、 类或接口的名称。
+`typename` 在 `Dim` 语句的 `As` 子句内合法的任何表达式，即任何数据类型、对象、结构、类或接口的名称。
 
 ## <a name="remarks"></a>备注
 
 > [!TIP]
-> 此外可以使用以下函数来执行类型转换：
+> 你还可以使用以下函数来执行类型转换：
 >
-> - 类型转换函数，如`CByte`， `CDbl`，和`CInt`，可以执行到特定的数据类型的转换。 有关详细信息，请参阅[类型转换函数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)。
-> - [DirectCast 运算符](../../../visual-basic/language-reference/operators/directcast-operator.md)或[TryCast 运算符](../../../visual-basic/language-reference/operators/trycast-operator.md)。 这些运算符要求一个类型继承自或实现另一个类型。 他们可以提供一定程度上更好的性能比`CType`来回进行转换时`Object`数据类型。
+> - 类型转换函数，例如 `CByte`、`CDbl` 和 `CInt` 执行到特定数据类型的转换。 有关详细信息，请参阅[类型转换函数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)。
+> - [DirectCast 运算符](../../../visual-basic/language-reference/operators/directcast-operator.md)或[TryCast 运算符](../../../visual-basic/language-reference/operators/trycast-operator.md)。 这些运算符要求一个类型继承自或实现另一个类型。 在转换为 @no__t 的数据类型时，它们可以提供比 @no__t 0 更好的性能。
 
-`CType` 采用内联方式编译，这意味着转换代码是计算表达式的值的代码的一部分。 在某些情况下，代码运行速度更快由于未调用过程来执行此转换。
+@no__t 为内联编译，这意味着转换代码是计算表达式的代码的一部分。 在某些情况下，代码运行速度更快，因为没有调用任何过程来执行转换。
 
-如果未定义转换从`expression`到`typename`(例如，从`Integer`到`Date`)，Visual Basic 将显示一条编译时错误消息。
+如果未定义从 `expression` 到 `typename` 的转换（例如从 `Integer` 到 `Date`），Visual Basic 将显示编译时错误消息。
 
-如果在运行时转换失败，引发相应异常。 如果收缩转换失败，<xref:System.OverflowException>是最常见的结果。 如果未定义转换，<xref:System.InvalidCastException>中引发。 例如，可能的原因`expression`属于类型`Object`并且其运行时类型具有不转换为`typename`。
+如果转换在运行时失败，则会引发相应的异常。 如果收缩转换失败，最常见的结果是 @no__t 0。 如果未定义转换，则会引发 @no__t 0。 例如，如果 `expression` 的类型 @no__t 为-1，并且其运行时类型没有转换为 `typename`，则可能会发生这种情况。
 
-如果的数据类型`expression`或`typename`是类或结构定义了，您可以定义`CType`类或结构为转换运算符上。 这使得`CType`充当*重载运算符*。 如果执行此操作，则可以控制之间的转换在类或结构，包括可能引发的异常的行为。
+如果 @no__t 的数据类型为-0 或 @no__t 为您定义的类或结构，则可以将该类或结构上的 @no__t 定义为转换运算符。 这使得 @no__t 为0作为*重载运算符*。 如果执行此操作，则可以控制与类或结构的转换的行为，包括可能引发的异常。
 
 ## <a name="overloading"></a>重载
 
-`CType`还可以在类或结构在代码之外定义重载运算符。 如果你的代码需要在这样的类或结构之间进行转换，请确保您了解的行为及其`CType`运算符。 有关详细信息，请参阅 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。
+也可以在代码外部定义的类或结构上重载 `CType` 运算符。 如果你的代码在此类或结构之间进行转换，请确保了解其 @no__t 运算符的行为。 有关详细信息，请参阅 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。
 
 ## <a name="converting-dynamic-objects"></a>转换动态对象
 
-通过用户定义的动态转换的使用进行的动态对象的类型转换<xref:System.Dynamic.DynamicObject.TryConvert%2A>或<xref:System.Dynamic.DynamicMetaObject.BindConvert%2A>方法。 如果你正在使用动态对象，请使用<xref:Microsoft.VisualBasic.Conversion.CTypeDynamic%2A>方法转换动态对象。
+动态对象的类型转换由使用 @no__t 0 或 @no__t 方法的用户定义的动态转换执行。 如果使用的是动态对象，请使用 <xref:Microsoft.VisualBasic.Conversion.CTypeDynamic%2A> 方法转换动态对象。
 
 ## <a name="example"></a>示例
 
-下面的示例使用`CType`函数将转换为表达式`Single`数据类型。
+下面的示例使用 `CType` 函数将表达式转换为 @no__t 的数据类型。
 
 [!code-vb[VbVbalrFunctions#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#24)]
 
-有关其他示例，请参阅[隐式转换和显式转换](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)。
+有关其他示例，请参阅[隐式和显式转换](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)。
 
 ## <a name="see-also"></a>请参阅
 
@@ -71,5 +71,5 @@ CType(expression, typename)
 - [类型转换函数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
 - [转换函数](../../../visual-basic/language-reference/functions/conversion-functions.md)
 - [Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md)
-- [如何：定义转换运算符](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)
+- [如何：定义转换运算符 @ no__t-0
 - [.NET Framework 中的类型转换](../../../standard/base-types/type-conversion.md)

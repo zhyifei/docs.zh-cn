@@ -7,21 +7,21 @@ f1_keywords:
 helpviewer_keywords:
 - BC32098
 ms.assetid: bab05325-dde8-4621-a5f6-368b5b7b2d76
-ms.openlocfilehash: ba7348ae50965ffcf2719b20934451916c8fa95a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 88b5f365c47b98964d9f5a0d22a941d85dcfb95f
+ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61923716"
+ms.lasthandoff: 09/28/2019
+ms.locfileid: "71592137"
 ---
 # <a name="type-parameters-cannot-be-used-as-qualifiers"></a>类型参数不能用作限定符
-编程元素限定包含类型参数的限定字符串中。  
+使用包含类型参数的限定字符串限定编程元素。  
   
- 类型参数表示构造泛型类型时将提供的类型的要求。 它不表示特定的已定义的类型。 限定字符串必须包含在编译时定义的元素。  
+ 类型参数表示在构造泛型类型时要提供的类型的要求。 它不表示特定的已定义类型。 限定字符串必须只包含在编译时定义的元素。  
   
  以下语句可能会生成此错误。  
   
-```  
+```vb  
 Public Function checkText(Of c As System.Windows.Forms.Control)(  
     ByVal badText As String) As Boolean  
   
@@ -30,16 +30,16 @@ Public Function checkText(Of c As System.Windows.Forms.Control)(
 End Function  
 ```  
   
- **错误 ID:** BC32098  
+ **错误 ID：** BC32098  
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   
-1. 从限定字符串中删除类型参数或替换已定义的类型。  
+1. 从限定字符串中删除类型参数，或将其替换为定义的类型。  
   
-2. 如果您需要使用一个构造的类型来查找正在限定的编程元素，则必须使用其他程序逻辑。  
+2. 如果需要使用构造类型来查找要限定的编程元素，则必须使用其他程序逻辑。  
   
 ## <a name="see-also"></a>请参阅
 
 - [对已声明元素的引用](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
-- [Visual Basic 中的泛型类型](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
 - [类型列表](../../../visual-basic/language-reference/statements/type-list.md)

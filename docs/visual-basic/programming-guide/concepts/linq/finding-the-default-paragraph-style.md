@@ -1,21 +1,21 @@
 ---
-title: 查找默认段落样式 (Visual Basic)
+title: 查找默认段落样式（Visual Basic）
 ms.date: 07/20/2015
 ms.assetid: 9d094a4a-ec8c-41b0-b7ab-a3deb2a01d45
-ms.openlocfilehash: f874033b9a070b951d27f37aae36f738ab1fd222
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6754c48148e81b02eb8c63843b57bc3d28a5774a
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64618380"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71352898"
 ---
-# <a name="finding-the-default-paragraph-style-visual-basic"></a>查找默认段落样式 (Visual Basic)
+# <a name="finding-the-default-paragraph-style-visual-basic"></a>查找默认段落样式（Visual Basic）
 在 WordprocessingML 文档中操作信息教程中的第一项任务是在文档中查找默认段落样式。  
   
 ## <a name="example"></a>示例  
   
 ### <a name="description"></a>描述  
- 下面的示例打开一个 Office Open XML WordprocessingML 文档，查找文档和包的样式部分，然后执行查找默认样式名称的查询。 有关 Office Open XML 文档包，以及它们包含的部分信息，请参阅[详细信息的 Office Open XML WordprocessingML 文档 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)。  
+ 下面的示例打开一个 Office Open XML WordprocessingML 文档，查找文档和包的样式部分，然后执行查找默认样式名称的查询。 有关 Office Open XML 文档包及其包含的部分的信息，请参阅[Office OPEN Xml WordprocessingML 文档的详细信息（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)。  
   
  查询将查找名为 `w:style` 的节点，该节点具有值为“paragraph”的名为 `w:type` 的属性和值为“1”的名为 `w:default` 的属性。 由于将只有一个 XML 节点具有这些属性，因此查询使用 <xref:System.Linq.Enumerable.First%2A?displayProperty=nameWithType> 运算符将集合转换为单一实例。 然后，它获取名为 `w:styleId` 的属性的值。  
   
@@ -82,15 +82,15 @@ End Module
 ### <a name="comments"></a>注释  
  该示例产生下面的输出：  
   
-```  
+```console  
 The default style is: Normal  
 ```  
   
 ## <a name="next-steps"></a>后续步骤  
  下一个示例中将创建一个类似的查询，查找文档中的所有段落及其样式：  
   
-- [检索段落及其样式 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md)  
+- [检索段落及其样式（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md)  
   
 ## <a name="see-also"></a>请参阅
 
-- [教程：操作 WordprocessingML 文档 (Visual Basic 中) 中的内容](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [教程：操作 WordprocessingML 文档中的内容（Visual Basic） ](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

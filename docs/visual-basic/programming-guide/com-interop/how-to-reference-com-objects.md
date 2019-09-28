@@ -8,49 +8,49 @@ helpviewer_keywords:
 - COM objects, referencing
 - interop assemblies
 ms.assetid: 9c518fb4-27d9-4112-9e6a-5a7d0210af6f
-ms.openlocfilehash: df234ecaf25243dbdf2d6552942ca86001d4a6fe
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 8e502dc9a279d9271a61fd2cf7a6afb564f09125
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592179"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71351997"
 ---
 # <a name="how-to-reference-com-objects-from-visual-basic"></a>如何：从 Visual Basic 引用 COM 对象
-在 Visual Basic 中，添加对包含类型库的 COM 对象的引用需要互操作程序集创建为 COM 库。 对 COM 对象的成员的引用是路由到互操作程序集，并转发给实际的 COM 对象。 从 COM 对象的响应是路由到互操作程序集，并转发到.NET Framework 应用程序。  
+在 Visual Basic 中，添加对具有类型库的 COM 对象的引用需要为 COM 库创建互操作程序集。 对 COM 对象成员的引用将路由到互操作程序集，然后转发到实际的 COM 对象。 将 COM 对象的响应路由到互操作程序集并转发到 .NET Framework 应用程序。  
   
- 无需通过将 COM 对象的类型信息嵌入在.NET 程序集中使用互操作程序集，即可引用 COM 对象。 若要嵌入类型信息，请设置`Embed Interop Types`属性设置为`True`对 COM 对象的引用。 如果你使用命令行编译器进行编译，请使用`/link`选项来引用 COM 库。 有关详细信息，请参阅[/link (Visual Basic)](../../../visual-basic/reference/command-line-compiler/link.md)。  
+ 通过在 .NET 程序集中嵌入 COM 对象的类型信息，可以引用 COM 对象，而无需使用互操作程序集。 若要嵌入类型信息，请将对 COM 对象的引用的 `Embed Interop Types` 属性设置为 `True`。 如果要使用命令行编译器进行编译，请使用 `/link` 选项来引用 COM 库。 有关详细信息，请参阅[/link （Visual Basic）](../../../visual-basic/reference/command-line-compiler/link.md)。  
   
- 添加对类型库中的集成的开发环境 (IDE) 的引用时，Visual Basic 会自动创建互操作程序集。 在从命令行处理时，可以使用 Tlbimp 实用工具来手动创建互操作程序集。  
+ 当你在集成开发环境（IDE）中添加对类型库的引用时，Visual Basic 会自动创建互操作程序集。 在命令行中工作时，可以使用 Tlbimp 实用工具手动创建互操作程序集。  
   
-### <a name="to-add-references-to-com-objects"></a>若要添加对 COM 对象的引用  
+### <a name="to-add-references-to-com-objects"></a>添加对 COM 对象的引用  
   
-1. 上**项目**菜单中，选择**添加引用**，然后单击**COM**对话框中的选项卡。  
+1. 在 "**项目**" 菜单上，选择 "**添加引用**"，然后单击对话框中的 " **COM** " 选项卡。  
   
-2. 选择你想要从 COM 对象的列表中使用的组件。  
+2. 从 COM 对象列表中选择要使用的组件。  
   
-3. 若要简化对互操作程序集的访问，将添加`Imports`到顶部的类或模块将在其中使用 COM 对象的语句。 例如，下面的代码示例将导入命名空间`INKEDLib`中所引用的对象`Microsoft InkEdit Control 1.0`库。  
+3. 若要简化对互操作程序集的访问，请将 `Imports` 语句添加到要在其中使用 COM 对象的类或模块的顶部。 例如，下面的代码示例为 @no__t 库中引用的对象导入命名空间 `INKEDLib`。  
   
      [!code-vb[VbVbalrInterop#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#40)]  
   
-### <a name="to-create-an-interop-assembly-using-tlbimp"></a>若要创建使用 Tlbimp 的互操作程序集  
+### <a name="to-create-an-interop-assembly-using-tlbimp"></a>使用 Tlbimp 创建互操作程序集  
   
-1. 将 Tlbimp 的位置添加到搜索路径中，如果它已不是搜索路径的一部分，并且您目前不所在的目录。  
+1. 将 Tlbimp 的位置添加到搜索路径中（如果它不在搜索路径中），并且当前不在该位置的目录中。  
   
-2. 调用 Tlbimp 从命令提示符下，提供以下信息：  
+2. 从命令提示符调用 Tlbimp，提供以下信息：  
   
     - 包含类型库的 DLL 的名称和位置  
   
-    - 名称和命名空间的位置信息应放置的位置  
+    - 应放置信息的命名空间的名称和位置  
   
     - 目标互操作程序集的名称和位置  
   
      以下代码提供了一个示例：  
   
-    ```  
+    ```console  
     Tlbimp test3.dll /out:NameSpace1 /out:Interop1.dll  
     ```  
   
-     可以使用 Tlbimp 来创建互操作程序集的类型库，甚至对于未注册的 COM 对象。 但是，由互操作程序集引用的 COM 对象必须正确注册它们将被用于在计算机上。 可以使用随 Windows 操作系统附带的 Regsvr32 实用工具来注册 COM 对象。  
+     可以使用 Tlbimp 为类型库创建互操作程序集，即使对于未注册的 COM 对象也是如此。 但是，互操作程序集所引用的 COM 对象必须在要使用它们的计算机上正确注册。 你可以使用 Windows 操作系统随附的 Regsvr32 实用程序来注册 COM 对象。  
   
 ## <a name="see-also"></a>请参阅
 

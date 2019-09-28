@@ -6,19 +6,19 @@ helpviewer_keywords:
 - functions [Visual Basic], function expressions
 - lambda expressions [Visual Basic], function expression
 ms.assetid: e8a47a45-4b8a-4f45-a623-7653625dffbc
-ms.openlocfilehash: 4bef609289cdbb192116469bac4fca66ee10fd09
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0ab4a77395b478df06f34240212438f3e6e18f6e
+ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662523"
+ms.lasthandoff: 09/28/2019
+ms.locfileid: "71592207"
 ---
 # <a name="function-expression-visual-basic"></a>函数表达式 (Visual Basic)
-声明的参数和函数的 lambda 表达式定义的代码。  
+声明定义函数 lambda 表达式的参数和代码。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```vb  
 Function ( [ parameterlist ] ) expression  
 - or -  
 Function ( [ parameterlist ] )  
@@ -30,49 +30,49 @@ End Function
   
 |术语|定义|  
 |---|---|  
-|`parameterlist`|可选。 表示此过程的参数的本地变量名称的列表。 括号必须存在，即使该列表为空。 请参阅[参数列表](../../../visual-basic/language-reference/statements/parameter-list.md)。|  
-|`expression`|必需。 一个表达式。 表达式的类型是该函数的返回类型。|  
-|`statements`|必需。 返回一个值，通过使用一系列语句`Return`语句。 (请参阅[Return 语句](../../../visual-basic/language-reference/statements/return-statement.md)。)返回的值的类型为该函数的返回类型。|  
+|`parameterlist`|可选。 表示此过程参数的局部变量名称的列表。 即使此列表为空，也必须存在括号。 请参阅[参数列表](../../../visual-basic/language-reference/statements/parameter-list.md)。|  
+|`expression`|必需。 单个表达式。 表达式的类型为函数的返回类型。|  
+|`statements`|必需。 通过使用 `Return` 语句返回值的语句列表。 （请参见[Return 语句](../../../visual-basic/language-reference/statements/return-statement.md)。）返回的值的类型为函数的返回类型。|  
   
 ## <a name="remarks"></a>备注  
- 一个*lambda 表达式*是没有名称，用于计算并返回一个值的函数。 可以使用 lambda 表达式任意位置可用作委托类型，除参数`RemoveHandler`。 有关委托和 lambda 表达式与委托一起使用的详细信息，请参阅[委托语句](../../../visual-basic/language-reference/statements/delegate-statement.md)并[宽松委托转换](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)。  
+ *Lambda 表达式*是没有名称的函数，用于计算并返回值。 除了作为 `RemoveHandler` 的参数以外，还可以在可以使用委托类型的任何位置使用 lambda 表达式。 有关委托的详细信息以及对委托使用 lambda 表达式的详细信息，请参阅[委托语句](../../../visual-basic/language-reference/statements/delegate-statement.md)和[宽松委托转换](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)。  
   
 ## <a name="lambda-expression-syntax"></a>Lambda 表达式语法  
- Lambda 表达式的语法类似于标准函数。 差异如下所示：  
+ Lambda 表达式的语法与标准函数的语法类似。 不同之处如下：  
   
 - Lambda 表达式没有名称。  
   
-- Lambda 表达式不能有修饰符，如`Overloads`或`Overrides`。  
+- Lambda 表达式不能具有修饰符，如 `Overloads` 或 @no__t 为-1。  
   
-- 不使用 lambda 表达式`As`子句来指定该函数的返回类型。 相反，从单行 lambda 表达式的主体的计算结果为，值或多行 lambda 表达式的返回值推断类型。 例如，单行 lambda 表达式的主体是否`Where cust.City = "London"`，其返回类型是`Boolean`。  
+- Lambda 表达式不使用 `As` 子句来指定函数的返回类型。 相反，该类型是从单行 lambda 表达式的主体计算得出的值推断出的，或是多行 lambda 表达式的返回值。 例如，如果单行 lambda 表达式的主体为 `Where cust.City = "London"`，则其返回类型为 `Boolean`。  
   
-- 单行 lambda 表达式的主体必须是表达式，而不是语句。 主体可以包含调用的函数过程中，但未一个 sub 过程调用。  
+- 单行 lambda 表达式的主体必须是表达式，而不是语句。 正文可以包含对 function 过程的调用，但不能包含对 sub 过程的调用。  
   
-- 必须必须推断数据类型或全部指定或者所有参数。  
+- 所有参数都必须具有指定的数据类型，或者都必须被推断。  
   
-- 不允许使用可选和 Paramarray 参数。  
+- 不允许使用可选参数和 Paramarray 参数。  
   
 - 不允许使用泛型参数。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示两种方法来创建简单的 lambda 表达式。 第一个示例使用`Dim`提供函数的名称。 若要调用函数时，发送时的参数值中。  
+ 下面的示例演示了两种创建简单 lambda 表达式的方法。 第一个函数使用 `Dim` 来提供函数的名称。 若要调用函数，请发送参数的值。  
   
  [!code-vb[VbVbalrLambdas#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#1)]  
   
  [!code-vb[VbVbalrLambdas#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#2)]  
   
 ## <a name="example"></a>示例  
- 或者，可以声明并在同一时间运行该函数。  
+ 或者，可以同时声明和运行函数。  
   
  [!code-vb[VbVbalrLambdas#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#3)]  
   
 ## <a name="example"></a>示例  
- 下面是递增其参数和返回值的 lambda 表达式的示例。 该示例显示了函数的这两个单行和多行 lambda 表达式语法。 有关更多示例，请参阅[Lambda 表达式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)。  
+ 下面是递增其参数并返回值的 lambda 表达式的示例。 该示例显示了函数的单行和多行 lambda 表达式语法。 有关更多示例，请参阅[Lambda 表达式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)。  
   
  [!code-vb[VbVbalrLambdas#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#14)]  
   
 ## <a name="example"></a>示例  
- Lambda 表达式基础中的查询运算符的许多[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]，并可以在基于方法的查询中显式使用。 下面的示例演示一个典型[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]查询中，为方法格式后跟查询的转换。  
+ Lambda 表达式的基础是 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 中的许多查询运算符，可以在基于方法的查询中显式使用。 下面的示例演示典型的 @no__t 0 查询，然后将查询转换为方法格式。  
   
 ```vb  
 Dim londonCusts = From cust In db.Customers  

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - reserved parameters
 ms.assetid: 3f33bf46-4a7b-43b3-bb78-1ffebe0dcfa6
 author: KrzysztofCwalina
-ms.openlocfilehash: 5a0f6e0fab5d0f2fe8574e348fc6b8ae726eeb99
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 28b00f5911bb47536ec44b96f284e47b6c671149
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61757399"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353739"
 ---
 # <a name="parameter-design"></a>参数设计
 本部分提供了有关参数设计的广泛准则，包括用于检查参数的准则。 此外，还应参考[命名参数](../../../docs/standard/design-guidelines/naming-parameters.md)中介绍的准则。  
@@ -86,19 +86,19 @@ ms.locfileid: "61757399"
 ### <a name="members-with-variable-number-of-parameters"></a>具有可变形参数量的成员  
  可以通过提供数组形参来表示使用可变数量实参的成员。 例如，<xref:System.String> 提供了以下方法：  
   
-```  
+```csharp  
 public class String {  
     public static string Format(string format, object[] parameters);  
 }  
 ```  
   
- 然后，用户可以调用<xref:System.String.Format%2A?displayProperty=nameWithType>方法，按如下所示：  
+ 然后，用户可以调用 <xref:System.String.Format%2A?displayProperty=nameWithType> 方法，如下所示：  
   
  `String.Format("File {0} not found in {1}",new object[]{filename,directory});`  
   
  将 C# params 关键字添加到数组形参会将形参更改为所谓的 params 数组形参，并提供了创建临时数组的快捷方式。  
   
-```  
+```csharp  
 public class String {  
     public static string Format(string format, params object[] parameters);  
 }  
@@ -151,7 +151,7 @@ public class String {
   
  例如，不需要传递起始索引，因为可以使用简单的指针算法来完成相同的结果。  
   
- *部分版权 © 2005, 2009 Microsoft Corporation。保留所有权利。*  
+ *部分版权 © 2005，2009 Microsoft Corporation。保留所有权利。*  
   
  *经 Pearson Education, Inc 授权，转载自[框架设计准则：可重用的 .NET 库的约定、习惯用语和模式，第 2 版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 作者：Krzysztof Cwalina 和 Brad Abrams，由 Addison Wesley Professional 于 2008 年 10 月 22 日印发，作为 Microsoft Windows 开发系列的一部分。*  
   

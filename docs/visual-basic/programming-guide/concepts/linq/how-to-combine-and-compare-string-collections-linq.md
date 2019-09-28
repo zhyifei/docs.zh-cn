@@ -1,15 +1,15 @@
 ---
-title: 如何：合并和比较字符串集合 (LINQ) (Visual Basic)
+title: 如何：合并和比较字符串集合（LINQ）（Visual Basic）
 ms.date: 07/20/2015
 ms.assetid: 243cfafc-9eaa-4354-a9df-d329f1d39913
-ms.openlocfilehash: 7b56185b98d89572e6a8e3b9bc8ed54ad6ef7b37
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: d521e56f9ae311eea53028ba189416db289839cd
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68631041"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71352881"
 ---
-# <a name="how-to-combine-and-compare-string-collections-linq-visual-basic"></a>如何：合并和比较字符串集合 (LINQ) (Visual Basic)
+# <a name="how-to-combine-and-compare-string-collections-linq-visual-basic"></a>如何：合并和比较字符串集合（LINQ）（Visual Basic）
 
 此示例演示如何合并包含文本行的文件，并对结果排序。 具体而言，此示例演示如何对两组文本行执行简单的串联、联合和交集。
 
@@ -17,7 +17,7 @@ ms.locfileid: "68631041"
 
 1. 将下面的姓名复制到名为 names1.txt 的文本文件，然后将此文件保存到项目文件夹：
 
-    ```
+    ```text
     Bankov, Peter
     Holm, Michael
     Garcia, Hugo
@@ -32,7 +32,7 @@ ms.locfileid: "68631041"
 
 2. 将下面的姓名复制到名为 names2.txt 的文本文件，然后将此文件保存到项目文件夹。 请注意，这两个文件拥有一些共同的名称。
 
-    ```
+    ```text
     Liu, Jinghao
     Bankov, Peter
     Holm, Michael
@@ -165,9 +165,9 @@ End Class
 
 ## <a name="compiling-the-code"></a>编译代码
 
-使用 VB.NET 命名空间的`Imports`语句创建一个控制台应用程序项目。
+创建一个 VB.NET 控制台应用程序项目，其中包含一个针对命名空间的 @no__t 语句。
 
 ## <a name="see-also"></a>请参阅
 
-- [LINQ 和字符串 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ 和字符串（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
 - [LINQ 和文件目录 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

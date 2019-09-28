@@ -13,12 +13,12 @@ helpviewer_keywords:
 - generic type parameters
 ms.assetid: 87a4b0da-ed64-43b1-ac43-968576c444ce
 author: KrzysztofCwalina
-ms.openlocfilehash: c0790cd20daf859ec81e2252dc9bce46673daf90
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2ecd708ccb8eb91270e8ef9c174b8d7e599a2629
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945504"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353695"
 ---
 # <a name="names-of-classes-structs-and-interfaces"></a>类、结构和接口的名称
 以下命名准则适用于常规类型命名。  
@@ -39,18 +39,18 @@ ms.locfileid: "61945504"
   
  **✓ 务必**在接口名称前加上字母 I 作为前缀，以指示该类型是接口。  
   
- 例如，`IComponent`（描述性名词），`ICustomAttributeProvider`（名词短语）和 `IPersistable`（形容词）是合适的接口名称。与其他类型名称一样，应避免使用缩略形式。 与其他类型名称，避免缩写。  
+ 例如，`IComponent`（描述性名词），`ICustomAttributeProvider`（名词短语）和 `IPersistable`（形容词）是合适的接口名称。与其他类型名称一样，应避免使用缩略形式。 对于其他类型名称，请避免缩写形式。  
   
  **✓ 务必**确保在定义类和接口对时，类名称和接口名称的区别仅在于 "I" 前缀，其中类是接口的标准实现。  
   
 ## <a name="names-of-generic-type-parameters"></a>泛型类型参数的名称  
- .NET Framework 2.0 中增添了泛型。 此功能引入了一种新的标识符称为*类型参数*。  
+ .NET Framework 2.0 中增添了泛型。 此功能引入了一种称为*类型参数*的新标识符。  
   
  **✓ 务必**使用描述性名称命名泛型参数，除非单字母名称可完整体现要传达的含义且描述性名称意义不大。  
   
  **✓ 考虑**使用 `T` 作为具有一个单字母类型参数的类型的类型参数名称。  
   
-```  
+```csharp  
 public int IComparer<T> { ... }  
 public delegate bool Predicate<T>(T item);  
 public struct Nullable<T> where T:struct { ... }  
@@ -58,7 +58,7 @@ public struct Nullable<T> where T:struct { ... }
   
  **✓ 务必**使用 `T` 作为描述性类型参数名称的前缀。  
   
-```  
+```csharp  
 public interface ISessionChannel<TSession> where TSession : ISession {  
     TSession Session { get; }  
 }  
@@ -71,7 +71,7 @@ public interface ISessionChannel<TSession> where TSession : ISession {
 ## <a name="names-of-common-types"></a>常见类型的名称  
  **✓ 务必**在命名从某些 .NET Framework 类型派生的类型或在实现某些 .NET Framework 类型时，遵循下表所述准则。  
   
-|基类型|派生的实现类型准则|  
+|基类型|派生/实现类型准则|  
 |---------------|------------------------------------------|  
 |`System.Attribute`|**✓ 务必**为自定义属性类的名称添加后缀 "Attribute"。|  
 |`System.Delegate`|**✓ 务必**向事件中所用委托的名称中添加后缀 "EventHandler"。<br /><br /> **✓ 务必**在用作事件处理程序的委托以外的委托名称中添加后缀 "Callback"。<br /><br /> **X 不要**将后缀 "Delegate" 添加到委托。|  

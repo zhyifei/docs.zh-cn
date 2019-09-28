@@ -1,15 +1,15 @@
 ---
-title: 如何：调试空查询结果集 (Visual Basic)
+title: 如何：调试空查询结果集（Visual Basic）
 ms.date: 07/20/2015
 ms.assetid: b242c90a-d2b8-4309-8a1e-e4e70736c727
-ms.openlocfilehash: cc6a370545b9e4d8c28e0096f5cff73f4d937bd3
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 6fc194432b1d44c1214da32d2c6978a4eeb316dc
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710432"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71351775"
 ---
-# <a name="how-to-debug-empty-query-results-sets-visual-basic"></a>如何：调试空查询结果集 (Visual Basic)
+# <a name="how-to-debug-empty-query-results-sets-visual-basic"></a>如何：调试空查询结果集（Visual Basic）
 
 查询 XML 树时遇到的一个最常见问题是，如果 XML 树具有默认命名空间，开发人员在编写查询时，有时会将 XML 视为不在命名空间内。
 
@@ -17,7 +17,7 @@ ms.locfileid: "68710432"
 
 第二个示例集演示必需的更正，以便可以查询命名空间中的 XML。
 
-有关详细信息, 请参阅[命名空间概述 (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)。
+有关详细信息，请参阅[命名空间概述（LINQ to XML）（Visual Basic）](namespaces-overview-linq-to-xml.md)。
 
 ## <a name="example"></a>示例
 
@@ -45,7 +45,7 @@ Console.WriteLine("End of result set")
 
 此示例产生下面的结果：
 
-```
+```console
 Result set follows:
 End of result set
 ```
@@ -84,7 +84,7 @@ End Module
 
 此示例产生下面的结果：
 
-```
+```console
 Result set follows:
 1
 2
@@ -94,4 +94,4 @@ End of result set
 
 ## <a name="see-also"></a>请参阅
 
-- [基本查询 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [基本查询（LINQ to XML）（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

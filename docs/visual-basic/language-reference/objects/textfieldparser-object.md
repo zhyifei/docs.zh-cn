@@ -1,24 +1,24 @@
 ---
-title: TextFieldParser 对象 (Visual Basic)
+title: TextFieldParser 对象（Visual Basic）
 ms.date: 07/20/2015
 helpviewer_keywords:
 - TextFieldParser object
 - TextFieldParser class, aboutTextFieldParser class
 - TextFieldParser class
 ms.assetid: d44bd2b0-7dfc-410b-a48b-534c1e97460b
-ms.openlocfilehash: da5f9058efcbd70c5c76bb1307c126a14861ffc7
-ms.sourcegitcommit: c4dfe37032c64a1fba2cc3d5947550d79f95e3b5
+ms.openlocfilehash: cac32cd67eb7b6babdf5dab3cb2429c2b8b48ae6
+ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67041773"
+ms.lasthandoff: 09/28/2019
+ms.locfileid: "71592120"
 ---
 # <a name="textfieldparser-object"></a>TextFieldParser Object
 提供分析结构化文本文件的方法和属性。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```vb  
 Public Class TextFieldParser  
 ```  
   
@@ -32,4 +32,4 @@ Public Class TextFieldParser
   
  **类：** <xref:Microsoft.VisualBasic.FileIO.TextFieldParser>  
   
- **程序集：** Visual Basic 运行库（在 Microsoft.VisualBasic.dll 中）
+ **件**Visual Basic 运行库（在 Microsoft.VisualBasic.dll 中）

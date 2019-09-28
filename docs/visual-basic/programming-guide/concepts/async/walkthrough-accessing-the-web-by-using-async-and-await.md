@@ -2,12 +2,12 @@
 title: 演练：使用 Async 和 Await 访问 Web （Visual Basic）
 ms.date: 07/20/2015
 ms.assetid: 84fd047f-fab8-4d89-8ced-104fb7310a91
-ms.openlocfilehash: 72132c4884f3d9bc94de447a122354b3e0dc2ee5
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 2d9d3ea3d55fcd3a59039f4b8b93f37df35bf86d
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928452"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71351905"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-visual-basic"></a>演练：使用 Async 和 Await 访问 Web （Visual Basic）
 
@@ -37,7 +37,7 @@ ms.locfileid: "70928452"
 
 有关完整的异步示例，请参阅 "[示例](#example)" 部分。
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>先决条件
 
 计算机上必须安装 Visual Studio 2012 或更高版本。 有关详细信息，请参阅 Visual Studio[下载](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)页。
 
@@ -215,9 +215,9 @@ ms.locfileid: "70928452"
 
 1. 按 F5 键以运行程序，然后选择 **“启动”** 按钮。
 
-    此时应显示类似于下列列表的输出。
+    此时应显示类似于以下列表的输出：
 
-    ```
+    ```console
     msdn.microsoft.com/library/windows/apps/br211380.aspx        383832
     msdn.microsoft.com                                            33964
     msdn.microsoft.com/library/hh290136.aspx               225793

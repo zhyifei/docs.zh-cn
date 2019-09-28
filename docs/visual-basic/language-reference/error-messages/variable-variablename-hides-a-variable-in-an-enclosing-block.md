@@ -7,32 +7,32 @@ f1_keywords:
 helpviewer_keywords:
 - BC30616
 ms.assetid: e7658ebc-da45-451b-a409-a0f8915f0beb
-ms.openlocfilehash: 36fe543dd4546c6fe930f259a55cea856917370f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4312abef83728f432e2f6a492e5acad3450719b1
+ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662663"
+ms.lasthandoff: 09/28/2019
+ms.locfileid: "71592065"
 ---
-# <a name="variable-variablename-hides-a-variable-in-an-enclosing-block"></a>变量\<变量名 > 隐藏封闭块中的变量
-块中包含的变量具有与另一个本地变量相同的名称。  
+# <a name="variable-variablename-hides-a-variable-in-an-enclosing-block"></a>变量 "\<variablename >" 隐藏封闭块中的变量
+块中包含的变量与另一个本地变量的名称相同。  
   
- **错误 ID:** BC30616  
+ **错误 ID：** BC30616  
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   
-- 重命名封闭块中的变量，以便它不与任何其他本地变量相同。 例如：  
+- 重命名封闭块中的变量，使其与其他任何局部变量不同。 例如：  
   
-    ```  
+    ```vb  
     Dim a, b, x As Integer  
     If a = b Then  
        Dim y As Integer = 20 ' Uniquely named block variable.  
     End If  
     ```  
   
-- 此错误的常见原因是使用`Catch e As Exception`的事件处理程序。 如果是这样，命名`Catch`块变量`ex`而非`e`。  
+- 此错误的一个常见原因是在事件处理程序中使用 `Catch e As Exception`。 如果是这种情况，请将 `Catch` 块变量命名为 `ex` 而不是 `e`。  
   
-- 此错误的另一个常见原因是尝试访问中声明的局部变量`Try`块中单独`Catch`块。 若要更正此问题，声明外部变量`Try...Catch...Finally`结构。  
+- 此错误的另一个常见原因是尝试访问在单独的 @no__t 块中的 `Try` 块内声明的局部变量。 若要更正此错误，请在 `Try...Catch...Finally` 结构之外声明变量。  
   
 ## <a name="see-also"></a>请参阅
 

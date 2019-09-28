@@ -1,5 +1,5 @@
 ---
-title: 可以为 null 值类型的 Visual Basic
+title: 可以为 null 的值类型-Visual Basic
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Nullable
@@ -10,61 +10,61 @@ helpviewer_keywords:
 - nullable types [Visual Basic]
 - data types [Visual Basic], nullable
 ms.assetid: 9ac3b602-6f96-4e6d-96f7-cd4e81c468a6
-ms.openlocfilehash: 46564d2c509fe2b53b9662ee441ab8b85fccc693
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 072496a560775a8f79274f1d44dd389d6ed5b40d
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65642138"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71351766"
 ---
 # <a name="nullable-value-types-visual-basic"></a>可以为 Null 的值类型 (Visual Basic)
 
-有时，你将使用在某些情况下没有已定义的值的值类型。 例如，在数据库中的字段可能需要区分具有分配的值有意义的而不让分配的值。 值类型可以扩展以使其正常值或 null 值。 调用此类扩展*为 null 的类型*。
+有时，您在某些情况下使用的值类型不具有定义的值。 例如，数据库中的字段可能必须区分分配的值是否有意义，并且没有分配值。 可以对值类型进行扩展，使其使用普通值或 null 值。 此类扩展称为*可以为 null 的类型*。
 
-每个可以为 null 的类型从泛型构造<xref:System.Nullable%601>结构。 假设有一个数据库，用于跟踪与工作相关的活动。 下面的示例构造一个可以为 null`Boolean`类型，并声明该类型的变量。 以下三种方式，可以编写以下声明：
+每个可以为 null 的类型都是从泛型 <xref:System.Nullable%601> 结构构造的。 考虑使用跟踪工作相关活动的数据库。 下面的示例构造一个可以为 null 的 @no__t 类型，并声明该类型的变量。 可以通过三种方式编写声明：
 
 [!code-vb[VbVbalrNullableValue#1](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrNullableValue/VB/Class1.vb#1)]
 
-在变量`ridesBusToWork`可以保存的值`True`，值为`False`，或者根本没有值。 其初始默认值是没有值，这在此情况下可能意味着，信息具有尚未获得此人。 与此相反，`False`可能是获得的信息，而该人员未乘坐公共汽车去上班。
+变量 `ridesBusToWork` 可以保存值 `True`、值 `False` 或根本没有值。 默认情况下，它的初始默认值为 "无" 值，在这种情况下，这可能意味着尚未获取此人的信息。 与此相反，`False` 表示已获得信息，而不会使总线工作。
 
-可以使用可以为 null 的类型来声明变量和属性，并可以声明具有可以为 null 的类型的元素的数组。 可以使用作为参数，可以为 null 的类型来声明过程和可以返回 null 的类型从`Function`过程。
+可以声明具有可以为 null 的类型的变量和属性，并且可以使用可以为 null 的类型的元素声明数组。 您可以使用可以为 null 的类型作为参数来声明过程，并且可以从 @no__t 0 过程返回可为 null 的类型。
 
-无法构造为 null 的类型，如数组、 引用类型上`String`，或类。 基础类型必须是值类型。 有关更多信息，请参见 [Value Types and Reference Types](value-types-and-reference-types.md)。
+无法在引用类型（如数组、`String` 或类）上构造可以为 null 的类型。 基础类型必须为值类型。 有关更多信息，请参见 [Value Types and Reference Types](value-types-and-reference-types.md)。
 
 ## <a name="using-a-nullable-type-variable"></a>使用可以为 Null 的类型变量
 
-可以为 null 的类型的最重要成员是其<xref:System.Nullable%601.HasValue%2A>和<xref:System.Nullable%601.Value%2A>属性。 变量的为 null 的类型，<xref:System.Nullable%601.HasValue%2A>告诉您此变量是否包含定义的值。 如果<xref:System.Nullable%601.HasValue%2A>是`True`，你可以读取的值从<xref:System.Nullable%601.Value%2A>。 请注意，这两<xref:System.Nullable%601.HasValue%2A>并<xref:System.Nullable%601.Value%2A>是`ReadOnly`属性。
+可以为 null 的类型的最重要成员是其 @no__t 为0，@no__t 为-1 个属性。 对于可以为 null 的类型的变量，<xref:System.Nullable%601.HasValue%2A> 指示该变量是否包含定义的值。 如果 <xref:System.Nullable%601.HasValue%2A> @no__t 为-1，则可以从 @no__t 中读取值。 请注意，@no__t 0 和 @no__t 都是 `ReadOnly` 属性。
 
 ### <a name="default-values"></a>默认值
 
-使用可以为 null 的类型和声明变量时其<xref:System.Nullable%601.HasValue%2A>属性具有默认值为`False`。 这意味着默认情况下该变量具有未定义的值，而不是其基础值类型的默认值。 在下面的示例中，变量`numberOfChildren`最初有没有定义的值，即使的默认值`Integer`类型为 0。
+使用可以为 null 的类型声明变量时，其 <xref:System.Nullable%601.HasValue%2A> 属性的默认值为 `False`。 这意味着，默认情况下，该变量没有定义的值，而不是其基础值类型的默认值。 在下面的示例中，变量 `numberOfChildren` 最初没有定义的值，即使 `Integer` 类型的默认值为0。
 
 [!code-vb[VbVbalrNullableValue#2](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrNullableValue/VB/Class1.vb#2)]
 
-Null 值可用于指示未定义或未知值。 如果`numberOfChildren`已声明为`Integer`，会有任何可能表示信息不是当前可用的值。
+空值有助于指示未定义或未知的值。 如果 `numberOfChildren` 已声明为 `Integer`，则没有任何值可指示该信息当前不可用。
 
-### <a name="storing-values"></a>将值存储
+### <a name="storing-values"></a>存储值
 
-以典型方式，可以在变量或可以为 null 的类型的属性中存储值。 下面的示例将一个值分配给变量`numberOfChildren`上一示例中声明。
+以典型方式将值存储在可以为 null 的类型的变量或属性中。 下面的示例将值赋给在上一个示例中声明的变量 `numberOfChildren`。
 
 [!code-vb[VbVbalrNullableValue#3](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrNullableValue/VB/Class1.vb#3)]
 
-如果变量或可以为 null 的类型的属性包含已定义的值，则可以使此恢复到其初始状态不具有分配的值。 为此，可设置的变量或属性设置为`Nothing`，如下面的示例所示。
+如果可为 null 的类型的变量或属性包含定义的值，则可以使其恢复到未分配值的初始状态。 为此，可将变量或属性设置为 `Nothing`，如下面的示例所示。
 
 [!code-vb[VbVbalrNullableValue#4](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrNullableValue/VB/Class1.vb#4)]
 
 > [!NOTE]
-> 尽管可以将分配`Nothing`不能为 null 的类型的变量，测试其用于`Nothing`使用等号。 使用等号的比较`someVar = Nothing`，计算结果始终为`Nothing`。 你可以测试的变量<xref:System.Nullable%601.HasValue%2A>属性`False`，或使用测试`Is`或`IsNot`运算符。
+> 尽管可以将 @no__t 0 赋给一个可以为 null 的类型的变量，但不能使用等号为 `Nothing` 进行测试。 使用等号 `someVar = Nothing` 的比较始终计算为 `Nothing`。 你可以测试 @no__t 的变量 <xref:System.Nullable%601.HasValue%2A> 属性，或使用 @no__t 2 或 `IsNot` 运算符测试。
 
 ### <a name="retrieving-values"></a>检索值
 
-若要检索的可以为 null 的类型的变量的值，应该首先测试其<xref:System.Nullable%601.HasValue%2A>属性来确认它具有值。 如果您尝试读取值时<xref:System.Nullable%601.HasValue%2A>是`False`，Visual Basic 将引发<xref:System.InvalidOperationException>异常。 下面的示例演示读取该变量的建议的方法`numberOfChildren`的前面的示例。
+若要检索可为 null 的类型的变量的值，您应该首先测试其 <xref:System.Nullable%601.HasValue%2A> 属性以确认它具有值。 如果尝试在 <xref:System.Nullable%601.HasValue%2A> @no__t 时读取值-1，Visual Basic 将引发 <xref:System.InvalidOperationException> 异常。 下面的示例演示了读取前面示例的变量 `numberOfChildren` 的建议方法。
 
 [!code-vb[VbVbalrNullableValue#5](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrNullableValue/VB/Class1.vb#5)]
 
-## <a name="comparing-nullable-types"></a>可以为 Null 的类型比较
+## <a name="comparing-nullable-types"></a>比较可以为 Null 的类型
 
-可以为 null 时`Boolean`在布尔表达式中使用变量，结果可以是`True`， `False`，或`Nothing`。 下面是真值表`And`和`Or`。 因为`b1`和`b2`现在有三个可能值有九个组合来评估。
+在布尔表达式中使用可以为 null 的 @no__t 变量时，结果可以是 `True`、`False` 或 `Nothing`。 下面是 `And` 和 `Or` 的事实数据表。 因为 `b1` 和 @no__t 现在有三个可能的值，所以有九个计算组合。
 
 |b1|b2|b1 和 b2|b1 或 b2|
 |--------|--------|---------------|--------------|
@@ -78,43 +78,43 @@ Null 值可用于指示未定义或未知值。 如果`numberOfChildren`已声�
 |`False`|`True`|`False`|`True`|
 |`False`|`False`|`False`|`False`|
 
-当布尔型变量或表达式的值是`Nothing`，它既不是`true`也不`false`。 请看下面的示例。
+如果布尔变量或表达式的值 `Nothing`，则不 @no__t 为-1，也不 `false`。 请看下面的示例。
 
 [!code-vb[VbVbalrNullableValue#6](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrNullableValue/VB/Class1.vb#6)]
 
-在此示例中，`b1 And b2`计算结果为`Nothing`。 因此，`Else`子句中每个执行`If`语句，并输出如下所示：
+在此示例中，`b1 And b2` 的计算结果为 `Nothing`。 因此，在每个 @no__t 语句中执行 `Else` 子句，输出如下所示：
 
 `Expression is not true`
 
 `Expression is not false`
 
 > [!NOTE]
-> `AndAlso` 并`OrElse`，可使用该技术短路计算，必须评估其第二个操作数时第一个计算结果为`Nothing`。
+> 在第一个计算为 `Nothing` 时，@no__t 0 和 `OrElse` （使用短路计算）必须计算其第二个操作数。
 
 ## <a name="propagation"></a>传播
 
-如果一个或两个操作数的算术、 比较、 shift 键或类型操作可以为 null，该操作的结果也是可以为 null。 如果两个操作数的值`Nothing`，对底层的操作数，值执行此操作，因为如果它们都不是 null 的类型。 在下面的示例中，变量`compare1`和`sum1`隐式类型化。 如果将鼠标指针停留在其上时，将看到编译器将为 null 的类型推断为这两个值。
+如果算术、比较、移位或类型运算的一个或两个操作数可以为 null，则该运算的结果也可以为 null。 如果两个操作数的值都不 `Nothing`，则对操作数的基础值执行运算，就好像这两个操作数都不是可以为 null 的类型一样。 在下面的示例中，变量 `compare1` 和 @no__t 均隐式类型化。 如果将鼠标指针停留在其上，则会看到编译器将为这两个文件推断可以为 null 的类型。
 
 [!code-vb[VbVbalrNullableValue#7](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrNullableValue/VB/Class1.vb#7)]
 
-如果一个或两个操作数具有值为`Nothing`，结果将是`Nothing`。
+如果一个或两个操作数的值都为 `Nothing`，则结果将 `Nothing`。
 
 [!code-vb[VbVbalrNullableValue#8](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrNullableValue/VB/Class1.vb#8)]
 
-## <a name="using-nullable-types-with-data"></a>数据中使用可以为 Null 的类型
+## <a name="using-nullable-types-with-data"></a>对数据使用可以为 Null 的类型
 
-数据库是一个最重要的地方使用可以为 null 的类型。 并非所有数据库对象当前都支持可以为 null 的类型，但设计器生成的表适配器。 请参阅[为 null 的类型的 TableAdapter 支持](/visualstudio/data-tools/fill-datasets-by-using-tableadapters#tableadapter-support-for-nullable-types)。
+数据库是使用可以为 null 的类型的最重要的地方之一。 并非所有数据库对象当前都支持可以为 null 的类型，但设计器生成的表适配器则执行此操作。 请参阅[对可以为 null 的类型的 TableAdapter 支持](/visualstudio/data-tools/fill-datasets-by-using-tableadapters#tableadapter-support-for-nullable-types)。
 
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.InvalidOperationException>
 - <xref:System.Nullable%601.HasValue%2A>
-- [使用可以为 null 的类型](../../../../csharp/programming-guide/nullable-types/using-nullable-types.md)
 - [数据类型](index.md)
-- [值类型和引用类型](value-types-and-reference-types.md)
+- [Value Types and Reference Types](value-types-and-reference-types.md)
 - [数据类型疑难解答](troubleshooting-data-types.md)
 - [使用 Tableadapter 填充数据集](/visualstudio/data-tools/fill-datasets-by-using-tableadapters)
 - [If 运算符](../../../language-reference/operators/if-operator.md)
 - [局部类型推理](../variables/local-type-inference.md)
 - [Is 运算符](../../../language-reference/operators/is-operator.md)
 - [IsNot 运算符](../../../language-reference/operators/isnot-operator.md)
+- [使用可以为 Null 的C#值类型（）](../../../../csharp/programming-guide/nullable-types/using-nullable-types.md)
