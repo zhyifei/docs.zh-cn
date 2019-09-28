@@ -31,7 +31,7 @@
       href: generics/
     - name: 命名空间
       href: namespaces/
-    - name: 可以为 null 的类型
+    - name: 可以为 null 的值类型
       href: nullable-types/
     - name: 不安全代码和指针
       href: unsafe-code-pointers/
