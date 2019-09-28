@@ -8,17 +8,17 @@ helpviewer_keywords:
 - indexers [C#]
 - C# language, indexers
 ms.assetid: 022cd27d-d5e0-4cfe-8b97-dc018cc3355d
-ms.openlocfilehash: 5b135fee12ac5b78b41a657f2eb458ea104143fc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f0df3170289d780852ee14232e92c3b71412c548
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69923936"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71392380"
 ---
 # <a name="indexers-c-programming-guide"></a>索引器（C# 编程指南）
 
 索引器允许类或结构的实例就像数组一样进行索引。 无需显式指定类型或实例成员，即可设置或检索索引值。 索引器类似于[属性](../classes-and-structs/properties.md)，不同之处在于它们的访问器需要使用参数。  
- 
+
  以下示例定义了一个泛型类，其中包含用于赋值和检索值的简单 [get](../../language-reference/keywords/get.md) 和 [set](../../language-reference/keywords/set.md) 访问器方法。 `Program` 类创建了此类的一个实例，用于存储字符串。  
   
  [!code-csharp[indexers#1](../../../../samples/snippets/csharp/programming-guide/indexers/indexer-1.cs)]  
