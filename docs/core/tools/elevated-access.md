@@ -3,12 +3,12 @@ title: 提升的 Dotnet 命令访问权限
 description: 了解需要提升访问权限的 dotnet 命令的最佳做法。
 author: wli3
 ms.date: 06/26/2019
-ms.openlocfilehash: b6de87f375a584da25e160d79f51f1bc48f3c302
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: cf7c93a0adcae7092a61a6fc6046cd45cf00bf58
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70969854"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216301"
 ---
 # <a name="elevated-access-for-dotnet-commands"></a>提升的 Dotnet 命令访问权限
 
@@ -41,7 +41,7 @@ ms.locfileid: "70969854"
 
 要安装工具，请在提升的提示符下运行以下命令。 此操作将在安装期间创建 dotnet-tools 文件夹  。
 
-```cmd
+```dotnetcli
 dotnet tool install PACKAGEID --tool-path "%ProgramFiles%\dotnet-tools".
 ```
 
@@ -69,7 +69,7 @@ TOOLCOMMAND
 
 在提升的提示符处，键入下列命令：
 
-```cmd
+```dotnetcli
 dotnet tool uninstall PACKAGEID --tool-path "%ProgramFiles%\dotnet-tools"
 ```
 

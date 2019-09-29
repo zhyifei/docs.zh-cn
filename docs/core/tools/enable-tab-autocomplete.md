@@ -4,12 +4,12 @@ description: 本文介绍如何针对适用于 PowerShell、Bash 和 zsh 的 .NE
 author: thraka
 ms.author: adegeo
 ms.date: 12/17/2018
-ms.openlocfilehash: c7673d95f3710d78d3a09b26f031396587f9c669
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 0f29ba2ef1d419339a0e2dc44f67c93b326eb40d
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202502"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182459"
 ---
 # <a name="how-to-enable-tab-completion-for-net-core-cli"></a>如何为 .NET Core CLI 启用 TAB 自动补全功能
 
@@ -44,7 +44,7 @@ pack
 
 ## <a name="powershell"></a>PowerShell
 
-要将 tab 自动补全添加到适用于 .NET Core CLI 的 PowerShell，请创建或编辑存储在变量 `$PROFILE` 中的配置文件  。 有关详细信息，请参阅[如何创建配置文件](/powershell/module/microsoft.powershell.core/about/about_profiles?view=powershell-6#how-to-create-a-profile)和[配置文件和执行策略](/powershell/module/microsoft.powershell.core/about/about_profiles?view=powershell-6#profiles-and-execution-policy)。 
+要将 tab 自动补全添加到适用于 .NET Core CLI 的 PowerShell，请创建或编辑存储在变量 `$PROFILE` 中的配置文件  。 有关详细信息，请参阅[如何创建配置文件](/powershell/module/microsoft.powershell.core/about/about_profiles#how-to-create-a-profile)和[配置文件和执行策略](/powershell/module/microsoft.powershell.core/about/about_profiles#profiles-and-execution-policy)。 
 
 将以下代码添加到配置文件中：
 
