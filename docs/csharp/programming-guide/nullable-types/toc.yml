@@ -1,7 +1,7 @@
-- name: 可以为 null 的类型
+- name: 可以为 null 的值类型
   href: index.md
   items:
-    - name: 使用可以为 null 的类型
+    - name: 使用可以为 null 的值类型
       href: using-nullable-types.md
-    - name: 如何：标识可以为 null 的类型
+    - name: 如何：确定可以为 null 的值类型
       href: how-to-identify-a-nullable-type.md

@@ -11,6 +11,8 @@
       href: how-to-explicitly-throw-exceptions.md
     - name: 如何：创建用户定义异常
       href: how-to-create-user-defined-exceptions.md
+    - name: 如何：使用本地化的异常消息创建用户定义的异常
+      href: how-to-create-localized-exception-messages.md
     - name: 使用用户筛选的异常处理程序
       href: using-user-filtered-exception-handlers.md
     - name: 如何：使用 Finally 块
