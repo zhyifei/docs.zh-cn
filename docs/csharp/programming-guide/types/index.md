@@ -12,12 +12,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: 422613a9016efb55c299f24c50cd2eec6c2c1069
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: a5ccd0e9e0e3e5bedad06a619be115c362b38e0d
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69588398"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71392155"
 ---
 # <a name="types-c-programming-guide"></a>类型（C# 编程指南）
 
@@ -46,11 +46,11 @@ C# 是一种强类型语言。 每个变量和常量都有一个类型，每个�
 > [!NOTE]
 > C 和 C++ 开发人员请注意，在 C# 中，[bool](../../language-reference/keywords/bool.md) 不能转换为 [int](../../language-reference/builtin-types/integral-numeric-types.md)。
 
-编译器将类型信息作为元数据嵌入可执行文件中。 公共语言运行时 (CLR) 在运行时使用相应的元数据，从而在分配和回收内存时进一步保证类型安全性。
+编译器将类型信息作为元数据嵌入可执行文件中。 公共语言运行时 (CLR) 在运行时使用元数据，以在分配和回收内存时进一步保证类型安全性。
 
 ### <a name="specifying-types-in-variable-declarations"></a>在变量声明中指定类型
 
-在程序中声明变量或常量时，必须指定其类型，或使用 [var](../../language-reference/keywords/var.md) 关键字，以便编译器能够推断出其类型。 以下示例显示了一些使用内置数值类型和复杂用户定义类型的变量声明：
+当在程序中声明变量或常量时，必须指定其类型或使用 [var](../../language-reference/keywords/var.md) 关键字让编译器推断类型。 以下示例显示了一些使用内置数值类型和复杂用户定义类型的变量声明：
 
 [!code-csharp[csProgGuideTypes#36](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#36)]
 
@@ -64,7 +64,7 @@ C# 是一种强类型语言。 每个变量和常量都有一个类型，每个�
 
 ## <a name="built-in-types"></a>内置类型
 
-C# 提供了一组标准的内置数值类型来表示整数、浮点值、布尔表达式、文本字符、十进制值和其他类型数据。 还有内置的 `string` 和 `object` 类型。 这些类型可供在任何 C# 程序中使用。 有关内置类型的详细信息，请参阅[内置类型参考表](../../language-reference/keywords/built-in-types-table.md)。
+C# 提供了一组标准的内置数值类型来表示整数、浮点值、布尔表达式、文本字符、十进制值和其他数据类型。 还有内置的 `string` 和 `object` 类型。 这些类型可供在任何 C# 程序中使用。 有关内置类型的详细信息，请参阅[内置类型参考表](../../language-reference/keywords/built-in-types-table.md)。
 
 ## <a name="custom-types"></a>自定义类型
 
@@ -149,7 +149,7 @@ IMyInterface iface = new MyClass();
 
 ## <a name="types-of-literal-values"></a>文本值的类型
 
-在 C# 中，文本值可从编译器获取类型。 可以通过在数字末尾追加一个字母来指定数字文本应采用的类型。 例如，若要将值 4.56 指定为应按浮点值处理，请在数字后面追加“f”或“F”：`4.56f`。 如果没有追加字母，那么编译器就会推断文本值的类型。 若要详细了解可以使用字母后缀指定哪些类型，请参阅[值类型](../../language-reference/keywords/value-types.md)中的各个类型参考页。
+在 C# 中，文本值从编译器接收类型。 可以通过在数字末尾追加一个字母来指定数字文本应采用的类型。 例如，若要将值 4.56 指定为应按浮点值处理，请在数字后面追加“f”或“F”：`4.56f`。 如果没有追加字母，那么编译器就会推断文本值的类型。 若要详细了解可以使用字母后缀指定哪些类型，请参阅[值类型](../../language-reference/keywords/value-types.md)中的各个类型参考页。
 
 由于文本已类型化，且所有类型最终都是从 <xref:System.Object?displayProperty=nameWithType> 派生，因此可以编写和编译如下所示的代码：
 
@@ -157,7 +157,7 @@ IMyInterface iface = new MyClass();
 
 ## <a name="generic-types"></a>泛型类型
 
-类型可使用一个或多个*类型参数*进行声明，这些参数用作客户端代码在创建类型实例时提供的实际类型（*具体类型*）的占位符。 这种类型称为泛型类型。  例如，.NET 类型 <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> 具有一个类型参数，它按照惯例被命名为 *T*。当创建类型的实例时，指定列表将包含的对象的类型，例如字符串：
+可使用一个或多个类型参数声明、作为客户端代码在创建类型实例时将提供的实际类型（具体类型）的占位符的类型。   这种类型称为泛型类型。  例如，.NET 类型 <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> 具有一个类型参数，它按照惯例被命名为 *T*。当创建类型的实例时，指定列表将包含的对象的类型，例如字符串：
 
 ```csharp
 List<string> stringList = new List<string>();
@@ -168,13 +168,13 @@ stringList.Add(4);
 
 使用类型参数，可以重用同一个类来保留任何类型的元素，而无需将每个元素转换成[对象](../../language-reference/keywords/object.md)。 泛型集合类称为*强类型集合*，因为编译器知道集合元素的具体类型，并能在编译时抛出错误，例如当尝试向上面示例中的 `stringList` 对象添加整数时。 有关详细信息，请参阅[泛型](../generics/index.md)。
 
-## <a name="implicit-types-anonymous-types-and-nullable-types"></a>隐式类型、匿名类型和可以为 null 的类型
+## <a name="implicit-types-anonymous-types-and-nullable-value-types"></a>隐式类型、匿名类型和可以为 null 的值类型
 
-如上所述，可以使用 [var](../../language-reference/keywords/var.md) 关键字隐式键入局部变量（但不是类成员）。 变量仍可在编译时获取类型，但类型是由编译器提供。 有关详细信息，请参阅[隐式类型局部变量](../classes-and-structs/implicitly-typed-local-variables.md)。
+如前所述，你可以使用 [var](../../language-reference/keywords/var.md) 关键字隐式键入一个局部变量（但不是类成员）。 变量仍可在编译时获取类型，但类型是由编译器提供。 有关详细信息，请参阅[隐式类型局部变量](../classes-and-structs/implicitly-typed-local-variables.md)。
 
 在某些情况下，为不打算在方法边界外存储或传递的各组简单的相关值创建已命名的类型并不方便。 因此，可以创建*匿名类型*。 有关详细信息，请参阅[匿名类型](../classes-and-structs/anonymous-types.md)。
 
-普通值类型不能包含值 [null](../../language-reference/keywords/null.md)。 不过，可以在类型后面附加 `?`，创建可以为 null 的值类型。 例如，`int?` 是还可以包含值 [null](../../language-reference/keywords/null.md) 的 `int` 类型。 在 CTS 中，可以为 null 的类型是泛型结构类型 <xref:System.Nullable%601?displayProperty=nameWithType> 的实例。 在将数据传入和传出数据库（数值可能为 null）时，可以为 null 的类型特别有用。 有关详细信息，请参阅[可以为 null 的类型](../nullable-types/index.md)。
+普通值类型不能包含值 [null](../../language-reference/keywords/null.md)。 不过，可以在类型后面附加 `?`，创建可以为 null 的值类型。 例如，`int?` 是还可以包含值 [null](../../language-reference/keywords/null.md) 的 `int` 类型。 可以为 null 的值类型是泛型结构类型 <xref:System.Nullable%601?displayProperty=nameWithType> 的实例。 在将数据传入和传出数据库（数值可能为 null）时，可以为 null 的值类型特别有用。 有关详细信息，请参阅[可以为 null 的值类型](../nullable-types/index.md)。
 
 ## <a name="related-sections"></a>相关章节
 
