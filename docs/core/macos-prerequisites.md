@@ -1,130 +1,51 @@
 ---
 title: Mac 上 .NET Core 的先决条件
 description: 在 macOS 计算机上开发、部署和运行 .NET Core 应用程序所支持的 macOS 版本和 .NET Core 依赖项。
-author: mairaw
+author: thraka
 ms.author: adegeo
 ms.custom: updateeachvsrelease
-ms.date: 07/13/2019
-ms.openlocfilehash: d391c18a371d721419c298f2987894f16ecbd169
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.date: 09/27/2019
+ms.openlocfilehash: 13eea0043be9cf5d5574d6b38f144853c22e8d07
+ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70969928"
+ms.lasthandoff: 09/28/2019
+ms.locfileid: "71591685"
 ---
-# <a name="prerequisites-for-net-core-on-macos"></a><span data-ttu-id="ca160-103">macOS 上 .NET Core 的先决条件</span><span class="sxs-lookup"><span data-stu-id="ca160-103">Prerequisites for .NET Core on macOS</span></span>
+# <a name="prerequisites-for-net-core-on-macos"></a><span data-ttu-id="70d70-103">macOS 上 .NET Core 的先决条件</span><span class="sxs-lookup"><span data-stu-id="70d70-103">Prerequisites for .NET Core on macOS</span></span>
 
-<span data-ttu-id="ca160-104">本文介绍了在 macOS 计算机上开发、部署和运行 .NET Core 应用程序所需的受支持的 macOS 版本和 .NET Core 依赖项。</span><span class="sxs-lookup"><span data-stu-id="ca160-104">This article shows you the supported macOS versions and .NET Core dependencies that you need to develop, deploy, and run .NET Core applications on macOS machines.</span></span> <span data-ttu-id="ca160-105">支持的操作系统版本和随附的依赖项适用于在 Mac 上开发 .NET Core 应用的三种方法：[结合使用常用编辑器和命令行](tutorials/using-with-xplat-cli.md)、[Visual Studio Code](https://code.visualstudio.com/) 和 [Visual Studio for Mac](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)。</span><span class="sxs-lookup"><span data-stu-id="ca160-105">The supported OS versions and dependencies that follow apply to the three ways of developing .NET Core apps on a Mac: via the [command-line with your favorite editor](tutorials/using-with-xplat-cli.md), [Visual Studio Code](https://code.visualstudio.com/), and [Visual Studio for Mac](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link).</span></span>
+<span data-ttu-id="70d70-104">本文介绍了在 macOS 计算机上开发、部署和运行 .NET Core 应用程序所需的受支持的 macOS 版本和 .NET Core 依赖项。</span><span class="sxs-lookup"><span data-stu-id="70d70-104">This article shows you the supported macOS versions and .NET Core dependencies that you need to develop, deploy, and run .NET Core applications on macOS machines.</span></span> <span data-ttu-id="70d70-105">支持的操作系统版本和随附的依赖项适用于在 Mac 上开发 .NET Core 应用的三种方法：[结合使用常用编辑器和命令行](tutorials/using-with-xplat-cli.md)、[Visual Studio Code](https://code.visualstudio.com/) 和 [Visual Studio for Mac](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)。</span><span class="sxs-lookup"><span data-stu-id="70d70-105">The supported OS versions and dependencies that follow apply to the three ways of developing .NET Core apps on a Mac: via the [command-line with your favorite editor](tutorials/using-with-xplat-cli.md), [Visual Studio Code](https://code.visualstudio.com/), and [Visual Studio for Mac](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link).</span></span>
 
-## <a name="supported-macos-versions"></a><span data-ttu-id="ca160-106">支持的 macOS 版本</span><span class="sxs-lookup"><span data-stu-id="ca160-106">Supported macOS versions</span></span>
+## <a name="downloads-and-dependencies"></a><span data-ttu-id="70d70-106">下载和依赖项</span><span class="sxs-lookup"><span data-stu-id="70d70-106">Downloads and dependencies</span></span>
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="net-core-2xtabnetcore2x"></a>[<span data-ttu-id="ca160-107">.NET Core 2.x</span><span class="sxs-lookup"><span data-stu-id="ca160-107">.NET Core 2.x</span></span>](#tab/netcore2x)
+# <a name="net-core-30tabnetcore30"></a>[<span data-ttu-id="70d70-107">.NET Core 3.0</span><span class="sxs-lookup"><span data-stu-id="70d70-107">.NET Core 3.0</span></span>](#tab/netcore30)
 
-<span data-ttu-id="ca160-108">以下 macOS 版本支持 .NET Core 2.x：</span><span class="sxs-lookup"><span data-stu-id="ca160-108">.NET Core 2.x is supported on the following versions of macOS:</span></span>
+<span data-ttu-id="70d70-108">.NET Core 3.0 在 macOS High Sierra（版本 10.13）及更高版本上受支持  。</span><span class="sxs-lookup"><span data-stu-id="70d70-108">.NET Core 3.0 is supported on **macOS High Sierra (version 10.13)** and later versions.</span></span> <span data-ttu-id="70d70-109">需要 x64 CPU 体系结构  。</span><span class="sxs-lookup"><span data-stu-id="70d70-109">A **x64** CPU architecture is required.</span></span>
 
-* <span data-ttu-id="ca160-109">macOS 10.12“Sierra”及更高版本</span><span class="sxs-lookup"><span data-stu-id="ca160-109">macOS 10.12 "Sierra" and later versions</span></span>
+<span data-ttu-id="70d70-110">从 [.NET Core 3.0 下载](https://dotnet.microsoft.com/download/dotnet-core/3.0)页面下载并安装 .NET Core SDK。</span><span class="sxs-lookup"><span data-stu-id="70d70-110">Download and install the .NET Core SDK from the [.NET Core 3.0 downloads](https://dotnet.microsoft.com/download/dotnet-core/3.0) page.</span></span> <span data-ttu-id="70d70-111">要在完整列表中了解 .NET Core 3.0 支持的操作系统、发行版本和版本、生命周期策略链接和不支持的 OS 版本，请参阅 [.NET Core 3.0 支持的 OS 版本](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md)。</span><span class="sxs-lookup"><span data-stu-id="70d70-111">[.NET Core 3.0 Supported OS Versions](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md) for the complete list of .NET Core 3.0 supported operating systems, distributions and versions, out of support OS versions, and lifecycle policy links.</span></span>
 
-<span data-ttu-id="ca160-110">有关 .NET Core 2.1 和 .NET Core 2.2 支持的操作系统、发行版本和版本、不支持的 OS 版本和生命周期策略链接的完整列表，请参阅 [.NET Core 2.1 支持的 OS 版本](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md)和 [.NET Core 2.2 支持的 OS 版本](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md)。</span><span class="sxs-lookup"><span data-stu-id="ca160-110">See [.NET Core 2.1 Supported OS Versions](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md) and [.NET Core 2.2 Supported OS Versions](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md) for the complete list of .NET Core 2.1 and .NET Core 2.2 supported operating systems, distributions and versions, out of support OS versions, and lifecycle policy links.</span></span>
+<span data-ttu-id="70d70-112">有关已知问题的列表，请参阅 [.NET Core 已知问题](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-known-issues.md)。</span><span class="sxs-lookup"><span data-stu-id="70d70-112">For a list of known issues, see [.NET Core known issues](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-known-issues.md).</span></span>
 
-<span data-ttu-id="ca160-111">有关下载链接和详细信息，请参阅 [.NET Core 2.2 下载](https://dotnet.microsoft.com/download/dotnet-core/2.2)或 [.NET Core 2.1 下载](https://dotnet.microsoft.com/download/dotnet-core/2.1)。</span><span class="sxs-lookup"><span data-stu-id="ca160-111">For download links and more information, see [.NET Core 2.2 downloads](https://dotnet.microsoft.com/download/dotnet-core/2.2) or [.NET Core 2.1 downloads](https://dotnet.microsoft.com/download/dotnet-core/2.1).</span></span>
+# <a name="net-core-22tabnetcore22"></a>[<span data-ttu-id="70d70-113">.NET Core 2.2</span><span class="sxs-lookup"><span data-stu-id="70d70-113">.NET Core 2.2</span></span>](#tab/netcore22)
 
-# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="ca160-112">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="ca160-112">.NET Core 1.x</span></span>](#tab/netcore1x)
+<span data-ttu-id="70d70-114">.NET Core 2.2 在 macOS Sierra（版本 10.12）及更高版本上受支持  。</span><span class="sxs-lookup"><span data-stu-id="70d70-114">.NET Core 2.2 is supported on **macOS Sierra (version 10.12)** and later versions.</span></span> <span data-ttu-id="70d70-115">需要 x64 CPU 体系结构  。</span><span class="sxs-lookup"><span data-stu-id="70d70-115">A **x64** CPU architecture is required.</span></span>
 
-<span data-ttu-id="ca160-113">以下 macOS 版本支持 .NET Core 1.x：</span><span class="sxs-lookup"><span data-stu-id="ca160-113">.NET Core 1.x is supported on the following versions of macOS:</span></span>
+<span data-ttu-id="70d70-116">从 [ .NET Core 2.2 下载](https://dotnet.microsoft.com/download/dotnet-core/2.2)页面下载并安装 .NET Core SDK。</span><span class="sxs-lookup"><span data-stu-id="70d70-116">Download and install the .NET Core SDK from the [.NET Core 2.2 downloads](https://dotnet.microsoft.com/download/dotnet-core/2.2) page.</span></span> <span data-ttu-id="70d70-117">要在完整列表中了解 .NET Core 2.2 支持的操作系统、发行版本和版本、生命周期策略链接和不支持的 OS 版本，请参阅 [.NET Core 2.2 支持的 OS 版本](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md)。</span><span class="sxs-lookup"><span data-stu-id="70d70-117">[.NET Core 2.2 Supported OS Versions](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md) for the complete list of .NET Core 2.2 supported operating systems, distributions and versions, out of support OS versions, and lifecycle policy links.</span></span>
 
-* <span data-ttu-id="ca160-114">macOS 10.12“Sierra”</span><span class="sxs-lookup"><span data-stu-id="ca160-114">macOS 10.12 "Sierra"</span></span>
-* <span data-ttu-id="ca160-115">macOS 10.11“El Capitan”</span><span class="sxs-lookup"><span data-stu-id="ca160-115">macOS 10.11 "El Capitan"</span></span>
+<span data-ttu-id="70d70-118">有关已知问题的列表，请参阅 [.NET Core 已知问题](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-known-issues.md)。</span><span class="sxs-lookup"><span data-stu-id="70d70-118">For a list of known issues, see [.NET Core known issues](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-known-issues.md).</span></span>
 
-<span data-ttu-id="ca160-116">有关 .NET Core 1.1 和 .NET Core 1.0 支持的操作系统、发行版本和版本、不支持的 OS 版本和生命周期策略链接的完整列表，请参阅 [.NET Core 1.1 支持的 OS 版本](https://github.com/dotnet/core/blob/master/release-notes/1.1/1.1.md)和 [.NET Core 1.0 支持的 OS 版本](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0-supported-os.md)。</span><span class="sxs-lookup"><span data-stu-id="ca160-116">See [.NET Core 1.1 Supported OS Versions](https://github.com/dotnet/core/blob/master/release-notes/1.1/1.1.md) and [.NET Core 1.0 Supported OS Versions](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0-supported-os.md) for the complete list of .NET Core 1.1 and .NET Core 1.0 supported operating systems, distributions and versions, out of support OS versions, and lifecycle policy links.</span></span>
+# <a name="net-core-21tabnetcore21"></a>[<span data-ttu-id="70d70-119">.NET Core 2.1</span><span class="sxs-lookup"><span data-stu-id="70d70-119">.NET Core 2.1</span></span>](#tab/netcore21)
 
-<span data-ttu-id="ca160-117">有关下载链接和详细信息，请参阅 [.NET Core 1.1 下载](https://dotnet.microsoft.com/download/dotnet-core/1.1)或 [.NET Core 1.0 下载](https://dotnet.microsoft.com/download/dotnet-core/1.0)。</span><span class="sxs-lookup"><span data-stu-id="ca160-117">For download links and more information, see [.NET Core 1.1 downloads](https://dotnet.microsoft.com/download/dotnet-core/1.1) or [.NET Core 1.0 downloads](https://dotnet.microsoft.com/download/dotnet-core/1.0).</span></span>
+<span data-ttu-id="70d70-120">.NET Core 2.1 在 macOS Sierra（版本 10.12）及更高版本上受支持  。</span><span class="sxs-lookup"><span data-stu-id="70d70-120">.NET Core 2.1 is supported on **macOS Sierra (version 10.12)** and later versions.</span></span> <span data-ttu-id="70d70-121">需要 x64 CPU 体系结构  。</span><span class="sxs-lookup"><span data-stu-id="70d70-121">A **x64** CPU architecture is required.</span></span>
 
-# <a name="net-core-30tabnetcore30"></a>[<span data-ttu-id="ca160-118">.NET Core 3.0</span><span class="sxs-lookup"><span data-stu-id="ca160-118">.NET Core 3.0</span></span>](#tab/netcore30)
+<span data-ttu-id="70d70-122">从 [.NET Core 2.1 下载](https://dotnet.microsoft.com/download/dotnet-core/2.1)页面下载并安装 .NET Core SDK。</span><span class="sxs-lookup"><span data-stu-id="70d70-122">Download and install the .NET Core SDK from the [.NET Core 2.1 downloads](https://dotnet.microsoft.com/download/dotnet-core/2.1) page.</span></span> <span data-ttu-id="70d70-123">要在完整列表中了解 .NET Core 2.1 支持的操作系统、发行版本和版本、生命周期策略链接和不支持的 OS 版本，请参阅 [.NET Core 2.1 支持的 OS 版本](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md)。</span><span class="sxs-lookup"><span data-stu-id="70d70-123">[.NET Core 2.1 Supported OS Versions](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md) for the complete list of .NET Core 2.1 supported operating systems, distributions and versions, out of support OS versions, and lifecycle policy links.</span></span>
 
-<span data-ttu-id="ca160-119">以下 macOS 版本均支持 .NET Core 3.0：</span><span class="sxs-lookup"><span data-stu-id="ca160-119">.NET Core 3.0 is supported on the following versions of macOS:</span></span>
-
-* <span data-ttu-id="ca160-120">macOS 10.13“High Sierra”及更高版本</span><span class="sxs-lookup"><span data-stu-id="ca160-120">macOS 10.13 "High Sierra" and later versions</span></span>
-
-<span data-ttu-id="ca160-121">有关 .NET Core 3.0 支持的操作系统、发行版本和版本、不支持的 OS 版本和生命周期策略链接的完整列表，请参阅 [.NET Core 3.0 支持的 OS 版本](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md)。</span><span class="sxs-lookup"><span data-stu-id="ca160-121">See [.NET Core 3.0 Supported OS Versions](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md) for the complete list of .NET Core 3.0 supported operating systems, distributions and versions, out of support OS versions, and lifecycle policy links.</span></span>
-
-<span data-ttu-id="ca160-122">有关下载链接和详细信息，请参阅 [.NET Core 3.0 下载](https://dotnet.microsoft.com/download/dotnet-core/3.0)。</span><span class="sxs-lookup"><span data-stu-id="ca160-122">For download links and more information, see [.NET Core 3.0 downloads](https://dotnet.microsoft.com/download/dotnet-core/3.0).</span></span>
+<span data-ttu-id="70d70-124">有关已知问题的列表，请参阅 [.NET Core 已知问题](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-known-issues.md)。</span><span class="sxs-lookup"><span data-stu-id="70d70-124">For a list of known issues, see [.NET Core known issues](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-known-issues.md).</span></span>
 
 ---
 
-## <a name="net-core-dependencies"></a><span data-ttu-id="ca160-123">.NET Core 依赖项</span><span class="sxs-lookup"><span data-stu-id="ca160-123">.NET Core dependencies</span></span>
+## <a name="visual-studio-for-mac"></a><span data-ttu-id="70d70-125">Visual Studio for Mac</span><span class="sxs-lookup"><span data-stu-id="70d70-125">Visual Studio for Mac</span></span>
 
-# <a name="net-core-2xtabnetcore2x"></a>[<span data-ttu-id="ca160-124">.NET Core 2.x</span><span class="sxs-lookup"><span data-stu-id="ca160-124">.NET Core 2.x</span></span>](#tab/netcore2x)
-
-<span data-ttu-id="ca160-125">从 [.NET 下载](https://dotnet.microsoft.com/download)页面下载并安装 .NET Core SDK。</span><span class="sxs-lookup"><span data-stu-id="ca160-125">Download and install the .NET Core SDK from the [.NET Downloads](https://dotnet.microsoft.com/download) page.</span></span> <span data-ttu-id="ca160-126">如果在 macOS 上安装时遇到问题，请查阅适用于已安装的版本的[已知问题](https://github.com/dotnet/core/tree/master/release-notes/2.1)主题。</span><span class="sxs-lookup"><span data-stu-id="ca160-126">If you have problems with the installation on macOS, consult the [Known issues](https://github.com/dotnet/core/tree/master/release-notes/2.1) topic for the version you have installed.</span></span>
-
-# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="ca160-127">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="ca160-127">.NET Core 1.x</span></span>](#tab/netcore1x)
-
-<span data-ttu-id="ca160-128">在 macOS 上运行时，.NET Core 1.x 需要 OpenSSL。</span><span class="sxs-lookup"><span data-stu-id="ca160-128">.NET Core 1.x requires OpenSSL when running on macOS.</span></span> <span data-ttu-id="ca160-129">获取 OpenSSL 的一个简单方法是使用适用于 macOS 的 [Homebrew (“brew”)](https://brew.sh/) 包。</span><span class="sxs-lookup"><span data-stu-id="ca160-129">An easy way to obtain OpenSSL is by using the [Homebrew ("brew")](https://brew.sh/) package manager for macOS.</span></span> <span data-ttu-id="ca160-130">在安装 *brew* 后，通过在终端（命令）提示符处执行以下命令来安装 OpenSSL：</span><span class="sxs-lookup"><span data-stu-id="ca160-130">After installing *brew*, install OpenSSL by executing the following commands at a Terminal (command) prompt:</span></span>
-
-```console
-brew update
-brew install openssl
-mkdir -p /usr/local/lib
-ln -s /usr/local/opt/openssl/lib/libcrypto.1.0.0.dylib /usr/local/lib/
-ln -s /usr/local/opt/openssl/lib/libssl.1.0.0.dylib /usr/local/lib/
-```
-
-<span data-ttu-id="ca160-131">从 [.NET 下载](https://dotnet.microsoft.com/download)页面下载并安装 .NET Core SDK。</span><span class="sxs-lookup"><span data-stu-id="ca160-131">Download and install the .NET Core SDK from the [.NET Downloads](https://dotnet.microsoft.com/download) page.</span></span> <span data-ttu-id="ca160-132">如果在 macOS 上安装时遇到问题，请查阅 [1.0.0 已知问题](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0.0-known-issues.md)和 [1.0.1 已知问题](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0.1-known-issues.md)主题。</span><span class="sxs-lookup"><span data-stu-id="ca160-132">If you have problems with the installation on macOS, consult the [1.0.0 Known Issues](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0.0-known-issues.md) and [1.0.1 Known Issues](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0.1-known-issues.md) topics.</span></span>
-
-# <a name="net-core-30tabnetcore30"></a>[<span data-ttu-id="ca160-133">.NET Core 3.0</span><span class="sxs-lookup"><span data-stu-id="ca160-133">.NET Core 3.0</span></span>](#tab/netcore30)
-
-<span data-ttu-id="ca160-134">从 [.NET 下载](https://dotnet.microsoft.com/download)页面下载并安装 .NET Core SDK。</span><span class="sxs-lookup"><span data-stu-id="ca160-134">Download and install the .NET Core SDK from the [.NET Downloads](https://dotnet.microsoft.com/download) page.</span></span> <span data-ttu-id="ca160-135">如果在 macOS 上进行安装时遇到问题，请查阅[发行说明](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md)主题以了解所安装的版本。</span><span class="sxs-lookup"><span data-stu-id="ca160-135">If you have problems with the installation on macOS, consult the [Release notes](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md) topic for the version you have installed.</span></span>
-
----
-
-## <a name="increase-the-maximum-open-file-limit-net-core-versions-before-net-core-sdk-202"></a><span data-ttu-id="ca160-136">提高开放文件上限（低于 .NET Core SDK 2.0.2 的 .NET Core 版本）</span><span class="sxs-lookup"><span data-stu-id="ca160-136">Increase the maximum open file limit (.NET Core versions before .NET Core SDK 2.0.2)</span></span>
-
-<span data-ttu-id="ca160-137">在低于 .NET Core SDK 2.0.2 的旧版 .NET Core 中，macOS 上的默认开放文件上限可能对某些 .NET Core 工作负荷（如还原项目或运行单元测试）不够用。</span><span class="sxs-lookup"><span data-stu-id="ca160-137">In older .NET Core versions (before .NET Core SDK 2.0.2), the default open file limit on macOS may not be sufficient for some .NET Core workloads, such as restoring projects or running unit tests.</span></span>
-
-<span data-ttu-id="ca160-138">可通过执行以下步骤来增大此限制：</span><span class="sxs-lookup"><span data-stu-id="ca160-138">You can increase this limit by following these steps:</span></span>
-
-1. <span data-ttu-id="ca160-139">使用文本编辑器创建新文件 _/Library/LaunchDaemons/limit.maxfiles.plist_，并在文件中保存以下内容：</span><span class="sxs-lookup"><span data-stu-id="ca160-139">Using a text editor, create a new file _/Library/LaunchDaemons/limit.maxfiles.plist_, and save the file with this content:</span></span>
-
-    ```xml
-    <?xml version="1.0" encoding="UTF-8"?>
-    <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-    <plist version="1.0">
-      <dict>
-        <key>Label</key>
-        <string>limit.maxfiles</string>
-        <key>ProgramArguments</key>
-        <array>
-          <string>launchctl</string>
-          <string>limit</string>
-          <string>maxfiles</string>
-          <string>2048</string>
-          <string>4096</string>
-        </array>
-        <key>RunAtLoad</key>
-        <true/>
-        <key>ServiceIPC</key>
-        <false/>
-      </dict>
-    </plist>
-    ```
-
-2. <span data-ttu-id="ca160-140">在终端窗口中运行以下命令：</span><span class="sxs-lookup"><span data-stu-id="ca160-140">In a terminal window, run the following command:</span></span>
-
-   ```console
-   echo 'ulimit -n 2048' | sudo tee -a /etc/profile
-   ```
-
-3. <span data-ttu-id="ca160-141">需要重启 Mac 才能应用这些设置。</span><span class="sxs-lookup"><span data-stu-id="ca160-141">Reboot your Mac to apply these settings.</span></span>
-
-## <a name="visual-studio-for-mac"></a><span data-ttu-id="ca160-142">Visual Studio for Mac</span><span class="sxs-lookup"><span data-stu-id="ca160-142">Visual Studio for Mac</span></span>
-
-<span data-ttu-id="ca160-143">可以使用任何编辑器，通过 .NET Core SDK 开发 .NET Core 应用程序。</span><span class="sxs-lookup"><span data-stu-id="ca160-143">You can use any editor to develop .NET Core applications using the .NET Core SDK.</span></span> <span data-ttu-id="ca160-144">但是，若要在集成的开发环境中的 Mac 上开发 .NET Core 应用程序，可以使用 [Visual Studio for Mac](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)。</span><span class="sxs-lookup"><span data-stu-id="ca160-144">However, if you want to develop .NET Core applications on a Mac in an integrated development environment, you can use [Visual Studio for Mac](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link).</span></span>
-
-<span data-ttu-id="ca160-145">使用 Visual Studio for Mac 在 macOS 上进行 .NET Core 开发需要：</span><span class="sxs-lookup"><span data-stu-id="ca160-145">.NET Core development on macOS with Visual Studio for Mac requires:</span></span>
-
-* <span data-ttu-id="ca160-146">macOS 操作系统的受支持版本</span><span class="sxs-lookup"><span data-stu-id="ca160-146">A supported version of the macOS operating system</span></span>
-* <span data-ttu-id="ca160-147">OpenSSL（仅 .NET Core 1.x；.NET Core 2.x 使用 macOS 上本机可用的安全服务）</span><span class="sxs-lookup"><span data-stu-id="ca160-147">OpenSSL (.NET Core 1.x only; .NET Core 2.x uses security services available natively in macOS)</span></span>
-* <span data-ttu-id="ca160-148">.NET Core SDK for Mac</span><span class="sxs-lookup"><span data-stu-id="ca160-148">.NET Core SDK for Mac</span></span>
-* [<span data-ttu-id="ca160-149">Visual Studio for Mac</span><span class="sxs-lookup"><span data-stu-id="ca160-149">Visual Studio for Mac</span></span>](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)
+<span data-ttu-id="70d70-126">可以使用任何编辑器，通过 .NET Core SDK 开发 .NET Core 应用程序。</span><span class="sxs-lookup"><span data-stu-id="70d70-126">You can use any editor to develop .NET Core applications using the .NET Core SDK.</span></span> <span data-ttu-id="70d70-127">但是，若要在集成的开发环境中的 Mac 上开发 .NET Core 应用程序，可以使用 [Visual Studio for Mac](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)。</span><span class="sxs-lookup"><span data-stu-id="70d70-127">However, if you want to develop .NET Core applications on a Mac in an integrated development environment, you can use [Visual Studio for Mac](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link).</span></span>
