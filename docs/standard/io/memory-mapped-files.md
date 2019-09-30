@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: a483d1b5-64aa-45b6-86ef-11b859f7f02e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c796a93f7ea5ad4664f35788b766117c712b9766
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 80eb5fd8b6c3b9ca8473efd1cab23a406280f1fa
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66487051"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71392899"
 ---
 # <a name="memory-mapped-files"></a>内存映射文件
 内存映射文件包含虚拟内存中文件的内容。 借助文件和内存空间之间的这种映射，应用（包括多个进程）可以直接对内存执行读取和写入操作，从而修改文件。 从 .NET Framework 4 开始，可以使用托管代码访问内存映射文件，就像本机 Windows 函数访问内存映射文件（如[管理内存映射文件](https://docs.microsoft.com/previous-versions/ms810613(v=msdn.10))所述）一样。  
@@ -122,7 +122,7 @@ ms.locfileid: "66487051"
   
  `Process A` 的输出如下所示：  
   
-```  
+```console  
 Start Process B and press ENTER to continue.  
 Start Process C and press ENTER to continue.  
 Process A says: True  

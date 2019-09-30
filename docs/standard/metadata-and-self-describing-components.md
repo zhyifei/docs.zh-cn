@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3dd13c5d-a508-455b-8dce-0a852882a5a7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8ccfb0dee0eb6380d48498ba61f763eb777bded1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1a35f4ffa88211d914dbf84c87da49fafa89a929
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64754945"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353894"
 ---
 # <a name="metadata-and-self-describing-components"></a>元数据和自描述组件
 
@@ -84,11 +84,9 @@ ms.locfileid: "64754945"
 
 元数据标记是一个四个字节的数字。 最高位字节表示特定标记（方法、类型等）引用的元数据表。 剩下的三个字节指定与所说明的编程元素对应的元数据表中的行。 如果您用 C# 定义一个方法并将其编译到 PE 文件，下面的元数据标记可能存在于 PE 文件的 MSIL 部分：
 
-```
-0x06000004
-```
+`0x06000004`
 
-最高位字节 (`0x06`) 表示这是一个 MethodDef 标记。 低位的三个字节 (`000004`) 指示公共语言运行时在 MethodDef 表的第四行查找对该方法定义进行描述的信息。
+最高位字节 (`0x06`) 表示这是一个 MethodDef  标记。 低位的三个字节 (`000004`) 指示公共语言运行时在 MethodDef  表的第四行查找对该方法定义进行描述的信息。
 
 ### <a name="metadata-within-a-pe-file"></a>PE 文件中的元数据
 
@@ -140,7 +138,7 @@ public class MyApp
 
 下面的示例显示了从以前代码的 `Main` 功能生成的部分 MSIL。 可使用 [MSIL 反汇编程序 (Ildasm.exe)](../../docs/framework/tools/ildasm-exe-il-disassembler.md) 从任何 .NET Framework 应用程序中查看 MSIL 和元数据。
 
-```
+```console
 .entrypoint
 .maxstack  3
 .locals ([0] int32 ValueOne,
@@ -157,7 +155,7 @@ IL_000c:  ldloc.1
 IL_000d:  call int32 ConsoleApplication.MyApp::Add(int32,int32) /* 06000003 */
 ```
 
-JIT 编译器读取整个方法的 MSIL，对其进行彻底地分析，然后为该方法生成有效的本机指令。 在 `IL_000d` 遇到 `Add` 方法 (`/*` `06000003 */`) 的元数据标记，运行时使用该标记参考 MethodDef 表的第三行。
+JIT 编译器读取整个方法的 MSIL，对其进行彻底地分析，然后为该方法生成有效的本机指令。 在 `IL_000d` 遇到 `Add` 方法 (`/*` `06000003 */`) 的元数据标记，运行时使用该标记参考 MethodDef  表的第三行。
 
 下表显示了说明  **方法的元数据标记所引用的 MethodDef**`Add` 表的一部分。 虽然程序集中存在其他元数据表并具有它们自己唯一的值，但这里只讨论该表。
 
@@ -167,9 +165,9 @@ JIT 编译器读取整个方法的 MSIL，对其进行彻底地分析，然后�
 |2|0x00002058|IL<br /><br /> Managed|Public<br /><br /> Static<br /><br /> ReuseSlot|Main|String|
 |3|0x0000208c|IL<br /><br /> Managed|Public<br /><br /> Static<br /><br /> ReuseSlot|添加|int, int, int|
 
-该表的每一列都包含有关代码的重要信息。 RVA 列允许运行时计算定义此方法的 MSIL 的起始内存地址。 ImplFlags 和 Flags 列包含说明该方法的位屏蔽（例如，该方法是公共的还是私有的）。 Name 列对来自字符串堆的方法的名称进行了索引。 Signature 列对在 Blob 堆中的方法签名的定义进行了索引。
+该表的每一列都包含有关代码的重要信息。 RVA  列允许运行时计算定义此方法的 MSIL 的起始内存地址。 ImplFlags  和 Flags  列包含说明该方法的位屏蔽（例如，该方法是公共的还是私有的）。 Name  列对来自字符串堆的方法的名称进行了索引。 Signature  列对在 Blob 堆中的方法签名的定义进行了索引。
 
-运行时在第三行的 RVA 列计算所需的偏移量地址并将该地址返回到 JIT 编译器，然后，JIT 编译器进入新地址。 JIT 编译器继续在新地址处理 MSIL，直到它遇到另一个元数据标记，之后，重复该过程。
+运行时在第三行的 RVA  列计算所需的偏移量地址并将该地址返回到 JIT 编译器，然后，JIT 编译器进入新地址。 JIT 编译器继续在新地址处理 MSIL，直到它遇到另一个元数据标记，之后，重复该过程。
 
 使用元数据，运行时可以访问加载代码并将其处理为本机指令所需的所有信息。 以这种方式，元数据使自描述文件、常规类型系统和跨语言继承成为可能。
 

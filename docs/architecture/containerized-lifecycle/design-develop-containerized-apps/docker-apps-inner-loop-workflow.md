@@ -2,12 +2,12 @@
 title: Docker 应用的内部循环开发工作流
 description: 了解 Docker 应用程序开发的“内部循环”工作流。
 ms.date: 02/15/2019
-ms.openlocfilehash: ce573546f61b98c2f93e998203497fa949e9efe8
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 04e1b29e6a0cef89df05cc9124806c74a38b5249
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68673974"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71214353"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Docker 应用的内部循环开发工作流
 
@@ -47,8 +47,7 @@ Docker 映像的容器或实例将包含以下组件：
 
 使用最新版本的用于 Mac 和 Windows 的 Docker，开发 Docker 应用程序容易得多，因为设置非常简单。
 
-> [!INFORMATION]
->
+> [!TIP]
 > 如需设置用于 Windows 的 Docker 的说明，请转到 <https://docs.docker.com/docker-for-windows/>。
 >
 >如需设置用于 Mac 的 Docker 的说明，请转到 <https://docs.docker.com/docker-for-mac/>。
@@ -57,8 +56,7 @@ Docker 映像的容器或实例将包含以下组件：
 
 Microsoft 提供 Visual Studio Code，它是 Mac、Windows 和 Linux 支持的轻量级代码编辑器，并为 IntelliSense 提供[多种语言的支持](https://code.visualstudio.com/docs/languages/overview)（JavaScript、.NET、Go、Java、Ruby、Python 和大多数现代语言）、[调试](https://code.visualstudio.com/Docs/editor/debugging)、[与 Git 集成](https://code.visualstudio.com/Docs/editor/versioncontrol)和[扩展插件支持](https://code.visualstudio.com/docs/extensions/overview)。 此编辑器是 Mac 和 Linux 开发人员的绝佳选择。 在 Windows 中，还可以使用完整的 Visual Studio 应用程序。
 
-> [!INFORMATION]
->
+> [!TIP]
 > 如需了解用于 Windows、Mac 或 Linux 的 Visual Studio Code 的安装说明，请转到 <https://code.visualstudio.com/docs/setup/setup-overview/>。
 >
 > 如需设置用于 Mac 的 Docker 的说明，请转到 <https://docs.docker.com/docker-for-mac/>。
@@ -94,7 +92,6 @@ VS Code 的 Docker 扩展提供以下功能：
 `DockerFile` 通常放在应用或服务的根文件夹中且包含所需命令，以便 Docker 知道如何设置和运行该应用或服务。 可以创建 `DockerFile` 并将其与代码（node.js、.NET Core 等）一起添加到项目中。或者，如果你是初次接触环境，请查看以下提示。
 
 > [!TIP]
->
 > 在使用与 Docker 容器相关的 `Dockerfile` 和 `docker-compose.yml` 文件时，可以使用 Docker 扩展来提供指导。 最终，可能无需使用此工具，即可编写这些类型的文件，但使用 Docker 扩展是一个很好的起点，可以加快学习曲线。
 
 在图 4-24 中，可以看到如何使用 VS Code 的 Docker 扩展添加 docker-compose 文件。
@@ -133,8 +130,7 @@ ENTRYPOINT ["dotnet", "MyCustomMicroservice.dll"]
 
 可在 Dockerfile 中指定其他配置设置，具体取决于使用的语言和框架。 例如，带有 `["dotnet", "MySingleContainerWebApp.dll"]` 的 `ENTRYPOINT` 行指示 Docker 运行 .NET Core 应用程序。 如果使用 SDK 和 .NET Core CLI (`dotnet CLI`) 来生成和运行 .NET 应用程序，则此设置会有所不同。 此处关键在于 ENTRYPOINT 行和其他设置根据为应用程序选择的语言和平台而有所不同。
 
-> [!INFORMATION]
->
+> [!TIP]
 > 有关为 .NET Core 应用程序生成 Docker 映像的详细信息，请转到 <https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images>。
 >
 > 如需了解有关构建自己的映像的详细信息，请转到 <https://docs.docker.com/engine/tutorials/dockerimages/>。
@@ -154,7 +150,6 @@ ENTRYPOINT ["dotnet", "MyCustomMicroservice.dll"]
 需要为构成应用的每个自定义服务创建相关映像。 如果应用由单个服务或 Web 应用组成，则只需创建单个映像即可。
 
 > [!NOTE]
->
 > 考虑“外部循环 DevOps 工作流”时，只要将源代码推送到 Git 存储库（持续集成），就会通过自动构建过程创建映像，因此将在全局环境中从源代码创建映像。
 >
 > 但在考虑采用外部循环路由之前，需要确保 Docker 应用程序实际上正常工作，这样它们就不会将可能无法正常工作的代码推送到 Git 等源代码管理系统。

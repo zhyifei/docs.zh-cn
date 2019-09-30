@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: e51988e7-7f4b-4646-a06d-1416cee8d557
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bb262f5a02343aeb91c28eb21c939edef8a70f61
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 1066a3533dedd5976f2dd73b1858ad8fa0c1f653
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666301"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71392692"
 ---
 # <a name="managed-threading-best-practices"></a>托管线程处理的最佳做法
 多线程处理需在编程时倍加注意。 对于多数任务，通过将执行请求以线程池线程的方式排队，可以降低复杂性。 本主题将探讨更复杂的情形，比如协调多个线程的工作或处理造成阻止的线程。  
@@ -145,10 +145,7 @@ else {
     {  
         lock (lockObject)  
         {  
-            if (x == null)  
-            {  
-                x = y;  
-            }  
+            x ??= y;
         }  
     }  
     ```  

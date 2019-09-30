@@ -8,12 +8,12 @@ helpviewer_keywords:
 - GC [.NET ], large object heap
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 70ea0110f22e741908ad857fa501553d93c4b98d
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 4663c42b784334f66318c61d531ab4cee2f8b02e
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929143"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71354054"
 ---
 # <a name="the-large-object-heap-on-windows-systems"></a>Windows 系统上的大型对象堆
 
@@ -211,7 +211,7 @@ perfview /GCOnly /AcceptEULA /nogui collect
 
 以下内容显示了分析 LOH 的示例输出：
 
-```
+```console
 0:003> .loadby sos mscorwks
 0:003> !eeheap -gc
 Number of GC Heaps: 1
@@ -252,7 +252,7 @@ LOH 堆大小为 (16,754,224 + 16,699,288 + 16,284,504) = 49,738,016 字节。 �
 
    以下示例显示 VM 空间中的碎片：
 
-   ```
+   ```console
    0:000> !address
    00000000 : 00000000 - 00010000
    Type     00000000

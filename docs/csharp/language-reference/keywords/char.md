@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - char data type [C#]
 ms.assetid: b51cf4fb-124c-4067-af48-afbac122b228
-ms.openlocfilehash: 754c04bfc3b4090906420d55d55e51606b72f187
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 255e69d3715a22e7933b4036e968e610657748cf
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69605949"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353764"
 ---
 # <a name="char-c-reference"></a>char（C# 参考）
 
@@ -51,5 +51,4 @@ ms.locfileid: "69605949"
 - [内置类型表](./built-in-types-table.md)
 - [隐式数值转换表](./implicit-numeric-conversions-table.md)
 - [显式数值转换表](./explicit-numeric-conversions-table.md)
-- [可以为 null 的类型](../../programming-guide/nullable-types/index.md)
 - [字符串](../../programming-guide/strings/index.md)

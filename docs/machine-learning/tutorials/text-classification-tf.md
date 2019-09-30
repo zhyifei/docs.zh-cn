@@ -6,12 +6,12 @@ ms.topic: tutorial
 ms.custom: mvc
 ms.author: nakersha
 author: natke
-ms.openlocfilehash: 2dd10c0843b2bea4755d5f4f0aceea6509c7cf46
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 38b935814d713284dae1ca931b90c63bbcac332b
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71054260"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216891"
 ---
 # <a name="tutorial-analyze-sentiment-of-movie-reviews-using-a-pre-trained-tensorflow-model-in-mlnet"></a>教程：在 ML.NET 中使用预先训练的 TensorFlow 模型分析电影评论的情绪
 
@@ -21,6 +21,7 @@ ms.locfileid: "71054260"
 
 在本教程中，你将了解：
 > [!div class="checklist"]
+>
 > * 加载预先训练的 TensorFlow 模型
 > * 将网站评论文本转换为适用于模型的特征
 > * 使用模型进行预测
@@ -80,14 +81,14 @@ ms.locfileid: "71054260"
 
 首先是将文本拆分为单独的单词，然后使用提供的映射文件将每个单词映射到整数编码。 这种转换的结果是一个可变长度的整数数组，其长度对应于句子中的单词数。
 
-|Property| 值|类型|
+|属性| 值|类型|
 |-------------|-----------------------|------|
 |ReviewText|这部电影非常不错|string|
 |VariableLengthFeatures|14,22,9,66,78,... |int[]|
 
 然后将可变长度特征数组的大小调整为固定长度 600。 这是 TensorFlow 模型所需的长度。
 
-|Property| 值|类型|
+|属性| 值|类型|
 |-------------|-----------------------|------|
 |ReviewText|这部电影非常不错|string|
 |VariableLengthFeatures|14,22,9,66,78,... |int[]|
@@ -120,7 +121,7 @@ ms.locfileid: "71054260"
     [!code-csharp[Prediction](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#Prediction "Declare prediction class")]
 
     `MovieReviewSentimentPrediction` 是在训练模型后使用的预测类。 `MovieReviewSentimentPrediction` 有一个 `float` 数组 (`Prediction`) 和一个 `VectorType` 属性。
-    
+
 ### <a name="create-the-mlcontext-lookup-dictionary-and-action-to-resize-features"></a>创建 MLContext、查找字典以及用于调整特征大小的操作
 
 [MLContext 类](xref:Microsoft.ML.MLContext)是所有 ML.NET 操作的起点。 初始化 `mlContext` 会创建一个新的 ML.NET 环境，可在模型创建工作流对象之间共享该环境。 从概念上讲，它与实体框架中的 `DBContext` 类似。
@@ -191,7 +192,7 @@ ms.locfileid: "71054260"
 
 1. 添加代码以从管道创建模型：
 
-    [!code-csharp[SnippetCreateModel](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#SnippetCreateModel)]  
+    [!code-csharp[SnippetCreateModel](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#SnippetCreateModel)]
 
     通过调用 `Fit` 方法，从管道中的估算器链创建 ML.NET 模型。 在这种情况下，我们不会调整任何数据以创建模型，因为 TensorFlow 模型此前已经过训练。 我们提供一个空的数据视图对象，以满足 `Fit` 方法的要求。
 
@@ -200,10 +201,10 @@ ms.locfileid: "71054260"
 1. 在 `Main` 方法下添加 `PredictSentiment` 方法：
 
     ```csharp
-        public static void PredictSentiment(MLContext mlContext, ITransformer model)
-        {
+    public static void PredictSentiment(MLContext mlContext, ITransformer model)
+    {
 
-        }
+    }
     ```
 
 1. 添加以下代码以创建 `PredictionEngine` 作为 `PredictSentiment()` 方法中的第一行：
@@ -222,7 +223,7 @@ ms.locfileid: "71054260"
 
 1. [Predict()](xref:Microsoft.ML.PredictionEngine%602.Predict%2A) 函数对单行数据进行预测：
 
-    |Property| 值|类型|
+    |属性| 值|类型|
     |-------------|-----------------------|------|
     |预测|[0.5459937, 0.454006255]|float[]|
 
@@ -241,8 +242,8 @@ ms.locfileid: "71054260"
 结果应如下所示。 处理期间将显示消息。 你可能会看到警告或处理消息。 为简便起见，已从以下结果中删除这些消息。
 
 ```console
-   Number of classes: 2
-   Is sentiment/review positive ? Yes
+Number of classes: 2
+Is sentiment/review positive ? Yes
 ```
 
 祝贺你！ 现已通过在 ML.NET 中重用预先训练的 `TensorFlow` 模型成功生成用于分类和预测消息情绪的机器学习模型。
@@ -251,6 +252,7 @@ ms.locfileid: "71054260"
 
 在本教程中，你将了解：
 > [!div class="checklist"]
+>
 > * 加载预先训练的 TensorFlow 模型
 > * 将网站评论文本转换为适用于模型的特征
 > * 使用模型进行预测

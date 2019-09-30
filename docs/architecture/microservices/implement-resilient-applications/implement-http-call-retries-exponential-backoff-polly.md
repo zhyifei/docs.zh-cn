@@ -2,12 +2,12 @@
 title: 通过 Polly 实现使用指数退避算法的 HTTP 调用重试
 description: 了解如何使用 Polly 和 HttpClientFactory 处理 HTTP 故障。
 ms.date: 01/07/2019
-ms.openlocfilehash: aa500b5525eff9f0bbf91bf98de8945f7c84704f
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: de1dad44b1ddc7b04438fb380f240d3be33bbb83
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68674564"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71331977"
 ---
 # <a name="implement-http-call-retries-with-exponential-backoff-with-httpclientfactory-and-polly-policies"></a>通过 HttpClientFactory 和 Polly 策略实现使用指数退避算法的 HTTP 调用重试
 
@@ -50,8 +50,6 @@ static IAsyncPolicy<HttpResponseMessage> GetRetryPolicy()
 ```
 
 使用 Polly 可定义一个重试策略，其中包含重试次数、指数退避算法配置以及在出现 HTTP 异常时要采取的操作，例如记录错误。 在此示例中，该策略配置为尝试 6 次（采用指数重试），以 2 秒为起始值。 
-
-也就是说，它将以 2 秒为起始值尝试 6 次，且每两次重试之间的秒数为指数关系。
 
 ## <a name="add-a-jitter-strategy-to-the-retry-policy"></a>将抖动策略添加到重试策略
 
