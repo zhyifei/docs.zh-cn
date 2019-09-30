@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 21271167-fe7f-46ba-a81f-a6812ea649d4
 author: jkoritzinsky
 ms.author: jekoritz
-ms.openlocfilehash: 686d1b31478121a8b2c907d99672a5fcc3438a71
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 8f9624414a2b423bd43e8790d11b70ae1ca6286d
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849031"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216223"
 ---
 # <a name="exposing-net-core-components-to-com"></a>向 COM 公开 .NET Core 组件
 
@@ -25,16 +25,24 @@ ms.locfileid: "70849031"
 
 ## <a name="prerequisites"></a>系统必备
 
-- 安装 [.NET Core 3.0 预览版 7 SDK](https://dotnet.microsoft.com/download) 或更新版本。
+- 安装 [.NET Core 3.0 SDK](https://dotnet.microsoft.com/download) 或更高版本。
 
 ## <a name="create-the-library"></a>创建库
 
 第一步是创建库。
 
-1. 创建新文件夹，并在该文件夹中运行 `dotnet new classlib`。
+1. 创建新文件夹，并在该文件夹中运行以下命令：
+    
+    ```dotnetcli
+    dotnet new classlib
+    ```
+
 2. 打开 `Class1.cs`。
 3. 将 `using System.Runtime.InteropServices;` 添加到文件顶部。
-4. 创建名为 `IServer` 的接口。 例如：[!code-csharp[The IServer interface](~/samples/core/extensions/COMServerDemo/COMContract/IServer.cs)]
+4. 创建名为 `IServer` 的接口。 例如:
+
+   [!code-csharp[The IServer interface](~/samples/core/extensions/COMServerDemo/COMContract/IServer.cs)]
+
 5. 将 `[Guid("<IID>")]` 属性添加到接口，包含要实现的 COM 接口的接口 GUID。 例如 `[Guid("fe103d6e-e71b-414c-80bf-982f18f6c1c7")]`。 请注意，此 GUID 必须唯一，因为它是 COM 的此接口的唯一标识符。 在 Visual Studio 中，可通过转到“工具”>“创建 GUID”以打开“创建 GUID”工具来生成 GUID。
 6. 将 `[InterfaceType]` 属性添加到接口，并指定接口应实现的基本 COM 接口。
 7. 创建用于实现 `IServer` 的名为 `Server` 的类。

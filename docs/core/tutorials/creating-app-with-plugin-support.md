@@ -4,12 +4,12 @@ description: 了解如何创建支持插件的 .NET Core 应用程序。
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/28/2019
-ms.openlocfilehash: 54a4459619ee69fc74a14da7ff7fe10a472a4433
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: e8b02d9b2175b4663e665db1a5a40a9bf3c44d10
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849442"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216258"
 ---
 # <a name="create-a-net-core-application-with-plugins"></a>使用插件创建 .NET Core 应用程序
 
@@ -22,15 +22,29 @@ ms.locfileid: "70849442"
 
 ## <a name="prerequisites"></a>系统必备
 
-- 安装 [.NET Core 3.0 预览版 2 SDK](https://dotnet.microsoft.com/download) 或更新版本。
+- 安装 [.NET Core 3.0](https://dotnet.microsoft.com/download) 或更新版本。
 
 ## <a name="create-the-application"></a>创建应用程序
 
 第一步是创建应用程序：
 
-1. 创建新文件夹，并在该文件夹中运行 `dotnet new console -o AppWithPlugin`。 
-2. 为了更容易生成项目，创建 Visual Studio 解决方案文件。 在同一文件夹中运行 `dotnet new sln`。 
-3. 运行 `dotnet sln add AppWithPlugin/AppWithPlugin.csproj` 向解决方案添加应用项目。
+1. 创建新文件夹，并在该文件夹中运行以下命令：
+
+    ```dotnetcli
+    dotnet new console -o AppWithPlugin
+    ```
+
+2. 为了更容易生成项目，请创建一个 Visual Studio 解决方案文件。 在同一文件夹中运行以下命令：
+
+    ```dotnetcli
+    dotnet new sln
+    ```
+
+3. 运行以下命令，向解决方案添加应用项目：
+
+    ```dotnetcli
+    dotnet sln add AppWithPlugin/AppWithPlugin.csproj
+    ```
 
 现在，我们可以填写应用程序的主干。 使用下面的代码替换 AppWithPlugin/Program.cs 文件中的代码： 
 
@@ -203,8 +217,18 @@ static Assembly LoadPlugin(string relativePath)
 
 返回到根文件夹，执行以下步骤：
 
-1. 运行 `dotnet new classlib -o HelloPlugin` 创建名为 `HelloPlugin` 的新类库项目。
-2. 运行 `dotnet sln add HelloPlugin/HelloPlugin.csproj` 向 `AppWithPlugin` 解决方案添加项目。 
+1. 运行以下命令，新建一个名为 `HelloPlugin` 的类库项目：
+    
+    ```dotnetcli
+    dotnet new classlib -o HelloPlugin
+    ```
+
+2. 运行以下命令，将项目添加到 `AppWithPlugin` 解决方案中：
+
+    ```dotnetcli
+    dotnet sln add HelloPlugin/HelloPlugin.csproj
+    ```
+
 3. 使用以下内容将 HelloPlugin/Class1.cs 文件替换为名为 HelloCommand.cs 的文件：  
 
 [!code-csharp[the-hello-plugin](~/samples/core/extensions/AppWithPlugin/HelloPlugin/HelloCommand.cs)]

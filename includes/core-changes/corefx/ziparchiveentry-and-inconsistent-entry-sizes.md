@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 748e7f484227b6a60a2309bde185079b30fe19de
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 9520f8c6b6671917f5694bc602293a00e2dab82d
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117229"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216935"
 ---
 ### <a name="ziparchiveentry-no-longer-handles-archives-with-inconsistent-entry-sizes"></a>ZipArchiveEntry 不再处理具有不一致条目大小的存档
 
@@ -24,7 +24,7 @@ Zip 存档在中央目录和本地标头中列出压缩的大小和未压缩的�
 
 #### <a name="recommended-action"></a>建议的操作
 
-对出现这些问题的任何 zip 存档进行重新打包。
+对出现这些问题的所有 zip 存档重新打包。
 
 #### <a name="category"></a>类别
 
@@ -46,6 +46,4 @@ CoreFx
 `Overload:System.IO.Compression.ZipFileExtensions.ExtractToFile%2A`
 `Overload:System.IO.Compression.ZipFile.ExtractToDirectory%2A`
 
-
 -->
-

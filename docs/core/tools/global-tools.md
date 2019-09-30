@@ -4,12 +4,12 @@ description: 概述：介绍 .NET Core 全局工具及其适用的 .NET Core CLI
 author: KathleenDollard
 ms.date: 05/29/2018
 ms.custom: seodec18
-ms.openlocfilehash: 01c1463ceddcd64e5bab05b95a5ae4a91b6da838
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 40a0aabcf523e8dac9a3ad226064bbb3c1b3ce5b
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117454"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332019"
 ---
 # <a name="net-core-global-tools-overview"></a>.NET Core 全局工具概述
 
@@ -107,31 +107,6 @@ dotnet doc
 dotnet <command> --help
 ```
 
-### <a name="what-could-go-wrong"></a>可能出现的问题
-
-全局工具是[依赖框架的应用程序](../deploying/index.md#framework-dependent-deployments-fdd)，也就是说它们依赖于计算机上安装的 .NET Core 运行时。 如果没有找到所需的运行时，则遵循常规的 .NET Core 运行时前滚规则，例如：
-
-* 应用程序前滚至指定的主要版本和次要版本的最高修补程序版本。
-* 如果主要版本号和次要版本号没有匹配的运行时，则使用下一个较高的次要版本。
-* 前滚不会发生在运行时的预览版之间，也不会发生在预览版和发行版之间。 因此，使用预览版创建的全局工具必须由作者重新生成和重新发布，再重新安装。
-* 在 .NET Core 2.1 Preview 1 中创建的全局工具可能会出现其他问题。 有关详细信息，请参阅 [.NET Core 2.1 Preview 2 已知的问题](https://github.com/dotnet/core/blob/master/release-notes/2.1/Preview/2.1.0-preview2-known-issues.md)。
-
-如果应用程序无法找到合适的运行时，它就无法运行并报告错误。
-
-另一个可能出现的问题是，在较早预览版中创建的全局工具不能在当前安装的 .NET Core 运行时中运行。 若要查看计算机上安装了哪些运行时，可以使用以下命令：
-
-```dotnetcli
-dotnet --list-runtimes
-```
-
-与全局工具的作者联系，看看他们是否能重新编译工具包，并将更新了版本号的工具包重新发布至 NuGet。 如果作者更新了 NuGet 上的包，用户便可更新副本。
-
-.NET Core CLI 在首次使用时尝试将默认位置添加到 PATH 环境变量。 但是，在某些情况下，位置不会自动添加至 PATH，例如：
-
-* 如果已设置 `DOTNET_SKIP_FIRST_TIME_EXPERIENCE` 环境变量。
-* 如果已在 macOS 上使用 .tar.gz 文件（而不是 .pkg）安装了 .NET Core SDK   。
-* 在 Linux 上，需要编辑 shell 环境文件来配置 PATH。
-
 ## <a name="other-cli-commands"></a>其他 CLI 命令
 
 .NET Core SDK 包含支持 .NET Core 全局工具的其他命令。 将 `dotnet tool` 命令用于以下选项之一：
@@ -162,3 +137,7 @@ dotnet tool uninstall -g <packagename>
 ```dotnetcli
 dotnet tool list -g
 ```
+
+## <a name="see-also"></a>请参阅
+
+* [排查 .NET Core 工具使用问题](troubleshoot-usage-issues.md)

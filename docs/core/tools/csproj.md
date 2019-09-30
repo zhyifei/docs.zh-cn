@@ -2,12 +2,12 @@
 title: .NET Core 的 csproj 格式的新增内容
 description: 了解现有文件和 .NET Core csproj 文件之间的区别
 ms.date: 04/08/2019
-ms.openlocfilehash: 13239b5235138cc6994841bbb81f8f12e661e337
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 89ab22f0c5e69f29ff31e13d46dce8ba278d08da
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70969848"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216199"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>.NET Core 的 csproj 格式的新增内容
 
@@ -125,13 +125,13 @@ ms.locfileid: "70969848"
 
 ### <a name="sdk-attribute"></a>Sdk 特性
 
-.csproj 文件的根 `<Project>` 元素具有名为 `Sdk` 的新特性  。 `Sdk` 指定项目将使用的 SDK。 如[分层文档](cli-msbuild-architecture.md)中所述，SDK 是一组可生成 .NET Core 代码的 MSBuild [任务](/visualstudio/msbuild/msbuild-tasks)和[目标](/visualstudio/msbuild/msbuild-targets)。 使用 .NET Core 3.0 预览版时，我们提供了 .NET Core 工具附带的三个主要 SDK 以及另外两个 SDK：
+.csproj 文件的根 `<Project>` 元素具有名为 `Sdk` 的新特性  。 `Sdk` 指定项目将使用的 SDK。 如[分层文档](cli-msbuild-architecture.md)中所述，SDK 是一组可生成 .NET Core 代码的 MSBuild [任务](/visualstudio/msbuild/msbuild-tasks)和[目标](/visualstudio/msbuild/msbuild-targets)。 .NET Core 可使用以下 SDK：
 
 1. ID 为 `Microsoft.NET.Sdk` 的 .NET Core SDK
 2. ID 为 `Microsoft.NET.Sdk.Web` 的 .NET Core Web SDK
 3. ID 为 `Microsoft.NET.Sdk.Razor` 的 .NET Core Razor 类库 SDK
-4. .NET Core Worker Service，ID 为 `Microsoft.NET.Sdk.Worker`（.NET Core 3.0 预览版）
-5. .NET Core WinForms 和 WPF，ID 为 `Microsoft.NET.Sdk.WindowsDesktop`（.NET Core 3.0 预览版）
+4. ID 为 `Microsoft.NET.Sdk.Worker` 的 .NET Core Worker Service（自 .NET Core 3.0 起）
+5. ID 为 `Microsoft.NET.Sdk.WindowsDesktop` 的 .NET Core WinForms 和 WPF（自 .NET Core 3.0 起）
 
 需要在 `<Project>` 元素上将 `Sdk` 属性设置为这两个 ID 之一，以使用 .NET Core 工具和生成代码。
 
@@ -395,7 +395,7 @@ license-expression =  1*1(simple-expression / compound-expression / UNLICENSED)
 
 每个特性都有一个可控制其内容的属性，还有一个可以禁用其生成的属性，如下表所示：
 
-| 特性                                                      | Property               | 要禁用的属性                             |
+| 特性                                                      | 属性               | 要禁用的属性                             |
 |----------------------------------------------------------------|------------------------|-------------------------------------------------|
 | <xref:System.Reflection.AssemblyCompanyAttribute>              | `Company`              | `GenerateAssemblyCompanyAttribute`              |
 | <xref:System.Reflection.AssemblyConfigurationAttribute>        | `Configuration`        | `GenerateAssemblyConfigurationAttribute`        |

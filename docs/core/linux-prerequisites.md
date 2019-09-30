@@ -1,15 +1,15 @@
 ---
 title: Linux 上 .NET Core 的先决条件
 description: 支持的 Linux 版本和 .NET Core 依赖项，用于在 Linux 计算机上开发、部署和运行 .NET Core 应用程序。
-author: thraka
-ms.author: adegeo
-ms.date: 12/14/2018
-ms.openlocfilehash: 31c53b2cc0fe576e56685f4a5561258136fd2541
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+author: leecow
+ms.author: leecow
+ms.date: 09/25/2019
+ms.openlocfilehash: 4c5d79459c9d69111ca6452d9305f0deb37212b8
+ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71116587"
+ms.lasthandoff: 09/28/2019
+ms.locfileid: "71591702"
 ---
 # <a name="prerequisites-for-net-core-on-linux"></a>Linux 上 .NET Core 的先决条件
 
@@ -25,69 +25,82 @@ ms.locfileid: "71116587"
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+# <a name="net-core-30tabnetcore30"></a>[.NET Core 3.0](#tab/netcore30)
 
-.NET Core 2.x 将 Linux 视为一个操作系统。 支持的 Linux 分发都对应有一个 Linux 内部版本（根据芯片体系结构）。 
-
-有关下载链接和详细信息，请参阅 [.NET Core 2.2 下载](https://dotnet.microsoft.com/download/dotnet-core/2.2)或 [.NET Core 2.1 下载](https://dotnet.microsoft.com/download/dotnet-core/2.1)。
-
-以下 Linux 发行版本/版本支持 .NET Core 2.x：
-
-* Red Hat Enterprise Linux 7，6 - 64 位（`x86_64` 或 `amd64`）
-* CentOS 7  - 64 位（`x86_64` 或 `amd64`） 
-* Oracle Linux 7 - 64 位（`x86_64` 或 `amd64`） 
-* Fedora 28、27 - 64 位（`x86_64` 或 `amd64`） 
-* Debian 9（64 位，`arm32`）、8.7 或更高版本 - 64 位（`x86_64` 或 `amd64`）
-* Ubuntu 18.04（64 位，`arm32`）、16.04、14.04 - 64 位（`x86_64` 或 `amd64`）
-* Linux Mint 18、17 - 64 位（`x86_64` 或 `amd64`）
-* openSUSE 42.3 或更高版本 - 64 位（`x86_64` 或 `amd64`）
-* SUSE Enterprise Linux (SLES) 12 Service Pack 2 或更高版本 - 64 位（`x86_64` 或 `amd64`）
-* Alpine Linux 3.7 或更高版本 - 64 位（`x86_64` 或 `amd64`）
-
-有关 .NET Core 2.1 和 .NET Core 2.2 支持的操作系统、发行版本和版本、不支持的 OS 版本和生命周期策略链接的完整列表，请参阅 [.NET Core 2.1 支持的 OS 版本](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md)和 [.NET Core 2.2 支持的 OS 版本](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md)。
-
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
-有关下载链接和详细信息，请参阅 [.NET Core 1.1 下载](https://dotnet.microsoft.com/download/dotnet-core/1.1)或 [.NET Core 1.0 下载](https://dotnet.microsoft.com/download/dotnet-core/1.0)。
-
-以下 Linux 64 位（`x86_64` 或 `amd64`）发行版本/版本支持 .NET Core 1.x：
-
-* Red Hat Enterprise Linux 7
-* CentOS 7
-* Oracle Linux 7
-* Fedora 28 (.NET Core 1.1)、27
-* Debian 8.2 或更高版本
-* Ubuntu 18.04 (.NET Core 1.1)、16.04、14.04
-* Linux Mint 17
-* openSUSE 42.3 或更高版本 (.NET Core 1.1)
-
-有关支持 .NET Core 1.x 的操作系统、不支持的 OS 版本和生命周期策略链接的完整列表，请参阅 [.NET Core 1.x - 支持的 OS 版本](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0-supported-os.md)。
-
-# <a name="net-core-30-preview-1tabnetcore30"></a>[.NET Core 3.0 预览版 1](#tab/netcore30)
-
-.NET Core 3.0 预览版 1 将 Linux 视为单一操作系统。 支持的 Linux 分发都对应有一个 Linux 内部版本（根据芯片体系结构）。 
+.NET Core 3.0 将 Linux 视为一个操作系统。 支持的 Linux 分发都对应有一个 Linux 内部版本（根据芯片体系结构）。 
 
 有关下载链接和详细信息，请参阅 [.NET Core 3.0 下载](https://dotnet.microsoft.com/download/dotnet-core/3.0)。
 
-以下 Linux 发行版本/版本支持 .NET Core 3.0 预览版 1。 
+以下 Linux 发行版本/版本支持 .NET Core 3.0：
 
-(OS)                            | Version               | 体系结构  
-------------------------------|-----------------------|----------------
-Red Hat Enterprise Linux      | 6                     | X64
-Red Hat Enterprise Linux<br>CentOS<br>Oracle Linux  | 7                     | X64
-Fedora                        | 28                    | X64
-Debian                        | 9                     | x64、ARM32\*ARM64\*
-Ubuntu                        | 16.04+、18.04+        | x64、ARM32\*ARM64\*
-Linux Mint                    | 18                    | X64
-openSUSE                      | 42.3+                 | X64
-SUSE Enterprise Linux (SLES)  | 12 SP2+               | X64
-Alpine Linux                  | 3.8+                  | x64、ARM64
+> [!NOTE]
+> `+` 表示最低版本。
 
-\* ARM32 和 ARM64 支持 Debian 9 和 Ubuntu 16.04 及以上版本。 ARM 芯片不支持这些发行版本的早期版本。
+| (OS)                             | Version               | 体系结构    |
+| ------------------------------ | --------------------- | ---------------- |
+| Red Hat Enterprise Linux       | 6+、7                 | X64 |
+| Oracle Linux                   | 7                     | X64 |
+| CentOS                         | 7                     | X64 |
+| Fedora                         | 29+                   | X64 |
+| Debian                         | 9+                    | x64、ARM32、ARM64 |
+| Ubuntu                         | 16.04+                | x64、ARM32、ARM64 |
+| Linux Mint                     | 18+                   | X64 |
+| openSUSE                       | 15+                   | X64 |
+| SUSE Enterprise Linux (SLES)   | 12 SP2+               | X64 |
+| Alpine Linux                   | 3.8+                  | x64、ARM64 |
 
 有关 .NET Core 3.0 支持的操作系统、发行版本和版本、不支持的 OS 版本和生命周期策略链接的完整列表，请参阅 [.NET Core 3.0 支持的 OS 版本](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md)。
 
 有关如何在 ARM64 上安装 .NET Core 3.0 的详细信息，请参阅[在 Linux ARM64 上安装 .NET Core 3.0](https://gist.github.com/richlander/467813274cea8abc624553ee72b28213)。
+
+# <a name="net-core-22tabnetcore22"></a>[.NET Core 2.2](#tab/netcore22)
+
+.NET Core 2.2 将 Linux 视为一个操作系统。 支持的 Linux 分发都对应有一个 Linux 内部版本（根据芯片体系结构）。
+
+有关下载链接和详细信息，请参阅 [.NET Core 2.2 下载](https://dotnet.microsoft.com/download/dotnet-core/2.2)。
+
+以下 Linux 发行版本/版本支持 .NET Core 2.2：
+
+> [!NOTE]
+> `+` 表示最低版本。
+
+| (OS)                             |  Version                |  体系结构   |
+| ------------------------------ | ----------------------- | ---------------- |
+| Red Hat Enterprise Linux       |  6、7                   | X64 |
+| Oracle Linux                   |  7                      | X64 |
+| CentOS                         |  7                      | X64 |
+| Fedora                         |  29、30                 | X64 |
+| Debian                         |  9                      | x64、ARM32 |
+| Ubuntu                         |  16.04、18.04、18.10    | x64、ARM32 |
+| Linux Mint                     |  17、18                 | X64 |
+| openSUSE                       |  15+                    | X64 |
+| SUSE Enterprise Linux (SLES)   |  12 SP2+                | X64 |
+| Alpine Linux                   |  3.7+                   | X64 |
+
+要在完整列表中了解 .NET Core 2.2 支持的操作系统、发行版本和版本、生命周期策略链接和不支持的 OS 版本，请参阅 [.NET Core 2.2 支持的 OS 版本](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md)。
+
+# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+
+.NET Core 2.1 将 Linux 视为一个操作系统。 支持的 Linux 分发都对应有一个 Linux 内部版本（根据芯片体系结构）。
+
+有关下载链接和详细信息，请参阅 [.NET Core 2.1 下载](https://dotnet.microsoft.com/download/dotnet-core/2.1)。
+
+以下 Linux 发行版本/版本支持 .NET Core 2.1：
+
+| (OS)                             |  Version                |  体系结构   |
+| ------------------------------ | ----------------------- | ---------------- |
+| Red Hat Enterprise Linux       |  6、7、8                | X64 |
+| Oracle Linux                   |  7                      | X64 |
+| CentOS                         |  7                      | X64 |
+| Fedora                         |  29、30                 | X64 |
+| Debian                         |  9                      | x64、ARM32 |
+| Ubuntu                         |  16.04、18.04、19.04    | x64、ARM32 |
+| Linux Mint                     |  17、18                 | X64 |
+| openSUSE                       |  42.3+                  | X64 |
+| SUSE Enterprise Linux (SLES)   |  12 SP2+                | X64 |
+| Alpine Linux                   |  3.7+                   | X64 |
+
+有关 .NET Core 2.1 支持的操作系统、发行版本和版本、不支持的 OS 版本和生命周期策略链接的完整列表，请参阅 [.NET Core 2.1 支持的 OS 版本](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md)。
 
 ---
 

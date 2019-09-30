@@ -6,40 +6,25 @@ dev_langs:
 - vb
 author: thraka
 ms.author: adegeo
-ms.date: 09/17/2019
-ms.openlocfilehash: 08ad77fbad7ad468e45fe629041ded82544792f2
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.date: 09/22/2019
+ms.openlocfilehash: ddb758b942099657708e79b590c7817c309396d7
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71116121"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216274"
 ---
-# <a name="whats-new-in-net-core-30-release-candidate-1"></a>.NET Core 3.0（候选发布 1）的新增功能
+# <a name="whats-new-in-net-core-30"></a>.NET Core 3.0 的新增功能
 
-本文介绍 .NET Core 3.0 候选发布 1 (RC1) 的新增功能。 最大的增强功能之一是对 Windows 桌面应用程序的支持（仅限 Windows）。 通过使用 .NET Core 3.0 SDK Windows 桌面组件，可移植 Windows 窗体和 Windows Presentation Foundation (WPF) 应用程序。 明确地说，只有在 Windows 上才支持和包含 Windows 桌面组件。 有关详细信息，请参阅本文后面的 [Windows 桌面](#windows-desktop)部分。
+本文介绍了 .NET Core 3.0 中的新增功能。 最大的增强功能之一是对 Windows 桌面应用程序的支持（仅限 Windows）。 通过使用 .NET Core 3.0 SDK Windows 桌面组件，可移植 Windows 窗体和 Windows Presentation Foundation (WPF) 应用程序。 明确地说，只有在 Windows 上才支持和包含 Windows 桌面组件。 有关详细信息，请参阅本文后面的 [Windows 桌面](#windows-desktop)部分。
 
-.NET Core 3.0 添加了对 C#8.0 的支持。 强烈建议使用 [Visual Studio 2019 16.3 Preview 4](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+preview)、[Visual Studio for Mac 8.3](https://docs.microsoft.com/visualstudio/mac/install-preview?view=vsmac-2019) 或 [Visual Studio Code](https://code.visualstudio.com/) 处理 C# 扩展  。
+.NET Core 3.0 添加了对 C#8.0 的支持。 强烈建议使用 [Visual Studio 2019 16.3](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)、[Visual Studio for Mac 8.3](/visualstudio/mac/install-preview) 或 [Visual Studio Code](https://code.visualstudio.com/) 处理 C# 扩展  。
 
-立即在 Windows、macOS 或 Linux 上[下载并开始使用 .NET Core 3.0 RC1](https://aka.ms/netcore3download)。
+立即在 Windows、macOS 或 Linux 上[下载并开始使用 .NET Core 3.0](https://aka.ms/netcore3download)。
 
-有关每个预览版本的详细信息，请参阅以下公告：
+有关版本的详细信息，请参阅 [.NET Core 3.0 公告](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0/)。
 
-- [.NET Core 3.0 RC1 公告](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-release-candidate-1/)
-- [.NET Core 3.0 预览版 9 公告](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-9/)
-- [.NET Core 3.0 预览版 8 公告](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-8/)
-- [.NET Core 3.0 预览版 7 公告](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-7/)
-- [.NET Core 3.0 预览版 6 公告](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-6/)
-- [.NET Core 3.0 预览版 5 公告](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-5/)
-- [.NET Core 3.0 预览版 4 公告](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-4/)
-- [.NET Core 3.0 预览版 3 公告](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-3/)
-- [.NET Core 3.0 预览版 2 公告](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-2/)
-- [.NET Core 3.0 预览版 1 公告](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-1-and-open-sourcing-windows-desktop-frameworks/)
-
-## <a name="production-supported-preview"></a>生产支持（预览版）
-
-.NET Core RC1 已由 Microsoft 准备就绪，可用于生产环境并且完全受支持。 从预览版 7 开始，版本将侧重于改进 .NET Core 3.0，而不是添加新功能。 有关 RC1 的改进内容的详细信息，请参阅 [RC1 公告](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-release-candidate-1/)。
-
-如果使用的是之前的预览版本，则必须转换为 RC1 才能继续获得“上线”支持。
+Microsoft 认为 .NET Core RC1 可用于生产环境，且该软件完全受支持。 如果使用的是预览版本，则必须转换为 RTM 版本才能继续获得支持。
 
 ## <a name="net-core-sdk-windows-installer"></a>.NET Core SDK Windows Installer
 
@@ -47,13 +32,13 @@ ms.locfileid: "71116121"
 
 有关版本控制的详细信息，请参阅 [.NET Core 的版本控制方式概述](../versions/index.md)。
 
-## <a name="c-80-preview"></a>C# 8.0 预览版
+## <a name="c-80"></a>C# 8.0
 
-.NET Core 3.0 支持 C# 8 预览版。 有关 C# 8.0 功能的详细信息，请参阅 [C# 8.0 中的新增功能](../../csharp/whats-new/csharp-8.md)。
+C# 8.0 也是该版本的一部分，它包含可为空引用类型功能、异步流和更多模式。 有关 C# 8.0 功能的详细信息，请参阅 [C# 8.0 中的新增功能](../../csharp/whats-new/csharp-8.md)。
 
 ## <a name="net-standard-21"></a>.NET Standard 2.1
 
-尽管 .NET Core 3.0 支持 **.NET Standard 2.1**，默认的 `dotnet new classlib` 模板还是会生成一个面向 **.NET Standard 2.0** 的项目。 若要面向 **.NET Standard 2.1**，请编辑项目文件并将 `TargetFramework` 属性更改为 `netstandard2.1`：
+尽管 .NET Core 3.0 支持 .NET Standard 2.1，默认的 `dotnet new classlib` 模板还是会生成一个仍然面向 .NET Standard 2.0 的项目   。 若要面向 **.NET Standard 2.1**，请编辑项目文件并将 `TargetFramework` 属性更改为 `netstandard2.1`：
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -515,7 +500,7 @@ RSA 密钥还支持：
 
 ## <a name="docker-and-cgroup-memory-limits"></a>Docker 和 cgroup 内存限制
 
-从预览版 3 开始，在 Linux 上使用 Docker 运行 .NET Core 3.0 时，可以更好地处理 cgroup 内存限制。 运行具有内存限制的 Docker 容器（例如使用 `docker run -m`）会更改 .NET Core 的行为方式。
+在 Linux 上使用 Docker 运行 .NET Core 3.0 时，可更好地应对 cgroup 内存限制。 运行具有内存限制的 Docker 容器（例如使用 `docker run -m`）会更改 .NET Core 的行为方式。
 
 - 默认垃圾回收器 (GC) 堆大小：最大为 20 MB 或容器内存限制的 75%。
 - 可以将显式大小设置为绝对数或 cgroup 限制的百分比。
