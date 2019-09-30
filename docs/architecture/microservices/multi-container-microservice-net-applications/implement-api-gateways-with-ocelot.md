@@ -562,19 +562,19 @@ Ocelot 的 ReRoute 层中的授权。   Ocelot 支持在进行身份验证后评
 
 使用 Ocelot API 网关时，还有其他重要的功能等待你来研究和使用，如以下链接所述。
 
-- 客户端中集成 Ocelot 与 Consul 或 Eureka 的服务发现 \ 
+-  客户端中集成 Ocelot 与 Consul 或 Eureka 的服务发现 \
   <https://ocelot.readthedocs.io/en/latest/features/servicediscovery.html>
 
-- API 网关层中的缓存 \ 
+-  API 网关层中的缓存 \
   <https://ocelot.readthedocs.io/en/latest/features/caching.html>
 
-- API 网关层中的日志记录 \ 
+-  API 网关层中的日志记录 \
   <https://ocelot.readthedocs.io/en/latest/features/logging.html>
 
-- API 网关层中的服务质量（重试次数和断路器） \ 
+-  API 网关层中的服务质量（重试次数和断路器） \
   <https://ocelot.readthedocs.io/en/latest/features/qualityofservice.html>
 
-- 速率限制 \ 
+-  速率限制 \
   [https://ocelot.readthedocs.io/en/latest/features/ratelimiting.html](https://ocelot.readthedocs.io/en/latest/features/ratelimiting.html )
 
 > [!div class="step-by-step"]

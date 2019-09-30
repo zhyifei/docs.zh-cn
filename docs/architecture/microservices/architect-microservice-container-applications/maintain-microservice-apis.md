@@ -25,7 +25,7 @@ API 定义的本质取决于所使用的协议。 例如，如果使用的是消
 
 ## <a name="additional-resources"></a>其他资源
 
-- **Scott Hanselman.ASP.NET Core RESTful Web API versioning made easy** \（简化 ASP.NET Core RESTful Web API 版本控制）
+- **Scott Hanselman.简化 ASP.NET Core RESTful Web API 版本控制** \
   <https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx>
 
 - **RESTful Web API 版本控制** \
