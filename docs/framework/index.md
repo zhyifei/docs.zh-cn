@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: f61f02f2-2f20-483d-8f56-a9c8f3a54986
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9d93dea42dbb854d8d52bd5cf3e54d1ce0d892d6
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: e5a86b3abf821a37944a0e478d0bc8f1bea31ccb
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65635532"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699058"
 ---
 # <a name="net-framework-guide"></a>.NET Framework 指南
 
@@ -63,4 +63,4 @@ ms.locfileid: "65635532"
 
 ## <a name="see-also"></a>请参阅
 
-* [.NET Framework 类库](/dotnet/api/?view=netframework-4.8)
+- [.NET Framework 类库](/dotnet/api/?view=netframework-4.8)
