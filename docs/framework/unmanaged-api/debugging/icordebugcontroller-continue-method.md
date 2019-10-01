@@ -17,44 +17,47 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c3a4e98a7265bda288b20b1cee1a10ab11990e8e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bdf59ee3c7bf41a2bb0ff68db5e70dd5a519a0e9
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67748882"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71700782"
 ---
 # <a name="icordebugcontrollercontinue-method"></a>ICorDebugController::Continue 方法
-恢复托管线程执行后调用[停止方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-stop-method.md)。  
-  
-## <a name="syntax"></a>语法  
-  
-```cpp  
-HRESULT Continue (  
-    [in] BOOL fIsOutOfBand  
-);  
-```  
-  
-## <a name="parameters"></a>参数  
+
+在调用[Stop 方法](icordebugcontroller-stop-method.md)后继续执行托管线程。
+
+## <a name="syntax"></a>语法
+
+```cpp
+HRESULT Continue (
+    [in] BOOL fIsOutOfBand
+);
+```
+
+## <a name="parameters"></a>Parameters
+
  `fIsOutOfBand`  
- [in]设置为`true`如果继续从带外事件; 否则设置为`false`。  
+ 中如果从带外事件继续，则设置为 `true`;否则，设置为 `false`。
+
+## <a name="remarks"></a>备注
+
+@no__t 在调用 `ICorDebugController::Stop` 方法后继续执行此过程。
+
+执行混合模式调试时，请不要在 Win32 事件线程上调用 `Continue`，除非从带外事件继续。
+
+*带内事件*是托管事件或普通非托管事件，在此期间，调试器支持与进程的托管状态交互。 在这种情况下，调试器接收[ICorDebugUnmanagedCallback：:D ebugevent](icordebugunmanagedcallback-debugevent-method.md)回调，并将其 @no__t 参数设置为 `false`。
   
-## <a name="remarks"></a>备注  
- `Continue` 在调用后继续执行过程`ICorDebugController::Stop`方法。  
-  
- 在进行混合模式调试时，不要调用`Continue`上 Win32 事件线程除非您要从带外事件继续执行。  
-  
- *带内事件*托管的事件或正常非托管事件，在此期间，调试器支持与托管进程的状态的交互事件。 在这种情况下，调试器将接收[icordebugunmanagedcallback:: Debugevent](../../../../docs/framework/unmanaged-api/debugging/icordebugunmanagedcallback-debugevent-method.md)具有回调其`fOutOfBand`参数设置为`false`。  
-  
- *的带事件*是在此期间与托管状态的进程的交互是不可能同时由于事件停止该进程的非托管的事件。 在这种情况下，调试器将接收`ICorDebugUnmanagedCallback::DebugEvent`具有回调其`fOutOfBand`参数设置为`true`。  
-  
-## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
-  
- **标头：** CorDebug.idl、 CorDebug.h  
-  
- **库：** CorGuids.lib  
-  
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
-  
-## <a name="see-also"></a>请参阅
+带*外事件*是一种非托管事件，在此过程中，由于发生事件，进程停止时无法与进程的托管状态交互。 在这种情况下，调试器接收到 `ICorDebugUnmanagedCallback::DebugEvent` 回调，其 @no__t 参数设置为 `true`。
+
+## <a name="requirements"></a>要求
+
+ **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。
+
+ **标头：** Cordebug.idl，Cordebug.idl
+
+ **类库**CorGuids.lib
+
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ 

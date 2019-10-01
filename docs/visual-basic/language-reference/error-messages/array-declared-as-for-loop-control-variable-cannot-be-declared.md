@@ -7,31 +7,31 @@ f1_keywords:
 helpviewer_keywords:
 - BC32039
 ms.assetid: 1d8b6560-c9eb-4b71-a038-24c6f5a5ce46
-ms.openlocfilehash: 9f24dd2a20dc3a4935cd288a20a0e12c1d47bee1
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: 9e8bb7b79b5a770c3c92e47d8e7c01c5b83d6061
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64912348"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71701212"
 ---
 # <a name="array-declared-as-for-loop-control-variable-cannot-be-declared-with-an-initial-size"></a>声明为 For Each 循环控制变量的数组在声明时不能指定初始大小值
-一个`For Each`循环使用数组作为其*元素*迭代变量但初始化该数组。  
+@No__t-0 循环使用数组作为其*元素*迭代变量，但会初始化该数组。  
   
- 下列语句显示可以生成此错误的方式。  
+ 以下语句说明了如何生成此错误。  
   
-```  
+```vb  
 Dim arrayList As New List(Of Integer())  
 For Each listElement() As Integer In arrayList  
 For Each listElement(1) As Integer In arrayList  
 ```  
   
- 第一个`For Each`语句来访问的元素的正确方法是`arrayList`。 第二个`For Each`语句将生成此错误。  
+ 第一个 `For Each` 语句是访问 @no__t 的元素的正确方法。 第二个 `For Each` 语句生成此错误。  
   
- **错误 ID:** BC32039  
+ **错误 ID：** BC32039  
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   
-- 声明中删除该初始化*元素*迭代变量。  
+- 从*元素*迭代变量的声明中删除该初始化。  
   
 ## <a name="see-also"></a>请参阅
 

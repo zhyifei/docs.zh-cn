@@ -10,19 +10,19 @@ helpviewer_keywords:
 - '*= operator [Visual Basic]'
 - compound assignment statements [Visual Basic]
 ms.assetid: 96c86509-6eb8-4682-8226-3852e049376f
-ms.openlocfilehash: 7c009a6b3acfe1528a2c34ed1e10735ac86507e6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 47d3239af6ff24501e6babc23c0db4103c477796
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032125"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71701068"
 ---
 # <a name="-operator-visual-basic"></a>*= 运算符 (Visual Basic)
-将表达式的值的变量或属性的值相乘并将结果赋给变量或属性。  
+将变量或属性的值乘以表达式的值，并将结果赋给变量或属性。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```vb  
 variableorproperty *= expression  
 ```  
   
@@ -34,15 +34,15 @@ variableorproperty *= expression
  必需。 任何数值表达式。  
   
 ## <a name="remarks"></a>备注  
- 在左侧和右侧的元素`*=`运算符可以是简单的标量变量、 属性或数组的元素。 变量或属性不能[ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)。  
+ @No__t-0 运算符左侧的元素可以是简单的标量变量、属性或数组元素。 变量或属性不能是[只读](../../../visual-basic/language-reference/modifiers/readonly.md)的。  
   
- `*=`运算符首先用变量或属性 （在运算符的左侧） 的值乘以 （运算符右侧） 的表达式的值。 然后，运算符将该操作的结果分配给变量或属性。  
+ @No__t-0 运算符首先将表达式的值（在运算符右侧）乘以变量或属性（位于运算符左侧）的值来进行乘号运算。 然后，运算符将该操作的结果赋给变量或属性。  
   
 ## <a name="overloading"></a>重载  
- [* 运算符](../../../visual-basic/language-reference/operators/multiplication-operator.md)可以是*重载*，这意味着，某个类或结构可以重新定义其行为时，操作数的类或结构的类型。 重载`*`运算符会影响的行为`*=`运算符。 如果你的代码使用`*=`上类或结构的重载`*`，确保了解其重新定义的行为。 有关详细信息，请参阅 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
+ [* 运算符](../../../visual-basic/language-reference/operators/multiplication-operator.md)可*重载*，这意味着当操作数具有该类或结构的类型时，该类或结构可以重新定义其行为。 重载 `*` 运算符会影响 @no__t 1 运算符的行为。 如果你的代码在重载 @no__t 的类或结构上使用 `*=`，请确保了解其重新定义的行为。 有关详细信息，请参阅 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
   
 ## <a name="example"></a>示例  
- 下面的示例使用`*=`运算符将一个`Integer`变量通过第二个并将结果赋给第一个变量。  
+ 下面的示例使用 `*=` 运算符将一个 @no__t 1 变量与第二个变量相乘，并将结果赋给第一个变量。  
   
  [!code-vb[VbVbalrOperators#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#5)]  
   

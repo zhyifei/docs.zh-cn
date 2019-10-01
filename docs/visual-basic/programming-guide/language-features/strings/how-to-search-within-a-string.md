@@ -1,41 +1,41 @@
 ---
-title: 如何：字符串 (Visual Basic 中) 内的搜索
+title: 如何：在字符串 Visual Basic 中搜索
 ms.date: 07/20/2015
 helpviewer_keywords:
 - strings [Visual Basic], finding
 - strings [Visual Basic], searching
 - examples [Visual Basic], strings
 ms.assetid: ae4c79e0-08ea-489f-bdb2-5eb6d355f284
-ms.openlocfilehash: 57a3d9650ad78e1c8580fd46839c9a1cbc7794c9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fe9e50dc5458fdf8546094e5f41c2f001f1d2791
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665343"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71700063"
 ---
-# <a name="how-to-search-within-a-string-visual-basic"></a>如何：字符串 (Visual Basic 中) 内的搜索
-此示例调用<xref:System.String.IndexOf%2A>方法<xref:System.String>要报告的子字符串的第一个匹配项的索引对象。  
-  
-## <a name="example"></a>示例  
- [!code-vb[VbVbalrStrings#71](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#71)]  
-  
-## <a name="compiling-the-code"></a>编译代码  
- 此示例需要：  
-  
-- `Imports`语句指定<xref:System>命名空间。 有关详细信息，请参阅 [Imports 语句（.NET 命名空间和类型）](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)。  
-  
-## <a name="robust-programming"></a>可靠编程  
- <xref:System.String.IndexOf%2A>方法报告的子字符串的第一个匹配项的第一个字符位置。 索引是基于 0 的这意味着字符串的第一个字符的索引为 0。  
-  
- 如果<xref:System.String.IndexOf%2A>未找到子字符串，则返回-1。  
-  
- <xref:System.String.IndexOf%2A>方法区分大小写，并使用当前区域性。  
-  
- 为了优化错误控制，你可能想要在使用字符串搜索`Try`块[尝试...Catch...Finally 语句](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)构造。  
-  
+# <a name="how-to-search-within-a-string-visual-basic"></a>如何：在字符串中搜索（Visual Basic）
+
+本文举例说明如何在 Visual Basic 中的字符串内进行搜索。
+
+## <a name="example"></a>示例
+
+此示例对 @no__t 1 对象调用 <xref:System.String.IndexOf%2A> 方法，以报告子字符串的第一个匹配项的索引：
+
+ [!code-vb[VbVbalrStrings#71](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#71)]
+
+## <a name="robust-programming"></a>可靠编程
+
+@No__t-0 方法返回子字符串的第一个匹配项的第一个字符的位置。 索引从0开始，这意味着字符串的第一个字符的索引为0。
+
+如果 @no__t，则返回-1。
+
+@No__t-0 方法区分大小写，并使用当前区域性。
+
+为了获得最佳的错误控制，你可能需要在 Try ... 的 `Try` 块中包含字符串搜索[Catch .。。Finally 语句](../../../language-reference/statements/try-catch-finally-statement.md)构造。
+
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.String.IndexOf%2A>
-- [Try...Catch...Finally 语句](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
-- [Visual Basic 中的字符串简介](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)
-- [字符串](../../../../visual-basic/programming-guide/language-features/strings/index.md)
+- [Try...Catch...Finally 语句](../../../language-reference/statements/try-catch-finally-statement.md)
+- [Visual Basic 中的字符串简介](introduction-to-strings.md)
+- [字符串](index.md)

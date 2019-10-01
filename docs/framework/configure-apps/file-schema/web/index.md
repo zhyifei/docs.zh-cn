@@ -9,27 +9,25 @@ helpviewer_keywords:
 - configuration files [ASP.NET]
 - configuration schema [.NET Framework], Web settings
 ms.assetid: ae1ac356-267d-4753-8d7a-7a04eb45a9be
-ms.openlocfilehash: d53d3a105203addfacb1c982e0960bd12996f571
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 71b9e46a8c2d60c853af63ee78e2ed5dbe6e98f4
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69941424"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699137"
 ---
 # <a name="web-settings-schema"></a>Web 设置架构
 Web 设置指定 CPU 和执行级别 ASP.NET 设置，后者应用于由 ASP.NET 承载层托管的进程范围行为。 这些设置与 ASP.NET 应用程序的 Web.config 文件中指定的应用程序域类型设置不同。  
   
- Web 设置包含在 Aspnet.config 文件中，该文件位于各版本 .NET Framework 的安装文件夹内。 例如, .NET Framework 2.0 的 Aspnet .config 文件位于以下文件夹中:  
+Web 设置包含在 Aspnet.config 文件中，该文件位于各版本 .NET Framework 的安装文件夹内。 例如，.NET Framework 2.0 的 Aspnet .config 文件位于以下文件夹中：  
   
- `C:\Windows\Microsoft.NET\Framework\v2.0.50727\`  
+`C:\Windows\Microsoft.NET\Framework\v2.0.50727\`  
   
- 其他任何配置文件（如 machine.config 文件、根 Web.config 或应用程序级别的 Web.config 文件）中都不使用 Web 设置。  
+其他任何配置文件（如 machine.config 文件、根 Web.config 或应用程序级别的 Web.config 文件）中都不使用 Web 设置。  
   
- [\<configuration> 元素](../configuration-element.md)  
-  
- [\<system.web> 元素（Web 设置）](system-web-element-web-settings.md)  
-  
- [\<applicationPool> 元素（Web 设置）](applicationpool-element-web-settings.md)  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t[ **\<system >** ](system-web-element-web-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t[ **\<applicationPool >** ](applicationpool-element-web-settings.md)  
   
 |元素|描述|  
 |-------------|-----------------|  

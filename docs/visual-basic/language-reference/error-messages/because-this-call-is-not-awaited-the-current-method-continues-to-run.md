@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC42358
 ms.assetid: 43342515-c3c8-4155-9263-c302afabcbc2
-ms.openlocfilehash: c4704fb09e9519c14f29365b2cf7f536bbbc5dca
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6ceebc3af01c13474affa6e728c49d6d246eb331
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64619564"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71701201"
 ---
 # <a name="because-this-call-is-not-awaited-the-current-method-continues-to-run-before-the-call-is-completed"></a>由于不等待此调用，因此在调用完成之前，当前方法将继续运行
 在调用完成之前，会继续执行当前方法，原因是此调用不处于等待状态。 请考虑向调用结果应用“Await”运算符。  
@@ -25,7 +25,7 @@ ms.locfileid: "64619564"
   
  默认情况下，此消息是一个警告。 若要深入了解如何隐藏警告或将警告视为错误，请参阅 [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic)。  
   
- **错误 ID:** BC42358  
+ **错误 ID：** BC42358  
   
 ### <a name="to-address-this-warning"></a>解决此警告  
   
@@ -83,7 +83,7 @@ ms.locfileid: "64619564"
   
      在此示例中，如果选择调用 1 或调用 2，未等待的异步方法 (`CalledMethodAsync`) 将在调用方 (`CallingMethodAsync`) 和调用方的调用方 (`StartButton_Click`) 完成后完成。 以下输出的最后一行演示了调用的方法何时完成。 输出内容标示了整个示例中何时进入和退出调用 `CallingMethodAsync` 的事件处理程序。  
   
-    ```  
+    ```console  
     Entering the Click event handler.  
       Entering calling method.  
         Entering called method, starting and awaiting Task.Delay.  
@@ -99,9 +99,9 @@ ms.locfileid: "64619564"
   
 2. 在 Visual Studio 代码编辑器中，选择 **“MainWindow.xaml”** 选项卡。  
   
-     如果此选项卡不可见，则在解决方案资源管理器 中，打开 MainWindow.xaml 的快捷菜单，然后选择“查看代码” 。  
+     如果此选项卡不可见，则在解决方案资源管理器中，打开 MainWindow.xaml 的快捷菜单，然后选择“查看代码”。  
   
-3. 在“XAML”  视图中，将 MainWindow.xaml 的代码替换为下面的代码。  
+3. 在“XAML” 视图中，将 MainWindow.xaml 的代码替换为下面的代码。  
   
     ```vb  
     <Window x:Class="MainWindow"  
@@ -115,7 +115,7 @@ ms.locfileid: "64619564"
     </Window>  
     ```  
   
-     MainWindow.xaml 的“设计”  视图中将显示一个简单的窗口，其中包含一个按钮和一个文本框。  
+     MainWindow.xaml 的“设计” 视图中将显示一个简单的窗口，其中包含一个按钮和一个文本框。  
   
      有关 XAML 设计器的详细信息，请参阅[使用 XAML 设计器创建 UI](/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio)。 有关如何自行生成简单 UI 的信息，请参阅“创建 WPF 应用程序的步骤”和“设计简单 WPF MainWindow 的步骤”两个部分，这两个部分位于[演练：使用 Async 和 Await 访问 Web](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)。  
   

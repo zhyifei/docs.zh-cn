@@ -8,21 +8,21 @@ helpviewer_keywords:
 - <nameEntry> element
 - nameEntry element
 ms.assetid: 7d7535e9-4b4a-4b8c-82e2-e40dff5a7821
-ms.openlocfilehash: d8f4d4aa9c80990cdf858da9fcdf6465438866cf
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a339638587f8b544bbc1b0073553f6232ce09694
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927560"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699782"
 ---
-# <a name="nameentry-element"></a>\<y > 元素
+# <a name="nameentry-element"></a>\<nameEntry > 元素
 将类名称映射到友好算法名称，允许一个类具有多个友好名称。  
   
- \<configuration>  
-\<mscorlib>  
-\<cryptographySettings>  
-\<cryptoNameMapping>  
-\<nameEntry>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<mscorlib >** ](mscorlib-element-for-cryptography-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t[ **\<cryptographySettings >** ](cryptographysettings-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<cryptoNameMapping >** ](cryptonamemapping-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 **\<nameEntry >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,8 +37,8 @@ ms.locfileid: "69927560"
   
 |特性|描述|  
 |---------------|-----------------|  
-|**名称**|必需的特性。<br /><br /> 指定密码类实现的算法的友好名称。|  
-|**class**|必需的特性。<br /><br /> [指定\<cryptoClass >](cryptoclass-element.md)元素中**name**属性的值。|  
+|**name**|必需的特性。<br /><br /> 指定密码类实现的算法的友好名称。|  
+|**class**|必需的特性。<br /><br /> 指定[\<cryptoClass >](cryptoclass-element.md)元素中的**name**属性的值。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  
@@ -51,10 +51,10 @@ ms.locfileid: "69927560"
 |`system.web`|为 ASP.NET 配置节指定根元素。|  
   
 ## <a name="remarks"></a>备注  
- **Name**属性可以是在<xref:System.Security.Cryptography>命名空间中找到的某个抽象类的名称。 对抽象加密类调用**Create**方法时, 会将抽象类名称传递给<xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A>方法。 **Cryptoconfig.createfromname**返回**类**特性指示的类型的实例。 如果**name**属性是一个短名称, 例如 RSA, 则可以在调用**cryptoconfig.createfromname**方法时使用该名称。  
+ **Name**属性可以是在 <xref:System.Security.Cryptography> 命名空间中找到的某个抽象类的名称。 对抽象加密类调用**Create**方法时，会将抽象类名称传递到 <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A> 方法。 **Cryptoconfig.createfromname**返回**类**特性指示的类型的实例。 如果**name**属性是一个短名称，例如 RSA，则可以在调用**cryptoconfig.createfromname**方法时使用该名称。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何使用 **\<y >** 元素来引用加密类并配置运行时。 然后, 你可以将字符串 "RSA" 传递给<xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType>方法, 并<xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A>使用方法返回`MyCryptoRSAClass`对象。  
+ 下面的示例演示如何使用 **\<nameEntry >** 元素来引用加密类并配置运行时。 然后，你可以将字符串 "RSA" 传递到 @no__t 0 方法，并使用 <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> 方法返回 @no__t 2 对象。  
   
 ```xml  
 <configuration>  

@@ -17,38 +17,40 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 155a8d5465e0fb19c55c9d11b67c6031c2b2c4a3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4b6fd6e8043f1c62da8994b43a9b9af45fb2e3c0
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747522"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71700824"
 ---
 # <a name="icordebugcodegetversionnumber-method"></a>ICorDebugCode::GetVersionNumber 方法
-获取标识此"ICorDebugCode"表示的代码版本的基于 1 的数。  
-  
-## <a name="syntax"></a>语法  
-  
-```cpp  
-HRESULT GetVersionNumber (  
-    [out] ULONG32    *nVersion  
-);  
-```  
-  
-## <a name="parameters"></a>参数  
+
+获取一个从1开始的数字，该数字标识此 "ICorDebugCode" 表示的代码版本。
+
+## <a name="syntax"></a>语法
+
+```cpp
+HRESULT GetVersionNumber (
+    [out] ULONG32    *nVersion
+);
+```
+
+## <a name="parameters"></a>Parameters
+
  `nVersion`  
- [out]指向代码的版本号的指针。  
+ 弄指向代码版本号的指针。
+
+## <a name="remarks"></a>备注
+
+ 每次对代码执行 "编辑并继续" （EnC）操作时，版本号都会递增。
+
+## <a name="requirements"></a>要求
+
+ **适用**请参阅[系统需求](../../get-started/system-requirements.md)。  
   
-## <a name="remarks"></a>备注  
- 编辑并继续 (EnC) 操作执行的代码每次都会递增的版本号。  
+ **标头：** Cordebug.idl，Cordebug.idl  
   
-## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **类库**CorGuids.lib  
   
- **标头：** CorDebug.idl、 CorDebug.h  
-  
- **库：** CorGuids.lib  
-  
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
-  
-## <a name="see-also"></a>请参阅
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

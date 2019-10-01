@@ -6,19 +6,19 @@ helpviewer_keywords:
 - Sub Expression [Visual Basic]
 - subroutines [Visual Basic], sub expressions
 ms.assetid: 36b6bfd1-6539-4d8f-a5eb-6541a745ffde
-ms.openlocfilehash: 6cdb75f150831ae3857a510d87b58773bdcf13c9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2330b410f54b54d8f6cb7d8ad6f9b39a3f4d31bc
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64609602"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71701338"
 ---
 # <a name="sub-expression-visual-basic"></a>Sub 表达式 (Visual Basic)
-声明的参数和子例程 lambda 表达式定义的代码。  
+声明定义子程序 lambda 表达式的参数和代码。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```vb  
 Sub ( [ parameterlist ] ) statement  
 - or -  
 Sub ( [ parameterlist ] )  
@@ -30,30 +30,30 @@ End Sub
   
 |术语|定义|  
 |---|---|  
-|`parameterlist`|可选。 表示过程的参数的本地变量名称的列表。 括号必须存在，即使该列表为空。 有关更多信息，请参见 [Parameter List](../../../visual-basic/language-reference/statements/parameter-list.md)。|  
-|`statement`|必需。 一条语句。|  
+|`parameterlist`|可选。 表示过程参数的局部变量名称的列表。 即使此列表为空，也必须存在括号。 有关更多信息，请参见 [Parameter List](../../../visual-basic/language-reference/statements/parameter-list.md)。|  
+|`statement`|必需。 单个语句。|  
 |`statements`|必需。 语句的列表。|  
   
 ## <a name="remarks"></a>备注  
- 一个*lambda 表达式*是不具有名称的子例程并执行一个或多个语句。 可以任意位置使用 lambda 表达式，您可以使用委托类型，除作为自变量到`RemoveHandler`。 有关委托和 lambda 表达式与委托一起使用的详细信息，请参阅[委托语句](../../../visual-basic/language-reference/statements/delegate-statement.md)并[宽松委托转换](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)。  
+ *Lambda 表达式*是不具有名称并执行一个或多个语句的子例程。 除了作为 `RemoveHandler` 的参数之外，你还可以在可以使用委托类型的任何位置使用 lambda 表达式。 有关委托的详细信息以及对委托使用 lambda 表达式的详细信息，请参阅[委托语句](../../../visual-basic/language-reference/statements/delegate-statement.md)和[宽松委托转换](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)。  
   
 ## <a name="lambda-expression-syntax"></a>Lambda 表达式语法  
- Lambda 表达式的语法类似于标准的子例程。 差异如下所示：  
+ Lambda 表达式的语法与标准子例程的语法相似。 不同之处如下：  
   
 - Lambda 表达式没有名称。  
   
-- Lambda 表达式不能有修饰符，如`Overloads`或`Overrides`。  
+- Lambda 表达式不能具有修饰符，如 `Overloads` 或 @no__t 为-1。  
   
-- 单行 lambda 表达式的主体必须是一条语句，不是表达式。 主体可以包含调用的 sub 过程，但不是为 function 过程的调用。  
+- 单行 lambda 表达式的主体必须是语句，而不能是表达式。 正文可以包含对 sub 过程的调用，但不能由对函数过程的调用组成。  
   
-- 在 lambda 表达式中，必须必须推断数据类型或所有参数已指定所有参数。  
+- 在 lambda 表达式中，所有参数都必须具有指定的数据类型，或者必须推断所有参数。  
   
-- 可选和`ParamArray`lambda 表达式中不允许使用参数。  
+- Lambda 表达式中不允许使用可选的和 @no__t 的参数。  
   
-- 在 lambda 表达式中不允许使用泛型参数。  
+- Lambda 表达式中不允许使用泛型参数。  
   
 ## <a name="example"></a>示例  
- 下面是向控制台写入值的 lambda 表达式的示例。 该示例显示了一个子例程的这两个单行和多行 lambda 表达式语法。 有关更多示例，请参阅[Lambda 表达式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)。  
+ 下面是将值写入控制台的 lambda 表达式的示例。 该示例显示了子程序的单行和多行 lambda 表达式语法。 有关更多示例，请参阅[Lambda 表达式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)。  
   
  [!code-vb[VbVbalrLambdas#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#15)]  
   

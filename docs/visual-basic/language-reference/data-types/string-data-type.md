@@ -18,30 +18,30 @@ helpviewer_keywords:
 - String literals [Visual Basic]
 - identifier type characters [Visual Basic], $
 ms.assetid: 15ac03f5-cabd-42cc-a754-1df3893c25d9
-ms.openlocfilehash: 11c4f119360af386fa2c5609ea7815b9ae7a64f3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6d2fd226735622de5cd7197060c05b8ac12b69f1
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647008"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71696841"
 ---
 # <a name="string-data-type-visual-basic"></a>String 数据类型 (Visual Basic)
-存储无符号的 16 位 （2 个字节） 码位的序列该范围从 0 到 65535 之间的值中。 每个*代码点*，或字符代码，表示单个 Unicode 字符。 一个字符串，可包含从 0 到大约 20 亿 (2 ^31) 的 Unicode 字符。  
+保存范围介于0到65535之间的16位无符号16位（2字节）码位序列。 每个*码位*或字符代码都表示一个 Unicode 字符。 字符串可以包含0到约2000000000（2 ^ 31）个 Unicode 字符。  
   
 ## <a name="remarks"></a>备注  
- 使用`String`数据类型来保存多个字符，无需数组管理开销`Char()`，数组`Char`元素。  
+ 使用 `String` 数据类型可保存多个字符，而无需 `Char()` 的数组管理开销，即一个 @no__t 为2元素的数组。  
   
- 默认值`String`是`Nothing`（空引用）。 请注意，这并不相同，则为空字符串 (值`""`)。  
+ @No__t 为 @no__t 的默认值为-1 （空引用）。 请注意，这不同于空字符串（值 `""`）。  
   
 ## <a name="unicode-characters"></a>Unicode 字符  
- Unicode 的第一个 128 个码位 (0-127) 对应的字母和标准的美式键盘上的符号。 这些第一个 128 个码位都与 ASCII 字符集定义相同。 第二个 128 个码位 (128-255) 表示特殊字符，如的基于拉丁文的字母、 重音符号、 货币符号和小数部分。 Unicode 使用各种各样的符号的其余代码点 (256-65535)。 这包括全球范围内的文本字符、 音调符号和数学和技术符号。  
+ Unicode 的第一个128码位（0–127）对应于标准美式键盘上的字母和符号。 这前128码位与 ASCII 字符集定义的代码点相同。 第二个128码位（128–255）表示特殊字符，例如基于拉丁语的字母表号、重音、货币符号和分数。 Unicode 对各种符号使用剩余的代码点（256-65535）。 这包括全球文本字符、音调符号、数学和技术符号。  
   
- 您可以使用方法，如<xref:System.Char.IsDigit%2A>并<xref:System.Char.IsPunctuation%2A>中的单个字符上`String`变量以确定其 Unicode 分类。  
+ 您可以使用方法（例如 <xref:System.Char.IsDigit%2A>）和 @no__t @no__t 2 变量中的单个字符来确定其 Unicode 分类。  
   
 ## <a name="format-requirements"></a>格式要求  
- 必须将`String`引号内的文本 (`" "`)。 如果为一个字符串中的字符，必须包含引号，则使用两个连续的引号 (`""`)。 下面的示例阐释了这一点。  
+ 必须将 `String` 文本括在引号中（`" "`）。 如果必须包括引号作为字符串中的字符之一，请使用两个连续的引号（`""`）。 下面的示例阐释了这一点。  
   
-```  
+```vb  
 Dim j As String = "Joe said ""Hello"" to me."  
 Dim h As String = "Hello"  
 ' The following messages all display the same thing:  
@@ -51,32 +51,32 @@ MsgBox("Joe said " & """" & h & """" & " to me.")
 MsgBox("Joe said """ & h & """ to me.")  
 ```  
   
- 请注意，连续的引号表示字符串中的引号都独立于引号开始和结束`String`文本。  
+ 请注意，表示字符串中的引号的连续引号与开始和结束 @no__t 0 文本的引号无关。  
   
 ## <a name="string-manipulations"></a>字符串操作  
- 分配到一个字符串后`String`变量，该字符串是*不可变*，这意味着您不能更改它的长度或内容。 在修改以任何方式的字符串时，Visual Basic 创建一个新字符串和放弃前一个。 `String`变量然后指向新的字符串。  
+ 将字符串分配给 `String` 变量后，该字符串是*不可变*的，这意味着你无法更改其长度或内容。 以任何方式更改字符串时，Visual Basic 会创建一个新字符串，并放弃上一个字符串。 然后，@no__t 的变量指向新的字符串。  
   
- 您可以操作的内容`String`变量使用的各种字符串函数。 下面的示例演示<xref:Microsoft.VisualBasic.Strings.Left%2A>函数  
+ 您可以使用各种字符串函数来处理 `String` 变量的内容。 下面的示例说明了 <xref:Microsoft.VisualBasic.Strings.Left%2A> 函数  
   
-```  
+```vb  
 Dim S As String = "Database"  
 ' The following statement sets S to a new string containing "Data".  
 S = Microsoft.VisualBasic.Left(S, 4)  
 ```  
   
- 可能会用前导或尾随空格填充通过另一个组件创建的字符串。 如果你收到此类字符串，则可以使用<xref:Microsoft.VisualBasic.Strings.Trim%2A>， <xref:Microsoft.VisualBasic.Strings.LTrim%2A>，和<xref:Microsoft.VisualBasic.Strings.RTrim%2A>函数来删除这些空格。  
+ 其他组件创建的字符串可能用前导空格或尾随空格填充。 如果收到这样的字符串，可以使用 <xref:Microsoft.VisualBasic.Strings.Trim%2A>、<xref:Microsoft.VisualBasic.Strings.LTrim%2A> 和 <xref:Microsoft.VisualBasic.Strings.RTrim%2A> 函数删除这些空格。  
   
  有关字符串操作的详细信息，请参阅[字符串](../../../visual-basic/programming-guide/language-features/strings/index.md)。  
   
 ## <a name="programming-tips"></a>编程提示  
   
-- **负号。** 请记住保留字符`String`是无符号，并且不能表示负值。 在任何情况下，不应使用`String`来保存数值。  
+- **负数。** 请记住，`String` 保存的字符是无符号的，不能表示负值。 在任何情况下，不应使用 `String` 来保存数值。  
   
-- **互操作注意事项。** 如果你不是为.NET Framework 编写的组件与交互如自动化或 COM 对象，请记住，字符串字符具有不同的数据宽度 （8 位） 在其他环境中。 如果您将 8 位字符的字符串参数传递给此类组件，将其作为声明`Byte()`，数组`Byte`元素，而不是`String`中新的 Visual Basic 代码。  
+- **互操作注意事项。** 如果你与不是为 .NET Framework 编写的组件（如自动化或 COM 对象）进行交互，请记住，在其他环境中，字符串字符具有不同的数据宽度（8位）。 如果要将8位字符的字符串参数传递给此类组件，则将其声明为 `Byte()`、一个 @no__t 为1个元素的数组，而不是在新的 Visual Basic 代码中 `String`。  
   
-- **类型字符。** 追加标识符类型字符`$`到任何标识符会强制转换到`String`数据类型。 `String` 有没有文本类型字符。 但是，编译器将文本括在引号 (`" "`) 作为`String`。  
+- **键入字符。** 如果将标识符类型字符 `$` 追加到任何标识符，则会将其强制转换为 @no__t 的数据类型。 `String` 没有文本类型字符。 但编译器会将括在引号中的文本（`" "`）视为 `String`。  
   
-- **Framework 类型。** .NET Framework 中的对应类型是<xref:System.String?displayProperty=nameWithType>类。  
+- **Framework 类型。** .NET Framework 中的相应类型是 @no__t 0 类。  
   
 ## <a name="see-also"></a>请参阅
 

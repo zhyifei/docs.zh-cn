@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - <source> element
 - source element
-ms.openlocfilehash: 55120e292ac2a2c822c5510563d1aa167ca921e4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c4f7e31422ccd8129599db1120f9b0cb327d9319
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920456"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697200"
 ---
-# <a name="source-element"></a>\<源 > 元素
+# <a name="source-element"></a>\<source > 元素
 指定用于启动跟踪消息的跟踪源。  
   
- \<configuration>  
-\<system.diagnostics>  
-\<源 >  
-\<源 >  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<system >** ](system-diagnostics-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t[ **\<sources >** ](sources-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<source >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,9 +38,9 @@ ms.locfileid: "69920456"
 |特性|描述|  
 |---------------|-----------------|  
 |`name`|可选特性。<br /><br /> 指定跟踪源的名称。|  
-|`switchName`|可选特性。<br /><br /> 指定应用程序中的跟踪开关实例的名称。 如果未在`<switches>`元素中标识开关, 则值指定开关的级别。|  
-|`switchType`|可选特性。<br /><br /> 指定跟踪开关的类型。 如果存在, 则该类型必须是有效的类名, 并且不能是空字符串。|  
-|`extraAttribute`|可选特性。<br /><br /> 指定跟踪源特定属性的值, 该属性由<xref:System.Diagnostics.TraceSource.GetSupportedAttributes%2A>该跟踪源的方法标识。|  
+|`switchName`|可选特性。<br /><br /> 指定应用程序中的跟踪开关实例的名称。 如果未在 `<switches>` 元素中标识交换机，则该值指定开关的级别。|  
+|`switchType`|可选特性。<br /><br /> 指定跟踪开关的类型。 如果存在，则该类型必须是有效的类名，并且不能是空字符串。|  
+|`extraAttribute`|可选特性。<br /><br /> 指定由跟踪源特定属性的值，该属性由该跟踪源的 <xref:System.Diagnostics.TraceSource.GetSupportedAttributes%2A> 方法标识。|  
   
 ### <a name="child-elements"></a>子元素  
   
@@ -57,10 +57,10 @@ ms.locfileid: "69920456"
 |`sources`|包含用于启动跟踪消息的跟踪源。|  
   
 ## <a name="remarks"></a>备注  
- 此元素可在计算机配置文件 (Machine.config) 和应用程序配置文件中使用。  
+ 此元素可在计算机配置文件（Machine.config）和应用程序配置文件中使用。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何使用`<source>`元素添加跟踪源`mySource` , 并设置名`sourceSwitch`为的源开关的级别。 添加了控制台跟踪侦听器, 用于将跟踪信息写入控制台。  
+ 下面的示例演示如何使用 `<source>` 元素将跟踪源添加 @no__t，并设置名为 `sourceSwitch` 的源开关的级别。 添加了控制台跟踪侦听器，用于将跟踪信息写入控制台。  
   
 ```xml  
 <configuration>  

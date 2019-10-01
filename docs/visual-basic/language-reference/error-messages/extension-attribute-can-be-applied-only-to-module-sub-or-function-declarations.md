@@ -7,28 +7,28 @@ f1_keywords:
 helpviewer_keywords:
 - BC36550
 ms.assetid: 4387a51f-733c-45d7-abdb-eb64d4f51078
-ms.openlocfilehash: 88212fb2c04eab61b719a161ae01ccdda9a6110d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 95a67a552efacf9e77dc3ebc3e0187817a6d82e2
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64640726"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698581"
 ---
 # <a name="extension-attribute-can-be-applied-only-to-module-sub-or-function-declarations"></a>“Extension”特性只能应用于“Module”、“Sub”或“Function”声明。
-扩展 Visual Basic 中的数据类型的唯一方法是定义在标准模块内的扩展方法。 扩展方法会很`Sub`过程或`Function`过程。 必须使用扩展属性中，标记所有扩展方法`<Extension()>`，从<xref:System.Runtime.CompilerServices?displayProperty=nameWithType>命名空间。 （可选） 包含扩展方法的模块可能标记相同的方式。 扩展属性的任何其他使用不都有效。  
+在 Visual Basic 中扩展数据类型的唯一方法是在标准模块内定义扩展方法。 扩展方法可以是 @no__t 或 @no__t 的过程。 所有扩展方法都必须从 @no__t 命名空间中的扩展属性 `<Extension()>` 进行标记。 或者，包含扩展方法的模块可以用相同的方式进行标记。 扩展属性的其他使用无效。  
   
- **错误 ID:** BC36550  
+ **错误 ID：** BC36550  
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   
 - 删除扩展属性。  
   
-- 将扩展重新设计的外层模块中定义的方法。  
+- 将扩展重新设计为封闭模块中定义的方法。  
   
 ## <a name="example"></a>示例  
- 下面的示例定义`Print`方法`String`数据类型。  
+ 下面的示例为 `String` 数据类型定义 `Print` 方法。  
   
-```  
+```vb  
 Imports StringUtility  
 Imports System.Runtime.CompilerServices  
 Namespace StringUtility  

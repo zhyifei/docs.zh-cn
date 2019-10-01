@@ -2,12 +2,12 @@
 title: 数学函数
 ms.date: 03/30/2017
 ms.assetid: b040c7cb-156d-40f2-9152-61065b18148c
-ms.openlocfilehash: 5e5658e28c7d806f7fd38f941bfa7254e7806e11
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 664d1a4f67ecced6713f83bf3dd11931c9b4dc18
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71182482"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71700002"
 ---
 # <a name="mathematical-functions"></a>数学函数
 
@@ -107,7 +107,6 @@ SQL Server .NET Framework 数据提供程序 (SqlClient) 提供了各种数学�
 
 **示例** 
 
-[!code-csharp[DP EntityServices Concepts#SQLSERVER_CEILING](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_ceiling)]
 [!code-sql[DP EntityServices Concepts#SQLSERVER_CEILING](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_ceiling)]
 
 ## <a name="cosexpression"></a>COS （expression）
@@ -186,7 +185,6 @@ SQL Server .NET Framework 数据提供程序 (SqlClient) 提供了各种数学�
 
 **示例** 
 
-[!code-csharp[DP EntityServices Concepts#SQLSERVER_FLOOR](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_floor)] 
 [!code-sql[DP EntityServices Concepts#SQLSERVER_FLOOR](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_floor)]
 
 ## <a name="logexpression"></a>LOG （expression）
@@ -382,10 +380,5 @@ SQL Server .NET Framework 数据提供程序 (SqlClient) 提供了各种数学�
   
 ## <a name="see-also"></a>请参阅
 
-有关 SqlClient 支持的数学函数的更多信息，请参见 SqlClient 提供程序清单中所指定的 SQL Server 版本的相应文档：
-
-- **SQL Server 2005：** [数学函数（Transact-sql）](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms177516(v=sql.90))
-- **SQL Server 2008:** [数学函数（Transact-sql）](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms177516(v=sql.100))
-- **SQL Server 2012 及更高版本：** [数学函数（Transact-sql）](/sql/t-sql/functions/mathematical-functions-transact-sql)
-
+- [数学函数（Transact-sql）](/sql/t-sql/functions/mathematical-functions-transact-sql)
 - [用于实体框架函数的 SqlClient](sqlclient-for-ef-functions.md)

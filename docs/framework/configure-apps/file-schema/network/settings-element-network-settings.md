@@ -8,19 +8,19 @@ helpviewer_keywords:
 - settings element
 - <settings> element
 ms.assetid: 189ce989-c39b-427d-b004-6b82a668b931
-ms.openlocfilehash: 12797e2f06d03aacd81700eae57d5776c1a6f354
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: ba08f630dc602c950da309bf29482d85b41af7ef
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663997"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697680"
 ---
-# <a name="settings-element-network-settings"></a>\<settings > 元素 (网络设置)
+# <a name="settings-element-network-settings"></a>\<settings > 元素（网络设置）
 配置 <xref:System.Net?displayProperty=nameWithType> 命名空间的基本网络选项。  
   
- \<configuration>  
-\<system.net>  
-\<设置 >  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t[ **\<system >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t **\<settings >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -46,13 +46,13 @@ ms.locfileid: "69663997"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[httpListener](httplistener-element-network-settings.md)|自定义<xref:System.Net.HttpListener>类使用的参数。|  
+|[httpListener](httplistener-element-network-settings.md)|自定义 <xref:System.Net.HttpListener> 类使用的参数。|  
 |[httpWebRequest](httpwebrequest-element-network-settings.md)|自定义 Web 请求参数。|  
-|[ipv6](ipv6-element-network-settings.md)|启用 Internet 协议版本 6 (IPv6) 支持。|  
-|[\<performanceCounter > 元素 (网络设置)](performancecounter-element-network-settings.md)|启用网络性能计数器。|  
+|[ipv6](ipv6-element-network-settings.md)|启用 Internet 协议版本6（IPv6）支持。|  
+|[\<performanceCounter > 元素（网络设置）](performancecounter-element-network-settings.md)|启用网络性能计数器。|  
 |[servicePointManager](servicepointmanager-element-network-settings.md)|配置与网络资源的连接。|  
 |[socket](socket-element-network-settings.md)|指定套接字操作是否使用完成端口。|  
-|[\<w > 元素 (网络设置)](webproxyscript-element-network-settings.md)|配置用于发现 Web 代理的脚本的特征。|  
+|[\<webProxyScript > 元素（网络设置）](webproxyscript-element-network-settings.md)|配置用于发现 Web 代理的脚本的特征。|  
   
 ### <a name="parent-elements"></a>父元素  
   

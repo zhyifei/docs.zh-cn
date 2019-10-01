@@ -12,23 +12,23 @@ helpviewer_keywords:
 - TypeOf operator [Visual Basic]
 - compatible data types [Visual Basic]
 ms.assetid: 33f65296-659a-4b9a-9a29-c2a91cff68b2
-ms.openlocfilehash: e5cb1ddc130a8b1913f30b0d20d27941005dd9d3
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: c6028f524a16b836310f0c8d564205244515cdc9
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063252"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71701287"
 ---
 # <a name="typeof-operator-visual-basic"></a>TypeOf 运算符 (Visual Basic)
-检查表达式的结果的运行时类型是否兼容的类型使用指定的类型。
+检查表达式的结果的运行时类型是否与指定的类型兼容。
   
 ## <a name="syntax"></a>语法  
   
-```  
+```vb  
 result = TypeOf objectexpression Is typename  
 ```  
   
-```  
+```vb  
 result = TypeOf objectexpression IsNot typename  
 ```  
   
@@ -66,7 +66,7 @@ result = TypeOf objectexpression IsNot typename
 
 - [Is 运算符](../../../visual-basic/language-reference/operators/is-operator.md)
 - [IsNot 运算符](../../../visual-basic/language-reference/operators/isnot-operator.md)
-- [在 Visual Basic 中的比较运算符](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [Visual Basic 中的比较运算符](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
 - [Visual Basic 中的运算符优先级](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [按功能列出的运算符](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
 - [运算符和表达式](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)

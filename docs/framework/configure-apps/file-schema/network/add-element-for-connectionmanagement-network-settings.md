@@ -10,20 +10,20 @@ helpviewer_keywords:
 - add element, connectionManagement
 - connectionManagement, add element
 ms.assetid: 856bf57d-1c63-46c7-a178-03d97b0a4149
-ms.openlocfilehash: 608c591b910252dd60950bf2aa7565d6df04d5fc
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 3742a040e8c16c38e495a0fd886c4c1f23780758
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69664232"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698389"
 ---
-# <a name="add-element-for-connectionmanagement-network-settings"></a>\<为 connectionManagement 添加 > 元素 (网络设置)
+# <a name="add-element-for-connectionmanagement-network-settings"></a>用于 connectionManagement 的 0add > 元素（网络设置） @no__t
 将 IP 地址或 DNS 名称添加到连接管理列表。  
   
- \<configuration>  
-\<system.net>  
-\<connectionManagement>  
-\<add>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t[ **\<system >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t[ **\<connectionManagement >** ](connectionmanagement-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<添加 >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -62,7 +62,7 @@ ms.locfileid: "69664232"
  此元素可在应用程序配置文件或计算机配置文件 (Machine.config) 中使用。  
   
 ## <a name="example"></a>示例  
- 下面的示例将应用程序配置为使用四个到服务器`www.contoso.com`的连接, 以及两个与其他服务器的连接。  
+ 下面的示例将应用程序配置为使用服务器 @no__t 的四个连接，并将两个连接连接到所有其他服务器。  
   
 ```xml  
 <configuration>  

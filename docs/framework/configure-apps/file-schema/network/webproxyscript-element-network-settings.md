@@ -8,20 +8,20 @@ helpviewer_keywords:
 - <webProxyScript> element
 - webProxyScript element
 ms.assetid: a13c26db-6218-4af3-9696-38f24b23bfac
-ms.openlocfilehash: 8a77c2567401fd80e355bb7fcee17b6684653ebe
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 2abab3de2965c31c11d9acaf7b78f3a668563506
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659035"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697457"
 ---
-# <a name="webproxyscript-element-network-settings"></a>\<w > 元素 (网络设置)
+# <a name="webproxyscript-element-network-settings"></a>\<webProxyScript > 元素（网络设置）
 配置用于发现 Web 代理的脚本的特征。  
   
- \<configuration>  
-\<system.net>  
-\<设置 >  
-\<webProxyScript>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t[ **\<system >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t[ **\<settings >** ](settings-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<webProxyScript >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,7 +38,7 @@ ms.locfileid: "69659035"
   
 |特性|描述|  
 |---------------|-----------------|  
-|`downloadTimeout`|指定下载脚本的最长时间, 以小时、分钟和秒为单位。 默认值为一分钟。|  
+|`downloadTimeout`|指定下载脚本的最长时间，以小时、分钟和秒为单位。 默认值为一分钟。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  

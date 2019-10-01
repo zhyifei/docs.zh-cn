@@ -10,22 +10,22 @@ helpviewer_keywords:
 - bypasslist, remove element
 - remove element, bypasslist
 ms.assetid: 61dcfb4a-e3d9-4abf-a2cd-7d685fe2f64b
-ms.openlocfilehash: 99c18bd5b779845d52831b4a9591eaf4d5e5530b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 97b49a8a520d6a4f72945366874991d2deb18710
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920961"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697894"
 ---
-# <a name="remove-element-for-bypasslist-network-settings"></a>\<删除 bypasslist 的 > 元素 (网络设置)
+# <a name="remove-element-for-bypasslist-network-settings"></a>用于 bypasslist 的 0remove > 元素（网络设置） @no__t
 
 从代理跳过列表中删除 IP 地址或 DNS 名称。
 
-\<配置 > \
-\<system.net>\
-\<defaultProxy>\
-\<bypasslist>\
-\<remove>
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t[ **\<system >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t[ **\<defaultProxy >** ](defaultproxy-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<bypasslist >** ](bypasslist-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 **\<remove >**  
 
 ## <a name="syntax"></a>语法
 
@@ -53,15 +53,15 @@ ms.locfileid: "69920961"
 
 |**元素**|**说明**|
 |-----------------|---------------------|
-|[bypasslist](bypasslist-element-network-settings.md)|提供了一组正则表达式, 描述不使用代理的地址。|
+|[bypasslist](bypasslist-element-network-settings.md)|提供了一组正则表达式，描述不使用代理的地址。|
 
 ## <a name="remarks"></a>备注
 
-`remove`元素从绕过代理服务器的地址列表中删除描述 IP 地址或 DNS 服务器名称的正则表达式。 地址在配置文件中或配置层次结构中的更高级别定义。
+@No__t 0 元素从绕过代理服务器的地址列表中删除描述 IP 地址或 DNS 服务器名称的正则表达式。 地址在配置文件中或配置层次结构中的更高级别定义。
 
-`address`特性的值应为描述一组 IP 地址或主机名的正则表达式。
+@No__t-0 属性的值应为描述一组 IP 地址或主机名的正则表达式。
 
-有关正则表达式的详细信息, 请参阅。[.NET Framework 正则表达式](../../../../standard/base-types/regular-expressions.md)。
+有关正则表达式的详细信息，请参阅。[.NET Framework 正则表达式](../../../../standard/base-types/regular-expressions.md)。
 
 ## <a name="configuration-files"></a>配置文件
 
@@ -69,7 +69,7 @@ ms.locfileid: "69920961"
 
 ## <a name="example"></a>示例
 
-下面的示例删除 adventure-works.com 域的任何先前定义, 然后将 contoso.com 域添加到跳过列表。
+下面的示例删除 adventure-works.com 域的任何先前定义，然后将 contoso.com 域添加到跳过列表。
 
 ```xml
 <configuration>

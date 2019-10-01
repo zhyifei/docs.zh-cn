@@ -8,22 +8,22 @@ helpviewer_keywords:
 - cryptoClass element
 - <cryptoClass> element
 ms.assetid: 03db52ef-010e-44ea-b6fd-b9c900ecad50
-ms.openlocfilehash: 6a868f62c6a327012a6225b86bf0103d178d6ab7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: db3681ea141bb7e3905f6a470f5c74ce05f6ef4b
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69921173"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699787"
 ---
 # <a name="cryptoclass-element"></a>\<cryptoClass > 元素
 包含一个密码类，该类具有到 [\<nameEntry>](nameentry-element.md) 元素中的友好名称的映射。  
   
- \<configuration>  
-\<mscorlib>  
-\<cryptographySettings>  
-\<cryptoNameMapping>  
-\<cryptoClasses >  
-\<cryptoClass >  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<mscorlib >** ](mscorlib-element-for-cryptography-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t[ **\<cryptographySettings >** ](cryptographysettings-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<cryptoNameMapping >** ](cryptonamemapping-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7[ **&nbsp;0cryptoClasses >** ](cryptoclasses-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 @ no__t-8 @ no__t-9 **&nbsp;1cryptoClass >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -54,7 +54,7 @@ ms.locfileid: "69921173"
 |`mscorlib`|包含 [\<cryptographySettings>](cryptographysettings-element.md) 元素。|  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何使用 **\<cryptoClass >** 元素来引用加密类并配置运行时。 然后, 你可以将字符串 "RSA" 传递给<xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType>方法, 并<xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A>使用方法返回`MyCryptoRSAClass`对象。  
+ 下面的示例演示如何使用 **\<cryptoClass >** 元素来引用加密类并配置运行时。 然后，你可以将字符串 "RSA" 传递到 @no__t 0 方法，并使用 <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> 方法返回 @no__t 2 对象。  
   
 ```xml  
 <configuration>  

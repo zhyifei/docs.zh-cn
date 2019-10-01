@@ -1,5 +1,5 @@
 ---
-title: <type1>'<typename>必须实现<membername>for interface<interfacename>
+title: <type1>“<typename>”必须为接口“<interfacename>”实现“<membername>”
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30154
@@ -7,33 +7,33 @@ f1_keywords:
 helpviewer_keywords:
 - BC30154
 ms.assetid: 259afdfa-3608-4760-adcb-88ec0da5020d
-ms.openlocfilehash: 86b0d46e0e27b2fd8d1fccb37f4a3c45e95f5f63
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a824b66eaad964049ced5cae5eb2cc370d00ba7f
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61792088"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71696893"
 ---
-# <a name="type1typename-must-implement-membername-for-interface-interfacename"></a>\<类型 1 >\<类型名称 > 必须实现\<成员名称 > 接口\<interfacename >
-'\<类型名称 > 必须实现\<成员名称 > 接口\<interfacename >。 实现属性必须具有匹配的 ReadOnly / WriteOnly 说明符。  
+# <a name="type1typename-must-implement-membername-for-interface-interfacename"></a>\<type1 > "\<typename >" 必须为接口 "\<interfacename >" 实现 "2membername @no__t"
+"\<typename >" 必须为接口 "\<interfacename >" 实现 "\<membername >"。 实现属性必须具有匹配的 "ReadOnly"/"WriteOnly" 说明符。  
   
- 类或结构声明实现一个接口，但不实现过程、 属性或事件的接口定义。 必须实现该接口的每个成员。  
+ 类或结构声明实现接口，但不实现由接口定义的过程、属性或事件。 必须实现接口的每个成员。  
   
- **错误 ID:** BC30154  
+ **错误 ID：** BC30154  
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   
-1. 声明具有相同名称和签名，因为在接口中定义的成员。 请务必包括至少`End Function`， `End Sub`，或`End Property`语句。  
+1. 使用在接口中定义的相同名称和签名声明成员。 请确保至少包含 `End Function`、`End Sub` 或 `End Property` 语句。  
   
-2. 添加`Implements`子句的末尾`Function`， `Sub`， `Property`，或`Event`语句。 例如：  
+2. 将 `Implements` 子句添加到 @no__t 的末尾，`Sub`、`Property` 或 @no__t 语句。 例如：  
   
-    ```  
+    ```vb  
     Public Event ItHappened() Implements IBaseInterface.ItHappened  
     ```  
   
-3. 当实现属性，请确保`ReadOnly`或`WriteOnly`使用如下所示的接口定义的方式相同。  
+3. 实现属性时，请确保使用与接口定义中相同的方式来使用 `ReadOnly` 或 @no__t。  
   
-4. 当实现属性，将声明`Get`和`Set`过程，根据需要。  
+4. 实现某个属性时，请根据需要声明 @no__t 0 和 @no__t 的过程。  
   
 ## <a name="see-also"></a>请参阅
 

@@ -8,21 +8,21 @@ helpviewer_keywords:
 - specifiedPickupDirectory element
 - <specifiedPickupDirectory> element
 ms.assetid: 0121f49d-bff2-4bc6-af06-f1628dcd61f1
-ms.openlocfilehash: b2e31dee4f5aff2bf6cedf5c4e9ca235695b0a53
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 47aa357dac8b6bf71ce8c391004af16f8c98e347
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659098"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697594"
 ---
-# <a name="specifiedpickupdirectory-element-network-settings"></a>\<specifiedPickupDirectory > 元素 (网络设置)
-配置简单邮件传输协议 (SMTP) 服务器的本地目录。  
+# <a name="specifiedpickupdirectory-element-network-settings"></a>\<specifiedPickupDirectory > 元素（网络设置）
+配置简单邮件传输协议（SMTP）服务器的本地目录。  
   
- \<configuration>  
-\<system.net>  
-\<mailSettings>  
-\<smtp>  
-\<specifiedPickupDirectory>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t[ **\<system >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t[ **\<mailSettings >** ](mailsettings-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<smtp >** ](smtp-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 **\<specifiedPickupDirectory >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -48,7 +48,7 @@ ms.locfileid: "69659098"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<smtp > 元素 (网络设置)](smtp-element-network-settings.md)|配置简单邮件传输协议 (SMTP) 邮件发送选项。|  
+|[\<smtp > 元素（网络设置）](smtp-element-network-settings.md)|配置简单邮件传输协议（SMTP）邮件发送选项。|  
   
 ## <a name="remarks"></a>备注  
  `specifiedPickupDirectory` 特性设置应用程序保存邮件以供 SMTP 服务器处理的目录。  

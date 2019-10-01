@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - BC30685
 ms.assetid: 756add7a-23d5-4b4f-a48d-8297d6459c73
-ms.openlocfilehash: 71f8cb96c9981bbfc55236ea815fa5f5cb0e8aaf
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 06e0d8863c74041f81977b3187fe99a1d05bcd53
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622661"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71700885"
 ---
-# <a name="membername-is-ambiguous-across-the-inherited-interfaces-interfacename1-and-interfacename2"></a>'\<成员名称 > 之间的继承接口的不明确\<interfacename1 > 和\<interfacename2 >
+# <a name="membername-is-ambiguous-across-the-inherited-interfaces-interfacename1-and-interfacename2"></a>"\<membername >" 在继承接口 "\<interfacename1 >" 和 "\<interfacename2 >" 之间不明确
 接口从多个接口继承具有相同名称的两个或多个成员。  
   
- **错误 ID:** BC30685  
+ **错误 ID：** BC30685  
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   
-- 将值转换为你想要使用; 的基接口例如：  
+- 将值强制转换为要使用的基接口;例如：  
   
-    ```  
+    ```vb  
     Interface Left  
         Sub MySub()  
     End Interface  

@@ -1,5 +1,5 @@
 ---
-title: <clear><listeners>的元素<source>
+title: <source> 的 @no__t <listeners> 元素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners/clear
@@ -7,22 +7,22 @@ helpviewer_keywords:
 - <clear> element for <listeners> for <source>
 - clear element for <listeners> for <source>
 ms.assetid: 76796bb2-9c0b-4526-8135-8bf18b16d8d9
-ms.openlocfilehash: 768d51a74b4c31d1250d2f5d6517f760f886e0a0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 05c20040ef59f4dee6b15bbe0b0369281b532754
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920563"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697196"
 ---
-# <a name="clear-element-for-listeners-for-source"></a>\<清除\< \<源 > 侦听器 > > 元素
+# <a name="clear-element-for-listeners-for-source"></a>\<clear > 元素，用于 2source @no__t 的 \<listeners >
 清除跟踪源的 `Listeners` 集合。  
   
- \<configuration>  
-\<system.diagnostics>  
-\<源 >  
-\<源 >  
-\<侦听器 >  
-\<清除 >  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<system >** ](system-diagnostics-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t[ **\<sources >** ](sources-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<source >** ](source-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7[ **&nbsp;0listeners >** ](listeners-element-for-source.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<clear>**  
   
 ## <a name="syntax"></a>语法  
   
@@ -50,13 +50,13 @@ ms.locfileid: "69920563"
 |`listeners`|指定用于收集、存储和路由消息的侦听器。|  
   
 ## <a name="remarks"></a>备注  
- 元素从跟踪源的集合中移除所有侦听器,包括。<xref:System.Diagnostics.DefaultTraceListener> `Listeners` `<clear>` 可以在`<clear>` `<add>`使用元素之前使用元素, 以确定集合中没有其他活动的侦听器。  
+ @No__t 0 元素从跟踪源的 @no__t 集合（包括 <xref:System.Diagnostics.DefaultTraceListener>）中删除所有侦听器。 你可以使用 `<clear>` 元素，然后才能使用 @no__t 元素，以确定集合中没有其他活动的侦听器。  
   
 ## <a name="configuration-file"></a>配置文件  
- 此元素可在计算机配置文件 (Machine.config) 和应用程序配置文件中使用。  
+ 此元素可在计算机配置文件（Machine.config）和应用程序配置文件中使用。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示`<clear>`如何在`<add>`使用元素将侦听器`console`和`textListener` `Listeners`集合添加到跟踪源`TraceSourceApp`之前使用元素。  
+ 下面的示例演示了如何使用 `<clear>` 元素，然后再使用 `<add>` 元素将侦听器添加到 @no__t 的跟踪源的 @no__t 集合 `console` 和 @no__t。  
   
 ```xml  
 <configuration>  

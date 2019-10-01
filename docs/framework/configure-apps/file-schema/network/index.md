@@ -12,15 +12,17 @@ helpviewer_keywords:
 - connections [.NET Framework], network configuration elements
 - network resources, network configuration elements
 ms.assetid: f1de5a0f-76c5-4833-819f-5222b8146340
-ms.openlocfilehash: 0f5d762a2b688bebcb7c027be6c639b6d64c069d
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 5e3bd1b1734fc7fba50b72785531a8b001d6d741
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69664105"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698155"
 ---
 # <a name="network-settings-schema"></a>网络设置架构
-网络设置指定 .NET Framework 与 Internet 的连接方式。 下表描述 [\<system.Net> 元素（网络设置）](system-net-element-network-settings.md)下每个子配置元素的功能。  
+网络设置指定 .NET Framework 与 Internet 的连接方式。
+
+@No__t-0system > 设置指定 .NET Framework 如何连接到网络。 下表描述 [\<system.Net> 元素（网络设置）](system-net-element-network-settings.md)下每个子配置元素的功能。  
   
 |元素|描述|  
 |-------------|-----------------|  
@@ -31,7 +33,7 @@ ms.locfileid: "69664105"
 |[\<requestCaching> 元素（网络设置）](requestcaching-element-network-settings.md)|控制网络请求的缓存机制。|  
 |[\<webRequestModules> 元素（网络设置）](webrequestmodules-element-network-settings.md)|指定用于从 Internet 主机请求信息的模块。|  
   
- URI 设置指定 .NET Framework 如何处理使用统一资源标识符 (URI) 表示的 Web 地址。 下表描述 [\<Uri> 元素（Uri 设置）](uri-element-uri-settings.md)下每个子配置元素的函数。  
+@No__t-0uri > 设置指定 .NET Framework 如何处理使用统一资源标识符（Uri）表示的 web 地址。 下表描述了[\<uri > 元素（Uri 设置）](uri-element-uri-settings.md)下的每个子配置元素的功能。  
   
 |元素|描述|  
 |-------------|-----------------|  

@@ -11,19 +11,19 @@ helpviewer_keywords:
 - trace listeners, <sharedListeners> element
 - sharedListeners element
 ms.assetid: de200534-19dd-4156-86cf-c50521802c4c
-ms.openlocfilehash: 41cabcbce13409b0842cbbd625028b51d32d59d0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b419ecf451b79808e545525c7b8761175f390200
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69926974"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699294"
 ---
 # <a name="sharedlisteners-element"></a>\<sharedListeners > 元素
-包含任何源或跟踪元素可以引用的侦听器。  默认情况下, 这些侦听器不会接收任何跟踪, 而且不能在运行时检索这些侦听器。 可以按名称将标识为共享侦听器的侦听器添加到源或跟踪。  
+包含任何源或跟踪元素可以引用的侦听器。  默认情况下，这些侦听器不会接收任何跟踪，而且不能在运行时检索这些侦听器。 可以按名称将标识为共享侦听器的侦听器添加到源或跟踪。  
   
- \<configuration>  
-\<system.diagnostics>  
-\<sharedListeners>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<system >** ](system-diagnostics-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t **\<sharedListeners >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -53,12 +53,12 @@ ms.locfileid: "69926974"
 |`system.diagnostics`|为 ASP.NET 配置节指定根元素。|  
   
 ## <a name="remarks"></a>备注  
- 将侦听器添加到共享侦听器集合并不会使其成为活动侦听器。 还必须将其添加到跟踪源或跟踪, 方法是将其添加到`Listeners`跟踪元素的集合。 .NET Framework 中的侦听器类派生自<xref:System.Diagnostics.TraceListener>类。  
+ 将侦听器添加到共享侦听器集合并不会使其成为活动侦听器。 还必须将其添加到跟踪源或跟踪，只需将其添加到跟踪元素的 `Listeners` 集合中即可。 .NET Framework 中的侦听器类派生自 @no__t 的类。  
   
- 此元素可在计算机配置文件 (Machine.config) 和应用程序配置文件中使用。  
+ 此元素可在计算机配置文件（Machine.config）和应用程序配置文件中使用。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示`<sharedListeners>`如何使用元素将侦听器`console`添加到`Listeners` <xref:System.Diagnostics.TraceSource>和<xref:System.Diagnostics.Trace>类的集合。 控制台跟踪侦听器通过对<xref:System.Diagnostics.TraceSource>或<xref:System.Diagnostics.Trace>的调用将跟踪信息写入控制台。  
+ 下面的示例演示如何使用 `<sharedListeners>` 元素将侦听器 `console` 添加到 @no__t 和 @no__t 类的 `Listeners` 集合。 控制台跟踪侦听器通过调用 <xref:System.Diagnostics.TraceSource> 或 <xref:System.Diagnostics.Trace> 将跟踪信息写入控制台。  
   
 ```xml  
 <configuration>  

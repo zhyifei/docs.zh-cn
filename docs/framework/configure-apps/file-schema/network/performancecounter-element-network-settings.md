@@ -8,20 +8,20 @@ helpviewer_keywords:
 - performanceCounter element
 - <performanceCounter> element
 ms.assetid: 3afa1586-e1b8-473d-8985-c3fc90cf561b
-ms.openlocfilehash: 05aac6c1ed3c04bce263a45cafdb9bec906bd75b
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 3fe6b19d0055aafad859b55960800d9786d7fa08
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69664065"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698001"
 ---
-# <a name="performancecounter-element-network-settings"></a>\<performanceCounter > 元素 (网络设置)
+# <a name="performancecounter-element-network-settings"></a>\<performanceCounter > 元素（网络设置）
 启用或禁用网络性能计数器。  
   
- \<configuration>  
-\<system.net>  
-\<设置 >  
-\<performanceCounters>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t[ **\<system >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t[ **\<settings >** ](settings-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<performanceCounters >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -52,14 +52,14 @@ ms.locfileid: "69664065"
 ## <a name="remarks"></a>备注  
  此元素可在应用程序配置文件或计算机配置文件 (Machine.config) 中使用。  
   
- 需要在要使用的配置文件中启用网络性能计数器。 通过配置文件中的单个设置即可启用或禁用所有网络性能计数器。 不能启用或禁用单个网络性能计数器。 有关特定的网络性能计数器的详细信息, 请参阅[联网性能计数器](../../../debug-trace-profile/performance-counters.md#networking)。  
+ 需要在要使用的配置文件中启用网络性能计数器。 通过配置文件中的单个设置即可启用或禁用所有网络性能计数器。 不能启用或禁用单个网络性能计数器。 有关特定的网络性能计数器的详细信息，请参阅[联网性能计数器](../../../debug-trace-profile/performance-counters.md#networking)。  
   
  默认值是禁用网络性能计数器。  
   
- 属性可用于从适用的配置文件中获取**已启用**属性的当前值。 <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType>  
+ @No__t-0 属性可用于从适用的配置文件中获取**已启用**属性的当前值。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何配置<xref:System.Net>和相关命名空间, 以启用网络性能计数器。  
+ 下面的示例演示如何配置 @no__t 0 和相关命名空间，以启用网络性能计数器。  
   
 ```xml  
 <configuration>  

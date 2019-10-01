@@ -7,19 +7,19 @@ f1_keywords:
 helpviewer_keywords:
 - BC30909
 ms.assetid: ffa7395d-e182-4087-8ce8-079810fdae54
-ms.openlocfilehash: cb5191442ed8d3ee47c5116b10740e277ffa5bac
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ca67e74d7790352bd1842cb8a59fe1525af6e18c
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64661919"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71700898"
 ---
-# <a name="membername-cannot-expose-type-typename-outside-the-project-through-containertype-containertypename"></a>'\<成员名称 > 不能公开类型\<类型名称 > 通过在项目外部\<containertype >'\<containertypename >
-变量、 过程参数或函数返回公开其容器外，但它被声明为不必须在容器外公开的类型。  
+# <a name="membername-cannot-expose-type-typename-outside-the-project-through-containertype-containertypename"></a>"\<membername >" 无法通过 \<containertype > "\<containertypename >" 在项目外部公开类型 "\<typename >"
+变量、过程参数或函数返回在其容器外部公开，但它被声明为不得在容器外部公开的类型。  
   
- 下面的主干代码显示了将生成此错误的情况。  
+ 以下框架代码显示了生成此错误的情况。  
   
-```  
+```vb  
 Private Class privateClass  
 End Class  
 Public Class mainClass  
@@ -27,14 +27,14 @@ Public Class mainClass
 End Class  
 ```  
   
- 声明的类型`Protected`， `Friend`， `Protected Friend`，或`Private`用于其声明上下文以外的访问受到限制。 使用与数据，将无法具有受限制更少访问的变量的类型实现此目的。 在上面的主干代码`exposedVar`是`Public`，并将公开`privateClass`不应有权访问它的代码。  
+ 声明为 `Protected`、`Friend`、`Protected Friend` 或 @no__t 3 的类型旨在在其声明上下文之外进行有限的访问。 将其用作受限访问的变量的数据类型将会降低此目的。 在上面的主干代码中，`exposedVar` @no__t 为-1，并将 `privateClass` 公开给不应访问它的代码。  
   
- **错误 ID:** BC30909  
+ **错误 ID：** BC30909  
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   
-- 更改访问级别，变量、 过程参数或函数的返回让至少作为其数据类型的访问级别限制性最高。  
+- 更改变量、过程参数或函数返回的访问级别，使其至少与数据类型的访问级别具有相同的限制。  
   
 ## <a name="see-also"></a>请参阅
 
-- [在 Visual Basic 中的访问级别](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Visual Basic 中的访问级别](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)

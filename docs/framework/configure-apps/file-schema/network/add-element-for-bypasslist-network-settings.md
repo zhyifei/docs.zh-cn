@@ -10,21 +10,21 @@ helpviewer_keywords:
 - <add> element, bypasslist
 - add element, bypasslist
 ms.assetid: a0b86e28-86b4-4497-abe8-d5fd614c7926
-ms.openlocfilehash: da234402c6ec7e2c1f85e4bd674517b1147f0d18
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1db0ba3b0a213de1175e6e0cee347753d2a413b7
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927484"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699613"
 ---
-# <a name="add-element-for-bypasslist-network-settings"></a>\<为 bypasslist 添加 > 元素 (网络设置)
+# <a name="add-element-for-bypasslist-network-settings"></a>用于 bypasslist 的 0add > 元素（网络设置） @no__t
 将 IP 地址或 DNS 名称添加到代理跳过列表。  
   
- \<configuration>  
-\<system.net>  
-\<defaultProxy >  
-\<bypasslist >  
-\<add>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t[ **\<system >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t[ **\<defaultProxy >** ](defaultproxy-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<bypasslist >** ](bypasslist-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<添加 >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -50,22 +50,22 @@ ms.locfileid: "69927484"
   
 |**元素**|**说明**|  
 |-----------------|---------------------|  
-|[bypasslist](bypasslist-element-network-settings.md)|提供了一组正则表达式, 描述不使用代理的地址。|  
+|[bypasslist](bypasslist-element-network-settings.md)|提供了一组正则表达式，描述不使用代理的地址。|  
   
 ## <a name="remarks"></a>备注  
- `add`元素将描述 IP 地址或 DNS 服务器名称的正则表达式插入绕过代理服务器的地址列表。  
+ @No__t-0 元素将描述 IP 地址或 DNS 服务器名称的正则表达式插入绕过代理服务器的地址列表。  
   
- `address`特性的值应为描述一组 IP 地址或主机名的正则表达式。  
+ @No__t-0 属性的值应为描述一组 IP 地址或主机名的正则表达式。  
   
- 为此元素指定正则表达式时, 应格外小心。 正则表达式 "[a-z] +\\\\.com" 与 contoso.com 域中的任何主机匹配, 但它还匹配 contoso.com.cpandl.com 域中的任何主机。 若要只匹配 contoso.com 域中的主机, 请使用定位点 ("$"): "[a-z] +\\\\.com $"。  
+ 为此元素指定正则表达式时，应格外小心。 正则表达式 "[a-z] + \\.contoso\\.com" 可匹配 contoso.com 域中的任何主机，但它还匹配 contoso.com.cpandl.com 域中的任何主机。 若要只匹配 contoso.com 域中的主机，请使用定位点（"$"）： "[a-z] + \\.contoso\\.com $"。  
   
- 有关正则表达式的详细信息, 请参阅。[.NET Framework 正则表达式](../../../../standard/base-types/regular-expressions.md)。  
+ 有关正则表达式的详细信息，请参阅。[.NET Framework 正则表达式](../../../../standard/base-types/regular-expressions.md)。  
   
 ## <a name="configuration-files"></a>配置文件  
  此元素可在应用程序配置文件或计算机配置文件 (Machine.config) 中使用。  
   
 ## <a name="example"></a>示例  
- 下面的示例将两个地址添加到跳过列表。 首先, 将跳过 contoso.com 域中所有服务器的代理;第二种方式是跳过其 IP 地址以192.168 开头的所有服务器的代理。  
+ 下面的示例将两个地址添加到跳过列表。 首先，将跳过 contoso.com 域中所有服务器的代理;第二种方式是跳过其 IP 地址以192.168 开头的所有服务器的代理。  
   
 ```xml  
 <configuration>  

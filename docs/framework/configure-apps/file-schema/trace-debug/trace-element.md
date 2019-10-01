@@ -10,19 +10,19 @@ helpviewer_keywords:
 - trace element
 - trace listener, <trace> element
 ms.assetid: 7931c942-63c1-47c3-a045-9d9de3cacdbf
-ms.openlocfilehash: fd90d271591a47849b3f70aea50cbe909b6fd613
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 02fd794eb7b7b7f46f7f7bc4e43036cb4a4758ed
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920401"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699172"
 ---
 # <a name="trace-element"></a>\<trace > 元素
 包含用于收集、存储和路由跟踪消息的侦听器。  
   
- \<configuration>  
-\<system.diagnostics>  
-\<trace>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<system >** ](system-diagnostics-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t **\<trace >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -45,17 +45,17 @@ ms.locfileid: "69920401"
   
 ## <a name="autoflush-attribute"></a>autoflush 特性  
   
-|值|描述|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |`false`|不会自动刷新输出缓冲区。 这是默认设置。|  
 |`true`|自动刷新输出缓冲区。|  
   
 ## <a name="usegloballock-attribute"></a>useGlobalLock 特性  
   
-|值|描述|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
-|`false`|如果侦听器是线程安全的, 则不使用全局锁定;否则, 将使用全局锁。|  
-|`true`|无论侦听器是否是线程安全的, 都使用全局锁。 这是默认设置。|  
+|`false`|如果侦听器是线程安全的，则不使用全局锁定;否则，将使用全局锁。|  
+|`true`|无论侦听器是否是线程安全的，都使用全局锁。 这是默认设置。|  
   
 ### <a name="child-elements"></a>子元素  
   
@@ -71,7 +71,7 @@ ms.locfileid: "69920401"
 |`system.diagnostics`|指定用于收集、存储和路由消息的跟踪侦听器以及对跟踪开关设置的级别。|  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何使用`<trace>`元素将侦听器`MyListener`添加到`Listeners`集合中。 `MyListener`创建一个名`MyListener.log`为的文件, 并将输出写入文件。 如果跟踪侦听器是线程`false`安全的, 则属性设置为,这将导致不会使用全局锁。`useGlobalLock` 特性设置为`true`, 这将导致跟踪侦听器写入文件, 而不管是否调用了<xref:System.Diagnostics.Trace.Flush%2A?displayProperty=nameWithType>方法。 `autoflush` 特性设置为 0 (零), 这会导致侦听器<xref:System.Diagnostics.Trace.Indent%2A?displayProperty=nameWithType>在调用方法时缩进零个空格。 `indentsize`  
+ 下面的示例演示如何使用 `<trace>` 元素将侦听器添加到 `Listeners` 集合 @no__t。 @no__t 创建一个名为 `MyListener.log` 的文件，并将输出写入文件。 @No__t-0 特性设置为 `false`，如果跟踪侦听器是线程安全的，这将导致不会使用全局锁。 @No__t-0 特性设置为 `true`，这将导致跟踪侦听器写入文件，无论是否调用了 <xref:System.Diagnostics.Trace.Flush%2A?displayProperty=nameWithType> 方法。 @No__t-0 特性设置为0（零），这会导致侦听器在调用 @no__t 1 方法时缩进零个空格。  
   
 ```xml  
 <configuration>  

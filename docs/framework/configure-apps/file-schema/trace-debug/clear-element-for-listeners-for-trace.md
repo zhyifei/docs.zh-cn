@@ -1,5 +1,5 @@
 ---
-title: <clear><listeners>的元素<trace>
+title: <trace> 的 @no__t <listeners> 元素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners/clear
@@ -7,21 +7,21 @@ helpviewer_keywords:
 - clear element for <listeners> for <trace>
 - <clear> element for <listeners> for <trace>
 ms.assetid: b44732a8-271f-4a06-ba9e-fe3298d6f192
-ms.openlocfilehash: 9816ba0f8e4ddd4c38537eb4e014a4240ff20407
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0361580724351f8f42d058d5e20354e3335bac2f
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927168"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699371"
 ---
-# <a name="clear-element-for-listeners-for-trace"></a>\<为\<跟踪 > 清除\<侦听器 > > 元素
+# <a name="clear-element-for-listeners-for-trace"></a>\<clear > 元素，用于 2trace @no__t 的 \<listeners >
 清除跟踪的 `Listeners` 集合。  
   
- \<configuration>  
-\<system.diagnostics>  
-\<trace>  
-\<侦听器 >  
-\<清除 >  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<system >** ](system-diagnostics-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t[ **\<trace >** ](trace-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<listeners >** ](listeners-element-for-trace.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 **\<clear >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -48,17 +48,17 @@ ms.locfileid: "69927168"
 |`listeners`|包含收集、存储和路由消息的侦听器。 侦听器将跟踪输出定向到适当的目标。|  
   
 ## <a name="remarks"></a>备注  
- 元素从跟踪的集合中移除所有侦听器。 `Listeners` `<clear>` 可以在`<clear>` `<add>`使用元素之前使用元素, 以确定集合中没有其他活动的侦听器。  
+ @No__t-0 元素从 trace 的 @no__t 集合中删除所有侦听器。 你可以使用 `<clear>` 元素，然后才能使用 @no__t 元素，以确定集合中没有其他活动的侦听器。  
   
- 您可以通过对`Listeners` <xref:System.Diagnostics.TraceListenerCollection.Clear%2A> <xref:System.Diagnostics.Trace.Listeners%2A?displayProperty=nameWithType>属性(`System.Diagnostics.Trace.Listeners.Clear()`) 调用方法, 以编程方式清除该集合。  
+ 可以通过在 <xref:System.Diagnostics.Trace.Listeners%2A?displayProperty=nameWithType> 属性（`System.Diagnostics.Trace.Listeners.Clear()`）上调用 <xref:System.Diagnostics.TraceListenerCollection.Clear%2A> 方法，以编程方式清除 `Listeners` 收集。  
   
- 此元素可在计算机配置文件 (Machine.config) 和应用程序配置文件中使用。  
+ 此元素可在计算机配置文件（Machine.config）和应用程序配置文件中使用。  
   
 > [!NOTE]
-> <xref:System.Diagnostics.DefaultTraceListener> <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=nameWithType>元素从`Listeners`集合中移除, 并更改、 、<xref:System.Diagnostics.Debug.Fail%2A?displayProperty=nameWithType>和<xref:System.Diagnostics.Trace.Fail%2A?displayProperty=nameWithType>方法的行为。 `<clear>` 通常调用`Fail`或方法会导致显示消息框。 `Assert` 但是, 如果<xref:System.Diagnostics.DefaultTraceListener>不`Listeners`在集合中, 则不会显示消息框。  
+> @No__t-0 元素从 `Listeners` 集合中删除 <xref:System.Diagnostics.DefaultTraceListener>，改变 <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>、@no__t、@no__t 和 @no__t 方法的行为。 调用 @no__t 0 或 @no__t 方法通常会导致显示消息框。 但是，如果 <xref:System.Diagnostics.DefaultTraceListener> 不在 @no__t 集合中，则不会显示消息框。  
   
 ## <a name="example"></a>示例  
- 下面的`<clear>`示例演示如何在`<add>`使用元素`Listeners`将侦听器`console`添加到用于 trace 的集合之前使用元素。  
+ 下面的示例演示如何使用 `<clear>` 元素，然后再使用 @no__t，将侦听器 `console` 添加到 trace 的 @no__t 集合。  
   
 ```xml  
 <configuration>  

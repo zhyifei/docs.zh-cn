@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fbdf8649e3cb2221e5c74eefd22959dc4b382236
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7df668487601e4278b56e196a43d1154b643fd29
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747693"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71700737"
 ---
 # <a name="icordebugcodegetaddress-method"></a>ICorDebugCode::GetAddress 方法
-获取此"ICorDebugCode"接口表示代码段的相对虚拟地址 (RVA)。  
+获取此 "ICorDebugCode" 接口表示的代码段的相对虚拟地址（RVA）。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,17 +35,15 @@ HRESULT GetAddress (
 );  
 ```  
   
-## <a name="parameters"></a>参数  
+## <a name="parameters"></a>Parameters  
  `pStart`  
- [out]一个指向代码段的 RVA。  
+ 弄指向代码段的 RVA 的指针。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头：** Cordebug.idl，Cordebug.idl  
   
- **库：** CorGuids.lib  
+ **类库**CorGuids.lib  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
-  
-## <a name="see-also"></a>请参阅
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

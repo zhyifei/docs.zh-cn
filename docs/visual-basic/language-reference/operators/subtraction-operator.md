@@ -17,22 +17,26 @@ helpviewer_keywords:
 - operators [Visual Basic], negation
 - minus operator [Visual Basic]
 ms.assetid: bff2c368-662d-4c92-ac87-1d9bdfd3426a
-ms.openlocfilehash: eb34b34986613f36b624c43c04f98390ffba4fe0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5f6b6b67e2999d380cfca078a43162b3e1db2206
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965868"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71701303"
 ---
 # <a name="--operator-visual-basic"></a>- 运算符 (Visual Basic)
 返回数值表达式的两个数值表达式或负值之间的差。  
   
 ## <a name="syntax"></a>语法  
   
-```  
-      expression1 – expression2  
-- or -  
-– expression1  
+```vb  
+expression1 – expression2
+```
+  
+或
+
+```vb  
+–expression1  
 ```  
   
 ## <a name="parts"></a>部件  
@@ -51,21 +55,21 @@ ms.locfileid: "69965868"
  所有数值类型。 这包括无符号和浮点类型和`Decimal`。  
   
 ## <a name="remarks"></a>备注  
- 在前面所示的语法中所示的第一个`–`用法中，运算符是两个数值表达式之差的*二进制*算术减法运算符。  
+ 在前面所示的语法中所示的第一个用法中，`–` 运算符是两个数值表达式之差的*二进制*算术减法运算符。  
   
- 在前面所示的语法中所示的第二`–`个用法中，运算符是表达式的负值的*一元*求反运算符。 在这种意义上，否定包含反转的符号`expression1` ，因此如果`expression1`为负，则结果为正。  
+ 在前面所示的语法中所示的第二个用法中，`–` 运算符是表达式的负值的*一元*求反运算符。 在这种意义上，否定包含反转的符号`expression1` ，因此如果`expression1`为负，则结果为正。  
   
  如果其中一个表达式的计算结果为 [Nothing](../../../visual-basic/language-reference/nothing.md)，则 `–` 运算符将其视为零。  
   
 > [!NOTE]
-> 运算符可以重载，这意味着当操作数具有该类或结构的类型时，该类或结构可以重新定义其行为。 `–` 如果代码对这样的类或结构使用此运算符，请确保了解其重新定义的行为。 有关详细信息，请参阅 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
+> @No__t-0 运算符可*重载*，这意味着当操作数具有该类或结构的类型时，该类或结构可以重新定义其行为。 如果代码对这样的类或结构使用此运算符，请确保了解其重新定义的行为。 有关详细信息，请参阅 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
   
 ## <a name="example"></a>示例  
  下面的示例使用`–`运算符计算并返回两个数字之间的差，然后对数字求反。  
   
  [!code-vb[VbVbalrOperators#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#10)]  
   
- 执行这些语句后， `binaryResult`包含124.45， `unaryResult`包含–334.90。  
+ 执行这些语句后，`binaryResult` 包含124.45，`unaryResult` 包含–334.90。  
   
 ## <a name="see-also"></a>请参阅
 

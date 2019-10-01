@@ -9,18 +9,20 @@ helpviewer_keywords:
 - <requiredRuntime> element
 - container tags, <requiredRuntime> element
 ms.assetid: 9fa1639e-beb8-43be-b7a4-12f7b229c34b
-ms.openlocfilehash: f5a9f99133c153401694372abaeea10a02e492e5
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: fe96673b95f48cb75d36662a680bf56a59363f9f
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634192"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697486"
 ---
 # <a name="requiredruntime-element"></a>\<requiredRuntime > 元素
 
-指定应用程序仅支持 1.0 版本的公共语言运行时。 此元素已弃用，应不再使用。 [ `supportedRuntime` ](supportedruntime-element.md)元素应改为使用。
+指定应用程序仅支持 1.0 版本的公共语言运行时。 此元素已弃用，不应再使用。 应改为使用[`supportedRuntime`](supportedruntime-element.md)元素。
 
-\<configuration> \<startup> \<requiredRuntime>
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<startup >** ](startup-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t **\<requiredRuntime >**  
 
 ## <a name="syntax"></a>语法
 
@@ -38,14 +40,14 @@ safemode="true|false"/>
 
 |特性|描述|
 |---------------|-----------------|
-|`version`|可选特性。<br /><br /> 一个字符串值，该值指定此应用程序支持的.NET framework 版本。 字符串值必须与.NET Framework 安装根目录下找到的目录名称匹配。 未分析的字符串值的内容。|
-|`safemode`|可选特性。<br /><br /> 指定是否在运行时启动代码搜索注册表，以确定运行时版本。|
+|`version`|可选特性。<br /><br /> 一个字符串值，该值指定此应用程序支持的 .NET Framework 的版本。 字符串值必须与 .NET Framework 安装根下的目录名称匹配。 不分析字符串值的内容。|
+|`safemode`|可选特性。<br /><br /> 指定运行时启动代码是否在注册表中搜索以确定运行时版本。|
 
-## <a name="safemode-attribute"></a>安全模式属性
+## <a name="safemode-attribute"></a>安全模式特性
 
-|值|描述|
+|ReplTest1|描述|
 |-----------|-----------------|
-|`false`|在注册表中查找运行时启动代码。 这是默认值。|
+|`false`|运行时启动代码在注册表中查找。 这是默认值。|
 |`true`|运行时启动代码不会在注册表中查找。|
 
 ### <a name="child-elements"></a>子元素
@@ -57,22 +59,22 @@ safemode="true|false"/>
 |元素|描述|
 |-------------|-----------------|
 |`configuration`|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|
-|`startup`|包含`<requiredRuntime>`元素。|
+|`startup`|`<requiredRuntime>`包含元素。|
 
 ## <a name="remarks"></a>备注
- 仅支持 1.0 版的运行时生成的应用程序必须使用`<requiredRuntime>`元素。 构建使用 1.1 版或更高版本的运行时版本的应用程序必须使用`<supportedRuntime>`元素。
+ 构建为仅支持1.0 版运行时的应用程序必须使用 `<requiredRuntime>` 元素。 使用版本1.1 或更高版本的运行时生成的应用程序必须使用 `<supportedRuntime>` 元素。
 
 > [!NOTE]
-> 如果您使用[CorBindToRuntimeByCfg](../../../unmanaged-api/hosting/corbindtoruntimebycfg-function.md)函数以指定配置文件，则必须使用`<requiredRuntime>`所有版本的运行时的元素。 `<supportedRuntime>`使用时，将忽略元素[CorBindToRuntimeByCfg](../../../unmanaged-api/hosting/corbindtoruntimebycfg-function.md)。
+> 如果使用[CorBindToRuntimeByCfg](../../../unmanaged-api/hosting/corbindtoruntimebycfg-function.md)函数来指定配置文件，则必须对所有版本的运行时使用 `<requiredRuntime>` 元素。 当使用[CorBindToRuntimeByCfg](../../../unmanaged-api/hosting/corbindtoruntimebycfg-function.md)时，将忽略 `<supportedRuntime>` 元素。
 
- `version`属性字符串必须匹配指定版本的.NET framework 的安装文件夹名称。 此字符串不解释。 如果运行时启动代码没有找到匹配的文件夹，则不会加载运行时;启动代码显示了一条错误消息并退出。
+ @No__t 的 .NET Framework 属性字符串必须与指定版本的的安装文件夹名称匹配。 不解释此字符串。 如果运行时启动代码找不到匹配的文件夹，则不加载运行时;启动代码将显示一条错误消息并退出。
 
 > [!NOTE]
-> Microsoft Internet Explorer 中承载的应用程序的启动代码将忽略`<requiredRuntime>`元素。
+> 在 Microsoft Internet Explorer 中托管的应用程序的启动代码将忽略 `<requiredRuntime>` 元素。
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何在配置文件中指定的运行时版本。
+下面的示例演示如何在配置文件中指定运行时版本。
 
 ```xml
 <configuration>

@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 43ae5dd3-50f5-43a8-8d01-e37a61664176
-ms.openlocfilehash: 2f17e9828f46e6355cdbbddb1b8a83f1188b1a01
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6d85cc041850300d1d079b227dcb8ed9201a0502
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70791740"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699062"
 ---
 # <a name="snapshot-isolation-in-sql-server"></a>SQL Server 中的快照隔离
 快照隔离可增强 OLTP 应用程序的并发性。  
   
 ## <a name="understanding-snapshot-isolation-and-row-versioning"></a>了解快照隔离和行版本控制  
- 启用快照隔离后，会在**tempdb**中维护每个事务的更新行版本。 唯一的事务序列号标识每个事务，并且为每个行版本记录这些唯一的编号。 事务使用序列号在事务序列号之前的最新行版本。 事务将忽略在事务开始之后创建的更新的行版本。  
+ 启用快照隔离后，必须维护每个事务的更新行版本。  在 SQL Server 2019 之前，这些版本存储在**tempdb**中。 SQL Server 2019 引入了一项新功能，即加速数据库恢复（ADR），该功能需要自己的行版本集。  因此，在 SQL Server 2019 的情况下，如果未启用 ADR，则行版本将始终保留在**tempdb**中。  如果启用了 ADR，则与快照隔离和 ADR 相关的所有行版本都将保留在 ADR 的持久性版本存储区（PVS）中，该存储区位于用户指定的文件组的用户数据库中。 唯一的事务序列号标识每个事务，并且为每个行版本记录这些唯一的编号。 事务使用序列号在事务序列号之前的最新行版本。 事务将忽略在事务开始之后创建的更新的行版本。  
   
  “快照”一词反映的情况是：事务中的所有查询根据事务开始那一刻数据库的状态，看到数据库的相同版本（即快照）。 不会在快照事务中的基础数据行或数据页上获取锁，这样可以执行其他事务，而不会被以前未完成的事务所阻止。 修改数据的事务不会阻止读取数据的事务，读取数据的事务不会阻止写入数据的事务，就好像通常情况下在 SQL Server 中使用默认的 READ COMMITTED 隔离级别一样。 这种无阻止的行为也大大降低了复杂事务出现死锁的可能性。  
   
@@ -76,7 +76,7 @@ SET READ_COMMITTED_SNAPSHOT ON
  快照事务始终使用开放式并发控制，不赋予可能阻止其他事务更新行的任何锁。 如果快照事务尝试提交对事务开始后已更改的行的更新，事务将回滚并引发错误。  
   
 ## <a name="working-with-snapshot-isolation-in-adonet"></a>在 ADO.NET 中使用快照隔离  
- ADO.NET 中通过 <xref:System.Data.SqlClient.SqlTransaction> 类支持快照隔离。 如果已为快照隔离启用了数据库，但没有为 READ_COMMITTED_SNAPSHOT 配置该数据库，则必须在调用<xref:System.Data.SqlClient.SqlTransaction> <xref:System.Data.SqlClient.SqlConnection.BeginTransaction%2A>方法时使用**IsolationLevel**枚举值启动。 此代码段假定连接是打开的 <xref:System.Data.SqlClient.SqlConnection> 对象。  
+ ADO.NET 中通过 <xref:System.Data.SqlClient.SqlTransaction> 类支持快照隔离。 如果已为快照隔离启用了数据库，但没有为 READ_COMMITTED_SNAPSHOT 配置该数据库，则必须在调用 <xref:System.Data.SqlClient.SqlConnection.BeginTransaction%2A> 方法时使用**IsolationLevel**枚举值启动 @no__t 0。 此代码段假定连接是打开的 <xref:System.Data.SqlClient.SqlConnection> 对象。  
   
 ```vb  
 Dim sqlTran As SqlTransaction = _  

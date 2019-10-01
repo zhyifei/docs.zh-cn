@@ -9,46 +9,46 @@ helpviewer_keywords:
 - TypeOf...Is expression
 - Is operator [Visual Basic]
 ms.assetid: 8045a6c8-2a83-45b6-ad47-d09a704c656d
-ms.openlocfilehash: a5481a9bce01e84ce4f078335c8cd15a747a3c51
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0351d224d9bf08a8f3ca74090de7b9c51c2c61bf
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69917220"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71701368"
 ---
 # <a name="is-operator-visual-basic"></a>Is 运算符 (Visual Basic)
 比较两个对象引用变量。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```vb  
 result = object1 Is object2  
 ```  
   
 ## <a name="parts"></a>部件  
  `result`  
- 必需。 任何`Boolean`值。  
+ 必需。 任何 @no__t 0 值。  
   
  `object1`  
- 必需。 任意`Object`名称。  
+ 必需。 任何 @no__t 0 的名称。  
   
  `object2`  
- 必需。 任意`Object`名称。  
+ 必需。 任何 @no__t 0 的名称。  
   
 ## <a name="remarks"></a>备注  
- `Is`运算符确定两个对象引用是否引用同一对象。 但是, 它不会执行值比较。 如果`object1`和`True` `result` `result` `False`都引用完全相同的对象实例, 则为; 如果不是, 则为; 如果不是, 则为。 `object2`  
+ @No__t-0 运算符确定两个对象引用是否引用同一对象。 但是，它不会执行值比较。 如果 @no__t 0 和 `object2` 都引用完全相同的对象实例，`result` 为 `True`;否则，`result` `False`。  
   
- `Is`还可与`TypeOf`关键字一起使用来`TypeOf`生成 .。。`Is`表达式, 用于测试对象变量是否与数据类型兼容。  
+ @no__t，还可以与 `TypeOf` 关键字一起使用，以生成 `TypeOf` ... `Is` 表达式，该表达式测试对象变量是否与数据类型兼容。  
   
 > [!NOTE]
-> `Is`关键字还用于[Select .。。Case 语句](../../../visual-basic/language-reference/statements/select-case-statement.md)。  
+> "Select ..." 中也使用了 @no__t 0 关键字[Case 语句](../../../visual-basic/language-reference/statements/select-case-statement.md)。  
   
 ## <a name="example"></a>示例  
- 下面的示例使用`Is`运算符比较对象引用对。 将结果分配给一个`Boolean`值, 该值表示两个对象是否相同。  
+ 下面的示例使用 `Is` 运算符来比较对象引用对。 结果分配给一个 @no__t 0 值，表示两个对象是否相同。  
   
  [!code-vb[VbVbalrOperators#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#27)]  
   
- 如前面的示例所示, 可以使用`Is`运算符来测试早期绑定和晚期绑定对象。  
+ 如前面的示例所示，可以使用 `Is` 运算符来测试早期绑定对象和后期绑定对象。  
   
 ## <a name="see-also"></a>请参阅
 

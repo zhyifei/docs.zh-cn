@@ -7,20 +7,20 @@ helpviewer_keywords:
 - <listeners> element
 - listeners element
 ms.assetid: 1394c2c3-6304-46db-87c1-8e8b16f5ad5b
-ms.openlocfilehash: e4550d4c4cd9ff37c5937ad366cccf91387c0e3f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 84b67532825372e7f69d86e1ef6060f4263587eb
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927018"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699356"
 ---
-# <a name="listeners-element-for-trace"></a>\<trace > 的\<侦听器 > 元素
+# <a name="listeners-element-for-trace"></a>\<trace 的 @no__t 0listeners > 元素 >
 指定用于收集、存储和路由消息的侦听器。 侦听器将跟踪输出定向到适当的目标。  
   
- \<配置 > 元素  
-\<诊断 > 元素  
-\<trace > 元素  
-\<trace > 的\<侦听器 > 元素  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<system >** ](system-diagnostics-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t[ **\<trace >** ](trace-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<listeners >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,7 +44,7 @@ ms.locfileid: "69927018"
 |-------------|-----------------|  
 |[\<add>](add-element-for-listeners-for-trace.md)|将侦听器添加到 `Listeners` 集合中。|  
 |[\<clear>](clear-element-for-listeners-for-trace.md)|清除跟踪的 `Listeners` 集合。|  
-|[\<remove>](remove-element-for-listeners-for-trace.md)|从`Listeners`集合中移除侦听器。|  
+|[\<remove>](remove-element-for-listeners-for-trace.md)|从 @no__t 集合中删除侦听器。|  
   
 ### <a name="parent-elements"></a>父元素  
   
@@ -55,13 +55,13 @@ ms.locfileid: "69927018"
 |`trace`|包含用于收集、存储和路由跟踪消息的侦听器。|  
   
 ## <a name="remarks"></a>备注  
- 和类共享相同的侦听器集合。 <xref:System.Diagnostics.Debug> <xref:System.Diagnostics.Trace> 如果将侦听器对象添加到其中一个类的集合中, 则其他类将使用同一侦听器。 随 .NET Framework 附带的侦听器类派生自<xref:System.Diagnostics.TraceListener>类。  
+ @No__t 0 和 @no__t 1 类共享相同的**侦听器**集合。 如果将侦听器对象添加到其中一个类的集合中，则其他类将使用同一侦听器。 随 .NET Framework 附带的侦听器类派生自 @no__t 的类。  
   
 ## <a name="configuration-file"></a>配置文件  
- 此元素可在计算机配置文件 (Machine.config) 和应用程序配置文件中使用。  
+ 此元素可在计算机配置文件（Machine.config）和应用程序配置文件中使用。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何使用 **\<侦听器>** 元素添加侦听器`MyListener`并`MyEventListener`到**侦听器**集合。 `MyListener`创建一个名`MyListener.log`为的文件, 并将输出写入文件。 `MyEventListener`在事件日志中创建一个条目。  
+ 下面的示例演示如何使用 **\<侦听器>** 元素添加侦听器`MyListener`并`MyEventListener`到**侦听器**集合。 @no__t 创建一个名为 @no__t 的文件，并将输出写入文件。 `MyEventListener` 会在事件日志中创建一个条目。  
   
 ```xml  
 <configuration>  

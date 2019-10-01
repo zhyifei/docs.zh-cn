@@ -8,18 +8,18 @@ helpviewer_keywords:
 - <system.diagnostics> element
 - system.diagnostics element
 ms.assetid: 3f348f42-fa72-4ff2-aa1c-bb9eecad4bb2
-ms.openlocfilehash: f3b4238a8d7028d47122a420526b38ee4f327332
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: dc05c46cb1ba74baceaaeadc2959a6889faf19c9
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69926934"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699199"
 ---
-# <a name="systemdiagnostics-element"></a>\<诊断 > 元素
+# <a name="systemdiagnostics-element"></a>0system > 元素的 @no__t
 指定用于收集、存储和路由消息的跟踪侦听器以及对跟踪开关设置的级别。  
   
- \<configuration>  
-\<system.diagnostics>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1 **\<system >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -52,10 +52,10 @@ ms.locfileid: "69926934"
 |`configuration`|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何在 system.exception  **\<>** 元素中嵌入跟踪开关和跟踪侦听器。 跟踪开关设置<xref:System.Diagnostics.TraceLevel>为级别。 `General` 跟踪侦听器`myListener`会创建一个名`MyListener.log`为的文件, 并将输出写入文件。  
+ 下面的示例演示如何在 **\<system >** 元素中嵌入跟踪开关和跟踪侦听器。 @No__t-0 trace 开关设置为 @no__t 级别。 跟踪侦听器 @no__t 创建一个名为 @no__t 的文件，并将输出写入文件。  
   
 > [!NOTE]
-> 在 .NET Framework 2.0 版中，你可以使用文本指定开关值。 `true`例如, 你可以<xref:System.Diagnostics.BooleanSwitch>为指定, 也可以使用表示枚举<xref:System.Diagnostics.TraceSwitch>值的文本 (例如) `Error` 。 行 `<add name="myTraceSwitch" value="Error" />` 等于 `<add name="myTraceSwitch" value="1" />`。  
+> 在 .NET Framework 2.0 版中，你可以使用文本指定开关值。 例如，你可以为 @no__t 指定 `true`，或者使用表示枚举值的文本，例如 `Error` 。 行 `<add name="myTraceSwitch" value="Error" />` 等于 `<add name="myTraceSwitch" value="1" />`。  
   
 ```xml  
 <configuration>  

@@ -9,19 +9,19 @@ helpviewer_keywords:
 - switches element
 - trace switches, <switches> element
 ms.assetid: 4cf36786-b89a-40e2-a0f1-86bb9b783343
-ms.openlocfilehash: 92a1c8db43579048945d76082e3ebd2862efd7ed
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c161f842192396101dcc6850f3b3da328958eac3
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920444"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697089"
 ---
-# <a name="switches-element"></a>\<开关 > 元素
+# <a name="switches-element"></a>\<switches > 元素
 包含跟踪开关和对该跟踪开关设置的级别。  
   
- \<configuration>  
-\<system.diagnostics>  
-\<开关 >  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<system >** ](system-diagnostics-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t **\<switches >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -50,7 +50,7 @@ ms.locfileid: "69920444"
 |`System.diagnostics`|指定用于收集、存储和路由消息的跟踪侦听器以及对跟踪开关设置的级别。|  
   
 ## <a name="remarks"></a>备注  
- 可以通过将跟踪开关置于配置文件中来更改其级别。 如果开关是<xref:System.Diagnostics.BooleanSwitch>, 则可以将其打开或关闭。 如果开关是<xref:System.Diagnostics.TraceSwitch>, 则可以为其分配不同的级别, 以指定应用程序输出的跟踪或调试消息的类型。  
+ 可以通过将跟踪开关置于配置文件中来更改其级别。 如果开关是 @no__t 0，则可以将其打开或关闭。 如果开关是 @no__t 0，则可以为其分配不同的级别，以指定应用程序输出的跟踪或调试消息的类型。  
   
 ## <a name="example"></a>示例  
  下面的示例演示如何使用 **\<切换>** 元素中设置`General`跟踪切换到<xref:System.Diagnostics.TraceLevel>级别，并启用`Data`布尔型跟踪开关。  
@@ -72,3 +72,4 @@ ms.locfileid: "69920444"
 - <xref:System.Diagnostics.TraceSwitch>
 - <xref:System.Diagnostics.BooleanSwitch>
 - [跟踪和调试设置架构](index.md)
+ 

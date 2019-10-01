@@ -8,18 +8,18 @@ helpviewer_keywords:
 - mscorlib element
 - <mscorlib> element
 ms.assetid: d549668f-31f1-4b92-8021-a9135c09ca3c
-ms.openlocfilehash: c780087246ea91846896037a245b82493251e538
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4e2159cda5f35b5795804dede09ec17d07d71b23
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69921069"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699736"
 ---
-# <a name="mscorlib-element-for-cryptography-settings"></a>\<用于加密设置的 mscorlib > 元素
-包含 g s [ >元素。\<](cryptographysettings-element.md)  
+# <a name="mscorlib-element-for-cryptography-settings"></a>\<mscorlib > 用于加密设置的元素
+包含[\<cryptographySettings > 元素](cryptographysettings-element.md)。  
   
- \<configuration>  
-\<mscorlib>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1 **\<mscorlib >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -47,7 +47,7 @@ ms.locfileid: "69921069"
 |`configuration`|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何使用 **\<mscorlib.dll >** 元素来引用加密类并配置运行时。 然后, 你可以将字符串 "RSA" 传递给<xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType>方法, 并<xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A>使用方法返回`MyCryptoRSAClass`对象。  
+ 下面的示例演示如何使用 **\<mscorlib >** 元素来引用加密类并配置运行时。 然后，你可以将字符串 "RSA" 传递到 @no__t 0 方法，并使用 <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> 方法返回 @no__t 2 对象。  
   
 ```xml  
 <configuration>  

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 10ab92c660353bea85bbd0918a25f716898ef837
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 825840536968562a53d9e05b8a4628a1df79407d
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747532"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71700833"
 ---
 # <a name="icordebugcodegetfunction-method"></a>ICorDebugCode::GetFunction 方法
-获取与此"ICorDebugCode"关联"ICorDebugFunction"。  
+获取与此 "ICorDebugCode" 关联的 "ICorDebugFunction"。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,20 +35,18 @@ HRESULT GetFunction (
 );  
 ```  
   
-## <a name="parameters"></a>参数  
+## <a name="parameters"></a>Parameters  
  `ppFunction`  
- [out]指向函数的地址的指针。  
+ 弄指向函数的地址的指针。  
   
 ## <a name="remarks"></a>备注  
- `ICorDebugCode` 和`ICorDebugFunction`维护一对一关系。  
+ `ICorDebugCode` 和 `ICorDebugFunction` 保持一对一关系。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头：** Cordebug.idl，Cordebug.idl  
   
- **库：** CorGuids.lib  
+ **类库**CorGuids.lib  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
-  
-## <a name="see-also"></a>请参阅
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

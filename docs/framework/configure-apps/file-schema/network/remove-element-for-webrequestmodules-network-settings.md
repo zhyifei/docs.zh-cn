@@ -10,20 +10,20 @@ helpviewer_keywords:
 - <remove> element, webRequestModules
 - <webRequestModules>, remove element
 ms.assetid: dd84d2fe-2f4f-457a-9d3c-441d0d21cc10
-ms.openlocfilehash: 20a586e945a889d1fd8a8d4c5c09c8b790c56fc3
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: f8209ea89ac8cd214389feddee8c475e10bc939a
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69664019"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697821"
 ---
-# <a name="remove-element-for-webrequestmodules-network-settings"></a>\<删除 webRequestModules 的 > 元素 (网络设置)
+# <a name="remove-element-for-webrequestmodules-network-settings"></a>用于 webRequestModules 的 0remove > 元素（网络设置） @no__t
 从应用程序中移除自定义 Web 请求模块。  
   
- \<configuration>  
-\<system.net>  
-\<webRequestModules>  
-\<remove>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t[ **\<system >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t[ **\<webRequestModules >** ](webrequestmodules-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<remove >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -52,16 +52,16 @@ ms.locfileid: "69664019"
 |[webRequestModules](webrequestmodules-element-network-settings.md)|指定用于从网络主机请求信息的模块。|  
   
 ## <a name="remarks"></a>备注  
- `remove`元素将为指定的 URI 前缀删除已注册的 Web 请求模块。  
+ @No__t-0 元素删除指定 URI 前缀的已注册 Web 请求模块。  
   
- `prefix`特性的值应为有效 URI 的前导字符, 例如, "`http`" 或 "`http://www.contoso.com`"。  
+ @No__t-0 属性的值应为有效 URI 的前导字符，例如 "`http`" 或 "`http://www.contoso.com`"。  
   
 ## <a name="configuration-files"></a>配置文件  
  此元素可在应用程序配置文件或计算机配置文件 (Machine.config) 中使用。  
   
 ## <a name="example"></a>示例  
 
-下面的示例将删除 HTTP 的现有 Web 请求模块, 然后将新的自定义 Web 请求模块注册到`www.contoso.com`的 http 请求。
+下面的示例将删除 HTTP 的现有 Web 请求模块，然后将 HTTP 请求的新的自定义 Web 请求模块注册到 `www.contoso.com`。
   
 ```xml  
 <configuration>  

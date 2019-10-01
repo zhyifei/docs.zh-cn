@@ -8,20 +8,20 @@ helpviewer_keywords:
 - <smtp> element
 - smtp element
 ms.assetid: 220b0329-e384-4e0c-86b4-0945ad17efd9
-ms.openlocfilehash: ac9405fdc6123a5a1352de06f94fefb6d7d4014b
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 2105a6dd25a7f6e5e4c1ce286be7f60beae1dca0
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659124"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697613"
 ---
-# <a name="smtp-element-network-settings"></a>\<smtp > 元素 (网络设置)
+# <a name="smtp-element-network-settings"></a>\<smtp > 元素（网络设置）
 配置发送电子邮件的传递格式、传递方法和发件人地址。  
   
- \<configuration>  
-\<system.net>  
-\<mailSettings>  
-\<smtp>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t[ **\<system >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t[ **\<mailSettings >** ](mailsettings-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<smtp >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -50,7 +50,7 @@ ms.locfileid: "69659124"
   
 |特性|描述|  
 |---------------|-----------------|  
-|`specifiedPickupDirectory`|配置简单邮件传输协议 (SMTP) 服务器的本地目录。|  
+|`specifiedPickupDirectory`|配置简单邮件传输协议（SMTP）服务器的本地目录。|  
 |`network`|配置外部 SMTP 服务器的网络选项。|  
   
 ### <a name="parent-elements"></a>父元素  

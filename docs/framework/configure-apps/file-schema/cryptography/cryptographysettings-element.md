@@ -8,19 +8,19 @@ helpviewer_keywords:
 - cryptographySettings element
 - <cryptographySettings> element
 ms.assetid: 6201b7da-bcb7-49f7-b9f5-ba1fe05573b9
-ms.openlocfilehash: 462db50a42e55c0c5a9570317ceeeb0ae69215a0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 96a8c9accc56274b5cc13dc2a871165857b3a2d9
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927653"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699812"
 ---
-# <a name="cryptographysettings-element"></a>\<G s > 元素
+# <a name="cryptographysettings-element"></a>\<cryptographySettings > 元素
 包含加密设置。  
   
- \<configuration>  
-\<mscorlib>  
-\<cryptographySettings>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<mscorlib >** ](mscorlib-element-for-cryptography-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t **\<cryptographySettings >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,7 +40,7 @@ ms.locfileid: "69927653"
 |元素|描述|  
 |-------------|-----------------|  
 |[\<cryptoNameMapping>](cryptonamemapping-element.md)|包含类到友好名称的映射。|  
-|[\<oidMap>](oidmap-element.md)|包含与类的 ASN 对象标识符 (OID) 映射。|  
+|[\<oidMap>](oidmap-element.md)|包含与类的 ASN 对象标识符（OID）映射。|  
   
 ### <a name="parent-elements"></a>父元素  
   
@@ -50,7 +50,7 @@ ms.locfileid: "69927653"
 |`mscorlib`|`cryptographySettings`包含元素。|  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何使用 **\<g s >** 元素包含加密名称映射和 OID 映射。 此示例将配置运行时, <xref:System.Security.Cryptography.HashAlgorithm.Create%2A?displayProperty=nameWithType>以便`MyHashClass`返回对象, `MyCryptoClass`类映射到对象标识符1.3.36.2.1。  
+ 下面的示例演示如何使用 **\<cryptographySettings >** 元素包含加密名称映射和 OID 映射。 此示例将配置运行时，以便 <xref:System.Security.Cryptography.HashAlgorithm.Create%2A?displayProperty=nameWithType> 返回一个 @no__t 对象，@no__t 2 类映射到对象标识符1.3.36.2.1。  
   
 ```xml  
 <configuration>  

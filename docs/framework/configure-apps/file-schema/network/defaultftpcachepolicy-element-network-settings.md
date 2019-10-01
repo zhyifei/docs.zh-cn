@@ -8,20 +8,20 @@ helpviewer_keywords:
 - <defaultFtpCachePolicy> element
 - defaultFtpCachePolicy element
 ms.assetid: 0eb0c5cb-dd97-484d-8614-785e88877abb
-ms.openlocfilehash: 7ff44f0251936d51b4e396c37c53322efa110227
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: fd1649edbf7a2c8546992019df667f27df68e02c
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659422"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698318"
 ---
-# <a name="defaultftpcachepolicy-element-network-settings"></a>\<defaultFtpCachePolicy > 元素 (网络设置)
-介绍 FTP 缓存是否处于活动状态, 并描述默认缓存策略。  
+# <a name="defaultftpcachepolicy-element-network-settings"></a>\<defaultFtpCachePolicy > 元素（网络设置）
+介绍 FTP 缓存是否处于活动状态，并描述默认缓存策略。  
   
- \<configuration>  
-\<system.net>  
-\<requestCaching>  
-\<defaultFtpCachePolicy>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t[ **\<system >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t[ **\<requestCaching >** ](requestcaching-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<defaultFtpCachePolicy >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,15 +42,15 @@ ms.locfileid: "69659422"
   
 ## <a name="policylevel-attribute"></a>policyLevel 特性  
   
-|值|描述|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
-|`Default`|如果资源是最新的, 则返回缓存的资源, 内容长度准确, 并且存在过期、修改和内容长度属性。|  
+|`Default`|如果资源是最新的，则返回缓存的资源，内容长度准确，并且存在过期、修改和内容长度属性。|  
 |`BypassCache`|从服务器返回资源。|  
-|`CacheOnly`|如果内容长度存在并且与条目大小匹配, 则返回缓存的资源。|  
-|`CacheIfAvailable`|如果提供了内容长度并与条目大小匹配, 则返回缓存的资源;否则, 将从服务器下载资源, 并将其返回给调用方。|  
-|`Revalidate`|如果缓存资源的时间戳与服务器上资源的时间戳相同, 则返回缓存的资源;否则, 将从服务器下载资源, 并将其存储在缓存中, 并将其返回给调用方。|  
-|`Reload`|从服务器下载资源, 将其存储在缓存中, 并将资源返回给调用方。|  
-|`NoCacheNoStore`|如果缓存的资源存在, 则将其删除。 从服务器下载资源, 并将其返回给调用方。|  
+|`CacheOnly`|如果内容长度存在并且与条目大小匹配，则返回缓存的资源。|  
+|`CacheIfAvailable`|如果提供了内容长度并与条目大小匹配，则返回缓存的资源;否则，将从服务器下载资源，并将其返回给调用方。|  
+|`Revalidate`|如果缓存资源的时间戳与服务器上资源的时间戳相同，则返回缓存的资源;否则，将从服务器下载资源，并将其存储在缓存中，并将其返回给调用方。|  
+|`Reload`|从服务器下载资源，将其存储在缓存中，并将资源返回给调用方。|  
+|`NoCacheNoStore`|如果缓存的资源存在，则将其删除。 从服务器下载资源，并将其返回给调用方。|  
 |`Revalidate`|如果时间戳与服务器上的资源的时间戳相同，则使用资源的缓存副本满足请求；否则从服务器下载资源，将资源展示给调用方，然后再存储在缓存中。|  
   
 ### <a name="child-elements"></a>子元素  
@@ -65,7 +65,7 @@ ms.locfileid: "69659422"
 ## <a name="remarks"></a>备注  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何指定的`NoCacheNoStore`FTP 缓存策略。  
+ 下面的示例演示如何将 FTP 缓存策略指定 `NoCacheNoStore`。  
   
 ```xml  
 <configuration>  

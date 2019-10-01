@@ -10,21 +10,21 @@ helpviewer_keywords:
 - <bypasslist>, clear element
 - bypasslist, clear element
 ms.assetid: 301584ca-a914-4100-b180-3b288d3b099e
-ms.openlocfilehash: e5305d9aed09b6c4d1ad4201e5e08e007a14c7c0
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 4d078dac14103560423bfccdd4a1717031e7a60f
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69664190"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699502"
 ---
-# <a name="clear-element-for-bypasslist-network-settings"></a>\<清除 bypasslist 的 > 元素 (网络设置)
+# <a name="clear-element-for-bypasslist-network-settings"></a>用于 bypasslist 的 0clear > 元素（网络设置） @no__t
 清除代理跳过列表。  
   
- \<configuration>  
-\<system.net>  
-\<defaultProxy >  
-\<bypasslist >  
-\<清除 >  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t[ **\<system >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t[ **\<defaultProxy >** ](defaultproxy-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<bypasslist >** ](bypasslist-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 **\<clear >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -45,16 +45,16 @@ ms.locfileid: "69664190"
   
 |**元素**|**说明**|  
 |-----------------|---------------------|  
-|[bypasslist](bypasslist-element-network-settings.md)|提供了一组正则表达式, 描述不使用代理的地址。|  
+|[bypasslist](bypasslist-element-network-settings.md)|提供了一组正则表达式，描述不使用代理的地址。|  
   
 ## <a name="remarks"></a>备注  
- `clear`元素清除跳过列表中的所有条目。  
+ @No__t 0 元素会清除绕过列表中的所有条目。  
   
 ## <a name="configuration-files"></a>配置文件  
  此元素可在应用程序配置文件或计算机配置文件 (Machine.config) 中使用。  
   
 ## <a name="example"></a>示例  
- 下面的示例清除了跳过列表, 并将两个地址添加到了跳过列表。 首先, 将跳过 contoso.com 域中所有服务器的代理;第二种方式是跳过其 IP 地址以192.168 开头的所有服务器的代理。  
+ 下面的示例清除了跳过列表，并将两个地址添加到了跳过列表。 首先，将跳过 contoso.com 域中所有服务器的代理;第二种方式是跳过其 IP 地址以192.168 开头的所有服务器的代理。  
   
 ```xml  
 <configuration>  

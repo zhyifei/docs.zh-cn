@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - BC30801
 ms.assetid: 67743319-2d1c-496e-bfd9-22b046b43b5a
-ms.openlocfilehash: 3634ea4b97f25e41e27629c51119f2ea4df5f887
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fa474aaff4b1ceaf9b80be5dbc869276a54a6e65
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64589776"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71700987"
 ---
 # <a name="labels-that-are-numbers-must-be-followed-by-colons"></a>数字标签后面必须跟冒号
-行号遵循与其他类型的标签，相同的规则，并且必须包含一个冒号。  
+行号与其他类型的标签遵循相同的规则，并且必须包含一个冒号。  
   
- **错误 ID:** BC30801  
+ **错误 ID：** BC30801  
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   
-- 位置号后跟一个冒号开头的一行代码;例如：  
+- 将该数字后跟一个冒号，放在代码行的开头;例如：  
   
-    ```  
+    ```vb  
     400:    X += 1  
     ```  
   

@@ -8,129 +8,132 @@ helpviewer_keywords:
 - troubleshooting procedures
 - procedures [Visual Basic], about procedures
 ms.assetid: 525721e8-2e02-4f75-b5d8-6b893462cf2b
-ms.openlocfilehash: 1a8cd568f1a9a05721f311cc72a22bfc2b6bcfc9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d8309b9bd63a2a3d1b0b56f97be121a06b78d6b6
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625456"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71700135"
 ---
 # <a name="troubleshooting-procedures-visual-basic"></a>过程疑难解答 (Visual Basic)
-此页列出了在使用过程时可能发生的一些常见问题。  
+
+此页列出了在使用过程时可能出现的一些常见问题。
+
+## <a name="returning-an-array-type-from-a-function-procedure"></a>从函数过程返回数组类型
+
+ 如果 @no__t 0 过程返回数组数据类型，则不能使用 @no__t 的名称将值存储在数组的元素中。 如果尝试执行此操作，编译器会将其解释为对 @no__t 的调用。 下面的示例生成编译器错误。
+
+ ```vb
+ Function AllOnes(n As Integer) As Integer()
+     For i = 1 To n - 1
+         ' The following statement generates a COMPILER ERROR.
+         AllOnes(i) = 1
+     Next
+     ' The following statement generates a COMPILER ERROR.
+     Return AllOnes()
+ End Function
+ ```
   
-## <a name="returning-an-array-type-from-a-function-procedure"></a>从函数过程中返回数组类型  
- 如果`Function`过程返回数组数据类型，不能使用`Function`要将值存储在数组的元素名称。 如果您尝试执行此操作，编译器将其解释为调用`Function`。 下面的示例生成编译器错误。  
-  
- `Function allOnes(ByVal n As Integer) As Integer()`  
-  
- `For i As Integer = 1 To n - 1`  
-  
- `' The following statement generates a`   `COMPILER ERROR`  `.`  
-  
- `allOnes(i) = 1`  
-  
- `Next i`  
-  
- `' The following statement generates a`   `COMPILER ERROR`  `.`  
-  
- `Return allOnes()`  
-  
- `End Function`  
-  
- 该语句`allOnes(i) = 1`生成编译器错误，因为它看起来在调用`allOnes`与错误的数据类型的自变量 (单一实例`Integer`而不是`Integer`数组)。 该语句`Return allOnes()`生成编译器错误，因为它看起来在调用`allOnes`不带参数。  
-  
- **正确的方法：** 若要在无法修改将返回一个数组的元素，请为本地变量定义内部数组。 下面的示例将编译没有错误。  
-  
- [!code-vb[VbVbcnProcedures#66](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#66)]  
-  
-## <a name="argument-not-being-modified-by-procedure-call"></a>未修改的参数的过程调用  
- 如果你想要允许更改基础调用代码中的自变量的编程元素的过程，必须通过引用传递。 但是，一个过程可以访问的元素的引用类型自变量，即使按值传递。  
-  
-- **基础变量**。 若要允许的值替换为基础的变量元素本身的过程，该过程必须声明参数[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)。 此外，调用代码必须不在括号中，将自变量，因为这样会重写`ByRef`传递机制。  
-  
-- **引用类型元素**。 如果将参数声明[ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)，该过程不能修改基础变量元素本身。 但是，如果参数为引用类型，该过程可以修改它指向的该对象的成员，即使它不能替换变量的值一样。 例如，如果参数为数组变量，该过程不能将一个新数组分配给它，但它可以更改一个或多个元素。 更改的元素将反映在调用代码中的基础数组变量。  
-  
- 下面的示例定义两个过程采用一个数组变量的值并运行它的元素上。 过程`increase`只需添加一个到每个元素。 过程`replace`将一个新数组分配给该参数`a()`，然后添加一个到每个元素。 但是，重新分配不影响调用代码中的基础数组变量因为`a()`被声明为`ByVal`。  
-  
- [!code-vb[VbVbcnProcedures#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#35)]  
-  
- [!code-vb[VbVbcnProcedures#38](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#38)]  
-  
- 以下示例将调用`increase`和`replace`。  
-  
- [!code-vb[VbVbcnProcedures#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#37)]  
-  
- 第一个`MsgBox`调用显示"increase(n) 后：11, 21, 31, 41". 因为`n`是引用类型，`increase`可以更改其中一个成员，即使它传递`ByVal`。  
-  
- 第二个`MsgBox`调用显示"replace(n) 后：11, 21, 31, 41". 因为`n`传递`ByVal`，`replace`不能修改变量`n`通过向它分配一个新数组。 当`replace`创建新的数组实例`k`并将其分配给本地变量`a`，它将失去对引用`n`由调用代码传入。 当它递增的成员`a`，只有本地数组`k`受到影响。  
-  
- **正确的方法：** 若要能够修改基础变量元素本身，请按引用传递。 下面的示例中的声明演示更改`replace`允许以替换与另一个调用代码中的一个数组。  
-  
- [!code-vb[VbVbcnProcedures#64](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#64)]  
-  
-## <a name="unable-to-define-an-overload"></a>无法定义重载方法  
- 如果你想要定义一个过程的重载的版本，则必须使用相同名称但不同的签名。 如果编译器无法区分从重载方法具有相同的签名声明，则将生成错误。  
-  
- *签名*的过程由过程名称和参数列表。 每个重载必须具有与所有其他重载相同的名称，但必须至少一个签名的其他组件中所有不同。 有关更多信息，请参见 [Procedure Overloading](./procedure-overloading.md)。  
-  
- 以下各项，即使它们与参数列表中，不是签名的过程的组件：  
-  
-- 过程修饰符关键字，如`Public`， `Shared`，和 `Static`  
-  
-- 参数名称  
-  
-- 参数修饰符关键字，如`ByRef`和 `Optional`  
-  
-- （除转换运算符） 的返回值数据类型  
-  
- 不能通过只改变一个或多个前面的项目重载的过程。  
-  
- **正确的方法：** 若要能够定义过程重载，您必须改变签名。 因为必须使用相同的名称，您必须改变数目、 顺序或参数的数据类型。 在泛型过程中，可以使用不同类型参数的数目。 在转换运算符 ([CType 函数](../../../../visual-basic/language-reference/functions/ctype-function.md))，可以采用不同的返回类型。  
-  
-### <a name="overload-resolution-with-optional-and-paramarray-arguments"></a>重载具有可选的解析和 ParamArray 参数  
- 如果重载具有一个或多个过程[可选](../../../../visual-basic/language-reference/modifiers/optional.md)参数或[ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)参数，必须避免重复任何*隐式重载*。 有关信息，请参阅[中重载过程注意事项](./considerations-in-overloading-procedures.md)。  
-  
-## <a name="calling-a-wrong-version-of-an-overloaded-procedure"></a>调用重载过程的错误版本  
- 如果过程具有多个重载的版本，应熟悉所有其参数列表，并了解 Visual Basic 如何解析重载之间的调用。 否则，您可以调用除预期之外的重载。  
-  
- 在确定你想要调用的重载，请务必遵守以下规则：  
-  
-- 提供正确数量的自变量，并按正确的顺序。  
-  
-- 理想情况下，参数应具有与对应的参数完全相同的数据类型。 在任何情况下，每个自变量的数据类型必须扩大到的其对应的参数。 这是如此[Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md)设置为`Off`。 如果某个重载需要从参数列表中，该重载任何收缩转换不能调用。  
-  
-- 如果你提供需要扩大转换的参数，请尽可能地为相应的参数数据类型及其数据类型。 如果两个或多个重载接受您的自变量数据类型，则编译器将解析对调用进行最少量的扩大转换的重载的调用。  
-  
- 可以通过减少数据类型不匹配的可能性[CType 函数](../../../../visual-basic/language-reference/functions/ctype-function.md)转换关键字时准备自己的参数。  
-  
-### <a name="overload-resolution-failure"></a>重载决策失败  
- 当您调用重载的过程时，编译器将尝试消除所有但的重载之一。 如果成功，它解析为该重载的调用。 如果它消除了所有重载，或者如果它不能减少为单个候选符合条件的重载，则将生成错误。  
-  
- 下面的示例阐释了重载决策过程。  
-  
- [!code-vb[VbVbcnProcedures#62](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#62)]  
-  
- [!code-vb[VbVbcnProcedures#63](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#63)]  
-  
- 在第一次调用，编译器无第一个重载，因为第一个参数的类型 (`Short`) 收缩到的相应参数的类型 (`Byte`)。 它然后能消除第三个重载，因为每个自变量类型中的第二个重载 (`Short`并`Single`) 将扩展到第三个重载中的相应类型 (`Integer`和`Single`)。 第二个重载需要较少扩大转换，因此编译器将其用于调用。  
-  
- 在第二个调用中，编译器不能消除任何根据收缩的重载。 因为它可以调用与自变量类型的最少扩大的第二个重载，它可以消除第三个重载了如下所示的第一个调用中，由于同一原因。 但是，编译器无法解析的第一个和第二个重载之间。 每个都有一个定义的参数类型扩展到其他相应的类型 (`Byte`到`Short`，但`Single`到`Double`)。 因此，编译器将生成重载解析错误。  
-  
- **正确的方法：** 若要能够调用无歧义地重载的过程，请使用[CType 函数](../../../../visual-basic/language-reference/functions/ctype-function.md)以匹配的参数类型的参数数据类型。 下面的示例演示如何调用`z`强制解析到第二个重载。  
-  
- [!code-vb[VbVbcnProcedures#65](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#65)]  
-  
-### <a name="overload-resolution-with-optional-and-paramarray-arguments"></a>重载具有可选的解析和 ParamArray 参数  
- 如果过程的两个重载具有相同的签名，只不过声明的最后一个参数[可选](../../../../visual-basic/language-reference/modifiers/optional.md)合一和[ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)中另一个，则编译器将解析对该过程的调用根据最接近的匹配。 有关更多信息，请参见 [Overload Resolution](./overload-resolution.md)。  
-  
+ 语句 @no__t 会生成编译器错误，因为它似乎使用错误数据类型（标量 `Integer` 而不是 @no__t 数组）的参数调用了 `AllOnes`。 语句 `Return AllOnes()` 会生成编译器错误，因为它似乎调用不带参数 `AllOnes`。
+
+ **正确的方法：** 为了能够修改要返回的数组元素，请将内部数组定义为局部变量。 下面的示例在编译时不会出错。
+
+ [!code-vb[VbVbcnProcedures#66](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#66)]
+
+## <a name="argument-not-being-modified-by-procedure-call"></a>过程调用未修改参数
+
+ 如果打算允许过程更改调用代码中的参数基础的编程元素，则必须通过引用传递该元素。 但过程可以访问引用类型参数的元素，即使你按值传递它。
+
+- **基础变量**。 若要允许该过程替换基础变量元素本身的值，该过程必须声明参数[ByRef](../../../language-reference/modifiers/byref.md)。 此外，调用代码不能将参数括在括号中，因为这会重写 `ByRef` 传递机制。
+
+- **引用类型元素**。 如果声明参数[ByVal](../../../language-reference/modifiers/byval.md)，则该过程将无法修改基础变量元素本身。 但是，如果参数是引用类型，则该过程可以修改它所指向的对象的成员，即使它不能替换变量的值。 例如，如果参数是一个数组变量，则该过程无法向其分配新数组，但它可以更改其一个或多个元素。 更改的元素将反映在调用代码的基础数组变量中。
+
+ 下面的示例定义了两个过程，这些过程按值获取数组变量并对其元素进行操作。 过程 `increase` 只是向每个元素添加一个。 过程 `replace` 会将新数组分配给参数 `a()`，然后将其添加到每个元素。 但是，重新分配不会影响调用代码中的基础数组变量，因为 `a()` 声明 @no__t 为-1。
+
+ [!code-vb[VbVbcnProcedures#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#35)]
+
+ [!code-vb[VbVbcnProcedures#38](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#38)]
+
+ 下面的示例调用 `increase` 并 `replace`。
+
+ [!code-vb[VbVbcnProcedures#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#37)]
+
+ 第一个 `MsgBox` 调用显示 "增加后（n）：11、21、31、41 "。 由于 @no__t 是引用类型，`increase` 可以更改其成员，即使将其传递 `ByVal`。
+
+ 第二个 `MsgBox` 调用显示 "replace 后（n）：11、21、31、41 "。 由于 `n` @no__t 为-1，`replace` 无法通过向其分配新数组来修改变量 `n`。 如果 `replace` 会创建新的数组实例，`k`，并将其分配给本地变量 `a`，它将丢失对调用代码传入的 `n` 的引用。 递增 `a` 的成员时，只会影响本地阵列 `k`。
+
+ **正确的方法：** 若要能够修改基础变量元素本身，请按引用传递它。 下面的示例演示 `replace` 的声明中的更改，它允许在调用代码中将一个数组替换为另一个数组。
+
+ [!code-vb[VbVbcnProcedures#64](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#64)]
+
+## <a name="unable-to-define-an-overload"></a>无法定义重载
+
+ 如果要定义过程的重载版本，则必须使用相同的名称，但不能使用其他签名。 如果编译器无法将声明与具有相同签名的重载区分开来，则会生成错误。
+
+ 过程的*签名*由过程名称和参数列表确定。 每个重载必须与所有其他重载具有相同的名称，但必须在签名的其他至少一个组件中与所有重载的名称不同。 有关更多信息，请参见 [Procedure Overloading](procedure-overloading.md)。
+
+ 以下项（即使它们属于参数列表）不是过程签名的组成部分：
+
+- 过程修饰符关键字，如 `Public`、`Shared` 和 `Static`
+
+- 参数名称
+
+- 参数修饰符关键字，如 `ByRef` 和 `Optional`
+
+- 返回值的数据类型（转换运算符除外）
+
+ 不能通过仅改变一个或多个前述项来重载过程。
+
+ **正确的方法：** 若要定义过程重载，必须更改签名。 由于必须使用相同的名称，因此必须更改参数的数目、顺序或数据类型。 在泛型过程中，可以改变类型参数的数目。 在转换运算符（[CType 函数](../../../language-reference/functions/ctype-function.md)）中，可以改变返回类型。
+
+### <a name="overload-resolution-with-optional-and-paramarray-arguments"></a>具有可选参数和 ParamArray 参数的重载决策
+
+ 如果要重载具有一个或多个[可选](../../../language-reference/modifiers/optional.md)参数或[ParamArray](../../../language-reference/modifiers/paramarray.md)参数的过程，则必须避免复制任何*隐式重载*。 有关信息，请参阅[重载过程中的注意事项](considerations-in-overloading-procedures.md)。
+
+## <a name="calling-a-wrong-version-of-an-overloaded-procedure"></a>调用错误的重载过程版本
+
+ 如果过程具有多个重载版本，你应该熟悉其所有参数列表，并了解 Visual Basic 如何在重载之间解析调用。 否则，可以调用非预期重载。
+
+ 确定要调用的重载时，请注意遵守以下规则：
+
+- 提供正确的参数数目，并按正确的顺序排列。
+
+- 理想情况下，自变量的数据类型应与对应参数的数据类型完全相同。 在任何情况下，每个参数的数据类型必须扩大到其对应参数的数据类型。 即使[Option Strict 语句](../../../language-reference/statements/option-strict-statement.md)设置为 `Off`，也是如此。 如果重载需要自变量列表进行任何收缩转换，则不能调用该重载。
+
+- 如果提供需要扩大的参数，请将其数据类型尽可能靠近相应的参数数据类型。 如果两个或更多重载接受您的参数数据类型，则编译器会将调用解析为对最小扩大量进行调用的重载。
+
+ 在准备参数时，可以使用[CType 函数](../../../language-reference/functions/ctype-function.md)转换关键字来减少数据类型不匹配的几率。
+
+### <a name="overload-resolution-failure"></a>重载决策失败
+
+ 调用重载过程时，编译器会尝试消除除一个重载以外的所有重载。 如果成功，它将解析对该重载的调用。 如果它消除了所有重载，或者无法将符合条件的重载减少到单个候选项，则会生成错误。
+
+ 下面的示例演示了重载决策过程。
+
+ [!code-vb[VbVbcnProcedures#62](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#62)]
+
+ [!code-vb[VbVbcnProcedures#63](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#63)]
+
+ 在第一次调用中，编译器将消除第一个重载，因为第一个参数的类型（`Short`）会缩小到相应参数的类型（@no__t 为-1）。 然后，它将消除第三个重载，因为第二个重载（@no__t 0 和 `Single`）中的每个参数类型扩大到第三个重载（`Integer` 和 `Single`）中的相应类型。 第二个重载需要更少的扩展，因此编译器将其用于调用。
+
+ 在第二次调用中，编译器无法根据收缩消除任何重载。 它消除第三个重载的原因与第一次调用中的相同原因，因为它可以通过更少的参数类型来调用第二个重载。 但编译器无法在第一个和第二个重载之间解析。 每个都有一个已定义的参数类型，该类型扩大到另一个中的相应类型（`Byte` 到 `Short`，但 `Single` 到 @no__t。 因此，编译器将生成重载决策错误。
+
+ **正确的方法：** 若要能够无歧义地调用重载过程，请使用[CType 函数](../../../language-reference/functions/ctype-function.md)将参数数据类型与参数类型相匹配。 下面的示例演示对 `z` 的调用，该调用强制解析为第二个重载。
+
+ [!code-vb[VbVbcnProcedures#65](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#65)]
+
+### <a name="overload-resolution-with-optional-and-paramarray-arguments"></a>具有可选参数和 ParamArray 参数的重载决策
+
+ 如果过程的两个重载具有相同的签名，但最后一个参数在另[一个中声明](../../../language-reference/modifiers/paramarray.md)为[可选](../../../language-reference/modifiers/optional.md)，则编译器将根据最接近的匹配项解析对该过程的调用。 有关更多信息，请参见 [Overload Resolution](overload-resolution.md)。
+
 ## <a name="see-also"></a>请参阅
 
-- [过程](./index.md)
-- [Sub 过程](./sub-procedures.md)
-- [Function 过程](./function-procedures.md)
-- [属性过程](./property-procedures.md)
-- [运算符过程](./operator-procedures.md)
-- [过程参数和自变量](./procedure-parameters-and-arguments.md)
-- [过程重载](./procedure-overloading.md)
-- [重载过程注意事项](./considerations-in-overloading-procedures.md)
-- [重载决策](./overload-resolution.md)
+- [过程](index.md)
+- [Sub 过程](sub-procedures.md)
+- [Function 过程](function-procedures.md)
+- [属性过程](property-procedures.md)
+- [运算符过程](operator-procedures.md)
+- [过程参数和自变量](procedure-parameters-and-arguments.md)
+- [过程重载](procedure-overloading.md)
+- [重载过程注意事项](considerations-in-overloading-procedures.md)
+- [重载决策](overload-resolution.md)

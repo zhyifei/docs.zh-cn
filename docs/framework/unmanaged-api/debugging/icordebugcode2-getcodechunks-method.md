@@ -17,47 +17,50 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4bbc7ac7d87c6a5d36dc3432c603bb7d16d62c00
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1bdaf6391ca5c19f073708d6258ad5775bec9824
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747429"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71700727"
 ---
 # <a name="icordebugcode2getcodechunks-method"></a>ICorDebugCode2::GetCodeChunks 方法
-获取此代码对象组成的代码块。  
-  
-## <a name="syntax"></a>语法  
-  
-```cpp  
-HRESULT GetCodeChunks (  
-    [in]  ULONG32     cbufSize,  
-    [out] ULONG32     *pcnumChunks,  
-    [out, size_is(cbufSize), length_is(*pcnumChunks)]   
-        CodeChunkInfo chunks[]  
-);  
-```  
-  
-## <a name="parameters"></a>参数  
+
+获取包含此代码对象的代码块。
+
+## <a name="syntax"></a>语法
+
+```cpp
+HRESULT GetCodeChunks (
+    [in]  ULONG32     cbufSize,
+    [out] ULONG32     *pcnumChunks,
+    [out, size_is(cbufSize), length_is(*pcnumChunks)]
+        CodeChunkInfo chunks[]
+);
+```
+
+## <a name="parameters"></a>Parameters
+
  `cbufSize`  
- [in]大小`chunks`数组。  
-  
+ 中@No__t-0 数组的大小。
+
  `pcnumChunks`  
- [out]在中返回的消息块数量`chunks`数组。  
-  
+ 弄@No__t-0 数组中返回的块区数。
+
  `chunks`  
- [out]"CodeChunkInfo"结构数组，其中每个表示单个代码块。 如果的值`cbufSize`为 0，则此参数可以为 null。  
-  
-## <a name="remarks"></a>备注  
- 代码块将永远不会重叠，而且它们将遵循在其中它们将具有已连接起来的顺序[icordebugcode:: Getcode](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getcode-method.md)。 .NET Framework 2.0 版中的 Microsoft 中间语言 (MSIL) 代码对象将包含单个代码块。  
-  
-## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
-  
- **标头：** CorDebug.idl、 CorDebug.h  
-  
- **库：** CorGuids.lib  
-  
- **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
-  
-## <a name="see-also"></a>请参阅
+ 弄"CodeChunkInfo" 结构的数组，其中每个结构都表示一个代码块。 如果 @no__t 的值为0，则此参数可以为 null。
+
+## <a name="remarks"></a>备注
+
+ 代码块将永远不会重叠，它们将遵循[ICorDebugCode：： GetCode](icordebugcode-getcode-method.md)连接的顺序。 .NET Framework 版本2.0 中的 Microsoft 中间语言（MSIL）代码对象将包含一个代码块。
+
+## <a name="requirements"></a>要求
+
+ **适用**请参阅[系统需求](../../get-started/system-requirements.md)。
+
+ **标头：** Cordebug.idl，Cordebug.idl
+
+ **类库**CorGuids.lib
+
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ 

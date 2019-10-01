@@ -2,22 +2,19 @@
 title: <iriParsing> 元素（Uri 设置）
 ms.date: 03/30/2017
 ms.assetid: 953d0b53-445e-41f9-b302-77c4030852ce
-ms.openlocfilehash: 2c99edf2f1a03e0e510858c106cad43b0eaa27b4
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: fd617d1b4ac8e532c6f9aeaa01465e9866b059e9
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69664091"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698095"
 ---
-# <a name="iriparsing-element-uri-settings"></a>\<Iriparsing> > 元素 (Uri 设置)
+# <a name="iriparsing-element-uri-settings"></a>\<iriParsing > 元素（Uri 设置）
 指定是否对 <xref:System.Uri> 应用国际资源标识符 (IRI) 分析以及是否应该应用 IRI 分析规则。  
   
-## <a name="schema-hierarchy"></a>架构层次结构  
- [\<configuration> 元素](../configuration-element.md)  
-  
- [\<Uri > 元素 (Uri 设置)](uri-element-uri-settings.md)  
-  
- [\<iriParsing>](iriparsing-element-uri-settings.md)  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<uri >** ](uri-element-uri-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t **\<iriParsing >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,18 +34,18 @@ ms.locfileid: "69664091"
 |`enabled`|指定是否启用 IRI 分析。 默认值为 `false`。|  
   
 ### <a name="child-elements"></a>子元素  
- 无  
+ None  
   
 ### <a name="parent-elements"></a>父元素  
   
 |**元素**|**说明**|  
 |-----------------|---------------------|  
-|[oma-uri](uri-element-uri-settings.md)|包含指定 .NET Framework 如何处理使用统一资源标识符 (Uri) 表示的 web 地址的设置。|  
+|[oma-uri](uri-element-uri-settings.md)|包含指定 .NET Framework 如何处理使用统一资源标识符（Uri）表示的 web 地址的设置。|  
   
 ## <a name="remarks"></a>备注  
- 已在<xref:System.Uri> .NET Framework 3.5 中扩展了现有的类。 3.0 SP1 和 2.0 SP1, 提供对国际资源标识符 (IRI) 和国际化域名 (IDN) 的支持。 当前用户将看不到 .NET Framework 2.0 行为中的任何更改, 除非它们专门启用 IRI 和 IDN 支持。 这确保了 NET Framework 以前版本的应用程序兼容性。  
+ 现有的 @no__t 0 类已在 .NET Framework 3.5 中扩展。 3.0 SP1 和 2.0 SP1，提供对国际资源标识符（IRI）和国际化域名（IDN）的支持。 当前用户将看不到 .NET Framework 2.0 行为中的任何更改，除非它们专门启用 IRI 和 IDN 支持。 这确保了 NET Framework 以前版本的应用程序兼容性。  
   
- 若要启用对 IRI 的支持, 需要以下两项更改:  
+ 若要启用对 IRI 的支持，需要以下两项更改：  
   
 1. 将以下行添加到 .NET Framework 2.0 目录下的 machine.config 文件中。  
   
@@ -58,7 +55,7 @@ ms.locfileid: "69664091"
   
 2. 指定是否应该应用 IRI 分析规则。 这可以在 machine.config 或应用配置文件中完成。  
   
- 启用 IRI 分析 (启用 iriparsing> = `true`) 将根据 RFC 3987 中的最新 IRI 规则执行规范化和字符检查。 默认值为`false` , 将根据 rfc 2396 和 rfc 3986 (针对 IPv6 文本) 执行规范化和字符检查。  
+ 启用 IRI 分析（启用 iriparsing> = `true`）将根据 RFC 3987 中的最新 IRI 规则执行规范化和字符检查。 默认值为 `false`，将根据 RFC 2396 和 RFC 3986 （针对 IPv6 文本）执行规范化和字符检查。  
   
 ### <a name="configuration-files"></a>配置文件  
  此元素可在应用程序配置文件或计算机配置文件 (Machine.config) 中使用。  
@@ -66,7 +63,7 @@ ms.locfileid: "69664091"
 ## <a name="example"></a>示例  
   
 ### <a name="description"></a>描述  
- 下面的示例演示<xref:System.Uri>类使用的配置, 以支持 IRI 分析和 IDN 名称。  
+ 下面的示例演示 <xref:System.Uri> 类用于支持 IRI 分析和 IDN 名称的配置。  
   
 ### <a name="code"></a>代码  
   

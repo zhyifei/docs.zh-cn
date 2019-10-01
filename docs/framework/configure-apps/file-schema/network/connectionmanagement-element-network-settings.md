@@ -8,19 +8,19 @@ helpviewer_keywords:
 - <connectionManagement> element
 - connectionManagement element
 ms.assetid: bedccaab-12a2-4511-8f67-e961f249aec6
-ms.openlocfilehash: faaba1b9de302ed916ad1a81c7e80b3fb5a67170
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: d377a77a4a1b4c57e9edd4fbfa364387f1bae479
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69664157"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699434"
 ---
-# <a name="connectionmanagement-element-network-settings"></a>\<connectionManagement > 元素 (网络设置)
+# <a name="connectionmanagement-element-network-settings"></a>\<connectionManagement > 元素（网络设置）
 指定到网络主机的最大连接数。  
   
- \<configuration>  
-\<system.net>  
-\<connectionManagement>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t[ **\<system >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t **\<connectionManagement >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -50,13 +50,13 @@ ms.locfileid: "69664157"
 |[system.net](system-net-element-network-settings.md)|包含指定 .NET Framework 如何连接到网络的设置。|  
   
 ## <a name="remarks"></a>备注  
- `connectionManagement`元素定义与服务器或服务器组的最大连接数。  
+ @No__t-0 元素定义与服务器或服务器组的最大连接数。  
   
 ## <a name="configuration-files"></a>配置文件  
  此元素可在应用程序配置文件或计算机配置文件 (Machine.config) 中使用。  
   
 ## <a name="example"></a>示例  
- 下面的示例将应用程序配置为使用四个到服务器`www.contoso.com`的连接, 以及两个与其他服务器的连接。  
+ 下面的示例将应用程序配置为使用服务器 @no__t 的四个连接，并将两个连接连接到所有其他服务器。  
   
 ```xml  
 <configuration>  

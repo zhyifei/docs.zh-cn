@@ -10,20 +10,20 @@ helpviewer_keywords:
 - <connectionManagement>, remove element
 - remove element, connectionManagement
 ms.assetid: 94b81775-5a22-4975-8c47-8620c40c3f35
-ms.openlocfilehash: 8ab7a43fbb3e8df5bb0c99b5947f2fafb362399a
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: cbafd29be6855cbb95d17388791ba152230295cc
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69664034"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697845"
 ---
-# <a name="remove-element-for-connectionmanagement-network-settings"></a>\<删除 connectionManagement 的 > 元素 (网络设置)
+# <a name="remove-element-for-connectionmanagement-network-settings"></a>用于 connectionManagement 的 0remove > 元素（网络设置） @no__t
 从连接管理列表中删除 IP 地址或 DNS 名称。  
   
- \<configuration>  
-\<system.net>  
-\<connectionManagement>  
-\<remove>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t[ **\<system >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t[ **\<connectionManagement >** ](connectionmanagement-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<remove >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -52,15 +52,15 @@ ms.locfileid: "69664034"
 |[connectionManagement](connectionmanagement-element-network-settings.md)|指定到网络主机的最大连接数。|  
   
 ## <a name="remarks"></a>备注  
- `remove`元素删除指定服务器的连接管理列表项。  
+ @No__t-0 元素删除指定服务器的连接管理列表项。  
   
- 该`address`属性的值应为有效的 IP 地址或主机名。  
+ @No__t-0 属性的值应为有效的 IP 地址或主机名。  
   
 ## <a name="configuration-files"></a>配置文件  
  此元素可在应用程序配置文件或计算机配置文件 (Machine.config) 中使用。  
   
 ## <a name="example"></a>示例  
- 下面的示例删除服务器`www.adventure-works.com`的任何连接管理列表项, 然后将应用程序配置为使用四个到服务器`www.contoso.com`的连接, 以及两个与其他服务器的连接。  
+ 下面的示例将删除服务器的任何连接管理列表项 `www.adventure-works.com`，然后将应用程序配置为使用四个到服务器的连接，`www.contoso.com` 和两个与所有其他服务器的连接。  
   
 ```xml  
 <configuration>  

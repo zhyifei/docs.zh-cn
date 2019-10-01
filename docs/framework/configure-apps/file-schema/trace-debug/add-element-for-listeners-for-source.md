@@ -1,5 +1,5 @@
 ---
-title: <add><listeners>的元素<source>
+title: <source> 的 @no__t <listeners> 元素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners/add
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - add element for <listeners> for <source>
 - <add> element for <listeners> for <source>
 ms.assetid: 4ce36ac1-81ef-48e8-b8b2-b5a5b0e2adcb
-ms.openlocfilehash: 96bfde3ec425f6f77d1d655808d155eb0e6fcd0f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0818d7ec248b210f215759069b9f69a3e29637f5
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927202"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699406"
 ---
-# <a name="add-element-for-listeners-for-source"></a>\<为源 > 的\< \<侦听器 > 添加 > 元素
+# <a name="add-element-for-listeners-for-source"></a>\<add > 元素，用于 2source @no__t 的 \<listeners >
 将侦听器添加到跟踪源的 `Listeners` 集合中。  
   
- \<configuration>  
-\<system.diagnostics>  
-\<源 >  
-\<源 >  
-\<侦听器 >  
-\<add>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<system >** ](system-diagnostics-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t[ **\<sources >** ](sources-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<source >** ](source-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7[ **&nbsp;0listeners >** ](listeners-element-for-source.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<add>**  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,11 +40,11 @@ ms.locfileid: "69927202"
   
 |特性|描述|  
 |---------------|-----------------|  
-|`type`|必需的属性, 除非引用`sharedListeners`集合中的侦听器, 在这种情况下, 只需按名称引用它 (请参阅[示例](#example))。<br /><br /> 指定侦听器的类型。 必须使用满足指定[完全限定的类型名称](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md)中指定的要求的字符串。|  
-|`initializeData`|可选特性。<br /><br /> 传递到指定类的构造函数的字符串。 如果类不具有采用字符串的构造函数, 则会引发。<xref:System.Configuration.ConfigurationException>|  
+|`type`|必需的属性，除非你引用 @no__t 集合中的侦听器，在这种情况下，你只需按名称引用它（请参阅[示例](#example)）。<br /><br /> 指定侦听器的类型。 必须使用满足指定[完全限定的类型名称](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md)中指定的要求的字符串。|  
+|`initializeData`|可选特性。<br /><br /> 传递到指定类的构造函数的字符串。 如果类不具有采用字符串的构造函数，则会引发 <xref:System.Configuration.ConfigurationException>。|  
 |`name`|可选特性。<br /><br /> 指定侦听器的名称。|  
-|`traceOutputOptions`|可选特性。<br /><br /> 指定跟踪<xref:System.Diagnostics.TraceListener.TraceOutputOptions%2A>侦听器的属性值。|  
-|[自定义属性]|可选属性。<br /><br /> 为该侦听器的<xref:System.Diagnostics.TraceListener.GetSupportedAttributes%2A>方法所标识的侦听器特定的特性指定值。 <xref:System.Diagnostics.DelimitedListTraceListener.Delimiter%2A>是<xref:System.Diagnostics.DelimitedListTraceListener>类独有的额外特性的一个示例。|  
+|`traceOutputOptions`|可选特性。<br /><br /> 为跟踪侦听器指定 @no__t 的属性值。|  
+|[自定义属性]|可选属性。<br /><br /> 指定侦听器特定属性的值，该属性由该侦听器的 <xref:System.Diagnostics.TraceListener.GetSupportedAttributes%2A> 方法标识。 <xref:System.Diagnostics.DelimitedListTraceListener.Delimiter%2A> 是对 @no__t 1 类唯一的额外特性的一个示例。|  
   
 ### <a name="child-elements"></a>子元素  
   
@@ -63,34 +63,34 @@ ms.locfileid: "69927202"
 |`listeners`|指定用于收集、存储和路由消息的侦听器。|  
   
 ## <a name="remarks"></a>备注  
- 随 .NET Framework 附带的侦听器类派生自<xref:System.Diagnostics.TraceListener>类。  
+ 随 .NET Framework 附带的侦听器类派生自 @no__t 的类。  
   
- 如果未指定`name`跟踪侦听器的属性, 则跟踪侦听器的<xref:System.Diagnostics.TraceListener.Name%2A>属性默认为空字符串 ("")。 如果你的应用程序只有一个侦听器, 则可以在不指定名称的情况下添加它, 并且可以通过为名称指定空字符串来删除它。 但是, 如果你的应用程序有多个侦听器, 则应为每个跟踪侦听器指定唯一的名称, 以便你可以在<xref:System.Diagnostics.TraceSource.Listeners%2A?displayProperty=nameWithType>集合中标识和管理单个跟踪侦听器。  
-  
-> [!NOTE]
-> 添加具有相同类型且具有相同名称的多个跟踪侦听器会导致只将该类型和名称的一个跟踪侦听器添加到`Listeners`集合中。 但是, 可以通过编程方式将多个相同的`Listeners`侦听器添加到集合中。  
-  
- 该`initializeData`属性的值取决于所创建的侦听器的类型。 并非所有跟踪侦听器都要求您指定`initializeData`。  
+ 如果未指定跟踪侦听器的 `name` 属性，则跟踪侦听器的 @no__t 属性默认为空字符串（""）。 如果你的应用程序只有一个侦听器，则可以在不指定名称的情况下添加它，并且可以通过为名称指定空字符串来删除它。 但是，如果你的应用程序具有多个侦听器，则应为每个跟踪侦听器指定唯一的名称，从而允许你在 <xref:System.Diagnostics.TraceSource.Listeners%2A?displayProperty=nameWithType> 集合中标识和管理单个跟踪侦听器。  
   
 > [!NOTE]
-> 使用`initializeData`属性时, 可能会收到编译器警告 "未声明 ' initializeData ' 特性"。 之所以出现此警告<xref:System.Diagnostics.TraceListener>, 是因为配置设置是针对抽象基类验证的, 后者不`initializeData`识别属性。 通常, 对于具有采用参数的构造函数的跟踪侦听器实现, 你可以忽略此警告。  
+> 添加具有相同类型且具有相同名称的多个跟踪侦听器会导致只将该类型和名称的一个跟踪侦听器添加到 @no__t 的集合中。 但是，可以通过编程方式将多个相同的侦听器添加到 @no__t 集合中。  
   
- 下表显示了 .NET Framework 附带的跟踪侦听器, 并描述了其`initializeData`属性的值。  
+ @No__t-0 属性的值取决于所创建的侦听器的类型。 并非所有跟踪侦听器都需要指定 `initializeData`。  
+  
+> [!NOTE]
+> 使用 `initializeData` 属性时，可能会收到编译器警告 "未声明 ' initializeData ' 特性"。 出现此警告的原因是，配置设置是根据 <xref:System.Diagnostics.TraceListener> 的抽象基类验证的，该基类无法识别 @no__t 属性。 通常，对于具有采用参数的构造函数的跟踪侦听器实现，你可以忽略此警告。  
+  
+ 下表显示 .NET Framework 附带的跟踪侦听器，并描述其 @no__t 属性的值。  
   
 |跟踪侦听器类|initializeData 特性值|  
 |--------------------------|------------------------------------|  
-|<xref:System.Diagnostics.ConsoleTraceListener?displayProperty=nameWithType>|<xref:System.Diagnostics.ConsoleTraceListener.%23ctor%2A>构造函数的`useErrorStream`值。  将属性设置为 "`true`" 可将跟踪和调试输出写入标准错误流; 将该属性设置为`false`"" 可写入标准输出流。 `initializeData`|  
-|<xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType>|写入的<xref:System.Diagnostics.DelimitedListTraceListener>文件的名称。|  
+|<xref:System.Diagnostics.ConsoleTraceListener?displayProperty=nameWithType>|@No__t 的构造函数的 @no__t 值为0。  将 `initializeData` 特性设置为 "`true`"，以将跟踪和调试输出写入标准错误流;将其设置为 "`false`" 以写入标准输出流。|  
+|<xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType>|@No__t-0 写入的文件的名称。|  
 |<xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType>|现有事件日志源的名称。|  
-|<xref:System.Diagnostics.EventSchemaTraceListener?displayProperty=nameWithType>|<xref:System.Diagnostics.EventSchemaTraceListener>写入的文件的名称。|  
-|<xref:System.Diagnostics.TextWriterTraceListener?displayProperty=nameWithType>|<xref:System.Diagnostics.TextWriterTraceListener>写入的文件的名称。|  
-|<xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType>|<xref:System.Diagnostics.XmlWriterTraceListener>写入的文件的名称。|  
+|<xref:System.Diagnostics.EventSchemaTraceListener?displayProperty=nameWithType>|@No__t-0 写入的文件的名称。|  
+|<xref:System.Diagnostics.TextWriterTraceListener?displayProperty=nameWithType>|@No__t-0 写入的文件的名称。|  
+|<xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType>|@No__t-0 写入的文件的名称。|  
   
 ## <a name="configuration-file"></a>配置文件  
- 此元素可在计算机配置文件 (Machine.config) 和应用程序配置文件中使用。  
+ 此元素可在计算机配置文件（Machine.config）和应用程序配置文件中使用。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示`<add>`如何使用元素将侦听器`console`和`textListener` `Listeners`集合添加到跟踪源`TraceSourceApp`的集合中。 `textListener`侦听器将跟踪输出写入文件 myListener。  
+ 下面的示例演示如何使用 `<add>` 元素向跟踪源 `TraceSourceApp` 的 @no__t 集合添加侦听器 `console` 和 @no__t 2。 @No__t-0 侦听器将跟踪输出写入文件 myListener。  
   
 ```xml  
 <configuration>  

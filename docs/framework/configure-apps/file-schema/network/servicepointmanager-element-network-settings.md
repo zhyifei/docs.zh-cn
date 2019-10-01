@@ -8,20 +8,20 @@ helpviewer_keywords:
 - servicePointManager element
 - <servicePointManager> element
 ms.assetid: 6e5def51-3646-4ef6-a7bd-c69151321bec
-ms.openlocfilehash: a6a40d97bf16a3125452311e7762617e657ca384
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 95ad1880cbb832a17311e7e63e9203f53257f65f
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659147"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697717"
 ---
-# <a name="servicepointmanager-element-network-settings"></a>\<servicePointManager > 元素 (网络设置)
+# <a name="servicepointmanager-element-network-settings"></a>\<servicePointManager > 元素（网络设置）
 配置与网络资源的连接。  
   
- \<configuration>  
-\<system.net>  
-\<设置 >  
-\<servicePointManager>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t[ **\<system >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t[ **\<settings >** ](settings-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<servicePointManager >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,12 +44,12 @@ ms.locfileid: "69659147"
   
 |**特性**|**说明**|  
 |-------------------|---------------------|  
-|`checkCertificateName`|指定在使用证书之前, 系统是否应验证证书上的名称是否与服务器主机名匹配。 默认值为 `true`。|  
+|`checkCertificateName`|指定在使用证书之前，系统是否应验证证书上的名称是否与服务器主机名匹配。 默认值为 `true`。|  
 |`checkCertificateRevocationList`|指定在使用证书之前系统是否应检查证书是否已吊销。 默认值为 `false`。|  
-|`dnsRefreshTimeout`|指定域名服务 (DNS) 解析与 DNS 轮循机制选项一起缓存的时间长度 (以毫秒为单位)。 默认值是 120,000 毫秒（2 分钟）。|  
-|`enableDnsRoundRobin`|指定具有多个 Internet 协议 (IP) 地址的主机名的 DNS 解析是返回所有地址, 还是只返回第一个地址。 默认值为 `false`。|  
-|`encryptionPolicy`|指定应用到<xref:System.Net.ServicePointManager>实例上的 SSL/TLS 会话的加密策略。 可能的值等效于<xref:System.Net.Security.EncryptionPolicy>枚举的值。 加密策略设置<xref:System.Security.Authentication.CipherAlgorithmType.Null>为`NoEncryption`时, 需要使用。 默认值为 `RequireEncryption`。|  
-|`expect100Continue`|指定 POST 方法是否应该接收`100-continue`来自服务器的响应。 默认值为 `true`。|  
+|`dnsRefreshTimeout`|指定域名服务（DNS）解析与 DNS 轮循机制选项一起缓存的时间长度（以毫秒为单位）。 默认值是 120,000 毫秒（2 分钟）。|  
+|`enableDnsRoundRobin`|指定具有多个 Internet 协议（IP）地址的主机名的 DNS 解析是返回所有地址，还是只返回第一个地址。 默认值为 `false`。|  
+|`encryptionPolicy`|指定应用到 <xref:System.Net.ServicePointManager> 实例上的 SSL/TLS 会话的加密策略。 可能的值与 <xref:System.Net.Security.EncryptionPolicy> 枚举的值等效。 当加密策略设置为 `NoEncryption` 时，需要使用 <xref:System.Security.Authentication.CipherAlgorithmType.Null>。 默认值为 `RequireEncryption`。|  
+|`expect100Continue`|指定 POST 方法是否应接收来自服务器 @no__t 0 的响应。 默认值为 `true`。|  
 |`useNagleAlgorithm`|指定由服务点管理器控制的连接是否使用 Nagle 算法。 默认值为 `true`。|  
   
 ### <a name="child-elements"></a>子元素  

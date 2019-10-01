@@ -8,20 +8,20 @@ helpviewer_keywords:
 - <oidMap> element
 - oidMap element
 ms.assetid: 7f0c2246-c070-4748-b96a-2f66a296c539
-ms.openlocfilehash: d2929167f5a7de96a868cd1ac884d2203d09dfb6
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: eec2c4745ad5a0492ccf04c8f23b901275f23c01
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927528"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698434"
 ---
 # <a name="oidmap-element"></a>\<oidMap > 元素
-包含与类的 ASN 对象标识符 (OID) 映射。  
+包含与类的 ASN 对象标识符（OID）映射。  
   
- \<configuration>  
-\<mscorlib>  
-\<cryptographySettings>  
-\<oidMap>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<mscorlib >** ](mscorlib-element-for-cryptography-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t[ **\<cryptographySettings >** ](cryptographysettings-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<oidMap >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -51,7 +51,7 @@ ms.locfileid: "69927528"
 |`mscorlib`|`cryptographySettings`包含元素。|  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何使用 **\<oidMap >** 元素包含 RIPEMD-160 哈希算法的 OID 到哈希算法的实现的映射。  
+ 下面的示例演示如何使用 **\<oidMap >** 元素包含160哈希算法的 OID 到哈希算法的实现的映射。  
   
 ```xml  
 <configuration>  
