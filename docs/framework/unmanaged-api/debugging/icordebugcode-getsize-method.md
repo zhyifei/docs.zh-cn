@@ -17,35 +17,37 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 52ba9d5bac5e772d721d38e4e8a7ba6757d0ae2e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 89df0e9be0600b51dcc8a68c5aba3f06e86e1b53
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747499"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71700804"
 ---
-# <a name="icordebugcodegetsize-method"></a><span data-ttu-id="f55ca-102">ICorDebugCode::GetSize 方法</span><span class="sxs-lookup"><span data-stu-id="f55ca-102">ICorDebugCode::GetSize Method</span></span>
-<span data-ttu-id="f55ca-103">获取用字节表示，此"ICorDebugCode"所表示的二进制代码大小。</span><span class="sxs-lookup"><span data-stu-id="f55ca-103">Gets the size, in bytes, of the binary code represented by this "ICorDebugCode".</span></span>  
-  
-## <a name="syntax"></a><span data-ttu-id="f55ca-104">语法</span><span class="sxs-lookup"><span data-stu-id="f55ca-104">Syntax</span></span>  
-  
-```cpp  
-HRESULT GetSize (  
-    [out] ULONG32    *pcBytes  
-);  
-```  
-  
-## <a name="parameters"></a><span data-ttu-id="f55ca-105">参数</span><span class="sxs-lookup"><span data-stu-id="f55ca-105">Parameters</span></span>  
+# <a name="icordebugcodegetsize-method"></a><span data-ttu-id="1768e-102">ICorDebugCode::GetSize 方法</span><span class="sxs-lookup"><span data-stu-id="1768e-102">ICorDebugCode::GetSize Method</span></span>
+
+<span data-ttu-id="1768e-103">获取此 "ICorDebugCode" 表示的二进制代码的大小（以字节为单位）。</span><span class="sxs-lookup"><span data-stu-id="1768e-103">Gets the size, in bytes, of the binary code represented by this "ICorDebugCode".</span></span>
+
+## <a name="syntax"></a><span data-ttu-id="1768e-104">语法</span><span class="sxs-lookup"><span data-stu-id="1768e-104">Syntax</span></span>
+
+```cpp
+HRESULT GetSize (
+    [out] ULONG32    *pcBytes
+);
+```
+
+## <a name="parameters"></a><span data-ttu-id="1768e-105">Parameters</span><span class="sxs-lookup"><span data-stu-id="1768e-105">Parameters</span></span>
+
  `pcBytes`  
- <span data-ttu-id="f55ca-106">[out]指向的大小，以字节为单位，该二进制文件的代码，此`ICorDebugCode`对象表示。</span><span class="sxs-lookup"><span data-stu-id="f55ca-106">[out] A pointer to the size, in bytes, of the binary code that this `ICorDebugCode` object represents.</span></span>  
-  
-## <a name="requirements"></a><span data-ttu-id="f55ca-107">要求</span><span class="sxs-lookup"><span data-stu-id="f55ca-107">Requirements</span></span>  
- <span data-ttu-id="f55ca-108">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="f55ca-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
-  
- <span data-ttu-id="f55ca-109">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f55ca-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
-  
- <span data-ttu-id="f55ca-110">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f55ca-110">**Library:** CorGuids.lib</span></span>  
-  
- <span data-ttu-id="f55ca-111">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f55ca-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="f55ca-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="f55ca-112">See also</span></span>
+ <span data-ttu-id="1768e-106">弄一个指针，指向此 @no__t 0 对象表示的二进制代码的大小（以字节为单位）。</span><span class="sxs-lookup"><span data-stu-id="1768e-106">[out] A pointer to the size, in bytes, of the binary code that this `ICorDebugCode` object represents.</span></span>
+
+## <a name="requirements"></a><span data-ttu-id="1768e-107">要求</span><span class="sxs-lookup"><span data-stu-id="1768e-107">Requirements</span></span>
+
+ <span data-ttu-id="1768e-108">**适用**请参阅[系统需求](../../get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="1768e-108">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>
+
+ <span data-ttu-id="1768e-109">**标头：** Cordebug.idl，Cordebug.idl</span><span class="sxs-lookup"><span data-stu-id="1768e-109">**Header:** CorDebug.idl, CorDebug.h</span></span>
+
+ <span data-ttu-id="1768e-110">**类库**CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="1768e-110">**Library:** CorGuids.lib</span></span>
+
+ <span data-ttu-id="1768e-111">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1768e-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ 

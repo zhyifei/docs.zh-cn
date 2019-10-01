@@ -17,25 +17,24 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 422c5eab896833b2bab8daf0c854c05c252b9ee6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 65218eb6b5ba26bfb1cbee4f1f276c39e8623c5d
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747480"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71700704"
 ---
-# <a name="icordebugcodegetencremapsequencepoints-method"></a><span data-ttu-id="baff2-102">ICorDebugCode::GetEnCRemapSequencePoints 方法</span><span class="sxs-lookup"><span data-stu-id="baff2-102">ICorDebugCode::GetEnCRemapSequencePoints Method</span></span>
-<span data-ttu-id="baff2-103">当前版本的.NET Framework 中未实现此方法。</span><span class="sxs-lookup"><span data-stu-id="baff2-103">This method is not implemented in the current version of the .NET Framework.</span></span>  
-  
-## <a name="syntax"></a><span data-ttu-id="baff2-104">语法</span><span class="sxs-lookup"><span data-stu-id="baff2-104">Syntax</span></span>  
-  
-```cpp  
-HRESULT GetEnCRemapSequencePoints(  
-    [in] ULONG32 cMap,  
-    [out] ULONG32 *pcMap,  
-    [out, size_is(cMap), length_is(*pcMap)]  
-        ULONG32 offsets[]  
-);  
-```  
-  
-## <a name="see-also"></a><span data-ttu-id="baff2-105">请参阅</span><span class="sxs-lookup"><span data-stu-id="baff2-105">See also</span></span>
+# <a name="icordebugcodegetencremapsequencepoints-method"></a><span data-ttu-id="4c67d-102">ICorDebugCode::GetEnCRemapSequencePoints 方法</span><span class="sxs-lookup"><span data-stu-id="4c67d-102">ICorDebugCode::GetEnCRemapSequencePoints Method</span></span>
+
+<span data-ttu-id="4c67d-103">在 .NET Framework 的当前版本中未实现此方法。</span><span class="sxs-lookup"><span data-stu-id="4c67d-103">This method is not implemented in the current version of the .NET Framework.</span></span>
+
+## <a name="syntax"></a><span data-ttu-id="4c67d-104">语法</span><span class="sxs-lookup"><span data-stu-id="4c67d-104">Syntax</span></span>
+
+```cpp
+HRESULT GetEnCRemapSequencePoints(
+    [in] ULONG32 cMap,
+    [out] ULONG32 *pcMap,
+    [out, size_is(cMap), length_is(*pcMap)]
+        ULONG32 offsets[]
+);
+```

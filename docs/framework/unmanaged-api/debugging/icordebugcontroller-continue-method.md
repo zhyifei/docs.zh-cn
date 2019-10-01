@@ -17,44 +17,47 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c3a4e98a7265bda288b20b1cee1a10ab11990e8e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bdf59ee3c7bf41a2bb0ff68db5e70dd5a519a0e9
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67748882"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71700782"
 ---
-# <a name="icordebugcontrollercontinue-method"></a><span data-ttu-id="eb4c5-102">ICorDebugController::Continue 方法</span><span class="sxs-lookup"><span data-stu-id="eb4c5-102">ICorDebugController::Continue Method</span></span>
-<span data-ttu-id="eb4c5-103">恢复托管线程执行后调用[停止方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-stop-method.md)。</span><span class="sxs-lookup"><span data-stu-id="eb4c5-103">Resumes execution of managed threads after a call to [Stop Method](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-stop-method.md).</span></span>  
-  
-## <a name="syntax"></a><span data-ttu-id="eb4c5-104">语法</span><span class="sxs-lookup"><span data-stu-id="eb4c5-104">Syntax</span></span>  
-  
-```cpp  
-HRESULT Continue (  
-    [in] BOOL fIsOutOfBand  
-);  
-```  
-  
-## <a name="parameters"></a><span data-ttu-id="eb4c5-105">参数</span><span class="sxs-lookup"><span data-stu-id="eb4c5-105">Parameters</span></span>  
+# <a name="icordebugcontrollercontinue-method"></a><span data-ttu-id="71384-102">ICorDebugController::Continue 方法</span><span class="sxs-lookup"><span data-stu-id="71384-102">ICorDebugController::Continue Method</span></span>
+
+<span data-ttu-id="71384-103">在调用[Stop 方法](icordebugcontroller-stop-method.md)后继续执行托管线程。</span><span class="sxs-lookup"><span data-stu-id="71384-103">Resumes execution of managed threads after a call to [Stop Method](icordebugcontroller-stop-method.md).</span></span>
+
+## <a name="syntax"></a><span data-ttu-id="71384-104">语法</span><span class="sxs-lookup"><span data-stu-id="71384-104">Syntax</span></span>
+
+```cpp
+HRESULT Continue (
+    [in] BOOL fIsOutOfBand
+);
+```
+
+## <a name="parameters"></a><span data-ttu-id="71384-105">Parameters</span><span class="sxs-lookup"><span data-stu-id="71384-105">Parameters</span></span>
+
  `fIsOutOfBand`  
- <span data-ttu-id="eb4c5-106">[in]设置为`true`如果继续从带外事件; 否则设置为`false`。</span><span class="sxs-lookup"><span data-stu-id="eb4c5-106">[in] Set to `true` if continuing from an out-of-band event; otherwise, set to `false`.</span></span>  
+ <span data-ttu-id="71384-106">中如果从带外事件继续，则设置为 `true`;否则，设置为 `false`。</span><span class="sxs-lookup"><span data-stu-id="71384-106">[in] Set to `true` if continuing from an out-of-band event; otherwise, set to `false`.</span></span>
+
+## <a name="remarks"></a><span data-ttu-id="71384-107">备注</span><span class="sxs-lookup"><span data-stu-id="71384-107">Remarks</span></span>
+
+<span data-ttu-id="71384-108">@no__t 在调用 `ICorDebugController::Stop` 方法后继续执行此过程。</span><span class="sxs-lookup"><span data-stu-id="71384-108">`Continue` continues the process after a call to the `ICorDebugController::Stop` method.</span></span>
+
+<span data-ttu-id="71384-109">执行混合模式调试时，请不要在 Win32 事件线程上调用 `Continue`，除非从带外事件继续。</span><span class="sxs-lookup"><span data-stu-id="71384-109">When doing mixed-mode debugging, do not call `Continue` on the Win32 event thread unless you are continuing from an out-of-band event.</span></span>
+
+<span data-ttu-id="71384-110">*带内事件*是托管事件或普通非托管事件，在此期间，调试器支持与进程的托管状态交互。</span><span class="sxs-lookup"><span data-stu-id="71384-110">An *in-band event* is either a managed event or a normal unmanaged event during which the debugger supports interaction with the managed state of the process.</span></span> <span data-ttu-id="71384-111">在这种情况下，调试器接收[ICorDebugUnmanagedCallback：:D ebugevent](icordebugunmanagedcallback-debugevent-method.md)回调，并将其 @no__t 参数设置为 `false`。</span><span class="sxs-lookup"><span data-stu-id="71384-111">In this case, the debugger receives the [ICorDebugUnmanagedCallback::DebugEvent](icordebugunmanagedcallback-debugevent-method.md) callback with its `fOutOfBand` parameter set to `false`.</span></span>
   
-## <a name="remarks"></a><span data-ttu-id="eb4c5-107">备注</span><span class="sxs-lookup"><span data-stu-id="eb4c5-107">Remarks</span></span>  
- <span data-ttu-id="eb4c5-108">`Continue` 在调用后继续执行过程`ICorDebugController::Stop`方法。</span><span class="sxs-lookup"><span data-stu-id="eb4c5-108">`Continue` continues the process after a call to the `ICorDebugController::Stop` method.</span></span>  
-  
- <span data-ttu-id="eb4c5-109">在进行混合模式调试时，不要调用`Continue`上 Win32 事件线程除非您要从带外事件继续执行。</span><span class="sxs-lookup"><span data-stu-id="eb4c5-109">When doing mixed-mode debugging, do not call `Continue` on the Win32 event thread unless you are continuing from an out-of-band event.</span></span>  
-  
- <span data-ttu-id="eb4c5-110">*带内事件*托管的事件或正常非托管事件，在此期间，调试器支持与托管进程的状态的交互事件。</span><span class="sxs-lookup"><span data-stu-id="eb4c5-110">An *in-band event* is either a managed event or a normal unmanaged event during which the debugger supports interaction with the managed state of the process.</span></span> <span data-ttu-id="eb4c5-111">在这种情况下，调试器将接收[icordebugunmanagedcallback:: Debugevent](../../../../docs/framework/unmanaged-api/debugging/icordebugunmanagedcallback-debugevent-method.md)具有回调其`fOutOfBand`参数设置为`false`。</span><span class="sxs-lookup"><span data-stu-id="eb4c5-111">In this case, the debugger receives the [ICorDebugUnmanagedCallback::DebugEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugunmanagedcallback-debugevent-method.md) callback with its `fOutOfBand` parameter set to `false`.</span></span>  
-  
- <span data-ttu-id="eb4c5-112">*的带事件*是在此期间与托管状态的进程的交互是不可能同时由于事件停止该进程的非托管的事件。</span><span class="sxs-lookup"><span data-stu-id="eb4c5-112">An *out-of-band event* is an unmanaged event during which interaction with the managed state of the process is impossible while the process is stopped due to the event.</span></span> <span data-ttu-id="eb4c5-113">在这种情况下，调试器将接收`ICorDebugUnmanagedCallback::DebugEvent`具有回调其`fOutOfBand`参数设置为`true`。</span><span class="sxs-lookup"><span data-stu-id="eb4c5-113">In this case, the debugger receives the `ICorDebugUnmanagedCallback::DebugEvent` callback with its `fOutOfBand` parameter set to `true`.</span></span>  
-  
-## <a name="requirements"></a><span data-ttu-id="eb4c5-114">要求</span><span class="sxs-lookup"><span data-stu-id="eb4c5-114">Requirements</span></span>  
- <span data-ttu-id="eb4c5-115">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="eb4c5-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
-  
- <span data-ttu-id="eb4c5-116">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="eb4c5-116">**Header:** CorDebug.idl, CorDebug.h</span></span>  
-  
- <span data-ttu-id="eb4c5-117">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="eb4c5-117">**Library:** CorGuids.lib</span></span>  
-  
- <span data-ttu-id="eb4c5-118">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="eb4c5-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="eb4c5-119">请参阅</span><span class="sxs-lookup"><span data-stu-id="eb4c5-119">See also</span></span>
+<span data-ttu-id="71384-112">带*外事件*是一种非托管事件，在此过程中，由于发生事件，进程停止时无法与进程的托管状态交互。</span><span class="sxs-lookup"><span data-stu-id="71384-112">An *out-of-band event* is an unmanaged event during which interaction with the managed state of the process is impossible while the process is stopped due to the event.</span></span> <span data-ttu-id="71384-113">在这种情况下，调试器接收到 `ICorDebugUnmanagedCallback::DebugEvent` 回调，其 @no__t 参数设置为 `true`。</span><span class="sxs-lookup"><span data-stu-id="71384-113">In this case, the debugger receives the `ICorDebugUnmanagedCallback::DebugEvent` callback with its `fOutOfBand` parameter set to `true`.</span></span>
+
+## <a name="requirements"></a><span data-ttu-id="71384-114">要求</span><span class="sxs-lookup"><span data-stu-id="71384-114">Requirements</span></span>
+
+ <span data-ttu-id="71384-115">**适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="71384-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>
+
+ <span data-ttu-id="71384-116">**标头：** Cordebug.idl，Cordebug.idl</span><span class="sxs-lookup"><span data-stu-id="71384-116">**Header:** CorDebug.idl, CorDebug.h</span></span>
+
+ <span data-ttu-id="71384-117">**类库**CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="71384-117">**Library:** CorGuids.lib</span></span>
+
+ <span data-ttu-id="71384-118">**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="71384-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ 
