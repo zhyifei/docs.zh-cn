@@ -1,88 +1,76 @@
 ---
 title: 将模型部署到 Azure Functions
 description: 使用 Azure Functions 通过 Internet 提供 ML.NET 情绪分析机器学习模型进行预测
-ms.date: 08/20/2019
+ms.date: 09/12/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
-ms.openlocfilehash: 96b62017994da5b7b209c441b3e7fb760cad5201
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: ef028fee6cafcf4a775e061d9a5f91f0cf9a7e36
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666671"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332710"
 ---
-# <a name="deploy-a-model-to-azure-functions"></a><span data-ttu-id="6a80e-103">将模型部署到 Azure Functions</span><span class="sxs-lookup"><span data-stu-id="6a80e-103">Deploy a model to Azure Functions</span></span>
+# <a name="deploy-a-model-to-azure-functions"></a><span data-ttu-id="1b14f-103">将模型部署到 Azure Functions</span><span class="sxs-lookup"><span data-stu-id="1b14f-103">Deploy a model to Azure Functions</span></span>
 
-<span data-ttu-id="6a80e-104">了解如何通过 Azure Functions 无服务器环境部署预先训练的 ML.NET 机器学习模型，以便通过 HTTP 进行预测。</span><span class="sxs-lookup"><span data-stu-id="6a80e-104">Learn how to deploy a pre-trained ML.NET machine learning model for predictions over HTTP through an Azure Functions serverless environment.</span></span>
+<span data-ttu-id="1b14f-104">了解如何通过 Azure Functions 无服务器环境部署预先训练的 ML.NET 机器学习模型，以便通过 HTTP 进行预测。</span><span class="sxs-lookup"><span data-stu-id="1b14f-104">Learn how to deploy a pre-trained ML.NET machine learning model for predictions over HTTP through an Azure Functions serverless environment.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="6a80e-105">`PredictionEnginePool` 服务扩展目前处于预览状态。</span><span class="sxs-lookup"><span data-stu-id="6a80e-105">`PredictionEnginePool` service extension is currently in preview.</span></span>
+> <span data-ttu-id="1b14f-105">`PredictionEnginePool` 服务扩展目前处于预览状态。</span><span class="sxs-lookup"><span data-stu-id="1b14f-105">`PredictionEnginePool` service extension is currently in preview.</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="6a80e-106">系统必备</span><span class="sxs-lookup"><span data-stu-id="6a80e-106">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="1b14f-106">系统必备</span><span class="sxs-lookup"><span data-stu-id="1b14f-106">Prerequisites</span></span>
 
-- <span data-ttu-id="6a80e-107">安装了“.NET Core 跨平台开发”工作负载和“Azure 开发”的 [Visual Studio 2017 15.6 或更高版本](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)。</span><span class="sxs-lookup"><span data-stu-id="6a80e-107">[Visual Studio 2017 15.6 or later](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) with the ".NET Core cross-platform development" workload and "Azure development" installed.</span></span>
-- <span data-ttu-id="6a80e-108">Microsoft.NET.Sdk.Functions NuGet 包版本 1.0.28+。</span><span class="sxs-lookup"><span data-stu-id="6a80e-108">Microsoft.NET.Sdk.Functions NuGet Package version 1.0.28+.</span></span>
-- [<span data-ttu-id="6a80e-109">Azure Functions 工具</span><span class="sxs-lookup"><span data-stu-id="6a80e-109">Azure Functions Tools</span></span>](/azure/azure-functions/functions-develop-vs#check-your-tools-version)
-- <span data-ttu-id="6a80e-110">Powershell</span><span class="sxs-lookup"><span data-stu-id="6a80e-110">Powershell</span></span>
-- <span data-ttu-id="6a80e-111">预先定型的模型。</span><span class="sxs-lookup"><span data-stu-id="6a80e-111">Pre-trained model.</span></span> <span data-ttu-id="6a80e-112">使用 [ML.NET 情绪分析教程](../tutorials/sentiment-analysis.md)生成自己的模型，或下载此[预先训练的情绪分析机器学习模型](https://github.com/dotnet/samples/blob/master/machine-learning/models/sentimentanalysis/sentiment_model.zip)</span><span class="sxs-lookup"><span data-stu-id="6a80e-112">Use the [ML.NET Sentiment Analysis tutorial](../tutorials/sentiment-analysis.md) to build your own model or download this [pre-trained sentiment analysis machine learning model](https://github.com/dotnet/samples/blob/master/machine-learning/models/sentimentanalysis/sentiment_model.zip)</span></span>
+- <span data-ttu-id="1b14f-107">安装了“.NET Core 跨平台开发”工作负载和“Azure 开发”的 [Visual Studio 2017 15.6 或更高版本](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)。</span><span class="sxs-lookup"><span data-stu-id="1b14f-107">[Visual Studio 2017 15.6 or later](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) with the ".NET Core cross-platform development" workload and "Azure development" installed.</span></span>
+- <span data-ttu-id="1b14f-108">Microsoft.NET.Sdk.Functions NuGet 包版本 1.0.28+。</span><span class="sxs-lookup"><span data-stu-id="1b14f-108">Microsoft.NET.Sdk.Functions NuGet Package version 1.0.28+.</span></span>
+- [<span data-ttu-id="1b14f-109">Azure Functions 工具</span><span class="sxs-lookup"><span data-stu-id="1b14f-109">Azure Functions Tools</span></span>](/azure/azure-functions/functions-develop-vs#check-your-tools-version)
+- <span data-ttu-id="1b14f-110">Powershell</span><span class="sxs-lookup"><span data-stu-id="1b14f-110">Powershell</span></span>
+- <span data-ttu-id="1b14f-111">预先定型的模型。</span><span class="sxs-lookup"><span data-stu-id="1b14f-111">Pre-trained model.</span></span> <span data-ttu-id="1b14f-112">使用 [ML.NET 情绪分析教程](../tutorials/sentiment-analysis.md)生成自己的模型，或下载此[预先训练的情绪分析机器学习模型](https://github.com/dotnet/samples/blob/master/machine-learning/models/sentimentanalysis/sentiment_model.zip)</span><span class="sxs-lookup"><span data-stu-id="1b14f-112">Use the [ML.NET Sentiment Analysis tutorial](../tutorials/sentiment-analysis.md) to build your own model or download this [pre-trained sentiment analysis machine learning model](https://github.com/dotnet/samples/blob/master/machine-learning/models/sentimentanalysis/sentiment_model.zip)</span></span>
 
-## <a name="create-azure-functions-project"></a><span data-ttu-id="6a80e-113">创建 Azure Functions 项目</span><span class="sxs-lookup"><span data-stu-id="6a80e-113">Create Azure Functions project</span></span>
+## <a name="create-azure-functions-project"></a><span data-ttu-id="1b14f-113">创建 Azure Functions 项目</span><span class="sxs-lookup"><span data-stu-id="1b14f-113">Create Azure Functions project</span></span>
 
-1. <span data-ttu-id="6a80e-114">打开 Visual Studio 2017。</span><span class="sxs-lookup"><span data-stu-id="6a80e-114">Open Visual Studio 2017.</span></span> <span data-ttu-id="6a80e-115">从菜单栏中选择“文件”   > “新建”   > “项目”  。</span><span class="sxs-lookup"><span data-stu-id="6a80e-115">Select **File** > **New** > **Project** from the menu bar.</span></span> <span data-ttu-id="6a80e-116">在“新项目”  对话框中，依次选择“Visual C#”  节点和“云”  节点。</span><span class="sxs-lookup"><span data-stu-id="6a80e-116">In the **New Project** dialog, select the **Visual C#** node followed by the **Cloud** node.</span></span> <span data-ttu-id="6a80e-117">然后，选择“Azure Functions”  项目模板。</span><span class="sxs-lookup"><span data-stu-id="6a80e-117">Then select the **Azure Functions** project template.</span></span> <span data-ttu-id="6a80e-118">在“名称”  文本框中，键入“SentimentAnalysisFunctionsApp”，再选择“确定”  按钮。</span><span class="sxs-lookup"><span data-stu-id="6a80e-118">In the **Name** text box, type "SentimentAnalysisFunctionsApp" and then select the **OK** button.</span></span>
-1. <span data-ttu-id="6a80e-119">在“新项目”  对话框中，打开项目选项上方的下拉列表，并选择“Azure Functions v2 (.NET Core)”  。</span><span class="sxs-lookup"><span data-stu-id="6a80e-119">In the **New Project** dialog, open the dropdown above the project options and select **Azure Functions v2 (.NET Core)**.</span></span> <span data-ttu-id="6a80e-120">然后，依次选择“Http 触发器”  项目和“确定”  按钮。</span><span class="sxs-lookup"><span data-stu-id="6a80e-120">Then, select the **Http trigger** project and then select the **OK** button.</span></span>
-1. <span data-ttu-id="6a80e-121">在项目中创建“MLModels”  目录，用于保存模型：</span><span class="sxs-lookup"><span data-stu-id="6a80e-121">Create a directory named *MLModels* in your project to save your model:</span></span>
+1. <span data-ttu-id="1b14f-114">打开 Visual Studio 2017。</span><span class="sxs-lookup"><span data-stu-id="1b14f-114">Open Visual Studio 2017.</span></span> <span data-ttu-id="1b14f-115">从菜单栏中选择“文件”   > “新建”   > “项目”  。</span><span class="sxs-lookup"><span data-stu-id="1b14f-115">Select **File** > **New** > **Project** from the menu bar.</span></span> <span data-ttu-id="1b14f-116">在“新项目”  对话框中，依次选择“Visual C#”  节点和“云”  节点。</span><span class="sxs-lookup"><span data-stu-id="1b14f-116">In the **New Project** dialog, select the **Visual C#** node followed by the **Cloud** node.</span></span> <span data-ttu-id="1b14f-117">然后，选择“Azure Functions”  项目模板。</span><span class="sxs-lookup"><span data-stu-id="1b14f-117">Then select the **Azure Functions** project template.</span></span> <span data-ttu-id="1b14f-118">在“名称”  文本框中，键入“SentimentAnalysisFunctionsApp”，再选择“确定”  按钮。</span><span class="sxs-lookup"><span data-stu-id="1b14f-118">In the **Name** text box, type "SentimentAnalysisFunctionsApp" and then select the **OK** button.</span></span>
+1. <span data-ttu-id="1b14f-119">在“新项目”  对话框中，打开项目选项上方的下拉列表，并选择“Azure Functions v2 (.NET Core)”  。</span><span class="sxs-lookup"><span data-stu-id="1b14f-119">In the **New Project** dialog, open the dropdown above the project options and select **Azure Functions v2 (.NET Core)**.</span></span> <span data-ttu-id="1b14f-120">然后，依次选择“Http 触发器”  项目和“确定”  按钮。</span><span class="sxs-lookup"><span data-stu-id="1b14f-120">Then, select the **Http trigger** project and then select the **OK** button.</span></span>
+1. <span data-ttu-id="1b14f-121">在项目中创建“MLModels”  目录，用于保存模型：</span><span class="sxs-lookup"><span data-stu-id="1b14f-121">Create a directory named *MLModels* in your project to save your model:</span></span>
 
-    <span data-ttu-id="6a80e-122">在“解决方案资源管理器”  中，右键单击项目，然后选择“添加”   > “新文件夹”  。</span><span class="sxs-lookup"><span data-stu-id="6a80e-122">In **Solution Explorer**, right-click on your project and select **Add** > **New Folder**.</span></span> <span data-ttu-id="6a80e-123">键入“MLModels”，再按 Enter。</span><span class="sxs-lookup"><span data-stu-id="6a80e-123">Type "MLModels" and hit Enter.</span></span>
+    <span data-ttu-id="1b14f-122">在“解决方案资源管理器”  中，右键单击项目，然后选择“添加”   > “新文件夹”  。</span><span class="sxs-lookup"><span data-stu-id="1b14f-122">In **Solution Explorer**, right-click on your project and select **Add** > **New Folder**.</span></span> <span data-ttu-id="1b14f-123">键入“MLModels”，再按 Enter。</span><span class="sxs-lookup"><span data-stu-id="1b14f-123">Type "MLModels" and hit Enter.</span></span>
 
-1. <span data-ttu-id="6a80e-124">安装“Microsoft.ML NuGet 包”  ：</span><span class="sxs-lookup"><span data-stu-id="6a80e-124">Install the **Microsoft.ML NuGet Package**:</span></span>
+1. <span data-ttu-id="1b14f-124">安装“Microsoft.ML NuGet 包”  ：</span><span class="sxs-lookup"><span data-stu-id="1b14f-124">Install the **Microsoft.ML NuGet Package**:</span></span>
 
-    <span data-ttu-id="6a80e-125">在“解决方案资源管理器”中，右键单击项目，然后选择“管理 NuGet 包”  。</span><span class="sxs-lookup"><span data-stu-id="6a80e-125">In Solution Explorer, right-click on your project and select **Manage NuGet Packages**.</span></span> <span data-ttu-id="6a80e-126">将“nuget.org”选择为“包源”，选择“浏览”选项卡并搜索“Microsoft.ML”  ，在列表中选择该包，然后选择“安装”  按钮。</span><span class="sxs-lookup"><span data-stu-id="6a80e-126">Choose "nuget.org" as the Package source, select the Browse tab, search for **Microsoft.ML**, select that package in the list, and select the **Install** button.</span></span> <span data-ttu-id="6a80e-127">选择“预览更改”  对话框上的“确定”  按钮，如果你同意所列包的许可条款，则选择“接受许可”  对话框上的“我接受”  按钮。</span><span class="sxs-lookup"><span data-stu-id="6a80e-127">Select the **OK** button on the **Preview Changes** dialog and then select the **I Accept** button on the **License Acceptance** dialog if you agree with the license terms for the packages listed.</span></span>
+    <span data-ttu-id="1b14f-125">在“解决方案资源管理器”中，右键单击项目，然后选择“管理 NuGet 包”  。</span><span class="sxs-lookup"><span data-stu-id="1b14f-125">In Solution Explorer, right-click on your project and select **Manage NuGet Packages**.</span></span> <span data-ttu-id="1b14f-126">将“nuget.org”选择为“包源”，选择“浏览”选项卡并搜索“Microsoft.ML”  ，在列表中选择该包，然后选择“安装”  按钮。</span><span class="sxs-lookup"><span data-stu-id="1b14f-126">Choose "nuget.org" as the Package source, select the Browse tab, search for **Microsoft.ML**, select that package in the list, and select the **Install** button.</span></span> <span data-ttu-id="1b14f-127">选择“预览更改”  对话框上的“确定”  按钮，如果你同意所列包的许可条款，则选择“接受许可”  对话框上的“我接受”  按钮。</span><span class="sxs-lookup"><span data-stu-id="1b14f-127">Select the **OK** button on the **Preview Changes** dialog and then select the **I Accept** button on the **License Acceptance** dialog if you agree with the license terms for the packages listed.</span></span>
 
-1. <span data-ttu-id="6a80e-128">安装 Microsoft.Azure.Functions.Extensions NuGet 包  ：</span><span class="sxs-lookup"><span data-stu-id="6a80e-128">Install the **Microsoft.Azure.Functions.Extensions NuGet Package**:</span></span>
+1. <span data-ttu-id="1b14f-128">安装 Microsoft.Azure.Functions.Extensions NuGet 包  ：</span><span class="sxs-lookup"><span data-stu-id="1b14f-128">Install the **Microsoft.Azure.Functions.Extensions NuGet Package**:</span></span>
 
-    <span data-ttu-id="6a80e-129">在“解决方案资源管理器”中，右键单击项目，然后选择“管理 NuGet 包”  。</span><span class="sxs-lookup"><span data-stu-id="6a80e-129">In Solution Explorer, right-click on your project and select **Manage NuGet Packages**.</span></span> <span data-ttu-id="6a80e-130">选择“nuget.org”作为包源，然后选择“浏览”选项卡并搜索“Microsoft.Azure.Functions.Extensions”，在列表中选择该包，再选择“安装”按钮   。</span><span class="sxs-lookup"><span data-stu-id="6a80e-130">Choose "nuget.org" as the Package source, select the Browse tab, search for **Microsoft.Azure.Functions.Extensions**, select that package in the list, and select the **Install** button.</span></span> <span data-ttu-id="6a80e-131">选择“预览更改”  对话框上的“确定”  按钮，如果你同意所列包的许可条款，则选择“接受许可”  对话框上的“我接受”  按钮。</span><span class="sxs-lookup"><span data-stu-id="6a80e-131">Select the **OK** button on the **Preview Changes** dialog and then select the **I Accept** button on the **License Acceptance** dialog if you agree with the license terms for the packages listed.</span></span>
+    <span data-ttu-id="1b14f-129">在“解决方案资源管理器”中，右键单击项目，然后选择“管理 NuGet 包”  。</span><span class="sxs-lookup"><span data-stu-id="1b14f-129">In Solution Explorer, right-click on your project and select **Manage NuGet Packages**.</span></span> <span data-ttu-id="1b14f-130">选择“nuget.org”作为包源，然后选择“浏览”选项卡并搜索“Microsoft.Azure.Functions.Extensions”，在列表中选择该包，再选择“安装”按钮   。</span><span class="sxs-lookup"><span data-stu-id="1b14f-130">Choose "nuget.org" as the Package source, select the Browse tab, search for **Microsoft.Azure.Functions.Extensions**, select that package in the list, and select the **Install** button.</span></span> <span data-ttu-id="1b14f-131">选择“预览更改”  对话框上的“确定”  按钮，如果你同意所列包的许可条款，则选择“接受许可”  对话框上的“我接受”  按钮。</span><span class="sxs-lookup"><span data-stu-id="1b14f-131">Select the **OK** button on the **Preview Changes** dialog and then select the **I Accept** button on the **License Acceptance** dialog if you agree with the license terms for the packages listed.</span></span>
 
-1. <span data-ttu-id="6a80e-132">安装 **Microsoft.Extensions.ML NuGet 包**：</span><span class="sxs-lookup"><span data-stu-id="6a80e-132">Install the **Microsoft.Extensions.ML NuGet Package**:</span></span>
+1. <span data-ttu-id="1b14f-132">安装 **Microsoft.Extensions.ML NuGet 包**：</span><span class="sxs-lookup"><span data-stu-id="1b14f-132">Install the **Microsoft.Extensions.ML NuGet Package**:</span></span>
 
-    <span data-ttu-id="6a80e-133">在“解决方案资源管理器”中，右键单击项目，然后选择“管理 NuGet 包”  。</span><span class="sxs-lookup"><span data-stu-id="6a80e-133">In Solution Explorer, right-click on your project and select **Manage NuGet Packages**.</span></span> <span data-ttu-id="6a80e-134">选择“nuget.org”作为包源，然后选择“浏览”选项卡并搜索“Microsoft.Extensions.ML”，在列表中选择包，再选择“安装”按钮   。</span><span class="sxs-lookup"><span data-stu-id="6a80e-134">Choose "nuget.org" as the Package source, select the Browse tab, search for **Microsoft.Extensions.ML**, select that package in the list, and select the **Install** button.</span></span> <span data-ttu-id="6a80e-135">选择“预览更改”  对话框上的“确定”  按钮，如果你同意所列包的许可条款，则选择“接受许可”  对话框上的“我接受”  按钮。</span><span class="sxs-lookup"><span data-stu-id="6a80e-135">Select the **OK** button on the **Preview Changes** dialog and then select the **I Accept** button on the **License Acceptance** dialog if you agree with the license terms for the packages listed.</span></span>
+    <span data-ttu-id="1b14f-133">在“解决方案资源管理器”中，右键单击项目，然后选择“管理 NuGet 包”  。</span><span class="sxs-lookup"><span data-stu-id="1b14f-133">In Solution Explorer, right-click on your project and select **Manage NuGet Packages**.</span></span> <span data-ttu-id="1b14f-134">选择“nuget.org”作为包源，然后选择“浏览”选项卡并搜索“Microsoft.Extensions.ML”，在列表中选择包，再选择“安装”按钮   。</span><span class="sxs-lookup"><span data-stu-id="1b14f-134">Choose "nuget.org" as the Package source, select the Browse tab, search for **Microsoft.Extensions.ML**, select that package in the list, and select the **Install** button.</span></span> <span data-ttu-id="1b14f-135">选择“预览更改”  对话框上的“确定”  按钮，如果你同意所列包的许可条款，则选择“接受许可”  对话框上的“我接受”  按钮。</span><span class="sxs-lookup"><span data-stu-id="1b14f-135">Select the **OK** button on the **Preview Changes** dialog and then select the **I Accept** button on the **License Acceptance** dialog if you agree with the license terms for the packages listed.</span></span>
 
-1. <span data-ttu-id="6a80e-136">将 Microsoft.NET.Sdk.Functions NuGet 包更新为版本 1.0.28+  ：</span><span class="sxs-lookup"><span data-stu-id="6a80e-136">Update the **Microsoft.NET.Sdk.Functions NuGet Package** to version 1.0.28+:</span></span>
+1. <span data-ttu-id="1b14f-136">将 Microsoft.NET.Sdk.Functions NuGet 包更新为版本 1.0.28+  ：</span><span class="sxs-lookup"><span data-stu-id="1b14f-136">Update the **Microsoft.NET.Sdk.Functions NuGet Package** to version 1.0.28+:</span></span>
 
-    <span data-ttu-id="6a80e-137">在“解决方案资源管理器”中，右键单击项目，然后选择“管理 NuGet 包”  。</span><span class="sxs-lookup"><span data-stu-id="6a80e-137">In Solution Explorer, right-click on your project and select **Manage NuGet Packages**.</span></span> <span data-ttu-id="6a80e-138">选择“nuget.org”作为包源，然后选择“安装”选项卡并搜索“Microsoft.NET.Sdk.Functions”，在列表中选择该包，再从“版本”下拉列表中选择 1.0.28 或更高版本，并选择“更新”按钮   。</span><span class="sxs-lookup"><span data-stu-id="6a80e-138">Choose "nuget.org" as the Package source, select the Installed tab, search for **Microsoft.NET.Sdk.Functions**, select that package in the list, select 1.0.28 or later from the Version dropdown, and select the **Update** button.</span></span> <span data-ttu-id="6a80e-139">选择“预览更改”  对话框上的“确定”  按钮，如果你同意所列包的许可条款，则选择“接受许可”  对话框上的“我接受”  按钮。</span><span class="sxs-lookup"><span data-stu-id="6a80e-139">Select the **OK** button on the **Preview Changes** dialog and then select the **I Accept** button on the **License Acceptance** dialog if you agree with the license terms for the packages listed.</span></span>
+    <span data-ttu-id="1b14f-137">在“解决方案资源管理器”中，右键单击项目，然后选择“管理 NuGet 包”  。</span><span class="sxs-lookup"><span data-stu-id="1b14f-137">In Solution Explorer, right-click on your project and select **Manage NuGet Packages**.</span></span> <span data-ttu-id="1b14f-138">选择“nuget.org”作为包源，然后选择“安装”选项卡并搜索“Microsoft.NET.Sdk.Functions”，在列表中选择该包，再从“版本”下拉列表中选择 1.0.28 或更高版本，并选择“更新”按钮   。</span><span class="sxs-lookup"><span data-stu-id="1b14f-138">Choose "nuget.org" as the Package source, select the Installed tab, search for **Microsoft.NET.Sdk.Functions**, select that package in the list, select 1.0.28 or later from the Version dropdown, and select the **Update** button.</span></span> <span data-ttu-id="1b14f-139">选择“预览更改”  对话框上的“确定”  按钮，如果你同意所列包的许可条款，则选择“接受许可”  对话框上的“我接受”  按钮。</span><span class="sxs-lookup"><span data-stu-id="1b14f-139">Select the **OK** button on the **Preview Changes** dialog and then select the **I Accept** button on the **License Acceptance** dialog if you agree with the license terms for the packages listed.</span></span>
 
-## <a name="add-pre-trained-model-to-project"></a><span data-ttu-id="6a80e-140">将预先训练的模型添加到项目</span><span class="sxs-lookup"><span data-stu-id="6a80e-140">Add pre-trained model to project</span></span>
+## <a name="add-pre-trained-model-to-project"></a><span data-ttu-id="1b14f-140">将预先训练的模型添加到项目</span><span class="sxs-lookup"><span data-stu-id="1b14f-140">Add pre-trained model to project</span></span>
 
-1. <span data-ttu-id="6a80e-141">将预生成的模型复制到 MLModels  文件夹。</span><span class="sxs-lookup"><span data-stu-id="6a80e-141">Copy your pre-built model to the *MLModels* folder.</span></span>
-1. <span data-ttu-id="6a80e-142">在“解决方案资源管理器”中，右键单击预生成的模型文件，并选择“属性”  。</span><span class="sxs-lookup"><span data-stu-id="6a80e-142">In Solution Explorer, right-click your pre-built model file and select **Properties**.</span></span> <span data-ttu-id="6a80e-143">在“高级”下，将“复制到输出目录”的值更改为“如果较新则复制”    。</span><span class="sxs-lookup"><span data-stu-id="6a80e-143">Under **Advanced**, change the value of **Copy to Output Directory** to **Copy if newer**.</span></span>
+1. <span data-ttu-id="1b14f-141">将预生成的模型复制到 MLModels  文件夹。</span><span class="sxs-lookup"><span data-stu-id="1b14f-141">Copy your pre-built model to the *MLModels* folder.</span></span>
+1. <span data-ttu-id="1b14f-142">在“解决方案资源管理器”中，右键单击预生成的模型文件，并选择“属性”  。</span><span class="sxs-lookup"><span data-stu-id="1b14f-142">In Solution Explorer, right-click your pre-built model file and select **Properties**.</span></span> <span data-ttu-id="1b14f-143">在“高级”下，将“复制到输出目录”的值更改为“如果较新则复制”    。</span><span class="sxs-lookup"><span data-stu-id="1b14f-143">Under **Advanced**, change the value of **Copy to Output Directory** to **Copy if newer**.</span></span>
 
-## <a name="create-azure-function-to-analyze-sentiment"></a><span data-ttu-id="6a80e-144">创建 Azure 函数用于分析情绪</span><span class="sxs-lookup"><span data-stu-id="6a80e-144">Create Azure Function to analyze sentiment</span></span>
+## <a name="create-azure-function-to-analyze-sentiment"></a><span data-ttu-id="1b14f-144">创建 Azure 函数用于分析情绪</span><span class="sxs-lookup"><span data-stu-id="1b14f-144">Create Azure Function to analyze sentiment</span></span>
 
-<span data-ttu-id="6a80e-145">创建情绪预测类。</span><span class="sxs-lookup"><span data-stu-id="6a80e-145">Create a class to predict sentiment.</span></span> <span data-ttu-id="6a80e-146">向项目添加一个新类：</span><span class="sxs-lookup"><span data-stu-id="6a80e-146">Add a new class to your project:</span></span>
+<span data-ttu-id="1b14f-145">创建情绪预测类。</span><span class="sxs-lookup"><span data-stu-id="1b14f-145">Create a class to predict sentiment.</span></span> <span data-ttu-id="1b14f-146">向项目添加一个新类：</span><span class="sxs-lookup"><span data-stu-id="1b14f-146">Add a new class to your project:</span></span>
 
-1. <span data-ttu-id="6a80e-147">在“解决方案资源管理器”  中，右键单击项目，然后选择“添加”   > “新项”  。</span><span class="sxs-lookup"><span data-stu-id="6a80e-147">In **Solution Explorer**, right-click the project, and then select **Add** > **New Item**.</span></span>
+1. <span data-ttu-id="1b14f-147">在“解决方案资源管理器”  中，右键单击项目，然后选择“添加”   > “新项”  。</span><span class="sxs-lookup"><span data-stu-id="1b14f-147">In **Solution Explorer**, right-click the project, and then select **Add** > **New Item**.</span></span>
 
-1. <span data-ttu-id="6a80e-148">在“添加新项”  对话框中，选择“Azure 函数”  ，并将“名称”  字段更改为“AnalyzeSentiment.cs”  。</span><span class="sxs-lookup"><span data-stu-id="6a80e-148">In the **Add New Item** dialog box, select **Azure Function** and change the **Name** field to *AnalyzeSentiment.cs*.</span></span> <span data-ttu-id="6a80e-149">然后，选择“添加”  按钮。</span><span class="sxs-lookup"><span data-stu-id="6a80e-149">Then, select the **Add** button.</span></span>
+1. <span data-ttu-id="1b14f-148">在“添加新项”  对话框中，选择“Azure 函数”  ，并将“名称”  字段更改为“AnalyzeSentiment.cs”  。</span><span class="sxs-lookup"><span data-stu-id="1b14f-148">In the **Add New Item** dialog box, select **Azure Function** and change the **Name** field to *AnalyzeSentiment.cs*.</span></span> <span data-ttu-id="1b14f-149">然后，选择“添加”  按钮。</span><span class="sxs-lookup"><span data-stu-id="1b14f-149">Then, select the **Add** button.</span></span>
 
-1. <span data-ttu-id="6a80e-150">在“新 Azure 函数”  对话框中，选择“Http 触发器”  。</span><span class="sxs-lookup"><span data-stu-id="6a80e-150">In the **New Azure Function** dialog box, select **Http Trigger**.</span></span> <span data-ttu-id="6a80e-151">然后，选择“确定”  按钮。</span><span class="sxs-lookup"><span data-stu-id="6a80e-151">Then, select the **OK** button.</span></span>
+1. <span data-ttu-id="1b14f-150">在“新 Azure 函数”  对话框中，选择“Http 触发器”  。</span><span class="sxs-lookup"><span data-stu-id="1b14f-150">In the **New Azure Function** dialog box, select **Http Trigger**.</span></span> <span data-ttu-id="1b14f-151">然后，选择“确定”  按钮。</span><span class="sxs-lookup"><span data-stu-id="1b14f-151">Then, select the **OK** button.</span></span>
 
-    <span data-ttu-id="6a80e-152">此时，AnalyzeSentiment.cs  文件在代码编辑器中打开。</span><span class="sxs-lookup"><span data-stu-id="6a80e-152">The *AnalyzeSentiment.cs* file opens in the code editor.</span></span> <span data-ttu-id="6a80e-153">将以下 `using` 语句添加到 *AnalyzeSentiment.cs* 的顶部：</span><span class="sxs-lookup"><span data-stu-id="6a80e-153">Add the following `using` statement to the top of *AnalyzeSentiment.cs*:</span></span>
+    <span data-ttu-id="1b14f-152">此时，AnalyzeSentiment.cs  文件在代码编辑器中打开。</span><span class="sxs-lookup"><span data-stu-id="1b14f-152">The *AnalyzeSentiment.cs* file opens in the code editor.</span></span> <span data-ttu-id="1b14f-153">将以下 `using` 语句添加到 *AnalyzeSentiment.cs* 的顶部：</span><span class="sxs-lookup"><span data-stu-id="1b14f-153">Add the following `using` statement to the top of *AnalyzeSentiment.cs*:</span></span>
 
-    ```csharp
-    using System;
-    using System.IO;
-    using System.Threading.Tasks;
-    using Microsoft.AspNetCore.Mvc;
-    using Microsoft.Azure.WebJobs;
-    using Microsoft.Azure.WebJobs.Extensions.Http;
-    using Microsoft.AspNetCore.Http;
-    using Microsoft.Extensions.Logging;
-    using Newtonsoft.Json;
-    using Microsoft.Extensions.ML;
-    using SentimentAnalysisFunctionsApp.DataModels;
-    ```
+    [!code-csharp [AnalyzeUsings](~/machinelearning-samples/samples/csharp/end-to-end-apps/ScalableMLModelOnAzureFunction/SentimentAnalysisFunctionsApp/AnalyzeSentiment.cs#L1-L11)]
 
-    <span data-ttu-id="6a80e-154">默认情况下，`AnalyzeSentiment` 类为 `static`。</span><span class="sxs-lookup"><span data-stu-id="6a80e-154">By default, the `AnalyzeSentiment` class is `static`.</span></span> <span data-ttu-id="6a80e-155">确保从类定义中删除 `static` 关键字。</span><span class="sxs-lookup"><span data-stu-id="6a80e-155">Make sure to remove the `static` keyword from the class definition.</span></span>
+    <span data-ttu-id="1b14f-154">默认情况下，`AnalyzeSentiment` 类为 `static`。</span><span class="sxs-lookup"><span data-stu-id="1b14f-154">By default, the `AnalyzeSentiment` class is `static`.</span></span> <span data-ttu-id="1b14f-155">确保从类定义中删除 `static` 关键字。</span><span class="sxs-lookup"><span data-stu-id="1b14f-155">Make sure to remove the `static` keyword from the class definition.</span></span>
 
     ```csharp
     public class AnalyzeSentiment
@@ -91,68 +79,43 @@ ms.locfileid: "69666671"
     }
     ```
 
-## <a name="create-data-models"></a><span data-ttu-id="6a80e-156">创建数据模型</span><span class="sxs-lookup"><span data-stu-id="6a80e-156">Create data models</span></span>
+## <a name="create-data-models"></a><span data-ttu-id="1b14f-156">创建数据模型</span><span class="sxs-lookup"><span data-stu-id="1b14f-156">Create data models</span></span>
 
-<span data-ttu-id="6a80e-157">需要为输入数据和预测创建一些类。</span><span class="sxs-lookup"><span data-stu-id="6a80e-157">You need to create some classes for your input data and predictions.</span></span> <span data-ttu-id="6a80e-158">向项目添加一个新类：</span><span class="sxs-lookup"><span data-stu-id="6a80e-158">Add a new class to your project:</span></span>
+<span data-ttu-id="1b14f-157">需要为输入数据和预测创建一些类。</span><span class="sxs-lookup"><span data-stu-id="1b14f-157">You need to create some classes for your input data and predictions.</span></span> <span data-ttu-id="1b14f-158">向项目添加一个新类：</span><span class="sxs-lookup"><span data-stu-id="1b14f-158">Add a new class to your project:</span></span>
 
-1. <span data-ttu-id="6a80e-159">在项目中创建“DataModels”  目录，用于保存数据模型：在“解决方案资源管理器”中，右键单击项目，并依次选择“添加”>“新文件夹”  。</span><span class="sxs-lookup"><span data-stu-id="6a80e-159">Create a directory named *DataModels* in your project to save your data models: In Solution Explorer, right-click on your project and select **Add > New Folder**.</span></span> <span data-ttu-id="6a80e-160">键入“DataModels”，再按 Enter。</span><span class="sxs-lookup"><span data-stu-id="6a80e-160">Type "DataModels" and hit Enter.</span></span>
-2. <span data-ttu-id="6a80e-161">在“解决方案资源管理器”中，右键单击“DataModels”  目录，再依次选择“添加”>“新项”  。</span><span class="sxs-lookup"><span data-stu-id="6a80e-161">In Solution Explorer, right-click the *DataModels* directory, and then select **Add > New Item**.</span></span>
-3. <span data-ttu-id="6a80e-162">在“添加新项”  对话框中，选择“类”  并将“名称”  字段更改为“SentimentData.cs”  。</span><span class="sxs-lookup"><span data-stu-id="6a80e-162">In the **Add New Item** dialog box, select **Class** and change the **Name** field to *SentimentData.cs*.</span></span> <span data-ttu-id="6a80e-163">然后，选择“添加”  按钮。</span><span class="sxs-lookup"><span data-stu-id="6a80e-163">Then, select the **Add** button.</span></span> 
+1. <span data-ttu-id="1b14f-159">在项目中创建“DataModels”  目录，用于保存数据模型：在“解决方案资源管理器”中，右键单击项目，并依次选择“添加”>“新文件夹”  。</span><span class="sxs-lookup"><span data-stu-id="1b14f-159">Create a directory named *DataModels* in your project to save your data models: In Solution Explorer, right-click on your project and select **Add > New Folder**.</span></span> <span data-ttu-id="1b14f-160">键入“DataModels”，再按 Enter。</span><span class="sxs-lookup"><span data-stu-id="1b14f-160">Type "DataModels" and hit Enter.</span></span>
+2. <span data-ttu-id="1b14f-161">在“解决方案资源管理器”中，右键单击“DataModels”  目录，再依次选择“添加”>“新项”  。</span><span class="sxs-lookup"><span data-stu-id="1b14f-161">In Solution Explorer, right-click the *DataModels* directory, and then select **Add > New Item**.</span></span>
+3. <span data-ttu-id="1b14f-162">在“添加新项”  对话框中，选择“类”  并将“名称”  字段更改为“SentimentData.cs”  。</span><span class="sxs-lookup"><span data-stu-id="1b14f-162">In the **Add New Item** dialog box, select **Class** and change the **Name** field to *SentimentData.cs*.</span></span> <span data-ttu-id="1b14f-163">然后，选择“添加”  按钮。</span><span class="sxs-lookup"><span data-stu-id="1b14f-163">Then, select the **Add** button.</span></span> 
 
-    <span data-ttu-id="6a80e-164">“SentimentData.cs”  文件随即在代码编辑器中打开。</span><span class="sxs-lookup"><span data-stu-id="6a80e-164">The *SentimentData.cs* file opens in the code editor.</span></span> <span data-ttu-id="6a80e-165">将以下 using 语句添加到 SentimentData.cs  顶部：</span><span class="sxs-lookup"><span data-stu-id="6a80e-165">Add the following using statement to the top of *SentimentData.cs*:</span></span>
+    <span data-ttu-id="1b14f-164">“SentimentData.cs”  文件随即在代码编辑器中打开。</span><span class="sxs-lookup"><span data-stu-id="1b14f-164">The *SentimentData.cs* file opens in the code editor.</span></span> <span data-ttu-id="1b14f-165">将以下 using 语句添加到 SentimentData.cs  顶部：</span><span class="sxs-lookup"><span data-stu-id="1b14f-165">Add the following using statement to the top of *SentimentData.cs*:</span></span>
 
-    ```csharp
-    using Microsoft.ML.Data;
-    ```
+    [!code-csharp [SentimentDataUsings](~/machinelearning-samples/samples/csharp/end-to-end-apps/ScalableMLModelOnAzureFunction/SentimentAnalysisFunctionsApp/DataModels/SentimentData.cs#L1)]
 
-    <span data-ttu-id="6a80e-166">删除现有类定义，并将以下代码添加到 SentimentData.cs  文件：</span><span class="sxs-lookup"><span data-stu-id="6a80e-166">Remove the existing class definition and add the following code to the *SentimentData.cs* file:</span></span>
-    
-    ```csharp
-    public class SentimentData
-    {
-        [LoadColumn(0)]
-        public string SentimentText;
+    <span data-ttu-id="1b14f-166">删除现有类定义，并将以下代码添加到 SentimentData.cs  文件：</span><span class="sxs-lookup"><span data-stu-id="1b14f-166">Remove the existing class definition and add the following code to the *SentimentData.cs* file:</span></span>
 
-        [LoadColumn(1)]
-        [ColumnName("Label")]
-        public bool Sentiment;
-    }
-    ```
+    [!code-csharp [SentimentData](~/machinelearning-samples/samples/csharp/end-to-end-apps/ScalableMLModelOnAzureFunction/SentimentAnalysisFunctionsApp/DataModels/SentimentData.cs#L5-L13)]
 
-4. <span data-ttu-id="6a80e-167">在“解决方案资源管理器”中，右键单击“DataModels”  目录，再依次选择“添加”>“新项”  。</span><span class="sxs-lookup"><span data-stu-id="6a80e-167">In Solution Explorer, right-click the *DataModels* directory, and then select **Add > New Item**.</span></span>
-5. <span data-ttu-id="6a80e-168">在“添加新项”  对话框中，选择“类”  ，并将“名称”  字段更改为“SentimentPrediction.cs”  。</span><span class="sxs-lookup"><span data-stu-id="6a80e-168">In the **Add New Item** dialog box, select **Class** and change the **Name** field to *SentimentPrediction.cs*.</span></span> <span data-ttu-id="6a80e-169">然后，选择“添加”  按钮。</span><span class="sxs-lookup"><span data-stu-id="6a80e-169">Then, select the **Add** button.</span></span> <span data-ttu-id="6a80e-170">此时，SentimentPrediction.cs  文件在代码编辑器中打开。</span><span class="sxs-lookup"><span data-stu-id="6a80e-170">The *SentimentPrediction.cs* file opens in the code editor.</span></span> <span data-ttu-id="6a80e-171">将以下 using 语句添加到 SentimentPrediction.cs  顶部：</span><span class="sxs-lookup"><span data-stu-id="6a80e-171">Add the following using statement to the top of *SentimentPrediction.cs*:</span></span>
+4. <span data-ttu-id="1b14f-167">在“解决方案资源管理器”中，右键单击“DataModels”  目录，再依次选择“添加”>“新项”  。</span><span class="sxs-lookup"><span data-stu-id="1b14f-167">In Solution Explorer, right-click the *DataModels* directory, and then select **Add > New Item**.</span></span>
+5. <span data-ttu-id="1b14f-168">在“添加新项”  对话框中，选择“类”  ，并将“名称”  字段更改为“SentimentPrediction.cs”  。</span><span class="sxs-lookup"><span data-stu-id="1b14f-168">In the **Add New Item** dialog box, select **Class** and change the **Name** field to *SentimentPrediction.cs*.</span></span> <span data-ttu-id="1b14f-169">然后，选择“添加”  按钮。</span><span class="sxs-lookup"><span data-stu-id="1b14f-169">Then, select the **Add** button.</span></span> <span data-ttu-id="1b14f-170">此时，SentimentPrediction.cs  文件在代码编辑器中打开。</span><span class="sxs-lookup"><span data-stu-id="1b14f-170">The *SentimentPrediction.cs* file opens in the code editor.</span></span> <span data-ttu-id="1b14f-171">将以下 using 语句添加到 SentimentPrediction.cs  顶部：</span><span class="sxs-lookup"><span data-stu-id="1b14f-171">Add the following using statement to the top of *SentimentPrediction.cs*:</span></span>
 
-    ```csharp
-    using Microsoft.ML.Data;
-    ```
+    [!code-csharp [SentimentPredictionUsings](~/machinelearning-samples/samples/csharp/end-to-end-apps/ScalableMLModelOnAzureFunction/SentimentAnalysisFunctionsApp/DataModels/SentimentPrediction.cs#L1)]
 
-    <span data-ttu-id="6a80e-172">删除现有类定义，并将以下代码添加到 SentimentPrediction.cs  文件：</span><span class="sxs-lookup"><span data-stu-id="6a80e-172">Remove the existing class definition and add the following code to the *SentimentPrediction.cs* file:</span></span>
+    <span data-ttu-id="1b14f-172">删除现有类定义，并将以下代码添加到 SentimentPrediction.cs  文件：</span><span class="sxs-lookup"><span data-stu-id="1b14f-172">Remove the existing class definition and add the following code to the *SentimentPrediction.cs* file:</span></span>
 
-    ```csharp
-    public class SentimentPrediction : SentimentData
-    {
+    [!code-csharp [SentimentPrediction](~/machinelearning-samples/samples/csharp/end-to-end-apps/ScalableMLModelOnAzureFunction/SentimentAnalysisFunctionsApp/DataModels/SentimentPrediction.cs#L5-L14)]
 
-        [ColumnName("PredictedLabel")]
-        public bool Prediction { get; set; }
+    <span data-ttu-id="1b14f-173">`SentimentPrediction` 继承自 `SentimentData`，后者提供对 `SentimentText` 属性中原始数据以及模型生成的输出的访问。</span><span class="sxs-lookup"><span data-stu-id="1b14f-173">`SentimentPrediction` inherits from `SentimentData` which provides access to the original data in the `SentimentText` property as well as the output generated by the model.</span></span>
 
-        public float Probability { get; set; }
+## <a name="register-predictionenginepool-service"></a><span data-ttu-id="1b14f-174">注册 PredictionEnginePool 服务</span><span class="sxs-lookup"><span data-stu-id="1b14f-174">Register PredictionEnginePool service</span></span>
 
-        public float Score { get; set; }
-    }
-    ```
+<span data-ttu-id="1b14f-175">若要进行单一预测，必须创建 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)。</span><span class="sxs-lookup"><span data-stu-id="1b14f-175">To make a single prediction, you have to create a [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602).</span></span> <span data-ttu-id="1b14f-176">[`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) 不是线程安全型。</span><span class="sxs-lookup"><span data-stu-id="1b14f-176">[`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) is not thread-safe.</span></span> <span data-ttu-id="1b14f-177">此外，必须在应用程序中的每一处所需位置创建它的实例。</span><span class="sxs-lookup"><span data-stu-id="1b14f-177">Additionally, you have to create an instance of it everywhere it is needed within your application.</span></span> <span data-ttu-id="1b14f-178">随着应用程序的增长，此过程可能会变得难以管理。</span><span class="sxs-lookup"><span data-stu-id="1b14f-178">As your application grows, this process can become unmanageable.</span></span> <span data-ttu-id="1b14f-179">为了提高性能和线程安全，请结合使用依赖项注入和 `PredictionEnginePool` 服务，这将创建一个在整个应用程序中使用的 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) 对象的 [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601)。</span><span class="sxs-lookup"><span data-stu-id="1b14f-179">For improved performance and thread safety, use a combination of dependency injection and the `PredictionEnginePool` service, which creates an [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) of [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) objects for use throughout your application.</span></span>
 
-    <span data-ttu-id="6a80e-173">`SentimentPrediction` 继承自 `SentimentData`，后者提供对 `SentimentText` 属性中原始数据以及模型生成的输出的访问。</span><span class="sxs-lookup"><span data-stu-id="6a80e-173">`SentimentPrediction` inherits from `SentimentData` which provides access to the original data in the `SentimentText` property as well as the output generated by the model.</span></span>
+<span data-ttu-id="1b14f-180">若要详细了解[依赖项注入](https://en.wikipedia.org/wiki/Dependency_injection)，请单击下面的链接。</span><span class="sxs-lookup"><span data-stu-id="1b14f-180">The following link provides more information if you want to learn more about [dependency injection](https://en.wikipedia.org/wiki/Dependency_injection).</span></span>
 
-## <a name="register-predictionenginepool-service"></a><span data-ttu-id="6a80e-174">注册 PredictionEnginePool 服务</span><span class="sxs-lookup"><span data-stu-id="6a80e-174">Register PredictionEnginePool service</span></span>
+1. <span data-ttu-id="1b14f-181">在“解决方案资源管理器”  中，右键单击项目，然后选择“添加”   > “新项”  。</span><span class="sxs-lookup"><span data-stu-id="1b14f-181">In **Solution Explorer**, right-click the project, and then select **Add** > **New Item**.</span></span>
+1. <span data-ttu-id="1b14f-182">在“添加新项”对话框中，选择“类”并将“名称”字段更改为“Startup.cs”     。</span><span class="sxs-lookup"><span data-stu-id="1b14f-182">In the **Add New Item** dialog box, select **Class** and change the **Name** field to *Startup.cs*.</span></span> <span data-ttu-id="1b14f-183">然后，选择“添加”  按钮。</span><span class="sxs-lookup"><span data-stu-id="1b14f-183">Then, select the **Add** button.</span></span> 
 
-<span data-ttu-id="6a80e-175">若要进行单个预测，请使用 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)。</span><span class="sxs-lookup"><span data-stu-id="6a80e-175">To make a single prediction, use [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602).</span></span> <span data-ttu-id="6a80e-176">若要在应用程序中使用 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)，则必须在需要时创建它。</span><span class="sxs-lookup"><span data-stu-id="6a80e-176">In order to use [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) in your application you must create it when it's needed.</span></span> <span data-ttu-id="6a80e-177">在这种情况下，可考虑的最佳做法是依赖项注入。</span><span class="sxs-lookup"><span data-stu-id="6a80e-177">In that case, a best practice to consider is dependency injection.</span></span>
-
-<span data-ttu-id="6a80e-178">若要详细了解[依赖关系注入](https://en.wikipedia.org/wiki/Dependency_injection)，请单击下面的链接。</span><span class="sxs-lookup"><span data-stu-id="6a80e-178">The following link provides more information if you want to learn about [dependency injection](https://en.wikipedia.org/wiki/Dependency_injection).</span></span>
-
-1. <span data-ttu-id="6a80e-179">在“解决方案资源管理器”  中，右键单击项目，然后选择“添加”   > “新项”  。</span><span class="sxs-lookup"><span data-stu-id="6a80e-179">In **Solution Explorer**, right-click the project, and then select **Add** > **New Item**.</span></span>
-1. <span data-ttu-id="6a80e-180">在“添加新项”对话框中，选择“类”并将“名称”字段更改为“Startup.cs”     。</span><span class="sxs-lookup"><span data-stu-id="6a80e-180">In the **Add New Item** dialog box, select **Class** and change the **Name** field to *Startup.cs*.</span></span> <span data-ttu-id="6a80e-181">然后，选择“添加”  按钮。</span><span class="sxs-lookup"><span data-stu-id="6a80e-181">Then, select the **Add** button.</span></span> 
-
-    <span data-ttu-id="6a80e-182">此时，*Startup.cs* 文件在代码编辑器中打开。</span><span class="sxs-lookup"><span data-stu-id="6a80e-182">The *Startup.cs* file opens in the code editor.</span></span> <span data-ttu-id="6a80e-183">将以下 using 语句添加到 *Startup.cs* 的顶部：</span><span class="sxs-lookup"><span data-stu-id="6a80e-183">Add the following using statement to the top of *Startup.cs*:</span></span>
+    <span data-ttu-id="1b14f-184">此时，*Startup.cs* 文件在代码编辑器中打开。</span><span class="sxs-lookup"><span data-stu-id="1b14f-184">The *Startup.cs* file opens in the code editor.</span></span> <span data-ttu-id="1b14f-185">将以下 using 语句添加到 *Startup.cs* 的顶部：</span><span class="sxs-lookup"><span data-stu-id="1b14f-185">Add the following using statement to the top of *Startup.cs*:</span></span>
 
     ```csharp
     using Microsoft.Azure.Functions.Extensions.DependencyInjection;
@@ -161,7 +124,7 @@ ms.locfileid: "69666671"
     using SentimentAnalysisFunctionsApp.DataModels;
     ```
 
-    <span data-ttu-id="6a80e-184">删除 using 语句下面的现有代码，并将以下代码添加到 *Startup.cs* 文件中：</span><span class="sxs-lookup"><span data-stu-id="6a80e-184">Remove the existing code below the using statements and add the following code to the *Startup.cs* file:</span></span>
+    <span data-ttu-id="1b14f-186">删除 using 语句下面的现有代码，并将以下代码添加到 *Startup.cs* 文件中：</span><span class="sxs-lookup"><span data-stu-id="1b14f-186">Remove the existing code below the using statements and add the following code to the *Startup.cs* file:</span></span>
 
     ```csharp
     [assembly: FunctionsStartup(typeof(Startup))]
@@ -172,36 +135,33 @@ ms.locfileid: "69666671"
             public override void Configure(IFunctionsHostBuilder builder)
             {
                 builder.Services.AddPredictionEnginePool<SentimentData, SentimentPrediction>()
-                    .FromFile("MLModels/sentiment_model.zip");
+                    .FromFile(modelName: "SentimentAnalysisModel", filePath:"MLModels/sentiment_model.zip", watchForChanges: true);
             }
         }
     }
     ```
 
-<span data-ttu-id="6a80e-185">概括地讲，此代码在应用程序请求时自动初始化对象和服务，你无需手动执行初始化。</span><span class="sxs-lookup"><span data-stu-id="6a80e-185">At a high level, this code initializes the objects and services automatically when requested by the application instead of having to manually do it.</span></span>
+<span data-ttu-id="1b14f-187">概括地讲，此代码在应用程序请求时自动初始化对象和服务供以后使用，无需手动执行初始化。</span><span class="sxs-lookup"><span data-stu-id="1b14f-187">At a high level, this code initializes the objects and services automatically for later use when requested by the application instead of having to manually do it.</span></span> 
 
-> [!WARNING]
-> <span data-ttu-id="6a80e-186">[`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) 不是线程安全型。</span><span class="sxs-lookup"><span data-stu-id="6a80e-186">[`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) is not thread-safe.</span></span> <span data-ttu-id="6a80e-187">为了提高性能和线程安全性，请使用 `PredictionEnginePool` 服务，该服务可创建 `PredictionEngine` 对象的 [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) 供应用程序使用。</span><span class="sxs-lookup"><span data-stu-id="6a80e-187">For improved performance and thread safety, use the `PredictionEnginePool` service, which creates an [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) of `PredictionEngine` objects for application use.</span></span> 
+<span data-ttu-id="1b14f-188">机器学习模型不是静态的。</span><span class="sxs-lookup"><span data-stu-id="1b14f-188">Machine learning models are not static.</span></span> <span data-ttu-id="1b14f-189">随着新的训练数据变得可用，模型将重新训练和重新部署。</span><span class="sxs-lookup"><span data-stu-id="1b14f-189">As new training data becomes available, the model is retrained and redeployed.</span></span> <span data-ttu-id="1b14f-190">将最新版本的模型引入应用程序的一种方法是重新部署整个应用程序。</span><span class="sxs-lookup"><span data-stu-id="1b14f-190">One way to get the latest version of the model into your application is to redeploy the entire application.</span></span> <span data-ttu-id="1b14f-191">但这会导致应用程序关闭。</span><span class="sxs-lookup"><span data-stu-id="1b14f-191">However, this introduces application downtime.</span></span> <span data-ttu-id="1b14f-192">`PredictionEnginePool` 服务提供了一种机制，用于在不使应用程序关闭的情况下重新加载已更新的模型。</span><span class="sxs-lookup"><span data-stu-id="1b14f-192">The `PredictionEnginePool` service provides a mechanism to reload an updated model without taking your application down.</span></span> 
 
-## <a name="load-the-model-into-the-function"></a><span data-ttu-id="6a80e-188">将模型加载到函数中</span><span class="sxs-lookup"><span data-stu-id="6a80e-188">Load the model into the function</span></span>
+<span data-ttu-id="1b14f-193">将 `watchForChanges` 参数设置为 `true`，则 `PredictionEnginePool` 会启动 [`FileSystemWatcher`](xref:System.IO.FileSystemWatcher)，用于侦听文件系统更改通知并在文件发生更改时引发事件。</span><span class="sxs-lookup"><span data-stu-id="1b14f-193">Set the `watchForChanges` parameter to `true`, and the `PredictionEnginePool` starts a [`FileSystemWatcher`](xref:System.IO.FileSystemWatcher) that listens to the file system change notifications and raises events when there is a change to the file.</span></span> <span data-ttu-id="1b14f-194">这会提示 `PredictionEnginePool` 自动重新加载模型。</span><span class="sxs-lookup"><span data-stu-id="1b14f-194">This prompts the `PredictionEnginePool` to automatically reload the model.</span></span>
 
-<span data-ttu-id="6a80e-189">在 *AnalyzeSentiment* 类中插入以下代码：</span><span class="sxs-lookup"><span data-stu-id="6a80e-189">Insert the following code inside the *AnalyzeSentiment* class:</span></span>
+<span data-ttu-id="1b14f-195">模型由 `modelName` 参数标识，因此更改时可以重新加载每个应用程序的多个模型。</span><span class="sxs-lookup"><span data-stu-id="1b14f-195">The model is identified by the `modelName` parameter so that more than one model per application can be reloaded upon change.</span></span> 
 
-```csharp
-private readonly PredictionEnginePool<SentimentData, SentimentPrediction> _predictionEnginePool;
+<span data-ttu-id="1b14f-196">或者，如果使用远程存储的模型，则可以使用 `FromUri` 方法。</span><span class="sxs-lookup"><span data-stu-id="1b14f-196">Alternatively, you can use the `FromUri` method when working with models stored remotely.</span></span> <span data-ttu-id="1b14f-197">`FromUri` 会轮询远程位置以获取更改，而不是监视文件更改事件。</span><span class="sxs-lookup"><span data-stu-id="1b14f-197">Rather than watching for file changed events, `FromUri` polls the remote location for changes.</span></span> <span data-ttu-id="1b14f-198">轮询间隔默认为 5 分钟。</span><span class="sxs-lookup"><span data-stu-id="1b14f-198">The polling interval defaults to 5 minutes.</span></span> <span data-ttu-id="1b14f-199">你可以根据应用程序的要求，增加或减少轮询间隔。</span><span class="sxs-lookup"><span data-stu-id="1b14f-199">You can increase or decrease the polling interval based on your application's requirements.</span></span>
 
-// AnalyzeSentiment class constructor
-public AnalyzeSentiment(PredictionEnginePool<SentimentData, SentimentPrediction> predictionEnginePool)
-{
-    _predictionEnginePool = predictionEnginePool;
-}
-```
+## <a name="load-the-model-into-the-function"></a><span data-ttu-id="1b14f-200">将模型加载到函数中</span><span class="sxs-lookup"><span data-stu-id="1b14f-200">Load the model into the function</span></span>
 
-<span data-ttu-id="6a80e-190">此代码通过将 `PredictionEnginePool` 传递给函数的构造函数（通过依赖项注入获得）来分配它。</span><span class="sxs-lookup"><span data-stu-id="6a80e-190">This code assigns the `PredictionEnginePool` by passing it to the function's constructor which you get via dependency injection.</span></span>
+<span data-ttu-id="1b14f-201">在 *AnalyzeSentiment* 类中插入以下代码：</span><span class="sxs-lookup"><span data-stu-id="1b14f-201">Insert the following code inside the *AnalyzeSentiment* class:</span></span>
 
-## <a name="use-the-model-to-make-predictions"></a><span data-ttu-id="6a80e-191">使用模型进行预测</span><span class="sxs-lookup"><span data-stu-id="6a80e-191">Use the model to make predictions</span></span>
+[!code-csharp [AnalyzeCtor](~/machinelearning-samples/samples/csharp/end-to-end-apps/ScalableMLModelOnAzureFunction/SentimentAnalysisFunctionsApp/AnalyzeSentiment.cs#L18-L24)]
 
-<span data-ttu-id="6a80e-192">将 AnalyzeSentiment  类中 Run  方法的现有实现替换为以下代码：</span><span class="sxs-lookup"><span data-stu-id="6a80e-192">Replace the existing implementation of *Run* method in *AnalyzeSentiment* class with the following code:</span></span>
+<span data-ttu-id="1b14f-202">此代码通过将 `PredictionEnginePool` 传递给函数的构造函数（通过依赖项注入获得）来分配它。</span><span class="sxs-lookup"><span data-stu-id="1b14f-202">This code assigns the `PredictionEnginePool` by passing it to the function's constructor which you get via dependency injection.</span></span>
+
+## <a name="use-the-model-to-make-predictions"></a><span data-ttu-id="1b14f-203">使用模型进行预测</span><span class="sxs-lookup"><span data-stu-id="1b14f-203">Use the model to make predictions</span></span>
+
+<span data-ttu-id="1b14f-204">将 AnalyzeSentiment  类中 Run  方法的现有实现替换为以下代码：</span><span class="sxs-lookup"><span data-stu-id="1b14f-204">Replace the existing implementation of *Run* method in *AnalyzeSentiment* class with the following code:</span></span>
 
 ```csharp
 [FunctionName("AnalyzeSentiment")]
@@ -214,9 +174,9 @@ ILogger log)
     //Parse HTTP Request Body
     string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
     SentimentData data = JsonConvert.DeserializeObject<SentimentData>(requestBody);
-    
+
     //Make Prediction
-    SentimentPrediction prediction = _predictionEnginePool.Predict(data);
+    SentimentPrediction prediction = _predictionEnginePool.Predict(modelName: "SentimentAnalysisModel", example: data);
 
     //Convert prediction to string
     string sentiment = Convert.ToBoolean(prediction.Prediction) ? "Positive" : "Negative";
@@ -226,27 +186,27 @@ ILogger log)
 }
 ```
 
-<span data-ttu-id="6a80e-193">执行 `Run` 方法时，来自 HTTP 请求的传入数据被反序列化并用作 `PredictionEnginePool` 的输入。</span><span class="sxs-lookup"><span data-stu-id="6a80e-193">When the `Run` method executes, the incoming data from the HTTP request is deserialized and used as input for the `PredictionEnginePool`.</span></span> <span data-ttu-id="6a80e-194">随后调用 `Predict` 方法生成预测并将结果返回给用户。</span><span class="sxs-lookup"><span data-stu-id="6a80e-194">The `Predict` method is then called to generate a prediction and return the result to the user.</span></span> 
+<span data-ttu-id="1b14f-205">执行 `Run` 方法时，来自 HTTP 请求的传入数据被反序列化并用作 `PredictionEnginePool` 的输入。</span><span class="sxs-lookup"><span data-stu-id="1b14f-205">When the `Run` method executes, the incoming data from the HTTP request is deserialized and used as input for the `PredictionEnginePool`.</span></span> <span data-ttu-id="1b14f-206">然后，调用 `Predict` 方法，使用在 `Startup` 类中注册的 `SentimentAnalysisModel` 进行预测，并在成功时将结果返回给用户。</span><span class="sxs-lookup"><span data-stu-id="1b14f-206">The `Predict` method is then called to to make predictions using the `SentimentAnalysisModel` registered in the `Startup` class and returns the results back to the user if successful.</span></span>
 
-## <a name="test-locally"></a><span data-ttu-id="6a80e-195">在本地测试</span><span class="sxs-lookup"><span data-stu-id="6a80e-195">Test locally</span></span>
+## <a name="test-locally"></a><span data-ttu-id="1b14f-207">在本地测试</span><span class="sxs-lookup"><span data-stu-id="1b14f-207">Test locally</span></span>
 
-<span data-ttu-id="6a80e-196">至此，已完成所有设置，是时候测试应用程序了：</span><span class="sxs-lookup"><span data-stu-id="6a80e-196">Now that everything is set up, it's time to test the application:</span></span>
+<span data-ttu-id="1b14f-208">至此，已完成所有设置，是时候测试应用程序了：</span><span class="sxs-lookup"><span data-stu-id="1b14f-208">Now that everything is set up, it's time to test the application:</span></span>
 
-1. <span data-ttu-id="6a80e-197">运行此应用程序</span><span class="sxs-lookup"><span data-stu-id="6a80e-197">Run the application</span></span>
-1. <span data-ttu-id="6a80e-198">打开 PowerShell，并在提示符中输入代码（其中，PORT 是应用程序运行所在的端口）。</span><span class="sxs-lookup"><span data-stu-id="6a80e-198">Open PowerShell and enter the code into the prompt where PORT is the port your application is running on.</span></span> <span data-ttu-id="6a80e-199">端口通常是 7071。</span><span class="sxs-lookup"><span data-stu-id="6a80e-199">Typically the port is 7071.</span></span>
+1. <span data-ttu-id="1b14f-209">运行此应用程序</span><span class="sxs-lookup"><span data-stu-id="1b14f-209">Run the application</span></span>
+1. <span data-ttu-id="1b14f-210">打开 PowerShell，并在提示符中输入代码（其中，PORT 是应用程序运行所在的端口）。</span><span class="sxs-lookup"><span data-stu-id="1b14f-210">Open PowerShell and enter the code into the prompt where PORT is the port your application is running on.</span></span> <span data-ttu-id="1b14f-211">端口通常是 7071。</span><span class="sxs-lookup"><span data-stu-id="1b14f-211">Typically the port is 7071.</span></span>
 
     ```powershell
     Invoke-RestMethod "http://localhost:<PORT>/api/AnalyzeSentiment" -Method Post -Body (@{SentimentText="This is a very bad steak"} | ConvertTo-Json) -ContentType "application/json"
     ```
 
-    <span data-ttu-id="6a80e-200">如果成功，输出文本应如下所示：</span><span class="sxs-lookup"><span data-stu-id="6a80e-200">If successful, the output should look similar to the text below:</span></span>
+    <span data-ttu-id="1b14f-212">如果成功，输出文本应如下所示：</span><span class="sxs-lookup"><span data-stu-id="1b14f-212">If successful, the output should look similar to the text below:</span></span>
     
     ```powershell
     Negative
     ```
 
-<span data-ttu-id="6a80e-201">祝贺你！</span><span class="sxs-lookup"><span data-stu-id="6a80e-201">Congratulations!</span></span> <span data-ttu-id="6a80e-202">你已成功使用 Azure Functions 通过 Internet 提供模型进行预测。</span><span class="sxs-lookup"><span data-stu-id="6a80e-202">You have successfully served your model to make predictions over the internet using an Azure Function.</span></span>
+<span data-ttu-id="1b14f-213">祝贺你！</span><span class="sxs-lookup"><span data-stu-id="1b14f-213">Congratulations!</span></span> <span data-ttu-id="1b14f-214">你已成功使用 Azure Functions 通过 Internet 提供模型进行预测。</span><span class="sxs-lookup"><span data-stu-id="1b14f-214">You have successfully served your model to make predictions over the internet using an Azure Function.</span></span>
 
-## <a name="next-steps"></a><span data-ttu-id="6a80e-203">后续步骤</span><span class="sxs-lookup"><span data-stu-id="6a80e-203">Next Steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="1b14f-215">后续步骤</span><span class="sxs-lookup"><span data-stu-id="1b14f-215">Next Steps</span></span>
 
-- [<span data-ttu-id="6a80e-204">部署到 Azure</span><span class="sxs-lookup"><span data-stu-id="6a80e-204">Deploy to Azure</span></span>](/azure/azure-functions/functions-develop-vs#publish-to-azure)
+- [<span data-ttu-id="1b14f-216">部署到 Azure</span><span class="sxs-lookup"><span data-stu-id="1b14f-216">Deploy to Azure</span></span>](/azure/azure-functions/functions-develop-vs#publish-to-azure)
