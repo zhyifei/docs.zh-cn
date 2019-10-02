@@ -1,21 +1,23 @@
 ---
 title: 什么是 ML.NET 以及它如何工作？
 description: ML.NET 使你能够在联机或脱机场景中将机器学习添加到 .NET 应用程序中。 借助此功能，可以使用应用程序的可用数据进行自动预测，而无需连接到网络以使用 ML.NET。 本文介绍 ML.NET 中机器学习的基础知识。
-ms.date: 08/26/2019
+ms.date: 09/27/2019
 ms.topic: overview
 ms.custom: mvc
 ms.author: nakersha
 author: natke
-ms.openlocfilehash: d49a4bdfec133fe805bc9d534e04edf2f9ca5726
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 1ae6b82ada841ad172cbe6a59b667aaaf619e714
+ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929403"
+ms.lasthandoff: 09/28/2019
+ms.locfileid: "71592052"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>什么是 ML.NET 以及它如何工作？
 
-ML.NET 使你能够在联机或脱机场景中将机器学习添加到 .NET 应用程序中。 借助此功能，可以使用应用程序的可用数据进行自动预测，而无需连接到网络。 本文介绍 ML.NET 中机器学习的基础知识。 
+ML.NET 使你能够在联机或脱机场景中将机器学习添加到 .NET 应用程序中。 借助此功能，可以使用应用程序的可用数据进行自动预测，而无需连接到网络。 本文介绍 ML.NET 中机器学习的基础知识。
+
+ML.NET 在使用 .NET Core 的 Windows、Linux 和 macOS 或使用 .NET Framework 的 Windows 上运行。 所有平台均支持 64 位。 Windows 支持 32 位，TensorFlow、LightGBM 和 ONNX 相关功能除外。
 
 可以使用 ML.NET 进行的预测类型的示例包括：
 
@@ -99,7 +101,7 @@ ML.NET 使你能够在联机或脱机场景中将机器学习添加到 .NET 应�
 
 ML.NET 模型是一个对象，它包含为了获得预测输出而要对输入数据执行的转换。
 
-### <a name="basic"></a>基本
+### <a name="basic"></a>Basic
 
 最基本的模型是二维线性回归，其中一个连续数量与另一个连续数量成比例关系，如上述房价示例所示。 
 

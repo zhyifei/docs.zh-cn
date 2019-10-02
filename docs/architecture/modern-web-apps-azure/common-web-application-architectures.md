@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Azure 构建新式 Web 应用程序 | 了�
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: a521be147c462146775caa81b6a31fb37b4103af
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 8985434467346acc360e9a89c052803f495e87d1
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926685"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71331999"
 ---
 # <a name="common-web-application-architectures"></a>常用 Web 应用程序体系结构
 
@@ -186,7 +186,7 @@ ASP.NET Core MVC 应用程序中的用户界面层是应用程序的入口点。
 
 若要管理此模型，可部署单个容器来表示应用程序。 若要进行缩放，只需添加更多副本，并将负载均衡器置于前面即可。 为了简单起见，在单个容器或 VM 中管理单个部署。
 
-![](./media/image5-13.png)
+![图 5-13](./media/image5-13.png)
 
 如图 5-13 中所示，可以在每个容器内添加多个组件/库或内部层。 但是，遵循容器原则（“一个容器在一个进程中做一件事”），整体模式可能成为冲突  。
 
@@ -198,7 +198,7 @@ ASP.NET Core MVC 应用程序中的用户界面层是应用程序的入口点。
 
 整体式方法很常见，并且许多组织均使用此体系结构方法进行开发。 其中许多组织取得了足够好的成果，而其他组织已达到极限。 许多组织使用这种模型设计应用程序，因为工具和基础结构难以构建面向服务的体系结构 (SOA)，而且在应用程序增长之前他们也没有发现这种需要。 如果发现已达到整体式方法的极限，请分解应用，使其可更好地利用可能作为下一个逻辑步骤的容器和微服务。
 
-![](./media/image5-14.png)
+![图 5-14](./media/image5-14.png)
 
 在 Microsoft Azure 中部署整体式应用程序可以通过使用每个实例的专用 VM 实现。 使用 [Azure 虚拟机规模集](https://docs.microsoft.com/azure/virtual-machine-scale-sets/)可轻松缩放 VM。 [Azure 应用服务](https://azure.microsoft.com/services/app-service/) 可运行整体式应用程序并轻松缩放实例，无需管理 VM。 Azure 应用服务还可运行 Docker 容器的单个实例，从而简化部署。 通过使用 Docker，可将单个 VM 部署为 Docker 主机，并运行多个实例。 如图 5-14 所示，使用 Azure 均衡器可管理缩放。
 

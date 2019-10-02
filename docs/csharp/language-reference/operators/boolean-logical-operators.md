@@ -32,12 +32,12 @@ helpviewer_keywords:
 - conditional OR operator [C#]
 - short-circuiting OR operator [C#]
 - '|| operator [C#]'
-ms.openlocfilehash: b2c3553f527e9fec8856297c7424a081b5b31db0
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 39f5be7a667b4e37e84246ef0bfeb03c0099d4b7
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67609926"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353361"
 ---
 # <a name="boolean-logical-operators-c-reference"></a>布尔逻辑运算符（C# 参考）
 
@@ -118,16 +118,16 @@ ms.locfileid: "67609926"
 |x|y|x 和 y|x&#124;y|  
 |----|----|----|----|  
 |true|true|true|true|  
-|true|False|false|true|  
+|true|false|false|true|  
 |true|null|null|true|  
-|False|true|False|true|  
-|False|False|False|False|  
-|False|null|False|null|  
+|false|true|false|true|  
+|false|false|false|false|  
+|false|null|false|null|  
 |null|true|null|true|  
-|null|False|False|null|  
+|null|false|false|null|  
 |null|null|null|null|  
 
-这些运算符的行为不同于值类型可以为 null 的典型运算符行为。 通常情况下，为值类型的操作数定义的运算符也能与值类型可以为 null 的相应操作数一起使用。 如果任何操作数是 `null`，此类运算符都会生成 `null`。 不过，即使操作数之一是 `null`，`&` 和 `|` 运算符也可以生成非 null。 若要详细了解值类型可以为 null 的运算符行为，请参阅[使用可以为 null 的类型](../../programming-guide/nullable-types/using-nullable-types.md)一文的[运算符](../../programming-guide/nullable-types/using-nullable-types.md#operators)部分。
+这些运算符的行为不同于值类型可以为 null 的典型运算符行为。 通常情况下，为值类型的操作数定义的运算符也能与值类型可以为 null 的相应操作数一起使用。 如果任何操作数是 `null`，此类运算符都会生成 `null`。 不过，即使操作数之一是 `null`，`&` 和 `|` 运算符也可以生成非 null。 若要详细了解值类型可为空的运算符行为，请参阅[使用可为空的值类型](../../programming-guide/nullable-types/using-nullable-types.md)一文的[运算符](../../programming-guide/nullable-types/using-nullable-types.md#operators)部分。
 
 还可以将 `!` 和 `^` 运算符与 `bool?` 操作数结合使用，如下面的示例所示：
 

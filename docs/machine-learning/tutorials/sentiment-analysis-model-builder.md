@@ -1,17 +1,17 @@
 ---
 title: 教程：分析情绪 - 二元分类
 description: 本教程演示如何创建 Razor Pages 应用程序，该应用程序对网站评论情绪进行分类并采取适当的措施。 二元情绪分类器使用 Visual Studio 中的模型生成器。
-ms.date: 09/13/2019
+ms.date: 09/26/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: c6184e097daf4604173db9e2a34606e68eb0fdc8
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 0878a9318e7c60be29eeac9fb4efd47e408ab660
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71054272"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332577"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-in-a-web-application-using-mlnet-model-builder"></a>教程：使用 ML.NET 模型生成器在 Web 应用程序中分析网站评论的情绪
 
@@ -22,13 +22,14 @@ ms.locfileid: "71054272"
 在本教程中，你将了解：
 
 > [!div class="checklist"]
-> * 创建 ASP.NET Core Razor Pages 应用程序
-> * 准备和了解数据
-> * 选择方案
-> * 加载数据
-> * 定型模型
-> * 评估模型
-> * 使用预测模型
+>
+> - 创建 ASP.NET Core Razor Pages 应用程序
+> - 准备和了解数据
+> - 选择方案
+> - 加载数据
+> - 定型模型
+> - 评估模型
+> - 使用预测模型
 
 > [!NOTE]
 > 模型生成器当前为预览版。
@@ -43,17 +44,17 @@ ms.locfileid: "71054272"
 
 1. 创建 ASP.NET Core Razor Pages 应用程序  。
 
-    1. 打开 Visual Studio 并从菜单栏中选择“文件”>“新建”>“项目”  。 
-    1. 在“新项目”对话框中，依次选择“Visual C#”  节点和“Web”  节点。 
-    1. 然后，选择“ASP.NET Core Web 应用程序”  项目模板。 
+    1. 打开 Visual Studio 并从菜单栏中选择“文件”>“新建”>“项目”  。
+    1. 在“新项目”对话框中，依次选择“Visual C#”  节点和“Web”  节点。
+    1. 然后，选择“ASP.NET Core Web 应用程序”  项目模板。
     1. 在“名称”  文本框中，键入“SentimentRazor”。
-    1. 默认情况下，应选中“创建解决方案的目录”  复选框。 如果未选中，请将其选中。 
+    1. 默认情况下，应选中“创建解决方案的目录”  复选框。 如果未选中，请将其选中。
     1. 选择“确定”  按钮。
     1. 在显示不同类型 ASP.NET Core 项目的窗口中，选择“Web 应用程序”  ，然后选择“确定”  按钮。
 
 ## <a name="prepare-and-understand-the-data"></a>准备和了解数据
 
-下载[维基百科 detox 数据集](https://raw.githubusercontent.com/dotnet/machinelearning/master/test/data/wikipedia-detox-250-line-data.tsv)。 打开网页时，右键单击页面，选择“另存为”  ，将文件保存到计算机上的任何位置。 
+下载[维基百科 detox 数据集](https://raw.githubusercontent.com/dotnet/machinelearning/master/test/data/wikipedia-detox-250-line-data.tsv)。 打开网页时，右键单击页面，选择“另存为”  ，将文件保存到计算机上的任何位置。
 
 wikipedia-detox-250-line-data.tsv  数据集中的每一行都代表一个用户在维基百科上留下的不同评价。 第一列表示文本的情绪（0 表示 non-toxic (无害)，1 表示 toxic (不良)），第二列表示用户留下的评论。 列由制表符分隔。 数据类似如下所示：
 
@@ -65,9 +66,9 @@ wikipedia-detox-250-line-data.tsv  数据集中的每一行都代表一个用户
 
 ## <a name="choose-a-scenario"></a>选择方案
 
-![](./media/sentiment-analysis-model-builder/model-builder-screen.png)
+![Visual Studio 中的“模型生成器”向导](./media/sentiment-analysis-model-builder/model-builder-screen.png)
 
-为了训练模型，需要从模型生成器提供的可用机器学习方案列表中进行选择。 
+为了训练模型，需要从模型生成器提供的可用机器学习方案列表中进行选择。
 
 1. 在“解决方案资源管理器”中，右键单击“SentimentRazor”项目，然后选择“添加” > “机器学习”     。
 1. 对于本示例，方案为情绪分析。 在模型生成器工具的“方案”步骤中，选择“情绪分析”方案   。
@@ -78,14 +79,15 @@ wikipedia-detox-250-line-data.tsv  数据集中的每一行都代表一个用户
 
 1. 在模型生成器工具的数据步骤中，选择数据源下拉列表中的“文件”  。
 1. 选择“选择文件”文本框旁边的按钮，并使用文件资源管理器浏览到 wikipedia-detox-250-line-data.tsv 文件，然后选择该文件   。
-1. 在“要预测的标签或列”下拉列表中选择“情绪”  
+1. 在“要预测的列(标签)”下拉列表中选择“情绪”   。
+1. 保留“输入列(特性)”下拉列表的默认值。 
 1. 选择“训练”  链接以转到模型生成器工具中的下一步。
 
 ## <a name="train-the-model"></a>定型模型
 
 在本教程中，用于训练价格预测模型的机器学习任务是二元分类。 在模型训练过程中，模型生成器使用不同的二元分类算法和设置训练各个模型，以便为数据集找到性能最佳的模型。
 
-模型训练所需的时间与数据量成正比。 模型生成器会根据数据源的大小自动选择“训练时间(秒)”的默认值  。 
+模型训练所需的时间与数据量成正比。 模型生成器会根据数据源的大小自动选择“训练时间(秒)”的默认值  。
 
 1. 尽管模型生成器将“训练时间(秒)”  的值设置为 10 秒，但可以将其增加到 30 秒。 通过较长时间段的训练，模型生成器可以在最佳模型的搜索中浏览更多的算法和参数组合。
 1. 选择“开始训练”  。
@@ -116,37 +118,27 @@ wikipedia-detox-250-line-data.tsv  数据集中的每一行都代表一个用户
     以下项目应出现在解决方案资源管理器  中：
 
     - *SentimentRazorML.ConsoleApp*：包含模型训练和预测代码的 .NET Core 控制台应用程序。
-    - *SentimentRazorML.Model*：一个 .NET Standard 类库，包含定义输入和输出模型数据架构的数据模型，以及在训练期间性能最佳的模型的持久版本。
+    - *SentimentRazorML.Model*：一个 .NET Standard 类库，包含定义输入和输出模型数据架构的数据模型，以及在训练期间性能最佳的模型的保存版本。
 
     对于本教程，只使用 SentimentRazorML.Model  项目，因为预测将在 SentimentRazor  Web 应用程序中（而不是控制台中）进行。 尽管 SentimentRazorML.ConsoleApp  不用于评分，但它可用于在以后使用新数据重新训练模型。 重新训练不属于本教程的讨论范围。
 
-1. 要在 Razor Pages 应用程序中使用已训练的模型，请添加对 SentimentRazorML.Model  项目的引用。
-
-    1. 右键单击 SentimentRazor  项目。 
-    1. 选择“添加”>“引用”  。 
-    1. 选择“项目”>“解决方案”  节点，从列表中选中“SentimentRazorML.Model”  项目。
-    1. 选择“确定”  。
-
 ### <a name="configure-the-predictionengine-pool"></a>配置 PredictionEngine 池
 
-若要进行单个预测，请使用 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)。 要在应用程序中使用 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)，则必须在需要时创建它。 在这种情况下，可考虑的最佳做法是依赖项注入。
-
-> [!WARNING]
-> [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) 不是线程安全型。 为了提高性能和线程安全性，请使用 `PredictionEnginePool` 服务，该服务可创建 `PredictionEngine` 对象的 [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) 供应用程序使用。 阅读以下博客文章，了解有关[在 ASP.NET Core 中创建和使用 `PredictionEngine` 对象池](https://devblogs.microsoft.com/cesardelatorre/how-to-optimize-and-run-ml-net-models-on-scalable-asp-net-core-webapis-or-web-apps/)的详细信息。 
+若要进行单一预测，必须创建 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)。 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) 不是线程安全型。 此外，必须在应用程序中的每一处所需位置创建它的实例。 随着应用程序的增长，此过程可能会变得难以管理。 为了提高性能和线程安全，请使用依赖项注入和 `PredictionEnginePool` 服务的组合，这将创建一个在整个应用程序中使用的 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) 对象的 [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601)。
 
 1. 安装 Microsoft.Extensions.ML NuGet 包  ：
 
-    1. 在“解决方案资源管理器”中，右键单击项目，然后选择“管理 NuGet 包”   。 
-    1. 选择“nuget.org”作为“包源”。 
-    1. 选择“浏览”  选项卡，搜索“Microsoft.Extensions.ML”  。 
-    1. 在列表中选择包，然后选择“安装”  按钮。 
+    1. 在“解决方案资源管理器”中，右键单击项目，然后选择“管理 NuGet 包”   。
+    1. 选择“nuget.org”作为“包源”。
+    1. 选择“浏览”  选项卡，搜索“Microsoft.Extensions.ML”  。
+    1. 在列表中选择包，然后选择“安装”  按钮。
     1. 选择“预览更改”  对话框中的“确定”  按钮
-    1. 如果同意所列包的许可条款，请选择“接受许可”  对话框中的“我接受”  按钮。 
+    1. 如果同意所列包的许可条款，请选择“接受许可”  对话框中的“我接受”  按钮。
 
 1. 打开“SentimentRazor”  项目中的“Startup.cs”  文件。
 1. 添加以下 using 语句以引用 Microsoft.Extensions.ML  NuGet 包和 SentimentRazorML.Model  项目：
 
-    [!code-csharp [StartupUsings](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Startup.cs#L12-L14)]        
+    [!code-csharp [StartupUsings](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Startup.cs#L12-L14)]
 
 1. 创建全局变量以存储已训练模型文件的位置。
 
@@ -172,7 +164,7 @@ wikipedia-detox-250-line-data.tsv  数据集中的每一行都代表一个用户
 
     [!code-csharp [IndexUsings](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Pages/Index.cshtml.cs#L7-L8)]
 
-    要使用 `Startup` 类中已配置的 `PredictionEnginePool`，必须将它插入到要在其中使用它的模型的构造函数中。 
+    要使用 `Startup` 类中已配置的 `PredictionEnginePool`，必须将它插入到要在其中使用它的模型的构造函数中。
 
 1. 添加变量以引用 `IndexModel` 类中的 `PredictionEnginePool`。
 
@@ -195,15 +187,15 @@ wikipedia-detox-250-line-data.tsv  数据集中的每一行都代表一个用户
 
     1. 在 `OnGetAnalyzeSentiment` 方法中，如果用户输入为空或为 null，则返回“中性”情绪  。
 
-        [!code-csharp [InitInput](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Pages/Index.cshtml.cs#L28)] 
-    
-    1. 给定有效的输入，创建新的 `ModelInput` 实例。 
+        [!code-csharp [InitInput](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Pages/Index.cshtml.cs#L28)]
 
-        [!code-csharp [InitInput](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Pages/Index.cshtml.cs#L29)] 
+    1. 给定有效的输入，创建新的 `ModelInput` 实例。
+
+        [!code-csharp [InitInput](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Pages/Index.cshtml.cs#L29)]
 
     1. 使用 `PredictionEnginePool` 预测情绪。
 
-        [!code-csharp [MakePrediction](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Pages/Index.cshtml.cs#L30)] 
+        [!code-csharp [MakePrediction](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Pages/Index.cshtml.cs#L30)]
 
     1. 使用以下代码将预测的 `bool` 值转换为“toxic”或“not toxic”。
 
@@ -217,7 +209,7 @@ wikipedia-detox-250-line-data.tsv  数据集中的每一行都代表一个用户
 
 `OnGetAnalyzeSentiment` 返回的结果将在 `Index` 网页上动态显示。
 
-1. 在“Pages”  目录中打开 Index.cshtml  文件，并将其内容替换为以下代码： 
+1. 在“Pages”  目录中打开 Index.cshtml  文件，并将其内容替换为以下代码：
 
     [!code-cshtml [IndexPage](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Pages/Index.cshtml)]
 
@@ -249,7 +241,7 @@ wikipedia-detox-250-line-data.tsv  数据集中的每一行都代表一个用户
 
 当应用程序启动时，在文本区域中输入“Model Builder is cool!”  。 显示的预测情绪应为“Not Toxic”  。
 
-![](./media/sentiment-analysis-model-builder/web-app.png)
+![正在运行的窗口（包含预测情绪窗口）](./media/sentiment-analysis-model-builder/web-app.png)
 
 如果稍后需要在另一个解决方案中引用模型生成器生成的项目，可以在 `C:\Users\%USERNAME%\AppData\Local\Temp\MLVSTools` 目录中找到它们。
 
@@ -257,13 +249,14 @@ wikipedia-detox-250-line-data.tsv  数据集中的每一行都代表一个用户
 
 在本教程中，你将了解：
 > [!div class="checklist"]
-> * 创建 ASP.NET Core Razor Pages 应用程序
-> * 准备和了解数据
-> * 选择方案
-> * 加载数据
-> * 定型模型
-> * 评估模型
-> * 使用预测模型
+>
+> - 创建 ASP.NET Core Razor Pages 应用程序
+> - 准备和了解数据
+> - 选择方案
+> - 加载数据
+> - 定型模型
+> - 评估模型
+> - 使用预测模型
 
 ### <a name="additional-resources"></a>其他资源
 

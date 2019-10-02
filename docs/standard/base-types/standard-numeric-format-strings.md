@@ -18,12 +18,12 @@ helpviewer_keywords:
 - format specifiers, standard numeric format strings
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c99e3bc59266846fcd5c5774b6050b4e075cbc3f
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: b2f997cf398e59f8e30ac87c1e0360e43a448e85
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374499"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216712"
 ---
 # <a name="standard-numeric-format-strings"></a>标准数字格式字符串
 
@@ -117,10 +117,10 @@ ms.locfileid: "70374499"
 |<xref:System.Globalization.NumberFormatInfo.CurrencyGroupSeparator%2A>|定义分隔整数的组的字符串。|
 |<xref:System.Globalization.NumberFormatInfo.CurrencyGroupSizes%2A>|指定在组中显示的整数位数。|
 
-下面的示例使用货币格式说明符设置 <xref:System.Double> 值的格式。
+下面的示例使用货币格式说明符设置 <xref:System.Double> 值的格式：
 
 [!code-cpp[Formatting.Numeric.Standard#1](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#1)]
-[!code-csharp-interactive[Formatting.Numeric.Standard#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#1)]
+[!code-csharp[Formatting.Numeric.Standard#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#1)]
 [!code-vb[Formatting.Numeric.Standard#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#1)]
 
 [返回表首](#table)
@@ -165,10 +165,10 @@ ms.locfileid: "70374499"
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>|定义在系数中将整数位与小数位分隔的字符串。|
 |<xref:System.Globalization.NumberFormatInfo.PositiveSign%2A>|定义指示指数为正值的字符串。|
 
-下面的示例使用指数格式说明符设置 <xref:System.Double> 值的格式。
+下面的示例使用指数格式说明符设置 <xref:System.Double> 值的格式：
 
 [!code-cpp[Formatting.Numeric.Standard#3](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#3)]
-[!code-csharp-interactive[Formatting.Numeric.Standard#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#3)]
+[!code-csharp[Formatting.Numeric.Standard#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#3)]
 [!code-vb[Formatting.Numeric.Standard#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#3)]
 
 [返回表首](#table)
@@ -189,10 +189,10 @@ ms.locfileid: "70374499"
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>|定义将整数位与小数位分隔的字符串。|
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A>|定义默认小数位数。 可使用精度说明符重写此值。|
 
-下面的示例使用定点格式说明符设置 <xref:System.Double> 和 <xref:System.Int32> 值的格式。
+下面的示例使用定点格式说明符设置 <xref:System.Double> 和 <xref:System.Int32> 值的格式：
 
 [!code-cpp[Formatting.Numeric.Standard#4](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#4)]
-[!code-csharp-interactive[Formatting.Numeric.Standard#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#4)]
+[!code-csharp[Formatting.Numeric.Standard#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#4)]
 [!code-vb[Formatting.Numeric.Standard#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#4)]
 
 [返回表首](#table)
@@ -236,10 +236,10 @@ ms.locfileid: "70374499"
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>|定义将整数位与小数位分隔的字符串。|
 |<xref:System.Globalization.NumberFormatInfo.PositiveSign%2A>|定义指示指数为正值的字符串。|
 
-下面的示例使用常规格式说明符设置各种浮点值的格式。
+下面的示例使用常规格式说明符设置各种浮点值的格式：
 
 [!code-cpp[Formatting.Numeric.Standard#5](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#5)]
-[!code-csharp-interactive[Formatting.Numeric.Standard#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#5)]
+[!code-csharp[Formatting.Numeric.Standard#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#5)]
 [!code-vb[Formatting.Numeric.Standard#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#5)]
 
 [返回表首](#table)
@@ -261,10 +261,10 @@ ms.locfileid: "70374499"
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>|定义分隔整数位和小数位的字符串。|
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A>|定义默认小数位数。 可使用精度说明符重写此值。|
 
-下面的示例使用数字格式说明符设置各种浮点值的格式。
+下面的示例使用数字格式说明符设置各种浮点值的格式：
 
 [!code-cpp[Formatting.Numeric.Standard#6](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#6)]
-[!code-csharp-interactive[Formatting.Numeric.Standard#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#6)]
+[!code-csharp[Formatting.Numeric.Standard#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#6)]
 [!code-vb[Formatting.Numeric.Standard#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#6)]
 
 [返回表首](#table)
@@ -288,10 +288,10 @@ ms.locfileid: "70374499"
 |<xref:System.Globalization.NumberFormatInfo.PercentGroupSeparator%2A>|定义分隔整数的组的字符串。|
 |<xref:System.Globalization.NumberFormatInfo.PercentGroupSizes%2A>|指定在组中显示的整数位数。|
 
-下面的示例使用百分比格式说明符设置浮点值的格式。
+下面的示例使用百分比格式说明符设置浮点值的格式：
 
 [!code-cpp[Formatting.Numeric.Standard#7](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#7)]
-[!code-csharp-interactive[Formatting.Numeric.Standard#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#7)]
+[!code-csharp[Formatting.Numeric.Standard#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#7)]
 [!code-vb[Formatting.Numeric.Standard#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#7)]
 
 [返回表首](#table)
@@ -324,9 +324,9 @@ ms.locfileid: "70374499"
 > [!IMPORTANT]
 > 在某些情况下，如果使用“R”标准数字格式字符串格式化的 <xref:System.Double> 值使用 `/platform:x64` 或 `/platform:anycpu` 开关编译并在 64 位系统上运行，则该值将无法成功往返。 有关详细信息，请参阅以下段落。
 
-若要解决使用“R”标准数字格式字符串格式化的 <xref:System.Double> 值在使用 `/platform:x64` 或 `/platform:anycpu` 交换机进行编译并在 64 位系统上运行时所出现的往返不成功的问题，可以使用“G17”标准数字格式字符格式化 <xref:System.Double> 值。 以下示例将“R”格式字符串与无法成功往返的 <xref:System.Double> 值配合使用，并使用“G17”格式字符串以成功往返原始值。
+若要解决使用“R”标准数字格式字符串格式化的 <xref:System.Double> 值在使用 `/platform:x64` 或 `/platform:anycpu` 交换机进行编译并在 64 位系统上运行时所出现的往返不成功的问题，可以使用“G17”标准数字格式字符格式化 <xref:System.Double> 值。 以下示例将“R”格式字符串与无法成功往返的 <xref:System.Double> 值配合使用，并使用“G17”格式字符串以成功往返原始值：
 
-[!code-csharp-interactive[System.Double.ToString#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Double.ToString/cs/roundtripex1.cs#RoundTrip)]
+[!code-csharp[System.Double.ToString#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Double.ToString/cs/roundtripex1.cs#RoundTrip)]
 [!code-vb[System.Double.ToString#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Double.ToString/vb/roundtripex1.vb#5)]
 
 [返回表首](#table)
@@ -380,7 +380,7 @@ ms.locfileid: "70374499"
 
 下面的示例使用 en-US 区域性和所有标准数字格式说明符设置一个整型数值和一个浮点型数值的格式。 此示例使用两个特定的数值类型（<xref:System.Double> 和 <xref:System.Int32>），但对于任何一个其他数值基类型（<xref:System.Byte>、<xref:System.SByte>、<xref:System.Int16>、<xref:System.Int32>、<xref:System.Int64>、<xref:System.UInt16>、<xref:System.UInt32>、<xref:System.UInt64>、<xref:System.Numerics.BigInteger>、<xref:System.Decimal> 和 <xref:System.Single>）都将产生类似的结果。
 
-[!code-csharp-interactive[system.x.tostring-and-culture#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.X.ToString-and-Culture/cs/xts.cs#FinalExample)]
+[!code-csharp[system.x.tostring-and-culture#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.X.ToString-and-Culture/cs/xts.cs#FinalExample)]
 [!code-vb[system.x.tostring-and-culture#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.X.ToString-and-Culture/vb/xts.vb#1)]
 
 ## <a name="see-also"></a>请参阅

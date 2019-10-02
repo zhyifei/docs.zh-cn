@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, structs
 - structs [C#]
 ms.assetid: b7cf4ff2-0eb7-4e5c-93d5-b2196b4f5d89
-ms.openlocfilehash: 063d7e3b68fbe6c01ff0df4ae935fec5af6f6891
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: df2a235651a2242ffe18df377dce9995af31e99f
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67743845"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71392462"
 ---
 # <a name="structs-c-programming-guide"></a>结构（C# 编程指南）
 
@@ -29,14 +29,14 @@ ms.locfileid: "67743845"
 - 结构可以声明具有参数的构造函数。
 - 一个结构无法继承自另一个结构或类，并且它不能为类的基类。 所有结构都直接继承自 <xref:System.ValueType>，后者继承自 <xref:System.Object>。  
 - 结构可以实现接口。
-- 结构不能为 `null`，并且不能向结构变量分配 `null`，除非将变量声明为可为 null 的类型。
+- 结构不能为 `null`，并且不能向结构变量分配 `null`，除非将变量声明为可为空的值类型。
   
 ## <a name="see-also"></a>请参阅
 
 - [C# 编程指南](../index.md)
 - [类和结构](index.md)
 - [类](classes.md)
-- [可以为 null 的类型](../nullable-types/index.md)
+- [可以为 null 的值类型](../nullable-types/index.md)
 - [标识符名称](../inside-a-program/identifier-names.md)
 - [使用结构](using-structs.md)
 - [如何：了解向方法传递结构与类引用的区别](how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method.md)

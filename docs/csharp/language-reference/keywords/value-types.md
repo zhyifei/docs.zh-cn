@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 2bbbac098096b46c659c4efde2d1c998c8e2d9ae
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 2a3e7f02ee9d210acae881edd170edbced82dab6
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69608376"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353747"
 ---
 # <a name="value-types-c-reference"></a>值类型（C# 参考）
 
@@ -32,7 +32,7 @@ ms.locfileid: "69608376"
 
 与引用类型不同，不能从值类型派生新类型。 但是，与引用类型一样，结构可以实现接口。
 
-值类型变量不能默认为 `null`。 但相应的[可以为空的类型](../../programming-guide/nullable-types/index.md)的变量可以为 `null`。
+值类型变量不能默认为 `null`。 但相应的[可为空的值类型](../../programming-guide/nullable-types/index.md)的变量可以为 `null`。
 
 每个值类型都有一个隐式无参数构造函数，用于初始化该类型的默认值。 有关值类型的默认值的信息，请参阅[默认值表](default-values-table.md)。
 
@@ -109,4 +109,4 @@ var p = new Point(); // Invoke parameterless constructor for the struct.
 - [C# 关键字](index.md)
 - [类型](types.md)
 - [引用类型](reference-types.md)
-- [可以为 null 的类型](../../programming-guide/nullable-types/index.md)
+- [可以为 null 的值类型](../../programming-guide/nullable-types/index.md)

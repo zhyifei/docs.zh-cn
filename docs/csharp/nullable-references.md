@@ -2,12 +2,12 @@
 title: 可为空引用类型
 description: 本文概述了在 C# 8 中添加的可为空引用类型。 你将了解该功能如何为新项目和现有项目提供针对空引用异常的安全性。
 ms.date: 02/19/2019
-ms.openlocfilehash: e66d74cdde3b3de9ec3f1b435cdbd3e3b24c2663
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 05a8e14a7c51df685b3ffdf16aab997da0a8036f
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70851063"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332363"
 ---
 # <a name="nullable-reference-types"></a>可为空引用类型
 
@@ -35,7 +35,7 @@ string? name;
 
 未将 `?` 附加到类型名称的任何变量都是“不可为空引用类型”  。 这包括启用此功能时现有代码中的所有引用类型变量。
 
-编译器使用静态分析来确定可为空引用是否为非 null。 如果你在一个可为空引用可能是 null 时对其取消引用，编译器将向你发出警告。 通过在变量名后面使用 null 包容运算符 (`!`) 即可覆盖此行为  。 例如，若知道 `name` 变量不为 null 但编译器仍发出警告，则可以编写以下代码来覆盖编译器的分析：
+编译器使用静态分析来确定可为空引用是否为非 null。 如果你在一个可为空引用可能是 null 时对其取消引用，编译器将向你发出警告。 可以通过使用 NULL 包容运算符 `!` 后跟变量名称来替代此行为。  例如，若知道 `name` 变量不为 null 但编译器仍发出警告，则可以编写以下代码来覆盖编译器的分析：
 
 ```csharp
 name!.Length;
@@ -58,7 +58,7 @@ name!.Length;
 
 可为空上下文可以对编译器如何解释引用类型变量进行精细控制。 任何给定源代码行的“可为空注释上下文”为 `enabled` 或 `disabled`  。 你可以将 C# 8 之前的编译器视为在 `disabled` 可为空上下文中编译所有代码：任何引用类型都可以为 null。 “可为空警告上下文”可以设置为 `enabled` 或 `disabled`  。 可为空警告上下文指定编译器使用其流分析生成的警告。
 
-可以使用 `csproj` 文件中的 `Nullable` 元素为项目设置可为空注释上下文和可为空警告上下文。 此元素配置编译器如何解释类型的为 Null 性以及生成哪些警告。 有效设置如下：
+可以使用 .csproj 文件中的 `Nullable` 元素为项目设置可为空注释上下文和可为空警告上下文。  此元素配置编译器如何解释类型的为 Null 性以及生成哪些警告。 有效设置如下：
 
 - `enable`：“启用”可为空注释上下文  。 “启用”可为空警告上下文  。
   - 引用类型的变量，例如 `string` 是“不可为空”。  启用所有为 Null 性警告。
@@ -69,21 +69,21 @@ name!.Length;
 - `disable`：“禁用”可为空注释上下文  。 “禁用”可为空警告上下文  。
   - 引用类型的变量是“无视”，就像早期版本的 C# 一样。 禁用所有为 Null 性警告。
 
-> [!IMPORTANT]
-> `Nullable` 元素以前名为 `NullableContextOptions`。 通过 Visual Studio 2019 16.2-p1 发布重命名。 .NET Core SDK 3.0.100-preview5-011568 未进行此更改。 如果使用.NET Core CLI，将需要在推出下一个预览版之前使用 `NullableContextOptions`。
-
 你还可以使用指令在项目的任何位置设置这些相同的上下文：
 
 - `#nullable enable`：将可为空注释上下文和可为空警告上下文设置为“已启用”  。
 - `#nullable disable`：将可为空注释上下文和可为空警告上下文设置为“已禁用”  。
 - `#nullable restore`：将可为空注释上下文和可为空警告上下文还原到项目设置。
-- `#pragma warning disable nullable`：将可为空警告上下文设置为“已禁用”  。
-- `#pragma warning enable nullable`：将可为空警告上下文设置为“已启用”  。
-- `#pragma warning restore nullable`：将可为空警告上下文还原到项目设置。
+- `#nullable disable warnings`：将可为空警告上下文设置为“已禁用”  。
+- `#nullable enable warnings`：将可为空警告上下文设置为“已启用”  。
+- `#nullable restore warnings`：将可为空警告上下文还原到项目设置。
+- `#nullable disable annotations`：将可为空注释上下文设置为“禁用”  。
+- `#nullable enable annotations`：将可为空注释上下文设置为“启用”  。
+- `#nullable restore annotations`：将注释警告上下文还原到项目设置。
 
 默认的可为空注释和警告上下文为 `disabled`。 该决定意味着无需更改现有代码即可进行编译，并且不会生成任何新警告。
 
-### <a name="nullable-annotation-context"></a>可为空注释上下文
+## <a name="nullable-annotation-context"></a>可为空注释上下文
 
 编译器在已禁用的可为空注释上下文中使用以下规则：
 
@@ -101,7 +101,7 @@ name!.Length;
 - 任何可为空引用类型（在变量声明中的类型之后由 `?` 标记）可为 null。 静态分析确定在取消引用该值时是否已知该值不为 null。 否则，编译器会发出警告。
 - 你可以使用 null 包容运算符声明可为空引用不为 null。
 
-在已启用的可为空注释上下文中，附加到引用类型的 `?` 字符声明“可为空引用类型”  。 可将 null 包容运算符 (`!`) 附加到表达式以声明表达式不为 null  。
+在已启用的可为空注释上下文中，附加到引用类型的 `?` 字符声明“可为空引用类型”  。 可将 NULL 包容运算符 `!` 附加到表达式以声明表达式不为 NULL  。
 
 ## <a name="nullable-warning-context"></a>可为空警告上下文
 

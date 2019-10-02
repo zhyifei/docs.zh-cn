@@ -7,12 +7,12 @@ helpviewer_keywords:
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: bb545d9da73154c237f55809a3a72ff0f121ce1a
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 5c36639d76a6fbd4e36f39486369a55a56a6e3ea
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253021"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71396282"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>类型参数的约束（C# 编程指南）
 
@@ -20,7 +20,7 @@ ms.locfileid: "70253021"
 
 |约束|说明|
 |----------------|-----------------|
-|`where T : struct`|类型参数必须是值类型。 可以指定除 <xref:System.Nullable%601> 以外的任何值类型。 有关可以为 null 的类型的详细信息，请参阅[可以为 null 的类型](../nullable-types/index.md)。|
+|`where T : struct`|类型参数必须是值类型。 可以指定除 <xref:System.Nullable%601> 以外的任何值类型。 有关可为空的值类型的详细信息，请参阅[可为空的值类型](../nullable-types/index.md)。|
 |`where T : class`|类型参数必须是引用类型。 此约束还应用于任何类、接口、委托或数组类型。|
 |`where T : notnull`|类型参数必须是不可为 null 的类型。 参数可以是 C# 8.0 或更高版本中的不可为 null 的引用类型，也可以是不可为 null 的值类型。 此约束还应用于任何类、接口、委托或数组类型。|
 |`where T : unmanaged`|类型参数必须是[非托管类型](../../language-reference/builtin-types/unmanaged-types.md)。|

@@ -3,12 +3,12 @@ title: 生成和使用异步流
 description: 本高级教程演示了生成和使用异步流提供一种更自然的方式来处理可能以异步方式生成的数据序列的场景。
 ms.date: 02/10/2019
 ms.custom: mvc
-ms.openlocfilehash: 3fdf5299deca365c62a00a8320ea335e96d9078c
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 04c4fe1c7e33138273c5b49c6985efc60767a724
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926690"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216549"
 ---
 # <a name="tutorial-generate-and-consume-async-streams-using-c-80-and-net-core-30"></a>教程：使用 C# 8.0 和 .NET Core 3.0 生成和使用异步流
 
@@ -24,7 +24,7 @@ C# 8.0 引入了**异步流**，在能够以异步方式检索或生成数据流
 
 ## <a name="prerequisites"></a>系统必备
 
-你需要将计算机设置为运行 .NET Core，包括 C# 8.0 beta 编译器。 自 [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 或最新 [.NET Core 3.0 预览版 SDK](https://dotnet.microsoft.com/download/dotnet-core/3.0) 起，随附 C# 8 beta 版本编译器。 异步流首先可在 .NET Core 3.0 预览版 1 中使用。
+需要将计算机设置为运行 .NET Core，包括 C# 8.0 编译器。 自 [Visual Studio 2019 版本 16.3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 或 [.NET Core 3.0 SDK](https://dotnet.microsoft.com/download) 起，开始随附 C# 8 编译器。
 
 将需要创建 [GitHub 访问令牌](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/#creating-a-token)，以便可以访问 GitHub GraphQL 终结点。 为 GitHub 访问令牌选择以下权限：
 

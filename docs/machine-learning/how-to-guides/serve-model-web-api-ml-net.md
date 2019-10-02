@@ -1,16 +1,16 @@
 ---
 title: 在 ASP.NET Core Web API 中部署模型
 description: 使用 ASP.NET Core Web API 通过 Internet 提供 ML.NET 情绪分析机器学习模型
-ms.date: 08/20/2019
+ms.date: 09/11/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to
-ms.openlocfilehash: 8d21ae5ae3aa4701ddd7d042d5069351c22864bb
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 1173315bbc88797ce0c6d0fcc9597896f14889ac
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71182548"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332694"
 ---
 # <a name="deploy-a-model-in-an-aspnet-core-web-api"></a>在 ASP.NET Core Web API 中部署模型
 
@@ -103,9 +103,9 @@ ms.locfileid: "71182548"
 
 ## <a name="register-predictionenginepool-for-use-in-the-application"></a>注册 PredictionEnginePool 用于应用程序
 
-若要进行单个预测，请使用 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)。 若要在应用程序中使用 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)，则必须在需要时创建它。 在这种情况下，可考虑的最佳做法是依赖项注入。
+若要进行单一预测，必须创建 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)。 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) 不是线程安全型。 此外，必须在应用程序中的每一处所需位置创建它的实例。 随着应用程序的增长，此过程可能会变得难以管理。 为了提高性能和线程安全，请使用依赖项注入和 `PredictionEnginePool` 服务的组合，这将创建一个在整个应用程序中使用的 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) 对象的 [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601)。
 
-如果想要了解 [ASP.NET Core 中的依赖项注入](/aspnet/core/fundamentals/dependency-injection)，以下链接提供详细信息。
+如果想要详细了解 [ASP.NET Core 中的依赖项注入](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-2.1)，以下链接提供详细信息。
 
 1. 打开 Startup.cs  类，并将以下 using 语句添加到文件顶部：
 
@@ -126,14 +126,19 @@ ms.locfileid: "71182548"
     {
         services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         services.AddPredictionEnginePool<SentimentData, SentimentPrediction>()
-            .FromFile("MLModels/sentiment_model.zip");
+            .FromFile(modelName: "SentimentAnalysisModel", filePath:"MLModels/sentiment_model.zip", watchForChanges: true);
     }
     ```
 
-概括地讲，此代码在应用程序请求时自动初始化对象和服务，你无需手动执行初始化。
+概括地讲，此代码在应用程序请求时自动初始化对象和服务以供稍后使用，你无需手动执行初始化。 
 
-> [!WARNING]
-> [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) 不是线程安全型。 为了提高性能和线程安全性，请使用 `PredictionEnginePool` 服务，该服务可创建 `PredictionEngine` 对象的 [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) 供应用程序使用。 阅读以下博客文章，了解有关[在 ASP.NET Core 中创建和使用 `PredictionEngine` 对象池](https://devblogs.microsoft.com/cesardelatorre/how-to-optimize-and-run-ml-net-models-on-scalable-asp-net-core-webapis-or-web-apps/)的详细信息。  
+机器学习模型不是静态的。 随着新的训练数据变得可用，模型将重新训练并重新部署。 在应用程序中获取模型的最新版本的一种方法是重新部署整个应用程序。 但这会导致应用程序关闭。 `PredictionEnginePool` 服务提供了一种机制，用于在不使应用程序关闭的情况下重新加载已更新的模型。 
+
+将 `watchForChanges` 参数设置为 `true`，`PredictionEnginePool` 则启动 [`FileSystemWatcher`](xref:System.IO.FileSystemWatcher)，它侦听文件系统更改通知并在文件发生更改时引发事件。 这会提示 `PredictionEnginePool` 会自动重新加载模型。
+
+模型由 `modelName` 参数标识，因此更改时可以重新加载每个应用程序的多个模型。 
+
+或者，如果使用远程存储的模型，则可以使用 `FromUri` 方法。 `FromUri` 会轮询远程位置以获取更改，而不是监视文件更改事件。 轮询间隔默认为 5 分钟。 你可以根据应用程序的要求，增加或减少轮询间隔。
 
 ## <a name="create-predict-controller"></a>创建预测控制器
 
@@ -170,7 +175,7 @@ ms.locfileid: "71182548"
                 return BadRequest();
             }
 
-            SentimentPrediction prediction = _predictionEnginePool.Predict(input);
+            SentimentPrediction prediction = _predictionEnginePool.Predict(modelName: "SentimentAnalysisModel", example: input);
 
             string sentiment = Convert.ToBoolean(prediction.Prediction) ? "Positive" : "Negative";
 
@@ -179,7 +184,7 @@ ms.locfileid: "71182548"
     }
     ```
 
-此代码通过将 `PredictionEnginePool` 传递给控制器的构造函数（通过依赖项注入获得）来分配它。 然后，`Predict` 控制器的 `Post` 方法使用 `PredictionEnginePool` 进行预测，并在成功时将结果返回给用户。
+此代码通过将 `PredictionEnginePool` 传递给控制器的构造函数（通过依赖项注入获得）来分配它。 然后，`Predict` 控制器的 `Post` 方法使用 `PredictionEnginePool`，来通过在 `Startup` 类中注册的 `SentimentAnalysisModel` 进行预测，并在成功时将结果返回给用户。
 
 ## <a name="test-web-api-locally"></a>在本地测试 Web API
 

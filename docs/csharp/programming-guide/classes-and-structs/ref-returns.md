@@ -4,12 +4,12 @@ description: 了解如何定义和使用 ref 返回值和 ref 局部变量
 author: rpetrusha
 ms.author: ronpet
 ms.date: 04/04/2018
-ms.openlocfilehash: fcac162f63438b6cbe54908383467d4b0f227c39
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: e23007deffea0f542d623be918cd1c61496d1362
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59081825"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353881"
 ---
 # <a name="ref-returns-and-ref-locals"></a>ref 返回值和局部变量
 
@@ -17,9 +17,9 @@ ms.locfileid: "59081825"
 
 ## <a name="what-is-a-reference-return-value"></a>什么是引用返回值？
 
-绝大多数开发者都很熟悉将参数按引用传递给被调用的方法。 已调用方法的参数列表包含以引用方式传递的变量。 调用方会监测已调用方法对其值做出的任何更改。 引用返回值是指，方法返回对某变量的引用（或别名）。 相应变量的作用域必须包括方法。 相应变量的生存期必须超过方法的返回值。 调用方对方法的返回值进行的修改应用于方法返回的变量。
+绝大多数开发者都很熟悉将参数按引用传递给被调用的方法  。 已调用方法的参数列表包含以引用方式传递的变量。 调用方会监测已调用方法对其值做出的任何更改。 引用返回值  是指，方法返回对某变量的引用  （或别名）。 相应变量的作用域必须包括方法。 相应变量的生存期必须超过方法的返回值。 调用方对方法的返回值进行的修改应用于方法返回的变量。
 
-如果声明方法返回引用返回值，表明方法返回变量别名。 这样做通常是为了让调用代码有权通过别名访问此变量（包括修改它）。 因此，方法的引用返回值不得包含返回类型 `void`。
+如果声明方法返回引用返回值  ，表明方法返回变量别名。 这样做通常是为了让调用代码有权通过别名访问此变量（包括修改它）。 因此，方法的引用返回值不得包含返回类型 `void`。
 
 对于方法能以引用返回值的形式返回的表达式，存在一些限制。 具体限制包括：
 
@@ -27,15 +27,15 @@ ms.locfileid: "59081825"
 
 - 返回值不得为文本 `null`。 返回 `null` 会生成编译器错误 CS8156“无法在此上下文中使用表达式，因为它可能不是以引用方式返回”。
 
-   使用引用返回值的方法可以返回值当前为 null（未实例化）或[可以为 null 的类型](../nullable-types/index.md)的变量别名。
- 
+   使用引用返回值的方法可以返回值当前为 NULL（未实例化）或[可为空的值类型](../nullable-types/index.md)的变量别名。
+
 - 返回值不得为常量、枚举成员、通过属性的按值返回值或 `class`/`struct` 方法。 违反此规则会生成编译器错误 CS8156“无法在此上下文中使用表达式，因为它可能不是以引用方式返回”。
 
 此外，禁止对异步方法使用引用返回值。 异步方法可能会在执行尚未完成时就返回值，尽管返回值仍未知。
- 
+
 ## <a name="defining-a-ref-return-value"></a>定义 ref 返回值
 
-返回引用返回值的方法必须满足以下两个条件：
+返回引用返回值  的方法必须满足以下两个条件：
 
 - 方法签名在返回类型前面有 [ref](../../language-reference/keywords/ref.md) 关键字。
 - 方法主体中的每个 [return](../../language-reference/keywords/return.md) 语句都在返回实例的名称前面有 [ref](../../language-reference/keywords/ref.md) 关键字。
@@ -56,8 +56,8 @@ public ref Person GetContactInformation(string fname, string lname)
 
 - 分配值时，就是将值分配到它取别名的变量。
 - 读取值时，就是读取它取别名的变量的值。
-- 如果以引用方式返回它，就是返回对相同变量所取的别名。
-- 如果以引用方式将它传递到另一个方法，就是传递对它取别名的变量的引用。
+- 如果以引用方式  返回它，就是返回对相同变量所取的别名。
+- 如果以引用方式  将它传递到另一个方法，就是传递对它取别名的变量的引用。
 - 如果返回[引用本地](#ref-locals)别名，就是返回相同变量的新别名。
 
 ## <a name="ref-locals"></a>ref 局部变量
@@ -76,7 +76,7 @@ Person p = contacts.GetContactInformation("Brandie", "Best");
 
 上面的分配将 `p` 声明为本地变量。 它的初始值是通过读取 `GetContactInformation` 返回的值进行复制。 之后对 `p` 的任何分配都不会更改 `GetContactInformation` 返回的变量值。 变量 `p` 不再是返回的变量的别名。
 
-声明引用本地变量，复制原始值的别名。 在下面的分配中，`p` 是从 `GetContactInformation` 返回的变量的别名。
+声明引用本地  变量，复制原始值的别名。 在下面的分配中，`p` 是从 `GetContactInformation` 返回的变量的别名。
 
 ```csharp
 ref Person p = ref contacts.GetContactInformation("Brandie", "Best");
@@ -84,7 +84,7 @@ ref Person p = ref contacts.GetContactInformation("Brandie", "Best");
 
 后续使用 `p` 等同于使用 `GetContactInformation` 返回的变量，因为 `p` 是此变量的别名。 对 `p` 所做的更改也会更改从 `GetContactInformation` 返回的变量。
 
-`ref` 关键字用于局部变量声明前面和方法调用前面。 
+`ref` 关键字用于局部变量声明前面和  方法调用前面。 
 
 可通过相同方式按引用访问值。 在某些情况下，按引用访问值可避免潜在的高开销复制操作，从而提高性能。 例如，以下语句显示用户可如何定义一个用于引用值的 ref 局部变量值。
 
@@ -92,7 +92,7 @@ ref Person p = ref contacts.GetContactInformation("Brandie", "Best");
 ref VeryLargeStruct reflocal = ref veryLargeStruct;
 ```
 
-`ref` 关键字用于局部变量声明前面和第二个示例中的值前面。 在这两个示例中，如果无法同时将 `ref` 关键字包含在变量声明和赋值中，则会导致编译器错误 CS8172：“无法使用值对按引用变量进行初始化”。 
+`ref` 关键字用于局部变量声明前面和  第二个示例中的值前面。 在这两个示例中，如果无法同时将 `ref` 关键字包含在变量声明和赋值中，则会导致编译器错误 CS8172：“无法使用值对按引用变量进行初始化”。 
 
 在低于 C# 7.3 的版本中，无法将 ref 局部变量重新分配为，在初始化后引用其他存储。 此限制已取消。 下面的示例展示了如何重新分配：
 

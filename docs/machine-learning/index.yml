@@ -1,69 +1,97 @@
-### YamlMime:YamlDocument
-documentType: LandingData
+### YamlMime:Landing
 title: ML.NET 文档
+summary: 了解如何使用开放源代码 ML.NET 生成机器学习解决方案，并将它们集成到应用程序。 通过教程、代码示例等说明操作方法。
 metadata:
-  document_id: na
   title: ML.NET 文档 - 教程和 API 参考
-  meta.description: 'Learn how to use ML.NET, an open-source and cross-platform machine learning framework you can use to build custom machine learning solutions and integrate them into .NET applications. Incorporate AI into your apps using the .NET skills you already have and without leaving .NET.'
+  description: 了解如何使用开放源代码 ML.NET 生成机器学习解决方案，并将它们集成到应用程序。 通过教程、代码示例等说明操作方法。
+  ms.prod: dotnet-ml
   ms.topic: landing-page
-  ms.date: 09/16/2019
-  ms.author: nakersha
+  ms.collection: collection
   author: natke
-abstract:
-  description: 了解如何使用 ML.NET，这是一个跨平台的开源机器学习框架，用于生成自定义机器学习解决方案并将其集成到 .NET 应用程序。 教程、代码示例、API 参考和其他文档将演示如何使用该框架。
-sections:
-  - title: 分步教程
-    items:
-      - type: paragraph
-        text: 了解如何使用 ML.NET 创建常见的解决方案：
-      - type: paragraph
-        text: <b>使用 ML.NET API 进行开发</b>：
-      - type: list
-        style: unordered
-        items:
-          - html: <a href="/dotnet/machine-learning/tutorials/sentiment-analysis">使用二元分类分析情绪</a>
-          - html: <a href="/dotnet/machine-learning/tutorials/github-issue-classification">使用多类分类对 GitHub 问题进行分类</a></li>
-          - html: <a href="/dotnet/machine-learning/tutorials/predict-prices">使用回归法预测价格</a>
-          - html: <a href="/dotnet/machine-learning/tutorials/iris-clustering">使用聚类分析按特征对花分类</a>
-          - html: <a href="/dotnet/machine-learning/tutorials/movie-recommendation">使用矩阵因子分解创建影片推荐系统</a>
-          - html: <a href="/dotnet/machine-learning/tutorials/image-classification">使用 TensorFlow 生成自定义图像分类器</a>
-          - html: <a href="/dotnet/machine-learning/tutorials/object-detection-onnx">使用 ONNX 检测图像中的对象</a>
-          - html: <a href="/dotnet/machine-learning/tutorials/text-classification-tf">使用 TensorFlow 对影片评论情绪进行分类</a>
-      - type: paragraph
-        text: <b>使用模型生成器</b>，它是一个图形 Visual Studio 扩展：
-      - type: list
-        style: unordered
-        items:
-          - html: <a href="/dotnet/machine-learning/tutorials/predict-prices-with-model-builder">使用模型生成器预测价格</a>
-          - html: <a href="/dotnet/machine-learning/tutorials/sentiment-analysis-model-builder">构建 Razor Pages Web 应用程序以分析情绪</a>
-      - type: paragraph
-        text: <b>运行 ML.NET CLI</b>：
-      - type: list
-        style: unordered
-        items:
-          - html: <a href="/dotnet/machine-learning/tutorials/mlnet-cli">使用 ML.NET CLI 分析情绪</a>
-  - title: 示例
-    items:
-      - type: paragraph
-        text: '有关 C# 和 F# 中的应用程序，请参阅 GitHub 上的<a href="https://github.com/dotnet/machinelearning-samples">示例存储库</a>。'
-  - title: 参考
-    items:
-      - type: paragraph
-        text: <b>ML.NET API</b>
-      - type: list
-        style: unordered
-        items:
-          - html: <a href="/dotnet/api/?view=ml-dotnet">发布 ML.NET API</a> 包含用于数据处理的组件、用于二元分类、多类分类、回归、异常情况检测、时序和预测、排名、模型保存和加载的算法以及 ONNX 和 TensorFlow 模型处理等等！
-          - html: <a href="/dotnet/api/?view=ml-dotnet-preview">预览 ML.NET API</a> 包含建议任务的算法，并支持标准深度学习模型。
-      - type: paragraph
-        text: <b>AutoML API</b>
-      - type: list
-        style: unordered
-        items:
-          - html: <a href="/dotnet/api/index?view=automl-dotnet">Auto ML API</a>
-      - type: paragraph
-        text: <b>ML.NET CLI 参考</b>
-      - type: list
-        style: unordered
-        items:
-          - html: <a href="/dotnet/machine-learning/reference/ml-net-cli-reference">ML.NET CLI 命令参考</a>
+  ms.author: nakersha
+  ms.date: 09/23/2019
+  ms.openlocfilehash: f6f4d0c516a1310df5c497a3f4e7331877f3c5a9
+  ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+  ms.translationtype: HT
+  ms.contentlocale: zh-CN
+  ms.lasthandoff: 09/24/2019
+  ms.locfileid: "71216651"
+landingContent:
+- title: 关于 ML.NET
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: 什么是 ML.NET？
+      url: how-does-mldotnet-work.md
+  - linkListType: concept
+    links:
+    - text: 机器学习模型类型
+      url: resources/tasks.md
+    - text: 如何选择算法
+      url: how-to-choose-an-ml-net-algorithm.md
+    - text: 数据转换
+      url: resources/transforms.md
+- title: 使用模型生成器
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: 什么是模型生成器？
+      url: automate-training-with-model-builder.md
+  - linkListType: quickstart
+    links:
+    - text: 安装模型生成器
+      url: how-to-guides/install-model-builder.md
+  - linkListType: tutorial
+    links:
+    - text: 预测价格 - 模型生成器
+      url: tutorials/predict-prices-with-model-builder.md
+    - text: 构建 Razor Pages Web 应用程序以分析情绪
+      url: tutorials/sentiment-analysis-model-builder.md
+- title: API 入门
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: 使用迁移学习构建 TensorFlow 图像分类器
+      url: tutorials/image-classification.md
+    - text: 分析网站评论情绪
+      url: tutorials/sentiment-analysis.md
+    - text: 使用 ONNX 检测图像中的对象
+      url: tutorials/object-detection-onnx.md
+  - linkListType: how-to-guide
+    links:
+    - text: 从各种源加载数据
+      url: how-to-guides/load-data-ml-net.md
+    - text: 准备建模的数据
+      url: how-to-guides/prepare-data-ml-net.md
+    - text: 训练和评估模型
+      url: how-to-guides/train-machine-learning-model-ml-net.md
+    - text: 使用经过训练的模型进行预测
+      url: how-to-guides/machine-learning-model-predictions-ml-net.md
+    - text: 保存和加载经过训练的模型
+      url: how-to-guides/save-load-machine-learning-models-ml-net.md
+- title: 使用 ML.NET CLI
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: 使用 ML.NET CLI 自动进行模型训练
+      url: automate-training-with-cli.md
+  - linkListType: quickstart
+    links:
+    - text: 安装 ML.NET CLI
+      url: how-to-guides/install-ml-net-cli.md
+  - linkListType: tutorial
+    links:
+    - text: 分析情绪 - ML.NET CLI 和 AutoML
+      url: tutorials/mlnet-cli.md
+- title: API 参考
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: ML.NET API 引用
+      url: https://docs.microsoft.com/dotnet/api/?view=ml-dotnet
+    - text: ML.NET API 参考（预览）
+      url: https://docs.microsoft.com/dotnet/api/?view=ml-dotnet-preview
+    - text: ML.NET CLI 参考
+      url: reference/ml-net-cli-reference.md
+    - text: AutoML API 参考
+      url: https://docs.microsoft.com/dotnet/api/?view=automl-dotnet

@@ -1,18 +1,18 @@
 ---
 title: 使用索引和范围探索数据范围
 description: 本高级教程教你使用索引和范围来探索数据，以检查顺序数据集的切片。
-ms.date: 04/19/2019
+ms.date: 09/20/2019
 ms.custom: mvc
-ms.openlocfilehash: d0eeadfff9732ced22e045536a88ed49cd98bbaa
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: a879601e1358f72e80983992a3cd96ba1fb06a38
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117834"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71391966"
 ---
 # <a name="indices-and-ranges"></a>索引和范围
 
-范围和索引为访问 <xref:System.Array>、<xref:System.String>、<xref:System.Span%601> 或 <xref:System.ReadOnlySpan%601> 中的单个元素或范围提供了简洁的语法。 这些功能启用更简洁清晰的语法来访问某个序列中的单个元素或元素范围。
+范围和索引为访问序列中的单个元素或范围提供了简洁的语法。
 
 在本教程中，你将了解：
 
@@ -74,6 +74,14 @@ string[] words = new string[]
 下面的示例展示了使用这些选项的多种原因。 请修改 `x`、`y` 和 `z` 以尝试不同的组合。 在进行实验时，请使用 `x` 小于 `y`且 `y` 小于 `z` 的有效组合值。 在新方法中添加以下代码。 尝试不同的组合：
 
 [!code-csharp[SemanticsExamples](~/samples/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_Semantics)]
+
+## <a name="type-support-for-indices-and-ranges"></a>索引和范围的类型支持
+
+若类型提供带 <xref:System.Index> 或 [ 参数的](../programming-guide/indexers/index.md)索引器<xref:System.Range>，则它将分别显式支持索引或范围。
+
+若类型包含名称为 `Length` 或 `Count` 的属性，属性有可访问的 Getter 并且其返回类型为 `int`，则此类型为可计数类型。  不显式支持索引或范围的可计数类型可能为它们提供隐式支持。 有关详细信息，请参阅[功能建议说明](~/_csharplang/proposals/csharp-8.0/ranges.md)的[隐式索引支持](~/_csharplang/proposals/csharp-8.0/ranges.md#implicit-index-support)和[隐式范围支持](~/_csharplang/proposals/csharp-8.0/ranges.md#implicit-range-support)部分。
+
+例如，以下 .NET 类型同时支持索引和范围：<xref:System.Array>、<xref:System.String>、<xref:System.Span%601> 和 <xref:System.ReadOnlySpan%601>。 <xref:System.Collections.Generic.List%601> 支持索引，但不支持范围。
 
 ## <a name="scenarios-for-indices-and-ranges"></a>索引和范围的应用场景
 

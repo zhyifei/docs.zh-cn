@@ -3,12 +3,12 @@ title: 如何使用 ML.NET 自动化 ML API
 description: ML.NET 自动化 ML API 可自动化模型生成过程并生成可供部署的模型。 了解可用于配置自动化机器学习任务的选项。
 ms.date: 04/24/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 02e4203b0d9f388c7bd7133f3cd4e97cc60cff14
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: a7057337fb6ff19a1e402d7bf74a766b246ea3c1
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929395"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332722"
 ---
 # <a name="how-to-use-the-mlnet-automated-machine-learning-api"></a>如何使用 ML.NET 自动化机器学习 API
 
@@ -126,6 +126,9 @@ using Microsoft.ML.AutoML;
 |PositiveRecall
 
 ## <a name="data-pre-processing-and-featurization"></a>数据预处理和特征化
+
+> [!NOTE]
+> 特征列仅支持 [`Boolean`](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)、[`Single`](https://docs.microsoft.com/en-us/dotnet/api/system.single) 和 [`String`](https://docs.microsoft.com/en-us/dotnet/api/system.string) 类型。
 
 默认情况下会进行数据预处理，并会自动执行以下步骤：
 

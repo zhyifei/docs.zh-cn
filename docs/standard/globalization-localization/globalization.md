@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e919934-6b19-42f2-b770-275a4fae87c9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8820fb898e0944704b7c81363962d523770a541c
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: ce2f127858305a96b358c1661b98a359ae565f57
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442472"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71393118"
 ---
 # <a name="globalization"></a>全球化
 
@@ -40,7 +40,7 @@ ms.locfileid: "56442472"
 
 许多应用程序和操作系统（包括 Windows 操作系统）也可以使用代码页来表示字符集。 代码页通常包含从 0x00 到 0x7F 的标准 ASCII 值，并将其他字符映射到从 0x80 到 0xFF 的剩余值。 从 0x80 到 0xFF 的值的解释取决于具体的代码页。 因此，如有可能，应避免在全球化应用中使用代码页。
 
-以下示例阐释了当系统上的默认代码页与保存数据的代码页不同时，解释代码页数据的危险。 （若要模拟此场景，示例应明确指定不同的代码页。）首先，该示例定义了一个由希腊字母表的大写字符组成的数组。 然后使用代码页 737（也称为 MS-DOS 希腊语）将其编码成一个字节数组，并保存到文件。 如果检索该文件并使用代码页 737 对其字节数组进行解码，则会还原原始字符。 但是，如果检索该文件并使用代码页 1252（或按拉丁字母表来表示字符的 Windows-1252）对其字节数组进行解码，原始数据则会丢失。
+以下示例阐释了当系统上的默认代码页与保存数据的代码页不同时，解释代码页数据的危险。 （若要模拟此场景，示例应明确指定不同的代码页。）首先，示例定义了一个由希腊字母表的大写字符组成的数组。 然后使用代码页 737（也称为 MS-DOS 希腊语）将其编码成一个字节数组，并保存到文件。 如果检索该文件并使用代码页 737 对其字节数组进行解码，则会还原原始字符。 但是，如果检索该文件并使用代码页 1252（或按拉丁字母表来表示字符的 Windows-1252）对其字节数组进行解码，原始数据则会丢失。
 
 [!code-csharp[Conceptual.Globalization#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/codepages1.cs#1)]
 [!code-vb[Conceptual.Globalization#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/codepages1.vb#1)]
@@ -85,8 +85,7 @@ ms.locfileid: "56442472"
 
 相等性的比较有时会涉及到搜索或子字符串比较，而不是对 <xref:System.String.Equals%2A?displayProperty=nameWithType> 方法的调用。 在某些情况下，可以使用子字符串搜索以确定子字符串是否与另一字符串相等。 如果比较的目的是非语义的，那么搜索也应该为序号搜索，而不区分区域性。
 
-以下示例阐释了对非语义数据进行区分区域性搜索的危险。 
-  `AccessesFileSystem` 方法旨在禁止文件系统访问以子字符串“FILE”开头的 URI。 为此，它对以字符串“FILE”开头的 URI 执行区分区域性、不区分大小写的比较。 由于访问文件系统的 URI 可以“FILE:”或“file:”开头，因此隐式假设“i”(U+0069) 始终为小写且等效于“I”(U+0049)。 但是，在土耳其语和阿塞拜疆语中，“i”的大写为“İ”(U+0130)。 由于存在此差异，因此区分区域性的比较在应禁止的情况下仍允许进行文件系统访问。
+以下示例阐释了对非语义数据进行区分区域性搜索的危险。 `AccessesFileSystem` 方法旨在禁止文件系统访问以子字符串“FILE”开头的 URI。 为此，它对以字符串“FILE”开头的 URI 执行区分区域性、不区分大小写的比较。 由于访问文件系统的 URI 可以“FILE:”或“file:”开头，因此隐式假设“i”(U+0069) 始终为小写且等效于“I”(U+0049)。 但是，在土耳其语和阿塞拜疆语中，“i”的大写为“İ”(U+0130)。 由于存在此差异，因此区分区域性的比较在应禁止的情况下仍允许进行文件系统访问。
 
 [!code-csharp[Conceptual.Globalization#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/equals1.cs#12)]
 [!code-vb[Conceptual.Globalization#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/equals1.vb#12)]
@@ -140,13 +139,11 @@ ms.locfileid: "56442472"
 
 - 无参数的 <xref:System.DateTime.ToString?displayProperty=nameWithType> 方法
 
-- 
-  <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> 方法，其中包含一个格式字符串
+- <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> 方法，其中包含一个格式字符串
 
 - 无参数的 <xref:System.DateTimeOffset.ToString?displayProperty=nameWithType> 方法
 
-- 
-  <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType>，其中包含一个格式字符串
+- <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType>，其中包含一个格式字符串
 
 - [复合格式](../../../docs/standard/base-types/composite-formatting.md)功能（与日期配合使用时）
 
@@ -186,7 +183,7 @@ ms.locfileid: "56442472"
 
 当还原数据的系统与对其进行序列化的系统位于同一时区时，反序列化的日期和时间值能准确地反映原始值，输出如下：
 
-```
+```console
 '3/30/2013 6:00:00 PM' --> 3/30/2013 6:00:00 PM Unspecified
 '2013-03-30T18:00:00' --> 3/30/2013 6:00:00 PM Unspecified
 '2013-03-30T18:00:00.0000000-07:00' --> 3/30/2013 6:00:00 PM Local
@@ -196,7 +193,7 @@ ms.locfileid: "56442472"
 
 但是，如果在处于其他时区的系统上还原数据，仅格式为“o”（往返）标准格式字符串的日期和时间值会保留时区信息，因此它会表示同一时刻。 当在处于罗马标准时区的系统上还原日期和时间数据时，输出如下：
 
-```
+```console
 '3/30/2013 6:00:00 PM' --> 3/30/2013 6:00:00 PM Unspecified
 '2013-03-30T18:00:00' --> 3/30/2013 6:00:00 PM Unspecified
 '2013-03-30T18:00:00.0000000-07:00' --> 3/31/2013 3:00:00 AM Local
@@ -221,7 +218,7 @@ ms.locfileid: "56442472"
 
 当在位于太平洋标准时区的系统上和在位于罗马标准时区的系统上对数据进行序列化时，该示例将显示以下输出：
 
-```
+```console
 '2013-03-30T18:00:00.0000000-07:00' --> 3/31/2013 3:00:00 AM Local
 'Sun, 31 Mar 2013 01:00:00 GMT' --> 3/31/2013 3:00:00 AM Local
 '2013-03-31 01:00:00Z' --> 3/31/2013 3:00:00 AM Local
@@ -233,8 +230,7 @@ ms.locfileid: "56442472"
 
 ### <a name="perform-date-and-time-arithmetic"></a>执行日期和时间算法
 
-
-  <xref:System.DateTime> 和 <xref:System.DateTimeOffset> 类型都支持算术运算。 可以计算两个日期值之差，或者将日期值与特定的时间间隔相加或相减。 但是，对日期和时间值进行的算术运算时不考虑时区和时区调整规则。 因此，计算表示时刻的日期和时间值可能会返回错误结果。
+<xref:System.DateTime> 和 <xref:System.DateTimeOffset> 类型都支持算术运算。 可以计算两个日期值之差，或者将日期值与特定的时间间隔相加或相减。 但是，对日期和时间值进行的算术运算时不考虑时区和时区调整规则。 因此，计算表示时刻的日期和时间值可能会返回错误结果。
 
 例如，从太平洋标准时到太平洋夏令时的转换发生在 3 月的第二个星期日，即 2013 年 3 月 10 日。 如下面的示例所示，如果计算的日期和时间比太平洋标准时区系统上的 2013 年 3 月 9 日上午 10:30 晚 48 小时， 2013 年 3 月 11 日上午 10:30 这一结果不会考虑干预时间调整。
 
@@ -326,17 +322,13 @@ ms.locfileid: "56442472"
 
 在 .NET 中，<xref:System.Globalization.CultureInfo> 类表示特定的区域性或区域。 其中一些属性返回提供有关某些区域性方面的特定信息的对象：
 
-- 
-  <xref:System.Globalization.CultureInfo.CompareInfo%2A?displayProperty=nameWithType> 属性返回 <xref:System.Globalization.CompareInfo> 对象，该对象包含有关如何比较区域性和排列字符串的信息。
+- <xref:System.Globalization.CultureInfo.CompareInfo%2A?displayProperty=nameWithType> 属性返回 <xref:System.Globalization.CompareInfo> 对象，该对象包含有关如何比较区域性和排列字符串的信息。
 
-- 
-  <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> 属性返回 <xref:System.Globalization.DateTimeFormatInfo> 对象，该对象提供用于设置日期和时间数据格式的区域性特定信息。
+- <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> 属性返回 <xref:System.Globalization.DateTimeFormatInfo> 对象，该对象提供用于设置日期和时间数据格式的区域性特定信息。
 
-- 
-  <xref:System.Globalization.CultureInfo.NumberFormat%2A?displayProperty=nameWithType> 属性返回 <xref:System.Globalization.NumberFormatInfo> 对象，该对象提供用于设置数值数据格式的区域性特定信息。
+- <xref:System.Globalization.CultureInfo.NumberFormat%2A?displayProperty=nameWithType> 属性返回 <xref:System.Globalization.NumberFormatInfo> 对象，该对象提供用于设置数值数据格式的区域性特定信息。
 
-- 
-  <xref:System.Globalization.CultureInfo.TextInfo%2A?displayProperty=nameWithType> 属性返回 <xref:System.Globalization.TextInfo> 对象，该对象提供有关区域性写入系统的信息。
+- <xref:System.Globalization.CultureInfo.TextInfo%2A?displayProperty=nameWithType> 属性返回 <xref:System.Globalization.TextInfo> 对象，该对象提供有关区域性写入系统的信息。
 
 一般情况下，不要对特定的 <xref:System.Globalization.CultureInfo> 属性及其相关对象的值作出任何假设。 相反，应将区域性特定的数据视为可更改的，原因如下：
 
@@ -346,7 +338,7 @@ ms.locfileid: "56442472"
 
 - .NET 支持替换区域性。 由此可定义补充现有标准区域性或完全替换现有标准区域性的新的自定义区域性。
 
-- 在 Windows 系统上，用户可使用“控制面板”中的“区域和语言”应用，自定义区域性专用设置。 在实例化 <xref:System.Globalization.CultureInfo> 对象时，可调用 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> 构造函数来确定它是否反射这些用户自定义。 通常，对最终用户应用而言，应考虑用户首选项，以用户期望的格式呈现数据。
+- 在 Windows 系统上，用户可使用“控制面板”中的“区域和语言”  应用，自定义区域性专用设置。 在实例化 <xref:System.Globalization.CultureInfo> 对象时，可调用 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> 构造函数来确定它是否反射这些用户自定义。 通常，对最终用户应用而言，应考虑用户首选项，以用户期望的格式呈现数据。
 
 ## <a name="see-also"></a>请参阅
 
