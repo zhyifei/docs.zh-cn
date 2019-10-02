@@ -6,12 +6,12 @@ helpviewer_keywords:
 - cast operators [C#], as and is operators
 - as operator [C#]
 - is operator [C#]
-ms.openlocfilehash: 764a69869b8a5b8f76e2f58aced51761af73e50e
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: d82c60374db637bb8ac879a23e2d74c39194ca18
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69566284"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353725"
 ---
 # <a name="how-to-safely-cast-by-using-pattern-matching-and-the-is-and-as-operators"></a>如何：使用模式匹配以及 is 和 as 运算符安全地进行强制转换
 
@@ -23,11 +23,11 @@ ms.locfileid: "69566284"
 
 前面的示例演示了模式匹配语法的一些功能。 `if (a is Mammal m)` 和 `if (o is Mammal m)` 语句将测试与初始化赋值相结合。 只有在测试成功时才会进行赋值。 变量 `m` 仅在已赋值的嵌入式 `if` 语句的范围内。 以后无法在同一方法中访问 `m`。 在交互式窗口中尝试操作。
 
-也可以使用同一语法来测试[可以为 null 的类型](../programming-guide/nullable-types/index.md)是否具有值，如以下示例代码所示：
+也可以使用同一语法来测试[可为空的值类型](../programming-guide/nullable-types/index.md)是否具有值，如以下示例代码所示：
 
 [!code-csharp[Pattern matching with nullable types](../../../samples/snippets/csharp/how-to/safelycast/nullablepatternmatching/Program.cs#PatternMatchingNullable)]
 
-前面的示例演示了模式匹配用于转换的其他功能。 可以通过专门检查 `null` 值来测试 NULL 模式的变量。 当变量的运行时值为 `null` 时，用于检查类型的 `is` 语句始终返回 `false`。 模式匹配 `is` 语句不允许可以为 null 值的类型，如 `int?` 或 `Nullable<int>`，但你可以测试任何其他值类型。
+前面的示例演示了模式匹配用于转换的其他功能。 可以通过专门检查 `null` 值来测试 NULL 模式的变量。 当变量的运行时值为 `null` 时，用于检查类型的 `is` 语句始终返回 `false`。 模式匹配 `is` 语句不允许可以为 null 值的类型，如 `int?` 或 `Nullable<int>`，但你可以测试任何其他值类型。 上述示例中的 `is` 模式不局限于可为空的值类型。 也可以使用这些模式测试引用类型的变量具有值还是为 `null`。
 
 前面的示例还演示如何在变量为其他类型的 `switch` 语句中使用模式匹配 `is` 表达式。
 

@@ -1,17 +1,17 @@
 ---
 title: C# 8.0 中的新增功能 - C# 指南
-description: 简要介绍 C# 8.0 中提供的新功能。 本文使用最新的预览版 5。
+description: 简要介绍 C# 8.0 中提供的新功能。
 ms.date: 09/20/2019
-ms.openlocfilehash: a434d1f7598bc3f6787f7466e48fb161db192761
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: ee0f6c9d7cfbe829508e3e0900e249c204266ca3
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71182413"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71396035"
 ---
 # <a name="whats-new-in-c-80"></a>C# 8.0 中的新增功能
 
-C# 语言有许多增强功能，可以进行试用。
+C# 8.0 向 C# 语言添加了以下功能和增强功能：
 
 - [Readonly 成员](#readonly-members)
 - [默认接口成员](#default-interface-members)
@@ -30,9 +30,6 @@ C# 语言有许多增强功能，可以进行试用。
 - [非托管构造类型](#unmanaged-constructed-types)
 - [嵌套表达式中的 stackalloc](#stackalloc-in-nested-expressions)
 - [内插逐字字符串的增强功能](#enhancement-of-interpolated-verbatim-strings)
-
-> [!NOTE]
-> 本文针对 C# 8.0 预览版 5 进行了最后一次更新。
 
 本文的剩余部分将简要介绍这些功能。 如果有详细讲解的文章，则将提供指向这些教程和概述的链接。 可以使用 `dotnet try` 全局工具在环境中浏览这些功能：
 
@@ -378,18 +375,18 @@ await foreach (var number in GenerateSequence())
 
 ## <a name="indices-and-ranges"></a>索引和范围
 
-范围和索引为在数组、[字符串](../language-reference/builtin-types/reference-types.md#the-string-type)<xref:System.Span%601>或 <xref:System.ReadOnlySpan%601> 中指定子范围提供了简洁语法。
+索引和范围为访问序列中的单个元素或范围提供了简洁的语法。
 
 此语言支持依赖于两个新类型和两个新运算符：
 
 - <xref:System.Index?displayProperty=nameWithType> 表示一个序列索引。
-- `^` 运算符，指定一个索引与序列末尾相关。
+- 来自末尾运算符 `^` 的索引，指定一个索引与序列末尾相关。
 - <xref:System.Range?displayProperty=nameWithType> 表示序列的子范围。
-- 范围运算符 (`..`)，用于指定范围的开始和末尾，就像操作数一样。
+- 范围运算符 `..`，用于指定范围的开始和末尾，就像操作数一样。
 
 让我们从索引规则开始。 请考虑数组 `sequence`。 `0` 索引与 `sequence[0]` 相同。 `^0` 索引与 `sequence[sequence.Length]` 相同。 请注意，`sequence[^0]` 会引发异常，就像 `sequence[sequence.Length]` 一样。 对于任何数字 `n`，索引 `^n` 与 `sequence.Length - n` 相同。
 
-范围指定范围的开始和末尾   。 包括此范围的开始，但不包括此范围的末尾，这表示此范围包含开始但不包含末尾。   范围 `[0..^0]` 表示整个范围，就像 `[0..sequence.Length]` 表示整个范围。 
+范围指定范围的开始和末尾   。 包括此范围的开始，但不包括此范围的末尾，这表示此范围包含开始但不包含末尾。   范围 `[0..^0]` 表示整个范围，就像 `[0..sequence.Length]` 表示整个范围。
 
 请看以下几个示例。 请考虑以下数组，用其顺数索引和倒数索引进行注释：
 
@@ -447,6 +444,8 @@ Range phrase = 1..4;
 ```csharp
 var text = words[phrase];
 ```
+
+不仅数组支持索引和范围。 也可以将索引和范围用于 [string](../language-reference/builtin-types/reference-types.md#the-string-type)、<xref:System.Span%601> 或 <xref:System.ReadOnlySpan%601>。 有关详细信息，请参阅[索引和范围的类型支持](../tutorials/ranges-indexes.md#type-support-for-indices-and-ranges)。
 
 可在有关[索引和范围](../tutorials/ranges-indexes.md)的教程中详细了解索引和范围。
 
