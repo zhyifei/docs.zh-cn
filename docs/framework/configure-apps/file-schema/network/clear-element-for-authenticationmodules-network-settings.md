@@ -10,20 +10,20 @@ helpviewer_keywords:
 - <clear> element, authenticationModules
 - authenticationModules, clear element
 ms.assetid: dc522c45-4a80-4831-8955-f7b68a47edfd
-ms.openlocfilehash: 12ac146926103b40073d34f48895b0645c8a8ed2
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 052f7eef30500d37389585956728250a46b718a3
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659470"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698403"
 ---
-# <a name="clear-element-for-authenticationmodules-network-settings"></a>\<清除 authenticationModules 的 > 元素 (网络设置)
+# <a name="clear-element-for-authenticationmodules-network-settings"></a>用于 authenticationModules 的 0clear > 元素（网络设置） @no__t
 清除应用程序中的所有身份验证模块。  
   
- \<configuration>  
-\<system.net>  
-\<authenticationModules>  
-\<清除 >  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t[ **\<system >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t[ **\<authenticationModules >** ](authenticationmodules-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<clear >**  
   
 ## <a name="syntax"></a>语法  
   
@@ -47,7 +47,7 @@ ms.locfileid: "69659470"
 |[authenticationModules](authenticationmodules-element-network-settings.md)|指定用于对网络请求进行身份验证的模块。|  
   
 ## <a name="remarks"></a>备注  
- `clear`元素删除之前在配置文件或配置层次结构的较高级别中定义的所有身份验证模块。  
+ @No__t-0 元素删除先前在配置文件中或在配置层次结构中的更高级别定义的所有身份验证模块。  
   
 ## <a name="configuration-files"></a>配置文件  
  此元素可在应用程序配置文件或计算机配置文件 (Machine.config) 中使用。  
