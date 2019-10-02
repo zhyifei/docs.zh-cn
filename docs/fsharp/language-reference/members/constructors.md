@@ -2,16 +2,16 @@
 title: 构造函数
 description: 了解如何在中F#定义和使用构造函数来创建和初始化类和结构对象。
 ms.date: 05/16/2016
-ms.openlocfilehash: c25fdcb95c2873eb69a94f30c87735e5c04d391b
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 6769ec7fc6768090d8ae68e21946a58829b6eea0
+ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627593"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71736850"
 ---
 # <a name="constructors"></a>构造函数
 
-本主题介绍如何定义和使用构造函数来创建和初始化类和结构对象。
+本文介绍如何定义和使用构造函数来创建和初始化类和结构对象。
 
 ## <a name="construction-of-class-objects"></a>类对象的构造
 
@@ -21,11 +21,11 @@ ms.locfileid: "68627593"
 
 无论你要调用的构造函数是主构造函数还是附加构造函数, 都可以通过使用`new`带有或不带可选`new`关键字的表达式来创建对象。 您可以将对象与构造函数参数一起初始化, 方法是按顺序列出参数, 并以逗号分隔并括在括号中, 或者通过使用括号中的命名参数和值。 您还可以通过使用属性名称和赋值来设置对象的属性, 就像使用命名构造函数参数一样。
 
-下面的代码演示一个类, 该类具有构造函数和用于创建对象的各种方法。
+下面的代码演示一个类，该类具有构造函数和用于创建对象的各种方式：
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3501.fs)]
 
-输出如下所示。
+输出如下所示：
 
 ```console
 Initialized object that has coordinates (1, 2, 3)
@@ -36,7 +36,7 @@ Initialized object that has coordinates (0, 0, 0)
 
 ## <a name="construction-of-structures"></a>结构的构造
 
-结构遵循类的所有规则。 因此, 您可以有一个主构造函数, 并且可以通过使用`new`提供其他构造函数。 但结构和类之间存在一个重要的区别: 结构可以有一个无参数的构造函数 (即, 没有参数的构造函数), 即使未定义主构造函数也是如此。 无参数构造函数将所有字段初始化为该类型的默认值, 通常为零或其等效的值。 为结构定义的任何构造函数都必须具有至少一个参数, 使其不会与默认构造函数冲突。
+结构遵循类的所有规则。 因此, 您可以有一个主构造函数, 并且可以通过使用`new`提供其他构造函数。 但结构和类之间存在一个重要的区别: 结构可以有一个无参数的构造函数 (即, 没有参数的构造函数), 即使未定义主构造函数也是如此。 无参数构造函数将所有字段初始化为该类型的默认值, 通常为零或其等效的值。 为结构定义的任何构造函数都必须具有至少一个参数，使其不会与无参数构造函数发生冲突。
 
 此外, 结构通常包含使用`val`关键字创建的字段; 类也可以包含这些字段。 具有使用`val`关键字定义的字段的结构和类也可以通过使用记录表达式在其他构造函数中进行初始化, 如以下代码所示。
 
@@ -50,7 +50,7 @@ Initialized object that has coordinates (0, 0, 0)
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3503.fs)]
 
-主构造函数的副作用仍在执行。 因此, 输出如下所示。
+主构造函数的副作用仍在执行。 因此，输出如下所示：
 
 ```console
 Created a person object.
@@ -64,7 +64,7 @@ Created an invalid person object.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3504.fs)]
 
-在其他构造函数中, 还可以通过将`as`子句置于构造函数参数之后来定义自定义标识符。 下面的示例演示了此语法。
+在其他构造函数中, 还可以通过将`as`子句置于构造函数参数之后来定义自定义标识符。 下面的示例演示了此语法：
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3505.fs)]
 
@@ -74,11 +74,11 @@ Created an invalid person object.
 
 ## <a name="assigning-values-to-properties-at-initialization"></a>在初始化时将值分配给属性
 
-您可以通过将窗体`property = value`赋值的列表追加到构造函数的参数列表, 将值分配给初始化代码中类对象的属性。 下面的代码示例对此进行了演示。
+您可以通过将窗体`property = value`赋值的列表追加到构造函数的参数列表, 将值分配给初始化代码中类对象的属性。 下面的代码示例对此进行了演示：
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3506.fs)]
 
-以下版本的前面的代码演示了一个构造函数调用中的普通参数、可选参数和属性设置的组合。
+以下版本的前面的代码演示了一个构造函数调用中的普通参数、可选参数和属性设置的组合：
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3507.fs)]
 

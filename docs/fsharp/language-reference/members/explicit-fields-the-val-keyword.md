@@ -2,12 +2,12 @@
 title: 显式字段：Val 关键字
 description: 了解用于声明F#用于在类或结构类型中存储值而不初始化类型的位置的 "val" 关键字。
 ms.date: 05/16/2016
-ms.openlocfilehash: fe339e33dae27ae226022a68dd8247d1ab1994b3
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 2703d9a2734cfda1614a401ec24c6630ec31b2f1
+ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216475"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71736839"
 ---
 # <a name="explicit-fields-the-val-keyword"></a>显式字段：Val 关键字
 
@@ -28,19 +28,16 @@ val [ mutable ] [ access-modifier ] field-name : type-name
 对于具有主构造函数的类类型中的显式字段， [DefaultValue](https://msdn.microsoft.com/library/a3a3307b-8c05-441e-b109-245511614d58)特性是必需的。 此特性指定该字段被初始化为零。 字段的类型必须支持零初始化。 如果一个类型为以下类型之一，则该类型支持零初始化：
 
 - 具有零值的基元类型。
-
 - 一种支持 Null 值作为标准值、异常值或值表示形式的类型。 这包括类、元组、记录、函数、接口、.NET 引用类型、`unit` 类型以及可区分联合类型。
-
 - 一个 .NET 值类型。
-
 - 一种结构，其字段均支持默认值零。
 
 例如，称为 `someField` 的不可变字段具有一个 .NET 编译表示形式的支持字段，该字段名为 `someField@`，你可以使用名为 `someField` 的属性访问存储值。
 
 对于可变字段，.NET 编译的表示形式是一个 .NET 字段。
 
->[!WARNING]
->.NET Framework 命名空间`System.ComponentModel`包含具有相同名称的属性。 有关该属性的信息，请参见 `System.ComponentModel.DefaultValueAttribute`。
+> [!WARNING]
+> .NET Framework 命名空间`System.ComponentModel`包含具有相同名称的属性。 有关该属性的信息，请参见 <xref:System.ComponentModel.DefaultValueAttribute>。
 
 以下代码展示了显式字段的用法，作为对比，还展示了具有主构造函数的类中的 `let` 绑定。 注意：与 `let` 字段绑定的 `myInt1` 是私有的。 当从成员方法引用与 `let` 字段绑定的 `myInt1` 时，不需要自我标识符 `this`。 但如果要引用显式字段 `myInt2` 和 `myString`，则需要自我标识符。
 
@@ -59,7 +56,7 @@ val [ mutable ] [ access-modifier ] field-name : type-name
 
 输出为 `35 22`。
 
-以下代码展示了结构中显式字段的用法。 由于结构是值类型，它自动具有默认构造函数，该函数将其字段的值设置为零。 因此，不需要 `DefaultValue` 特性。
+以下代码展示了结构中显式字段的用法。 由于结构是值类型，因此它自动具有无参数的构造函数，该构造函数将其字段的值设置为零。 因此，不需要 `DefaultValue` 特性。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6703.fs)]
 

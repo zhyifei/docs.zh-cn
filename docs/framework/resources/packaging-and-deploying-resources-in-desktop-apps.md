@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 417550397582641c5a8fa97c061377beadfb0e6f
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: aae38c8c2446ead128925e0e1d910ae12c8f220f
+ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71045578"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71736761"
 ---
 # <a name="packaging-and-deploying-resources-in-net-apps"></a>打包和部署 .NET 应用中的资源
 
@@ -42,20 +42,20 @@ ms.locfileid: "71045578"
 此模型有以下优点：
 
 - 部署应用程序后，可针对新区域性以增量方式添加资源。 因为特定于区域性资源的后续开发可能需要大量时间，这使你能够先发布主要应用程序，并在以后发布特定于区域性的资源。
-
 - 可更新和更改应用程序的附属程序集，无需重新编译应用程序。
-
 - 应用程序只需加载那些包含特定区域性所需资源的附属程序集。 这可显著减少系统资源的使用。
 
  但是，该模型也有以下缺点：
 
 - 必须管理多组资源。
-
 - 测试应用程序的初始成本增加，因为必须测试多种配置。 请注意，从长远角度看，测试使用多个附属程序集测试多个核心应用程序会比测试并维护多个并行国际版本更轻松，成本更低。
 
 ## <a name="resource-naming-conventions"></a>资源命名约定
 
 在打包应用程序的资源时，必须使用公共语言运行时所要求的资源命名约定对其进行命名。 运行时可按其区域性名称标识资源。 每个区域性均被赋予唯一名称，通常是与语言相关的两个小写字母的区域性名称和必要情况下，与国家或地区相关的两个大写子母的区域性名称的组合。 子区域性名称跟在区域性名称后，以短划线 (-) 隔开。 例如：ja-JP 表示日本日语，en-US 表示美国英语，de-DE 表示德国德语，de-AT 表示奥地利德语。 请参阅 [Windows 支持的语言/区域名称列表](https://docs.microsoft.com/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c)中的“语言标记”列。 列名遵循 [BCP 47](https://tools.ietf.org/html/bcp47) 定义的标准。
+
+> [!NOTE]
+> 两个字母的区域性名称有一些例外，例如，对于简体中文 @no__t 为0。
 
 > [!NOTE]
 > 有关创建资源文件的信息，请参阅[创建资源文件](creating-resource-files-for-desktop-apps.md)和[创建附属程序集](creating-satellite-assemblies-for-desktop-apps.md)。
@@ -204,8 +204,8 @@ al /t:lib /embed:resources.ru.resources /culture:ru /out:ru\Example1.resources.d
 
 应用程序源代码位于名为 Example1.cs 或 Example1.vb 的文件中。 它包括 <xref:System.Resources.NeutralResourcesLanguageAttribute> 属性，以指示默认应用程序资源位于 fr 子目录中。 它可实例化 Resource Manager，检索 `Greeting` 资源的值，并将其显示到控制台。
 
-[!code-csharp[Conceptual.Resources.Packaging#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.packaging/cs/example1.cs#1)]
-[!code-vb[Conceptual.Resources.Packaging#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.packaging/vb/example1.vb#1)]
+[!code-csharp[Conceptual.Resources.Packaging#1](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.packaging/cs/example1.cs#1)]
+[!code-vb[Conceptual.Resources.Packaging#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.packaging/vb/example1.vb#1)]
 
 然后，可以从命令行编译 C# 源代码，如下所示：
 
