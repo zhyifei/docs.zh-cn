@@ -4,12 +4,12 @@ description: 通过访问从图像处理到移动后端和 ETL 管道的示例�
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: cb761524976125c816aae925f0c369eb8c76e7de
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 7024a33f8a7fccd6afa51c126454afedd87cceee
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926471"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834303"
 ---
 # <a name="serverless-business-scenarios-and-use-cases"></a>无服务器业务方案和用例
 
@@ -33,7 +33,7 @@ ms.locfileid: "70926471"
 
 请参阅如何在 Azure Web 门户或 Visual Studio 中实现简单的无服务器 Azure 功能。 使用在 Android、iOS 和 Windows 上运行的 Xamarin. Forms 生成客户端。 然后，将应用程序进行优化，以将 JavaScript 对象表示法（JSON）用作服务器与具有无服务器后端的移动客户端之间的通信媒介。
 
-有关详细信息，请参阅[使用 Xamarin 客户端实现简单的 Azure 函数](https://azure.microsoft.com/resources/samples/functions-xamarin-getting-started/)
+有关详细信息，请参阅[使用 Xamarin Client 实现简单的 Azure 函数](https://azure.microsoft.com/resources/samples/functions-xamarin-getting-started/)。
 
 ## <a name="generate-a-photo-mosaic-with-serverless-image-recognition"></a>使用无服务器映像识别生成照片马赛克
 
