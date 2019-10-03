@@ -19,7 +19,7 @@ ms.locfileid: "68631094"
 
 如果经常访问的对象需要多个方法和属性的限定路径, 则可以通过不重复限定路径来加快代码的速度。
 
-可以通过两种方法来避免重复限定路径。 可以将对象分配给一个变量, 也可以将其`With`用于 .。。`End With`块。
+可以通过两种方法来避免重复限定路径。 可以将对象分配给一个变量, 也可以将其`With`用于 ...`End With`块。
 
 ### <a name="to-speed-up-access-to-a-heavily-qualified-object-by-assigning-it-to-a-variable"></a>通过将严重限定对象赋给变量来加快对该对象的访问速度
 

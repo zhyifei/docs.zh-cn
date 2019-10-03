@@ -46,7 +46,7 @@ ms.locfileid: "68626569"
     End If
     ```
 
-    `TypeOf`.。。如果对象的运行时类型与指定的类型兼容, 则表达式返回`True`。 `Is`
+    `TypeOf`...如果对象的运行时类型与指定的类型兼容, 则表达式返回`True`。 `Is`
 
     兼容性的条件取决于指定的类型是类、结构还是接口。 通常, 如果对象的类型与、继承自或实现指定的类型, 则类型是兼容的。 有关详细信息, 请参阅[TypeOf 运算符](../../../../visual-basic/language-reference/operators/typeof-operator.md)。
 

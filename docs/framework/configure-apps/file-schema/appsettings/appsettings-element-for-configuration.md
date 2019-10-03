@@ -53,8 +53,7 @@ ms.locfileid: "69921330"
 
 ## <a name="remarks"></a>备注
 
-**
-          \<AppSettings >** 元素将自定义应用程序配置信息，如数据库连接字符串、 文件路径、 XML Web service Url 或任何其他自定义配置信息存储应用程序。 使用类<xref:System.Configuration.ConfigurationSettings>在代码中访问 **\<appSettings >** 元素中指定的键/值对。
+**\<AppSettings >** 元素将自定义应用程序配置信息，如数据库连接字符串、 文件路径、 XML Web service Url 或任何其他自定义配置信息存储应用程序。 使用类<xref:System.Configuration.ConfigurationSettings>在代码中访问 **\<appSettings >** 元素中指定的键/值对。
 
 您可以使用 web.config 的 **\<appSettings >** 元素和应用程序配置文件中的**文件**属性。 此属性指定一个配置文件, 该配置文件提供其他设置或替代在 **\<appSettings >** 元素中指定的设置。 **文件**属性可用于源代码管理团队开发方案, 例如当用户想要重写应用程序配置文件中指定的项目设置时。
 

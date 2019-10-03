@@ -23,7 +23,7 @@ ms.locfileid: "70205919"
  [!code-csharp[TransactionScope#1](../../../../samples/snippets/csharp/VS_Snippets_Remoting/TransactionScope/cs/ScopeWithSQL.cs#1)]
  [!code-vb[TransactionScope#1](../../../../samples/snippets/visualbasic/VS_Snippets_Remoting/TransactionScope/vb/ScopeWithSQL.vb#1)]  
   
- 创建新<xref:System.Transactions.TransactionScope>的对象后, 将启动事务范围。  如代码示例中所示, 建议使用**using**语句创建作用域。 **Using**语句同时在C#和中 Visual Basic 可用, 其工作方式类似于**try .。。finally**块, 以确保正确释放作用域。  
+ 创建新<xref:System.Transactions.TransactionScope>的对象后, 将启动事务范围。  如代码示例中所示, 建议使用**using**语句创建作用域。 **Using**语句同时在C#和中 Visual Basic 可用, 其工作方式类似于**try ...finally**块, 以确保正确释放作用域。  
   
  在实例化 <xref:System.Transactions.TransactionScope> 时，事务管理器确定哪些事务参与进来。 一旦确定，该范围将始终参与该事务。 决策基于两个因素: 是否存在环境事务以及构造函数中的**TransactionScopeOption**参数的值。 环境事务是指在其中执行代码的事务。 可通过调用 <xref:System.Transactions.Transaction.Current%2A?displayProperty=nameWithType> 类的静态 <xref:System.Transactions.Transaction> 属性，获取对环境事务的引用。 有关如何使用此参数的详细信息, 请参阅本主题的[使用 TransactionScopeOption 管理事务流](#ManageTxFlow)部分。  
   

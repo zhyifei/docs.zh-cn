@@ -50,7 +50,7 @@ If condition Then [ statements ] [ Else [ elsestatements ] ]
 
 ## <a name="quick-links-to-example-code"></a>示例代码的快速链接
 
-本文包含一些示例，这些示例演示了`If`.。。`Then`...`Else`语句：
+本文包含一些示例，这些示例演示了`If`...`Then`...`Else`语句：
 
 - [多行语法示例](#multi-line)
 - [嵌套语法示例](#nested)
@@ -67,40 +67,40 @@ If condition Then [ statements ] [ Else [ elsestatements ] ]
 在单行语法中为必需;在多行语法中是可选的。
 
 `statements` \
-可选。 后面`If`的一个或多个语句 .。。如果计算结果为`True`，则执行。 `condition` `Then`
+可选。 后面`If`的一个或多个语句 ...如果计算结果为`True`，则执行。 `condition` `Then`
 
 `elseifcondition` \
 如果`ElseIf`存在，则为必需。 表达式. 的计算结果`True`必须`False`为或，或者是可隐式转换为`Boolean`的数据类型。
 
 `elseifstatements` \
-可选。 后面`ElseIf`的一个或多个语句 .。。如果计算结果为`True`，则执行。 `elseifcondition` `Then`
+可选。 后面`ElseIf`的一个或多个语句 ...如果计算结果为`True`，则执行。 `elseifcondition` `Then`
 
 `elsestatements` \
 可选。 如果上`condition` `elseifcondition`一个或表达式的计算结果为`True`，则执行的一个或多个语句。
 
 `End If` \
-终止的`If`多行版本 .。。`Then`...`Else`块。
+终止的`If`多行版本 ...`Then`...`Else`块。
 
 ## <a name="remarks"></a>备注
 
 ### <a name="multiline-syntax"></a>多行语法
 
-`If`当 .。。`Then`...语句时， `condition`将对其进行测试。 `Else` 如果`condition` `Then`为`True`，则执行以下语句。 如果`condition` `ElseIf`为`False`，则按顺序对每个语句（如果有）进行求值。 找到后，将执行紧随关联`ElseIf`的后面的语句。 `True` `elseifcondition` 如果计算`elseifcondition`结果不`True`为， `ElseIf`或者没有语句，则将执行下面`Else`的语句。 执行完后的语句`Then` `ElseIf` `Else`后，将继续执行后面`End If`的语句。
+`If`当 ...`Then`...语句时， `condition`将对其进行测试。 `Else` 如果`condition` `Then`为`True`，则执行以下语句。 如果`condition` `ElseIf`为`False`，则按顺序对每个语句（如果有）进行求值。 找到后，将执行紧随关联`ElseIf`的后面的语句。 `True` `elseifcondition` 如果计算`elseifcondition`结果不`True`为， `ElseIf`或者没有语句，则将执行下面`Else`的语句。 执行完后的语句`Then` `ElseIf` `Else`后，将继续执行后面`End If`的语句。
 
 `ElseIf` 和`Else`子句均可选。 你可以`ElseIf` `If`在 ... 中包含任意数量的子句`Then`...语句后， `Else`子句`ElseIf`中不能出现子句。 `Else` `If`...`Then`...`Else`语句可以相互嵌套。
 
-在多行语法中， `If`语句必须是第一行中的唯一语句。 `ElseIf`、和语句`End If`前面只能有一个行标签。 `Else` `If`.。。`Then`...`Else`块必须`End If`以语句结束。
+在多行语法中， `If`语句必须是第一行中的唯一语句。 `ElseIf`、和语句`End If`前面只能有一个行标签。 `Else` `If`...`Then`...`Else`块必须`End If`以语句结束。
 
 > [!TIP]
-> [Select .。。](../../../visual-basic/language-reference/statements/select-case-statement.md)当你评估具有多个可能值的单个表达式时，Case 语句可能更有用。
+> [Select ...](../../../visual-basic/language-reference/statements/select-case-statement.md)当你评估具有多个可能值的单个表达式时，Case 语句可能更有用。
 
 ### <a name="single-line-syntax"></a>单行语法
 
 对于一个条件，可以使用单行语法，如果该条件为 true，则执行代码。 不过，多行语法提供更多的结构和灵活性，更易于读取、维护和调试。
 
-检查关键字后面`Then`的内容，以确定语句是否为单行`If`语句。 如果在同一行之后`Then`出现注释以外的任何内容，则该语句将被视为单行`If`语句。 如果`Then`不存在，则必须为多行`If`的开头 .。。`Then`...`Else`.
+检查关键字后面`Then`的内容，以确定语句是否为单行`If`语句。 如果在同一行之后`Then`出现注释以外的任何内容，则该语句将被视为单行`If`语句。 如果`Then`不存在，则必须为多行`If`的开头 ...`Then`...`Else`.
 
-在单行语法中，你可以将多个语句作为`If`.。。`Then`决策。 所有语句必须位于同一行上，并由冒号分隔。
+在单行语法中，你可以将多个语句作为`If`...`Then`决策。 所有语句必须位于同一行上，并由冒号分隔。
 
 ## <a name="multiline-syntax-example"></a>多行语法示例
 
@@ -114,7 +114,7 @@ If condition Then [ statements ] [ Else [ elsestatements ] ]
 
 <a name="nested"></a>
 
-下面的示例包含嵌套`If`.。。`Then`...`Else`语句。
+下面的示例包含嵌套`If`...`Then`...`Else`语句。
 
 [!code-vb[VbVbalrStatements#102](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class6.vb#102)]
 

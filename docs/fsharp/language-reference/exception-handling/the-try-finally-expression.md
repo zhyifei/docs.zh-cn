@@ -1,6 +1,6 @@
 ---
 title: 异常：try...finally 表达式
-description: 了解F# "try .。。finally 表达式使你可以执行清理代码，即使代码块引发异常也是如此。
+description: 了解F# "try ...finally 表达式使你可以执行清理代码，即使代码块引发异常也是如此。
 ms.date: 05/16/2016
 ms.openlocfilehash: 0ddb64ac13b307404864ec5b54f26fd8a7a3d7d8
 ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
@@ -45,7 +45,7 @@ Exception handled.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5702.fs)]
 
-在计算表达式（包括序列表达式和异步工作流）的上下文中，**尝试 .。。finally**表达式可以具有自定义实现。 有关详细信息，请参阅[计算表达式](../computation-expressions.md)。
+在计算表达式（包括序列表达式和异步工作流）的上下文中，**尝试 ...inally**表达式可以具有自定义实现。 有关详细信息，请参阅[计算表达式](../computation-expressions.md)。
 
 ## <a name="see-also"></a>请参阅
 

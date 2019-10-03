@@ -62,7 +62,7 @@ Next [ element ]
 若要为集合或数组的每个元素重复一组语句，请使用 `For Each` ... `Next` 循环。
 
 > [!TIP]
-> [用于 。](../../../visual-basic/language-reference/statements/for-next-statement.md)如果可以将循环的每次迭代与控件变量相关联，并确定该变量的初始值，则下一语句会很好地运行。 但是，在处理集合时，初始值和 final 值的概念没有意义，并且您不一定知道该集合具有多少元素。 在这种情况下，`For Each` ... @no__t 循环通常是更好的选择。
+> [用于 .。。](../../../visual-basic/language-reference/statements/for-next-statement.md)如果可以将循环的每次迭代与控件变量相关联，并确定该变量的初始值，则下一语句会很好地运行。 但是，在处理集合时，初始值和 final 值的概念没有意义，并且您不一定知道该集合具有多少元素。 在这种情况下，`For Each` ... @no__t 循环通常是更好的选择。
 
 在下面的示例中，@no__t `Next` 语句循环访问列表集合的所有元素。
 
@@ -100,7 +100,7 @@ Next [ element ]
 
 - 在 `Try` ... `Catch` ... `Finally` 中捕获到异常。你可能会在 @no__t 块的末尾使用 `Exit For`。
 
-- 有一个无限循环，该循环是一种循环，它可以运行很大甚至无限次。 如果检测到这种情况，可以使用 `Exit For` 来转义循环。 有关详细信息，请参阅[Do 。循环语句](../../../visual-basic/language-reference/statements/do-loop-statement.md)。
+- 有一个无限循环，该循环是一种循环，它可以运行很大甚至无限次。 如果检测到这种情况，可以使用 `Exit For` 来转义循环。 有关详细信息，请参阅[Do...Loop 语句](../../../visual-basic/language-reference/statements/do-loop-statement.md)。
 
 ## <a name="iterators"></a>Iterators
 
@@ -108,7 +108,7 @@ Next [ element ]
 
 通过使用 `For Each...Next` 语句来调用迭代器。 `For Each` 循环的每次迭代都会调用迭代器。 在迭代器中到达 `Yield` 语句时，将返回 @no__t 为1的语句中的表达式，并保留当前在代码中的位置。 下次调用迭代器时，将从该位置重新开始执行。
 
-下面的示例使用迭代器函数。 迭代器函数有一个 `Yield` 语句，该语句位于[For 。下一个](../../../visual-basic/language-reference/statements/for-next-statement.md)循环。 在 `ListEvenNumbers` 方法中，第一次 @no__t 语句体的每次迭代都会创建对迭代器函数的调用，该函数将继续执行下一个 @no__t 第2条语句。
+下面的示例使用迭代器函数。 迭代器函数有一个 `Yield` 语句，该语句位于[For...Next 语句](../../../visual-basic/language-reference/statements/for-next-statement.md)循环。 在 `ListEvenNumbers` 方法中，第一次 @no__t 语句体的每次迭代都会创建对迭代器函数的调用，该函数将继续执行下一个 @no__t 第2条语句。
 
 [!code-vb[VbVbalrStatements#127](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class9.vb#127)]
 

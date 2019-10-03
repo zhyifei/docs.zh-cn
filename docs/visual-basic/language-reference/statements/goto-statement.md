@@ -39,10 +39,10 @@ GoTo line
 > [!NOTE]
 > `GoTo`语句可以使代码难以阅读和维护。 请尽可能使用控制结构。 有关详细信息, 请参阅[控制流](../../../visual-basic/programming-guide/language-features/control-flow/index.md)。  
   
- 不能使用`GoTo`语句从`For`.。。`Next`, `For Each`...`Next`, `SyncLock`...`End SyncLock`, `Try`...`Catch`...`Finally`, `With`...`End With`, 或`Using`.。。`End Using`构造到中的标签。  
+ 不能使用`GoTo`语句从`For`...`Next`, `For Each`...`Next`, `SyncLock`...`End SyncLock`, `Try`...`Catch`...`Finally`, `With`...`End With`, 或`Using`...`End Using`构造到中的标签。  
   
 ## <a name="branching-and-try-constructions"></a>分支和尝试构造  
- `Try`在 .。。`Catch`...构造, 以下规则适用于`GoTo`使用语句的分支。 `Finally`  
+ `Try`在 ...`Catch`...构造, 以下规则适用于`GoTo`使用语句的分支。 `Finally`  
   
 |块或区域|从外部分支|从内部分支出|  
 |---------------------|-------------------------------|-------------------------------|  
@@ -50,7 +50,7 @@ GoTo line
 |`Catch`模块|不允许|仅对整个构造以外的或`Try`相同构造<sup>1</sup>的块|  
 |`Finally`模块|不允许|不允许|  
   
- <sup>1</sup> (如果`Try`有) .。。`Catch`...构造嵌套在另一个块中`Catch` , `Try`块可以在其自身的嵌套级别 (而不是其他`Try`块) 分支到块。 `Finally` 嵌套`Try`.。。`Catch`...构造必须完全包含在它所`Try`嵌套`Catch`到的构造内或块中。 `Finally`  
+ <sup>1</sup> (如果`Try`有) ...`Catch`...构造嵌套在另一个块中`Catch` , `Try`块可以在其自身的嵌套级别 (而不是其他`Try`块) 分支到块。 `Finally` 嵌套`Try`...`Catch`...构造必须完全包含在它所`Try`嵌套`Catch`到的构造内或块中。 `Finally`  
   
  下图显示了一个`Try`嵌套在另一个构造内的构造。 这两个构造的块中的各种分支都指示为有效或无效。  
   
