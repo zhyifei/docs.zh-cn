@@ -42,8 +42,7 @@ ms.locfileid: "69921043"
 
 ## <a name="remarks"></a>备注
 
-**
-          \<SectionName>** 元素是通过定义的自定义元素 **\<部分>** 标记中的 **\<configSections>** 元素。
+**\<SectionName>** 元素是通过定义的自定义元素 **\<部分>** 标记中的 **\<configSections>** 元素。
 
 下表显示 ConfigurationSettings. GetConfig 方法为每个配置节处理程序返回的对象类型:
 
