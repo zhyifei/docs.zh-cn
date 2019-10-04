@@ -8,12 +8,12 @@ helpviewer_keywords:
 - printing XPS files programmatically [WPF]
 - XPS files [WPF], printing programmatically
 ms.assetid: 0b1c0a3f-b19e-43d6-bcc9-eb3ec4e555ad
-ms.openlocfilehash: 28197b22b379b84c34e7fdf8991472e082c8cb42
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: d44f372fe5ef9633e91d8e46cca9e9a0967b9615
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855754"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834577"
 ---
 # <a name="how-to-programmatically-print-xps-files"></a>如何：以编程方式打印 XPS 文件
 
@@ -27,7 +27,7 @@ ms.locfileid: "70855754"
 
 使用三参数<xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29>方法的主要步骤如下所示。 以下示例提供了详细信息。
 
-1. 确定打印机是否是 XPSDrv 打印机。 （有关 XPSDrv 的详细信息，请参阅[打印概述](printing-overview.md)。）
+1. 确定打印机是否是 XPSDrv 打印机。 有关 XPSDrv 的详细信息，请参阅[打印概述](printing-overview.md)。
 
 2. 如果打印机不是 XPSDrv 打印机，将线程的单元设置为单线程。
 

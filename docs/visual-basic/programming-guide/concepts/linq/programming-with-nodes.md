@@ -1,15 +1,15 @@
 ---
-title: 使用节点 (Visual Basic) 进行编程
+title: 通过节点进行编程（Visual Basic）
 ms.date: 07/20/2015
 ms.assetid: d8422a9b-dd37-44a3-8aac-2237ed9561e0
-ms.openlocfilehash: ed7f460b441a5973c33841f1f53ce4679b627071
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2a331d77f1c54f6428d36b6ccb403dcc01094c98
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61756931"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834933"
 ---
-# <a name="programming-with-nodes-visual-basic"></a>使用节点 (Visual Basic) 进行编程
+# <a name="programming-with-nodes-visual-basic"></a>通过节点进行编程（Visual Basic）
 需要编写 XML 编辑器、转换系统或报告编写器这类程序的 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 开发人员通常需要编写在比元素和属性更细的粒度下运行的程序。 开发人员通常需要在节点级别上工作，操作文本节点、处理指令和添加注释。 本主题提供有关在节点级别进行编程的一些详细信息。  
   
 ## <a name="node-details"></a>节点详细信息  
@@ -28,7 +28,7 @@ Console.WriteLine(doc.Root.Parent Is Nothing)
   
  该示例产生下面的输出：  
   
-```  
+```console  
 True  
 True  
 ```  
@@ -53,7 +53,7 @@ Console.WriteLine(xmlTree.Nodes().OfType(Of XText)().Count())
   
  该示例产生下面的输出：  
   
-```  
+```console  
 1  
 1  
 2  
@@ -75,7 +75,7 @@ Console.WriteLine(">>{0}<<", textNode2)
   
  该示例产生下面的输出：  
   
-```  
+```console  
 >><<  
 ```  
   
@@ -117,7 +117,7 @@ Next
   
  该示例产生下面的输出：  
   
-```  
+```console  
 xmlns="http://www.adventure-works.com"  IsNamespaceDeclaration:True  
 xmlns:fc="www.fourthcoffee.com"  IsNamespaceDeclaration:True  
 AnAttribute="abc"  IsNamespaceDeclaration:False  
@@ -143,7 +143,7 @@ Console.WriteLine(nodes.OfType(Of XText)().Count())
   
  该示例产生下面的输出：  
   
-```  
+```console  
 3  
 0  
 ```  
@@ -173,4 +173,4 @@ Console.WriteLine(doc.Nodes().Count())
   
 ## <a name="see-also"></a>请参阅
 
-- [高级的 LINQ to XML 编程 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+- [高级 LINQ to XML 编程（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

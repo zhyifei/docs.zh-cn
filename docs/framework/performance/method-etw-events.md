@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 167a4459-bb6e-476c-9046-7920880f2bb5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 58249a0e080e045223bdaf170f2eaedb67fc0dea
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 48e1c2271d6d011296d347e7d74fb363cc4d8527
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046376"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834554"
 ---
 # <a name="method-etw-events"></a>方法 ETW 事件
 
@@ -36,7 +36,7 @@ CLR 方法事件进一步细分为以下几类：
 
 ## <a name="clr-method-events"></a>CLR 方法事件
 
-下表显示了关键字和级别。 （有关详细信息，请参阅 [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md)。）
+下表显示了关键字和级别。 有关详细信息，请参阅[CLR ETW 关键字和级别](clr-etw-keywords-and-levels.md)。
 
 |引发事件的关键字|Level|
 |-----------------------------------|-----------|
@@ -45,7 +45,7 @@ CLR 方法事件进一步细分为以下几类：
 |`JitRundownKeyword` (0x10) 断开提供程序|信息性 (4)|
 |`NGENRundownKeyword` (0x20) 断开提供程序|信息性 (4)|
 
-下表显示了事件信息。
+下表显示了事件信息：
 
 |Event|事件 ID|描述|
 |-----------|--------------|-----------------|
@@ -54,7 +54,7 @@ CLR 方法事件进一步细分为以下几类：
 |`MethodDCStart_V1`|137|启动断开期间的枚举方法。|
 |`MethodDCEnd_V1`|138|结束断开期间的枚举方法。|
 
-下表显示了事件数据。
+下表显示了事件数据：
 
 |字段名|数据类型|描述|
 |----------------|---------------|-----------------|
@@ -74,7 +74,7 @@ CLR 方法事件进一步细分为以下几类：
 
 仅在断开提供程序中会引发这些事件。 它们表示在启动或结束断开期间方法枚举的结束。 （即，启用 `NGENRundownKeyword`、 `JitRundownKeyword`、 `LoaderRundownKeyword`或 `AppDomainResourceManagementRundownKeyword` 关键字时引发。）
 
-下表显示了关键字和级别。
+下表显示了关键字和级别：
 
 |引发事件的关键字|Level|
 |-----------------------------------|-----------|
@@ -82,7 +82,7 @@ CLR 方法事件进一步细分为以下几类：
 |`JitRundownKeyword` (0x10) 断开提供程序|信息性 (4)|
 |`NGENRundownKeyword` (0x20) 断开提供程序|信息性 (4)|
 
-下表显示了事件信息。
+下表显示了事件信息：
 
 |Event|事件 ID|描述|
 |-----------|--------------|----------------|
@@ -91,7 +91,7 @@ CLR 方法事件进一步细分为以下几类：
 |`DCEndInit_V1`|148|结束断开期间枚举开始之前发送。|
 |`DCEndComplete_V1`|146|结束断开期间枚举结束时发送。|
 
-下表显示了事件数据。
+下表显示了事件数据：
 
 |字段名|数据类型|描述|
 |----------------|---------------|-----------------|
@@ -103,7 +103,7 @@ CLR 方法事件进一步细分为以下几类：
 
 ## <a name="clr-method-verbose-events"></a>CLR 方法详细事件
 
-下表显示了关键字和级别。
+下表显示了关键字和级别：
 
 |引发事件的关键字|Level|
 |-----------------------------------|-----------|
@@ -112,7 +112,7 @@ CLR 方法事件进一步细分为以下几类：
 |`JitRundownKeyword` (0x10) 断开提供程序|详细级别 (5)|
 |`NGENRundownKeyword` (0x20) 断开提供程序|详细级别 (5)|
 
-下表显示了事件信息。
+下表显示了事件信息：
 
 |Event|事件 ID|描述|
 |-----------|--------------|-----------------|
@@ -121,7 +121,7 @@ CLR 方法事件进一步细分为以下几类：
 |`MethodDCStartVerbose_V1`|141|启动断开期间的枚举方法。|
 |`MethodDCEndVerbose_V1`|142|结束断开期间的枚举方法。|
 
-下表显示了事件数据。
+下表显示了事件数据：
 
 |字段名|数据类型|描述|
 |----------------|---------------|-----------------|
@@ -142,7 +142,7 @@ CLR 方法事件进一步细分为以下几类：
 
 ## <a name="methodjittingstarted-event"></a>MethodJittingStarted 事件
 
-下表显示了关键字和级别。
+下表显示了关键字和级别：
 
 |引发事件的关键字|Level|
 |-----------------------------------|-----------|
@@ -151,13 +151,13 @@ CLR 方法事件进一步细分为以下几类：
 |`JitRundownKeyword` (0x10) 断开提供程序|详细级别 (5)|
 |`NGENRundownKeyword` (0x20) 断开提供程序|详细级别 (5)|
 
-下表显示了事件信息。
+下表显示了事件信息：
 
 |Event|事件 ID|描述|
 |-----------|--------------|-----------------|
 |`MethodJittingStarted`|145|在方法由 JIT 编译时引发。|
 
-下表显示了事件数据。
+下表显示了事件数据：
 
 |字段名|数据类型|描述|
 |----------------|---------------|-----------------|

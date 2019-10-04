@@ -2,12 +2,12 @@
 title: 如何：错误处理
 ms.date: 03/30/2017
 ms.assetid: de566e39-9358-44ff-8244-780f6b799966
-ms.openlocfilehash: 4958e7914d9feb32dc00d11a215cf8247e9baffc
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 3b8e48a74ff7671b942b5499fb3a0b5d0f389d61
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67424605"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834701"
 ---
 # <a name="how-to-error-handling"></a>如何：错误处理
 
@@ -79,7 +79,7 @@ ms.locfileid: "67424605"
     </backupLists>
     ```
 
-4. 定义筛选器表，该筛选器表将筛选器与 deadDestination 终结点和备份终结点列表相关联。  路由服务首先尝试向与筛选器关联的目标终结点发送消息。 由于 deadDestination 包含一个未引用正在运行的服务的地址，因此，这会导致网络错误。 然后，路由服务尝试向 backupEndpointList 中指定的终结点发送消息。
+4. 定义筛选器表，该筛选器表将筛选器与 deadDestination 终结点和备份终结点列表相关联。  路由服务首先尝试向与筛选器关联的目标终结点发送消息。 由于 deadDestination 包含一个未引用正在运行的服务的地址，因此，这会导致网络错误。 然后，路由服务会尝试将消息发送到 backupEndpointList 中指定的终结点。
 
     ```xml
     <filterTables>
@@ -93,7 +93,7 @@ ms.locfileid: "67424605"
           </filterTables>
     ```
 
-5. 若要根据筛选器表中包含的筛选器对传入消息求值，必须使用路由行为将筛选器表与服务终结点相关联。  下面的示例演示将"filterTable1"与服务终结点。
+5. 若要根据筛选器表中包含的筛选器对传入消息求值，必须使用路由行为将筛选器表与服务终结点相关联。  下面的示例演示如何将 "filterTable1" 与服务终结点相关联。
 
     ```xml
     <behaviors>
@@ -108,7 +108,7 @@ ms.locfileid: "67424605"
 
 ## <a name="example"></a>示例
 
-下面是配置文件的完整代码清单。
+下面是配置文件的完整列表：
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>

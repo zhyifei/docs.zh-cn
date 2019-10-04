@@ -9,12 +9,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 654c7f2f-1586-480b-9f12-9d9b8f5cc32b
-ms.openlocfilehash: de25c3dcf33471a1aadb4445a83affab9c40914b
-ms.sourcegitcommit: 1e72e2990220b3635cebc39586828af9deb72d8c
+ms.openlocfilehash: b8f0c7c4584505d382e78aca68e2e99c9fa7748f
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71306339"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834630"
 ---
 # <a name="walkthrough-creating-an-accessible-windows-based-application"></a>演练：创建基于 Windows 的可访问应用程序
 
@@ -46,7 +46,7 @@ ms.locfileid: "71306339"
 
 #### <a name="to-begin-making-the-application"></a>开始生成应用程序
 
-- 在 Visual Basic 或视觉对象C#中创建新的 Windows 应用程序。 将项目命名为 **PizzaOrder**。 （有关详细信息，请参阅[创建新解决方案和项目](/visualstudio/ide/creating-solutions-and-projects)。）
+- 在 Visual Basic 或视觉对象C#中创建新的 Windows 应用程序。 将项目命名为 **PizzaOrder**。 有关详细信息，请参阅[创建新解决方案和项目](/visualstudio/ide/creating-solutions-and-projects)。
 
 ## <a name="adding-the-controls-to-the-form"></a>将控件添加到窗体
 

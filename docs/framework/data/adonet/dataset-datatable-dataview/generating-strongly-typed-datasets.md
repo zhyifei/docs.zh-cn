@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 54333cbf-bb43-4314-a7d4-6dc1dd1c44b3
-ms.openlocfilehash: f1c1fd77bed700fae8e5a658da8b267120518ca9
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: ce7e5ad53f7aa5dad457ca1aa6ab76716086c0c3
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70786303"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71833990"
 ---
 # <a name="generating-strongly-typed-datasets"></a>生成强类型化数据集
-给定符合 xml 架构定义语言（XSD）标准的 xml 架构后，可以使用随 Windows 软件开发工具包（ <xref:System.Data.DataSet> SDK）提供的 xsd.exe 工具生成强类型化。  
+给定符合 XML 架构定义语言（XSD）标准的 XML 架构后，可以使用随 Windows 软件开发工具包（SDK）提供的 XSD.EXE 工具来生成强类型 <xref:System.Data.DataSet>。  
   
- （若要创建数据库表中的 xsd， <xref:System.Data.DataSet.WriteXmlSchema%2A>请参阅或使用[Visual Studio 中的数据集](/visualstudio/data-tools/dataset-tools-in-visual-studio)）。  
+ （若要创建数据库表中的 xsd，请参阅 <xref:System.Data.DataSet.WriteXmlSchema%2A> 或使用[Visual Studio 中的数据集](/visualstudio/data-tools/dataset-tools-in-visual-studio)）。  
   
  下面的代码演示了使用此工具生成**数据集**的语法。  
   
@@ -23,7 +23,7 @@ ms.locfileid: "70786303"
 xsd.exe /d /l:CS XSDSchemaFileName.xsd /eld /n:XSDSchema.Namespace  
 ```  
   
- 在此语法中， `/d`指令告诉工具生成**数据集**，并`/l:`告诉工具使用哪种语言（例如， C#或 Visual Basic .net）。 可选`/eld`指令指定可以使用 LINQ to DataSet 来针对生成的**数据集**进行查询。 当同时指定 `/d` 选项时可使用此选项。 有关详细信息，请参阅[查询类型化数据集](../querying-typed-datasets.md)。 可选`/n:`指令指示该工具还会生成一个名为**XSDSchema**的**数据集**的命名空间。 命令的输出为 XSDSchemaFileName.cs，该输出可以在 ADO.NET 应用程序中编译和使用。 所生成的代码可以编译成库或模块。  
+ 在此语法中，`/d` 指令告诉工具生成**数据集**，`/l:` 告诉工具使用哪种语言（例如， C#或 Visual Basic .net）。 可选 `/eld` 指令指定您可以使用 LINQ to DataSet 来针对生成的**数据集**进行查询。 当同时指定 `/d` 选项时可使用此选项。 有关详细信息，请参阅[查询类型化数据集](../querying-typed-datasets.md)。 可选的 `/n:` 指令指示该工具还生成一个名为**XSDSchema**的**数据集**的命名空间。 命令的输出为 XSDSchemaFileName.cs，该输出可以在 ADO.NET 应用程序中编译和使用。 所生成的代码可以编译成库或模块。  
   
  以下代码显示使用 C# 编译器 (csc.exe) 将生成的代码编译成库的语法。  
   
@@ -73,7 +73,7 @@ foreach(CustomerDataSet.CustomersRow customerRow in customers.Customers)
   Console.WriteLine(customerRow.CustomerID);  
 ```  
   
- 下面是用于该示例的 XML 架构。  
+ 下面是用于示例的 XML 架构：
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  

@@ -1,15 +1,15 @@
 ---
-title: 如何：序列化使用 DataContractSerializer (Visual Basic)
+title: 如何：使用 DataContractSerializer 进行序列化（Visual Basic）
 ms.date: 07/20/2015
 ms.assetid: ecaea518-8a0f-4249-b4e5-9b3fb0cdd8ad
-ms.openlocfilehash: 9593dede3eb29aadc7ffb494e1d728cb8e679f0c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5b747f505b0314c082929fbce25a67f79dd4af35
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62054427"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835163"
 ---
-# <a name="how-to-serialize-using-datacontractserializer-visual-basic"></a>如何：序列化使用 DataContractSerializer (Visual Basic)
+# <a name="how-to-serialize-using-datacontractserializer-visual-basic"></a>如何：使用 DataContractSerializer 进行序列化（Visual Basic）
 本主题显示一个使用 <xref:System.Runtime.Serialization.DataContractSerializer> 进行序列化和反序列化的示例。  
   
 ## <a name="example"></a>示例  
@@ -74,7 +74,7 @@ End Class
   
  该示例产生下面的输出：  
   
-```  
+```console  
 Testing for type: System.Xml.Linq.XElement  
   Deserialized type: System.Xml.Linq.XElement  
 Testing for type: XElementContainer  
@@ -85,4 +85,4 @@ Testing for type: XElementNullContainer
   
 ## <a name="see-also"></a>请参阅
 
-- [序列化包含 XElement 对象 (Visual Basic 中) 的对象图](../../../../visual-basic/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)
+- [序列化包含 System.xml.linq.xelement> 对象的对象图（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)

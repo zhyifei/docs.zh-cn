@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 113a8bbf-6875-4a72-a49d-ca2d92e19cc8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4a0a6a00fc76a646b4295db726bd8ae67733e321
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 0ce9d5f706a473d64e97fb02e0426060878d9c75
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053219"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834033"
 ---
 # <a name="application-domains"></a>应用程序域
 
@@ -128,7 +128,7 @@ ms.locfileid: "71053219"
   
 ### <a name="syntax"></a>语法  
   
-```  
+```env  
 COMPLUS_LoaderOptimization = 1  
 ```  
   
@@ -151,7 +151,7 @@ COMPLUS_LoaderOptimization = 1
 
  可通过将 `COMPLUS_LoaderOptimization=1` 追加到 HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\IISADMIN 键中环境的多字符串值中，来强制所有程序集不以 IISADMIN 服务的非特定于域的形式加载。  
   
-```  
+```env  
 Key = HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\IISADMIN  
 Name = Environment  
 Type = REG_MULTI_SZ  

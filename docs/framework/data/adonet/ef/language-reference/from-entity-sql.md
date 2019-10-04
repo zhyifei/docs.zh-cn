@@ -2,23 +2,23 @@
 title: FROM (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: ff3e3048-0d5d-4502-ae5c-9187fcbd0514
-ms.openlocfilehash: 993e71e6fee2e18806da789bdb10a488337d030f
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 2334a30009d6bef9544d2ca1e0ab923a7441d6f2
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250956"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71833821"
 ---
 # <a name="from-entity-sql"></a>FROM (Entity SQL)
 指定在[SELECT](select-entity-sql.md)语句中使用的集合。
 
 ## <a name="syntax"></a>语法
 
-```
-FROM expression [ ,...n ] as C
+```sql
+FROM expression [ ,...n ] AS C
 ```
 
-## <a name="arguments"></a>自变量
+## <a name="arguments"></a>参数
 
 `expression` \
 任何可生成集合以用作 `SELECT` 语句中的源的有效查询表达式。
@@ -51,7 +51,7 @@ LOB.Customers
 
 ### <a name="join-from-clause-item"></a>JOIN FROM 子句项
 
-`JOIN FROM` 子句项表示两个 `FROM` 子句项之间的联接。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 支持交叉联接、内部联接、左右外部联接和完全外部联接。 支持所有这些联接，这与在 Transact-sql 中受支持的方式相似。 与 transact-sql 一样， `FROM` `JOIN`中涉及的两个子句项必须是独立的。 即，它们不能相关。 `CROSS APPLY` 或 `OUTER APPLY` 可用于这些情况。
+`JOIN FROM` 子句项表示两个 `FROM` 子句项之间的联接。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 支持交叉联接、内部联接、左右外部联接和完全外部联接。 支持所有这些联接，这与在 Transact-sql 中受支持的方式相似。 与 Transact-sql 一样，@no__t 中涉及的两个 `FROM` 子句项必须是独立的。 即，它们不能相关。 `CROSS APPLY` 或 `OUTER APPLY` 可用于这些情况。
 
 #### <a name="cross-joins"></a>交叉联接
 
@@ -103,10 +103,10 @@ LOB.Customers
 `SELECT c, f FROM C AS c OUTER APPLY c.Assoc AS f`
 
 > [!NOTE]
-> 与 Transact-sql 不同，中不需要显式 unnest 步骤[!INCLUDE[esql](../../../../../../includes/esql-md.md)]。
+> 与 Transact-sql 不同，不需要 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 中的显式 unnest 步骤。
 
 > [!NOTE]
-> `CROSS`和`OUTER APPLY`运算符是在 SQL Server 2005 中引入的。 在某些情况下，查询管道可能生成包含 `CROSS APPLY` 和/或 `OUTER APPLY` 运算符的 Transact-SQL。 因为某些后端提供程序（包括早于 SQL Server 2005 的 SQL Server 版本）不支持这些运算符，所以不能对这些后端提供程序执行此类查询。
+> SQL Server 2005 中引入了 @no__t 0 和 `OUTER APPLY` 运算符。 在某些情况下，查询管道可能生成包含 `CROSS APPLY` 和/或 `OUTER APPLY` 运算符的 Transact-SQL。 因为某些后端提供程序（包括早于 SQL Server 2005 的 SQL Server 版本）不支持这些运算符，所以不能对这些后端提供程序执行此类查询。
 >
 > 下面是一些可能导致输出查询中出现 `CROSS APPLY` 和/或 `OUTER APPLY`运算符的典型情况：分页相关子查询；相关子查询或导航所生成的集合上的 AnyElement；使用接受元素选择器的分组方法的 LINQ 查询；显式指定 `CROSS APPLY` 或 `OUTER APPLY` 的查询；在 `DEREF` 构造上具有 `REF` 构造的查询。
 
@@ -114,7 +114,7 @@ LOB.Customers
 
 `FROM` 子句不能包含逗号分隔的多个集合。 在这些情况下，假定集合将联接在一起。 将它们视为一个 n 向 CROSS JOIN。
 
-在下面的示例中`C` ， `D`和是独立集合`C`， `c.Names`但依赖于。
+在下面的示例中，`C`，`D` 是独立的集合，但 `c.Names` 依赖于 `C`。
 
 ```sql
 FROM C AS c, D AS d, c.Names AS e
@@ -149,7 +149,7 @@ from (C as c join D as d) cross apply c.Names as e
 from (C as c join D as d) cross apply c.Names as e
 ```
 
-在[!INCLUDE[esql](../../../../../../includes/esql-md.md)] （与 transact-sql 不同）中`FROM` ，子句仅将别名引入作用域。 任何对这些集合的列（属性）的引用都必须以别名进行限定。
+在 @no__t 中，`FROM` 子句仅将别名引入作用域。 任何对这些集合的列（属性）的引用都必须以别名进行限定。
 
 ## <a name="pulling-up-keys-from-nested-queries"></a>从嵌套查询中拉取键
 

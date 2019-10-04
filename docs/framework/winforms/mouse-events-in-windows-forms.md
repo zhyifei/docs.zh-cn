@@ -15,16 +15,16 @@ helpviewer_keywords:
 - mouse [Windows Forms], events
 - MouseUp event
 ms.assetid: 8cf0070d-793b-4876-b09e-d20d28280fab
-ms.openlocfilehash: 181d01f6e688b94876f77155bf598aba129e9fbf
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a61f4eedde611cfb7598d55465103924516e06c6
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949913"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834597"
 ---
 # <a name="mouse-events-in-windows-forms"></a>Windows 窗体中的鼠标事件
 
-当处理鼠标输入时，通常想要知道鼠标指针的位置和鼠标按钮的状态。 本主题详细介绍如何从鼠标事件获取此信息，并说明在 Windows 窗体控件中引发的鼠标单击事件的顺序。 有关所有鼠标事件的列表和说明, 请参阅[鼠标输入在 Windows 窗体中的工作原理](how-mouse-input-works-in-windows-forms.md)。  另请参阅[事件处理程序概述 (Windows 窗体)](event-handlers-overview-windows-forms.md)和[事件概述 (Windows 窗体)](events-overview-windows-forms.md)。
+当处理鼠标输入时，通常想要知道鼠标指针的位置和鼠标按钮的状态。 本主题详细介绍如何从鼠标事件获取此信息，并说明在 Windows 窗体控件中引发的鼠标单击事件的顺序。 有关所有鼠标事件的列表和说明，请参阅[鼠标输入在 Windows 窗体中的工作原理](how-mouse-input-works-in-windows-forms.md)。  另请参阅[事件处理程序概述（Windows 窗体）](event-handlers-overview-windows-forms.md)和[事件概述（Windows 窗体）](events-overview-windows-forms.md)。
 
 ## <a name="mouse-information"></a>鼠标信息
 
@@ -48,7 +48,7 @@ ms.locfileid: "69949913"
 
 4. <xref:System.Windows.Forms.Control.MouseUp> 事件。
 
-下表显示双击鼠标按钮所引发事件的顺序：
+下面是双击鼠标按钮所引发事件的顺序：
 
 1. <xref:System.Windows.Forms.Control.MouseDown> 事件。
 
@@ -66,24 +66,27 @@ ms.locfileid: "69949913"
 
 8. <xref:System.Windows.Forms.Control.MouseUp> 事件。
 
-有关演示鼠标单击事件顺序的代码示例, 请参阅[如何:在 Windows 窗体控件](how-to-handle-user-input-events-in-windows-forms-controls.md)中处理用户输入事件。
+有关演示鼠标单击事件顺序的代码示例，请参阅 [How to：在 Windows 窗体控件 @ no__t-0 中处理用户输入事件。
 
 ### <a name="individual-controls"></a>个别控件
 
 以下控件不符合标准鼠标单击事件行为：
 
-- <xref:System.Windows.Forms.Button>、<xref:System.Windows.Forms.CheckBox>、<xref:System.Windows.Forms.ComboBox> 和 <xref:System.Windows.Forms.RadioButton> 控件
+- <xref:System.Windows.Forms.Button>
+- <xref:System.Windows.Forms.CheckBox>
+- <xref:System.Windows.Forms.ComboBox>
+- <xref:System.Windows.Forms.RadioButton>
 
   > [!NOTE]
   > 对于 <xref:System.Windows.Forms.ComboBox> 控件，如果用户单击编辑字段、按钮或列表中的某个项，将发生稍后详细说明的事件行为。
 
   - 左键单击：<xref:System.Windows.Forms.Control.Click>、<xref:System.Windows.Forms.Control.MouseClick>
 
-  - 右键单击:未引发任何 click 事件
+  - 右键单击：未引发任何 click 事件
 
   - 左键双击：<xref:System.Windows.Forms.Control.Click>、<xref:System.Windows.Forms.Control.MouseClick>；<xref:System.Windows.Forms.Control.Click>、<xref:System.Windows.Forms.Control.MouseClick>
 
-  - 右键双击:未引发任何 click 事件
+  - 右键双击：未引发任何 click 事件
 
 - <xref:System.Windows.Forms.TextBox>、<xref:System.Windows.Forms.RichTextBox>、<xref:System.Windows.Forms.ListBox>、<xref:System.Windows.Forms.MaskedTextBox> 和 <xref:System.Windows.Forms.CheckedListBox> 控件
 
@@ -92,11 +95,11 @@ ms.locfileid: "69949913"
 
   - 左键单击：<xref:System.Windows.Forms.Control.Click>、<xref:System.Windows.Forms.Control.MouseClick>
 
-  - 右键单击:未引发任何 click 事件
+  - 右键单击：未引发任何 click 事件
 
   - 左键双击：<xref:System.Windows.Forms.Control.Click>、<xref:System.Windows.Forms.Control.MouseClick>、<xref:System.Windows.Forms.Control.DoubleClick>、<xref:System.Windows.Forms.Control.MouseDoubleClick>
 
-  - 右键双击:未引发任何 click 事件
+  - 右键双击：未引发任何 click 事件
 
 - <xref:System.Windows.Forms.ListView> 控件
 

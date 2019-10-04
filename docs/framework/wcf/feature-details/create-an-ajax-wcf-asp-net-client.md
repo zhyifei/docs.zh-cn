@@ -2,12 +2,12 @@
 title: 在 Visual Studio 中创建启用 AJAX 的 WCF 服务和 ASP.NET 客户端
 ms.date: 08/17/2018
 ms.assetid: 95012df8-2a66-420d-944a-8afab261013e
-ms.openlocfilehash: 1f5c9eb1750b0df28836f147d5b4be1b223bb52e
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: a6d6e87de6200a5cb9bba566d595066673cdf9cf
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053683"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834787"
 ---
 # <a name="how-to-create-an-ajax-enabled-wcf-service-and-an-aspnet-client-that-accesses-the-service"></a>如何：创建支持 AJAX 的 WCF 服务和访问服务的 ASP.NET 客户端
 
@@ -104,9 +104,9 @@ ms.locfileid: "71053683"
 
 ## <a name="run-the-program"></a>运行程序
 
-请确保*webform1.aspx*具有焦点，然后按 "**启动**" 按钮以启动 web 客户端。 该按钮具有一个绿色三角形，并显示类似**IIS Express （Microsoft Edge）** 的内容。 也可以按**F5**。 单击 " **3 三明治**" 按钮的 "价格" 以生成 "3.75" 的预期输出。
+请确保*webform1.aspx*具有焦点，然后按 "**启动**" 按钮以启动 web 客户端。 该按钮具有一个绿色三角形，并显示类似**IIS Express （Microsoft Edge）** 的内容。 也可以按<kbd>F5</kbd>。 单击 " **3 三明治**" 按钮的 "价格" 以生成 "3.75" 的预期输出。
 
-## <a name="example-code"></a>示例代码
+## <a name="example"></a>示例
 
 下面是*CostService.svc.cs*文件中的完整代码：
 

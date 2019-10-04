@@ -2,19 +2,19 @@
 title: 如何：定义连接字符串
 ms.date: 03/30/2017
 ms.assetid: 6027335d-4e26-420d-9151-6523289b1989
-ms.openlocfilehash: a78158c7553c0b479b935e3b94931313df912c2f
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 9ce0b427cac17fc338877c5f85d3648d15d5ee14
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854659"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71833956"
 ---
 # <a name="how-to-define-the-connection-string"></a>如何：定义连接字符串
 
 本主题介绍如何定义在连接到概念模型时使用的连接字符串。 本主题基于[AdventureWorks 销售](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb387147(v=vs.100))概念模型。 AdventureWorks 销售模型在实体框架文档中的与任务相关的主题中使用。 本主题假定您已经配置了实体框架并定义了 AdventureWorks 销售模型。 有关详细信息，请参阅[如何：手动定义模型和映射文件](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399785(v=vs.100))。 本主题中的过程也包括在[如何：手动配置实体框架项目](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))。
 
 > [!NOTE]
-> 如果你在 Visual Studio 项目中使用实体数据模型向导，它会自动生成 .edmx 文件并将该项目配置为使用实体框架。 有关详细信息，请参阅[如何：使用实体数据模型向导](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100))
+> 如果你在 Visual Studio 项目中使用实体数据模型向导，它会自动生成 .edmx 文件并将该项目配置为使用实体框架。 有关详细信息，请参阅[如何：使用实体数据模型向导](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100))。
 
 ## <a name="to-define-the-entity-framework-connection-string"></a>定义实体框架连接字符串
 

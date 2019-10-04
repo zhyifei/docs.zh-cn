@@ -2,23 +2,23 @@
 title: CREATEREF (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 489828cf-a335-4449-9360-b0d92eec5481
-ms.openlocfilehash: cbaea82108dd3debcca972ca15dea248227330ac
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 3659f2c0690b00e728630c6e77308ba9d424bb1b
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251107"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71833920"
 ---
 # <a name="createref-entity-sql"></a>CREATEREF (Entity SQL)
 创建对实体集中的实体的引用。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```sql  
 CreateRef(entityset_identifier, row_typed_expression)  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  `entityset_identifier`  
  实体集标识符，不是字符串文本。  
   
@@ -30,19 +30,19 @@ CreateRef(entityset_identifier, row_typed_expression)
   
  在下面的示例中，Orders 和 BadOrders 都是类型 Order 的实体集，而假定 Id 为 Order 的单个键属性。 该示例演示如何生成对 BadOrders 中的实体的引用。 请注意，该引用可以是无关联引用。  即，该引用可以不真正标识特定实体。 在这种情况下，对该引用的 `DEREF` 操作会返回 Null。  
   
-```  
-select CreateRef(LOB.BadOrders, row(o.Id))   
-from LOB.Orders as o   
+```sql  
+SELECT CreateRef(LOB.BadOrders, row(o.Id))
+FROM LOB.Orders AS o
 ```  
   
 ## <a name="example"></a>示例  
  下面的 Entity SQL 查询使用 CREATEREF 运算符创建对实体集中的实体的引用。 此查询基于 AdventureWorks 销售模型。 若要编译并运行此查询，请执行下列步骤：  
   
-1. [按照如何：执行返回 StructuralType 结果](../how-to-execute-a-query-that-returns-structuraltype-results.md)的查询。  
+1. 按照 [How 中的过程执行以下操作：执行返回 StructuralType Results @ no__t-0 的查询。  
   
 2. 将以下查询作为参数传递给 `ExecuteStructuralTypeQuery` 方法：  
   
- [!code-csharp[DP EntityServices Concepts 2#CREATEREF](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#createref)]  
+ [!code-sql[DP EntityServices Concepts#CREATEREF](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#createref)]  
   
 ## <a name="see-also"></a>请参阅
 

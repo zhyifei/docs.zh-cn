@@ -2,15 +2,15 @@
 title: 标识符 (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: d58a5edd-7b5c-48e1-b5d7-a326ff426aa4
-ms.openlocfilehash: 4a8f98a9ea9601e1bf5f178e404f99e4a9160078
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: b467a42ed0a0083b9e72037f437dd70aa6b46390
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250720"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71833707"
 ---
 # <a name="identifiers-entity-sql"></a>标识符 (Entity SQL)
-在 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 中，标识符用于表示查询表达式别名、变量引用、对象的属性、函数等等。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]提供两种标识符：简单标识符和带引号的标识符。  
+在 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 中，标识符用于表示查询表达式别名、变量引用、对象的属性、函数等等。 @no__t 提供了两种标识符：简单标识符和带引号的标识符。  
   
 ## <a name="simple-identifiers"></a>简单标识符  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 中的简单标识符是字母数字和下划线字符的序列。 标识符的第一个字符必须是字母字符（a-z 或 A-Z）。  
@@ -75,13 +75,13 @@ ms.locfileid: "70250720"
   
  隐式别名是根据用户输入自动生成的。 例如，下面一行代码将生成 NAME 作为两个列的别名，从而发生冲突。  
   
-```  
+```sql  
 SELECT product.NAME, person.NAME  
 ```  
   
  下面使用显式别名的代码行也会失败。 但是，通过阅读代码，失败会更为明显。  
   
-```  
+```sql  
 SELECT 1 AS X, 2 AS X …  
 ```  
   

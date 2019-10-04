@@ -12,12 +12,12 @@ helpviewer_keywords:
 - data binding [Windows Forms], interfaces
 - IDataErrorInfo interface [Windows Forms], Windows Forms data binding
 ms.assetid: 14e49a2e-3e46-47ca-b491-70d546333277
-ms.openlocfilehash: 9f102b584d2ed0b5a9d2bbb0e7ce3f7871ec40b2
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 4e40f7ec1922cdf43e6a0b8f5734acaaeefbc514
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70046361"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834592"
 ---
 # <a name="interfaces-related-to-data-binding"></a>与数据绑定相关的接口
 
@@ -25,7 +25,7 @@ ms.locfileid: "70046361"
 
 ## <a name="consumers-of-data-binding-interfaces"></a>数据绑定接口的使用者
 
-以下部分描述两组接口对象。 第一组列出数据源作者在数据源上实现的接口。 这些接口旨在由数据源使用者使用，在多数情况下，这些使用者是 Windows 窗体控件或组件。 第二组列出面向组件作者设计的接口。 组件作者在创建支持数据绑定的组件时使用这些接口，以便它们能够被 Windows 窗体数据绑定引擎使用。 可以在与窗体关联的类中实现这些接口以启用数据绑定；每种情况都表示一个类，该类所实现的接口支持与数据进行交互。 Visual Studio 快速应用程序开发（RAD）数据设计体验工具已充分利用此功能。
+以下各节描述了两组接口对象。 第一组列出数据源作者在数据源上实现的接口。 这些接口旨在由数据源使用者使用，在多数情况下，这些使用者是 Windows 窗体控件或组件。 第二组列出面向组件作者设计的接口。 组件作者在创建支持数据绑定的组件时使用这些接口，以便它们能够被 Windows 窗体数据绑定引擎使用。 可以在与窗体关联的类中实现这些接口以启用数据绑定；每种情况都表示一个类，该类所实现的接口支持与数据进行交互。 Visual Studio 快速应用程序开发（RAD）数据设计体验工具已充分利用此功能。
 
 ### <a name="interfaces-for-implementation-by-data-source-authors"></a>要由数据源作者实现的接口
 
@@ -76,9 +76,9 @@ ms.locfileid: "70046361"
 
   实现<xref:System.ComponentModel.IDataErrorInfo>接口的类允许对象向绑定控件提供自定义错误信息：
 
-  - <xref:System.ComponentModel.IDataErrorInfo.Error%2A>属性返回常规错误消息文本（例如，"发生错误"）。
+  - @No__t-0 属性返回常规错误消息文本（例如，"发生错误"）。
 
-  - 属性返回列中包含特定错误消息的字符串（例如，" `State`列中的值无效"）。 <xref:System.ComponentModel.IDataErrorInfo.Item%2A>
+  - @No__t-0 属性返回一个字符串，其中包含来自该列的特定错误消息（例如，"`State` 列中的值无效"）。
 
 - <xref:System.Collections.IEnumerable>交互
 
@@ -133,7 +133,7 @@ ms.locfileid: "70046361"
   实现此接口的类是一个在其任何属性值更改时都会引发事件的类型。 此接口旨在替换控件的每个属性都有一个更改事件这种模式。 当在<xref:System.ComponentModel.BindingList%601>中使用时，业务对象应<xref:System.ComponentModel.INotifyPropertyChanged>实现接口，system.componentmodel.bindinglist\`1 会将事件转换<xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged>为<xref:System.ComponentModel.BindingList%601.ListChanged>类型<xref:System.ComponentModel.ListChangedType.ItemChanged>为的事件。
 
   > [!NOTE]
-  > 对于在绑定的客户端和数据源之间的绑定中发生的更改通知，绑定的数据源类型应实现<xref:System.ComponentModel.INotifyPropertyChanged>接口（首选），也可以为绑定类型提供*propertyName* `Changed`事件，但不应同时执行这两项操作。
+  > 若要在绑定的客户端和数据源之间的绑定中发生更改通知，绑定数据源类型应实现 <xref:System.ComponentModel.INotifyPropertyChanged> 接口（首选），也可以为绑定类型提供*propertyName*`Changed` 事件，但你不应同时执行这两项操作。
 
 ### <a name="interfaces-for-implementation-by-component-authors"></a>要由组件作者实现的接口
 
@@ -156,5 +156,5 @@ ms.locfileid: "70046361"
 ## <a name="see-also"></a>请参阅
 
 - [数据绑定和 Windows 窗体](data-binding-and-windows-forms.md)
-- [如何：在 Windows 窗体上创建简单绑定控件](how-to-create-a-simple-bound-control-on-a-windows-form.md)
+- [如何：在 Windows 窗体 @ no__t 上创建简单绑定控件
 - [Windows 窗体数据绑定](windows-forms-data-binding.md)

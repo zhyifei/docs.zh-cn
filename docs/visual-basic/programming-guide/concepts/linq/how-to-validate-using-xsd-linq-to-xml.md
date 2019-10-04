@@ -1,15 +1,15 @@
 ---
-title: 如何：使用 XSD (LINQ to XML) 进行验证 (Visual Basic)
+title: 如何：使用 XSD 进行验证（LINQ to XML）（Visual Basic）
 ms.date: 07/20/2015
 ms.assetid: a0fe88d4-4e77-49e7-90de-8953feeccc21
-ms.openlocfilehash: a29473b871961af0de033b77076686cc5b9dde0e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 67b197d3c92e7f72b7bda444f307b191eaec8304
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61613342"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835052"
 ---
-# <a name="how-to-validate-using-xsd-linq-to-xml-visual-basic"></a>如何：使用 XSD (LINQ to XML) 进行验证 (Visual Basic)
+# <a name="how-to-validate-using-xsd-linq-to-xml-visual-basic"></a>如何：使用 XSD 进行验证（LINQ to XML）（Visual Basic）
 <xref:System.Xml.Schema> 命名空间包含扩展方法，这些扩展方法可以简化针对 XML 架构定义语言 (XSD) 文件验证 XML 树的过程。 有关更多信息，请参见 <xref:System.Xml.Schema.Extensions.Validate%2A> 方法文档。  
   
 ## <a name="example"></a>示例  
@@ -67,7 +67,7 @@ End Sub
   
  该示例产生下面的输出：  
   
-```  
+```console  
 Validating doc1  
 doc1 validated  
   
@@ -79,7 +79,7 @@ doc2 did not validate
 ## <a name="example"></a>示例  
  以下示例验证来自[示例 XML 文件：客户和订单 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md)的 XML 文档对于[示例 XSD 文件：客户和订单](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md)中的架构是否有效。 然后修改源 XML 文档。 它更改第一个客户的 `CustomerID` 属性。 更改后，订单将指向不存在的客户，因此该 XML 文档不再有效。  
   
- 此示例使用下面的 XML 文档：[示例 XML 文件：客户和订单 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md)。  
+ 本示例使用下面的 XML 文档：[示例 XML 文件：客户和订单 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md)。  
   
  本示例使用下面的 XSD 架构：[示例 XSD 文件：客户和订单](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md).  
   
@@ -113,7 +113,7 @@ End Sub
   
  该示例产生下面的输出：  
   
-```  
+```console  
 Attempting to validate  
 custOrdDoc validated  
   
@@ -125,4 +125,4 @@ custOrdDoc did not validate
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Xml.Schema.Extensions.Validate%2A>
-- [创建 XML 树 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)
+- [创建 XML 树（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)

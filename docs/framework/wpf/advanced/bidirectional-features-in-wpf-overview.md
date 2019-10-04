@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Span elements [WPF]
 - bidirectional features [WPF]
 ms.assetid: fd850e25-7dba-408c-b521-8873e51dc968
-ms.openlocfilehash: 4c3a39c1d1252951b0847638809c9e1e6be2a21e
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 2a599322ef955b9f702f8960f294f5d093ede74a
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70856191"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834750"
 ---
 # <a name="bidirectional-features-in-wpf-overview"></a>WPF 中的双向功能概述
 
@@ -178,7 +178,7 @@ XAML 元素可以包含一个[!INCLUDE[TLA#tla_xml](../../../../includes/tlashar
 
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 沿承了这一传统，并为此功能提供了进一步支持，以允许更多的用户对使用替换的时间和方式进行控制。 虽然此功能适用于任何语言，但它对双向内容尤其有用；由于应用程序可能会在各种区域性下运行，因此针对特定语言来设置数字形状通常是应用程序开发人员所面临的难题。
 
-控制中[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]的数字替换工作方式的核心属性<xref:System.Windows.Media.NumberSubstitution.Substitution%2A>是依赖属性。 <xref:System.Windows.Media.NumberSubstitution>类指定如何显示文本中的数字。 它有三个定义其行为的公共属性。 下面概括了其中的每个属性。
+控制中[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]的数字替换工作方式的核心属性<xref:System.Windows.Media.NumberSubstitution.Substitution%2A>是依赖属性。 <xref:System.Windows.Media.NumberSubstitution>类指定如何显示文本中的数字。 它有三个定义其行为的公共属性。 下面是每个属性的摘要：
 
 **CultureSource：**
 
@@ -226,7 +226,7 @@ XAML 元素可以包含一个[!INCLUDE[TLA#tla_xml](../../../../includes/tlashar
 
 首先，设置应用程序组件的`NumberSubstitution.CultureSource="Text"`。 使用此设置可确保不[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]会将设置用于默认值为 "User" 的文本元素， <xref:System.Windows.Controls.TextBlock>例如。
 
-例如:
+例如：
 
 ```xaml
 <TextBlock

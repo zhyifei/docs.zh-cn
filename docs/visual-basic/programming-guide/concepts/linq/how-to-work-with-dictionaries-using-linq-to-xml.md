@@ -1,19 +1,19 @@
 ---
-title: 如何：使用字典使用 LINQ to XML (Visual Basic)
+title: 如何：使用 LINQ to XML （Visual Basic）使用词典
 ms.date: 07/20/2015
 ms.assetid: 6cb3f969-1986-414a-b850-87418712edea
-ms.openlocfilehash: def00fcd356472825ebc4b9f5c306cf3547991e1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9773b926d16b51ea912792b0f348a26a9a3c7a29
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61614140"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835088"
 ---
-# <a name="how-to-work-with-dictionaries-using-linq-to-xml-visual-basic"></a>如何：使用字典使用 LINQ to XML (Visual Basic)
+# <a name="how-to-work-with-dictionaries-using-linq-to-xml-visual-basic"></a>如何：使用 LINQ to XML （Visual Basic）使用词典
 通常需要将各种数据结构转换为 XML 和将 XML 转换回其他数据结构。 本主题通过 <xref:System.Collections.Generic.Dictionary%602> 和 XML 的相互转换演示这一常规方法的具体实现。  
   
 ## <a name="example"></a>示例  
- 此示例使用嵌入式表达式中的 XML 文本和查询。 查询投影新<xref:System.Xml.Linq.XElement>对象，该对象然后成为的新内容`Root`<xref:System.Xml.Linq.XElement>对象。  
+ 此示例在嵌入式表达式中使用 XML 文本和查询。 此查询投影新 <xref:System.Xml.Linq.XElement> 对象，后者随后将成为 @no__t @no__t 2 对象的新内容。  
   
 ```vb  
 Dim dict As Dictionary(Of String, String) = New Dictionary(Of String, String)()  
@@ -63,7 +63,7 @@ Next
   
  此代码生成以下输出：  
   
-```  
+```console  
 Child1:Value1  
 Child2:Value2  
 Child3:Value3  
@@ -72,4 +72,4 @@ Child4:Value4
   
 ## <a name="see-also"></a>请参阅
 
-- [投影和转换 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+- [投影和转换（LINQ to XML）（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

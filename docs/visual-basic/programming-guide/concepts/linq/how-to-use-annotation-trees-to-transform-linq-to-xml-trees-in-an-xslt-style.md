@@ -1,15 +1,15 @@
 ---
-title: 如何：使用批注以转换 LINQ to XML 树中 XSLT 样式 (Visual Basic)
+title: 如何：使用批注以 XSLT 样式转换 LINQ to XML 树（Visual Basic）
 ms.date: 07/20/2015
 ms.assetid: 08e91fa2-dac2-4463-9ef1-87b1ac3fa890
-ms.openlocfilehash: 9ebff2276fc9f574989530fdb07a0d0875ff74a3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: aa0561ecc26139d191107521a8bb5fc2889332cd
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648804"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835075"
 ---
-# <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-visual-basic"></a>如何：使用批注以转换 LINQ to XML 树中 XSLT 样式 (Visual Basic)
+# <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-visual-basic"></a>如何：使用批注以 XSLT 样式转换 LINQ to XML 树（Visual Basic）
 使用批注可帮助进行 XML 树的转换。  
   
  有些 XML 文档“以文档为中心兼有混合内容”。 对于这样的文档，您不必知道元素的子节点的形状。 例如，包含文本的节点可能具有像下面这样的外观：  
@@ -18,7 +18,7 @@ ms.locfileid: "64648804"
 <text>A phrase with <b>bold</b> and <i>italic</i> text.</text>  
 ```  
   
- 任何给定的文本节点都可以具有任意数量的子 `<b>` 和 `<i>` 元素。 此方法可扩展到很多其他情况： 如页面可以包含各种子元素，如规则段落、 带项目符号的段落和位图。 表中的单元格可以包含文本，下拉列表或位图。 以文档为中心的 XML 的一个主要特性是您不必知道任一特定元素将具有哪些子元素。  
+ 任何给定的文本节点都可以具有任意数量的子 `<b>` 和 `<i>` 元素。 此方法扩展到多种其他情况：例如，可以包含各种子元素（如常规段落、项目符号段落和位图）的页面。 表中的单元格可以包含文本，下拉列表或位图。 以文档为中心的 XML 的一个主要特性是您不必知道任一特定元素将具有哪些子元素。  
   
  如果在转换树中的元素时不必知道有关要转换元素的子级的太多信息，则这种方法（使用批注）就是一种有效的方法。  
   
@@ -135,7 +135,7 @@ End Module
   
  该示例产生下面的输出：  
   
-```  
+```console
 Before Transform  
 ----------------  
 <Root>  
@@ -158,33 +158,23 @@ After Transform
 ## <a name="effecting-the-transform"></a>实施转换  
  小函数 `XForm` 可以从原始的、已批注的树创建新的、转换后的树。  
   
-- 该函数的伪代码非常简单：  
+该函数的伪代码非常简单：  
   
-```  
-The function takes an XElement as an argument and returns an XElement.   
-If an element has an XElement annotation, then  
-    Return a new XElement  
-        The name of the new XElement is the annotation element's name.  
-        All attributes are copied from the annotation to the new node.  
-        All child nodes are copied from the annotation, with the  
-            exception that the special node xf:ApplyTransforms is  
-            recognized, and the source element's child nodes are  
-            iterated. If the source child node is not an XElement, it  
-            is copied to the new tree. If the source child is an  
-            XElement, then it is transformed by calling this function  
-            recursively.  
-If an element is not annotated  
-    Return a new XElement  
-        The name of the new XElement is the source element's name  
-        All attributes are copied from the source element to the  
-            destination's element.  
-        All child nodes are copied from the source element.  
-        If the source child node is not an XElement, it is copied to  
-            the new tree. If the source child is an XElement, then it  
-            is transformed by calling this function recursively.  
-```  
-  
- 下面是此函数的实现：  
+> 函数采用 System.xml.linq.xelement> 作为参数，并返回 System.xml.linq.xelement>。
+>   
+> 如果元素具有 System.xml.linq.xelement> 批注，则返回新的 System.xml.linq.xelement>：  
+>    - 新 System.xml.linq.xelement> 的名称是 annotation 元素的名称。  
+>    - 所有属性都将从注释复制到新节点。  
+>    - 所有子节点都从批注进行复制，但特殊节点 xf： ApplyTransforms 被识别，并且源元素的子节点会进行迭代。 如果源子节点不是 System.xml.linq.xelement>，则会将其复制到新树。 如果源子级是 System.xml.linq.xelement>，则通过以递归方式调用此函数来转换它。
+>  
+> 如果未对元素进行批注：  
+>    - 返回新的 System.xml.linq.xelement>  
+>        - 新 System.xml.linq.xelement> 的名称为源元素的名称。  
+>        - 所有属性均从源元素复制到目标的元素。  
+>        - 从源元素复制所有子节点。  
+>        - 如果源子节点不是 System.xml.linq.xelement>，则会将其复制到新树。 如果源子级是 System.xml.linq.xelement>，则通过以递归方式调用此函数来转换它。  
+
+下面是此函数的实现：  
   
 ```vb  
 ' Build a transformed XML tree per the annotations.  
@@ -346,7 +336,7 @@ End Module
   
  该示例产生下面的输出：  
   
-```  
+```console
 Before Transform  
 ----------------  
 <Root Att1="123">  
@@ -380,4 +370,4 @@ After Transform
   
 ## <a name="see-also"></a>请参阅
 
-- [高级的 LINQ to XML 编程 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+- [高级 LINQ to XML 编程（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

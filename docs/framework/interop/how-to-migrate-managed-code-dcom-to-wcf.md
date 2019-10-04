@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 52961ffc-d1c7-4f83-832c-786444b951ba
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e2e37de4d3032db6d9578eae7ba0be5c1e39f39d
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 42edce63856b629511faeb165362da18ea3cecad
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71051751"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71833629"
 ---
 # <a name="how-to-migrate-managed-code-dcom-to-wcf"></a>如何：将托管代码 DCOM 迁移到 WCF
 Windows Communication Foundation (WCF) 是针对分布式组件对象模型 (DCOM) 建议的安全选择，可用于处理分布式环境中服务器和客户端间的托管代码调用。 本文介绍在以下情景中，如何将代码从 DCOM 迁移到 WCF。  
@@ -302,7 +302,7 @@ public interface ISessionBoundObject
     }  
 ```  
   
- 以下是此服务的实现： 此实现维护单一实例通道工厂以创建会话对象。  当调用 `GetInstanceAddress` 时，它会创建一个通道，并创建一个指向与此通道关联的远程地址的 <xref:System.ServiceModel.EndpointAddress10> 对象。   <xref:System.ServiceModel.EndpointAddress10> 是一种可按值返回到客户端的数据类型。  
+ 下面是此服务的实现。 此实现维护单一实例通道工厂以创建会话对象。  当调用 `GetInstanceAddress` 时，它会创建一个通道，并创建一个指向与此通道关联的远程地址的 <xref:System.ServiceModel.EndpointAddress10> 对象。   <xref:System.ServiceModel.EndpointAddress10> 是一种可按值返回到客户端的数据类型。
   
 ```csharp  
 public class SessionBoundFactory : ISessionBoundFactory  
@@ -329,7 +329,7 @@ public class SessionBoundFactory : ISessionBoundFactory
   
 2. 在 `<services>` 节中，声明工厂和会话对象的服务终结点。  这使客户端可与服务终结点通信，可获取 <xref:System.ServiceModel.EndpointAddress10> 并可创建会话通道。  
   
- 以下是使用这些设置的配置文件示例：  
+ 下面是包含这些设置的示例配置文件：  
   
 ```xml  
 <configuration>  

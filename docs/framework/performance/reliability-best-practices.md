@@ -40,12 +40,12 @@ helpviewer_keywords:
 ms.assetid: cf624c1f-c160-46a1-bb2b-213587688da7
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c8c47091d943aa0d710cec1af83e039bca9ee2d2
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 40c1b98f82fe53819edc437bbac575c1df206496
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046247"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834539"
 ---
 # <a name="reliability-best-practices"></a>可靠性最佳做法
 
@@ -81,7 +81,7 @@ ms.locfileid: "71046247"
 
 面对死锁或资源约束时，SQL Server 将中止线程或关闭 <xref:System.AppDomain>。  在此情况下，只能保证运行受约束的执行区域 (CER) 中的退出代码。
 
-### <a name="use-safehandle-to-avoid-resource-leaks"></a>使用 SafeHandle 以避免资源泄露
+### <a name="use-safehandle-to-avoid-resource-leaks"></a>使用 SafeHandle 避免资源泄漏
 
 在 <xref:System.AppDomain> 卸载的情况下，无法依赖正在被执行的 `finally` 块或终结器，因此，通过 <xref:System.Runtime.InteropServices.SafeHandle> 类（而非 <xref:System.IntPtr>、<xref:System.Runtime.InteropServices.HandleRef> 或相似的类）抽象所有操作系统资源访问是很重要的。 这样使 CLR 能够跟踪和关闭你使用的句柄，即使在 <xref:System.AppDomain> 关闭的情况下也不例外。  <xref:System.Runtime.InteropServices.SafeHandle> 将使用 CLR 将始终运行的一个关键终结器。
 
@@ -101,11 +101,11 @@ ms.locfileid: "71046247"
 
 使用 <xref:System.Runtime.InteropServices.SafeHandle> 以封装操作系统资源。 不要使用 <xref:System.Runtime.InteropServices.HandleRef> 或 <xref:System.IntPtr> 类型的字段。
 
-### <a name="ensure-finalizers-do-not-have-to-run-to-prevent-leaking-operating-system-resources"></a>确保不需要运行终结器即可防止操作系统资源泄露
+### <a name="ensure-finalizers-do-not-have-to-run-to-prevent-leaking-operating-system-resources"></a>确保不需要运行终结器来防止操作系统资源泄露
 
 仔细检查终结器以确保即使它们不运行，关键的操作系统资源也不会泄露。  与应用程序正以稳定状态执行或服务器（如 SQL Server）关闭时的普通 <xref:System.AppDomain> 卸载不同，在突然发生的 <xref:System.AppDomain> 卸载期间，对象不会被终结。  请确保出现突然发生的卸载时资源不会泄露，因为虽然无法保证应用程序的正确性，但是要维持服务器的完整性必须保证资源不被泄露。  使用 <xref:System.Runtime.InteropServices.SafeHandle> 以释放任何操作系统资源。
 
-### <a name="ensure-that-finally-clauses-do-not-have-to-run-to-prevent-leaking-operating-system-resources"></a>确保不需要运行 finally 子句即可防止操作系统资源泄露
+### <a name="ensure-that-finally-clauses-do-not-have-to-run-to-prevent-leaking-operating-system-resources"></a>确保不需要运行 finally 子句来防止操作系统资源泄露
 
 由于不保证 `finally` 子句可以在 CER 外部运行，因此要求库开发人员不要依赖 `finally` 块中的代码来释放非托管资源。  建议的解决方案是使用 <xref:System.Runtime.InteropServices.SafeHandle>。
 
@@ -113,7 +113,7 @@ ms.locfileid: "71046247"
 
 使用 <xref:System.Runtime.InteropServices.SafeHandle> 清理操作系统资源，而不是使用 `Finalize`。 不要使用 <xref:System.IntPtr>；使用 <xref:System.Runtime.InteropServices.SafeHandle> 以封装资源。 如果 finally 子句必须运行，请将其放在 CER 中。
 
-### <a name="all-locks-should-go-through-existing-managed-locking-code"></a>所有锁必须遍历现有的托管锁定代码
+### <a name="all-locks-should-go-through-existing-managed-locking-code"></a>所有锁都应通过现有托管锁定代码
 
 CLR 必须知道代码何时在锁中，这样它便知道关闭 <xref:System.AppDomain>，而不仅仅是中止线程。  中止线程可能是危险的操作，因为可能会使由线程运行的数据处于不一致的状态。 因此，必须回收整个 <xref:System.AppDomain>。  未能成功识别锁可能导致死锁或者出现不正确的结果。 使用方法 <xref:System.Threading.Thread.BeginCriticalRegion%2A> 和 <xref:System.Threading.Thread.EndCriticalRegion%2A> 以识别锁定区域。  它们是仅应用于当前线程的 <xref:System.Threading.Thread> 类上的静态方法，帮助防止某个线程编辑另一线程的锁计数。
 
@@ -125,23 +125,23 @@ CLR 必须知道代码何时在锁中，这样它便知道关闭 <xref:System.Ap
 
 使用 <xref:System.Threading.Thread.BeginCriticalRegion%2A> 和 <xref:System.Threading.Thread.EndCriticalRegion%2A> 标记并识别所有锁。 不要在循环中使用 <xref:System.Threading.Interlocked.CompareExchange%2A>、<xref:System.Threading.Interlocked.Increment%2A> 和 <xref:System.Threading.Interlocked.Decrement%2A>。  不要对这些方法的 Win32 变量执行平台调用。  不要在循环中使用 <xref:System.Threading.Thread.Sleep%2A>。  不要使用可变字段。
 
-### <a name="cleanup-code-must-be-in-a-finally-or-a-catch-block-not-following-a-catch"></a>清理代码必须在 finally 或 catch 块中，不能位于 catch 之后
+### <a name="cleanup-code-must-be-in-a-finally-or-a-catch-block-not-following-a-catch"></a>清理代码必须位于 finally 或 catch 块中，但不在 catch
 
-清理代码不能位于 `catch` 块之后；它应该在 `finally` 或 `catch` 块中。  这应该是普通的良好做法。  通常首选使用 `finally` 块，因为在引发异常时以及在一般情况下达到 `try` 块的末尾时它都运行相同的代码。  在引发意外异常的情况下（例如 <xref:System.Threading.ThreadAbortException>），清理代码将不会运行。  理想情况下，要在 `finally` 中清理的任何非托管资源应该包装在 <xref:System.Runtime.InteropServices.SafeHandle> 中以防止泄露。  请注意，可以有效地使用 C# `using` 键释放对象，包括句柄。
+清理代码不能位于 `catch` 块之后；它应该在 `finally` 或 `catch` 块中。 这应该是普通的良好做法。 通常首选使用 `finally` 块，因为在引发异常时以及在一般情况下达到 `try` 块的末尾时它都运行相同的代码。  在引发意外异常的情况下（例如 <xref:System.Threading.ThreadAbortException>），清理代码将不会运行。  理想情况下，要在 `finally` 中清理的任何非托管资源应该包装在 <xref:System.Runtime.InteropServices.SafeHandle> 中以防止泄露。  请注意，可以有效地使用 C# `using` 键释放对象，包括句柄。
 
-虽然 <xref:System.AppDomain> 回收可以清理终结器线程上的资源，但是将清理代码放在正确的位置中仍然是很重要的。  请注意，如果线程在未持有锁的情况下接收异步异常，那么 CLR 将尝试自己终止线程，而无需回收 <xref:System.AppDomain>。  通过提供更多可用的资源以及进行更好的生命期管理，有助于确保尽早地清理资源。  如果不显示关闭指向某些错误代码路径中的文件的句柄，并且等待 <xref:System.Runtime.InteropServices.SafeHandle> 终结器进行清理，那么下一次你的代码运行时，如果终结器尚未运行，代码尝试访问同一文件可能会失败。  因此，确保清理代码存在并能够正常工作将有助于更彻底、更快速地从失败中恢复，即使这并非绝对必要的操作。
+虽然 <xref:System.AppDomain> 回收可以清理终结器线程上的资源，但是将清理代码放在正确的位置中仍然是很重要的。 请注意，如果线程在未持有锁的情况下接收异步异常，那么 CLR 将尝试自己终止线程，而无需回收 <xref:System.AppDomain>。  通过提供更多可用的资源以及进行更好的生命期管理，有助于确保尽早地清理资源。 如果不显示关闭指向某些错误代码路径中的文件的句柄，并且等待 <xref:System.Runtime.InteropServices.SafeHandle> 终结器进行清理，那么下一次你的代码运行时，如果终结器尚未运行，代码尝试访问同一文件可能会失败。  因此，确保清理代码存在并能够正常工作将有助于更彻底、更快速地从失败中恢复，即使这并非绝对必要的操作。
 
 #### <a name="code-analysis-rule"></a>代码分析规则
 
-`catch` 后面的清理代码需要在 `finally` 块中。 将要进行释放的调用放置在 finally 块中。  `catch` 块应以引发或再次引发结束。  虽然将出现异常，例如代码检测是否可以建立网络连接，在此情况下可能会出现大量的异常，但是，正常情况下，任何需要捕获大量异常的代码应该指示应对代码进行测试以检查它是否将成功。
+`catch` 后面的清理代码需要在 `finally` 块中。 将要进行释放的调用放置在 finally 块中。 `catch` 块应以引发或再次引发结束。 虽然将出现异常，例如代码检测是否可以建立网络连接，在此情况下可能会出现大量的异常，但是，正常情况下，任何需要捕获大量异常的代码应该指示应对代码进行测试以检查它是否将成功。
 
-### <a name="process-wide-mutable-shared-state-between-application-domains-should-be-eliminated-or-use-a-constrained-execution-region"></a>应消除应用程序域之间进程范围的可变共享状态或者使用受约束的执行区域
+### <a name="process-wide-mutable-shared-state-between-application-domains-should-be-eliminated-or-use-a-constrained-execution-region"></a>应该消除应用程序域之间进程范围的可变共享状态，或使用受约束的执行区域
 
 如简介中所述，以可靠方式编写监视应用程序域之间进程范围的共享状态的托管代码是非常困难的。  进程范围的共享状态是在应用程序域之间共享的任何种类的数据结构，可以在 Win32 代码中、CLR 内部或者在使用远程处理的托管代码中。  在托管代码中正确地编写可变的共享状态是非常困难的，并且处理任何静态的共享状态时必须极其小心。  如果有进程范围或计算机范围的共享状态，请找到方法消除它或使用受约束的执行区域 (CER) 保护此共享状态。  请注意，具有任何未识别并未更正的共享状态的库可能导致需要清理 <xref:System.AppDomain> 卸载的主机（如 SQL Server） 崩溃。
 
 如果代码使用 COM 对象，请避免在应用程序域之间共享此 COM 对象。
 
-### <a name="locks-do-not-work-process-wide-or-between-application-domains"></a>锁在进程范围或应用程序域之间不起作用。
+### <a name="locks-do-not-work-process-wide-or-between-application-domains"></a>锁定在进程范围内或应用程序域之间不起作用。
 
 过去，<xref:System.Threading.Monitor.Enter%2A> 和 [lock 语句](../../csharp/language-reference/keywords/lock-statement.md)用于创建全局进程锁定。  例如，在对 <xref:System.AppDomain> 敏捷类进行锁定时会发生这种情况，例如来自非共享程序集的 <xref:System.Type> 实例、<xref:System.Threading.Thread> 对象、暂存的字符串以及某些使用远程处理跨应用程序域共享的字符串。  这些锁不再属于进程范围。  若要识别进程范围的应用程序间域锁的存在，请确定锁中的代码是否使用任何外部持久化资源，如磁盘上的文件或者可能使用一个数据库。
 
@@ -195,7 +195,7 @@ public static MyClass SingletonProperty
 }
 ```
 
-#### <a name="a-note-about-lockthis"></a>Lock(this) 的说明
+#### <a name="a-note-about-lockthis"></a>有关锁的说明（this）
 
 通常，在可公开访问的单个对象上采用锁是可以接受的。  但是，如果对象是可能导致整个子系统出现死锁的单一对象，也可以考虑使用以上设计模式。  例如，<xref:System.Security.SecurityManager> 对象上的锁可能导致 <xref:System.AppDomain> 内出现死锁，从而使整个 <xref:System.AppDomain> 不可用。 好的做法是不在此类可公开访问的对象上采用锁。  但是，单个集合或数组上的锁通常不存在此问题。
 
@@ -203,7 +203,7 @@ public static MyClass SingletonProperty
 
 不要在可跨应用程序域使用或不能明确进行标识的类型上采用锁。 不要在 <xref:System.Type>、<xref:System.Reflection.MethodInfo>、<xref:System.Reflection.PropertyInfo>、<xref:System.String>、<xref:System.ValueType>、<xref:System.Threading.Thread> 或任何派生自 <xref:System.MarshalByRefObject> 的对象上调用 <xref:System.Threading.Monitor.Enter%2A>。
 
-### <a name="remove-gckeepalive-calls"></a>删除 GC.KeepAlive 调用
+### <a name="remove-gckeepalive-calls"></a>删除 GC。KeepAlive 调用
 
 大量现有代码在应该使用 <xref:System.GC.KeepAlive%2A> 时不使用或在不适合的时候使用它。  在转换成 <xref:System.Runtime.InteropServices.SafeHandle> 后，类不需要调用 <xref:System.GC.KeepAlive%2A>，即假设它们没有终结器但是依赖于 <xref:System.Runtime.InteropServices.SafeHandle> 以终结操作系统句柄。  虽然保留对 <xref:System.GC.KeepAlive%2A> 调用的性能成本可以忽略不计，但是调用 <xref:System.GC.KeepAlive%2A> 是必需或足以解决可能不再存在的生存期问题的方法，这样使代码更难以维护。  但是，当使用 COM 互操作 CLR 可调用包装器 (RCW) 时，代码还是需要 <xref:System.GC.KeepAlive%2A>。
 
@@ -211,7 +211,7 @@ public static MyClass SingletonProperty
 
 删除 <xref:System.GC.KeepAlive%2A>。
 
-### <a name="use-the-host-protection-attribute"></a>使用主机保护特性
+### <a name="use-the-hostprotection-attribute"></a>使用 HostProtection 特性
 
 <xref:System.Security.Permissions.HostProtectionAttribute> (HPA) 允许使用声明性安全操作来决定主机保护需求，使主机甚至能够阻止完全信任的代码调用不适用于给定主机的某些方法，例如针对 SQL Server 的 <xref:System.Environment.Exit%2A> 或 <xref:System.Windows.Forms.MessageBox.Show%2A>。
 
@@ -239,7 +239,7 @@ HPA 仅影响可托管公共语言运行时且实现主机保护的非托管应�
 
 对于 SQL Server，所有用于引入同步或线程的方法必须使用 HPA 识别。 这包括共享状态、被同步或管理外部进程的方法。 影响 SQL Server 的 <xref:System.Security.Permissions.HostProtectionResource> 值是 <xref:System.Security.Permissions.HostProtectionResource.SharedState>、<xref:System.Security.Permissions.HostProtectionResource.Synchronization> 和 <xref:System.Security.Permissions.HostProtectionResource.ExternalProcessMgmt>。 但是，任何公开任意 <xref:System.Security.Permissions.HostProtectionResource> 的方法都应由 HPA 识别，而不只是使用影响 SQL 的资源的那些方法。
 
-### <a name="do-not-block-indefinitely-in-unmanaged-code"></a>不要在非托管代码中无限期阻塞
+### <a name="do-not-block-indefinitely-in-unmanaged-code"></a>不要在非托管代码中无限期阻止
 
 在非托管代码中而不是在托管代码中阻塞可能导致拒绝服务攻击，因为 CLR 无法中止线程。  已阻塞的线程会阻止 CLR 卸载 <xref:System.AppDomain>，至少是在没有执行某些极端不安全操作的情况下。  使用 Windows 同步基元进行阻止是我们无法允许的一个清晰的示例。  如果可能，应尽可能`ReadFile`避免在对套接字的调用中进行阻止，理想情况下，Windows API 应为此类操作提供一种机制来超时。
 
@@ -251,11 +251,11 @@ HPA 仅影响可托管公共语言运行时且实现主机保护的非托管应�
 
 在非托管代码中在没有超时的情况下进行阻塞是拒绝服务攻击。 不要执行对 `WaitForSingleObject`、`WaitForSingleObjectEx`、`WaitForMultipleObjects`、`MsgWaitForMultipleObjects` 和 `MsgWaitForMultipleObjectsEx` 的平台调用。  不要使用 NMPWAIT_WAIT_FOREVER。
 
-### <a name="identify-any-sta-dependent-features"></a>识别任何依赖 STA 的功能。
+### <a name="identify-any-sta-dependent-features"></a>确定任何依赖于 STA 的功能
 
 识别任何使用 COM 单线程单元 (STA) 的代码。  STA 在 SQL Server 进程中是被禁用的。  必须在 SQL Server 中禁用依赖 `CoInitialize` 的功能，如性能计数器或剪贴板。
 
-### <a name="ensure-finalizers-are-free-of-synchronization-problems"></a>确保终结器不存在同步问题
+### <a name="ensure-finalizers-are-free-of-synchronization-problems"></a>确保终结器无同步问题
 
 多个终结器线程可能在 .NET Framework 的未来版本中存在，这意味着针对同一类型的不同实例的终结器会同时运行。  它们不需要是完全线程安全的；垃圾回收器保证只有一个线程将针对给定的对象实例运行终结器。  但是，必须对终结器进行编码以避免同时在多个不同的对象示例上运行时出现争用条件和死锁的情况。  当在终结器中使用任何外部状态（如写入日志文件）时，必须解决线程问题。  不要依赖终结来提供线程安全性。 不要使用线程本地存储（托管的或本机的）在终结器线程上存储状态。
 
@@ -263,15 +263,15 @@ HPA 仅影响可托管公共语言运行时且实现主机保护的非托管应�
 
 终结器不得存在同步问题。 不要在终结器中使用静态的可变状态。
 
-### <a name="avoid-unmanaged-memory-if-possible"></a>如有可能，请避免使用非托管内存
+### <a name="avoid-unmanaged-memory-if-possible"></a>如果可能，请避免非托管内存
 
 非托管内存可能会被泄露，正如操作系统句柄一样。 如有可能，请使用 [stackalloc](../../csharp/language-reference/operators/stackalloc.md) 或固定的托管对象（如 [fixed 语句](../../csharp/language-reference/keywords/fixed-statement.md)或使用 byte[] 的 <xref:System.Runtime.InteropServices.GCHandle>）在堆栈上尝试使用内存。 <xref:System.GC> 最终会清理这些内容。 但是，如果必须要分配非托管内存，请考虑使用派生自 <xref:System.Runtime.InteropServices.SafeHandle> 的类以包装内存分配。
 
-请注意，至少存在一种 <xref:System.Runtime.InteropServices.SafeHandle> 不适用的情况。  对于分配或释放内存的 COM 方法调用，通常是一个 DLL 通过 `CoTaskMemAlloc` 分配内存，然后另一个 DLL 使用 `CoTaskMemFree` 释放内存。  在这些位置中使用 <xref:System.Runtime.InteropServices.SafeHandle> 可能不适合，因为它会尝试将非托管内存的生存期绑定到 <xref:System.Runtime.InteropServices.SafeHandle> 的生存期，而不是允许其他 DLL 控制内存的生存期。
+请注意，至少存在一种 <xref:System.Runtime.InteropServices.SafeHandle> 不适用的情况。 对于分配或释放内存的 COM 方法调用，通常是一个 DLL 通过 `CoTaskMemAlloc` 分配内存，然后另一个 DLL 使用 `CoTaskMemFree` 释放内存。  在这些位置中使用 <xref:System.Runtime.InteropServices.SafeHandle> 可能不适合，因为它会尝试将非托管内存的生存期绑定到 <xref:System.Runtime.InteropServices.SafeHandle> 的生存期，而不是允许其他 DLL 控制内存的生存期。
 
-### <a name="review-all-uses-of-catchexception"></a>查看 Catch(Exception) 的所有用法
+### <a name="review-all-uses-of-catchexception"></a>查看 catch 的所有使用情况（异常）
 
-捕获所有异常而不是捕获某个特定异常的 catch 块现在也将捕获异步异常。  检查每个 catch(Exception) 块，以确认没有重要的资源释放、可能被跳过的退出代码以及用于处理 <xref:System.Threading.ThreadAbortException>、<xref:System.StackOverflowException> 或 <xref:System.OutOfMemoryException> 的 catch 块自身中潜在的不正确行为。  请注意，此代码可能会记录或作出它只能发现特定异常的假设，或者假设无论异常何时发生，它的失败都是由同一特定原因所导致的。  可能需要对这些假设进行更新以将 <xref:System.Threading.ThreadAbortException> 包括在内。
+捕获所有异常而不是捕获某个特定异常的 catch 块现在也将捕获异步异常。 检查每个 catch(Exception) 块，以确认没有重要的资源释放、可能被跳过的退出代码以及用于处理 <xref:System.Threading.ThreadAbortException>、<xref:System.StackOverflowException> 或 <xref:System.OutOfMemoryException> 的 catch 块自身中潜在的不正确行为。  请注意，此代码可能会记录或作出它只能发现特定异常的假设，或者假设无论异常何时发生，它的失败都是由同一特定原因所导致的。  可能需要对这些假设进行更新以将 <xref:System.Threading.ThreadAbortException> 包括在内。
 
 请考虑更改捕获所有异常的所有位置以捕获期待将引发的特定类型的异常，例如来自字符串格式化方法的 <xref:System.FormatException>。  这将阻止 catch 块针对意外异常运行，并且将帮助确保代码不会通过捕获意外异常来隐藏 bug。  按照一般规则，绝不要在库代码中处理异常（要求你捕获异常的代码可能指示正在调用的代码中存在设计缺陷）。  在某些情况下，你可能想捕获异常并且引发不同的异常类型以提供更多的数据。  在此情况下则使用嵌套异常，以将失败的真实原因存储在新异常的 <xref:System.Exception.InnerException%2A> 属性中。
 
@@ -279,11 +279,11 @@ HPA 仅影响可托管公共语言运行时且实现主机保护的非托管应�
 
 查看托管代码中捕获所有对象或捕获所有异常的所有 catch 块。  在C#中，这意味着标记`catch` {}和`catch(Exception)` {}。  请考虑将异常类型描述得非常具体，或者查看代码以确保在它捕获到意外异常类型时不会以错误的方式执行。
 
-### <a name="do-not-assume-a-managed-thread-is-a-win32-thread--it-is-a-fiber"></a>不要假设托管线程是 Win32 线程 – 它是纤程
+### <a name="do-not-assume-a-managed-thread-is-a-win32-thread--it-is-a-fiber"></a>不要假设托管线程是一个 Win32 线程–它是一个纤程
 
-虽然使用托管线程本地存储的确有效，但你不能再次使用非托管线程本地存储或再次假设代码将在当前操作系统线程上运行。  不要更改如线程的区域设置等设置。  不要通过平台调用对 `InitializeCriticalSection` 或 `CreateMutex` 进行调用，因为它们要求进入锁的操作系统线程也能退出锁。  由于使用纤程时将不存在此问题，所以不能直接在 SQL 中使用 Win32 临界区和互斥。  请注意，托管 <xref:System.Threading.Mutex> 类不会处理这些线程关联问题。
+虽然使用托管线程本地存储的确有效，但你不能再次使用非托管线程本地存储或再次假设代码将在当前操作系统线程上运行。 不要更改如线程的区域设置等设置。 不要通过平台调用对 `InitializeCriticalSection` 或 `CreateMutex` 进行调用，因为它们要求进入锁的操作系统线程也能退出锁。 由于使用纤程时将不存在此问题，所以不能直接在 SQL 中使用 Win32 临界区和互斥。  请注意，托管 <xref:System.Threading.Mutex> 类不会处理这些线程关联问题。
 
-可以在托管 <xref:System.Threading.Thread> 对象上安全使用大部分状态，包括托管线程本地存储和线程当前的 UI 区域性。  还可以使用 <xref:System.ThreadStaticAttribute>，这将使现有静态变量的值只能由当前托管线程访问（这是在 CLR 中执行纤程本地存储的另一种方法）。  出于编程模型的原因，在 SQL 中运行时不能更改线程当前的区域性。
+可以在托管 <xref:System.Threading.Thread> 对象上安全使用大部分状态，包括托管线程本地存储和线程当前的 UI 区域性。 还可以使用 <xref:System.ThreadStaticAttribute>，这将使现有静态变量的值只能由当前托管线程访问（这是在 CLR 中执行纤程本地存储的另一种方法）。 出于编程模型的原因，在 SQL 中运行时不能更改线程当前的区域性。
 
 #### <a name="code-analysis-rule"></a>代码分析规则
 
@@ -297,7 +297,7 @@ SQL Server 在纤程模式中运行；不要使用线程本地存储。 请避�
 
 让 SQL Server 处理模拟。 不要使用 `RevertToSelf`、`ImpersonateAnonymousToken`、`DdeImpersonateClient`、`ImpersonateDdeClientWindow`、`ImpersonateLoggedOnUser`、`ImpersonateNamedPipeClient`、`ImpersonateSelf`、`RpcImpersonateClient`、`RpcRevertToSelf`、`RpcRevertToSelfEx` 或 `SetThreadToken`。
 
-### <a name="do-not-call-threadsuspend"></a>不要调用 Thread::Suspend
+### <a name="do-not-call-threadsuspend"></a>不调用 Thread：：挂起
 
 挂起线程的功能可能在一个简单的操作中实现，但是它可能会导致死锁。  如果持有锁的线程由另一个线程挂起，后者又尝试采用相同的锁，则会发生死锁。  <xref:System.Threading.Thread.Suspend%2A> 当前会对安全性、类加载、远程处理和反射造成干扰。
 
@@ -305,7 +305,7 @@ SQL Server 在纤程模式中运行；不要使用线程本地存储。 请避�
 
 不要调用 <xref:System.Threading.Thread.Suspend%2A>。 请考虑改为使用真正的同步基元，如 <xref:System.Threading.Semaphore> 或 <xref:System.Threading.ManualResetEvent>。
 
-### <a name="protect-critical-operations-with-constrained-execution-regions-and-reliability-contracts"></a>通过受约束的执行区域和可靠性协定来保护关键操作
+### <a name="protect-critical-operations-with-constrained-execution-regions-and-reliability-contracts"></a>通过受约束的执行区域和可靠性协定保护关键操作
 
 在执行更新共享状态或需要确定性的完全成功或完全失败的复杂操作时，请确保此操作受到受约束的执行区域 (CER) 的保护。 这将保证代码在所有情况下都可运行，甚至在线程突然中止或 <xref:System.AppDomain> 突然卸载的情况下也不例外。
 

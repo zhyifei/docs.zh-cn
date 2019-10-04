@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a60c30fa-1e68-45fe-b984-f6abb9ede40e
-ms.openlocfilehash: 4df1653b7bd6865ad9f5d7d3fb9be6815dcfe018
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: af22b6a895fef8037eb5c069ffb7cb23d1333531
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70781016"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71833682"
 ---
 # <a name="standard-query-operator-translation"></a>标准查询运算符转换
 
@@ -38,7 +38,7 @@ SQL 主要处理*值的无序集*。 排序通常是显式声明的后续处理�
 
 ### <a name="take-skip"></a>Take、Skip
 
-<xref:System.Linq.Enumerable.Take%2A>仅<xref:System.Linq.Enumerable.Skip%2A>对*有序集*定义和方法。 未定义针对无序集或多重集的语义。
+<xref:System.Linq.Enumerable.Take%2A> 和 <xref:System.Linq.Enumerable.Skip%2A> 方法仅对*有序集*定义良好。 未定义针对无序集或多重集的语义。
 
 > [!NOTE]
 > <xref:System.Linq.Enumerable.Take%2A> 和 <xref:System.Linq.Enumerable.Skip%2A> 用在针对 SQL Server 2000 的查询中时存在一定的限制。 有关详细信息，请参阅[疑难解答](troubleshooting.md)中的 "跳过并使用 SQL Server 2000" 条目。
@@ -121,17 +121,17 @@ ORDER BY [t0].[CustomerID]
 
 - <xref:System.Linq.Enumerable.Except%2A>
 
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]支持*平面*参数的相等性和比较，但不支持或包含序列的参数。 平参数是一种能映射到 SQL 行的类型。 可以静态方式确定不包含序列的一个或多个实体类型的投影被视为平参数。
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 支持*平面*参数的相等性和比较，但不支持或包含序列的参数。 平参数是一种能映射到 SQL 行的类型。 可以静态方式确定不包含序列的一个或多个实体类型的投影被视为平参数。
 
-以下是平参数的一些示例：
+下面是平面参数的示例：
 
-[!code-csharp[DLinqSQOTranslation#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSQOTranslation/cs/Program.cs#3)]
-[!code-vb[DLinqSQOTranslation#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSQOTranslation/vb/Module1.vb#3)]
+[!code-csharp[DLinqSQOTranslation#3](~/samples/snippets/csharp/VS_Snippets_Data/DLinqSQOTranslation/cs/Program.cs#3)]
+[!code-vb[DLinqSQOTranslation#3](~/samples/snippets/visualbasic/VS_Snippets_Data/DLinqSQOTranslation/vb/Module1.vb#3)]
 
-以下是非平（分层）自变量的一些示例。
+下面是非平面（分层）参数的示例：
 
-[!code-csharp[DLinqSQOTranslation#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSQOTranslation/cs/Program.cs#4)]
-[!code-vb[DLinqSQOTranslation#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSQOTranslation/vb/Module1.vb#4)]
+[!code-csharp[DLinqSQOTranslation#4](~/samples/snippets/csharp/VS_Snippets_Data/DLinqSQOTranslation/cs/Program.cs#4)]
+[!code-vb[DLinqSQOTranslation#4](~/samples/snippets/visualbasic/VS_Snippets_Data/DLinqSQOTranslation/vb/Module1.vb#4)]
 
 ### <a name="visual-basic-function-translation"></a>Visual Basic 函数转换
 
@@ -158,7 +158,7 @@ Visual Basic 编译器使用的以下 Helper 函数转换为对应的 SQL 运算
 
 ### <a name="inheritance-mapping-restrictions"></a>继承映射限制
 
-有关详细信息，请参阅[如何：映射继承层次](how-to-map-inheritance-hierarchies.md)结构。
+有关详细信息，请参阅[如何：映射继承层次结构 @ no__t。
 
 ### <a name="inheritance-in-queries"></a>查询中的继承
 
@@ -198,7 +198,7 @@ Visual Basic 编译器使用的以下 Helper 函数转换为对应的 SQL 运算
 
 ## <a name="sql-server-2000-support"></a>SQL Server 2000 支持
 
-以下 SQL Server 2000 限制（与 Microsoft SQL Server 2005 相比）影响[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]支持。
+以下 SQL Server 2000 限制（与 Microsoft SQL Server 2005 相比）影响 @no__t 0 支持。
 
 ### <a name="cross-apply-and-outer-apply-operators"></a>Cross Apply 和 Outer Apply 运算符
 
@@ -208,7 +208,7 @@ Visual Basic 编译器使用的以下 Helper 函数转换为对应的 SQL 运算
 
 ### <a name="text--ntext"></a>text / ntext
 
-数据类型`text`  /  不能`varchar(max)`用于对的某些 / 查询操作，这些操作受 Microsoft SQL Server 2005 的支持。 `nvarchar(max)` `ntext`
+数据类型 `text` @ no__t-1 @ no__t-2 不能用于针对 Microsoft SQL Server 2005 支持的 @no__t 3 @ no__t @ @ no__t 的某些查询操作。
 
 不存在解决此限制的方法。 具体而言，您不能对包含映射到 `Distinct()` 或 `text` 列的成员的任何结果使用 `ntext`。
 
@@ -232,7 +232,7 @@ SQL Server 2000 （到 SP4）联编程序具有由嵌套查询触发的一些特
 
   - 投影中的类型强制转换
 
-- 遵循<xref:System.Linq.Enumerable.AsEnumerable%2A>方法的方法在*本地执行*。 此方法不会导致直接执行。
+- 执行 <xref:System.Linq.Enumerable.AsEnumerable%2A> 方法的方法在*本地执行*。 此方法不会导致直接执行。
 
 - 您可以将 `struct` 用作查询结果的返回类型或结果类型的成员。 实体需要变成类。 匿名类型具体化为类的实例，但命名结构（非实体）可在投影中使用。
 

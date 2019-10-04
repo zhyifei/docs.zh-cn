@@ -2,12 +2,12 @@
 title: Entity SQL 与 Transact-SQL 有何不同
 ms.date: 03/30/2017
 ms.assetid: 9c9ee36d-f294-4c8b-a196-f0114c94f559
-ms.openlocfilehash: e809cea2f853eed51d28e55f81a411f7af2e5a33
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: e0af0a415d812337d6abf449e9ee170526c3df0c
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854469"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71833714"
 ---
 # <a name="how-entity-sql-differs-from-transact-sql"></a>Entity SQL 与 Transact-SQL 有何不同
 本主题介绍和 transact-sql 之间[!INCLUDE[esql](../../../../../../includes/esql-md.md)]的差异。  
@@ -37,7 +37,7 @@ ms.locfileid: "70854469"
   
  下面是所有有效的 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 查询。  
   
-```  
+```sql  
 1+2 *3  
 "abc"  
 row(1 as a, 2 as b)  
@@ -72,33 +72,33 @@ set(e1)
   
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 还对涉及 `group by` 子句的查询施加了额外的限制。 此类查询的 `select` 子句和 `having` 子句中的表达式只能通过其别名引用 `group by` 关键字。 以下构造在 Transact-sql 中有效，但不在中[!INCLUDE[esql](../../../../../../includes/esql-md.md)]：  
   
-```  
-select t.x + t.y from T as t group by t.x + t.y  
+```sql  
+SELECT t.x + t.y FROM T AS t group BY t.x + t.y
 ```  
   
  在 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 执行此操作  
   
-```  
-select k from T as t group by (t.x + t.y) as k  
+```sql  
+SELET k FROM T AS t GROUP BY (t.x + t.y) AS k
 ```  
   
 ## <a name="referencing-columns-properties-of-tables-collections"></a>引用表（集合）的列（属性）  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 中的所有列引用都必须用表别名限定。 以下构造（假定`a`是表`T`的有效列）在 transact-sql 中有效，但在中[!INCLUDE[esql](../../../../../../includes/esql-md.md)]无效。  
   
-```  
-select a from T  
+```sql  
+SELECT a FROM T
 ```  
   
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 形式为  
   
-```  
-select t.a as A from T as t  
+```sql  
+SELECT t.a AS A FROM T AS t
 ```  
   
  表别名在 `from` 子句中是可选的。 表名称被用作隐式别名。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 还允许使用以下形式：  
   
-```  
-select Tab.a from Tab  
+```sql  
+SELET Tab.a FROM Tab
 ```  
   
 ## <a name="navigation-through-objects"></a>通过对象导航  
@@ -106,7 +106,7 @@ select Tab.a from Tab
   
  例如，如果 `p` 是 Person 类型的表达式，则下面是用于引用此人地址所在城市的 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 语法。  
   
-```  
+```sql  
 p.Address.City   
 ```  
   
@@ -120,18 +120,18 @@ p.Address.City
 ## <a name="changes-to-group-by"></a>对 Group By 的更改  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 支持 `group by` 关键字的别名化。 `select` 子句和 `having` 子句中的表达式必须通过这些别名引用 `group by` 关键字。 例如，以下 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 语法：  
   
-```  
-select k1, count(t.a), sum(t.a)  
-from T as t  
-group by t.b + t.c as k1  
+```sql  
+SELECT k1, count(t.a), sum(t.a)
+FROM T AS t
+GROUP BY t.b + t.c AS k1
 ```  
   
  ...等效于以下 Transact-sql：  
   
-```  
-select b + c, count(*), sum(a)   
-from T  
-group by b + c  
+```sql  
+SELECT b + c, count(*), sum(a)
+FROM T
+GROUP BY b + c
 ```  
   
 ## <a name="collection-based-aggregates"></a>基于集合的聚合  
@@ -139,27 +139,27 @@ group by b + c
   
  基于集合的合计对集合进行运算，并且产生合计结果。 它们可以出现在查询中的任何位置，并且不需要 `group by` 子句。 例如：  
   
-```  
-select t.a as a, count({1,2,3}) as b from T as t     
+```sql  
+SELECT t.a AS a, count({1,2,3}) AS b FROM T AS t
 ```  
   
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 还支持 SQL 样式的合计。 例如:  
   
-```  
-select a, sum(t.b) from T as t group by t.a as a  
+```sql  
+SELECT a, sum(t.b) FROM T AS t GROUP BY t.a AS a
 ```  
   
 ## <a name="order-by-clause-usage"></a>ORDER BY 子句用法  
- Transact-sql 仅允许在最顶部的 SELECT 语句中指定 ORDER BY 子句。 从。 WHERE 块中指定 ORDER BY 子句。 在 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 中，可以使用嵌套的 ORDER BY 表达式，并且可以将其放置在查询中的任何地方，但不会保留嵌套查询中的排序。  
+Transact-sql 仅允许在最顶层的 @no__t 块中指定 @no__t 的子句。 在 @no__t 中，您可以使用嵌套的 @no__t 1 表达式，并将其放在查询中的任何位置，但不会保留在嵌套查询中的排序。  
   
-```  
+```sql  
 -- The following query will order the results by the last name  
 SELECT C1.FirstName, C1.LastName  
-        FROM AdventureWorks.Contact as C1  
+        FROM AdventureWorks.Contact AS C1
         ORDER BY C1.LastName  
 ```  
   
-```  
+```sql  
 -- In the following query ordering of the nested query is ignored.  
 SELECT C2.FirstName, C2.LastName  
     FROM (SELECT C1.FirstName, C1.LastName  
@@ -197,16 +197,16 @@ SELECT C2.FirstName, C2.LastName
  查询结果批处理  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 不支持查询结果批处理。 例如，下面是有效的 Transact-sql （以批处理的形式发送）：  
   
-```  
-select * from products;  
-select * from catagories;  
+```sql  
+SELECT * FROM products;
+SELECT * FROM catagories;
 ```  
   
  但是，等效的 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 不受支持：  
   
-```  
-Select value p from Products as p;  
-Select value c from Categories as c;  
+```sql  
+SELECT value p FROM Products AS p;
+SELECT value c FROM Categories AS c;
 ```  
   
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 仅支持在每个命令中使用一个由结果生成的查询语句。  
