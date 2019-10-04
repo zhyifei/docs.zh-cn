@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 672a5ac8-8305-4d28-ba10-11089c2c0924
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8a0c34eebda789f6561195c89e2660ae77603dc0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 729e6caa36ed8c2f6e77153f8d8ae356513b0603
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69923288"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71956992"
 ---
 # <a name="xslt-compiler-xsltcexe"></a>XSLT 编译器 (xsltc.exe)
 XSLT 编译器 (xsltc.exe) 编译 XSLT 样式表并生成一个程序集。 然后可以将已编译的样式表直接传递到 <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> 方法中。 不能用 xsltc.exe 生成签名的程序集。  
@@ -19,19 +19,19 @@ XSLT 编译器 (xsltc.exe) 编译 XSLT 样式表并生成一个程序集。 然�
   
 ## <a name="syntax"></a>语法  
   
-```  
+```console  
 xsltc [options] [/class:<name>] <sourceFile> [[/class:<name>] <sourceFile>...]  
 ```  
   
 ## <a name="argument"></a>参数  
   
-|参数|说明|  
+|参数|描述|  
 |--------------|-----------------|  
 |`sourceFile`|指定样式表的名称。 样式表必须是本地文件或者位于 Intranet 上。|  
   
 ## <a name="options"></a>选项  
   
-|选项|说明|  
+|Option|描述|  
 |------------|-----------------|  
 |`/c[lass]:` `name`|指定下面样式表的类名称。 类名称可以是完全限定的名称。<br /><br /> 类名称默认为样式表的名称。 例如，如果编译样式表 customers.xsl，则默认类名称为 customers。|  
 |`/debug[`+&#124;-`]`|指定是否生成调试信息。<br /><br /> 指定 `+` 或 `/debug` 将导致编译器生成调试信息并将此信息放在程序数据库 (PDB) 文件中。 生成的 PDB 文件的名称为 `assemblyName`.pdb。<br /><br /> 指定 `-`（在不指定 `/debug` 时生效）将导致不创建任何调试信息。 生成发布程序集。 **注意：** 在调试模式下进行编译会显著影响 XSLT 性能。|  
@@ -49,36 +49,36 @@ xsltc [options] [/class:<name>] <sourceFile> [[/class:<name>] <sourceFile>...]
 > [!NOTE]
 > 您还必须包括已编译的程序集作为应用程序中的引用。  
   
- xsltc.exe 工具不验证类（`/class:` 名称）或程序集（`/out:`assemblyName）名称   。 如果名称无效，公共语言运行库将引发错误。  
+ xsltc.exe 工具不验证类（`/class:` 名称）或程序集（`/out:`assemblyName）名称。 如果名称无效，公共语言运行库将引发错误。  
   
 ## <a name="examples"></a>示例  
  下面的命令编译样式表并创建一个名为 booksort.dll 的程序集。  
   
-```  
+```console  
 xsltc booksort.xsl  
 ```  
   
  下面的命令编译样式表并创建名称分别为 booksort.dll 和 booksort.pdb 的程序集和 PDB 文件。  
   
-```  
+```console  
 xsltc booksort.xsl /debug  
 ```  
   
  下面的命令编译包含 msxsl:script 元素的样式表并创建两个名为 calc.dll 和 calc_Script1.dll 的程序集。  
   
-```  
+```console  
 xsltc /settings:script+ calc.xsl  
 ```  
   
  下面的命令启用 DTD 处理和脚本支持并创建两个名为 myTest.dll 和 myTest_Script1.dll 的程序集。  
   
-```  
+```console  
 xsltc /settings:DTD+,script+ /out:myTest calc.xsl  
 ```  
   
  下面的命令编译两个样式表模块并创建单个名为 booksort.dll 的程序集。  
   
-```  
+```console  
 xsltc booksort.xsl output.xsl  
 ```  
   

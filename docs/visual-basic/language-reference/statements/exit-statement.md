@@ -12,82 +12,88 @@ helpviewer_keywords:
 - program termination
 - execution [Visual Basic], stopping
 ms.assetid: 760bfb32-5c3f-4bdb-a432-9a6001c92db7
-ms.openlocfilehash: 1f386694bd7425ee530b9305ab684b730f9b73c8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9c25653809c51662ea5b606ab97be6a9b50d5986
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61638111"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71956933"
 ---
 # <a name="exit-statement-visual-basic"></a>Exit 语句 (Visual Basic)
-退出过程或块，并立即将控制转移到的过程调用或块定义后面的语句。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-Exit { Do | For | Function | Property | Select | Sub | Try | While }  
-```  
-  
-## <a name="statements"></a>语句  
+
+退出过程或块并将控制立即传输到过程调用或块定义后面的语句。
+
+## <a name="syntax"></a>语法
+
+```vb
+Exit { Do | For | Function | Property | Select | Sub | Try | While }
+```
+
+## <a name="statements"></a>语句
+
  `Exit Do`  
- 立即退出`Do`循环中将显示。 继续后面的语句执行`Loop`语句。 `Exit Do` 可仅在`Do`循环。 当使用内嵌套`Do`循环，`Exit Do`退出最里面的循环，并将控制转移到下一个较高级别的嵌套。  
-  
+ 立即退出出现 @no__t 的0循环。 继续执行 `Loop` 语句后面的语句。 `Exit Do` 只能在 @no__t 循环内使用。 在嵌套 `Do` 循环内使用时，`Exit Do` 退出最内层的循环，并将控制转移到下一个更高的嵌套级别。
+
  `Exit For`  
- 立即退出`For`循环中将显示。 继续后面的语句执行`Next`语句。 `Exit For` 可仅在`For`...`Next`或`For Each`...`Next`循环。 当使用内嵌套`For`循环，`Exit For`退出最里面的循环，并将控制转移到下一个较高级别的嵌套。  
-  
+ 立即退出出现 @no__t 的0循环。 继续执行 `Next` 语句后面的语句。 `Exit For` 只能在 @no__t `Next` 或 `For Each` ... `Next` 循环内使用。 在嵌套 `For` 循环内使用时，`Exit For` 退出最内层的循环，并将控制转移到下一个更高的嵌套级别。
+
  `Exit Function`  
- 立即退出`Function`它所在的过程。 继续后面的语句调用的语句的执行`Function`过程。 `Exit Function` 可仅在`Function`过程。  
-  
- 若要指定返回值，可以将值分配给前一行的函数名称`Exit Function`语句。 若要将返回值和退出在一个语句中的函数，则可以使用[Return 语句](../../../visual-basic/language-reference/statements/return-statement.md)。  
-  
+ 会立即退出显示它的 @no__t 0 过程。 执行将继续，语句后跟调用 `Function` 过程的语句后面的语句。 `Exit Function` 只能在 @no__t 一过程中使用。
+
+ 若要指定返回值，可以在 `Exit Function` 语句之前，将值分配给函数名称。 若要分配返回值并在一个语句中退出函数，可以改为使用[Return 语句](return-statement.md)。
+
  `Exit Property`  
- 立即退出`Property`它所在的过程。 继续执行调用语句`Property`过程，也就是说，与请求或设置该属性的值的语句。 `Exit Property` 可仅在属性的`Get`或`Set`过程。  
-  
- 若要指定在返回值`Get`过程中，可以将值分配给前一行的函数名称`Exit Property`语句。 若要将分配的返回值和出口`Get`在一个语句中的过程，则可以使用`Return`语句。  
-  
- 在中`Set`过程中，`Exit Property`语句等效于`Return`语句。  
-  
+ 会立即退出显示它的 @no__t 0 过程。 执行将继续，语句称为 @no__t 的过程，即，语句请求或设置属性的值。 `Exit Property` 只能在属性的 @no__t 或 @no__t 步骤中使用。
+
+ 若要在 @no__t 的过程中指定返回值，可以在 @no__t 1 语句之前，将值分配给函数名称。 若要在一个语句中分配返回值并退出 `Get` 过程，可以改为使用 @no__t 语句。
+
+ 在 @no__t 的过程中，@no__t 语句等效于第 2 @no__t 语句。
+
  `Exit Select`  
- 立即退出`Select Case`阻止所在。 继续后面的语句执行`End Select`语句。 `Exit Select` 可仅在`Select Case`语句。  
-  
+ 立即退出出现 @no__t 的块。 继续执行 `End Select` 语句后面的语句。 `Exit Select` 只能在 @no__t 语句中使用。
+
  `Exit Sub`  
- 立即退出`Sub`它所在的过程。 继续后面的语句调用的语句的执行`Sub`过程。 `Exit Sub` 可仅在`Sub`过程。  
-  
- 在中`Sub`过程中，`Exit Sub`语句等效于`Return`语句。  
-  
+ 会立即退出显示它的 @no__t 0 过程。 执行将继续，语句后跟调用 `Sub` 过程的语句后面的语句。 `Exit Sub` 只能在 @no__t 一过程中使用。
+
+ 在 @no__t 的过程中，@no__t 语句等效于第 2 @no__t 语句。
+
  `Exit Try`  
- 立即退出`Try`或`Catch`阻止所在。 继续执行`Finally`阻止如果有的话，或后面的语句与`End Try`否则为语句。 `Exit Try` 可仅在`Try`或`Catch`块中，不能在`Finally`块。  
-  
+ 立即退出出现 @no__t 0 或 `Catch` 块。 如果有 `Finally` 块，则继续执行; 否则，将继续执行 `End Try` 语句后面的语句。 `Exit Try` 只能在 @no__t 或 `Catch` 块内使用，而不能在 @no__t 块内使用。
+
  `Exit While`  
- 立即退出`While`循环中将显示。 继续后面的语句执行`End While`语句。 `Exit While` 可仅在`While`循环。 使用时内嵌套`While`循环`Exit While`将控制转移到高循环的一个嵌套级别的循环其中`Exit While`发生。  
-  
-## <a name="remarks"></a>备注  
- 不要混淆`Exit`语句替换`End`语句。 `Exit` 未定义语句的末尾。  
-  
-## <a name="example"></a>示例  
- 以下示例中，在循环条件停止循环时`index`变量是否大于 100。 `If`语句在循环中，但是，导致`Exit Do`语句停止循环索引变量是否大于 10 时。  
-  
- [!code-vb[VbVbalrStatements#133](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class10.vb#133)]  
-  
-## <a name="example"></a>示例  
- 以下示例将返回值分配为函数名称`myFunction`，然后使用`Exit Function`以从函数返回。  
-  
- [!code-vb[VbVbalrStatements#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#23)]  
-  
-## <a name="example"></a>示例  
- 下面的示例使用[Return 语句](../../../visual-basic/language-reference/statements/return-statement.md)返回值分配并退出该函数。  
-  
- [!code-vb[VbVbalrStatements#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#24)]  
-  
+ 立即退出出现 @no__t 的0循环。 继续执行 `End While` 语句后面的语句。 `Exit While` 只能在 @no__t 循环内使用。 在嵌套 `While` 循环内使用时，`Exit While` 会将控制转移到循环，该循环是在发生 `Exit While` 的循环之上的一个嵌套级别。
+
+## <a name="remarks"></a>备注
+
+不要将 `Exit` 语句与 @no__t 语句混淆。 `Exit` 不定义语句的末尾。
+
+## <a name="example"></a>示例
+
+在下面的示例中，当 `index` 变量大于100时，loop 条件将停止循环。 但是，循环中的 `If` 语句导致当索引变量大于10时，`Exit Do` 语句停止循环。
+
+[!code-vb[VbVbalrStatements#133](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class10.vb#133)]
+
+## <a name="example"></a>示例
+
+下面的示例将返回值分配给函数名称 `myFunction`，然后使用 `Exit Function` 从函数返回：
+
+[!code-vb[VbVbalrStatements#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#23)]
+
+## <a name="example"></a>示例
+
+下面的示例使用[Return 语句](return-statement.md)来分配返回值并退出函数：
+
+[!code-vb[VbVbalrStatements#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#24)]
+
 ## <a name="see-also"></a>请参阅
 
-- [Continue 语句](../../../visual-basic/language-reference/statements/continue-statement.md)
-- [Do...Loop 语句](../../../visual-basic/language-reference/statements/do-loop-statement.md)
-- [End 语句](../../../visual-basic/language-reference/statements/end-statement.md)
-- [For Each...Next 语句](../../../visual-basic/language-reference/statements/for-each-next-statement.md)
-- [For...Next 语句](../../../visual-basic/language-reference/statements/for-next-statement.md)
-- [Function 语句](../../../visual-basic/language-reference/statements/function-statement.md)
-- [Return 语句](../../../visual-basic/language-reference/statements/return-statement.md)
-- [Stop 语句](../../../visual-basic/language-reference/statements/stop-statement.md)
-- [Sub 语句](../../../visual-basic/language-reference/statements/sub-statement.md)
-- [Try...Catch...Finally 语句](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
+- [Continue 语句](continue-statement.md)
+- [Do...Loop 语句](do-loop-statement.md)
+- [End 语句](end-statement.md)
+- [For Each...Next 语句](for-each-next-statement.md)
+- [For...Next 语句](for-next-statement.md)
+- [Function 语句](function-statement.md)
+- [Return 语句](return-statement.md)
+- [Stop 语句](stop-statement.md)
+- [Sub 语句](sub-statement.md)
+- [Try...Catch...Finally 语句](try-catch-finally-statement.md)

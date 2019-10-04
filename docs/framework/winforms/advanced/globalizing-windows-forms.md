@@ -1,6 +1,6 @@
 ---
 title: 全球化 Windows 窗体应用程序
-description: 本主题提供与全球化 Windows 窗体应用程序相关的主题的列表。
+description: 本主题提供与全球化 Windows 窗体应用程序相关的主题列表。
 ms.date: 06/08/2018
 helpviewer_keywords:
 - Windows Forms, globalization
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - world-ready applications
 - global applications [Windows Forms], creating Windows Forms
 ms.assetid: 72f6cd92-83be-45ec-aa37-9cb8e3ebc3c5
-ms.openlocfilehash: 72bab76245b7b613ed97acec4cc616732c54de0f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0e7794b731294e03515265ff33e82af4fde40efa
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62004505"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71956428"
 ---
 # <a name="globalizing-windows-forms-applications"></a>全球化 Windows 窗体应用程序
 
@@ -22,14 +22,11 @@ ms.locfileid: "62004505"
 
 ## <a name="in-this-section"></a>本节内容
 
-[编码和 Windows 窗体全球化](encoding-and-windows-forms-globalization.md)  
-介绍完整的 Unicode 支持及其影响。
-
 [Windows 窗体和控件中的国际字体](international-fonts-in-windows-forms-and-controls.md)  
 说明何时以及如何选择字体以在 Windows 窗体上显示国际字符。
 
 [Windows 窗体应用程序的双向支持](bi-directional-support-for-windows-forms-applications.md)  
-说明如何创建基于 Windows 的应用程序支持的双向 （右到左） 语言。
+说明如何创建支持双向（从右向左）语言的基于 Windows 的应用程序。
 
 [通过 ImeMode 属性显示亚洲字符](display-of-asian-characters-with-the-imemode-property.md)  
 介绍 `ImeMode` 属性，它用于控制 Windows 窗体或控件接受的输入类型。
@@ -44,12 +41,12 @@ ms.locfileid: "62004505"
 
 - [演练：使用 ClickOnce 部署 API 按需下载附属程序集](/visualstudio/deployment/walkthrough-downloading-satellite-assemblies-on-demand-with-the-clickonce-deployment-api)
 
-- [如何：为 Windows 窗体全球化设置区域性和 UI 区域性](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/b28bx3bh(v=vs.100))
+- [如何：为 Windows 窗体全球化 @ no__t 设置区域性和 UI 区域性
 
-- [如何：创建镜像的 Windows 窗体和控件](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/xwbz5ws0(v=vs.100))
+- [如何：创建镜像 Windows 窗体和控件 @ no__t-0
 
-- [如何：支持对使用 AutoSize 和 TableLayoutPanel 控件的 Windows 窗体的本地化](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/1zkt8b33(v=vs.100))
+- [如何：使用 AutoSize 和 TableLayoutPanel Control @ no__t 支持对 Windows 窗体的本地化
 
-- [演练：本地化 Windows 窗体](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/y99d1cd3(v=vs.100))
+- [演练：本地化 Windows 窗体 @ no__t-0
 
-- [演练：创建布局根据本地化需要调整比例](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/7k9fa71y(v=vs.100))
+- [演练：创建调整比例的布局 @ no__t-0
