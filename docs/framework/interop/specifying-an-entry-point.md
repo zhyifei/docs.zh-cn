@@ -8,30 +8,32 @@ helpviewer_keywords:
 ms.assetid: d1247f08-0965-416a-b978-e0b50652dfe3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 410c8bdb63b56a78dbfa64c21344fdcd6a6656c3
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 2a5449b4fa77ba99a18595077081089e80bd32df
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71051613"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71833608"
 ---
-# <a name="specifying-an-entry-point"></a><span data-ttu-id="3e6ff-102">指定入口点</span><span class="sxs-lookup"><span data-stu-id="3e6ff-102">Specifying an Entry Point</span></span>
-<span data-ttu-id="3e6ff-103">入口点标识 DLL 中的函数位置。</span><span class="sxs-lookup"><span data-stu-id="3e6ff-103">An entry point identifies the location of a function in a DLL.</span></span> <span data-ttu-id="3e6ff-104">在托管项目中，目标函数的原始名称或序号入口点跨越互操作边界标识该函数。</span><span class="sxs-lookup"><span data-stu-id="3e6ff-104">Within a managed project, the original name or ordinal entry point of a target function identifies that function across the interoperation boundary.</span></span> <span data-ttu-id="3e6ff-105">此外，可将入口点映射到其他名称，有效地重命名该函数。</span><span class="sxs-lookup"><span data-stu-id="3e6ff-105">Further, you can map the entry point to a different name, effectively renaming the function.</span></span>  
+# <a name="specifying-an-entry-point"></a><span data-ttu-id="126e3-102">指定入口点</span><span class="sxs-lookup"><span data-stu-id="126e3-102">Specifying an Entry Point</span></span>
+
+<span data-ttu-id="126e3-103">入口点标识 DLL 中的函数位置。</span><span class="sxs-lookup"><span data-stu-id="126e3-103">An entry point identifies the location of a function in a DLL.</span></span> <span data-ttu-id="126e3-104">在托管项目中，目标函数的原始名称或序号入口点跨越互操作边界标识该函数。</span><span class="sxs-lookup"><span data-stu-id="126e3-104">Within a managed project, the original name or ordinal entry point of a target function identifies that function across the interoperation boundary.</span></span> <span data-ttu-id="126e3-105">此外，可将入口点映射到其他名称，有效地重命名该函数。</span><span class="sxs-lookup"><span data-stu-id="126e3-105">Further, you can map the entry point to a different name, effectively renaming the function.</span></span>  
   
- <span data-ttu-id="3e6ff-106">以下列表列出了重命名 DLL 函数的可能原因：</span><span class="sxs-lookup"><span data-stu-id="3e6ff-106">Following is a list of possible reasons to rename a DLL function:</span></span>  
+ <span data-ttu-id="126e3-106">下面列出了重命名 DLL 函数的可能原因：</span><span class="sxs-lookup"><span data-stu-id="126e3-106">The following is a list of possible reasons to rename a DLL function:</span></span>  
   
-- <span data-ttu-id="3e6ff-107">避免使用区分大小写的 API 函数名</span><span class="sxs-lookup"><span data-stu-id="3e6ff-107">To avoid using case-sensitive API function names</span></span>  
+- <span data-ttu-id="126e3-107">避免使用区分大小写的 API 函数名</span><span class="sxs-lookup"><span data-stu-id="126e3-107">To avoid using case-sensitive API function names</span></span>  
   
-- <span data-ttu-id="3e6ff-108">符合现有的命名标准</span><span class="sxs-lookup"><span data-stu-id="3e6ff-108">To comply with existing naming standards</span></span>  
+- <span data-ttu-id="126e3-108">符合现有的命名标准</span><span class="sxs-lookup"><span data-stu-id="126e3-108">To comply with existing naming standards</span></span>  
   
-- <span data-ttu-id="3e6ff-109">提供采用不同数据类型的函数（通过声明同一 DLL 函数的多个版本）</span><span class="sxs-lookup"><span data-stu-id="3e6ff-109">To accommodate functions that take different data types (by declaring multiple versions of the same DLL function)</span></span>  
+- <span data-ttu-id="126e3-109">提供采用不同数据类型的函数（通过声明同一 DLL 函数的多个版本）</span><span class="sxs-lookup"><span data-stu-id="126e3-109">To accommodate functions that take different data types (by declaring multiple versions of the same DLL function)</span></span>  
   
-- <span data-ttu-id="3e6ff-110">简化对包含 ANSI 和 Unicode 版本的 API 的使用</span><span class="sxs-lookup"><span data-stu-id="3e6ff-110">To simplify using APIs that contain ANSI and Unicode versions</span></span>  
+- <span data-ttu-id="126e3-110">简化对包含 ANSI 和 Unicode 版本的 API 的使用</span><span class="sxs-lookup"><span data-stu-id="126e3-110">To simplify using APIs that contain ANSI and Unicode versions</span></span>  
   
- <span data-ttu-id="3e6ff-111">本主题说明如何在托管代码中重命名 DLL 函数。</span><span class="sxs-lookup"><span data-stu-id="3e6ff-111">This topic demonstrates how to rename a DLL function in managed code.</span></span>  
+ <span data-ttu-id="126e3-111">本主题说明如何在托管代码中重命名 DLL 函数。</span><span class="sxs-lookup"><span data-stu-id="126e3-111">This topic demonstrates how to rename a DLL function in managed code.</span></span>  
   
-## <a name="renaming-a-function-in-visual-basic"></a><span data-ttu-id="3e6ff-112">重命名 Visual Basic 中的函数</span><span class="sxs-lookup"><span data-stu-id="3e6ff-112">Renaming a Function in Visual Basic</span></span>  
- <span data-ttu-id="3e6ff-113">Visual Basic 在 Declare语句中使用 Function关键字设置 <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint?displayProperty=nameWithType> 字段。</span><span class="sxs-lookup"><span data-stu-id="3e6ff-113">Visual Basic uses the **Function** keyword in the **Declare** statement to set the <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint?displayProperty=nameWithType> field.</span></span> <span data-ttu-id="3e6ff-114">下面的示例演示了一个基本声明。</span><span class="sxs-lookup"><span data-stu-id="3e6ff-114">The following example shows a basic declaration.</span></span>  
+## <a name="renaming-a-function-in-visual-basic"></a><span data-ttu-id="126e3-112">重命名 Visual Basic 中的函数</span><span class="sxs-lookup"><span data-stu-id="126e3-112">Renaming a Function in Visual Basic</span></span>  
+ 
+<span data-ttu-id="126e3-113">Visual Basic 在 Declare语句中使用 Function关键字设置 <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint?displayProperty=nameWithType> 字段。</span><span class="sxs-lookup"><span data-stu-id="126e3-113">Visual Basic uses the **Function** keyword in the **Declare** statement to set the <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint?displayProperty=nameWithType> field.</span></span> <span data-ttu-id="126e3-114">下面的示例演示了一个基本声明。</span><span class="sxs-lookup"><span data-stu-id="126e3-114">The following example shows a basic declaration.</span></span>  
   
 ```vb
 Friend Class NativeMethods
@@ -43,7 +45,7 @@ Friend Class NativeMethods
 End Class
 ```
   
- <span data-ttu-id="3e6ff-115">如下例所示，通过在定义中包括 Alias 关键字，可以用 MsgBox 替换 MessageBox 入口点。</span><span class="sxs-lookup"><span data-stu-id="3e6ff-115">You can replace the **MessageBox** entry point with **MsgBox** by including the **Alias** keyword in your definition, as shown in the following example.</span></span> <span data-ttu-id="3e6ff-116">在这两个示例中，Auto关键字使你无需指定入口点的字符集版本。</span><span class="sxs-lookup"><span data-stu-id="3e6ff-116">In both examples the **Auto** keyword eliminates the need to specify the character-set version of the entry point.</span></span> <span data-ttu-id="3e6ff-117">有关选择字符集的详细信息，请参阅[指定字符集](specifying-a-character-set.md)。</span><span class="sxs-lookup"><span data-stu-id="3e6ff-117">For more information about selecting a character set, see [Specifying a Character Set](specifying-a-character-set.md).</span></span>  
+<span data-ttu-id="126e3-115">如下例所示，通过在定义中包括 Alias 关键字，可以用 MsgBox 替换 MessageBox 入口点。</span><span class="sxs-lookup"><span data-stu-id="126e3-115">You can replace the **MessageBox** entry point with **MsgBox** by including the **Alias** keyword in your definition, as shown in the following example.</span></span> <span data-ttu-id="126e3-116">在这两个示例中，Auto关键字使你无需指定入口点的字符集版本。</span><span class="sxs-lookup"><span data-stu-id="126e3-116">In both examples the **Auto** keyword eliminates the need to specify the character-set version of the entry point.</span></span> <span data-ttu-id="126e3-117">有关选择字符集的详细信息，请参阅[指定字符集](specifying-a-character-set.md)。</span><span class="sxs-lookup"><span data-stu-id="126e3-117">For more information about selecting a character set, see [Specifying a Character Set](specifying-a-character-set.md).</span></span>  
   
 ```vb
 Friend Class NativeMethods
@@ -56,17 +58,17 @@ Friend Class NativeMethods
 End Class
 ```
   
-## <a name="renaming-a-function-in-c-and-c"></a><span data-ttu-id="3e6ff-118">重命名 C# 和 C++ 中的函数</span><span class="sxs-lookup"><span data-stu-id="3e6ff-118">Renaming a Function in C# and C++</span></span>  
- <span data-ttu-id="3e6ff-119">可使用 <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint?displayProperty=nameWithType> 字段通过名称或序号指定 DLL 函数。</span><span class="sxs-lookup"><span data-stu-id="3e6ff-119">You can use the <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint?displayProperty=nameWithType> field to specify a DLL function by name or ordinal.</span></span> <span data-ttu-id="3e6ff-120">如果方法定义中函数的名称与 DLL 中入口点的名称相同，则不必使用 EntryPoint字段显式地标识函数。</span><span class="sxs-lookup"><span data-stu-id="3e6ff-120">If the name of the function in your method definition is the same as the entry point in the DLL, you do not have to explicitly identify the function with the **EntryPoint** field.</span></span> <span data-ttu-id="3e6ff-121">否则，使用以下属性形式之一指示名称或序号：</span><span class="sxs-lookup"><span data-stu-id="3e6ff-121">Otherwise, use one of the following attribute forms to indicate a name or ordinal:</span></span>  
+## <a name="renaming-a-function-in-c-and-c"></a><span data-ttu-id="126e3-118">重命名 C# 和 C++ 中的函数</span><span class="sxs-lookup"><span data-stu-id="126e3-118">Renaming a Function in C# and C++</span></span>  
+ <span data-ttu-id="126e3-119">可使用 <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint?displayProperty=nameWithType> 字段通过名称或序号指定 DLL 函数。</span><span class="sxs-lookup"><span data-stu-id="126e3-119">You can use the <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint?displayProperty=nameWithType> field to specify a DLL function by name or ordinal.</span></span> <span data-ttu-id="126e3-120">如果方法定义中函数的名称与 DLL 中入口点的名称相同，则不必使用 EntryPoint字段显式地标识函数。</span><span class="sxs-lookup"><span data-stu-id="126e3-120">If the name of the function in your method definition is the same as the entry point in the DLL, you do not have to explicitly identify the function with the **EntryPoint** field.</span></span> <span data-ttu-id="126e3-121">否则，使用以下属性形式之一指示名称或序号：</span><span class="sxs-lookup"><span data-stu-id="126e3-121">Otherwise, use one of the following attribute forms to indicate a name or ordinal:</span></span>  
   
 ```csharp
 [DllImport("DllName", EntryPoint = "Functionname")]
 [DllImport("DllName", EntryPoint = "#123")]
 ```
   
- <span data-ttu-id="3e6ff-122">请注意，序号前必须带有井号 (#)。</span><span class="sxs-lookup"><span data-stu-id="3e6ff-122">Notice that you must prefix an ordinal with the pound sign (#).</span></span>  
+ <span data-ttu-id="126e3-122">请注意，序号前必须带有井号 (#)。</span><span class="sxs-lookup"><span data-stu-id="126e3-122">Notice that you must prefix an ordinal with the pound sign (#).</span></span>  
   
- <span data-ttu-id="3e6ff-123">下面的示例演示如何使用 EntryPoint 字段将代码中的 MessageBoxA 替换为 MsgBox。</span><span class="sxs-lookup"><span data-stu-id="3e6ff-123">The following example demonstrates how to replace **MessageBoxA** with **MsgBox** in your code by using the **EntryPoint** field.</span></span>  
+ <span data-ttu-id="126e3-123">下面的示例演示如何使用 EntryPoint 字段将代码中的 MessageBoxA 替换为 MsgBox。</span><span class="sxs-lookup"><span data-stu-id="126e3-123">The following example demonstrates how to replace **MessageBoxA** with **MsgBox** in your code by using the **EntryPoint** field.</span></span>  
   
 ```csharp
 using System;
@@ -90,9 +92,9 @@ extern "C" int MsgBox(
     HWND hWnd, String* lpText, String* lpCaption, unsigned int uType);
 ```
   
-## <a name="see-also"></a><span data-ttu-id="3e6ff-124">请参阅</span><span class="sxs-lookup"><span data-stu-id="3e6ff-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="126e3-124">请参阅</span><span class="sxs-lookup"><span data-stu-id="126e3-124">See also</span></span>
 
 - <xref:System.Runtime.InteropServices.DllImportAttribute>
-- [<span data-ttu-id="3e6ff-125">在托管代码中创建原型</span><span class="sxs-lookup"><span data-stu-id="3e6ff-125">Creating Prototypes in Managed Code</span></span>](creating-prototypes-in-managed-code.md)
-- [<span data-ttu-id="3e6ff-126">平台调用示例</span><span class="sxs-lookup"><span data-stu-id="3e6ff-126">Platform Invoke Examples</span></span>](platform-invoke-examples.md)
-- [<span data-ttu-id="3e6ff-127">用平台调用封送数据</span><span class="sxs-lookup"><span data-stu-id="3e6ff-127">Marshaling Data with Platform Invoke</span></span>](marshaling-data-with-platform-invoke.md)
+- [<span data-ttu-id="126e3-125">在托管代码中创建原型</span><span class="sxs-lookup"><span data-stu-id="126e3-125">Creating Prototypes in Managed Code</span></span>](creating-prototypes-in-managed-code.md)
+- [<span data-ttu-id="126e3-126">平台调用示例</span><span class="sxs-lookup"><span data-stu-id="126e3-126">Platform Invoke Examples</span></span>](platform-invoke-examples.md)
+- [<span data-ttu-id="126e3-127">用平台调用封送数据</span><span class="sxs-lookup"><span data-stu-id="126e3-127">Marshaling Data with Platform Invoke</span></span>](marshaling-data-with-platform-invoke.md)

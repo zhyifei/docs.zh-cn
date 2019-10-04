@@ -2,45 +2,45 @@
 title: DEREF (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 4c78e833-b260-453d-9bf4-eb39857dd0fa
-ms.openlocfilehash: 10c5ecb2b44c85dccd758cc1cf63a152da045cc1
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 27fc23a2be47ea00eff20aa8d2f559af5ae90387
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251085"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71833896"
 ---
-# <a name="deref-entity-sql"></a><span data-ttu-id="c5c8c-102">DEREF (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="c5c8c-102">DEREF (Entity SQL)</span></span>
-<span data-ttu-id="c5c8c-103">取消引用一个引用值，并生成该取消引用的结果。</span><span class="sxs-lookup"><span data-stu-id="c5c8c-103">Dereferences a reference value and produces the result of that dereference.</span></span>  
+# <a name="deref-entity-sql"></a><span data-ttu-id="43a75-102">DEREF (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="43a75-102">DEREF (Entity SQL)</span></span>
+<span data-ttu-id="43a75-103">取消引用一个引用值，并生成该取消引用的结果。</span><span class="sxs-lookup"><span data-stu-id="43a75-103">Dereferences a reference value and produces the result of that dereference.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c5c8c-104">语法</span><span class="sxs-lookup"><span data-stu-id="c5c8c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="43a75-104">语法</span><span class="sxs-lookup"><span data-stu-id="43a75-104">Syntax</span></span>  
   
+```sql  
+SELECT DEREF ( o.expression ) FROM Table AS o;
 ```  
-SELECT DEREF ( o.expression ) from Table as o;  
-```  
   
-## <a name="arguments"></a><span data-ttu-id="c5c8c-105">自变量</span><span class="sxs-lookup"><span data-stu-id="c5c8c-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="43a75-105">参数</span><span class="sxs-lookup"><span data-stu-id="43a75-105">Arguments</span></span>  
  `expression`  
- <span data-ttu-id="c5c8c-106">任何返回集合的有效查询表达式。</span><span class="sxs-lookup"><span data-stu-id="c5c8c-106">Any valid query expression that returns a collection.</span></span>  
+ <span data-ttu-id="43a75-106">任何返回集合的有效查询表达式。</span><span class="sxs-lookup"><span data-stu-id="43a75-106">Any valid query expression that returns a collection.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="c5c8c-107">返回值</span><span class="sxs-lookup"><span data-stu-id="c5c8c-107">Return Value</span></span>  
- <span data-ttu-id="c5c8c-108">引用的实体的值。</span><span class="sxs-lookup"><span data-stu-id="c5c8c-108">The value of the entity that is referenced.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="43a75-107">返回值</span><span class="sxs-lookup"><span data-stu-id="43a75-107">Return Value</span></span>  
+ <span data-ttu-id="43a75-108">引用的实体的值。</span><span class="sxs-lookup"><span data-stu-id="43a75-108">The value of the entity that is referenced.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="c5c8c-109">备注</span><span class="sxs-lookup"><span data-stu-id="c5c8c-109">Remarks</span></span>  
- <span data-ttu-id="c5c8c-110">DEREF 运算符取消引用一个引用值，并生成该取消引用的结果。</span><span class="sxs-lookup"><span data-stu-id="c5c8c-110">The DEREF operator dereferences a reference value and produces the result of that dereference.</span></span> <span data-ttu-id="c5c8c-111">例如，如果`r`是`r`引用\<类型 >，则是类型`T`的表达式`Deref(r)` ，该表达式生成由引用的实体。</span><span class="sxs-lookup"><span data-stu-id="c5c8c-111">For example, if `r` is a reference of type ref\<T>, `Deref(r)` is an expression of type `T` that yields the entity referenced by `r`.</span></span> <span data-ttu-id="c5c8c-112">如果引用值为 Null，或无关联（即，引用的目标不存在），则 DEREF 运算符的结果为 Null。</span><span class="sxs-lookup"><span data-stu-id="c5c8c-112">If the reference value is null, or is dangling (that is, the target of the reference does not exist), the result of the DEREF operator is null.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="43a75-109">备注</span><span class="sxs-lookup"><span data-stu-id="43a75-109">Remarks</span></span>  
+ <span data-ttu-id="43a75-110">DEREF 运算符取消引用一个引用值，并生成该取消引用的结果。</span><span class="sxs-lookup"><span data-stu-id="43a75-110">The DEREF operator dereferences a reference value and produces the result of that dereference.</span></span> <span data-ttu-id="43a75-111">例如，如果 `r` 是类型 ref @ no__t-1T > 的引用，则 `Deref(r)` 是一个 `T` 类型的表达式，该表达式生成由 `r` 引用的实体。</span><span class="sxs-lookup"><span data-stu-id="43a75-111">For example, if `r` is a reference of type ref\<T>, `Deref(r)` is an expression of type `T` that yields the entity referenced by `r`.</span></span> <span data-ttu-id="43a75-112">如果引用值为 Null，或无关联（即，引用的目标不存在），则 DEREF 运算符的结果为 Null。</span><span class="sxs-lookup"><span data-stu-id="43a75-112">If the reference value is null, or is dangling (that is, the target of the reference does not exist), the result of the DEREF operator is null.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="c5c8c-113">示例</span><span class="sxs-lookup"><span data-stu-id="c5c8c-113">Example</span></span>  
- <span data-ttu-id="c5c8c-114">下面的 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 查询使用 DEREF 运算符取消引用一个引用值，并生成该取消引用的结果。</span><span class="sxs-lookup"><span data-stu-id="c5c8c-114">The following [!INCLUDE[esql](../../../../../../includes/esql-md.md)] query uses the DEREF operator to dereference a reference value and produce the result of that dereference.</span></span> <span data-ttu-id="c5c8c-115">此查询基于 AdventureWorks 销售模型。</span><span class="sxs-lookup"><span data-stu-id="c5c8c-115">The query is based on the AdventureWorks Sales Model.</span></span> <span data-ttu-id="c5c8c-116">若要编译并运行此查询，请执行下列步骤：</span><span class="sxs-lookup"><span data-stu-id="c5c8c-116">To compile and run this query, follow these steps:</span></span>  
+## <a name="example"></a><span data-ttu-id="43a75-113">示例</span><span class="sxs-lookup"><span data-stu-id="43a75-113">Example</span></span>  
+ <span data-ttu-id="43a75-114">下面的 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 查询使用 DEREF 运算符取消引用一个引用值，并生成该取消引用的结果。</span><span class="sxs-lookup"><span data-stu-id="43a75-114">The following [!INCLUDE[esql](../../../../../../includes/esql-md.md)] query uses the DEREF operator to dereference a reference value and produce the result of that dereference.</span></span> <span data-ttu-id="43a75-115">此查询基于 AdventureWorks 销售模型。</span><span class="sxs-lookup"><span data-stu-id="43a75-115">The query is based on the AdventureWorks Sales Model.</span></span> <span data-ttu-id="43a75-116">若要编译并运行此查询，请执行下列步骤：</span><span class="sxs-lookup"><span data-stu-id="43a75-116">To compile and run this query, follow these steps:</span></span>  
   
-1. <span data-ttu-id="c5c8c-117">[按照如何：执行返回 PrimitiveType 结果](../how-to-execute-a-query-that-returns-primitivetype-results.md)的查询。</span><span class="sxs-lookup"><span data-stu-id="c5c8c-117">Follow the procedure in [How to: Execute a Query that Returns PrimitiveType Results](../how-to-execute-a-query-that-returns-primitivetype-results.md).</span></span>  
+1. <span data-ttu-id="43a75-117">按照 [How 中的过程执行以下操作：执行返回 PrimitiveType Results @ no__t-0 的查询。</span><span class="sxs-lookup"><span data-stu-id="43a75-117">Follow the procedure in [How to: Execute a Query that Returns PrimitiveType Results](../how-to-execute-a-query-that-returns-primitivetype-results.md).</span></span>  
   
-2. <span data-ttu-id="c5c8c-118">将以下查询作为参数传递给 ExecutePrimitiveTypeQuery 方法：</span><span class="sxs-lookup"><span data-stu-id="c5c8c-118">Pass the following query as an argument to the ExecutePrimitiveTypeQuery method:</span></span>  
+2. <span data-ttu-id="43a75-118">将以下查询作为参数传递给 ExecutePrimitiveTypeQuery 方法：</span><span class="sxs-lookup"><span data-stu-id="43a75-118">Pass the following query as an argument to the ExecutePrimitiveTypeQuery method:</span></span>  
   
- [!code-csharp[DP EntityServices Concepts 2#DEREF](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#deref)]  
+ [!code-sql[DP EntityServices Concepts#DEREF](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#deref)]  
   
-## <a name="see-also"></a><span data-ttu-id="c5c8c-119">请参阅</span><span class="sxs-lookup"><span data-stu-id="c5c8c-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="43a75-119">请参阅</span><span class="sxs-lookup"><span data-stu-id="43a75-119">See also</span></span>
 
-- [<span data-ttu-id="c5c8c-120">实体 SQL 引用</span><span class="sxs-lookup"><span data-stu-id="c5c8c-120">Entity SQL Reference</span></span>](entity-sql-reference.md)
-- [<span data-ttu-id="c5c8c-121">REF</span><span class="sxs-lookup"><span data-stu-id="c5c8c-121">REF</span></span>](ref-entity-sql.md)
-- [<span data-ttu-id="c5c8c-122">CREATEREF</span><span class="sxs-lookup"><span data-stu-id="c5c8c-122">CREATEREF</span></span>](createref-entity-sql.md)
-- [<span data-ttu-id="c5c8c-123">KEY</span><span class="sxs-lookup"><span data-stu-id="c5c8c-123">KEY</span></span>](key-entity-sql.md)
-- [<span data-ttu-id="c5c8c-124">可以为 NULL 的结构化类型</span><span class="sxs-lookup"><span data-stu-id="c5c8c-124">Nullable Structured Types</span></span>](nullable-structured-types-entity-sql.md)
+- [<span data-ttu-id="43a75-120">实体 SQL 引用</span><span class="sxs-lookup"><span data-stu-id="43a75-120">Entity SQL Reference</span></span>](entity-sql-reference.md)
+- [<span data-ttu-id="43a75-121">REF</span><span class="sxs-lookup"><span data-stu-id="43a75-121">REF</span></span>](ref-entity-sql.md)
+- [<span data-ttu-id="43a75-122">CREATEREF</span><span class="sxs-lookup"><span data-stu-id="43a75-122">CREATEREF</span></span>](createref-entity-sql.md)
+- [<span data-ttu-id="43a75-123">KEY</span><span class="sxs-lookup"><span data-stu-id="43a75-123">KEY</span></span>](key-entity-sql.md)
+- [<span data-ttu-id="43a75-124">可以为 NULL 的结构化类型</span><span class="sxs-lookup"><span data-stu-id="43a75-124">Nullable Structured Types</span></span>](nullable-structured-types-entity-sql.md)

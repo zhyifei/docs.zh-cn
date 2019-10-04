@@ -1,21 +1,21 @@
 ---
-title: 如何：编写基于上下文查找元素的查询 (Visual Basic)
+title: 如何：编写基于上下文查找元素的查询（Visual Basic）
 ms.date: 07/20/2015
 ms.assetid: 0b085290-ddc1-4126-aaa0-e4c95a3d9a09
-ms.openlocfilehash: 1743a0793a8b572cb212d45a31924fe8eb93bf45
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: a7661ea35ff829875ee4c625c45da533865fea9f
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710407"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835031"
 ---
-# <a name="how-to-write-a-query-that-finds-elements-based-on-context-visual-basic"></a><span data-ttu-id="bd588-102">如何：编写基于上下文查找元素的查询 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bd588-102">How to: Write a Query that Finds Elements Based on Context (Visual Basic)</span></span>
-<span data-ttu-id="bd588-103">有时，您可能必须编写基于元素上下文选择元素的查询。</span><span class="sxs-lookup"><span data-stu-id="bd588-103">Sometimes you might have to write a query that selects elements based on their context.</span></span> <span data-ttu-id="bd588-104">您可能需要基于前面或后面的同级元素进行筛选。</span><span class="sxs-lookup"><span data-stu-id="bd588-104">You might want to filter based on preceding or following sibling elements.</span></span> <span data-ttu-id="bd588-105">您可能需要基于子元素或上级元素进行筛选。</span><span class="sxs-lookup"><span data-stu-id="bd588-105">You might want to filter based on child or ancestor elements.</span></span>  
+# <a name="how-to-write-a-query-that-finds-elements-based-on-context-visual-basic"></a><span data-ttu-id="c39ad-102">如何：编写基于上下文查找元素的查询（Visual Basic）</span><span class="sxs-lookup"><span data-stu-id="c39ad-102">How to: Write a Query that Finds Elements Based on Context (Visual Basic)</span></span>
+<span data-ttu-id="c39ad-103">有时，您可能必须编写基于元素上下文选择元素的查询。</span><span class="sxs-lookup"><span data-stu-id="c39ad-103">Sometimes you might have to write a query that selects elements based on their context.</span></span> <span data-ttu-id="c39ad-104">您可能需要基于前面或后面的同级元素进行筛选。</span><span class="sxs-lookup"><span data-stu-id="c39ad-104">You might want to filter based on preceding or following sibling elements.</span></span> <span data-ttu-id="c39ad-105">您可能需要基于子元素或上级元素进行筛选。</span><span class="sxs-lookup"><span data-stu-id="c39ad-105">You might want to filter based on child or ancestor elements.</span></span>  
   
- <span data-ttu-id="bd588-106">通过编写查询并在 `where` 子句中使用查询的结果可以实现此目的。</span><span class="sxs-lookup"><span data-stu-id="bd588-106">You can do this by writing a query and using the results of the query in the `where` clause.</span></span> <span data-ttu-id="bd588-107">如果在测试值之前必须先测试空值，则更适合在 `let` 子句中执行查询，然后在 `where` 子句中使用查询结果。</span><span class="sxs-lookup"><span data-stu-id="bd588-107">If you have to first test against null, and then test the value, it is more convenient to do the query in a `let` clause, and then use the results in the `where` clause.</span></span>  
+ <span data-ttu-id="c39ad-106">通过编写查询并在 `where` 子句中使用查询的结果可以实现此目的。</span><span class="sxs-lookup"><span data-stu-id="c39ad-106">You can do this by writing a query and using the results of the query in the `where` clause.</span></span> <span data-ttu-id="c39ad-107">如果在测试值之前必须先测试空值，则更适合在 `let` 子句中执行查询，然后在 `where` 子句中使用查询结果。</span><span class="sxs-lookup"><span data-stu-id="c39ad-107">If you have to first test against null, and then test the value, it is more convenient to do the query in a `let` clause, and then use the results in the `where` clause.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="bd588-108">示例</span><span class="sxs-lookup"><span data-stu-id="bd588-108">Example</span></span>  
- <span data-ttu-id="bd588-109">下面的示例选择后面紧接 `p` 元素的所有 `ul` 元素。</span><span class="sxs-lookup"><span data-stu-id="bd588-109">The following example selects all `p` elements that are immediately followed by a `ul` element.</span></span>  
+## <a name="example"></a><span data-ttu-id="c39ad-108">示例</span><span class="sxs-lookup"><span data-stu-id="c39ad-108">Example</span></span>  
+ <span data-ttu-id="c39ad-109">下面的示例选择后面紧接 `p` 元素的所有 `ul` 元素。</span><span class="sxs-lookup"><span data-stu-id="c39ad-109">The following example selects all `p` elements that are immediately followed by a `ul` element.</span></span>  
   
 ```vb  
 Dim doc As XElement = _  
@@ -49,16 +49,16 @@ For Each e As XElement In items
 Next  
 ```  
   
- <span data-ttu-id="bd588-110">此代码生成以下输出：</span><span class="sxs-lookup"><span data-stu-id="bd588-110">This code produces the following output:</span></span>  
+ <span data-ttu-id="c39ad-110">此代码生成以下输出：</span><span class="sxs-lookup"><span data-stu-id="c39ad-110">This code produces the following output:</span></span>  
   
-```  
+```console  
 id = 1  
 id = 3  
 id = 6  
 ```  
   
-## <a name="example"></a><span data-ttu-id="bd588-111">示例</span><span class="sxs-lookup"><span data-stu-id="bd588-111">Example</span></span>  
- <span data-ttu-id="bd588-112">下面的示例演示如何对命名空间中的 XML 进行同样的查询。</span><span class="sxs-lookup"><span data-stu-id="bd588-112">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="bd588-113">有关详细信息, 请参阅[命名空间概述 (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="bd588-113">For more information, see [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).</span></span>  
+## <a name="example"></a><span data-ttu-id="c39ad-111">示例</span><span class="sxs-lookup"><span data-stu-id="c39ad-111">Example</span></span>  
+ <span data-ttu-id="c39ad-112">下面的示例演示如何对命名空间中的 XML 进行同样的查询。</span><span class="sxs-lookup"><span data-stu-id="c39ad-112">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="c39ad-113">有关详细信息，请参阅[命名空间概述（LINQ to XML）（Visual Basic）](namespaces-overview-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="c39ad-113">For more information, see [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).</span></span>  
   
 ```vb  
 Imports <xmlns='http://www.adatum.com'>  
@@ -98,18 +98,18 @@ Module Module1
 End Module  
 ```  
   
- <span data-ttu-id="bd588-114">此代码生成以下输出：</span><span class="sxs-lookup"><span data-stu-id="bd588-114">This code produces the following output:</span></span>  
+ <span data-ttu-id="c39ad-114">此代码生成以下输出：</span><span class="sxs-lookup"><span data-stu-id="c39ad-114">This code produces the following output:</span></span>  
   
-```  
+```console  
 id = 1  
 id = 3  
 id = 6  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="bd588-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="bd588-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c39ad-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="c39ad-115">See also</span></span>
 
 - <xref:System.Xml.Linq.XElement.Parse%2A>
 - <xref:System.Xml.Linq.XContainer.Descendants%2A>
 - <xref:System.Xml.Linq.XNode.ElementsAfterSelf%2A>
 - <xref:System.Linq.Enumerable.FirstOrDefault%2A>
-- [<span data-ttu-id="bd588-116">基本查询 (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bd588-116">Basic Queries (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [<span data-ttu-id="c39ad-116">基本查询（LINQ to XML）（Visual Basic）</span><span class="sxs-lookup"><span data-stu-id="c39ad-116">Basic Queries (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

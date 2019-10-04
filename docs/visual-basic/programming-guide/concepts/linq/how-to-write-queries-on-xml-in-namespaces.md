@@ -1,23 +1,23 @@
 ---
-title: 如何：针对命名空间中的 XML 编写查询 (Visual Basic)
+title: 如何：针对命名空间中的 XML 编写查询（Visual Basic）
 ms.date: 07/20/2015
 ms.assetid: 7d4131b5-3288-414f-b77c-b2edc2a1f465
-ms.openlocfilehash: 3b910e8b46632fbff2228baef44a45e8c22d731e
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 71e66791b41e26ea13f828ef6239a8db9a9365b0
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68709879"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835011"
 ---
-# <a name="how-to-write-queries-on-xml-in-namespaces-visual-basic"></a><span data-ttu-id="d293f-102">如何：针对命名空间中的 XML 编写查询 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d293f-102">How to: Write Queries on XML in Namespaces (Visual Basic)</span></span>
-<span data-ttu-id="d293f-103">若要针对命名空间中的 XML 编写查询，必须使用具有正确命名空间的 <xref:System.Xml.Linq.XName> 对象。</span><span class="sxs-lookup"><span data-stu-id="d293f-103">To write a query on XML that is in a namespace, you must use <xref:System.Xml.Linq.XName> objects that have the correct namespace.</span></span>  
+# <a name="how-to-write-queries-on-xml-in-namespaces-visual-basic"></a><span data-ttu-id="585b7-102">如何：针对命名空间中的 XML 编写查询（Visual Basic）</span><span class="sxs-lookup"><span data-stu-id="585b7-102">How to: Write Queries on XML in Namespaces (Visual Basic)</span></span>
+<span data-ttu-id="585b7-103">若要针对命名空间中的 XML 编写查询，必须使用具有正确命名空间的 <xref:System.Xml.Linq.XName> 对象。</span><span class="sxs-lookup"><span data-stu-id="585b7-103">To write a query on XML that is in a namespace, you must use <xref:System.Xml.Linq.XName> objects that have the correct namespace.</span></span>  
   
- <span data-ttu-id="d293f-104">在 Visual Basic 中，最常用的方法是定义一个全局命名空间，然后使用那些使用该全局命名空间的 XML 文本和 XML 属性。</span><span class="sxs-lookup"><span data-stu-id="d293f-104">In Visual Basic, the most common approach is to define a global namespace, and then use XML literals and XML properties that use the global namespace.</span></span> <span data-ttu-id="d293f-105">您可以定义一个全局默认命名空间，在这种情况中，XML 文本中的元素将默认位于该命名空间中。</span><span class="sxs-lookup"><span data-stu-id="d293f-105">You can define a global default namespace, in which case elements in the XML literals will be in the namespace by default.</span></span> <span data-ttu-id="d293f-106">或者，您可以定义一个具有前缀的全局命名空间，然后根据需要在 XML 文本和 XML 属性中使用该前缀。</span><span class="sxs-lookup"><span data-stu-id="d293f-106">Alternatively, you can define a global namespace with a prefix, and then use the prefix as required in the XML literals, and in XML properties.</span></span> <span data-ttu-id="d293f-107">与其他形式的 XML 一样，默认情况下，属性始终不在任何命名空间中。</span><span class="sxs-lookup"><span data-stu-id="d293f-107">As with other forms of XML, attributes are always in no namespace by default.</span></span>  
+ <span data-ttu-id="585b7-104">在 Visual Basic 中，最常用的方法是定义一个全局命名空间，然后使用那些使用该全局命名空间的 XML 文本和 XML 属性。</span><span class="sxs-lookup"><span data-stu-id="585b7-104">In Visual Basic, the most common approach is to define a global namespace, and then use XML literals and XML properties that use the global namespace.</span></span> <span data-ttu-id="585b7-105">您可以定义一个全局默认命名空间，在这种情况中，XML 文本中的元素将默认位于该命名空间中。</span><span class="sxs-lookup"><span data-stu-id="585b7-105">You can define a global default namespace, in which case elements in the XML literals will be in the namespace by default.</span></span> <span data-ttu-id="585b7-106">或者，您可以定义一个具有前缀的全局命名空间，然后根据需要在 XML 文本和 XML 属性中使用该前缀。</span><span class="sxs-lookup"><span data-stu-id="585b7-106">Alternatively, you can define a global namespace with a prefix, and then use the prefix as required in the XML literals, and in XML properties.</span></span> <span data-ttu-id="585b7-107">与其他形式的 XML 一样，默认情况下，属性始终不在任何命名空间中。</span><span class="sxs-lookup"><span data-stu-id="585b7-107">As with other forms of XML, attributes are always in no namespace by default.</span></span>  
   
- <span data-ttu-id="d293f-108">本主题的第一个示例集演示如何在默认命名空间中创建一个 XML 树。</span><span class="sxs-lookup"><span data-stu-id="d293f-108">The first set of examples in this topic shows how to create an XML tree in a default namespace.</span></span> <span data-ttu-id="d293f-109">第二个示例集演示如何在带有前缀的命名空间中创建一个 XML 树。</span><span class="sxs-lookup"><span data-stu-id="d293f-109">The second set shows how to create an XML tree in a namespace with a prefix.</span></span>  
+ <span data-ttu-id="585b7-108">本主题的第一个示例集演示如何在默认命名空间中创建一个 XML 树。</span><span class="sxs-lookup"><span data-stu-id="585b7-108">The first set of examples in this topic shows how to create an XML tree in a default namespace.</span></span> <span data-ttu-id="585b7-109">第二个示例集演示如何在带有前缀的命名空间中创建一个 XML 树。</span><span class="sxs-lookup"><span data-stu-id="585b7-109">The second set shows how to create an XML tree in a namespace with a prefix.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="d293f-110">示例</span><span class="sxs-lookup"><span data-stu-id="d293f-110">Example</span></span>  
- <span data-ttu-id="d293f-111">下面的示例创建一个位于默认命名空间中的 XML 树。</span><span class="sxs-lookup"><span data-stu-id="d293f-111">The following example creates an XML tree that is in a default namespace.</span></span> <span data-ttu-id="d293f-112">然后检索元素的集合。</span><span class="sxs-lookup"><span data-stu-id="d293f-112">It then retrieves a collection of elements.</span></span>  
+## <a name="example"></a><span data-ttu-id="585b7-110">示例</span><span class="sxs-lookup"><span data-stu-id="585b7-110">Example</span></span>  
+ <span data-ttu-id="585b7-111">下面的示例创建一个位于默认命名空间中的 XML 树。</span><span class="sxs-lookup"><span data-stu-id="585b7-111">The following example creates an XML tree that is in a default namespace.</span></span> <span data-ttu-id="585b7-112">然后检索元素的集合。</span><span class="sxs-lookup"><span data-stu-id="585b7-112">It then retrieves a collection of elements.</span></span>  
   
 ```vb  
 Imports <xmlns="http://www.adventure-works.com">  
@@ -43,18 +43,18 @@ Module Module1
 End Module  
 ```  
   
- <span data-ttu-id="d293f-113">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="d293f-113">This example produces the following output:</span></span>  
+ <span data-ttu-id="585b7-113">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="585b7-113">This example produces the following output:</span></span>  
   
-```  
+```console  
 1  
 2  
 3  
 ```  
   
-## <a name="example"></a><span data-ttu-id="d293f-114">示例</span><span class="sxs-lookup"><span data-stu-id="d293f-114">Example</span></span>  
- <span data-ttu-id="d293f-115">但是，在 Visual Basic 中，在使用带前缀的命名空间的 XML 树上编写查询与在默认命名空间中查询 XML 树却大不相同。</span><span class="sxs-lookup"><span data-stu-id="d293f-115">In Visual Basic, however, writing queries on an XML tree that uses a namespace with a prefix is quite different from querying an XML tree in a default namespace.</span></span> <span data-ttu-id="d293f-116">您通常使用 `Imports` 语句导入带前缀的命名空间。</span><span class="sxs-lookup"><span data-stu-id="d293f-116">Typically you use the `Imports` statement to import the namespace with a prefix.</span></span> <span data-ttu-id="d293f-117">然后在构造 XML 树时，在元素和属性名称中使用该前缀。</span><span class="sxs-lookup"><span data-stu-id="d293f-117">You then use the prefix in the element and attribute names when you construct the XML tree.</span></span> <span data-ttu-id="d293f-118">使用 XML 属性查询 XML 树时，还要使用前缀。</span><span class="sxs-lookup"><span data-stu-id="d293f-118">You also use the prefix when querying an XML tree using XML properties.</span></span>  
+## <a name="example"></a><span data-ttu-id="585b7-114">示例</span><span class="sxs-lookup"><span data-stu-id="585b7-114">Example</span></span>  
+ <span data-ttu-id="585b7-115">但是，在 Visual Basic 中，在使用带前缀的命名空间的 XML 树上编写查询与在默认命名空间中查询 XML 树却大不相同。</span><span class="sxs-lookup"><span data-stu-id="585b7-115">In Visual Basic, however, writing queries on an XML tree that uses a namespace with a prefix is quite different from querying an XML tree in a default namespace.</span></span> <span data-ttu-id="585b7-116">您通常使用 `Imports` 语句导入带前缀的命名空间。</span><span class="sxs-lookup"><span data-stu-id="585b7-116">Typically you use the `Imports` statement to import the namespace with a prefix.</span></span> <span data-ttu-id="585b7-117">然后在构造 XML 树时，在元素和属性名称中使用该前缀。</span><span class="sxs-lookup"><span data-stu-id="585b7-117">You then use the prefix in the element and attribute names when you construct the XML tree.</span></span> <span data-ttu-id="585b7-118">使用 XML 属性查询 XML 树时，还要使用前缀。</span><span class="sxs-lookup"><span data-stu-id="585b7-118">You also use the prefix when querying an XML tree using XML properties.</span></span>  
   
- <span data-ttu-id="d293f-119">下面的示例创建一个位于具有前缀的默认命名空间中的 XML 树。</span><span class="sxs-lookup"><span data-stu-id="d293f-119">The following example creates an XML tree that is in a namespace with a prefix.</span></span> <span data-ttu-id="d293f-120">然后检索元素的集合。</span><span class="sxs-lookup"><span data-stu-id="d293f-120">It then retrieves a collection of elements.</span></span>  
+ <span data-ttu-id="585b7-119">下面的示例创建一个位于具有前缀的默认命名空间中的 XML 树。</span><span class="sxs-lookup"><span data-stu-id="585b7-119">The following example creates an XML tree that is in a namespace with a prefix.</span></span> <span data-ttu-id="585b7-120">然后检索元素的集合。</span><span class="sxs-lookup"><span data-stu-id="585b7-120">It then retrieves a collection of elements.</span></span>  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  
@@ -80,14 +80,14 @@ Module Module1
 End Module  
 ```  
   
- <span data-ttu-id="d293f-121">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="d293f-121">This example produces the following output:</span></span>  
+ <span data-ttu-id="585b7-121">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="585b7-121">This example produces the following output:</span></span>  
   
-```  
+```console  
 1  
 2  
 3  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="d293f-122">请参阅</span><span class="sxs-lookup"><span data-stu-id="d293f-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="585b7-122">请参阅</span><span class="sxs-lookup"><span data-stu-id="585b7-122">See also</span></span>
 
-- [<span data-ttu-id="d293f-123">命名空间概述 (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d293f-123">Namespaces Overview (LINQ to XML) (Visual Basic)</span></span>](namespaces-overview-linq-to-xml.md)
+- [<span data-ttu-id="585b7-123">命名空间概述（LINQ to XML）（Visual Basic）</span><span class="sxs-lookup"><span data-stu-id="585b7-123">Namespaces Overview (LINQ to XML) (Visual Basic)</span></span>](namespaces-overview-linq-to-xml.md)
