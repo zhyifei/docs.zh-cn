@@ -334,8 +334,6 @@
     - name: 全球化 Windows 窗体
       href: globalizing-windows-forms.md
       items:
-        - name: 编码和 Windows 窗体全球化
-          href: encoding-and-windows-forms-globalization.md
         - name: Windows 窗体和控件中的国际字体
           href: international-fonts-in-windows-forms-and-controls.md
         - name: Windows 窗体应用程序的双向支持
