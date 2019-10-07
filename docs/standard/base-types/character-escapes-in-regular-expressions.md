@@ -19,10 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
 ms.openlocfilehash: 248d434f7aad56d84d952fa27cf49f3d370f4a1c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
+ms.lasthandoff: 10/04/2019
 ms.locfileid: "69934835"
 ---
 # <a name="character-escapes-in-regular-expressions"></a>正则表达式中的字符转义
@@ -49,7 +49,7 @@ ms.locfileid: "69934835"
 |`\f`|匹配换页，`\u000C`。|  
 |`\n`|匹配换行，`\u000A`。|  
 |`\e`|匹配转义，`\u001B`。|  
-|`\` nnn|匹配 ASCII 字符，其中 nnn 包含表示八进制字符代码的两位数或三位数   。 例如，`\040` 表示空格字符。 如果此构造仅包含一个数字（如 `\2`）或者它对应捕获组的编号，则将它解释为向后引用。 （请参阅[向后引用构造](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md)。）|  
+|`\` *nnn*|匹配 ASCII 字符，其中 nnn  包含表示八进制字符代码的两位数或三位数。 例如，`\040` 表示空格字符。 如果此构造仅包含一个数字（如 `\2`）或者它对应捕获组的编号，则将它解释为向后引用。 （请参阅[向后引用构造](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md)。）|  
 |`\x` nn |匹配 ASCII 字符，其中 nn  是两位数的十六进制字符代码。|  
 |`\c` X |匹配 ASCII 控制字符，其中 X 是控制字符的字母。 例如，`\cC` 为 CTRL-C。|  
 |`\u` nnnn |匹配的 UTF-16 代码单元，单元值是 nnnn  十六进制。 **注意：** .NET 不支持用于指定 Unicode 的 Perl 5 字符转义。 Perl 5 字符转义采用以下格式 `\x{`####  `…}`，其中 ####  `…` 是一系列十六进制数字。 改用 `\u`nnnn  。|  
