@@ -3,12 +3,12 @@ title: 使用索引和范围探索数据范围
 description: 本高级教程教你使用索引和范围来探索数据，以检查顺序数据集的切片。
 ms.date: 09/20/2019
 ms.custom: mvc
-ms.openlocfilehash: a879601e1358f72e80983992a3cd96ba1fb06a38
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 1be144560d2b20bafc66cd68de0735e6dc7f0124
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71391966"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699941"
 ---
 # <a name="indices-and-ranges"></a>索引和范围
 
@@ -33,7 +33,7 @@ ms.locfileid: "71391966"
 
 让我们从索引规则开始。 请考虑数组 `sequence`。 `0` 索引与 `sequence[0]` 相同。 `^0` 索引与 `sequence[sequence.Length]` 相同。 请注意，`sequence[^0]` 不会引发异常，就像 `sequence[sequence.Length]` 一样。 对于任何数字 `n`，索引 `^n` 与 `sequence[sequence.Length - n]` 相同。
 
-```csharp-interactive
+```csharp
 string[] words = new string[]
 {
                 // index from start    index from end

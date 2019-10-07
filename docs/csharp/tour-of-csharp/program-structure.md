@@ -3,12 +3,12 @@ title: C# 程序结构 - C# 语言介绍
 description: 了解 C# 程序的基本构建基块
 ms.date: 08/10/2016
 ms.assetid: 984f0314-507f-47a0-af56-9011243f5e65
-ms.openlocfilehash: e6b3e0d3b91d3dee8cbc8ac530323e23e0ce8b2a
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 5102c72d68108f698a0456b9c14e6713778f4325
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634560"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834157"
 ---
 # <a name="program-structure"></a>程序结构
 
@@ -20,7 +20,7 @@ C# 中的关键组织结构概念包括***程序***、***命名空间***、***�
 
 此类的完全限定的名称为 `Acme.Collections.Stack`。 此类包含多个成员：一个 `top` 字段、两个方法（`Push` 和 `Pop`）和一个 `Entry` 嵌套类。 `Entry` 类还包含三个成员：一个 `next` 字段、一个 `data` 字段和一个构造函数。 假定示例的源代码存储在 `acme.cs` 文件中，以下命令行
 
-```
+```console
 csc /t:library acme.cs
 ```
 
@@ -37,13 +37,13 @@ csc /t:library acme.cs
 
 如果程序存储在文件 `example.cs` 中，编译 `example.cs` 时，可以使用编译器的 /r 选项引用 acme.dll 程序集：
 
-```
+```console
 csc /r:acme.dll example.cs
 ```
 
 这会创建 `example.exe` 可执行程序集，它将在运行时输出以下内容：
 
-```
+```console
 100
 10
 1

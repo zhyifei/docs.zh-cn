@@ -3,12 +3,12 @@ title: 使用 Infer.NET 和概率性编程创建游戏匹配列表
 description: 了解如何使用概率性编程和 Infer.NET 创建基于简化版 TrueSkill 的游戏匹配列表应用。
 ms.date: 05/06/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: edb747355f2d41d0400c6a989eea37423bbda2b4
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: f6f91aecfe7fdeffb7e8913309046c7942ecbab7
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117985"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71957217"
 ---
 # <a name="create-a-game-match-up-list-app-with-infernet-and-probabilistic-programming"></a>使用 Infer.NET 和概率性编程创建游戏匹配列表
 
@@ -138,7 +138,7 @@ dotnet run
 
 结果应如下所示：
 
-```
+```console
 Compiling model...done.
 Iterating:
 .........|.........|.........|.........|.........| 50
