@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7d10d11f-680f-4721-b047-fb136316b4cd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7b7783d3360bfb042880f5d1e74bfac77e729299
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6b4e9072100a25c297dbf3bfb70a928e16b06da4
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69959485"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71956890"
 ---
 # <a name="miscellaneous-constructs-in-regular-expressions"></a>正则表达式中的其他构造
 .NET 中的正则表达式包括三个其他语言构造。 其中一个使你可以在正则表达式模式中间启用或禁用特定匹配选项。 其余两个使你可以在正则表达式中包含注释。  
@@ -25,9 +25,7 @@ ms.locfileid: "69959485"
 ## <a name="inline-options"></a>内联选项  
  可以使用语法为正则表达式的一部分设置或禁用特定模式匹配选项  
   
-```  
-(?imnsx-imnsx)  
-```  
+`(?imnsx-imnsx)`  
   
  在问号后列出要启用的选项，在负号后列出要禁用的选项。 下表对每个选项进行了描述。 有关每个选项的更多信息，请参见[正则表达式选项](../../../docs/standard/base-types/regular-expression-options.md)。  
   

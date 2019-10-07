@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 37dfe4e3-7da0-48b6-a3d9-398981524e1c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 298ac8eae0a8b125ddf5f1ff35658f426f6b10aa
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8873b4938f654213bd659631175ba4526a35dcc3
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968587"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71957345"
 ---
 # <a name="retrieving-information-stored-in-attributes"></a>检索存储在特性中的信息
 检索自定义属性的过程非常简单。 首先，声明要检索的属性实例。 然后，使用 <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType> 方法，用要检索的属性的值初始化新属性。 在初始化新属性后，只需使用它的属性即可获取值。  
@@ -44,7 +44,7 @@ ms.locfileid: "69968587"
   
  此程序在执行时显示以下文本。  
   
-```  
+```console  
 The Name Attribute is: Joan Smith.  
 The Level Attribute is: 42.  
 The Reviewed Attribute is: True.  
@@ -52,7 +52,7 @@ The Reviewed Attribute is: True.
   
  如果找不到属性，GetCustomAttribute  方法会将 `MyAttribute` 初始化为 NULL 值。 此示例在 `MyAttribute` 中查找此类实例，并在找不到属性时通知用户。 如果在类范围中找不到 `DeveloperAttribute`，控制台中显示以下消息。  
   
-```  
+```console  
 The attribute was not found.   
 ```  
   

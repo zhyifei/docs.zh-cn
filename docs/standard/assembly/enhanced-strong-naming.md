@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 6cf17a82-62a1-4f6d-8d5a-d7d06dec2bb5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 88f9a5c848a8a46b72fb39865ffa861424107438
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 1ab1087a840fe41b9fac7779c73797c470899408
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972713"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834883"
 ---
 # <a name="enhanced-strong-naming"></a>改进的强命名
 强名称签名是 .NET Framework 中用于识别程序集的识别机制。 它是一个公钥数字签名，通常用于验证发信方（签名方）发送给收信方（验证方）的数据的完整性。 此签名是程序集的唯一标识，可确保对程序集的引用清楚明确。 在生成过程中对程序集进行签名，然后在加载程序集时对其进行验证。  
@@ -43,25 +43,25 @@ ms.locfileid: "70972713"
   
 1. 生成新的标识密钥（如有必要）。  
   
-    ```  
+    ```console  
     sn -k IdentityKey.snk  
     ```  
   
 2. 提取标识公钥，并指定使用此密钥进行签名时，须使用 SHA-2 算法。  
   
-    ```  
+    ```console  
     sn -p IdentityKey.snk IdentityPubKey.snk sha256  
     ```  
   
 3. 使用标识公钥文件对程序集进行延迟签名。  
   
-    ```  
+    ```console  
     csc MyAssembly.cs /keyfile:IdentityPubKey.snk /delaySign+  
     ```  
   
 4. 使用完整标识密钥对对程序集进行重新签名。  
   
-    ```  
+    ```console  
     sn -Ra MyAssembly.exe IdentityKey.snk  
     ```  
   
@@ -70,32 +70,32 @@ ms.locfileid: "70972713"
   
 1. 生成标识密钥和签名密钥对（如有必要）。  
   
-    ```  
+    ```console  
     sn -k IdentityKey.snk  
     sn -k SignatureKey.snk  
     ```  
   
 2. 提取签名公钥，并指定使用此密钥进行签名时，必须使用 SHA-2 算法。  
   
-    ```  
+    ```console  
     sn -p SignatureKey.snk SignaturePubKey.snk sha256  
     ```  
   
 3. 提取标识公钥，该公钥确定用于生成副署的哈希算法。  
   
-    ```  
+    ```console  
     sn -p IdentityKey.snk IdentityPubKey.snk  
     ```  
   
 4. 生成 <xref:System.Reflection.AssemblySignatureKeyAttribute> 属性的参数，并将该参数附加到程序集。  
   
-    ```  
+    ```console  
     sn -a IdentityPubKey.snk IdentityKey.snk SignaturePubKey.snk  
     ```  
 
     这将生成类似下面的输出。
 
-    ```
+    ```output
     Information for key migration attribute.
     (System.Reflection.AssemblySignatureKeyAttribute):
     publicKey=
@@ -123,13 +123,13 @@ ms.locfileid: "70972713"
   
 5. 使用标识公钥延迟对程序集签名。  
   
-    ```  
+    ```console  
     csc MyAssembly.cs /keyfile:IdentityPubKey.snk /delaySign+  
     ```  
   
 6. 使用签名密钥对对程序集进行完整签名。  
   
-    ```  
+    ```console  
     sn -Ra MyAssembly.exe SignatureKey.snk  
     ```  
   

@@ -18,12 +18,12 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 61f676b5-936f-40f6-83ce-f22805ec9c2f
-ms.openlocfilehash: 2652c080951823e5289785b5906d2b0f48f5d658
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 44a1019ac8169138aa95b03e2027d9539cbf8391
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69950780"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71957373"
 ---
 # <a name="how-to-implement-a-component-that-supports-the-event-based-asynchronous-pattern"></a>如何：实现支持基于事件的异步模式的组件
 若要编写的类有一些可能会带来明显延迟的操作，请考虑按照[基于事件的异步模式概述](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)中的步骤操作，为它实现异步功能。  
@@ -91,7 +91,7 @@ ms.locfileid: "69950780"
   
      将看到下面两个编译器警告：  
   
-    ```  
+    ```console  
     warning CS0067: The event 'AsynchronousPatternExample.PrimeNumberCalculator.ProgressChanged' is never used  
     warning CS0067: The event 'AsynchronousPatternExample.PrimeNumberCalculator.CalculatePrimeCompleted' is never used  
     ```  
@@ -162,7 +162,7 @@ ms.locfileid: "69950780"
   
      将看到下面的一个编译器警告：  
   
-    ```  
+    ```console  
     warning CS0169: The private field 'AsynchronousPatternExample.PrimeNumberCalculator.workerDelegate' is never used  
     ```  
   

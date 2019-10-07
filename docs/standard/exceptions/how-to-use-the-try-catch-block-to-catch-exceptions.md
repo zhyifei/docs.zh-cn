@@ -13,25 +13,25 @@ helpviewer_keywords:
 ms.assetid: a3ce6dfd-1f64-471b-8ad8-8cfaf406275d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5183a854ee2b7462ecc27786a5fc0697565194c0
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: eaa389f461e70aae41f2e09437fd725a3bcefa5e
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092743"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71696719"
 ---
 # <a name="how-to-use-the-trycatch-block-to-catch-exceptions"></a>如何使用 try/catch 块捕获异常
 
 将可能引发异常的任何代码语句放置在 `try` 块中，将用于处理异常的语句放置在 `try` 块下的一个或多个 `catch` 块中。 每个 `catch` 块包括异常类型，并且可以包含处理该异常类型所需的其他语句。
 
-在以下示例中，<xref:System.IO.StreamReader> 将打开一个名为 data.txt 的文件，并从文件中检索行。 因为代码可能会引发任何三个异常，因此将其放置于 `try` 块中。 三个 `catch` 块捕获异常并通过将结果向控制台显示来处理它们。
+在以下示例中，<xref:System.IO.StreamReader> 将打开一个名为 data.txt 的文件  ，并从文件中检索行。 因为代码可能会引发任何三个异常，因此将其放置于 `try` 块中。 三个 `catch` 块捕获异常并通过将结果向控制台显示来处理它们。
 
 [!code-csharp[CatchException#3](~/samples/snippets/csharp/VS_Snippets_CLR/CatchException/CS/catchexception2.cs#3)]
-[!code-vb[CatchException#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/CatchException/VB/catchexception2.vb#3)]  
+[!code-vb[CatchException#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/CatchException/VB/catchexception2.vb#3)]
 
 公共语言运行时 (CLR) 会捕获未由 `catch` 块处理的异常。 如果异常由 CLR 捕获，则可能出现以下结果之一，具体取决于 CLR 配置：
 
-- 出现“调试”对话框。
+- 出现“调试”对话框  。
 - 该程序停止执行，出现含有异常信息的对话框。
 - 错误输出到[标准错误输出流](xref:System.Console.Error)。
 
@@ -40,5 +40,5 @@ ms.locfileid: "56092743"
 
 ## <a name="see-also"></a>请参阅
 
-[异常](index.md)  
-[处理 .NET 中的 I/O 错误](../io/handling-io-errors.md)
+- [异常](index.md)
+- [处理 .NET 中的 I/O 错误](../io/handling-io-errors.md)

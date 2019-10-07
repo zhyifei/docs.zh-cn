@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0fc18634-f590-4062-8d5c-f0b71abe405b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 57198cb9fb0042a3a74589e2781b3db1a2b829f1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ee06454575afc16c904b60a2301feeb05debdcdf
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963382"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71957169"
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>正则表达式中的分组构造
 分组构造描述了正则表达式的子表达式，用于捕获输入字符串的子字符串。 你可以使用分组构造来完成下列任务：  
@@ -78,9 +78,7 @@ ms.locfileid: "69963382"
   
  正则表达式模式为：  
   
-```  
-(\w+)\s(\1)\W  
-```  
+`(\w+)\s(\1)\W`  
   
  下表演示了如何解释正则表达式模式。  
   
@@ -95,15 +93,11 @@ ms.locfileid: "69963382"
 ## <a name="named-matched-subexpressions"></a>命名匹配的子表达式  
  以下分组构造捕获匹配的子表达式，并允许你按名称或编号访问它：  
   
-```  
-(?<name>subexpression)  
-```  
+`(?<name>subexpression)`  
   
  或：  
   
-```  
-(?'name'subexpression)  
-```  
+`(?'name'subexpression)`  
   
  其中 *名称* 是有效的组名称，而 *子表达式* 是任何有效的正则表达式模式。 *名称* 不得包含任何标点符号字符，并且不能以数字开头。  
   
@@ -141,9 +135,7 @@ ms.locfileid: "69963382"
   
  正则表达式模式按如下方式定义：  
   
-```  
-(?<duplicateWord>\w+)\s\k<duplicateWord>\W(?<nextWord>\w+)  
-```  
+`(?<duplicateWord>\w+)\s\k<duplicateWord>\W(?<nextWord>\w+)`  
   
  下表演示了正则表达式的含义。  
   
@@ -175,15 +167,11 @@ ms.locfileid: "69963382"
 ## <a name="balancing-group-definitions"></a>平衡组定义  
  平衡组定义将删除以前定义的组和存储的定义，并在当前组中存储以前定义的组和当前组之间的间隔。 此分组构造具有以下格式：  
   
-```  
-(?<name1-name2>subexpression)  
-```  
+`(?<name1-name2>subexpression)`  
   
  或：  
   
-```  
-(?'name1-name2' subexpression)  
-```  
+`(?'name1-name2' subexpression)`
   
  *name1* 位置是当前的组（可选）， *name2* 是一个以前定义的组，而 *子表达式* 是任何有效的正则表达式模式。 平衡组定义删除 *name2* 的定义并在 *name1* 中保存 *name2* 和 *name1*之间的间隔。 如果未定义 *name2* 组，则匹配将回溯。 由于删除 *name2* 的最后一个定义会显示 *name2*以前的定义，因此该构造允许将 *name2* 组的捕获堆栈用作计数器，用于跟踪嵌套构造（如括号或者左括号和右括号）。  
   
@@ -199,9 +187,7 @@ ms.locfileid: "69963382"
   
  正则表达式模式为：  
   
-```  
-^[^<>]*(((?'Open'<)[^<>]*)+((?'Close-Open'>)[^<>]*)+)*(?(Open)(?!))$  
-```  
+`^[^<>]*(((?'Open'<)[^<>]*)+((?'Close-Open'>)[^<>]*)+)*(?(Open)(?!))$`  
   
  正则表达式按如下方式解释：  
   
@@ -254,9 +240,7 @@ ms.locfileid: "69963382"
 ## <a name="noncapturing-groups"></a>非捕获组  
  以下分组构造不会捕获由子表达式匹配的子字符串：  
   
-```  
-(?:subexpression)  
-```  
+`(?:subexpression)`
   
  其中 *子表达式* 为任何有效正则表达式模式。 当一个限定符应用到一个组，但组捕获的子字符串并非所需时，通常会使用非捕获组构造。  
   
