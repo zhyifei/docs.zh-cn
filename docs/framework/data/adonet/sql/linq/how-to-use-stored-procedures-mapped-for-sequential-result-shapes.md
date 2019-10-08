@@ -5,20 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a73530de-5a4e-4d9c-8d66-abb19c225b11
-ms.openlocfilehash: bae10e823a274304f21292cf55947a4d4eaccc10
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 8378a175ab2479ab9769ca08579e1c89269eaba4
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70781454"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72003217"
 ---
 # <a name="how-to-use-stored-procedures-mapped-for-sequential-result-shapes"></a>如何：使用针对顺序结果形状映射的存储过程
-这种存储过程可以生成多个结果形状，但您知道结果的返回顺序。 请将此方案与您不知道返回顺序的方案作一个对比。 有关详细信息，请参阅[如何：使用为多个结果形状](how-to-use-stored-procedures-mapped-for-multiple-result-shapes.md)映射的存储过程。  
+这种存储过程可以生成多个结果形状，但您知道结果的返回顺序。 请将此方案与您不知道返回顺序的方案作一个对比。 有关详细信息，请参阅[如何：使用为多个结果形状映射的存储过程 @ no__t-0。  
   
 ## <a name="example"></a>示例  
  下面是一个按顺序返回多个结果形状的存储过程的 T-SQL。  
   
-```  
+```sql
 CREATE PROCEDURE MultipleResultTypesSequentially  
 AS  
 select * from products  
