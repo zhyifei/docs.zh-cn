@@ -5,23 +5,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 714e252f-c053-4bbb-b1f3-924111cd4d97
-ms.openlocfilehash: da4e5e8fe4682191a0c8e2b0ce6a7b945fe63deb
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: dfe82fd50eb3eedeaff9082a4288901f72197795
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70781473"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72003233"
 ---
 # <a name="how-to-use-scalar-valued-user-defined-functions"></a>如何：使用标量值用户定义的函数
 您可以通过使用 <xref:System.Data.Linq.Mapping.FunctionAttribute> 属性将类中定义的客户端方法映射到用户定义的函数。 请注意，方法体会构造一个捕获方法调用意向的表达式，并将该表达式传递给 <xref:System.Data.Linq.DataContext> 进行转换和执行。  
   
 > [!NOTE]
-> 只有在查询外部调用此函数时，才会直接执行。 有关详细信息，请参阅[如何：以内联](how-to-call-user-defined-functions-inline.md)方式调用用户定义函数。  
+> 只有在查询外部调用此函数时，才会直接执行。 有关详细信息，请参阅[如何：调用用户定义函数内联 @ no__t-0。  
   
 ## <a name="example"></a>示例  
  下面的 SQL 代码展示了一个用户定义的标量值函数 `ReverseCustName()`。  
   
-```  
+```sql  
 CREATE FUNCTION ReverseCustName(@string varchar(100))  
 RETURNS varchar(100)  
 AS  

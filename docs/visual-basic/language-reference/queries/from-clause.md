@@ -10,19 +10,19 @@ helpviewer_keywords:
 - From clause [Visual Basic]
 - From statement [Visual Basic]
 ms.assetid: 83e3665e-68a0-4540-a3a3-3d777a0f95d5
-ms.openlocfilehash: 23b277b2eb14ea6722295aab8d7190d78def6f36
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 781902f1bf28bd029c8d9825aee155a6691cbae9
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64639636"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72004778"
 ---
 # <a name="from-clause-visual-basic"></a>From 子句 (Visual Basic)
-指定一个或多个范围变量和查询的集合。  
+指定一个或多个范围变量以及要查询的集合。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```vb  
 From element [ As type ] In collection [ _ ]  
   [, element2 [ As type2 ] In collection2 [, ... ] ]  
 ```  
@@ -31,41 +31,41 @@ From element [ As type ] In collection [ _ ]
   
 |术语|定义|  
 |---|---|  
-|`element`|必需。 一个*范围变量*用于循环访问集合的元素。 范围变量用于引用的每个成员`collection`根据循环访问查询`collection`。 必须是可枚举类型。|  
-|`type`|可选。 `element` 的类型。 如果没有`type`指定的类型`element`从推断`collection`。|  
-|`collection`|必需。 表示要查询的集合。 必须是可枚举类型。|  
+|`element`|必需。 用于循环访问集合中的元素的*范围变量*。 范围变量用于引用 `collection` 的每个成员，因为查询会循环访问 @no__t。 必须为可枚举类型。|  
+|`type`|可选。 `element` 的类型。 如果未指定 `type`，则从 @no__t 中推断 @no__t 的类型。|  
+|`collection`|必需。 引用要查询的集合。 必须为可枚举类型。|  
   
 ## <a name="remarks"></a>备注  
- `From`子句用于标识源数据中的查询以及用于在源集合中引用的元素的变量。 这些变量称为*范围变量*。 `From`子句是必需的查询，除非当`Aggregate`子句用于确定某个查询仅返回聚合结果。 有关详细信息，请参阅[Aggregate 子句](../../../visual-basic/language-reference/queries/aggregate-clause.md)。  
+ @No__t-0 子句用于标识查询的源数据和用于引用源集合中的元素的变量。 这些变量称为*范围变量*。 查询需要 `From` 子句，除非使用 `Aggregate` 子句标识仅返回聚合结果的查询。 有关详细信息，请参阅[Aggregate 子句](../../../visual-basic/language-reference/queries/aggregate-clause.md)。  
   
- 可以指定多个`From`查询来标识要联接的多个集合中的子句。 如果指定多个集合，独立，循环，或如果它们彼此联接它们。 您可以通过使用隐式联接集合`Select`子句，或通过使用显式`Join`或`Group Join`子句。 作为替代方法，您可以指定多个范围变量和集合中单个`From`子句中，每个相关的范围变量和由逗号分隔开的集合。 下面的代码示例显示了有关这两个语法选项`From`子句。  
+ 您可以在查询中指定多个 `From` 子句来识别要联接的多个集合。 指定多个集合时，它们将被单独循环访问，如果相关，可以联接它们。 您可以通过使用 `Select` 子句隐式联接集合，或者使用 @no__t 或 `Group Join` 子句显式联接集合。 作为替代方法，您可以在单个 @no__t 0 子句中指定多个范围变量和集合，其中每个相关范围变量和集合用逗号分隔开。 下面的代码示例显示 `From` 子句的语法选项。  
   
  [!code-vb[VbSimpleQuerySamples#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#21)]  
   
- `From`子句定义的查询，这是类似的作用域范围`For`循环。 因此，每个`element`查询的作用域中的范围变量必须具有唯一的名称。 因为你可以指定多个`From`子句的查询，后续`From`子句可以引用中的范围变量`From`子句，或它们在早期的范围变量可以引用`From`子句。 例如，下面的示例演示嵌套`From`子句中的第二个子句的集合基于第一个子句中的范围变量的属性。  
+ @No__t-0 子句定义查询的作用域，这与 @no__t 循环的作用域类似。 因此，查询范围内的每个 @no__t 0 范围变量都必须具有唯一的名称。 因为您可以为查询指定多个 `From` 子句，所以后面的 @no__t 子句可以引用 @no__t 2 子句中的范围变量，也可以引用前面的 `From` 子句中的范围变量。 例如，下面的示例演示一个嵌套的 @no__t 0 子句，其中第二个子句中的集合基于第一个子句中范围变量的属性。  
   
  [!code-vb[VbSimpleQuerySamples#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#22)]  
   
- 每个`From`子句可以后跟其他查询子句以优化查询的任意组合。 可以按以下方式来优化查询：  
+ 每个 `From` 子句可后接其他查询子句的任意组合，以优化查询。 可以通过以下方式优化查询：  
   
-- 通过使用隐式组合多个集合`From`并`Select`子句，或通过使用显式`Join`或`Group Join`子句。  
+- 使用 @no__t 0 和 `Select` 子句隐式组合多个集合，或使用 `Join` 或 @no__t 子句显式合并多个集合。  
   
-- 使用`Where`子句来筛选查询结果。  
+- 使用 `Where` 子句来筛选查询结果。  
   
-- 对结果进行排序通过使用`Order By`子句。  
+- 使用 `Order By` 子句对结果进行排序。  
   
-- 通过将类似的结果组合在一起`Group By`子句。  
+- 使用 `Group By` 子句将相似结果组合在一起。  
   
-- 使用`Aggregate`子句，以标识要针对整个查询结果计算的聚合函数。  
+- 使用 `Aggregate` 子句标识要为整个查询结果计算的聚合函数。  
   
-- 使用`Let`子句引入迭代变量的值由而不是集合的表达式。  
+- 使用 `Let` 子句来引入一个迭代变量，该变量的值由表达式而不是集合确定。  
   
-- 使用`Distinct`子句忽略重复的查询结果。  
+- 使用 `Distinct` 子句忽略重复的查询结果。  
   
-- 标识要通过使用返回的结果的部分`Skip`， `Take`， `Skip While`，和`Take While`子句。  
+- 通过使用 `Skip`、`Take`、`Skip While` 和 @no__t 3 子句来标识要返回的结果的各部分。  
   
 ## <a name="example"></a>示例  
- 下面的查询中使用表达式`From`子句来声明范围变量`cust`每个`Customer`对象中`customers`集合。 `Where`子句使用的范围变量将输出限制为客户，从指定的区域。 `For Each`循环显示查询结果中的每个客户的公司名称。  
+ 下面的查询表达式使用 `From` 子句为 @no__t 集合中的每个 `Customer` 对象声明一个范围变量 `cust`。 @No__t-0 子句使用范围变量将输出限制为指定区域的客户。 @No__t-0 循环显示查询结果中每个客户的公司名称。  
   
  [!code-vb[VbSimpleQuerySamples#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#23)]  
   

@@ -9,47 +9,47 @@ helpviewer_keywords:
 - netcf compiler option [Visual Basic]
 - /netcf compiler option [Visual Basic]
 ms.assetid: db7cfa59-c315-401c-a59b-0daf355343d6
-ms.openlocfilehash: 028fa148d0e5622648a5fdfff1789c3d0bfde057
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.openlocfilehash: 3df7e622f97a5a1291736180e3964b1b3deaea2f
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67268279"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005446"
 ---
 # <a name="-netcf"></a>-netcf
 
-设置编译器将.NET Compact Framework 为目标。
+设置编译器以面向 .NET Compact Framework。
 
 ## <a name="syntax"></a>语法
 
-```
+```console
 -netcf
 ```
 
 ## <a name="remarks"></a>备注
 
-`-netcf`选项将使 Visual Basic 编译器以面向.NET Compact Framework 而不是完整的.NET Framework。 仅在完整的.NET Framework 中存在的语言功能已禁用。
+@No__t-0 选项导致 Visual Basic 编译器以 .NET Compact Framework 而不是完整 .NET Framework 为目标。 仅在完整 .NET Framework 中显示的语言功能处于禁用状态。
 
-`-netcf`选项旨在用于[-sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md)。 通过禁用的语言功能`-netcf`是相同的语言功能与所针对的文件中不存在`-sdkpath`。
+@No__t-0 选项设计为与[-sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md)一起使用。 @No__t-0 禁用的语言功能与 @no__t 为的文件中不存在相同的语言功能。
 
 > [!NOTE]
-> `-netcf`选项不适用于从 Visual Studio 开发环境中，仅当从命令行编译时便可。 `-netcf`加载 Visual Basic 设备项目时，设置选项。
+> 在 Visual Studio 开发环境中，不能使用 `-netcf` 选项;仅当从命令行进行编译时，它才可用。 加载 Visual Basic 设备项目时，设置 `-netcf` 选项。
 
-`-netcf`选项可更改以下语言功能：
+@No__t-0 选项更改以下语言功能：
 
-- [最终\<关键字 > 语句](../../../visual-basic/language-reference/statements/end-keyword-statement.md)关键字，这将终止执行程序，已禁用。 以下程序编译和运行而无需`-netcf`但在编译时会失败`-netcf`。
+- 已禁用[End \<keyword > 语句](../../../visual-basic/language-reference/statements/end-keyword-statement.md)关键字，该关键字终止程序的执行。 下面的程序在编译和运行时不 `-netcf`，但在编译时失败，@no__t 为-1。
 
   [!code-vb[VbVbalrCompiler#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/netcf.vb#34)]
 
-- 后期绑定，在所有表单中，已禁用。 当遇到已识别的后期绑定方案时，会生成编译时错误。 以下程序编译和运行而无需`-netcf`但在编译时会失败`-netcf`。
+- 所有窗体中的后期绑定都处于禁用状态。 如果遇到可识别的后期绑定方案，则会生成编译时错误。 下面的程序在编译和运行时不 `-netcf`，但在编译时失败，@no__t 为-1。
 
   [!code-vb[VbVbalrCompiler#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/OptionStrictOff.vb#35)]
 
-- [自动](../../../visual-basic/language-reference/modifiers/auto.md)， [Ansi](../../../visual-basic/language-reference/modifiers/ansi.md)，并[Unicode](../../../visual-basic/language-reference/modifiers/unicode.md)修饰符处于禁用状态。 语法[Declare 语句](../../../visual-basic/language-reference/statements/declare-statement.md)语句也被修改为`Declare Sub|Function name Lib "library" [Alias "alias"] [([arglist])]`。 下面的代码演示的效果`-netcf`上一次编译。
+- [Auto](../../../visual-basic/language-reference/modifiers/auto.md)、 [Ansi](../../../visual-basic/language-reference/modifiers/ansi.md)和[Unicode](../../../visual-basic/language-reference/modifiers/unicode.md)修饰符已禁用。 [Declare 语句](../../../visual-basic/language-reference/statements/declare-statement.md)语句的语法还会修改为 `Declare Sub|Function name Lib "library" [Alias "alias"] [([arglist])]`。 下面的代码演示了在编译时 `-netcf` 的影响。
 
   [!code-vb[VbVbalrCompiler#36](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/OptionStrictOff.vb#36)]
 
-- 使用已从 Visual Basic 的 Visual Basic 6.0 关键字生成不同的错误时`-netcf`使用。 这会影响以下关键字的错误消息：
+- 使用从 Visual Basic 中删除 Visual Basic 6.0 关键字会在使用 @no__t 0 时生成不同的错误。 这会影响以下关键字的错误消息：
 
   - `Open`
 
@@ -85,7 +85,7 @@ ms.locfileid: "67268279"
 
 ## <a name="example"></a>示例
 
-下面的代码编译`Myfile.vb`使用.NET Compact Framework 中，使用版本的 mscorlib.dll 和 Microsoft.VisualBasic.dll 的.NET Compact Framework 的 C 驱动器上的默认安装目录中找到。 通常情况下，将使用.NET Compact Framework 的最新版本。
+下面的代码使用 C 驱动器上 .NET Compact Framework 的默认安装目录中的 mscorlib.dll 和 Microsoft .NET Compact Framework 的版本，将 `Myfile.vb` 编译为。 通常，您将使用最新版本的 .NET Compact Framework。
 
 ```console
 vbc -netcf -sdkpath:"c:\Program Files\Microsoft Visual Studio .NET 2003\CompactFrameworkSDK\v1.0.5000\Windows CE " myfile.vb

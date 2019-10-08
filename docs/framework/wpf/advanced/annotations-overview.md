@@ -9,21 +9,21 @@ helpviewer_keywords:
 - documents [WPF], annotations
 - sticky notes [WPF]
 ms.assetid: 716bf474-29bd-4c74-84a4-8e0744bdad62
-ms.openlocfilehash: 861a757effee8d68d1e41682dd91ffadba20c536
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: dc9c4125f9ac3c44be41efe92b9e495599e5c130
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364375"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72004043"
 ---
 # <a name="annotations-overview"></a>批注概述
 在纸质文档上编写说明或注释毫不稀奇，我们几乎认为这是理所当然的。 这些说明或注释就是“批注”，我们将其添加到文档，用于标注信息或突出显示兴趣项以供日后参考。 虽然在打印文档上编写注释很简单也很平常，但是就算在所有电子文档上添加个人注释，功能上却通常有很多限制。  
   
- 本主题介绍了几种常见类型的批注, 特别是粘滞便笺和突出显示内容, 并说明了 Microsoft 批注框架如何通过 Windows Presentation Foundation 在应用程序中帮助这些类型的批注) 文档查看控件。  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]支持批注的文档查看控件包括<xref:System.Windows.Controls.FlowDocumentReader>和<xref:System.Windows.Controls.FlowDocumentScrollViewer>, 以及派生自<xref:System.Windows.Controls.Primitives.DocumentViewerBase> <xref:System.Windows.Controls.DocumentViewer>和<xref:System.Windows.Controls.FlowDocumentPageViewer>的控件。  
+ 本主题介绍了几种常见类型的批注，特别是粘滞便笺和突出显示内容，并说明了 Microsoft 批注框架如何通过 Windows Presentation Foundation 在应用程序中帮助这些类型的批注）文档查看控件。  @no__t 0 文档查看支持批注的控件包括 <xref:System.Windows.Controls.FlowDocumentReader> 和 <xref:System.Windows.Controls.FlowDocumentScrollViewer>，以及从 <xref:System.Windows.Controls.Primitives.DocumentViewerBase> 派生的控件，如 @no__t 和 @no__t。  
 
 <a name="caf1_type_stickynotes"></a>   
 ## <a name="sticky-notes"></a>便笺  
- 平常的便笺是将信息写在小块彩纸上，随后将这张彩纸“粘贴”到文档。 数字便笺为电子文档提供类似的功能，但灵活性更高，可包括许多其他类型的内容，如键入文本、手写注释（如 [!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)]“墨迹”笔划）或 Web 链接。  
+ 平常的便笺是将信息写在小块彩纸上，随后将这张彩纸“粘贴”到文档。 数字便笺为电子文档提供了类似的功能，但具有更大的灵活性，可包含许多其他类型的内容，例如键入的文本、手写注释（例如，Tablet PC "ink" 笔划）或 Web 链接。  
   
  下图显示了突出显示、文本便笺以及墨迹便笺批注的一些示例。  
   
@@ -36,19 +36,19 @@ ms.locfileid: "68364375"
   
 <a name="caf1_type_callouts"></a>   
 ## <a name="highlights"></a>突出显示  
- 当人们在纸质文档上作标记时，往往使用创造性的方法来突出显示兴趣项，例如对于句子中的某些字词，加下划线、高亮显示、圈出，或者将在空白的地方绘制标记或符号。  Microsoft 批注框架中的突出显示批注提供了一个类似的功能, 用于[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]标记文档查看控件中显示的信息。  
+ 当人们在纸质文档上作标记时，往往使用创造性的方法来突出显示兴趣项，例如对于句子中的某些字词，加下划线、高亮显示、圈出，或者将在空白的地方绘制标记或符号。  Microsoft 批注框架中的突出显示批注提供了类似的功能，用于标记 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 文档查看控件中显示的信息。  
   
  下图演示了一个突出显示批注的示例。  
   
  ![突出显示批注](./media/caf-callouts.png "CAF_Callouts")  
   
- 用户通常通过首先选择某个文本或感兴趣的项来创建批注, 然后右键单击以显示<xref:System.Windows.Controls.ContextMenu>批注选项的。  下面的示例演示[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]了如何使用路由命令<xref:System.Windows.Controls.ContextMenu>声明, 用户可以访问这些命令来创建和管理批注。  
+ 用户通常通过首先选择某个文本或感兴趣的项来创建批注，然后右键单击以显示批注选项 @no__t 0。  下面的示例演示可用来使用路由命令声明一个 @no__t 1 的 @no__t，用户可以访问这些命令来创建和管理注释。  
   
  [!code-xaml[DocViewerAnnotationsXps#CreateDeleteAnnotations](~/samples/snippets/csharp/VS_Snippets_Wpf/DocViewerAnnotationsXps/CSharp/Window1.xaml#createdeleteannotations)]  
   
 <a name="caf1_framework_data_anchoring"></a>   
 ## <a name="data-anchoring"></a>数据锚定  
- 批注框架将批注绑定到用户选择的数据, 而不只是显示在显示视图上的某个位置。 因此，如果文档视图更改（例如，当用户滚动显示窗口或者调整其大小时），批注将仍然跟随它绑定到的所选数据。 例如，下图显示了用户在所选文本上做的批注。 当文档视图更改时（滚动、调整大小、缩放或者移动），突出显示批注将与最初所选数据一起移动。  
+ 批注框架将批注绑定到用户选择的数据，而不只是显示在显示视图上的某个位置。 因此，如果文档视图更改（例如，当用户滚动显示窗口或者调整其大小时），批注将仍然跟随它绑定到的所选数据。 例如，下图显示了用户在所选文本上做的批注。 当文档视图更改时（滚动、调整大小、缩放或者移动），突出显示批注将与最初所选数据一起移动。  
   
  ![批注数据锚定](./media/caf-dataanchoring.png "CAF_DataAnchoring")  
   
@@ -75,4 +75,4 @@ ms.locfileid: "68364375"
 - [ContextMenu 概述](../controls/contextmenu-overview.md)
 - [命令概述](commanding-overview.md)
 - [流文档概述](flow-document-overview.md)
-- [如何：向 MenuItem 添加命令](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms741839(v=vs.90))
+- [如何：将命令添加到 MenuItem @ no__t-0

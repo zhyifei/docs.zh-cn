@@ -5,24 +5,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c2b84dfe-7fec-489a-92de-45215cec4518
-ms.openlocfilehash: d32faf026789923ca4343271c9fd1b6bbdb068df
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 065e866ec5937c4af31c0b1563a7582cb4112eba
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70793091"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72003271"
 ---
 # <a name="how-to-use-stored-procedures-mapped-for-multiple-result-shapes"></a>如何：使用针对多个结果形状映射的存储过程
 当存储过程可以返回多个结果形状时，返回类型无法强类型化为单个投影形状。 尽管 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 可以生成所有可能的投影类型，但它无法获知将以何种顺序返回它们。  
   
- 请将这种情况与按顺序产生多个结果形状的存储过程作一个对比。 有关详细信息，请参阅[如何：使用为顺序结果形状](how-to-use-stored-procedures-mapped-for-sequential-result-shapes.md)映射的存储过程。  
+ 请将这种情况与按顺序产生多个结果形状的存储过程作一个对比。 有关详细信息，请参阅[如何：使用为顺序结果形状（@ no__t-0）映射的存储过程。  
   
  <xref:System.Data.Linq.Mapping.ResultTypeAttribute> 属性适用于返回多个结果类型的存储过程，用以指定该过程可以返回的类型的集合。  
   
 ## <a name="example"></a>示例  
  在下面的 SQL 代码示例中，结果形状取决于输入（`shape =1` 或 `shape = 2`）。 您不知道将先返回哪个投影。  
   
-```  
+``` sql
 CREATE PROCEDURE VariableResultShapes(@shape int)  
 AS  
 if(@shape = 1)  

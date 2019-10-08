@@ -13,19 +13,19 @@ helpviewer_keywords:
 - commanding [WPF]
 - CommandManager [WPF]
 ms.assetid: bc208dfe-367d-426a-99de-52b7e7511e81
-ms.openlocfilehash: 835b06c6107cd44d49c83cfe34102b0c2d2a4bb9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 192fe629493947ffe4e0aa8ade417b7701ff95b4
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64627401"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72004595"
 ---
 # <a name="commanding-overview"></a>命令概述
 <a name="introduction"></a>命令是 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中的一种输出机制，与设备输出相比，其提供的输出处理更侧重于语义级别。 示例命令如许多应用程序均具有的“复制”、“剪切”和“粘贴”操作。  
   
  本概述定义 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中有哪些命令、哪些类属于命令模型以及如何在应用程序中使用和创建命令。  
   
- 本主题包含以下各节：  
+ 本主题包含以下各节:  
   
 - [什么是命令？](#commands_at_10000_feet)  
   
@@ -173,7 +173,7 @@ ms.locfileid: "64627401"
 ## <a name="command-library"></a>命令库  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供一组预定义命令。  命令库包括以下类：<xref:System.Windows.Input.ApplicationCommands>、<xref:System.Windows.Input.NavigationCommands>、<xref:System.Windows.Input.MediaCommands>、<xref:System.Windows.Documents.EditingCommands> 和 <xref:System.Windows.Input.ComponentCommands>。  这些类提供诸如 <xref:System.Windows.Input.ApplicationCommands.Cut%2A>、<xref:System.Windows.Input.NavigationCommands.BrowseBack%2A>、<xref:System.Windows.Input.NavigationCommands.BrowseForward%2A>、<xref:System.Windows.Input.MediaCommands.Play%2A>、<xref:System.Windows.Input.MediaCommands.Stop%2A> 和 <xref:System.Windows.Input.MediaCommands.Pause%2A> 的命令。  
   
- 许多这些命令都包含一组默认输入绑定。  例如，如果指定应用程序处理复制命令，则可自动获取键盘绑定“CTRL+C”。此外，还可获得其他输入设备的绑定，例如 [!INCLUDE[TLA2#tla_tpc](../../../../includes/tla2sharptla-tpc-md.md)] 笔势和语音信息。  
+ 许多这些命令都包含一组默认输入绑定。  例如，如果指定应用程序处理 "复制" 命令，则会自动获取键盘绑定 "CTRL + C"。还会获取其他输入设备的绑定，如 Tablet PC 笔笔势和语音信息。  
   
  使用 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 引用各个命令库中的命令时，通常可省略公开静态命令属性的库类的类名。 一般来说，命令名称是明确作为字符串的，且存在所属类型来提供命令的逻辑分组，不过对于消除二义性这并不必要。 例如，可指定 `Command="Cut"` 而不是更为冗长的 `Command="ApplicationCommands.Cut"`。 这是针对命令内置于 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 处理器中的便捷机制（更准确地说，它是 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 处理器在加载时所引用的 <xref:System.Windows.Input.ICommand> 的类型转换器行为）。  
   
@@ -192,5 +192,5 @@ ms.locfileid: "64627401"
 - [输入概述](input-overview.md)
 - [路由事件概述](routed-events-overview.md)
 - [实现 ICommandSource](how-to-implement-icommandsource.md)
-- [如何：将命令添加到菜单项](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms741839(v=vs.90))
+- [如何：将命令添加到 MenuItem @ no__t-0
 - [创建自定义 RoutedCommand 示例](https://github.com/Microsoft/WPF-Samples/tree/master/Input%20and%20Commands/CustomRoutedCommand)

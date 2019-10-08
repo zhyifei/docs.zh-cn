@@ -18,48 +18,48 @@ helpviewer_keywords:
 - objects [Visual Basic], names
 - names [Visual Basic], shadowing
 ms.assetid: 54bb4c25-12c4-4181-b4a0-93546053964e
-ms.openlocfilehash: 9ad992a53618fa2f410e0b0fb23886c30136384f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 30c02cf367c461c3896a01538d03380627de294f
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61917890"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72004865"
 ---
 # <a name="shadowing-in-visual-basic"></a>Visual Basic 中的隐藏
-当两个编程元素共享相同的名称时，可以隐藏其中一个，或*卷影*，另一个。 在这种情况下，隐藏的元素不是可用于引用;相反，当你的代码使用的元素名称时，Visual Basic 编译器将其解析为隐藏的元素。  
+当两个编程元素共享同一名称时，其中一个元素可以*隐藏或隐藏*另一个。 在这种情况下，隐藏的元素不可用于引用;相反，当你的代码使用元素名称时，Visual Basic 编译器会将其解析为隐藏元素。  
   
 ## <a name="purpose"></a>用途  
- 隐藏的主要目的是保护类成员的定义。 基本类可能需要进行更改，创建具有作为一个已定义的相同名称的元素。 如果发生这种情况，`Shadows`通过您的类将解析为成员的修饰符强制引用你定义，而不是新基类元素。  
+ 隐藏的主要目的是保护类成员的定义。 基类可能会发生更改，该更改将创建一个与已定义的元素同名的元素。 如果发生这种情况，则 @no__t 的修饰符强制将通过类的引用解析为你定义的成员，而不是新的基类元素。  
   
 ## <a name="types-of-shadowing"></a>隐藏类型  
- 元素可在两种不同方法隐藏另一个元素。 隐藏元素可以包含隐藏的元素，在这种情况下隐藏来实现的区域的子区域内声明*作用域通过*。 或派生类可以重新定义的基类，在其中完成种情况下隐藏成员*通过继承*。  
+ 元素可通过两种不同的方式隐藏其他元素。 可以在包含隐藏元素的区域的子区域内声明隐藏元素，在这种情况下，隐藏是*通过范围*实现的。 或派生类可以重新定义基类的成员，在这种情况下，将*通过继承*来完成隐藏。  
   
-### <a name="shadowing-through-scope"></a>通过范围进行隐藏  
- 很可能相同的模块、 类或结构具有相同名称但不同的作用域中的编程元素。 范围较窄的元素后，在这种方式中声明两个元素的代码引用它们共享的名称，隐藏的其他元素 （块范围是最小）。  
+### <a name="shadowing-through-scope"></a>通过范围隐藏  
+ 同一模块、类或结构中的编程元素可以具有相同的名称，但范围不同。 如果以这种方式声明了两个元素，而代码引用了它们共享的名称，则范围较窄的元素将隐藏另一个元素（块范围是最窄的）。  
   
- 例如，可以定义模块`Public`名为变量`temp`，该模块内的一个过程可以声明一个也名为的本地变量`temp`。 对引用`temp`内过程访问的同时对引用的局部变量`temp`从外部过程访问`Public`变量。 在此情况下，过程变量`temp`隐藏模块变量`temp`。  
+ 例如，模块可以定义一个名为 @no__t 的 @no__t 0 变量，该模块中的一个过程可以声明同样名为 `temp` 的局部变量。 在过程中对 `temp` 的引用将访问本地变量，而从该过程外部对 `temp` 的引用将访问 @no__t 2 变量。 在这种情况下，过程变量 `temp` 会隐藏模块变量 `temp`。  
   
- 下图显示了两个变量，这两名为`temp`。 本地变量`temp`隐藏了成员变量`temp`从各自的过程中进行访问时`p`。 但是，`MyClass`关键字绕开隐藏并访问成员变量。  
+ 下图显示了两个变量，两者都命名 `temp`。 在从 `p` 的过程中进行访问时，本地变量 @no__t 为 `temp` 的成员变量。 但 @no__t 关键字会绕过隐藏并访问成员变量。  
   
- ![图形，该图形显示了通过范围进行隐藏。](./media/shadowing/shadow-scope-diagram.gif)
+ ![显示通过范围隐藏的图形。](./media/shadowing/shadow-scope-diagram.gif)
   
- 通过范围进行隐藏的示例，请参阅[如何：隐藏与您的变量同名的变量](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md)。  
+ 有关通过范围进行隐藏的示例，请参阅 [How to：使用与你的变量 @ no__t-0 相同的名称隐藏变量。  
   
 ### <a name="shadowing-through-inheritance"></a>通过继承隐藏  
- 如果派生的类重定义继承自基类的编程元素，重新定义的元素将隐藏原始元素。 与其他任何类型都可隐藏任何类型的声明的元素或重载元素集。 例如，`Integer`变量可以隐藏`Function`过程。 如果隐藏与另一个过程的过程，您可以使用不同的参数列表和不同的返回类型。  
+ 如果派生类重定义了从基类继承的编程元素，则重定义元素将隐藏原始元素。 可以用任何其他类型隐藏任何类型的已声明元素或重载元素集。 例如，@no__t 0 变量可以隐藏 @no__t 的过程。 如果使用另一个过程来隐藏过程，则可以使用不同的参数列表和不同的返回类型。  
   
- 下图显示了一个基类`b`和派生的类`d`，它继承自`b`。 该基类定义一个名为过程`proc`，然后用相同名称的另一个过程的派生的类隐藏它。 第一个`Call`语句访问隐藏`proc`派生类中。 但是，`MyBase`关键字绕开隐藏和访问基类中隐藏的过程。  
+ 下图显示了基类 `b` 和从 `b` 继承的派生类 @no__t。 基类定义了一个名为 `proc` 的过程，派生类将使用另一个同名的过程来隐藏该过程。 第一个 `Call` 语句访问派生类中的隐藏 `proc`。 但 @no__t 关键字会绕过隐藏并访问基类中的隐藏过程。  
   
  ![通过继承进行隐藏示意图](./media/shadowing/shadowing-inherit-diagram.gif)  
   
- 通过继承隐藏的示例，请参阅[如何：隐藏与您的变量同名的变量](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md)和[如何：隐藏继承的变量](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md)。  
+ 有关通过继承进行隐藏的示例，请参阅 [How to：使用与你的变量 @ no__t-0 相同的名称和 [How 来隐藏变量：隐藏继承的变量 @ no__t。  
   
 #### <a name="shadowing-and-access-level"></a>隐藏和访问级别  
- 隐藏元素并不总是可从使用派生的类的代码访问。 例如，可能会声明`Private`。 在这种情况下，隐藏是大大降低，则编译器将解析对它的同一元素的任何引用如果以前没有隐藏。 此元素是最少追溯时派生自隐藏类向后步骤的可访问元素。 如果隐藏的元素是一个过程，解析到最接近的可访问版本具有相同名称，参数列表中，并返回类型。  
+ 不能始终使用派生类从代码访问隐藏元素。 例如，可将其声明 `Private`。 在这种情况下，隐藏会失效，如果没有隐藏，编译器将解析对同一元素的任何引用。 此元素是可访问的元素，它是从隐藏类向后 derivational 的最少步骤。 如果隐藏的元素是一个过程，则将其解析为具有相同名称、参数列表和返回类型的最接近的可访问版本。  
   
- 下面的示例演示三个类的继承层次结构。 每个类定义`Sub`过程`display`，并且每个派生类都隐藏`display`其基类中的过程。  
+ 下面的示例显示了三个类的继承层次结构。 每个类都定义一个 @no__t @no__t 的过程，每个派生类在其基类中隐藏 @no__t 2 过程。  
   
-```  
+```vb  
 Public Class firstClass  
     Public Sub display()  
         MsgBox("This is firstClass")  
@@ -92,25 +92,25 @@ Module callDisplay
 End Module  
 ```  
   
- 在前面的示例中，派生类`secondClass`shadows`display`与`Private`过程。 当模块`callDisplay`调用`display`中`secondClass`，调用代码是外部`secondClass`，因此不能访问私有`display`过程。 阴影操作失败，并且编译器解析对基类的引用`display`过程。  
+ 在前面的示例中，派生类 `secondClass` 阴影 `display` 与 @no__t 2 过程一起使用。 当模块 `callDisplay` 调用 `secondClass` 中的 `display` 时，调用代码在 `secondClass` 外部，因此无法访问私有的 @no__t 4 过程。 隐藏操作已失效，编译器会将对基类的引用解析 @no__t。  
   
- 但是，进一步派生类`thirdClass`声明`display`作为`Public`，因此中的代码`callDisplay`可以访问它。  
+ 但是，更进一步的派生类 `thirdClass` 将 `display` 声明为 `Public`，因此 `callDisplay` 中的代码可以访问它。  
   
 ## <a name="shadowing-and-overriding"></a>隐藏和重写  
- 不要混淆隐藏和重写。 派生的类继承自基类，并同时重新定义与另一个声明的元素时将使用它们。 但是，两者之间的重大差异。 有关比较，请参阅[差异之间隐藏和重写](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)。  
+ 不要将隐藏与重写混淆。 当派生类从基类继承时，同时使用这两种方法，并将一个声明的元素重定义为另一个。 但两者之间存在重大差异。 有关比较，请参阅[隐藏和重写之间的差异](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)。  
   
 ## <a name="shadowing-and-overloading"></a>隐藏和重载  
- 如果在派生类中隐藏多个元素具有的相同基类元素，隐藏的元素将变为该元素的重载的版本。 有关更多信息，请参见 [Procedure Overloading](../../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)。  
+ 如果在派生类中隐藏具有多个元素的同一个基类元素，则隐藏元素将成为该元素的重载版本。 有关更多信息，请参见 [Procedure Overloading](../../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)。  
   
 ## <a name="accessing-a-shadowed-element"></a>访问隐藏的元素  
- 当你从派生类访问的元素时，你通常要通过该派生类的当前实例通过符合条件的元素名称与`Me`关键字。 如果派生的类隐藏基类中的元素，可以通过限定其与访问基类元素`MyBase`关键字。  
+ 从派生类访问某个元素时，通常通过该派生类的当前实例执行此操作，方法是使用 `Me` 关键字限定元素名称。 如果派生类隐藏了基类中的元素，则可以通过使用 `MyBase` 关键字限定基类元素来访问它。  
   
- 访问隐藏的元素的示例，请参阅[如何：访问被派生类隐藏的变量](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-access-a-variable-hidden-by-a-derived-class.md)。  
+ 有关访问隐藏的元素的示例，请参阅 [How to：访问由派生类 @ no__t 隐藏的变量。  
   
-### <a name="declaration-of-the-object-variable"></a>对象变量声明  
- 如何创建对象变量还会影响是否在派生的类访问隐藏元素或隐藏的元素。 下面的示例创建两个对象从派生类，但一个对象声明为类的基类，另一个用作派生的类。  
+### <a name="declaration-of-the-object-variable"></a>对象变量的声明  
+ 创建对象变量的方式还会影响派生类是访问隐藏元素还是访问隐藏的元素。 下面的示例从派生类创建两个对象，但一个对象声明为基类，另一个对象作为派生类。  
   
-```  
+```vb  
 Public Class baseCls  
     ' The following statement declares the element that is to be shadowed.  
     Public z As Integer = 100  
@@ -135,12 +135,12 @@ Public Class useClasses
 End Class  
 ```  
   
- 在前面的示例中，变量`basObj`声明为类的基类。 分配`dervCls`到它的对象构成的扩大转换，因此有效。 但是，基本类不能访问该变量的隐藏版本`z`在派生类中，因此编译器解析`basObj.z`到原始的基类值。  
+ 在前面的示例中，变量 `basObj` 声明为基类。 将 @no__t 0 对象赋给它将形成扩大转换，因此有效。 但是，基类无法访问派生类中的变量 @no__t 的隐藏版本，因此编译器将 `basObj.z` 解析为原始基类值。  
   
 ## <a name="see-also"></a>请参阅
 
 - [对已声明元素的引用](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
-- [在 Visual Basic 中的作用域](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [范围 Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
 - [扩大转换和收缩转换](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
 - [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md)
 - [Overrides](../../../../visual-basic/language-reference/modifiers/overrides.md)

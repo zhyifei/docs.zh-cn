@@ -6,12 +6,12 @@ helpviewer_keywords:
 - writing extension methods [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: fb2739cc-958d-4ef4-a38b-214a74c93413
-ms.openlocfilehash: 31ccb18e0e6d1569764ec2a67201d7f758129425
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: d01596d50db8ba1078e8ac82caa951418645c977
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71332757"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72004613"
 ---
 # <a name="how-to-write-an-extension-method-visual-basic"></a>如何：编写扩展方法（Visual Basic）
 
@@ -27,11 +27,13 @@ ms.locfileid: "71332757"
     Imports System.Runtime.CompilerServices
     ```
 
-3. 在新应用程序或现有应用程序的模块中，使用扩展属性开始方法定义：
+3. 在新应用程序或现有应用程序的模块中，使用[`<Extension>`](xref:System.Runtime.CompilerServices.ExtensionAttribute)属性开始方法定义：
 
     ```vb
     <Extension()>
     ```
+ 
+   请注意，`Extension` 属性只能应用于 Visual Basic[模块](../../../language-reference/statements/module-statement.md)中的方法（@no__t 1 或 @no__t 2 过程）。 如果将它应用于 @no__t 0 或 `Structure` 中的方法，则 Visual Basic 编译器将生成错误[BC36551](../../../misc/bc36551.md)，"只能在模块中定义扩展方法。"
 
 4. 用普通方法声明方法，但第一个参数的类型必须是要扩展的数据类型。
 

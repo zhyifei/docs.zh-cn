@@ -7,41 +7,41 @@ helpviewer_keywords:
 - optimization [Visual Basic], enabling
 - -optimize compiler option [Visual Basic]
 ms.assetid: fcba4a97-3622-4b87-a891-0f77deab4998
-ms.openlocfilehash: eb84e0a7038e7ff8cb399ac7222b6ac1661b5bc1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e8daf4a49123623b6470bc3c6281869f1b9b3d0f
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788968"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005367"
 ---
 # <a name="-optimize"></a>-optimize
 启用或禁用编译器优化。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```console  
 -optimize[ + | - ]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
   
 |术语|定义|  
 |---|---|  
-|`+` &#124; `-`|可选。 `-optimize-`选项会禁用编译器优化。 `-optimize+`选项将启用优化。 默认情况下，禁用优化。|  
+|`+` &#124; `-`|可选。 @No__t-0 选项将禁用编译器优化。 @No__t-0 选项启用优化。 默认情况下，禁用优化。|  
   
 ## <a name="remarks"></a>备注  
- 编译器优化会使输出文件更智能、更快并且更有效。 但是，因为优化会导致输出文件中的代码重排`-optimize+`会使调试困难。  
+ 编译器优化会使输出文件更智能、更快并且更有效。 但是，由于优化会导致输出文件中的代码重排，因此 `-optimize+` 会使调试变得困难。  
   
- 使用生成的所有模块`-target:module`程序集必须使用相同`-optimize`与程序集的设置。 有关详细信息，请参阅[-目标 (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)。  
+ 对于程序集，使用 `-target:module` 生成的所有模块都必须使用与程序集相同的 @no__t 1 设置。 有关详细信息，请参阅[-target （Visual Basic）](../../../visual-basic/reference/command-line-compiler/target.md)。  
   
- 你可以组合`-optimize`和`-debug`选项。  
+ 可以组合 @no__t 0 和 @no__t 选项。  
   
-|若要设置的优化 Visual Studio 集成的开发环境中|  
+|在 Visual Studio 集成开发环境中设置-优化|  
 |---|  
-|1.在 **“解决方案资源管理器”** 中选择一个项目。 在“项目”菜单上，单击“属性”。<br />     <br />2.单击“编译”选项卡。<br />3.单击“高级”按钮。<br />4.修改**启用优化**复选框。|  
+|1.在 **“解决方案资源管理器”** 中选择一个项目。 在“项目”菜单上，单击“属性”。<br />     <br />2.单击“编译”选项卡。<br />3.单击“高级”按钮。<br />4.修改 "**启用优化**" 复选框。|  
   
 ## <a name="example"></a>示例  
- 下面的代码编译`T2.vb`并启用编译器优化。  
+ 下面的代码编译 `T2.vb` 并启用编译器优化。  
   
 ```console
 vbc t2.vb -optimize  
@@ -50,6 +50,6 @@ vbc t2.vb -optimize
 ## <a name="see-also"></a>请参阅
 
 - [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)
-- [-调试 (Visual Basic)](../../../visual-basic/reference/command-line-compiler/debug.md)
+- [-debug （Visual Basic）](../../../visual-basic/reference/command-line-compiler/debug.md)
 - [示例编译命令行](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [-目标 (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
+- [-target （Visual Basic）](../../../visual-basic/reference/command-line-compiler/target.md)

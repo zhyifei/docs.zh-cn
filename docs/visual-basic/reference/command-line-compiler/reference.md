@@ -1,5 +1,5 @@
 ---
-title: -参考 (Visual Basic)
+title: -reference （Visual Basic）
 ms.date: 03/13/2018
 helpviewer_keywords:
 - /reference compiler option [Visual Basic]
@@ -9,49 +9,53 @@ helpviewer_keywords:
 - reference compiler option [Visual Basic]
 - -r compiler option [Visual Basic]
 ms.assetid: 66bdfced-bbf6-43d1-a554-bc0990315737
-ms.openlocfilehash: 2394a23ddd59d09ce53c78fc4486fc5bae9e8516
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 552fbcf920be609de83708a995a87761f6080220
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583356"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005269"
 ---
-# <a name="-reference-visual-basic"></a>-参考 (Visual Basic)
-使编译器让指定程序集中的类型信息供当前正在编译的项目。  
+# <a name="-reference-visual-basic"></a>-reference （Visual Basic）
+使编译器使指定程序集中的类型信息可供当前正在编译的项目使用。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```console  
 -reference:fileList  
-' -or-  
+```
+
+或
+
+```console
 -r:fileList  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
   
 |术语|定义|  
 |---|---|  
 |`fileList`|必需。 程序集文件名的逗号分隔列表。 如果文件名包含空格，则将名称括在引号内。|  
   
 ## <a name="remarks"></a>备注  
- 导入的文件必须包含程序集元数据。 仅公共类型都是程序集外部可见的。 [/Addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)选项从模块导入元数据。  
+ 导入的文件必须包含程序集元数据。 仅公共类型在程序集外可见。 [/Addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)选项从模块导入元数据。  
   
- 如果引用的程序集 （程序集 A） 本身引用了另一个程序集 (程序集 B)，则在下列情况下需要引用程序集 B:  
+ 如果引用本身引用另一个程序集（程序集 B）的程序集（程序集 A），则需要在以下情况下引用程序集 B：  
   
 - 程序集 A 中的类型继承自程序集 B 中的类型或实现程序集 B 中的接口。  
   
 - 调用具有程序集 B 中的返回类型或参数类型的字段、属性、事件或方法。  
   
- 使用[-libpath](../../../visual-basic/reference/command-line-compiler/libpath.md)指定一个或多个程序集引用所在的目录。  
+ 使用[-libpath](../../../visual-basic/reference/command-line-compiler/libpath.md)可指定一个或多个程序集引用所在的目录。  
   
- 为使编译器可以识别的程序集 （而不是模块） 中的类型，必须强制其解析的类型。 如何执行此操作的一个示例是定义类型的实例。 其他方法都可以解析为编译器的程序集中的类型名称。 例如，如果您从程序集中的类型继承，类型名称然后将成为编译器已知。  
+ 为了使编译器能够识别程序集中的类型（而不是模块），必须强制解析该类型。 如何执行此操作的一个示例是定义类型的实例。 其他方法可用于解析编译器的程序集中的类型名称。 例如，如果从程序集中的某个类型继承，则该类型名称将在编译器中是已知的。  
   
- 默认情况下使用 Vbc.rsp 响应文件，通常使用.NET Framework 程序集的引用。 使用`-noconfig`如果不希望编译器使用 Vbc.rsp。  
+ 默认情况下，将使用用于引用常用 .NET Framework 程序集的 Vbc 响应文件。 如果你不希望编译器使用 Vbc，请使用 `-noconfig`。  
   
  `-reference` 的缩写形式是 `/r`。  
   
 ## <a name="example"></a>示例  
- 下面的命令编译源文件`Input.vb`和引用程序集从`Metad1.dll`并`Metad2.dll`以生成`Out.exe`。  
+ 下面的命令编译源文件 @no__t 0 和引用程序集，从 `Metad1.dll` 和 `Metad2.dll` 生成 @no__t 3。  
   
 ```console
 vbc -reference:metad1.dll,metad2.dll -out:out.exe input.vb  
@@ -61,6 +65,6 @@ vbc -reference:metad1.dll,metad2.dll -out:out.exe input.vb
 
 - [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)
-- [-目标 (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
+- [-target （Visual Basic）](../../../visual-basic/reference/command-line-compiler/target.md)
 - [Public](../../../visual-basic/language-reference/modifiers/public.md)
 - [示例编译命令行](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

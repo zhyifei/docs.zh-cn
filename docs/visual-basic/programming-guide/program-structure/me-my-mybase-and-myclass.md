@@ -21,42 +21,42 @@ helpviewer_keywords:
 - current instance [Visual Basic], Me keyword
 - MyBase keyword [Visual Basic], relationship to similar programming elements
 ms.assetid: f8e241ae-b1ed-4886-9aa0-08c632154029
-ms.openlocfilehash: 3eca756429c5fec8f324a17350844b59baf9ccf7
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 7df146e09a1d7cd730f4cf539d6823f7ced44bd1
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586255"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72002530"
 ---
 # <a name="me-my-mybase-and-myclass-in-visual-basic"></a>Visual Basic 中的 Me、My、MyBase 和 MyClass
-`Me``My`， `MyBase`，和`MyClass`在 Visual Basic 中具有类似名称，但不同的用途。 本主题介绍上述每个实体以将它们区分开来。  
+`Me`、`My`、`MyBase` 和 Visual Basic 中的 @no__t 为类似的名称，但用途不同。 本主题将介绍其中的每个实体，以便将它们区分开来。  
   
 ## <a name="me"></a>Me  
- `Me`关键字提供了一种方法来指代类或当前正在其中执行代码的结构的特定实例。 `Me` 行为类似于的对象变量或结构变量引用当前实例。 使用`Me`特别适合将类或结构的当前正在执行的实例的信息传递给另一个类、 结构或模块中的过程。  
+ @No__t 关键字提供了一种方法，用于引用当前正在执行代码的类或结构的特定实例。 `Me` 的行为类似于引用当前实例的对象变量或结构变量。 在将有关当前正在执行的类或结构实例的信息传递到另一个类、结构或模块中的过程时，使用 @no__t。  
   
- 例如，假设在模块中有下面的过程。  
+ 例如，假设你在模块中具有以下过程。  
   
-```  
+```vb  
 Sub ChangeFormColor(FormName As Form)  
    Randomize()  
    FormName.BackColor = Color.FromArgb(Rnd() * 256, Rnd() * 256, Rnd() * 256)  
 End Sub  
 ```  
   
- 可以调用此过程，并将传递的当前实例<xref:System.Windows.Forms.Form>作为通过使用以下语句参数的类。  
+ 可以调用此过程，并使用以下语句将 @no__t 0 类的当前实例作为参数传递。  
   
-```  
+```vb  
 ChangeFormColor(Me)  
 ```  
   
 ## <a name="my"></a>My  
- `My`功能可比较容易、 直观地访问多个.NET Framework 类，使 Visual Basic 用户与计算机、 应用程序、 设置、 资源等进行交互。  
+ @No__t-0 功能提供对多个 .NET Framework 类的简单直观访问，使 Visual Basic 用户可以与计算机、应用程序、设置、资源等进行交互。  
   
 ## <a name="mybase"></a>MyBase  
- `MyBase`关键字的行为类似于一个类的当前实例的基类引用的对象变量。 `MyBase` 通常用于访问基类成员被重写或派生类中被隐藏。 `MyBase.New` 用于从派生的类构造函数中显式调用基类构造函数。  
+ @No__t 的关键字的行为类似于引用类的当前实例的基类的对象变量。 `MyBase` 通常用于访问派生类中被重写或隐藏的基类成员。 `MyBase.New` 用于从派生类构造函数中显式调用基类构造函数。  
   
 ## <a name="myclass"></a>MyClass  
- `MyClass`关键字的行为类似于与最初实现的类的当前实例引用的对象变量。 `MyClass` 类似于`Me`，但方法是在其上的所有方法调用都被都看作`NotOverridable`。  
+ @No__t 的关键字的行为类似于引用最初实现的类的当前实例的对象变量。 `MyClass` 类似于 `Me`，但其上的所有方法调用都被视为 `NotOverridable` 方法。  
   
 ## <a name="see-also"></a>请参阅
 

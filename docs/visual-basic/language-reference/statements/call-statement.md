@@ -8,24 +8,24 @@ helpviewer_keywords:
 - Call statement [Visual Basic]
 - procedures [Visual Basic], calling
 ms.assetid: e5b31571-6867-406f-b8e7-a3f9aae4723a
-ms.openlocfilehash: af0b62d6cfacbcf94f527e049e07e51bf496a6cf
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: a04ebddc7db176188876da1082e1e6946e1e8eec
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71392763"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005165"
 ---
 # <a name="call-statement-visual-basic"></a>Call 语句 (Visual Basic)
 
-将控制转移到 `Function`、@no__t 1 或动态链接库（DLL）过程。
-
-## <a name="syntax"></a>语法
-
-```vb
-[ Call ] procedureName [ (argumentList) ]
-```
-
-## <a name="parts"></a>部件
+将控制转移到 `Function`、@no__t 1 或动态链接库（DLL）过程。  
+  
+## <a name="syntax"></a>语法  
+  
+```vb  
+[ Call ] procedureName [ (argumentList) ]  
+```  
+  
+## <a name="parts"></a>部件  
 
 |||
 |---|---|

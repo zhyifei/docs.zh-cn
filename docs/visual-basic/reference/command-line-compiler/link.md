@@ -11,25 +11,29 @@ helpviewer_keywords:
 - -l compiler option [Visual Basic]
 - /l compiler option [Visual Basic]
 ms.assetid: 1885f24a-86f5-486c-a064-9fb7e455ccec
-ms.openlocfilehash: 7d68e55972336e304286e967d445f3589219b9a2
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: e131b39e05badf0bb90fbbb14761571003156f85
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972308"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005522"
 ---
 # <a name="-link-visual-basic"></a>-link （Visual Basic）
 使编译器让指定程序集中的 COM 类型信息可供当前正在编译的项目使用。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```console  
 -link:fileList  
-' -or-  
+```
+
+或  
+
+```console
 -l:fileList  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
   
 |术语|定义|  
 |---|---|  
@@ -55,7 +59,7 @@ ms.locfileid: "70972308"
   
  使用[-libpath](libpath.md)可指定一个或多个程序集引用所在的目录。  
   
- 与[/reference](reference.md)编译器选项一样， `-link`编译器选项使用 Vbc 响应文件，该文件引用频繁使用的 .NET Framework 程序集。 如果你不希望编译器使用 Vbc 文件，请使用[-noconfig](noconfig.md)编译器选项。  
+ 与[/reference](reference.md)编译器选项一样，`-link` 编译器选项使用 Vbc 响应文件，该文件引用频繁使用的 .NET Framework 程序集。 如果你不希望编译器使用 Vbc 文件，请使用[-noconfig](noconfig.md)编译器选项。  
   
  `-link` 的缩写形式是 `-l`。  
   
@@ -79,7 +83,7 @@ ms.locfileid: "70972308"
  [!code-vb[VbLinkCompiler#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vblinkcompiler/vb/module1.vb#5)]  
   
 ## <a name="example"></a>示例  
- `OfficeApp.vb`以下命令行从`COMData1.dll`和`COMData2.dll`生成`OfficeApp.exe`源文件和引用程序集。  
+ 以下命令行编译源文件 @no__t 0 和引用程序集，`COMData1.dll` 和 `COMData2.dll` 生成 @no__t 3。  
   
 ```console  
 vbc -link:COMData1.dll,COMData2.dll /out:OfficeApp.exe OfficeApp.vb  

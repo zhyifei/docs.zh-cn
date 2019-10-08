@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 297878d0-685b-4c01-b2e0-9d731b7322bc
-ms.openlocfilehash: be0aea66f0923b8b353f42cecc9360731efc7bb9
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 1675e4c6a610373e1c981b383ae0229739d96dd0
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70792847"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72003327"
 ---
 # <a name="querying-across-relationships"></a>跨关系查询
 您的类定义中对其他对象或其他对象的集合的直接引用相当于数据库中的外键关系。 您可以通过使用点表示法在查询时利用这些关系来访问关系属性以及从一个对象定位到另一个对象。 这些访问操作会转换成用等效的 SQL 表示的更为复杂的联接或关联子查询。  
@@ -31,23 +31,23 @@ ms.locfileid: "70792847"
   
  既然您已经具备了关系，您就可以通过引用您的类中定义的关系属性来编写查询。 这些关系引用相当于数据库中的外键关系。 使用这些关系的操作会转换成用等效的 SQL 表示的更为复杂的联接。 只要你已经定义关系（使用 <xref:System.Data.Linq.Mapping.AssociationAttribute> 属性），你就无需在 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中编写显式联接的代码。  
   
- 为了帮助保持这种错觉[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ，实现了一种称为*延迟加载*的技术。 有关详细信息，请参阅[延迟与立即加载](deferred-versus-immediate-loading.md)。  
+ 为了帮助保持这种错觉，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 实现了一种称为*延迟加载*的技术。 有关详细信息，请参阅[延迟与立即加载](deferred-versus-immediate-loading.md)。  
   
- 请考虑以下 SQL 查询来投影对的`CustomerID` - `OrderID`列表：  
+ 请考虑以下 SQL 查询来投影 `CustomerID` @ no__t-1 @ no__t 对的列表：  
   
-```  
+```sql
 SELECT t0.CustomerID, t1.OrderID  
 FROM   Customers AS t0 INNER JOIN  
           Orders AS t1 ON t0.CustomerID = t1.CustomerID  
 WHERE  (t0.City = @p0)  
 ```  
   
- 若要通过使用 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 获得相同的结果，您可以使用 `Orders` 类中已经存在的 `Customer` 属性引用。 引用提供了执行查询和`CustomerID` - `OrderID`投影对所需的信息，如以下代码所示： `Orders`  
+ 若要通过使用 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 获得相同的结果，您可以使用 `Orders` 类中已经存在的 `Customer` 属性引用。 @No__t 引用提供了执行查询所必需的信息并投影了 `CustomerID` @ no__t @ no__t 对，如以下代码所示：  
   
  [!code-csharp[DLinqQueryConcepts#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryConcepts/cs/Program.cs#5)]
  [!code-vb[DLinqQueryConcepts#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryConcepts/vb/Module1.vb#5)]  
   
- 您也可以反向操作。 也就是说，您可以查询 `Orders`，然后使用其 `Customer` 关系引用来访问关于关联的 `Customer` 对象的信息。 下面的代码将与之前`CustomerID`相同- `OrderID`的对进行投影，但这一`Orders` `Customers`次是通过查询而不是。  
+ 您也可以反向操作。 也就是说，您可以查询 `Orders`，然后使用其 `Customer` 关系引用来访问关于关联的 `Customer` 对象的信息。 下面的代码投影与之前相同的 `CustomerID` @ no__t-1 @ no__t-2 对，但这次是通过查询 `Orders` 而不是 `Customers` 来进行的。  
   
  [!code-csharp[DLinqQueryConcepts#6](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryConcepts/cs/Program.cs#6)]
  [!code-vb[DLinqQueryConcepts#6](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryConcepts/vb/Module1.vb#6)]  

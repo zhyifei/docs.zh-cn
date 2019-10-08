@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [WPF], listed by category
 ms.assetid: f8a1f78e-d9fa-4367-9ec6-f084577e83bb
-ms.openlocfilehash: b86684bab6c552102af7486b2c9ab49ea703a175
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 41cbe57f1e3711bb4e18b2b4da28c26ebbd2bc60
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64627303"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005702"
 ---
 # <a name="controls-by-category"></a>按类别分类的控件
-Windows Presentation Foundation (WPF) 控件可以进行逻辑分组为多个类别。 可以使用这些类别来为方案选择适当的控件，从而有助于查看具有相同用法模式或功能的控件。  
+Windows Presentation Foundation （WPF）控件可以逻辑分组为多个类别。 可以使用这些类别来为方案选择适当的控件，从而有助于查看具有相同用法模式或功能的控件。  
   
 ## <a name="layout"></a>布局  
  布局控件用于管理子元素的大小、尺寸、位置和排列。  
@@ -56,7 +56,7 @@ Windows Presentation Foundation (WPF) 控件可以进行逻辑分组为多个类
 - <xref:System.Windows.Controls.WrapPanel>  
   
 ## <a name="buttons"></a>按钮  
- 按钮是最基本的用户界面控件之一。 应用程序通常执行中的某些任务<xref:System.Windows.Controls.Primitives.ButtonBase.Click>当用户单击其上的事件。  
+ 按钮是最基本的用户界面控件之一。 当用户单击应用程序时，应用程序通常会在 @no__t 0 事件中执行一些任务。  
   
 - <xref:System.Windows.Controls.Button>  
   
@@ -171,7 +171,7 @@ Windows Presentation Foundation (WPF) 控件可以进行逻辑分组为多个类
 - <xref:System.Windows.Controls.SoundPlayerAction>  
   
 ## <a name="digital-ink"></a>数字墨迹  
- 数字墨迹控件提供对诸如墨迹查看和墨迹输入等 [!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)] 功能的集成支持。  
+ 数字墨迹控件为 Tablet PC 功能提供集成支持，如墨迹查看和墨迹输入。  
   
 - <xref:System.Windows.Controls.InkCanvas>  
   

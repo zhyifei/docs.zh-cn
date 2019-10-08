@@ -8,40 +8,40 @@ helpviewer_keywords:
 - queries [Visual Basic], Where
 - Where clause [Visual Basic]
 ms.assetid: 48b5c2c5-3181-429c-8545-894296798c89
-ms.openlocfilehash: 5632e69039baebb3d1f1fd90c04586d9e50fe40f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 404dd848058f7e5c9bc8a74b6d89df18c6c55fad
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945205"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005001"
 ---
 # <a name="where-clause-visual-basic"></a>Where 子句 (Visual Basic)
 指定查询的筛选条件。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```vb  
 Where condition  
 ```  
   
 ## <a name="parts"></a>部件  
  `condition`  
- 必需。 一个表达式，确定输出集合中是否包含在集合中的当前项的值。 该表达式的计算结果必须为`Boolean`的等效项或值`Boolean`值。 如果条件计算结果为`True`，该元素是包含在查询结果; 否则为查询结果中排除该元素。  
+ 必需。 确定集合中当前项的值是否包含在输出集合中的表达式。 表达式的计算结果必须为 `Boolean` 值或等效于 @no__t 1 值。 如果条件的计算结果为 `True`，则查询结果中将包含元素;否则，元素会从查询结果中排除。  
   
 ## <a name="remarks"></a>备注  
- `Where`子句，可以通过选择满足特定条件的元素来筛选查询数据。 元素的值会导致`Where`子句来计算结果为`True`包含在查询结果; 中排除其他元素。 使用中的表达式`Where`子句的计算结果必须为`Boolean`或等效于`Boolean`，如计算结果为一个整数`False`时其值为 0。 可以组合多个表达式以`Where`通过使用逻辑运算符，如子句`And`， `Or`， `AndAlso`， `OrElse`， `Is`，和`IsNot`。  
+ 使用 `Where` 子句可以通过仅选择符合特定条件的元素来筛选查询数据。 如果元素的值导致 `Where` 子句的计算结果为 `True`，则包含在查询结果中;排除其他元素。 在 `Where` 子句中使用的表达式的计算结果必须为 @no__t 1 或等效的 `Boolean`，例如，当其值为零时，计算结果为 `False` 的整数。 可以通过使用逻辑运算符（如 `And`、`Or`、`AndAlso`、`OrElse`、`Is` 和 `IsNot`）在 `Where` 子句中组合多个表达式。  
   
- 默认情况下，查询无法计算的表达式直到被访问，例如，当它们进行数据绑定或在进行循环访问时`For`循环。 因此，`Where`访问查询之前不计算子句。 如果您具有值的查询中使用的外部`Where`子句，确保适当的值在中使用`Where`子句在执行查询的时间。 有关执行查询的详细信息，请参阅[编写你的第一个 LINQ 查询](../../../visual-basic/programming-guide/concepts/linq/writing-your-first-linq-query.md)。  
+ 默认情况下，在访问查询表达式之前，不会对其进行计算（例如，当它们在 `For` 循环中进行数据绑定或循环访问时）。 因此，在访问查询之前，不会计算 `Where` 子句。 如果在 `Where` 子句中使用的查询外部存在值，请确保在执行查询时在 `Where` 子句中使用适当的值。 有关查询执行的详细信息，请参阅[编写第一个 LINQ 查询](../../../visual-basic/programming-guide/concepts/linq/writing-your-first-linq-query.md)。  
   
- 可以调用中的函数`Where`子句执行计算或操作的值从集合中的当前元素。 调用函数`Where`子句可能会导致立即定义后而不是受访问时执行的查询。 有关执行查询的详细信息，请参阅[编写你的第一个 LINQ 查询](../../../visual-basic/programming-guide/concepts/linq/writing-your-first-linq-query.md)。  
+ 可以在 `Where` 子句中调用函数，以对集合中的当前元素中的值执行计算或运算。 调用 `Where` 子句中的函数可能会导致在定义查询时（而不是在访问时）立即执行查询。 有关查询执行的详细信息，请参阅[编写第一个 LINQ 查询](../../../visual-basic/programming-guide/concepts/linq/writing-your-first-linq-query.md)。  
   
 ## <a name="example"></a>示例  
- 下面的查询中使用表达式`From`子句来声明范围变量`cust`每个`Customer`对象中`customers`集合。 `Where`子句使用的范围变量将输出限制为客户，从指定的区域。 `For Each`循环显示查询结果中的每个客户的公司名称。  
+ 下面的查询表达式使用 `From` 子句为 @no__t 集合中的每个 `Customer` 对象声明一个范围变量 `cust`。 @No__t-0 子句使用范围变量将输出限制为指定区域的客户。 @No__t-0 循环显示查询结果中每个客户的公司名称。  
   
  [!code-vb[VbSimpleQuerySamples#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#23)]  
   
 ## <a name="example"></a>示例  
- 下面的示例使用`And`并`Or`中的逻辑运算符`Where`子句。  
+ 下面的示例使用了 `Where` 子句中的 @no__t 0 和 @no__t 逻辑运算符。  
   
  [!code-vb[VbSimpleQuerySamples#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#31)]  
   

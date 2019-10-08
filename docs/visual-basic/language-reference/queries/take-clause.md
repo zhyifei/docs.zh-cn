@@ -8,37 +8,37 @@ helpviewer_keywords:
 - queries [Visual Basic], Take
 - Take clause [Visual Basic]
 ms.assetid: 77bf87b2-1476-4456-957f-fee922fbad8c
-ms.openlocfilehash: cb109eaf43fee19b77ac690492b85919c9d78301
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 32a4c7fd7f1e2f6fe640f3f53f15579f014759d5
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62054388"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72004717"
 ---
 # <a name="take-clause-visual-basic"></a>Take 子句 (Visual Basic)
 从集合的开头返回指定数量的连续元素。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```vb  
 Take count  
 ```  
   
 ## <a name="parts"></a>部件  
  `count`  
- 必需。 一个值或表达式的计算结果为要返回的序列的元素数量。  
+ 必需。 值或计算结果为要返回的序列的元素数的表达式。  
   
 ## <a name="remarks"></a>备注  
- `Take`子句会使查询，以便包括指定的数量的结果列表的开始的连续元素。 指定要包括的元素数`count`参数。  
+ @No__t-0 子句使查询包括从结果列表的开头开始的指定数量的连续元素。 要包括的元素数由 `count` 参数指定。  
   
- 可以使用`Take`子句与`Skip`子句从查询的任何段返回一系列数据。 若要执行此操作，将传递到范围内的第一个元素的索引`Skip`子句和范围的大小`Take`子句。 在这种情况下，`Take`子句必须指定后`Skip`子句。  
+ 可以将 `Take` 子句与 `Skip` 子句一起使用，以从查询的任何段返回数据范围。 为此，请将范围的第一个元素的索引传递到 `Skip` 子句，并将范围的大小传递到 @no__t 的子句。 在这种情况下，必须在 @no__t 1 子句之后指定 `Take` 子句。  
   
- 当你使用`Take`查询中的子句，您可能还需要确保将启用的顺序返回结果`Take`子句，以包括预期的结果。 对查询结果进行排序的详细信息，请参阅[Order By 子句](../../../visual-basic/language-reference/queries/order-by-clause.md)。  
+ 当在查询中使用 `Take` 子句时，您可能还需要确保按使 `Take` 子句包含预期结果的顺序返回结果。 有关对查询结果进行排序的详细信息，请参阅[Order By 子句](../../../visual-basic/language-reference/queries/order-by-clause.md)。  
   
- 可以使用`TakeWhile`子句来指定只有某些元素返回，具体取决于提供的条件。  
+ 您可以使用 `TakeWhile` 子句来指定仅返回某些元素，具体取决于所提供的条件。  
   
 ## <a name="example"></a>示例  
- 下面的代码示例使用`Take`子句一起使用`Skip`子句，以从页中的查询返回的数据。 GetCustomers 函数使用`Skip`子句以跳过列表中的客户，直到提供的起始索引值，并使用`Take`子句返回的客户从该索引值开始页。  
+ 下面的代码示例将 `Take` 子句与 @no__t 子句一起使用，以便在页中从查询返回数据。 GetCustomers 函数使用 `Skip` 子句来绕过列表中的客户，直至提供起始索引值，并使用 `Take` 子句返回从该索引值开始的客户页面。  
   
  [!code-vb[VbSimpleQuerySamples#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#1)]  
   

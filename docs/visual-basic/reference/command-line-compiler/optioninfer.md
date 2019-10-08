@@ -8,23 +8,23 @@ helpviewer_keywords:
 - /optioninfer compiler option [Visual Basic]
 - optioninfer compiler option [Visual Basic]
 ms.assetid: f6c09db1-0553-464a-abe3-d4510c61d6ed
-ms.openlocfilehash: 4848dec148bc528e7a30940643e3364f1bb5f805
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c6fc7e9dcfbce938ad75b0f357c2bfa9cd10703a
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69939200"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005323"
 ---
 # <a name="-optioninfer"></a>-optioninfer
 允许在变量声明中使用局部类型推理。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```console  
 -optioninfer[+ | -]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
   
 |术语|定义|  
 |---|---|  
@@ -34,13 +34,13 @@ ms.locfileid: "69939200"
 > 你可使用 `-noconfig` 选项来保留编译器的内部默认值(而非在 vbc.rsp 中指定的那些值）。 此选项默认的编译器是 `-optioninfer-`。  
   
 ## <a name="remarks"></a>备注  
- 如果源代码文件包含[选项推断语句](../../../visual-basic/language-reference/statements/option-infer-statement.md), 则语句将重写`-optioninfer`命令行编译器设置。  
+ 如果源代码文件包含[选项推断语句](../../../visual-basic/language-reference/statements/option-infer-statement.md)，则该语句将重写 `-optioninfer` 命令行编译器设置。  
   
 ### <a name="to-set--optioninfer-in-the-visual-studio-ide"></a>在 Visual Studio IDE 中设置-optioninfer  
   
 1. 在**解决方案资源管理器**中选择一个项目。 在“项目”菜单上，单击“属性”。  
   
-2. 在 "**编译**" 选项卡上, 修改 "**选项推断**框" 中的值。  
+2. 在 "**编译**" 选项卡上，修改 "**选项推断**框" 中的值。  
   
 ## <a name="example"></a>示例  
  以下代码在启用局部类型推理的情况下编译 `test.vb`。  

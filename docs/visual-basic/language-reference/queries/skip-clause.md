@@ -8,37 +8,37 @@ helpviewer_keywords:
 - Skip statement [Visual Basic]
 - Skip clause [Visual Basic]
 ms.assetid: f00eb172-3907-4c43-9745-d8546ab86234
-ms.openlocfilehash: db2d79596895505ddaa7778e831082a94c7ad44e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e52de186e1475bfabd02821a0cd2384d8350eed3
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945244"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72004762"
 ---
 # <a name="skip-clause-visual-basic"></a>Skip 子句 (Visual Basic)
 绕过集合中指定数量的元素，然后返回剩余的元素。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```vb  
 Skip count  
 ```  
   
 ## <a name="parts"></a>部件  
  `count`  
- 必需。 一个值或表达式的计算结果为要跳过序列中的元素数。  
+ 必需。 值或计算结果为要跳过的序列的元素数的表达式。  
   
 ## <a name="remarks"></a>备注  
- `Skip`子句会使查询以绕过在结果列表的开始处的元素并返回剩余元素。 要跳过的元素数由`count`参数。  
+ @No__t-0 子句导致查询跳过结果列表开头的元素，并返回剩余的元素。 要跳过的元素数由 `count` 参数标识。  
   
- 可以使用`Skip`子句与`Take`子句从查询的任何段返回一系列数据。 若要执行此操作，将传递到范围内的第一个元素的索引`Skip`子句和范围的大小`Take`子句。  
+ 可以将 `Skip` 子句与 `Take` 子句一起使用，以从查询的任何段返回数据范围。 为此，请将范围的第一个元素的索引传递到 `Skip` 子句，并将范围的大小传递到 @no__t 的子句。  
   
- 当你使用`Skip`查询中的子句，您可能还需要确保将启用的顺序返回结果`Skip`子句，以绕过预期的结果。 对查询结果进行排序的详细信息，请参阅[Order By 子句](../../../visual-basic/language-reference/queries/order-by-clause.md)。  
+ 在查询中使用 `Skip` 子句时，您可能还需要确保按允许 `Skip` 子句跳过预期结果的顺序返回结果。 有关对查询结果进行排序的详细信息，请参阅[Order By 子句](../../../visual-basic/language-reference/queries/order-by-clause.md)。  
   
- 可以使用`SkipWhile`子句来指定只有某些元素将忽略，具体取决于提供的条件。  
+ 您可以使用 `SkipWhile` 子句来指定仅忽略某些元素，具体取决于所提供的条件。  
   
 ## <a name="example"></a>示例  
- 下面的代码示例使用`Skip`子句一起使用`Take`子句，以从页中的查询返回的数据。 `GetCustomers`函数使用`Skip`子句，以跳过列表中的客户，直到提供的起始索引值，并使用`Take`子句返回的客户从该索引值开始页。  
+ 下面的代码示例将 `Skip` 子句与 @no__t 子句一起使用，以便在页中从查询返回数据。 @No__t-0 函数使用 `Skip` 子句来绕过列表中的客户，直至提供的起始索引值，并使用 `Take` 子句返回从该索引值开始的客户页面。  
   
  [!code-vb[VbSimpleQuerySamples#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#1)]  
   

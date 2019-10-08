@@ -6,35 +6,35 @@ f1_keywords:
 helpviewer_keywords:
 - Const statement [Visual Basic]
 ms.assetid: 495b318d-b7c5-4198-94f8-0790a541b07a
-ms.openlocfilehash: 9d2e0c7b2b81a79f95fa852b3975f4512d87f8e0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 522ac71767707ae90a3f1d11d45ef8b29471ae6c
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623996"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005121"
 ---
 # <a name="const-statement-visual-basic"></a>Const 语句 (Visual Basic)
 声明和定义一个或多个常量。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```vb  
 [ <attributelist> ] [ accessmodifier ] [ Shadows ]   
 Const constantlist  
 ```  
   
 ## <a name="parts"></a>部件  
  `attributelist`  
- 可选。 此语句中声明的属性适用于所有常量的列表。 请参阅[属性列表](../../../visual-basic/language-reference/statements/attribute-list.md)括进尖括号 ("`<`"和"`>`")。  
+ 可选。 应用于此语句中声明的所有常量的特性列表。 请参阅尖括号中的[属性列表](../../../visual-basic/language-reference/statements/attribute-list.md)（"`<`" 和 "`>`"）。  
   
  `accessmodifier`  
- 可选。 用于指定哪些代码可以访问这些常量。 可以是[公共](../../../visual-basic/language-reference/modifiers/public.md)，[受保护](../../../visual-basic/language-reference/modifiers/protected.md)，[友元](../../../visual-basic/language-reference/modifiers/friend.md)， [Protected Friend](../modifiers/protected-friend.md)，[专用](../../../visual-basic/language-reference/modifiers/private.md)，或[专用受保护](../../language-reference/modifiers/private-protected.md)。
+ 可选。 用于指定哪些代码可以访问这些常量。 可以是[公共](../../../visual-basic/language-reference/modifiers/public.md)、[受保护](../../../visual-basic/language-reference/modifiers/protected.md)、[朋友](../../../visual-basic/language-reference/modifiers/friend.md)、[受保护的朋友](../modifiers/protected-friend.md)、[私有](../../../visual-basic/language-reference/modifiers/private.md)或[私有保护](../../language-reference/modifiers/private-protected.md)的。
   
  `Shadows`  
- 可选。 使用此方法将重新声明并隐藏基类中的编程元素。 请参阅[Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)。  
+ 可选。 用于在基类中重新声明和隐藏编程元素。 请参阅[阴影](../../../visual-basic/language-reference/modifiers/shadows.md)。  
   
  `constantlist`  
- 必需。 此语句中声明的常量的列表。  
+ 必需。 在此语句中声明的常量的列表。  
   
  `constant` `[ ,` `constant` `... ]`  
   
@@ -45,59 +45,59 @@ Const constantlist
 |部件|描述|  
 |----------|-----------------|  
 |`constantname`|必需。 常数的名称。 请参阅 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。|  
-|`datatype`|需要`Option Strict`是`On`。 常量的数据类型。|  
-|`initializer`|必需。 在编译时计算和分配给常量的表达式。|  
+|`datatype`|如果 `Option Strict` @no__t，则为必需。 常量的数据类型。|  
+|`initializer`|必需。 在编译时计算并分配给常量的表达式。|  
   
 ## <a name="remarks"></a>备注  
- 如果在应用程序中有一个值，永远不会更改，可以定义一个命名的常量和用它代替文字值。 系统会更容易记忆于值名称。 您可以只需一次定义常量和在代码中在多个位置使用它。 如果需要更高版本中重新定义的值，`Const`语句是您需要进行更改的唯一位置。  
+ 如果你的应用程序中有一个永不更改的值，则可以定义一个已命名的常量，并将其用于替代文本值。 名称比值更易于记忆。 可以仅定义一次常数，并在代码中的多个位置使用它。 如果在更高版本中，需要重新定义值，只需进行一项更改 `Const` 语句即可。  
   
- 可以使用`Const`仅在模块或过程的级别。 这意味着*声明上下文*变量必须是类、 结构、 模块、 过程或块，并且不能是源文件、 命名空间或接口。 有关详细信息，请参阅[声明上下文和默认访问级别](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)。  
+ 只能在模块或过程级别使用 `Const`。 这意味着变量的*声明上下文*必须是类、结构、模块、过程或块，而不能是源文件、命名空间或接口。 有关详细信息，请参阅[声明上下文和默认访问级别](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)。  
   
- 局部常量 （在对过程） 默认为公共访问权限，并且您不能对其使用任何访问修饰符。 类和模块成员 （任何过程之外） 的常量默认为私有访问和结构成员常量默认为公共访问权限。 您可以调整其访问级别和访问修饰符。  
+ 本地常量（在过程中）默认为公共访问，不能对其使用任何访问修饰符。 类和模块成员常量（任何过程外部）默认为私有访问，结构成员常量默认为公共访问。 您可以使用访问修饰符调整其访问级别。  
   
 ## <a name="rules"></a>规则  
   
-- **声明上下文。** 常量是在模块级别，在任何过程中，外部声明*成员常量*; 它是类、 结构的成员或声明其模块。  
+- **声明上下文。** 在任何过程之外，在模块级别声明的常量是*成员常量*;它是声明它的类、结构或模块的成员。  
   
-     在过程级别声明的常量是*的局部常量*; 它是本地的过程或声明它的块。  
+     在过程级别声明的常量是*局部常量*;它在声明它的过程或块的本地。  
   
-- **特性。** 可以将特性应用于成员常数上，而不是局部常量。 特性提供信息对程序集的元数据，这并无意义的局部常量如临时存储。  
+- **属性.** 仅可将属性应用于成员常量，而不能应用于局部常数。 特性向程序集的元数据提供信息，这对于临时存储（如本地常量）没有意义。  
   
-- **修饰符。** 默认情况下，所有常量都均`Shared`， `Static`，和`ReadOnly`。 声明常量时，不能使用任何这些关键字。  
+- **组成.** 默认情况下，所有常量都 `Shared`、`Static` 和 `ReadOnly`。 在声明常数时不能使用任何这些关键字。  
   
-     在过程级别不能使用`Shadows`或任何访问修饰符来声明局部常量。  
+     在过程级别，不能使用 @no__t 0 或任何访问修饰符来声明局部常量。  
   
-- **多个常量。** 您可以声明多个常量在相同的声明语句中，指定`constantname`为每个部分。 由逗号分隔多个常量。  
+- **多个常量。** 可以在同一声明语句中声明多个常量，并为每个常量指定 @no__t 0 部分。 多个常量用逗号分隔。  
   
-## <a name="data-type-rules"></a>数据类型的规则  
+## <a name="data-type-rules"></a>数据类型规则  
   
-- **数据类型。** `Const`语句可以声明一个变量的数据类型。 您可以指定任何数据类型或枚举的名称。  
+- **数据类型。** @No__t-0 语句可以声明变量的数据类型。 您可以指定任何数据类型或枚举的名称。  
   
-- **默认类型。** 如果未指定`datatype`，该常量将的数据类型`initializer`。 如果同时指定`datatype`并`initializer`的数据类型`initializer`必须可转换为`datatype`。 如果既没有`datatype`也不`initializer`存在，则数据类型默认为`Object`。  
+- **默认类型。** 如果不指定 `datatype`，则常量将采用 `initializer` 的数据类型。 如果同时指定 @no__t 0 和 `initializer`，`initializer` 的数据类型必须可转换为 `datatype`。 如果 `datatype` 和 @no__t 均不存在，则数据类型默认为 `Object`。  
   
-- **不同类型。** 可以通过使用单独指定不同的数据类型为不同的常量`As`子句为每个声明的变量。 但是，不能声明为相同类型的通过使用一种常见的多个常量`As`子句。  
+- **不同类型。** 你可以为不同的常量指定不同的数据类型，为你声明的每个变量使用单独的 @no__t 0 子句。 但是，不能使用常见的 @no__t 0 子句声明多个常量为同一类型。  
   
-- **初始化。** 必须初始化中的每个常量的值`constantlist`。 您使用`initializer`来提供要分配给常量的表达式。 表达式可以是文本、 其他已定义的常量和枚举成员的已定义的任意组合。 可以使用算术和逻辑运算符来组合这些元素。  
+- **起始.** 必须在 `constantlist` 中初始化每个常量的值。 使用 `initializer` 来提供要分配给常量的表达式。 表达式可以是文本的任意组合、已经定义的其他常数以及已定义的枚举成员。 可以使用算术运算符和逻辑运算符来合并此类元素。  
   
-     不能使用变量或函数中的`initializer`。 但是，可以使用转换关键字如`CByte`和`CShort`。 此外可以使用`AscW`如果调用与常量`String`或`Char`参数，因为可以在编译时计算。  
+     不能使用 `initializer` 中的变量或函数。 但是，可以使用转换关键字，如 `CByte` 和 `CShort`。 如果使用常量 `String` 或 `Char` 参数调用它，则还可以使用 `AscW`，因为可以在编译时计算。  
   
 ## <a name="behavior"></a>行为  
   
-- **作用域。** 局部常量仅从内部来访问它们的过程或块。 成员常量是可从其类、 结构或模块内任意位置访问。  
+- **内.** 本地常量只能从其过程或块中访问。 成员常量可从其类、结构或模块中的任何位置进行访问。  
   
-- **限定。** 代码类之外，结构或模块必须限定成员常量的名称，并且该类、 结构或模块的名称。 过程或块不能引用在该过程或块中任何局部常量之外的代码。  
+- **限定.** 类、结构或模块外的代码必须使用该类、结构或模块的名称来限定成员常量的名称。 过程或块外的代码不能引用该过程或块中的任何本地常数。  
   
 ## <a name="example"></a>示例  
- 下面的示例使用`Const`语句声明用于代替文字值的常量。  
+ 下面的示例使用 `Const` 语句声明用于替代文本值的常量。  
   
  [!code-vb[VbVbalrStatements#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#13)]  
   
 ## <a name="example"></a>示例  
- 如果数据类型定义一个常量`Object`，Visual Basic 编译器为其提供的类型`initializer`，而不是`Object`。 在下面的示例中，常量`naturalLogBase`具有运行时类型`Decimal`。  
+ 如果定义数据类型为 `Object` 的常量，则 Visual Basic 编译器会为其提供 @no__t 类型，而不是 `Object`。 在下面的示例中，常量 `naturalLogBase` @no__t 为-1。  
   
  [!code-vb[VbVbalrStatements#87](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#87)]  
   
- 前面的示例使用<xref:System.Type.ToString%2A>方法<xref:System.Type>返回的对象[GetType 运算符](../../../visual-basic/language-reference/operators/gettype-operator.md)，这是因为<xref:System.Type>无法转换为`String`使用`CStr`。  
+ 前面的示例在由[GetType 运算符](../../../visual-basic/language-reference/operators/gettype-operator.md)返回的 <xref:System.Type> 对象上使用 <xref:System.Type.ToString%2A> 方法，因为 @no__t 不能使用 @no__t 5 转换为 `String`。  
   
 ## <a name="see-also"></a>请参阅
 

@@ -8,27 +8,27 @@ helpviewer_keywords:
 - Distinct statement [Visual Basic]
 - queries [Visual Basic], Distinct
 ms.assetid: 86f42614-0d8f-4ffc-b888-ce8a37a8d36a
-ms.openlocfilehash: fbca9fa8aa227d8d5b6488bef179f4bda08bb38c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e8d3e38261a04c4d29faab351d24d6710413b09a
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945348"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72004791"
 ---
 # <a name="distinct-clause-visual-basic"></a>Distinct 子句 (Visual Basic)
-将当前的范围变量，以消除重复值在后续查询子句中的值限制。  
+限制当前范围变量的值，以消除后面的查询子句中的重复值。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```vb  
 Distinct  
 ```  
   
 ## <a name="remarks"></a>备注  
- 可以使用`Distinct`子句返回唯一项的列表。 `Distinct`子句会使查询以忽略重复的查询结果。 `Distinct`子句应用到重复的值的所有返回指定的字段`Select`子句。 如果没有`Select`指定子句，则`Distinct`子句应用于查询中标识的范围变量`From`子句。 如果范围变量不是不可变类型，查询将只会忽略查询结果，如果该类型的所有成员都匹配现有的查询结果。  
+ 您可以使用 `Distinct` 子句返回唯一项的列表。 @No__t-0 子句使查询忽略重复的查询结果。 @No__t-0 子句适用于 @no__t 子句指定的所有返回字段的重复值。 如果未指定 `Select` 子句，则 @no__t 子句将应用到 `From` 子句中标识的查询的范围变量。 如果范围变量不是不可变类型，则当该类型的所有成员均与现有查询结果匹配时，该查询将忽略查询结果。  
   
 ## <a name="example"></a>示例  
- 下面的查询表达式联接客户列表和客户订单的列表。 `Distinct`子句是包括在内，以返回的唯一客户名称列表，并且订单日期。  
+ 下面的查询表达式将联接列表和客户订单列表。 包含 `Distinct` 子句以返回唯一客户名称和订单日期的列表。  
   
  [!code-vb[VbSimpleQuerySamples#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#20)]  
   

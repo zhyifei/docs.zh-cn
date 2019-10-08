@@ -9,46 +9,46 @@ helpviewer_keywords:
 - -vbruntime compiler option [Visual Basic]
 - /vbruntime compiler option [Visual Basic]
 ms.assetid: 1aa0239e-511a-4c29-957d-fd72877b350a
-ms.openlocfilehash: 56ea692d6e65d94c497fbc9406e03b40648c55a2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8c7789c6af7b82ecb40ecd73d09f64aa1da3fd4b
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663497"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005052"
 ---
 # <a name="-vbruntime"></a>-vbruntime
 指定编译器应在不引用 Visual Basic 运行库的情况下进行编译，或在引用特定运行库的情况下进行编译。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```console  
 -vbruntime:{ - | + | * | path }  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  \-  
- 编译而无需对 Visual Basic 运行时库的引用。  
+ 在不引用 Visual Basic 运行时库的情况下编译。  
   
  \+  
- 使用默认的 Visual Basic 运行时库的引用进行编译。  
+ 使用对默认 Visual Basic 运行时库的引用进行编译。  
   
  \*  
- 对 Visual Basic 运行时库的引用的情况下编译，嵌入到程序集从 Visual Basic 运行时库的核心功能。  
+ 在不引用 Visual Basic 运行时库的情况下进行编译，并将 Visual Basic 运行时库中的核心功能嵌入到程序集中。  
   
  `path`  
- 使用指定的库 (DLL) 的引用进行编译。  
+ 使用对指定库（DLL）的引用进行编译。  
   
 ## <a name="remarks"></a>备注  
- `-vbruntime`编译器选项可用于指定编译器应编译而无需对 Visual Basic 运行时库的引用。 如果编译而无需对 Visual Basic 运行时库的引用，在代码或语言生成 Visual Basic 运行时帮助器调用的构造记录错误或警告。 (A *Visual Basic 运行时帮助器*是在运行时执行特定的语言语义时调用的 Microsoft.VisualBasic.dll 中定义的函数。)  
+ 使用 `-vbruntime` 编译器选项，可以指定编译器应在不引用 Visual Basic 运行库的情况下编译。 如果在不引用 Visual Basic 运行时库的情况下进行编译，则会记录生成对 Visual Basic 运行时帮助程序的调用的代码或语言构造的错误或警告。 （ *Visual Basic 运行时帮助器*是一个在运行时调用的函数，用于执行特定的语言语义。）  
   
- `-vbruntime+`选项将生成相同的行为，如果不会发生`-vbruntime`指定开关。 可以使用`-vbruntime+`选项重写之前`-vbruntime`开关。  
+ @No__t-0 选项将产生与未指定 @no__t 1 开关时发生的相同行为。 你可以使用 `-vbruntime+` 选项来重写以前的 @no__t 1 开关。  
   
- 大多数对象的`My`使用时，类型将不可用`-vbruntime-`或`-vbruntime:path`选项。  
+ 使用 @no__t 或 @no__t 2 选项时，@no__t 0 类型的大多数对象不可用。  
   
-## <a name="embedding-visual-basic-runtime-core-functionality"></a>嵌入 Visual Basic 运行时的核心功能  
- `-vbruntime*`选项使你能够编译而无需对运行时库的引用。 相反，从 Visual Basic 运行时库的核心功能嵌入用户程序集。 如果你的应用程序在不包含 Visual Basic 运行时的平台上运行，可以使用此选项。  
+## <a name="embedding-visual-basic-runtime-core-functionality"></a>嵌入 Visual Basic 运行时核心功能  
+ 使用 @no__t 的选项，可以在不引用运行库的情况下编译。 相反，将 Visual Basic 运行时库中的核心功能嵌入用户程序集。 如果你的应用程序在不包含 Visual Basic 运行时的平台上运行，则可以使用此选项。  
   
- 嵌入以下运行时成员：  
+ 以下运行时成员嵌入：  
   
 - <xref:Microsoft.VisualBasic.CompilerServices.Conversions> 类  
   
@@ -78,17 +78,17 @@ ms.locfileid: "64663497"
   
 - <xref:Microsoft.VisualBasic.Constants.vbVerticalTab> 常量  
   
-- 某些对象`My`类型  
+- @No__t 类型的某些对象  
   
- 如果在编译时使用`-vbruntime*`选项和您的代码未使用的核心功能嵌入的 Visual Basic 运行时库中引用的成员，编译器将返回错误，指示该成员不可用。  
+ 如果使用 `-vbruntime*` 选项进行编译，并且你的代码引用了未嵌入核心功能的 Visual Basic 运行时库中的成员，则编译器将返回一个错误，指示该成员不可用。  
   
-## <a name="referencing-a-specified-library"></a>引用的指定的库  
- 可以使用`path`参数来编译到自定义运行时库而不是默认 Visual Basic 运行时库的引用。  
+## <a name="referencing-a-specified-library"></a>引用指定的库  
+ 您可以使用 @no__t 参数通过对自定义运行库的引用进行编译，而不是使用默认 Visual Basic 运行时库。  
   
- 如果的值为`path`参数为 DLL 的完全限定的路径时，编译器将使用该文件作为运行时库。 如果的值为`path`参数不是 DLL 的完全限定的路径，Visual Basic 编译器将首先搜索当前文件夹中标识的 DLL。 它并将在你通过使用指定的路径中搜索[-sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md)编译器选项。 如果`-sdkpath`未使用编译器选项时，编译器将搜索标识 dll 中的.NET Framework 文件夹 (`%systemroot%\Microsoft.NET\Framework\versionNumber`)。  
+ 如果 @no__t 参数的值是 DLL 的完全限定路径，则编译器将使用该文件作为运行时库。 如果 @no__t 参数的值不是 DLL 的完全限定路径，则 Visual Basic 编译器将首先在当前文件夹中搜索标识的 DLL。 然后，它将在你使用[-sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md)编译器选项指定的路径中进行搜索。 如果未使用 `-sdkpath` 编译器选项，编译器将在 .NET Framework 文件夹（`%systemroot%\Microsoft.NET\Framework\versionNumber`）中搜索标识的 DLL。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何使用`-vbruntime`选项使用对自定义库的引用进行编译。  
+ 下面的示例演示如何使用 `-vbruntime` 选项进行编译，使其引用自定义库。  
   
 ```console
 vbc -vbruntime:C:\VBLibraries\CustomVBLibrary.dll  
@@ -96,7 +96,7 @@ vbc -vbruntime:C:\VBLibraries\CustomVBLibrary.dll
   
 ## <a name="see-also"></a>请参阅
 
-- [Visual Basic 核心 – Visual Studio 2010 SP1 中新的编译模式](https://devblogs.microsoft.com/vbteam/vb-core-new-compilation-mode-in-visual-studio-2010-sp1/)
+- [Visual Basic 核心– Visual Studio 2010 SP1 中的新编译模式](https://devblogs.microsoft.com/vbteam/vb-core-new-compilation-mode-in-visual-studio-2010-sp1/)
 - [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)
 - [示例编译命令行](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
 - [-sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md)

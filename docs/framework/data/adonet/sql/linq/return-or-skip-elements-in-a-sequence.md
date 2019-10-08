@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 81a31acd-e0f1-4bca-9a12-fa1ad5752374
-ms.openlocfilehash: a5c32afc913443787ad8371f31f1fe330b126398
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 7c98681493738b4e94ed14417fa1437efb6c12ac
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70792756"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72003308"
 ---
 # <a name="return-or-skip-elements-in-a-sequence"></a>返回或跳过序列中的元素
 使用 <xref:System.Linq.Queryable.Take%2A> 运算符可返回序列中给定数目的元素，然后跳过其余元素。  
@@ -49,16 +49,16 @@ ms.locfileid: "70792756"
  由于 SQL 中的排序存在限制，因此 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 会设法将 <xref:System.Linq.Queryable.Take%2A> 或 <xref:System.Linq.Queryable.Skip%2A> 运算符的参数的排序操作移到相应运算符的结果中进行。  
   
 > [!NOTE]
-> SQL Server 2000 和 SQL Server 2005 的转换不同。 如果你计划将与<xref:System.Linq.Queryable.Skip%2A>查询结合使用，请使用 SQL Server 2005。  
+> SQL Server 2000 和 SQL Server 2005 的转换不同。 如果你计划将 <xref:System.Linq.Queryable.Skip%2A> 与任何复杂性的查询一起使用，请使用 SQL Server 2005。  
   
- 对于 SQL Server 2000 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ，请考虑以下查询：  
+ 请考虑以下 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 查询 SQL Server 2000：  
   
  [!code-csharp[DLinqQueryExamples#19](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#19)]
  [!code-vb[DLinqQueryExamples#19](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#19)]  
   
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 将排序操作移到 SQL 代码的结尾进行，如下所示：  
   
-```  
+```sql
 SELECT TOP 1 [t0].[CustomerID], [t0].[CompanyName],  
 FROM [Customers] AS [t0]  
 WHERE (NOT (EXISTS(  

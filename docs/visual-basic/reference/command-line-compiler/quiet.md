@@ -9,12 +9,12 @@ helpviewer_keywords:
 - /quiet compiler option [Visual Basic]
 - quiet compiler option [Visual Basic]
 ms.assetid: 5d77fa23-4c50-4708-8535-649912b098e8
-ms.openlocfilehash: a22773e2e37eb60ab6f1e88305266f41764311e7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6e773c60469e8426956c92a5aa377741ba5af4d3
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788838"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005277"
 ---
 # <a name="-quiet"></a>-quiet
 
@@ -22,15 +22,15 @@ ms.locfileid: "61788838"
 
 ## <a name="syntax"></a>语法
 
-```
+```console
 -quiet
 ```
 
 ## <a name="remarks"></a>备注
 
-默认情况，`-quiet` 是无效的。 当编译器报告相关的语法错误或警告时，它还将输出从源代码行。 对于分析编译器输出的应用程序，它可能会更方便的编译器输出的诊断的文本。
+默认情况，`-quiet` 是无效的。 当编译器报告与语法相关的错误或警告时，它还会输出源代码中的行。 对于分析编译器输出的应用程序，编译器仅输出诊断文本可能更方便。
 
-在以下示例中，`Module1`输出的错误包括源代码，而无需在编译时`-quiet`。
+在下面的示例中，`Module1` 会输出一个错误，该错误在编译时不 @no__t 为-1 时包含源代码。
 
 ```vb
 Module Module1
@@ -49,20 +49,20 @@ C:\projects\vb2.vb(3) : error BC30451: 'x' is not declared. It may be inaccessib
         ~
 ```
 
-使用编译`-quiet`，编译器只输出如下：
+用 `-quiet` 编译时，编译器仅输出以下内容：
 
-```
+```console
 E:\test\t2.vb(3) : error BC30451: Name 'x' is not declared.
 ```
 
 > [!NOTE]
-> `-quiet`选项不适用于从 Visual Studio 开发环境中，仅当从命令行编译时便可。
+> 在 Visual Studio 开发环境中，不能使用 `-quiet` 选项;仅当从命令行进行编译时，它才可用。
 
 ## <a name="example"></a>示例
 
-下面的代码编译`T2.vb`，不会显示相关的语法的编译器诊断的代码：
+下面的代码编译 `T2.vb`，并且不显示与语法相关的编译器诊断的代码：
 
-```
+```console
 vbc -quiet t2.vb
 ```
 

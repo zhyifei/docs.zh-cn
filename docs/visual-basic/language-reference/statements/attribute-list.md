@@ -5,53 +5,53 @@ helpviewer_keywords:
 - attribute list
 - attributes [Visual Basic], applying
 ms.assetid: 5880073a-68a4-4b6b-8a07-ace32959a4e2
-ms.openlocfilehash: 378a6b1543181052c000fd58f7deeed88cabf1ad
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 771757afe214919649e13fda3990e1154be8e1e1
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622527"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72004528"
 ---
 # <a name="attribute-list-visual-basic"></a>特性列表 (Visual Basic)
-指定要应用于声明的编程元素的特性。 用逗号分隔多个属性。 下面是一个属性的语法。  
+指定要应用于已声明的编程元素的特性。 用逗号分隔多个属性。 下面是一个属性的语法。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```vb  
 [ attributemodifier ] attributename [ ( attributearguments | attributeinitializer ) ]  
 ```  
   
 ## <a name="parts"></a>部件  
 |||
 |---|---|
-|`attributemodifier`|所需应用的源代码文件开头的属性。 可以是[程序集](../../../visual-basic/language-reference/modifiers/assembly.md)或[模块](../../../visual-basic/language-reference/modifiers/module-keyword.md)。|
+|`attributemodifier`|应用于源文件开头的属性是必需的。 可以是[程序集](../../../visual-basic/language-reference/modifiers/assembly.md)或[模块](../../../visual-basic/language-reference/modifiers/module-keyword.md)。|
 |`attributename`| 必需。 属性的名称。|
-|`attributearguments`|可选。 为此特性的位置自变量的列表。 由逗号分隔多个自变量。|
-|`attributeinitializer`|可选。 此属性的变量或属性初始值设定项的列表。 由逗号分隔多个初始值设定项。|
+|`attributearguments`|可选。 此特性的位置自变量列表。 多个参数之间用逗号分隔。|
+|`attributeinitializer`|可选。 此特性的变量或属性初始值设定项的列表。 多个初始值设定项用逗号分隔。|
   
 ## <a name="remarks"></a>备注  
- 可以将一个或多个特性应用于几乎任何编程元素 （类型、 过程、 属性等）。 属性出现在程序集的元数据，并且它们可以帮助您批注代码，或指定如何使用特定的编程元素。 您可以应用由 Visual Basic 和.NET Framework 中，定义的特性，可以定义自己的属性。  
+ 可以将一个或多个属性应用于几乎所有编程元素（类型、过程、属性等）。 特性显示在程序集的元数据中，它们可帮助你批注代码或指定如何使用特定编程元素。 您可以应用 Visual Basic 和 .NET Framework 定义的属性，并且可以定义自己的属性。  
 
- 有关何时使用属性的详细信息，请参阅[的特性概述](../../../visual-basic/programming-guide/concepts/attributes/index.md)。 属性名称的信息，请参阅[声明的元素名称](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。  
+ 有关何时使用属性的详细信息，请参阅[属性概述](../../../visual-basic/programming-guide/concepts/attributes/index.md)。 有关属性名称的信息，请参阅已[声明的元素名称](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。  
   
 ## <a name="rules"></a>规则  
   
-- **放置。** 可以将特性应用于最声明的编程元素。 若要将应用一个或多个属性，将置于*特性块*元素声明的开头。 在属性列表中的每个条目指定你想要将应用，一个属性、 修饰符和自变量将用于此属性的调用。  
+- **虚拟.** 您可以将特性应用于大多数已声明的编程元素。 若要应用一个或多个特性，请将*特性块*置于元素声明的开头。 "属性" 列表中的每个条目指定要应用的属性，以及用于此属性调用的修饰符和参数。  
   
-- **尖括号。** 如果提供的属性列表，则必须将其括在尖括号中 ("`<`"和"`>`")。  
+- **尖括号。** 如果提供了属性列表，则必须将其括在尖括号中（"`<`" 和 "`>`"）。  
   
-- **声明的一部分。** 该属性必须是元素声明，而不是单独语句的一部分。 您可以使用行继续符序列 (" `_`") 来扩展到多个源代码行上的声明语句。  
+- **声明的一部分。** 特性必须是元素声明的一部分，而不是单独的语句。 您可以使用行继续符（"`_`"）将声明语句扩展到多个源代码行上。  
   
-- **修饰符。** 特性修饰符 (`Assembly`或`Module`) 上应用到编程元素中的源文件开头的每个属性必需的。 应用于不在源文件开头的元素的特性不允许出现特性修饰符。  
+- **组成.** 在源文件开头应用于编程元素的每个特性都需要属性修饰符（@no__t 0 或 `Module`）。 应用于不在源文件开头的元素的特性上不允许使用特性修饰符。  
   
-- **自变量。** 属性的所有位置参数必须位于任何变量或属性初始值设定项之前。  
+- **形参.** 特性的所有位置参数都必须在任何变量或属性初始值设定项之前。  
   
 ## <a name="example"></a>示例  
- 下面的示例应用<xref:System.Runtime.InteropServices.DllImportAttribute>属性的主干定义为`Function`过程。  
+ 下面的示例将 <xref:System.Runtime.InteropServices.DllImportAttribute> 属性应用于 @no__t 过程的主干定义。  
   
  [!code-vb[VbVbalrStatements#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#1)]  
   
- <xref:System.Runtime.InteropServices.DllImportAttribute> 指示特性化的过程表示非托管动态链接库 (DLL) 中的入口点。 该属性提供的 DLL 名称作为位置自变量和变量初始值设定项与其他信息。  
+ <xref:System.Runtime.InteropServices.DllImportAttribute> 指示特性化过程表示非托管动态链接库（DLL）中的入口点。 特性提供 DLL 名称作为位置参数，将其他信息作为变量初始值设定项提供。  
   
 ## <a name="see-also"></a>请参阅
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], binding to XML data using XmlDataProvider queries
 - binding [WPF], to XML data using XmlDataProvider queries
 ms.assetid: 7dcd018f-16aa-4870-8e47-c1b4ea31e574
-ms.openlocfilehash: 4833e024fcd352094a2163f11df8572aa4c241f8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d92b01c453a9e07a5d4a6d1900d54e8c86210041
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69944652"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005681"
 ---
 # <a name="how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries"></a>如何：使用 XMLDataProvider 和 XPath 查询绑定到 XML 数据
 此示例演示如何通过 <xref:System.Windows.Data.XmlDataProvider> 绑定到 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] 数据。  
@@ -40,11 +40,11 @@ ms.locfileid: "69944652"
   
 - `XPath="Book[@*]"` 将返回带有任意属性的所有 Book 元素。  
   
-- `XPath="Book[last()-1]"` 将返回第二个至最后一个 Book 元素（“Introducing Microsoft .NET”）。  
+- `XPath="Book[last()-1]"` 将返回倒数第二个 Book 元素（“Introducing Microsoft .NET”）。  
   
 - `XPath="*[position()>3]"` 将返回除前 3 个元素之外的所有 Book 元素。  
   
- 运行 **XPath** 查询时，它将返回 <xref:System.Xml.XmlNode> 或 XmlNode 的列表。 <xref:System.Xml.XmlNode>是公共语言运行时 (clr) 对象, 这意味着你可以使用<xref:System.Windows.Data.Binding.Path%2A>属性绑定到公共语言运行时 (clr) 属性。 再以上述示例为例。 如果该示例的其余部分保持不变，而你将 <xref:System.Windows.Controls.TextBlock> 绑定更改为如下所示，则会在 <xref:System.Windows.Controls.ListBox> 中看到返回的 XmlNode 的名称。 在此情况下，所有返回节点的名称为“*Book*”。  
+ 运行 **XPath** 查询时，它将返回 <xref:System.Xml.XmlNode> 或 XmlNode 的列表。 @no__t 为公共语言运行时（CLR）对象，这意味着可以使用 @no__t 属性来绑定到公共语言运行时（CLR）属性。 再以上述示例为例。 如果该示例的其余部分保持不变，而你将 <xref:System.Windows.Controls.TextBlock> 绑定更改为如下所示，则会在 <xref:System.Windows.Controls.ListBox> 中看到返回的 XmlNode 的名称。 在此情况下，所有返回节点的名称为“*Book*”。  
   
  [!code-xaml[XmlDataSourceVariation#XmlNodePath](~/samples/snippets/csharp/VS_Snippets_Wpf/XmlDataSourceVariation/CS/Page1.xaml#xmlnodepath)]  
   
@@ -52,7 +52,7 @@ ms.locfileid: "69944652"
   
  [!code-xaml[XMLDataSource2#XmlFileExample](~/samples/snippets/csharp/VS_Snippets_Wpf/XmlDataSource2/CS/Window1.xaml#xmlfileexample)]  
   
- 如果 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 数据驻留在远程 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 文件中，则可通过指定 <xref:System.Windows.Data.XmlDataProvider.Source%2A> 属性的相应 [!INCLUDE[TLA2#tla_url](../../../../includes/tla2sharptla-url-md.md)] 来定义对数据的访问权限，如下所示：  
+ 如果 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 数据驻留在远程 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 文件中，则可以通过为 <xref:System.Windows.Data.XmlDataProvider.Source%2A> 属性分配相应的 URL 来定义对数据的访问权限，如下所示：  
   
 ```xml  
 <XmlDataProvider x:Key="BookData" Source="http://MyUrl" XPath="Books"/>  

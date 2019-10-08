@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: 1f6a54f6-ec33-452a-a37d-48122207bf14
-ms.openlocfilehash: a74216c53c45790b974938c7155e0b5e1043ac13
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 7acce3f8483fab3c2978de7cbd1b9d875900f1d3
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70792283"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72003392"
 ---
 # <a name="walkthrough-manipulating-data-visual-basic"></a>演练：操作数据 (Visual Basic)
 本演练提供了用于在数据库中添加、修改和删除数据的基本端对端 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 方案。 您将使用 Northwind 示例数据库的一个副本来添加一位客户，更改该客户的姓名，然后删除一个订单。  
@@ -18,7 +18,7 @@ ms.locfileid: "70792283"
   
  本演练是使用 Visual Basic 开发设置编写的。  
   
-## <a name="prerequisites"></a>系统必备  
+## <a name="prerequisites"></a>先决条件  
  本演练需要如下内容：  
   
 - 本演练使用专用文件夹（“c:\linqtest2”）来保存文件。 请在开始本演练前创建此文件夹。  
@@ -38,7 +38,7 @@ ms.locfileid: "70792283"
 ## <a name="overview"></a>概述  
  本演练由六项主要任务组成：  
   
-- 在 Visual Studio 中创建解决方案。[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]  
+- 在 Visual Studio 中创建 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 解决方案。  
   
 - 向项目添加数据库代码文件。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "70792283"
 - 将这些更改提交至 Northwind 数据库。  
   
 ## <a name="creating-a-linq-to-sql-solution"></a>创建 LINQ to SQL 解决方案  
- 在第一个任务中，您将创建一个 Visual Studio 解决方案，其中包含生成和运行[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]项目所必需的引用。  
+ 在第一个任务中，您将创建一个 Visual Studio 解决方案，其中包含生成和运行 @no__t 0 项目所必需的引用。  
   
 #### <a name="to-create-a-linq-to-sql-solution"></a>创建 LINQ to SQL 解决方案  
   
@@ -66,7 +66,7 @@ ms.locfileid: "70792283"
 5. 单击 **“确定”** 。  
   
 ## <a name="adding-linq-references-and-directives"></a>添加 LINQ 引用和指令  
- 本演练用到默认情况下您的项目中可能未安装的程序集。 如果`System.Data.Linq`未在你的项目中列为引用（单击 "在**解决方案资源管理器**中**显示所有文件**" 并展开 "**引用**" 节点），请添加它，如以下步骤中所述。  
+ 本演练用到默认情况下您的项目中可能未安装的程序集。 如果 `System.Data.Linq` 未在您的项目中列为引用（单击 "显示**解决方案资源管理器**中的**所有文件**" 并展开 "**引用**" 节点），请添加它，如以下步骤中所述。  
   
 #### <a name="to-add-systemdatalinq"></a>添加 System.Data.Linq  
   
@@ -168,7 +168,7 @@ ms.locfileid: "70792283"
   
      控制台窗口显示如下：  
   
-    ```  
+    ```console
     Customers matching CA before update:  
     Customer ID: CACTU  
     Customer ID: RICAR  

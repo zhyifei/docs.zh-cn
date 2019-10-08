@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5a4ae2b4-3290-4aa1-bc95-fc70c51b54cf
-ms.openlocfilehash: 31797ae7d0fe23227cc4af733fbceac5d474f779
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: c4b5290e4f1aa69c7f55951d526ccb303a5a95ec
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70781442"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72003184"
 ---
 # <a name="how-to-use-table-valued-user-defined-functions"></a>如何：使用表值用户定义的函数
 表值函数返回单个行集（与存储过程不同，存储过程可返回多个结果形状）。 由于表值函数的返回类型为 `Table`，因此在 SQL 中可以使用表的任何地方均可以使用表值函数。 此外，您还可以完全像处理表那样来处理表值函数。  
@@ -18,7 +18,7 @@ ms.locfileid: "70781442"
 ## <a name="example"></a>示例  
  下面的 SQL 函数显式声明其返回一个 `TABLE`。 因此，隐式定义了所返回的行集结构。  
   
-```  
+```sql
 CREATE FUNCTION ProductsCostingMoreThan(@cost money)  
 RETURNS TABLE  
 AS  
@@ -36,7 +36,7 @@ RETURN
 ## <a name="example"></a>示例  
  下面的 SQL 代码说明你可以对此函数返回的表执行联接，以及像处理任何其他表一样处理它：  
   
-```  
+```sql
 SELECT p2.ProductName, p1.UnitPrice  
 FROM dbo.ProductsCostingMoreThan(80.50)  
 AS p1 INNER JOIN Products AS p2 ON p1.ProductID = p2.ProductID  

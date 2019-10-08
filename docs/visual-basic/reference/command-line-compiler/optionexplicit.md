@@ -9,39 +9,39 @@ helpviewer_keywords:
 - optionexplicit compiler option [Visual Basic]
 - -optionexplicit compiler option [Visual Basic]
 ms.assetid: 5d296ab3-bafe-4c4d-9887-78f162ed86c7
-ms.openlocfilehash: 54d438541e8840e4394b24b20b4f394ff8cdb820
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5c0946b94bfe02d797d1a484088869375703eb6a
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788942"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005303"
 ---
 # <a name="-optionexplicit"></a>-optionexplicit
-如果在使用之前未声明变量，会导致编译器报告错误。  
+如果变量在使用之前未声明，则导致编译器报告错误。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```console  
 -optionexplicit[+ | -]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  `+` &#124; `-`  
- 可选。 指定`-optionexplicit+`要求显式声明变量。 `-optionexplicit+`选项是默认值和相同`-optionexplicit`。 `-optionexplicit-`选项启用隐式声明变量。  
+ 可选。 指定 `-optionexplicit+` 需要显式声明变量。 @No__t-0 选项是默认选项，与 `-optionexplicit` 相同。 @No__t-0 选项启用隐式声明变量。  
   
 ## <a name="remarks"></a>备注  
- 如果源代码文件包含[Option Explicit 语句](../../../visual-basic/language-reference/statements/option-explicit-statement.md)，语句将覆盖`-optionexplicit`命令行编译器设置。  
+ 如果源代码文件包含[Option Explicit 语句](../../../visual-basic/language-reference/statements/option-explicit-statement.md)，则该语句将重写 `-optionexplicit` 命令行编译器设置。  
   
-### <a name="to-set--optionexplicit-in-the-visual-studio-ide"></a>若要在 Visual Studio IDE 中设置-optionexplicit  
+### <a name="to-set--optionexplicit-in-the-visual-studio-ide"></a>在 Visual Studio IDE 中设置-optionexplicit  
   
 1. 在 **“解决方案资源管理器”** 中选择一个项目。 在“项目”菜单上，单击“属性”。   
   
 2. 单击“编译”选项卡。  
   
-3. 修改中的值**Option Explicit**框。  
+3. 修改**选项 "显式**框" 中的值。  
   
 ## <a name="example"></a>示例  
- 下面的代码编译时`-optionexplicit-`使用。  
+ 使用 `-optionexplicit-` 时，将编译以下代码。  
   
  [!code-vb[VbVbalrCompiler#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/OptionExplicitOff.vb#5)]  
   

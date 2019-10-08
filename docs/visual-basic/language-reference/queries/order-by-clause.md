@@ -10,43 +10,43 @@ helpviewer_keywords:
 - Order By clause [Visual Basic]
 - Order By statement [Visual Basic]
 ms.assetid: fa911282-6b81-44c7-acfa-46b5bb93df75
-ms.openlocfilehash: 1c84a4cdb4a149154d459ca4d9c290ed360d1772
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f8ee46b12e84f99629c3a92057fc3a7bb8a3c2e8
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61712560"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72004949"
 ---
 # <a name="order-by-clause-visual-basic"></a>Order By 子句 (Visual Basic)
 指定查询结果的排序顺序。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```vb  
 Order By orderExp1 [ Ascending | Descending ] [, orderExp2 [...] ]  
 ```  
   
 ## <a name="parts"></a>部件  
  `orderExp1`  
- 必需。 一个或多个字段从当前的查询结果，确定如何对返回的值进行排序。 必须由逗号 （，） 分隔的字段名称。 您可以标识每个字段，为按升序或降序排序，通过使用`Ascending`或`Descending`关键字。 如果没有`Ascending`或`Descending`指定关键字时，默认的排序顺序为升序。 从左到右的优先顺序提供排序顺序字段。  
+ 必需。 当前查询结果中的一个或多个字段，用于确定如何对返回的值进行排序。 字段名称必须用逗号（，）分隔。 可以通过使用 `Ascending` 或 `Descending` 关键字，将每个字段标识为按升序或降序排序。 如果未指定 `Ascending` 或 `Descending` 关键字，则默认排序顺序为升序。 排序顺序字段的优先级从左到右。  
   
 ## <a name="remarks"></a>备注  
- 可以使用`Order By`子句的查询结果进行排序。 `Order By`子句只能在排序基于当前作用域的范围变量的结果。 例如，`Select`子句引入一个新作用域在查询表达式中使用新的迭代变量的作用域。 之前定义的范围变量`Select`子句的查询中将不可用之后`Select`子句。 因此，如果你想要通过中不可用的字段对结果进行排序`Select`子句中，必须将放`Order By`之前的子句`Select`子句。 一个需要执行此操作的示例是当你想不作为结果的一部分返回的字段的查询结果进行排序时。  
+ 您可以使用 `Order By` 子句对查询结果进行排序。 @No__t-0 子句只能根据当前作用域的范围变量对结果进行排序。 例如，`Select` 子句在查询表达式中引入了新的作用域，该作用域具有新的迭代变量。 在查询中 `Select` 子句之前定义的范围变量在 @no__t 1 子句之后不可用。 因此，如果要按 `Select` 子句中不存在的字段对结果进行排序，则必须将 @no__t 子句置于 @no__t 2 子句之前。 需要执行此操作的一个示例是，如果要按不作为结果的一部分返回的字段对查询进行排序。  
   
- 升序和降序顺序的实现决定字段<xref:System.IComparable>字段的数据类型的接口。 如果数据类型不实现<xref:System.IComparable>接口，排序顺序将被忽略。  
+ 字段的升序和降序由字段的数据类型 <xref:System.IComparable> 接口的实现确定。 如果数据类型未实现 <xref:System.IComparable> 接口，则忽略排序顺序。  
   
 ## <a name="example"></a>示例  
- 下面的查询中使用表达式`From`子句来声明范围变量`book`为`books`集合。 `Order By`子句对查询结果进行排序的价格以升序 （默认值）。 按标题以升序排序书籍，其价格相同。 `Select`子句中选择`Title`和`Price`由查询返回的值的属性。  
+ 下面的查询表达式使用 `From` 子句为 `books` 集合声明范围变量 `book`。 @No__t-0 子句按价格升序对查询结果进行排序（默认值）。 价格相同的书籍按标题的升序排序。 @No__t-0 子句选择 `Title` 和 `Price` 属性作为查询返回的值。  
   
  [!code-vb[VbSimpleQuerySamples#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#24)]  
   
 ## <a name="example"></a>示例  
- 下面的查询表达式使用`Order By`子句来按价格以降序对查询结果进行排序。 按标题以升序排序书籍，其价格相同。  
+ 下面的查询表达式使用 `Order By` 子句按价格以降序对查询结果进行排序。 价格相同的书籍按标题的升序排序。  
   
  [!code-vb[VbSimpleQuerySamples#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#25)]  
   
 ## <a name="example"></a>示例  
- 下面的查询表达式使用`Select`选择书名、 价格、 发布日期，并编写的子句。 然后填充`Title`， `Price`， `PublishDate`，和`Author`新作用域的范围变量的字段。 `Order By`子句进行排序的作者姓名、 书籍标题和价格的新范围变量。 每个列是按默认顺序 （升序） 排序。  
+ 下面的查询表达式使用 `Select` 子句来选择书籍标题、价格、发布日期和作者。 然后，它将填充新范围的范围变量的 `Title`、`Price`、`PublishDate` 和 @no__t 3 字段。 @No__t-0 子句按作者姓名、书籍标题和价格对新范围变量进行排序。 每列按默认顺序（升序）排序。  
   
  [!code-vb[VbSimpleQuerySamples#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#26)]  
   

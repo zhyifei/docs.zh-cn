@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 725718f5-da29-4841-9f53-aafef64ba977
-ms.openlocfilehash: 5ec188e0345140297062d0a10dfbbc4a294bbb7d
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: b853a6f2175009cbcbc01c14a6732b98e37e1a7f
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70781608"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72003057"
 ---
 # <a name="how-to-return-rowsets"></a>如何：返回行集
 此示例从数据库中返回行集合，并包含用于筛选结果的输入参数。  
@@ -20,7 +20,7 @@ ms.locfileid: "70781608"
 ## <a name="example"></a>示例  
  下面的示例表示一个存储过程，该存储过程返回客户行并使用输入参数来仅返回将“London”列为客户城市的那些行。 该示例假定有一个可枚举的 `CustomersByCityResult` 类。  
   
-```  
+```sql  
 CREATE PROCEDURE [dbo].[Customers By City]  
     (@param1 NVARCHAR(20))  
 AS  

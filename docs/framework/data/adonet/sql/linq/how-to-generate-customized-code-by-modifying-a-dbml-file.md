@@ -2,12 +2,12 @@
 title: 如何：通过修改 DBML 文件生成自定义代码
 ms.date: 03/30/2017
 ms.assetid: 50ad597a-8598-42d3-82dd-fc7d702ebc37
-ms.openlocfilehash: 01890e6b899db6b70049e2d6b8193e5b0f4095fb
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6619f4b8c0a47b36a0b84fa21bab4109d26ef895
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70781981"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72002954"
 ---
 # <a name="how-to-generate-customized-code-by-modifying-a-dbml-file"></a>如何：通过修改 DBML 文件生成自定义代码
 可以从数据库标记语言C# （.dbml）元数据文件生成 Visual Basic 或源代码。 此方法提供了一个在生成应用程序映射代码前自定义默认 .dbml 文件的机会。 这是一项高级功能。  
@@ -25,7 +25,7 @@ ms.locfileid: "70781981"
 ## <a name="example"></a>示例  
  下面的代码从 Northwind 示例数据库生成 .dbml 文件。 您可以使用数据库的名称或 .mdf 文件的名称作为数据库元数据的源。  
   
-```  
+```console  
 sqlmetal /server:myserver /database:northwind /dbml:mymeta.dbml  
 sqlmetal /dbml:mymeta.dbml mydbfile.mdf  
 ```  
@@ -33,7 +33,7 @@ sqlmetal /dbml:mymeta.dbml mydbfile.mdf
 ## <a name="example"></a>示例  
  下面的代码从 .dbml 文件C#生成 Visual Basic 或源代码文件。  
   
-```  
+```console
 sqlmetal /namespace:nwind /code:nwind.vb /language:vb DBMLFile.dbml  
 sqlmetal /namespace:nwind /code:nwind.cs /language:csharp DBMLFile.dbml  
 ```  

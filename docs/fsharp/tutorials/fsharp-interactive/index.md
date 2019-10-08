@@ -2,14 +2,14 @@
 title: F# Interactive (fsi.exe) 参考
 description: 了解如何F#使用 Interactive （fsi.exe）在控制台上以交互F#方式运行代码或执行F#脚本。
 ms.date: 05/16/2016
-ms.openlocfilehash: 4e6ea1e42be180e88349acc9da7d5ef19a8ddedd
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 4e8521677cad5f4e62d2822837818292c55da96d
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71214256"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72002066"
 ---
-# <a name="interactive-programming-with-f"></a>与 F 的交互式编程\#
+# <a name="interactive-programming-with-f"></a>与 F @ no__t 交互编程-0
 
 > [!NOTE]
 > 本文目前仅介绍适用于 Windows 的体验。  它将被重写。
@@ -22,10 +22,10 @@ F# Interactive (fsi.exe) 用于在控制台以交互方式运行 F# 代码，或
 若要从控制台运行 F# Interactive，请运行 fsi.exe。  你将在中找到 fsi.exe：
 
 ```console
-C:\Program Files (x86)\Microsoft Visual Studio\2017\<sku>\Common7\IDE\CommonExtensions\Microsoft\FSharp
+C:\Program Files (x86)\Microsoft Visual Studio\2019\<sku>\Common7\IDE\CommonExtensions\Microsoft\FSharp
 ```
 
-其中`sku` ，`Community`为、 `Professional`或。`Enterprise`
+其中 `sku` @no__t 为-1、`Professional` 或 @no__t 为3。
 
 有关可用命令行选项的信息，请参阅 [F# Interactive 选项](../../language-reference/fsharp-interactive-options.md)。
 
@@ -43,7 +43,7 @@ F# Interactive 试图编译代码，如果成功，它将执行代码并打印�
 
 你可以通过调整设置控制 F# Interactive 命令行自变量（选项）。 在“工具”菜单上，选择“选项...”，然后展开“F# 工具”。 可以更改的两种设置是 F# Interactive 选项和“64 位F# Interactive”，只有在 64 位计算机上运行 F# Interactive 时，更改才有意义。 此设置确定是否需要运行 fsi.exe 或 fsianycpu.exe 的专用 64 位版本，它使用计算机体系结构确定是作为 32 位还是 64 位进程来运行。
 
-## <a name="scripting-with-f"></a>用 F 编写脚本\#
+## <a name="scripting-with-f"></a>用 F @ no__t 编写脚本
 脚本使用 **.fsx** 或 **.fsscript** 文件扩展名。 可以不编译源代码再运行编译的程序集，而仅运行 **fsi.exe** 并指定 F# 源代码脚本的文件名，F# Interactive 会实时读取并执行代码。
 
 ## <a name="differences-between-the-interactive-scripting-and-compiled-environments"></a>交互式、脚本编写和编译环境之间的差异

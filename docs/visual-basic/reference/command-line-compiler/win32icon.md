@@ -6,39 +6,39 @@ helpviewer_keywords:
 - -win32icon compiler option [Visual Basic]
 - /win32icon compiler option [Visual Basic]
 ms.assetid: aecaab01-9353-46c5-941c-6edabd4eff92
-ms.openlocfilehash: dc48a8f79aa04892c514917da00b8fd6489695b1
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 6b4b69d227c857442de6857fac023090b3698e81
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65593083"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72004643"
 ---
 # <a name="-win32icon"></a>-win32icon
-在输出文件中插入.ico 文件。 此.ico 文件表示的输出文件中**文件资源管理器**。  
+在输出文件中插入 .ico 文件。 此 .ico 文件表示**文件资源管理器**中的输出文件。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```console  
 -win32icon:filename  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
   
 |术语|定义|  
 |---|---|  
-|`filename`|要添加到输出文件的.ico 文件。 将文件名括在引号 ("") 如果包含空格。|  
+|`filename`|要添加到输出文件的 .ico 文件。 如果文件名包含空格，请将文件名用引号（""）引起来。|  
   
 ## <a name="remarks"></a>备注  
- 可以使用 Microsoft Windows 资源编译器 (RC) 创建的.ico 文件。 资源编译器在编译视觉对象时调用C++进行编程;从.rc 文件创建的.ico 文件。 `-win32icon`和`-win32resource`选项互斥。  
+ 您可以使用 Microsoft Windows 资源编译器（RC）创建 .ico 文件。 在编译视觉对象C++程序时，将调用资源编译器;.ico 文件是从 .rc 文件创建的。 @No__t 0 和 @no__t 选项是互斥的。  
   
- 请参阅[-linkresource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/linkresource.md)来引用.NET Framework 资源文件，或[-资源 (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md)要附加的.NET Framework 资源文件。 请参阅[-win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md)导入.res 文件。  
+ 请参阅[-linkresource （Visual Basic）](../../../visual-basic/reference/command-line-compiler/linkresource.md)以引用 .NET Framework 资源文件或[-resource （Visual Basic）](../../../visual-basic/reference/command-line-compiler/resource.md)来附加 .NET Framework 资源文件。 请参阅[-win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md)以导入 .res 文件。  
   
-|若要设置-win32icon Visual Studio IDE 中|  
+|在 Visual Studio IDE 中设置-win32icon|  
 |---|  
-|1.在 **“解决方案资源管理器”** 中选择一个项目。 在“项目”菜单上，单击“属性”。 <br />2.单击“应用程序”  选项卡。<br />3.修改中的值**图标**框。|  
+|1.在 **“解决方案资源管理器”** 中选择一个项目。 在“项目”菜单上，单击“属性”。 <br />2.单击“应用程序” 选项卡。<br />3.修改 "**图标**" 框中的值。|  
   
 ## <a name="example"></a>示例  
- 下面的代码编译`In.vb`并附加.ico 文件， `Rf.ico`。  
+ 下面的代码编译 `In.vb` 并附加 .ico 文件，`Rf.ico`。  
   
 ```console
 vbc -win32icon:rf.ico in.vb  

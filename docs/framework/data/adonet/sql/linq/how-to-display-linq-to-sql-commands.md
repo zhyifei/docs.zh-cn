@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1decb05e-37ad-4ed6-ab2f-071eb4c4f628
-ms.openlocfilehash: 2f562dfd8f13c107249e697b77de7538df56fe2f
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: ec5010a42980e2d7a1a03c31d396cac6b6934a58
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70781956"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72002935"
 ---
 # <a name="how-to-display-linq-to-sql-commands"></a>如何：显示 LINQ to SQL 命令
 使用 <xref:System.Data.Linq.DataContext.GetCommand%2A> 可显示 SQL 命令及其他信息。  
@@ -23,7 +23,7 @@ ms.locfileid: "70781956"
   
  输出形式如下：  
   
-```  
+```console  
 Customers from London:  
     Thomas Hardy  
     Victoria Ashworth  
@@ -35,7 +35,7 @@ Customers from London:
     Dominique Perrier  
 ```  
   
-```  
+```console  
 Command Text:  
 SELECT [t0].[CustomerID], [t0].[CompanyName], [t0].[ContactName], [t0].[ContactT  
 itle], [t0].[Address], [t0].[City], [t0].[Region], [t0].[PostalCode], [t0].[Coun  

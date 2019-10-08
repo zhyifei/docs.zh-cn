@@ -1,44 +1,44 @@
 ---
-title: -导入 (Visual Basic)
+title: -imports （Visual Basic）
 ms.date: 03/10/2018
 helpviewer_keywords:
 - /imports compiler option [Visual Basic]
 - imports compiler option [Visual Basic]
 - -imports compiler option [Visual Basic]
 ms.assetid: 9a93fb53-c080-497b-bf9b-441022dbbc39
-ms.openlocfilehash: 075eeccc7d80943d2757a97b9a355bbea3ef9d4e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 929e24a1ffd02d4e21ab1b925ddd59050b5d3cc4
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61663240"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005573"
 ---
-# <a name="-imports-visual-basic"></a>-导入 (Visual Basic)
+# <a name="-imports-visual-basic"></a>-imports （Visual Basic）
 从指定的程序集导入命名空间。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```console  
 -imports:namespaceList  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
   
 |术语|定义|  
 |---|---|  
-|`namespaceList`|必需。 要导入的命名空间的以逗号分隔列表。|  
+|`namespaceList`|必需。 要导入的命名空间的逗号分隔列表。|  
   
 ## <a name="remarks"></a>备注  
- `-imports`选项将导入当前的源代码文件或从任何引用的程序集设置中定义的任何命名空间。  
+ @No__t-0 选项将导入在当前源文件集中或从任何引用的程序集内定义的任何命名空间。  
   
- 使用指定的命名空间中的成员`-imports`适用于编译中所有源代码文件。 使用[Imports 语句 （.NET Namespace 和类型）](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)为单个源代码文件中使用命名空间。  
+ 使用 `-imports` 指定的命名空间中的成员可用于编译中的所有源代码文件。 使用[Imports 语句（.Net 命名空间和类型）](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)可在单个源代码文件中使用命名空间。  
   
-|若要设置/导入 Visual Studio 集成的开发环境中|  
+|在 Visual Studio 集成开发环境中设置/imports|  
 |---|  
-|1.在 **“解决方案资源管理器”** 中选择一个项目。 在“项目”菜单上，单击“属性”。 <br />2.单击“引用”选项卡。<br />3.旁边的框中输入命名空间名称**添加用户导入**按钮。<br />4.单击**添加用户导入**按钮。|  
+|1.在 **“解决方案资源管理器”** 中选择一个项目。 在“项目”菜单上，单击“属性”。 <br />2.单击“引用”选项卡。<br />3.在 "**添加用户导入**" 按钮旁的框中输入命名空间名称。<br />4.单击 "**添加用户导入**" 按钮。|  
   
 ## <a name="example"></a>示例  
- 下面的代码编译时`/imports:system.globalization`指定。 如果没有它，成功编译要求任一`Imports System.Globalization`语句是包含源代码文件中，开始时，或作为完全限定属性`System.Globalization.CultureInfo.CurrentCulture.Name`。
+ 当指定 @no__t 时，以下代码将编译。 如果没有此方法，则成功编译需要在源代码文件的开头包含 `Imports System.Globalization` 语句，或者属性完全限定为 `System.Globalization.CultureInfo.CurrentCulture.Name`。
 
 ```vb
 Module Example

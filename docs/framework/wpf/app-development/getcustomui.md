@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - custom error messages [WPF]
 ms.assetid: e55180fc-35bb-4f80-a136-772b5eb3e4e5
-ms.openlocfilehash: a9c4c9d597f5cc1b172213d49a3dd5b8f1c1f671
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: e9ef32912c2afb3c99e46e1e14bb3daa5a2e99af
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991378"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005706"
 ---
 # <a name="getcustomui"></a>GetCustomUI
 由 Presentationhost.exe 调用，用于获取主机的自定义进度和错误消息（如果已实现）。  
@@ -20,14 +20,14 @@ ms.locfileid: "70991378"
 HRESULT GetCustomUI( [out] BSTR* pwzProgressAssemblyName, [out] BSTR* pwzProgressClassName, [out] BSTR* pwzErrorAssemblyName, [out] BSTR* pwzErrorClassName );  
 ```  
   
-## <a name="parameters"></a>参数  
+## <a name="parameters"></a>Parameters  
  `pwzProgressAssemblyName`  
   
  弄指向包含主机提供的进度用户界面的程序集的指针。  
   
  `pwzProgressClassName`  
   
- 弄类的名称，它是宿主提供的进度用户界面，最好[!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)]是具有<xref:System.Windows.Controls.Page>的文件是顶级元素。 此类驻留在指定`pwzProgressAssemblyName`的程序集中。  
+ 弄类的名称，它是宿主提供的进度用户界面，最好是 @no__t 为-0 的 XAML 文件是其顶级元素。 此类驻留在由 `pwzProgressAssemblyName` 指定的程序集中。  
   
  `pwzErrorAssemblyName`  
   
@@ -35,7 +35,7 @@ HRESULT GetCustomUI( [out] BSTR* pwzProgressAssemblyName, [out] BSTR* pwzProgres
   
  `pwzErrorClassName`  
   
- 弄类的名称，它是宿主提供的错误用户界面，最好是具有<xref:System.Windows.Controls.Page>的 XAML 文件是它的顶级元素。 此类驻留在指定`pwzErrorAssemblyName`的程序集中。  
+ 弄类的名称，它是宿主提供的错误用户界面，最好是包含 <xref:System.Windows.Controls.Page> 的 XAML 文件是它的顶级元素。 此类驻留在由 `pwzErrorAssemblyName` 指定的程序集中。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
  HRESULT：已忽略。  

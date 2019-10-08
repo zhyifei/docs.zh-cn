@@ -6,46 +6,46 @@ helpviewer_keywords:
 - keyfile compiler option [Visual Basic]
 - -keyfile compiler option [Visual Basic]
 ms.assetid: ffa82a4b-517a-4c6c-9889-5bae7b534bb8
-ms.openlocfilehash: 30b890cf3d523d1e33b433a1ff6109759bd9a5e3
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: b17df3cb803cfbef324b74a9dee4394fce70215b
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972332"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005538"
 ---
 # <a name="-keyfile"></a>-keyfile
 指定包含密钥或密钥对的文件从而为程序集赋予强名称。  
   
 ## <a name="syntax"></a>语法  
   
-``` 
+```console 
 -keyfile:file  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  `file`  
  必需。 包含密钥的文件。 如果文件名包含空格，则将该名称括在引号（""）中。  
   
 ## <a name="remarks"></a>备注  
  编译器将公钥插入程序集清单中，然后用私钥对最终程序集进行签名。 若要生成密钥文件，请在命令行键入 `sn -k file`。 有关详细信息，请参阅[sn.exe （强名称工具）](../../../framework/tools/sn-exe-strong-name-tool.md)。  
   
- 如果使用进行`-target:module`编译，则密钥文件的名称将保存在模块中，并合并到在使用[/addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)编译程序集时创建的程序集中。  
+ 如果使用 `-target:module` 进行编译，则密钥文件的名称将保存在模块中，并合并到在使用[/addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)编译程序集时创建的程序集。  
   
  也可以使用 [-keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md) 将加密信息传递给编译器。 如果需要部分签名的程序集，请使用 [-delaysign](../../../visual-basic/reference/command-line-compiler/delaysign.md)。  
   
- 你还可以将此选项指定为任何 Microsoft 中间<xref:System.Reflection.AssemblyKeyFileAttribute>语言模块的源代码中的自定义特性（）。  
+ 你还可以将此选项指定为任何 Microsoft 中间语言模块的源代码中的自定义特性（<xref:System.Reflection.AssemblyKeyFileAttribute>）。  
   
- 如果在同一`-keyfile`编译中同时指定了和[-keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md) （通过命令行选项或通过自定义特性），编译器将首先尝试密钥容器。 如果成功，则使用密钥容器中的信息对程序集签名。 如果编译器没有找到密钥容器，则它将尝试用`-keyfile`指定的文件。 如果此操作成功，则会用密钥文件中的信息对程序集进行签名，并将密钥信息安装到密钥容器中（ `sn -i`类似于），以便在下一次编译时，密钥容器将有效。  
+ 如果在同一编译中同时指定 `-keyfile` 和[-keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md) （通过命令行选项或通过自定义特性），编译器将首先尝试密钥容器。 如果成功，则使用密钥容器中的信息对程序集签名。 如果编译器没有找到密钥容器，则会尝试 `-keyfile` 指定的文件。 如果此操作成功，则会用密钥文件中的信息对程序集进行签名，并将密钥信息安装到密钥容器中（类似于 `sn -i`），以便在下一次编译时，密钥容器将有效。  
   
  请注意，密钥文件可能仅包含公钥。  
   
  有关对程序集进行签名的详细信息，请参阅[创建和使用具有强名称的程序集](../../../standard/assembly/create-use-strong-named.md)。  
   
 > [!NOTE]
-> 此`-keyfile`选项在 Visual Studio 开发环境中不可用; 它仅在从命令行编译时可用。  
+> 在 Visual Studio 开发环境中，不能使用 `-keyfile` 选项;仅当从命令行进行编译时，它才可用。  
   
 ## <a name="example"></a>示例  
- 下面的代码编译源文件`Input.vb`并指定密钥文件。  
+ 下面的代码编译源文件 `Input.vb` 并指定密钥文件。  
   
 ```console  
 vbc -keyfile:myfile.sn input.vb  
