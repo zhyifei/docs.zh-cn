@@ -28,6 +28,8 @@
           href: how-to-chunk-serialized-data.md
         - name: 如何：确定 .NET 标准对象是否可序列化
           href: how-to-determine-if-netstandard-object-is-serializable.md
+        - name: 示例
+          href: serialization-samples-binary.md
     - name: XML 和 SOAP 序列化
       href: xml-and-soap-serialization.md
       items:
@@ -73,23 +75,12 @@
           href: add-element-for-schemaimporterextensions.md
         - name: <xmlSerializer> 元素
           href: xmlserializer-element.md
-        - name: 序列化工具
+        - name: 工具
           href: serialization-tools.md
           items:
             - name: XML 序列化程序生成器工具 (Sgen.exe)
               href: xml-serializer-generator-tool-sgen-exe.md
             - name: XML Schema Definition Tool (Xsd.exe)
               href: xml-schema-definition-tool-xsd-exe.md
-        - name: 序列化示例
-          href: serialization-samples.md
-          items:
-            - name: 基本序列化技术示例
-              href: basic-serialization-technology-sample.md
-            - name: 使用 XmlSerializer 自定义序列化顺序
-              href: custom-serialization-order-with-xmlserializer.md
-            - name: SchemaImporterExtension 技术示例
-              href: schemaimporterextension-technology-sample.md
-            - name: 版本容错序列化技术示例
-              href: version-tolerant-serialization-technology-sample.md
-            - name: Web 服务泛型序列化技术示例
-              href: web-services-generics-serialization-technology-sample.md
+        - name: 示例
+          href: serialization-samples-xml.md

@@ -1,23 +1,23 @@
 ---
-title: 如何：查找子元素 (XPATH-LINQ to XML) 的列表 (Visual Basic)
+title: 如何：查找子元素的列表（XPath LINQ to XML）（Visual Basic）
 ms.date: 07/20/2015
 ms.assetid: 2868abfd-9f7b-412a-9cb5-f643f0fed146
-ms.openlocfilehash: 7ed31f17157176a6c100a8d02e065843a62b9587
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: aab185cd4c157c7ee671418368668d46b4bb2a4a
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62021656"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72249975"
 ---
-# <a name="how-to-find-a-list-of-child-elements-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="fa7e1-102">如何：查找子元素 (XPATH-LINQ to XML) 的列表 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="fa7e1-102">How to: Find a List of Child Elements (XPath-LINQ to XML) (Visual Basic)</span></span>
-<span data-ttu-id="fa7e1-103">本主题将 XPath 子元素轴与 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Elements%2A> 轴进行比较。</span><span class="sxs-lookup"><span data-stu-id="fa7e1-103">This topic compares the XPath child elements axis to the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Elements%2A> axis.</span></span>  
+# <a name="how-to-find-a-list-of-child-elements-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="54419-102">如何：查找子元素的列表（XPath LINQ to XML）（Visual Basic）</span><span class="sxs-lookup"><span data-stu-id="54419-102">How to: Find a List of Child Elements (XPath-LINQ to XML) (Visual Basic)</span></span>
+<span data-ttu-id="54419-103">本主题将 XPath 子元素轴与 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Elements%2A> 轴进行比较。</span><span class="sxs-lookup"><span data-stu-id="54419-103">This topic compares the XPath child elements axis to the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Elements%2A> axis.</span></span>  
   
- <span data-ttu-id="fa7e1-104">XPath 表达式为：`./*`</span><span class="sxs-lookup"><span data-stu-id="fa7e1-104">The XPath expression is: `./*`</span></span>  
+ <span data-ttu-id="54419-104">XPath 表达式为：`./*`</span><span class="sxs-lookup"><span data-stu-id="54419-104">The XPath expression is: `./*`</span></span>  
   
-## <a name="example"></a><span data-ttu-id="fa7e1-105">示例</span><span class="sxs-lookup"><span data-stu-id="fa7e1-105">Example</span></span>  
- <span data-ttu-id="fa7e1-106">本示例查找 `Address` 元素的所有子元素。</span><span class="sxs-lookup"><span data-stu-id="fa7e1-106">This example finds all of the child elements of the `Address` element.</span></span>  
+## <a name="example"></a><span data-ttu-id="54419-105">示例</span><span class="sxs-lookup"><span data-stu-id="54419-105">Example</span></span>  
+ <span data-ttu-id="54419-106">本示例查找 `Address` 元素的所有子元素。</span><span class="sxs-lookup"><span data-stu-id="54419-106">This example finds all of the child elements of the `Address` element.</span></span>  
   
- <span data-ttu-id="fa7e1-107">此示例使用下面的 XML 文档：[示例 XML 文件：多个采购订单 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="fa7e1-107">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="54419-107">本示例使用下面的 XML 文档：[示例 XML 文件：多个采购订单 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="54419-107">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span></span>  
   
 ```vb  
 Dim cpo As XDocument = XDocument.Load("PurchaseOrders.xml")  
@@ -40,9 +40,9 @@ For Each el As XElement In list1
 Next  
 ```  
   
- <span data-ttu-id="fa7e1-108">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="fa7e1-108">This example produces the following output:</span></span>  
+ <span data-ttu-id="54419-108">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="54419-108">This example produces the following output:</span></span>  
   
-```  
+```console
 Results are identical  
 <Name>Ellen Adams</Name>  
 <Street>123 Maple Street</Street>  
@@ -52,6 +52,6 @@ Results are identical
 <Country>USA</Country>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="fa7e1-109">请参阅</span><span class="sxs-lookup"><span data-stu-id="fa7e1-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="54419-109">请参阅</span><span class="sxs-lookup"><span data-stu-id="54419-109">See also</span></span>
 
-- [<span data-ttu-id="fa7e1-110">LINQ to XML 针对 XPath 用户 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="fa7e1-110">LINQ to XML for XPath Users (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [<span data-ttu-id="54419-110">XPath 用户的 LINQ to XML （Visual Basic）</span><span class="sxs-lookup"><span data-stu-id="54419-110">LINQ to XML for XPath Users (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

@@ -1,21 +1,21 @@
 ---
-title: 如何：查找具有特定子元素的元素 (Visual Basic)
+title: 如何：查找具有特定子元素的元素（Visual Basic）
 ms.date: 07/20/2015
 ms.assetid: b0d0a463-6a85-46c3-8453-ad25b0ecf93c
-ms.openlocfilehash: af8667b6aa6870accb62fa22bd5243ce029b32c9
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 4df2f8f55a516665c02d12c3bdf6569601db30c2
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68709071"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72249913"
 ---
-# <a name="how-to-find-an-element-with-a-specific-child-element-visual-basic"></a><span data-ttu-id="cecf0-102">如何：查找具有特定子元素的元素 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cecf0-102">How to: Find an Element with a Specific Child Element (Visual Basic)</span></span>
-<span data-ttu-id="cecf0-103">本主题演示如何查找特定元素，该特定元素包含具有特定值的子元素。</span><span class="sxs-lookup"><span data-stu-id="cecf0-103">This topic shows how to find a particular element that has a child element with a specific value.</span></span>  
+# <a name="how-to-find-an-element-with-a-specific-child-element-visual-basic"></a><span data-ttu-id="44a51-102">如何：查找具有特定子元素的元素（Visual Basic）</span><span class="sxs-lookup"><span data-stu-id="44a51-102">How to: Find an Element with a Specific Child Element (Visual Basic)</span></span>
+<span data-ttu-id="44a51-103">本主题演示如何查找特定元素，该特定元素包含具有特定值的子元素。</span><span class="sxs-lookup"><span data-stu-id="44a51-103">This topic shows how to find a particular element that has a child element with a specific value.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="cecf0-104">示例</span><span class="sxs-lookup"><span data-stu-id="cecf0-104">Example</span></span>  
- <span data-ttu-id="cecf0-105">示例查找 `Test` 元素，该元素包含具有值为“Examp2.EXE”的 `CommandLine` 子元素。</span><span class="sxs-lookup"><span data-stu-id="cecf0-105">The example finds the `Test` element that has a `CommandLine` child element with the value of "Examp2.EXE".</span></span>  
+## <a name="example"></a><span data-ttu-id="44a51-104">示例</span><span class="sxs-lookup"><span data-stu-id="44a51-104">Example</span></span>  
+ <span data-ttu-id="44a51-105">示例查找 `Test` 元素，该元素包含具有值为“Examp2.EXE”的 `CommandLine` 子元素。</span><span class="sxs-lookup"><span data-stu-id="44a51-105">The example finds the `Test` element that has a `CommandLine` child element with the value of "Examp2.EXE".</span></span>  
   
- <span data-ttu-id="cecf0-106">此示例使用下面的 XML 文档：[示例 XML 文件：测试配置 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="cecf0-106">This example uses the following XML document: [Sample XML File: Test Configuration (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="44a51-106">本示例使用下面的 XML 文档：[示例 XML 文件：测试配置 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="44a51-106">This example uses the following XML document: [Sample XML File: Test Configuration (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md).</span></span>  
   
 ```vb  
 Dim root As XElement = XElement.Load("TestConfig.xml")  
@@ -28,19 +28,19 @@ For Each el as XElement In tests
 Next  
 ```  
   
- <span data-ttu-id="cecf0-107">此代码生成以下输出：</span><span class="sxs-lookup"><span data-stu-id="cecf0-107">This code produces the following output:</span></span>  
+ <span data-ttu-id="44a51-107">此代码生成以下输出：</span><span class="sxs-lookup"><span data-stu-id="44a51-107">This code produces the following output:</span></span>  
   
-```  
+```console  
 0002  
 0006  
 ```  
   
- <span data-ttu-id="cecf0-108">请注意, 此示例使用[Xml 子轴属性](../../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md)、 [xml 属性轴属性](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)和[xml 值属性](../../../../visual-basic/language-reference/xml-axis/xml-value-property.md)。</span><span class="sxs-lookup"><span data-stu-id="cecf0-108">Note that this example uses the [XML Child axis property](../../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md), the [XML Attribute axis property](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md), and the [XML Value property](../../../../visual-basic/language-reference/xml-axis/xml-value-property.md).</span></span>  
+ <span data-ttu-id="44a51-108">请注意，此示例使用[Xml 子轴属性](../../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md)、 [xml 属性轴属性](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)和[xml 值属性](../../../../visual-basic/language-reference/xml-axis/xml-value-property.md)。</span><span class="sxs-lookup"><span data-stu-id="44a51-108">Note that this example uses the [XML Child axis property](../../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md), the [XML Attribute axis property](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md), and the [XML Value property](../../../../visual-basic/language-reference/xml-axis/xml-value-property.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="cecf0-109">示例</span><span class="sxs-lookup"><span data-stu-id="cecf0-109">Example</span></span>  
- <span data-ttu-id="cecf0-110">下面的示例演示如何对命名空间中的 XML 进行同样的查询。</span><span class="sxs-lookup"><span data-stu-id="cecf0-110">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="cecf0-111">有关详细信息, 请参阅[命名空间概述 (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="cecf0-111">For more information, see [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).</span></span>  
+## <a name="example"></a><span data-ttu-id="44a51-109">示例</span><span class="sxs-lookup"><span data-stu-id="44a51-109">Example</span></span>  
+ <span data-ttu-id="44a51-110">下面的示例演示如何对命名空间中的 XML 进行同样的查询。</span><span class="sxs-lookup"><span data-stu-id="44a51-110">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="44a51-111">有关详细信息，请参阅[命名空间概述（LINQ to XML）（Visual Basic）](namespaces-overview-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="44a51-111">For more information, see [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).</span></span>  
   
- <span data-ttu-id="cecf0-112">此示例使用下面的 XML 文档：[示例 XML 文件：命名空间中的测试配置](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-in-a-namespace.md)。</span><span class="sxs-lookup"><span data-stu-id="cecf0-112">This example uses the following XML document: [Sample XML File: Test Configuration in a Namespace](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-in-a-namespace.md).</span></span>  
+ <span data-ttu-id="44a51-112">本示例使用下面的 XML 文档：[示例 XML 文件：命名空间中的测试配置](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-in-a-namespace.md)。</span><span class="sxs-lookup"><span data-stu-id="44a51-112">This example uses the following XML document: [Sample XML File: Test Configuration in a Namespace](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-in-a-namespace.md).</span></span>  
   
 ```vb  
 Imports <xmlns='http://www.adatum.com'>  
@@ -59,17 +59,17 @@ Module Module1
 End Module  
 ```  
   
- <span data-ttu-id="cecf0-113">此代码生成以下输出：</span><span class="sxs-lookup"><span data-stu-id="cecf0-113">This code produces the following output:</span></span>  
+ <span data-ttu-id="44a51-113">此代码生成以下输出：</span><span class="sxs-lookup"><span data-stu-id="44a51-113">This code produces the following output:</span></span>  
   
-```  
+```console  
 0002  
 0006  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="cecf0-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="cecf0-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="44a51-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="44a51-114">See also</span></span>
 
 - <xref:System.Xml.Linq.XElement.Attribute%2A>
 - <xref:System.Xml.Linq.XContainer.Elements%2A>
-- [<span data-ttu-id="cecf0-115">基本查询 (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cecf0-115">Basic Queries (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
-- [<span data-ttu-id="cecf0-116">标准查询运算符概述 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cecf0-116">Standard Query Operators Overview (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [<span data-ttu-id="cecf0-117">投影操作 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cecf0-117">Projection Operations (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/projection-operations.md)
+- [<span data-ttu-id="44a51-115">基本查询（LINQ to XML）（Visual Basic）</span><span class="sxs-lookup"><span data-stu-id="44a51-115">Basic Queries (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [<span data-ttu-id="44a51-116">标准查询运算符概述 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="44a51-116">Standard Query Operators Overview (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [<span data-ttu-id="44a51-117">投影操作（Visual Basic）</span><span class="sxs-lookup"><span data-stu-id="44a51-117">Projection Operations (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/projection-operations.md)
