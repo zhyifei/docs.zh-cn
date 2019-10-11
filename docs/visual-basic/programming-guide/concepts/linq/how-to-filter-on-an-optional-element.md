@@ -1,15 +1,15 @@
 ---
-title: 如何：筛选可选元素 (Visual Basic)
+title: 如何：筛选可选元素（Visual Basic）
 ms.date: 07/20/2015
 ms.assetid: a74b76ad-6889-4185-a189-d6ef2c63841e
-ms.openlocfilehash: 4de8c0b07eebc340a53785e6b932a66cb9d2fec9
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 01ab143dd48b0cb0ff74aa039fa292501654056a
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710423"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72250004"
 ---
-# <a name="how-to-filter-on-an-optional-element-visual-basic"></a>如何：筛选可选元素 (Visual Basic)
+# <a name="how-to-filter-on-an-optional-element-visual-basic"></a>如何：筛选可选元素（Visual Basic）
 有时，尽管不能确定某个元素是否存在于 XML 文档中，您还是会尝试筛选该元素。 应当执行搜索，这样如果特定元素没有子元素，就不会因为筛选它而触发空引用异常。 在下面的示例中，`Child5` 元素没有 `Type` 子元素，但是查询仍可以正确执行。  
   
 ## <a name="example"></a>示例  
@@ -50,14 +50,14 @@ Next
   
  此代码生成以下输出：  
   
-```  
+```console  
 Child One Text  
 Child Two Text  
 Child Four Text  
 ```  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何对命名空间中的 XML 进行同样的查询。 有关详细信息, 请参阅[命名空间概述 (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)。  
+ 下面的示例演示如何对命名空间中的 XML 进行同样的查询。 有关详细信息，请参阅[命名空间概述（LINQ to XML）（Visual Basic）](namespaces-overview-linq-to-xml.md)。  
   
 ```vb  
 Imports <xmlns='http://www.adatum.com'>  
@@ -100,7 +100,7 @@ End Module
   
  此代码生成以下输出：  
   
-```  
+```console  
 Child One Text  
 Child Two Text  
 Child Four Text  
@@ -111,9 +111,9 @@ Child Four Text
 - <xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=nameWithType>
 - <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType>
 - <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType>
-- [基本查询 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [基本查询（LINQ to XML）（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
 - [XML 子轴属性](../../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md)
 - [XML 特性轴属性](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)
 - [XML 值属性](../../../../visual-basic/language-reference/xml-axis/xml-value-property.md)
 - [标准查询运算符概述 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [投影操作 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projection-operations.md)
+- [投影操作（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/projection-operations.md)

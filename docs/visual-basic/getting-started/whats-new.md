@@ -8,12 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: 3638deeafc052a2da3b438de2c504a9955a15ad3
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: d286cc811c87f2d45d5a9e6d4e8acd9c430ff346
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70895255"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835253"
 ---
 # <a name="whats-new-for-visual-basic"></a>Visual Basic 的新增功能
 
@@ -22,19 +22,19 @@ ms.locfileid: "70895255"
 ## <a name="current-version"></a>当前版本
 
 Visual Basic 16.0/Visual Studio 2019 版本 16.0  
-有关新功能，请参阅 [Visual Basic 16.0](#visual-basic-160)
+有关新功能，请参阅 [Visual Basic 16.0](#visual-basic-160)。
 
 ## <a name="previous-versions"></a>早期版本
 
-Visual Basic 15.8 / Visual Studio 2017 版本 15.8 有关新功能，请参阅 [Visual Basic 15.8](#visual-basic-158)
+Visual Basic 15.8 / Visual Studio 2017 版本 15.8 有关新功能，请参阅 [Visual Basic 15.8](#visual-basic-158)。
 
-Visual Basic 15.5 / Visual Studio 2017 版本 15.5 有关新功能，请参阅 [Visual Basic 15.5](#visual-basic-155)
+Visual Basic 15.5 / Visual Studio 2017 版本 15.5 有关新功能，请参阅 [Visual Basic 15.5](#visual-basic-155)。
 
-Visual Basic 15.3 / Visual Studio 2017 版本 15.3 有关新功能，请参阅 [Visual Basic 15.3](#visual-basic-153)
+Visual Basic 15.3 / Visual Studio 2017 版本 15.3 有关新功能，请参阅 [Visual Basic 15.3](#visual-basic-153)。
 
-Visual Basic 2017 / Visual Studio 2017 有关新功能，请参阅 [Visual Basic 2017](#visual-basic-2017)
+Visual Basic 2017 / Visual Studio 2017 有关新功能，请参阅 [Visual Basic 2017](#visual-basic-2017)。
 
-Visual Basic / Visual Studio 2015 有关新功能，请参阅 [Visual Basic 14](#visual-basic-14)
+Visual Basic / Visual Studio 2015 有关新功能，请参阅 [Visual Basic 14](#visual-basic-14)。
 
 Visual Basic / Visual Studio 2013 .NET Compiler Platform 的技术预览版 (“Roslyn”)
 
@@ -140,7 +140,7 @@ Dim number As Integer = &H_C305_F860
 
 **其他编译器开关**
 
-Visual Basic 命令行编译器现在支持 [-refout](../reference/command-line-compiler/refout-compiler-option.md) 和 [-refonly](../reference/command-line-compiler/refonly-compiler-option.md) 编译器选项，可控制引用程序集的输出。 -refout 定义引用程序集的输出目录，-refonly 指定只通过编译输出一个引用程序集。
+Visual Basic 命令行编译器现在支持 [-refout](../reference/command-line-compiler/refout-compiler-option.md) 和 [-refonly](../reference/command-line-compiler/refonly-compiler-option.md) 编译器选项，可控制引用程序集的输出   。 -refout 定义引用程序集的输出目录，-refonly 指定只通过编译输出一个引用程序集   。
 
 ## <a name="visual-basic-2017"></a>Visual Basic 2017
 
@@ -168,7 +168,7 @@ Visual Basic 命令行编译器现在支持 [-refout](../reference/command-line-
 
 有关详细信息，请参阅 [Byte](../language-reference/data-types/byte-data-type.md#literal-assignments)、[Integer](../language-reference/data-types/integer-data-type.md#literal-assignments)、[Long](../language-reference/data-types/long-data-type.md#literal-assignments)、[Short](../language-reference/data-types/short-data-type.md#literal-assignments)、[SByte](../language-reference/data-types/sbyte-data-type.md#literal-assignments)、[UInteger](../language-reference/data-types/uinteger-data-type.md#literal-assignments)、[ULong](../language-reference/data-types/ulong-data-type.md#literal-assignments) 和 [UShort](../language-reference/data-types/ushort-data-type.md#literal-assignments) 数据类型的“文本分配”部分。
 
-[支持 C# 引用返回值](../programming-guide/language-features/procedures/ref-return-values.md)
+[支持 C# 引用返回值](../programming-guide/language-features/procedures/ref-return-values.md) 
 
 从 C# 7.0 开始，C# 支持引用返回值。 也就是说，当调用方法收到引用返回的值时，可以更改引用的值。 Visual Basic 不允许使用引用返回值创建方法，但允许使用和修改引用返回值。
 

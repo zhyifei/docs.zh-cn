@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - BC30686
 ms.assetid: 784fefec-ef57-48cf-b960-957df419b439
-ms.openlocfilehash: a36cfe8e5496bbfd1941afa8a46086491ae96a2a
-ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
+ms.openlocfilehash: f76163d58f3f11d3ca946525a1604abc3ebba68d
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68512751"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72250371"
 ---
-# <a name="default-property-access-is-ambiguous-between-the-inherited-interface-members-defaultpropertyname-of-interface-interfacename1-and-defaultpropertyname-of-interface-interfacename2"></a>默认属性\<访问在接口 "\<1 >" 和 "\<defaultpropertyname >"\<的继承接口成员 "defaultpropertyname >" 之间不明确。i > "
+# <a name="default-property-access-is-ambiguous-between-the-inherited-interface-members-defaultpropertyname-of-interface-interfacename1-and-defaultpropertyname-of-interface-interfacename2"></a>默认属性访问在接口 "\<interfacename1 >" 的继承接口成员 "\<defaultpropertyname >" 与接口 "\<interfacename2 >" 的 "\<defaultpropertyname >" 之间不明确。
 
-接口继承自两个接口, 每个接口都声明一个具有相同名称的默认属性。 编译器无法解析对此默认属性的访问, 无需进行限定。 下面的示例阐释了这一点。
+接口继承自两个接口，每个接口都声明一个具有相同名称的默认属性。 编译器无法解析对此默认属性的访问，无需进行限定。 下面的示例阐释了这一点。
 
 ```vb
 Public Interface Iface1
@@ -36,13 +36,13 @@ Public Class testClass
 End Class
 ```
 
-指定`testObj(1)`时, 编译器会尝试将其解析为默认属性。 不过, 由于继承了接口, 有两个可能的默认属性, 因此编译器会发出此错误信号。
+当指定 `testObj(1)` 时，编译器会尝试将其解析为默认属性。 不过，由于继承了接口，有两个可能的默认属性，因此编译器会发出此错误信号。
 
-**错误 ID:** BC30686
+**错误 ID：** BC30686
 
 ## <a name="to-correct-this-error"></a>更正此错误
 
-- 避免继承任何具有相同名称的成员。 在前面的示例中, `testObj`如果不需要的任何成员 ( `Iface2`例如), 请按如下所示声明:
+- 避免继承任何具有相同名称的成员。 在前面的示例中，如果 `testObj` 不需要的任何成员（例如，`Iface2`），则按如下方式声明：
 
   ```vb
   Dim testObj As Iface1
@@ -50,7 +50,7 @@ End Class
 
   \- 或 -
 
-- 在类中实现继承接口。 然后, 可以用不同的名称实现每个继承的属性。 但是, 其中只有一个可以是实现类的默认属性。 下面的示例阐释了这一点。
+- 在类中实现继承接口。 然后，可以用不同的名称实现每个继承的属性。 但是，其中只有一个可以是实现类的默认属性。 下面的示例阐释了这一点。
 
   ```vb
   Public Class useIface3
@@ -66,4 +66,4 @@ End Class
 
 ## <a name="see-also"></a>请参阅
 
-- [接口](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
+- [接口](../../programming-guide/language-features/interfaces/index.md)

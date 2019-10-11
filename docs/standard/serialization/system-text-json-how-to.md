@@ -1,5 +1,5 @@
 ---
-title: 如何序列化 JSON-.NET
+title: 如何使用C# -.NET 对 JSON 进行序列化和反序列化
 author: tdykstra
 ms.author: tdykstra
 ms.date: 09/16/2019
@@ -8,34 +8,34 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 8ccd7afe4abb928e7723aa740507774012fc85d1
-ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
+ms.openlocfilehash: 3c988a0151f57b67db19f41aeb88c6fb9b808cb3
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71083107"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72179205"
 ---
-# <a name="how-to-serialize-json-in-net"></a>如何在 .NET 中序列化 JSON
+# <a name="how-to-serialize-and-deserialize-json-in-net"></a>如何在 .NET 中对 JSON 进行序列化和反序列化
 
 > [!IMPORTANT]
 > JSON 序列化文档正在构造。 本文不介绍所有方案。 有关详细信息，请查看 GitHub 上的 dotnet/corefx 存储库中的[system.web 问题](https://github.com/dotnet/corefx/issues?q=is%3Aopen+is%3Aissue+label%3Aarea-System.Text.Json)，尤其是标记为[Json 功能的文档](https://github.com/dotnet/corefx/labels/json-functionality-doc)。
 
-本文介绍如何使用<xref:System.Text.Json>命名空间来序列化和反序列化 JavaScript 对象表示法（JSON）。 方向和示例代码直接使用库，而不是通过框架（如[ASP.NET Core](/aspnet/core/)）使用。
+本文介绍如何使用 <xref:System.Text.Json> 命名空间在 JavaScript 对象表示法（JSON）之间进行序列化和反序列化。 方向和示例代码直接使用库，而不是通过框架（如[ASP.NET Core](/aspnet/core/)）使用。
 
 ## <a name="namespaces"></a>命名空间
 
-<xref:System.Text.Json>命名空间包含所有入口点和主要类型。 <xref:System.Text.Json.Serialization>命名空间包含用于高级方案的属性和 api，以及特定于序列化和反序列化的自定义。 因此，本文中所示的代码示例需要以下`using`一个或两个指令：
+@No__t 的命名空间包含所有入口点和主要类型。 @No__t 的命名空间包含用于高级方案的属性和 Api，以及特定于序列化和反序列化的自定义。 因此，本文中所示的代码示例需要以下一项或两项 `using` 指令：
 
 ```csharp
 using System.Text.Json;
 using System.Text.Json.Serialization;
 ```
 
-当前不支持<xref:System.Runtime.Serialization>命名空间中`System.Text.Json`的特性。
+@No__t 中当前不支持 @no__t 命名空间中的属性。
 
 ## <a name="how-to-write-net-objects-to-json-serialize"></a>如何将 .NET 对象写入 JSON （序列化）
 
-若要将 JSON 写入字符串，请调用<xref:System.Text.Json.JsonSerializer.Serialize%2A?displayProperty=nameWithType>方法。 下面的示例使用具有泛型类型参数的重载：
+若要将 JSON 写入字符串，请调用 <xref:System.Text.Json.JsonSerializer.Serialize%2A?displayProperty=nameWithType> 方法。 下面的示例使用具有泛型类型参数的重载：
 
 ```csharp
 WeatherForecast weatherForecast;
@@ -119,17 +119,17 @@ public class Temperature
 }
 ```
 
-的<xref:System.Text.Json.JsonSerializer.Serialize%2A>重载允许您序列化为<xref:System.IO.Stream>。 `Stream`重载的异步版本可用。
+@No__t 的重载允许您序列化到 @no__t 1。 @No__t-0 重载的异步版本可用。
 
 ### <a name="serialize-to-utf-8"></a>序列化为 UTF-8
 
-若要序列化为 utf-8，请调用<xref:System.Text.Json.JsonSerializer.SerializeToUtf8Bytes%2A?displayProperty=nameWithType>方法：
+若要序列化为 UTF-8，请调用 <xref:System.Text.Json.JsonSerializer.SerializeToUtf8Bytes%2A?displayProperty=nameWithType> 方法：
 
 ```csharp
 byte[] utf8Json = JsonSerializer.SerializeToUtf8Bytes<WeatherForecast>(weatherForecast);
 ```
 
-作为替代方法， <xref:System.Text.Json.JsonSerializer.Serialize%2A>可以使用<xref:System.Text.Json.Utf8JsonWriter>采用的重载。
+作为替代方法，可以使用 @no__t 为-1 的 @no__t 0 重载。
 
 序列化为 UTF-8 比使用基于字符串的方法更快 5-10%。 不同之处在于，不需要将字节（如 UTF-8）转换为字符串（UTF-16）。
 
@@ -147,7 +147,7 @@ byte[] utf8Json = JsonSerializer.SerializeToUtf8Bytes<WeatherForecast>(weatherFo
 * 映射到 JavaScript 基元的 .NET 基元，如数值类型、字符串和布尔值。
 * 用户定义的[普通旧 CLR 对象（poco）](https://stackoverflow.com/questions/250001/poco-definition)。
 * 一维数组和交错数组（`ArrayName[][]`）。
-* `Dictionary<string,TValue>`其中`TValue` ， `object`是、`JsonElement`或 POCO。
+* `Dictionary<string,TValue>`，其中 `TValue` 是 `object`、`JsonElement` 还是 POCO。
 * 以下命名空间中的集合。 有关详细信息，请参阅 GitHub 上的 dotnet/corefx 存储库中的[收集支持问题](https://github.com/dotnet/corefx/issues/36643)。
   * <xref:System.Collections>
   * <xref:System.Collections.Generic>
@@ -155,7 +155,7 @@ byte[] utf8Json = JsonSerializer.SerializeToUtf8Bytes<WeatherForecast>(weatherFo
 
 ## <a name="how-to-read-json-into-net-objects-deserialize"></a>如何将 JSON 读入 .NET 对象（反序列化）
 
-若要从字符串进行反序列化<xref:System.Text.Json.JsonSerializer.Deserialize%2A?displayProperty=nameWithType> ，请调用方法，如以下示例中所示：
+若要从字符串进行反序列化，请调用 <xref:System.Text.Json.JsonSerializer.Deserialize%2A?displayProperty=nameWithType> 方法，如以下示例中所示：
 
 ```csharp
 string json = ... ;
@@ -165,11 +165,11 @@ var weatherForecast = JsonSerializer.Deserialize<WeatherForecast>(json);
 
 有关示例，请参阅[序列化](#how-to-write-net-objects-to-json-serialize)部分。 JSON 和 .NET 对象是相同的，但方向反转。
 
-的<xref:System.Text.Json.JsonSerializer.Deserialize*>重载使你可以`Stream`从进行反序列化。  `Stream`重载的异步版本可用。
+@No__t 的重载使你可以从 @no__t 进行反序列化。  @No__t-0 重载的异步版本可用。
 
 ### <a name="deserialize-from-utf-8"></a>从 UTF-8 反序列化
 
-若要从 utf-8 进行反序列化， <xref:System.Text.Json.JsonSerializer.Deserialize%2A?displayProperty=nameWithType>请调用`Utf8JsonReader`采用或的`ReadOnlySpan<byte>`重载，如以下示例中所示：
+若要从 UTF-8 进行反序列化，请调用采用 @no__t 或 @no__t 的 @no__t 0 重载，如以下示例中所示：
 
 ```csharp
 byte[] utf8Json;
@@ -198,7 +198,7 @@ weatherForecast = JsonSerializer.Deserialize<WeatherForecastMin>(ref utf8Reader)
 
 ## <a name="serialize-to-formatted-json"></a>序列化为格式化的 JSON
 
-若要整齐打印 JSON 输出，请将<xref:System.Text.Json.JsonSerializerOptions.WriteIndented?displayProperty=nameWithType>设置`true`为：
+若要整齐地打印 JSON 输出，请将 <xref:System.Text.Json.JsonSerializerOptions.WriteIndented?displayProperty=nameWithType> 设置为 `true`：
 
 ```csharp
 var options = new JsonSerializerOptions
@@ -229,7 +229,7 @@ class WeatherForecast
 
 ## <a name="allow-comments-and-trailing-commas"></a>允许注释和尾随逗号
 
-默认情况下，JSON 中不允许使用注释和尾随逗号。 若要允许 JSON 中的注释，请<xref:System.Text.Json.JsonSerializerOptions.ReadCommentHandling?displayProperty=nameWithType>将属性`JsonCommentHandling.Skip`设置为。 若要允许尾随逗号，请将<xref:System.Text.Json.JsonSerializerOptions.AllowTrailingCommas?displayProperty=nameWithType>属性设置`true`为。 下面的示例演示如何允许两种方法：
+默认情况下，JSON 中不允许使用注释和尾随逗号。 若要允许 JSON 中的注释，请将 <xref:System.Text.Json.JsonSerializerOptions.ReadCommentHandling?displayProperty=nameWithType> 属性设置为 `JsonCommentHandling.Skip`。 若要允许尾随逗号，请将 <xref:System.Text.Json.JsonSerializerOptions.AllowTrailingCommas?displayProperty=nameWithType> 属性设置为 `true`。 下面的示例演示如何允许两种方法：
 
 ```csharp
 var options = new JsonSerializerOptions
@@ -294,7 +294,7 @@ class WeatherForecast
 
 ### <a name="use-camel-case-for-all-json-property-names"></a>对所有 JSON 属性名称使用 camel 大小写
 
-若要对所有 JSON 属性名称使用 camel 大小写<xref:System.Text.Json.JsonSerializerOptions.PropertyNamingPolicy?displayProperty=nameWithType> ， `JsonNamingPolicy.CamelCase`请将设置为，如下面的示例中所示：
+若要对所有 JSON 属性名称使用 camel 大小写，请将 <xref:System.Text.Json.JsonSerializerOptions.PropertyNamingPolicy?displayProperty=nameWithType> 设置为 `JsonNamingPolicy.CamelCase`，如以下示例中所示：
 
 ```csharp
 var options = new JsonSerializerOptions
@@ -329,11 +329,11 @@ class WeatherForecast
 Camel 大小写属性命名策略：
 
 * 适用于序列化和反序列化。
-* 由`[JsonPropertyName]`特性重写。
+* 由 `[JsonPropertyName]` 特性重写。
 
 ### <a name="use-a-custom-json-property-naming-policy"></a>使用自定义 JSON 属性命名策略
 
-若要使用自定义 JSON 属性命名策略，请创建一个派生自<xref:System.Text.Json.JsonNamingPolicy>的类并重<xref:System.Text.Json.JsonNamingPolicy.ConvertName%2A>写方法，如以下示例中所示：
+若要使用自定义 JSON 属性命名策略，请创建一个派生自 @no__t 0 的类，并重写 <xref:System.Text.Json.JsonNamingPolicy.ConvertName%2A> 方法，如以下示例中所示：
 
 ```csharp
 class UpperCaseNamingPolicy : JsonNamingPolicy
@@ -345,7 +345,7 @@ class UpperCaseNamingPolicy : JsonNamingPolicy
 }
 ```
 
-然后将<xref:System.Text.Json.JsonSerializerOptions.PropertyNamingPolicy?displayProperty=nameWithType>属性设置为命名策略类的实例：
+然后，将 <xref:System.Text.Json.JsonSerializerOptions.PropertyNamingPolicy?displayProperty=nameWithType> 属性设置为命名策略类的实例：
 
 ```csharp
 var options = new JsonSerializerOptions
@@ -380,11 +380,11 @@ class WeatherForecast
 JSON 属性命名策略：
 
 * 适用于序列化和反序列化。
-* 由`[JsonPropertyName]`特性重写。
+* 由 `[JsonPropertyName]` 特性重写。
 
 ### <a name="camel-case-dictionary-keys"></a>Camel 大小写字典密钥
 
-如果要序列化的对象的属性的类型`Dictionary<string,TValue>`为，则`string`可以将键转换为 camel 大小写形式。 为此，请将<xref:System.Text.Json.JsonSerializerOptions.DictionaryKeyPolicy>设置`JsonNamingPolicy.CamelCase`为，如下面的示例中所示：
+如果要序列化的对象的属性的类型为 `Dictionary<string,TValue>`，则可以将 @no__t 键转换为 camel 大小写形式。 为此，请将 @no__t 设置为 `JsonNamingPolicy.CamelCase`，如以下示例中所示：
 
 ```csharp
 var options = new JsonSerializerOptions
@@ -396,9 +396,9 @@ json = JsonSerializer.Serialize(weatherForecast, options);
 
 下面是一个示例对象，用于序列化和 JSON 输出：
 
-|Property |值  |
+|属性 |ReplTest1  |
 |---------|---------|
-| 日期    | 8/1/2019 12:00:00 AM-07:00|
+| Date    | 8/1/2019 12:00:00 AM-07:00|
 | TemperatureC| 25 |
 | 总结| 修复|
 | TemperatureRanges | 冷，20<br>热，40|
@@ -452,7 +452,7 @@ class WeatherForecast
 
 ### <a name="exclude-all-read-only-properties"></a>排除所有只读属性
 
-若要排除所有只读属性，请将设置<xref:System.Text.Json.JsonSerializerOptions.IgnoreReadOnlyProperties?displayProperty=nameWithType>为`true`，如下面的示例中所示：
+若要排除所有只读属性，请将 @no__t 设置为 `true`，如以下示例中所示：
 
 ```csharp
 var options = new JsonSerializerOptions
@@ -486,7 +486,7 @@ class WeatherForecast
 
 ### <a name="exclude-all-null-value-properties"></a>排除所有 null 值属性
 
-若要排除所有 null 值属性，请<xref:System.Text.Json.JsonSerializerOptions.IgnoreNullValues>将属性`true`设置为，如下面的示例中所示：
+若要排除所有 null 值属性，请将 <xref:System.Text.Json.JsonSerializerOptions.IgnoreNullValues> 属性设置为 `true`，如以下示例中所示：
 
 ```csharp
 var options = new JsonSerializerOptions
@@ -498,9 +498,9 @@ json = JsonSerializer.Serialize(weatherForecast, options);
 
 下面是一个示例对象，用于序列化和 JSON 输出：
 
-|属性 |值  |
+|属性 |ReplTest1  |
 |---------|---------|
-| 日期    | 8/1/2019 12:00:00 AM-07:00|
+| Date    | 8/1/2019 12:00:00 AM-07:00|
 | TemperatureC| 25 |
 | 总结| null|
 
@@ -515,7 +515,7 @@ json = JsonSerializer.Serialize(weatherForecast, options);
 
 ## <a name="case-insensitive-property-matching"></a>不区分大小写的属性匹配
 
-默认情况下，反序列化将查找 JSON 与目标对象属性之间区分大小写的属性名称匹配。 若要更改此行为，请<xref:System.Text.Json.JsonSerializerOptions.PropertyNameCaseInsensitive?displayProperty=nameWithType>将`true`设置为：
+默认情况下，反序列化将查找 JSON 与目标对象属性之间区分大小写的属性名称匹配。 若要更改此行为，请将 @no__t 0 设置为 `true`：
 
 ```csharp
 var options = new JsonSerializerOptions
@@ -546,7 +546,7 @@ class WeatherForecast
 
 ## <a name="include-properties-of-derived-classes"></a>包含派生类的属性
 
-在编译时指定要序列化的类型时，不支持多态序列化。 例如，假设您有一个`WeatherForecast`类和一个派生类： `WeatherForecastWithWind`
+在编译时指定要序列化的类型时，不支持多态序列化。 例如，假设您有一个 @no__t 0 类和一个派生类 `WeatherForecastWithWind`：
 
 ```csharp
 class WeatherForecast
@@ -561,7 +561,7 @@ class WeatherForecastWithWind : WeatherForecast
 }
 ```
 
-并且假设在编译时传递到或由`Serialize`方法推断的类型为： `WeatherForecast`
+并且假设类型传递到，或由推断，在编译时 `Serialize` 方法 @no__t 为-1：
 
 ```csharp
 string json = JsonSerializer.Serialize<WeatherForecast>(weatherForecast);
@@ -573,7 +573,7 @@ WeatherForecast weatherForecast;
 json = JsonSerializer.Serialize(weatherForecast);
 ```
 
-在这种情况下`WindSpeed` ，即使`weatherForecast`对象实际上`WeatherForecastWithWind`是对象，也不会序列化属性。 仅序列化基类属性：
+在这种情况下，即使 @no__t 对象实际上是 @no__t 2 对象，也不会序列化 `WindSpeed` 属性。 仅序列化基类属性：
 
 ```json
 {
@@ -587,19 +587,19 @@ json = JsonSerializer.Serialize(weatherForecast);
 
 若要序列化派生类型的属性，请使用以下方法之一：
 
-* 调用的重载<xref:System.Text.Json.JsonSerializer.Serialize%2A> ，以便在运行时指定类型：
+* 调用 <xref:System.Text.Json.JsonSerializer.Serialize%2A> 的重载，以便在运行时指定类型：
 
   ```csharp
   json = JsonSerializer.Serialize(weatherForecast, weatherForecast.GetType());
   ```
 
-* 声明要序列化为`object`的对象。
+* 将要序列化的对象声明为 `object`。
 
   ```csharp
   json = JsonSerializer.Serialize<object>(weatherForecast);
   ```
 
-在前面的示例方案中，这两种`WindSpeed`方法都会导致在 JSON 输出中包括属性：
+在前面的示例方案中，这两种方法都会导致在 JSON 输出中包含 `WindSpeed` 属性：
 
 ```json
 {
@@ -642,7 +642,7 @@ class WeatherForecast
 }
 ```
 
-如果将所显示的 JSON 反序列化为显示的类型`DatesAvailable` ， `SummaryWords`则和属性将不会有任何位置并丢失。 若要捕获额外数据（如这些属性），请将[JsonExtensionData](xref:System.Text.Json.Serialization.JsonExtensionDataAttribute)特性应用于类型`Dictionary<string,object>`为`Dictionary<string,JsonElement>`或的属性：
+如果将所显示的 JSON 反序列化为显示的类型，则 @no__t 的 "0" 和 "@no__t" 属性没有任何位置，并且将丢失。 若要捕获额外数据（如这些属性），请将[JsonExtensionData](xref:System.Text.Json.Serialization.JsonExtensionDataAttribute)特性应用于类型 `Dictionary<string,object>` 或 `Dictionary<string,JsonElement>` 的属性：
 
 ```csharp
 class WeatherForecast
@@ -655,12 +655,12 @@ class WeatherForecast
 }
 ```
 
-反序列化前面显示的此示例类型中的 JSON 时，额外的数据将成为`ExtensionData`属性的键值对：
+反序列化前面显示的此示例类型的 JSON 时，额外的数据将成为 `ExtensionData` 属性的键值对：
 
-|属性 |值  |说明  |
+|属性 |ReplTest1  |说明  |
 |---------|---------|---------|
-| 日期    | 8/1/2019 12:00:00 AM-07:00||
-| TemperatureC| 0 | 区分大小写不匹配`temperatureC` （在 JSON 中），因此未设置属性。 |
+| Date    | 8/1/2019 12:00:00 AM-07:00||
+| TemperatureC| 0 | 区分大小写不匹配（在 JSON 中 `temperatureC`），因此未设置属性。 |
 | 总结 | 修复 ||
 | ExtensionData | temperatureC:25 |由于大小写不匹配，因此此 JSON 属性是一个额外的，并成为字典中的键值对。|
 || DatesAvailable:<br>  8/1/2019 12:00:00 AM-07:00<br>8/2/2019 12:00:00 AM-07:00 |JSON 中的额外属性将成为键值对，并将数组作为值对象。|
@@ -686,11 +686,11 @@ class WeatherForecast
 }
 ```
 
-请注意， `ExtensionData`属性名称未出现在 JSON 中。 此行为允许 JSON 进行往返，而不会丢失任何不会被反序列化的额外数据。
+请注意，`ExtensionData` 属性名称未出现在 JSON 中。 此行为允许 JSON 进行往返，而不会丢失任何不会被反序列化的额外数据。
 
 ## <a name="use-utf8jsonwriter-directly"></a>直接使用 Utf8JsonWriter
 
-下面的示例演示如何直接使用<xref:System.Text.Json.Utf8JsonWriter>类。
+下面的示例演示如何直接使用 @no__t 0 类。
 
 ```csharp
 var options = new JsonWriterOptions
@@ -715,7 +715,7 @@ using (var stream = new MemoryStream())
 
 ## <a name="use-utf8jsonreader-directly"></a>直接使用 Utf8JsonReader
 
-下面的示例演示如何直接使用<xref:System.Text.Json.Utf8JsonReader>类。 此代码假定该`jsonUtf8`变量是一个字节数组，该数组包含编码为 utf-8 的有效 JSON。
+下面的示例演示如何直接使用 @no__t 0 类。 此代码假定 `jsonUtf8` 变量是包含有效 JSON 的字节数组，编码为 UTF-8。
 
 ```csharp
 var options = new JsonReaderOptions

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: cb5fab92-1c19-499e-ae91-8b7525dd875f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 599432af178031a85dea4155a8fd2923f879a600
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 9d54f06c1fc774a2e73b3b99a7d5bb24dd8baf3f
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59427352"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835264"
 ---
 # <a name="how-to-write-a-simple-parallelforeach-loop"></a>如何：编写简单的 Parallel.ForEach 循环
 
@@ -27,12 +27,12 @@ ms.locfileid: "59427352"
 
 ## <a name="example"></a>示例
 
-此示例假定 C:\Users\Public\Pictures\Sample Pictures 文件夹中有几个 .jpg 文件，并创建名为“Modified”的新子文件夹。 运行该示例时，它会旋转示例图片中的每个 .jpg 图像并将其保存到“Modified”文件夹 可以根据需要修改这两个路径。
+此示例假定 C:\Users\Public\Pictures\Sample Pictures  文件夹中有几个 .jpg 文件，并创建名为“Modified”  的新子文件夹。 运行该示例时，它会旋转示例图片中的每个 .jpg 图像  并将其保存到“Modified”文件夹  可以根据需要修改这两个路径。
 
 [!code-csharp[TPL_Parallel#03](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_parallel/cs/simpleforeach.cs#03)]
 [!code-vb[TPL_Parallel#03](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_parallel/vb/simpleforeach.vb#03)]
 
-<xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> 循环的工作原理类似 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 循环。 该循环对源集合进行分区，并根据系统环境在多个线程上安排工作。 系统上的处理器越多，并行方法的运行速度就越快。 对于一些源集合，有序循环可能会更快，具体视源大小以及该循环要执行的工作类型而定。 若要详细了解性能，请参阅[数据并行和任务并行的潜在问题](../../../docs/standard/parallel-programming/potential-pitfalls-in-data-and-task-parallelism.md)
+<xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> 循环的工作原理类似 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 循环。 该循环对源集合进行分区，并根据系统环境在多个线程上安排工作。 系统上的处理器越多，并行方法的运行速度就越快。 对于一些源集合，有序循环可能会更快，具体视源大小以及该循环要执行的工作类型而定。 有关性能的详细信息，请参阅[数据和任务并行的潜在问题](potential-pitfalls-in-data-and-task-parallelism.md)。
 
 若要详细了解并行循环，请参阅[如何：编写简单的 Parallel.For 循环](../../../docs/standard/parallel-programming/how-to-write-a-simple-parallel-for-loop.md)。
 
@@ -51,7 +51,7 @@ Visual Studio 中有适用于 Windows 桌面和 .NET Core 的 Visual Basic 和 C
 
 从命令行，可使用 .NET Core 及其 CLI 工具（例如 `dotnet new console` 或 `dotnet new console -lang vb`），或者可创建文件并使用 .NET Framework 应用程序提供的命令行编译器。
 
-对于.NET Core 项目，必须引用 System.Drawing.Common NuGet 包。 在 Visual Studio 中，使用 NuGet 包管理器安装该包。 或者，也可以在 \*.csproj 或 \*.vbproj 文件中添加对包的引用：
+对于.NET Core 项目，必须引用 System.Drawing.Common  NuGet 包。 在 Visual Studio 中，使用 NuGet 包管理器安装该包。 或者，也可以在 \*.csproj 或 \*.vbproj 文件中添加对包的引用：
  
 ```xml
 <ItemGroup>
@@ -61,7 +61,7 @@ Visual Studio 中有适用于 Windows 桌面和 .NET Core 的 Visual Basic 和 C
 
 要从命令行运行 .NET Core 控制台应用程序，请使用包含该应用程序的文件夹中的 `dotnet run`。
 
-要从 Visual Studio 中运行控制台应用程序，请按 F5。
+要从 Visual Studio 中运行控制台应用程序，请按 F5  。
 
 ## <a name="see-also"></a>请参阅
 

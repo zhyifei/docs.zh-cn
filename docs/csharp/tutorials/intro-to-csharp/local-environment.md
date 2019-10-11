@@ -2,17 +2,17 @@
 title: C# 简介 - 熟悉开发工具
 description: 本文介绍用于在计算机上开发 C# 和 .NET 应用程序的工具的基本知识。
 ms.date: 10/23/2018
-ms.openlocfilehash: fe39bd5e89bb168316b19c62d6e022e36c58fc2f
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: b18c71c54e4450902f576a1074058abcd5e8aa91
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70850754"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834076"
 ---
 # <a name="become-familiar-with-the-net-development-tools"></a>熟悉 .NET 开发工具
 
 在计算机上演练教程的第一步是设置开发环境。
-.NET 教程 [Hello World 10 分钟入门](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)介绍了如何在 Mac、PC 或 Linux 上设置本地开发环境。
+.NET 教程 [Hello World 10 分钟入门](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)介绍了如何在 Windows、Linux 或 macOS 上设置本地开发环境。
 
 或者，也可以安装 [.NET Core SDK](https://dotnet.microsoft.com/download) 和 [Visual Studio Code](https://code.visualstudio.com/)。
 

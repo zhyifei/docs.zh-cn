@@ -2,12 +2,12 @@
 title: API 网关模式与客户端到微服务直接通信
 description: 了解 API 网关模式与客户端到微服务直接通信之间的差异及二者的用途。
 ms.date: 01/07/2019
-ms.openlocfilehash: c54287ea3e99ff7fe9faf02898b8c322b756e26f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d895ae50e50ade2f8285117491733d5c9814b732
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69914663"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834434"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>API 网关模式与客户端到微服务直接通信
 
@@ -17,7 +17,7 @@ ms.locfileid: "69914663"
 
 使用客户端到微服务直接通信体系结构是一种可行方法。 在此方法中，客户端应用可以直接向某些微服务发出请求，如图 4-12 所示。
 
-![显示客户端到微服务直接通信体系结构（每个应用直接与各个微服务通信）的关系图。](./media/image12.png)
+![显示客户端到微服务通信体系结构的示意图。](./media/direct-client-to-microservice-communication-versus-the-API-Gateway-pattern/direct-client-to-microservice-communication.png)
 
 图 4-12  。 使用客户端到微服务直接通信体系结构
 
@@ -69,11 +69,11 @@ ms.locfileid: "69914663"
 
 图 4-13 演示自定义 API 网关如何通过几个微服务适应简化的基于微服务的体系结构。
 
-![显示作为自定义服务实现的 API 网关的关系图，在这种情况下，应用程序将连接到单个终结点，即 API 网关，该终结点配置为将请求转发到各个微服务。](./media/image13.png)
+![显示作为自定义服务实现的 API 网关的示意图。](./media/direct-client-to-microservice-communication-versus-the-API-Gateway-pattern/custom-service-api-gateway.png)
 
 图 4-13  。 使用作为自定义服务实现的 API 网关
 
-在此示例中，API 网关将作为自定义 ASP.NET Core WebHost 服务实现，并作为容器运行。
+应用程序将连接到单个终结点，即 API 网关，该终结点配置为将请求转发到各个微服务。 在此示例中，API 网关将作为自定义 ASP.NET Core WebHost 服务实现，并作为容器运行。
 
 将使用面向多个不同客户端应用的单个自定义 API 网关服务，在该图中突出显示这一点非常重要。 这一事实可能存在很大风险，因为 API 网关服务将根据客户端应用的多种不同要求而不断增长和发展。 最终，它将因这些不同的需求而膨胀，实际上，它会类似于整体式应用程序或整体式服务。 正因如此，强烈建议将 API 网关拆分成多个服务或多个更小的 API 网关（例如每种客户端应用外形规格一个网关）。
 
@@ -83,11 +83,11 @@ ms.locfileid: "69914663"
 
 当将 API 网关层拆分为多个 API 网关时，如果应用程序有多个客户端应用，那么在识别多个 API 网关类型时，这可能是一个主枢轴，这样你就可以为每个客户端应用提供所需的不同外观。 本例是一个名为“用于前端的后端”([BFF](https://samnewman.io/patterns/architectural/bff/)) 模式，其中每个 API 网关可以专为每个客户端应用类型提供不同的 API，甚至可以通过实现特定的适配器代码（该代码在下方调用多个内部微服务），根据客户端外形规格提供不同 API，如下图所示：
 
-![显示多个自定义 API 网关的关系图，其中按客户端类型将 API 网关一分为二；一个用于移动客户端，一个用于 Web 客户端。 传统 Web 应用连接到使用 Web API 网关的 MVC 微服务。](./media/image13.1.png)
+![显示多个自定义 API 网关的示意图。](./media/direct-client-to-microservice-communication-versus-the-API-Gateway-pattern/multiple-custom-api-gateways.png)
 
 图 4-13.1  。 使用多个自定义 API 网关
 
-以前的映像显示一个使用多个细化 API 网关的简化体系结构。 在本例中，为每个 API 网关识别的边界纯粹基于“用于前端的后端”([BFF](https://samnewman.io/patterns/architectural/bff/)) 模式，因此仅基于每个客户端应用所需的 API。 但是在更大的应用程序中，还应该更进一步，并创建基于业务边界的附加 API 网关作为第二个设计枢轴。
+图 4-13.1 显示按客户端类型分开的 API 网关；一个用于移动客户端，一个用于 Web 客户端。 传统 Web 应用连接到使用 Web API 网关的 MVC 微服务。 示例显示一个使用多个细化 API 网关的简化体系结构。 在本例中，为每个 API 网关识别的边界纯粹基于“用于前端的后端”([BFF](https://samnewman.io/patterns/architectural/bff/)) 模式，因此仅基于每个客户端应用所需的 API。 但是在更大的应用程序中，还应该更进一步，并创建基于业务边界的附加 API 网关作为第二个设计枢轴。
 
 ## <a name="main-features-in-the-api-gateway-pattern"></a>API 网关模式中的主要功能
 
@@ -128,11 +128,11 @@ API 网关可以提供多个功能。 然而，根据产品，它可能提供更
 
 [Azure API 管理](https://azure.microsoft.com/services/api-management/)（如图 4-14 所示）不仅能够满足 API 网关需求，还提供从 API 收集见解等功能。 如果正在使用 API 管理解决方案，则 API 网关仅是整个 API 管理解决方案中的一个组成部分。
 
-![Azure API 管理同时满足了 API 网关和管理需求（如日志记录、安全和计量等）。](./media/api-gateway-azure-api-management.png)
+![显示如何使用 Azure API 管理作为 API 网关的示意图。](./media/direct-client-to-microservice-communication-versus-the-API-Gateway-pattern/api-gateway-azure-api-management.png)
 
 图 4-14  。 为 API 网关使用 Azure API 管理
 
-在这种情况下，使用如 Azure API 管理之类的产品时，拥有单个 API 网关不会存在较大风险，因为这类 API 网关“更精细”，这意味着不会实现可能发展成整体式组件的自定义 C# 代码。 
+Azure API 管理同时满足了 API 网关和管理需求（如日志记录、安全和计量等）。在这种情况下，使用如 Azure API 管理之类的产品时，拥有单个 API 网关不会存在较大风险，因为这类 API 网关“更精细”，这意味着不会实现可能发展成整体式组件的自定义 C# 代码。 
 
 API 网关产品通常表现为用于入口通信的反向代理，也可以从内部微服务筛选 API，并授权此单层中的已发布 API。
 

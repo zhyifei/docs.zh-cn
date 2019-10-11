@@ -1,7 +1,7 @@
 ---
 title: 布尔逻辑运算符 - C# 参考
 description: 了解使用布尔操作数执行逻辑非、逻辑与、逻辑或和逻辑异或运算的 C# 运算符。
-ms.date: 04/08/2019
+ms.date: 09/27/2019
 author: pkulikov
 f1_keywords:
 - '!_CSharpKeyword'
@@ -32,12 +32,12 @@ helpviewer_keywords:
 - conditional OR operator [C#]
 - short-circuiting OR operator [C#]
 - '|| operator [C#]'
-ms.openlocfilehash: 39f5be7a667b4e37e84246ef0bfeb03c0099d4b7
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: cc25d4bfd444dc0acb30fc1c6e6c3c9918af537c
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353361"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698679"
 ---
 # <a name="boolean-logical-operators-c-reference"></a>布尔逻辑运算符（C# 参考）
 
@@ -54,6 +54,8 @@ ms.locfileid: "71353361"
 `!` 运算符计算操作数的逻辑非。 也就是说，如果操作数的计算结果为 `false`，它生成 `true`；如果操作数的计算结果为 `true`，它生成 `false`：
 
 [!code-csharp-interactive[logical negation](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#Negation)]
+
+从 C# 8.0 起，一元后缀 `!` 运算符为 null 包容运算符。 在已启用的可为空的注释上下文中，可以使用它来声明可为空的引用类型的表达式 `x` 不为 null：`x!`。 有关详细信息，请参阅[可为空引用类型](../../nullable-references.md)。
 
 ## <a name="logical-and-operator-"></a> 逻辑 AND 运算符 &amp;
 

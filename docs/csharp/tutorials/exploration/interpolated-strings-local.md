@@ -4,18 +4,18 @@ description: 本教程介绍了如何使用 C# 字符串内插功能将格式化
 author: rpetrusha
 ms.author: ronpet
 ms.date: 10/23/2018
-ms.openlocfilehash: b2bbab5705d78525ccae6a90b4f4f2a91064a06b
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: e142c48cd944fd6119c697a299308dc9ce1203ca
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117846"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834139"
 ---
 # <a name="use-string-interpolation-to-construct-formatted-strings"></a>使用字符串内插构造格式化字符串
 
 本教程介绍了如何使用 C# [字符串内插](../../language-reference/tokens/interpolated.md)将值插入单个结果字符串中。 读者可以编写 C# 代码并查看代码编译和运行结果。 本教程包含一系列课程，介绍了如何将值插入字符串，以及用不同方式设置这些值的格式。
 
-本教程要求你有一台可用于开发的计算机。 .NET 教程 [Hello World 10 分钟入门](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)介绍了如何在 Mac、PC 或 Linux 上设置本地开发环境。 另外，还可在浏览器中完成本教程的[交互式版本](interpolated-strings.yml)。
+本教程要求你有一台可用于开发的计算机。 .NET 教程 [Hello World 10 分钟入门](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)介绍了如何在 Windows、Linux 或 macOS 上设置本地开发环境。 另外，还可在浏览器中完成本教程的[交互式版本](interpolated-strings.yml)。
 
 ## <a name="create-an-interpolated-string"></a>创建内插字符串
 

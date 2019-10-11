@@ -2,12 +2,12 @@
 title: 创建基于微服务的复合 UI
 description: 微服务体系结构不仅针对后端。 了解微服务在前端中的使用。
 ms.date: 09/20/2018
-ms.openlocfilehash: 0d1825d6183b79a0e10f70fc6cfee6ca79a837d8
-ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
+ms.openlocfilehash: 60e0e6d59738f3f1fec31226cb842ceb1af303e4
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68817830"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834379"
 ---
 # <a name="creating-composite-ui-based-on-microservices"></a>创建基于微服务的复合 UI
 
@@ -15,7 +15,7 @@ ms.locfileid: "68817830"
 
 图 4-20 显示了在整体式客户端应用程序中使用微服务的更为简单的方式。 当然，在生成 HTML 之后，可以创建一个 ASP.NET MVC 服务，再生成 JavaScript。 该图是一张简图，强调拥有使用微服务的单一（整体式）客户端 UI，该 UI 仅关注逻辑和数据，而不关注 UI 形状（HTML 和 JavaScript）。
 
-![连接到各项微服务的整体式 UI 应用程序。](./media/image20.png)
+![单一 UI 应用程序连接到微服务的关系图。](./media/microservice-based-composite-ui-shape-layout/monolith-ui-consume-microservices.png)
 
 图 4-20  。 使用后端微服务的整体式 UI 应用程序
 
@@ -25,11 +25,11 @@ ms.locfileid: "68817830"
 
 图 4-21 显示了一种复合 UI 方法。 这只是一个简化示例，因为可能还有其他微服务，它们将聚合基于不同技术的精细部件。 具体取决于构建的是传统 Web 方法 (ASP.NET MVC) 还是 SPA （单页应用程序）。
 
-![在复合 UI 应用程序中，每个 UI 区域都由一个 UI 复合微服务生成，其作用类似于迷你网关。](./media/image21.png)
+![由多个视图模型组成的复合 UI 的关系图。](./media/microservice-based-composite-ui-shape-layout/microservice-generate-composite-ui.png)
 
 图 4-21  。 由后端微服务形成的复合 UI 应用程序示例
 
-这些 UI 组合微服务中的每一个都类似于一个小型的 API 网关。 但在此处，每个服务都负责一个小的 UI 领域。
+这些 UI 组合微服务中的每一个都类似于一个小型的 API 网关。 但在此情况下，每个服务都负责一个小的 UI 领域。
 
 由微服务驱动的复合 UI 方法的挑战性可能更大也可能更小，具体取决于使用的 UI 技术。 例如，生成传统 Web 应用程序时，不会采用生成 SPA 或本机移动应用的技术（开发 Xamarin 应用时，此方法可能更具挑战性）。
 

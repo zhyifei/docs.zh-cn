@@ -2,12 +2,12 @@
 title: 基于消息的异步通信
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 基于消息的异步通信是微服务体系结构中的一个重要概念，因为它是保持微服务彼此独立的同时使其最终同步的最佳方式。
 ms.date: 09/20/2018
-ms.openlocfilehash: 65bd0cd2b316fe7011ad8e878852547ee5949f09
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 109737a04eac8cfc30c746d283ca71c697f5b29d
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68673314"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834473"
 ---
 # <a name="asynchronous-message-based-communication"></a>基于消息的异步通信
 
@@ -31,7 +31,7 @@ ms.locfileid: "68673314"
 
 一旦开始发送基于消息的通信（通过命令或事件），就应该避免将基于消息的通信与同步 HTTP 通信混合在一起。
 
-![接收异步消息的单个微服务](./media/image18.png)
+![接收异步消息的单个微服务](./media/asynchronous-message-based-communication/single-receiver-message-based-communication.png)
 
 **图 4-18**. 接收异步消息的单个微服务
 
@@ -53,11 +53,11 @@ ms.locfileid: "68673314"
 
 很重要的一点是，你可能想要与订阅同一事件的多个微服务进行通信。 为此，可以使用基于事件驱动通信的发布/订阅消息传递，如图 4-19 所示。 这种发布/订阅机制并不是微服务体系结构所独有的。 它类似于 DDD 中[界定上下文](https://martinfowler.com/bliki/BoundedContext.html)的通信方式，或者类似于在[命令和查询责任分离 (CQRS)](https://martinfowler.com/bliki/CQRS.html) 体系结构模式中将更新从写入数据库传播到读取数据库的方式。 其目标是在分布式系统中的多个数据源之间实现最终一致性。
 
-![在事件驱动的异步通信中，一个微服务将事件发布到事件总线，许多微服务可以订阅它，以获取通知并对其进行操作。](./media/image19.png)
+![显示异步事件驱动的通信的示意图。](./media/asynchronous-message-based-communication/asynchronous-event-driven-communication.png)
 
 **图 4-19**. 事件驱动的异步消息通信
 
-你的实现将决定要用于基于消息的事件驱动通信的协议。 [AMQP](https://en.wikipedia.org/wiki/Advanced_Message_Queuing_Protocol) 有助于实现可靠的排队通信。
+在事件驱动的异步通信中，一个微服务将事件发布到事件总线，许多微服务可以订阅它，以获取通知并对其进行操作。 你的实现将决定要用于基于消息的事件驱动通信的协议。 [AMQP](https://en.wikipedia.org/wiki/Advanced_Message_Queuing_Protocol) 有助于实现可靠的排队通信。
 
 使用事件总线时，你可能希望将基于类中相关实现的抽象级别（如事件总线接口）与使用 API（来自消息代理，如 [RabbitMQ](https://www.rabbitmq.com/)，或来自服务总线，如 [Azure 服务总线及主题](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-dotnet-how-to-use-topics-subscriptions)）的代码结合使用。 或者，你可能希望使用 NServiceBus、MassTransit 或 Brighter 等更高级别的服务总线来清楚地表述你的事件总线和发布/订阅系统。
 

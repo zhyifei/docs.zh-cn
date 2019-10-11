@@ -5,12 +5,12 @@ ms.date: 08/29/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to
-ms.openlocfilehash: 9617582c79b2278e3a68e7acf84568247b81eca1
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: 8090e4565a7e55aaa9cc9939e61eb728a169de8d
+ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70167655"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71736874"
 ---
 # <a name="explain-model-predictions-using-permutation-feature-importance"></a>使用排列特征重要性解释模型预测
 
@@ -18,7 +18,7 @@ ms.locfileid: "70167655"
 
 机器学习模型通常被视为黑盒，它们接收输入并生成输出。 人们对影响输出的中间步骤或特征之间的交互了解甚少。 随着机器学习被引入日常生活的更多方面（例如医疗保健），理解机器学习模型为何做出其决策变得至关重要。 例如，如果诊断由机器学习模型做出，则医疗保健专业人员需要查看影响做出诊断的因素的方法。 提供正确的诊断可以对患者是否快速康复产生重大影响。 因此，模型的可解释性水平越高，医疗保健专业人员就越有信心接受或拒绝模型做出的决策。
 
-有各种技术被用于解释模型，其中之一是 PFI。 PFI 是一种用于解释分类和回归模型的技术，其灵感来自 [Breima 的 *Random Forests*（随机森林）论文](https://www.stat.berkeley.edu/~breiman/randomforest2001.pdf)（参见第 10 部分）。 概括而言，其工作原理是一次随机为整个数据集随机抽取数据的一个特征，并计算关注性能指标的下降程度。 变化越大，特征就越重要。 
+有各种技术被用于解释模型，其中之一是 PFI。 PFI 是一种用于解释分类和回归模型的技术，其灵感来自 [Breima 的 Random Forests  （随机森林）论文](https://www.stat.berkeley.edu/~breiman/randomforest2001.pdf)（参见第 10 部分）。 概括而言，其工作原理是一次随机为整个数据集随机抽取数据的一个特征，并计算关注性能指标的下降程度。 变化越大，特征就越重要。 
 
 此外，通过突出显示最重要的特征，模型生成器可以专注于使用一组更有意义的特征，这可能会减少干扰和训练时间。
 

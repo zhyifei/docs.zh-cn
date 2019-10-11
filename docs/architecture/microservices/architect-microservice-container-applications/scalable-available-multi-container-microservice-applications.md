@@ -2,12 +2,12 @@
 title: 协调安排微服务和多容器应用程序，实现高可伸缩性和高可用性
 description: 发现用于安排微服务和多容器应用程序以便实现高可伸缩性和可用性的选项，以及 Azure Dev Spaces 在开发 Kubernetes 应用程序生命周期时的可能性。
 ms.date: 09/20/2018
-ms.openlocfilehash: aef9dc2206c24d685610616a2a4d7850837b832d
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: f0efad0134ec95028ecd49ad8d294ae4813940e9
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71040107"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834325"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>协调安排微服务和多容器应用程序，实现高可伸缩性和高可用性
 
@@ -15,11 +15,11 @@ ms.locfileid: "71040107"
 
 图 4-23 介绍如何部署到由多个微服务（容器）组成的应用程序群集。
 
-![群集中的组合 Docker 应用程序：为每个服务实例使用一个容器。 Docker 容器是“部署单元”，一个容器代表 Docker 的一个实例。 一个主机可以处理多个容器](./media/image23.png)
+![显示群集中的组合 Docker 应用程序的示意图。](./media/scalable-available-multi-container-microservice-applications/composed-docker-applications-cluster.png)
 
 图 4-23  。 容器群集
 
-它看上去类似于逻辑方法。 但是如何处理负载均衡、路由以及如何协调安排这些组合式应用程序呢？
+为每个服务实例使用一个容器。 Docker 容器是“部署单元”，一个容器代表 Docker 的一个实例。 一个主机可以处理多个容器。 它看上去类似于逻辑方法。 但是如何处理负载均衡、路由以及如何协调安排这些组合式应用程序呢？
 
 单个 Docker 主机中的普通 Docker 引擎能够满足在一台主机上管理单映像实例的需求，但若要管理针对更复杂的分布式应用程序而部署在多个主机上的多个容器，则无法满足需求。 大多数情况下，需要一个管理平台，该平台能自动启动容器、扩展容器（每个映像具有多个实例）、必要时暂停或关闭，并且在理想情况下还能控制资源（如网络和数据存储）访问方式。
 
@@ -37,8 +37,8 @@ ms.locfileid: "71040107"
 
 |     |   |
 |-----|---|
-| **Kubernetes** <br> ![Kubernetes 徽标](./media/image24.png) | [*Kubernetes*](https://kubernetes.io/) 是一款开源产品，提供各种功能，从群集基础结构和容器计划到安排功能均涵盖在内。 它能实现跨主机群集自动部署、缩放以及执行各种应用程序容器操作。 <br><br> Kubernetes  提供以容器为中心的基础结构，将应用程序容器分组为逻辑单元，以便管理和发现。 <br><br> Kubernetes  在 Linux 中的运用已发展成熟，但在 Windows 中相对较弱。 |
-| **Azure Kubernetes 服务 (AKS)** <br> ![Azure Kubernetes 服务徽标](./media/image41.png) | [AKS](https://azure.microsoft.com/services/kubernetes-service/) 是 Azure 中的托管 Kubernetes 容器业务流程服务，简化了 Kubernetes 群集的管理、部署和操作。 |
+| **Kubernetes** <br> ![Kubernetes 徽标图像。](./media/scalable-available-multi-container-microservice-applications/kubernetes-container-orchestration-system-logo.png) | [*Kubernetes*](https://kubernetes.io/) 是一款开源产品，提供各种功能，从群集基础结构和容器计划到安排功能均涵盖在内。 它能实现跨主机群集自动部署、缩放以及执行各种应用程序容器操作。 <br><br> Kubernetes  提供以容器为中心的基础结构，将应用程序容器分组为逻辑单元，以便管理和发现。 <br><br> Kubernetes  在 Linux 中的运用已发展成熟，但在 Windows 中相对较弱。 |
+| **Azure Kubernetes 服务 (AKS)** <br> ![Azure Kubernetes 服务徽标图像。](./media/scalable-available-multi-container-microservice-applications/azure-kubernetes-service-logo.png) | [AKS](https://azure.microsoft.com/services/kubernetes-service/) 是 Azure 中的托管 Kubernetes 容器业务流程服务，简化了 Kubernetes 群集的管理、部署和操作。 |
 
 ## <a name="using-container-based-orchestrators-in-microsoft-azure"></a>在 Microsoft Azure 中使用基于容器的业务流程协调程序
 
@@ -52,7 +52,7 @@ AKS 提供了一种方法，可在 Azure 中简化虚拟机（预配置为运行
 
 Azure Kubernetes 服务优化了专门针对 Azure 的常用 Docker 群集开源和技术的配置。 可以获得一个开放的解决方案，该解决方案为容器和应用程序配置提供可移植性。 用户选择主机的大小和数量以及业务流程协调程序工具，然后 AKS 可处理其他操作。
 
-![Kubernetes 群集结构：有一个处理 DNS、计划程序、代理等的主节点，以及多个托管容器的工作节点。](media/image36.png)
+![显示 Kubernetes 群集结构的示意图。](./media/scalable-available-multi-container-microservice-applications/kubernetes-cluster-simplified-structure.png)
 
 图 4-24  。 Kubernetes 群集的简化结构和拓扑
 
@@ -62,7 +62,7 @@ Azure Kubernetes 服务优化了专门针对 Azure 的常用 Docker 群集开源
 
 在开发环境中，[Docker 于 2018 年 7 月宣布](https://blog.docker.com/2018/07/kubernetes-is-now-available-in-docker-desktop-stable-channel/)只需安装 [Docker 桌面](https://docs.docker.com/install/)，Kubernetes 便还可以在单个开发计算机（Windows 10 或 macOS）中运行。 可以在以后部署到云 (AKS) 进行进一步集成测试，如图 4-25 所示。
 
-![Docker 于 2018 年 7 月宣布通过 Docker 桌面对 Kubernetes 群集进行开发计算机支持。](media/image37.png) 
+![显示开发计算机上的 Kubernetes 随后部署到 AKS 的示意图](./media/scalable-available-multi-container-microservice-applications/kubernetes-development-environment.png) 
 
 图 4-25  。 在开发计算机和云中运行 Kubernetes
 
@@ -96,7 +96,7 @@ Azure Dev Spaces 可帮助开发团队在 Kubernetes 上提高工作效率，因
 
 如图 4-26 所示，Azure Dev Spaces 中最独特的功能是能够创建可以运行的“空间”，它们会集成到群集中全局部署的其余部分。
 
-![Azure Dev Spaces 可以通过透明方式混合搭配生产微服务与开发容器实例，以便简化新版本的测试。](media/image38.png)
+![显示在 Azure Dev Spaces 中使用多个空间的示意图。](./media/scalable-available-multi-container-microservice-applications/use-multiple-spaces-azure-dev.png)
 
 **图 4-26**。 在 Azure Dev Spaces 中使用多个空间
 

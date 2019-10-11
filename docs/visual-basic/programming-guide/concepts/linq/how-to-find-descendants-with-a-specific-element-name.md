@@ -1,15 +1,15 @@
 ---
-title: 如何：查找具有特定元素名称的后代 (Visual Basic)
+title: 如何：查找具有特定元素名称的后代（Visual Basic）
 ms.date: 07/20/2015
 ms.assetid: 78915518-0d25-4051-ab55-929779989510
-ms.openlocfilehash: 0084f04db5af7b012748b66187e029c77d0cfce5
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 5c4556ae7bf4c7560618781be51e066f659b0b4c
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710261"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72249686"
 ---
-# <a name="how-to-find-descendants-with-a-specific-element-name-visual-basic"></a>如何：查找具有特定元素名称的后代 (Visual Basic)
+# <a name="how-to-find-descendants-with-a-specific-element-name-visual-basic"></a>如何：查找具有特定元素名称的后代（Visual Basic）
 有时，您想要查找所有具有特定名称的子代。 可以编写代码用于循环访问所有子代，但使用 <xref:System.Xml.Linq.XContainer.Descendants%2A> 轴更简单。  
   
 ## <a name="example"></a>示例  
@@ -49,12 +49,12 @@ Console.WriteLine(str)
   
  此代码生成以下输出：  
   
-```  
+```console  
 Some text that is broken up into multiple segments.  
 ```  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何对命名空间中的 XML 进行同样的查询。 有关详细信息, 请参阅[命名空间概述 (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)。  
+ 下面的示例演示如何对命名空间中的 XML 进行同样的查询。 有关详细信息，请参阅[命名空间概述（LINQ to XML）（Visual Basic）](namespaces-overview-linq-to-xml.md)。  
   
 ```vb  
 Imports <xmlns='http://www.adatum.com'>  
@@ -96,11 +96,11 @@ End Module
   
  此代码生成以下输出：  
   
-```  
+```console  
 Some text that is broken up into multiple segments.  
 ```  
   
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Xml.Linq.XContainer.Descendants%2A>
-- [基本查询 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [基本查询（LINQ to XML）（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

@@ -2,12 +2,12 @@
 title: Docker 应用程序中的状态和数据
 description: Docker 应用程序中的状态和数据管理。 微服务实例是可消耗的，但数据不是，本文介绍如何使用微服务处理这一问题。
 ms.date: 09/20/2018
-ms.openlocfilehash: bd0ac007479dcd51f2c639881273b81d1fd8b6d7
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 193ac143ca0cc42c248f449b1e1a1339af6f69d1
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039584"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834424"
 ---
 # <a name="state-and-data-in-docker-applications"></a>Docker 应用程序中的状态和数据
 
@@ -47,11 +47,11 @@ ms.locfileid: "71039584"
 
 如图 4-5 所示，常规 Docker 卷可以存储在容器本身之外，但是在主机服务器或 VM 的物理边界内。 但是，Docker 容器无法从一个主机服务器或 VM 访问另一个主机服务器或 VM 的卷。 换而言之，如果使用这些卷，那么不能管理在不同 Docker 主机上运行的容器之间共享的数据，尽管可通过支持远程主机的卷驱动程序来实现这一功能。
 
-![卷可在容器之间共享，但仅限于同一台主机，除非使用支持远程主机的远程驱动程序。](./media/image5.png)
+![显示基于容器的应用程序的数据卷和外部数据源的示意图。](./media/docker-application-state-data/volumes-external-data-sources.png)
 
 **图 4-5**。 基于容器的应用程序的卷和外部数据源
 
-此外，当 Docker 容器由业务流程协调程序管理时，容器可能会在主机之间“移动”，这取决于群集所执行的优化。 因此，不建议将数据卷用于业务数据。 但它们是一种良好的机制，可以处理跟踪文件、时态文件或类似的不会影响业务数据一致性的文件。
+卷可在容器之间共享，但仅限于同一台主机，除非使用支持远程主机的远程驱动程序。 此外，当 Docker 容器由业务流程协调程序管理时，容器可能会在主机之间“移动”，这取决于群集所执行的优化。 因此，不建议将数据卷用于业务数据。 但它们是一种良好的机制，可以处理跟踪文件、时态文件或类似的不会影响业务数据一致性的文件。
 
 远程数据源和缓存工具（如 Azure SQL 数据库、Azure Cosmos DB）或远程缓存（如 Redis）可以在容器化应用程序中使用，与开发时没有容器的使用方式相同  。 这是存储业务应用程序数据的一种行之有效的方法。
 

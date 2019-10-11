@@ -1,15 +1,15 @@
 ---
-title: 如何：查找父 (XPATH-LINQ to XML) 的属性 (Visual Basic)
+title: 如何：查找父级的属性（LINQ to XML）（Visual Basic）
 ms.date: 07/20/2015
 ms.assetid: 9d2572fd-27d4-426c-b079-16854cb9ec7d
-ms.openlocfilehash: ded20c173063492d260aee5ba55f3c4c585bd961
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ce8fbb828a5ea8df79f449d50f1d61702a4e3df2
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62021643"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72249917"
 ---
-# <a name="how-to-find-an-attribute-of-the-parent-xpath-linq-to-xml-visual-basic"></a>如何：查找父 (XPATH-LINQ to XML) 的属性 (Visual Basic)
+# <a name="how-to-find-an-attribute-of-the-parent-xpath-linq-to-xml-visual-basic"></a>如何：查找父级的属性（LINQ to XML）（Visual Basic）
 本主题演示如何定位到父元素并查找其属性。  
   
  XPath 表达式为：  
@@ -19,7 +19,7 @@ ms.locfileid: "62021643"
 ## <a name="example"></a>示例  
  此示例首先查找 `Author` 元素。 然后，查找父元素的 `id` 属性。  
   
- 此示例使用下面的 XML 文档：[示例 XML 文件：图书 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md)。  
+ 本示例使用下面的 XML 文档：[示例 XML 文件：图书 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md)。  
   
 ```vb  
 Dim books As XDocument = XDocument.Load("Books.xml")  
@@ -42,11 +42,11 @@ Console.WriteLine(att1)
   
  该示例产生下面的输出：  
   
-```  
+```console  
 Results are identical  
 id="bk101"  
 ```  
   
 ## <a name="see-also"></a>请参阅
 
-- [LINQ to XML 针对 XPath 用户 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [XPath 用户的 LINQ to XML （Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

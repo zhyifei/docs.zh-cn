@@ -3,18 +3,18 @@ title: C# 中的数字 - C# 教程简介
 description: 通过浏览数字类型、其属性和方法了解 C#。
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: 436e8db10f973b468458987150e1312a16103b91
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 731824fefcf4966a885c53be8f71e77140541383
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70850690"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834090"
 ---
 # <a name="manipulate-integral-and-floating-point-numbers-in-c"></a>处理 C\# 中的整数和浮点数
 
 本教程以交互方式介绍了 C# 中的数字类型。 你将编写少量的代码，然后编译并运行这些代码。 本教程包含一系列课程，介绍了 C# 中的数字和数学运算。 这些课程介绍了 C# 语言的基础知识。
 
-本教程要求你有一台可用于开发的计算机。 .NET 教程 [Hello World 10 分钟入门](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)介绍了如何在 Mac、PC 或 Linux 上设置本地开发环境。 [熟悉开发工具](local-environment.md)不仅简要概述了将用到的命令，还收录了详细信息链接。
+本教程要求你有一台可用于开发的计算机。 .NET 教程 [Hello World 10 分钟入门](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)介绍了如何在 Windows、Linux 或 macOS 上设置本地开发环境。 [熟悉开发工具](local-environment.md)不仅简要概述了将用到的命令，还收录了详细信息链接。
 
 ## <a name="explore-integer-math"></a>探索整数数学运算
 
@@ -31,7 +31,7 @@ Console.WriteLine(c);
 
 通过在命令窗口中键入 `dotnet run` 运行此代码。
 
-刚刚看到的是一种基本的整数数学运算。 `int` 类型表示整数  （正整数或负整数）。 使用 `+` 符号执行加法运算。 其他常见的整数数学运算包括：
+刚刚看到的是一种基本的整数数学运算。 `int` 类型表示整数  （零、正整数或负整数）。 使用 `+` 符号执行加法运算。 其他常见的整数数学运算包括：
 
 - `-`：减法运算
 - `*`：乘法运算
@@ -114,7 +114,7 @@ Console.WriteLine(d);
 可以在要优先执行的一个或多个运算前后添加括号，从而强制改变运算顺序。 添加以下行并再次运行：
 
 ```csharp
-d = (a  + b) * c;
+d = (a + b) * c;
 Console.WriteLine(d);
 ```
 
@@ -133,7 +133,7 @@ Console.WriteLine(d);
 int e = 7;
 int f = 4;
 int g = 3;
-int h = (e  + f) / g;
+int h = (e + f) / g;
 Console.WriteLine(h);
 ```
 
@@ -171,7 +171,7 @@ namespace NumbersInCSharp
             int d = a + b * c;
             Console.WriteLine(d);
 
-            d = (a  + b) * c;
+            d = (a + b) * c;
             Console.WriteLine(d);
 
             d = (a + b) - 6 * c + (12 * 4) / 3 + 12;
@@ -204,7 +204,7 @@ namespace NumbersInCSharp
 int a = 7;
 int b = 4;
 int c = 3;
-int d = (a  + b) / c;
+int d = (a + b) / c;
 int e = (a + b) % c;
 Console.WriteLine($"quotient: {d}");
 Console.WriteLine($"remainder: {e}");
@@ -242,7 +242,7 @@ Console.WriteLine($"An example of overflow: {what}");
 double a = 5;
 double b = 4;
 double c = 2;
-double d = (a  + b) / c;
+double d = (a + b) / c;
 Console.WriteLine(d);
 ```
 
@@ -252,7 +252,7 @@ Console.WriteLine(d);
 double e = 19;
 double f = 23;
 double g = 8;
-double h = (e  + f) / g;
+double h = (e + f) / g;
 Console.WriteLine(h);
 ```
 
@@ -277,7 +277,7 @@ Console.WriteLine(third);
 
 ***挑战***
 
-尝试使用 `double` 类型执行其他的大小数、乘法和除法运算。  尝试执行更复杂的运算。
+尝试使用 `double` 类型执行其他的大小数、乘法和除法运算。 尝试执行更复杂的运算。
 
 花了一些时间应对挑战之后，获取已编写的代码并放在一个新方法中。 将新方法命名为 `WorkWithDoubles`。
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - named arguments [C#], Office programming
 - Office programming [C#]
 ms.assetid: 041b25c2-3512-4e0f-a4ea-ceb2999e4d5e
-ms.openlocfilehash: 8e99402752b3fafb486735d56d66737f03ceec30
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 3399d1aad8a2118775f7779727d4d03ee2002547
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972092"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834208"
 ---
 # <a name="how-to-access-office-interop-objects-by-using-visual-c-features-c-programming-guide"></a>如何：使用 Visual C# 功能访问 Office 互操作对象（C# 编程指南）
 
@@ -49,7 +49,7 @@ Visual C# 具有一些功能，可简化对 Office API 对象的访问。 这些
 
 1. 在“解决方案资源管理器”  中，右键单击你的项目名称，然后单击“添加引用”  。 此时会显示“添加引用”  对话框。
 
-2. 在“程序集”  页上，在“组件名称”  列表中选择“Microsoft.Office.Interop.Word”  ，然后按住 Ctrl 键并选择“Microsoft.Office.Interop.Excel”  。  如果看不到程序集，可能需要确保它们已安装并显示（请参阅[操作说明：安装 Office 主互操作程序集](/visualstudio/vsto/how-to-install-office-primary-interop-assemblies)）
+2. 在“程序集”  页上，在“组件名称”  列表中选择“Microsoft.Office.Interop.Word”  ，然后按住 Ctrl 键并选择“Microsoft.Office.Interop.Excel”  。  如果未看到程序集，你可能需要确保安装并将其显示出来。 请参阅[如何：安装 Office 主互操作程序集](/visualstudio/vsto/how-to-install-office-primary-interop-assemblies)。
 
 3. 单击 **“确定”** 。
 
@@ -57,7 +57,7 @@ Visual C# 具有一些功能，可简化对 Office API 对象的访问。 这些
 
 1. 在“解决方案资源管理器”  中，右键单击“Program.cs”  文件，然后单击“查看代码”  。
 
-2. 将以下 `using` 指令添加到代码文件的顶部。
+2. 将以下 `using` 指令添加到代码文件的顶部：
 
      [!code-csharp[csProgGuideOfficeHowTo#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#1)]
 

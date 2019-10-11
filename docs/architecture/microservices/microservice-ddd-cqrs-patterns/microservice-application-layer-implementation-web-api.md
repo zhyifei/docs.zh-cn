@@ -2,12 +2,12 @@
 title: 使用 Web API 实现微服务应用层
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 了解依赖关系注入和转存进程模式及其在 Web API 应用层中的实现详细信息。
 ms.date: 10/08/2018
-ms.openlocfilehash: c8447cfcd3155a873d61ee9287f58774392c279d
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 0f6f47dd5f67fb18695715e5cfc9179206ef6bcf
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68676574"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834364"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>使用 Web API 实现微服务应用层
 
@@ -203,7 +203,7 @@ Autofac 还具有用于[按名称约定扫描程序集和注册类型](https://a
 
 命令通过包含数据字段或集合（其中包含执行命令所需的所有信息）的类实现。 命令是一种特殊的数据传输对象 (DTO)，专门用于请求更改或事务。 命令本身完全基于处理命令所需的信息，别无其他。
 
-下面的示例演示简化的 CreateOrderCommand 类。 这是 eShopOnContainers 的订购微服务中使用的不可变命令。
+下面的示例显示了简化的 `CreateOrderCommand` 类。 这是 eShopOnContainers 的订购微服务中使用的不可变命令。
 
 ```csharp
 // DDD and CQRS patterns comment
@@ -215,7 +215,7 @@ Autofac 还具有用于[按名称约定扫描程序集和注册类型](https://a
 // http://cqrs.nu/Faq
 // https://docs.spine3.org/motivation/immutability.html
 // http://blog.gauffin.org/2012/06/griffin-container-introducing-command-support/
-// https://msdn.microsoft.com/library/bb383979.aspx
+// https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/how-to-implement-a-lightweight-class-with-auto-implemented-properties
 [DataContract]
 public class CreateOrderCommand
     :IAsyncRequest<bool>
@@ -287,7 +287,7 @@ public class CreateOrderCommand
 
 请记住，如果打算或预计命令将经过序列化/反序列化过程，则属性必须具有私有资源库和 `[DataMember]`（或 `[JsonProperty]`）特性，否则反序列化程序将无法在目标上使用所需值重新构造对象。
 
-例如，用于创建订单的命令类可能与你要创建的订单在数据上类似，但你可能不需要相同的属性。 例如 CreateOrder 命令没有订单 ID，因为订单尚未创建。
+例如，用于创建订单的命令类可能与你要创建的订单在数据上类似，但你可能不需要相同的属性。 例如，`CreateOrderCommand` 命令没有订单 ID，因为订单尚未创建。
 
 许多命令类可能很简单，只需要一些有关需要更改的状态的字段。 如果只需要使用类似以下的命令将订单状态从“处理中”更改为“已付款”或“已发货”，则是这种情况：
 
@@ -335,7 +335,7 @@ public class UpdateOrderStatusCommand
 
 如果命令处理程序很复杂，包含过多逻辑，则可能存在代码异味。 请查看它们，如果发现域逻辑，则重构代码，将域行为移动到域对象（聚合根和子实体）的方法。
 
-作为命令处理程序类的示例，下面的代码演示这一章开头介绍的同一个 CreateOrderCommandHandler 类。 在此示例中，我们想要强调 Handle 方法以及域模型对象/聚合的操作。
+作为命令处理程序类的示例，下面的代码演示本章开头介绍的同一个 `CreateOrderCommandHandler` 类。 在此示例中，我们想要强调 Handle 方法以及域模型对象/聚合的操作。
 
 ```csharp
 public class CreateOrderCommandHandler
@@ -480,7 +480,10 @@ public class MyMicroserviceController : Controller
 {
     public MyMicroserviceController(IMediator mediator,
                                     IMyMicroserviceQueries microserviceQueries)
-    // ...
+    {
+        // ...
+    }
+}
 ```
 
 你会发现转存进程可提供简洁、精益的 Web API 控制器构造函数。 此外，在控制器方法中，将命令发送到转存进程对象的代码几乎只有一行：

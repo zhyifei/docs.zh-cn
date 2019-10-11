@@ -2,12 +2,12 @@
 title: 逻辑体系结构与物理体系结构
 description: 了解逻辑和物理体系结构之间的差异。
 ms.date: 09/20/2018
-ms.openlocfilehash: c269369e9b5391e8d25ece46e6b08e34a82fbbba
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 8d1bfca190eb9b18d46625fa4afdec963eb07054
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68673054"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834403"
 ---
 # <a name="logical-architecture-versus-physical-architecture"></a>逻辑体系结构与物理体系结构
 
@@ -25,7 +25,7 @@ ms.locfileid: "68673054"
 
 如图 4-8 所示，目录商业微服务可由几个服务或进程组成。 这些服务可以是多个 ASP.NET Web API 服务，也可以是使用 HTTP 或其他任何协议的其他任何服务。 更重要的是，这些服务只要对于相同业务领域具有内聚性，便能共享相同数据。
 
-![Catalog 商业微服务关系图，其中包含 API 服务、搜索服务和 SQL Server 数据库。](./media/image8.png)
+![具有物理服务器的 Catalog 商业微服务的示意图。](./media/logical-versus-physical-architecture/multiple-physical-services.png)
 
 **图 4-8**。 使用多个物理服务的商业微服务
 

@@ -5,12 +5,12 @@ author: cartermp
 ms.author: mairaw
 ms.date: 08/23/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: baeb091f7c1757e62ba049afc7a92ae8e73d3925
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: f43cd61fbcb3c1c872961476449822c574f76cff
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70014942"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835283"
 ---
 # <a name="net-architectural-components"></a>.NET 体系结构组件
 
@@ -83,6 +83,26 @@ UWP 是用于为物联网 (IoT) 生成新式触控 Windows 应用程序和软件
 - [MSBuild](/visualstudio/msbuild/msbuild)（用于生成项目的生成引擎）
 - [NuGet](/nuget/)（适用于.NET 的 Microsoft 程序包管理器）
 - 开放源生成业务流程工具，例如 [CAKE](https://cakebuild.net/) 和 [FAKE](https://fake.build/)
+
+## <a name="applicable-standards"></a>适用标准
+
+C# 语言和公共语言基础结构 (CLI) 规范通过 [Ecma International®](https://www.ecma-international.org/) 进行标准化。 这些标准的第一版已于 2001 年 12 月由 Ecma 发布。
+
+这些标准的后续版本由编程委员技术委员会 ([TC49](https://www.ecma-international.org/memento/tc49.htm)) 的 TC49-TG2 (C#) 和 TC49-TG3 (CLI) 任务组编制，被 Ecma General Assembly 采纳，随后通过 ISO 快速跟踪流程被 ISO/IEC JTC 1 采纳。
+
+### <a name="latest-standards"></a>最新标准
+
+以下官方 Ecma 文档可用于 [C#](http://www.ecma-international.org/publications/standards/Ecma-334.htm) 和 [CLI](http://www.ecma-international.org/publications/standards/Ecma-335.htm) ([TR-84](http://www.ecma-international.org/publications/techreports/E-TR-084.htm))：
+
+- **C# 语言标准（版本 5.0）** ：[ECMA-334.pdf](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-334.pdf)
+- **公共语言基础结构**：提供 [pdf](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-335.pdf) 和 [zip](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-335.zip) 形式。
+- **派生自分区 IV XML 文件的信息**：提供 [pdf](https://www.ecma-international.org/publications/files/ECMA-TR/ECMA%20TR-084.pdf) 和 [zip](https://www.ecma-international.org/publications/files/ECMA-TR/TR-084.zip) 格式。
+ 
+官方 ISO/IEC 文档可从 ISO/IEC [公开标准](https://standards.iso.org/ittf/PubliclyAvailableStandards/)页获取。 以下链接可从该页面直接获得：
+
+- **信息技术 - 编程语言 - C#** ：[ISO/IEC 23270:2018](https://standards.iso.org/ittf/PubliclyAvailableStandards/c075178_ISO_IEC_23270_2018.zip)
+- **信息技术 - 公共语言基础结构 (CLI) 分区 I 到 VI**：[ISO/IEC 23271:2012](https://standards.iso.org/ittf/PubliclyAvailableStandards/c058046_ISO_IEC_23271_2012(E).zip)
+- **信息技术 - 公共语言基础结构 (CLI) - 有关派生自分区 IV XML 文件的信息的技术报告**：[ISO/IEC TR 23272:2011](https://standards.iso.org/ittf/PubliclyAvailableStandards/c057955_ISO_IEC_TR_23272_2011.zip)
 
 ## <a name="see-also"></a>请参阅
 

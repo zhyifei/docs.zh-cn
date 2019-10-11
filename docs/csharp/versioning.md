@@ -3,12 +3,12 @@ title: C# 版本控制 - C# 指南
 description: 了解 C# 和 .NET 中的版本控制工作原理
 ms.date: 01/08/2017
 ms.assetid: aa8732d7-5cd0-46e1-994a-78017f20d861
-ms.openlocfilehash: bfad7abe6b2b5c6a19324656963a79212a317110
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: dcfe373312b88c8ddd8587e27c566a90b25e3c13
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926582"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834060"
 ---
 # <a name="versioning-in-c"></a>C\# 中的版本控制
 
@@ -25,9 +25,9 @@ ms.locfileid: "70926582"
 
 SemVer 的最基本方法是 3 组件格式 `MAJOR.MINOR.PATCH`，其中：
 
-* 进行不兼容的 API 更改时，`MAJOR` 将会增加
-* 以后向兼容方式添加功能时，`MINOR` 将会增加
-* 进行后向兼容 bug 修复时，`PATCH` 将会增加
+- 进行不兼容的 API 更改时，`MAJOR` 将会增加
+- 以后向兼容方式添加功能时，`MINOR` 将会增加
+- 进行后向兼容 bug 修复时，`PATCH` 将会增加
 
 将版本信息应用于 .NET 库时，还可通过其他方法指定其他方案，如预发布版本等。
 
@@ -38,14 +38,14 @@ SemVer 的最基本方法是 3 组件格式 `MAJOR.MINOR.PATCH`，其中：
 
 以下是维护与较旧版本库的后向兼容时的注意事项：
 
-* 虚拟方法：如果在新版本中使虚拟方法成为非虚拟方法，则必须更新替代该方法的项目。 这是一项重大更改，强烈建议不要执行此操作。
-* 方法签名：虽然更新方法行为也需要更改其签名，但应创建重载，使调用该方法的代码仍可正常运行。
+- 虚拟方法：如果在新版本中使虚拟方法成为非虚拟方法，则必须更新替代该方法的项目。 这是一项重大更改，强烈建议不要执行此操作。
+- 方法签名：虽然更新方法行为也需要更改其签名，但应创建重载，使调用该方法的代码仍可正常运行。
 始终可以使用旧方法签名来调用新方法签名，以使实现保持一致。
-* [已过时属性](programming-guide/concepts/attributes/common-attributes.md#Obsolete)：可在代码中使用此属性指定已弃用且很可能在将来版本中删除的类或类成员。 这可确保使用此库的开发人员能更好地为重大更改做好准备。
-* 可选方法参数：如果使以前的可选方法参数变为强制性方法参数或更改它们的默认值，则需要更新不提供这些参数的所有代码。
+- [已过时属性](programming-guide/concepts/attributes/common-attributes.md#Obsolete)：可在代码中使用此属性指定已弃用且很可能在将来版本中删除的类或类成员。 这可确保使用此库的开发人员能更好地为重大更改做好准备。
+- 可选方法参数：如果使以前的可选方法参数变为强制性方法参数或更改它们的默认值，则需要更新不提供这些参数的所有代码。
 
 > [!NOTE]
-> 将强制性参数变为可选参数应几乎没有影响，对于不更改方法的行为的情况尤其如此。
+> 将强制性参数变为可选参数应几乎没有影响，尤其是在不更改方法的行为的情况下。
 
 为用户提供的升级到新版本库的方法越简单，用户升级的速度很可能会越快。
 
@@ -62,7 +62,7 @@ SemVer 的最基本方法是 3 组件格式 `MAJOR.MINOR.PATCH`，其中：
 
 ### <a name="assembly-binding-redirection"></a>程序集绑定重定向
 
-可使用 `app.config` 文件更新应用使用的库版本。 通过添加所谓的[*绑定重定向*](../framework/configure-apps/redirect-assembly-versions.md)，可在无需重新编译应用的情况下使用新的库版本。 下面的示例演示更新应用的 `app.config` 文件的方法，以便使用 `ReferencedLibrary` 的 `1.0.1` 修补程序版本，而不是最初编译时使用的 `1.0.0` 版本。
+可使用 app.config  文件更新应用使用的库版本。 通过添加所谓的[绑定重定向  ](../framework/configure-apps/redirect-assembly-versions.md)，可在无需重新编译应用的情况下使用新的库版本。 下面的示例演示了更新应用的 app.config  文件的方法，以便使用 `ReferencedLibrary` 的 `1.0.1` 修补程序版本，而不是最初编译时使用的 `1.0.0` 版本。
 
 ```xml
 <dependentAssembly>
@@ -81,11 +81,11 @@ SemVer 的最基本方法是 3 组件格式 `MAJOR.MINOR.PATCH`，其中：
 
 请参见以下示例：
 
-[!code-csharp[Sample usage of the 'new' modifier](../../samples/csharp/versioning/new/Program.cs#sample)]
+[!code-csharp[Sample usage of the 'new' modifier](~/samples/csharp/versioning/new/Program.cs#sample)]
 
 **输出**
 
-```
+```console
 A base method
 A derived method
 ```
@@ -103,7 +103,7 @@ A derived method
 
 **输出**
 
-```
+```console
 Base Method One: Method One
 Derived Method One: Derived Method One
 ```
@@ -111,4 +111,3 @@ Derived Method One: Derived Method One
 `override` 修饰符将在编译时计算，如果此修饰符找不到要重写的虚拟成员，编译器将引发错误。
 
 了解所讨论的这些技术以及使用情境，对于简化库版本之间的转换有重要作用。
- 

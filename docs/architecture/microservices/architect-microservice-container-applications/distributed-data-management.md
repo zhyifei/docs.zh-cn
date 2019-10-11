@@ -2,12 +2,12 @@
 title: 分布式数据管理的挑战和解决方案
 description: 了解微服务体系中的分布式数据管理面临的挑战和相应解决方案。
 ms.date: 09/20/2018
-ms.openlocfilehash: 7733a4523e147591151cd0dda26c43992dbe9a41
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: c30de24591d5a73fd34087f34a69e9c7ed54cd35
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68673134"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834449"
 ---
 # <a name="challenges-and-solutions-for-distributed-data-management"></a>分布式数据管理的挑战和解决方案
 
@@ -47,7 +47,7 @@ ms.locfileid: "68673134"
 
 但是，在基于微服务的应用程序中，产品表和购物篮表属于其各自的微服务。 如图 4-9 所示，微服务不应在其自己的事务中包含属于另一微服务的表/存储，甚至在直接查询中也不能包含。
 
-![微服务不能直接访问另一个微服务中的表，必须使用最终一致性来同步数据。](./media/image9.png)
+![显示微服务数据库数据无法共享的示意图。](./media/distributed-data-management/indepentent-microservice-databases.png)
 
 **图 4-9**. 微服务不能直接访问另一微服务中的表
 
@@ -104,7 +104,7 @@ ms.locfileid: "68673134"
 - **Compensating Transaction** \（补偿事务）
   <https://docs.microsoft.com/azure/architecture/patterns/compensating-transaction>
 
-- **Udi Dahan.Service Oriented Composition** \（面向服务的组合）
+- **Udi Dahan.面向服务的组合** \
   <http://udidahan.com/2014/07/30/service-oriented-composition-with-video/>
 
 >[!div class="step-by-step"]

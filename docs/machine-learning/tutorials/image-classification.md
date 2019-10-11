@@ -1,17 +1,17 @@
 ---
 title: 教程：从预先训练的 TensorFlow 模型生成 ML.NET 图像分类模型
 description: 了解如何将现有 TensorFlow 模型中的知识传输到新的 ML.NET 图像分类模型中。 TensorFlow 模型经过训练，可以将图像分为一千个类别。 ML.NET 模型使用迁移学习将图像分为更多类别。
-ms.date: 09/26/2019
+ms.date: 09/30/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
 author: natke
 ms.author: nakersha
-ms.openlocfilehash: 28d8c18721bd353e961284935758a87679c8c8e0
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 8ae966330ca85722c72c92e26363d99c7d9de3e7
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353694"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698653"
 ---
 # <a name="tutorial-generate-an-mlnet-image-classification-model-from-a-pre-trained-tensorflow-model"></a>教程：从预先训练的 TensorFlow 模型生成 ML.NET 图像分类模型
 
@@ -25,7 +25,7 @@ TensorFlow 模型经过训练，可以将图像分为一千个类别。 ML.NET �
 > [!div class="checklist"]
 >
 > * 了解问题
-> * 将预先训练的 TensorFlow 模型合并到 ML.NET 管道中
+> * 将经过预先训练的 TensorFlow 模型合并到 ML.NET 管道中
 > * 训练和评估 ML.NET 模型
 > * 对测试图像进行分类
 
@@ -246,7 +246,10 @@ toaster2.png    appliance
 
     [!code-csharp[PredictSingle](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#PredictSingle)]
 
-    [PredictionEngine 类](xref:Microsoft.ML.PredictionEngine%602)是对单个数据实例执行预测的简便 API。 若要获得预测，请使用 [Predict()](xref:Microsoft.ML.PredictionEngine%602.Predict%2A) 方法。
+    若要获得预测，请使用 [Predict()](xref:Microsoft.ML.PredictionEngine%602.Predict%2A) 方法。 [PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) 是一个简便 API，可使用它对单个数据实例执行预测。 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) 不是线程安全型。 可以在单线程环境或原型环境中使用。 为了在生产环境中提高性能和线程安全，请使用 `PredictionEnginePool` 服务，这将创建一个在整个应用程序中使用的 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) 对象的 [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601)。 请参阅本指南，了解如何[在 ASP.NET Core Web API 中使用 `PredictionEnginePool`](https://docs.microsoft.com/en-us/dotnet/machine-learning/how-to-guides/serve-model-web-api-ml-net#register-predictionenginepool-for-use-in-the-application)
+
+    > [!NOTE]
+    > `PredictionEnginePool` 服务扩展目前处于预览状态。
 
 1. `ClassifySingleImage()` 方法的下一行代码用于显示预测结果：
 

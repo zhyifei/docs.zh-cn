@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 8f8c2c90-f15d-400e-87e7-a757e4f04d0e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 207460bc66c7d19558a69828797408df4ad92d64
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 22e35450460436e164db922fce76a53c437f6bdf
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972629"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835324"
 ---
 # <a name="assembly-names"></a>程序集名称
 程序集的名称存储在元数据中，它对程序集的范围及应用程序对程序集的使用有重要影响。 强名称程序集有一个完全限定的名称，由程序集的名称、区域性、公钥及版本号组成。 该名称通常称为显示名称，对于加载的程序集，可通过使用 <xref:System.Reflection.Assembly.FullName%2A> 属性来获取它。  
@@ -50,12 +50,12 @@ System.data, version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e08
 ## <a name="name-application-components"></a>命名应用程序组件  
  运行时在确定程序集的标识时不考虑文件名。 程序集标识（由程序集名称、版本、区域性和强名称组成）对运行时必须清楚明了。  
   
- 例如，如果一个名为 myAssembly.exe 的程序集引用一个名为 myAssembly.dll 的程序集，则在执行 myAssembly.exe 时会正确进行绑定。 但是，如果另一个应用程序使用 <xref:System.AppDomain.ExecuteAssembly%2A?displayProperty=nameWithType> 方法执行 myAssembly.exe，则当 myAssembly.exe 请求绑定到 `myAssembly` 时，运行时会确定 `myAssembly` 已经加载。 在这种情况下，不会加载 myAssembly.dll。 由于 myAssembly.exe 不包含请求的类型，因此会发生 <xref:System.TypeLoadException>。  
+ 例如，如果一个名为 myAssembly.exe 的程序集引用一个名为 myAssembly.dll 的程序集，则在执行 myAssembly.exe 时会正确进行绑定    。 但是，如果另一个应用程序使用 <xref:System.AppDomain.ExecuteAssembly%2A?displayProperty=nameWithType> 方法执行 myAssembly.exe，则当 myAssembly.exe 请求绑定到 `myAssembly` 时，运行时会确定 `myAssembly` 已经加载   。 在这种情况下，不会加载 myAssembly.dll  。 由于 myAssembly.exe 不包含请求的类型，因此会发生 <xref:System.TypeLoadException>  。  
   
  为避免这个问题，请确保组成应用程序的程序集具有不同的程序集名称，或者将名称相同的程序集放在不同的目录中。  
   
 > [!NOTE]
-> 在 .NET Framework 中，如果将强名称程序集置于全局程序集缓存中，则程序集的文件名必须与程序集名称相匹配，不包括文件扩展名，如 .exe 或 .dll。 例如，如果程序集的文件名为 myAssembly.dll，则程序集名称必须为 `myAssembly`。 只有在根应用程序目录中部署的专用程序集的程序集名称可以不同于文件名。  
+> 在 .NET Framework 中，如果将强名称程序集置于全局程序集缓存中，则程序集的文件名必须与程序集名称相匹配，不包括文件扩展名，如 .exe 或 .dll   。 例如，如果程序集的文件名为 myAssembly.dll，则程序集名称必须为 `myAssembly`  。 只有在根应用程序目录中部署的专用程序集的程序集名称可以不同于文件名。  
   
 ## <a name="see-also"></a>请参阅
 

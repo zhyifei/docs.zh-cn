@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: 303d6790f1e4a42b021de3a214e3e7b44e1a4320
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 23501575fb34f0291b3a6b795c197f45a86fd512
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70104635"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71955970"
 ---
 # <a name="contributing"></a>参与
 
 感谢你对参与 .NET 文档的关注！
 
-> 我们正在将我们的指导原则转变为网站级参与指南。 
+> 我们正在将我们的指导原则转变为网站级参与指南。
 > 若要查看新指南，请访问 [Microsoft Docs 参与者指南概述](https://docs.microsoft.com/contribute/)。
 
 本文档介绍了参与到 [.NET 文档站点](https://docs.microsoft.com/dotnet)上托管的文章和代码示例中的过程。 参与内容可简（更正拼写错误），可繁（编写新文章）。
@@ -22,11 +22,12 @@ ms.locfileid: "70104635"
 
 此存储库包含适用于 .NET 的概念文档。 .NET 文档站点建立在多个存储库的基础上，还包括下面这个：
 
-- [代码示例和代码片段](https://github.com/dotnet/samples)
-- [API 参考](https://github.com/dotnet/dotnet-api-docs)
-- [.NET Compiler Platform SDK 参考](https://github.com/dotnet/roslyn-api-docs)
-
-可在此处跟踪所有这些存储库的问题和任务。
+- [代码示例和代码片段](https://github.com/dotnet/samples)  
+    此存储库的问题和任务在 [dotnet/docs/issues](https://github.com/dotnet/docs/issues) 中进行跟踪。
+- [.NET API 参考](https://github.com/dotnet/dotnet-api-docs)  
+    此存储库的问题和任务在 [dotnet/dotnet-api-docs/issues](https://github.com/dotnet/dotnet-api-docs/issues) 中进行跟踪。
+- [.NET Compiler Platform SDK 参考](https://github.com/dotnet/roslyn-api-docs)  
+    此存储库的问题和任务在 [dotnet/docs/issues](https://github.com/dotnet/docs/issues) 中进行跟踪。
 
 ## <a name="process-for-contributing"></a>参与流程
 
@@ -43,7 +44,7 @@ ms.locfileid: "70104635"
 
 - **内容更新**。 考虑到文档集比较庞大，内容很容易过时且需要修改。 此外，由于各种原因，会对一些内容进行备份甚至双重备份。 更新内容包括确保单个主题是最新的，或者修改功能区域中的内容以消除重复，并确保所有唯一内容都保存在较小的文档集中。
 
-- **新内容创作**。 如果了解如何创作你自己的主题，这些问题将列出我们知道要添加到文档集的主题。 不过，在你开始研究某个主题之前，请告知我们。 如果你有意编写此处未列出的主题，请提问。 
+- **新内容创作**。 如果了解如何创作你自己的主题，这些问题将列出我们知道要添加到文档集的主题。 不过，在你开始研究某个主题之前，请告知我们。 如果你有意编写此处未列出的主题，请提问。
 
 此外可以查看我们的[待解决问题](https://github.com/dotnet/docs/issues)列表，并自愿参与你感兴趣的工作。 我们使用[空缺](https://github.com/dotnet/docs/labels/up-for-grabs)标签来标记公开供参与的问题。 
 
@@ -76,7 +77,7 @@ docs
             portability_report.png
 ```
 
-**步骤 4：** 从分支中将拉取请求 (PR) 提交到 `dotnet/docs/master`。
+**步骤 4：** 从分支中将拉取请求 (PR) 提交到 `dotnet/docs/master`、`dotnet/dotnet-api-docs/master` 或 `dotnet/samples/master`。
 
 PR 应始终面向主分支  。 你应从不打开面向活动分支的 PR  。
 

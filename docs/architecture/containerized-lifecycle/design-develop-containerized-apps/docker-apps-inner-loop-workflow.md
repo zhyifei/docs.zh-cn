@@ -2,18 +2,18 @@
 title: Docker 应用的内部循环开发工作流
 description: 了解 Docker 应用程序开发的“内部循环”工作流。
 ms.date: 02/15/2019
-ms.openlocfilehash: 04e1b29e6a0cef89df05cc9124806c74a38b5249
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 565852511f3a837066d5da5cf0e3ab0a902dd7da
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71214353"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71956485"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Docker 应用的内部循环开发工作流
 
 在触发跨整个 DevOps 周期的外部循环工作流之前，这一切都从每个开发人员的计算机开始，使用其首选语言或平台对应用本身进行编码，并在本地进行测试（图 4-21）。 但在所有情况下，无论选择何种语言、框架或平台，都有一个重要的共同点。 在此特定的工作流中，始终在本地开发和测试 Docker 容器。
 
-![步骤 1 - 代码/运行/调试](./media/image18.png)
+![显示内部循环开发环境概念的示意图。](./media/docker-apps-inner-loop-workflow/inner-loop-development-context.png)
 
 图 4-21  。 内部循环开发上下文
 
@@ -35,7 +35,7 @@ Docker 映像的容器或实例将包含以下组件：
 
 图 4-22 显示了构建 Docker 应用时通常需要执行的基本步骤，每个步骤后跟详细说明。
 
-![工作流概述：步骤 1 - 代码，步骤 2 - 编写 Dockerfile，步骤 3 - 创建使用 Dockerfile 定义的映像，步骤 4 - 使用 docker-compose 文件定义服务，步骤 5 - 运行容器或组合式应用，步骤 6 - 测试应用，步骤 7 - 推送以开始外部循环（CI/CD 管道）或继续开发。](./media/image19.png)
+![显示创建容器化应用程序所用的七个步骤的示意图。](./media/docker-apps-inner-loop-workflow/life-cycle-containerized-apps-docker-cli.png)
 
 **图 4-22**。 使用 Docker CLI 实现 Docker 容器化应用程序生命周期的高级工作流
 
@@ -54,10 +54,10 @@ Docker 映像的容器或实例将包含以下组件：
 
 此外，还需要代码编辑器，以便在使用 Docker CLI 时实际开发应用程序。
 
-Microsoft 提供 Visual Studio Code，它是 Mac、Windows 和 Linux 支持的轻量级代码编辑器，并为 IntelliSense 提供[多种语言的支持](https://code.visualstudio.com/docs/languages/overview)（JavaScript、.NET、Go、Java、Ruby、Python 和大多数现代语言）、[调试](https://code.visualstudio.com/Docs/editor/debugging)、[与 Git 集成](https://code.visualstudio.com/Docs/editor/versioncontrol)和[扩展插件支持](https://code.visualstudio.com/docs/extensions/overview)。 此编辑器是 Mac 和 Linux 开发人员的绝佳选择。 在 Windows 中，还可以使用完整的 Visual Studio 应用程序。
+Microsoft 提供 Visual Studio Code，它是 Windows、Linux 和 macOS 支持的轻量级代码编辑器，并为 IntelliSense 提供[多种语言的支持](https://code.visualstudio.com/docs/languages/overview)（JavaScript、.NET、Go、Java、Ruby、Python 和大多数现代语言）、[调试](https://code.visualstudio.com/Docs/editor/debugging)、[与 Git 集成](https://code.visualstudio.com/Docs/editor/versioncontrol)和[扩展插件支持](https://code.visualstudio.com/docs/extensions/overview)。 此编辑器是 macOS 和 Linux 开发人员的绝佳选择。 在 Windows 中，你还可以使用 Visual Studio。
 
 > [!TIP]
-> 如需了解用于 Windows、Mac 或 Linux 的 Visual Studio Code 的安装说明，请转到 <https://code.visualstudio.com/docs/setup/setup-overview/>。
+> 如需了解用于 Windows、Linux 或 macOS 的 Visual Studio Code 的安装说明，请转到 <https://code.visualstudio.com/docs/setup/setup-overview/>。
 >
 > 如需设置用于 Mac 的 Docker 的说明，请转到 <https://docs.docker.com/docker-for-mac/>。
 
@@ -81,7 +81,7 @@ VS Code 的 Docker 扩展提供以下功能：
 
 要安装 Docker 扩展，请按 Ctrl+Shift+P，键入 `ext install`，然后运行安装扩展命令以打开市场扩展列表。 接下来，键入“docker”，对结果进行筛选，然后选择 Docker 支持扩展，如下图 4-23 所示  。
 
-![VS Code 的 Docker 扩展视图。](./media/image20.png)
+![VS Code 的 Docker 扩展视图。](./media/docker-apps-inner-loop-workflow/install-docker-extension-vs-code.png)
 
 图 4-23  。 在 Visual Studio Code 中安装 Docker 扩展
 
@@ -96,7 +96,7 @@ VS Code 的 Docker 扩展提供以下功能：
 
 在图 4-24 中，可以看到如何使用 VS Code 的 Docker 扩展添加 docker-compose 文件。
 
-![VS Code 的 Docker 扩展控制台视图。](./media/image24.png)
+![VS Code 的 Docker 扩展控制台视图。](./media/docker-apps-inner-loop-workflow/add-docker-files-to-workspace-command.png)
 
 图 4-24  。 使用“将 Docker 文件添加到工作区命令”添加 Docker 文件 
 
@@ -158,7 +158,7 @@ ENTRYPOINT ["dotnet", "MyCustomMicroservice.dll"]
 
 要在本地环境中创建映像并使用 DockerFile，可以使用 docker build 命令，如图 4-25 所示（对于由多个容器/服务组成的应用程序，也可以运行 `docker-compose up --build`）。
 
-![Docker-compose 构建的控制台输出，其中显示映像下载进度。](./media/image25.png)
+![显示 docker 生成命令的控制台输出的屏幕截图。](./media/docker-apps-inner-loop-workflow/run-docker-build-command.png)
 
 图 4-25  。 运行 docker build
 
@@ -168,7 +168,7 @@ ENTRYPOINT ["dotnet", "MyCustomMicroservice.dll"]
 
 使用 docker images 命令可查找本地存储库（开发计算机）中的现有映像，如图 4-26 所示。
 
-![命令 docker 映像的控制台输出，其中显示现有映像。](./media/image26.png)
+![命令 docker 映像的控制台输出，其中显示现有映像。](./media/docker-apps-inner-loop-workflow/view-existing-images-with-docker-images.png)
 
 **图 4-26**。 使用 docker 映像查看现有映像
 
@@ -223,13 +223,13 @@ docker run -t -d -p 80:5000 cesardl/netcore-webapi-microservice-docker:first
 
 在大多数企业场景中，Docker 应用程序将由多个服务组成。 对于这些情况，可以运行 `docker-compose up` 命令（图 4-27），该命令将使用上述创建的 docker-compose.yml 文件。 运行此命令将使用其所有相关容器部署组合式应用程序。
 
-![来自 docker-compose up 命令的控制台输出。](./media/image27.png)
+![来自 docker-compose up 命令的控制台输出。](./media/docker-apps-inner-loop-workflow/results-docker-compose-up.png)
 
 **图 4-27**。 运行“docker-compose up”命令的结果
 
 运行 `docker-compose up` 后，（如图 4-28 所示）在 VM 表示形式中将应用程序及其相关容器部署到 Docker 主机中。
 
-![运行多容器应用程序的 VM。](./media/image28.png)
+![运行多容器应用程序的 VM。](./media/docker-apps-inner-loop-workflow/vm-with-docker-containers-deployed.png)
 
 **图 4-28**。 部署了 Docker 容器的 VM
 
@@ -247,7 +247,7 @@ docker-machine {IP} {YOUR-CONTAINER-NAME}
 
 在 Docker 主机上，打开浏览器并导航到该站点，应看到应用/服务正在运行（如图 4-29 所示）。
 
-![来自 localhost/API/值的响应的浏览器视图。](./media/image29.png)
+![来自 localhost/API/值的响应的浏览器视图。](./media/docker-apps-inner-loop-workflow/test-docker-app-locally-localhost.png)
 
 **图 4-29**。 使用 localhost 在本地测试 Docker 应用程序
 
@@ -255,7 +255,7 @@ docker-machine {IP} {YOUR-CONTAINER-NAME}
 
 可以使用来自终端的 CURL 对其进行测试。 在安装在 Windows 上的 Docker 中，默认 IP 为 10.0.75.1（如图 4-30 所示）。
 
-![通过 curl 获取 http://10.0.75.1/API/values 的控制台输出](./media/image30.png)
+![通过 curl 获取 http://10.0.75.1/API/values 的控制台输出](./media/docker-apps-inner-loop-workflow/test-docker-app-locally-curl.png)
 
 **图 4-30**。 使用 CURL 在本地测试 Docker 应用程序
 
@@ -265,8 +265,7 @@ docker-machine {IP} {YOUR-CONTAINER-NAME}
 
 使用 Visual Studio for Windows or Visual Studio for Mac 时，还可以在 Docker 中调试 .NET Core 或 .NET Framework 容器，如下一节所述。
 
-> [!INFORMATION]
->
+> [!TIP]
 > 如需了解有关调试 Node.js Docker 容器的详细信息，请转到 <https://blog.docker.com/2016/07/live-debugging-docker/> 和 <https://blogs.msdn.microsoft.com/user_ed/2016/02/27/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/>。
 
 >[!div class="step-by-step"]

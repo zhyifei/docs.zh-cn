@@ -2,12 +2,12 @@
 title: 在微服务中应用简化的 CQRS 和 DDD 模式
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 了解 CQRS 与 DDD 模式之间的整体关系。
 ms.date: 10/08/2018
-ms.openlocfilehash: 36bffce37176aed6c7d9daea7f2995952b58e895
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: f42b553fd30fdffdc6e325b11740fe9162aab7c8
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68674374"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834307"
 ---
 # <a name="apply-simplified-cqrs-and-ddd-patterns-in-a-microservice"></a>在微服务中应用简化后的 CQRS 和 DDD 模式
 
@@ -27,9 +27,11 @@ CQRS 表示有两个对象用于读/写操作，而在其他上下文中有一�
 
 这种服务的一个例子就是 eShopOnContainers 引用应用程序的订购微服务。 该服务基于简化的 CQRS 方法实现微服务。 使用单个数据源或数据库、两个逻辑模型和事务域的 DDD 模式，如图 7-2 所示。
 
-![逻辑订购微服务包括其订购数据库，该数据库无论是否与其位于同一 Docker 主机均可。 若该数据库位于同一 Docker 主机，则更利于开发，但不利于生产。](./media/image2.png)
+![显示高级别的简化 CQRS 和 DDD 微服务的示意图。](./media/apply-simplified-microservice-cqrs-ddd-patterns/simplified-cqrs-ddd-microservice.png)
 
 **图 7-2**。 基于简化 CQRS 和 DDD 的微服务
+
+逻辑“订购”微服务包括其订购数据库，该数据库可以（但无需）为相同 Docker 主机。 若该数据库位于同一 Docker 主机，则更利于开发，但不利于生产。
 
 应用程序层可以是 Web API 本身。 此处的重要设计是微服务已经从 CQRS 模式之后的命令、域模型和事务中将查询和 ViewModel（特别为客户端应用程序创建的数据模型）拆分开了。 这种方法使查询独立于 DDD 模式的限制和约束，这些模式只对事务和更新有意义，如后面的章节所述。
 

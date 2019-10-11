@@ -7,17 +7,17 @@ helpviewer_keywords:
 - types [C#], built-in
 - built-in C# types
 ms.assetid: 54f901f2-bf2f-472c-ae8d-73e8ecfc57fe
-ms.openlocfilehash: 1f7248a23d53fb90202595defbf70e231bd1d5d3
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 687990cc86b3303bdef96af26be63af47410f8c0
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69605978"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698798"
 ---
 # <a name="built-in-types-table-c-reference"></a>内置类型表（C# 参考）
 
-下表显示内置 C# 类型的关键字，即 <xref:System> 命名空间中预定义类型的别名。  
-  
+下表显示内置 C# 类型的关键字，即 <xref:System> 命名空间中预定义类型的别名：
+
 |C# 类型|.NET 类型|  
 |--------------|-------------------------|  
 |[bool](bool.md)|<xref:System.Boolean?displayProperty=nameWithType>|  
@@ -38,9 +38,9 @@ ms.locfileid: "69605978"
   
 ## <a name="remarks"></a>备注
 
-此表中的所有类型，除 `object` 和 `string` 外，皆被称为简单类型。  
-  
-.NET 类型及其 C# 类型关键字别名可互换。 例如，可通过使用以下任意一个声明来声明整型变量：  
+此表中的所有类型，除 `object` 和 `string` 外，皆被称为简单类型。
+
+.NET 类型及其 C# 类型关键字别名可互换。 例如，可通过使用以下任意一个声明来声明整型变量：
 
 ```csharp
 int x = 123;
