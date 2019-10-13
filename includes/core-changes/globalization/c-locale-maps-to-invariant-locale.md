@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: 9e9e443be9ea51d214e95c676fc28f0d8790af8b
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: f9ae32c44e5648eb74d7eab9fa5aa6cc2f17b9a1
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117205"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72237301"
 ---
 ### <a name="c-locale-maps-to-the-invariant-locale"></a>“C”区域设置映射到固定区域设置
 
 .NET Core 2.2 及更早版本依赖于默认 ICU 行为，该行为将“C”区域设置映射到 en_US_POSIX 区域设置。 En_US_POSIX 区域设置的排序行为并不可取，因为它不支持不区分大小写的字符串比较。 用户会遇到意外行为是因为部分 Linux 分发版将“C”区域设置设置为了默认区域设置。 
 
-#### <a name="details"></a>详细信息
+#### <a name="change-description"></a>更改描述
 
 从 .NET Core 3.0 开始，“C”区域设置映射已更改为使用固定区域设置，而不是 en_US_POSIX。 “C”区域设置到固定的映射还应用于 Windows，以实现一致性。
 
@@ -18,7 +18,7 @@ ms.locfileid: "71117205"
 
 #### <a name="version-introduced"></a>引入的版本
 
-.NET Core 3.0
+3.0
 
 ### <a name="recommended-action"></a>建议的操作
 

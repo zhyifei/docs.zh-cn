@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: b965c3a975b0f2cadd906799fef1665261d96d6e
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: f9000b19997201c2d3de0643669f9029ff1ca31c
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71181990"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72237294"
 ---
 ### <a name="envelopedcms-defaults-to-aes-256-encryption"></a>EnvelopedCms 默认为 AES-256 加密
 
 `EnvelopedCms` 使用的默认对称加密算法已由 TripleDES 改为 AES-256。
 
-#### <a name="details"></a>详细信息
+#### <a name="change-description"></a>更改描述
 
 在 .NET Core 预览版 7 和更早版本中，如果 <xref:System.Security.Cryptography.Pkcs.EnvelopedCms> 用于对数据加密但未通过构造函数重载指定对称加密算法，则使用 TripleDES/3DES/3DEA/DES3-EDE 算法对数据加密。
 

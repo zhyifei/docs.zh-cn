@@ -4,12 +4,12 @@ description: 了解包、元包和框架的术语。
 author: richlander
 ms.date: 06/20/2016
 ms.custom: seodec18
-ms.openlocfilehash: a03a4961b116b05468ac6c6ce5e648c07a77b7f6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 7b019686df195a8cebdce126f7a0b2d22548dc0e
+ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59090493"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72275763"
 ---
 # <a name="packages-metapackages-and-frameworks"></a>包、元包和框架
 
@@ -17,7 +17,7 @@ ms.locfileid: "59090493"
 
 每个 .Net Core 包都支持以框架形式通过多个 .Net 实现代码运行。 其中有些框架是传统框架，例如表示 .NET Framework 的 `net46`。 而另一些则是新框架，可视为是“基于包的框架”，这种是框架的另外一种新的定义模型。 这些基于包的框架整个都是由包组成的，它们自身也被定义成包，这就在包与框架之间形成了一种比较密切的关系。
 
-## <a name="packages"></a>包
+## <a name="packages"></a>package
 
 .NET Core 被分成一组包，它们提供了基元类型，以及更高层的数据类型，应用组合类型和通用实用工具。 每一个包都代表着单独的同名程序集。 例如，[System.Runtime](https://www.nuget.org/packages/System.Runtime) 这个包就包含了 System.Runtime.dll 程序集。 
 
@@ -72,7 +72,7 @@ ms.locfileid: "59090493"
 重要的 .NET Core 元包有：
 
 - [Microsoft.NETCore.App](https://www.nuget.org/packages/Microsoft.NETCore.App) - 描述了属于 .NET Core 发行版的部分库。 也就是 [`.NETCoreApp` 框架](https://github.com/dotnet/core-setup/blob/release/1.1.0/pkg/projects/Microsoft.NETCore.App/Microsoft.NETCore.App.pkgproj)。 它依赖于更小的 `NETStandard.Library`。
-- [Microsoft.AspNetCore.App](https://www.nuget.org/packages/Microsoft.AspNetCore.App) - 包含来自 ASP.NET Core 和 Entity Framework Core 的所有受支持的包（包含第三方依赖项的包除外）。 有关详细信息，请参阅 [ASP.NET Core 的 Microsoft.AspNetCore.App 元包](/aspnet/core/fundamentals/metapackage)。
+- [Microsoft.AspNetCore.App](https://www.nuget.org/packages/Microsoft.AspNetCore.App) - 包含来自 ASP.NET Core 和 Entity Framework Core 的所有受支持的包（包含第三方依赖项的包除外）。 有关详细信息，请参阅 [ASP.NET Core 的 Microsoft.AspNetCore.App 元包](/aspnet/core/fundamentals/metapackage-app)。
 - [Microsoft.AspNetCore.All](https://www.nuget.org/packages/Microsoft.AspNetCore.All) - 包含来自 ASP.NET Core、Entity Framework Core 以及 ASP.NET Core 和 Entity Framework Core 使用的内部和第三方依赖项的所有受支持包。 有关详细信息，请参阅 [ASP.NET Core 2.x 的 Microsoft.AspNetCore.All 元包](/aspnet/core/fundamentals/metapackage)。
 - [Microsoft.NETCore.Portable.Compatibility](https://www.nuget.org/packages/Microsoft.NETCore.Portable.Compatibility) - 一组兼容外观，使基于 mscorlib 的可移植类库(PCL) 得以在 .Net Core上运行。
 
@@ -134,9 +134,7 @@ ms.locfileid: "59090493"
 
 面向 `netstandard1.3` 却使用 `NETStandard.Library` 1.6.0 版本，这一点很奇怪。 然而，这是一个有效的用例，因为元包支持更旧的 `netstandard` 版本。 可能恰好你已将 1.6.0 版的元包进行了标准化，然后将其用于所有库，而这些库可以面向各种 `netstandard` 版本。 使用此方法，只需还原 `NETStandard.Library` 1.6.0，无需加载早期版本。 
 
-
-反之，将 `netstandard1.6` 设为目标，却使用 1.3.0 版的 `NETStandard.Library`，这是无效的。不能将高版本的框架设为目标，却使用低版本的元包，因为低版本的元包不会对高版本的框架公开任何资产。元包的版本控制方案断言元包匹配它们所描述的框架的最高版本。凭借版本控制方案，`NETStandard.Library` 的第一个版本是 v1.6.0，因为它包含 `netstandard1.6` 资产。而上例中使用 v1.3.0 版本只是为了保持对称，实际上它并不存在。
-
+反之，将 `netstandard1.6` 设为目标，却使用 1.3.0 版的 `NETStandard.Library`，这是无效的。 不能将高版本的框架设为目标，却使用低版本的元包，因为低版本的元包不会对高版本的框架公开任何资产。 元包的版本控制方案断言元包匹配它们所描述的框架的最高版本。 凭借版本控制方案，`NETStandard.Library` 的第一个版本是 v1.6.0，因为它包含 `netstandard1.6` 资产。 而上例中使用 v1.3.0 版本只是为了保持对称，实际上它并不存在。
 
 ### <a name="net-core-application"></a>.NET Core 应用程序
 

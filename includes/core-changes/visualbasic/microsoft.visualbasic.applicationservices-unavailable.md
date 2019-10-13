@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: c3211752282b231e818d9af25322efbb6c93cf78
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 294c077b837899bd714deb2afd1bdff2b3185f38
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71181761"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72237290"
 ---
 ### <a name="types-in-microsoftvisualbasicapplicationservices-namespace-not-available"></a>Microsoft.VisualBasic.ApplicationServices 命名空间中的类型不可用
 
@@ -14,7 +14,7 @@ ms.locfileid: "71181761"
 
 .NET Core 3.0 预览版 8
 
-#### <a name="details"></a>详细信息
+#### <a name="change-description"></a>更改描述
 
 <xref:Microsoft.VisualBasic.ApplicationServices?displayProperty=fullName> 中的类型之前在某些 .NET Core 3.0 预览版本中可用。 自 NET Core 3.0 预览版 9 起，它们不再可用。
 

@@ -4,12 +4,12 @@ description: 了解如何在 Windows 上使用 .NET Core 运行 .NET for Apache 
 ms.date: 06/27/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 004256a2fe369b026b15151dfc72ae379da0be8e
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: c4dbce74d0d8c0a682250a8021d983ef2990971f
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928486"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72250315"
 ---
 # <a name="tutorial-get-started-with-net-for-apache-spark"></a>教程：.NET for Apache Spark 入门
 
@@ -67,7 +67,7 @@ ms.locfileid: "70928486"
 
 1. 从本地计算机的 .NET for Apache Spark GitHub 版本页下载 [Microsoft.Spark.Worker](https://github.com/dotnet/spark/releases)。 例如，可以将其下载到路径 `c:\bin\Microsoft.Spark.Worker\`。
 
-2. 创建名为 `DotnetWorkerPath` 的[新环境变量](https://www.java.com/en/download/help/path.xml)，并将其设置到已下载和已提取 Microsoft.Spark.Worker 的目录  。 例如 `c:\bin\Microsoft.Spark.Worker`。
+2. 创建名为 `DOTNET_WORKER_DIR` 的[新环境变量](https://www.java.com/en/download/help/path.xml)，并将其设置到已下载和已提取 Microsoft.Spark.Worker 的目录  。 例如 `c:\bin\Microsoft.Spark.Worker`。
 
 ## <a name="clone-the-net-for-apache-spark-github-repo"></a>克隆 .NET for Apache Spark GitHub 存储库
 

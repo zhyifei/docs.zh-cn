@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: 4075eadf7cfb39c913b7657d43335bae5497deff
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 58d1c8cd3aff52703522391c14348bd81c108587
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216929"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72237297"
 ---
 ### <a name="custom-encoderfallbackbuffer-instances-cannot-fall-back-recursively"></a>自定义 EncoderFallbackBuffer 实例无法递归回退
 
 自定义 <xref:System.Text.EncoderFallbackBuffer> 实例无法以递归方式回退。 <xref:System.Text.EncoderFallbackBuffer.GetNextChar?displayProperty=nameWithType> 的实现必须生成一个可转换为目标编码的字符序列。 否则会发生异常。
 
-#### <a name="details"></a>详细信息
+#### <a name="change-description"></a>更改描述
 
 在字符到字节的转码操作期间，运行时将检测格式不正确或不可转换的 UTF-16 序列，并将这些字符提供给 <xref:System.Text.EncoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> 方法。 `Fallback` 方法确定应将哪些字符替换为原始不可转换数据，并通过在循环中调用 <xref:System.Text.EncoderFallbackBuffer.GetNextChar%2A?displayProperty=nameWithType> 来释放这些字符。
 

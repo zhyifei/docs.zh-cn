@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 98893470b64de4abf7f04817871e3053bf25b86d
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 8a92a426ac2c5eee6fba40bfc46281420466d648
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71119100"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72237300"
 ---
 ### <a name="jsonelement-api-changes"></a>JsonElement API 更改
 
@@ -33,14 +33,13 @@ ms.locfileid: "71119100"
 
 1. `WriteValue` 已重命名为 <xref:System.Text.Json.JsonElement.WriteTo%2A>。 这会影响诸如以下内容的代码：
 
-```csharp
-using (JsonDocument doc = JsonDocument.Parse(jsonString))
-{
-    JsonElement root = doc.RootElement;
-    root.WriteValue(writer);
-}
-
-```
+   ```csharp
+    using (JsonDocument doc = JsonDocument.Parse(jsonString))
+    {
+        JsonElement root = doc.RootElement;
+        root.WriteValue(writer);
+    }
+    ```
 
 1. 现在，<xref:System.Text.Json.JsonElement.WriteTo%2A> 在其方法参数为 `null` 时引发 <xref:System.ArgumentNullException>。
 
