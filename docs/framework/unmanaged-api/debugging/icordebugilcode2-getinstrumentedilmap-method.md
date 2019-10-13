@@ -49,7 +49,7 @@ HRESULT GetInstrumentedILMap(
 ## <a name="remarks"></a>备注  
  如果探查器通过调用来设置映射[icorprofilerinfo:: Setilinstrumentedcodemap](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilinstrumentedcodemap-method.md)方法，则调试器可以调用此方法来检索该映射，并计算 IL 偏移量的堆栈时在内部使用该映射跟踪和变量生存期。  
   
- 如果`cMap`为 0 和`pcMap`为非**null**，`pcMap`设置为可用 COR_IL_MAP 值的数目。 如果 `map``cMap` 为非零，则它表示  数组的存储容量。 方法返回时，`map`最多包含`cMap`项，并`pcMap`设置为实际写入 COR_IL_MAP 值的数目`map`数组。  
+ 如果`cMap`为 0 和`pcMap`为非**null**，`pcMap`设置为可用 COR_IL_MAP 值的数目。 如果 `map`、`cMap` 为非零，则它表示  数组的存储容量。 方法返回时，`map`最多包含`cMap`项，并`pcMap`设置为实际写入 COR_IL_MAP 值的数目`map`数组。  
   
  如果尚未检测到 IL 或探查器没有提供映射，则此方法将返回 `S_OK` 并将 `pcMap` 设置为 0。  
   

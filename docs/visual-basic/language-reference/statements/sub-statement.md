@@ -214,7 +214,7 @@ Visual Basic 有时会重新排列算术表达式来提高内部工作效率。 
 
 此外可以将标记[Function 语句](function-statement.md)与`Async`修饰符。 `Async`函数可以具有的返回类型<xref:System.Threading.Tasks.Task%601>或<xref:System.Threading.Tasks.Task>。 示例更高版本在本主题演示`Async`函数的返回类型为<xref:System.Threading.Tasks.Task%601>。
 
-`Async` `Sub` 过程主要用于事件处理程序的值不能返回。 `Async` `Sub`无法等待过程，和的调用方`Async``Sub`过程无法捕获的异常的`Sub`过程，则会引发。
+`Async` `Sub` 过程主要用于事件处理程序的值不能返回。 `Async` `Sub`无法等待过程，和的调用方`Async` `Sub`过程无法捕获的异常的`Sub`过程，则会引发。
 
 `Async`过程不能声明任何[ByRef](../modifiers/byref.md)参数。
 
@@ -228,7 +228,7 @@ Visual Basic 有时会重新排列算术表达式来提高内部工作效率。 
 
 ## <a name="example"></a>示例
 
-在以下示例中，`DelayAsync`是`Async``Function`具有返回类型的<xref:System.Threading.Tasks.Task%601>。 `DelayAsync` 具有返回整数的 `Return` 语句。 因此，函数声明`DelayAsync`必须具有返回类型为`Task(Of Integer)`。 因为返回类型是`Task(Of Integer)`的评估`Await`中的表达式`DoSomethingAsync`如下语句所示得出整数： `Dim result As Integer = Await delayTask`。
+在以下示例中，`DelayAsync`是`Async` `Function`具有返回类型的<xref:System.Threading.Tasks.Task%601>。 `DelayAsync` 具有返回整数的 `Return` 语句。 因此，函数声明`DelayAsync`必须具有返回类型为`Task(Of Integer)`。 因为返回类型是`Task(Of Integer)`的评估`Await`中的表达式`DoSomethingAsync`如下语句所示得出整数： `Dim result As Integer = Await delayTask`。
 
 `startButton_Click`过程是一种`Async Sub`过程。 因为`DoSomethingAsync`是`Async`函数，为调用任务`DoSomethingAsync`必须等待，如以下语句所示： `Await DoSomethingAsync()`。 `startButton_Click` `Sub`过程必须使用定义`Async`修饰符，因此`Await`表达式。
 

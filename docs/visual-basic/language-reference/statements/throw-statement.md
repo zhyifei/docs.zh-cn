@@ -38,7 +38,7 @@ Throw [ expression ]
 
 ## <a name="remarks"></a>备注
 
-语句引发异常, 你可以使用结构化异常处理代码 (`Try`... `Throw``Catch`...) 或非结构化异常处理代码`On Error GoTo`()。 `Finally` 您可以使用`Throw`语句来捕获代码中的错误, 因为 Visual Basic 在调用堆栈中向上移动, 直到找到相应的异常处理代码。
+语句引发异常, 你可以使用结构化异常处理代码 (`Try`... `Throw` `Catch`...) 或非结构化异常处理代码`On Error GoTo`()。 `Finally` 您可以使用`Throw`语句来捕获代码中的错误, 因为 Visual Basic 在调用堆栈中向上移动, 直到找到相应的异常处理代码。
 
 不带 expression 的`Catch` `Catch`语句只能用在语句中, 在这种情况下, 该语句重新引发语句当前正在处理的异常。 `Throw`
 

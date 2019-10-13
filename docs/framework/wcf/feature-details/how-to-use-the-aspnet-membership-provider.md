@@ -34,7 +34,7 @@ Windows Communication Foundation (WCF) 开发人员可以出于安全目的利�
 
 3. 添加元素以刷新提供程序`providers`的集合, 作为 < > 元素的子元素。 `<clear />`
 
-4. `connectionStringName` `type``add` `name` `enablePasswordReset` `applicationName` `requiresQuestionAndAnswer` `enablePasswordRetrieval`在元素下, 创建一个 < > 元素, 并将以下属性设置为适当的值:、、、、、、 `<clear />`、 `requiresUniqueEmail`和。`passwordFormat` `name` 属性以后作为一个值在配置文件中使用。 下面的示例将其设置为 `SqlMembershipProvider`。
+4. `connectionStringName` `type` `add` `name` `enablePasswordReset` `applicationName` `requiresQuestionAndAnswer` `enablePasswordRetrieval`在元素下, 创建一个 < > 元素, 并将以下属性设置为适当的值:、、、、、、 `<clear />`、 `requiresUniqueEmail`和。`passwordFormat` `name` 属性以后作为一个值在配置文件中使用。 下面的示例将其设置为 `SqlMembershipProvider`。
 
     下面的示例显示配置节。
 

@@ -96,7 +96,7 @@ namespace Metadata.Samples
 
 2. 在 `<behaviors>` 元素内，添加一个 `<serviceBehaviors>` 元素。  
 
-3. 向 `<behavior>``<serviceBehaviors>` 元素中添加一个 `name` 元素，并为 元素的 `<behavior>` 属性指定一个值。  
+3. 向 `<behavior>`、`<serviceBehaviors>` 元素中添加一个 `name` 元素，并为 元素的 `<behavior>` 属性指定一个值。  
 
 4. 向 `<serviceMetadata>` 元素中添加一个 `<behavior>` 元素。 将 `httpGetEnabled` 属性设置为 `true`，并将 `policyVersion` 属性设置为 Policy15。 `httpGetEnabled` 可让服务响应 HTTP GET 请求发出的元数据请求。 `policyVersion` 通知服务在生成元数据时应符合 WS-Policy 1.5。  
 

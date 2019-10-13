@@ -83,7 +83,7 @@ ms.locfileid: "68238542"
   
 - **默认样式**，也称为**主题样式。** <xref:System.Windows.FrameworkElement.Style%2A>属性不直接，设置和实际上将读作`null`直到运行时。 在这种情况下，样式来自作为 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 表示引擎一部分的运行时主题评估。  
   
- 对于主题中不存在的隐式样式，该类型必须完全-匹配`MyButton``Button`的派生的类不会隐式使用的样式`Button`。  
+ 对于主题中不存在的隐式样式，该类型必须完全-匹配`MyButton` `Button`的派生的类不会隐式使用的样式`Button`。  
   
 <a name="themestyles"></a>   
 ## <a name="default-theme-styles"></a>默认（主题）样式  
