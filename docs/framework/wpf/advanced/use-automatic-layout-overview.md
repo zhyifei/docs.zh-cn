@@ -5,16 +5,16 @@ helpviewer_keywords:
 - layout [WPF], automatic
 - automatic layout [WPF]
 ms.assetid: 6fed9264-18bb-4d05-8867-1fe356c6f687
-ms.openlocfilehash: 0253c57f080705b648d9f416368d0fe974ac83ab
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 2fe473da3eeabef3852e3003e61b3b9604332855
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834669"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291274"
 ---
 # <a name="use-automatic-layout-overview"></a>使用自动布局概述
 
-本主题介绍了有关如何编写可本地化 @no__t [!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)] 的应用程序的开发人员指南。 过去，UI 的本地化是一个耗时的过程。 UI 调整的每种语言都需要像素的像素调整。 如今，使用正确的设计和右编码标准，可以构造 [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]，使本地化人员可以更少地调整大小和重定位。 编写可以更方便地调整大小和重新定位的应用程序的方法称为自动布局，可通过使用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序设计实现。
+本主题介绍有关如何编写具有可本地化的用户界面（Ui）的 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 应用程序的开发人员指南。 过去，UI 的本地化是一个耗时的过程。 UI 调整的每种语言都需要像素的像素调整。 如今，使用正确的设计和右编码标准，可以构造 Ui，使本地化人员可以更少地调整大小和重新定位。 编写可以更方便地调整大小和重新定位的应用程序的方法称为自动布局，可通过使用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序设计实现。
 
 <a name="advantages_of_autolayout"></a>
 

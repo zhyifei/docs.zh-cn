@@ -2,21 +2,21 @@
 title: 如何：以编程方式向 WCF 服务和客户端添加可发现性
 ms.date: 03/30/2017
 ms.assetid: 4f7ae7ab-6fc8-4769-9730-c14d43f7b9b1
-ms.openlocfilehash: de227e8df895dd4c031aadce16102559c43e47ce
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: a139eb4a15486be329bc6853ee6b3a3be06b0619
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586621"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291567"
 ---
 # <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>如何：以编程方式向 WCF 服务和客户端添加可发现性
-本主题说明如何使 Windows Communication Foundation (WCF) 服务可发现。 它基于[自托管](https://go.microsoft.com/fwlink/?LinkId=145523)示例。  
+本主题说明如何使 Windows Communication Foundation （WCF）服务可发现。 它基于[自主机](https://go.microsoft.com/fwlink/?LinkId=145523)示例。  
   
 ### <a name="to-configure-the-existing-self-host-service-sample-for-discovery"></a>针对 Discovery 配置现有自承载服务示例  
   
 1. 在 Visual Studio 2012 中打开自承载解决方案。 示例位于 TechnologySamples\Basic\Service\Hosting\SelfHost 目录中。  
   
-2. 将对 `System.ServiceModel.Discovery.dll` 的引用添加到服务项目中。 可能会看到错误消息，指出"系统。 ServiceModel.Discovery.dll 或其某个依赖项需要更高版本的.NET framework 与指定的项目中..."如果看到此消息，请右键单击解决方案资源管理器中的项目并选择**属性**。 在中**项目属性**窗口中，请确保**目标框架**是[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]。  
+2. 将对 `System.ServiceModel.Discovery.dll` 的引用添加到服务项目中。 你可能会看到一条错误消息，指出 "系统。 "System.servicemodel. .dll" 或其依赖项之一需要更高版本的 .NET Framework，而不是在项目中指定的版本 ... "如果看到此消息，请在解决方案资源管理器中右键单击该项目，然后选择 "**属性**"。 在项目的 "**属性**" 窗口中，确保**目标框架**[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]。  
   
 3. 打开 Service.cs 文件并添加下面的 `using` 语句。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "65586621"
   
 2. 添加对 `System.ServiceModel.dll` 和 `System.ServiceModel.Discovery.dll` 的引用  
   
-3. 将 GeneratedClient.cs 和 App.config 文件从现有客户端项目复制到新的 DiscoveryClientApp 项目。 若要执行此操作，右键单击中的文件**解决方案资源管理器**，选择**副本**，然后选择**DiscoveryClientApp**项目中，右键单击，然后选择**粘贴**。  
+3. 将 GeneratedClient.cs 和 App.config 文件从现有客户端项目复制到新的 DiscoveryClientApp 项目。 为此，请在**解决方案资源管理器**中右键单击文件，选择 "**复制**"，然后选择 " **DiscoveryClientApp** " 项目，右键单击并选择 "**粘贴**"。  
   
 4. 打开 Program.cs。  
   
@@ -92,7 +92,7 @@ ms.locfileid: "65586621"
     }  
     ```  
   
-     这将告知 WCF 的<xref:System.ServiceModel.Discovery.DiscoveryClient>类应使用标准 UDP 发现终结点发送和接收发现消息。  
+     这会告知 WCF @no__t 0 类应使用标准 UDP 发现终结点来发送和接收发现消息。  
   
 8. 在下一行，调用 <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> 方法并指定包含要搜索的服务协定的 <xref:System.ServiceModel.Discovery.FindCriteria> 实例。 在本示例中，指定的是 `ICalculator`。  
   
@@ -124,7 +124,7 @@ ms.locfileid: "65586621"
   
      此方法使用从 `FindCalculatorServiceAddress` 返回的终结点地址调用计算器服务。  
   
-11. 在 `InvokeCalculatorService` 方法的内部，创建 `CalculatorServiceClient` 类的实例。 此类定义由[自托管](https://go.microsoft.com/fwlink/?LinkId=145523)示例。 并且是使用 Svcutil.exe 生成的。  
+11. 在 `InvokeCalculatorService` 方法的内部，创建 `CalculatorServiceClient` 类的实例。 此类由[自承载](https://go.microsoft.com/fwlink/?LinkId=145523)示例定义。 并且是使用 Svcutil.exe 生成的。  
   
     ```csharp  
     // Create a client  
@@ -196,7 +196,7 @@ ms.locfileid: "65586621"
   
 3. service.exe 的输出应类似于以下输出。  
   
-    ```Output  
+    ```output  
     Received Add(100,15.99)  
     Return: 115.99  
     Received Subtract(100,15.99)  
@@ -209,7 +209,7 @@ ms.locfileid: "65586621"
   
 4. Discoveryclientapp.exe 的输出应类似于以下输出。  
   
-    ```Output  
+    ```output  
     Invoking CalculatorService at http://localhost:8000/ServiceModelSamples/service  
     Add(100,15.99) = 115.99  
     Subtract(100,15.99) = 84.01  
@@ -220,7 +220,7 @@ ms.locfileid: "65586621"
     ```  
   
 ## <a name="example"></a>示例  
- 下面是此示例的代码清单。 因为此代码基于[自托管](https://go.microsoft.com/fwlink/?LinkId=145523)示例列出了这些文件进行的更改。 有关自承载示例的详细信息，请参阅[设置说明](https://go.microsoft.com/fwlink/?LinkId=145522)。  
+ 下面是此示例的代码清单。 由于此代码基于[自承载](https://go.microsoft.com/fwlink/?LinkId=145523)示例，因此仅列出已更改的文件。 有关自承载示例的详细信息，请参阅[安装说明](https://go.microsoft.com/fwlink/?LinkId=145522)。  
   
 ```csharp  
 // Service.cs  

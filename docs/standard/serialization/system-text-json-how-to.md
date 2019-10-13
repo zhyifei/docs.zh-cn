@@ -8,12 +8,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 3c988a0151f57b67db19f41aeb88c6fb9b808cb3
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: 22c2fd5fc5eaf7a5dc9b71a7335b0b844fa92b51
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72179205"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291604"
 ---
 # <a name="how-to-serialize-and-deserialize-json-in-net"></a>如何在 .NET 中对 JSON 进行序列化和反序列化
 
@@ -131,7 +131,7 @@ byte[] utf8Json = JsonSerializer.SerializeToUtf8Bytes<WeatherForecast>(weatherFo
 
 作为替代方法，可以使用 @no__t 为-1 的 @no__t 0 重载。
 
-序列化为 UTF-8 比使用基于字符串的方法更快 5-10%。 不同之处在于，不需要将字节（如 UTF-8）转换为字符串（UTF-16）。
+序列化为 UTF-8 比使用基于字符串的方法更快5-10%。 不同之处在于，不需要将字节（如 UTF-8）转换为字符串（UTF-16）。
 
 ## <a name="serialization-behavior"></a>序列化行为
 
@@ -237,7 +237,7 @@ var options = new JsonSerializerOptions
     ReadCommentHandling = JsonCommentHandling.Skip,
     AllowTrailingCommas = true
 };
-var weatherForecast = JsonSerializer.Deserialize<WeatherForecast>(json);
+var weatherForecast = JsonSerializer.Deserialize<WeatherForecast>(json, options);
 ```
 
 下面是包含注释和尾随逗号的示例 JSON：

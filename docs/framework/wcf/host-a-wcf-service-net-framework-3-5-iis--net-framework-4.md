@@ -2,29 +2,29 @@
 title: 如何：在 .NET Framework 4 环境下运行的 IIS 中承载使用 .NET Framework 3.5 编写的 WCF 服务
 ms.date: 03/30/2017
 ms.assetid: 9aabc785-068d-4d32-8841-3ef39308d8d6
-ms.openlocfilehash: eb4f0538380bf2e1d0e36d69020787055230dbaf
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 6a87fd5e3997e9d15810a5efb079da629908f854
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67425559"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291534"
 ---
 # <a name="how-to-host-a-wcf-service-written-with-net-framework-35-in-iis-running-under-net-framework-4"></a>如何：在 .NET Framework 4 环境下运行的 IIS 中承载使用 .NET Framework 3.5 编写的 WCF 服务
-承载 Windows Communication Foundation (WCF) 服务使用编写时[!INCLUDE[netfx35_long](../../../includes/netfx35-long-md.md)]上运行的计算机[!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)]，你可能会收到<xref:System.ServiceModel.ProtocolException>具有以下文本。  
+在运行 [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] 的计算机上承载使用 [!INCLUDE[netfx35_long](../../../includes/netfx35-long-md.md)] 编写的 Windows Communication Foundation （WCF）服务时，你可能会收到包含以下文本的 <xref:System.ServiceModel.ProtocolException>。  
   
-```Output  
+```output  
 Unhandled Exception: System.ServiceModel.ProtocolException: The content type text/html; charset=utf-8 of the response message does not match the content type of the binding (application/soap+xml; charset=utf-8). If using a custom encoder, be sure that the IsContentTypeSupported method is implemented properly. The first 1024 bytes of the response were: '<html>    <head>        <title>The application domain or application pool is currently running version 4.0 or later of the .NET Framework. This can occur if IIS settings have been set to 4.0 or later for this Web application, or if you are using version 4.0 or later of the ASP.NET Web Development Server. The <compilation> element in the Web.config file for this Web application does not contain the required 'targetFrameworkMoniker' attribute for this version of the .NET Framework (for example, '<compilation targetFrameworkMoniker=".NETFramework,Version=v4.0">'). Update the Web.config file with this attribute, or configure the Web application to use a different version of the .NET Framework.</title>...  
 ```  
   
  或者，如果尝试浏览服务的 .svc 文件，您可能会看到包含以下文本的错误页面。  
   
-```Output  
+```output  
 The application domain or application pool is currently running version 4.0 or later of the .NET Framework. This can occur if IIS settings have been set to 4.0 or later for this Web application, or if you are using version 4.0 or later of the ASP.NET Web Development Server. The <compilation> element in the Web.config file for this Web application does not contain the required 'targetFrameworkMoniker' attribute for this version of the .NET Framework (for example, '<compilation targetFrameworkMoniker=".NETFramework,Version=v4.0">'). Update the Web.config file with this attribute, or configure the Web application to use a different version of the .NET Framework.  
 ```  
   
  出现上述错误的原因是，运行 IIS 的应用程序域正在运行 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]，WCF 服务应在 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 下运行。 本主题说明运行服务所需进行的修改。  
   
- 接下来找到 <`compilers`> 元素，并将 CompilerVersion 提供程序选项的值为 4.0 更改为。 默认情况下，有两个 <`compiler`> 元素下的 <`compilers`> 元素。 您必须同时更新这两个元素的 CompilerVersion 提供程序选项，如下面的示例所示。  
+ 接下来，查找 < @no__t > 元素，并将 CompilerVersion 提供程序选项更改为值4.0。 默认情况下，< `compilers` > 元素下有两个 < @no__t 的 > 元素。 您必须同时更新这两个元素的 CompilerVersion 提供程序选项，如下面的示例所示。  
   
 ```xml  
 <system.codedom>  
@@ -46,9 +46,9 @@ The application domain or application pool is currently running version 4.0 or l
   
 ### <a name="add-the-required-targetframework-attribute"></a>添加所需的 targetFramework 特性  
   
-1. 打开服务的 Web.config 文件并查找 <`compilation`> 元素。  
+1. 打开服务的 Web.config 文件，查找 < @no__t > 元素。  
   
-2. 添加`targetFramework`属性为 <`compilation`> 元素，如以下示例所示。  
+2. 将 `targetFramework` 特性添加到 < `compilation` > 元素，如下面的示例中所示。  
   
     ```xml  
     <compilation debug="false"  
@@ -64,7 +64,7 @@ The application domain or application pool is currently running version 4.0 or l
           </compilation>  
     ```  
   
-3. 查找 <`compilers`> 元素，并将 CompilerVersion 提供程序选项的值为 4.0 更改为。 默认情况下，有两个 <`compiler`> 元素下的 <`compilers`> 元素。 您必须同时更新这两个元素的 CompilerVersion 提供程序选项，如下面的示例所示。  
+3. 查找 < @no__t > 元素，并将 CompilerVersion 提供程序选项更改为值4.0。 默认情况下，< `compilers` > 元素下有两个 < @no__t 的 > 元素。 您必须同时更新这两个元素的 CompilerVersion 提供程序选项，如下面的示例所示。  
   
     ```xml  
     <system.codedom>  

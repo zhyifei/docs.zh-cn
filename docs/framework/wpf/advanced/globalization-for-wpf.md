@@ -7,12 +7,12 @@ helpviewer_keywords:
 - international user interface [WPF], XAML
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-ms.openlocfilehash: 1ab372f69792a00160edb2542762298114d3f8b4
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 32caf87435e23008f9f300d231c2705e7894280f
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72003438"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291458"
 ---
 # <a name="globalization-for-wpf"></a>WPF 的全球化
 本主题介绍编写全局市场 @no__t 0 应用程序时应注意的问题。 在 <xref:System.Globalization> 命名空间的 .NET 中定义全球化编程元素。
@@ -143,7 +143,7 @@ ms.locfileid: "72003438"
 
 <a name="mui"></a>
 ### <a name="multilingual-user-interface"></a>多语言用户界面
- 多语言用户界面（MUI）支持从一种语言切换到另一种语言 [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]。 @No__t-0 应用程序使用程序集模型来支持 MUI。 一个应用程序包含非特定语言程序集和与语言相关的附属资源程序集。 入口点是主程序集中的托管 .EXE。  @no__t，资源加载器利用第 1 @no__t 资源管理器来支持资源查找和回退。 多个语言附属程序集使用同一个主程序集。 加载的资源程序集取决于当前线程的 @no__t 0。
+ 多语言用户界面（MUI）是用于将用户界面从一种语言切换到另一种语言的 Microsoft 支持。 @No__t-0 应用程序使用程序集模型来支持 MUI。 一个应用程序包含非特定语言程序集和与语言相关的附属资源程序集。 入口点是主程序集中的托管 .EXE。  @no__t，资源加载器利用第 1 @no__t 资源管理器来支持资源查找和回退。 多个语言附属程序集使用同一个主程序集。 加载的资源程序集取决于当前线程的 @no__t 0。
 
 <a name="localizable_ui"></a>
 ### <a name="localizable-user-interface"></a>可本地化的用户界面

@@ -2,22 +2,22 @@
 title: WS-AtomicTransaction 配置 MMC 管理单元
 ms.date: 03/30/2017
 ms.assetid: 23592973-1d51-44cc-b887-bf8b0d801e9e
-ms.openlocfilehash: 1fa0548e2d63562ddcb85fc6392bf5c99d67d6c7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 926332ac1873db89ce9332075380effdfdc1fc37
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69916808"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291503"
 ---
 # <a name="ws-atomictransaction-configuration-mmc-snap-in"></a>WS-AtomicTransaction 配置 MMC 管理单元
 WS-AtomicTransaction 配置 MMC 管理单元用于在本地计算机和远程计算机上配置一部分 WS-AtomicTransaction 设置。  
   
 ## <a name="remarks"></a>备注  
- 如果你[!INCLUDE[wxp](../../../includes/wxp-md.md)]运行的是[!INCLUDE[ws2003](../../../includes/ws2003-md.md)]或, 则可以通过导航到 **"控制面板"/"管理工具"/"组件服务**", 右键单击**我的电脑**, 然后选择 "**属性**" 来找到 MMC 管理单元。 这与可在其中配置 MSDTC 的位置相同。 可用于配置的选项分组在 " **ws-at** " 选项卡下。  
+ 如果运行 @no__t 或 [!INCLUDE[ws2003](../../../includes/ws2003-md.md)]，则可以通过导航到 **"控制面板"/"管理工具"/"组件服务**"，右键单击 "**我的电脑**"，然后选择 "**属性**" 来找到 MMC 管理单元。 这与可在其中配置 MSDTC 的位置相同。 可用于配置的选项分组在 " **ws-at** " 选项卡下。  
   
- 如果你运行的是 Windows Vista [!INCLUDE[lserver](../../../includes/lserver-md.md)]或, 则可以通过单击 "**开始**" 按钮`dcomcnfg.exe` , 然后在**搜索**框中键入来找到 MMC 管理单元。 打开 MMC 时, 导航到 "我的**Computer\Distributed Transaction 处理协调器 DTC** " 节点, 右键单击并选择 "**属性**"。 可用于配置的选项分组在 " **ws-at** " 选项卡下。  
+ 如果你运行的是 Windows Vista 或 [!INCLUDE[lserver](../../../includes/lserver-md.md)]，则可以通过单击 "**开始**" 按钮，然后在 "**搜索**" 框中键入 `dcomcnfg.exe` 来找到 MMC 管理单元。 打开 MMC 时，导航到 "我的**Computer\Distributed Transaction 处理协调器 DTC** " 节点，右键单击并选择 "**属性**"。 可用于配置的选项分组在 " **ws-at** " 选项卡下。  
   
- 使用前面的步骤来启动用于配置本地计算机的管理单元。 如果要配置远程计算机, 则应在 **"控制面板"/"管理工具"/"组件服务/** " 中找到远程计算机的名称, 并在运行[!INCLUDE[wxp](../../../includes/wxp-md.md)]或[!INCLUDE[ws2003](../../../includes/ws2003-md.md)]的情况下执行类似的步骤。 如果你运行的是 Windows vista [!INCLUDE[lserver](../../../includes/lserver-md.md)]或, 请对 Vista 和[!INCLUDE[lserver](../../../includes/lserver-md.md)]执行前面的步骤, 但使用远程计算机的节点下的**Distributed Transaction 处理协调器 DTC**节点。  
+ 使用前面的步骤来启动用于配置本地计算机的管理单元。 如果要配置远程计算机，则应在 **"控制面板"/"管理工具"/"组件服务/** " 中找到远程计算机的名称，然后在运行 [!INCLUDE[wxp](../../../includes/wxp-md.md)] 或 [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] 时执行类似的步骤。 如果运行的是 Windows Vista 或 [!INCLUDE[lserver](../../../includes/lserver-md.md)]，请遵循 Vista 和 [!INCLUDE[lserver](../../../includes/lserver-md.md)] 前面的步骤，但使用远程计算机的节点下的**Distributed Transaction 处理协调器 DTC**节点。  
   
  若要使用工具提供的用户界面，您必须注册 WsatUI.dll 文件，该文件位于以下路径中：  
   
@@ -25,18 +25,18 @@ WS-AtomicTransaction 配置 MMC 管理单元用于在本地计算机和远程计
   
  可通过以下命令完成注册。  
   
-```Output  
+```console
 regasm.exe /codebase WsatUI.dll  
 ```  
   
  您可以使用此工具来修改基本 WS-AtomicTransaction 设置。 例如，您可以启用和禁用 WS-AtomicTransaction 协议支持、为 WS-AT 配置 HTTP 端口、将 SSL 证书绑定到 HTTP 端口、通过指定证书主题名称来配置证书、选择跟踪模式以及设置默认和最大超时。  
   
- 如果只必须在本地计算机上配置 WS-AtomicTransaction 支持，您可以使用此工具的命令行版本。 有关命令行工具的详细信息, 请参阅[Ws-atomictransaction 配置实用工具 (wsatconfig.exe)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)主题。  
+ 如果只必须在本地计算机上配置 WS-AtomicTransaction 支持，您可以使用此工具的命令行版本。 有关命令行工具的详细信息，请参阅[Ws-atomictransaction 配置实用工具（wsatconfig.exe）](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)主题。  
   
- 应该注意，MMC 管理单元和命令行工具都不支持配置所有 WS-AT 设置。 只能通过直接修改注册表来编辑这些设置。 有关这些注册表设置的详细信息, 请参阅[配置 WS 原子事务支持](../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md)。  
+ 应该注意，MMC 管理单元和命令行工具都不支持配置所有 WS-AT 设置。 只能通过直接修改注册表来编辑这些设置。 有关这些注册表设置的详细信息，请参阅[配置 WS 原子事务支持](../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md)。  
   
 ### <a name="user-interface-description"></a>用户界面说明  
- **启用 WS 原子事务网络支持**:  
+ **启用 WS 原子事务网络支持**：  
   
  切换选择此复选框将启用或禁用此管理单元的所有 GUI 组件。  
   
@@ -56,14 +56,14 @@ regasm.exe /codebase WsatUI.dll
   
  **终结点证书**  
   
- 单击 "**选择**" 按钮将显示本地计算机上当前可用证书的列表, 使用户可以选择可用于 SSL 加密的证书。 证书必须具有私钥。 否则会收到一条错误消息。  
+ 单击 "**选择**" 按钮将显示本地计算机上当前可用证书的列表，使用户可以选择可用于 SSL 加密的证书。 证书必须具有私钥。 否则会收到一条错误消息。  
   
 > [!NOTE]
 > 为选定端口设置 SSL 证书时，将覆盖与该端口关联的原始 SSL 证书（如果有）。  
   
  **授权帐户**  
   
- 单击 "**选择**" 按钮调用 Windows 访问控制列表编辑器, 您可以在其中指定可参与 WS 原子事务的用户或组, 方法是选中 " **参与**" 或 "**拒绝**" 框。权限组。  
+ 单击 "**选择**" 按钮调用 Windows 访问控制列表编辑器，您可以在其中指定可参与 WS 原子事务的用户或组，方法是选中 "**参与** **" 或 "** **拒绝**" 框。权限组。  
   
  **授权的证书**  
   
@@ -75,16 +75,16 @@ regasm.exe /codebase WsatUI.dll
 #### <a name="tracing-and-logging-group-box"></a>“跟踪和日志记录”分组框  
  "**跟踪和日志记录**组" 框可用于配置所需的跟踪和日志记录级别。  
   
- 单击 "**选项**" 按钮将调用一个页面, 您可以在其中指定其他设置。  
+ 单击 "**选项**" 按钮将调用一个页面，您可以在其中指定其他设置。  
   
- 您可以通过 "**跟踪级别**" 组合框选择任何有效的<xref:System.Diagnostics.TraceLevel>枚举值。 您也可以使用这些复选框来指定是否要执行活动跟踪、活动传播或收集个人身份信息。  
+ "**跟踪级别**" 组合框允许您从 @no__t 的任何有效值中进行选择。 您也可以使用这些复选框来指定是否要执行活动跟踪、活动传播或收集个人身份信息。  
   
  你还可以在 "**日志记录会话**" 组框中指定日志记录会话。  
   
 > [!NOTE]
 > 如果另一个跟踪使用者正在使用 WS-AT 跟踪提供程序，则您无法为跟踪事件创建新的日志记录会话。 任何试图在此时配置日志记录的操作都会导致错误消息“无法启用提供程序。 错误代码:1".  
   
- 有关跟踪和日志记录的详细信息, 请参阅[管理和诊断](../../../docs/framework/wcf/diagnostics/index.md)。  
+ 有关跟踪和日志记录的详细信息，请参阅[管理和诊断](../../../docs/framework/wcf/diagnostics/index.md)。  
   
 ## <a name="see-also"></a>请参阅
 
