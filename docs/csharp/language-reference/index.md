@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C# language, reference
 - reference, C# language
 ms.assetid: 06de3167-c16c-4e1a-b3c5-c27841d4569a
-ms.openlocfilehash: fd5c39bfcb05296a36d94ea64946f8c29ed7e4d6
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: df56287d161f7760e136eb80aa1a9171966df794
+ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70925345"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72275799"
 ---
 # <a name="c-reference"></a>C# 参考
 此部分收录了有关 C# 关键字、运算符、特殊字符、预处理器指令、编译器选项以及编译器错误与警告的参考资料。  
@@ -55,7 +55,7 @@ ms.locfileid: "70925345"
  C# 7.3 是另一个包含多个小更新的重要发布。 可对泛型类型参数使用新约束。 通过其他更改，可更轻松地使用 `fixed` 字段，包括使用 [`stackalloc`](./operators/stackalloc.md) 分配。 可以重新分配使用 `ref` 关键字声明的本地变量以引用新存储。 可将属性放置在自动实现的属性上，该属性针对编译器生成的支持字段。 表达式变量可用于初始化表达式中。 可以比较元组的相等性（或不等性）。 重载决策也有一些改进。
   
  [C# 8.0 规范建议](../../../_csharplang/proposals/csharp-8.0/nullable-reference-types.md)  
- C# 8.0 可用于 .NET Core 3.0。 功能包括可为 null 的引用类型、递归模式匹配、默认接口成员、异步流、范围和索引、基于模式的 using 和 using 声明、null 合并分配以及只读实例成员。
+ C# 8.0 可用于 .NET Core 3.0。 这些功能包括可为空引用类型、递归模式匹配、默认接口方法、异步流、范围和索引、基于模式的 using 和 using 声明、null 合并分配以及只读实例成员。
   
 ## <a name="related-sections"></a>相关章节  
 

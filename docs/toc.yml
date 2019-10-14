@@ -580,8 +580,8 @@
           href: csharp/tutorials/exploration/interpolated-strings-local.md
         - name: 字符串内插的高级方案
           href: csharp/tutorials/string-interpolation.md
-        - name: 安全更新默认接口成员的接口
-          href: csharp/tutorials/default-interface-members-versions.md
+        - name: 使用默认接口方法安全地更新接口
+          href: csharp/tutorials/default-interface-methods-versions.md
         - name: 探索索引和范围
           href: csharp/tutorials/ranges-indexes.md
         - name: 使用可为空引用类型
