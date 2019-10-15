@@ -226,7 +226,7 @@ public void Configure(EntityTypeBuilder<Order> orderConfiguration)
 
 在前面的代码中，`orderConfiguration.OwnsOne(o => o.Address)` 方法指定了 `Address` 属性是 `Order` 类型的固有实体。
 
-默认情况下，EF Core 约定将固有实体类型属性的数据库列命名为 `EntityProperty_OwnedEntityProperty`。 因此，`Address` 的内部属性将以 `Address_Street`、`Address_City` 这样的名称（对于 `State``Country` 和 `ZipCode` 可进行类推）出现在 `Orders` 表中。
+默认情况下，EF Core 约定将固有实体类型属性的数据库列命名为 `EntityProperty_OwnedEntityProperty`。 因此，`Address` 的内部属性将以 `Address_Street`、`Address_City` 这样的名称（对于 `State`、`Country` 和 `ZipCode` 可进行类推）出现在 `Orders` 表中。
 
 可以附加 `Property().HasColumnName()` 连贯性方法来重命名这些列。 如果 `Address` 是公共属性，映射将如下所示：
 

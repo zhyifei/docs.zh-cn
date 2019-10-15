@@ -32,7 +32,7 @@ ms.locfileid: "70106656"
    [!code-csharp[System.TimeZone2.Concepts#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Concepts/CS/TimeZone2Concepts.cs#1)]
    [!code-vb[System.TimeZone2.Concepts#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Concepts/VB/TimeZone2Concepts.vb#1)]
 
-2. 使用循环 (在中<xref:System.TimeZoneInfo> C#) 或...,枚举集合中的各个对象`For Each` `foreach``Next` 循环 (在 Visual Basic 中), 并对每个对象执行任何必要的处理。 例如, 以下代码枚举<xref:System.Collections.ObjectModel.ReadOnlyCollection%601>步骤1中返回的<xref:System.TimeZoneInfo>对象的集合, 并在控制台上列出每个时区的显示名称。
+2. 使用循环 (在中<xref:System.TimeZoneInfo> C#) 或...,枚举集合中的各个对象`For Each` `foreach` `Next` 循环 (在 Visual Basic 中), 并对每个对象执行任何必要的处理。 例如, 以下代码枚举<xref:System.Collections.ObjectModel.ReadOnlyCollection%601>步骤1中返回的<xref:System.TimeZoneInfo>对象的集合, 并在控制台上列出每个时区的显示名称。
 
    [!code-csharp[System.TimeZone2.Concepts#12](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Concepts/CS/TimeZone2Concepts.cs#12)]
    [!code-vb[System.TimeZone2.Concepts#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Concepts/VB/TimeZone2Concepts.vb#12)]

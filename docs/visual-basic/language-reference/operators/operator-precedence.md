@@ -59,7 +59,7 @@ ms.locfileid: "69659929"
  算术移位 (`<<`, `>>`)
 
 ### <a name="comparison-operators"></a>比较运算符
- 所有比较运算符 (`=`、 `<>` `<` `<=` 、、`>`、、 、`>=`、、 、...`TypeOf` `Like` `Is` `IsNot``Is`)
+ 所有比较运算符 (`=`、`<>`、`<`、`<=`、`>`、`>=`、...`TypeOf`、`Like`、`Is`、`IsNot`、`Is`)
 
 ### <a name="logical-and-bitwise-operators"></a>逻辑运算符和位运算符
  求反`Not`()

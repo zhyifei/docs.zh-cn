@@ -63,7 +63,7 @@ STDAPI CompareAssemblyIdentity (
  `pfEquivalent`返回一个布尔值，该值指示两个程序集是否等效。 `pResult`返回`AssemblyComparisonResult`值之一，以便为的`pfEquivalent`值提供更详细的原因。  
   
 ## <a name="remarks"></a>备注  
- `CompareAssemblyIdentity``pwzAssemblyIdentity1`检查和`pwzAssemblyIdentity2`是否等效。 `pfEquivalent`在以下一个`true`或多个条件下，设置为：  
+ `CompareAssemblyIdentity`、`pwzAssemblyIdentity1`检查和`pwzAssemblyIdentity2`是否等效。 `pfEquivalent`在以下一个`true`或多个条件下，设置为：  
   
 - 这两个程序集标识是等效的。 对于强名称程序集，等效要求程序集名称、版本、公钥标记和区域性完全相同。 对于简单命名的程序集，等效要求程序集名称和区域性匹配。  
   

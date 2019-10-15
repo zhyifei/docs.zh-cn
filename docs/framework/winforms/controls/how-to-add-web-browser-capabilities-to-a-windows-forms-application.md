@@ -32,7 +32,7 @@ ms.locfileid: "65588895"
 ## <a name="compiling-the-code"></a>编译代码  
  此示例需要：  
   
-- 对 `System``System.Drawing` 和 `System.Windows.Forms` 程序集的引用。  
+- 对 `System`、`System.Drawing` 和 `System.Windows.Forms` 程序集的引用。  
   
 ## <a name="see-also"></a>请参阅
 

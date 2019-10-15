@@ -269,7 +269,7 @@ ms.locfileid: "69958679"
   
 #### <a name="processing-data-returned-from-a-modeless-dialog-box"></a>处理从无模式对话框返回的数据  
 
-在此示例中, `FindDialogBox`可能会向主窗口返回一个或多个查找结果, 具体取决于在没有任何特定频率的情况下搜索的文本。 和模式对话框一样，无模式对话框也可以使用属性返回结果。 但拥有对话框的窗口需要了解何时检查那些属性。 实现此目的的一种方法是用对话框实现事件，只要找到文本就引发它。 `FindDialogBox``TextFoundEvent`为此目的实现, 这首先需要委托。  
+在此示例中, `FindDialogBox`可能会向主窗口返回一个或多个查找结果, 具体取决于在没有任何特定频率的情况下搜索的文本。 和模式对话框一样，无模式对话框也可以使用属性返回结果。 但拥有对话框的窗口需要了解何时检查那些属性。 实现此目的的一种方法是用对话框实现事件，只要找到文本就引发它。 `FindDialogBox`、`TextFoundEvent`为此目的实现, 这首先需要委托。  
 
 [!code-csharp[The TextFoundEventHandler delegate](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/TextFoundEventHandler.cs)]
 [!code-vb[The TextFoundEventHandler delegate](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/TextFoundEventHandler.vb)]  

@@ -139,7 +139,7 @@ DOS 设备路径通过定义进行完全限定。 不允许使用相对目录段
 
 ### <a name="handling-legacy-devices"></a>处理旧设备
 
-如果路径是旧版 DOS 设备（例如 `CON``COM1` 或 `LPT1`），则会转换为设备路径（方法是在其前面追加 `\\.\`）并返回。 
+如果路径是旧版 DOS 设备（例如 `CON`、`COM1` 或 `LPT1`），则会转换为设备路径（方法是在其前面追加 `\\.\`）并返回。 
 
 开头为旧设备名的路径始终被 <xref:System.IO.Path.GetFullPath(System.String)?displayProperty=nameWithType> 方法解释为旧设备。 例如，`CON.TXT` 的 DOS 设备路径为 `\\.\CON`，而 `COM1.TXT\file1.txt` 的 DOS 设备路径为 `\\.\COM1`。
 

@@ -34,7 +34,7 @@ public virtual double Area()
 
 默认情况下，方法是非虚拟的。 不能替代非虚方法。
 
-`virtual` 修饰符不能与 `static`、`abstract``private` 或 `override` 修饰符一起使用。 以下示例显示了虚拟属性：
+`virtual` 修饰符不能与 `static`、`abstract`、`private` 或 `override` 修饰符一起使用。 以下示例显示了虚拟属性：
 
 [!code-csharp[csrefKeywordsModifiers#26](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#26)]
 
@@ -48,7 +48,7 @@ public virtual double Area()
 
 在该示例中，`Shape` 类包含 `x`、`y` 两个坐标和 `Area()` 虚拟方法。 不同的形状类（如 `Circle`、`Cylinder` 和 `Sphere`）继承 `Shape` 类，并为每个图形计算表面积。 每个派生类都有各自的 `Area()` 替代实现。
 
-请注意，继承的类 `Circle``Sphere` 和 `Cylinder` 均使用初始化基类的构造函数，如下面的声明中所示。
+请注意，继承的类 `Circle`、`Sphere` 和 `Cylinder` 均使用初始化基类的构造函数，如下面的声明中所示。
 
 ```csharp
 public Cylinder(double r, double h): base(r, h) {}

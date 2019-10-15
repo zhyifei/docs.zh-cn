@@ -94,7 +94,7 @@ ML.NET 过程的第一步是准备并加载用于训练和测试数据的模型�
 
 在机器学习中，用于进行预测的列称为 [Features](../resources/glossary.md#feature)，带有返回预测的列称为 [Label](../resources/glossary.md#label)。
 
-想要预测影片评分，因此评分列为 `Label`。 其他三列，`userId``movieId` 和 `timestamp` 都用 `Features` 来预测 `Label`。
+想要预测影片评分，因此评分列为 `Label`。 其他三列，`userId`、`movieId` 和 `timestamp` 都用 `Features` 来预测 `Label`。
 
 | 特征      | Label         |
 | ------------- |:-------------:|
@@ -424,7 +424,7 @@ Movie 10 is recommended for user 6
 
 ### <a name="features"></a>特征
 
-在本教程中，只使用数据集提供的三个 `Features`（`user id``movie id` 和 `rating`）。
+在本教程中，只使用数据集提供的三个 `Features`（`user id`、`movie id` 和 `rating`）。
 
 虽然这是一个良好的开端，但实际上你可能希望添加其他属性或 `Features`（例如，年龄、性别、地理位置等），如果它们包含在数据集中。 添加更相关的 `Features` 有助于提升推荐模型的性能。
 
