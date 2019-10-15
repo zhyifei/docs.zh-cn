@@ -2,12 +2,12 @@
 title: 迁移到混合云方案
 description: 通过 Azure 云和 Windows 容器实现现有 .NET 应用程序的现代化 |迁移到混合云方案
 ms.date: 04/30/2018
-ms.openlocfilehash: 313608c41427b3833bbc873398595ceb37bd7c7d
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 5f0819495080bc29ed1239b4a7ab8af31141881b
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373946"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72318470"
 ---
 # <a name="migrate-to-hybrid-cloud-scenarios"></a>迁移到混合云方案
 
@@ -25,7 +25,7 @@ Azure Stack 是一种混合云平台，可让你从组织的数据中心提供 A
 
 图4-13 显示了 Microsoft 提供的真正混合云平台的概述。
 
-![具有 Azure Stack 和 Azure 的 Microsoft 混合云平台](./media/image13.jpg)
+![与 Azure Stack 和 Azure 的 Microsoft 混合云平台关系图。](./media/migrate-to-hybrid-cloud-scenarios/microsoft-hybrid-cloud-platform.png)
 
 **图4-13。** 具有 Azure Stack 和 Azure 的 Microsoft 混合云平台
 

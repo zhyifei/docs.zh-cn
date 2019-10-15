@@ -4,14 +4,14 @@ ms.date: 03/30/2017
 ms.assetid: a5eada64-075b-4162-9655-ded84e4681f2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8ea167ae15e4d0035785d228f08779406e05e873
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 375c95a30f4f60bb711e176cb6c2d0c5fd763e2f
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052369"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049115"
 ---
-# <a name="typeinstantiation-element-net-native"></a>\<类型实例化 > 元素 (.NET Native)
+# <a name="typeinstantiation-element-net-native"></a>\<类型实例化 > 元素（.NET Native）
 将运行时反射策略应用到一个构造泛型类型。  
   
 ## <a name="syntax"></a>语法  
@@ -55,7 +55,7 @@ ms.locfileid: "66052369"
   
 |值|描述|  
 |-----------|-----------------|  
-|type_name|类型名称。 如果该 `<TypeInstantiation>` 元素是 [\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md) 元素、[\<Type>](../../../docs/framework/net-native/type-element-net-native.md) 元素或另一个 `<TypeInstantiation>` 元素的子元素，type_name 可以指定类型名称而不包括其命名空间。 否则，type_name 必须包含完全限定的类型名称。 该类型名称没有经过修饰。 例如，对于一个 <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> 对象，`<TypeInstantiation>` 元素可能显示如下：<br /><br /> `\<TypeInstantiation Name=System.Collections.Generic.List Dynamic="Required Public" />`|  
+|type_name|类型名称。 如果该 `<TypeInstantiation>` 元素是 [\<Namespace>](namespace-element-net-native.md) 元素、[\<Type>](type-element-net-native.md) 元素或另一个 `<TypeInstantiation>` 元素的子元素，type_name 可以指定类型名称而不包括其命名空间。 否则，type_name 必须包含完全限定的类型名称。 该类型名称没有经过修饰。 例如，对于一个 <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> 对象，`<TypeInstantiation>` 元素可能显示如下：<br /><br /> `\<TypeInstantiation Name=System.Collections.Generic.List Dynamic="Required Public" />`|  
   
 ## <a name="arguments-attribute"></a>自变量特性  
   
@@ -67,43 +67,43 @@ ms.locfileid: "66052369"
   
 |值|描述|  
 |-----------|-----------------|  
-|policy_setting|该设置将应用到这个构造泛型类型的策略类型。 可能值为 `All`、`Auto`、`Excluded`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal` 以及 `Required All`。 有关详细信息，请参阅[运行时指令策略设置](../../../docs/framework/net-native/runtime-directive-policy-settings.md)。|  
+|policy_setting|该设置将应用到这个构造泛型类型的策略类型。 可能值为 `All`、`Auto`、`Excluded`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal` 以及 `Required All`。 有关详细信息，请参阅[运行时指令策略设置](runtime-directive-policy-settings.md)。|  
   
 ### <a name="child-elements"></a>子元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<Event>](../../../docs/framework/net-native/event-element-net-native.md)|将反射策略应用到属于这种类型的一个事件。|  
-|[\<Field>](../../../docs/framework/net-native/field-element-net-native.md)|将反射策略应用到属于这种类型的一个字段。|  
-|[\<ImpliesType>](../../../docs/framework/net-native/impliestype-element-net-native.md)|如果该策略已应用到以包含 `<TypeInstantiation>` 元素为代表的类型，将该策略应用到一个类型。|  
-|[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|将反射策略应用到属于这种类型的一个方法。|  
-|[\<MethodInstantiation>](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)|将反射策略应用到属于这种类型的一个构造泛型方法。|  
-|[\<Property>](../../../docs/framework/net-native/property-element-net-native.md)|将反射策略应用到属于这种类型的一个属性。|  
-|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|将反射策略应用到一个嵌套类型。|  
+|[\<Event>](event-element-net-native.md)|将反射策略应用到属于这种类型的一个事件。|  
+|[\<Field>](field-element-net-native.md)|将反射策略应用到属于这种类型的一个字段。|  
+|[\<ImpliesType>](impliestype-element-net-native.md)|如果该策略已应用到以包含 `<TypeInstantiation>` 元素为代表的类型，将该策略应用到一个类型。|  
+|[\<Method>](method-element-net-native.md)|将反射策略应用到属于这种类型的一个方法。|  
+|[\<MethodInstantiation>](methodinstantiation-element-net-native.md)|将反射策略应用到属于这种类型的一个构造泛型方法。|  
+|[\<Property>](property-element-net-native.md)|将反射策略应用到属于这种类型的一个属性。|  
+|[\<Type>](type-element-net-native.md)|将反射策略应用到一个嵌套类型。|  
 |`<TypeInstantiation>`|将反射策略应用到一个嵌套的构造泛型类型。|  
   
 ### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<Application>](../../../docs/framework/net-native/application-element-net-native.md)|作为应用程序范围内的类型和元数据可以反应在运行时间的类型成员的容器而服务。|  
-|[\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)|将反射策略应用到指定程序集中的所有类型。|  
-|[\<Library>](../../../docs/framework/net-native/library-element-net-native.md)|定义包含元数据在运行时间可以用于反射的类型和类型成员的程序集。|  
-|[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)|将反射策略应用到命名空间中的所有类型。|  
-|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|将反射策略应用到一种类型及其所有成员。|  
+|[\<Application>](application-element-net-native.md)|作为应用程序范围内的类型和元数据可以反应在运行时间的类型成员的容器而服务。|  
+|[\<Assembly>](assembly-element-net-native.md)|将反射策略应用到指定程序集中的所有类型。|  
+|[\<Library>](library-element-net-native.md)|定义包含元数据在运行时间可以用于反射的类型和类型成员的程序集。|  
+|[\<Namespace>](namespace-element-net-native.md)|将反射策略应用到命名空间中的所有类型。|  
+|[\<Type>](type-element-net-native.md)|将反射策略应用到一种类型及其所有成员。|  
 |`<TypeInstantiation>`|将反射策略应用到一种构造泛型类型及其所有成员。|  
   
 ## <a name="remarks"></a>备注  
  反射、序列化和互操作特性都是可选项。 然而，至少一个特性必须存在。  
   
- 如果 `<TypeInstantiation>` 元素是 [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)、[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)、或 [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) 元素的子元素，它会重写由父元素定义的策略设置。 如果 [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) 元素定义了相应的泛型类型定义，`<TypeInstantiation>` 元素只为指定构造泛型类型的实例化重写运行时反射策略。  
+ 如果 `<TypeInstantiation>` 元素是 [\<Assembly>](assembly-element-net-native.md)、[\<Namespace>](namespace-element-net-native.md)、或 [\<Type>](type-element-net-native.md) 元素的子元素，它会重写由父元素定义的策略设置。 如果 [\<Type>](type-element-net-native.md) 元素定义了相应的泛型类型定义，`<TypeInstantiation>` 元素只为指定构造泛型类型的实例化重写运行时反射策略。  
   
 ## <a name="example"></a>示例  
- 以下实例使用反射从一个构造的 <xref:System.Collections.Generic.Dictionary%602> 对象取回了泛型类型定义。 它还使用反射显示了代表构造泛型类型和构造类型定义的有关 <xref:System.Type> 对象的信息。 在变量`b`在示例中是<xref:Windows.UI.Xaml.Controls.TextBlock>控件。  
+ 以下实例使用反射从一个构造的 <xref:System.Collections.Generic.Dictionary%602> 对象取回了泛型类型定义。 它还使用反射显示了代表构造泛型类型和构造类型定义的有关 <xref:System.Type> 对象的信息。 示例中`b`的变量是一个<xref:Windows.UI.Xaml.Controls.TextBlock>控件。  
   
  [!code-csharp[ProjectN_Reflection#2](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/makegenerictype1.cs#2)]  
   
- 使用.NET Native 工具链进行编译之后, 本示例将引发[丢失元数据异常](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)调用的行上的异常<xref:System.Type.GetGenericTypeDefinition%2A?displayProperty=nameWithType>方法。 你可通过将以下 `<TypeInstantiation>` 元素添加到运行时指令文件来消除异常并提供必需的元数据：  
+ 使用 .NET Native 工具链进行编译之后，该示例在调用 <xref:System.Type.GetGenericTypeDefinition%2A?displayProperty=nameWithType>方法的行上引发 [MissingMetadataException](missingmetadataexception-class-net-native.md) 异常。 你可通过将以下 `<TypeInstantiation>` 元素添加到运行时指令文件来消除异常并提供必需的元数据：  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
@@ -118,6 +118,6 @@ ms.locfileid: "66052369"
   
 ## <a name="see-also"></a>请参阅
 
-- [运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [运行时指令元素](../../../docs/framework/net-native/runtime-directive-elements.md)
-- [运行时指令策略设置](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+- [运行时指令 (rd.xml) 配置文件参考](runtime-directives-rd-xml-configuration-file-reference.md)
+- [运行时指令元素](runtime-directive-elements.md)
+- [运行时指令策略设置](runtime-directive-policy-settings.md)

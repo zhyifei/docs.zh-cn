@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1793547cfc0d9637352b62ff47beee41e9f5ac5c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6bd274b1eb14532629580e777288317186544912
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740498"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274168"
 ---
-# <a name="cortypelayout-structure"></a>COR_TYPE_LAYOUT 结构
+# <a name="cor_type_layout-structure"></a>COR_TYPE_LAYOUT 结构
 提供有关内存中某个对象的布局的信息。  
   
 ## <a name="syntax"></a>语法  
@@ -42,25 +42,25 @@ typedef struct COR_TYPE_LAYOUT {
   
 |成员|描述|  
 |------------|-----------------|  
-|`parentID`|为此类型的父类型的标识符。 这将是 NULL 类型 id (token1 = 0，token2 = 0) 如果类型 id 对应于<xref:System.Object?displayProperty=nameWithType>。|  
-|`objectSize`|此类型的对象的基大小。 这是对于非变量大小对象的总大小。|  
+|`parentID`|此类型的父类型的标识符。 如果类型 id 对应<xref:System.Object?displayProperty=nameWithType>于，则此值将为 NULL 类型 id （token1 = 0，token2 = 0）。|  
+|`objectSize`|此类型的对象的基大小。 这是非变量大小对象的总大小。|  
 |`numFields`|此类型的对象中包含的字段数。|  
-|`boxOffset`|如果此类型进行装箱时，对象的字段的偏移量开始。 此字段是值类型，例如基元和结构仅对有效。|  
-|`type`|此类型所属 CorElementType。|  
+|`boxOffset`|如果此类型为装箱，则为对象字段的开始偏移量。 此字段仅对基元和结构等值类型有效。|  
+|`type`|此类型所属的 CorElementType。|  
   
 ## <a name="remarks"></a>备注  
- 如果`numFields`大于零，可以调用[ICorDebugProcess5::GetTypeFields](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-gettypefields-method.md)方法来获取有关此类型中字段的信息。 如果`type`是`ELEMENT_TYPE_STRING`， `ELEMENT_TYPE_ARRAY`，或`ELEMENT_TYPE_SZARRAY`，此类型的对象的大小是变量，并可以将传递[COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md)结构[ICorDebugProcess5::GetArrayLayout](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getarraylayout-method.md)方法。  
+ 如果`numFields`大于零，则可以调用[ICorDebugProcess5：： GetTypeFields](icordebugprocess5-gettypefields-method.md)方法来获取有关此类型中的字段的信息。 如果`type`为 `ELEMENT_TYPE_STRING`、`ELEMENT_TYPE_ARRAY` 或`ELEMENT_TYPE_SZARRAY`，则此类型的对象的大小是可变的，你可以将 [COR_TYPEID](cor-typeid-structure.md) 结构传递到[ICorDebugProcess5：： GetArrayLayout](icordebugprocess5-getarraylayout-method.md)方法。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **适用**请参阅[系统需求](../../get-started/system-requirements.md)。  
   
- **标头：** CorDebug.idl、 CorDebug.h  
+ **标头：** Cordebug.idl，Cordebug.idl  
   
- **库：** CorGuids.lib  
+ **类库**CorGuids.lib  
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 
-- [调试结构](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [调试](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [调试结构](debugging-structures.md)
+- [调试](index.md)

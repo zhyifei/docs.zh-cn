@@ -2,12 +2,12 @@
 title: 将现有 .NET 应用部署为 Windows 容器
 description: 通过 Azure 云和 Windows 容器实现现有 .NET 应用程序的现代化 |将现有 .NET 应用部署为 Windows 容器
 ms.date: 04/29/2018
-ms.openlocfilehash: d48acbb2e1c4858bf3146318f70dd7b8a7b62918
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 997b32e51272be2126bd824de1f8f026d77ca203
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926489"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72318653"
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>将现有 .NET 应用部署为 Windows 容器
 
@@ -51,7 +51,7 @@ ms.locfileid: "70926489"
 
 [Docker](https://www.docker.com/)是一种[开源项目](https://github.com/docker/docker)，可自动将应用程序部署为可在云中或本地运行的、可移植的独立容器。 Docker 也是一家促进和发展这项技术的[公司](https://www.docker.com/)。 公司与云、Linux 和 Windows 供应商（包括 Microsoft）合作。
 
-![Docker 在混合云的所有层上部署容器](./media/image6.png)
+![显示 Docker 如何在混合云中部署容器的关系图。](./media/deploy-existing-net-apps-as-windows-containers/docker-deploys-containers-all-layers.png)
 
 **图4-6。** Docker 在混合云的所有层上部署容器
 
@@ -83,7 +83,7 @@ Docker 容器（对于简单起见，*容器*）可以在 Linux 和 Windows 上�
 
 图4-7 显示了可以定位的操作系统版本，具体取决于应用程序的 .NET Framework 版本。
 
-![基于 .NET Framework 版本的目标操作系统](./media/image7.png)
+![根据 .NET Framework 版本显示目标目标的关系图。](./media/deploy-existing-net-apps-as-windows-containers/dotnet-framework-operating-systems.png)
 
 **图4-7。** 基于 .NET Framework 版本的目标操作系统
 
@@ -129,7 +129,7 @@ Docker 容器（对于简单起见，*容器*）可以在 Linux 和 Windows 上�
 
     <https://docs.microsoft.com/virtualization/windowscontainers/about/>
 
-- **信息图Microsoft 和容器**
+- **Infographic：Microsoft 和容器 @ no__t-0
 
     <https://info.microsoft.com/rs/157-GQE-382/images/Container%20infographic%201.4.17.pdf>
 
@@ -138,15 +138,15 @@ Docker 容器（对于简单起见，*容器*）可以在 Linux 和 Windows 上�
 在前面的部分中，已介绍了 Docker 容器的优点，以及适用于 .NET 应用程序的特定容器映像的详细信息。 为了开发或容器化应用程序，所有这些通用信息都是基本信息。
 但是，在考虑生产部署环境乃至 QA 和开发/测试环境时，Microsoft Azure 提供了一种开放且广泛的选择，即云中的完整容器生态系统（如下图所示）。 根据具体的应用程序需求，应选择一个或另一个 Azure 产品。
 
-![Azure 中的容器生态系统](./media/image7.5.png)
+![Azure 中的容器生态系统示意图。](./media/deploy-existing-net-apps-as-windows-containers/azure-container-ecosystem.png)
 
 **图 4-7.5。** Azure 中的容器生态系统
 
 在 Azure 中的容器生态系统中，以下产品支持被视为基础结构的容器：
 
 - **Azure 容器实例 (ACI)**
-- **Azure 虚拟机**（支持容器）
-- **Azure 虚拟机规模集**（支持容器）
+- **Azure 虚拟机**（包含容器的支持）
+- **Azure 虚拟机规模集**（包含容器的支持）
 
 从这三个角度来看，ACI 带来了极大的好处，这就是不需要维护基础操作系统、无需升级/修补等的情况，但 ACI 仍位于基础结构级别，如本书后面的部分中所述。
 
