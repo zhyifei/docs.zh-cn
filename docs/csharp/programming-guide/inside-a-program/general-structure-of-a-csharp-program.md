@@ -13,7 +13,7 @@ ms.lasthandoff: 08/19/2019
 ms.locfileid: "69589363"
 ---
 # <a name="general-structure-of-a-c-program-c-programming-guide"></a>C# 程序的通用结构（C# 编程指南）
-C# 程序可由一个或多个文件组成。 每个文件均可包含零个或多个命名空间。 一个命名空间除了可包含其他命名空间外,还可包含类、结构、接口、枚举、委托等类型。 下面是包含所有这些元素的 C# 程序主干。  
+C# 程序可由一个或多个文件组成。 每个文件均可包含零个或多个命名空间。 一个命名空间除了可包含其他命名空间外，还可包含类、结构、接口、枚举、委托等类型。 下面是包含所有这些元素的 C# 程序主干。  
   
  [!code-csharp[csProgGuide#34](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/class2.cs#34)]  
   
