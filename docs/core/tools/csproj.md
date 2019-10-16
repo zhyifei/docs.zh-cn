@@ -2,12 +2,12 @@
 title: .NET Core 的 csproj 格式的新增内容
 description: 了解现有文件和 .NET Core csproj 文件之间的区别
 ms.date: 04/08/2019
-ms.openlocfilehash: 89ab22f0c5e69f29ff31e13d46dce8ba278d08da
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 2ec1aaff88754848d844a56b1744beb2efa4cd89
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216199"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291232"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>.NET Core 的 csproj 格式的新增内容
 
@@ -270,7 +270,7 @@ RID 允许发布独立部署。
 
 许可证表达式的准确语法如下面的 [ABNF](https://tools.ietf.org/html/rfc5234) 所述。
 
-```cli
+```abnf
 license-id            = <short form license identifier from https://spdx.org/spdx-specification-21-web-version#h.luq9dgcle9mo>
 
 license-exception-id  = <short form license exception identifier from https://spdx.org/spdx-specification-21-web-version#h.ruv3yl8g6czd>
@@ -347,6 +347,12 @@ license-expression =  1*1(simple-expression / compound-expression / UNLICENSED)
 ### <a name="repositorytype"></a>RepositoryType
 
 指定存储库的类型。 默认值为“git”。
+
+### <a name="repositorybranch"></a>RepositoryBranch
+指定存储库中源分支的名称。 当项目打包到 NuGet 包时，它将被添加到包元数据。
+
+### <a name="repositorycommit"></a>RepositoryCommit
+可选的存储库提交或更改集，指示针对其生成包的源。 还必须指定 `RepositoryUrl` 才能包含此属性。 当项目打包到 NuGet 包中时，此提交或变更集将添加到包元数据中。
 
 ### <a name="nopackageanalysis"></a>NoPackageAnalysis
 

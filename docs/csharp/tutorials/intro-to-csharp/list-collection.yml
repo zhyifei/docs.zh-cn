@@ -9,12 +9,12 @@ metadata:
   level: Beginner
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: 6dfbbbb6ef64b3dbb83d15ba66860acb7c5b3585
-  ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+  ms.openlocfilehash: fb08cef284a016dd65c99a1efb0a661624a731f1
+  ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
   ms.translationtype: HT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 09/10/2019
-  ms.locfileid: "70850740"
+  ms.lasthandoff: 10/09/2019
+  ms.locfileid: "72179012"
 items:
 - durationInMinutes: 1
   content: >
@@ -36,6 +36,9 @@ items:
     }
 
     ```
+
+
+    如果在环境中运行此操作，则应改为按照[本地版本](arrays-and-collections.md)的说明进行操作。
 
 
     你已创建了一个字符串列表，在该列表中添加了三个名称，并打印了所有大写的名称。 循环读取整个列表需要用到在前面的教程中学到的概念。

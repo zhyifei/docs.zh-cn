@@ -4,12 +4,12 @@ description: 了解如何使用 Visual Studio Code 创建和调试首个 C# .NET
 author: kendrahavens
 ms.date: 12/05/2018
 ms.custom: seodec18
-ms.openlocfilehash: 03a2edcbb3414cfd63006603424a3ca1eade528f
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 4e283f631f463953185a37bf196a1a9b706eee2b
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849452"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72002321"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>C# 和 Visual Studio Code 入门
 
@@ -34,9 +34,10 @@ ms.locfileid: "70849452"
       ![Visual Studio Code“打开文件夹”](media/with-visual-studio-code/vs-code-open-folder.png)
 
 2. 初始化 C# 项目：
+
     - 通过从主菜单中选择“视图”   > “集成终端”  ，从 Visual Studio Code 中打开集成终端。
     - 在终端窗口中，键入“`dotnet new console`”。
-    - 此命令在已编写“Hello World”简单程序的文件夹中创建 `Program.cs` 文件，以及 `HelloWorld.csproj` C# 项目文件。
+    - 此命令在已编写“Hello World”简单程序的文件夹中创建“Program.cs”文件，以及名为“HelloWorld.csproj”的 C# 项目文件   。
 
       ![dotnet new 命令](media/with-visual-studio-code/dotnet-new-command.png)
 
@@ -70,7 +71,7 @@ ms.locfileid: "70849452"
 
     ![在 Visual Studio Code 中打开“调试”选项卡](media/with-visual-studio-code/open-debug-tab.png)
 
-4. 找到窗格最上面的绿色箭头。 请确保已选择旁边下拉列表中的“`.NET Core Launch (console)`”。
+4. 找到窗格最上面的绿色箭头。 请确保已选择旁边下拉列表中的“.NET Core Launch (控制台)”  。
 
     ![在 Visual Studio Code 中选择“.NET Core”](media/with-visual-studio-code/select-net-core.png)
 
@@ -78,7 +79,7 @@ ms.locfileid: "70849452"
 
     ![设置断点](media/with-visual-studio-code/set-breakpoint-vs-code.png)
 
-6. 要开始调试，请选择 <kbd>F5</kbd> 或绿色箭头。 在到达你在上一步中设置的断点时，调试器会停止执行程序。
+6. 请按 <kbd>F5</kbd> 或选择绿色箭头启动调试。 在到达你在上一步中设置的断点时，调试器会停止执行程序。
     - 调试时，可以在左上角的窗格中查看局部变量，也可以使用调试控制台进行查看。
 
 7. 选择最上面的蓝色箭头以继续调试，或选择最上面的红色方块以停止调试。
@@ -91,8 +92,8 @@ ms.locfileid: "70849452"
 ## <a name="add-a-class"></a>添加类
 
 1. 若要添加一个新类，请右键单击 VSCode Explorer 并选择“新文件”  。 此操作会将新文件添加到在 VSCode 中打开的文件夹中。
-2. 将文件命名为 `MyClass.cs`。 必须在末尾使用 `.cs` 扩展名保存它，以便将其识别为 csharp 文件。
-3. 添加下面的代码，以创建第一个类。 确保包括正确的命名空间，以便可以从 `Program.cs` 文件引用它。
+2. 将文件命名为 MyClass.cs  。 必须在末尾使用 `.cs` 扩展名保存它，以便将其识别为 csharp 文件。
+3. 添加下面的代码，以创建第一个类。 确保包括正确的命名空间，以便可以从“Program.cs”文件引用它  ：
 
     ``` csharp
     using System;
@@ -109,7 +110,7 @@ ms.locfileid: "70849452"
     }
     ```
 
-4. 通过添加下面的代码，从 `Program.cs` 中的主要方法调用新类。
+4. 通过添加下面的代码，从“Program.cs”中的主要方法调用新类  ：
 
     ```csharp
     using System;
@@ -120,7 +121,7 @@ ms.locfileid: "70849452"
         {
             static void Main(string[] args)
             {
-                MyClass c1 = new MyClass();
+                var c1 = new MyClass();
                 Console.WriteLine($"Hello World! {c1.ReturnMessage()}");
             }
         }
@@ -138,7 +139,7 @@ ms.locfileid: "70849452"
 
 ### <a name="im-missing-required-assets-to-build-and-debug-c-in-visual-studio-code-my-debugger-says-no-configuration"></a>缺少在 Visual Studio Code 中生成和调试 C# 所需的资产。 调试器显示“无配置”。
 
-Visual Studio Code C# 扩展可生成用于生成和调试的资产。 首次打开 C# 项目时，Visual Studio Code 会提示用户生成这些资产。 如果当时并未生成这些资产，仍可以通过打开命令面板（“视图”>“命令面板”  ）并键入“>.NET：生成用于生成和调试的资产”来运行此命令。 选择此方法可生成所需的 .vscode、launch.json 和 tasks.jsonn 配置文件。
+Visual Studio Code C# 扩展可生成用于生成和调试的资产。 首次打开 C# 项目时，Visual Studio Code 会提示用户生成这些资产。 如果当时并未生成这些资产，仍可以通过打开命令面板（“视图”>“命令面板”  ）并键入“>.NET：生成用于生成和调试的资产”来运行此命令。 选择此方法可生成所需的 .vscode、launch.json 和 tasks.jsonn 配置文件    。
 
 ## <a name="see-also"></a>请参阅
 

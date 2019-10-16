@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9ba6c46116d809e2881eee37b080e1952e2eb6a0
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 0c0fa0e2c59856beda65ec5804b8896352db98b3
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70895273"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72180195"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>垃圾回收的基本知识
 
@@ -176,7 +176,7 @@ ms.locfileid: "70895273"
 
 下图演示了触发垃圾回收并导致其他线程挂起的线程。
 
-![线程触发垃圾回收时] (../../../docs/standard/garbage-collection/media/gc-triggered.png "GC_Triggered") 触发垃圾回收的线程
+![当线程触发垃圾回收时](../../../docs/standard/garbage-collection/media/gc-triggered.png "When a thread triggers a Garbage Collection")
 
 [返回页首](#top)
 
@@ -208,7 +208,7 @@ ms.locfileid: "70895273"
 
 下图演示了服务器上执行垃圾回收的专用线程。
 
-![服务器垃圾回收线程] (../../../docs/standard/garbage-collection/media/gc-server.png "GC_Server") 服务器垃圾回收
+![服务器垃圾回收线程](../../../docs/standard/garbage-collection/media/gc-server.png "Server Garbage Collection Threads")
 
 ### <a name="configuring-garbage-collection"></a>配置垃圾回收
 
@@ -262,7 +262,7 @@ ms.locfileid: "70895273"
 
 下图演示了在单独的专用线程上执行的并发垃圾回收。
 
-![并发垃圾回收线程] (../../../docs/standard/garbage-collection/media/gc-concurrent.png "GC_Concurrent") 并发垃圾回收
+![并发垃圾回收线程](../../../docs/standard/garbage-collection/media/gc-concurrent.png "Concurrent Garbage Collection Threads")
 
 [返回页首](#top)
 
@@ -283,7 +283,7 @@ ms.locfileid: "70895273"
 
 下图显示对工作站上的独立专用线程执行的后台垃圾回收：
 
-![显示后台工作站垃圾回收的图。](./media/fundamentals/background-workstation-garbage-collection.png)
+![显示后台工作站垃圾回收的图。](./media/fundamentals/background-workstation-garbage-collection.png "Diagram that shows background workstation garbage collection.")
 
 [返回页首](#top)
 
@@ -295,7 +295,7 @@ ms.locfileid: "70895273"
 
 下图显示对服务器上的独立专用线程执行的后台垃圾回收：
 
-![显示后台服务器垃圾回收的图。](./media/fundamentals/background-server-garbage-collection.png)
+![显示后台服务器垃圾回收的图。](./media/fundamentals/background-server-garbage-collection.png "Diagram that shows background server garbage collection.")
 
 ## <a name="see-also"></a>请参阅
 

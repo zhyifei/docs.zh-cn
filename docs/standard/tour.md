@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 05/22/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: acd8e14e1d000f55f03017a4fee43347f50df3a7
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: a83253e37d3afde9ed8266ec1195c9726f6462cc
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415918"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291591"
 ---
 # <a name="tour-of-net"></a>.NET 教程
 
@@ -55,7 +55,7 @@ Microsoft 积极开发和支持三种 .NET 语言：C#、F# 和 Visual Basic (VB
 
 部分对象会引用*未托管的资源*。 未托管的资源是指不由 .NET 运行时自动维护的资源。 例如，文件句柄就是未托管的资源。 <xref:System.IO.FileStream> 对象是一个托管对象，但它引用未托管的文件句柄。 用完 <xref:System.IO.FileStream> 之后，需要释放文件句柄。
 
-在 .NET 中，引用未托管资源的对象会实现 <xref:System.IDisposable> 接口。 用完对象后，需调用此对象的 <xref:System.IDisposable.Dispose> 方法，该方法会释放所有托管资源。 .NET 语言为此类对象提供了一种便捷的 `using` 语法，如下例所示：
+在 .NET 中，引用未托管资源的对象会实现 <xref:System.IDisposable> 接口。 用完对象后，需调用此对象的 <xref:System.IDisposable.Dispose> 方法，该方法会释放所有托管资源。 .NET 语言为此类对象提供了一种便捷的 [`using` 语句](../csharp/language-reference/keywords/using.md)，如下例所示：
 
 [!code-csharp[UnmanagedResources](../../samples/csharp/snippets/tour/UnmanagedResources.csx#L1-L6)]
 

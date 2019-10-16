@@ -2,12 +2,12 @@
 title: 在 CQRS 微服务中实现读取/查询
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 了解如何使用 Dapper 在 eShopOnContainers 中的订购微服务上实现 CQRS 查询端。
 ms.date: 10/08/2018
-ms.openlocfilehash: f791546e2fc00e276ab55302802a5534465ace58
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: c39a42b7f5200208a0f812665a2d1c87b4433ba9
+ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68674334"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72275787"
 ---
 # <a name="implement-readsqueries-in-a-cqrs-microservice"></a>在 CQRS 微服务中实现读取/查询
 
@@ -118,7 +118,7 @@ public class OrderQueries : IOrderQueries
         using (var connection = new SqlConnection(_connectionString))
         {
             connection.Open();
-            var result = await connection.QueryAsync<OrderSummary>(
+            return await connection.QueryAsync<OrderSummary>(
                   @"SELECT o.[Id] as ordernumber, 
                   o.[OrderDate] as [date],os.[Name] as [status], 
                   SUM(oi.units*oi.unitprice) as total
@@ -185,13 +185,13 @@ public class OrderSummary
 
 ## <a name="additional-resources"></a>其他资源
 
-- **Dapper** \
+- **Dapper**  
  <https://github.com/StackExchange/dapper-dot-net>
 
-- **Julie Lerman.数据点 - Dapper、Entity Framework 和混合应用（MSDN Mag. 文章）**  \
-  <https://msdn.microsoft.com/magazine/mt703432.aspx>
+- **Julie Lerman.数据点 - Dapper、Entity Framework 和混合应用（MSDN 杂志文章）**  
+  <https://msdn.microsoft.com/magazine/mt703432>
 
-- **使用 Swagger 的 ASP.NET Core Web API 帮助页** \
+- **使用 Swagger 的 ASP.NET Core Web API 帮助页**  
   <https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger?tabs=visual-studio>
 
 >[!div class="step-by-step"]

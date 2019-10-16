@@ -2,12 +2,12 @@
 title: 将现有 .NET 应用现代化为云优化应用
 description: 使用 Azure 云和 Windows 容器更新现有 .NET 应用程序。
 ms.date: 04/28/2018
-ms.openlocfilehash: 92dc0cde11bb35797fe3c4e8442a2a6514a27e08
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: cd7e2886b135eb89c381965a327b6e62baa39736
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374064"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72318585"
 ---
 # <a name="modernize-existing-net-apps-to-cloud-optimized-applications"></a>将现有 .NET 应用现代化为云优化的应用程序
 
@@ -17,7 +17,7 @@ ms.locfileid: "70374064"
 
 部分现代化应用不一定意味着完整迁移和重新架构。 可以从重要而易于实现的任务开始现代化现有应用程序。 可以维护当前基本代码，这些代码使用现有.NET Framework 版本编写并具有任意 Windows 和 IIS 依赖项。 图 4-1 突出显示了如何在 Azure 应用程序现代化成熟度模型中定位云优化的应用。
 
-![定位云优化的应用程序](./media/image1.png)
+![此示意图演示如何定位针对云进行了优化的应用程序。](./media/index/position-cloud-optimized-application.png)
 
 **图 4-1**。 定位云优化的应用程序
 

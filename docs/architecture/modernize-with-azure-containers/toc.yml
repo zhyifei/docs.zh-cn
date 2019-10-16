@@ -33,7 +33,7 @@
         - name: 通过监视和遥测对应用进行现代化
           href: ./modernize-existing-apps-to-cloud-optimized/modernize-your-apps-with-monitoring-and-telemetry.md
         - name: 通过云中的 CI/CD 管道和 DevOps 工具保持对应用的生命周期进行现代化
-          href: ./modernize-existing-apps-to-cloud-optimized/modernize-your-apps-lifecycle-with-ci-cd-pipelines-and-devops-tools-in-the-cloud.md
+          href: ./modernize-existing-apps-to-cloud-optimized/life-cycle-ci-cd-pipelines-devops-tools.md
         - name: 迁移到混合云方案
           href: ./modernize-existing-apps-to-cloud-optimized/migrate-to-hybrid-cloud-scenarios.md
     - name: 演练和技术入门概述

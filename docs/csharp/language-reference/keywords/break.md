@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - break keyword [C#]
 ms.assetid: be2571ed-efb0-4965-b122-81e5b09db0b9
-ms.openlocfilehash: 77d18d12cd0fabb26906a5b58dc3939da6214a29
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 2628da73364cf94a52e2862d349243c100d4afaf
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69602243"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72179937"
 ---
 # <a name="break-c-reference"></a>break（C# 参考）
 
@@ -27,12 +27,6 @@ ms.locfileid: "69602243"
 
 ## <a name="example"></a>示例
 
-在此示例中，`break` 语句用于中断内层嵌套循环，并将控制权返回给外层循环。
-
-[!code-csharp[csrefKeywordsJump#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsJump/CS/csrefKeywordsJump.cs#7)]
-
-## <a name="example"></a>示例
-
 本示例演示 `break` 在 [switch](./switch.md) 语句中的用法。
 
 [!code-csharp[csrefKeywordsJump#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsJump/CS/csrefKeywordsJump.cs#2)]
@@ -43,6 +37,18 @@ ms.locfileid: "69602243"
 Enter your selection (1, 2, or 3): 4
 Sorry, invalid selection.
 ```
+
+## <a name="example"></a>示例
+
+在此示例中，`break` 语句用于中断内层嵌套循环，并将控制权返回给外层循环。 控件在嵌套循环中仅向上返回一级  。
+
+[!code-csharp[csrefKeywordsJump#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsJump/CS/csrefKeywordsJump.cs#7)]
+
+## <a name="example"></a>示例
+
+在本例中，`break` 语句仅用于在循环的每次迭代中脱离当前分支。 循环本身不受属于嵌套 [switch](./switch.md) 语句的 `break` 实例的影响。
+
+[!code-csharp[csrefKeywordsJump#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsJump/CS/csrefKeywordsJump.cs#8)]
 
 ## <a name="c-language-specification"></a>C# 语言规范
 

@@ -5,12 +5,12 @@ ms.date: 09/12/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
-ms.openlocfilehash: ef028fee6cafcf4a775e061d9a5f91f0cf9a7e36
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: 2abd8588aa314b630c995e0c78b5869ec00a89df
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71332710"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72179374"
 ---
 # <a name="deploy-a-model-to-azure-functions"></a>将模型部署到 Azure Functions
 
@@ -149,7 +149,16 @@ ms.locfileid: "71332710"
 
 模型由 `modelName` 参数标识，因此更改时可以重新加载每个应用程序的多个模型。 
 
-或者，如果使用远程存储的模型，则可以使用 `FromUri` 方法。 `FromUri` 会轮询远程位置以获取更改，而不是监视文件更改事件。 轮询间隔默认为 5 分钟。 你可以根据应用程序的要求，增加或减少轮询间隔。
+> [!TIP]
+> 或者，如果使用远程存储的模型，则可以使用 `FromUri` 方法。 `FromUri` 会轮询远程位置以获取更改，而不是监视文件更改事件。 轮询间隔默认为 5 分钟。 你可以根据应用程序的要求，增加或减少轮询间隔。 在下面的代码示例中，`PredictionEnginePool` 每分钟轮询存储在指定 URI 中的模型。
+>    
+>```csharp
+>builder.Services.AddPredictionEnginePool<SentimentData, SentimentPrediction>()
+>   .FromUri(
+>       modelName: "SentimentAnalysisModel", 
+>       uri:"https://github.com/dotnet/samples/raw/master/machine-learning/models/sentimentanalysis/sentiment_model.zip", 
+>       period: TimeSpan.FromMinutes(1));
+>```
 
 ## <a name="load-the-model-into-the-function"></a>将模型加载到函数中
 

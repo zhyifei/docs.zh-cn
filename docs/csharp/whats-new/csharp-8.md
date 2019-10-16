@@ -2,19 +2,19 @@
 title: C# 8.0 中的新增功能 - C# 指南
 description: 简要介绍 C# 8.0 中提供的新功能。
 ms.date: 09/20/2019
-ms.openlocfilehash: d948db0523684c998425bc22ab6fd245d65a8045
-ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
+ms.openlocfilehash: 6b5602db6ee61b1d9db4c906d6a14ea2f918ad0a
+ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71736702"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72275781"
 ---
 # <a name="whats-new-in-c-80"></a>C# 8.0 中的新增功能
 
 C# 8.0 向 C# 语言添加了以下功能和增强功能：
 
 - [Readonly 成员](#readonly-members)
-- [默认接口成员](#default-interface-members)
+- [默认接口方法](#default-interface-methods)
 - [模式匹配增强功能](#more-patterns-in-more-places)：
   - [Switch 表达式](#switch-expressions)
   - [属性模式](#property-patterns)
@@ -85,11 +85,11 @@ public readonly void Translate(int xOffset, int yOffset)
 
 通过此功能，可以指定设计意图，使编译器可以强制执行该意图，并基于该意图进行优化。
 
-## <a name="default-interface-members"></a>默认接口成员
+## <a name="default-interface-methods"></a>默认接口方法
 
-现在可以将成员添加到接口，并为这些成员提供实现。 借助此语言功能，API 作者可以将方法添加到以后版本的接口中，而不会破坏与该接口当前实现的源或二进制文件兼容性。 现有的实现继承默认实现  。 此功能使 C# 与面向 Android 或 Swift 的 API 进行互操作，此类 API 支持类似功能。 默认接口成员还支持类似于“特征”语言功能的方案。
+现在可以将成员添加到接口，并为这些成员提供实现。 借助此语言功能，API 作者可以将方法添加到以后版本的接口中，而不会破坏与该接口当前实现的源或二进制文件兼容性。 现有的实现继承默认实现  。 此功能使 C# 与面向 Android 或 Swift 的 API 进行互操作，此类 API 支持类似功能。 默认接口方法还支持类似于“特征”语言功能的方案。
 
-默认接口成员会影响很多方案和语言元素。 我们的第一个教程介绍如何[使用默认实现更新接口](../tutorials/default-interface-members-versions.md)。 其他教程和参考更新将适时公开发布。
+默认接口方法会影响很多方案和语言元素。 我们的第一个教程介绍如何[使用默认实现更新接口](../tutorials/default-interface-methods-versions.md)。 其他教程和参考更新将适时公开发布。
 
 ## <a name="more-patterns-in-more-places"></a>在更多位置中使用更多模式
 

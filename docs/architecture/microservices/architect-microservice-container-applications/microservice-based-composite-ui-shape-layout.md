@@ -2,16 +2,16 @@
 title: 创建基于微服务的复合 UI
 description: 微服务体系结构不仅针对后端。 了解微服务在前端中的使用。
 ms.date: 09/20/2018
-ms.openlocfilehash: 60e0e6d59738f3f1fec31226cb842ceb1af303e4
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 1861d3bb6e5d4a0226aa8f3f72a2e0d3e83be56f
+ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834379"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72275737"
 ---
 # <a name="creating-composite-ui-based-on-microservices"></a>创建基于微服务的复合 UI
 
-微服务体系结构通常从服务器端处理数据和逻辑开始。 但是，根据微服务设计应用程序 UI 是更好的方法。 这意味着拥有的是由微服务生成的复合 UI，而不是服务器上的微服务和使用微服务的整体式客户端应用。 按照这种方法构建的微服务具有逻辑和可视化表示形式，功能十分完整。
+微服务体系结构通常从服务器端处理数据和逻辑开始，但在许多情况下，UI 仍作为整体来处理。 但是，一种称为[微前端](https://martinfowler.com/articles/micro-frontends.html)的更高级的方法也是根据微服务设计应用程序 UI。 这意味着拥有的是由微服务生成的复合 UI，而不是服务器上的微服务和使用微服务的整体式客户端应用。 按照这种方法构建的微服务具有逻辑和可视化表示形式，功能十分完整。
 
 图 4-20 显示了在整体式客户端应用程序中使用微服务的更为简单的方式。 当然，在生成 HTML 之后，可以创建一个 ASP.NET MVC 服务，再生成 JavaScript。 该图是一张简图，强调拥有使用微服务的单一（整体式）客户端 UI，该 UI 仅关注逻辑和数据，而不关注 UI 形状（HTML 和 JavaScript）。
 
@@ -39,19 +39,25 @@ ms.locfileid: "71834379"
 
 ## <a name="additional-resources"></a>其他资源
 
-- **使用 ASP.NET（Particular 的 Workshop）的复合 UI** \
+- **微前端（Martin Fowler 的博客）**  
+  <https://martinfowler.com/articles/micro-frontends.html>
+  
+- **微前端（Michael Geers 站点）**  
+  <https://micro-frontends.org/>
+  
+- **使用 ASP.NET（Particular 的 Workshop）的复合 UI**  
   <https://github.com/Particular/Workshop/tree/master/demos/asp-net-core>
 
-- **Ruben Oostinga。微服务体系结构中的整体式前端** \
+- **Ruben Oostinga。微服务体系结构中的整体式前端**  
   <https://xebia.com/blog/the-monolithic-frontend-in-the-microservices-architecture/>
 
-- **Mauro Servienti。优化 UI 组合的秘诀** \
+- **Mauro Servienti。优化 UI 组合的秘诀**  
   <https://particular.net/blog/secret-of-better-ui-composition>
 
-- **Viktor Farcic。在微服务中纳入前端 Web 组件** \
+- **Viktor Farcic。在微服务中纳入前端 Web 组件**  
   <https://technologyconversations.com/2015/08/09/including-front-end-web-components-into-microservices/>
 
-- **在微服务体系结构中管理前端** \
+- **在微服务体系结构中管理前端**  
   <https://allegro.tech/2016/03/Managing-Frontend-in-the-microservices-architecture.html>
 
 >[!div class="step-by-step"]

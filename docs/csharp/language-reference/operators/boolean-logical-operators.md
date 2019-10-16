@@ -32,12 +32,12 @@ helpviewer_keywords:
 - conditional OR operator [C#]
 - short-circuiting OR operator [C#]
 - '|| operator [C#]'
-ms.openlocfilehash: cc25d4bfd444dc0acb30fc1c6e6c3c9918af537c
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: f711bd04aeadb584eac1ecb0b644a36e2e496d08
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71698679"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72290939"
 ---
 # <a name="boolean-logical-operators-c-reference"></a>布尔逻辑运算符（C# 参考）
 
@@ -51,11 +51,11 @@ ms.locfileid: "71698679"
 
 ## <a name="logical-negation-operator-"></a>逻辑非运算符 !
 
-`!` 运算符计算操作数的逻辑非。 也就是说，如果操作数的计算结果为 `false`，它生成 `true`；如果操作数的计算结果为 `true`，它生成 `false`：
+一元前缀 `!` 运算符计算操作数的逻辑非。 也就是说，如果操作数的计算结果为 `false`，它生成 `true`；如果操作数的计算结果为 `true`，它生成 `false`：
 
 [!code-csharp-interactive[logical negation](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#Negation)]
 
-从 C# 8.0 起，一元后缀 `!` 运算符为 null 包容运算符。 在已启用的可为空的注释上下文中，可以使用它来声明可为空的引用类型的表达式 `x` 不为 null：`x!`。 有关详细信息，请参阅[可为空引用类型](../../nullable-references.md)。
+从 C# 8.0 起，一元后缀 `!` 运算符为 [null 包容运算符](null-forgiving.md)。
 
 ## <a name="logical-and-operator-"></a> 逻辑 AND 运算符 &amp;
 

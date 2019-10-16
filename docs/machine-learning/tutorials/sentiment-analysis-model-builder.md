@@ -1,17 +1,17 @@
 ---
 title: 教程：分析情绪 - 二元分类
 description: 本教程演示如何创建 Razor Pages 应用程序，该应用程序对网站评论情绪进行分类并采取适当的措施。 二元情绪分类器使用 Visual Studio 中的模型生成器。
-ms.date: 09/30/2019
+ms.date: 10/08/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: ce64f0d11b1da65e460235fdabc2b07e05ffcbe4
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 4a97fb70caafd7b0003830259ddbb0ec72a2ca8a
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71700915"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72180272"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-in-a-web-application-using-mlnet-model-builder"></a>教程：使用 ML.NET 模型生成器在 Web 应用程序中分析网站评论的情绪
 
@@ -85,7 +85,7 @@ wikipedia-detox-250-line-data.tsv  数据集中的每一行都代表一个用户
 
 ## <a name="train-the-model"></a>定型模型
 
-在本教程中，用于训练价格预测模型的机器学习任务是二元分类。 在模型训练过程中，模型生成器使用不同的二元分类算法和设置训练各个模型，以便为数据集找到性能最佳的模型。
+在本教程中，用于训练情绪分析模型的机器学习任务是二元分类。 在模型训练过程中，模型生成器使用不同的二元分类算法和设置训练各个模型，以便为数据集找到性能最佳的模型。
 
 模型训练所需的时间与数据量成正比。 模型生成器会根据数据源的大小自动选择“训练时间(秒)”的默认值  。
 
