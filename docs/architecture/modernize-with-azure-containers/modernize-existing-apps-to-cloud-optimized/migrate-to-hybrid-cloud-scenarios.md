@@ -2,12 +2,12 @@
 title: 迁移到混合云方案
 description: 通过 Azure 云和 Windows 容器实现现有 .NET 应用程序的现代化 |迁移到混合云方案
 ms.date: 04/30/2018
-ms.openlocfilehash: 5f0819495080bc29ed1239b4a7ab8af31141881b
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 4348a9b538042fee7ebd9c08f480491f17425937
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72318470"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72394535"
 ---
 # <a name="migrate-to-hybrid-cloud-scenarios"></a>迁移到混合云方案
 
@@ -41,7 +41,7 @@ Azure Stack 集成系统通过 Microsoft 和硬件合作伙伴的合作关系提
 
 ### <a name="azure-stack-development-kit"></a>Azure Stack 开发工具包
 
-Microsoft Azure Stack 开发工具包是单节点部署的 Azure Stack，可用于评估和了解 Azure Stack。 你还可以将 Azure Stack 开发工具包用作开发人员环境，可在其中使用与 Azure 一致的 Api 和工具进行开发。 Azure Stack 开发工具包不能用作生产环境。
+Microsoft Azure Stack 开发工具包是 Azure Stack 的单节点部署，可用于评估和了解 Azure Stack。 你还可以将 Azure Stack 开发工具包用作开发人员环境，可在其中使用与 Azure 一致的 Api 和工具进行开发。 Azure Stack 开发工具包不应作为生产环境使用。
 
 ### <a name="additional-resources"></a>其他资源
 
@@ -66,5 +66,5 @@ Microsoft Azure Stack 开发工具包是单节点部署的 Azure Stack，可用�
     <https://azure.microsoft.com/pricing/hybrid-benefit/>
 
 >[!div class="step-by-step"]
->[上一页](modernize-your-apps-lifecycle-with-ci-cd-pipelines-and-devops-tools-in-the-cloud.md)
+>[上一页](life-cycle-ci-cd-pipelines-devops-tools.md)
 >[下一页](../walkthroughs-technical-get-started-overview.md)
