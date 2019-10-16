@@ -2,14 +2,14 @@
 title: .NET Core 分发打包
 description: 了解如何为 .NET Core 打包、命名并进行版本控制以进行分发。
 author: tmds
-ms.date: 03/02/2018
+ms.date: 10/09/2019
 ms.custom: seodec18
-ms.openlocfilehash: d72677cba1e7685f8e05cf479ec508683dd77b55
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 3c41ce8a4a9ac1a914de2535a9b2423a7ddfa2cf
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70394162"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72250137"
 ---
 # <a name="net-core-distribution-packaging"></a>.NET Core 分发打包
 
@@ -23,37 +23,37 @@ ms.locfileid: "70394162"
 安装时，.NET Core 包含一些组件，这些组件在文件系统中排列如下：
 
 ```
-.
+{dotnet_root}                                     (*)
 ├── dotnet                       (1)
 ├── LICENSE.txt                  (8)
 ├── ThirdPartyNotices.txt        (8)
-├── host
-│   └── fxr
+├── host                                          (*)
+│   └── fxr                                       (*)
 │       └── <fxr version>        (2)
-├── sdk
+├── sdk                                           (*)
 │   ├── <sdk version>            (3)
-│   └── NuGetFallbackFolder      (4)
-├── packs
-│   ├── Microsoft.AspNetCore.App.Ref
+│   └── NuGetFallbackFolder      (4)              (*)
+├── packs                                         (*)
+│   ├── Microsoft.AspNetCore.App.Ref              (*)
 │   │   └── <aspnetcore ref version>     (11)
-│   ├── Microsoft.NETCore.App.Ref
+│   ├── Microsoft.NETCore.App.Ref                 (*)
 │   │   └── <netcore ref version>        (12)
-│   ├── Microsoft.NETCore.App.Host.<rid>
+│   ├── Microsoft.NETCore.App.Host.<rid>          (*)
 │   │   └── <apphost version>            (13)
-│   ├── Microsoft.WindowsDesktop.App.Ref
+│   ├── Microsoft.WindowsDesktop.App.Ref          (*)
 │   │   └── <desktop ref version>        (14)
-│   └── NETStandard.Library.Ref
+│   └── NETStandard.Library.Ref                   (*)
 │       └── <netstandard version>        (15)
-├── shared
-│   ├── Microsoft.NETCore.App
+├── shared                                        (*)
+│   ├── Microsoft.NETCore.App                     (*)
 │   │   └── <runtime version>     (5)
-│   ├── Microsoft.AspNetCore.App
+│   ├── Microsoft.AspNetCore.App                  (*)
 │   │   └── <aspnetcore version>  (6)
-│   ├── Microsoft.AspNetCore.All
+│   ├── Microsoft.AspNetCore.All                  (*)
 │   │   └── <aspnetcore version>  (6)
-│   └── Microsoft.WindowsDesktop.App
+│   └── Microsoft.WindowsDesktop.App              (*)
 │       └── <desktop app version> (7)
-└── templates
+└── templates                                     (*)
 │   └── <templates version>      (17)
 /
 ├── etc/dotnet
@@ -94,9 +94,11 @@ ms.locfileid: "70394162"
 
 - (15) **NETStandard.Library.Ref** 描述了 netstandard `x.y` API。 在针对该目标进行编译时，将使用这些文件。
 
-- (16) **/etc/dotnet/install_location** 文件包含 `dotnet` 主机二进制文件所在文件夹的完整路径。 可以换行符终止路径。 根路径为 `/usr/share/dotnet` 时无需添加此文件。
+- (16)“/etc/dotnet/install_location”是一个包含 `{dotnet_root}` 完整路径的文件  。 该路径可能以换行符结尾。 根路径为 `/usr/share/dotnet` 时无需添加此文件。
 
 - (17) templates  包含 SDK 使用的模板。 例如，`dotnet new` 在此处查找项目模板。
+
+标记为 `(*)` 的文件夹被多个包使用。 某些包格式（例如，`rpm`）需要对此类文件夹进行特殊处理。 包维护人员必须处理这个问题。
 
 ## <a name="recommended-packages"></a>推荐的包
 
@@ -113,7 +115,7 @@ SDK 版本采用相同的 `[major].[minor]`，并有一个独立的 `[patch]`，
   - **版本：** \<运行时版本>
   - **示例：** dotnet-sdk-2.1
   - **包含：** (3),(4)
-  - **依赖项：** `aspnetcore-runtime-[major].[minor]`、`dotnet-targeting-pack-[major].[minor]`、`aspnetcore-targeting-pack-[major].[minor]`、`netstandard-targeting-pack-[netstandard_major].[netstandard_minor]`、`dotnet-apphost-pack-[major].[minor]`、`dotnet-templates-[major].[minor]`
+  - **依赖项：** `dotnet-runtime-[major].[minor]`、`aspnetcore-runtime-[major].[minor]`、`dotnet-targeting-pack-[major].[minor]`、`aspnetcore-targeting-pack-[major].[minor]`、`netstandard-targeting-pack-[netstandard_major].[netstandard_minor]`、`dotnet-apphost-pack-[major].[minor]`、`dotnet-templates-[major].[minor]`
 
 - `aspnetcore-runtime-[major].[minor]` - 安装特定 ASP.NET Core 运行时
   - **版本：** \<aspnetcore 运行时版本>
@@ -130,13 +132,13 @@ SDK 版本采用相同的 `[major].[minor]`，并有一个独立的 `[patch]`，
   - **版本：** \<运行时版本>
   - **示例：** dotnet-runtime-2.1
   - **包含：** (5)
-  - **依赖项：** `dotnet-hostfxr:<runtime version>+`、`dotnet-runtime-deps-[major].[minor]`
+  - **依赖项：** `dotnet-hostfxr-[major].[minor]`、`dotnet-runtime-deps-[major].[minor]`
 
-- `dotnet-hostfxr` - 依赖项
+- `dotnet-hostfxr-[major].[minor]` - 依赖项
   - **版本：** \<运行时版本>
-  - **示例：** dotnet-hostfxr
+  - **示例：** dotnet-hostfxr-3.0
   - **包含：** (2)
-  - **依赖项：** `host:<runtime version>+`
+  - **依赖项：** `dotnet-host`
 
 - `dotnet-host` - 依赖项
   - **版本：** \<运行时版本>
@@ -155,7 +157,7 @@ SDK 版本采用相同的 `[major].[minor]`，并有一个独立的 `[patch]`，
   - **版本：** \<aspnetcore 运行时版本>
   - **包含：** (11)
 
-- `netstandard-targeting-pack-[major].[minor]` - 允许面向 netstandard 版本
+- `netstandard-targeting-pack-[netstandard_major].[netstandard_minor]` - 允许面向 netstandard 版本
   - **版本：** \<sdk 版本>
   - **包含：** (15)
 
@@ -163,11 +165,11 @@ SDK 版本采用相同的 `[major].[minor]`，并有一个独立的 `[patch]`，
   - **版本：** \<sdk 版本>
   - **包含：** (15)
 
-`dotnet-runtime-deps-[major].[minor]` 要求理解_发行版特定依赖项_。 因为发行版生成系统可能能够自动派生包，所以包是可选的，如果选择，会将这些依赖项直接添加到 `dotnet-runtime-[major].[minor]` 包中。
+`dotnet-runtime-deps-[major].[minor]` 需要了解发行版特定依赖项  。 因为发行版生成系统可能能够自动派生包，所以包是可选的，如果选择，会将这些依赖项直接添加到 `dotnet-runtime-[major].[minor]` 包中。
 
-当包内容位于受版本控制的文件夹下时，包名称 `[major].[minor]` 与受版本控制的文件夹名称匹配。 对于所有包（除 `netstandard-targeting-pack-[major].[minor]` 外），这也与 .NET Core 版本匹配。
+当包内容位于受版本控制的文件夹下时，包名称 `[major].[minor]` 与受版本控制的文件夹名称匹配。 对于所有包（除 `netstandard-targeting-pack-[netstandard_major].[netstandard_minor]` 外），这也与 .NET Core 版本匹配。
 
-包间的依赖关系应使用“等于或大于”  版本要求。 例如，`dotnet-sdk-2.2:2.2.401` 要求 `aspnetcore-runtime-2.2 >= 2.2.6`。 这使用户可以通过根包（例如 `dnf update dotnet-sdk-2.2`）升级其安装。
+包间的依赖关系应使用“等于或大于”版本要求  。 例如，`dotnet-sdk-2.2:2.2.401` 要求 `aspnetcore-runtime-2.2 >= 2.2.6`。 这使用户可以通过根包（例如 `dnf update dotnet-sdk-2.2`）升级其安装。
 
 大多数分发都需要从源中构建所有项目。 这对包有一些影响：
 

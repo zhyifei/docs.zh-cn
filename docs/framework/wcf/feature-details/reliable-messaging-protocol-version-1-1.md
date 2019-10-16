@@ -322,9 +322,9 @@ WCF 将"非法携带"机制用于在 Ws-reliable Messaging 中提供的序列确
 
 - B1801:WCF 生成并传输`Message Addressing Header Required`发生故障时以下项之一为 true:
 
-  - `CreateSequence``CloseSequence` 或 `TerminateSequence` 消息缺少 `MessageId` 头。
+  - `CreateSequence`、`CloseSequence` 或 `TerminateSequence` 消息缺少 `MessageId` 头。
 
-  - `CreateSequence``CloseSequence` 或 `TerminateSequence` 消息缺少 `ReplyTo` 头。
+  - `CreateSequence`、`CloseSequence` 或 `TerminateSequence` 消息缺少 `ReplyTo` 头。
 
   - `CreateSequenceResponse`、`CloseSequenceResponse` 或 `TerminateSequenceResponse` 消息缺少 `RelatesTo` 头。
 

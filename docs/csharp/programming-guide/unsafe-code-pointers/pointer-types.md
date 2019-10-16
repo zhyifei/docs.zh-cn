@@ -72,7 +72,7 @@ int* myVariable;
 |`&`|获取变量的地址。|
 |`++` 和 `--`|递增和递减指针。|
 |`+` 和 `-`|执行指针算法。|
-|`==`、`!=`、`<``>`、`<=` 和 `>=`|比较指针。|
+|`==`、`!=`、`<`、`>`、`<=` 和 `>=`|比较指针。|
 |[`stackalloc` 运算符](../../language-reference/operators/stackalloc.md)|在堆栈上分配内存。|
 |[`fixed` 语句](../../language-reference/keywords/fixed-statement.md)|临时固定变量以便找到其地址。|
 

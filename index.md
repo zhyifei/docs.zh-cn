@@ -6,12 +6,12 @@ title: .NET 文档
 description: 了解如何通过 C#、Visual Basic 和 F# 在任意平台上使用 .NET 创建各种应用程序。 浏览 API 引用、代码示例、教程以及其他内容。
 ms.custom: updateeachrelease
 ms.date: 09/30/2019
-ms.openlocfilehash: a30744ca8831375f9a54f054b226274e273a67a5
-ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
+ms.openlocfilehash: 1446d870a4cae2c5bf385a0089bbc830f932ea08
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71736769"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72321474"
 ---
 <!-- markdownlint-disable MD033 -->
 <div id="main" class="v2">
@@ -88,7 +88,7 @@ ms.locfileid: "71736769"
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img src="/dotnet/images/hub/dotnet.svg" alt="" />
+                                                    <img src="/dotnet/images/hub/dotnet-logo-image.svg" alt="Screenshot of the purple .NET logo." />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -138,7 +138,7 @@ ms.locfileid: "71736769"
                                                 <p><a href="/dotnet/framework/get-started/">入门</a></p>
                                                 <p><a href="/dotnet/framework/development-guide">开发指南</a></p>
                                                 <p><a href="/dotnet/framework/develop-client-apps">客户端开发</a></p>
-                                                <p><a href="/aspnet/#pivot=aspnet">ASP.NET 2.0</a></p>
+                                                <p><a href="/aspnet/#pivot=aspnet">ASP.NET</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -194,7 +194,7 @@ ms.locfileid: "71736769"
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3><a href="/dotnet/fsharp/">F# 指南</a></h3>
+                                                <h3><a href="/dotnet/fsharp/">F # 指南</a></h3>
                                                 <p><a href="/dotnet/fsharp/get-started/">入门</a></p>
                                                 <p><a href="/dotnet/fsharp/tour">F# 教程</a></p>
                                                 <p><a href="/dotnet/fsharp/language-reference/">F# 语言参考</a></p>
@@ -248,7 +248,7 @@ ms.locfileid: "71736769"
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img src="/dotnet/images/hub/netspark.svg" alt="" />
+                                                    <img src="/dotnet/images/hub/netspark-logo-image.svg" alt="Screenshot of the purple .NET for Apache Spark Guide logo." />
                                                 </div>
                                             </div>
                                             <div class="cardText">

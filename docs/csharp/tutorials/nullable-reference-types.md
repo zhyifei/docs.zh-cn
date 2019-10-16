@@ -3,16 +3,16 @@ title: 使用可为空引用类型进行设计
 description: 本高级教程介绍了可为空引用类型。 你将学习在引用值可能为 NULL 时表达你的设计意图，并在引用值不能为 NULL 时让编译器强制执行。
 ms.date: 02/19/2019
 ms.custom: mvc
-ms.openlocfilehash: 914a1eeee2d3d1843bf597f94761e39d16331b5c
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: e58f2bac23fabf734df93aa2a643106f1c1bd5f3
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71956650"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291392"
 ---
 # <a name="tutorial-express-your-design-intent-more-clearly-with-nullable-and-non-nullable-reference-types"></a>教程：使用可为空和不可为空引用类型更清晰地表达设计意图
 
-C# 8 引入了  可为空引用类型，它们以与可为空值类型补充值类型相同的方式补充引用类型。 通过将 `?` 追加到此类型，你可以将变量声明为  可为空引用类型。 例如，`string?` 表示可为空的 `string`。 可以使用这些新类型更清楚地表达你的设计意图：某些变量  必须始终具有值，其他变量可以缺少值  。
+C# 8.0 引入了[可为空引用类型](../nullable-references.md)，它们以与可为空值类型补充值类型相同的方式补充引用类型。 通过将 `?` 追加到此类型，你可以将变量声明为  可为空引用类型。 例如，`string?` 表示可为空的 `string`。 可以使用这些新类型更清楚地表达你的设计意图：某些变量  必须始终具有值，其他变量可以缺少值  。
 
 在本教程中，你将了解：
 
@@ -25,7 +25,7 @@ C# 8 引入了  可为空引用类型，它们以与可为空值类型补充值�
 
 ## <a name="prerequisites"></a>系统必备
 
-需要将计算机设置为运行 .NET Core，包括 C# 8.0 编译器。 [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 或 [.NET Core 3.0](https://dotnet.microsoft.com/download/dotnet-core/3.0) 随附 C# 8 编译器。
+需要将计算机设置为运行 .NET Core，包括 C# 8.0 编译器。 [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 或 [.NET Core 3.0](https://dotnet.microsoft.com/download/dotnet-core/3.0) 随附 C# 8.0 编译器。
 
 本教程假设你熟悉 C# 和 .NET，包括 Visual Studio 或 .NET Core CLI。
 
@@ -37,7 +37,7 @@ C# 8 引入了  可为空引用类型，它们以与可为空值类型补充值�
 
 ## <a name="create-the-application-and-enable-nullable-reference-types"></a>创建应用程序并启用可为空引用类型
 
-在 Visual Studio 中或使用 `dotnet new console` 从命令行创建新的控制台应用程序。 命名应用程序 `NullableIntroduction`。 创建应用程序后，需要指定整个项目都在 `enabled` 可为空注释上下文  中进行编译。 打开 `csproj` 文件，并向 `PropertyGroup` 元素添加 `Nullable` 元素。 将其值设置为 `enabled`。 必须选择  “可为空引用类型”功能，即使在 C# 8 项目中也是如此。 这是因为，一旦启用该功能，现有的引用变量声明将成为不可为空引用类型  。 尽管该决定将有助于发现现有代码可能不具有适当的 NULL 检查的问题，但它可能无法准确反映你的原始设计意图：
+在 Visual Studio 中或使用 `dotnet new console` 从命令行创建新的控制台应用程序。 命名应用程序 `NullableIntroduction`。 创建应用程序后，需要指定整个项目都在启用的“可为空注释上下文”中进行编译  。 打开 .csproj 文件，并向 `PropertyGroup` 元素添加 `Nullable` 元素  。 将其值设置为 `enable`。 必须选择“可为空引用类型”功能，即使在 C# 8.0 项目中也是如此  。 这是因为，一旦启用该功能，现有的引用变量声明将成为不可为空引用类型  。 尽管该决定将有助于发现现有代码可能不具有适当的 NULL 检查的问题，但它可能无法准确反映你的原始设计意图：
 
 ```xml
 <Nullable>enable</Nullable>
@@ -84,7 +84,7 @@ namespace NullableIntroduction
 }
 ```
 
-编译器将启用可为空的上下文中的代码的每个引用类型变量声明解释为不可为空  引用类型。 你可以通过添加问题文本的属性和问题类型来查看第一个警告，如以下代码所示：
+编译器将在启用的可为空的注释上下文中的代码的每个引用类型变量声明解释为“不可为空”引用类型  。 你可以通过添加问题文本的属性和问题类型来查看第一个警告，如以下代码所示：
 
 ```csharp
 namespace NullableIntroduction
@@ -134,7 +134,7 @@ namespace NullableIntroduction
 
 [!code-csharp[AddQuestions](~/samples/csharp/NullableIntroduction/NullableIntroduction/Program.cs#AddQuestions)]
 
-由于整个项目处于启用可为空的上下文中，因此将 `null` 传递给任何应为不可为空引用类型的方法时，将收到警告。 通过将以下行添加到 `Main` 进行尝试：
+由于整个项目处于启用的可为空的注释上下文中，因此将 `null` 传递给任何应为不可为空引用类型的方法时，将收到警告。 通过将以下行添加到 `Main` 进行尝试：
 
 ```csharp
 surveyRun.AddQuestion(QuestionType.Text, default);

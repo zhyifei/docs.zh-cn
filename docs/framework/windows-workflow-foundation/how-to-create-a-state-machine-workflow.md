@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3ec60e8f-fad4-493e-a426-e7962d7aee8c
-ms.openlocfilehash: 451f9581ae997ad86fee968fa978713db2049455
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
-ms.translationtype: HT
+ms.openlocfilehash: e93f84f0bacf7ac205294c12c55afcab8d7319b7
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044390"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989816"
 ---
 # <a name="how-to-create-a-state-machine-workflow"></a>如何：创建状态机工作流
 工作流可基于内置活动以及自定义活动来构造。 本主题介绍如何创建一个工作流，该工作流使用内置活动（如<xref:System.Activities.Statements.StateMachine>活动）和上一步[中的自定义活动如何：创建活动](how-to-create-an-activity.md)主题。 该工作流模拟猜数游戏。  
@@ -43,7 +43,7 @@ ms.locfileid: "70044390"
   
 5. 单击 "**创建自变量**"。  
   
-6. 在`Turns`新添加    的参数下方的 "名称" 框中键入，从 "方向" 下拉列表中选择 "向外"，从 "参数类型" 下拉列表中选择 "Int32"，然后按 enter。 `MaxNumber`  
+6. 在`Turns`新添加的参数下方的 "名称" 框中键入，从 "方向" 下拉列表中选择 "向外"，从 "参数类型" 下拉列表中选择 "Int32"，然后按 enter。 `MaxNumber`  
   
 7. 单击活动设计器左下方的 "**参数**"，以关闭 "**参数**" 窗格。  
   
@@ -157,21 +157,21 @@ ms.locfileid: "70044390"
   
 23. 在**If**活动的**Condition**属性值框中键入以下表达式。  
   
-    ```
-    Guess < Target  
+    ```text
+    Guess < Target
     ```  
   
 24. 将两个 " **WriteLine** " 活动从 "**工具箱**" 的 "**基元**" 部分拖放到 " **If** " 活动的 " **Then** " 部分，另一个处于 " **Else** " 部分。  
   
 25. 单击 " **Then** " 部分中的 " **WriteLine** " 活动将其选中，然后在 "**文本**属性值" 框中键入以下表达式。  
   
-    ```
+    ```text
     "Your guess is too low."  
     ```  
   
 26. 单击 " **Else** " 部分中的 " **WriteLine** " 活动将其选中，然后在 "**文本**属性值" 框中键入以下表达式。  
   
-    ```
+    ```text
     "Your guess is too high."  
     ```  
   

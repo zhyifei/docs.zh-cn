@@ -2,18 +2,18 @@
 title: 泛型接口中的变体 (C#)
 ms.date: 06/06/2019
 ms.assetid: 4828a8f9-48c0-4128-9749-7fcd6bf19a06
-ms.openlocfilehash: 12a8b58983256be0ca2b56ea6ed09e724e0814c8
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 71225814a11074f52e4937dec88ca5e27114d6c7
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69595158"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72179062"
 ---
 # <a name="variance-in-generic-interfaces-c"></a>泛型接口中的变体 (C#)
 
 .NET Framework 4 引入了对多个现有泛型接口的变体支持。 变体支持允许实现这些接口的类进行隐式转换。 
 
-自 .NET Framework 4 起，以下接口是变体：
+自 .NET Framework 4 起，以下接口为变体：
 
 - <xref:System.Collections.Generic.IEnumerable%601>（T 是协变）
 

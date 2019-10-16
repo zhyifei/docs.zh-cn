@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3acfa0da0caa29b503f47f23b0e9042d73ef0657
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: f2150351c97f6deae18177be642e6c3009422960
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353385"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72393709"
 ---
 # <a name="whats-new-in-the-net-framework"></a>.NET Framework 中的新增功能
 
@@ -202,7 +202,7 @@ ms.locfileid: "71353385"
 .NET Framework 4.7.2 在以下几个领域新增了功能：
 
 - [基类](#core-472)
-- [ASP.NET 2.0](#asp-net472)
+- [ASP.NET](#asp-net472)
 - [网络连接](#net472)
 - [SQL](#sql472)
 - [WPF](#wpf472)
@@ -542,7 +542,7 @@ public static event EventHandler<StaticResourceResolvedEventArgs> StaticResource
 ```
 
 ```vb
-Public Shared Event StaticResourceResolved As EventHandler(Of StaticResourceResolvedEventArgs)
+Public Shared Event StaticResourceResolved As EventHandler(Of StaticResourceResolvedEventArgs)
 ```
 
 每当运行时解析 [StaticResource](../wpf/advanced/staticresource-markup-extension.md) 引用时，都会引发此事件。 <xref:System.Windows.Diagnostics.StaticResourceResolvedEventArgs> 参数描述解析，并指示托管 [StaticResource](../wpf/advanced/staticresource-markup-extension.md) 引用的对象和属性及用于解析的  <xref:Windows.UI.Xaml.ResourceDictionary> 和密钥：
@@ -592,7 +592,7 @@ Windows 窗体的 HDPI 感知应用程序、Windows Presentation Foundation (WPF
 - [基类](#core471)
 - [公共语言运行时 (CLR)](#clr)
 - [网络连接](#net471)
-- [ASP.NET 2.0](#asp-net471)
+- [ASP.NET](#asp-net471)
 
 此外，.NET Framework 4.7.1 的重点是改进了辅助功能，使应用程序能为使用辅助技术的用户提供最佳体验。 有关 .NET Framework 4.7.1 中辅助功能改进的信息，请参阅 [.NET Framework 中辅助功能的新增功能](whats-new-in-accessibility.md)。
 
@@ -674,7 +674,7 @@ ASP.NET 处理包括 23 个事件的预定义管道中的请求。 ASP.NET 执�
 
 - [基类](#Core47)
 - [网络连接](#net47)
-- [ASP.NET 2.0](#ASP-NET47)
+- [ASP.NET](#ASP-NET47)
 - [Windows Communication Foundation (WCF)](#wcf47)
 - [Windows 窗体](#wf47)
 - [Windows Presentation Foundation (WPF)](#WPF47)
@@ -782,7 +782,7 @@ WCF 包含大量代码更改，消除了争用条件，从而提升了序列化�
 
 .NET Framework 4.6.2 在以下几个领域新增了功能：
 
-- [ASP.NET 2.0](#ASPNET462)
+- [ASP.NET](#ASPNET462)
 
 - [字符类别](#Strings)
 
@@ -2131,5 +2131,5 @@ ASP.NET 4.5 和 4.5.1 为 Web 窗体、WebSocket 支持、异步处理程序、�
 - [.NET Framework 和带外版本](../get-started/the-net-framework-and-out-of-band-releases.md)
 - [.NET Framework 中辅助功能的新增功能](whats-new-in-accessibility.md)
 - [Visual Studio 2017 中的新增功能](/visualstudio/ide/whats-new-in-visual-studio)
-- [ASP.NET 2.0](/aspnet)
+- [ASP.NET](/aspnet)
 - [Visual C++ 中的新增功能](/cpp/what-s-new-for-visual-cpp-in-visual-studio)

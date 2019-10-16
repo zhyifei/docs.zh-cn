@@ -28,7 +28,7 @@ ms.locfileid: "62050399"
 SyndicationFeedFormatter GetTemplate1();  
 ```  
   
- 若要打开 WCF WEB HTTP 帮助页，你必须向服务的终结点添加一个终结点行为。 可以通过配置或代码完成此操作。 若要通过配置启用 WCF WEB HTTP 帮助页，请使用 `<webHttp>``enableHelp` 元素添加终结点行为，将 `true` 设置为 ，添加一个终结点并将其配置为使用终结点行为。 下面的配置代码演示如何执行此操作。  
+ 若要打开 WCF WEB HTTP 帮助页，你必须向服务的终结点添加一个终结点行为。 可以通过配置或代码完成此操作。 若要通过配置启用 WCF WEB HTTP 帮助页，请使用 `<webHttp>`、`enableHelp` 元素添加终结点行为，将 `true` 设置为 ，添加一个终结点并将其配置为使用终结点行为。 下面的配置代码演示如何执行此操作。  
   
 ```xml  
 <endpointBehaviors>  

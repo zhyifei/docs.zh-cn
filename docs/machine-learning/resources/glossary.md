@@ -4,12 +4,12 @@ description: 一个重要的机器学习术语表，可在 ML.NET 中生成自�
 ms.custom: seodec18
 ms.topic: reference
 ms.date: 07/31/2019
-ms.openlocfilehash: 4d4bb80c6582facbcb11664309fde230bcfa4e7b
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: cb5681f1f72776ec9a8cbcfe45519befe02b8caf
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929269"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72180174"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>机器学习重要术语词汇表
 
@@ -136,7 +136,7 @@ ML.NET 中实现 <xref:Microsoft.ML.IEstimator%601> 接口的类。
  正则化会对过于复杂的线性模型进行惩罚。 正则化有两种类型：
 
 - $L_1$ 正则化将无意义特征的权重归零。 进行这种正则化之后，所保存模型的大小可能会变小。
-- $L_2$ 正则化将无意义特征的权重范围最小化，这是一个更常规的过程，对离群值的敏感度也较低。
+- $L_2$ 正则化将无意义特征的权重范围最小化。 这是一种更通用的过程，并且对离群值不太敏感。
 
 ## <a name="regression"></a>回归测试
 

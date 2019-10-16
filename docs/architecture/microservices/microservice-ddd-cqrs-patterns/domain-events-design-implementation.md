@@ -2,12 +2,12 @@
 title: 域事件。 设计和实现
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 深入了解域事件（在聚合之间建立通信的一个关键概念）。
 ms.date: 10/08/2018
-ms.openlocfilehash: 46341bbc3ee3e5713707cc6a18b678d51102b64d
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 4fe0c1fa04bbecb64783e070838ab796de4f90d6
+ms.sourcegitcommit: 10db6551ea3c971470cf5d2cc21ba1cbcefe5c55
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926544"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72031835"
 ---
 # <a name="domain-events-design-and-implementation"></a>域事件：设计和实现
 

@@ -2,12 +2,12 @@
 title: 云本机应用程序呢？
 description: 通过 Azure 云和 Windows 容器实现现有 .NET 应用程序的现代化 |什么是云本机应用程序？
 ms.date: 04/28/2018
-ms.openlocfilehash: 86153b04790eb21276e58b3fe33c0a680d9ea1c4
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: cf4c3b24a4eeb62ed84a5fccb294b675d38fcc36
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373919"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72318450"
 ---
 # <a name="what-about-cloud-native-applications"></a>云本机应用程序呢？
 
@@ -15,7 +15,7 @@ ms.locfileid: "70373919"
 
 图4-3 在 application 现代化成熟度中定位云本机应用：
 
-![定位云本机应用程序](./media/image3.png)
+![演示如何定位云本机应用程序的关系图。](./media/what-about-cloud-native-applications/positioning-cloud-native-applications.png)
 
 **图4-3。** 定位云本机应用程序
 
@@ -25,7 +25,7 @@ ms.locfileid: "70373919"
 
 图4-4 显示了云本机模型的主要特征。
 
-![云本机特性包括微服务、容器、云复原、协调器和无服务器](./media/image4.png)
+![列出主要云本机特性的关系图。](./media/what-about-cloud-native-applications/cloud-native-characteristics.png)
 
 **图4-4。** 云本机特性
 
@@ -41,7 +41,7 @@ ms.locfileid: "70373919"
 
 [云本机计算基础（CNCF）](https://www.cncf.io/)是云本机原则的主要提升程序。 Microsoft 是[CNCF 的成员](https://azure.microsoft.com/blog/announcing-cncf/)。
 
-有关示例定义和云本机应用程序特征的详细信息，请参阅 Gartner 文章[如何构建和设计云本机应用程序](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications)。 有关如何实现云本机应用程序的 Microsoft 具体指导，请参阅[.net 微服务：适用于容器化 .NET 应用程序的体系结构](https://aka.ms/microservicesebook)。
+有关示例定义和云本机应用程序特征的详细信息，请参阅 Gartner 文章[如何构建和设计云本机应用程序](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications)。 有关 Microsoft 如何实现云本机应用程序的具体指导，请参阅 [.NET 微服务：适用于容器化 .NET 应用程序的体系结构](https://aka.ms/microservicesebook)。
 
 如果将整个应用程序迁移到云本机模型，则要考虑的最重要因素是，必须重塑到基于微服务的体系结构。 由于涉及大型重构过程，这显然需要大量的开发工作。 通常会为需要新级别的可伸缩性和长期灵活性的任务关键型应用程序选择此选项。 但是，你可以通过为只是几个新方案添加微服务来开始向云中移动，并最终重构应用程序并将其完全视为微服务。 这是一种在某些情况下最好的方法。
 
@@ -55,7 +55,7 @@ ms.locfileid: "70373919"
 
 微服务体系结构正在成为分布式和大型任务关键型应用程序的首选方法，这些应用程序基于多个独立的子系统，采用自治服务的形式。 在基于微服务的体系结构中，应用程序构建为可独立开发、测试、版本控制、部署和缩放的服务集合。 这可以包括每个微服务的任何相关的自治数据库。
 
-若要详细了解可以使用 .net Core 实现的微服务体系结构，请参阅可下载的 PDF 电子书[.net 微服务：适用于容器化 .NET 应用程序的体系结构](https://aka.ms/microservicesebook)。 本指南还提供[在线](../../microservices/index.md)支持。
+若要详细了解可以使用 .NET Core 实现的微服务体系结构，请参阅可下载的 PDF 电子书 [.NET 微服务：适用于容器化 .NET 应用程序的体系结构](https://aka.ms/microservicesebook)。 本指南还提供[在线](../../microservices/index.md)支持。
 
 但即使是在微服务提供功能强大的独立部署、强子系统边界和技术多样性的情况下，它们也会带来许多新的挑战。 这些挑战与分布式应用程序开发相关，如分散和独立的数据模型;实现微服务之间的弹性通信;需要最终一致性;和操作复杂性。 与传统的单一应用程序相比，微服务引入了更高的复杂性。
 

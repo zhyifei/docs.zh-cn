@@ -1,0 +1,66 @@
+- name: .NET Framework 指南
+  href: index.md
+- name: 新增功能
+  href: whats-new/
+- name: 开始操作
+  href: get-started/
+- name: 安装指南
+  href: install/
+- name: 迁移指南
+  href: migration-guide/
+- name: 开发指南
+  href: development-guide.md
+  items:
+    - name: 应用程序域和程序集
+      href: app-domains/
+    - name: 桌面应用程序中的资源
+      href: resources/
+    - name: 可访问性
+      href: ui-automation/
+    - name: 数据和建模
+      href: data/
+    - name: 客户端应用程序
+      href: develop-client-apps.md
+      items:
+        - name: Windows Presentation Foundation
+          href: wpf/
+        - name: Windows 窗体
+          href: winforms/
+    - name: 使用 WCF 的面向服务的应用程序
+      href: wcf/
+    - name: Windows Workflow Foundation
+      href: windows-workflow-foundation/
+    - name: Windows 服务应用程序
+      href: windows-services/
+    - name: 64 位应用程序
+      href: 64-bit-apps.md
+    - name: 使用 ASP.NET 的 Web 应用程序
+      href: develop-web-apps-with-aspnet.md
+    - name: .NET Framework 中的网络编程
+      href: network-programming/
+    - name: 配置应用
+      href: configure-apps/
+    - name: 使用 .NET Native 编译引用
+      href: net-native/
+    - name: Windows Identity Foundation
+      href: security/
+    - name: 调试、跟踪和分析
+      href: debug-trace-profile/
+    - name: 部署
+      href: deployment/
+    - name: 性能
+      href: performance/
+    - name: 动态编程
+      href: reflection-and-codedom/
+    - name: Managed Extensibility Framework (MEF)
+      href: mef/
+    - name: 与非托管代码交互操作
+      href: interop/
+    - name: 非托管 API 参考
+      href: unmanaged-api/
+    - name: XAML 服务
+      href: xaml-services/
+- name: 工具
+  href: tools/
+- name: 其他类库和 API
+  href: additional-apis/

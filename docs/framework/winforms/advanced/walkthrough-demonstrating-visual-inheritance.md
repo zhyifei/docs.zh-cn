@@ -47,7 +47,7 @@ ms.locfileid: "70046141"
 >
 > - <xref:System.Windows.Forms.DataGridView>
 >
-> 无论使用何种修饰符（`private``protected` 或 `public`），继承的窗体中的这些控件始终为只读。
+> 无论使用何种修饰符（`private`、`protected` 或 `public`），继承的窗体中的这些控件始终为只读。
 
 ## <a name="create-a-class-library-project-containing-a-base-form"></a>创建包含基窗体的类库项目
 

@@ -59,7 +59,7 @@ ms.locfileid: "70972491"
 
 [!code-csharp[Part 3](~/samples/snippets/standard/assembly/unloading/simple_example.cs#5)]
 
-这足以卸载测试程序集。 将所有上述内容放入单独的非可内联方法中，以确保 `TestAssemblyLoadContext``Assembly` 和 `MethodInfo` (`Assembly.EntryPoint`) 无法通过堆栈槽引用（实际或 JIT 引入的本地变量）保持活动状态。 这可以使 `TestAssemblyLoadContext` 保持活动状态并阻止其卸载。
+这足以卸载测试程序集。 将所有上述内容放入单独的非可内联方法中，以确保 `TestAssemblyLoadContext`、`Assembly` 和 `MethodInfo` (`Assembly.EntryPoint`) 无法通过堆栈槽引用（实际或 JIT 引入的本地变量）保持活动状态。 这可以使 `TestAssemblyLoadContext` 保持活动状态并阻止其卸载。
 
 此外，返回对 `AssemblyLoadContext` 的弱引用，以便之后可以使用它来检测卸载是否已完成。
 

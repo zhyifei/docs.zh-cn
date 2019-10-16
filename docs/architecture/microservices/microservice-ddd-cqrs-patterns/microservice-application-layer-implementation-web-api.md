@@ -2,12 +2,12 @@
 title: 使用 Web API 实现微服务应用层
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 了解依赖关系注入和转存进程模式及其在 Web API 应用层中的实现详细信息。
 ms.date: 10/08/2018
-ms.openlocfilehash: 0f6f47dd5f67fb18695715e5cfc9179206ef6bcf
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: df304ffbe2406323e3dcf42b9eb989b02a62b28b
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834364"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72249735"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>使用 Web API 实现微服务应用层
 
@@ -502,7 +502,7 @@ public async Task<IActionResult> ExecuteBusinessOperation([FromBody]RunOpCommand
 
 ### <a name="implement-idempotent-commands"></a>实现幂等命令
 
-在 eShopOnContainers  中，比上述更高级的示例是从订购微服务提交 CreateOrderCommand 对象。 但由于订购业务进程有点复杂，所以在我们的示例中，其实是从购物篮微服务开始，提交 CreateOrderCommand 对象的操作从名为 >UserCheckoutAcceptedIntegrationEvent.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/IntegrationEvents/EventHandling/UserCheckoutAcceptedIntegrationEventHandler.cs) 的集成事件处理程序（而不是从客户端应用调用的简单 WebAPI 控制器，如之前较简单示例所示）执行。
+在 eShopOnContainers  中，比上述更高级的示例是从订购微服务提交 CreateOrderCommand 对象。 但由于订购业务进程有点复杂，所以在我们的示例中，其实是从购物篮微服务开始，提交 CreateOrderCommand 对象的操作从名为 [UserCheckoutAcceptedIntegrationEventHandler](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/IntegrationEvents/EventHandling/UserCheckoutAcceptedIntegrationEventHandler.cs) 的集成事件处理程序（而不是从客户端应用调用的简单 WebAPI 控制器，如之前较简单示例所示）执行。
 
 不过，将命令提交到 MediatR 的操作非常类似，如下面的代码所示。
 

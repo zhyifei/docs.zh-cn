@@ -2,12 +2,12 @@
 title: 为基于容器的应用程序选择 Azure 计算平台
 description: 通过 Azure 云和 Windows 容器实现现有 .NET 应用程序的现代化 |为基于容器的应用程序选择 Azure 计算平台
 ms.date: 05/04/2018
-ms.openlocfilehash: 54c5945326fb8a50a39c50552a413580926da2c7
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: 2262d2cf4e69e19e8b78c07c239602dd5dccc3cd
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71331959"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72318664"
 ---
 # <a name="choosing-azure-compute-platforms-for-container-based-applications"></a>为基于容器的应用程序选择 Azure 计算平台
 
@@ -16,7 +16,7 @@ ms.locfileid: "71331959"
 作为*默认*建议，以下是本指南中建议的主要标准：
 
 - **单一单一应用程序：** 选择 Azure App Service
-- **N 层应用程序：** 如果有一个或多个后端服务，请选择 "协调器"，例如 "Azure Kubernetes Service （AKS）" 或 "应用服务"
+- **N 层应用程序：** 如果你有单个或几个后端服务，请选择 "协调器" （如 Azure Kubernetes Service （AKS）或 "应用服务"）
 - **微服务**选择 AKS 或适用于容器的 Azure Web 应用
 - **& 事件处理程序的无服务器函数：** 选择 Azure Functions
 - **大规模批：** 选择 Azure Batch

@@ -2,12 +2,12 @@
 title: 使用 Async和 Await 的任务异步编程模型 (TAP) (C#)
 ms.date: 05/22/2017
 ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
-ms.openlocfilehash: abe1ab777a17ba8cba15a27b02d389a9ede3caf0
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: 3ced168bada4167418bf27861c5b8666b02aa70e
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70167900"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291337"
 ---
 # <a name="task-asynchronous-programming-model"></a>异步编程模型
 
@@ -42,22 +42,31 @@ C# 中的 [Async](../../../language-reference/keywords/async.md) 和 [Await](../
 
 下面的示例演示了一种异步方法。 你应对代码中的几乎所有内容都非常熟悉。
 
-本主题的末尾提供完整的 Windows Presentation Foundation (WPF) 示例文件，可以从[异步示例：“使用 Async 和 Await 的异步编程”示例](https://code.msdn.microsoft.com/Async-Sample-Example-from-9b9f505c)下载此示例。
+本主题的末尾提供完整的 Windows Presentation Foundation (WPF) 示例文件，可以从[异步示例：“使用 Async 和 Await 的异步编程”示例](https://docs.microsoft.com/samples/dotnet/samples/async-and-await-cs/)下载此示例。
 
 ```csharp
 async Task<int> AccessTheWebAsync()
-{
+{ 
     // You need to add a reference to System.Net.Http to declare client.
-    using (HttpClient client = new HttpClient())
-    {
-        Task<string> getStringTask = client.GetStringAsync("https://docs.microsoft.com");
+    var client = new HttpClient();
 
-        DoIndependentWork();
+    // GetStringAsync returns a Task<string>. That means that when you await the
+    // task you'll get a string (urlContents).
+    Task<string> getStringTask = client.GetStringAsync("https://docs.microsoft.com/dotnet");
 
-        string urlContents = await getStringTask;
+    // You can do work here that doesn't rely on the string from GetStringAsync.
+    DoIndependentWork();
 
-        return urlContents.Length;
-    }
+    // The await operator suspends AccessTheWebAsync.
+    //  - AccessTheWebAsync can't continue until getStringTask is complete.
+    //  - Meanwhile, control returns to the caller of AccessTheWebAsync.
+    //  - Control resumes here when getStringTask is complete. 
+    //  - The await operator then retrieves the string result from getStringTask.
+    string urlContents = await getStringTask;
+
+    // The return statement specifies an integer result.
+    // Any methods that are awaiting AccessTheWebAsync retrieve the length value.
+    return urlContents.Length;
 }
 ```
 
@@ -75,23 +84,18 @@ return 语句指定整数结果。 任何等待 `AccessTheWebAsync` 的方法都
 如果 `AccessTheWebAsync` 在调用 `GetStringAsync` 和等待其完成期间不能进行任何工作，则你可以通过在下面的单个语句中调用和等待来简化代码。
 
 ```csharp
-string urlContents = await client.GetStringAsync("https://docs.microsoft.com");
+string urlContents = await client.GetStringAsync("https://docs.microsoft.com/dotnet");
 ```
 
-以下特征总结了使上一个示例成为异步方法的原因。
+以下特征总结了使上一个示例成为异步方法的原因：
 
 - 方法签名包含 `async` 修饰符。
-
 - 按照约定，异步方法的名称以“Async”后缀结尾。
-
 - 返回类型为下列类型之一：
 
   - 如果你的方法有操作数为 `TResult` 类型的返回语句，则为 <xref:System.Threading.Tasks.Task%601>。
-
   - 如果你的方法没有返回语句或具有没有操作数的返回语句，则为 <xref:System.Threading.Tasks.Task>。
-
   - `void`：如果要编写异步事件处理程序。
-
   - 包含 `GetAwaiter` 方法的其他任何类型（自 C# 7.0 起）。
 
   有关详细信息，请参阅[返回类型和参数](#BKMK_ReturnTypesandParameters)部分。
@@ -104,7 +108,7 @@ string urlContents = await client.GetStringAsync("https://docs.microsoft.com");
 
 ## <a name="BKMK_WhatHappensUnderstandinganAsyncMethod"></a> 异步方法的运行机制
 
-异步编程中最需弄清的是控制流是如何从方法移动到方法的。 下图可引导你完成该过程。
+异步编程中最需弄清的是控制流是如何从方法移动到方法的。 下图可引导你完成此过程：
 
 ![跟踪异步程序](./media/task-asynchronous-programming-model/navigation-trace-async-program.png "NavigationTrace")
 
@@ -136,7 +140,7 @@ string urlContents = await client.GetStringAsync("https://docs.microsoft.com");
 8. 当 `AccessTheWebAsync` 具有字符串结果时，该方法可以计算字符串长度。 然后，`AccessTheWebAsync` 工作也将完成，并且等待事件处理程序可继续使用。 在此主题结尾处的完整示例中，可确认事件处理程序检索并打印长度结果的值。
 如果你不熟悉异步编程，请花 1 分钟时间考虑同步行为和异步行为之间的差异。 当其工作完成时（第 5 步）会返回一个同步方法，但当其工作挂起时（第 3 步和第 6 步），异步方法会返回一个任务值。 在异步方法最终完成其工作时，任务会标记为已完成，而结果（如果有）将存储在任务中。
 
-若要详细了解控制流，请参阅[异步程序中的控制流 (C#)](./control-flow-in-async-programs.md)。
+若要详细了解控制流，请参阅[异步程序中的控制流 (C#)](control-flow-in-async-programs.md)。
 
 ## <a name="BKMK_APIAsyncMethods"></a> API 异步方法
 
@@ -162,12 +166,11 @@ Windows 运行时也包含许多可以在 Windows 应用中与 `async` 和 `awai
 
 - 标记的异步方法本身可以通过调用它的方法等待。
 
-异步方法通常包含 `await` 运算符的一个或多个实例，但缺少 `await` 表达式也不会导致生成编译器错误。 如果异步方法未使用 `await` 运算符标记暂停点，那么异步方法会作为同步方法执行，即使有 `async` 修饰符，也不例外。 编译器将为此类方法发布一个警告。
+异步方法通常包含 `await` 运算符的一个或多个实例，但缺少 `await` 表达式也不会导致生成编译器错误。 如果异步方法未使用 `await` 运算符标记暂停点，则该方法会作为同步方法执行，即使有 `async` 修饰符，也不例外。 编译器将为此类方法发布一个警告。
 
 `async` 和 `await` 都是上下文关键字。 有关更多信息和示例，请参见以下主题：
 
 - [async](../../../language-reference/keywords/async.md)
-
 - [await](../../../language-reference/operators/await.md)
 
 ## <a name="BKMK_ReturnTypesandParameters"></a> 返回类型和参数
@@ -180,7 +183,7 @@ Windows 运行时也包含许多可以在 Windows 应用中与 `async` 和 `awai
 
 自 C# 7.0 起，还可以指定任何其他返回类型，前提是类型包含 `GetAwaiter` 方法。 例如，<xref:System.Threading.Tasks.ValueTask%601> 就是这种类型。 可用于 [System.Threading.Tasks.Extension](https://www.nuget.org/packages/System.Threading.Tasks.Extensions/) NuGet 包。
 
-下面的示例演示如何声明并调用可返回 <xref:System.Threading.Tasks.Task%601> 或 <xref:System.Threading.Tasks.Task> 的方法。
+下面的示例演示如何声明并调用可返回 <xref:System.Threading.Tasks.Task%601> 或 <xref:System.Threading.Tasks.Task> 的方法：
 
 ```csharp
 // Signature specifies Task<TResult>
@@ -216,7 +219,7 @@ await GetTaskAsync();
 
 异步方法也可以具有 `void` 返回类型。 该返回类型主要用于定义需要 `void` 返回类型的事件处理程序。 异步事件处理程序通常用作异步程序的起始点。
 
-无法等待具有 `void` 返回类型的异步方法，并且无效返回方法的调用方捕获不到异步方法抛出的任何异常。
+无法等待具有 `void` 返回类型的异步方法，并且无效返回方法的调用方捕获不到异步方法引发的任何异常。
 
 异步方法无法声明 [in](../../../language-reference/keywords/in-parameter-modifier.md)、[ref](../../../language-reference/keywords/ref.md) 或 [out](../../../language-reference/keywords/out-parameter-modifier.md) 参数，但可以调用包含此类参数的方法。 同样，异步方法无法通过引用返回值，但可以调用包含 ref 返回值的方法。
 
@@ -225,11 +228,8 @@ await GetTaskAsync();
 Windows 运行时编程中的异步 API 具有下列返回类型之一（类似于任务）：
 
 - <xref:Windows.Foundation.IAsyncOperation%601>（对应于 <xref:System.Threading.Tasks.Task%601>）
-
 - <xref:Windows.Foundation.IAsyncAction>（对应于 <xref:System.Threading.Tasks.Task>）
-
 - <xref:Windows.Foundation.IAsyncActionWithProgress%601>
-
 - <xref:Windows.Foundation.IAsyncOperationWithProgress%602>
 
 ## <a name="BKMK_NamingConvention"></a> 命名约定
@@ -257,88 +257,9 @@ Windows 运行时编程中的异步 API 具有下列返回类型之一（类似�
 
 ## <a name="BKMK_CompleteExample"></a> 完整示例
 
-下面的代码来自于本主题介绍的 Windows Presentation Foundation (WPF) 应用程序的 MainWindow.xaml.cs 文件。 可以从[异步示例：“使用 Async 和 Await 的异步编程”示例](https://code.msdn.microsoft.com/Async-Sample-Example-from-9b9f505c)下载此示例。
+下面的代码来自于本文介绍的 WPF 应用程序的“MainWindow.xaml.cs”文件  。 可以从[异步示例：“使用 Async 和 Await 的异步编程”示例](https://docs.microsoft.com/samples/dotnet/samples/async-and-await-cs/)下载此示例。
 
-```csharp
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-
-// Add a using directive and a reference for System.Net.Http;
-using System.Net.Http;
-
-namespace AsyncFirstExample
-{
-    public partial class MainWindow : Window
-    {
-        // Mark the event handler with async so you can use await in it.
-        private async void StartButton_Click(object sender, RoutedEventArgs e)
-        {
-            // Call and await separately.
-            //Task<int> getLengthTask = AccessTheWebAsync();
-            //// You can do independent work here.
-            //int contentLength = await getLengthTask;
-
-            int contentLength = await AccessTheWebAsync();
-
-            resultsTextBox.Text +=
-                $"\r\nLength of the downloaded string: {contentLength}.\r\n";
-        }
-
-        // Three things to note in the signature:
-        //  - The method has an async modifier.
-        //  - The return type is Task or Task<T>. (See "Return Types" section.)
-        //    Here, it is Task<int> because the return statement returns an integer.
-        //  - The method name ends in "Async."
-        async Task<int> AccessTheWebAsync()
-        {
-            // You need to add a reference to System.Net.Http to declare client.
-            using (HttpClient client = new HttpClient())
-            {
-                    // GetStringAsync returns a Task<string>. That means that when you await the
-                    // task you'll get a string (urlContents).
-                    Task<string> getStringTask = client.GetStringAsync("https://docs.microsoft.com");
-
-                    // You can do work here that doesn't rely on the string from GetStringAsync.
-                    DoIndependentWork();
-
-                    // The await operator suspends AccessTheWebAsync.
-                    //  - AccessTheWebAsync can't continue until getStringTask is complete.
-                    //  - Meanwhile, control returns to the caller of AccessTheWebAsync.
-                    //  - Control resumes here when getStringTask is complete.
-                    //  - The await operator then retrieves the string result from getStringTask.
-                    string urlContents = await getStringTask;
-
-                    // The return statement specifies an integer result.
-                    // Any methods that are awaiting AccessTheWebAsync retrieve the length value.
-                    return urlContents.Length;
-            }
-        }
-
-        void DoIndependentWork()
-        {
-            resultsTextBox.Text += "Working . . . . . . .\r\n";
-        }
-    }
-}
-
-// Sample Output:
-
-// Working . . . . . . .
-
-// Length of the downloaded string: 25035.
-```
+[!code-csharp[async](~/samples/async/async-and-await/cs/MainWindow.xaml.cs)] 
 
 ## <a name="see-also"></a>请参阅
 

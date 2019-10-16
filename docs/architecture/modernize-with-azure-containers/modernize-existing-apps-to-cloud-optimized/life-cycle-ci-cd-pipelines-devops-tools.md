@@ -2,12 +2,12 @@
 title: 通过云中的 CI/CD 管道和 DevOps 工具保持对应用的生命周期进行现代化
 description: 通过 Azure 云和 Windows 容器实现现有 .NET 应用程序的现代化 |在云中通过 CI/CD 管道和 DevOps 工具现代化应用程序的生命周期
 ms.date: 04/30/2018
-ms.openlocfilehash: 4e4436ac4a622a82cc990b977b03eeae95ca9368
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: d1aa2e156e87cafe99fb994233786f67bf7a81a1
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71181900"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72396253"
 ---
 # <a name="modernize-your-apps-lifecycle-with-cicd-pipelines-and-devops-tools-in-the-cloud"></a>通过云中的 CI/CD 管道和 DevOps 工具保持对应用的生命周期进行现代化
 
@@ -27,7 +27,7 @@ Azure DevOps Services 通过官方 Azure DevOps Services 部署任务支持将�
 
 图4-12 显示了部署到 Azure 容器服务中的 Kubernetes 群集的持续部署管道。
 
-![Azure DevOps Services 连续部署管道，部署到 Kubernetes 群集](./media/image12.png)
+![部署到 Kubernetes 群集的 Azure DevOps Services 屏幕截图。](./media/life-cycle-ci-cd-pipelines-devops-tools/deploy-mvc-app-container-kubernetes.png)
 
 **图4-12。** Azure DevOps Services 连续部署管道，部署到 Kubernetes 群集
 

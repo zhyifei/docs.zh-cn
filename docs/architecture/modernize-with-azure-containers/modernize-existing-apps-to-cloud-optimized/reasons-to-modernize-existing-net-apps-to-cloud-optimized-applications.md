@@ -2,12 +2,12 @@
 title: 将现有 .NET 应用现代化到云优化应用程序的原因
 description: 通过 Azure 云和 Windows 容器实现现有 .NET 应用程序的现代化 |将现有 .NET 应用现代化到云优化应用程序的原因
 ms.date: 04/28/2018
-ms.openlocfilehash: aabce73efaae520a3b59c70d53519b847f2c6a94
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: c86b9ec4d4a92b8daa0fceef0531ed955b9bb2bf
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373936"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72318534"
 ---
 # <a name="reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications"></a>将现有 .NET 应用现代化到云优化应用程序的原因
 
@@ -41,7 +41,7 @@ ms.locfileid: "70373936"
 
 图4-2 显示了云优化应用程序的主要可选支柱。 实现的支柱越多，应用程序的 readier 就能满足客户的预期。
 
-![云优化应用程序的主要支柱](./media/image2.png)
+![命名云优化应用程序的主要要素的关系图。](./media/reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications/main-pillars-cloud-optimized-application.png)
 
 **图 4-2**。 云优化应用程序的主要支柱
 

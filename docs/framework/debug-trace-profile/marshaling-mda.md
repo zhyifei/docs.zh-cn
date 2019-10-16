@@ -31,7 +31,7 @@ name="assembly!Namespace.Class::myChar
 ```  
   
 ## <a name="configuration"></a>配置  
- MDA 配置允许你基于所涉及的字段或方法名称，筛选报告的封送处理信息。  以下示例演示如何使用 `methodFilter``fieldFilter` 和 `match` 元素指定筛选器。  将属性设置为星号（\*）可匹配所有内容。 `name`  
+ MDA 配置允许你基于所涉及的字段或方法名称，筛选报告的封送处理信息。  以下示例演示如何使用 `methodFilter`、`fieldFilter` 和 `match` 元素指定筛选器。  将属性设置为星号（\*）可匹配所有内容。 `name`  
   
 ```xml  
 <mdaConfig>  

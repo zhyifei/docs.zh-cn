@@ -2,12 +2,12 @@
 title: 通过监视和遥测对应用进行现代化
 description: 通过 Azure 云和 Windows 容器实现现有 .NET 应用程序的现代化 |通过监视和遥测实现应用现代化
 ms.date: 04/30/2018
-ms.openlocfilehash: 65c464e27e326f6a60b4879ec787253dea019d92
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 3d629e89a73c870d4b6396c6b1d0ecbe95b79ead
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373954"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72393854"
 ---
 # <a name="modernize-your-apps-with-monitoring-and-telemetry"></a>通过监视和遥测对应用进行现代化
 
@@ -19,7 +19,7 @@ Application Insights 是适用于在多个平台上工作的 web 开发人员的
 
 图4-10 显示了一个示例，说明了 Application Insights 如何监视应用程序以及它如何将这些见解呈现给仪表板。
 
-![Application Insights 监视仪表板](./media/image10.png)
+![Application Insights 监视仪表板的屏幕截图。](./media/modernize-your-apps-with-monitoring-and-telemetry/application-insights-monitoring-dashboard.png)
 
 **图4-10。** Application Insights 监视仪表板
 
@@ -43,7 +43,7 @@ Log Analytics 中的[容器监视解决方案](https://docs.microsoft.com/azure/
 
 图4-11 显示了各种容器主机与代理和 OMS 之间的关系。
 
-![Log Analytics 容器监视解决方案](./media/image11.png)
+![Log Analytics 容器监视解决方案的屏幕截图。](./media/modernize-your-apps-with-monitoring-and-telemetry/log-analytics-container-monitoring-solution.png)
 
 **图4-11。** Log Analytics 容器监视解决方案
 
@@ -89,4 +89,4 @@ Log Analytics 中的[容器监视解决方案](https://docs.microsoft.com/azure/
 
 >[!div class="step-by-step"]
 >[上一页](build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud.md)
->[下一页](modernize-your-apps-lifecycle-with-ci-cd-pipelines-and-devops-tools-in-the-cloud.md)
+>[下一页](life-cycle-ci-cd-pipelines-devops-tools.md)

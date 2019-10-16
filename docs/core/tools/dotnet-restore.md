@@ -2,12 +2,12 @@
 title: dotnet restore 命令
 description: 了解如何使用 dotnet-restore 命令还原依赖项和特定于项目的工具。
 ms.date: 05/29/2018
-ms.openlocfilehash: 0d138e31f8cd5b447c75bffda5164d92ce8eb5a2
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 055a4250755af02ad392877663985f86a647f892
+ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117603"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72275748"
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
@@ -137,7 +137,7 @@ dotnet restore [-h|--help]
 
 `--verbosity <LEVEL>`
 
-设置命令的详细级别。 允许使用的值为 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。
+设置命令的详细级别。 允许使用的值为 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。 默认值是 `minimal`。
 
 `--interactive`
 
@@ -183,7 +183,7 @@ dotnet restore [-h|--help]
 
 `--verbosity <LEVEL>`
 
-设置命令的详细级别。 允许使用的值为 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。
+设置命令的详细级别。 允许使用的值为 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。 默认值为 `minimal`。
 
 ---
 
@@ -205,6 +205,6 @@ dotnet restore [-h|--help]
 
 `dotnet restore -s c:\packages\mypackages -s c:\packages\myotherpackages`
 
-还原当前目录中项目的依赖项和工具，并仅显示最少的输出：
+还原当前目录中项目的依赖项和工具，并显示详细的输出：
 
-`dotnet restore --verbosity minimal`
+`dotnet restore --verbosity detailed`

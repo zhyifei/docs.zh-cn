@@ -6,19 +6,19 @@ helpviewer_keywords:
 - Freezable elements [WPF]
 - PresentationOptions prefix [WPF]
 ms.assetid: 391032dd-2fba-4804-bb8a-3b071797a9f4
-ms.openlocfilehash: e60c4a505db42936f188354f52edd7832fb9632b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d3e0cee293a9585b972b0145da953976ed94b74c
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772835"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991430"
 ---
 # <a name="presentationoptionsfreeze-attribute"></a>PresentationOptions:Freeze 特性
-集<xref:System.Windows.Freezable.IsFrozen%2A>状态变为`true`上包含<xref:System.Windows.Freezable>元素。 默认行为<xref:System.Windows.Freezable>而无需`PresentationOptions:Freeze`指定的属性是<xref:System.Windows.Freezable.IsFrozen%2A>是`false`加载时间和依赖于一般<xref:System.Windows.Freezable>在运行时的行为。  
+将包含`true` <xref:System.Windows.Freezable.IsFrozen%2A> 元素的<xref:System.Windows.Freezable>状态设置为。 如果<xref:System.Windows.Freezable>未指定属性<xref:System.Windows.Freezable.IsFrozen%2A>，则的默认行为<xref:System.Windows.Freezable> 是在加载时，并且依赖于运行时的常规行为。`false` `PresentationOptions:Freeze`  
   
 ## <a name="xaml-attribute-usage"></a>XAML 属性用法  
   
-```  
+```xaml  
 <object  
   xmlns:PresentationOptions="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options"  
   xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"  
@@ -31,15 +31,15 @@ ms.locfileid: "61772835"
   
 |||  
 |-|-|  
-|`PresentationOptions`|XML 命名空间前缀，这可以是任何有效的前缀字符串，每个 XML 1.0 规范。 前缀`PresentationOptions`用于标识此文档中使用。|  
-|`freezableElement`|实例化任何元素派生的类<xref:System.Windows.Freezable>。|  
+|`PresentationOptions`|XML 命名空间前缀，可以是每个 XML 1.0 规范的任何有效的前缀字符串。 在本`PresentationOptions`文档中，前缀用于标识目的。|  
+|`freezableElement`|一个实例化的任何派生类的<xref:System.Windows.Freezable>元素。|  
   
 ## <a name="remarks"></a>备注  
- `Freeze`属性是唯一的属性或其他编程元素中定义`http://schemas.microsoft.com/winfx/2006/xaml/presentation/options`XML 命名空间。 `Freeze`具体来说，以便可以将其指定为可忽略，使用此特殊的命名空间中存在的属性[mc: Ignorable 特性](mc-ignorable-attribute.md)作为根元素声明的一部分。 原因，`Freeze`必须是可以忽略是因为并非所有[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]处理器实现可冻结<xref:System.Windows.Freezable>在加载时; 此功能不是属于[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]规范。  
+ `Freeze`特性是`http://schemas.microsoft.com/winfx/2006/xaml/presentation/options`在 XML 命名空间中定义的唯一特性或其他编程元素。 此特殊命名空间中存在 `Freeze` 属性，因此可将其指定为可忽略，并使用[mc：可忽略属性](mc-ignorable-attribute.md)作为根元素声明的一部分。 `Freeze`必须能够被忽略的原因是，并非所有[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]处理器实现<xref:System.Windows.Freezable>都能够在加载时冻结[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ; 此功能不是规范的组成部分。  
   
- 处理的能力`Freeze`属性专门的内置[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]处理器，用于处理[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]为编译的应用程序。 该属性不受任何类和属性语法不可扩展或可修改。 如果要实现您自己[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]处理器可以选择并行的冻结行为[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)][!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]处理器处理时`Freeze`特性，可以在<xref:System.Windows.Freezable>在加载时的元素。  
+ 处理`Freeze`属性的功能专门内置[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]于处理[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]已编译应用程序的处理器。 任何类都不支持该特性，且特性语法不可扩展或可修改。 如果要实现[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]自己的处理器，可以选择在加载时并行处理元素上<xref:System.Windows.Freezable>的[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] `Freeze`属性时，并行处理[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]处理器的冻结行为。  
   
- 任何值`Freeze`特性，除`true`（不区分大小写） 生成的负载时错误。 (指定`Freeze`属性作为`false`不是错误，但这已经是默认值，因此将设置为`false`不执行任何操作)。  
+ `Freeze` 除`true` （不区分大小写）以外的其他属性值将生成加载时错误。 （将`Freeze`属性指定为`false`不是错误，但这已是默认值，因此，将设置`false`为不执行任何操作）。  
   
 ## <a name="see-also"></a>请参阅
 

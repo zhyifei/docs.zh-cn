@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 185d7aea-68a6-4bd8-adde-45050f33170a
-ms.openlocfilehash: 3afac76fc977f992e780d2ebe302c1ed94568835
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
-ms.translationtype: HT
+ms.openlocfilehash: 0faf4d77b1ea2881ba8e029d544f2e42cf552349
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044398"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989689"
 ---
 # <a name="how-to-create-a-flowchart-workflow"></a>如何：创建 Flowchart 工作流
 工作流可基于内置活动以及自定义活动来构造。 本主题介绍如何创建一个工作流，该工作流使用内置活动（如<xref:System.Activities.Statements.Flowchart>活动）和上一步[中的自定义活动如何：创建活动](how-to-create-an-activity.md)主题。 该工作流模拟猜数游戏。  
@@ -43,7 +43,7 @@ ms.locfileid: "70044398"
   
 5. 单击 "**创建自变量**"。  
   
-6. 在`Turns`新添加    的参数下方的 "名称" 框中键入，从 "方向" 下拉列表中选择 "向外"，从 "参数类型" 下拉列表中选择 "Int32"，然后按 enter。 `MaxNumber`  
+6. 在`Turns`新添加的参数下方的 "名称" 框中键入，从 "方向" 下拉列表中选择 "向外"，从 "参数类型" 下拉列表中选择 "Int32"，然后按 enter。 `MaxNumber`  
   
 7. 单击活动设计器左下方的 "**参数**"，以关闭 "**参数**" 窗格。  
   
@@ -118,15 +118,15 @@ ms.locfileid: "70044398"
   
 9. 单击第二个 " **FlowDecision** " 活动将其选中。 在 "**属性" 窗口**中，在 " **Condition** " 属性值框中键入以下表达式。  
   
-    ```
-    Guess < Target  
+    ```text
+    Guess < Target
     ```  
   
 10. 将两个 " **WriteLine** " 活动从 "**工具箱**" 的 "**基元**" 部分拖放到两个**FlowDecision**活动下。 将底部**FlowDecision**活动的**真正**操作连接到最左端的**Writeline**活动，并将**False**操作连接到最右侧的**writeline**活动。  
   
 11. 单击最左边的 " **WriteLine** " 活动将其选中，然后在 "**属性" 窗口**的 " **Text** " 属性值框中键入以下表达式。  
   
-    ```
+    ```text
     "Your guess is too low."  
     ```  
   
@@ -134,7 +134,7 @@ ms.locfileid: "70044398"
   
 13. 单击最右边的 " **WriteLine** " 活动将其选中，然后在 "**属性" 窗口**的 " **Text** " 属性值框中键入以下表达式。  
   
-    ```
+    ```text
     "Your guess is too high."  
     ```  
   

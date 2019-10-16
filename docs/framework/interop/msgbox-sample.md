@@ -30,7 +30,7 @@ ms.locfileid: "71151740"
        UINT uType);  
     ```  
   
- 在此示例中，`NativeMethods` 类包含 `MsgBoxSample` 类调用的每一个未托管的函数的托管原型。 托管原型方法 `MsgBox``MsgBox2` 和 `MsgBox3` 对于相同的未托管的函数有不同的声明。  
+ 在此示例中，`NativeMethods` 类包含 `MsgBoxSample` 类调用的每一个未托管的函数的托管原型。 托管原型方法 `MsgBox`、`MsgBox2` 和 `MsgBox3` 对于相同的未托管的函数有不同的声明。  
   
  由于指定为 ANSI 的字符类型与 Unicode 函数名称的入口点 `MessageBoxW` 不匹配，`MsgBox2` 的声明会在消息框中生成不正确的输出。 `MsgBox3` 的声明会在 EntryPoint、CharSet 和 ExactSpelling 字段之间创建不匹配。 调用时，`MsgBox3` 会引发异常。 有关字符串命名和名称封送处理的详细信息，请参阅[指定字符集](specifying-a-character-set.md)。  
   
