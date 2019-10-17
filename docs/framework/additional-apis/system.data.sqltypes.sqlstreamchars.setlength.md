@@ -1,5 +1,5 @@
 ---
-title: SqlStreamChars.SetLength(Int64) 方法 (System.Data.SqlTypes)
+title: SqlStreamChars. SetLength （Int64）方法（SqlTypes）
 author: stevestein
 ms.author: sstein
 ms.date: 12/20/2018
@@ -12,37 +12,37 @@ api_location:
 - System.Data.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 6bdf7bf5b998135652bc63d8d3e6c71a61475d20
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 291d6e9395581f2370dafc728521a314d54a686d
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634294"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395727"
 ---
-# <a name="sqlstreamcharssetlengthint64-method"></a><span data-ttu-id="32a96-102">SqlStreamChars.SetLength(Int64) 方法</span><span class="sxs-lookup"><span data-stu-id="32a96-102">SqlStreamChars.SetLength(Int64) Method</span></span>
+# <a name="sqlstreamcharssetlengthint64-method"></a><span data-ttu-id="94588-102">SqlStreamChars. SetLength （Int64）方法</span><span class="sxs-lookup"><span data-stu-id="94588-102">SqlStreamChars.SetLength(Int64) Method</span></span>
 
-<span data-ttu-id="32a96-103">当在派生类中重写时释放流使用的资源。</span><span class="sxs-lookup"><span data-stu-id="32a96-103">When overridden in a derived class, releases the resources used by the stream.</span></span> <span data-ttu-id="32a96-104">包含此方法的程序集具有与 SQLAccess.dll 友元关系。</span><span class="sxs-lookup"><span data-stu-id="32a96-104">The assembly that contains this method has a friend relationship with SQLAccess.dll.</span></span> <span data-ttu-id="32a96-105">它被用于 SQL server 上。</span><span class="sxs-lookup"><span data-stu-id="32a96-105">It's intended for use by SQL Server.</span></span> <span data-ttu-id="32a96-106">对于其他数据库，使用提供该数据库的宿主机制。</span><span class="sxs-lookup"><span data-stu-id="32a96-106">For other databases, use the hosting mechanism provided by that database.</span></span>
+<span data-ttu-id="94588-103">当在派生类中重写时，释放流使用的资源。</span><span class="sxs-lookup"><span data-stu-id="94588-103">When overridden in a derived class, releases the resources used by the stream.</span></span> <span data-ttu-id="94588-104">包含此方法的程序集与 SQLAccess 具有友元关系。</span><span class="sxs-lookup"><span data-stu-id="94588-104">The assembly that contains this method has a friend relationship with SQLAccess.dll.</span></span> <span data-ttu-id="94588-105">它旨在 SQL Server 使用。</span><span class="sxs-lookup"><span data-stu-id="94588-105">It's intended for use by SQL Server.</span></span> <span data-ttu-id="94588-106">对于其他数据库，请使用该数据库提供的托管机制。</span><span class="sxs-lookup"><span data-stu-id="94588-106">For other databases, use the hosting mechanism provided by that database.</span></span>
 
 ```csharp
 public abstract void SetLength (long value);
 ```
 
-## <a name="parameters"></a><span data-ttu-id="32a96-107">参数</span><span class="sxs-lookup"><span data-stu-id="32a96-107">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="94588-107">参数</span><span class="sxs-lookup"><span data-stu-id="94588-107">Parameters</span></span>
 
 `value`\
-<span data-ttu-id="32a96-108">所需的当前流的长度（以字节表示）。</span><span class="sxs-lookup"><span data-stu-id="32a96-108">The desired length of the current stream in bytes.</span></span>
+<span data-ttu-id="94588-108">所需的当前流的长度（以字节表示）。</span><span class="sxs-lookup"><span data-stu-id="94588-108">The desired length of the current stream in bytes.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="32a96-109">备注</span><span class="sxs-lookup"><span data-stu-id="32a96-109">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="94588-109">备注</span><span class="sxs-lookup"><span data-stu-id="94588-109">Remarks</span></span>
 
 > [!WARNING]
-> <span data-ttu-id="32a96-110">`SqlStreamChars.SetLength`方法是私有的不适合直接在代码中使用。</span><span class="sxs-lookup"><span data-stu-id="32a96-110">The `SqlStreamChars.SetLength` method is private and is not meant to be used directly in your code.</span></span>
+> <span data-ttu-id="94588-110">@No__t-0 方法是私有的，不应在代码中直接使用。</span><span class="sxs-lookup"><span data-stu-id="94588-110">The `SqlStreamChars.SetLength` method is private and is not meant to be used directly in your code.</span></span>
 >
-> <span data-ttu-id="32a96-111">Microsoft 不支持在生产应用程序在任何情况下使用此字段。</span><span class="sxs-lookup"><span data-stu-id="32a96-111">Microsoft does not support the use of this field in a production application under any circumstance.</span></span>
+> <span data-ttu-id="94588-111">在任何情况下，Microsoft 不支持在生产应用程序中使用此方法。</span><span class="sxs-lookup"><span data-stu-id="94588-111">Microsoft does not support the use of this method in a production application under any circumstance.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="32a96-112">要求</span><span class="sxs-lookup"><span data-stu-id="32a96-112">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="94588-112">要求</span><span class="sxs-lookup"><span data-stu-id="94588-112">Requirements</span></span>
 
-<span data-ttu-id="32a96-113">**Namespace**：<xref:System.Data.SqlTypes></span><span class="sxs-lookup"><span data-stu-id="32a96-113">**Namespace:** <xref:System.Data.SqlTypes></span></span>
+<span data-ttu-id="94588-113">**命名空间：** <xref:System.Data.SqlTypes></span><span class="sxs-lookup"><span data-stu-id="94588-113">**Namespace:** <xref:System.Data.SqlTypes></span></span>
 
-<span data-ttu-id="32a96-114">**程序集：** System.Data （在 System.Data.dll 中)</span><span class="sxs-lookup"><span data-stu-id="32a96-114">**Assembly:** System.Data (in System.Data.dll)</span></span>
+<span data-ttu-id="94588-114">**程序集：** System.object （在 System.web 中）</span><span class="sxs-lookup"><span data-stu-id="94588-114">**Assembly:** System.Data (in System.Data.dll)</span></span>
 
-<span data-ttu-id="32a96-115">**.NET framework 版本：** 自 2.0 之后可用。</span><span class="sxs-lookup"><span data-stu-id="32a96-115">**.NET Framework versions:** Available since 2.0.</span></span>
+<span data-ttu-id="94588-115">**.NET Framework 版本：** 自2.0 起可用。</span><span class="sxs-lookup"><span data-stu-id="94588-115">**.NET Framework versions:** Available since 2.0.</span></span>
