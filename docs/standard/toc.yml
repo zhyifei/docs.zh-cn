@@ -1,0 +1,145 @@
+- name: .NET Standard 指南
+  href: index.md
+- name: .NET 入门
+  href: get-started.md
+- name: .NET 教程
+  href: tour.md
+- name: .NET 体系结构组件
+  href: components.md
+- name: .NET Standard
+  href: net-standard.md
+  items:
+    - name: .NET Standard 中的新增功能
+      href: whats-new/whats-new-in-dotnet-standard.md
+- name: 目标框架
+  href: frameworks.md
+- name: .NET 术语表
+  href: glossary.md
+- name: 开放源代码库指南
+  href: library-guidance/
+- name: 为服务器应用选择 .NET Core 或 .NET Framework
+  href: choosing-core-framework-server.md
+- name: 什么是“托管代码”？
+  href: managed-code.md
+  items:
+    - name: 自动内存管理
+      href: automatic-memory-management.md
+- name: 公共语言运行时 (CLR)
+  href: clr.md
+- name: 语言独立
+  href: language-independence.md
+  items:
+    - name: 语言独立性和与语言无关的组件
+      href: language-independence-and-language-independent-components.md
+- name: 框架库
+  href: framework-libraries.md
+  items:
+    - name: 类库概述
+      href: class-library-overview.md
+    - name: 基类型
+      href: base-types/
+- name: .NET 类库
+  href: class-libraries.md
+- name: 分析器
+  href: analyzers/index.md
+  items:
+    - name: API 分析器
+      href: analyzers/api-analyzer.md
+    - name: 可移植性分析器
+      href: analyzers/portability-analyzer.md
+    - name: 框架分析器
+      href: analyzers/framework-analyzer.md
+- name: 处理和引发异常
+  href: exceptions/
+- name: .NET 中的程序集
+  href: assembly/
+- name: 垃圾回收
+  href: garbage-collection/
+- name: 泛型类型
+  href: generics.md
+- name: 委托和 lambda
+  href: delegates-lambdas.md
+- name: LINQ
+  href: using-linq.md
+- name: 常规类型系统和公共语言规范
+  href: common-type-system.md
+- name: 并行处理、并发和异步
+  href: parallel-processing-and-concurrency.md
+  items:
+    - name: 异步编程
+      href: async.md
+      items:
+        - name: 深层异步编程
+          href: async-in-depth.md
+        - name: 异步编程模式
+          href: asynchronous-programming-patterns/
+    - name: 并行编程
+      href: parallel-programming/
+    - name: 线程
+      href: threading/
+- name: 内存和跨度相关类型
+  href: memory-and-spans/index.md
+  items:
+    - name: 内存<T>和跨度<T>使用准则
+      href: memory-and-spans/memory-t-usage-guidelines.md
+- name: 本机互操作性
+  href: native-interop/index.md
+  items:
+    - name: P/Invoke
+      href: native-interop/pinvoke.md
+    - name: 类型封送
+      href: native-interop/type-marshaling.md
+    - name: 自定义结构封送
+      href: native-interop/customize-struct-marshaling.md
+    - name: 自定义参数封送
+      href: native-interop/customize-parameter-marshaling.md
+    - name: 互操作指南
+      href: native-interop/best-practices.md
+    - name: 字符集和封送
+      href: native-interop/charset.md
+    - name: COM 互操作
+      href: native-interop/cominterop.md
+      items:
+        - name: COM 包装
+          href: native-interop/com-wrappers.md
+          items:
+            - name: 运行时可调用包装
+              href: native-interop/runtime-callable-wrapper.md
+            - name: COM 可调用包装
+              href: native-interop/com-callable-wrapper.md
+        - name: 为 COM 互操作限定 .NET 类型
+          href: native-interop/qualify-net-types-for-interoperation.md
+    - name: 应用互操作特性
+      href: native-interop/apply-interop-attributes.md
+- name: 集合和数据结构
+  href: collections/
+- name: .NET 中的数字
+  href: numerics.md
+- name: 日期、时间和时区
+  href: datetime/
+- name: 事件
+  href: events/
+- name: 托管执行过程
+  href: managed-execution-process.md
+- name: 元数据和自描述组件
+  href: metadata-and-self-describing-components.md
+- name: 生成控制台应用程序
+  href: building-console-apps.md
+- name: 应用程序要点
+  href: application-essentials.md
+- name: 文件和流 I/O
+  href: io/index.md
+- name: 全球化和本地化
+  href: globalization-localization/
+- name: 特性
+  href: attributes/
+- name: 框架设计准则
+  href: design-guidelines/
+- name: XML 文档和数据
+  href: data/xml/
+- name: 安全性
+  href: security/
+- name: 序列化
+  href: serialization/
+- name: 针对多个平台开发
+  href: cross-platform/
