@@ -4,12 +4,12 @@ description: 在 IaaS、PaaS、容器和无服务器之间进行比较时，可�
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 4cc8442509fc8a0e2cc0eb797365423458e77684
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: c745a4eb1c6f4a00bf139100b02f31cf3327d01e
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834340"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522725"
 ---
 # <a name="architecture-deployment-approaches"></a>体系结构部署方法
 
@@ -19,38 +19,38 @@ ms.locfileid: "71834340"
 
 [N 层体系结构模式](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/n-tier)是一种成熟的体系结构，只是指将各种逻辑层分为单独的物理层的应用程序。 N 层体系结构是 N 层体系结构的物理实现。 此体系结构的最常见实现包括：
 
-* 表示层，例如 web 应用。
-* API 或数据访问层，如 REST API。
-* 数据层，如 SQL 数据库。
+- 表示层，例如 web 应用。
+- API 或数据访问层，如 REST API。
+- 数据层，如 SQL 数据库。
 
 ![N 层体系结构](./media/n-tier-architecture.png)
 
 N 层解决方案具有以下特征：
 
-* 项目通常与层对齐。
-* 层的测试可能以不同的方式进行。
-* 层提供抽象层，例如，表示层通常未知的是数据层的实现细节。
-* 通常，层只与相邻层交互。
-* 版本通常在项目中进行管理，并因此进行层级管理。 简单的 API 更改可能需要整个中间层的新版本。
+- 项目通常与层对齐。
+- 层的测试可能以不同的方式进行。
+- 层提供抽象层，例如，表示层通常未知的是数据层的实现细节。
+- 通常，层只与相邻层交互。
+- 版本通常在项目中进行管理，并因此进行层级管理。 简单的 API 更改可能需要整个中间层的新版本。
 
 此方法具有多项优势，包括：
 
-* 数据库的隔离（通常是前端不能直接访问数据库后端）。
-* 重新使用 API （例如，移动、桌面和 web 应用客户端可以重复使用相同的 Api）。
-* 相互独立地扩展层的能力。
-* 重构隔离：可以重构一个层，而不会影响其他层。
+- 数据库的隔离（通常是前端不能直接访问数据库后端）。
+- 重新使用 API （例如，移动、桌面和 web 应用客户端可以重复使用相同的 Api）。
+- 相互独立地扩展层的能力。
+- 重构隔离：可以重构一个层，而不会影响其他层。
 
 ## <a name="on-premises-and-infrastructure-as-a-service-iaas"></a>本地和基础结构即服务（IaaS）
 
 托管应用程序的传统方法需要购买硬件，并管理所有软件安装（包括操作系统）。 最初，这涉及到昂贵的数据中心和物理硬件。 操作物理硬件附带的难题包括：
 
-* 需要购买额外的 "以防万一" 或峰值需求方案。
-* 保护对硬件的物理访问。
-* 硬件故障（例如磁盘故障）的责任。
-* 成本.
-* 配置路由器和负载均衡器。
-* 电源冗余。
-* 保护软件访问。
+- 需要购买额外的 "以防万一" 或峰值需求方案。
+- 保护对硬件的物理访问。
+- 硬件故障（例如磁盘故障）的责任。
+- 成本.
+- 配置路由器和负载均衡器。
+- 电源冗余。
+- 保护软件访问。
 
 ![IaaS 方法](./media/iaas-approach.png)
 
@@ -62,22 +62,22 @@ N 层解决方案具有以下特征：
 
 有关详细信息，请参阅[虚拟机](https://docs.microsoft.com/azure/virtual-machines/)。
 
-## <a name="platform-as-a-service-paas"></a>平台即服务 (PaaS)
+## <a name="platform-as-a-service-paas"></a>平台即服务（PaaS）
 
 平台即服务（PaaS）提供了已配置的解决方案，开发人员可以直接将其插入。 PaaS 是托管托管的另一种术语。 这样就无需管理基本操作系统、安全修补程序，在许多情况下，都有任何第三方依赖项。 平台示例包括 web 应用程序、数据库和移动后端。
 
 PaaS 解决了 IaaS 常见的挑战。 PaaS 允许开发人员将精力集中在代码或数据库架构上，而不是部署方式。 PaaS 的优点包括：
 
-* 为使用的模型付费，从而消除了在闲置计算机上投入的开销。
-* 直接部署和改进的 DevOps、持续集成（CI）和持续交付（CD）管道。
-* 自动升级、更新和安全修补程序。
-* 向外扩展和向上扩展（弹性缩放）。
+- 为使用的模型付费，从而消除了在闲置计算机上投入的开销。
+- 直接部署和改进的 DevOps、持续集成（CI）和持续交付（CD）管道。
+- 自动升级、更新和安全修补程序。
+- 向外扩展和向上扩展（弹性缩放）。
 
 PaaS 的主要缺点是供应商锁定。 例如，某些 PaaS 提供程序仅支持 ASP.NET、node.js 或其他特定语言和平台。 诸如 Azure App Service 之类的产品已演变为满足多个平台的需要，并支持多种语言和框架来托管 web 应用。
 
 ![平台即服务体系结构](./media/paas-architecture.png)
 
-## <a name="software-as-a-service-saas"></a>软件即服务 (SaaS)
+## <a name="software-as-a-service-saas"></a>软件即服务（SaaS）
 
 软件即服务或 SaaS 集中托管，无需本地安装或预配即可使用。 SaaS 通常在 PaaS 的顶层托管为部署软件的平台。 SaaS 提供要运行的服务，并与现有软件连接。 SaaS 通常是行业特定的。 SaaS 经常获得许可，通常提供客户端/服务器模型。 大多数新式 SaaS 产品为客户端使用基于 web 的应用。 公司通常将 SaaS 视为许可证产品/服务的业务解决方案。 它不经常作为应用程序的可伸缩性和可维护性的体系结构注意事项来实现。 事实上，大多数 SaaS 解决方案都是在 IaaS、PaaS 和/或无服务器的后端上构建的。
 
@@ -89,11 +89,11 @@ PaaS 的主要缺点是供应商锁定。 例如，某些 PaaS 提供程序仅�
 
 容器的优点包括：
 
-* 轻型和可移植
-* 自包含，无需安装依赖项
-* 提供一致的环境，不管主机（在便携式计算机上的便携式计算机上的运行完全相同）
-* 可以快速预配以进行横向扩展
-* 可以快速重新启动以从故障中恢复
+- 轻型和可移植
+- 自包含，无需安装依赖项
+- 提供一致的环境，不管主机（在便携式计算机上的便携式计算机上的运行完全相同）
+- 可以快速预配以进行横向扩展
+- 可以快速重新启动以从故障中恢复
 
 容器在容器主机上运行（反过来可以在裸机计算机或虚拟机上运行）。 同一容器的多个容器或实例可以在单个主机上运行。 若要实现真正的故障转移和恢复，必须在主机之间扩展容器。
 
@@ -125,10 +125,10 @@ PaaS 的主要缺点是供应商锁定。 例如，某些 PaaS 提供程序仅�
 
 无服务器的优点包括：
 
-* **高密度。** 与容器或虚拟机相比，同一个无服务器代码的多个实例可以在同一主机上运行。 实例扩展到多个主机的 scale out 和复原能力。
-* **微计费**。 大多数无服务器提供程序基于无服务器执行计费，在某些情况下可节省大量成本。
-* **即时缩放**。 无服务器可进行扩展以自动、快速地匹配工作负载。
-* **缩短上市时间**开发人员专注于代码并直接部署到无服务器平台。 组件可以彼此独立地发布。
+- **高密度。** 与容器或虚拟机相比，同一个无服务器代码的多个实例可以在同一主机上运行。 实例扩展到多个主机的 scale out 和复原能力。
+- **微计费。** 大多数无服务器提供程序基于无服务器执行计费，在某些情况下可节省大量成本。
+- **即时缩放。** 无服务器可进行扩展以自动、快速地匹配工作负载。
+- **缩短上市时间。** 开发人员专注于代码并直接部署到无服务器平台。 组件可以彼此独立地发布。
 
 无服务器最常在计算的上下文中讨论，但也可以应用于数据。 例如， [AZURE SQL](https://docs.microsoft.com/azure/sql-database)和[Cosmos DB](https://docs.microsoft.com/azure/cosmos-db)都提供不要求你配置主机或群集的云数据库。 本书重点介绍无服务器计算。
 
@@ -138,32 +138,32 @@ PaaS 的主要缺点是供应商锁定。 例如，某些 PaaS 提供程序仅�
 
 |         |IaaS     |PaaS     |容器|无服务器|
 |---------|---------|---------|---------|----------|
-|缩放|VM       |实例 |应用      |Functions  |
-|**概括**|硬件|平台|OS 主机|运行时   |
-|**单位** |VM       |项目  |图像    |代码      |
+|缩放|VMNETWORK       |实例 |应用      |函数  |
+|**概括**|硬件|Platform|OS 主机|运行时   |
+|**单位** |VMNETWORK       |项目  |Image    |代码      |
 |**生存期**|个月|天到月|分钟到天|毫秒到分钟|
-|**职责**|应用程序、依赖项、运行时和操作系统|应用程序和依赖项|应用程序、依赖项和运行时|Functions
+|**职责**|应用程序、依赖项、运行时和操作系统|应用程序和依赖项|应用程序、依赖项和运行时|函数
 
-* **Scale**指用于缩放应用程序的单位
-* **抽象化**是指由实现抽象的层
-* **单位**指的是部署的范围
-* **生存期**指的是特定实例的典型运行时
-* **责任**是指构建、部署和维护应用程序所产生的开销
+- **Scale**指用于缩放应用程序的单位
+- **抽象化**是指由实现抽象的层
+- **单位**指的是部署的范围
+- **生存期**指的是特定实例的典型运行时
+- **责任**是指构建、部署和维护应用程序所产生的开销
 
 下一章将重点介绍无服务器体系结构、用例和设计模式。
 
 ## <a name="recommended-resources"></a>推荐的资源
 
-* [Azure 应用程序体系结构指南](https://docs.microsoft.com/azure/architecture/guide/)
-* [Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db)
-* [Azure SQL](https://docs.microsoft.com/azure/sql-database)
-* [N 层体系结构模式](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/n-tier)
-* [Azure 上的 Kubernetes](https://docs.microsoft.com/azure/aks/intro-kubernetes)
-* [微服务](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/microservices)
-* [虚拟机 N 层参考体系结构](https://docs.microsoft.com/azure/architecture/reference-architectures/virtual-machines-windows/n-tier)
-* [虚拟机](https://docs.microsoft.com/azure/virtual-machines/)
-* [什么是 Docker？](../microservices/container-docker-introduction/docker-defined.md)
-* [Wingtip 票证 SaaS 应用程序](https://docs.microsoft.com/azure/sql-database/saas-tenancy-welcome-wingtip-tickets-app)
+- [Azure 应用程序体系结构指南](https://docs.microsoft.com/azure/architecture/guide/)
+- [Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db)
+- [Azure SQL](https://docs.microsoft.com/azure/sql-database)
+- [N 层体系结构模式](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/n-tier)
+- [Azure 上的 Kubernetes](https://docs.microsoft.com/azure/aks/intro-kubernetes)
+- [微服务](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/microservices)
+- [虚拟机 N 层参考体系结构](https://docs.microsoft.com/azure/architecture/reference-architectures/virtual-machines-windows/n-tier)
+- [虚拟机](https://docs.microsoft.com/azure/virtual-machines/)
+- [什么是 Docker？](../microservices/container-docker-introduction/docker-defined.md)
+- [Wingtip 票证 SaaS 应用程序](https://docs.microsoft.com/azure/sql-database/saas-tenancy-welcome-wingtip-tickets-app)
 
 >[!div class="step-by-step"]
 >[上一页](architecture-approaches.md)

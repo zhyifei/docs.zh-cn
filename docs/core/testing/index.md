@@ -5,12 +5,12 @@ author: ardalis
 ms.author: wiwagn
 ms.date: 08/30/2017
 ms.custom: seodec18
-ms.openlocfilehash: 835e7c0cffbcd5857c33694586b4d63511ecadb8
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 006ccf0370f8014e5021275c4d38cc50bf1c076f
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926298"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522909"
 ---
 # <a name="unit-testing-in-net-core-and-net-standard"></a>.NET Core 和 .NET Standard 中的单元测试
 
@@ -39,30 +39,30 @@ ms.locfileid: "70926298"
 
 .NET Core 单元测试项目支持：
 
-* [C#](../../csharp/index.md)
-* [F#](../../fsharp/index.md)
-* [Visual Basic](../../visual-basic/index.md) 
+- [C#](../../csharp/index.md)
+- [F#](../../fsharp/index.md)
+- [Visual Basic](../../visual-basic/index.md) 
 
 还可以在以下各项之间进行选择：
 
-* [xUnit](https://xunit.github.io) 
-* [NUnit](https://nunit.org)
-* [MSTest](https://github.com/Microsoft/testfx-docs)
+- [xUnit](https://xunit.github.io) 
+- [NUnit](https://nunit.org)
+- [MSTest](https://github.com/Microsoft/testfx-docs)
 
 可在以下演练中了解详细信息：
 
-* [结合使用 .NET Core CLI 与 xUnit  和 C#  ](unit-testing-with-dotnet-test.md) 创建单元测试。
-* [结合使用 .NET Core CLI 与 NUnit 和 C#](unit-testing-with-nunit.md) 创建单元测试   。
-* [结合使用 .NET Core CLI 与 MSTest  和 C#  ](unit-testing-with-mstest.md) 创建单元测试。
-* [结合使用 .NET Core CLI 与 xUnit  和 F#  ](unit-testing-fsharp-with-dotnet-test.md) 创建单元测试。
-* [结合使用 .NET Core CLI 与 NUnit 和 F#](unit-testing-fsharp-with-nunit.md) 创建单元测试   。
-* [结合使用 .NET Core CLI 与 MSTest  和 F#  ](unit-testing-fsharp-with-mstest.md) 创建单元测试。
-* [结合使用 .NET Core CLI 与 xUnit  和 Visual Basic  ](unit-testing-visual-basic-with-dotnet-test.md) 创建单元测试。
-* [结合使用 .NET Core CLI 与 NUnit 和 Visual Basic](unit-testing-visual-basic-with-nunit.md) 创建单元测试   。
-* [结合使用 .NET Core CLI 与 MSTest  和 Visual Basic  ](unit-testing-visual-basic-with-mstest.md) 创建单元测试。
+- [结合使用 .NET Core CLI 与 xUnit  和 C#  ](unit-testing-with-dotnet-test.md) 创建单元测试。
+- [结合使用 .NET Core CLI 与 NUnit 和 C#](unit-testing-with-nunit.md) 创建单元测试   。
+- [结合使用 .NET Core CLI 与 MSTest  和 C#  ](unit-testing-with-mstest.md) 创建单元测试。
+- [结合使用 .NET Core CLI 与 xUnit  和 F#  ](unit-testing-fsharp-with-dotnet-test.md) 创建单元测试。
+- [结合使用 .NET Core CLI 与 NUnit 和 F#](unit-testing-fsharp-with-nunit.md) 创建单元测试   。
+- [结合使用 .NET Core CLI 与 MSTest  和 F#  ](unit-testing-fsharp-with-mstest.md) 创建单元测试。
+- [结合使用 .NET Core CLI 与 xUnit  和 Visual Basic  ](unit-testing-visual-basic-with-dotnet-test.md) 创建单元测试。
+- [结合使用 .NET Core CLI 与 NUnit 和 Visual Basic](unit-testing-visual-basic-with-nunit.md) 创建单元测试   。
+- [结合使用 .NET Core CLI 与 MSTest  和 Visual Basic  ](unit-testing-visual-basic-with-mstest.md) 创建单元测试。
 
 可在以下文章中了解详细信息：
 
-* Visual Studio Enterprise 提供用于 .NET Core 的卓越测试工具。 有关详细信息，请查看 [Live Unit Testing](/visualstudio/test/live-unit-testing) 或[代码覆盖率](https://github.com/Microsoft/vstest-docs/blob/master/docs/analyze.md#working-with-code-coverage)。
-* 有关如何运行选择性单元测试的详细信息，请参阅[运行选择性单元测试](selective-unit-tests.md)或[使用 Visual Studio 添加和排除测试](/visualstudio/test/live-unit-testing#include-and-exclude-test-projects-and-test-methods)。
-* [如何通过 .NET Core 和 Visual Studio 使用 xUnit](https://xunit.github.io/docs/getting-started-dotnet-core.html)。
+- Visual Studio Enterprise 提供用于 .NET Core 的卓越测试工具。 有关详细信息，请查看 [Live Unit Testing](/visualstudio/test/live-unit-testing) 或[代码覆盖率](https://github.com/Microsoft/vstest-docs/blob/master/docs/analyze.md#working-with-code-coverage)。
+- 有关如何运行选择性单元测试的详细信息，请参阅[运行选择性单元测试](selective-unit-tests.md)或[使用 Visual Studio 添加和排除测试](/visualstudio/test/live-unit-testing#include-and-exclude-test-projects-and-test-methods)。
+- [如何通过 .NET Core 和 Visual Studio 使用 xUnit](https://xunit.github.io/docs/getting-started-dotnet-core.html)。

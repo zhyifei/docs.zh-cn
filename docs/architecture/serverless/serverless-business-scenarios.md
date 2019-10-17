@@ -4,12 +4,12 @@ description: 通过访问从图像处理到移动后端和 ETL 管道的示例�
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 7024a33f8a7fccd6afa51c126454afedd87cceee
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 8a2301b3c7a5f4a1f465677f31371d5b94783692
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834303"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522390"
 ---
 # <a name="serverless-business-scenarios-and-use-cases"></a>无服务器业务方案和用例
 
@@ -27,7 +27,7 @@ ms.locfileid: "71834303"
 
 ![自动映像库](./media/automated-image-gallery.png)
 
-可在此处获取完整的存储库和生成逻辑应用的说明：[事件网格粘附](https://github.com/JeremyLikness/Event-Grid-Glue)。
+用于生成逻辑应用的完整存储库和说明可在此处找到：[事件网格粘附](https://github.com/JeremyLikness/Event-Grid-Glue)。
 
 ## <a name="cross-platform-mobile-client-using-xamarinforms-and-functions"></a>使用 Xamarin 的跨平台移动客户端。窗体和函数
 
@@ -55,7 +55,7 @@ ms.locfileid: "71834303"
 
 代理提供单个 API 终结点，该终结点经过更新，可在移动到无服务器函数时重新路由单独的请求。
 
-可以查看视频来完成整个迁移：[无服务器 Azure 功能的提升和转移](https://channel9.msdn.com/Events/Connect/2017/E102)。 访问示例代码：[引入你自己的应用](https://github.com/JeremyLikness/bring-own-app-connect-17)。
+可以观看整个迁移的视频：通过[无服务器 Azure 功能](https://channel9.msdn.com/Events/Connect/2017/E102)进行直接迁移。 访问示例代码：[引入自己的应用](https://github.com/JeremyLikness/bring-own-app-connect-17)。
 
 ## <a name="parse-a-csv-file-and-insert-into-a-database"></a>分析 CSV 文件并将其插入到数据库中
 
@@ -77,7 +77,7 @@ Azure Functions 用于提供单个页面应用程序（SPA），该应用程序�
 
 ![Power BI 示例](./media/power-bi-example.png)
 
-可在此处获取完整的链接缩短符存储库，其中包含说明：[无服务器 URL 缩短符](https://github.com/jeremylikness/serverless-url-shortener)。 可在此处阅读有关简化版本的信息：[Azure Storage for 无服务器 .net 应用（分钟）](https://devblogs.microsoft.com/aspnet/azure-storage-for-serverless-net-apps-in-minutes/)。
+可在此处获取完整的链接缩短符存储库，其中包含说明：[无服务器 URL 缩短符](https://github.com/jeremylikness/serverless-url-shortener)。 你可以在此处阅读有关简化版本的信息：[以分钟为单位的无服务器 .net 应用的 Azure 存储](https://devblogs.microsoft.com/aspnet/azure-storage-for-serverless-net-apps-in-minutes/)。
 
 ## <a name="verify-device-connectivity-using-a-ping"></a>使用 ping 验证设备连接
 
@@ -87,15 +87,15 @@ Azure Functions 用于提供单个页面应用程序（SPA），该应用程序�
 
 ## <a name="recommended-resources"></a>推荐的资源
 
-* [Azure Functions 照片马赛克生成器](https://azure.microsoft.com/resources/samples/functions-dotnet-photo-mosaic/)
-* [Azure IoT 中心 ping](https://azure.microsoft.com/resources/samples/iot-hub-node-ping/)
-* [Azure Storage for 无服务器 .NET 应用（分钟）](https://devblogs.microsoft.com/aspnet/azure-storage-for-serverless-net-apps-in-minutes/)
-* [自带应用](https://github.com/JeremyLikness/bring-own-app-connect-17)
-* [CSV 导入实验室](https://github.com/JeremyLikness/azure-fn-file-process-hol)
-* [事件网格粘附](https://github.com/JeremyLikness/Event-Grid-Glue)
-* [使用 Xamarin client 实现简单的 Azure 函数](https://azure.microsoft.com/resources/samples/functions-xamarin-getting-started/)
-* [无服务器 Azure 功能的提升和移位](https://channel9.msdn.com/Events/Connect/2017/E102)
-* [无服务器 URL 缩短符](https://github.com/jeremylikness/serverless-url-shortener)
+- [Azure Functions 照片马赛克生成器](https://azure.microsoft.com/resources/samples/functions-dotnet-photo-mosaic/)
+- [Azure IoT 中心 ping](https://azure.microsoft.com/resources/samples/iot-hub-node-ping/)
+- [Azure Storage for 无服务器 .NET 应用（分钟）](https://devblogs.microsoft.com/aspnet/azure-storage-for-serverless-net-apps-in-minutes/)
+- [自带应用](https://github.com/JeremyLikness/bring-own-app-connect-17)
+- [CSV 导入实验室](https://github.com/JeremyLikness/azure-fn-file-process-hol)
+- [事件网格粘附](https://github.com/JeremyLikness/Event-Grid-Glue)
+- [使用 Xamarin client 实现简单的 Azure 函数](https://azure.microsoft.com/resources/samples/functions-xamarin-getting-started/)
+- [无服务器 Azure 功能的提升和移位](https://channel9.msdn.com/Events/Connect/2017/E102)
+- [无服务器 URL 缩短符](https://github.com/jeremylikness/serverless-url-shortener)
 
 >[!div class="step-by-step"]
 >[上一页](orchestration-patterns.md)
