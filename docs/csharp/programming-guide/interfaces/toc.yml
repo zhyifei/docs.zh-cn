@@ -1,9 +1,0 @@
-- name: 接口
-  href: index.md
-  items:
-    - name: 显式接口实现
-      href: explicit-interface-implementation.md
-    - name: 如何：显式实现接口成员
-      href: how-to-explicitly-implement-interface-members.md
-    - name: 如何：显式实现两个接口的成员
-      href: how-to-explicitly-implement-members-of-two-interfaces.md
