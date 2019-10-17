@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - performance counters [WCF]
 ms.assetid: f559b2bd-ed83-4988-97a1-e88f06646609
-ms.openlocfilehash: a9bddcbd907e37d9bdf757b1999946c99e10440c
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 73bb02379308fbfe507137e61ac8d84e6b9760b4
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855628"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395900"
 ---
 # <a name="wcf-performance-counters"></a>WCF 性能计数器
 Windows Communication Foundation （WCF）包含大量性能计数器，可帮助你衡量应用程序的性能。  
@@ -27,11 +27,11 @@ Windows Communication Foundation （WCF）包含大量性能计数器，可帮�
   
  可以将 `performanceCounters` 属性设置为启用特定类型的性能计数器。 有效值为  
   
-- 一切所有类别计数器（ServiceModelService、ServiceModelEndpoint 和 ServiceModelOperation）均已启用。  
+- All：启用所有类别计数器（ServiceModelService、ServiceModelEndpoint 和 ServiceModelOperation）。  
   
-- ServiceOnly仅启用 ServiceModelService 类别计数器。 这是默认值。  
+- ServiceOnly：仅启用 ServiceModelService 类别计数器。 此为默认值。  
   
-- 非已禁用 "System.servicemodel *" 性能计数器。  
+- Off：禁用 ServiceModel* 性能计数器。  
   
  如果要为所有 WCF 应用程序启用性能计数器，则可以将配置设置置于 machine.config 文件中。  有关在计算机上为性能计数器配置足够内存的详细信息，请参阅下面的 "**增加性能计数器的内存大小**" 部分。  
   
@@ -51,7 +51,7 @@ config.Save();
 ```  
   
 ## <a name="viewing-performance-data"></a>查看性能数据  
- 若要查看性能计数器捕获的数据，则可以使用 Windows 附带的性能监视器 (Perfmon.exe)。 您可以通过转到 "**开始**"，然后单击 "**运行**" 并`perfmon.exe`在对话框中键入来启动此工具。  
+ 若要查看性能计数器捕获的数据，则可以使用 Windows 附带的性能监视器 (Perfmon.exe)。 可以通过转到 "**开始**"，然后单击 "**运行**"，然后在对话框中键入 `perfmon.exe` 来启动此工具。  
   
 > [!NOTE]
 > 性能计数器实例可能会在终结点调度程序处理最后一条消息之前被释放。 这可能导致不能为某些消息捕获性能数据。  
@@ -59,7 +59,7 @@ config.Save();
 ## <a name="increasing-memory-size-for-performance-counters"></a>增加性能计数器的内存大小  
  WCF 使用单独的共享内存作为其性能计数器类别。  
   
- 默认情况下，单独的共享内存被设置为全局性能计数器内存大小的四分之一。 默认的全局性能计数器内存大小为 524,288 字节。 因此，三个 WCF 性能计数器类别的默认大小约为128KB。 根据计算机上 WCF 应用程序的运行时特性，性能计数器内存可能会耗尽。 发生这种情况时，WCF 会将错误写入到应用程序事件日志中。 错误的内容指出未加载性能计数器，且条目包含异常 "InvalidOperationException：自定义计数器文件视图内存不足。 " 如果在错误级别启用了跟踪，此故障也将被跟踪。 如果性能计数器内存用尽，继续运行启用了性能计数器的 WCF 应用程序可能会导致性能下降。 如果您是计算机管理员，则应对计算机进行配置，以便分配足够的内存来支持随时可能存在的最大数量的性能计数器。  
+ 默认情况下，单独的共享内存被设置为全局性能计数器内存大小的四分之一。 默认的全局性能计数器内存大小为 524,288 字节。 因此，三个 WCF 性能计数器类别的默认大小约为128KB。 根据计算机上 WCF 应用程序的运行时特性，性能计数器内存可能会耗尽。 发生这种情况时，WCF 会将错误写入到应用程序事件日志中。 该错误的内容声明未加载性能计数器，并声明一个包含异常“System.InvalidOperationException：可用于自定义计数器文件视图的内存不足。”的项。 如果在错误级别启用了跟踪，此故障也将被跟踪。 如果性能计数器内存用尽，继续运行启用了性能计数器的 WCF 应用程序可能会导致性能下降。 如果您是计算机管理员，则应对计算机进行配置，以便分配足够的内存来支持随时可能存在的最大数量的性能计数器。  
   
  你可以在注册表中更改 WCF 类别的性能计数器内存量。 为此，需要向以下三个位置添加名为 `FileMappingSize` 的新 DWORD 值，并将它设为所需的值（以字节为单位）。 重新启动您的计算机以使这些更改生效。  
   
@@ -72,17 +72,17 @@ config.Save();
  当释放的大量对象（例如 ServiceHost）等待进行垃圾回收时，`PrivateBytes` 性能计数器将登记一个非常大的数字。 若要解决此问题，可以添加特定于自己的应用程序的计数器，或使用 `performanceCounters` 属性仅启用服务级别计数器。  
   
 ## <a name="types-of-performance-counters"></a>性能计数器的类型  
- 性能计数器的作用域为三个不同的级别：服务、终结点和操作。  
+ 性能计数器可分为三个不同级别：服务、终结点和操作。  
   
  可以使用 WMI 检索性能计数器实例的名称。 例如，应用于对象的  
   
-- 可以通过 WMI[服务](../../../../../docs/framework/wcf/diagnostics/wmi/service.md)实例的 "CounterInstanceName" 属性获取服务计数器实例名称。  
+- 可以通过 WMI[服务](../wmi/service.md)实例的 "CounterInstanceName" 属性获取服务计数器实例名称。  
   
-- 可以通过 WMI[终结点](../../../../../docs/framework/wcf/diagnostics/wmi/endpoint.md)实例的 "CounterInstanceName" 属性获取终结点计数器实例名称。  
+- 可以通过 WMI[终结点](../wmi/endpoint.md)实例的 "CounterInstanceName" 属性获取终结点计数器实例名称。  
   
-- 可以通过 WMI[终结点](../../../../../docs/framework/wcf/diagnostics/wmi/endpoint.md)实例的 "GetOperationCounterInstanceName" 方法获取操作计数器实例名称。  
+- 可以通过 WMI[终结点](../wmi/endpoint.md)实例的 "GetOperationCounterInstanceName" 方法获取操作计数器实例名称。  
   
- 有关 WMI 的详细信息，请参阅[使用 Windows Management Instrumentation 诊断](../../../../../docs/framework/wcf/diagnostics/wmi/index.md)。  
+ 有关 WMI 的详细信息，请参阅[使用 Windows Management Instrumentation 诊断](../wmi/index.md)。  
   
 ### <a name="service-performance-counters"></a>服务性能计数器  
  服务性能计数器将服务行为作为整体来进行衡量，可用于诊断服务整体性能。 如果使用性能监视器查看，可以在 `ServiceModelService 4.0.0.0` 性能对象下找到服务性能计数器。 使用以下模式命名计数器实例：  
@@ -118,20 +118,17 @@ config.Save();
 > 如果一个协定上有两个操作名称，则只能为这两个操作获取一个计数器实例。  
   
 ## <a name="programming-the-wcf-performance-counters"></a>对 WCF 性能计数器进行编程  
- SDK 安装文件夹中安装了几个文件，以便您可以通过编程方式访问 WCF 性能计数器。 下面列出了这些文件。  
+
+SDK 安装文件夹中安装了几个文件，以便您可以通过编程方式访问 WCF 性能计数器。 这些文件如下所示：
   
-- _ServiceModelEndpointPerfCounters.vrg  
+- *\_ServiceModelEndpointPerfCounters. vrg*
+- *\_ServiceModelOperationPerfCounters. vrg*
+- *\_ServiceModelServicePerfCounters. vrg*  
+- *\_SMSvcHostPerfCounters. vrg*
+- *\_TransactionBridgePerfCounters. vrg*
   
-- _ServiceModelOperationPerfCounters.vrg  
-  
-- _ServiceModelServicePerfCounters.vrg  
-  
-- _SMSvcHostPerfCounters.vrg  
-  
-- _TransactionBridgePerfCounters.vrg  
-  
- 有关如何以编程方式访问计数器的详细信息，请参阅[性能计数器编程体系结构](https://go.microsoft.com/fwlink/?LinkId=95179)。  
+有关如何以编程方式访问计数器的详细信息，请参阅[性能计数器编程体系结构](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/5f9bkxzf(v=vs.90))。
   
 ## <a name="see-also"></a>请参阅
 
-- [管理和诊断](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [管理和诊断](../index.md)

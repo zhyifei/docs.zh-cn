@@ -7,12 +7,12 @@ helpviewer_keywords:
 - international user interface [WPF], XAML
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-ms.openlocfilehash: 32caf87435e23008f9f300d231c2705e7894280f
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: 7826bbfca09cce7508d7352c647bafae93504e58
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291458"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395844"
 ---
 # <a name="globalization-for-wpf"></a>WPF 的全球化
 本主题介绍编写全局市场 @no__t 0 应用程序时应注意的问题。 在 <xref:System.Globalization> 命名空间的 .NET 中定义全球化编程元素。
@@ -23,7 +23,7 @@ ms.locfileid: "72291458"
 
 <a name="char_reference"></a>
 ### <a name="character-references"></a>字符引用
-字符引用以十进制或十六进制形式为其表示的特定 @no__t 0 字符提供 UTF16 代码单位。 下面的示例显示了一个用于哥普特大写字母 HORI 或 "Ϩ" 的十进制字符引用：
+字符引用以十进制或十六进制形式为其表示的特定 Unicode 字符提供 UTF16 代码单元。 下面的示例显示了一个用于哥普特大写字母 HORI 或 "Ϩ" 的十进制字符引用：
 
 ```
 &#1000;
@@ -37,7 +37,7 @@ ms.locfileid: "72291458"
 
 <a name="encoding"></a>
 ### <a name="encoding"></a>编码
- @No__t 支持的编码为 ASCII，[!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)] UTF-16 和 UTF-8。 编码语句位于 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 文档的开头。 如果不存在编码特性，并且没有任何字节顺序，则分析器默认为 UTF-8。 UTF-8 和 UTF-16 都是首选编码。 不支持 UTF-7。 下面的示例演示如何在 @no__t 0 文件中指定 UTF-8 编码。
+ @No__t 支持的编码为 ASCII、Unicode UTF-16 和 UTF-8。 编码语句位于 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 文档的开头。 如果不存在编码特性，并且没有任何字节顺序，则分析器默认为 UTF-8。 UTF-8 和 UTF-16 都是首选编码。 不支持 UTF-7。 下面的示例演示如何在 @no__t 0 文件中指定 UTF-8 编码。
 
 ```xaml
 ?xml encoding="UTF-8"?
@@ -47,7 +47,7 @@ ms.locfileid: "72291458"
 ### <a name="language-attribute"></a>语言特性
  [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 使用[xml： lang](../../xaml-services/xml-lang-handling-in-xaml.md)表示元素的 language 特性。  若要利用 @no__t 0 类，language 特性值需要是由 @no__t 预定义的区域性名称之一。 [xml:lang](../../xaml-services/xml-lang-handling-in-xaml.md) 在元素树中可继承（可按 XML 规则继承，但并不一定这样继承，因为存在依赖属性继承）；在未明确赋值的情况下，其默认值为空字符串。
 
- 语言特性对指定方言非常有用。 例如，法语在法国、魁北克、比利时和瑞士的拼写、词汇和发音各不相同。 同时，中文、日语和韩语共享 [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)] 中的代码点，但表意形状不同，它们使用完全不同的字体。
+ 语言特性对指定方言非常有用。 例如，法语在法国、魁北克、比利时和瑞士的拼写、词汇和发音各不相同。 同时，中文、日语和朝鲜语使用 Unicode 共享码位，但表意形状不同，它们使用完全不同的字体。
 
  以下 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 示例使用 @no__t 语言特性指定加拿大法语。
 
@@ -57,7 +57,7 @@ ms.locfileid: "72291458"
 
 <a name="unicode"></a>
 ### <a name="unicode"></a>Unicode
- [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 支持所有 @no__t 项功能，包括代理项。 只要字符集可以映射到 [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)]，就支持该字符集。 例如，GB18030 中引入了某些可映射到中文、日语和朝鲜语 (CFK) 扩展 A 和 B 以及代理项对的字符，因此完全受支持。 @No__t-0 应用程序可以使用 <xref:System.Globalization.StringInfo> 来处理字符串，而无需了解它们是否具有代理项对或组合字符。
+ [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 支持所有 Unicode 功能，包括代理项。 只要字符集可以映射到 Unicode，就支持该字符集。 例如，GB18030 中引入了某些可映射到中文、日语和朝鲜语 (CFK) 扩展 A 和 B 以及代理项对的字符，因此完全受支持。 @No__t-0 应用程序可以使用 <xref:System.Globalization.StringInfo> 来处理字符串，而无需了解它们是否具有代理项对或组合字符。
 
 <a name="design_intl_ui_with_xaml"></a>
 ## <a name="designing-an-international-user-interface-with-xaml"></a>使用 XAML 设计国际用户界面
@@ -125,7 +125,7 @@ ms.locfileid: "72291458"
 
  所有书写系统引擎都支持 OpenType 字体。 OpenType 字体可以包含 OpenType 布局表，它们使字体创建者能够设计更好的国际化和高端版式字体。 OpenType 字体布局表包含有关符号替换、标志符号定位、对齐和基线定位的信息，使文本处理应用程序能够改进文本布局。
 
- OpenType 字体允许使用 [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)] 编码处理大字形集。 这种编码享有广泛的国际支持，并支持版式字形变体。
+ OpenType 字体允许使用 Unicode 编码处理大字形集。 这种编码享有广泛的国际支持，并支持版式字形变体。
 
  @no__t 0 文本呈现由支持分辨率独立性的 Microsoft ClearType 子像素技术提供支持。 这极大地提高了可读性，并为所有脚本提供了支持高质量杂志样式文档的功能。
 

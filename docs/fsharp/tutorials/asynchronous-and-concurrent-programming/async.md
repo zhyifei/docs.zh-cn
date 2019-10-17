@@ -1,219 +1,389 @@
 ---
-title: 异步编程
-description: 了解如何F#通过是易于使用和自然语言的语言级别编程模型实现异步编程。
-ms.date: 06/20/2016
-ms.openlocfilehash: 8cd7d7bcecabe8ea2c33a4787fe9ebbadd67fe67
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+title: 中的异步编程F#
+description: 了解如何F#基于从核心函数编程概念派生的语言级编程模型，为异步提供干净支持。
+ms.date: 12/17/2018
+ms.openlocfilehash: 1ede4a5c1e26df271ac94f9b2c216ac84fb38f59
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64753590"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395791"
 ---
-# <a name="async-programming-in-f"></a>F 中的异步编程\#
+# <a name="async-programming-in-f"></a>F @ no__t 中的异步编程
 
-> [!NOTE]
-> 在本文中发现了一些错误。  它是被重写。  请参阅[问题 #666](https://github.com/dotnet/docs/issues/666)若要了解有关所做的更改。
+异步编程是一种对新式应用程序至关重要的机制，原因多种多样。 大多数开发人员都将遇到两个主要用例：
 
-异步编程中F#可以通过设计为易于使用和自然语言的语言级别编程模型来完成。
+- 提供可为大量并发传入请求提供服务的服务器进程，同时最大限度地减少在请求处理过程中所占用的系统资源，等待来自该进程外部的系统或服务的输入
+- 在并发后台工作的同时维护响应式 UI 或主线程
 
-异步编程中的核心F#是`Async<'T>`，表示形式可以触发以便在后台运行的工作位置`'T`通过特殊的返回类型`return`关键字或`unit`如果异步工作流具有要返回的结果。
+尽管后台工作通常涉及多个线程的使用率，但请务必分别考虑异步和多线程的概念。 事实上，它们是单独的问题，而另一个则不是。 本文后面的内容将更详细地介绍这一点。
 
-若要了解的关键概念在于异步表达式的类型是`Async<'T>`，即只_规范_的异步上下文中完成的工作。 不执行直到它显式启动其中一个起始函数 (如`Async.RunSynchronously`)。 虽然这是以不同的方式考虑执行工作的但它最终实际上非常简单。
+## <a name="asynchrony-defined"></a>已定义异步
 
-例如，假设你想要从 dotnetfoundation.org 下载 HTML，而不会阻止主线程。 您可以实现它像这样：
+之前的一点是，异步独立于多个线程的利用率，值得进一步解释。 有时有三个相关概念，但彼此完全独立：
 
-```fsharp
-open System
-open System.Net
+- 能力当多个计算在重叠的时间段内执行时。
+- 度当一个计算的多个计算或多个部分在同一时间运行时。
+- 异步当一个或多个计算可与主程序流分开执行时。
 
-let fetchHtmlAsync url =
-    async {
-        let uri = Uri(url)
-        use webClient = new WebClient()
+这三种概念都是直角概念，但可以很容易地与父，尤其是在它们一起使用时。 例如，可能需要并行执行多个异步计算。 这并不意味着并行或异步彼此不同。
 
-        // Execution of fetchHtmlAsync won't continue until the result
-        // of AsyncDownloadString is bound.
-        let! html = webClient.AsyncDownloadString(uri)
-        return html
-    }
+如果你考虑 "异步" 一词的 etymology，则涉及两个部分：
 
-let html = "https://dotnetfoundation.org" |> fetchHtmlAsync |> Async.RunSynchronously
-printfn "%s" html
-```
+- "a"，表示 "not"。
+- "同步"，表示 "同时"。
 
-就是这么简单！ 除了使用`async`， `let!`，并`return`，这是正常的只是F#代码。
+将这两个术语组合在一起后，会看到 "异步" 表示 "不同时"。 就这么简单！ 此定义中不存在并发或并行性的含义。 实际上也是如此。
 
-有几个语法构造是值得一提：
+在实际情况下，中F#的异步计算计划为独立于主程序流执行。 这并不意味着并发性或并行性，也不意味着计算始终在后台发生。 事实上，异步计算甚至可以同步执行，具体取决于计算的性质和正在执行计算的环境。
 
-* `let!` 将一个异步表达式 （其在另一个上下文中运行） 的结果绑定。
-* `use!` 工作方式就类似于`let!`，但它超出范围时释放其绑定的资源。
-* `do!` 将 await 的异步工作流，这不会返回任何内容。
-* `return` 只需从异步表达式将返回结果。
-* `return!` 执行另一个异步工作流并返回其返回值作为结果。
+应该具有的主要要点在于是异步计算与主程序流无关。 尽管对异步计算的执行时间或方式有一些保证，但还是有一些用于协调和安排这些方法的方法。 本文的其余部分探讨了F#异步的核心概念，以及如何使用中F#内置的类型、函数和表达式。
 
-此外，正常`let`， `use`，和`do`关键字可以用异步版本，就像在普通函数中。
+## <a name="core-concepts"></a>核心概念
 
-## <a name="how-to-start-async-code-in-f"></a>如何在 F 中启动异步代码\#
+在F#中，异步编程围绕三个核心概念：
 
-前面曾提到，异步代码将是一种规范，需要对其显式启动另一个上下文中完成工作。 下面是两种主要方法来实现此目的：
+- @No__t-0 类型，它表示可组合的异步计算。
+- @No__t-0 模块函数，可用于计划异步工作、撰写异步计算和转换异步结果。
+- @No__t 0[计算表达式](../../language-reference/computation-expressions.md)，它提供了一种用于生成和控制异步计算的方便语法。
 
-1. `Async.RunSynchronously` 将另一个线程上启动异步工作流，并等待其结果。
-
-    ```fsharp
-    open System
-    open System.Net
-
-    let fetchHtmlAsync url =
-        async {
-            let uri = Uri(url)
-            use webClient = new WebClient()
-            let! html = webClient.AsyncDownloadString(uri)
-            return html
-        }
-
-    // Execution will pause until fetchHtmlAsync finishes
-    let html = "https://dotnetfoundation.org" |> fetchHtmlAsync |> Async.RunSynchronously
-
-    // you actually have the result from fetchHtmlAsync now!
-    printfn "%s" html
-    ```
-
-2. `Async.Start` 将另一个线程上启动的异步工作流，并将**不**等待其结果。
-
-    ```fsharp
-    open System
-    open System.Net
-
-    let uploadDataAsync url data =
-        async {
-            let uri = Uri(url)
-            use webClient = new WebClient()
-            webClient.UploadStringAsync(uri, data)
-        }
-
-    let workflow = uploadDataAsync "https://url-to-upload-to.com" "hello, world!"
-
-    // Execution will continue after calling this!
-    Async.Start(workflow)
-
-    printfn "%s" "uploadDataAsync is running in the background..."
-    ```
-
-还有其他方法来启动异步工作流可用于更多特定方案。 对其进行详细[异步参考中](https://msdn.microsoft.com/library/ee370232.aspx)。
-
-### <a name="a-note-on-threads"></a>有关线程的说明
-
-上述"在另一个线程"短语，但务必要知道**这并不意味着异步工作流是用于的外观的多线程处理**。 工作流实际"跳转"借用的少量时间来执行有用的工作线程之间。 时异步工作流有效地"等待"（例如，等待网络调用，以返回某些内容），在时，它借用了任何线程被释放到转执行有用的工作在别的事情上。 这允许异步工作流，以利用它们尽可能有效地运行的系统并使这些极强的大量 I/O 方案。
-
-## <a name="how-to-add-parallelism-to-async-code"></a>如何将并行处理添加到异步代码
-
-有时您可能需要并行执行多个异步作业收集其结果，并以某种方式进行解释。 `Async.Parallel` 允许您执行此操作而无需使用任务并行库，这会涉及无需强制转换`Task<'T>`和`Async<'T>`类型。
-
-下面的示例将使用`Async.Parallel`从并行的四个常用网站下载 HTML，等待这些任务完成，然后输出已下载的 HTML。
+在以下示例中，可以看到这三个概念：
 
 ```fsharp
 open System
-open System.Net
+open System.IO
 
-let urlList =
-    [ "https://www.microsoft.com"
-      "https://www.google.com"
-      "https://www.amazon.com"
-      "https://www.facebook.com" ]
-
-let fetchHtmlAsync url =
+let printTotalFileBytes path =
     async {
-        let uri = Uri(url)
-        use webClient = new WebClient()
-        let! html = webClient.AsyncDownloadString(uri)
-        return html
+        let! bytes = File.ReadAllBytesAsync(path) |> Async.AwaitTask
+        let fileName = Path.GetFileName(path)
+        printfn "File %s has %d bytes" fileName bytes.Length
     }
 
-let getHtmlList urls =
-    urls
-    |> Seq.map fetchHtmlAsync   // Build an Async<'T> for each site
-    |> Async.Parallel           // Returns an Async<'T []>
-    |> Async.RunSynchronously   // Wait for the result of the parallel work
+[<EntryPoint>]
+let main argv =
+    printTotalFileBytes "path-to-file.txt"
+    |> Async.RunSynchronously
 
-let htmlList = getHtmlList urlList
-
-// We now have the downloaded HTML for each site!
-for html in htmlList do
-    printfn "%s" html
+    Console.Read() |> ignore
+    0
 ```
 
-## <a name="important-info-and-advice"></a>重要信息和建议
+在此示例中，@no__t @no__t 函数的类型为-1。 调用函数实际上不会执行异步计算。 相反，它会返回一个 `Async<unit>`，它充当要异步执行的工作的 * 规范。 它将在其正文中调用 `Async.AwaitTask`，这会在调用时将 @no__t 的结果转换为适当的类型。
 
-* 将"Async"追加到末尾将使用的任何函数
+另一个重要的行是对 @no__t 的调用。 这是要实际执行F#异步计算时需要调用的异步模块启动函数之一。
 
- 虽然这是命名约定，但它确实使 API 可发现性等内容更容易。 尤其是例程的当有相同的同步和异步版本，它是例程的显式声明为异步通过名称的一个好办法。
+这与 `async` 编程的C#/VB 样式是根本差异。 在F#中，可以将异步计算视为**冷任务**。 它们必须显式启动才能实际执行。 这有一些优点，因为它允许你比在/VB. 中C#更轻松地组合和序列化异步工作
 
-* 侦听编译器 ！
+## <a name="combining-asynchronous-computations"></a>组合异步计算
 
-F#编译器是非常严格，因此几乎不可能执行一些麻烦的问题等操作以同步方式运行"async"代码。 如果您遇到一条警告，则代码不会执行认为它将如何登录。 如果编译器可以为取悦，按预期方式将很可能执行代码。
-
-## <a name="for-the-cvb-programmer-looking-into-f"></a>有关C#/VB 程序员研究 F\#
-
-本部分假定您熟悉使用中的异步模型C#/VB. 如果你不可以，[中的异步编程C#](../../../csharp/async.md)是一个起始点。
-
-没有本质上之间的区别C#/VB 异步模型和F#异步模型。
-
-当调用一个函数，它返回`Task`或`Task<'T>`，该作业已开始执行。 返回的句柄表示已在运行异步作业。 与此相反，当您调用异步函数F#，则`Async<'a>`返回表示一个作业，它将是**生成**在某个时间点。 了解此模型非常强大，因为它允许在异步作业F#链接起来变得更容易，有条件地执行和入门的更细粒度的控制。
-
-有几个其他的相似之处和值得注意的区别。
-
-### <a name="similarities"></a>相似之处
-
-* `let!``use!`，并`do!`类似于`await`内调用的异步作业时`async{ }`块。
-
-  只能在使用三个关键字`async { }`块中，类似于如何`await`只能在调用`async`方法。 简单地说，`let!`适用于你想要捕获和使用结果`use!`是相同，但某些内容在使用后，应会清理其资源和`do!`适用于你想要等待的异步工作流完成不返回值再继续。
-
-* F#类似的方式支持数据并行。
-
-  尽管它以非常不同的方式，运行`Async.Parallel`对应于`Task.WhenAll`想的一组异步作业结果，它们全部完成时的方案。
-
-### <a name="differences"></a>差异
-
-* 嵌套`let!`不允许，与不同嵌套 `await`
-
-  与不同`await`，可以嵌套无限期`let!`能并且必须包含另一个内部使用它之前绑定其结果`let!`， `do!`，或`use!`。
-
-* 取消支持是在F#比C#/VB.
-
-  支持的任务在执行中途取消C#/VB 需要检查`IsCancellationRequested`属性或调用`ThrowIfCancellationRequested()`上`CancellationToken`传递到异步方法的对象。
-
-与此相反，F#异步工作流是更自然可取消。 取消是一个简单的三步骤过程。
-
-1. 创建一个新的 `CancellationTokenSource`。
-2. 将它传递到起始函数。
-3. 调用`Cancel`的令牌。
-
-示例:
+下面是通过组合计算在上一个示例中生成的示例：
 
 ```fsharp
-open System.Threading
+open System
+open System.IO
 
-// Create a workflow which will loop forever.
-let workflow =
+let printTotalFileBytes path =
     async {
-        while true do
-            printfn "Working..."
-            do! Async.Sleep 1000
+        let! bytes = File.ReadAllBytesAsync(path) |> Async.AwaitTask
+        let fileName = Path.GetFileName(path)
+        printfn "File %s has %d bytes" fileName bytes.Length
     }
 
-let tokenSource = new CancellationTokenSource()
+[<EntryPoint>]
+let main argv =
+    argv
+    |> Array.map printTotalFileBytes
+    |> Async.Parallel
+    |> Async.Ignore
+    |> Async.RunSynchronously
 
-// Start the workflow in the background
-Async.Start (workflow, tokenSource.Token)
-
-// Executing the next line will stop the workflow
-tokenSource.Cancel()
+    0
 ```
 
-就是这么简单！
+正如您所看到的，`main` 函数进行了更多调用。 从概念上讲，它执行以下操作：
 
-## <a name="further-resources"></a>其他资源：
+1. 将命令行参数转换为 `Array.map` @no__t 计算。
+2. 创建一个 `Async<'T[]>`，它在运行时并行计划并运行 @no__t 1 个计算。
+3. 创建一个 `Async<unit>`，它将运行并行计算并忽略其结果。
+4. 在 @no__t 的最后一个计算中显式运行，并在它完成之前一直阻止。
 
-* [MSDN 上的异步工作流](https://msdn.microsoft.com/library/dd233250.aspx)
-* [异步序列 F#](https://fsprojects.github.io/FSharp.Control.AsyncSeq/library/AsyncSeq.html)
-* [F# HTTP 数据实用程序](https://fsharp.github.io/FSharp.Data/library/Http.html)
+运行此程序时，@no__t 为每个命令行参数并行运行0。 由于异步计算独立于程序流执行，因此它们不会打印其信息并完成执行。 将并行计划计算，但不保证其执行顺序。
+
+## <a name="sequencing-asynchronous-computations"></a>序列化异步计算
+
+由于 @no__t 为工作规范而不是已运行的任务，因此您可以轻松地执行更复杂的转换。 下面是一个示例，该示例对一组异步计算进行排序，以便它们逐个执行。
+
+```fsharp
+let printTotalFileBytes path =
+    async {
+        let! bytes = File.ReadAllBytesAsync(path) |> Async.AwaitTask
+        let fileName = Path.GetFileName(path)
+        printfn "File %s has %d bytes" fileName bytes.Length
+    }
+
+[<EntryPoint>]
+let main argv =
+    argv
+    |> Array.map printTotalFileBytes
+    |> Async.Sequential
+    |> Async.RunSynchronously
+    |> ignore
+```
+
+这会将 @no__t 0 计划为按 @no__t 的元素的顺序执行，而不是以并行方式进行计划。 因为在上一次计算执行完成后将不会计划下一项，所以，计算的顺序就是在执行时没有重叠。
+
+## <a name="important-async-module-functions"></a>重要的异步模块函数
+
+在中F#编写异步代码时，通常会与用于处理计算计划的框架交互。 但是，这并不总是如此，因此最好了解用于计划异步工作的各种开始函数。
+
+因为F#异步计算是一种_规范_，而不是已在执行的工作表示形式，所以必须使用启动函数显式启动它们。 许多[异步启动函数](https://msdn.microsoft.com/library/ee370232.aspx)在不同的上下文中很有用。 以下部分介绍了一些更常见的启动函数。
+
+### <a name="asyncstartchild"></a>StartChild
+
+在异步计算中启动子计算。 这允许并发执行多个异步计算。 子计算与父计算共享取消标记。 如果取消了父计算，则子计算也将被取消。
+
+信号
+
+```fsharp
+computation: Async<'T> - timeout: ?int -> Async<Async<'T>>
+```
+
+何时使用：
+
+- 如果要同时执行多个异步计算，而不是一次执行多个异步计算，但不需要并行计划它们。
+- 如果希望将子计算的生存期与父计算的生存期关联，则为。
+
+需要注意的事项：
+
+- 通过 `Async.StartChild` 启动多个计算与并行计划它们不同。 如果要并行计划计算，请使用 `Async.Parallel`。
+- 取消父计算将触发它开始的所有子计算的取消。
+
+### <a name="asyncstartimmediate"></a>StartImmediate
+
+运行异步计算，在当前操作系统线程上立即启动。 如果需要在计算过程中在调用线程上更新某些内容，这会很有帮助。 例如，如果异步计算必须更新 UI （如更新进度栏），则应使用 `Async.StartImmediate`。
+
+信号
+
+```fsharp
+computation: Async<unit> - cancellationToken: ?CancellationToken -> unit
+```
+
+何时使用：
+
+- 需要在异步计算的中间对调用线程进行更新时。
+
+需要注意的事项：
+
+- 异步计算中的代码将在要计划的任何线程上运行。 如果该线程以某种方式（例如，UI 线程）进行敏感，则可能会出现问题。 在这种情况下，可能不适合使用 `Async.StartImmediate`。
+
+### <a name="asyncstartastask"></a>Async.startastask
+
+在线程池中执行计算。 返回一个 <xref:System.Threading.Tasks.Task%601>，它将在计算终止后（生成结果、引发异常或取消）在相应的状态下完成。 如果未提供取消标记，则使用默认取消标记。
+
+信号
+
+```fsharp
+computation: Async<'T> - taskCreationOptions: ?TaskCreationOptions - cancellationToken: ?CancellationToken -> Task<'T>
+```
+
+何时使用：
+
+- 需要调用需要 <xref:System.Threading.Tasks.Task%601> 的 .NET API 来表示异步计算的结果时。
+
+需要注意的事项：
+
+- 此调用将分配额外的 @no__t 0 对象，如果经常使用此对象，则可能会增加开销。
+
+### <a name="asyncparallel"></a>Async 并行
+
+计划要并行执行的异步计算序列。 通过指定 @no__t 的参数，可选择优化/限制并行度。
+
+信号
+
+```fsharp
+computations: seq<Async<'T>> - ?maxDegreesOfParallelism: int -> Async<'T[]>
+```
+
+何时使用它：
+
+- 如果需要同时运行一组计算，而不依赖于其执行顺序。
+- 如果无需并行计划的计算结果，直到它们全部完成。
+
+需要注意的事项：
+
+- 所有计算完成后，只能访问生成的值数组。
+- 计算将运行，但最终会得到计划。 这意味着不能依赖其执行顺序。
+
+### <a name="asyncsequential"></a>异步顺序
+
+计划一系列要按其传递顺序执行的异步计算。 将执行第一个计算，然后执行下一次计算，依次类推。 不会并行执行任何计算。
+
+信号
+
+```fsharp
+computations: seq<Async<'T>> -> Async<'T[]>
+```
+
+何时使用它：
+
+- 如果需要按顺序执行多个计算。
+
+需要注意的事项：
+
+- 所有计算完成后，只能访问生成的值数组。
+- 计算将按其传递到此函数的顺序运行，这可能意味着返回结果之前需要更多时间。
+
+### <a name="asyncawaittask"></a>Async.awaittask
+
+返回一个异步计算，该计算等待给定的 <xref:System.Threading.Tasks.Task%601> 完成，并将其结果作为 @no__t 返回
+
+信号
+
+```fsharp
+task: Task<'T>  -> Async<'T>
+```
+
+何时使用：
+
+- 使用 .NET API 时，将在F#异步计算中返回 <xref:System.Threading.Tasks.Task%601>。
+
+需要注意的事项：
+
+- 按照任务并行库的约定，将异常包装在 <xref:System.AggregateException> 中，这不同于异步显示异常F#的方式。
+
+### <a name="asynccatch"></a>Async Catch
+
+创建一个异步计算，该计算执行给定的 `Async<'T>`，返回 `Async<Choice<'T, exn>>`。 如果给定 `Async<'T>` 成功完成，则将返回一个 @no__t 为结果值。 如果异常在完成前引发，则返回一个 @no__t，并引发异常。 如果它用于由多个计算组成的异步计算，并且其中一个计算引发异常，则会完全停止包含计算。
+
+信号
+
+```fsharp
+computation: Async<'T> -> Async<Choice<'T, exn>>
+```
+
+何时使用：
+
+- 当你执行的异步工作可能会失败并出现异常，你希望在调用方中处理该异常。
+
+需要注意的事项：
+
+- 使用组合的或序列化的异步计算时，如果其中一个 "内部" 计算引发异常，则会完全停止包含计算。
+
+### <a name="asyncignore"></a>Async。 Ignore
+
+创建一个异步计算，该异步计算将运行给定的计算并忽略其结果。
+
+信号
+
+```fsharp
+computation: Async<'T> -> Async<unit>
+```
+
+何时使用：
+
+- 如果具有不需要其结果的异步计算。 这类似于非异步代码的 `ignore` 代码。
+
+需要注意的事项：
+
+- 如果你必须使用此项，因为你希望使用 `Async.Start` 或需要 `Async<unit>` 的其他函数，则请考虑是否放弃结果是否可执行。 通常不应丢弃结果来满足类型签名。
+
+### <a name="asyncrunsynchronously"></a>RunSynchronously
+
+运行异步计算，并在调用线程上等待其结果。 此调用正在阻止。
+
+信号
+
+```fsharp
+computation: Async<'T> - timeout: ?int - cancellationToken: ?CancellationToken -> 'T
+```
+
+何时使用它：
+
+- 如果需要，请在应用程序的入口点（可执行文件）中使用它一次。
+- 当你不关心性能并希望同时执行一组其他异步操作时。
+
+需要注意的事项：
+
+- 调用 `Async.RunSynchronously` 会阻止调用线程，直到执行完成。
+
+### <a name="asyncstart"></a>Async. Start
+
+在线程池中启动异步计算，该计算返回 `unit`。 不会等待其结果。 @No__t-0 开始的嵌套计算完全独立于调用它们的父计算。 它们的生存期未绑定到任何父计算。 如果取消了父计算，则不会取消任何子计算。
+
+信号
+
+```fsharp
+computation: Async<unit> - cancellationToken: ?CancellationToken -> unit
+```
+
+仅在以下情况时使用：
+
+- 您有一个异步计算，该计算不产生结果和/或需要处理一个结果。
+- 不需要知道异步计算何时完成。
+- 您不关心异步计算在哪个线程上运行。
+- 您无需注意或报告由任务生成的异常。
+
+需要注意的事项：
+
+- 通过 `Async.Start` 开始的计算引发的异常不会传播到调用方。 调用堆栈将被完全展开。
+- 任何 effectful 的工作（例如调用 `printfn`）都是从 @no__t 开始，这不会导致在程序执行的主线程上发生效果。
+
+## <a name="interoperating-with-net"></a>与 .NET 互操作
+
+你可以使用 .NET 库或C#使用[async/await](../../../standard/async.md)样式异步编程的基本代码。 因为C#和大多数 .net 库使用 <xref:System.Threading.Tasks.Task%601> 和 <xref:System.Threading.Tasks.Task> 类型作为其核心抽象，而不是 `Async<'T>`，所以必须将这两种方法之间的边界跨越异步。
+
+### <a name="how-to-work-with-net-async-and-taskt"></a>如何使用 .NET async 和 `Task<T>`
+
+使用使用 <xref:System.Threading.Tasks.Task%601> （即，具有返回值的异步计算）的 .NET 异步库和基本代码非常简单，并且具有的F#内置支持。
+
+您可以使用 `Async.AwaitTask` 函数来等待 .NET 异步计算：
+
+```fsharp
+let getValueFromLibrary param =
+    async {
+        let! value = DotNetLibrary.GetValueAsync param |> Async.AwaitTask
+        return value
+    }
+```
+
+可以使用 `Async.StartAsTask` 函数将异步计算传递到 .NET 调用方：
+
+```fsharp
+let computationForCaller param =
+    async {
+        let! result = getAsyncResult param
+        return result
+    } |> Async.StartAsTask
+```
+
+### <a name="how-to-work-with-net-async-and-task"></a>如何使用 .NET async 和 `Task`
+
+若要使用 @no__t 为0（即，不返回值的 .NET async 计算）的 Api，你可能需要添加一个将 @no__t 转换为 @no__t 2 的其他函数：
+
+```fsharp
+module Async =
+    // Async<unit> -> Task
+    let startTaskFromAsyncUnit (comp: Async<unit>) =
+        Async.StartAsTask comp :> Task
+```
+
+已有 `Async.AwaitTask` 接受 @no__t 输入。 使用此函数和之前定义 `startTaskFromAsyncUnit` 函数，可以从F#异步计算启动和等待 @no__t 类型。
+
+## <a name="relationship-to-multithreading"></a>与多线程的关系
+
+尽管本文介绍了线程处理，但要记住以下两个重要事项：
+
+1. 除非在当前线程上显式启动，否则异步计算与线程之间没有关联。
+1. 中F#的异步编程不是多线程的抽象。
+
+例如，根据工作的性质，计算实际上可以在其调用方的线程上运行。 计算也可以在线程之间 "跳转"，从而在 "等待" 的时间间隔（例如，当网络调用正在传输时）使用一小段时间完成有用的工作。
+
+尽管F#提供了在当前线程上启动异步计算的某些功能（或不显式在当前线程上），但异步通常不与特定的线程策略相关联。
+
+## <a name="see-also"></a>请参阅
+
+- [F#异步编程模型](https://www.microsoft.com/research/publication/the-f-asynchronous-programming-model)
+- [Jet .com 的F# Async Guide](https://medium.com/jettech/f-async-guide-eb3c8a2d180a)
+- [F#获取趣味和利润的异步编程指南](https://fsharpforfunandprofit.com/posts/concurrency-async-and-parallel/)
+- [C#和F#中的异步：中的异步陷阱C#](http://tomasp.net/blog/csharp-async-gotchas.aspx/)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0a81f4a53954c559ab12e27bcf039b7b1a1804cc
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 1b7cbadbd1494d5e4d1488dd12296f4f90890127
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71700797"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395484"
 ---
 # <a name="icordebugcodeisil-method"></a>ICorDebugCode::IsIL 方法
 
@@ -36,17 +36,17 @@ HRESULT IsIL (
 );
 ```
 
-## <a name="parameters"></a>Parameters
- `pbIL`  
- [out] 如果此 `ICorDebugCode` 表示在 MSIL 中编译的代码，则为 `true`;否则，`false`。
+## <a name="parameters"></a>参数
+
+`pbIL`  
+[out] 如果此 `ICorDebugCode` 表示在 MSIL 中编译的代码，则为 `true`;否则，`false`。
 
 ## <a name="requirements"></a>要求
 
- **适用**请参阅[系统需求](../../get-started/system-requirements.md)。  
+**平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。
 
- **标头：** Cordebug.idl，Cordebug.idl  
+**标头**：CorDebug.idl、CorDebug.h
 
- **类库**CorGuids.lib  
+**库：** CorGuids.lib
 
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
- 
+**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

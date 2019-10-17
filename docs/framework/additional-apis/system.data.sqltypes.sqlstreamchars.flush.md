@@ -1,5 +1,5 @@
 ---
-title: SqlStreamChars.Flush 方法 (System.Data.SqlTypes)
+title: SqlStreamChars 方法（SqlTypes）
 author: stevestein
 ms.author: sstein
 ms.date: 12/20/2018
@@ -12,16 +12,16 @@ api_location:
 - System.Data.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 411bd0036de904dd485d9fb54fa5fd45e3b55dbb
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 38ade5ce38cfe5003b2d06c0d8bb2db1a20bc05b
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634338"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395614"
 ---
-# <a name="sqlstreamcharsflush-method"></a>SqlStreamChars.Flush 方法
+# <a name="sqlstreamcharsflush-method"></a>SqlStreamChars 方法
 
-当在派生类中重写时，将清除该流的所有缓冲区，并使得所有缓冲数据被写入到基础设备。 包含此方法的程序集具有与 SQLAccess.dll 友元关系。 它被用于 SQL server 上。 对于其他数据库，使用提供该数据库的宿主机制。
+当在派生类中重写时，将清除该流的所有缓冲区，并使得所有缓冲数据被写入到基础设备。 包含此方法的程序集与 SQLAccess 具有友元关系。 它旨在 SQL Server 使用。 对于其他数据库，请使用该数据库提供的托管机制。
 
 ## <a name="syntax"></a>语法
 
@@ -32,14 +32,14 @@ public abstract void Flush ();
 ## <a name="remarks"></a>备注
 
 > [!WARNING]
-> `SqlStreamChars.Flush`方法是私有的不适合直接在代码中使用。
+> @No__t-0 方法是私有的，不应在代码中直接使用。
 >
-> Microsoft 不支持在生产应用程序在任何情况下使用此字段。
+> 在任何情况下，Microsoft 不支持在生产应用程序中使用此方法。
 
 ## <a name="requirements"></a>要求
 
-**Namespace**：<xref:System.Data.SqlTypes>
+**命名空间：** <xref:System.Data.SqlTypes>
 
-**程序集：** System.Data （在 System.Data.dll 中)
+**程序集：** System.object （在 System.web 中）
 
-**.NET framework 版本：** 自 2.0 之后可用。
+**.NET Framework 版本：** 自2.0 起可用。

@@ -4,23 +4,23 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - string functions
 ms.assetid: f1bf9ac2-cbcf-4298-ae51-53182076bdc8
-ms.openlocfilehash: 917797700c3e403971ce6f48174a282b1102f127
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 32a31a881573cc9dc481fc07fc4067569a96a963
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70799320"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395824"
 ---
 # <a name="string-functions-visual-basic"></a>字符串函数 (Visual Basic)
 
-下表列出了 Visual Basic 在<xref:Microsoft.VisualBasic.Strings?displayProperty=nameWithType>类中提供的用于搜索和操作字符串的函数。 它们可以视为 Visual Basic 内部函数;也就是说，您不必将它们作为类的显式成员进行调用，如示例所示。 <xref:System.String?displayProperty=nameWithType>类中提供了其他方法，在某些情况下为互补方法。 
+下表列出了 Visual Basic 在 @no__t 0 类中提供的用于搜索和操作字符串的函数。 它们可以视为 Visual Basic 内部函数;也就是说，您不必将它们作为类的显式成员进行调用，如示例所示。 在某些情况下，附加方法（在某些情况下为互补方法）在 <xref:System.String?displayProperty=nameWithType> 类中提供。 
   
 |.NET Framework 方法|描述|  
 |---------------------------|-----------------|  
-|<xref:Microsoft.VisualBasic.Strings.Asc%2A>， <xref:Microsoft.VisualBasic.Strings.AscW%2A>|返回一个`Integer`值，该值表示与某个字符相对应的字符代码。|  
-|<xref:Microsoft.VisualBasic.Strings.Chr%2A>， <xref:Microsoft.VisualBasic.Strings.ChrW%2A>|返回与指定字符代码关联的字符。|  
-|<xref:Microsoft.VisualBasic.Strings.Filter%2A>|返回一个从零开始的数组，其中包含基于`String`指定筛选条件的数组的子集。|  
-|<xref:Microsoft.VisualBasic.Strings.Format%2A>|返回根据格式`String`表达式中包含的指令设置格式的字符串。|  
+|<xref:Microsoft.VisualBasic.Strings.Asc%2A>，<xref:Microsoft.VisualBasic.Strings.AscW%2A>|返回表示与某个字符相对应的字符代码的 @no__t 0 值。|  
+|<xref:Microsoft.VisualBasic.Strings.Chr%2A>，<xref:Microsoft.VisualBasic.Strings.ChrW%2A>|返回与指定字符代码关联的字符。|  
+|<xref:Microsoft.VisualBasic.Strings.Filter%2A>|返回一个从零开始的数组，其中包含基于指定筛选条件的 @no__t 0 数组的子集。|  
+|<xref:Microsoft.VisualBasic.Strings.Format%2A>|返回一个字符串，该字符串根据格式 `String` 表达式中包含的指令进行格式设置。|  
 |<xref:Microsoft.VisualBasic.Strings.FormatCurrency%2A>|返回使用系统控制面板中定义的货币符号格式化为货币值的表达式。|  
 |<xref:Microsoft.VisualBasic.Strings.FormatDateTime%2A>|返回表示日期/时间值的字符串表达式。|  
 |<xref:Microsoft.VisualBasic.Strings.FormatNumber%2A>|返回格式化为数字的表达式。|  
@@ -47,43 +47,43 @@ ms.locfileid: "70799320"
 |<xref:Microsoft.VisualBasic.Strings.Trim%2A>|返回一个字符串，该字符串包含不带前导空格或尾随空格的指定字符串的副本。|  
 |<xref:Microsoft.VisualBasic.Strings.UCase%2A>|返回包含转换为大写的指定字符串的字符串或字符。|  
   
- 您可以使用[Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md)语句来设置是使用不区分大小写的文本排序顺序（由系统的区域设置（`Text`）决定），还是通过字符的内部二进制表示形式来比较字符串（`Binary`）。 默认的文本比较方法是 `Binary`。  
+ 您可以使用[Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md)语句来设置是使用不区分大小写的文本排序顺序来比较字符串，而不区分大小写的文本排序顺序由系统的区域设置（`Text`）或字符（`Binary`）的内部二进制表示形式确定。 默认的文本比较方法是 `Binary`。  
   
-## <a name="example-ucase"></a>示例：UCase
+## <a name="example-ucase"></a>示例： UCase
 
-此示例使用`UCase`函数返回字符串的大写形式。  
+此示例使用 `UCase` 函数返回字符串的大写形式。  
 [!code-vb[VbVbalrStrings#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#31)]  
   
-## <a name="example-ltrim"></a>示例：LTrim
+## <a name="example-ltrim"></a>示例： LTrim
 
-此示例使用`LTrim`函数来去除前导空格`RTrim` ，并使用函数去除字符串变量中的尾随空格。 它使用`Trim`函数来去除这两种类型的空格。  
+此示例使用 `LTrim` 函数去除前导空格，使用 `RTrim` 函数去除字符串变量中的尾随空格。 它使用 `Trim` 函数来去除这两种类型的空格。  
   
 [!code-vb[VbVbalrStrings#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#25)]  
   
-## <a name="example-mid"></a>示例：中层
+## <a name="example-mid"></a>示例： Mid
 
-此示例使用`Mid`函数从字符串返回指定数目的字符。  
+此示例使用 `Mid` 函数从字符串返回指定数目的字符。  
 
 [!code-vb[VbVbalrStrings#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#17)]  
 
-## <a name="example-len"></a>示例：Len
+## <a name="example-len"></a>示例： Len
 
-此示例使用`Len`返回字符串中的字符数。  
+此示例使用 `Len` 返回字符串中的字符数。  
   
 [!code-vb[VbVbalrStrings#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#33)]  
   
-## <a name="example-instr"></a>示例：InStr
+## <a name="example-instr"></a>示例： InStr
 
-此示例使用`InStr`函数返回一个字符串在另一个字符串中的第一个匹配项的位置。  
+此示例使用 `InStr` 函数返回一个字符串在另一个字符串中的第一个匹配项的位置。  
   
 [!code-vb[VbVbalrStrings#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#8)]  
   
 ## <a name="example-format"></a>示例：格式
 
-此示例演示`Format`函数使用格式和用户定义格式设置值`String`格式的各种用法。 对于`/`日期分隔符（）、时间分隔符（`:`）以及 AM/PM 指示符（`t`和`tt`），系统显示的实际格式化输出取决于代码使用的区域设置。 当在开发环境中显示时间和日期时，将使用代码区域设置的短时间格式和短日期格式。  
+此示例显示 `Format` 函数使用 @no__t 一种格式和用户定义格式设置值格式的各种用法。 对于日期分隔符（`/`）、时间分隔符（`:`）和 AM/PM 指示符（`t` 和 @no__t 3），系统显示的实际格式输出取决于代码使用的区域设置。 当在开发环境中显示时间和日期时，将使用代码区域设置的短时间格式和短日期格式。  
   
 > [!NOTE]
-> 对于使用24小时制的区域设置，AM/PM 指示符（`t`和`tt`）不显示任何内容。  
+> 对于使用24小时制的区域设置，AM/PM 指示符（@no__t 0 和 `tt`）不显示任何内容。  
   
  [!code-vb[VbVbalrStrings#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#27)]  
   
@@ -92,4 +92,4 @@ ms.locfileid: "70799320"
 - [关键字](../../../visual-basic/language-reference/keywords/index.md)
 - [Visual Basic 运行库成员](../../../visual-basic/language-reference/runtime-library-members.md)
 - [字符串操作摘要](../../../visual-basic/language-reference/keywords/string-manipulation-summary.md)
-- [System.string 类方法]<xref:System.String#methods?displayProperty=nameWithType>
+- [System.string 类方法](xref:System.String#methods)

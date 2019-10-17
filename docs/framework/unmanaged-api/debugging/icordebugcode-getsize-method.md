@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 89df0e9be0600b51dcc8a68c5aba3f06e86e1b53
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 25349f7c8274b818df2cd1bc5d67856e31efecc4
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71700804"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395548"
 ---
 # <a name="icordebugcodegetsize-method"></a>ICorDebugCode::GetSize 方法
 
@@ -36,18 +36,17 @@ HRESULT GetSize (
 );
 ```
 
-## <a name="parameters"></a>Parameters
+## <a name="parameters"></a>参数
 
- `pcBytes`  
- 弄一个指针，指向此 @no__t 0 对象表示的二进制代码的大小（以字节为单位）。
+`pcBytes`  
+弄一个指针，指向此 @no__t 0 对象表示的二进制代码的大小（以字节为单位）。
 
 ## <a name="requirements"></a>要求
 
- **适用**请参阅[系统需求](../../get-started/system-requirements.md)。
+**平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。
 
- **标头：** Cordebug.idl，Cordebug.idl
+**标头**：CorDebug.idl、CorDebug.h
 
- **类库**CorGuids.lib
+**库：** CorGuids.lib
 
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
- 
+**.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

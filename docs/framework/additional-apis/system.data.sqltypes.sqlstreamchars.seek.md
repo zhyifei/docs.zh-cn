@@ -1,5 +1,5 @@
 ---
-title: SqlStreamChars.Seek （Int64，SeekOrigin） 方法 (System.Data.SqlTypes)
+title: SqlStreamChars （Int64，SeekOrigin）方法（SqlTypes）
 author: stevestein
 ms.author: sstein
 ms.date: 12/20/2018
@@ -12,16 +12,16 @@ api_location:
 - System.Data.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 6b69f87da9fb3829d765dc135de1f6c10765b63a
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: db8aba0a86c140ba62af8056011226532d415951
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634361"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395594"
 ---
-# <a name="sqlstreamcharsseekint64-seekorigin-method"></a>SqlStreamChars.Seek （Int64，SeekOrigin） 方法
+# <a name="sqlstreamcharsseekint64-seekorigin-method"></a>SqlStreamChars （Int64，SeekOrigin）方法
 
-当在派生类中重写时，设置当前流中的位置。 包含此方法的程序集具有与 SQLAccess.dll 友元关系。 它被用于 SQL server 上。 对于其他数据库，使用提供该数据库的宿主机制。
+当在派生类中重写时，设置当前流中的位置。 包含此方法的程序集与 SQLAccess 具有友元关系。 它旨在 SQL Server 使用。 对于其他数据库，请使用该数据库提供的托管机制。
 
 ```csharp
 public abstract long Seek (long offset, System.IO.SeekOrigin origin);
@@ -30,10 +30,10 @@ public abstract long Seek (long offset, System.IO.SeekOrigin origin);
 ## <a name="parameters"></a>参数
 
 `offset`\
-字节偏移量相对于`origin`。
+相对于 @no__t 0 的字节偏移量。
 
 `origin`\
-一个枚举值，该值指示要从中获取新位置的参考点。
+枚举值之一，指示要从中获取新位置的参考点。
 
 ## <a name="returns"></a>返回
 
@@ -43,14 +43,14 @@ public abstract long Seek (long offset, System.IO.SeekOrigin origin);
 ## <a name="remarks"></a>备注
 
 > [!WARNING]
-> `SqlStreamChars.Seek`方法是私有的不适合直接在代码中使用。
+> @No__t-0 方法是私有的，不应在代码中直接使用。
 >
-> Microsoft 不支持在生产应用程序在任何情况下使用此字段。
+> 在任何情况下，Microsoft 不支持在生产应用程序中使用此方法。
 
 ## <a name="requirements"></a>要求
 
-**Namespace**：<xref:System.Data.SqlTypes>
+**命名空间：** <xref:System.Data.SqlTypes>
 
-**程序集：** System.Data （在 System.Data.dll 中)
+**程序集：** System.object （在 System.web 中）
 
-**.NET framework 版本：** 自 2.0 之后可用。
+**.NET Framework 版本：** 自2.0 起可用。

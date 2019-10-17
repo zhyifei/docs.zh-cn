@@ -7,17 +7,17 @@ helpviewer_keywords:
 - extending data types [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: b8020aae-374d-46a9-bcb7-8cc2390b93b6
-ms.openlocfilehash: b5ad066fe9ec40d715702ed99537f45b21c558cf
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: d988ab36703bc20e6960d4b8ecc7a476d95ee9bc
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71701057"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72396013"
 ---
 # <a name="extension-methods-visual-basic"></a>扩展方法 (Visual Basic)
 
 通过扩展方法，开发人员可以向已定义的数据类型添加自定义功能，而无需创建新的派生类型。 通过扩展方法，可以编写一个方法，该方法可以像调用现有类型的实例方法一样进行调用。
-  
+
 ## <a name="remarks"></a>备注
 
 扩展方法只能是 @no__t 或 @no__t 的过程。 不能定义扩展属性、字段或事件。 所有扩展方法都必须使用 <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> 命名空间中的扩展属性 `<Extension>` 进行标记，且必须在[模块](../../../language-reference/statements/module-statement.md)中定义。 如果在模块之外定义扩展方法，则 Visual Basic 编译器将生成错误[BC36551](../../../misc/bc36551.md)"只能在模块中定义扩展方法"。
@@ -29,7 +29,7 @@ ms.locfileid: "71701057"
 ## <a name="example"></a>示例
 
 下面的示例定义了 <xref:System.String> 数据类型的 @no__t 的扩展。 方法使用 `Console.WriteLine` 来显示字符串。 @No__t-1 @no__t 方法的参数确定方法扩展了 @no__t 2 类。
-  
+
 [!code-vb[VbVbalrExtensionMethods#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/StringExtensions.vb#1)]
 
 请注意，扩展方法定义标记有扩展属性 `<Extension()>`。 标记定义方法的模块是可选的，但必须标记每个扩展方法。 必须导入 <xref:System.Runtime.CompilerServices> 才能访问扩展属性。
@@ -45,7 +45,6 @@ ms.locfileid: "71701057"
 通过在 `punc` 的字符串参数中发送来调用方法： `example.PrintAndPunctuate(".")`
 
 下面的示例演示如何定义和调用 @no__t 0 和 @no__t。 在定义模块中导入 <xref:System.Runtime.CompilerServices>，以便能够访问扩展属性。
-
 
 ```vb
 Imports System.Runtime.CompilerServices
@@ -98,7 +97,7 @@ End Module
 - 委托
 - ByRef 和 ByVal 参数
 - 泛型方法参数
-- 数组
+- 阵列
 
 因为第一个参数指定扩展方法扩展的数据类型，所以它是必需的，并且不能是可选的。 出于此原因，@no__t 参数和 @no__t 1 参数不能是参数列表中的第一个参数。
 

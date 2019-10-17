@@ -8,15 +8,15 @@ helpviewer_keywords:
 - typography [WPF], special characters
 - special characters [WPF]
 ms.assetid: a57776d1-f353-4794-afa0-bfa3c712ed1c
-ms.openlocfilehash: 61ee38319b2f0aa46690fb063f6ffe6612f993ad
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 27f2b18593d075b54eb8c3351bbb84415700cfd4
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69918436"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395808"
 ---
 # <a name="how-to-use-special-characters-in-xaml"></a>如何：在 XAML 中使用特殊字符
-中[!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]创建的标记文件将自动[!INCLUDE[TLA#tla_unicode](../../../../includes/tlasharptla-unicode-md.md)]以 utf-8 文件格式保存, 这意味着, 最特殊的字符 (如重音符号) 已正确编码。 但是，有一组常用特殊字符的处理方式不同。 这些特殊字符遵循[!INCLUDE[TLA#tla_w3c](../../../../includes/tlasharptla-w3c-md.md)] [!INCLUDE[TL A#tla_xml](../../../../includes/tlasharptla-xml-md.md)]编码的标准。  
+在 [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] 中创建的标记文件将自动保存为 Unicode UTF-8 文件格式，这意味着最特殊的字符（如重音符号）会正确编码。 但是，有一组常用特殊字符的处理方式不同。 这些特殊字符遵循 [!INCLUDE[TLA#tla_w3c](../../../../includes/tlasharptla-w3c-md.md)] @no__t 标准进行编码。  
   
  下表显示这组特殊字符的编码语法：  
   
@@ -28,7 +28,7 @@ ms.locfileid: "69918436"
 |"|`&quot;`|双引号。|  
   
 > [!NOTE]
-> 如果使用文本编辑器 (如 Windows 记事本) 创建标记文件, 则必须将该文件[!INCLUDE[TLA#tla_unicode](../../../../includes/tlasharptla-unicode-md.md)]保存为 utf-8 文件格式, 以便保留所有编码的特殊字符。  
+> 如果使用文本编辑器（如 Windows 记事本）创建标记文件，则必须将该文件保存为 Unicode UTF-8 文件格式，以便保留所有编码的特殊字符。  
   
  以下示例演示创建标记时如何在文本中使用特殊字符。  
   

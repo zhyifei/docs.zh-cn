@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1605ee92c8743606ff0e958f112a2d90af43e03a
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 3ebed8ea1d4943007f8f18b0baa1c676a78207c2
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71700720"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395509"
 ---
 # <a name="icordebugcode2getcompilerflags-method"></a>ICorDebugCode2::GetCompilerFlags 方法
 
@@ -36,18 +36,17 @@ HRESULT GetCompilerFlags (
 );
 ```
 
-## <a name="parameters"></a>Parameters
+## <a name="parameters"></a>参数
 
- `pdwFlags`  
- 弄指向[CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md)枚举的值的指针，该枚举指定 JIT 编译器或本机图像生成器的行为。
+`pdwFlags`  
+弄指向[CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md)枚举的值的指针，该枚举指定 JIT 编译器或本机图像生成器的行为。
 
 ## <a name="requirements"></a>要求
 
- **适用**请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。
+**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。
 
- **标头：** Cordebug.idl，Cordebug.idl
+**标头**：CorDebug.idl、CorDebug.h
 
- **类库**CorGuids.lib
+**库：** CorGuids.lib
 
- **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
- 
+**.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

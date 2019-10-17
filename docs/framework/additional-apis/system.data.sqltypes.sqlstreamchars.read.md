@@ -1,5 +1,5 @@
 ---
-title: SqlStreamChars.Read (Char []，Int32，Int32) 方法 (System.Data.SqlTypes)
+title: SqlStreamChars （Char []，Int32，Int32）方法（SqlTypes）
 author: stevestein
 ms.author: sstein
 ms.date: 12/20/2018
@@ -12,16 +12,16 @@ api_location:
 - System.Data.dll
 api_type:
 - Assembly
-ms.openlocfilehash: df715f622f874b3c9297c421eab9f4c7504e696b
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 9c8a1526e75fdc304022e74a7cc52506762489ea
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634323"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395756"
 ---
-# <a name="sqlstreamcharsreadchar-int32-int32-method"></a>SqlStreamChars.Read (Char []，Int32，Int32) 方法
+# <a name="sqlstreamcharsreadchar-int32-int32-method"></a>SqlStreamChars （Char []，Int32，Int32）方法
 
-当在派生类中重写，请从输入流读取下一组字符。 包含此方法的程序集具有与 SQLAccess.dll 友元关系。 它被用于 SQL server 上。 对于其他数据库，使用提供该数据库的宿主机制。
+当在派生类中重写时，从输入流中读取下一组字符。 包含此方法的程序集与 SQLAccess 具有友元关系。 它旨在 SQL Server 使用。 对于其他数据库，请使用该数据库提供的托管机制。
 
 ```csharp
 public abstract int Read (char[] buffer, int offset, int count);
@@ -33,7 +33,7 @@ public abstract int Read (char[] buffer, int offset, int count);
 要读取的字符数组。
 
 `offset`\
-相对于源偏移量。
+相对于原点的偏移量。
 
 `count`\
 要从当前流中读取的字符数。
@@ -46,14 +46,14 @@ public abstract int Read (char[] buffer, int offset, int count);
 ## <a name="remarks"></a>备注
 
 > [!WARNING]
-> `SqlStreamChars.Read`方法是私有的不适合直接在代码中使用。
+> @No__t-0 方法是私有的，不应在代码中直接使用。
 >
-> Microsoft 不支持在生产应用程序在任何情况下使用此字段。
+> 在任何情况下，Microsoft 不支持在生产应用程序中使用此方法。
 
 ## <a name="requirements"></a>要求
 
-**Namespace**：<xref:System.Data.SqlTypes>
+**命名空间：** <xref:System.Data.SqlTypes>
 
-**程序集：** System.Data （在 System.Data.dll 中)
+**程序集：** System.object （在 System.web 中）
 
-**.NET framework 版本：** 自 2.0 之后可用。
+**.NET Framework 版本：** 自2.0 起可用。
