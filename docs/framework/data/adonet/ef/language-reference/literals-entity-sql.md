@@ -2,12 +2,12 @@
 title: 文本 (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 092ef693-6e5f-41b4-b868-5b9e82928abf
-ms.openlocfilehash: 9aba737b522f75f1f81cc054fb87b414b06f9611
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: e07dd3217e133fff98beb11ecad47e1474e4974a
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250335"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319668"
 ---
 # <a name="literals-entity-sql"></a>文本 (Entity SQL)
 本主题介绍 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 对于文字的支持。  
@@ -19,22 +19,22 @@ ms.locfileid: "70250335"
   
  有关可以使用自由浮动 null 文本的规则，请参阅[Null 文本和类型推理](null-literals-and-type-inference-entity-sql.md)。  
   
-## <a name="boolean"></a>Boolean  
+## <a name="boolean"></a>布尔值  
  布尔值文字由关键字 `true` 和 `false` 表示。  
   
 ## <a name="integer"></a>整数  
  整型文字可以为类型 <xref:System.Int32> 或 <xref:System.Int64>。 <xref:System.Int32> 文字是一系列数字字符。 <xref:System.Int64> 文字是一系列数字字符，后跟一个大写 L。  
   
-## <a name="decimal"></a>Decimal  
+## <a name="decimal"></a>十进制  
  固定点数字（小数）是一系列数字字符、一个圆点 (.) 和另一系列数字字符，后跟一个大写“M”。  
   
 ## <a name="float-double"></a>浮点，双精度  
  双精度浮点数字是一系列数字字符、一个圆点 (.) 和另一系列数字字符，后面可能跟一个指数。 单精度浮点数字（或浮点数）是双精度浮点数字语法后跟小写 f。  
   
-## <a name="string"></a>String  
+## <a name="string"></a>字符串  
  字符串是包含在引号内的一系列字符。 引号可以同时为单引号 (`'`) 或同时为双引号 (")。 字符串文字可以是 Unicode 或非 Unicode。 若要将字符串文字声明为 Unicode，请在文字之前加上大写“N”作为前缀。 默认值为非 Unicode 字符串文字。 在 N 与字符串文字负载之间不能存在空格，并且 N 必须为大写。  
   
-```  
+```sql  
 'hello' -- non-Unicode character string literal  
 N'hello' -- Unicode character string literal  
 "x"  
@@ -45,13 +45,13 @@ N"This is a string!"
 ## <a name="datetime"></a>DateTime  
  日期时间文字独立于区域设置并由日期部分和时间部分组成。 日期部分和时间部分都是必需的，并且没有默认值。  
   
- 日期`YYYY`部分的格式必须为： - - `MM` `DD` `MM` ，其中是`YYYY`介于0001和9999之间的四位数年份值，是介于1和12之间的月份，是`DD`给定月份`MM`有效的日期值。  
+ 日期部分必须采用以下格式： `YYYY` - `MM` - `DD`，其中 `YYYY` 是介于0001和9999之间的四位数年份，`MM` 是介于1和12之间的月份，`DD` 是日期值。对于给定月份 `MM` 有效。  
   
  时间部分的格式必须为：`HH`:`MM`[:`SS`[.fffffff]]，其中 `HH` 为介于 0 至 23 之间的小时值，`MM` 为介于 0 至 59 之间的分钟值，`SS` 为介于 0 至 59 之间的秒值，而 fffffff 为介于 0 至 9999999 之间的秒的小数部分值。 所有值范围都包含两端。 秒的小数部分是可选的。 除非指定了秒的小数部分，否则秒是可选的；在指定了秒的小数部分时秒是必需的。 在未指定秒或秒的小数部分时，将使用默认值零。  
   
  在 DATETIME 符号与文字负载之间可以存在任意数目的空格，但是不能存在新行。  
   
-```  
+```sql  
 DATETIME'2006-10-1 23:11'  
 DATETIME'2006-12-25 01:01:00.0000000' -- same as DATETIME'2006-12-25 01:01'  
 ```  
@@ -61,7 +61,7 @@ DATETIME'2006-12-25 01:01:00.0000000' -- same as DATETIME'2006-12-25 01:01'
   
  在 TIME 符号与文字负载之间可以存在任意数目的空格，但是不能存在新行。  
   
-```  
+```sql  
 TIME‘23:11’  
 TIME‘01:01:00.1234567’  
 ```  
@@ -71,7 +71,7 @@ TIME‘01:01:00.1234567’
   
  在 DATETIMEOFFSET 符号与文字负载之间可以存在任意数目的空格，但是不能存在新行。  
   
-```  
+```sql  
 DATETIMEOFFSET‘2006-10-1 23:11 +02:00’  
 DATETIMEOFFSET‘2006-12-25 01:01:00.0000000 -08:30’  
 ```  
@@ -84,19 +84,19 @@ DATETIMEOFFSET‘2006-12-25 01:01:00.0000000 -08:30’
   
  十六进制字符也不区分大小写。 如果文字由奇数个十六进制数字组成，则将通过在文字之前附加十六进制数字零作为前缀，使文字与下一个偶数十六进制数字对齐。 对于二进制字符串的大小，不存在正式的限制。  
   
-```  
+```sql  
 Binary'00ffaabb'  
 X'ABCabc'  
 BINARY    '0f0f0f0F0F0F0F0F0F0F'  
 X'' –- empty binary string  
 ```  
   
-## <a name="guid"></a>Guid  
- `GUID` 文本表示全局唯一标识符。 它是由关键字`GUID`构成的序列，后跟十六进制数字，格式称为*注册表*格式：包含在单引号内的 8-4-4-4-12。 十六进制数字区分大小写。  
+## <a name="guid"></a>GUID  
+ `GUID` 文本表示全局唯一标识符。 它是一个由关键字构成的序列，`GUID` 后跟十六进制数字，格式称为*注册表*格式：8-4-4-4-12 括在单引号中。 十六进制数字区分大小写。  
   
  在 GUID 符号与文字负载之间可以存在任意数目的空格，但是不能存在新行。  
   
-```  
+```sql  
 Guid'1afc7f5c-ffa0-4741-81cf-f12eAAb822bf'  
 GUID  '1AFC7F5C-FFA0-4741-81CF-F12EAAB822BF'  
 ```  

@@ -2,21 +2,21 @@
 title: MULTISET (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: eb90a377-e47a-43a5-b308-e993b6d611e6
-ms.openlocfilehash: 8e02d2d3171c9f08333ecef7ee22e65100bdf822
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 222be86db434b5d41c7b0536d271a3750b6afbe8
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250098"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319585"
 ---
 # <a name="multiset-entity-sql"></a>MULTISET (Entity SQL)
 根据值列表创建多集的实例。 MULTISET 构造函数中的所有值都必须具有兼容类型 `T`。 不允许使用空的多集构造函数。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```sql  
 MULTISET ( expression [{, expression }] )  
-or  
+-- or  
 { expression [{, expression }] }  
 ```  
   
@@ -25,7 +25,7 @@ or
  任何有效的值列表。  
   
 ## <a name="return-value"></a>返回值  
- > 类型\<的集合。  
+ 类型为多重集 \<T > 的集合。  
   
 ## <a name="remarks"></a>备注  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 提供了三种构造函数：行构造函数、对象构造函数和多集（或集合）构造函数。 有关详细信息，请参阅[构造类型](constructing-types-entity-sql.md)。  
@@ -39,16 +39,16 @@ or
  `{1, 2, 3}`  
   
 > [!NOTE]
-> 仅当包装多集具有单个多重集元素时才支持嵌套的多集文本;例如， `{{1, 2, 3}}`。 当包装多集具有多个多集元素（如 `{{1, 2}, {3, 4}}`）时，不支持嵌套多集文本。  
+> 仅当包装多集具有单个多重集元素时才支持嵌套的多集文本;例如，`{{1, 2, 3}}`。 当包装多集具有多个多集元素（如 `{{1, 2}, {3, 4}}`）时，不支持嵌套多集文本。  
   
 ## <a name="example"></a>示例  
  下面的 Entity SQL 查询使用 MULTISET 运算符根据值列表创建多集的实例。 此查询基于 AdventureWorks 销售模型。 若要编译并运行此查询，请执行下列步骤：  
   
-1. [按照如何：执行返回 StructuralType 结果](../how-to-execute-a-query-that-returns-structuraltype-results.md)的查询。  
+1. 执行 [How to: Execute a Query that Returns StructuralType Results](../how-to-execute-a-query-that-returns-structuraltype-results.md)中的过程。  
   
 2. 将以下查询作为参数传递给 `ExecuteStructuralTypeQuery` 方法：  
   
- [!code-csharp[DP EntityServices Concepts 2#MULTISET](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#multiset)]  
+ [!code-sql[DP EntityServices Concepts#MULTISET](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#multiset)]  
   
 ## <a name="see-also"></a>请参阅
 

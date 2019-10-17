@@ -2,19 +2,19 @@
 title: ISNULL (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: dc7a0173-3664-4c90-a57b-5cbb0a8ed7ee
-ms.openlocfilehash: d54c350196ad1ef7cfafa6d931d9d1ad8f267177
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 9066f9fb68ce2c50e9523881cfa0dd930cd0b52e
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250560"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319733"
 ---
 # <a name="isnull-entity-sql"></a>ISNULL (Entity SQL)
 确定查询表达式是否为 null。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```sql  
 expression IS [ NOT ] NULL  
 ```  
   
@@ -31,7 +31,7 @@ expression IS [ NOT ] NULL
 ## <a name="remarks"></a>备注  
  使用 `IS NULL` 可确定外部联接的元素是否为 null：  
   
-```  
+```sql  
 select c   
       from LOB.Customers as c left outer join LOB.Orders as o   
                               on c.ID = o.CustomerID    
@@ -40,7 +40,7 @@ select c
   
  使用 `IS NULL` 可确定成员是否有实际值：  
   
-```  
+```sql  
 select c from LOB.Customer as c where c.DOB is not null  
 ```  
   
@@ -59,11 +59,11 @@ select c from LOB.Customer as c where c.DOB is not null
 ## <a name="example"></a>示例  
  下面的 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 查询使用 IS NOT NULL 运算符来确定查询表达式是否不为 null。 此查询基于 AdventureWorks 销售模型。 若要编译并运行此查询，请执行下列步骤：  
   
-1. [按照如何：执行返回 StructuralType 结果](../how-to-execute-a-query-that-returns-structuraltype-results.md)的查询。  
+1. 执行 [How to: Execute a Query that Returns StructuralType Results](../how-to-execute-a-query-that-returns-structuraltype-results.md)中的过程。  
   
 2. 将以下查询作为参数传递给 `ExecuteStructuralTypeQuery` 方法：  
   
- [!code-csharp[DP EntityServices Concepts 2#ISNULL](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#isnull)]  
+ [!code-sql[DP EntityServices Concepts#ISNULL](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#isnull)]  
   
 ## <a name="see-also"></a>请参阅
 

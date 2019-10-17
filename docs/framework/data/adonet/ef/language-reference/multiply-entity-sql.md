@@ -2,19 +2,19 @@
 title: '* 乘（实体 SQL）'
 ms.date: 03/30/2017
 ms.assetid: 508ce246-4e86-47dd-a605-4af4bebb9891
-ms.openlocfilehash: 19fb73d327f91303de938a5f49866339413b9698
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 7006f5143e8cc18156f748ae7664f3787c9ff5c9
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250049"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319615"
 ---
 # <a name="-multiply-entity-sql"></a>*（乘）(Entity SQL)
 将两个表达式相乘。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```sql  
 expression * expression  
 ```  
   
@@ -28,11 +28,11 @@ expression * expression
 ## <a name="example"></a>示例  
  以下 Entity SQL 查询使用 * 算术运算符将两个数字相乘。 此查询基于 AdventureWorks 销售模型。 若要编译并运行此查询，请执行下列步骤：  
   
-1. [按照如何：执行返回 StructuralType 结果](../how-to-execute-a-query-that-returns-structuraltype-results.md)的查询。  
+1. 执行 [How to: Execute a Query that Returns StructuralType Results](../how-to-execute-a-query-that-returns-structuraltype-results.md)中的过程。  
   
 2. 将以下查询作为参数传递给 `ExecuteStructuralTypeQuery` 方法：  
   
- [!code-csharp[DP EntityServices Concepts 2#MULTIPLY](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#multiply)]  
+ [!code-sql[DP EntityServices Concepts#MULTIPLY](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#multiply)]  
   
 ## <a name="see-also"></a>请参阅
 
