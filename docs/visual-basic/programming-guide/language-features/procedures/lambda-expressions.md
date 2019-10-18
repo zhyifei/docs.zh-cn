@@ -9,156 +9,161 @@ helpviewer_keywords:
 - expressions [Visual Basic], lambda
 - inline functions [Visual Basic]
 ms.assetid: 137064b0-3928-4bfa-ba71-c3f9cbd951e2
-ms.openlocfilehash: e688beac18e782367bf39ddec8339df2b2735225
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d3c385737d7f3a25009dba3abfffe88a1cf1619a
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69928904"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72524043"
 ---
-# <a name="lambda-expressions-visual-basic"></a><span data-ttu-id="b4841-102">Lambda 表达式 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b4841-102">Lambda Expressions (Visual Basic)</span></span>
-<span data-ttu-id="b4841-103">*Lambda 表达式*是没有名称的函数或子例程, 只要委托有效, 就可以使用该函数。</span><span class="sxs-lookup"><span data-stu-id="b4841-103">A *lambda expression* is a function or subroutine without a name that can be used wherever a delegate is valid.</span></span> <span data-ttu-id="b4841-104">Lambda 表达式可以是函数或子例程, 可以是单行或多行。</span><span class="sxs-lookup"><span data-stu-id="b4841-104">Lambda expressions can be functions or subroutines and can be single-line or multi-line.</span></span> <span data-ttu-id="b4841-105">可以将值从当前作用域传递到 lambda 表达式。</span><span class="sxs-lookup"><span data-stu-id="b4841-105">You can pass values from the current scope to a lambda expression.</span></span>  
-  
-> [!NOTE]
-> <span data-ttu-id="b4841-106">`RemoveHandler`语句是一个异常。</span><span class="sxs-lookup"><span data-stu-id="b4841-106">The `RemoveHandler` statement is an exception.</span></span> <span data-ttu-id="b4841-107">不能为的委托参数`RemoveHandler`传递中的 lambda 表达式。</span><span class="sxs-lookup"><span data-stu-id="b4841-107">You cannot pass a lambda expression in for the delegate parameter of `RemoveHandler`.</span></span>  
-  
- <span data-ttu-id="b4841-108">您可以使用`Function`或`Sub`关键字创建 lambda 表达式, 就像创建标准函数或子例程一样。</span><span class="sxs-lookup"><span data-stu-id="b4841-108">You create lambda expressions by using the `Function` or `Sub` keyword, just as you create a standard function or subroutine.</span></span> <span data-ttu-id="b4841-109">但是, lambda 表达式包含在语句中。</span><span class="sxs-lookup"><span data-stu-id="b4841-109">However, lambda expressions are included in a statement.</span></span>  
-  
- <span data-ttu-id="b4841-110">下面的示例是一个 lambda 表达式, 它递增其参数并返回值。</span><span class="sxs-lookup"><span data-stu-id="b4841-110">The following example is a lambda expression that increments its argument and returns the value.</span></span> <span data-ttu-id="b4841-111">该示例显示函数的单行和多行 lambda 表达式语法。</span><span class="sxs-lookup"><span data-stu-id="b4841-111">The example shows both the single-line and multi-line lambda expression syntax for a function.</span></span>  
-  
- [!code-vb[VbVbalrLambdas#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#14)]  
-  
- <span data-ttu-id="b4841-112">下面的示例是一个将值写入控制台的 lambda 表达式。</span><span class="sxs-lookup"><span data-stu-id="b4841-112">The following example is a lambda expression that writes a value to the console.</span></span> <span data-ttu-id="b4841-113">该示例显示了子程序的单行和多行 lambda 表达式语法。</span><span class="sxs-lookup"><span data-stu-id="b4841-113">The example shows both the single-line and multi-line lambda expression syntax for a subroutine.</span></span>  
-  
- [!code-vb[VbVbalrLambdas#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#15)]  
-  
- <span data-ttu-id="b4841-114">请注意, 在前面的示例中, lambda 表达式被分配给变量名。</span><span class="sxs-lookup"><span data-stu-id="b4841-114">Notice that in the previous examples the lambda expressions are assigned to a variable name.</span></span> <span data-ttu-id="b4841-115">只要引用变量, 就会调用 lambda 表达式。</span><span class="sxs-lookup"><span data-stu-id="b4841-115">Whenever you refer to the variable, you invoke the lambda expression.</span></span> <span data-ttu-id="b4841-116">还可以同时声明和调用 lambda 表达式, 如下例所示。</span><span class="sxs-lookup"><span data-stu-id="b4841-116">You can also declare and invoke a lambda expression at the same time, as shown in the following example.</span></span>  
-  
- [!code-vb[VbVbalrLambdas#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#3)]  
-  
- <span data-ttu-id="b4841-117">Lambda 表达式可以作为函数调用的值返回 (如本主题后面的[上下文](#context)部分的示例中所示), 或者作为参数传递给采用委托类型的参数, 如下面的示例中所示。</span><span class="sxs-lookup"><span data-stu-id="b4841-117">A lambda expression can be returned as the value of a function call (as is shown in the example in the [Context](#context) section later in this topic), or passed in as an argument to a parameter that takes a delegate type, as shown in the following example.</span></span>  
-  
- [!code-vb[VbVbalrLambdas#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class2.vb#8)]  
-  
-## <a name="lambda-expression-syntax"></a><span data-ttu-id="b4841-118">Lambda 表达式语法</span><span class="sxs-lookup"><span data-stu-id="b4841-118">Lambda Expression Syntax</span></span>  
- <span data-ttu-id="b4841-119">Lambda 表达式的语法与标准函数或子例程的语法相似。</span><span class="sxs-lookup"><span data-stu-id="b4841-119">The syntax of a lambda expression resembles that of a standard function or subroutine.</span></span> <span data-ttu-id="b4841-120">不同之处如下:</span><span class="sxs-lookup"><span data-stu-id="b4841-120">The differences are as follows:</span></span>  
-  
-- <span data-ttu-id="b4841-121">Lambda 表达式没有名称。</span><span class="sxs-lookup"><span data-stu-id="b4841-121">A lambda expression does not have a name.</span></span>  
-  
-- <span data-ttu-id="b4841-122">Lambda 表达式不能具有修饰符, 如`Overloads`或`Overrides`。</span><span class="sxs-lookup"><span data-stu-id="b4841-122">Lambda expressions cannot have modifiers, such as `Overloads` or `Overrides`.</span></span>  
-  
-- <span data-ttu-id="b4841-123">单行 lambda 函数不使用`As`子句来指定返回类型。</span><span class="sxs-lookup"><span data-stu-id="b4841-123">Single-line lambda functions do not use an `As` clause to designate the return type.</span></span> <span data-ttu-id="b4841-124">相反, 该类型是从 lambda 表达式体的计算结果为的值推断出来的。</span><span class="sxs-lookup"><span data-stu-id="b4841-124">Instead, the type is inferred from the value that the body of the lambda expression evaluates to.</span></span> <span data-ttu-id="b4841-125">例如, 如果 lambda 表达式的主体为`cust.City = "London"`, 则其返回类型为。 `Boolean`</span><span class="sxs-lookup"><span data-stu-id="b4841-125">For example, if the body of the lambda expression is `cust.City = "London"`, its return type is `Boolean`.</span></span>  
-  
-- <span data-ttu-id="b4841-126">在多行 lambda 函数中, 可以使用`As`子句指定返回类型, 或`As`省略子句以便推断返回类型。</span><span class="sxs-lookup"><span data-stu-id="b4841-126">In multi-line lambda functions, you can either specify a return type by using an `As` clause, or omit the `As` clause so that the return type is inferred.</span></span> <span data-ttu-id="b4841-127">如果为多行 lambda 函数省略`Return` 子句,则会将返回类型推断为来自多行lambda函数中所有语句的基准类型。`As`</span><span class="sxs-lookup"><span data-stu-id="b4841-127">When the `As` clause is omitted for a multi-line lambda function, the return type is inferred to be the dominant type from all the `Return` statements in the multi-line lambda function.</span></span> <span data-ttu-id="b4841-128">*主导类型*是所有其他类型可以扩大到的唯一类型。</span><span class="sxs-lookup"><span data-stu-id="b4841-128">The *dominant type* is a unique type that all other types can widen to.</span></span> <span data-ttu-id="b4841-129">如果无法确定此唯一类型, 则主导类型是数组中所有其他类型可以缩小到的唯一类型。</span><span class="sxs-lookup"><span data-stu-id="b4841-129">If this unique type cannot be determined, the dominant type is the unique type that all other types in the array can narrow to.</span></span> <span data-ttu-id="b4841-130">如果这两种唯一类型都无法确定，则基准类型是 `Object`。</span><span class="sxs-lookup"><span data-stu-id="b4841-130">If neither of these unique types can be determined, the dominant type is `Object`.</span></span> <span data-ttu-id="b4841-131">在这种情况下`Option Strict` , 如果将`On`设置为, 则会发生编译器错误。</span><span class="sxs-lookup"><span data-stu-id="b4841-131">In this case, if `Option Strict` is set to `On`, a compiler error occurs.</span></span>  
-  
-     <span data-ttu-id="b4841-132">例如`Return` , 如果提供给语句的表达式包含类型`Integer`为、 `Long`和`Double`的值, 则生成的数组的类型`Double`为。</span><span class="sxs-lookup"><span data-stu-id="b4841-132">For example, if the expressions supplied to the `Return` statement contain values of type `Integer`, `Long`, and `Double`, the resulting array is of type `Double`.</span></span> <span data-ttu-id="b4841-133">和`Integer` 都`Long`仅`Double`扩大到和。 `Double`</span><span class="sxs-lookup"><span data-stu-id="b4841-133">Both `Integer` and `Long` widen to `Double` and only `Double`.</span></span> <span data-ttu-id="b4841-134">因此， `Double` 是基准类型。</span><span class="sxs-lookup"><span data-stu-id="b4841-134">Therefore, `Double` is the dominant type.</span></span> <span data-ttu-id="b4841-135">有关详细信息，请参阅[扩大和缩小转换](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)。</span><span class="sxs-lookup"><span data-stu-id="b4841-135">For more information, see [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).</span></span>  
-  
-- <span data-ttu-id="b4841-136">单行函数的主体必须是返回值的表达式, 而不是语句。</span><span class="sxs-lookup"><span data-stu-id="b4841-136">The body of a single-line function must be an expression that returns a value, not a statement.</span></span> <span data-ttu-id="b4841-137">没有适用于单行函数的语句。`Return`</span><span class="sxs-lookup"><span data-stu-id="b4841-137">There is no `Return` statement for single-line functions.</span></span> <span data-ttu-id="b4841-138">单行函数返回的值是函数体中表达式的值。</span><span class="sxs-lookup"><span data-stu-id="b4841-138">The value returned by the single-line function is the value of the expression in the body of the function.</span></span>  
-  
-- <span data-ttu-id="b4841-139">单行子例程的主体必须是单行语句。</span><span class="sxs-lookup"><span data-stu-id="b4841-139">The body of a single-line subroutine must be single-line statement.</span></span>  
-  
-- <span data-ttu-id="b4841-140">单行函数和子例程不包含`End Function`或`End Sub`语句。</span><span class="sxs-lookup"><span data-stu-id="b4841-140">Single-line functions and subroutines do not include an `End Function` or `End Sub` statement.</span></span>  
-  
-- <span data-ttu-id="b4841-141">您可以使用`As`关键字指定 lambda 表达式参数的数据类型, 也可以推断参数的数据类型。</span><span class="sxs-lookup"><span data-stu-id="b4841-141">You can specify the data type of a lambda expression parameter by using the `As` keyword, or the data type of the parameter can be inferred.</span></span> <span data-ttu-id="b4841-142">所有参数都必须具有指定的数据类型, 或者都必须被推断。</span><span class="sxs-lookup"><span data-stu-id="b4841-142">Either all parameters must have specified data types or all must be inferred.</span></span>  
-  
-- <span data-ttu-id="b4841-143">`Optional`不`Paramarray`允许使用和参数。</span><span class="sxs-lookup"><span data-stu-id="b4841-143">`Optional` and `Paramarray` parameters are not permitted.</span></span>  
-  
-- <span data-ttu-id="b4841-144">不允许使用泛型参数。</span><span class="sxs-lookup"><span data-stu-id="b4841-144">Generic parameters are not permitted.</span></span>  
-  
-## <a name="async-lambdas"></a><span data-ttu-id="b4841-145">异步 lambda</span><span class="sxs-lookup"><span data-stu-id="b4841-145">Async Lambdas</span></span>  
- <span data-ttu-id="b4841-146">通过使用[Async](../../../../visual-basic/language-reference/modifiers/async.md)和[Await 运算符](../../../../visual-basic/language-reference/operators/await-operator.md)关键字, 你可以轻松创建包含异步处理的 lambda 表达式和语句。</span><span class="sxs-lookup"><span data-stu-id="b4841-146">You can easily create lambda expressions and statements that incorporate asynchronous processing by using the [Async](../../../../visual-basic/language-reference/modifiers/async.md) and [Await Operator](../../../../visual-basic/language-reference/operators/await-operator.md) keywords.</span></span> <span data-ttu-id="b4841-147">例如，下面的 Windows 窗体示例包含一个调用和等待异步方法 `ExampleMethodAsync`的事件处理程序。</span><span class="sxs-lookup"><span data-stu-id="b4841-147">For example, the following Windows Forms example contains an event handler that calls and awaits an async method, `ExampleMethodAsync`.</span></span>  
-  
-```vb  
-Public Class Form1  
-  
-    Async Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click  
-        ' ExampleMethodAsync returns a Task.  
-        Await ExampleMethodAsync()  
-        TextBox1.Text = vbCrLf & "Control returned to button1_Click."  
-    End Sub  
-  
-    Async Function ExampleMethodAsync() As Task  
-        ' The following line simulates a task-returning asynchronous process.  
-        Await Task.Delay(1000)  
-    End Function  
-  
-End Class  
-```  
-  
- <span data-ttu-id="b4841-148">可以通过在[AddHandler 语句](../../../../visual-basic/language-reference/statements/addhandler-statement.md)中使用 async lambda 来添加同一事件处理程序。</span><span class="sxs-lookup"><span data-stu-id="b4841-148">You can add the same event handler by using an async lambda in an [AddHandler Statement](../../../../visual-basic/language-reference/statements/addhandler-statement.md).</span></span> <span data-ttu-id="b4841-149">若要添加此处理程序，请在 lambda 参数列表前添加一个 `Async` 修饰符，如下例所示。</span><span class="sxs-lookup"><span data-stu-id="b4841-149">To add this handler, add an `Async` modifier before the lambda parameter list, as the following example shows.</span></span>  
-  
-```vb  
-Public Class Form1  
-  
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load  
-        AddHandler Button1.Click,   
-            Async Sub(sender1, e1)  
-                ' ExampleMethodAsync returns a Task.  
-                Await ExampleMethodAsync()  
-                TextBox1.Text = vbCrLf & "Control returned to Button1_ Click."  
-            End Sub  
-    End Sub  
-  
-    Async Function ExampleMethodAsync() As Task  
-        ' The following line simulates a task-returning asynchronous process.  
-        Await Task.Delay(1000)  
-    End Function  
-  
-End Class  
-```  
-  
- <span data-ttu-id="b4841-150">有关如何创建和使用异步方法的详细信息, 请参阅[使用 async 和 Await 进行异步编程](../../../../visual-basic/programming-guide/concepts/async/index.md)。</span><span class="sxs-lookup"><span data-stu-id="b4841-150">For more information about how to create and use async methods, see [Asynchronous Programming with Async and Await](../../../../visual-basic/programming-guide/concepts/async/index.md).</span></span>  
-  
-## <a name="context"></a><span data-ttu-id="b4841-151">快捷</span><span class="sxs-lookup"><span data-stu-id="b4841-151">Context</span></span>  
- <span data-ttu-id="b4841-152">Lambda 表达式将其上下文与定义它的范围共享。</span><span class="sxs-lookup"><span data-stu-id="b4841-152">A lambda expression shares its context with the scope within which it is defined.</span></span> <span data-ttu-id="b4841-153">它与在包含范围内编写的任何代码具有相同的访问权限。</span><span class="sxs-lookup"><span data-stu-id="b4841-153">It has the same access rights as any code written in the containing scope.</span></span> <span data-ttu-id="b4841-154">这包括访问包含作用域中的成员变量、 `Me`函数和 sub、以及参数和局部变量。</span><span class="sxs-lookup"><span data-stu-id="b4841-154">This includes access to member variables, functions and subs, `Me`, and parameters and local variables in the containing scope.</span></span>  
-  
- <span data-ttu-id="b4841-155">对包含作用域中的局部变量和参数的访问可以超出该范围的生存期。</span><span class="sxs-lookup"><span data-stu-id="b4841-155">Access to local variables and parameters in the containing scope can extend beyond the lifetime of that scope.</span></span> <span data-ttu-id="b4841-156">只要引用 lambda 表达式的委托不可用于垃圾回收, 就会保留对原始环境中的变量的访问。</span><span class="sxs-lookup"><span data-stu-id="b4841-156">As long as a delegate referring to a lambda expression is not available to garbage collection, access to the variables in the original environment is retained.</span></span> <span data-ttu-id="b4841-157">在下面的示例中, `target`变量是的`makeTheGame`局部变量, 其中定义了 lambda 表达式`playTheGame`的方法。</span><span class="sxs-lookup"><span data-stu-id="b4841-157">In the following example, variable `target` is local to `makeTheGame`, the method in which the lambda expression `playTheGame` is defined.</span></span> <span data-ttu-id="b4841-158">请注意, 分配`takeAGuess`给中`Main`的返回的 lambda 表达式仍有权访问本地变量`target`。</span><span class="sxs-lookup"><span data-stu-id="b4841-158">Note that the returned lambda expression, assigned to `takeAGuess` in `Main`, still has access to the local variable `target`.</span></span>  
-  
- [!code-vb[VbVbalrLambdas#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class6.vb#12)]  
-  
- <span data-ttu-id="b4841-159">下面的示例演示了嵌套 lambda 表达式的各种访问权限。</span><span class="sxs-lookup"><span data-stu-id="b4841-159">The following example demonstrates the wide range of access rights of the nested lambda expression.</span></span> <span data-ttu-id="b4841-160">当从`Main` `aDel`执行返回的 lambda 表达式时, 它将访问这些元素:</span><span class="sxs-lookup"><span data-stu-id="b4841-160">When the returned lambda expression is executed from `Main` as `aDel`, it accesses these elements:</span></span>  
-  
-- <span data-ttu-id="b4841-161">定义它的类的字段:`aField`</span><span class="sxs-lookup"><span data-stu-id="b4841-161">A field of the class in which it is defined: `aField`</span></span>  
-  
-- <span data-ttu-id="b4841-162">定义它的类的属性:`aProp`</span><span class="sxs-lookup"><span data-stu-id="b4841-162">A property of the class in which it is defined: `aProp`</span></span>  
-  
-- <span data-ttu-id="b4841-163">定义它的方法`functionWithNestedLambda`的参数:`level1`</span><span class="sxs-lookup"><span data-stu-id="b4841-163">A parameter of method `functionWithNestedLambda`, in which it is defined: `level1`</span></span>  
-  
-- <span data-ttu-id="b4841-164">的`functionWithNestedLambda`局部变量:`localVar`</span><span class="sxs-lookup"><span data-stu-id="b4841-164">A local variable of `functionWithNestedLambda`: `localVar`</span></span>  
-  
-- <span data-ttu-id="b4841-165">它在其中进行嵌套的 lambda 表达式的参数:`level2`</span><span class="sxs-lookup"><span data-stu-id="b4841-165">A parameter of the lambda expression in which it is nested: `level2`</span></span>  
-  
- [!code-vb[VbVbalrLambdas#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class3.vb#9)]  
-  
-## <a name="converting-to-a-delegate-type"></a><span data-ttu-id="b4841-166">转换为委托类型</span><span class="sxs-lookup"><span data-stu-id="b4841-166">Converting to a Delegate Type</span></span>  
- <span data-ttu-id="b4841-167">Lambda 表达式可隐式转换为兼容的委托类型。</span><span class="sxs-lookup"><span data-stu-id="b4841-167">A lambda expression can be implicitly converted to a compatible delegate type.</span></span> <span data-ttu-id="b4841-168">有关兼容性的一般要求的信息, 请参阅[宽松委托转换](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)。</span><span class="sxs-lookup"><span data-stu-id="b4841-168">For information about the general requirements for compatibility, see [Relaxed Delegate Conversion](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md).</span></span> <span data-ttu-id="b4841-169">例如, 下面的代码示例演示一个隐式转换为`Func(Of Integer, Boolean)`或匹配的委托签名的 lambda 表达式。</span><span class="sxs-lookup"><span data-stu-id="b4841-169">For example, the following code example shows a lambda expression that implicitly converts to `Func(Of Integer, Boolean)` or a matching delegate signature.</span></span>  
-  
- [!code-vb[VbVbalrLambdas#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#16)]  
-  
- <span data-ttu-id="b4841-170">下面的代码示例演示一个隐式转换为`Sub(Of Double, String, Double)`或匹配的委托签名的 lambda 表达式。</span><span class="sxs-lookup"><span data-stu-id="b4841-170">The following code example shows a lambda expression that implicitly converts to `Sub(Of Double, String, Double)` or a matching delegate signature.</span></span>  
-  
- [!code-vb[VbVbalrLambdas#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/class7.vb#23)]  
-  
- <span data-ttu-id="b4841-171">当你将 lambda 表达式分配给委托或将其作为参数传递给过程时, 可以指定参数名称但省略其数据类型, 从而使类型从委托中获取。</span><span class="sxs-lookup"><span data-stu-id="b4841-171">When you assign lambda expressions to delegates or pass them as arguments to procedures, you can specify the parameter names but omit their data types, letting the types be taken from the delegate.</span></span>  
-  
-## <a name="examples"></a><span data-ttu-id="b4841-172">示例</span><span class="sxs-lookup"><span data-stu-id="b4841-172">Examples</span></span>  
-  
-- <span data-ttu-id="b4841-173">下面的示例定义一个 lambda 表达式, 该`True`表达式在可以为 null 的参数具有分配的`False`值时返回, `Nothing`如果其值为, 则返回。</span><span class="sxs-lookup"><span data-stu-id="b4841-173">The following example defines a lambda expression that returns `True` if the nullable argument has an assigned value, and `False` if its value is `Nothing`.</span></span>  
-  
-     [!code-vb[VbVbalrLambdas#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#4)]  
-  
-- <span data-ttu-id="b4841-174">下面的示例定义了一个 lambda 表达式, 该表达式返回数组中最后一个元素的索引。</span><span class="sxs-lookup"><span data-stu-id="b4841-174">The following example defines a lambda expression that returns the index of the last element in an array.</span></span>  
-  
-     [!code-vb[VbVbalrLambdas#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#5)]  
-  
-## <a name="see-also"></a><span data-ttu-id="b4841-175">请参阅</span><span class="sxs-lookup"><span data-stu-id="b4841-175">See also</span></span>
+# <a name="lambda-expressions-visual-basic"></a><span data-ttu-id="ca9d3-102">Lambda 表达式 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ca9d3-102">Lambda Expressions (Visual Basic)</span></span>
 
-- [<span data-ttu-id="b4841-176">过程</span><span class="sxs-lookup"><span data-stu-id="b4841-176">Procedures</span></span>](./index.md)
-- [<span data-ttu-id="b4841-177">Visual Basic 中的 LINQ 简介</span><span class="sxs-lookup"><span data-stu-id="b4841-177">Introduction to LINQ in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
-- [<span data-ttu-id="b4841-178">委托</span><span class="sxs-lookup"><span data-stu-id="b4841-178">Delegates</span></span>](../../../../visual-basic/programming-guide/language-features/delegates/index.md)
-- [<span data-ttu-id="b4841-179">Function 语句</span><span class="sxs-lookup"><span data-stu-id="b4841-179">Function Statement</span></span>](../../../../visual-basic/language-reference/statements/function-statement.md)
-- [<span data-ttu-id="b4841-180">Sub 语句</span><span class="sxs-lookup"><span data-stu-id="b4841-180">Sub Statement</span></span>](../../../../visual-basic/language-reference/statements/sub-statement.md)
-- [<span data-ttu-id="b4841-181">可以为 null 的值类型</span><span class="sxs-lookup"><span data-stu-id="b4841-181">Nullable Value Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
-- [<span data-ttu-id="b4841-182">如何：将过程传递到 Visual Basic 中的其他过程</span><span class="sxs-lookup"><span data-stu-id="b4841-182">How to: Pass Procedures to Another Procedure in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/delegates/how-to-pass-procedures-to-another-procedure.md)
-- [<span data-ttu-id="b4841-183">如何：创建 Lambda 表达式</span><span class="sxs-lookup"><span data-stu-id="b4841-183">How to: Create a Lambda Expression</span></span>](./how-to-create-a-lambda-expression.md)
-- [<span data-ttu-id="b4841-184">宽松委托转换</span><span class="sxs-lookup"><span data-stu-id="b4841-184">Relaxed Delegate Conversion</span></span>](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
+<span data-ttu-id="ca9d3-103">*Lambda 表达式*是没有名称的函数或子例程，只要委托有效，就可以使用该函数。</span><span class="sxs-lookup"><span data-stu-id="ca9d3-103">A *lambda expression* is a function or subroutine without a name that can be used wherever a delegate is valid.</span></span> <span data-ttu-id="ca9d3-104">Lambda 表达式可以是函数或子例程，可以是单行或多行。</span><span class="sxs-lookup"><span data-stu-id="ca9d3-104">Lambda expressions can be functions or subroutines and can be single-line or multi-line.</span></span> <span data-ttu-id="ca9d3-105">可以将值从当前作用域传递到 lambda 表达式。</span><span class="sxs-lookup"><span data-stu-id="ca9d3-105">You can pass values from the current scope to a lambda expression.</span></span>
+
+> [!NOTE]
+> <span data-ttu-id="ca9d3-106">@No__t_0 语句是一个异常。</span><span class="sxs-lookup"><span data-stu-id="ca9d3-106">The `RemoveHandler` statement is an exception.</span></span> <span data-ttu-id="ca9d3-107">不能为 `RemoveHandler` 的委托参数传递中的 lambda 表达式。</span><span class="sxs-lookup"><span data-stu-id="ca9d3-107">You cannot pass a lambda expression in for the delegate parameter of `RemoveHandler`.</span></span>
+
+<span data-ttu-id="ca9d3-108">您可以使用 `Function` 或 `Sub` 关键字创建 lambda 表达式，就像创建标准函数或子例程一样。</span><span class="sxs-lookup"><span data-stu-id="ca9d3-108">You create lambda expressions by using the `Function` or `Sub` keyword, just as you create a standard function or subroutine.</span></span> <span data-ttu-id="ca9d3-109">但是，lambda 表达式包含在语句中。</span><span class="sxs-lookup"><span data-stu-id="ca9d3-109">However, lambda expressions are included in a statement.</span></span>
+
+<span data-ttu-id="ca9d3-110">下面的示例是一个 lambda 表达式，它递增其参数并返回值。</span><span class="sxs-lookup"><span data-stu-id="ca9d3-110">The following example is a lambda expression that increments its argument and returns the value.</span></span> <span data-ttu-id="ca9d3-111">该示例显示函数的单行和多行 lambda 表达式语法。</span><span class="sxs-lookup"><span data-stu-id="ca9d3-111">The example shows both the single-line and multi-line lambda expression syntax for a function.</span></span>
+
+[!code-vb[VbVbalrLambdas#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#14)]
+
+<span data-ttu-id="ca9d3-112">下面的示例是一个将值写入控制台的 lambda 表达式。</span><span class="sxs-lookup"><span data-stu-id="ca9d3-112">The following example is a lambda expression that writes a value to the console.</span></span> <span data-ttu-id="ca9d3-113">该示例显示了子程序的单行和多行 lambda 表达式语法。</span><span class="sxs-lookup"><span data-stu-id="ca9d3-113">The example shows both the single-line and multi-line lambda expression syntax for a subroutine.</span></span>
+
+[!code-vb[VbVbalrLambdas#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#15)]
+
+<span data-ttu-id="ca9d3-114">请注意，在前面的示例中，lambda 表达式被分配给变量名。</span><span class="sxs-lookup"><span data-stu-id="ca9d3-114">Notice that in the previous examples the lambda expressions are assigned to a variable name.</span></span> <span data-ttu-id="ca9d3-115">只要引用变量，就会调用 lambda 表达式。</span><span class="sxs-lookup"><span data-stu-id="ca9d3-115">Whenever you refer to the variable, you invoke the lambda expression.</span></span> <span data-ttu-id="ca9d3-116">还可以同时声明和调用 lambda 表达式，如下例所示。</span><span class="sxs-lookup"><span data-stu-id="ca9d3-116">You can also declare and invoke a lambda expression at the same time, as shown in the following example.</span></span>
+
+[!code-vb[VbVbalrLambdas#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#3)]
+
+<span data-ttu-id="ca9d3-117">Lambda 表达式可以作为函数调用的值返回（如本主题后面的[上下文](#context)部分的示例中所示），或者作为参数传递给采用委托类型的参数，如下面的示例中所示。</span><span class="sxs-lookup"><span data-stu-id="ca9d3-117">A lambda expression can be returned as the value of a function call (as is shown in the example in the [Context](#context) section later in this topic), or passed in as an argument to a parameter that takes a delegate type, as shown in the following example.</span></span>
+
+[!code-vb[VbVbalrLambdas#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class2.vb#8)]
+
+## <a name="lambda-expression-syntax"></a><span data-ttu-id="ca9d3-118">Lambda 表达式语法</span><span class="sxs-lookup"><span data-stu-id="ca9d3-118">Lambda Expression Syntax</span></span>
+
+<span data-ttu-id="ca9d3-119">Lambda 表达式的语法与标准函数或子例程的语法相似。</span><span class="sxs-lookup"><span data-stu-id="ca9d3-119">The syntax of a lambda expression resembles that of a standard function or subroutine.</span></span> <span data-ttu-id="ca9d3-120">不同之处如下：</span><span class="sxs-lookup"><span data-stu-id="ca9d3-120">The differences are as follows:</span></span>
+
+- <span data-ttu-id="ca9d3-121">Lambda 表达式没有名称。</span><span class="sxs-lookup"><span data-stu-id="ca9d3-121">A lambda expression does not have a name.</span></span>
+
+- <span data-ttu-id="ca9d3-122">Lambda 表达式不能具有修饰符，如 `Overloads` 或 `Overrides`。</span><span class="sxs-lookup"><span data-stu-id="ca9d3-122">Lambda expressions cannot have modifiers, such as `Overloads` or `Overrides`.</span></span>
+
+- <span data-ttu-id="ca9d3-123">单行 lambda 函数不使用 `As` 子句来指定返回类型。</span><span class="sxs-lookup"><span data-stu-id="ca9d3-123">Single-line lambda functions do not use an `As` clause to designate the return type.</span></span> <span data-ttu-id="ca9d3-124">相反，该类型是从 lambda 表达式体的计算结果为的值推断出来的。</span><span class="sxs-lookup"><span data-stu-id="ca9d3-124">Instead, the type is inferred from the value that the body of the lambda expression evaluates to.</span></span> <span data-ttu-id="ca9d3-125">例如，如果 lambda 表达式的主体是 `cust.City = "London"` 的，则其返回类型为 `Boolean`。</span><span class="sxs-lookup"><span data-stu-id="ca9d3-125">For example, if the body of the lambda expression is `cust.City = "London"`, its return type is `Boolean`.</span></span>
+
+- <span data-ttu-id="ca9d3-126">在多行 lambda 函数中，可以使用 `As` 子句指定返回类型，或省略 `As` 子句，以便推断返回类型。</span><span class="sxs-lookup"><span data-stu-id="ca9d3-126">In multi-line lambda functions, you can either specify a return type by using an `As` clause, or omit the `As` clause so that the return type is inferred.</span></span> <span data-ttu-id="ca9d3-127">如果为多行 lambda 函数省略了 `As` 子句，则会将返回类型推断为来自多行 lambda 函数中所有 `Return` 语句的主导类型。</span><span class="sxs-lookup"><span data-stu-id="ca9d3-127">When the `As` clause is omitted for a multi-line lambda function, the return type is inferred to be the dominant type from all the `Return` statements in the multi-line lambda function.</span></span> <span data-ttu-id="ca9d3-128">*主导类型*是所有其他类型可以扩大到的唯一类型。</span><span class="sxs-lookup"><span data-stu-id="ca9d3-128">The *dominant type* is a unique type that all other types can widen to.</span></span> <span data-ttu-id="ca9d3-129">如果无法确定此唯一类型，则主导类型是数组中所有其他类型可以缩小到的唯一类型。</span><span class="sxs-lookup"><span data-stu-id="ca9d3-129">If this unique type cannot be determined, the dominant type is the unique type that all other types in the array can narrow to.</span></span> <span data-ttu-id="ca9d3-130">如果无法确定为这两种唯一类型之一，则基准类型是 `Object`。</span><span class="sxs-lookup"><span data-stu-id="ca9d3-130">If neither of these unique types can be determined, the dominant type is `Object`.</span></span> <span data-ttu-id="ca9d3-131">在这种情况下，如果 `Option Strict` 设置为 `On`，则会发生编译器错误。</span><span class="sxs-lookup"><span data-stu-id="ca9d3-131">In this case, if `Option Strict` is set to `On`, a compiler error occurs.</span></span>
+
+     <span data-ttu-id="ca9d3-132">例如，如果提供给 `Return` 语句的表达式包含 `Integer`、`Long` 和 `Double` 类型的值，则生成的数组的类型为 `Double`。</span><span class="sxs-lookup"><span data-stu-id="ca9d3-132">For example, if the expressions supplied to the `Return` statement contain values of type `Integer`, `Long`, and `Double`, the resulting array is of type `Double`.</span></span> <span data-ttu-id="ca9d3-133">@No__t_0 和 `Long` 扩大到 `Double` 并且仅 `Double`。</span><span class="sxs-lookup"><span data-stu-id="ca9d3-133">Both `Integer` and `Long` widen to `Double` and only `Double`.</span></span> <span data-ttu-id="ca9d3-134">因此， `Double` 是基准类型。</span><span class="sxs-lookup"><span data-stu-id="ca9d3-134">Therefore, `Double` is the dominant type.</span></span> <span data-ttu-id="ca9d3-135">有关详细信息，请参阅 [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)。</span><span class="sxs-lookup"><span data-stu-id="ca9d3-135">For more information, see [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).</span></span>
+
+- <span data-ttu-id="ca9d3-136">单行函数的主体必须是返回值的表达式，而不是语句。</span><span class="sxs-lookup"><span data-stu-id="ca9d3-136">The body of a single-line function must be an expression that returns a value, not a statement.</span></span> <span data-ttu-id="ca9d3-137">单行函数没有 `Return` 语句。</span><span class="sxs-lookup"><span data-stu-id="ca9d3-137">There is no `Return` statement for single-line functions.</span></span> <span data-ttu-id="ca9d3-138">单行函数返回的值是函数体中表达式的值。</span><span class="sxs-lookup"><span data-stu-id="ca9d3-138">The value returned by the single-line function is the value of the expression in the body of the function.</span></span>
+
+- <span data-ttu-id="ca9d3-139">单行子例程的主体必须是单行语句。</span><span class="sxs-lookup"><span data-stu-id="ca9d3-139">The body of a single-line subroutine must be single-line statement.</span></span>
+
+- <span data-ttu-id="ca9d3-140">单行函数和子例程不包含 `End Function` 或 `End Sub` 语句。</span><span class="sxs-lookup"><span data-stu-id="ca9d3-140">Single-line functions and subroutines do not include an `End Function` or `End Sub` statement.</span></span>
+
+- <span data-ttu-id="ca9d3-141">您可以使用 `As` 关键字指定 lambda 表达式参数的数据类型，也可以推断参数的数据类型。</span><span class="sxs-lookup"><span data-stu-id="ca9d3-141">You can specify the data type of a lambda expression parameter by using the `As` keyword, or the data type of the parameter can be inferred.</span></span> <span data-ttu-id="ca9d3-142">所有参数都必须具有指定的数据类型，或者都必须被推断。</span><span class="sxs-lookup"><span data-stu-id="ca9d3-142">Either all parameters must have specified data types or all must be inferred.</span></span>
+
+- <span data-ttu-id="ca9d3-143">不允许 `Optional` 和 `Paramarray` 参数。</span><span class="sxs-lookup"><span data-stu-id="ca9d3-143">`Optional` and `Paramarray` parameters are not permitted.</span></span>
+
+- <span data-ttu-id="ca9d3-144">不允许使用泛型参数。</span><span class="sxs-lookup"><span data-stu-id="ca9d3-144">Generic parameters are not permitted.</span></span>
+
+## <a name="async-lambdas"></a><span data-ttu-id="ca9d3-145">异步 lambda</span><span class="sxs-lookup"><span data-stu-id="ca9d3-145">Async Lambdas</span></span>
+
+<span data-ttu-id="ca9d3-146">通过使用[Async](../../../../visual-basic/language-reference/modifiers/async.md)和[Await 运算符](../../../../visual-basic/language-reference/operators/await-operator.md)关键字，你可以轻松创建包含异步处理的 lambda 表达式和语句。</span><span class="sxs-lookup"><span data-stu-id="ca9d3-146">You can easily create lambda expressions and statements that incorporate asynchronous processing by using the [Async](../../../../visual-basic/language-reference/modifiers/async.md) and [Await Operator](../../../../visual-basic/language-reference/operators/await-operator.md) keywords.</span></span> <span data-ttu-id="ca9d3-147">例如，下面的 Windows 窗体示例包含一个调用和等待异步方法 `ExampleMethodAsync`的事件处理程序。</span><span class="sxs-lookup"><span data-stu-id="ca9d3-147">For example, the following Windows Forms example contains an event handler that calls and awaits an async method, `ExampleMethodAsync`.</span></span>
+
+```vb
+Public Class Form1
+
+    Async Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        ' ExampleMethodAsync returns a Task.
+        Await ExampleMethodAsync()
+        TextBox1.Text = vbCrLf & "Control returned to button1_Click."
+    End Sub
+
+    Async Function ExampleMethodAsync() As Task
+        ' The following line simulates a task-returning asynchronous process.
+        Await Task.Delay(1000)
+    End Function
+
+End Class
+```
+
+<span data-ttu-id="ca9d3-148">可以通过在[AddHandler 语句](../../../../visual-basic/language-reference/statements/addhandler-statement.md)中使用 async lambda 来添加同一事件处理程序。</span><span class="sxs-lookup"><span data-stu-id="ca9d3-148">You can add the same event handler by using an async lambda in an [AddHandler Statement](../../../../visual-basic/language-reference/statements/addhandler-statement.md).</span></span> <span data-ttu-id="ca9d3-149">若要添加此处理程序，请在 lambda 参数列表前添加一个 `Async` 修饰符，如下例所示。</span><span class="sxs-lookup"><span data-stu-id="ca9d3-149">To add this handler, add an `Async` modifier before the lambda parameter list, as the following example shows.</span></span>
+
+```vb
+Public Class Form1
+
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        AddHandler Button1.Click,
+            Async Sub(sender1, e1)
+                ' ExampleMethodAsync returns a Task.
+                Await ExampleMethodAsync()
+                TextBox1.Text = vbCrLf & "Control returned to Button1_ Click."
+            End Sub
+    End Sub
+
+    Async Function ExampleMethodAsync() As Task
+        ' The following line simulates a task-returning asynchronous process.
+        Await Task.Delay(1000)
+    End Function
+
+End Class
+```
+
+<span data-ttu-id="ca9d3-150">有关如何创建和使用异步方法的详细信息，请参阅[使用 async 和 Await 进行异步编程](../../../../visual-basic/programming-guide/concepts/async/index.md)。</span><span class="sxs-lookup"><span data-stu-id="ca9d3-150">For more information about how to create and use async methods, see [Asynchronous Programming with Async and Await](../../../../visual-basic/programming-guide/concepts/async/index.md).</span></span>
+
+## <a name="context"></a><span data-ttu-id="ca9d3-151">上下文</span><span class="sxs-lookup"><span data-stu-id="ca9d3-151">Context</span></span>
+
+<span data-ttu-id="ca9d3-152">Lambda 表达式将其上下文与定义它的范围共享。</span><span class="sxs-lookup"><span data-stu-id="ca9d3-152">A lambda expression shares its context with the scope within which it is defined.</span></span> <span data-ttu-id="ca9d3-153">它与在包含范围内编写的任何代码具有相同的访问权限。</span><span class="sxs-lookup"><span data-stu-id="ca9d3-153">It has the same access rights as any code written in the containing scope.</span></span> <span data-ttu-id="ca9d3-154">这包括访问包含作用域中的成员变量、函数和 sub、`Me` 以及参数和局部变量。</span><span class="sxs-lookup"><span data-stu-id="ca9d3-154">This includes access to member variables, functions and subs, `Me`, and parameters and local variables in the containing scope.</span></span>
+
+<span data-ttu-id="ca9d3-155">对包含作用域中的局部变量和参数的访问可以超出该范围的生存期。</span><span class="sxs-lookup"><span data-stu-id="ca9d3-155">Access to local variables and parameters in the containing scope can extend beyond the lifetime of that scope.</span></span> <span data-ttu-id="ca9d3-156">只要引用 lambda 表达式的委托不可用于垃圾回收，就会保留对原始环境中的变量的访问。</span><span class="sxs-lookup"><span data-stu-id="ca9d3-156">As long as a delegate referring to a lambda expression is not available to garbage collection, access to the variables in the original environment is retained.</span></span> <span data-ttu-id="ca9d3-157">在下面的示例中，变量 `target` 是 `makeTheGame` 的本地变量，其中定义了 lambda 表达式 `playTheGame` 的方法。</span><span class="sxs-lookup"><span data-stu-id="ca9d3-157">In the following example, variable `target` is local to `makeTheGame`, the method in which the lambda expression `playTheGame` is defined.</span></span> <span data-ttu-id="ca9d3-158">请注意，在 `Main` 中分配给 `takeAGuess` 的返回 lambda 表达式仍有权访问本地变量 `target`。</span><span class="sxs-lookup"><span data-stu-id="ca9d3-158">Note that the returned lambda expression, assigned to `takeAGuess` in `Main`, still has access to the local variable `target`.</span></span>
+
+[!code-vb[VbVbalrLambdas#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class6.vb#12)]
+
+<span data-ttu-id="ca9d3-159">下面的示例演示了嵌套 lambda 表达式的各种访问权限。</span><span class="sxs-lookup"><span data-stu-id="ca9d3-159">The following example demonstrates the wide range of access rights of the nested lambda expression.</span></span> <span data-ttu-id="ca9d3-160">当从 `Main` 作为 `aDel` 执行返回的 lambda 表达式时，它将访问以下元素：</span><span class="sxs-lookup"><span data-stu-id="ca9d3-160">When the returned lambda expression is executed from `Main` as `aDel`, it accesses these elements:</span></span>
+
+- <span data-ttu-id="ca9d3-161">定义它的类的字段： `aField`</span><span class="sxs-lookup"><span data-stu-id="ca9d3-161">A field of the class in which it is defined: `aField`</span></span>
+
+- <span data-ttu-id="ca9d3-162">定义它的类的属性： `aProp`</span><span class="sxs-lookup"><span data-stu-id="ca9d3-162">A property of the class in which it is defined: `aProp`</span></span>
+
+- <span data-ttu-id="ca9d3-163">定义该参数的方法 `functionWithNestedLambda` 的参数： `level1`</span><span class="sxs-lookup"><span data-stu-id="ca9d3-163">A parameter of method `functionWithNestedLambda`, in which it is defined: `level1`</span></span>
+
+- <span data-ttu-id="ca9d3-164">@No__t_0 的局部变量： `localVar`</span><span class="sxs-lookup"><span data-stu-id="ca9d3-164">A local variable of `functionWithNestedLambda`: `localVar`</span></span>
+
+- <span data-ttu-id="ca9d3-165">它在其中进行嵌套的 lambda 表达式的参数： `level2`</span><span class="sxs-lookup"><span data-stu-id="ca9d3-165">A parameter of the lambda expression in which it is nested: `level2`</span></span>
+
+ [!code-vb[VbVbalrLambdas#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class3.vb#9)]
+
+## <a name="converting-to-a-delegate-type"></a><span data-ttu-id="ca9d3-166">转换为委托类型</span><span class="sxs-lookup"><span data-stu-id="ca9d3-166">Converting to a Delegate Type</span></span>
+
+<span data-ttu-id="ca9d3-167">Lambda 表达式可隐式转换为兼容的委托类型。</span><span class="sxs-lookup"><span data-stu-id="ca9d3-167">A lambda expression can be implicitly converted to a compatible delegate type.</span></span> <span data-ttu-id="ca9d3-168">有关兼容性的一般要求的信息，请参阅[宽松委托转换](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)。</span><span class="sxs-lookup"><span data-stu-id="ca9d3-168">For information about the general requirements for compatibility, see [Relaxed Delegate Conversion](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md).</span></span> <span data-ttu-id="ca9d3-169">例如，下面的代码示例演示一个隐式转换为 `Func(Of Integer, Boolean)` 或匹配的委托签名的 lambda 表达式。</span><span class="sxs-lookup"><span data-stu-id="ca9d3-169">For example, the following code example shows a lambda expression that implicitly converts to `Func(Of Integer, Boolean)` or a matching delegate signature.</span></span>
+
+[!code-vb[VbVbalrLambdas#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#16)]
+
+<span data-ttu-id="ca9d3-170">下面的代码示例演示一个隐式转换为 `Sub(Of Double, String, Double)` 或匹配的委托签名的 lambda 表达式。</span><span class="sxs-lookup"><span data-stu-id="ca9d3-170">The following code example shows a lambda expression that implicitly converts to `Sub(Of Double, String, Double)` or a matching delegate signature.</span></span>
+
+[!code-vb[VbVbalrLambdas#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/class7.vb#23)]
+
+<span data-ttu-id="ca9d3-171">当你将 lambda 表达式分配给委托或将其作为参数传递给过程时，可以指定参数名称但省略其数据类型，从而使类型从委托中获取。</span><span class="sxs-lookup"><span data-stu-id="ca9d3-171">When you assign lambda expressions to delegates or pass them as arguments to procedures, you can specify the parameter names but omit their data types, letting the types be taken from the delegate.</span></span>
+
+## <a name="examples"></a><span data-ttu-id="ca9d3-172">示例</span><span class="sxs-lookup"><span data-stu-id="ca9d3-172">Examples</span></span>
+
+- <span data-ttu-id="ca9d3-173">下面的示例定义一个 lambda 表达式，该表达式返回 `True` 如果可以为 null 的参数具有分配的值，并且 `False` 其值是否为 `Nothing`。</span><span class="sxs-lookup"><span data-stu-id="ca9d3-173">The following example defines a lambda expression that returns `True` if the nullable argument has an assigned value, and `False` if its value is `Nothing`.</span></span>
+
+     [!code-vb[VbVbalrLambdas#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#4)]
+
+- <span data-ttu-id="ca9d3-174">下面的示例定义了一个 lambda 表达式，该表达式返回数组中最后一个元素的索引。</span><span class="sxs-lookup"><span data-stu-id="ca9d3-174">The following example defines a lambda expression that returns the index of the last element in an array.</span></span>
+
+     [!code-vb[VbVbalrLambdas#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#5)]
+
+## <a name="see-also"></a><span data-ttu-id="ca9d3-175">请参阅</span><span class="sxs-lookup"><span data-stu-id="ca9d3-175">See also</span></span>
+
+- [<span data-ttu-id="ca9d3-176">过程</span><span class="sxs-lookup"><span data-stu-id="ca9d3-176">Procedures</span></span>](./index.md)
+- [<span data-ttu-id="ca9d3-177">Visual Basic 中的 LINQ 简介</span><span class="sxs-lookup"><span data-stu-id="ca9d3-177">Introduction to LINQ in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [<span data-ttu-id="ca9d3-178">委托</span><span class="sxs-lookup"><span data-stu-id="ca9d3-178">Delegates</span></span>](../../../../visual-basic/programming-guide/language-features/delegates/index.md)
+- [<span data-ttu-id="ca9d3-179">Function 语句</span><span class="sxs-lookup"><span data-stu-id="ca9d3-179">Function Statement</span></span>](../../../../visual-basic/language-reference/statements/function-statement.md)
+- [<span data-ttu-id="ca9d3-180">Sub 语句</span><span class="sxs-lookup"><span data-stu-id="ca9d3-180">Sub Statement</span></span>](../../../../visual-basic/language-reference/statements/sub-statement.md)
+- [<span data-ttu-id="ca9d3-181">可以为 null 的值类型</span><span class="sxs-lookup"><span data-stu-id="ca9d3-181">Nullable Value Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
+- [<span data-ttu-id="ca9d3-182">如何：在 Visual Basic 中将过程传递给另一过程</span><span class="sxs-lookup"><span data-stu-id="ca9d3-182">How to: Pass Procedures to Another Procedure in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/delegates/how-to-pass-procedures-to-another-procedure.md)
+- [<span data-ttu-id="ca9d3-183">如何：创建 lambda 表达式</span><span class="sxs-lookup"><span data-stu-id="ca9d3-183">How to: Create a Lambda Expression</span></span>](./how-to-create-a-lambda-expression.md)
+- [<span data-ttu-id="ca9d3-184">宽松委托转换</span><span class="sxs-lookup"><span data-stu-id="ca9d3-184">Relaxed Delegate Conversion</span></span>](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
