@@ -2,40 +2,40 @@
 title: '! (NOT) (Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: a1447a34-df06-4393-93c3-0612ebd41abc
-ms.openlocfilehash: 4055d56d878b817fe88bb0dacb53ea39061bc4b2
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 7755219c5238f78e59332c508643fe2ae1f5096f
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70249864"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319520"
 ---
-# <a name="-not-entity-sql"></a><span data-ttu-id="11b99-103">!</span><span class="sxs-lookup"><span data-stu-id="11b99-103">!</span></span> <span data-ttu-id="11b99-104">(NOT) (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="11b99-104">(NOT) (Entity SQL)</span></span>
-<span data-ttu-id="11b99-105">对 `Boolean` 表达式求反。</span><span class="sxs-lookup"><span data-stu-id="11b99-105">Negates a `Boolean` expression.</span></span>  
+# <a name="-not-entity-sql"></a><span data-ttu-id="1d9c3-103">!</span><span class="sxs-lookup"><span data-stu-id="1d9c3-103">!</span></span> <span data-ttu-id="1d9c3-104">(NOT) (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="1d9c3-104">(NOT) (Entity SQL)</span></span>
+<span data-ttu-id="1d9c3-105">对 `Boolean` 表达式求反。</span><span class="sxs-lookup"><span data-stu-id="1d9c3-105">Negates a `Boolean` expression.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="11b99-106">语法</span><span class="sxs-lookup"><span data-stu-id="11b99-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1d9c3-106">语法</span><span class="sxs-lookup"><span data-stu-id="1d9c3-106">Syntax</span></span>  
   
-```  
+```sql  
 NOT boolean_expression  
-or  
+-- or  
 ! boolean_expression  
-```  
+``` 
   
-## <a name="arguments"></a><span data-ttu-id="11b99-107">自变量</span><span class="sxs-lookup"><span data-stu-id="11b99-107">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="1d9c3-107">自变量</span><span class="sxs-lookup"><span data-stu-id="1d9c3-107">Arguments</span></span>  
  `boolean_expression`  
- <span data-ttu-id="11b99-108">返回 Boolean 的任何有效表达式。</span><span class="sxs-lookup"><span data-stu-id="11b99-108">Any valid expression that returns a Boolean.</span></span>  
+ <span data-ttu-id="1d9c3-108">返回 Boolean 的任何有效表达式。</span><span class="sxs-lookup"><span data-stu-id="1d9c3-108">Any valid expression that returns a Boolean.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="11b99-109">备注</span><span class="sxs-lookup"><span data-stu-id="11b99-109">Remarks</span></span>  
- <span data-ttu-id="11b99-110">惊叹号 (!) 与 NOT 运算符具有相同的功能。</span><span class="sxs-lookup"><span data-stu-id="11b99-110">The exclamation point (!) has the same functionality as the NOT operator.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="1d9c3-109">备注</span><span class="sxs-lookup"><span data-stu-id="1d9c3-109">Remarks</span></span>  
+ <span data-ttu-id="1d9c3-110">惊叹号 (!) 与 NOT 运算符具有相同的功能。</span><span class="sxs-lookup"><span data-stu-id="1d9c3-110">The exclamation point (!) has the same functionality as the NOT operator.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="11b99-111">示例</span><span class="sxs-lookup"><span data-stu-id="11b99-111">Example</span></span>  
- <span data-ttu-id="11b99-112">以下 Entity SQL 查询使用 NOT 运算符以对 `Boolean` 表达式求反。</span><span class="sxs-lookup"><span data-stu-id="11b99-112">The following Entity SQL query uses the NOT operator to negates a `Boolean` expression.</span></span> <span data-ttu-id="11b99-113">此查询基于 AdventureWorks 销售模型。</span><span class="sxs-lookup"><span data-stu-id="11b99-113">The query is based on the AdventureWorks Sales Model.</span></span> <span data-ttu-id="11b99-114">若要编译并运行此查询，请执行下列步骤：</span><span class="sxs-lookup"><span data-stu-id="11b99-114">To compile and run this query, follow these steps:</span></span>  
+## <a name="example"></a><span data-ttu-id="1d9c3-111">示例</span><span class="sxs-lookup"><span data-stu-id="1d9c3-111">Example</span></span>  
+ <span data-ttu-id="1d9c3-112">以下 Entity SQL 查询使用 NOT 运算符以对 `Boolean` 表达式求反。</span><span class="sxs-lookup"><span data-stu-id="1d9c3-112">The following Entity SQL query uses the NOT operator to negates a `Boolean` expression.</span></span> <span data-ttu-id="1d9c3-113">此查询基于 AdventureWorks 销售模型。</span><span class="sxs-lookup"><span data-stu-id="1d9c3-113">The query is based on the AdventureWorks Sales Model.</span></span> <span data-ttu-id="1d9c3-114">若要编译并运行此查询，请执行下列步骤：</span><span class="sxs-lookup"><span data-stu-id="1d9c3-114">To compile and run this query, follow these steps:</span></span>  
   
-1. <span data-ttu-id="11b99-115">[按照如何：执行返回 StructuralType 结果](../how-to-execute-a-query-that-returns-structuraltype-results.md)的查询。</span><span class="sxs-lookup"><span data-stu-id="11b99-115">Follow the procedure in [How to: Execute a Query that Returns StructuralType Results](../how-to-execute-a-query-that-returns-structuraltype-results.md).</span></span>  
+1. <span data-ttu-id="1d9c3-115">执行 [How to: Execute a Query that Returns StructuralType Results](../how-to-execute-a-query-that-returns-structuraltype-results.md)中的过程。</span><span class="sxs-lookup"><span data-stu-id="1d9c3-115">Follow the procedure in [How to: Execute a Query that Returns StructuralType Results](../how-to-execute-a-query-that-returns-structuraltype-results.md).</span></span>  
   
-2. <span data-ttu-id="11b99-116">将以下查询作为参数传递给 `ExecuteStructuralTypeQuery` 方法：</span><span class="sxs-lookup"><span data-stu-id="11b99-116">Pass the following query as an argument to the `ExecuteStructuralTypeQuery` method:</span></span>  
+2. <span data-ttu-id="1d9c3-116">将以下查询作为参数传递给 `ExecuteStructuralTypeQuery` 方法：</span><span class="sxs-lookup"><span data-stu-id="1d9c3-116">Pass the following query as an argument to the `ExecuteStructuralTypeQuery` method:</span></span>  
   
- [!code-csharp[DP EntityServices Concepts 2#NOT](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#not)]  
+ [!code-sql[DP EntityServices Concepts#NOT](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#not)]  
   
-## <a name="see-also"></a><span data-ttu-id="11b99-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="11b99-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1d9c3-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="1d9c3-117">See also</span></span>
 
-- [<span data-ttu-id="11b99-118">实体 SQL 引用</span><span class="sxs-lookup"><span data-stu-id="11b99-118">Entity SQL Reference</span></span>](entity-sql-reference.md)
+- [<span data-ttu-id="1d9c3-118">实体 SQL 引用</span><span class="sxs-lookup"><span data-stu-id="1d9c3-118">Entity SQL Reference</span></span>](entity-sql-reference.md)

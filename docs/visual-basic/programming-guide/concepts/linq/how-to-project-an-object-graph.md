@@ -1,19 +1,19 @@
 ---
-title: 如何：投影对象图 (Visual Basic)
+title: 如何：投影对象图（Visual Basic）
 ms.date: 07/20/2015
 ms.assetid: 9451eb47-6a31-49d7-84df-73368c618422
-ms.openlocfilehash: 6403bb0aa63120b6ec82e4e94d483769f2cfe1aa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6c4a040600b26e3e2d3d031c8eb991dd9c14fbac
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62038228"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320261"
 ---
-# <a name="how-to-project-an-object-graph-visual-basic"></a><span data-ttu-id="2286d-102">如何：投影对象图 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2286d-102">How to: Project an Object Graph (Visual Basic)</span></span>
-<span data-ttu-id="2286d-103">本主题演示如何从 XML 投影或填充对象图。</span><span class="sxs-lookup"><span data-stu-id="2286d-103">This topic illustrates how to project, or populate, an object graph from XML.</span></span>  
+# <a name="how-to-project-an-object-graph-visual-basic"></a><span data-ttu-id="bcede-102">如何：投影对象图（Visual Basic）</span><span class="sxs-lookup"><span data-stu-id="bcede-102">How to: Project an Object Graph (Visual Basic)</span></span>
+<span data-ttu-id="bcede-103">本主题演示如何从 XML 投影或填充对象图。</span><span class="sxs-lookup"><span data-stu-id="bcede-103">This topic illustrates how to project, or populate, an object graph from XML.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="2286d-104">示例</span><span class="sxs-lookup"><span data-stu-id="2286d-104">Example</span></span>  
- <span data-ttu-id="2286d-105">以下代码使用[示例 XML 文件中的 `Address`、`PurchaseOrder` 和 `PurchaseOrderItem` 类填充对象图：典型采购订单 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md) XML 文档。</span><span class="sxs-lookup"><span data-stu-id="2286d-105">The following code populates an object graph with the `Address`, `PurchaseOrder`, and `PurchaseOrderItem` classes from the [Sample XML File: Typical Purchase Order (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md) XML document.</span></span>  
+## <a name="example"></a><span data-ttu-id="bcede-104">示例</span><span class="sxs-lookup"><span data-stu-id="bcede-104">Example</span></span>  
+ <span data-ttu-id="bcede-105">下面的代码用[示例 XML 文件：典型采购订单 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md) XML 文档中的 `Address`、`PurchaseOrder` 和 `PurchaseOrderItem` 类填充对象图。</span><span class="sxs-lookup"><span data-stu-id="bcede-105">The following code populates an object graph with the `Address`, `PurchaseOrder`, and `PurchaseOrderItem` classes from the [Sample XML File: Typical Purchase Order (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md) XML document.</span></span>  
   
 ```vb  
 Class Address  
@@ -296,11 +296,11 @@ Sub Main()
 End Sub  
 ```  
   
- <span data-ttu-id="2286d-106">在此示例中，[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询的结果以 <xref:System.Collections.Generic.IEnumerable%601> 的 `PurchaseOrderItem` 形式返回。</span><span class="sxs-lookup"><span data-stu-id="2286d-106">In this example, the result of the [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query is returned as an <xref:System.Collections.Generic.IEnumerable%601> of `PurchaseOrderItem`.</span></span> <span data-ttu-id="2286d-107">`PurchaseOrder` 类中各项的类型都是 <xref:System.Collections.Generic.IEnumerable%601> 的 `PurchaseOrderItem`。</span><span class="sxs-lookup"><span data-stu-id="2286d-107">The items in the `PurchaseOrder` class are of type <xref:System.Collections.Generic.IEnumerable%601> of `PurchaseOrderItem`.</span></span> <span data-ttu-id="2286d-108">该代码使用 <xref:System.Linq.Enumerable.ToList%2A> 扩展方法，根据查询结果来创建 <xref:System.Collections.Generic.List%601> 集合。</span><span class="sxs-lookup"><span data-stu-id="2286d-108">The code uses the <xref:System.Linq.Enumerable.ToList%2A> extension method to create a <xref:System.Collections.Generic.List%601> collection from the results of the query.</span></span>  
+ <span data-ttu-id="bcede-106">在此示例中，[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询的结果以 <xref:System.Collections.Generic.IEnumerable%601> 的 `PurchaseOrderItem` 形式返回。</span><span class="sxs-lookup"><span data-stu-id="bcede-106">In this example, the result of the [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query is returned as an <xref:System.Collections.Generic.IEnumerable%601> of `PurchaseOrderItem`.</span></span> <span data-ttu-id="bcede-107">`PurchaseOrder` 类中各项的类型都是 <xref:System.Collections.Generic.IEnumerable%601> 的 `PurchaseOrderItem`。</span><span class="sxs-lookup"><span data-stu-id="bcede-107">The items in the `PurchaseOrder` class are of type <xref:System.Collections.Generic.IEnumerable%601> of `PurchaseOrderItem`.</span></span> <span data-ttu-id="bcede-108">该代码使用 <xref:System.Linq.Enumerable.ToList%2A> 扩展方法，根据查询结果来创建 <xref:System.Collections.Generic.List%601> 集合。</span><span class="sxs-lookup"><span data-stu-id="bcede-108">The code uses the <xref:System.Linq.Enumerable.ToList%2A> extension method to create a <xref:System.Collections.Generic.List%601> collection from the results of the query.</span></span>  
   
- <span data-ttu-id="2286d-109">此示例产生以下输出：</span><span class="sxs-lookup"><span data-stu-id="2286d-109">The example produces the following output:</span></span>  
+ <span data-ttu-id="bcede-109">此示例产生以下输出：</span><span class="sxs-lookup"><span data-stu-id="bcede-109">The example produces the following output:</span></span>  
   
-```  
+```console  
 PurchaseOrderNumber: 99503  
 OrderDate: 10/20/1999  
   
@@ -337,8 +337,8 @@ USPrice: 39.98
 ShipDate: 5/21/1999  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="2286d-110">请参阅</span><span class="sxs-lookup"><span data-stu-id="2286d-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="bcede-110">请参阅</span><span class="sxs-lookup"><span data-stu-id="bcede-110">See also</span></span>
 
 - <xref:System.Linq.Enumerable.Select%2A>
 - <xref:System.Linq.Enumerable.ToList%2A>
-- [<span data-ttu-id="2286d-111">投影和转换 (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2286d-111">Projections and Transformations (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+- [<span data-ttu-id="bcede-111">投影和转换（LINQ to XML）（Visual Basic）</span><span class="sxs-lookup"><span data-stu-id="bcede-111">Projections and Transformations (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
