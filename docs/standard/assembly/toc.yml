@@ -17,6 +17,8 @@
       href: file-format.md
     - name: 如何：在 .NET Core 中使用和调试程序集可卸载性
       href: unloadability.md
+    - name: 引用程序集
+      href: reference-assemblies.md
     - name: 解析程序集加载
       href: resolve-loads.md
     - name: 使用程序集编程
