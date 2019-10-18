@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - behaviors [WCF], system-provided client
 ms.assetid: d16d3405-be70-4edb-8f62-b5f614ddeca5
-ms.openlocfilehash: 738aadf93b726569eb59fc281cca2e482bace0bc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 075f62526ace1ac49d12e1bdec39d8df4b0a3ff1
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645188"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72321408"
 ---
 # <a name="specifying-client-run-time-behavior"></a>指定客户端运行时行为
-Windows Communication Foundation (WCF) 客户端，如 Windows Communication Foundation (WCF) 服务，可以配置为修改以满足客户端应用程序的运行时行为。 有三个属性可用于指定客户端运行时行为。 双工客户端回调对象可以使用 <xref:System.ServiceModel.CallbackBehaviorAttribute> 和 <xref:System.ServiceModel.Description.CallbackDebugBehavior> 属性修改其运行时行为。 另一个属性 <xref:System.ServiceModel.Description.ClientViaBehavior> 可用于将逻辑目标与直接网络目标分开。 此外，双工客户端回调类型可以使用某些服务端行为。 有关详细信息，请参阅[指定服务运行时行为](../../../docs/framework/wcf/specifying-service-run-time-behavior.md)。  
+Windows Communication Foundation （WCF）客户端（如 Windows Communication Foundation （WCF）服务）可进行配置，以修改运行时行为，以适合客户端应用程序。 有三个属性可用于指定客户端运行时行为。 双工客户端回调对象可以使用 <xref:System.ServiceModel.CallbackBehaviorAttribute> 和 <xref:System.ServiceModel.Description.CallbackDebugBehavior> 属性修改其运行时行为。 另一个属性 <xref:System.ServiceModel.Description.ClientViaBehavior> 可用于将逻辑目标与直接网络目标分开。 此外，双工客户端回调类型可以使用某些服务端行为。 有关详细信息，请参阅[指定服务运行时行为](specifying-service-run-time-behavior.md)。  
   
 ## <a name="using-the-callbackbehaviorattribute"></a>使用 CallbackBehaviorAttribute  
  可以使用 <xref:System.ServiceModel.CallbackBehaviorAttribute> 类来配置或扩展客户端应用程序中回调协定实现的执行行为。 此属性为回调类和 <xref:System.ServiceModel.ServiceBehaviorAttribute> 类执行相似的功能，不同之处在于实例化行为和事务设置。  
@@ -36,7 +36,7 @@ Windows Communication Foundation (WCF) 客户端，如 Windows Communication Fou
   
 - 仅在受控调试方案中才能这样做。  
   
- 下面的代码示例演示客户端指示 WCF 在返回托管的异常信息从客户端回调对象在 SOAP 消息中的配置文件。  
+ 下面的代码示例演示一个客户端配置文件，该文件指示 WCF 从 SOAP 消息中的客户端回调对象返回托管异常信息。  
   
  [!code-xml[SCA.CallbackContract#4](../../../samples/snippets/csharp/VS_Snippets_CFX/sca.callbackcontract/cs/client.exe.config#4)]  
  
@@ -45,4 +45,4 @@ Windows Communication Foundation (WCF) 客户端，如 Windows Communication Fou
   
 ## <a name="see-also"></a>请参阅
 
-- [指定服务运行时行为](../../../docs/framework/wcf/specifying-service-run-time-behavior.md)
+- [指定服务运行时行为](specifying-service-run-time-behavior.md)

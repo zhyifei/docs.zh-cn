@@ -7,16 +7,16 @@ helpviewer_keywords:
 - fundamentals [WCF]
 - Windows Communication Foundation [WCF], concepts
 ms.assetid: 3e7e0afd-7913-499d-bafb-eac7caacbc7a
-ms.openlocfilehash: eb03a164ce0ff0140c32b3b56bcb502674e5fecd
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 9dcaa5f73dd8a4ec1943cb7fc840feee889563b8
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70990290"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319851"
 ---
 # <a name="fundamental-windows-communication-foundation-concepts"></a>Windows Communication Foundation 基础概念
 
-本文档提供 Windows Communication Foundation （WCF）体系结构的概要视图。 本文档旨在解释关键概念以及这些概念之间的关系。 有关创建 WCF 服务和客户端的最简单版本的教程，请参阅[入门教程](../../../docs/framework/wcf/getting-started-tutorial.md)。 若要了解 WCF 编程，请参阅[基本 Wcf 编程](../../../docs/framework/wcf/basic-wcf-programming.md)。
+本文档提供 Windows Communication Foundation （WCF）体系结构的概要视图。 本文档旨在解释关键概念以及这些概念之间的关系。 有关创建 WCF 服务和客户端的最简单版本的教程，请参阅[入门教程](getting-started-tutorial.md)。 若要了解 WCF 编程，请参阅[基本 Wcf 编程](basic-wcf-programming.md)。
 
 ## <a name="wcf-fundamentals"></a>WCF 基础知识
 
@@ -26,7 +26,7 @@ WCF 是一个运行时和一组 Api，用于创建在服务和客户端之间发
 
 WCF 基于基于消息的通信的概念，可作为消息建模的任何内容（例如 HTTP 请求或消息队列（也称为 MSMQ）消息）都可以在编程模型中以统一的方式表示。 这样，就可以在不同传输机制间提供一个统一的 API。
 
-此模型区分_客户端_（启动通信的应用程序）和_服务_（这些应用程序等待客户端与其通信并响应通信）。 单个应用程序既可以充当客户端，也可以充当服务。 有关示例，请参阅[双工服务](../../../docs/framework/wcf/feature-details/duplex-services.md)和[对等网络](../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)。
+此模型区分_客户端_（启动通信的应用程序）和_服务_（这些应用程序等待客户端与其通信并响应通信）。 单个应用程序既可以充当客户端，也可以充当服务。 有关示例，请参阅[双工服务](./feature-details/duplex-services.md)和[对等网络](./feature-details/peer-to-peer-networking.md)。
 
 消息在终结点之间发送。 _终结点_是发送或接收消息的位置，它们定义消息交换所需的所有信息。 服务公开一个或多个应用程序终结点（以及零个或更多个基础结构终结点），而客户端生成一个与服务的其中一个终结点兼容的终结点。
 
@@ -81,7 +81,7 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
 ```
 
 **绑定**  
- 绑定定义终结点与外界进行通信的方式。 它由一组称为绑定元素的要素构造而成，这些元素“堆叠”在一起以形成通信基础结构。 绑定最起码应定义传输协议（如 HTTP 或 TCP）和所使用的编码（如文本或二进制）。 绑定可以包含指定详细信息（例如，用于保护消息的安全机制或终结点所使用的消息模式）的绑定元素。 有关详细信息，请参阅[配置服务](../../../docs/framework/wcf/configuring-services.md)。
+ 绑定定义终结点与外界进行通信的方式。 它由一组称为绑定元素的要素构造而成，这些元素“堆叠”在一起以形成通信基础结构。 绑定最起码应定义传输协议（如 HTTP 或 TCP）和所使用的编码（如文本或二进制）。 绑定可以包含指定详细信息（例如，用于保护消息的安全机制或终结点所使用的消息模式）的绑定元素。 有关详细信息，请参阅[配置服务](configuring-services.md)。
 
 **Binding 元素**  
  绑定元素表示绑定的特定部分，如传输协议、编码、基础结构级协议（如 WS-ReliableMessaging）的实现以及通信堆栈的其他任何要素。
@@ -90,7 +90,7 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
  行为是控制服务、终结点、特定操作或客户端的各个运行时方面的要素。 行为按照范围进行分组：常见行为在全局范围内影响所有终结点，服务行为仅影响与服务相关的方面，终结点行为仅影响与终结点相关的属性，操作级行为影响特定操作。 例如，有一种服务行为是遏制，它指定当过多的消息可能超出服务的处理能力时，服务应该如何反应。 另一方面，终结点行为仅控制与终结点相关的方面，如查找安全凭据的方式和位置。
 
 **系统提供的绑定**  
- WCF 包含许多系统提供的绑定。 这些绑定是针对特定方案进行优化的绑定元素的集合。 例如， <xref:System.ServiceModel.WSHttpBinding>旨在实现与实现各种\* WS 规范的服务的互操作性。 通过仅提供那些可以正确应用于特定方案的选项，这些预定义的绑定可以节省时间。 如果预定义的绑定不能满足你的需求，则可以创建你自己的自定义绑定。
+ WCF 包含许多系统提供的绑定。 这些绑定是针对特定方案进行优化的绑定元素的集合。 例如，<xref:System.ServiceModel.WSHttpBinding> 旨在实现与实现各种 WS \* 规范的服务的互操作性。 通过仅提供那些可以正确应用于特定方案的选项，这些预定义的绑定可以节省时间。 如果预定义的绑定不能满足你的需求，则可以创建你自己的自定义绑定。
 
 **配置与编码**  
  可以通过代码编写、配置或将两者结合在一起对应用程序进行控制。 配置的优点在于，它使非开发人员（如网络管理员）可以在代码编写完成后直接对客户端和服务参数进行设置，而不必重新进行编译。 使用配置不仅可以设置值（如终结点地址），还可以通过添加终结点、绑定和行为来实施进一步的控制。 通过代码编写，开发人员可以保持对服务或客户端的所有组件的严格控制，而且可以对通过配置完成的所有设置进行检查，并根据需要通过代码进行重写。
@@ -134,31 +134,31 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
 **WCF 客户端**  
  客户端应用程序构造，将服务操作公开为方法（采用所选的 .NET Framework 编程语言，如 Visual Basic 或视觉对象C#）。 任何应用程序都可以承载 WCF 客户端，包括承载服务的应用程序。 因此，可以创建一个包含其他服务的 WCF 客户端的服务。
 
-WCF 客户端可以使用 " [svcutil.exe" 元数据实用工具（）](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)进行自动生成，并将其指向发布元数据的运行中服务。
+WCF 客户端可以使用 " [svcutil.exe" 元数据实用工具（）](servicemodel-metadata-utility-tool-svcutil-exe.md)进行自动生成，并将其指向发布元数据的运行中服务。
 
 **元数据**  
- 服务的元数据描述服务的各种特征，外部实体需要了解这些特征以便与该服务进行通信。 元数据[实用工具（svcutil.exe）](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)可以使用元数据生成 WCF 客户端，以及客户端应用程序可用于与服务进行交互的伴随配置。
+ 服务的元数据描述服务的各种特征，外部实体需要了解这些特征以便与该服务进行通信。 元数据[实用工具（svcutil.exe）](servicemodel-metadata-utility-tool-svcutil-exe.md)可以使用元数据生成 WCF 客户端，以及客户端应用程序可用于与服务进行交互的伴随配置。
 
 服务所公开的元数据包括 XML 架构文档（用于定义服务的数据协定）和 WSDL 文档（用于描述服务的方法）。
 
 启用元数据后，WCF 可通过检查服务及其终结点来自动生成服务的元数据。 若要发布服务的元数据，必须显式启用元数据行为。
 
-**安全性**  
- 在 WCF 中，包括保密性（为防止窃听而进行的消息加密）、完整性（用于检测消息篡改的方法）、身份验证（用于验证服务器和客户端的方法）以及授权（对的访问控制资源）。 这些函数通过利用现有的安全机制（例如 HTTP 上的 TLS （也称为 HTTPS））或实现一个或多个不同的 WS\*安全规范来提供。
+**Security**  
+ 在 WCF 中，包括保密性（为防止窃听而进行的消息加密）、完整性（用于检测消息篡改的方法）、身份验证（用于验证服务器和客户端的方法）以及授权（对的访问控制资源）。 这些函数通过利用现有的安全机制（例如 HTTP 上的 TLS （也称为 HTTPS））或实现一个或多个不同的 WS \* 安全规范来提供。
 
 **传输安全模式**  
  传输安全模式指定由传输层机制（如 HTTPS）提供保密性、完整性和身份验证。 在使用像 HTTPS 这样的传输协议时，此模式的优点在于性能出色，而且由于它在 Internet 上非常流行，因此很容易理解。 其缺点在于，这种安全分别应用于通信路径中的每个跃点，这使得通信容易遭受“中间人”攻击。
 
 **消息安全模式**  
- 指定通过实现一个或多个安全规范来提供安全性，如名为[Web Services 安全性的规范：SOAP 消息安全性](https://go.microsoft.com/fwlink/?LinkId=94684)。 每个消息都包含必要的安全机制，用于在消息传输过程中保证安全，并使接收方能够检测到篡改和对消息进行解密。 从这种意义上说，安全信息包装在每个消息中，从而提供了跨多个跃点的端到端安全。 由于安全信息成为消息的一部分，因此还可以在消息中包含多种凭据（这些凭据称为_声明_）。 这种方法还具有这样一个优点，即消息可以通过任意传输协议（包括在其起点和目标之间的多个传输协议）安全地传送。 这种方法的缺点在于所使用的加密机制较为复杂，使性能受到影响。
+ 指定通过实现一个或多个安全规范（如名为[Web Services 安全性： SOAP Message security](https://go.microsoft.com/fwlink/?LinkId=94684)的规范）来提供安全性。 每个消息都包含必要的安全机制，用于在消息传输过程中保证安全，并使接收方能够检测到篡改和对消息进行解密。 从这种意义上说，安全信息包装在每个消息中，从而提供了跨多个跃点的端到端安全。 由于安全信息成为消息的一部分，因此还可以在消息中包含多种凭据（这些凭据称为_声明_）。 这种方法还具有这样一个优点，即消息可以通过任意传输协议（包括在其起点和目标之间的多个传输协议）安全地传送。 这种方法的缺点在于所使用的加密机制较为复杂，使性能受到影响。
 
 **带有消息凭据的传输安全模式**  
  此模式指定使用传输层来提供消息的保密性、身份验证和完整性，并且每个消息都可以包含消息接收方所要求的多个凭据（声明）。
 
-**WS-\***  
+**WS \***  
  一组不断增加的、在 WCF 中实现的 Web 服务 (WS) 规范（如 WS-Security、WS-ReliableMessaging 等）的简写。
 
 ## <a name="see-also"></a>请参阅
 
-- [什么是 Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)
-- [Windows Communication Foundation 体系结构](../../../docs/framework/wcf/architecture.md)
+- [什么是 Windows Communication Foundation](whats-wcf.md)
+- [Windows Communication Foundation 体系结构](architecture.md)

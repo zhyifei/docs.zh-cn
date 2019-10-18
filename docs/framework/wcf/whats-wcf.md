@@ -6,12 +6,12 @@ helpviewer_keywords:
 - technology overview [WCF]
 - WCF [WCF], technology overview
 ms.assetid: 40e1009d-ef15-450b-9848-62eabe5e5738
-ms.openlocfilehash: 21a01c5d59d30ac89f6baa19dbcdcf718a1b7d88
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 01470bd7f317acca068b3c1be1c751e3050ee7e8
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834854"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320212"
 ---
 # <a name="what-is-windows-communication-foundation"></a>什么是 Windows Communication Foundation
 Windows Communication Foundation （WCF）是用于生成面向服务的应用程序的框架。 使用 WCF，可以将数据作为异步消息从一个服务终结点发送到另一个服务终结点。 服务终结点可以是由 IIS 承载的持续可用的服务的一部分，也可以是应用程序中承载的服务。 终结点可以是从服务终结点请求数据的服务客户端。 简单消息可以是作为 XML 发送的单个字符或单个单词，复杂消息可以是二进制数据流。 一些示例方案包括：
@@ -32,7 +32,7 @@ Windows Communication Foundation （WCF）是用于生成面向服务的应用�
 
 ## <a name="features-of-wcf"></a>WCF 的功能
 
-WCF 包括以下功能集。 有关详细信息，请参阅[WCF 功能详细信息](../../../docs/framework/wcf/feature-details/index.md)。
+WCF 包括以下功能集。 有关详细信息，请参阅[WCF 功能详细信息](./feature-details/index.md)。
 
 - **服务导向**
 
@@ -40,39 +40,39 @@ WCF 包括以下功能集。 有关详细信息，请参阅[WCF 功能详细信�
 
 - **互操作性**
 
-     WCF 实现了用于 Web 服务互操作性的现代行业标准。 有关支持的标准的详细信息，请参阅[互操作性和集成](../../../docs/framework/wcf/feature-details/interoperability-and-integration.md)。
+     WCF 实现了用于 Web 服务互操作性的现代行业标准。 有关支持的标准的详细信息，请参阅[互操作性和集成](./feature-details/interoperability-and-integration.md)。
 
 - **多种消息模式**
 
-     采用多种模式之一交换消息。 最常用的模式是请求/答复模式，其中一个终结点从另一个终结点请求数据， 另一个终结点进行答复。 还有其他模式，比如单向消息，其中只有一个终结点发送消息，而不期望得到答复。 更复杂的模式是双工交换模式，在该模式下，两个终结点建立连接并来回发送数据，类似于即时消息传递程序。 有关如何使用 WCF 实现不同消息交换模式的详细信息，请参阅[约定](../../../docs/framework/wcf/feature-details/contracts.md)。
+     采用多种模式之一交换消息。 最常用的模式是请求/答复模式，其中一个终结点从另一个终结点请求数据， 另一个终结点进行答复。 还有其他模式，比如单向消息，其中只有一个终结点发送消息，而不期望得到答复。 更复杂的模式是双工交换模式，在该模式下，两个终结点建立连接并来回发送数据，类似于即时消息传递程序。 有关如何使用 WCF 实现不同消息交换模式的详细信息，请参阅[约定](./feature-details/contracts.md)。
 
 - **服务元数据**
 
-     WCF 支持使用行业标准（如 WSDL、XML 架构和 WS 策略）中指定的格式发布服务元数据。 此元数据可用于自动生成和配置用于访问 WCF 服务的客户端。 可通过 HTTP 和 HTTPS 来发布元数据，也可使用 Web 服务元数据交换标准来发布元数据。 有关详细信息，请参阅[元数据](../../../docs/framework/wcf/feature-details/metadata.md)。
+     WCF 支持使用行业标准（如 WSDL、XML 架构和 WS 策略）中指定的格式发布服务元数据。 此元数据可用于自动生成和配置用于访问 WCF 服务的客户端。 可通过 HTTP 和 HTTPS 来发布元数据，也可使用 Web 服务元数据交换标准来发布元数据。 有关详细信息，请参阅[元数据](./feature-details/metadata.md)。
 
 - **数据协定**
 
      因为 WCF 是使用 .NET Framework 生成的，所以它还包含提供要强制执行的协定的代码友好方法。 数据协定就是其中一种通用类型的协定。 实质上，当您使用 Visual C# 或 Visual Basic 对服务进行编码时，处理数据的最简单方法是使用属于数据实体的属性创建表示该数据实体的类。 WCF 包含一个用于以这种简单方式处理数据的综合系统。 在创建了表示数据的类之后，服务会自动生成使客户端能够符合所设计数据类型的元数据。 有关详细信息，请参阅[使用数据协定](../../../docs/framework/wcf/feature-details/using-data-contracts.md)。
 
-- **安全性**
+- **Security**
 
-     可对消息进加密以保护隐私，而且可以要求用户对其自身进行身份验证，然后才允许接收消息。 可使用众所周知的标准（如 SSL 或 WS-SecureConversation）实现安全性。 有关详细信息，请参阅[安全性](../../../docs/framework/wcf/feature-details/security.md)。
+     可对消息进加密以保护隐私，而且可以要求用户对其自身进行身份验证，然后才允许接收消息。 可使用众所周知的标准（如 SSL 或 WS-SecureConversation）实现安全性。 有关详细信息，请参阅[安全性](./feature-details/security.md)。
 
 - **多种传输和编码方式**
 
-     可通过多种内置传输协议和编码中的任意一种发送消息。 最常见的协议和编码是使用超文本传输协议（HTTP）发送文本编码的 SOAP 消息，以便在万维网上使用。 另外，WCF 还允许通过 TCP、命名管道或 MSMQ 发送消息。 这些消息可以编码为文本，也可以使用优化的二进制格式。  使用 MTOM 标准可有效地发送二进制数据。 如果所提供的传输或编码都不符合您的需要，您可以创建自己的自定义传输或编码。 有关 WCF 支持的传输和编码的详细信息，请参阅[传输](../../../docs/framework/wcf/feature-details/transports.md)。
+     可通过多种内置传输协议和编码中的任意一种发送消息。 最常见的协议和编码是使用超文本传输协议（HTTP）发送文本编码的 SOAP 消息，以便在万维网上使用。 另外，WCF 还允许通过 TCP、命名管道或 MSMQ 发送消息。 这些消息可以编码为文本，也可以使用优化的二进制格式。  使用 MTOM 标准可有效地发送二进制数据。 如果所提供的传输或编码都不符合您的需要，您可以创建自己的自定义传输或编码。 有关 WCF 支持的传输和编码的详细信息，请参阅[传输](./feature-details/transports.md)。
 
 - **可靠的排队消息**
 
-     WCF 支持可靠的消息交换，其中使用通过 WS-TRUST 消息和使用 MSMQ 实现的可靠会话。 有关 WCF 中可靠和排队消息支持的详细信息，请参阅[队列和可靠会话](../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md)。
+     WCF 支持可靠的消息交换，其中使用通过 WS-TRUST 消息和使用 MSMQ 实现的可靠会话。 有关 WCF 中可靠和排队消息支持的详细信息，请参阅[队列和可靠会话](./feature-details/queues-and-reliable-sessions.md)。
 
 - **持久性消息**
 
-     持久性消息决不会由于通信中断而丢失。 持久性消息模式的消息会始终保存到数据库中。 如果发生中断，数据库将允许您在恢复连接后恢复消息交换。 你还可以使用 Windows Workflow Foundation （WF）创建持久消息。 有关详细信息，请参阅[工作流服务](../../../docs/framework/wcf/feature-details/workflow-services.md)。
+     持久性消息决不会由于通信中断而丢失。 持久性消息模式的消息会始终保存到数据库中。 如果发生中断，数据库将允许您在恢复连接后恢复消息交换。 你还可以使用 Windows Workflow Foundation （WF）创建持久消息。 有关详细信息，请参阅[工作流服务](./feature-details/workflow-services.md)。
 
 - **事务**
 
-     WCF 还支持使用以下三种事务模型之一的事务：AtomicTransactions、<xref:System.Transactions> 命名空间中的 Api 和 Microsoft 分布式事务处理协调器。 有关 WCF 中事务支持的详细信息，请参阅[事务](../../../docs/framework/wcf/feature-details/transactions-in-wcf.md)。
+     WCF 还支持使用以下三种事务模型之一的事务： AtomicTransactions、<xref:System.Transactions> 命名空间中的 Api 和 Microsoft 分布式事务处理协调器。 有关 WCF 中事务支持的详细信息，请参阅[事务](./feature-details/transactions-in-wcf.md)。
 
 - **AJAX 和 REST 支持**
 
@@ -80,7 +80,7 @@ WCF 包括以下功能集。 有关详细信息，请参阅[WCF 功能详细信�
 
 - **扩展性**
 
-     WCF 体系结构具有大量扩展点。 如果需要额外功能，它还提供许多入口点，允许您自定义服务的行为。 有关可用扩展点的详细信息，请参阅[扩展 WCF](../../../docs/framework/wcf/extending/index.md)。
+     WCF 体系结构具有大量扩展点。 如果需要额外功能，它还提供许多入口点，允许您自定义服务的行为。 有关可用扩展点的详细信息，请参阅[扩展 WCF](./extending/index.md)。
 
 ## <a name="wcf-integration-with-other-microsoft-technologies"></a>WCF 与其他 Microsoft 技术的集成
 
@@ -97,10 +97,10 @@ Windows Server AppFabric 应用程序服务器的托管功能专门用于部署�
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.ServiceModel>
-- [Windows Communication Foundation 基础概念](../../../docs/framework/wcf/fundamental-concepts.md)
-- [Windows Communication Foundation 体系结构](../../../docs/framework/wcf/architecture.md)
-- [指南与最佳做法](../../../docs/framework/wcf/guidelines-and-best-practices.md)
-- [入门教程](../../../docs/framework/wcf/getting-started-tutorial.md)
-- [文档使用指南](../../../docs/framework/wcf/guide-to-the-documentation.md)
-- [基本 WCF 编程](../../../docs/framework/wcf/basic-wcf-programming.md)
+- [Windows Communication Foundation 基础概念](fundamental-concepts.md)
+- [Windows Communication Foundation 体系结构](architecture.md)
+- [指南与最佳做法](guidelines-and-best-practices.md)
+- [入门教程](getting-started-tutorial.md)
+- [文档使用指南](guide-to-the-documentation.md)
+- [基本 WCF 编程](basic-wcf-programming.md)
 - [Windows Communication Foundation 示例](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751514%28v=vs.90%29)

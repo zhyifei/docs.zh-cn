@@ -1,18 +1,18 @@
 ---
-title: 如何：修改 Office Open XML 文档 (Visual Basic)
+title: 如何：修改 Office Open XML 文档（Visual Basic）
 ms.date: 07/20/2015
 ms.assetid: 1cefd7f5-8e39-44c4-869c-f8021538a777
-ms.openlocfilehash: 5ec5451112855b687abded3ec64dda18423881f1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0eb8704608fa7d529b32e44e754c0274d7a67b1d
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61942553"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319949"
 ---
-# <a name="how-to-modify-an-office-open-xml-document-visual-basic"></a>如何：修改 Office Open XML 文档 (Visual Basic)
+# <a name="how-to-modify-an-office-open-xml-document-visual-basic"></a>如何：修改 Office Open XML 文档（Visual Basic）
 本主题显演示一个打开、修改和保存 Office Open XML 文档的示例。  
   
- 有关 Office Open XML 的详细信息，请参阅[Eric White 博客](http://www.ericwhite.com)。  
+ 有关 Office Open XML 的详细信息，请参阅[Eric 白的博客](http://www.ericwhite.com)。  
   
 ## <a name="example"></a>示例  
  本示例查找文档中的第一个段落元素。 示例从段落中检索文本，然后删除段落中的所有文本域。 它创建一个由第一个段落已转换为大写的文本构成的新文本域。 然后将已更改的 XML 序列化为 Open XML 包并关闭该包。  
@@ -137,12 +137,12 @@ End Module
   
  如果在运行此程序之后打开 `SampleDoc.docx`，则可以看到此程序已将文档中的第一个段落转换为大写。  
   
- 当运行的示例 Open XML 文档中所述[创建源 Office Open XML 文档 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)，此示例生成以下输出：  
+ 当与[创建源 Office OPEN Xml 文档（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)中所述的示例 Open xml 文档运行时，此示例将生成以下输出：  
   
-```  
+```console  
 New first paragraph: >PARSING WORDPROCESSINGML WITH LINQ TO XML<  
 ```  
   
 ## <a name="see-also"></a>请参阅
 
-- [高级查询技术 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+- [高级查询技术（LINQ to XML）（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

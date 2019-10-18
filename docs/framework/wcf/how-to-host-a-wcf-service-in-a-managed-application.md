@@ -5,41 +5,41 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5eb29db0-b6dc-4e77-8c68-0a62f79d743b
-ms.openlocfilehash: b6d1c9c38e2cc5f1b1b7b5538af0339987563de6
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: e3adcad6ba70aa64b797325cd45a043301d7e680
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65637584"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320982"
 ---
-# <a name="how-to-host-a-wcf-service-in-a-managed-app"></a>如何：承载的托管应用中的 WCF 服务
+# <a name="how-to-host-a-wcf-service-in-a-managed-app"></a>如何：在托管应用程序中托管 WCF 服务
 
 若要在托管应用程序中承载某项服务，请在托管应用程序代码内嵌入该服务的代码，在代码中强制定义、通过配置以声明的方式定义或者使用默认终结点定义该服务的终结点，然后创建 <xref:System.ServiceModel.ServiceHost> 的实例。
 
 若要开始接收消息，请调用 <xref:System.ServiceModel.ICommunicationObject.Open%2A> 上的 <xref:System.ServiceModel.ServiceHost>。 这样即可创建并打开服务的侦听器。 以这种方式承载服务的做法通常称为“自承载”，原因是托管的应用程序会自己处理承载工作。 若要关闭服务，请调用 <xref:System.ServiceModel.Channels.CommunicationObject.Close%2A?displayProperty=nameWithType> 上的 <xref:System.ServiceModel.ServiceHost>。
 
-在托管的 Windows 服务中、在 Internet Information Services (IIS) 中或在 Windows 进程激活服务 (WAS) 中也可以承载服务。 有关托管服务的选项的详细信息，请参阅[托管服务](../../../docs/framework/wcf/hosting-services.md)。
+在托管的 Windows 服务中、在 Internet Information Services (IIS) 中或在 Windows 进程激活服务 (WAS) 中也可以承载服务。 有关服务托管选项的详细信息，请参阅[托管服务](hosting-services.md)。
 
-在托管应用程序中承载服务是一个非常灵活的选项，因为采用此选项时，所需部署的基础结构最少。 有关在托管应用程序中承载服务的详细信息，请参阅[托管应用程序中承载](../../../docs/framework/wcf/feature-details/hosting-in-a-managed-application.md)。
+在托管应用程序中承载服务是一个非常灵活的选项，因为采用此选项时，所需部署的基础结构最少。 有关托管应用程序中托管服务的详细信息，请参阅[托管应用程序中](./feature-details/hosting-in-a-managed-application.md)的托管。
 
 下面的过程演示如何在控制台应用程序中实现自承载的服务。
 
-## <a name="create-a-self-hosted-service"></a>创建自承载的服务
+## <a name="create-a-self-hosted-service"></a>创建自承载服务
 
 1. 创建新的控制台应用程序：
 
-   1. 打开 Visual Studio 并选择**新建** > **项目**从**文件**菜单。
+   1. 打开 Visual Studio，然后从 "**文件**" 菜单中选择 "**新建**"  > **项目**。
 
-   2. 在中**已安装的模板**列表中，选择**Visual C#** 或**Visual Basic**，然后选择**Windows 桌面**。
+   2. 在 "**已安装的模板**" 列表中，选择 " **Visual C#**  " 或 " **Visual Basic**"，然后选择 " **Windows 桌面**"。
 
-   3. 选择**控制台应用**模板。 类型`SelfHost`中**名称**框，然后选择**确定**。
+   3. 选择 "**控制台应用程序**" 模板。 在 "**名称**" 框中键入 `SelfHost`，然后选择 **"确定"** 。
 
-2. 右键单击**SelfHost**中**解决方案资源管理器**，然后选择**添加引用**。 选择**System.ServiceModel**从 **.NET**选项卡，然后选择**确定**。
+2. 在**解决方案资源管理器**中右键单击 " **SelfHost** "，然后选择 "**添加引用**"。 从 " **.net** " 选项卡中选择 " **system.servicemodel** "，然后选择 **"确定"** 。
 
     > [!TIP]
-    > 如果**解决方案资源管理器**窗口不可见，请选择**解决方案资源管理器**从**视图**菜单。
+    > 如果 "**解决方案资源管理器**" 窗口不可见，请从 "**视图**" 菜单中选择 "**解决方案资源管理器**"。
 
-3. 双击**Program.cs**或**Module1.vb**中**解决方案资源管理器**打开在代码窗口中，如果已打开。 在文件顶部添加以下语句：
+3. 在**解决方案资源管理器**中双击 " **Program.cs** " 或 " **Module1** "，以在 "代码" 窗口中将其打开（如果尚未打开）。 在文件顶部添加以下语句：
 
      [!code-csharp[CFX_SelfHost4#1](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_selfhost4/cs/program.cs#1)]
      [!code-vb[CFX_SelfHost4#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_selfhost4/vb/module1.vb#1)]
@@ -50,7 +50,7 @@ ms.locfileid: "65637584"
      [!code-vb[CFX_SelfHost4#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_selfhost4/vb/module1.vb#2)]
 
     > [!NOTE]
-    > 有关如何定义和实现服务接口的详细信息，请参阅[如何：定义服务协定](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)和[如何：实现服务协定](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md)。
+    > 有关如何定义和实现服务接口的详细信息，请参阅[如何：定义服务协定](how-to-define-a-wcf-service-contract.md)和[如何：实现服务协定](how-to-implement-a-wcf-contract.md)。
 
 5. 在 `Main` 方法的顶部，使用该服务的基址创建 <xref:System.Uri> 类的实例。
 
@@ -63,29 +63,29 @@ ms.locfileid: "65637584"
      [!code-vb[CFX_SelfHost4#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_selfhost4/vb/module1.vb#4)]
 
     > [!NOTE]
-    > 此示例使用默认终结点，且该服务不需要任何配置文件。 如果未配置任何终结点，则运行时会为该服务实现的每个服务协定的每个基地址创建一个终结点。 有关默认终结点的详细信息，请参阅[Simplified Configuration](../../../docs/framework/wcf/simplified-configuration.md)并[WCF 服务的简化配置](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)。
+    > 此示例使用默认终结点，且该服务不需要任何配置文件。 如果未配置任何终结点，则运行时会为该服务实现的每个服务协定的每个基地址创建一个终结点。 有关默认终结点的详细信息，请参阅[WCF 服务的](./samples/simplified-configuration-for-wcf-services.md)[简化配置](simplified-configuration.md)和简化配置。
 
-7. 按**Ctrl**+**Shift**+**B**以生成解决方案。
+7. 按**Ctrl** +**Shift** +**B**生成解决方案。
 
 ## <a name="test-the-service"></a>测试服务
 
-1. 按**Ctrl**+**F5**来运行服务。
+1. 按**Ctrl** +**F5**运行该服务。
 
 2. 打开**WCF 测试客户端**。
 
     > [!TIP]
-    > 若要打开**WCF 测试客户端**，打开 Visual Studio 开发人员命令提示符并执行**WcfTestClient.exe**。
+    > 若要打开**WCF 测试客户端**，请打开 Visual Studio 开发人员命令提示，然后执行**wcftestclient.exe**。
 
-3. 选择**添加的服务**从**文件**菜单。
+3. 从 "**文件**" 菜单中选择 "**添加服务**"。
 
-4. 类型`http://localhost:8080/hello`到地址框，然后单击**确定**。
+4. 在 "地址" 框中键入 `http://localhost:8080/hello`，然后单击 **"确定"** 。
 
     > [!TIP]
     > 确保服务正在运行，否则此步骤将失败。 如果已经更改了代码中的基址，则在此步骤中使用修改后的基址。
 
-5. 双击**SayHello**下**我的服务项目**节点。 键入到您的姓名**值**中的列**请求**列表，然后单击**Invoke**。
+5. 双击 "**我的服务项目**" 节点下的**SayHello** 。 在**请求**列表的 "**值**" 列中键入名称，然后单击 "**调用**"。
 
-   回复消息出现在**响应**列表。
+   回复消息将出现在**响应**列表中。
 
 ## <a name="example"></a>示例
 
@@ -99,11 +99,11 @@ ms.locfileid: "65637584"
 - <xref:System.Uri>
 - <xref:System.Configuration.ConfigurationManager.AppSettings%2A>
 - <xref:System.Configuration.ConfigurationManager>
-- [如何：承载在 IIS 中的 WCF 服务](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)
-- [自承载](../../../docs/framework/wcf/samples/self-host.md)
-- [托管服务](../../../docs/framework/wcf/hosting-services.md)
-- [如何：定义服务协定](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)
-- [如何：实现服务协定](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md)
-- [ServiceModel 元数据实用工具 (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
-- [使用绑定配置服务和客户端](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [系统提供的绑定](../../../docs/framework/wcf/system-provided-bindings.md)
+- [如何：在 IIS 中承载 WCF 服务](./feature-details/how-to-host-a-wcf-service-in-iis.md)
+- [自承载](./samples/self-host.md)
+- [托管服务](hosting-services.md)
+- [如何：定义服务协定](how-to-define-a-wcf-service-contract.md)
+- [如何：实现服务协定](how-to-implement-a-wcf-contract.md)
+- [ServiceModel 元数据实用工具 (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md)
+- [使用绑定配置服务和客户端](using-bindings-to-configure-services-and-clients.md)
+- [系统提供的绑定](system-provided-bindings.md)

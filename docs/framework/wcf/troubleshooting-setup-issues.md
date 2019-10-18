@@ -2,12 +2,12 @@
 title: 安装问题疑难解答
 ms.date: 03/30/2017
 ms.assetid: 1644f885-c408-4d5f-a5c7-a1a907bc8acd
-ms.openlocfilehash: 326daab1f7df5f8a4ea4f74fd8890031f243f7f5
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: 02e6446893e661a0ec0553b0ddf254c40595595c
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291510"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72321353"
 ---
 # <a name="troubleshooting-setup-issues"></a>安装问题疑难解答
 本主题介绍如何对 Windows Communication Foundation （WCF）设置问题进行故障排除。  
@@ -38,17 +38,17 @@ ms.locfileid: "72291510"
   
 4. 事件日志或安装跟踪日志文件中可能会列出以下异常之一：  
   
-     Servicemodelreg.exe [11:09:59:046]：System.ApplicationException:意外结果3，执行具有 "E:\WINDOWS\Microsoft.NET\Framework\v3.0\Windows Communication Foundation\ServiceModel.mof" 的 E:\WINDOWS\system32\wbem\mofcomp.exe  
+     ServiceModelReg [11:09:59:046]: System.ApplicationException: 使用“E:\WINDOWS\Microsoft.NET\Framework\v3.0\Windows Communication Foundation\ServiceModel.mof”执行 E:\WINDOWS\system32\wbem\mofcomp.exe 发生意外结果 3  
   
      或：  
   
-     Servicemodelreg.exe [07:19:33:843]：System.typeinitializationexception："ManagementPath" 的类型初始值设定项引发了异常。 ---> InteropServices. COMException （0x80040154）：检索 CLSID 为 {CF4CC405-E2C5-4DDD-B3CE-5E7582D8C9FA} 的组件的 COM 类工厂失败，原因是出现以下错误：80040154。  
+     ServiceModelReg [07:19:33:843]: System.TypeInitializationException: “System.Management.ManagementPath”的类型初始值设定项引发异常。 ---> COMException （0x80040154）：由于以下错误，检索 CLSID 为 {CF4CC405-E2C5-4DDD-B3CE-5E7582D8C9FA} 的组件的 COM 类工厂失败：80040154。  
   
      或：  
   
-     Servicemodelreg.exe [07:19:32:750]：System.IO.FileNotFoundException:无法加载文件或程序集 "C:\WINDOWS\system32\wbem\mofcomp.exe" 或其依赖项之一。 系统找不到指定的文件。  
+     ServiceModelReg [07:19:32:750]: System.IO.FileNotFoundException: 无法加载文件或程序集“C:\WINDOWS\system32\wbem\mofcomp.exe”或其一个依赖项。 系统找不到指定的文件。  
   
-     文件名：'C:\WINDOWS\system32\wbem\mofcomp.exe  
+     文件名:“C:\WINDOWS\system32\wbem\mofcomp.exe”  
   
  若要解决前面说明的问题，必须按照以下步骤操作。  
   
@@ -57,17 +57,17 @@ ms.locfileid: "72291510"
  使用**控制面板**中的 "**添加/删除程序**" 小程序修复 .NET Framework 3.0 安装，或卸载/重新安装 .NET Framework 3.0。  
   
 ## <a name="repairing-net-framework-30-after-net-framework-35-installation-removes-configuration-elements-introduced-by-net-framework-35-in-machineconfig"></a>在安装 .NET Framework 3.5 后修复 .NET Framework 3.0 会移除 .NET Framework 3.5 在 machine.config 中引入的配置元素  
- 如果在安装 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 后修复 .NET Framework 3.0，则会从 machine.config 中移除由 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 引入的配置元素。 但是，web.config 保持不变。 解决方法是在此之后通过 ARP 修复 @no__t 0，或将[工作流服务注册工具（wfservicesreg.exe）](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md)与 `/c` 开关一起使用。  
+ 如果在安装 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 后修复 .NET Framework 3.0，则会从 machine.config 中移除由 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 引入的配置元素。 但是，web.config 保持不变。 解决方法是在此之后通过 ARP 修复 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]，或将[工作流服务注册工具（wfservicesreg.exe）](workflow-service-registration-tool-wfservicesreg-exe.md)与 `/c` 开关一起使用。  
   
- 可以在%windir%\Microsoft.NET\framework\v3.5\ 或%Windir%\microsoft.net\framework64\v3.5\ 中找到中找到[工作流服务注册工具（wfservicesreg.exe）](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md)  
+ 可以在%windir%\Microsoft.NET\framework\v3.5\ 或%Windir%\microsoft.net\framework64\v3.5\ 中找到中找到[工作流服务注册工具（wfservicesreg.exe）](workflow-service-registration-tool-wfservicesreg-exe.md)  
   
 ## <a name="configure-iis-properly-for-wcfwf-webhost-after-installing-net-framework-35"></a>安装 .NET Framework 3.5 之后，为 WCF/WF Webhost 正确配置 IIS  
  如果 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 安装无法配置与 WCF 相关的其他 IIS 配置设置，则会在安装日志中记录错误并继续。 对运行 WorkflowServices 应用程序的任何尝试都将失败，因为缺少必需的配置设置。 例如，加载 xoml 或规则服务会失败。  
   
- 若要解决此问题，请将[工作流服务注册工具（wfservicesreg.exe）](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md)与 `/c` 开关一起使用，以便在计算机上正确配置 IIS 脚本映射。 可以在%windir%\Microsoft.NET\framework\v3.5\ 或%Windir%\microsoft.net\framework64\v3.5\ 中找到中找到[工作流服务注册工具（wfservicesreg.exe）](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md)  
+ 若要解决此问题，请将[工作流服务注册工具（wfservicesreg.exe）](workflow-service-registration-tool-wfservicesreg-exe.md)与 `/c` 开关一起使用，以正确配置计算机上的 IIS 脚本映射。 可以在%windir%\Microsoft.NET\framework\v3.5\ 或%Windir%\microsoft.net\framework64\v3.5\ 中找到中找到[工作流服务注册工具（wfservicesreg.exe）](workflow-service-registration-tool-wfservicesreg-exe.md)  
   
 ## <a name="could-not-load-type-systemservicemodelactivationhttpmodule-from-assembly-systemservicemodel-version-3000-cultureneutral-publickeytokenb77a5c561934e089"></a>无法从程序集“System.ServiceModel, Version 3.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089”加载类型“System.ServiceModel.Activation.HttpModule”  
- 如果安装 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]，然后启用 WCF HTTP 激活，则会发生此错误。 若要解决此问题，请从 Visual Studio 的开发人员命令提示中运行以下命令行：  
+ 如果安装 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 并启用 WCF HTTP 激活，则会发生此错误。 若要解决此问题，请从 Visual Studio 的开发人员命令提示中运行以下命令行：  
   
 ```console
 aspnet_regiis.exe -i -enable  
@@ -75,4 +75,4 @@ aspnet_regiis.exe -i -enable
   
 ## <a name="see-also"></a>请参阅
 
-- [设置说明](../../../docs/framework/wcf/samples/set-up-instructions.md)
+- [设置说明](./samples/set-up-instructions.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, COM+ integration
 - WCF, COM+ integration
 ms.assetid: 7717c6c2-85fc-418b-a8ed-bad8e61cec5c
-ms.openlocfilehash: 98c8e50ea4a9efe1c69a0c7b959b228a045dfca1
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 13368dfa7ca9d7981ac146b87e83f77077eaf537
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855654"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320724"
 ---
 # <a name="com-service-model-configuration-tool-comsvcconfigexe"></a>COM+ 服务模块配置工具 (ComSvcConfig.exe)
 利用 COM+ 服务模块配置命令行工具 (ComSvcConfig.exe)，你可以配置要作为 Web 服务公开的 COM+ 接口。  
@@ -30,7 +30,7 @@ ComSvcConfig.exe /install | /uninstall | /list [/application:<ApplicationID | Ap
   
  %SystemRoot%\Microsoft.Net\Framework\v3.0\Windows Communication Foundation\  
   
- 有关 comsvcconfig.exe 的详细信息，请参阅[如何：使用 COM + 服务模型配置工具](../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)。  
+ 有关 Comsvcconfig.exe 的详细信息，请参阅[如何：使用 COM + 服务模型配置工具](./feature-details/how-to-use-the-com-service-model-configuration-tool.md)。  
   
  下表介绍可用于 ComSvcConfig.exe 的模式。  
   
@@ -44,11 +44,11 @@ ComSvcConfig.exe /install | /uninstall | /list [/application:<ApplicationID | Ap
   
 |选项|描述|  
 |------------|-----------------|  
-|`/application:` \<*ApplicationID* &#124; *ApplicationName*\>|指定要配置的 COM+ 应用程序。<br /><br /> 缩写形式：`/a`。|  
-|`/contract:`&#124; &#124; &#124; ClassID ProgID&#124; ，InterfaceID InterfaceName\* \<    \*\>|指定将作为服务协定配置的 COM+ 组件和接口。<br /><br /> 缩写形式：`/c`。<br /><br /> 尽管指定组件和接口\*名称时可以使用通配符（），但我们建议您不要使用通配符，因为您可能会公开您不打算使用的接口。|  
-|`/hosting:`&#124; complus \<是  \>|指定是使用 COM+ 宿主模式还是 Web 宿主模式。<br /><br /> 缩写形式：`/h`。<br /><br /> 如果使用 COM+ 宿主模式，将需要显式激活 COM+ 应用程序。 如果使用 Web 宿主模式，将能够按照需要自动激活 COM+ 应用程序。 如果 COM+ 应用程序是库应用程序，它将在 Internet 信息服务 (IIS) 进程中运行。 如果 COM+ 应用程序是服务器应用程序，它将在 Dllhost.exe 进程中运行。|  
-|`/webSite:`\< *WebsiteName*\>|指定使用 Web 宿主模式时（请参见 `/hosting` 标志）用于宿主的网站。<br /><br /> 缩写形式：`/w`。<br /><br /> 如果未指定网站，则使用默认网站。|  
-|`/webDirectory:` \<*WebDirectoryName*\>|指定在使用 Web 宿主时（请参见 `/hosting` 标志）用于宿主的虚拟目录。<br /><br /> 缩写形式：`/d`。|  
+|`/application:` \<*ApplicationID* &#124; *ApplicationName* \>|指定要配置的 COM+ 应用程序。<br /><br /> 缩写形式：`/a`。|  
+|`/contract:` \<*ClassID* &#124; *ProgID* &#124; \*，*InterfaceID* &#124; *InterfaceName* &#124; 1 2|指定将作为服务协定配置的 COM+ 组件和接口。<br /><br /> 缩写形式：`/c`。<br /><br /> 尽管在指定组件和接口名称时可以使用通配符（\*），但我们建议您不要使用通配符，因为您可能会公开您不打算使用的接口。|  
+|\<*complus* &#124; *`/hosting:` \>*|指定是使用 COM+ 宿主模式还是 Web 宿主模式。<br /><br /> 缩写形式：`/h`。<br /><br /> 如果使用 COM+ 宿主模式，将需要显式激活 COM+ 应用程序。 如果使用 Web 宿主模式，将能够按照需要自动激活 COM+ 应用程序。 如果 COM+ 应用程序是库应用程序，它将在 Internet 信息服务 (IIS) 进程中运行。 如果 COM+ 应用程序是服务器应用程序，它将在 Dllhost.exe 进程中运行。|  
+|`/webSite:` \<*WebsiteName* \>|指定使用 Web 宿主模式时（请参见 `/hosting` 标志）用于宿主的网站。<br /><br /> 缩写形式：`/w`。<br /><br /> 如果未指定网站，则使用默认网站。|  
+|`/webDirectory:` \<*WebDirectoryName* \>|指定在使用 Web 宿主时（请参见 `/hosting` 标志）用于宿主的虚拟目录。<br /><br /> 缩写形式：`/d`。|  
 |`/mex`|将元数据交换 (MEX) 服务终结点添加到默认服务配置，以支持要从服务中检索协定定义的客户端。<br /><br /> 缩写形式：`/x`。|  
 |`/id`|以 ID 的形式显示应用程序、组件和接口信息。<br /><br /> 缩写形式：`/k`。|  
 |`/nologo`|防止 ComSvcConfig.exe 显示其徽标。<br /><br /> 缩写形式：`/n`。|  
@@ -96,4 +96,4 @@ ComSvcConfig.exe /list /application:OnlineStore /hosting:complus
   
 ## <a name="see-also"></a>请参阅
 
-- [如何：使用 COM + 服务模型配置工具](../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)
+- [如何：使用 COM+ 服务模型配置工具](./feature-details/how-to-use-the-com-service-model-configuration-tool.md)

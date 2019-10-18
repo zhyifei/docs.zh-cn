@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ef88af8c-8dfe-4556-8b56-81df960a900b
-ms.openlocfilehash: 0996b7d864c5892e383cb98d4065e99b096206d1
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 8eca2ee1afec5662e40d4f43347c469bd538c066
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854331"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319497"
 ---
 # <a name="null-comparisons"></a>Null 比较
 数据源中的 `null` 值指示未知的值。 在 LINQ to Entities 查询中，可以检查是否存在 null 值，以便仅对具有有效或非 null 数据的行执行某些计算或比较。 但是，CLR null 语义可能与数据源的 null 语义不同。 大多数数据库使用某个版本的三值逻辑处理 null 比较。 即，对 null 值的比较不会计算为 `true` 或 `false`，而是计算为 `unknown`。 通常这是 ANSI null 值的实现，但情况并非总是如此。  
   
- 在 SQL Server 中，null 等于 null 比较默认返回 null 值。 在下面的示例中， `ShipDate`将从结果集中排除为 null 的行，并且 transact-sql 语句将返回0行。  
+ 在 SQL Server 中，null 等于 null 比较默认返回 null 值。 在下面的示例中，从结果集中排除 `ShipDate` 为 null 的行，Transact-sql 语句将返回0行。  
   
-```  
+```sql  
 -- Find order details and orders with no ship date.  
 SELECT h.SalesOrderID  
 FROM Sales.SalesOrderHeader h  
@@ -44,7 +44,7 @@ WHERE h.ShipDate IS Null
  [!code-vb[DP L2E Conceptual Examples#CastResultsIsNull](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#castresultsisnull)]  
   
 ## <a name="passing-null-collections-to-aggregate-functions"></a>将 Null 集合传递到聚合函数  
- 在 LINQ to Entities 中，当您将支持`IQueryable`的集合传递到聚合函数时，将在数据库中执行聚合运算。 在内存中执行的查询结果与在数据库中执行的查询可能存在差异。 对于内存中查询，如果没有匹配项，查询将返回零。 在数据库中，同一查询返回 `null`。 如果将`null`值传递给 LINQ 聚合函数，则会引发异常。 若要接受`null`可能的值，请将接收查询结果的类型的类型和属性强制转换为可以为 null 的类型。  
+ 在 LINQ to Entities 中，当您将支持 `IQueryable` 的集合传递到聚合函数时，将在数据库中执行聚合运算。 在内存中执行的查询结果与在数据库中执行的查询可能存在差异。 对于内存中查询，如果没有匹配项，查询将返回零。 在数据库中，同一查询返回 `null`。 如果向 LINQ 聚合函数传递 `null` 值，则将引发异常。 若要接受可能的 `null` 值，请将接收查询结果的类型的类型和属性强制转换为可以为 null 的类型。  
   
 ## <a name="see-also"></a>请参阅
 

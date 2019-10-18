@@ -8,15 +8,15 @@ helpviewer_keywords:
 - WCF, security
 - ProtectionLevel property
 ms.assetid: 3d4e8f80-0f9e-4a26-9899-beb6584e78df
-ms.openlocfilehash: 222fda180923cdc7b0d7b7ab413c151c69add259
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4ff835f767852da586a3a35b7f4ce2edf99db283
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69950981"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320915"
 ---
 # <a name="how-to-set-the-protectionlevel-property"></a>如何：设置 ProtectionLevel 属性
-通过应用相应的属性 (Attribute) 并设置该属性 (Property) 可设置保护级别。 可在服务级设置保护以影响每条消息的所有部分，或者可以从方法到消息部分逐级递增地设置保护。 有关`ProtectionLevel`属性的详细信息, 请参阅[了解保护级别](../../../docs/framework/wcf/understanding-protection-level.md)。  
+通过应用相应的属性 (Attribute) 并设置该属性 (Property) 可设置保护级别。 可在服务级设置保护以影响每条消息的所有部分，或者可以从方法到消息部分逐级递增地设置保护。 有关 `ProtectionLevel` 属性的详细信息，请参阅[了解保护级别](understanding-protection-level.md)。  
   
 > [!NOTE]
 > 只能在代码中，而不是在配置中设置保护级别。  
@@ -42,7 +42,7 @@ ms.locfileid: "69950981"
      [!code-vb[C_ProtectionLevel#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_protectionlevel/vb/source.vb#2)]  
   
 ## <a name="protecting-fault-messages"></a>保护错误消息  
- 服务上引发的异常可以作为 SOAP 故障发送到客户端。 有关创建强类型错误的详细信息, 请参阅[在协定和服务中指定和处理错误](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)和[如何:声明服务协定](../../../docs/framework/wcf/how-to-declare-faults-in-service-contracts.md)中的错误。  
+ 服务上引发的异常可以作为 SOAP 故障发送到客户端。 有关创建强类型错误的详细信息，请参阅[在协定和服务中指定和处理错误](specifying-and-handling-faults-in-contracts-and-services.md)和[如何：在服务协定中声明错误](how-to-declare-faults-in-service-contracts.md)。  
   
 #### <a name="to-protect-a-fault-message"></a>保护错误消息  
   
@@ -61,7 +61,7 @@ ms.locfileid: "69950981"
      [!code-vb[C_ProtectionLevel#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_protectionlevel/vb/source.vb#4)]  
   
 ## <a name="protecting-message-parts"></a>保护消息部分  
- 使用消息协定来保护消息的各个部分。 有关消息约定的详细信息, 请参阅[使用消息协定](../../../docs/framework/wcf/feature-details/using-message-contracts.md)。  
+ 使用消息协定来保护消息的各个部分。 有关消息约定的详细信息，请参阅[使用消息协定](./feature-details/using-message-contracts.md)。  
   
 #### <a name="to-protect-a-message-body"></a>保护消息正文  
   
@@ -71,7 +71,7 @@ ms.locfileid: "69950981"
   
 3. 将 <xref:System.ServiceModel.MessageHeaderAttribute> 属性 (Attribute) 应用于将表示为消息头的字段，并将 `ProtectionLevel` 属性 (Property) 设置为 <xref:System.Net.Security.ProtectionLevel.EncryptAndSign>。  
   
-4. 将应用于将表示为消息正文的一部分的任何字段, 并`ProtectionLevel`将属性设置为<xref:System.Net.Security.ProtectionLevel.EncryptAndSign>, 如下面的示例中所示。 <xref:System.ServiceModel.MessageBodyMemberAttribute>  
+4. 将 <xref:System.ServiceModel.MessageBodyMemberAttribute> 应用于将表示为消息正文的一部分的任何字段，并将 `ProtectionLevel` 属性设置为 <xref:System.Net.Security.ProtectionLevel.EncryptAndSign>，如下面的示例中所示。  
   
      [!code-csharp[C_ProtectionLevel#5](../../../samples/snippets/csharp/VS_Snippets_CFX/c_protectionlevel/cs/source.cs#5)]
      [!code-vb[C_ProtectionLevel#5](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_protectionlevel/vb/source.vb#5)]  
@@ -95,4 +95,4 @@ ms.locfileid: "69950981"
 - <xref:System.ServiceModel.FaultContractAttribute>
 - <xref:System.ServiceModel.MessageContractAttribute>
 - <xref:System.ServiceModel.MessageBodyMemberAttribute>
-- [了解保护级别](../../../docs/framework/wcf/understanding-protection-level.md)
+- [了解保护级别](understanding-protection-level.md)

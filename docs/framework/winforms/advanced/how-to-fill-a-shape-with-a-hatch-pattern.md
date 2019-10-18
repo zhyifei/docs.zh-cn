@@ -1,5 +1,5 @@
 ---
-title: 如何：用交错线图案填充形状
+title: 如何：用阴影图案填充形状
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,18 +9,18 @@ helpviewer_keywords:
 - shapes [Windows Forms], filling with patterns
 - brushes [Windows Forms], using hatch brushes
 ms.assetid: 9c8300ff-187b-404f-af1f-ebd499f5b16f
-ms.openlocfilehash: b9ecefb82aaaf896c4ed39733f1e8d7bd65c16d4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b80708f0ce722b1809fe49190639231e7e4c8329
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645466"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320053"
 ---
-# <a name="how-to-fill-a-shape-with-a-hatch-pattern"></a>如何：用交错线图案填充形状
-从两种颜色进行阴影图案： 一个用于在后台，一个用于在后台上形成图案的行。 若要用阴影图案填充闭合的形状，请使用<xref:System.Drawing.Drawing2D.HatchBrush>对象。 下面的示例演示如何用阴影图案填充椭圆，使用：  
+# <a name="how-to-fill-a-shape-with-a-hatch-pattern"></a>如何：用阴影图案填充形状
+阴影模式是从两种颜色组成的：一个用于背景，另一个用于在背景上形成图案的线条。 若要使用阴影模式填充闭合形状，请使用 <xref:System.Drawing.Drawing2D.HatchBrush> 对象。 下面的示例演示如何使用阴影模式填充椭圆：  
   
 ## <a name="example"></a>示例  
- <xref:System.Drawing.Drawing2D.HatchBrush.%23ctor%2A>构造函数采用三个参数： 的阴影样式、 阴影线条的颜色和背景颜色。 阴影样式参数可以为任何值<xref:System.Drawing.Drawing2D.HatchStyle>枚举。 有超过 50 个元素中的<xref:System.Drawing.Drawing2D.HatchStyle>枚举; 其中几个元素显示在下面的列表：  
+ @No__t_0 构造函数采用三个参数：阴影样式、阴影线颜色和背景颜色。 阴影样式参数可以是 <xref:System.Drawing.Drawing2D.HatchStyle> 枚举中的任何值。 @No__t_0 枚举中的元素超过50个;下面的列表显示了其中的几个元素：  
   
 - <xref:System.Drawing.Drawing2D.HatchStyle.Horizontal>  
   
@@ -34,9 +34,9 @@ ms.locfileid: "64645466"
   
 - <xref:System.Drawing.Drawing2D.HatchStyle.DiagonalCross>  
   
- 下图显示了实心的椭圆。  
+ 下图显示了实心椭圆。  
   
- ![阴影图案](./media/hatch1.png "hatch1")  
+  ![用阴影模式填充的椭圆外观的屏幕截图。](./media/how-to-fill-a-shape-with-a-hatch-pattern/ellipse-filled-hatch.png "hatch1")
   
  [!code-csharp[System.Drawing.UsingABrush#41](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingABrush/CS/Class1.cs#41)]
  [!code-vb[System.Drawing.UsingABrush#41](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#41)]  

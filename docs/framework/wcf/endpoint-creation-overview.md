@@ -7,26 +7,26 @@ dev_langs:
 helpviewer_keywords:
 - endpoints [WCF], overview
 ms.assetid: f4dce0fb-6f54-47e6-8054-86d7f574b91c
-ms.openlocfilehash: 0b0c22737e9407ebe2cb56c15fb7ff75d16b50a4
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: bf6bfb10123223bf689945ef93ff09219a68092c
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70040311"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319929"
 ---
 # <a name="endpoint-creation-overview"></a>终结点创建概述
 
-与 Windows Communication Foundation (WCF) 服务的所有通信都通过服务*终结点*进行。 终结点使客户端能够访问 WCF 服务所提供的功能。 本节描述终结点的结构，并概述如何在配置和代码中定义终结点。
+与 Windows Communication Foundation （WCF）服务的所有通信都通过服务*终结点*进行。 终结点使客户端能够访问 WCF 服务所提供的功能。 本节描述终结点的结构，并概述如何在配置和代码中定义终结点。
 
 ## <a name="the-structure-of-an-endpoint"></a>终结点的结构
 
 每个终结点包含一个指示可在何处找到此终结点的地址、一个指定客户端如何与此终结点进行通信的绑定和一个标识可用方法的协定。
 
-- **Address**。 地址唯一标识终结点并告知潜在客户服务的所在位置。 它在 WCF 对象模型中由<xref:System.ServiceModel.EndpointAddress>地址表示, 该地址包含一个统一资源标识符 (URI) 和地址属性, 其中包括标识、某些 Web 服务描述语言 (WSDL) 元素和可选的集合只要. 可选标头提供用于标识终结点或与终结点交互的其他详细寻址信息。 有关详细信息, 请参阅[指定终结点地址](../../../docs/framework/wcf/specifying-an-endpoint-address.md)。
+- **Address**。 地址唯一标识终结点并告知潜在客户服务的所在位置。 它在 WCF 对象模型中由 <xref:System.ServiceModel.EndpointAddress> 地址表示，其中包含一个统一资源标识符（URI）和地址属性，其中包括标识、某些 Web 服务描述语言（WSDL）元素和可选标头的集合。 可选标头提供用于标识终结点或与终结点交互的其他详细寻址信息。 有关详细信息，请参阅[指定终结点地址](specifying-an-endpoint-address.md)。
 
-- **绑定**。 绑定指定如何与终结点进行通信。 绑定指定终结点如何与世界通信，包括使用哪种传输协议（例如，TCP 或 HTTP）、对消息使用何种编码（例如，文本或二进制），以及需要何种安全要求（例如，安全套接字层 [SSL] 或 SOAP 消息安全）。 有关详细信息, 请参阅[使用绑定配置服务和客户端](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)。
+- **绑定**。 绑定指定如何与终结点进行通信。 绑定指定终结点如何与世界通信，包括使用哪种传输协议（例如，TCP 或 HTTP）、对消息使用何种编码（例如，文本或二进制），以及需要何种安全要求（例如，安全套接字层 [SSL] 或 SOAP 消息安全）。 有关详细信息，请参阅[使用绑定配置服务和客户端](using-bindings-to-configure-services-and-clients.md)。
 
-- **服务协定**。 服务协定概述了终结点向客户端公开的功能。 协定指定客户端可以调用的操作、消息的形式、输入参数的类型或调用操作所需的数据，以及客户端应收到的处理消息或响应消息的种类。 三种基本的协定类型与基本消息交换模式 (MEP) 相对应：数据报（单向）、请求/答复和双工（双向）。 当访问服务协定时，服务协定也可以采用数据和消息协定要求特定的数据类型和消息格式。 有关如何定义服务协定的详细信息, 请参阅[设计服务协定](../../../docs/framework/wcf/designing-service-contracts.md)。 请注意，也可以要求客户端实现服务定义的协定（称为回调协定），以便在双工 MEP 下接收服务的消息。 有关详细信息, 请参阅[双工服务](../../../docs/framework/wcf/feature-details/duplex-services.md)。
+- **服务协定**。 服务协定概述了终结点向客户端公开的功能。 协定指定客户端可以调用的操作、消息的形式、输入参数的类型或调用操作所需的数据，以及客户端应收到的处理消息或响应消息的种类。 三种基本的协定类型与基本消息交换模式 (MEP) 相对应：数据报（单向）、请求/答复和双工（双向）。 当访问服务协定时，服务协定也可以采用数据和消息协定要求特定的数据类型和消息格式。 有关如何定义服务协定的详细信息，请参阅[设计服务协定](designing-service-contracts.md)。 请注意，也可以要求客户端实现服务定义的协定（称为回调协定），以便在双工 MEP 下接收服务的消息。 有关详细信息，请参阅[双工服务](./feature-details/duplex-services.md)。
 
 指定服务的终结点有两种方式，通过使用代码的强制方式或通过配置的声明方式。 如果未指定任何终结点，则运行时通过为该服务实现的每个服务协定的每个基地址添加一个默认终结点，来提供默认终结点。 在代码中定义终结点通常是不可行的，因为已部署服务的绑定和地址通常与在部署服务时所用的绑定和地址不同。 一般而言，使用配置定义服务终结点比使用代码更为可行。 通过将绑定和寻址信息放置在代码之外，可以在更改这些信息之后不必重新编译和重新部署应用程序。
 
@@ -37,11 +37,11 @@ ms.locfileid: "70040311"
 
 下面的示例说明如何在代码中指定终结点，如下所示：
 
-- 定义一`IEcho`种服务类型的协定, 该服务接受某人的姓名和回音, 响应 "Hello \<name >!"。
+- 为 `IEcho` 类型的服务定义一个协定，该协定接受某人的姓名和回音，并响应 "Hello \<name >！"。
 
 - 实现由 `Echo` 协定定义的该类型的 `IEcho` 服务。
 
-- 指定服务的终结点`http://localhost:8000/Echo`地址。
+- 为服务指定 `http://localhost:8000/Echo` 的终结点地址。
 
 - 使用 `Echo` 绑定配置 <xref:System.ServiceModel.WSHttpBinding> 服务。
 
@@ -133,10 +133,10 @@ serviceHost.Open()
 
 ## <a name="defining-endpoints-in-configuration"></a>在配置中定义终结点
 
-创建应用程序时，经常需要将一些决策交给部署该应用程序的管理员。 例如，通常没有办法预先知道将使用什么服务地址（一个 URI）。 最好允许管理员在创建服务后指定地址，而不是对地址进行硬编码。 这种灵活性是通过配置实现的。 有关详细信息, 请参阅[配置服务](../../../docs/framework/wcf/configuring-services.md)。
+创建应用程序时，经常需要将一些决策交给部署该应用程序的管理员。 例如，通常没有办法预先知道将使用什么服务地址（一个 URI）。 最好允许管理员在创建服务后指定地址，而不是对地址进行硬编码。 这种灵活性是通过配置实现的。 有关详细信息，请参阅[配置服务](configuring-services.md)。
 
 > [!NOTE]
-> 将配置文件的[元数据实用工具 (svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)与`/config:` *filename*`[,`*filename* `]`开关结合使用来快速创建配置文件。
+> 使用带有 `/config:`*filename*的配置的[元数据实用工具（svcutil.exe）](servicemodel-metadata-utility-tool-svcutil-exe.md) `[,`*filename* `]` 开关来快速创建配置文件。
 
 ## <a name="using-default-endpoints"></a>使用默认终结点
 
@@ -201,8 +201,8 @@ Dim echoUri As Uri = New Uri("http://localhost:8000/")
 serviceHost.Open()
 ```
 
- 如果显式提供了终结点，则仍可以添加默认终结点，方法是先在 <xref:System.ServiceModel.ServiceHostBase.AddDefaultEndpoints%2A> 上调用 <xref:System.ServiceModel.ServiceHost>，然后调用 <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>。 有关默认终结点的详细信息, 请参阅[WCF 服务的](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)[简化配置](../../../docs/framework/wcf/simplified-configuration.md)和简化配置。
+ 如果显式提供了终结点，则仍可以添加默认终结点，方法是先在 <xref:System.ServiceModel.ServiceHostBase.AddDefaultEndpoints%2A> 上调用 <xref:System.ServiceModel.ServiceHost>，然后调用 <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>。 有关默认终结点的详细信息，请参阅[WCF 服务的](./samples/simplified-configuration-for-wcf-services.md)[简化配置](simplified-configuration.md)和简化配置。
 
 ## <a name="see-also"></a>请参阅
 
-- [实现服务协定](../../../docs/framework/wcf/implementing-service-contracts.md)
+- [实现服务协定](implementing-service-contracts.md)

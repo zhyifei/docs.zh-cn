@@ -2,19 +2,19 @@
 title: ORDER BY (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: c0b61572-ecee-41eb-9d7f-74132ec8a26c
-ms.openlocfilehash: f3310274766ff3619604e30bfb5f5ca437cb1acd
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 2010ef9d6fe37e65824cac877074453db1b789db
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70249757"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319448"
 ---
 # <a name="order-by-entity-sql"></a>ORDER BY (Entity SQL)
 指定用于 SELECT 语句所返回的对象的排序顺序。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```sql  
 [ ORDER BY   
    {  
       order_by_expression [SKIP n] [LIMIT n]  
@@ -52,16 +52,18 @@ ms.locfileid: "70249757"
  ORDER BY 子句中的每个表达式的计算结果都必须是可按顺序比较是否不等（小于或大于，等等）的某一类型。 这些类型通常为标量基元类型，如数字、字符串和日期。 可比较类型的 RowTypes 也可按顺序比较。  
   
  如果代码循环访问一个有序集（顶级投影除外），则不能确保输出会保持其顺序。  
-  
-```  
--- In the following sample, order is guaranteed to be preserved:  
+
+在下面的示例中，保证保留顺序：
+
+```sql  
 SELECT C1.FirstName, C1.LastName  
         FROM AdventureWorks.Contact as C1  
         ORDER BY C1.LastName  
 ```  
-  
-```  
--- In the following query ordering of the nested query is ignored.  
+
+在下面的查询中，将忽略嵌套查询的顺序：  
+
+```sql  
 SELECT C2.FirstName, C2.LastName  
     FROM (SELECT C1.FirstName, C1.LastName  
         FROM AdventureWorks.Contact as C1  
@@ -70,7 +72,7 @@ SELECT C2.FirstName, C2.LastName
   
  若要执行有序的 UNION、UNION ALL、EXCEPT 或 INTERSECT 运算，请使用以下模式：  
   
-```  
+```sql  
 SELECT ...  
 FROM ( UNION/EXCEPT/INTERSECT operation )  
 ORDER BY ...  
@@ -99,16 +101,18 @@ ORDER BY ...
   
 ## <a name="ordering-nested-queries"></a>嵌套查询排序  
  在实体框架中，嵌套表达式可以放在查询的任何位置，不保留嵌套查询的顺序。  
-  
-```  
--- The following query will order the results by the last name.  
+
+下面的查询将按姓氏对结果进行排序：  
+
+```sql  
 SELECT C1.FirstName, C1.LastName  
         FROM AdventureWorks.Contact as C1  
         ORDER BY C1.LastName  
 ```  
-  
-```  
--- In the following query, ordering of the nested query is ignored.  
+
+在下面的查询中，将忽略嵌套查询的顺序：  
+
+```sql  
 SELECT C2.FirstName, C2.LastName  
     FROM (SELECT C1.FirstName, C1.LastName  
         FROM AdventureWorks.Contact as C1  
@@ -118,11 +122,11 @@ SELECT C2.FirstName, C2.LastName
 ## <a name="example"></a>示例  
  下面的 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 查询使用 ORDER BY 运算符来指定用于 SELECT 语句所返回的对象的排序顺序。 此查询基于 AdventureWorks 销售模型。 若要编译并运行此查询，请执行下列步骤：  
   
-1. [按照如何：执行返回 StructuralType 结果](../how-to-execute-a-query-that-returns-structuraltype-results.md)的查询。  
+1. 执行 [How to: Execute a Query that Returns StructuralType Results](../how-to-execute-a-query-that-returns-structuraltype-results.md)中的过程。  
   
 2. 将以下查询作为参数传递给 `ExecuteStructuralTypeQuery` 方法：  
   
- [!code-csharp[DP EntityServices Concepts 2#ORDERBY](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#orderby)]  
+ [!code-sql[DP EntityServices Concepts#ORDERBY](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#orderby)]  
   
 ## <a name="see-also"></a>请参阅
 

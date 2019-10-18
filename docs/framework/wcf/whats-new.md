@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF [WCF], what's new
 - Windows Communication Foundation [WCF], what's new
 ms.assetid: 7e93fe73-af93-46b5-9f63-32f761ee40cf
-ms.openlocfilehash: a50db521e986972e864ac60c8b84a63d3d1de69b
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 0a065676d81b36f32729bb08c23025825e94d3bc
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834878"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320456"
 ---
 # <a name="whats-new-in-windows-communication-foundation-45"></a>Windows Communication Foundation 4.5 中的新增功能
 
@@ -18,11 +18,11 @@ ms.locfileid: "71834878"
 
 ## <a name="wcf-simplification-features"></a>WCF 简化功能
 
-人们已进行了大量工作，以便更加方便地开发和维护 WCF 4.5 应用程序。 有关详细信息，请参阅[WCF 简化功能](../../../docs/framework/wcf/wcf-simplification-features.md)。
+人们已进行了大量工作，以便更加方便地开发和维护 WCF 4.5 应用程序。 有关详细信息，请参阅[WCF 简化功能](wcf-simplification-features.md)。
 
 ### <a name="task-based-async-support"></a>基于任务的异步支持
 
-默认情况下，“添加服务应用”会生成返回任务的异步服务操作方法。 此操作是针对同步和异步方法执行的。 通过此操作，你可以使用新的基于任务的异步编程模型来异步调用服务操作。 在你调用生成的代理方法时，WCF 会构造一个 Task 对象以表示异步操作并返回该任务。 该任务在操作完成时完成。 实现异步操作时，可以将其实现为基于任务的异步操作。 有关详细信息，请参阅[同步和异步操作](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)。
+默认情况下，“添加服务应用”会生成返回任务的异步服务操作方法。 此操作是针对同步和异步方法执行的。 通过此操作，你可以使用新的基于任务的异步编程模型来异步调用服务操作。 在你调用生成的代理方法时，WCF 会构造一个 Task 对象以表示异步操作并返回该任务。 该任务在操作完成时完成。 实现异步操作时，可以将其实现为基于任务的异步操作。 有关详细信息，请参阅[同步和异步操作](synchronous-and-asynchronous-operations.md)。
 
 ### <a name="simplified-generated-configuration-files"></a>简化了生成的配置文件
 
@@ -36,19 +36,19 @@ WCF 现在支持协定优先开发。 Svcutil.exe 具有/serviceContract 开关�
 
 ### <a name="add-service-reference-from-a-portable-subset-project"></a>从可移植子集项目添加服务引用
 
-通过可移植子集项目，.NET 程序集程序员可以维护单个源树并生成系统，同时仍支持多个 .NET 平台（桌面、Silverlight、Windows Phone 和 XBOX）。 可移植子集项目仅引用 .NET 可移植库，这是可在任何 .NET 平台上使用的 .NET framework 程序集。 开发人员的体验与添加任何其他 WCF 客户端应用程序内的服务引用相同。 有关详细信息，请参阅[可移植子集项目中的添加服务引用](../../../docs/framework/wcf/add-service-reference-in-a-portable-subset-project.md)。
+通过可移植子集项目，.NET 程序集程序员可以维护单个源树并生成系统，同时仍支持多个 .NET 平台（桌面、Silverlight、Windows Phone 和 XBOX）。 可移植子集项目仅引用 .NET 可移植库，这是可在任何 .NET 平台上使用的 .NET framework 程序集。 开发人员的体验与添加任何其他 WCF 客户端应用程序内的服务引用相同。 有关详细信息，请参阅[可移植子集项目中的添加服务引用](add-service-reference-in-a-portable-subset-project.md)。
 
 ### <a name="aspnet-compatibility-mode-default-changed"></a>ASP.NET 兼容模式默认值已更改
 
-WCF 提供了 ASP.NET 兼容模式，以向开发人员授予编写 WCF 服务时对 ASP.NET HTTP 管道中的功能的完全访问权限。 若要使用此模式，你必须在 web.config 的[\<serviceHostingEnvironment >](../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)节中将 `aspNetCompatibilityEnabled` 特性设置为 true。此外，此 appDomain 中的任何服务都需要将 `RequirementsMode` property on its <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> 设置为 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed> 或 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required>。 默认情况下 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> 现在设置为 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed>。 有关详细信息，请参阅 Windows Communication Foundation 和 WCF 服务[中的新增功能](../../../docs/framework/wcf/whats-new.md)[和 ASP.NET](../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)。
+WCF 提供了 ASP.NET 兼容模式，以向开发人员授予编写 WCF 服务时对 ASP.NET HTTP 管道中的功能的完全访问权限。 若要使用此模式，你必须在 web.config 的 " [\<serviceHostingEnvironment >](../configure-apps/file-schema/wcf/servicehostingenvironment.md) " 部分中将 `aspNetCompatibilityEnabled` 特性设置为 true。此外，此 appDomain 中的任何服务都需要将其 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> 上的 `RequirementsMode` 属性设置为 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed> 或 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required>。 默认情况下，<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> 现在设置为 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed>。 有关详细信息，请参阅[WCF 服务和 ASP.NET](./feature-details/wcf-services-and-aspnet.md)。
 
 ### <a name="new-transport-default-values"></a>新传输默认值
 
-为了简化配置，更改了多个传输属性默认值。 有关详细信息，请参阅[WCF 简化功能](../../../docs/framework/wcf/wcf-simplification-features.md)。
+为了简化配置，更改了多个传输属性默认值。 有关详细信息，请参阅[WCF 简化功能](wcf-simplification-features.md)。
 
 ### <a name="xmldictionaryreaderquotas"></a>XmlDictionaryReaderQuotas
 
-<xref:System.Xml.XmlDictionaryReaderQuotas> 包含用于 XML 字典读取器的可配置配额值，这些配额值会限制创建消息时由编码器使用的内存量。 虽然这些配额是可配置的，但默认值已更改，以减小开发人员必须显式设置这些默认值的可能性。 有关详细信息，请参阅[WCF 简化功能](../../../docs/framework/wcf/wcf-simplification-features.md)。
+<xref:System.Xml.XmlDictionaryReaderQuotas> 包含用于 XML 字典读取器的可配置配额值，这些配额值会限制创建消息时由编码器使用的内存量。 虽然这些配额是可配置的，但默认值已更改，以减小开发人员必须显式设置这些默认值的可能性。 有关详细信息，请参阅[WCF 简化功能](wcf-simplification-features.md)。
 
 ### <a name="wcf-configuration-validation"></a>WCF 配置验证
 
@@ -60,7 +60,7 @@ WCF 提供了 ASP.NET 兼容模式，以向开发人员授予编写 WCF 服务�
 
 ## <a name="streaming-improvements"></a>流改进
 
-添加了对真实异步流的支持，在这种流中，如果接收方没有读取或者读取速度较慢，则发送方现在不会阻止线程，从而提高了可伸缩性。 消除了客户端向 IIS 承载的 WCF 服务发送流消息时对消息缓冲的限制。 有关详细信息，请参阅[WCF 简化功能](../../../docs/framework/wcf/wcf-simplification-features.md)。
+添加了对真实异步流的支持，在这种流中，如果接收方没有读取或者读取速度较慢，则发送方现在不会阻止线程，从而提高了可伸缩性。 消除了客户端向 IIS 承载的 WCF 服务发送流消息时对消息缓冲的限制。 有关详细信息，请参阅[WCF 简化功能](wcf-simplification-features.md)。
 
 ## <a name="simplifying-exposing-an-endpoint-over-https-with-iis"></a>简化通过 HTTPS 与 IIS 公开终结点
 
@@ -72,19 +72,19 @@ WCF 提供了 ASP.NET 兼容模式，以向开发人员授予编写 WCF 服务�
 
 ## <a name="websocket-support"></a>WebSocket 支持
 
-WebSocket 是一种通过端口 80 和 443 提供真正双向通信的技术，其性能特性与 TCP 类似。 添加了两个新的绑定以支持通过 WebSocket 传输进行通信。 <xref:System.ServiceModel.NetHttpBinding> 和 <xref:System.ServiceModel.NetHttpsBinding>。 有关更多信息，请参见：[系统提供的绑定](../../../docs/framework/wcf/system-provided-bindings.md)。
+WebSocket 是一种通过端口 80 和 443 提供真正双向通信的技术，其性能特性与 TCP 类似。 添加了两个新的绑定以支持通过 WebSocket 传输进行通信。 <xref:System.ServiceModel.NetHttpBinding> 和 <xref:System.ServiceModel.NetHttpsBinding>。 有关详细信息，请参阅：[系统提供的绑定](system-provided-bindings.md)。
 
 ## <a name="new-transport-default-values"></a>新传输默认值
 
 下表描述了已更改的设置以及可在何处找到其他信息。
 
-|属性|On|新默认值|有关更多信息，请参见|
+|Property|On|新默认值|有关更多信息，请参见|
 |--------------|--------|-----------------|------------------------------|
 |channelInitializationTimeout|<xref:System.ServiceModel.NetTcpBinding>|30 秒|<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.ChannelInitializationTimeout%2A>|
 |listenBacklog|<xref:System.ServiceModel.NetTcpBinding>|12 * 处理器数目|<xref:System.ServiceModel.NetTcpBinding.ListenBacklog%2A>|
-|maxPendingAccepts|ConnectionOrientedTransportBindingElement<br /><br /> SMSvcHost.exe|2 * 传输处理器的数目<br /><br /> 4 @no__t Smsvchost.exe 的处理器数|@no__t[配置 Net.tcp 端口共享服务](../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)|
+|maxPendingAccepts|ConnectionOrientedTransportBindingElement<br /><br /> SMSvcHost.exe|2 * 传输处理器的数目<br /><br /> 4 \* Smsvchost.exe 的处理器数|<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingAccepts%2A>[配置 Net.tcp 端口共享服务](./feature-details/configuring-the-net-tcp-port-sharing-service.md)|
 |maxPendingConnections|ConnectionOrientedTransportBindingElement|12 * 处理器数目|<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingConnections%2A>|
-|receiveTimeout|SMSvcHost.exe|30 秒|[配置 Net.TCP 端口共享服务](../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)|
+|receiveTimeout|SMSvcHost.exe|30 秒|[配置 Net.TCP 端口共享服务](./feature-details/configuring-the-net-tcp-port-sharing-service.md)|
 
 ## <a name="xml-editor-tooltips"></a>XML 编辑器工具提示
 
@@ -92,7 +92,7 @@ WebSocket 是一种通过端口 80 和 443 提供真正双向通信的技术，�
 
 ## <a name="configuring-wcf-services-in-code"></a>在代码中配置 WCF 服务
 
-Windows Communication Foundation （WCF）允许开发人员使用配置文件或代码来配置服务。 当部署之后需要对服务进行配置时，配置文件十分有用。 在使用配置文件时，IT 专业人员只需要更新配置文件，无需重新编译。 不过，配置文件可能十分复杂，难以维护。 不支持对配置文件进行调试，并且将按名称来引用配置元素，这使得配置文件的创作易于出错且较为困难。 WCF 还允许您在代码中配置服务。 在早期版本的 WCF （4.0 及更早版本）中，可以轻松地在自承载方案中配置<xref:System.ServiceModel.ServiceHost>代码中的服务，类允许你在调用 ServiceHost 之前配置终结点和行为。 但是，在 Web 承载方案中，您没有访问 <xref:System.ServiceModel.ServiceHost> 类的权限。 若要配置 Web 承载的服务，你需要创建 `System.ServiceModel.ServiceHostFactory`，后者会创建 <xref:System.ServiceModel.Activation.ServiceHostFactory> 并执行任何所需的配置。 从 .NET 4.5 开始，WCF 提供了一种更简单的方法来在代码中配置自承载服务和 web 托管服务。 有关详细信息，请参阅[在代码中配置 WCF 服务](../../../docs/framework/wcf/configuring-wcf-services-in-code.md)。
+Windows Communication Foundation （WCF）允许开发人员使用配置文件或代码来配置服务。 当部署之后需要对服务进行配置时，配置文件十分有用。 在使用配置文件时，IT 专业人员只需要更新配置文件，无需重新编译。 不过，配置文件可能十分复杂，难以维护。 不支持对配置文件进行调试，并且将按名称来引用配置元素，这使得配置文件的创作易于出错且较为困难。 WCF 还允许您在代码中配置服务。 在早期版本的 WCF （4.0 及更早版本）中，可以轻松地在自承载方案中配置代码中的服务，<xref:System.ServiceModel.ServiceHost> 类允许你在调用 ServiceHost 之前配置终结点和行为。 但是，在 Web 承载方案中，您没有访问 <xref:System.ServiceModel.ServiceHost> 类的权限。 若要配置 Web 承载的服务，你需要创建 `System.ServiceModel.ServiceHostFactory`，后者会创建 <xref:System.ServiceModel.Activation.ServiceHostFactory> 并执行任何所需的配置。 从 .NET 4.5 开始，WCF 提供了一种更简单的方法来在代码中配置自承载服务和 web 托管服务。 有关详细信息，请参阅[在代码中配置 WCF 服务](configuring-wcf-services-in-code.md)。
 
 ## <a name="channelfactory-caching"></a>ChannelFactory 缓存
 
@@ -106,7 +106,7 @@ WCF 客户端应用程序使用 <xref:System.ServiceModel.ChannelFactory%601> �
 
 4. 资源的释放
 
-为了尽量减少这种开销，WCF 可以缓存使用 WCF 客户端代理时的通道工厂。 有关详细信息，请参阅[通道工厂和缓存](../../../docs/framework/wcf/feature-details/channel-factory-and-caching.md)。
+为了尽量减少这种开销，WCF 可以缓存使用 WCF 客户端代理时的通道工厂。 有关详细信息，请参阅[通道工厂和缓存](./feature-details/channel-factory-and-caching.md)。
 
 ## <a name="compression-and-the-binary-encoder"></a>压缩和二进制编码器
 
@@ -122,7 +122,7 @@ WCF 客户端应用程序使用 <xref:System.ServiceModel.ChannelFactory%601> �
 
 ## <a name="idn-support"></a>IDN 支持
 
-添加了允许使用带有国际化域名的 WCF 服务的支持。 有关详细信息，请参阅[WCF 和国际化域名](../../../docs/framework/wcf/feature-details/wcf-and-internationalized-domain-names.md)。
+添加了允许使用带有国际化域名的 WCF 服务的支持。 有关详细信息，请参阅[WCF 和国际化域名](./feature-details/wcf-and-internationalized-domain-names.md)。
 
 ## <a name="httpclient"></a>HttpClient
 
@@ -138,7 +138,7 @@ WCF 元素和属性现在在 "XML 编辑器" 中具有工具提示，以便更�
 
 ## <a name="paste-data-as-classes"></a>将数据作为类进行粘贴
 
-在 WCF 项目中，在 XML 中定义的数据类型（在服务中公开的类型）可以粘贴直接到代码页中。 XML 类型将作为 CLR 类型进行粘贴。 有关更多详细信息，请参阅[从 XML 生成数据类型类](../../../docs/framework/wcf/generating-data-type-classes-from-xml.md)。
+在 WCF 项目中，在 XML 中定义的数据类型（在服务中公开的类型）可以粘贴直接到代码页中。 XML 类型将作为 CLR 类型进行粘贴。 有关更多详细信息，请参阅[从 XML 生成数据类型类](generating-data-type-classes-from-xml.md)。
 
 ## <a name="webservicehost-and-default-endpoints"></a>WebServiceHost 和默认终结点
 

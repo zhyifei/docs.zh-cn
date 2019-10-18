@@ -2,18 +2,18 @@
 title: 在可移植子集项目中添加服务引用
 ms.date: 03/30/2017
 ms.assetid: 61ccfe0f-a34b-40ca-8f5e-725fa1b8095e
-ms.openlocfilehash: 92ee180da531259b005b5782c180a139fd66847b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 764ce487d8f2673eb2c75f8cd05da4ccbae3c935
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61782416"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320842"
 ---
 # <a name="add-service-reference-in-a-portable-subset-project"></a>在可移植子集项目中添加服务引用
-可移植子集项目启用.NET 程序集程序员可以维护单个源树和生成系统，同时仍可支持多个.NET 实现 （桌面、 Silverlight、 Windows Phone 和 XBOX）。 可移植子集项目只引用.NET 可移植库，后者是可以使用任何.NET 实现的.NET framework 程序集。  
+可移植子集项目使 .NET 程序集编程人员能够维护单个源树和生成系统，同时仍然支持多个 .NET 实现（桌面、Silverlight、Windows Phone 和 XBOX）。 可移植子集项目仅引用 .NET 可移植库，这是可用于任何 .NET 实现的 .NET framework 程序集。  
   
 ## <a name="add-service-reference-details"></a>添加服务引用详细信息  
- 在可移植子集项目中添加服务引用时，将强制执行以下限制：   
+ 在可移植子集项目中添加服务引用时，将强制执行以下限制：  
   
 1. 对于 <xref:System.Xml.Serialization.XmlSerializer>，仅允许文本编码。 SOAP 编码在导入过程中生成错误。  
   
@@ -45,5 +45,5 @@ ms.locfileid: "61782416"
   
 ## <a name="see-also"></a>请参阅
 
-- [使用 WCF 客户端访问服务](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)
+- [使用 WCF 客户端访问服务](accessing-services-using-a-wcf-client.md)
 - [可移植类库](../../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)

@@ -4,33 +4,33 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - service creation [WCF]
 ms.assetid: 7cf21bfe-23bd-46aa-8033-609f851dbf76
-ms.openlocfilehash: 6d9ea3b877e7c735cf789039b2a6956037372888
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fe578ba3c655c9c9ea8398b9b2e4d4f974153c8e
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61782397"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320817"
 ---
 # <a name="basic-programming-lifecycle"></a>基本编程生命周期
-Windows Communication Foundation (WCF) 使应用程序通报它们是在同一计算机上，在 Internet 上或在不同的应用程序平台上。 本主题概述了生成 WCF 应用程序所需的任务。 有关工作示例应用程序，请参阅[入门教程](../../../docs/framework/wcf/getting-started-tutorial.md)。  
+Windows Communication Foundation （WCF）使应用程序可以在同一台计算机上、在 Internet 上或在不同应用程序平台上通信。 本主题概述生成 WCF 应用程序所需的任务。 有关有效的示例应用程序，请参阅[入门教程](getting-started-tutorial.md)。  
   
 ## <a name="the-basic-tasks"></a>基本任务  
  要执行的基本任务依次为：  
   
-1. 定义服务协定。 服务协定指定服务的签名、服务交换的数据和其他协定要求的数据。 有关详细信息，请参阅[Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md)。  
+1. 定义服务协定。 服务协定指定服务的签名、服务交换的数据和其他协定要求的数据。 有关详细信息，请参阅[设计服务协定](designing-service-contracts.md)。  
   
-2. 实现协定。 若要实现服务协定，请创建实现协定的类并指定运行时应具有的自定义行为。 有关详细信息，请参阅[实现服务协定](../../../docs/framework/wcf/implementing-service-contracts.md)。  
+2. 实现协定。 若要实现服务协定，请创建实现协定的类并指定运行时应具有的自定义行为。 有关详细信息，请参阅[实现服务协定](implementing-service-contracts.md)。  
   
-3. 通过指定终结点和其他行为信息来配置服务。 有关详细信息，请参阅[配置服务](../../../docs/framework/wcf/configuring-services.md)。  
+3. 通过指定终结点和其他行为信息来配置服务。 有关详细信息，请参阅[配置服务](configuring-services.md)。  
   
-4. 承载服务。 有关详细信息，请参阅[托管服务](../../../docs/framework/wcf/hosting-services.md)。  
+4. 承载服务。 有关详细信息，请参阅[托管服务](hosting-services.md)。  
   
-5. 生成客户端应用程序。 有关详细信息，请参阅[生成客户端](../../../docs/framework/wcf/building-clients.md)。  
+5. 生成客户端应用程序。 有关详细信息，请参阅[生成客户端](building-clients.md)。  
   
  尽管本节中的主题遵循此顺序，但是一些方案并不会从头开始。 例如，如果想要为预先存在的服务生成客户端，则从步骤 5 开始。 或者，如果您是在生成其他人要使用的服务，则可以跳过步骤 5。  
   
- 熟悉开发服务协定后，您还可以阅读[扩展性介绍](../../../docs/framework/wcf/introduction-to-extensibility.md)。 如果您创建服务出现问题，请[WCF 疑难解答快速入门](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md)若要查看其他人是否有相同或类似问题。  
+ 熟悉开发服务协定后，还可以阅读[扩展性简介](introduction-to-extensibility.md)。 如果你的服务出现问题，请查看[WCF 疑难解答快速入门](wcf-troubleshooting-quickstart.md)，查看其他人是否有相同或类似的问题。  
   
 ## <a name="see-also"></a>请参阅
 
-- [实现服务协定](../../../docs/framework/wcf/implementing-service-contracts.md)
+- [实现服务协定](implementing-service-contracts.md)

@@ -2,19 +2,19 @@
 title: WHERE (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: a8e1061e-0028-4a6f-8f19-b9f48e96c4b8
-ms.openlocfilehash: 8dd0e34a6669b2147052befb17b8f4ff8395aabc
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: b551d15d7de2cf07afc7455b7fd0a0faf6436ccf
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70248487"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319186"
 ---
 # <a name="where-entity-sql"></a>WHERE (Entity SQL)
 WHERE 子句直接应用于[from](from-entity-sql.md)子句之后。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```sql  
 [ WHERE expression ]  
 ```  
   
@@ -25,7 +25,7 @@ WHERE 子句直接应用于[from](from-entity-sql.md)子句之后。
 ## <a name="remarks"></a>备注  
  WHERE 子句具有与 Transact-sql 所述相同的语义。 它将源集合的元素限定为传递条件的元素，以此限制查询表达式所生成的对象。  
   
-```  
+```sql  
 select c from cs as c where e  
 ```  
   

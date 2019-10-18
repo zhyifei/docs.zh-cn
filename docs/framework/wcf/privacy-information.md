@@ -6,35 +6,35 @@ helpviewer_keywords:
 - WCF, privacy information
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
-ms.openlocfilehash: 6da9e2a91fe8156c0631aa77594e3ed47d32cb8b
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 0b277728d2f2c224d5e45e3990ab2fd588bc81d3
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65882189"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72318699"
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Windows Communication Foundation 隐私信息
-Microsoft 承诺保护最终用户的隐私。 生成使用 Windows Communication Foundation (WCF) 3.0 版，它的应用程序时你的应用程序可能会影响最终用户的隐私。 例如，应用程序可能显式收集用户联系信息，或者通过 Internet 向您的网站请求或发送信息。 如果您在应用程序中嵌入了 Microsoft 技术，则该技术可能具有可能会影响隐私的自己的行为。 WCF 不发送任何信息向 Microsoft 从你的应用程序除非你或最终用户选择将其发送给我们。  
+Microsoft 承诺保护最终用户的隐私。 使用 Windows Communication Foundation （WCF）版本3.0 生成应用程序时，应用程序可能会影响最终用户的隐私。 例如，应用程序可能显式收集用户联系信息，或者通过 Internet 向您的网站请求或发送信息。 如果您在应用程序中嵌入了 Microsoft 技术，则该技术可能具有可能会影响隐私的自己的行为。 WCF 不会从你的应用程序向 Microsoft 发送任何信息，除非你或最终用户选择将其发送给我们。  
   
 ## <a name="wcf-in-brief"></a>WCF 概述  
- WCF 是使用 Microsoft.NET Framework，开发人员可以构建分布式应用程序的分布式消息传递框架。 在两个应用程序之间交换的消息包含标头和正文信息。  
+ WCF 是使用 Microsoft .NET 框架的分布式消息框架，允许开发人员生成分布式应用程序。 在两个应用程序之间交换的消息包含标头和正文信息。  
   
- 标头可能包含消息路由、安全信息、事务和其他信息，具体取决于应用程序所使用的服务。 默认情况下，消息通常要进行加密。 一个例外的情况是使用 `BasicHttpBinding`（它适用于不受保护的旧式 Web 服务）。 作为应用程序设计人员，您负责进行最终设计。 SOAP 正文中的消息包含特定于应用程序的数据;但是，可以使用 WCF 加密或保密性功能来保护此数据，如应用程序定义的个人信息。 以下几节将描述可能对隐私造成影响的功能。  
+ 标头可能包含消息路由、安全信息、事务和其他信息，具体取决于应用程序所使用的服务。 默认情况下，消息通常要进行加密。 一个例外的情况是使用 `BasicHttpBinding`（它适用于不受保护的旧式 Web 服务）。 作为应用程序设计人员，您负责进行最终设计。 SOAP 正文中的消息包含特定于应用程序的数据;不过，这些数据（如应用程序定义的个人信息）可以通过使用 WCF 加密或机密性功能来保护。 以下几节将描述可能对隐私造成影响的功能。  
   
 ## <a name="messaging"></a>消息  
- 每个 WCF 消息具有指定的消息目标的地址标头和答复应发送到何处。  
+ 每个 WCF 消息都有一个地址标头，该标头指定消息目标和答复的目标位置。  
   
  终结点地址的地址部分是一个标识该终结点的统一资源标识符 (URI)。 该地址可以是网络地址，也可以是逻辑地址。 该地址可能包含计算机名称（主机名、完全限定域名）和一个 IP 地址。 终结点地址还可能包含一个用于进行临时寻址的全局唯一标识符 (GUID) 或 GUID 集合，以便辨别每个地址。 每个消息都包含一个消息 ID，该消息 ID 是 GUID。 此功能遵循 WS-Addressing 引用标准。  
   
- WCF 消息传递层不会写入本地计算机的任何个人信息。 但是，如果服务开发人员创建了公开此类信息的服务（例如，通过在终结点名称中使用个人姓名，或者将个人信息包含在终结点的 Web 服务描述语言中，但不要求客户端使用 https 来访问 WSDL），则消息传递层可能会在网络级传播个人信息。 此外，如果开发人员在运行[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)针对公开个人信息，该工具的输出的终结点的工具可能包含该信息，并且输出文件写入到本地硬盘。  
+ WCF 消息传递层不会向本地计算机写入任何个人信息。 但是，如果服务开发人员创建了公开此类信息的服务（例如，通过在终结点名称中使用个人姓名，或者将个人信息包含在终结点的 Web 服务描述语言中，但不要求客户端使用 https 来访问 WSDL），则消息传递层可能会在网络级传播个人信息。 此外，如果开发人员针对公开个人信息的终结点运行 " [Svcutil.exe 元数据实用工具（）](servicemodel-metadata-utility-tool-svcutil-exe.md) " 工具，则该工具的输出可能包含该信息，并且输出文件将写入本地硬盘。  
   
 ## <a name="hosting"></a>宿主  
- WCF 中的承载功能允许应用程序来启动按需或多个应用程序之间启用端口共享。 可以在 Internet 信息服务 (IIS)，类似于 ASP.NET 承载的 WCF 应用程序。  
+ WCF 中的托管功能使应用程序可以按需启动，或者允许在多个应用程序之间共享端口。 WCF 应用程序可以在 Internet Information Services （IIS）中承载，类似于 ASP.NET。  
   
  承载功能不会在网路上公开任何特定信息，也不会在计算机上保留数据。  
   
 ## <a name="message-security"></a>消息安全  
- WCF 安全提供了消息传送应用程序的安全功能。 所提供的安全功能包括身份验证和授权。  
+ WCF 安全性为消息传递应用程序提供安全功能。 所提供的安全功能包括身份验证和授权。  
   
  身份验证通过在客户端和服务之间传递凭据来执行。 身份验证可以通过传输级安全实现，也可以通过 SOAP 消息级安全实现，如下所述：  
   
@@ -57,7 +57,7 @@ Microsoft 承诺保护最终用户的隐私。 生成使用 Windows Communicatio
  审核功能还记录管理员修改消息日志记录的配置（启用或禁用）的时间，因为消息日志记录可能记录标头或正文中特定于应用程序的数据。 对于 [!INCLUDE[wxp](../../../includes/wxp-md.md)]，记录将写入应用程序事件日志。 对于 [!INCLUDE[wv](../../../includes/wv-md.md)] 和 [!INCLUDE[ws2003](../../../includes/ws2003-md.md)]，记录将写入安全事件日志。  
   
 ## <a name="transactions"></a>事务  
- 事务功能提供事务性服务添加到 WCF 应用程序。  
+ 事务功能为 WCF 应用程序提供事务性服务。  
   
  事务传播中使用的事物标头可能包含事务 ID 或登记 ID（这些 ID 都是 GUID）。  
   
@@ -66,14 +66,14 @@ Microsoft 承诺保护最终用户的隐私。 生成使用 Windows Communicatio
  事务功能实现了 WS-Coordination 和 WS-Atomic 事务标准。  
   
 ## <a name="reliable-sessions"></a>可靠会话  
- WCF 中的可靠会话传输或中间故障发生时提供消息的传输。 甚至在基础传输断开（例如，无线网络上的 TCP 连接断开）或丢失消息（HTTP 代理丢弃传出消息或传入消息）时，它们也会提供“一次性”消息传送。 可靠会话还可以恢复消息重新排序（这可能在多路径路由的情况下发生），从而保留消息的发送顺序。  
+ WCF 中的可靠会话在发生传输或中介故障时提供消息传输。 甚至在基础传输断开（例如，无线网络上的 TCP 连接断开）或丢失消息（HTTP 代理丢弃传出消息或传入消息）时，它们也会提供“一次性”消息传送。 可靠会话还可以恢复消息重新排序（这可能在多路径路由的情况下发生），从而保留消息的发送顺序。  
   
  可靠会话是使用 WS-ReliableMessaging (WS-RM) 协议来实现的。 可靠会话添加包含会话信息的 WS-RM 标头，这些会话信息用于标识与特定可靠会话关联的所有消息。 每个 WS-RM 会话都有一个 GUID 标识符。  
   
  最终用户的计算机上不会保留任何个人信息。  
   
 ## <a name="queued-channels"></a>排队通道  
- 队列代表接收应用程序存储来自发送应用程序的消息，之后再将这些消息转发给接收应用程序。 队列有助于在某些情况下（例如，接收应用程序是瞬态应用程序）确保消息从发送应用程序传送到接收应用程序。 WCF 提供通过使用 Microsoft 消息队列 (MSMQ) 作为传输协议队列的支持。  
+ 队列代表接收应用程序存储来自发送应用程序的消息，之后再将这些消息转发给接收应用程序。 队列有助于在某些情况下（例如，接收应用程序是瞬态应用程序）确保消息从发送应用程序传送到接收应用程序。 WCF 通过使用 Microsoft 消息队列（MSMQ）作为传输来提供对队列的支持。  
   
  排队通道功能不会向消息中添加标头。 相反，它会创建一个具有适当的消息队列消息属性集的消息队列消息，并调用消息队列方法来将消息放入“消息队列”队列中。 消息队列是一个可选组件，它随 Windows 一起提供。  
   
@@ -83,19 +83,19 @@ Microsoft 承诺保护最终用户的隐私。 生成使用 Windows Communicatio
  此功能包装现有的 COM 和 COM + 功能，以创建与 WCF 服务兼容的服务。 此功能不使用特定的标头，并且不会在最终用户的计算机上保留数据。  
   
 ## <a name="com-service-moniker"></a>COM 服务标记  
- 这为标准 WCF 客户端提供的非托管的包装器。 此功能在网络上没有特定的标头，也不会在计算机上持久保留数据。  
+ 这为标准 WCF 客户端提供非托管包装。 此功能在网络上没有特定的标头，也不会在计算机上持久保留数据。  
   
 ## <a name="peer-channel"></a>对等通道  
- 对等通道支持的多方应用程序使用 WCF 的开发。 多方消息传递发生在网格环境中。 网格由节点可以加入的名称来标识。 对等通道中的每个节点都在用户指定的端口创建一个 TCP 侦听器，并与网格中的其他节点建立连接以确保连接的弹性。 为了与网格中的其他节点进行连接，节点还会与网格中的其他节点交换一些数据，包括侦听器地址和计算机的 IP 地址。 在网格中四处发送的消息可能包含与发送方相关的安全信息，以防止发生消息欺骗和篡改。  
+ 对等通道允许使用 WCF 开发多方应用程序。 多方消息传递发生在网格环境中。 网格由节点可以加入的名称来标识。 对等通道中的每个节点都在用户指定的端口创建一个 TCP 侦听器，并与网格中的其他节点建立连接以确保连接的弹性。 为了与网格中的其他节点进行连接，节点还会与网格中的其他节点交换一些数据，包括侦听器地址和计算机的 IP 地址。 在网格中四处发送的消息可能包含与发送方相关的安全信息，以防止发生消息欺骗和篡改。  
   
  最终用户的计算机上不会存储任何个人信息。  
   
 ## <a name="it-professional-experience"></a>IT 专业经验  
   
 ### <a name="tracing"></a>跟踪  
- WCF 基础结构的诊断功能记录通过传输和服务模型层的活动和与这些消息关联的事件传递的消息。 默认情况下，此功能被禁用。 启用使用应用程序的配置文件，并可以在运行时使用的 WCF WMI 提供程序来修改跟踪行为。 在启用此功能后，跟踪基础结构会向已配置的侦听器发出包含消息、活动和处理事件的诊断跟踪。 输出的格式和位置由管理员的侦听器配置选择确定，但通常是 XML 格式化文件。 管理员负责设置跟踪文件上的访问控制列表 (ACL)。 具体而言，在由 Windows 激活系统 (WAS) 进行承载时，管理员应确保不是从公共虚拟根目录提供这些文件（如果不需要）。  
+ WCF 基础结构的诊断功能记录传递到传输和服务模型层的消息，以及与这些消息关联的活动和事件。 默认情况下，此功能被禁用。 使用应用程序的配置文件启用此功能，并且可以在运行时使用 WCF WMI 提供程序修改跟踪行为。 在启用此功能后，跟踪基础结构会向已配置的侦听器发出包含消息、活动和处理事件的诊断跟踪。 输出的格式和位置由管理员的侦听器配置选择确定，但通常是 XML 格式化文件。 管理员负责设置跟踪文件上的访问控制列表 (ACL)。 具体而言，在由 Windows 激活系统 (WAS) 进行承载时，管理员应确保不是从公共虚拟根目录提供这些文件（如果不需要）。  
   
- 有两种类型的跟踪：消息日志记录和诊断服务模型跟踪下, 一节中描述。 每种类型都通过其自身的跟踪源进行配置，它们分别是 <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A> 和 <xref:System.ServiceModel>。 这两种日志记录跟踪源都捕获应用程序本地的数据。  
+ 有两种类型的跟踪：消息日志记录和服务模型诊断跟踪，下一节将对其进行介绍。 每种类型都通过其自身的跟踪源进行配置，它们分别是 <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A> 和 <xref:System.ServiceModel>。 这两种日志记录跟踪源都捕获应用程序本地的数据。  
   
 ### <a name="message-logging"></a>消息日志记录  
  消息日志记录跟踪源（<xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A>）使管理员可以记录流经系统的消息。 通过配置，用户可以决定是记录完整的消息还是仅记录消息头、是否在传输和/或服务模型层记录以及是否包括格式不正确的消息。 另外，用户可以配置筛选来限制要记录的消息范围。  
@@ -116,24 +116,24 @@ Microsoft 承诺保护最终用户的隐私。 生成使用 Windows Communicatio
  即使消息在网络上进行了保护和加密，在此层记录的消息也是解密消息。  
   
  格式不正确的消息日志记录  
- WCF 基础结构无法理解或处理的日志消息。  
+ 记录 WCF 基础结构无法理解或处理的消息。  
   
  消息按原样（即，加密或不加密）进行记录。  
   
- 在中记录消息时解密或加密表单中，默认情况下，WCF 之前会删除安全密钥和潜在的个人信息的消息并记录这些。 下面几节将描述要删除的消息以及删除时间。 计算机管理员和应用程序部署人员都必须执行一定的配置操作来更改默认行为，以便记录密钥和潜在的个人信息。  
+ 如果以解密或未加密形式记录消息，则默认情况下，WCF 将在记录消息之前从消息中删除安全密钥和潜在的个人信息。 下面几节将描述要删除的消息以及删除时间。 计算机管理员和应用程序部署人员都必须执行一定的配置操作来更改默认行为，以便记录密钥和潜在的个人信息。  
   
 #### <a name="information-removed-from-message-headers-when-logging-decryptedunencrypted-messages"></a>在记录解密/未加密消息时从消息头中删除的信息  
- 在以解密/未加密形式记录消息时，默认情况下，将在记录消息之前从消息头和消息正文中删除安全密钥和潜在的个人信息。 以下列表显示了 WCF 视为密钥和潜在的个人信息。  
+ 在以解密/未加密形式记录消息时，默认情况下，将在记录消息之前从消息头和消息正文中删除安全密钥和潜在的个人信息。 下面的列表显示 WCF 如何考虑密钥和潜在的个人信息。  
   
  被删除的密钥：  
   
- \- 对于 xmlns:wst ="http://schemas.xmlsoap.org/ws/2004/04/trust"和 xmlns:wst ="http://schemas.xmlsoap.org/ws/2005/02/trust"  
+ xmlns： wst = "http://schemas.xmlsoap.org/ws/2004/04/trust" 和 xmlns： wst = "http://schemas.xmlsoap.org/ws/2005/02/trust" 的 \-  
   
  wst:BinarySecret  
   
  wst:Entropy  
   
- \- 对于 xmlns:wsse ="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd"和 xmlns:wsse ="http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
+ xmlns： wsse = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" 和 xmlns： wsse = "http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd" 的 \-  
   
  wsse:Password  
   
@@ -141,15 +141,15 @@ Microsoft 承诺保护最终用户的隐私。 生成使用 Windows Communicatio
   
  被删除的潜在个人信息：  
   
- \- 对于 xmlns:wsse ="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd"和 xmlns:wsse ="http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
+ xmlns： wsse = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" 和 xmlns： wsse = "http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd" 的 \-  
   
  wsse:Username  
   
  wsse:BinarySecurityToken  
   
- \- 有关 xmlns:saml ="urn: oasis： 名称： tc: SAML:1.0:assertion"删除以下各项以粗体显示 （）：  
+ xmlns： saml = "urn： oasis： names： tc： SAML：1.0： assertion" 的 \- 会删除粗体项（如下所示）：  
   
- \<断言  
+ \<Assertion  
   
  MajorVersion="1"  
   
@@ -163,41 +163,41 @@ Microsoft 承诺保护最终用户的隐私。 生成使用 Windows Communicatio
   
  >  
   
- \<Conditions NotBefore="[dateTime]" NotOnOrAfter="[dateTime]">  
+ \<Conditions NotBefore = "[dateTime]" NotOnOrAfter = "[dateTime]" >  
   
- \<AudienceRestrictionCondition>  
+ \<AudienceRestrictionCondition >  
   
- \<Audience>[uri]\</Audience>+  
+ \<Audience > [uri] \</Audience > +  
   
- \</AudienceRestrictionCondition>*  
+ \</AudienceRestrictionCondition > *  
   
- \<DoNotCacheCondition />*  
+ \<DoNotCacheCondition/> *  
   
- <\!-抽象基类型  
+ < \!--抽象基类型  
   
- \<条件 / > *  
+ \<Condition/> *  
   
  -->  
   
- \</ 条件 >？  
+ \</Conditions >？  
   
- \<建议 >  
+ \<Advice >  
   
- \<AssertionIDReference>[ID]\</AssertionIDReference>*  
+ \<AssertionIDReference > [ID] \</AssertionIDReference > *  
   
- \<Assertion>[assertion]\</Assertion>*  
+ \<Assertion > [assertion] \</Assertion > *  
   
  [any]*  
   
- \</ 通知 >？  
+ \</Advice >？  
   
- <\!-抽象基类型  
+ < \!-抽象基类型  
   
- \<语句 / > *  
+ \<Statement/> *  
   
- \<SubjectStatement>  
+ \<SubjectStatement >  
   
- \<Subject>  
+ \<Subject >  
   
  `<NameIdentifier`  
   
@@ -211,19 +211,19 @@ Microsoft 承诺保护最终用户的隐私。 生成使用 Windows Communicatio
   
  `</NameIdentifier>?`  
   
- \<SubjectConfirmation>  
+ \<SubjectConfirmation >  
   
- \<ConfirmationMethod>[anyUri]\</ConfirmationMethod>+  
+ \<ConfirmationMethod > [anyUri] \</ConfirmationMethod > +  
   
- \<SubjectConfirmationData>[any]\</SubjectConfirmationData>?  
+ \<SubjectConfirmationData > [任何] \</SubjectConfirmationData >？  
   
- \<ds:KeyInfo>...\</ds:KeyInfo>?  
+ \<ds： KeyInfo > ... \</ds： KeyInfo >？  
   
- \</SubjectConfirmation>?  
+ \</SubjectConfirmation >？  
   
- \</Subject>  
+ \</Subject >  
   
- \</SubjectStatement>*  
+ \</SubjectStatement > *  
   
  -->  
   
@@ -245,7 +245,7 @@ Microsoft 承诺保护最终用户的隐私。 生成使用 Windows Communicatio
   
  `/>?`  
   
- <AuthorityBinding  
+ < AuthorityBinding  
   
  AuthorityKind="[QName]"  
   
@@ -255,13 +255,13 @@ Microsoft 承诺保护最终用户的隐私。 生成使用 Windows Communicatio
   
  />*  
   
- \</AuthenticationStatement>*  
+ \</AuthenticationStatement > *  
   
- \<AttributeStatement>  
+ \<AttributeStatement >  
   
  [Subject]  
   
- \<属性  
+ \<Attribute  
   
  AttributeName="[string]"  
   
@@ -271,40 +271,40 @@ Microsoft 承诺保护最终用户的隐私。 生成使用 Windows Communicatio
   
  `<AttributeValue>[any]</AttributeValue>+`  
   
- \</ 属性 > +  
+ \</Attribute > +  
   
- \</AttributeStatement>*  
+ \</AttributeStatement > *  
   
  \<AuthorizationDecisionStatement  
   
  Resource="[uri]"  
   
- Decision="[Permit&#124;Deny&#124;Indeterminate]"  
+ 决策 = "[允许&#124;拒绝&#124;不确定]"  
   
  >  
   
  [Subject]  
   
- \<操作 Namespace ="[uri]"> [string]\</Action > +  
+ \<Action Namespace = "[uri]" > [string] \</Action > +  
   
- \<证据 >  
+ \<Evidence >  
   
- \<AssertionIDReference>[ID]\</AssertionIDReference>+  
+ \<AssertionIDReference > [ID] \</AssertionIDReference > +  
   
- \<Assertion>[assertion]\</Assertion>+  
+ \<Assertion > [assertion] \</Assertion > +  
   
- \</ 证据 >？  
+ \</Evidence >？  
   
- \</AuthorizationDecisionStatement>*  
+ \</AuthorizationDecisionStatement > *  
   
- \</Assertion>  
+ \</Assertion >  
   
 #### <a name="information-removed-from-message-bodies-when-logging-decryptedunencrypted-messages"></a>在记录解密/未加密消息时从消息正文中删除的信息  
- 如上文所述，WCF 会删除密钥和已知的潜在个人信息的记录解密/未加密的消息的消息标头中。 此外，WCF 从中删除密钥和已知的潜在个人信息的正文元素和以下列表中，用于描述密钥交换中涉及的安全消息的操作的消息正文。  
+ 如前所述，WCF 从消息头中删除已记录的解密/未加密消息的密钥和已知的潜在个人信息。 另外，WCF 将从以下列表中的正文元素和操作的消息正文中删除密钥和已知的潜在个人信息，其中描述了密钥交换中涉及的安全消息。  
   
  对于下列命名空间：  
   
- xmlns:wst ="http://schemas.xmlsoap.org/ws/2004/04/trust"和 xmlns:wst ="http://schemas.xmlsoap.org/ws/2005/02/trust"（例如，如果无可用的操作）  
+ xmlns： wst = "http://schemas.xmlsoap.org/ws/2004/04/trust" 和 xmlns： wst = "http://schemas.xmlsoap.org/ws/2005/02/trust" （例如，如果没有可用的操作）  
   
  删除那些涉及密钥交换的正文元素的信息：  
   
@@ -357,7 +357,7 @@ Microsoft 承诺保护最终用户的隐私。 生成使用 Windows Communicatio
 - `http://schemas.xmlsoap.org/ws/2004/04/security/trust/RSTR/SCT-Amend`
   
 #### <a name="no-information-is-removed-from-application-specific-headers-and-body-data"></a>不会从特定于应用程序的标头和正文数据中删除任何信息  
- WCF 不跟踪特定于应用程序的标头 （例如，查询字符串） 或正文数据 （例如，信用卡号） 中的个人信息。  
+ WCF 不跟踪特定于应用程序的标头中的个人信息（例如查询字符串）或正文数据（例如，信用卡号）。  
   
  启用消息日志记录后，特定于应用程序的标头中的个人信息和正文信息在日志中可见。 同样，应用程序部署人员负责设置配置和日志文件上的 ACL。 如果他不希望让这些信息可见，他还可以禁用日志记录，或者在记录这些信息之后将其从日志文件中筛选掉。  
   
@@ -372,26 +372,26 @@ Microsoft 承诺保护最终用户的隐私。 生成使用 Windows Communicatio
  对于消息日志记录和跟踪记录，可以配置一个自定义跟踪侦听器，该侦听器可以在网络上发送跟踪和消息（例如，向远程数据库发送）。 应用程序部署人员负责配置自定义侦听器或授权用户执行这一操作。 他还对在远程位置公开的所有个人信息负有责任，并负责将 ACL 正确应用到此位置。  
   
 ### <a name="other-features-for-it-professionals"></a>IT 专业人员的其他作用  
- WCF 具有公开通过 WMI （随 Windows） 的 WCF 基础结构配置信息的 WMI 提供程序。 默认情况下，WMI 接口可供管理员使用。  
+ WCF 有一个 WMI 提供程序，该提供程序通过 WMI （随 Windows 一起提供）公开 WCF 基础结构配置信息。 默认情况下，WMI 接口可供管理员使用。  
   
- WCF 配置使用.NET Framework 配置机制。 配置文件存储在计算机上。 应用程序开发人员和管理员为应用程序的每个需求创建配置文件和 ACL。 配置文件可以包含终结点地址和指向证书存储区中的证书的链接。 证书可用于提供应用程序数据，以配置应用程序所使用的功能的各种属性。  
+ WCF 配置使用 .NET Framework 配置机制。 配置文件存储在计算机上。 应用程序开发人员和管理员为应用程序的每个需求创建配置文件和 ACL。 配置文件可以包含终结点地址和指向证书存储区中的证书的链接。 证书可用于提供应用程序数据，以配置应用程序所使用的功能的各种属性。  
   
- WCF 还通过调用使用.NET Framework 进程转储功能<xref:System.Environment.FailFast%2A>方法。  
+ WCF 还通过调用 <xref:System.Environment.FailFast%2A> 方法使用 .NET Framework 进程转储功能。  
   
 ### <a name="it-pro-tools"></a>IT 专业工具  
- WCF 还提供了以下的 IT 专业工具，这在 Windows SDK 中提供。  
+ WCF 还提供了以下 Windows SDK 附带的 IT 专业工具。  
   
 #### <a name="svctraceviewerexe"></a>SvcTraceViewer.exe  
- 在查看器显示 WCF 跟踪文件。 该查看器显示跟踪中包含的所有信息。  
+ 查看器将显示 WCF 跟踪文件。 该查看器显示跟踪中包含的所有信息。  
   
 #### <a name="svcconfigeditorexe"></a>SvcConfigEditor.exe  
  编辑器允许用户创建和编辑 WCF 配置文件。 该编辑器显示配置文件中包含的所有信息。 使用文本编辑器可以完成同样的任务。  
   
-#### <a name="servicemodelreg"></a>ServiceModel_Reg  
- 此工具使用户可以管理计算机上的 ServiceModel 安装。 该工具在控制台窗口中显示状态消息后，它在运行，在此过程中，可能会显示有关 WCF 安装的配置信息。  
+#### <a name="servicemodel_reg"></a>ServiceModel_Reg  
+ 此工具使用户可以管理计算机上的 ServiceModel 安装。 该工具在运行时在控制台窗口中显示状态消息，在此过程中，可能会显示有关 WCF 安装的配置的信息。  
   
 #### <a name="wsatconfigexe-and-wsatuidll"></a>WSATConfig.exe 和 WSATUI.dll  
- 这些工具，IT 专业人员在 WCF 中配置可互操作的 WS-AtomicTransaction 网络支持。 这两种工具显示并使用户可以更改存储在注册表中的最常用 WS-AtomicTransaction 设置的值。  
+ 这些工具使 IT 专业人员能够在 WCF 中配置互操作的 ws-atomictransaction 网络支持。 这两种工具显示并使用户可以更改存储在注册表中的最常用 WS-AtomicTransaction 设置的值。  
   
 ## <a name="cross-cutting-features"></a>横切功能  
  下列功能是横切功能。 即，它们可以用前面的任何功能构成。  
@@ -404,4 +404,4 @@ Microsoft 承诺保护最终用户的隐私。 生成使用 Windows Communicatio
 ## <a name="see-also"></a>请参阅
 
 - [Windows Communication Foundation](index.md)
-- [安全性](../../../docs/framework/wcf/feature-details/security.md)
+- [Security](./feature-details/security.md)

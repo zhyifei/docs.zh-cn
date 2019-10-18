@@ -2,12 +2,12 @@
 title: 可以为 null 的结构化类型 (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: ae006fa9-997e-45bb-8a04-a7f62026171e
-ms.openlocfilehash: 6b078ae458aba73e82957f84408b1000b216aef9
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: b155c672d8c0bef8b01fb26fb49908f094add25a
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70249804"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319477"
 ---
 # <a name="nullable-structured-types-entity-sql"></a>可以为 null 的结构化类型 (Entity SQL)
 结构化类型的 `null` 实例是不存在的实例。 这不同于其中所有属性都具有 `null` 值的现有实例。  
@@ -28,46 +28,46 @@ ms.locfileid: "70249804"
   
 - 将 `null` 说明为结构化类型：  
   
-    ```  
+    ```sql  
     TREAT (NULL AS StructuredType)  
     ```  
   
 - 将基类型向上转换为派生类型：  
   
-    ```  
+    ```sql  
     TREAT (BaseType AS DerivedType)  
     ```  
   
 - 对 false 条件进行外部联接：  
   
-    ```  
+    ```sql  
     Collection1 LEFT OUTER JOIN Collection2  
     ON FalseCondition  
     ```  
   
      --或  
   
-    ```  
+    ```sql  
     Collection1 RIGHT OUTER JOIN Collection2  
     ON FalseCondition  
     ```  
   
      --或  
   
-    ```  
+    ```sql  
     Collection1 FULL OUTER JOIN Collection2  
     ON FalseCondition  
     ```  
   
 - 取消 `null` 引用的引用：  
   
-    ```  
+    ```sql  
     DEREF(NullRef)  
     ```  
   
 - 从空集合获取 ANYELEMENT：  
   
-    ```  
+    ```sql  
     ANYELEMENT(EmptyCollection)  
     ```  
   

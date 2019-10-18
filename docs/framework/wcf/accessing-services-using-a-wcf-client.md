@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - clients [WCF], consuming services
 ms.assetid: d780af9f-73c5-42db-9e52-077a5e4de7fe
-ms.openlocfilehash: ae589e1c418b1cf13fe9f5b34648bdf7a2210eed
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 462d9a3923009f0124c2b90b6fa86dfa9869a3c5
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855676"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72316542"
 ---
 # <a name="accessing-services-using-a-wcf-client"></a>使用 WCF 客户端访问服务
 
@@ -26,10 +26,10 @@ ms.locfileid: "70855676"
 
 3. 实例化 WCF 客户端代理。
 
-通过使用服务模型元数据实用工具（Svcutil.exe），可以手动生成 WCF 客户端代理。有关详细信息，请参阅 ""[元数据实用工具（svcutil.exe）](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)。 还可以使用**添加服务引用**功能在 Visual Studio 中生成 WCF 客户端代理。 若要使用上述两种方法中的一种生成 WCF 客户端代理，必须运行该服务。 如果服务是自承载服务，则必须运行主机。 如果服务是在 IIS/WAS 中承载的，则无需执行任何其他操作。
+通过使用服务模型元数据实用工具（Svcutil.exe），可以手动生成 WCF 客户端代理。有关详细信息，请参阅 ""[元数据实用工具（svcutil.exe）](servicemodel-metadata-utility-tool-svcutil-exe.md)。 还可以使用**添加服务引用**功能在 Visual Studio 中生成 WCF 客户端代理。 若要使用上述两种方法中的一种生成 WCF 客户端代理，必须运行该服务。 如果服务是自承载服务，则必须运行主机。 如果服务是在 IIS/WAS 中承载的，则无需执行任何其他操作。
 
 ## <a name="servicemodel-metadata-utility-tool"></a>ServiceModel 元数据实用工具
- [Svcutil.exe 元数据实用工具（）](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)是一个命令行工具，用于从元数据生成代码。 下面是一个基本 Svcutil.exe 命令示例。
+ [Svcutil.exe 元数据实用工具（）](servicemodel-metadata-utility-tool-svcutil-exe.md)是一个命令行工具，用于从元数据生成代码。 下面是一个基本 Svcutil.exe 命令示例。
 
 ```console
 Svcutil.exe <service's Metadata Exchange (MEX) address or HTTP GET address>
@@ -49,10 +49,10 @@ Svcutil.exe <list of WSDL and XSD files on file system>
 Svcutil.exe <file1 [,file2]>
 ```
 
- 如果仅提供了一个文件名，则该文件名是输出文件的名称。 如果提供了两个文件名，则第一个文件是输入配置文件，其内容将与生成的配置合并，然后写出到第二个文件中。 有关配置的详细信息，请参阅[配置服务的绑定](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)。
+ 如果仅提供了一个文件名，则该文件名是输出文件的名称。 如果提供了两个文件名，则第一个文件是输入配置文件，其内容将与生成的配置合并，然后写出到第二个文件中。 有关配置的详细信息，请参阅[配置服务的绑定](configuring-bindings-for-wcf-services.md)。
 
 > [!IMPORTANT]
-> 不安全的元数据请求以与任何不安全的网络请求相同的方式来带来某些风险：如果你不确定要与之通信的终结点是谁说，你检索的信息可能是来自恶意服务的元数据。
+> 与任何未受保护的网络请求一样，未受保护的元数据请求也会带来一定的风险：如果您不能确定您正在与其进行通信的终结点身份属实，那么您检索的信息有可能是来自于恶意服务的元数据。
 
 ## <a name="add-service-reference-in-visual-studio"></a>Visual Studio 中的“添加服务引用”功能
 
@@ -178,22 +178,22 @@ Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result)
 
 WCF 客户端引发的许多异常由服务上的异常引起。 以下是这种情况的一些示例：
 
-- <xref:System.Net.Sockets.SocketException>：远程主机强行关闭了现有连接。
+- <xref:System.Net.Sockets.SocketException>: 现有连接被远程主机强行关闭。
 
-- <xref:System.ServiceModel.CommunicationException>：基础连接意外关闭。
+- <xref:System.ServiceModel.CommunicationException>: 基础连接意外关闭。
 
-- <xref:System.ServiceModel.CommunicationObjectAbortedException>：套接字连接已中止。 这可能是由于处理消息时出错或远程主机超过接收超时或者潜在的网络资源问题导致的。
+- <xref:System.ServiceModel.CommunicationObjectAbortedException>: 套接字连接已中止。 这可能是由于处理消息时出错或远程主机超过接收超时或者潜在的网络资源问题导致的。
 
-当发生这些类型的异常时，解决问题的最佳方式是在服务端启用跟踪并确定服务端发生了何种异常。 有关跟踪的详细信息，请参阅[跟踪](../../../docs/framework/wcf/diagnostics/tracing/index.md)和[使用跟踪对应用程序进行故障排除](../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)。
+当发生这些类型的异常时，解决问题的最佳方式是在服务端启用跟踪并确定服务端发生了何种异常。 有关跟踪的详细信息，请参阅[跟踪](./diagnostics/tracing/index.md)和[使用跟踪对应用程序进行故障排除](./diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)。
 
 ## <a name="see-also"></a>请参阅
 
-- [如何：创建客户端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
-- [如何：使用双工协定访问服务](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
-- [如何：以异步方式调用服务操作](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)
-- [如何：使用单向和请求-答复协定访问服务](../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)
-- [如何：访问 WSE 3.0 服务](../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)
-- [了解生成的客户端代码](../../../docs/framework/wcf/feature-details/understanding-generated-client-code.md)
-- [如何：使用 XmlSerializer 改善 WCF 客户端应用程序的启动时间](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)
-- [指定客户端运行时行为](../../../docs/framework/wcf/specifying-client-run-time-behavior.md)
-- [配置客户端行为](../../../docs/framework/wcf/configuring-client-behaviors.md)
+- [如何：创建客户端](how-to-create-a-wcf-client.md)
+- [如何：使用双工协定访问服务](./feature-details/how-to-access-services-with-a-duplex-contract.md)
+- [如何：以异步方式调用服务操作](./feature-details/how-to-call-wcf-service-operations-asynchronously.md)
+- [如何：使用单向和请求-答复协定访问服务](./feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)
+- [如何：访问 WSE 3.0 服务](./feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)
+- [了解生成的客户端代码](./feature-details/understanding-generated-client-code.md)
+- [如何：使用 XmlSerializer 改善 WCF 客户端应用程序的启动时间](./feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)
+- [指定客户端运行时行为](specifying-client-run-time-behavior.md)
+- [配置客户端行为](configuring-client-behaviors.md)

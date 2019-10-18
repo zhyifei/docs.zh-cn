@@ -1,16 +1,16 @@
 ---
-title: 如何：检索特性的值 (LINQ to XML) (Visual Basic)
+title: 如何：检索特性的值（LINQ to XML）（Visual Basic）
 ms.date: 07/20/2015
 ms.assetid: 5f4b3790-c83f-4eb3-a889-e3587edf3ca1
-ms.openlocfilehash: d03b2b146ad2f6b796ba6589cf99d06aa429535d
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 6f9a5936c962111eb75a05f5e3704f7132618143
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710494"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320466"
 ---
-# <a name="how-to-retrieve-the-value-of-an-attribute-linq-to-xml-visual-basic"></a>如何：检索特性的值 (LINQ to XML) (Visual Basic)
-本主题说明如何获取属性的值。 主要有两种方法：可以将 <xref:System.Xml.Linq.XAttribute> 强制转换为所需的类型；然后，显式转换运算符将元素或属性的内容转换为指定的类型。 此外，还可以使用 <xref:System.Xml.Linq.XAttribute.Value%2A> 属性。 但是，强制转换通常是更好的方法。 在检索可能存在也可能不存在的属性的值时，如果将属性强制转换为可以为 null 的类型，则代码会更易于编写。 有关此技术的示例，请参见[如何：检索元素 (LINQ to XML) 的值 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-retrieve-the-value-of-an-element-linq-to-xml.md)。  
+# <a name="how-to-retrieve-the-value-of-an-attribute-linq-to-xml-visual-basic"></a>如何：检索特性的值（LINQ to XML）（Visual Basic）
+本主题说明如何获取属性的值。 主要方法有两种：可以将 <xref:System.Xml.Linq.XAttribute> 强制转换为所需的类型；然后，显式转换运算符将元素或属性的内容转换为指定的类型。 此外，还可以使用 <xref:System.Xml.Linq.XAttribute.Value%2A> 属性。 但是，强制转换通常是更好的方法。 在检索可能存在也可能不存在的属性的值时，如果将属性强制转换为可以为 null 的类型，则代码会更易于编写。 有关此技术的示例，请参阅[如何：检索元素的值（LINQ to XML）（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/how-to-retrieve-the-value-of-an-element-linq-to-xml.md)。  
   
 ## <a name="example"></a>示例  
  在 Visual Basic 中，可以使用集成的属性 (Attribute) 属性 (Property) 来检索属性 (Attribute) 的值。  
@@ -46,7 +46,7 @@ Console.WriteLine(root)
 ```  
   
 ## <a name="example"></a>示例  
- 下面的示例演示在属性处于命名空间中时，如何检索属性的值。 有关详细信息, 请参阅[命名空间概述 (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)。  
+ 下面的示例演示在属性处于命名空间中时，如何检索属性的值。 有关详细信息，请参阅[命名空间概述（LINQ to XML）（Visual Basic）](namespaces-overview-linq-to-xml.md)。  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  
@@ -62,7 +62,7 @@ End Module
   
  该示例产生下面的输出：  
   
-```  
+```console  
 abcde  
 ```  
   

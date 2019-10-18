@@ -2,19 +2,19 @@
 title: OFTYPE (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 6d259ca7-bbf0-40f8-a154-181d25c0d67e
-ms.openlocfilehash: 36701a5e75e804ea541d242aaff243de0b24cec3
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: f1dd5ba92c7b1eaf7117c9732a78e04e5d5a317a
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70249797"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319460"
 ---
 # <a name="oftype-entity-sql"></a>OFTYPE (Entity SQL)
 从查询表达式返回特定类型的对象集合。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```sql  
 OFTYPE ( expression, [ONLY] test_type )  
 ```  
   
@@ -33,19 +33,19 @@ OFTYPE ( expression, [ONLY] test_type )
   
  `OFTYPE` 表达式是下面的查询表达式的缩写形式：  
   
-```  
+```sql  
 select value treat(t as T) from ts as t where t is of (T)  
 ```  
   
  如果 Manager 是 Employee 的子类型，则以下表达式将从员工集合生成仅包含经理的集合：  
   
-```  
+```sql  
 OfType(employees, NamespaceName.Manager)  
 ```  
   
  还可以使用类型筛选器向上转换集合类型：  
   
-```  
+```sql
 OfType(executives, NamespaceName.Manager)  
 ```  
   
@@ -62,7 +62,7 @@ OfType(executives, NamespaceName.Manager)
 ## <a name="example"></a>示例  
  下面的 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 查询使用 OFTYPE 运算符从 Course 对象集合返回 OnsiteCourse 对象集合。 该查询基于 [School 模型](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896300(v=vs.100))。  
   
- [!code-csharp[DP EntityServices Concepts 2#OFTYPE](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#oftype)]  
+ [!code-sql[DP EntityServices Concepts#OFTYPE](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#oftype)]  
   
 ## <a name="see-also"></a>请参阅
 

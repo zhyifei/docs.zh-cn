@@ -2,19 +2,19 @@
 title: + （字符串串联）（实体 SQL）
 ms.date: 03/30/2017
 ms.assetid: 580130fa-6c7c-4f76-a47d-d22c27ccadf6
-ms.openlocfilehash: ef482a1206dea98cfb5a0ba5071acc130ef0cd18
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 9c078e193eeecd4d331c5e3c04c66dee2c4a1daa
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70249031"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319312"
 ---
 # <a name="-string-concatenation-entity-sql"></a>+（字符串串联）(Entity SQL)
 串联两个字符串。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```sql  
 expression + expression  
 ```  
   
@@ -28,11 +28,11 @@ expression + expression
 ## <a name="example"></a>示例  
  以下 Entity SQL 查询使用 + 运算符以串联两个字符串。 此查询基于 AdventureWorks 销售模型。 若要编译并运行此查询，请执行下列步骤：  
   
-1. [按照如何：执行返回 PrimitiveType 结果](../how-to-execute-a-query-that-returns-primitivetype-results.md)的查询。  
+1. 按照[如何：执行返回 PrimitiveType 结果的查询](../how-to-execute-a-query-that-returns-primitivetype-results.md)中的过程进行操作。  
   
 2. 将以下查询作为参数传递给 `ExecutePrimitiveTypeQuery` 方法：  
   
- [!code-csharp[DP EntityServices Concepts 2#CONCAT](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#concat)]  
+ [!code-sql[DP EntityServices Concepts#CONCAT](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#concat)]  
   
 ## <a name="see-also"></a>请参阅
 

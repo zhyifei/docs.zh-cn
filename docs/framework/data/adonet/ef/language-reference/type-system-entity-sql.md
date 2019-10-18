@@ -2,15 +2,15 @@
 title: 类型系统 (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 818a505b-a196-41dd-aaac-2ccd5f7a2f1a
-ms.openlocfilehash: 7f9b41181d9a7a7f23123f2e1b71893000b34d4a
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 0f7dae9e57132929737d752c67694cd369b79d9e
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70248942"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319239"
 ---
 # <a name="type-system-entity-sql"></a>类型系统 (Entity SQL)
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)]支持多种类型：  
+[!INCLUDE[esql](../../../../../../includes/esql-md.md)] 支持多种类型：  
   
 - 基元（简单）类型，如 `Int32` 和 `String.`。  
   
@@ -26,7 +26,7 @@ ms.locfileid: "70248942"
 ## <a name="collections"></a>集合  
  集合类型表示其他对象的零个或零个以上的实例。 有关如何构造集合的信息，请参阅[构造类型](constructing-types-entity-sql.md)。  
   
-## <a name="references"></a>参考资料  
+## <a name="references"></a>reference  
  引用是指向特定实体集中的特定实体的逻辑指针。  
   
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 支持使用以下运算符对引用进行构造、解构和导航：  
@@ -41,7 +41,7 @@ ms.locfileid: "70248942"
   
  可以使用成员访问（点）运算符 (`.`) 对引用进行导航。 下面的代码段通过对 r（引用）属性进行导航提取 Order 的 Id 属性。  
   
-```  
+```sql  
 select o2.r.Id   
 from (select ref(o) as r from LOB.Orders as o) as o2   
 ```  

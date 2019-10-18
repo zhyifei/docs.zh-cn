@@ -2,19 +2,19 @@
 title: REF (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: c5f4cb35-69e9-44cc-b63b-ee38922bbda1
-ms.openlocfilehash: 9d35306d1299e91ecaa55a7d2818ee1e2982793f
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 08bcaad4fdc0cf5324ff9976fcf48c23b206e72f
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70249195"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319395"
 ---
 # <a name="ref-entity-sql"></a>REF (Entity SQL)
 返回对实体实例的引用。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```sql  
 REF( expression )   
 ```  
   
@@ -33,11 +33,11 @@ REF( expression )
 ## <a name="example"></a>示例  
  下面的 Entity SQL 查询使用 REF 运算符返回输入实体参数的引用。 由于使用属性提取运算符 (.) 访问 Product 实体的属性，同一查询会取消引用。 此查询基于 AdventureWorks 销售模型。 若要编译并运行此查询，请执行下列步骤：  
   
-1. [按照如何：执行返回 PrimitiveType 结果](../how-to-execute-a-query-that-returns-primitivetype-results.md)的查询。  
+1. 按照[如何：执行返回 PrimitiveType 结果的查询](../how-to-execute-a-query-that-returns-primitivetype-results.md)中的过程进行操作。  
   
 2. 将以下查询作为参数传递给 `ExecutePrimitiveTypeQuery` 方法：  
   
- [!code-csharp[DP EntityServices Concepts 2#REF](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#ref)]  
+ [!code-sql[DP EntityServices Concepts#REF](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#ref)]  
   
 ## <a name="see-also"></a>请参阅
 

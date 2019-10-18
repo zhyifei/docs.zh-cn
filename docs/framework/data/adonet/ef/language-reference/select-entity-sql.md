@@ -2,22 +2,22 @@
 title: SELECT (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 9a33bd0d-ded1-41e7-ba3c-305502755e3b
-ms.openlocfilehash: 3d3564c37d8971d3261cb47acb774bd1b9f92192
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 4142dca604c0f6dd521f45a8cadd26b9574000f0
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70249204"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319369"
 ---
 # <a name="select-entity-sql"></a>SELECT (Entity SQL)
 指定查询所返回的元素。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```sql  
 SELECT [ ALL | DISTINCT ] [ topSubclause ] aliasedExpr   
       [{ , aliasedExpr }] FROM fromClause [ WHERE whereClause ] [ GROUP BY groupByClause [ HAVING havingClause ] ] [ ORDER BY orderByClause ]  
-or  
+-- or  
 SELECT VALUE [ ALL | DISTINCT ] [ topSubclause ] expr FROM fromClause [ WHERE whereClause ] [ GROUP BY groupByClause [ HAVING havingClause ] ] [ ORDER BY orderByClause  
 ```  
   
@@ -39,7 +39,7 @@ SELECT VALUE [ ALL | DISTINCT ] [ topSubclause ] expr FROM fromClause [ WHERE wh
  `aliasedExpr`  
  形式如下的表达式：  
   
- `expr`为`identifier` &#124;`expr`  
+ 作为 `identifier` &#124; `expr` `expr`  
   
  `expr`  
  文本或表达式。  
@@ -49,20 +49,20 @@ SELECT VALUE [ ALL | DISTINCT ] [ topSubclause ] expr FROM fromClause [ WHERE wh
   
  跟在 SELECT 关键字之后的一个或多个查询表达式的列表称为“选择列表”，更加正式的名称为“投影”。 最普通的投影形式为单个查询表达式。 如果从集合 `member1` 选择一个成员 `collection1`，则会生成 `member1` 中每个对象的所有 `collection1`值的新集合（如下面的示例所示）。  
   
-```  
+```sql  
 SELECT collection1.member1 FROM collection1  
 ```  
   
  例如，如果 `customers` 是类型为 `Customer` 的集合，且该类型有类型为 `Name` 的属性 `string`，则从 `Name` 选择 `customers` 将生成一个字符串集合（如下面的示例所示）。  
   
-```  
+```sql  
 SELECT customers.Name FROM customers AS c  
 ```  
   
  也可以使用 JOIN 语法（FULL、INNER、LEFT、OUTER、ON 和 RIGHT）。 ON 是内部联接的必需语法，但不允许用于交叉联接。  
   
 ## <a name="row-and-value-select-clauses"></a>行和值选择子句  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 支持 SELECT 子句的两种变体。 第一种变体是行选择，由 SELECT 关键字标识，可以用于指定应提取出的一个或多个值。由于返回值的两侧会隐式添加行包装，因此查询表达式的结果始终为行的多集。  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 支持 SELECT 子句的两种变体。 第一种变体是行选择，由 SELECT 关键字标识，可用于指定一个或多个应被投影的值。由于在返回的值周围隐式添加了行包装，因此查询表达式的结果始终为行的多集。  
   
  行选择中的每个查询表达式都必须指定一个别名。 如果不指定别名，[!INCLUDE[esql](../../../../../../includes/esql-md.md)] 会尝试使用别名生成规则生成别名。  
   
@@ -70,7 +70,7 @@ SELECT customers.Name FROM customers AS c
   
  行选择总是可通过 VALUE SELECT 进行表示（如下面的示例所示）。  
   
-```  
+```sql  
 SELECT 1 AS a, "abc" AS b FROM C  
 SELECT VALUE ROW(1 AS a, "abc" AS b) FROM C   
 ```  
@@ -81,24 +81,24 @@ SELECT VALUE ROW(1 AS a, "abc" AS b) FROM C
 ## <a name="differences-from-transact-sql"></a>与 Transact-SQL 的区别  
  与 Transact-SQL 不同， [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 不支持在 SELECT 子句中使用 * 参数。  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 允许查询通过从 FROM 子句引用集合别名来提取出完整的记录（如下面的示例所示）。  
   
-```  
+```sql  
 SELECT * FROM T1, T2  
 ```  
   
- 上一 transact-sql 查询表达式的表示[!INCLUDE[esql](../../../../../../includes/esql-md.md)]方式如下所示。  
+ 上一 Transact-sql 查询表达式以下列方式在 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 中表示。  
   
-```  
+```sql  
 SELECT a1, a2 FROM T1 AS a1, T2 AS a2  
 ```  
   
 ## <a name="example"></a>示例  
  下面的 Entity SQL 查询使用 SELECT 运算符指定查询要返回的元素。 此查询基于 AdventureWorks 销售模型。 若要编译并运行此查询，请执行下列步骤：  
   
-1. [按照如何：执行返回 StructuralType 结果](../how-to-execute-a-query-that-returns-structuraltype-results.md)的查询。  
+1. 执行 [How to: Execute a Query that Returns StructuralType Results](../how-to-execute-a-query-that-returns-structuraltype-results.md)中的过程。  
   
 2. 将以下查询作为参数传递给 `ExecuteStructuralTypeQuery` 方法：  
   
- [!code-csharp[DP EntityServices Concepts 2#LESS](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#less)]  
+ [!code-sql[DP EntityServices Concepts#LESS](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#less)]  
   
 ## <a name="see-also"></a>请参阅
 

@@ -1,15 +1,15 @@
 ---
-title: 如何：读取和写入编码的文档 (Visual Basic)
+title: 如何：读取和写入编码的文档（Visual Basic）
 ms.date: 07/20/2015
 ms.assetid: 159d868f-5ac8-40f2-95ca-07dd925f35c6
-ms.openlocfilehash: 7d558b8dea5f376b6ad77e2f4ac93a3f4663cbff
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 96a490d6915201b4e1069ae0249dea09d761aea6
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62008871"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72321011"
 ---
-# <a name="how-to-read-and-write-an-encoded-document-visual-basic"></a>如何：读取和写入编码的文档 (Visual Basic)
+# <a name="how-to-read-and-write-an-encoded-document-visual-basic"></a>如何：读取和写入编码的文档（Visual Basic）
 若要创建编码的 XML 文档，请向 XML 树中添加一个 <xref:System.Xml.Linq.XDeclaration>，将编码设置为需要的代码页名称。  
   
  由 <xref:System.Text.Encoding.WebName%2A> 返回的任何值都是有效值。  
@@ -56,7 +56,7 @@ Console.WriteLine("Encoding of loaded document is:{0}", newDoc16.Declaration.Enc
   
  该示例产生下面的输出：  
   
-```  
+```console  
 Creating a document with utf-8 encoding  
 Encoding is:utf-8  
   
@@ -79,4 +79,4 @@ Encoding of loaded document is:utf-16
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Xml.Linq.XDeclaration.Encoding%2A?displayProperty=nameWithType>
-- [高级的 LINQ to XML 编程 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+- [高级 LINQ to XML 编程（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

@@ -9,15 +9,15 @@ helpviewer_keywords:
 - WCF, authorization
 - WCF, security
 ms.assetid: 5162f5c4-8781-4cc4-9425-bb7620eaeaf4
-ms.openlocfilehash: 3b109e3e6817c300af1e79258d555562dcba067a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 93268be4b04ec6824ed7ecab070f28ddf40f8831
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69951012"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320944"
 ---
 # <a name="how-to-restrict-access-with-the-principalpermissionattribute-class"></a>如何：使用 PrincipalPermissionAttribute 类限制访问
-控制对 Windows 域计算机上的资源的访问是一项基本的安全任务。 例如，应该只有某些用户才能查看敏感数据，例如工资单信息。 本主题解释如何通过要求用户属于某个预定义组来限制对方法的访问。 有关工作示例, 请参阅[授权访问服务操作](../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md)。  
+控制对 Windows 域计算机上的资源的访问是一项基本的安全任务。 例如，应该只有某些用户才能查看敏感数据，例如工资单信息。 本主题解释如何通过要求用户属于某个预定义组来限制对方法的访问。 有关工作示例，请参阅[授权访问服务操作](./samples/authorizing-access-to-service-operations.md)。  
   
  此任务由两个单独的过程组成。 第一个过程创建组，并用用户填充它。 第二个过程应用 <xref:System.Security.Permissions.PrincipalPermissionAttribute> 类以指定组。  
   
@@ -25,13 +25,13 @@ ms.locfileid: "69951012"
   
 1. 打开 "**计算机管理**" 控制台。  
   
-2. 在左侧面板中, 单击 "**本地用户和组**"。  
+2. 在左侧面板中，单击 "**本地用户和组**"。  
   
-3. 右键单击 "**组**", 然后单击 "**新建组**"。  
+3. 右键单击 "**组**"，然后单击 "**新建组**"。  
   
-4. 在 "**组名称**" 框中, 键入新组的名称。  
+4. 在 "**组名称**" 框中，键入新组的名称。  
   
-5. 在 "**说明**" 框中, 键入新组的描述。  
+5. 在 "**说明**" 框中，键入新组的描述。  
   
 6. 单击 "**添加**" 按钮将新成员添加到组中。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "69951012"
   
 ### <a name="to-demand-user-membership"></a>要求用户具有成员资格  
   
-1. 打开包含已实现的服务协定代码的 Windows Communication Foundation (WCF) 代码文件。 有关实现协定的详细信息, 请参阅[实现服务协定](../../../docs/framework/wcf/implementing-service-contracts.md)。  
+1. 打开包含已实现的服务协定代码的 Windows Communication Foundation （WCF）代码文件。 有关实现协定的详细信息，请参阅[实现服务协定](implementing-service-contracts.md)。  
   
 2. 将 <xref:System.Security.Permissions.PrincipalPermissionAttribute> 属性应用于每个必须限制到特定组的方法。 将 <xref:System.Security.Permissions.SecurityAttribute.Action%2A> 属性设置为 <xref:System.Security.Permissions.SecurityAction.Demand>，并将 <xref:System.Security.Permissions.PrincipalPermissionAttribute.Role%2A> 属性设置为组名称。 例如:  
   
@@ -52,7 +52,7 @@ ms.locfileid: "69951012"
 ## <a name="using-a-certificate-to-control-access-to-a-method"></a>使用证书控制对方法的访问  
  如果客户端凭据类型是证书，还可以使用 `PrincipalPermissionAttribute` 类控制对方法的访问。 为此，您必须具有证书的主题和指纹。  
   
- 若要检查证书的属性, 请参阅[如何:用 MMC 管理单元](../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)查看证书。 若要查找 "指纹" 值[, 请参阅如何:检索证书](../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)的指纹。  
+ 若要检查证书的属性，请参阅[如何：使用 MMC 管理单元查看证书](./feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)。 若要查找 "指纹" 值，请参阅[如何：检索证书的指纹](./feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)。  
   
 #### <a name="to-control-access-using-a-certificate"></a>使用证书控制访问  
   
@@ -77,7 +77,7 @@ ms.locfileid: "69951012"
     </behaviors>  
     ```  
   
-     将此值设置为 `UseAspNetRoles` 表示 `Name` 的 `PrincipalPermissionAttribute` 属性将用于执行字符串比较。 使用证书作为客户端凭据时, 默认情况下, WCF 会将证书公用名和指纹连接起来, 以创建客户端主要标识的唯一值。 在将 `UseAspNetRoles` 设置为服务上的 `PrincipalPermissionMode` 之后，会将此主标识值与 `Name` 属性值进行比较，以确定用户的访问权限。  
+     将此值设置为 `UseAspNetRoles` 表示 `Name` 的 `PrincipalPermissionAttribute` 属性将用于执行字符串比较。 使用证书作为客户端凭据时，默认情况下，WCF 会将证书公用名和指纹连接起来，以创建客户端主要标识的唯一值。 在将 `UseAspNetRoles` 设置为服务上的 `PrincipalPermissionMode` 之后，会将此主标识值与 `Name` 属性值进行比较，以确定用户的访问权限。  
   
      此外，在创建自承载服务时，还可以按照以下代码中的方式在代码中设置 <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A> 属性：  
   
@@ -89,6 +89,6 @@ ms.locfileid: "69951012"
 - <xref:System.Security.Permissions.PrincipalPermissionAttribute>
 - <xref:System.Security.Permissions.SecurityAction.Demand>
 - <xref:System.Security.Permissions.PrincipalPermissionAttribute.Role%2A>
-- [授予对服务操作的权限](../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md)
-- [安全性概述](../../../docs/framework/wcf/feature-details/security-overview.md)
-- [实现服务协定](../../../docs/framework/wcf/implementing-service-contracts.md)
+- [授予对服务操作的权限](./samples/authorizing-access-to-service-operations.md)
+- [安全性概述](./feature-details/security-overview.md)
+- [实现服务协定](implementing-service-contracts.md)

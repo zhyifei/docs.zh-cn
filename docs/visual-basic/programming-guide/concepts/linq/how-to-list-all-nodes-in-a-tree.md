@@ -1,15 +1,15 @@
 ---
-title: 如何：列出所有节点在树 (Visual Basic)
+title: 如何：列出树中的所有节点（Visual Basic）
 ms.date: 07/20/2015
 ms.assetid: e19289c4-26d1-435b-b0db-fb8bc856b753
-ms.openlocfilehash: 6576beaaed00905ce7a09f338251934ea375cb7e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2c736f7e3a92e8aa92ac91ef4c32141128eff5db
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62021617"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320552"
 ---
-# <a name="how-to-list-all-nodes-in-a-tree-visual-basic"></a>如何：列出所有节点在树 (Visual Basic)
+# <a name="how-to-list-all-nodes-in-a-tree-visual-basic"></a>如何：列出树中的所有节点（Visual Basic）
 有时，列出树中的所有节点会有帮助。 它可帮助准确了解方法或属性是如何影响树的。 以文本形式列出所有节点的一种方法是生成准确逐一地标识树中所有节点的 XPath 表达式。  
   
  使用 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 执行 XPath 表达式不特别有用。 XPath 表达式的性能不如 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 查询，并且 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 查询的功能更强大。 但作为标识 XML 树中节点的一种方式，XPath 可以有效地工作。  
@@ -39,7 +39,7 @@ ms.locfileid: "62021617"
   
  下面是上述 XML 树中节点的列表，以 XPath 表达式表示：  
   
-```  
+```console
 /processing-instruction()  
 /Root  
 /Root/@AttName  
@@ -265,4 +265,4 @@ End Module
   
 ## <a name="see-also"></a>请参阅
 
-- [高级查询技术 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+- [高级查询技术（LINQ to XML）（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

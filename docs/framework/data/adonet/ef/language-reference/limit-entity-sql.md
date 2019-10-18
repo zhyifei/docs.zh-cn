@@ -2,19 +2,19 @@
 title: LIMIT (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: c22ffede-0a52-44d1-99b9-4a91e651e1b9
-ms.openlocfilehash: 432dfe2c8b2b87daf885be6de4da9bbeaaa37638
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 275b22686c6c932b2a9e4b20973ac07e99d47e14
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250445"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319626"
 ---
 # <a name="limit-entity-sql"></a>LIMIT (Entity SQL)
 在 ORDER BY 子句中使用 LIMIT 子子句可执行物理分页。 LIMIT 不能脱离 ORDER BY 子句单独使用。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```sql  
 [ LIMIT n ]  
 ```  
   
@@ -30,15 +30,15 @@ ms.locfileid: "70250445"
 ## <a name="example"></a>示例  
  下面的 Entity SQL 查询将 LIMIT 和 ORDER BY 运算符结合使用来指定用于 SELECT 语句所返回的对象的排序顺序。 此查询基于 AdventureWorks 销售模型。 若要编译并运行此查询，请执行下列步骤：  
   
-1. [按照如何：执行返回 StructuralType 结果](../how-to-execute-a-query-that-returns-structuraltype-results.md)的查询。  
+1. 执行 [How to: Execute a Query that Returns StructuralType Results](../how-to-execute-a-query-that-returns-structuraltype-results.md)中的过程。  
   
 2. 将以下查询作为参数传递给 `ExecuteStructuralTypeQuery` 方法：  
   
- [!code-csharp[DP EntityServices Concepts 2#LIMIT](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#limit)]  
+ [!code-sql[DP EntityServices Concepts#LIMIT](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#limit)]  
   
 ## <a name="see-also"></a>请参阅
 
 - [ORDER BY](order-by-entity-sql.md)
-- [如何：查看查询结果](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738702(v=vs.100))
+- [如何：对查询结果进行分页](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738702(v=vs.100))
 - [分页](paging-entity-sql.md)
 - [TOP](top-entity-sql.md)

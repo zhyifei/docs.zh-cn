@@ -2,12 +2,12 @@
 title: 类型定义 (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 306b204a-ade5-47ef-95b5-c785d2da4a7e
-ms.openlocfilehash: 471964266c290d5eba95804dbe1c2bc5225e3f83
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 35f660a66fd706b37187056830af5e06ac586caa
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70248948"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319251"
 ---
 # <a name="type-definitions-entity-sql"></a>类型定义 (Entity SQL)
 类型定义用在 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 内联函数的声明语句中。  
@@ -23,7 +23,7 @@ ms.locfileid: "70248948"
   
 - 关键字 `COLLECTION` 后跟放在括号中的另一个类型定义（例如，“Collection(AdventureWorks.Order)”）。  
   
-- 关键字 ROW 后跟放在括号中的属性定义列表（例如，“Row(x AdventureWorks.Order)”）。 属性定义具有格式，如 "`identifier type_definition`， `identifier type_definition`，..."。  
+- 关键字 ROW 后跟放在括号中的属性定义列表（例如，“Row(x AdventureWorks.Order)”）。 属性定义具有格式，如 "`identifier type_definition`、`identifier type_definition`、..."。  
   
 - 关键字 REF 后跟放在括号中的标识符类型（例如，“Ref(AdventureWorks.Order)”）。 REF 类型定义运算符要求将实体类型作为自变量。 您不能指定基元类型作为参数。  
   
@@ -31,7 +31,7 @@ ms.locfileid: "70248948"
   
  类型定义选项为：  
   
-- `IdentifierName supported_type`，或  
+- `IdentifierName supported_type` 或  
   
 - `IdentifierName` COLLECTION(`type_definition`) 或  
   
@@ -48,7 +48,7 @@ ms.locfileid: "70248948"
 ## <a name="examples"></a>示例  
  下面是一个简单类型定义的示例。  
   
-```  
+```sql  
 USING Microsoft.Samples.Entity  
 Function MyRound(p1 EDM.Decimal) AS (  
    Round(p1)  
@@ -58,7 +58,7 @@ MyRound(CAST(1.7 as EDM.Decimal))
   
  下面是 COLLECTION 类型定义的示例。  
   
-```  
+```sql  
 USING Microsoft.Samples.Entity  
 Function MyRound(p1 Collection(EDM.Decimal)) AS (  
    Select Round(p1) from p1  
@@ -68,7 +68,7 @@ MyRound({CAST(1.7 as EDM.Decimal), CAST(2.7 as EDM.Decimal)})
   
  下面是 ROW 类型定义的示例。  
   
-```  
+```sql  
 USING Microsoft.Samples.Entity  
 Function MyRound(p1 Row(x EDM.Decimal)) AS (  
    Round(p1.x)  
@@ -78,7 +78,7 @@ select MyRound(row(a as x)) from {CAST(1.7 as EDM.Decimal), CAST(2.7 as EDM.Deci
   
  下面是 REF 类型定义的示例。  
   
-```  
+```sql  
 USING Microsoft.Samples.Entity  
 Function UnReference(p1 Ref(AdventureWorks.Order)) AS (  
    Deref(p1)  
