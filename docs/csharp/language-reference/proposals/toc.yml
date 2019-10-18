@@ -1,0 +1,80 @@
+- name: 最新功能规范
+  items:
+    - name: 'C# 7.0 规范建议'
+      items:
+        - name: 模式匹配
+          href: ../../../../_csharplang/proposals/csharp-7.0/pattern-matching.md
+        - name: 本地函数
+          href: ../../../../_csharplang/proposals/csharp-7.0/local-functions.md
+        - name: Out 变量声明
+          href: ../../../../_csharplang/proposals/csharp-7.0/out-var.md
+        - name: 引发表达式
+          href: ../../../../_csharplang/proposals/csharp-7.0/throw-expression.md
+        - name: 二进制文本
+          href: ../../../../_csharplang/proposals/csharp-7.0/binary-literals.md
+        - name: 数字分隔符
+          href: ../../../../_csharplang/proposals/csharp-7.0/digit-separators.md
+    - name: 'C# 7.1 规范建议'
+      items:
+        - name: 异步主方法
+          href: ../../../../_csharplang/proposals/csharp-7.1/async-main.md
+        - name: 默认表达式
+          href: ../../../../_csharplang/proposals/csharp-7.1/target-typed-default.md
+        - name: 推导元组名
+          href: ../../../../_csharplang/proposals/csharp-7.1/infer-tuple-names.md
+        - name: 使用泛型的模式匹配
+          href: ../../../../_csharplang/proposals/csharp-7.1/generics-pattern-match.md
+    - name: 'C# 7.2 规范建议'
+      items:
+        - name: 只读引用
+          href: ../../../../_csharplang/proposals/csharp-7.2/readonly-ref.md
+        - name: ref-like 类型的编译时安全性
+          href: ../../../../_csharplang/proposals/csharp-7.2/span-safety.md
+        - name: 非尾随命名参数
+          href: ../../../../_csharplang/proposals/csharp-7.2/non-trailing-named-arguments.md
+        - name: 专用受保护
+          href: ../../../../_csharplang/proposals/csharp-7.2/private-protected.md
+        - name: 条件引用
+          href: ../../../../_csharplang/proposals/csharp-7.2/conditional-ref.md
+        - name: 前导数字分隔符
+          href: ../../../../_csharplang/proposals/csharp-7.2/leading-separator.md
+    - name: 'C# 7.3 规范建议'
+      items:
+        - name: 非托管的泛型类型约束
+          href: ../../../../_csharplang/proposals/csharp-7.3/blittable.md
+        - name: 无论上下文是可移动还是不可移动，索引 `fixed` 字段都不应要求固定
+          href: ../../../../_csharplang/proposals/csharp-7.3/indexing-movable-fixed-fields.md
+        - name: 基于模式的 `fixed` 语句
+          href: ../../../../_csharplang/proposals/csharp-7.3/pattern-based-fixed.md
+        - name: Ref 局部重新分配
+          href: ../../../../_csharplang/proposals/csharp-7.3/ref-local-reassignment.md
+        - name: Stackalloc 数组初始值设定项
+          href: ../../../../_csharplang/proposals/csharp-7.3/stackalloc-array-initializers.md
+        - name: 面向自动实现的属性字段的特性
+          href: ../../../../_csharplang/proposals/csharp-7.3/auto-prop-field-attrs.md
+        - name: 初始化表达式中的表达式变量
+          href: ../../../../_csharplang/proposals/csharp-7.3/expression-variables-in-initializers.md
+        - name: 元组相等 (==) 和元组不等 (!=)
+          href: ../../../../_csharplang/proposals/csharp-7.3/tuple-equality.md
+        - name: 改进了重载候选项
+          href: ../../../../_csharplang/proposals/csharp-7.3/improved-overload-candidates.md
+    - name: 'C# 8.0 规范建议'
+      items:
+        - name: 可为 null 的引用类型 - 建议
+          href: ../../../../_csharplang/proposals/csharp-8.0/nullable-reference-types.md
+        - name: 可为 null 的引用类型 - 规范
+          href: ../../../../_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md
+        - name: 递归模式匹配
+          href: ../../../../_csharplang/proposals/csharp-8.0/patterns.md
+        - name: 默认接口方法
+          href: ../../../../_csharplang/proposals/csharp-8.0/default-interface-methods.md
+        - name: 异步流
+          href: ../../../../_csharplang/proposals/csharp-8.0/async-streams.md
+        - name: 范围
+          href: ../../../../_csharplang/proposals/csharp-8.0/ranges.md
+        - name: 基于模式的 using 和 using 声明
+          href: ../../../../_csharplang/proposals/csharp-8.0/using.md
+        - name: Null 合并分配
+          href: ../../../../_csharplang/proposals/csharp-8.0/null-coalescing-assignment.md
+        - name: 只读实例成员
+          href: ../../../../_csharplang/proposals/csharp-8.0/readonly-instance-members.md

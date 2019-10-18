@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - service contracts [WCF], designing services and transactions
 ms.assetid: 864813ff-2709-4376-912d-f5c8d318c460
-ms.openlocfilehash: 9dfe34406bfda2c16bd2f0cd53796b2fcef07b57
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9110198fa64e43c20e1e6ba0dcf158dddeac93a6
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61967916"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72321148"
 ---
 # <a name="services-and-transactions"></a>服务和事务
-Windows Communication Foundation (WCF) 应用程序可以启动从事务中客户端和服务操作中协调该事务。 客户端可以启动事务和调用多个服务操作，并可确保服务操作作为一个单元提交或回滚。  
+Windows Communication Foundation （WCF）应用程序可以从客户端中启动事务，并在服务操作中协调事务。 客户端可以启动事务和调用多个服务操作，并可确保服务操作作为一个单元提交或回滚。  
   
- 通过为需要客户端事务的服务操作指定 <xref:System.ServiceModel.ServiceBehaviorAttribute> 并设置其 <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionIsolationLevel%2A> 和 <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> 属性，可以启用服务协定中的事务行为。 <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> 参数指定在没有引发未处理异常的情况下，在其中执行方法的事务是否自动完成。 有关这些属性的详细信息，请参阅[ServiceModel 事务特性](../../../docs/framework/wcf/feature-details/servicemodel-transaction-attributes.md)。  
+ 通过为需要客户端事务的服务操作指定 <xref:System.ServiceModel.ServiceBehaviorAttribute> 并设置其 <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionIsolationLevel%2A> 和 <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> 属性，可以启用服务协定中的事务行为。 <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> 参数指定在没有引发未处理异常的情况下，在其中执行方法的事务是否自动完成。 有关这些属性的详细信息，请[参阅。](./feature-details/servicemodel-transaction-attributes.md)  
   
  在服务操作中执行并由资源管理器管理的工作（如记录数据库更新）是客户端事务的一部分。  
   
@@ -59,7 +59,7 @@ public class CalculatorService: ICalculatorLog
 }  
 ```  
   
- 可以启用事务和事务流通过配置客户端和服务绑定，以使用 WS-AtomicTransaction 协议，以及设置[ \<transactionFlow >](../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md)元素`true`，如下所示在下面的示例配置。  
+ 可以通过将客户端和服务绑定配置为使用 WS-ATOMICTRANSACTION 协议，并将[\<transactionFlow >](../configure-apps/file-schema/wcf/transactionflow.md)元素设置为 `true`，来启用事务和事务流，如下面的示例中所示configuration.  
   
 ```xml  
 <client>  
@@ -90,6 +90,6 @@ using (TransactionScope ts = new TransactionScope(TransactionScopeOption.Require
   
 ## <a name="see-also"></a>请参阅
 
-- [System.ServiceModel 中的事务性支持](../../../docs/framework/wcf/feature-details/transactional-support-in-system-servicemodel.md)
-- [事务模型](../../../docs/framework/wcf/feature-details/transaction-models.md)
-- [WS 事务流](../../../docs/framework/wcf/samples/ws-transaction-flow.md)
+- [System.ServiceModel 中的事务性支持](./feature-details/transactional-support-in-system-servicemodel.md)
+- [事务模型](./feature-details/transaction-models.md)
+- [WS 事务流](./samples/ws-transaction-flow.md)

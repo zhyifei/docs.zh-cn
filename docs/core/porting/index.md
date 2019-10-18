@@ -4,12 +4,12 @@ description: 了解移植过程以及发现在将 .NET Framework 项目移植到
 author: cartermp
 ms.date: 09/13/2019
 ms.custom: seodec18
-ms.openlocfilehash: b6c02932b5d9c7ccc2743dd38dddf2904f9c24e4
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: c349f7df3726e7a9814e5ad5e738742ab1bb9ff8
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039665"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522983"
 ---
 # <a name="port-your-code-from-net-framework-to-net-core"></a>将代码从 .NET Framework 移植到 .NET Core
 
@@ -41,9 +41,9 @@ ms.locfileid: "71039665"
 
 以下列表显示了在移植过程中使用可能有所帮助的工具：
 
-* .NET 可移植性分析器 - [命令行工具](https://github.com/Microsoft/dotnet-apiport/releases)或 [Visual Studio 扩展](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer)，一款可就代码在 .NET Framework 与目标 .NET Core 平台之间的可移植性生成报表的工具。 此报表按逐个程序集细分列出了目标 .NET Core 平台上缺少的类型和 API。 有关详细信息，请参阅 [.NET Portability Analyzer](../../standard/analyzers/portability-analyzer.md)。 建议开始移植之前先运行 .NET 可移植性分析器工具，因为它可帮助确定特定目标 .NET 平台公共图面上缺少的 API 中的任何空白。
-* .NET API 分析器 - 一款 Roslyn 分析器，可用于发现在某些平台上引发 <xref:System.PlatformNotSupportedException> 的 .NET Standard API、检测对已弃用的 API 的调用，并发现不同平台上针对 C# API 的潜在兼容性风险。 有关详细信息，请参阅 [.NET API 分析器](../../standard/analyzers/api-analyzer.md)。 在已创建 .NET Core 项目来确定不同平台上的运行时行为差异之后，此分析器非常有用。
-* Reverse Package Search - 一个[有用的 Web 服务](https://packagesearch.azurewebsites.net)，能够实现搜索某一类型并找到包含该类型的包。
+- .NET 可移植性分析器 - [命令行工具](https://github.com/Microsoft/dotnet-apiport/releases)或 [Visual Studio 扩展](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer)，一款可就代码在 .NET Framework 与目标 .NET Core 平台之间的可移植性生成报表的工具。 此报表按逐个程序集细分列出了目标 .NET Core 平台上缺少的类型和 API。 有关详细信息，请参阅 [.NET Portability Analyzer](../../standard/analyzers/portability-analyzer.md)。 建议开始移植之前先运行 .NET 可移植性分析器工具，因为它可帮助确定特定目标 .NET 平台公共图面上缺少的 API 中的任何空白。
+- .NET API 分析器 - 一款 Roslyn 分析器，可用于发现在某些平台上引发 <xref:System.PlatformNotSupportedException> 的 .NET Standard API、检测对已弃用的 API 的调用，并发现不同平台上针对 C# API 的潜在兼容性风险。 有关详细信息，请参阅 [.NET API 分析器](../../standard/analyzers/api-analyzer.md)。 在已创建 .NET Core 项目来确定不同平台上的运行时行为差异之后，此分析器非常有用。
+- Reverse Package Search - 一个[有用的 Web 服务](https://packagesearch.azurewebsites.net)，能够实现搜索某一类型并找到包含该类型的包。
 
 此外，可以尝试使用 [CsprojToVs2017](https://github.com/hvanbakel/CsprojToVs2017) 工具将较小的解决方案或单个项目移植到 .NET Core 项目文件格式。
 
