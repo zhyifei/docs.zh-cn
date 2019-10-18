@@ -1,35 +1,35 @@
 ---
-title: 受保护的友元 (Visual Basic)
+title: 受保护的朋友（Visual Basic）
 ms.date: 05/10/2018
 helpviewer_keywords:
 - Protected Friend keyword [Visual Basic]
 - Protected Friend keyword [Visual Basic], syntax
-ms.openlocfilehash: 331c63dc290d4096e8158f265ee869b47743a273
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d3592feaece1d5ce85ee6e2657d8a2715c4097a3
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62053881"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72524770"
 ---
-# <a name="protected-friend-visual-basic"></a>受保护的友元 (Visual Basic)
+# <a name="protected-friend-visual-basic"></a>受保护的朋友（Visual Basic）
 
-`Protected Friend` 关键字组合是一种成员访问修饰符。 它授予这两[友元](friend.md)访问权限和[受保护](protected.md)上声明的元素，因此它们可从同一程序集，从其自身的类，以及从派生类中的任意位置访问的访问。 您可以指定`Protected Friend`只能在类; 的成员上不能应用`Protected Friend`为结构成员的因为结构不能被继承。
+`Protected Friend` 关键字组合是一种成员访问修饰符。 它在已声明的元素上授予[朋友](friend.md)访问和[受保护](protected.md)的访问，因此可以从同一程序集中的任何位置、从其自己的类和派生类中访问它们。 只能在类的成员上指定 `Protected Friend`;无法将 `Protected Friend` 应用到结构的成员，因为结构不能继承。
 
 > [!NOTE]
-> 在 Visual Studio 中，选择上的 F1 帮助`protected friend`提供有关可以帮助[受保护](protected.md)或[友元](friend.md)。 IDE 选取单个令牌在光标，而不是组合词。
+> 在 Visual Studio 中，选择 `protected friend` 上的 F1 帮助为[受保护](protected.md)的或[朋友](friend.md)提供帮助。 IDE 将选取光标下的单个标记，而不是组合词。
 
 ## <a name="rules"></a>规则
 
-- **声明上下文。** 可以使用`Protected Friend`仅在类级别。 这意味着声明上下文`Protected`元素必须是类，且不能为源文件、 命名空间、 接口、 模块、 结构或过程。 
+**声明上下文。** 只能在类级别使用 `Protected Friend`。 这意味着 `Protected` 元素的声明上下文必须是类，且不能是源文件、命名空间、接口、模块、结构或过程。
 
 ## <a name="see-also"></a>请参阅
 
-- [Public](../../../visual-basic/language-reference/modifiers/public.md)
+- [COMClassAttribute](../../../visual-basic/language-reference/modifiers/public.md)
 - [Protected](../../../visual-basic/language-reference/modifiers/protected.md)
 - [Friend](friend.md)
 - [Private](../../../visual-basic/language-reference/modifiers/private.md)
 - [Private Protected](./private-protected.md)
-- [在 Visual Basic 中的访问级别](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Visual Basic 中的访问级别](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [过程](../../../visual-basic/programming-guide/language-features/procedures/index.md)
 - [结构](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [对象和类](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

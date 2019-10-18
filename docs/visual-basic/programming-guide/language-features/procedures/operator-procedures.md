@@ -11,75 +11,82 @@ helpviewer_keywords:
 - operator overloading
 - operator procedures
 ms.assetid: 8c513d38-246b-4fb7-8b75-29e1364e555b
-ms.openlocfilehash: d62c3480db56b5cbf22c1f3f6ff59ab220a48b09
-ms.sourcegitcommit: 5e05f983e63d5bbd8c0b246d02c6e4f23d2fc1db
+ms.openlocfilehash: 46afbbe411a1adf27960e3c7d9d3ca98046ecec5
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67152036"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72524523"
 ---
 # <a name="operator-procedures-visual-basic"></a>运算符过程 (Visual Basic)
-运算符过程是一系列定义标准运算符的行为的 Visual Basic 语句 (如`*`， `<>`，或`And`) 上的类或结构定义。 这也称为*运算符重载*。  
-  
-## <a name="when-to-define-operator-procedures"></a>何时定义运算符过程  
- 当已定义的类或结构时，可声明为类或结构的类型的变量。 有时此类变量需要参与一个操作作为表达式的一部分。 若要执行此操作，它必须是运算符的操作数。  
-  
- Visual Basic 仅在其基本数据类型上定义运算符。 您可以定义一个运算符的行为或两个操作数均为类或结构的类型。  
-  
- 有关详细信息，请参阅[Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md)。  
-  
-## <a name="types-of-operator-procedure"></a>类型的运算符过程  
- 运算符过程可以是以下类型之一：  
-  
-- 其中的参数是类或结构的类型的一元运算符的定义。  
-  
-- 其中至少一个参数是类或结构的类型的二进制运算符的定义。  
-  
-- 其中的参数是类或结构的类型的转换运算符的定义。  
-  
-- 转换运算符返回的类或结构类型的定义。  
-  
- 转换运算符始终是一元，并始终使用`CType`用作您定义的运算符。  
-  
-## <a name="declaration-syntax"></a>声明语法  
- 声明运算符过程的语法如下所示：  
- 
- ```vb 
- Public Shared [Widening | Narrowing] Operator operatorsymbol ( operand1 [,  operand2 ]) As datatype  
-  
- ' Statements of the operator procedure.
-  
- End Operator
- ```
- 
- 您使用`Widening`或`Narrowing`关键字仅在类型转换运算符。 运算符符号始终是[CType 函数](../../../../visual-basic/language-reference/functions/ctype-function.md)的类型转换运算符。  
-  
- 声明两个操作数定义二元运算符，并声明一个要定义一元运算符，包括类型转换运算符的操作数。 必须声明所有操作数`ByVal`。  
-  
- 相同的方式声明的参数声明每个操作数[Sub 过程](./sub-procedures.md)。  
-  
-### <a name="data-type"></a>数据类型  
- 要在类或已定义的结构上定义运算符，因为至少一个操作数必须是类或结构的数据类型。 有关类型转换运算符，操作数或返回类型必须是类或结构的数据类型。  
-  
- 有关更多详细信息，请参阅[Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md)。  
-  
-## <a name="calling-syntax"></a>调用语法  
- 通过在表达式中使用的运算符符号的隐式调用运算符过程。 提供操作数的相同方式为预定义的运算符。  
-  
- 隐式调用运算符过程的语法如下所示：  
-  
- `Dim testStruct As`  *structurename*  
-  
- `Dim testNewStruct As`  *structurename*  `= testStruct`  *operatorsymbol*  `10`  
-  
-### <a name="illustration-of-declaration-and-call"></a>声明和调用的插图  
- 以下结构将 128 位带符号的整数值存储为构成的高序位，低位部分。 它定义`+`运算符将两个`veryLong`值，并生成生成`veryLong`值。  
-  
- [!code-vb[VbVbcnProcedures#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#23)]  
-  
- 下面的示例演示对典型调用`+`上定义的运算符`veryLong`。  
-  
- [!code-vb[VbVbcnProcedures#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#24)]  
+
+运算符过程是一系列 Visual Basic 语句，用于定义标准运算符（如 `*`、`<>` 或 `And`）在已定义的类或结构中的行为。 这也称为*运算符重载*。
+
+## <a name="when-to-define-operator-procedures"></a>何时定义操作员过程
+
+定义了类或结构后，可以将变量声明为该类或结构的类型。 有时，此类变量需要作为表达式的一部分参与操作。 为此，它必须是运算符的操作数。
+
+Visual Basic 仅定义其基本数据类型的运算符。 如果两个操作数或其中一个操作数为类或结构的类型，则可以定义运算符的行为。
+
+有关详细信息，请参阅[Operator 语句](../../../../visual-basic/language-reference/statements/operator-statement.md)。
+
+## <a name="types-of-operator-procedure"></a>运算符过程的类型
+
+操作员过程可以是以下类型之一：
+
+- 一元运算符的定义，其中的参数是你的类或结构的类型。
+
+- 二元运算符的定义，其中至少有一个参数是你的类或结构的类型。
+
+- 转换运算符的定义，其中的参数属于你的类或结构的类型。
+
+- 返回类或结构的类型的转换运算符的定义。
+
+ 转换运算符始终为一元运算符，并且你始终使用 `CType` 作为正在定义的运算符。
+
+## <a name="declaration-syntax"></a>声明语法
+
+声明运算符过程的语法如下所示：
+
+```vb
+Public Shared [Widening | Narrowing] Operator operatorsymbol ( operand1 [,  operand2 ]) As datatype
+
+' Statements of the operator procedure.
+
+End Operator
+```
+
+仅对类型转换运算符使用 `Widening` 或 `Narrowing` 关键字。 对于类型转换运算符，运算符符号始终是[CType 函数](../../../../visual-basic/language-reference/functions/ctype-function.md)。
+
+您可以声明两个操作数来定义一个二元运算符，并声明一个操作数来定义一元运算符，包括类型转换运算符。 所有操作数都必须 `ByVal` 声明。
+
+声明每个操作数的方式与声明[Sub 过程](./sub-procedures.md)的参数的方式相同。
+
+### <a name="data-type"></a>数据类型
+
+由于你在定义的类或结构上定义运算符，因此至少一个操作数必须是该类或结构的数据类型。 对于类型转换运算符，操作数或返回类型必须是类或结构的数据类型。
+
+有关更多详细信息，请参阅[Operator 语句](../../../../visual-basic/language-reference/statements/operator-statement.md)。
+
+## <a name="calling-syntax"></a>调用语法
+
+通过在表达式中使用运算符符号，可以隐式调用运算符过程。 提供操作数的方式与预定义运算符相同。
+
+对运算符过程的隐式调用的语法如下所示：
+
+`Dim testStruct As`  *structurename*
+
+`Dim testNewStruct As`*structurename* `= testStruct`*operatorsymbol* `10`
+
+### <a name="illustration-of-declaration-and-call"></a>声明和调用的插图
+
+下面的结构将已签名的128位整数值存储为构成的高序位和低序位部分。 它定义 `+` 运算符以添加两个 `veryLong` 值并生成生成的 `veryLong` 值。
+
+[!code-vb[VbVbcnProcedures#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#23)]
+
+下面的示例演示对 `veryLong` 上定义的 `+` 运算符的典型调用。
+
+[!code-vb[VbVbcnProcedures#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#24)]
 
 ## <a name="see-also"></a>请参阅
 

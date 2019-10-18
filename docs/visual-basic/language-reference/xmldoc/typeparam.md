@@ -1,19 +1,19 @@
 ---
-title: <typeparam> (Visual Basic)
+title: <typeparam> （Visual Basic）
 ms.date: 07/20/2015
 helpviewer_keywords:
 - typeparam XML tag
 - <typeparam> XML tag
 ms.assetid: 1bb5ba78-f060-478c-905c-77a2e43639af
-ms.openlocfilehash: 014623be84f9d7eb8a25ac4aadcce450f158c154
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dbd99997fed33c192a2160fb45a739addbae254a
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61940746"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72524622"
 ---
-# <a name="typeparam-visual-basic"></a>\<typeparam > (Visual Basic)
-定义的类型参数名称和说明。  
+# <a name="typeparam-visual-basic"></a>\<typeparam > （Visual Basic）
+定义类型参数名称和说明。  
   
 ## <a name="syntax"></a>语法  
   
@@ -29,12 +29,12 @@ ms.locfileid: "61940746"
  类型参数的说明。  
   
 ## <a name="remarks"></a>备注  
- 使用`<typeparam>`的注释以描述一个类型参数的泛型类型或泛型成员声明中的标记。  
+ 在泛型类型或泛型成员声明的注释中使用 `<typeparam>` 标记来描述一个类型参数。  
   
- 使用 [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) 进行编译可以将文档注释处理到文件中。  
+ 使用 [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) 进行编译以便将文档注释处理到文件中。  
   
 ## <a name="example"></a>示例  
- 此示例使用`<typeparam>`标记来描述`id`参数。  
+ 此示例使用 `<typeparam>` 标记来描述 `id` 参数。  
   
  [!code-vb[VbVbcnXmlDocComments#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#8)]  
   

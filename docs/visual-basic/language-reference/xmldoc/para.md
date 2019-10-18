@@ -1,19 +1,19 @@
 ---
-title: <para> (Visual Basic)
+title: <para> （Visual Basic）
 ms.date: 07/20/2015
 helpviewer_keywords:
 - <para> XML tag
 - para XML tag
 ms.assetid: a3a18b6c-6416-4358-94ec-37b22675fd37
-ms.openlocfilehash: 16d10b2f955a4d9a02075ee4cc40dfa2b18c3541
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: aa4e4c14717b69b9ca4595e20c768a2b91aac1e4
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61940857"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72524743"
 ---
-# <a name="para-visual-basic"></a>\<para > (Visual Basic)
-指定内容的格式设置为一个段落。  
+# <a name="para-visual-basic"></a>\<para > （Visual Basic）
+指定将内容的格式设置为段落。  
   
 ## <a name="syntax"></a>语法  
   
@@ -26,12 +26,12 @@ ms.locfileid: "61940857"
  段落文本。  
   
 ## <a name="remarks"></a>备注  
- `<para>`标记是用于标记内，例如[\<摘要 >](../../../visual-basic/language-reference/xmldoc/summary.md)， [\<备注 >](../../../visual-basic/language-reference/xmldoc/remarks.md)，或[\<返回 >](../../../visual-basic/language-reference/xmldoc/returns.md)，并允许您向文本添加结构。  
+ @No__t_0 标记在标记内使用，如[\<summary >](../../../visual-basic/language-reference/xmldoc/summary.md)、 [\<remarks >](../../../visual-basic/language-reference/xmldoc/remarks.md)或[\<returns](../../../visual-basic/language-reference/xmldoc/returns.md)>，并允许向文本中添加结构。  
   
- 使用 [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) 进行编译可以将文档注释处理到文件中。  
+ 使用 [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) 进行编译以便将文档注释处理到文件中。  
   
 ## <a name="example"></a>示例  
- 此示例使用`<para>`拆分备注部分的标记`UpdateRecord`分成两个段落的方法。  
+ 此示例使用 `<para>` 标记将 `UpdateRecord` 方法的备注部分拆分为两个段落。  
   
  [!code-vb[VbVbcnXmlDocComments#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#6)]  
   

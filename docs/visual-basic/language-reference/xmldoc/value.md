@@ -1,18 +1,18 @@
 ---
-title: <value> (Visual Basic)
+title: <value> （Visual Basic）
 ms.date: 07/20/2015
 helpviewer_keywords:
 - <value> XML tag
 - value XML tag
 ms.assetid: 0b84b02e-9e6d-41b5-a926-0d5dc76dacb5
-ms.openlocfilehash: 2938d485bf6c547c792431b93fc8959c9c36befa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 516ff6ba534478d066b8ca06baee46bdd4b35265
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61940733"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72524606"
 ---
-# <a name="value-visual-basic"></a>\<值 > (Visual Basic)
+# <a name="value-visual-basic"></a>\<value > （Visual Basic）
 指定属性的说明。  
   
 ## <a name="syntax"></a>语法  
@@ -26,12 +26,12 @@ ms.locfileid: "61940733"
  属性的说明。  
   
 ## <a name="remarks"></a>备注  
- 使用`<value>`标记描述的属性。 请注意，当添加在 Visual Studio 开发环境中使用代码向导的属性时，它将添加[\<摘要 >](../../../visual-basic/language-reference/xmldoc/summary.md)标记为新属性。 然后，应手动添加`<value>`标记来描述该属性表示的值。  
+ 使用 `<value>` 标记来描述属性。 请注意，当您使用 Visual Studio 开发环境中的代码向导添加属性时，它将为新属性添加一个[\<summary >](../../../visual-basic/language-reference/xmldoc/summary.md)标记。 然后，你应该手动添加 `<value>` 标记来描述属性表示的值。  
   
- 使用 [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) 进行编译可以将文档注释处理到文件中。  
+ 使用 [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) 进行编译以便将文档注释处理到文件中。  
   
 ## <a name="example"></a>示例  
- 此示例使用`<value>`标记来描述哪些值`Counter`属性保存。  
+ 此示例使用 `<value>` 标记来描述 `Counter` 属性包含的值。  
   
  [!code-vb[VbVbcnXmlDocComments#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#1)]  
   

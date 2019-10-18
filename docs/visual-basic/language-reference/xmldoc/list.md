@@ -1,5 +1,5 @@
 ---
-title: <list> (Visual Basic)
+title: <list> （Visual Basic）
 ms.date: 07/20/2015
 helpviewer_keywords:
 - listheader XML tag
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - item XML tag
 - <term> XML tag
 ms.assetid: ec35fced-d58e-4520-a764-0691256e014b
-ms.openlocfilehash: 7d7b85867f4c701322c5e6c31f2d89ab38fad05d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5d4295d485611e75e8b6c8d8f95e079654f0cfa3
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61940863"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72524746"
 ---
-# <a name="list-visual-basic"></a>\<列表 > (Visual Basic)
+# <a name="list-visual-basic"></a>\<list > （Visual Basic）
 定义列表或表。  
   
 ## <a name="syntax"></a>语法  
@@ -40,25 +40,25 @@ ms.locfileid: "61940863"
   
 ## <a name="parameters"></a>参数  
  `type`  
- 列表的类型。 对于项目符号列表、 编号的列表，或两列的表"表"的"number"必须为"bullet"。  
+ 列表的类型。 必须是项目符号列表的 "项目符号"、编号列表的 "数字" 或两列表的 "表"。  
   
  `term`  
- 仅当使用`type`是"table"。 要定义的术语，说明标记中定义。  
+ 仅在 `type` 为 "table" 时使用。 要定义的术语，在 description 标记中定义。  
   
  `description`  
- 当`type`"bullet"或"数字"`description`是列表中的项时`type`是"table"`description`的定义是`term`。  
+ 当 `type` 为 "项目符号" 或 "数字" 时，当 `type` 为 "table" 时，`description` 是列表中的项，`description` 是 `term` 的定义。  
   
 ## <a name="remarks"></a>备注  
- `<listheader>`块定义的表或定义列表的标题。 在定义表时，只需提供的条目`term`标题中。  
+ @No__t_0 块定义表或定义列表的标题。 定义表时，只需为标题中的 `term` 提供条目。  
   
- 使用指定列表中的每个项`<item>`块。 创建定义列表时，必须指定`term`和`description`。 但是，对于表、 项目符号列表或编号的列表，只需提供的条目`description`。  
+ 列表中的每一项都指定了一个 `<item>` 块。 创建定义列表时，必须同时指定 `term` 和 `description`。 但是，对于表、项目符号列表或编号列表，只需为 `description` 提供条目。  
   
- 列表或表可以有任意多个`<item>`根据需要将阻止。  
+ 列表或表可以具有任意数量的 `<item>` 块（根据需要）。  
   
- 使用 [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) 进行编译可以将文档注释处理到文件中。  
+ 使用 [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) 进行编译以便将文档注释处理到文件中。  
   
 ## <a name="example"></a>示例  
- 此示例使用`<list>`标记以在备注部分中定义的项目符号列表。  
+ 此示例使用 `<list>` 标记在 "备注" 部分中定义项目符号列表。  
   
  [!code-vb[VbVbcnXmlDocComments#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#5)]  
   
