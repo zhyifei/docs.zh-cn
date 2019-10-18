@@ -5,15 +5,15 @@ helpviewer_keywords:
 - <exception> XML tag
 - exception XML tag
 ms.assetid: c0517549-171e-4dae-ab88-a9c1700b6eee
-ms.openlocfilehash: 4e2f441863d6a8677593a257cdb2cc841634d47c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 16ffb4f6b57dabb3650376c913a7d7608a00646d
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61940915"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523929"
 ---
-# <a name="exception-visual-basic"></a>\<异常 > (Visual Basic)
-指定可引发哪些异常。  
+# <a name="exception-visual-basic"></a>\<exception > （Visual Basic）
+指定可以引发的异常。  
   
 ## <a name="syntax"></a>语法  
   
@@ -29,12 +29,12 @@ ms.locfileid: "61940915"
  描述。  
   
 ## <a name="remarks"></a>备注  
- 使用`<exception>`标记来指定可以引发哪些异常。 这是适用于方法定义的标记。  
+ 使用 `<exception>` 标记指定可以引发的异常。 这是适用于方法定义的标记。  
   
- 使用 [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) 进行编译可以将文档注释处理到文件中。  
+ 使用 [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) 进行编译以便将文档注释处理到文件中。  
   
 ## <a name="example"></a>示例  
- 此示例使用`<exception>`标记来描述异常的`IntDivide`函数可以引发。  
+ 此示例使用 `<exception>` 标记来描述 `IntDivide` 函数可能引发的异常。  
   
  [!code-vb[VbVbcnXmlDocComments#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#3)]  
   
