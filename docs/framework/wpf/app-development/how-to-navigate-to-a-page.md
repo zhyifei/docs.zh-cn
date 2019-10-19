@@ -1,5 +1,5 @@
 ---
-title: 如何：转到页面
+title: 如何：导航到页面
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,18 +8,18 @@ helpviewer_keywords:
 - pages [WPF], navigating to
 - navigation [WPF], to page
 ms.assetid: 2a556fc0-748b-417f-a58a-0d05a7afb66f
-ms.openlocfilehash: 38814268c9bb271ad3d88d549fb6ec4c6cbfed40
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 25a0dbbc609c7b6f8f2878d2068e61e492a59c7e
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966031"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582543"
 ---
-# <a name="how-to-navigate-to-a-page"></a>如何：转到页面
-此示例演示了通过多种方式从<xref:System.Windows.Navigation.NavigationWindow>中导航页面的方法。  
+# <a name="how-to-navigate-to-a-page"></a>如何：导航到页面
+此示例演示了几种从 <xref:System.Windows.Navigation.NavigationWindow> 中导航页面的方法。  
   
 ## <a name="example"></a>示例  
- <xref:System.Windows.Navigation.NavigationWindow>使用以下方法之一可以导航到某个页面:  
+ @No__t_0 可以使用以下操作之一导航到某个页面：  
   
 - <xref:System.Windows.Navigation.NavigationWindow.Source%2A> 属性。  
   
@@ -29,7 +29,7 @@ ms.locfileid: "69966031"
  [!code-vb[HOWTONavigationSnippets#NavigateToPageCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTONavigationSnippets/visualbasic/mainwindow.xaml.vb#navigatetopagecode)]  
   
 > [!NOTE]
-> [!INCLUDE[TLA#tla_uri#initcap#plural](../../../../includes/tlasharptla-urisharpinitcapsharpplural-md.md)]可以是相对的, 也可以是绝对的。 有关详细信息，请参阅 [WPF 中的 Pack URI](pack-uris-in-wpf.md)。  
+> 统一资源标识符（Uri）可以是相对的，也可以是绝对的。 有关详细信息，请参阅 [WPF 中的 Pack URI](pack-uris-in-wpf.md)。  
   
 ## <a name="see-also"></a>请参阅
 

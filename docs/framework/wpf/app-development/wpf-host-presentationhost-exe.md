@@ -5,15 +5,15 @@ helpviewer_keywords:
 - WPF Host application [WPF]
 - PresentationHost.exe
 ms.assetid: 3215bfa1-722c-4ac8-a7c5-bdd02d30afbd
-ms.openlocfilehash: c1c26b49a33a58189f66e7b938333f362e467853
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: ec8ec42c174d87834af5d4c651c1e8c8bde3b3e2
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72002160"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72581702"
 ---
 # <a name="wpf-host-presentationhostexe"></a>WPF 主机 (PresentationHost.exe)
-Windows Presentation Foundation （WPF）宿主（Presentationhost.exe）是一种允许在兼容的浏览器（包括 Microsoft Internet Explorer 6 及更高版本）中承载 @no__t 0 应用程序的应用程序。 默认情况下，Windows Presentation Foundation （WPF）主机注册为浏览器承载的 @no__t 0 内容的 shell 和 MIME 处理程序，其中包括：  
+Windows Presentation Foundation （WPF）宿主（Presentationhost.exe）是一种应用程序，它使 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 应用程序可以在兼容的浏览器（包括 Microsoft Internet Explorer 6 及更高版本）中承载。 默认情况下，Windows Presentation Foundation （WPF）主机注册为浏览器承载的 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 内容的 shell 和 MIME 处理程序，其中包括：  
   
 - 松散（未编译）[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 文件 (.xaml)。  
   
@@ -32,11 +32,11 @@ Windows Presentation Foundation （WPF）宿主（Presentationhost.exe）是一�
 ## <a name="usage"></a>用法  
  `PresentationHost.exe [parameters] uri|filename`  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>参数  
   
 |参数|描述|  
 |---------------|-----------------|  
-|filename|要激活的文件的路径。 也可以为 [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]。|  
+|filename|要激活的文件的路径。 也可以是 URI。|  
 |-debug|激活应用程序时，不要从存储中提交或运行它。 此参数仅在激活本地文件时才起作用。|  
 |-debugSecurityZoneURL \<url>|与 URL 值一起使用，以指示 Presentationhost.exe 应该调试应用程序，就像它是从指定的 URL 部署的一样。 此参数可确定部署区域和源站点。|  
 |-embedding|OLE 的必需参数。 如果已指定 `-event` 或 `-debug` 参数，则无需指定 `-embedding` 参数，因为该参数已在内部设置。|  
@@ -59,4 +59,4 @@ Windows Presentation Foundation （WPF）宿主（Presentationhost.exe）是一�
   
 ## <a name="see-also"></a>请参阅
 
-- [安全性](../security-wpf.md)
+- [Security](../security-wpf.md)

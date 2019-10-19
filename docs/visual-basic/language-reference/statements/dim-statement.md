@@ -29,20 +29,20 @@ helpviewer_keywords:
 - Dim statement [Visual Basic], syntax
 - variables [Visual Basic], member and local
 ms.assetid: fae3eca1-f0b2-4400-994b-7aa58a848448
-ms.openlocfilehash: 5a16060efc45cc0642aa6612d02644e252cd53d9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5663935db5fc7ad03d18ff94fae2be9a569290ac
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64751795"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72583426"
 ---
 # <a name="dim-statement-visual-basic"></a>Dim 语句 (Visual Basic)
 
-声明，并为一个或多个变量分配存储空间。
+声明和分配一个或多个变量的存储空间。
 
 ## <a name="syntax"></a>语法
 
-```
+```vb
 [ <attributelist> ] [ accessmodifier ] [[ Shared ] [ Shadows ] | [ Static ]] [ ReadOnly ]
 Dim [ WithEvents ] variablelist
 ```
@@ -51,13 +51,13 @@ Dim [ WithEvents ] variablelist
 
 - `attributelist`
 
-  可选。 请参阅[属性列表](../../../visual-basic/language-reference/statements/attribute-list.md)。
+  可选。 请参阅[特性列表](../../../visual-basic/language-reference/statements/attribute-list.md)。
 
 - `accessmodifier`
 
   可选。 可以是以下各项之一：
 
-  - [Public](../../../visual-basic/language-reference/modifiers/public.md)
+  - [COMClassAttribute](../../../visual-basic/language-reference/modifiers/public.md)
 
   - [Protected](../../../visual-basic/language-reference/modifiers/protected.md)
 
@@ -77,7 +77,7 @@ Dim [ WithEvents ] variablelist
 
 - `Shadows`
 
-  可选。 请参阅[Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)。
+  可选。 请参阅[阴影](../../../visual-basic/language-reference/modifiers/shadows.md)。
 
 - `Static`
 
@@ -89,11 +89,11 @@ Dim [ WithEvents ] variablelist
 
 - `WithEvents`
 
-可选。 指定这些引用可以引发事件的类的实例的对象变量。 请参阅[WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md)。
+可选。 指定这些对象变量引用可以引发事件的类的实例。 请参阅[WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md)。
 
 - `variablelist`
 
-  必需。 此语句中声明的变量的列表。
+  必须的。 在此语句中声明的变量的列表。
 
   `variable [ , variable ... ]`
 
@@ -103,43 +103,43 @@ Dim [ WithEvents ] variablelist
 
   |部件|描述|
   |---|---|
-  |`variablename`|必需。 变量的名称。 请参阅 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。|
-  |`boundslist`|可选。 一个数组变量的每个维度的边界的列表。|
-  |`New`|可选。 创建类的新实例时`Dim`语句在运行时。|
+  |`variablename`|必须的。 变量的名称。 请参阅 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。|
+  |`boundslist`|可选。 数组变量的每个维度的界限列表。|
+  |`New`|可选。 当 `Dim` 语句运行时，创建类的新实例。|
   |`datatype`|可选。 变量的数据类型。|
-  |`With`|可选。 引入了对象初始值设定项列表。|
-  |`propertyname`|可选。 在类中属性的名称要进行的实例。|
-  |`propinitializer`|之后需要`propertyname`=。 一个表达式，计算并分配给属性名。|
-  |`initializer`|可选如果`New`未指定。 计算并将在创建时分配给变量的表达式。|
+  |`With`|可选。 引入对象初始值设定项列表。|
+  |`propertyname`|可选。 要生成其实例的类中的属性的名称。|
+  |`propinitializer`|@No__t_0 = 后必需。 计算并分配给属性名称的表达式。|
+  |`initializer`|如果未指定 `New`，则为可选。 创建变量时计算并分配给该变量的表达式。|
 
 ## <a name="remarks"></a>备注
 
-Visual Basic 编译器使用`Dim`语句来确定变量的数据类型和其他信息，如哪些代码可以访问该变量。 下面的示例声明一个变量来保存`Integer`值。
+Visual Basic 编译器使用 `Dim` 语句来确定变量的数据类型和其他信息，例如哪些代码可以访问该变量。 下面的示例声明一个变量以保存 `Integer` 值。
 
 ```vb
 Dim numberOfStudents As Integer
 ```
 
-您可以指定任何数据类型或枚举、 结构、 类或接口的名称。
+您可以指定任何数据类型或枚举、结构、类或接口的名称。
 
 ```vb
 Dim finished As Boolean
 Dim monitorBox As System.Windows.Forms.Form
 ```
 
-对于引用类型，你使用`New`关键字来创建类的新实例或结构的指定数据类型。 如果使用`New`，不使用初始值设定项表达式。 相反，你提供参数，如有必要，创建该变量的类的构造函数。
+对于引用类型，可以使用 `New` 关键字创建由数据类型指定的类或结构的新实例。 如果使用 `New`，则不使用初始值设定项表达式。 相反，可以向从中创建变量的类的构造函数提供参数（如果需要）。
 
 ```vb
 Dim bottomLabel As New System.Windows.Forms.Label
 ```
 
-您可以声明过程、 块、 类、 结构或模块中的变量。 不能声明的源文件、 命名空间或接口中的变量。 有关详细信息，请参阅[声明上下文和默认访问级别](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)。
+您可以在过程、块、类、结构或模块中声明变量。 不能在源文件、命名空间或接口中声明变量。 有关详细信息，请参阅[声明上下文和默认访问级别](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)。
 
-在模块级别，在任何过程中，外部声明的变量是*成员变量*或*字段*。 成员变量是在整个其类、 结构或模块范围内。 在过程级别声明的变量是*局部变量*。 本地变量是仅在它们的过程或块的作用域中。
+在模块级别，在任何过程外部声明的变量是*成员变量*或*字段*。 成员变量在其类、结构或模块中的作用域内。 在过程级别声明的变量是*局部变量*。 局部变量仅在其过程或块范围内。
 
-以下访问修饰符用于声明变量的过程之外： `Public`， `Protected`， `Friend`， `Protected Friend`，和`Private`。 有关详细信息，请参阅[访问 Visual Basic 中的级别](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。
+以下访问修饰符用于声明过程之外的变量： `Public`、`Protected`、`Friend`、`Protected Friend` 和 `Private`。 有关详细信息，请参阅[Visual Basic 中的访问级别](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。
 
-`Dim`关键字是可选的如果指定任何下列修饰符通常省略： `Public`， `Protected`， `Friend`， `Protected Friend`， `Private`， `Shared`， `Shadows`， `Static`，`ReadOnly`，或`WithEvents`。
+如果指定以下任何修饰符，则 `Dim` 关键字是可选的，通常省略此关键字： `Public`、`Protected`、`Friend`、`Protected Friend`、`Private`、`Shared`、`Shadows`、`Static`、`ReadOnly` 或 0。
 
 ```vb
 Public maximumAllowed As Double
@@ -148,18 +148,18 @@ Private salary As Decimal
 Static runningTotal As Integer
 ```
 
-如果`Option Explicit`是启用 （默认值），编译器需要的声明为使用每个变量。 有关详细信息，请参阅[Option Explicit 语句](../../../visual-basic/language-reference/statements/option-explicit-statement.md)。
+如果 `Option Explicit` 为 on （默认值），则编译器要求使用的每个变量的声明。 有关详细信息，请参阅[Option Explicit 语句](../../../visual-basic/language-reference/statements/option-explicit-statement.md)。
 
-## <a name="specifying-an-initial-value"></a>指定一个初始值
+## <a name="specifying-an-initial-value"></a>指定初始值
 
-在创建时，可以将值分配给一个变量。 对于值类型，你使用*初始值设定项*来提供要分配给该变量的表达式。 该表达式的计算结果必须为一个常量，它可以在编译时计算。
+可以在创建变量时为该变量分配值。 对于值类型，使用*初始值设定项*提供要分配给变量的表达式。 表达式的计算结果必须为可在编译时计算的常数。
 
 ```vb
 Dim quantity As Integer = 10
 Dim message As String = "Just started"
 ```
 
-如果指定一个初始值设定项，并且在未指定数据类型`As`子句中，*类型推理*用于推断从初始值设定项的数据类型。 在以下示例中，同时`num1`和`num2`强类型为整数。 在第二个声明中，类型推理来推断值 3 中的类型。
+如果指定了初始值设定项并且 `As` 子句中未指定数据类型，则使用*类型推理*从初始值设定项推断数据类型。 在下面的示例中，`num1` 和 `num2` 都作为整数强类型化。 在第二个声明中，类型推理从值3推断类型。
 
 ```vb
 ' Use explicit typing.
@@ -169,58 +169,58 @@ Dim num1 As Integer = 3
 Dim num2 = 3
 ```
 
-在过程级别应用类型推断。 它不适用于类、 结构、 模块或接口中的过程之外。 类型推理的详细信息，请参阅[Option Infer 语句](../../../visual-basic/language-reference/statements/option-infer-statement.md)并[本地类型推断](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)。
+类型推理适用于过程级别。 它不会应用于类、结构、模块或接口中的过程外部。 有关类型推理的详细信息，请参阅[选项推断语句](../../../visual-basic/language-reference/statements/option-infer-statement.md)和[局部类型推理](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)。
 
-如果未指定数据类型或初始值设定项，则会发生什么情况的信息，请参阅[默认数据类型和值](../../../visual-basic/language-reference/statements/dim-statement.md#default)本主题中更高版本。
+有关未指定数据类型或初始值设定项时所发生情况的信息，请参阅本主题后面的[默认数据类型和值](../../../visual-basic/language-reference/statements/dim-statement.md#default)。
 
-可以使用*对象初始值设定项*声明命名和匿名类型的实例。 下面的代码创建的实例`Student`类，并使用对象初始值设定项来初始化属性。
+可以使用*对象初始值设定项*声明命名类型和匿名类型的实例。 下面的代码创建 `Student` 类的实例，并使用对象初始值设定项来初始化属性。
 
 ```vb
 Dim student1 As New Student With {.First = "Michael",
                                   .Last = "Tucker"}
 ```
 
-有关对象初始值设定项的详细信息，请参阅[如何：使用对象初始值设定项声明对象](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md)，[对象初始值设定项：命名和匿名类型](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)，并[匿名类型](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)。
+有关对象初始值设定项的详细信息，请参阅[如何：使用对象初始值设定项声明对象](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md)、[对象初始值设定项：命名类型和匿名](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)类型和[匿名类型](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)。
 
 ## <a name="declaring-multiple-variables"></a>声明多个变量
 
-您可以声明多个变量在一个声明语句中，使用括号指定每个，并在每个数组名的变量名称。 以逗号分隔多个变量。
+可以在一个声明语句中声明多个变量，并为每个变量指定变量名称，并在每个数组名称后面加上括号。 以逗号分隔多个变量。
 
 ```vb
 Dim lastTime, nextTime, allTimes() As Date
 ```
 
-如果要声明多个变量与一个`As`子句，不能提供该组的变量的初始值设定项。
+如果使用一个 `As` 子句声明多个变量，则不能为该变量组提供初始值设定项。
 
-可以通过使用单独指定不同的数据类型为不同的变量`As`子句为每个声明的变量。 每个变量将在第一个指定的数据类型`As`子句后遇到其`variablename`一部分。
+您可以为不同的变量指定不同的数据类型，方法是为每个声明的变量使用单独的 `As` 子句。 每个变量都采用在其 `variablename` 部分后遇到的第一个 `As` 子句中指定的数据类型。
 
 ```vb
 Dim a, b, c As Single, x, y As Double, i As Integer
 ' a, b, and c are all Single; x and y are both Double
 ```
 
-## <a name="arrays"></a>数组
+## <a name="arrays"></a>阵列
 
-您可以声明一个变量来保存*数组*，后者可以包含多个值。 若要指定该变量包含一个数组，请遵循其`variablename`立即使用括号。 有关数组的详细信息，请参阅[数组](../../../visual-basic/programming-guide/language-features/arrays/index.md)。
+您可以声明一个变量来保存一个*数组*，该数组可以包含多个值。 若要指定某个变量包含数组，请在其 `variablename` 后跟括号。 有关数组的详细信息，请参阅[数组](../../../visual-basic/programming-guide/language-features/arrays/index.md)。
 
-您可以指定上限和每个维度的数组的下限。 若要执行此操作，包括`boundslist`在括号内。 为每个维度`boundslist`指定上限和下限 （可选）。 下限始终为零，或不指定它是否。 每个索引可能会不同于为 0 到其上界值。
+您可以指定数组的每个维度的下限和上限。 为此，请在括号内包含一个 `boundslist`。 对于每个维度，`boundslist` 指定上限，还可以选择下限。 无论是否指定，下限始终为零。 每个索引的大小均为0到其上限值。
 
-以下两个语句是等效的。 每个语句声明数组 21`Integer`元素。 在访问数组时，索引可能会不同于 0 到 20。
+下面两个语句是等效的。 每个语句声明21个 `Integer` 元素的数组。 访问数组时，索引的取值可能为0到20。
 
 ```vb
 Dim totals(20) As Integer
 Dim totals(0 To 20) As Integer
 ```
 
-下面的语句声明的类型的二维数组`Double`。 数组具有 6 列 (5 + 1) 每个 4 行 (3 + 1)。 请注意，上限表示索引不维的长度的最大可能值。 维的长度是上边界加 1。
+下面的语句声明一个 `Double` 类型的二维数组。 数组具有4个行（3 + 1）每个行（5 + 1）。 请注意，上限表示索引的可能的最大值，而不是维度的长度。 维度的长度为上限加1。
 
 ```vb
 Dim matrix2(3, 5) As Double
 ```
 
-数组可以包含 1 到 32 维数。
+数组的维数可以是1到32。
 
-您可以将所有边界的数组声明中留空。 如果执行此操作时，数组具有您指定的维数，但不会被初始化。 它的值为`Nothing`直到至少初始化的某些元素。 `Dim`语句必须指定所有维度或任何维度的边界。
+可以在数组声明中保留所有界限为空。 如果执行此操作，数组将具有指定的维度数，但未初始化。 它的值为 `Nothing`，直到至少初始化其部分元素。 @No__t_0 语句必须为所有维度或无维度指定界限。
 
 ```vb
 ' Declare an array with blank array bounds.
@@ -229,21 +229,21 @@ Dim messages() As String
 ReDim messages(4)
 ```
 
-如果数组具有多个维度，必须包含以逗号分隔括号来表示的维度数。
+如果数组具有多个维度，则必须在括号之间包含逗号以指示维数。
 
 ```vb
 Dim oneDimension(), twoDimensions(,), threeDimensions(,,) As Byte
 ```
 
-您可以声明*零长度数组*通过声明一个数组的维数是-1。 包含一个零长度数组的变量不具有值`Nothing`。 零长度数组所需的某些公共语言运行时函数。 如果您尝试访问此类数组，则会发生运行时异常。 有关详细信息，请参阅[数组](../../../visual-basic/programming-guide/language-features/arrays/index.md)。
+可以通过将数组的一个维度声明为-1，来声明*长度为零的数组*。 保存零长度数组的变量不具有 `Nothing` 的值。 某些公共语言运行时函数需要零长度数组。 如果尝试访问此类数组，则会发生运行时异常。 有关详细信息，请参阅 [array](../../../visual-basic/programming-guide/language-features/arrays/index.md)。
 
-可以通过使用数组文本初始化数组的值。 若要这样做，括起来与大括号初始化值 (`{}`)。
+可以通过使用数组文本初始化数组的值。 为此，请将初始化值用大括号（`{}`）括起来。
 
 ```vb
 Dim longArray() As Long = {0, 1, 2, 3}
 ```
 
-对于多维数组，每个单独的维度的初始化括在大括号外部的维度中。 按行优先的顺序指定了元素。
+对于多维数组，每个单独维度的初始化都括在外部维度中的大括号内。 元素按行主顺序指定。
 
 ```vb
 Dim twoDimensions(,) As Integer = {{0, 1, 2}, {10, 11, 12}}
@@ -251,75 +251,75 @@ Dim twoDimensions(,) As Integer = {{0, 1, 2}, {10, 11, 12}}
 
 有关数组文本的详细信息，请参阅[数组](../../../visual-basic/programming-guide/language-features/arrays/index.md)。
 
-## <a name="default"></a> 默认数据类型和值
+## <a name="default"></a>默认数据类型和值
 
 下表描述了指定 `Dim` 语句中数据类型和初始值设定项的各种组合的结果。
 
 |是否指定数据类型？|是否指定初始值设定项？|示例|结果|
 |---|---|---|---|
-|否|否|`Dim qty`|如果[Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)是 off （默认），将变量设置为`Nothing`。<br /><br /> 如果 `Option Strict` 处于打开状态，则发生编译时错误。|
-|否|是|`Dim qty = 5`|如果[Option Infer](../../../visual-basic/language-reference/statements/option-infer-statement.md)是启用 （默认值），则变量采用数据类型的初始值设定项。 请参阅[局部类型推理](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)。<br /><br /> 如果 `Option Infer` 和 `Option Strict` 均处于关闭状态，则变量采用 `Object` 的数据类型。<br /><br /> 如果 `Option Infer` 处于关闭状态但 `Option Strict` 处于打开状态，则发生编译时错误。|
-|是|否|`Dim qty As Integer`|将变量初始化为数据类型的默认值。 请参阅本节后面的表。|
+|No|No|`Dim qty`|如果[Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)为 off （默认值），则变量设置为 `Nothing`。<br /><br /> 如果 `Option Strict` 处于打开状态，则发生编译时错误。|
+|No|是|`Dim qty = 5`|如果[选项推断](../../../visual-basic/language-reference/statements/option-infer-statement.md)为 on （默认值），则变量使用初始值设定项的数据类型。 请参阅[局部类型推理](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)。<br /><br /> 如果 `Option Infer` 和 `Option Strict` 均处于关闭状态，则变量采用 `Object` 的数据类型。<br /><br /> 如果 `Option Infer` 处于关闭状态但 `Option Strict` 处于打开状态，则发生编译时错误。|
+|是|No|`Dim qty As Integer`|将变量初始化为数据类型的默认值。 请参阅本部分后面的表。|
 |是|是|`Dim qty  As Integer = 5`|如果初始值设定项的数据类型不可转换为指定数据类型，则会发生编译时错误。|
 
-如果你指定的数据类型，但不是指定初始值设定项，Visual Basic 将变量初始化为其数据类型的默认值。 下表显示的默认初始化值。
+如果指定数据类型但未指定初始值设定项，Visual Basic 会将变量初始化为其数据类型的默认值。 下表显示了默认的初始化值。
 
 |数据类型|默认值|
 |---|---|
-|所有数值类型 (包括`Byte`和`SByte`)|0|
-|`Char`|二进制 0|
-|所有的引用类型 (包括`Object`， `String`，和所有数组)|`Nothing`|
+|所有数值类型（包括 `Byte` 和 `SByte`）|0|
+|`Char`|二进制0|
+|所有引用类型（包括 `Object`、`String` 和所有数组）|`Nothing`|
 |`Boolean`|`False`|
-|`Date`|12:00 AM 的 1 年 1 月 1 日 (0001 年 01 月 01 日上午 12:00:00)|
+|`Date`|12:00 年1月1日上午（01/01/0001 12:00:00 AM）|
 
-就像一个单独的变量初始化结构的每个元素。 如果声明数组的长度，但不是初始化它的元素，每个元素将初始化，就好像单独的变量。
+将结构的每个元素初始化为一个单独的变量。 如果声明数组的长度，但不初始化其元素，则会将每个元素初始化为单独的变量。
 
-## <a name="static-local-variable-lifetime"></a>静态本地变量的生存期
+## <a name="static-local-variable-lifetime"></a>静态局部变量生存期
 
-一个`Static`本地变量的生存期比在其中声明该过程的生存期更长。 边界的变量的生存期取决于声明该过程以及它是否`Shared`。
+@No__t_0 局部变量的生存期比声明它的过程长。 变量生存期的边界取决于声明过程的位置以及是否 `Shared`。
 
-|过程声明|初始化变量|变量会停止现有|
+|过程声明|变量已初始化|变量停止了现有|
 |---|---|---|
-|在模块中|第一次调用该过程|当您的程序停止执行|
-|过程是在类或结构中， `Shared`|第一次调用该过程的特定实例上或在类或结构本身上|当您的程序停止执行|
-|过程不是在类或结构中， `Shared`|第一次特定实例上调用该过程|该实例进行垃圾回收 (GC) 的发布时|
+|在模块中|第一次调用该过程时|当程序停止执行时|
+|在类或结构中，过程是 `Shared`|第一次在特定实例或类或结构自身上调用该过程时|当程序停止执行时|
+|在类或结构中，过程不 `Shared`|第一次在特定实例上调用该过程时|当发布实例进行垃圾回收（GC）时|
 
 ## <a name="attributes-and-modifiers"></a>特性和修饰符
 
-可以将特性应用仅到成员变量上，而不是本地变量。 属性提供信息对程序集的元数据，这并不用于临时存储 （如本地变量） 有意义。
+仅可将属性应用于成员变量，而不能应用于局部变量。 特性向程序集的元数据提供信息，这对于临时存储（如局部变量）没有意义。
 
-在模块级别不能使用`Static`修饰符来声明变量的成员。 在过程级别不能使用`Shared`， `Shadows`， `ReadOnly`， `WithEvents`，或任何访问修饰符来声明本地变量。
+在模块级别，不能使用 `Static` 修饰符来声明成员变量。 在过程级别，不能使用 `Shared`、`Shadows`、`ReadOnly`、`WithEvents` 或任何访问修饰符来声明局部变量。
 
-您可以指定哪些代码可以访问的变量通过提供`accessmodifier`。 类和模块成员变量 （任何过程之外） 默认为私有访问和结构成员变量默认为公共访问权限。 您可以调整其访问级别和访问修饰符。 （过程） 中的本地变量上，不能使用访问修饰符。
+可以通过提供 `accessmodifier` 来指定哪些代码可以访问变量。 类和模块成员变量（在任何过程外部）默认为私有访问，结构成员变量默认为公共访问。 您可以使用访问修饰符调整其访问级别。 不能对本地变量（在过程中）使用访问修饰符。
 
-您可以指定`WithEvents`仅在成员变量上，而不是上一个过程中本地变量。 如果指定`WithEvents`，该变量的数据类型必须是特定的类类型，不`Object`。 不能声明具有数组`WithEvents`。 有关事件的详细信息，请参阅[事件](../../../visual-basic/programming-guide/language-features/events/index.md)。
+只能在成员变量上指定 `WithEvents`，而不能指定过程中的局部变量。 如果指定 `WithEvents`，则变量的数据类型必须是特定的类类型，而不是 `Object`。 不能使用 `WithEvents` 声明数组。 有关事件的详细信息，请参阅[事件](../../../visual-basic/programming-guide/language-features/events/index.md)。
 
 > [!NOTE]
-> 代码类之外，结构或模块必须限定成员变量的名称，并且该类、 结构或模块的名称。 过程或块不能引用任何本地变量在该过程或块之外的代码。
+> 类、结构或模块外的代码必须使用该类、结构或模块的名称来限定成员变量的名称。 过程或块外的代码不能引用该过程或块中的任何局部变量。
 
-## <a name="releasing-managed-resources"></a>释放托管的资源
+## <a name="releasing-managed-resources"></a>释放托管资源
 
-.NET Framework 垃圾回收器释放托管资源而无需您采取任何额外的编码。 但是，您可以强制而不是等待垃圾回收器托管的资源可供使用。
+.NET Framework 垃圾回收器会释放托管资源，而不会对你的部分进行任何额外编码。 但是，您可以强制处置托管资源，而不是等待垃圾回收器。
 
-如果一个类保存到的特别有价值且稀缺资源 （例如数据库连接或文件句柄） 上，可能不希望等到下一步的垃圾回收，以清理不再使用的类实例。 一个类可以实现<xref:System.IDisposable>接口，以提供一种方法来释放垃圾回收之前的资源。 实现该接口的类公开`Dispose`可以调用来强制立即释放资源有价值的方法。
+如果类包含在特别宝贵的资源（例如数据库连接或文件句柄）上，则您可能不希望等到下一次垃圾回收来清理不再使用的类实例。 类可以实现 <xref:System.IDisposable> 接口，以提供一种在垃圾回收之前释放资源的方法。 实现该接口的类公开了一个 `Dispose` 方法，可以调用该方法来强制立即释放有价值的资源。
 
-`Using`语句可获取资源、 执行一组语句，然后释放资源的过程进行自动化。 但是，资源必须实现<xref:System.IDisposable>接口。 有关详细信息，请参阅 [Using 语句](../../../visual-basic/language-reference/statements/using-statement.md)。
+@No__t_0 语句会自动获取资源，执行一组语句，然后释放资源。 但是，资源必须实现 <xref:System.IDisposable> 接口。 有关详细信息，请参阅 [Using 语句](../../../visual-basic/language-reference/statements/using-statement.md)。
 
 ## <a name="example"></a>示例
 
-下面的示例通过使用声明变量`Dim`语句使用各种选项。
+下面的示例通过使用带有各种选项的 `Dim` 语句来声明变量。
 
 [!code-vb[VbVbalrStatements#141](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class11.vb#141)]
 
 ## <a name="example"></a>示例
 
-以下示例列出 1 到 30 之间的素数。 本地变量的作用域是在代码注释中所述。
+下面的示例列出了介于1和30之间的质数。 在代码注释中介绍了局部变量的作用域。
 
 [!code-vb[VbVbalrStatements#142](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class11.vb#142)]
 
 ## <a name="example"></a>示例
 
-在以下示例中，`speedValue`在类级别声明变量。 `Private`关键字用于声明变量。 中的任何过程可以访问该变量`Car`类。
+在下面的示例中，在类级别声明 `speedValue` 变量。 @No__t_0 关键字用于声明变量。 @No__t_0 类中的任何过程都可以访问该变量。
 
 [!code-vb[VbVbalrStatements#144](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class11.vb#144)]
 
@@ -335,8 +335,8 @@ Dim twoDimensions(,) As Integer = {{0, 1, 2}, {10, 11, 12}}
 - [“项目设计器”->“编译”页 (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)
 - [变量声明](../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
 - [数组](../../../visual-basic/programming-guide/language-features/arrays/index.md)
-- [对象初始值设定项：命名和匿名类型](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
+- [对象初始值设定项：命名类型和匿名类型](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
 - [匿名类型](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
-- [对象初始值设定项：命名和匿名类型](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
+- [对象初始值设定项：命名类型和匿名类型](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
 - [如何：使用对象初始值设定项声明对象](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md)
 - [局部类型推理](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)

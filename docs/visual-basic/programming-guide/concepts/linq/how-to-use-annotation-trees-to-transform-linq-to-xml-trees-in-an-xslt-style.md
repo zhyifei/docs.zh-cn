@@ -2,12 +2,12 @@
 title: 如何：使用批注以 XSLT 样式转换 LINQ to XML 树（Visual Basic）
 ms.date: 07/20/2015
 ms.assetid: 08e91fa2-dac2-4463-9ef1-87b1ac3fa890
-ms.openlocfilehash: b950f823b65299689f4ed829138a6689f6789c18
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: b8f15c4dc6016e48619d26e7cc8717a2a3c5acd5
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395959"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72581980"
 ---
 # <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-visual-basic"></a>如何：使用批注以 XSLT 样式转换 LINQ to XML 树（Visual Basic）
 
@@ -85,7 +85,7 @@ End Module
 
 ## <a name="a-more-complicated-transform"></a>更复杂的转换
 
- 下面的示例对树进行查询并计算 `Data` 元素的平均值和总和，并将它们作为新元素添加到树中。
+下面的示例对树进行查询并计算 `Data` 元素的平均值和总和，并将它们作为新元素添加到树中。
 
 ```vb
 Imports <xmlns:xf="http://www.microsoft.com/LinqToXmlTransform/2007">
@@ -133,10 +133,10 @@ Module Module1
         Console.WriteLine("----------------")
         Console.WriteLine(newData)
     End Sub
-End Module 
+End Module
 ```
 
- 该示例产生下面的输出：
+该示例产生下面的输出：
 
 ```console
 Before Transform
@@ -165,7 +165,7 @@ After Transform
 该函数的伪代码非常简单：
 
 > 函数采用 System.xml.linq.xelement> 作为参数，并返回 System.xml.linq.xelement>。
-> 
+>
 > 如果元素具有 System.xml.linq.xelement> 批注，则返回新的 System.xml.linq.xelement>：
 >
 > - 新 System.xml.linq.xelement> 的名称是 annotation 元素的名称。
@@ -338,7 +338,7 @@ Module Module1
         Console.WriteLine("----------------")
         Console.WriteLine(newRoot)
     End Sub
-End Module 
+End Module
 ```
 
 该示例产生下面的输出：

@@ -2,24 +2,24 @@
 title: 静态编译的查询（LINQ to XML）（Visual Basic）
 ms.date: 07/20/2015
 ms.assetid: 3f4825c7-c3b0-48da-ba4e-8e97fb2a2f34
-ms.openlocfilehash: ed701f57821c18f4cfa75a3bb7cd5a652ab384d8
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: f295e8aa8b747b90933d6a35e5352f66740ef071
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373735"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582903"
 ---
 # <a name="statically-compiled-queries-linq-to-xml-visual-basic"></a>静态编译的查询（LINQ to XML）（Visual Basic）
 
 LINQ to XML 的一个最重要的性能优势（与 <xref:System.Xml.XmlDocument> 相比）为：LINQ to XML 中的查询是静态编译的，而 XPath 查询则必须在运行时进行解释。 此功能是 LINQ to XML 的内置功能，因此您不必执行额外的步骤即可利用此功能，但在这两项技术之间做出选择时了解它们的区别将很有帮助。 本主题解释了其中的区别。
 
-## <a name="statically-compiled-queries-vs-xpath"></a>静态编译的查询与XPath
+## <a name="statically-compiled-queries-vs-xpath"></a>静态编译的查询与 XPath 对比
 
 下面的示例演示如何获取具有指定名称并包含带有指定值的属性的子代元素。
 
 以下是等效的 XPath 表达式：
 
-```
+```vb
 //Address[@Type='Shipping']
 ```
 
@@ -46,7 +46,7 @@ For Each el In list1
 Next
 ```
 
-<xref:System.Linq.Enumerable.Where%2A> 方法为扩展方法。 有关详细信息，请参阅[扩展方法](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md) 由于 <xref:System.Linq.Enumerable.Where%2A> 是一个扩展方法，因此会将上面的查询视为按以下形式编写的查询进行编译：
+<xref:System.Linq.Enumerable.Where%2A> 方法为扩展方法。 有关详细信息，请参阅[扩展方法](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)。 由于 <xref:System.Linq.Enumerable.Where%2A> 是一个扩展方法，因此会将上面的查询视为按以下形式编写的查询进行编译：
 
 ```vb
 Dim po = XDocument.Load("PurchaseOrders.xml")

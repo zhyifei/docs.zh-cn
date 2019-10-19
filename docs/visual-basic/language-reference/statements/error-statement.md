@@ -1,5 +1,5 @@
 ---
-title: Error 语句 (Visual Basic)
+title: Error 语句（Visual Basic）
 ms.date: 07/20/2015
 f1_keywords:
 - vb.error
@@ -10,57 +10,57 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], codes
 - errors [Visual Basic], simulating
 ms.assetid: 85cd5c59-5224-4f02-aaf5-fcfefab17a29
-ms.openlocfilehash: 7b926214d3be7f5f57783a8599acf1bb1042f956
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c7b2adfe7f6b6ff5e89598cb318a90c51595ff6f
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69944446"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72583381"
 ---
 # <a name="error-statement"></a>Error 语句
 模拟出现错误的情况。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```vb  
 Error errornumber  
 ```  
   
 ## <a name="parts"></a>部件  
  `errornumber`  
- 必需。 可以是任何有效的错误号。  
+ 必须的。 可以是任何有效的错误号。  
   
 ## <a name="remarks"></a>备注  
- 支持`Error`语句, 以便向后兼容。 在新代码中, 特别是在创建对象时`Err` , 使用`Raise`对象的方法来生成运行时错误。  
+ 支持 `Error` 语句，以便向后兼容。 在新代码中，特别是在创建对象时，使用 `Err` 对象的 `Raise` 方法来生成运行时错误。  
   
- 如果`errornumber`定义了`Error` , 则在为`Err`对象的属性分配以下默认值之后, 语句将调用错误处理程序:  
+ 如果定义了 `errornumber`，则 `Error` 语句将在为该对象的 `Err` 属性分配以下默认值之后调用错误处理程序：  
   
-|属性|值|  
+|Property|“值”|  
 |--------------|-----------|  
-|`Number`|指定为`Error`语句的参数的值。 可以是任何有效的错误号。|  
+|`Number`|指定为 `Error` 语句的参数的值。 可以是任何有效的错误号。|  
 |`Source`|当前 Visual Basic 项目的名称。|  
-|`Description`|对应于指定`Error` `Number`的函数的返回值的字符串表达式 (如果此字符串存在)。 如果该字符串不存在, `Description`则包含一个长度为零的字符串 ("")。|  
+|`Description`|对应于指定的 `Number` 的 `Error` 函数的返回值的字符串表达式（如果此字符串存在）。 如果字符串不存在，`Description` 包含一个长度为零的字符串（""）。|  
 |`HelpFile`|适当的 Visual Basic 帮助文件的完全限定驱动器、路径和文件名。|  
-|`HelpContext`|对应于`Number`属性的错误的相应 Visual Basic 帮助文件上下文 ID。|  
+|`HelpContext`|对应于 `Number` 属性的错误的相应 Visual Basic 帮助文件上下文 ID。|  
 |`LastDLLError`|无.|  
   
- 如果没有错误处理程序, 或者未启用任何错误处理程序, 则将创建错误消息并将`Err`其显示在对象属性中。  
+ 如果没有错误处理程序，或者未启用任何错误处理程序，则将创建一个错误消息并将其显示在 `Err` 对象属性中。  
   
 > [!NOTE]
-> 某些 Visual Basic 主机应用程序无法创建对象。 请参阅宿主应用程序的文档, 以确定它是否可以创建类和对象。  
+> 某些 Visual Basic 主机应用程序无法创建对象。 请参阅宿主应用程序的文档，以确定它是否可以创建类和对象。  
   
 ## <a name="example"></a>示例  
- 此示例使用`Error`语句生成错误号11。  
+ 此示例使用 `Error` 语句生成错误号11。  
   
-```  
+```vb  
 On Error Resume Next   ' Defer error handling.  
 Error 11   ' Simulate the "Division by zero" error.  
 ```  
   
 ## <a name="requirements"></a>要求  
- **命名空间：** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
+ **命名空间：** [Microsoft](../../../visual-basic/language-reference/runtime-library-members.md)  
   
- **件**Visual Basic 运行库（在 Microsoft.VisualBasic.dll 中）  
+ **程序集：** Visual Basic 运行时库（在 Microsoft. .dll 中）  
   
 ## <a name="see-also"></a>请参阅
 

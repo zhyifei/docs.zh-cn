@@ -9,40 +9,40 @@ helpviewer_keywords:
 - Return statement [Visual Basic]
 - expressions [Visual Basic], returning control to
 ms.assetid: ac86e7f0-5a67-42c3-9834-0e0381efa3ec
-ms.openlocfilehash: af49ea95d7f9d01072190ac3ccf6ba2f1041347e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: edaaf09f5a984344f7e89c9da988c529774934e9
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69957678"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72583254"
 ---
 # <a name="return-statement-visual-basic"></a>Return 语句 (Visual Basic)
-将控件返回到调用`Function`、 `Sub`、 `Get`、 `Set`或`Operator`过程的代码。  
+将控件返回到调用 `Function`、`Sub`、`Get`、`Set` 或 `Operator` 过程的代码。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```vb  
 Return  
--or-  
+' -or-  
 Return expression  
 ```  
   
 ## <a name="part"></a>部件  
  `expression`  
- 在、 `Function` `Get`或过程中是必需的。`Operator` 表示要返回到调用代码的值的表达式。  
+ 在 `Function`、`Get` 或 `Operator` 过程中是必需的。 表示要返回到调用代码的值的表达式。  
   
 ## <a name="remarks"></a>备注  
- `Return` `Exit Sub` `Exit Property` `expression`在或过程`Set`中, 语句等效于或语句, 不能提供。 `Sub`  
+ 在 `Sub` 或 `Set` 过程中，`Return` 语句等效于 `Exit Sub` 或 `Exit Property` 语句，不能提供 `expression`。  
   
- `expression` `expression`在、或过程`Operator`中,`Return`语句必须包含, 并且必须计算为可转换为过程返回类型的数据类型。 `Get` `Function` `Exit Function` `Exit Property`在或过程`Get`中, 您还可以选择将表达式分配给过程名称以用作返回值, 然后执行或语句。 `Function` 在过程中, 必须使用`Return expression`。 `Operator`  
+ 在 `Function`、`Get` 或 `Operator` 过程中，`Return` 语句必须包含 `expression`，并且 `expression` 的计算结果必须为可转换为过程返回类型的数据类型。 在 `Function` 或 `Get` 过程中，您还可以选择将表达式分配给过程名称以用作返回值，然后执行 `Exit Function` 或 `Exit Property` 语句。 在 `Operator` 过程中，必须使用 `Return expression`。  
   
- 可以在同一个过程`Return`中包含任意多个语句。  
+ 可以在同一过程中包含任意数量的 `Return` 语句。  
   
 > [!NOTE]
-> `Finally`块中的代码在遇到`Try`或`Catch`块`Return`中的语句之后、但在执行该`Return`语句之前运行。 语句不能包含`Finally`在块中。 `Return`  
+> @No__t_0 块中的代码将在遇到 `Try` 或 `Catch` 块中的 `Return` 语句之后、但在执行该 `Return` 语句之前运行。 @No__t_1 块中不能包含 `Return` 语句。  
   
 ## <a name="example"></a>示例  
- 下面的示例多次使用`Return`语句, 以便在过程不需要执行任何其他操作时返回到调用代码。  
+ 下面的示例多次使用 `Return` 语句，以便在过程无需执行任何其他操作时返回到调用代码。  
   
  [!code-vb[VbVbalrStatements#53](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#53)]  
   

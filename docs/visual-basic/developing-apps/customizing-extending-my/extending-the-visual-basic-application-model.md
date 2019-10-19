@@ -4,92 +4,95 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic Application Model, extending
 ms.assetid: e91d3bed-4c27-40e3-871d-2be17467c72c
-ms.openlocfilehash: f4857d410b16c3bbcb2129cec0d753a1c3d7a726
-ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.openlocfilehash: 02a964506d976cb10f3f28f83f0655fecc447e59
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65469486"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582762"
 ---
 # <a name="extending-the-visual-basic-application-model"></a>扩展 Visual Basic 应用程序模型
-您可以将功能添加到应用程序模型中通过重写`Overridable`的成员<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>类。 此技术，可自定义应用程序模型的行为并添加对你自己的方法的调用，如应用程序启动和关闭。  
-  
-## <a name="visual-overview-of-the-application-model"></a>应用程序模型的直观概述  
- 本部分中直观地显示 Visual Basic 应用程序模型中的函数调用的序列。 下一节介绍每个函数在详细信息的用途。  
-  
- 下图显示了在正常的 Visual Basic Windows 窗体应用程序中的应用程序模型调用序列。 该序列开始，何时`Sub Main`过程调用<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Run%2A>方法。  
-  
- ![显示应用程序模型调用序列关系图。](./media/extending-the-visual-basic-application-model/application-model-call-sequence.gif)  
-  
- Visual Basic 应用程序模型还提供了<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance>和<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException>事件。 下图显示引发这些事件的机制。  
-  
- ![显示引发 StartupNextInstance 事件 OnStartupNextInstance 方法的关系图。](./media/extending-the-visual-basic-application-model/raise-startupnextinstance-event.gif)  
-  
- ![显示引发 UnhandledException 事件的 OnUnhandledException 方法的关系图。](./media/extending-the-visual-basic-application-model/raise-unhandledexception-event.gif)  
-  
-## <a name="overriding-the-base-methods"></a>重写基方法  
- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Run%2A>方法在其中定义顺序`Application`方法运行。 默认情况下`Sub Main`Windows 窗体应用程序的过程调用<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Run%2A>方法。  
-  
- 如果应用程序正常的应用程序 （多个实例应用程序） 或单实例应用程序的第一个实例<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Run%2A>方法执行`Overridable`方法按以下顺序：  
-  
-1. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnInitialize%2A>。 默认情况下，此方法设置的视觉样式、 文本显示样式和当前主体的主应用程序线程 （如果应用程序使用 Windows 身份验证），并调用`ShowSplashScreen`如果既没有`/nosplash`也不`-nosplash`用作命令行参数。  
-  
-     如果此函数返回，则取消应用程序启动序列`False`。 这可以是在其中应用程序不应运行的情况下是否有用。  
-  
-     <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnInitialize%2A>方法调用以下方法：  
-  
-    1. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.ShowSplashScreen%2A>。 确定应用程序是否具有定义的初始屏幕和如果是这样，在单独线程上显示初始屏幕。  
-  
-         <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.ShowSplashScreen%2A>方法包含的代码显示初始屏幕上的至少指定的毫秒数<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MinimumSplashScreenDisplayTime%2A>属性。 若要使用此功能，必须将初始屏幕添加到应用程序使用**项目设计器**(集`My.Application.MinimumSplashScreenDisplayTime`属性设置为两秒)，或设置`My.Application.MinimumSplashScreenDisplayTime`重写的方法中的属性<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnInitialize%2A>或<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A>方法。 有关详细信息，请参阅 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MinimumSplashScreenDisplayTime%2A>。  
-  
-    2. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A>。 允许设计器发出初始化初始屏幕的代码。  
-  
-         默认情况下，此方法没有任何影响。 如果您选择在 Visual Basic 中的应用程序初始屏幕**项目设计器**，在设计器将重写<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A>方法设置的方法与<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SplashScreen%2A>属性设置为初始屏幕窗体的新实例.  
-  
-2. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartup%2A>。 提供一个扩展点用于引发`Startup`事件。 如果此函数返回，请停止应用程序启动序列`False`。  
-  
-     默认情况下，此方法将引发<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup>事件。 如果事件处理程序设置<xref:System.ComponentModel.CancelEventArgs.Cancel>的事件参数的属性`True`，该方法将返回`False`取消应用程序启动。  
-  
-3. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnRun%2A>。 当主应用程序已准备好开始运行，在初始化完成后提供的起始点。  
-  
-     默认情况下，它将进入 Windows 窗体消息循环之前, 此方法将调用`OnCreateMainForm`（若要创建应用程序的主窗体） 和`HideSplashScreen`（若要关闭初始屏幕） 的方法：  
-  
-    1. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateMainForm%2A>。 提供设计器发出初始化主窗体的代码的方法。  
-  
-         默认情况下，此方法没有任何影响。 但是，如果选择主窗体应用程序的 Visual Basic**项目设计器**，在设计器将重写<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateMainForm%2A>方法设置的方法与<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MainForm%2A>到主窗体的新实例的属性。  
-  
-    2. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.HideSplashScreen%2A>。 如果应用程序具有定义的初始屏幕，并且它已打开，则此方法关闭初始屏幕。  
-  
-         默认情况下，此方法关闭初始屏幕。  
-  
-4. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartupNextInstance%2A>。 使您能够自定义应用程序的另一个实例启动时的单实例应用程序的行为方式。  
-  
-     默认情况下，此方法将引发<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance>事件。  
-  
-5. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnShutdown%2A>。 提供一个扩展点用于引发`Shutdown`事件。 主应用程序中出现未经处理的异常时，此方法不会运行。  
-  
-     默认情况下，此方法将引发<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown>事件。  
-  
-6. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnUnhandledException%2A>。 如果在任何上述列出的方法中发生未经处理的异常，执行。  
-  
-     默认情况下，此方法将引发<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException>事件，只要未附加调试程序和应用程序处理`UnhandledException`事件。  
-  
- 如果应用程序是单实例应用程序，并且已在运行该应用程序，应用程序的后续实例调用<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartupNextInstance%2A>方法上的原始实例应用程序，然后退出。  
- 
- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartupNextInstance(Microsoft.VisualBasic.ApplicationServices.StartupNextInstanceEventArgs)>构造函数调用<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A>属性来确定要用于应用程序的窗体的文本呈现引擎。 默认情况下<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A>属性返回`False`，指示使用的 GDI 文本呈现引擎，这是 Visual Basic 2005 和更高版本中的默认值。 您可以重写<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A>属性以返回`True`，指示要使用的 GDI + 文本呈现引擎，这是在 Visual Basic.NET 2002年和 Visual Basic.NET 2003年默认设置。  
-  
-## <a name="configuring-the-application"></a>配置应用程序  
- Visual Basic 应用程序模型的一部分<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>类提供了配置应用程序的受保护的属性。 应在实现类的构造函数中设置这些属性。  
-  
- 在默认 Windows 窗体项目中，**项目设计器**创建代码以设置与设计器设置的属性。 仅当启动应用程序; 时，才使用属性应用程序启动后对它们进行设置都不起作用。  
-  
-|属性|确定|在项目设计器的应用程序窗格中的设置|  
-|---|---|---|  
-|<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.IsSingleInstance%2A>|是否为单实例或多个实例应用程序运行应用程序。|**生成单个实例应用程序**复选框|  
-|<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.EnableVisualStyles%2A>|如果应用程序将使用与 Windows XP 相匹配的视觉样式。|**启用 XP 视觉样式**复选框|  
-|<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SaveMySettingsOnExit%2A>|如果应用程序退出时，应用程序会自动保存应用程序的用户设置更改。|**关闭时保存 My.Settings**复选框|  
-|<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.ShutdownStyle%2A>|导致应用程序终止，如启动窗体关闭时或当最后一个窗体关闭的原因。|**关闭模式**列表|  
-  
+
+可以通过重写 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> 类的 `Overridable` 成员，将功能添加到应用程序模型。 利用此方法，你可以自定义应用程序模型的行为，并在应用程序启动和关闭时添加对你自己的方法的调用。
+
+## <a name="visual-overview-of-the-application-model"></a>应用程序模型的视觉对象概述
+
+本节直观显示 Visual Basic 应用程序模型中的函数调用序列。 下一部分将详细介绍每个函数的用途。
+
+下图显示了正常 Visual Basic Windows 窗体应用程序中的应用程序模型调用序列。 序列在 `Sub Main` 过程调用 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Run%2A> 方法时开始。
+
+![显示应用程序模型调用序列的关系图。](./media/extending-the-visual-basic-application-model/application-model-call-sequence.gif)
+
+Visual Basic 应用程序模型还提供 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance> 并 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException> 事件。 下图显示了引发这些事件的机制。
+
+![显示引发 StartupNextInstance 事件的 OnStartupNextInstance 方法的关系图。](./media/extending-the-visual-basic-application-model/raise-startupnextinstance-event.gif)
+
+![显示引发 UnhandledException 事件的 OnUnhandledException 方法的关系图。](./media/extending-the-visual-basic-application-model/raise-unhandledexception-event.gif)
+
+## <a name="overriding-the-base-methods"></a>重写基方法
+
+@No__t_0 方法定义 `Application` 方法的运行顺序。 默认情况下，Windows 窗体应用程序的 `Sub Main` 过程将调用 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Run%2A> 方法。
+
+如果应用程序是普通的应用程序（多实例应用程序）或单实例应用程序的第一个实例，则 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Run%2A> 方法按以下顺序执行 `Overridable` 方法：
+
+1. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnInitialize%2A> 默认情况下，此方法设置应用程序主线程（如果应用程序使用 Windows 身份验证）的视觉样式、文本显示样式和当前主体，如果 `/nosplash` 和 `-nosplash` 都不用作命令行参数，则调用 `ShowSplashScreen`。
+
+     如果此函数返回 `False`，则将取消应用程序启动顺序。 在某些情况下，如果应用程序不应运行，这会很有用。
+
+     @No__t_0 方法调用以下方法：
+
+    1. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.ShowSplashScreen%2A> 确定应用程序是否定义了初始屏幕，如果是，则在单独的线程上显示初始屏幕。
+
+         @No__t_0 方法包含的代码显示初始屏幕，其中至少显示了 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MinimumSplashScreenDisplayTime%2A> 属性指定的毫秒数。 若要使用此功能，必须使用**项目设计器**将初始屏幕添加到应用程序（这会将 `My.Application.MinimumSplashScreenDisplayTime` 属性设置为两秒钟），或在重写 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnInitialize%2A> 或 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A> 方法的方法中设置 `My.Application.MinimumSplashScreenDisplayTime` 属性。 有关更多信息，请参见<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MinimumSplashScreenDisplayTime%2A>。
+
+    2. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A> 允许设计器发出初始化初始屏幕的代码。
+
+         默认情况下，此方法不执行任何操作。 如果在 Visual Basic**项目设计器**中为应用程序选择了初始屏幕，则设计器会使用一个方法来重写 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A> 方法，该方法将 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SplashScreen%2A> 属性设置为初始屏幕窗体的新实例。
+
+2. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartup%2A> 提供用于引发 `Startup` 事件的扩展点。 如果此函数返回 `False`，应用程序启动序列将停止。
+
+     默认情况下，此方法会引发 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup> 事件。 如果事件处理程序将事件参数的 <xref:System.ComponentModel.CancelEventArgs.Cancel> 属性设置为 `True`，则该方法返回 `False` 以取消应用程序启动。
+
+3. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnRun%2A> 提供初始化完成后主应用程序准备开始运行的起始点。
+
+     默认情况下，在进入 Windows 窗体消息循环之前，此方法调用 `OnCreateMainForm` （创建应用程序的主窗体）并 `HideSplashScreen` （以关闭初始屏幕）方法：
+
+    1. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateMainForm%2A> 为设计器提供发出初始化主窗体的代码的方法。
+
+         默认情况下，此方法不执行任何操作。 但是，当你在 Visual Basic**项目设计器**中选择应用程序的主窗体时，设计器将使用一个方法来重写 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateMainForm%2A> 方法，该方法将 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MainForm%2A> 属性设置为主窗体的新实例。
+
+    2. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.HideSplashScreen%2A> 如果应用程序定义了初始屏幕并且它已打开，则此方法将关闭初始屏幕。
+
+         默认情况下，此方法会关闭初始屏幕。
+
+4. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartupNextInstance%2A> 提供一种方法，用于自定义应用程序的另一个实例启动时单实例应用程序的行为方式。
+
+     默认情况下，此方法会引发 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance> 事件。
+
+5. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnShutdown%2A> 提供用于引发 `Shutdown` 事件的扩展点。 如果主应用程序中出现未经处理的异常，则此方法不会运行。
+
+     默认情况下，此方法会引发 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown> 事件。
+
+6. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnUnhandledException%2A> 在上述任何一种方法中发生未经处理的异常时执行。
+
+     默认情况下，只要调试器未附加并且应用程序正在处理 `UnhandledException` 事件，此方法就会引发 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException> 事件。
+
+ 如果应用程序为单实例应用程序，并且该应用程序已在运行，则应用程序的后续实例将对该应用程序的原始实例调用 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartupNextInstance%2A> 方法，然后退出。
+
+ @No__t_0 构造函数调用 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> 属性，以确定要用于应用程序窗体的文本呈现引擎。 默认情况下，<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> 属性返回 `False`，指示使用的是 GDI 文本呈现引擎，这是 Visual Basic 2005 及更高版本中的默认值。 您可以重写 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> 属性以返回 `True`，这表示使用的是 GDI + 文本呈现引擎，这是 Visual Basic .NET 2002 和 Visual Basic .NET 2003 中的默认值。
+
+## <a name="configuring-the-application"></a>配置应用程序
+ 作为 Visual Basic 应用程序模型的一部分，<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> 类提供了用于配置应用程序的受保护的属性。 应在实现类的构造函数中设置这些属性。
+
+ 在默认 Windows 窗体项目中，**项目设计器**将创建代码以使用设计器设置来设置属性。 属性仅在应用程序启动时使用;在应用程序启动后设置它们不起作用。
+
+|Property|4|项目设计器的 "应用程序" 窗格中的设置|
+|---|---|---|
+|<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.IsSingleInstance%2A>|应用程序是作为单实例还是多实例应用程序运行。|"**生成单个实例应用程序**" 复选框|
+|<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.EnableVisualStyles%2A>|如果应用程序将使用与 Windows XP 匹配的视觉样式，则为。|"**启用 XP 视觉样式**" 复选框|
+|<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SaveMySettingsOnExit%2A>|当应用程序退出时，应用程序自动保存应用程序的用户设置更改。|"**关闭时设置**" 复选框|
+|<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.ShutdownStyle%2A>|导致应用程序终止的原因，如启动窗体关闭或最后一个窗体关闭时。|**关机模式**列表|
+
 ## <a name="see-also"></a>请参阅
 
 - <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>

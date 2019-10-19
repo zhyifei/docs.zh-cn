@@ -26,19 +26,19 @@ helpviewer_keywords:
 - declaration statements [Visual Basic]
 - scalar variables [Visual Basic]
 ms.assetid: ad1c5e07-dcd7-4ae1-a79e-ad3f2dcc2083
-ms.openlocfilehash: e8689820d13db173950f8df45431011968899bed
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a9384ba118df2a84fbd2581e6a8bacb58e41ddcc
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64582901"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582084"
 ---
 # <a name="redim-statement-visual-basic"></a>ReDim 语句 (Visual Basic)
 为数组变量重新分配存储空间。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```vb  
 ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]  
 ```  
   
@@ -47,8 +47,8 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
 |术语|定义|  
 |----------|----------------|  
 |`Preserve`|可选。 修饰符，当仅更改最后一个维度的大小时，用来保留现有数组中的数据。|  
-|`name`|必需。 数组变量的名称。 请参阅 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。|  
-|`boundlist`|必需。 列出重新定义的数组各个维度的边界。|  
+|`name`|必须的。 数组变量的名称。 请参阅 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。|  
+|`boundlist`|必须的。 列出重新定义的数组各个维度的边界。|  
   
 ## <a name="remarks"></a>备注  
  可以使用 `ReDim` 语句来更改某个已声明数组的一个或多个维度的大小。 如果数组较大，并且你不再需要它的某些元素，`ReDim`可通过减少数组大小来释放内存。 另一方面，如果数组需要更多元素，也可使用 `ReDim` 进行添加。  
@@ -59,31 +59,31 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
   
 ## <a name="rules"></a>规则  
   
-- **多个变量。** 可以在同一声明语句中重设多个数组变量的大小，并为每个变量指定 `name` 和 `boundlist` 部分。 以逗号分隔多个变量。  
+- **多个变量。** 您可以在同一声明语句中调整多个数组变量的大小，并为每个变量指定 `name` 和 `boundlist` 部分。 以逗号分隔多个变量。  
   
-- **数组界限。** `boundlist` 中的各个条目可指定该维度的上下边界。 下边界始终为 0（零）。 上边界是该维度可能的最大索引值，而不是维度的长度（即上边界加 1）。 每个维度的索引都可能在 0 到其上边界值之间变动。  
+- **数组界限。** @No__t_0 中的每个条目都可以指定该维度的下限和上限。 下边界始终为 0（零）。 上边界是该维度可能的最大索引值，而不是维度的长度（即上边界加 1）。 每个维度的索引都可能在 0 到其上边界值之间变动。  
   
      `boundlist` 中的维数必须与数组的原始维数（秩）相匹配。  
   
-- **数据类型。** `ReDim` 语句无法更改数组变量或其元素的数据类型。  
+- **数据类型。** @No__t_0 语句无法更改数组变量或其元素的数据类型。  
   
-- **初始化。** `ReDim` 语句无法为数组元素提供新的初始化值。  
+- **起始.** @No__t_0 语句不能为数组元素提供新的初始化值。  
   
-- **等级。** `ReDim` 语句无法更改数组的秩（维数）。  
+- **级别.** `ReDim` 语句无法更改数组的秩（维数）。  
   
-- **使用 Preserve 重设大小。** 如果使用 `Preserve`，则只能调整数组最后一个维度的大小。 对于其他每个维度，必须指定现有数组的边界。  
+- **用 Preserve 调整大小。** 如果使用 `Preserve`，则只能调整数组最后一个维度的大小。 对于其他每个维度，必须指定现有数组的边界。  
   
      例如，如果数组只有一个维度，则可以重设该维度的大小并依然保留数组的所有内容，因为你更改的是最后一个也是唯一的维度。 但是，如果数组具有两个或更多维度，则使用 `Preserve` 只能重设最后一个维度的大小。  
   
-- **属性。** 可以对保留值数组的属性使用 `ReDim`。  
+- **属性.** 可以对保存值数组的属性使用 `ReDim`。  
   
 ## <a name="behavior"></a>行为  
   
-- **数组替换。** `ReDim` 释放现有数组，并创建一个新数组，具有相同的排名。 新数组将替换数组变量中已释放的数组。  
+- **数组替换。** `ReDim` 释放现有数组，并创建一个具有相同秩的新数组。 新数组将替换数组变量中已释放的数组。  
   
-- **而无需保留的初始化。** 如果未指定 `Preserve`，则 `ReDim` 会通过使用新数组元素的数据类型的默认值来初始化这些元素。  
+- **不保留的初始化。** 如果不指定 `Preserve`，`ReDim` 使用其数据类型的默认值初始化新数组的元素。  
   
-- **使用 Preserve 初始化。** 如果指定 `Preserve`，则 Visual Basic 会将元素从现有数组复制到新数组。  
+- **用 Preserve 初始化。** 如果指定 `Preserve`，Visual Basic 会将元素从现有数组复制到新数组。  
   
 ## <a name="example"></a>示例  
  下面的示例将增加某个动态数组最后一个维度的大小（不会丢失数组中的任何现有数据），然后减小该大小（会有部分数据丢失）。 最后，它会将大小重新减小到其原始值，并重新初始化所有数组元素。  

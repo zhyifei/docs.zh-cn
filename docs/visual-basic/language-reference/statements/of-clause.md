@@ -17,20 +17,20 @@ helpviewer_keywords:
 - type parameters
 - data type arguments
 ms.assetid: 0db8f65c-65af-4089-ab7f-6fcfecb60444
-ms.openlocfilehash: 880570c714292b0c11eef4e2cd4c4b410bb075f1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c0cfbb5109d5b49f995028944e735c96440c9ab2
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61784145"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72583508"
 ---
 # <a name="of-clause-visual-basic"></a>Of 子句 (Visual Basic)
-引入了`Of`子句，用于标识*的类型形参*上*泛型*类、 结构、 接口、 委托或过程。 有关泛型类型的信息，请参阅[在 Visual Basic 中的泛型类型](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)。  
+引入 `Of` 子句，该子句标识*泛型*类、结构、接口、委托或过程中的*类型参数*。 有关泛型类型的信息，请参阅[Visual Basic 中的泛型类型](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)。  
   
-## <a name="using-the-of-keyword"></a>使用的关键字  
- 下面的代码示例使用`Of`关键字来定义采用两个类型参数的类的轮廓。 它*约束，使之*`keyType`参数<xref:System.IComparable>接口，这意味着使用的代码必须提供实现一个类型实参<xref:System.IComparable>。 这是必需的以便`add`过程可以调用<xref:System.IComparable.CompareTo%2A?displayProperty=nameWithType>方法。 有关约束的详细信息，请参阅 [Type List](../../../visual-basic/language-reference/statements/type-list.md)。  
+## <a name="using-the-of-keyword"></a>使用关键字 of  
+ 下面的代码示例使用 `Of` 关键字定义带有两个类型参数的类的轮廓。 它通过 <xref:System.IComparable> 接口*限制*`keyType` 参数，这意味着使用的代码必须提供实现 <xref:System.IComparable> 的类型参数。 这是必需的，以便 `add` 过程可以调用 <xref:System.IComparable.CompareTo%2A?displayProperty=nameWithType> 方法。 有关约束的详细信息，请参阅 [Type List](../../../visual-basic/language-reference/statements/type-list.md)。  
   
-```  
+```vb  
 Public Class Dictionary(Of entryType, keyType As IComparable)  
     Public Sub add(ByVal e As entryType, ByVal k As keyType)  
         Dim dk As keyType  
@@ -42,11 +42,11 @@ Public Class Dictionary(Of entryType, keyType As IComparable)
 End Class  
 ```  
   
- 如果您完成前面的类定义，可以构造各种`dictionary`从它的类。 提供给类型`entryType`和`keyType`确定哪种类型的条目类保存并与每个条目关联哪种类型的密钥。 由于该约束，必须提供给`keyType`实现的类型<xref:System.IComparable>。  
+ 如果你完成了前面的类定义，则可以从它构造各种 `dictionary` 类。 您提供的用于 `entryType` 和 `keyType` 确定类的项类型以及它与每个项关联的键的类型。 由于约束，你必须提供以 `keyType` 实现 <xref:System.IComparable> 的类型。  
   
- 下面的代码示例创建一个对象，保存`String`条目并将关联`Integer`其中每个密钥。 `Integer` 实现<xref:System.IComparable>，因此在满足约束`keyType`。  
+ 下面的代码示例创建一个对象，该对象保存 `String` 项，并将 `Integer` 键与每个项关联。 `Integer` 实现 <xref:System.IComparable>，因此满足 `keyType` 的约束。  
   
-```  
+```vb  
 Dim d As New dictionary(Of String, Integer)  
 ```  
   
@@ -68,6 +68,6 @@ Dim d As New dictionary(Of String, Integer)
 
 - <xref:System.IComparable>
 - [类型列表](../../../visual-basic/language-reference/statements/type-list.md)
-- [Visual Basic 中的泛型类型](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
 - [In](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)
 - [Out](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)

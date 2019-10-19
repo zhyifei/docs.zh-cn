@@ -1,5 +1,5 @@
 ---
-title: Option Compare 语句 (Visual Basic)
+title: Option Compare 语句（Visual Basic）
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Compare
@@ -18,19 +18,19 @@ helpviewer_keywords:
 - Option Compare statement [Visual Basic]
 - text [Visual Basic], comparing
 ms.assetid: 54e8eeeb-3b0d-4fb9-acce-fbfbd5975f6e
-ms.openlocfilehash: 77f208a0ce94925f1f968d4949f591ccab43e582
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 43d3faf3a6630cd308913ce2325a5f7fe96e474c
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64583514"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72581587"
 ---
 # <a name="option-compare-statement"></a>Option Compare 语句
 声明比较字符串数据时要使用的默认比较方法。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```vb  
 Option Compare { Binary | Text }  
 ```  
   
@@ -59,7 +59,7 @@ Option Compare { Binary | Text }
  `(A=a) < (À = à) < (B=b) < (E=e) < (Ê = ê) < (Z=z) < (Ø = ø)`  
   
 ## <a name="when-an-option-compare-statement-is-not-present"></a>当 Option Compare 语句不存在时  
- 如果源代码不包含`Option Compare`语句中， **Option Compare**上设置[编译页，项目设计器 (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)使用。 如果使用命令行编译器时，指定的设置[/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)使用编译器选项。  
+ 如果源代码不包含 `Option Compare` 语句，则将使用 "编译" 页上的 "**选项比较**" 设置，并使用 "[项目设计器" （Visual Basic）](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) 。 如果使用命令行编译器，则使用[/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)编译器选项指定的设置。  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
@@ -69,13 +69,13 @@ Option Compare { Binary | Text }
   
 2. 单击“编译”选项卡。  
   
-3. 中的值设置**Option Compare**框。  
+3. 设置 "**选项比较**" 框中的值。  
   
- 创建项目时**Option Compare**上设置**编译**选项卡设置为**Option Compare**中设置**选项**对话框。 若要更改此设置时，在**工具**菜单上，单击**选项**。 在“选项”对话框中，展开“项目和解决方案”，然后单击“VB 默认值”。 中的初始默认设置**VB 默认值**是**二进制**。  
+ 创建项目时，"**编译**" 选项卡上的 "**选项比较**" 设置设置为 "**选项**" 对话框中的 " **option compare** " 设置。 若要更改此设置，请在 "**工具**" 菜单上单击 "**选项**"。 在“选项”对话框中，展开“项目和解决方案”，然后单击“VB 默认值”。 **VB 默认**设置中的初始默认设置为 "**二进制**"。  
   
 #### <a name="to-set-option-compare-on-the-command-line"></a>若要设置命令行上的 Option Compare  
   
-- 包括[/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)中的编译器选项**vbc**命令。  
+- 在**vbc**命令中包含[/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)编译器选项。  
   
 ## <a name="example"></a>示例  
  下例使用 `Option Compare` 语句将二进制比较设置为默认字符串比较方法。 若要使用此代码，请取消 `Option Compare Binary` 语句的注释，并将其置于源文件顶部。  
@@ -96,7 +96,7 @@ Option Compare { Binary | Text }
 - <xref:Microsoft.VisualBasic.Strings.StrComp%2A>
 - [/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)
 - [比较运算符](../../../visual-basic/language-reference/operators/comparison-operators.md)
-- [在 Visual Basic 中的比较运算符](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [Visual Basic 中的比较运算符](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
 - [Like 运算符](../../../visual-basic/language-reference/operators/like-operator.md)
 - [字符串函数](../../../visual-basic/language-reference/functions/string-functions.md)
 - [Option Explicit 语句](../../../visual-basic/language-reference/statements/option-explicit-statement.md)

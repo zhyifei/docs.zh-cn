@@ -15,12 +15,12 @@ helpviewer_keywords:
 - With block
 - End keyword [Visual Basic], With...End With statements
 ms.assetid: 340d5fbb-4f43-48ec-a024-80843c137817
-ms.openlocfilehash: 3c6766d9084962d006fe5e5d7d5cc723c2aad441
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 3da04b85865389a2b4466b78091ff28529346269
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70046635"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582259"
 ---
 # <a name="withend-with-statement-visual-basic"></a>With...End With 语句 (Visual Basic)
 
@@ -28,7 +28,7 @@ ms.locfileid: "70046635"
 
 ## <a name="syntax"></a>语法
 
-```
+```vb
 With objectExpression
     [ statements ]
 End With
@@ -38,9 +38,9 @@ End With
 
 |术语|定义|
 |---|---|
-|`objectExpression`|必需。 计算结果为对象的表达式。 表达式可能是任意复杂的，并且只能计算一次。 表达式可以计算为任何数据类型，包括基本类型。|
+|`objectExpression`|必须的。 计算结果为对象的表达式。 表达式可能是任意复杂的，并且只能计算一次。 表达式可以计算为任何数据类型，包括基本类型。|
 |`statements`|可选。 `With` 和 `End With` 之间的一个或多个语句，这些语句可能引用通过计算 `objectExpression` 生成的对象的成员。|
-|`End With`|必需。 终止 `With` 块的定义。|
+|`End With`|必须的。 终止 `With` 块的定义。|
 
 ## <a name="remarks"></a>备注
 
@@ -64,10 +64,10 @@ End With
 
 你不能从 `With` 语句块的外部分支到此语句块。
 
-除非此语句块包含循环，否则这些语句只运行一次。 你可嵌套不同类型的控制结构。 有关详细信息, 请参阅[嵌套控制结构](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)。
+除非此语句块包含循环，否则这些语句只运行一次。 你可嵌套不同类型的控制结构。 有关详细信息，请参阅[嵌套控制结构](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)。
 
 > [!NOTE]
-> 你还可在对象初始值设定项中使用 `With` 关键字。 有关详细信息和示例, 请[参阅对象初始值设定项:命名类型](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)和匿名类型和[匿名类型](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)。
+> 你还可在对象初始值设定项中使用 `With` 关键字。 有关详细信息和示例，请参阅[对象初始值设定项：命名类型和匿名](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)类型和[匿名类型](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)。
 >
 > 如果你使用 `With` 块只是为了初始化已实例化的对象的属性或字段，请考虑改用对象初始值设定项。
 
@@ -87,5 +87,5 @@ End With
 
 - <xref:System.Collections.Generic.List%601>
 - [嵌套的控件结构](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)
-- [对象初始值设定项:命名类型和匿名类型](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
+- [对象初始值设定项：命名类型和匿名类型](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
 - [匿名类型](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
