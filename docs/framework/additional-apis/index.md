@@ -1,6 +1,6 @@
 ---
 title: 其他类库和 API
-ms.date: 10/09/2019
+ms.date: 10/17/2019
 helpviewer_keywords:
 - Additional class libraries
 - Additional managed libraries
@@ -10,18 +10,18 @@ ms.assetid: cf2d9006-b631-4e5d-81cd-20aab78c60f1
 author: mairaw
 ms.author: mairaw
 ms.topic: conceptual
-ms.openlocfilehash: b869ca2f5e17db9a204a8b757b5e24ebb209d7c5
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 809ac026244b24aee69ec0d6c40c10a1248c234c
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395663"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72579113"
 ---
 # <a name="additional-class-libraries-and-apis"></a>其他类库和 API
 
 .NET Framework 不断发展。 若要改善跨平台开发并及早引入新功能，可通过带外（OOB）发布新功能。 本主题列出了我们提供了有关文档的 OOB 项目。  
   
-此外，一些库面向 .NET Framework 的特定平台或实现。 例如，@no__t 0 类使代码页编码可用于使用 .NET Framework 开发的 UWP 应用。 本主题还列出了以下库。  
+此外，一些库面向 .NET Framework 的特定平台或实现。 例如，<xref:System.Text.CodePagesEncodingProvider> 类使代码页编码可用于使用 .NET Framework 开发的 UWP 应用。 本主题还列出了以下库。  
   
 ## <a name="oob-projects"></a>OOB 项目
   
@@ -36,7 +36,7 @@ ms.locfileid: "72395663"
   
 | 项目 | 描述 |  
 | ------- | ----------- |  
-| <xref:System.Text.CodePagesEncodingProvider> | 扩展 @no__t 0 类，使代码页编码可用于面向通用 Windows 平台的应用程序。 |  
+| <xref:System.Text.CodePagesEncodingProvider> | 扩展 <xref:System.Text.EncodingProvider> 类，使代码页编码可用于面向通用 Windows 平台的应用程序。 |  
   
 ## <a name="private-apis"></a>私有 API  
 
@@ -57,20 +57,21 @@ ms.locfileid: "72395663"
 * [SqlTypes. SqlStreamChars. SetLength 方法](system.data.sqltypes.sqlstreamchars.setlength.md)
 * [SqlTypes. SqlStreamChars 方法](system.data.sqltypes.sqlstreamchars.write.md)
 * [系统 .Net. 连接类](connection.md)
-* [System no__t-1WriteList 字段](m_writelist.md)
+* [系统 \_WriteList 字段](m_writelist.md)
 * [ConnectionGroup 类](connectiongroup.md)
-* [系统 ConnectionGroup @ no__t-1ConnectionList 字段](m_connectionlist.md)
+* [系统 ConnectionGroup \_ConnectionList 字段](m_connectionlist.md)
 * [CoreResponseData 类](coreresponsedata.md)
-* [系统 CoreResponseData @ no__t-1ResponseHeaders 字段](coreresponsedata_m_responseheaders.md)
-* [系统 CoreResponseData @ no__t-1StatusCode 字段](coreresponsedata_m_statuscode.md)
-* [系统 @no__t HttpWebRequest-1AutoRedirects 字段](_autoredirects.md)
-* [系统 @no__t HttpWebRequest-1CoreResponse 字段](httpwebrequest__coreresponse.md)
-* [系统 @no__t HttpWebRequest-1HttpResponse 字段](_httpresponse.md)
-* [系统 ServicePoint @ no__t-1ConnectionGroupList 字段](m_connectiongrouplist.md)
-* [系统 ServicePointManager @ no__t-1ServicePointTable 字段](s_servicepointtable.md)
-* [No__t-1isDebuggerCheckDisabledForTestPurposes 字段（VisualDiagnostics）](s-isdebuggercheckdisabledfortestpurposes-field.md)
+* [系统 CoreResponseData \_ResponseHeaders 字段](coreresponsedata_m_responseheaders.md)
+* [系统 CoreResponseData \_StatusCode 字段](coreresponsedata_m_statuscode.md)
+* [系统 \_AutoRedirects 字段 HttpWebRequest](_autoredirects.md)
+* [系统 \_CoreResponse 字段 HttpWebRequest](httpwebrequest__coreresponse.md)
+* [系统 \_HttpResponse 字段 HttpWebRequest](_httpresponse.md)
+* [系统 ServicePoint \_ConnectionGroupList 字段](m_connectiongrouplist.md)
+* [系统 \_ServicePointTable 字段 ServicePointManager](s_servicepointtable.md)
+* ["VisualDiagnostics" \_isDebuggerCheckDisabledForTestPurposes 字段](s-isdebuggercheckdisabledfortestpurposes-field.md)
 * ["DataMemberFieldEditor" 类](datamemberfieldeditor-class.md)
 * ["DataMemberListEditor" 类](datamemberlisteditor-class.md)
+* [System.web. CreateSqlReader 方法](system.xml.xmlreader.createsqlreader.md)
 * [adodb.recordset.连接接口](adodb.connection.md)
 * [adodb.recordset.EventReason 枚举](adodb.eventreasonenum.md)
 * [adodb.recordset.EventStatus 枚举](adodb.eventstatusenum.md)

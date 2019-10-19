@@ -7,37 +7,38 @@ f1_keywords:
 helpviewer_keywords:
 - WithEvents keyword [Visual Basic]
 ms.assetid: 19d461f5-d72f-4de9-8c1d-0a6650316990
-ms.openlocfilehash: e8a8fb571fa65228f3a0acec1f902d21eb9bfe04
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.openlocfilehash: 50d5a768393e90d28d150b451405e35e6f4c7953
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67268302"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72583043"
 ---
 # <a name="withevents-visual-basic"></a>WithEvents (Visual Basic)
-指定一个或多个声明的成员变量引用可以引发事件的类的实例。  
-  
-## <a name="remarks"></a>备注  
- 当使用定义一个变量`WithEvents`，可以以声明方式指定一种方法处理使用的变量的事件`Handles`关键字。  
-  
- 可以使用`WithEvents`只能在类或模块级别。 这意味着声明上下文`WithEvents`变量必须是类或模块，且不能为源文件、 命名空间、 结构或过程。  
-  
- 不能使用`WithEvents`结构成员上。  
-  
- 您可以声明只有单个变量-不数组 — 与`WithEvents`。  
-  
-## <a name="rules"></a>规则  
-  
-- **元素类型。** 必须声明`WithEvents`变量为对象变量，以便它们可以接受类实例。 但是，您不能将其声明为`Object`。 必须将它们声明为可引发事件的特定类。  
-  
- `WithEvents`修饰符可用于在此上下文中：[Dim 语句](../../../visual-basic/language-reference/statements/dim-statement.md)  
- 
+指定一个或多个已声明的成员变量引用可引发事件的类的实例。
+
+## <a name="remarks"></a>备注
+
+使用 `WithEvents` 定义变量时，可以通过声明方式指定方法使用 `Handles` 关键字来处理变量的事件。
+
+只能在类或模块级别使用 `WithEvents`。 这意味着 `WithEvents` 变量的声明上下文必须是类或模块，不能是源文件、命名空间、结构或过程。
+
+不能对结构成员使用 `WithEvents`。
+
+您只能用 `WithEvents` 声明单个变量（而非数组）。
+
+## <a name="rules"></a>规则
+
+**元素类型。** 必须将 `WithEvents` 变量声明为对象变量，以便它们可以接受类实例。 但是，不能将它们声明为 `Object`。 您必须将它们声明为可引发事件的特定类。
+
+@No__t_0 修饰符可以在此上下文中使用： [Dim 语句](../../../visual-basic/language-reference/statements/dim-statement.md)
+
 ## <a name="example"></a>示例
 
-```VB
+```vb
 Dim WithEvents app As Application
 ```
-  
+
 ## <a name="see-also"></a>请参阅
 
 - [Handles](../../../visual-basic/language-reference/statements/handles-clause.md)

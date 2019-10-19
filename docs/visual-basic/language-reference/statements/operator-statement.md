@@ -1,5 +1,5 @@
 ---
-title: Operator 语句 (Visual Basic)
+title: Operator 语句（Visual Basic）
 ms.date: 07/20/2015
 f1_keywords:
 - vb.operator
@@ -17,159 +17,167 @@ helpviewer_keywords:
 - Operator statement [Visual Basic]
 - CType function [Visual Basic], Operator statement
 ms.assetid: b12ec4af-1ad7-4a17-865b-c5ee96320ae5
-ms.openlocfilehash: 4162f7cb5d8b89a1e5e8e7db429cf4e8dd9b700a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c4fae40992fa665121aff637ae427ef0cafbf547
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64583597"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582387"
 ---
 # <a name="operator-statement"></a>Operator Statement
-声明运算符符号、 操作数和运算符过程定义的类或结构的代码。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-[ <attrlist> ] Public [ Overloads ] Shared [ Shadows ] [ Widening | Narrowing ]   
-Operator operatorsymbol ( operand1 [, operand2 ]) [ As [ <attrlist> ] type ]  
-    [ statements ]  
-    [ statements ]  
-    Return returnvalue  
-    [ statements ]  
-End Operator  
-```  
-  
-## <a name="parts"></a>部件  
- `attrlist`  
- 可选。 请参阅[属性列表](../../../visual-basic/language-reference/statements/attribute-list.md)。  
-  
- `Public`  
- 必需。 指示此运算符过程具有[公共](../../../visual-basic/language-reference/modifiers/public.md)访问。  
-  
- `Overloads`  
- 可选。 请参阅[重载](../../../visual-basic/language-reference/modifiers/overloads.md)。  
-  
- `Shared`  
- 必需。 指示此运算符过程[共享](../../../visual-basic/language-reference/modifiers/shared.md)过程。  
-  
- `Shadows`  
- 可选。 请参阅[Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)。  
-  
- `Widening`  
- 除非您指定所需的转换运算符`Narrowing`。 指示定义此运算符过程[Widening](../../../visual-basic/language-reference/modifiers/widening.md)转换。 有关此帮助页，请参阅"扩大转换和收缩转换"。  
-  
- `Narrowing`  
- 除非您指定所需的转换运算符`Widening`。 指示定义此运算符过程[Narrowing](../../../visual-basic/language-reference/modifiers/narrowing.md)转换。 有关此帮助页，请参阅"扩大转换和收缩转换"。  
-  
- `operatorsymbol`  
- 必需。 符号或运算符，以定义此运算符过程的标识符。  
-  
- `operand1`  
- 必需。 名称和单个操作数的一元运算符 （包括转换运算符） 或二元运算符的左的操作数的类型。  
-  
- `operand2`  
- 所需的二进制运算符。 名称和类型的二元运算符的右操作数。  
-  
- `operand1` 和`operand2`具有以下语法和部分：  
-  
- `[ ByVal ] operandname [ As operandtype ]`  
-  
-|部件|描述|  
-|----------|-----------------|  
-|`ByVal`|必须为可选，但传递机制[ByVal](../../../visual-basic/language-reference/modifiers/byval.md)。|  
-|`operandname`|必需。 表示此操作数的变量的名称。 请参阅 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。|  
-|`operandtype`|可选除非`Option Strict`是`On`。 此操作数的数据类型。|  
-  
- `type`  
- 可选除非`Option Strict`是`On`。 数据类型的值的运算符过程返回。  
-  
- `statements`  
- 可选。 运算符过程运行的语句块。  
-  
- `returnvalue`  
- 必需。 运算符过程返回到调用代码的值。  
-  
- `End` `Operator`  
- 必需。 终止此运算符过程的定义。  
-  
-## <a name="remarks"></a>备注  
- 可以使用`Operator`只能在类或结构中。 这意味着*声明上下文*运算符不能为源文件、 命名空间、 模块、 接口、 过程或块。 有关详细信息，请参阅[声明上下文和默认访问级别](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)。  
-  
- 所有运算符都必须`Public Shared`。 不能指定`ByRef`， `Optional`，或`ParamArray`的其中一个操作数。  
-  
- 不能使用的运算符符号或标识符用于保存返回值。 必须使用`Return`语句，并且它必须指定一个值。 任意数量的`Return`语句可以出现在任何位置该过程。  
-  
- 以这种方式定义一个运算符称为*运算符重载*无论是否使用`Overloads`关键字。 下表列出了可定义的运算符。  
-  
-|类型|运算符|  
-|----------|---------------|  
-|一元|`+`, `-`, `IsFalse`, `IsTrue`, `Not`|  
-|二进制|`+`, `-`, `*`, `/`, `\`, `&`, `^`, `>>`, `<<`, `=`, `<>`, `>`, `>=`, `<`, `<=`, `And`, `Like`, `Mod`, `Or`, `Xor`|  
-|转换（一元）|`CType`|  
-  
- 请注意， `=` ，二元列表中的运算符是比较运算符，而不是赋值运算符。  
-  
- 在定义`CType`，则必须指定`Widening`或`Narrowing`。  
-  
-## <a name="matched-pairs"></a>匹配的对  
- 必须以匹配对的形式定义某些运算符。 如果你定义此类对任一运算符，则必须定义对其他。 匹配的对如下所示：  
-  
-- `=` 和 `<>`  
-  
-- `>` 和 `<`  
-  
-- `>=` 和 `<=`  
-  
-- `IsTrue` 和 `IsFalse`  
-  
-## <a name="data-type-restrictions"></a>数据类型限制  
- 定义每个运算符必须涉及在其上定义的类或结构。 这意味着类或结构必须显示为以下数据类型：  
-  
-- 一元运算符的操作数。  
-  
-- 至少一个二元运算符的操作数。  
-  
-- 操作数或转换运算符的返回类型。  
-  
- 某些运算符具有其他数据类型限制，按如下所示：  
-  
-- 如果定义了`IsTrue`并`IsFalse`运算符，它们必须均返回`Boolean`类型。  
-  
-- 如果定义了`<<`并`>>`运算符，它们必须同时指定`Integer`类型`operandtype`的`operand2`。  
-  
- 返回类型没有对应于其中一个操作数的类型。 例如，如比较运算符`=`或`<>`可以返回`Boolean`即使两个操作数是`Boolean`。  
-  
-## <a name="logical-and-bitwise-operators"></a>逻辑运算符和位运算符  
- `And`， `Or`， `Not`，和`Xor`运算符可以在 Visual Basic 中执行逻辑或位运算。 但是，如果在类或结构上定义以下运算符之一，可以定义仅其按位运算。  
-  
- 不能定义`AndAlso`运算符直接与`Operator`语句。 但是，可以使用`AndAlso`如果你已满足以下条件：  
-  
-- 已定义`And`想要用于对相同的操作数类型`AndAlso`。  
-  
-- 您的定义`And`返回与在其上定义它的类或结构相同的类型。  
-  
-- 已定义`IsFalse`运算符已定义的类或结构`And`。  
-  
- 同样，可以使用`OrElse`如果已定义`Or`相同的操作数，在其中返回类型的类或结构，并且你已定义`IsTrue`类或结构上。  
-  
-## <a name="widening-and-narrowing-conversions"></a>Widening and Narrowing Conversions  
- 一个*扩大转换*在运行时，始终成功时*收缩转换*可以在运行时失败。 有关详细信息，请参阅 [Widening and Narrowing Conversions](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)。  
-  
- 如果你声明一个转换过程要`Widening`，过程代码一定不会产生任何故障。 这意味着：  
-  
-- 它必须始终返回有效的值类型的`type`。  
-  
-- 它必须处理所有可能的异常和其他错误条件。  
-  
-- 它必须处理从它调用任何过程返回的任何错误。  
-  
- 如果已转换过程可能不会成功，或者它可能会导致未经处理的异常，必须将其声明`Narrowing`。  
-  
-## <a name="example"></a>示例  
- 下面的代码示例使用`Operator`语句来定义包含有关的运算符过程的结构轮廓`And`， `Or`， `IsFalse`，和`IsTrue`运算符。 `And` 并`Or`每个都采用两种类型的操作数`abc`返回类型和`abc`。 `IsFalse` 并`IsTrue`每个都采用单个类型的操作数`abc`，并返回`Boolean`。 这些定义允许调用代码以使用`And`， `AndAlso`， `Or`，和`OrElse`类型的操作数与`abc`。  
-  
- [!code-vb[VbVbalrStatements#44](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#44)]  
-  
+
+声明在类或结构上定义运算符过程的运算符符号、操作数和代码。
+
+## <a name="syntax"></a>语法
+
+```vb
+[ <attrlist> ] Public [ Overloads ] Shared [ Shadows ] [ Widening | Narrowing ]
+Operator operatorsymbol ( operand1 [, operand2 ]) [ As [ <attrlist> ] type ]
+    [ statements ]
+    [ statements ]
+    Return returnvalue
+    [ statements ]
+End Operator
+```
+
+## <a name="parts"></a>部件
+
+`attrlist`  
+可选。 请参阅[特性列表](../../../visual-basic/language-reference/statements/attribute-list.md)。
+
+`Public`  
+必须的。 指示此运算符过程具有[公共](../../../visual-basic/language-reference/modifiers/public.md)访问权限。
+
+`Overloads`  
+可选。 请参阅[重载](../../../visual-basic/language-reference/modifiers/overloads.md)。
+
+`Shared`  
+必须的。 指示此运算符过程是一个[共享](../../../visual-basic/language-reference/modifiers/shared.md)过程。
+
+`Shadows`  
+可选。 请参阅[阴影](../../../visual-basic/language-reference/modifiers/shadows.md)。
+
+`Widening`  
+对于转换运算符是必需的，除非指定 `Narrowing`。 指示此运算符过程定义[扩大](../../../visual-basic/language-reference/modifiers/widening.md)转换。 请参阅此帮助页上的 "扩大和收缩转换"。
+
+`Narrowing`  
+对于转换运算符是必需的，除非指定 `Widening`。 指示此运算符过程定义[收缩](../../../visual-basic/language-reference/modifiers/narrowing.md)转换。 请参阅此帮助页上的 "扩大和收缩转换"。
+
+`operatorsymbol`  
+必须的。 此运算符过程所定义的运算符的符号或标识符。
+
+`operand1`  
+必须的。 一元运算符的单个操作数的名称和类型（包括转换运算符）或二元运算符的左操作数。
+
+`operand2`  
+对于二元运算符是必需的。 二元运算符的右操作数的名称和类型。
+
+`operand1` 和 `operand2` 具有以下语法和部分：
+
+`[ ByVal ] operandname [ As operandtype ]`
+
+|部件|描述|
+|----------|-----------------|
+|`ByVal`|可选，但传递机制必须是[ByVal](../../../visual-basic/language-reference/modifiers/byval.md)。|
+|`operandname`|必须的。 表示此操作数的变量的名称。 请参阅 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。|
+|`operandtype`|除非 `On` `Option Strict`，否则为可选。 此操作数的数据类型。|
+
+`type`  
+除非 `On` `Option Strict`，否则为可选。 运算符过程返回的值的数据类型。
+
+`statements`  
+可选。 运算符过程运行的语句块。
+
+`returnvalue`  
+必须的。 运算符过程返回到调用代码的值。
+
+`End` `Operator`  
+必须的。 终止此运算符过程的定义。
+
+## <a name="remarks"></a>备注
+
+只能在类或结构中使用 `Operator`。 这意味着运算符的*声明上下文*不能是源文件、命名空间、模块、接口、过程或块。 有关详细信息，请参阅[声明上下文和默认访问级别](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)。
+
+所有运算符都必须 `Public Shared`。 不能为任一操作数指定 `ByRef`、`Optional` 或 `ParamArray`。
+
+不能使用运算符符号或标识符来保存返回值。 必须使用 `Return` 语句，并且必须指定一个值。 任意数量的 `Return` 语句可以出现在过程中的任何位置。
+
+以这种方式定义运算符称为*运算符重载*，无论是否使用 `Overloads` 关键字。 下表列出了可定义的运算符。
+
+|键入|运算符|
+|----------|---------------|
+|一元|`+`, `-`, `IsFalse`, `IsTrue`, `Not`|
+|二进制|`+`, `-`, `*`, `/`, `\`, `&`, `^`, `>>`, `<<`, `=`, `<>`, `>`, `>=`, `<`, `<=`, `And`, `Like`, `Mod`, `Or`, `Xor`|
+|转换（一元）|`CType`|
+
+请注意，二元列表中的 `=` 运算符是比较运算符，而不是赋值运算符。
+
+在定义 `CType` 时，必须指定 `Widening` 或 `Narrowing`。
+
+## <a name="matched-pairs"></a>匹配对
+
+必须将某些运算符定义为匹配对。 如果定义此类对的任一运算符，则还必须定义其他运算符。 匹配对如下所示：
+
+- `=` 和 `<>`
+
+- `>` 和 `<`
+
+- `>=` 和 `<=`
+
+- `IsTrue` 和 `IsFalse`
+
+## <a name="data-type-restrictions"></a>数据类型限制
+
+你定义的每个运算符都必须涉及你定义它的类或结构。 这意味着，类或结构必须显示为以下类型的数据类型：
+
+- 一元运算符的操作数。
+
+- 二元运算符的至少一个操作数。
+
+- 转换运算符的操作数或返回类型。
+
+ 某些运算符具有额外的数据类型限制，如下所示：
+
+- 如果定义 `IsTrue` 和 `IsFalse` 运算符，则它们必须返回 `Boolean` 类型。
+
+- 如果定义 `<<` 和 `>>` 运算符，则它们必须为 `operand2` 的 `operandtype` 指定 `Integer` 类型。
+
+返回类型不一定对应于任一操作数的类型。 例如，即使两个操作数都不 `Boolean`，`=` 或 `<>` 这样的比较运算符也可能返回 `Boolean`。
+
+## <a name="logical-and-bitwise-operators"></a>逻辑运算符和位运算符
+
+@No__t_0、`Or`、`Not` 和 `Xor` 运算符可在 Visual Basic 中执行逻辑或按位运算。 但是，如果在类或结构上定义这些运算符之一，则只能定义其按位运算。
+
+不能使用 `Operator` 语句直接定义 `AndAlso` 运算符。 不过，如果已满足以下条件，则可以使用 `AndAlso`：
+
+- 已在要用于 `AndAlso` 的相同操作数类型上定义 `And`。
+
+- @No__t_0 的定义返回的类型与定义它的类或结构的类型相同。
+
+- 您已在定义了 `And` 的类或结构上定义 `IsFalse` 运算符。
+
+同样，如果已使用类或结构的返回类型在同一操作数上定义了 `Or`，并且已在类或结构上定义了 `IsTrue`，则可以使用 `OrElse`。
+
+## <a name="widening-and-narrowing-conversions"></a>Widening and Narrowing Conversions
+
+在运行时，*扩大转换*始终会成功，而*收缩转换*可能会在运行时失败。 有关详细信息，请参阅 [Widening and Narrowing Conversions](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)。
+
+如果声明要 `Widening` 的转换过程，则过程代码不得生成任何失败。 这意味着：
+
+- 它必须始终返回 `type` 类型的有效值。
+
+- 它必须处理所有可能的异常和其他错误情况。
+
+- 它必须处理它所调用的任何过程中的任何错误。
+
+如果转换过程可能会失败或可能导致未经处理的异常，则必须将其声明为 `Narrowing`。
+
+## <a name="example"></a>示例
+
+下面的代码示例使用 `Operator` 语句来定义结构的轮廓，其中包括 `And`、`Or`、`IsFalse` 和 `IsTrue` 运算符的运算符过程。 `And` 和 `Or` 每个都采用类型 `abc` 和返回类型 `abc` 两个操作数。 `IsFalse` 和 `IsTrue` 每个都采用 `abc` 类型的单个操作数并返回 `Boolean`。 这些定义允许调用代码将 `And`、`AndAlso`、`Or` 和 `OrElse` 与 `abc` 类型的操作数一起使用。
+
+[!code-vb[VbVbalrStatements#44](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#44)]
+
 ## <a name="see-also"></a>请参阅
 
 - [IsFalse 运算符](../../../visual-basic/language-reference/operators/isfalse-operator.md)

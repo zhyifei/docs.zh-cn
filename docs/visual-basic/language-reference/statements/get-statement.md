@@ -1,5 +1,5 @@
 ---
-title: Get 语句 (Visual Basic)
+title: Get 语句（Visual Basic）
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Get
@@ -11,19 +11,19 @@ helpviewer_keywords:
 - Get keyword [Visual Basic]
 - property procedures [Visual Basic], Get statements
 ms.assetid: 56b05cdc-bd64-4dfd-bb12-824eacec6f94
-ms.openlocfilehash: 33fa6811f952d240fb86bbdf59ca83df0afc03ad
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d76155b8ff29e4f5e9206ae8fc689fa4fcaf3b8c
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625530"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72581836"
 ---
 # <a name="get-statement"></a>Get 语句
-声明`Get`用于检索属性值的属性过程。  
+声明用于检索属性值的 `Get` 属性过程。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```vb  
 [ <attributelist> ] [ accessmodifier ] Get()  
     [ statements ]  
 End Get  
@@ -33,43 +33,43 @@ End Get
   
 |术语|定义|  
 |---|---|  
-|`attributelist`|可选。 请参阅[属性列表](../../../visual-basic/language-reference/statements/attribute-list.md)。|  
-|`accessmodifier`|在最多一个的可选`Get`和`Set`中此属性的语句。 可以是以下各项之一：<br /><br /> -   [受保护](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [友元](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [专用](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> 请参阅 [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。|  
-|`statements`|可选。 运行时的一个或多个语句`Get`调用属性过程。|  
-|`End Get`|必需。 终止的定义`Get`属性过程。|  
+|`attributelist`|可选。 请参阅[特性列表](../../../visual-basic/language-reference/statements/attribute-list.md)。|  
+|`accessmodifier`|在此属性中的最多一个 `Get` 和 `Set` 语句上是可选的。 可以是以下各项之一：<br /><br /> -   [保护](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [朋友](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [私有](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> 请参阅 [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。|  
+|`statements`|可选。 调用 `Get` 属性过程时运行的一个或多个语句。|  
+|`End Get`|必须的。 终止 `Get` 属性过程的定义。|  
   
 ## <a name="remarks"></a>备注  
- 每个属性必须具有`Get`属性过程除非该属性标记为`WriteOnly`。 `Get`过程用于返回属性的当前值。  
+ 每个属性都必须具有 `Get` 属性过程，除非该属性被标记为 `WriteOnly`。 @No__t_0 过程用于返回属性的当前值。  
   
- Visual Basic 会自动调用属性的`Get`表达式请求属性的值时的过程。  
+ 当表达式请求属性值时，Visual Basic 会自动调用属性的 `Get` 过程。  
   
- 属性声明的主体可以包含仅属性的`Get`并`Set`过程之间[Property 语句](../../../visual-basic/language-reference/statements/property-statement.md)和`End Property`语句。 它不能存储这些过程之外的任何内容。 具体而言，它不能存储属性的当前值。 必须存储属性，超出此值，因为如果将其存储在属性过程之一，另一个属性过程不能访问它。 常用方法是存储中的值[专用](../../../visual-basic/language-reference/modifiers/private.md)变量声明为属性的级别相同。 必须定义`Get`它所应用于的属性内的过程。  
+ 属性声明的主体只能包含属性的 `Get`，并在[Property 语句](../../../visual-basic/language-reference/statements/property-statement.md)和 `End Property` 语句之间包含 `Set` 过程。 它无法存储这些过程以外的任何内容。 特别是，它无法存储属性的当前值。 您必须将此值存储在属性的外部，因为如果将其存储在任一属性过程中，则其他属性过程将无法访问它。 常见的方法是将值存储在与属性在同一级别上声明的[私有](../../../visual-basic/language-reference/modifiers/private.md)变量中。 必须在应用的属性中定义 `Get` 过程。  
   
- `Get`过程默认为其包含的属性的访问级别，除非使用`accessmodifier`中`Get`语句。  
+ 除非在 `Get` 语句中使用 `accessmodifier`，否则 `Get` 过程默认为其包含属性的访问级别。  
   
 ## <a name="rules"></a>规则  
   
-- **混合的访问级别。** 如果你正在定义的读-写属性，您可以选择指定不同的访问级别为`Get`或`Set`过程，但不可同时使用两者。 如果执行此操作时，过程访问级别必须比属性的访问级别限制性更强。 例如，如果属性声明`Friend`，可以声明`Get`过程`Private`，但不是`Public`。  
+- **混合访问级别。** 如果要定义读写属性，则可以选择为 `Get` 或 `Set` 过程指定不同的访问级别，但不能同时指定两者。 如果执行此操作，则过程访问级别必须比属性的访问级别更严格。 例如，如果属性已 `Friend` 声明，则可以将 `Get` 过程声明 `Private` 但不 `Public`。  
   
-     如果您要定义`ReadOnly`属性，`Get`过程都表示整个属性。 不能声明不同的访问级别`Get`，因为这会设置属性的两个访问级别。  
+     如果正在定义 `ReadOnly` 属性，则 `Get` 过程表示整个属性。 不能为 `Get` 声明不同的访问级别，因为这会为属性设置两个访问级别。  
   
-- **返回类型。** [Property Statement](../../../visual-basic/language-reference/statements/property-statement.md)可以声明其返回的值的数据类型。 `Get`过程会自动返回数据类型。 您可以指定任何数据类型或枚举、 结构、 类或接口的名称。  
+- **返回类型。** [Property 语句](../../../visual-basic/language-reference/statements/property-statement.md)可以声明其返回的值的数据类型。 @No__t_0 过程会自动返回该数据类型。 您可以指定任何数据类型或枚举、结构、类或接口的名称。  
   
-     如果`Property`语句不指定`returntype`，该过程返回`Object`。  
+     如果 `Property` 语句未指定 `returntype`，则过程返回 `Object`。  
   
 ## <a name="behavior"></a>行为  
   
-- **从过程中返回。** 当`Get`过程返回到调用代码，请求的属性值的语句中将继续执行。  
+- **从过程返回。** 当 `Get` 过程返回到调用代码时，执行将在请求属性值的语句中继续执行。  
   
-     `Get` 属性过程可以返回值使用[Return 语句](../../../visual-basic/language-reference/statements/return-statement.md)或者将返回值分配给属性名称。 详细信息，请参阅"返回值"中[Function 语句](../../../visual-basic/language-reference/statements/function-statement.md)。  
+     `Get` 属性过程可以使用[Return 语句](../../../visual-basic/language-reference/statements/return-statement.md)或通过将返回值分配给属性名称来返回值。 有关详细信息，请参阅[Function 语句](../../../visual-basic/language-reference/statements/function-statement.md)中的 "返回值"。  
   
-     `Exit Property`和`Return`语句从属性过程会导致立即退出。 任意数量的`Exit Property`并`Return`语句可以在过程中，任何位置出现，并且可以混合`Exit Property`和`Return`语句。  
+     @No__t_0 和 `Return` 语句导致直接从属性过程退出。 任意数量的 `Exit Property` 和 `Return` 语句可以出现在过程中的任何位置，并且可以混合 `Exit Property` 和 `Return` 语句。  
   
-- **返回值。** 若要返回的值`Get`过程中，可以将值分配给属性名称或将其包含在[Return 语句](../../../visual-basic/language-reference/statements/return-statement.md)。 `Return`语句将同时分配`Get`过程返回值，并退出该过程。  
+- **返回值。** 若要从 `Get` 过程返回值，可将值分配给属性名称或将其包含在[Return 语句](../../../visual-basic/language-reference/statements/return-statement.md)中。 @No__t_0 语句同时分配 `Get` 过程返回值并退出该过程。  
   
-     如果您使用`Exit Property`而不将值分配到的属性名`Get`过程将返回属性的数据类型的默认值。 详细信息，请参阅"返回值"中[Function 语句](../../../visual-basic/language-reference/statements/function-statement.md)。  
+     如果在不向属性名称赋予值的情况下使用 `Exit Property`，则 `Get` 过程将返回属性数据类型的默认值。 有关详细信息，请参阅[Function 语句](../../../visual-basic/language-reference/statements/function-statement.md)中的 "返回值"。  
   
-     下面的示例演示两种方法的只读属性`quoteForTheDay`可保存在私有变量的值返回`quoteValue`。  
+     下面的示例演示了只读属性 `quoteForTheDay` 可以返回 `quoteValue` 中包含的值的两种方法。  
   
      [!code-vb[VbVbalrStatements#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#27)]  
   
@@ -78,7 +78,7 @@ End Get
      [!code-vb[VbVbalrStatements#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#29)]  
   
 ## <a name="example"></a>示例  
- 下面的示例使用`Get`语句返回的属性值。  
+ 下面的示例使用 `Get` 语句返回属性的值。  
   
  [!code-vb[VbVbalrStatements#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#30)]  
   

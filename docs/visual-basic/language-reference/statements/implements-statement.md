@@ -1,5 +1,5 @@
 ---
-title: Implements 语句 (Visual Basic)
+title: Implements 语句（Visual Basic）
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Implements
@@ -9,54 +9,54 @@ helpviewer_keywords:
 - Implements statement [Visual Basic]
 - interface implementation [Visual Basic], Implements statement
 ms.assetid: 1fafb83f-f55a-4215-8ea9-681e8622613d
-ms.openlocfilehash: 1f0c6b052ead303e0b43465dac2067422abc4ef8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 865e99aa0e27591d10fde1465047a2e6bf183bbf
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61637734"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72581790"
 ---
 # <a name="implements-statement"></a>Implements 语句
-指定一个或多个接口，或必须在类中实现的接口成员或结构定义中的出现。  
+指定一个或多个接口或接口成员，它们必须在它所出现的类或结构定义中实现。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```vb  
 Implements interfacename [, ...]  
--or-  
+' -or-  
 Implements interfacename.interfacemember [, ...]  
 ```  
   
 ## <a name="parts"></a>部件  
  `interfacename`  
- 必需。 一个其属性、 过程和事件是由类或结构中的相应成员来实现的接口。  
+ 必须的。 一个接口，其属性、过程和事件由类或结构中的相应成员实现。  
   
  `interfacemember`  
- 必需。 正在实现的接口的成员。  
+ 必须的。 正在实现的接口的成员。  
   
 ## <a name="remarks"></a>备注  
- 接口是集合接口封装的原型表示的成员 （属性、 过程和事件）。 接口包含仅成员; 的声明类和结构实现这些成员。 有关详细信息，请参阅[接口](../../../visual-basic/programming-guide/language-features/interfaces/index.md)。  
+ 接口是表示接口封装的成员（属性、过程和事件）的原型的集合。 接口只包含成员的声明;类和结构实现这些成员。 有关详细信息，请参阅[接口](../../../visual-basic/programming-guide/language-features/interfaces/index.md)。  
   
- `Implements`语句必须紧跟`Class`或`Structure`语句。  
+ @No__t_0 语句必须紧跟在 `Class` 或 `Structure` 语句之后。  
   
- 当实现接口时，必须实现该接口中声明的所有成员。 省略任何成员被视为是语法错误。 若要实现单个成员，则指定[实现](../../../visual-basic/language-reference/statements/implements-clause.md)关键字 (即独立于`Implements`语句) 中的类或结构的成员的声明时。 有关详细信息，请参阅[接口](../../../visual-basic/programming-guide/language-features/interfaces/index.md)。  
+ 实现接口时，必须实现在接口中声明的所有成员。 省略任何成员均视为语法错误。 若要实现单个成员，请在声明类或结构中的成员时指定[Implements](../../../visual-basic/language-reference/statements/implements-clause.md)关键字（与 `Implements` 语句分开）。 有关详细信息，请参阅[接口](../../../visual-basic/programming-guide/language-features/interfaces/index.md)。  
   
- 类可以使用[专用](../../../visual-basic/language-reference/modifiers/private.md)了仅通过强制转换到一个变量中的实现类实例声明为接口的类型的可访问的属性和过程，但这些成员实现。  
+ 类可以使用属性和过程的[私有](../../../visual-basic/language-reference/modifiers/private.md)实现，但只能通过将实现类的实例强制转换为声明为接口类型的变量来访问这些成员。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何使用`Implements`语句来实现的接口成员。 它定义一个接口，名为`ICustomerInfo`与事件、 属性和过程。 类`customerInfo`实现在接口中定义的所有成员。  
+ 下面的示例演示如何使用 `Implements` 语句来实现接口的成员。 它使用事件、属性和过程来定义名为 `ICustomerInfo` 的接口。 类 `customerInfo` 实现在接口中定义的所有成员。  
   
  [!code-vb[VbVbalrStatements#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#33)]  
   
- 请注意，该类`customerInfo`使用`Implements`单独的源文件的代码行以指示该类实现的所有成员上的语句`ICustomerInfo`接口。 然后，在类中的每个成员使用`Implements`关键字作为其成员声明，以指示它实现该接口成员的一部分。  
+ 请注意，类 `customerInfo` 对单独的源代码行使用 `Implements` 语句，以指示类实现了 `ICustomerInfo` 接口的所有成员。 然后，类中的每个成员都使用 `Implements` 关键字作为其成员声明的一部分，以指示它实现了该接口成员。  
   
 ## <a name="example"></a>示例  
- 以下两个过程演示如何使用在前面的示例实现的接口。 若要测试实现，请将这些过程添加到项目中并调用`testImplements`过程。  
+ 下面的两个过程演示如何使用在前面的示例中实现的接口。 若要测试实现，请将这些过程添加到项目中，然后调用 `testImplements` 过程。  
   
  [!code-vb[VbVbalrStatements#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#34)]  
   
 ## <a name="see-also"></a>请参阅
 
-- [Implements](../../../visual-basic/language-reference/statements/implements-clause.md)
+- [Sub New](../../../visual-basic/language-reference/statements/implements-clause.md)
 - [Interface 语句](../../../visual-basic/language-reference/statements/interface-statement.md)
 - [接口](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
