@@ -4,12 +4,12 @@ description: 了解有关 Windows 兼容性包以及如何使用它将现有 .NE
 author: terrajobst
 ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: 71e390881d4e9c7836622abeed49c0ea2e5f7526
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: adf2aaab27b5a8afcc89fceac67184d3b1974037
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202561"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72521276"
 ---
 # <a name="use-the-windows-compatibility-pack-to-port-code-to-net-core"></a>使用 Windows 兼容性包将代码移植到 .NET Core
 
@@ -25,23 +25,23 @@ Windows 兼容性包  通过 NuGet 包 [Microsoft.Windows.Compatibility](https:/
 
 它提供了约 20,000 个 API，包括仅 Windows API 以及以下技术领域中的跨平台 API：
 
-* 代码页
-* CodeDom
-* 配置
-* 目录服务
-* 绘图
-* ODBC
-* 权限
-* 端口
-* Windows 访问控制列表 (ACL)
-* Windows Communication Foundation (WCF)
-* Windows 加密
-* Windows 事件日志
-* Windows Management Instrumentation (WMI)
-* Windows 性能计数器
-* Windows 注册表
-* Windows 运行时缓存
-* Windows 服务
+- 代码页
+- CodeDom
+- 配置
+- 目录服务
+- 绘图
+- ODBC
+- 权限
+- 端口
+- Windows 访问控制列表 (ACL)
+- Windows Communication Foundation (WCF)
+- Windows 加密
+- Windows 事件日志
+- Windows Management Instrumentation (WMI)
+- Windows 性能计数器
+- Windows 注册表
+- Windows 运行时缓存
+- Windows 服务
 
 有关详细信息，请参阅[兼容包规范](https://github.com/dotnet/designs/blob/master/accepted/compat-pack/compat-pack.md)。
 

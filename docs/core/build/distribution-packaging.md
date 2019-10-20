@@ -4,12 +4,12 @@ description: 了解如何为 .NET Core 打包、命名并进行版本控制以�
 author: tmds
 ms.date: 10/09/2019
 ms.custom: seodec18
-ms.openlocfilehash: 3c41ce8a4a9ac1a914de2535a9b2423a7ddfa2cf
-ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
+ms.openlocfilehash: 715eb944c3e7626696f64e63b874e2f77595cf46
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72250137"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72393585"
 ---
 # <a name="net-core-distribution-packaging"></a>.NET Core 分发打包
 
@@ -72,7 +72,7 @@ ms.locfileid: "72250137"
 
 - (3) **sdk/\<sdk version>** SDK（也称为“工具”）是一组托管工具，可用于编写和生成 .NET Core 库和应用程序。 SDK 包括 .NET Core 命令行接口 (CLI)、托管的语言编译器、MSBuild 及相关生成任务和目标、NuGet、新项目模板等。
 
-- (4) **sdk/NuGetFallbackFolder** 包含 SDK 在还原操作期间使用的 NuGet 包的缓存，例如在运行 `dotnet restore` 或 `dotnet build /t:Restore` 时。 此文件夹仅在 .NET Core 3.0 之前使用。 不能从源生成它，因为它包含来自 `nuget.org` 的预构建二进制资产。
+- (4) **sdk/NuGetFallbackFolder** 包含 SDK 在还原操作期间使用的 NuGet 包的缓存，例如在运行 `dotnet restore` 或 `dotnet build` 时。 此文件夹仅在 .NET Core 3.0 之前使用。 不能从源生成它，因为它包含来自 `nuget.org` 的预构建二进制资产。
 
 “共享”  文件夹包含框架。 共享框架提供一组位于中心位置的库，从而让不同的应用程序使用。
 

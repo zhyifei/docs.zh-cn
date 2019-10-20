@@ -2,12 +2,12 @@
 title: dotnet build-server 命令
 description: dotnet build-server 命令与通过生成启动的服务器进行交互。
 ms.date: 04/24/2019
-ms.openlocfilehash: 89d1aba104e2cb07b46766a3768eed68d85a7aa7
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 1c6c6dcdb53d779426daf5daa470d2ad0470a7a1
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117767"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523010"
 ---
 # <a name="dotnet-build-server"></a>dotnet build-server
 
@@ -31,24 +31,24 @@ dotnet build-server [-h|--help]
 
 ## <a name="commands"></a>命令
 
-* **`shutdown`**
+- **`shutdown`**
 
   关闭从 dotnet 启动的生成服务器。 默认情况下会关闭所有服务器。
 
 ## <a name="options"></a>选项
 
-* **`-h|--help`**
+- **`-h|--help`**
 
   打印出有关命令的简短帮助。
 
-* **`--msbuild`**
+- **`--msbuild`**
 
   关闭 MSBuild 生成服务器。
 
-* **`--razor`**
+- **`--razor`**
 
   关闭 Razor 生成服务器。
 
-* **`--vbcscompiler`**
+- **`--vbcscompiler`**
 
   关闭 VB/C# 编译器生成服务器。

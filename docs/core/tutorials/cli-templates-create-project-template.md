@@ -5,12 +5,12 @@ author: thraka
 ms.date: 06/25/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: 3455720d729f813d9b6f32e433adffa4dc40dce4
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 1f4e73287fca650b20ed5617c8dfd80e0bd8363c
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926138"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72318277"
 ---
 # <a name="tutorial-create-a-project-template"></a>教程：创建项目模板
 
@@ -159,7 +159,7 @@ Worker Service                                    worker                [C#]    
 
 ### <a name="test-the-project-template"></a>测试项目模板
 
-现在你已安装了项模板，可对其进行测试。 导航到 test  文件夹，使用 `dotnet new console` 创建新的控制台应用程序。 这将生成一个可以使用 `dotnet run` 命令轻松测试的工作项目。
+现在你已安装了项模板，可对其进行测试。 导航到 test  文件夹，使用 `dotnet new consoleasync` 创建新的控制台应用程序。 这将生成一个可以使用 `dotnet run` 命令轻松测试的工作项目。
 
 ```console
 C:\test> dotnet new consoleasync

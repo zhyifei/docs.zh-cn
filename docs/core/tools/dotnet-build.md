@@ -2,12 +2,12 @@
 title: dotnet build 命令
 description: dotnet build 命令可生成项目及其所有依赖项。
 ms.date: 10/07/2019
-ms.openlocfilehash: db353feebab920dc8f63b9854d14f050adeb0b79
-ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
+ms.openlocfilehash: 0a3e2c0e441cfdd1cb8266bc77dc1aba08af84d6
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72250195"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522775"
 ---
 # <a name="dotnet-build"></a>dotnet 生成
 
@@ -66,85 +66,85 @@ dotnet build [-h|--help]
 
 ## <a name="options"></a>选项
 
-* **`-c|--configuration {CONFIGURATION}`**
+- **`-c|--configuration {Debug|Release}`**
 
   定义生成配置。 大多数项目的默认配置为 `Debug`，但你可以覆盖项目中的生成配置设置。
 
-* **`-f|--framework <FRAMEWORK>`**
+- **`-f|--framework <FRAMEWORK>`**
 
   编译特定[框架](../../standard/frameworks.md)。 必须在[项目文件](csproj.md)中定义该框架。
 
-* **`--force`**
+- **`--force`**
 
   强制解析所有依赖项，即使上次还原已成功，也不例外。 指定此标记等同于删除 project.assets.json 文件  。 自 .NET Core 2.0 SDK 起可用。
 
-* **`-h|--help`**
+- **`-h|--help`**
 
   打印出有关命令的简短帮助。
 
-* **`--interactive`**
+- **`--interactive`**
 
   允许命令停止并等待用户输入或操作。 例如，完成身份验证。 自 .NET Core 3.0 SDK 起可用。
 
-* **`--no-dependencies`**
+- **`--no-dependencies`**
 
   忽略项目到项目 (P2P) 引用，并仅生成指定的根项目。
 
-* **`--no-incremental`**
+- **`--no-incremental`**
 
   将生成标记为对增量生成不安全。 此标记关闭增量编译，并强制完全重新生成项目依赖项关系图。
 
-* **`--no-restore`**
+- **`--no-restore`**
 
   在生成期间不执行隐式还原。 自 .NET Core 2.0 SDK 起可用。
 
-* **`--nologo`**
+- **`--nologo`**
 
   不显示启动版权标志或版权消息。 自 .NET Core 3.0 SDK 起可用。
 
-* **`-o|--output <OUTPUT_DIRECTORY>`**
+- **`-o|--output <OUTPUT_DIRECTORY>`**
 
   放置生成二进制文件的目录。 指定此选项时还需要定义 `--framework`。 如果未指定，则默认路径为 `./bin/<configuration>/<framework>/`。
 
-* **`-r|--runtime <RUNTIME_IDENTIFIER>`**
+- **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
   指定目标运行时。 有关运行时标识符 (RID) 的列表，请参阅 [RID 目录](../rid-catalog.md)。
 
-* **`-v|--verbosity <LEVEL>`**
+- **`-v|--verbosity <LEVEL>`**
 
   设置 MSBuild 详细级别。 允许使用的值为 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。 默认值为 `minimal`。
 
-* **`--version-suffix <VERSION_SUFFIX>`**
+- **`--version-suffix <VERSION_SUFFIX>`**
 
   设置生成项目时使用的 `$(VersionSuffix)` 属性的值。 这仅在未设置 `$(Version)` 属性时有效。 然后，`$(Version)` 设置为 `$(VersionPrefix)` 与 `$(VersionSuffix)` 组合，并用短划线分隔。
 
 ## <a name="examples"></a>示例
 
-* 生成项目及其依赖项：
+- 生成项目及其依赖项：
 
   ```dotnetcli
   dotnet build
   ```
 
-* 使用“发布”配置生成项目及其依赖项：
+- 使用“发布”配置生成项目及其依赖项：
 
   ```dotnetcli
   dotnet build --configuration Release
   ```
 
-* 针对特定运行时（本例中为 Ubuntu 18.04）生成项目及其依赖项：
+- 针对特定运行时（本例中为 Ubuntu 18.04）生成项目及其依赖项：
 
   ```dotnetcli
   dotnet build --runtime ubuntu.18.04-x64
   ```
 
-* 生成项目，并在还原操作过程中使用指定的 NuGet 包源（.NET Core 2.0 SDK 及更高版本）：
+- 生成项目，并在还原操作过程中使用指定的 NuGet 包源（.NET Core 2.0 SDK 及更高版本）：
 
   ```dotnetcli
   dotnet build --source c:\packages\mypackages
   ```
 
-* 生成项目并设置版本 1.2.3.4 作为使用 `-p` [MSBuild 选项](#msbuild)的生成参数：
+- 生成项目并设置版本 1.2.3.4 作为使用 `-p` [MSBuild 选项](#msbuild)的生成参数：
 
   ```dotnetcli
   dotnet build -p:Version=1.2.3.4

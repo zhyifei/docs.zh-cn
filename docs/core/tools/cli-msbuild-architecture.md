@@ -2,18 +2,19 @@
 title: .NET Core 命令行工具体系结构
 description: 了解 .NET Core 工具层及最新版本中的更改。
 ms.date: 03/06/2017
-ms.openlocfilehash: e9226a314932eb73c6474c0fd17c77c87683e6db
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 05183a9edc26615e00d6383043fd10d8bec06f2b
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57675688"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72521305"
 ---
 # <a name="high-level-overview-of-changes-in-the-net-core-tools"></a>.NET Core 工具中变更的高级概述
 
-此文档介绍了与从 project.json 移动到 MSBuild 和 csproj 项目系统有关的更改，其中包含关于 .NET Core 工具的分层和 CLI 命令的实现的更改的信息。 这些更改与 2017 年 3 月 7 日 .NET Core SDK 1.0 和 Visual Studio 2017 的发布同时发生（请参阅[通知](https://devblogs.microsoft.com/dotnet/announcing-net-core-tools-1-0/)），但是最初是在 .NET Core SDK 预览 3 版本中实现的。
+此文档介绍了与从 project.json  移动到 MSBuild 和 csproj  项目系统有关的更改，其中包含关于 .NET Core 工具的分层和 CLI 命令的实现的更改的信息。 这些更改与 2017 年 3 月 7 日 .NET Core SDK 1.0 和 Visual Studio 2017 的发布同时发生（请参阅[通知](https://devblogs.microsoft.com/dotnet/announcing-net-core-tools-1-0/)），但是最初是在 .NET Core SDK 预览 3 版本中实现的。
 
 ## <a name="moving-away-from-projectjson"></a>弃用 project.json
+
 .NET Core 工具的最大变更无疑是[弃用 project.json，改用 csproj](https://devblogs.microsoft.com/dotnet/changes-to-project-json/) 作为项目系统。 最新版本的命令行工具不支持 *project.json* 文件。 这意味着它不能用于生成、运行或发布基于 project.json 的应用程序和库。 若要使用此版本的工具，需要迁移现有项目或启动新的项目。 
 
 作为此次移动的一部分，开发用于生成 project.json 项目的自定义生成引擎被替换为一个功能完整的成熟生成引擎，即 [MSBuild](https://github.com/Microsoft/msbuild)。 MSBuild 是.NET 社区中的知名引擎，因为自该平台首个版本以来，它一直作为一项关键技术。 当然，因为它需要生成 .NET Core 应用程序，所以 MSBuild 已经移植到 .NET Core，并可在 .NET Core 运行的任何平台上使用。 .NET Core 的一个主要的好处是跨平台开发堆栈，我们已确保本次迁移不会破坏此好处。
@@ -22,6 +23,7 @@ ms.locfileid: "57675688"
 > 如果还不熟悉 MSBuild，并且想要了解相关详细信息，可参阅 [MSBuild 概念](/visualstudio/msbuild/msbuild-concepts)一文。 
 
 ## <a name="the-tooling-layers"></a>工具层
+
 随着弃用现有项目系统以及改换生成引擎，自然会出现一个疑问：这些更改会改变整体 .NET Core 工具生态系统的整体“分层”吗？ 是否有新的位和组件？
 
 首先来简要介绍下预览版 2 分层，如下图所示：
@@ -46,23 +48,27 @@ ms.locfileid: "57675688"
 
 从使用角度而言，它不会更改使用 CLI 的方式。 CLI 仍具有预览 2 版本中存在的核心命令：
 
-* `new`
-* `restore`
-* `run` 
-* `build`
-* `publish`
-* `test`
-* `pack` 
+- `new`
+- `restore`
+- `run` 
+- `build`
+- `publish`
+- `test`
+- `pack` 
 
 这些命令的作用没有发生改变（仍可新建项目、生成项目、发布项目、打包项目等等）。 大部分选项并未更改，仍和以前一样。可以使用 `dotnet <command> --help` 查看相应命令的帮助屏幕，也可以参阅此网站上的文档来熟悉所有更改。 
 
 从执行角度而言，CLI 命令会采用其参数并构造对“原始”MSBuild 的调用，从而设置所需属性和运行所需目标。 为更好的说明这点，请参考下面的命令： 
 
-   `dotnet publish -o pub -c Release`
+   ```dotnetcli
+   dotnet publish -o pub -c Release
+   ```
     
 此命令会使用“发布”配置将应用程序发布到 `pub` 文件夹。 在内部，此命令会转换成下面的 MSBuild 调用： 
 
-   `dotnet msbuild -t:Publish -p:OutputPath=pub -p:Configuration=Release`
+   ```dotnetcli
+   dotnet msbuild -t:Publish -p:OutputPath=pub -p:Configuration=Release
+   ```
 
 此规则值得注意的例外是 `new` 和 `run` 命令，因为它们未实现为 MSBuild 目标。
 

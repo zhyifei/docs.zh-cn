@@ -4,12 +4,12 @@ description: Microsoft WCF Web Service Reference Provider 工具概述，该工�
 author: mlacouture
 ms.date: 04/19/2018
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 11a18161db0fde522442e2412c4522811c5dd40a
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 5c5759dcc0f428c763eddb84f3d3652fbc548cb2
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926462"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522236"
 ---
 # <a name="use-the-wcf-web-service-reference-provider-tool"></a>使用 WCF Web Service Reference Provider 工具
 
@@ -20,16 +20,16 @@ ms.locfileid: "70926462"
 
 ## <a name="prerequisites"></a>系统必备
 
-* [Visual Studio 2017 15.5](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) 或更高版本
+- [Visual Studio 2017 15.5](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) 或更高版本
 
 ## <a name="how-to-use-the-extension"></a>如何使用扩展
 
 > [!NOTE]
 > “WCF Web 服务引用”选项适用于使用以下项目模板创建的项目  ：
 >
-> * Visual C# > .NET Core  
-> * Visual C# > .NET Standard  
-> * Visual C# > Web > ASP.NET Core Web 应用程序   
+> - Visual C# > .NET Core  
+> - Visual C# > .NET Standard  
+> - Visual C# > Web > ASP.NET Core Web 应用程序   
 
 以“ASP.NET Core Web 应用程序”项目模板为例，本文将介绍如何向该项目中添加 WCF 服务引用  ：
 
@@ -68,9 +68,9 @@ ms.locfileid: "70926462"
 
 在显示进度的同时，工具：
 
-* 从 WCF 服务下载元数据。
-* 在名为“reference.cs”的文件中生成服务引用代码，并将其添加到“连接的服务”节点下的项目   。
-* 使用在目标平台上编译和运行所需的 NuGet 包引用更新项目文件 (.csproj)。
+- 从 WCF 服务下载元数据。
+- 在名为“reference.cs”的文件中生成服务引用代码，并将其添加到“连接的服务”节点下的项目   。
+- 使用在目标平台上编译和运行所需的 NuGet 包引用更新项目文件 (.csproj)。
 
 ![Visual Studio 进度窗口](./media/wcf-web-service-reference-guide/wcfcs-ProgressWindow.png)
 
@@ -84,4 +84,4 @@ ms.locfileid: "70926462"
 
 ### <a name="release-notes"></a>发行说明
 
-* 请参阅[发行说明](https://github.com/dotnet/wcf/blob/master/release-notes/WCF-Web-Service-Reference-notes.md)，了解更新的版本信息（包括已知问题）。
+- 请参阅[发行说明](https://github.com/dotnet/wcf/blob/master/release-notes/WCF-Web-Service-Reference-notes.md)，了解更新的版本信息（包括已知问题）。

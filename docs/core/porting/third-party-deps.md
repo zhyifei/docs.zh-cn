@@ -4,12 +4,12 @@ description: 了解如何分析外部依赖项，以便将项目从 .NET Framewo
 author: cartermp
 ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: 6c0f55150a4a1c4d0fb8b3125565c9ab8ade3117
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 36d1c1d2090a0fb9e6f48fe519d15897579df2d5
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904338"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72521471"
 ---
 # <a name="analyze-your-dependencies-to-port-code-to-net-core"></a>分析依赖项将代码移植到 .NET Core
 
@@ -20,8 +20,8 @@ ms.locfileid: "55904338"
 如果在项目中引用 NuGet 包，需要验证它们是否与 .NET Core 兼容。
 可通过两种方式来实现此目的：
 
-* [使用 NuGet 包资源管理器应用](#analyze-nuget-packages-using-nuget-package-explorer)
-* [使用 nuget.org 站点](#analyze-nuget-packages-using-nugetorg)
+- [使用 NuGet 包资源管理器应用](#analyze-nuget-packages-using-nuget-package-explorer)
+- [使用 nuget.org 站点](#analyze-nuget-packages-using-nugetorg)
 
 分析包后，如果它们与 .NET Core 不兼容并且仅面向 .NET Framework，则可检查 [.NET Framework 兼容性模式](#net-framework-compatibility-mode)是否能有助于移植过程。
 
@@ -32,10 +32,10 @@ NuGet 包本身就是一组包含特定于平台的程序集的文件夹。 所�
 检查 NuGet 包文件夹最简单方法是使用 [NuGet 包资源管理器](https://github.com/NuGetPackageExplorer/NuGetPackageExplorer)工具。 安装完成后，使用以下步骤查看文件夹名称：
 
 1. 打开 NuGet 包资源管理器。
-2. 单击“从在线源打开包”。
+2. 单击“从在线源打开包”  。
 3. 搜索包的名称。
-4. 从搜索结果中选择包的名称，然后点击“打开”。
-5. 展开右侧的“lib”文件夹并查看文件夹名称。
+4. 从搜索结果中选择包的名称，然后点击“打开”  。
+5. 展开右侧的“lib”文件夹并查看文件夹名称  。
 
 查找具有以下任意名称的文件夹：
 
@@ -67,9 +67,9 @@ portable-net45-win8-wpa8-wpa81
 
 ### <a name="analyze-nuget-packages-using-nugetorg"></a>使用 nuget.org 分析 NuGet 包
 
-或者，可在包页面“依赖项”部分下的 [nuget.org](https://www.nuget.org/) 上查看每个包支持的 TFM。
+或者，可在包页面“依赖项”部分下的 [nuget.org](https://www.nuget.org/) 上查看每个包支持的 TFM  。
 
-尽管使用该站点可以比较简单地验证兼容性，但站点上并未提供所有包的“依赖项”信息。
+尽管使用该站点可以比较简单地验证兼容性，但站点上并未提供所有包的“依赖项”信息  。
 
 ### <a name="net-framework-compatibility-mode"></a>.NET Framework 兼容性模式
 
@@ -104,7 +104,7 @@ portable-net45-win8-wpa8-wpa81
 如果所依赖的 NuGet 包无法在 .NET Core 上运行，可以执行以下几项操作：
 
 1. 如果项目是开放源代码并托管在诸如 GitHub 中，则可以直接与开发人员交流。
-2. 可直接在 [nuget.org](https://www.nuget.org/) 上联系作者。搜索包并单击包页面左侧的“联系所有者”。
+2. 可直接在 [nuget.org](https://www.nuget.org/) 上联系作者。搜索包并单击包页面左侧的“联系所有者”  。
 3. 可以搜索在 .NET Core 上运行的其他包，它与所使用的包进行的是相同的任务。
 4. 可以尝试自己编写包所执行的代码。
 5. 可以通过更改应用的功能来清除对包的依赖性，至少在该包有可用的兼容性版本之前都能这样做。

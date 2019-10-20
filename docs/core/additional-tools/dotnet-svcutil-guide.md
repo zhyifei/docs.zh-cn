@@ -4,12 +4,12 @@ description: Microsoft WCF dotnet-svcutil 工具概述，该工具添加了 .NET
 author: mlacouture
 ms.date: 02/22/2019
 ms.custom: seodec18
-ms.openlocfilehash: c6eb17ca6cd4ce920cd358a87d2a4a6759dc3439
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 49b0579c284af74d270cac04d302ce231dcb9357
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117211"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522827"
 ---
 # <a name="wcf-dotnet-svcutil-tool-for-net-core"></a>.NET Core 的 WCF dotnet-svcutil 工具
 
@@ -28,13 +28,13 @@ dotnet-svcutil  工具是 [WCF Web 服务引用](wcf-web-service-reference-guide
 
 # <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
 
-* [.NET Core 2.1 SDK](https://dotnet.microsoft.com/download) 或更高版本
-* 你最喜欢的代码编辑器
+- [.NET Core 2.1 SDK](https://dotnet.microsoft.com/download) 或更高版本
+- 你最喜欢的代码编辑器
 
 # <a name="dotnet-svcutil-1xtabdotnetsvcutil1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
 
-* [.NET Core 1.0.4 SDK](https://dotnet.microsoft.com/download) 或更高版本
-* 你最喜欢的代码编辑器
+- [.NET Core 1.0.4 SDK](https://dotnet.microsoft.com/download) 或更高版本
+- 你最喜欢的代码编辑器
 
 ---
 
@@ -177,8 +177,8 @@ dotnet svcutil --help
 
 ## <a name="release-notes"></a>发行说明
 
-* 请参阅[发行说明](https://github.com/dotnet/wcf/blob/master/release-notes/dotnet-svcutil-notes.md)，了解更新的版本信息（包括已知问题）。
+- 请参阅[发行说明](https://github.com/dotnet/wcf/blob/master/release-notes/dotnet-svcutil-notes.md)，了解更新的版本信息（包括已知问题）。
 
 ## <a name="information"></a>信息
 
-* [dotnet-svcutil NuGet 包](https://nuget.org/packages/dotnet-svcutil)
+- [dotnet-svcutil NuGet 包](https://nuget.org/packages/dotnet-svcutil)

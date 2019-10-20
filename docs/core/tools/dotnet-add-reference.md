@@ -2,12 +2,12 @@
 title: dotnet-add reference 命令
 description: dotnet add reference 命令可便于添加项目间引用。
 ms.date: 06/26/2019
-ms.openlocfilehash: 06d10f6903251bc9d29ae856a900a20610565a14
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 79c8a787079e02f6cf227820c24bb4157b0292c6
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117776"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522771"
 ---
 # <a name="dotnet-add-reference"></a>dotnet-add reference
 
@@ -39,43 +39,43 @@ ms.locfileid: "71117776"
 
 ## <a name="arguments"></a>自变量
 
-* **`PROJECT`**
+- **`PROJECT`**
 
   指定项目文件。 如果未指定，此命令会搜索当前目录来获取一个项目文件。
 
-* **`PROJECT_REFERENCES`**
+- **`PROJECT_REFERENCES`**
 
   要添加的项目到项目 (P2P) 引用。 指定一个或多个项目。 基于 Unix/Linux 的系统支持 [glob 模式](https://en.wikipedia.org/wiki/Glob_(programming))。
 
 ## <a name="options"></a>选项
 
-* **`-h|--help`**
+- **`-h|--help`**
 
   打印出有关命令的简短帮助。
 
-* **`-f|--framework <FRAMEWORK>`**
+- **`-f|--framework <FRAMEWORK>`**
 
   仅在以特定[框架](../../standard/frameworks.md)为目标时添加项目引用。
 
-* **`--interactive`**
+- **`--interactive`**
 
   允许命令停止并等待用户输入或操作（例如，完成身份验证）。 自 .NET Core 3.0 SDK 起可用。
 
 ## <a name="examples"></a>示例
 
-* 添加项目引用：
+- 添加项目引用：
 
   ```dotnetcli
   dotnet add app/app.csproj reference lib/lib.csproj
   ```
 
-* 向当前目录中的项目添加多个项目引用：
+- 向当前目录中的项目添加多个项目引用：
 
   ```dotnetcli
   dotnet add reference lib1/lib1.csproj lib2/lib2.csproj
   ```
 
-* 使用 glob 模式在 Linux/Unix 上添加多个项目引用：
+- 使用 glob 模式在 Linux/Unix 上添加多个项目引用：
 
   ```dotnetcli
   dotnet add app/app.csproj reference **/*.csproj
