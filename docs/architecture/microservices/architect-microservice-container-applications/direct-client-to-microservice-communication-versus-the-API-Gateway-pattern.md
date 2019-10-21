@@ -2,12 +2,12 @@
 title: API 网关模式与客户端到微服务直接通信
 description: 了解 API 网关模式与客户端到微服务直接通信之间的差异及二者的用途。
 ms.date: 01/07/2019
-ms.openlocfilehash: d895ae50e50ade2f8285117491733d5c9814b732
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 6b42650b2dbce093f12fe02b1605c95076dc8592
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834434"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522944"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>API 网关模式与客户端到微服务直接通信
 
@@ -17,7 +17,7 @@ ms.locfileid: "71834434"
 
 使用客户端到微服务直接通信体系结构是一种可行方法。 在此方法中，客户端应用可以直接向某些微服务发出请求，如图 4-12 所示。
 
-![显示客户端到微服务通信体系结构的示意图。](./media/direct-client-to-microservice-communication-versus-the-API-Gateway-pattern/direct-client-to-microservice-communication.png)
+![显示客户端到微服务通信体系结构的示意图。](./media/direct-client-to-microservice-communication.png)
 
 图 4-12  。 使用客户端到微服务直接通信体系结构
 

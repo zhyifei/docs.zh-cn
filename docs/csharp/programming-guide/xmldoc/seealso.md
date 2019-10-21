@@ -13,12 +13,12 @@ helpviewer_keywords:
 - cross-references [C#], tags
 - <seealso> C# XML tag
 ms.assetid: 8e157f3f-f220-4fcf-9010-88905b080b18
-ms.openlocfilehash: 3ddaa7efec2b4bf5ffa53971aa6f380a1be9bad8
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 430270c170f2829d9bf9b90d258c948176b9c086
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69587655"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523327"
 ---
 # <a name="seealso-c-programming-guide"></a>\<seealso>（C# 编程指南）
 ## <a name="syntax"></a>语法  
@@ -36,7 +36,7 @@ ms.locfileid: "69587655"
 ## <a name="remarks"></a>备注  
  使用 \<seealso> 标记，可以指定想要在“另请参阅”部分中显示的文本。 使用 [\<see>](./see.md) 从文本内指定链接。  
   
- 使用 [/doc](../../language-reference/compiler-options/doc-compiler-option.md) 进行编译可以将文档注释处理到文件中。  
+ 使用 [-doc](../../language-reference/compiler-options/doc-compiler-option.md) 进行编译以便将文档注释处理到文件中。  
   
 ## <a name="example"></a>示例  
  有关使用 \<seealso> 的示例，请参阅 [\<summary>](./summary.md)。  

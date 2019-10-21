@@ -2,12 +2,12 @@
 title: C# 8.0 中的新增功能 - C# 指南
 description: 简要介绍 C# 8.0 中提供的新功能。
 ms.date: 09/20/2019
-ms.openlocfilehash: 6b5602db6ee61b1d9db4c906d6a14ea2f918ad0a
-ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
+ms.openlocfilehash: 12e41a3bca981d04f7b29970eba1f737254f2b58
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72275781"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72579138"
 ---
 # <a name="whats-new-in-c-80"></a>C# 8.0 中的新增功能
 
@@ -261,25 +261,36 @@ static Quadrant GetQuadrant(Point point) => point switch
 using 声明  是前面带 `using` 关键字的变量声明。 它指示编译器声明的变量应在封闭范围的末尾进行处理。 以下面编写文本文件的代码为例：
 
 ```csharp
-static void WriteLinesToFile(IEnumerable<string> lines)
+static int WriteLinesToFile(IEnumerable<string> lines)
 {
     using var file = new System.IO.StreamWriter("WriteLines2.txt");
+    // Notice how we declare skippedLines after the using statement.
+    int skippedLines = 0;
     foreach (string line in lines)
     {
         if (!line.Contains("Second"))
         {
             file.WriteLine(line);
         }
+        else
+        {
+            skippedLines++;
+        }
     }
-// file is disposed here
+    // Notice how skippedLines is in scope here.
+    return skippedLines;
+    // file is disposed here
 }
 ```
 
 在前面的示例中，当到达方法的右括号时，将对该文件进行处理。 这是声明 `file` 的范围的末尾。 前面的代码相当于下面使用经典 [using 语句](../language-reference/keywords/using-statement.md)的代码：
 
 ```csharp
-static void WriteLinesToFile(IEnumerable<string> lines)
+static int WriteLinesToFile(IEnumerable<string> lines)
 {
+    // We must declare the variable outside of the using block
+    // so that it is in scope to be returned.
+    int skippedLines = 0;
     using (var file = new System.IO.StreamWriter("WriteLines2.txt"))
     {
         foreach (string line in lines)
@@ -288,8 +299,13 @@ static void WriteLinesToFile(IEnumerable<string> lines)
             {
                 file.WriteLine(line);
             }
+            else
+            {
+                skippedLines++;
+            }
         }
     } // file is disposed here
+    return skippedLines;
 }
 ```
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <param> C# XML tag
 - param C# XML tag
 ms.assetid: 46d329b1-5b84-4537-9e17-73ca97313e4e
-ms.openlocfilehash: e2e9bd4478ceaf2f491aba0aa3db8bae7857f28d
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: ed7a8f8a06771a18dc4244bffbda53e9adbd4e90
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69587921"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523412"
 ---
 # <a name="param-c-programming-guide"></a>\<param>（C# 编程指南）
 ## <a name="syntax"></a>语法  
@@ -35,7 +35,7 @@ ms.locfileid: "69587921"
   
  \<param> 标记的文本将显示在 IntelliSense、对象浏览器和代码注释 Web 报表中。  
   
- 使用 [/doc](../../language-reference/compiler-options/doc-compiler-option.md) 进行编译可以将文档注释处理到文件中。  
+ 使用 [-doc](../../language-reference/compiler-options/doc-compiler-option.md) 进行编译以便将文档注释处理到文件中。  
   
 ## <a name="example"></a>示例  
  [!code-csharp[csProgGuideDocComments#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#1)]  

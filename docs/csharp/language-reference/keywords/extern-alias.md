@@ -9,12 +9,12 @@ helpviewer_keywords:
 - aliases [C#], extern keyword
 - aliases, extern keyword
 ms.assetid: f487bf4f-c943-4fca-851b-e540c83d9027
-ms.openlocfilehash: a701ae02adebfa2dda8fb65053dbf2ebbe83328b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 09d1247c51f0e600973840cfef2d3b396d9bf0d0
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924685"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72520290"
 ---
 # <a name="extern-alias-c-reference"></a>外部别名（C# 参考）
 有时你可能不得不引用具有相同的完全限定类型名称的程序集的两个版本。 例如，可能需要在同一应用程序中使用某程序集的两个或多个版本。 通过使用外部程序集别名，可在别名命名的根级别命名空间内包装每个程序集的命名空间，使其能够在同一文件中使用。  
@@ -47,4 +47,4 @@ ms.locfileid: "69924685"
 - [C# 编程指南](../../programming-guide/index.md)
 - [C# 关键字](./index.md)
 - [::运算符](../operators/namespace-alias-qualifier.md)
-- [/reference（C# 编译器选项）](../compiler-options/reference-compiler-option.md)
+- [-reference（C# 编译器选项）](../compiler-options/reference-compiler-option.md)

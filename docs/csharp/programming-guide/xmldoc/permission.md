@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <permission> C# XML tag
 - permission C# XML tag
 ms.assetid: 769e93fe-8404-443f-bf99-577aa42b6a49
-ms.openlocfilehash: e9eb50394f01072a194d3f746577707f89ba65dd
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 454928d5dfd023639bc68f194f2f5ec9e2d7dc22
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69587881"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523392"
 ---
 # <a name="permission-c-programming-guide"></a>\<permission>（C# 编程指南）
 ## <a name="syntax"></a>语法  
@@ -35,7 +35,7 @@ ms.locfileid: "69587881"
 ## <a name="remarks"></a>备注  
  使用 \<permission> 可以记录成员访问权限 <xref:System.Security.PermissionSet> 类可指定对成员的访问权限。  
   
- 使用 [/doc](../../language-reference/compiler-options/doc-compiler-option.md) 进行编译可以将文档注释处理到文件中。  
+ 使用 [-doc](../../language-reference/compiler-options/doc-compiler-option.md) 进行编译以便将文档注释处理到文件中。  
   
 ## <a name="example"></a>示例  
  [!code-csharp[csProgGuideDocComments#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#8)]  

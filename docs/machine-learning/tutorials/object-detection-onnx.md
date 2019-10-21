@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 08/27/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 4856608e2c944c3a0fee65a328076bf1581f3d2a
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: f31c5155dd3ca59b1a370599b3ffabb2648791b1
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71332627"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72318520"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>教程：在 ML.NET 中使用 ONNX 检测对象
 
@@ -34,7 +34,7 @@ ms.locfileid: "71332627"
 - [Microsoft.ML Nuget 包](https://www.nuget.org/packages/Microsoft.ML/)
 - [Microsoft.ML.ImageAnalytics NuGet 包](https://www.nuget.org/packages/Microsoft.ML.ImageAnalytics/)
 - [Microsoft.ML.OnnxTransformer NuGet 包](https://www.nuget.org/packages/Microsoft.ML.OnnxTransformer/)
-- [Tiny YOLOv2 预训练的模型](https://github.com/onnx/models/tree/master/tiny_yolov2)
+- [Tiny YOLOv2 预训练的模型](https://github.com/onnx/models/tree/master/vision/object_detection_segmentation/tiny_yolov2)
 - [Netron](https://github.com/lutzroeder/netron)（可选）
 
 ## <a name="onnx-object-detection-sample-overview"></a>ONNX 对象检测示例概述
@@ -707,7 +707,7 @@ person and its Confidence score: 0.5551759
 
 祝贺你！ 现已通过重用 ML.NET 中的预训练 `ONNX` 模型，成功生成了对象检测机器学习模型。
 
-可以在 [dotnet/samples](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx) 存储库中找到本教程的源代码。
+可以在 [dotnet/machinelearning-samples](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx) 存储库中找到本教程的源代码。
 
 在本教程中，你将了解：
 > [!div class="checklist"]
@@ -720,4 +720,4 @@ person and its Confidence score: 0.5551759
 
 请查看机器学习示例 GitHub 存储库，以探索扩展的对象检测示例。
 > [!div class="nextstepaction"]
-> [dotnet/machinelearning-samples GitHub 存储库](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/end-to-end-apps/DeepLearning_ObjectDetection_Onnx)
+> [dotnet/machinelearning-samples GitHub 存储库](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx)

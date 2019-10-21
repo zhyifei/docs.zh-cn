@@ -2,12 +2,12 @@
 title: 基于消息的异步通信
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 基于消息的异步通信是微服务体系结构中的一个重要概念，因为它是保持微服务彼此独立的同时使其最终同步的最佳方式。
 ms.date: 09/20/2018
-ms.openlocfilehash: 109737a04eac8cfc30c746d283ca71c697f5b29d
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: c362bdaf41fee5ee20516b89b8bec12d6c0557cf
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834473"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522755"
 ---
 # <a name="asynchronous-message-based-communication"></a>基于消息的异步通信
 
@@ -77,14 +77,14 @@ ms.locfileid: "71834473"
 
 - 使用完整[事件溯源](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing)模式。
 
-- 使用[发件箱模式](http://gistlabs.com/2014/05/the-outbox/)：将用作消息队列的事务数据库表作为事件创建器组件的基础，该组件将创建并发布事件。
+- 使用[发件箱模式](http://www.kamilgrzybek.com/design/the-outbox-pattern/)：将用作消息队列的事务数据库表作为事件创建器组件的基础，该组件将创建并发布事件。
 
 使用异步通信时需要考虑的其他主题包括消息幂等性和重复消息删除。 这些主题将在本指南后面的[在微服务（集成事件）之间实现基于事件的通信](../multi-container-microservice-net-applications/integration-event-based-microservice-communications.md)部分中进行介绍。
 
 ## <a name="additional-resources"></a>其他资源
 
 - **事件驱动的消息传递** \
-  <http://soapatterns.org/design_patterns/event_driven_messaging>
+  <https://soapatterns.org/design_patterns/event_driven_messaging>
 
 - **发布/订阅通道** \
   <https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html>
