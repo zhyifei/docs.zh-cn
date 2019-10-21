@@ -26,7 +26,7 @@ ms.locfileid: "67306186"
 |`!=`|不适用。|<ul><li>F# 中不使用。 使用 `<>` 进行不等运算。<br /></li></ul>|
 |`"`|[文本](../literals.md)<br /><br />[字符串](../strings.md)|<ul><li>分隔文本字符串。<br /></li></ul>|
 |`"""`|[字符串](../strings.md)|分隔逐字文本字符串。 区别你可以在字符串中使用单引号来指示引号字符的 `@"..."`。|
-|`#`|[编译器指令](../compiler-directives.md)<br /><br />[可变类型](../flexible-types.md)|<ul><li>给预处理器指令或编译器指令加上前缀，如 `#light`。<br /></li><li>当用于类型时，指示“灵活类型”  ，即某一类型或该类型的任何一个派生类型。<br /></li></ul>|
+|`#`|[编译器指令](../compiler-directives.md)<br /><br />[可变类型](../flexible-types.md)|<ul><li>给预处理器指令或编译器指令加上前缀，如 `#light`。<br /></li><li>当用于类型时，指示“灵活类型”，即某一类型或该类型的任何一个派生类型。<br /></li></ul>|
 |`$`|无可用的详细信息。|<ul><li>在内部用于特定编译器生成的变量和函数名称。<br /></li></ul>|
 |`%`|[算术运算符](arithmetic-operators.md)<br /><br />[代码引用](../code-quotations.md)|<ul><li>计算整数余数。<br /></li><li>用于将表达式拼接到类型化的代码引号中。<br /></li></ul>|
 |`%%`|[代码引用](../code-quotations.md)|<ul><li>用于将表达式拼接到非类型化的代码引号中。<br /></li></ul>|
@@ -39,7 +39,7 @@ ms.locfileid: "67306186"
 |`( )`|[Unit 类型](../unit-type.md)|<ul><li>表示单位类型的单个值。<br /></li></ul>|
 |`(...)`|[元组](../tuples.md)<br /><br />[运算符重载](../operator-overloading.md)|<ul><li>指示表达式的计算顺序。<br /></li><li>分隔元组。<br /></li><li>在运算符定义中使用。<br /></li></ul>|
 |`(*...*)`||<ul><li>分隔跨多行的注释。<br /></li></ul>|
-|<code>(&#124;...&#124;)</code>|[活动模式](../active-patterns.md)|<ul><li>分隔活动模式。 也称为“香蕉夹”  。<br /></li></ul>|
+|<code>(&#124;...&#124;)</code>|[活动模式](../active-patterns.md)|<ul><li>分隔活动模式。 也称为“香蕉夹”。<br /></li></ul>|
 |`*`|[算术运算符](arithmetic-operators.md)<br /><br />[元组](../tuples.md)<br /><br />[度量单位](../units-of-measure.md)|<ul><li>当用作二元运算符时，使左右两侧相乘。<br /></li><li>在类型中，指示元组中的配对。<br /></li><li>用于度量单位类型。<br /></li></ul>|
 |`*?`|[可为 null 的运算符](nullable-operators.md)|<ul><li>当右侧是可以为 null 的类型时，使左右两侧相乘。<br /></li></ul>|
 |`**`|[算术运算符](arithmetic-operators.md)|<ul><li>计算幂运算（`x ** y` 表示 `x` 的 `y` 次方）。<br /></li></ul>|

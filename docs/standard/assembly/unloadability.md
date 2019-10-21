@@ -37,7 +37,7 @@ ms.locfileid: "70972491"
 
 如你所见，`Load` 方法返回 `null`。 这意味着所有依赖项程序集都会加载到默认上下文中，而新上下文仅包含显式加载到其中的程序集。
 
-若要在 `AssemblyLoadContext` 中加载部分或全部依赖项，可以在 `Load` 方法中使用 `AssemblyDependencyResolver`。 `AssemblyDependencyResolver` 使用加载到上下文中的主程序集目录中包含的 .deps.json 文件并使用该目录中的程序集文件将程序集名称解析为绝对程序集文件路径。
+若要在 `AssemblyLoadContext` 中加载部分或全部依赖项，可以在 `Load` 方法中使用 `AssemblyDependencyResolver`。 `AssemblyDependencyResolver` 使用加载到上下文中的主程序集目录中包含的 .deps.json 文件并使用该目录中的程序集文件将程序集名称解析为绝对程序集文件路径  。
 
 [!code-csharp[Advanced custom AssemblyLoadContext](~/samples/snippets/standard/assembly/unloading/complex_assemblyloadcontext.cs)]
 
@@ -248,6 +248,6 @@ OS Thread Id: 0x60bc (7)
 
 ## <a name="program-loaded-into-the-testassemblyloadcontext"></a>程序已加载到 TestAssemblyLoadContext 中
 
-以下代码表示传递给主测试程序中 `ExecuteAndUnload` 方法的 test.dll。
+以下代码表示传递给主测试程序中 `ExecuteAndUnload` 方法的 test.dll  。
 
 [!code-csharp[Program loaded into the TestAssemblyLoadContext](~/samples/snippets/standard/assembly/unloading/unloadability_issues_example_test.cs)]

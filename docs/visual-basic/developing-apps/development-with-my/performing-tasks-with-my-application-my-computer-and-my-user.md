@@ -28,7 +28,7 @@ ms.locfileid: "62014123"
   
  除了检索信息，通过这三个对象公开的成员还允许您执行与该对象相关的方法。 例如，可以访问多种方法来处理文件或更新通过注册表`My.Computer`。  
   
- 文件 I/O 将变得更加容易和快速使用`My`，其中包括各种方法和属性用于操作文件、 目录和驱动器。 <xref:Microsoft.VisualBasic.FileIO.TextFieldParser>对象使用户可以从大型结构化的文件具有分隔或固定宽度的字段中读取。 此示例打开`TextFieldParser reader`并使用它来从读取`C:\TestFolder1\test1.txt`。  
+ 文件 I/O 将变得更加容易和快速使用`My`，其中包括各种方法和属性用于操作文件、 目录和驱动器。 <xref:Microsoft.VisualBasic.FileIO.TextFieldParser>对象使用户可以从大型结构化的文件具有分隔或固定宽度的字段中读取。 此示例打开`TextFieldParser` `reader`并使用它来从读取`C:\TestFolder1\test1.txt`。  
   
  [!code-vb[VbVbalrTextFieldParser#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTextFieldParser/VB/Class1.vb#23)]  
   
