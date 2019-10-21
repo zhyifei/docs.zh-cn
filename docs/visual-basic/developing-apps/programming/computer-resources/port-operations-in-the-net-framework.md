@@ -4,34 +4,36 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - ports, Visual Basic
 ms.assetid: 1eba223b-7bd3-401a-b097-982bce96df1b
-ms.openlocfilehash: 936ff4c861444d3a971b38fd7b2a0af38b19494b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 10488f896ff7c6761e831d2a8af52249a19cf7d6
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69916595"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72524386"
 ---
-# <a name="port-operations-in-the-net-framework-with-visual-basic"></a><span data-ttu-id="3108e-102">使用 Visual Basic 在 .NET Framework 中执行的端口操作</span><span class="sxs-lookup"><span data-stu-id="3108e-102">Port Operations in the .NET Framework with Visual Basic</span></span>
-<span data-ttu-id="3108e-103">可以通过 <xref:System.IO.Ports?displayProperty=nameWithType> 命名空间中的 .NET Framework 类访问计算机的串行端口。</span><span class="sxs-lookup"><span data-stu-id="3108e-103">You can access your computer's serial ports through the .NET Framework classes in the <xref:System.IO.Ports?displayProperty=nameWithType> namespace.</span></span> <span data-ttu-id="3108e-104">最重要的类 <xref:System.IO.Ports.SerialPort> 为同步和事件驱动 I/O 提供框架，提供对插针和中断状态的访问，以及对串行驱动程序属性的访问。</span><span class="sxs-lookup"><span data-stu-id="3108e-104">The most important class, <xref:System.IO.Ports.SerialPort>, provides a framework for synchronous and event-driven I/O, access to pin and break states, and access to serial driver properties.</span></span> <span data-ttu-id="3108e-105">它可以包装在可通过 <xref:System.IO.Ports.SerialPort.BaseStream> 属性访问的 <xref:System.IO.Stream> 对象中。</span><span class="sxs-lookup"><span data-stu-id="3108e-105">It can be wrapped in a <xref:System.IO.Stream> object, accessible through the <xref:System.IO.Ports.SerialPort.BaseStream> property.</span></span> <span data-ttu-id="3108e-106">将 <xref:System.IO.Ports.SerialPort> 包装在 <xref:System.IO.Stream> 对象中，以便允许使用流的类访问串行端口。</span><span class="sxs-lookup"><span data-stu-id="3108e-106">Wrapping <xref:System.IO.Ports.SerialPort> in a <xref:System.IO.Stream> object allows the serial port to be accessed by classes that use streams.</span></span> <span data-ttu-id="3108e-107">该命名空间包含可以简化对串行端口的控制的枚举。</span><span class="sxs-lookup"><span data-stu-id="3108e-107">The namespace includes enumerations that simplify the control of serial ports.</span></span>  
-  
- <span data-ttu-id="3108e-108">创建 <xref:System.IO.Ports.SerialPort> 对象的最简单的方法是通过 <xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="3108e-108">The simplest way to create a <xref:System.IO.Ports.SerialPort> object is through the <xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A> method.</span></span>  
-  
+# <a name="port-operations-in-the-net-framework-with-visual-basic"></a><span data-ttu-id="dfade-102">使用 Visual Basic 在 .NET Framework 中执行的端口操作</span><span class="sxs-lookup"><span data-stu-id="dfade-102">Port Operations in the .NET Framework with Visual Basic</span></span>
+
+<span data-ttu-id="dfade-103">可以通过 <xref:System.IO.Ports?displayProperty=nameWithType> 命名空间中的 .NET Framework 类访问计算机的串行端口。</span><span class="sxs-lookup"><span data-stu-id="dfade-103">You can access your computer's serial ports through the .NET Framework classes in the <xref:System.IO.Ports?displayProperty=nameWithType> namespace.</span></span> <span data-ttu-id="dfade-104">最重要的类 <xref:System.IO.Ports.SerialPort> 为同步和事件驱动 I/O 提供框架，提供对插针和中断状态的访问，以及对串行驱动程序属性的访问。</span><span class="sxs-lookup"><span data-stu-id="dfade-104">The most important class, <xref:System.IO.Ports.SerialPort>, provides a framework for synchronous and event-driven I/O, access to pin and break states, and access to serial driver properties.</span></span> <span data-ttu-id="dfade-105">它可以包装在可通过 <xref:System.IO.Ports.SerialPort.BaseStream> 属性访问的 <xref:System.IO.Stream> 对象中。</span><span class="sxs-lookup"><span data-stu-id="dfade-105">It can be wrapped in a <xref:System.IO.Stream> object, accessible through the <xref:System.IO.Ports.SerialPort.BaseStream> property.</span></span> <span data-ttu-id="dfade-106">将 <xref:System.IO.Ports.SerialPort> 包装在 <xref:System.IO.Stream> 对象中，以便允许使用流的类访问串行端口。</span><span class="sxs-lookup"><span data-stu-id="dfade-106">Wrapping <xref:System.IO.Ports.SerialPort> in a <xref:System.IO.Stream> object allows the serial port to be accessed by classes that use streams.</span></span> <span data-ttu-id="dfade-107">该命名空间包含可以简化对串行端口的控制的枚举。</span><span class="sxs-lookup"><span data-stu-id="dfade-107">The namespace includes enumerations that simplify the control of serial ports.</span></span>
+
+<span data-ttu-id="dfade-108">创建 <xref:System.IO.Ports.SerialPort> 对象的最简单的方法是通过 <xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="dfade-108">The simplest way to create a <xref:System.IO.Ports.SerialPort> object is through the <xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A> method.</span></span>
+
 > [!NOTE]
-> <span data-ttu-id="3108e-109">不能使用 .NET Framework 类直接访问并行端口、USB 端口等其他类型的端口。</span><span class="sxs-lookup"><span data-stu-id="3108e-109">You cannot use .NET Framework classes to directly access other types of ports, such as parallel ports, USB ports, and so on.</span></span>  
-  
-## <a name="enumerations"></a><span data-ttu-id="3108e-110">枚举</span><span class="sxs-lookup"><span data-stu-id="3108e-110">Enumerations</span></span>  
- <span data-ttu-id="3108e-111">此表列出并描述了用于访问串行端口的主要枚举：</span><span class="sxs-lookup"><span data-stu-id="3108e-111">This table lists and describes the main enumerations used for accessing a serial port:</span></span>  
-  
-|<span data-ttu-id="3108e-112">枚举</span><span class="sxs-lookup"><span data-stu-id="3108e-112">Enumeration</span></span>|<span data-ttu-id="3108e-113">说明</span><span class="sxs-lookup"><span data-stu-id="3108e-113">Description</span></span>|  
-|---|---|   
-|<xref:System.IO.Ports.Handshake>|<span data-ttu-id="3108e-114">指定在为 <xref:System.IO.Ports.SerialPort> 对象建立串行端口通信时使用的控制协议。</span><span class="sxs-lookup"><span data-stu-id="3108e-114">Specifies the control protocol used in establishing a serial port communication for a <xref:System.IO.Ports.SerialPort> object.</span></span>|  
-|<xref:System.IO.Ports.Parity>|<span data-ttu-id="3108e-115">指定 <xref:System.IO.Ports.SerialPort> 对象的奇偶校验位。</span><span class="sxs-lookup"><span data-stu-id="3108e-115">Specifies the parity bit for a <xref:System.IO.Ports.SerialPort> object.</span></span>|  
-|<xref:System.IO.Ports.SerialData>|<span data-ttu-id="3108e-116">指定在 <xref:System.IO.Ports.SerialPort> 对象的串行端口上收到的字符的类型。</span><span class="sxs-lookup"><span data-stu-id="3108e-116">Specifies the type of character that was received on the serial port of the <xref:System.IO.Ports.SerialPort> object.</span></span>|  
-|<xref:System.IO.Ports.SerialError>|<span data-ttu-id="3108e-117">指定在 <xref:System.IO.Ports.SerialPort> 对象上发生的错误</span><span class="sxs-lookup"><span data-stu-id="3108e-117">Specifies errors that occur on the <xref:System.IO.Ports.SerialPort> object</span></span>|  
-|<xref:System.IO.Ports.SerialPinChange>|<span data-ttu-id="3108e-118">指定在 <xref:System.IO.Ports.SerialPort> 对象上发生的更改的类型。</span><span class="sxs-lookup"><span data-stu-id="3108e-118">Specifies the type of change that occurred on the <xref:System.IO.Ports.SerialPort> object.</span></span>|  
-|<xref:System.IO.Ports.StopBits>|<span data-ttu-id="3108e-119">指定在 <xref:System.IO.Ports.SerialPort> 对象上使用的停止位的数目。</span><span class="sxs-lookup"><span data-stu-id="3108e-119">Specifies the number of stop bits used on the <xref:System.IO.Ports.SerialPort> object.</span></span>|  
-  
-## <a name="see-also"></a><span data-ttu-id="3108e-120">请参阅</span><span class="sxs-lookup"><span data-stu-id="3108e-120">See also</span></span>
+> <span data-ttu-id="dfade-109">不能使用 .NET Framework 类直接访问并行端口、USB 端口等其他类型的端口。</span><span class="sxs-lookup"><span data-stu-id="dfade-109">You cannot use .NET Framework classes to directly access other types of ports, such as parallel ports, USB ports, and so on.</span></span>
+
+## <a name="enumerations"></a><span data-ttu-id="dfade-110">枚举</span><span class="sxs-lookup"><span data-stu-id="dfade-110">Enumerations</span></span>
+
+<span data-ttu-id="dfade-111">此表列出并描述了用于访问串行端口的主要枚举：</span><span class="sxs-lookup"><span data-stu-id="dfade-111">This table lists and describes the main enumerations used for accessing a serial port:</span></span>
+
+|<span data-ttu-id="dfade-112">枚举</span><span class="sxs-lookup"><span data-stu-id="dfade-112">Enumeration</span></span>|<span data-ttu-id="dfade-113">说明</span><span class="sxs-lookup"><span data-stu-id="dfade-113">Description</span></span>|
+|---|---|
+|<xref:System.IO.Ports.Handshake>|<span data-ttu-id="dfade-114">指定在为 <xref:System.IO.Ports.SerialPort> 对象建立串行端口通信时使用的控制协议。</span><span class="sxs-lookup"><span data-stu-id="dfade-114">Specifies the control protocol used in establishing a serial port communication for a <xref:System.IO.Ports.SerialPort> object.</span></span>|
+|<xref:System.IO.Ports.Parity>|<span data-ttu-id="dfade-115">指定 <xref:System.IO.Ports.SerialPort> 对象的奇偶校验位。</span><span class="sxs-lookup"><span data-stu-id="dfade-115">Specifies the parity bit for a <xref:System.IO.Ports.SerialPort> object.</span></span>|
+|<xref:System.IO.Ports.SerialData>|<span data-ttu-id="dfade-116">指定在 <xref:System.IO.Ports.SerialPort> 对象的串行端口上收到的字符的类型。</span><span class="sxs-lookup"><span data-stu-id="dfade-116">Specifies the type of character that was received on the serial port of the <xref:System.IO.Ports.SerialPort> object.</span></span>|
+|<xref:System.IO.Ports.SerialError>|<span data-ttu-id="dfade-117">指定在 <xref:System.IO.Ports.SerialPort> 对象上发生的错误</span><span class="sxs-lookup"><span data-stu-id="dfade-117">Specifies errors that occur on the <xref:System.IO.Ports.SerialPort> object</span></span>|
+|<xref:System.IO.Ports.SerialPinChange>|<span data-ttu-id="dfade-118">指定在 <xref:System.IO.Ports.SerialPort> 对象上发生的更改的类型。</span><span class="sxs-lookup"><span data-stu-id="dfade-118">Specifies the type of change that occurred on the <xref:System.IO.Ports.SerialPort> object.</span></span>|
+|<xref:System.IO.Ports.StopBits>|<span data-ttu-id="dfade-119">指定在 <xref:System.IO.Ports.SerialPort> 对象上使用的停止位的数目。</span><span class="sxs-lookup"><span data-stu-id="dfade-119">Specifies the number of stop bits used on the <xref:System.IO.Ports.SerialPort> object.</span></span>|
+
+## <a name="see-also"></a><span data-ttu-id="dfade-120">请参阅</span><span class="sxs-lookup"><span data-stu-id="dfade-120">See also</span></span>
 
 - <xref:Microsoft.VisualBasic.Devices.Ports>
-- [<span data-ttu-id="3108e-121">访问计算机的端口</span><span class="sxs-lookup"><span data-stu-id="3108e-121">Accessing the Computer's Ports</span></span>](../../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-computer-s-ports.md)
+- [<span data-ttu-id="dfade-121">访问计算机的端口</span><span class="sxs-lookup"><span data-stu-id="dfade-121">Accessing the Computer's Ports</span></span>](../../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-computer-s-ports.md)
