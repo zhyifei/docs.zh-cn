@@ -59,7 +59,7 @@ ms.locfileid: "64629106"
 ## <a name="defining-the-test-method-and-asynchronous-delegate"></a>定义测试方法和异步委托
  下面的代码示例演示了异步调用同一个长时间运行的方法 `TestMethod`的各种方式。 `TestMethod` 方法会显示一条控制台消息，说明该方法已开始处理，休眠了几秒钟，然后结束。 `TestMethod` 有一个 `out` 参数，该参数用于演示将此类参数添加到 `BeginInvoke` 和 `EndInvoke`的签名中的方式。 您可以按同样的方式处理 `ref` 参数。
 
- 下面的代码示例显示了 `TestMethod` 的定义和可用于异步调用 `TestMethod` 的名称为 `AsyncMethodCaller` 的委托。 要编译此代码示例，必须包括 `TestMethod` 和 `AsyncMethodCaller` 委托的定义。
+ 下面的代码示例显示了 `TestMethod` 的定义和可用于异步调用 `AsyncMethodCaller` 的名称为 `TestMethod` 的委托。 要编译此代码示例，必须包括 `TestMethod` 和 `AsyncMethodCaller` 委托的定义。
 
  [!code-cpp[AsyncDelegateExamples#1](../../../samples/snippets/cpp/VS_Snippets_CLR/AsyncDelegateExamples/cpp/TestMethod.cpp#1)]
  [!code-csharp[AsyncDelegateExamples#1](../../../samples/snippets/csharp/VS_Snippets_CLR/AsyncDelegateExamples/CS/TestMethod.cs#1)]
