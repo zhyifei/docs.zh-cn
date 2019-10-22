@@ -9,12 +9,12 @@ helpviewer_keywords:
 - operator associativity [C#]
 - expressions [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 766da517d247361f747591c3758e8610927866a9
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 7d69528804cf0cee1302fd62fa2301e06076897a
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71116099"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72579207"
 ---
 # <a name="c-operators-c-reference"></a>C# 运算符（C# 参考）
 
@@ -63,8 +63,8 @@ Console.WriteLine(a); //  output: 8
 
 当运算符的优先级相同，运算符的结合性决定了运算的执行顺序：
 
-- 左结合运算符按从左到右的顺序计算。  除[赋值运算符](assignment-operator.md)和 [null 合并运算符 `??`](null-coalescing-operator.md)外，所有二元运算符都是左结合运算符。 例如，`a + b - c` 将计算为 `(a + b) - c`。
-- 右结合运算符按从右到左的顺序计算。  赋值运算符、null 合并运算符 `??` 和[条件运算符 `?:`](conditional-operator.md)是右结合运算符。 例如，`x = y = z` 将计算为 `x = (y = z)`。
+- 左结合运算符按从左到右的顺序计算。  除[赋值运算符](assignment-operator.md)和 [null 合并运算符](null-coalescing-operator.md)外，所有二元运算符都是左结合运算符。 例如，`a + b - c` 将计算为 `(a + b) - c`。
+- 右结合运算符按从右到左的顺序计算。  赋值运算符、null 合并运算符和[条件运算符`?:`](conditional-operator.md)是右结合运算符。 例如，`x = y = z` 将计算为 `x = (y = z)`。
 
 使用括号更改运算符结合性所施加的计算顺序：
 
@@ -85,7 +85,7 @@ Console.WriteLine($"a = {a}, b = {b}");  // output: a = 1, b = 6
 |`a / b + c * d`|a, b, /, c, d, *, +|
 |`a / (b + c) * d`|a, b, c, +, /, d, *|
 
-通常，会计算所有运算符操作数。 某些运算符有条件地计算操作数。 也就是说，此类运算符的第一个操作数的值定义了是否应计算其他操作数，或计算其他哪些操作数。 这些运算符有条件逻辑 [AND (`&&`)](boolean-logical-operators.md#conditional-logical-and-operator-) 和 [OR (`||`)](boolean-logical-operators.md#conditional-logical-or-operator-) 运算符、[null 合并运算符 `??`](null-coalescing-operator.md)、[null 条件运算符 `?.` 和和 `?[]`](member-access-operators.md#null-conditional-operators--and-)，以及[条件运算符 `?:`](conditional-operator.md)。 有关更多详细信息，请参阅每个运算符的说明。
+通常，会计算所有运算符操作数。 某些运算符有条件地计算操作数。 也就是说，此类运算符的第一个操作数的值定义了是否应计算其他操作数，或计算其他哪些操作数。 这些运算符有条件逻辑 [AND (`&&`)](boolean-logical-operators.md#conditional-logical-and-operator-) 和 [OR (`||`)](boolean-logical-operators.md#conditional-logical-or-operator-) 运算符、[null 合并运算符 `??` 和 `??=`](null-coalescing-operator.md)、[null 条件运算符 `?.` 和 `?[]`](member-access-operators.md#null-conditional-operators--and-) 以及[条件运算符`?:`](conditional-operator.md)。 有关更多详细信息，请参阅每个运算符的说明。
 
 ## <a name="c-language-specification"></a>C# 语言规范
 

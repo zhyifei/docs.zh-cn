@@ -14,12 +14,12 @@ helpviewer_keywords:
 - type boundaries
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 903a553b5383620f15cce274c61a440b7bbb1d7d
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 5fb809b564df17d6320b7ffce3d757fa0fee7639
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70970016"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72583009"
 ---
 # <a name="assemblies-in-net"></a>.NET 中的程序集
 
@@ -115,6 +115,7 @@ ms.locfileid: "70970016"
 - [.NET 程序集文件格式](file-format.md)
 - [.NET 中的程序集](index.md)
 - [友元程序集](friend.md)
+- [引用程序集](reference-assemblies.md)
 - [如何：加载和卸载程序集](load-unload.md)
 - [如何：在 .NET Core 中使用和调试程序集可卸载性](unloadability.md)
 - [如何：确定文件是否为程序集](identify.md)
