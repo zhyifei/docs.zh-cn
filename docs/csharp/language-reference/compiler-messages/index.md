@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Visual C# compiler, errors
 - errors [C#]
 ms.assetid: 57262ab1-6c50-4f9c-81ad-9fba48477416
-ms.openlocfilehash: 3714223209a3298706960625ea383e42dc2b2154
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: af1ec49e6c7eb94c4e324b947e8ead8149d0a997
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69607171"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771880"
 ---
 # <a name="c-compiler-errors"></a>C# 编译器错误
 
@@ -34,5 +34,5 @@ ms.locfileid: "69607171"
 - [C# 编译器选项](../compiler-options/index.md)
 - [很抱歉，我们没有关于此 C# 错误的具体信息](../../misc/sorry-we-don-t-have-specifics-on-this-csharp-error.md)
 - [“项目设计器”->“生成”页 (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp)
-- [/warn（C# 编译器选项）](../compiler-options/warn-compiler-option.md)
-- [/nowarn（C# 编译器选项）](../compiler-options/nowarn-compiler-option.md)
+- [-warn（C# 编译器选项）](../compiler-options/warn-compiler-option.md)
+- [-nowarn（C# 编译器选项）](../compiler-options/nowarn-compiler-option.md)
